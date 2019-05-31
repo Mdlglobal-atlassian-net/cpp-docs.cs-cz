@@ -2,12 +2,12 @@
 title: Grafické prvky (C++ AMP)
 ms.date: 11/04/2016
 ms.assetid: 190a98a4-5f7d-442e-866b-b374ca74c16f
-ms.openlocfilehash: 4a40575d84c9a0efedcb3c7c9717fc310870b530
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6e21c5af094ce90c8e4365ed4263198422ad1905
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62405661"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66449865"
 ---
 # <a name="graphics-c-amp"></a>Grafické prvky (C++ AMP)
 
@@ -25,7 +25,7 @@ C++ AMP obsahuje několik rozhraní API v [Concurrency::graphics](../../parallel
 
 ## <a name="short-vector-library"></a>Knihovna krátkých vektorů
 
-Krátká vektorová knihovna poskytuje některé funkce [typ vektoru](http://go.microsoft.com/fwlink/p/?linkid=248500) , který je definován v HLSL a obvykle se používá k definování texelů. Krátký vektor je datová struktura, která obsahuje jednu až čtyři hodnoty stejného typu. Podporované typy jsou **double**, **float**, **int**, `norm`, `uint`, a `unorm`. Názvy typů jsou uvedeny v následující tabulce. Pro každý typ existuje také odpovídající **typedef** , který neobsahuje v názvu podtržítko. Typy obsahující podtržítka jsou [Concurrency::graphics Namespace](../../parallel/amp/reference/concurrency-graphics-namespace.md). Typy, které nemají podtržítka jsou v [Concurrency::Graphics:: Direct3D – Namespace](../../parallel/amp/reference/concurrency-graphics-direct3d-namespace.md) tak, aby zřetelné oddělení od podobně pojmenovaných základních typů jako **__int8** a **__int16**.
+Krátká vektorová knihovna poskytuje některé funkce [typ vektoru](https://go.microsoft.com/fwlink/p/?linkid=248500) , který je definován v HLSL a obvykle se používá k definování texelů. Krátký vektor je datová struktura, která obsahuje jednu až čtyři hodnoty stejného typu. Podporované typy jsou **double**, **float**, **int**, `norm`, `uint`, a `unorm`. Názvy typů jsou uvedeny v následující tabulce. Pro každý typ existuje také odpovídající **typedef** , který neobsahuje v názvu podtržítko. Typy obsahující podtržítka jsou [Concurrency::graphics Namespace](../../parallel/amp/reference/concurrency-graphics-namespace.md). Typy, které nemají podtržítka jsou v [Concurrency::Graphics:: Direct3D – Namespace](../../parallel/amp/reference/concurrency-graphics-direct3d-namespace.md) tak, aby zřetelné oddělení od podobně pojmenovaných základních typů jako **__int8** a **__int16**.
 
 ||Délka 2|Délka 3|Délka 4|
 |-|--------------|--------------|--------------|
@@ -67,7 +67,7 @@ Mnoho grafických karet využívá hardware a, které jsou optimalizovány pro n
 
 - Krátký vektor, který má dvě nebo čtyři součásti. Jedinou výjimkou je `double_4`, což není povoleno.
 
-`texture` Objekt může mít řád 1, 2 nebo 3. `texture` Objektu můžete zachycen pouze odkazem v lambda výrazu volání `parallel_for_each`. Textura je uložena v GPU jako objekty textur rozhraní Direct3D. Další informace o texturách a texelech v Direct3D naleznete v tématu [Úvod do textur v Direct3D 11](http://go.microsoft.com/fwlink/p/?linkid=248502).
+`texture` Objekt může mít řád 1, 2 nebo 3. `texture` Objektu můžete zachycen pouze odkazem v lambda výrazu volání `parallel_for_each`. Textura je uložena v GPU jako objekty textur rozhraní Direct3D. Další informace o texturách a texelech v Direct3D naleznete v tématu [Úvod do textur v Direct3D 11](https://go.microsoft.com/fwlink/p/?linkid=248502).
 
 Typ texelu, který používáte, může být jeden z mnoha formátů textur, které se používají v programování grafiky. Například formát RGBA může používat 32 bitů s 8 bity pro R, G, B a skalární prvky. Hardware textury grafické karty může přistupovat k jednotlivým prvkům založeným na formátu. Například může hardware textury Pokud používáte formát RGBA, extrahovat každý 8bitový prvek do 32bitové podoby. V jazyce C++ AMP můžete nastavit bity na skalární prvek texelu tak, aby může automaticky přistupovat k jednotlivým skalárním prvkům v kódu bez použití bitového řazení.
 
@@ -307,7 +307,7 @@ void write2ComponentTexture() {
 
 Jak vidíte, dva příklady jsou téměř identické, pokud všechny prováděné činnosti provádějí zapisuje do na úrovni primární mipmapy. Pokud jste použili `writeonly_texture_view` v existujícím kódu a neplánujete vylepšit, že kód, není nutné ho změnit. Nicméně pokud uvažujete o převedení tohoto kódu vpřed, doporučujeme přepsat ho pomocí `texture_view` protože vylepšení v něm podporují nové funkce textury hardwaru. Přečtěte si další informace o těchto nových funkcí.
 
-Další informace o zavržení `writeonly_texture_view`, naleznete v tématu [přehled návrhu zobrazení textury v C++ AMP](http://blogs.msdn.com/b/nativeconcurrency/archive/2013/07/25/overview-of-the-texture-view-design-in-c-amp.aspx) na paralelní programování v blogu nativního kódu.
+Další informace o zavržení `writeonly_texture_view`, naleznete v tématu [přehled návrhu zobrazení textury v C++ AMP](https://blogs.msdn.com/b/nativeconcurrency/archive/2013/07/25/overview-of-the-texture-view-design-in-c-amp.aspx) na paralelní programování v blogu nativního kódu.
 
 ### <a name="instantiating-texture-view-objects"></a>Vytváření instancí objektů zobrazení textury
 
@@ -379,9 +379,9 @@ void write2ComponentTexture() {
 
 Texture – zobrazení, jehož prvky jsou založeny na typech s plovoucí desetinnou čárkou, například float, float_2 – nebo float_4 – lze také číst pomocí odběru vzorků textury výhod hardwarové podpory pro různé režimy filtrování a adresování. C++ AMP podporuje dva režimy filtrování, které jsou nejčastější ve výpočetních scénářích – bod filtrování (Nejbližší soused) a lineární filtrování (vážený průměr) – a čtyři režimy adresování – zabalené, zrcadlené, omezen a ohraničení. Další informace o režimech adresování naleznete v tématu [address_mode – výčet](reference/concurrency-graphics-namespace-enums.md#address_mode).
 
-Kromě režimů, které přímo podporují C++ AMP může přístup ostatním režimům filtrování a režimům adresování základní platformy pomocí rozhraní API zprostředkovatele pro osvojení vzorkovače textury, který byl vytvořen přímo pomocí rozhraní API platformy. Direct3D například podporuje jiné režimy filtrování, například anizotropní filtrování a můžete použít jiný režim adresování pro každou dimenzi textury. Můžete vytvořit vzorkovač textury, jehož souřadnice jsou zabaleny svisle, zrcadleny vodorovně a vzorkovány pomocí anizotropního filtrování pomocí rozhraní API Direct3D a pak ho využít ve svém kódu C++ AMP pomocí `make_sampler` vzájemné spolupráce rozhraní API. Další informace najdete v části [vzorkování textur v c ++ AMP](http://blogs.msdn.com/b/nativeconcurrency/archive/2013/07/18/texture-sampling-in-c-amp.aspx) na paralelní programování v blogu nativního kódu.
+Kromě režimů, které přímo podporují C++ AMP může přístup ostatním režimům filtrování a režimům adresování základní platformy pomocí rozhraní API zprostředkovatele pro osvojení vzorkovače textury, který byl vytvořen přímo pomocí rozhraní API platformy. Direct3D například podporuje jiné režimy filtrování, například anizotropní filtrování a můžete použít jiný režim adresování pro každou dimenzi textury. Můžete vytvořit vzorkovač textury, jehož souřadnice jsou zabaleny svisle, zrcadleny vodorovně a vzorkovány pomocí anizotropního filtrování pomocí rozhraní API Direct3D a pak ho využít ve svém kódu C++ AMP pomocí `make_sampler` vzájemné spolupráce rozhraní API. Další informace najdete v části [vzorkování textur v c ++ AMP](https://blogs.msdn.com/b/nativeconcurrency/archive/2013/07/18/texture-sampling-in-c-amp.aspx) na paralelní programování v blogu nativního kódu.
 
-Zobrazení textury také podporují čtení Mipmap. Zobrazení textur jen pro čtení (těch, které mají konstantní typ prvku) nabízí největší flexibilitu, protože rozsah úrovně mip, která je určena při instanci, lze dynamicky vzorkovat, a protože jsou podporovány prvky, které mají 1, 2 nebo 4 komponenty. Zobrazení textury pro čtení i zápis, která mají prvky, které mají jednu komponentu, také podporují mipmapy, ale pouze pro úroveň, která je určena při instanci. Další informace najdete v tématu [textury s Mipmaps](http://blogs.msdn.com/b/nativeconcurrency/archive/2013/08/22/texture-with-mipmaps.aspx) na paralelní programování v blogu nativního kódu.
+Zobrazení textury také podporují čtení Mipmap. Zobrazení textur jen pro čtení (těch, které mají konstantní typ prvku) nabízí největší flexibilitu, protože rozsah úrovně mip, která je určena při instanci, lze dynamicky vzorkovat, a protože jsou podporovány prvky, které mají 1, 2 nebo 4 komponenty. Zobrazení textury pro čtení i zápis, která mají prvky, které mají jednu komponentu, také podporují mipmapy, ale pouze pro úroveň, která je určena při instanci. Další informace najdete v tématu [textury s Mipmaps](https://blogs.msdn.com/b/nativeconcurrency/archive/2013/08/22/texture-with-mipmaps.aspx) na paralelní programování v blogu nativního kódu.
 
 ### <a name="writing-to-texture-view-objects"></a>Zapisování do objektů zobrazení textury
 
@@ -404,7 +404,7 @@ parallel_for_each(w_view.extent, [=](index<2> idx) restrict(amp)
 
 ## <a name="interoperability"></a>Interoperabilita
 
-Runtime C++ AMP podporuje interoperabilitu mezi `texture<T,1>` a [ID3D11Texture1D rozhraním](http://go.microsoft.com/fwlink/p/?linkId=248503), mezi `texture<T,2>` a [ID3D11Texture2D rozhraním](http://go.microsoft.com/fwlink/p/?linkId=255317)a mezi `texture<T,3>`a [ID3D11Texture3D rozhraním](http://go.microsoft.com/fwlink/p/?linkId=255377). [Get_texture](reference/concurrency-graphics-direct3d-namespace-functions.md#get_texture) přijímá metodu `texture` objekt a vrátí `IUnknown` rozhraní. [Make_texture](reference/concurrency-graphics-direct3d-namespace-functions.md#make_texture) přijímá metodu `IUnknown` rozhraní a `accelerator_view` objekt a vrátí `texture` objektu.
+Runtime C++ AMP podporuje interoperabilitu mezi `texture<T,1>` a [ID3D11Texture1D rozhraním](https://go.microsoft.com/fwlink/p/?linkId=248503), mezi `texture<T,2>` a [ID3D11Texture2D rozhraním](https://go.microsoft.com/fwlink/p/?linkId=255317)a mezi `texture<T,3>`a [ID3D11Texture3D rozhraním](https://go.microsoft.com/fwlink/p/?linkId=255377). [Get_texture](reference/concurrency-graphics-direct3d-namespace-functions.md#get_texture) přijímá metodu `texture` objekt a vrátí `IUnknown` rozhraní. [Make_texture](reference/concurrency-graphics-direct3d-namespace-functions.md#make_texture) přijímá metodu `IUnknown` rozhraní a `accelerator_view` objekt a vrátí `texture` objektu.
 
 ## <a name="see-also"></a>Viz také:
 

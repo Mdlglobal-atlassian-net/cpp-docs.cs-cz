@@ -2,12 +2,12 @@
 title: 'Průvodce přenosem: COM Spy'
 ms.date: 11/04/2016
 ms.assetid: 24aa0d52-4014-4acb-8052-f4e2e4bbc3bb
-ms.openlocfilehash: ec928768307a38cbb6ea00d985d60e6c2311b563
-ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.openlocfilehash: 791b2e88166caae39c3b8e645ca1cc053f0b9379
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65449082"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66451182"
 ---
 # <a name="porting-guide-com-spy"></a>Průvodce přenosem: COM Spy
 
@@ -24,7 +24,7 @@ Soubor projektu převede snadno a vytváří sestavy migrace. Existuje několik 
 ComSpyAudit\ComSpyAudit.vcproj: MSB8012: $(TargetPath) ('C:\Users\UserName\Desktop\spy\spy\ComSpyAudit\.\XP32_DEBUG\ComSpyAudit.dll') does not match the Librarian's OutputFile property value '.\XP32_DEBUG\ComSpyAudit.dll' ('C:\Users\UserName\Desktop\spy\spy\XP32_DEBUG\ComSpyAudit.dll') in project configuration 'Unicode Debug|Win32'. This may cause your project to build incorrectly. To correct this, please make sure that $(TargetPath) property value matches the value specified in %(Lib.OutputFile).
 ```
 
-Jednou z častých problémech v provádění upgrade projektů, která je **Linkeru OutputFile** nastavení v dialogovém okně Vlastnosti projektu může být nutné zkontrolovat. Pro projekty před Visual Studio 2010 OutputFile je jedním z nastavení, která v Průvodci převodem automatické má potíže s tím, pokud je nastavena na hodnotu nestandardní. Cesty pro výstupní soubory v tomto případě byla nastavena na složku nestandardní XP32_DEBUG. Najít další informace o této chybě, jsme konzultaci [blogový příspěvek](http://blogs.msdn.com/b/vcblog/archive/2010/03/02/visual-studio-2010-c-project-upgrade-guide.aspx) související s upgrade projektu Visual Studio 2010, která byla upgradu, které se podílejí změna vcbuild msbuild, významnou změnu. Podle těchto informací se výchozí hodnota pro **výstupní soubor** nastavení při vytváření nového projektu je `$(OutDir)$(TargetName)$(TargetExt)`, ale to není nastaven při převodu, protože není možné u převedený projektů a ověřte, zda všechno, co je správná. Ale můžeme zkuste uvedení, že pro výstupní soubor a pokud to funguje.  Ano, takže se můžeme přesunout. Pokud neexistuje žádný konkrétní důvod pro používání nestandardní výstupní složky, doporučujeme použít standardní umístění. V tomto případě jsme zvolili ponechat umístění výstupu jako nestandardní během procesu přenos a upgrade. `$(OutDir)` přeloží do složky XP32_DEBUG v **ladění** konfigurace a ReleaseU složku **vydání** konfigurace.
+Jednou z častých problémech v provádění upgrade projektů, která je **Linkeru OutputFile** nastavení v dialogovém okně Vlastnosti projektu může být nutné zkontrolovat. Pro projekty před Visual Studio 2010 OutputFile je jedním z nastavení, která v Průvodci převodem automatické má potíže s tím, pokud je nastavena na hodnotu nestandardní. Cesty pro výstupní soubory v tomto případě byla nastavena na složku nestandardní XP32_DEBUG. Najít další informace o této chybě, jsme konzultaci [blogový příspěvek](https://devblogs.microsoft.com/cppblog/visual-studio-2010-c-project-upgrade-guide/) související s upgrade projektu Visual Studio 2010, která byla upgradu, které se podílejí změna vcbuild msbuild, významnou změnu. Podle těchto informací se výchozí hodnota pro **výstupní soubor** nastavení při vytváření nového projektu je `$(OutDir)$(TargetName)$(TargetExt)`, ale to není nastaven při převodu, protože není možné u převedený projektů a ověřte, zda všechno, co je správná. Ale můžeme zkuste uvedení, že pro výstupní soubor a pokud to funguje.  Ano, takže se můžeme přesunout. Pokud neexistuje žádný konkrétní důvod pro používání nestandardní výstupní složky, doporučujeme použít standardní umístění. V tomto případě jsme zvolili ponechat umístění výstupu jako nestandardní během procesu přenos a upgrade. `$(OutDir)` přeloží do složky XP32_DEBUG v **ladění** konfigurace a ReleaseU složku **vydání** konfigurace.
 
 ### <a name="step-2-getting-it-to-build"></a>Krok 2. Načítání sestavení
 Sestavení přenesená projektu, dojde k počtu chyb a upozornění.

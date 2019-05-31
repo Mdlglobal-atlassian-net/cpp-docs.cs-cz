@@ -220,12 +220,12 @@ helpviewer_keywords:
 - CHtmlEditCtrlBase [MFC], Unlink
 - CHtmlEditCtrlBase [MFC], UnorderList
 ms.assetid: e0cc74b4-8320-4570-b673-16c03d2ae266
-ms.openlocfilehash: a3c90f4b75b79dc51091c87a5a84b5c59a70646f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a336804889a3ad10818ff0883c55f9141f9e210d
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62375818"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66450269"
 ---
 # <a name="chtmleditctrlbase-class"></a>CHtmlEditCtrlBase Class
 
@@ -241,7 +241,7 @@ template <class T> class CHtmlEditCtrlBase
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CHtmlEditCtrlBase::AddToGlyphTable](#addtoglyphtable)|Přidá položku do piktogram tabulku, která určuje Image pro zobrazení konkrétních značek v režimu návrhu.|
 |[CHtmlEditCtrlBase::Bold](#bold)|Přepíná tučné stav vybraného textu.|
@@ -1700,7 +1700,7 @@ long QueryStatus(long cmdID) const;
 ### <a name="parameters"></a>Parametry
 
 *cmdID*<br/>
-ID příkazu. Identifikátory příkazů pocházejí ze skupiny CGID_MSHTML příkazů. Tyto příkazy jsou definovány v Mshtmcid.h. Můžete také vyhledat seznam online na [identifikátory příkazů MSHTML](http://go.microsoft.com/fwlink/p/?linkid=149220).
+ID příkazu. Identifikátory příkazů pocházejí ze skupiny CGID_MSHTML příkazů. Tyto příkazy jsou definovány v Mshtmcid.h. Můžete také vyhledat seznam online na [identifikátory příkazů MSHTML](https://go.microsoft.com/fwlink/p/?linkid=149220).
 
 ### <a name="return-value"></a>Návratová hodnota
 

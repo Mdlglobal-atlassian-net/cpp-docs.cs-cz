@@ -4,12 +4,12 @@ ms.date: 06/21/2018
 ms.technology: cpp-ide
 author: corob-msft
 ms.author: corob
-ms.openlocfilehash: 21931fc4976c909c77120e696f25f93c0a0fda0b
-ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.openlocfilehash: da703d6649cb430b572d4d0db44adcfdef8ed8c4
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65446771"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66451159"
 ---
 # <a name="how-to-report-a-problem-with-the-visual-c-toolset-or-documentation"></a>Postup ohlášení problému se sadou nástrojů Visual C++ nebo dokumentace
 
@@ -112,7 +112,7 @@ Je dobré reprodukci:
 
 - **Porovnávána s jinými kompilátory** podle potřeby. Reprodukce, které se týkají přenositelný kód C++ ověřte chování před jinými kompilátory, pokud je to možné. Standardní Určuje program správnosti a žádný kompilátor je ideálním řešením, ale při Clang a GCC přijmout kódu bez diagnostiku a MSVC tak není, bude pravděpodobně že se díváte na chybu v našich kompilátoru. (Další možnosti zahrnují rozdíly v chování systému Unix a Windows nebo různé úrovně implementaci standardů C++ atd.) Na druhé straně Pokud všechny kompilátory odmítnout kódu, pak je pravděpodobné, že váš kód je nesprávný. Zobrazuje různé chybové zprávy vám mohou pomoci diagnostikovat problém.
 
-   Můžete najít seznam online kompilátory k testování kódu proti v [kompilátory Online C++](https://isocpp.org/blog/2013/01/online-c-compilers) na webu ISO C++ nebo to připravili [seznamu z Online kompilátory C++](https://arnemertz.github.io/online-compilers/) na Githubu. Některé konkrétní příklady [Wandbox](https://wandbox.org/), [kompilátoru Explorer](https://godbolt.org/), a [Coliru](http://coliru.stacked-crooked.com/).
+   Můžete najít seznam online kompilátory k testování kódu proti v [kompilátory Online C++](https://isocpp.org/blog/2013/01/online-c-compilers) na webu ISO C++ nebo to připravili [seznamu z Online kompilátory C++](https://arnemertz.github.io/online-compilers/) na Githubu. Některé konkrétní příklady [Wandbox](https://wandbox.org/), [kompilátoru Explorer](https://godbolt.org/), a [Coliru](https://coliru.stacked-crooked.com/).
 
    > [!NOTE]
    > Websites online kompilátoru nejsou spojit s Microsoftem. Počet webů online kompilátoru jsou spouštěny jako osobní projekty a některé z těchto webů nemusí být k dispozici, když jste najdete v tomto, ale vyhledávání by měl najít jiné, která vám pomůže.

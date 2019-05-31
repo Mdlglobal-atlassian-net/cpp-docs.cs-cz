@@ -5,12 +5,12 @@ description: Microsoft C++ v aplikaci Visual Studio 2019 postupujte směrem k pl
 ms.technology: cpp-language
 author: mikeblome
 ms.author: mblome
-ms.openlocfilehash: e9bc86683ec89858d0b6cb39dcc6a65cf4eb05b2
-ms.sourcegitcommit: 61121faf879cc581a4d39e4baccabf7cf1f673a5
+ms.openlocfilehash: 02b778f10ad94342c922a4e79a856cc2a7d53076
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/20/2019
-ms.locfileid: "65934127"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66451215"
 ---
 # <a name="c-conformance-improvements-in-visual-studio-2019-rtw-and-version-161improvements161"></a>C++vylepšení ve verzi RTW 2019 Visual Studio a verze [16.1](#improvements_161)
 
@@ -26,7 +26,7 @@ Moduly jsou nyní oficiálně v C ++ 20 standard. Vylepšená podpora byl přid�
 
 ### <a name="modified-specification-of-aggregate-type"></a>Změny specifikace požadovaný typ agregace
 
-Specifikace agregační typ se změnil v C ++ 20 (viz [zakázat agregace s uživatelem deklarované konstruktory](http://wg21.link/p1008r1)). V aplikaci Visual Studio 2019 pod `/std:c++latest`, třída s atributem žádné uživatelem deklarovaným konstruktorem (například včetně konstruktor deklarovat `= default` nebo `= delete`) není agregační. Předtím jenom uživatelem zadané konstruktory by vyřadit třídy z se agregace. Tato změna vloží další omezení na tom, jak lze inicializovat tyto typy.
+Specifikace agregační typ se změnil v C ++ 20 (viz [zakázat agregace s uživatelem deklarované konstruktory](https://wg21.link/p1008r1)). V aplikaci Visual Studio 2019 pod `/std:c++latest`, třída s atributem žádné uživatelem deklarovaným konstruktorem (například včetně konstruktor deklarovat `= default` nebo `= delete`) není agregační. Předtím jenom uživatelem zadané konstruktory by vyřadit třídy z se agregace. Tato změna vloží další omezení na tom, jak lze inicializovat tyto typy.
 
 Následující kód zkompiluje bez chyb v sadě Visual Studio 2017, ale vyvolává chyby C2280 a C2440 v aplikaci Visual Studio 2019 pod `/std:c++latest`:
 
@@ -89,7 +89,7 @@ int main()
 ```
 ### <a name="reinterpretcast-from-an-overloaded-function"></a>`reinterpret_cast` z přetížené funkce
 
-Argument `reinterpret_cast` není jedním z kontextu, ve kterých je povolená adresa přetíženou funkci. Následující kód se zkompiluje bez chyb v sadě Visual Studio 2017, ale v aplikaci Visual Studio 2019 vyvolá *C2440: nelze převést z "přetížené funkce" na "fp"*:
+Argument `reinterpret_cast` není jedním z kontextu, ve kterých je povolená adresa přetíženou funkci. Následující kód se zkompiluje bez chyb v sadě Visual Studio 2017, ale v aplikaci Visual Studio 2019 vyvolá *C2440: nelze převést z "přetížené funkce" na "fp"* :
 
 ```cpp
 int f(int) { return 1; }
@@ -160,7 +160,7 @@ Implementováno `remove_cvref` a `remove_cvref_t` zadejte vlastnosti z [P0550](h
 
 ### <a name="char8t"></a>char8_t
 
-[P0482r6](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2018/p0482r6.html). C ++ 20 přidá nový typ znaku, který se používá k reprezentování jednotkami kódu kódování UTF-8. U8 řetězcové literály v C ++ 20 mít typ `const char8_t[N]` místo `const char[N]`, která dříve byla případu. Podobné změny byly navrženy pro Standard C v [N2231](http://www.open-std.org/jtc1/sc22/wg14/www/docs/n2231.htm). Návrhům na odstranění problému char8_t zpětné kompatibility jsou uvedeny v [P1423r0](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2019/p1423r0.html). Microsoft C++ kompilátor přidává podporu pro char8_t v aplikaci Visual Studio 2019 verze 16.1 při zadávání **/Zc:char8_t** – možnost kompilátoru. V budoucnu se bude podporovat s [/std: c ++ nejnovější](../../build/reference/std-specify-language-standard-version.md), která se vrátí zpátky na C ++ 17 chování prostřednictvím **/Zc:char8_t-**. Zaměstnance EDG kompilátoru, který využívá technologie IntelliSense zatím nepodporuje, proto uvidíte detekováno falešné pouze technologie IntelliSense chyby, které nemají vliv na skutečné kompilace.
+[P0482r6](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2018/p0482r6.html). C ++ 20 přidá nový typ znaku, který se používá k reprezentování jednotkami kódu kódování UTF-8. U8 řetězcové literály v C ++ 20 mít typ `const char8_t[N]` místo `const char[N]`, která dříve byla případu. Podobné změny byly navrženy pro Standard C v [N2231](http://www.open-std.org/jtc1/sc22/wg14/www/docs/n2231.htm). Návrhům na odstranění problému char8_t zpětné kompatibility jsou uvedeny v [P1423r0](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2019/p1423r0.html). Microsoft C++ kompilátor přidává podporu pro char8_t v aplikaci Visual Studio 2019 verze 16.1 při zadávání **/Zc:char8_t** – možnost kompilátoru. V budoucnu se bude podporovat s [/std: c ++ nejnovější](../../build/reference/std-specify-language-standard-version.md), která se vrátí zpátky na C ++ 17 chování prostřednictvím **/Zc:char8_t-** . Zaměstnance EDG kompilátoru, který využívá technologie IntelliSense zatím nepodporuje, proto uvidíte detekováno falešné pouze technologie IntelliSense chyby, které nemají vliv na skutečné kompilace.
 
 #### <a name="example"></a>Příklad
 
@@ -274,7 +274,7 @@ Aby se zabránilo chybě v tomto příkladu, použijte operátor pomocí metody 
 
 ### <a name="initializers-for-inline-static-data-members"></a>Inicializátory pro vložené statické datové členy
 
-Neplatný člen přistupuje k v rámci `inline` a `static constexpr` inicializátory jsou nyní správně rozpozná. Následující příklad se zkompiluje bez chyb v sadě Visual Studio 2017, ale Visual Studio 2019 pod `/std:c++17` režimu vyvolá *chyba C2248: přístup privátního člena nelze deklarovat v třídě 'X'*.
+Neplatný člen přistupuje k v rámci `inline` a `static constexpr` inicializátory jsou nyní správně rozpozná. Následující příklad se zkompiluje bez chyb v sadě Visual Studio 2017, ale Visual Studio 2019 pod `/std:c++17` režimu vyvolá *chyba C2248: přístup privátního člena nelze deklarovat v třídě 'X'* .
 
 ```cpp
 struct X

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - C++ Accelerated Massive Parallelism, overview
 - C++ Accelerated Massive Parallelism
 ms.assetid: 9e593b06-6e3c-43e9-8bae-6d89efdd39fc
-ms.openlocfilehash: 258266768d3f456fb761a9d5a403a92c502dbe32
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4098a1467b0f81b5f66a2e45a4bb2138e8c1c262
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62349900"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66449945"
 ---
 # <a name="c-amp-overview"></a>Přehled produktu C++ AMP
 
@@ -62,7 +62,7 @@ Důležité části kódu jsou následující:
 
 - Iterace: První `for` smyčky poskytuje mechanismus pro procházení prvků v polích. Kód, který chcete spustit pro výpočet součtu je obsažen v prvním `for` bloku.
 
-- Index: `idx` Proměnnou přistupuje k jednotlivým prvkům polí.
+- Rejstřík: `idx` Proměnnou přistupuje k jednotlivým prvkům polí.
 
 Používání modelu C++ AMP, můžete například napsat následující kód místo.
 
@@ -106,7 +106,7 @@ Stejné základní prvky jsou k dispozici, ale jsou použity konstrukce knihovny
 
 - Iterace: [Parallel_for_each – funkce (C++ AMP)](reference/concurrency-namespace-functions-amp.md#parallel_for_each) poskytuje mechanismus pro procházení datových prvků, nebo *výpočetní domény*. V tomto příkladu je výpočetní domény určené `sum.extent`. Kód, který chcete spustit je obsažen ve výrazu lambda nebo *funkce jádra*. `restrict(amp)` Označuje, že je použita pouze podmnožina jazyka C++, kterou může knihovna C++ AMP urychlit.
 
-- Index: [Index – třída](../../parallel/amp/reference/index-class.md) proměnnou, `idx`, je deklarována s rozměrem jedna, aby odpovídala pořadí `array_view` objektu. Pomocí indexu lze přistupovat k jednotlivým prvkům `array_view` objekty.
+- Rejstřík: [Index – třída](../../parallel/amp/reference/index-class.md) proměnnou, `idx`, je deklarována s rozměrem jedna, aby odpovídala pořadí `array_view` objektu. Pomocí indexu lze přistupovat k jednotlivým prvkům `array_view` objekty.
 
 ## <a name="shaping-and-indexing-data-index-and-extent"></a>Tvarování a indexování dat: index a rozsah
 
@@ -431,7 +431,7 @@ for (int i = 0; i <4; i++) {
 
 ## <a name="math-libraries"></a>Matematické knihovny
 
-C++ AMP obsahuje dvě matematické knihovny. Knihovna s dvojitou přesností v [Concurrency::precise_math Namespace](../../parallel/amp/reference/concurrency-precise-math-namespace.md) poskytuje podporu pro funkce s dvojitou přesností. Také poskytuje podporu pro funkce s jednoduchou přesností, i když je nutné použít podporu dvojité přesnosti na hardwaru. Odpovídá [dle specifikace C99 (ISO/IEC 9899)](http://go.microsoft.com/fwlink/p/?linkid=225887). Akcelerátor musí podporovat plnou dvojitou přesnost. Můžete určit, zda ji provede pomocí kontroly hodnoty [Accelerator::supports_double_precision – datový člen](reference/accelerator-class.md#supports_double_precision). Rychlé matematické knihovny v [Concurrency::fast_math Namespace](../../parallel/amp/reference/concurrency-fast-math-namespace.md), obsahuje jinou sadu matematických funkcí. Tyto funkce, které podporují pouze `float` operandy, prováděny rychleji, ale nejsou tak přesné jako ty v knihovně matematiku s dvojitou přesností. Funkce jsou obsaženy v \<amp_math.h > hlavičkový soubor a všechny jsou deklarovány pomocí `restrict(amp)`. Funkce \<cmath > soubor hlaviček jsou importovány do obou `fast_math` a `precise_math` obory názvů. **Omezit** – klíčové slovo se používá pro rozlišení \<cmath > verze a verze C++ AMP. Následující kód vypočítá logaritmus o základu 10, pomocí rychlé metody pro každou hodnotu, která je ve výpočetní doméně.
+C++ AMP obsahuje dvě matematické knihovny. Knihovna s dvojitou přesností v [Concurrency::precise_math Namespace](../../parallel/amp/reference/concurrency-precise-math-namespace.md) poskytuje podporu pro funkce s dvojitou přesností. Také poskytuje podporu pro funkce s jednoduchou přesností, i když je nutné použít podporu dvojité přesnosti na hardwaru. Odpovídá [dle specifikace C99 (ISO/IEC 9899)](https://go.microsoft.com/fwlink/p/?linkid=225887). Akcelerátor musí podporovat plnou dvojitou přesnost. Můžete určit, zda ji provede pomocí kontroly hodnoty [Accelerator::supports_double_precision – datový člen](reference/accelerator-class.md#supports_double_precision). Rychlé matematické knihovny v [Concurrency::fast_math Namespace](../../parallel/amp/reference/concurrency-fast-math-namespace.md), obsahuje jinou sadu matematických funkcí. Tyto funkce, které podporují pouze `float` operandy, prováděny rychleji, ale nejsou tak přesné jako ty v knihovně matematiku s dvojitou přesností. Funkce jsou obsaženy v \<amp_math.h > hlavičkový soubor a všechny jsou deklarovány pomocí `restrict(amp)`. Funkce \<cmath > soubor hlaviček jsou importovány do obou `fast_math` a `precise_math` obory názvů. **Omezit** – klíčové slovo se používá pro rozlišení \<cmath > verze a verze C++ AMP. Následující kód vypočítá logaritmus o základu 10, pomocí rychlé metody pro každou hodnotu, která je ve výpočetní doméně.
 
 ```cpp
 #include <amp.h>
@@ -473,13 +473,13 @@ Stejně jako ostatní knihovny jazyka můžete použít C++ AMP v aplikacích pr
 
 - [Používání modelu C++ AMP v aplikacích pro UPW](../../parallel/amp/using-cpp-amp-in-windows-store-apps.md)
 
-- [Návod: Vytvoření základní komponenty prostředí Windows Runtime v jazyce C++ a volání komponenty z jazyka JavaScript](http://go.microsoft.com/fwlink/p/?linkid=249077)
+- [Návod: Vytvoření základní komponenty prostředí Windows Runtime v jazyce C++ a volání komponenty z jazyka JavaScript](https://go.microsoft.com/fwlink/p/?linkid=249077)
 
-- [Optimalizátor cest, app Store okno v jazyce JavaScript a C++ map Bing](http://go.microsoft.com/fwlink/p/?linkid=249078)
+- [Optimalizátor cest, app Store okno v jazyce JavaScript a C++ map Bing](https://go.microsoft.com/fwlink/p/?linkid=249078)
 
-- [Jak používat c ++ AMP z C# s použitím prostředí Windows Runtime](http://go.microsoft.com/fwlink/p/?linkid=249080)
+- [Jak používat c ++ AMP z C# s použitím prostředí Windows Runtime](https://go.microsoft.com/fwlink/p/?linkid=249080)
 
-- [Jak používat c ++ AMP z C#](http://go.microsoft.com/fwlink/p/?linkid=249081)
+- [Jak používat c ++ AMP z C#](https://go.microsoft.com/fwlink/p/?linkid=249081)
 
 - [Volání nativních funkcí ze spravovaného kódu](../../dotnet/calling-native-functions-from-managed-code.md)
 
@@ -508,4 +508,4 @@ Operace modulo a dělení celých čísel bez znaménka mají výrazně lepší 
 [C++ AMP (C++ Accelerated Massive Parallelism)](../../parallel/amp/cpp-amp-cpp-accelerated-massive-parallelism.md)<br/>
 [Syntaxe výrazů lambda](../../cpp/lambda-expression-syntax.md)<br/>
 [Referenční dokumentace (C++ AMP)](../../parallel/amp/reference/reference-cpp-amp.md)<br/>
-[Paralelní programování v blogu nativního kódu](http://go.microsoft.com/fwlink/p/?linkid=238472)
+[Paralelní programování v blogu nativního kódu](https://go.microsoft.com/fwlink/p/?linkid=238472)

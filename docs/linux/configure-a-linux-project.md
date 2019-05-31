@@ -2,12 +2,12 @@
 title: Konfigurace projektu C++ Linux v sadě Visual Studio
 ms.date: 11/12/2018
 ms.assetid: 4d7c6adf-54b9-4b23-bd23-5de0c825b768
-ms.openlocfilehash: 84b9242ad5af79ed48d716fb5a35db56428e9a98
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8e8bf2b12462a18c8a0e6c1c4d6677f18e2f0f34
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62389821"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66451148"
 ---
 # <a name="configure-a-linux-project"></a>Konfigurace projektu Linux
 
@@ -31,7 +31,7 @@ Chcete-li změnit nastavení vztahující se ke vzdálenému počítači Linux, 
 
 - **Vzdálený kořenový adresář sestavení** Určuje, kde sestavení projektu ve vzdáleném počítači Linux umístění kořenového adresáře.  To bude ve výchozím nastavení **~/projects** není-li změnit.
 
-- **Vzdálený adresář projektu sestavení** je, kde bude vytvořen tohoto konkrétního projektu na vzdáleném počítači s Linuxem.  To bude ve výchozím nastavení **$(RemoteRootDir)/$(ProjectName)**, který se rozbalí a adresář s názvem po aktuální projekt pod kořenovým adresářem uvedené výše.
+- **Vzdálený adresář projektu sestavení** je, kde bude vytvořen tohoto konkrétního projektu na vzdáleném počítači s Linuxem.  To bude ve výchozím nastavení **$(RemoteRootDir)/$(ProjectName)** , který se rozbalí a adresář s názvem po aktuální projekt pod kořenovým adresářem uvedené výše.
 
 > [!NOTE]
 > Ke změně výchozího jazyka C a kompilátory C++, nebo Linkeru a archivačního programu sloužící k sestavení projektu, použijte odpovídající položky v **C/C++ > Obecné** oddílu a **Linker > Obecné** oddílu.  To může být nastaven na použití určité verze GCC, nebo dokonce kompilátoru Clang, třeba. Další informace najdete v části [vlastnosti C/C++ (Linux C++)](prop-pages/c-cpp-linux.md) a [vlastnosti Linkeru (Linux C++)](prop-pages/linker-linux.md).
@@ -40,7 +40,7 @@ Chcete-li změnit nastavení vztahující se ke vzdálenému počítači Linux, 
 
 **Visual Studio 2017 verze 15.6 a starší:**<br/>
 Ve výchozím nastavení Visual Studio nezahrnuje všech souborů include úrovni systému z počítače s Linuxem.  Příklad položky v **/usr/include** adresáře nejsou k dispozici v sadě Visual Studio.
-Úplné [IntelliSense](/visualstudio/ide/using-intellisense) podpory, budete muset zkopírovat tyto soubory do umístění ve svém vývojovém počítači a sady Visual Studio přejděte do tohoto umístění.  Jednou z možností je použití spojovacího bodu služby (Secure Copy) ke kopírování souborů.  Ve Windows 10, můžete použít [Bash ve Windows](https://msdn.microsoft.com/commandline/wsl/about) ke spuštění spojovací bod služby.  U předchozích verzí systému Windows, například použít něco jako [PSCP (PuTTY Secure Copy)](http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html).
+Úplné [IntelliSense](/visualstudio/ide/using-intellisense) podpory, budete muset zkopírovat tyto soubory do umístění ve svém vývojovém počítači a sady Visual Studio přejděte do tohoto umístění.  Jednou z možností je použití spojovacího bodu služby (Secure Copy) ke kopírování souborů.  Ve Windows 10, můžete použít [Bash ve Windows](https://msdn.microsoft.com/commandline/wsl/about) ke spuštění spojovací bod služby.  U předchozích verzí systému Windows, například použít něco jako [PSCP (PuTTY Secure Copy)](https://www.chiark.greenend.org.uk/~sgtatham/putty/download.html).
 
 Zkopírujte soubory s použitím příkazu, který je podobný následujícímu:
 

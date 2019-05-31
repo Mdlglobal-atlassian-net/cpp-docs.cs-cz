@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - LNK1104
 ms.assetid: 9ca6f929-0efc-4055-8354-3cf5b4e636dc
-ms.openlocfilehash: bc6305ab2e96496aa212004e186150d4a51cf3fc
-ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.openlocfilehash: fcd3c06ae2db5c43aacbf781800870a83d2d77c1
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65446965"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66451144"
 ---
 # <a name="linker-tools-error-lnk1104"></a>Chyba linkerů LNK1104
 
@@ -81,7 +81,7 @@ Pokud zadáte jednotlivé knihovny **Další závislosti** vlastnost přímo, po
 
 Tato chyba může zobrazit při cesta pro *filename* rozšiřuje na více než 260 znaků. Změňte názvy nebo změně uspořádání adresářovou strukturu v případě potřeby ke zkrácení cesty k požadovaným souborům.
 
-Této chybě může dojít, protože soubor je příliš velký. Knihovny nebo objekt soubory větší než gigabajty velikost může způsobit potíže 32bitovému linkeru. Je to možné opravu tohoto problému je použít 64bitové sady nástrojů. Další informace o tom, jak to provést na příkazovém řádku naleznete v tématu [jak: Povolit 64bitové sady nástrojů Visual C++ v příkazovém řádku](../../build/how-to-enable-a-64-bit-visual-cpp-toolset-on-the-command-line.md). Informace o tom, jak to provést v prostředí IDE najdete v tématu [pomocí nástroje MSBuild s 64bitovým kompilátorem a nástroji](../../build/walkthrough-using-msbuild-to-create-a-visual-cpp-project.md#using-msbuild-to-build-your-project) a tento příspěvek na webu Stack Overflow: [Jak sada Visual Studio pomocí sady nástrojů nativní amd64](http://stackoverflow.com/questions/19820718/how-to-make-visual-studio-use-the-native-amd64-toolchain/23793055).
+Této chybě může dojít, protože soubor je příliš velký. Knihovny nebo objekt soubory větší než gigabajty velikost může způsobit potíže 32bitovému linkeru. Je to možné opravu tohoto problému je použít 64bitové sady nástrojů. Další informace o tom, jak to provést na příkazovém řádku naleznete v tématu [jak: Povolit 64bitové sady nástrojů Visual C++ v příkazovém řádku](../../build/how-to-enable-a-64-bit-visual-cpp-toolset-on-the-command-line.md). Informace o tom, jak to provést v prostředí IDE najdete v tématu [pomocí nástroje MSBuild s 64bitovým kompilátorem a nástroji](../../build/walkthrough-using-msbuild-to-create-a-visual-cpp-project.md#using-msbuild-to-build-your-project) a tento příspěvek na webu Stack Overflow: [Jak sada Visual Studio pomocí sady nástrojů nativní amd64](https://stackoverflow.com/questions/19820718/how-to-make-visual-studio-use-the-native-amd64-toolchain/23793055).
 
 K této chybě může dojít, pokud máte soubor dostatečná oprávnění pro přístup k *filename*. To může dojít, pokud můžete použít běžný uživatelský účet a pokus o přístup k souborům knihovny v adresářích chráněného systému, nebo použít soubory zkopírovány z jiných uživatelů, kteří mají oprávnění k nim původní nastavení. Chcete-li vyřešit tento problém, přesuňte soubor na adresář zapisovatelný projektu. Pokud soubor je do zapisovatelného adresáře, ale je nedostupný oprávnění, můžete použít příkazový řádek správce a spusťte příkaz takeown.exe převzít vlastnictví souboru.
 

@@ -1,18 +1,19 @@
 ---
-title: Řetězec a formátování I/o (moderní verze jazyka C++)
-ms.date: 11/04/2016
+title: Formátování řetězců a I/O (moderní verze jazyka C++)
+description: Možnosti pro formátovaný řetězec vstupně-výstupní operace k dispozici v moderních C++.
+ms.date: 05/30/2019
 ms.topic: conceptual
 ms.assetid: 3954e8de-a59b-4175-89c9-4ee842ab89ed
-ms.openlocfilehash: c051a7d70042456d30bee0ebb2b362c5d05b8e37
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e22c745798109a2dbef82297c45256593823f806
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62266917"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66450498"
 ---
 # <a name="string-and-io-formatting-modern-c"></a>Formátování řetězců a I/O (moderní verze jazyka C++)
 
-C++ [iostreams](../standard-library/iostream.md) jsou schopny vstupu a výstupu formátovaných řetězců. Například následující kód ukazuje, jak nastavit cout k formátování výstupu v šestnáctkové soustavě, nejprve uložením mimo aktuální stav a opětovným nastavením později, protože jakmile formátování stavu je předání cout zůstane tak, jak, dokud není změněno, nikoli pouze pro jeden řádek celého čísla kódu.
+C++[ \<iostream – >](../standard-library/iostream.md) tříd, funkcí a operátorů podporují formátovaný řetězec vstupně-výstupních operací. Například následující kód ukazuje, jak nastavit `cout` k formátování výstupu v šestnáctkové soustavě celého čísla. Nejprve ho uloží aktuální stav resetovat ho později, protože jednou formátu stav je předán `cout`, zůstane tak, jak, dokud se nezmění. Neplatí pouze pro jeden řádek kódu.
 
 ```cpp
 #include <iostream>
@@ -38,17 +39,21 @@ int main()
 }
 ```
 
-To může být v mnoha případech příliš obtížné. Jako alternativu můžete použít metodu Boost.Format z knihoven Boost C++, přestože je nestandardní. Všechny knihovny Boost můžete stáhnout [Boost](http://www.boost.org/) webu.
+Tento přístup je typově bezpečné a rozšiřitelné, ale je také komplexní a podrobný.
 
-Některé výhody Boost.Format jsou:
+## <a name="alternative-format-options"></a>Možnosti alternativní formátu
 
-- Bezpečnost: Typově bezpečný a vyvolá výjimku – například specifikace příliš málo nebo příliš mnoho položek.
+Jako alternativu můžete použít `Boost.Format` z nárůst C++ knihovny, i když je nestandardní. Všechny knihovny Boost můžete stáhnout [Boost](https://www.boost.org/) webu.
+
+Mezi výhody `Boost.Format` jsou:
+
+- Bezpečnost: Typově bezpečný a vyvolá výjimku, například specifikace příliš málo nebo příliš mnoho položek.
 
 - Rozšiřitelné: Funguje pro libovolný typ, který můžete Streamovat.
 
 - Pohodlné: Standard Posix a podobné formátovací řetězce.
 
-I když je Boost.Format založen na knihovnách C++ [iostreams](../standard-library/iostream-programming.md), které jsou bezpečné a rozšiřitelné, a proto nejsou optimalizovány pro výkon. Pokud požadujete optimalizaci výkonu, zvažte v jazyku C [printf](../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md) a [sprintf](../c-runtime-library/reference/sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md), které jsou rychlé a snadné použití. Však nejsou rozšiřitelné nebo bezpečné před chybami zabezpečení. (Existují bezpečné verze, ale způsobují mírné snížení výkonu. Další informace najdete v tématu [printf_s _printf_s_l –, wprintf_s – _wprintf_s_l –](../c-runtime-library/reference/printf-s-printf-s-l-wprintf-s-wprintf-s-l.md) a [sprintf_s – _sprintf_s_l –, swprintf_s – _swprintf_s_l –](../c-runtime-library/reference/sprintf-s-sprintf-s-l-swprintf-s-swprintf-s-l.md)).
+I když `Boost.Format` je postavená na C++ [ \<iostream – >](../standard-library/iostream-programming.md) zařízení, které jsou bezpečné a rozšiřitelné, nejsou optimalizovány pro výkon. Pokud požadujete optimalizaci výkonu, zvažte v jazyku C [printf](../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md) a [sprintf](../c-runtime-library/reference/sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md), které jsou rychlé a snadné použití. Však nejsou rozšiřitelné nebo bezpečné před chybami zabezpečení. (Existují bezpečné verze, ale způsobují mírné snížení výkonu. Další informace najdete v tématu [printf_s _printf_s_l –, wprintf_s – _wprintf_s_l –](../c-runtime-library/reference/printf-s-printf-s-l-wprintf-s-wprintf-s-l.md) a [sprintf_s – _sprintf_s_l –, swprintf_s – _swprintf_s_l –](../c-runtime-library/reference/sprintf-s-sprintf-s-l-swprintf-s-swprintf-s-l.md)).
 
 Následující kód ukazuje některé funkce formátování Boost.
 

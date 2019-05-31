@@ -162,12 +162,12 @@ helpviewer_keywords:
 - CTreeCtrl [MFC], SortChildren
 - CTreeCtrl [MFC], SortChildrenCB
 ms.assetid: 96e20031-6161-4143-8c12-8d1816c66d90
-ms.openlocfilehash: 3819e861b7a5e6ff27fe632a33413b588a5a4835
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2428c94eaa5dd371d58680f6317173709f684507
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62323632"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66449574"
 ---
 # <a name="ctreectrl-class"></a>Ctreectrl – třída
 
@@ -183,13 +183,13 @@ class CTreeCtrl : public CWnd
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CTreeCtrl::CTreeCtrl](#ctreectrl)|Vytvoří `CTreeCtrl` objektu.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CTreeCtrl::Create](#create)|Vytvoří ovládací prvek stromového zobrazení a připojí ho k `CTreeCtrl` objektu.|
 |[CTreeCtrl::CreateDragImage](#createdragimage)|Vytvoří přetahování rastrového obrázku pro položku zobrazení domény stromové struktury.|
@@ -375,7 +375,7 @@ Nenulové, pokud je úspěšná jinak 0.
 
 ### <a name="remarks"></a>Poznámky
 
-Použití `CreateEx` místo [vytvořit](#create) použít rozšířené styly Windows určené předponu rozšířeného stylu Windows **WS_EX_**.
+Použití `CreateEx` místo [vytvořit](#create) použít rozšířené styly Windows určené předponu rozšířeného stylu Windows **WS_EX_** .
 
 ##  <a name="createdragimage"></a>  CTreeCtrl::CreateDragImage
 
@@ -935,7 +935,7 @@ Pokud je tento parametr nenulovou hodnotu, ohraničující obdélník obsahuje p
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Nenulové, pokud je položka viditelná, s ohraničující obdélník součástí *lprect –*. Jinak 0 s *lprect –* Neinicializovaný.
+Nenulové, pokud je položka viditelná, s ohraničující obdélník součástí *lprect –* . Jinak 0 s *lprect –* Neinicializovaný.
 
 ### <a name="example"></a>Příklad
 
@@ -1505,7 +1505,7 @@ Popisovač na položku zobrazení stromu ( `HTREEITEM`), který odpovídá *uAcc
 
 ### <a name="remarks"></a>Poznámky
 
-Usnadnění jsou aplikace, které pomůže uživatelům s postižením používání počítačů. Usnadnění identifikátoru je používán `IAccessible` rozhraní jednoznačně určit element v okně. Další informace o usnadnění identifikátory, vyhledejte téma "O Active Accessibility podpory" v [Microsoft Developer Network](http://go.microsoft.com/fwlink/p/?linkid=56322).
+Usnadnění jsou aplikace, které pomůže uživatelům s postižením používání počítačů. Usnadnění identifikátoru je používán `IAccessible` rozhraní jednoznačně určit element v okně. Další informace o usnadnění identifikátory, vyhledejte téma "O Active Accessibility podpory" v [Microsoft Developer Network](https://go.microsoft.com/fwlink/p/?linkid=56322).
 
 Tato metoda odesílá [TVM_MAPACCIDTOHTREEITEM](/windows/desktop/Controls/tvm-mapaccidtohtreeitem) zprávu, která je popsána v sadě Windows SDK.
 
@@ -1541,7 +1541,7 @@ Usnadnění identifikátor, který odpovídá *: hItem* parametru.
 
 ### <a name="remarks"></a>Poznámky
 
-Usnadnění jsou aplikace, které pomůže uživatelům s postižením používání počítačů. Usnadnění identifikátoru je používán `IAccessible` rozhraní jednoznačně určit element v okně. Další informace o usnadnění identifikátory, vyhledejte téma "O Active Accessibility podpory" v [Microsoft Developer Network](http://go.microsoft.com/fwlink/p/?linkid=56322).
+Usnadnění jsou aplikace, které pomůže uživatelům s postižením používání počítačů. Usnadnění identifikátoru je používán `IAccessible` rozhraní jednoznačně určit element v okně. Další informace o usnadnění identifikátory, vyhledejte téma "O Active Accessibility podpory" v [Microsoft Developer Network](https://go.microsoft.com/fwlink/p/?linkid=56322).
 
 Tato metoda odesílá [TVM_MAPHTREEITEMTOACCID](/windows/desktop/Controls/tvm-maphtreeitemtoaccid) zprávu, která je popsána v sadě Windows SDK.
 
@@ -2281,7 +2281,7 @@ void ShowInfoTip(HTREEITEM hItem);
 
 ### <a name="remarks"></a>Poznámky
 
-Další informace o rozdílech mezi popisy tlačítek a infotips, vyhledejte téma "A popisy tlačítek Infotips" v [Microsoft Developer Network](http://go.microsoft.com/fwlink/p/?linkid=56322).
+Další informace o rozdílech mezi popisy tlačítek a infotips, vyhledejte téma "A popisy tlačítek Infotips" v [Microsoft Developer Network](https://go.microsoft.com/fwlink/p/?linkid=56322).
 
 Tato metoda odesílá [TVM_SHOWINFOTIP](/windows/desktop/Controls/tvm-showinfotip) zprávu, která je popsána v sadě Windows SDK.
 

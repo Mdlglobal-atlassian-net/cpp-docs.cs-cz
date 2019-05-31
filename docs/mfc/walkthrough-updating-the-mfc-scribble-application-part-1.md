@@ -9,12 +9,12 @@ helpviewer_keywords:
 - MFC Feature Pack, update existing application
 - walkthroughs [MFC], update existing application
 ms.assetid: aa6330d3-6cfc-4c79-8fcb-0282263025f7
-ms.openlocfilehash: cba28039cb7755149b35a47ddee82b6274fe4c72
-ms.sourcegitcommit: 283cb64fd7958a6b7fbf0cd8534de99ac8d408eb
+ms.openlocfilehash: a12c2bd2c1c1963630a1bd74b56f2c832573cc94
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64558221"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66450511"
 ---
 # <a name="walkthrough-updating-the-mfc-scribble-application-part-1"></a>Návod: Aktualizace aplikace MFC Scribble (část 1)
 
@@ -24,7 +24,7 @@ Tento názorný postup upravuje classic vzorek Scribble 1.0 MFC, který vám umo
 
 ## <a name="prerequisites"></a>Požadavky
 
-[Vzorek Scribble 1.0 MFC](http://download.microsoft.com/download/4/0/9/40946FEC-EE5C-48C2-8750-B0F8DA1C99A8/MFC/general/Scribble.zip.exe). Nápovědu k převodu do sady Visual Studio 2017 nebo později, naleznete v tématu [portování průvodce: MFC Scribble](../porting/porting-guide-mfc-scribble.md).
+[Vzorek Scribble 1.0 MFC](https://download.microsoft.com/download/4/0/9/40946FEC-EE5C-48C2-8750-B0F8DA1C99A8/MFC/general/Scribble.zip.exe). Nápovědu k převodu do sady Visual Studio 2017 nebo později, naleznete v tématu [portování průvodce: MFC Scribble](../porting/porting-guide-mfc-scribble.md).
 
 ##  <a name="top"></a> Oddíly
 
@@ -171,7 +171,7 @@ Se skládá z pásu karet **aplikace** tlačítko, které je velké tlačítko v
 
 1. V návrhovém zobrazení, klikněte na tlačítko **aplikace** tlačítko a zobrazte její vlastnosti. Změňte hodnoty vlastností následujícím způsobem: **Image** k `IDB_RIBBON_MAIN`, **výzvy** k `File`, **klíče** k `f`, **Large Images** k `IDB_RIBBON_FILELARGE`a **Small Images** k `IDB_RIBBON_FILESMALL`.
 
-1. Vytvořit následující změny v nabídce, která se zobrazí, když uživatel klikne **aplikace** tlačítko. Klikněte na tlačítko se třemi tečkami (**...** ) vedle položky **položky hlavní** otevřít **Editor položek**.
+1. Vytvořit následující změny v nabídce, která se zobrazí, když uživatel klikne **aplikace** tlačítko. Klikněte na tlačítko se třemi tečkami ( **...** ) vedle položky **položky hlavní** otevřít **Editor položek**.
 
    1. S **položky** typ **tlačítko** vybraný, klikněte na tlačítko **přidat** přidáte tlačítko. Změna **titulek** k `&New`, **ID** k `ID_FILE_NEW`, **Image** k `0`, **velký obrázek** k `0`.
 
@@ -199,7 +199,7 @@ Se skládá z pásu karet **aplikace** tlačítko, které je velké tlačítko v
 
 1. Následující změny vytvoří ukončení tlačítko, které se zobrazí v dolní části **aplikace** tlačítka nabídky.
 
-   1. V **vlastnosti** okna, klikněte na tlačítko se třemi tečkami (**...** ) vedle položky **tlačítko** otevřít **Editor položek**.
+   1. V **vlastnosti** okna, klikněte na tlačítko se třemi tečkami ( **...** ) vedle položky **tlačítko** otevřít **Editor položek**.
 
    1. S **položky** typ **tlačítko** vybraný, klikněte na tlačítko **přidat** přidáte tlačítko. Změna **titulek** k `E&xit`, **ID** k `ID_APP_EXIT`, **Image** k `8`.
 

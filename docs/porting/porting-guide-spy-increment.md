@@ -2,12 +2,12 @@
 title: 'Průvodce přenosem: Spy++'
 ms.date: 11/19/2018
 ms.assetid: e558f759-3017-48a7-95a9-b5b779d5e51d
-ms.openlocfilehash: b28de2396ba94578a8d06038a1191be42dce49ea
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: bca5e912d28124e8d5d6e56cc234ef7bf9bceb89
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62337421"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66451119"
 ---
 # <a name="porting-guide-spy"></a>Průvodce přenosem: Spy++
 
@@ -39,7 +39,7 @@ Byl jeden ze souborů, které se nenašel v nástroji Spy ++ verstamp.h. Ze vyhl
 1>C:\Program Files (x86)\Windows Kits\8.1\Include\shared\common.ver(212): error RC2104: undefined keyword or key name: VER_FILEFLAGSMASK
 ```
 
-Nejjednodušší způsob, jak najít symbol v souborech zahrnutí k dispozici je použití **najít v souborech** (**Ctrl**+**Shift**+**F**) a zadejte **adresáře souborů k zahrnutí Visual C++**. Našli jsme ji v ntverp.h. Jsme nahradit verstamp.h zahrnout ntverp.h a zmizel k této chybě.
+Nejjednodušší způsob, jak najít symbol v souborech zahrnutí k dispozici je použití **najít v souborech** (**Ctrl**+**Shift**+**F**) a zadejte **adresáře souborů k zahrnutí Visual C++** . Našli jsme ji v ntverp.h. Jsme nahradit verstamp.h zahrnout ntverp.h a zmizel k této chybě.
 
 ##  <a name="linker_output_settings"></a> Krok 3. Nastavení OutputFile linkeru
 
@@ -51,7 +51,7 @@ MSBuild si bude stěžovat na, který **Link.OutputFile** vlastnost neodpovídá
 warning MSB8012: TargetPath(...\spyxx\spyxxhk\.\..\Debug\SpyxxHk.dll) does not match the Linker's OutputFile property value (...\spyxx\Debug\SpyHk55.dll). This may cause your project to build incorrectly. To correct this, please make sure that $(OutDir), $(TargetName) and $(TargetExt) property values match the value specified in %(Link.OutputFile).warning MSB8012: TargetName(SpyxxHk) does not match the Linker's OutputFile property value (SpyHk55). This may cause your project to build incorrectly. To correct this, please make sure that $(OutDir), $(TargetName) and $(TargetExt) property values match the value specified in %(Link.OutputFile).
 ```
 
-**Link.OutputFile** je výstup sestavení (EXE, DLL, třeba) a je obvykle vytvořen z `$(TargetDir)$(TargetName)$(TargetExt)`, poskytuje cesty, názvu souboru a přípony. To je běžné chyby při migraci projektů ze staré Visual C++ sestavení nástroje (vcbuild.exe) nový nástroj pro sestavení (MSBuild.exe). Protože došlo ke změně nástroj pro sestavení v sadě Visual Studio 2010, můžete narazit na tento problém pokaždé, když se migrovat projekt Project 2010 2010 nebo novější verzi. Základní problém je, že v Průvodci projektem migrace neprovede aktualizaci **Link.OutputFile** hodnotu, protože není vždy možné určit, co by měl mít hodnotu na základě jiné nastavení projektu. Proto je obvykle nutné nastavit ručně. Další podrobnosti najdete v tomto [příspěvku](http://blogs.msdn.com/b/vcblog/archive/2010/03/02/visual-studio-2010-c-project-upgrade-guide.aspx) na blogu Visual C++.
+**Link.OutputFile** je výstup sestavení (EXE, DLL, třeba) a je obvykle vytvořen z `$(TargetDir)$(TargetName)$(TargetExt)`, poskytuje cesty, názvu souboru a přípony. To je běžné chyby při migraci projektů ze staré Visual C++ sestavení nástroje (vcbuild.exe) nový nástroj pro sestavení (MSBuild.exe). Protože došlo ke změně nástroj pro sestavení v sadě Visual Studio 2010, můžete narazit na tento problém pokaždé, když se migrovat projekt Project 2010 2010 nebo novější verzi. Základní problém je, že v Průvodci projektem migrace neprovede aktualizaci **Link.OutputFile** hodnotu, protože není vždy možné určit, co by měl mít hodnotu na základě jiné nastavení projektu. Proto je obvykle nutné nastavit ručně. Další podrobnosti najdete v tomto [příspěvku](https://devblogs.microsoft.com/cppblog/visual-studio-2010-c-project-upgrade-guide/) na blogu Visual C++.
 
 V takovém případě **Link.OutputFile** vlastnost v převedeného projektu byla nastavena na.\Debug\Spyxx.exe a.\Release\Spyxx.exe nástroje Spy ++ projektu, v závislosti na konfiguraci. Nejvhodnějších je jednoduše nahrazovat tyto hodnoty pevně zakódované `$(TargetDir)$(TargetName)$(TargetExt)` pro **všechny konfigurace**. Pokud to nepomůže, můžete upravit z něj nebo změny vlastností v **Obecné** části, kde jsou tyto hodnoty nastaveny (vlastnosti jsou **výstupní adresář**, **název cílového**, a **cílit na rozšíření**. Mějte na paměti, pokud vlastnost si prohlížíte používá makra, které můžete zvolit **upravit** v rozevíracím seznamu a zobrazte dialogové okno, které se zobrazují posledním řetězci uvedené s provedeny náhrady – makro. Všechna dostupná makra a jejich aktuální hodnoty můžete zobrazit výběrem **makra** tlačítko.
 

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - LNK2001
 ms.assetid: dc1cf267-c984-486c-abd2-fd07c799f7ef
-ms.openlocfilehash: 824fa9108e6322b1bcf77d6c28c7fb843b743833
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 916c37e3283f40ff5ded865a573ff45839de6e2a
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62161014"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66449621"
 ---
 # <a name="linker-tools-error-lnk2001"></a>Chyba linkerů LNK2001
 
@@ -71,7 +71,7 @@ K této chybě může dojít, pokud váš kód odkazuje na symbol z jedné verze
 
 Aktuálně nejsou k dispozici žádné standard pro [C++ pojmenování](../../error-messages/tool-errors/name-decoration.md) mezi dodavateli kompilátoru nebo dokonce i mezi různými verzemi kompilátoru. Proto propojování souborů objektů kompilován jinými kompilátory nemusí vytvářejí stejné schéma pojmenování a chyba LNK2001, čímž vznikne.
 
-[Kombinování vložené a které nejsou vložené možnosti kompilace](../../error-messages/tool-errors/function-inlining-problems.md) na různých modulů, může způsobit LNK2001. Pokud knihovnu C++ se vytvoří pomocí funkce vkládání zapnuté (**/Ob1** nebo **/ob2**), ale má odpovídající soubor záhlaví popisující funkce vkládání vypnuto (žádné `inline` – klíčové slovo), k této chybě Vyvolá se v. Chcete-li vyřešit tento problém, definování funkcí `inline` v hlavičkovém souboru je zahrnout v jiných zdrojových souborech.
+[Kombinování vložené a které nejsou vložené možnosti kompilace](../../error-messages/tool-errors/function-inlining-problems.md) na různých modulů, může způsobit LNK2001. Pokud knihovnu C++ se vytvoří pomocí funkce vkládání zapnuté ( **/Ob1** nebo **/ob2**), ale má odpovídající soubor záhlaví popisující funkce vkládání vypnuto (žádné `inline` – klíčové slovo), k této chybě Vyvolá se v. Chcete-li vyřešit tento problém, definování funkcí `inline` v hlavičkovém souboru je zahrnout v jiných zdrojových souborech.
 
 Pokud používáte `#pragma inline_depth` kompilátoru direktiv, ujistěte se, že máte [hodnotu 2 nebo novější sada](../../error-messages/tool-errors/function-inlining-problems.md)a ujistěte se, že použijete také [/Ob1](../../build/reference/ob-inline-function-expansion.md) nebo [/ob2](../../build/reference/ob-inline-function-expansion.md) – možnost kompilátoru.
 
@@ -101,5 +101,5 @@ V některých případech linker může jenom nahlásit to upravený název pro 
 
 ## <a name="additional-resources"></a>Další zdroje
 
-Další informace o možných příčinách a řešení pro LNK2001 viz otázka na Stack Overflow [co se o chybu nedefinované odkaz/nerozpoznaných externích symbolů a jak ho mám opravit?](http://stackoverflow.com/q/12573816/2002113).
+Další informace o možných příčinách a řešení pro LNK2001 viz otázka na Stack Overflow [co se o chybu nedefinované odkaz/nerozpoznaných externích symbolů a jak ho mám opravit?](https://stackoverflow.com/q/12573816/2002113).
 

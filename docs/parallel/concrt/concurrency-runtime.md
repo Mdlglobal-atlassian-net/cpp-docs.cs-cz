@@ -6,12 +6,12 @@ helpviewer_keywords:
 - ConcRT (see Concurrency Runtime)
 - Concurrency Runtime
 ms.assetid: 874bc58f-8dce-483e-a3a1-4dcc9e52ed2c
-ms.openlocfilehash: 6f7b70dcbee639bdd44a195709bddde9e06dee21
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: fa64e2536fd1697e839f1b4921a290e1b7a30a35
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62414006"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66449694"
 ---
 # <a name="concurrency-runtime"></a>Concurrency Runtime
 
@@ -63,7 +63,7 @@ Odkaz na dokumentaci najdete v tématu [odkaz](../../parallel/concrt/reference/r
 |-|-|
 |[Vytváření asynchronních operací v jazyce C++ pro aplikace pro UPW](../../parallel/concrt/creating-asynchronous-operations-in-cpp-for-windows-store-apps.md)|Popisuje některé z klíčových bodů do vzít v úvahu při vytváření asynchronních operací v aplikaci pro UPW pomocí modulu Runtime souběžnosti.|
 |[Návod: Připojení pomocí úloh a žádostí XML HTTP](../../parallel/concrt/walkthrough-connecting-using-tasks-and-xml-http-requests.md)|Ukazuje, jak kombinovat úlohy PPL s `IXMLHTTPRequest2` a `IXMLHTTPRequest2Callback` rozhraní k odesílání požadavků HTTP GET a POST na webovou službu v aplikaci UWP.|
-|[Ukázky aplikací pro Windows Runtime](http://code.msdn.microsoft.com/windowsapps)|Obsahuje ukázky ke stažení kódu a ukázkové aplikace pro Windows 8.x. Ukázky v C++ pomocí funkce modulu Runtime souběžnosti, jako je úlohy PPL pro zpracování dat na pozadí zajistit uživatelského rozhraní reagovat.|
+|[Ukázky aplikací pro Windows Runtime](https://code.msdn.microsoft.com/windowsapps)|Obsahuje ukázky ke stažení kódu a ukázkové aplikace pro Windows 8.x. Ukázky v C++ pomocí funkce modulu Runtime souběžnosti, jako je úlohy PPL pro zpracování dat na pozadí zajistit uživatelského rozhraní reagovat.|
 
 ## <a name="dataflow-programming-in-the-asynchronous-agents-library"></a>Programování toku dat v knihovně asynchronních agentů
 
@@ -99,8 +99,8 @@ Odkaz na dokumentaci najdete v tématu [odkaz](../../parallel/concrt/reference/r
 |||
 |-|-|
 |[Vzory asynchronního programování a v Hilo (aplikace Windows Store pomocí jazyka C++ a XAML)](https://msdn.microsoft.com/library/windows/apps/jj160321.aspx)|Zjistěte, jak můžete využít modul Concurrency Runtime pro implementaci asynchronních operací v Hilo, aplikace v jazyce prostředí Windows Runtime pomocí jazyka C++ a XAML.|
-|[Paralelní programování v blogu nativního kódu](http://go.microsoft.com/fwlink/p/?linkid=183873)|Poskytuje podrobný blogový další články o paralelním programování v modulu Runtime souběžnosti.|
-|[V C++ a nativním kódu fórum pro paralelní výpočty](http://go.microsoft.com/fwlink/p/?linkid=183874)|Umožňuje účast v komunitě diskuse o modulu Runtime souběžnosti.|
+|[Paralelní programování v blogu nativního kódu](https://go.microsoft.com/fwlink/p/?linkid=183873)|Poskytuje podrobný blogový další články o paralelním programování v modulu Runtime souběžnosti.|
+|[V C++ a nativním kódu fórum pro paralelní výpočty](https://go.microsoft.com/fwlink/p/?linkid=183874)|Umožňuje účast v komunitě diskuse o modulu Runtime souběžnosti.|
 |[Paralelní programování](/dotnet/standard/parallel-programming/index)|Naučíte se o paralelní programovací model, který je k dispozici v rozhraní .NET Framework.|
 
 ## <a name="see-also"></a>Viz také:

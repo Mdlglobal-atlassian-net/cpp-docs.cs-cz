@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Windows Forms [C++], hosting as MFC Dialog
 - hosting Windows Forms control [C++]
 ms.assetid: 0434a9d7-8b14-48e6-ad69-9ba9a684677a
-ms.openlocfilehash: 4c4ee8c8b4570b598ba20b3bd5e1cf4c706ee885
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5b216580f4965e0814b8a100f968a322641a3398
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62222946"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66450720"
 ---
 # <a name="hosting-a-windows-form-user-control-as-an-mfc-dialog-box"></a>Hostitelské poskytování uživatelského ovládacího prvku modelu Windows Form jako dialogového okna knihovny MFC
 
@@ -19,7 +19,7 @@ Knihovna MFC poskytuje šablony třídy [CWinFormsDialog](../mfc/reference/cwinf
 
 Proces, který `CWinFormsDialog` používá k hostování uživatelského ovládacího prvku je podobný tomu popsanému v [hostitelské poskytování uživatelského Windows Form v dialogovém okně knihovny MFC](../dotnet/hosting-a-windows-form-user-control-in-an-mfc-dialog-box.md). Ale `CWinFormsDialog` spravuje inicializace a poskytování hostitelských služeb uživatelského ovládacího prvku, takže není nutné naprogramovat ručně.
 
-Ukázková aplikace, která ukazuje použití s knihovnou MFC modelu Windows Forms, naleznete v tématu [MFC a integrace formulářů Windows](http://www.microsoft.com/downloads/details.aspx?FamilyID=987021bc-e575-4fe3-baa9-15aa50b0f599&displaylang=en).
+Ukázková aplikace, která ukazuje použití s knihovnou MFC modelu Windows Forms, naleznete v tématu [MFC a integrace formulářů Windows](https://www.microsoft.com/downloads/details.aspx?FamilyID=987021bc-e575-4fe3-baa9-15aa50b0f599&displaylang=en).
 
 ### <a name="to-create-the-mfc-host-application"></a>Chcete-li vytvořit hostitelskou aplikaci knihovny MFC
 
@@ -35,7 +35,7 @@ Ukázková aplikace, která ukazuje použití s knihovnou MFC modelu Windows For
 
    V **Průzkumníka řešení**, klikněte pravým tlačítkem myši **MFC03** uzel projektu a zvolte **vlastnosti**. **Stránky vlastností** zobrazí se dialogové okno.
 
-   V **stránky vlastností** v dialogu **vlastnosti konfigurace** ovládacího prvku stromu, vyberte **Obecné**, pak v **výchozínastaveníprojektu**nastavte **Common Language Runtime support** k **Common Language Runtime Support (/ clr)**. Klikněte na **OK**.
+   V **stránky vlastností** v dialogu **vlastnosti konfigurace** ovládacího prvku stromu, vyberte **Obecné**, pak v **výchozínastaveníprojektu**nastavte **Common Language Runtime support** k **Common Language Runtime Support (/ clr)** . Klikněte na **OK**.
 
 1. Přidejte odkaz na ovládací prvek .NET.
 

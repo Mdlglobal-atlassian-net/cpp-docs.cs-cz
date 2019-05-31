@@ -7,19 +7,19 @@ helpviewer_keywords:
 - Visual C++, home page
 author: mikeblome
 ms.author: mblome
-ms.openlocfilehash: e9327f74f46590f4d4a71e56340dcadf6527fabb
-ms.sourcegitcommit: bde3279f70432f819018df74923a8bb895636f81
+ms.openlocfilehash: c2a38d13cd7b34880b64521af99103ed8192bfd0
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66174779"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66451205"
 ---
 # <a name="c-in-visual-studio"></a>C++ v sadě Visual Studio
 
 > [!NOTE]
 > Tuto dokumentaci pro vývojáře se vztahuje k sadě Visual Studio 2015 a novější. Pomocí selektoru verze v levém horním rohu stránky tak, aby odpovídaly vaší verze sady Visual Studio.
 >
-> Pokud hledáte balíček distribuovatelných součástí Visual C++ tak, aby mohly běžet programu, pokračujte [Microsoft Download Center](http://www.microsoft.com/download/) a zadejte **Visual C++** do vyhledávacího pole.
+> Pokud hledáte balíček distribuovatelných součástí Visual C++ tak, aby mohly běžet programu, pokračujte [Microsoft Download Center](https://www.microsoft.com/download/) a zadejte **Visual C++** do vyhledávacího pole.
 
 Microsoft Visual C++, obvykle zkrátila na Visual C++ nebo MSVC, je název pro C++, C a jazyk sestavení vývojářské nástroje a knihovny, které jsou k dispozici jako součást sady Visual Studio ve Windows. Tyto nástroje a knihovny umožňují vytvářet aplikace pro univerzální platformu Windows (UPW), nativních aplikací stolní počítače a servery Windows, multiplatformní knihovny a aplikace, které běží na Windows, Linux, Android a iOS, stejně jako spravovaných aplikací a knihoven, které používají rozhraní .NET Architektura. Visual C++ můžete použít k zápisu cokoli z jednoduché konzolové aplikace do nejvíce propracované a komplexní aplikace pro Windows desktop z ovladačů zařízení a součástí operačního systému pro mobilní zařízení a hry pro různé platformy z nejmenší zařízení IoT k více serverů vysokovýkonného výpočetního prostředí v cloudu Azure.
 
@@ -61,7 +61,7 @@ Zjistěte, které platformy jsou podporovány.
 [C++ vás vítá zpět](../cpp/welcome-back-to-cpp-modern-cpp.md)<br/>
 Další informace o moderní C++ programovací techniky na základě v C ++ 11 a novějším, které umožňují napsat rychlé a bezpečné kód a vyhnout se mnoho nástrahy programování ve stylu C.
 
-[Standardní C++](http://isocpp.org/)<br/>
+[Standardní C++](https://isocpp.org/)<br/>
 Získejte informace o jazyce C++, přehled o moderním jazyce C++ a odkazy na knihy, články, rozhovory a události.
 
 [Informace o jazyku Visual C++](../build/vscpp-step-1-create.md)<br/>

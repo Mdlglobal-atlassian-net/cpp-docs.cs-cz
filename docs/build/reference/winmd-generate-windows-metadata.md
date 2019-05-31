@@ -4,18 +4,18 @@ ms.date: 11/04/2016
 f1_keywords:
 - VC.Project.VCLinkerTool.GenerateWindowsMetadata
 ms.assetid: bcfb4901-411e-4c9e-9f78-23028b6e5fcc
-ms.openlocfilehash: 93db20d14d3477734e35d33111246f9459310b90
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 45d6492c87b7543a54d031f02dcf09e319150131
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62317156"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66449729"
 ---
 # <a name="winmd-generate-windows-metadata"></a>/WINMD (Generování metadat Windows)
 
 Povolí generování souboru Windows Runtime Metadata (.winmd).
 
-> **/ WINMD**\[**:**{**NE**\|**POUZE**}]
+> **/ WINMD**\[ **:** {**NE**\|**POUZE**}]
 
 ## <a name="arguments"></a>Arguments
 
@@ -30,7 +30,7 @@ Linker generuje pouze soubor winmd, ale nikoli binární spustitelný soubor.
 
 ## <a name="remarks"></a>Poznámky
 
-**Winmd** – možnost linkeru se používá pro aplikace UWP a součástí prostředí Windows runtime k řízení vytvoření souboru Windows Runtime metadata (.winmd). Soubor winmd je druh knihovny DLL, která obsahuje metadata pro typy Windows runtime a v případě součásti modulu runtime, implementace těchto typů. Řídí metadata [ECMA-335](http://www.ecma-international.org/publications/standards/Ecma-335.htm) standard.
+**Winmd** – možnost linkeru se používá pro aplikace UWP a součástí prostředí Windows runtime k řízení vytvoření souboru Windows Runtime metadata (.winmd). Soubor winmd je druh knihovny DLL, která obsahuje metadata pro typy Windows runtime a v případě součásti modulu runtime, implementace těchto typů. Řídí metadata [ECMA-335](https://www.ecma-international.org/publications/standards/Ecma-335.htm) standard.
 
 Ve výchozím nastavení, název výstupního souboru má tvar *binaryname*.winmd. Chcete-li zadat jiný název souboru, použijte [/WINMDFILE](winmdfile-specify-winmd-file.md) možnost.
 

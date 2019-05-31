@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Windows 8.x apps, creating C++ async operations
 - Creating C++ async operations
 ms.assetid: a57cecf4-394a-4391-a957-1d52ed2e5494
-ms.openlocfilehash: 8815861e525a2824bb1bc7a7d0e40f96b053c6a4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 92226d8db9fa87ce829ae96b4802ad2f45bc3e54
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62413977"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66450183"
 ---
 # <a name="creating-asynchronous-operations-in-c-for-uwp-apps"></a>Vytváření asynchronních operací v jazyce C++ pro aplikace pro UPW
 
@@ -126,7 +126,7 @@ Je vidět na následujícím obrázku `Primes` aplikace po jednotlivých možnos
 
 ![Prostředí Windows Runtime základen aplikace](../../parallel/concrt/media/concrt_windows_primes.png "základen modulu Windows Runtime aplikace")
 
-Příklady, které používají `create_async` pro vytváření asynchronních úloh určených pro jiné jazyky, naleznete v tématu [pomocí C++ v příklad optimalizace cesty mapy Bing](https://msdn.microsoft.com/library/windows/apps/hh699891.aspx) a [asynchronní operace systému Windows 8 v jazyce C++ pomocí úlohy PPL](http://code.msdn.microsoft.com/windowsapps/windows-8-asynchronous-08009a0d).
+Příklady, které používají `create_async` pro vytváření asynchronních úloh určených pro jiné jazyky, naleznete v tématu [pomocí C++ v příklad optimalizace cesty mapy Bing](https://msdn.microsoft.com/library/windows/apps/hh699891.aspx) a [asynchronní operace systému Windows 8 v jazyce C++ pomocí úlohy PPL](https://code.msdn.microsoft.com/windowsapps/windows-8-asynchronous-08009a0d).
 
 ##  <a name="exethread"></a> Řízení prováděcího vlákna
 

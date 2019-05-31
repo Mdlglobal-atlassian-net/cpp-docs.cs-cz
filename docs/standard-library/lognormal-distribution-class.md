@@ -26,12 +26,12 @@ helpviewer_keywords:
 - std::lognormal_distribution [C++], param_type
 - std::lognormal_distribution [C++], param_type
 ms.assetid: f2d6a431-6c3a-4370-b12e-4adb4ddf6cc4
-ms.openlocfilehash: bd57b45ec08d044719caa60635f731276794d407
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: eb92844ae1af36b9f4f7146e378fed1832c0b4f9
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62413070"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66449789"
 ---
 # <a name="lognormaldistribution-class"></a>lognormal_distribution – třída
 
@@ -92,7 +92,7 @@ Vlastnost člena `param()` Nastaví nebo vrátí `param_type` uložené distribu
 
 Další informace o distribuci třídy a jejich členy, naleznete v tématu [ \<náhodné >](../standard-library/random.md).
 
-Podrobné informace o rozdělení, najdete v článku Wolfram MathWorld [rozdělení](http://go.microsoft.com/fwlink/p/?linkid=400917).
+Podrobné informace o rozdělení, najdete v článku Wolfram MathWorld [rozdělení](https://go.microsoft.com/fwlink/p/?linkid=400917).
 
 ## <a name="example"></a>Příklad
 

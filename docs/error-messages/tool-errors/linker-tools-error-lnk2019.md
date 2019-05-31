@@ -7,12 +7,12 @@ helpviewer_keywords:
 - nochkclr.obj
 - LNK2019
 - _check_commonlanguageruntime_version
-ms.openlocfilehash: 0ef0bfd565b8c76816cc1f8a20b1521da238cdfc
-ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.openlocfilehash: eb28ff3673c054b8ac1876d8ba736ceddfa5fd1a
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65447705"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66449612"
 ---
 # <a name="linker-tools-error-lnk2019"></a>Chyba linkerů LNK2019
 
@@ -213,9 +213,9 @@ int main() {
 }
 ```
 
-Chcete-li tuto chybu vyřešit, změňte `unsigned short` k `wchar_t` nebo `WCHAR`, nebo kompilací LNK2019g.cpp pomocí **/Zc:wchar_t-**.
+Chcete-li tuto chybu vyřešit, změňte `unsigned short` k `wchar_t` nebo `WCHAR`, nebo kompilací LNK2019g.cpp pomocí **/Zc:wchar_t-** .
 
 ## <a name="additional-resources"></a>Další zdroje
 
-Další informace o možných příčinách a řešení pro LNK2001 viz otázka na Stack Overflow [co se o chybu nedefinované odkaz/nerozpoznaných externích symbolů a jak ho mám opravit?](http://stackoverflow.com/q/12573816/2002113).
+Další informace o možných příčinách a řešení pro LNK2001 viz otázka na Stack Overflow [co se o chybu nedefinované odkaz/nerozpoznaných externích symbolů a jak ho mám opravit?](https://stackoverflow.com/q/12573816/2002113).
 

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - /Gw compiler option [C++]
 - -Gw compiler option [C++]
 ms.assetid: 6f90f4e9-5eb8-4c47-886e-631278a5a4a9
-ms.openlocfilehash: 5796f353414a021908147bdd2f296ef8e02f69ad
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8afdb21defbbc8309b27749ab18a40f9555139e5
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62270708"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66450133"
 ---
 # <a name="gw-optimize-global-data"></a>/Gw (Optimalizovat globální data)
 
@@ -26,13 +26,13 @@ Globální data balíčku v oddílů COMDAT optimalizace.
 
 ## <a name="remarks"></a>Poznámky
 
-**/Gw** možnost způsobí, že kompilátor globální data balíčku v jednotlivých oddílů COMDAT. Ve výchozím nastavení **/Gw** je vypnuté a musí být explicitně povolené. Chcete-li explicitně zakázat, použijte **/Gw-**. Pokud obě **/Gw** a [/GL](gl-whole-program-optimization.md) jsou povolené, propojovací program používá k porovnání oddílů COMDAT napříč více souborů objektů, aby bylo možné vyloučit neodkazovaná globální data nebo sloučit optimalizace celého programu stejná jen pro čtení globální data. To může výrazně snížit velikost výsledné binárního spustitelného souboru.
+**/Gw** možnost způsobí, že kompilátor globální data balíčku v jednotlivých oddílů COMDAT. Ve výchozím nastavení **/Gw** je vypnuté a musí být explicitně povolené. Chcete-li explicitně zakázat, použijte **/Gw-** . Pokud obě **/Gw** a [/GL](gl-whole-program-optimization.md) jsou povolené, propojovací program používá k porovnání oddílů COMDAT napříč více souborů objektů, aby bylo možné vyloučit neodkazovaná globální data nebo sloučit optimalizace celého programu stejná jen pro čtení globální data. To může výrazně snížit velikost výsledné binárního spustitelného souboru.
 
 Když kompilujete a propojujete samostatně, můžete [OPT](opt-optimizations.md) – možnost linkeru vyloučit ze spustitelného souboru zkompilovaná neodkazovaná globálních dat v souborech objektů **/Gw** možnost.
 
 Můžete také použít [/OPT:ICF](opt-optimizations.md) a [parametru/LTCG](ltcg-link-time-code-generation.md) možnosti propojovacího programu dohromady a sloučit ve spustitelném souboru zkompilovaná všechny shodné jen pro čtení globálních dat napříč více souborů objektů **/Gw** možnost.
 
-Další informace najdete v tématu [Představujeme /Gw přepínač kompilátoru](http://blogs.msdn.com/b/vcblog/archive/2013/09/11/introducing-gw-compiler-switch.aspx) na blogu týmu Visual C++.
+Další informace najdete v tématu [Představujeme /Gw přepínač kompilátoru](https://devblogs.microsoft.com/cppblog/introducing-gw-compiler-switch/) na C++ Blog týmu.
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Nastavení tohoto parametru kompilátoru ve vývojovém prostředí Visual Studio
 

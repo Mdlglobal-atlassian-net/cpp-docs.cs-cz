@@ -2,12 +2,12 @@
 title: Visual C++ co&#39;s novou 2003 – 2015
 ms.date: 11/04/2016
 ms.assetid: c4afde6f-3d75-40bf-986f-be57e3818e26
-ms.openlocfilehash: 773500b32b1a80a6a7b1d1f2431b036f7ad3bd63
-ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.openlocfilehash: 4bcf661284d447b18542bb158940d539ef9c0686
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65448872"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66449805"
 ---
 # <a name="visual-c-what39s-new-2003-through-2015"></a>Visual C++ co&#39;s novou 2003 – 2015
 
@@ -20,7 +20,7 @@ Tato stránka obsahuje všechny "Novinky" stránky pro všechny verze sady Visua
 
 V sadě Visual Studio 2015 a novější probíhající vylepšení shoda s kompilátorem prostředí někdy změnit, jak kompilátor rozpozná existující zdrojový kód. Pokud k tomu dojde, mohou se vyskytnout nové nebo jiné chyby během sestavování nebo dokonce behaviorální rozdíly v kódu, který dříve vytvořené a vypadal jako správně spustit.
 
-Naštěstí tyto rozdíly mít žádné nebo téměř žádné dopad na většinu zdrojový kód a vyřešit tyto rozdíly jsou potřeba zdrojový kód nebo jiné změny, opravy jsou obvykle malé a přímočaré. Přidali jsme mnoho příkladů dříve přijatelné zdrojový kód, který může být nutné změnit *(před)* a opravy je opravit *(po)*.
+Naštěstí tyto rozdíly mít žádné nebo téměř žádné dopad na většinu zdrojový kód a vyřešit tyto rozdíly jsou potřeba zdrojový kód nebo jiné změny, opravy jsou obvykle malé a přímočaré. Přidali jsme mnoho příkladů dříve přijatelné zdrojový kód, který může být nutné změnit *(před)* a opravy je opravit *(po)* .
 
 I když váš zdrojový kód nebo jiných artefaktů sestavení, můžete tyto rozdíly ovlivňují, neovlivňují binární kompatibilitu mezi aktualizace na verzi Visual C++. Více závažné druh změn, *narušující změna* může mít vliv na binární kompatibilitu, ale tyto druhy binární kompatibilitu konce vyskytovat jenom mezi hlavními verzemi Visual C++. Například mezi Visual C++ 2013 a Visual C++ 2015. Informace o nejnovější změny, ke kterým došlo mezi Visual C++ 2013 a Visual C++ 2015, najdete v části [změn Visual C++ 2003 – 2015 historie](../porting/visual-cpp-change-history-2003-2015.md).
 
@@ -253,7 +253,7 @@ I když váš zdrojový kód nebo jiných artefaktů sestavení, můžete tyto r
 
 - **Nové umístění a delete**
 
-   Byla provedena změna **odstranit** operátor pamětí souladu s C ++ 14, standardní. Podrobnosti o změně standardy najdete v [C++ velikostí Dealokace](http://isocpp.org/files/papers/n3778.html). Změny přidejte formulář globálního **odstranit** operátor, který přijímá parametr velikosti. Rozbíjející změnu je, že pokud jste dříve používali operátor **odstranit** se stejným podpisem (tak, aby odpovídaly s **nové umístění** operátor), obdržíte chybu kompilátoru (C2956, to se stává v místě, kde **nové umístění** se používá, protože to je pozice v kódu, kde kompilátor se pokusí identifikovat příslušné odpovídající **odstranit** operátor).
+   Byla provedena změna **odstranit** operátor pamětí souladu s C ++ 14, standardní. Podrobnosti o změně standardy najdete v [C++ velikostí Dealokace](https://isocpp.org/files/papers/n3778.html). Změny přidejte formulář globálního **odstranit** operátor, který přijímá parametr velikosti. Rozbíjející změnu je, že pokud jste dříve používali operátor **odstranit** se stejným podpisem (tak, aby odpovídaly s **nové umístění** operátor), obdržíte chybu kompilátoru (C2956, to se stává v místě, kde **nové umístění** se používá, protože to je pozice v kódu, kde kompilátor se pokusí identifikovat příslušné odpovídající **odstranit** operátor).
 
    Funkce `void operator delete(void *, size_t)` byla **umístění operátoru delete** odpovídající operátor **umístění nového** funkce `void * operator new(size_t, size_t)` v C ++ 11. Pomocí C ++ 14 velikostí dealokace, to **odstranit** funkce je teď *funkce zrušení přidělení obvykle* (globální **odstranit** operátor). Standardní vyžaduje, že pokud použití **umístění nového** vyhledá odpovídající **odstranit** funkce a najde funkce obvykle zrušení přidělení, program je chybně vytvořený.
 
@@ -1741,7 +1741,7 @@ Kromě **paralelní úlohy** okno a **paralelní zásobníky** okně Visual Stud
 
 **Sémantického barevného zvýraznění.** Typy, výčty, makra a další tokeny jazyka C++ nyní mají zabarvení ve výchozím nastavení.
 
-**Zvýraznění odkazů.** Výběrem symbolu teď zvýrazní všechny výskyty symbolu v aktuálním souboru. Stisknutím klávesy **Ctrl**+**Shift**+**šipka nahoru** nebo **Ctrl**+**Shift**  + **Šipka dolů** k procházení zvýrazněných odkazů. Můžete vypnout tato funkce **možnosti** dialogovém okně **textový Editor** > **C/C++** > **Upřesnit**.
+**Zvýraznění odkazů.** Výběrem symbolu teď zvýrazní všechny výskyty symbolu v aktuálním souboru. Stisknutím klávesy **Ctrl**+**Shift**+**šipka nahoru** nebo **Ctrl**+**Shift**  + **Šipka dolů** k procházení zvýrazněných odkazů. Můžete vypnout tato funkce **možnosti** dialogovém okně **textový Editor** > **C/C++**  > **Upřesnit**.
 
 ### <a name="application-lifecycle-management-tools"></a>Nástroje pro správu životního cyklu aplikací
 

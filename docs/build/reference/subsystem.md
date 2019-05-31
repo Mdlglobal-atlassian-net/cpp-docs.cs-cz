@@ -8,12 +8,12 @@ helpviewer_keywords:
 - -SUBSYSTEM editbin option
 - SUBSYSTEM editbin option
 ms.assetid: 515e4cdf-3cc4-4659-8764-1f2757b49215
-ms.openlocfilehash: b13313d57226719086cb73584543488f842057c1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e67ec57c3a8d74fdd97a94ed04c29cad53af1ea5
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62317715"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66450726"
 ---
 # <a name="subsystem"></a>/SUBSYSTEM
 
@@ -43,7 +43,7 @@ Aplikace znakového režimu Windows. Operační systém poskytuje konzolu pro ko
 **EFI_RUNTIME_DRIVER**<br/>
 Obrázek Extensible Firmware Interface (EFI)
 
-Možnosti subsystému EFI popisují spustitelné bitové kopie, které běží v prostředí Extensible Firmware Interface. Toto prostředí je obvykle součástí hardware a spustí se před načtením operačního systému. Hlavní rozdíly mezi typy obrázků EFI jsou umístění v paměti, která obrázek nahrán a akce, která se provede, když vrátí volání image. Bitová kopie EFI_APPLICATION je uvolněna při vrácení ovládacího prvku. Je bitová kopie EFI_BOOT_SERVICE_DRIVER nebo EFI_RUNTIME_DRIVER je uvolněna pouze v případě, že ovládací prvek vrácen chybový kód. Bitová kopie EFI_ROM je spouštěna z paměti ROM. Další informace najdete v tématu specifikace na [Unified EFI Forum](http://www.uefi.org/) webu.
+Možnosti subsystému EFI popisují spustitelné bitové kopie, které běží v prostředí Extensible Firmware Interface. Toto prostředí je obvykle součástí hardware a spustí se před načtením operačního systému. Hlavní rozdíly mezi typy obrázků EFI jsou umístění v paměti, která obrázek nahrán a akce, která se provede, když vrátí volání image. Bitová kopie EFI_APPLICATION je uvolněna při vrácení ovládacího prvku. Je bitová kopie EFI_BOOT_SERVICE_DRIVER nebo EFI_RUNTIME_DRIVER je uvolněna pouze v případě, že ovládací prvek vrácen chybový kód. Bitová kopie EFI_ROM je spouštěna z paměti ROM. Další informace najdete v tématu specifikace na [Unified EFI Forum](https://www.uefi.org/) webu.
 
 **NATIVNÍ**<br/>
 Kód, který běží bez prostředí podsystému – například ovladače zařízení režimu jádra a nativní systémové procesy. Tato možnost je obvykle vyhrazena pro funkce systému Windows.

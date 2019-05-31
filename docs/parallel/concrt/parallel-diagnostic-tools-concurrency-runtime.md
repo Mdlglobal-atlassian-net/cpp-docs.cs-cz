@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - Parallel Diagnostic Tools [Concurrency Runtime]
 ms.assetid: b1a3f1d2-f5df-4f29-852e-906b3d8341fc
-ms.openlocfilehash: 2af1898312a4f448d618fcfc4e43ea93f5f0bc76
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: 182171bfcfbaf1476cc25fe3160114bc1d96ca7e
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64346317"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66449244"
 ---
 # <a name="parallel-diagnostic-tools-concurrency-runtime"></a>Paralelní diagnostické nástroje (Concurrency Runtime)
 
@@ -27,13 +27,13 @@ Nástroje pro profilaci poskytují tři zobrazení dat, které zobrazují grafic
 
 Modul Concurrency Runtime používá [události trasování pro Windows](/windows/desktop/ETW/event-tracing-portal) (ETW) upozornění instrumentace nástrojů, jako je profilovací programy, pokud dojde k různým událostem. Tyto události patří když Plánovač se aktivuje nebo deaktivuje, pokud kontext začíná, skončí, blokuje, odblokuje nebo provede, a když paralelního algoritmu začíná nebo končí.
 
-Nástroje, jako [Vizualizátor souběžnosti](/visualstudio/profiling/concurrency-visualizer) využívat tuto funkci; proto obvykle nemusíte pracovat přímo s těmito událostmi. Tyto události jsou však užitečné, když vyvíjíte vlastní profileru nebo při použití nástroje Sledování událostí, jako [Xperf](http://go.microsoft.com/fwlink/p/?linkid=160628).
+Nástroje, jako [Vizualizátor souběžnosti](/visualstudio/profiling/concurrency-visualizer) využívat tuto funkci; proto obvykle nemusíte pracovat přímo s těmito událostmi. Tyto události jsou však užitečné, když vyvíjíte vlastní profileru nebo při použití nástroje Sledování událostí, jako [Xperf](https://go.microsoft.com/fwlink/p/?linkid=160628).
 
 Modul Concurrency Runtime vyvolává tyto události pouze v případě, že je povoleno trasování. Volání [concurrency::EnableTracing](reference/concurrency-namespace-functions.md#enabletracing) funkci umožňující trasování událostí a [concurrency::DisableTracing](reference/concurrency-namespace-functions.md#disabletracing) funkce pro vypnutí trasování.
 
 Následující tabulka popisuje události, které modul runtime vyvolá, když je povoleno trasování událostí:
 
-|Událost|Popis|Hodnota|
+|Událost|Popis|Value|
 |-----------|-----------------|-----------|
 |[concurrency::ConcRT_ProviderGuid](reference/concurrency-namespace-constants1.md#concrt_providerguid)|Identifikátor poskytovatele trasování událostí pro Windows pro Concurrency Runtime.|`f7b697a3-4db5-4d3b-be71-c4d284e6592f`|
 |[concurrency::ContextEventGuid](reference/concurrency-namespace-constants1.md#contexteventguid)|Značky událostí, které souvisejí s kontexty.|`5727a00f-50be-4519-8256-f7699871fecb`|

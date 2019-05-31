@@ -9,12 +9,12 @@ helpviewer_keywords:
 - cpuid instruction
 - cpuid intrinsic
 ms.assetid: f8c344d3-91bf-405f-8622-cb0e337a6bdc
-ms.openlocfilehash: 30b66c78c6c3477c4da634901058d77d0e362101
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c66a3fe7b923b214c4cf2bd84fc03f535d5f4973
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62349079"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66449994"
 ---
 # <a name="cpuid-cpuidex"></a>__cpuid __cpuidex
 
@@ -63,9 +63,9 @@ Tomto vnitřní ukládá podporované funkce a vrátí informace o procesoru `cp
 
 `__cpuid` Vnitřní vymaže register ECX před voláním `cpuid` instrukce. `__cpuidex` Nastaví vnitřní hodnotu ECX zaregistrujte se a *subfunction_id* předtím, než ji vygeneruje `cpuid` instrukce. To umožňuje získat další informace o procesoru.
 
-Další informace o konkrétní parametry použít a jaké hodnoty vrácené tyto vnitřní objekty na procesorech Intel, naleznete v dokumentaci pro `cpuid` instrukce v [Intel 64 a IA-32 architektury softwaru vývojáři ručně Svazek 2: Referenční dokumentace sady instrukcí](http://go.microsoft.com/fwlink/p/?LinkID=510021) a [rozšíření programování odkaz na sadu instrukcí architektury Intel](http://go.microsoft.com/fwlink/p/?LinkID=506627). Intel dokumentace používá pro podmínky typu "list" a "subleaf" *function_id* a *subfunction_id* parametry předané v EAX a ECX.
+Další informace o konkrétní parametry použít a jaké hodnoty vrácené tyto vnitřní objekty na procesorech Intel, naleznete v dokumentaci pro `cpuid` instrukce v [Intel 64 a IA-32 architektury softwaru vývojáři ručně Svazek 2: Referenční dokumentace sady instrukcí](https://go.microsoft.com/fwlink/p/?LinkID=510021) a [rozšíření programování odkaz na sadu instrukcí architektury Intel](https://go.microsoft.com/fwlink/p/?LinkID=506627). Intel dokumentace používá pro podmínky typu "list" a "subleaf" *function_id* a *subfunction_id* parametry předané v EAX a ECX.
 
-Další informace o konkrétní parametry použít a jaké hodnoty vrácené tyto vnitřní u procesorů AMD, naleznete v dokumentaci pro `cpuid` instrukce v programátor architektury AMD64 ruční svazku 3: Pro obecné účely a pokyny k systému a v příručkách revize pro konkrétní procesor řady. Odkazy na tyto dokumenty a další informace najdete v článku AMD [příručky pro vývojáře, příručky & ISA dokumenty](http://go.microsoft.com/fwlink/p/?LinkId=510023) stránky. Dokumentace ke službě AMD používá číslo podmínky"funkce" a "cislo podfunkce je" pro *function_id* a *subfunction_id* parametry předané v EAX a ECX.
+Další informace o konkrétní parametry použít a jaké hodnoty vrácené tyto vnitřní u procesorů AMD, naleznete v dokumentaci pro `cpuid` instrukce v programátor architektury AMD64 ruční svazku 3: Pro obecné účely a pokyny k systému a v příručkách revize pro konkrétní procesor řady. Odkazy na tyto dokumenty a další informace najdete v článku AMD [příručky pro vývojáře, příručky & ISA dokumenty](https://go.microsoft.com/fwlink/p/?LinkId=510023) stránky. Dokumentace ke službě AMD používá číslo podmínky"funkce" a "cislo podfunkce je" pro *function_id* a *subfunction_id* parametry předané v EAX a ECX.
 
 Při *function_id* argument je 0, *cpuInfo*[0] vrátí nejvyšší dostupná s rozšířeným *function_id* hodnotu podporovanou procesoru. Výrobce procesoru je zakódován do *cpuInfo*[1]; *cpuInfo*[2], a *cpuInfo*[3].
 

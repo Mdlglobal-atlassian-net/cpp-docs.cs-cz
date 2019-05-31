@@ -9,18 +9,18 @@ helpviewer_keywords:
 - background colors, dialog boxes
 - MFC dialog boxes [MFC], colors
 ms.assetid: 05ee28a4-f3ae-4203-84ac-022f266ff2ab
-ms.openlocfilehash: 495ab827d6185826cc4d261a6a990f751e525d22
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3fcbeea5dc6137d7b7f0f2f6c1e0d034e6111b9a
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62307741"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66449660"
 ---
 # <a name="setting-the-dialog-boxs-background-color"></a>Nastavení barvy pozadí v dialogovém okně
 
 Díky zpracování WM_CTLCOLOR – zprávy pro pole dialogovém okně můžete nastavit barvu pozadí dialogových oknech. Barva, o kterou jste nastavili se používá pro pouze zadaný dialogové okno.
 
-Zobrazit [codexpert blogu](http://codexpert.ro/blog/2013/03/13/painting-the-dialog-backround/) příklad.
+Zobrazit [codexpert blogu](https://codexpert.ro/blog/2013/03/13/painting-the-dialog-backround/) příklad.
 
 ## <a name="see-also"></a>Viz také:
 

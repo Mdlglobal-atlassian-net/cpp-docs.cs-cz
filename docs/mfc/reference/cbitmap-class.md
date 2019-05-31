@@ -34,12 +34,12 @@ helpviewer_keywords:
 - CBitmap [MFC], SetBitmapBits
 - CBitmap [MFC], SetBitmapDimension
 ms.assetid: 3980616a-c59d-495a-86e6-62bd3889c84c
-ms.openlocfilehash: 11e210680bdf68f1a1dcbfaed18ae56ce006c8ad
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 60086c428166bd021095ec6fe2c52d031b335d81
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62388446"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66450033"
 ---
 # <a name="cbitmap-class"></a>Cbitmap – třída
 
@@ -55,13 +55,13 @@ class CBitmap : public CGdiObject
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CBitmap::CBitmap](#cbitmap)|Vytvoří `CBitmap` objektu.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CBitmap::CreateBitmap](#createbitmap)|Inicializuje objekt, který má nastavená šířka, výška a bitový vzor bitmapa paměti závislé na zařízení.|
 |[CBitmap::CreateBitmapIndirect](#createbitmapindirect)|Inicializuje objekt s rastrový obrázek šířku, výšku a bitový vzor (Pokud je zadaná) podle `BITMAP` struktury.|
@@ -79,7 +79,7 @@ class CBitmap : public CGdiObject
 
 ### <a name="public-operators"></a>Veřejné operátory
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CBitmap::operator HBITMAP](#operator_hbitmap)|Vrátí popisovač Windows připojené k `CBitmap` objektu.|
 
@@ -408,7 +408,7 @@ Nenulové, pokud je úspěšná. jinak 0.
 
 Ve výchozím nastavení `LoadMappedBitmap` provede mapování barev používaných v glyfech tlačítko.
 
-Informace o vytváření mapované rastrový obrázek, podívat se na funkci Windows [CreateMappedBitmap](http://go.microsoft.com/fwlink/p/?linkid=230562) a [COLORMAP](/windows/desktop/api/commctrl/ns-commctrl-_colormap) struktura v sadě Windows SDK.
+Informace o vytváření mapované rastrový obrázek, podívat se na funkci Windows [CreateMappedBitmap](https://go.microsoft.com/fwlink/p/?linkid=230562) a [COLORMAP](/windows/desktop/api/commctrl/ns-commctrl-_colormap) struktura v sadě Windows SDK.
 
 ##  <a name="loadoembitmap"></a>  CBitmap::LoadOEMBitmap
 

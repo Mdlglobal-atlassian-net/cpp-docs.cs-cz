@@ -12,12 +12,12 @@ helpviewer_keywords:
 - CException [MFC], Delete
 - CException [MFC], ReportError
 ms.assetid: cfacf14d-bfe4-4666-a5c7-38b800512920
-ms.openlocfilehash: 689afa2ffbc27feec6f9e1704a6b295d5eabfaee
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5942e636809e3758f34d209a3da80f0d903ab708
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62163997"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66450361"
 ---
 # <a name="cexception-class"></a>Cexception – třída
 
@@ -33,13 +33,13 @@ class AFX_NOVTABLE CException : public CObject
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CException::CException](#cexception)|Vytvoří `CException` objektu.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CException::Delete](#delete)|Odstraní `CException` objektu.|
 |[CException::ReportError](#reporterror)|Sestavy chybová zpráva v okně se zprávou pro uživatele.|
@@ -231,4 +231,4 @@ else
 [CObject – třída](cobject-class.md)<br/>
 [Graf hierarchie](../hierarchy-chart.md)<br/>
 [Zpracování výjimek](exception-processing.md)<br/>
-[Postup: Vytvoření vlastní třídy vlastních výjimek](http://go.microsoft.com/fwlink/p/?linkid=128045)
+[Postup: Vytvoření vlastní třídy vlastních výjimek](https://go.microsoft.com/fwlink/p/?linkid=128045)

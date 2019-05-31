@@ -2,12 +2,12 @@
 title: Zpracování výjimek ARM
 ms.date: 07/11/2018
 ms.assetid: fe0e615f-c033-4ad5-97f4-ff96af45b201
-ms.openlocfilehash: 8a2bae8e42ac6a624bebe7c185ac7e0ade8d5491
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f4e56284ce8db18ec76b0143253ee1e25f3fd82c
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62195352"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66450491"
 ---
 # <a name="arm-exception-handling"></a>Zpracování výjimek ARM
 
@@ -21,7 +21,7 @@ EABI ARM (vložené aplikace binary interface) určuje parsovat kódy unwind odv
 
 ### <a name="assumptions"></a>Předpoklady
 
-Spustitelné Image pro Windows na ARM, použijte formát Portable Executable (PE). Další informace najdete v tématu [formátech Microsoft PE a COFF specifikace](http://go.microsoft.com/fwlink/p/?linkid=84140). Informace o zpracování výjimek je uložen v částech .pdata a .xdata bitové kopie.
+Spustitelné Image pro Windows na ARM, použijte formát Portable Executable (PE). Další informace najdete v tématu [formátech Microsoft PE a COFF specifikace](https://go.microsoft.com/fwlink/p/?linkid=84140). Informace o zpracování výjimek je uložen v částech .pdata a .xdata bitové kopie.
 
 Mechanismus zpracování výjimek určitých předpokladů o kód, který následuje na ARM ABI pro Windows:
 

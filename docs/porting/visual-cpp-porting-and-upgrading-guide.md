@@ -2,12 +2,12 @@
 title: Průvodce přenosem a upgradováním Visual C++
 ms.date: 09/18/2018
 ms.assetid: f5fbcc3d-aa72-41a6-ad9a-a706af2166fb
-ms.openlocfilehash: 058972ec4ad44fd4ec9fa2dad926916846d47adf
-ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
+ms.openlocfilehash: 5659ca362204c62ab8fb21a74dccf8e29f33912c
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65708049"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66450376"
 ---
 # <a name="visual-c-porting-and-upgrading-guide"></a>Průvodce přenosem a upgradováním Visual C++
 
@@ -53,7 +53,7 @@ Spustit upgrade projektu nebo řešení, právě otevřete řešení v nové ver
 
 8. Chyby za běhu nebo neočekávané výsledky díky změnám chování
 
-9. Chyby vzniklé v důsledku chyby, které byly zavedeny v nástrojích. Pokud narazíte na problém, ohlásit týmu Visual C++ pomocí pracovníkům podpory normální, nebo pomocí [Visual Studio Feedback Center](http://connect.microsoft.com/VisualStudio/Feedback).
+9. Chyby vzniklé v důsledku chyby, které byly zavedeny v nástrojích. Pokud narazíte na problém, nahlásit ho do Vizuálu C++ týmu prostřednictvím pracovníkům podpory normální, nebo pomocí [sady Visual Studio C++ komunity vývojářů](https://developercommunity.visualstudio.com/spaces/62/index.html) stránky.
 
 Kromě změn, které není možné vyhnout se z důvodu chyb kompilátoru některé změny jsou volitelné v upgradu, jako například:
 

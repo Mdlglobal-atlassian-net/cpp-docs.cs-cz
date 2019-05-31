@@ -26,12 +26,12 @@ helpviewer_keywords:
 - std::extreme_value_distribution [C++], param_type
 - std::extreme_value_distribution [C++], param_type
 ms.assetid: a0cd8370-0a54-4e26-9388-8b9678fb57da
-ms.openlocfilehash: 7eb75fb7b76399fd4bf1d3bea94dcec4b52230f9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5bc0270cb24fcff93d995e8908daaec62c956371
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62405141"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66451187"
 ---
 # <a name="extremevaluedistribution-class"></a>extreme_value_distribution – třída
 
@@ -90,7 +90,7 @@ Funkce vlastností `a()` a `b()` vrátit jejich příslušných hodnot pro param
 
 Další informace o distribuci třídy a jejich členy, naleznete v tématu [ \<náhodné >](../standard-library/random.md).
 
-Podrobné informace o rozdělení extrémní hodnoty, najdete v článku Wolfram MathWorld [rozdělení extrémní hodnoty](http://go.microsoft.com/fwlink/p/?linkid=401110).
+Podrobné informace o rozdělení extrémní hodnoty, najdete v článku Wolfram MathWorld [rozdělení extrémní hodnoty](https://go.microsoft.com/fwlink/p/?linkid=401110).
 
 ## <a name="example"></a>Příklad
 

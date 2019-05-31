@@ -20,12 +20,12 @@ helpviewer_keywords:
 - A4508
 - A4509
 ms.assetid: 52b38267-6023-4bdc-a0ef-863362f48eec
-ms.openlocfilehash: 867ef50065c6ed63a4da6d37523bd5a1f3cbadba
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 72c1ea64501ef8104fee9bdf914a1464c07c3b76
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62167840"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66449223"
 ---
 # <a name="arm-assembler-diagnostic-messages"></a>Diagnostické zprávy assembleru ARM
 
@@ -33,13 +33,13 @@ Assembler Microsoft ARM (*armasm*) vysílá diagnostických upozornění a chyby
 
 ## <a name="syntax"></a>Syntaxe
 
-> <em>Název souboru</em>**(**<em>číslo řádku</em>**):** \[ **chyba**|**upozornění** ] **A**<em>číslo</em>**:** *zprávy*
+> <em>Název souboru</em> **(** <em>číslo řádku</em> **):** \[ **chyba**|**upozornění** ] **A**<em>číslo</em> **:** *zprávy*
 
 ## <a name="diagnostic-messages---errors"></a>Diagnostické zprávy – chyby
 
 > A2193: generuje tento pokyn nepředvídatelné chování.
 
-Architektura ARM nemůže zaručit, co se stane při spuštění této instrukce.  Podrobné informace o jasně definované formy tento pokyn, [ARM architektuře referenčním manuálu](http://go.microsoft.com/fwlink/p/?linkid=246464).
+Architektura ARM nemůže zaručit, co se stane při spuštění této instrukce.  Podrobné informace o jasně definované formy tento pokyn, [ARM architektuře referenčním manuálu](https://go.microsoft.com/fwlink/p/?linkid=246464).
 
 ```asm
     ADD r0, r8, pc         ; A2193: this instruction generates unpredictable behavior
@@ -115,7 +115,7 @@ V režimu ARM je alternativní syntaxe pro určení konstanty.  Místo psaní `#
 
 > A4509: Tato forma podmíněné instrukce je zastaralý.
 
-Tato forma podmíněné instrukce je zastaralá ve ARM v architektuře ARMv8. Doporučujeme vám, že změníte kód, který použije podmínkových větví. Pokud chcete zobrazit, které podmíněné pokyny jsou stále podporovány, naleznete [ARM architektuře referenčním manuálu](http://go.microsoft.com/fwlink/p/?linkid=246464).
+Tato forma podmíněné instrukce je zastaralá ve ARM v architektuře ARMv8. Doporučujeme vám, že změníte kód, který použije podmínkových větví. Pokud chcete zobrazit, které podmíněné pokyny jsou stále podporovány, naleznete [ARM architektuře referenčním manuálu](https://go.microsoft.com/fwlink/p/?linkid=246464).
 
 Toto upozornění není, protože když ho **- oldit** použít přepínač příkazového řádku.
 

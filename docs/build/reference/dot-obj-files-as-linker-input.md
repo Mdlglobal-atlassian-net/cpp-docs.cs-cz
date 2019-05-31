@@ -9,12 +9,12 @@ helpviewer_keywords:
 - COFF files
 - OBJ files as linker input
 - .obj files as linker input
-ms.openlocfilehash: c55c3181c2ddfabddce882a473e56d952a7e5d81
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 36f41077fcba6b093865625d426b8009f6185e7b
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62293274"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66450579"
 ---
 # <a name="obj-files-as-linker-input"></a>Soubory .Obj jako vstup linkeru
 
@@ -28,7 +28,7 @@ Společnost Microsoft poskytuje úplný popis běžný formát souborů objektu.
 
 Od verze Visual Studio 2005, a kompilátorem Microsoft MSVC podporuje znaky znakové sady Unicode v identifikátorech definované ISO/IEC C a C++ standardy. Předchozí verze kompilátoru podporovány v identifikátorech pouze znaky ASCII. Pro podporu kódování Unicode v názvy funkcí, tříd a statické, kompilátoru a propojovacího programu je používat kódování Unicode UTF-8 symbolů COFF v souborech .obj. Kódování UTF-8 je upwardly kompatibilní s kódováním ASCII, které se používají v předchozích verzích sady Visual Studio.
 
-Další informace o kompilátoru a linkeru, naleznete v tématu [Podpora kódování Unicode v kompilátoru a Linkeru](unicode-support-in-the-compiler-and-linker.md). Další informace o standardu Unicode, najdete v článku [Unicode](http://www.unicode.org/) organizace.
+Další informace o kompilátoru a linkeru, naleznete v tématu [Podpora kódování Unicode v kompilátoru a Linkeru](unicode-support-in-the-compiler-and-linker.md). Další informace o standardu Unicode, najdete v článku [Unicode](https://www.unicode.org/) organizace.
 
 ## <a name="see-also"></a>Viz také:
 
@@ -36,5 +36,5 @@ Další informace o kompilátoru a linkeru, naleznete v tématu [Podpora kódov�
 [Možnosti linkeru MSVC](linker-options.md)<br/>
 [Podpora pro Unicode](../../text/support-for-unicode.md)<br/>
 [Podpora kódování Unicode v kompilátoru a linkeru](unicode-support-in-the-compiler-and-linker.md)<br/>
-[Unicode standard](http://www.unicode.org/)<br/>
+[Unicode standard](https://www.unicode.org/)<br/>
 [Formátu PE](/windows/desktop/Debug/pe-format)

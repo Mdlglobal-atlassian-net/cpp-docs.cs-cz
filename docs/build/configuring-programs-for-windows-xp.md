@@ -2,12 +2,12 @@
 title: Konfigurace programů pro Windows XP
 ms.date: 05/16/2019
 ms.assetid: 1e4487b3-d815-4123-878b-5718b22f0fd5
-ms.openlocfilehash: 6c94c6a66d0f22b8707012856a65df4b19965acb
-ms.sourcegitcommit: a10c9390413978d36b8096b684d5ed4cf1553bc8
+ms.openlocfilehash: 55753737b4868f33487ed980eaf37a8801f59638
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/17/2019
-ms.locfileid: "65837128"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66450699"
 ---
 # <a name="configuring-programs-for-windows-xp"></a>Konfigurace programů pro Windows XP
 
@@ -69,4 +69,4 @@ Vývojové prostředí pro aplikace, které používají sadu nástrojů platfor
 
 - **Vytváření HLSL**
 
-   Ve výchozím nastavení sada nástrojů Windows XP nezkompiluje HLSL souborů se zdrojovým kódem. Pro kompilaci souborů HLSL, stáhněte a nainstalujte červen 2010 je rozhraní DirectX SDK a pak nastavte projekt VC adresáře ho. Další informace najdete v tématu "rozhraní DirectX SDK nezaregistruje cesty zahrnutí nebo knihovnu, sadou Visual Studio 2010" část [červen 2010 stránku pro stažení rozhraní DirectX SDK](http://www.microsoft.com/download/details.aspx?displaylang=en&id=6812).
+   Ve výchozím nastavení sada nástrojů Windows XP nezkompiluje HLSL souborů se zdrojovým kódem. Pro kompilaci souborů HLSL, stáhněte a nainstalujte červen 2010 je rozhraní DirectX SDK a pak nastavte projekt VC adresáře ho. Další informace najdete v tématu "rozhraní DirectX SDK nezaregistruje cesty zahrnutí nebo knihovnu, sadou Visual Studio 2010" část [červen 2010 stránku pro stažení rozhraní DirectX SDK](https://www.microsoft.com/download/details.aspx?displaylang=en&id=6812).

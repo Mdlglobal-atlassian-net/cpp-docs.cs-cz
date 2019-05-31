@@ -3,12 +3,12 @@ title: 'Návod: Vytvoření aplikace UPW s použitím knihovny WRL a platformy M
 ms.date: 04/23/2019
 ms.topic: reference
 ms.assetid: 0336c550-fbeb-4dc4-aa9b-660f9fc45382
-ms.openlocfilehash: 28e8d4b2871dbd3bef0f30bae5480d346af50706
-ms.sourcegitcommit: 283cb64fd7958a6b7fbf0cd8534de99ac8d408eb
+ms.openlocfilehash: 1eee353bb13a3fa03fda42c3d0f7a4103dc5ad13
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64558270"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66450154"
 ---
 # <a name="walkthrough-creating-a-uwp-app-using-wrl-and-media-foundation"></a>Návod: Vytvoření aplikace UPW s použitím knihovny WRL a platformy Media Foundation
 
@@ -25,7 +25,7 @@ Tento příklad vytvoří vlastní transformace Media Foundation, která se pou�
 Ve většině případů můžete použít C++/CX k vytvoření prostředí Windows Runtime. Ale někdy je nutné použít WRL. Například při vytváření média rozšíření pro Microsoft Media Foundation, musíte vytvořit komponentu, která implementuje rozhraní COM a Windows Runtime. Protože C++/CX lze vytvořit pouze objekty modulu Windows Runtime, chcete-li vytvořit médium rozšíření je nutné použít WRL vzhledem k tomu, že umožňuje, aby implementace rozhraní COM a Windows Runtime.
 
 > [!NOTE]
-> Sice dlouhý tento příklad kódu ukazuje minimální potřebná k vytvoření užitečné transformace Media Foundation. Můžete ho použít jako výchozí bod pro vlastní vlastní transformace. V tomto příkladu jsou upraveny z [ukázkové rozšíření Media](http://code.msdn.microsoft.com/windowsapps/Media-extensions-sample-7b466096), které používá media rozšíření použít dopad na video, dekódování video a vytváření obslužných rutin schéma, které vytvářejí datové proudy médií.
+> Sice dlouhý tento příklad kódu ukazuje minimální potřebná k vytvoření užitečné transformace Media Foundation. Můžete ho použít jako výchozí bod pro vlastní vlastní transformace. V tomto příkladu jsou upraveny z [ukázkové rozšíření Media](https://code.msdn.microsoft.com/windowsapps/Media-extensions-sample-7b466096), které používá media rozšíření použít dopad na video, dekódování video a vytváření obslužných rutin schéma, které vytvářejí datové proudy médií.
 
 ## <a name="prerequisites"></a>Požadavky
 
@@ -98,7 +98,7 @@ Ve většině případů můžete použít C++/CX k vytvoření prostředí Wind
 
    1. Také v části **vstup**, přidejte `runtimeobject.lib`, `mfuuid.lib`, a `mfplat.lib` k **Další závislosti** vlastnost.
 
-   1. V části **metadat Windows**, nastavte **generování metadat Windows** k **Ano (/ WINMD)**.
+   1. V části **metadat Windows**, nastavte **generování metadat Windows** k **Ano (/ WINMD)** .
 
 ### <a name="to-use-the-wrl-the-custom-media-foundation-component-from-a-c-app"></a>Použití knihovny WRL vlastní součást Media Foundation z aplikace C#
 
@@ -122,10 +122,10 @@ Je vidět na následujícím obrázku `MediaCapture app`.
 
 ## <a name="next-steps"></a>Další kroky
 
-Tento příklad ukazuje, jak zachytit fotky z výchozí webovou kameru, jeden po druhém. [Ukázkové rozšíření Media](http://code.msdn.microsoft.com/windowsapps/Media-extensions-sample-7b466096) více. Ukazuje, jak vytvořit výčet webová kamera zařízení a pracovat s obslužnými rutinami místní schéma a ukazuje účinky dalšího média, pracující na jednotlivé fotografie a datových proudů videa.
+Tento příklad ukazuje, jak zachytit fotky z výchozí webovou kameru, jeden po druhém. [Ukázkové rozšíření Media](https://code.msdn.microsoft.com/windowsapps/Media-extensions-sample-7b466096) více. Ukazuje, jak vytvořit výčet webová kamera zařízení a pracovat s obslužnými rutinami místní schéma a ukazuje účinky dalšího média, pracující na jednotlivé fotografie a datových proudů videa.
 
 ## <a name="see-also"></a>Viz také:
 
 [Knihovna šablon C++ prostředí Windows Runtime (WRL)](windows-runtime-cpp-template-library-wrl.md)<br/>
 [Microsoft Media Foundation](/windows/desktop/medfound/microsoft-media-foundation-sdk)<br/>
-[Ukázka rozšíření média](http://code.msdn.microsoft.com/windowsapps/Media-extensions-sample-7b466096)
+[Ukázka rozšíření média](https://code.msdn.microsoft.com/windowsapps/Media-extensions-sample-7b466096)
