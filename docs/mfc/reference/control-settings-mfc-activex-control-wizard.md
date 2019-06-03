@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - MFC ActiveX Control Wizard, control settings
 ms.assetid: 2ccaa4fc-0d52-413e-afa3-ecd474c3f6f0
-ms.openlocfilehash: 34cc49fff88399a6c3cf5f7db71410c88e5c9bab
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9d7653e61e6aada9205f599cf7a7ca6187dd139d
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62373277"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66450555"
 ---
 # <a name="control-settings-mfc-activex-control-wizard"></a>Nastavení ovládacího prvku, Průvodce ovládacím prvkem ActiveX v prostředí MFC
 
@@ -57,7 +57,7 @@ Další informace o tom, jak vybrat možnosti na této stránce pro maximalizaci
    Určuje, zda ovládací prvek má standardní Windows **o** dialogové okno, které se zobrazuje číslo verze a informace o autorských právech.
 
    > [!NOTE]
-   > Jak uživatel přistupuje k nápovědu pro ovládací prvek závisí na tom, jak jste implementovali nápovědy a určuje, zda jste integrovali Nápověda ovládacího prvku pomocí kontejneru. Další informace o tom, jak integrovat nápovědy, na [knihovny MSDN](http://go.microsoft.com/fwlink/p/?linkid=150542) webu, vyhledejte "Přidání Context-Sensitive nápovědy pro MFC ovládací prvek ActiveX".
+   > Jak uživatel přistupuje k nápovědu pro ovládací prvek závisí na tom, jak jste implementovali nápovědy a určuje, zda jste integrovali Nápověda ovládacího prvku pomocí kontejneru. Další informace o tom, jak integrovat nápovědy, na [knihovny MSDN](https://go.microsoft.com/fwlink/p/?linkid=150542) webu, vyhledejte "Přidání Context-Sensitive nápovědy pro MFC ovládací prvek ActiveX".
 
    Když vyberete tuto možnost, vloží `AboutBox` řídit metody ve třídě ovládacího prvku projektu (C*název_projektu*Ctrl.cpp) a přidá AboutBox mapa odeslání projektu. Ve výchozím nastavení je tato možnost vybrána.
 
@@ -87,7 +87,7 @@ Další informace o tom, jak vybrat možnosti na této stránce pro maximalizaci
 
 - **Funguje jako jednoduchý rámečku ovládacího prvku**
 
-   Určuje, zda ovládací prvek kontejneru pro ostatní ovládací prvky tak, že nastavíte OLEMISC_SIMPLEFRAME bit ovládacího prvku. Další informace najdete v [knihovny MSDN](http://go.microsoft.com/fwlink/p/?linkid=150542) webu, vyhledejte "Jednoduché rámeček webu členství ve skupině".
+   Určuje, zda ovládací prvek kontejneru pro ostatní ovládací prvky tak, že nastavíte OLEMISC_SIMPLEFRAME bit ovládacího prvku. Další informace najdete v [knihovny MSDN](https://go.microsoft.com/fwlink/p/?linkid=150542) webu, vyhledejte "Jednoduché rámeček webu členství ve skupině".
 
 - **Asynchronně načte vlastnosti**
 

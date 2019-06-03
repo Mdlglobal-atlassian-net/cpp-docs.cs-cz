@@ -74,12 +74,12 @@ helpviewer_keywords:
 - CButton [MFC], SetState
 - CButton [MFC], SetTextMargin
 ms.assetid: cdc76d5b-31da-43c5-bc43-fde4cb39de5b
-ms.openlocfilehash: b1a02d995594f5e079359151167ac970a3d1ab37
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3283e974dc2b933049599fba0b6cf51c32a18ef3
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62348689"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66450842"
 ---
 # <a name="cbutton-class"></a>CButton – třída
 
@@ -95,13 +95,13 @@ class CButton : public CWnd
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CButton::CButton](#cbutton)|Vytvoří `CButton` objektu.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CButton::Create](#create)|Vytvoří ovládací prvek tlačítka Windows a připojí ho k `CButton` objektu.|
 |[CButton::DrawItem](#drawitem)|Přepsání za účelem vykreslení vykreslovaných vlastníkem `CButton` objektu.|
@@ -153,7 +153,7 @@ Pokud chcete zpracovávat Windows oznamující zprávy odeslal ovládací prvek 
 
 Každá položka mapování zpráv má následující podobu:
 
-**DÁLE\_**_oznámení_ **(** _id_, _memberFxn_ **)**
+**DÁLE\_** _oznámení_ **(** _id_, _memberFxn_ **)**
 
 kde *id* určuje Identifikátor podřízené okno ovládacího prvku odesílání oznámení a *memberFxn* je název nadřazené členské funkce mají napsané tak, aby oznámení.
 
@@ -321,7 +321,7 @@ int GetCheck() const;
 
 Návratová hodnota z ovládacího prvku tlačítko vytvořené pomocí BS_AUTOCHECKBOX, BS_AUTORADIOBUTTON, BS_AUTO3STATE, BS_CHECKBOX, BS_RADIOBUTTON nebo BS_3STATE style je jedním z následujících hodnot:
 
-|Value|Význam|
+|Hodnota|Význam|
 |-----------|-------------|
 |BST_UNCHECKED|Stav tlačítka není zaškrtnuta.|
 |BST_CHECKED|Kontroluje se stav tlačítka.|
@@ -578,7 +578,7 @@ UINT GetState() const;
 
 Bitové pole, která obsahuje kombinaci hodnot, které označují aktuální stav ovládacího prvku tlačítko. V následující tabulce jsou uvedeny možné hodnoty.
 
-|Stav tlačítka|Hodnota|Popis|
+|Stav tlačítka|Value|Popis|
 |------------------|-----------|-----------------|
 |BST_UNCHECKED|0x0000|Počáteční stav.|
 |BST_CHECKED|0x0001|Ovládací prvek tlačítko zaškrtnuto.|
@@ -808,7 +808,7 @@ Hodnota TRUE, pokud tato metoda je úspěšná. v opačném případě hodnota F
 
 ### <a name="remarks"></a>Poznámky
 
-Pokud ovládací prvek tlačítka nebo příkaz odkazu vyžaduje zvýšená oprávnění k provedení akce, nastavte ovládací prvek na `elevation required` stavu. Následně Windows zobrazuje ikona štítu řízení uživatelských účtů (UAC) v ovládacím prvku. Další informace najdete v článku "Řízení uživatelských účtů" na [MSDN](http://go.microsoft.com/fwlink/p/?linkid=18507).
+Pokud ovládací prvek tlačítka nebo příkaz odkazu vyžaduje zvýšená oprávnění k provedení akce, nastavte ovládací prvek na `elevation required` stavu. Následně Windows zobrazuje ikona štítu řízení uživatelských účtů (UAC) v ovládacím prvku. Další informace najdete v článku "Řízení uživatelských účtů" na [MSDN](https://go.microsoft.com/fwlink/p/?linkid=18507).
 
 Tato metoda odesílá [BCM_SETSHIELD](/windows/desktop/Controls/bcm-setshield) zprávu, která je popsána v sadě Windows SDK.
 

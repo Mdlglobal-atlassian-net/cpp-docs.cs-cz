@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - random header
 ms.assetid: 60afc25c-b162-4811-97c1-1b65398d4c57
-ms.openlocfilehash: 5b246be02c860ede6691db1c4d21af7e6b4da26a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3fd6272ebcb58d48cc943541f32d1195c3fab498
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62369803"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66450802"
 ---
 # <a name="ltrandomgt"></a>&lt;náhodné&gt;
 
@@ -49,7 +49,7 @@ Tady je několik užitečných tipů k vzít v úvahu při použití \<náhodné
 
 - Nejužitečnější párování pro většinu aplikací je `mt19937` modul s `uniform_int_distribution`, jak je znázorněno [příklad kódu](#code) dále v tomto článku.
 
-Existuje mnoho možností můžete vybírat z v \<náhodné > záhlaví a některý z nich je vhodnější než zastaralé funkce C Runtime `rand()`. Informace o čem je problém s `rand()` a jak \<náhodné > řeší tyto nedostatky, naleznete v tématu [toto video](http://go.microsoft.com/fwlink/p/?linkid=397615).
+Existuje mnoho možností můžete vybírat z v \<náhodné > záhlaví a některý z nich je vhodnější než zastaralé funkce C Runtime `rand()`. Informace o čem je problém s `rand()` a jak \<náhodné > řeší tyto nedostatky, naleznete v tématu [toto video](https://go.microsoft.com/fwlink/p/?linkid=397615).
 
 ## <a name="code"></a> Příklady
 
@@ -500,7 +500,7 @@ Existují dva velmi užitečné URNGs v sadě Visual Studio –`mt19937` a `rand
 
 <sup>* Pokud dodají známé počáteční hodnoty.</sup>
 
-I když standardu ISO C++ nevyžaduje `random_device` bude kryptograficky zabezpečené a v sadě Visual Studio je potřebná k dosažení kryptograficky zabezpečené. (Termín "kryptograficky zabezpečené" neznamená záruky, ale odkazuje na minimální úroveň entropie – a proto se úroveň předvídatelnost – poskytuje algoritmu danou náhodné. Další informace najdete v článku na wikipedii [kryptograficky zabezpečené Generátor pseudonáhodných čísel](http://go.microsoft.com/fwlink/p/?linkid=398017).) Vzhledem k tomu, že standardu ISO C++ nevyžaduje, aby to, jiné platformy může implementovat `random_device` jako jednoduchý pseudonáhodného generátoru čísel (není bezpečné kryptograficky) a může pouze vhodné jako zdroj počáteční hodnoty pro generátor jiný. Vyhledejte v dokumentaci pro tyto platformy při použití `random_device` v multiplatformním kódem.
+I když standardu ISO C++ nevyžaduje `random_device` bude kryptograficky zabezpečené a v sadě Visual Studio je potřebná k dosažení kryptograficky zabezpečené. (Termín "kryptograficky zabezpečené" neznamená záruky, ale odkazuje na minimální úroveň entropie – a proto se úroveň předvídatelnost – poskytuje algoritmu danou náhodné. Další informace najdete v článku na wikipedii [kryptograficky zabezpečené Generátor pseudonáhodných čísel](https://go.microsoft.com/fwlink/p/?linkid=398017).) Vzhledem k tomu, že standardu ISO C++ nevyžaduje, aby to, jiné platformy může implementovat `random_device` jako jednoduchý pseudonáhodného generátoru čísel (není bezpečné kryptograficky) a může pouze vhodné jako zdroj počáteční hodnoty pro generátor jiný. Vyhledejte v dokumentaci pro tyto platformy při použití `random_device` v multiplatformním kódem.
 
 Podle definice `random_device` výsledky nejsou reprodukovatelné a vedlejší efekt je, že může výrazně pomalejší než ostatní URNGs spustit. Většina aplikací, které nemusejí být kryptograficky zabezpečené použití `mt19937` nebo podobná motoru, i když možná budete chtít naplnit voláním `random_device`, jak je znázorněno [příklad kódu](#code).
 

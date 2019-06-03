@@ -5,12 +5,12 @@ ms.date: 05/06/2019
 helpviewer_keywords:
 - 'msbuild (c++), howto: modify target framework and platform toolset'
 ms.assetid: 031b1d54-e6e1-4da7-9868-3e75a87d9ffe
-ms.openlocfilehash: c3d6b50a57cab9cc63657949fceccebf4ea6b8c9
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.openlocfilehash: b2cf5ac5c6a339917b87a25001be568a7caa2247
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65220671"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66450748"
 ---
 # <a name="how-to-modify-the-target-framework-and-platform-toolset"></a>Postupy: Změna cílové architektury a sady nástrojů
 
@@ -22,7 +22,7 @@ Visual Studio můžete změnit C++ nastavení pro jiné cílové verze rozhraní
 Pokud změníte cílový rámec, také změňte sadu nástrojů platformy na verzi, která podporuje tento rámec. Například chcete-li cílit na rozhraní .NET Framework 4.5, musíte použít sadu nástrojů kompatibilní platformy, jako je Visual Studio 2015 (v140), Visual Studio 2013 (v120) nebo Visual Studio 2012 (v110). Můžete použít **Windows7.1SDK** sada nástrojů platformy cílit na rozhraní .NET Framework 2.0, 3.0, 3.5 a 4 a x86, Itanium a x64 platformy.
 
 > [!NOTE]
->  Chcete-li změnit sadu nástrojů cílové platformy, musíte mít přidružené verze sady Visual Studio nebo Windows Platform SDK nainstalovány. Například pro zaměření na platformu Itanium se **Windows7.1SDK** sada nástrojů platformy, musíte mít [Microsoft Windows SDK pro Windows 7 a rozhraní .NET Framework 4 SP1](http://www.microsoft.com/download/details.aspx?id=8279) nainstalované, ale můžete použít jinou kompatibilní verzi sady Visual Studio k provedení vývojové práce, za předpokladu, že se zaměříte správnou Framework verze a platformy sadu nástrojů.
+>  Chcete-li změnit sadu nástrojů cílové platformy, musíte mít přidružené verze sady Visual Studio nebo Windows Platform SDK nainstalovány. Například pro zaměření na platformu Itanium se **Windows7.1SDK** sada nástrojů platformy, musíte mít [Microsoft Windows SDK pro Windows 7 a rozhraní .NET Framework 4 SP1](https://www.microsoft.com/download/details.aspx?id=8279) nainstalované, ale můžete použít jinou kompatibilní verzi sady Visual Studio k provedení vývojové práce, za předpokladu, že se zaměříte správnou Framework verze a platformy sadu nástrojů.
 
 Můžete rozšířit cílovou platformu další tak, že vytvoříte vlastní sady nástrojů platformy. Další informace najdete v tématu [cílení na více verzí v nativním C++](https://blogs.msdn.microsoft.com/vcblog/2009/12/08/c-native-multi-targeting/) na blogu Visual C++.
 

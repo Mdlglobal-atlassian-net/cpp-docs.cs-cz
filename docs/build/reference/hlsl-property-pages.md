@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 f1_keywords:
 - VC.Project.FXCompilerTool.AdditionalOptionsPage
 ms.assetid: 0c65f5ec-a2a5-4f5b-8d4c-fa57113a5a1d
-ms.openlocfilehash: f42d99b5f1fab06c5de0b8e794009a4ac4291e0c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 62111141e40862f630b11e4f87f912497ab265b9
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62270165"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66450909"
 ---
 # <a name="hlsl-property-pages"></a>HLSL – stránky vlastností
 
@@ -27,10 +27,10 @@ Hlsl – stránky vlastností kompilátor (fxc.exe) můžete použít ke konfigu
 
    Poskytuje vlastnosti k určení, jak jsou soubory výstup kompilátoru HLSL.
 
-Můžete zadat argumenty příkazového řádku pro kompilátor HLSL pomocí **další možnosti** vlastnost **příkazového řádku** stránku vlastností; to zahrnuje argumenty, které nelze konfigurovat pomocí jiných Vlastnosti hlsl – stránky vlastností. Informace o kompilátoru HLSL najdete v tématu [nástroj účinkem Compiler](http://go.microsoft.com/fwlink/p/?LinkID=258285&clcid=0x409)
+Můžete zadat argumenty příkazového řádku pro kompilátor HLSL pomocí **další možnosti** vlastnost **příkazového řádku** stránku vlastností; to zahrnuje argumenty, které nelze konfigurovat pomocí jiných Vlastnosti hlsl – stránky vlastností. Informace o kompilátoru HLSL najdete v tématu [nástroj účinkem Compiler](https://go.microsoft.com/fwlink/p/?LinkID=258285&clcid=0x409)
 
 ## <a name="see-also"></a>Viz také:
 
 [Odkaz na stránku vlastností projektu jazyka C++](property-pages-visual-cpp.md)<br>
 [Stránky vlastností příkazového řádku](command-line-property-pages.md)<br>
-[Kompilování shaderů](http://go.microsoft.com/fwlink/p/?LinkID=258284&clcid=0x409)
+[Kompilování shaderů](https://go.microsoft.com/fwlink/p/?LinkID=258284&clcid=0x409)

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - CWaitCursor [MFC], CWaitCursor
 - CWaitCursor [MFC], Restore
 ms.assetid: 5dfae2ff-d7b6-4383-b0ad-91e0868c67b3
-ms.openlocfilehash: 7ce81e62ec6498ad84349108b4c4a07090b17de5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 87ac87019f127d3956caf959a28fc889fdecad50
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62323336"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66450808"
 ---
 # <a name="cwaitcursor-class"></a>Cwaitcursor – třída
 
@@ -31,13 +31,13 @@ class CWaitCursor
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CWaitCursor::CWaitCursor](#cwaitcursor)|Vytvoří `CWaitCursor` objektu a zobrazí kurzor pro čekání.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CWaitCursor::Restore](#restore)|Obnoví kurzor pro čekání po byl změněn.|
 
@@ -121,4 +121,4 @@ Pokud potřebujete obnovit kurzor pro čekání ve funkci než ten, ve kterém `
 [CCmdTarget::EndWaitCursor](../../mfc/reference/ccmdtarget-class.md#endwaitcursor)<br/>
 [CCmdTarget::RestoreWaitCursor](../../mfc/reference/ccmdtarget-class.md#restorewaitcursor)<br/>
 [CWinApp::DoWaitCursor](../../mfc/reference/cwinapp-class.md#dowaitcursor)<br/>
-[Postup: Změnit kurzoru myši v aplikaci tříd Microsoft Foundation](http://go.microsoft.com/fwlink/p/?linkid=128044)
+[Postup: Změnit kurzoru myši v aplikaci tříd Microsoft Foundation](https://go.microsoft.com/fwlink/p/?linkid=128044)

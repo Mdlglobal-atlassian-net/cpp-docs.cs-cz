@@ -4,12 +4,12 @@ ms.date: 08/30/2017
 helpviewer_keywords:
 - breaking changes [C++]
 ms.assetid: b38385a9-a483-4de9-99a6-797488bc5110
-ms.openlocfilehash: a0a13748894880c076f8d32c9c74afde1752504c
-ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.openlocfilehash: f05656612e464395117e77c82fb9dc9eb2290e0e
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65448986"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66451283"
 ---
 # <a name="visual-c-change-history-2003---2015"></a>2003 – 2015 historie změn Visual C++
 
@@ -409,7 +409,7 @@ Při upgradu z předchozí verze kódu, může také dojít chyb kompilátoru, k
 
 V sadě Visual Studio 2015 probíhající vylepšení shoda s kompilátorem prostředí můžete někdy změnit, jak kompilátor rozpozná existující zdrojový kód. Nové nebo jiné chyby v důsledku toho může dojít během sestavování nebo dokonce behaviorální rozdíly v kódu, který dříve vytvořené a vypadal jako správně spustit.
 
-Tyto rozdíly naštěstí mít žádné nebo téměř žádné dopad na většinu zdrojového kódu. Pokud zdrojový kód nebo jiné změny jsou potřeba k vyřešení těchto rozdílů, opravy jsou obvykle malé a přímočaré. Přidali jsme mnoho příkladů dříve přijatelné zdrojový kód, který může být nutné změnit *(před)* a opravy je opravit *(po)*.
+Tyto rozdíly naštěstí mít žádné nebo téměř žádné dopad na většinu zdrojového kódu. Pokud zdrojový kód nebo jiné změny jsou potřeba k vyřešení těchto rozdílů, opravy jsou obvykle malé a přímočaré. Přidali jsme mnoho příkladů dříve přijatelné zdrojový kód, který může být nutné změnit *(před)* a opravy je opravit *(po)* .
 
 I když váš zdrojový kód nebo jiných artefaktů sestavení, můžete tyto rozdíly ovlivňují, neovlivňují binární kompatibilitu mezi aktualizace verze sady Visual Studio. A *narušující změna* je přísnější a může ovlivnit binární kompatibilitu, ale tyto druhy binární kompatibilitu konce vyskytovat jenom mezi hlavními verzemi sady Visual Studio, například mezi Visual Studio 2013 a Visual Studio 2015. Informace o nejnovější změny, ke kterým došlo mezi Visual Studio 2013 a Visual Studio 2015, najdete v části [Visual Studio 2015 nejnovějšími změnami](#VC_2015).
 
@@ -641,7 +641,7 @@ I když váš zdrojový kód nebo jiných artefaktů sestavení, můžete tyto r
 
 - **Nové umístění a delete**
 
-   Byla provedena změna **odstranit** operátor pamětí souladu s C ++ 14, standardní. Podrobnosti o změně standardy najdete v [C++ velikostí Dealokace](http://isocpp.org/files/papers/n3778.html). Změny přidejte formulář globálního **odstranit** operátor, který přijímá parametr velikosti. Rozbíjející změnu je, že pokud jste dříve používali operátor **odstranit** se stejným podpisem (tak, aby odpovídaly s **nové umístění** operátor), obdržíte chybu kompilátoru (C2956, to se stává v okamžiku, kdy se používá nové umístění, protože to je pozice v kódu, kde kompilátor se pokusí identifikovat příslušné odpovídající **odstranit** operátor).
+   Byla provedena změna **odstranit** operátor pamětí souladu s C ++ 14, standardní. Podrobnosti o změně standardy najdete v [C++ velikostí Dealokace](https://isocpp.org/files/papers/n3778.html). Změny přidejte formulář globálního **odstranit** operátor, který přijímá parametr velikosti. Rozbíjející změnu je, že pokud jste dříve používali operátor **odstranit** se stejným podpisem (tak, aby odpovídaly s **nové umístění** operátor), obdržíte chybu kompilátoru (C2956, to se stává v okamžiku, kdy se používá nové umístění, protože to je pozice v kódu, kde kompilátor se pokusí identifikovat příslušné odpovídající **odstranit** operátor).
 
    Funkce `void operator delete(void *, size_t)` byla **umístění operátoru delete** odpovídající operátor **umístění nového** funkce `void * operator new(size_t, size_t)` v C ++ 11. Pomocí C ++ 14 velikostí dealokace, tato funkce delete je teď *funkce zrušení přidělení obvykle* (globální **odstranit** operátor). Standardní vyžaduje, pokud použijte nové umístění vyhledá odpovídající funkce delete a vyhledá funkce zrušení přidělení obvyklé, program chybně vytvořený.
 
@@ -1106,7 +1106,7 @@ I když váš zdrojový kód nebo jiných artefaktů sestavení, můžete tyto r
 
 - **Textový literál je pole s konstantní**
 
-   Následující kód nyní generuje upozornění C2664: "void f (void *)': nejde převést argument 1 z" const char (*) [2]' k ' void * "
+   Následující kód nyní generuje upozornění C2664: "void f (void *)': nejde převést argument 1 z" const char (* ) [2]' k ' void * "
 
     ```cpp
     void f(void *);

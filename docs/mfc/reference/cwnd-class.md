@@ -818,12 +818,12 @@ helpviewer_keywords:
 - CWnd [MFC], WindowProc
 - CWnd [MFC], m_hWnd
 ms.assetid: 49a832ee-bc34-4126-88b3-bc1d9974f6c4
-ms.openlocfilehash: e88c375560c617e970c70adda245125ac8242ae4
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.openlocfilehash: fc92497c4d43238f9cf6aea7132afb8c8dc27fbd
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65220354"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66451229"
 ---
 # <a name="cwnd-class"></a>Třída CWnd
 
@@ -1652,7 +1652,7 @@ void BringWindowToTop();
 
 Kromě toho `BringWindowToTop` aktivuje automaticky otevírané okno nejvyšší úrovně a podřízených oken MDI. `BringWindowToTop` Členská funkce by měla být použita k odkrytí okna, které je částečně nebo zcela zakryto překrývajícími se okny.
 
-Tato funkce volá pouze Win32 [BringWindowToTop](/windows/desktop/api/winuser/nf-winuser-bringwindowtotop) funkce. Volání [SetWindowPos](#setwindowpos) funkce změně pozic okna v pořadí vykreslování. `BringWindowToTop` Funkce nezmění styl okna, aby okno nejvyšší úrovně. Další informace najdete v tématu [jaký je rozdíl mezi HWND_TOP a HWND_TOPMOST](http://blogs.msdn.com/b/oldnewthing/archive/2005/11/21/495246.aspx)
+Tato funkce volá pouze Win32 [BringWindowToTop](/windows/desktop/api/winuser/nf-winuser-bringwindowtotop) funkce. Volání [SetWindowPos](#setwindowpos) funkce změně pozic okna v pořadí vykreslování. `BringWindowToTop` Funkce nezmění styl okna, aby okno nejvyšší úrovně. Další informace najdete v tématu [jaký je rozdíl mezi HWND_TOP a HWND_TOPMOST](https://devblogs.microsoft.com/oldnewthing/?p=33263)
 
 ### <a name="example"></a>Příklad
 
@@ -2455,7 +2455,7 @@ Nenulové, pokud je funkce úspěšná; jinak 0.
 
 `[drive:] [ [\u]directory[\idirectory]...\u] [filename]`
 
-V tomto příkladu *jednotky* je některé potřebné písmeno *directory* je platný název adresáře, a *filename* je platný název souboru, který musí obsahovat alespoň jeden zástupný znak. Zástupné znaky jsou otazník (**?**), což znamená, že odpovídají jakékoli znakem a hvězdičku (<strong>\*</strong>), což znamená odpovídat libovolný počet znaků.
+V tomto příkladu *jednotky* je některé potřebné písmeno *directory* je platný název adresáře, a *filename* je platný název souboru, který musí obsahovat alespoň jeden zástupný znak. Zástupné znaky jsou otazník ( **?** ), což znamená, že odpovídají jakékoli znakem a hvězdičku (<strong>\*</strong>), což znamená odpovídat libovolný počet znaků.
 
 Pokud zadáte řetězec s délkou 0 pro *lpPathSpec*, nebo pokud zadáte pouze název adresáře, ale neobsahují žádné specifikace souboru, řetězce se změní na "\*.\*".
 
@@ -2523,7 +2523,7 @@ Určuje výsledek funkce. Jedná se nenulovou hodnotu, pokud bylo provedeno výp
 
 `[drive:] [ [\u]directory[\idirectory]...\u] [filename]`
 
-V tomto příkladu *jednotky* je některé potřebné písmeno *directory* je platný název adresáře, a *filename* je platný název souboru, který musí obsahovat alespoň jeden zástupný znak. Zástupné znaky jsou otazník (**?**), což znamená, že odpovídají jakékoli znakem a hvězdičku (<strong>\*</strong>), což znamená, že odpovídají libovolný počet znaků.
+V tomto příkladu *jednotky* je některé potřebné písmeno *directory* je platný název adresáře, a *filename* je platný název souboru, který musí obsahovat alespoň jeden zástupný znak. Zástupné znaky jsou otazník ( **?** ), což znamená, že odpovídají jakékoli znakem a hvězdičku (<strong>\*</strong>), což znamená, že odpovídají libovolný počet znaků.
 
 Pokud zadáte řetězec nulové délky pro *lpPathSpec*, použije se aktuální adresář a *lpPathSpec* se nezmění. Pokud zadáte pouze název adresáře, ale neobsahují žádné specifikace souboru, řetězce se změní na "\*".
 
@@ -3701,7 +3701,7 @@ ID checked přepínací tlačítko, nebo 0, pokud není vybrána žádná.
 
 ##  <a name="getclientrect"></a>  CWnd::GetClientRect
 
-Zkopíruje souřadnice klienta `CWnd` klientské oblasti do struktury odkazované *lprect –*.
+Zkopíruje souřadnice klienta `CWnd` klientské oblasti do struktury odkazované *lprect –* .
 
 ```
 void GetClientRect(LPRECT lpRect) const;
@@ -5054,7 +5054,7 @@ Nenulové, pokud je funkce úspěšná; jinak 0.
 
 ##  <a name="getwindowrect"></a>  CWnd::GetWindowRect
 
-Zkopíruje dimenze ohraničující obdélník `CWnd` objektu do struktury odkazované *lprect –*.
+Zkopíruje dimenze ohraničující obdélník `CWnd` objektu do struktury odkazované *lprect –* .
 
 ```
 void GetWindowRect(LPRECT lpRect) const;
@@ -5652,7 +5652,7 @@ Určuje obdélníku, jehož body se má převést. První verze této funkce je 
 Ukazatel na pole [POINT – struktura](/windows/desktop/api/windef/ns-windef-tagpoint) , které obsahují sadu bodů má být převeden.
 
 *nCount*<br/>
-Určuje počet `POINT` struktury v poli odkazované *lppoint –*.
+Určuje počet `POINT` struktury v poli odkazované *lppoint –* .
 
 ##  <a name="messagebox"></a>  CWnd::MessageBox
 
@@ -6127,7 +6127,7 @@ Obsahuje počet opakování, kolikrát stisk klávesy se opakuje, když uživate
 *nFlags*<br/>
 Obsahuje kontroly kódu, přechod klíče kódu, předchozí stav klíčů a kód kontextu, jak je znázorněno v následujícím seznamu:
 
-|Hodnota|Význam|
+|Value|Význam|
 |-----------|-------------|
 |0-15|Určuje počet opakování. Hodnota je počet průchodů stisknutí klávesy se opakuje v důsledku uživatele podržíte klávesu.|
 |16-23|Určuje kód kontroly. Hodnota závisí na výrobce OEM (OEM)|
@@ -7386,7 +7386,7 @@ Určuje virtuální kód zadaný klíč. Seznam kódů standardní virtuální k
 *nFlags*<br/>
 Určuje kontroly kódu, přechod klíče kódu, předchozí stav klíčů a kód kontextu, jak je znázorněno v následujícím seznamu:
 
-|Hodnota|Popis|
+|Value|Popis|
 |-----------|-----------------|
 |0-7|Naskenujte kód (OEM závislé hodnoty).|
 |8|Rozšířené klíč, jako je například funkční klávesy nebo klávesy na numerické klávesnici (1, pokud je rozšířené klíč).|
@@ -9648,7 +9648,7 @@ Určuje počet opakování.
 *nFlags*<br/>
 Určuje kontroly kódu, přechod klíče kódu, předchozí stav klíčů a kód kontextu, jak je znázorněno v následujícím seznamu:
 
-|Value|Význam|
+|Hodnota|Význam|
 |-----------|-------------|
 |0-7|Naskenujte kód (OEM závislé hodnoty). Nižší bajt vyšší řád slova.|
 |8|Rozšířené klíč, jako je například funkční klávesy nebo klávesy na numerické klávesnici (1, pokud je rozšířené klíč; jinak 0).|
@@ -9756,7 +9756,7 @@ Pro rozšířené IBM klávesnice 101 a 102 klíč rozšířené klíče jsou sp
 
 Pro mimo USA Vylepšené 102 klávesami, klávesu ALT přímo zpracovávané jako kombinace kláves CTRL + ALT. Následuje ukázka pořadí zpráv a volání, která dojít, pokud uživatel stiskne a uvolní tento klíč:
 
-|Pořadí|Získat přístup k – funkce|Zprávu předanou|
+|Sequence|Získat přístup k – funkce|Zprávu předanou|
 |--------------|-----------------------|--------------------|
 |1.|[WM_KEYDOWN](#onkeydown)|VK_CONTROL|
 |2.|[WM_KEYDOWN](#onkeydown)|VK_MENU|

@@ -8,17 +8,17 @@ helpviewer_keywords:
 - file redistribution [C++]
 - redistributing applications [C++], about redistributing applications
 ms.assetid: d201b2ce-36f1-44e5-a96c-0db81a1ba652
-ms.openlocfilehash: 2bf4297a6c61d16c68d6a9cb893aed78b9d7609d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b64fac7086dcc22199ca359a163074b967c56f95
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62388160"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66450616"
 ---
 # <a name="redistributing-visual-c-files"></a>Redistribuce souborů Visual C++
 
 > [!NOTE]
-> Jste tady, protože jste hledali stahování jednoho ze souborů modulu Runtime Visual C++? Přejděte [webu společnosti Microsoft](http://www.microsoft.com/) a zadejte **distribuovatelné součásti Visual C++** do vyhledávacího pole. Stáhněte si a nainstalujte redistribuovatelný balíček pro architekturu vašeho počítače (například x64 Pokud používáte systém Windows 64-bit) a verze aplikace Visual C++ (například 2015), které potřebujete.
+> Jste tady, protože jste hledali stahování jednoho ze souborů modulu Runtime Visual C++? Přejděte [webu společnosti Microsoft](https://www.microsoft.com/) a zadejte **distribuovatelné součásti Visual C++** do vyhledávacího pole. Stáhněte si a nainstalujte redistribuovatelný balíček pro architekturu vašeho počítače (například x64 Pokud používáte systém Windows 64-bit) a verze aplikace Visual C++ (například 2015), které potřebujete.
 
 Při nasazení aplikace je nutné nasadit také soubory, které jsou vyžadovány pro její podporu. Pokud je některý z těchto souborů poskytován společností Microsoft, zkontrolujte, zda je povoleno jej dále distribuovat. Chcete-li zkontrolovat licenční podmínky pro Visual Studio, na odkaz licenční podmínky v dialogovém okně o aplikaci Microsoft Visual Studio v integrovaném vývojovém prostředí nebo stáhnout [licenční podmínky pro Software společnosti Microsoft](https://visualstudio.microsoft.com/license-terms/mlt687465/) souboru. K zobrazení seznamu "REDIST list", který se odkazuje v oddíle "Distribuovatelný kód" licenčních podmínek pro Software společnosti Microsoft pro některé edice sady Visual Studio, naleznete v tématu [Distribuovatelný kód pro Microsoft Visual Studio 2017 a Microsoft Visual Studio 2017 Sada SDK (zahrnuje soubory Buildovacího serveru a)](/visualstudio/productinfo/2017-redistribution-vs), nebo Visual Studio 2015, najdete v části [Distribuovatelný kód pro Microsoft Visual Studio 2015 a Microsoft Visual Studio 2015 SDK](/visualstudio/productinfo/2015-redistribution-vs). Další informace o znovu distribuovatelných souborech naleznete v tématu [Determining Which DLLs to Redistribute](determining-which-dlls-to-redistribute.md) a [Deployment Examples](deployment-examples.md).
 

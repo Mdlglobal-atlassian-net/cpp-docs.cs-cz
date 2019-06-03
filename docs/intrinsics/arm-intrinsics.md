@@ -1931,22 +1931,22 @@ helpviewer_keywords:
 - cl.exe compiler, intrinsics
 - intrinsics, ARM
 ms.assetid: d3d7dadd-7bd5-4508-8bff-371a66913e20
-ms.openlocfilehash: 8590f6ac056bf561960f9c02ff4a4cc6a4d3bfa0
-ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.openlocfilehash: 0f63112f04da317371c15e1fd6ba22fc7e2bd6e1
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65447720"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66450783"
 ---
 # <a name="arm-intrinsics"></a>ARM – vnitřní prvky
 
-Microsoft C++ kompilátor (MSVC) díky následující vnitřní objekty dostupné na architekturu ARM. Další informace o ARM najdete v článku [příručky pro referenční architekturu ARM](http://go.microsoft.com/fwlink/p/?LinkId=522049) a [příručka nástroje assembleru ARM](http://go.microsoft.com/fwlink/p/?LinkId=246102) na webu informační středisko ARM.
+Microsoft C++ kompilátor (MSVC) díky následující vnitřní objekty dostupné na architekturu ARM. Další informace o ARM najdete v článku [příručky pro referenční architekturu ARM](https://go.microsoft.com/fwlink/p/?LinkId=522049) a [příručka nástroje assembleru ARM](https://go.microsoft.com/fwlink/p/?LinkId=246102) na webu informační středisko ARM.
 
 ##  <a name="top"></a> NEON
 
 Rozšíření sady instrukcí vektorů NEON ARM poskytují možnosti více dat jedné instrukce (SIMD), které se podobají těm v MMX a SSE vektoru instrukce sady, které jsou společné pro procesory s architekturou x86 a x64.
 
-Vnitřní objekty NEON jsou podporovány, jak je uvedeno v souboru hlaviček `arm_neon.h`. Podpora MSVC NEON – vnitřní prvky vypadá podobně jako u kompilátoru ARM, které jsou uvedené v dodatku G [sada nástrojů kompilátoru ARM, verze 4.1 kompilátoru odkaz](http://go.microsoft.com/fwlink/p/?LinkId=251083) na webu informační středisko ARM.
+Vnitřní objekty NEON jsou podporovány, jak je uvedeno v souboru hlaviček `arm_neon.h`. Podpora MSVC NEON – vnitřní prvky vypadá podobně jako u kompilátoru ARM, které jsou uvedené v dodatku G [sada nástrojů kompilátoru ARM, verze 4.1 kompilátoru odkaz](https://go.microsoft.com/fwlink/p/?LinkId=251083) na webu informační středisko ARM.
 
 Hlavní rozdíl mezi MSVC a kompilátor ARM je, že MSVC přidá `_ex` varianty `vldX` a `vstX` vektorové načtení a uložení pokyny. `_ex` Varianty trvat další parametr, který určuje zarovnání argument ukazatele, ale jsou jinak stejné jako jejich jinou hodnotu než`_ex` protějšky.
 
@@ -2398,14 +2398,14 @@ Následující tabulka shrnuje podporu ARM – vnitřní prvky bez bittest propo
 
 ||8|16|32|64|P|
 |-|-------|--------|--------|--------|-------|
-|Přidejte|Žádný|Žádné|Do bloku|Do bloku|Žádné|
-|A|Do bloku|Do bloku|Do bloku|Do bloku|Žádné|
+|Přidejte|Žádné|Žádné|Do bloku|Do bloku|Žádné|
+|A|Do bloku|Do bloku|Do bloku|Do bloku|Žádný|
 |CompareExchange|Do bloku|Do bloku|Do bloku|Do bloku|Do bloku|
 |Snížení|Žádné|Do bloku|Do bloku|Do bloku|Žádné|
 |Exchange|Částečné|Částečné|Částečné|Částečné|Částečné|
-|ExchangeAdd|Do bloku|Do bloku|Do bloku|Do bloku|Žádné|
-|Přírůstek|Žádné|Do bloku|Do bloku|Do bloku|Žádný|
-|Nebo|Do bloku|Do bloku|Do bloku|Do bloku|Žádný|
+|ExchangeAdd|Do bloku|Do bloku|Do bloku|Do bloku|Žádný|
+|Přírůstek|Žádný|Do bloku|Do bloku|Do bloku|Žádné|
+|Nebo|Do bloku|Do bloku|Do bloku|Do bloku|Žádné|
 |XOR|Do bloku|Do bloku|Do bloku|Do bloku|Žádné|
 
 Klíč:
