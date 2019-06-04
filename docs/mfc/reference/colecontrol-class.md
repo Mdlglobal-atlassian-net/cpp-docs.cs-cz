@@ -334,12 +334,12 @@ helpviewer_keywords:
 - COleControl [MFC], IsInvokeAllowed
 - COleControl [MFC], SetInitialDataFormats
 ms.assetid: 53e95299-38e8-447b-9c5f-a381d27f5123
-ms.openlocfilehash: 30d73d546ee68a25f1e59776020477d038da65e8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: edad2ca391639868e7af1db6e13aaec66733f383
+ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62160312"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66503866"
 ---
 # <a name="colecontrol-class"></a>COleControl – třída
 
@@ -355,13 +355,13 @@ class COleControl : public CWnd
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[COleControl::COleControl](#colecontrol)|Vytvoří `COleControl` objektu.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[COleControl::AmbientAppearance](#ambientappearance)|Načte aktuální vzhled ovládacího prvku.|
 |[COleControl::AmbientBackColor](#ambientbackcolor)|Vrátí hodnotu vlastnosti BackColor okolí.|
@@ -525,7 +525,7 @@ class COleControl : public CWnd
 
 ### <a name="protected-methods"></a>Chráněné metody
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[COleControl::DrawContent](#drawcontent)|Volá se rozhraním, když je potřeba aktualizovat vzhled ovládacího prvku.|
 |[COleControl::DrawMetafile](#drawmetafile)|Volá se rozhraním, když se používá kontextu zařízení metasouboru.|
@@ -1184,7 +1184,7 @@ Popisovač pro typy parametrů události.
 
 Obvykle tato funkce by neměla být volána přímo. Místo toho bude volat funkcí vyvolávající události v části mapy událostí deklarace třídy ovládacího prvku.
 
-*PbParams* argument je místo oddělený seznam **VTS_**. Jeden nebo více z těchto hodnot oddělených mezerami (ne středníky), určuje seznam parametrů funkce. Možné hodnoty jsou následující:
+*PbParams* argument je místo oddělený seznam **VTS_** . Jeden nebo více z těchto hodnot oddělených mezerami (ne středníky), určuje seznam parametrů funkce. Možné hodnoty jsou následující:
 
 |Symbol|Typ parametru|
 |------------|--------------------|
@@ -2811,7 +2811,7 @@ DWORD popisující, které tvoří nebo aspektu objektu je zobrazený. Platné h
 - DVASPECT_TRANSPARENT obdélník pokrývá všechny části transparentní nebo nestandardní.
 
 *pRect*<br/>
-Odkazuje [RECTL](https://msdn.microsoft.com/library/windows/desktop/dd162907) struktura určující obdélník, ve kterém má být vykreslena objektu. Tento parametr řídí umístění a roztažení objektu.
+Odkazuje [RECTL](/previous-versions/dd162907\(v=vs.85\)) struktura určující obdélník, ve kterém má být vykreslena objektu. Tento parametr řídí umístění a roztažení objektu.
 
 ### <a name="return-value"></a>Návratová hodnota
 

@@ -11,12 +11,12 @@ f1_keywords:
 helpviewer_keywords:
 - IPersistPropertyBagImpl class
 ms.assetid: 712af24d-99f8-40f2-9811-53b3ff6e5b19
-ms.openlocfilehash: 800c38c15e4ec8028fba9188d75e49be7ca51146
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 569a24fd08801de952e998f772afbc3478096628
+ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62274890"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66503148"
 ---
 # <a name="ipersistpropertybagimpl-class"></a>Ipersistpropertybagimpl – třída
 
@@ -41,7 +41,7 @@ Vaše třída odvozena od `IPersistPropertyBagImpl`.
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[IPersistPropertyBagImpl::GetClassID](#getclassid)|Načte identifikátor CLSID objektu.|
 |[IPersistPropertyBagImpl::InitNew](#initnew)|Inicializuje nově vytvořený objekt. Implementace knihovny ATL vrátí hodnotu S_OK.|
@@ -50,9 +50,9 @@ Vaše třída odvozena od `IPersistPropertyBagImpl`.
 
 ## <a name="remarks"></a>Poznámky
 
-[IPersistPropertyBag](https://msdn.microsoft.com/library/aa768205.aspx) rozhraní umožňuje uložit do kontejneru objektů klientem poskytnutý její vlastnosti. Třída `IPersistPropertyBagImpl` poskytuje výchozí implementaci tohoto rozhraní a implementuje `IUnknown` posíláním informací o k výpisu paměti zařízení v ladění sestavení.
+[IPersistPropertyBag](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa768205\(v=vs.85\)) rozhraní umožňuje uložit do kontejneru objektů klientem poskytnutý její vlastnosti. Třída `IPersistPropertyBagImpl` poskytuje výchozí implementaci tohoto rozhraní a implementuje `IUnknown` posíláním informací o k výpisu paměti zařízení v ladění sestavení.
 
-`IPersistPropertyBag` funguje ve spojení s [IPropertyBag](https://msdn.microsoft.com/library/aa768196.aspx) a [IErrorLog](https://msdn.microsoft.com/library/aa768231.aspx). Tato druhá možnost dvě rozhraní musí být implementované klientem. Prostřednictvím `IPropertyBag`, klient ukládá a načítá jednotlivých vlastností objektu. Prostřednictvím `IErrorLog`, objektu a klienta můžete podávat zprávy o chybách byla zjištěna.
+`IPersistPropertyBag` funguje ve spojení s [IPropertyBag](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa768196\(v=vs.85\)) a [IErrorLog](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa768231\(v=vs.85\)). Tato druhá možnost dvě rozhraní musí být implementované klientem. Prostřednictvím `IPropertyBag`, klient ukládá a načítá jednotlivých vlastností objektu. Prostřednictvím `IErrorLog`, objektu a klienta můžete podávat zprávy o chybách byla zjištěna.
 
 **Související články** [ATL – tutoriál](../../atl/active-template-library-atl-tutorial.md), [vytvoření projektu ATL](../../atl/reference/creating-an-atl-project.md)
 
@@ -92,7 +92,7 @@ Vrátí hodnotu S_OK.
 
 ### <a name="remarks"></a>Poznámky
 
-Zobrazit [IPersistPropertyBag::InitNew](https://msdn.microsoft.com/library/aa768204.aspx) ve Windows SDK.
+Zobrazit [IPersistPropertyBag::InitNew](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa768204\(v=vs.85\)) ve Windows SDK.
 
 ##  <a name="load"></a>  IPersistPropertyBagImpl::Load
 
@@ -106,7 +106,7 @@ STDMETHOD(Load)(LPPROPERTYBAG pPropBag, LPERRORLOG pErrorLog);
 
 Mapy vlastností objektu ATL používá pro načtení těchto informací.
 
-Zobrazit [IPersistPropertyBag::Load](https://msdn.microsoft.com/library/aa768206.aspx) ve Windows SDK.
+Zobrazit [IPersistPropertyBag::Load](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa768206\(v=vs.85\)) ve Windows SDK.
 
 ##  <a name="save"></a>  IPersistPropertyBagImpl::Save
 
@@ -123,7 +123,7 @@ STDMETHOD(Save)(
 
 Mapy vlastností objektu ATL používá k ukládání příslušných informací. Ve výchozím nastavení, tato metoda šetří všechny vlastnosti, bez ohledu na hodnotu *fSaveAllProperties*.
 
-Zobrazit [IPersistPropertyBag::Save](https://msdn.microsoft.com/library/aa768207.aspx) ve Windows SDK.
+Zobrazit [IPersistPropertyBag::Save](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa768207\(v=vs.85\)) ve Windows SDK.
 
 ## <a name="see-also"></a>Viz také:
 

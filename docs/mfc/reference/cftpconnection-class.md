@@ -30,12 +30,12 @@ helpviewer_keywords:
 - CFtpConnection [MFC], Rename
 - CFtpConnection [MFC], SetCurrentDirectory
 ms.assetid: 5e3a0501-8893-49cf-a3d5-0628d8d6b936
-ms.openlocfilehash: 12ef4de16279c5c2033a95df5928a6dfb7a2a652
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8940b1d028edc76383470f913ccbe16cb8c0e9f0
+ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62181974"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66503706"
 ---
 # <a name="cftpconnection-class"></a>CFtpConnection Class
 
@@ -51,13 +51,13 @@ class CFtpConnection : public CInternetConnection
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CFtpConnection::CFtpConnection](#cftpconnection)|Vytvoří `CFtpConnection` objektu.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CFtpConnection::Command](#command)|Odešle příkaz přímo na FTP server.|
 |[CFtpConnection::CreateDirectory](#createdirectory)|Vytvoří adresář na serveru.|
@@ -208,7 +208,7 @@ Ukazatel na řetězec obsahující název adresář, který chcete vytvořit.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Nenulové, pokud je úspěšná. jinak 0. Pokud selže volání funkce Windows [GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360) může být volána a zjistěte příčinu chyby.
+Nenulové, pokud je úspěšná. jinak 0. Pokud selže volání funkce Windows [GetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror) může být volána a zjistěte příčinu chyby.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -246,7 +246,7 @@ Ukazatel na DWORD, který obsahuje následující informace:
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Nenulové, pokud je úspěšná. jinak 0. Pokud volání selže, funkci Win32 [GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360) může být volána a zjistěte příčinu chyby.
+Nenulové, pokud je úspěšná. jinak 0. Pokud volání selže, funkci Win32 [GetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror) může být volána a zjistěte příčinu chyby.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -284,7 +284,7 @@ Ukazatel na DWORD, který obsahuje následující informace:
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Nenulové, pokud je úspěšná. jinak 0. Pokud volání selže, funkci Win32 [GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360) může být volána a zjistěte příčinu chyby.
+Nenulové, pokud je úspěšná. jinak 0. Pokud volání selže, funkci Win32 [GetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror) může být volána a zjistěte příčinu chyby.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -344,7 +344,7 @@ Identifikátor kontextu načítání souborů. Zobrazit **poznámky** Další in
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Nenulové, pokud je úspěšná. jinak 0. Pokud volání selže, funkci Win32 [GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360) může být volána a zjistěte příčinu chyby.
+Nenulové, pokud je úspěšná. jinak 0. Pokud volání selže, funkci Win32 [GetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror) může být volána a zjistěte příčinu chyby.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -434,7 +434,7 @@ Identifikátor kontextu umístění souboru. Zobrazit **poznámky** Další info
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Nenulové, pokud je úspěšná. jinak 0. Pokud volání selže, funkci Win32 [GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360) může být volána a zjistěte příčinu chyby.
+Nenulové, pokud je úspěšná. jinak 0. Pokud volání selže, funkci Win32 [GetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror) může být volána a zjistěte příčinu chyby.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -457,7 +457,7 @@ Ukazatel na řetězec obsahující název souboru, který chcete odebrat.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Nenulové, pokud je úspěšná. jinak 0. Pokud volání selže, funkci Win32 [GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360) může být volána a zjistěte příčinu chyby.
+Nenulové, pokud je úspěšná. jinak 0. Pokud volání selže, funkci Win32 [GetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror) může být volána a zjistěte příčinu chyby.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -478,7 +478,7 @@ Ukazatel na řetězec obsahující adresář, který má být odebrán.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Nenulové, pokud je úspěšná. jinak 0. Pokud volání selže, funkci Win32 [GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360) může být volána a zjistěte příčinu chyby.
+Nenulové, pokud je úspěšná. jinak 0. Pokud volání selže, funkci Win32 [GetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror) může být volána a zjistěte příčinu chyby.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -506,7 +506,7 @@ Ukazatel na řetězec obsahující název nového souboru.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Nenulové, pokud je úspěšná. jinak 0. Pokud volání selže, funkci Win32 [GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360) může být volána a zjistěte příčinu chyby.
+Nenulové, pokud je úspěšná. jinak 0. Pokud volání selže, funkci Win32 [GetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror) může být volána a zjistěte příčinu chyby.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -527,7 +527,7 @@ Ukazatel na řetězec obsahující název adresáře.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Nenulové, pokud je úspěšná. jinak 0. Pokud volání selže, funkci Win32 [GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360) může být volána a zjistěte příčinu chyby.
+Nenulové, pokud je úspěšná. jinak 0. Pokud volání selže, funkci Win32 [GetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror) může být volána a zjistěte příčinu chyby.
 
 ### <a name="remarks"></a>Poznámky
 

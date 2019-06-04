@@ -152,12 +152,12 @@ helpviewer_keywords:
 - CRichEditCtrl [MFC], StreamOut
 - CRichEditCtrl [MFC], Undo
 ms.assetid: 2be52788-822c-4c27-aafd-2471231e74eb
-ms.openlocfilehash: 5517efca66744c43eeccd3fb91b97a6fedc8180e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: bcb2f354314a0b0d1220a1ecb1c0fa2b8a913d5e
+ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62372098"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66504737"
 ---
 # <a name="cricheditctrl-class"></a>CRichEditCtrl Class
 
@@ -173,13 +173,13 @@ class CRichEditCtrl : public CWnd
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CRichEditCtrl::CRichEditCtrl](#cricheditctrl)|Vytvoří `CRichEditCtrl` objektu.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CRichEditCtrl::CanPaste](#canpaste)|Určuje, pokud lze vložit obsah schránky do tohoto ovládacího prvku RichEdit.|
 |[CRichEditCtrl::CanRedo](#canredo)|Určuje, zda jsou všechny akce ve frontě znovu ovládacího prvku.|
@@ -503,7 +503,7 @@ Nenulové, pokud je úspěšná. jinak 0.
 
 ### <a name="remarks"></a>Poznámky
 
-Použití `CreateEx` místo `Create` použít rozšířené styly Windows určené předponu rozšířeného stylu Windows **WS_EX_**.
+Použití `CreateEx` místo `Create` použít rozšířené styly Windows určené předponu rozšířeného stylu Windows **WS_EX_** .
 
 ##  <a name="cricheditctrl"></a>  CRichEditCtrl::CRichEditCtrl
 
@@ -1122,7 +1122,7 @@ Závisí na formuláři:
 
 ### <a name="remarks"></a>Poznámky
 
-Pokud používáte prvním **GetSelText (** `lpBuf` **)**, ujistěte se, že vyrovnávací paměť je příliš velká pro text se zobrazí. Volání [GetSel](#getsel) k určení počtu znaků v aktuálním výběru.
+Pokud používáte prvním **GetSelText (** `lpBuf` **)** , ujistěte se, že vyrovnávací paměť je příliš velká pro text se zobrazí. Volání [GetSel](#getsel) k určení počtu znaků v aktuálním výběru.
 
 Další informace najdete v tématu [EM_GETSELTEXT](/windows/desktop/Controls/em-getseltext) v sadě Windows SDK.
 
@@ -1354,7 +1354,7 @@ Znakový index řádku zadaném v *využívat* nebo -1, pokud zadaný počet ř�
 
 Znakový index je počet znaků od začátku ovládacího prvku RichEdit na určený řádek.
 
-Další informace najdete v tématu [EM_LINEINDEX](https://msdn.microsoft.com/library/windows/desktop/bb761611) v sadě Windows SDK.
+Další informace najdete v tématu [EM_LINEINDEX](/windows/desktop/controls/em-lineindex) v sadě Windows SDK.
 
 ### <a name="example"></a>Příklad
 

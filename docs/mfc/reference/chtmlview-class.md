@@ -194,12 +194,12 @@ helpviewer_keywords:
 - CHtmlView [MFC], SetWidth
 - CHtmlView [MFC], Stop
 ms.assetid: 904976af-73de-4aba-84ac-cfae8e2be09a
-ms.openlocfilehash: 17979dce7899820db3da3c24968385914c3a57e9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5ea7b59ccb95078324ae85bbf04c11c537f0f525
+ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62337892"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66503567"
 ---
 # <a name="chtmlview-class"></a>CHtmlView – třída
 
@@ -215,7 +215,7 @@ class CHtmlView : public CFormView
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CHtmlView::Create](#create)|Vytvoří ovládací prvek WebBrowser.|
 |[CHtmlView::CreateControlSite](#createcontrolsite)|Overridable umožňuje vytvořit instanci ovládacího prvku serveru pro hostování ovládacího prvku na formuláři.|
@@ -493,7 +493,7 @@ Hodnotu typu variant pro zadávání argumentů výstup příkazu.
 
 ### <a name="remarks"></a>Poznámky
 
-Zobrazit [IWebBrowser2::ExecWB](https://msdn.microsoft.com/library/aa752117.aspx) ve Windows SDK.
+Zobrazit [IWebBrowser2::ExecWB](/previous-versions//aa752117\(v=vs.85\)) ve Windows SDK.
 
 ##  <a name="getaddressbar"></a>  CHtmlView::GetAddressBar
 
@@ -759,7 +759,7 @@ READYSTATE GetReadyState() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-A [READYSTATE](https://msdn.microsoft.com/library/aa768362.aspx) hodnoty, jak je popsáno v sadě Windows SDK.
+A [READYSTATE](/previous-versions//aa768362\(v=vs.85\)) hodnoty, jak je popsáno v sadě Windows SDK.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -1307,7 +1307,7 @@ Přepsat `OnFrameWindowActivate` reagovat `OnFrameWindowActivate` oznámení z o
 
 ##  <a name="onfullscreen"></a>  CHtmlView::OnFullScreen
 
-Tato členská funkce je volána rozhraním, když [na celou obrazovku –](https://msdn.microsoft.com/library/aa752119.aspx) je změněna vlastnost.
+Tato členská funkce je volána rozhraním, když [na celou obrazovku –](/previous-versions/aa752119\(v=vs.85\)) je změněna vlastnost.
 
 ```
 virtual void OnFullScreen(BOOL bFullScreen);
@@ -1430,7 +1430,7 @@ Přepsat `OnHideUI` reagovat `HideUI` oznámení z ovládacího prvku Microsoft 
 
 ##  <a name="onmenubar"></a>  CHtmlView::OnMenuBar
 
-Tato členská funkce je volána rozhraním, když [řádku nabídek](https://msdn.microsoft.com/library/aa752131.aspx) je změněna vlastnost.
+Tato členská funkce je volána rozhraním, když [řádku nabídek](/previous-versions/aa752131\(v=vs.85\)) je změněna vlastnost.
 
 ```
 virtual void OnMenuBar(BOOL bMenuBar);
@@ -1481,7 +1481,7 @@ Adresa URL, pro kterou navigace se nezdařila.
 Název rámce, ve kterém prostředek je zobrazený, nebo hodnotu NULL, pokud žádné pojmenované rámce je určený pro prostředek.
 
 *dwError*<br/>
-Stavový kód chyby, pokud je k dispozici. Seznam možných stavů HRESULT a HTTP najdete v tématu [NavigateError události stavové kódy.](https://msdn.microsoft.com/library/aa768365.aspx)
+Stavový kód chyby, pokud je k dispozici. Seznam možných stavů HRESULT a HTTP najdete v tématu [NavigateError události stavové kódy.](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa768365\(v=vs.85\)).
 
 *pbCancel*<br/>
 Určuje, jestli se má zrušit navigaci na chybovou stránku nebo žádné další automatické hledání. Pokud hodnotu TRUE (výchozí), pokračovat s navigací na chybové stránky nebo automatické hledání; Pokud má hodnotu FALSE, zrušte navigace na chybové stránky nebo automatické hledání.
@@ -1490,7 +1490,7 @@ Určuje, jestli se má zrušit navigaci na chybovou stránku nebo žádné dalš
 
 Přepsáním této metody můžete zadat vlastní navigační zpracování chyb.
 
-Další informace najdete v tématu [DWebBrowserEvents2::NavigateError](https://msdn.microsoft.com/library/aa768286.aspx)
+Další informace najdete v tématu [DWebBrowserEvents2::NavigateError](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa768286\(v=vs.85\))
 
 ##  <a name="onnewwindow2"></a>  CHtmlView::OnNewWindow2
 
@@ -1661,7 +1661,7 @@ Přepsat `OnShowUI` reagovat `ShowUI` oznámení z ovládacího prvku Microsoft 
 
 ##  <a name="onstatusbar"></a>  CHtmlView::OnStatusBar
 
-Tato členská funkce je volána rozhraním, když [StatusBar](https://msdn.microsoft.com/library/aa768270.aspx) je změněna vlastnost.
+Tato členská funkce je volána rozhraním, když [StatusBar](/previous-versions//aa768270\(v=vs.85\)) je změněna vlastnost.
 
 ```
 virtual void OnStatusBar(BOOL bStatusBar);
@@ -1687,7 +1687,7 @@ virtual void OnStatusTextChange(LPCTSTR lpszText);
 
 ##  <a name="ontheatermode"></a>  CHtmlView::OnTheaterMode
 
-Tato členská funkce je volána rozhraním, když [TheaterMode](https://msdn.microsoft.com/library/aa768273.aspx) je změněna vlastnost.
+Tato členská funkce je volána rozhraním, když [TheaterMode](/previous-versions/aa768273\(v=vs.85\)) je změněna vlastnost.
 
 ```
 virtual void OnTheaterMode(BOOL bTheaterMode);
@@ -1717,7 +1717,7 @@ Pro kód HTML může změnit název; zatímco HTML se ještě stahuje, adresa UR
 
 ##  <a name="ontoolbar"></a>  CHtmlView::OnToolBar
 
-Tato členská funkce je volána rozhraním, když [nástrojů](https://msdn.microsoft.com/library/aa768274.aspx) je změněna vlastnost.
+Tato členská funkce je volána rozhraním, když [nástrojů](/previous-versions/aa768274\(v=vs.85\)) je změněna vlastnost.
 
 ```
 virtual void OnToolBar(BOOL bToolBar);
@@ -1956,7 +1956,7 @@ void Refresh2(int nLevel);
 ### <a name="parameters"></a>Parametry
 
 *nLevel*<br/>
-Adresa proměnné zadání úrovně obnovení. Je to možné proměnné jsou definovány v [RefreshConstants](https://msdn.microsoft.com/library/aa768363.aspx), v sadě Windows SDK.
+Adresa proměnné zadání úrovně obnovení. Je to možné proměnné jsou definovány v [RefreshConstants](/previous-versions/aa768363\(v=vs.85\)), v sadě Windows SDK.
 
 ### <a name="remarks"></a>Poznámky
 

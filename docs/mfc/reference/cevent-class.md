@@ -16,12 +16,12 @@ helpviewer_keywords:
 - CEvent [MFC], SetEvent
 - CEvent [MFC], Unlock
 ms.assetid: df676042-ce27-4702-800a-e73ff4f44395
-ms.openlocfilehash: d7731c87c6d6b0ebdec9a0c72c24b04334aa0662
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 54501e5ff690b855ca65652e76d45b9c6cfb6259
+ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62206040"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66503721"
 ---
 # <a name="cevent-class"></a>CEvent – třída
 
@@ -37,13 +37,13 @@ class CEvent : public CSyncObject
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CEvent::CEvent](#cevent)|Vytvoří `CEvent` objektu.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CEvent::PulseEvent](#pulseevent)|Nastaví událost, která má k dispozici (signalizován), uvolní čekajících vláken a nastaví událost do nedostupný (nonsignaled).|
 |[CEvent::ResetEvent](#resetevent)|Nastaví událost do nedostupný (nonsignaled).|
@@ -110,7 +110,7 @@ Při hodnotě TRUE Určuje, jestli objekt události je ruční událost, jinak j
 Název `CEvent` objektu. Je nutné zadat, pokud se použije objekt přes hranice procesu. Pokud jeho název odpovídá existující událost, konstruktor vytvoří novou `CEvent` objekt, který odkazuje na události s tímto názvem. Pokud název odpovídá existující objekt synchronizace, který není událost, procesu vytváření se nezdaří. Pokud má hodnotu NULL, bude mít název hodnotu null.
 
 *lpsaAttribute*<br/>
-Atributy zabezpečení pro objekt události. Úplný popis této struktury viz [SECURITY_ATTRIBUTES](https://msdn.microsoft.com/library/windows/desktop/aa379560) v sadě Windows SDK.
+Atributy zabezpečení pro objekt události. Úplný popis této struktury viz [SECURITY_ATTRIBUTES](/previous-versions/windows/desktop/legacy/aa379560\(v=vs.85\)) v sadě Windows SDK.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -119,7 +119,7 @@ Přístup nebo vydání `CEvent` objektu, vytvořit [CMultiLock](../../mfc/refer
 Chcete-li změnit stav `CEvent` objekt signalizován (vláken nemusíte čekat), volání [SetEvent](#setevent) nebo [PulseEvent](#pulseevent). Nastavit stav `CEvent` objekt nonsignaled (musíte počkat vláken), volání [ResetEvent](#resetevent).
 
 > [!IMPORTANT]
->  Po vytvoření `CEvent` objektu, použijte [GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360) zajistit, že mutex ještě neexistuje. Pokud mutex neočekávaně neexistuje, může to znamenat podvodný procesu je obsazení a může být úmyslem použít mutex závadně. Doporučený postup zabezpečení v tomto případě je zavřít popisovač a pokračovat, jako při vytváření objektu došlo k chybě.
+>  Po vytvoření `CEvent` objektu, použijte [GetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror) zajistit, že mutex ještě neexistuje. Pokud mutex neočekávaně neexistuje, může to znamenat podvodný procesu je obsazení a může být úmyslem použít mutex závadně. Doporučený postup zabezpečení v tomto případě je zavřít popisovač a pokračovat, jako při vytváření objektu došlo k chybě.
 
 ##  <a name="pulseevent"></a>  CEvent::PulseEvent
 

@@ -11,12 +11,12 @@ helpviewer_keywords:
 - user interface threads [C++]
 - threading [MFC], user interface threads
 ms.assetid: 446925c1-db59-46ea-ae5b-d5ae5d5b91d8
-ms.openlocfilehash: ac22fad95041b07e132d31a2d246e58c3b40d30c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b2fb23bd502de87aefe01d91e2b0640ee3137b00
+ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62212906"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66504586"
 ---
 # <a name="multithreading-creating-mfc-user-interface-threads"></a>Multithreading: Vytváření vláken uživatelského rozhraní MFC
 
@@ -45,13 +45,13 @@ Knihovna MFC poskytuje dvě verze funkce `AfxBeginThread` prostřednictvím pře
 
 - (Volitelné) CREATE_SUSPENDED, pokud chcete, aby vlákno vytvořeno v pozastaveném stavu. Výchozí hodnota je 0 nebo normální spuštění vlákna.
 
-- (Volitelné) Požadované atributy zabezpečení. Výchozí hodnota je stejný přístup jako k nadřazenému vláknu. Další informace o formátu bezpečnostních informací naleznete v tématu [SECURITY_ATTRIBUTES](https://msdn.microsoft.com/library/windows/desktop/aa379560) v sadě Windows SDK.
+- (Volitelné) Požadované atributy zabezpečení. Výchozí hodnota je stejný přístup jako k nadřazenému vláknu. Další informace o formátu bezpečnostních informací naleznete v tématu [SECURITY_ATTRIBUTES](/previous-versions/windows/desktop/legacy/aa379560\(v=vs.85\)) v sadě Windows SDK.
 
 `AfxBeginThread` Většina práce udělá za vás. Vytvoří nový objekt třídy, inicializuje ji s informacemi poskytujete a volání [CWinThread::CreateThread](../mfc/reference/cwinthread-class.md#createthread) která spustí provádění vlákna. Kontroly jsou prováděny v celém procesu zajistit, aby že všechny objekty jsou správně uvolněny by selhat některá část vytvoření.
 
 ## <a name="what-do-you-want-to-know-more-about"></a>Co chcete zjistit více informací?
 
-- [Multithreading: Ukončení vláken](multithreading-terminating-threads.md)
+- [Multithreading: Ukončování vláken](multithreading-terminating-threads.md)
 
 - [Multithreading: Vytváření pracovních vláken](multithreading-creating-worker-threads.md)
 

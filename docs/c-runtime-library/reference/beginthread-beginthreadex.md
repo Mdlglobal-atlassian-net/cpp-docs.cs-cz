@@ -29,12 +29,12 @@ helpviewer_keywords:
 - _beginthreadex function
 - beginthread function
 ms.assetid: 0df64740-a978-4358-a88f-fb0702720091
-ms.openlocfilehash: d70d2fb0ecb647d4854a6277d6c69cd9886e072f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f64fd7b945fc8ea2e5c111d300266e07faade0e7
+ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62349261"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66504543"
 ---
 # <a name="beginthread-beginthreadex"></a>_beginthread, _beginthreadex
 
@@ -83,7 +83,7 @@ Velikost zásobníku pro nové vlákno, nebo 0.
 Seznam argumentů, které se mají předat nové vlákno, nebo **NULL**.
 
 *Zabezpečení*<br/>
-Ukazatel [SECURITY_ATTRIBUTES](https://msdn.microsoft.com/library/windows/desktop/aa379560) struktura, která určuje, zda lze Vrácený popisovač Zdědit podřízenými procesy. Pokud *zabezpečení* je **NULL**, popisovač nelze dědit. Musí být **NULL** pro aplikace Windows 95.
+Ukazatel [SECURITY_ATTRIBUTES](/previous-versions/windows/desktop/legacy/aa379560\(v=vs.85\)) struktura, která určuje, zda lze Vrácený popisovač Zdědit podřízenými procesy. Pokud *zabezpečení* je **NULL**, popisovač nelze dědit. Musí být **NULL** pro aplikace Windows 95.
 
 *initflag*<br/>
 Příznaky, které řídí počáteční stav nového vlákna. Nastavte *initflag* 0 spustit okamžitě, nebo k **CREATE_SUSPENDED** k vytvoření vlákna v pozastaveném stavu; použijte [ResumeThread](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-resumethread) ke spuštění vlákna. Nastavte *initflag* k **STACK_SIZE_PARAM_IS_A_RESERVATION** příznak pro použití *stack_size* jako počáteční rezervovat velikost zásobníku v bajtech; Pokud je tento příznak není zadán, *stack_size* Určuje velikost potvrzení změn.
@@ -99,7 +99,7 @@ Pokud *start_address* je **NULL**, je vyvolána obslužná rutina neplatného pa
 
 Další informace o těchto a dalších návratových kódech naleznete v tématu [errno _doserrno, _sys_errlist a _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
-Další informace o **uintptr_t –**, naleznete v tématu [standardní typy](../../c-runtime-library/standard-types.md).
+Další informace o **uintptr_t –** , naleznete v tématu [standardní typy](../../c-runtime-library/standard-types.md).
 
 ## <a name="remarks"></a>Poznámky
 
@@ -128,7 +128,7 @@ Můžete volat [_endthread](endthread-endthreadex.md) nebo **_endthreadex** expl
 
 Operační systém zpracovává přidělení zásobníku při buď **_beginthread** nebo **_beginthreadex** nazývá; nemáte předat adresu zásobníku podprocesu některou z těchto funkcí. Kromě toho *stack_size* argument může být 0, ve kterém případ operační systém používá stejnou hodnotu jako zásobník, který je určen pro hlavní vlákno.
 
-*seznam_argumentů* je parametr má být předán do nově vytvořeného vlákna. Obvykle je to adresa datové položky, jako je řetězec znaků. *seznam_argumentů* může být **NULL** Pokud není potřeba, ale **_beginthread** a **_beginthreadex** musí mít nějakou hodnotu pro předání do nového vlákna. Všechna vlákna jsou ukončena, pokud kterékoli vlákno použije [přerušit](abort.md), **ukončit**, **_exit**, nebo **exitprocess –**.
+*seznam_argumentů* je parametr má být předán do nově vytvořeného vlákna. Obvykle je to adresa datové položky, jako je řetězec znaků. *seznam_argumentů* může být **NULL** Pokud není potřeba, ale **_beginthread** a **_beginthreadex** musí mít nějakou hodnotu pro předání do nového vlákna. Všechna vlákna jsou ukončena, pokud kterékoli vlákno použije [přerušit](abort.md), **ukončit**, **_exit**, nebo **exitprocess –** .
 
 Národní prostředí nového vlákna je inicializována pomocí na úrovni jednotlivého procesu globální aktuální o národním prostředí. Pokud je povoleno národní prostředí pro vlákno voláním [_configthreadlocale](configthreadlocale.md) (buď globálně, nebo pro nová vlákna), vlákno lze změnit pouze své národní prostředí nezávisle z jiných vláken voláním **setlocale** nebo **_wsetlocale**. Vlákna, které nemají nastaven příznak národní prostředí vlákno může ovlivnit o národním prostředí v všechna vlákna, které nemají taky nastavit příznak národní prostředí vlákno, jakož i všech nově vytvořeného vlákna. Další informace najdete v tématu [národní prostředí](../../c-runtime-library/locale.md).
 

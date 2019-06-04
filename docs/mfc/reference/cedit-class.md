@@ -94,12 +94,12 @@ helpviewer_keywords:
 - CEdit [MFC], ShowBalloonTip
 - CEdit [MFC], Undo
 ms.assetid: b1533c30-7f10-4663-88d3-8b7f2c9f7024
-ms.openlocfilehash: 45c03d142c34186660aa2715081ffb0f45e85ccc
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 295a58a86f35fca3b8d25706857162facc9cb3ea
+ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62164069"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66503750"
 ---
 # <a name="cedit-class"></a>Cedit – třída
 
@@ -115,13 +115,13 @@ class CEdit : public CWnd
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CEdit::CEdit](#cedit)|Vytvoří `CEdit` objekt ovládacího prvku.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CEdit::CanUndo](#canundo)|Určuje, jestli operace edit-control je možné vrátit zpět.|
 |[CEdit::CharFromPos](#charfrompos)|Načte indexy řádku a znak nejblíže určené pozici znaku.|
@@ -181,7 +181,7 @@ Pokud chcete zpracovávat Windows oznamující zprávy odeslal ovládacího prvk
 
 Každá položka mapování zpráv má následující podobu:
 
-  **ON_**_oznámení_**(** _id_**,** _memberFxn_ **)**
+  **ON_** _oznámení_ **(** _id_ **,** _memberFxn_ **)**
 
 kde `id` identifikátor podřízené okno ovládacího prvku pro úpravy, posílání oznámení, a `memberFxn` je název nadřazené členské funkce mají napsané tak, aby oznámení.
 
@@ -708,7 +708,7 @@ Určuje znak zobrazený namísto znaku, který uživatel zadal. Vrácená hodnot
 
 ### <a name="remarks"></a>Poznámky
 
-Pokud vytvoříte ovládací prvek pro úpravy stylu ES_PASSWORD, určuje knihovnu DLL, která podporuje ovládací prvek výchozí znak hesla. Manifest nebo [InitCommonControlsEx](/windows/desktop/api/commctrl/nf-commctrl-initcommoncontrolsex) metoda určuje, které knihovny DLL podporuje ovládací prvek pro úpravy. Pokud user32.dll podporuje ovládací prvek pro úpravy, výchozí znak hesla je hvězdička ("*", U + 002A). Pokud verze souboru comctl32.dll 6 podporuje ovládací prvek pro úpravy, je výchozí znakovou KRUH ČERNÉ ("●", U + 25CF). Další informace o který podporuje knihovnu DLL a verze běžných ovládacích prvků naleznete v tématu [prostředí a verze běžných ovládacích prvků](https://msdn.microsoft.com/library/windows/desktop/bb776779).
+Pokud vytvoříte ovládací prvek pro úpravy stylu ES_PASSWORD, určuje knihovnu DLL, která podporuje ovládací prvek výchozí znak hesla. Manifest nebo [InitCommonControlsEx](/windows/desktop/api/commctrl/nf-commctrl-initcommoncontrolsex) metoda určuje, které knihovny DLL podporuje ovládací prvek pro úpravy. Pokud user32.dll podporuje ovládací prvek pro úpravy, výchozí znak hesla je hvězdička ("*", U + 002A). Pokud verze souboru comctl32.dll 6 podporuje ovládací prvek pro úpravy, je výchozí znakovou KRUH ČERNÉ ("●", U + 25CF). Další informace o který podporuje knihovnu DLL a verze běžných ovládacích prvků naleznete v tématu [prostředí a verze běžných ovládacích prvků](/previous-versions/windows/desktop/legacy/bb776779\(v=vs.85\)).
 
 Tato metoda odesílá [EM_GETPASSWORDCHAR](/windows/desktop/Controls/em-getpasswordchar) zprávu, která je popsána v sadě Windows SDK.
 
@@ -867,7 +867,7 @@ Znakový index je počet znaků od začátku textovém poli na určený řádek.
 
 Tato členská funkce je zpracována pouze v ovládacích prvcích pro úpravy více řádků.
 
-Další informace najdete v tématu [EM_LINEINDEX](https://msdn.microsoft.com/library/windows/desktop/bb761611) v sadě Windows SDK.
+Další informace najdete v tématu [EM_LINEINDEX](/windows/desktop/controls/em-lineindex) v sadě Windows SDK.
 
 ### <a name="example"></a>Příklad
 

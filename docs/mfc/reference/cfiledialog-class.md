@@ -132,12 +132,12 @@ helpviewer_keywords:
 - CFileDialog [MFC], OnTypeChange
 - CFileDialog [MFC], m_ofn
 ms.assetid: fda4fd3c-08b8-4ce0-8e9d-7bab23f8c6c0
-ms.openlocfilehash: f74d883fa0dcdce025345848caf49069736ee0fa
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: fe4994b91813e2965972b47c838ddaf5333cc5f0
+ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62385362"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66503759"
 ---
 # <a name="cfiledialog-class"></a>Cfiledialog – třída
 
@@ -153,13 +153,13 @@ class CFileDialog : public CCommonDialog
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CFileDialog::CFileDialog](#cfiledialog)|Vytvoří `CFileDialog` objektu.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CFileDialog::AddCheckButton](#addcheckbutton)|Přidá tlačítko zaškrtnutí do dialogového okna.|
 |[CFileDialog::AddComboBox](#addcombobox)|Přidá pole se seznamem do dialogového okna.|
@@ -214,7 +214,7 @@ class CFileDialog : public CCommonDialog
 
 ### <a name="protected-methods"></a>Chráněné metody
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CFileDialog::OnButtonClicked](#onbuttonclicked)|Volá se, když dojde ke kliknutí na tlačítko.|
 |[CFileDialog::OnCheckButtonToggled](#oncheckbuttontoggled)|Volá se, když je toto políčko zaškrtnuto a nezaškrtnuto.|
@@ -230,7 +230,7 @@ class CFileDialog : public CCommonDialog
 
 ### <a name="public-data-members"></a>Veřejné datové členy
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CFileDialog::m_ofn](#m_ofn)|Windows `OPENFILENAME` struktury. Poskytuje přístup k základní soubor dialogové okno pole parametrů.|
 
@@ -512,7 +512,7 @@ void ApplyOFNToShellDialog();
 
 ### <a name="remarks"></a>Poznámky
 
-Ve verzích Windows než Windows Vista, člen [LPSTRFILE](https://msdn.microsoft.com/library/ms911906.aspx) datová struktura byla průběžně synchronizována se stavem `CFileDialog`. Všechny změny [m_ofn](#m_ofn) členské proměnné se okamžitě projeví ve stavu dialogového okna. Také, okamžitě aktualizovat všechny změny stavu dialogových oken `m_ofn` členské proměnné.
+Ve verzích Windows než Windows Vista, člen [LPSTRFILE](/previous-versions/windows/embedded/ms911906\(v=msdn.10\)) datová struktura byla průběžně synchronizována se stavem `CFileDialog`. Všechny změny [m_ofn](#m_ofn) členské proměnné se okamžitě projeví ve stavu dialogového okna. Také, okamžitě aktualizovat všechny změny stavu dialogových oken `m_ofn` členské proměnné.
 
 V systému Windows Vista nebo novější hodnoty `m_ofn` členské proměnné a stav `CFileDialog` není zaručeno, že se dá provést synchronizace. Tato funkce vynutí stav `CFileDialog` aktualizovat tak, aby odpovídaly `m_ofn` struktury. Windows volá tuto funkci automaticky během [CFileDialog::DoModal](#domodal).
 
@@ -1626,7 +1626,7 @@ void UpdateOFNFromShellDialog();
 
 ### <a name="remarks"></a>Poznámky
 
-Ve verzích Windows než Windows Vista, člen [LPSTRFILE](https://msdn.microsoft.com/library/ms911906.aspx) datová struktura byla průběžně synchronizována se stavem `CFileDialog`. Všechny změny [m_ofn](#m_ofn) členské proměnné přímo vliv na stav dialogového okna. Navíc všechny změny stavu dialogového okna okamžitě aktualizován m_ofn členské proměnné.
+Ve verzích Windows než Windows Vista, člen [LPSTRFILE](/previous-versions/windows/embedded/ms911906\(v=msdn.10\)) datová struktura byla průběžně synchronizována se stavem `CFileDialog`. Všechny změny [m_ofn](#m_ofn) členské proměnné přímo vliv na stav dialogového okna. Navíc všechny změny stavu dialogového okna okamžitě aktualizován m_ofn členské proměnné.
 
 V systému Windows Vista nebo novější `m_ofn` datová struktura se neaktualizuje automaticky. Chcete-li zaručit, že data v `m_ofn` členské proměnné, měli byste zavolat `UpdateOFNFromShellDialog` funkce před přístupu k datům. Windows volá tuto funkci automaticky během zpracování [IFileDialog::OnFileOK](/windows/desktop/api/shobjidl_core/nf-shobjidl_core-ifiledialogevents-onfileok).
 

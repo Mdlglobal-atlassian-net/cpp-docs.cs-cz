@@ -42,12 +42,12 @@ helpviewer_keywords:
 - registry, writing to
 - registry, deleting keys
 ms.assetid: 3afce82b-ba2c-4c1a-8404-dc969e1af74b
-ms.openlocfilehash: 1215c66f1f40cfbc96b813d4eb5084f07698bc01
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 58b7b180f5b4925f64078f8c799036252003549e
+ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62278082"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66503239"
 ---
 # <a name="cregkey-class"></a>Cregkey – třída
 
@@ -66,14 +66,14 @@ class CRegKey
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CRegKey::CRegKey](#cregkey)|Konstruktor|
 |[CRegKey::~CRegKey](#dtor)|Destruktor.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CRegKey::Attach](#attach)|Volejte tuto metodu za účelem připojení HKEY k `CRegKey` objektu tak, že nastavíte [m_hKey](#m_hkey) popisovač člena `hKey`.|
 |[CRegKey::Close](#close)|Volejte tuto metodu za účelem uvolnění [m_hKey](#m_hkey) člen zpracování a nastavte ho na hodnotu NULL.|
@@ -106,14 +106,14 @@ class CRegKey
 
 ### <a name="public-operators"></a>Veřejné operátory
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CRegKey::operator HKEY](#operator_hkey)|Převede `CRegKey` objekt HKEY.|
 |[CRegKey::operator =](#operator_eq)|Operátor přiřazení.|
 
 ### <a name="public-data-members"></a>Veřejné datové členy
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CRegKey::m_hKey](#m_hkey)|Obsahuje popisovač klíče registru přidružené `CRegKey` objektu.|
 |[CRegKey::m_pTM](#m_ptm)|Ukazatel na `CAtlTransactionManager` objektu|
@@ -195,7 +195,7 @@ Možnosti pro klíč. Výchozí hodnota je REG_OPTION_NON_VOLATILE. Seznam možn
 Zabezpečený přístup ke klíči. Výchozí hodnota je KEY_READ &#124; KEY_WRITE. Seznam možných hodnot a popisy najdete v tématu `RegCreateKeyEx`.
 
 *lpSecAttr*<br/>
-Ukazatel [SECURITY_ATTRIBUTES](https://msdn.microsoft.com/library/windows/desktop/aa379560) struktura, která označuje, zda popisovač klíče mohou být zděděny podřízený proces. Ve výchozím nastavení tento parametr hodnotu NULL (tj. nemůže být zděděn popisovač).
+Ukazatel [SECURITY_ATTRIBUTES](/previous-versions/windows/desktop/legacy/aa379560\(v=vs.85\)) struktura, která označuje, zda popisovač klíče mohou být zděděny podřízený proces. Ve výchozím nastavení tento parametr hodnotu NULL (tj. nemůže být zděděn popisovač).
 
 *lpdwDisposition*<br/>
 [out] Pokud není NULL, načte REG_CREATED_NEW_KEY (Pokud klíč neexistuje a vytvořila) nebo REG_OPENED_EXISTING_KEY (Pokud klíč existuje a byl otevřen).

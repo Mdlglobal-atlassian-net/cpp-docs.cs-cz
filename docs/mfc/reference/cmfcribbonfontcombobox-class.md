@@ -22,12 +22,12 @@ helpviewer_keywords:
 - CMFCRibbonFontComboBox [MFC], RebuildFonts
 - CMFCRibbonFontComboBox [MFC], SetFont
 ms.assetid: 33b4db50-df4f-45fa-8f05-2e6e73c31435
-ms.openlocfilehash: 643e2a519c6d96c1070990dd86d571c5b7c09f95
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f17ad9157ff40620a68073eea85acb6fff104bb4
+ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62237022"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66504841"
 ---
 # <a name="cmfcribbonfontcombobox-class"></a>Cmfcribbonfontcombobox – třída
 
@@ -43,19 +43,19 @@ class CMFCRibbonFontComboBox : public CMFCRibbonComboBox
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |`CMFCRibbonFontComboBox::~CMFCRibbonFontComboBox`|Destruktor.|
 
 ### <a name="protected-constructors"></a>Chráněné konstruktory
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CMFCRibbonFontComboBox::CMFCRibbonFontComboBox](#cmfcribbonfontcombobox)|Vytvoří a inicializuje `CMFCRibbonFontComboBox` objektu.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CMFCRibbonFontComboBox::BuildFonts](#buildfonts)|Naplní pásu karet pole se seznamem písma s písmy zadaný font typu, znaková sada a rozteč a rodiny.|
 |`CMFCRibbonFontComboBox::CreateObject`|Rozhraní používá k vytvoření dynamické instance tohoto typu třídy.|
@@ -143,7 +143,7 @@ CMFCRibbonFontComboBox(
 
 ### <a name="remarks"></a>Poznámky
 
-Další informace o možných *nFontType* hodnoty parametrů naleznete v tématu [EnumFontFamProc](https://msdn.microsoft.com/library/windows/desktop/dd162621) v dokumentaci Windows SDK.
+Další informace o možných *nFontType* hodnoty parametrů naleznete v tématu [EnumFontFamProc](/previous-versions/dd162621\(v=vs.85\)) v dokumentaci Windows SDK.
 
 Další informace o platné znakových sad, které je možné přiřadit *nCharSet*a platné hodnoty, které je možné přiřadit *nPitchAndFamily*, naleznete v tématu [LOGFONT](/windows/desktop/api/wingdi/ns-wingdi-taglogfonta) v Dokumentace k sadě Windows SDK.
 

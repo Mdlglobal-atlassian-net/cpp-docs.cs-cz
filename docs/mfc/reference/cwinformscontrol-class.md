@@ -14,12 +14,12 @@ helpviewer_keywords:
 - CWinFormsControl [MFC], GetControl
 - CWinFormsControl [MFC], GetControlHandle
 ms.assetid: 6406dd7b-fb89-4a18-ac3a-c010d6b6289a
-ms.openlocfilehash: 91691203f88f07f597aaad6a5db32b03e7ad11c4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c1c7a394317fefba7911e9500126919e83389f20
+ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62323295"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66504667"
 ---
 # <a name="cwinformscontrol-class"></a>CWinFormsControl – třída
 
@@ -41,13 +41,13 @@ Ovládací prvek formulářů Windows rozhraní .NET Framework zobrazeného v ap
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CWinFormsControl::CWinFormsControl](#cwinformscontrol)|Vytvoří objekt obálky ovládacího prvku Windows Forms knihovny MFC.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CWinFormsControl::CreateManagedControl](#createmanagedcontrol)|Vytvoří ovládacího prvku Windows Forms v MFC kontejneru.|
 |[CWinFormsControl::GetControl](#getcontrol)|Načte ukazatel na ovládacím prvku Windows Forms.|
@@ -55,7 +55,7 @@ Ovládací prvek formulářů Windows rozhraní .NET Framework zobrazeného v ap
 
 ### <a name="public-operators"></a>Veřejné operátory
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CWinFormsControl::operator -&gt;](#operator_-_gt)|Nahradí [CWinFormsControl::GetControl](#getcontrol) ve výrazech.|
 |[CWinFormsControl::operator TManagedControl^](#operator_tmanagedcontrol)|Přetypování typu jako ukazatel na ovládacím prvku Windows Forms.|
@@ -108,7 +108,7 @@ inline BOOL CreateManagedControl(
 ### <a name="parameters"></a>Parametry
 
 *pType*<br/>
-Datový typ ovládacího prvku, který má být vytvořen. Musí být [typ](https://msdn.microsoft.com/library/system.type) datového typu.
+Datový typ ovládacího prvku, který má být vytvořen. Musí být [typ](/dotnet/api/system.type) datového typu.
 
 *dwStyle*<br/>
 Styl okna pro ovládací prvek. Určuje kombinaci [styly oken](../../mfc/reference/styles-used-by-mfc.md#window-styles). V současné době jsou podporovány pouze následující styly: WS_TABSTOP WS_VISIBLE, WS_DISABLED a WS_GROUP.
@@ -136,7 +136,7 @@ Pokud je úspěšná, vrátí nenulovou hodnotu. Pokud není úspěšné, vrát�
 
 Tato metoda vytvoří instanci ovládacího prvku formulářů Windows rozhraní .NET Framework v kontejneru prvku knihovny MFC.
 
-První přetížení metody přijímá datový typ rozhraní .NET Framework *pType* tak, aby MFC instanci můžete vytvořit nový objekt tohoto typu. *pType* musí být [typ](https://msdn.microsoft.com/library/system.type) datového typu.
+První přetížení metody přijímá datový typ rozhraní .NET Framework *pType* tak, aby MFC instanci můžete vytvořit nový objekt tohoto typu. *pType* musí být [typ](/dotnet/api/system.type) datového typu.
 
 Druhé přetížení metody vytvoří ovládacího prvku Windows Forms na základě `TManagedControl` parametrem šablony `CWinFormsControl` třídy. Podle velikosti a pozice ovládacího prvku `RECT` předané metodě. Pouze *dwStyle* je důležité pro styly.
 

@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - CSemaphore [MFC], CSemaphore
 ms.assetid: 385fc7e4-8f86-4be2-85e1-d23b38c12f7f
-ms.openlocfilehash: f2a05963f39393bcc73650beb44c5dbb8e5535ee
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6c518b6a9ad0fe857b0878bcecd3020ba97174e6
+ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62324204"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66504716"
 ---
 # <a name="csemaphore-class"></a>CSemaphore – třída
 
@@ -29,7 +29,7 @@ class CSemaphore : public CSyncObject
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CSemaphore::CSemaphore](#csemaphore)|Vytvoří `CSemaphore` objektu.|
 
@@ -83,14 +83,14 @@ Maximální využití počet pro semafor. Musí být větší než 0.
 Název semafor. Je nutné zadat, pokud semafor budou mít přístup přes hranice procesu. Pokud `NULL`, bude objekt musí být pojmenovaná. Pokud název odpovídá existující semafor, konstruktoru vytvoří novou `CSemaphore` objekt, který odkazuje na spolupráci s tímto názvem. Pokud název odpovídá existující synchronizační objekt, který není semafor, procesu vytváření se nezdaří.
 
 *lpsaAttributes*<br/>
-Atributy zabezpečení pro objekt pro spolupráci. Úplný popis této struktury viz [SECURITY_ATTRIBUTES](https://msdn.microsoft.com/library/windows/desktop/aa379560) v sadě Windows SDK.
+Atributy zabezpečení pro objekt pro spolupráci. Úplný popis této struktury viz [SECURITY_ATTRIBUTES](/previous-versions/windows/desktop/legacy/aa379560\(v=vs.85\)) v sadě Windows SDK.
 
 ### <a name="remarks"></a>Poznámky
 
 Přístup nebo vydání `CSemaphore` objektu, vytvořit [CMultiLock](../../mfc/reference/cmultilock-class.md) nebo [CSingleLock](../../mfc/reference/csinglelock-class.md) objektu a volání jeho [Zámek](../../mfc/reference/csinglelock-class.md#lock) a [odemknout](../../mfc/reference/csinglelock-class.md#unlock) Členské funkce.
 
 > [!IMPORTANT]
->  Po vytvoření `CSemaphore` objektu, použijte [GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360) zajistit, že mutex již neexistuje. Pokud mutex neočekávaně neexistuje, může to znamenat podvodný procesu je obsazení a může být úmyslem použít mutex závadně. Doporučený postup zabezpečení v tomto případě je zavřít popisovač a pokračovat, jako při vytváření objektu došlo k chybě.
+>  Po vytvoření `CSemaphore` objektu, použijte [GetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror) zajistit, že mutex již neexistuje. Pokud mutex neočekávaně neexistuje, může to znamenat podvodný procesu je obsazení a může být úmyslem použít mutex závadně. Doporučený postup zabezpečení v tomto případě je zavřít popisovač a pokračovat, jako při vytváření objektu došlo k chybě.
 
 ## <a name="see-also"></a>Viz také:
 

@@ -20,12 +20,12 @@ helpviewer_keywords:
 - CNetAddressCtrl [MFC], GetAllowType
 - CNetAddressCtrl [MFC], SetAllowType
 ms.assetid: cb4c6aca-3f49-4b52-b76c-65f57096155b
-ms.openlocfilehash: ec4d7aa6f2a1061e632b81a27a0233cf5fdd1c63
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 23160c51466ce1a2857d3648dd5f4970dfe172f7
+ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62373811"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66504234"
 ---
 # <a name="cnetaddressctrl-class"></a>CNetAddressCtrl – třída
 
@@ -41,13 +41,13 @@ class CNetAddressCtrl : public CEdit
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CNetAddressCtrl::CNetAddressCtrl](#cnetaddressctrl)|Vytvoří `CNetAddressCtrl` objektu.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CNetAddressCtrl::Create](#create)|Vytvoří ovládací prvek adresy sítě se zadaným styly a připojí ho k aktuální `CNetAddressCtrl` objektu.|
 |[CNetAddressCtrl::CreateEx](#createex)|Vytvoří ovládací prvek adresy sítě se zadaným rozšířené styly a připojí ho k aktuální `CNetAddressCtrl` objektu.|
@@ -74,7 +74,7 @@ Následující příklad kódu je část dialogového okna, která ověřuje sí
 
 ## <a name="example"></a>Příklad
 
-Následující příklad kódu ze souboru záhlaví dialogového okna definuje [NC_ADDRESS](/windows/desktop/api/shellapi/ns-shellapi-tagnc_address) a [NET_ADDRESS_INFO](https://msdn.microsoft.com/library/windows/desktop/bb773346) proměnné, které jsou vyžadované [CNetAddressCtrl::GetAddress](#getaddress)metody.
+Následující příklad kódu ze souboru záhlaví dialogového okna definuje [NC_ADDRESS](/windows/desktop/api/shellapi/ns-shellapi-tagnc_address) a [NET_ADDRESS_INFO](/windows/desktop/shell/hkey-type) proměnné, které jsou vyžadované [CNetAddressCtrl::GetAddress](#getaddress)metody.
 
 [!code-cpp[NVC_MFC_CNetAddressCtrl_s1#2](../../mfc/reference/codesnippet/cpp/cnetaddressctrl-class_2.h)]
 
@@ -191,7 +191,7 @@ HRESULT GetAddress(PNC_ADDRESS pAddress) const;
 ### <a name="parameters"></a>Parametry
 
 *pAddress*<br/>
-[out v] Ukazatel [NC_ADDRESS](/windows/desktop/api/shellapi/ns-shellapi-tagnc_address) struktury.  Nastavte *pAddrInfo* člena této struktury na adresu [NET_ADDRESS_INFO](https://msdn.microsoft.com/library/windows/desktop/bb773346) strukturu před voláním metody GetAddress.
+[out v] Ukazatel [NC_ADDRESS](/windows/desktop/api/shellapi/ns-shellapi-tagnc_address) struktury.  Nastavte *pAddrInfo* člena této struktury na adresu [NET_ADDRESS_INFO](/windows/desktop/shell/hkey-type) strukturu před voláním metody GetAddress.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -199,7 +199,7 @@ Hodnota S_OK, pokud tato metoda je úspěšná. jinak kód chyby modelu COM. Dal
 
 ### <a name="remarks"></a>Poznámky
 
-Pokud tato metoda je úspěšná, [NET_ADDRESS_INFO](https://msdn.microsoft.com/library/windows/desktop/bb773346) struktura obsahuje další informace o síťové adrese.
+Pokud tato metoda je úspěšná, [NET_ADDRESS_INFO](/windows/desktop/shell/hkey-type) struktura obsahuje další informace o síťové adrese.
 
 Použití [CNetAddressCtrl::SetAllowType](#setallowtype) metodu pro určení typů ovládacího prvku aktuální síťové adresy může podporovat adresy. Použití [CNetAddressCtrl::GetAddress](#getaddress) metodu k ověření a analyzovat síťovou adresu, která uživatel zadá. Použití [CNetAddressCtrl::DisplayErrorTip](#displayerrortip) metoda se zobrazí chybová zpráva tip, pokud [CNetAddressCtrl::GetAddress](#getaddress) metoda neproběhne úspěšně.
 
@@ -215,7 +215,7 @@ DWORD GetAllowType() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Bitová kombinace (nebo) příznaky určující typy adres může podporovat ovládacího prvku síťové adresy. Další informace najdete v tématu [NET_STRING](https://msdn.microsoft.com/library/windows/desktop/bb762586).
+Bitová kombinace (nebo) příznaky určující typy adres může podporovat ovládacího prvku síťové adresy. Další informace najdete v tématu [NET_STRING](/windows/desktop/shell/net-string).
 
 ### <a name="remarks"></a>Poznámky
 
@@ -233,7 +233,7 @@ HRESULT SetAllowType(DWORD dwAddrMask);
 
 |Parametr|Popis|
 |---------------|-----------------|
-|*dwAddrMask*|[in] Bitová kombinace (nebo) příznaky určující typy adres může podporovat ovládacího prvku síťové adresy. Další informace najdete v tématu [NET_STRING](https://msdn.microsoft.com/library/windows/desktop/bb762586).|
+|*dwAddrMask*|[in] Bitová kombinace (nebo) příznaky určující typy adres může podporovat ovládacího prvku síťové adresy. Další informace najdete v tématu [NET_STRING](/windows/desktop/shell/net-string).|
 
 ### <a name="return-value"></a>Návratová hodnota
 

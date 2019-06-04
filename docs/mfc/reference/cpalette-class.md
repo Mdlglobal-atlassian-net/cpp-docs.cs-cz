@@ -26,12 +26,12 @@ helpviewer_keywords:
 - CPalette [MFC], ResizePalette
 - CPalette [MFC], SetPaletteEntries
 ms.assetid: 8cd95498-53ed-4852-85e1-70e522541114
-ms.openlocfilehash: f0105a8ee33a57f7431a9c6a97b4b132f291f42a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1dc29a675f6ab3883683b3afae7e22e7ed0f1cc3
+ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62373177"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66504770"
 ---
 # <a name="cpalette-class"></a>CPalette Class
 
@@ -47,13 +47,13 @@ class CPalette : public CGdiObject
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CPalette::CPalette](#cpalette)|Vytvoří `CPalette` objekt se žádné připojené palety Windows. Je třeba inicializovat `CPalette` objekt s jedním z inicializace členských funkcí předtím, než je možné.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CPalette::AnimatePalette](#animatepalette)|Nahradí položky v logickou paletu identifikován `CPalette` objektu. Aplikace nemá klientské oblasti, aktualizovat, protože Windows mapuje nové položky do systémové palety okamžitě.|
 |[CPalette::CreateHalftonePalette](#createhalftonepalette)|Vytvoří barevnou paletu polotónování pro kontext zařízení a připojí ho k `CPalette` objektu.|
@@ -67,7 +67,7 @@ class CPalette : public CGdiObject
 
 ### <a name="public-operators"></a>Veřejné operátory
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CPalette::operator HPALETTE](#operator_hpalette)|Vrátí HPALETTE připojené k `CPalette`.|
 
@@ -111,7 +111,7 @@ Určuje první položku v palety animovat.
 Určuje počet položek v palety animovat.
 
 *lpPaletteColors*<br/>
-Odkazuje na první člen pole [PALETTEENTRY](https://msdn.microsoft.com/library/windows/desktop/dd162769) struktury k nahrazení palety identifikovaný *nStartIndex* a *nNumEntries*.
+Odkazuje na první člen pole [PALETTEENTRY](/previous-versions/dd162769\(v=vs.85\)) struktury k nahrazení palety identifikovaný *nStartIndex* a *nNumEntries*.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -245,7 +245,7 @@ Určuje první položku v logickou paletu, která se má načíst.
 Určuje počet položek v logickou paletu, která se má načíst.
 
 *lpPaletteColors*<br/>
-Odkazuje na pole [PALETTEENTRY](https://msdn.microsoft.com/library/windows/desktop/dd162769) datové struktury pro příjem položky palety. Pole musí obsahovat alespoň tolik datových struktur podle specifikace *nNumEntries*.
+Odkazuje na pole [PALETTEENTRY](/previous-versions/dd162769\(v=vs.85\)) datové struktury pro příjem položky palety. Pole musí obsahovat alespoň tolik datových struktur podle specifikace *nNumEntries*.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -312,7 +312,7 @@ Určuje první položku v logickou paletu, která se má nastavit.
 Určuje počet položek v logickou paletu, která se má nastavit.
 
 *lpPaletteColors*<br/>
-Odkazuje na pole [PALETTEENTRY](https://msdn.microsoft.com/library/windows/desktop/dd162769) datové struktury pro příjem položky palety. Pole musí obsahovat alespoň tolik datových struktur podle specifikace *nNumEntries*.
+Odkazuje na pole [PALETTEENTRY](/previous-versions/dd162769\(v=vs.85\)) datové struktury pro příjem položky palety. Pole musí obsahovat alespoň tolik datových struktur podle specifikace *nNumEntries*.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -322,7 +322,7 @@ Nastavit počet položek v logickou paletu; 0, pokud funkce se nezdařilo.
 
 Pokud je logickou paletu vybrána kontextu zařízení, pokud aplikace volá `SetPaletteEntries`, změny se projeví až do volání aplikace [CDC::RealizePalette](../../mfc/reference/cdc-class.md#realizepalette).
 
-Další informace o struktuře Windows `PALETTEENTRY`, naleznete v tématu [PALETTEENTRY](https://msdn.microsoft.com/library/windows/desktop/dd162769) v sadě Windows SDK.
+Další informace najdete v tématu [PALETTEENTRY](/previous-versions/dd162769\(v=vs.85\)) v sadě Windows SDK.
 
 ## <a name="see-also"></a>Viz také:
 

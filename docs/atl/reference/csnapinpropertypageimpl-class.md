@@ -25,12 +25,12 @@ helpviewer_keywords:
 - property pages, ATL
 - CSnapInPropertyPageImpl class
 ms.assetid: 75bdce5a-985e-4166-bd44-493132e023c4
-ms.openlocfilehash: d4e363f7de46de6f875a28a62d4ecdf929decdc3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: dd60afc34b1a2de8f86037eb180aab86a9b8afde
+ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62277501"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66503085"
 ---
 # <a name="csnapinpropertypageimpl-class"></a>CSnapInPropertyPageImpl Class
 
@@ -49,13 +49,13 @@ CSnapInPropertyPageImpl : public CDialogImplBase
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CSnapInPropertyPageImpl::CSnapInPropertyPageImpl](#csnapinpropertypageimpl)|Konstruktor|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CSnapInPropertyPageImpl::CancelToClose](#canceltoclose)|Změní stav **OK** a **zrušit** tlačítka.|
 |[CSnapInPropertyPageImpl::Create](#create)|Inicializuje nově vytvořený `CSnapInPropertyPageImpl` objektu.|
@@ -73,7 +73,7 @@ CSnapInPropertyPageImpl : public CDialogImplBase
 
 ### <a name="public-data-members"></a>Veřejné datové členy
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CSnapInPropertyPageImpl::m_psp](#m_psp)|Windows `PROPSHEETPAGE` struktura používá `CSnapInPropertyPageImpl` objektu.|
 
@@ -150,7 +150,7 @@ PROPSHEETPAGE m_psp;
 
 Tuto strukturu použijte pro inicializaci vzhled stránky vlastností po jejím vytváření.
 
-Další informace o této struktuře, včetně seznamu členů, naleznete v tématu [PROPSHEETPAGE](https://msdn.microsoft.com/library/aa815151) v sadě Windows SDK.
+Další informace o této struktuře, včetně seznamu členů, naleznete v tématu [PROPSHEETPAGE](/windows/desktop/api/prsht/ns-prsht-propsheetpagea_v3) v sadě Windows SDK.
 
 ##  <a name="onapply"></a>  CSnapInPropertyPageImpl::OnApply
 

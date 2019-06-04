@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Windows Desktop Wizard
 - Win32 Project Wizard
 ms.assetid: 5d7b3a5e-8461-479a-969a-67b7883725b9
-ms.openlocfilehash: a434a329febc38d6a46881dcabba6b05a402fbca
-ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
+ms.openlocfilehash: 2f9ac262cc564c39d30ddfae7f70ea92e92081a8
+ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65708055"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66503800"
 ---
 # <a name="windows-desktop-wizard"></a>Desktopový Průvodce pro Windows
 
@@ -51,7 +51,7 @@ Vytvoří určený typ aplikace.
 
 |Možnost|Popis|
 |------------|-----------------|
-|**Konzolová aplikace**|Vytvoří konzolovou aplikaci. Programy konzoly jsou vyvíjeny pomocí [funkce konzoly](https://msdn.microsoft.com/library/ms813137.aspx), které poskytují podporu znakového režimu v oknech konzoly. Visual C++ [běhové knihovny](../c-runtime-library/c-run-time-library-reference.md) také poskytují výstup a vstup z okna konzoly se standardních vstupních/výstupních funkcí, jako například `printf_s()` a `scanf_s()`. Konzolová aplikace nemá žádné grafické uživatelské rozhraní. Zkompiluje se do souboru .exe a lze ji spustit jako samostatnou aplikaci z příkazového řádku.<br /><br /> Do konzolové aplikace je možné přidat podporu knihovny MFC a knihovny ATL.|
+|**Konzolová aplikace**|Vytvoří konzolovou aplikaci. Visual C++ [běhové knihovny](../c-runtime-library/c-run-time-library-reference.md) také poskytují výstup a vstup z okna konzoly se standardních vstupních/výstupních funkcí, jako například `printf_s()` a `scanf_s()`. Konzolová aplikace nemá žádné grafické uživatelské rozhraní. Zkompiluje se do souboru .exe a lze ji spustit jako samostatnou aplikaci z příkazového řádku.<br /><br /> Do konzolové aplikace je možné přidat podporu knihovny MFC a knihovny ATL.|
 |**Aplikace Windows**|Vytvoří program systému Win32. Program systému Win32 je spustitelná aplikace (EXE) napsaná v C nebo C++, využívající volání rozhraní API systému Win32 k vytvoření grafického uživatelského rozhraní.<br /><br /> Do aplikace pro systém Windows není možné přidat podporu knihovny MFC nebo knihovny ATL.|
 |**Dynamické knihovny DLL**|Vytvoří dynamickou knihovnu (DLL) systému Win32. Knihovna DLL systému Win32 je binární soubor napsaný v C nebo C++, který používá volání rozhraní API systému Win32, nikoli tříd knihovny MFC, a funguje jako sdílená knihovna funkcí, které lze použít více aplikacemi současně.<br /><br /> Nelze přidat podporu knihovny MFC nebo ATL DLL aplikace vytvořené pomocí tohoto průvodce, ale můžete vytvořit knihovny MFC DLL vybrat **nový > Projekt > MFC DLL**.|
 |**Statická knihovna**|Vytvoří statickou knihovnu. Statická knihovna je soubor obsahující objekty a jejich funkce a data, které jsou propojeny do programu při vytvoření spustitelného souboru. Toto téma vysvětluje, jak vytvořit počáteční soubory a [vlastnosti projektu](../build/reference/property-pages-visual-cpp.md) pro statické knihovny. Soubor statické knihovny poskytuje následující výhody:<br /><br />-Statická knihovna systému Win32 je užitečná, pokud aplikace, kterou právě pracujete provede volání rozhraní API systému Win32, nikoli tříd knihovny MFC.<br />-Proces propojení je stejný, ať zbytek aplikace Windows napsán v jazyce C nebo C++.<br />-Můžete propojit statickou knihovnu pro aplikace založené na knihovně MFC nebo do programu bez knihovny MFC.|

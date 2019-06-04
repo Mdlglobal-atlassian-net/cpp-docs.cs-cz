@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - applications [MFC], managing
 ms.assetid: b72f4154-24db-4e75-bca3-6873e2459c15
-ms.openlocfilehash: 84d11b5c2d456a55e09b8512a3c0af06409939e8
-ms.sourcegitcommit: 934cb53fa4cb59fea611bfeb9db110d8d6f7d165
+ms.openlocfilehash: b106a8874d1b0243f408a6c6c7311a9ce791e019
+ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65612282"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66504498"
 ---
 # <a name="application-information-and-management"></a>Informace o aplikacích a správa aplikací
 
@@ -98,7 +98,7 @@ Určuje další příznak, který řídí vytvoření vlákna. Tento příznak m
 - **0** spuštění vlákna ihned po vytvoření.
 
 *lpSecurityAttrs*<br/>
-Odkazuje [SECURITY_ATTRIBUTES](https://msdn.microsoft.com/library/windows/desktop/aa379560) struktura, která určuje atributy zabezpečení pro vlákno. Pokud má hodnotu NULL, použije se stejné atributy zabezpečení jako u vytvářeného vlákna. Další informace o této struktuře naleznete v tématu Windows SDK.
+Odkazuje [SECURITY_ATTRIBUTES](/previous-versions/windows/desktop/legacy/aa379560\(v=vs.85\)) struktura, která určuje atributy zabezpečení pro vlákno. Pokud má hodnotu NULL, použije se stejné atributy zabezpečení jako u vytvářeného vlákna. Další informace o této struktuře naleznete v tématu Windows SDK.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -648,7 +648,7 @@ LPCTSTR AFXAPI AfxRegisterWndClass(
 ### <a name="parameters"></a>Parametry
 
 *nClassStyle*<br/>
-Určuje styl třídu Windows nebo kombinace stylů, vytvořené pomocí bitového operátoru OR ( **&#124;**) operátoru pro třídu okna. Seznam tříd stylů, najdete v článku [WNDCLASS](/windows/desktop/api/winuser/ns-winuser-tagwndclassa) struktura v sadě Windows SDK. Pokud má hodnotu NULL, výchozí hodnoty nastavte následujícím způsobem:
+Určuje styl třídu Windows nebo kombinace stylů, vytvořené pomocí bitového operátoru OR ( **&#124;** ) operátoru pro třídu okna. Seznam tříd stylů, najdete v článku [WNDCLASS](/windows/desktop/api/winuser/ns-winuser-tagwndclassa) struktura v sadě Windows SDK. Pokud má hodnotu NULL, výchozí hodnoty nastavte následujícím způsobem:
 
 - Nastaví styl myši CS_DBLCLKS, která odešle dvakrát klikněte na panel zpráv pro proceduru okna při poklepání myši.
 

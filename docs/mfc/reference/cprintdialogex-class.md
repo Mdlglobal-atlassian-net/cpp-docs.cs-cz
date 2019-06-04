@@ -38,12 +38,12 @@ helpviewer_keywords:
 - CPrintDialogEx [MFC], PrintSelection
 - CPrintDialogEx [MFC], m_pdex
 ms.assetid: 1d506703-ee1c-44cc-b4ce-4e778fec26b8
-ms.openlocfilehash: e5ddb2f7b5616acc0f275ad21599abedfbd8d060
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3959eb01e5c0a36410129925e7c3f53898e99196
+ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62372839"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66504801"
 ---
 # <a name="cprintdialogex-class"></a>CPrintDialogEx Class
 
@@ -59,13 +59,13 @@ class CPrintDialogEx : public CCommonDialog
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CPrintDialogEx::CPrintDialogEx](#cprintdialogex)|Vytvoří `CPrintDialogEx` objektu.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CPrintDialogEx::CreatePrinterDC](#createprinterdc)|Vytvoří kontext zařízení tiskárny bez zobrazení dialogového okna Tisk.|
 |[CPrintDialogEx::DoModal](#domodal)|Zobrazí dialogové okno a umožňuje uživateli vybrat.|
@@ -84,7 +84,7 @@ class CPrintDialogEx : public CCommonDialog
 
 ### <a name="public-data-members"></a>Veřejné datové členy
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CPrintDialogEx::m_pdex](#m_pdex)|Struktura používané k úpravám `CPrintDialogEx` objektu.|
 
@@ -180,7 +180,7 @@ virtual INT_PTR DoModal();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-INT_PTR návratové hodnoty je ve skutečnosti HRESULT. V části vrátit hodnoty v [PrintDlgEx](https://msdn.microsoft.com/library/windows/desktop/ms646942) v sadě Windows SDK.
+INT_PTR návratové hodnoty je ve skutečnosti HRESULT. V části vrátit hodnoty v [PrintDlgEx](/previous-versions/windows/desktop/legacy/ms646942\(v=vs.85\)) v sadě Windows SDK.
 
 ### <a name="remarks"></a>Poznámky
 

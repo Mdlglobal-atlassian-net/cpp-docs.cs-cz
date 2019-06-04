@@ -46,12 +46,12 @@ helpviewer_keywords:
 - CCmdTarget [MFC], OnFinalRelease
 - CCmdTarget [MFC], RestoreWaitCursor
 ms.assetid: 8883b132-2057-4ce0-a5f2-88979f8f2b13
-ms.openlocfilehash: 9314717fab53b1a89b87d657ec617a4c6bd45b8b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4db220ce28ecd762796f196e611a69ce157d2efa
+ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62206438"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66504463"
 ---
 # <a name="ccmdtarget-class"></a>CCmdTarget – třída
 
@@ -67,13 +67,13 @@ class CCmdTarget : public CObject
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CCmdTarget::CCmdTarget](#ccmdtarget)|Vytvoří `CCmdTarget` objektu.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CCmdTarget::BeginWaitCursor](#beginwaitcursor)|Zobrazí kurzor přesýpacích hodin kurzoru.|
 |[CCmdTarget::DoOleVerb](#dooleverb)|Způsobí, že určený operaci OLE provést akci.|
@@ -284,7 +284,7 @@ virtual BOOL GetDispatchIID(IID* pIID);
 ### <a name="parameters"></a>Parametry
 
 *pIID*<br/>
-Ukazatel na Identifikátor rozhraní ( [GUID](https://msdn.microsoft.com/library/windows/desktop/aa373931)).
+Ukazatel na Identifikátor rozhraní ( [GUID](/previous-versions/aa373931\(v=vs.80\))).
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -350,7 +350,7 @@ HRESULT GetTypeInfoOfGuid(
 Identifikátor národního prostředí ( `LCID`).
 
 *identifikátor GUID*<br/>
-[GUID](https://msdn.microsoft.com/library/windows/desktop/aa373931) popisu typu.
+[GUID](/previous-versions/aa373931\(v=vs.80\)) popisu typu.
 
 *ppTypeInfo*<br/>
 Ukazatel na ukazatel `ITypeInfo` rozhraní.

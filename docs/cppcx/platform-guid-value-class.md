@@ -7,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - Platform::Guid Struct
 ms.assetid: 25c0bfb2-7f93-44d8-bdf4-ef4fbac3424a
-ms.openlocfilehash: 64c70b619380d7c2ed4aaaecad3ee01a1d0f79c7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8d6c71028e4f93064c7b4df978678b5f7c26d6bc
+ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62383318"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66504522"
 ---
 # <a name="platformguid-value-class"></a>Platform::Guid – hodnotová třída
 
-Představuje [GUID](https://msdn.microsoft.com/library/windows/desktop/aa373931) typu v systému typů modulu Windows Runtime.
+Představuje [GUID](/previous-versions/aa373931\(v=vs.80\)) typu v systému typů modulu Windows Runtime.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -115,7 +115,7 @@ Další bajt identifikátoru `GUID`.
 Další bajt identifikátoru `GUID`.
 
 *m*<br/>
-A `GUID` ve formuláři [GUID struktury](https://msdn.microsoft.com/library/windows/desktop/aa373931).
+A `GUID` ve formuláři [GUID struktury](/previous-versions/aa373931\(v=vs.80\)).
 
 *n*<br/>
 Zbývající 8 bajtů `GUID`.
@@ -194,7 +194,7 @@ Tento operátor se poskytuje tak, aby `Guid` objekty mohou snadněji využívat 
 
 ## <a name="operator-call"></a> GUID::Operator() – operátor
 
-Implicitně převede `Platform::Guid` k [GUID struktury](https://msdn.microsoft.com/library/windows/desktop/aa373931).
+Implicitně převede `Platform::Guid` k [GUID struktury](/previous-versions/aa373931\(v=vs.80\)).
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -204,7 +204,7 @@ const GUID& Platform::Guid::operator();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-A [GUID struktury](https://msdn.microsoft.com/library/windows/desktop/aa373931).
+A [GUID struktury](/previous-versions/aa373931\(v=vs.80\)).
 
 ## <a name="see-also"></a>Viz také:
 

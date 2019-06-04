@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - ATL_DRAWINFO structure
 ms.assetid: dd2e2aa8-e8c5-403b-b4df-35c0f6f57fb7
-ms.openlocfilehash: 70329d3b2c18c8cd8e94854f40ff971c0b39a8f4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 77ef56f73be1ed9ddfc63c459b6bab3ad4decb3f
+ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62261062"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66503419"
 ---
 # <a name="atldrawinfo-structure"></a>Atl_drawinfo – struktura
 
@@ -60,7 +60,7 @@ Kontextové informace pro cílové zařízení odkazované `ptd` ze kterého mů
 Kontext zařízení, na kterém chcete-li nakreslit. Pro objekt bez oken `hdcDraw` člen `MM_TEXT` režim mapování s jeho logické souřadnice odpovídající souřadnice klienta obsahujícího okna. Kromě toho by měl být kontext zařízení v takovém stavu, jako je obvykle předávána `WM_PAINT` zprávy.
 
 `prcBounds`<br/>
-Ukazatel na [RECTL](https://msdn.microsoft.com/library/windows/desktop/dd162907) struktura určující obdélník na `hdcDraw` a ve kterém má být vykreslena objektu. Tento člen Určuje umístění a roztažení objektu. Tento člen by měl mít hodnotu NULL k vykreslení objektu active bez oken na místě. V každé situaci, hodnota NULL není platná hodnota a by měl vést `E_INVALIDARG` kód chyby. Pokud kontejner předá objekt bez oken hodnota jiná než NULL, objekt vykreslovat požadovaný aspekt do kontextu zadané zařízení a obdélník. Kontejner můžete takový požadavek z objektu bez oken pro vykreslení zobrazení druhé, neaktivní objektu nebo vytisknutí objektu.
+Ukazatel na [RECTL](/previous-versions//dd162907\(v=vs.85\)) struktura určující obdélník na `hdcDraw` a ve kterém má být vykreslena objektu. Tento člen Určuje umístění a roztažení objektu. Tento člen by měl mít hodnotu NULL k vykreslení objektu active bez oken na místě. V každé situaci, hodnota NULL není platná hodnota a by měl vést `E_INVALIDARG` kód chyby. Pokud kontejner předá objekt bez oken hodnota jiná než NULL, objekt vykreslovat požadovaný aspekt do kontextu zadané zařízení a obdélník. Kontejner můžete takový požadavek z objektu bez oken pro vykreslení zobrazení druhé, neaktivní objektu nebo vytisknutí objektu.
 
 `prcWBounds`<br/>
 Pokud `hdcDraw` je kontextu zařízení metasouboru (naleznete v tématu [GetDeviceCaps](/windows/desktop/api/wingdi/nf-wingdi-getdevicecaps) v sadě Windows SDK), tím je ukazatel na `RECTL` struktura určení ohraničující obdélník v podkladové metasouboru. Obdélník struktura obsahuje rozsah okna a okna původu. Tyto hodnoty jsou užitečné pro kreslení metasoubory. Obdélník indikován `prcBounds` je vnořená do to `prcWBounds` obdélník; jsou ve stejném souřadnicového prostoru.

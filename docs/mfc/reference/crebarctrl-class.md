@@ -98,12 +98,12 @@ helpviewer_keywords:
 - CReBarCtrl [MFC], ShowBand
 - CReBarCtrl [MFC], SizeToRect
 ms.assetid: 154570d7-e48c-425d-8c7e-c64542bcb4cc
-ms.openlocfilehash: db72dbab14db69f14d7c3d813562ec661df4b424
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a6996f978305472ec7a3af171ecf0987724751d5
+ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62372381"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66504751"
 ---
 # <a name="crebarctrl-class"></a>Crebarctrl – třída
 
@@ -119,13 +119,13 @@ class CReBarCtrl : public CWnd
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CReBarCtrl::CReBarCtrl](#crebarctrl)|Vytvoří `CReBarCtrl` objektu.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CReBarCtrl::BeginDrag](#begindrag)|Umístí do režimu přetažení myší ovládacího prvku rebar.|
 |[CReBarCtrl::Create](#create)|Vytvoří ovládací prvek matrice a připojí ho k `CReBarCtrl` objektu.|
@@ -317,7 +317,7 @@ Nenulové, pokud je úspěšná. jinak 0.
 
 ### <a name="remarks"></a>Poznámky
 
-Použití `CreateEx` místo [vytvořit](#create) použít rozšířené styly Windows určené předponu rozšířeného stylu Windows **WS_EX_**.
+Použití `CreateEx` místo [vytvořit](#create) použít rozšířené styly Windows určené předponu rozšířeného stylu Windows **WS_EX_** .
 
 ##  <a name="crebarctrl"></a>  CReBarCtrl::CReBarCtrl
 
@@ -678,7 +678,7 @@ Index založený na nule obsluhy vzdálené správy na časovém okamžiku nebo 
 
 ##  <a name="idtoindex"></a>  CReBarCtrl::IDToIndex
 
-Implementuje chování zprávy Win32 [RB_IDTOINDEX](https://msdn.microsoft.com/library/windows/desktop/bb774496), jak je popsáno v sadě Windows SDK.
+Implementuje chování zprávy Win32 [RB_IDTOINDEX](/windows/desktop/controls/rb-idtoindex), jak je popsáno v sadě Windows SDK.
 
 ```
 int IDToIndex(UINT uBandID) const;

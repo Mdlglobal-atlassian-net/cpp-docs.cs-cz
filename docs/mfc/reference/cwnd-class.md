@@ -818,12 +818,12 @@ helpviewer_keywords:
 - CWnd [MFC], WindowProc
 - CWnd [MFC], m_hWnd
 ms.assetid: 49a832ee-bc34-4126-88b3-bc1d9974f6c4
-ms.openlocfilehash: fc92497c4d43238f9cf6aea7132afb8c8dc27fbd
-ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
+ms.openlocfilehash: 50558e6959789dddc8223804394a0b242f793de5
+ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66451229"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66504255"
 ---
 # <a name="cwnd-class"></a>Třída CWnd
 
@@ -5607,7 +5607,7 @@ Nenulové, pokud je funkce úspěšná. Je 0, pokud dojde k chybě nebo pokud `L
 
 Uzamčené okno nelze přesunout. Uzamknout lze najednou pouze jedno okno. Odemknout uzamčení se okno `LockWindowUpdate`, volání [UnlockWindowUpdate](#unlockwindowupdate).
 
-Pokud aplikace s uzamčené okna (nebo všechny uzamčené podřízená okna) zavolat [GetDC,](https://msdn.microsoft.com/library/windows/desktop/dd144871) [GetDCEx,](https://msdn.microsoft.com/library/windows/desktop/dd144873) nebo [BeginPaint](/windows/desktop/api/winuser/nf-winuser-beginpaint) Windows funkce volané funkci vrátí zařízení kontext, jejichž viditelná oblast je prázdný. K tomu dojde, dokud aplikace odemkne okna voláním `UnlockWindowUpdate` členskou funkci.
+Pokud aplikace s uzamčené okna (nebo všechny uzamčené podřízená okna) zavolat [GetDC,](/windows/desktop/api/winuser/nf-winuser-getdc) [GetDCEx,](/windows/desktop/api/winuser/nf-winuser-getdcex) nebo [BeginPaint](/windows/desktop/api/winuser/nf-winuser-beginpaint) Windows funkce volané funkci vrátí zařízení kontext, jejichž viditelná oblast je prázdný. K tomu dojde, dokud aplikace odemkne okna voláním `UnlockWindowUpdate` členskou funkci.
 
 Když jsou uzamčené aktualizace okna, systém uchovává informace o ohraničující obdélník všechny operace kreslení k kontexty zařízení spojené s uzamčené okno. Při vykreslování je opětovně povolena, tato ohraničující obdélník zneplatněna v uzamčeném okna a jeho podřízených oken přinutit konečné [WM_PAINT](/windows/desktop/gdi/wm-paint) k aktualizaci aplikace na obrazovce. Pokud byly uzamčeném aktualizace okna došlo k bez kreslení, žádné oblasti je neplatná.
 
@@ -7757,7 +7757,7 @@ Obsahuje ukazatel na vybrané `CMenu`. Ukazatel může být dočasné a neměl b
 
 Vyšší řád slova vrácené hodnoty by měl obsahovat některý z kódů následující příkaz:
 
-|Hodnota|Popis|
+|Value|Popis|
 |-----------|-----------------|
 |0|Říká se zahodit znak, že uživatel stiskne a vytvoří krátké zvukový signál na reproduktoru systému Windows.|
 |1|Říká zavřete aktuální nabídku Windows.|
@@ -10038,7 +10038,7 @@ afx_msg void OnUserChanged();
 
 ### <a name="remarks"></a>Poznámky
 
-Tato metoda přijímá [WM_USERCHANGED](https://msdn.microsoft.com/library/windows/desktop/ms632651) zpráva s oznámením, která je popsána v sadě Windows SDK. Když se uživatel přihlásí nebo odhlásí, uživatelská nastavení pro aktualizace operačního systému. Systém pošle tuto zprávu okamžitě po aktualizaci nastavení.
+Tato metoda přijímá [WM_USERCHANGED](/windows/desktop/winmsg/wm-userchanged) zpráva s oznámením, která je popsána v sadě Windows SDK. Když se uživatel přihlásí nebo odhlásí, uživatelská nastavení pro aktualizace operačního systému. Systém pošle tuto zprávu okamžitě po aktualizaci nastavení.
 
 > [!NOTE]
 > Tato členská funkce se volá se rozhraním, aby vaše aplikace, aby se zpracovala zpráva Windows. Parametry předané do funkce zahrnují parametry přijata rozhraním, když byla přijata zpráva. Pokud bude volat implementaci základní třídy tuto funkci, použije tuto implementaci parametry původně předána funkci s zpráva a ne parametrů, které zadáte.

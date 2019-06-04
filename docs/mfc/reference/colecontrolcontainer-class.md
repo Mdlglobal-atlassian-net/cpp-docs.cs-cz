@@ -72,12 +72,12 @@ helpviewer_keywords:
 - COleControlContainer [MFC], m_pWnd
 - COleControlContainer [MFC], m_siteMap
 ms.assetid: f7ce9246-0fb7-4f07-a83a-6c2390d0fdf8
-ms.openlocfilehash: 6e97f7ceafb92098d701cba64b4ec01d26d3991a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1d386072b67568ecf58afd0853df2d7fbaeac68d
+ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62310433"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66504567"
 ---
 # <a name="colecontrolcontainer-class"></a>COleControlContainer Class
 
@@ -93,13 +93,13 @@ class COleControlContainer : public CCmdTarget
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[COleControlContainer::COleControlContainer](#colecontrolcontainer)|Vytvoří `COleControlContainer` objektu.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[COleControlContainer::AttachControlSite](#attachcontrolsite)|Vytvoří ovládací prvek webu, hostitelem kontejneru.|
 |[COleControlContainer::BroadcastAmbientPropertyChange](#broadcastambientpropertychange)|Informuje o tom všechny hostované ovládací prvky, které změní vlastnost ambient změnila.|
@@ -126,7 +126,7 @@ class COleControlContainer : public CCmdTarget
 
 ### <a name="public-data-members"></a>Veřejné datové členy
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[COleControlContainer::m_crBack](#m_crback)|Barva pozadí kontejneru.|
 |[COleControlContainer::m_crFore](#m_crfore)|Barva popředí kontejneru.|
@@ -473,7 +473,7 @@ Identifikátor ovládacího prvku.
 Ukazatel na logickou hodnotu, která přijímá hodnotu úspěch nebo selhání – funkce (hodnota TRUE označuje úspěch, hodnota FALSE označuje selhání).
 
 *bSigned*<br/>
-Určuje, zda by měla funkce prozkoumají text pro znaménko mínus na začátku a nenalezne-li vrátit hodnotu se znaménkem. Pokud *bSigned* parametr má hodnotu TRUE, určení, že je hodnota má být načtena hodnota celé číslo se znaménkem, přetypovávat návratovou hodnotu pro **int** typu. Chcete-li získat rozšířené informace o chybě, volejte [GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360).
+Určuje, zda by měla funkce prozkoumají text pro znaménko mínus na začátku a nenalezne-li vrátit hodnotu se znaménkem. Pokud *bSigned* parametr má hodnotu TRUE, určení, že je hodnota má být načtena hodnota celé číslo se znaménkem, přetypovávat návratovou hodnotu pro **int** typu. Chcete-li získat rozšířené informace o chybě, volejte [GetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror).
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -515,7 +515,7 @@ Určuje maximální délku znaků, řetězec, který má být zkopírován do vy
 
 Pokud funkce uspěje, vrácená hodnota určuje počet znaků, které jsou zkopírovány do vyrovnávací paměti, bez ukončujícího znaku null.
 
-Pokud funkce selže, vrácená hodnota je nula. Chcete-li získat rozšířené informace o chybě, volejte [GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360).
+Pokud funkce selže, vrácená hodnota je nula. Chcete-li získat rozšířené informace o chybě, volejte [GetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror).
 
 ##  <a name="handlesetfocus"></a>  COleControlContainer::HandleSetFocus
 

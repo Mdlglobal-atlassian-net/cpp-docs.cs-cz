@@ -18,12 +18,12 @@ helpviewer_keywords:
 - CMonikerFile [MFC], Open
 - CMonikerFile [MFC], CreateBindContext
 ms.assetid: 87be5966-f4f7-4235-bce2-1fa39e9417de
-ms.openlocfilehash: ecffdb3a6f44f60004cf4f039bdab9c98e212ce1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7fb0ad3eef781be1b5ca358e825c09a88c0109e3
+ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62338035"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66503826"
 ---
 # <a name="cmonikerfile-class"></a>Cmonikerfile – třída
 
@@ -39,13 +39,13 @@ class CMonikerFile : public COleStreamFile
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CMonikerFile::CMonikerFile](#cmonikerfile)|Vytvoří `CMonikerFile` objektu.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CMonikerFile::Close](#close)|Odpojí a uvolní datového proudu a monikeru.|
 |[CMonikerFile::Detach](#detach)|Odpojí `IMoniker` z tohoto `CMonikerFile` objektu.|
@@ -54,7 +54,7 @@ class CMonikerFile : public COleStreamFile
 
 ### <a name="protected-methods"></a>Chráněné metody
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CMonikerFile::CreateBindContext](#createbindcontext)|Získá kontext vazby nebo vytvoří kontext vazby inicializované ve výchozím nastavení.|
 
@@ -117,7 +117,7 @@ Ukazatel na soubor výjimku. V případě chyby bude nastavena na příčinu.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Ukazatel do kontextu vazby [IBindCtx](/windows/desktop/api/objidl/nn-objidl-ibindctx) má být svázána s Pokud úspěšné; jinak hodnota NULL. Pokud instance byla otevřena s `IBindHost` rozhraní, kontextu vazby je načten z `IBindHost`. Pokud není žádný `IBindHost` rozhraní nebo rozhraní se nepodařilo vrátit kontext vazby, kontextu vazby je vytvořen. Popis [IBindHost](https://msdn.microsoft.com/library/ie/ms775076) rozhraní, naleznete v sadě Windows SDK.
+Ukazatel do kontextu vazby [IBindCtx](/windows/desktop/api/objidl/nn-objidl-ibindctx) má být svázána s Pokud úspěšné; jinak hodnota NULL. Pokud instance byla otevřena s `IBindHost` rozhraní, kontextu vazby je načten z `IBindHost`. Pokud není žádný `IBindHost` rozhraní nebo rozhraní se nepodařilo vrátit kontext vazby, kontextu vazby je vytvořen. Popis [IBindHost](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/ms775076\(v=vs.85\)) rozhraní, naleznete v sadě Windows SDK.
 
 ### <a name="remarks"></a>Poznámky
 

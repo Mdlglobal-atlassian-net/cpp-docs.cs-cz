@@ -12,12 +12,12 @@ helpviewer_keywords:
 - stock properties, about stock properties
 - stock properties
 ms.assetid: 37bd4db7-efd3-4faa-87ad-64902ed16a36
-ms.openlocfilehash: 06940bb72f9113e0a8148e15418504b35fc95099
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 79938cb5c762292c5e1802832477c3a568ae2fdb
+ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62226265"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66504471"
 ---
 # <a name="add-a-property"></a>Přidat vlastnost
 
@@ -191,5 +191,5 @@ Pokud přidáváte vlastnost dispinterface MFC pomocí [Průvodce přidáním vl
 |`Font`|Vrátí nebo nastaví písmo ovládacího prvku. Hodnota Null, pokud ovládací prvek nemá žádné písmo.|
 |`ForeColor`|Vrací nebo nastavuje okolí ovládacího prvku `ForeColor` vlastnost.|
 |`hWnd`|Vrátí nebo nastaví ovládací prvek `hWnd` vlastnost. `hWnd` nemá žádné **členskou proměnnou** typ implementace.|
-|`ReadyState`|Vrátí nebo nastaví ovládací prvek `ReadyState` vlastnost. Ovládací prvek může být neinicializované, inicializován, načítání, interaktivní nebo dokončení. Další informace najdete v tématu [READYSTATE](https://msdn.microsoft.com/library/aa768362.aspx) v *Internet SDK*.|
+|`ReadyState`|Vrátí nebo nastaví ovládací prvek `ReadyState` vlastnost. Ovládací prvek může být neinicializované, inicializován, načítání, interaktivní nebo dokončení. Další informace najdete v tématu [READYSTATE](/previous-versions//aa768362\(v=vs.85\)) v *Internet SDK*.|
 |`Text`|Vrátí nebo nastaví text obsažen v ovládacím prvku. `Text` nemá žádné **členskou proměnnou** typ implementace.|

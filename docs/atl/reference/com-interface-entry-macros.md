@@ -18,12 +18,12 @@ f1_keywords:
 helpviewer_keywords:
 - COM interfaces, COM interface entry macros
 ms.assetid: 19dcb768-2e1f-4b8d-a618-453a01a4bd00
-ms.openlocfilehash: ed2b8445a0f13b82338d2904d43fd17688d05b9e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f8439e973c935108d645076bb7e2bfae7207e65d
+ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62245579"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66503346"
 ---
 # <a name="cominterfaceentry-macros"></a>COM_INTERFACE_ENTRY – makra
 
@@ -39,7 +39,7 @@ Tato makra zadejte rozhraní objektu do jeho mapy modelu COM, tak, aby k nim mů
 |[COM_INTERFACE_ENTRY_AGGREGATE_BLIND](#com_interface_entry_aggregate_blind)|Stejné jako [COM_INTERFACE_ENTRY_AGGREGATE](#com_interface_entry_aggregate), s tím rozdílem, že dotazování pro libovolný identifikátor IID výsledkem předávání dotaz tak, aby *punk*.|
 |[COM_INTERFACE_ENTRY_AUTOAGGREGATE](#com_interface_entry_autoaggregate)|Stejné jako [COM_INTERFACE_ENTRY_AGGREGATE](#com_interface_entry_aggregate), kromě případu, kdy *punk* má hodnotu NULL, automaticky vytvoří agregace popsaného *clsid*.|
 |[COM_INTERFACE_ENTRY_AUTOAGGREGATE_BLIND](#com_interface_entry_autoaggregate_blind)|Stejné jako [COM_INTERFACE_ENTRY_AUTOAGGREGATE](#com_interface_entry_autoaggregate), s tím rozdílem, že dotazování pro libovolný identifikátor IID výsledkem předávání dotaz tak, aby *punk*a pokud *punk* má hodnotu NULL, se automaticky vytvoří agregace popsaného *clsid*.|
-|[COM_INTERFACE_ENTRY_BREAK](#com_interface_entry_break)|Způsobí, že program k volání [DebugBreak](https://msdn.microsoft.com/library/windows/desktop/ms679297) při dotázali zadané rozhraní.|
+|[COM_INTERFACE_ENTRY_BREAK](#com_interface_entry_break)|Způsobí, že program k volání [DebugBreak](/windows/desktop/api/debugapi/nf-debugapi-debugbreak) při dotázali zadané rozhraní.|
 |[COM_INTERFACE_ENTRY_CACHED_TEAR_OFF](#com_interface_entry_cached_tear_off)|Ukládá data specifická pro rozhraní pro každou instanci.|
 |[COM_INTERFACE_ENTRY_TEAR_OFF](#com_interface_entry_tear_off)|Zpřístupňuje odtržených rozhraní.|
 |[COM_INTERFACE_ENTRY_CHAIN](#com_interface_entry_chain)|Zpracovává mapu COM základní třídy tuto položku v objektu map COM dosáhne zpracování.|
@@ -243,7 +243,7 @@ Pokud dotaz rozhraní nezdaří, bude pokračovat zpracování COM map.
 
 ##  <a name="com_interface_entry_break"></a>  COM_INTERFACE_ENTRY_BREAK
 
-Způsobí, že program k volání [DebugBreak](https://msdn.microsoft.com/library/windows/desktop/ms679297) při dotázali zadané rozhraní.
+Způsobí, že program k volání [DebugBreak](/windows/desktop/api/debugapi/nf-debugapi-debugbreak) při dotázali zadané rozhraní.
 
 ```
 COM_INTERFACE_ENTRY_BREAK(x)
@@ -328,7 +328,7 @@ Například v následujícím kódu:
 
 [!code-cpp[NVC_ATL_Windowing#116](../../atl/codesnippet/cpp/com-map-macros_9.h)]
 
-Všimněte si, že první položka v objektu map COM musí být rozhraní na objekt obsahující mapy modelu COM. Proto nelze spustit zadané mapy modelu COM s COM_INTERFACE_ENTRY_CHAIN, což způsobí, že mapy modelu COM z jiného objektu pro hledání v okamžiku, kdy **COM_INTERFACE_ENTRY_CHAIN (**`COtherObject`**)** se zobrazí váš objekt modelu COM mapě. Pokud budete chtít nejprve hledejte mapy modelu COM z jiného objektu, přidejte záznam rozhraní pro `IUnknown` do mapy modelu COM, pak zřetězit jiný objekt modelu COM mapy. Příklad:
+Všimněte si, že první položka v objektu map COM musí být rozhraní na objekt obsahující mapy modelu COM. Proto nelze spustit zadané mapy modelu COM s COM_INTERFACE_ENTRY_CHAIN, což způsobí, že mapy modelu COM z jiného objektu pro hledání v okamžiku, kdy **COM_INTERFACE_ENTRY_CHAIN (** `COtherObject` **)** se zobrazí váš objekt modelu COM mapě. Pokud budete chtít nejprve hledejte mapy modelu COM z jiného objektu, přidejte záznam rozhraní pro `IUnknown` do mapy modelu COM, pak zřetězit jiný objekt modelu COM mapy. Příklad:
 
 [!code-cpp[NVC_ATL_Windowing#111](../../atl/codesnippet/cpp/com-map-macros_10.h)]
 

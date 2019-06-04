@@ -64,12 +64,12 @@ helpviewer_keywords:
 - CHeaderCtrl [MFC], SetItem
 - CHeaderCtrl [MFC], SetOrderArray
 ms.assetid: b847ac90-5fae-4a87-88e0-ca45f77b8b3b
-ms.openlocfilehash: 51cdfb481892ba5057d4ca26ff4d6e51665557e5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5268a5ae336b0f96dfd6c0bd348a883e85ac32e6
+ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62160195"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66503543"
 ---
 # <a name="cheaderctrl-class"></a>Cheaderctrl – třída
 
@@ -85,13 +85,13 @@ class CHeaderCtrl : public CWnd
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CHeaderCtrl::CHeaderCtrl](#cheaderctrl)|Vytvoří `CHeaderCtrl` objektu.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CHeaderCtrl::ClearAllFilters](#clearallfilters)|Vymaže všechny filtry pro ovládací prvek záhlaví.|
 |[CHeaderCtrl::ClearFilter](#clearfilter)|Vymaže filtr pro ovládací prvek záhlaví.|
@@ -315,7 +315,7 @@ Nenulové, pokud je úspěšná. jinak 0.
 
 ### <a name="remarks"></a>Poznámky
 
-Použití `CreateEx` místo `Create` použít rozšířené styly Windows určené předponu rozšířeného stylu Windows **WS_EX_**.
+Použití `CreateEx` místo `Create` použít rozšířené styly Windows určené předponu rozšířeného stylu Windows **WS_EX_** .
 
 ##  <a name="createdragimage"></a>  CHeaderCtrl::CreateDragImage
 
@@ -761,7 +761,7 @@ Index položky, na základě jeho pořadí v ovládacím prvku záhlaví. Index 
 
 ### <a name="remarks"></a>Poznámky
 
-Tato členská funkce implementuje chování – makro Win32 [HDM_ORDERTOINDEX](https://msdn.microsoft.com/library/windows/desktop/bb775355), jak je popsáno v sadě Windows SDK. Poskytuje pro podporu řazení položky záhlaví.
+Tato členská funkce implementuje chování – makro Win32 [HDM_ORDERTOINDEX](/windows/desktop/controls/hdm-ordertoindex), jak je popsáno v sadě Windows SDK. Poskytuje pro podporu řazení položky záhlaví.
 
 ##  <a name="setbitmapmargin"></a>  CHeaderCtrl::SetBitmapMargin
 

@@ -84,12 +84,12 @@ helpviewer_keywords:
 - CMenu [MFC], TrackPopupMenuEx
 - CMenu [MFC], m_hMenu
 ms.assetid: 40cacfdc-d45c-4ec7-bf28-991c72812499
-ms.openlocfilehash: 464b59f7e598ea1901cf88c47c5887cbbf308607
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5df6515573cfca784d1e59f34342466dde2e42e4
+ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62375792"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66504849"
 ---
 # <a name="cmenu-class"></a>Cmenu – třída
 
@@ -105,13 +105,13 @@ class CMenu : public CObject
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CMenu::CMenu](#cmenu)|Vytvoří `CMenu` objektu.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CMenu::AppendMenu](#appendmenu)|Přidá novou položku na konec této nabídky.|
 |[CMenu::Attach](#attach)|Připojí popisovač nabídky Windows `CMenu` objektu.|
@@ -153,7 +153,7 @@ class CMenu : public CObject
 
 ### <a name="public-operators"></a>Veřejné operátory
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CMenu::operator HMENU](#operator_hmenu)|Načte popisovač objekt nabídky.|
 |[CMenu::operator! =](#operator_neq)|Určuje, pokud dva objekty nabídky nejsou stejné.|
@@ -161,7 +161,7 @@ class CMenu : public CObject
 
 ### <a name="public-data-members"></a>Veřejné datové členy
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CMenu::m_hMenu](#m_hmenu)|Určuje popisovač do nabídky Windows připojené k `CMenu` objektu.|
 
@@ -651,7 +651,7 @@ UINT GetDefaultItem(
 *gmdiFlags*<br/>
 Hodnota, která určuje, jak funkce hledá položky nabídky. Tento parametr může být žádný, jeden nebo kombinace těchto hodnot:
 
-|Hodnota|Význam|
+|Value|Význam|
 |-----------|-------------|
 |GMDI_GOINTOPOPUPS|Určuje, zda, pokud je položka výchozí, otevře se podnabídka, funkce pro hledání v odpovídající rekurzivně podnabídka. Pokud příkaz nemá žádný výchozí položku, návratová hodnota identifikuje položku, otevře podnabídka.<br /><br /> Ve výchozím nastavení funkce vrátí první výchozí položku v nabídce zadaný bez ohledu na to, zda je položka, která otevře se podnabídka.|
 |GMDI_USEDISABLED|Určuje, že funkce vrátí výchozí položky, i když je zakázán.<br /><br /> Ve výchozím nastavení přeskočí funkce vypnuta nebo šedým položky.|
@@ -769,7 +769,7 @@ Hodnota, která určuje význam `nIDItem`. Ve výchozím nastavení `ByPos` má 
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Pokud funkce uspěje, vrácená hodnota je nenulový. Pokud funkce selže, vrácená hodnota je nula. Chcete-li získat rozšířené informace o chybě, použijte funkci Win32 [GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360), jak je popsáno v sadě Windows SDK.
+Pokud funkce uspěje, vrácená hodnota je nenulový. Pokud funkce selže, vrácená hodnota je nula. Chcete-li získat rozšířené informace o chybě, použijte funkci Win32 [GetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror), jak je popsáno v sadě Windows SDK.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -1267,7 +1267,7 @@ Hodnota, která určuje význam *uItem*. Pokud tento parametr má hodnotu FALSE,
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Pokud funkce uspěje, vrácená hodnota je nenulový. Pokud funkce selže, vrácená hodnota je nula. Chcete-li získat rozšířené informace o chybě, použijte funkci Win32 [GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360), jak je popsáno v sadě Windows SDK.
+Pokud funkce uspěje, vrácená hodnota je nenulový. Pokud funkce selže, vrácená hodnota je nula. Chcete-li získat rozšířené informace o chybě, použijte funkci Win32 [GetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror), jak je popsáno v sadě Windows SDK.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -1476,7 +1476,7 @@ Ukazatel [TPMPARAMS](/windows/desktop/api/winuser/ns-winuser-tagtpmparams) struk
 
 Pokud zadáte TPM_RETURNCMD v *fuFlags* parametr, návratová hodnota je identifikátor položky nabídky, kterou uživatel vybral položky. Pokud uživatel zruší nabídce bez výběru nebo pokud dojde k chybě, vrácená hodnota je 0.
 
-Pokud nezadáte TPM_RETURNCMD v *fuFlags* nenulovou hodnotu, pokud je funkce úspěšná a 0 je návratová hodnota parametr, pokud selže. Chcete-li získat rozšířené informace o chybě, volejte [GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360).
+Pokud nezadáte TPM_RETURNCMD v *fuFlags* nenulovou hodnotu, pokud je funkce úspěšná a 0 je návratová hodnota parametr, pokud selže. Chcete-li získat rozšířené informace o chybě, volejte [GetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror).
 
 ### <a name="remarks"></a>Poznámky
 

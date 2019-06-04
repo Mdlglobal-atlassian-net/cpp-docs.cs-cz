@@ -28,12 +28,12 @@ helpviewer_keywords:
 - COleDataObject [MFC], IsDataAvailable
 - COleDataObject [MFC], Release
 ms.assetid: d1cc84be-2e1c-4bb3-a8a0-565eb08aaa34
-ms.openlocfilehash: 24d79c684226d57839161946255781c3bdd5a043
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: 54585ee17fe5686e9b3621d8a24581f06580a38f
+ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64341708"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66504547"
 ---
 # <a name="coledataobject-class"></a>Coledataobject – třída
 
@@ -49,13 +49,13 @@ class COleDataObject
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[COleDataObject::COleDataObject](#coledataobject)|Vytvoří `COleDataObject` objektu.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[COleDataObject::Attach](#attach)|Připojí zadaný datový objekt OLE `COleDataObject`.|
 |[COleDataObject::AttachClipboard](#attachclipboard)|Připojí datový objekt, který je do schránky.|
@@ -288,7 +288,7 @@ Po volání [COleDataObject::BeginEnumFormats](#beginenumformats), je uložen po
 
 Chcete-li zkontrolovat dostupnost daném formátu, zavolejte [COleDataObject::IsDataAvailable](#isdataavailable).
 
-Další informace najdete v tématu [IEnumXXXX::Next](https://msdn.microsoft.com/library/ms695273.aspx) v sadě Windows SDK.
+Další informace najdete v tématu [IEnumXXXX::Next](/previous-versions//ms695273\(v=vs.85\)) v sadě Windows SDK.
 
 ##  <a name="isdataavailable"></a>  COleDataObject::IsDataAvailable
 

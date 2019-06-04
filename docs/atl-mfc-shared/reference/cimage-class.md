@@ -54,12 +54,12 @@ helpviewer_keywords:
 - CImage class
 - transparent color
 ms.assetid: 52861e3d-bf7e-481f-a240-90e88f76c490
-ms.openlocfilehash: 14a4691e0c1f25a8f9e8b2b652c6e582f51c954a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0b61d38d141392dc85a150ddd2caf50b28146ae7
+ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62235117"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66503176"
 ---
 # <a name="cimage-class"></a>Cimage – třída
 
@@ -78,13 +78,13 @@ class CImage
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CImage::CImage](#cimage)|Konstruktor|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CImage::AlphaBlend](#alphablend)|Zobrazí rastrové obrázky, být transparentní nebo poloprůhledných pixelů.|
 |[CImage::Attach](#attach)|Připojí HBITMAP k `CImage` objektu. Je možné s rastrových obrázků bez DIB části nebo části DIB rastrových obrázků.|
@@ -128,7 +128,7 @@ class CImage
 
 ### <a name="public-operators"></a>Veřejné operátory
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CImage::operator HBITMAP](#operator_hbitmap)|Vrátí popisovač Windows připojené k `CImage` objektu.|
 
@@ -158,7 +158,7 @@ Chcete-li zjistit, zda připojené rastrového obrázku je oddíl DIB, zavolejte
 > [!NOTE]
 > Pomocí globálního `CImage` objektů v knihovně DLL se nedoporučuje. Pokud je třeba použít globální `CImage` objektů v knihovně DLL, volání [CImage::ReleaseGDIPlus](#releasegdiplus) explicitně uvolnit prostředky využívané třídou rozhraní GDI +.
 
-`CImage` Nelze vybrat, do nového [CDC](../../mfc/reference/cdc-class.md). `CImage` Vytvoří vlastní HDC bitové kopie. Protože HBITMAP lze vybrat pouze do jedné HDC najednou, HBITMAP přidružené `CImage` nelze vybrat, do jiného HDC. Pokud potřebujete CDC, načtení HDC z `CImage` a přiřaďte mu [CDC::FromHandle] (.. /.. /MFC/reference/CDC-Class.MD#cdc__fromhandle.
+`CImage` Nelze vybrat, do nového [CDC](../../mfc/reference/cdc-class.md). `CImage` Vytvoří vlastní HDC bitové kopie. Protože HBITMAP lze vybrat pouze do jedné HDC najednou, HBITMAP přidružené `CImage` nelze vybrat, do jiného HDC. Pokud potřebujete CDC, načtení HDC z `CImage` a poskytnout tak [CDC::FromHandle](../../mfc/reference/cdc-class.md#fromhandle).
 
 ## <a name="example"></a>Příklad
 
@@ -480,7 +480,7 @@ Určuje typ komprese pro komprimované rastrový obrázek zdola nahoru (DIB shor
 - Tabulky barev se skládá ze tří masky barva DWORD, které v uvedeném pořadí, zadejte komponenty červené, zelené a modré každý pixel BI_BITFIELDS formát nekomprimované. Toto je platný při použití s 16 a 32 bpp rastrových obrázků.
 
 *pdwBitfields*<br/>
-Použít jenom v případě *eCompression* je nastavena na BI_BITFIELDS, jinak ho musí mít hodnotu NULL. Ukazatel na pole tři vyčíslení DWORD zadání bity každý pixel, které se používají pro komponenty červené, zelené a modré barvy. Informace o omezeních pro bitová pole najdete v tématu [BITMAPINFOHEADER](https://msdn.microsoft.com/library/windows/desktop/dd183376) v sadě Windows SDK.
+Použít jenom v případě *eCompression* je nastavena na BI_BITFIELDS, jinak ho musí mít hodnotu NULL. Ukazatel na pole tři vyčíslení DWORD zadání bity každý pixel, které se používají pro komponenty červené, zelené a modré barvy. Informace o omezeních pro bitová pole najdete v tématu [BITMAPINFOHEADER](/previous-versions//dd183376\(v=vs.85\)) v sadě Windows SDK.
 
 *dwFlags*<br/>
 Určuje, zda má objekt bitmap alfa kanál. Může být kombinace nuly nebo více z následujících hodnot:
@@ -648,7 +648,7 @@ Počet bitů na pixel.
 
 Tato hodnota určuje počet bitů, které definují každý pixel a maximální počet barev v rastrového obrázku.
 
-Bitů na pixel, je obvykle 1, 4, 8, 16, 24 nebo 32. Zobrazit `biBitCount` členem [BITMAPINFOHEADER](https://msdn.microsoft.com/library/windows/desktop/dd183376) v sadě Windows SDK pro další informace o této hodnotě.
+Bitů na pixel, je obvykle 1, 4, 8, 16, 24 nebo 32. Zobrazit `biBitCount` členem [BITMAPINFOHEADER](/previous-versions//dd183376\(v=vs.85\)) v sadě Windows SDK pro další informace o této hodnotě.
 
 ##  <a name="getcolortable"></a>  CImage::GetColorTable
 

@@ -402,12 +402,12 @@ helpviewer_keywords:
 - CDC [MFC], m_hAttribDC
 - CDC [MFC], m_hDC
 ms.assetid: 715b3334-cb2b-4c9c-8067-02eb7c66c8b2
-ms.openlocfilehash: 2ff6cd6e0817f74c7688fc573d4b98f70704f96c
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.openlocfilehash: a6b6c872963dbbdf991d013cceba66ffd20bac5c
+ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65222571"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66504390"
 ---
 # <a name="cdc-class"></a>CDC – třída
 
@@ -1947,7 +1947,7 @@ Nenulové, pokud je funkce úspěšná; jinak 0.
 
 ### <a name="remarks"></a>Poznámky
 
-Centrum se třemi tečkami je center ohraničující obdélník určené *x1*, *y1*, *x2*, a *y2*, nebo  *lprect –*. Se třemi tečkami je vykreslen s aktuální pero a jeho vnitřní, naplní se aktuální štětce.
+Centrum se třemi tečkami je center ohraničující obdélník určené *x1*, *y1*, *x2*, a *y2*, nebo  *lprect –* . Se třemi tečkami je vykreslen s aktuální pero a jeho vnitřní, naplní se aktuální štětce.
 
 Na obrázku vykreslena touto funkcí rozšiřuje až, ale nezahrnuje, souřadnice vpravo a dole. To znamená, že je výška obrázku *y2* - *y1* a šířku na obrázku je *x2* - *x1*.
 
@@ -2490,7 +2490,7 @@ Pouze kontexty paměťového zařízení a zařízení, která podporují rastro
 
 ##  <a name="framerect"></a>  CDC::FrameRect
 
-Ohraničení kolem obdélník určené *lprect –*.
+Ohraničení kolem obdélník určené *lprect –* .
 
 ```
 void FrameRect(
@@ -2927,7 +2927,7 @@ Typ oblast ořezu. Může být některý z následujících hodnot:
 
 ### <a name="remarks"></a>Poznámky
 
-Dimenze se zkopírují do vyrovnávací paměti, na které odkazuje *lprect –*.
+Dimenze se zkopírují do vyrovnávací paměti, na které odkazuje *lprect –* .
 
 ##  <a name="getcoloradjustment"></a>  CDC::GetColorAdjustment
 
@@ -3220,7 +3220,7 @@ V případě úspěchu vrátí aktuální režim grafiky. Seznam hodnot, které 
 
 Vrátí hodnotu 0 při selhání.
 
-Chcete-li získat rozšířené informace o chybě, volejte [GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360).
+Chcete-li získat rozšířené informace o chybě, volejte [GetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror).
 
 ### <a name="remarks"></a>Poznámky
 
@@ -3276,7 +3276,7 @@ DWORD GetLayout() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-V případě úspěšného ověření rozložení příznaky pro aktuální kontext zařízení. V opačném případě GDI_ERROR. Rozšířené informace o chybě, volejte [GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360). Seznam všech příznaků, rozložení, naleznete v tématu [CDC::SetLayout](#setlayout).
+V případě úspěšného ověření rozložení příznaky pro aktuální kontext zařízení. V opačném případě GDI_ERROR. Rozšířené informace o chybě, volejte [GetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror). Seznam všech příznaků, rozložení, naleznete v tématu [CDC::SetLayout](#setlayout).
 
 ### <a name="remarks"></a>Poznámky
 
@@ -4012,7 +4012,7 @@ Vrací nenulovou hodnotu, při úspěchu.
 
 Vrátí hodnotu 0 při selhání.
 
-Chcete-li získat rozšířené informace o chybě, volejte [GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360).
+Chcete-li získat rozšířené informace o chybě, volejte [GetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror).
 
 ### <a name="remarks"></a>Poznámky
 
@@ -4459,7 +4459,7 @@ Vrací nenulovou hodnotu, při úspěchu.
 
 Vrátí hodnotu 0 při selhání.
 
-Chcete-li získat rozšířené informace o chybě, volejte [GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360).
+Chcete-li získat rozšířené informace o chybě, volejte [GetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror).
 
 ### <a name="remarks"></a>Poznámky
 
@@ -6003,7 +6003,7 @@ Určuje režim grafiky. Seznam hodnot, které mohou provádět tento parametr, n
 
 V případě úspěchu vrátí původní grafickém režimu.
 
-Vrátí hodnotu 0 při selhání. Chcete-li získat rozšířené informace o chybě, volejte [GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360).
+Vrátí hodnotu 0 při selhání. Chcete-li získat rozšířené informace o chybě, volejte [GetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror).
 
 ### <a name="remarks"></a>Poznámky
 
@@ -6022,7 +6022,7 @@ DWORD SetLayout(DWORD dwLayout);
 *dwLayout*<br/>
 Rozložení kontextu zařízení a rastrový obrázek řídicí příznaky. Může být kombinací těchto hodnot.
 
-|Hodnota|Význam|
+|Value|Význam|
 |-----------|-------------|
 |LAYOUT_BITMAPORIENTATIONPRESERVED|Zakáže jakýkoli odraz pro volání [CDC::BitBlt](#bitblt) a [CDC::StretchBlt](#stretchblt).|
 |LAYOUT_RTL|Nastaví výchozí vodorovné rozložení zprava doleva.|
@@ -6032,7 +6032,7 @@ Rozložení kontextu zařízení a rastrový obrázek řídicí příznaky. Mů�
 
 V případě úspěchu předchozí rozložení kontextu zařízení.
 
-Pokud není úspěšné, GDI_ERROR. Chcete-li získat rozšířené informace o chybě, volejte [GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360).
+Pokud není úspěšné, GDI_ERROR. Chcete-li získat rozšířené informace o chybě, volejte [GetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror).
 
 ### <a name="remarks"></a>Poznámky
 
@@ -6657,7 +6657,7 @@ Vrací nenulovou hodnotu, při úspěchu.
 
 Vrátí hodnotu 0 při selhání.
 
-Chcete-li získat rozšířené informace o chybě, volejte [GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360).
+Chcete-li získat rozšířené informace o chybě, volejte [GetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror).
 
 ### <a name="remarks"></a>Poznámky
 

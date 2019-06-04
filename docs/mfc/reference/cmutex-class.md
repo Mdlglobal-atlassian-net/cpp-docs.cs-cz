@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - CMutex [MFC], CMutex
 ms.assetid: 6330c050-4f01-4195-a099-2029b92f8cf1
-ms.openlocfilehash: f85e562af9d048503be20d1ab5d219fe8d2d039f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9c55da8a7692982fc18589fa69e9e2b0749cb6eb
+ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62373633"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66504190"
 ---
 # <a name="cmutex-class"></a>CMutex – třída
 
@@ -29,7 +29,7 @@ class CMutex : public CSyncObject
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CMutex::CMutex](#cmutex)|Vytvoří `CMutex` objektu.|
 
@@ -77,14 +77,14 @@ Určuje, pokud vytváření vlákna `CMutex` objektu původně má přístup k p
 Název `CMutex` objektu. Pokud existuje jiný objekt mutex se stejným názvem, *lpszName* musí být zadán, pokud se použije objekt přes hranice procesu. Pokud **NULL**, mutex budou bez názvu. Pokud název odpovídá existující objekt mutex, konstruktoru vytvoří novou `CMutex` objekt, který odkazuje na objekt mutex s tímto názvem. Pokud název odpovídá existující synchronizační objekt, který není objekt mutex, procesu vytváření se nezdaří.
 
 *lpsaAttribute*<br/>
-Atributy zabezpečení pro objekt mutex. Úplný popis této struktury viz [SECURITY_ATTRIBUTES](https://msdn.microsoft.com/library/windows/desktop/aa379560) v sadě Windows SDK.
+Atributy zabezpečení pro objekt mutex. Úplný popis této struktury viz [SECURITY_ATTRIBUTES](/previous-versions/windows/desktop/legacy/aa379560\(v=vs.85\)) v sadě Windows SDK.
 
 ### <a name="remarks"></a>Poznámky
 
 Přístup nebo vydání `CMutex` objektu, vytvořit [CMultiLock](../../mfc/reference/cmultilock-class.md) nebo [CSingleLock](../../mfc/reference/csinglelock-class.md) objektu a volání jeho [Zámek](../../mfc/reference/csinglelock-class.md#lock) a [odemknout](../../mfc/reference/csinglelock-class.md#unlock) Členské funkce. Pokud `CMutex` objektu používá samostatné, zavolejte jeho `Unlock` členskou funkci pro uvolnění.
 
 > [!IMPORTANT]
->  Po vytvoření `CMutex` objektu, použijte [GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360) zajistit, že mutex již neexistuje. Pokud mutex neočekávaně neexistuje, může to znamenat podvodný procesu je obsazení a může být úmyslem použít mutex závadně. Doporučený postup zabezpečení v tomto případě je zavřít popisovač a pokračovat, jako při vytváření objektu došlo k chybě.
+>  Po vytvoření `CMutex` objektu, použijte [GetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror) zajistit, že mutex již neexistuje. Pokud mutex neočekávaně neexistuje, může to znamenat podvodný procesu je obsazení a může být úmyslem použít mutex závadně. Doporučený postup zabezpečení v tomto případě je zavřít popisovač a pokračovat, jako při vytváření objektu došlo k chybě.
 
 ## <a name="see-also"></a>Viz také:
 

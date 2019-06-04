@@ -41,19 +41,19 @@ helpviewer_keywords:
 - painting and device context [MFC]
 - CPalette class [MFC], HPALETTE handle type
 ms.assetid: 41963b25-34b7-4343-8446-34ba516b83ca
-ms.openlocfilehash: 58ecf680d64f39ab61589a0ad668c15d1a9cd68c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3058bc5793a7766b0a6849ba77f0533f0bbbcef6
+ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62359058"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66503810"
 ---
 # <a name="graphic-objects"></a>Grafické objekty
 
 Windows poskytuje celou řadu nástrojů pro použití v kontextech zařízení pro kreslení. Poskytuje pera kreslení čar štětce pro výplň vnitřek a písma pro vykreslení textu. Knihovna MFC poskytuje třídy grafických objektů ekvivalentní nástrojů pro kreslení ve Windows. Následující tabulka uvádí dostupné třídy a ekvivalentní Windows grafiky zařízení rozhraní GDI systému popisovač typů.
 
 > [!NOTE]
->  Další informace najdete v dokumentaci sady SDK rozhraní GDI + na: [ https://msdn.microsoft.com/library/default.aspurl=/library/gdicpp/GDIPlus/GDIPlus.asp ](https://msdn.microsoft.com/library/default.aspurl=/library/gdicpp/gdiplus/gdiplus.asp).
+>  Další informace najdete v tématu [dokumentace k sadě SDK rozhraní GDI +](/windows/desktop/gdiplus/-gdiplus-gdi-start).
 
 Tento článek vysvětluje použití těchto tříd grafických objektů:
 

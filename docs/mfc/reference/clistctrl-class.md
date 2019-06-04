@@ -264,12 +264,12 @@ helpviewer_keywords:
 - CListCtrl [MFC], SubItemHitTest
 - CListCtrl [MFC], Update
 ms.assetid: fe08a1ca-4b05-4ff7-a12a-ee4c765a2197
-ms.openlocfilehash: eea37d03ca5a4fab450fbca0c4c3f6c76fefb407
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1cdc4bfacee4913d3a38aaa45aadf0a430e547ab
+ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62225244"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66503445"
 ---
 # <a name="clistctrl-class"></a>CListCtrl Class
 
@@ -285,13 +285,13 @@ class CListCtrl : public CWnd
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CListCtrl::CListCtrl](#clistctrl)|Vytvoří `CListCtrl` objektu.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CListCtrl::ApproximateViewRect](#approximateviewrect)|Určuje šířku a výšku vyžadována k zobrazení položek ovládacího prvku zobrazení seznamu.|
 |[CListCtrl::Arrange](#arrange)|Zarovnává položky v mřížce.|
@@ -681,7 +681,7 @@ Nenulové, pokud je úspěšná. jinak 0.
 
 ### <a name="remarks"></a>Poznámky
 
-Použití `CreateEx` místo [vytvořit](#create) použít rozšířené styly Windows určené předponu rozšířeného stylu Windows **WS_EX_**.
+Použití `CreateEx` místo [vytvořit](#create) použít rozšířené styly Windows určené předponu rozšířeného stylu Windows **WS_EX_** .
 
 `CreateEx` Vytvoří ovládací prvek s rozšířené styly Windows určené *dwExStyle*. Chcete-li nastavit konkrétní rozšířené styly ovládacího prvku, zavolejte [SetExtendedStyle](#setextendedstyle). Například použít `CreateEx` nastavit tyto styly jako WS_EX_CONTEXTHELP, ale použijte `SetExtendedStyle` nastavit tyto styly jako LVS_EX_FULLROWSELECT. Další informace najdete v tématu styly popsané v tématu [rozšířené styly zobrazení seznamu](/windows/desktop/Controls/extended-list-view-styles) v sadě Windows SDK.
 
@@ -1367,7 +1367,7 @@ Hodnota TRUE, pokud tato metoda je úspěšná. v opačném případě hodnota F
 
 ### <a name="remarks"></a>Poznámky
 
-Tato metoda odesílá [LVM_GETGROUPINFOBYINDEX](https://msdn.microsoft.com/library/windows/desktop/bb774933) --> zpráva, která je popsána v sadě Windows SDK.
+Tato metoda odesílá [LVM_GETGROUPINFOBYINDEX](/windows/desktop/controls/lvm-getgroupinfobyindex) --> zpráva, která je popsána v sadě Windows SDK.
 
 ### <a name="example"></a>Příklad
 
@@ -1787,7 +1787,7 @@ BOOL GetItemIndexRect(
 
 |Parametr|Popis|
 |---------------|-----------------|
-|*pItemIndex*|[in] Ukazatel [LVITEMINDEX](https://msdn.microsoft.com/library/windows/desktop/bb774762) strukturu pro nadřazenou položku podřízenou položku.<br /><br /> Volající zodpovídá za přidělování a nastavení členové [LVITEMINDEX](https://msdn.microsoft.com/library/windows/desktop/bb774762) struktury. Tento parametr nemůže mít hodnotu NULL.|
+|*pItemIndex*|[in] Ukazatel [LVITEMINDEX](/windows/desktop/api/commctrl/ns-commctrl-lvitemindex) strukturu pro nadřazenou položku podřízenou položku.<br /><br /> Volající zodpovídá za přidělování a nastavení členové [LVITEMINDEX](/windows/desktop/api/commctrl/ns-commctrl-lvitemindex) struktury. Tento parametr nemůže mít hodnotu NULL.|
 |*iColumn*|[in] Z nuly vycházející index sloupce v ovládacím prvku.|
 |*rectType*|[in] Část subitem zobrazení seznamu, pro který je načten ohraničující obdélník. Zadejte jednu z následujících hodnot:<br /><br /> LVIR_BOUNDS – vrací ohraničující obdélník podřízenou položku včetně ikonu a popisek.<br /><br /> LVIR_ICON – vrací ohraničující obdélník ikonu nebo malé ikony podřízenou položku.<br /><br /> LVIR_LABEL – vrací ohraničující obdélník text podřízenou položku.|
 |*pRect*|[out] Ukazatel [RECT](/previous-versions/dd162897\(v=vs.85\)) struktura, která obdrží informace o ohraničující obdélník podřízenou položku.<br /><br /> Volající zodpovídá za přidělování [RECT](/previous-versions/dd162897\(v=vs.85\)) struktury. Tento parametr nemůže mít hodnotu NULL.|
@@ -2093,8 +2093,8 @@ BOOL GetNextItemIndex(
 
 |Parametr|Popis|
 |---------------|-----------------|
-|*pItemIndex*|[out v] Ukazatel [LVITEMINDEX](https://msdn.microsoft.com/library/windows/desktop/bb774762) struktura, která popisuje položky, kde začíná hledání nebo -1 pro na první položku, která odpovídá příznaky v *nFlags* parametru.<br /><br /> Pokud tato metoda je úspěšná, `LVITEMINDEX` struktura popisuje položky nalezené.|
-|*nFlags*|[in] Bitová kombinace (OR) mezi příznaky, které určují, jak provést hledání.<br /><br /> Hledání může záviset na index, stavu nebo vzhled cílové položky nebo určená cílová položka fyzické umístění vzhledem k položce *pItemIndex* parametru. Další informace najdete v tématu *příznaky* parametr [LVM_GETNEXTITEMINDEX](https://msdn.microsoft.com/library/windows/desktop/bb761059) zprávy.|
+|*pItemIndex*|[out v] Ukazatel [LVITEMINDEX](/windows/desktop/api/commctrl/ns-commctrl-lvitemindex) struktura, která popisuje položky, kde začíná hledání nebo -1 pro na první položku, která odpovídá příznaky v *nFlags* parametru.<br /><br /> Pokud tato metoda je úspěšná, `LVITEMINDEX` struktura popisuje položky nalezené.|
+|*nFlags*|[in] Bitová kombinace (OR) mezi příznaky, které určují, jak provést hledání.<br /><br /> Hledání může záviset na index, stavu nebo vzhled cílové položky nebo určená cílová položka fyzické umístění vzhledem k položce *pItemIndex* parametru. Další informace najdete v tématu *příznaky* parametr [LVM_GETNEXTITEMINDEX](/windows/desktop/controls/lvm-getnextitemindex) zprávy.|
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -2104,7 +2104,7 @@ Hodnota TRUE, pokud tato metoda je úspěšná. v opačném případě hodnota F
 
 Volající zodpovídá za přidělování a nastavení členové `LVITEMINDEX` struktury na které odkazují *pItemIndex* parametru.
 
-Tato metoda odesílá [LVM_GETNEXTITEMINDEX](https://msdn.microsoft.com/library/windows/desktop/bb761059) zprávu, která je popsána v sadě Windows SDK.
+Tato metoda odesílá [LVM_GETNEXTITEMINDEX](/windows/desktop/controls/lvm-getnextitemindex) zprávu, která je popsána v sadě Windows SDK.
 
 ## <a name="getnextselecteditem"></a>  CListCtrl::GetNextSelectedItem
 
@@ -2909,7 +2909,7 @@ Ovládací prvek zobrazení seznamu interně sleduje položky podle indexu. Mů�
 
 Všimněte si, že ve vícevláknových prostředích index je zaručeno, že pouze ve vlákně, který je hostitelem ovládacího prvku zobrazení seznamu, nikoli na vláken na pozadí.
 
-Tato metoda odesílá [LVM_MAPIDTOINDEX](https://msdn.microsoft.com/library/windows/desktop/bb761137) zprávu, která je popsána v sadě Windows SDK.
+Tato metoda odesílá [LVM_MAPIDTOINDEX](/windows/desktop/controls/lvm-mapidtoindex) zprávu, která je popsána v sadě Windows SDK.
 
 ## <a name="mapindextoid"></a>  CListCtrl::MapIndexToID
 
@@ -3822,7 +3822,7 @@ BOOL SetItemIndexState(
 
 |Parametr|Popis|
 |---------------|-----------------|
-|*pItemIndex*|[in] Ukazatel [LVITEMINDEX](https://msdn.microsoft.com/library/windows/desktop/bb774762) struktura, která popisuje položky. Volající zodpovídá za přidělování tuto strukturu a nastavení jeho členů.|
+|*pItemIndex*|[in] Ukazatel [LVITEMINDEX](/windows/desktop/api/commctrl/ns-commctrl-lvitemindex) struktura, která popisuje položky. Volající zodpovídá za přidělování tuto strukturu a nastavení jeho členů.|
 |*dwState*|[in] Stav, který má nastavit položku, která je bitová kombinace hodnot [stavy položky zobrazení seznamu](/windows/desktop/Controls/list-view-item-states). Určete nula k obnovení nebo z nich se má nastavit stav.|
 |*dwMask*|[in] Maska platné bity na stav zadaný ve *dwState* parametru. Zadejte (nebo) bitová kombinace hodnot [stavy položky zobrazení seznamu](/windows/desktop/Controls/list-view-item-states).|
 
@@ -4164,7 +4164,7 @@ void SetWorkAreas(
 ### <a name="parameters"></a>Parametry
 
 *nWorkAreas*<br/>
-Počet `RECT` struktury (nebo [crect –](../../atl-mfc-shared/reference/crect-class.md) objektů) v poli, na které odkazuje *lprect –*.
+Počet `RECT` struktury (nebo [crect –](../../atl-mfc-shared/reference/crect-class.md) objektů) v poli, na které odkazuje *lprect –* .
 
 *lpRect*<br/>
 Adresa pole `RECT` struktury (nebo `CRect` objekty), které určují nové pracovní oblasti ovládacího prvku zobrazení seznamu. Tyto oblasti je třeba zadat v souřadnicích klienta. Pokud má parametr hodnotu NULL, pracovní plocha nastaví na klientské oblasti ovládacího prvku.

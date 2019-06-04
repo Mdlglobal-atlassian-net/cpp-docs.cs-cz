@@ -10,12 +10,12 @@ helpviewer_keywords:
 - merging toolbar and status bar [MFC]
 - menus [MFC], OLE document applications
 ms.assetid: 80b6bb17-d830-4122-83f0-651fc112d4d1
-ms.openlocfilehash: e00464e59de5e20627fd2423c101c23629d7c4d2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1f7af7007e72cb8e01022c81a244fc70ba52a5cc
+ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62225536"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66504827"
 ---
 # <a name="menus-and-resources-menu-merging"></a>Nabídky a prostředky: Slučováním nabídek
 
@@ -29,9 +29,7 @@ V tomto článku probíraná témata zahrnují:
 
 ##  <a name="_core_menu_layouts"></a> Rozložení nabídek
 
-Prvním krokem je koordinace rozložení nabídek. Další informace najdete v tématu **vytvoření nabídky** tématu [aspekty programování nabídky](https://msdn.microsoft.com/library/ms647557.aspx) v sadě Windows SDK.
-
-Aplikace typu kontejner by měl vytvořit novou nabídku pro použití pouze v případě, že vložené položky se aktivují v místě. Minimálně by měla tato nabídka skládá z těchto možností v uvedeném pořadí:
+Prvním krokem je koordinace rozložení nabídek. Aplikace typu kontejner by měl vytvořit novou nabídku pro použití pouze v případě, že vložené položky se aktivují v místě. Minimálně by měla tato nabídka skládá z těchto možností v uvedeném pořadí:
 
 1. Nabídka Soubor je stejný jako ten, který používá, když jsou otevřené soubory. (Obvykle žádné jiné položky nabídky jsou umístěny před na další položku.)
 

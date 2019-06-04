@@ -32,12 +32,12 @@ helpviewer_keywords:
 - CInternetSession [MFC], SetCookie
 - CInternetSession [MFC], SetOption
 ms.assetid: ef54feb4-9d0f-4e65-a45d-7a4cf6c40e51
-ms.openlocfilehash: 5ad1a1a0dde32358828d58a8f237337c4f62f3e5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e3d6d319a963fbc24e89bf8c4c0858cd80ec5a9d
+ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62345588"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66503462"
 ---
 # <a name="cinternetsession-class"></a>Cinternetsession – třída
 
@@ -53,13 +53,13 @@ class CInternetSession : public CObject
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CInternetSession::CInternetSession](#cinternetsession)|Vytvoří `CInternetSession` objektu.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CInternetSession::Close](#close)|Zavře připojení k Internetu Internet relace je ukončena.|
 |[CInternetSession::EnableStatusCallback](#enablestatuscallback)|Vytváří rutina zpětného volání stavu.|
@@ -76,7 +76,7 @@ class CInternetSession : public CObject
 
 ### <a name="public-operators"></a>Veřejné operátory
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CInternetSession::operator HINTERNET](#operator_hinternet)|Popisovač s aktuální relací Internetu.|
 
@@ -156,7 +156,7 @@ Určuje různé možnosti ukládání do mezipaměti. Výchozí hodnota je nasta
 
 - INTERNET_FLAG_DONT_CACHE Neukládat do mezipaměti dat, místně nebo v veškeré servery brány.
 
-- Stáhnout INTERNET_FLAG_OFFLINE operace jsou splněny prostřednictvím trvalého mezipaměti. Pokud položka v mezipaměti neexistuje, vrátí se odpovídající chybový kód. Tento příznak může kombinované pomocí bitového **nebo** ( **&#124;**) – operátor.
+- Stáhnout INTERNET_FLAG_OFFLINE operace jsou splněny prostřednictvím trvalého mezipaměti. Pokud položka v mezipaměti neexistuje, vrátí se odpovídající chybový kód. Tento příznak může kombinované pomocí bitového **nebo** ( **&#124;** ) – operátor.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -258,7 +258,7 @@ Proměnná, určení velikosti *pstrCookieData* vyrovnávací paměti. Pokud fun
 
 ### <a name="return-value"></a>Návratová hodnota
 
-V opačném případě vrátí hodnotu PRAVDA, pokud je úspěšná, nebo FALSE. Pokud volání selže, zavolejte funkci Win32 [GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360) a zjistěte příčinu chyby. Platí následující hodnoty Chyba:
+V opačném případě vrátí hodnotu PRAVDA, pokud je úspěšná, nebo FALSE. Pokud volání selže, zavolejte funkci Win32 [GetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror) a zjistěte příčinu chyby. Platí následující hodnoty Chyba:
 
 - ERROR_NO_MORE_ITEMS neexistuje žádný soubor cookie pro zadanou adresu URL a všech jejích nadřazených tříd.
 
@@ -536,7 +536,7 @@ Ukazatel, který `OpenURL` vrátí závisí na *pstrURL*typ služby. Následují
 
 ### <a name="remarks"></a>Poznámky
 
-Parametr *dwFlags* musí obsahovat INTERNET_FLAG_TRANSFER_ASCII nebo INTERNET_FLAG_TRANSFER_BINARY, ale ne obojí. Zbývající příznaků je možné kombinovat s bitový **nebo** – operátor ( **&#124;**).
+Parametr *dwFlags* musí obsahovat INTERNET_FLAG_TRANSFER_ASCII nebo INTERNET_FLAG_TRANSFER_BINARY, ale ne obojí. Zbývající příznaků je možné kombinovat s bitový **nebo** – operátor ( **&#124;** ).
 
 `OpenURL`, která zabalí funkci Win32 `InternetOpenURL`, umožňuje pouze stahování, načtení a čtení dat z internetového serveru. `OpenURL` umožňuje manipulaci s žádný soubor ve vzdáleném umístění, takže nevyžaduje žádné [cinternetconnection –](../../mfc/reference/cinternetconnection-class.md) objektu.
 
@@ -616,11 +616,11 @@ Určuje různé možnosti ukládání do mezipaměti. Výchozí hodnota je nasta
 
 - INTERNET_FLAG_DONT_CACHE Neukládat do mezipaměti dat, místně nebo v veškeré servery brány.
 
-- Stáhnout INTERNET_FLAG_OFFLINE operace jsou splněny prostřednictvím trvalého mezipaměti. Pokud položka v mezipaměti neexistuje, vrátí se odpovídající chybový kód. Tento příznak může kombinované pomocí bitového **nebo** ( **&#124;**) – operátor.
+- Stáhnout INTERNET_FLAG_OFFLINE operace jsou splněny prostřednictvím trvalého mezipaměti. Pokud položka v mezipaměti neexistuje, vrátí se odpovídající chybový kód. Tento příznak může kombinované pomocí bitového **nebo** ( **&#124;** ) – operátor.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Pokud byla operace úspěšná, vrátí hodnotu true. Pokud došlo k chybě, vrátí se hodnota FALSE. Pokud volání selže, funkci Win32 [GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360) může být volána a zjistěte příčinu chyby.
+Pokud byla operace úspěšná, vrátí hodnotu true. Pokud došlo k chybě, vrátí se hodnota FALSE. Pokud volání selže, funkci Win32 [GetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror) může být volána a zjistěte příčinu chyby.
 
 ## <a name="see-also"></a>Viz také:
 

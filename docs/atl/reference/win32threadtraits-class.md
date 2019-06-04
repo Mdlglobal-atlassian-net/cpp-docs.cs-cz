@@ -10,12 +10,12 @@ helpviewer_keywords:
 - threading [ATL], creation functions
 - Win32ThreadTraits class
 ms.assetid: 50279c38-eae1-4301-9ea6-97ccea580f3e
-ms.openlocfilehash: da4b8b3d5a41ab16dc2027fd632c56158afd3b97
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: cae5faea7938918da2656e21648282c1a2e1a66d
+ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62275935"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66503764"
 ---
 # <a name="win32threadtraits-class"></a>Win32threadtraits – třída
 
@@ -34,7 +34,7 @@ class Win32ThreadTraits
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[Win32ThreadTraits::CreateThread](#createthread)|(Statické) Voláním této funkce k vytvoření vlákna, která se nesmí používat funkce CRT.|
 
@@ -90,7 +90,7 @@ Vytváření příznaky (0 nebo CREATE_SUSPENDED).
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vrátí popisovač do nově vytvořeného vlákna nebo hodnota NULL při selhání. Volání [GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360) a získat tak rozšířené informace o chybě.
+Vrátí popisovač do nově vytvořeného vlákna nebo hodnota NULL při selhání. Volání [GetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror) a získat tak rozšířené informace o chybě.
 
 ### <a name="remarks"></a>Poznámky
 

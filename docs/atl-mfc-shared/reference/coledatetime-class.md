@@ -34,12 +34,12 @@ helpviewer_keywords:
 - dates, handling in MFC
 - time, handling in MFC
 ms.assetid: e718f294-16ec-4649-88b6-a4dbae5178fb
-ms.openlocfilehash: 46b5f15a2f6048745a12b8c3a8c8a63404f71aa2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 63c2971f5d55cb5198925650bcf90b2f1a8b0958
+ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62252698"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66503218"
 ---
 # <a name="coledatetime-class"></a>COleDateTime – třída
 
@@ -55,13 +55,13 @@ class COleDateTime
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[COleDateTime::COleDateTime](#coledatetime)|Vytvoří `COleDateTime` objektu.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[COleDateTime::Format](#format)|Generuje formátovaný řetězec představující `COleDateTime` objektu.|
 |[COleDateTime::GetAsDBTIMESTAMP](#getasdbtimestamp)|Volejte tuto metodu za účelem získání čas v `COleDateTime` objektu jako `DBTIMESTAMP` datové struktury.|
@@ -85,7 +85,7 @@ class COleDateTime
 
 ### <a name="public-operators"></a>Veřejné operátory
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[COleDateTime::operator == COleDateTime::operator < atd.](#coledatetime_relational_operators)|Porovnat dva `COleDateTime` hodnoty.|
 |[COleDateTime::operator + COleDateTime::operator-](#operator_add_-)|Sčítání a odečítání `COleDateTime` hodnoty.|
@@ -95,7 +95,7 @@ class COleDateTime
 
 ### <a name="public-data-members"></a>Veřejné datové členy
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[COleDateTime::m_dt](#m_dt)|Obsahuje základní `DATE` to `COleDateTime` objektu.|
 |[COleDateTime::m_status](#m_status)|Obsahuje stav tohoto `COleDateTime` objektu.|
@@ -169,7 +169,7 @@ bool operator>=(const COleDateTime& date) const throw();
 
 ### <a name="example"></a>Příklad
 
-Operátory **>=**, **\< =**, **>**, a **<**, bude-li uplatnit `COleDateTime` objekt je nastaven na hodnotu null.
+Operátory **>=** , **\< =** , **>** , a **<** , bude-li uplatnit `COleDateTime` objekt je nastaven na hodnotu null.
 
 [!code-cpp[NVC_ATLMFC_Utilities#170](../../atl-mfc-shared/codesnippet/cpp/coledatetime-class_3.cpp)]
 
@@ -225,7 +225,7 @@ Označení hodnoty data a času, které se mají zkopírovat do nové `COleDateT
 Hodnoty data a času zástupného kódu MS-DOS převést na hodnotu data a času a zkopírovány do nového `COleDateTime` objektu.
 
 *timeStamp*<br/>
-Odkaz na [DBTimeStamp](https://msdn.microsoft.com/library/system.data.oledb.oledbtype) struktury obsahující aktuální místní čas.
+Odkaz na [DBTimeStamp](/dotnet/api/system.data.oledb.oledbtype) struktury obsahující aktuální místní čas.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -347,7 +347,7 @@ bool GetAsDBTIMESTAMP(DBTIMESTAMP& timeStamp) const throw();
 ### <a name="parameters"></a>Parametry
 
 *timeStamp*<br/>
-Odkaz na [DBTimeStamp](https://msdn.microsoft.com/library/system.data.oledb.oledbtype) struktury.
+Odkaz na [DBTimeStamp](/dotnet/api/system.data.oledb.oledbtype) struktury.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -1089,7 +1089,7 @@ Pokud hodnota data nebo času zadanou parametry není platná, že stav tohoto o
 
 Tady jsou některé příklady hodnot času:
 
-|*nHour*|*nMin*|*nSec*|Hodnota|
+|*nHour*|*nMin*|*nSec*|Value|
 |-------------|------------|------------|-----------|
 |1|3|3|01:03:03|
 |23|45|0|23:45:00|

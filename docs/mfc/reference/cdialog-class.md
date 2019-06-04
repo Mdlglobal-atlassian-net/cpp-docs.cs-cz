@@ -40,12 +40,12 @@ helpviewer_keywords:
 - CDialog [MFC], OnCancel
 - CDialog [MFC], OnOK
 ms.assetid: ca64b77e-2cd2-47e3-8eff-c2645ad578f9
-ms.openlocfilehash: 9918b1ae38caacf2b2355ace6337e8e5e6260605
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 23d170cf023374fe61e13d907e3c3466c0352fe6
+ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62168320"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66504447"
 ---
 # <a name="cdialog-class"></a>CDialog – třída
 
@@ -61,13 +61,13 @@ class CDialog : public CWnd
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CDialog::CDialog](#cdialog)|Vytvoří `CDialog` objektu.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CDialog::Create](#create)|Inicializuje `CDialog` objektu. Vytvoří nemodální dialogové okno a připojí ho k `CDialog` objektu.|
 |[CDialog::CreateIndirect](#createindirect)|Vytvoří nemodální dialogové okno z šablony dialog-box v paměti (ne založené na prostředcích).|
@@ -86,7 +86,7 @@ class CDialog : public CWnd
 
 ### <a name="protected-methods"></a>Chráněné metody
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CDialog::OnCancel](#oncancel)|Přepsání nastavení za účelem provedení tlačítko Storno nebo reakce na stisknutí klávesy ESC. Výchozí hodnota zavře dialogové okno a `DoModal` vrátí IDCANCEL.|
 |[CDialog::OnOK](#onok)|Přepsání nastavení za účelem provedení akce tlačítko OK v modální dialogové okno. Výchozí hodnota zavře dialogové okno a `DoModal` vrátí IDOK.|
@@ -276,7 +276,7 @@ virtual INT_PTR DoModal();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-**Int** hodnotu, která určuje hodnotu *Nvýsledek* parametr, který byl předán [CDialog::EndDialog](#enddialog) členská funkce, který slouží k zavření dialogového okna. Vrácená hodnota je -1, pokud funkci nelze vytvořit dialogové okno nebo IDABORT, pokud došlo k nějaké chybě, v takovém případě v okně Výstup bude obsahovat informace o chybě z [GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360).
+**Int** hodnotu, která určuje hodnotu *Nvýsledek* parametr, který byl předán [CDialog::EndDialog](#enddialog) členská funkce, který slouží k zavření dialogového okna. Vrácená hodnota je -1, pokud funkci nelze vytvořit dialogové okno nebo IDABORT, pokud došlo k nějaké chybě, v takovém případě v okně Výstup bude obsahovat informace o chybě z [GetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror).
 
 ### <a name="remarks"></a>Poznámky
 
