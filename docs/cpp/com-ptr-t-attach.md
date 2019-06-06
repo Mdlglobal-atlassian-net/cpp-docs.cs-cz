@@ -37,9 +37,9 @@ Pokud je hodnota TRUE, pak `AddRef` je volána. Pokud má hodnotu FALSE, `_com_p
 
 ## <a name="remarks"></a>Poznámky
 
-- **Připojení (***pInterface***)** `AddRef` není volána. To je předáno vlastnictví rozhraní `_com_ptr_t` objektu. `Release` nazývá se sníží počet odkazů na dříve zapouzdřený ukazatel.
+- **Připojení (** *pInterface* **)** `AddRef` není volána. To je předáno vlastnictví rozhraní `_com_ptr_t` objektu. `Release` nazývá se sníží počet odkazů na dříve zapouzdřený ukazatel.
 
-- **Připojení (***pInterface* **,***fAddRef***)** Pokud *fAddRef* má hodnotu TRUE, `AddRef`nazývá se zvýší počet odkazů pro zapouzdřený ukazatel rozhraní. Pokud *fAddRef* má hodnotu FALSE, to `_com_ptr_t` objekt převezme vlastnictví nezpracovaného ukazatele rozhraní bez volání `AddRef`. `Release` nazývá se sníží počet odkazů na dříve zapouzdřený ukazatel.
+- **Připojení (** *pInterface* **,** *fAddRef* **)** Pokud *fAddRef* má hodnotu TRUE, `AddRef`nazývá se zvýší počet odkazů pro zapouzdřený ukazatel rozhraní. Pokud *fAddRef* má hodnotu FALSE, to `_com_ptr_t` objekt převezme vlastnictví nezpracovaného ukazatele rozhraní bez volání `AddRef`. `Release` nazývá se sníží počet odkazů na dříve zapouzdřený ukazatel.
 
 **Specifické pro END Microsoft**
 

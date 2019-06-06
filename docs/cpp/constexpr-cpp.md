@@ -21,8 +21,8 @@ Pokud chcete omezit složitost kompilace konstantní výpočty a jejich potenci�
 
 ## <a name="syntax"></a>Syntaxe
 
-> **constexpr** *typem literálu* *identifikátor* ** = ** *konstantní výraz* **;** 
->  **constexpr** *typem literálu* *identifikátor* **{** *konstantního výrazu. * **}** **;** 
+> **constexpr** *typem literálu* *identifikátor* **=** *konstantní výraz* **;** 
+>  **constexpr** *typem literálu* *identifikátor* **{** *konstantního výrazu.* **}** **;** 
 >  **constexpr** *typem literálu* *identifikátor* **(** *params* **)** **;** 
 >  **constexpr** *ctor* **(** *params* **)** **;**
 
