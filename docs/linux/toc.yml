@@ -1,0 +1,41 @@
+- name: Linux s Visual Studio C++ (dokumentace)
+  href: index.md
+- name: 'Stažení, instalace a nastavení úloh pro vývoj pro Linux'
+  href: download-install-and-setup-the-linux-development-workload.md
+- name: Konfigurace projektu Linux
+  href: configure-a-linux-project.md
+- name: Konfigurace projektu Linux CMake
+  href: cmake-linux-project.md
+- name: Vytvoření nového projektu Linux
+  href: create-a-new-linux-project.md
+- name: Připojení ke vzdálenému počítači s Linuxem
+  href: connect-to-your-remote-linux-computer.md
+- name: 'Nasazení, spuštění a ladění projektu Linux'
+  href: deploy-run-and-debug-your-linux-project.md
+- name: 'Kurz: Vytváření projektů v jazyce C++ pro různé platformy v sadě Visual Studio'
+  href: ../build/get-started-linux-cmake.md
+- name: Odkaz na stránku vlastností projektu Linux
+  expanded: false
+  items:
+    - name: Odkaz na stránku vlastností projektu Linux
+      href: prop-pages-linux.md
+    - name: Obecné vlastnosti (Linux)
+      href: prop-pages/general-linux.md
+    - name: Vlastnosti ladění (Linux)
+      href: prop-pages/debugging-linux.md
+    - name: Vlastnosti adresářů VC++ (Linux)
+      href: prop-pages/directories-linux.md
+    - name: Kopírování vlastností zdrojů (Linux)
+      href: prop-pages/copy-sources-project.md
+    - name: Vlastnosti C/C++ (Linux)
+      href: prop-pages/c-cpp-linux.md
+    - name: Vlastnosti linkeru (Linux)
+      href: prop-pages/linker-linux.md
+    - name: Vlastnosti události sestavení (Linux)
+      href: prop-pages/build-events-linux.md
+    - name: Vlastnosti vlastního kroku sestavení (Linux)
+      href: prop-pages/custom-build-step-linux.md
+    - name: Vlastnosti projektu souboru pravidel (Linux)
+      href: prop-pages/makefile-linux.md
+    - name: Vlastnosti vzdáleného archivu (Linux)
+      href: prop-pages/remote-ar-linux.md
