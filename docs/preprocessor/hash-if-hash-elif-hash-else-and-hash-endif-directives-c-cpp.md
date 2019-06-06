@@ -41,25 +41,25 @@ ms.locfileid: "62409886"
 &nbsp;&nbsp;&nbsp;&nbsp;*text řádku IF*
 
 *řádek IF* :<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**#if***konstantního výrazu.*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**#ifdef***identifikátor*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**#ifndef***identifikátor*
+&nbsp;&nbsp;&nbsp;&nbsp; **#if** *konstantního výrazu.*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp; **#ifdef** *identifikátor*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp; **#ifndef** *identifikátor*
 
 *části elif* :<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*text řádku elif*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*části elif text řádku elif*
 
 *řádek elif* :<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**#elif***konstantního výrazu.*
+&nbsp;&nbsp;&nbsp;&nbsp; **#elif** *konstantního výrazu.*
 
 *části else* :<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*text řádku else*
 
 *řádek else* :<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**#else**
+&nbsp;&nbsp;&nbsp;&nbsp; **#else**
 
 *řádek endif* :<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**#endif**
+&nbsp;&nbsp;&nbsp;&nbsp; **#endif**
 
 Každý **#if** směrnice ve zdrojovém souboru musí mít odpovídající uzavírací **#endif** směrnice. Libovolný počet **#elif** direktivy mohou objevit mezi **#if** a **#endif** direktivy, ale jedna **#else** – direktiva je povolen. **#Else** direktiva, pokud jsou k dispozici, musí být poslední direktivou před parametrem **#endif**.
 
@@ -73,7 +73,7 @@ Preprocesor vybere jeden z daných výskytů *text* k dalšímu zpracování. Bl
 
 Preprocesor zpracuje vybraný *text* a předá ho kompilátoru. Pokud *text* obsahuje direktivy preprocesoru, preprocesor provádí uvedené směrnice. Kompilovány jsou pouze textové bloky vybrané preprocesorem.
 
-Preprocesor vybere jednu *text* položky vyhodnocením konstantního výrazu po každé **#if** nebo **#elif** směrnice, dokud nenajde true (nenulový) – Konstanta výraz. Vybere celý text (včetně ostatních pokynů preprocesoru počínaje **#**) až po přidružený **#elif**, **#else**, nebo **#endif** .
+Preprocesor vybere jednu *text* položky vyhodnocením konstantního výrazu po každé **#if** nebo **#elif** směrnice, dokud nenajde true (nenulový) – Konstanta výraz. Vybere celý text (včetně ostatních pokynů preprocesoru počínaje **#** ) až po přidružený **#elif**, **#else**, nebo **#endif** .
 
 Pokud všechny výskyty *konstantní výraz* jsou false, nebo pokud žádná **#elif** direktivy nezobrazí, preprocesor vybere textový blok po **#else** klauzuli. Pokud **#else** klauzule je vynechána a všechny instance *konstantní výraz* v **#if** bloku jsou false, je vybrán žádný textový blok.
 
