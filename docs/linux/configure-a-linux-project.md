@@ -1,79 +1,104 @@
 ---
 title: Konfigurace projektu C++ Linux v sadě Visual Studio
-ms.date: 11/12/2018
+ms.date: 06/07/2019
 ms.assetid: 4d7c6adf-54b9-4b23-bd23-5de0c825b768
-ms.openlocfilehash: 8e8bf2b12462a18c8a0e6c1c4d6677f18e2f0f34
-ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
+ms.openlocfilehash: 5acd9edeef8f09f86c394c39939d8408821dd691
+ms.sourcegitcommit: 8adabe177d557c74566c13145196c11cef5d10d4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66451148"
+ms.lasthandoff: 06/10/2019
+ms.locfileid: "66821564"
 ---
 # <a name="configure-a-linux-project"></a>Konfigurace projektu Linux
 
-Toto téma popisuje postup konfigurace projektu C++ Linux, který je založen na šabloně projektu Linux v sadě Visual Studio. Informace o Linuxové projekty CMake v sadě Visual Studio najdete v tématu [konfigurace projektu Linux CMake ](cmake-linux-project.md).
+::: moniker range="vs-2015"
+
+Podpora Linuxu je k dispozici v sadě Visual Studio 2017 nebo novější.
+
+::: moniker-end
+
+Toto téma popisuje postup konfigurace C++ projektu Linux, jak je popsáno v [vytvořte nový C++ projektu Linux v sadě Visual Studio](create-a-new-linux-project.md). CMake Linuxových projektů, naleznete v tématu [konfigurace projektu Linux CMake ](cmake-linux-project.md). 
+
+Můžete konfigurace projektu Linux cílit na fyzický počítač s Linuxem, virtuálních počítačů nebo [subsystém Windows pro Linux](/windows/wsl/about) (WSL). 
+
+::: moniker range="vs-2019"
+
+**Visual Studio 2019 version 16.1**:
+
+- Při cílení na WSL, můžete se vyhnout kopírování operace, které jsou nezbytné k vytváření, technologie IntelliSense při cílení na vzdálených Linuxových systémů.
+
+- Můžete zadat samostatnou Linuxových cílů pro sestavování a ladění.
+
+::: moniker-end
 
 ## <a name="general-settings"></a>Obecná nastavení
 
-Širokou škálu možností je nakonfigurovat pro Linux projekt pomocí sady Visual Studio.  Chcete-li zobrazit tyto možnosti, vyberte **projektu > vlastnosti** nabídek nebo kliknutím pravým tlačítkem na projekt v **Průzkumníka řešení** a vyberte **vlastnosti** v místní nabídce. **Obecné** nastavení se zobrazí.
+Chcete-li zobrazit možnosti konfigurace, vyberte **projektu > vlastnosti** nabídek nebo kliknutím pravým tlačítkem na projekt v **Průzkumníka řešení** a vyberte **vlastnosti** z kontextu nabídka. **Obecné** nastavení se zobrazí.
 
 ![Obecná konfigurace](media/settings_general.png)
 
-Ve výchozím nastavení je spustitelný soubor (.out) vytvořené nástrojem.  Vytvoří statickou nebo dynamickou knihovnu, nebo použít existující soubor pravidel, použijte **typ konfigurace** výběru.
+Ve výchozím nastavení je spustitelný soubor (.out) vytvořené nástrojem. Vytvoří statickou nebo dynamickou knihovnu, nebo použít existující soubor pravidel, použijte **typ konfigurace** nastavení.
 
-Další informace o možnosti na stránkách vlastností najdete v tématu [odkaz na stránku vlastností projektu Linux](prop-pages-linux.md).
+Další informace o nastavení na stránkách vlastností najdete v tématu [odkaz na stránku vlastností projektu Linux](prop-pages-linux.md).
 
 ## <a name="remote-settings"></a>Nastavení vzdáleného přístupu
 
-Chcete-li změnit nastavení vztahující se ke vzdálenému počítači Linux, nakonfigurujte vzdálené možnosti, které se zobrazují v [Obecné](prop-pages/general-linux.md) nastavení:
+Chcete-li změnit nastavení vztahující se na vzdálené počítače s Linuxem, konfigurace, které se zobrazí v části Nastavení vzdáleného [Obecné](prop-pages/general-linux.md).
 
-- Chcete-li změnit cílový počítač s Linuxem, použijte **vzdálený počítač sestavení** položka.  To vám umožní vybrat jedno z připojení, které jste předtím vytvořili.  Chcete-li vytvořit nový záznam, přejděte prosím sem [připojení vzdáleného počítače Linux](connect-to-your-remote-linux-computer.md) části.
+- Pokud chcete zadat vzdálený cílový počítač Linux, použijte **vzdálený počítač sestavení** položka. To vám umožní vybrat jedno z připojení, které jste předtím vytvořili. Pokud chcete vytvořit nový záznam, najdete v článku [připojení vzdáleného počítače Linux](connect-to-your-remote-linux-computer.md) části.
 
-- **Vzdálený kořenový adresář sestavení** Určuje, kde sestavení projektu ve vzdáleném počítači Linux umístění kořenového adresáře.  To bude ve výchozím nastavení **~/projects** není-li změnit.
+   ![Sestavení počítače](media/remote-build-machine-vs2019.png)
 
-- **Vzdálený adresář projektu sestavení** je, kde bude vytvořen tohoto konkrétního projektu na vzdáleném počítači s Linuxem.  To bude ve výchozím nastavení **$(RemoteRootDir)/$(ProjectName)** , který se rozbalí a adresář s názvem po aktuální projekt pod kořenovým adresářem uvedené výše.
+   ::: moniker range="vs-2019"
+
+   **Visual Studio 2019 version 16.1**: Zacílené subsystém Windows pro Linux, klikněte na šipku dolů u **sada nástrojů platformy** a zvolte **WSL_1_0**. Další možnosti vzdáleného zmizí a zobrazí se místo nich cestu k výchozí WSL prostředí:
+
+   ![WSL sestavující počítač](media/wsl-remote-vs2019.png)
+
+   Pokud máte zařízení WSL vedle sebe, můžete zadat jinou cestu. Další informace o správě více distribucích najdete v tématu [spravovat a konfigurovat subsystém Windows pro Linux](/windows/wsl/wsl-config#set-a-default-distribution).
+
+   Můžete určit jiný cíl pro ladění na **vlastnosti konfigurace** > **ladění** stránky.
+
+   ::: moniker-end
+
+- **Vzdálený kořenový adresář sestavení** Určuje, kde sestavení projektu ve vzdáleném počítači Linux umístění kořenového adresáře. To bude ve výchozím nastavení **~/projects** není-li změnit.
+
+- **Vzdálený adresář projektu sestavení** je, kde bude vytvořen tohoto konkrétního projektu na vzdáleném počítači s Linuxem. To bude ve výchozím nastavení **$(RemoteRootDir)/$(ProjectName)** , který se rozbalí a adresář s názvem po aktuální projekt pod kořenovým adresářem uvedené výše.
 
 > [!NOTE]
-> Ke změně výchozího jazyka C a kompilátory C++, nebo Linkeru a archivačního programu sloužící k sestavení projektu, použijte odpovídající položky v **C/C++ > Obecné** oddílu a **Linker > Obecné** oddílu.  To může být nastaven na použití určité verze GCC, nebo dokonce kompilátoru Clang, třeba. Další informace najdete v části [vlastnosti C/C++ (Linux C++)](prop-pages/c-cpp-linux.md) a [vlastnosti Linkeru (Linux C++)](prop-pages/linker-linux.md).
+> Ke změně výchozího jazyka C a kompilátory C++, nebo Linkeru a archivačního programu sloužící k sestavení projektu, použijte odpovídající položky v **C/C++ > Obecné** oddílu a **Linker > Obecné** oddílu. Můžete třeba zadat určité verzi GCC nebo Clang. Další informace najdete v části [vlastnosti C/C++ (Linux C++)](prop-pages/c-cpp-linux.md) a [vlastnosti Linkeru (Linux C++)](prop-pages/linker-linux.md).
 
-## <a name="include-directories-and-intellisense-support"></a>Zahrnout adresáře a podporu technologie IntelliSense
+## <a name="copy-sources-remote-systems-only"></a>Kopírovat zdroje (pouze pro vzdálené systémy)
 
-**Visual Studio 2017 verze 15.6 a starší:**<br/>
-Ve výchozím nastavení Visual Studio nezahrnuje všech souborů include úrovni systému z počítače s Linuxem.  Příklad položky v **/usr/include** adresáře nejsou k dispozici v sadě Visual Studio.
-Úplné [IntelliSense](/visualstudio/ide/using-intellisense) podpory, budete muset zkopírovat tyto soubory do umístění ve svém vývojovém počítači a sady Visual Studio přejděte do tohoto umístění.  Jednou z možností je použití spojovacího bodu služby (Secure Copy) ke kopírování souborů.  Ve Windows 10, můžete použít [Bash ve Windows](https://msdn.microsoft.com/commandline/wsl/about) ke spuštění spojovací bod služby.  U předchozích verzí systému Windows, například použít něco jako [PSCP (PuTTY Secure Copy)](https://www.chiark.greenend.org.uk/~sgtatham/putty/download.html).
+::: moniker range="vs-2019"
 
-Zkopírujte soubory s použitím příkazu, který je podobný následujícímu:
+Tato část se nevztahuje při cílení na WSL.
 
-`scp -r linux_username@remote_host:/usr/include .`
+::: moniker-end
 
-Samozřejmě, nahraďte **linux_username** a **remote_host** hodnoty vyšší než co je vhodné pro vaše vlastní prostředí.
+Při sestavování ve vzdálených systémech, jsou zdrojové soubory na vašem počítači zkopírují do počítače s Linuxem a zkompilovány existuje. Ve výchozím nastavení všechny zdroje v projektu sady Visual Studio se zkopírují do umístění v nastavení výše. Však další zdroje můžete také přidat do seznamu nebo kopírování zdrojů může být vypnuto úplně, což je výchozí nastavení pro projektu souboru pravidel.
 
-Po zkopírování souborů, použijte **adresáře VC ++** položky ve vlastnostech projektu sady Visual Studio zjistit, kde najdete další vložené soubory, které byly zkopírovány pouze.
-
-![Adresáře VC ++](media/settings_directories.png)
-
-**Visual Studio 2017 verze 15.7 nebo novější:**<br/>
-Zobrazit [Správa vzdálených hlaviček IntelliSense](#remote_intellisense).
-
-## <a name="copy-sources"></a>Kopírovat zdroje
-
-Při sestavování, jsou zdrojové soubory na vašem počítači zkopírují do počítače s Linuxem a zkompilovány existuje.  Ve výchozím nastavení všechny zdroje v projektu sady Visual Studio se zkopírují do umístění v nastavení výše.  Však další zdroje můžete také přidat do seznamu nebo kopírování zdrojů může být vypnuto úplně, což je výchozí nastavení pro projektu souboru pravidel.
-
-- **Zdroje ke zkopírování** Určuje, jaké zdroje jsou zkopírovány do vzdáleného počítače.  Ve výchozím nastavení  **\@(SourcesToCopyRemotely)** ve výchozím nastavení všechny soubory zdrojového kódu v projektu, ale neobsahuje žádné soubory prostředků nebo prostředek, jako jsou obrázky.
+- **Zdroje ke zkopírování** Určuje, jaké zdroje jsou zkopírovány do vzdáleného počítače. Ve výchozím nastavení  **\@(SourcesToCopyRemotely)** ve výchozím nastavení všechny soubory zdrojového kódu v projektu, ale neobsahuje žádné soubory prostředků nebo prostředek, jako jsou obrázky.
 
 - **Kopírovat zdroje** lze zapnout a vypnout můžete povolit nebo zakázat kopírování zdrojových souborů do vzdáleného počítače.
 
-- **Další zdroje ke zkopírování** vám umožní přidávat další zdrojové soubory, které budou zkopírovány do vzdáleného systému.  Středníkem oddělený seznam můžete zadat, nebo můžete použít **: =** syntaxe pro určení názvu místních a vzdálených používat:
+- **Další zdroje ke zkopírování** vám umožní přidávat další zdrojové soubory, které budou zkopírovány do vzdáleného systému. Středníkem oddělený seznam můžete zadat, nebo můžete použít **: =** syntaxe pro určení názvu místních a vzdálených používat:
 
 `C:\Projects\ConsoleApplication1\MyFile.cpp:=~/projects/ConsoleApplication1/ADifferentName.cpp;C:\Projects\ConsoleApplication1\MyFile2.cpp:=~/projects/ConsoleApplication1/ADifferentName2.cpp;`
 
 ## <a name="build-events"></a>Události sestavení
 
-Protože všechny kompilace se děje ve vzdáleném počítači, několik dalších události sestavení se přidaly do části události sestavení ve vlastnostech projektu.  Jedná se o **Vzdálená událost před sestavením**, **Vzdálená událost před propojením**, a **Vzdálená událost po sestavení**a dojde na vzdáleném počítači před nebo po jednotlivých krocích proces.
+Protože všechny kompilace probíhá na vzdáleném počítači (nebo WSL), několik dalších události sestavení se přidaly do části události sestavení ve vlastnostech projektu. Jedná se o **Vzdálená událost před sestavením**, **Vzdálená událost před propojením**, a **Vzdálená událost po sestavení**a dojde na vzdáleném počítači před nebo po jednotlivých krocích proces.
 
 ![Události sestavení](media/settings_buildevents.png)
 
-## <a name="remote_intellisense"></a> Technologie IntelliSense pro vzdálených hlaviček (Visual Studio 2017 verze 15.7 nebo novější)
+## <a name="remote_intellisense"></a> Technologie IntelliSense pro záhlaví ve vzdálených systémech
+
+::: moniker range="vs-2019"
+
+Tato část se nevztahuje při cílení na WSL.
+
+::: moniker-end
 
 Při přidání nového připojení v **Správce připojení**, sada Visual Studio automaticky zjistí adresáře vložených souborů pro kompilátor ve vzdáleném systému. Visual Studio pak zips a zkopíruje soubory do adresáře na místním počítači Windows. Potom při každém použití připojení v sadě Visual Studio nebo CMake projektu, se záhlaví v těchto adresářích používají k zajištění technologie IntelliSense.
 
@@ -83,9 +108,23 @@ Tato funkce závisí na počítači s Linuxem s zip nainstalované. Zip můžete
 apt install zip
 ```
 
-Ke správě vaší mezipaměti hlaviček, přejděte na **nástroje > Možnosti, různé platformy > Správce připojení > vzdáleného správce IntelliSense záhlaví**. Aktualizace hlaviček mezipaměti po provedení změny na počítač s Linuxem, vyberte vzdáleného připojení a pak vyberte **aktualizovat**. Vyberte **odstranit** odebrat záhlaví bez odstranění samotného připojení. Vyberte **prozkoumat** otevření místní adresáře v **Průzkumníka souborů**. Tato složka považovat jen pro čtení. Chcete-li stáhnout hlavičky pro existující připojení, který byl vytvořen starší než verze 15.3, vyberte připojit a pak vyberte **Stáhnout**.
+Ke správě vaší mezipaměti hlaviček, přejděte na **nástroje > Možnosti, různé platformy > Správce připojení > vzdáleného správce IntelliSense záhlaví**. Aktualizace hlaviček mezipaměti po provedení změny na počítač s Linuxem, vyberte vzdáleného připojení a pak vyberte **aktualizovat**. Vyberte **odstranit** odebrat záhlaví bez odstranění samotného připojení. Vyberte **prozkoumat** otevření místní adresáře v **Průzkumníka souborů**. Tato složka považovat jen pro čtení. Chcete-li stahovat hlavičky pro existující připojení, který byl vytvořen před Visual Studio 2017 verze 15.3, vyberte požadované připojení a pak vyberte **Stáhnout**.
+
+::: moniker range="vs-2017"
 
 ![Vzdálené hlaviček IntelliSense](media/remote-header-intellisense.png)
+
+::: moniker-end
+
+::: moniker range="vs-2019"
+
+![Vzdálené hlaviček IntelliSense](media/connection-manager-vs2019.png)
+
+Můžete povolit protokolování, které vám pomohou vyřešit problémy:
+
+![Vzdálené přihlášení](media/remote-logging-vs2019.png)
+
+::: moniker-end
 
 ## <a name="see-also"></a>Viz také:
 

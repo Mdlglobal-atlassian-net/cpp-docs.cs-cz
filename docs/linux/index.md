@@ -2,16 +2,16 @@
 layout: LandingPage
 title: Vývoj pro Linux v dokumentaci k C++
 description: Vytvářet a ladit aplikace běžící na Linuxu.
-ms.openlocfilehash: 516b57ca976ddd89081581978c6ac5f86c64876e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f57777451e861a8ea0df1eb81fc97553c176ebec
+ms.sourcegitcommit: 8adabe177d557c74566c13145196c11cef5d10d4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62393139"
+ms.lasthandoff: 06/10/2019
+ms.locfileid: "66821653"
 ---
 # <a name="linux-development-with-c-documentation"></a>Vývoj pro Linux v dokumentaci k C++
 
-Visual Studio 2017 umožňuje vytvářet a ladit aplikace běžící na Linuxu.
+Vytvářet a ladit aplikace spuštěné na vzdálené počítače s Linuxem nebo subsystému Windows pro Linux pomocí sady Visual Studio 2017 nebo novější.
 
 <ul class="panelContent cardsF">
     <li>
@@ -64,8 +64,8 @@ Visual Studio 2017 umožňuje vytvářet a ladit aplikace běžící na Linuxu.
             <div class="cardPadding">
                 <div class="card">
                     <div class="cardText">
-                        <h3><a href="/cpp/overview/visual-cpp-in-visual-studio.md">Visual C++</a></h3>
-                        <p><a href="/cpp/overview-of-cpp-development">Integrované vývojové prostředí a nástroje pro vývoj v jazyce Visual C++</a></p>
+                        <h3><a href="/cpp/overview/visual-cpp-in-visual-studio.md">C++ v sadě Visual Studio</a></h3>
+                        <p><a href="/cpp/overview-of-cpp-development">Přehled vývoje v jazyce C++ v sadě Visual Studio</a></p>
                     </div>
                 </div>
             </div>

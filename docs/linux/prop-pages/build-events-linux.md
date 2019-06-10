@@ -1,15 +1,23 @@
 ---
 title: Vzdálený Buildovací události (Linux C++)
-ms.date: 9/26/2017
+ms.date: 06/07/2019
 ms.assetid: 165d3690-5bd8-4b0b-bc66-8b699d85a61b
-ms.openlocfilehash: 87647948b641fff7370003a59775a5680c176fb3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1e5c453da05fe65871fa7f6b0d4ca6528a96d4dd
+ms.sourcegitcommit: 8adabe177d557c74566c13145196c11cef5d10d4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62393087"
+ms.lasthandoff: 06/10/2019
+ms.locfileid: "66821475"
 ---
 # <a name="build-event-properties-linux-c"></a>Vytvořit událost vlastnosti (Linux C++)
+
+::: moniker range="vs-2015"
+
+Podpora Linuxu je k dispozici v sadě Visual Studio 2017 nebo novější.
+
+::: moniker-end
+
+::: moniker range=">=vs-2017"
 
 ## <a name="pre-build-event"></a>Událost před sestavením
 
@@ -64,3 +72,7 @@ Příkazový řádek | Určuje příkazový řádek pro nástroj události po se
 Popis | Určuje popis, který se má zobrazit nástroj události po sestavení.
 Použít v sestavení | Určuje, zda je tato událost sestavení vyloučena ze sestavení v aktuální konfiguraci.
 Další soubory ke zkopírování | Určuje další soubory ke zkopírování ze vzdáleného systému. Volitelně lze zadat seznam jako vzdálené místních mapovacích dvojice touto syntaxí: fullremotepath1: = fulllocalpath1; fullremotepath2: = fulllocalpath2, kde vzdálený soubor je možné zkopírovat do zadaného umístění na místním počítači.
+
+::: moniker-end
+
+

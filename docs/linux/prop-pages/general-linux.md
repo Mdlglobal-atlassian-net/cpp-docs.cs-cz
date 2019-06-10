@@ -1,15 +1,23 @@
 ---
 title: Obecné vlastnosti (projektu C++ Linux) | Dokumentace Microsoftu
-ms.date: 9/26/2017
+ms.date: 06/07/2019
 ms.assetid: 56c800a9-3df9-4196-87b2-81adb00e4767
-ms.openlocfilehash: bc4eb39d2d735f8f7f782d2827bf2b938c5c2457
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ce3683f11d80c253195b751b5eed364fbc04b68a
+ms.sourcegitcommit: 8adabe177d557c74566c13145196c11cef5d10d4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62393048"
+ms.lasthandoff: 06/10/2019
+ms.locfileid: "66821279"
 ---
 # <a name="general-properties-linux-c"></a>Obecné vlastnosti (Linux C++)
+
+::: moniker range="vs-2015"
+
+Podpora Linuxu je k dispozici v sadě Visual Studio 2017 nebo novější.
+
+::: moniker-end
+
+::: moniker range=">=vs-2017"
 
 Vlastnost | Popis | Možnosti
 --- | ---| ---
@@ -20,8 +28,11 @@ Cílová přípona | Určuje rozšíření souboru, který bude tento projekt ge
 Přípony odstraňované při čištění | Středníkem oddělená specifikace zástupných znaků určujících, které soubory v přechodovém adresáři odstranit při čištění nebo opětovném sestavení.
 Soubor protokolu sestavení | Určuje soubor protokolu sestavení pro zápis při protokolování sestavení je povolená.
 Sada nástrojů platformy | Určuje, nástrojů pro sestavení aktuální konfigurace. Pokud není využito set, výchozí sady nástrojů
-Vzdálený sestavující počítač | Cílový počítač nebo zařízení pro vzdálené sestavení, nasazení a ladění.
+Vzdálený sestavující počítač | Cílový počítač nebo zařízení pro vzdálené sestavení, nasazení a ladění. **Visual Studio 2019 verze 16.1** lze zadat jiný počítač pro ladění [ladění](debugging-linux.md) stránky.
 Vzdálený Buildovací kořenový adresář | Určuje cestu k adresáři na vzdáleném počítači či zařízení.
 Adresář projektu vzdáleného buildu | Určuje cestu k adresáři na vzdáleném počítači nebo zařízení pro tento projekt.
 Typ konfigurace | Určuje typ výstupu generovaného touto konfigurací. | **Dynamická knihovna (.so)** – dynamická knihovna (.so)<br>**Statická knihovna (.a)** – statická knihovna (.a)<br>**Aplikace (.out)** – aplikace (.out)<br>**Soubor pravidel** -souboru pravidel<br>
 Použití STL | Určuje, která standardní knihovna C++ použít pro tuto konfiguraci. | **Knihovna sdílené GNU Standard C++**<br>**Knihovna statické GNU Standard C++ (-statické)**<br>
+
+::: moniker-end
+

@@ -25,12 +25,12 @@ helpviewer_keywords:
 - _get_osfhandle function
 - file handles [C++], operating system
 ms.assetid: 0bdd728a-4fd8-410b-8c9f-01a121135196
-ms.openlocfilehash: beab4e4308bc7bcde287366b78671f61a89f8827
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: cc3b50e3d3f65bee83b8df83aa0adb5c8694e35a
+ms.sourcegitcommit: 8adabe177d557c74566c13145196c11cef5d10d4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62332205"
+ms.lasthandoff: 06/10/2019
+ms.locfileid: "66821658"
 ---
 # <a name="getosfhandle"></a>_get_osfhandle
 
@@ -51,11 +51,16 @@ Existující popisovač souboru.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Vrátí popisovač souboru operačního systému, pokud *fd* je platný. V opačném případě je vyvolána obslužná rutina neplatného parametru, jak je popsáno v [Parameter Validation](../../c-runtime-library/parameter-validation.md). Pokud provádění může pokračovat, tato funkce vrací **INVALID_HANDLE_VALUE** (-1) a nastaví **errno** k **EBADF**, určující neplatný popisovač souboru. Aby se zabránilo upozornění kompilátoru při použití vráceného výsledku v rutin, které očekávají popisovač souboru Win32, přetypujte ji na **zpracování** typu.
+Vrátí popisovač souboru operačního systému, pokud *fd* je platný. V opačném případě je vyvolána obslužná rutina neplatného parametru, jak je popsáno v [Parameter Validation](../../c-runtime-library/parameter-validation.md). Pokud provádění může pokračovat, vrátí **INVALID_HANDLE_VALUE** (-1). Nastaví také **errno** k **EBADF**, která neplatný popisovač souboru. Abyste zabránili upozornění při použití vráceného výsledku jako popisovač souboru Win32, přetypujte ji na **zpracování** typu.
+
+> [!NOTE]
+> Když **stdin**, **stdout**, a **stderr** nejsou přidružené k stream (například v aplikaci Windows bez okna konzoly), hodnoty popisovače souboru Tyto datové proudy jsou vráceny z [_fileno](fileno.md) jako zvláštní hodnota -2. Podobně pokud použijete hodnotu 0, 1 nebo 2 jako parametr popisovače souboru místo výsledku volání **_fileno**, **_get_osfhandle –** také vrátí hodnotu zvláštní hodnota -2, pokud není popisovač souboru přidružen pomocí služby stream a nenastaví **errno**. Ale to není platný soubor popisovač hodnota a následná volání, které se pokoušejí jeho použití jsou pravděpodobně selže.
+
+Další informace o **EBADF** a dalších chybových kódech naleznete v tématu [_doserrno, errno, _sys_errlist a _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Poznámky
 
-Zavřete soubor, jehož popisovač souboru operačního systému (OS) se získá **_get_osfhandle –**, volání [_Zavřít](close.md) na popisovač souboru *fd*. Nevolejte **CloseHandle** na návratový typ této funkce. Vlastní podkladové popisovač souboru operačního systému *fd* popisovač souboru a je uzavřen, když [_Zavřít](close.md) je volán na *fd*. Pokud popisovač souboru je vlastněna `FILE *` datový proud a následným voláním [fclose –](fclose-fcloseall.md) zabývat `FILE *` datový proud se zavře popisovače souborů a podkladové popisovač souboru operačního systému. V takovém případě Nevolejte [_Zavřít](close.md) na popisovač souboru.
+Zavřete soubor, jehož popisovač souboru operačního systému (OS) se získá **_get_osfhandle –** , volání [_Zavřít](close.md) na popisovač souboru *fd*. Nikdy neměl volat **CloseHandle** na návratový typ této funkce. Vlastní podkladové popisovač souboru operačního systému *fd* popisovač souboru a je uzavřen, když [_Zavřít](close.md) je volán na *fd*. Pokud popisovač souboru je vlastněna `FILE *` datový proud a následným voláním [fclose –](fclose-fcloseall.md) zabývat `FILE *` datový proud se zavře popisovače souborů a podkladové popisovač souboru operačního systému. V takovém případě Nevolejte [_Zavřít](close.md) na popisovač souboru.
 
 ## <a name="requirements"></a>Požadavky
 
@@ -72,3 +77,4 @@ Další informace o kompatibilitě naleznete v tématu [kompatibility](../../c-r
 [_creat, _wcreat](creat-wcreat.md)<br/>
 [_dup, _dup2](dup-dup2.md)<br/>
 [_open, _wopen](open-wopen.md)<br/>
+[\_open_osfhandle](open-osfhandle.md)

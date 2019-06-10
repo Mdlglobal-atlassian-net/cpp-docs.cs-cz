@@ -1,15 +1,23 @@
 ---
 title: Obecné vlastnosti (projektu souboru pravidel C++ pro Linux) | Dokumentace Microsoftu
-ms.date: 9/26/2017
+ms.date: 06/07/2019
 ms.assetid: 3dec6853-43f6-412b-9806-9bfad333a204
-ms.openlocfilehash: fb742d552d0b70ba5f5c406dd43bdf4cf8d1914b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a64066ad3c8d7e6ca8bfa9d3d82670ff1da4b527
+ms.sourcegitcommit: 8adabe177d557c74566c13145196c11cef5d10d4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62393022"
+ms.lasthandoff: 06/10/2019
+ms.locfileid: "66821452"
 ---
 # <a name="makefile-project-properties-linux-c"></a>Vlastnosti projektu souboru pravidel (Linux C++)
+
+::: moniker range="vs-2015"
+
+Podpora Linuxu je k dispozici v sadě Visual Studio 2017 nebo novější.
+
+::: moniker-end
+
+::: moniker range=">=vs-2017"
 
 Toto je částečný seznam vlastností dostupných v projektu souboru pravidel pro Linux. Mnoho vlastností projektu souboru pravidel jsou stejné jako vlastnosti projektu aplikace konzoly C++ Linux.
 
@@ -101,3 +109,5 @@ Sestavení příkazového řádku | Určuje příkazový řádek pro spuštění
 Opětovné sestavení všech příkazového řádku | Určuje příkazový řádek pro spuštění příkazu "Sestavit vše znovu". Provádí se ve vzdáleném systému.
 Příkazový řádek příkazu vyčistit | Určuje příkazový řádek pro spuštění příkazu "Clean". Provádí se ve vzdáleném systému.
 Výstupy | Určuje výstupy generované vzdáleným sestavením ve vzdáleném systému.
+
+::: moniker-end

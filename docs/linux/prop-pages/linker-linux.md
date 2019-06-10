@@ -1,15 +1,23 @@
 ---
 title: Linker Properties (Linux C++)
-ms.date: 9/26/2017
+ms.date: 06/07/2019
 ms.assetid: a0243a94-8164-425b-b2fe-b84ff363d546
-ms.openlocfilehash: 2e5c3446d8daeeb052937b5e172fc9fa4b6ad302
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 01e8a9e45272ff55db6bbf738b48c75f4e1f6c48
+ms.sourcegitcommit: 8adabe177d557c74566c13145196c11cef5d10d4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62393035"
+ms.lasthandoff: 06/10/2019
+ms.locfileid: "66821290"
 ---
 # <a name="linker-properties-linux-c"></a>Linker Properties (Linux C++)
+
+::: moniker range="vs-2015"
+
+Podpora Linuxu je k dispozici v sadě Visual Studio 2017 nebo novější.
+
+::: moniker-end
+
+::: moniker range=">=vs-2017"
 
 ## <a name="general"></a>Obecné
 
@@ -55,3 +63,5 @@ Označit jen pro čtení proměnné po přemístění | Tato možnost označí p
 Povolit okamžité vázání funkcí | Tato možnost označí objekt pro okamžité vázání funkcí.
 Nevyžadují žádná spustitelný zásobník | Tato možnost určí, že výstup nevyžaduje spustitelný zásobník.
 Celý archiv | Celý archiv používá veškerý kód ze zdrojů a dalších závislostí.
+
+::: moniker-end

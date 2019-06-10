@@ -4,12 +4,12 @@ ms.custom: how-to
 ms.date: 05/22/2019
 ms.topic: conceptual
 ms.assetid: 7d6ebb73-fa0d-4b0b-a528-bf05de96518e
-ms.openlocfilehash: 4e7d63840f60c00f97b02825965cc247cddc38fd
-ms.sourcegitcommit: bde3279f70432f819018df74923a8bb895636f81
+ms.openlocfilehash: ac6db74122383ef8adb0f208860a6f6fba02dcc7
+ms.sourcegitcommit: 8adabe177d557c74566c13145196c11cef5d10d4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66174812"
+ms.lasthandoff: 06/10/2019
+ms.locfileid: "66821692"
 ---
 # <a name="how-to-create-and-use-sharedptr-instances"></a>Postupy: Vytvoření a používání instancí ukazatelů shared_ptr
 
@@ -108,7 +108,7 @@ Instanci typu `shared_ptr` lze předat jiné funkci následujícími způsoby:
 
 - Pokud máte k udělení přístupu k pomocné funkce základního ukazatele, a vědět, že pomocnou funkci se právě použijete tento ukazatel a vrátí se před vrácením volající funkce vrátí tuto funkci a nemusí sdílet vlastnictví základního ukazatele. K tomuto ukazateli má přístup jen během doby života instance typu `shared_ptr` volajícího. V takovém případě je bezpečné předat instanci typu `shared_ptr` podle odkazem nebo předat obyčejný ukazatel nebo odkaz na základní objekt. Předání tímto způsobem mírně zlepšuje výkon a může také pomoci lépe vyjádřit záměr programu.
 
-- Někdy, například pro typ `std:vector<shared_ptr<T>>`, bude pravděpodobně nutné předat každou instanci typu `shared_ptr` tělu výrazu lambda nebo objektu pojmenované funkce. Pokud výraz lambda nebo funkce ukazatel neukládá, předejte `shared_ptr` odkazem, abyste zabránili volání kopie konstruktoru pro každý prvek.
+- Někdy, například pro typ `std::vector<shared_ptr<T>>`, bude pravděpodobně nutné předat každou instanci typu `shared_ptr` tělu výrazu lambda nebo objektu pojmenované funkce. Pokud výraz lambda nebo funkce ukazatel neukládá, předejte `shared_ptr` odkazem, abyste zabránili volání kopie konstruktoru pro každý prvek.
 
 ## <a name="example-6"></a>Příklad 6
 
