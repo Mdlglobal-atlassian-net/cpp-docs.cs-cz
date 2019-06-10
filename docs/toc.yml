@@ -610,7 +610,7 @@
                       href: build/reference/gl-whole-program-optimization.md
                     - name: /Gm (povolení minimálního opětovného sestavení)
                       href: build/reference/gm-enable-minimal-rebuild.md
-                    - name: /GR (povolení informací o typu za běhu)
+                    - name: /GR (Povolit informace běhového typu)
                       href: build/reference/gr-enable-run-time-type-information.md
                     - name: /GS (kontrola zabezpečení vyrovnávací paměti)
                       href: build/reference/gs-buffer-security-check.md
@@ -663,7 +663,7 @@
                           href: build/reference/o1-o2-minimize-size-maximize-speed.md
                         - name: /Ob (rozbalení vložené funkce)
                           href: build/reference/ob-inline-function-expansion.md
-                        - name: /Od (zakázání (ladění))
+                        - name: /Od (Zakázat (ladění))
                           href: build/reference/od-disable-debug.md
                         - name: /Og (globální optimalizace)
                           href: build/reference/og-global-optimizations.md
@@ -688,7 +688,7 @@
                           href: build/reference/q-options-low-level-operations.md
                         - name: /Qfast_transcendentals (vynucení rychlých transcendentních objektů)
                           href: build/reference/qfast-transcendentals-force-fast-transcendentals.md
-                        - name: /QIfist (potlačení _ftol)
+                        - name: /QIfist (Potlačit _ftol)
                           href: build/reference/qifist-suppress-ftol.md
                         - name: /Qimprecise_fwaits (odebrání příkazů fwaits z bloků Try)
                           href: build/reference/qimprecise-fwaits-remove-fwaits-inside-try-blocks.md
@@ -1531,14 +1531,20 @@
               href: build/reference/dot-xml-file-processing.md
             - name: Oddělovače pro značky dokumentace C++
               href: build/reference/delimiters-for-visual-cpp-documentation-tags.md
-- name: Zápis a refaktorování kódu
+- name: Čtení a zápis kódu
   expanded: false
   items:
-    - name: Zápis a refaktorování kódu
+    - name: Čtení a zápis kódu
       expanded: false
       items:
-        - name: Psaní a refaktoring kódu
+        - name: Čtení a pochopení kódu C++
+          href: ide/read-and-understand-code-cpp.md
+        - name: Úpravy a refaktorování kódu C++
           href: ide/writing-and-refactoring-code-cpp.md
+        - name: Navigace v kódu C++
+          href: ide/navigate-code-cpp.md
+        - name: Spolupráce přes Live Share pro C++
+          href: ide/live-share-cpp.md
         - name: Změna signatury
           href: ide/refactoring/change-signature.md
         - name: Převod na nezpracovaný řetězcový literál
@@ -1597,8 +1603,6 @@
           href: ide/implementing-a-connection-point-visual-cpp.md
         - name: Implementace rozhraní
           href: ide/implementing-an-interface-visual-cpp.md
-        - name: Navigace strukturou třídy
-          href: ide/navigating-the-class-structure-visual-cpp.md
         - name: Přepsání virtuální funkce
           href: ide/overriding-a-virtual-function-visual-cpp.md
 - name: Vývoj desktopových aplikací pro Windows
@@ -2845,7 +2849,7 @@
           href: dotnet/standard-conversions-and-implicit-boxing.md
 - name: Cloudové a webové programování
   href: cloud/cloud-and-web-programming-in-visual-cpp.md
-- name: Portování a upgrade kódu C++
+- name: Přenos a upgrade kódu C++
   expanded: false
   items:
     - name: Průvodce portováním a upgradováním Visual C++
@@ -6005,7 +6009,7 @@
               href: extensions/compiler-support-for-type-traits-cpp-component-extensions.md
             - name: Kontextově závislá klíčová slova
               href: extensions/context-sensitive-keywords-cpp-component-extensions.md
-            - name: delegate
+            - name: delegát
               href: extensions/delegate-cpp-component-extensions.md
             - name: enum class
               href: extensions/enum-class-cpp-component-extensions.md
@@ -6484,7 +6488,7 @@
                       href: c-runtime-library/text-and-binary-mode-file-i-o.md
                     - name: I/O streamu kódování Unicode v textovém a binárním režimu
                       href: c-runtime-library/unicode-stream-i-o-in-text-and-binary-modes.md
-                    - name: I/O streamu
+                    - name: I/O proudu
                       href: c-runtime-library/stream-i-o.md
                     - name: I/O nízké úrovně
                       href: c-runtime-library/low-level-i-o.md
