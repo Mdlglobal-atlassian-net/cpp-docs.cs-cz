@@ -31,7 +31,7 @@ ms.locfileid: "62157732"
 
 *init-declarator*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*Deklarátor*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*deklarátor***=***inicializátor*  / \* pro skalární inicializace \*/
+&nbsp;&nbsp;&nbsp;&nbsp;*deklarátor* **=** *inicializátor*  / \* pro skalární inicializace \*/
 
 *storage-class-specifier*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**auto**<br/>
@@ -39,17 +39,17 @@ ms.locfileid: "62157732"
 &nbsp;&nbsp;&nbsp;&nbsp;**Statická**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**extern**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**Definice TypeDef**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**__declspec (** *extended-decl-modifier-seq* **)**  / \* specifické pro Microsoft \*/
+&nbsp;&nbsp;&nbsp;&nbsp; **__declspec (** *extended-decl-modifier-seq* **)**  / \* specifické pro Microsoft \*/
 
 *Specifikátor typu*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**Typ void**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**Char**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**short**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**int**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**__int8**  / \* specifické pro Microsoft \*/<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**__int16**  / \* specifické pro Microsoft \*/<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**__int32**  / \* specifické pro Microsoft \*/<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**__int64**  / \* specifické pro Microsoft \*/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp; **__int8**  / \* specifické pro Microsoft \*/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp; **__int16**  / \* specifické pro Microsoft \*/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp; **__int32**  / \* specifické pro Microsoft \*/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp; **__int64**  / \* specifické pro Microsoft \*/<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**Long**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**plovoucí desetinnou čárkou**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**Double**<br/>
@@ -68,7 +68,7 @@ ms.locfileid: "62157732"
 
 *direct-declarator*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*identifikátor*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**(** *deklarátor* **)**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp; **(** *deklarátor* **)**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*přímé declarator* **[** *konstantní výraz*<sub>optimalizované</sub> **]**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*přímé declarator* **(** *seznam parametrů typu* **)**  / \* deklarátor nový styl \*/<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*přímé declarator* **(** *seznam identifikátorů*<sub>optimalizované</sub> **)**  / \* Obsolete – vizuální styl deklarátor \*/
@@ -109,7 +109,7 @@ ms.locfileid: "62157732"
 &nbsp;&nbsp;&nbsp;&nbsp;*Struktura nebo sjednocení* *identifikátor*
 
 *struct-or-union*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**– Struktura**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp; **– Struktura**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**sjednocení**
 
 *struct-declaration-list*:<br/>
@@ -120,8 +120,8 @@ ms.locfileid: "62157732"
 &nbsp;&nbsp;&nbsp;&nbsp;*specifikátor qualifier-list* *struct-declarator-list* **;**
 
 *specifier-qualifier-list*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*Specifikátor typu* *specifikátor seznam kvalifikátorů-*<sub>optimalizované</sub><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*Kvalifikátor typu* *specifikátor seznam kvalifikátorů-*<sub>optimalizované</sub>
+&nbsp;&nbsp;&nbsp;&nbsp;*Specifikátor typu* *specifikátor seznam kvalifikátorů-* <sub>optimalizované</sub><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*Kvalifikátor typu* *specifikátor seznam kvalifikátorů-* <sub>optimalizované</sub>
 
 *struct-declarator-list*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*Struktura declarator* *struct-declarator-list* **,** *deklarátor – struktura*
@@ -143,14 +143,14 @@ ms.locfileid: "62157732"
 &nbsp;&nbsp;&nbsp;&nbsp;*pointer*<sub>opt</sub> *direct-abstract-declarator*
 
 *direct-abstract-declarator*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**(** *abstraktní deklarátor* **)**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp; **(** *abstraktní deklarátor* **)**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*direct-abstract-declarator*<sub>opt</sub> **[** *constant-expression*<sub>opt</sub> **]**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*direct-abstract-declarator*<sub>opt</sub> **(** *parameter-type-list*<sub>opt</sub> **)**
 
 *Inicializátor*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*assignment-expression*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**{** *seznam inicializátorů* **}**  / \* pro inicializace agregace \*/<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**{** *seznam inicializátorů* **,}**
+&nbsp;&nbsp;&nbsp;&nbsp; **{** *seznam inicializátorů* **}**  / \* pro inicializace agregace \*/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp; **{** *seznam inicializátorů* **,}**
 
 *seznam inicializátorů*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*Inicializátor*<br/>

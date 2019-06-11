@@ -15,18 +15,18 @@ ms.locfileid: "62157815"
 &nbsp;&nbsp;&nbsp;&nbsp;*identifikátor*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*Konstanty*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*řetězcový literál*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**(***výraz***)**
+&nbsp;&nbsp;&nbsp;&nbsp; **(** *výraz* **)**
 
 *výraz*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*assignment-expression*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*výraz***,***výrazu přiřazení*
+&nbsp;&nbsp;&nbsp;&nbsp;*výraz* **,** *výrazu přiřazení*
 
 *constant-expression*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*conditional-expression*
 
 *conditional-expression*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*logický výraz OR*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*logický výraz OR***?**  *výraz* **:** *podmíněného výrazu*
+&nbsp;&nbsp;&nbsp;&nbsp;*logický výraz OR* **?**  *výraz* **:** *podmíněného výrazu*
 
 *assignment-expression*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*conditional-expression*<br/>
@@ -43,29 +43,29 @@ ms.locfileid: "62157815"
 
 *argument-expression-list*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*assignment-expression*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*argument-expression-list***,***výrazu přiřazení*
+&nbsp;&nbsp;&nbsp;&nbsp;*argument-expression-list* **,** *výrazu přiřazení*
 
 *unary-expression*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*postfix-expression*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**++**  *Unární výraz*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**--**  *Unární výraz*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp; **++**  *Unární výraz*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp; **--**  *Unární výraz*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*unary-operator*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*výraz CAST*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**operátor sizeof:***unární výraz*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**sizeof (***název typu***)**
+&nbsp;&nbsp;&nbsp;&nbsp;**operátor sizeof:** *unární výraz*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**sizeof (** *název typu* **)**
 
 *Unární operátor*: jeden z<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**&** **&#42;** **+** **-** **~** **!**
+&nbsp;&nbsp;&nbsp;&nbsp; **&** **&#42;** **+** **-** **~** **!**
 
 *výraz CAST*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*Unární výraz*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**(**  *název typu*  **)**  *výrazem přetypování.*
+&nbsp;&nbsp;&nbsp;&nbsp; **(**  *název typu*  **)**  *výrazem přetypování.*
 
 *multiplicative-expression*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*výraz CAST*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*multiplikativní výraz***&#42;***výrazem přetypování.*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*multiplikativní výraz***/***výrazem přetypování.*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*multiplikativní výraz***%***výrazem přetypování.*
+&nbsp;&nbsp;&nbsp;&nbsp;*multiplikativní výraz* **&#42;** *výrazem přetypování.*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*multiplikativní výraz* **/** *výrazem přetypování.*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*multiplikativní výraz* **%** *výrazem přetypování.*
 
 *additive-expression*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*multiplikativní výraz*<br/>
@@ -75,39 +75,39 @@ ms.locfileid: "62157815"
 *shift-expression*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*additive-expression*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*shift-expression*  **\<\<**  *additive-expression*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*SHIFT-expression***>>***additive-expression*
+&nbsp;&nbsp;&nbsp;&nbsp;*SHIFT-expression* **>>** *additive-expression*
 
 *relational-expression*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*shift-expression*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*relační výraz***\<***shift-expression*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*relační výraz***>***shift-expression*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*relační výraz***\<=***shift-expression*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*relační výraz***>=***shift-expression*
+&nbsp;&nbsp;&nbsp;&nbsp;*relační výraz* **\<** *shift-expression*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*relační výraz* **>** *shift-expression*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*relační výraz* **\<=** *shift-expression*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*relační výraz* **>=** *shift-expression*
 
 *equality-expression*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*relational-expression*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*výraz rovnosti***==***relační výraz*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*výraz rovnosti***! =***relační výraz*
+&nbsp;&nbsp;&nbsp;&nbsp;*výraz rovnosti* **==** *relační výraz*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*výraz rovnosti* **! =** *relační výraz*
 
 *A výraz*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*výraz rovnosti*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*Výraz AND***&***výrazu rovnosti*
+&nbsp;&nbsp;&nbsp;&nbsp;*Výraz AND* **&** *výrazu rovnosti*
 
 *exclusive-OR-expression*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*Výraz AND*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*výraz exkluzivní OR***^***výraz AND*
+&nbsp;&nbsp;&nbsp;&nbsp;*výraz exkluzivní OR* **^** *výraz AND*
 
 *inclusive-OR-expression*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*výraz exkluzivní OR*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*Inkluzivní výraz OR***&#124;***výraz exkluzivní OR*
+&nbsp;&nbsp;&nbsp;&nbsp;*Inkluzivní výraz OR* **&#124;** *výraz exkluzivní OR*
 
 *logical-AND-expression*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*Inkluzivní nebo výraz*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*logický a výraz***&&***včetně výraz OR*
+&nbsp;&nbsp;&nbsp;&nbsp;*logický a výraz* **&&** *včetně výraz OR*
 
 *logical-OR-expression*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*logický a výraz*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*logický výraz OR***&#124;&#124;***logické a expression*
+&nbsp;&nbsp;&nbsp;&nbsp;*logický výraz OR* **&#124;&#124;** *logické a expression*
 
 ## <a name="see-also"></a>Viz také:
 
