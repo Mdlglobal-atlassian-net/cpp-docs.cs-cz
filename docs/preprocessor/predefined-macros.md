@@ -178,7 +178,7 @@ Kompilátor podporuje těchto předdefinovaných makrech určené ISO C ++ 17 st
 
 - **&#95;&#95;SOUBOR&#95; &#95;**  název aktuálního zdrojového souboru. **&#95;&#95;SOUBOR&#95; &#95;**  rozbalí na řetězcový literál znaku. Chcete-li zajistit, že se zobrazí úplnou cestu k souboru, použijte [/FC (úplná cesta ze souboru zdrojového kódu v diagnostice)](../build/reference/fc-full-path-of-source-code-file-in-diagnostics.md). Toto makro je vždy definováno.
 
-- **&#95;&#95;ŘÁDEK&#95; &#95;**  definován jako celé číslo řádku v aktuálním zdrojovém souboru. Hodnota **&#95; &#95;řádku&#95; &#95;** makra lze změnit pomocí `#line` směrnice. Toto makro je vždy definováno.
+- **&#95;&#95;ŘÁDEK&#95; &#95;**  definován jako celé číslo řádku v aktuálním zdrojovém souboru. Hodnota **&#95; &#95;řádku&#95; &#95;**  makra lze změnit pomocí `#line` směrnice. Toto makro je vždy definováno.
 
 - **&#95;&#95;STDC&#95; &#95;**  definována jako 1, jenom když se kompilují jako C a pokud [/Za](../build/reference/za-ze-disable-language-extensions.md) je zadána možnost kompilátoru. V opačném případě undefined.
 
@@ -186,7 +186,7 @@ Kompilátor podporuje těchto předdefinovaných makrech určené ISO C ++ 17 st
 
 - **&#95;&#95;STDCPP&#95;vlákna&#95; &#95;**  definováno jako 1 pouze v případě program může mít více než jedno vlákno provádění a zkompilovat jako C++. V opačném případě undefined.
 
-- **&#95;&#95;ČAS&#95; &#95;**  doby překladu jednotky předzpracovaná překladu. Čas je řetězec znaků literálu ve formátu *hh: mm:*, stejné jako čas vrácený CRT [asctime –](../c-runtime-library/reference/asctime-wasctime.md) funkce. Toto makro je vždy definováno.
+- **&#95;&#95;ČAS&#95; &#95;**  doby překladu jednotky předzpracovaná překladu. Čas je řetězec znaků literálu ve formátu *hh: mm:* , stejné jako čas vrácený CRT [asctime –](../c-runtime-library/reference/asctime-wasctime.md) funkce. Toto makro je vždy definováno.
 
 ## <a name="microsoft-specific-predefined-macros"></a>Předdefinovaná makra specifická pro společnost Microsoft
 
@@ -396,7 +396,7 @@ MSVC podporuje tyto dodatečné předdefinovaná makra.
 
    Další informace najdete v tématu [verze kompilátoru Visual C++](https://devblogs.microsoft.com/cppblog/visual-c-compiler-version/) na blogu týmu Microsoft C++.
 
-- **&#95;MSVC&#95;LANG** definován jako celočíselného literálu, který určuje standard jazyka C++, který je cílem kompilátoru. Je nastavena pouze v kódu zkompilovaném jako C++. Celočíselný literál je makro hodnota 201402L ve výchozím nastavení, nebo když [/std: c ++ 14](../build/reference/std-specify-language-standard-version.md) je zadána možnost kompilátoru. Makra je nastavena na 201703L, pokud [/std: c ++ 17](../build/reference/std-specify-language-standard-version.md) je zadána možnost kompilátoru. Je nastavena na hodnotu vyšší, Neurčeno při [/std: c ++ nejnovější](../build/reference/std-specify-language-standard-version.md) je zadána možnost. V opačném případě makro není definováno.  **&#95;MSVC&#95;LANG** – makro a [/STD (určení standardní jazykové verze)](../build/reference/std-specify-language-standard-version.md) jsou k dispozici od verze Visual Studio 2015 Update 3 – možnosti kompilátoru.
+- **&#95;MSVC&#95;LANG** definován jako celočíselného literálu, který určuje standard jazyka C++, který je cílem kompilátoru. Je nastavena pouze v kódu zkompilovaném jako C++. Celočíselný literál je makro hodnota 201402L ve výchozím nastavení, nebo když [/std: c ++ 14](../build/reference/std-specify-language-standard-version.md) je zadána možnost kompilátoru. Makra je nastavena na 201703L, pokud [/std: c ++ 17](../build/reference/std-specify-language-standard-version.md) je zadána možnost kompilátoru. Je nastavena na hodnotu vyšší, Neurčeno při [/std: c ++ nejnovější](../build/reference/std-specify-language-standard-version.md) je zadána možnost. V opačném případě makro není definováno. **&#95;MSVC&#95;LANG** – makro a [/STD (určení standardní jazykové verze)](../build/reference/std-specify-language-standard-version.md) jsou k dispozici od verze Visual Studio 2015 Update 3 – možnosti kompilátoru.
 
 - **&#95;&#95;MSVC&#95;RUNTIME&#95;KONTROLUJE** definována jako 1, pokud jeden z [/RTC](../build/reference/rtc-run-time-error-checks.md) nastavit možnosti kompilátoru. V opačném případě undefined.
 
@@ -421,7 +421,7 @@ MSVC podporuje tyto dodatečné předdefinovaná makra.
 
 - **&#95;VC&#95;NODEFAULTLIB** definována jako 1, pokud [/Zl (vynechat název výchozí knihovny)](../build/reference/zl-omit-default-library-name.md) – možnost kompilátoru je nastavena. V opačném případě undefined.
 
-- **&#95;WCHAR&#95;T&#95;definované** definována jako 1, pokud výchozí [/Zc: wchar_t](../build/reference/zc-wchar-t-wchar-t-is-native-type.md) – možnost kompilátoru je nastavena.  **&#95;WCHAR&#95;T&#95;definované** – makro je definováno, ale nemá žádnou hodnotu, pokud `/Zc:wchar_t-` – možnost kompilátoru je nastavena, a **wchar_t** je definována v hlavičkovém souboru součástí vaší projekt. V opačném případě undefined.
+- **&#95;WCHAR&#95;T&#95;definované** definována jako 1, pokud výchozí [/Zc: wchar_t](../build/reference/zc-wchar-t-wchar-t-is-native-type.md) – možnost kompilátoru je nastavena. **&#95;WCHAR&#95;T&#95;definované** – makro je definováno, ale nemá žádnou hodnotu, pokud `/Zc:wchar_t-` – možnost kompilátoru je nastavena, a **wchar_t** je definována v hlavičkovém souboru součástí vaší projekt. V opačném případě undefined.
 
 - **&#95;Win32** definováno jako 1, pokud jsou cílem kompilace ARM 32bitové, 64bitové ARM x86, nebo x 64. V opačném případě undefined.
 

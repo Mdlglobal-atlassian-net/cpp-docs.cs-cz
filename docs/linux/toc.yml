@@ -10,6 +10,8 @@
   href: create-a-new-linux-project.md
 - name: Připojení ke vzdálenému počítači s Linuxem
   href: connect-to-your-remote-linux-computer.md
+- name: Konfigurace linuxových projektů pro použití sanitizéru adres
+  href: linux-asan-configuration.md
 - name: 'Nasazení, spuštění a ladění projektu Linux'
   href: deploy-run-and-debug-your-linux-project.md
 - name: 'Kurz: Vytváření projektů v jazyce C++ pro různé platformy v sadě Visual Studio'

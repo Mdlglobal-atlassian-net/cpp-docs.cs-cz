@@ -16,14 +16,14 @@ ms.locfileid: "62179877"
 # <a name="preprocessor-grammar"></a>Gramatika preprocesoru
 
 *ovládací prvek řádku*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**#define** *identifikátor* *řetězci tokenu*<sub>optimalizované</sub><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**#define** <em>identifikátor</em>**(** *identifikátor*<sub>optimalizované</sub> **,** ... **,** *identifikátor*<sub>optimalizované</sub> **)** *řetězci tokenu*<sub>optimalizované</sub><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**#include** **"** *path-spec* **"**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**#include** **\<** *path-spec* **>**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**#line** *sekvence číslic***"** *filename* **"**<sub>optimalizované</sub><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**#undef** *identifikátor*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**#error** *řetězci tokenu*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**#pragma** *řetězci tokenu*
+&nbsp;&nbsp;&nbsp;&nbsp; **#define** *identifikátor* *řetězci tokenu*<sub>optimalizované</sub><br/>
+&nbsp;&nbsp;&nbsp;&nbsp; **#define** <em>identifikátor</em> **(** *identifikátor*<sub>optimalizované</sub> **,** ... **,** *identifikátor*<sub>optimalizované</sub> **)** *řetězci tokenu*<sub>optimalizované</sub><br/>
+&nbsp;&nbsp;&nbsp;&nbsp; **#include** **"** *path-spec* **"**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp; **#include** **\<** *path-spec* **>**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp; **#line** *sekvence číslic* **"** *filename* **"** <sub>optimalizované</sub><br/>
+&nbsp;&nbsp;&nbsp;&nbsp; **#undef** *identifikátor*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp; **#error** *řetězci tokenu*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp; **#pragma** *řetězci tokenu*
 
 *constant-expression*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**definovaný (** *identifikátor* **)**<br/>
@@ -37,25 +37,25 @@ ms.locfileid: "62179877"
 &nbsp;&nbsp;&nbsp;&nbsp;*if-line* *text*
 
 *řádek IF* :<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**#if** *konstantního výrazu.*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**#ifdef** *identifikátor*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**#ifndef** *identifikátor*
+&nbsp;&nbsp;&nbsp;&nbsp; **#if** *konstantního výrazu.*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp; **#ifdef** *identifikátor*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp; **#ifndef** *identifikátor*
 
 *části elif* :<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*elif-line* *text*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*části elif* *řádku elif* *text*
 
 *řádek elif* :<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**#elif** *konstantního výrazu.*
+&nbsp;&nbsp;&nbsp;&nbsp; **#elif** *konstantního výrazu.*
 
 *části else* :<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*else-line* *text*
 
 *řádek else* :<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**#else**
+&nbsp;&nbsp;&nbsp;&nbsp; **#else**
 
 *řádek endif* :<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**#endif**
+&nbsp;&nbsp;&nbsp;&nbsp; **#endif**
 
 *sekvence číslic* :<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*digit*<br/>
@@ -71,7 +71,7 @@ ms.locfileid: "62179877"
 &nbsp;&nbsp;&nbsp;&nbsp;*keyword*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*identifikátor*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*Konstanty*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*– Operátor*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp; *– Operátor*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*interpunkci*
 
 *Název souboru* :<br/>
@@ -84,7 +84,7 @@ ms.locfileid: "62179877"
 &nbsp;&nbsp;&nbsp;&nbsp;Libovolná sekvence textu
 
 > [!NOTE]
-> Následující neterminály jsou rozbaleny v [lexikální konvence](../cpp/lexical-conventions.md) část *referenční dokumentace jazyka C++*: *konstantní*, *konstantního výrazu.* , *identifikátor*, *– klíčové slovo*, *operátor*, a *interpunkci*.
+> Následující neterminály jsou rozbaleny v [lexikální konvence](../cpp/lexical-conventions.md) část *referenční dokumentace jazyka C++* : *konstantní*, *konstantního výrazu.* , *identifikátor*, *– klíčové slovo*, *operátor*, a *interpunkci*.
 
 ## <a name="see-also"></a>Viz také:
 
