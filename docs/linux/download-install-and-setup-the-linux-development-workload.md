@@ -1,17 +1,22 @@
 ---
 title: Nainstalujte úlohu C++ Linux v sadě Visual Studio
 description: Popisuje, jak stáhnout, nainstalovat a nastavit Linux úlohy pro C++ v sadě Visual Studio.
-ms.date: 06/07/2019
+ms.date: 06/11/2019
 ms.assetid: e11b40b2-f3a4-4f06-b788-73334d58dfd9
-ms.openlocfilehash: af4e3ec0ac21951163e92786555559cd02e8148f
-ms.sourcegitcommit: 8adabe177d557c74566c13145196c11cef5d10d4
+ms.openlocfilehash: d5c099794f781fa9e6217f3796d24d1a63fd7b53
+ms.sourcegitcommit: fde637f823494532314790602c2819f889706ff6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/10/2019
-ms.locfileid: "66821579"
+ms.lasthandoff: 06/13/2019
+ms.locfileid: "67042744"
 ---
 # <a name="download-install-and-set-up-the-linux-workload"></a>Stažení, instalace a nastavení úloh Linux
 
+::: moniker range="vs-2015"
+
+Linuxové projekty jsou podporovány v sadě Visual Studio 2017 nebo novější.
+
+::: moniker-end
 
 ::: moniker range=">=vs-2017"
 
@@ -35,7 +40,10 @@ Podpora pro [AddressSanitizer (ASan)](https://github.com/google/sanitizers/wiki/
 
 ## <a name="visual-studio-setup"></a>Instalační program sady Visual Studio
 
-1. Zadejte do vyhledávacího pole Windows "Instalační program sady Visual Studio": ![Windows vyhledávacího pole](media/visual-studio-installer-search.png)
+1. Zadejte do vyhledávacího pole Windows "Instalační program sady Visual Studio":
+
+   ![Windows vyhledávacího pole](media/visual-studio-installer-search.png)
+
 2. Vyhledejte instalační služby v rámci **aplikace** výsledky a dvojím kliknutím ho. Když se instalační program otevře, zvolte **změnit**a potom klikněte na **úlohy** kartu. Přejděte dolů k položce **další sady nástrojů** a vyberte **vývoj pro Linux v C++** pracovního vytížení.
 
    ![Visual C++ pro úlohu vývoj pro Linux](media/linuxworkload.png)
@@ -56,10 +64,10 @@ Ve Windows 10 můžete nainstalovat a cílit na vaše oblíbené distribuce Linu
 
 ## <a name="linux-setup-ubuntu-on-wsl"></a>Nastavení pro Linux: Ubuntu ve WSL
 
-Na WSL je nutné žádné vzdálené připojení. **ZIP** a **rsync** jsou požadovány pro automatickou synchronizaci hlavičky Linuxu pomocí sady Visual Studio pro podporu technologie Intellisense. Pokud požadované aplikace již nejsou k dispozici, můžete je nainstalovat následujícím způsobem:
+Pokud se zaměřujete na WSL, není nutné přidat připojení ke vzdálené nebo konfigurace SSH sestavování a ladění. **ZIP** a **rsync** jsou požadovány pro automatickou synchronizaci hlavičky Linuxu pomocí sady Visual Studio pro podporu technologie Intellisense. Pokud požadované aplikace již nejsou k dispozici, můžete je nainstalovat následujícím způsobem:
 
 ```bash
-sudo g++ gdb make rsync zip
+sudo apt-get install g++ gdb make rsync zip
 ```
 ::: moniker-end
 

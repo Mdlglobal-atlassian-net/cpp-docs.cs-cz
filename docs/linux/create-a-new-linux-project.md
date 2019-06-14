@@ -1,13 +1,13 @@
 ---
 title: Vytvoření nového projektu C++ Linux v sadě Visual Studio
-ms.date: 06/07/2019
+ms.date: 06/11/2019
 ms.assetid: 5d7c1d67-bc31-4f96-8622-2b4cf91372fd
-ms.openlocfilehash: e39e60c906901420a4809c22b4f4e71d3b621da1
-ms.sourcegitcommit: 8adabe177d557c74566c13145196c11cef5d10d4
+ms.openlocfilehash: 0377e21177b29d998fc3e66bb1863dbc127c1fbe
+ms.sourcegitcommit: fde637f823494532314790602c2819f889706ff6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/10/2019
-ms.locfileid: "66821631"
+ms.lasthandoff: 06/13/2019
+ms.locfileid: "67042710"
 ---
 # <a name="create-a-new-linux-project"></a>Vytvoření nového projektu Linux
 
@@ -19,7 +19,7 @@ Linuxové projekty jsou k dispozici v sadě Visual Studio 2017 nebo novější.
 
 Nejprve zkontrolujte, zda máte **úlohy pro vývoj pro Linux** pro nainstalovanou sadu Visual Studio. Další informace najdete v tématu [stažení, instalace a nastavení úloh Linux](download-install-and-setup-the-linux-development-workload.md).
 
-Když vytvoříte nový C++ projektu pro Linux v sadě Visual Studio, můžete vytvořit projekt sady Visual Studio nebo projekt CMake. Tento článek popisuje, jak vytvořit projekt sady Visual Studio. Informace o tom, jak vytvořit a pracovat s existující projekty CMake najdete v tématu [konfigurace projektu Linux CMake ](cmake-linux-project.md).
+Když vytvoříte nový C++ projektu pro Linux v sadě Visual Studio, můžete vytvořit projekt sady Visual Studio nebo projekt CMake. Tento článek popisuje, jak vytvořit projekt sady Visual Studio. Informace o tom, jak vytvořit a pracovat s existující projekty CMake najdete v tématu [vytvoření a konfigurace projektu Linux CMake ](cmake-linux-project.md).
 
 ## <a name="to-create-a-new-linux-project"></a>K vytvoření nového projektu Linux
 
@@ -49,6 +49,12 @@ K vytvoření nového projektu Linux v sadě Visual Studio, postupujte podle tě
    | **Konzolová aplikace (Linux)** | Projekt je určená pro libovolný počítač s Linuxem se se vzorovým kódem, který zobrazí text do konzoly |
    | **Empty Project (Linux)**       | Projekt je určená pro libovolný počítač s Linuxem se bez ukázky kódu |
    | **Projekt makefile (Linux)**    | Projekt je určená pro libovolný počítač s Linuxem se vytvořené pomocí souboru pravidel standardní sestavovacího systému |
+
+   ::: moniker range="vs-2019"
+
+   Visual Studio 2019 umožňuje vytvořit nový projekt CMake. Další informace najdete v tématu [vytvoření a konfigurace projektu Linux CMake ](cmake-linux-project.md).
+   
+   ::: moniker-end
 
 ## <a name="next-steps"></a>Další kroky
 

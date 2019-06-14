@@ -4,24 +4,24 @@ ms.date: 03/21/2019
 helpviewer_keywords:
 - Open Folder Projects in Visual Studio
 ms.assetid: abd1985e-3717-4338-9e80-869db5435175
-ms.openlocfilehash: 4f59781833a303ad2db837549eddca2f2ce291b1
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.openlocfilehash: 8856a5b1782c75c5a59dfdc93a8203627059ea12
+ms.sourcegitcommit: fde637f823494532314790602c2819f889706ff6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65220493"
+ms.lasthandoff: 06/13/2019
+ms.locfileid: "67042717"
 ---
-# <a name="open-folder-projects-for-c"></a>Otevřete složku projekty jazyka C++
+# <a name="open-folder-projects-for-c"></a>Projekty Otevřít složku pro C++
 
 V sadě Visual Studio 2017 nebo novější umožňuje funkce "Otevřít složku" Otevřít složku zdrojových souborů a okamžitě začněte programovat s podporou technologie IntelliSense, procházení, refaktoring, ladění, a tak dále. Jsou načteny žádné soubory .sln nebo .vcxproj; v případě potřeby můžete zadat vlastní úkoly a sestavujte a uvádějte parametry v souborech .json jednoduché. Obecné informace o otevřít složku najdete v tématu [vývoj kódu v sadě Visual Studio bez projektů nebo řešení](/visualstudio/ide/develop-code-in-visual-studio-without-projects-or-solutions).
 
-CMake je integrovaná v integrovaném vývojovém prostředí sady Visual Studio jako nástroje CMake pro Visual Studio, součást sady funkcí klasické pracovní plochy jazyka C++. Další informace najdete v tématu [projekty CMake v sadě Visual Studio](cmake-projects-in-visual-studio.md). Pro jiné systém sestavení můžete použít funkce Otevřít složku. Otevřít složku efektivně odděluje editor kódu, ladicí program a analyzátorů od systém sestavení a sady nástrojů kompilátoru. Můžete použít editor kódu jazyka C++ s jeho bohaté funkce IntelliSense, analyzátorů kódu a ladicí program sady Visual Studio s prakticky jakýmkoliv systémem sestavení, včetně CMake, Ninja, QMake (pro projekty Qt), gyp, SCons, Gradle, Buck, zkontrolujte a dalších. Funguje i s jeden soubor nebo dojde ke ztrátě kolekce souborů bez systému sestavení.
+CMake jsou integrovány v integrovaném vývojovém prostředí sady Visual Studio jako součást C++ úloze vývoje desktopových aplikací. Další informace najdete v tématu [projekty CMake v sadě Visual Studio](cmake-projects-in-visual-studio.md). Pro jiné systém sestavení můžete použít funkce Otevřít složku. Otevřít složku efektivně odděluje editor kódu, ladicí program a analyzátorů od systém sestavení a sady nástrojů kompilátoru. Můžete použít editor kódu jazyka C++ s jeho bohaté funkce IntelliSense, analyzátorů kódu a ladicí program sady Visual Studio s prakticky jakýmkoliv systémem sestavení, včetně CMake, Ninja, QMake (pro projekty Qt), gyp, SCons, Gradle, Buck, zkontrolujte a dalších. Funguje i s jeden soubor nebo dojde ke ztrátě kolekce souborů bez systému sestavení.
 
 Použití funkce Otevřít složku v hlavní nabídce vyberte **soubor | Otevřít | Složka** nebo stiskněte klávesu **Ctrl + Shift + Alt + O**. Průzkumník řešení okamžitě zobrazí všechny soubory ve složce. Můžete kliknout na jakýkoli soubor můžete začít s jeho úpravami. Na pozadí spustí aplikace Visual Studio indexování soubory, které chcete povolit technologii IntelliSense, navigace a funkcí refaktoringu. Úpravy, vytváření, přesunout a odstranit soubory, Visual Studio automaticky sleduje změny a průběžně aktualizuje jeho index IntelliSense. 
 
 ## <a name="qmake-projects-that-target-the-qt-framework"></a>QMake projekty, které cílí rozhraní framework Qt
 
-Nástroje CMake pro Visual Studio můžete použít k cílení Qt k sestavení projektů Qt, nebo můžete použít [rozšíření sady Visual Studio Qt](https://download.qt.io/development_releases/vsaddin/) pro Visual Studio 2015 nebo Visual Studio 2017.
+Můžete použít k sestavení projektů Qt CMake, nebo můžete použít [rozšíření sady Visual Studio Qt](https://download.qt.io/development_releases/vsaddin/) pro Visual Studio 2015 nebo Visual Studio 2017.
 
 ## <a name="gyp-cons-scons-buck-etc"></a>gyp nevýhody SCons, Buck, atd.
 

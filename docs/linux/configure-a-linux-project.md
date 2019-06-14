@@ -1,13 +1,13 @@
 ---
 title: Konfigurace projektu C++ Linux v sadě Visual Studio
-ms.date: 06/07/2019
+ms.date: 06/11/2019
 ms.assetid: 4d7c6adf-54b9-4b23-bd23-5de0c825b768
-ms.openlocfilehash: 5acd9edeef8f09f86c394c39939d8408821dd691
-ms.sourcegitcommit: 8adabe177d557c74566c13145196c11cef5d10d4
+ms.openlocfilehash: a4e20222cc0b04f496989bf2d51fc12c85f5d162
+ms.sourcegitcommit: fde637f823494532314790602c2819f889706ff6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/10/2019
-ms.locfileid: "66821564"
+ms.lasthandoff: 06/13/2019
+ms.locfileid: "67042632"
 ---
 # <a name="configure-a-linux-project"></a>Konfigurace projektu Linux
 
@@ -37,7 +37,7 @@ Chcete-li zobrazit možnosti konfigurace, vyberte **projektu > vlastnosti** nab�
 
 ![Obecná konfigurace](media/settings_general.png)
 
-Ve výchozím nastavení je spustitelný soubor (.out) vytvořené nástrojem. Vytvoří statickou nebo dynamickou knihovnu, nebo použít existující soubor pravidel, použijte **typ konfigurace** nastavení.
+Ve výchozím nastavení je sestaven spustitelný soubor (.out). Vytvoří statickou nebo dynamickou knihovnu, nebo použít existující soubor pravidel, použijte **typ konfigurace** nastavení.
 
 Další informace o nastavení na stránkách vlastností najdete v tématu [odkaz na stránku vlastností projektu Linux](prop-pages-linux.md).
 
@@ -105,7 +105,7 @@ Při přidání nového připojení v **Správce připojení**, sada Visual Stud
 Tato funkce závisí na počítači s Linuxem s zip nainstalované. Zip můžete nainstalovat pomocí tohoto příkazu apt-get:
 
 ```cmd
-apt install zip
+sudo apt install zip
 ```
 
 Ke správě vaší mezipaměti hlaviček, přejděte na **nástroje > Možnosti, různé platformy > Správce připojení > vzdáleného správce IntelliSense záhlaví**. Aktualizace hlaviček mezipaměti po provedení změny na počítač s Linuxem, vyberte vzdáleného připojení a pak vyberte **aktualizovat**. Vyberte **odstranit** odebrat záhlaví bez odstranění samotného připojení. Vyberte **prozkoumat** otevření místní adresáře v **Průzkumníka souborů**. Tato složka považovat jen pro čtení. Chcete-li stahovat hlavičky pro existující připojení, který byl vytvořen před Visual Studio 2017 verze 15.3, vyberte požadované připojení a pak vyberte **Stáhnout**.

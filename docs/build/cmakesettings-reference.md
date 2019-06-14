@@ -4,12 +4,12 @@ ms.date: 05/16/2019
 helpviewer_keywords:
 - CMake in Visual C++
 ms.assetid: 444d50df-215e-4d31-933a-b41841f186f8
-ms.openlocfilehash: 018a755aa4f3acde44fe1dbb33b07b49c8d1c223
-ms.sourcegitcommit: a10c9390413978d36b8096b684d5ed4cf1553bc8
+ms.openlocfilehash: 0dcd05833af005807d874d71e8f6a07d4e738e8c
+ms.sourcegitcommit: fde637f823494532314790602c2819f889706ff6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/17/2019
-ms.locfileid: "65837258"
+ms.lasthandoff: 06/13/2019
+ms.locfileid: "67042586"
 ---
 # <a name="cmakesettingsjson-schema-reference"></a>Referenční dokumentace schématu souboru CMakeSettings.json
 
@@ -121,7 +121,7 @@ Pokud aktivní konfigurace určuje generátoru Visual Studio, ve výchozím nast
 
 - `remoteMachineName`: Určuje název vzdáleného počítače s Linuxem, který je hostitelem CMake, sestavení a ladicí program. Pro přidání nového počítače s Linuxem použijte Connection Manager. Podporovaná makra patří `${defaultRemoteMachineName}`.
 - `remoteCopySourcesOutputVerbosity`: Určuje úroveň podrobností operace kopírování zdroje do vzdáleného počítače. Může být jedna z "" normální","Verbose"nebo"Diagnostických".
-- `remoteCopySourcesConcurrentCopies`: Určuje, kolik souběžných kopie používá během synchronizace zdroje do vzdáleného počítače.
+- `remoteCopySourcesConcurrentCopies`: Určuje, kolik souběžných kopie používá během synchronizace zdroje do vzdáleného počítače (pouze sftp).
 - `remoteCopySourcesMethod`: Určuje metodu kopírování souborů do vzdáleného počítače. Může být "rsync" nebo "sftp".
 - `remoteCMakeListsRoot`: Určuje adresář ve vzdáleném počítači, který obsahuje projekt CMake. Podporovaná makra patří `${workspaceRoot}`, `${workspaceHash}`, `${projectFile}`, `${projectDir}`, `${thisFile}`, `${thisFileDir}`, `${name}`, `${generator}`, `${env.VARIABLE}`.
 - `remoteBuildRoot`: Určuje adresář ve vzdáleném počítači, ve kterém CMake generuje skripty sestavení pro zvolený generátor. Podporovaná makra patří `${workspaceRoot}`, `${workspaceHash}`, `${projectFile}`, `${projectDir}`, `${thisFile}`, `${thisFileDir}`, `${name}`, `${generator}`, `${env.VARIABLE}`.

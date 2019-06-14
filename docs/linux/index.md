@@ -2,12 +2,12 @@
 layout: LandingPage
 title: Vývoj pro Linux v dokumentaci k C++
 description: Vytvářet a ladit aplikace běžící na Linuxu.
-ms.openlocfilehash: f57777451e861a8ea0df1eb81fc97553c176ebec
-ms.sourcegitcommit: 8adabe177d557c74566c13145196c11cef5d10d4
+ms.openlocfilehash: ac80c6ad3b0650d7da20f18b049af0242ffa5704
+ms.sourcegitcommit: fde637f823494532314790602c2819f889706ff6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/10/2019
-ms.locfileid: "66821653"
+ms.lasthandoff: 06/13/2019
+ms.locfileid: "67042731"
 ---
 # <a name="linux-development-with-c-documentation"></a>Vývoj pro Linux v dokumentaci k C++
 
@@ -34,7 +34,7 @@ Vytvářet a ladit aplikace spuštěné na vzdálené počítače s Linuxem nebo
         </a>
     </li>
     <li>
-        <a href="https://blogs.msdn.microsoft.com/vcblog/2016/03/30/visual-c-for-linux-development/">
+        <a href="https://devblogs.microsoft.com/cppblog/">
         <div class="cardSize">
             <div class="cardPadding">
                 <div class="card">
@@ -44,8 +44,8 @@ Vytvářet a ladit aplikace spuštěné na vzdálené počítače s Linuxem nebo
                         </div>
                     </div>
                     <div class="cardText">
-                        <h3>Visual C++ pro Linux Blog</h3>
-                        <p>Stálý přehled díky novým funkcím, přidá do prostředí Visual C++ pro Linux úlohy.</p>
+                        <h3>C++Blog týmu</h3>
+                        <p>Udržovat v aktuálním stavu na nejnovější C++ funkcí v sadě Visual Studio.</p>
                     </div>
                 </div>
             </div>
@@ -64,8 +64,7 @@ Vytvářet a ladit aplikace spuštěné na vzdálené počítače s Linuxem nebo
             <div class="cardPadding">
                 <div class="card">
                     <div class="cardText">
-                        <h3><a href="/cpp/overview/visual-cpp-in-visual-studio.md">C++ v sadě Visual Studio</a></h3>
-                        <p><a href="/cpp/overview-of-cpp-development">Přehled vývoje v jazyce C++ v sadě Visual Studio</a></p>
+                        <h3><a href="/cpp/overview/visual-cpp-in-visual-studio">C++ v sadě Visual Studio</a></h3>
                     </div>
                 </div>
             </div>
