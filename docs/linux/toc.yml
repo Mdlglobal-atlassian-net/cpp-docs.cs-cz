@@ -2,14 +2,14 @@
   href: index.md
 - name: 'Stažení, instalace a nastavení úloh pro vývoj pro Linux'
   href: download-install-and-setup-the-linux-development-workload.md
-- name: Konfigurace projektu Linux
-  href: configure-a-linux-project.md
-- name: Konfigurace projektu Linux CMake
-  href: cmake-linux-project.md
-- name: Vytvoření nového projektu Linux
-  href: create-a-new-linux-project.md
 - name: Připojení ke vzdálenému počítači s Linuxem
   href: connect-to-your-remote-linux-computer.md
+- name: Vytvoření nového projektu Linux
+  href: create-a-new-linux-project.md
+- name: Konfigurace projektu Linux
+  href: configure-a-linux-project.md
+- name: Vytvoření a konfigurace projektu Linux CMake
+  href: cmake-linux-project.md
 - name: Konfigurace linuxových projektů pro použití sanitizéru adres
   href: linux-asan-configuration.md
 - name: 'Nasazení, spuštění a ladění projektu Linux'

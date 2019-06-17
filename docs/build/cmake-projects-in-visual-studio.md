@@ -1,15 +1,15 @@
 ---
 title: Projekty CMake v sadě Visual Studio
-ms.date: 03/27/2019
+ms.date: 06/12/2019
 helpviewer_keywords:
 - CMake in Visual C++
 ms.assetid: 444d50df-215e-4d31-933a-b41841f186f8
-ms.openlocfilehash: ae686383d82453f291bbf81428748524160082f7
-ms.sourcegitcommit: 18d3b1e9cdb4fc3a76f7a650c31994bdbd2bde64
+ms.openlocfilehash: f2bafb75aae2eabb4e8f289435ddaeb61e6aabf4
+ms.sourcegitcommit: fde637f823494532314790602c2819f889706ff6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/29/2019
-ms.locfileid: "64877183"
+ms.lasthandoff: 06/13/2019
+ms.locfileid: "67042651"
 ---
 # <a name="cmake-projects-in-visual-studio"></a>Projekty CMake v sadě Visual Studio
 
@@ -20,13 +20,13 @@ CMake je nástroj pro různé platformy, open source definovat procesy sestaven�
 
 ::: moniker range="vs-2019"
 
-Visual Studio 2019 zavádí **editor nastavení CMake** a další vylepšení v sadě Visual Studio 2017. **Nástroje Visual C++ pro CMake** komponenta používá **otevřít složku** funkce umožňuje rozhraní IDE využívat soubory projektu CMake (například soubor CMakeLists.txt) přímo pro účely technologie IntelliSense a procházení. Generátory Ninja a sady Visual Studio jsou podporovány. Pokud používáte Visual Studio generátor, dočasný projekt souboru se vygeneruje a předat msbuild.exe, ale je nikdy načtena pro IntelliSense nebo prohlížením účely. Můžete také importovat existující mezipaměť CMake. 
+Visual Studio 2019 zavádí **editor nastavení CMake** a další vylepšení v sadě Visual Studio 2017. **C++ Nástroje CMake pro Windows** komponenta používá **otevřít složku** funkce umožňuje rozhraní IDE využívat soubory projektu CMake (například soubor CMakeLists.txt) přímo pro účely technologie IntelliSense a procházení. Generátory Ninja a sady Visual Studio jsou podporovány. Pokud používáte Visual Studio generátor, dočasný projekt souboru se vygeneruje a předat msbuild.exe, ale je nikdy načtena pro IntelliSense nebo prohlížením účely. Můžete také importovat existující mezipaměť CMake. 
 
 ## <a name="installation"></a>Instalace
 
-**Nástroje Visual C++ pro CMake** je ve výchozím nastavení nainstalován jako součást **vývoj desktopových aplikací pomocí C++** pracovního vytížení a jako součást **vývoj pro Linux v C++** pracovního vytížení. Zobrazit [projekty CMake Cross-platform](../linux/cmake-linux-project.md) Další informace.
+**C++Nástroje CMake pro Windows** je ve výchozím nastavení nainstalován jako součást **vývoj desktopových aplikací pomocí C++**  pracovního vytížení a jako součást **vývoj pro Linux v C++**  pracovního vytížení. Zobrazit [projekty CMake Cross-platform](../linux/cmake-linux-project.md) Další informace.
 
-![Komponenta CMake v C++ Desktop](media/cmake-install.png)
+![Komponenta CMake v C++ Desktop](media/cmake-install-2019.png)
 
 Další informace najdete v tématu [, nainstalujte úlohu C++ Linux v sadě Visual Studio](../linux/download-install-and-setup-the-linux-development-workload.md).
 
