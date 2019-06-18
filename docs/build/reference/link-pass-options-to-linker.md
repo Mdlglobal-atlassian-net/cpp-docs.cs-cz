@@ -11,12 +11,12 @@ helpviewer_keywords:
 - -link compiler option [C++]
 - cl.exe compiler [C++], passing options to linker
 ms.assetid: 16902a94-c094-4328-841f-3ac94ca04848
-ms.openlocfilehash: ef81a6617df811660506c08434f3b65e29155794
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 37743e855c933b6236b5e7a837db257f332a3037
+ms.sourcegitcommit: bbaf65f8ed1af12828b38f8eacd24f934ac0e538
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62290676"
+ms.lasthandoff: 06/17/2019
+ms.locfileid: "67155783"
 ---
 # <a name="link-pass-options-to-linker"></a>/link (předání možností linkeru)
 
@@ -33,7 +33,7 @@ Jedna nebo více možností linkeru předá linkeru.
 
 ## <a name="remarks"></a>Poznámky
 
-**/Link** a jeho možnosti linkeru musí vyskytovat za všechny názvy souborů a možností CL. Mezera mezi vyžádáním **/link** a `linkeroptions`. Další informace najdete v tématu [MSVC linkeru odkaz](linking.md).
+**/Link** a jeho možnosti linkeru musí vyskytovat za všechny názvy souborů a možností CL. Mezera mezi vyžádáním **/link** a možnosti linkeru. Další informace najdete v tématu [MSVC linkeru odkaz](linking.md).
 
 ## <a name="example"></a>Příklad
 
