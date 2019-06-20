@@ -1,14 +1,14 @@
 ---
 title: Připojení k cílovému systému Linux v sadě Visual Studio
 description: Jak se připojit na vzdálený počítač s Linuxem nebo WSL v rámci sady Visual Studio C++ projektu.
-ms.date: 06/11/2019
+ms.date: 06/19/2019
 ms.assetid: 5eeaa683-4e63-4c46-99ef-2d5f294040d4
-ms.openlocfilehash: 4003a7387981b60d22f0344463d1729974d437a7
-ms.sourcegitcommit: fde637f823494532314790602c2819f889706ff6
+ms.openlocfilehash: 7fa09c49df3da39084edb6735a7a2ccc724c34d3
+ms.sourcegitcommit: 3ae8025df7fd50f5f56a0a2b5396533218bcc7dc
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "67042688"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67285259"
 ---
 # <a name="connect-to-your-target-linux-system-in-visual-studio"></a>Připojení k cílovému systému Linux v sadě Visual Studio
 
@@ -20,11 +20,11 @@ Podpora Linuxu je k dispozici v sadě Visual Studio 2017 nebo novější.
 
 ::: moniker range=">=vs-2017"
 
-Možné konfigurace projektu Linux k cíli vzdáleném počítači nebo subsystému Windows pro Linux (WSL).
+Můžete nakonfigurovat projekt systému Linux, který cílí na vzdáleném počítači nebo subsystému Windows pro Linux (WSL). Vzdálené počítače a WSL v sadě Visual Studio 2017 musíte nastavit připojení. 
 
 ## <a name="connect-to-a-remote-linux-computer"></a>Připojení ke vzdálenému počítači s Linuxem
 
-Při sestavování C++ projektu Linux pro vzdálený systém Linux (virtuální nebo fyzický počítač), Linux, se zkopíruje do vzdálenému počítači s Linuxem a potom zkompiluje kód podle nastavení sady Visual Studio. (V sadě Visual Studio 2017, použijte tyto pokyny pro připojení k WSL také. Použít **localhost** pro **název hostitele**.)
+Při sestavování C++ projektu Linux pro vzdálený systém Linux (virtuální nebo fyzický počítač), Linux, se zkopíruje do vzdálenému počítači s Linuxem a potom zkompiluje kód podle nastavení sady Visual Studio.
 
 Nastavení tohoto vzdáleného připojení:
 
@@ -48,13 +48,25 @@ Nastavení tohoto vzdáleného připojení:
    | **Souboru s privátním klíčem**    | Soubor privátního klíče vytvořené pro ssh připojení
    | **Přístupové heslo**          | Heslo s privátním klíčem výše vybraného
 
+   Můžete buď heslo nebo klíč souborové služby a heslo pro ověření. Pro většinu scénářů vývoje stačí ověřování pomocí hesla. Pokud chcete použít soubor veřejného a privátního klíče, můžete vytvořit nový nebo [znovu použít existující](https://security.stackexchange.com/questions/10203/reusing-private-public-keys). Momentálně se podporuje jenom klíče RSA a DSA jsou podporovány. 
+   
+   Pomocí následujících kroků můžete vytvořit soubor privátního klíče RSA:
+
+    1. Na počítači s Windows, vytvořte ssh dvojice klíčů s `ssh-keygen -t rsa`. Tím se vytvoří veřejný klíč a privátní klíč. Ve výchozím nastavení se umístí klíče `C:\Users\%USERNAME%\.ssh` s názvy `id_rsa.pub` a `id_rsa`.
+
+    1. Z Windows, zkopírujte veřejný klíč pro počítač s Linuxem: `scp -p C:\Users\%USERNAME%\.ssh\id_rsa.pub user@hostname`.
+
+    1. V systému Linux přidat do seznamu autorizovaných klíčů klíč (a ujistěte se, že soubor má správná oprávnění): `cat ~/id_rsa.pub >> ~/.ssh/authorized_keys; chmod 600 ~/.ssh/authorized_keys`
+
 1. Klikněte na tlačítko **připojit** tlačítko pokusu o připojení ke vzdálenému počítači. 
 
    Pokud se připojování povede, Visual Studio se začne konfigurace používat vzdálených hlaviček IntelliSense. Další informace najdete v tématu [technologie IntelliSense pro záhlaví ve vzdálených systémech](configure-a-linux-project.md#remote_intellisense).
 
-   Pokud se nepovede, vstupní pole, které je potřeba změnit bude označeno červeně.
+   Pokud se nepovede, jsou uvedeny polí položky, které je potřeba změnit červeně.
 
    ![Chyba Správce připojení](media/settings_connectionmanagererror.png)
+
+   Pokud používáte soubory klíče pro ověřování, ujistěte se, že je server SSH cílovém počítači spuštěny a nakonfigurovány správně.
 
    ::: moniker-end
 
@@ -64,11 +76,21 @@ Nastavení tohoto vzdáleného připojení:
 
    ![Vzdálené přihlášení](media/remote-logging-vs2019.png)
 
-   Protokoly obsahovat připojení, všechny příkazy, odeslané do vzdáleného počítače (jejich text, ukončovací kód a doba provádění) a všechny operace zápisu ze sady Visual Studio se chcete k prostředí. Protokolování funguje pro každý projekt CMake napříč platformami nebo Linuxu založené na MSBuild projektu v sadě Visual Studio.
+   Protokoly obsahovat připojení, všechny příkazy, odeslané do vzdáleného počítače (jejich text, ukončovací kód a doba provádění) a veškerý výstup ze sady Visual Studio se chcete k prostředí. Protokolování funguje pro každý projekt CMake napříč platformami nebo Linuxu založené na MSBuild projektu v sadě Visual Studio.
 
    Můžete nakonfigurovat výstup přejděte do souboru nebo **protokolování pro různé platformy** podokně ve výstupním okně. Pro projekty založené na MSBuild Linuxu, příkazy ke vzdálenému počítači pomocí nástroje MSBuild nejsou směrovány ke **okno výstup** protože jsou emitovaný mimo proces. Místo toho se protokolují do souboru s předponou "msbuild_".
 
+   ::: moniker-end
+
 ## <a name="connect-to-wsl"></a>Připojte se k WSL
+
+::: moniker range="vs-2017"
+
+V sadě Visual Studio 2017 připojíte se k WSL pomocí stejných kroků jako připojení ke vzdálenému počítači Linux, jak je popsáno výše v tomto článku. Použití **localhost** pro **název hostitele**.
+
+::: moniker-end
+
+::: moniker range="vs-2019"
 
 V aplikaci Visual Studio 2019 verze 16.1 není nutné přidat připojení ke vzdálené nebo konfigurace SSH, pokud jsou cílem WSL. Vše, co se vyžaduje v systému Linux je gcc, gdb, ujistěte se, rsync a zip. Visual Studio vyžaduje rsync a zip pouze k extrahování hlavičkové soubory při prvním použití z vaší instance WSL do systému souborů Windows pro nástroj IntelliSense. Ve Visual Studio 2019 verze 16.1 je podpora WSL založená na Windows verze 1809. Může běžet na novější verzi Windows, ale Visual Studio ještě nevyužívá nových funkcí WSL.
 
