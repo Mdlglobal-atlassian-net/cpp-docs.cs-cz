@@ -5,10 +5,10 @@ helpviewer_keywords:
 - regular expressions [C++]
 ms.assetid: aafe202a-1d96-4b36-a270-d676dfd3c51c
 ms.openlocfilehash: 291b25959f790db328080aa74a6320775a33e981
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.sourcegitcommit: 0ad35b26e405bbde17dc0bd0141e72f78f0a38fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2019
+ms.lasthandoff: 06/20/2019
 ms.locfileid: "65220309"
 ---
 # <a name="regular-expressions-c"></a>Regulární výrazy (C++)
@@ -478,7 +478,7 @@ Pokud existuje více než jedna dílčí sekvence, která odpovídá v určitém
 |"$&"|"&"|Sekvence znaků, která odpovídá celému regulárnímu výrazu (`[match[0].first, match[0].second)`)|
 |"$$"||"$"|
 ||"\\&"|"&"|
-|"$\`" (znak dolaru následovaný závěrečnou uvozovkou) || Sekvence znaků, která předchází dílčí sekvenci odpovídající regulárnímu výrazu (`[match.prefix().first, match.prefix().second)`)|
+|"$\`" (znak dolaru následovaný závěrečnou uvozovkou)||Sekvence znaků, která předchází dílčí sekvenci odpovídající regulárnímu výrazu (`[match.prefix().first, match.prefix().second)`)|
 |„$'“ (znak dolaru následovaný počáteční uvozovkou)||Sekvence znaků, který následuje za dílčí sekvencí odpovídající regulárnímu výrazu (`[match.suffix().first, match.suffix().second)`)|
 |„$n“|„\n“|Sekvence znaků, který odpovídá skupině zachycení na pozici `n`, kde `n` je číslo mezi 0 a 9 (`[match[n].first, match[n].second)`)|
 ||"\\\n"|„\n“|
