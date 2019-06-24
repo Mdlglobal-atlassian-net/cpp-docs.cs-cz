@@ -1,25 +1,25 @@
 ---
-title: CppProperties.json schéma – referenční informace
+title: Referenční informace ke schématu CppProperties.json
 ms.date: 05/16/2019
 helpviewer_keywords:
 - CMake in Visual Studio
-ms.openlocfilehash: e80f4e8a189510a9a3e8860609d74121b7cbb0ef
-ms.sourcegitcommit: a10c9390413978d36b8096b684d5ed4cf1553bc8
+ms.openlocfilehash: 8432b72deaef99ee20147505030cbc8a9a270869
+ms.sourcegitcommit: 6cf0c67acce633b07ff31b56cebd5de3218fd733
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/17/2019
-ms.locfileid: "65837039"
+ms.lasthandoff: 06/24/2019
+ms.locfileid: "67344407"
 ---
-# <a name="cpppropertiesjson-schema-reference"></a>CppProperties.json schéma – referenční informace
+# <a name="cpppropertiesjson-schema-reference"></a>Referenční informace ke schématu CppProperties.json
 
 Otevřít složku projekty, které nepoužívají CMake můžete uložit nastavení konfigurace projektu v `CppProperties.json` souboru. (Použití projekty CMake [CMakeSettings.json](customize-cmake-settings.md) souboru.) Integrované vývojové prostředí sady Visual Studio používá `CppProperties.json` pro technologii IntelliSense a navigace v kódu. Konfigurace se skládá z dvojice název/hodnota a definuje #include cesty, přepínače kompilátoru a další parametry. 
 
 
 ## <a name="default-configurations"></a>Výchozí konfigurace
 
-Visual Studio poskytuje předdefinované konfigurace pro x86 a x64 pro ladění a vydání. Ve výchozím nastavení, váš projekt, má konfiguraci x86 ladění `CppProperties.json`. Chcete-li přidat novou konfiguraci, klikněte pravým tlačítkem na `CppProperties.json` ve **Průzkumníka řešení** a zvolte **Přidat konfiguraci**:
+Visual Studio poskytuje předdefinované konfigurace pro x86 a x64 pro ladění a vydání. Ve výchozím nastavení, váš projekt, má konfiguraci x86 ladění `CppProperties.json`. Chcete-li přidat novou konfiguraci, klikněte pravým tlačítkem na `CppProperties.json` ve **Průzkumníku řešení** a zvolte **Přidat konfiguraci**:
 
-![Otevřít složku přidat konfiguraci](media/open-folder-add-config.png "otevřít složku přidat novou konfiguraci")
+![Otevřít složku – přidat novou konfiguraci](media/open-folder-add-config.png "otevřít složku přidat novou konfiguraci")
 
 Výchozí konfigurace se tady zobrazí:
 
@@ -115,9 +115,9 @@ Konfigurace může mít některou z následujících vlastností:
 |`compilerSwitches`|jeden nebo více dalších přepínačů, které mohou mít vliv na chování technologie IntelliSense|
 |`forcedInclude`|hlavičky, které mají být automaticky zahrnuty ve všech jednotkách kompilace (/FI mapuje pro MSVC nebo – zahrnout pro clang)|
 |`undefines`|seznam maker na nedefinované (mapuje /U pro MSVC)|
-|`intelliSenseMode`|modul IntelliSense, který se má použít. Můžete zadat konkrétní varianty architektury pro MSVC a gcc, Clang:<br/><br/>- windows-msvc-x86 (default)<br/>- windows-msvc-x64<br/>- msvc-arm<br/>- windows-clang-x86<br/>- windows-clang-x64<br/>-windows-clang-arm<br/>- Linux-x64<br/>- Linux-x86<br/>-Linux-arm<br/>-gccarm|
+|`intelliSenseMode`|modul IntelliSense, který se má použít. Můžete určit varianty specifické pro architekturu pro MSVC a gcc, Clang:<br/><br/>- windows-msvc-x86 (default)<br/>- windows-msvc-x64<br/>- msvc-arm<br/>- windows-clang-x86<br/>- windows-clang-x64<br/>-windows-clang-arm<br/>- Linux-x64<br/>- Linux-x86<br/>-Linux-arm<br/>-gccarm|
 
-Poznámka: Hodnoty `msvc-x86` a `msvc-x64` podporují pouze starším verzím. Použijte prosím `windows-msvc*` variant.
+Poznámka: Hodnoty `msvc-x86` a `msvc-x64` podporují pouze starším verzím. Použití `windows-msvc-*` varianty místo.
 
 ## <a name="custom-configurations"></a>Vlastní konfigurace
 
@@ -208,7 +208,7 @@ Můžete definovat vlastní proměnné prostředí v `CppProperties.json` buď g
 ```
 ## <a name="per-configuration-environment-variables"></a>Proměnné prostředí podle konfigurace
 
-Můžete také definujte **prostředí** uvnitř konfiguraci tak, že platí pouze pro tuto konfiguraci a přepíše všechny globální proměnné se stejným názvem vlastnosti. V následujícím příkladu x64 konfigurace definuje místní **zahrnout** proměnné, která přepíše globální hodnotu:
+Můžete také definujte **prostředí** vlastnosti v konfiguraci. Platí pouze pro tuto konfiguraci a přepíše všechny globální proměnné se stejným názvem. V následujícím příkladu x64 konfigurace definuje místní **zahrnout** proměnné, která přepíše globální hodnotu:
 
 ```json
 {
@@ -266,7 +266,7 @@ Máte přístup k následující předdefinované makra v `CppProperties.json`:
 |`${projectRoot}`| Úplná cesta ke složce kde `CppProperties.json` nachází|
 |`${vsInstallDir}`| Úplná cesta ke složce, kde je nainstalována spuštěné instance sady Visual Studio|
 
-Například pokud váš projekt má zahrnout složku a také zahrnuje windows.h a dalších běžných hlaviček ze sady Windows SDK, můžete k aktualizaci vašeho `CppProperties.json` konfigurační soubor s těmito zahrnuje:
+Například pokud váš projekt má zahrnout složku a také zahrnuje windows.h a dalších běžných hlaviček ze sady Windows SDK, můžete k aktualizaci vašeho `CppProperties.json` zahrnuje konfiguračního souboru následujícím kódem:
 
 ```json
 {
@@ -294,6 +294,3 @@ Například pokud váš projekt má zahrnout složku a také zahrnuje windows.h 
 ## <a name="troubleshoot-intellisense-errors"></a>Řešení potíží technologie IntelliSense
 
 Řešení potíží s IntelliSense chyby způsobené chybějící vkládaným, otevřete **seznam chyb** a filtrovat výstup "Pouze technologie IntelliSense" a kódem chyby E1696 "nelze otevřít zdrojový soubor...".
-
-
-

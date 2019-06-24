@@ -19,19 +19,19 @@ helpviewer_keywords:
 - View Use button
 - resource editors [C++], resource symbols
 ms.assetid: 35168d31-3af6-4ecd-9362-3707d47b53f3
-ms.openlocfilehash: 8bb73c1a9e8d253492a7068c444dd7ddea8417da
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d03246d2c701961c824b55fb0cbb781ee3f65028
+ms.sourcegitcommit: 6cf0c67acce633b07ff31b56cebd5de3218fd733
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62350946"
+ms.lasthandoff: 06/24/2019
+ms.locfileid: "67344204"
 ---
 # <a name="how-to-create-symbols-c"></a>Postupy: Vytvoření symboly (C++)
 
 Když začínáte nový projekt, možná bude vhodné ke zmapování názvy symbolů, které budete potřebovat ještě před vytvořením prostředků, které budete mít přiřazenou.
 
 > [!NOTE]
-> Pokud váš projekt již neobsahuje soubor .rc, najdete [jak: Vytvoření prostředků](../windows/how-to-create-a-resource-script-file.md).
+> Pokud váš projekt již neobsahuje soubor .rc, přečtěte si téma [jak: Vytvoření prostředků](../windows/how-to-create-a-resource-script-file.md).
 
 **Symbolů prostředků** dialogové okno umožňuje přidat nový prostředek symboly, symboly, které se zobrazí, nebo přejděte do umístění ve zdrojovém kódu, pokud symbol je používán změnit.
 

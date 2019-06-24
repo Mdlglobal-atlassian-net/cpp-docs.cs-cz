@@ -14,19 +14,19 @@ helpviewer_keywords:
 - dialog boxes [C++], size
 - dialog boxes [C++], positioning
 ms.assetid: 303de801-c4f8-42e1-b622-353f6423f688
-ms.openlocfilehash: c5f026683881ba8e608bd00089879e0e2a7b4af2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 28ed6c8be262e0446b828cfa3e6e9fe2ba53672a
+ms.sourcegitcommit: 6cf0c67acce633b07ff31b56cebd5de3218fd733
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62223568"
+ms.lasthandoff: 06/24/2019
+ms.locfileid: "67344210"
 ---
 # <a name="how-to-create-a-dialog-box-c"></a>Postupy: Vytvoření dialogového okna (C++)
 
 Umístění a velikosti dialogového okna C++ a umístění a velikost ovládacích prvků na ní, se měří v jednotkách dialogového okna. Hodnoty jednotlivých ovládacích prvků a dialogové okno se zobrazí v pravém dolním rohu sady Visual Studio se na stavovém řádku při výběru.
 
 > [!NOTE]
-> Pokud váš projekt již neobsahuje soubor .rc, najdete [vytváření nového souboru skriptu prostředků](../windows/how-to-create-a-resource-script-file.md).
+> Pokud váš projekt již neobsahuje soubor .rc, přečtěte si téma [vytváření nového souboru skriptu prostředků](../windows/how-to-create-a-resource-script-file.md).
 
 ## <a name="how-to"></a>Postupy
 
@@ -38,7 +38,7 @@ Umístění a velikosti dialogového okna C++ a umístění a velikost ovládac�
 
 1. V **přidat prostředek** dialogu **dialogové okno** v **typ prostředku** seznamu a pak zvolte **nový**.
 
-   Pokud symbol plus (**+**) se zobrazí vedle **dialogové okno** typ prostředku, znamená to, že pole šablon dialogového okna jsou k dispozici. Vyberte znaménko plus rozbalit seznam šablon, vyberte šablonu a zvolte **nový**.
+   Pokud symbol plus ( **+** ) se zobrazí vedle **dialogové okno** typ prostředku, znamená to, že pole šablon dialogového okna jsou k dispozici. Vyberte znaménko plus rozbalit seznam šablon, vyberte šablonu a zvolte **nový**.
 
    Otevře se dialogové okno Nový v **editoru dialogového okna**.
 

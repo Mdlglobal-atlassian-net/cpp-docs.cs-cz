@@ -1,5 +1,5 @@
 ---
-title: _InterlockedCompareExchange Intrinsic Functions
+title: Vnitřní funkce _InterlockedCompareExchange
 ms.date: 12/17/2018
 f1_keywords:
 - _InterlockedCompareExchange_HLERelease
@@ -48,18 +48,18 @@ helpviewer_keywords:
 - InterlockedCompareExchange64_rel intrinsic
 - _InterlockedCompareExchange64_rel intrinsic
 ms.assetid: c3ad79c0-a523-4930-a3a4-69a65d7d5c81
-ms.openlocfilehash: 6c0fabe7cbada87253960faca8e207bb10dd07bd
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6ac3ea1c97fe78cf2a145cd2ce62f7b3f198ab3c
+ms.sourcegitcommit: 6cf0c67acce633b07ff31b56cebd5de3218fd733
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62263734"
+ms.lasthandoff: 06/24/2019
+ms.locfileid: "67344442"
 ---
-# <a name="interlockedcompareexchange-intrinsic-functions"></a>_InterlockedCompareExchange Intrinsic Functions
+# <a name="interlockedcompareexchange-intrinsic-functions"></a>Vnitřní funkce _InterlockedCompareExchange
 
 **Microsoft Specific**
 
-Provádí propojené porovnání a záměna.
+Propojené porovnání a výměna.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -202,15 +202,15 @@ Vrácená hodnota je počáteční hodnota proměnné `Destination` ukazatele.
 
 ## <a name="remarks"></a>Poznámky
 
-`_InterlockedCompareExchange` provádí atomické porovnání `Destination` hodnotu `Comparand` hodnotu. Pokud `Destination` hodnota se rovná `Comparand` hodnotu, `Exchange` hodnota je uložená v adrese `Destination`. V opačném případě je provedena žádná operace.
+`_InterlockedCompareExchange` provádí atomické porovnání `Destination` hodnotu `Comparand` hodnotu. Pokud `Destination` hodnota se rovná `Comparand` hodnotu, `Exchange` hodnota je uložená v adrese `Destination`. V opačném případě nemá žádná operace.
 
 `_InterlockedCompareExchange` poskytuje vnitřní podporu kompilátoru pro sadu SDK Windows Win32 [InterlockedCompareExchange](/windows/desktop/api/winnt/nf-winnt-interlockedcompareexchange) funkce.
 
-Existuje několik variant na `_InterlockedCompareExchange` , která se liší v závislosti na datové typy, které zahrnují a zda specifické pro procesor získat nebo se používá sémantiku vydání.
+Existuje několik variant na `_InterlockedCompareExchange` , která se liší v závislosti na datové typy, které zahrnují a zda specifické pro procesor získat nebo se používají sémantika vydání.
 
 Zatímco `_InterlockedCompareExchange` funkce pracuje na dlouhé celé číslo hodnoty `_InterlockedCompareExchange8` pracuje hodnoty 8bitové celé číslo, `_InterlockedCompareExchange16` pracuje na krátké celé číslo hodnoty a `_InterlockedCompareExchange64` pracuje na 64bitové celé číslo hodnoty.
 
-Na platformách ARM, pomocí vnitřní objekty s `_acq` a `_rel` přípony pro získání a uvolnění sémantiky, jako například na začátku a konci kritický oddíl. Vnitřní objekty ARM pomocí `_nf` příponu ("žádná ohrazení") nefungují jako překážku paměti.
+Na platformách ARM, pomocí vnitřní objekty s `_acq` a `_rel` přípony pro získání a uvolnění sémantiky, jako například na začátku a konci kritický oddíl. Vnitřní objekty ARM pomocí `_nf` příponu ("žádná ohrazení") doby něco neuděláte jako překážku paměti.
 
 Vnitřní objekty s `_np` příponu ("žádná předběžné načtení") zabránit možný předběžné načtení operace nebude vložen kompilátorem.
 
@@ -220,7 +220,7 @@ Tyto rutiny jsou dostupné jenom jako vnitřní funkce.
 
 ## <a name="example"></a>Příklad
 
-V následujícím příkladu `_InterlockedCompareExchange` je používán k synchronizaci jednoduché vláknu nízké úrovně. Tento přístup má jeho omezení jako základ pro programování s více vlákny. se zobrazí znázorňují typické použití propojené vnitřních objektů. Nejlepších výsledků dosáhnete použijte rozhraní Windows API. Další informace o programování s více vlákny naleznete v tématu [psaní programů s více vlákny pro Win32](../parallel/writing-a-multithreaded-win32-program.md).
+V následujícím příkladu `_InterlockedCompareExchange` je používán k synchronizaci jednoduché vláknu nízké úrovně. Tento přístup má jeho omezení jako základ pro programování s více vlákny. se zobrazí znázorňují typické použití propojené vnitřních objektů. Nejlepších výsledků dosáhnete použijte rozhraní Windows API. Další informace o programování s více vlákny, naleznete v tématu [psaní programů s více vlákny pro Win32](../parallel/writing-a-multithreaded-win32-program.md).
 
 ```
 // intrinExample.cpp
@@ -248,7 +248,7 @@ using namespace std;
 //#define SKIP_LOCKING
 
 // A common way of locking using _InterlockedCompareExchange.
-// Please refer to other sources for a discussion of the many issues
+// Refer to other sources for a discussion of the many issues
 // involved. For example, this particular locking scheme performs well
 // when lock contention is low, as the while loop overhead is small and
 // locks are acquired very quickly, but degrades as many callers want
