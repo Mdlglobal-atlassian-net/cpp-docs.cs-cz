@@ -6,12 +6,12 @@ helpviewer_keywords:
 - projects [C++], building
 - project building [C++]
 ms.assetid: d459bc03-88ef-48d0-9f9a-82d17f0b6a4d
-ms.openlocfilehash: ea477e7b2f5435e049b242e68d151cc1f2d20624
-ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
+ms.openlocfilehash: d23412bcc740cbbda4227e0271842b4d44b436af
+ms.sourcegitcommit: 8bb2bea1384b290b7570b01608a86c7488ae7a02
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65708136"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67400995"
 ---
 # <a name="walkthrough-building-a-project-c"></a>Návod: Sestavení projektu (C++)
 
@@ -55,7 +55,7 @@ V tomto návodu jste záměrnou C++ Chyba syntaxe v kódu a zjistěte, jak vypad
 ## <a name="next-steps"></a>Další kroky
 
 **Předchozí:** [Návod: Práce s projekty a řešeními (C++)](../ide/walkthrough-working-with-projects-and-solutions-cpp.md)<br/>
-**Další:** [Návod: Testování projektu (C++)](../ide/walkthrough-testing-a-project-cpp.md)<br/>
+**Další:** [Návod: Testování projektu (C++)](../ide/walkthrough-testing-a-project-cpp.md)
 
 ## <a name="see-also"></a>Viz také:
 

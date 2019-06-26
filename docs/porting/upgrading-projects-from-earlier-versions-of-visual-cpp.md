@@ -6,12 +6,12 @@ helpviewer_keywords:
 - 32-bit code porting
 - upgrading Visual C++ applications, 32-bit code
 ms.assetid: 18cdacaa-4742-43db-9e4c-2d9e73d8cc84
-ms.openlocfilehash: fca4a87310f7ba0c21a6a7512dd93dce0f915f6b
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.openlocfilehash: 25cf8d451c0efb5234fba5e56b6bfe7ceb7c2c08
+ms.sourcegitcommit: 8bb2bea1384b290b7570b01608a86c7488ae7a02
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65220382"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67400818"
 ---
 # <a name="upgrading-projects-from-earlier-versions-of-visual-c"></a>Upgradování projektů z dřívějších verzí aplikace Visual C++
 
@@ -42,7 +42,7 @@ Informace o tom, jak aktualizovat cílová verze Windows najdete v tématu [úpr
 [Problémy migrace s plovoucí desetinnou čárkou](floating-point-migration-issues.md)<br/>
 [Sestavení starých projektů v sadě Visual Studio pomocí nativního cílení na více verzí](use-native-multi-targeting.md)<br/>
 [Funkce Visual C++, které jsou ve verzi Preview sady Visual Studio 2019 zastaralé](features-deprecated-in-visual-studio.md)<br/>
-[Změny systému sestavení](build-system-changes.md)<br/>
+[Změny systému sestavení](build-system-changes.md)
 
 ## <a name="see-also"></a>Viz také:
 

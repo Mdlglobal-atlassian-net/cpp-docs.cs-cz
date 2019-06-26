@@ -6,12 +6,12 @@ helpviewer_keywords:
 - command-line applications [C++], standard
 - standard applications [C++]
 ms.assetid: 48217e35-d892-46b7-93e3-f6f0b7e2da35
-ms.openlocfilehash: ed9c19dad029f8fc9495d38ab6e5c0ba8ad6d529
-ms.sourcegitcommit: 18d3b1e9cdb4fc3a76f7a650c31994bdbd2bde64
+ms.openlocfilehash: b3172dd6ed4c438bacedd6760da5ab65228396f3
+ms.sourcegitcommit: 8bb2bea1384b290b7570b01608a86c7488ae7a02
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/29/2019
-ms.locfileid: "64877420"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67400911"
 ---
 # <a name="walkthrough-creating-a-standard-c-program-c"></a>Návod: Vytvoření programu ve standardním C++ (C++)
 
@@ -36,7 +36,7 @@ Následující postup se liší v závislosti na tom, kterou verzi sady Visual S
 
 1. V hlavní nabídce zvolte **souboru** > **nový** > **projektu** otevřít **vytvořte nový projekt** dialogového okna pole.
 
-1. V horní části dialogového okna, nastavte **jazyk** k **C++**, nastavte **platformy** k **Windows**a nastavte **typprojektu** k **konzoly**. 
+1. V horní části dialogového okna, nastavte **jazyk** k **C++** , nastavte **platformy** k **Windows**a nastavte **typprojektu** k **konzoly**. 
 
 1. Filtrované seznamu typů projektů zvolte **konzolovou aplikaci** klikněte na tlačítko **Další**. Na další stránce zadejte název projektu a zadejte umístění projektu, v případě potřeby.
 
@@ -88,7 +88,7 @@ Následující postup se liší v závislosti na tom, kterou verzi sady Visual S
 
    1. V **Průzkumníka řešení**, klikněte pravým tlačítkem na **zdrojové soubory** složku, přejděte na příkaz **přidat**a potom klikněte na tlačítko **nová položka**.
 
-   1. V **kód** uzel, klikněte na tlačítko **soubor C++ (.cpp)**, zadejte název souboru a pak klikněte na tlačítko **přidat**.
+   1. V **kód** uzel, klikněte na tlačítko **soubor C++ (.cpp)** , zadejte název souboru a pak klikněte na tlačítko **přidat**.
 
    Soubor .cpp se zobrazí v **zdrojové soubory** složky **Průzkumníka řešení**, a soubor je otevřen v editoru sady Visual Studio.
 
@@ -107,9 +107,9 @@ Následující postup se liší v závislosti na tom, kterou verzi sady Visual S
 ## <a name="next-steps"></a>Další kroky
 
 **Předchozí:** [Konzolové aplikace v jazyku Visual C++](../windows/console-applications-in-visual-cpp.md)<br/>
-**Další:** [Návod: Kompilace nativního programu C++ na příkazovém řádku](../build/walkthrough-compiling-a-native-cpp-program-on-the-command-line.md)<br/>
+**Další:** [Návod: Kompilace nativního programu C++ na příkazovém řádku](../build/walkthrough-compiling-a-native-cpp-program-on-the-command-line.md)
 
 ## <a name="see-also"></a>Viz také:
 
 [Referenční dokumentace jazyka C++](../cpp/cpp-language-reference.md)<br/>
-[Standardní knihovna C++](../standard-library/cpp-standard-library-reference.md)<br/>
+[Standardní knihovna C++](../standard-library/cpp-standard-library-reference.md)

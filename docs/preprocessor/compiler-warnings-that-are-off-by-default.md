@@ -5,14 +5,14 @@ helpviewer_keywords:
 - warnings, compiler
 - cl.exe compiler, setting options
 ms.assetid: 69809cfb-a38a-4035-b154-283a61938df8
-ms.openlocfilehash: ee2b6097a62a8f1030dc631354f96ec7a33d2f11
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0f306ef11b17ac94281dc9a5fdba55a34d236eb1
+ms.sourcegitcommit: 8bb2bea1384b290b7570b01608a86c7488ae7a02
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62236553"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67400928"
 ---
-# <a name="compiler-warnings-that-are-off-by-default"></a>Upozornění kompilátoru, které jsou ve výchozím nastavení vypnuta
+# <a name="compiler-warnings-that-are-off-by-default"></a>Upozornění kompilátoru, která jsou ve výchozím nastavení vypnutá
 
 Kompilátor podporuje upozornění, která jsou vypnuté ve výchozím nastavení, protože většina vývojářů nenajdete je užitečné. V některých případech upozorňují stylistické možnost volby, ani s společné idiomy ve starším kódu. Další varování jsou týkajících se používání rozšíření společnosti Microsoft pro jazyk. V ostatních případech označují oblast, ve které programátoři často vytvářet nesprávné předpoklady, které mohou vést k neočekávaným nebo nedefinované chování. Pokud je povoleno, může některá tato upozornění se zobrazí v mnoha případech v záhlaví knihovny. Knihovny runtime jazyka C a standardní knihovny C++ jsou určeny k emitování žádná upozornění pouze na úrovni upozornění [/W4](../build/reference/compiler-option-warning-level.md).
 
@@ -159,7 +159,7 @@ Následující upozornění jsou vypnuté ve výchozím nastavení v sadě Visua
 ::: moniker range=">= vs-2019"
 <sup>16.0</sup> toto upozornění je k dispozici od verze Visual Studio. 2019 RTM.<br/>
 ::: moniker-end
-<sup>Jako trvalé</sup> toto upozornění je vypnuté, pokud [/ permissive-](../build/reference/permissive-standards-conformance.md) – možnost kompilátoru je nastavena.<br/>
+<sup>Jako trvalé</sup> toto upozornění je vypnuté, pokud [/ permissive-](../build/reference/permissive-standards-conformance.md) – možnost kompilátoru je nastavena.
 
 ## <a name="warnings-off-by-default-in-earlier-versions"></a>Upozornění vypnuto ve výchozím nastavení v dřívějších verzích
 

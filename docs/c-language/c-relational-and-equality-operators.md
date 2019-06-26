@@ -8,12 +8,12 @@ helpviewer_keywords:
 - equality operator, syntax
 - operators [C], relational
 ms.assetid: c89a3815-a65e-4e0d-8333-0e8dc7fdb30b
-ms.openlocfilehash: 78dfd9f208b4c5cf484f0ff43c5e07ce1aadec35
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: 25e9bb65492e0c4b100ecd7a800491d238b1dd38
+ms.sourcegitcommit: 8bb2bea1384b290b7570b01608a86c7488ae7a02
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64343835"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67400533"
 ---
 # <a name="c-relational-and-equality-operators"></a>Relační operátory a operátory rovnosti jazyka C
 
@@ -26,7 +26,7 @@ Binární relační operátory a operátory rovnosti porovnejte jejich prvního 
 &nbsp;&nbsp;&nbsp;&nbsp;*relační výraz* **&lt;** *shift-expression*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*relační výraz* **>** *shift-expression*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*relační výraz* **&lt; =** *shift-expression*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*relační výraz* **>=** *shift-expression*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*relační výraz* **>=** *shift-expression*
 
 *equality-expression*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*relational-expression*<br/>
@@ -48,7 +48,7 @@ V seznamu výše první čtyři operátory mají vyšší prioritu než operáto
 
 Operandy může mít typ integral, plovoucí nebo ukazatel. Typy operandů může lišit. Relační operátory provádět běžné aritmetické převody na typ s plovoucí desetinnou čárkou a celočíselné operandy. Kromě toho můžete použít následující kombinace typy operandů s relační operátory a operátory rovnosti:
 
-- Odkazy na stejný typ může být operandy všechny relační nebo operátor rovnosti. Rovnost (`==`) a nerovnost (`!=`) operátory, výsledek porovnání určuje, zda dva odkazy adres stejné místo v paměti. Pro relační operátory (**\<**, **>**, **\<**=, a **>**=), výsledek porovnání určuje relativní pozice adresy paměti dvou objektů, na. Relační operátory porovnání pouze posunů.
+- Odkazy na stejný typ může být operandy všechny relační nebo operátor rovnosti. Rovnost (`==`) a nerovnost (`!=`) operátory, výsledek porovnání určuje, zda dva odkazy adres stejné místo v paměti. Pro relační operátory ( **\<** , **>** , **\<** =, a **>** =), výsledek porovnání určuje relativní pozice adresy paměti dvou objektů, na. Relační operátory porovnání pouze posunů.
 
    Porovnání ukazatelů je určená jenom pro části stejný objekt. V případě, že ukazatele odkazují na členy pole, je ekvivalentní k porovnání odpovídající dolní indexy porovnání. Adresa na první prvek pole je "menší než" adresa poslední prvek. V případě struktury ukazatelů na členy struktury deklarované později jsou "větší než" ukazatele na členy deklarované výše ve struktuře. Ukazatelé na členy stejné sjednocení jsou si rovny.
 

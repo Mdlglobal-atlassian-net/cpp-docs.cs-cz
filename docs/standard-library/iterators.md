@@ -5,18 +5,18 @@ helpviewer_keywords:
 - iterator conventions
 - C++ Standard Library, iterator conventions
 ms.assetid: 2f746be7-b37d-4bfc-bf05-be4336ca982f
-ms.openlocfilehash: ae4193b8e6edf94ab0f8d839ac36fc1addfd8d04
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.openlocfilehash: d72cd26f2642816efae2ec826df1bd9fa02e7531
+ms.sourcegitcommit: 8bb2bea1384b290b7570b01608a86c7488ae7a02
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65220334"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67400427"
 ---
 # <a name="iterators"></a>Iterátory
 
 Iterátor je objekt, který může iterovat prvky v kontejneru standardní knihovny C++ a poskytují přístup k jednotlivým prvkům. Kontejnery standardní knihovny C++, všechny poskytnuté iterátory tak, aby algoritmů můžete ke jejich prvky standardním způsobem, aniž byste museli být obeznámeni s typu kontejneru elementů jsou uloženy v.
 
-Můžete použít iterátory explicitně pomocí členské a globální funkce, jako `begin()` a `end()` a operátory, jako například **++** a **--** přesunout vpřed nebo zpětně. Můžete také použít iterátory implicitně s rozsahem-smyčky for nebo (pro některé typy iterátoru) operátor dolního indexu  **\[]**.
+Můžete použít iterátory explicitně pomocí členské a globální funkce, jako `begin()` a `end()` a operátory, jako například **++** a **--** přesunout vpřed nebo zpětně. Můžete také použít iterátory implicitně s rozsahem-smyčky for nebo (pro některé typy iterátoru) operátor dolního indexu  **\[]** .
 
 Na začátek pořadí nebo rozsahu ve standardní knihovně jazyka C++ je první prvek. Konec pořadí nebo rozsah je vždy definována jako jedno místo za posledním prvkem. Globální funkce `begin` a `end` vrátí iterátory do zadaného kontejneru. Typické explicitní iterace smyčky přes všechny prvky v kontejneru vypadá takto:
 
@@ -49,7 +49,7 @@ Existuje pět kategorií iterátorů. V pořadí podle zvýšení výkonu katego
 
 - **Obousměrné**. A *obousměrný iterátor, který* `X` může proběhnout iterátor předání. Vám může, ale také snížení obousměrný iterátor, stejně jako v `--X`, `X--`, nebo `(V = *X--)`. Je možné přistupovat k členům elementu a porovnat obousměrných iterátorů stejným způsobem jako dopředných iterátorů.
 
-- **Náhodný přístup**. A *iterátor s náhodným přístupem* `X` může proběhnout obousměrný iterátor. S iterátor náhodného přístupu můžete použít operátor dolního indexu  **\[]** k přístupu k prvkům. Můžete použít **+**, **-**, **+=** a **-=** operátory přesunutí dopředu nebo dozadu zadaný počet prvků a vzdálenosti mezi vzájemně iterátory. Můžete porovnat s použitím obousměrných iterátorů **==**, **! =**, **\<**, **>**, **\< =**, a **>=**.
+- **Náhodný přístup**. A *iterátor s náhodným přístupem* `X` může proběhnout obousměrný iterátor. S iterátor náhodného přístupu můžete použít operátor dolního indexu  **\[]** k přístupu k prvkům. Můžete použít **+** , **-** , **+=** a **-=** operátory přesunutí dopředu nebo dozadu zadaný počet prvků a vzdálenosti mezi vzájemně iterátory. Můžete porovnat s použitím obousměrných iterátorů **==** , **! =** , **\<** , **>** , **\< =** , a **>=** .
 
 Všechny iterátory můžete přiřadit nebo zkopírován. Jsou považovány za jednoduché objekty a jsou často předané a vrácené hodnoty není odkazem. Všimněte si také, že žádná z operací výše popsaný může vyvolat výjimku při provádění na iterátor platný.
 
@@ -58,7 +58,7 @@ Hierarchie kategorií iterátoru můžeme shrnout tím, že zobrazuje tři pořa
 > výstupní iterátor<br/>
 > Dopředný iterátor, který -><br/>
 > obousměrný iterátor, který -><br/>
-> -> iterátor s náhodným přístupem<br/>
+> -> iterátor s náhodným přístupem
 
 Na šipku vpravo znamená "může být nahrazen." Libovolný algoritmus, který volá pro výstupní iterátor by měl fungovat například krásně pro dopředný iterátor, ale *není* naopak.
 
@@ -67,7 +67,7 @@ Pro přístup jen pro čtení do sekvence můžete použít některý z:
 > vstupní iterátor<br/>
 > Dopředný iterátor, který -><br/>
 > obousměrný iterátor, který -><br/>
-> -> iterátor s náhodným přístupem<br/>
+> -> iterátor s náhodným přístupem
 
 Vstupní iterátor v tomto případě je nejnižší prioritu všech kategorií.
 
@@ -75,7 +75,7 @@ Nakonec pro přístup pro čtení a zápis do pořadí, můžete použít někte
 
 > Dopředný iterátor, který<br/>
 > obousměrný iterátor, který -><br/>
-> -> iterátor s náhodným přístupem<br/>
+> -> iterátor s náhodným přístupem
 
 Ukazatelem na objekt může vždycky sloužit jako iterátor náhodného přístupu, aby mohl sloužit jako libovolnou kategorii iterátoru, pokud podporuje přístup správné čtení a zápis do sekvence, které určí.
 

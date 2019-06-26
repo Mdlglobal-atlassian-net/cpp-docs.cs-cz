@@ -20,12 +20,12 @@ helpviewer_keywords:
 - std::promise [C++], set_value
 - std::promise [C++], set_value_at_thread_exit
 - std::promise [C++], swap
-ms.openlocfilehash: 101c9939f1636d87780aa15aea9459ebb927684d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 991df549168456112afe27bed6f4991a7ccfb88e
+ms.sourcegitcommit: 8bb2bea1384b290b7570b01608a86c7488ae7a02
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62369953"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67400875"
 ---
 # <a name="promise-class"></a>promise – třída
 
@@ -42,13 +42,13 @@ class promise;
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[Promise](#promise)|Vytvoří `promise` objektu.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[get_future](#get_future)|Vrátí [budoucí](../standard-library/future-class.md) spojené s tímto příslibem.|
 |[set_exception](#set_exception)|Atomicky nastaví výsledek této snahy na označení výjimky.|
@@ -59,13 +59,13 @@ class promise;
 
 ### <a name="public-operators"></a>Veřejné operátory
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[Promise::Operator =](#op_eq)|Přiřazení sdíleného stavu tohoto objektu promise.|
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
-*Promise*<br/>
+*Promise*
 
 ## <a name="requirements"></a>Požadavky
 

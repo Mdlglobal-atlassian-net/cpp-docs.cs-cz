@@ -20,12 +20,12 @@ helpviewer_keywords:
 - __leave keyword [C++], try-finally statement
 - structured exception handling [C++], try-finally
 ms.assetid: 826e0347-ddfe-4f6e-a7bc-0398e0edc7c2
-ms.openlocfilehash: d2a1c63f686b46aad4e174c86895f6f9fc00d260
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c52921d2e9c4265d42b3e0187af1396ff8946bde
+ms.sourcegitcommit: 8bb2bea1384b290b7570b01608a86c7488ae7a02
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62404722"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67400804"
 ---
 # <a name="try-finally-statement"></a>try-finally – příkaz
 
@@ -40,12 +40,12 @@ Následující syntaxe popisuje **try-finally** – příkaz:
 > **\_\_Nakonec**<br/>
 > {<br/>
 > &nbsp;&nbsp;&nbsp;&nbsp;ukončení programu<br/>
-> }<br/>
+> }
 
 ## <a name="grammar"></a>Gramatika
 
 *try-finally-statement*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**\_\_Zkuste** *compound-statement*  **\_ \_nakonec** *compound-statement*
+&nbsp;&nbsp;&nbsp;&nbsp; **\_\_Zkuste** *compound-statement*  **\_ \_nakonec** *compound-statement*
 
 **Try-finally** příkaz je rozšířením společnosti Microsoft pro jazyky C a C++, které umožňuje cílovým aplikacím zaručit spuštění kódu čištění, když dojde k přerušení vykonání bloku kódu. Čištění se skládá z úlohy, jako jsou rušení přidělení paměti, zavírání souborů a uvolněním popisovačů souborů. **Try-finally** příkaz je užitečné hlavně pro rutiny, které mají několika místech, kde se provede kontrola pro chybu, která by mohla způsobit předčasné vrátit z rutiny.
 

@@ -17,12 +17,12 @@ helpviewer_keywords:
 - mnemonics [C++], uniqueness checking
 - Check Mnemonics command
 ms.assetid: 6d308205-3c9e-42f2-ab42-45e656940e45
-ms.openlocfilehash: c9abf46907c473d4cf6d9e945038f70aa75bfc48
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1010e4d1c11c9408ef73f4db0a449314b36059a7
+ms.sourcegitcommit: 8bb2bea1384b290b7570b01608a86c7488ae7a02
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62376715"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67400759"
 ---
 # <a name="menu-commands-c"></a>Příkazy (C++)
 
@@ -55,7 +55,7 @@ Jsou často časy, kdy má příkaz nabídky a kombinace kláves stejný příka
 
    - Po popisek nabídky zadejte řídicí sekvence pro kartu (\t), takže všechno, co jsou klávesové zkratky v nabídce vlevo.
 
-   - Zadejte název modifikační klávesa (**Ctrl**, **Alt**, nebo **Shift**) následované znakem plus (**+**) a název, písmeno, nebo symbol Další klíč.
+   - Zadejte název modifikační klávesa (**Ctrl**, **Alt**, nebo **Shift**) následované znakem plus ( **+** ) a název, písmeno, nebo symbol Další klíč.
 
    Například chcete přiřadit **Ctrl**+**O** k **otevřít** příkaz **souboru** nabídky, změnit příkazu nabídky  **Titulek** tak, aby vypadal jako následující text:
 
@@ -88,7 +88,7 @@ Win32
 
 ## <a name="see-also"></a>Viz také:
 
-[Editor nabídek](../windows/menu-editor.md)<br/>
+[Editor nabídek](../windows/menu-editor.md)
 
 <!--
 [Strings (ATL/MFC)](../atl-mfc-shared/strings-atl-mfc.md)<br/>-->

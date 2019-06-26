@@ -7,12 +7,12 @@ helpviewer_keywords:
 - projects [C++]
 - solutions [C++], about solutions
 ms.assetid: 93a3f290-e294-46e3-876e-e3084d9ae833
-ms.openlocfilehash: 6dfee695092a69252069dbfc73b6260bd65245e2
-ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
+ms.openlocfilehash: ae2830d58bb992a4ff065aa0e53085a490eb90d7
+ms.sourcegitcommit: 8bb2bea1384b290b7570b01608a86c7488ae7a02
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65708129"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67400954"
 ---
 # <a name="walkthrough-working-with-projects-and-solutions-c"></a>Návod: Práce s projekty a řešeními (C++)
 
@@ -36,7 +36,7 @@ Chcete-li vytvořit projekt, zvolte nejprve šablonu typu projektu. Pro každý 
 
 1. V hlavní nabídce zvolte **souboru** > **nový** > **projektu** otevřít **vytvořte nový projekt** dialogového okna pole.
 
-1. V horní části dialogového okna, nastavte **jazyk** k **C++**, nastavte **platformy** k **Windows**a nastavte **typprojektu** k **konzoly**. 
+1. V horní části dialogového okna, nastavte **jazyk** k **C++** , nastavte **platformy** k **Windows**a nastavte **typprojektu** k **konzoly**. 
 
 1. Filtrované seznamu typů projektů zvolte **konzolovou aplikaci** klikněte na tlačítko **Další**. Na další stránce zadejte *hru* jako název projektu.
 
@@ -56,7 +56,7 @@ Chcete-li vytvořit projekt, zvolte nejprve šablonu typu projektu. Pro každý 
 
 1. V panelu nabídky zvolte **souboru** > **nový** > **projektu**.
 
-1. V levém podokně **nový projekt** dialogového okna rozbalte **nainstalováno** a vyberte **Visual C++**, pokud není již otevřen.
+1. V levém podokně **nový projekt** dialogového okna rozbalte **nainstalováno** a vyberte **Visual C++** , pokud není již otevřen.
 
 1. V seznamu nainstalovaných šablon v prostředním podokně vyberte **Konzolová aplikace Windows**.
 
@@ -78,7 +78,7 @@ Chcete-li vytvořit projekt, zvolte nejprve šablonu typu projektu. Pro každý 
 
 1. V panelu nabídky zvolte **souboru** > **nový** > **projektu**.
 
-1. V levém podokně **nový projekt** dialogového okna rozbalte **nainstalováno** a vyberte **Visual C++**, pokud není již otevřen.
+1. V levém podokně **nový projekt** dialogového okna rozbalte **nainstalováno** a vyberte **Visual C++** , pokud není již otevřen.
 
 1. V seznamu nainstalovaných šablon v prostředním podokně vyberte **Konzolová aplikace Win32**.
 
@@ -261,7 +261,7 @@ Blahopřejeme, úspěšně jste vytvořili řešení a projekt aplikace. Další
 ## <a name="next-steps"></a>Další kroky
 
 **Předchozí:** [Použití prostředí IDE sady Visual Studio pro vývoj aplikací klasické pracovní plochy v jazyce C++](../ide/using-the-visual-studio-ide-for-cpp-desktop-development.md)<br/>
-**Další:** [Návod: Sestavení projektu (C++)](../ide/walkthrough-building-a-project-cpp.md)<br/>
+**Další:** [Návod: Sestavení projektu (C++)](../ide/walkthrough-building-a-project-cpp.md)
 
 ## <a name="see-also"></a>Viz také:
 

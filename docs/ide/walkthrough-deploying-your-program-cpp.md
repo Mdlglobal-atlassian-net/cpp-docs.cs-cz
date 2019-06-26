@@ -9,12 +9,12 @@ helpviewer_keywords:
 - projects [C++], deploying programs
 - application deployment [C++], walkthroughs
 ms.assetid: 79e6cc4e-dced-419d-aaf7-d62d1367603f
-ms.openlocfilehash: 4232edd10b71c70097002511ef4ee663e67d6598
-ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
+ms.openlocfilehash: 5cc4ead7aaef2ffa56870a374b0b73d16eb31521
+ms.sourcegitcommit: 8bb2bea1384b290b7570b01608a86c7488ae7a02
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65708131"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67400957"
 ---
 # <a name="walkthrough-deploying-your-program-c"></a>Návod: Nasazení programu (C++)
 
@@ -50,7 +50,7 @@ Kroky v této části se liší v závislosti na tom, kterou verzi sady Visual S
 
 1. V dialogovém okně vyberte **primární výstup** a klikněte na tlačítko **OK**. Nová položka s názvem **primární výstup ze hry (aktivní)** se zobrazí.
 
-1. Vyberte položku **primární výstup ze hry (aktivní)** klikněte pravým tlačítkem a zvolte **vytvořit zástupce na primární výstup ze hry (aktivní)**. Nová položka s názvem **zástupce primární výstup ze hry (aktivní)** se zobrazí.
+1. Vyberte položku **primární výstup ze hry (aktivní)** klikněte pravým tlačítkem a zvolte **vytvořit zástupce na primární výstup ze hry (aktivní)** . Nová položka s názvem **zástupce primární výstup ze hry (aktivní)** se zobrazí.
 
 1. Přejmenovat položku místní *hru*, pak přetažení položky do **Uživatelská nabídka programy** uzlu na levé straně okna.
 
@@ -92,7 +92,7 @@ Kroky v této části se liší v závislosti na tom, kterou verzi sady Visual S
 
 1. V dialogovém okně vyberte **primární výstup** a klikněte na tlačítko **OK**. Nová položka s názvem **primární výstup ze hry (aktivní)** se zobrazí.
 
-1. Vyberte položku **primární výstup ze hry (aktivní)** klikněte pravým tlačítkem a zvolte **vytvořit zástupce na primární výstup ze hry (aktivní)**. Nová položka s názvem **zástupce primární výstup ze hry (aktivní)** se zobrazí.
+1. Vyberte položku **primární výstup ze hry (aktivní)** klikněte pravým tlačítkem a zvolte **vytvořit zástupce na primární výstup ze hry (aktivní)** . Nová položka s názvem **zástupce primární výstup ze hry (aktivní)** se zobrazí.
 
 1. Přejmenovat položku místní *hru*, pak přetažení položky do **Uživatelská nabídka programy** uzlu na levé straně okna.
 
@@ -110,7 +110,7 @@ Kroky v této části se liší v závislosti na tom, kterou verzi sady Visual S
 
 ## <a name="next-steps"></a>Další kroky
 
-**Předchozí:** [Návod: Ladění projektu (C++)](walkthrough-debugging-a-project-cpp.md)<br/>
+**Předchozí:** [Návod: Ladění projektu (C++)](walkthrough-debugging-a-project-cpp.md)
 
 ## <a name="see-also"></a>Viz také:
 

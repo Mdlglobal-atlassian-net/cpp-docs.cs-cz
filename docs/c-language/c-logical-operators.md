@@ -20,17 +20,17 @@ ms.locfileid: "62326583"
 ---
 # <a name="c-logical-operators"></a>Logické operátory jazyka C
 
-Logické operátory provádí logické- a (**&&**) a logical-OR (**||**) operace.
+Logické operátory provádí logické- a ( **&&** ) a logical-OR ( **||** ) operace.
 
 ## <a name="syntax"></a>Syntaxe
 
 *logical-AND-expression*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*Inkluzivní nebo výraz*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*logický a výraz***&&***včetně výraz OR*
+&nbsp;&nbsp;&nbsp;&nbsp;*logický a výraz* **&&** *včetně výraz OR*
 
 *logical-OR-expression*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*logický a výraz*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*logický výraz OR***&#124;&#124;***logické a expression*
+&nbsp;&nbsp;&nbsp;&nbsp;*logický výraz OR* **&#124;&#124;** *logické a expression*
 
 ## <a name="remarks"></a>Poznámky
 
