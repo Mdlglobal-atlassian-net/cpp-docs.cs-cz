@@ -17,12 +17,12 @@ helpviewer_keywords:
 - Os compiler option [C++]
 - -Os compiler option [C++]
 ms.assetid: 9a340806-fa15-4308-892c-355d83cac0f2
-ms.openlocfilehash: d4e8d062685a543c428f0c86a22c17c8faf017ad
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5bbdda07eacdb003515a40a93a232c0f8626ca89
+ms.sourcegitcommit: aed09c9c05e6b031c8a9f87a8d6bbdaf253485e8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62320172"
+ms.lasthandoff: 06/27/2019
+ms.locfileid: "67412246"
 ---
 # <a name="os-ot-favor-small-code-favor-fast-code"></a>/Os, /Ot (Upřednostnit malý kód, upřednostnit rychlý kód)
 
@@ -39,7 +39,7 @@ Minimalizuje nebo maximalizuje velikost souborů exe a DLL.
 
 **/OS** (upřednostnit malý kód) minimalizuje velikost souborů exe a DLL tím, že kompilátor, aby velikost upřednostnil před rychlostí. Kompilátor může snížit mnoho konstrukcí jazyka C a C++ funkčně podobné pořadí strojového kódu. Tyto rozdíly občas nabízet kompromisy velikost a rychlost. **/Os** a **/Ot** možností vám umožňují určit předvolby pro některého z nich:
 
-**/Ot** (upřednostnit rychlý kód) maximalizuje rychlost souborů exe a DLL tím, že kompilátor, aby rychlost upřednostnil před velikostí. (Toto je výchozí.) Kompilátor může snížit mnoho konstrukcí jazyka C a C++ funkčně podobné pořadí strojového kódu. Tyto rozdíly v některých případech nabízejí kompromisy velikost a rychlost. Maximalizovat rychlost předpokládá možnost /Ot ([/O2](o1-o2-minimize-size-maximize-speed.md)) možnost. **/O2** možnost kombinuje několik možností, jak vytvořit velmi rychlý kód.
+**/Ot** (upřednostnit rychlý kód) maximalizuje rychlost souborů exe a DLL tím, že kompilátor, aby rychlost upřednostnil před velikostí. (Toto je výchozí.) Kompilátor může snížit mnoho konstrukcí jazyka C a C++ funkčně podobné pořadí strojového kódu. Tyto rozdíly v některých případech nabízejí kompromisy velikost a rychlost. **/Ot** předpokládá možnost maximalizovat rychlost ([/O2](o1-o2-minimize-size-maximize-speed.md)) možnost. **/O2** možnost kombinuje několik možností, jak vytvořit velmi rychlý kód.
 
 Pokud používáte **/Os** nebo **/Ot**, pak musíte zadat také [/og](og-global-optimizations.md) optimalizovat kód.
 
@@ -48,7 +48,7 @@ Pokud používáte **/Os** nebo **/Ot**, pak musíte zadat také [/og](og-global
 
 **x86 konkrétní**
 
-Následující příklad kódu ukazuje rozdíl mezi upřednostnit malý kód (**/Os**) možnosti a upřednostnit rychlý kód (**/Ot**) možnost:
+Následující příklad kódu ukazuje rozdíl mezi upřednostnit malý kód ( **/Os**) možnosti a upřednostnit rychlý kód ( **/Ot**) možnost:
 
 > [!NOTE]
 >  Následující text popisuje očekávaný chování při použití **/Os** nebo **/Ot**. Nicméně chování kompilátoru jednotlivých verzí může vést k jiné optimalizace pro kód uvedený níže.
@@ -65,14 +65,14 @@ int differ(int x)
 }
 ```
 
-Jak znázorňuje fragment strojového kódu níže, když DIFFER.c je zkompilován pro velikost (**/OS**), kompilátor implementuje vynásobit výrazu v příkaz return explicitně jako vícenásobně k vytvoření krátkým, ale nižší pořadí kódu:
+Jak znázorňuje fragment strojového kódu níže, když DIFFER.c je zkompilován pro velikost ( **/OS**), kompilátor implementuje vynásobit výrazu v příkaz return explicitně jako vícenásobně k vytvoření krátkým, ale nižší pořadí kódu:
 
 ```
 mov    eax, DWORD PTR _x$[ebp]
 imul   eax, 71                  ; 00000047H
 ```
 
-Alternativně, pokud je DIFFER.c zkompiluje pro vyšší rychlost (**/Ot**), kompilátor implementuje vynásobit výrazu v návratový příkaz jako řadu objektů shift a `LEA` pokyny k vytvoření rychlé, ale delší posloupnost kódu:
+Alternativně, pokud je DIFFER.c zkompiluje pro vyšší rychlost ( **/Ot**), kompilátor implementuje vynásobit výrazu v návratový příkaz jako řadu objektů shift a `LEA` pokyny k vytvoření rychlé, ale delší posloupnost kódu:
 
 ```
 mov    eax, DWORD PTR _x$[ebp]
