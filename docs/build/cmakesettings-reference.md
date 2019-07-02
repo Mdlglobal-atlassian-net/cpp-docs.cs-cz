@@ -4,16 +4,16 @@ ms.date: 05/16/2019
 helpviewer_keywords:
 - CMake in Visual C++
 ms.assetid: 444d50df-215e-4d31-933a-b41841f186f8
-ms.openlocfilehash: 0dcd05833af005807d874d71e8f6a07d4e738e8c
-ms.sourcegitcommit: fde637f823494532314790602c2819f889706ff6
+ms.openlocfilehash: cc9b9a788f17e9257bed628024e3f65dfc89fb23
+ms.sourcegitcommit: b233f05adae607f75815111006a771c432df5a9d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "67042586"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67516380"
 ---
 # <a name="cmakesettingsjson-schema-reference"></a>Referenční dokumentace schématu souboru CMakeSettings.json
 
-**Cmakesettings.json**' soubor obsahuje informace o tom, jak by měl Visual Studio pracovat s CMake pro sestavení projektu pro zadanou platformu. Soubor ukládá informace, jako jsou proměnné prostředí nebo argumenty pro cmake.exe prostředí. Můžete upravit přímo, nebo použít **editor nastavení CMake** (Visual Studio 2019 a novější). Zobrazit [nastavení v sadě Visual Studio sestavení přizpůsobit CMake](customize-cmake-settings.md) Další informace o editoru.
+**Cmakesettings.json** soubor obsahuje informace o tom, jak by měl Visual Studio pracovat s CMake pro sestavení projektu pro zadanou platformu. Soubor ukládá informace, jako jsou proměnné prostředí nebo argumenty pro cmake.exe prostředí. Můžete upravit přímo, nebo použít **editor nastavení CMake** (Visual Studio 2019 a novější). Zobrazit [nastavení v sadě Visual Studio sestavení přizpůsobit CMake](customize-cmake-settings.md) Další informace o editoru.
 
 ## <a name="environments"></a>Prostředí
 

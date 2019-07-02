@@ -3,12 +3,12 @@ title: Referenční informace ke schématu CppProperties.json
 ms.date: 05/16/2019
 helpviewer_keywords:
 - CMake in Visual Studio
-ms.openlocfilehash: 8432b72deaef99ee20147505030cbc8a9a270869
-ms.sourcegitcommit: 6cf0c67acce633b07ff31b56cebd5de3218fd733
+ms.openlocfilehash: cf5cd964068ad2e3aeeaf1e057c9bf407f4985f5
+ms.sourcegitcommit: b233f05adae607f75815111006a771c432df5a9d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/24/2019
-ms.locfileid: "67344407"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67516373"
 ---
 # <a name="cpppropertiesjson-schema-reference"></a>Referenční informace ke schématu CppProperties.json
 
@@ -264,7 +264,7 @@ Máte přístup k následující předdefinované makra v `CppProperties.json`:
 |-|-|
 |`${workspaceRoot}`| Úplná cesta ke složce pracovního prostoru|
 |`${projectRoot}`| Úplná cesta ke složce kde `CppProperties.json` nachází|
-|`${vsInstallDir}`| Úplná cesta ke složce, kde je nainstalována spuštěné instance sady Visual Studio|
+|`${env.vsInstallDir}`| Úplná cesta ke složce, kde je nainstalována spuštěné instance sady Visual Studio|
 
 Například pokud váš projekt má zahrnout složku a také zahrnuje windows.h a dalších běžných hlaviček ze sady Windows SDK, můžete k aktualizaci vašeho `CppProperties.json` zahrnuje konfiguračního souboru následujícím kódem:
 
