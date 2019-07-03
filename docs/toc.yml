@@ -93,6 +93,8 @@
           href: build/cmake-projects-in-visual-studio.md
         - name: 'Kurz: Vytváření projektů v jazyce C++ pro různé platformy v sadě Visual Studio'
           href: build/get-started-linux-cmake.md
+        - name: Clang/LLVM v projektech CMake
+          href: build/clang-support-cmake.md
         - name: Konfigurace projektu Linux CMake
           href: build/../linux/cmake-linux-project.md
         - name: Vlastní nastavení sestavení CMake
