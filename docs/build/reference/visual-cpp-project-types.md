@@ -1,6 +1,6 @@
 ---
 title: Typy projektů Visual C++
-ms.date: 11/29/2018
+ms.date: 07/02/2019
 helpviewer_keywords:
 - programs [C++], projects
 - project templates [Visual Studio], C++
@@ -10,19 +10,19 @@ helpviewer_keywords:
 - applications [C++], projects
 - C++ projects, types
 ms.assetid: 7337987e-1e7b-4120-9a4b-94f0401f15e7
-ms.openlocfilehash: dce96a221804e5538929d63fa3c125a27e7fc36d
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.openlocfilehash: 98f8ea11cce61ca91fbdc8f8afb900a7ba5b42c9
+ms.sourcegitcommit: 9b904e490b1e262293a602bd1291a8f3045e755b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65217773"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67552218"
 ---
 # <a name="c-project-templates"></a>Šablony projektů C++
 
 Šablony projektů sady Visual Studio generování souborů se zdrojovým kódem, možnosti kompilátoru, nabídky, panely nástrojů, ikony, odkazy, a `#include` příkazy, které jsou vhodné pro typ projektu chcete vytvořit. Visual Studio obsahuje několik typů z C++ šablony projektů a poskytuje průvodce pro mnoho z nich tak, aby vaše projekty můžete přizpůsobit podle jejich vytvoření. Ihned po vytvoření projektu lze sestavit a spustit aplikaci. je dobrým zvykem přerušovaně sestavení při vývoji vaší aplikace.
 
 > [!NOTE]
-> Vytvořte projekt jazyka C pomocí šablon projektů jazyka C++. V generovaném projektu, vyhledejte soubory, které mají .cpp příponu názvu souboru a změňte ji na. c. Potom na **vlastnosti projektu** stránce projektu (ne pro řešení), rozbalte **vlastnosti konfigurace**, **C/C++** a vyberte **Upřesnit**. Změnit **zkompilovat jako** nastavení **kompilovat jako kód jazyka C (/ TC)**.
+> Vytvořte projekt jazyka C pomocí šablon projektů jazyka C++. V generovaném projektu, vyhledejte soubory, které mají .cpp příponu názvu souboru a změňte ji na. c. Potom na **vlastnosti projektu** stránce projektu (ne pro řešení), rozbalte **vlastnosti konfigurace**, **C/C++** a vyberte **Upřesnit**. Změnit **zkompilovat jako** nastavení **kompilovat jako kód jazyka C (/ TC)** .
 
 ## <a name="project-templates"></a>Šablony projektů
 
@@ -72,7 +72,7 @@ Pokud chcete přidat komponenty k instalaci sady Visual Studio podporu knihovny 
 
 Pokud chcete přidat součást nástrojů pro univerzální platformu Windows C++ k instalaci sady Visual Studio, tyto šablony projektu jsou přidány k sadě Visual Studio.
 
-Přehled Windows univerzální aplikace v jazyce C++, naleznete v tématu [univerzální aplikace pro Windows (C++)](../../windows/universal-windows-apps-cpp.md).
+Přehled Windows univerzální aplikace v jazyce C++, naleznete v tématu [univerzální aplikace pro Windows (C++)](../../cppcx/universal-windows-apps-cpp.md).
 
 |Šablona projektu|Popis|
 |----------------------|-----------------------------|

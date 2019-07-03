@@ -1,18 +1,18 @@
 ---
 title: C++ v sadě Visual Studio
 description: Visual C++ je název pro kompilátor C++ společnosti Microsoft, editor kódu a související nástroje v integrovaném vývojovém prostředí sady Visual Studio. Použití jazyka Visual C++ pro vývoj aplikací pro Windows, Linux, Android a iOS.
-ms.date: 05/14/2019
+ms.date: 07/02/2019
 ms.technology: cpp-ide
 helpviewer_keywords:
 - Visual C++, home page
 author: mikeblome
 ms.author: mblome
-ms.openlocfilehash: c2a38d13cd7b34880b64521af99103ed8192bfd0
-ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
+ms.openlocfilehash: 67bed9a8ce9b5cfbe11a5383d2f67ea6c02d1106
+ms.sourcegitcommit: 9b904e490b1e262293a602bd1291a8f3045e755b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66451205"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67552377"
 ---
 # <a name="c-in-visual-studio"></a>C++ v sadě Visual Studio
 
@@ -92,7 +92,7 @@ Vytvoření testování částí pomocí Microsoft Unit Testing Framework pro C+
 
 ## <a name="write-applications-in-c"></a>Psaní aplikací v jazyce C++
 
-[Aplikace pro Universal Windows](../windows/universal-windows-apps-cpp.md)<br/>
+[Univerzální aplikace pro Windows (C++)](../cppcx/universal-windows-apps-cpp.md)<br/>
 Vyhledejte si pokyny a referenční obsah ve středisku pro vývojáře v operačním systému Windows. Informace o vývoji aplikací pro UWP, naleznete v tématu [Úvod k univerzální platformě Windows](/windows/uwp/get-started/universal-application-platform-guide) a [vytvoření vaší první aplikace pro UWP pomocí jazyka C++](/windows/uwp/get-started/create-a-basic-windows-10-app-in-cpp).
 
 [Desktopové aplikace (C++)](../windows/desktop-applications-visual-cpp.md)<br/>
@@ -122,7 +122,7 @@ Připojení k databázím pomocí rozhraní ODBC a OLE DB.
 [Text a řetězce](../text/text-and-strings-in-visual-cpp.md)<br/>
 Další informace o práci s jiným textovým a formáty řetězců a kódování pro místní i mezinárodní vývoje.
 
-## <a name="languages-reference"></a>Odkaz na jazyky
+## <a name="languages-reference"></a>Jazyky – referenční informace
 
 [Referenční dokumentace jazyka C++](../cpp/cpp-language-reference.md)
 

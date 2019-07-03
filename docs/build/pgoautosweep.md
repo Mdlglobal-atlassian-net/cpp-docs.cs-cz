@@ -1,20 +1,20 @@
 ---
 title: PgoAutoSweep
-ms.date: 03/14/2018
+ms.date: 07/02/2019
 f1_keywords:
 - PgoAutoSweep
 - PogoAutoSweepA
 - PogoAutoSweepW
-ms.openlocfilehash: 2d9804e5ce90663d44ac389ab4f71d10290e6470
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 57bcd1b2e9f0a3312867c4373fd1e50bcf91576e
+ms.sourcegitcommit: 9b904e490b1e262293a602bd1291a8f3045e755b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62295330"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67552245"
 ---
 # <a name="pgoautosweep"></a>PgoAutoSweep
 
-`PgoAutoSweep` Uloží aktuální informace z čítače profilu do souboru a potom obnoví čítače. Použijte funkci během optimalizace na základě profilu školení k zápisu do souboru .pgc pro pozdější použití v sestavení optimalizace na všechna data profilu ze spuštěného programu.
+`PgoAutoSweep` Uloží aktuální informace z čítače profilu do souboru a potom obnoví čítače. Použijte funkci během optimalizace na základě profilu školení pro zvýšení zapsat všechna data profilu ze spuštěného programu `.pgc` pro pozdější použití v sestavení optimalizace.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -25,8 +25,8 @@ void PgoAutoSweep(const wchar_t* name); // UNICODE
 
 ### <a name="parameters"></a>Parametry
 
-*Jméno*<br/>
-Identifikační řetězec pro soubor .pgc uložené.
+*name*<br/>
+Identifikační řetězec pro uložené `.pgc` souboru.
 
 ## <a name="remarks"></a>Poznámky
 
@@ -34,11 +34,11 @@ Můžete volat `PgoAutoSweep` z vaší aplikace na Uložit a obnovit data profil
 
 Data čítače uloženého profilu je umístěn v souboru s názvem *base_name*-*název*! *Hodnota*.pgc, kde *base_name* je základní název spustitelného souboru, *název* je parametr předána `PgoAutoSweep`, a *hodnotu* je jedinečná hodnota, obvykle monotónně se zvyšující číslo, aby se zabránilo kolize názvů souborů.
 
-Soubory .pgc vytvořené `PgoAutoSweep` je potřeba sloučit do souboru .pgd se použije k vytvoření optimalizované spustitelný soubor. Můžete použít [pgomgr](pgomgr.md) příkaz k provedení sloučení.
+`.pgc` Souborů vytvořených databázovým `PgoAutoSweep` je potřeba sloučit do `.pgd` soubor má být použit k vytvoření optimalizované spustitelný soubor. Můžete použít [pgomgr](pgomgr.md) příkaz k provedení sloučení.
 
-Můžete předat název souboru sloučeného .pgd linkeru během sestavování optimalizace s použitím **PGD =**_filename_ argument [/useprofile](reference/useprofile.md) – možnost linkeru, nebo pomocí zastaralá **/PGD** – možnost linkeru. Pokud jste soubory .pgc sloučit do souboru s názvem *base_name*.pgd, není potřeba zadat název souboru v příkazovém řádku vzhledem k tomu, že má linker převezme název souboru ve výchozím nastavení.
+Můžete předat název sloučený `.pgd` souboru během optimalizace sestavení pomocí linkeru **PGD =** _filename_ argument [/useprofile](reference/useprofile.md) linkeru možnosti, nebo pomocí zastaralá **/PGD** – možnost linkeru. Při sloučení `.pgc` soubory do souboru s názvem *base_name*.pgd, není potřeba zadat název souboru v příkazovém řádku vzhledem k tomu, že má linker převezme název souboru ve výchozím nastavení.
 
-`PgoAutoSweep` Funkce spravuje nastavení zabezpečení vlákna zadané, když se vytvoří instrumentované sestavení. Pokud používáte výchozí nastavení nebo zadejte **NOEXACT** argument [/genprofile nebo /FASTGENPROFILE]() – možnost linkeru, zavolá do `PgoAutoSweep` nejsou bezpečné pro vlákna. **EXACT** argument vytvoří bezpečné pro vlákna a přesnější, ale pomalejší, instrumentovaný spustitelný soubor.
+`PgoAutoSweep` Funkce spravuje nastavení zabezpečení vlákna zadané, když se vytvoří instrumentované sestavení. Pokud používáte výchozí nastavení nebo zadejte **NOEXACT** argument [/genprofile nebo /FASTGENPROFILE](reference/genprofile-fastgenprofile-generate-profiling-instrumented-build.md) – možnost linkeru, zavolá do `PgoAutoSweep` nejsou bezpečné pro vlákna. **EXACT** argument vytvoří bezpečné pro vlákna a přesnější, ale pomalejší, instrumentovaný spustitelný soubor.
 
 ## <a name="requirements"></a>Požadavky
 
@@ -50,7 +50,7 @@ Spustitelný soubor musí obsahovat soubor pgobootrun.lib v propojených knihove
 
 ## <a name="example"></a>Příklad
 
-V příkladu níže použití `PgoAutoSweep` vytvořte dvě. PGC soubory v různých fázích během provádění. Obsahuje data, která popisuje chování za běhu až do první `count` rovná 3, a druhá obsahuje data shromážděná za touto pozicí dokud těsně před ukončení aplikace.
+V příkladu níže použití `PgoAutoSweep` vytvořit dvě `.pgc` soubory v různých fázích během provádění. Obsahuje data, která popisuje chování za běhu až do první `count` rovná 3, a druhá obsahuje data shromážděná za touto pozicí dokud těsně před ukončení aplikace.
 
 ```cpp
 // pgoautosweep.cpp

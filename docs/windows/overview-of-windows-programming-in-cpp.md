@@ -1,13 +1,13 @@
 ---
 title: Přehled programování v C++ v systému Windows
-ms.date: 05/06/2019
+ms.date: 07/02/2019
 ms.assetid: efc691d7-21f3-47ae-ae56-cab999ccf59d
-ms.openlocfilehash: 585fda614acce85e286e25b807d0fda57d03758b
-ms.sourcegitcommit: af580f3a11b19d22288424eac7ceae1bc24ab312
+ms.openlocfilehash: 1f49c9f8f78f83d6ae991b7427b28f7f5cbf7f0c
+ms.sourcegitcommit: 9b904e490b1e262293a602bd1291a8f3045e755b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66355556"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67552309"
 ---
 # <a name="overview-of-windows-programming-in-c"></a>Přehled programování v C++ v systému Windows
 
@@ -118,5 +118,5 @@ Systém Visual Studio obsahuje výkonný ladicí program pro nativní kód, nás
 |[C++ v sadě Visual Studio](../overview/visual-cpp-in-visual-studio.md)|Nadřazené téma pro obsah pro vývojáře v jazyce Visual C++.|
 [Vývoj pro .NET v C++/CLI](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)|Vytváření obálek pro nativní knihovny C++, které umožňují komunikaci s aplikacemi .NET a součásti.|
 |[Přípony komponent pro .NET a UPW](../extensions/component-extensions-for-runtime-platforms.md)|Referenční informace pro prvky syntaxe sdílí C++/CX a C++vyhodnocovací.|
-|[Univerzální aplikace pro Windows (C++)](universal-windows-apps-cpp.md)|Psaní aplikací UPW pomocí C++/CX nebo Windows Runtime šablony knihovny (WRL).|
+|[Univerzální aplikace pro Windows (C++)](../cppcx/universal-windows-apps-cpp.md)|Psaní aplikací UPW pomocí C++/CX nebo Windows Runtime šablony knihovny (WRL).|
 |[Atributy C++ pro COM a .NET](attributes/cpp-attributes-com-net.md)|Nestandardní atributy Windows – pouze pro programování pomocí rozhraní .NET nebo modelu COM.|

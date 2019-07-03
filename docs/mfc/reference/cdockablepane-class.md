@@ -1,6 +1,6 @@
 ---
 title: CDockablePane Class
-ms.date: 10/18/2018
+ms.date: 07/02/2019
 f1_keywords:
 - CDockablePane
 - AFXDOCKABLEPANE/CDockablePane
@@ -132,12 +132,12 @@ helpviewer_keywords:
 - CDockablePane [MFC], m_bHideInAutoHideMode
 - CDockablePane [MFC], m_nSlideSteps
 ms.assetid: e2495f4c-765f-48f9-a2e2-e45e47608d91
-ms.openlocfilehash: a9d7c4ea941884435c9ecfac54a1d42649c6dbd5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9ba5cfa2fc30c19cabc3f9f45a10f2c23e7d4269
+ms.sourcegitcommit: 9b904e490b1e262293a602bd1291a8f3045e755b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62391202"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67552327"
 ---
 # <a name="cdockablepane-class"></a>CDockablePane Class
 
@@ -153,13 +153,13 @@ class CDockablePane : public CPane
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CDockablePane::CDockablePane](#cdockablepane)|Vytvoří a inicializuje `CDockablePane` objektu.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CDockablePane::AttachToTabWnd](#attachtotabwnd)|Připojí do podokna Další podokno. Tím se vytvoří podokna s kartami.|
 |[CDockablePane::CalcFixedLayout](#calcfixedlayout)|Vrátí velikost podokna obdélník.|
@@ -229,7 +229,7 @@ class CDockablePane : public CPane
 
 ### <a name="protected-methods"></a>Chráněné metody
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CDockablePane::CheckAutoHideCondition](#checkautohidecondition)|Určuje, zda je ukotvené podokno skrytý (v režimu automatického skrytí).|
 |[CDockablePane::CheckStopSlideCondition](#checkstopslidecondition)|Určuje, kdy ukotvené podokno automatického schovávání by se měla zastavit klouzavé.|
@@ -239,7 +239,7 @@ class CDockablePane : public CPane
 
 ### <a name="data-members"></a>Datové členy
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CDockablePane::m_bDisableAnimation](#m_bdisableanimation)|Určuje, zda je animace automatického skrytí podokna ukotvitelné zakázaný.|
 |[CDockablePane::m_bHideInAutoHideMode](#m_bhideinautohidemode)|Určuje chování v podokně, když je podokno v režimu automatického skrytí.|
@@ -783,7 +783,7 @@ Hodnota TRUE, pokud kontejner byl úspěšně ukotveno podokna. v opačném př�
 
 *dwAlignment* může být kterýkoli z následujících hodnot:
 
-|Hodnota|Popis|
+|Value|Popis|
 |-----------|-----------------|
 |CBRS_ALIGN_TOP|Kontejner je ukotven horní části podokna.|
 |CBRS_ALIGN_BOTTOM|Kontejner je právě ukotven k dolní části podokna.|

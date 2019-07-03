@@ -1,13 +1,13 @@
 ---
 title: Visual C++ co&#39;s novou 2003 – 2015
-ms.date: 11/04/2016
+ms.date: 07/02/2019
 ms.assetid: c4afde6f-3d75-40bf-986f-be57e3818e26
-ms.openlocfilehash: 4bcf661284d447b18542bb158940d539ef9c0686
-ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
+ms.openlocfilehash: 1aff65ff998d9b3bb86fbf7288850287f4445275
+ms.sourcegitcommit: 9b904e490b1e262293a602bd1291a8f3045e755b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66449805"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67552198"
 ---
 # <a name="visual-c-what39s-new-2003-through-2015"></a>Visual C++ co&#39;s novou 2003 – 2015
 
@@ -1682,7 +1682,7 @@ Tato vylepšená podpora standardů ISO C/C++ mohou vyžadovat změny existujíc
 ### <a name="windows-runtime-app-development-support"></a>Podpora pro vývoj aplikací pro modul Runtime Windows
 
 - **Nativní uživatelské rozhraní založené na XAML model**. Pro aplikace Windows Runtime můžete použít nový model nativního uživatelského rozhraní založeného na XAML.
-- **Rozšíření Visual C++ komponent**. Tato rozšíření zjednodušit využití objektů prostředí Windows Runtime, které jsou nezbytnou součástí aplikace Windows Runtime. Další informace najdete v tématu [plán pro prostředí Windows Runtime aplikace s využitím C++ ](../windows/universal-windows-apps-cpp.md) a [Visual C++ referenční informace k jazyku (C++/CX)](../cppcx/visual-c-language-reference-c-cx.md)
+- **Rozšíření Visual C++ komponent**. Tato rozšíření zjednodušit využití objektů prostředí Windows Runtime, které jsou nezbytnou součástí aplikace Windows Runtime. Další informace najdete v tématu [plán pro prostředí Windows Runtime aplikace s využitím C++ ](../cppcx/universal-windows-apps-cpp.md) a [Visual C++ referenční informace k jazyku (C++/CX)](../cppcx/visual-c-language-reference-c-cx.md)
 - **Hry rozhraní DirectX**. Zajímavé hry můžete vyvíjet s využitím nových rozhraní DirectX podpory pro aplikace Windows Runtime.
 - **Zprostředkovatele komunikace XAML nebo DirectX**. Aplikace Windows Runtime, používající XAML a rozhraní DirectX nyní efektivně spolupracovat.
 - **Vývoj DLL komponenty Windows Runtime**. Součást knihovny DLL vývoj díky rozšiřitelné prostředí Windows Runtime.

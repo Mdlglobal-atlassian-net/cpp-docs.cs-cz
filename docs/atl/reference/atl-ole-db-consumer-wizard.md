@@ -1,15 +1,15 @@
 ---
 title: Průvodce příjemcem ATL OLE DB
-ms.date: 05/09/2019
+ms.date: 07/02/2019
 helpviewer_keywords:
 - ATL projects, adding ATL OLE DB consumers
 ms.assetid: dcb68ed1-2224-422f-9f7b-108a74864204
-ms.openlocfilehash: bd7af5c9788f5075f38f85bd035ba8cd09e8baec
-ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
+ms.openlocfilehash: 7195d712474765258ac0319539697b3517cb91b3
+ms.sourcegitcommit: 9b904e490b1e262293a602bd1291a8f3045e755b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65706993"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67552229"
 ---
 # <a name="atl-ole-db-consumer-wizard"></a>Průvodce příjemcem ATL OLE DB
 
@@ -30,7 +30,7 @@ Tento průvodce nastaví třída příjemce technologie OLE DB pomocí datové v
 
 - **Zdroj dat**
 
-   **Zdroj dat** tlačítko umožňuje nastavit zadaný zdroj dat pomocí zadaného zprostředkovatele OLE DB. Po kliknutí na toto tlačítko **vlastnosti propojení dat** zobrazí se dialogové okno. Další informace o vytváření připojovacích řetězců a **vlastnosti propojení dat** dialogovém okně naleznete v tématu [Data přehled rozhraní API odkazu](/previous-versions/windows/desktop/ms718102) v dokumentaci Windows SDK.
+   **Zdroj dat** tlačítko umožňuje nastavit zadaný zdroj dat pomocí zadaného zprostředkovatele OLE DB. Po kliknutí na toto tlačítko **vlastnosti propojení dat** zobrazí se dialogové okno. Další informace o vytváření připojovacích řetězců a **vlastnosti propojení dat** dialogovém okně naleznete v tématu [Data přehled rozhraní API odkazu](/previous-versions/windows/desktop/ms718102(v=vs.85)) v dokumentaci Windows SDK.
 
    Popisuje následující doplňkové informace na kartách v **vlastnosti propojení dat** dialogové okno.
 
@@ -171,7 +171,7 @@ Tento průvodce nastaví třída příjemce technologie OLE DB pomocí datové v
 
 - **Podpora**
 
-   Vyberte zaškrtávací políčka a určete typy aktualizací, aby se podporoval příjemce (výchozí hodnota je none). Každý z těchto nastaví [DBPROP_IRowsetChange](/previous-versions/windows/desktop/ms715892) a odpovídající položky pro [DBPROP_UPDATABILITY](/previous-versions/windows/desktop/ms722676) ve vlastnosti nastavit mapování.
+   Vyberte zaškrtávací políčka a určete typy aktualizací, aby se podporoval příjemce (výchozí hodnota je none). Každý z těchto nastaví [DBPROP_IRowsetChange](/previous-versions/windows/desktop/ms715892(v=vs.85)) a odpovídající položky pro [DBPROP_UPDATABILITY](/previous-versions/windows/desktop/ms722676(v=vs.85)) ve vlastnosti nastavit mapování.
 
    - **Změna**
 
@@ -191,4 +191,4 @@ Tento průvodce nastaví třída příjemce technologie OLE DB pomocí datové v
 
 [Příjemce knihovny ATL technologie OLE DB](../../atl/reference/adding-an-atl-ole-db-consumer.md)<br/>
 [Přidání funkce pomocí Průvodců kódem](../../ide/adding-functionality-with-code-wizards-cpp.md)<br/>
-[Připojovací řetězce a propojení dat (OLE DB)](/previous-versions/windows/desktop/ms718376)
+[Připojovací řetězce a propojení dat (OLE DB)](/previous-versions/windows/desktop/ms718376(v=vs.85))

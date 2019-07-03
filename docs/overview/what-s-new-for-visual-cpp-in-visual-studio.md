@@ -1,22 +1,22 @@
 ---
 title: Novinky v jazyce C++ v sadě Visual Studio
-ms.date: 06/17/2019
+ms.date: 07/02/2019
 ms.technology: cpp-ide
 ms.assetid: 8801dbdb-ca0b-491f-9e33-01618bff5ae9
 author: mikeblome
 ms.author: mblome
-ms.openlocfilehash: b408036fdee3d8163ef48cdbdab6e0f0a9c939ab
-ms.sourcegitcommit: 6cf0c67acce633b07ff31b56cebd5de3218fd733
+ms.openlocfilehash: f02c5878f5f741c216499f619bfd1392483bfa86
+ms.sourcegitcommit: 9b904e490b1e262293a602bd1291a8f3045e755b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/24/2019
-ms.locfileid: "67344190"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67552348"
 ---
 # <a name="whats-new-for-c-in-visual-studio"></a>Novinky v jazyce C++ v sadě Visual Studio
 
 ::: moniker range=">=vs-2019"
 
-Visual Studio 2019 přináší řadu vylepšení a oprav prostředí Microsoft C++. Vyřešili jsme mnoho chyb a problémů v kompilátoru a nástrojů. Mnohé z těchto problémů chyby odeslané zákazníky pomocí [nahlásit problém](/visualstudio/how-to-report-a-problem-with-visual-studio-2017) a [poslat návrh](https://developercommunity.visualstudio.com/spaces/62/index.html) možnosti v části **odeslat zpětnou vazbu**. Děkujeme vám, že hlásíte chyby! Další informace o tom, co je nového v celé sady Visual Studio, navštivte web [co je nového ve Visual Studio 2019](/visualstudio/ide/whats-new-visual-studio-2019). Informace o tom, co je nového pro C++ v sadě Visual Studio 2017, najdete v článku [co je nového pro C++ v sadě Visual Studio 2017](/cpp/overview/what-s-new-for-visual-cpp-in-visual-studio?view=vs-2017). Informace o tom, co je nového pro C++ v sadě Visual Studio 2015 a starší verze, najdete v článku [Visual C++ co je nového 2003 do 2015](/cpp/porting/visual-cpp-what-s-new-2003-through-2015).
+Visual Studio 2019 přináší řadu vylepšení a oprav prostředí Microsoft C++. Vyřešili jsme mnoho chyb a problémů v kompilátoru a nástrojů. Mnohé z těchto problémů chyby odeslané zákazníky pomocí [nahlásit problém](/visualstudio/ide/how-to-report-a-problem-with-visual-studio?view=vs-2019) a [poslat návrh](https://developercommunity.visualstudio.com/spaces/62/index.html) možnosti v části **odeslat zpětnou vazbu**. Děkujeme vám, že hlásíte chyby! Další informace o tom, co je nového v celé sady Visual Studio, navštivte web [co je nového ve Visual Studio 2019](/visualstudio/ide/whats-new-visual-studio-2019). Informace o tom, co je nového pro C++ v sadě Visual Studio 2017, najdete v článku [co je nového pro C++ v sadě Visual Studio 2017](/cpp/overview/what-s-new-for-visual-cpp-in-visual-studio?view=vs-2017). Informace o tom, co je nového pro C++ v sadě Visual Studio 2015 a starší verze, najdete v článku [Visual C++ co je nového 2003 do 2015](/cpp/porting/visual-cpp-what-s-new-2003-through-2015).
 
 ## <a name="c-compiler"></a>kompilátor C++
 
@@ -241,7 +241,7 @@ Odebrali jsme součástí experimentální Clang/C2. Použijte sadu nástrojů M
 
 ::: moniker range="=vs-2017"
 
-Visual Studio 2017 přináší řadu vylepšení a oprav prostředí C++. Jsme opravili víc než 250 chyb a nahlášených problémů v kompilátoru a nástrojů, řadu z nich odeslali zákazníci přes [nahlásit problém a poslat návrh](/visualstudio/how-to-report-a-problem-with-visual-studio-2017) možnosti v části **odeslat zpětnou vazbu**. Děkujeme vám, že hlásíte chyby! Další informace o tom, co je nového v celé sady Visual Studio, naleznete v tématu [co je nového v sadě Visual Studio 2017](/visualstudio/ide/whats-new-visual-studio-2017?view=vs-2017). Informace o tom, co je nového pro C++ v aplikaci Visual Studio 2019, naleznete v tématu [co je nového pro C++ v sadě Visual Studio](/cpp/overview/what-s-new-for-visual-cpp-in-visual-studio?view=vs-2019). Informace o tom, co je nového pro C++ v sadě Visual Studio 2015 a starší verze, najdete v článku [Visual C++ co je nového 2003 do 2015](/cpp/porting/visual-cpp-what-s-new-2003-through-2015).
+Visual Studio 2017 přináší řadu vylepšení a oprav prostředí C++. Jsme opravili víc než 250 chyb a nahlášených problémů v kompilátoru a nástrojů, řadu z nich odeslali zákazníci přes [nahlásit problém a poslat návrh](/visualstudio/ide/how-to-report-a-problem-with-visual-studio?view=vs-2017) možnosti v části **odeslat zpětnou vazbu**. Děkujeme vám, že hlásíte chyby! Další informace o tom, co je nového v celé sady Visual Studio, naleznete v tématu [co je nového v sadě Visual Studio 2017](/visualstudio/ide/whats-new-visual-studio-2017?view=vs-2017). Informace o tom, co je nového pro C++ v aplikaci Visual Studio 2019, naleznete v tématu [co je nového pro C++ v sadě Visual Studio](/cpp/overview/what-s-new-for-visual-cpp-in-visual-studio?view=vs-2019). Informace o tom, co je nového pro C++ v sadě Visual Studio 2015 a starší verze, najdete v článku [Visual C++ co je nového 2003 do 2015](/cpp/porting/visual-cpp-what-s-new-2003-through-2015).
 
 ## <a name="c-compiler"></a>kompilátor C++
 

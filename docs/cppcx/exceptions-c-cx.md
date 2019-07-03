@@ -1,13 +1,13 @@
 ---
 title: Výjimky (C++/CX)
-ms.date: 01/18/2018
+ms.date: 07/02/2019
 ms.assetid: 6cbdc1f1-e4d7-4707-a670-86365146432f
-ms.openlocfilehash: 7134cbb9e90f0355a3b2a912330027cf73876443
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 93a3c096c79140787a46dcbd0ae6ec7edc0bf2e4
+ms.sourcegitcommit: 9b904e490b1e262293a602bd1291a8f3045e755b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62301523"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67552183"
 ---
 # <a name="exceptions-ccx"></a>Výjimky (C++/CX)
 
@@ -27,7 +27,7 @@ Nelze odvodit typ vlastní výjimky z `Platform::Exception`. Pokud chcete vyvola
 
 V následující tabulce jsou uvedeny standardních výjimek.
 
-|Název|Základní hodnota HRESULT|Popis|
+|Name|Základní hodnota HRESULT|Popis|
 |----------|------------------------|-----------------|
 |COMException|*uživatelem definované hresult*|Vyvolána, když je nerozpoznaný HRESULT vrácená z volání metody COM.|
 |AccessDeniedException|ELEKTRONICKÉ\_ACCESSDENIED|Vyvolána, když byl odepřen přístup k prostředku nebo funkce.|
@@ -63,7 +63,7 @@ Zachytit výjimky, které jsou vyvolány během asynchronní operace, použijte 
 
 ## <a name="unhandlederrordetected-event"></a>UnhandledErrorDetected události
 
-Ve Windows 8.1 můžete odebírat [Windows::ApplicationModel::Core::CoreApplication::UnhandledErrorDetected](/uwp/api/windows.applicationmodel.core.icoreapplicationunhandlederror#Windows_ApplicationModel_Core_ICoreApplicationUnhandledError_UnhandledErrorDetected) statické událost, která poskytuje přístup k neošetřené chyby, které se chystáte snížilo procesu. Bez ohledu na to, odkud pochází chybu, dosáhne této obslužné rutiny jako [Windows::ApplicationModel::Core::UnhandledError](/uwp/api/windows.applicationmodel.core.unhandlederror) objekt, který se předává pomocí argumenty události. Při volání `Propagate` objektu, vytváří a vyvolává `Platform::*Exception` typu, který odpovídá kódu chyby. V blocích catch, můžete uložit stav uživatele v případě potřeby a pak buď umožnit, voláním ukončení procesu `throw`, nebo udělat něco, co je program vrátit do známého stavu. Následující příklad zobrazuje základní vzor:
+Ve Windows 8.1 můžete odebírat [Windows::ApplicationModel::Core::CoreApplication::UnhandledErrorDetected](/uwp/api/windows.applicationmodel.core.icoreapplicationunhandlederror.unhandlederrordetected) statické událost, která poskytuje přístup k neošetřené chyby, které se chystáte snížilo procesu. Bez ohledu na to, odkud pochází chybu, dosáhne této obslužné rutiny jako [Windows::ApplicationModel::Core::UnhandledError](/uwp/api/windows.applicationmodel.core.unhandlederror) objekt, který se předává pomocí argumenty události. Při volání `Propagate` objektu, vytváří a vyvolává `Platform::*Exception` typu, který odpovídá kódu chyby. V blocích catch, můžete uložit stav uživatele v případě potřeby a pak buď umožnit, voláním ukončení procesu `throw`, nebo udělat něco, co je program vrátit do známého stavu. Následující příklad zobrazuje základní vzor:
 
 V app.xaml.h:
 
