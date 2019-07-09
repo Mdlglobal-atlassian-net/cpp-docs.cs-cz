@@ -1,6 +1,6 @@
 ---
 title: localtime_s, _localtime32_s, _localtime64_s
-ms.date: 11/04/2016
+ms.date: 07/09/2019
 apiname:
 - _localtime64_s
 - _localtime32_s
@@ -32,12 +32,12 @@ helpviewer_keywords:
 - time, converting values
 - localtime_s function
 ms.assetid: 842d1dc7-d6f8-41d3-b340-108d4b90df54
-ms.openlocfilehash: 44b2eb2515035d56143a2aab251437a92515e652
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 454ab492fbe8a31b9ceeca518fa5e590271dbf06
+ms.sourcegitcommit: 07b34ca1c1fecced9fadc95de15dc5fee4f31e5a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62157271"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67693416"
 ---
 # <a name="localtimes-localtime32s-localtime64s"></a>localtime_s, _localtime32_s, _localtime64_s
 
@@ -84,16 +84,16 @@ V případě první dvě chybové stavy, je vyvolána obslužná rutina neplatn�
 
 ## <a name="remarks"></a>Poznámky
 
-**_Localtime32_s –** funkce převede uložené jako čas [time_t](../../c-runtime-library/standard-types.md) hodnotu a výsledek je uložen na strukturu typu [tm](../../c-runtime-library/standard-types.md). **Dlouhé** hodnotu *sourceTime* představuje sekundách uplynulých od půlnoci (00: 00:00), 1. ledna 1970, UTC. Tato hodnota se obvykle získá z [čas](time-time32-time64.md) funkce.
+**Localtime_s –** funkce převede uložené jako čas [time_t](../../c-runtime-library/standard-types.md) hodnotu a výsledek je uložen na strukturu typu [tm](../../c-runtime-library/standard-types.md). **Time_t** hodnotu *sourceTime* představuje sekundách uplynulých od půlnoci (00: 00:00), 1. ledna 1970, UTC. Tato hodnota se obvykle získá z [čas](time-time32-time64.md) funkce.
 
-**_localtime32_s –** pro místní časové pásmo opraví, pokud uživatel nejprve nastaví proměnnou prostředí globální **TZ**. Když **TZ** nastavena tři další proměnné prostředí (**_timezone**, **_daylight**, a **_tzname**) se automaticky nastaví také. Pokud **TZ** proměnná není nastavená, **localtime32_s –** pokusí použít informace o časovém pásmu, zadaný v aplikaci datum/čas v Ovládacích panelech. Pokud nelze získat tyto informace, se standardně používá PST8PDT, což znamená tichomořské časové pásmo. Zobrazit [_tzset –](tzset.md) popis těchto proměnných. **TZ** je rozšíření společnosti Microsoft a není součástí standardní definice ANSI **localtime**.
+**localtime_s –** pro místní časové pásmo opraví, pokud uživatel nejprve nastaví proměnnou prostředí globální **TZ**. Když **TZ** nastavena tři další proměnné prostředí ( **_timezone**, **_daylight**, a **_tzname**) se automaticky nastaví také. Pokud **TZ** proměnná není nastavená, **localtime_s –** pokusí použít informace o časovém pásmu, zadaný v aplikaci datum/čas v Ovládacích panelech. Pokud nelze získat tyto informace, se standardně používá PST8PDT, což znamená tichomořské časové pásmo. Zobrazit [_tzset –](tzset.md) popis těchto proměnných. **TZ** je rozšíření společnosti Microsoft a není součástí standardní definice ANSI **localtime**.
 
 > [!NOTE]
 > Cílové prostředí snažte se zjistit, zda je v platnosti letní čas.
 
-**_localtime64_s –**, který používá **__time64_t –** struktury, umožňuje data vyjadřují až do 23:59:59, 18. ledna 3001, koordinovaného univerzálního času (UTC), zatímco **_localtime32_s –** představuje data do 23:59:59 18. ledna 2038 UTC.
+**_localtime64_s –** , který používá **__time64_t –** struktury, umožňuje data vyjadřují až do 23:59:59, 18. ledna 3001, koordinovaného univerzálního času (UTC), zatímco **_localtime32_s –** představuje data do 23:59:59 18. ledna 2038 UTC.
 
-**localtime_s –** je vložená funkce, která je vyhodnocena na **_localtime64_s –**, a **time_t** je ekvivalentní **__time64_t –**. Pokud je nutné donutit kompilátor k interpretaci **time_t** jako staré 32bitové **time_t**, můžete definovat **_USE_32BIT_TIME_T**. To způsobí, že to **localtime_s –** vyhodnotilo **_localtime32_s –**. Toto nastavení nedoporučujeme, protože může vaše aplikace selhat po 18. ledna 2038, a to není povoleno na 64bitových platformách.
+**localtime_s –** je vložená funkce, která je vyhodnocena na **_localtime64_s –** , a **time_t** je ekvivalentní **__time64_t –** . Pokud je nutné donutit kompilátor k interpretaci **time_t** jako staré 32bitové **time_t**, můžete definovat **_USE_32BIT_TIME_T**. To způsobí, že to **localtime_s –** vyhodnotilo **_localtime32_s –** . Toto nastavení nedoporučujeme, protože může vaše aplikace selhat po 18. ledna 2038, a to není povoleno na 64bitových platformách.
 
 Pole typu Struktura [tm](../../c-runtime-library/standard-types.md) ukládat následující hodnoty, z nichž každý je **int**.
 

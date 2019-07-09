@@ -3,12 +3,12 @@ title: Možnosti kompilátoru (abecední pořadí)
 ms.date: 05/06/2019
 helpviewer_keywords:
 - compiler options, C++
-ms.openlocfilehash: ba4357f4c14e5cca9363ad2029374ede93529a2a
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.openlocfilehash: 7e69aa501dd0a7dbf2af51b6fa2c5bf4339eb416
+ms.sourcegitcommit: 07b34ca1c1fecced9fadc95de15dc5fee4f31e5a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65221774"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67693433"
 ---
 # <a name="compiler-options-listed-alphabetically"></a>Možnosti kompilátoru (abecední pořadí)
 
@@ -158,6 +158,7 @@ Následuje úplný abecední seznam – možnosti kompilátoru. Seznam kategori�
 |[/Zi](z7-zi-zi-debug-information-format.md)|Generuje úplné ladicí informace.|
 |[/Zl](zl-omit-default-library-name.md)|Odstraní výchozí název knihovny ze souboru .obj (pouze x86).|
 |[/Zm](zm-specify-precompiled-header-memory-allocation-limit.md)|Určuje omezení přidělení paměti pro předkompilované hlavičky.|
+|[/Zo](zo-enhance-optimized-debugging.md)|Generuje rozšířené informace o ladění pro optimalizovaný kód.|
 |[/Zp](zp-struct-member-alignment.md)|Zabalí členy struktury.|
 |[/Zs](zs-syntax-check-only.md)|Zkontroluje pouze syntaxi.|
 |[/ZW](zw-windows-runtime-compilation.md)|Vytvoří výstupní soubor pro spuštění v modulu Windows Runtime.|

@@ -1,6 +1,6 @@
 ---
 title: Chandle – třída
-ms.date: 11/04/2016
+ms.date: 07/09/2019
 f1_keywords:
 - CHandle
 - ATLBASE/ATL::CHandle
@@ -12,12 +12,12 @@ f1_keywords:
 helpviewer_keywords:
 - CHandle class
 ms.assetid: 883e9db5-40ec-4e29-9c74-4dd2ddd2e35d
-ms.openlocfilehash: 19e761ea8eb133db55b4d24600f2a1fd01ac3e34
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 86d2cba6c3ee2e914d96ae2a09b642d556d46027
+ms.sourcegitcommit: 07b34ca1c1fecced9fadc95de15dc5fee4f31e5a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62245631"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67693399"
 ---
 # <a name="chandle-class"></a>Chandle – třída
 
@@ -33,14 +33,14 @@ class CHandle
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CHandle::CHandle](#chandle)|Konstruktor|
 |[Chandle –:: ~ chandle –](#dtor)|Destruktor.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CHandle::Attach](#attach)|Voláním této metody lze připojit `CHandle` objektů pro existující popisovač.|
 |[CHandle::Close](#close)|Volejte tuto metodu za účelem Zavřít `CHandle` objektu.|
@@ -48,14 +48,14 @@ class CHandle
 
 ### <a name="public-operators"></a>Veřejné operátory
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CHandle::operator POPISOVAČ](#operator_handle)|Vrací hodnotu uloženou popisovač.|
 |[CHandle::operator =](#operator_eq)|Operátor přiřazení.|
 
 ### <a name="public-data-members"></a>Veřejné datové členy
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CHandle::m_h](#m_h)|Členské proměnné, která uloží popisovač.|
 
@@ -85,7 +85,7 @@ void Attach(HANDLE h) throw();
 
 ### <a name="remarks"></a>Poznámky
 
-Přiřazuje `CHandle` objektu *h* zpracovat. V sestaveních ladí, bude-li vyvolána ATLASSERT *h* má hodnotu NULL. Žádné další typové kontroly za jako platnosti popisovače.
+Přiřazuje `CHandle` objektu *h* popisovač a poté zavolá **h.Detach()** . V sestaveních ladí, bude-li vyvolána ATLASSERT *h* má hodnotu NULL. Žádné další typové kontroly za jako platnosti popisovače.
 
 ##  <a name="chandle"></a>  CHandle::CHandle
 
