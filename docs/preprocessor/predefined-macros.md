@@ -143,12 +143,12 @@ helpviewer_keywords:
 - _WINRT_DLL macro
 - __func__ identifier
 ms.assetid: 1cc5f70a-a225-469c-aed0-fe766238e23f
-ms.openlocfilehash: dedcab9b0addd3696749b50fef92b70081981c03
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: bf74bc3b5293cba018c07b6b5c56c85695db7635
+ms.sourcegitcommit: 6cb0670ca7d40e8ec55f162b8ce2847f5ae15f5c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62179903"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67787371"
 ---
 # <a name="predefined-macros"></a>Předdefinovaná makra
 
@@ -381,6 +381,9 @@ MSVC podporuje tyto dodatečné předdefinovaná makra.
    |Visual Studio 2017 verze 15.8|1915|
    |Visual Studio 2017 verze 15.9|1916|
    |Visual Studio RTW 2019 (16.0)|1920|
+   |Visual Studio 2019 version 16.1|1921|
+   |Visual Studio 2019 version 16.2|1922|
+   |Visual Studio 2019 version 16.3|1923|
 
    K otestování verzemi kompilátoru. nebo aktualizace v dané verzi sady Visual Studio nebo později, použijte **>=** operátor. Vám pomůže ho v podmíněnou direktivu porovnání  **&#95;MSC&#95;VER** proti této známé verze. Pokud máte několik verzí vzájemně se vylučující k porovnání, pořadí vaše porovnání v sestupném pořadí podle čísla verze. Například tento kód kontroluje kompilátory, které jsou všeobecně dostupné v sadě Visual Studio 2017 nebo novější. V dalším kroku kontroluje kompilátory vydané v nebo po sadu Visual Studio 2015. Potom vyhledá všechny kompilátory vydané dřív než Visual Studio 2015:
 

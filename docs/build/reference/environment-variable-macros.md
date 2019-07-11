@@ -6,12 +6,12 @@ helpviewer_keywords:
 - environment variables, macros in NMAKE
 - macros, environment-variable
 ms.assetid: f8e96635-0906-47b0-9f56-12a6fdf5e347
-ms.openlocfilehash: 7f7f8a05545658142001b75ac78975251185a033
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a96b2de8469ace971d7fbc2707d3f786e873bb26
+ms.sourcegitcommit: 6cb0670ca7d40e8ec55f162b8ce2847f5ae15f5c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62272608"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67787343"
 ---
 # <a name="environment-variable-macros"></a>Makra proměnné prostředí
 
@@ -25,7 +25,7 @@ Příklad:
 PATH=$(PATH);\nonesuch
 
 all:
-    echo %PATH%
+    echo %%PATH%%
 ```
 
 V tomto příkladu mění `PATH` změní příslušné proměnné prostředí `PATH`; přidá `\nonesuch` do cesty.
