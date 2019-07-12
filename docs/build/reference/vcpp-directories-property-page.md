@@ -13,16 +13,16 @@ f1_keywords:
 helpviewer_keywords:
 - VC++ Directories Property Page
 ms.assetid: 428eeef6-f127-4271-b3ea-0ae6f2c3d624
-ms.openlocfilehash: e739ea99df424f44dc43a28e3dc01c3529bb0c1a
-ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
+ms.openlocfilehash: aff143fca47cb5958b90e4a3f4c7ec284f2129f5
+ms.sourcegitcommit: 0e3da5cea44437c132b5c2ea522bd229ea000a10
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66450714"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67861046"
 ---
 # <a name="vc-directories-property-page-windows"></a>VC ++ Directories Property Page (Windows)
 
-Pomocí této stránky vlastností říct adresáře, které se má použít při vytváření aktuálně vybraného projektu sady Visual Studio. Nastavení adresáře pro více projektů v řešení, použijte seznam vlastních vlastností, jak je popsáno v [sdílené složky nebo resuse nastavení projektu Visual Studio C++](../create-reusable-property-configurations.md).
+Pomocí této stránky vlastností říct adresáře, které se má použít při vytváření aktuálně vybraného projektu sady Visual Studio. Nastavení adresáře pro více projektů v řešení, použijte seznam vlastních vlastností, jak je popsáno v [sdílené složky nebo opakované použití sady Visual Studio C++ nastavení projektu](../create-reusable-property-configurations.md).
 
 Verzi Linuxu na této stránce, najdete v části [adresáře VC ++ (Linux C++)](../../linux/prop-pages/directories-linux.md).
 
@@ -54,7 +54,7 @@ Zobrazí dialogové okno takto:
 
 ![Zobrazit adresáře knihoven](../media/vcppdir_libdir.png "dialogové okno pro přidání nebo odebrání cesty knihoven")
 
-Použijte toto dialogové okno k zobrazení aktuálního adresáře. Pokud chcete změnit nebo přidat adresáře, je ale vhodnější použít **Správce vlastností** můžete vytvořit seznam vlastností nebo upravit výchozí uživatelský seznam vlastností. Další informace najdete v tématu [sdílené složky nebo resuse nastavení projektu Visual Studio C++](../create-reusable-property-configurations.md).
+Použijte toto dialogové okno k zobrazení aktuálního adresáře. Pokud chcete změnit nebo přidat adresáře, je ale vhodnější použít **Správce vlastností** můžete vytvořit seznam vlastností nebo upravit výchozí uživatelský seznam vlastností. Další informace najdete v tématu [sdílené složky nebo opakované použití sady Visual Studio C++ nastavení projektu](../create-reusable-property-configurations.md).
 
 Jak uvádíme výš, řadu zděděné cesty jsou uvedeny jako makra.  Chcete-li zkontrolovat aktuální hodnotu makra, zvolte **makra** tlačítko v pravém dolním rohu dialogového okna. Všimněte si, že mnoho makra závisí na konfiguraci typu. Makra v sestavení pro ladění může být vyhodnocen na jinou cestu než stejný – makro v sestavení pro vydání.
 

@@ -104,12 +104,12 @@ helpviewer_keywords:
 - CMFCTabCtrl [MFC], SynchronizeScrollBar
 - CMFCTabCtrl [MFC], m_bEnableActivate
 ms.assetid: d441385d-2c72-4203-96fa-deae2273da35
-ms.openlocfilehash: 43eb171ce9b3ea3454855dc1f92d9aa1b74645d4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b2588a4fe9903de624cbd3517c290a5439fe284a
+ms.sourcegitcommit: 0e3da5cea44437c132b5c2ea522bd229ea000a10
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62252942"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67860975"
 ---
 # <a name="cmfctabctrl-class"></a>CMFCTabCtrl Class
 
@@ -125,14 +125,14 @@ class CMFCTabCtrl : public CMFCBaseTabCtrl
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |`CMFCTabCtrl::CMFCTabCtrl`|Výchozí konstruktor.|
 |`CMFCTabCtrl::~CMFCTabCtrl`|Destruktor.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CMFCTabCtrl::ActivateMDITab](#activatemditab)|Zobrazí zadanou kartu aktuální ovládací prvek karty a nastaví fokus na této kartě.|
 |[CMFCTabCtrl::AllowDestroyEmptyTabbedPane](#allowdestroyemptytabbedpane)||
@@ -193,7 +193,7 @@ class CMFCTabCtrl : public CMFCBaseTabCtrl
 
 ### <a name="data-members"></a>Datové členy
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CMFCTabCtrl::m_bEnableActivate](#m_benableactivate)|Zabrání zobrazení aktivního ztráta fokusu, pokud je vložen a povolí na nové kartě.|
 
@@ -846,7 +846,7 @@ Vždy TRUE.
 
 Hodnota *styl* parametr může být jeden z následujících `CMFCTabCtrl::Style` výčty.
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |STYLE_3D|Zobrazí trojrozměrného, obdélníkové karty, které mají zaoblení rohů.|
 |STYLE_3D_ONENOTE|Zobrazí trojrozměrného karty, které mají jeden svislý jeden zkosené straně a a které mají zaoblené rohy.|
@@ -1078,7 +1078,7 @@ void SetResizeMode(ResizeMode resizeMode);
 
 *ResizeMode* parametr může být jeden z následujících `ResizeMode` hodnot výčtu.
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |RESIZE_NO|Nelze změnit velikost ovládacího prvku karta.|
 |RESIZE_VERT|Ovládací prvek karty můžete změnit velikost svisle, ale ne horizontálně.|
@@ -1139,6 +1139,5 @@ Tato metoda má vliv pouze ovládacího prvku karta, která zobrazuje plochý ka
 
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>
 [Třídy](../../mfc/reference/mfc-classes.md)<br/>
-[CDockablePane – třída](../../mfc/reference/cdockablepane-class.md)<br/>
 [CDockablePane – třída](../../mfc/reference/cdockablepane-class.md)<br/>
 [CMFCBaseTabCtrl – třída](../../mfc/reference/cmfcbasetabctrl-class.md)

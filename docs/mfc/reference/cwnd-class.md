@@ -818,12 +818,12 @@ helpviewer_keywords:
 - CWnd [MFC], WindowProc
 - CWnd [MFC], m_hWnd
 ms.assetid: 49a832ee-bc34-4126-88b3-bc1d9974f6c4
-ms.openlocfilehash: 50558e6959789dddc8223804394a0b242f793de5
-ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
+ms.openlocfilehash: b846a065b02a73bfca8f548097101f73008b33d3
+ms.sourcegitcommit: 0e3da5cea44437c132b5c2ea522bd229ea000a10
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66504255"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67861066"
 ---
 # <a name="cwnd-class"></a>Třída CWnd
 
@@ -1606,9 +1606,7 @@ Odkazuje na okno Ovládací prvek hostitele zdroj dat ke kterému bude vázán v
 
 `BindDefaultProperty` může být použita v kontextu následující:
 
-[!code-cpp[NVC_MFC_AxDataBinding#1](../../mfc/reference/codesnippet/cpp/cwnd-class_6.cpp)]
 [!code-cpp[NVC_MFC_AxDataBinding#2](../../mfc/reference/codesnippet/cpp/cwnd-class_7.cpp)]
-[!code-cpp[NVC_MFC_AxDataBinding#3](../../mfc/reference/codesnippet/cpp/cwnd-class_8.cpp)]
 
 ##  <a name="bindproperty"></a>  CWnd::BindProperty
 
@@ -1636,9 +1634,7 @@ Odkazuje na okno Ovládací prvek hostitele zdroj dat ke kterému bude vázán v
 
 `BindProperty` může být použita v kontextu následující:
 
-[!code-cpp[NVC_MFC_AxDataBinding#1](../../mfc/reference/codesnippet/cpp/cwnd-class_6.cpp)]
 [!code-cpp[NVC_MFC_AxDataBinding#4](../../mfc/reference/codesnippet/cpp/cwnd-class_9.cpp)]
-[!code-cpp[NVC_MFC_AxDataBinding#3](../../mfc/reference/codesnippet/cpp/cwnd-class_8.cpp)]
 
 ##  <a name="bringwindowtotop"></a>  CWnd::BringWindowToTop
 
@@ -1970,7 +1966,7 @@ virtual HRESULT CreateAccessibleProxy(
 *wParam*<br/>
 Určuje objekt zpřístupněny pomocí proxy serveru Active Accessibility. Může být jedna z následujících hodnot
 
-|Value|Význam|
+|Hodnota|Význam|
 |-----------|-------------|
 |OBJID_CLIENT|Odkazuje na klientské oblasti okna.|
 
@@ -4065,9 +4061,7 @@ Pomocí vrácenému ukazateli můžete nastavit vlastnost ICursor komplexní ovl
 
 ### <a name="example"></a>Příklad
 
-[!code-cpp[NVC_MFC_AxDataBinding#1](../../mfc/reference/codesnippet/cpp/cwnd-class_6.cpp)]
 [!code-cpp[NVC_MFC_AxDataBinding#5](../../mfc/reference/codesnippet/cpp/cwnd-class_37.cpp)]
-[!code-cpp[NVC_MFC_AxDataBinding#3](../../mfc/reference/codesnippet/cpp/cwnd-class_8.cpp)]
 
 ##  <a name="getdynamiclayout"></a>  CWnd::GetDynamicLayout
 
@@ -6344,7 +6338,7 @@ Obsahuje dlouhým ukazatelem na [compareitemstruct –](/windows/desktop/api/win
 
 Určuje relativní umístění dvě položky. To může být libovolná z následujících hodnot:
 
-|Value|Význam|
+|Hodnota|Význam|
 |-----------|-------------|
 |-1|Položka 1 se řadí před položkou 2.|
 |0|Položka 1 a položka 2 seřadí hodnoty stejné.|
@@ -7386,7 +7380,7 @@ Určuje virtuální kód zadaný klíč. Seznam kódů standardní virtuální k
 *nFlags*<br/>
 Určuje kontroly kódu, přechod klíče kódu, předchozí stav klíčů a kód kontextu, jak je znázorněno v následujícím seznamu:
 
-|Value|Popis|
+|Hodnota|Popis|
 |-----------|-----------------|
 |0-7|Naskenujte kód (OEM závislé hodnoty).|
 |8|Rozšířené klíč, jako je například funkční klávesy nebo klávesy na numerické klávesnici (1, pokud je rozšířené klíč).|
@@ -7431,7 +7425,7 @@ Určuje virtuální kód zadaný klíč. Seznam kódů standardní virtuální k
 *nFlags*<br/>
 Určuje kontroly kódu, přechod klíče kódu, předchozí stav klíčů a kód kontextu, jak je znázorněno v následujícím seznamu:
 
-|Value|Popis|
+|Hodnota|Popis|
 |-----------|-----------------|
 |0-7|Naskenujte kód (OEM závislé hodnoty). Nižší bajt vyšší řád slova.|
 |8|Rozšířené klíč, jako je například funkční klávesy nebo klávesy na numerické klávesnici (1, pokud je rozšířené klíč; jinak 0).|
@@ -7757,7 +7751,7 @@ Obsahuje ukazatel na vybrané `CMenu`. Ukazatel může být dočasné a neměl b
 
 Vyšší řád slova vrácené hodnoty by měl obsahovat některý z kódů následující příkaz:
 
-|Value|Popis|
+|Hodnota|Popis|
 |-----------|-----------------|
 |0|Říká se zahodit znak, že uživatel stiskne a vytvoří krátké zvukový signál na reproduktoru systému Windows.|
 |1|Říká zavřete aktuální nabídku Windows.|
@@ -9524,7 +9518,7 @@ Určuje počet opakování (počet pokusů, které stisknutí klávesy se opakuj
 *nFlags*<br/>
 *NFlags* parametr může mít tyto hodnoty:
 
-|Value|Význam|
+|Hodnota|Význam|
 |-----------|-------------|
 |0-15|Určuje počet opakování. Hodnota je počet průchodů stisknutí klávesy se opakuje v důsledku uživatele podržíte klávesu...|
 |16-23|Určuje kód kontroly. Hodnota závisí na výrobce OEM (OEM)|
@@ -9648,7 +9642,7 @@ Určuje počet opakování.
 *nFlags*<br/>
 Určuje kontroly kódu, přechod klíče kódu, předchozí stav klíčů a kód kontextu, jak je znázorněno v následujícím seznamu:
 
-|Hodnota|Význam|
+|Value|Význam|
 |-----------|-------------|
 |0-7|Naskenujte kód (OEM závislé hodnoty). Nižší bajt vyšší řád slova.|
 |8|Rozšířené klíč, jako je například funkční klávesy nebo klávesy na numerické klávesnici (1, pokud je rozšířené klíč; jinak 0).|
@@ -9687,7 +9681,7 @@ Určuje počet opakování.
 *nFlags*<br/>
 Určuje kontroly kódu, přechod klíče kódu, předchozí stav klíčů a kód kontextu, jak je znázorněno v následujícím seznamu:
 
-|Value|Význam|
+|Hodnota|Význam|
 |-----------|-------------|
 |0-7|Naskenujte kód (OEM závislé hodnoty). Nižší bajt vyšší řád slova.|
 |8|Rozšířené klíč, jako je například funkční klávesy nebo klávesy na numerické klávesnici (1, pokud je rozšířené klíč; jinak 0).|
@@ -9734,7 +9728,7 @@ Určuje počet opakování.
 *nFlags*<br/>
 Určuje kontroly kódu, přechod klíče kódu, předchozí stav klíčů a kód kontextu, jak je znázorněno v následujícím seznamu:
 
-|Hodnota|Význam|
+|Value|Význam|
 |-----------|-------------|
 |0-7|Naskenujte kód (OEM závislé hodnoty). Nižší bajt vyšší řád slova.|
 |8|Rozšířené klíč, jako je například funkční klávesy nebo klávesy na numerické klávesnici (1, pokud je rozšířené klíč; jinak 0).|

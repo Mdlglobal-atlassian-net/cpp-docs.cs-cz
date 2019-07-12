@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Windows applications [C++], Win32
 - Windows Desktop applications [C++]
 - Windows API [C++]
-ms.openlocfilehash: 0bc9ef82863fde361964234cca54f12aac1e2abe
-ms.sourcegitcommit: 18d3b1e9cdb4fc3a76f7a650c31994bdbd2bde64
+ms.openlocfilehash: 2cf9928d56c564edc0e3bda1935eb11004000985
+ms.sourcegitcommit: 0e3da5cea44437c132b5c2ea522bd229ea000a10
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/29/2019
-ms.locfileid: "64877393"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67861121"
 ---
 # <a name="walkthrough-create-a-traditional-windows-desktop-application-c"></a>Návod: Vytvořte tradiční aplikace klasické pracovní plochy Windows (C++)
 
@@ -44,19 +44,19 @@ Postupujte podle následujících kroků vytvořte svůj první projekt klasick�
 
 1. V hlavní nabídce zvolte **souboru** > **nový** > **projektu** otevřít **vytvořte nový projekt** dialogového okna pole.
 
-1. V horní části dialogového okna, nastavte **jazyk** k **C++**, nastavte **platformy** k **Windows**a nastavte **typprojektu** k **Desktop**. 
+1. V horní části dialogového okna, nastavte **jazyk** k **C++** , nastavte **platformy** k **Windows**a nastavte **typprojektu** k **Desktop**. 
 
 1. Filtrované seznamu typů projektů zvolte **desktopový Průvodce pro Windows** klikněte na tlačítko **Další**. Na další stránce zadejte název projektu a zadejte umístění projektu, v případě potřeby.
 
 1. Zvolte **vytvořit** tlačítko pro vytvoření projektu.
 
-1. **Windows desktopový projekt** se nyní zobrazí dialogové okno. V části **typ aplikace**vyberte **aplikace Windows (.exe)**. V části **další možnosti**vyberte **prázdný projekt**. Zvolte **OK** pro vytvoření projektu.
+1. **Windows desktopový projekt** se nyní zobrazí dialogové okno. V části **typ aplikace**vyberte **aplikace Windows (.exe)** . V části **další možnosti**vyberte **prázdný projekt**. Zvolte **OK** pro vytvoření projektu.
 
 1. V **Průzkumníku řešení**, klikněte pravým tlačítkem myši **DesktopApp** projektu, zvolte **přidat**a klikněte na tlačítko **nová položka**.
 
    ![Přidat novou položku do projektu DesktopApp](../build/media/desktop-app-project-add-new-item-153.gif "přidat novou položku do projektu DesktopApp")
 
-1. V **přidat novou položku** dialogu **soubor C++ (.cpp)**. V **název** zadejte název souboru, například *HelloWindowsDesktop.cpp*. Zvolte **přidat**.
+1. V **přidat novou položku** dialogu **soubor C++ (.cpp)** . V **název** zadejte název souboru, například *HelloWindowsDesktop.cpp*. Zvolte **přidat**.
 
    ![Soubor .cpp přidat do projektu DesktopApp](../build/media/desktop-app-add-cpp-file-153.png "přidat soubor .cpp DesktopApp projektu")
 
@@ -76,7 +76,7 @@ Váš projekt je nyní vytvořen a zdrojový soubor je otevřen v editoru. Chcet
 
    ![Pojmenujte projekt DesktopApp](../build/media/desktop-app-new-project-name-153.png "pojmenujte projekt DesktopApp")
 
-1. V **Windows desktopový projekt** dialogového okna, v části **typ aplikace**vyberte **aplikace Windows (.exe)**. V části **další možnosti**vyberte **prázdný projekt**. Zvolte **OK** pro vytvoření projektu.
+1. V **Windows desktopový projekt** dialogového okna, v části **typ aplikace**vyberte **aplikace Windows (.exe)** . V části **další možnosti**vyberte **prázdný projekt**. Zvolte **OK** pro vytvoření projektu.
 
    ![Desktopový projekt Windows pomocí průvodce vytvořit DesktopApp](../build/media/desktop-app-new-project-wizard-153.png "vytvořit DesktopApp v Průvodci desktopový projekt Windows")
 
@@ -84,7 +84,7 @@ Váš projekt je nyní vytvořen a zdrojový soubor je otevřen v editoru. Chcet
 
    ![Přidat novou položku do projektu DesktopApp](../build/media/desktop-app-project-add-new-item-153.gif "přidat novou položku do projektu DesktopApp")
 
-1. V **přidat novou položku** dialogu **soubor C++ (.cpp)**. V **název** zadejte název souboru, například *HelloWindowsDesktop.cpp*. Zvolte **přidat**.
+1. V **přidat novou položku** dialogu **soubor C++ (.cpp)** . V **název** zadejte název souboru, například *HelloWindowsDesktop.cpp*. Zvolte **přidat**.
 
    ![Soubor .cpp přidat do projektu DesktopApp](../build/media/desktop-app-add-cpp-file-153.png "přidat soubor .cpp DesktopApp projektu")
 
@@ -116,7 +116,7 @@ Váš projekt je nyní vytvořen a zdrojový soubor je otevřen v editoru. Chcet
 
    ![Přidat novou položku do projektu DesktopApp](../build/media/desktop-app-project-add-new-item-150.gif "přidat novou položku do projektu DesktopApp")
 
-1. V **přidat novou položku** dialogu **soubor C++ (.cpp)**. V **název** zadejte název souboru, například *HelloWindowsDesktop.cpp*. Zvolte **přidat**.
+1. V **přidat novou položku** dialogu **soubor C++ (.cpp)** . V **název** zadejte název souboru, například *HelloWindowsDesktop.cpp*. Zvolte **přidat**.
 
    ![Soubor .cpp přidat do projektu DesktopApp](../build/media/desktop-app-add-cpp-file-150.png "přidat soubor .cpp DesktopApp projektu")
 
@@ -589,7 +589,7 @@ Jak jsme slíbili, tady je kompletní kód pro funkční aplikaci.
 
 1. Chcete-li aplikaci spustit, stiskněte **F5**. Okno, které obsahuje text "Hello, plochu Windows!" se zobrazí v levém horním rohu zobrazení.
 
-   ![Spusťte projekt DesktopApp](../build/media/desktop-app-project-run-157.png ", spusťte projekt DesktopApp")
+   ![Spusťte projekt DesktopApp](../build/media/desktop-app-project-run-157.PNG ", spusťte projekt DesktopApp")
 
 Blahopřejeme! Dokončení tohoto návodu a integrované tradiční desktopové aplikace Windows.
 

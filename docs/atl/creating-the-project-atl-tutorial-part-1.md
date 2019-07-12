@@ -3,12 +3,12 @@ title: Vytvoření projektu (ATL – tutoriál, část 1)
 ms.custom: get-started-article
 ms.date: 05/06/2019
 ms.assetid: f6b727d1-390a-4b27-b82f-daadcd9fc059
-ms.openlocfilehash: 292faf1769baa2e1c3fc6e52ba6df065cf08766e
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.openlocfilehash: 0df793b23aaec57835774252eeac21b092f8a9e9
+ms.sourcegitcommit: 0e3da5cea44437c132b5c2ea522bd229ea000a10
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65221402"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67861024"
 ---
 # <a name="creating-the-project-atl-tutorial-part-1"></a>Vytvoření projektu (ATL – tutoriál, část 1)
 
@@ -44,15 +44,10 @@ Tento kurz vás provede bez atributové projekt knihovny ATL, který vytvoří o
 
     Umístění pro zdrojový kód se obvykle ve výchozím nastavení \Users\\\<uživatelské jméno > \source\repos a nové složky se vytvoří automaticky.
 
-1. Klikněte na tlačítko **OK** a **projekt knihovny ATL** otevře se průvodce.
+1. V aplikaci Visual Studio 2019, přijměte výchozí hodnoty a klikněte na tlačítko **OK**. 
+   V sadě Visual Studio 2017, klikněte na tlačítko **OK** otevřít **projekt knihovny ATL** průvodce. Klikněte na tlačítko **nastavení aplikace** chcete zobrazit dostupné možnosti. Protože tento projekt vytvoří ovládací prvek a ovládací prvek musí být v procesový server, ponechte **typ aplikace** jako knihovnu DLL. Klikněte na **OK**.
 
-1. Klikněte na tlačítko **nastavení aplikace** chcete zobrazit dostupné možnosti.
-
-1. Jako jsou vytvoření ovládacího prvku a ovládací prvek musí být v procesový server, ponechte **typ aplikace** jako knihovnu DLL.
-
-1. U ostatních možností ponechte jejich výchozí hodnoty a klikněte na tlačítko **OK**.
-
-**Průvodce projektem ATL** vytvoří vygenerováním několik souborů projektu. Můžete zobrazit tyto soubory v **Průzkumníka řešení** tak, že rozbalíte `Polygon` objektu. Soubory jsou uvedeny níže.
+Visual Studio vytvoří projekt vygenerováním několik souborů. Můžete zobrazit tyto soubory v **Průzkumníka řešení** tak, že rozbalíte `Polygon` objektu. Soubory jsou uvedeny níže.
 
 |Soubor|Popis|
 |----------|-----------------|

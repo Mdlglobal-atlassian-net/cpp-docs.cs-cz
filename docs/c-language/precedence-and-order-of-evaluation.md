@@ -1,18 +1,18 @@
 ---
 title: Přednost a pořadí vyhodnocení
-ms.date: 11/04/2016
+ms.date: 07/11/2019
 helpviewer_keywords:
 - associativity of operators [C++]
 - precedence [C++], operators
 - data binding [C++], operator precedence
 - operators [C++], precedence
 ms.assetid: 201f7864-0c51-4c55-9d6f-39c5d013bcb0
-ms.openlocfilehash: 88d0256e2ce948fbdfffb24037517690ef4b7cb7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 327a5a5344f17f1d84e0cebc1371d56426c95deb
+ms.sourcegitcommit: 0e3da5cea44437c132b5c2ea522bd229ea000a10
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62232205"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67861080"
 ---
 # <a name="precedence-and-order-of-evaluation"></a>Přednost a pořadí vyhodnocení
 
@@ -22,32 +22,32 @@ Následující tabulka shrnuje prioritu a asociativitu (tedy pořadí, v němž 
 
 ## <a name="precedence-and-associativity-of-c-operators"></a>Priorita a asociativita operátorů jazyka C
 
-|Symbol <sup>1</sup>|Typ operace|Asociativita|
+| Symbol <sup>1</sup> | Typ operace | Asociativita |
 |-------------|-----------------------|-------------------|
-|**\[ ] ( ) . ->**<br /><br />**++** **--** (postfix)|Výraz|Zleva doprava|
-**sizeof & \* + - ~ !**<br /><br />**++--** (předpona)|Unární|Zprava doleva|
-|*zaokrouhlovat*|Unární|Zprava doleva|
-|**\* / %**|Násobení|Zleva doprava|
-|**+ -**|Additive|Zleva doprava|
-|**\<\< >>**|Bitový posun|Zleva doprava|
-|**\< > \<= >=**|Relační|Zleva doprava|
-|**== !=**|Rovnost|Zleva doprava|
-|**&**|Bitový operátor AND|Zleva doprava|
-|**^**|Bitový exkluzivní operátor OR|Zleva doprava|
-|**&#124;**|Bitový inkluzivní operátor OR|Zleva doprava|
-|**&&**|Logický operátor AND|Zleva doprava|
-|**&#124;&#124;**|Logický operátor OR|Zleva doprava|
-|**? :**|Podmíněný výraz|Zprava doleva|
-|**= \*= /= %=**<br /><br /> **+= -= \<\<= >>= &=**<br /><br /> **^= &#124;=**|Jednoduché a složené přiřazení <sup>2</sup>|Zprava doleva|
-|**,**|Sekvenční vyhodnocení|Zleva doprava|
+| `[` `]` `(` `)` `.` `->`<br/>`++` `--` (postfix) | Výraz | Zleva doprava |
+| **sizeof** `&` `*` `+` `-` `~` `!`<br/>`++` `--` (prefix) | Unární | Zprava doleva |
+| *zaokrouhlovat* | Unární | Zprava doleva |
+| `*` `/` `%` | Násobení | Zleva doprava |
+| `+``-` | Additive | Zleva doprava |
+| `<<``>>` | Bitový posun | Zleva doprava |
+| `<` `>` `<=` `>=` | Relační | Zleva doprava |
+| `==``!=` | Rovnost | Zleva doprava |
+| `&` | Bitový operátor AND | Zleva doprava |
+| `^` | Bitový exkluzivní operátor OR | Zleva doprava |
+| `|` | Bitový inkluzivní operátor OR | Zleva doprava |
+| `&&` | Logický operátor AND | Zleva doprava |
+| `||` | Logický operátor OR | Zleva doprava |
+| `? :` | Podmíněný výraz | Zprava doleva |
+| `=` `*=` `/=` `%=`<br/>`+=` `-=` `<<=` `>>=` `&=`<br/>`^=``|=` | Jednoduché a složené přiřazení <sup>2</sup> | Zprava doleva |
+| `,` | Sekvenční vyhodnocení | Zleva doprava |
 
-1. Operátory jsou uvedeny v sestupném pořadí dle priority. Je-li několik operátorů uvedeno na stejném řádku nebo ve skupině, mají stejnou prioritu.
+<sup>1</sup> operátory jsou uvedeny v sestupném pořadí podle priority. Je-li několik operátorů uvedeno na stejném řádku nebo ve skupině, mají stejnou prioritu.
 
-1. Všechny operátory jednoduchého a složeného přiřazení mají stejnou prioritu.
+<sup>2</sup> všechny operátory jednoduchého a složeného přiřazení mají stejnou prioritu.
 
-Výraz může obsahovat několik operátorů shodné priority. Vyskytne-li se na stejné úrovni ve výrazu několik takových operátorů, vyhodnocování pokračuje dle asociativity operátorů, tedy zleva doprava nebo zprava doleva. Směr vyhodnocení neovlivní výsledky výrazů, které obsahují více než jedno násobení (<strong>\*</strong>), sčítání (**+**), nebo binární bitový (**&**, **&#124;**, nebo **^**) operátor na stejné úrovni. Pořadí operací není v jazyce definováno. Dokáže-li kompilátor zaručit konzistentní výsledek, může takové výrazy vyhodnotit v libovolném pořadí.
+Výraz může obsahovat několik operátorů shodné priority. Vyskytne-li se na stejné úrovni ve výrazu několik takových operátorů, vyhodnocování pokračuje dle asociativity operátorů, tedy zleva doprava nebo zprava doleva. Směr vyhodnocení neovlivní výsledky výrazů, které obsahují více než jedno násobení (`*`), sčítání (`+`), nebo binární bitový (`&`, `|`, nebo `^`) operátor na stejné úrovni. Pořadí operací není v jazyce definováno. Dokáže-li kompilátor zaručit konzistentní výsledek, může takové výrazy vyhodnotit v libovolném pořadí.
 
-Pouze sekvenční vyhodnocení (**,**), logický- a (**&&**), logický operátor OR (**||**), podmíněný výraz (**?:** ), a operátorů volání funkce představují body sekvence a zaručují konkrétní pořadí vyhodnocení svých operandů. Operátorem volání funkce je sada závorek za identifikátorem funkce. Operátor sekvenčního vyhodnocení (**,**) zaručuje vyhodnocení operandů zleva doprava. (Povšimněte si, že operátor čárky ve volání funkce není totéž jako operátor sekvenčního vyhodnocení, a žádnou takovou záruku tak neposkytuje.) Další informace najdete v tématu [body sekvence](../c-language/c-sequence-points.md).
+Pouze sekvenční vyhodnocení (`,`), logický- a (`&&`), logický operátor OR (`||`), podmíněný výraz (`? :`), a operátorů volání funkce představují body sekvence a zaručují konkrétní pořadí vyhodnocení svých operandů. Operátorem volání funkce je sada závorek za identifikátorem funkce. Operátor sekvenčního vyhodnocení (`,`) zaručuje vyhodnocení operandů zleva doprava. (Operátor čárky ve volání funkce není stejný jako operátor sekvenčního vyhodnocení a žádnou takovou záruku tak neposkytuje.) Další informace najdete v tématu [body sekvence](c-sequence-points.md).
 
 Logické operátory rovněž zaručují vyhodnocení svých operandů zleva doprava. Vyhodnocují však nejmenší počet operandů potřebných k určení výsledků výrazu. Tento postup se nazývá „zkrácené“ vyhodnocení. Některé operandy výrazu tedy nemusí být vyhodnoceny. Například ve výrazu
 
@@ -59,28 +59,28 @@ je druhý operand, `y++`, vyhodnocen pouze v případě, že operand `x` je vyho
 
 Následující seznam ukazuje, jak kompilátor automaticky sváže několik vzorových výrazů:
 
-|Výraz|Automatické vázání|
+| Výraz | Automatické vázání |
 |----------------|-----------------------|
-|a & b &#124;&#124; c|(& b). &#124; &#124; c|
-|a = b &#124;&#124; c|a = (b &#124; &#124; c).|
-|q && r &#124;&#124; s--|(q & & r) &#124; &#124; s--|
+| `a & b || c` | `(a & b) || c` |
+| `a = b || c` | `a = (b || c)` |
+| `q && r || s--` | `(q && r) || s--` |
 
-V prvním výrazu bitový – a – operátor (**&**) má vyšší prioritu než logický operátor OR – operátor (**||**), takže `a & b` tvoří první operand operace logického operátoru OR.
+V prvním výrazu bitový operátor AND (`&`) má vyšší prioritu než logický operátor OR (`||`), proto výraz `a & b` tvoří první operand operace logického operátoru OR.
 
-Ve druhém výrazu logický operátor OR (**||**) má vyšší prioritu než operátor jednoduchého přiřazení (**=**), takže `b || c` seskupen jako Chcete-li operand pravé strany v přiřazení. Povšimněte si, že hodnota přiřazená proměnné `a` je 0 nebo 1.
+Ve druhém výrazu má logický operátor OR (`||`) vyšší prioritu než operátor jednoduchého přiřazení (`=`), proto je výraz `b || c` v přiřazení seskupen jako operand pravé strany. Povšimněte si, že hodnota přiřazená proměnné `a` je 0 nebo 1.
 
-Třetí výraz ukazuje výraz správného tvaru, který může být vyhodnocen na neočekávaný výsledek. Logický- a – operátor (**&&**) má vyšší prioritu než logický operátor OR – operátor (**||**), takže `q && r` seskupen jako operand. Protože logické operátory zaručují vyhodnocování operandů zleva doprava, `q && r` je vyhodnoceno před `s--`. Nicméně pokud `q && r` vyhodnocen na nenulovou hodnotu, `s--` není vyhodnocen, a `s` není snížena. Pokud nesnížení `s` způsobilo potíže v programu, `s--` by se měla zobrazit jako první operand výrazu, nebo `s` by měla být snížena v samostatné operaci.
+Třetí výraz ukazuje výraz správného tvaru, který může být vyhodnocen na neočekávaný výsledek. Logický operátor AND (`&&`) má vyšší prioritu než logický operátor OR (`||`), proto je výraz `q && r` seskupen jako operand. Protože logické operátory zaručují vyhodnocování operandů zleva doprava, `q && r` je vyhodnoceno před `s--`. Nicméně pokud `q && r` vyhodnocen na nenulovou hodnotu, `s--` není vyhodnocen, a `s` není snížena. Pokud nesnížení `s` způsobilo potíže v programu, `s--` by se měla zobrazit jako první operand výrazu, nebo `s` by měla být snížena v samostatné operaci.
 
 Následující výraz není platný a vyvolá při kompilaci diagnostickou zprávu:
 
-|Neplatný výraz|Výchozí seskupení|
+| Neplatný výraz | Výchozí seskupení |
 |------------------------|----------------------|
-|p == 0 ? p += 1: p += 2|( p == 0 ? p += 1 : p ) += 2|
+| `p == 0 ? p += 1: p += 2` | `( p == 0 ? p += 1 : p ) += 2` |
 
-V tomto výrazu operátor rovnosti (**==**) má nejvyšší prioritu, takže `p == 0` seskupen jako operand. Operátor podmíněného výrazu (**?:**) má druhou nejvyšší prioritu. Jeho prvním operandem je výraz `p == 0`, jeho druhým operandem pak výraz `p += 1`. Za poslední operand v operátoru podmíněného výrazu je však považován výraz `p` místo výrazu `p += 2`, protože tento výskyt proměnné `p` je více svázán s operátorem podmíněného výrazu než s operátorem složeného přiřazení. Výraz `+= 2` nemá operand na levé straně, dojde tedy k chybě syntaxe. Chcete-li zabránit chybám tohoto typu a vytvářet čitelnější kód, měly by být použity závorky. Závorky by měly být použity například jako v ukázce níže, která předchozí příklad opravuje a ujasňuje:
+V tomto výrazu má operátor rovnosti (`==`) nejvyšší prioritu, proto je výraz `p == 0` seskupen jako operand. Operátor podmíněného výrazu (`? :`) má druhou nejvyšší prioritu. Jeho prvním operandem je výraz `p == 0`, jeho druhým operandem pak výraz `p += 1`. Za poslední operand v operátoru podmíněného výrazu je však považován výraz `p` místo výrazu `p += 2`, protože tento výskyt proměnné `p` je více svázán s operátorem podmíněného výrazu než s operátorem složeného přiřazení. Výraz `+= 2` nemá operand na levé straně, dojde tedy k chybě syntaxe. Chcete-li zabránit chybám tohoto typu a vytvářet čitelnější kód, měly by být použity závorky. Závorky by měly být použity například jako v ukázce níže, která předchozí příklad opravuje a ujasňuje:
 
 `( p == 0 ) ? ( p += 1 ) : ( p += 2 )`
 
 ## <a name="see-also"></a>Viz také:
 
-[Operátory jazyka C](../c-language/c-operators.md)
+[Operátory jazyka C](c-operators.md)

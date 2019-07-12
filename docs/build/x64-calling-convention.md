@@ -1,16 +1,16 @@
 ---
-title: x64 konvence volání
+title: x64 – konvence volání
 description: Podrobnosti o výchozí x64 ABI konvenci volání.
 ms.date: 12/17/2018
 ms.assetid: 41ca3554-b2e3-4868-9a84-f1b46e6e21d9
-ms.openlocfilehash: 02bf4719766366049b600b148ad88fc238f4e54e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2cad00ac7f2cb5fe086fa262a0f512330997391f
+ms.sourcegitcommit: 0e3da5cea44437c132b5c2ea522bd229ea000a10
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62313612"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67861165"
 ---
-# <a name="x64-calling-convention"></a>x64 konvence volání
+# <a name="x64-calling-convention"></a>x64 – konvence volání
 
 Tato část popisuje standardních procesů a vytváření názvů, které používá jeden – funkce (volajícího) pro volání do jiného – funkce (volaný) x64 kódu.
 
@@ -142,12 +142,12 @@ Struct2 func4(int a, double b, int c, float d);
 
 ## <a name="callercallee-saved-registers"></a>Volající/volaný – uložené registry
 
-Poškození registrů RAX RCX, RDX, R8, R9, R10, R11 jsou považovány za volatile a musíte vzít v úvahu při volání funkce (není-li jinak bezpečnost dokázat analýzou například celková optimalizace programu).
+Poškození registrů RAX RCX, RDX, R8, R9, R10, R11, XMM0 až 5 a horní části YMM0 až 15 a ZMM0 15 jsou považovány za volatile a musíte vzít v úvahu při volání funkce (není-li jinak bezpečnost dokázat analýzou například celková optimalizace programu). Na AVX512VL jsou přechodné registrů ZMM YMM a XMM 16-31.
 
-Registry RBX RBP, RDI, RSI, RSP, r 12, R13, R14 a R15 jsou považovány za stálé a musí být uloženy a obnovit pomocí funkce, která je používá.
+Registry RBX RBP, RDI, RSI, RSP, r 12, R13, R14, R15 a XMM6 15 jsou považovány za stálé a musí být uložen a obnovit pomocí funkce, která je používá.
 
 ## <a name="function-pointers"></a>Ukazatele na funkce
-
+ 
 Ukazatele na funkce jsou jednoduše ukazatele na popisek příslušné funkce. Neexistují žádná tabulka požadavků na obsah (TOC) pro ukazatele na funkce.
 
 ## <a name="floating-point-support-for-older-code"></a>Podpora plovoucí desetinné čárky pro starší kód

@@ -3,12 +3,12 @@ title: Připojení k cílovému systému Linux v sadě Visual Studio
 description: Jak se připojit na vzdálený počítač s Linuxem nebo WSL v rámci sady Visual Studio C++ projektu.
 ms.date: 06/19/2019
 ms.assetid: 5eeaa683-4e63-4c46-99ef-2d5f294040d4
-ms.openlocfilehash: 7fa09c49df3da39084edb6735a7a2ccc724c34d3
-ms.sourcegitcommit: 3ae8025df7fd50f5f56a0a2b5396533218bcc7dc
+ms.openlocfilehash: 00d7facca2857efb0b8b43b5aaf38edce348a511
+ms.sourcegitcommit: 0e3da5cea44437c132b5c2ea522bd229ea000a10
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/20/2019
-ms.locfileid: "67285259"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67861149"
 ---
 # <a name="connect-to-your-target-linux-system-in-visual-studio"></a>Připojení k cílovému systému Linux v sadě Visual Studio
 
@@ -108,7 +108,7 @@ Konfigurace projektu pro WSL, naleznete v tématu [konfigurace projektu Linux](c
 
 [Konfigurace projektu Linux](configure-a-linux-project.md)<br />
 [Konfigurace projektu Linux CMake](cmake-linux-project.md)<br />
-[Deply, spouštění a ladění projektu Linux](deploy-run-and-debug-your-linux-project.md)<br />
+[Nasazení, spuštění a ladění projektu Linux](deploy-run-and-debug-your-linux-project.md)<br />
 
 
 

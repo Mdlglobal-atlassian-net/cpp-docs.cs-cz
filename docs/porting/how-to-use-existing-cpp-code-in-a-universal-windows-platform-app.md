@@ -2,12 +2,12 @@
 title: 'Postupy: Použití existujícího kódu C++ v aplikaci Windows Universal Platform'
 ms.date: 04/08/2019
 ms.assetid: 87e5818c-3081-42f3-a30d-3dca2cf0645c
-ms.openlocfilehash: 3aeef205effe072a25fc0b3dabb9145245461d45
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b46cbdc088908f59d6cbdc0ecd7cd6475da370d8
+ms.sourcegitcommit: 0e3da5cea44437c132b5c2ea522bd229ea000a10
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62205189"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67861137"
 ---
 # <a name="how-to-use-existing-c-code-in-a-universal-windows-platform-app"></a>Postupy: Použití existujícího kódu C++ v aplikaci Windows Universal Platform
 
@@ -135,7 +135,7 @@ Následující postup platí pro případ, kdy máte nativní knihovnu DLL, kter
 
 2. Otevřít **vlastnosti projektu** pro projekt knihovny DLL a nastavte **konfigurace** k **všechny konfigurace**.
 
-3. V **vlastnosti projektu**v části **C/C++** > **Obecné** kartu, nastavte **využívat rozšíření modulu Runtime Windows** k  **Ano (/ZW)**. To umožňuje rozšíření komponent (C++/CX).
+3. V **vlastnosti projektu**v části **C/C++**  > **Obecné** kartu, nastavte **využívat rozšíření modulu Runtime Windows** k  **Ano (/ZW)** . To umožňuje rozšíření komponent (C++/CX).
 
 4. V **Průzkumníka řešení**, vyberte uzel projektu, otevřete místní nabídku a zvolte **uvolnit projekt**. Pak otevřete místní nabídku uzlu uvolnit projekt a zvolte pro úpravu souboru projektu. Vyhledejte `WindowsTargetPlatformVersion` prvku a nahraďte ji metodou následující prvky.
 
@@ -193,9 +193,9 @@ Můžete však použít statické knihovny v UPW bez opětovné kompilace s `/ZW
 
 ### <a name="to-use-a-native-c-static-library-in-a-uwp-project"></a>Použít nativní statickou knihovnu C++ v projektu UWP
 
-1. Ve vlastnostech projektu pro projekt UPW v **Linkeru** části, přidejte cestu ke knihovně v **vstup** vlastnost. Například pro knihovnu v projektu, který se umístí výstup ve *SolutionFolder*\Debug\MyNativeLibrary\MyNativeLibrary.lib, zadejte relativní cestu `Debug\MyNativeLibrary\MyNativeLibrary.lib`.
+1. Ve vlastnostech projektu pro projekt UPW, zvolte **vlastnosti konfigurace** > **Linkeru** > **vstup** v levém podokně. V pravém podokně, přidejte cestu ke knihovně v **Další závislosti** vlastnost. Například pro knihovnu v projektu, který se umístí výstup ve *SolutionFolder*\Debug\MyNativeLibrary\MyNativeLibrary.lib, zadejte relativní cestu `Debug\MyNativeLibrary\MyNativeLibrary.lib`.
 
-2. Přidejte příkaz zahrnutí odkazu na soubor hlaviček pro váš soubor pch.h v projektu UWP a začněte přidávat kód, který používá knihovnu.
+2. Přidejte příkaz zahrnutí odkazu na soubor hlaviček pro váš soubor pch.h (pokud existuje), nebo libovolný soubor .cpp podle potřeby a začněte přidávat kód, který používá knihovnu.
 
    ```cpp
    #include "..\MyNativeLibrary\giraffe.h"
@@ -221,7 +221,7 @@ Pokud chcete používat nativní rozhraní API ve statické knihovně z aplikace
 
 6. Může být nyní některé duplikovali jste kód. Pokud máte více než jeden předkompilované hlavičky (třeba stdafx.h a soubor pch.h), vyberte z nich se má zachovat. Zkopírujte všechny kódu, jako například zahrnovat příkazy do ta, kterou už vedení. Odstraňte vlastnosti dalších a v projektu v části **předkompilované hlavičky**, ujistěte se, že je správný název souboru hlaviček.
 
-   Pokud jste změnili soubor, který má používat jako předkompilované hlavičky, ujistěte se, že jsou správné pro každý soubor možností předkompilovaných hlaviček. Pak vyberte každý soubor .cpp, otevřete její okno Vlastnosti a ujistěte se, že všechny jsou nastaveny na **použití (/Yu)**, s výjimkou požadované předkompilované hlavičky, které by mělo být nastavené **vytvořit (/Yc)**.
+   Pokud jste změnili soubor, který má používat jako předkompilované hlavičky, ujistěte se, že jsou správné pro každý soubor možností předkompilovaných hlaviček. Pak vyberte každý soubor .cpp, otevřete její okno Vlastnosti a ujistěte se, že všechny jsou nastaveny na **použití (/Yu)** , s výjimkou požadované předkompilované hlavičky, které by mělo být nastavené **vytvořit (/Yc)** .
 
 7. Sestavte projekt a vyřešte všechny chyby. Tyto chyby může být způsobena použitím `/ZW` možnost, nebo může být způsobena novou verzi sady Windows SDK nebo se může dojít k tomu závislosti, jako jsou hlavičkové soubory, knihovny, na kterých závisí nebo rozdíly v nastavení projektu mezi tvojí projekt a novým.
 

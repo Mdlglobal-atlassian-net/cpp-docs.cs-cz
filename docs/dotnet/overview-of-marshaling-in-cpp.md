@@ -1,6 +1,6 @@
 ---
 title: Přehled zařazování v jazyku C++
-ms.date: 06/28/2018
+ms.date: 07/12/2019
 ms.topic: reference
 f1_keywords:
 - marshaling
@@ -10,16 +10,16 @@ helpviewer_keywords:
 - C++ Support Library, marshaling
 - marshaling, about marshaling
 ms.assetid: 997dd4bc-5f98-408f-b890-f35de9ce3bb8
-ms.openlocfilehash: 9e3b8f561ce6609eb2afedb527a16c4803f69c53
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 937fbdf4b3ed09344e69a8f1eb731565c36794ae
+ms.sourcegitcommit: 0e3da5cea44437c132b5c2ea522bd229ea000a10
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62384735"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67861167"
 ---
-# <a name="overview-of-marshaling-in-c"></a>Přehled zařazování v jazyku C++
+# <a name="overview-of-marshaling-in-ccli"></a>Přehled zařazování v C++vyhodnocovací
 
-Ve smíšeném režimu někdy musíte zařazování dat mezi nativními a spravovanými typy. Visual Studio 2008 zavedené *zařazovací knihovna* umožňující zařazování a převádí data v jednoduché.  Zařazovací knihovna se skládá ze sady funkcí a `marshal_context` třídy, které provádějí zařazování pro běžné typy. Knihovny je definován v těchto záhlavích v **zahrnují/msclr –** adresář pro vaši verzi sady Visual Studio:
+Ve smíšeném režimu někdy musíte zařazování dat mezi nativními a spravovanými typy. *Zařazovací knihovna* pomáhá zařazování a převádí data v jednoduché.  Zařazovací knihovna se skládá ze sady funkcí a `marshal_context` třídy, které provádějí zařazování pro běžné typy. Knihovny je definován v těchto záhlavích v **zahrnují/msclr –** adresář pro vaši verzi sady Visual Studio:
 
 |Záhlaví|Popis|
 |---------------|-----------------|
@@ -71,8 +71,6 @@ Tento příklad ukazuje, jak zahrnout adresář msclr – deklarace zahrnout zá
 `#include "msclr\marshal_cppstd.h"`
 
 Knihovna zařazování je rozšiřitelný, kde můžete přidat vlastní zařazování typů. Další informace o rozšíření knihovny zařazování, naleznete v tématu [jak: Rozšíření knihovny zařazování](../dotnet/how-to-extend-the-marshaling-library.md).
-
-V dřívějších verzích by mohla zařazování dat s využitím [vyvolání platformy](/dotnet/framework/interop/consuming-unmanaged-dll-functions). Další informace o `PInvoke`, naleznete v tématu [volání nativních funkcí ze spravovaného kódu](../dotnet/calling-native-functions-from-managed-code.md).
 
 ## <a name="see-also"></a>Viz také:
 

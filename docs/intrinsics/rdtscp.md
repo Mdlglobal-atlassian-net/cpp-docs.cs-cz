@@ -1,6 +1,6 @@
 ---
 title: __rdtscp
-ms.date: 11/04/2016
+ms.date: 07/11/2019
 f1_keywords:
 - __rdtscp
 helpviewer_keywords:
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - __rdtscp intrinsic
 - rdtscp instruction
 ms.assetid: f17d9a9c-88bb-44e0-b69d-d516bc1c93ee
-ms.openlocfilehash: b28052fbe0a1ab0e1a6f037ce61f43abea5cf771
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b8a31c6d19cd171cbe909c75a27c2389866bd578
+ms.sourcegitcommit: 0e3da5cea44437c132b5c2ea522bd229ea000a10
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62263058"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67861115"
 ---
 # <a name="rdtscp"></a>__rdtscp
 
@@ -42,7 +42,7 @@ Počet cyklů 64bitové celé číslo bez znaménka.
 
 |Vnitřní|Architektura|
 |---------------|------------------|
-|`__rdtscp`|0Fh řady NPT AMD nebo novější verze|
+|`__rdtscp`|x86, x64|
 
 **Soubor hlaviček** \<intrin.h >
 
@@ -50,25 +50,22 @@ Počet cyklů 64bitové celé číslo bez znaménka.
 
 Tomto vnitřní vygeneruje `rdtscp` instrukce. Chcete-li určit hardwarovou podporu pro tento pokyn, zavolejte `__cpuid` vnitřní s `InfoType=0x80000001` a zkontrolujte bit 27 `CPUInfo[3] (EDX)`. Tato verze je 1, pokud podporované instrukce a 0 jinak.  Pokud jste spustili kód, který používá tuto vnitřní hardware, který není podporován `rdtscp` instrukce, výsledky nepředvídatelné.
 
-> [!CAUTION]
->  Na rozdíl od `rdtsc`, `rdtscp` je serializaci instrukce; nicméně, kompilátor může přesunout kód tomuto vnitřní.
-
-Výklad TSC hodnotu této generace hardwaru se liší od v dřívějších verzích x64.  Najdete v článku hardware příruček pro další informace.
+Tento pokyn počká, až uzavřeli dohodu o všech předchozích kroků a všech předchozích načtení jsou viditelné globálně. Však není serializaci instrukce. Zobrazit Intelu a AMD příruček pro další informace.
 
 Hodnoty ve smyslu `TSC_AUX[31:0]` závisí na operačním systému.
 
 ## <a name="example"></a>Příklad
 
-```
+```cpp
 #include <intrin.h>
 #include <stdio.h>
 int main()
 {
-unsigned __int64 i;
-unsigned int ui;
-i = __rdtscp(&ui);
-printf_s("%I64d ticks\n", i);
-printf_s("TSC_AUX was %x\n", ui);
+    unsigned __int64 i;
+    unsigned int ui;
+    i = __rdtscp(&ui);
+    printf_s("%I64d ticks\n", i);
+    printf_s("TSC_AUX was %x\n", ui);
 }
 ```
 
@@ -79,7 +76,6 @@ TSC_AUX was 0
 
 **Specifické pro END Microsoft**
 
-Copyright 2007 by Advanced Micro Devices, Inc. Všechna práva vyhrazena. Reprodukovat se svolením rozšířené Micro zařízení, Inc.
 
 ## <a name="see-also"></a>Viz také:
 

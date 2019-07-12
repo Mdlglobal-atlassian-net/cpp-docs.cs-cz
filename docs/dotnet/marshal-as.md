@@ -1,6 +1,6 @@
 ---
 title: marshal_as
-ms.date: 11/04/2016
+ms.date: 07/12/2019
 ms.topic: reference
 f1_keywords:
 - marshal_as
@@ -9,12 +9,12 @@ f1_keywords:
 helpviewer_keywords:
 - marshal_as template [C++]
 ms.assetid: 2ed717da-2b11-41e5-981d-47d251771989
-ms.openlocfilehash: 2294d8fe94a32f281332c963b21a542366ae3207
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6ab4962f18368f0d896f8b7343baf54e8f59ac52
+ms.sourcegitcommit: 0e3da5cea44437c132b5c2ea522bd229ea000a10
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62386080"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67861099"
 ---
 # <a name="marshalas"></a>marshal_as
 
@@ -44,6 +44,8 @@ Tato metoda je jednodušší způsob, jak převést dat mezi nativními a spravo
 Pokud se pokusíte zařazování pár datových typů, které nejsou podporované. zahrnuje `marshal_as` vygeneruje chybu [C4996](../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md) v době kompilace. Přečtěte si zprávy zadané k této chybě Další informace. `C4996` Chyby mohou být generovány pro více než jen zastaralé funkce. Jedním z příkladů je pokusu o zařazení pár datových typů, které nejsou podporovány.
 
 Zařazovací knihovna se skládá z několika hlavičkové soubory. Jakýkoli převod vyžaduje pouze jeden soubor, ale pokud je potřeba pro ostatní převody, které můžete zahrnout další soubory. Pokud chcete zjistit, které převody jsou přidruženy soubory, které, podívejte se v tabulce v `Marshaling Overview`. Bez ohledu na to co převodu chcete udělat, požadavek na obor názvů je vždy v platnosti.
+
+Vyvolá `System::ArgumentNullException(_EXCEPTION_NULLPTR)` Pokud vstupní parametr má hodnotu null.
 
 ## <a name="example"></a>Příklad
 
