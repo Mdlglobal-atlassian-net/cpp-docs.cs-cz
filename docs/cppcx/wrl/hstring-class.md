@@ -1,6 +1,6 @@
 ---
 title: HString – třída
-ms.date: 09/24/2018
+ms.date: 07/15/2019
 ms.topic: reference
 f1_keywords:
 - corewrappers/Microsoft::WRL::Wrappers::HString
@@ -8,6 +8,7 @@ f1_keywords:
 - corewrappers/Microsoft::WRL::Wrappers::HString::CopyTo
 - corewrappers/Microsoft::WRL::Wrappers::HString::Detach
 - corewrappers/Microsoft::WRL::Wrappers::HString::Get
+- corewrappers/Microsoft::WRL::Wrappers::HString::GetRawBuffer
 - corewrappers/Microsoft::WRL::Wrappers::HString::GetAddressOf
 - corewrappers/Microsoft::WRL::Wrappers::HString::HString
 - corewrappers/Microsoft::WRL::Wrappers::HString::IsValid
@@ -37,12 +38,12 @@ helpviewer_keywords:
 - Microsoft::WRL::Wrappers::HString::Set method
 - Microsoft::WRL::Wrappers::HString::~HString, destructor
 ms.assetid: 6709dd2e-8d72-4675-8ec7-1baa7d71854d
-ms.openlocfilehash: 19ef11a5d33e69bb77049e450df1b386528b7f7b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 884efb2a69b05589ad9458148409533880073878
+ms.sourcegitcommit: fd466f2e14ad001f52f3dbe54f46d77be10f2d7b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62398287"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67894407"
 ---
 # <a name="hstring-class"></a>HString – třída
 
@@ -62,20 +63,21 @@ Modul Runtime Windows poskytuje přístup k řetězcům prostřednictvím [HSTRI
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-Název                                | Popis
+Name                                | Popis
 ----------------------------------- | -----------------------------------------------------
 [Hstring::hstring –](#hstring)        | Inicializuje novou instanci třídy `HString` třídy.
 [HString:: ~ HString](#tilde-hstring) | Odstraní aktuální instanci aplikace `HString` třídy.
 
 ### <a name="public-methods"></a>Veřejné metody
 
-Název                                     | Popis
+Name                                     | Popis
 ---------------------------------------- | -------------------------------------------------------------------------------------------------------------
 [Hstring::Attach –](#attach)               | Přidruží zadaný `HString` objektu s aktuálním `HString` objektu.
 [Hstring::CopyTo –](#copyto)               | Zkopíruje aktuální `HString` objektu na objekt HSTRING.
 [Hstring::detach –](#detach)               | Zruší přidružení zadaného `HString` objekt ze základní hodnoty.
 [Hstring::Get –](#get)                     | Načte hodnotu podkladového popisovače HSTRING.
 [HString::GetAddressOf](#getaddressof)   | Načte ukazatel na podkladové popisovač HSTRING.
+[HString::GetRawBuffer](#getrawbuffer)   | Načte ukazatel na podkladová data řetězce.
 [HString::IsValid](#isvalid)             | Určuje, zda aktuální `HString` objektu je neplatný.
 [Hstring::makereference –](#makereference) | Vytvoří `HStringReference` objekt ze zadaného parametru řetězce.
 [Hstring::Release –](#release)             | Odstraní hodnotu řetězce a inicializuje aktuální `HString` objektu na prázdnou hodnotu.
@@ -83,7 +85,7 @@ Název                                     | Popis
 
 ### <a name="public-operators"></a>Veřejné operátory
 
-Název                                         | Popis
+Name                                         | Popis
 -------------------------------------------- | ----------------------------------------------------------------------------
 [HString::operator =](#operator-assign)       | Přesune hodnotu jiného `HString` objektů na aktuální `HString` objektu.
 [HString::operator ==](#operator-equality)    | Určuje, zda se tyto dva parametry rovnají.
@@ -181,6 +183,22 @@ Ukazatel na podkladové popisovač HSTRING.
 ### <a name="remarks"></a>Poznámky
 
 Po provedení této operace je zničen řetězcovou hodnotu podkladového popisovače HSTRING.
+
+## <a name="getrawbuffer"></a>HString::GetRawBuffer
+
+Načte ukazatel na podkladová data řetězce.
+
+```cpp
+const wchar_t* GetRawBuffer(unsigned int* length) const;
+```
+### <a name="parameters"></a>Parametry
+
+*Délka* ukazatel **int** proměnné, která obdrží délka dat.
+
+### <a name="return-value"></a>Návratová hodnota
+
+A **const** ukazatel na podkladová data řetězce.
+
 
 ## <a name="hstring"></a>Hstring::hstring –
 

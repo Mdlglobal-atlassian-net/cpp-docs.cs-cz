@@ -1,6 +1,6 @@
 ---
 title: CWinApp – třída
-ms.date: 11/04/2016
+ms.date: 07/15/2019
 f1_keywords:
 - CWinApp
 - AFXWIN/CWinApp
@@ -192,12 +192,12 @@ helpviewer_keywords:
 - CWinApp [MFC], m_nAutosaveInterval
 - CWinApp [MFC], m_pDataRecoveryHandler
 ms.assetid: e426a3cd-0d15-40d6-bd55-beaa5feb2343
-ms.openlocfilehash: 6366638ebfd5e78ad517a8913e4276d5cd820670
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a4ec6c976b6611563eb95cce1173d7c77c3b5ef0
+ms.sourcegitcommit: fd466f2e14ad001f52f3dbe54f46d77be10f2d7b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62323356"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67894488"
 ---
 # <a name="cwinapp-class"></a>CWinApp – třída
 
@@ -213,13 +213,13 @@ class CWinApp : public CWinThread
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CWinApp::CWinApp](#cwinapp)|Vytvoří `CWinApp` objektu.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CWinApp::AddDocTemplate](#adddoctemplate)|Přidá šablonu dokumentu do seznamu aplikace ze šablony dokumentu k dispozici.|
 |[CWinApp::AddToRecentFileList](#addtorecentfilelist)|Přidá název souboru do seznamu naposledy použitých souborů (MRU).|
@@ -287,7 +287,7 @@ class CWinApp : public CWinThread
 
 ### <a name="protected-methods"></a>Chráněné metody
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CWinApp::EnableShellOpen](#enableshellopen)|Umožňuje uživateli otevřít datové soubory ze souboru správce Windows.|
 |[CWinApp::LoadStdProfileSettings](#loadstdprofilesettings)|Zatížení standard. Nastavení souboru INI a umožňuje seznamu naposledy použitých položek souboru funkci seznamu.|
@@ -306,7 +306,7 @@ class CWinApp : public CWinThread
 
 ### <a name="public-data-members"></a>Veřejné datové členy
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CWinApp::m_bHelpMode](#m_bhelpmode)|Určuje, zda uživatel je v režimu kontextové nápovědy (obvykle vyvolány pomocí klávesy SHIFT + F1).|
 |[CWinApp::m_eHelpType](#m_ehelptype)|Určuje typ nápovědy v aplikaci použít.|
@@ -323,7 +323,7 @@ class CWinApp : public CWinThread
 
 ### <a name="protected-data-members"></a>Chránění členové dat
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CWinApp::m_dwRestartManagerSupportFlags](#m_dwrestartmanagersupportflags)|Příznaky, které určují, jak se chová správce restartování.|
 |[CWinApp::m_nAutosaveInterval](#m_nautosaveinterval)|Délka doby v milisekundách mezi automaticky ukládá.|
@@ -899,7 +899,7 @@ Nenulové, pokud je úspěšná. jinak 0.
 Tato členská funkce není rozlišuje velikost písmen, takže jsou řetězce v *lpszSection* a *lpszEntry* parametrů se může lišit v případě.
 
 > [!NOTE]
-> `GetProfileBinary` přidělí vyrovnávací paměti a vrátí jeho adresu v \* *ppData*. Volající zodpovídá za uvolnění vyrovnávací paměti pomocí **delete []**.
+> `GetProfileBinary` přidělí vyrovnávací paměti a vrátí jeho adresu v \* *ppData*. Volající zodpovídá za uvolnění vyrovnávací paměti pomocí **delete []** .
 
 > [!IMPORTANT]
 > Data vrácená touto funkcí nemusí být nutně ukončena hodnotou null a volající musí provést ověření. Další informace najdete v tématu [předcházení přetečení vyrovnávací paměti](/windows/desktop/SecBP/avoiding-buffer-overruns).
@@ -1033,10 +1033,10 @@ virtual void HtmlHelp(
 ### <a name="parameters"></a>Parametry
 
 *dwData*<br/>
-Určuje další data. Hodnota závisí na hodnotě *nCmd* parametru.
+Určuje další data. Hodnota závisí na hodnotě *nCmd* parametru. Výchozí hodnota je `0x000F` to znamená, že [HH_HELP_CONTEXT](/previous-versions/windows/desktop/htmlhelp/hh-help-context-command).
 
 *nCmd*<br/>
-Určuje typ nápovědy požadavku. Seznam možných hodnot a jejich vliv *dwData* parametr, najdete v článku *uCommand* parametr je popsáno v o the HTMLHelp funkce rozhraní API v sadě Windows SDK.
+Určuje typ nápovědy požadavku. Seznam možných hodnot a jejich vliv *dwData* parametr, naleznete v tématu *uCommand* podle parametru [HtmlHelpW](/windows/desktop/api/htmlhelp/nf-htmlhelp-htmlhelpw) nebo [HtmlHelpA](/windows/desktop/api/htmlhelp/nf-htmlhelp-htmlhelpa) Funkce rozhraní API v sadě Windows SDK.  
 
 ### <a name="remarks"></a>Poznámky
 

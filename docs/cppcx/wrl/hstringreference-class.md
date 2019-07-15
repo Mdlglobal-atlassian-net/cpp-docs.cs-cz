@@ -1,11 +1,12 @@
 ---
 title: HStringReference – třída
-ms.date: 09/25/2018
+ms.date: 07/15/2019
 ms.topic: reference
 f1_keywords:
 - corewrappers/Microsoft::WRL::Wrappers::HStringReference
 - corewrappers/Microsoft::WRL::Wrappers::HStringReference::CopyTo
 - corewrappers/Microsoft::WRL::Wrappers::HStringReference::Get
+- corewrappers/Microsoft::WRL::Wrappers::GetRawBuffer
 - corewrappers/Microsoft::WRL::Wrappers::HStringReference::HStringReference
 - corewrappers/Microsoft::WRL::Wrappers::HStringReference::operator=
 - corewrappers/Microsoft::WRL::Wrappers::HStringReference::operator==
@@ -21,12 +22,12 @@ helpviewer_keywords:
 - Microsoft::WRL::Wrappers::HStringReference::operator!= operator
 - Microsoft::WRL::Wrappers::HStringReference::operator< operator
 ms.assetid: 9bf823b1-17eb-4ac4-8c5d-27d27c7a4150
-ms.openlocfilehash: b9d2e49d0a7e1321e2259c06e1313a90d55dc90e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9c17a9df8fcc7d849bbbd4f613bf5dce6dae8983
+ms.sourcegitcommit: fd466f2e14ad001f52f3dbe54f46d77be10f2d7b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62398274"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67894393"
 ---
 # <a name="hstringreference-class"></a>HStringReference – třída
 
@@ -46,7 +47,7 @@ Doba života běhu záložní vyrovnávací paměti v novém HSTRING není sprav
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-Název                                                    | Popis
+Name                                                    | Popis
 ------------------------------------------------------- | -----------------------------------------------------------
 [Hstringreference::hstringreference –](#hstringreference) | Inicializuje novou instanci třídy `HStringReference` třídy.
 
@@ -56,10 +57,11 @@ Název                                                    | Popis
 ----------------------------------- | ------------------------------------------------------------------
 [Hstringreference::CopyTo –](#copyto) | Zkopíruje aktuální `HStringReference` objektu na objekt HSTRING.
 [HStringReference::Get](#get)       | Načte hodnotu podkladového popisovače HSTRING.
+[HStringReference::GetRawBuffer](#getrawbuffer) | Načte ukazatel na podkladová data řetězce.
 
 ### <a name="public-operators"></a>Veřejné operátory
 
-Název                                                  | Popis
+Name                                                  | Popis
 ----------------------------------------------------- | ----------------------------------------------------------------------------------------------
 [HStringReference::operator =](#operator-assign)       | Přesune hodnotu jiného `HStringReference` objektů na aktuální `HStringReference` objektu.
 [HStringReference::operator ==](#operator-equality)    | Určuje, zda se tyto dva parametry rovnají.
@@ -106,6 +108,21 @@ HSTRING Get() const throw()
 ### <a name="return-value"></a>Návratová hodnota
 
 Hodnotu podkladového popisovače HSTRING.
+
+## <a name="getrawbuffer"></a>HStringReference::GetRawBuffer
+
+Načte ukazatel na podkladová data řetězce.
+
+```cpp
+const wchar_t* GetRawBuffer(unsigned int* length) const;
+```
+### <a name="parameters"></a>Parametry
+
+*Délka* ukazatel **int** proměnné, která obdrží délka dat.
+
+### <a name="return-value"></a>Návratová hodnota
+
+A **const** ukazatel na podkladová data řetězce.
 
 ## <a name="hstringreference"></a>Hstringreference::hstringreference –
 

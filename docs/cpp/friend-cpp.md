@@ -1,6 +1,6 @@
 ---
 title: friend (C++)
-ms.date: 11/19/2018
+ms.date: 07/15/2019
 f1_keywords:
 - friend_cpp
 helpviewer_keywords:
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - friend classes [C++]
 - friend keyword [C++]
 ms.assetid: 8fe9ee55-d56f-40cd-9075-d9fb1375aff4
-ms.openlocfilehash: 769720877cc58de530791b268811d7d01adad3e6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 03b6cb7f856ec59c10f5e410c947f74d17ec4e46
+ms.sourcegitcommit: fd466f2e14ad001f52f3dbe54f46d77be10f2d7b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62154484"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67894422"
 ---
 # <a name="friend-c"></a>friend (C++)
 
@@ -119,7 +119,7 @@ Je-li třeba deklarovat dvě třídy, které jsou navzájem spřáteleny, celá 
 
 ## <a name="friend-functions"></a>friend – funkce
 
-A **friend** funkce je funkce, která není členem třídy, ale má přístup k soukromým a chráněným členům třídy. Spřátelené funkce nejsou považovány za členy třídy. Jsou to normální externí funkce, kterým jsou přiřazena zvláštní přístupová oprávnění. Spřátelené funkce nejsou v oboru třídy a nejsou volány pomocí operátorů výběru členů (**.** a -**>**) Pokud nejsou členy jiné třídy. A **friend** funkce je deklarována pomocí třídy, která uděluje přístup. **Friend** deklarace může být umístěna kdekoli v deklaraci třídy. Není ovlivněna klíčovými slovy řízení přístupu.
+A **friend** funkce je funkce, která není členem třídy, ale má přístup k soukromým a chráněným členům třídy. Spřátelené funkce nejsou považovány za členy třídy. Jsou to normální externí funkce, kterým jsou přiřazena zvláštní přístupová oprávnění. Spřátelené funkce nejsou v oboru třídy a nejsou volány pomocí operátorů výběru členů ( **.** a - **>** ) Pokud nejsou členy jiné třídy. A **friend** funkce je deklarována pomocí třídy, která uděluje přístup. **Friend** deklarace může být umístěna kdekoli v deklaraci třídy. Není ovlivněna klíčovými slovy řízení přístupu.
 
 Následující příklad ukazuje třídu `Point` a spřátelenou funkci `ChangePrivate`. **Friend** funkce má přístup ke členu soukromých dat objektu `Point` který přijímá jako parametr.
 
@@ -224,7 +224,7 @@ int main() {
 
 Přátelství není vzájemné, pokud není výslovně uvedeno. V předchozím příkladu nemohou členské funkce `YourClass` získat přístup k soukromým členům `YourOtherClass`.
 
-Spravovaný typ nemůže mít jakékoli přátelské funkce, přátelské třídy nebo přátelská rozhraní.
+Spravovaného typu (v C++vyhodnocovací) nemůže mít jakékoli přátelské funkce, přátelské třídy nebo přátelská rozhraní.
 
 Přátelství není zděděno, což znamená, že třídy odvozené z `YourOtherClass` nemohou získat přístup k soukromým členům `YourClass`. Přátelství není přenosné, takže třídy, které jsou přátelé `YourOtherClass`, nemohou získat přístup k soukromým členům `YourClass`.
 
@@ -235,9 +235,7 @@ Vliv na relace typu friend
 
 ## <a name="inline-friend-definitions"></a>Definice vloženého typu friend
 
-Spřátelené funkce lze definovat uvnitř deklarací tříd. Tyto funkce jsou vložené funkce a chovají se podobně jako vložené členské funkce, jako by byly definovány ihned po zjištění členů třídy, ale ještě před uzavřením oboru třídy (konec deklarace třídy).
-
-Spřátelené funkce definované uvnitř deklarací třídy nejsou v rozsahu považovány za nadřazené třídy. Jsou v rozsahu souboru.
+Spřátelené funkce lze definovat (daný tělo funkce) uvnitř deklarací tříd. Tyto funkce jsou vložené funkce a chovají se podobně jako vložené členské funkce, jako by byly definovány ihned po zjištění členů třídy, ale ještě před uzavřením oboru třídy (konec deklarace třídy). Spřátelené funkce definované uvnitř deklarací tříd jsou v oboru ohraničující třídy.
 
 ## <a name="see-also"></a>Viz také:
 

@@ -1,6 +1,6 @@
 ---
 title: Cmfcmenubutton – třída
-ms.date: 11/04/2016
+ms.date: 07/15/2019
 f1_keywords:
 - CMFCMenuButton
 - AFXMENUBUTTON/CMFCMenuButton
@@ -12,6 +12,7 @@ f1_keywords:
 - AFXMENUBUTTON/CMFCMenuButton::m_bStayPressed
 - AFXMENUBUTTON/CMFCMenuButton::m_hMenu
 - AFXMENUBUTTON/CMFCMenuButton::m_nMenuResult
+- AFXMENUBUTTON/CMFCMenuButton::m_bDefaultClick
 helpviewer_keywords:
 - CMFCMenuButton [MFC], CMFCMenuButton
 - CMFCMenuButton [MFC], PreTranslateMessage
@@ -21,13 +22,14 @@ helpviewer_keywords:
 - CMFCMenuButton [MFC], m_bStayPressed
 - CMFCMenuButton [MFC], m_hMenu
 - CMFCMenuButton [MFC], m_nMenuResult
+- CMFCMenuButton [MFC], m_bDefaultClick
 ms.assetid: 53d3d459-1e5a-47c5-8b7f-2e61f6af5187
-ms.openlocfilehash: cbdf4005ee1a0249e7ed2b5f1d50621fb951f64f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 71d239c9d1084c69ab2e159a479e66f0cbe66d7a
+ms.sourcegitcommit: fd466f2e14ad001f52f3dbe54f46d77be10f2d7b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62388420"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67894423"
 ---
 # <a name="cmfcmenubutton-class"></a>Cmfcmenubutton – třída
 
@@ -43,26 +45,27 @@ class CMFCMenuButton : public CMFCButton
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CMFCMenuButton::CMFCMenuButton](#cmfcmenubutton)|Vytvoří `CMFCMenuButton` objektu.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CMFCMenuButton::PreTranslateMessage](#pretranslatemessage)|Volá se rozhraním před odesláním přeložit zprávy okna. (Přepíše `CMFCButton::PreTranslateMessage`.)|
 |[CMFCMenuButton::SizeToContent](#sizetocontent)|Změní velikost tlačítka podle velikosti jeho textu a obrázků.|
 
 ### <a name="data-members"></a>Datové členy
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CMFCMenuButton::m_bOSMenu](#m_bosmenu)|Určuje, zda chcete zobrazit výchozí rozbalovací nabídky systému nebo použít [CContextMenuManager::TrackPopupMenu](../../mfc/reference/ccontextmenumanager-class.md#trackpopupmenu).|
 |[CMFCMenuButton::m_bRightArrow](#m_brightarrow)|Určuje, zda v rozbalovací nabídce se zobrazí pod nebo napravo od panelu.|
 |[CMFCMenuButton::m_bStayPressed](#m_bstaypressed)|Určuje, zda tlačítko nabídky po uživatel uvolní tlačítko změní svůj stav.|
 |[CMFCMenuButton::m_hMenu](#m_hmenu)|Popisovač pro připojené nabídku Windows.|
 |[CMFCMenuButton::m_nMenuResult](#m_nmenuresult)|Identifikátor, který určuje položky, které uživatel vybral v místní nabídce.|
+|[CMFCMenuButton::m_bDefaultClick](#m_bdefaultclick)| Povolit zpracování výchozí (na tlačítko text nebo obrázek).|
 
 ## <a name="remarks"></a>Poznámky
 
@@ -164,6 +167,28 @@ int m_nMenuResult;
 ### <a name="remarks"></a>Poznámky
 
 Hodnota této proměnné člena je nula, pokud uživatel zruší nabídce bez výběru nebo pokud dojde k chybě.
+
+##  <a name="m_bdefaultclick"></a>  CMFCMenuButton::m_bDefaultClick
+
+Umožňuje zpracovat výchozí Image nebo text na tlačítku.
+
+```
+BOOL  m_bDefaultClick;
+```
+
+### <a name="remarks"></a>Poznámky
+
+M_bDefaultClick nastavení na hodnotu false způsobí, že tlačítko zobrazit v nabídce po kliknutí na libovolné místo na tlačítku.
+
+##  <a name="m_nmenuresult"></a>  CMFCMenuButton::m_nMenuResult
+
+Celé číslo, které označuje, která položka uživatel vybere z místní nabídky.
+
+```
+int m_nMenuResult;
+```
+
+### <a name="remarks"></a>Poznámky
 
 ##  <a name="pretranslatemessage"></a>  CMFCMenuButton::PreTranslateMessage
 

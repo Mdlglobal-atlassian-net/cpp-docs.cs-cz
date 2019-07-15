@@ -7,14 +7,17 @@ helpviewer_keywords:
 - class types [C++], unions as
 - union keyword [C++]
 ms.assetid: 25c4e219-fcbb-4b7b-9b64-83f3252a92ca
-ms.openlocfilehash: 58f4940d209b783b00c7167265ff1a2a733c947c
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.openlocfilehash: c15ec782d16aebab85d57de2dea1e91b91620c74
+ms.sourcegitcommit: fd466f2e14ad001f52f3dbe54f46d77be10f2d7b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65222340"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67894473"
 ---
 # <a name="unions"></a>Sjednocení
+
+> [!NOTE]
+> V C ++ 17 a novějších **std::variant** třídy je typově bezpečný alternativou pro sjednocení.
 
 A **sjednocení** je uživatelem definovaný typ, ve kterém všichni členové sdílejí stejné místo v paměti. To znamená, že v každém okamžiku sjednocení může obsahovat více než jeden objekt ze svého seznamu členů. Také znamená, že bez ohledu na to, kolik členů má sjednocení, vždy používá pouze dostatek paměti k ukládání největšího členu.
 

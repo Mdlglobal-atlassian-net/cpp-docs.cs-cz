@@ -1,6 +1,6 @@
 ---
 title: Zjištění, které knihovny DLL je třeba redistribuovat
-ms.date: 03/25/2019
+ms.date: 07/15/2019
 helpviewer_keywords:
 - redistributing DLLs
 - DLLs [C++], redistributing
@@ -8,18 +8,18 @@ helpviewer_keywords:
 - application deployment [C++], DLL redistribution
 - deploying applications [C++], DLL redistribution
 ms.assetid: f7a2cb42-fb48-42ab-abd2-b35e2fd5601a
-ms.openlocfilehash: 4e4b53745c76a8e5b630bdd92633779e84262188
-ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
+ms.openlocfilehash: 82fb582cae129b517a96deb3d4a9572ef8370a9d
+ms.sourcegitcommit: fd466f2e14ad001f52f3dbe54f46d77be10f2d7b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66451265"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67894484"
 ---
 # <a name="determining-which-dlls-to-redistribute"></a>Zjištění, které knihovny DLL je třeba redistribuovat
 
 Při sestavování aplikace, která používá knihoven DLL, získáte ho od sady Visual Studio se třeba uživatelům vaší aplikace těmito knihovnami DLL na svých počítačích pro spuštění aplikace. Protože většina uživatelů pravděpodobně nemají nainstalovanou sadu Visual Studio, je nutné zadat tyto knihovny DLL pro ně. Visual Studio zpřístupní tyto knihovny DLL jako *distribuovatelné soubory* , kterou můžete v instalačním programem vaší aplikace.
 
-Aby bylo snazší zahrnout distribuovatelné knihovny DLL s instalačním programem vaší, jsou k dispozici jako samostatné *Distribuovatelné balíčky*. Toto jsou specifické pro architekturu spustitelné soubory, které pomocí centrálního nasazení nainstalujte distribuovatelné soubory v počítači uživatele. Například vcredist\_x86.exe nainstaluje 32bitové knihovny pro x86 počítače, vcredist\_x64.exe nainstaluje knihovny 64-bit pro x64 počítače a vcredist\_ARM.exe nainstaluje knihovny pro počítače ARM. Doporučujeme centrálního nasazení, protože Microsoft můžete použít službu Windows Update se nezávisle aktualizovat tyto knihovny. Kromě kopií v instalaci sady Visual Studio aktuální Distribuovatelné balíčky jsou k dispozici ke stažení. Odkazy na nejnovější podporované redistribuovatelné balíčky pro aktuální a starší sady nástrojů, naleznete v části [nejnovější podporované soubory ke stažení Visual C++](https://support.microsoft.com/help/2977003/the-latest-supported-visual-c-downloads). Konkrétní starší verze distribuovatelné balíčky mohou jde najít vyhledáváním [Microsoft Download Center](https://go.microsoft.com/fwlink/p/?LinkId=158431) pro "Distribuovatelné balíčky Visual C++".
+Aby bylo snazší zahrnout distribuovatelné knihovny DLL s instalačním programem vaší, jsou k dispozici jako samostatné *Distribuovatelné balíčky*. Toto jsou specifické pro architekturu spustitelné soubory, které pomocí centrálního nasazení nainstalujte distribuovatelné soubory v počítači uživatele. Například vcredist\_x86.exe nainstaluje 32bitové knihovny pro x86 i x64 počítače vcredist\_x64.exe nainstaluje knihovny 64-bit pro x64 počítače a vcredist\_ARM.exe nainstaluje knihovny pro ARM počítače. Doporučujeme centrálního nasazení, protože Microsoft můžete použít službu Windows Update se nezávisle aktualizovat tyto knihovny. Kromě kopií v instalaci sady Visual Studio aktuální Distribuovatelné balíčky jsou k dispozici ke stažení. Odkazy na nejnovější podporované redistribuovatelné balíčky pro aktuální a starší sady nástrojů, naleznete v části [nejnovější podporované soubory ke stažení Visual C++](https://support.microsoft.com/help/2977003/the-latest-supported-visual-c-downloads). Konkrétní starší verze distribuovatelné balíčky mohou jde najít vyhledáváním [Microsoft Download Center](https://go.microsoft.com/fwlink/p/?LinkId=158431) pro "Distribuovatelné balíčky Visual C++".
 
 Hlavní číslo verze balíčku opětovné distribuce nasadíte musí odpovídat verzi sady nástrojů Visual Studio používá k vytvoření aplikace a podverze musí být stejná nebo vyšší. Visual Studio 2017 a Visual Studio 2015 mají sadu nástrojů kompatibilní čísla verzí, což znamená, že Visual Studio 2017 distribuovatelné soubory může používat aplikace vytvořené s použitím nástrojů 2015. Když mohou být kompatibilní, nepodporujeme pomocí distribuovatelné soubory 2015 v aplikace vytvořené s použitím nástrojů 2017. Podporujeme jenom pomocí distribuovatelných balíčků, který je stejný jako nebo novější než vaše verze sady nástrojů.
 

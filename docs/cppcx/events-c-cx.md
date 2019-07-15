@@ -1,13 +1,13 @@
 ---
 title: Události (C++/CX)
-ms.date: 01/22/2017
+ms.date: 07/15/2019
 ms.assetid: 31c8e08a-00ad-40f9-8f7e-124864aaad58
-ms.openlocfilehash: 8e7e8616831e66a7f59ed849fc92ef2553aadb5b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d0a3ab01628487dcca081eb300470cbd1bf3bb83
+ms.sourcegitcommit: fd466f2e14ad001f52f3dbe54f46d77be10f2d7b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62301536"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67894457"
 ---
 # <a name="events-ccx"></a>Události (C++/CX)
 
@@ -15,7 +15,7 @@ Windows Runtime lze deklarovat typ (který je, publikování) události a kódem
 
 ## <a name="consuming-events-in-windows-components"></a>Spotřebovávajících událostí ve Windows komponenty
 
-Mnoho komponent v prostředí Windows Runtime vystavit události. Například objekt LightSensor aktivuje událost ReadingChanged při senzor sestavy novou hodnotu gradientu. Při použití objektu LightSensor ve svém programu, můžete definovat metodu, která bude volána po ReadingChanged událost se aktivuje. Metodu můžete dělat cokoliv, co chcete udělat; Jediným požadavkem je, že jeho podpis musí odpovídat signatuře delegáta, který je pro další informace o tom, jak vytvořit obslužnou rutinu události delegáta a přihlásit odběr události, přečtěte si [delegáti](../cppcx/delegates-c-cx.md).
+Mnoho komponent v prostředí Windows Runtime vystavit události. Například objekt LightSensor aktivuje událost ReadingChanged při senzor sestavy novou hodnotu gradientu. Při použití objektu LightSensor ve svém programu, můžete definovat metodu, která bude volána po ReadingChanged událost se aktivuje. Metodu můžete dělat cokoliv, co chcete udělat; Jediným požadavkem je, že jeho podpis musí odpovídat signatuře delegáta, která je vyvolána. Další informace o tom, jak vytvořit obslužnou rutinu události delegáta a přihlášení k odběru události najdete v tématu [delegáti](../cppcx/delegates-c-cx.md).
 
 ## <a name="creating-custom-events"></a>Vytváření vlastních událostí
 
