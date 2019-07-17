@@ -42,25 +42,16 @@ helpviewer_keywords:
 - std::sqrt [C++]
 - std::tan [C++]
 - std::tanh [C++]
-ms.openlocfilehash: a67955da21c1229c3492d5b52dd6e14c9caa33fd
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5ecba1de1419203d75ba6a97fbd651469a472905
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62389200"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68244717"
 ---
 # <a name="ltcomplexgt-functions"></a>&lt;komplexní&gt; funkce
 
-||||
-|-|-|-|
-|[abs](#abs)|[arg](#arg)|[conj](#conj)|
-|[cos](#cos)|[cosh](#cosh)|[exp](#exp)|
-|[imag](#imag)|[log](#log)|[log10](#log10)|
-|[Norm –](#norm)|[polar](#polar)|[Pow](#pow)|
-|[Real](#real)|[sin](#sin)|[sinh](#sinh)|
-|[sqrt](#sqrt)|[Tan](#tan)|[tanh](#tanh)|
-
-## <a name="abs"></a>  abs
+## <a name="abs"></a> Abs
 
 Vypočítá zbytek z komplexního čísla.
 
@@ -71,7 +62,7 @@ Type abs(const complex<Type>& complexNum);
 
 ### <a name="parameters"></a>Parametry
 
-*complexNum*<br/>
+*complexNum*\
 Komplexní čísla, jejichž modulus má být stanovena.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -147,7 +138,19 @@ arg ( c2 ) = 0.523599 radians, which is 30 degrees.
 The complex numbers c2 & c3 have the same principal arguments.
 ```
 
-## <a name="arg"></a>  arg
+## <a name="acos"></a> Funkce ACOS
+
+```cpp
+template<class T> complex<T> acos(const complex<T>&);
+```
+
+## <a name="acosh"></a> acosh –
+
+```cpp
+template<class T> complex<T> acosh(const complex<T>&);
+```
+
+## <a name="arg"></a> arg
 
 Extrahuje argumentu z komplexního čísla.
 
@@ -158,7 +161,7 @@ Type arg(const complex<Type>& complexNum);
 
 ### <a name="parameters"></a>Parametry
 
-*complexNum*<br/>
+*complexNum*\
 Komplexní čísla, jehož argument má být stanovena.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -234,6 +237,30 @@ arg ( c2 ) = 0.523599 radians, which is 30 degrees.
 The complex numbers c2 & c3 have the same principal arguments.
 ```
 
+## <a name="asin"></a> ASIN
+
+```cpp
+template<class T> complex<T> asin(const complex<T>&);
+```
+
+## <a name="asinh"></a> asinh –
+
+```cpp
+template<class T> complex<T> asinh(const complex<T>&);
+```
+
+## <a name="atan"></a> Atan
+
+```cpp
+template<class T> complex<T> atan(const complex<T>&);
+```
+
+## <a name="atanh"></a> atanh –
+
+```cpp
+template<class T> complex<T> atanh(const complex<T>&);
+```
+
 ## <a name="conj"></a>  conj
 
 Vrátí sdružené komplexního čísla.
@@ -245,7 +272,7 @@ complex<Type> conj(const complex<Type>& complexNum);
 
 ### <a name="parameters"></a>Parametry
 
-*complexNum*<br/>
+*complexNum*\
 Komplexní čísla, jejichž sdružené se vrací.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -309,7 +336,7 @@ The imaginary part of c2 is imag ( c2 ) = -3.
 The norm of (c1 * conj (c1) ) is c1 * c2 = 25
 ```
 
-## <a name="cos"></a>  cos
+## <a name="cos"></a> Cos
 
 Vrátí hodnotu kosinus tohoto komplexního čísla.
 
@@ -320,7 +347,7 @@ complex<Type> cos(const complex<Type>& complexNum);
 
 ### <a name="parameters"></a>Parametry
 
-*complexNum*<br/>
+*complexNum*\
 Komplexní čísla, jehož kosinus je stanovena.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -331,9 +358,9 @@ Komplexní čísla, která je kosinus vstupu komplexního čísla.
 
 Definování komplexních cosines identity:
 
-Cos ( *z*) (1/2) =\*(exp ( *iz*) + exp (- *iz*))
+Cos (*z*) (1/2) =\*(exp (*iz*) + exp (- *iz*))
 
-Cos ( *z*) = cos ( *a* + *bi*) = cos ( *a*) cosh ( *b*)-isin ( *a*) sinh ( *b*)
+Cos (*z*) = cos (*a* + *bi*) = cos (*a*) cosh ( *b*)-isin (*a*) sinh (*b*)
 
 ### <a name="example"></a>Příklad
 
@@ -400,7 +427,7 @@ The complex components cos (vci), where abs (vci) = 1
 (0.540302,-1.74036e-013)
 ```
 
-## <a name="cosh"></a>  COSH –
+## <a name="cosh"></a> COSH –
 
 Vrací hyperbolický kosinus komplexního čísla.
 
@@ -411,7 +438,7 @@ complex<Type> cosh(const complex<Type>& complexNum);
 
 ### <a name="parameters"></a>Parametry
 
-*complexNum*<br/>
+*complexNum*\
 Komplexní čísla, jejíž hyperbolický kosinus je stanovena.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -422,9 +449,9 @@ Komplexní čísla, která je hyperbolický kosinus vstupu komplexního čísla.
 
 Definování komplexních hyperbolický cosines identity:
 
-Cos ( *z*) (1/2) =\*(exp ( *z*) + exp (- *z*))
+Cos (*z*) (1/2) =\*(exp (*z*) + exp (- *z*))
 
-Cos ( *z*) = cosh ( *a + bi*) = cosh ( *a*) cos ( *b*) + isinh ( *a*) sin ( *b*)
+Cos (*z*) = cosh (*a+ bi*) = cosh (*a*) cos (*b*) + isinh (*a*) sin (*b*)
 
 ### <a name="example"></a>Příklad
 
@@ -491,7 +518,7 @@ The complex components cosh (vci), where abs (vci) = 1
 (1.54308,2.43059e-013)
 ```
 
-## <a name="exp"></a>  Exp
+## <a name="exp"></a> Exp
 
 Vrátí hodnotu exponenciální funkce komplexního čísla.
 
@@ -502,7 +529,7 @@ complex<Type> exp(const complex<Type>& complexNum);
 
 ### <a name="parameters"></a>Parametry
 
-*complexNum*<br/>
+*complexNum*\
 Komplexního čísla, jejichž exponenciální je stanovena.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -562,7 +589,7 @@ int main() {
 }
 ```
 
-## <a name="imag"></a>  Imag
+## <a name="imag"></a> Imag
 
 Extrahuje imaginární komplexního čísla.
 
@@ -573,7 +600,7 @@ Type imag(const complex<Type>& complexNum);
 
 ### <a name="parameters"></a>Parametry
 
-*complexNum*<br/>
+*complexNum*\
 Komplexní čísla, jejichž skutečné část je třeba extrahovat.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -614,7 +641,7 @@ The real part of c1 is real ( c1 ) = 4.
 The imaginary part of c1 is imag ( c1 ) = 3.
 ```
 
-## <a name="log"></a>  protokol
+## <a name="log"></a> protokol
 
 Vrátí přirozený logaritmus komplexního čísla.
 
@@ -625,7 +652,7 @@ complex<Type> log(const complex<Type>& complexNum);
 
 ### <a name="parameters"></a>Parametry
 
-*complexNum*<br/>
+*complexNum*\
 Komplexní čísla, jejichž přirozený logaritmus je stanovena.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -684,7 +711,7 @@ int main() {
 }
 ```
 
-## <a name="log10"></a>  LOG10
+## <a name="log10"></a> LOG10
 
 Vrátí logaritmus o základu 10 komplexního čísla.
 
@@ -695,7 +722,7 @@ complex<Type> log10(const complex<Type>& complexNum);
 
 ### <a name="parameters"></a>Parametry
 
-*complexNum*<br/>
+*complexNum*\
 Komplexní čísla, jejichž logaritmus o základu 10 je stanovena.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -754,7 +781,7 @@ int main() {
 }
 ```
 
-## <a name="norm"></a>  Norm –
+## <a name="norm"></a> Norm –
 
 Extrahuje norm komplexního čísla.
 
@@ -765,7 +792,7 @@ Type norm(const complex<Type>& complexNum);
 
 ### <a name="parameters"></a>Parametry
 
-*complexNum*<br/>
+*complexNum*\
 Komplexní čísla, jejichž norm má být stanovena.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -774,7 +801,7 @@ Norm komplexního čísla.
 
 ### <a name="remarks"></a>Poznámky
 
-Norm komplexního čísla *+ bi* je *(*<sup>2</sup> *+ b*<sup>2</sup>*).* Norm komplexního čísla je druhou mocninu jeho modulus. Modulus komplexního čísla je míra délku vektoru reprezentující komplexní čísla. Modulus komplexního čísla *+ bi* je `sqrt` *(*<sup>2</sup> *+ b*<sup>2</sup> *),* napsané  *&#124;+ bi&#124;.*
+Norm komplexního čísla *+ bi* je *(* <sup>2</sup> *+ b*<sup>2</sup> *).* Norm komplexního čísla je druhou mocninu jeho modulus. Modulus komplexního čísla je míra délku vektoru reprezentující komplexní čísla. Modulus komplexního čísla *+ bi* je `sqrt` *(* <sup>2</sup> *+ b*<sup>2</sup> *),* napsané  *&#124;+ bi&#124;.*
 
 ### <a name="example"></a>Příklad
 
@@ -837,7 +864,7 @@ The norm of c2 given by: norm ( c2 ) = 25
 The modulus of c2 is the square root of the norm: sqrt ( normc2 ) = 5.
 ```
 
-## <a name="polar"></a>  Polar
+## <a name="polar"></a> Polar
 
 Komplexní čísla, která odpovídá zadané operace modulo a argument, vrátí v Kartézském formuláře.
 
@@ -848,10 +875,10 @@ complex<Type> polar(const Type& _Modulus, const Type& _Argument = 0);
 
 ### <a name="parameters"></a>Parametry
 
-*_Modulus*<br/>
+*_Modulus*\
 Modulus komplexního čísla se vstup.
 
-*_Argument*<br/>
+*_Argument*\
 Argument komplexního čísla se vstup.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -914,7 +941,7 @@ Argument of c2 is recovered from c2 using:
 arg ( c2 ) = 0.523599 radians, which is 30 degrees.
 ```
 
-## <a name="pow"></a>  Pow
+## <a name="pow"></a> Pow
 
 Vyhodnotí komplexního čísla získala při vyvolání základ, který je komplexního čísla na mocninu vyjádřenou druhým číslem komplexní.
 
@@ -934,10 +961,10 @@ complex<Type> pow(const Type& _Base, const complex<Type>& _Power);
 
 ### <a name="parameters"></a>Parametry
 
-*_Base*<br/>
+*_Základní*\
 Komplexní čísla nebo číslo, které je parametr typu pro komplexní čísla, která je základem pro mocniny navýšit tak, že členská funkce.
 
-*_Power*<br/>
+*_Power*\
 Celé číslo nebo komplexní číslo nebo číslo, které je parametr typu pro komplexní čísla, která je výkon, který má být aktivováno členskou funkci základní třídy.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -1059,7 +1086,13 @@ The modulus of ce4 is: 9.8696
 The argument of ce4 is: -1.14473 radians, which is -65.5882 degrees.
 ```
 
-## <a name="real"></a>  Real
+## <a name="proj"></a> proj
+
+```cpp
+template<class T> complex<T> proj(const complex<T>&);
+```
+
+## <a name="real"></a> Real
 
 Extrahuje reálnou součástí komplexního čísla.
 
@@ -1070,7 +1103,7 @@ Type real(const complex<Type>& complexNum);
 
 ### <a name="parameters"></a>Parametry
 
-*complexNum*<br/>
+*complexNum*\
 Komplexní čísla, jejichž skutečné část je třeba extrahovat.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -1111,7 +1144,7 @@ The real part of c1 is real ( c1 ) = 4.
 The imaginary part of c1 is imag ( c1 ) = 3.
 ```
 
-## <a name="sin"></a>  Sin
+## <a name="sin"></a> Sin
 
 Vrátí sinus úhlu komplexního čísla.
 
@@ -1122,7 +1155,7 @@ complex<Type> sin(const complex<Type>& complexNum);
 
 ### <a name="parameters"></a>Parametry
 
-*complexNum*<br/>
+*complexNum*\
 Komplexní čísla, jehož sinus je stanovena.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -1133,9 +1166,9 @@ Komplexní čísla, která je sinus vstupu komplexního čísla.
 
 Definování komplexních siny identity:
 
-Sin ( *z*) = (1/2 *můžu*)\*(exp ( *iz*)-exp (- *iz*))
+Sin (*z*) = (1/2 *můžu*)\*(exp (*iz*)-exp (- *iz*))
 
-Sin ( *z*) = sin ( *a + bi*) = sin ( *a*) cosh ( *b*) + icos ( *a*) sinh ( *b*)
+Sin (*z*) = sin (*a+ bi*) = sin (*a*) cosh (*b*) + icos (*a*) sinh (*b*)
 
 ### <a name="example"></a>Příklad
 
@@ -1202,7 +1235,7 @@ The complex components sin (vci), where abs (vci) = 1
 (-0.841471,-1.11747e-013)
 ```
 
-## <a name="sinh"></a>  SINH –
+## <a name="sinh"></a> SINH –
 
 Vrací hyperbolický sinus komplexního čísla.
 
@@ -1213,7 +1246,7 @@ complex<Type> sinh(const complex<Type>& complexNum);
 
 ### <a name="parameters"></a>Parametry
 
-*complexNum*<br/>
+*complexNum*\
 Komplexní čísla, jejíž hyperbolický sinus je stanovena.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -1224,9 +1257,9 @@ Komplexní čísla, která je hyperbolický sinus vstupu komplexního čísla.
 
 Definování komplexních hyperbolické siny identity:
 
-SINH ( *z*) (1/2) =\*(exp ( *z*)-exp (- *z*))
+SINH (*z*) (1/2) =\*(exp (*z*)-exp (- *z*))
 
-SINH ( *z*) = sinh ( *a + bi*) = sinh ( *a*) cos ( *b*) + *i*cosh ( *a*) sin ( *b*)
+SINH (*z*) = sinh (*a+ bi*) = sinh (*a*) cos (*b*) + *můžu*cosh (*a*) sin (*b*)
 
 ### <a name="example"></a>Příklad
 
@@ -1293,7 +1326,7 @@ The complex components sinh (vci), where abs (vci) = 1
 (-1.1752,-3.19145e-013)
 ```
 
-## <a name="sqrt"></a>  Sqrt
+## <a name="sqrt"></a> Sqrt
 
 Vypočítá druhou odmocninu komplexního čísla.
 
@@ -1304,7 +1337,7 @@ complex<Type> sqrt(const complex<Type>& complexNum);
 
 ### <a name="parameters"></a>Parametry
 
-*complexNum*<br/>
+*complexNum*\
 Komplexní čísla, jejichž odmocnina je nalezen.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -1381,7 +1414,7 @@ complex<Type> tan(const complex<Type>& complexNum);
 
 ### <a name="parameters"></a>Parametry
 
-*complexNum*<br/>
+*complexNum*\
 Komplexní čísla, jehož tangens je stanovena.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -1392,7 +1425,7 @@ Komplexní čísla, která je tangens vstupní komplexního čísla.
 
 Definování komplexních kotangens identity:
 
-Tan ( *z*) = sin ( *z*) / cos ( *z*) = (exp ( *iz*)-exp (- *iz*)) / *i*(exp ( *iz*) + exp (- *iz*))
+Tan (*z*) = sin (*z*) / cos (*z*) = (exp (*iz*)-exp (- *iz*)) / *i*(exp (*iz*) + exp (- *iz*))
 
 ### <a name="example"></a>Příklad
 
@@ -1459,7 +1492,7 @@ The complex components tan (vci), where abs (vci) = 1
 (-1.55741,-7.08476e-013)
 ```
 
-## <a name="tanh"></a>  TANH –
+## <a name="tanh"></a> TANH –
 
 Vrací hyperbolický tangens komplexního čísla.
 
@@ -1470,7 +1503,7 @@ complex<Type> tanh(const complex<Type>& complexNum);
 
 ### <a name="parameters"></a>Parametry
 
-*complexNum*<br/>
+*complexNum*\
 Komplexní čísla, jejíž hyperbolický tangens je stanovena.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -1481,7 +1514,7 @@ Komplexní čísla, která je hyperbolický tangens vstupní komplexního čísl
 
 Definování komplexních hyperbolický kotangens identity:
 
-TANH ( *z*) = sinh ( *z*) / cosh ( *z*) = (exp ( *z*)-exp (- *z*)) / (exp ( *z*) + exp (- *z*))
+TANH (*z*) = sinh (*z*) / cosh (*z*) = (exp (*z*)-exp (- *z*)) / (exp (*z*) + exp (- *z*))
 
 ### <a name="example"></a>Příklad
 
@@ -1547,7 +1580,3 @@ The complex components tanh (vci), where abs (vci) = 1
 (-0.792403,0.24356)
 (-0.761594,-8.68604e-014)
 ```
-
-## <a name="see-also"></a>Viz také:
-
-[\<complex>](../standard-library/complex.md)<br/>
