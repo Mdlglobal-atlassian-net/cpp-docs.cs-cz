@@ -1,38 +1,36 @@
 ---
-title: Nainstalujte úlohu C++ Linux v sadě Visual Studio
-description: Popisuje, jak stáhnout, nainstalovat a nastavit Linux úlohy pro C++ v sadě Visual Studio.
+title: Instalace úlohy C++ Linux do sady Visual Studio
+description: Popisuje, jak stáhnout, nainstalovat a nastavit úlohu pro Linux pro C++ v aplikaci Visual Studio.
 ms.date: 06/11/2019
 ms.assetid: e11b40b2-f3a4-4f06-b788-73334d58dfd9
-ms.openlocfilehash: d5c099794f781fa9e6217f3796d24d1a63fd7b53
-ms.sourcegitcommit: fde637f823494532314790602c2819f889706ff6
+ms.openlocfilehash: 5df7b323d202f398059e92abaeeeedbf73439fa4
+ms.sourcegitcommit: 7f5b29e24e1be9b5985044a030977485fea0b50c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "67042744"
+ms.lasthandoff: 07/17/2019
+ms.locfileid: "68299798"
 ---
-# <a name="download-install-and-set-up-the-linux-workload"></a>Stažení, instalace a nastavení úloh Linux
+# <a name="download-install-and-set-up-the-linux-workload"></a>Stažení, instalace a nastavení úlohy Linux
 
 ::: moniker range="vs-2015"
 
-Linuxové projekty jsou podporovány v sadě Visual Studio 2017 nebo novější.
+Projekty Linux jsou podporovány v aplikaci Visual Studio 2017 a novějších.
 
 ::: moniker-end
 
 ::: moniker range=">=vs-2017"
 
-Integrované vývojové prostředí sady Visual Studio ve Windows můžete použít k vytváření, úpravy a ladění projektů C++, které jsou spouštěny na fyzickém počítači Linux, virtuální počítač, nebo [subsystém Windows pro Linux](/windows/wsl/about). 
+Integrované vývojové prostředí (IDE) sady Visual Studio ve Windows můžete použít k vytváření C++ , úpravám a ladění projektů, které se spouštějí na fyzickém počítači Linux, virtuálním počítači nebo v subsystému [Windows pro Linux](/windows/wsl/about). 
 
-Můžete pracovat na svém stávajícím základu kódu, který používá CMake nebo jakémkoli jiném systému sestavení bez nutnosti převádět na projekt sady Visual Studio. Je-li vašeho základu kódu napříč platformami, je cílem Windows a Linuxem z Visual Studia. Například můžete upravit, ladění a profilování kódu ve Windows pomocí sady Visual Studio a pak rychle změnit cílení projektů pro Linux provedete dalšímu testování. Soubory hlaviček Linux se automaticky zkopírují do svého místního počítače, kde sady Visual Studio je využívá k poskytování plnou podporou technologie IntelliSense (dokončování příkazů, přejít k definici a tak dále) podpory. 
+Můžete pracovat na svém stávajícím základu kódu, který používá CMake nebo jakýkoli jiný systém sestavení, aniž by bylo nutné ho převést na projekt aplikace Visual Studio. Pokud je váš základ kódu pro různé platformy, můžete v sadě Visual Studio cílit na Windows i Linux. Můžete například upravit, ladit a profilovat kód ve Windows pomocí sady Visual Studio a pak rychle změnit cílení projektu pro Linux na další testování. Soubory hlaviček systému Linux jsou automaticky zkopírovány do místního počítače, kde je aplikace Visual Studio používá k zajištění úplné podpory technologie IntelliSense (dokončování příkazů, přechodu k definici atd.). 
  
-Pro některý z těchto scénářů **vývoj pro Linux v C++** zatížení je povinný. 
+Pro některý z těchto scénářů se vyžaduje **vývoj pro C++ Linux s** úlohou. 
 
 ::: moniker-end
 
 ::: moniker range="vs-2019"
 
-V aplikaci Visual Studio 2019 můžete zadat samostatné cíle pro sestavování a ladění. Při cílení na WSL, je už nebude potřeba přidat připojení ke vzdálené nebo konfigurace SSH.
-
-Podpora pro [AddressSanitizer (ASan)](https://github.com/google/sanitizers/wiki/AddressSanitizer) je integrovaná do sady Visual Studio pro Linuxové projekty.
+V aplikaci Visual Studio 2019 můžete určit samostatné cíle pro vytváření a ladění. Při cílení na WSL již není nutné přidávat vzdálené připojení nebo konfigurovat SSH.
 
 ::: moniker-end
 
@@ -40,31 +38,31 @@ Podpora pro [AddressSanitizer (ASan)](https://github.com/google/sanitizers/wiki/
 
 ## <a name="visual-studio-setup"></a>Instalační program sady Visual Studio
 
-1. Zadejte do vyhledávacího pole Windows "Instalační program sady Visual Studio":
+1. Do vyhledávacího pole Windows zadejte "Instalační program pro Visual Studio":
 
-   ![Windows vyhledávacího pole](media/visual-studio-installer-search.png)
+   ![Vyhledávací pole Windows](media/visual-studio-installer-search.png)
 
-2. Vyhledejte instalační služby v rámci **aplikace** výsledky a dvojím kliknutím ho. Když se instalační program otevře, zvolte **změnit**a potom klikněte na **úlohy** kartu. Přejděte dolů k položce **další sady nástrojů** a vyberte **vývoj pro Linux v C++** pracovního vytížení.
+2. Vyhledejte instalační program v části výsledky **aplikace** a dvakrát na něj klikněte. Jakmile se instalační program otevře, zvolte **Upravit**a pak klikněte na kartu **úlohy** . Přejděte dolů na **jiné sady nástrojů** a vyberte **vývoj pro Linux pomocí C++**  úlohy.
 
-   ![Visual C++ pro úlohu vývoj pro Linux](media/linuxworkload.png)
+   ![Visual C++ pro vývoj pro Linux – úlohy vývoje](media/linuxworkload.png)
 
-1. Pokud cílíte na platformy vložený nebo IoT, přejděte na **podrobné informace o instalaci** podokno na pravé straně v části **vývoj pro Linux v C++** , rozbalte **volitelné součásti**a vyberte komponenty, které potřebujete. Podpora CMake pro Linux je standardně vybraná.
+1. Pokud cílíte na IoT nebo integrované platformy, v **pravém podokně v** části vývoj pro Linux v **C++nástroji**rozbalte možnost **volitelné komponenty** a vyberte požadované součásti. Ve výchozím nastavení je vybrána podpora CMake pro Linux.
 
-1. Klikněte na tlačítko **změnit** pokračujte v instalaci.
+1. Pokračujte v instalaci kliknutím na tlačítko **změnit** .
 
-## <a name="options-for-creating-a-linux-environment"></a>Možnosti pro vytvoření prostředí s Linuxem
+## <a name="options-for-creating-a-linux-environment"></a>Možnosti pro vytvoření prostředí Linux
 
-Pokud ještě nemáte počítač s Linuxem, můžete vytvořit virtuální počítač s Linuxem v Azure. Další informace najdete v tématu [rychlý start: Vytvoření virtuálního počítače s Linuxem na webu Azure Portal](/azure/virtual-machines/linux/quick-create-portal).
+Pokud ještě nemáte počítač se systémem Linux, můžete v Azure vytvořit virtuální počítač se systémem Linux. Další informace najdete v tématu [rychlý Start: Vytvořte virtuální počítač se systémem Linux v Azure Portal](/azure/virtual-machines/linux/quick-create-portal).
 
-Ve Windows 10 můžete nainstalovat a cílit na vaše oblíbené distribuce Linuxu v subsystému Windows pro Linux (WSL). Další informace najdete v tématu [subsystém Windows pro Linux Instalační příručka pro Windows 10](/windows/wsl/install-win10). WSL je vhodné konzoly prostředí, ale nedoporučuje se používat pro grafických aplikací. 
+Ve Windows 10 můžete nainstalovat a cílit na svůj oblíbený distribuce pro Linux v subsystému Windows pro Linux (WSL). Další informace najdete v tématu [Instalační příručka k subsystému Windows pro Linux pro Windows 10](/windows/wsl/install-win10). WSL je praktické prostředí konzoly, ale nedoporučuje se pro grafické aplikace. 
 
 ::: moniker-end
 
 ::: moniker range="vs-2019"
 
-## <a name="linux-setup-ubuntu-on-wsl"></a>Nastavení pro Linux: Ubuntu ve WSL
+## <a name="linux-setup-ubuntu-on-wsl"></a>Instalace pro Linux: Ubuntu na WSL
 
-Pokud se zaměřujete na WSL, není nutné přidat připojení ke vzdálené nebo konfigurace SSH sestavování a ladění. **ZIP** a **rsync** jsou požadovány pro automatickou synchronizaci hlavičky Linuxu pomocí sady Visual Studio pro podporu technologie Intellisense. Pokud požadované aplikace již nejsou k dispozici, můžete je nainstalovat následujícím způsobem:
+Při cílení na WSL není nutné přidávat vzdálené připojení ani konfigurovat SSH, aby bylo možné sestavovat a ladit. k automatické synchronizaci hlaviček Linux pomocí sady Visual Studio pro podporu technologie IntelliSense jsou vyžadovány soubory **zip** a **rsync** . Pokud požadované aplikace ještě nejsou k dispozici, můžete je nainstalovat následujícím způsobem:
 
 ```bash
 sudo apt-get install g++ gdb make rsync zip
@@ -73,24 +71,24 @@ sudo apt-get install g++ gdb make rsync zip
 
 ::: moniker range=">=vs-2017"
 
-## <a name="ubuntu-on-remote-linux-systems"></a>Ubuntu na vzdálených Linuxových systémů
+## <a name="ubuntu-on-remote-linux-systems"></a>Ubuntu na vzdálených systémech Linux
 
-Cílový systém Linux musí mít **openssh-server**, **g ++** , **gdb**, a **gdbserver** nainstalované a ssh démon musí být spuštěn. **ZIP** se vyžaduje pro automatickou synchronizaci vzdálených hlaviček pomocí místního počítače pro podporu technologie Intellisense. Pokud tyto aplikace již nejsou k dispozici, můžete je nainstalovat následujícím způsobem:
+Cílový systém Linux musí mít nainstalované **OpenSSH-server**, **g + +** , **GDB**a **gdbserver** a musí být spuštěn démon procesu SSH. k automatické synchronizaci vzdálených hlaviček pomocí místního počítače pro podporu technologie IntelliSense se vyžaduje **zip** . Pokud tyto aplikace ještě nejsou k dispozici, můžete je nainstalovat následujícím způsobem:
 
-1. V příkazovém řádku shell na počítači s Linuxem spusťte:
+1. Na příkazovém řádku prostředí v počítači se systémem Linux spusťte příkaz:
 
    ```bash
    sudo apt-get install openssh-server g++ gdb gdbserver zip
    ```
 
-   Můžete být vyzváni k kořenové heslo z důvodu příkazu sudo.  Pokud ano, zadejte ho a pokračovat. Jakmile budete hotovi, se nainstalují požadované služby a nástroje.
+   V důsledku příkazu sudo se může zobrazit výzva k zadání vašeho kořenového hesla.  Pokud ano, zadejte ho a pokračujte. Po dokončení jsou nainstalovány požadované služby a nástroje.
 
-1. Zkontrolujte, ssh služba běží na počítači s Linuxem pomocí:
+1. Zajistěte, aby na počítači se systémem Linux běžela služba SSH spuštěním:
 
    ```bash
    sudo service ssh start
    ```
-   To spustí službu a běží na pozadí je připraven přijmout připojení na portu.
+   Tím se spustí služba a spustí se na pozadí, která je připravena přijmout připojení.
 
 ::: moniker-end
 
@@ -98,48 +96,48 @@ Cílový systém Linux musí mít **openssh-server**, **g ++** , **gdb**, a **gd
 
 ## <a name="fedora-on-wsl"></a>Fedora na WSL
 
-Používá fedora **dnf** balíček Instalační služby. Chcete-li stáhnout **g ++** , **gdb**, **rsync** a **zip**, spusťte:
+Fedora používá instalační program balíčků **DNF** . Ke stažení **g + +** , **GDB**, **rsync** a **zip**spusťte:
 
    ```bash
    sudo dnf install gcc-g++ gdb rsync zip
    ```
 
-**ZIP** a **rsync** jsou požadovány pro automatickou synchronizaci hlavičky Linuxu pomocí sady Visual Studio pro podporu technologie Intellisense.
+k automatické synchronizaci hlaviček Linux pomocí sady Visual Studio pro podporu technologie IntelliSense jsou vyžadovány soubory **zip** a **rsync** .
 
 ::: moniker-end
 
 ::: moniker range=">=vs-2017"
 
-## <a name="fedora-on-remote-linux-systems"></a>Fedora na vzdálených Linuxových systémů
+## <a name="fedora-on-remote-linux-systems"></a>Fedora na vzdálených systémech Linux
 
-Cílový počítač s Fedora používá **dnf** balíček Instalační služby. Chcete-li stáhnout **openssh-server**, **g ++** , **gdb**, **gdbserver** a **zip**a restartujte ssh proces démon, postupujte podle těchto pokynů:
+Cílový počítač se systémem Fedora používá instalační program balíčků **DNF** . Pokud chcete stáhnout **OpenSSH-server**, **g + +** , **GDB**, **gdbserver** a **zip**a restartovat démona SSH, postupujte podle těchto pokynů:
 
-1. V příkazovém řádku shell na počítači s Linuxem spusťte:
+1. Na příkazovém řádku prostředí v počítači se systémem Linux spusťte příkaz:
 
    ```bash
    sudo dnf install openssh-server gcc-g++ gdb gdb-gdbserver zip
    ```
-   Můžete být vyzváni k kořenové heslo z důvodu příkazu sudo.  Pokud ano, zadejte ho a pokračovat. Jakmile budete hotovi, se nainstalují požadované služby a nástroje.
+   V důsledku příkazu sudo se může zobrazit výzva k zadání vašeho kořenového hesla.  Pokud ano, zadejte ho a pokračujte. Po dokončení jsou nainstalovány požadované služby a nástroje.
 
-1. Zkontrolujte, ssh služba běží na počítači s Linuxem pomocí:
+1. Zajistěte, aby na počítači se systémem Linux běžela služba SSH spuštěním:
 
    ```bash
    sudo systemctl start sshd
    ```
 
-   To spustí službu a běží na pozadí je připraven přijmout připojení na portu.
+   Tím se spustí služba a spustí se na pozadí, která je připravena přijmout připojení.
 
 ::: moniker-end
 
 ::: moniker range="vs-2015"
 
-Podpora pro Linux C++ vývoj je k dispozici v sadě Visual Studio 2017 nebo novější.
+Podpora pro vývoj C++ pro Linux je dostupná v systému Visual Studio 2017 nebo novějším.
 
 ::: moniker-end
 
 ## <a name="next-steps"></a>Další kroky
 
-Nyní jste připraveni k vytvoření nebo otevření projektu Linux a nakonfigurovat jej pro spuštění v cílovém systému. Další informace naleznete v tématu:
+Teď jste připraveni vytvořit nebo otevřít projekt pro Linux a nakonfigurovat ho tak, aby běžel v cílovém systému. Další informace naleznete v tématu:
 
 - [Vytvoření nového projektu Linux](create-a-new-linux-project.md)
 - [Konfigurace projektu Linux CMake](cmake-linux-project.md)

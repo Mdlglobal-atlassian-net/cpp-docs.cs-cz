@@ -1,6 +1,6 @@
 ---
-title: C++ projektu odkaz na stránku vlastností – Visual Studio
-ms.date: 05/06/2019
+title: C++odkaz na stránku vlastností projektu – Visual Studio
+ms.date: 07/16/2019
 f1_keywords:
 - VC.Project.NotAProp.Edit
 helpviewer_keywords:
@@ -14,34 +14,42 @@ helpviewer_keywords:
 - build macro
 - user-defined macros
 ms.assetid: 13ffe3ea-1bc3-4bee-be5e-053a8a99cce4
-ms.openlocfilehash: 7b10e3c7eef846d72220545b89a217da7a4bb9a1
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.openlocfilehash: 164a8e8aff5428be36c5d921bc8078ab352f51c0
+ms.sourcegitcommit: 7f5b29e24e1be9b5985044a030977485fea0b50c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65217783"
+ms.lasthandoff: 07/17/2019
+ms.locfileid: "68299727"
 ---
-# <a name="c-project-property-page-reference"></a>Odkaz na stránku vlastností projektu jazyka C++
+# <a name="c-project-property-page-reference"></a>C++odkaz na stránku vlastností projektu
 
-Pomocí stránky vlastností, můžete zadat nastavení pro projekty aplikace Visual Studio. Chcete-li otevřít **stránky vlastností** dialogové okno pro Visual Studio na projekt **projektu** nabídce zvolte **vlastnosti**. Další informace o vlastnosti projektu, naleznete v tématu [vlastnosti kompilátoru a sestavení nastavte C++ v sadě Visual Studio](../working-with-project-properties.md).
+V aplikaci Visual Studio určíte možnosti kompilátoru a linkeru, cesty k souborům a další nastavení sestavení pomocí stránek vlastností projektu. Chcete-li **otevřít stránky vlastností**, v hlavní nabídce vyberte možnost**vlastnosti** **projektu** > , nebo klikněte pravým tlačítkem myši na uzel projektu v **Průzkumník řešení** a vyberte možnost **vlastnosti**. Další informace o vlastnostech projektu naleznete v tématu [nastavení C++ kompilátoru a vlastností sestavení v sadě Visual Studio](../working-with-project-properties.md).
 
-Stránky vlastností v projektech mimo Windows, naleznete v tématu [odkaz na stránku vlastností Linux C++](../../linux/prop-pages-linux.md).
+Stránky vlastností v projektech pro Linux najdete v [tématu C++ reference na stránku vlastností Linux](../../linux/prop-pages-linux.md).
 
 ## <a name="in-this-section"></a>V tomto oddílu
 
-[Upřesnit, Nástroj Manifest, vlastnosti konfigurace, \<Projectname > dialogové okno stránky vlastností projektu](advanced-manifest-tool.md)
+[Obecná stránka vlastností (projekt)](general-property-page-project.md)
+
+[Stránka vlastností adresářů VC++](vcpp-directories-property-page.md)
+
+[Nástroj manifest, obecný](general-manifest-tool-configuration-properties.md)
+[Nástroj manifest, vstupní a výstupní](input-and-output-manifest-tool.md)
+[Nástroj manifest,](isolated-com-manifest-tool.md)
+Nástroj pro izolovaný[manifest](advanced-manifest-tool.md) com, pokročilý
+
 
 [Stránky vlastností příkazového řádku](command-line-property-pages.md)
 
 [Stránka vlastností vlastního kroku sestavení: Obecné](custom-build-step-property-page-general.md)
 
-[Přidávání odkazů na](../adding-references-in-visual-cpp-projects.md)
+[Přidávání odkazů](../adding-references-in-visual-cpp-projects.md)
 
 [Obecná stránka vlastností (soubor)](general-property-page-file.md)
 
-[Obecná stránka vlastností (projekt)](general-property-page-project.md)
 
-[Obecné, Nástroj Manifest, vlastnosti konfigurace, \<Projectname > dialogové okno stránky vlastností projektu](general-manifest-tool-configuration-properties.md)
+
+
 
 [HLSL – stránky vlastností](hlsl-property-pages.md)
 
@@ -51,9 +59,9 @@ Stránky vlastností v projektech mimo Windows, naleznete v tématu [odkaz na st
 
 [HLSL – stránky vlastností: Výstupní soubory](hlsl-property-pages-output-files.md)
 
-[Vstup a výstup, Nástroj Manifest, vlastnosti konfigurace, \<Projectname > dialogové okno stránky vlastností projektu](input-and-output-manifest-tool.md)
 
-[Izolované modely COM, Nástroj Manifest, vlastnosti konfigurace, \<Projectname > dialogové okno stránky vlastností projektu](isolated-com-manifest-tool.md)
+
+
 
 [Stránky vlastností linkeru](linker-property-pages.md)
 
@@ -73,7 +81,7 @@ Stránky vlastností v projektech mimo Windows, naleznete v tématu [odkaz na st
 
 [Stránky vlastností prostředků](resources-property-pages.md)
 
-[Stránka vlastností adresářů VC++](vcpp-directories-property-page.md)
+
 
 [Stránka vlastností webových odkazů](web-references-property-page.md)
 

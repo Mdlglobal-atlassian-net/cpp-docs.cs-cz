@@ -1,6 +1,6 @@
 ---
 title: Obecná stránka vlastností (projekt)
-ms.date: 11/04/2016
+ms.date: 07/17/2019
 f1_keywords:
 - VC.Project.VCConfiguration.IntermediateDirectory
 - VC.Project.VCConfiguration.ConfigurationType
@@ -25,151 +25,211 @@ helpviewer_keywords:
 - Clean Build option
 - output files, setting directory
 - Unicode, creating C++ build configuration
-ms.openlocfilehash: e6d418c1668a0757349c7e5c3bb38f7cda801223
-ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.openlocfilehash: 0fb6e1289b44940cabaee02e62690c94ec5bf131
+ms.sourcegitcommit: 7f5b29e24e1be9b5985044a030977485fea0b50c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65446561"
+ms.lasthandoff: 07/17/2019
+ms.locfileid: "68299775"
 ---
 # <a name="general-property-page-project"></a>Obecná stránka vlastností (projekt)
 
-Když pravým tlačítkem myši na uzel projektu v Průzkumníku řešení a vyberete **vlastnosti**, **Obecné** stránka vlastností **vlastnosti konfigurace** uzlu v levém podokně zobrazí dva oddíly vlastností:
+::: moniker range=">=vs-2019"
 
-- Obecné
+Toto téma se vztahuje na projekty sady Visual Studio pro systém Windows. Pro projekty pro Linux se podívejte na [odkaz na stránku vlastností Linux C++ ](../../linux/prop-pages-linux.md). Projekty CMake najdete v tématu [projekty cmake v sadě Visual Studio](../cmake-projects-in-visual-studio.md).
 
-- Výchozí vlastnosti projektu
-
-Projekty bez Windows, naleznete v tématu [odkaz na stránku vlastností Linux C++](../../linux/prop-pages-linux.md).
-
-## <a name="general"></a>Obecné
-
-Vlastnosti v oddíle Obecná ovlivňují umístění souborů, které jsou vytvořeny během procesu sestavení a které soubory jsou odstraněny při **Vyčistit** možnost (**sestavení** nabídky) je vybraná.
-
-- **Cílová platforma**
-
-   Určuje, který se spustí projekt na platformu. Například Windows, Android nebo iOS. Hodnota **Windows 10** znamená, že je projekt zaměřen univerzální platformu Windows. Pokud cílíte na starších verzích Windows, není uvedená verze a hodnotu v tomto poli se zobrazí jako pouze **Windows**. Toto je pole jen pro čtení, který je nastaven při vytváření projektu.
-
-- **Verze sady Windows SDK**
-
-   Pro cílovou platformu Windows určuje verzi sady Windows SDK, které vyžaduje váš projekt. Při instalaci úlohy pro C++ s použitím instalačního programu sady Visual Studio, nainstaluje se také požadovaných součástí sady Windows SDK. Pokud máte další verze sady Windows SDK ve vašem počítači, se zobrazí v rozevírací nabídce každou verzi sady SDK nástroje, které jste nainstalovali.
-
-   Chcete-li cílit na Windows 7 nebo Windows Vista, použijte hodnotu **8.1**, protože Windows SDK 8.1 je zpětně kompatibilní pro tyto platformy. Kromě toho byste měli definovat má hodnotu vhodnou pro **_WIN32_WINNT** v targetver.h. Pro Windows 7, který je 0x0601. Zobrazit [úpravy maker WINVER a _WIN32_WINNT](../../porting/modifying-winver-and-win32-winnt.md).
-
-   Můžete nainstalovat sadu nástrojů platformy Windows XP součástí sady Visual Studio používat aktuální verzi knihovny k sestavení projektů Windows XP a Windows 2003 Server. Informace o tom, jak získat a používat touto sadou nástrojů platformy najdete v tématu [konfigurace aplikací pro Windows XP](../configuring-programs-for-windows-xp.md). Další informace o změně sada nástrojů platformy najdete v tématu [jak: Změna cílové architektury a sady nástrojů](../how-to-modify-the-target-framework-and-platform-toolset.md).
-
-- **Cílové platformy Min. Verze**
-
-   Určuje nejnižší verze platformy, které můžete spouštět projekt. Tato vlastnost se zobrazí jenom v případě, že typ projektu podporuje, například v projektech Windows Universal. Pokud vaše aplikace v novější verzi sady Windows SDK můžete využít výhod funkcí, ale může být stále spuštěny na starší verze bez těchto funkcí, třeba s určitou ztrátou funkce, která je pak hodnotu z těchto dvou vlastností lišit. Pokud váš kód tak, by měl zkontrolovat verzi platformy běží proti za běhu a ne pokusu o použití funkce, které nejsou k dispozici ve starší verzi platformy.
-
-   Všimněte si, že Visual C++ nevynucuje tuto možnost. Přikládáme ji pro zajištění konzistence s jinými jazyky, jako je C# a JavaScript a jako vodítko pro každého, kdo používá váš projekt. Visual C++ nevygeneruje chybu, pokud používáte funkci, která není k dispozici v minimální verzi.
+Když kliknete pravým tlačítkem myši na uzel projektu v Průzkumník řešení a vyberete **vlastnosti**, stránka **Obecné** vlastnosti pod uzlem **Vlastnosti konfigurace** v levém podokně zobrazí tyto vlastnosti:
 
 - **Výstupní adresář**
 
-   Určuje adresář, do kterého nástroje, jako je například linker, umístí všechny konečné výstupní soubory, které jsou vytvořeny během procesu sestavení. Obvykle obsahuje výstupy nástrojů, jako je například linker, librarian nebo BSCMake. Ve výchozím nastavení, tato vlastnost je adresáři určeném argumentem makra $ $(SolutionDir) (konfigurace) \.
+   Určuje adresář, do kterého nástroje, jako je třeba linker, umístí všechny finální výstupní soubory, které jsou vytvořeny během procesu sestavení. Obvykle to zahrnuje výstup nástrojů, jako je linker, librarian nebo BSCMake. Ve výchozím nastavení je tato vlastnost adresářem určeným makry $ (SolutionDir) $ (konfigurace) \.
 
-   Programový přístup k této vlastnosti, najdete v článku <xref:Microsoft.VisualStudio.VCProjectEngine.VCConfiguration.OutputDirectory%2A>.
+   Chcete-li programově získat přístup k <xref:Microsoft.VisualStudio.VCProjectEngine.VCConfiguration.OutputDirectory%2A>této vlastnosti, přečtěte si téma.
 
 - **Zprostředkující adresář**
 
-   Určuje adresář, do kterého nástroje, jako je například kompilátor, umístí všechny mezilehlé soubory vytvořené během procesu sestavení. Obvykle obsahuje výstupy nástrojů, jako je například kompilátor C/C++, MIDL a kompilátor prostředků. Ve výchozím nastavení, tato vlastnost je adresáři určeném argumentem – makro $(konfigurace) \.
+   Určuje adresář, do kterého nástroje, jako je třeba kompilátor, umístí všechny mezilehlé soubory vytvořené během procesu sestavení. Obvykle to zahrnuje výstup nástrojů, jako je C/C++ COMPILER, MIDL a kompilátor prostředků. Ve výchozím nastavení je tato vlastnost adresářem určeným makrem $ (konfigurace) \.
 
-   Programový přístup k této vlastnosti, najdete v článku <xref:Microsoft.VisualStudio.VCProjectEngine.VCConfiguration.IntermediateDirectory%2A>.
+   Chcete-li programově získat přístup k <xref:Microsoft.VisualStudio.VCProjectEngine.VCConfiguration.IntermediateDirectory%2A>této vlastnosti, přečtěte si téma.
 
 - **Název cíle**
 
-   Určuje název souboru vygenerovaného tímto projektem. Ve výchozím nastavení tato vlastnost je název souboru zadaného – makro $ (ProjectName).
-
-- **Cílová přípona**
-
-   Určuje příponu názvu souboru vygenerovaného tímto projektem; například .exe nebo .dll.
-
-- **Přípony odstraňované při čištění**
-
-   **Vyčistit** možnost (**sestavení** nabídky) odstraní soubory z mezilehlého adresáře, ve kterém je sestavena konfigurace projektu. Soubory s příponami zadanými pomocí této vlastnosti budou odstraněny při **Vyčistit** spuštění nebo při provádění opětovné sestavení. Kromě souborů s těmito příponami ve zprostředkujícím adresáři systém sestavení odstraní také všechny známé výstupy sestavení bez ohledu na to, kde jsou umístěny (včetně zprostředkujících výstupů, jako jsou například soubory .obj). Všimněte si, že je možné zadat zástupné znaky.
-
-   Programový přístup k této vlastnosti, najdete v článku <xref:Microsoft.VisualStudio.VCProjectEngine.VCConfiguration.DeleteExtensionsOnClean%2A>.
-
-- **Soubor protokolu sestavení**
-
-   Umožňuje určit jiné než výchozí umístění souboru protokolu, který je vytvořen při sestavení projektu. Výchozí umístění je určená .log makra $(IntDir) $(MSBuildProjectName).
-
-   Chcete-li změnit umístění adresáře můžete použít projektová makra. Zobrazit [sestavení běžná makra pro příkazy a vlastnosti](common-macros-for-build-commands-and-properties.md).
-
-- **Sada nástrojů platformy**
-
-   Umožňuje projekt cílit na jinou verzi knihovny Visual C++ a kompilátor. Visual Studio C++ projekty můžete cílit buď na výchozí sadu nástrojů nainstalované sady Visual Studio, nebo jeden z nástrojů nainstalována v předchozích verzích sady Visual Studio, včetně sady nástrojů, které vytvoříte spustitelné soubory, které můžete spustit v systému Windowx XP. Informace o změně sada nástrojů platformy najdete v tématu [jak: Změna cílové architektury a sady nástrojů](../how-to-modify-the-target-framework-and-platform-toolset.md).
-
-- **Povolit spravované přírůstkové sestavení**
-
-   Pro spravované projekty umožňuje detekovat externí viditelnosti, při generování sestavení. Pokud ke změně spravovaný projekt není viditelný pro jiné projekty, nejsou přetvořeny závislých projektů. To můžete výrazně vylepšit dobu sestavení v řešení, která zahrnují spravovaných projektů.
-
-## <a name="project-defaults"></a>Výchozí vlastnosti projektu
-
-Vlastnosti v oddíle Výchozí projektu představují výchozí vlastnosti, které můžete upravit. Definice pro tyto vlastnosti můžete najít v souborech .props v *instalační adresář*\VC\VCProjectDefaults.
+   Určuje název souboru, který tento projekt vygeneruje. Ve výchozím nastavení je tato vlastnost název souboru zadaný pomocí makra $ (ProjectName).
 
 - **Typ konfigurace**
 
-  Existují vybírat z několika typů konfigurace:
+  Existuje několik typů konfigurace, ze kterých si můžete vybrat:
 
-  - **Aplikace (.exe)**
+  - **Aplikace (. exe)**
 
-     Zobrazí sadu nástrojů linkeru (kompilátor C/C++, MIDL, kompilátor prostředků, Linker, BSCMake, generátor Proxy webové služby XML, vlastní sestavení, události prebuild, prelink a postbuild).
+     Zobrazí sadu nástrojů linkeru (C++ C/COMPILER, MIDL, kompilátor prostředků, linker, BSCMAKE, generátor proxy webové služby XML, vlastní sestavení, představování, předpojování, události postbuild).
 
   - **Dynamická knihovna (.dll)**
 
-     Zobrazí sadu nástrojů linkeru, určuje možnost/DLL linkeru a přidá definici _windll do CL.
+     Zobrazí sadu nástrojů linkeru, Určuje možnost linkeru/DLL a přidá _WINDLL definované pro CL.
 
-  - **Soubor pravidel**
+  - **Makefile**
 
      Zobrazí sadu nástrojů makefile (NMake).
 
-  - **Statická knihovna (.lib)**
+  - **Statická knihovna (. lib)**
 
-     Zobrazí sadu nástrojů librarian (stejné jako sadu nástrojů linkeru, s výjimkou nahrazení nástroje librarian pro linker a vynechání generátoru Proxy webové služby XML).
+     Zobrazí sadu nástrojů Librarian (stejně jako sadu nástrojů linkeru s výjimkou náhradních Librarian pro Linker a vynechání generátoru proxy webové služby XML).
 
-  - **Nástroj**
+  - **Spuštění**
 
-     Zobrazí sadu nástrojů nástroje (MIDL, vlastní sestavení, události prebuild, postbuild).
+     Zobrazí sadu nástrojů nástrojů (MIDL, vlastní sestavení, představování a postbuild události).
 
-  Programový přístup k této vlastnosti, najdete v článku <xref:Microsoft.VisualStudio.VCProjectEngine.VCConfiguration.ConfigurationType%2A>.
+  Chcete-li programově získat přístup k <xref:Microsoft.VisualStudio.VCProjectEngine.VCConfiguration.ConfigurationType%2A>této vlastnosti, přečtěte si téma.
+
+- **Verze Windows SDK**
+
+   Pro cílovou platformu Windows určuje verzi Windows SDK, kterou váš projekt vyžaduje. Když nainstalujete C++ úlohu pomocí instalačního programu sady Visual Studio, nainstalují se taky požadované části Windows SDK. Pokud máte v počítači jiné verze Windows SDK, v rozevíracím seznamu se zobrazí každá verze nástrojů sady SDK, které jste nainstalovali.
+
+   Chcete-li cílit na systém Windows 7 nebo Windows Vista, použijte hodnotu **8,1**, protože Windows SDK 8,1 je zpětně kompatibilní s těmito platformami. Kromě toho byste měli definovat vhodnou hodnotu pro **_WIN32_WINNT** v targetver. h. Pro Windows 7 to je 0x0601. Viz [Úpravy winver a _WIN32_WINNT](../../porting/modifying-winver-and-win32-winnt.md).
+
+   Sadu nástrojů platformy Windows XP, která je součástí sady Visual Studio, můžete nainstalovat tak, aby používala aktuální verzi knihoven k sestavování projektů Windows XP a Windows 2003 serveru. Informace o tom, jak získat a použít tuto sadu nástrojů platformy, najdete v tématu [Konfigurace programů pro systém Windows XP](../configuring-programs-for-windows-xp.md). Další informace o změně sady nástrojů platformy najdete v tématu [How to: Upravte cílovou architekturu a sadu nástrojů](../how-to-modify-the-target-framework-and-platform-toolset.md)platformy.
+
+- **Sada nástrojů platformy**
+
+   Umožňuje projektu cílit na jinou verzi knihoven a kompilátorů vizuálů C++ . Projekty sady C++ Visual Studio mohou cílit buď na výchozí sadu nástrojů nainstalovanou sadou Visual Studio, nebo na jednu ze sad nástrojů nainstalovaných několika předchozími verzemi sady Visual Studio, včetně sad nástrojů, které vytvářejí spustitelné soubory, které lze spustit v Windowx XP. Informace o změně sady nástrojů platformy najdete v tématu [How to: Upravte cílovou architekturu a sadu nástrojů](../how-to-modify-the-target-framework-and-platform-toolset.md)platformy.
+
+- **C++Standardní jazyk**
+
+   Určuje jazykovou normu, která se má použít. Výchozí hodnota je/std: c++ 14. Zadejte/std: c++ 17 pro použití funkcí C++ 17 nebo/std: c++ + nejnovější pro použití C++ 20 nebo dalších experimentálních funkcí. Další informace najdete v tématu [/std (zadání jazykové verze Standard)](std-specify-language-standard-version.md) .
+
+::: moniker-end
+
+::: moniker range="<=vs-2017"
+
+Pokud v aplikaci Visual Studio 2015 a Visual Studio 2017 kliknete pravým tlačítkem myši na uzel projektu v **Průzkumník řešení**a vyberete **vlastnosti**, zobrazí se stránka **Obecná** vlastnost pod uzlem **Vlastnosti konfigurace** v levém podokně. dvě části vlastností:
+
+- Obecné
+
+- Výchozí nastavení projektu
+
+## <a name="general"></a>Obecné
+
+- **Cílová platforma**
+
+   Určuje platformu, na které bude projekt běžet. Například Windows, Android nebo iOS. Hodnota **Windows 10** znamená, že projekt cílí na Univerzální platforma Windows. Pokud cílíte na starší verze Windows, verze není v seznamu a hodnota v tomto poli se zobrazí jako jenom **Windows**. Toto je pole jen pro čtení, které je nastaveno při vytváření projektu.
+
+- **Verze cílové platformy (Visual Studio 2015)**
+
+   Určuje nejnižší verzi platformy, na které může projekt běžet. Tato vlastnost se zobrazí pouze v případě, že je typ projektu podporuje. Pokud vaše aplikace může využít výhod funkcí v novější verzi Windows SDK, ale může běžet i v dřívějších verzích bez těchto funkcí, třeba s určitou ztrátou funkčnosti, pak se hodnota těchto dvou vlastností může lišit. Pokud ano, váš kód by měl kontrolovat verzi platformy, na které běží, za běhu a nepokusit se používat funkce, které nejsou dostupné ve starší verzi platformy.
+
+   Systém C++ projektu tuto možnost nevynutil. Je součástí konzistence s jinými jazyky, jako jsou C# například a JavaScript, a jako vodítko pro kohokoli, kdo používá váš projekt. Pokud C++ použijete funkci, která není k dispozici v minimální verzi, vizuál negeneruje chybu.
+
+- **Verze Windows SDK (Visual Studio 2017)**
+
+   Pro cílovou platformu Windows určuje verzi Windows SDK, kterou váš projekt vyžaduje. Když nainstalujete C++ úlohu pomocí instalačního programu sady Visual Studio, nainstalují se taky požadované části Windows SDK. Pokud máte v počítači jiné verze Windows SDK, v rozevíracím seznamu se zobrazí každá verze nástrojů sady SDK, které jste nainstalovali.
+
+   Chcete-li cílit na systém Windows 7 nebo Windows Vista, použijte hodnotu **8,1**, protože Windows SDK 8,1 je zpětně kompatibilní s těmito platformami. Kromě toho byste měli definovat vhodnou hodnotu pro **_WIN32_WINNT** v targetver. h. Pro Windows 7 to je 0x0601. Viz [Úpravy winver a _WIN32_WINNT](../../porting/modifying-winver-and-win32-winnt.md).
+
+   Sadu nástrojů platformy Windows XP, která je součástí sady Visual Studio, můžete nainstalovat tak, aby používala aktuální verzi knihoven k sestavování projektů Windows XP a Windows 2003 serveru. Informace o tom, jak získat a použít tuto sadu nástrojů platformy, najdete v tématu [Konfigurace programů pro systém Windows XP](../configuring-programs-for-windows-xp.md). Další informace o změně sady nástrojů platformy najdete v tématu [How to: Upravte cílovou architekturu a sadu nástrojů](../how-to-modify-the-target-framework-and-platform-toolset.md)platformy.
+
+- **Výstupní adresář**
+
+   Určuje adresář, do kterého nástroje, jako je třeba linker, umístí všechny finální výstupní soubory, které jsou vytvořeny během procesu sestavení. Obvykle to zahrnuje výstup nástrojů, jako je linker, librarian nebo BSCMake. Ve výchozím nastavení je tato vlastnost adresářem určeným makry $ (SolutionDir) $ (konfigurace) \.
+
+   Chcete-li programově získat přístup k <xref:Microsoft.VisualStudio.VCProjectEngine.VCConfiguration.OutputDirectory%2A>této vlastnosti, přečtěte si téma.
+
+- **Zprostředkující adresář**
+
+   Určuje adresář, do kterého nástroje, jako je třeba kompilátor, umístí všechny mezilehlé soubory vytvořené během procesu sestavení. Obvykle to zahrnuje výstup nástrojů, jako je C/C++ COMPILER, MIDL a kompilátor prostředků. Ve výchozím nastavení je tato vlastnost adresářem určeným makrem $ (konfigurace) \.
+
+   Chcete-li programově získat přístup k <xref:Microsoft.VisualStudio.VCProjectEngine.VCConfiguration.IntermediateDirectory%2A>této vlastnosti, přečtěte si téma.
+
+- **Název cíle**
+
+   Určuje název souboru, který tento projekt vygeneruje. Ve výchozím nastavení je tato vlastnost název souboru zadaný pomocí makra $ (ProjectName).
+
+- **Cílová Přípona**
+
+   Určuje příponu názvu souboru, který tento projekt vygeneruje. například. exe nebo. dll.
+
+- **Přípony k odstranění při čištění**
+
+   Možnost **vyčistit** (nabídka**sestavení** ) odstraní soubory z mezilehlého adresáře, kde je vytvořena konfigurace projektu. Soubory s příponami, které jsou zadané pomocí této vlastnosti, se odstraní, když se spustí **Vyčištění** nebo když provedete opětovné sestavení. Kromě souborů těchto rozšíření v zprostředkujícím adresáři systém sestavení také odstraní jakýkoliv známý výstup sestavení bez ohledu na to, kde se nachází (včetně mezilehlých výstupů, jako jsou soubory. obj). Všimněte si, že můžete zadat zástupné znaky.
+
+   Chcete-li programově získat přístup k <xref:Microsoft.VisualStudio.VCProjectEngine.VCConfiguration.DeleteExtensionsOnClean%2A>této vlastnosti, přečtěte si téma.
+
+- **Soubor protokolu sestavení**
+
+   Umožňuje zadat jiné než výchozí umístění souboru protokolu, který se vytvoří při každém sestavení projektu. Výchozí umístění je zadáno pomocí makra $ (IntDir) $ (MSBuildProjectName) $ (). log.
+
+   Můžete použít makra projektu ke změně umístění adresáře. Viz [společná makra pro příkazy a vlastnosti buildu](common-macros-for-build-commands-and-properties.md).
+
+- **Sada nástrojů platformy**
+
+   Umožňuje projektu cílit na jinou verzi knihoven a kompilátorů vizuálů C++ . Projekty sady C++ Visual Studio mohou cílit buď na výchozí sadu nástrojů nainstalovanou sadou Visual Studio, nebo na jednu ze sad nástrojů nainstalovaných několika předchozími verzemi sady Visual Studio, včetně sad nástrojů, které vytvářejí spustitelné soubory, které lze spustit v Windowx XP. Informace o změně sady nástrojů platformy najdete v tématu [How to: Upravte cílovou architekturu a sadu nástrojů](../how-to-modify-the-target-framework-and-platform-toolset.md)platformy.
+
+- **Povolit spravované přírůstkové sestavení**
+
+   U spravovaných projektů to umožňuje detekci externí viditelnosti při generování sestavení. Pokud změna spravovaného projektu není viditelná pro jiné projekty, pak nejsou znovu sestaveny závislé projekty. To může výrazně zlepšit dobu sestavení v řešeních, která zahrnují spravované projekty.
+
+## <a name="project-defaults"></a>Výchozí nastavení projektu
+ 
+Vlastnosti ve výchozím oddílu projektu reprezentují výchozí vlastnosti, které lze upravit. Definici pro tyto vlastnosti lze nalézt v souborech. props v *instalačním adresáři*\VC\VCProjectDefaults.
+
+- **Typ konfigurace**
+
+  Existuje několik typů konfigurace, ze kterých si můžete vybrat:
+
+  - **Aplikace (. exe)**
+
+     Zobrazí sadu nástrojů linkeru (C++ C/COMPILER, MIDL, kompilátor prostředků, linker, BSCMAKE, generátor proxy webové služby XML, vlastní sestavení, představování, předpojování, události postbuild).
+
+  - **Dynamická knihovna (.dll)**
+
+     Zobrazí sadu nástrojů linkeru, Určuje možnost linkeru/DLL a přidá _WINDLL definované pro CL.
+
+  - **Makefile**
+
+     Zobrazí sadu nástrojů makefile (NMake).
+
+  - **Statická knihovna (. lib)**
+
+     Zobrazí sadu nástrojů Librarian (stejně jako sadu nástrojů linkeru s výjimkou náhradních Librarian pro Linker a vynechání generátoru proxy webové služby XML).
+
+  - **Spuštění**
+
+     Zobrazí sadu nástrojů nástrojů (MIDL, vlastní sestavení, představování a postbuild události).
+
+  Chcete-li programově získat přístup k <xref:Microsoft.VisualStudio.VCProjectEngine.VCConfiguration.ConfigurationType%2A>této vlastnosti, přečtěte si téma.
 
 - **Použití knihovny MFC**
 
-   Určuje, zda projekt knihovny MFC bude propojovat staticky nebo dynamicky ke knihovně MFC DLL. Můžete vybrat projekty bez knihovny MFC **použít standardní knihovny Windows** k propojení s různými knihovnami Win32, které jsou zahrnuty při použití knihovny MFC.
+   Určuje, zda projekt knihovny MFC bude staticky nebo dynamicky propojen s knihovnou MFC DLL. Projekty mimo knihovnu MFC mohou vybrat možnost **použít standardní knihovny Windows** pro propojení s různými knihovnami Win32, které jsou zahrnuty při použití knihovny MFC.
 
-   Programový přístup k této vlastnosti, najdete v článku <xref:Microsoft.VisualStudio.VCProject.VCProjectConfigurationProperties.useOfMfc%2A>.
-
-- **Použití knihovny ATL**
-
-   Určuje, zda projekt knihovny ATL bude propojovat staticky nebo dynamicky ATL. KNIHOVNY DLL. Pokud zadáte cokoli jiného než **Nepoužívat ATL**, definovat se přidají do kompilátoru **příkazového řádku** stránku vlastností.
-
-   Programový přístup k této vlastnosti, najdete v článku <xref:Microsoft.VisualStudio.VCProject.VCProjectConfigurationProperties.useOfATL%2A>.
+   Chcete-li programově získat přístup k <xref:Microsoft.VisualStudio.VCProject.VCProjectConfigurationProperties.useOfMfc%2A>této vlastnosti, přečtěte si téma.
 
 - **Znaková sada**
 
-   Definuje, zda by měla být nastavena _UNICODE nebo _MBCS. Kde je to vhodné, ovlivňuje také vstupní bod linkeru.
+   Definuje, jestli se má nastavit _UNICODE nebo _MBCS. Také ovlivňuje vstupní bod linkeru, kde je to vhodné.
 
-   Programový přístup k této vlastnosti, najdete v článku <xref:Microsoft.VisualStudio.VCProject.VCProjectConfigurationProperties.CharacterSet%2A>.
+   Chcete-li programově získat přístup k <xref:Microsoft.VisualStudio.VCProject.VCProjectConfigurationProperties.CharacterSet%2A>této vlastnosti, přečtěte si téma.
 
-- **Podpora modulu CLR**
+- **Podpora modulu CLR (Common Language Runtime)**
 
-   Způsobí, že [/CLR](clr-common-language-runtime-compilation.md) použití možnosti kompilátoru.
+   Způsobí použití možnosti kompilátoru [/CLR](clr-common-language-runtime-compilation.md) .
 
-   Programový přístup k této vlastnosti, najdete v článku <xref:Microsoft.VisualStudio.VCProject.VCProjectConfigurationProperties.ManagedExtensions%2A>.
+   Chcete-li programově získat přístup k <xref:Microsoft.VisualStudio.VCProject.VCProjectConfigurationProperties.ManagedExtensions%2A>této vlastnosti, přečtěte si téma.
 
-- **Cílové verze rozhraní .NET**
+- **Cílová verze rozhraní .NET Framework**
 
-   Ve spravovaných projektech určuje verze rozhraní .NET framework na cíl.
+   Ve spravovaných projektech určuje cílovou verzi rozhraní .NET Framework.
 
-- **Celková optimalizace programu**
+- **Optimalizace celého programu**
 
-   Určuje, [/GL](gl-whole-program-optimization.md) – možnost kompilátoru a [parametru/LTCG](ltcg-link-time-code-generation.md) – možnost linkeru. Ve výchozím nastavení to je zakázaná pro konfiguraci ladění a povolit pro maloobchodní konfigurace.
+   Určuje možnost kompilátoru [/GL](gl-whole-program-optimization.md) a možnost linkeru [/LTCG](ltcg-link-time-code-generation.md) . Ve výchozím nastavení je tato možnost zakázána pro konfiguraci ladění a je povolena pro maloobchodní konfigurace.
 
 - **Podpora aplikací pro Windows Store**
 
-   Určuje, zda tento projekt podporuje aplikace Windows Runtime (univerzální platformu Windows). Další informace najdete v tématu [/ZW (kompilace Windows Runtime)](zw-windows-runtime-compilation.md)a ve středisku pro vývojáře Windows.
+   Určuje, jestli tento projekt podporuje aplikace prostředí Windows Runtime (Univerzální platforma Windows). Další informace naleznete v tématu [/ZW (prostředí Windows Runtime Compilation)](zw-windows-runtime-compilation.md)a ve středisku pro vývojáře v systému Windows.
+
+::: moniker-end
 
 ## <a name="see-also"></a>Viz také:
 
-[Odkaz na stránku vlastností projektu jazyka C++](property-pages-visual-cpp.md)
+[C++odkaz na stránku vlastností projektu](property-pages-visual-cpp.md)

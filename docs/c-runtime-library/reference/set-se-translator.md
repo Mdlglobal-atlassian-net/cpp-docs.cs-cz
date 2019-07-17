@@ -23,16 +23,16 @@ helpviewer_keywords:
 - exception handling, changing
 - _set_se_translator function
 ms.assetid: 280842bc-d72a-468b-a565-2d3db893ae0f
-ms.openlocfilehash: 18ee500d7b884d1934c29dc91d9bcb03d507680d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 23eb4e9016666567771832cefed686cb9197b02f
+ms.sourcegitcommit: 7f5b29e24e1be9b5985044a030977485fea0b50c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62356547"
+ms.lasthandoff: 07/17/2019
+ms.locfileid: "68299712"
 ---
 # <a name="setsetranslator"></a>_set_se_translator
 
-Nastavte výjimky typu funkce zpětného volání na vlákno pro převod výjimky Win32 (strukturované výjimky jazyka C) na C++.
+Nastavte funkci zpětného volání pro vlákno pro převod výjimek Win32 (strukturované výjimky jazyka C) C++ na typové výjimky.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -45,33 +45,33 @@ _se_translator_function _set_se_translator(
 ### <a name="parameters"></a>Parametry
 
 *seTransFunction*<br/>
-Ukazatel na C strukturované výjimky funkce translator, který píšete.
+Ukazatel na funkci překladače strukturované výjimky jazyka C, kterou zapisujete.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Vrátí ukazatel na funkci předchozí translator registrovaných **_set_se_translator**, takže lze později obnovit předchozí funkce. Pokud byla nastavena žádná předchozí funkce, vrácená hodnota je možné obnovit výchozí chování; Tato hodnota může být **nullptr**.
+Vrátí ukazatel na předchozí funkci překladače zaregistrovanou funkcí **_set_se_translator**, aby bylo možné předchozí funkci obnovit později. Pokud není nastavená žádná předchozí funkce, můžete k obnovení výchozího chování použít návratovou hodnotu. Tato hodnota může být **nullptr**.
 
 ## <a name="remarks"></a>Poznámky
 
-**_Set_se_translator** funkce poskytuje způsob, jak zpracovat výjimky Win32 (strukturované výjimky jazyka C) jako C++ zadané výjimky. Chcete-li povolit jednotlivé výjimky jazyka C++ zpracovávat **catch** obslužnou rutinu, nejprve definují C obálkovou třídu výjimek, který můžete použít nebo odvodit, kterému budou připsány určitý typ třídy na výjimku jazyka C. Pokud chcete použít tuto třídu, nainstalujte vlastní funkci C výjimka translator, která je volána metodou interní mechanismus zpracování výjimek pokaždé, když je vyvolána výjimka jazyka C. V rámci funkce translator, lze vyvolat jakoukoli typovou výjimku, které lze zachytit odpovídající C++ **catch** obslužné rutiny.
+Funkce **_set_se_translator** poskytuje způsob, jak zpracovat výjimky Win32 (strukturované výjimky jazyka C) jako C++ typové výjimky. Chcete-li, aby každá výjimka jazyka c mohla C++ být zpracována obslužnou rutinou **catch** , nejprve definujte obálkovou třídu výjimky jazyka c, která může být použita nebo odvozena z, k atributu určitého typu třídy na výjimku jazyka C. Chcete-li použít tuto třídu, nainstalujte vlastní funkci překladače výjimky jazyka C, která je volána interním mechanismem zpracování výjimky pokaždé, když je vyvolána výjimka jazyka C. V rámci funkce překladatele můžete vyvolat jakoukoli typovou výjimku, kterou lze zachytit pomocí odpovídající C++ obslužné rutiny **catch** .
 
-Je nutné použít [/EHa](../../build/reference/eh-exception-handling-model.md) při použití **_set_se_translator**.
+[/EHa](../../build/reference/eh-exception-handling-model.md) je nutné použít při použití **_set_se_translator**.
 
-Chcete-li zadat vlastní funkci překladu, zavolejte **_set_se_translator** pomocí názvu funkce překladu jako její argument. Funkce translator, který píšete se volá jednou pro každé vyvolání funkce v zásobníku, který má **zkuste** bloky. Neexistuje žádný výchozí převaděč funkce.
+Chcete-li zadat vlastní funkci překladu, zavolejte **_set_se_translator** pomocí názvu funkce překladu jako argumentu. Funkce překladatele, kterou napíšete, je volána jednou pro každé vyvolání funkce v zásobníku, která obsahuje bloky **Try** . Neexistuje žádná výchozí funkce překladače.
 
-Funkce translator by měl provádět žádné další než výjimku jazyka C++ zadané výjimky. Pokud už existoval nic kromě vyvolání (jako je například zápis do souboru protokolu, třeba) aplikace nemusí chovat dle očekávání, protože počet, kolikrát vyvolání této funkce translator závisí na platformě.
+Funkce překladače by neměla dělat více než vyvolat C++ typovou výjimku. V případě, že kromě toho dojde k vyvolání (například při zápisu do souboru protokolu), se program nemusí chovat podle očekávání, protože počet volání funkce překladače je závislý na platformě.
 
-V prostředí s více vlákny jsou funkce překladatele udržovány odděleně pro každé vlákno. Je potřeba nainstalovat vlastní funkci translator každém novém vláknu. Díky tomu se každé vlákno má na starosti vlastní zpracování překladu. **_set_se_translator** je specifický pro jedno vlákno; jiné knihovně DLL můžete nainstalovat funkce různých překladu.
+V prostředí s více vlákny jsou funkce překladatele uchovávány samostatně pro každé vlákno. Každé nové vlákno musí nainstalovat svou vlastní funkci překladatele. Proto každé vlákno má za následek vlastní zpracování překladu. **_set_se_translator** je specifický pro jedno vlákno; Jiná knihovna DLL může nainstalovat jinou funkci překladu.
 
-*SeTransFunction* vytvořená funkce musí být funkce nativně kompilovaného (ne zkompilovanou pomocí/CLR). Celé číslo bez znaménka a ukazatel je nutné provést při Win32 **_exception_pointers –** struktury jako argumenty. Argumenty jsou vrácené hodnoty volání rozhraní API systému Win32 **GetExceptionCode** a **GetExceptionInformation** funguje, v uvedeném pořadí.
+Funkce *seTransFunction* , kterou napíšete, musí být nativní kompilovaná funkce (není zkompilována s/CLR). Musí přebírat unsigned integer a jako argumenty **_EXCEPTION_POINTERS** strukturu Win32. Argumenty jsou návratové hodnoty volání funkce Win32 API **GetExceptionCode** a **GetExceptionInformation** , v uvedeném pořadí.
 
 ```cpp
 typedef void (__cdecl *_se_translator_function)(unsigned int, struct _EXCEPTION_POINTERS* );
 ```
 
-Pro **_set_se_translator**, když dynamického propojení ke CRT jsou důsledky; jiné knihovny DLL v procesu může volat **_set_se_translator** a nahradit vlastní obslužnou rutinu.
+Pro **_set_se_translator**existují důsledky Při dynamickém propojení s CRT; Jiná knihovna DLL v procesu může volat **_set_se_translator** a nahradit svou obslužnou rutinu vlastními.
 
-Při použití **_set_se_translator** ze spravovaného kódu (kód zkompilovaný s parametrem/CLR) nebo smíšeného nativního a spravovaného kódu, mějte na paměti, které ovlivňuje překladač výjimky generované v pouze nativního kódu. Některé spravované výjimky generované ve spravovaném kódu (třeba při vyvolání `System::Exception`) nejsou směrovány prostřednictvím funkce translator. Výjimky vyvolané ve spravovaném kódu použitím funkce Win32 **RaiseException** nebo způsobeno výjimkou systému, jako jsou dělení nulovou výjimkou jsou směrovány překladač.
+Při použití **_set_se_translator** ze spravovaného kódu (kód kompilovaný s/CLR) nebo smíšeným nativním a spravovaným kódem je třeba si uvědomit, že Překladatel ovlivňuje pouze výjimky vygenerované pouze v nativním kódu. Jakékoli spravované výjimky vygenerované ve spravovaném kódu (například při `System::Exception`vyvolávání) nejsou směrovány pomocí funkce Translator. Výjimky vyvolané ve spravovaném kódu pomocí funkce Win32 **RaiseException –** nebo způsobené výjimkou systému, jako je dělení nulou, jsou směrovány prostřednictvím překladatele.
 
 ## <a name="requirements"></a>Požadavky
 
@@ -79,9 +79,11 @@ Při použití **_set_se_translator** ze spravovaného kódu (kód zkompilovaný
 |-------------|---------------------|
 |**_set_se_translator**|\<eh.h>|
 
-Další informace o kompatibilitě naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Příklad
+
+Tato ukázka zabalí volání pro nastavení překladatele strukturované výjimky a obnoví starou třídu RAII, `Scoped_SE_Translator`. Tato třída umožňuje zavést překladatele specifický pro obor jako jednu deklaraci. Destruktor třídy obnoví původní překladatel, když ovládací prvek opustí rozsah.
 
 ```cpp
 // crt_settrans.cpp
@@ -94,11 +96,21 @@ Další informace o kompatibilitě naleznete v tématu [kompatibility](../../c-r
 class SE_Exception : public std::exception
 {
 private:
-    unsigned int nSE;
+    const unsigned int nSE;
 public:
-    SE_Exception() : nSE{ 0 } {}
-    SE_Exception( unsigned int n ) : nSE{ n } {}
-    unsigned int getSeNumber() { return nSE; }
+    SE_Exception() noexcept : SE_Exception{ 0 } {}
+    SE_Exception( unsigned int n ) noexcept : nSE{ n } {}
+    unsigned int getSeNumber() const noexcept { return nSE; }
+};
+
+class Scoped_SE_Translator
+{
+private:
+    const _se_translator_function old_SE_translator;
+public:
+    Scoped_SE_Translator( _se_translator_function new_SE_translator ) noexcept
+        : old_SE_translator{ _set_se_translator( new_SE_translator ) } {}
+    ~Scoped_SE_Translator() noexcept { _set_se_translator( old_SE_translator ); }
 };
 
 void SEFunc()
@@ -117,23 +129,22 @@ void SEFunc()
     }
 }
 
-void trans_func(unsigned int u, EXCEPTION_POINTERS*)
+void trans_func( unsigned int u, EXCEPTION_POINTERS* )
 {
-    throw SE_Exception(u);
+    throw SE_Exception( u );
 }
 
 int main()
 {
-    auto original = _set_se_translator(trans_func);
+    Scoped_SE_Translator scoped_se_translator{ trans_func };
     try
     {
         SEFunc();
     }
-    catch(SE_Exception& e)
+    catch( const SE_Exception& e )
     {
-        printf("Caught a __try exception, error %8.8x.\n", e.getSeNumber());
+        printf( "Caught a __try exception, error %8.8x.\n", e.getSeNumber() );
     }
-    _set_se_translator(original);
 }
 ```
 
@@ -145,60 +156,70 @@ Caught a __try exception, error c0000094.
 
 ## <a name="example"></a>Příklad
 
-I když funkce poskytované **_set_se_translator** není k dispozici ve spravovaném kódu, je možné použít toto mapování v nativním kódu i v případě, že nativního kódu je v kompilaci v části **/CLR** Přepnout, tak dlouho, dokud nativního kódu je označen pomocí `#pragma unmanaged`. Pokud se strukturovaná výjimka je vyvolávána ve spravovaném kódu, který se má namapovat, musí být označen kód, který generuje a zpracovává výjimku `#pragma unmanaged`. Následující kód ukazuje možné použít. Další informace najdete v tématu [direktivy Pragma a klíčové slovo __Pragma](../../preprocessor/pragma-directives-and-the-pragma-keyword.md).
+Přestože funkce, které poskytuje **_set_se_translator** , nejsou ve spravovaném kódu k dispozici, je možné použít toto mapování v nativním kódu, a to i v případě, že je tento nativní kód v kompilaci pod přepínačem **/CLR** , pokud je nativní kód označené pomocí `#pragma unmanaged`. Pokud dojde k vyvolání strukturované výjimky ve spravovaném kódu, který má být namapován, je nutné označit `#pragma unmanaged`kód, který generuje a zpracuje výjimku. Následující kód ukazuje možné použití. Další informace naleznete v tématu [direktivy pragma a klíčové slovo __pragma](../../preprocessor/pragma-directives-and-the-pragma-keyword.md).
 
 ```cpp
 // crt_set_se_translator_clr.cpp
 // compile with: cl /W4 /clr crt_set_se_translator_clr.cpp
 #include <windows.h>
 #include <eh.h>
-#include <assert.h>
 #include <stdio.h>
 #include <exception>
 
-int thrower_func(int i) {
+int thrower_func( int i ) {
    int y = 0;
    int *p = &y;
    *p = i / *p;
    return 0;
 }
 
-class SE_Exception : public std::exception {
+class SE_Exception : public std::exception
+{
 private:
-    unsigned int nSE;
+    const unsigned int nSE;
 public:
-    SE_Exception() : nSE{ 0 } {}
-    SE_Exception(unsigned int n) : nSE{ n } {}
-    unsigned int getSeNumber() { return nSE; }
+    SE_Exception() noexcept : SE_Exception{ 0 } {}
+    SE_Exception( unsigned int n ) noexcept : nSE{ n } {}
+    unsigned int getSeNumber() const noexcept { return nSE; }
+};
+
+class Scoped_SE_Translator
+{
+private:
+    const _se_translator_function old_SE_translator;
+public:
+    Scoped_SE_Translator( _se_translator_function new_SE_translator ) noexcept
+        : old_SE_translator{ _set_se_translator( new_SE_translator ) } {}
+    ~Scoped_SE_Translator() noexcept { _set_se_translator( old_SE_translator ); }
 };
 
 #pragma unmanaged
-void my_trans_func(unsigned int u, PEXCEPTION_POINTERS)
+void my_trans_func( unsigned int u, PEXCEPTION_POINTERS )
 {
-    throw SE_Exception(u);
+    throw SE_Exception( u );
 }
 
 void DoTest()
 {
     try
     {
-        thrower_func(10);
+        thrower_func( 10 );
     }
-    catch(SE_Exception& e)
+    catch( const SE_Exception& e )
     {
-        printf("Caught SE_Exception, error %8.8x\n", e.getSeNumber());
+        printf( "Caught SE_Exception, error %8.8x\n", e.getSeNumber() );
     }
     catch(...)
     {
-        printf("Caught unexpected SEH exception.\n");
+        printf( "Caught unexpected SEH exception.\n" );
     }
 }
 #pragma managed
 
 int main() {
-    auto original = _set_se_translator(my_trans_func);
+    Scoped_SE_Translator scoped_se_translator{ my_trans_func };
+
     DoTest();
-    _set_se_translator(original);
 }
 ```
 
@@ -211,5 +232,5 @@ Caught SE_Exception, error c0000094
 [Rutiny zpracování výjimek](../../c-runtime-library/exception-handling-routines.md)<br/>
 [set_terminate](set-terminate-crt.md)<br/>
 [set_unexpected](set-unexpected-crt.md)<br/>
-[ukončit](terminate-crt.md)<br/>
+[ruší](terminate-crt.md)<br/>
 [unexpected](unexpected-crt.md)<br/>
