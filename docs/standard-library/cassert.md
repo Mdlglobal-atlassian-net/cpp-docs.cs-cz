@@ -6,16 +6,19 @@ f1_keywords:
 helpviewer_keywords:
 - cassert header
 ms.assetid: 6ead15a3-ac45-4075-be8e-350bca995c26
-ms.openlocfilehash: 6634ddd9adb4e7e7364aec2354c4ebd707e6ccd1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 14dda03e835ec411013b2d827bd1ccaa77f8982e
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62380036"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68245022"
 ---
 # <a name="ltcassertgt"></a>&lt;cassert&gt;
 
-Obsahuje hlavičku knihovny Standard C \<assert.h > a přidá názvy přidružené k `std` oboru názvů.
+Obsahuje hlavičku knihovny C Standard \<assert.h > a přidá názvy přidružené k `std` oboru názvů. Včetně této hlavičky zajišťuje, že názvy deklarované s vnějším spojením v záhlaví knihovny C Standard jsou deklarovány v `std` oboru názvů.
+
+> [!NOTE]
+> \<Assert.h > nedefinuje `static_assert` – makro.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -23,9 +26,15 @@ Obsahuje hlavičku knihovny Standard C \<assert.h > a přidá názvy přidružen
 #include <cassert>
 ```
 
-## <a name="remarks"></a>Poznámky
+## <a name="macros"></a>Makra
 
-Včetně této hlavičky zajišťuje, že názvy deklarované s vnějším spojením v záhlaví knihovny Standard C jsou deklarovány v `std` oboru názvů.
+```cpp
+#define assert(E)
+```
+
+### <a name="remarks"></a>Poznámky
+
+`assert(E)` je jenom konstantní, pokud je definován NDEBUG kde `assert` je poslední definované nebo předefinovat, nebo *E* převést na bool vyhodnocen **true**.
 
 ## <a name="see-also"></a>Viz také:
 

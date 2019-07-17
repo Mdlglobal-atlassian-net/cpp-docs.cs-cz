@@ -10,12 +10,12 @@ helpviewer_keywords:
 - CD2DRectU [MFC], CD2DRectU
 - CD2DRectU [MFC], IsNull
 ms.assetid: a62f17d1-011d-4867-8f51-fd7e7c00561d
-ms.openlocfilehash: feb8af3992b9f56164ded0e3b6a4529a46fe2a1d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4bbf7014fc1b612804289dcb647f85b5e7905aeb
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62396285"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68244388"
 ---
 # <a name="cd2drectu-class"></a>Cd2drectu – třída
 
@@ -31,19 +31,19 @@ class CD2DRectU : public D2D1_RECT_U;
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CD2DRectU::CD2DRectU](#cd2drectu)|Přetíženo. Vytvoří `CD2DRectU` objektu z `D2D1_RECT_U` objektu.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CD2DRectU::IsNull](#isnull)|Vrátí **logická** hodnotu, která určuje, zda výraz neobsahuje žádná platná data (NULL).|
 
 ### <a name="public-operators"></a>Veřejné operátory
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[Crect – CD2DRectU::Operator](#operator_crect)|Převede `CD2DRectU` k `CRect` objektu.|
 
@@ -64,7 +64,7 @@ Vytvoří objekt cd2drectu – z crect – objektu.
 ```
 CD2DRectU(const CRect& rect);
 CD2DRectU(const D2D1_RECT_U& rect);
-  CD2DRectU(const D2D1_RECT_U* rect);
+CD2DRectU(const D2D1_RECT_U* rect);
 
 CD2DRectU(
     UINT32 uLeft = 0,

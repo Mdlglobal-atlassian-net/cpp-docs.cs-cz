@@ -6,22 +6,25 @@ f1_keywords:
 helpviewer_keywords:
 - map header
 ms.assetid: bbf76680-7362-456e-88fa-ecda93561b6a
-ms.openlocfilehash: 0ea47a28599df543987831ee13a2c645f72a0113
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 96ca19b2562c3f145555c3c1b1d8db4fc700ed91
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62412992"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68243310"
 ---
 # <a name="ltmapgt"></a>&lt;Mapa&gt;
 
 Definuje kontejner šablony třídy map a objektu multimap a jejich podpůrných šablon.
 
-## <a name="syntax"></a>Syntaxe
+## <a name="requirements"></a>Požadavky
 
-```cpp
-#include <map>
-```
+**Záhlaví:** \<mapy >
+
+**Namespace:** std
+
+> [!NOTE]
+> \<Mapy > Knihovna také používá `#include <initializer_list>` příkazu.
 
 ## <a name="members"></a>Členové
 
@@ -44,7 +47,7 @@ Definuje kontejner šablony třídy map a objektu multimap a jejich podpůrných
 
 ### <a name="classes"></a>Třídy
 
-|Třída|Popis|
+|||
 |-|-|
 |[value_compare – třída](../standard-library/value-compare-class-map.md)|Poskytuje objekt funkce, který může porovnat prvky objektu map porovnáním hodnot jejich klíče pro určení jejich relativního pořadí v objektu map.|
 |[map – třída](../standard-library/map-class.md)|Používá pro ukládání a načítání dat z kolekce, ve kterém každý prvek má jedinečný klíč, pomocí kterého jsou data automaticky uspořádávána.|

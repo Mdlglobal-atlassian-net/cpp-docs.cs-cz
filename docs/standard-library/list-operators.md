@@ -16,21 +16,16 @@ helpviewer_keywords:
 - std::operator&lt; (list)
 - std::operator&lt;= (list)
 - std::operator== (list)
-ms.openlocfilehash: 919c24217866a57d0401c8cd6fea8f5cef02906b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7b0b7540c1b9a55140405a55e8e034f9c6ec646c
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62413187"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68246465"
 ---
 # <a name="ltlistgt-operators"></a>&lt;seznam&gt; operátory
 
-||||
-|-|-|-|
-|[operator!=](#op_neq)|[– Operátor&gt;](#op_gt)|[– Operátor&gt;=](#op_gt_eq)|
-|[– Operátor&lt;](#op_lt)|[– Operátor&lt;=](#op_lt_eq)|[operator==](#op_eq_eq)|
-
-## <a name="op_neq"></a>  Operator! =
+## <a name="op_neq"></a> Operator! =
 
 Testuje, zda je objekt seznamu na levé straně operátoru není roven objektu seznamu na pravé straně.
 
@@ -42,10 +37,10 @@ bool operator!=(
 
 ### <a name="parameters"></a>Parametry
 
-*doleva*<br/>
+*doleva*\
 Objekt typu `list`.
 
-*doprava*<br/>
+*doprava*\
 Objekt typu `list`.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -81,7 +76,7 @@ Lists not equal.
 */
 ```
 
-## <a name="op_lt"></a>  – Operátor&lt;
+## <a name="op_lt"></a> – Operátor&lt;
 
 Testuje, zda je objekt seznamu na levé straně operátoru menší než objekt seznamu na pravé straně.
 
@@ -93,10 +88,10 @@ bool operator<(
 
 ### <a name="parameters"></a>Parametry
 
-*doleva*<br/>
+*doleva*\
 Objekt typu `list`.
 
-*doprava*<br/>
+*doprava*\
 Objekt typu `list`.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -136,7 +131,7 @@ List c1 is less than list c2.
 */
 ```
 
-## <a name="op_lt_eq"></a>  – Operátor&lt;=
+## <a name="op_lt_eq"></a> – Operátor&lt;=
 
 Testuje, zda je objekt v seznamu na levé straně operátoru je menší než nebo roven objektu seznamu na pravé straně.
 
@@ -148,10 +143,10 @@ bool operator<=(
 
 ### <a name="parameters"></a>Parametry
 
-*doleva*<br/>
+*doleva*\
 Objekt typu `list`.
 
-*doprava*<br/>
+*doprava*\
 Objekt typu `list`.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -191,7 +186,7 @@ List c1 is less than or equal to list c2.
 */
 ```
 
-## <a name="op_eq_eq"></a>  Operator ==
+## <a name="op_eq_eq"></a> Operator ==
 
 Testuje, zda je objekt seznamu na levé straně operátoru roven objektu seznamu na pravé straně.
 
@@ -203,10 +198,10 @@ bool operator==(
 
 ### <a name="parameters"></a>Parametry
 
-*doleva*<br/>
+*doleva*\
 Objekt typu `list`.
 
-*doprava*<br/>
+*doprava*\
 Objekt typu `list`.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -242,7 +237,7 @@ The lists are equal.
 */
 ```
 
-## <a name="op_gt"></a>  – Operátor&gt;
+## <a name="op_gt"></a> – Operátor&gt;
 
 Testuje, zda je objekt seznamu na levé straně operátoru větší než objekt seznamu na pravé straně.
 
@@ -254,10 +249,10 @@ bool operator>(
 
 ### <a name="parameters"></a>Parametry
 
-*doleva*<br/>
+*doleva*\
 Objekt typu `list`.
 
-*doprava*<br/>
+*doprava*\
 Objekt typu `list`.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -297,7 +292,7 @@ List c1 is greater than list c2.
 */
 ```
 
-## <a name="op_gt_eq"></a>  – Operátor&gt;=
+## <a name="op_gt_eq"></a> – Operátor&gt;=
 
 Testuje, zda je objekt seznamu na levé straně operátoru větší než nebo roven objektu seznamu na pravé straně.
 
@@ -309,10 +304,10 @@ bool operator>=(
 
 ### <a name="parameters"></a>Parametry
 
-*doleva*<br/>
+*doleva*\
 Objekt typu `list`.
 
-*doprava*<br/>
+*doprava*\
 Objekt typu `list`.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -352,7 +347,3 @@ int main( )
 List c1 is greater than or equal to list c2.
 */
 ```
-
-## <a name="see-also"></a>Viz také:
-
-[\<list>](../standard-library/list.md)<br/>

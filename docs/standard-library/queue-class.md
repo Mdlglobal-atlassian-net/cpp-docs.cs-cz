@@ -22,12 +22,12 @@ helpviewer_keywords:
 - std::queue [C++], push
 - std::queue [C++], size
 ms.assetid: 28c20ab0-3a72-4185-9e0f-5a44eea0e204
-ms.openlocfilehash: 2b82e4237a525b09758323ae2483d8818fc938af
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 78479a05f8957aea5ca0f78fd3a086a49b9ef009
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62369940"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68240403"
 ---
 # <a name="queue-class"></a>queue – třída
 
@@ -42,10 +42,10 @@ class queue
 
 ### <a name="parameters"></a>Parametry
 
-*Typ*<br/>
+*Typ*\
 Typ dat prvku mají být uloženy ve frontě
 
-*Kontejner*<br/>
+*Kontejner*\
 Typ základního kontejneru používaný k implementaci fronty.
 
 ## <a name="remarks"></a>Poznámky
@@ -64,38 +64,34 @@ Existují tři typy určené adaptéry kontejneru C++ standardní knihovny: zás
 
 - [Priority_queue – třída](../standard-library/priority-queue-class.md) orders jeho prvky tak, aby největšího prvku je vždy na nejvyšší pozici. Podporuje vložení elementu a kontrolu a odstranění prvku na vrcholu. Dobré analogové brát v úvahu by uživatelé zarovnání ve kterém jsou uspořádané podle věku, výšku ani jiné kritérium.
 
+## <a name="members"></a>Členové
+
 ### <a name="constructors"></a>Konstruktory
 
-|Konstruktor|Popis|
+|||
 |-|-|
 |[fronty](#queue)|Vytvoří `queue` , který je prázdný nebo který je kopií základní kontejnerového objektu.|
 
 ### <a name="typedefs"></a>Typedefs
 
-|Název typu|Popis|
+|||
 |-|-|
 |[container_type](#container_type)|Typ, který poskytuje základní kontejneru upraví `queue`.|
 |[size_type](#size_type)|Typ celé číslo bez znaménka představující počet prvků v `queue`.|
 |[value_type](#value_type)|Typ, který představuje typ uložený jako prvek v objektu `queue`.|
 
-### <a name="member-functions"></a>Členské funkce
+### <a name="functions"></a>Funkce
 
-|Členská funkce|Popis|
+|||
 |-|-|
 |[Zpět](#back)|Vrátí odkaz na poslední a naposledy přidat prvek při zálohování `queue`.|
 |[prázdný](#empty)|Testuje, zda `queue` je prázdný.|
 |[Přední](#front)|Vrátí odkaz na první prvek na začátku `queue`.|
-|[pop](#pop)|Odstraní prvek z přední části `queue`.|
+|[POP](#pop)|Odstraní prvek z přední části `queue`.|
 |[push](#push)|Přidá prvek na pozadí `queue`.|
 |[Velikost](#size)|Vrátí počet prvků v `queue`.|
 
-## <a name="requirements"></a>Požadavky
-
-**Záhlaví:** \<fronty >
-
-**Namespace:** std
-
-## <a name="back"></a>  Queue::back
+## <a name="back"></a> Zpět
 
 Vrátí že odkaz na poslední a naposledy přidat element zádi fronty.
 
@@ -141,7 +137,7 @@ int main( )
 }
 ```
 
-## <a name="container_type"></a>  Queue::container_type
+## <a name="container_type"></a> container_type –
 
 Typ, který poskytuje základní kontejner, aby ho upravit.
 
@@ -159,7 +155,7 @@ Další informace o `Container`, najdete v části poznámky [front třídy](../
 
 Podívejte se na příklad pro [fronty](#queue) příklad toho, jak deklarace a používání `container_type`.
 
-## <a name="empty"></a>  Queue::Empty
+## <a name="empty"></a> prázdný
 
 Testuje, zda je fronta je prázdná.
 
@@ -205,7 +201,7 @@ The queue q1 is not empty.
 The queue q2 is empty.
 ```
 
-## <a name="front"></a>  Queue::front
+## <a name="front"></a> Přední
 
 Vrátí odkaz na první prvek na začátku fronty.
 
@@ -257,7 +253,7 @@ int main() {
 }
 ```
 
-## <a name="pop"></a>  Queue::POP
+## <a name="pop"></a> POP
 
 Odebere element ze začátku fronty.
 
@@ -313,7 +309,7 @@ After a pop the queue length is 2.
 After a pop, the element at the front of the queue is 20.
 ```
 
-## <a name="push"></a>  Queue::push
+## <a name="push"></a> nabízených oznámení
 
 Přidá prvek na pozadí do fronty.
 
@@ -323,7 +319,7 @@ void push(const Type& val);
 
 ### <a name="parameters"></a>Parametry
 
-*Val*<br/>
+*Val*\
 Prvek přidán na pozadí do fronty.
 
 ### <a name="remarks"></a>Poznámky
@@ -362,7 +358,7 @@ The queue length is 3.
 The element at the front of the queue is 10.
 ```
 
-## <a name="queue"></a>  Queue::Queue
+## <a name="queue"></a> fronty
 
 Vytvoří frontu, který je prázdný nebo který je kopii základní kontejnerového objektu.
 
@@ -374,7 +370,7 @@ explicit queue(const container_type& right);
 
 ### <a name="parameters"></a>Parametry
 
-*doprava*<br/>
+*doprava*\
 **Const** kontejneru je vytvořený fronty kopií.
 
 ### <a name="remarks"></a>Poznámky
@@ -429,7 +425,7 @@ The element at the front of queue q5 is 1.
 The element at the back of queue q5 is 2.
 ```
 
-## <a name="size"></a>  Queue::size
+## <a name="size"></a> Velikost
 
 Vrátí počet prvků ve frontě.
 
@@ -470,7 +466,7 @@ The queue length is 1.
 The queue length is now 2.
 ```
 
-## <a name="size_type"></a>  queue::size_type
+## <a name="size_type"></a> size_type
 
 Typ celé číslo bez znaménka představující počet prvků ve frontě.
 
@@ -486,7 +482,7 @@ Typ je synonymum pro `size_type` základní kontejneru přizpůsobené fronty.
 
 Podívejte se na příklad pro [queue::front](#front) příklad toho, jak deklarace a používání `size_type`.
 
-## <a name="value_type"></a>  Queue::value_type
+## <a name="value_type"></a> value_type
 
 Typ, který představuje typ objektu uložený jako prvek ve frontě.
 

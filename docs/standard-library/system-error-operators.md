@@ -5,20 +5,16 @@ f1_keywords:
 - system_error/std::operator!=
 - system_error/std::operator==
 ms.assetid: c14edefb-bd8a-4e90-88d3-c59c98e6f73c
-ms.openlocfilehash: d5c8f49c4a38862d62b7fe8212d98c87949fecfc
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5cf6a455beb5654ef65f7411db4783a32c71d625
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62412121"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68246214"
 ---
 # <a name="ltsystemerrorgt-operators"></a>&lt;system_error –&gt; operátory
 
-||||
-|-|-|-|
-|[operator!=](#op_neq)|[– Operátor&lt;](#op_lt)|[operator==](#op_eq_eq)|
-
-## <a name="op_eq_eq"></a>  Operator ==
+## <a name="op_eq_eq"></a> Operator ==
 
 Testuje, zda je objekt na levé straně operátoru roven objektu na pravé straně.
 
@@ -28,14 +24,18 @@ bool operator==(const error_code& left,
 
 bool operator==(const error_condition& left,
     const error_code& right);
+
+bool operator==(const error_condition& left,
+    const error_condition& right);
 ```
 
 ### <a name="parameters"></a>Parametry
 
-|Parametr|Popis|
-|---------------|-----------------|
-|*doleva*|Objekt, který chcete testovat rovnost.|
-|*doprava*|Objekt, který chcete testovat rovnost.|
+*doleva*\
+Objekt, který chcete testovat rovnost.
+
+*doprava*\
+Objekt, který chcete testovat rovnost.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -45,24 +45,24 @@ bool operator==(const error_condition& left,
 
 Tato funkce vrací `left.category() == right.category() && left.value() == right.value()`.
 
-## <a name="op_neq"></a>  Operator! =
+## <a name="op_neq"></a> Operator! =
 
 Testuje, zda je objekt na levé straně operátoru není roven objektu na pravé straně.
 
 ```cpp
-bool operator!=(const error_code& left,
-    const error_condition& right);
-
-bool operator!=(const error_condition& left,
-    const error_code& right);
+bool operator!=(const error_code& left, const error_condition& right);
+bool operator!=(const error_condition& left, const error_code& right);
+bool operator!=(const error_code& left, const error_code& right);
+bool operator!=(const error_condition& left, const error_condition& right);
 ```
 
 ### <a name="parameters"></a>Parametry
 
-|Parametr|Popis|
-|---------------|-----------------|
-|*doleva*|Objekt, který má být testována nerovnost.|
-|*doprava*|Objekt, který má být testována nerovnost.|
+*doleva*\
+Objekt, který má být testována nerovnost.
+
+*doprava*\
+Objekt, který má být testována nerovnost.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -72,7 +72,7 @@ bool operator!=(const error_condition& left,
 
 Tato funkce vrací `!(left == right)`.
 
-## <a name="op_lt"></a>  – Operátor&lt;
+## <a name="op_lt"></a> – Operátor&lt;
 
 Zkouší, zda je objekt menší než objekt předaný k porovnání.
 
@@ -102,10 +102,11 @@ inline bool operator<(
 
 ### <a name="parameters"></a>Parametry
 
-|Parametr|Popis|
-|---------------|-----------------|
-|*doleva*|Objekt, který chcete porovnat.|
-|*doprava*|Objekt, který chcete porovnat.|
+*doleva*\
+Objekt, který chcete porovnat.
+
+*doprava*\
+Objekt, který chcete porovnat.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -115,6 +116,9 @@ inline bool operator<(
 
 Tato funkce testuje pořadí chyb.
 
-## <a name="see-also"></a>Viz také:
+## <a name="op_ostream"></a> – Operátor&lt;&lt;
 
-[<system_error>](../standard-library/system-error.md)<br/>
+```cpp
+template <class charT, class traits> 
+    basic_ostream<charT, traits>& operator<<(basic_ostream<charT, traits>& os, const error_code& ec);
+```

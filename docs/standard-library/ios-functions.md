@@ -32,8 +32,14 @@ helpviewer_keywords:
 - std::dec [C++]
 - std::fixed [C++]
 - std::hex [C++]
+- std::hexfloat [C++]
+- std::io_errc [C++]
 - std::internal [C++]
+- std::iostream_category [C++]
+- std::is_error_code_enum [C++]
 - std::left [C++]
+- std::make_error_code [C++]
+- std::make_error_condition [C++]
 - std::noboolalpha [C++]
 - std::noshowbase [C++]
 - std::noshowpoint [C++]
@@ -50,27 +56,16 @@ helpviewer_keywords:
 - std::skipws [C++]
 - std::unitbuf [C++]
 - std::uppercase [C++]
-ms.openlocfilehash: 18f42f8e5bcd69872e4300d154eb72f489015e36
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a08c039322c49f33ae4441851c96aa56e62fcb84
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62404887"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68245295"
 ---
 # <a name="ltiosgt-functions"></a>&lt;IOS&gt; funkce
 
-||||
-|-|-|-|
-|[defaultfloat](#ios_defaultfloat)|[boolalpha](#boolalpha)|[DEC](#dec)|
-|[Oprava](#fixed)|[Hex](#hex)|[internal](#internal)|
-|[doleva](#left)|[noboolalpha](#noboolalpha)|[noshowbase](#noshowbase)|
-|[noshowpoint](#noshowpoint)|[noshowpos](#noshowpos)|[noskipws](#noskipws)|
-|[nounitbuf](#nounitbuf)|[nouppercase](#nouppercase)|[Říjen](#oct)|
-|[doprava](#right)|[scientific](#scientific)|[showbase](#showbase)|
-|[showpoint](#showpoint)|[showpos](#showpos)|[skipws](#skipws)|
-|[unitbuf](#unitbuf)|[velká písmena](#uppercase)|
-
-## <a name="boolalpha"></a>  boolalpha
+## <a name="boolalpha"></a> boolalpha
 
 Určuje proměnné tohoto typu [bool](../cpp/bool-cpp.md) zobrazí jako **true** nebo **false** v datovém proudu.
 
@@ -80,7 +75,7 @@ ios_base& boolalpha(ios_base& str);
 
 ### <a name="parameters"></a>Parametry
 
-*str*<br/>
+*str*\
 Odkaz na objekt typu [ios_base –](../standard-library/ios-base-class.md), nebo typ, který dědí z `ios_base`.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -122,7 +117,7 @@ true
 true
 ```
 
-## <a name="dec"></a>  dec
+## <a name="dec"></a> DEC
 
 Určuje, že celočíselné proměnné zobrazí v základní 10 zápisu.
 
@@ -132,7 +127,7 @@ ios_base& dec(ios_base& str);
 
 ### <a name="parameters"></a>Parametry
 
-*str*<br/>
+*str*\
 Odkaz na objekt typu [ios_base –](../standard-library/ios-base-class.md), nebo typ, který dědí z `ios_base`.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -175,7 +170,7 @@ int main( )
 100
 ```
 
-## <a name="ios_defaultfloat"></a>  &lt;IOS&gt; defaultfloat
+## <a name="ios_defaultfloat"></a> &lt;IOS&gt; defaultfloat
 
 Nakonfiguruje příznaky ze `ios_base` objektu, který chcete použít výchozí zobrazovací formát pro hodnoty typu float.
 
@@ -185,14 +180,14 @@ ios_base& defaultfloat(ios_base& _Iosbase);
 
 ### <a name="parameters"></a>Parametry
 
-*_Iosbase*<br/>
+*_Iosbase*\
 `ios_base` Objektu.
 
 ### <a name="remarks"></a>Poznámky
 
 Manipulátor efektivně volá _I `osbase.` [ios_base::unsetf](../standard-library/ios-base-class.md#unsetf)`(ios_base::floatfield)`, vrátí _I `osbase`.
 
-## <a name="fixed"></a>  Oprava
+## <a name="fixed"></a> Oprava
 
 Určuje, že číslo s plovoucí desetinnou čárkou se zobrazí v oprava desítkovém zápisu.
 
@@ -202,7 +197,7 @@ ios_base& fixed(ios_base& str);
 
 ### <a name="parameters"></a>Parametry
 
-*str*<br/>
+*str*\
 Odkaz na objekt typu [ios_base –](../standard-library/ios-base-class.md), nebo typ, který dědí z `ios_base`.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -240,7 +235,7 @@ int main( )
 1.1
 ```
 
-## <a name="hex"></a>  Hex
+## <a name="hex"></a> Hex
 
 Určuje, že se zobrazí celočíselné proměnné v základní 16 zápisu.
 
@@ -250,7 +245,7 @@ ios_base& hex(ios_base& str);
 
 ### <a name="parameters"></a>Parametry
 
-*str*<br/>
+*str*\
 Odkaz na objekt typu [ios_base –](../standard-library/ios-base-class.md), nebo typ, který dědí z `ios_base`.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -267,7 +262,21 @@ Efektivně volá manipulátor `str` **.** [setf](../standard-library/ios-base-cl
 
 Zobrazit [dec](../standard-library/ios-functions.md#dec) příklad, jak používat `hex`.
 
-## <a name="internal"></a>  Interní
+## <a name="hexfloat"></a> hexfloat
+
+```cpp
+ios_base& hexfloat (ios_base& str);
+```
+
+## <a name="io_errc"></a> io_errc –
+
+```cpp
+enum class io_errc {
+    stream = 1
+};
+```
+
+## <a name="internal"></a> Interní
 
 Způsobí, že se znaménkem číslo vlevo oprávněné a číslo, které má být zarovnané vpravo.
 
@@ -277,7 +286,7 @@ ios_base& internal(ios_base& str);
 
 ### <a name="parameters"></a>Parametry
 
-*str*<br/>
+*str*\
 Odkaz na objekt typu [ios_base –](../standard-library/ios-base-class.md), nebo typ, který dědí z `ios_base`.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -313,7 +322,19 @@ int main( void )
 -..123.456
 ```
 
-## <a name="left"></a>  doleva
+## <a name="is_error_code_enum"></a> is_error_code_enum –
+
+```cpp
+template <> struct is_error_code_enum<io_errc> : public true_type { };
+```
+
+## <a name="iostream_category"></a> iostream_category
+
+```cpp
+const error_category& iostream_category() noexcept;
+```
+
+## <a name="left"></a> doleva
 
 Způsobí, že text, který není stejně široká jako šířka výstupu se zobrazí v stream vyprázdnění se na levém okraji.
 
@@ -323,7 +344,7 @@ ios_base& left(ios_base& str);
 
 ### <a name="parameters"></a>Parametry
 
-*str*<br/>
+*str*\
 Odkaz na objekt typu [ios_base –](../standard-library/ios-base-class.md), nebo typ, který dědí z `ios_base`.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -352,11 +373,23 @@ int main( )
 ```
 
 ```Output
-                   5
 5
+        5
 ```
 
-## <a name="noboolalpha"></a>  noboolalpha
+## <a name="make_error_code"></a> make_error_code –
+
+```cpp
+error_code make_error_code(io_errc e) noexcept;
+```
+
+## <a name="make_error_condition"></a> make_error_condition –
+
+```cpp
+error_condition make_error_condition(io_errc e) noexcept;
+```
+
+## <a name="noboolalpha"></a> noboolalpha
 
 Určuje, že proměnné typu [bool](../cpp/bool-cpp.md) jako 1 nebo 0 v datovém proudu.
 
@@ -366,7 +399,7 @@ ios_base& noboolalpha(ios_base& str);
 
 ### <a name="parameters"></a>Parametry
 
-*str*<br/>
+*str*\
 Odkaz na objekt typu [ios_base –](../standard-library/ios-base-class.md), nebo typ, který dědí z `ios_base`.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -385,7 +418,7 @@ Ve výchozím nastavení `noboolalpha` je v platnosti.
 
 Zobrazit [boolalpha](../standard-library/ios-functions.md#boolalpha) pro příklad použití `noboolalpha`.
 
-## <a name="noshowbase"></a>  noshowbase
+## <a name="noshowbase"></a> noshowbase
 
 Vypne označující konvenční základní třídy, ve kterém se zobrazí číslo.
 
@@ -395,7 +428,7 @@ ios_base& noshowbase(ios_base& str);
 
 ### <a name="parameters"></a>Parametry
 
-*str*<br/>
+*str*\
 Odkaz na objekt typu [ios_base –](../standard-library/ios-base-class.md), nebo typ, který dědí z `ios_base`.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -412,7 +445,7 @@ Efektivně volá manipulátor `str`.[ unsetf –](../standard-library/ios-base-c
 
 Zobrazit [showbase](../standard-library/ios-functions.md#showbase) příklad, jak používat `noshowbase`.
 
-## <a name="noshowpoint"></a>  noshowpoint
+## <a name="noshowpoint"></a> noshowpoint
 
 Zobrazí pouze část celého čísla s plovoucí desetinnou čárkou čísel, jehož zlomkové části je nula.
 
@@ -422,7 +455,7 @@ ios_base& noshowpoint(ios_base& str);
 
 ### <a name="parameters"></a>Parametry
 
-*str*<br/>
+*str*\
 Odkaz na objekt typu [ios_base –](../standard-library/ios-base-class.md), nebo typ, který dědí z `ios_base`.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -459,7 +492,7 @@ int main( )
 5
 ```
 
-## <a name="noshowpos"></a>  noshowpos
+## <a name="noshowpos"></a> noshowpos
 
 Způsobí, že kladná čísla nesmí být explicitně přihlášení.
 
@@ -469,7 +502,7 @@ ios_base& noshowpos(ios_base& str);
 
 ### <a name="parameters"></a>Parametry
 
-*str*<br/>
+*str*\
 Odkaz na objekt typu [ios_base –](../standard-library/ios-base-class.md), nebo typ, který dědí z `ios_base`.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -486,7 +519,7 @@ Efektivně volá manipulátor `str`.[ unsetf –](../standard-library/ios-base-c
 
 Zobrazit [showpos](../standard-library/ios-functions.md#showpos) pro příklad použití `noshowpos`.
 
-## <a name="noskipws"></a>  noskipws
+## <a name="noskipws"></a> noskipws
 
 Způsobit prostory přečtou vstupní datový proud.
 
@@ -496,7 +529,7 @@ ios_base& noskipws(ios_base& str);
 
 ### <a name="parameters"></a>Parametry
 
-*str*<br/>
+*str*\
 Odkaz na objekt typu [ios_base –](../standard-library/ios-base-class.md), nebo typ, který dědí z `ios_base`.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -528,7 +561,7 @@ int main() {
 }
 ```
 
-## <a name="nounitbuf"></a>  nounitbuf
+## <a name="nounitbuf"></a> nounitbuf
 
 Způsobí, že výstupní ukládány do vyrovnávací paměti a zpracování na při vyrovnávací paměť je plná.
 
@@ -538,7 +571,7 @@ ios_base& nounitbuf(ios_base& str);
 
 ### <a name="parameters"></a>Parametry
 
-*str*<br/>
+*str*\
 Odkaz na objekt typu [ios_base –](../standard-library/ios-base-class.md), nebo typ, který dědí z `ios_base`.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -551,7 +584,7 @@ Odkaz na objekt, ze které _ *Str* pochází.
 
 Efektivně volá manipulátor `str`.[ unsetf –](../standard-library/ios-base-class.md#unsetf)( `ios_base::unitbuf`) a vrátí *str*.
 
-## <a name="nouppercase"></a>  nouppercase
+## <a name="nouppercase"></a> nouppercase
 
 Určuje, že šestnáctkových číslic a exponent za použití vědeckého zápisu se zobrazí na malá písmena.
 
@@ -561,7 +594,7 @@ ios_base& nouppercase(ios_base& str);
 
 ### <a name="parameters"></a>Parametry
 
-*str*<br/>
+*str*\
 Odkaz na objekt typu [ios_base –](../standard-library/ios-base-class.md), nebo typ, který dědí z `ios_base`.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -576,7 +609,7 @@ Efektivně volá manipulátor `str`.[ unsetf –](../standard-library/ios-base-c
 
 Zobrazit [velká](../standard-library/ios-functions.md#uppercase) pro příklad použití `nouppercase`.
 
-## <a name="oct"></a>  Říjen
+## <a name="oct"></a> Říjen
 
 Určuje, že celočíselné proměnné zobrazí v základní 8 zápisu.
 
@@ -586,7 +619,7 @@ ios_base& oct(ios_base& str);
 
 ### <a name="parameters"></a>Parametry
 
-*str*<br/>
+*str*\
 Odkaz na objekt typu [ios_base –](../standard-library/ios-base-class.md), nebo typ, který dědí z `ios_base`.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -603,7 +636,7 @@ Efektivně volá manipulátor `str`.[ SETF](../standard-library/ios-base-class.m
 
 Zobrazit [dec](../standard-library/ios-functions.md#dec) příklad, jak používat `oct`.
 
-## <a name="right"></a>  doprava
+## <a name="right"></a> doprava
 
 Způsobí, že text, který není stejně široká jako šířka výstupu se zobrazí v vyprázdnění datový proud s na pravém okraji.
 
@@ -613,7 +646,7 @@ ios_base& right(ios_base& str);
 
 ### <a name="parameters"></a>Parametry
 
-*str*<br/>
+*str*\
 Odkaz na objekt typu [ios_base –](../standard-library/ios-base-class.md), nebo typ, který dědí z `ios_base`.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -660,7 +693,7 @@ int main( )
                    5
 ```
 
-## <a name="scientific"></a>  vědecké
+## <a name="scientific"></a> vědecké
 
 Způsobí, že s plovoucí desetinnou čárkou čísla, který se má zobrazit pomocí vědeckého zápisu.
 
@@ -670,7 +703,7 @@ ios_base& scientific(ios_base& str);
 
 ### <a name="parameters"></a>Parametry
 
-*str*<br/>
+*str*\
 Odkaz na objekt typu [ios_base –](../standard-library/ios-base-class.md), nebo typ, který dědí z `ios_base`.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -705,7 +738,7 @@ int main( )
 1.002300e+002
 ```
 
-## <a name="showbase"></a>  showbase
+## <a name="showbase"></a> showbase
 
 Označuje konvenční základní třídy, ve kterém se zobrazí číslo.
 
@@ -715,7 +748,7 @@ ios_base& showbase(ios_base& str);
 
 ### <a name="parameters"></a>Parametry
 
-*str*<br/>
+*str*\
 Odkaz na objekt typu [ios_base –](../standard-library/ios-base-class.md), nebo typ, který dědí z `ios_base`.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -759,7 +792,7 @@ int main( )
 144
 ```
 
-## <a name="showpoint"></a>  showpoint
+## <a name="showpoint"></a> showpoint
 
 Zobrazuje část celého čísla číslo s plovoucí desetinnou čárkou a číslic vpravo od desetinné čárky, i v případě, že zlomkové části je nula.
 
@@ -769,7 +802,7 @@ ios_base& showpoint(ios_base& str);
 
 ### <a name="parameters"></a>Parametry
 
-*str*<br/>
+*str*\
 Odkaz na objekt typu [ios_base –](../standard-library/ios-base-class.md), nebo typ, který dědí z `ios_base`.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -786,7 +819,7 @@ Efektivně volá manipulátor `str`.[ SETF](../standard-library/ios-base-class.m
 
 Zobrazit [noshowpoint](../standard-library/ios-functions.md#noshowpoint) pro příklad použití `showpoint`.
 
-## <a name="showpos"></a>  showpos
+## <a name="showpos"></a> showpos
 
 Způsobí, že explicitně podepsat kladná čísla.
 
@@ -796,7 +829,7 @@ ios_base& showpos(ios_base& str);
 
 ### <a name="parameters"></a>Parametry
 
-*str*<br/>
+*str*\
 Odkaz na objekt typu [ios_base –](../standard-library/ios-base-class.md), nebo typ, který dědí z `ios_base`.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -831,7 +864,7 @@ int main( )
 +1
 ```
 
-## <a name="skipws"></a>  skipws
+## <a name="skipws"></a> skipws
 
 Způsobit prostory vstupního datového proudu nelze číst.
 
@@ -841,7 +874,7 @@ ios_base& skipws(ios_base& str);
 
 ### <a name="parameters"></a>Parametry
 
-*str*<br/>
+*str*\
 Odkaz na objekt typu [ios_base –](../standard-library/ios-base-class.md), nebo typ, který dědí z `ios_base`.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -883,7 +916,7 @@ Enter three characters: 1 2 3
 .3.
 ```
 
-## <a name="unitbuf"></a>  unitbuf
+## <a name="unitbuf"></a> unitbuf
 
 Způsobí, že výstupní ke zpracování, pokud vyrovnávací paměť není prázdný.
 
@@ -893,7 +926,7 @@ ios_base& unitbuf(ios_base& str);
 
 ### <a name="parameters"></a>Parametry
 
-*str*<br/>
+*str*\
 Odkaz na objekt typu [ios_base –](../standard-library/ios-base-class.md), nebo typ, který dědí z `ios_base`.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -918,7 +951,7 @@ ios_base& uppercase(ios_base& str);
 
 ### <a name="parameters"></a>Parametry
 
-*str*<br/>
+*str*\
 Odkaz na objekt typu [ios_base –](../standard-library/ios-base-class.md), nebo typ, který dědí z `ios_base`.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -958,7 +991,3 @@ int main( void )
 a
 A
 ```
-
-## <a name="see-also"></a>Viz také:
-
-[\<ios>](../standard-library/ios.md)<br/>

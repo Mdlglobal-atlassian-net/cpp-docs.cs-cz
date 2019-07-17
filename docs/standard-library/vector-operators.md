@@ -16,21 +16,16 @@ helpviewer_keywords:
 - std::operator&lt; (vector)
 - std::operator&lt;= (vector)
 - std::operator== (vector)
-ms.openlocfilehash: f659f1291c4111d83cc8715fd0deb104a9685f4f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f6717add93c489f536bd0c0b0f82b74bbd915985
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62185942"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68240985"
 ---
 # <a name="ltvectorgt-operators"></a>&lt;vektor&gt; operátory
 
-||||
-|-|-|-|
-|[operator!=](#op_neq)|[– Operátor&gt;](#op_gt)|[– Operátor&gt;=](#op_gt_eq)|
-|[– Operátor&lt;](#op_lt)|[– Operátor&lt;=](#op_lt_eq)|[operator==](#op_eq_eq)|
-
-## <a name="op_neq"></a>  Operator! =
+## <a name="op_neq"></a> Operator! =
 
 Testuje, zda je objekt na levé straně operátoru není roven objektu na pravé straně.
 
@@ -40,10 +35,10 @@ bool operator!=(const vector<Type, Allocator>& left, const vector<Type, Allocato
 
 ### <a name="parameters"></a>Parametry
 
-*doleva*<br/>
+*doleva*\
 Objekt typu `vector`.
 
-*doprava*<br/>
+*doprava*\
 Objekt typu `vector`.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -81,7 +76,7 @@ int main( )
 Vectors not equal.
 ```
 
-## <a name="op_lt"></a>  – Operátor&lt;
+## <a name="op_lt"></a> – Operátor&lt;
 
 Testuje, zda je objekt na levé straně operátoru menší než objekt na pravé straně.
 
@@ -91,10 +86,10 @@ bool operator<(const vector<Type, Allocator>& left, const vector<Type, Allocator
 
 ### <a name="parameters"></a>Parametry
 
-*doleva*<br/>
+*doleva*\
 Objekt typu `vector`.
 
-*doprava*<br/>
+*doprava*\
 Objekt typu `vector`.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -132,7 +127,7 @@ int main( )
 Vector v1 is less than vector v2.
 ```
 
-## <a name="op_lt_eq"></a>  – Operátor&lt;=
+## <a name="op_lt_eq"></a> – Operátor&lt;=
 
 Testuje, zda je objekt na levé straně operátoru menší než nebo roven objektu na pravé straně.
 
@@ -142,10 +137,10 @@ bool operator<=(const vector<Type, Allocator>& left, const vector<Type, Allocato
 
 ### <a name="parameters"></a>Parametry
 
-*doleva*<br/>
+*doleva*\
 Objekt typu `vector`.
 
-*doprava*<br/>
+*doprava*\
 Objekt typu `vector`.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -183,7 +178,7 @@ int main( )
 Vector v1 is less than or equal to vector v2.
 ```
 
-## <a name="op_eq_eq"></a>  Operator ==
+## <a name="op_eq_eq"></a> Operator ==
 
 Testuje, zda je objekt na levé straně operátoru roven objektu na pravé straně.
 
@@ -193,10 +188,10 @@ bool operator==(const vector<Type, Allocator>& left, const vector<Type, Allocato
 
 ### <a name="parameters"></a>Parametry
 
-*doleva*<br/>
+*doleva*\
 Objekt typu `vector`.
 
-*doprava*<br/>
+*doprava*\
 Objekt typu `vector`.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -234,7 +229,7 @@ int main( )
 Vectors equal.
 ```
 
-## <a name="op_gt"></a>  – Operátor&gt;
+## <a name="op_gt"></a> – Operátor&gt;
 
 Testuje, zda je objekt na levé straně operátoru větší než objekt na pravé straně.
 
@@ -244,10 +239,10 @@ bool operator>(const vector<Type, Allocator>& left, const vector<Type, Allocator
 
 ### <a name="parameters"></a>Parametry
 
-*doleva*<br/>
+*doleva*\
 Objekt typu `vector`.
 
-*doprava*<br/>
+*doprava*\
 Objekt typu `vector`.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -286,7 +281,7 @@ int main( )
 Vector v1 is greater than vector v2.
 ```
 
-## <a name="op_gt_eq"></a>  – Operátor&gt;=
+## <a name="op_gt_eq"></a> – Operátor&gt;=
 
 Testuje, zda je objekt na levé straně operátoru větší než nebo stejný jako objekt na pravé straně.
 
@@ -296,10 +291,10 @@ bool operator>=(const vector<Type, Allocator>& left, const vector<Type, Allocato
 
 ### <a name="parameters"></a>Parametry
 
-*doleva*<br/>
+*doleva*\
 Objekt typu `vector`.
 
-*doprava*<br/>
+*doprava*\
 Objekt typu `vector`.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -337,7 +332,3 @@ int main( )
 ```Output
 Vector v1 is greater than or equal to vector v2.
 ```
-
-## <a name="see-also"></a>Viz také:
-
-[\<vector>](../standard-library/vector.md)<br/>

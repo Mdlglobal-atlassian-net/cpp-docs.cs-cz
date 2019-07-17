@@ -12,21 +12,16 @@ helpviewer_keywords:
 - std::operator&amp; (bitset)
 - std::operator&gt;&gt; (bitset)
 - std::operator&lt;&lt; (bitset)
-ms.openlocfilehash: 1c4c1b6f6c023514a1d3ae46f6670247e4bf99d4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 30367e003d2dad95e870854098e7fcae34f50efa
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62380192"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68243323"
 ---
 # <a name="ltbitsetgt-operators"></a>&lt;bitset –&gt; operátory
 
-||||
-|-|-|-|
-|[– Operátor&amp;](#op_amp)|[– Operátor&gt;&gt;](#op_gt_gt)|[– Operátor&lt;&lt;](#op_lt_lt)|
-|[operátor ^](#op_xor)|[operator&#124;](#op_or)| |
-
-## <a name="op_amp"></a>  – Operátor&amp;
+## <a name="op_amp"></a> – Operátor&amp;
 
 Provádí logické bitové `AND` mezi dvěma bitsets.
 
@@ -40,10 +35,10 @@ operator&(
 
 ### <a name="parameters"></a>Parametry
 
-*doleva*<br/>
+*doleva*\
 První dva bitsets jehož příslušné prvky mají být kombinované pomocí bitového `AND`.
 
-*doprava*<br/>
+*doprava*\
 Druhé dvě valarrays jehož příslušné prvky mají být kombinované pomocí bitového `AND`.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -78,7 +73,7 @@ bitset 2: 0011
 bitset 3: 0001
 ```
 
-## <a name="op_lt_lt"></a>  – Operátor&lt;&lt;
+## <a name="op_lt_lt"></a> – Operátor&lt;&lt;
 
 Vloží textové znázornění sekvence bit do výstupního datového proudu.
 
@@ -91,7 +86,7 @@ basic_ostream<CharType, Traits>& operator<<(
 
 ### <a name="parameters"></a>Parametry
 
-*doprava*<br/>
+*doprava*\
 Objekt typu **bitset –\<N >** , který má být vložen do výstupního datového proudu jako řetězec.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -102,7 +97,7 @@ Textové vyjádření pořadí bitů v `ostr`.
 
 Funkce přetížení šablon `operator<<`, což bitset – Chcete-li možné zapsat bez první převodu na řetězec. Funkce šablony efektivně provede:
 
-**ostr** << _ *vpravo*. [to_string](bitset-class.md) < **CharType**, **osobnostní rysy**, **alokátoru** \< **CharType**>>)
+**ostr** << _*vpravo*. [to_string](bitset-class.md) <**CharType**, **osobnostní rysy**, **alokátoru**\<**CharType**>>)
 
 ### <a name="example"></a>Příklad
 
@@ -135,7 +130,7 @@ int main( )
 }
 ```
 
-## <a name="op_gt_gt"></a>  – Operátor&gt;&gt;
+## <a name="op_gt_gt"></a> – Operátor&gt;&gt;
 
 Načte řetězec rozšířené znaky do bitset –.
 
@@ -150,10 +145,10 @@ _Istr,
 
 ### <a name="parameters"></a>Parametry
 
-*_Istr*<br/>
+*_Istr*\
 Řetězec, který se zadá do vstupního datového proudu má být vložen do bitset –.
 
-*doprava*<br/>
+*doprava*\
 Bitset –, který přijímá bity ze vstupního datového proudu.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -221,7 +216,7 @@ int main()
 }
 ```
 
-## <a name="op_xor"></a>  operátor ^
+## <a name="op_xor"></a> operátor ^
 
 Provádí logické bitové `EXCLUSIVE-OR` mezi dvěma bitsets.
 
@@ -235,10 +230,10 @@ operator^(
 
 ### <a name="parameters"></a>Parametry
 
-*doleva*<br/>
+*doleva*\
 První dva bitsets jehož příslušné prvky mají být kombinované pomocí bitového `EXCLUSIVE-OR`.
 
-*doprava*<br/>
+*doprava*\
 Druhé dvě valarrays jehož příslušné prvky mají být kombinované pomocí bitového `EXCLUSIVE-OR`.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -273,7 +268,7 @@ bitset 2: 0011
 bitset 3: 0110
 ```
 
-## <a name="op_or"></a>  – operátor&#124;
+## <a name="op_or"></a> – operátor&#124;
 
 Provádí logické bitové `OR` mezi dvěma bitsets.
 
@@ -287,10 +282,10 @@ operator|(
 
 ### <a name="parameters"></a>Parametry
 
-*doleva*<br/>
+*doleva*\
 První dva bitsets jehož příslušné prvky mají být kombinované pomocí bitového `OR`.
 
-*doprava*<br/>
+*doprava*\
 Druhé dvě valarrays jehož příslušné prvky mají být kombinované pomocí bitového `OR`.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -324,7 +319,3 @@ bitset 1: 0101
 bitset 2: 0011
 bitset 3: 0111
 ```
-
-## <a name="see-also"></a>Viz také:
-
-[\<bitset>](../standard-library/bitset.md)<br/>

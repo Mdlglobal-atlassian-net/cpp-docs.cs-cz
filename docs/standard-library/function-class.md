@@ -18,12 +18,12 @@ helpviewer_keywords:
 - std::function [C++], target
 - std::function [C++], target_type
 ms.assetid: 7b5ca76b-9ca3-4d89-8fcf-cad70a4aeae6
-ms.openlocfilehash: 44c7691cc967b13b4fa94a7c51da57b7bf4d511f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d775af68b8238093c794a0f78d7e24f2a515ee56
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62159714"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68243797"
 ---
 # <a name="function-class"></a>function – třída
 
@@ -79,10 +79,10 @@ public:
 
 ### <a name="parameters"></a>Parametry
 
-*Fty*<br/>
+*Fty*\
 Typ funkce zahrnující.
 
-*AX*<br/>
+*AX*\
 Funkce alokátoru.
 
 ## <a name="remarks"></a>Poznámky
@@ -103,42 +103,38 @@ Ve všech případech `INVOKE(f, t1, t2, ..., tN)`, kde `f` je volatelný objekt
 
 Prázdná `function` objekt neobsahuje volatelného objektu nebo odkazem na volatelný objekt.
 
+## <a name="members"></a>Členové
+
 ### <a name="constructors"></a>Konstruktory
 
-|Konstruktor|Popis|
+|||
 |-|-|
 |[– funkce](#function)|Vytvoří obálku, která je prázdná nebo uchovává volatelný objekt libovolného typu s pevnou podpis.|
 
 ### <a name="typedefs"></a>Typedefs
 
-|Název typu|Popis|
+|||
 |-|-|
 |[result_type](#result_type)|Návratový typ uložený volatelný objekt.|
 
-### <a name="member-functions"></a>Členské funkce
+### <a name="functions"></a>Funkce
 
-|Členská funkce|Popis|
+|||
 |-|-|
 |[assign](#assign)|Volatelný objekt přiřadí k tomuto objektu funkce.|
 |[swap](#swap)|Zamění dvě volatelných objektů.|
-|[target](#target)|Testuje, zda je uložená volatelný objekt lze volat jako zadaný.|
+|[Cíl](#target)|Testuje, zda je uložená volatelný objekt lze volat jako zadaný.|
 |[target_type](#target_type)|Získá typ informací na volatelný objekt.|
 
 ### <a name="operators"></a>Operátory
 
-|Operátor|Popis|
+|||
 |-|-|
-|[Tento parametr zadán Function::Operator](#op_unspecified)|Testuje, zda existuje uložené volatelný objekt.|
-|[function::operator()](#op_call)|Volá volatelný objekt.|
-|[Function::Operator =](#op_eq)|Nahradí uloženou volatelný objekt.|
+|[Tento parametr zadán – operátor](#op_unspecified)|Testuje, zda existuje uložené volatelný objekt.|
+|[operator()](#op_call)|Volá volatelný objekt.|
+|[operátor =](#op_eq)|Nahradí uloženou volatelný objekt.|
 
-## <a name="requirements"></a>Požadavky
-
-**Záhlaví:** \<funkční >
-
-**Namespace:** std
-
-## <a name="assign"></a>  Function::Assign
+## <a name="assign"></a> přiřazení
 
 Volatelný objekt přiřadí k tomuto objektu funkce.
 
@@ -156,20 +152,20 @@ template <class Fx, class Alloc>
 
 ### <a name="parameters"></a>Parametry
 
-*_Func*<br/>
+*_Func*\
 Volatelný objekt.
 
-*_Fnref*<br/>
+*_Fnref*\
 Obálka odkaz, který obsahuje volatelný objekt.
 
-*AX*<br/>
+*AX*\
 Objekt alokátoru.
 
 ### <a name="remarks"></a>Poznámky
 
 Členské funkce jednotlivých nahradit `callable object` drží `*this` s volatelný objekt předán jako `operand`. Obě přidělení úložiště s objekt alokátoru, který *Ax*.
 
-## <a name="function"></a>  Function::Function
+## <a name="function"></a> – funkce
 
 Vytvoří obálku, která je prázdná nebo uchovává volatelný objekt libovolného typu s pevnou podpis.
 
@@ -194,22 +190,22 @@ template <class Fx, class Alloc>
 
 ### <a name="parameters"></a>Parametry
 
-*doprava*<br/>
+*doprava*\
 Objekt funkce ke kopírování.
 
-*Fx*<br/>
+*FX*\
 Typ volatelný objekt.
 
-*_Func*<br/>
+*_Func*\
 Volatelný objekt zabalit.
 
-*ALLOC*<br/>
+*ALLOC*\
 Typ alokátoru.
 
-*AX*<br/>
+*AX*\
 Alokátor.
 
-*_Fnref*<br/>
+*_Fnref*\
 Odkaz na volatelný objekt zabalit.
 
 ### <a name="remarks"></a>Poznámky
@@ -286,7 +282,7 @@ f is non-empty (correct).
 g is empty (correct).
 ```
 
-## <a name="op_unspecified"></a>  Tento parametr zadán Function::Operator
+## <a name="op_unspecified"></a> Tento parametr zadán – operátor
 
 Testuje, zda existuje uložené volatelný objekt.
 
@@ -328,7 +324,7 @@ not empty == false
 not empty == true
 ```
 
-## <a name="op_call"></a>  funkce:: operator()
+## <a name="op_call"></a> Operator()
 
 Volá volatelný objekt.
 
@@ -341,10 +337,10 @@ result_type operator()(
 
 ### <a name="parameters"></a>Parametry
 
-*TN*<br/>
+*TN*\
 Typ n-té volání argument.
 
-*tN*<br/>
+*TN*\
 Volání n-tý argument.
 
 ### <a name="remarks"></a>Poznámky
@@ -379,7 +375,7 @@ empty == false
 val == -3
 ```
 
-## <a name="op_eq"></a>  Function::Operator =
+## <a name="op_eq"></a> operátor =
 
 Nahradí uloženou volatelný objekt.
 
@@ -394,16 +390,16 @@ template <class Fty>
 
 ### <a name="parameters"></a>Parametry
 
-*NPC*<br/>
+*NPC*\
 Toto je konstanta ukazatele s hodnotou null.
 
-*doprava*<br/>
+*doprava*\
 Objekt funkce ke kopírování.
 
-*fn*<br/>
+*fn*\
 Volatelný objekt zabalit.
 
-*fnref*<br/>
+*fnref*\
 Odkaz na volatelný objekt zabalit.
 
 ### <a name="remarks"></a>Poznámky
@@ -461,7 +457,7 @@ empty == false
 val == -3
 ```
 
-## <a name="result_type"></a>  Function::result_type
+## <a name="result_type"></a> result_type
 
 Návratový typ uložený volatelný objekt.
 
@@ -503,7 +499,7 @@ empty == false
 val == -3
 ```
 
-## <a name="swap"></a>  Function::swap
+## <a name="swap"></a> Prohození
 
 Zamění dvě volatelných objektů.
 
@@ -513,7 +509,7 @@ void swap(function& right);
 
 ### <a name="parameters"></a>Parametry
 
-*doprava*<br/>
+*doprava*\
 Objekt funkce, které chcete Prohodit s.
 
 ### <a name="remarks"></a>Poznámky
@@ -562,7 +558,7 @@ empty == false
 val == -3
 ```
 
-## <a name="target"></a>  Function::target
+## <a name="target"></a> Cíl
 
 Testuje, zda je uložená volatelný objekt lze volat jako zadaný.
 
@@ -575,7 +571,7 @@ template <class Fty2>
 
 ### <a name="parameters"></a>Parametry
 
-*Fty2*<br/>
+*Fty2*\
 Cílový typ volatelný objekt k testování.
 
 ### <a name="remarks"></a>Poznámky
@@ -623,7 +619,7 @@ empty == true
 no target == true
 ```
 
-## <a name="target_type"></a>  function::target_type
+## <a name="target_type"></a> target_type –
 
 Získá typ informací na volatelný objekt.
 
@@ -668,8 +664,3 @@ type == int (__cdecl*)(int)
 empty == true
 type == void
 ```
-
-## <a name="see-also"></a>Viz také:
-
-[mem_fn](../standard-library/functional-functions.md#mem_fn)<br/>
-[reference_wrapper – třída](../standard-library/reference-wrapper-class.md)<br/>

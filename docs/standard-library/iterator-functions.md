@@ -32,40 +32,30 @@ helpviewer_keywords:
 - std::make_unchecked_array_iterator [C++]
 - std::next [C++]
 - std::prev [C++]
-ms.openlocfilehash: f6ea1ac49dabbfc34af9c8ddd020543f606d37a4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 69f1007f0c7f587e81313f5de97947410bf243df
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62224139"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68244026"
 ---
 # <a name="ltiteratorgt-functions"></a>&lt;iterátor&gt; funkce
 
-||||
-|-|-|-|
-|[advance](#advance)|[back_inserter](#back_inserter)|[začít](#begin)|
-|[cbegin](#cbegin)|[cend](#cend)|[distance](#distance)|
-|[ukončení](#end)|[front_inserter](#front_inserter)|[inserter](#inserter)|
-|[make_checked_array_iterator](#make_checked_array_iterator)|[make_move_iterator](#make_move_iterator)|[make_unchecked_array_iterator](#make_unchecked_array_iterator)|
-|[next](#next)|[prev](#prev)|
-
-## <a name="advance"></a>  zálohy
+## <a name="advance"></a> zálohy
 
 Zvýší iterátor o zadaný počet pozic.
 
 ```cpp
 template <class InputIterator, class Distance>
-void advance(
-    InputIterator& InIt,
-    Distance Off);
+    void advance(InputIterator& InIt, Distance Off);
 ```
 
 ### <a name="parameters"></a>Parametry
 
-*Inicializace*<br/>
+*Inicializace*\
 Iterátor, který má být zvýšen a který musí splňovat požadavky pro vstupní iterátor.
 
-*Off*<br/>
+*Vypnout*\
 Integrální typ, který lze převést na typ rozdílu iterátoru a určuje počet přírůstků pozice, o které má být iterátor zvýšen.
 
 ### <a name="remarks"></a>Poznámky
@@ -123,7 +113,7 @@ LPOS is advanced 4 steps forward to point to the fifth element: 5.
 LPOS is moved 3 steps back to point to the 2nd element: 2.
 ```
 
-## <a name="back_inserter"></a>  back_inserter –
+## <a name="back_inserter"></a> back_inserter –
 
 Vytvoří iterátor, který může vložit prvky do zadní části zadaného kontejneru.
 
@@ -134,7 +124,7 @@ back_insert_iterator<Container> back_inserter(Container& _Cont);
 
 ### <a name="parameters"></a>Parametry
 
-*_Cont*<br/>
+*_Cont*\
 Kontejner, do kterého má být zpracována zpětné vložení.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -194,7 +184,7 @@ The initial vector vec is: ( 0 1 2 ).
 After the insertions, the vector vec is: ( 0 1 2 30 40 500 600 ).
 ```
 
-## <a name="begin"></a>  začít
+## <a name="begin"></a> začít
 
 Načte iterátor na první prvek v zadaném kontejneru.
 
@@ -213,10 +203,10 @@ Ty *begin(Ty (& array)[Size]);
 
 ### <a name="parameters"></a>Parametry
 
-*pokračování*<br/>
+*pokračování*\
 Kontejner.
 
-*Pole*<br/>
+*Pole*\
 Pole objektů typu `Ty`.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -296,7 +286,7 @@ Pak zasláním pole způsobíte tuto chybu kompilátoru:
 error C2228: left of '.begin' must have class/struct/union
 ```
 
-## <a name="cbegin"></a>  cbegin
+## <a name="cbegin"></a> cbegin
 
 Načte konstantní iterátor na první prvek v zadaném kontejneru.
 
@@ -308,7 +298,7 @@ auto cbegin(const Container& cont)
 
 ### <a name="parameters"></a>Parametry
 
-*pokračování*<br/>
+*pokračování*\
 Kontejner nebo seznam initializer_list.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -329,7 +319,7 @@ auto i2 = Container.cbegin();
 // i2 is Container<T>::const_iterator
 ```
 
-## <a name="cend"></a>  cend
+## <a name="cend"></a> cend
 
 Načte iterátor const na prvek, který následuje po posledním prvku v zadaném kontejneru.
 
@@ -341,7 +331,7 @@ auto cend(const Container& cont)
 
 ### <a name="parameters"></a>Parametry
 
-*pokračování*<br/>
+*pokračování*\
 Kontejner nebo seznam initializer_list.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -362,7 +352,28 @@ auto i2 = Container.cend();
 // i2 is Container<T>::const_iterator
 ```
 
-## <a name="distance"></a>  vzdálenost
+## <a name="crbegin"></a> crbegin –
+
+```cpp
+template <class C> constexpr auto crbegin(const C& c) -> decltype(std::rbegin(c));
+```
+
+## <a name="crend"></a> crend –
+
+```cpp
+template <class C> constexpr auto crend(const C& c) -> decltype(std::rend(c));
+```
+
+## <a name="data"></a> Data
+
+```cpp
+template <class C> constexpr auto data(C& c) -> decltype(c.data());
+template <class C> constexpr auto data(const C& c) -> decltype(c.data());
+template <class T, size_t N> constexpr T* data(T (&array)[N]) noexcept;
+template <class E> constexpr const E* data(initializer_list<E> il) noexcept;
+```
+
+## <a name="distance"></a> vzdálenost
 
 Určuje počet kroků mezi polohami řešenými dvěma iterátory.
 
@@ -373,10 +384,10 @@ typename iterator_traits<InputIterator>::difference_type distance(InputIterator 
 
 ### <a name="parameters"></a>Parametry
 
-*první*<br/>
+*první*\
 První iterátor, který má být stanovena jehož vzdálenost od druhé.
 
-*last*<br/>
+*poslední*\
 Druhý iterátor, jehož vzdálenost od první má být stanovena.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -435,7 +446,15 @@ LPOS is advanced 7 steps forward to point  to the eighth element: 12.
 The distance from L.begin( ) to LPOS is: 7.
 ```
 
-## <a name="end"></a>  ukončení
+## <a name="empty"></a> prázdný
+
+```cpp
+template <class C> constexpr auto empty(const C& c) -> decltype(c.empty());
+template <class T, size_t N> constexpr bool empty(const T (&array)[N]) noexcept;
+template <class E> constexpr bool empty(initializer_list<E> il) noexcept;
+```
+
+## <a name="end"></a> ukončení
 
 Načte iterátor na prvek, který následuje po posledním prvku v zadaném kontejneru.
 
@@ -454,10 +473,10 @@ Ty *end(Ty (& array)[Size]);
 
 ### <a name="parameters"></a>Parametry
 
-*pokračování*<br/>
+*pokračování*\
 Kontejner.
 
-*Pole*<br/>
+*Pole*\
 Pole objektů typu `Ty`.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -470,7 +489,7 @@ Třetí funkce šablony vrátí `array + Size`.
 
 Příklad kódu naleznete v tématu [začít](../standard-library/iterator-functions.md#begin).
 
-## <a name="front_inserter"></a>  front_inserter
+## <a name="front_inserter"></a> front_inserter
 
 Vytvoří iterátor, který může vložit prvky do přední části zadaného kontejneru.
 
@@ -481,7 +500,7 @@ front_insert_iterator<Container> front_inserter(Container& _Cont);
 
 ### <a name="parameters"></a>Parametry
 
-*_Cont*<br/>
+*_Cont*\
 Objekt kontejneru, jehož přední dochází k danému elementu vložen.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -541,7 +560,7 @@ After the front insertions, the list L is:
 ( 200 100 -1 0 1 2 3 4 5 6 7 8 ).
 ```
 
-## <a name="inserter"></a>  Vkládací modul
+## <a name="inserter"></a> Vkládací modul
 
 Pomocná funkce šablony, které vám umožní používat `inserter(_Cont, _Where)` místo `insert_iterator<Container>(_Cont, _Where)`.
 
@@ -555,10 +574,10 @@ inserter(
 
 ### <a name="parameters"></a>Parametry
 
-*_Cont*<br/>
+*_Cont*\
 Kontejner, ke kterému jsou nové prvky mají být přidány.
 
-*_Where*<br/>
+*_Where*\
 Iterátor vyhledání bodu vložení.
 
 ### <a name="remarks"></a>Poznámky
@@ -612,7 +631,7 @@ After the insertions, the list L is:
 ( 1 20 30 40 500 ).
 ```
 
-## <a name="make_checked_array_iterator"></a>  make_checked_array_iterator
+## <a name="make_checked_array_iterator"></a> make_checked_array_iterator
 
 Vytvoří [checked_array_iterator](../standard-library/checked-array-iterator-class.md) , který mohou používat ostatní algoritmy.
 
@@ -630,13 +649,13 @@ Iter Ptr,
 
 ### <a name="parameters"></a>Parametry
 
-*Ptr*<br/>
+*PTR*\
 Ukazatel na cílové pole.
 
-*Velikost*<br/>
+*Velikost*\
 Velikost cílového pole.
 
-*Index*<br/>
+*Index*\
 Volitelný index do pole.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -706,7 +725,7 @@ int main()
 }
 ```
 
-## <a name="make_move_iterator"></a>  make_move_iterator
+## <a name="make_move_iterator"></a> make_move_iterator
 
 Vytvoří `move iterator` obsahující zadaný iterátor jako `stored` iterátoru.
 
@@ -718,14 +737,14 @@ make_move_iterator(const Iterator& _It);
 
 ### <a name="parameters"></a>Parametry
 
-*_It*<br/>
+*_It*\
 Iterátor uložené v nové iterátorem pohybu.
 
 ### <a name="remarks"></a>Poznámky
 
 Šablona funkce vrátí `move_iterator` `<Iterator>(_It)`.
 
-## <a name="make_unchecked_array_iterator"></a>  make_unchecked_array_iterator
+## <a name="make_unchecked_array_iterator"></a> make_unchecked_array_iterator
 
 Vytvoří [unchecked_array_iterator](../standard-library/unchecked-array-iterator-class.md) , který mohou používat ostatní algoritmy.
 
@@ -740,7 +759,7 @@ unchecked_array_iterator<Iter>
 
 ### <a name="parameters"></a>Parametry
 
-*Ptr*<br/>
+*PTR*\
 Ukazatel na cílové pole.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -804,7 +823,7 @@ int main()
 }
 ```
 
-## <a name="next"></a>  Další
+## <a name="next"></a> Další
 
 Iteruje zadaný počet iterací a vrátí novou pozici iterace.
 
@@ -817,10 +836,10 @@ InputIterator next(
 
 ### <a name="parameters"></a>Parametry
 
-*první*<br/>
+*první*\
 Aktuální pozice.
 
-*_Off*<br/>
+*_Off*\
 Počet pokusů pro iteraci.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -831,7 +850,7 @@ Vrátí novou pozici iterace po iterace *_Off* časy.
 
 Šablona funkce vrátí `next` zvýšena *_Off* časy
 
-## <a name="prev"></a>  předchozí
+## <a name="prev"></a> předchozí
 
 Iteruje v opačném pořadí zadaný počet iterací a vrátí novou pozici iterace.
 
@@ -844,16 +863,33 @@ BidirectionalIterator prev(
 
 ### <a name="parameters"></a>Parametry
 
-*první*<br/>
+*první*\
 Aktuální pozice.
 
-*_Off*<br/>
+*_Off*\
 Počet pokusů pro iteraci.
 
 ### <a name="remarks"></a>Poznámky
 
 Šablona funkce vrátí `next` snížen `off` časy.
 
-## <a name="see-also"></a>Viz také:
+## <a name="rbegin"></a> rbegin –
 
-[\<iterator>](../standard-library/iterator.md)<br/>
+```cpp
+template <class C> constexpr auto rbegin(C& c) -> decltype(c.rbegin());
+template <class C> constexpr auto rbegin(const C& c) -> decltype(c.rbegin());
+```
+
+## <a name="rend"></a> rend –
+
+```cpp
+template <class C> constexpr auto rend(C& c) -> decltype(c.rend());
+template <class C> constexpr auto rend(const C& c) -> decltype(c.rend());
+```
+
+## <a name="size"></a> Velikost
+
+```cpp
+template <class C> constexpr auto size(const C& c) -> decltype(c.size());
+template <class T, size_t N> constexpr size_t size(const T (&array)[N]) noexcept;
+```

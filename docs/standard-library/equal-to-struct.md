@@ -7,12 +7,12 @@ helpviewer_keywords:
 - equal_to function
 - equal_to struct
 ms.assetid: 8e4f2b50-b2db-48e3-b4cc-6cc03362c2a6
-ms.openlocfilehash: 9dc388c5e4248b6d0cd6ad4842be7252601dec13
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ac7c5a3ed8d85e6ea3ad46ec61c7968bc19cd15e
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62413733"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68245837"
 ---
 # <a name="equalto-struct"></a>equal_to – struktura
 
@@ -39,12 +39,13 @@ struct equal_to<void>
 
 ### <a name="parameters"></a>Parametry
 
-*Typ*, *T*, *U* libovolný typ, který podporuje `operator==` , která přebírá operandů zadaný nebo odvozené typy.
+*Typ*, *T*, *U*\
+Libovolný typ, který podporuje `operator==` , která přebírá operandů zadaný nebo odvozené typy.
 
-*doleva*<br/>
+*doleva*\
 Levý operand operace rovnosti. Nespecializovaná šablony přebírá argument typu odkazu l-hodnoty *typ*. Specializovaná šablona perfektní přesměrování l-hodnoty a argumenty odkazu rvalue odvodit typ *T*.
 
-*doprava*<br/>
+*doprava*\
 Pravý operand operace rovnosti. Nespecializovaná šablony přebírá argument typu odkazu l-hodnoty *typ*. Specializovaná šablona perfektní přesměrování l-hodnoty a argumenty odkazu rvalue odvodit typ *U*.
 
 ## <a name="return-value"></a>Návratová hodnota

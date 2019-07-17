@@ -134,12 +134,12 @@ helpviewer_keywords:
 - std::unordered_set::size
 - std::unordered_set::swap
 ms.assetid: ac08084e-05a7-48c0-9ae4-d40c529922dd
-ms.openlocfilehash: 01c8b79f596c2fda8cef0a74a7b5dcdc70786dbf
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 739e39dcb5dd79cfaae8875c5166eb7015134430
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62362735"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68243445"
 ---
 # <a name="unorderedset-class"></a>unordered_set – třída
 
@@ -158,16 +158,23 @@ class unordered_set;
 
 ### <a name="parameters"></a>Parametry
 
-|Parametr|Popis|
-|-|-|
-|*Key*|Klíčový typ|
-|*Hash*|Typ objektu hashovací funkce|
-|*Před*|Typ objektu funkce porovnání rovnosti|
-|*ALLOC*|Třída alokátoru|
+*Klíč*\
+Klíčový typ
+
+*Hodnota hash*\
+Typ objektu hashovací funkce
+
+*Před*\
+Typ objektu funkce porovnání rovnosti
+
+*ALLOC*\
+Třída alokátoru
 
 ## <a name="members"></a>Členové
 
-|Definice typu|Popis|
+### <a name="typedefs"></a>Typedefs
+
+|||
 |-|-|
 |[allocator_type](#allocator_type)|Typ alokátoru pro správu úložiště|
 |[const_iterator](#const_iterator)|Typ konstantního iterátoru řízené sekvence|
@@ -185,7 +192,9 @@ class unordered_set;
 |[size_type](#size_type)|Typ vzdálenosti bez znaménka mezi dvěma prvky|
 |[value_type](#value_type)|Typ prvku|
 
-|Členská funkce|Popis|
+### <a name="functions"></a>Funkce
+
+|||
 |-|-|
 |[začít](#begin)|Určuje začátek řízené sekvence.|
 |[plechovka](#bucket)|Získá číslo kbelíku pro hodnotu klíče.|
@@ -193,9 +202,9 @@ class unordered_set;
 |[bucket_size](#bucket_size)|Získá velikost kbelíku.|
 |[cbegin](#cbegin)|Určuje začátek řízené sekvence.|
 |[cend](#cend)|Určuje konec řízené sekvence.|
-|[clear](#clear)|Odebere všechny prvky.|
+|[Vymazat](#clear)|Odebere všechny prvky.|
 |[Počet](#count)|Zjistí počet prvků odpovídající zadanému klíči.|
-|[emplace](#emplace)|Přidá prvek vytvořený v místě.|
+|[emplace –](#emplace)|Přidá prvek vytvořený v místě.|
 |[emplace_hint](#emplace_hint)|Přidá prvek vytvořený v místě s nápovědou.|
 |[prázdný](#empty)|Zkouší, zda nejsou přítomny žádné prvky.|
 |[ukončení](#end)|Určuje konec řízené sekvence.|
@@ -206,7 +215,7 @@ class unordered_set;
 |[hash_function –](#hash)|Získá uložený objekt hashovací funkce.|
 |[Vložit](#insert)|Přidá prvky.|
 |[key_eq](#key_eq)|Získá uložený objekt funkce porovnání.|
-|[load_factor](#load_factor)|Spočítá průměrný počet prvků na kbelík.|
+|[load_factor –](#load_factor)|Spočítá průměrný počet prvků na kbelík.|
 |[max_bucket_count](#max_bucket_count)|Získá maximální počet kbelíků.|
 |[max_load_factor](#max_load_factor)|Získá nebo nastaví maximální počet prvků na kbelík.|
 |[max_size](#max_size)|Získá maximální velikost řízené sekvence.|
@@ -215,7 +224,9 @@ class unordered_set;
 |[swap](#swap)|Zamění obsah dvou kontejnerů.|
 |[unordered_set](#unordered_set)|Sestaví objekt kontejneru.|
 
-|Operátory|Popis|
+### <a name="operators"></a>Operátory
+
+|||
 |-|-|
 |[unordered_set::operator=](#op_eq)|Zkopíruje tabulku hash.|
 
@@ -228,12 +239,6 @@ Objekt také uchovává faktor maximálního zatížení, který určuje maximá
 Skutečné pořadí prvků v řízené sekvenci závisí na hashovací funkci, funkci porovnání, pořadí vkládání, faktoru maximálního zatížení a aktuálním počtu kbelíků. Pořadí prvků v řízené sekvenci obecně nelze předvídat. Můžete si však vždy být jisti, že všechny dílčí množiny prvků, které mají ekvivalentní řazení, v řízené sekvenci sousedí.
 
 Objekt přiděluje a uvolňuje úložiště pro sekvenci řídí, prostřednictvím uloženého objektu alokátoru typu[unordered_set::allocator_type](#allocator_type). Takový objekt alokátoru musí mít stejné externí rozhraní jako objekt třídy šablony `allocator`. Všimněte si, že uložený objekt alokátoru není zkopírován při přiřazení objektu kontejneru.
-
-## <a name="requirements"></a>Požadavky
-
-**Header:** \<unordered_set>
-
-**Namespace:** std
 
 ## <a name="allocator_type"></a>  unordered_set::allocator_type
 
@@ -273,7 +278,7 @@ int main()
 al == std::allocator() is true
 ```
 
-## <a name="begin"></a>  unordered_set::begin
+## <a name="begin"></a> začít
 
 Určuje začátek řízené sekvence nebo blok.
 
@@ -289,9 +294,8 @@ const_local_iterator begin(size_type nbucket) const;
 
 ### <a name="parameters"></a>Parametry
 
-|Parametr|Popis|
-|-|-|
-|*nbucket*|Číslo kbelíku.|
+*nbucket*\
+Číslo kbelíku.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -353,7 +357,7 @@ int main()
 [a]
 ```
 
-## <a name="bucket"></a>  unordered_set::Bucket
+## <a name="bucket"></a> plechovka
 
 Získá číslo kbelíku pro hodnotu klíče.
 
@@ -363,7 +367,7 @@ size_type bucket(const Key& keyval) const;
 
 ### <a name="parameters"></a>Parametry
 
-*keyval*<br/>
+*Keyval*\
 Hodnota klíče pro mapování.
 
 ### <a name="remarks"></a>Poznámky
@@ -408,7 +412,7 @@ bucket('a') == 7
 bucket_size(7) == 1
 ```
 
-## <a name="bucket_count"></a>  unordered_set::bucket_count
+## <a name="bucket_count"></a> bucket_count –
 
 Získá počet kbelíků.
 
@@ -493,7 +497,7 @@ max_bucket_count() == 128
 max_load_factor() == 0.1
 ```
 
-## <a name="bucket_size"></a>  unordered_set::bucket_size
+## <a name="bucket_size"></a> bucket_size –
 
 Získá velikost kbelíku
 
@@ -503,7 +507,7 @@ size_type bucket_size(size_type nbucket) const;
 
 ### <a name="parameters"></a>Parametry
 
-*nbucket*<br/>
+*nbucket*\
 Číslo kbelíku.
 
 ### <a name="remarks"></a>Poznámky
@@ -548,7 +552,7 @@ bucket('a') == 7
 bucket_size(7) == 1
 ```
 
-## <a name="cbegin"></a>  unordered_set::cbegin
+## <a name="cbegin"></a> cbegin
 
 Vrátí **const** iterátor adresující první prvek v rozsahu.
 
@@ -574,7 +578,7 @@ auto i2 = Container.cbegin();
 // i2 isContainer<T>::const_iterator
 ```
 
-## <a name="cend"></a>  unordered_set::cend
+## <a name="cend"></a> cend
 
 Vrátí **const** iterátor adresující umístění hned za posledním prvkem v rozsahu.
 
@@ -602,7 +606,7 @@ auto i2 = Container.cend();
 
 Hodnota vrácená `cend` by neměla být dereferencována.
 
-## <a name="clear"></a>  unordered_set::clear
+## <a name="clear"></a> Vymazat
 
 Odebere všechny prvky.
 
@@ -666,7 +670,7 @@ size == 2
 empty() == false
 ```
 
-## <a name="const_iterator"></a>  unordered_set::const_iterator
+## <a name="const_iterator"></a> const_iterator
 
 Typ konstantního iterátoru řízené sekvence
 
@@ -708,7 +712,7 @@ int main()
 [c] [b] [a]
 ```
 
-## <a name="const_local_iterator"></a>  unordered_set::const_local_iterator
+## <a name="const_local_iterator"></a> const_local_iterator
 
 Typ konstantního iterátoru kbelíku řízené sekvence
 
@@ -755,7 +759,7 @@ int main()
 [a]
 ```
 
-## <a name="const_pointer"></a>  unordered_set::const_pointer
+## <a name="const_pointer"></a> const_pointer
 
 Typ konstantního ukazatele na prvek
 
@@ -800,7 +804,7 @@ int main()
 [c] [b] [a]
 ```
 
-## <a name="const_reference"></a>  unordered_set::const_reference
+## <a name="const_reference"></a> const_reference
 
 Typ konstantního odkazu na prvek
 
@@ -845,7 +849,7 @@ int main()
 [c] [b] [a]
 ```
 
-## <a name="count"></a>  unordered_set::Count
+## <a name="count"></a> Počet
 
 Zjistí počet prvků odpovídající zadanému klíči.
 
@@ -855,7 +859,7 @@ size_type count(const Key& keyval) const;
 
 ### <a name="parameters"></a>Parametry
 
-*keyval*<br/>
+*Keyval*\
 Hodnota klíče pro hledání.
 
 ### <a name="remarks"></a>Poznámky
@@ -899,7 +903,7 @@ count('b') == 1
 count('C') == 0
 ```
 
-## <a name="difference_type"></a>  unordered_set::difference_type
+## <a name="difference_type"></a> difference_type
 
 Typ vzdálenosti se znaménkem mezi dvěma prvky
 
@@ -955,7 +959,7 @@ end()-begin() == 3
 begin()-end() == -3
 ```
 
-## <a name="emplace"></a>  unordered_set::emplace
+## <a name="emplace"></a> emplace –
 
 Vloží vytvořený prvek na místo (jsou prováděny žádné operace kopírování nebo přesunutí).
 
@@ -968,9 +972,8 @@ Args&&... args);
 
 ### <a name="parameters"></a>Parametry
 
-|Parametr|Popis|
-|-|-|
-|*argumenty*|Argumenty předané vytvořit element, který má být vložen do unordered_set, pokud již obsahuje prvek, jehož hodnota je ekvivalentně seřazen.|
+*argumenty*\
+Argumenty předané vytvořit element, který má být vložen do unordered_set, pokud již obsahuje prvek, jehož hodnota je ekvivalentně seřazen.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -986,7 +989,7 @@ Při vkládání Pokud je vyvolána výjimka, ale nenastane v kontejneru funkce 
 
 Příklad kódu naleznete v tématu[set::emplace](../standard-library/set-class.md#emplace).
 
-## <a name="emplace_hint"></a>  unordered_set::emplace_hint
+## <a name="emplace_hint"></a> emplace_hint –
 
 Vloží vytvořený prvek na místo (jsou prováděny žádné operace kopírování nebo přesunutí), s náznakem umístění.
 
@@ -999,10 +1002,11 @@ Args&&... args);
 
 ### <a name="parameters"></a>Parametry
 
-|Parametr|Popis|
-|-|-|
-|*argumenty*|Argumenty předané vytvořit element, který má být vložen do unordered_set – Pokud unordered_set již obsahuje tento prvek nebo obecně platí, pokud ho již obsahuje prvek, jehož klíč je ekvivalentně seřazen.|
-|*kde*|Doporučení týkající se místo zahájení vyhledání správného bodu vložení.|
+*argumenty*\
+Argumenty předané vytvořit element, který má být vložen do unordered_set – Pokud unordered_set již obsahuje tento prvek nebo obecně platí, pokud ho již obsahuje prvek, jehož klíč je ekvivalentně seřazen.
+
+*kde*\
+Doporučení týkající se místo zahájení vyhledání správného bodu vložení.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -1018,7 +1022,7 @@ Při vkládání Pokud je vyvolána výjimka, ale nenastane v kontejneru funkce 
 
 Příklad kódu naleznete v tématu[set::emplace_hint](../standard-library/set-class.md#emplace_hint).
 
-## <a name="empty"></a>  unordered_set::Empty
+## <a name="empty"></a> prázdný
 
 Zkouší, zda nejsou přítomny žádné prvky.
 
@@ -1082,7 +1086,7 @@ size == 2
 empty() == false
 ```
 
-## <a name="end"></a>  unordered_set::end
+## <a name="end"></a> ukončení
 
 Určuje konec řízené sekvence.
 
@@ -1098,9 +1102,8 @@ const_local_iterator end(size_type nbucket) const;
 
 ### <a name="parameters"></a>Parametry
 
-|Parametr|Popis|
-|-|-|
-|*nbucket*|Číslo kbelíku.|
+*nbucket*\
+Číslo kbelíku.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -1151,7 +1154,7 @@ int main()
 [a]
 ```
 
-## <a name="equal_range"></a>  unordered_set::equal_range
+## <a name="equal_range"></a> equal_range –
 
 Najde rozsah, který odpovídá zadanému klíči.
 
@@ -1165,7 +1168,7 @@ equal_range(const Key& keyval) const;
 
 ### <a name="parameters"></a>Parametry
 
-*keyval*<br/>
+*Keyval*\
 Hodnota klíče pro hledání.
 
 ### <a name="remarks"></a>Poznámky
@@ -1219,7 +1222,7 @@ equal_range('x'):
 equal_range('b'): [b]
 ```
 
-## <a name="erase"></a>  unordered_set::erase
+## <a name="erase"></a> vymazání
 
 Odebere prvek nebo rozsah prvků v unordered_set – od zadané pozice nebo odebere prvky, které odpovídají zadanému klíči.
 
@@ -1233,16 +1236,16 @@ size_type erase(const key_type& Key);
 
 ### <a name="parameters"></a>Parametry
 
-*kde*<br/>
+*kde*\
 Pozice prvku, který má být odebrán.
 
-*první*<br/>
+*první*\
 Pozice prvního prvku, který má být odebrán.
 
-*poslední*<br/>
+*poslední*\
 Pozice bezprostředně za posledním prvkem, který má být odebrán.
 
-*Key*<br/>
+*Klíč*\
 Hodnota klíče prvků, které mají být odebrány.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -1255,7 +1258,7 @@ Třetí členská funkce vrátí počet prvků, které byly odebrány z unordere
 
 Příklad kódu naleznete v tématu[set::erase](../standard-library/set-class.md#erase).
 
-## <a name="find"></a>  unordered_set::Find
+## <a name="find"></a> Najít
 
 Vyhledá prvek, který odpovídá zadanému klíči.
 
@@ -1265,7 +1268,7 @@ const_iterator find(const Key& keyval) const;
 
 ### <a name="parameters"></a>Parametry
 
-*keyval*<br/>
+*Keyval*\
 Hodnota klíče pro hledání.
 
 ### <a name="remarks"></a>Poznámky
@@ -1314,7 +1317,7 @@ find('A') == false
 find('b') == true: [b]
 ```
 
-## <a name="get_allocator"></a>  unordered_set::get_allocator
+## <a name="get_allocator"></a> get_allocator
 
 Získá uložený objekt alokátoru.
 
@@ -1352,7 +1355,7 @@ int main()
 al == std::allocator() is true
 ```
 
-## <a name="hash"></a>  unordered_set::hash_function
+## <a name="hash"></a> hash_function –
 
 Získá uložený objekt hashovací funkce.
 
@@ -1390,7 +1393,7 @@ hfn('a') == 1630279
 hfn('b') == 1647086
 ```
 
-## <a name="hasher"></a>  unordered_set::hasher
+## <a name="hasher"></a> hasher
 
 Typ hashovací funkce
 
@@ -1428,7 +1431,7 @@ hfn('a') == 1630279
 hfn('b') == 1647086
 ```
 
-## <a name="insert"></a>  unordered_set::Insert
+## <a name="insert"></a> Vložit
 
 Vloží prvek nebo rozsah prvků do unordered_set.
 
@@ -1457,15 +1460,26 @@ void insert(initializer_list<value_type> IList);
 
 ### <a name="parameters"></a>Parametry
 
-|Parametr|Popis|
-|-|-|
-|*Val*|Hodnota element, který má být vložen do unordered_set, pokud již obsahuje prvek, jehož klíč je ekvivalentně seřazen.|
-|*kde*|Místo zahájení vyhledání správného bodu vložení.|
-|*ValTy*|Parametr šablony určující typ argumentu, unordered_set – můžete použít k vytvoření prvku[value_type](../standard-library/map-class.md#value_type)a dokonalému předání *Val* jako argument.|
-|*první*|Pozice prvního prvku, který chcete zkopírovat.|
-|*poslední*|Pozice bezprostředně za posledním prvkem, který chcete zkopírovat.|
-|*InputIterator*|Argument funkce šablony, který splňuje požadavky[vstupní iterátor](../standard-library/input-iterator-tag-struct.md) , která odkazuje na prvky typu, který lze použít k sestavení kompletních[value_type](../standard-library/map-class.md#value_type) objekty.|
-|*IList*|[Initializer_list](../standard-library/initializer-list.md) ze kterého chcete kopírovat prvky.|
+*Val*\
+Hodnota element, který má být vložen do unordered_set, pokud již obsahuje prvek, jehož klíč je ekvivalentně seřazen.
+
+*kde*\
+Místo zahájení vyhledání správného bodu vložení.
+
+*ValTy*\
+Parametr šablony určující typ argumentu, unordered_set – můžete použít k vytvoření prvku[value_type](../standard-library/map-class.md#value_type)a dokonalému předání *Val* jako argument.
+
+*první*\
+Pozice prvního prvku, který chcete zkopírovat.
+
+*poslední*\
+Pozice bezprostředně za posledním prvkem, který chcete zkopírovat.
+
+*InputIterator*\
+Argument funkce šablony, který splňuje požadavky[vstupní iterátor](../standard-library/input-iterator-tag-struct.md) , která odkazuje na prvky typu, který lze použít k sestavení kompletních[value_type](../standard-library/map-class.md#value_type) objekty.
+
+*IList*\
+[Initializer_list](../standard-library/initializer-list.md) ze kterého chcete kopírovat prvky.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -1491,7 +1505,7 @@ Pro vložení prvku vytvořeného na místě – to znamená, jsou prováděny �
 
 Příklad kódu naleznete v tématu[set::insert](../standard-library/set-class.md#insert).
 
-## <a name="iterator"></a>  unordered_set::iterator
+## <a name="iterator"></a> iterátor
 
 Typ, který poskytuje konstantní[dopředný iterátor, který](../standard-library/forward-iterator-tag-struct.md) , který může číst prvky unordered_set.
 
@@ -1503,7 +1517,7 @@ typedef implementation-defined iterator;
 
 Podívejte se na příklad pro[začít](../standard-library/set-class.md#begin) příklad toho, jak deklarace a používání**iterátoru**.
 
-## <a name="key_eq"></a>  unordered_set::key_eq
+## <a name="key_eq"></a> key_eq –
 
 Získá uložený objekt funkce porovnání.
 
@@ -1543,7 +1557,7 @@ cmpfn('a', 'a') == true
 cmpfn('a', 'b') == false
 ```
 
-## <a name="key_equal"></a>  unordered_set::key_equal
+## <a name="key_equal"></a> key_equal
 
 Typ funkce porovnání
 
@@ -1583,7 +1597,7 @@ cmpfn('a', 'a') == true
 cmpfn('a', 'b') == false
 ```
 
-## <a name="key_type"></a>  unordered_set::key_type
+## <a name="key_type"></a> key_type
 
 Typ klíče řazení
 
@@ -1635,7 +1649,7 @@ int main()
 [d] [c] [b] [a]
 ```
 
-## <a name="load_factor"></a>  unordered_set::load_factor
+## <a name="load_factor"></a> load_factor –
 
 Spočítá průměrný počet prvků na kbelík.
 
@@ -1720,7 +1734,7 @@ max_bucket_count() == 128
 max_load_factor() == 0.1
 ```
 
-## <a name="local_iterator"></a>  unordered_set::local_iterator
+## <a name="local_iterator"></a> local_iterator
 
 Typ iterátoru kbelíku.
 
@@ -1767,7 +1781,7 @@ int main()
 [a]
 ```
 
-## <a name="max_bucket_count"></a>  unordered_set::max_bucket_count
+## <a name="max_bucket_count"></a> max_bucket_count –
 
 Získá maximální počet kbelíků.
 
@@ -1852,7 +1866,7 @@ max_bucket_count() == 128
 max_load_factor() == 0.1
 ```
 
-## <a name="max_load_factor"></a>  unordered_set::max_load_factor
+## <a name="max_load_factor"></a> max_load_factor –
 
 Získá nebo nastaví maximální počet prvků na kbelík.
 
@@ -1864,7 +1878,7 @@ void max_load_factor(float factor);
 
 ### <a name="parameters"></a>Parametry
 
-*faktor*<br/>
+*faktor*\
 Nové faktor maximálního zatížení.
 
 ### <a name="remarks"></a>Poznámky
@@ -1944,7 +1958,7 @@ max_bucket_count() == 128
 max_load_factor() == 0.1
 ```
 
-## <a name="max_size"></a>  unordered_set::max_size
+## <a name="max_size"></a> max_size
 
 Získá maximální velikost řízené sekvence.
 
@@ -1979,7 +1993,7 @@ int main()
 max_size() == 4294967295
 ```
 
-## <a name="op_eq"></a>  unordered_set::Operator =
+## <a name="op_eq"></a> operátor =
 
 Zkopíruje tabulku hash.
 
@@ -1991,9 +2005,8 @@ unordered_set& operator=(unordered_set&& right);
 
 ### <a name="parameters"></a>Parametry
 
-|Parametr|Popis|
-|-|-|
-|*doprava*|[Unordered_set](../standard-library/unordered-set-class.md) kopírovaná do `unordered_set`.|
+*doprava*\
+[Unordered_set](../standard-library/unordered-set-class.md) kopírovaná do `unordered_set`.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -2036,7 +2049,7 @@ int main( )
 }
 ```
 
-## <a name="pointer"></a>  unordered_set::Pointer
+## <a name="pointer"></a> Ukazatel
 
 Typ ukazatele na prvek
 
@@ -2082,7 +2095,7 @@ int main()
 [c] [b] [a]
 ```
 
-## <a name="reference"></a>  unordered_set::Reference
+## <a name="reference"></a> Referenční dokumentace
 
 Typ odkazu na prvek
 
@@ -2128,7 +2141,7 @@ int main()
 [c] [b] [a]
 ```
 
-## <a name="rehash"></a>  unordered_set::rehash
+## <a name="rehash"></a> rehash
 
 Znovu vytvoří hashovací tabulku.
 
@@ -2138,7 +2151,7 @@ void rehash(size_type nbuckets);
 
 ### <a name="parameters"></a>Parametry
 
-*nbuckets*<br/>
+*nbuckets*\
 Požadovaný počet kbelíků.
 
 ### <a name="remarks"></a>Poznámky
@@ -2205,7 +2218,7 @@ load_factor() == 0.0234375
 max_load_factor() == 0.1
 ```
 
-## <a name="size"></a>  unordered_set::size
+## <a name="size"></a> Velikost
 
 Spočítá počet prvků.
 
@@ -2270,7 +2283,7 @@ size == 2
 empty() == false
 ```
 
-## <a name="size_type"></a>  unordered_set::size_type
+## <a name="size_type"></a> size_type
 
 Typ vzdálenosti bez znaménka mezi dvěma prvky
 
@@ -2306,7 +2319,7 @@ int main()
 size == 0
 ```
 
-## <a name="swap"></a>  unordered_set::swap
+## <a name="swap"></a> Prohození
 
 Zamění obsah dvou kontejnerů.
 
@@ -2316,7 +2329,7 @@ void swap(unordered_set& right);
 
 ### <a name="parameters"></a>Parametry
 
-*doprava*<br/>
+*doprava*\
 Kontejner se Prohodit s.
 
 ### <a name="remarks"></a>Poznámky
@@ -2375,7 +2388,7 @@ int main()
 [c] [b] [a]
 ```
 
-## <a name="unordered_set"></a>  unordered_set::unordered_set
+## <a name="unordered_set"></a> unordered_set –
 
 Sestaví objekt kontejneru.
 
@@ -2424,15 +2437,26 @@ unordered_set(
 
 ### <a name="parameters"></a>Parametry
 
-|Parametr|Popis|
-|-|-|
-|*InputIterator*|Typ iterátoru.|
-|*Al*|Objekt alokátoru, který se má uložit.|
-|*Kompozice*|Objekt funkce porovnání, který se má uložit.|
-|*Hash*|Objekt hashovací funkce, který se má uložit.|
-|*bucket_count*|Minimální počet kbelíků.|
-|*doprava*|Kontejner, který se má kopírovat.|
-|*IList*|Objekt initializer_list obsahující prvky ke zkopírování.|
+*InputIterator*\
+Typ iterátoru.
+
+*Al*\
+Objekt alokátoru, který se má uložit.
+
+*Kompozice*\
+Objekt funkce porovnání, který se má uložit.
+
+*Hodnota hash*\
+Objekt hashovací funkce, který se má uložit.
+
+*bucket_count –* \
+Minimální počet kbelíků.
+
+*doprava*\
+Kontejner, který se má kopírovat.
+
+*IList*\
+Objekt initializer_list obsahující prvky ke zkopírování.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -2440,7 +2464,7 @@ První konstruktor určuje kopii sekvence řízenou parametrem *vpravo*. Druhý 
 
 Všechny konstruktory také inicializují několik uložených hodnot. Pro konstruktor kopírování jsou hodnoty získány z *vpravo*. V opačném případě:
 
-Minimální počet kbelíků je argument *bucket_count –*, pokud k dispozici; jinak je výchozí hodnota popsaná zde jako hodnota definovaná implementací `N0`.
+Minimální počet kbelíků je argument *bucket_count –* , pokud k dispozici; jinak je výchozí hodnota popsaná zde jako hodnota definovaná implementací `N0`.
 
 objekt hashovací funkce je argument *Hash*, pokud existuje; v opačném případě je `Hash()`.
 
@@ -2448,7 +2472,7 @@ Objekt funkce porovnání je argument *kompozici*, pokud existuje; v opačném p
 
 Objekt alokátoru je argument *Al*, pokud existuje; jinak, je `Alloc()`.
 
-## <a name="value_type"></a>  unordered_set::value_type
+## <a name="value_type"></a> value_type
 
 Typ prvku
 
@@ -2499,10 +2523,3 @@ int main()
 [c] [b] [a]
 [d] [c] [b] [a]
 ```
-
-## <a name="see-also"></a>Viz také:
-
-[<unordered_set>](../standard-library/unordered-set.md)<br/>
-[Kontejnery](../cpp/containers-modern-cpp.md)<br/>
-[Bezpečný přístup z více vláken ve standardní knihovně C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
-[Standardní knihovna C++ – referenční dokumentace](../standard-library/cpp-standard-library-reference.md)<br/>

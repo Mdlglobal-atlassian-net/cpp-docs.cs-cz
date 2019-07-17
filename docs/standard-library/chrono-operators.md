@@ -4,23 +4,16 @@ ms.date: 11/04/2016
 f1_keywords:
 - chrono/std::operator modulo
 ms.assetid: c5a19267-4684-40c1-b7a9-cc1012b058f3
-ms.openlocfilehash: d86fbf15313c25dd28b9220c654750ee8bc96d81
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 398e2429c38cffb454c7b510aa5ab44fbe4cfef6
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62279070"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68244887"
 ---
 # <a name="ltchronogt-operators"></a>&lt;chrono&gt; operátory
 
-||||
-|-|-|-|
-|[Operátor modulo](#op_modulo)|[operator!=](#op_neq)|[– Operátor&gt;](#op_gt)|
-|[– Operátor&gt;=](#op_gt_eq)|[– Operátor&lt;](#op_lt)|[– Operátor&lt;=](#op_lt_eq)|
-|[Operator *](#op_star)|[Operator +](#op_add)|[Operator-](#operator-)|
-|[Operator /](#op_div)|[operator==](#op_eq_eq)|
-
-## <a name="operator-"></a>  Operator-
+## <a name="operator-"></a> Operator-
 
 Operátor odčítání nebo negace objektů [doba trvání](../standard-library/duration-class.md) a [time_point](../standard-library/time-point-class.md) objekty.
 
@@ -46,16 +39,16 @@ constexpr typename common_type<Duration1, Duration2>::type
 
 ### <a name="parameters"></a>Parametry
 
-*doleva*<br/>
+*doleva*\
 Levé straně `duration` nebo `time_point` objektu.
 
-*doprava*<br/>
+*doprava*\
 Vpravo `duration` nebo `time_point` objektu.
 
-*čas*<br/>
+*čas*\
 A `time_point` objektu.
 
-*Doba trvání*<br/>
+*Doba trvání*\
 A `duration` objektu.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -66,7 +59,7 @@ Druhá funkce vrátí `time_point` objekt, který představuje bod v čase, kter
 
 Třetí funkce vrátí `duration` objekt, který představuje časový interval mezi *vlevo* a *vpravo*.
 
-## <a name="op_neq"></a>  Operator! =
+## <a name="op_neq"></a> Operator! =
 
 Operátor nerovnosti pro [doba trvání](../standard-library/duration-class.md) nebo [time_point](../standard-library/time-point-class.md) objekty.
 
@@ -84,17 +77,17 @@ constexpr bool operator!=(
 
 ### <a name="parameters"></a>Parametry
 
-*doleva*<br/>
+*doleva*\
 Levé straně `duration` nebo `time_point` objektu.
 
-*doprava*<br/>
+*doprava*\
 Vpravo `duration` nebo `time_point` objektu.
 
 ### <a name="return-value"></a>Návratová hodnota
 
 Každá funkce vrátí `!(Left == Right)`.
 
-## <a name="op_star"></a>  Operator *
+## <a name="op_star"></a> Operator *
 
 Operátor násobení pro [doba trvání](../standard-library/chrono-operators.md#op_star) objekty.
 
@@ -115,10 +108,10 @@ constexpr duration<typename common_type<Rep1, Rep2>::type, Period2>
 
 ### <a name="parameters"></a>Parametry
 
-*Doba trvání*<br/>
+*Doba trvání*\
 A `duration` objektu.
 
-*Mult*<br/>
+*Mult*\
 Celočíselná hodnota.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -129,7 +122,7 @@ Není-li `is_convertible<Rep2, common_type<Rep1, Rep2>>` *platí*, první funkce
 
 Není-li `is_convertible<Rep1, common_type<Rep1, Rep2>>` *platí*, druhá funkce není součástí řešení přetížení. Další informace najdete v tématu [< type_traits >](../standard-library/type-traits.md).
 
-## <a name="op_div"></a>  Operator /
+## <a name="op_div"></a> Operator /
 
 Operátor dělení pro [doba trvání](../standard-library/chrono-operators.md#op_star) objekty.
 
@@ -149,16 +142,16 @@ constexpr typename common_type<Rep1, Rep2>::type
 
 ### <a name="parameters"></a>Parametry
 
-*Doba trvání*<br/>
+*Doba trvání*\
 A `duration` objektu.
 
-*div*<br/>
+*div*\
 Celočíselná hodnota.
 
-*doleva*<br/>
+*doleva*\
 Levé straně `duration` objektu.
 
-*doprava*<br/>
+*doprava*\
 Vpravo `duration` objektu.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -169,7 +162,7 @@ Druhý operátor vrátí poměr délek interval *vlevo* a *vpravo*.
 
 Není-li `is_convertible<Rep2, common_type<Rep1, Rep2>>` *platí*, a `Rep2` není instancí `duration`, první operátor není součástí řešení přetížení. Další informace najdete v tématu [< type_traits >](../standard-library/type-traits.md).
 
-## <a name="op_add"></a>  Operator +
+## <a name="op_add"></a> Operator +
 
 Přidá [doba trvání](../standard-library/duration-class.md) a [time_point](../standard-library/time-point-class.md) objekty.
 
@@ -195,16 +188,16 @@ time_point<Clock, constexpr typename common_type<duration<Rep1, Period1>, Durati
 
 ### <a name="parameters"></a>Parametry
 
-*doleva*<br/>
+*doleva*\
 Levé straně `duration` nebo `time_point` objektu.
 
-*doprava*<br/>
+*doprava*\
 Vpravo `duration` nebo `time_point` objektu.
 
-*čas*<br/>
+*čas*\
 A `time_point` objektu.
 
-*Doba trvání*<br/>
+*Doba trvání*\
 A `duration` objektu.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -213,7 +206,7 @@ Vrátí první funkce `duration` objekt, který obsahuje časový interval, kter
 
 Druhý a třetí funkce vrátí `time_point` objekt, který představuje bod v čase, který je posunut o interval *doba trvání*, od bodu v čase *čas*.
 
-## <a name="op_lt"></a>  – Operátor&lt;
+## <a name="op_lt"></a> – Operátor&lt;
 
 Určuje, zda jeden [doba trvání](../standard-library/duration-class.md) nebo [time_point](../standard-library/time-point-class.md) je menší než jiný objekt `duration` nebo `time_point` objektu.
 
@@ -231,10 +224,10 @@ constexpr bool operator<(
 
 ### <a name="parameters"></a>Parametry
 
-*doleva*<br/>
+*doleva*\
 Levé straně `duration` nebo `time_point` objektu.
 
-*doprava*<br/>
+*doprava*\
 Vpravo `duration` nebo `time_point` objektu.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -243,7 +236,7 @@ První funkce vrací **true** Pokud délka intervalu *vlevo* je menší než dé
 
 Druhá funkce vrátí **true** Pokud *vlevo* předchází *vpravo*. V opačném případě vrátí funkce **false**.
 
-## <a name="op_lt_eq"></a>  – Operátor&lt;=
+## <a name="op_lt_eq"></a> – Operátor&lt;=
 
 Určuje, zda jeden [doba trvání](../standard-library/duration-class.md) nebo [time_point](../standard-library/time-point-class.md) objekt je menší nebo rovna jiné `duration` nebo `time_point` objektu.
 
@@ -261,17 +254,17 @@ constexpr bool operator<=(
 
 ### <a name="parameters"></a>Parametry
 
-*doleva*<br/>
+*doleva*\
 Levé straně `duration` nebo `time_point` objektu.
 
-*doprava*<br/>
+*doprava*\
 Vpravo `duration` nebo `time_point` objektu.
 
 ### <a name="return-value"></a>Návratová hodnota
 
 Každá funkce vrátí `!(Right < Left)`.
 
-## <a name="op_eq_eq"></a>  Operator ==
+## <a name="op_eq_eq"></a> Operator ==
 
 Určuje, zda dva `duration` objekty představují časové intervaly, které mají stejnou délku, nebo zda dva `time_point` objekty představují stejný bod v čase.
 
@@ -289,10 +282,10 @@ constexpr bool operator==(
 
 ### <a name="parameters"></a>Parametry
 
-*doleva*<br/>
+*doleva*\
 Levé straně `duration` nebo `time_point` objektu.
 
-*doprava*<br/>
+*doprava*\
 Vpravo `duration` nebo `time_point` objektu.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -301,7 +294,7 @@ První funkce vrací **true** Pokud *vlevo* a *vpravo* představují časové in
 
 Druhá funkce vrátí **true** Pokud *vlevo* a *vpravo* představují stejný bod v čase. V opačném případě vrátí funkce **false**.
 
-## <a name="op_gt"></a>  – Operátor&gt;
+## <a name="op_gt"></a> – Operátor&gt;
 
 Určuje, zda jeden [doba trvání](../standard-library/duration-class.md) nebo [time_point](../standard-library/time-point-class.md) je větší než jiný objekt `duration` nebo `time_point` objektu.
 
@@ -319,17 +312,17 @@ constexpr bool operator>(
 
 ### <a name="parameters"></a>Parametry
 
-*doleva*<br/>
+*doleva*\
 Levé straně `duration` nebo `time_point` objektu.
 
-*doprava*<br/>
+*doprava*\
 Vpravo `duration` nebo `time_point` objektu.
 
 ### <a name="return-value"></a>Návratová hodnota
 
 Každá funkce vrátí `Right < Left`.
 
-## <a name="op_gt_eq"></a>  – Operátor&gt;=
+## <a name="op_gt_eq"></a> – Operátor&gt;=
 
 Určuje, zda jeden [doba trvání](../standard-library/duration-class.md) nebo [time_point](../standard-library/time-point-class.md) objekt je větší než nebo roven jinému `duration` nebo `time_point` objektu.
 
@@ -347,17 +340,17 @@ constexpr bool operator>=(
 
 ### <a name="parameters"></a>Parametry
 
-*doleva*<br/>
+*doleva*\
 Levé straně `duration` nebo `time_point` objektu.
 
-*doprava*<br/>
+*doprava*\
 Vpravo `duration` nebo `time_point` objektu.
 
 ### <a name="return-value"></a>Návratová hodnota
 
 Každá funkce vrátí `!(Left < Right)`.
 
-## <a name="op_modulo"></a>  Operátor modulo
+## <a name="op_modulo"></a> Operátor modulo
 
 Operátor modulo operace [doba trvání](../standard-library/duration-class.md) objekty.
 
@@ -377,16 +370,16 @@ constexpr typename common_type<duration<Rep1, _Period1>, duration<Rep2, Period2>
 
 ### <a name="parameters"></a>Parametry
 
-*Doba trvání*<br/>
+*Doba trvání*\
 A `duration` objektu.
 
-*div*<br/>
+*div*\
 Celočíselná hodnota.
 
-*doleva*<br/>
+*doleva*\
 Levé straně `duration` objektu.
 
-*doprava*<br/>
+*doprava*\
 Vpravo `duration` objektu.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -394,7 +387,3 @@ Vpravo `duration` objektu.
 Vrátí první funkce `duration` objekt, jehož délka intervalu je *doba trvání* modulo *Div*.
 
 Druhá funkce vrátí hodnotu, která představuje *vlevo* modulo *vpravo*.
-
-## <a name="see-also"></a>Viz také:
-
-[\<chrono>](../standard-library/chrono.md)<br/>

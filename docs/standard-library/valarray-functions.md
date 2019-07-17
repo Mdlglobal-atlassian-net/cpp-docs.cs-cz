@@ -26,8 +26,10 @@ helpviewer_keywords:
 - std::asin [C++]
 - std::atan [C++]
 - std::atan2
+- std::begin [C++]
 - std::cos [C++]
 - std::cosh [C++]
+- std::end [C++]
 - std::exp [C++]
 - std::log [C++]
 - std::log10
@@ -38,25 +40,16 @@ helpviewer_keywords:
 - std::swap [C++]
 - std::tan [C++]
 - std::tanh [C++]
-ms.openlocfilehash: c4e5873e9a511311d2c49b34791df82038fe9f9b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 12275f93c751b4d9ffafcae62621b251a8bc9bfc
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62365181"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68246677"
 ---
 # <a name="ltvalarraygt-functions"></a>&lt;valarray –&gt; funkce
 
-||||
-|-|-|-|
-|[abs](#abs)|[acos](#acos)|[asin](#asin)|
-|[atan](#atan)|[atan2](#atan2)|[cos](#cos)|
-|[cosh](#cosh)|[exp](#exp)|[log](#log)|
-|[log10](#log10)|[Pow](#pow)|[sin](#sin)|
-|[sinh](#sinh)|[sqrt](#sqrt)|[swap](#swap)|
-|[Tan](#tan)|[tanh](#tanh)|
-
-## <a name="abs"></a>  abs
+## <a name="abs"></a> Abs
 
 Prvky vstupní valarray – vrácení valarray, jehož prvky jsou rovné absolutní hodnota prvků vstupní valarray pracuje.
 
@@ -67,7 +60,7 @@ valarray<Type> abs(const valarray<Type>& left);
 
 ### <a name="parameters"></a>Parametry
 
-*doleva*<br/>
+*doleva*\
 Vstupní valarray, jehož prvky mají být provozována členskou funkci.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -111,7 +104,7 @@ The initial valarray is: 0 -1 -2 -3 4 5 6 7 8 .
 The absolute value of the initial valarray is: 0 1 2 3 4 5 6 7 8 .
 ```
 
-## <a name="acos"></a>  Funkce ACOS
+## <a name="acos"></a> Funkce ACOS
 
 Prvky vstupní valarray – vrácení valarray, jehož prvky jsou rovné Arkus kosinus prvků vstupní valarray pracuje.
 
@@ -122,7 +115,7 @@ valarray<Type> acos(const valarray<Type>& left);
 
 ### <a name="parameters"></a>Parametry
 
-*doleva*<br/>
+*doleva*\
 Vstupní valarray, jehož prvky mají být provozována členskou funkci.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -184,7 +177,7 @@ The arccosine of the initial valarray is:
          0  radians, which is            0  degrees
 ```
 
-## <a name="asin"></a>  ASIN
+## <a name="asin"></a> ASIN
 
 Prvky vstupní valarray – vrácení valarray, jehož prvky jsou rovné Arkus sinus prvků vstupní valarray pracuje.
 
@@ -195,7 +188,7 @@ valarray<Type> asin(const valarray<Type>& left);
 
 ### <a name="parameters"></a>Parametry
 
-*doleva*<br/>
+*doleva*\
 Vstupní valarray, jehož prvky mají být provozována členskou funkci.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -257,7 +250,7 @@ The arcsine of the initial valarray is:
     1.5708  radians, which is           90  degrees
 ```
 
-## <a name="atan"></a>  Atan
+## <a name="atan"></a> Atan
 
 Prvky vstupní valarray – vrácení valarray, jehož prvky jsou rovné hlavní hodnotu Arkus tangens prvků vstupní valarray pracuje.
 
@@ -268,7 +261,7 @@ valarray<Type> atan(const valarray<Type>& left);
 
 ### <a name="parameters"></a>Parametry
 
-*doleva*<br/>
+*doleva*\
 Vstupní valarray, jehož prvky mají být provozována členskou funkci.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -333,7 +326,7 @@ The arcsine of the initial valarray is:
     1.5608  radians, which is      89.4271  degrees
 ```
 
-## <a name="atan2"></a>  ATAN2
+## <a name="atan2"></a> ATAN2
 
 Vrátí valarray, jehož prvky jsou rovné Arkus tangens Kartézském součástí určených kombinaci konstanty a prvky valarrays.
 
@@ -350,10 +343,10 @@ valarray<Type> atan2(const Type& left, const valarray<Type>& right);
 
 ### <a name="parameters"></a>Parametry
 
-*doleva*<br/>
+*doleva*\
 Konstantní číselná data typu nebo vstup valarray jejíž prvky zadejte hodnoty pro souřadnice y arkustangens argumentu.
 
-*doprava*<br/>
+*doprava*\
 Konstantní číselná data typu nebo vstup valarray jejíž prvky zadejte hodnoty pro souřadnice x arkustangens argumentu.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -427,7 +420,14 @@ The atan2 ( y / x ) of the initial valarrays is:
  -0.785398  radians, which is          -45degrees
 ```
 
-## <a name="cos"></a>  cos
+## <a name="begin"></a> začít
+
+```cpp
+template <class T> unspecified 1 begin(valarray<T>& v);
+template <class T> unspecified 2 begin(const valarray<T>& v);
+```
+
+## <a name="cos"></a> Cos
 
 Prvky vstupní valarray – vrácení valarray, jehož prvky jsou rovné kosinus prvků vstupní valarray pracuje.
 
@@ -438,7 +438,7 @@ valarray<Type> cos(const valarray<Type>& left);
 
 ### <a name="parameters"></a>Parametry
 
-*doleva*<br/>
+*doleva*\
 Vstupní valarray, jehož prvky mají být provozována členskou funkci.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -504,7 +504,7 @@ The cosine of the initial valarray is:
 -1
 ```
 
-## <a name="cosh"></a>  COSH –
+## <a name="cosh"></a> COSH –
 
 Prvky vstupní valarray – vrácení valarray, jehož prvky jsou rovné hyperbolický kosinus hodnoty prvků vstupní valarray pracuje.
 
@@ -515,7 +515,7 @@ valarray<Type> cosh(const valarray<Type>& left);
 
 ### <a name="parameters"></a>Parametry
 
-*doleva*<br/>
+*doleva*\
 Vstupní valarray, jehož prvky mají být provozována členskou funkci.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -587,7 +587,14 @@ The hyperbolic cosine of the initial valarray is:
 11.592
 ```
 
-## <a name="exp"></a>  Exp
+## <a name="end"></a> ukončení
+
+```cpp
+template <class T> unspecified 1 end(valarray<T>& v);
+template <class T> unspecified 2 end(const valarray<T>& v);
+```
+
+## <a name="exp"></a> Exp
 
 Funguje na prvcích vstupní valarray – vrácení valarray, jehož prvky jsou rovné exponenciální prvků vstupní valarray přirozený.
 
@@ -598,7 +605,7 @@ valarray<Type> exp(const valarray<Type>& left);
 
 ### <a name="parameters"></a>Parametry
 
-*doleva*<br/>
+*doleva*\
 Vstupní valarray, jehož prvky mají být provozována členskou funkci.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -650,7 +657,7 @@ The natural exponential of the initial valarray is:
 22026.5
 ```
 
-## <a name="log"></a>  protokol
+## <a name="log"></a> protokol
 
 Prvky vstupní valarray – vrácení valarray, jehož prvky jsou rovné přirozený logaritmus prvků vstupní valarray pracuje.
 
@@ -661,7 +668,7 @@ valarray<Type> log(const valarray<Type>& left);
 
 ### <a name="parameters"></a>Parametry
 
-*doleva*<br/>
+*doleva*\
 Vstupní valarray, jehož prvky mají být provozována členskou funkci.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -713,7 +720,7 @@ The natural logarithm of the initial valarray is:
 4.38203
 ```
 
-## <a name="log10"></a>  LOG10
+## <a name="log10"></a> LOG10
 
 Prvky vstupní valarray – vrácení valarray, jehož prvky jsou rovné základní 10 nebo vypočítat dekadický logaritmus prvků vstupní valarray pracuje.
 
@@ -724,7 +731,7 @@ valarray<Type> log10(const valarray<Type>& left);
 
 ### <a name="parameters"></a>Parametry
 
-*doleva*<br/>
+*doleva*\
 Vstupní valarray, jehož prvky mají být provozována členskou funkci.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -778,7 +785,7 @@ The common logarithm of the initial valarray is:
 2
 ```
 
-## <a name="pow"></a>  Pow
+## <a name="pow"></a> Pow
 
 Funguje na prvcích vstupní valarrays a konstanty vrací valarray, jehož prvky jsou rovné základní zadané buď prvků vstupní valarray nebo konstantu umocněné na exponent zadané buď prvků vstupní valarray nebo Toto je konstanta.
 
@@ -804,10 +811,10 @@ pow(
 
 ### <a name="parameters"></a>Parametry
 
-*doleva*<br/>
+*doleva*\
 Vstupní valarray, jehož prvky zadat základ pro každý prvek bude exponentiated.
 
-*doprava*<br/>
+*doprava*\
 Vstupní valarray, jehož prvky napájení pro každý prvek bude exponentiated.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -875,7 +882,7 @@ n = 4   gives 256
 n = 5   gives 1024
 ```
 
-## <a name="sin"></a>  Sin
+## <a name="sin"></a> Sin
 
 Prvky vstupní valarray – vrácení valarray, jehož prvky jsou rovné sinus prvků vstupní valarray pracuje.
 
@@ -886,7 +893,7 @@ valarray<Type> sin(const valarray<Type>& left);
 
 ### <a name="parameters"></a>Parametry
 
-*doleva*<br/>
+*doleva*\
 Vstupní valarray, jehož prvky mají být provozována členskou funkci.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -952,7 +959,7 @@ The sine of the initial valarray is:
 -2.06823e-013
 ```
 
-## <a name="sinh"></a>  SINH –
+## <a name="sinh"></a> SINH –
 
 Prvky vstupní valarray – vrácení valarray, jehož prvky jsou rovné hyperbolický sinus prvků vstupní valarray pracuje.
 
@@ -963,7 +970,7 @@ valarray<Type> sinh(const valarray<Type>& left);
 
 ### <a name="parameters"></a>Parametry
 
-*doleva*<br/>
+*doleva*\
 Vstupní valarray, jehož prvky mají být provozována členskou funkci.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -1035,7 +1042,7 @@ The hyperbolic sine of the initial valarray is:
 11.5487
 ```
 
-## <a name="sqrt"></a>  Sqrt
+## <a name="sqrt"></a> Sqrt
 
 Prvky vstupní valarray – vrácení valarray, jehož prvky jsou rovné druhou odmocninu prvků vstupní valarray pracuje.
 
@@ -1046,7 +1053,7 @@ valarray<Type> sqrt(const valarray<Type>& left);
 
 ### <a name="parameters"></a>Parametry
 
-*doleva*<br/>
+*doleva*\
 Vstupní valarray, jehož prvky mají být provozována členskou funkci.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -1089,7 +1096,7 @@ The initial valarray is: ( 0 1 4 9 16 ).
 The square root of the initial valarray is: ( 0 1 2 3 4 ).
 ```
 
-## <a name="swap"></a>  Prohození
+## <a name="swap"></a> Prohození
 
 Vymění prvky dvou valarrays.
 
@@ -1102,16 +1109,17 @@ void swap(
 
 ### <a name="parameters"></a>Parametry
 
-|Parametr|Popis|
-|---------------|-----------------|
-|*doleva*|Objekt typu `valarray`.|
-|*doprava*|Objekt typu `valarray`.|
+*doleva*\
+Objekt typu `valarray`.
+
+*doprava*\
+Objekt typu `valarray`.
 
 ### <a name="remarks"></a>Poznámky
 
-Funkce šablony provede ` left.swap( right)`.
+Funkce šablony provede `left.swap(right)`.
 
-## <a name="tan"></a>  Tan
+## <a name="tan"></a> Tan
 
 Prvky vstupní valarray – vrácení valarray, jehož prvky jsou rovné tangens hodnoty prvků vstupní valarray pracuje.
 
@@ -1122,7 +1130,7 @@ valarray<Type> tan(const valarray<Type>& left);
 
 ### <a name="parameters"></a>Parametry
 
-*doleva*<br/>
+*doleva*\
 Vstupní valarray, jehož prvky mají být provozována členskou funkci.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -1188,7 +1196,7 @@ The tangent of the initial valarray is:
 -9.6701e+012
 ```
 
-## <a name="tanh"></a>  TANH –
+## <a name="tanh"></a> TANH –
 
 Prvky vstupní valarray – vrácení valarray, jehož prvky jsou rovné hyperbolický tangens hodnoty prvků vstupní valarray pracuje.
 
@@ -1199,7 +1207,7 @@ valarray<Type> tanh(const valarray<Type>& left);
 
 ### <a name="parameters"></a>Parametry
 
-*doleva*<br/>
+*doleva*\
 Vstupní valarray, jehož prvky mají být provozována členskou funkci.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -1270,7 +1278,3 @@ The hyperbolic tangent of the initial valarray is:
 0.982193
 0.996272
 ```
-
-## <a name="see-also"></a>Viz také:
-
-[\<valarray>](../standard-library/valarray.md)<br/>

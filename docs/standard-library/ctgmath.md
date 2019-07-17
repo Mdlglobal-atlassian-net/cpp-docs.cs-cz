@@ -2,26 +2,26 @@
 title: '&lt;ctgmath&gt;'
 ms.date: 11/04/2016
 ms.assetid: ff521893-f445-4dc8-a2f6-699185bb7024
-ms.openlocfilehash: 64d72bb643e792fe39978d5c2e92e1bcf23cfc4f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 85099f3cb206dd791aade59bf9a531a714e68ac3
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62394194"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68246609"
 ---
 # <a name="ltctgmathgt"></a>&lt;ctgmath&gt;
 
-Ve skutečnosti obsahuje hlavičky standardní knihovny C++ \<ccomplex > a \<cmath >, které poskytují rovnocenná obecná matematická makra ekvivalentní \<tgmath.h >.
+Ve skutečnosti obsahuje C++ hlavičky standardní knihovny \<komplexní > a \<cmath >, které poskytují rovnocenná obecná matematická makra ekvivalentní \<tgmath.h >.
 
-## <a name="syntax"></a>Syntaxe
+## <a name="requirements"></a>Požadavky
 
-```cpp
-#include <ctgmath>
-```
+**Záhlaví:** \<ctgmath >
+
+**Namespace:** std
 
 ## <a name="remarks"></a>Poznámky
 
-Funkce záhlaví knihovny Standard C \<tgmath.h > je poskytována přetížení v \<ccomplex > a \<cmath >.
+Funkce záhlaví knihovny Standard C \<tgmath.h > je poskytována přetížení v \<komplexní > a \<cmath >.
 
 Včetně této hlavičky zajišťuje, že názvy deklarované s vnějším spojením v záhlaví knihovny Standard C jsou deklarovány v `std` oboru názvů.
 

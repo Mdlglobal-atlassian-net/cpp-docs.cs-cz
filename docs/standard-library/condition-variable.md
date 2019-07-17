@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 f1_keywords:
 - <condition_variable>
 ms.assetid: 8567f7cc-20bd-42a7-9137-87c46f878009
-ms.openlocfilehash: 3ce9125a13f0dd2f2e4f98a217c4373f2be2f8a8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ed98966f651df76078fa47b05f5a2d8ae1b71d05
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62212063"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68244579"
 ---
 # <a name="ltconditionvariablegt"></a>&lt;condition_variable&gt;
 
@@ -17,11 +17,11 @@ Definuje třídy [condition_variable](../standard-library/condition-variable-cla
 
 Toto záhlaví používá Concurrency Runtime (ConcRT), takže ho můžete použít společně s další mechanismy ConcRT. Další informace o ConcRT najdete v tématu [Concurrency Runtime](../parallel/concrt/concurrency-runtime.md).
 
-## <a name="syntax"></a>Syntaxe
+## <a name="requirements"></a>Požadavky
 
-```cpp
-#include <condition_variable>
-```
+**Záhlaví:** \<condition_variable >
+
+**Namespace:** std
 
 > [!NOTE]
 > V kódu, který je zkompilován s použitím **/CLR**, tato hlavička se zablokuje.
@@ -56,6 +56,14 @@ Každá třída také obsahuje dvě metody, které se používají pro oznámen�
 - `notify_one` probudí jedno z vláken, které čeká na proměnnou podmínku.
 
 - `notify_all` probudí všechna vlákna, které čekají na proměnnou podmínku.
+
+## <a name="functions-and-enums"></a>Funkce a výčty
+
+```cpp
+void notify_all_at_thread_exit(condition_variable& cond, unique_lock<mutex> lk);
+
+enum class cv_status { no_timeout, timeout };
+```
 
 ## <a name="see-also"></a>Viz také:
 

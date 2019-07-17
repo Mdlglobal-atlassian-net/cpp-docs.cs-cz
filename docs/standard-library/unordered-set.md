@@ -6,33 +6,38 @@ f1_keywords:
 helpviewer_keywords:
 - unordered_set header
 ms.assetid: a3364d54-147d-4796-8728-9e62a2e4c226
-ms.openlocfilehash: 8e79d05512a53b8fc2d4cb305cecf8d9095a9728
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5065d1f2d0ea710dbaaaa09ec9079dbf502065af
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62362852"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68243406"
 ---
 # <a name="ltunorderedsetgt"></a>&lt;unordered_set&gt;
 
 Definuje kontejner šablony třídy [unordered_multiset](../standard-library/unordered-multiset-class.md) a [unordered_set](../standard-library/unordered-set-class.md) a jejich podpůrných šablon.
 
-## <a name="syntax"></a>Syntaxe
+## <a name="requirements"></a>Požadavky
 
-```cpp
-#include <unordered_set>
-```
+**Záhlaví:** \<unordered_set >
+
+**Namespace:** std
+
+> [!NOTE]
+> \<Unordered_set > Knihovna také používá `#include <initializer_list>` příkazu.
+
+## <a name="members"></a>Členové
 
 ### <a name="classes"></a>Třídy
 
-|Třída|Popis|
+|||
 |-|-|
 |[unordered_multiset – třída](../standard-library/unordered-multiset-class.md)|Úložiště table klíče hash|
 |[unordered_set – třída](../standard-library/unordered-set-class.md)|Úložiště table klíče hash|
 
 ### <a name="functions"></a>Funkce
 
-|Funkce|Popis|
+|||
 |-|-|
 |[operator!=](../standard-library/unordered-set-operators.md#op_neq)|Testuje, zda je objekt unordered_multiset na levé straně operátoru není roven objektu unordered_multiset na pravé straně.|
 |[operator==](../standard-library/unordered-set-operators.md#op_eq_eq)|Testuje, zda objekt unordered_multiset na levé straně operátoru roven objektu unordered_multiset na pravé straně.|

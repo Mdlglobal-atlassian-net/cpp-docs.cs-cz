@@ -7,12 +7,12 @@ helpviewer_keywords:
 - multiplies class
 - multiplies struct
 ms.assetid: ec85e8af-70ad-44ad-90f0-d961a5847864
-ms.openlocfilehash: 7e91c834d3e56d4c0170c4e2f6b26b73dc925432
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3bccaf2a5e6594652a1179b357cdbbee2d2436b3
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62186072"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68240586"
 ---
 # <a name="multiplies-struct"></a>multiplies – struktura
 
@@ -39,12 +39,13 @@ struct multiplies<void>
 
 ### <a name="parameters"></a>Parametry
 
-*Typ*, *T*, *U* typ, který podporuje binární soubor `operator*` , která přebírá operandů zadaný nebo odvozené typy.
+*Typ*, *T*, *U*\
+Typ, který podporuje binární soubor `operator*` , která přebírá operandů zadaný nebo odvozené typy.
 
-*doleva*<br/>
+*doleva*\
 Levý operand operace násobení. Nespecializovaná šablony přebírá argument typu odkazu l-hodnoty *typ*. Specializovaná šablona perfektní přesměrování l-hodnoty a argumenty odkazu rvalue odvodit typ *T*.
 
-*doprava*<br/>
+*doprava*\
 Pravý operand operace násobení. Nespecializovaná šablony přebírá argument typu odkazu l-hodnoty *typ*. Specializovaná šablona perfektní přesměrování l-hodnoty a argumenty odkazu rvalue odvodit typ *U*.
 
 ## <a name="return-value"></a>Návratová hodnota
@@ -99,21 +100,11 @@ int main( )
       cout << *Iter3 << " ";
    cout << ")" << endl;
 }
-/* Output:
+```
+
+```Output
 The vector v1 = ( 2 4 6 8 10 12 )
 The vector v2 = ( 3 6 9 12 15 18 )
 The element-wise products of vectors V1 & v2
 are: ( 6 24 54 96 150 216 )
-*/
 ```
-
-## <a name="requirements"></a>Požadavky
-
-**Záhlaví:** \<funkční >
-
-**Namespace:** std
-
-## <a name="see-also"></a>Viz také:
-
-[Bezpečný přístup z více vláken ve standardní knihovně C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
-[Standardní knihovna C++ – referenční dokumentace](../standard-library/cpp-standard-library-reference.md)<br/>

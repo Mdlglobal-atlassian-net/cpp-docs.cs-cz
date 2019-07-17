@@ -10,12 +10,12 @@ helpviewer_keywords:
 - std::complex [C++], imag
 - std::complex [C++], real
 ms.assetid: d6492e1c-5eba-4bc5-835b-2a88001a5868
-ms.openlocfilehash: 2ebaee81b792f9acc475fe25ac1ef7cc7a78a0de
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: db04569d3938c673653ac36eeebdabc9cb725c1e
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62376156"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68244731"
 ---
 # <a name="complex-class"></a>complex – třída
 
@@ -42,28 +42,30 @@ Konkrétně se žádné lišila mohou existovat mezi konstrukci kopie a výchoz�
 
 Explicitní specializace šablony třídy komplexní existují tři typy s plovoucí desetinnou čárkou. V této implementaci hodnoty libovolného typu `Type` přetypovat na **double** pro skutečné výpočty s **double** výsledek zpětně přiřazena poté uložený objekt typu `Type`.
 
+## <a name="members"></a>Členové
+
 ### <a name="constructors"></a>Konstruktory
 
-|Konstruktor|Popis|
+|||
 |-|-|
 |[complex](#complex)|Sestaví komplexního čísla se zadaným reálné a imaginární části nebo jako kopii některé komplexního čísla.|
 
 ### <a name="typedefs"></a>Typedefs
 
-|Název typu|Popis|
+|||
 |-|-|
 |[value_type](#value_type)|Typ, který představuje datový typ používá k reprezentování reálné a imaginární části komplexního čísla.|
 
-### <a name="member-functions"></a>Členské funkce
+### <a name="functions"></a>Funkce
 
-|Členská funkce|Popis|
+|||
 |-|-|
 |[imag](#imag)|Extrahuje imaginární komplexního čísla.|
 |[Real](#real)|Extrahuje reálnou součástí komplexního čísla.|
 
 ### <a name="operators"></a>Operátory
 
-|Operátor|Popis|
+|||
 |-|-|
 |[Operator * =](#op_star_eq)|Vynásobí číslo cílového komplexní faktoru, který může být komplexní nebo stejného typu jako reálné a imaginární části komplexních číslo.|
 |[operator+=](#op_add_eq)|Přidá číslo cílového komplexního čísla, kde počet přidaných může být složitý nebo stejného typu, jako jsou reálné a imaginární části komplexní čísla, ke kterému je přidání.|
@@ -71,13 +73,9 @@ Explicitní specializace šablony třídy komplexní existují tři typy s plovo
 |[/ = – operátor](#op_div_eq)|Vydělí cílové komplexního čísla dělitelem, která může být komplexní nebo být stejného typu, jako jsou reálné a imaginární části komplexních číslo.|
 |[operátor =](#op_eq)|Přiřadí číslo cílového komplexního čísla, kde může být složitý číslo přiřazené nebo stejného typu, jako jsou reálné a imaginární části komplexní čísla, ke kterému je přiřazen.|
 
-## <a name="requirements"></a>Požadavky
 
-**Hlavička**: \<komplexní >
 
-**Namespace:** std
-
-## <a name="complex"></a>  COMPLEX::Complex
+## <a name="complex"></a> komplexní
 
 Sestaví komplexního čísla se zadaným reálné a imaginární části nebo jako kopii některé komplexního čísla.
 
@@ -93,13 +91,13 @@ constexpr complex(
 
 ### <a name="parameters"></a>Parametry
 
-*_RealVal*<br/>
+*_RealVal*\
 Hodnota části skutečné použitý k inicializaci komplexního čísla při konstrukci.
 
-*_ImagVal*<br/>
+*_ImagVal*\
 Hodnota imaginární části použitý k inicializaci komplexního čísla při konstrukci.
 
-*complexNum*<br/>
+*complexNum*\
 Komplexní čísla, jejichž reálné a imaginární části se používají k inicializaci komplexního čísla při konstrukci.
 
 ### <a name="remarks"></a>Poznámky
@@ -161,7 +159,7 @@ int main( )
 }
 ```
 
-## <a name="imag"></a>  COMPLEX::Imag
+## <a name="imag"></a> Imag
 
 Extrahuje imaginární komplexního čísla.
 
@@ -173,7 +171,7 @@ T imag(const T& right);
 
 ### <a name="parameters"></a>Parametry
 
-*doprava*<br/>
+*doprava*\
 Komplexní čísla, jehož imaginární hodnota má být extrahován.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -215,7 +213,7 @@ The real part of c1 is c1.real() = 4.
 The imaginary part of c1 is c1.imag() = 3.
 ```
 
-## <a name="op_star_eq"></a>  COMPLEX::Operator * =
+## <a name="op_star_eq"></a> Operator * =
 
 Vynásobí číslo cílového komplexní faktoru, který může být komplexní nebo stejného typu jako reálné a imaginární části komplexních číslo.
 
@@ -230,7 +228,7 @@ complex<Type>& operator*=(const complex<Type>& right);
 
 ### <a name="parameters"></a>Parametry
 
-*doprava*<br/>
+*doprava*\
 Komplexní čísla nebo číslo, které je stejného typu jako parametr komplexního čísla cíl.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -300,7 +298,7 @@ int main()
 }
 ```
 
-## <a name="op_add_eq"></a>  COMPLEX::Operator +=
+## <a name="op_add_eq"></a> += – operátor
 
 Přidá číslo cílového komplexního čísla, kde počet přidaných může být složitý nebo stejného typu, jako jsou reálné a imaginární části komplexní čísla, ke kterému je přidání.
 
@@ -315,7 +313,7 @@ complex<Type>& operator+=(const complex<Type>& right);
 
 ### <a name="parameters"></a>Parametry
 
-*doprava*<br/>
+*doprava*\
 Komplexní čísla nebo číslo, které je stejného typu jako parametr komplexního čísla cíl.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -403,7 +401,7 @@ The modulus of cl2 is: 5
 The argument of cl2 is: 0.927295 radians, which is 53.1301 degrees.
 ```
 
-## <a name="operator-_eq"></a>  COMPLEX::Operator-=
+## <a name="operator-_eq"></a> operátor-=
 
 Odečte číslo z cílové komplexního čísla, kde číslo odečtena může být složitý nebo stejného typu jako jsou reálné a imaginární části komplexní čísla, ke kterému je přidání.
 
@@ -418,10 +416,10 @@ complex<Type>& operator-=(const complex<Type>& complexNum);
 
 ### <a name="parameters"></a>Parametry
 
-*complexNum*<br/>
+*complexNum*\
 Komplexní čísla se odečítají z cílové komplexního čísla.
 
-*_RealPart*<br/>
+*_RealPart*\
 Reálné číslo bude odečítat od cílové komplexního čísla.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -511,7 +509,7 @@ The modulus of cl2 is: 5
 The argument of cl2 is: 2.2143 radians, which is 126.87 degrees.
 ```
 
-## <a name="op_div_eq"></a>  COMPLEX::Operator / =
+## <a name="op_div_eq"></a> / = – operátor
 
 Vydělí cílové komplexního čísla dělitelem, která může být komplexní nebo být stejného typu, jako jsou reálné a imaginární části komplexních číslo.
 
@@ -526,10 +524,10 @@ complex<Type>& operator/=(const complex<Type>& complexNum);
 
 ### <a name="parameters"></a>Parametry
 
-*complexNum*<br/>
+*complexNum*\
 Komplexní čísla se odečítají z cílové komplexního čísla.
 
-*_RealPart*<br/>
+*_RealPart*\
 Reálné číslo bude odečítat od cílové komplexního čísla.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -615,7 +613,7 @@ The modulus of cl2 is: 0.6
 The argument of cl2 is: 0.523599 radians, which is 30 degrees.
 ```
 
-## <a name="op_eq"></a>  COMPLEX::Operator =
+## <a name="op_eq"></a> operátor =
 
 Přiřadí číslo cílového komplexního čísla, kde může být složitý číslo přiřazené nebo stejného typu, jako jsou reálné a imaginární části komplexní čísla, ke kterému je přiřazen.
 
@@ -628,7 +626,7 @@ complex<Type>& operator=(const Type& right);
 
 ### <a name="parameters"></a>Parametry
 
-*doprava*<br/>
+*doprava*\
 Komplexní čísla nebo číslo, které je stejného typu jako parametr komplexního čísla cíl.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -693,7 +691,7 @@ The complex number (3, 4) assigned to the complex number cl2 is:
 cl2 = (3,4)
 ```
 
-## <a name="real"></a>  COMPLEX::Real
+## <a name="real"></a> Real
 
 Získá nebo nastaví reálnou součástí komplexního čísla.
 
@@ -705,7 +703,7 @@ T real(const T& right);
 
 ### <a name="parameters"></a>Parametry
 
-*doprava*<br/>
+*doprava*\
 Komplexní čísla, jejichž skutečné hodnoty je třeba extrahovat.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -714,7 +712,7 @@ Skutečné součástí komplexní čísla.
 
 ### <a name="remarks"></a>Poznámky
 
-Pro komplexní čísla *+ bi*, skutečné část nebo součást je *Re(a + bi) =*.
+Pro komplexní čísla *+ bi*, skutečné část nebo součást je *Re(a + bi) =* .
 
 ### <a name="example"></a>Příklad
 
@@ -747,7 +745,7 @@ The real part of c1 is c1.real() = 4.
 The imaginary part of c1 is c1.imag() = 3.
 ```
 
-## <a name="value_type"></a>  COMPLEX::value_type
+## <a name="value_type"></a> value_type
 
 Typ, který představuje datový typ používá k reprezentování reálné a imaginární části komplexního čísla.
 

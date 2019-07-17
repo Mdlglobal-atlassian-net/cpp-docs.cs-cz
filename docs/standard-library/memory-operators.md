@@ -10,22 +10,16 @@ f1_keywords:
 - memory/std::operator<<
 - memory/std::operator==
 ms.assetid: 257e3ba9-c4c2-4ae8-9b11-b156ba9c28de
-ms.openlocfilehash: ca1412efb4d095ef9a371b3739d4c282683821dc
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 661f1bb4c0f5734d88dd23f73c69b362f59a76c2
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62348455"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68243822"
 ---
 # <a name="ltmemorygt-operators"></a>&lt;paměť&gt; operátory
 
-||||
-|-|-|-|
-|[operator!=](#op_neq)|[– Operátor&gt;](#op_gt)|[– Operátor&gt;=](#op_gt_eq)|
-|[– Operátor&lt;](#op_lt)|[– Operátor&lt;&lt;](#op_lt_lt)|[– Operátor&lt;=](#op_lt_eq)|
-|[operator==](#op_eq_eq)|
-
-## <a name="op_neq"></a>  Operator! =
+## <a name="op_neq"></a> Operator! =
 
 Testy pro nerovnost mezi objekty.
 
@@ -48,16 +42,16 @@ bool operator!=(
 
 ### <a name="parameters"></a>Parametry
 
-*doleva*<br/>
+*doleva*\
 Jeden z objektů má být testována nerovnost.
 
-*doprava*<br/>
+*doprava*\
 Jeden z objektů má být testována nerovnost.
 
-*Ty1*<br/>
+*Ty1*\
 Typ řízený levé sdílený ukazatel.
 
-*Ty2*<br/>
+*Ty2*\
 Typ řízený správné sdílený ukazatel.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -126,7 +120,7 @@ sp0 != sp0 == false
 sp0 != sp1 == true
 ```
 
-## <a name="op_eq_eq"></a>  Operator ==
+## <a name="op_eq_eq"></a> Operator ==
 
 Testy pro rovnost mezi objekty.
 
@@ -149,16 +143,16 @@ bool operator==(
 
 ### <a name="parameters"></a>Parametry
 
-*doleva*<br/>
+*doleva*\
 Jeden z objektů, které chcete testovat rovnost.
 
-*doprava*<br/>
+*doprava*\
 Jeden z objektů, které chcete testovat rovnost.
 
-*Ty1*<br/>
+*Ty1*\
 Typ řízený levé sdílený ukazatel.
 
-*Ty2*<br/>
+*Ty2*\
 Typ řízený správné sdílený ukazatel.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -238,7 +232,7 @@ sp0 == sp0 == true
 sp0 == sp1 == false
 ```
 
-## <a name="op_gt_eq"></a>  – Operátor&gt;=
+## <a name="op_gt_eq"></a> – Operátor&gt;=
 
 Testy pro jeden objekt, který je větší než nebo roven druhému objektu.
 
@@ -256,23 +250,23 @@ bool operator>=(
 
 ### <a name="parameters"></a>Parametry
 
-*doleva*<br/>
+*doleva*\
 Jeden z objektů, který se má porovnat.
 
-*doprava*<br/>
+*doprava*\
 Jeden z objektů, který se má porovnat.
 
-*Ty1*<br/>
+*Ty1*\
 Typ řízený levé sdílený ukazatel.
 
-*Ty2*<br/>
+*Ty2*\
 Typ řízený správné sdílený ukazatel.
 
 ### <a name="remarks"></a>Poznámky
 
 Šablona operátory vrací `left.get() >= right.get()`.
 
-## <a name="op_lt"></a>  – Operátor&lt;
+## <a name="op_lt"></a> – Operátor&lt;
 
 Testy pro jeden objekt, který je menší než druhý objekt.
 
@@ -290,19 +284,19 @@ bool operator<(
 
 ### <a name="parameters"></a>Parametry
 
-*doleva*<br/>
+*doleva*\
 Jeden z objektů, který se má porovnat.
 
-*doprava*<br/>
+*doprava*\
 Jeden z objektů, který se má porovnat.
 
-*Ty1*<br/>
+*Ty1*\
 Typ řízený ukazatelem vlevo.
 
-*Ty2*<br/>
+*Ty2*\
 Typ řízený ukazatelem správné.
 
-## <a name="op_lt_eq"></a>  – Operátor&lt;=
+## <a name="op_lt_eq"></a> – Operátor&lt;=
 
 Testy pro jeden objekt, který je menší než nebo roven druhému objektu.
 
@@ -320,23 +314,23 @@ bool operator<=(
 
 ### <a name="parameters"></a>Parametry
 
-*doleva*<br/>
+*doleva*\
 Jeden z objektů, který se má porovnat.
 
-*doprava*<br/>
+*doprava*\
 Jeden z objektů, který se má porovnat.
 
-*Ty1*<br/>
+*Ty1*\
 Typ řízený levé sdílený ukazatel.
 
-*Ty2*<br/>
+*Ty2*\
 Typ řízený správné sdílený ukazatel.
 
 ### <a name="remarks"></a>Poznámky
 
 Šablona operátory vrací `left.get() <= right.get()`
 
-## <a name="op_gt"></a>  – Operátor&gt;
+## <a name="op_gt"></a> – Operátor&gt;
 
 Testy pro jeden objekt, který je větší než druhý objekt.
 
@@ -354,19 +348,19 @@ bool operator>(
 
 ### <a name="parameters"></a>Parametry
 
-*doleva*<br/>
+*doleva*\
 Jeden z objektů, který se má porovnat.
 
-*doprava*<br/>
+*doprava*\
 Jeden z objektů, který se má porovnat.
 
-*Ty1*<br/>
+*Ty1*\
 Typ řízený levé sdílený ukazatel.
 
-*Ty2*<br/>
+*Ty2*\
 Typ řízený správné sdílený ukazatel.
 
-## <a name="op_lt_lt"></a>  – Operátor&lt;&lt;
+## <a name="op_lt_lt"></a> – Operátor&lt;&lt;
 
 Sdílený ukazatel zapíše do datového proudu.
 
@@ -378,19 +372,19 @@ std::basic_ostream<Elem, Tr>& operator<<(std::basic_ostream<Elem, Tr>& out,
 
 ### <a name="parameters"></a>Parametry
 
-*Elem*<br/>
+*Elem*\
 Typ prvku datového proudu.
 
-*tr*<br/>
+*tr*\
 Typ elementu vlastnosti datového proudu.
 
-*Ty*<br/>
+*Ty*\
 Typ řízený sdíleným ukazatelem.
 
-*out*<br/>
+*navýšení kapacity*\
 Výstupní datový proud
 
-*sp*<br/>
+*SP*\
 Sdílený ukazatel.
 
 ### <a name="remarks"></a>Poznámky
@@ -418,7 +412,3 @@ int main()
 ```Output
 sp0 == 3f3040 (varies)
 ```
-
-## <a name="see-also"></a>Viz také:
-
-[\<memory>](../standard-library/memory.md)<br/>

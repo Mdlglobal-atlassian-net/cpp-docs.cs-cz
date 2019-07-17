@@ -21,12 +21,12 @@ helpviewer_keywords:
 - std::locale [C++], facet
 - std::locale [C++], id
 ms.assetid: 7dd6d271-472d-4750-8fb5-ea8f55fbef62
-ms.openlocfilehash: a1f5ace58af427645a0ad4eb8706506cc52ab08c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: dedc1b5812357c84944654d1c352be2a51e9393c
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62413174"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68245412"
 ---
 # <a name="locale-class"></a>locale – třída
 
@@ -154,8 +154,8 @@ Pravidla číselného formátování pro následná vložení do `cout` zůstáv
 
 |Členská funkce|Popis|
 |-|-|
-|[combine](#combine)|Vloží omezující vlastnost ze zadaného národního prostředí do cílového národního prostředí.|
-|[Jméno](#name)|Vrátí název uloženého národního prostředí.|
+|[kombinování](#combine)|Vloží omezující vlastnost ze zadaného národního prostředí do cílového národního prostředí.|
+|[name](#name)|Vrátí název uloženého národního prostředí.|
 
 ### <a name="static-functions"></a>Statické funkce
 
@@ -168,6 +168,7 @@ Pravidla číselného formátování pro následná vložení do `cout` zůstáv
 
 |Operátor|Popis|
 |-|-|
+|[operátor =](#op_eq)|Přiřadí národní prostředí.|
 |[operator!=](#op_neq)|Testuje dvě národní prostředí na nerovnost.|
 |[() – operátor](#op_call)|Porovná dva `basic_string` objekty.|
 |[operator==](#op_eq_eq)|Testuje dvě národní prostředí na rovnost.|
@@ -417,7 +418,7 @@ class id
 
 ## <a name="locale"></a>  locale::Locale
 
-Vytvoří národní prostředí nebo kopii národního prostředí či kopii národního prostředí, kde byla omezující vlastnost nebo kategorie nahrazena omezující vlastností nebo kategorií z jiného národního prostředí.
+Vytvoří národní prostředí nebo kopii národního prostředí či kopii národního prostředí, kde byla omezující vlastnost nebo kategorie nahrazena omezující vlastností nebo kategorií z jiného národního prostředí. Také obsahuje destruktor.
 
 ```cpp
 locale();
@@ -430,6 +431,8 @@ locale(const locale& Loc, const char* Locname, category Cat);
 
 template <class Facet>
 locale(const locale& Loc, const Facet* Fac);
+
+~locale();
 ```
 
 ### <a name="parameters"></a>Parametry
@@ -548,6 +551,14 @@ The name of the previous locale is: C.
 The name of the current locale is: German_Germany.1252.
 ```
 
+## <a name="op_eq"></a>  locale::Operator =
+
+Přiřadí národní prostředí.
+
+```cpp
+const locale& operator=(const locale& other) noexcept;
+```
+
 ## <a name="op_neq"></a>  locale::Operator! =
 
 Testuje dvě národní prostředí na nerovnost.
@@ -634,7 +645,7 @@ Správný řetězec.
 
 - -1, pokud první pořadí porovnává menší než druhý pořadí.
 
-- + 1, pokud druhá sekvence porovnává méně než první pořadí.
+- \+ 1, pokud druhá sekvence porovnává méně než první pořadí.
 
 - 0, pokud jsou ekvivalentní sekvencí.
 

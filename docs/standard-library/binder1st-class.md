@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - binder1st class
 ms.assetid: 6b8ee343-c82f-48f8-867d-06f9d1d324c0
-ms.openlocfilehash: f70a1a4a0903b66edf5f42e59788b9a2d97fc967
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 384a870a10c9f806684443d8c67647e924b6b2aa
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62388212"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68243374"
 ---
 # <a name="binder1st-class"></a>binder1st – třída
 
@@ -43,13 +43,13 @@ protected:
 
 ### <a name="parameters"></a>Parametry
 
-*binary_fn*<br/>
+*binary_fn*\
 Objekt binární funkce pro převod na objekt jednočlenné funkce.
 
-*doleva*<br/>
+*doleva*\
 Hodnota, na které má být vázaný prvního argumentu binární funkce na objekt.
 
-*doprava*<br/>
+*doprava*\
 Hodnota argumentu, který porovná objekt adaptovaného binární pevnou hodnotu druhého argumentu.
 
 ## <a name="return-value"></a>Návratová hodnota
@@ -58,9 +58,9 @@ Objekt jednočlenné funkce, která je výsledkem vazby prvního argumentu biná
 
 ## <a name="remarks"></a>Poznámky
 
-Třída šablony ukládá jejich kopii objekt binární funkce *binary_fn* v `op`a kopii *levé* v `value`. Definuje jeho členskou funkci `operator()` jako vracející `op( value, right )`.
+Třída šablony ukládá jejich kopii objekt binární funkce *binary_fn* v `op`a kopii *levé* v `value`. Definuje jeho členskou funkci `operator()` jako vracející `op(value, right)`.
 
-Pokud *binary_fn* je objekt typu `Operation` a `c` je konstanta, pak `bind1st( binary_fn, c )` je pohodlnější ekvivalentem `binder1st<Operation>( binary_fn, c )`. Další informace najdete v tématu [bind1st –](../standard-library/functional-functions.md#bind1st).
+Pokud *binary_fn* je objekt typu `Operation` a `c` je konstanta, pak `bind1st(binary_fn, c)` je pohodlnější ekvivalentem `binder1st<Operation>(binary_fn, c)`. Další informace najdete v tématu [bind1st –](../standard-library/functional-functions.md#bind1st).
 
 ## <a name="example"></a>Příklad
 
@@ -105,20 +105,10 @@ int main()
     cout << "The number of elements in v1 less than 10 is: "
          << result2 << "." << endl;
 }
-/* Output:
+```
+
+```Output
 The vector v1 = ( 0 5 10 15 20 25 )
 The number of elements in v1 greater than 10 is: 3.
 The number of elements in v1 less than 10 is: 2.
-*/
 ```
-
-## <a name="requirements"></a>Požadavky
-
-**Záhlaví:** \<funkční >
-
-**Namespace:** std
-
-## <a name="see-also"></a>Viz také:
-
-[Bezpečný přístup z více vláken ve standardní knihovně C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
-[Standardní knihovna C++ – referenční dokumentace](../standard-library/cpp-standard-library-reference.md)<br/>

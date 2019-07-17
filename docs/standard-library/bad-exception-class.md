@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - bad_exception class
 ms.assetid: 5ae2c4ef-c7ad-4469-8a9e-a773e86bb000
-ms.openlocfilehash: 94d1104b66fc6bd84e209caa23ce309cffd9fa85
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1795a44d2d31cfbad964b41ef03e4bf65b401352
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62377815"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68246197"
 ---
 # <a name="badexception-class"></a>Třída bad_exception
 
@@ -20,7 +20,12 @@ Tato třída popisuje výjimku, která mohou být vyvolány z neočekávané obs
 ## <a name="syntax"></a>Syntaxe
 
 ```cpp
-class bad_exception    : public exception {};
+class bad_exception : public exception {};
+
+bad_exception();
+bad_exception(const bad_exception&);
+bad_exception& operator=(const bad_exception&);
+const char* what() const override;
 ```
 
 ## <a name="remarks"></a>Poznámky
@@ -34,14 +39,3 @@ Pro seznam členů děděné `bad_exception` najdete v tématu [tříd výjimek]
 ## <a name="example"></a>Příklad
 
 Zobrazit [set_unexpected](../standard-library/exception-functions.md#set_unexpected) příklad použití [neočekávané](../standard-library/exception-functions.md#unexpected) vyvolání `bad_exception`.
-
-## <a name="requirements"></a>Požadavky
-
-**Záhlaví:** \<výjimky >
-
-**Namespace:** std
-
-## <a name="see-also"></a>Viz také:
-
-[exception – třída](../standard-library/exception-class.md)<br/>
-[Bezpečný přístup z více vláken ve standardní knihovně C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>

@@ -20,12 +20,12 @@ helpviewer_keywords:
 - std::stack [C++], size
 - std::stack [C++], top
 ms.assetid: 02151c1e-eab0-41b8-be94-a839ead78ecf
-ms.openlocfilehash: cc18a62db3f39bc85c0a3bb7e84e6a27011c2b5a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 36074f75830f92ba3fb9e5edb4e1507aa5ae1407
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62412433"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68241068"
 ---
 # <a name="stack-class"></a>stack – třída
 
@@ -40,11 +40,11 @@ class stack
 
 ### <a name="parameters"></a>Parametry
 
-*Typ*<br/>
+*Typ*\
 Typ dat prvku, který bude uložen do zásobníku.
 
-*Kontejner*<br/>
-Typ základního kontejneru používaný k implementaci zásobníku. Výchozí hodnota je třída `deque`  *\<typ >*.
+*Kontejner*\
+Typ základního kontejneru používaný k implementaci zásobníku. Výchozí hodnota je třída `deque`  *\<typ >* .
 
 ## <a name="remarks"></a>Poznámky
 
@@ -60,37 +60,33 @@ Zásobníku objekty jsou srovnatelné if rovnosti a pouze v případě elementů
 
 - [Priority_queue – třída](../standard-library/priority-queue-class.md) orders jeho prvky tak, aby největšího prvku je vždy na nejvyšší pozici. Podporuje vložení elementu a kontrolu a odstranění prvku na vrcholu. Dobré analogové brát v úvahu by uživatelé zarovnání ve kterém jsou uspořádané podle věku, výšku ani jiné kritérium.
 
+## <a name="members"></a>Členové
+
 ### <a name="constructors"></a>Konstruktory
 
-|Konstruktor|Popis|
+|||
 |-|-|
-|[stack](#stack)|Vytvoří `stack` , který je prázdný nebo který je kopií základní kontejnerového objektu.|
+|[Zásobník](#stack)|Vytvoří `stack` , který je prázdný nebo který je kopií základní kontejnerového objektu.|
 
 ### <a name="typedefs"></a>Typedefs
 
-|Název typu|Popis|
+|||
 |-|-|
 |[container_type](#container_type)|Typ, který poskytuje základní kontejneru upraví `stack`.|
 |[size_type](#size_type)|Typ celé číslo bez znaménka představující počet prvků v `stack`.|
 |[value_type](#value_type)|Typ, který představuje typ uložený jako prvek v objektu `stack`.|
 
-### <a name="member-functions"></a>Členské funkce
+### <a name="functions"></a>Funkce
 
-|Členská funkce|Popis|
+|||
 |-|-|
 |[prázdný](#empty)|Testuje, zda `stack` je prázdný.|
-|[pop](#pop)|Odebere element z horní části `stack`.|
+|[POP](#pop)|Odebere element z horní části `stack`.|
 |[push](#push)|Přidá prvek do horní části `stack`.|
 |[Velikost](#size)|Vrátí počet prvků v `stack`.|
 |[nahoru](#top)|Vrátí odkaz na prvek v horní části `stack`.|
 
-## <a name="requirements"></a>Požadavky
-
-**Záhlaví:** \<zásobníku >
-
-**Namespace:** std
-
-## <a name="container_type"></a>  Stack::container_type
+## <a name="container_type"></a> container_type –
 
 Typ, který poskytuje základní kontejner, aby ho upravit.
 
@@ -108,7 +104,7 @@ Další informace o `Container`, najdete v části poznámky [stack – třída]
 
 Podívejte se na příklad pro [stack::stack](#stack) příklad toho, jak deklarace a používání `container_type`.
 
-## <a name="empty"></a>  Stack::Empty
+## <a name="empty"></a> prázdný
 
 Testuje, zda je zásobník je prázdný.
 
@@ -153,7 +149,7 @@ The stack s1 is not empty.
 The stack s2 is empty.
 ```
 
-## <a name="pop"></a>  Stack::POP
+## <a name="pop"></a> POP
 
 Odebere element z horní části zásobníku.
 
@@ -209,7 +205,7 @@ After a pop, the stack length is 2.
 After a pop, the element at the top of the stack is 20.
 ```
 
-## <a name="push"></a>  Stack::push
+## <a name="push"></a> nabízených oznámení
 
 Přidá prvek do horní části zásobníku.
 
@@ -219,7 +215,7 @@ void push(const Type& val);
 
 ### <a name="parameters"></a>Parametry
 
-*Val*<br/>
+*Val*\
 Prvek přidán do horní části zásobníku.
 
 ### <a name="remarks"></a>Poznámky
@@ -258,7 +254,7 @@ The stack length is 3.
 The element at the top of the stack is 30.
 ```
 
-## <a name="size"></a>  Stack::size
+## <a name="size"></a> Velikost
 
 Vrátí počet prvků v zásobníku.
 
@@ -299,7 +295,7 @@ The stack length is 1.
 The stack length is now 2.
 ```
 
-## <a name="size_type"></a>  Stack::size_type
+## <a name="size_type"></a> size_type
 
 Typ celé číslo bez znaménka představující počet prvků v zásobníku.
 
@@ -315,7 +311,7 @@ Typ je synonymum pro `size_type` základní kontejneru přizpůsobené zásobní
 
 Podívejte se na příklad pro [velikost](#size) příklad toho, jak deklarace a používání `size_type`.
 
-## <a name="stack"></a>  Stack::Stack
+## <a name="stack"></a> Zásobník
 
 Sestaví zásobníku, který je prázdný nebo který je kopii kontejner základní třídy.
 
@@ -327,7 +323,7 @@ explicit stack(const container_type& right);
 
 ### <a name="parameters"></a>Parametry
 
-*doprava*<br/>
+*doprava*\
 Kontejner je vytvořený zásobníku kopií.
 
 ### <a name="example"></a>Příklad
@@ -369,7 +365,7 @@ int main( )
 The element at the top of stack vsi2 is 1.
 ```
 
-## <a name="top"></a>  Stack::TOP
+## <a name="top"></a> nahoru
 
 Vrátí odkaz na prvek v horní části zásobníku.
 
@@ -420,7 +416,7 @@ The top integer of the stack s1 is 2.
 The next integer down is 1.
 ```
 
-## <a name="value_type"></a>  Stack::value_type
+## <a name="value_type"></a> value_type
 
 Typ, který představuje typ objektu uložený jako prvek v zásobníku.
 

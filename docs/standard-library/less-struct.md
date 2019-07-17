@@ -7,12 +7,12 @@ helpviewer_keywords:
 - less struct
 - less function
 ms.assetid: 39349da3-11cd-4774-b2cc-b46af5aae5d7
-ms.openlocfilehash: e24c7fb238c9c05d91cbdba7fab277878e6f5e24
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 13aef35856066f9c1897c3d8855c5ff537aa3567
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62224048"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68245339"
 ---
 # <a name="less-struct"></a>less – struktura
 
@@ -39,12 +39,13 @@ struct less<void>
 
 ### <a name="parameters"></a>Parametry
 
-*Typ*, *T*, *U* libovolný typ, který podporuje `operator<` , která přebírá operandů zadaný nebo odvozené typy.
+*Typ*, *T*, *U*\
+Libovolný typ, který podporuje `operator<` , která přebírá operandů zadaný nebo odvozené typy.
 
-*doleva*<br/>
+*doleva*\
 Levý operand větší-než operace. Nespecializovaná šablony přebírá argument typu odkazu l-hodnoty *typ*. Specializovaná šablona perfektní přesměrování l-hodnoty a argumenty odkazu rvalue odvodit typ *T*.
 
-*doprava*<br/>
+*doprava*\
 Pravý operand větší-než operace. Nespecializovaná šablony přebírá argument typu odkazu l-hodnoty *typ*. Specializovaná šablona perfektní přesměrování l-hodnoty a argumenty odkazu rvalue odvodit typ *U*.
 
 ## <a name="return-value"></a>Návratová hodnota
@@ -53,7 +54,7 @@ Výsledek `Left < Right`. Specializovaná šablona perfektní přesměrování v
 
 ## <a name="remarks"></a>Poznámky
 
-Binární predikát `less` <  `Type`> poskytuje přísné slabé seřazení sady hodnot prvků typu *typ* na rovnocennost třídy pouze v případě tento typ splňuje standard matematické požadavky na seřadí se tak. Specializace pro libovolný typ ukazatele yield celkového pořadí prvků, v tom, že všechny prvky různých hodnot jsou uspořádány ve vztahu mezi sebou.
+Binární predikát `less` < `Type`> poskytuje přísné slabé seřazení sady hodnot prvků typu *typ* na rovnocennost třídy pouze v případě tento typ splňuje standard matematické požadavky na seřadí se tak. Specializace pro libovolný typ ukazatele yield celkového pořadí prvků, v tom, že všechny prvky různých hodnot jsou uspořádány ve vztahu mezi sebou.
 
 ## <a name="example"></a>Příklad
 
@@ -100,19 +101,7 @@ cout << Iter1->m_i << " ";
 }
 ```
 
-## <a name="output"></a>Výstup
-
 ```Output
 Original vector v1 = (41 18467 6334 26500 19169 15724 11478)
 Sorted vector v1 = (41 6334 11478 15724 18467 19169 26500)
 ```
-
-## <a name="requirements"></a>Požadavky
-
-**Záhlaví:** \<funkční >
-
-**Namespace:** std
-
-## <a name="see-also"></a>Viz také:
-
-[Standardní knihovna C++ – referenční dokumentace](../standard-library/cpp-standard-library-reference.md)<br/>

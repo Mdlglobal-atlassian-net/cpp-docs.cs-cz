@@ -7,12 +7,12 @@ helpviewer_keywords:
 - pointer_to_binary_function function
 - pointer_to_binary_function class
 ms.assetid: fb50599f-bcb3-4076-a669-6dcc3eb189a5
-ms.openlocfilehash: 88d38be258c6ceb1054e0d31cc52e4d8d25186ec
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: fcc643d7569bd4f71b11249babdb49ef1362dc8b
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62370316"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68240495"
 ---
 # <a name="pointertobinaryfunction-class"></a>pointer_to_binary_function – třída
 
@@ -25,7 +25,6 @@ template <class Arg1, class Arg2, class Result>
 class pointer_to_binary_function
     : public binary_function <Arg1, Arg2, Result>
 {
-public:
     explicit pointer_to_binary_function(
         Result(*pfunc)(Arg1, Arg2));
     Result operator()(Arg1 left, Arg2 right) const;
@@ -34,13 +33,13 @@ public:
 
 ### <a name="parameters"></a>Parametry
 
-*pfunc*<br/>
+*pfunc*\
 Binární funkce pro převod.
 
-*doleva*<br/>
+*doleva*\
 Levé straně objekt, který  *\*pfunc* je volán na.
 
-*doprava*<br/>
+*doprava*\
 Vpravo objekt, který  *\*pfunc* je volán na.
 
 ## <a name="return-value"></a>Návratová hodnota
@@ -54,13 +53,3 @@ Ukazatel na binární funkci je objekt funkce a může být předán s libovoln�
 ## <a name="example"></a>Příklad
 
 Konstruktor třídy `pointer_to_binary_function` je zřídka se používá přímo. Viz pomocná funkce [ptr_fun –](../standard-library/functional-functions.md#ptr_fun) příklad toho, jak deklarovat a použít `pointer_to_binary_function` adaptér predikátu.
-
-## <a name="requirements"></a>Požadavky
-
-**Záhlaví:** \<funkční >
-
-**Namespace:** std
-
-## <a name="see-also"></a>Viz také:
-
-[Standardní knihovna C++ – referenční dokumentace](../standard-library/cpp-standard-library-reference.md)<br/>

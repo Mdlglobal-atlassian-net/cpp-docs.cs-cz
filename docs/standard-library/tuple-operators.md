@@ -9,21 +9,16 @@ f1_keywords:
 - tuple/std::operator<=
 - tuple/std::operator==
 ms.assetid: f25752dc-d3e2-4e12-b5ac-9a8682ca60ed
-ms.openlocfilehash: e60de54a78f3a206ef77776761c3419bf8a2f3b1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5554f08f32048bafde5bdb2c316e12e1e01c6ffb
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62411874"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68241664"
 ---
 # <a name="lttuplegt-operators"></a>&lt;řazené kolekce členů&gt; operátory
 
-||||
-|-|-|-|
-|[operator!=](#op_neq)|[– Operátor&gt;](#op_gt)|[– Operátor&gt;=](#op_gt_eq)|
-|[– Operátor&lt;](#op_lt)|[– Operátor&lt;=](#op_lt_eq)|[operator==](#op_eq_eq)|
-
-## <a name="op_neq"></a>  Operator! =
+## <a name="op_neq"></a> Operator! =
 
 Porovnání `tuple` objekty nerovnost.
 
@@ -36,7 +31,7 @@ bool operator!=(const tuple<T1, T2, ..., TN>& tpl1,
 
 ### <a name="parameters"></a>Parametry
 
-*TN*<br/>
+*TN*\
 Typ prvku n-tý řazené kolekce členů.
 
 ### <a name="remarks"></a>Poznámky
@@ -88,7 +83,7 @@ false
 true
 ```
 
-## <a name="op_lt"></a>  – Operátor&lt;
+## <a name="op_lt"></a> – Operátor&lt;
 
 Porovnání `tuple` objekty pro menší.
 
@@ -101,7 +96,7 @@ bool operator<(const tuple<T1, T2, ..., TN>& tpl1,
 
 ### <a name="parameters"></a>Parametry
 
-*TN*<br/>
+*TN*\
 Typ prvku n-tý řazené kolekce členů.
 
 ### <a name="remarks"></a>Poznámky
@@ -153,7 +148,7 @@ false
 true
 ```
 
-## <a name="op_lt_eq"></a>  – Operátor&lt;=
+## <a name="op_lt_eq"></a> – Operátor&lt;=
 
 Porovnání `tuple` objekty pro menší nebo rovno.
 
@@ -166,7 +161,7 @@ bool operator<=(const tuple<T1, T2, ..., TN>& tpl1,
 
 ### <a name="parameters"></a>Parametry
 
-*TN*<br/>
+*TN*\
 Typ prvku n-tý řazené kolekce členů.
 
 ### <a name="remarks"></a>Poznámky
@@ -218,7 +213,7 @@ true
 false
 ```
 
-## <a name="op_eq_eq"></a>  Operator ==
+## <a name="op_eq_eq"></a> Operator ==
 
 Porovnání `tuple` objekty pro rovnost.
 
@@ -231,7 +226,7 @@ bool operator==(const tuple<T1, T2, ..., TN>& tpl1,
 
 ### <a name="parameters"></a>Parametry
 
-*TN*<br/>
+*TN*\
 Typ prvku n-tý řazené kolekce členů.
 
 ### <a name="remarks"></a>Poznámky
@@ -283,7 +278,7 @@ true
 false
 ```
 
-## <a name="op_gt"></a>  – Operátor&gt;
+## <a name="op_gt"></a> – Operátor&gt;
 
 Porovnání `tuple` objekty pro větší.
 
@@ -296,7 +291,7 @@ bool operator>(const tuple<T1, T2, ..., TN>& tpl1,
 
 ### <a name="parameters"></a>Parametry
 
-*TN*<br/>
+*TN*\
 Typ prvku n-tý řazené kolekce členů.
 
 ### <a name="remarks"></a>Poznámky
@@ -348,7 +343,7 @@ false
 true
 ```
 
-## <a name="op_gt_eq"></a>  – Operátor&gt;=
+## <a name="op_gt_eq"></a> – Operátor&gt;=
 
 Porovnání `tuple` objekty pro větší nebo rovno.
 
@@ -361,7 +356,7 @@ bool operator>=(const tuple<T1, T2, ..., TN>& tpl1,
 
 ### <a name="parameters"></a>Parametry
 
-*TN*<br/>
+*TN*\
 Typ prvku n-tý řazené kolekce členů.
 
 ### <a name="remarks"></a>Poznámky
@@ -412,7 +407,3 @@ int main() {
 true
 false
 ```
-
-## <a name="see-also"></a>Viz také:
-
-[\<tuple>](../standard-library/tuple.md)<br/>

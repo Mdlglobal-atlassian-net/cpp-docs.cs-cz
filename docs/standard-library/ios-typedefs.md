@@ -9,21 +9,16 @@ f1_keywords:
 - iosfwd/std::wios
 - iosfwd/std::wstreampos
 ms.assetid: 0b962632-3439-44de-bf26-20c67a7f0ff3
-ms.openlocfilehash: 1f0ff93c22263ca4b35377b5d9af089816e8895a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a0fd73cc53c5d538469cb957b7b4c4ec56783ade
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62159259"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68245284"
 ---
 # <a name="ltiosgt-typedefs"></a>&lt;IOS&gt; – definice TypeDef
 
-||||
-|-|-|-|
-|[IOS](#ios)|[streamoff](#streamoff)|[streampos](#streampos)|
-|[streamsize](#streamsize)|[wios](#wios)|[wstreampos](#wstreampos)|
-
-## <a name="ios"></a>  IOS
+## <a name="ios"></a> IOS
 
 Podporuje ios třídy z původní Knihovna iostream.
 
@@ -35,7 +30,7 @@ typedef basic_ios<char, char_traits<char>> ios;
 
 Typ je synonymum pro šablony třídy [basic_ios –](../standard-library/basic-ios-class.md)specializované pro prvky typu **char** s výchozí vlastností.
 
-## <a name="streamoff"></a>  streamoff
+## <a name="streamoff"></a> streamoff
 
 Podporuje vnitřní operace.
 
@@ -51,7 +46,7 @@ Podporuje vnitřní operace.
 
 Typ je celé číslo se znaménkem, který popisuje objekt, který můžete uložit bajtovým posunem zahrnutých v různých stream umístění operace. Její reprezentace obsahuje alespoň 32 bitů hodnotu. Není nutně dostatečně velký pro reprezentaci libovolného bajtu v rámci datového proudu. Hodnota `streamoff(-1)` obvykle naznačuje chybný posun.
 
-## <a name="streampos"></a>  streampos
+## <a name="streampos"></a> streampos
 
 Obsahuje aktuální pozici ukazatele vyrovnávací paměti nebo ukazatel na soubor.
 
@@ -134,7 +129,7 @@ typedef basic_ios<wchar_t, char_traits<wchar_t>> wios;
 
 Typ je synonymum pro šablony třídy [basic_ios –](../standard-library/basic-ios-class.md)specializované pro prvky typu **wchar_t** s výchozí vlastností.
 
-## <a name="wstreampos"></a>  wstreampos
+## <a name="wstreampos"></a> wstreampos
 
 Obsahuje aktuální pozici ukazatele vyrovnávací paměti nebo ukazatel na soubor.
 
@@ -167,7 +162,3 @@ int main( )
 ```Output
 7
 ```
-
-## <a name="see-also"></a>Viz také:
-
-[\<ios>](../standard-library/ios.md)<br/>

@@ -17,22 +17,16 @@ helpviewer_keywords:
 - std::operator&gt;= (iterator)
 - std::operator&lt; (iterator)
 - std::operator&lt;= (iterator), std::operator== (iterator)
-ms.openlocfilehash: 311710d5614bbc7c24d6b32e89285715476f94da
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7455610af5f03be024753e26f67e561b14c85612
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62224256"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68244020"
 ---
 # <a name="ltiteratorgt-operators"></a>&lt;iterátor&gt; operátory
 
-||||
-|-|-|-|
-|[operator!=](#op_neq)|[– Operátor&gt;](#op_gt)|[– Operátor&gt;=](#op_gt_eq)|
-|[– Operátor&lt;](#op_lt)|[– Operátor&lt;=](#op_lt_eq)|[Operator +](#op_add)|
-|[Operator-](#operator-)|[operator==](#op_eq_eq)|
-
-## <a name="op_neq"></a>  Operator! =
+## <a name="op_neq"></a> Operator! =
 
 Testuje, zda je objekt iterátoru na levé straně operátoru není roven objektu iterátoru na pravé straně.
 
@@ -49,10 +43,10 @@ bool operator!=(const istreambuf_iterator<CharType, Traits>& left, const istream
 
 ### <a name="parameters"></a>Parametry
 
-*doleva*<br/>
+*doleva*\
 Objekt typu `iterator`.
 
-*doprava*<br/>
+*doprava*\
 Objekt typu `iterator`.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -125,7 +119,7 @@ in the reversed sequence: 7.
 The iterators are not equal.
 ```
 
-## <a name="op_eq_eq"></a>  Operator ==
+## <a name="op_eq_eq"></a> Operator ==
 
 Testuje, zda je objekt iterátoru na levé straně operátoru roven objektu iterátoru na pravé straně.
 
@@ -153,10 +147,10 @@ bool operator==(
 
 ### <a name="parameters"></a>Parametry
 
-*doleva*<br/>
+*doleva*\
 Objekt typu iterátoru.
 
-*doprava*<br/>
+*doprava*\
 Objekt typu iterátoru.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -167,7 +161,7 @@ Objekt typu iterátoru.
 
 Pokud řeší stejné prvky v kontejneru je roven jinému jeden objekt iterátoru. Pokud se dvěma iterátory, přejděte na různé prvky v kontejneru, pak nejsou stejné.
 
-První dvě šablony operátory vrací hodnotu true, pouze pokud oba *levé* a *správné* ukládání stejným iterátorem. Třetí šablony operátor, který se vrátí hodnota true, pouze pokud *levé* a *správné* ukládání stejný ukazatel streamu. Vrátí operátor čtvrtá šablona ` left.equal ( right)`.
+První dvě šablony operátory vrací hodnotu true, pouze pokud oba *levé* a *správné* ukládání stejným iterátorem. Třetí šablony operátor, který se vrátí hodnota true, pouze pokud *levé* a *správné* ukládání stejný ukazatel streamu. Vrátí operátor čtvrtá šablona `left.equal (right)`.
 
 ### <a name="example"></a>Příklad
 
@@ -231,7 +225,7 @@ in the reversed sequence: 8.
 The iterators are not equal.
 ```
 
-## <a name="op_lt"></a>  – Operátor&lt;
+## <a name="op_lt"></a> – Operátor&lt;
 
 Testuje, zda je objekt iterátoru na levé straně operátoru menší než objekt iterátoru na pravé straně.
 
@@ -242,10 +236,10 @@ bool operator<(const reverse_iterator<RandomIterator>& left, const reverse_itera
 
 ### <a name="parameters"></a>Parametry
 
-*doleva*<br/>
+*doleva*\
 Objekt typu `iterator`.
 
-*doprava*<br/>
+*doprava*\
 Objekt typu `iterator`.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -322,7 +316,7 @@ in the reversed sequence: 8.
 The iterator rVPOS1 is less than the iterator rVPOS2.
 ```
 
-## <a name="op_lt_eq"></a>  – Operátor&lt;=
+## <a name="op_lt_eq"></a> – Operátor&lt;=
 
 Testuje, zda je objekt iterátoru na levé straně operátoru menší než nebo roven objektu iterátoru na pravé straně.
 
@@ -333,10 +327,10 @@ bool operator<=(const reverse_iterator<RandomIterator>& left, const reverse_iter
 
 ### <a name="parameters"></a>Parametry
 
-*doleva*<br/>
+*doleva*\
 Objekt typu iterátoru.
 
-*doprava*<br/>
+*doprava*\
 Objekt typu iterátoru.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -417,7 +411,7 @@ in the reversed sequence: 8.
 The iterator rVPOS1 is less than or equal to the iterator rVPOS2.
 ```
 
-## <a name="op_gt"></a>  – Operátor&gt;
+## <a name="op_gt"></a> – Operátor&gt;
 
 Testuje, zda je objekt iterátoru na levé straně operátoru větší než objekt iterátoru na pravé straně.
 
@@ -428,10 +422,10 @@ bool operator>(const reverse_iterator<RandomIterator>& left, const reverse_itera
 
 ### <a name="parameters"></a>Parametry
 
-*doleva*<br/>
+*doleva*\
 Objekt typu iterátoru.
 
-*doprava*<br/>
+*doprava*\
 Objekt typu iterátoru.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -506,7 +500,7 @@ in the reversed sequence: 8.
 The iterator rVPOS1 is greater than the iterator rVPOS2.
 ```
 
-## <a name="op_gt_eq"></a>  – Operátor&gt;=
+## <a name="op_gt_eq"></a> – Operátor&gt;=
 
 Testuje, zda je objekt iterátoru na levé straně operátoru větší než nebo roven objektu iterátoru na pravé straně.
 
@@ -517,10 +511,10 @@ bool operator>=(const reverse_iterator<RandomIterator>& left, const reverse_iter
 
 ### <a name="parameters"></a>Parametry
 
-*doleva*<br/>
+*doleva*\
 Objekt typu iterátoru.
 
-*doprava*<br/>
+*doprava*\
 Objekt typu iterátoru.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -601,7 +595,7 @@ in the reversed sequence: 8.
 The iterator rVPOS1 is greater than or equal to the iterator rVPOS2.
 ```
 
-## <a name="op_add"></a>  Operator +
+## <a name="op_add"></a> Operator +
 
 Přidá posun do iterátoru a vrátí `move_iterator` nebo `reverse_iterator` adresující vložený prvek na nové pozici posunu.
 
@@ -621,15 +615,15 @@ operator+(
 
 ### <a name="parameters"></a>Parametry
 
-*_Off*<br/>
+*_Off*\
 Počet pozic, const move_iterator nebo const reverse_iterator má být posun.
 
-*doprava*<br/>
+*doprava*\
 Iterátor, který má být posun.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vrátí součet *správné* + *_Off*.
+Vrátí součet *správné* +  *_Off*.
 
 ### <a name="example"></a>Příklad
 
@@ -680,7 +674,7 @@ The iterator rVPOS1 now points to the fifth element
 in the reversed sequence: 2.
 ```
 
-## <a name="operator-"></a>  Operator-
+## <a name="operator-"></a> Operator-
 
 Odečte jeden iterátor od druhého a vrátí rozdíl.
 
@@ -698,10 +692,10 @@ Tdiff operator-(
 
 ### <a name="parameters"></a>Parametry
 
-*doleva*<br/>
+*doleva*\
 Iterátor.
 
-*doprava*<br/>
+*doprava*\
 Iterátor.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -772,7 +766,3 @@ The iterator rVPOS2 now points to the fifth element
 in the reversed sequence: 2.
 The difference: rVPOS2 - rVPOS1= 4.
 ```
-
-## <a name="see-also"></a>Viz také:
-
-[\<iterator>](../standard-library/iterator.md)<br/>

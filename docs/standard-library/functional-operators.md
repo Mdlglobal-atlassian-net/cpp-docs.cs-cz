@@ -7,40 +7,36 @@ f1_keywords:
 helpviewer_keywords:
 - functional operators
 ms.assetid: d4b3c760-f3e2-4b65-bdaa-d42e8dd6f5e1
-ms.openlocfilehash: 6fd4e25b3ca7b56e2221cb99b64f7c8e109bf452
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b396e5c692129821c0deb9aef9469a5c54e600b0
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62159549"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68243772"
 ---
 # <a name="ltfunctionalgt-operators"></a>&lt;funkční&gt; operátory
 
-|||
-|-|-|
-|[operator!=](#op_neq)|[operator==](#op_eq_eq)|
-
-## <a name="op_eq_eq"></a>  Operator ==
+## <a name="op_eq_eq"></a> Operator ==
 
 Testuje, zda je volatelný objekt je prázdný.
 
 ```cpp
 template <class Fty>
-bool operator==(const function<Fty>& f, null_ptr_type npc);
+    bool operator==(const function<Fty>& f, null_ptr_type npc);
 
 template <class Fty>
-bool operator==(null_ptr_type npc, const function<Fty>& f);
+    bool operator==(null_ptr_type npc, const function<Fty>& f);
 ```
 
 ### <a name="parameters"></a>Parametry
 
-*Fty*<br/>
+*Fty*\
 Typ funkce zahrnující.
 
-*f*<br/>
+*F*\
 Objekt funkce
 
-*NPC*<br/>
+*NPC*\
 Ukazatel s hodnotou null.
 
 ### <a name="remarks"></a>Poznámky
@@ -79,27 +75,27 @@ empty == true
 empty == false
 ```
 
-## <a name="op_neq"></a>  Operator! =
+## <a name="op_neq"></a> Operator! =
 
 Testuje, zda je volatelný objekt není prázdný.
 
 ```cpp
 template <class Fty>
-bool operator!=(const function<Fty>& f, null_ptr_type npc);
+    bool operator!=(const function<Fty>& f, null_ptr_type npc);
 
 template <class Fty>
-bool operator!=(null_ptr_type npc, const function<Fty>& f);
+    bool operator!=(null_ptr_type npc, const function<Fty>& f);
 ```
 
 ### <a name="parameters"></a>Parametry
 
-*Fty*<br/>
+*Fty*\
 Typ funkce zahrnující.
 
-*f*<br/>
+*F*\
 Objekt funkce
 
-*NPC*<br/>
+*NPC*\
 Ukazatel s hodnotou null.
 
 ### <a name="remarks"></a>Poznámky
@@ -137,7 +133,3 @@ int main()
 not empty == false
 not empty == true
 ```
-
-## <a name="see-also"></a>Viz také:
-
-[\<funkční >](../standard-library/functional.md)<br/>

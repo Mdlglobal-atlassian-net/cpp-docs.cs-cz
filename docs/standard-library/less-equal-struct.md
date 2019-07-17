@@ -7,12 +7,12 @@ helpviewer_keywords:
 - less_equal function
 - less_equal struct
 ms.assetid: 32085782-c7e0-4310-9b40-8aa3c1bff211
-ms.openlocfilehash: e1949477cc130bbbc8cdfeea082ec73f14bf4aad
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 67a686b139ae4abbf25a42a994cceaba008decf5
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62223940"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68245386"
 ---
 # <a name="lessequal-struct"></a>less_equal – struktura
 
@@ -39,12 +39,13 @@ struct less_equal<void>
 
 ### <a name="parameters"></a>Parametry
 
-*Typ*, *T*, *U* libovolný typ, který podporuje `operator<=` , která přebírá operandů zadaný nebo odvozené typy.
+*Typ*, *T*, *U*\
+Libovolný typ, který podporuje `operator<=` , která přebírá operandů zadaný nebo odvozené typy.
 
-*doleva*<br/>
+*doleva*\
 Levý operand operace menší než nebo rovno. Nespecializovaná šablony přebírá argument typu odkazu l-hodnoty *typ*. Specializovaná šablona perfektní přesměrování l-hodnoty a argumenty odkazu rvalue odvodit typ *T*.
 
-*doprava*<br/>
+*doprava*\
 Pravý operand operace menší než nebo rovno. Nespecializovaná šablony přebírá argument typu odkazu l-hodnoty *typ*. Specializovaná šablona perfektní přesměrování l-hodnoty a argumenty odkazu rvalue odvodit typ *U*.
 
 ## <a name="return-value"></a>Návratová hodnota
@@ -53,7 +54,7 @@ Výsledek `Left <= Right`. Specializovaná šablona perfektní přesměrování 
 
 ## <a name="remarks"></a>Poznámky
 
-Binární predikát `less_equal` <  `Type`> poskytuje přísné slabé seřazení sady hodnot prvků typu *typ* na rovnocennost třídy pouze v případě tento typ splňuje standard matematické požadavky na seřadí se tak. Specializace pro libovolný typ ukazatele yield celkového pořadí prvků, v tom, že všechny prvky různých hodnot jsou uspořádány ve vztahu mezi sebou.
+Binární predikát `less_equal` < `Type`> poskytuje přísné slabé seřazení sady hodnot prvků typu *typ* na rovnocennost třídy pouze v případě tento typ splňuje standard matematické požadavky na seřadí se tak. Specializace pro libovolný typ ukazatele yield celkového pořadí prvků, v tom, že všechny prvky různých hodnot jsou uspořádány ve vztahu mezi sebou.
 
 ## <a name="example"></a>Příklad
 
@@ -109,19 +110,7 @@ int main( )
 }
 ```
 
-## <a name="sample-output"></a>Vzorový výstup
-
 ```Output
 Original vector v1 = (31247 37154 48755 15251 6205 2836 2836 2836)
 Sorted vector v1 = (2836 2836 2836 6205 15251 31247 37154 48755)
 ```
-
-## <a name="requirements"></a>Požadavky
-
-**Záhlaví:** \<funkční >
-
-**Namespace:** std
-
-## <a name="see-also"></a>Viz také:
-
-[Standardní knihovna C++ – referenční dokumentace](../standard-library/cpp-standard-library-reference.md)<br/>

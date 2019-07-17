@@ -102,12 +102,12 @@ helpviewer_keywords:
 - CListBox [MFC], SetTopIndex
 - CListBox [MFC], VKeyToItem
 ms.assetid: 7ba3c699-c286-4cd9-9066-532c41ec05d1
-ms.openlocfilehash: b448f725bac68c2b67dc44d660c664c075aa86da
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f7b62ecf64c70c554fe14883c45d6b7936c668d7
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62225266"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68243570"
 ---
 # <a name="clistbox-class"></a>Clistbox – třída
 
@@ -123,13 +123,13 @@ class CListBox : public CWnd
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CListBox::CListBox](#clistbox)|Vytvoří `CListBox` objektu.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CListBox::AddString](#addstring)|Přidá řetězec do pole se seznamem.|
 |[CListBox::CharToItem](#chartoitem)|Přepsání nastavení za účelem zadejte vlastní WM_CHAR zpracování pro seznamy vykreslené vlastníkem, které nemají řetězce.|
@@ -146,7 +146,7 @@ class CListBox : public CWnd
 |[CListBox::GetCount](#getcount)|Vrátí počet řetězců v seznamu.|
 |[CListBox::GetCurSel](#getcursel)|Vrátí index aktuálně vybrané řetězec založený na nule v seznamu.|
 |[CListBox::GetHorizontalExtent](#gethorizontalextent)|Vrátí šířku v pixelech, že je vodorovně posuvný seznam.|
-|[CListBox::GetItemData](#getitemdata)|Vrátí hodnotu 32-bit přidružené položky pole se seznamem.|
+|[CListBox::GetItemData](#getitemdata)|Vrátí hodnotu přidružený k položce seznamu.|
 |[CListBox::GetItemDataPtr](#getitemdataptr)|Vrací ukazatel na pole se seznamem položek.|
 |[CListBox::GetItemHeight](#getitemheight)|Určuje výšku položky v seznamu.|
 |[CListBox::GetItemRect](#getitemrect)|Vrací ohraničující obdélník položky pole se seznamem, který se nyní zobrazí.|
@@ -170,7 +170,7 @@ class CListBox : public CWnd
 |[CListBox::SetColumnWidth](#setcolumnwidth)|Nastavuje šířku sloupce vícesloupcový seznam.|
 |[CListBox::SetCurSel](#setcursel)|Vybere pole se seznamem řetězec.|
 |[CListBox::SetHorizontalExtent](#sethorizontalextent)|Nastavuje šířku v pixelech, že je vodorovně posuvný seznam.|
-|[CListBox::SetItemData](#setitemdata)|Nastaví hodnotu 32-bit přidružené položky pole se seznamem.|
+|[CListBox::SetItemData](#setitemdata)|Nastaví hodnotu přiřazenou k položce seznamu.|
 |[CListBox::SetItemDataPtr](#setitemdataptr)|Nastaví ukazatel na pole se seznamem položek.|
 |[CListBox::SetItemHeight](#setitemheight)|Nastaví výšku položky v seznamu.|
 |[CListBox::SetLocale](#setlocale)|Nastaví identifikátor národního prostředí pro pole se seznamem.|
@@ -702,7 +702,7 @@ Určuje z nuly vycházející index položky v seznamu.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-32bitová hodnota přidružené položky nebo LB_ERR, pokud dojde k chybě.
+Hodnota přidružená položka nebo LB_ERR, pokud dojde k chybě.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -1039,7 +1039,7 @@ UINT ItemFromPoint(
 
 ### <a name="parameters"></a>Parametry
 
-*pt*<br/>
+*PT*<br/>
 Bod, pro kterou se má vyhledat nejbližší položky určen ve vztahu k levého horního rohu klientské oblasti pole se seznamem.
 
 *bOutside*<br/>
@@ -1288,7 +1288,7 @@ Tato členská funkce není užitečná pro pole se seznamem vícesloupcovém ob
 
 ##  <a name="setitemdata"></a>  CListBox::SetItemData
 
-Nastaví hodnotu 32-bit přidružené k zadané položky seznamu.
+Nastaví hodnotu přiřazenou k zadané položky seznamu.
 
 ```
 int SetItemData(

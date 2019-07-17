@@ -6,22 +6,25 @@ f1_keywords:
 helpviewer_keywords:
 - random header
 ms.assetid: 60afc25c-b162-4811-97c1-1b65398d4c57
-ms.openlocfilehash: 3fd6272ebcb58d48cc943541f32d1195c3fab498
-ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
+ms.openlocfilehash: 1448ad2b703aa6dcf26fad2e4adcbeb2aec2c956
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66450802"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68240425"
 ---
 # <a name="ltrandomgt"></a>&lt;náhodné&gt;
 
 Definuje zařízení pro generování náhodných čísel, umožňující vytvoření rovnoměrně distribuovaných náhodných čísel.
 
-## <a name="syntax"></a>Syntaxe
+## <a name="requirements"></a>Požadavky
 
-```cpp
-#include <random>
-```
+**Hlavička**: \<náhodné >
+
+**Namespace:** std
+
+> [!NOTE]
+> \<Náhodné > knihovna používá "#include < initializer_list >' – příkaz.
 
 ## <a name="summary"></a>Souhrn
 
@@ -493,7 +496,7 @@ Další informace najdete v další části odkaz pod touto propojenou dříve v
 
 Existují dva velmi užitečné URNGs v sadě Visual Studio –`mt19937` a `random_device`– jak je znázorněno v této tabulce porovnání:
 
-|URNG|Rychlé|Crypto-secure|Seedable|Deterministické|
+|URNG|Rychlé|Šifrování zabezpečení|Seedable|Deterministické|
 |----------|-----------|---------------------|---------------|--------------------|
 |`mt19937`|Ano|Ne|Ano|Ano<sup>*</sup>|
 |`random_device`|Ne|Ano|Ne|Ne|

@@ -14,35 +14,47 @@ helpviewer_keywords:
 - std::make_pair [C++]
 - std::move [C++]
 - std::swap [C++]
-ms.openlocfilehash: 7a061ede19c5c4c181b5fea912b9c6212c583267
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 723b077500b9b741445efcd8574fb26cd53e5fc7
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62362364"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68246301"
 ---
 # <a name="ltutilitygt-functions"></a>&lt;Nástroj&gt; funkce
 
-||||
-|-|-|-|
-|[exchange](#exchange)|[Vpřed](#forward)|[Funkce Get &lt;nástroje&gt;](#get)|
-|[make_pair](#make_pair)|[move](#move)|[swap](#swap)|
+## <a name="asconst"></a> as_const
 
-## <a name="exchange"></a>  Exchange
+```cpp
+template <class T> constexpr add_const_t<T>& as_const(T& t) noexcept;
+template <class T> void as_const(const T&&) = delete;
+```
+
+### <a name="return-value"></a>Návratová hodnota
+
+Vrátí *T*.
+
+## <a name="declval"></a> declval –
+
+```cpp
+template <class T> add_rvalue_reference_t<T> declval() noexcept;  // as unevaluated operand
+```
+
+## <a name="exchange"></a> Exchange
 
 **(C ++ 14)**  Objektu přiřadí novou hodnotu a vrátí jeho starou hodnotu.
 
 ```cpp
 template <class T, class Other = T>
-T exchange(T& val, Other&& new_val)
+    T exchange(T& val, Other&& new_val)
 ```
 
 ### <a name="parameters"></a>Parametry
 
-*Val*<br/>
+*Val*\
 Objekt, který se zobrazí hodnota new_val.
 
-*new_val*<br/>
+*new_val*\
 Objekt, jehož hodnota je zkopírovaný ani přesunutý do val.
 
 ### <a name="remarks"></a>Poznámky
@@ -83,24 +95,25 @@ The old value of c1 is: 1
 The new value of c1 after exchange is: 2
 ```
 
-## <a name="forward"></a>  Vpřed
+## <a name="forward"></a> Vpřed
 
 Podmíněně přetypuje svůj argument na odkaz rvalue, pokud je argument hodnota rvalue nebo odkaz rvalue. Tím se období hodnota rvalue argumentu na funkci předání za účelem maximální podpory předávání.
 
 ```cpp
 template <class Type>    // accepts lvalues
-constexpr Type&& forward(typename remove_reference<Type>::type& Arg) noexcept
+    constexpr Type&& forward(typename remove_reference<Type>::type& Arg) noexcept
 
 template <class Type>    // accepts everything else
-constexpr Type&& forward(typename remove_reference<Type>::type&& Arg) noexcept
+    constexpr Type&& forward(typename remove_reference<Type>::type&& Arg) noexcept
 ```
 
 ### <a name="parameters"></a>Parametry
 
-|Parametr|Popis|
-|---------------|-----------------|
-|*Typ*|Typ hodnoty předané v *Arg*, který může být jiný než typ *Arg*. Obvykle určeno argumentem šablony funkce předávání.|
-|*arg*|Argument, který chcete přetypovat.|
+*Typ*\
+Typ hodnoty předané v *Arg*, který může být jiný než typ *Arg*. Obvykle určeno argumentem šablony funkce předávání.
+
+*arg*\
+Argument, který chcete přetypovat.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -110,67 +123,79 @@ Vrátí odkaz rvalue na *Arg* Pokud hodnota předaná v *Arg* byla původně rva
 
 Je nutné zadat explicitní argument šablony pro volání `forward`.
 
-`forward` nepředává svůj argument. Místo toho podle podmíněně přetypuje svůj argument na odkaz rvalue, pokud byla původně rvalue nebo odkaz rvalue, `forward` umožňuje kompilátoru provést řešení přetížení se znalostí původního typu předaného argumentu. Viditelný typ argumentu pro funkci předání může být jiný než jeho původní typ, například když se používá jako argument pro funkci a je vázán na název parametru; r-hodnoty. s názvem umožňuje l-hodnotou, bez ohledu na to, zda daná hodnota skutečně existuje jako hodnota rvalue – `forward` obnoví deklarovanou rvalue argumentu.
+`forward` není přeposlat svého argumentu. Místo toho podle podmíněně přetypuje svůj argument na odkaz rvalue, pokud byla původně rvalue nebo odkaz rvalue, `forward` umožňuje kompilátoru provést řešení přetížení se znalostí původního typu předaného argumentu. Viditelný typ argumentu pro funkci předání může být jiný než jeho původní typ, například když se používá jako argument pro funkci a je vázán na název parametru; r-hodnoty. s názvem umožňuje l-hodnotou, s kterou hodnota skutečně existuje jako hodnota rvalue – `forward` obnoví deklarovanou rvalue argumentu.
 
-Obnovení deklarovanou rvalue původní hodnoty argumentu, aby bylo možné provést řešení přetížení se označuje jako *perfektní přesměrování*. Dokonalé předávání umožňuje funkci šablony přijmout argument některého typu odkazu a obnovit jeho vlastnost rvalue, když je nezbytná pro správné řešení přetížení. Pomocí dokonalého předávání můžete zachovat sémantiku přesunu pro hodnoty rvalue. Nebude tak nutné poskytovat přetížení pro funkce, které se liší pouze typem odkazu svých argumentů.
+Obnovení deklarovanou rvalue původní hodnoty argumentu do řešení přetížení se označuje jako *perfektní přesměrování*. Dokonalé předávání umožňuje funkci šablony přijmout argument některého typu odkazu a obnovit jeho vlastnost rvalue, když je nezbytná pro správné řešení přetížení. Pomocí dokonalého předávání můžete zachovat sémantiku přesunu pro hodnoty rvalue. Nebude tak nutné poskytovat přetížení pro funkce, které se liší pouze typem odkazu svých argumentů.
 
-## <a name="get"></a>  získat
+## <a name="from_chars"></a> from_chars
+
+```cpp
+from_chars_result from_chars(const char* first, const char* last, see below& value, int base = 10);
+
+from_chars_result from_chars(const char* first, const char* last, float& value, chars_format fmt = chars_format::general); 
+
+from_chars_result from_chars(const char* first, const char* last, double& value, chars_format fmt = chars_format::general); 
+
+from_chars_result from_chars(const char* first, const char* last, long double& value, chars_format fmt = chars_format::general);
+```
+
+## <a name="get"></a> získat
 
 Získá prvek z `pair` index pozice, nebo podle typu objektu.
 
 ```cpp
 // get reference to element at Index in pair Pr
 template <size_t Index, class T1, class T2>
-constexpr tuple_element_t<Index, pair<T1, T2>>&
-get(pair<T1, T2>& Pr) noexcept;
+    constexpr tuple_element_t<Index, pair<T1, T2>>&
+    get(pair<T1, T2>& Pr) noexcept;
 
 // get reference to element T1 in pair Pr
 template <class T1, class T2>
-constexpr T1& get(pair<T1, T2>& Pr) noexcept;
+    constexpr T1& get(pair<T1, T2>& Pr) noexcept;
 
 // get reference to element T2 in pair Pr
 template <class T2, class T1>
-constexpr T2& get(pair<T1, T2>& Pr) noexcept;
+    constexpr T2& get(pair<T1, T2>& Pr) noexcept;
 
 // get const reference to element at Index in pair Pr
 template <size_t Index, class T1, class T2>
-constexpr const tuple_element_t<Index, pair<T1, T2>>&
-get(const pair<T1, T2>& Pr) noexcept;
+    constexpr const tuple_element_t<Index, pair<T1, T2>>&
+    get(const pair<T1, T2>& Pr) noexcept;
 
 // get const reference to element T1 in pair Pr
 template <class T1, class T2>
-constexpr const T1& get(const pair<T1, T2>& Pr) noexcept;
+    constexpr const T1& get(const pair<T1, T2>& Pr) noexcept;
 
 // get const reference to element T2 in pair Pr
 template <class T2, class T1>
-constexpr const T2& get(const pair<T1, T2>& Pr) noexcept;
+    constexpr const T2& get(const pair<T1, T2>& Pr) noexcept;
 
 // get rvalue reference to element at Index in pair Pr
 template <size_t Index, class T1, class T2>
-constexpr tuple_element_t<Index, pair<T1, T2>>&&
-get(pair<T1, T2>&& Pr) noexcept;
+    constexpr tuple_element_t<Index, pair<T1, T2>>&&
+    get(pair<T1, T2>&& Pr) noexcept;
 
 // get rvalue reference to element T1 in pair Pr
 template <class T1, class T2>
-constexpr T1&& get(pair<T1, T2>&& Pr) noexcept;
+    constexpr T1&& get(pair<T1, T2>&& Pr) noexcept;
 
 // get rvalue reference to element T2 in pair Pr
 template <class T2, class T1>
-constexpr T2&& get(pair<T1, T2>&& Pr) noexcept;
+    constexpr T2&& get(pair<T1, T2>&& Pr) noexcept;
 ```
 
 ### <a name="parameters"></a>Parametry
 
-*Index*<br/>
-Index elementu určené založený na 0.
+*Index*\
+Index zvolené elementu založený na 0.
 
-*T1*<br/>
+*T1*\
 Typ první prvek dvojice.
 
-*T2*<br/>
+*T2.* \
 Typ elementu druhý pár.
 
-*pr*<br/>
+*žádost o přijetí změn*\
 Dvojice lze vybírat.
 
 ### <a name="remarks"></a>Poznámky
@@ -202,45 +227,71 @@ int main()
     MyPair c1(1, 0.27);
     cout << " " << get<int>(c1);
     cout << " " << get<double>(c1) << endl;
-
-    /*
-    Output:
-    9 3.14
-    1 0.27
-    */
-
 }
 ```
 
-## <a name="make_pair"></a>  make_pair
+```Output
+9 3.14
+1 0.27
+```
+
+## <a name="index_sequence"></a> index_sequence
+
+```cpp
+template<size_t... I>
+    using index_sequence = integer_sequence<size_t, I...>;
+```
+
+## <a name="index_sequence_for"></a> index_sequence_for
+
+```cpp
+template<class... T>
+    using index_sequence_for = make_index_sequence<sizeof...(T)>;
+```
+
+## <a name="make_index_sequence"></a> make_index_sequence
+
+```cpp
+template<size_t N>
+    using make_index_sequence = make_integer_sequence<size_t, N>;
+```
+
+## <a name="make_integer_sequence"></a> make_integer_sequence
+
+```cpp
+template<class T, T N>
+    using make_integer_sequence = integer_sequence<T, see below >;
+```
+
+## <a name="make_pair"></a> make_pair
 
 Funkce šablony, můžete použít k vytvoření objektů typu `pair`, kde typy komponenty je automaticky kliknuto, na základě typu dat, které jsou předány jako parametry.
 
 ```cpp
 template <class T, class U>
-pair<T, U> make_pair(T& Val1, U& Val2);
+    pair<T, U> make_pair(T& Val1, U& Val2);
 
 template <class T, class U>
-pair<T, U> make_pair(T& Val1, U&& Val2);
+    pair<T, U> make_pair(T& Val1, U&& Val2);
 
 template <class T, class U>
-pair<T, U> make_pair(T&& Val1, U& Val2);
+    pair<T, U> make_pair(T&& Val1, U& Val2);
 
 template <class T, class U>
-pair<T, U> make_pair(T&& Val1, U&& Val2);
+    pair<T, U> make_pair(T&& Val1, U&& Val2);
 ```
 
 ### <a name="parameters"></a>Parametry
 
-*Val1*<br/>
+*Val1*\
 Hodnota, která inicializuje první prvek `pair`.
 
-*Val2*<br/>
+*Val2*\
 Hodnota, která inicializuje druhý prvek `pair`.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vytvořený objekt dvojice: `pair` <  `T`, `U`> ( `Val1`, `Val2`).
+Vytvořený objekt dvojice: `pair` < `T`,`U`> (`Val1`, `Val2`).
 
 ### <a name="remarks"></a>Poznámky
 
@@ -254,7 +305,7 @@ Ve vráceném `pair` objektu, `T` je stanoven následujícím způsobem:
 
 Vrácený typ `U` je podobně určen na základě vstupního typu `U`.
 
-Jednou z výhod `make_pair` je, že typy ukládaných objektů jsou určeny automaticky kompilátorem a není nutné explicitně zadat. Nepoužívejte explicitní argumenty šablony, jako `make_pair<int, int>(1, 2)` při použití `make_pair` protože je zbytečně podrobný a přidá komplexní rvalue reference problémy, které mohou způsobit selhání kompilace. V tomto příkladu by správná syntaxe byla `make_pair(1, 2)`
+Jednou z výhod `make_pair` je, že typy ukládaných objektů jsou určeny automaticky kompilátorem a není potřeba explicitně zadat. Nepoužívejte explicitní argumenty šablony, jako `make_pair<int, int>(1, 2)` při použití `make_pair` protože je verbose a přidá komplexní rvalue reference problémy, které mohou způsobit selhání kompilace. V tomto příkladu by správná syntaxe byla `make_pair(1, 2)`
 
 `make_pair` Pomocná funkce také umožňuje předat dvě hodnoty funkci, která vyžaduje dvojici jako vstupní parametr.
 
@@ -262,21 +313,22 @@ Jednou z výhod `make_pair` je, že typy ukládaných objektů jsou určeny auto
 
 Příklad použití funkce pomocné rutiny `make_pair` deklaraci a inicializaci dvojice naleznete v tématu [pair – struktura](../standard-library/pair-structure.md).
 
-## <a name="move"></a>  Přesunutí
+## <a name="move"></a> Přesunutí
 
 Bezpodmínečně přetypuje svůj argument na odkaz hodnoty rvalue a značí, že ji lze přesunout, pokud je pro její typ přesunutí povoleno.
 
 ```cpp
 template <class Type>
-constexpr typename remove_reference<Type>::type&& move(Type&& Arg) noexcept;
+    constexpr typename remove_reference<Type>::type&& move(Type&& Arg) noexcept;
 ```
 
 ### <a name="parameters"></a>Parametry
 
-|Parametr|Popis|
-|---------------|-----------------|
-|*Typ*|Typ odvozený od typu argumentu předaného *Arg*společně s pravidly pro sbalení odkazu.|
-|*arg*|Argument, který chcete přetypovat. I když typ *Arg* jeví jako zadaný jako odkaz hodnoty rvalue, `move` také přijímá argumenty hodnoty lvalue, protože odkazy lvalue lze vázat na odkazy rvalue.|
+*Typ*\
+Typ odvozený od typu argumentu předaného *Arg*společně s pravidly pro sbalení odkazu.
+
+*arg*\
+Argument, který chcete přetypovat. I když typ *Arg* jeví jako zadaný jako odkaz hodnoty rvalue, `move` také přijímá argumenty hodnoty lvalue, protože odkazy lvalue lze vázat na odkazy rvalue.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -286,30 +338,56 @@ constexpr typename remove_reference<Type>::type&& move(Type&& Arg) noexcept;
 
 Argument šablony *typ* není určen k explicitnímu určení, ale k odvození od typu hodnoty předané v *Arg*. Typ *typ* je dále upraven podle pravidel sbalení odkazů.
 
-`move` nepřesune svůj argument. Místo toho podle bezpodmínečným přetypováním svého argumentu, který může být l-hodnota – na odkaz rvalue, povolí kompilátorovi následně přesunout, spíše než kopírování, hodnota předaná v *Arg* li její typ přesunutí povoleno. Pokud pro daný typ není povolen přesun, hodnota se zkopíruje.
+`move` čárka nepohybuje svého argumentu. Místo toho podle bezpodmínečným přetypováním svého argumentu, který může být l-hodnota – na odkaz rvalue, povolí kompilátorovi následně přesunout, spíše než kopírování, hodnota předaná v *Arg* li její typ přesunutí povoleno. Není-li její typ přesunutí povoleno, zkopíruje se místo toho.
 
-Pokud hodnota předaná v *Arg* l-hodnotou, tedy má název nebo adresu je možné provést – zneplatněna po provedení přesunutí. Neodkazují na hodnotu předanou v *Arg* podle názvu nebo adresy až po přesunutí neodkazujte.
+Pokud hodnota předaná v *Arg* l-hodnotou, tedy má název nebo adresu je možné provést – zneplatněna po provedení přesunutí. Není odkazovat na hodnotu předanou v *Arg* podle názvu nebo adresy až po přesunutí neodkazujte.
 
-## <a name="swap"></a>  Prohození
-
-Vymění prvky dvou [pair – struktura](../standard-library/pair-structure.md) objekty.
+## <a name="moveif"></a> move_if_noexcept
 
 ```cpp
+template <class T> constexpr conditional_t< !is_nothrow_move_constructible_v<T> && is_copy_constructible_v<T>, const T&, T&&> move_if_noexcept(T& x) noexcept;
+```
+
+## <a name="swap"></a> Prohození
+
+Vymění prvky dvou typů nebo [pair – struktura](../standard-library/pair-structure.md) objekty.
+
+```cpp
+template <class T>
+    void swap(T& left, T& right) noexcept(see below );
+template <class T, size_t N>
+    void swap(T (&left)[N], T (&right)[N]) noexcept(is_nothrow_swappable_v<T>);
 template <class T, class U>
-void swap(pair<T, U>& left, pair<T, U>& right);
+    void swap(pair<T, U>& left, pair<T, U>& right);
 ```
 
 ### <a name="parameters"></a>Parametry
 
-|Parametr|Popis|
-|---------------|-----------------|
-|*doleva*|Objekt typu `pair`.|
-|*doprava*|Objekt typu `pair`.|
+*doleva*\
+Objekt typu nebo typu `pair`.
+
+*doprava*\
+Objekt typu nebo typu `pair`.
 
 ### <a name="remarks"></a>Poznámky
 
-Jednou z výhod `swap` je, že typy ukládaných objektů jsou určeny automaticky kompilátorem a není nutné explicitně zadat. Nepoužívejte explicitní argumenty šablony, jako `swap<int, int>(1, 2)` při použití `swap` protože je zbytečně podrobný a přidá komplexní rvalue reference problémy, které mohou způsobit selhání kompilace.
+Jednou z výhod `swap` je, že typy ukládaných objektů jsou určeny automaticky kompilátorem a není potřeba explicitně zadat. Nepoužívejte explicitní argumenty šablony, jako `swap<int, int>(1, 2)` při použití `swap` protože je verbose a přidá komplexní rvalue reference problémy, které mohou způsobit selhání kompilace.
 
-## <a name="see-also"></a>Viz také:
+## <a name="to_chars"></a> to_chars
 
-[\<Nástroje >](../standard-library/utility.md)<br/>
+```cpp
+to_chars_result to_chars(char* first, char* last, see below value, int base = 10);
+to_chars_result to_chars(char* first, char* last, float value); 
+to_chars_result to_chars(char* first, char* last, double value); 
+to_chars_result to_chars(char* first, char* last, long double value);
+to_chars_result to_chars(char* first, char* last, float value, chars_format fmt); 
+to_chars_result to_chars(char* first, char* last, double value, chars_format fmt); 
+to_chars_result to_chars(char* first, char* last, long double value, chars_format fmt);
+to_chars_result to_chars(char* first, char* last, float value, chars_format fmt, int precision); 
+to_chars_result to_chars(char* first, char* last, double value, chars_format fmt, int precision); 
+to_chars_result to_chars(char* first, char* last, long double value, chars_format fmt, int precision);
+```
+
+### <a name="remarks"></a>Poznámky
+
+Převede hodnotu na řetězec znaků zadáním rozsahu `[first, last)`, kde `[first, last)` musí být platný rozsah.

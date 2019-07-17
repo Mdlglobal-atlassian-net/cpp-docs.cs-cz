@@ -16,21 +16,16 @@ helpviewer_keywords:
 - std::operator&lt; (deque)
 - std::operator&lt;= (deque)
 - std::operator== (deque)
-ms.openlocfilehash: a5e88d421df2746cf2ca0aab5be4c19953162559
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 868909ac4346a59cade3660f288a0f0e71bc4ed0
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62393997"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68245650"
 ---
 # <a name="ltdequegt-operators"></a>&lt;deque –&gt; operátory
 
-||||
-|-|-|-|
-|[operator!=](#op_neq)|[– Operátor&gt;](#op_gt)|[– Operátor&gt;=](#op_gt_eq)|
-|[– Operátor&lt;](#op_lt)|[– Operátor&lt;=](#op_lt_eq)|[operator==](#op_eq_eq)|
-
-## <a name="op_neq"></a>  Operator! =
+## <a name="op_neq"></a> Operator! =
 
 Testuje, zda je objekt deque na levé straně operátoru není roven objektu deque na pravé straně.
 
@@ -40,10 +35,10 @@ bool operator!=(const deque<Type, Allocator>& left, const deque<Type, Allocator>
 
 ### <a name="parameters"></a>Parametry
 
-*doleva*<br/>
+*doleva*\
 Objekt typu `deque`.
 
-*doprava*<br/>
+*doprava*\
 Objekt typu `deque`.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -75,12 +70,13 @@ int main( )
    else
       cout << "The deques are equal." << endl;
 }
-/* Output:
-The deques are not equal.
-*/
 ```
 
-## <a name="op_lt"></a>  – Operátor&lt;
+```Output
+The deques are not equal.
+```
+
+## <a name="op_lt"></a> – Operátor&lt;
 
 Testuje, zda je objekt deque na levé straně operátoru menší než objekt deque na pravé straně.
 
@@ -90,10 +86,10 @@ bool operator<(const deque<Type, Allocator>& left, const deque<Type, Allocator>&
 
 ### <a name="parameters"></a>Parametry
 
-*doleva*<br/>
+*doleva*\
 Objekt typu `deque`.
 
-*doprava*<br/>
+*doprava*\
 Objekt typu `deque`.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -129,12 +125,13 @@ int main( )
    else
       cout << "Deque c1 is not less than deque c2." << endl;
 }
-/* Output:
-Deque c1 is less than deque c2.
-*/
 ```
 
-## <a name="op_lt_eq"></a>  – Operátor&lt;=
+```Output
+Deque c1 is less than deque c2.
+```
+
+## <a name="op_lt_eq"></a> – Operátor&lt;=
 
 Testuje, zda je deque objekt na levé straně operátoru je menší než nebo roven objektu deque na pravé straně.
 
@@ -144,10 +141,10 @@ bool operator<=(const deque<Type, Allocator>& left, const deque<Type, Allocator>
 
 ### <a name="parameters"></a>Parametry
 
-*doleva*<br/>
+*doleva*\
 Objekt typu `deque`.
 
-*doprava*<br/>
+*doprava*\
 Objekt typu `deque`.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -183,12 +180,13 @@ int main( )
    else
       cout << "Deque c1 is greater than deque c2." << endl;
 }
-/* Output:
-Deque c1 is less than or equal to deque c2.
-*/
 ```
 
-## <a name="op_eq_eq"></a>  Operator ==
+```Output
+Deque c1 is less than or equal to deque c2.
+```
+
+## <a name="op_eq_eq"></a> Operator ==
 
 Testuje, zda objekt deque na levé straně operátoru roven objektu deque na pravé straně.
 
@@ -198,10 +196,10 @@ bool operator==(const deque<Type, Allocator>& left, const deque<Type, Allocator>
 
 ### <a name="parameters"></a>Parametry
 
-*doleva*<br/>
+*doleva*\
 Objekt typu `deque`.
 
-*doprava*<br/>
+*doprava*\
 Objekt typu `deque`.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -239,13 +237,14 @@ int main( )
    else
       cout << "The deques are not equal." << endl;
 }
-/* Output:
-The deques are equal.
-The deques are not equal.
-*/
 ```
 
-## <a name="op_gt"></a>  – Operátor&gt;
+```Output
+The deques are equal.
+The deques are not equal.
+```
+
+## <a name="op_gt"></a> – Operátor&gt;
 
 Testuje, zda je objekt deque na levé straně operátoru větší než deque objekt na pravé straně.
 
@@ -255,10 +254,10 @@ bool operator>(const deque<Type, Allocator>& left, const deque<Type, Allocator>&
 
 ### <a name="parameters"></a>Parametry
 
-*doleva*<br/>
+*doleva*\
 Objekt typu `deque`.
 
-*doprava*<br/>
+*doprava*\
 Objekt typu `deque`.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -295,12 +294,13 @@ int main( )
    else
       cout << "Deque c1 is not greater than deque c2." << endl;
 }
-/* Output:
-Deque c1 is greater than deque c2.
-*/
 ```
 
-## <a name="op_gt_eq"></a>  – Operátor&gt;=
+```Output
+Deque c1 is greater than deque c2.
+```
+
+## <a name="op_gt_eq"></a> – Operátor&gt;=
 
 Testuje, zda je objekt deque na levé straně operátoru větší než nebo rovna hodnotě deque objekt na pravé straně.
 
@@ -310,10 +310,10 @@ bool operator>=(const deque<Type, Allocator>& left, const deque<Type, Allocator>
 
 ### <a name="parameters"></a>Parametry
 
-*doleva*<br/>
+*doleva*\
 Objekt typu `deque`.
 
-*doprava*<br/>
+*doprava*\
 Objekt typu `deque`.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -350,11 +350,8 @@ int main( )
    else
       cout << "Deque c1 is less than deque c2." << endl;
 }
-/* Output:
-Deque c1 is greater than or equal to deque c2.
-*/
 ```
 
-## <a name="see-also"></a>Viz také:
-
-[\<deque>](../standard-library/deque.md)<br/>
+```Output
+Deque c1 is greater than or equal to deque c2.
+```

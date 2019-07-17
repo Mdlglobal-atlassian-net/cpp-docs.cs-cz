@@ -11,12 +11,12 @@ f1_keywords:
 - filesystem/std::filesystem::perms
 - filesystem/std::experimental::filesystem::perms
 ms.assetid: 0096c046-d101-464c-8259-b878a48280b0
-ms.openlocfilehash: 9c4efa145455240c4420a51c4a01662a30dc0761
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9bf5f0231fbc5b694c1f4ae507feb82b0d19d600
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62405128"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68240746"
 ---
 # <a name="ltfilesystemgt-enumerations"></a>&lt;systém souborů&gt; výčty
 
@@ -79,12 +79,12 @@ enum class directory_options {
 
 ### <a name="values"></a>Hodnoty
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |`none`|Výchozí chování: Ignorovat symbolické odkazy na adresáře. Oprávnění byla odepřena se o chybu.|
 |`follow_directory_symlink`|Považovat za symbolické odkazy k adresářům skutečné adresáře.|
 
-## <a name="file_type"></a>  file_type
+## <a name="file_type"></a>  file_type –
 
 Výčet pro typy souborů. Podporované hodnoty jsou standardní, adresář, not_found a neznámý.
 
@@ -107,7 +107,7 @@ enum class file_type {
 
 ### <a name="values"></a>Hodnoty
 
-|Název|Hodnota|Popis|
+|Name|Hodnota|Popis|
 |----------|-----------|-----------------|
 |`not_found`|-1|Představuje soubor, který neexistuje.|
 |`none`|0|Představuje soubor, který nemá žádné atributy typu. (Není podporováno.)|
@@ -119,6 +119,14 @@ enum class file_type {
 |`fifo`|6|Představuje soubor FIFO na systémech UNIX. (Není podporováno.)|
 |`socket`|7|Představuje soketu v systémech UNIX založené. (Není podporováno.)|
 |`unknown`|8|Představuje soubor nelze zjistit jejichž stav.|
+
+## <a name="perm_options"></a>  perm_options
+
+Obsahuje hodnoty `replace`, `add`, `remove`, a `nofollow`.
+
+```cpp
+enum class perm_options;
+```
 
 ## <a name="perms"></a>  oprávnění
 
@@ -156,4 +164,4 @@ enum class perms {// names for permissions
 ## <a name="see-also"></a>Viz také:
 
 [Odkaz na soubory hlaviček](../standard-library/cpp-standard-library-header-files.md)<br/>
-[\<filesystem>](../standard-library/filesystem.md)<br/>
+[\<FileSystem >](../standard-library/filesystem.md)<br/>

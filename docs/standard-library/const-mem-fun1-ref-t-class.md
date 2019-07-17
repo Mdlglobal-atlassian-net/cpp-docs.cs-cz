@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - const_mem_fun1_ref_t class
 ms.assetid: 8220d373-fa1c-44be-a21d-96d49b3ea6bb
-ms.openlocfilehash: 21d53178bf7ed80b5e0b170619e6221826393dab
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 59790b5791dc50d217053dc7a13856d436101020
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62212011"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68244543"
 ---
 # <a name="constmemfun1reft-class"></a>const_mem_fun1_ref_t – třída
 
@@ -21,8 +21,8 @@ Třída adaptéru umožňující **const** členskou funkci, která přijímá j
 
 ```cpp
 template <class Result, class Type, class Arg>
-class const_mem_fun1_ref_t
-: public binary_function<Type, Arg, Result>
+    class const_mem_fun1_ref_t
+        : public binary_function<Type, Arg, Result>
 {
     explicit const_mem_fun1_ref_t(Result (Type::* Pm)(Arg) const);
     Result operator()(const Type& left, Arg right) const;
@@ -31,13 +31,13 @@ class const_mem_fun1_ref_t
 
 ### <a name="parameters"></a>Parametry
 
-*Pm*<br/>
+*Odp.* \
 Ukazatel na členskou funkci třídy `Type` má být převeden na objekt funkce.
 
-*doleva*<br/>
+*doleva*\
 **Const** objekt, který *Pm* členská funkce je volána v.
 
-*doprava*<br/>
+*doprava*\
 Argument, který je právě přiřazen k *Pm*.
 
 ## <a name="return-value"></a>Návratová hodnota
@@ -46,19 +46,8 @@ Přizpůsobitelnou binární funkci.
 
 ## <a name="remarks"></a>Poznámky
 
-Třída šablony ukládá kopie *Pm*, která musí být ukazatel na členskou funkci třídy `Type`, v objektu privátní člen. Definuje jeho členskou funkci `operator()` jako vracející ( `left`.\* *PM*) ( `right`) **const**.
+Třída šablony ukládá kopie *Pm*, která musí být ukazatel na členskou funkci třídy `Type`, v objektu privátní člen. Definuje jeho členskou funkci `operator()` jako vracející (`left`.\* *PM*) (`right`) **const**.
 
 ## <a name="example"></a>Příklad
 
 Konstruktor třídy `const_mem_fun1_ref_t` se obvykle nepoužívá přímo; pomocnou funkci `mem_fun_ref` slouží k přizpůsobení členské funkce. Zobrazit [mem_fun_ref –](../standard-library/functional-functions.md#mem_fun_ref) příklady, jak používat adaptéry členské funkce.
-
-## <a name="requirements"></a>Požadavky
-
-**Záhlaví:** \<funkční >
-
-**Namespace:** std
-
-## <a name="see-also"></a>Viz také:
-
-[Bezpečný přístup z více vláken ve standardní knihovně C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
-[Standardní knihovna C++ – referenční dokumentace](../standard-library/cpp-standard-library-reference.md)<br/>

@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - tuple class
 ms.assetid: c38749be-ae4d-41f3-98ea-6aa3250de9a3
-ms.openlocfilehash: 7e85ad445743cc02ba078eb3c09342f69915c09c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: aca5cc90566fb1fa602b96568d4cda9dd5ab26b9
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62279049"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68241827"
 ---
 # <a name="tuple-class"></a>tuple – třída
 
@@ -22,7 +22,6 @@ Zabalí pevné délky sekvence elementů.
 
 ```
 class tuple {
-public:
    tuple();
    explicit tuple(P1, P2, ..., PN); // 0 < N
    tuple(const tuple&);
@@ -37,12 +36,12 @@ public:
       tuple& operator=(const tuple<U1, U2, ..., UN>&);
    template <class U1, class U2>
       tuple& operator=(const pair<U1, U2>&); // N == 2
-   };
+};
 ```
 
 ### <a name="parameters"></a>Parametry
 
-*TN*<br/>
+*TN*\
 Typ prvku n-tý řazené kolekce členů.
 
 ## <a name="remarks"></a>Poznámky
@@ -117,13 +116,7 @@ The tuples in the vector are
 ( 3, 0.033, three ).
 ```
 
-## <a name="requirements"></a>Požadavky
-
-**Záhlaví:** \<řazené kolekce členů >
-
-**Namespace:** std
-
-## <a name="op_eq"></a>  tuple::Operator =
+## <a name="op_eq"></a> operátor =
 
 Přiřadí `tuple` objektu.
 
@@ -144,10 +137,10 @@ template <class U1, class U2>
 
 ### <a name="parameters"></a>Parametry
 
-*ZRUŠENÍ*<br/>
+*ZRUŠENÍ*\
 Typ n-té zkopírovat prvek řazené kolekce členů.
 
-*doprava*<br/>
+*doprava*\
 Kopírování z řazené kolekce členů.
 
 ### <a name="remarks"></a>Poznámky
@@ -196,7 +189,7 @@ int main()
     std::cout << std::endl;
 
     return (0);
-    }
+}
 ```
 
 ```Output
@@ -205,7 +198,7 @@ int main()
 x 4
 ```
 
-## <a name="tuple_swap"></a>  tuple:swap
+## <a name="tuple_swap"></a> Prohození
 
 Vymění prvky dvou řazené kolekce členů.
 
@@ -216,16 +209,17 @@ template <class... Types>
 
 ### <a name="parameters"></a>Parametry
 
-|Parametr|Popis|
-|---------------|-----------------|
-|*doleva*|Řazené kolekce členů, jehož prvky mají být zaměněny řazené kolekce členů *správné*.|
-|*doprava*|Řazené kolekce členů, jehož prvky mají být zaměněny řazené kolekce členů *levé*.|
+*doleva*\
+Řazené kolekce členů, jehož prvky mají být zaměněny řazené kolekce členů *správné*.
+
+*doprava*\
+Řazené kolekce členů, jehož prvky mají být zaměněny řazené kolekce členů *levé*.
 
 ### <a name="remarks"></a>Poznámky
 
 Provede se příslušná funkce `left.swap(right)`.
 
-## <a name="tuple"></a>  tuple::tuple
+## <a name="tuple"></a> Řazené kolekce členů
 
 Vytvoří `tuple` objektu.
 
@@ -252,10 +246,10 @@ template <class U1, class U2>
 
 ### <a name="parameters"></a>Parametry
 
-*ZRUŠENÍ*<br/>
+*ZRUŠENÍ*\
 Typ n-té zkopírovat prvek řazené kolekce členů.
 
-*doprava*<br/>
+*doprava*\
 Kopírování z řazené kolekce členů.
 
 ### <a name="remarks"></a>Poznámky
@@ -338,8 +332,3 @@ x 4
 0 1 2 3
 4 5 6 7
 ```
-
-## <a name="see-also"></a>Viz také:
-
-[\<tuple>](../standard-library/tuple.md)<br/>
-[make_tuple](../standard-library/tuple-functions.md#make_tuple)<br/>

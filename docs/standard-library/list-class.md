@@ -98,12 +98,12 @@ helpviewer_keywords:
 - std::list [C++], swap
 - std::list [C++], unique
 ms.assetid: d3707f4a-10fd-444f-b856-f9ca2077c1cd
-ms.openlocfilehash: d990efb7d4c363b8d8e38f42f9edac7eea0a3882
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c38c6823f48d61cf616f7b91a96dfcc040d666ed
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62413213"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68246486"
 ---
 # <a name="list-class"></a>list – třída
 
@@ -118,10 +118,10 @@ class list
 
 ### <a name="parameters"></a>Parametry
 
-*Typ*<br/>
+*Typ*\
 Typ dat prvku, který bude uložen do seznamu.
 
-*Allocator –*<br/>
+*Allocator –* \
 Typ představující uložený objekt alokátoru, který zapouzdřuje informace o přidělování a navracení zpět paměti v seznamu. Tento argument je nepovinný a výchozí hodnota je **alokátoru**\<*typ*>.
 
 ## <a name="remarks"></a>Poznámky
@@ -134,15 +134,17 @@ Seznam realokace nastane, pokud členskou funkci musíte vložit nebo mazání p
 
 Zahrnout hlavičku standardní knihovny C++ standard \<seznamu > k definování [kontejneru](../standard-library/stl-containers.md) seznam šablon třídy a několik podpůrných šablon.
 
+## <a name="members"></a>Členové
+
 ### <a name="constructors"></a>Konstruktory
 
-|Konstruktor|Popis|
+|||
 |-|-|
 |[list](#list)|Sestaví seznam určité velikosti nebo s prvky určité hodnoty nebo s konkrétní `allocator` nebo jako kopii jiného seznamu.|
 
 ### <a name="typedefs"></a>Typedefs
 
-|Název typu|Popis|
+|||
 |-|-|
 |[allocator_type](#allocator_type)|Typ, který představuje `allocator` třídy pro objekt seznamu.|
 |[const_iterator](#const_iterator)|Typ, který poskytuje obousměrný iterátor, který může číst **const** prvek v seznamu.|
@@ -157,19 +159,19 @@ Zahrnout hlavičku standardní knihovny C++ standard \<seznamu > k definování 
 |[size_type](#size_type)|Typ, který vrátí počet prvků v seznamu.|
 |[value_type](#value_type)|Typ, který představuje datový typ uložený v seznamu.|
 
-### <a name="member-functions"></a>Členské funkce
+### <a name="functions"></a>Funkce
 
-|Členská funkce|Popis|
+|||
 |-|-|
 |[assign](#assign)|Odstraní prvky ze seznamu a zkopíruje novou sadu prvků do cílového seznamu.|
 |[Zpět](#back)|Vrátí odkaz na poslední prvek seznamu.|
 |[začít](#begin)|Vrátí iterátor adresující první prvek v seznamu.|
 |[cbegin](#cbegin)|Vrátí konstantní iterátor adresující první prvek v seznamu.|
 |[cend](#cend)|Vrátí konstantní iterátor adresující umístění následující po posledním prvku v seznamu.|
-|[clear](#clear)|Vymaže všechny prvky seznamu.|
+|[Vymazat](#clear)|Vymaže všechny prvky seznamu.|
 |[crbegin](#crbegin)|Vrátí konstantní iterátor adresující první prvek v obráceném seznamu.|
-|[crend](#crend)|Vrátí konstantní iterátor adresující umístění následující po posledním prvku v obráceném seznamu.|
-|[emplace](#emplace)|Vloží vytvořený prvek na místo do seznamu na zadané pozici.|
+|[crend –](#crend)|Vrátí konstantní iterátor adresující umístění následující po posledním prvku v obráceném seznamu.|
+|[emplace –](#emplace)|Vloží vytvořený prvek na místo do seznamu na zadané pozici.|
 |[emplace_back](#emplace_back)|Přidá prvek vytvořený v místě na konec seznamu.|
 |[emplace_front](#emplace_front)|Přidá prvek vytvořený v místě na začátek seznamu.|
 |[prázdný](#empty)|Testuje, zda je seznam prázdný.|
@@ -180,7 +182,7 @@ Zahrnout hlavičku standardní knihovny C++ standard \<seznamu > k definování 
 |[Vložit](#insert)|Vloží prvek nebo prvky, nebo rozsah prvků do seznamu na zadané pozici.|
 |[max_size](#max_size)|Vrátí maximální délku seznamu.|
 |[sloučení](#merge)|Odebere prvky ze seznamu argumentů, vloží do cílového seznamu a řadí nové, kombinované sadu elementů ve vzestupném pořadí nebo v jiných určeném pořadí.|
-|[pop_back](#pop_back)|Odstraní prvek na konec seznamu.|
+|[pop_back –](#pop_back)|Odstraní prvek na konec seznamu.|
 |[pop_front](#pop_front)|Odstraní prvek na začátku seznamu.|
 |[push_back](#push_back)|Přidá prvek na konec seznamu.|
 |[push_front](#push_front)|Přidá prvek na začátku seznamu.|
@@ -188,7 +190,7 @@ Zahrnout hlavičku standardní knihovny C++ standard \<seznamu > k definování 
 |[remove](#remove)|Odstraní prvky v seznamu, které odpovídají zadané hodnotě.|
 |[remove_if](#remove_if)|Odstraní prvky ze seznamu, pro kterou zadaný predikát uspokojen.|
 |[rend –](#rend)|Vrátí iterátor adresující umístění následující po posledním prvku v obráceném seznamu.|
-|[resize](#resize)|Určuje novou velikost seznamu.|
+|[Změna velikosti](#resize)|Určuje novou velikost seznamu.|
 |[reverzní](#reverse)|Obrátí pořadí, ve kterém se prvky objevují v seznamu.|
 |[Velikost](#size)|Vrátí počet prvků v seznamu.|
 |[Řazení](#sort)|Uspořádá prvky seznamu vzestupně nebo s ohledem na některé jiné pořadí vztah.|
@@ -198,15 +200,15 @@ Zahrnout hlavičku standardní knihovny C++ standard \<seznamu > k definování 
 
 ### <a name="operators"></a>Operátory
 
-|Operátor|Popis|
+|||
 |-|-|
-|[list::Operator =](#op_eq)|Nahradí prvky seznamu kopii jiného seznamu.|
+|[operátor =](#op_eq)|Nahradí prvky seznamu kopii jiného seznamu.|
 
 ## <a name="requirements"></a>Požadavky
 
 **Hlavička**: \<seznamu >
 
-## <a name="allocator_type"></a>  list::allocator_type
+## <a name="allocator_type"></a> allocator_type
 
 Typ, který představuje třídu alokátoru pro objekt seznamu.
 
@@ -222,7 +224,7 @@ typedef Allocator allocator_type;
 
 Podívejte se na příklad pro [get_allocator](#get_allocator).
 
-## <a name="assign"></a>  list::Assign
+## <a name="assign"></a> přiřazení
 
 Odstraní prvky ze seznamu a zkopíruje novou sadu prvků do cílového seznamu.
 
@@ -242,19 +244,19 @@ void assign(
 
 ### <a name="parameters"></a>Parametry
 
-*první*<br/>
+*první*\
 Pozice prvního prvku v rozsahu prvků, které se mají zkopírovat ze seznamu argumentů.
 
-*poslední*<br/>
+*poslední*\
 Pozice prvního prvku za rozsahem prvků, které se mají zkopírovat ze seznamu argumentů.
 
-*Počet*<br/>
+*Počet*\
 Počet kopií prvku vloženého do seznamu.
 
-*Val*<br/>
+*Val*\
 Hodnota prvku vloženého do seznamu.
 
-*IList*<br/>
+*IList*\
 Objekt initializer_list obsahující prvky, které mají být vloženy.
 
 ### <a name="remarks"></a>Poznámky
@@ -311,7 +313,7 @@ int main()
 c1 = 10 20 30c1 = 50 60c1 = 4 4 4 4 4 4 4c1 = 10 20 30 40
 ```
 
-## <a name="back"></a>  list::back
+## <a name="back"></a> Zpět
 
 Vrátí odkaz na poslední prvek seznamu.
 
@@ -361,7 +363,7 @@ The last integer of c1 is 11
 The next-to-last integer of c1 is 10
 ```
 
-## <a name="begin"></a>  list::begin
+## <a name="begin"></a> začít
 
 Vrátí iterátor adresující první prvek v seznamu.
 
@@ -414,7 +416,7 @@ The first element of c1 is 1
 The first element of c1 is now 20
 ```
 
-## <a name="cbegin"></a>  list::cbegin
+## <a name="cbegin"></a> cbegin
 
 Vrátí **const** iterátor adresující první prvek v rozsahu.
 
@@ -440,7 +442,7 @@ auto i2 = Container.cbegin();
 // i2 is Container<T>::const_iterator
 ```
 
-## <a name="cend"></a>  list::cend
+## <a name="cend"></a> cend
 
 Vrátí `const` iterátor adresující umístění hned za posledním prvkem v rozsahu.
 
@@ -468,7 +470,7 @@ auto i2 = Container.cend();
 
 Hodnota vrácená `cend` by neměla být dereferencována.
 
-## <a name="clear"></a>  list::clear
+## <a name="clear"></a> Vymazat
 
 Vymaže všechny prvky seznamu.
 
@@ -503,7 +505,7 @@ The size of the list is initially 3
 The size of list after clearing is 0
 ```
 
-## <a name="const_iterator"></a>  list::const_iterator
+## <a name="const_iterator"></a> const_iterator
 
 Typ, který poskytuje obousměrný iterátor, který může číst **const** prvek v seznamu.
 
@@ -519,7 +521,7 @@ Typ `const_iterator` nelze použít ke změně hodnoty prvku.
 
 Podívejte se na příklad pro [zpět](#back).
 
-## <a name="const_pointer"></a>  list::const_pointer
+## <a name="const_pointer"></a> const_pointer
 
 Poskytuje ukazatel **const** prvek v seznamu.
 
@@ -533,7 +535,7 @@ Typ `const_pointer` nelze použít ke změně hodnoty prvku.
 
 Ve většině případů [iterátoru](#iterator) by měla sloužit pro přístup k prvkům v seznamu objektů.
 
-## <a name="const_reference"></a>  list::const_reference
+## <a name="const_reference"></a> const_reference
 
 Typ, který poskytuje odkaz na **const** prvek uložený v seznamu pro čtení a provádění **const** operace.
 
@@ -577,7 +579,7 @@ The first element is 10
 The second element is 20
 ```
 
-## <a name="const_reverse_iterator"></a>  list::const_reverse_iterator
+## <a name="const_reverse_iterator"></a> const_reverse_iterator
 
 Typ, který poskytuje obousměrný iterátor, který může přečíst jakýkoli **const** prvek v seznamu.
 
@@ -593,7 +595,7 @@ Typ `const_reverse_iterator` hodnotu prvku nelze změnit a slouží k iteraci v 
 
 Podívejte se na příklad pro [rbegin –](#rbegin).
 
-## <a name="crbegin"></a>  list::crbegin
+## <a name="crbegin"></a> crbegin –
 
 Vrátí konstantní iterátor adresující první prvek v obráceném seznamu.
 
@@ -637,7 +639,7 @@ int main( )
 The last element in the list is 30.
 ```
 
-## <a name="crend"></a>  list::crend
+## <a name="crend"></a> crend –
 
 Vrátí konstantní iterátor adresující umístění následující po posledním prvku v obráceném seznamu.
 
@@ -688,7 +690,7 @@ int main( )
 The first element in the list is: 10
 ```
 
-## <a name="difference_type"></a>  list::difference_type
+## <a name="difference_type"></a> difference_type
 
 Celočíselný typ se znaménkem, který slouží k vyjádření počtu prvků v seznamu v rozsahu mezi prvky, na které odkazují iterátory.
 
@@ -745,7 +747,7 @@ The number '20' is in c1 collection 2 times.
 The number '30' is in c1 collection 3 times.
 ```
 
-## <a name="emplace"></a>  list::emplace
+## <a name="emplace"></a> emplace –
 
 Vloží vytvořený prvek na místo do seznamu na zadané pozici.
 
@@ -755,10 +757,11 @@ void emplace(iterator Where, Type&& val);
 
 ### <a name="parameters"></a>Parametry
 
-|Parametr|Popis|
-|-|-|
-|*kde*|Pozice v cílovém [seznamu](../standard-library/list-class.md) vloženy první prvek.|
-|*Val*|Prvek přidán na konec objektu `list`.|
+*kde*\
+Pozice v cílovém [seznamu](../standard-library/list-class.md) vloženy první prvek.
+
+*Val*\
+Prvek přidán na konec objektu `list`.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -788,7 +791,7 @@ int main( )
 Moved first element: a
 ```
 
-## <a name="emplace_back"></a>  list::emplace_back
+## <a name="emplace_back"></a> emplace_back
 
 Přidá prvek vytvořený v místě na konec seznamu.
 
@@ -798,9 +801,8 @@ void emplace_back(Type&& val);
 
 ### <a name="parameters"></a>Parametry
 
-|Parametr|Popis|
-|-|-|
-|*Val*|Prvek přidán na konec objektu [seznamu](../standard-library/list-class.md).|
+*Val*\
+Prvek přidán na konec objektu [seznamu](../standard-library/list-class.md).
 
 ### <a name="remarks"></a>Poznámky
 
@@ -830,7 +832,7 @@ int main( )
 Moved first element: a
 ```
 
-## <a name="emplace_front"></a>  list::emplace_front
+## <a name="emplace_front"></a> emplace_front –
 
 Přidá prvek vytvořený v místě na začátek seznamu.
 
@@ -840,9 +842,8 @@ void emplace_front(Type&& val);
 
 ### <a name="parameters"></a>Parametry
 
-|Parametr|Popis|
-|-|-|
-|*Val*|Element přidá na začátek [seznamu](../standard-library/list-class.md).|
+*Val*\
+Element přidá na začátek [seznamu](../standard-library/list-class.md).
 
 ### <a name="remarks"></a>Poznámky
 
@@ -872,7 +873,7 @@ int main( )
 Moved first element: a
 ```
 
-## <a name="empty"></a>  list::Empty
+## <a name="empty"></a> prázdný
 
 Testuje, zda je seznam prázdný.
 
@@ -909,7 +910,7 @@ int main( )
 The list is not empty.
 ```
 
-## <a name="end"></a>  list::end
+## <a name="end"></a> ukončení
 
 Vrátí iterátor adresující umístění následující po posledním prvku v seznamu.
 
@@ -969,7 +970,7 @@ The new next-to-last integer of c1 is 400
 The list is now: 10 400 30
 ```
 
-## <a name="erase"></a>  list::Erase
+## <a name="erase"></a> vymazání
 
 Odebere prvek nebo rozsah prvků v seznamu od zadané pozice.
 
@@ -980,13 +981,13 @@ iterator erase(iterator first, iterator last);
 
 ### <a name="parameters"></a>Parametry
 
-*kde*<br/>
+*kde*\
 Pozice prvku, který chcete odebrat ze seznamu.
 
-*první*<br/>
+*první*\
 Pozice prvního prvku odebrán ze seznamu.
 
-*last*<br/>
+*poslední*\
 Pozice bezprostředně za posledním prvkem odebrán ze seznamu.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -1044,7 +1045,7 @@ After erasing the first element, the list becomes: 20 30 40 50
 After erasing all elements but the first, the list becomes:  20
 ```
 
-## <a name="front"></a>  list::front
+## <a name="front"></a> Přední
 
 Vrátí odkaz na první prvek v seznamu.
 
@@ -1091,7 +1092,7 @@ The first integer of c1 is 10
 The first integer of c1 is 11
 ```
 
-## <a name="get_allocator"></a>  list::get_allocator
+## <a name="get_allocator"></a> get_allocator
 
 Vrátí kopii přidělování objektu používanou k vytvoření seznamu.
 
@@ -1131,7 +1132,7 @@ int main( )
 }
 ```
 
-## <a name="insert"></a>  list::Insert
+## <a name="insert"></a> Vložit
 
 Vloží prvek nebo prvky, nebo rozsah prvků do seznamu na zadané pozici.
 
@@ -1148,13 +1149,20 @@ void insert(iterator Where, InputIterator First, InputIterator Last);
 
 ### <a name="parameters"></a>Parametry
 
-|Parametr|Popis|
-|-|-|
-|*kde*|Pozice v cílovém seznamu vloženy první prvek.|
-|*Val*|Hodnota prvku vloženého do seznamu.|
-|*Počet*|Počet prvků vloženého do seznamu.|
-|*první*|Pozice prvního prvku v rozsahu prvků v seznamu argumentů, které se mají zkopírovat.|
-|*poslední*|Pozice prvního prvku mimo rozsah prvků v seznamu argumentů, které se mají zkopírovat.|
+*kde*\
+Pozice v cílovém seznamu vloženy první prvek.
+
+*Val*\
+Hodnota prvku vloženého do seznamu.
+
+*Počet*\
+Počet prvků vloženého do seznamu.
+
+*první*\
+Pozice prvního prvku v rozsahu prvků v seznamu argumentů, které se mají zkopírovat.
+
+*poslední*\
+Pozice prvního prvku mimo rozsah prvků v seznamu argumentů, které se mají zkopírovat.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -1230,7 +1238,7 @@ int main()
 }
 ```
 
-## <a name="iterator"></a>  list::iterator
+## <a name="iterator"></a> iterátor
 
 Typ, který poskytuje obousměrný iterátor, který může číst nebo upravovat libovolný prvek v seznamu.
 
@@ -1246,7 +1254,7 @@ Typ `iterator` lze použít ke změně hodnoty prvku.
 
 Podívejte se na příklad pro [začít](#begin).
 
-## <a name="list"></a>  list::list
+## <a name="list"></a> Seznam
 
 Sestaví seznam určité velikosti nebo s prvky určité hodnoty nebo se zvláštní alokátory nebo jako kopii celé nebo části některého jiného seznamu.
 
@@ -1270,15 +1278,26 @@ list(InputIterator First, InputIterator Last, const Allocator& Al);
 
 ### <a name="parameters"></a>Parametry
 
-|Parametr|Popis|
-|-|-|
-|*Al*|Třída alokátoru, která se má použít s tímto objektem.|
-|*Počet*|Počet prvků v sestaveném seznamu.|
-|*Val*|Hodnota prvků v seznamu.|
-|*doprava*|Seznam, jehož vyrobený seznam je kopií.|
-|*první*|Pozice prvního prvku v rozsahu prvků, které se mají zkopírovat.|
-|*poslední*|Pozice prvního prvku mimo rozsah prvků, které se mají zkopírovat.|
-|*IList*|Objekt initializer_list obsahující prvky, které mají být zkopírovány.|
+*Al*\
+Třída alokátoru, která se má použít s tímto objektem.
+
+*Počet*\
+Počet prvků v sestaveném seznamu.
+
+*Val*\
+Hodnota prvků v seznamu.
+
+*doprava*\
+Seznam, jehož vyrobený seznam je kopií.
+
+*první*\
+Pozice prvního prvku v rozsahu prvků, které se mají zkopírovat.
+
+*poslední*\
+Pozice prvního prvku mimo rozsah prvků, které se mají zkopírovat.
+
+*IList*\
+Objekt initializer_list obsahující prvky, které mají být zkopírovány.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -1393,7 +1412,7 @@ int main()
 c1 = 0 0 0c2 = 2 2 2 2 2c3 = 1 1 1c4 = 2 2 2 2 2c5 = 2 2c6 = 2 2 2c7 = 2 2 2c8 = 1 2 3 4
 ```
 
-## <a name="max_size"></a>  list::max_size
+## <a name="max_size"></a> max_size
 
 Vrátí maximální délku seznamu.
 
@@ -1424,7 +1443,7 @@ int main( )
 }
 ```
 
-## <a name="merge"></a>  list::merge
+## <a name="merge"></a> sloučení
 
 Odebere prvky ze seznamu argumentů, vloží do cílového seznamu a řadí nové, kombinované sadu elementů ve vzestupném pořadí nebo v jiných určeném pořadí.
 
@@ -1437,10 +1456,10 @@ void merge(list<Type, Allocator>& right, Traits comp);
 
 ### <a name="parameters"></a>Parametry
 
-*doprava*<br/>
+*doprava*\
 Seznam argumentů ke sloučení se do cílového seznamu.
 
-*comp*<br/>
+*Kompozice*\
 Operátor porovnání slouží k seřazení prvků do cílového seznamu.
 
 ### <a name="remarks"></a>Poznámky
@@ -1508,7 +1527,7 @@ c3 = 5 1
 After merging c3 with c2 according to the '>' comparison relation: c2 = 6 5 4 3 2 1
 ```
 
-## <a name="op_eq"></a>  list::Operator =
+## <a name="op_eq"></a> operátor =
 
 Nahradí prvky seznamu kopii jiného seznamu.
 
@@ -1519,9 +1538,8 @@ list& operator=(list&& right);
 
 ### <a name="parameters"></a>Parametry
 
-|Parametr|Popis|
-|-|-|
-|*doprava*|[Seznamu](../standard-library/list-class.md) kopírovaná do `list`.|
+*doprava*\
+[Seznamu](../standard-library/list-class.md) kopírovaná do `list`.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -1568,7 +1586,7 @@ int main( )
 }
 ```
 
-## <a name="pointer"></a>  list::Pointer
+## <a name="pointer"></a> Ukazatel
 
 Poskytuje ukazatel na prvek v seznamu.
 
@@ -1582,7 +1600,7 @@ Typ `pointer` lze použít ke změně hodnoty prvku.
 
 Ve většině případů [iterátoru](#iterator) by měla sloužit pro přístup k prvkům v seznamu objektů.
 
-## <a name="pop_back"></a>  list::pop_back
+## <a name="pop_back"></a> pop_back –
 
 Odstraní prvek na konec seznamu.
 
@@ -1624,7 +1642,7 @@ The last element is: 2
 After deleting the element at the end of the list, the last element is: 1
 ```
 
-## <a name="pop_front"></a>  list::pop_front
+## <a name="pop_front"></a> pop_front –
 
 Odstraní prvek na začátku seznamu.
 
@@ -1666,7 +1684,7 @@ The second element is: 2
 After deleting the element at the beginning of the list, the first element is: 2
 ```
 
-## <a name="push_back"></a>  list::push_back
+## <a name="push_back"></a> push_back
 
 Přidá prvek na konec seznamu.
 
@@ -1676,9 +1694,8 @@ void push_back(void push_back(Type&& val);
 
 ### <a name="parameters"></a>Parametry
 
-|Parametr|Popis|
-|-|-|
-|*Val*|Prvek přidán na konec seznamu.|
+*Val*\
+Prvek přidán na konec seznamu.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -1721,7 +1738,7 @@ New last element: 2
 Moved first element: a
 ```
 
-## <a name="push_front"></a>  list::push_front
+## <a name="push_front"></a> push_front
 
 Přidá prvek na začátku seznamu.
 
@@ -1732,9 +1749,8 @@ void push_front(Type&& val);
 
 ### <a name="parameters"></a>Parametry
 
-|Parametr|Popis|
-|-|-|
-|*Val*|Element přidá na začátek seznamu.|
+*Val*\
+Element přidá na začátek seznamu.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -1777,7 +1793,7 @@ New first element: 2
 Moved first element: a
 ```
 
-## <a name="rbegin"></a>  list::rbegin
+## <a name="rbegin"></a> rbegin –
 
 Vrátí iterátor adresující první prvek v obráceném seznamu.
 
@@ -1848,7 +1864,7 @@ The reversed list is: 30 20 10
 The last element in the list is now 40.
 ```
 
-## <a name="reference"></a>  list::Reference
+## <a name="reference"></a> Referenční dokumentace
 
 Typ, který poskytuje odkaz na prvek uložený v seznamu.
 
@@ -1884,7 +1900,7 @@ The first element is 10
 The second element is 20
 ```
 
-## <a name="remove"></a>  list::Remove
+## <a name="remove"></a> odebrat
 
 Odstraní prvky v seznamu, které odpovídají zadané hodnotě.
 
@@ -1894,7 +1910,7 @@ void remove(const Type& val);
 
 ### <a name="parameters"></a>Parametry
 
-*Val*<br/>
+*Val*\
 Hodnota, která pokud je uložena prvkem, způsobí odebrání tohoto prvku ze seznamu.
 
 ### <a name="remarks"></a>Poznámky
@@ -1941,7 +1957,7 @@ The initial list is c1 = 5 100 5 200 5 300
 After removing elements with value 5, the list becomes c2 = 100 200 300
 ```
 
-## <a name="remove_if"></a>  list::remove_if
+## <a name="remove_if"></a> remove_if –
 
 Odstraní prvky ze seznamu, pro kterou zadaný predikát uspokojen.
 
@@ -1952,7 +1968,7 @@ void remove_if(Predicate pred)
 
 ### <a name="parameters"></a>Parametry
 
-*Před*<br/>
+*Před*\
 Unární predikát, který pokud uspokojen prvkem, má za následek odstranění tohoto prvku ze seznamu.
 
 ### <a name="example"></a>Příklad
@@ -2006,7 +2022,7 @@ The initial list is c1 = 3 4 5 6 7 8
 After removing the odd elements, the list becomes c2 = 4 6 8
 ```
 
-## <a name="rend"></a>  list::rend
+## <a name="rend"></a> rend –
 
 Vrátí iterátor adresující umístění následující po posledním prvku v obráceném seznamu.
 
@@ -2092,7 +2108,7 @@ The reversed list is: 30 20 10
 The modified reversed list is: 30 20 40
 ```
 
-## <a name="resize"></a>  list::Resize
+## <a name="resize"></a> Změna velikosti
 
 Určuje novou velikost seznamu.
 
@@ -2103,10 +2119,10 @@ void resize(size_type _Newsize, Type val);
 
 ### <a name="parameters"></a>Parametry
 
-*_Newsize*<br/>
+*_Newsize*\
 Nová velikost seznamu.
 
-*Val*<br/>
+*Val*\
 Hodnota nových prvků, které mají být přidány do seznamu, pokud je nová velikost větší, původní velikost. Pokud je hodnota vynechána, nové prvky jsou přiřazeny výchozí hodnotě pro třídu.
 
 ### <a name="remarks"></a>Poznámky
@@ -2159,7 +2175,7 @@ The reduced size of c1 is: 2
 The value of the last element is now 20
 ```
 
-## <a name="reverse"></a>  list::Reverse
+## <a name="reverse"></a> reverzní
 
 Obrátí pořadí, ve kterém se prvky objevují v seznamu.
 
@@ -2203,7 +2219,7 @@ c1 = 10 20 30
 Reversed c1 = 30 20 10
 ```
 
-## <a name="reverse_iterator"></a>  list::reverse_iterator
+## <a name="reverse_iterator"></a> reverse_iterator –
 
 Typ, který poskytuje obousměrný iterátor, který může číst nebo upravovat prvek v obráceném seznamu.
 
@@ -2219,7 +2235,7 @@ Typ `reverse_iterator` se používá k iteraci v rámci seznamu pozpátku.
 
 Podívejte se na příklad pro [rbegin –](#rbegin).
 
-## <a name="size"></a>  list::size
+## <a name="size"></a> Velikost
 
 Vrátí počet prvků v seznamu.
 
@@ -2260,7 +2276,7 @@ List length is 1.
 List length is now 2.
 ```
 
-## <a name="size_type"></a>  list::size_type
+## <a name="size_type"></a> size_type
 
 Typ, který vrátí počet prvků v seznamu.
 
@@ -2272,7 +2288,7 @@ typedef typename Allocator::size_type size_type;
 
 Podívejte se na příklad pro [velikost](#size).
 
-## <a name="sort"></a>  list::sort
+## <a name="sort"></a> Řazení
 
 Uspořádá prvky seznamu vzestupně nebo s ohledem na některé jiné řazení zadané uživatelem.
 
@@ -2280,12 +2296,12 @@ Uspořádá prvky seznamu vzestupně nebo s ohledem na některé jiné řazení 
 void sort();
 
 template <class Traits>
-void sort(Traits comp);
+    void sort(Traits comp);
 ```
 
 ### <a name="parameters"></a>Parametry
 
-*comp*<br/>
+*Kompozice*\
 Operátor porovnání slouží k seřazení po sobě jdoucí prvky.
 
 ### <a name="remarks"></a>Poznámky
@@ -2337,7 +2353,7 @@ After sorting c1 = 10 20 30
 After sorting with 'greater than' operation, c1 = 30 20 10
 ```
 
-## <a name="splice"></a>  list::splice
+## <a name="splice"></a> splice
 
 Odstraní prvky ze seznamu zdrojů a vloží je do cílového seznamu.
 
@@ -2357,19 +2373,19 @@ void splice(const_iterator Where, list<Type, Allocator>&& Source, const_iterator
 
 ### <a name="parameters"></a>Parametry
 
-*kde*<br/>
+*kde*\
 Pozice v seznamu cíl před, které se má vložit.
 
-*Zdroj*<br/>
+*Zdroj*\
 Zdroj seznamu, který má být vložen do cílového seznamu.
 
-*ITER*<br/>
+*ITER*\
 Element, který má být vložen ze zdrojového seznamu.
 
-*první*<br/>
+*první*\
 První prvek v rozsahu, který chcete vložit ze zdrojového seznamu.
 
-*poslední*<br/>
+*poslední*\
 První pozici za posledním prvkem v rozsahu, který chcete vložit ze zdrojového seznamu.
 
 ### <a name="remarks"></a>Poznámky
@@ -2460,7 +2476,7 @@ int main()
 Beginning state of lists:c1 = 2 elements: (10) (11)c2 = 3 elements: (20) (21) (22)c3 = 2 elements: (30) (31)c4 = 4 elements: (40) (41) (42) (43)After splicing c1 into c2:c1 = 0 elements:c2 = 5 elements: (20) (10) (11) (21) (22)After splicing the first element of c3 into c2:c3 = 1 elements: (31)c2 = 6 elements: (20) (10) (11) (30) (21) (22)After splicing a range of c4 into c2:c4 = 2 elements: (40) (43)c2 = 8 elements: (20) (10) (11) (30) (41) (42) (21) (22)
 ```
 
-## <a name="swap"></a>  list::swap
+## <a name="swap"></a> Prohození
 
 Vymění prvky dvou seznamů.
 
@@ -2471,10 +2487,10 @@ friend void swap(list<Type, Allocator>& left, list<Type, Allocator>& right)
 
 ### <a name="parameters"></a>Parametry
 
-*doprava*<br/>
+*doprava*\
 Seznam poskytující prvky pro záměnu nebo seznam, jehož prvky mají vyměnit s těmi na seznamu *levé*.
 
-*doleva*<br/>
+*doleva*\
 Seznam, jehož prvky mají vyměnit s těmi na seznamu *správné*.
 
 ### <a name="example"></a>Příklad
@@ -2525,7 +2541,7 @@ After swapping with c2, list c1 is: 10 20
 After swapping with c3, list c1 is: 100
 ```
 
-## <a name="unique"></a>  list::Unique
+## <a name="unique"></a> Jedinečný
 
 Odebere sousedících duplicitních prvků nebo sousedící prvky, které splňují některé binárním predikátem ze seznamu.
 
@@ -2538,7 +2554,7 @@ void unique(BinaryPredicate pred);
 
 ### <a name="parameters"></a>Parametry
 
-*Před*<br/>
+*Před*\
 Binární predikát, který používá k porovnání po sobě jdoucí prvky.
 
 ### <a name="remarks"></a>Poznámky
@@ -2598,7 +2614,7 @@ After removing successive duplicate elements, c2 = -10 10 20 -10
 After removing successive unequal elements, c3 = -10 -10
 ```
 
-## <a name="value_type"></a>  list::value_type
+## <a name="value_type"></a> value_type
 
 Typ, který představuje datový typ uložený v seznamu.
 
@@ -2630,9 +2646,3 @@ int main( )
 ```Output
 44
 ```
-
-## <a name="see-also"></a>Viz také:
-
-[\<list>](../standard-library/list.md)<br/>
-[Bezpečný přístup z více vláken ve standardní knihovně C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
-[Standardní knihovna C++ – referenční dokumentace](../standard-library/cpp-standard-library-reference.md)<br/>

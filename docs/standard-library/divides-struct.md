@@ -7,12 +7,12 @@ helpviewer_keywords:
 - divides struct
 - divides class
 ms.assetid: b9cf8e9c-6981-43a6-a6a3-8f761987dd7a
-ms.openlocfilehash: 9632227619d0cad337a1cb026a20c9af0ec9d2a7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6c7297fa7c31470591b473ab5eadcde54e8c3b34
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62413811"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68244151"
 ---
 # <a name="divides-struct"></a>divides – struktura
 
@@ -39,12 +39,13 @@ struct divides<void>
 
 ### <a name="parameters"></a>Parametry
 
-*Typ*, *T*, *U* typ, který podporuje `operator/` , která přebírá operandů zadaný nebo odvozené typy.
+*Typ*, *T*, *U*\
+Typ, který podporuje `operator/` , která přebírá operandů zadaný nebo odvozené typy.
 
-*doleva*<br/>
+*doleva*\
 Levý operand operace dělení. Nespecializovaná šablony přebírá argument typu odkazu l-hodnoty *typ*. Specializovaná šablona perfektní přesměrování l-hodnoty a argumenty odkazu rvalue odvodit typ *T*.
 
-*doprava*<br/>
+*doprava*\
 Pravý operand operace dělení. Nespecializovaná šablony přebírá argument typu odkazu l-hodnoty *typ*. Specializovaná šablona perfektní přesměrování l-hodnoty a argumenty odkazu rvalue odvodit typ *U*.
 
 ## <a name="return-value"></a>Návratová hodnota
@@ -99,21 +100,10 @@ int main( )
       cout << *Iter3 << " ";
    cout << ")" << endl;
 }
+```
 
-/* Output:
+```Output
 The vector v1 = ( 0 7 14 21 28 35 )
 The vector v2 = ( 2 4 6 8 10 12 )
 The element-wise quotients are: ( 0 1.75 2.33333 2.625 2.8 2.91667 )
-*/
 ```
-
-## <a name="requirements"></a>Požadavky
-
-**Záhlaví:** \<funkční >
-
-**Namespace:** std
-
-## <a name="see-also"></a>Viz také:
-
-[Bezpečný přístup z více vláken ve standardní knihovně C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
-[Standardní knihovna C++ – referenční dokumentace](../standard-library/cpp-standard-library-reference.md)<br/>

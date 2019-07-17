@@ -16,21 +16,16 @@ helpviewer_keywords:
 - std::operatoroperator&gt=; (forward_list)
 - std::operatoroperator&lt; (forward_list)
 - std::operatoroperator&lt;= (forward_list)
-ms.openlocfilehash: 4126b81f61bd37a7a12e0621c323ec832c5b2ab7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 64a49273cafd72158f176ee34ec271557ebee097
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62159428"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68240665"
 ---
 # <a name="ltforwardlistgt-operators"></a>&lt;forward_list –&gt; operátory
 
-||||
-|-|-|-|
-|[operator!=](#op_neq)|[– Operátor&gt;](#op_gt)|[– Operátor&gt;=](#op_gt_eq)|
-|[– Operátor&lt;](#op_lt)|[– Operátor&lt;=](#op_lt_eq)|[operator==](#op_eq_eq)|
-
-## <a name="op_eq_eq"></a>  Operator ==
+## <a name="op_eq_eq"></a> Operator ==
 
 Testuje, zda objekt dopředu seznamu na levé straně operátoru roven objektu dopředné seznamu na pravé straně.
 
@@ -42,16 +37,17 @@ bool operator==(
 
 ### <a name="parameters"></a>Parametry
 
-|Parametr|Popis|
-|---------------|-----------------|
-|*doleva*|Objekt typu `forward_list`.|
-|*doprava*|Objekt typu `forward_list`.|
+*doleva*\
+Objekt typu `forward_list`.
+
+*doprava*\
+Objekt typu `forward_list`.
 
 ### <a name="remarks"></a>Poznámky
 
 Tato funkce šablony přetížení `operator==` k porovnání dvou objektů třídy šablony `forward_list`. Funkce vrátí `distance(left.begin(), end()) == distance(right.begin(),right.end()) && equal(left. begin(),left. end(),right.begin())`.
 
-## <a name="op_neq"></a>  Operator! =
+## <a name="op_neq"></a> Operator! =
 
 Testuje, zda je objekt dopředu seznamu na levé straně operátoru není roven objektu dopředné seznamu na pravé straně.
 
@@ -63,10 +59,11 @@ bool operator!=(
 
 ### <a name="parameters"></a>Parametry
 
-|Parametr|Popis|
-|---------------|-----------------|
-|*doleva*|Objekt typu `forward_list`.|
-|*doprava*|Objekt typu `forward_list`.|
+*doleva*\
+Objekt typu `forward_list`.
+
+*doprava*\
+Objekt typu `forward_list`.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -76,7 +73,7 @@ bool operator!=(
 
 Tato šablona funkce vrátí `!(left == right)`.
 
-## <a name="op_lt"></a>  – Operátor&lt;
+## <a name="op_lt"></a> – Operátor&lt;
 
 Testuje, zda objekt dopředu seznamu na levé straně operátoru menší než objekt dopředu seznamu na pravé straně.
 
@@ -88,10 +85,11 @@ bool operator<(
 
 ### <a name="parameters"></a>Parametry
 
-|Parametr|Popis|
-|---------------|-----------------|
-|*doleva*|Objekt typu `forward_list`.|
-|*doprava*|Objekt typu `forward_list`.|
+*doleva*\
+Objekt typu `forward_list`.
+
+*doprava*\
+Objekt typu `forward_list`.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -101,7 +99,7 @@ bool operator<(
 
 Tato funkce šablony přetížení `operator<` k porovnání dvou objektů třídy šablony `forward_list`. Funkce vrátí `lexicographical_compare(lhs. begin(), lhs. end(), rhs.begin(), rhs.end())`.
 
-## <a name="op_lt_eq"></a>  – Operátor&lt;=
+## <a name="op_lt_eq"></a> – Operátor&lt;=
 
 Testuje, zda je objekt seznamu vpřed na levé straně operátoru je menší než nebo roven objektu dopředné seznamu na pravé straně.
 
@@ -113,10 +111,11 @@ bool operator<=(
 
 ### <a name="parameters"></a>Parametry
 
-|Parametr|Popis|
-|---------------|-----------------|
-|*doleva*|Objekt typu `forward_list`.|
-|*doprava*|Objekt typu `forward_list`.|
+*doleva*\
+Objekt typu `forward_list`.
+
+*doprava*\
+Objekt typu `forward_list`.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -126,7 +125,7 @@ bool operator<=(
 
 Tato šablona funkce vrátí `!(right < left)`.
 
-## <a name="op_gt"></a>  – Operátor&gt;
+## <a name="op_gt"></a> – Operátor&gt;
 
 Testuje, zda objekt dopředu seznamu na levé straně operátoru větší než objekt dopředu seznamu na pravé straně.
 
@@ -138,10 +137,11 @@ bool operator>(
 
 ### <a name="parameters"></a>Parametry
 
-|Parametr|Popis|
-|---------------|-----------------|
-|*doleva*|Objekt typu `forward_list`.|
-|*doprava*|Objekt typu `forward_list`.|
+*doleva*\
+Objekt typu `forward_list`.
+
+*doprava*\
+Objekt typu `forward_list`.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -151,7 +151,7 @@ bool operator>(
 
 Tato šablona funkce vrátí `right < left`.
 
-## <a name="op_gt_eq"></a>  – Operátor&gt;=
+## <a name="op_gt_eq"></a> – Operátor&gt;=
 
 Testuje, zda je objekt dopředu seznamu na levé straně operátoru větší než nebo roven objektu dopředné seznamu na pravé straně.
 
@@ -163,10 +163,11 @@ bool operator>=(
 
 ### <a name="parameters"></a>Parametry
 
-|Parametr|Popis|
-|---------------|-----------------|
-|*doleva*|Objekt typu `forward_list`.|
-|*doprava*|Objekt typu `forward_list`.|
+*doleva*\
+Objekt typu `forward_list`.
+
+*doprava*\
+Objekt typu `forward_list`.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -175,7 +176,3 @@ bool operator>=(
 ### <a name="remarks"></a>Poznámky
 
 Šablona funkce vrátí `!(left < right)`.
-
-## <a name="see-also"></a>Viz také:
-
-[<forward_list>](../standard-library/forward-list.md)<br/>

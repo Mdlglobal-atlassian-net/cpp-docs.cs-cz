@@ -16,21 +16,14 @@ helpviewer_keywords:
 - std::operator&lt; (map)
 - std::operator&lt;= (map)
 - std::operator== (map)
-ms.openlocfilehash: b6d2ac108652e33fdd76abaac9b982840d4fce7f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e05aca75f527e1bc78912ab6b4b5a9de6dcd54c5
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62413018"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68246425"
 ---
 # <a name="ltmapgt-operators"></a>&lt;Mapa&gt; operátory
-
-||||
-|-|-|-|
-|[operator!=](#op_neq)|[– Operátor&gt;](#op_gt)|[– Operátor&gt;=](#op_gt_eq)|
-|[– Operátor&lt;](#op_lt)|[– Operátor&lt;=](#op_lt_eq)|[operator==](#op_eq_eq)|
-|[Operator! = (multimap)](#op_neq_multimap)|[operátor&gt; (multimap)](#op_gt_multimap)|[operátor&gt;= (multimap)](#op_gt_eq_multimap)|
-|[operátor&lt; (multimap)](#op_lt_multimap)|[operátor&lt;= (multimap)](#op_lt_eq_multimap)|[operator== (multimap)](#op_eq_eq_multimap)|
 
 ## <a name="op_neq"></a>  Operator! =
 
@@ -44,10 +37,10 @@ bool operator!=(
 
 ### <a name="parameters"></a>Parametry
 
-*doleva*<br/>
+*doleva*\
 Objekt typu `map`.
 
-*doprava*<br/>
+*doprava*\
 Objekt typu `map`.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -90,13 +83,14 @@ int main( )
    else
       cout << "The maps m1 and m3 are equal." << endl;
 }
-/* Output:
-The maps m1 and m2 are not equal.
-The maps m1 and m3 are equal.
-*/
 ```
 
-## <a name="op_lt"></a>  – Operátor&lt;
+```Output
+The maps m1 and m2 are not equal.
+The maps m1 and m3 are equal.
+```
+
+## <a name="op_lt"></a> – Operátor&lt;
 
 Testuje, zda je objekt map na levé straně operátoru menší než objekt map na pravé straně.
 
@@ -108,10 +102,10 @@ bool operator<(
 
 ### <a name="parameters"></a>Parametry
 
-*doleva*<br/>
+*doleva*\
 Objekt typu `map`.
 
-*doprava*<br/>
+*doprava*\
 Objekt typu `map`.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -154,13 +148,14 @@ int main( )
    else
       cout << "The map m1 is not less than the map m3." << endl;
 }
-/* Output:
-The map m1 is less than the map m2.
-The map m1 is not less than the map m3.
-*/
 ```
 
-## <a name="op_lt_eq"></a>  – Operátor&lt;=
+```Output
+The map m1 is less than the map m2.
+The map m1 is not less than the map m3.
+```
+
+## <a name="op_lt_eq"></a> – Operátor&lt;=
 
 Testuje, zda na mapě objekt na levé straně operátoru je menší než nebo roven objektu map na pravé straně.
 
@@ -172,10 +167,10 @@ bool operator<=(
 
 ### <a name="parameters"></a>Parametry
 
-*doleva*<br/>
+*doleva*\
 Objekt typu `map`.
 
-*doprava*<br/>
+*doprava*\
 Objekt typu `map`.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -220,14 +215,15 @@ int main( )
    else
       cout << "The map m1 is greater than the map m4." << endl;
 }
-/* Output:
+```
+
+```Output
 The map m1 is less than or equal to the map m2.
 The map m1 is greater than the map m3.
 The map m1 is less than or equal to the map m4.
-*/
 ```
 
-## <a name="op_eq_eq"></a>  Operator ==
+## <a name="op_eq_eq"></a> Operator ==
 
 Testuje, zda je objekt map na levé straně operátoru roven objektu map na pravé straně.
 
@@ -239,10 +235,10 @@ bool operator==(
 
 ### <a name="parameters"></a>Parametry
 
-*doleva*<br/>
+*doleva*\
 Objekt typu `map`.
 
-*doprava*<br/>
+*doprava*\
 Objekt typu `map`.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -285,13 +281,14 @@ int main( )
    else
       cout << "The maps m1 and m3 are not equal." << endl;
 }
-/* Output:
-The maps m1 and m2 are not equal.
-The maps m1 and m3 are equal.
-*/
 ```
 
-## <a name="op_gt"></a>  – Operátor&gt;
+```Output
+The maps m1 and m2 are not equal.
+The maps m1 and m3 are equal.
+```
+
+## <a name="op_gt"></a> – Operátor&gt;
 
 Testuje, zda je objekt map na levé straně operátoru větší než objekt map na pravé straně.
 
@@ -303,10 +300,10 @@ bool operator>(
 
 ### <a name="parameters"></a>Parametry
 
-*doleva*<br/>
+*doleva*\
 Objekt typu `map`.
 
-*doprava*<br/>
+*doprava*\
 Objekt typu `map`.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -367,10 +364,10 @@ bool operator>=(
 
 ### <a name="parameters"></a>Parametry
 
-*doleva*<br/>
+*doleva*\
 Objekt typu `map`.
 
-*doprava*<br/>
+*doprava*\
 Objekt typu `map`.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -415,14 +412,15 @@ int main( )
    else
       cout << "The map m1 is less than the map m4." << endl;
 }
-/* Output:
+```
+
+```Output
 The map m1 is less than the map m2.
 Map m1 is greater than or equal to map m3.
 Map m1 is greater than or equal to map m4.
-*/
 ```
 
-## <a name="op_neq_multimap"></a>  Operator! = (multimap)
+## <a name="op_neq_multimap"></a> Operator! = (multimap)
 
 Testuje, zda je objektem multimap na levé straně operátoru není roven objektu multimap na pravé straně.
 
@@ -434,10 +432,10 @@ bool operator!=(
 
 ### <a name="parameters"></a>Parametry
 
-*doleva*<br/>
+*doleva*\
 Objekt typu `multimap`.
 
-*doprava*<br/>
+*doprava*\
 Objekt typu `multimap`.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -480,13 +478,14 @@ int main( )
    else
       cout << "The multimaps m1 and m3 are equal." << endl;
 }
-/* Output:
-The multimaps m1 and m2 are not equal.
-The multimaps m1 and m3 are equal.
-*/
 ```
 
-## <a name="op_lt_multimap"></a>  – Operátor&lt;
+```Output
+The multimaps m1 and m2 are not equal.
+The multimaps m1 and m3 are equal.
+```
+
+## <a name="op_lt_multimap"></a> – Operátor&lt;
 
 Testuje, zda je multimap objekt na levé straně operátoru menší než objektem multimap na pravé straně.
 
@@ -498,10 +497,10 @@ bool operator<(
 
 ### <a name="parameters"></a>Parametry
 
-*doleva*<br/>
+*doleva*\
 Objekt typu `multimap`.
 
-*doprava*<br/>
+*doprava*\
 Objekt typu `multimap`.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -544,13 +543,18 @@ int main( )
    else
       cout << "The multimap m1 is not less than the multimap m3." << endl;
 }
-/* Output:
-The multimap m1 is less than the multimap m2.
-The multimap m1 is not less than the multimap m3.
-*/
 ```
 
+```Output
+The multimap m1 is less than the multimap m2.
+The multimap m1 is not less than the multimap m3.
+```
+
+<<<<<<< HEAD
+## <a name="eq_multimap"></a> – Operátor&lt;=
+=======
 ## <a name="op_lt_eq_multimap"></a>  – Operátor&lt;=
+>>>>>>> 009c7ce384664f2a62ffb0bc61d6586b585ed38a
 
 Testuje, zda je objekt multimap na levé straně operátoru je menší než nebo roven objektu multimap na pravé straně.
 
@@ -562,10 +566,10 @@ bool operator<=(
 
 ### <a name="parameters"></a>Parametry
 
-*doleva*<br/>
+*doleva*\
 Objekt typu `multimap`.
 
-*doprava*<br/>
+*doprava*\
 Objekt typu `multimap`.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -610,14 +614,15 @@ int main( )
    else
       cout << "m1 is greater than m4" << endl;
 }
-/* Output:
+```
+
+```Output
 m1 is less than or equal to m2
 m1 is greater than m3
 m1 is less than or equal to m4
-*/
 ```
 
-## <a name="op_eq_eq_multimap"></a>  Operator ==
+## <a name="op_eq_eq_multimap"></a> Operator ==
 
 Testuje, zda je objektem multimap na levé straně operátoru roven objektu multimap na pravé straně.
 
@@ -629,10 +634,10 @@ bool operator==(
 
 ### <a name="parameters"></a>Parametry
 
-*doleva*<br/>
+*doleva*\
 Objekt typu `multimap`.
 
-*doprava*<br/>
+*doprava*\
 Objekt typu `multimap`.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -675,13 +680,14 @@ int main( )
    else
       cout << "m1 and m3 are not equal" << endl;
 }
-/* Output:
-m1 and m2 are not equal
-m1 and m3 are equal
-*/
 ```
 
-## <a name="op_gt_multimap"></a>  – Operátor&gt;
+```Output
+m1 and m2 are not equal
+m1 and m3 are equal
+```
+
+## <a name="op_gt_multimap"></a> – Operátor&gt;
 
 Testuje, zda je objektem multimap na levé straně operátoru větší než objektem multimap na pravé straně.
 
@@ -693,10 +699,10 @@ bool operator>(
 
 ### <a name="parameters"></a>Parametry
 
-*doleva*<br/>
+*doleva*\
 Objekt typu `multimap`.
 
-*doprava*<br/>
+*doprava*\
 Objekt typu `multimap`.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -739,13 +745,14 @@ int main( )
    else
       cout << "The multimap m1 is not greater than the multimap m3." << endl;
 }
-/* Output:
-Multimap m1 is not greater than multimap m2.
-The multimap m1 is greater than the multimap m3.
-*/
 ```
 
-## <a name="op_gt_eq_multimap"></a>  – Operátor&gt;=
+```Output
+Multimap m1 is not greater than multimap m2.
+The multimap m1 is greater than the multimap m3.
+```
+
+## <a name="op_gt_eq_multimap"></a> – Operátor&gt;=
 
 Testuje, zda je objektem multimap na levé straně operátoru větší než nebo rovna hodnotě objektem multimap na pravé straně.
 
@@ -757,10 +764,10 @@ bool operator>=(
 
 ### <a name="parameters"></a>Parametry
 
-*doleva*<br/>
+*doleva*\
 Objekt typu `multimap`.
 
-*doprava*<br/>
+*doprava*\
 Objekt typu `multimap`.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -805,13 +812,10 @@ int main( )
    else
       cout << "The multimap m1 is less than the multimap m4." << endl;
 }
-/* Output:
+```
+
+```Output
 The multimap m1 is less than the multimap m2.
 The multimap m1 is greater than or equal to the multimap m3.
 The multimap m1 is greater than or equal to the multimap m4.
-*/
 ```
-
-## <a name="see-also"></a>Viz také:
-
-[\<map>](../standard-library/map.md)<br/>

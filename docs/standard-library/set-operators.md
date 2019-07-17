@@ -16,23 +16,16 @@ helpviewer_keywords:
 - std::operator&lt; (set)
 - std::operator&lt;= (set)
 - std::operator== (set)
-ms.openlocfilehash: 16308623a845fdbf804f4e72f2159bc2a2dbc76b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4618030cf81f79a085e16052c8b9c547201e3577
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62412589"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68246391"
 ---
 # <a name="ltsetgt-operators"></a>&lt;Nastavte&gt; operátory
 
-||||
-|-|-|-|
-|[Operator! = (set)](#op_neq)|[operátor&gt; (set)](#op_gt)|[operátor&gt;= (set)](#op_gt_eq)|
-|[operátor&lt; (set)](#op_lt)|[operátor&lt;= (set)](#op_lt_eq)|[Operator == (set)](#op_eq_eq)|
-|[Operator! = (multiset)](#op_neq_multiset)|[operátor&gt; (multiset)](#op_gt_multiset)|[operátor&gt;= (multiset)](#op_gt_eq_multiset)|
-|[operátor&lt; (multiset)](#op_lt_multiset)|[operátor&lt;= (multiset)](#op_lt_eq_multiset)|[operator== (multiset)](#op_eq_eq_multiset)|
-
-## <a name="op_neq"></a>  Operator! = (set)
+## <a name="op_neq"></a> Operator! = (set)
 
 Testuje, zda je objekt set na levé straně operátoru není roven objektu set na pravé straně.
 
@@ -42,10 +35,10 @@ bool operator!=(const set <Key, Traits, Allocator>& left, const set <Key, Traits
 
 ### <a name="parameters"></a>Parametry
 
-*doleva*<br/>
+*doleva*\
 Objekt typu `set`.
 
-*doprava*<br/>
+*doprava*\
 Objekt typu `set`.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -93,7 +86,7 @@ The sets s1 and s3 are equal.
 */
 ```
 
-## <a name="op_lt"></a>  operátor&lt; (set)
+## <a name="op_lt"></a> operátor&lt; (set)
 
 Testuje, zda je objekt set na levé straně operátoru menší než objekt set na pravé straně.
 
@@ -103,10 +96,10 @@ bool operator<(const set <Key, Traits, Allocator>& left, const set <Key, Traits,
 
 ### <a name="parameters"></a>Parametry
 
-*doleva*<br/>
+*doleva*\
 Objekt typu `set`.
 
-*doprava*<br/>
+*doprava*\
 Objekt typu `set`.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -154,7 +147,7 @@ The set s1 is not less than the set s3.
 */
 ```
 
-## <a name="op_lt_eq"></a>  operátor&lt;= (set)
+## <a name="op_lt_eq"></a> operátor&lt;= (set)
 
 Testuje, zda je sada objekt na levé straně operátoru je menší než nebo roven objektu set na pravé straně.
 
@@ -164,10 +157,10 @@ bool operator!<=(const set <Key, Traits, Allocator>& left, const set <Key, Trait
 
 ### <a name="parameters"></a>Parametry
 
-*doleva*<br/>
+*doleva*\
 Objekt typu `set`.
 
-*doprava*<br/>
+*doprava*\
 Objekt typu `set`.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -215,14 +208,15 @@ int main( )
    else
       cout << "The set s1 is greater than the set s4." << endl;
 }
-/* Output:
+```
+
+```Output
 Set s1 is less than or equal to the set s2.
 The set s1 is greater than the set s3.
 Set s1 is less than or equal to the set s4.
-*/
 ```
 
-## <a name="op_eq_eq"></a>  Operator == (set)
+## <a name="op_eq_eq"></a> Operator == (set)
 
 Testuje, zda je objekt set na levé straně operátoru roven objektu set na pravé straně.
 
@@ -232,10 +226,10 @@ bool operator!==(const set <Key, Traits, Allocator>& left, const set <Key, Trait
 
 ### <a name="parameters"></a>Parametry
 
-*doleva*<br/>
+*doleva*\
 Objekt typu `set`.
 
-*doprava*<br/>
+*doprava*\
 Objekt typu `set`.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -277,13 +271,14 @@ int main( )
    else
       cout << "The sets s1 and s3 are not equal." << endl;
 }
-/* Output:
-The sets s1 and s2 are not equal.
-The sets s1 and s3 are equal.
-*/
 ```
 
-## <a name="op_gt"></a>  operátor&gt; (set)
+```Output
+The sets s1 and s2 are not equal.
+The sets s1 and s3 are equal.
+```
+
+## <a name="op_gt"></a> operátor&gt; (set)
 
 Testuje, zda je objekt set na levé straně operátoru větší než objekt set na pravé straně.
 
@@ -293,10 +288,10 @@ bool operator>(const set <Key, Traits, Allocator>& left, const set <Key, Traits,
 
 ### <a name="parameters"></a>Parametry
 
-*doleva*<br/>
+*doleva*\
 Objekt typu `set`.
 
-*doprava*<br/>
+*doprava*\
 Objekt typu `set`.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -344,7 +339,7 @@ The set s1 is greater than the set s3.
 */
 ```
 
-## <a name="op_gt_eq"></a>  operátor&gt;= (set)
+## <a name="op_gt_eq"></a> operátor&gt;= (set)
 
 Testuje, zda je objekt set na levé straně operátoru větší než nebo roven objektu set na pravé straně.
 
@@ -354,10 +349,10 @@ bool operator!>=(const set <Key, Traits, Allocator>& left, const set <Key, Trait
 
 ### <a name="parameters"></a>Parametry
 
-*doleva*<br/>
+*doleva*\
 Objekt typu `set`.
 
-*doprava*<br/>
+*doprava*\
 Objekt typu `set`.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -405,14 +400,15 @@ int main( )
    else
       cout << "The set s1 is less than the set s4." << endl;
 }
-/* Output:
+```
+
+```Output
 The set s1 is less than the set s2.
 Set s1 is greater than or equal to set s3.
 Set s1 is greater than or equal to set s4.
-*/
 ```
 
-## <a name="op_neq_multiset"></a>  Operator! = (multiset)
+## <a name="op_neq_multiset"></a> Operator! = (multiset)
 
 Testuje, zda je objekt multiset – na levé straně operátoru není roven multiset – objekt na pravé straně.
 
@@ -422,10 +418,10 @@ bool operator!=(const multiset <Key, Traits, Allocator>& left, const multiset <K
 
 ### <a name="parameters"></a>Parametry
 
-*doleva*<br/>
+*doleva*\
 Objekt typu `multiset`.
 
-*doprava*<br/>
+*doprava*\
 Objekt typu `multiset`.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -467,13 +463,14 @@ int main( )
    else
       cout << "The multisets s1 and s3 are equal." << endl;
 }
-/* Output:
-The multisets s1 and s2 are not equal.
-The multisets s1 and s3 are equal.
-*/
 ```
 
-## <a name="op_lt_multiset"></a>  operátor&lt; (multiset)
+```Output
+The multisets s1 and s2 are not equal.
+The multisets s1 and s3 are equal.
+```
+
+## <a name="op_lt_multiset"></a> operátor&lt; (multiset)
 
 Testuje, zda je objekt multiset – na levé straně operátoru menší než multiset – objekt na pravé straně.
 
@@ -483,10 +480,10 @@ bool operator<(const multiset <Key, Traits, Allocator>& left, const multiset <Ke
 
 ### <a name="parameters"></a>Parametry
 
-*doleva*<br/>
+*doleva*\
 Objekt typu `multiset`.
 
-*doprava*<br/>
+*doprava*\
 Objekt typu `multiset`.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -532,13 +529,14 @@ int main( )
       cout << "The multiset s1 is not less than "
            << "the multiset s3." << endl;
 }
-/* Output:
-The multiset s1 is less than the multiset s2.
-The multiset s1 is not less than the multiset s3.
-*/
 ```
 
-## <a name="op_lt_eq_multiset"></a>  operátor&lt;= (multiset)
+```Output
+The multiset s1 is less than the multiset s2.
+The multiset s1 is not less than the multiset s3.
+```
+
+## <a name="op_lt_eq_multiset"></a> operátor&lt;= (multiset)
 
 Testuje, zda je třída multiset objekt na levé straně operátoru je menší než nebo rovna hodnotě multiset – objekt na pravé straně.
 
@@ -548,10 +546,10 @@ bool operator!<=(const multiset <Key, Traits, Allocator>& left, const multiset <
 
 ### <a name="parameters"></a>Parametry
 
-*doleva*<br/>
+*doleva*\
 Objekt typu `multiset`.
 
-*doprava*<br/>
+*doprava*\
 Objekt typu `multiset`.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -605,14 +603,15 @@ int main( )
       cout << "The multiset s1 is greater than "
            << "the multiset s4." << endl;
 }
-/* Output:
+```
+
+```Output
 The multiset s1 is less than or equal to the multiset s2.
 The multiset s1 is greater than the multiset s3.
 The multiset s1 is less than or equal to the multiset s4.
-*/
 ```
 
-## <a name="op_eq_eq_multiset"></a>  Operator == (multiset)
+## <a name="op_eq_eq_multiset"></a> Operator == (multiset)
 
 Testuje, zda je objekt multiset – na levé straně operátoru rovná multiset – objekt na pravé straně.
 
@@ -622,10 +621,10 @@ bool operator!==(const multiset <Key, Traits, Allocator>& left, const multiset <
 
 ### <a name="parameters"></a>Parametry
 
-*doleva*<br/>
+*doleva*\
 Objekt typu `multiset`.
 
-*doprava*<br/>
+*doprava*\
 Objekt typu `multiset`.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -667,13 +666,14 @@ int main( )
    else
       cout << "The multisets s1 and s3 are not equal." << endl;
 }
-/* Output:
-The multisets s1 and s2 are not equal.
-The multisets s1 and s3 are equal.
-*/
 ```
 
-## <a name="op_gt_multiset"></a>  operátor&gt; (multiset)
+```Output
+The multisets s1 and s2 are not equal.
+The multisets s1 and s3 are equal.
+```
+
+## <a name="op_gt_multiset"></a> operátor&gt; (multiset)
 
 Testuje, zda je objekt multiset – na levé straně operátoru větší než multiset – objekt na pravé straně.
 
@@ -683,10 +683,10 @@ bool operator>(const multiset <Key, Traits, Allocator>& left, const multiset <Ke
 
 ### <a name="parameters"></a>Parametry
 
-*doleva*<br/>
+*doleva*\
 Objekt typu `multiset`.
 
-*doprava*<br/>
+*doprava*\
 Objekt typu `multiset`.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -732,13 +732,14 @@ int main( )
       cout << "The multiset s1 is not greater than "
            << "the multiset s3." << endl;
 }
-/* Output:
-The multiset s1 is not greater than the multiset s2.
-The multiset s1 is greater than the multiset s3.
-*/
 ```
 
-## <a name="op_gt_eq_multiset"></a>  operátor&gt;= (multiset)
+```Output
+The multiset s1 is not greater than the multiset s2.
+The multiset s1 is greater than the multiset s3.
+```
+
+## <a name="op_gt_eq_multiset"></a> operátor&gt;= (multiset)
 
 Testuje, zda je objekt multiset – na levé straně operátoru větší než nebo rovna hodnotě multiset – objekt na pravé straně.
 
@@ -748,10 +749,10 @@ bool operator!>=(const multiset <Key, Traits, Allocator>& left, const multiset <
 
 ### <a name="parameters"></a>Parametry
 
-*doleva*<br/>
+*doleva*\
 Objekt typu `multiset`.
 
-*doprava*<br/>
+*doprava*\
 Objekt typu `multiset`.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -805,13 +806,10 @@ int main( )
       cout << "The multiset s1 is less than "
            << "the multiset s4." << endl;
 }
-/* Output:
+```
+
+```Output
 The multiset s1 is less than the multiset s2.
 The multiset s1 is greater than or equal to the multiset s3.
 The multiset s1 is greater than or equal to the multiset s4.
-*/
 ```
-
-## <a name="see-also"></a>Viz také:
-
-[\<set>](../standard-library/set.md)<br/>

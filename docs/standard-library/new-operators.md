@@ -1,41 +1,38 @@
 ---
-title: '&lt;nové&gt; operátory'
+title: '&lt;nové&gt; operátory a výčty'
 ms.date: 11/04/2016
 f1_keywords:
 - new/std::operator delete
 - new/std::operator new
 ms.assetid: d1af4b56-9a95-4c65-ab01-bf43e982c7bd
-ms.openlocfilehash: 87f7b6cfd6a06ab03b27ebe6aa4dd41b0b900673
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a3fd5b825fe1eaf3a07d9d001f03b9d0c64ffa31
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62223685"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68243683"
 ---
-# <a name="ltnewgt-operators"></a>&lt;nové&gt; operátory
+# <a name="ltnewgt-operators-and-enums"></a>&lt;nové&gt; operátory a výčty
 
-||||
-|-|-|-|
-|[delete – operátor](#op_delete)|[delete[] – operátor](#op_delete_arr)|[new – operátor](#op_new)|
-|[new [] – operátor](#op_new_arr)|
+## <a name="op_align_val_t"></a> align_val_t výčtu
 
-## <a name="op_delete"></a>  delete – operátor
+```cpp
+enum class align_val_t : size_t {};
+```
 
-Funkci volanou třídou výraz delete se zrušit přidělení úložiště pro jednotlivé objekty.
+## <a name="op_delete"></a> delete – operátor
+
+Funkci volanou třídou výraz delete pro zrušení přidělení úložiště pro jednotlivé objekty.
 
 ```cpp
 void operator delete(void* ptr) throw();
-
-void operator delete(void *,
-    void*) throw();
-
-void operator delete(void* ptr,
-    const std::nothrow_t&) throw();
+void operator delete(void *, void*) throw();
+void operator delete(void* ptr, const std::nothrow_t&) throw();
 ```
 
 ### <a name="parameters"></a>Parametry
 
-*ptr*<br/>
+*PTR*\
 Ukazatel, jehož hodnota má být vykreslen odstraněním neplatný.
 
 ### <a name="remarks"></a>Poznámky
@@ -46,29 +43,25 @@ Výchozí chování pro hodnotu null z *ptr* se neprovede žádnou akci. Jakáko
 
 Druhá funkce je volána výrazem odstranit umístění odpovídající výraz new formuláře **nové**( **std::size_t**). To nemá žádný účinek.
 
-Třetí funkce je volána výrazem odstranit umístění odpovídající výraz new formuláře **nové**( **std::size_t**, **conststd::nothrow_t &**). Program lze definovat funkci s Tento podpis funkce, která nahradí výchozí verze definované ve standardní knihovně jazyka C++. Požadované chování je tak, aby přijímal hodnotu `ptr` , který je null nebo který byl vrácen dřívějším volání `operator new`( **size_t**). Výchozí chování je vyhodnotit **odstranit**(`ptr`).
+Třetí funkce je volána výrazem odstranit umístění odpovídající výraz new formuláře **nové**( **std::size_t**, **conststd::nothrow_t &** ). Program lze definovat funkci s Tento podpis funkce, která nahradí výchozí verze definované ve standardní knihovně jazyka C++. Požadované chování je tak, aby přijímal hodnotu `ptr` , který je null nebo který byl vrácen dřívějším volání `operator new`( **size_t**). Výchozí chování je vyhodnotit **odstranit**(`ptr`).
 
 ### <a name="example"></a>Příklad
 
 Naleznete v tématu [operátor new](../standard-library/new-operators.md#op_new) Příklad používající **operátor delete**.
 
-## <a name="op_delete_arr"></a>  Operator delete]
+## <a name="op_delete_arr"></a> Operator delete]
 
 Funkci volanou třídou výraz delete se zrušit přidělení úložiště pro pole objektů.
 
 ```cpp
 void operator delete[](void* ptr) throw();
-
-void operator delete[](void *,
-    void*) throw();
-
-void operator delete[](void* ptr,
-    const std::nothrow_t&) throw();
+void operator delete[](void *, void*) throw();
+void operator delete[](void* ptr, const std::nothrow_t&) throw();
 ```
 
 ### <a name="parameters"></a>Parametry
 
-*ptr*<br/>
+*PTR*\
 Ukazatel, jehož hodnota má být vykreslen odstraněním neplatný.
 
 ### <a name="remarks"></a>Poznámky
@@ -77,32 +70,28 @@ První funkce je volána `delete[]` výraz k vykreslení hodnoty *ptr* neplatný
 
 Druhá funkce je volána umístění `delete[]` výraz odpovídá `new[]` výrazu v podobě `new[]`(**std::size_t**). To nemá žádný účinek.
 
-Třetí funkce je volána umístění odstranit výraz odpovídá `new[]` výrazu v podobě `new[]`( **std::size_t**, **const std::nothrow_t &**). Program lze definovat funkci s Tento podpis funkce, která nahradí výchozí verze definované ve standardní knihovně jazyka C++. Požadované chování je tak, aby přijímal hodnotu *ptr* , který je null nebo který byl vrácen dřívějším volání operátoru `new[]`(**size_t**). Výchozí chování je vyhodnotit `delete[]`( `ptr`).
+Třetí funkce je volána umístění odstranit výraz odpovídá `new[]` výrazu v podobě `new[]`( **std::size_t**, **const std::nothrow_t &** ). Program lze definovat funkci s Tento podpis funkce, která nahradí výchozí verze definované ve standardní knihovně jazyka C++. Požadované chování je tak, aby přijímal hodnotu *ptr* , který je null nebo který byl vrácen dřívějším volání operátoru `new[]`(**size_t**). Výchozí chování je vyhodnotit `delete[]`( `ptr`).
 
 ### <a name="example"></a>Příklad
 
 Zobrazit [operátor new&#91; &#93; ](../standard-library/new-operators.md#op_new_arr) příklady použití `operator delete[]`.
 
-## <a name="op_new"></a>  new – operátor
+## <a name="op_new"></a> new – operátor
 
 Funkci volanou třídou výraz new k přidělení úložiště pro jednotlivé objekty.
 
 ```cpp
 void* operator new(std::size_t count) throw(bad_alloc);
-
-void* operator new(std::size_t count,
-    const std::nothrow_t&) throw();
-
-void* operator new(std::size_t count,
-    void* ptr) throw();
+void* operator new(std::size_t count, const std::nothrow_t&) throw();
+void* operator new(std::size_t count, void* ptr) throw();
 ```
 
 ### <a name="parameters"></a>Parametry
 
-*Počet*<br/>
+*Počet*\
 Počet bajtů je přiděleno úložiště.
 
-*ptr*<br/>
+*PTR*\
 Ukazatel, který se má vrátit.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -137,7 +126,7 @@ Třetí funkce je volána umístění **nové** výrazu v podobě **nové** ( *a
 
 Uvolnění úložiště přidělené **operátor new**, volání [operátor delete](../standard-library/new-operators.md#op_delete).
 
-Informace o vyvolání nebo nonthrowing chování nové, najdete v tématu [nové a odstranit operátory](../cpp/new-and-delete-operators.md).
+Informace o vyvolání nebo non-throwing. chování nové, najdete v tématu [nové a odstranit operátory](../cpp/new-and-delete-operators.md).
 
 ### <a name="example"></a>Příklad
 
@@ -182,26 +171,22 @@ int main( )
 }
 ```
 
-## <a name="op_new_arr"></a>  new [] – operátor
+## <a name="op_new_arr"></a> new [] – operátor
 
 Funkce přidělení volány výraz new k přidělení úložiště pro pole objektů.
 
 ```cpp
 void* operator new[](std::size_t count) throw(std::bad_alloc);
-
-void* operator new[](std::size_t count,
-    const std::nothrow_t&) throw();
-
-void* operator new[](std::size_t count,
-    void* ptr) throw();
+void* operator new[](std::size_t count, const std::nothrow_t&) throw();
+void* operator new[](std::size_t count, void* ptr) throw();
 ```
 
 ### <a name="parameters"></a>Parametry
 
-*Počet*<br/>
+*Počet*\
 Počet bajtů úložiště, která bude přidělena pro objekt pole.
 
-*ptr*<br/>
+*PTR*\
 Ukazatel, který se má vrátit.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -260,7 +245,3 @@ int main() {
    delete[ ] fPtr3;
 }
 ```
-
-## <a name="see-also"></a>Viz také:
-
-[\<new>](../standard-library/new.md)<br/>

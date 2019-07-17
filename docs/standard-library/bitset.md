@@ -7,39 +7,40 @@ helpviewer_keywords:
 - <bitset> header
 - bitset header
 ms.assetid: af30a9b9-489e-46e3-9d29-5f3ea07ae6dc
-ms.openlocfilehash: d90e49190ef2f22ce7ba2dfe30c2c68c6275f5b0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b0a5a01ca04d01d9535291e3c4a254143bc09e5a
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62380127"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68243303"
 ---
 # <a name="ltbitsetgt"></a>&lt;bitset&gt;
 
 Definuje bitset – třída šablony a dvě podpůrné funkce šablony pro představující a manipulaci s pevnou velikostí pořadí bitů.
 
-## <a name="syntax"></a>Syntaxe
+## <a name="requirements"></a>Požadavky
 
-```
+**Záhlaví:** \<bitset – >
 
-#include <bitset>
-```
+**Namespace:** std
+
+## <a name="members"></a>Členové
 
 ### <a name="operators"></a>Operátory
 
-|Operátor|Popis|
+|||
 |-|-|
 |[operátor &](../standard-library/bitset-operators.md#op_amp)|Provádí bitové operace AND mezi dvěma bitsets.|
 |[Operator <\<](../standard-library/bitset-operators.md#op_lt_lt)|Vloží textové znázornění sekvence bit do standardního výstupního datového proudu.|
-|[operator>>](../standard-library/bitset-operators.md#op_gt_gt)|Vloží textové znázornění sekvence bit do standardního vstupního proudu.|
+|[operátor >>](../standard-library/bitset-operators.md#op_gt_gt)|Vloží textové znázornění sekvence bit do standardního vstupního proudu.|
 |[operátor ^](../standard-library/bitset-operators.md#op_xor)|Provádí logické bitové EXKLUZIVNÍ disjunkce OR mezi dvěma bitsets.|
 |[operator&#124;](../standard-library/bitset-operators.md#op_or)|Provádí bitové operace OR mezi dvěma bitsets.|
 
 ### <a name="classes"></a>Třídy
 
-|Třída|Popis|
+|||
 |-|-|
-|[bitset – třída](../standard-library/bitset-class.md)|Třída šablony popisuje typ objektu, který ukládá pořadí skládající se z pevný počet bitů, které umožňují compact udržování příznaky pro sadu položek nebo podmínky.|
+|[bitset](../standard-library/bitset-class.md)|Třída šablony popisuje typ objektu, který ukládá pořadí skládající se z pevný počet bitů, které umožňují compact udržování příznaky pro sadu položek nebo podmínky.|
 
 ## <a name="see-also"></a>Viz také:
 

@@ -6,29 +6,32 @@ f1_keywords:
 helpviewer_keywords:
 - set header
 ms.assetid: 43cb1ab2-6383-48cf-8bdc-2b96d7203596
-ms.openlocfilehash: 633571f00cfe761b687e9b76624029f57ab6043e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1bf5663d3e6891d45e2139c612d8e16860b6cace
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62412576"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68246386"
 ---
 # <a name="ltsetgt"></a>&lt;set&gt;
 
 Definuje kontejner šablony třídy sady a multiset a jejich podpůrných šablon.
 
-## <a name="syntax"></a>Syntaxe
+## <a name="requirements"></a>Požadavky
 
-```cpp
-#include <set>
-```
+**Záhlaví:** \<nastavit >
+
+**Namespace:** std
+
+> [!NOTE]
+> \<Nastavit > Knihovna také používá `#include <initializer_list>` příkazu.
 
 ## <a name="members"></a>Členové
 
 ### <a name="operators"></a>Operátory
 
 |Nastavit verzi|Multiset – verze|Popis|
-|-----------------|----------------------|-----------------|
+|-|-|-|
 |[Operator! = (set)](../standard-library/set-operators.md#op_neq)|[Operator! = (multiset)](../standard-library/set-operators.md#op_neq)|Testuje, zda sada nebo multiset – objekt na levé straně operátoru není roven set nebo multiset – objekt na pravé straně.|
 |[Operator < (set)](../standard-library/set-operators.md#op_lt)|[Operator < (multiset)](../standard-library/set-operators.md#op_lt_multiset)|Testuje, zda sada nebo multiset – objekt na levé straně operátoru menší než sada nebo multiset – objekt na pravé straně.|
 |[Operator < = (set)](../standard-library/set-operators.md#op_lt_eq)|[operátor\<= (multiset)](../standard-library/set-operators.md#op_lt_eq_multiset)|Testuje, zda sada nebo multiset – objekt na levé straně operátoru menší než nebo rovna hodnotě set nebo multiset – objekt na pravé straně.|
@@ -39,12 +42,12 @@ Definuje kontejner šablony třídy sady a multiset a jejich podpůrných šablo
 ### <a name="specialized-template-functions"></a>Specializované funkce šablon
 
 |Nastavit verzi|Multiset – verze|Popis|
-|-----------------|----------------------|-----------------|
+|-|-|-|
 |[swap](../standard-library/set-functions.md#swap)|[swap (multiset)](../standard-library/set-functions.md#swap_multiset)|Vymění prvky dvou sad nebo multisets.|
 
 ### <a name="classes"></a>Třídy
 
-|Třída|Popis|
+|||
 |-|-|
 |[set – třída](../standard-library/set-class.md)|Používá pro ukládání a načítání dat z kolekce, ve kterém hodnoty elementů obsažených jsou jedinečné a slouží jako klíčové hodnoty, podle kterých jsou data automaticky uspořádávána.|
 |[multiset – třída](../standard-library/multiset-class.md)|Používá pro ukládání a načítání dat z kolekce, ve kterém hodnoty elementů obsažených nemusí být jedinečný a ve které slouží jako klíčové hodnoty, podle kterých jsou data automaticky uspořádávána.|

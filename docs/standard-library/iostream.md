@@ -14,16 +14,16 @@ f1_keywords:
 helpviewer_keywords:
 - iostream header
 ms.assetid: de5d39e1-7e77-4b55-bcd1-7c77b41515c8
-ms.openlocfilehash: 18d6a8517d71cfa9c7e17a45c97f77977ec778f0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: fa90a861194275d8c82a407e2ca8db6e757aab35
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62385138"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68245231"
 ---
 # <a name="ltiostreamgt"></a>&lt;iostream&gt;
 
-Deklaruje objekty, které určují čtení a zápis do standardních datových proudů. To je často jediným hlavičky, které je potřeba zahrnout provádět vstup a výstup z programu v jazyce C++.
+Deklaruje objekty, které určují čtení a zápis do standardních datových proudů. To je často pouze záhlaví, budete muset vstup a výstup z C++ programu.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -31,19 +31,22 @@ Deklaruje objekty, které určují čtení a zápis do standardních datových p
 #include <iostream>
 ```
 
+> [!NOTE]
+> \<Iostream – > knihovna používá `#include <ios>`, `#include <streambuf>`, `#include <istream>`, a `#include <ostream>` příkazy.
+
 ## <a name="remarks"></a>Poznámky
 
 Objekty lze rozdělit do dvou skupin:
 
-- [CIN](#cin), [cout](#cout), [cerr](#cerr), a [clog](#clog) jsou bajtů orientované na provádění konvenční přenosy bajtů v čase.
+- [CIN](#cin), [cout](#cout), [cerr](#cerr), a [clog](#clog) jsou orientované na bajt konvenční přenosu objemu bajtů na čas.
 
 - [wcin](#wcin), [wcout](#wcout), [wcerr](#wcerr), a [wclog](#wclog) orientovány široké, převod na a z široké znaky, které program pracuje interně.
 
-Po provedení určitých operací v datovém proudu, jako je například standardní vstup nejde provést operace jinou orientaci pro stejný datový proud. Proto program nemůže pracovat Zaměnitelně obě [cin](#cin) a [wcin](#wcin), např.
+Až to uděláte určitých operací v datovém proudu, jako je například standardní vstup je nejde provést operace jinou orientaci pro stejný datový proud. Proto program nemůže pracovat Zaměnitelně obě [cin](#cin) a [wcin](#wcin), např.
 
 Všechny objekty deklarované v této sdílené složce hlavičky specifické vlastnosti – jsou vytvořeny před všechny statické objekty definujete v jednotce překladu, který obsahuje, můžete předpokládat \<iostream – >. Stejnou měrou můžete předpokládat, že tyto objekty nejsou zničeny, před destruktory pro takové statických objektů, které definujete. (Výstupní datové proudy, ale vyprázdní při ukončení programu.) Proto může bezpečně číst nebo zapisovat do standardních streamů před spuštěním programu a po ukončení programu.
 
-Tuto záruku však není univerzální. Statický konstruktor může volat funkci v jiné jednotce překladu. Volaná funkce nelze předpokládat, že objekty deklarované v této hlavičky mají byl vytvořen, daný neurčitém pořadí, ve které překlad jednotky účastnit statické konstrukce. Pokud chcete použít tyto objekty v této souvislosti, je nutné nejprve vytvořit objekt třídy [ios_base::Init](../standard-library/ios-base-class.md#init).
+Tuto záruku není univerzální, ale. Statický konstruktor může volat funkci v jiné jednotce překladu. Volaná funkce nelze předpokládat, že objekty deklarované v této hlavičky mají byl vytvořen, daný neurčitém pořadí, ve které překlad jednotky účastnit statické konstrukce. Pokud chcete použít tyto objekty v této souvislosti, je nutné nejprve vytvořit objekt třídy [ios_base::Init](../standard-library/ios-base-class.md#init).
 
 ### <a name="global-stream-objects"></a>Stream globální objekty
 
@@ -58,7 +61,7 @@ Tuto záruku však není univerzální. Statický konstruktor může volat funkc
 |[wclog](#wclog)|Určuje, `wclog` globální datového proudu.|
 |[wcout](#wcout)|Určuje, `wcout` globální datového proudu.|
 
-###  <a name="cerr"></a>  cerr
+###  <a name="cerr"></a> cerr
 
 Objekt `cerr` řídí výstup do vyrovnávací paměti datového proudu přidružená k objektu `stderr`, které jsou deklarovány v \<cstdio – >.
 
@@ -104,7 +107,7 @@ int main( )
 }
 ```
 
-###  <a name="cin"></a>  CIN
+###  <a name="cin"></a> CIN
 
 Určuje, `cin` globální datového proudu.
 
@@ -122,7 +125,7 @@ Objekt ovládacích prvků ze standardního vstupu extrakce jako datový proud b
 
 #### <a name="example"></a>Příklad
 
-V tomto příkladu `cin` nastaví selhání bit v datovém proudu, pokud se setká s jiné než číselné znaky. Program vymaže bit selhání a odstraní neplatný znak z datového proudu, aby bylo možné pokračovat.
+V tomto příkladu `cin` nastaví selhání bit v datovém proudu, pokud jde o mezi jiné než číselné znaky. Program vymaže bit selhání a odstraní neplatný znak z datového proudu, abyste mohli pokračovat.
 
 ```cpp
 // iostream_cin.cpp
@@ -152,11 +155,10 @@ int main()
 ```
 
 ```Output
-
 2
 ```
 
-###  <a name="clog"></a>  clog
+###  <a name="clog"></a> clog
 
 Určuje, `clog` globální datového proudu.
 
@@ -176,7 +178,7 @@ Ovládací prvky objektu ukládány do vyrovnávací paměti vložení do standa
 
 Zobrazit [cerr](#cerr) pro příklad použití `clog`.
 
-###  <a name="cout"></a>  cout
+###  <a name="cout"></a> cout
 
 Určuje, `cout` globální datového proudu.
 
@@ -196,7 +198,7 @@ Objekt řídí vložení do standardního výstupního datového proudu bajtů.
 
 Zobrazit [cerr](#cerr) pro příklad použití `cout`.
 
-###  <a name="wcerr"></a>  wcerr
+### <a name="wcerr"></a> wcerr
 
 Určuje, `wcerr` globální datového proudu.
 
@@ -216,7 +218,7 @@ Objekt ovládacích prvků bez vyrovnávací paměti vložení do standardní ch
 
 Zobrazit [cerr](#cerr) pro příklad použití `wcerr`.
 
-###  <a name="wcin"></a>  wcin
+### <a name="wcin"></a> wcin
 
 Určuje, `wcin` globální datového proudu.
 
@@ -236,7 +238,7 @@ Objekt ovládacích prvků ze standardního vstupu extrakce jako široké datov�
 
 Zobrazit [cerr](#cerr) pro příklad použití `wcin`.
 
-###  <a name="wclog"></a>  wclog
+### <a name="wclog"></a> wclog
 
 Určuje, `wclog` globální datového proudu.
 
@@ -256,7 +258,7 @@ Ovládací prvky objektu ukládány do vyrovnávací paměti vložení do standa
 
 Zobrazit [cerr](#cerr) pro příklad použití `wclog`.
 
-###  <a name="wcout"></a>  wcout
+### <a name="wcout"></a> wcout
 
 Určuje, `wcout` globální datového proudu.
 
@@ -279,10 +281,9 @@ Zobrazit [cerr](#cerr) pro příklad použití `wcout`.
 `CString` instance `wcout` příkazu musí být přetypovat na `const wchar_t*`, jak je znázorněno v následujícím příkladu.
 
 ```
+CString cs("meow");
 
-    CString cs("meow");
-
-    wcout <<(const wchar_t*) cs <<endl;
+wcout <<(const wchar_t*) cs <<endl;
 ```
 
 Další informace najdete v tématu [základních operací CString](../atl-mfc-shared/basic-cstring-operations.md).

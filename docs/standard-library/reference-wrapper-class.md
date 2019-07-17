@@ -18,12 +18,12 @@ helpviewer_keywords:
 - std::reference_wrapper [C++], type
 - std::reference_wrapper [C++], get
 ms.assetid: 90b8ed62-e6f1-44ed-acc7-9619bd58865a
-ms.openlocfilehash: baf38dd637e31f6fabdf869a242f8f18e2812717
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 83b68d1fdf89519df0a26acd478467fddec8b662
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62369587"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68240264"
 ---
 # <a name="referencewrapper-class"></a>reference_wrapper – třída
 
@@ -35,7 +35,6 @@ Obaluje referenci.
 template <class Ty>
 class reference_wrapper
 {
-public:
     typedef Ty type;
 
     reference_wrapper(Ty&) noexcept;
@@ -45,9 +44,6 @@ public:
     template <class... Types>
     auto operator()(Types&&... args) const ->
         decltype(std::invoke(get(), std::forward<Types>(args)...));
-
-private:
-    Ty *ptr; // exposition only
 };
 ```
 
@@ -59,39 +55,35 @@ Typ `Ty` musí být typem objektu nebo funkce typu nebo statický kontrolní vý
 
 Pomocné funkce [std::ref](functional-functions.md#ref) a [std::cref](functional-functions.md#cref) slouží k vytvoření `reference_wrapper` objekty.
 
+## <a name="members"></a>Členové
+
 ### <a name="constructors"></a>Konstruktory
 
-|Konstruktor|Popis|
+|||
 |-|-|
 |[reference_wrapper](#reference_wrapper)|Vytvoří `reference_wrapper`.|
 
 ### <a name="typedefs"></a>Typedefs
 
-|Název typu|Popis|
+|||
 |-|-|
 |[result_type](#result_type)|Typ výsledku Slabý odkaz zabalené.|
 |[type](#type)|Typ zabalené odkazu.|
 
-### <a name="member-functions"></a>Členské funkce
+### <a name="functions"></a>Funkce
 
-|Členská funkce|Popis|
+|||
 |-|-|
 |[get](#get)|Získá zabalené odkaz.|
 
 ### <a name="operators"></a>Operátory
 
-|Operátor|Popis|
+|||
 |-|-|
-|[reference_wrapper::Operator Ty&amp;](#op_ty_amp)|Získá ukazatel na odkaz zabalené.|
-|[reference_wrapper::operator()](#op_call)|Volá zabalené odkaz.|
+|[Operator Ty&amp;](#op_ty_amp)|Získá ukazatel na odkaz zabalené.|
+|[operator()](#op_call)|Volá zabalené odkaz.|
 
-## <a name="requirements"></a>Požadavky
-
-**Záhlaví:** \<funkční >
-
-**Namespace:** std
-
-## <a name="get"></a>  reference_wrapper::Get
+## <a name="get"></a> získat
 
 Získá zabalené odkaz.
 
@@ -130,7 +122,7 @@ rwi = 1
 i = -1
 ```
 
-## <a name="op_ty_amp"></a>  reference_wrapper::Operator Ty&amp;
+## <a name="op_ty_amp"></a> Operator Ty&amp;
 
 Získá zabalené odkaz.
 
@@ -166,7 +158,7 @@ i = 1
 (int)rwi = 1
 ```
 
-## <a name="op_call"></a>  reference_wrapper::Operator()
+## <a name="op_call"></a> Operator()
 
 Volá zabalené odkaz.
 
@@ -177,10 +169,10 @@ auto operator()(Types&&... args);
 
 ### <a name="parameters"></a>Parametry
 
-*Typy*<br/>
+*Typy*\
 Typy seznamu argumentů.
 
-*argumenty*<br/>
+*argumenty*\
 Seznam argumentů.
 
 ### <a name="remarks"></a>Poznámky
@@ -212,7 +204,7 @@ int main() {
 rwi(3) = -3
 ```
 
-## <a name="reference_wrapper"></a>  reference_wrapper::reference_wrapper
+## <a name="reference_wrapper"></a> reference_wrapper –
 
 Vytvoří `reference_wrapper`.
 
@@ -222,10 +214,10 @@ reference_wrapper(Ty& val) noexcept;
 
 ### <a name="parameters"></a>Parametry
 
-*Ty*<br/>
+*Ty*\
 Typ, který má zabalit.
 
-*Val*<br/>
+*Val*\
 Hodnota určená k zabalení.
 
 ### <a name="remarks"></a>Poznámky
@@ -263,7 +255,7 @@ rwi = 1
 i = -1
 ```
 
-## <a name="result_type"></a>  reference_wrapper::result_type
+## <a name="result_type"></a> result_type
 
 Typ výsledku Slabý odkaz zabalené.
 
@@ -302,7 +294,7 @@ int main() {
 val = -3
 ```
 
-## <a name="type"></a>  reference_wrapper::type
+## <a name="type"></a> Typ
 
 Typ zabalené odkazu.
 
@@ -343,8 +335,3 @@ int main() {
 i = 1
 rwi = 1
 ```
-
-## <a name="see-also"></a>Viz také:
-
-[cref](../standard-library/functional-functions.md#cref)<br/>
-[ref](../standard-library/functional-functions.md#ref)<br/>

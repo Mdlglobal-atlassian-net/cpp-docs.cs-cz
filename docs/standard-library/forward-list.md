@@ -6,43 +6,48 @@ f1_keywords:
 helpviewer_keywords:
 - <forward_list>
 ms.assetid: 8b4ab09e-1475-434a-b4e0-fdbc07a08b5b
-ms.openlocfilehash: cbde6268be0f501a220721cae498254dd0588eb4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d20c5b83e0ce00c7634d32e6b63c92242c24d1b2
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62159376"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68240641"
 ---
 # <a name="ltforwardlistgt"></a>&lt;forward_list&gt;
 
 Definuje forward_list – kontejner šablony třídy a několik podpůrných šablon.
 
-## <a name="syntax"></a>Syntaxe
+## <a name="requirements"></a>Požadavky
 
-```cpp
-#include <forward_list>
-```
+**Záhlaví:** \<forward_list – >
+
+**Namespace:** std
+
+> [!NOTE]
+> \<Forward_list – > Knihovna také používá `#include <initializer_list>` příkazu.
+
+## <a name="members"></a>Členové
 
 ### <a name="operators"></a>Operátory
 
-|Operátor|Popis|
+|||
 |-|-|
 |[operator==](../standard-library/forward-list-operators.md#op_eq_eq)|Testuje, zda objekt dopředu seznamu na levé straně operátoru roven objektu dopředné seznamu na pravé straně.|
 |[operator!=](../standard-library/forward-list-operators.md#op_neq)|Testuje, zda je objekt dopředu seznamu na levé straně operátoru není roven objektu dopředné seznamu na pravé straně.|
 |[Operator <](../standard-library/forward-list-operators.md#op_lt)|Testuje, zda objekt dopředu seznamu na levé straně operátoru menší než objekt dopředu seznamu na pravé straně.|
-|[operator<=](../standard-library/forward-list-operators.md#op_lt_eq)|Testuje, zda je objekt seznamu vpřed na levé straně operátoru je menší než nebo roven objektu dopředné seznamu na pravé straně.|
-|[operator>](../standard-library/forward-list-operators.md#op_gt)|Testuje, zda objekt dopředu seznamu na levé straně operátoru větší než objekt dopředu seznamu na pravé straně.|
+|[Operator < =](../standard-library/forward-list-operators.md#op_lt_eq)|Testuje, zda je objekt seznamu vpřed na levé straně operátoru je menší než nebo roven objektu dopředné seznamu na pravé straně.|
+|[Operator >](../standard-library/forward-list-operators.md#op_gt)|Testuje, zda objekt dopředu seznamu na levé straně operátoru větší než objekt dopředu seznamu na pravé straně.|
 |[operator>=](../standard-library/forward-list-operators.md#op_lt_eq)|Testuje, zda je objekt dopředu seznamu na levé straně operátoru větší než nebo roven objektu dopředné seznamu na pravé straně.|
 
 ### <a name="functions"></a>Funkce
 
-|Funkce|Popis|
+|||
 |-|-|
 |[swap](../standard-library/forward-list-functions.md#swap)|Vymění prvky dvou seznamů vpřed.|
 
 ### <a name="classes"></a>Třídy
 
-|Třída|Popis|
+|||
 |-|-|
 |[forward_list](../standard-library/forward-list-class.md)|Popisuje objekt, který řídí různé délky sekvence elementů. Sekvence se ukládá jako jednotlivě propojený seznam prvků, každá obsahuje člen typu `Type`.|
 

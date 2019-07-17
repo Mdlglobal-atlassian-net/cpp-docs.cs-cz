@@ -16,38 +16,36 @@ helpviewer_keywords:
 - std::operator&lt; (utility)
 - std::operator&lt;= (utility)
 - std::operator== (utility)
-ms.openlocfilehash: 418b18851aaf8da44ee0ed2df7ff9e60a0b5ef1f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ec6c996487dc2e6c5ce628fe5e080b4f601479d9
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62167566"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68246296"
 ---
 # <a name="ltutilitygt-operators"></a>&lt;Nástroj&gt; operátory
 
-||||
-|-|-|-|
-|[operator!=](#op_neq)|[– Operátor&gt;](#op_gt)|[– Operátor&gt;=](#op_gt_eq)|
-|[– Operátor&lt;](#op_lt)|[– Operátor&lt;=](#op_lt_eq)|[operator==](#op_eq_eq)|
+> [!NOTE]
+> Použití operátorů `Type&` zahrnují `namespace rel_ops`.
 
-## <a name="op_neq"></a>  Operator! =
+## <a name="op_neq"></a> Operator! =
 
 Testuje, zda je objekt dvojice na levé straně operátoru není roven párový objekt na pravé straně.
 
 ```cpp
 template <class Type>
-constexpr bool operator!=(const Type& left, const Type& right);
+    constexpr bool operator!=(const Type& left, const Type& right);
 
 template <class T, class U>
-constexpr bool operator!=(const pair<T, U>& left, const pair<T, U>& right);
+    constexpr bool operator!=(const pair<T, U>& left, const pair<T, U>& right);
 ```
 
 ### <a name="parameters"></a>Parametry
 
-*doleva*<br/>
+*doleva*\
 Objekt typu `pair`.
 
-*doprava*<br/>
+*doprava*\
 Objekt typu `pair`.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -105,7 +103,7 @@ The pairs p1 and p2 are not equal.
 The pairs p1 and p3 are equal.
 ```
 
-## <a name="op_eq_eq"></a>  Operator ==
+## <a name="op_eq_eq"></a> Operator ==
 
 Testuje, zda objekt dvojice na levé straně operátoru roven objektu pair na pravé straně.
 
@@ -116,10 +114,10 @@ constexpr bool operator==(const pair<T, U>& left, const pair<T, U>& right);
 
 ### <a name="parameters"></a>Parametry
 
-*doleva*<br/>
+*doleva*\
 Objekt typu `pair`.
 
-*doprava*<br/>
+*doprava*\
 Objekt typu `pair`.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -168,7 +166,7 @@ int main( )
 }
 ```
 
-## <a name="op_lt"></a>  – Operátor&lt;
+## <a name="op_lt"></a> – Operátor&lt;
 
 Testuje, zda je pár objekt na levé straně operátoru je menší než objekt dvojice na pravé straně.
 
@@ -179,10 +177,10 @@ constexpr bool operator<(const pair<T, U>& left, const pair<T, U>& right);
 
 ### <a name="parameters"></a>Parametry
 
-*doleva*<br/>
+*doleva*\
 Objekt typu `pair` na levé straně operátoru.
 
-*doprava*<br/>
+*doprava*\
 Objekt typu `pair` na pravé straně operátoru.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -242,7 +240,7 @@ The pair p1 is less than the pair p2.
 The pair p1 is not less than the pair p3.
 ```
 
-## <a name="op_lt_eq"></a>  – Operátor&lt;=
+## <a name="op_lt_eq"></a> – Operátor&lt;=
 
 Testuje, zda je pár objekt na levé straně operátoru je menší než nebo rovna hodnotě párový objekt na pravé straně.
 
@@ -256,10 +254,10 @@ constexpr bool operator<=(const pair<T, U>& left, const pair<T, U>& right);
 
 ### <a name="parameters"></a>Parametry
 
-*doleva*<br/>
+*doleva*\
 Objekt typu `pair` na levé straně operátoru.
 
-*doprava*<br/>
+*doprava*\
 Objekt typu `pair` na pravé straně operátoru.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -327,7 +325,7 @@ The pair p1 is greater than the pair p3.
 The pair p1 is less than or equal to the pair p4.
 ```
 
-## <a name="op_gt"></a>  – Operátor&gt;
+## <a name="op_gt"></a> – Operátor&gt;
 
 Testuje, zda je objekt dvojice na levé straně operátoru větší než párový objekt na pravé straně.
 
@@ -341,10 +339,10 @@ constexpr bool operator>(const pair<T, U>& left, const pair<T, U>& right);
 
 ### <a name="parameters"></a>Parametry
 
-*doleva*<br/>
+*doleva*\
 Objekt typu `pair` na levé straně operátoru.
 
-*doprava*<br/>
+*doprava*\
 Objekt typu `pair` na pravé straně operátoru.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -414,24 +412,24 @@ The pair p1 is greater than the pair p3.
 The pair p1 is not greater than the pair p4.
 ```
 
-## <a name="op_gt_eq"></a>  – Operátor&gt;=
+## <a name="op_gt_eq"></a> – Operátor&gt;=
 
 Testuje, zda je objekt dvojice na levé straně operátoru větší než nebo rovna hodnotě párový objekt na pravé straně.
 
 ```cpp
 template <class Type>
-constexpr bool operator>=(const Type& left, const Type& right);
+    constexpr bool operator>=(const Type& left, const Type& right);
 
 template <class T, class U>
-constexpr bool operator>=(const pair<T, U>& left, const pair<T, U>& right);
+    constexpr bool operator>=(const pair<T, U>& left, const pair<T, U>& right);
 ```
 
 ### <a name="parameters"></a>Parametry
 
-*doleva*<br/>
+*doleva*\
 Objekt typu `pair` na levé straně operátoru.
 
-*doprava*<br/>
+*doprava*\
 Objekt typu `pair` na pravé straně operátoru.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -498,7 +496,3 @@ The pair p1 is less than the pair p2.
 Pair p1 is greater than or equal to pair p3.
 Pair p1 is greater than or equal to pair p4.
 ```
-
-## <a name="see-also"></a>Viz také:
-
-[\<Nástroje >](../standard-library/utility.md)<br/>

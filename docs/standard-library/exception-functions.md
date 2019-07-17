@@ -24,23 +24,16 @@ helpviewer_keywords:
 - std::terminate [C++]
 - std::uncaught_exception [C++]
 - std::unexpected [C++]
-ms.openlocfilehash: 22c5b34f1c87d10b48a797229bc987305fca8f9d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 34a34c48be8bb0e319a7d0eebeccba805cafbc1f
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62412654"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68246059"
 ---
 # <a name="ltexceptiongt-functions"></a>&lt;výjimka&gt; funkce
 
-||||
-|-|-|-|
-|[current_exception](#current_exception)|[get_terminate](#get_terminate)|[get_unexpected](#get_unexpected)|
-|[make_exception_ptr](#make_exception_ptr)|[rethrow_exception](#rethrow_exception)|[set_terminate](#set_terminate)|
-|[set_unexpected](#set_unexpected)|[ukončit](#terminate)|[uncaught_exception](#uncaught_exception)|
-|[unexpected](#unexpected)|
-
-## <a name="current_exception"></a>  current_exception
+## <a name="current_exception"></a> current_exception
 
 Získá inteligentní ukazatel na aktuální výjimku.
 
@@ -62,18 +55,18 @@ Na konci je volán destruktor aktuální výjimky **catch** blokovat, pokud nen�
 
 Následná volání `current_exception` funkce vrátit `exception_ptr` objekty, které odkazují na různé kopie aktuální výjimky. V důsledku toho se objekty při porovnání jeví jako nerovné, protože odkazují na jiné kopie, i přesto, že kopie mají stejné binární hodnoty.
 
-## <a name="make_exception_ptr"></a>  make_exception_ptr
+## <a name="make_exception_ptr"></a> make_exception_ptr
 
 Vytvoří [exception_ptr](../standard-library/exception-typedefs.md#exception_ptr) objekt, který obsahuje kopii výjimky.
 
 ```cpp
 template <class E>
-exception_ptr make_exception_ptr(E Except);
+    exception_ptr make_exception_ptr(E Except);
 ```
 
 ### <a name="parameters"></a>Parametry
 
-*S výjimkou*<br/>
+*S výjimkou*\
 Třída s výjimkou pro kopírování Obvykle, zadejte [třída výjimky](../standard-library/exception-class.md) jako argument pro objekt `make_exception_ptr` fungovat, i když jakýkoli objekt třídy může být argumentem.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -86,7 +79,7 @@ Volání `make_exception_ptr` funkce je ekvivalentní k vyvolání C++ výjimky,
 
 Aplikace obvykle nevyžaduje, aby `make_exception_ptr` funkce a zabraňte jejich použití.
 
-## <a name="rethrow_exception"></a>  rethrow_exception
+## <a name="rethrow_exception"></a> rethrow_exception
 
 Vyvolá výjimku předanou jako parametr.
 
@@ -96,14 +89,14 @@ void rethrow_exception(exception_ptr P);
 
 ### <a name="parameters"></a>Parametry
 
-*P*<br/>
+*P*\
 Zachycená výjimka, kterou chcete znovu vyvolat. Pokud *P* nulový [exception_ptr](../standard-library/exception-typedefs.md#exception_ptr), funkce vyvolá [std::bad_exception](../standard-library/bad-exception-class.md).
 
 ### <a name="remarks"></a>Poznámky
 
 Po uložení zachycené výjimky v `exception_ptr` objektu, může primární vlákno zpracovat objektu. V primárním vlákně, zavolejte `rethrow_exception` společně s funkcí `exception_ptr` objektu jako svůj argument. `rethrow_exception` Extrahuje výjimku z funkce `exception_ptr` objekt a potom vyvolá výjimku v kontextu primárního vlákna.
 
-## <a name="get_terminate"></a>  get_terminate –
+## <a name="get_terminate"></a> get_terminate –
 
 Získá aktuální `terminate_handler` funkce.
 
@@ -111,7 +104,7 @@ Získá aktuální `terminate_handler` funkce.
 terminate_handler get_terminate();
 ```
 
-## <a name="set_terminate"></a>  set_terminate
+## <a name="set_terminate"></a> set_terminate
 
 Vytvoří novou `terminate_handler` která se má volat při ukončení programu.
 
@@ -121,7 +114,7 @@ terminate_handler set_terminate(terminate_handler fnew) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*fnew*<br/>
+*fnew*\
 Funkce, která se má volat při ukončení.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -160,7 +153,7 @@ int main()
 }
 ```
 
-## <a name="get_unexpected"></a>  get_unexpected –
+## <a name="get_unexpected"></a> get_unexpected –
 
 Získá aktuální `unexpected_handler` funkce.
 
@@ -168,7 +161,18 @@ Získá aktuální `unexpected_handler` funkce.
 unexpected_handler get_unexpected();
 ```
 
-## <a name="set_unexpected"></a>  set_unexpected
+## <a name="rethrow_if_nested"></a> rethrow_if_nested
+
+```cpp
+template <class E> 
+    void rethrow_if_nested(const E& e);
+```
+
+### <a name="remarks"></a>Poznámky
+
+Pokud není polymorfního typu třídy, nebo pokud `nested_exception` je nedostupný nebo nejednoznačný, neexistuje žádný vliv. V opačném případě provádí dynamické přetypování.
+
+## <a name="set_unexpected"></a> set_unexpected
 
 Vytvoří novou `unexpected_handler` bude při k neočekávané výjimce.
 
@@ -178,7 +182,7 @@ unexpected_handler set_unexpected(unexpected_handler fnew) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*fnew*<br/>
+*fnew*\
 Funkce se volá, když je došlo k neočekávané výjimce.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -216,7 +220,7 @@ int main()
 }
 ```
 
-## <a name="terminate"></a>  ukončit
+## <a name="terminate"></a> ukončit
 
 Zavolá obslužnou rutinu ukončení.
 
@@ -234,7 +238,18 @@ Obslužná rutina ukončení nesmí vracet volajícímu. Při spuštění progra
 
 Zobrazit [set_unexpected](../standard-library/exception-functions.md#set_unexpected) příklad použití `terminate`.
 
-## <a name="uncaught_exception"></a>  uncaught_exception
+## <a name="throw_with_nested"></a> throw_with_nested
+
+```cpp
+template <class T> [[noreturn]]
+    void throw_with_nested(T&& t);
+```
+
+### <a name="remarks"></a>Poznámky
+
+Vyvolá výjimku s vnořené výjimky.
+
+## <a name="uncaught_exception"></a> uncaught_exception
 
 Vrátí **true** pouze v případě, že je vyvolaná výjimka právě zpracovávána.
 
@@ -299,7 +314,7 @@ In Test::~Test("outside try block")
         std::uncaught_exception( ) = 0
 ```
 
-## <a name="unexpected"></a>  neočekávané
+## <a name="unexpected"></a> neočekávané
 
 Volá obslužnou rutinu neočekávané.
 
@@ -326,7 +341,3 @@ Při spuštění programu obslužnou rutinu neočekávané je funkce, která vol
 ### <a name="example"></a>Příklad
 
 Zobrazit [set_unexpected](../standard-library/exception-functions.md#set_unexpected) příklad použití `unexpected`.
-
-## <a name="see-also"></a>Viz také:
-
-[\<exception>](../standard-library/exception.md)<br/>

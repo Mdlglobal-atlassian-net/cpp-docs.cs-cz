@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - <numeric> header
 ms.assetid: 6d6ccb94-48cc-479b-b4a9-bd9c78d4896a
-ms.openlocfilehash: ee93d254dcf49b38cb817ba460060fa72b81e01f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ce195742605c3dd2e127c84ac2f4e1e696c75bd0
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62371449"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68246700"
 ---
 # <a name="ltnumericgt"></a>&lt;Číselné&gt;
 
 Definuje funkce šablony kontejneru, které provádějí algoritmy numerického zpracování.
 
-## <a name="syntax"></a>Syntaxe
+## <a name="requirements"></a>Požadavky
 
-```cpp
-#include <numeric>
-```
+**Hlavička**: \<číselné >
+
+**Namespace:** std
 
 ## <a name="remarks"></a>Poznámky
 
@@ -29,15 +29,25 @@ Numerické algoritmy se podobají algoritmy standardní knihovny C++ [ \<algorit
 
 Algoritmy rozšiřují akce podporované operacemi a funkcemi členů každého kontejnery standardní knihovny C++ a umožňují interakci s různými typy objektů kontejnerů ve stejnou dobu.
 
+## <a name="members"></a>Členové
+
 ### <a name="functions"></a>Funkce
 
-|Funkce|Popis|
+|||
 |-|-|
 |[accumulate](../standard-library/numeric-functions.md#accumulate)|Vypočítá součet všech prvků v určeném rozsahu, včetně některých počátečních hodnot, podle výpočtu po sobě jdoucích částečných součtů nebo vypočítá výsledek po sobě jdoucích částečných výsledků, které jsou získány pomocí zadané binární operace místo operace součtu.|
 |[adjacent_difference](../standard-library/numeric-functions.md#adjacent_difference)|Vypočítá po sobě následující rozdíly mezi každým prvkem a jeho předchůdcem ve vstupním rozsahu a vydá výsledky do cílového rozsahu nebo vypočte výsledek zobecněné procedury, kde je operace rozdílu nahrazena jinou zadanou binární operací.|
+|[exclusive_scan](../standard-library/numeric-functions.md#exclusive_scan)||
+|[GCD](../standard-library/numeric-functions.md#gcd)||
+|[inclusive_scan](../standard-library/numeric-functions.md#inclusive_scan)||
 |[inner_product](../standard-library/numeric-functions.md#inner_product)|Vypočítá součet prvků produktu ve dvou rozsazích a přidá jej k zadané počáteční hodnotě nebo vypočítá výsledek zobecněné procedury, kde jsou operace součtu a produktu nahrazeny jinými zadanými binárními operacemi.|
 |[iota](../standard-library/numeric-functions.md#iota)|Obsahuje počáteční hodnotu počínaje prvním prvkem a následně postupné přírůstky hodnoty (`value++`) v každém z prvků intervalu `[first, last)`.|
+|[LCM](../standard-library/numeric-functions.md#lcm)||
 |[partial_sum](../standard-library/numeric-functions.md#partial_sum)|Vypočítá sérii součtů ve vstupním rozsahu od prvního prvku po *můžu*tý prvek a uloží výsledek každého součtu v *můžu*-tém prvku cílového rozsahu nebo vypočítá výsledek generalizovaný postup, kde operace součtu je nahrazena jinou zadanou binární operací.|
+|[snížení](../standard-library/numeric-functions.md#reduce)||
+|[transform_exclusive_scan](../standard-library/numeric-functions.md#transform_exclusive_scan)||
+|[transform_inclusive_scan](../standard-library/numeric-functions.md#transform_inclusive_scan)||
+|[transform_reduce](../standard-library/numeric-functions.md#transform_reduce)||
 
 ## <a name="see-also"></a>Viz také:
 

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - typetrait header
 - type_traits
 ms.assetid: 2260b51f-8160-4c66-a82f-00b534cb60d4
-ms.openlocfilehash: c80629fd8771206d193b53aa7c32073de0ba45dd
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c83949a2c74447735f6863c5f1af68b4dfe2ee4e
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62278979"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68243525"
 ---
 # <a name="lttypetraitsgt"></a>&lt;type_traits&gt;
 
@@ -81,7 +81,7 @@ Primární typ kategorie
 |[is_enum](../standard-library/is-enum-class.md)|Ověřuje, zda typ výčtu.|
 |[is_union](../standard-library/is-union-class.md)|Ověřuje, zda je typ sjednocení.|
 |[is_class](../standard-library/is-class-class.md)|Ověřuje, zda typ třídy.|
-|[is_function](../standard-library/is-function-class.md)|Ověřuje, zda typ je typ funkce.|
+|[is_function –](../standard-library/is-function-class.md)|Ověřuje, zda typ je typ funkce.|
 
 Složený typ kategorie
 
@@ -110,6 +110,7 @@ Typ vlastnosti
 |[is_polymorphic](../standard-library/is-polymorphic-class.md)|Ověřuje, zda typ polymorfní třídy.|
 |[is_abstract](../standard-library/is-abstract-class.md)|Ověřuje, zda typ je abstraktní třída.|
 |[is_final](../standard-library/is-final-class.md)|Ověřuje, zda typ není typem třídy označené `final`.|
+|[is_aggregate](../standard-library/is-aggregate-class.md)||
 |[is_signed](../standard-library/is-signed-class.md)|Ověřuje, zda typ celé číslo se znaménkem.|
 |[is_unsigned](../standard-library/is-unsigned-class.md)|Ověřuje, zda typ celé číslo bez znaménka.|
 |[is_constructible](../standard-library/is-constructible-class.md)|Ověřuje, zda typ constructible pomocí zadanými typy argumentu.|
@@ -119,6 +120,8 @@ Typ vlastnosti
 |[is_assignable](../standard-library/type-traits-functions.md#is_assignable)|Ověřuje, zda první typ lze přiřadit hodnotu druhého typu.|
 |[is_copy_assignable](../standard-library/type-traits-functions.md#is_copy_assignable)|Ověřuje, zda je možné přiřadit typ konstantní odkaz na hodnotu typu.|
 |[is_move_assignable](../standard-library/type-traits-functions.md#is_move_assignable)|Ověřuje, zda je možné přiřadit typ odkaz rvalue typu.|
+|[is_swappable](../standard-library/type-traits-functions.md#is_swappable)||
+|[is_swappable_with](../standard-library/type-traits-functions.md#is_swappable_with)||
 |[is_destructible –](../standard-library/is-destructible-class.md)|Ověřuje, zda typ zničitelné.|
 |[is_trivially_constructible](../standard-library/is-trivially-constructible-class.md)|Ověřuje, zda typ používá žádné netriviální operace při použití zadaného typů.|
 |[is_trivially_default_constructible](../standard-library/is-trivially-default-constructible-class.md)|Ověřuje, zda typ používá žádné netriviální operace při vytvořen výchozí.|
@@ -127,7 +130,7 @@ Typ vlastnosti
 |[is_trivially_assignable](../standard-library/is-trivially-assignable-class.md)|Testuje, jestli jsou tyto typy Přiřaditelné a přiřazení používá žádné netriviální operace.|
 |[is_trivially_copy_assignable](../standard-library/type-traits-functions.md#is_trivially_copy_assignable)|Testuje, jestli je typ přiřaditelný kopírování a přiřazení používá žádné netriviální operace.|
 |[is_trivially_move_assignable](../standard-library/type-traits-functions.md#is_trivially_move_assignable)|Testuje, jestli je typ přiřaditelný přesunutí a přiřazení používá žádné netriviální operace.|
-|[is_trivially_destructible](../standard-library/is-trivially-destructible-class.md)|Testuje, jestli je typ zničitelné a používá žádné operace netriviální destruktor.|
+|[is_trivially_destructible –](../standard-library/is-trivially-destructible-class.md)|Testuje, jestli je typ zničitelné a používá žádné operace netriviální destruktor.|
 |[is_nothrow_constructible](../standard-library/is-nothrow-constructible-class.md)|Ověřuje, zda je typ constructible a se ví, že výjimku při vytvářeny pomocí zadané typy.|
 |[is_nothrow_default_constructible](../standard-library/is-nothrow-default-constructible-class.md)|Testy, jestli je typ výchozí constructible a se ví, že výjimku při vytvořen výchozí.|
 |[is_nothrow_copy_constructible](../standard-library/is-nothrow-copy-constructible-class.md)|Ověřuje, zda typ je kopírovací a kopírovací konstruktor se ví, že výjimku.|
@@ -135,8 +138,11 @@ Typ vlastnosti
 |[is_nothrow_assignable](../standard-library/is-nothrow-assignable-class.md)|Testuje, jestli je typ přiřaditelný pomocí zadaného typu a přiřazení se ví, že výjimku.|
 |[is_nothrow_copy_assignable](../standard-library/is-nothrow-copy-assignable-class.md)|Testuje, jestli je typ přiřaditelný kopírování a přiřazení se ví, že výjimku.|
 |[is_nothrow_move_assignable](../standard-library/type-traits-functions.md#is_nothrow_move_assignable)|Testuje, jestli je typ přiřaditelný přesunutí a přiřazení se ví, že výjimku.|
-|[is_nothrow_destructible](../standard-library/is-nothrow-destructible-class.md)|Testuje, jestli je typ zničitelné a destruktor se ví, že výjimku.|
+|[is_nothrow_swappable](../standard-library/type-traits-functions.md#is_nothrow_swappable)||
+|[is_nothrow_swappable_with](../standard-library/type-traits-functions.md#is_nothrow_swappable_with)||
+|[is_nothrow_destructible –](../standard-library/is-nothrow-destructible-class.md)|Testuje, jestli je typ zničitelné a destruktor se ví, že výjimku.|
 |`has_virtual_destructor`|Ověřuje, zda typ má virtuální destruktor.|
+|`has_unique_object_representations`||
 | [is_invocable](is-invocable-classes.md) | Ověřuje, zda volatelného typu lze vyvolat pomocí zadanými typy argumentu.<br/> Přidáno v C ++ 17. |
 | [is_invocable_r](is-invocable-classes.md) | Testuje, zda volatelného typu lze vyvolat pomocí zadanými typy argumentu a výsledek je lze převést na zadaný typ.<br/> Přidáno v C ++ 17. |
 | [is_nothrow_invocable](is-invocable-classes.md) | Testy, jestli je možné vyvolat volatelného typu pomocí zadaného argumentu typů a není znám vyvolávat výjimky.<br/> Přidáno v C ++ 17. |
@@ -166,7 +172,7 @@ Typ relace
 |[add_volatile](../standard-library/add-volatile-class.md)|Vytvoří **volatile** typ z typu.|
 |[add_cv](../standard-library/add-cv-class.md)|Vytvoří **const volatile** typ z typu.|
 |[remove_const](../standard-library/remove-const-class.md)|Vytvoří nekonstantní typ z typu.|
-|[remove_volatile](../standard-library/remove-volatile-class.md)|Vytvoří stálé typ z typu.|
+|[remove_volatile –](../standard-library/remove-volatile-class.md)|Vytvoří stálé typ z typu.|
 |[remove_cv](../standard-library/remove-cv-class.md)|Vytvoří nekonstantní typ není typu volatile z typu.|
 
 Odkaz na úpravy
@@ -203,7 +209,7 @@ Další transformace
 |||
 |-|-|
 |[aligned_storage](../standard-library/aligned-storage-class.md)|Neinicializované paměti přidělí zarovnaný typu.|
-|[aligned_union](../standard-library/aligned-union-class.md)|Neinicializované paměti přidělí pro zarovnané sjednocení s netriviálními konstruktor nebo destruktor.|
+|[aligned_union –](../standard-library/aligned-union-class.md)|Neinicializované paměti přidělí pro zarovnané sjednocení s netriviálními konstruktor nebo destruktor.|
 |[common_type](../standard-library/common-type-class.md)|Vytvoří společný typ všechny typy balíček parametrů.|
 |[Podmíněné](../standard-library/conditional-class.md)|Pokud je podmínka pravdivá, vytvoří první zadaný typ, jinak druhého zadaného typu.|
 |[decay](../standard-library/decay-class.md)|Vytvoří typ jako předán podle hodnoty. Vytvoří typ bez odkazu, nekonstantní nebo není typu volatile nebo vytvoří ukazatel na typ.|
@@ -211,6 +217,14 @@ Další transformace
 |[invoke_result](invoke-result-class.md)|Určuje návratový typ volatelného typu, který přijímá zadanými typy argumentu. <br/>Přidáno v C ++ 17. |
 |[result_of](../standard-library/result-of-class.md)|Určuje návratový typ volatelného typu, který přijímá zadanými typy argumentu. <br/>Přidáno v C ++ 14, zastaralé v C ++ 17. |
 |[underlying_type](../standard-library/underlying-type-class.md)|Vytvoří základní celočíselného typu pro typ výčtu.|
+
+Logický operátor osobnostní rysy
+
+|||
+|-|-|
+|[spojení](../standard-library/conjunction-class.md)||
+|[disjunkce](../standard-library/disjunction-class.md)||
+|[Negace](../standard-library/negation-class.md)||
 
 ## <a name="see-also"></a>Viz také:
 

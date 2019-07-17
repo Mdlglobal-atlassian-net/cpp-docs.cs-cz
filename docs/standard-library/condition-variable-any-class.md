@@ -18,12 +18,12 @@ helpviewer_keywords:
 - std::condition_variable_any::wait
 - std::condition_variable_any::wait_for
 - std::condition_variable_any::wait_until
-ms.openlocfilehash: c38c080b0a8dbd9d4b0b76496aa367fa55892f50
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7ecf13974404ec6e223d5d3e7387a70526eeefcc
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62279047"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68244648"
 ---
 # <a name="conditionvariableany-class"></a>condition_variable_any – třída
 
@@ -37,29 +37,23 @@ class condition_variable_any;
 
 ## <a name="members"></a>Členové
 
-### <a name="public-constructors"></a>Veřejné konstruktory
+### <a name="constructors"></a>Konstruktory
 
-|Název|Popis|
-|----------|-----------------|
-|[condition_variable_any](#condition_variable_any)|Vytvoří `condition_variable_any` objektu.|
+|||
+|-|-|
+|[condition_variable_any –](#condition_variable_any)|Vytvoří `condition_variable_any` objektu.|
 
-### <a name="public-methods"></a>Veřejné metody
+### <a name="functions"></a>Funkce
 
-|Název|Popis|
-|----------|-----------------|
+|||
+|-|-|
 |[notify_all](#notify_all)|Odblokuje všechna vlákna, která čekají `condition_variable_any` objektu.|
 |[notify_one](#notify_one)|Odblokuje jedno z vláken, která čekají `condition_variable_any` objektu.|
 |[Počkej](#wait)|Blokuje vlákno.|
 |[wait_for](#wait_for)|Blokuje vlákno a nastavuje časový interval, po jejímž uplynutí se vlákno odblokuje.|
 |[wait_until](#wait_until)|Blokuje vlákno a nastavuje maximální bod v čase, kdy se vlákno odblokuje.|
 
-## <a name="requirements"></a>Požadavky
-
-**Záhlaví:** \<condition_variable >
-
-**Namespace:** std
-
-## <a name="condition_variable_any"></a>  condition_variable_any::condition_variable_any – konstruktor
+## <a name="condition_variable_any"></a> condition_variable_any –
 
 Vytvoří `condition_variable_any` objektu.
 
@@ -71,7 +65,7 @@ condition_variable_any();
 
 Pokud není k dispozici není dostatek paměti, vyvolá konstruktor [system_error](../standard-library/system-error-class.md) objekt, který má `not_enough_memory` kód chyby. Pokud objekt nelze vytvořit, protože jiný prostředek není k dispozici, vyvolá konstruktor `system_error` objekt, který má `resource_unavailable_try_again` kód chyby.
 
-## <a name="notify_all"></a>  condition_variable_any::notify_all –
+## <a name="notify_all"></a> notify_all
 
 Odblokuje všechna vlákna, která čekají `condition_variable_any` objektu.
 
@@ -79,7 +73,7 @@ Odblokuje všechna vlákna, která čekají `condition_variable_any` objektu.
 void notify_all() noexcept;
 ```
 
-## <a name="notify_one"></a>  condition_variable_any::notify_one –
+## <a name="notify_one"></a> notify_one
 
 Odblokuje jedno z vláken, která čekají na `condition_variable_any` objektu.
 
@@ -87,7 +81,7 @@ Odblokuje jedno z vláken, která čekají na `condition_variable_any` objektu.
 void notify_one() noexcept;
 ```
 
-## <a name="wait"></a>  condition_variable_any::wait –
+## <a name="wait"></a> Počkej
 
 Blokuje vlákno.
 
@@ -101,10 +95,10 @@ void wait(Lock& Lck, Predicate Pred);
 
 ### <a name="parameters"></a>Parametry
 
-*LCK*<br/>
+*LCK*\
 A `mutex` objekt jakéhokoli typu.
 
-*Před*<br/>
+*Před*\
 Libovolný výraz, který vrátí **true** nebo **false**.
 
 ### <a name="remarks"></a>Poznámky
@@ -118,7 +112,7 @@ while (!Pred())
     wait(Lck);
 ```
 
-## <a name="wait_for"></a>  condition_variable_any::wait_for –
+## <a name="wait_for"></a> wait_for
 
 Blokuje vlákno a nastavuje časový interval, po jejímž uplynutí se vlákno odblokuje.
 
@@ -132,13 +126,13 @@ bool wait_for(Lock& Lck, const chrono::duration<Rep, Period>& Rel_time, Predicat
 
 ### <a name="parameters"></a>Parametry
 
-*LCK*<br/>
+*LCK*\
 A `mutex` objekt jakéhokoli typu.
 
-*Rel_time*<br/>
+*Rel_time*\
 A `chrono::duration` probudí objekt, který určuje dobu před vlákna.
 
-*Před*<br/>
+*Před*\
 Libovolný výraz, který vrátí **true** nebo **false**.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -161,7 +155,7 @@ while(!Pred())
 return true;
 ```
 
-## <a name="wait_until"></a>  condition_variable_any::wait_until –
+## <a name="wait_until"></a> wait_until
 
 Blokuje vlákno a nastavuje maximální bod v čase, kdy se vlákno odblokuje.
 
@@ -187,13 +181,13 @@ void wait_until(
 
 ### <a name="parameters"></a>Parametry
 
-*LCK*<br/>
+*LCK*\
 Objekt mutex.
 
-*Abs_time*<br/>
+*Abs_time*\
 A [chrono::time_point](../standard-library/time-point-class.md) objektu.
 
-*Před*<br/>
+*Před*\
 Libovolný výraz, který vrátí **true** nebo **false**.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -217,8 +211,3 @@ return true;
 ```
 
 Třetí a čtvrtá metoda použije ukazatel na objekt typu `xtime` nahradit `chrono::time_point` objektu. `xtime` Objekt určuje maximální dobu čekání na signál.
-
-## <a name="see-also"></a>Viz také:
-
-[Odkaz na soubory hlaviček](../standard-library/cpp-standard-library-header-files.md)<br/>
-[<condition_variable>](../standard-library/condition-variable.md)<br/>

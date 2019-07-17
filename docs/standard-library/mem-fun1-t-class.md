@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - mem_fun1_t class
 ms.assetid: 01a8c2c2-b2f7-4e3f-869c-5b5b9f06ea54
-ms.openlocfilehash: 42a6ee7c169d078e216b82365ab26d10838798c6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 822de97849750a72948137ba8fe23beab8554ff5
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62412862"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68245101"
 ---
 # <a name="memfun1t-class"></a>mem_fun1_t – třída
 
@@ -28,19 +28,18 @@ class mem_fun1_t : public binary_function<Type *, Arg, Result> {
     Result operator()(
     Type* _Pleft,
     Arg right) const;
-
 };
 ```
 
 ### <a name="parameters"></a>Parametry
 
-*_Pm*<br/>
+*_Pm*\
 Ukazatel na členskou funkci třídy `Type` má být převeden na objekt funkce.
 
-*_Pleft*<br/>
+*_Pleft*\
 Objekt, který *_Pm* členská funkce je volána v.
 
-*doprava*<br/>
+*doprava*\
 Argument, který je právě přiřazen k *_Pm*.
 
 ## <a name="return-value"></a>Návratová hodnota
@@ -49,19 +48,8 @@ Přizpůsobitelnou binární funkci.
 
 ## <a name="remarks"></a>Poznámky
 
-Třída šablony ukládá kopie *_Pm*, která musí být ukazatel na členskou funkci třídy `Type`, v objektu privátní člen. Definuje jeho členskou funkci `operator()` jako vracející ( **_Pleft** -> \* `_Pm`) ( **správné**).
+Třída šablony ukládá kopie *_Pm*, která musí být ukazatel na členskou funkci třídy `Type`, v objektu privátní člen. Definuje jeho členskou funkci `operator()` jako vracející ( **_Pleft** -> \* `_Pm`) (**správné**).
 
 ## <a name="example"></a>Příklad
 
 Konstruktor třídy `mem_fun1_t` se obvykle nepoužívá přímo; pomocnou funkci `mem_fun` slouží k přizpůsobení členské funkce. Zobrazit [mem_fun –](../standard-library/functional-functions.md#mem_fun) příklad, jak používat adaptéry členské funkce.
-
-## <a name="requirements"></a>Požadavky
-
-**Záhlaví:** \<funkční >
-
-**Namespace:** std
-
-## <a name="see-also"></a>Viz také:
-
-[Bezpečný přístup z více vláken ve standardní knihovně C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
-[Standardní knihovna C++ – referenční dokumentace](../standard-library/cpp-standard-library-reference.md)<br/>

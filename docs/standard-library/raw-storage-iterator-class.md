@@ -10,12 +10,12 @@ helpviewer_keywords:
 - std::raw_storage_iterator [C++], element_type
 - std::raw_storage_iterator [C++], iter_type
 ms.assetid: 6f033f15-f48e-452a-a326-647ea2cf346f
-ms.openlocfilehash: 8e13d03e577df4c64e85704993cfc0ff81af5f8f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: eb32d1846c4e94fbd275dcc416de4f37d9bb53f1
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62369758"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68240380"
 ---
 # <a name="rawstorageiterator-class"></a>raw_storage_iterator – třída
 
@@ -25,15 +25,15 @@ Třída adaptéru, která je k dispozici pro povolení algoritmů pro ukládán�
 
 ```cpp
 template <class OutputIterator, class Type>
-class raw_storage_iterator
+    class raw_storage_iterator
 ```
 
 ### <a name="parameters"></a>Parametry
 
-*OutputIterator*<br/>
+*OutputIterator*\
 Určuje výstupní iterátor pro objekt uložené.
 
-*Typ*<br/>
+*Typ*\
 Typ objektu, pro který je přidělen úložiště.
 
 ## <a name="remarks"></a>Poznámky
@@ -46,32 +46,26 @@ Tato třída adaptéru se používá v případě potřeby k oddělení přiděl
 
 ### <a name="constructors"></a>Konstruktory
 
-|Konstruktor|Popis|
+|||
 |-|-|
 |[raw_storage_iterator](#raw_storage_iterator)|Vytvoří iterátor úložiště pomocí zadané základní iterátor výstupu.|
 
 ### <a name="typedefs"></a>Typedefs
 
-|Název typu|Popis|
+|||
 |-|-|
 |[element_type](#element_type)|Obsahuje typ, který popisuje element, který má být uložena iterátor úložiště.|
 |[iter_type](#iter_type)|Obsahuje typ, který popisuje iterátoru, které je základem iterátor úložiště.|
 
 ### <a name="operators"></a>Operátory
 
-|Operátor|Popis|
+|||
 |-|-|
 |[Operator *](#op_star)|Operátor přesměrování používaný k implementaci výrazu výstupního iterátoru \* `ii`  =  `x`.|
 |[operátor =](#op_eq)|Operátor přiřazení používaný k implementaci výrazu iterátoru úložiště \* `i`  =  `x` pro ukládání do paměti.|
 |[Operator ++](#op_add_add)|Operátory preincrement a následného zvýšení u iterátorů úložiště.|
 
-## <a name="requirements"></a>Požadavky
-
-**Záhlaví:** \<paměti >
-
-**Namespace:** std
-
-## <a name="element_type"></a>  raw_storage_iterator::ELEMENT_TYPE
+### <a name="element_type"></a> ELEMENT_TYPE
 
 Obsahuje typ, který popisuje element, který má být uložena iterátor úložiště.
 
@@ -79,11 +73,11 @@ Obsahuje typ, který popisuje element, který má být uložena iterátor úlož
 typedef Type element_type;
 ```
 
-### <a name="remarks"></a>Poznámky
+#### <a name="remarks"></a>Poznámky
 
 Typ je synonymum pro parametr šablony raw_storage_iterator – třída `Type`.
 
-## <a name="iter_type"></a>  raw_storage_iterator::iter_type
+### <a name="iter_type"></a> iter_type
 
 Obsahuje typ, který popisuje iterátoru, které je základem iterátor úložiště.
 
@@ -91,11 +85,11 @@ Obsahuje typ, který popisuje iterátoru, které je základem iterátor úloži�
 typedef ForwardIterator iter_type;
 ```
 
-### <a name="remarks"></a>Poznámky
+#### <a name="remarks"></a>Poznámky
 
 Typ je synonymum pro parametr šablony `ForwardIterator`.
 
-## <a name="op_star"></a>  raw_storage_iterator::Operator\*
+### <a name="op_star"></a> – Operátor\*
 
 Operátor přesměrování používaný k implementaci výrazu iterátoru úložiště \* *ii* = *x*.
 
@@ -103,15 +97,15 @@ Operátor přesměrování používaný k implementaci výrazu iterátoru úlož
 raw_storage_iterator<ForwardIterator, Type>& operator*();
 ```
 
-### <a name="return-value"></a>Návratová hodnota
+#### <a name="return-value"></a>Návratová hodnota
 
 Odkaz na iterátor úložiště
 
-### <a name="remarks"></a>Poznámky
+#### <a name="remarks"></a>Poznámky
 
 Požadavky `ForwardIterator` si, že nezpracovaná úložiště iterátoru musí splňovat vyžadují pouze výraz \* *ii* = *t* platné a že neříká nic o **operátor** nebo `operator=` sami. Vrátí operátory členů v této implementaci  **\*to**tak, aby [operátor =](#op_eq)(**constType**&) můžete provádět skutečný úložiště ve výrazu například \* *ptr* = `val`.
 
-### <a name="example"></a>Příklad
+#### <a name="example"></a>Příklad
 
 ```cpp
 // raw_storage_iterator_op_deref.cpp
@@ -155,14 +149,15 @@ int main( void)
    raw_storage_iterator< Int*, Int > it( pInt );
 *it = 5;
 }
-/* Output:
+```
+
+```Output
 Not constructed.
 Copying 5
 Constructing 5
-*/
 ```
 
-## <a name="op_eq"></a>  raw_storage_iterator::Operator =
+### <a name="op_eq"></a> operátor =
 
 Operátor přiřazení používaný k implementaci výrazu iterátoru úložiště \* *můžu* = *x* pro ukládání do paměti.
 
@@ -171,22 +166,22 @@ raw_storage_iterator<ForwardIterator, Type>& operator=(
     const Type& val);
 ```
 
-### <a name="parameters"></a>Parametry
+#### <a name="parameters"></a>Parametry
 
-*Val*<br/>
+*Val*\
 Hodnota objektu typu `Type` má být vložen do paměti.
 
-### <a name="return-value"></a>Návratová hodnota
+#### <a name="return-value"></a>Návratová hodnota
 
 Operátor vloží `val` do paměti a následně vrátí odkaz na iterátor úložiště.
 
-### <a name="remarks"></a>Poznámky
+#### <a name="remarks"></a>Poznámky
 
 Požadavky `ForwardIterator` stavu, ve kterém úložiště iterátoru musí splňovat vyžadují pouze výraz \* *ii* = *t* platné a že neříká nic o **operátor** nebo `operator=` sami. Tyto operátory členů vrátit  **\*to**.
 
 Operátor přiřazení vytvoří další objekt v pořadí výstupu pomocí uloženého iterátoru hodnoty nejprve vyhodnocením výrazu nové umístění **nové** (( `void` \*) &\* **první**) **typ**( `val`).
 
-### <a name="example"></a>Příklad
+#### <a name="example"></a>Příklad
 
 ```cpp
 // raw_storage_iterator_op_assign.cpp
@@ -228,14 +223,15 @@ int main( void )
    raw_storage_iterator<Int*, Int> it( pInt );
 *it = 5;
 }
-/* Output:
+```
+
+```Output
 Not constructed.
 Copying 5
 Constructing 5
-*/
 ```
 
-## <a name="op_add_add"></a>  raw_storage_iterator::Operator ++
+### <a name="op_add_add"></a> Operator ++
 
 Operátory preincrement a následného zvýšení u iterátorů úložiště.
 
@@ -245,11 +241,11 @@ raw_storage_iterator<ForwardIterator, Type>& operator++();
 raw_storage_iterator<ForwardIterator, Type> operator++(int);
 ```
 
-### <a name="return-value"></a>Návratová hodnota
+#### <a name="return-value"></a>Návratová hodnota
 
 Iterátor úložiště nebo odkaz na iterátor úložiště.
 
-### <a name="remarks"></a>Poznámky
+#### <a name="remarks"></a>Poznámky
 
 První operátor nakonec se pokusí extrahovat a uložit objekt typu `CharType` z přidruženého vstupního datového proudu. Druhý operátor vytvoří kopii tohoto objektu, zvýší na objekt a potom vrátí kopii.
 
@@ -259,7 +255,7 @@ Druhý operátor o vytvoří kopii tohoto  **\*to**, zvýší uložený výstupn
 
 Konstruktor ukládá `first` jako výstupní objekt iterátoru.
 
-### <a name="example"></a>Příklad
+#### <a name="example"></a>Příklad
 
 ```cpp
 // raw_storage_iterator_op_incr.cpp
@@ -282,16 +278,17 @@ int main( void )
 
    delete[] pInt;
 }
-/* Output:
+```
+
+```Output
 array 0 = 0
 array 1 = 2
 array 2 = 4
 array 3 = 6
 array 4 = 8
-*/
 ```
 
-## <a name="raw_storage_iterator"></a>  raw_storage_iterator::raw_storage_iterator
+### <a name="raw_storage_iterator"></a> raw_storage_iterator –
 
 Vytvoří iterátor úložiště pomocí zadané základní iterátor výstupu.
 
@@ -299,12 +296,12 @@ Vytvoří iterátor úložiště pomocí zadané základní iterátor výstupu.
 explicit raw_storage_iterator(ForwardIterator first);
 ```
 
-### <a name="parameters"></a>Parametry
+#### <a name="parameters"></a>Parametry
 
-*první*<br/>
+*první*\
 Dopředný iterátor, který tvoří základ, je `raw_storage_iterator` objektu při konstrukci.
 
-### <a name="example"></a>Příklad
+#### <a name="example"></a>Příklad
 
 ```cpp
 // raw_storage_iterator_ctor.cpp
@@ -360,7 +357,9 @@ int main( void )
 
    free(pInt);
 }
-/* Output:
+```
+
+```Output
 Error! I'm not constructed!
 Copying 1
 Error! I'm not constructed!
@@ -381,9 +380,4 @@ array 0 = 1
 array 1 = 2
 array 2 = 3
 array 3 = 4
-*/
 ```
-
-## <a name="see-also"></a>Viz také:
-
-[Bezpečný přístup z více vláken ve standardní knihovně C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>

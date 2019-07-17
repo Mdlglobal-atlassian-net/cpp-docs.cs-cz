@@ -70,12 +70,12 @@ helpviewer_keywords:
 - std::numeric_limits [C++], tinyness_before
 - std::numeric_limits [C++], traps
 ms.assetid: 9e817177-0e91-48e6-b680-0531c4b26625
-ms.openlocfilehash: 861850f192281d64ef02ec4a241315c05cd3318f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: bc9f9bd1157af96ced3c901309f19dcaa5dadab3
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62371513"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68246712"
 ---
 # <a name="numericlimits-class"></a>numeric_limits – třída
 
@@ -85,21 +85,21 @@ Třída šablony popisuje aritmetické vlastnosti předdefinovaných číselnýc
 
 ```cpp
 template <class Type>
-class numeric_limits
+    class numeric_limits
 ```
 
 ### <a name="parameters"></a>Parametry
 
-*Typ*<br/>
-Datový typ základní prvek, jehož vlastnosti jsou právě testováno nebo dotazovat nebo nastavit.
+*Typ*\
+Datový typ základní prvek, jehož vlastnosti jsou právě testováno nebo dotazovat nebo nastavit. *Typ* lze také deklarovat **const**, **volatile**, nebo **const volatile**.
 
 ## <a name="remarks"></a>Poznámky
 
-Záhlaví definuje explicitní specializace pro typy **wchar_t**, **bool**, **char**, **podepsané char**, **bez znaménka Char**, **krátký**, **unsigned short**, **int**, **unsigned int**, **dlouho**, **unsigned long**, **float**, **double**, **long double**, **long long**, **unsigned long long.**, **char16_t**, a **char32_t**. Pro tyto explicitní specializace členu [numeric_limits::is_specialized](#is_specialized) je **true**, a všechny relevantní členy mají smysluplné hodnoty. Program můžete zadat další explicitní specializace. Většina členské funkce třídy popisují nebo testování je to možné implementace **float**.
+Záhlaví definuje explicitní specializace pro typy **wchar_t**, **bool**, **char**, **podepsané char**, **bez znaménka Char**, **krátký**, **unsigned short**, **int**, **unsigned int**, **dlouho**, **unsigned long**, **float**, **double**, **long double**, **long long**, **unsigned long long.** , **char16_t**, a **char32_t**. Pro tyto explicitní specializace členu [numeric_limits::is_specialized](#is_specialized) je **true**, a všechny relevantní členy mají smysluplné hodnoty. Program můžete zadat další explicitní specializace. Většina členské funkce třídy popisují nebo testování je to možné implementace **float**.
 
 Pro libovolné specializace mít žádné členy smysluplné hodnoty. Uloží objekt člena, který nemá smysluplnou hodnotu nula (nebo **false**) a vrátí členskou funkci, která nevrací hodnotu smysluplné `Type(0)`.
 
-### <a name="static-functions-and-constants"></a>Statické funkce a konstanty
+## <a name="static-functions-and-constants"></a>Statické funkce a konstanty
 
 |||
 |-|-|
@@ -110,7 +110,7 @@ Pro libovolné specializace mít žádné členy smysluplné hodnoty. Uloží ob
 |[has_denorm](#has_denorm)|Testuje, zda typ umožňuje denormalizovaný hodnoty.|
 |[has_denorm_loss](#has_denorm_loss)|Ověřuje, zda ztrátou přesnosti se detekuje jako denormalizace ztrátu, nikoli jako nepřesné výsledky.|
 |[has_infinity](#has_infinity)|Ověřuje, zda typ má reprezentaci pro kladné nekonečno.|
-|[has_quiet_NaN](#has_quiet_nan)|Ověřuje, zda typ má reprezentaci pro tichý nečíselné (NAN), což je nonsignaling.|
+|[has_quiet_NaN](#has_quiet_nan)|Ověřuje, zda typ má reprezentaci pro tichý nečíselné (NAN), který je bez signalizace.|
 |[has_signaling_NaN](#has_signaling_nan)|Ověřuje, zda typ má reprezentaci pro signalizaci nečíselné (NAN).|
 |[Infinity](#infinity)|Reprezentace pro kladné nekonečno pro typ, pokud je k dispozici.|
 |[is_bounded](#is_bounded)|Testuje, zda je sada hodnot, které mohou představovat typ je omezené.|
@@ -119,7 +119,7 @@ Pro libovolné specializace mít žádné členy smysluplné hodnoty. Uloží ob
 |[is_integer](#is_integer)|Testuje, zda je typ má reprezentaci celého čísla.|
 |[is_modulo](#is_modulo)|Testuje, zda má typ modulo reprezentace.|
 |[is_signed](#is_signed)|Testuje, zda je typ má reprezentaci podepsaný držitelem.|
-|[is_specialized](#is_specialized)|Testuje, zda typ má explicitní specializace definované v šabloně třídy `numeric_limits`.|
+|[is_specialized –](#is_specialized)|Testuje, zda typ má explicitní specializace definované v šabloně třídy `numeric_limits`.|
 |[Nejnižší](#lowest)|Vrátí největší omezenou zápornou hodnotu.|
 |[max](#max)|Vrátí maximální konečná hodnota typu.|
 |[max_digits10](#max_digits10)|Vrátí počet desetinných míst, které jsou potřeba k tomu, že dvě odlišné hodnoty typu mají odlišné reprezentace decimal.|
@@ -136,13 +136,7 @@ Pro libovolné specializace mít žádné členy smysluplné hodnoty. Uloží ob
 |[tinyness_before](#tinyness_before)|Ověřuje, zda typ můžete určit, že hodnota je příliš malá, aby reprezentovala normalizovanou hodnotu před jeho zaokrouhlení.|
 |[depeše](#traps)|Testuje, zda soutisku, která informuje o aritmetické výjimky je implementován pro typ.|
 
-## <a name="requirements"></a>Požadavky
-
-**Záhlaví:** \<omezení >
-
-**Namespace:** std
-
-## <a name="denorm_min"></a>  numeric_limits::denorm_min
+### <a name="denorm_min"></a> denorm_min –
 
 Vrátí nejmenší nenulovou denormalizovaný hodnotu.
 
@@ -150,17 +144,17 @@ Vrátí nejmenší nenulovou denormalizovaný hodnotu.
 static constexpr Type denorm_min() throw();
 ```
 
-### <a name="return-value"></a>Návratová hodnota
+#### <a name="return-value"></a>Návratová hodnota
 
 Nejmenší nenulovou Nenormalizovaná hodnotu.
 
-### <a name="remarks"></a>Poznámky
+#### <a name="remarks"></a>Poznámky
 
 **long double** je stejný jako **double** pro kompilátor jazyka C++.
 
 Vrátí minimální hodnotu pro typ, který je stejný jako [min](#min) Pokud [has_denorm –](#has_denorm) není roven `denorm_present`.
 
-### <a name="example"></a>Příklad
+#### <a name="example"></a>Příklad
 
 ```cpp
 // numeric_limits_denorm_min.cpp
@@ -201,7 +195,7 @@ for long double objects is: 4.94066e-324
 0
 ```
 
-## <a name="digits"></a>  numeric_limits::digits
+### <a name="digits"></a> číslice
 
 Vrátí počet číslic základ číselné soustavy, představující typ bez ztráty přesnosti.
 
@@ -209,15 +203,15 @@ Vrátí počet číslic základ číselné soustavy, představující typ bez zt
 static constexpr int digits = 0;
 ```
 
-### <a name="return-value"></a>Návratová hodnota
+#### <a name="return-value"></a>Návratová hodnota
 
 Počet číslic základ číselné soustavy, představující typ bez ztráty přesnosti.
 
-### <a name="remarks"></a>Poznámky
+#### <a name="remarks"></a>Poznámky
 
 Člen ukládá počet číslic základ číselné soustavy, představující typ beze změny, což je počet bitů než všechny bit znaménka pro předdefinované celočíselný typ, nebo počet číslic mantisa pro předdefinovaný typ s plovoucí desetinnou čárkou.
 
-### <a name="example"></a>Příklad
+#### <a name="example"></a>Příklad
 
 ```cpp
 // numeric_limits_digits_min.cpp
@@ -245,7 +239,7 @@ int main( )
 63
 ```
 
-## <a name="digits10"></a>  numeric_limits::digits10
+### <a name="digits10"></a> digits10 –
 
 Vrátí počet desetinných míst, představující typ bez ztráty přesnosti.
 
@@ -253,11 +247,11 @@ Vrátí počet desetinných míst, představující typ bez ztráty přesnosti.
 static constexpr int digits10 = 0;
 ```
 
-### <a name="return-value"></a>Návratová hodnota
+#### <a name="return-value"></a>Návratová hodnota
 
 Počet desetinných míst, které mohou představovat typ bez ztráty přesnosti.
 
-### <a name="example"></a>Příklad
+#### <a name="example"></a>Příklad
 
 ```cpp
 // numeric_limits_digits10.cpp
@@ -289,7 +283,7 @@ int main( )
 The float is; 100000000
 ```
 
-## <a name="epsilon"></a>  numeric_limits::epsilon
+### <a name="epsilon"></a> Epsilon –
 
 Funkce vrátí rozdíl mezi 1 a nejmenší hodnotu větší než 1, který je reprezentovat podle datového typu.
 
@@ -297,15 +291,15 @@ Funkce vrátí rozdíl mezi 1 a nejmenší hodnotu větší než 1, který je re
 static constexpr Type epsilon() throw();
 ```
 
-### <a name="return-value"></a>Návratová hodnota
+#### <a name="return-value"></a>Návratová hodnota
 
 Rozdíl mezi 1 a nejmenší hodnotu větší než 1, který je reprezentovat podle datového typu.
 
-### <a name="remarks"></a>Poznámky
+#### <a name="remarks"></a>Poznámky
 
 Hodnota je typu FLT_EPSILON **float**. `epsilon` pro typ je nejmenší kladné číslo s plovoucí desetinnou čárkou *N* tak, aby *N* + `epsilon` + *N* je reprezentovatelné.
 
-### <a name="example"></a>Příklad
+#### <a name="example"></a>Příklad
 
 ```cpp
 // numeric_limits_epsilon.cpp
@@ -341,7 +335,7 @@ The difference between 1 and the smallest value greater than 1
 for long double objects is: 2.22045e-016
 ```
 
-## <a name="has_denorm"></a>  numeric_limits::has_denorm
+### <a name="has_denorm"></a> has_denorm –
 
 Testuje, zda typ umožňuje denormalizovaný hodnoty.
 
@@ -349,15 +343,15 @@ Testuje, zda typ umožňuje denormalizovaný hodnoty.
 static constexpr float_denorm_style has_denorm = denorm_absent;
 ```
 
-### <a name="return-value"></a>Návratová hodnota
+#### <a name="return-value"></a>Návratová hodnota
 
 Hodnotu výčtu typu **const**`float_denorm_style`, která udává, zda typ umožňuje Nenormalizovaná hodnoty.
 
-### <a name="remarks"></a>Poznámky
+#### <a name="remarks"></a>Poznámky
 
 Člen úložišť `denorm_present` pro typ s plovoucí desetinnou čárkou, který obsahuje Nenormalizovaná hodnoty efektivně proměnný počet bitů exponentu.
 
-### <a name="example"></a>Příklad
+#### <a name="example"></a>Příklad
 
 ```cpp
 // numeric_limits_has_denorm.cpp
@@ -387,7 +381,7 @@ Whether double objects allow denormalized values: 1
 Whether long int objects allow denormalized values: 0
 ```
 
-## <a name="has_denorm_loss"></a>  numeric_limits::has_denorm_loss
+### <a name="has_denorm_loss"></a> has_denorm_loss –
 
 Ověřuje, zda ztrátou přesnosti se detekuje jako denormalizace ztrátu, nikoli jako nepřesné výsledky.
 
@@ -395,15 +389,15 @@ Ověřuje, zda ztrátou přesnosti se detekuje jako denormalizace ztrátu, nikol
 static constexpr bool has_denorm_loss = false;
 ```
 
-### <a name="return-value"></a>Návratová hodnota
+#### <a name="return-value"></a>Návratová hodnota
 
 **Hodnota TRUE** Pokud se zjistí ztrátou přesnosti denormalizace ztrátu; **false** Pokud tomu tak není.
 
-### <a name="remarks"></a>Poznámky
+#### <a name="remarks"></a>Poznámky
 
 Člen ukládá hodnotu true pro typ, který určuje, zda hodnotu ztratil přesnost, protože je dodávána jako Nenormalizovaná výsledek (příliš malá, aby reprezentovala normalizovanou hodnotu) nebo je nepřesný (není stejný jako výsledek nevztahují se k omezení exponent rozsah a přesnost), možnost s IEC 559 s plovoucí desetinnou čárkou záruky, které mohou ovlivnit některé výsledky.
 
-### <a name="example"></a>Příklad
+#### <a name="example"></a>Příklad
 
 ```cpp
 // numeric_limits_has_denorm_loss.cpp
@@ -433,7 +427,7 @@ Whether double objects can detect denormalized loss: 1
 Whether long int objects can detect denormalized loss: 0
 ```
 
-## <a name="has_infinity"></a>  numeric_limits::has_infinity
+### <a name="has_infinity"></a> has_infinity –
 
 Ověřuje, zda typ má reprezentaci pro kladné nekonečno.
 
@@ -441,15 +435,15 @@ Ověřuje, zda typ má reprezentaci pro kladné nekonečno.
 static constexpr bool has_infinity = false;
 ```
 
-### <a name="return-value"></a>Návratová hodnota
+#### <a name="return-value"></a>Návratová hodnota
 
 **Hodnota TRUE** Pokud má typ reprezentaci pro kladné nekonečno; **false** Pokud tomu tak není.
 
-### <a name="remarks"></a>Poznámky
+#### <a name="remarks"></a>Poznámky
 
 Vrací člena **true** Pokud [is_iec559 –](#is_iec559) je **true**.
 
-### <a name="example"></a>Příklad
+#### <a name="example"></a>Příklad
 
 ```cpp
 // numeric_limits_has_infinity.cpp
@@ -479,7 +473,7 @@ Whether double objects have infinity: 1
 Whether long int objects have infinity: 0
 ```
 
-## <a name="has_quiet_nan"></a>  numeric_limits::has_quiet_NaN
+### <a name="has_quiet_nan"></a> has_quiet_nan –
 
 Ověřuje, zda typ má reprezentaci pro tichý nečíselné (NAN), což je nonsignaling.
 
@@ -487,15 +481,15 @@ Ověřuje, zda typ má reprezentaci pro tichý nečíselné (NAN), což je nonsi
 static constexpr bool has_quiet_NaN = false;
 ```
 
-### <a name="return-value"></a>Návratová hodnota
+#### <a name="return-value"></a>Návratová hodnota
 
 **Hodnota TRUE** Pokud **typ** má reprezentaci tichý NaN; **false** Pokud tomu tak není.
 
-### <a name="remarks"></a>Poznámky
+#### <a name="remarks"></a>Poznámky
 
 Tichý NAN je kódování není číslo, které nevydá signál své přítomnosti ve výrazu. Vrácená hodnota je **true** Pokud [is_iec559 –](#is_iec559) má hodnotu true.
 
-### <a name="example"></a>Příklad
+#### <a name="example"></a>Příklad
 
 ```cpp
 // numeric_limits_has_quiet_nan.cpp
@@ -525,7 +519,7 @@ Whether double objects have quiet_NaN: 1
 Whether long int objects have quiet_NaN: 0
 ```
 
-## <a name="has_signaling_nan"></a>  numeric_limits::has_signaling_NaN
+### <a name="has_signaling_nan"></a> has_signaling_nan –
 
 Ověřuje, zda typ má reprezentaci pro signalizaci nečíselné (NAN).
 
@@ -533,15 +527,15 @@ Ověřuje, zda typ má reprezentaci pro signalizaci nečíselné (NAN).
 static constexpr bool has_signaling_NaN = false;
 ```
 
-### <a name="return-value"></a>Návratová hodnota
+#### <a name="return-value"></a>Návratová hodnota
 
 **Hodnota TRUE** Pokud typ má reprezentaci signalizační NaN; **false** Pokud tomu tak není.
 
-### <a name="remarks"></a>Poznámky
+#### <a name="remarks"></a>Poznámky
 
 Signalizace NAN je kódování není číslo, která signalizuje své přítomnosti ve výrazu. Vrácená hodnota je **true** Pokud [is_iec559 –](#is_iec559) má hodnotu true.
 
-### <a name="example"></a>Příklad
+#### <a name="example"></a>Příklad
 
 ```cpp
 // numeric_limits_has_signaling_nan.cpp
@@ -571,7 +565,7 @@ Whether double objects have a signaling_NaN: 1
 Whether long int objects have a signaling_NaN: 0
 ```
 
-## <a name="infinity"></a>  numeric_limits::Infinity
+### <a name="infinity"></a> Infinity
 
 Reprezentuje kladné nekonečno pro typ, pokud je k dispozici.
 
@@ -579,15 +573,15 @@ Reprezentuje kladné nekonečno pro typ, pokud je k dispozici.
 static constexpr Type infinity() throw();
 ```
 
-### <a name="return-value"></a>Návratová hodnota
+#### <a name="return-value"></a>Návratová hodnota
 
 Reprezentuje kladné nekonečno pro typ, pokud je k dispozici.
 
-### <a name="remarks"></a>Poznámky
+#### <a name="remarks"></a>Poznámky
 
 Návratová hodnota má smysl pouze v případě [has_infinity –](#has_infinity) je **true**.
 
-### <a name="example"></a>Příklad
+#### <a name="example"></a>Příklad
 
 ```cpp
 // numeric_limits_infinity.cpp
@@ -625,7 +619,7 @@ The representation of infinity for type double is: inf
 The representation of infinity for type long double is: inf
 ```
 
-## <a name="is_bounded"></a>  numeric_limits::is_bounded
+### <a name="is_bounded"></a> is_bounded
 
 Testuje, zda je sada hodnot, které mohou představovat typ je omezené.
 
@@ -633,15 +627,15 @@ Testuje, zda je sada hodnot, které mohou představovat typ je omezené.
 static constexpr bool is_bounded = false;
 ```
 
-### <a name="return-value"></a>Návratová hodnota
+#### <a name="return-value"></a>Návratová hodnota
 
 **Hodnota TRUE** Pokud má typ omezená sada hodnot reprezentovatelných; **false** Pokud tomu tak není.
 
-### <a name="remarks"></a>Poznámky
+#### <a name="remarks"></a>Poznámky
 
 Máte omezená sada hodnot reprezentovatelných všechny předdefinované typy a vrátit **true**.
 
-### <a name="example"></a>Příklad
+#### <a name="example"></a>Příklad
 
 ```cpp
 // numeric_limits_is_bounded.cpp
@@ -679,7 +673,7 @@ Whether long int objects have bounded set of representable values: 1
 Whether unsigned char objects have bounded set of representable values: 1
 ```
 
-## <a name="is_exact"></a>  numeric_limits::is_exact
+### <a name="is_exact"></a> is_exact –
 
 Testuje, zda jsou zdarma předešlo chybám při zaokrouhlování výpočty provést u typu.
 
@@ -687,15 +681,15 @@ Testuje, zda jsou zdarma předešlo chybám při zaokrouhlování výpočty prov
 static constexpr bool is_exact = false;
 ```
 
-### <a name="return-value"></a>Návratová hodnota
+#### <a name="return-value"></a>Návratová hodnota
 
 **Hodnota TRUE** Pokud výpočty jsou zdarma zaokrouhlení chyby; **false** Pokud tomu tak není.
 
-### <a name="remarks"></a>Poznámky
+#### <a name="remarks"></a>Poznámky
 
 Všechny předdefinované celočíselnými typy mají přesnou reprezentací pro jejich hodnoty a vrátí **false**. Znázornění s pevnou desetinnou čárkou nebo racionální bude také považován za přesný, ale je reprezentace plovoucí desetinné čárky.
 
-### <a name="example"></a>Příklad
+#### <a name="example"></a>Příklad
 
 ```cpp
 // numeric_limits_is_exact.cpp
@@ -733,7 +727,7 @@ Whether long int objects have calculations free of rounding errors: 1
 Whether unsigned char objects have calculations free of rounding errors: 1
 ```
 
-## <a name="is_iec559"></a>  numeric_limits::is_iec559
+### <a name="is_iec559"></a> is_iec559 –
 
 Testuje, zda je typ odpovídá IEC 559 standardy.
 
@@ -741,15 +735,15 @@ Testuje, zda je typ odpovídá IEC 559 standardy.
 static constexpr bool is_iec559 = false;
 ```
 
-### <a name="return-value"></a>Návratová hodnota
+#### <a name="return-value"></a>Návratová hodnota
 
 **Hodnota TRUE** Pokud typ splňuje standardy IEC 559; **false** Pokud tomu tak není.
 
-### <a name="remarks"></a>Poznámky
+#### <a name="remarks"></a>Poznámky
 
 IEC 559 je mezinárodní standard pro reprezentování hodnot s plovoucí desetinnou čárkou a je také označován jako IEEE 754 v USA.
 
-### <a name="example"></a>Příklad
+#### <a name="example"></a>Příklad
 
 ```cpp
 // numeric_limits_is_iec559.cpp
@@ -783,7 +777,7 @@ Whether int objects conform to iec559 standards: 0
 Whether unsigned char objects conform to iec559 standards: 0
 ```
 
-## <a name="is_integer"></a>  numeric_limits::is_integer
+### <a name="is_integer"></a> is_integer –
 
 Testuje, zda je typ má reprezentaci celého čísla.
 
@@ -791,15 +785,15 @@ Testuje, zda je typ má reprezentaci celého čísla.
 static constexpr bool is_integer = false;
 ```
 
-### <a name="return-value"></a>Návratová hodnota
+#### <a name="return-value"></a>Návratová hodnota
 
 **Hodnota TRUE** Pokud má typ reprezentaci celé číslo; **false** Pokud tomu tak není.
 
-### <a name="remarks"></a>Poznámky
+#### <a name="remarks"></a>Poznámky
 
 Všechny předdefinované celočíselnými typy mají reprezentaci celého čísla.
 
-### <a name="example"></a>Příklad
+#### <a name="example"></a>Příklad
 
 ```cpp
 // numeric_limits_is_integer.cpp
@@ -833,7 +827,7 @@ Whether int objects have an integral representation: 1
 Whether unsigned char objects have an integral representation: 1
 ```
 
-## <a name="is_modulo"></a>  numeric_limits::is_modulo
+### <a name="is_modulo"></a> is_modulo –
 
 Testuje, zda **typ** má modulo reprezentace.
 
@@ -841,15 +835,15 @@ Testuje, zda **typ** má modulo reprezentace.
 static constexpr bool is_modulo = false;
 ```
 
-### <a name="return-value"></a>Návratová hodnota
+#### <a name="return-value"></a>Návratová hodnota
 
 **Hodnota TRUE** Pokud má typ modulo reprezentace; **false** Pokud tomu tak není.
 
-### <a name="remarks"></a>Poznámky
+#### <a name="remarks"></a>Poznámky
 
 A modulo reprezentace je nakreslené schéma, kde jsou všechny výsledky zmenšeny modulo některá z hodnot. Všechny typy předdefinované celé číslo bez znaménka mají modulo reprezentace.
 
-### <a name="example"></a>Příklad
+#### <a name="example"></a>Příklad
 
 ```cpp
 // numeric_limits_is_modulo.cpp
@@ -883,7 +877,7 @@ Whether signed char objects have a modulo representation: 1
 Whether unsigned char objects have a modulo representation: 1
 ```
 
-## <a name="is_signed"></a>  numeric_limits::is_signed
+### <a name="is_signed"></a> is_signed –
 
 Testuje, zda je typ má reprezentaci podepsaný držitelem.
 
@@ -891,15 +885,15 @@ Testuje, zda je typ má reprezentaci podepsaný držitelem.
 static constexpr bool is_signed = false;
 ```
 
-### <a name="return-value"></a>Návratová hodnota
+#### <a name="return-value"></a>Návratová hodnota
 
 **Hodnota TRUE** Pokud má typ podepsaný reprezentace; **false** Pokud tomu tak není.
 
-### <a name="remarks"></a>Poznámky
+#### <a name="remarks"></a>Poznámky
 
 Člen ukládá hodnotu true pro typ, který má reprezentaci podepsaný držitelem, které platí pro všechny předdefinované typy celých čísel s plovoucí desetinnou čárkou a podepsaný držitelem.
 
-### <a name="example"></a>Příklad
+#### <a name="example"></a>Příklad
 
 ```cpp
 // numeric_limits_is_signaled.cpp
@@ -933,7 +927,7 @@ Whether signed char objects have a signed representation: 1
 Whether unsigned char objects have a signed representation: 0
 ```
 
-## <a name="is_specialized"></a>  numeric_limits::is_specialized
+### <a name="is_specialized"></a> is_specialized –
 
 Testuje, zda typ má explicitní specializace definované v šabloně třídy `numeric_limits`.
 
@@ -941,15 +935,15 @@ Testuje, zda typ má explicitní specializace definované v šabloně třídy `n
 static constexpr bool is_specialized = false;
 ```
 
-### <a name="return-value"></a>Návratová hodnota
+#### <a name="return-value"></a>Návratová hodnota
 
 **Hodnota TRUE** Pokud typ má explicitní specializace definované v šabloně třídy; **false** Pokud tomu tak není.
 
-### <a name="remarks"></a>Poznámky
+#### <a name="remarks"></a>Poznámky
 
 Explicitní specializace definován pro šablony třídy mají všechny Skalární typy jiné než ukazatele `numeric_limits`.
 
-### <a name="example"></a>Příklad
+#### <a name="example"></a>Příklad
 
 ```cpp
 // numeric_limits_is_specialized.cpp
@@ -987,7 +981,7 @@ Whether int objects have an explicit specialization in the class: 1
 Whether int* objects have an explicit specialization in the class: 0
 ```
 
-## <a name="lowest"></a>  numeric_limits::lowest
+### <a name="lowest"></a> Nejnižší
 
 Vrátí největší omezenou zápornou hodnotu.
 
@@ -995,15 +989,15 @@ Vrátí největší omezenou zápornou hodnotu.
 static constexpr Type lowest() throw();
 ```
 
-### <a name="return-value"></a>Návratová hodnota
+#### <a name="return-value"></a>Návratová hodnota
 
 Vrátí největší omezenou zápornou hodnotu.
 
-### <a name="remarks"></a>Poznámky
+#### <a name="remarks"></a>Poznámky
 
 Vrátí největší omezenou zápornou hodnotu pro typ (což je obvykle `min()` pro celočíselné typy a `-max()` pro typy s plovoucí desetinnou čárkou). Návratová hodnota má smysl Pokud `is_bounded` je **true**.
 
-## <a name="max"></a>  numeric_limits::max
+### <a name="max"></a> maximální počet
 
 Vrátí maximální konečná hodnota typu.
 
@@ -1011,15 +1005,15 @@ Vrátí maximální konečná hodnota typu.
 static constexpr Type max() throw();
 ```
 
-### <a name="return-value"></a>Návratová hodnota
+#### <a name="return-value"></a>Návratová hodnota
 
 Maximální konečná hodnota typu.
 
-### <a name="remarks"></a>Poznámky
+#### <a name="remarks"></a>Poznámky
 
 Maximální konečná hodnota je pro typ INT_MAX **int** a FLT_MAX pro typ **float**. Návratová hodnota má smysl Pokud [is_bounded](#is_bounded) je **true**.
 
-### <a name="example"></a>Příklad
+#### <a name="example"></a>Příklad
 
 ```cpp
 // numeric_limits_max.cpp
@@ -1045,7 +1039,7 @@ int main() {
 }
 ```
 
-## <a name="max_digits10"></a>  numeric_limits::max_digits10
+### <a name="max_digits10"></a> max_digits10 –
 
 Vrátí počet desetinných míst vyžaduje, abyste měli jistotu, že dvě odlišné hodnoty typu mají odlišné reprezentace decimal.
 
@@ -1053,15 +1047,15 @@ Vrátí počet desetinných míst vyžaduje, abyste měli jistotu, že dvě odli
 static constexpr int max_digits10 = 0;
 ```
 
-### <a name="return-value"></a>Návratová hodnota
+#### <a name="return-value"></a>Návratová hodnota
 
 Vrátí počet desetinných míst, které jsou potřeba, abyste měli jistotu, že dvě odlišné hodnoty typu mají odlišné reprezentace desítkové.
 
-### <a name="remarks"></a>Poznámky
+#### <a name="remarks"></a>Poznámky
 
 Člen ukládá počet desetinných míst vyžaduje, abyste měli jistotu, že dvě odlišné hodnoty typu mají odlišné reprezentace decimal.
 
-## <a name="max_exponent"></a>  numeric_limits::max_exponent
+### <a name="max_exponent"></a> max_exponent –
 
 Vrátí maximální kladný celočíselný exponent, který typ s plovoucí desetinnou čárkou mohou představovat jako konečnou hodnotu po její základní základ číselné soustavy je vyvolávána s cílem, které stojí za.
 
@@ -1069,15 +1063,15 @@ Vrátí maximální kladný celočíselný exponent, který typ s plovoucí dese
 static constexpr int max_exponent = 0;
 ```
 
-### <a name="return-value"></a>Návratová hodnota
+#### <a name="return-value"></a>Návratová hodnota
 
 Maximální integrální založené na základ číselné soustavy exponent reprezentovatelných typem.
 
-### <a name="remarks"></a>Poznámky
+#### <a name="remarks"></a>Poznámky
 
 Členská funkce, návratový má smysl pouze pro typy s plovoucí desetinnou čárkou. `max_exponent` Je hodnota FLT_MAX_EXP pro typ **float**.
 
-### <a name="example"></a>Příklad
+#### <a name="example"></a>Příklad
 
 ```cpp
 // numeric_limits_max_exponent.cpp
@@ -1107,7 +1101,7 @@ The maximum radix-based exponent for type double is:  1024
 The maximum radix-based exponent for type long double is:  1024
 ```
 
-## <a name="max_exponent10"></a>  numeric_limits::max_exponent10
+### <a name="max_exponent10"></a> max_exponent10 –
 
 Vrátí maximální kladné celočíselné exponent, který typ s plovoucí desetinnou čárkou mohou představovat jako konečnou hodnotu při vyvolání třídou base deset na výkon.
 
@@ -1115,15 +1109,15 @@ Vrátí maximální kladné celočíselné exponent, který typ s plovoucí dese
 static constexpr int max_exponent10 = 0;
 ```
 
-### <a name="return-value"></a>Návratová hodnota
+#### <a name="return-value"></a>Návratová hodnota
 
 Exponent reprezentovatelné maximální celočíselný základní 10 podle typu.
 
-### <a name="remarks"></a>Poznámky
+#### <a name="remarks"></a>Poznámky
 
 Členská funkce, návratový má smysl pouze pro typy s plovoucí desetinnou čárkou. `max_exponent` Je hodnota FLT_MAX_10 pro typ **float**.
 
-### <a name="example"></a>Příklad
+#### <a name="example"></a>Příklad
 
 ```cpp
 // numeric_limits_max_exponent10.cpp
@@ -1153,7 +1147,7 @@ The maximum base 10 exponent for type double is:  308
 The maximum base 10 exponent for type long double is:  308
 ```
 
-## <a name="min"></a>  numeric_limits::min
+### <a name="min"></a> min
 
 Vrátí minimální Normalizovaná hodnota typu.
 
@@ -1161,15 +1155,15 @@ Vrátí minimální Normalizovaná hodnota typu.
 static constexpr Type min() throw();
 ```
 
-### <a name="return-value"></a>Návratová hodnota
+#### <a name="return-value"></a>Návratová hodnota
 
 Minimální Normalizovaná hodnota typu.
 
-### <a name="remarks"></a>Poznámky
+#### <a name="remarks"></a>Poznámky
 
 Minimální Normalizovaná hodnota je pro typ INT_MIN **int** a FLT_MIN pro typ **float**. Návratová hodnota má smysl Pokud [is_bounded](#is_bounded) je **true** nebo, pokud [is_signed –](#is_signed) je **false**.
 
-### <a name="example"></a>Příklad
+#### <a name="example"></a>Příklad
 
 ```cpp
 // numeric_limits_min.cpp
@@ -1203,7 +1197,7 @@ The minimum value for type int is:  -2147483648
 The minimum value for type short int is:  -32768
 ```
 
-## <a name="min_exponent"></a>  numeric_limits::min_exponent
+### <a name="min_exponent"></a> min_exponent –
 
 Vrátí maximální negativní integrální exponent, který typ s plovoucí desetinnou čárkou mohou představovat jako konečnou hodnotu po její základní základ číselné soustavy je vyvolávána s cílem, které stojí za.
 
@@ -1211,15 +1205,15 @@ Vrátí maximální negativní integrální exponent, který typ s plovoucí des
 static constexpr int min_exponent = 0;
 ```
 
-### <a name="return-value"></a>Návratová hodnota
+#### <a name="return-value"></a>Návratová hodnota
 
 Minimální celočíselné založené na základ číselné soustavy exponent reprezentovat typem.
 
-### <a name="remarks"></a>Poznámky
+#### <a name="remarks"></a>Poznámky
 
 Členská funkce má smysl pouze pro typy s plovoucí desetinnou čárkou. `min_exponent` Je hodnota FLT_MIN_EXP pro typ **float**.
 
-### <a name="example"></a>Příklad
+#### <a name="example"></a>Příklad
 
 ```cpp
 // numeric_limits_min_exponent.cpp
@@ -1249,7 +1243,7 @@ The minimum radix-based exponent for type double is:  -1021
 The minimum radix-based exponent for type long double is:  -1021
 ```
 
-## <a name="min_exponent10"></a>  numeric_limits::min_exponent10
+### <a name="min_exponent10"></a> min_exponent10 –
 
 Vrátí maximální negativní integrální exponent, který typ s plovoucí desetinnou čárkou mohou představovat jako konečnou hodnotu při vyvolání třídou base deset na výkon.
 
@@ -1257,15 +1251,15 @@ Vrátí maximální negativní integrální exponent, který typ s plovoucí des
 static constexpr int min_exponent10 = 0;
 ```
 
-### <a name="return-value"></a>Návratová hodnota
+#### <a name="return-value"></a>Návratová hodnota
 
 Exponent reprezentovatelné minimální celočíselný základní 10 podle typu.
 
-### <a name="remarks"></a>Poznámky
+#### <a name="remarks"></a>Poznámky
 
 Členská funkce má smysl pouze pro typy s plovoucí desetinnou čárkou. `min_exponent10` Je hodnota FLT_MIN_10_EXP pro typ **float**.
 
-### <a name="example"></a>Příklad
+#### <a name="example"></a>Příklad
 
 ```cpp
 // numeric_limits_min_exponent10.cpp
@@ -1295,7 +1289,7 @@ The minimum base 10 exponent for type double is:  -307
 The minimum base 10 exponent for type long double is:  -307
 ```
 
-## <a name="quiet_nan"></a>  numeric_limits::quiet_NaN
+### <a name="quiet_nan"></a> quiet_nan –
 
 Vrátí reprezentaci tichý pro typ není číslo (NAN).
 
@@ -1303,15 +1297,15 @@ Vrátí reprezentaci tichý pro typ není číslo (NAN).
 static constexpr Type quiet_NaN() throw();
 ```
 
-### <a name="return-value"></a>Návratová hodnota
+#### <a name="return-value"></a>Návratová hodnota
 
 Reprezentace typu tichý NAN.
 
-### <a name="remarks"></a>Poznámky
+#### <a name="remarks"></a>Poznámky
 
 Návratová hodnota má smysl pouze v případě [has_quiet_nan –](#has_quiet_nan) je **true**.
 
-### <a name="example"></a>Příklad
+#### <a name="example"></a>Příklad
 
 ```cpp
 // numeric_limits_quiet_nan.cpp
@@ -1341,7 +1335,7 @@ The quiet NaN for type int is:  0
 The quiet NaN for type long double is:  1.#QNAN
 ```
 
-## <a name="radix"></a>  numeric_limits::radix
+### <a name="radix"></a> základ číselné soustavy
 
 Vrátí integrální base označovány jako základ, použitý pro reprezentaci typu.
 
@@ -1349,15 +1343,15 @@ Vrátí integrální base označovány jako základ, použitý pro reprezentaci 
 static constexpr int radix = 0;
 ```
 
-### <a name="return-value"></a>Návratová hodnota
+#### <a name="return-value"></a>Návratová hodnota
 
 Integrální základ pro reprezentaci typu.
 
-### <a name="remarks"></a>Poznámky
+#### <a name="remarks"></a>Poznámky
 
 Základ je 2 pro předdefinované celočíselnými typy a základní třídy, do které se vyvolá exponent nebo FLT_RADIX, předdefinovaných typů s plovoucí desetinnou čárkou.
 
-### <a name="example"></a>Příklad
+#### <a name="example"></a>Příklad
 
 ```cpp
 // numeric_limits_radix.cpp
@@ -1387,7 +1381,7 @@ The base for type int is:  2
 The base for type long double is:  2
 ```
 
-## <a name="round_error"></a>  numeric_limits::round_error
+### <a name="round_error"></a> round_error –
 
 Vrátí maximální zaokrouhlení typ v podrobnostech o chybě.
 
@@ -1395,11 +1389,11 @@ Vrátí maximální zaokrouhlení typ v podrobnostech o chybě.
 static constexpr Type round_error() throw();
 ```
 
-### <a name="return-value"></a>Návratová hodnota
+#### <a name="return-value"></a>Návratová hodnota
 
 Maximální zaokrouhlení typ v podrobnostech o chybě.
 
-### <a name="example"></a>Příklad
+#### <a name="example"></a>Příklad
 
 ```cpp
 // numeric_limits_round_error.cpp
@@ -1429,7 +1423,7 @@ The maximum rounding error for type int is:  0
 The maximum rounding error for type long double is:  0.5
 ```
 
-## <a name="round_style"></a>  numeric_limits::round_style
+### <a name="round_style"></a> round_style –
 
 Vrátí hodnotu, která popisuje různé metody, které můžete vybrat implementace zaokrouhlení s plovoucí desetinnou čárkou na celočíselnou hodnotu.
 
@@ -1437,17 +1431,17 @@ Vrátí hodnotu, která popisuje různé metody, které můžete vybrat implemen
 static constexpr float_round_style round_style = round_toward_zero;
 ```
 
-### <a name="return-value"></a>Návratová hodnota
+#### <a name="return-value"></a>Návratová hodnota
 
 Hodnota z `float_round_style` výčet, který popisuje zaokrouhlování stylu.
 
-### <a name="remarks"></a>Poznámky
+#### <a name="remarks"></a>Poznámky
 
 Člen ukládá hodnotu, která popisuje různé metody, které můžete vybrat implementace zaokrouhlení s plovoucí desetinnou čárkou na celočíselnou hodnotu.
 
 Round style je obtížné zakódované v této implementaci, takže i že pokud program spustí s jiný režim zaokrouhlení, nedojde ke změně této hodnoty.
 
-### <a name="example"></a>Příklad
+#### <a name="example"></a>Příklad
 
 ```cpp
 // numeric_limits_round_style.cpp
@@ -1476,7 +1470,7 @@ The rounding style for a double type is now: 1
 The rounding style for an int type is: 0
 ```
 
-## <a name="signaling_nan"></a>  numeric_limits::signaling_NaN
+### <a name="signaling_nan"></a> signaling_nan –
 
 Pro typ, vrátí reprezentaci signalizace nečíselné (NAN).
 
@@ -1484,15 +1478,15 @@ Pro typ, vrátí reprezentaci signalizace nečíselné (NAN).
 static constexpr Type signaling_NaN() throw();
 ```
 
-### <a name="return-value"></a>Návratová hodnota
+#### <a name="return-value"></a>Návratová hodnota
 
 Reprezentuje signalizační NAN typu.
 
-### <a name="remarks"></a>Poznámky
+#### <a name="remarks"></a>Poznámky
 
 Návratová hodnota má smysl pouze v případě [has_signaling_nan –](#has_signaling_nan) je **true**.
 
-### <a name="example"></a>Příklad
+#### <a name="example"></a>Příklad
 
 ```cpp
 // numeric_limits_signaling_nan.cpp
@@ -1516,7 +1510,7 @@ int main( )
 }
 ```
 
-## <a name="tinyness_before"></a>  numeric_limits::tinyness_before
+### <a name="tinyness_before"></a> tinyness_before –
 
 Ověřuje, zda typ můžete určit, že hodnota je příliš malá, aby reprezentovala normalizovanou hodnotu před jeho zaokrouhlení.
 
@@ -1524,15 +1518,15 @@ Ověřuje, zda typ můžete určit, že hodnota je příliš malá, aby reprezen
 static constexpr bool tinyness_before = false;
 ```
 
-### <a name="return-value"></a>Návratová hodnota
+#### <a name="return-value"></a>Návratová hodnota
 
 **Hodnota TRUE** Pokud typ dokáže malý hodnoty před zaokrouhlení; **false** v případě nedostupnosti.
 
-### <a name="remarks"></a>Poznámky
+#### <a name="remarks"></a>Poznámky
 
 Typy, které dokáží detekovat tinyness byly zahrnuty jako možnost s IEC 559 reprezentace plovoucí desetinné čárky a jeho implementace může mít vliv na některé výsledky.
 
-### <a name="example"></a>Příklad
+#### <a name="example"></a>Příklad
 
 ```cpp
 // numeric_limits_tinyness_before.cpp
@@ -1566,7 +1560,7 @@ Whether long int types can detect tinyness before rounding: 0
 Whether unsigned char types can detect tinyness before rounding: 0
 ```
 
-## <a name="traps"></a>  numeric_limits::traps
+### <a name="traps"></a> depeše
 
 Testuje, zda soutisku, která informuje o aritmetické výjimky je implementován pro typ.
 
@@ -1574,11 +1568,11 @@ Testuje, zda soutisku, která informuje o aritmetické výjimky je implementová
 static constexpr bool traps = false;
 ```
 
-### <a name="return-value"></a>Návratová hodnota
+#### <a name="return-value"></a>Návratová hodnota
 
 **Hodnota TRUE** Pokud zachytávání je implementován pro typ; **false** nesplnění.
 
-### <a name="example"></a>Příklad
+#### <a name="example"></a>Příklad
 
 ```cpp
 // numeric_limits_traps.cpp
@@ -1611,7 +1605,3 @@ Whether double types have implemented trapping: 1
 Whether long int types have implemented trapping: 0
 Whether unsigned char types have implemented trapping: 0
 ```
-
-## <a name="see-also"></a>Viz také:
-
-[Bezpečný přístup z více vláken ve standardní knihovně C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>

@@ -88,12 +88,12 @@ helpviewer_keywords:
 - std::map [C++], upper_bound
 - std::map [C++], value_comp
 ms.assetid: 7876f4c9-ebb4-4878-af1e-09364c43af0a
-ms.openlocfilehash: 52a24bb2372cc7f22797ae7122b6659724c47b55
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 67345a9530162aee0c1b5c44baa81fa9c799014a
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62413005"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68246438"
 ---
 # <a name="map-class"></a>map – třída
 
@@ -113,18 +113,18 @@ class map;
 
 ### <a name="parameters"></a>Parametry
 
-*Key*<br/>
+*Klíč*\
 Datový typ klíče, který se uloží v objektu map.
 
-*Typ*<br/>
+*Typ*\
 Typ dat prvku, který bude uložen v objektu map.
 
-*Osobnostní rysy*<br/>
+*Osobnostní rysy*\
 Typ poskytující objekt funkce, který může porovnat dvě hodnoty prvků pro určení jejich relativního pořadí v objektu map. Tento argument je nepovinný a binární predikát `less<Key>` je výchozí hodnota.
 
 V C ++ 14 můžete povolit heterogenní vyhledávání tak, že zadáte std::less <> predikát, který nemá žádné parametry typu. Další informace najdete v tématu [heterogenní vyhledávání v asociativních kontejnerech](../standard-library/stl-containers.md#sequence_containers)
 
-*Allocator –*<br/>
+*Allocator –* \
 Typ představující uložený objekt alokátoru, který zapouzdřuje informace o přidělování a navrácení paměti zpět objektu map. Tento argument je nepovinný a výchozí hodnota je `allocator<pair<const Key, Type> >`.
 
 ## <a name="remarks"></a>Poznámky
@@ -160,13 +160,13 @@ Na mapě Seřadí prvky pomocí volání uloženého objektu funkce typu [key_co
 
 ### <a name="constructors"></a>Konstruktory
 
-|Konstruktor|Popis|
+|||
 |-|-|
 |[Mapa](#map)|Sestaví seznam určité velikosti nebo s prvky určité hodnoty nebo s konkrétní `allocator` nebo jako kopii jiného objektu map.|
 
 ### <a name="typedefs"></a>Typedefs
 
-|Název typu|Popis|
+|||
 |-|-|
 |[allocator_type](#allocator_type)|Definice typu `allocator` třídy pro objekt map.|
 |[const_iterator](#const_iterator)|Definice typu pro obousměrný iterátor, který může číst **const** prvek v objektu map.|
@@ -192,11 +192,11 @@ Na mapě Seřadí prvky pomocí volání uloženého objektu funkce typu [key_co
 |[začít](#begin)|Vrátí iterátor odkazující na první prvek v objektu map.|
 |[cbegin](#cbegin)|Vrátí konstantní iterátor odkazující na první prvek v objektu map.|
 |[cend](#cend)|Vrátí konstantní iterátor za koncem.|
-|[clear](#clear)|Odstraní všechny prvky objektu map.|
+|[Vymazat](#clear)|Odstraní všechny prvky objektu map.|
 |[Počet](#count)|Vrátí počet prvků objektu map, jejichž klíč odpovídá klíči zadaného parametrem.|
 |[crbegin](#crbegin)|Vrátí konstantní iterátor, který odkazuje na první prvek v obráceném objektu map.|
-|[crend](#crend)|Vrátí konstantní iterátor, který odkazuje na umístění za posledním prvkem v převráceném objektu map.|
-|[emplace](#emplace)|Vloží vytvořený prvek na místo do objektu map.|
+|[crend –](#crend)|Vrátí konstantní iterátor, který odkazuje na umístění za posledním prvkem v převráceném objektu map.|
+|[emplace –](#emplace)|Vloží vytvořený prvek na místo do objektu map.|
 |[emplace_hint](#emplace_hint)|Vloží vytvořený prvek s náznakem umístění na místo do objektu map.|
 |[prázdný](#empty)|Vrátí **true** Pokud je objekt map prázdný.|
 |[ukončení](#end)|Vrátí iterátor za koncem.|
@@ -217,18 +217,12 @@ Na mapě Seřadí prvky pomocí volání uloženého objektu funkce typu [key_co
 
 ### <a name="operators"></a>Operátory
 
-|Operátor|Popis|
+|||
 |-|-|
 |[– operátor&#91;&#93;](#op_at)|Vloží prvek do objektu map se zadanou hodnotou klíče.|
 |[operátor =](#op_eq)|Nahradí prvky objektu map kopií jiného objektu map.|
 
-## <a name="requirements"></a>Požadavky
-
-**Záhlaví:** \<mapy >
-
-**Namespace:** std
-
-## <a name="allocator_type"></a>  map::allocator_type
+## <a name="allocator_type"></a> allocator_type
 
 Typ, který představuje třídu alokátoru pro objekt map.
 
@@ -240,7 +234,7 @@ typedef Allocator allocator_type;
 
 Viz příklad pro [get_allocator](#get_allocator) příklad, který používá `allocator_type`.
 
-## <a name="at"></a>  map::AT
+## <a name="at"></a> v
 
 Vyhledá prvek se zadanou hodnotou klíče.
 
@@ -252,10 +246,8 @@ const Type& at(const Key& key) const;
 
 ### <a name="parameters"></a>Parametry
 
-|Parametr|Popis|
-|-|-|
-|Parametr|Popis|
-|*key*|Hodnota klíče k vyhledání.|
+klíč * \
+Hodnota klíče k vyhledání.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -291,7 +283,7 @@ int main()
     }
 ```
 
-## <a name="begin"></a>  map::begin
+## <a name="begin"></a> začít
 
 Vrátí iterátor adresující první prvek v objektu map.
 
@@ -346,7 +338,7 @@ The first element of m1 is 0
 The first element of m1 is now 1
 ```
 
-## <a name="cbegin"></a>  map::cbegin
+## <a name="cbegin"></a> cbegin
 
 Vrátí **const** iterátor adresující umístění hned za posledním prvkem v rozsahu.
 
@@ -372,7 +364,7 @@ auto i2 = Container.cbegin();
 // i2 is Container<T>::const_iterator
 ```
 
-## <a name="cend"></a>  map::cend
+## <a name="cend"></a> cend
 
 Vrátí **const** iterátor adresující umístění hned za posledním prvkem v rozsahu.
 
@@ -400,7 +392,7 @@ auto i2 = Container.cend();
 
 Hodnota vrácená `cend` by neměla být dereferencována.
 
-## <a name="clear"></a>  map::clear
+## <a name="clear"></a> Vymazat
 
 Odstraní všechny prvky objektu map.
 
@@ -444,7 +436,7 @@ The size of the map is initially 2.
 The size of the map after clearing is 0.
 ```
 
-## <a name="const_iterator"></a>  map::const_iterator
+## <a name="const_iterator"></a> const_iterator
 
 Typ, který poskytuje obousměrný iterátor, který může číst **const** prvek v objektu map.
 
@@ -468,7 +460,7 @@ Chcete-li získat přístup k hodnotě z namapované datum pro element, použijt
 
 Viz příklad pro [začít](#begin) příklad, který používá `const_iterator`.
 
-## <a name="const_pointer"></a>  map::const_pointer
+## <a name="const_pointer"></a> const_pointer
 
 Typ, který poskytuje ukazatel **const** prvku v objektu map.
 
@@ -482,7 +474,7 @@ Typ `const_pointer` nelze použít ke změně hodnoty prvku.
 
 Ve většině případů [iterátoru](#iterator) by měla sloužit pro přístup k prvkům v objektu map.
 
-## <a name="const_reference"></a>  map::const_reference
+## <a name="const_reference"></a> const_reference
 
 Typ, který poskytuje odkaz na **const** prvek uložený v objektu map pro čtení a provádění **const** operace.
 
@@ -532,7 +524,7 @@ The key of first element in the map is 1.
 The data value of first element in the map is 10.
 ```
 
-## <a name="const_reverse_iterator"></a>  map::const_reverse_iterator
+## <a name="const_reverse_iterator"></a> const_reverse_iterator
 
 Typ, který poskytuje obousměrný iterátor, který může přečíst jakýkoli **const** prvek v objektu map.
 
@@ -556,7 +548,7 @@ Chcete-li získat přístup k hodnotě z namapované datum pro element, použijt
 
 Podívejte se na příklad pro [rend](#rend) příklad toho, jak deklarace a používání `const_reverse_iterator`.
 
-## <a name="count"></a>  map::Count
+## <a name="count"></a> Počet
 
 Vrátí počet prvků v objektu map, jejichž klíč odpovídá klíči se zadaným parametrem.
 
@@ -566,7 +558,7 @@ size_type count(const Key& key) const;
 
 ### <a name="parameters"></a>Parametry
 
-*key*<br/>
+*Klíč*\
 Hodnota klíče prvků lze porovnat z mapy.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -624,7 +616,7 @@ The number of elements in m1 with a sort key of 2 is: 1.
 The number of elements in m1 with a sort key of 3 is: 0.
 ```
 
-## <a name="crbegin"></a>  map::crbegin
+## <a name="crbegin"></a> crbegin –
 
 Vrátí konstantní iterátor adresující první prvek v obráceném objektu map.
 
@@ -674,7 +666,7 @@ int main( )
 The first element of the reversed map m1 is 3.
 ```
 
-## <a name="crend"></a>  map::crend
+## <a name="crend"></a> crend –
 
 Vrátí konstantní iterátor adresující umístění následující po posledním prvku v obráceném objektu map.
 
@@ -727,7 +719,7 @@ int main( )
 The last element of the reversed map m1 is 1.
 ```
 
-## <a name="difference_type"></a>  map::difference_type
+## <a name="difference_type"></a> difference_type
 
 Celočíselný typ se znaménkem, který slouží k vyjádření počtu prvků objektu map v rozsahu mezi prvky, na které odkazují iterátory.
 
@@ -783,7 +775,7 @@ int main( )
 The number of elements in the map m1 is: 4.
 ```
 
-## <a name="emplace"></a>  map::emplace
+## <a name="emplace"></a> emplace –
 
 Vloží vytvořený prvek na místo (jsou prováděny žádné operace kopírování nebo přesunutí) do mapy.
 
@@ -796,10 +788,8 @@ emplace(
 
 ### <a name="parameters"></a>Parametry
 
-|Parametr|Popis|
-|-|-|
-|Parametr|Popis|
-|*argumenty*|Argumenty předané vytvořit element, který má být vložen do objektu map, pokud již obsahuje prvek, jehož hodnota je ekvivalentně seřazen.|
+*argumenty*\
+Argumenty předané vytvořit element, který má být vložen do objektu map, pokud již obsahuje prvek, jehož hodnota je ekvivalentně seřazen.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -871,7 +861,7 @@ int main()
 }
 ```
 
-## <a name="emplace_hint"></a>  map::emplace_hint
+## <a name="emplace_hint"></a> emplace_hint –
 
 Vloží vytvořený prvek na místo (jsou prováděny žádné operace kopírování nebo přesunutí), s náznakem umístění.
 
@@ -884,11 +874,11 @@ iterator emplace_hint(
 
 ### <a name="parameters"></a>Parametry
 
-|Parametr|Popis|
-|-|-|
-|Parametr|Popis|
-|*argumenty*|Argumenty předané vytvořit element, který má být vložen do objektu map, pokud mapa již obsahuje tento prvek nebo obecně platí, pokud ho již obsahuje prvek, jehož klíč je ekvivalentně seřazen.|
-|*kde*|Místo zahájení vyhledání správného bodu vložení. (Pokud bezprostředně předchází tento bod *kde*, vložení, může dojít v amortizovaném konstantním času místo logaritmické čas.)|
+*argumenty*\
+Argumenty předané vytvořit element, který má být vložen do objektu map, pokud mapa již obsahuje tento prvek nebo obecně platí, pokud ho již obsahuje prvek, jehož klíč je ekvivalentně seřazen.
+
+*kde*\
+Místo zahájení vyhledání správného bodu vložení. (Pokud bezprostředně předchází tento bod *kde*, vložení, může dojít v amortizovaném konstantním času místo logaritmické čas.)
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -948,7 +938,7 @@ int main()
 }
 ```
 
-## <a name="empty"></a>  map::Empty
+## <a name="empty"></a> prázdný
 
 Testuje, zda je objekt map prázdný.
 
@@ -993,7 +983,7 @@ The map m1 is not empty.
 The map m2 is empty.
 ```
 
-## <a name="end"></a>  map::end
+## <a name="end"></a> ukončení
 
 Vrátí iterátor za koncem.
 
@@ -1015,7 +1005,7 @@ Hodnota vrácená `end` by neměla být dereferencována.
 
 Příklad kódu naleznete v tématu [map::find](#find).
 
-## <a name="equal_range"></a>  map::equal_range
+## <a name="equal_range"></a> equal_range –
 
 Vrátí pár iterátorů, které představují [lower_bound](#lower_bound) klíče a [upper_bound](#upper_bound) klíče.
 
@@ -1027,7 +1017,7 @@ pair <iterator, iterator> equal_range (const Key& key);
 
 ### <a name="parameters"></a>Parametry
 
-*key*<br/>
+*Klíč*\
 Hodnota klíče argumentu k porovnání s klíči řazení prvek z mapy vyhledaly.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -1094,7 +1084,7 @@ matching the 2nd element of the pair returned by equal_range( 2 ).
 The map m1 doesn't have an element with a key less than 40.
 ```
 
-## <a name="erase"></a>  map::Erase
+## <a name="erase"></a> vymazání
 
 Odebere prvek nebo rozsah prvků v objektu map od zadané pozice nebo odebere prvky, které odpovídají zadanému klíči.
 
@@ -1112,16 +1102,16 @@ size_type erase(
 
 ### <a name="parameters"></a>Parametry
 
-*kde*<br/>
+*kde*\
 Pozice prvku, který má být odebrán.
 
-*první*<br/>
+*první*\
 Pozice prvního prvku, který má být odebrán.
 
-*poslední*<br/>
+*poslední*\
 Pozice bezprostředně za posledním prvkem, který má být odebrán.
 
-*Key*<br/>
+*Klíč*\
 Hodnota klíče prvků, které mají být odebrány.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -1210,7 +1200,7 @@ int main()
 }
 ```
 
-## <a name="find"></a>  map::Find
+## <a name="find"></a> Najít
 
 Vrátí iterátor odkazující na umístění prvku v objektu map, který má klíč odpovídající zadanému klíči.
 
@@ -1222,7 +1212,7 @@ const_iterator find(const Key& key) const;
 
 ### <a name="parameters"></a>Parametry
 
-*key*<br/>
+*Klíč*\
 Hodnota klíče k porovnání s klíči řazení prvek z mapy vyhledaly.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -1297,7 +1287,7 @@ int main()
 }
 ```
 
-## <a name="get_allocator"></a>  map::get_allocator
+## <a name="get_allocator"></a> get_allocator
 
 Vrátí kopii přidělování objektu používanou k vytvoření objektu map.
 
@@ -1367,7 +1357,7 @@ int main( )
 }
 ```
 
-## <a name="insert"></a>  map::Insert
+## <a name="insert"></a> Vložit
 
 Vloží prvek nebo rozsah prvků do mapy.
 
@@ -1407,16 +1397,26 @@ IList);
 
 ### <a name="parameters"></a>Parametry
 
-|Parametr|Popis|
-|-|-|
-|Parametr|Popis|
-|*Val*|Hodnota element, který má být vložen do objektu map, pokud již obsahuje prvek, jehož klíč je ekvivalentně seřazen.|
-|*kde*|Místo zahájení vyhledání správného bodu vložení. (Pokud bezprostředně předchází tento bod *kde*, vložení, může dojít v amortizovaném konstantním času místo logaritmické čas.)|
-|*ValTy*|Parametr šablony určující typ argumentu, na mapě můžete použít k vytvoření prvku [value_type](#value_type)a dokonalému předání *Val* jako argument.|
-|*první*|Pozice prvního prvku, který chcete zkopírovat.|
-|*poslední*|Pozice bezprostředně za posledním prvkem, který chcete zkopírovat.|
-|*InputIterator*|Argument funkce šablony, který splňuje požadavky [vstupní iterátor](../standard-library/input-iterator-tag-struct.md) , která odkazuje na prvky typu, který lze použít k sestavení kompletních [value_type](#value_type) objekty.|
-|*IList*|[Initializer_list](../standard-library/initializer-list.md) ze kterého chcete kopírovat prvky.|
+*Val*\
+Hodnota element, který má být vložen do objektu map, pokud již obsahuje prvek, jehož klíč je ekvivalentně seřazen.
+
+*kde*\
+Místo zahájení vyhledání správného bodu vložení. (Pokud bezprostředně předchází tento bod *kde*, vložení, může dojít v amortizovaném konstantním času místo logaritmické čas.)
+
+*ValTy*\
+Parametr šablony určující typ argumentu, na mapě můžete použít k vytvoření prvku [value_type](#value_type)a dokonalému předání *Val* jako argument.
+
+*první*\
+Pozice prvního prvku, který chcete zkopírovat.
+
+*poslední*\
+Pozice bezprostředně za posledním prvkem, který chcete zkopírovat.
+
+*InputIterator*\
+Argument funkce šablony, který splňuje požadavky [vstupní iterátor](../standard-library/input-iterator-tag-struct.md) , která odkazuje na prvky typu, který lze použít k sestavení kompletních [value_type](#value_type) objekty.
+
+*IList*\
+[Initializer_list](../standard-library/initializer-list.md) ze kterého chcete kopírovat prvky.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -1538,7 +1538,7 @@ int main()
 }
 ```
 
-## <a name="iterator"></a>  map::iterator
+## <a name="iterator"></a> iterátor
 
 Typ, který poskytuje obousměrný iterátor, který může číst nebo upravovat libovolný prvek v objektu map.
 
@@ -1558,7 +1558,7 @@ Chcete-li přistupovat k hodnotě klíče pro element, použijte `Iter->first`, 
 
 Viz příklad pro [začít](#begin) příklad toho, jak deklarace a používání `iterator`.
 
-## <a name="key_comp"></a>  map::key_comp
+## <a name="key_comp"></a> key_comp
 
 Získá kopii objektu porovnání použitého pro seřazení klíčů v objektu map.
 
@@ -1629,7 +1629,7 @@ kc1( 2,3 ) returns value of true, where kc1 is the function object of m1.
 kc2( 2,3 ) returns value of false, where kc2 is the function object of m2.
 ```
 
-## <a name="key_compare"></a>  map::key_compare
+## <a name="key_compare"></a> key_compare
 
 Typ poskytující objekt funkce, který může porovnat dva klíče řazení pro určení relativního pořadí dvou prvků v objektu map.
 
@@ -1647,7 +1647,7 @@ Další informace o *osobnostní rysy* najdete v článku [map – třída](../s
 
 Viz příklad pro [key_comp](#key_comp) příklad toho, jak deklarace a používání `key_compare`.
 
-## <a name="key_type"></a>  map::key_type
+## <a name="key_type"></a> key_type
 
 Typ, který popisuje klíče řazení uloženého v jednotlivých prvcích objektu map.
 
@@ -1665,7 +1665,7 @@ Další informace o *klíč*, najdete v části poznámky [map – třída](../s
 
 Viz příklad pro [value_type](#value_type) příklad toho, jak deklarace a používání `key_type`.
 
-## <a name="lower_bound"></a>  map::lower_bound
+## <a name="lower_bound"></a> lower_bound –
 
 Vrátí iterátor na první prvek v objektu map s hodnotou klíče, který je roven nebo větší než zadaný klíč.
 
@@ -1677,7 +1677,7 @@ const_iterator lower_bound(const Key& key) const;
 
 ### <a name="parameters"></a>Parametry
 
-*key*<br/>
+*Klíč*\
 Hodnota klíče argumentu k porovnání s klíči řazení prvek z mapy vyhledaly.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -1736,7 +1736,7 @@ The map m1 doesn't have an element with a key of 4.
 The element of m1 with a key matching that of the last element is: 30.
 ```
 
-## <a name="map"></a>  map::map
+## <a name="map"></a> Mapa
 
 Vytvoří mapu, který je prázdný nebo který je kopií celého nebo části jiného objektu map.
 
@@ -1789,15 +1789,23 @@ map(
 
 ### <a name="parameters"></a>Parametry
 
-|Parametr|Popis|
-|-|-|
-|Parametr|Popis|
-|*Al*|Třída úložiště alokátoru pro tento objekt map, kde je použit výchozí `Allocator`.|
-|*Kompozice*|Funkce porovnání typu `const Traits` používají k seřazení prvků v objektu map, kde je použit výchozí `hash_compare`.|
-|*doprava*|Objekt map, ze kterého je kopií vytvořen objekt set.|
-|*první*|Pozice prvního prvku v rozsahu prvků, které se mají zkopírovat.|
-|*poslední*|Pozice prvního prvku mimo rozsah prvků, které se mají zkopírovat.|
-|*IList*|Objekt initializer_list, ze kterého mají být zkopírovány prvky.|
+*Al*\
+Třída úložiště alokátoru pro tento objekt map, kde je použit výchozí `Allocator`.
+
+*Kompozice*\
+Funkce porovnání typu `const Traits` používají k seřazení prvků v objektu map, kde je použit výchozí `hash_compare`.
+
+*doprava*\
+Objekt map, ze kterého je kopií vytvořen objekt set.
+
+*první*\
+Pozice prvního prvku v rozsahu prvků, které se mají zkopírovat.
+
+*poslední*\
+Pozice prvního prvku mimo rozsah prvků, které se mají zkopírovat.
+
+*IList*\
+Objekt initializer_list, ze kterého mají být zkopírovány prvky.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -1933,7 +1941,7 @@ int main()
 }
 ```
 
-## <a name="mapped_type"></a>  map::mapped_type
+## <a name="mapped_type"></a> mapped_type
 
 Typ, který představuje data uložená v objektu map.
 
@@ -1951,7 +1959,7 @@ Další informace o *typ* najdete v článku [map – třída](../standard-libra
 
 Viz příklad pro [value_type](#value_type) příklad toho, jak deklarace a používání `mapped_type`.
 
-## <a name="max_size"></a>  map::max_size
+## <a name="max_size"></a> max_size
 
 Vrátí maximální délku objektu map.
 
@@ -1984,7 +1992,7 @@ int main( )
 }
 ```
 
-## <a name="op_at"></a>  map::Operator]
+## <a name="op_at"></a> Operator [].
 
 Vloží prvek do objektu map se zadanou hodnotou klíče.
 
@@ -1996,10 +2004,8 @@ Type& operator[](Key&& key);
 
 ### <a name="parameters"></a>Parametry
 
-|Parametr|Popis|
-|-|-|
-|Parametr|Popis|
-|*key*|Hodnota klíče prvku, který má být vložen.|
+*Klíč*\
+Hodnota klíče prvku, který má být vložen.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -2009,7 +2015,7 @@ Odkaz na hodnotu dat vloženého prvku.
 
 Pokud není nalezena hodnota klíče argumentu, je vložen spolu s výchozí hodnotou datového typu.
 
-`operator[]` slouží k vložit prvky do mapy `m` pomocí `m[ key] = DataValue;` kde `DataValue` je hodnota `mapped_type` prvku s hodnotou klíče *klíč*.
+`operator[]` slouží k vložit prvky do mapy `m` pomocí `m[key] = DataValue;` kde `DataValue` je hodnota `mapped_type` prvku s hodnotou klíče *klíč*.
 
 Při použití `operator[]` vložit prvky, vrácený odkaz neudává, zda je vložení změna již existující element nebo vytvoří nový. Členské funkce [najít](#find) a [vložit](#insert) slouží k určení, zda element s určeným klíčem již existuje před vložením.
 
@@ -2084,22 +2090,19 @@ c2[move(str)] == 0
 c2["abc"] == 1
 ```
 
-## <a name="op_eq"></a>  map::Operator =
+## <a name="op_eq"></a> operátor =
 
 Nahradí prvky objektu map kopií jiného objektu map.
 
 ```cpp
 map& operator=(const map& right);
-
 map& operator=(map&& right);
 ```
 
 ### <a name="parameters"></a>Parametry
 
-|Parametr|Popis|
-|-|-|
-|Parametr|Popis|
-|*doprava*|[Mapy](../standard-library/map-class.md) kopírovaná do `map`.|
+*doprava*\
+[Mapy](../standard-library/map-class.md) kopírovaná do `map`.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -2142,7 +2145,7 @@ int main( )
    }
 ```
 
-## <a name="pointer"></a>  map::Pointer
+## <a name="pointer"></a> Ukazatel
 
 Typ, který poskytuje ukazatel na prvek v objektu map.
 
@@ -2156,7 +2159,7 @@ Typ `pointer` lze použít ke změně hodnoty prvku.
 
 Ve většině případů [iterátoru](#iterator) by měla sloužit pro přístup k prvkům v objektu map.
 
-## <a name="rbegin"></a>  map::rbegin
+## <a name="rbegin"></a> rbegin –
 
 Vrátí iterátor adresující první prvek v obráceném objektu map.
 
@@ -2236,7 +2239,7 @@ The reversed map is: 3 2 1 .
 After the erasure, the first element in the reversed map is 2.
 ```
 
-## <a name="reference"></a>  map::Reference
+## <a name="reference"></a> Referenční dokumentace
 
 Typ, který poskytuje odkaz na prvek uložený v objektu map.
 
@@ -2293,7 +2296,7 @@ The data value of first element in the map is 10.
 The modified data value of first element is 15.
 ```
 
-## <a name="rend"></a>  map::rend
+## <a name="rend"></a> rend –
 
 Vrátí iterátor adresující umístění následující po posledním prvku v obráceném objektu map.
 
@@ -2377,7 +2380,7 @@ The reversed map is: 3 2 1 .
 After the erasure, the last element in the reversed map is 2.
 ```
 
-## <a name="reverse_iterator"></a>  map::reverse_iterator
+## <a name="reverse_iterator"></a> reverse_iterator –
 
 Typ, který poskytuje obousměrný iterátor, který může číst nebo upravovat prvek v obráceném objektu map.
 
@@ -2399,7 +2402,7 @@ Chcete-li přistupovat k hodnotě klíče pro element, použijte `rIter`  ->  **
 
 Viz příklad pro [rbegin –](#rbegin) příklad toho, jak deklarace a používání `reverse_iterator`.
 
-## <a name="size"></a>  map::size
+## <a name="size"></a> Velikost
 
 Vrátí počet prvků v objektu map.
 
@@ -2443,7 +2446,7 @@ The map length is 1.
 The map length is now 2.
 ```
 
-## <a name="size_type"></a>  map::size_type
+## <a name="size_type"></a> size_type
 
 Typ celé číslo bez znaménka představující počet prvků v objektu map.
 
@@ -2455,7 +2458,7 @@ typedef typename allocator_type::size_type size_type;
 
 Podívejte se na příklad pro [velikost](#size) příklad toho, jak deklarace a používání `size_type`.
 
-## <a name="swap"></a>  map::swap
+## <a name="swap"></a> Prohození
 
 Zamění prvky dvou objektů map.
 
@@ -2466,7 +2469,7 @@ void swap(
 
 ### <a name="parameters"></a>Parametry
 
-*doprava*<br/>
+*doprava*\
 Argument mapy poskytující prvky pro záměnu s cílová mapa.
 
 ### <a name="remarks"></a>Poznámky
@@ -2525,7 +2528,7 @@ After swapping with m2, map m1 is: 100 200.
 After swapping with m3, map m1 is: 300.
 ```
 
-## <a name="upper_bound"></a>  map::upper_bound
+## <a name="upper_bound"></a> upper_bound –
 
 Vrátí iterátor na první prvek v objektu map, že s klíčem s hodnotou, která je větší než zadaný klíč.
 
@@ -2537,7 +2540,7 @@ const_iterator upper_bound(const Key& key) const;
 
 ### <a name="parameters"></a>Parametry
 
-*key*<br/>
+*Klíč*\
 Hodnota klíče argumentu k porovnání s hodnotou klíče řazení prvek z mapy být vyhledán.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -2597,7 +2600,7 @@ The 1st element of m1 with a key greater than
 that of the initial element of m1 is: 20.
 ```
 
-## <a name="value_comp"></a>  map::value_comp
+## <a name="value_comp"></a> value_comp –
 
 Členská funkce vrátí objekt funkce, která určuje pořadí prvků v objektu map porovnáním jejich hodnoty klíče.
 
@@ -2665,7 +2668,7 @@ The element ( 1,10 ) precedes the element ( 2,5 ).
 The element ( 2,5 ) does not precede the element ( 1,10 ).
 ```
 
-## <a name="value_type"></a>  map::value_type
+## <a name="value_type"></a> value_type
 
 Typ objektu uložený jako prvek v objektu map.
 

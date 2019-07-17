@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - const_mem_fun1_t class
 ms.assetid: 250fac30-9663-4133-9051-6303f76ea259
-ms.openlocfilehash: df984d90f8b632f8e3e3b183943343952d45b8be
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8ccd9d7e58b9cadec83b64df5553564db20a5745
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62211972"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68244518"
 ---
 # <a name="constmemfun1t-class"></a>const_mem_fun1_t – třída
 
@@ -30,13 +30,13 @@ class const_mem_fun1_t : public binary_function<const Type *, Arg, Result>
 
 ### <a name="parameters"></a>Parametry
 
-*member_ptr*<br/>
+*member_ptr*\
 Ukazatel na členskou funkci třídy `Type` má být převeden na objekt funkce.
 
-*doleva*<br/>
+*doleva*\
 **Const** objekt, který *member_ptr* členská funkce je volána v.
 
-*doprava*<br/>
+*doprava*\
 Argument, který je právě přiřazen k *member_ptr*.
 
 ## <a name="return-value"></a>Návratová hodnota
@@ -50,14 +50,3 @@ Třída šablony ukládá kopie *member_ptr*, která musí být ukazatel na čle
 ## <a name="example"></a>Příklad
 
 Konstruktor třídy `const_mem_fun1_t` je zřídka se používá přímo. `mem_fn` slouží k přizpůsobení členské funkce. Zobrazit [mem_fn –](../standard-library/functional-functions.md#mem_fn) příklad, jak používat adaptéry členské funkce.
-
-## <a name="requirements"></a>Požadavky
-
-**Záhlaví:** \<funkční >
-
-**Namespace:** std
-
-## <a name="see-also"></a>Viz také:
-
-[Bezpečný přístup z více vláken ve standardní knihovně C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
-[Standardní knihovna C++ – referenční dokumentace](../standard-library/cpp-standard-library-reference.md)<br/>

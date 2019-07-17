@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - mem_fun_t class
 ms.assetid: 242566d4-750c-4c87-9d63-2e2c9d19ca2a
-ms.openlocfilehash: cf1080f5f832bd79a347ee7fd847ff56a7567fdf
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 19ccd4835c4257a7f409bcf0f7bda1a898567458
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62412888"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68245088"
 ---
 # <a name="memfunt-class"></a>mem_fun_t – třída
 
@@ -25,16 +25,15 @@ class mem_fun_t : public unary_function<Type *, Result> {
     explicit mem_fun_t(Result (Type::* _Pm)());
 
     Result operator()(Type* _Pleft) const;
-
 };
 ```
 
 ### <a name="parameters"></a>Parametry
 
-*_Pm*<br/>
+*_Pm*\
 Ukazatel na členskou funkci třídy `Type` má být převeden na objekt funkce.
 
-*_Pleft*<br/>
+*_Pleft*\
 Objekt, který *_Pm* členská funkce je volána v.
 
 ## <a name="return-value"></a>Návratová hodnota
@@ -43,20 +42,8 @@ Přizpůsobitelnou jednočlennou funkci.
 
 ## <a name="remarks"></a>Poznámky
 
-Třída šablony ukládá kopie *_Pm*, která musí být ukazatel na členskou funkci třídy `Type`, v objektu privátní člen. Definuje jeho členskou funkci `operator()` jako vracející ( `_Pleft` ->*  `_Pm`) ().
+Třída šablony ukládá kopie *_Pm*, která musí být ukazatel na členskou funkci třídy `Type`, v objektu privátní člen. Definuje jeho členskou funkci `operator()` jako vracející (`_Pleft`->* `_Pm`) ().
 
 ## <a name="example"></a>Příklad
 
 Konstruktor třídy `mem_fun_t` se obvykle nepoužívá přímo; pomocnou funkci `mem_fun` slouží k přizpůsobení členské funkce. Zobrazit [mem_fun –](../standard-library/functional-functions.md#mem_fun) příklad, jak používat adaptéry členské funkce.
-
-## <a name="requirements"></a>Požadavky
-
-**Záhlaví:** \<funkční >
-
-**Namespace:** std
-
-## <a name="see-also"></a>Viz také:
-
-[\<funkční >](../standard-library/functional.md)<br/>
-[Bezpečný přístup z více vláken ve standardní knihovně C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
-[Standardní knihovna C++ – referenční dokumentace](../standard-library/cpp-standard-library-reference.md)<br/>

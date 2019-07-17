@@ -16,21 +16,16 @@ helpviewer_keywords:
 - std::operator&lt; (queue)
 - std::operator&lt;= (queue)
 - std::operator== (queue)
-ms.openlocfilehash: 496b728b67c4539a63d5bf3c783f8c9145c1de42
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 420d717b34b6c17587f8790701906e06ab008d96
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62369901"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68240280"
 ---
 # <a name="ltqueuegt-operators"></a>&lt;fronty&gt; operátory
 
-||||
-|-|-|-|
-|[operator!=](#op_neq)|[– Operátor&gt;](#op_gt)|[– Operátor&gt;=](#op_gt_eq)|
-|[– Operátor&lt;](#op_lt)|[– Operátor&lt;=](#op_lt_eq)|[operator==](#op_eq_eq)|
-
-## <a name="op_neq"></a>  Operator! =
+## <a name="op_neq"></a> Operator! =
 
 Testuje, zda je objekt fronty na levé straně operátoru není roven objektu fronty na pravé straně.
 
@@ -40,10 +35,10 @@ bool operator!=(const queue <Type, Container>& left, const queue <Type, Containe
 
 ### <a name="parameters"></a>Parametry
 
-*doleva*<br/>
+*doleva*\
 Objekt typu `queue`.
 
-*doprava*<br/>
+*doprava*\
 Objekt typu `queue`.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -97,7 +92,7 @@ The queues q1 and q2 are not equal.
 The queues q1 and q3 are equal.
 ```
 
-## <a name="op_lt"></a>  – Operátor&lt;
+## <a name="op_lt"></a> – Operátor&lt;
 
 Testuje, zda je objekt fronty na levé straně operátoru menší než objekt fronty na pravé straně.
 
@@ -107,10 +102,10 @@ bool operator<(const queue <Type, Container>& left, const queue <Type, Container
 
 ### <a name="parameters"></a>Parametry
 
-*doleva*<br/>
+*doleva*\
 Objekt typu `queue`.
 
-*doprava*<br/>
+*doprava*\
 Objekt typu `queue`.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -160,7 +155,7 @@ The queue q1 is less than the queue q2.
 The queue q1 is not less than the queue q3.
 ```
 
-## <a name="op_lt_eq"></a>  – Operátor&lt;=
+## <a name="op_lt_eq"></a> – Operátor&lt;=
 
 Testuje, zda je objekt fronty na levé straně operátoru je menší než nebo rovna hodnotě objekt fronty na pravé straně.
 
@@ -170,10 +165,10 @@ bool operator<=(const queue <Type, Container>& left, const queue <Type, Containe
 
 ### <a name="parameters"></a>Parametry
 
-*doleva*<br/>
+*doleva*\
 Objekt typu `queue`.
 
-*doprava*<br/>
+*doprava*\
 Objekt typu `queue`.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -225,7 +220,7 @@ The queue q1 is greater than the queue q2.
 The queue q1 is less than or equal to the queue q3.
 ```
 
-## <a name="op_eq_eq"></a>  Operator ==
+## <a name="op_eq_eq"></a> Operator ==
 
 Testuje, zda je objekt fronty na levé straně operátoru roven objektu fronty na pravé straně.
 
@@ -235,10 +230,10 @@ bool operator==(const queue <Type, Container>& left, const queue <Type, Containe
 
 ### <a name="parameters"></a>Parametry
 
-*doleva*<br/>
+*doleva*\
 Objekt typu `queue`.
 
-*doprava*<br/>
+*doprava*\
 Objekt typu `queue`.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -291,7 +286,7 @@ The queues q1 and q2 are not equal.
 The queues q1 and q3 are equal.
 ```
 
-## <a name="op_gt"></a>  – Operátor&gt;
+## <a name="op_gt"></a> – Operátor&gt;
 
 Testuje, zda je objekt fronty na levé straně operátoru větší než objekt fronty na pravé straně.
 
@@ -301,10 +296,10 @@ bool operator>(const queue <Type, Container>& left, const queue <Type, Container
 
 ### <a name="parameters"></a>Parametry
 
-*doleva*<br/>
+*doleva*\
 Objekt typu `queue`.
 
-*doprava*<br/>
+*doprava*\
 Objekt typu `queue`.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -357,7 +352,7 @@ The queue q1 is not greater than the queue q2.
 The queue q1 is greater than the queue q3.
 ```
 
-## <a name="op_gt_eq"></a>  – Operátor&gt;=
+## <a name="op_gt_eq"></a> – Operátor&gt;=
 
 Testuje, zda je objekt fronty na levé straně operátoru větší než nebo rovna hodnotě objekt fronty na pravé straně.
 
@@ -367,10 +362,10 @@ bool operator>=(const queue <Type, Container>& left, const queue <Type, Containe
 
 ### <a name="parameters"></a>Parametry
 
-*doleva*<br/>
+*doleva*\
 Objekt typu `queue`.
 
-*doprava*<br/>
+*doprava*\
 Objekt typu `queue`.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -421,7 +416,3 @@ int main( )
 The queue q1 is less than the queue q2.
 The queue q1 is greater than or equal to the queue q3.
 ```
-
-## <a name="see-also"></a>Viz také:
-
-[\<queue>](../standard-library/queue.md)<br/>

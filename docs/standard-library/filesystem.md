@@ -9,12 +9,12 @@ f1_keywords:
 - filesystem/std::experimental::filesystem::directory_iterator
 - <filesystem>
 ms.assetid: 5005753b-46fa-43e1-8d4e-1b38617d3cfd
-ms.openlocfilehash: 0f397d8b0c39769fde20b6aa50412c979237f70a
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.openlocfilehash: a44fc3c6c6a37c20e1e1c294929ae3cb15cece58
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65220371"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68240700"
 ---
 # <a name="ltfilesystemgt"></a>&lt;systém souborů&gt;
 
@@ -89,10 +89,12 @@ Nakonec se o důležitou funkci objekty cesty je, že je můžete využít bez o
 
 Další informace a příklady kódu naleznete v tématu [navigace systému souborů (C++)](../standard-library/file-system-navigation.md).
 
-## <a name="classes"></a>Třídy
+## <a name="members"></a>Členové
 
-|Name|Popis|
-|----------|-----------------|
+### <a name="classes"></a>Třídy
+
+|||
+|-|-|
 |[directory_entry – třída](../standard-library/directory-entry-class.md)|Popisuje objekt, který je vrácen `directory_iterator` nebo `recursive_directory_iterator` a obsahuje cestu.|
 |[directory_iterator – třída](../standard-library/directory-iterator-class.md)|Popisuje vstupní iterátor, který pořadí pomocí názvů souboru v adresáři systému souborů.|
 |[filesystem_error – třída](../standard-library/filesystem-error-class.md)|Základní třída pro výjimky, které jsou vyvolány hlášení nižší úrovně systému přetečení.|
@@ -100,10 +102,10 @@ Další informace a příklady kódu naleznete v tématu [navigace systému soub
 |[recursive_directory_iterator – třída](../standard-library/recursive-directory-iterator-class.md)|Popisuje vstupní iterátor, který pořadí pomocí názvů souboru v adresáři systému souborů. Iterátor může také sestup do podadresáře.|
 |[file_status – třída](../standard-library/file-status-class.md)|Zabalí `file_type`.|
 
-## <a name="structs"></a>Struktury
+### <a name="structs"></a>Struktury
 
-|Name|Popis|
-|----------|-----------------|
+|||
+|-|-|
 |[space_info – struktura](../standard-library/space-info-structure.md)|Obsahuje informace o svazku.|
 
 ## <a name="functions"></a>Funkce
@@ -116,12 +118,13 @@ Další informace a příklady kódu naleznete v tématu [navigace systému soub
 
 ## <a name="enumerations"></a>Výčty
 
-|Name|Popis|
-|----------|-----------------|
+|||
+|-|-|
 |[copy_options](../standard-library/filesystem-enumerations.md#copy_options)|Výčet, který se používá s [copy_file –](../standard-library/filesystem-functions.md#copy_file) a určuje chování, pokud cílový soubor už existuje.|
 |[copy_options](../standard-library/filesystem-enumerations.md#copy_options)|Výčet, který se používá s [copy_file –](../standard-library/filesystem-functions.md#copy_file) a určuje chování, pokud cílový soubor už existuje.|
-|[directory_options](../standard-library/filesystem-enumerations.md#directory_options)|Výčet, který určuje možnosti pro adresář iterátory.|
+|[directory_options –](../standard-library/filesystem-enumerations.md#directory_options)|Výčet, který určuje možnosti pro adresář iterátory.|
 |[file_type](../standard-library/filesystem-enumerations.md#file_type)|Výčet pro typy souborů.|
+|[perm_options](../standard-library/filesystem-enumerations.md#perm_options)||
 |[oprávnění](../standard-library/filesystem-enumerations.md#perms)|Typ bitové masky využít k předání možnosti oprávnění a oprávnění|
 
 ## <a name="see-also"></a>Viz také:

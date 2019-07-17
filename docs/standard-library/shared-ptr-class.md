@@ -31,12 +31,12 @@ helpviewer_keywords:
 - std::shared_ptr [C++], unique
 - std::shared_ptr [C++], use_count
 ms.assetid: 1469fc51-c658-43f1-886c-f4530dd84860
-ms.openlocfilehash: 791a18461b3a0ee8237dec47c87f9d441221141d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ca427bd364a5ab66112f23e0a920598ad8ba190b
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62412550"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68246371"
 ---
 # <a name="sharedptr-class"></a>shared_ptr – třída
 
@@ -46,7 +46,7 @@ Zabalí inteligentní ukazatel počítaný odkazy do dynamicky alokovaného obje
 
 ```cpp
 template <class T>
-class shared_ptr;
+    class shared_ptr;
 ```
 
 ## <a name="remarks"></a>Poznámky
@@ -129,44 +129,67 @@ Více vláken může číst a zapisovat různé `shared_ptr` objekty ve stejnou 
 
 ### <a name="constructors"></a>Konstruktory
 
-|Konstruktor|Popis|
+|||
 |-|-|
 |[shared_ptr](#shared_ptr)|Vytvoří `shared_ptr`.|
-|[shared_ptr::~shared_ptr](#dtorshared_ptr)|Odstraní `shared_ptr`.|
+|[~ shared_ptr](#dtorshared_ptr)|Odstraní `shared_ptr`.|
 
-### <a name="types"></a>Typy
+### <a name="typedefs"></a>Typedefs
 
-|Název typu|Popis|
+|||
 |-|-|
 |[element_type](#element_type)|Typ prvku|
 
 ### <a name="functions"></a>Funkce
 
-|Funkce|Popis|
+|||
 |-|-|
+|[allocate_shared](#allocate_shared)||
+|[const_pointer_cast](#const_pointer_cast)||
+|[dynamic_pointer_cast](#dynamic_pointer_cast)||
 |[get](#get)|Získá adresu vlastněného prostředku.|
-|[owner_before](#owner_before)|Vrátí hodnotu PRAVDA, pokud `shared_ptr` je řazen před (nebo menší než) poskytnutý ukazatel.|
+|[get_deleter](#get_deleter)||
+|[make_shared](#make_shared)||
+|[owner_before –](#owner_before)|Vrátí hodnotu PRAVDA, pokud `shared_ptr` je řazen před (nebo menší než) poskytnutý ukazatel.|
+|[reinterpret_pointer_cast](#reinterpret_pointer_cast)||
 |[reset](#reset)|Nahraďte vlastněný zdroj.|
+|[static_pointer_cast](#static_pointer_cast)||
 |[swap](#swap)|Prohodí dva `shared_ptr` objekty.|
 |[unique](#unique)|Testuje, zda je vlastněný zdroj jedinečný.|
-|[use_count](#use_count)|Počítá vlastníky zdrojů.|
+|[use_count –](#use_count)|Počítá vlastníky zdrojů.|
 
 ### <a name="operators"></a>Operátory
 
-|Operátor|Popis|
+|||
 |-|-|
-|[shared_ptr::operator bool](#op_bool)|Testuje, zda existuje vlastněný prostředek.|
-|[shared_ptr::operator*](#op_star)|Získá určenou hodnotu.|
-|[shared_ptr::operator=](#op_eq)|Nahradí vlastněný zdroj.|
-|[shared_ptr::operator-&gt;](#op_arrow)|Získá ukazatel na určenou hodnotu.|
+|[bool – operátor](#op_bool)|Testuje, zda existuje vlastněný prostředek.|
+|[Operator *](#op_star)|Získá určenou hodnotu.|
+|[operátor =](#op_eq)|Nahradí vlastněný zdroj.|
+|[Operator-&gt;](#op_arrow)|Získá ukazatel na určenou hodnotu.|
+|[– Operátor&lt;&lt;](#op_arrowarrow)||
 
-## <a name="requirements"></a>Požadavky
+### <a name="allocate_shared"></a> allocate_shared
 
-**Záhlaví:** \<paměti >
+```cpp
+template<class T, class A, class... Args>
+    shared_ptr<T> allocate_shared(const A& a, Args&&... args);
+```
 
-**Namespace:** std
+### <a name="const_pointer_cast"></a> const_pointer_cast –
 
-## <a name="element_type"></a>  shared_ptr::ELEMENT_TYPE
+```cpp
+template<class T, class U>
+    shared_ptr<T> const_pointer_cast(const shared_ptr<U>& r) noexcept;
+```
+
+### <a name="dynamic_pointer_cast"></a> dynamic_pointer_cast –
+
+```cpp
+template<class T, class U>
+    shared_ptr<T> dynamic_pointer_cast(const shared_ptr<U>& r) noexcept;
+```
+
+### <a name="element_type"></a> ELEMENT_TYPE
 
 Typ prvku
 
@@ -174,11 +197,11 @@ Typ prvku
 typedef T element_type;
 ```
 
-### <a name="remarks"></a>Poznámky
+#### <a name="remarks"></a>Poznámky
 
 Typ je synonymum pro parametr šablony `T`.
 
-### <a name="example"></a>Příklad
+#### <a name="example"></a>Příklad
 
 ```cpp
 // std__memory__shared_ptr_element_type.cpp
@@ -201,7 +224,7 @@ int main()
 *sp0 == 5
 ```
 
-## <a name="get"></a>  shared_ptr::Get
+### <a name="get"></a> získat
 
 Získá adresu vlastněného prostředku.
 
@@ -209,11 +232,11 @@ Získá adresu vlastněného prostředku.
 T *get() const;
 ```
 
-### <a name="remarks"></a>Poznámky
+#### <a name="remarks"></a>Poznámky
 
 Členská funkce vrátí adresu vlastněného prostředku. Pokud objekt není vlastníkem prostředku vrátí hodnotu 0.
 
-### <a name="example"></a>Příklad
+#### <a name="example"></a>Příklad
 
 ```cpp
 // std__memory__shared_ptr_get.cpp
@@ -239,7 +262,21 @@ sp0.get() == 0 == true
 *sp1.get() == 5
 ```
 
-## <a name="op_bool"></a>  shared_ptr::Operator bool
+### <a name="get_deleter"></a> get_deleter –
+
+```cpp
+template<class D, class T>
+    D* get_deleter(const shared_ptr<T>& p) noexcept;
+```
+
+### <a name="make_shared"></a> make_shared
+
+```cpp
+template<class T, class... Args>
+    shared_ptr<T> make_shared(Args&&... args);
+```
+
+### <a name="op_bool"></a> bool – operátor
 
 Testuje, zda existuje vlastněný prostředek.
 
@@ -247,11 +284,11 @@ Testuje, zda existuje vlastněný prostředek.
 explicit operator bool() const noexcept;
 ```
 
-### <a name="remarks"></a>Poznámky
+#### <a name="remarks"></a>Poznámky
 
 Operátor vrátí hodnotu **true** při `get() != nullptr`, jinak **false**.
 
-### <a name="example"></a>Příklad
+#### <a name="example"></a>Příklad
 
 ```cpp
 // std__memory__shared_ptr_operator_bool.cpp
@@ -278,7 +315,7 @@ int main()
 (bool)sp1 == true
 ```
 
-## <a name="op_star"></a>  shared_ptr::Operator *
+### <a name="op_star"></a> Operator *
 
 Získá určenou hodnotu.
 
@@ -286,11 +323,11 @@ Získá určenou hodnotu.
 T& operator*() const;
 ```
 
-### <a name="remarks"></a>Poznámky
+#### <a name="remarks"></a>Poznámky
 
 Dereferenční operátor vrátí `*get()`. Proto uložený ukazatel nesmí mít hodnotu null.
 
-### <a name="example"></a>Příklad
+#### <a name="example"></a>Příklad
 
 ```cpp
 // std__memory__shared_ptr_operator_st.cpp
@@ -312,7 +349,7 @@ int main()
 *sp0 == 5
 ```
 
-## <a name="op_eq"></a>  shared_ptr::Operator =
+### <a name="op_eq"></a> operátor =
 
 Nahradí vlastněný zdroj.
 
@@ -320,34 +357,34 @@ Nahradí vlastněný zdroj.
 shared_ptr& operator=(const shared_ptr& sp);
 
 template <class Other>
-shared_ptr& operator=(const shared_ptr<Other>& sp);
+    shared_ptr& operator=(const shared_ptr<Other>& sp);
 
 template <class Other>
-shared_ptr& operator=(auto_ptr<Other>& ap);
+    shared_ptr& operator=(auto_ptr<Other>& ap);
 
 template <class Other>
-shared_ptr& operator=(auto_ptr<Other>& ap);
+    shared_ptr& operator=(auto_ptr<Other>& ap);
 
 template <class Other>
-shared_ptr& operator=(auto_ptr<Other>&& ap);
+    shared_ptr& operator=(auto_ptr<Other>&& ap);
 
 template <class Other, class Deletor>
-shared_ptr& operator=(unique_ptr<Other, Deletor>&& ap);
+    shared_ptr& operator=(unique_ptr<Other, Deletor>&& ap);
 ```
 
-### <a name="parameters"></a>Parametry
+#### <a name="parameters"></a>Parametry
 
-*sp*<br/>
+*SP*\
 Sdílený ukazatel na kopii.
 
-*ap*<br/>
+*Asie a Tichomoří*\
 Automatický ukazatel na kopii.
 
-### <a name="remarks"></a>Poznámky
+#### <a name="remarks"></a>Poznámky
 
 Všechny operátory snížen počet odkazů prostředku aktuálně vlastníkem `*this` a přiřazení vlastnictví prostředků s názvem podle sekvenci operandů pro `*this`. Pokud klesne počet odkazů na nulu, zdroj je uvolněn. Pokud se operátor nezdaří ponechá `*this` beze změny.
 
-### <a name="example"></a>Příklad
+#### <a name="example"></a>Příklad
 
 ```cpp
 // std__memory__shared_ptr_operator_as.cpp
@@ -376,7 +413,7 @@ int main()
 *sp0 == 10
 ```
 
-## <a name="op_arrow"></a>  shared_ptr::Operator-&gt;
+### <a name="op_arrow"></a> Operator-&gt;
 
 Získá ukazatel na určenou hodnotu.
 
@@ -384,11 +421,11 @@ Získá ukazatel na určenou hodnotu.
 T * operator->() const;
 ```
 
-### <a name="remarks"></a>Poznámky
+#### <a name="remarks"></a>Poznámky
 
 Vrátí operátor výběru `get()`tak, aby výraz `sp->member` se chová stejně jako `(sp.get())->member` kde `sp` je objekt třídy `shared_ptr<T>`. Proto nesmí mít hodnotu null, uložený ukazatel a `T` musí být třída, struktura nebo typu sjednocení se členem `member`.
 
-### <a name="example"></a>Příklad
+#### <a name="example"></a>Příklad
 
 ```cpp
 // std__memory__shared_ptr_operator_ar.cpp
@@ -413,28 +450,42 @@ sp0->first == 1
 sp0->second == 2
 ```
 
-## <a name="owner_before"></a>  shared_ptr::owner_before
+### <a name="op_arrowarrow"></a> – Operátor&lt;&lt;
+
+```cpp
+template<class E, class T, class Y>
+    basic_ostream<E, T>& operator<< (basic_ostream<E, T>& os, const shared_ptr<Y>& p);
+```
+
+### <a name="owner_before"></a> owner_before –
 
 Vrátí hodnotu PRAVDA, pokud `shared_ptr` je řazen před (nebo menší než) poskytnutý ukazatel.
 
 ```cpp
 template <class Other>
-bool owner_before(const shared_ptr<Other>& ptr);
+    bool owner_before(const shared_ptr<Other>& ptr);
 
 template <class Other>
-bool owner_before(const weak_ptr<Other>& ptr);
+    bool owner_before(const weak_ptr<Other>& ptr);
 ```
 
-### <a name="parameters"></a>Parametry
+#### <a name="parameters"></a>Parametry
 
-*ptr*<br/>
+*PTR*\
 `lvalue` Odkazu na buď `shared_ptr` nebo `weak_ptr`.
 
-### <a name="remarks"></a>Poznámky
+#### <a name="remarks"></a>Poznámky
 
 Šablony členské funkce vrátí hodnotu PRAVDA, pokud `*this` je `ordered before` `ptr`.
 
-## <a name="reset"></a>  shared_ptr::Reset
+### <a name="reinterpret_pointer_cast"></a> reinterpret_pointer_cast
+
+```cpp
+template<class T, class U>
+    shared_ptr<T> reinterpret_pointer_cast(const shared_ptr<U>& r) noexcept;
+```
+
+### <a name="reset"></a> Resetovat
 
 Nahraďte vlastněný zdroj.
 
@@ -442,40 +493,40 @@ Nahraďte vlastněný zdroj.
 void reset();
 
 template <class Other>
-void reset(Other *ptr;);
+    void reset(Other *ptr;);
 
 template <class Other, class D>
-void reset(Other *ptr, D dtor);
+    void reset(Other *ptr, D dtor);
 
 template <class Other, class D, class A>
-void reset(Other *ptr, D dtor, A alloc);
+    void reset(Other *ptr, D dtor, A alloc);
 ```
 
-### <a name="parameters"></a>Parametry
+#### <a name="parameters"></a>Parametry
 
-*Jiné*<br/>
+*Ostatní*\
 Typ řízený ukazatelem argumentu.
 
-*D*<br/>
+*D*\
 Typ odstraňovače.
 
-*ptr*<br/>
+*PTR*\
 Ukazatel na kopii.
 
-*dtor*<br/>
+*dtor*\
 Odstraňovač pro kopírování.
 
-*A*<br/>
+*A*\
 Typ alokátoru.
 
-*alloc*<br/>
+*ALLOC*\
 Alokátor ke kopírování.
 
-### <a name="remarks"></a>Poznámky
+#### <a name="remarks"></a>Poznámky
 
 Všechny operátory snížen počet odkazů prostředku aktuálně vlastníkem `*this` a přiřazení vlastnictví prostředků s názvem podle sekvenci operandů pro `*this`. Pokud klesne počet odkazů na nulu, zdroj je uvolněn. Pokud se operátor nezdaří ponechá `*this` beze změny.
 
-### <a name="example"></a>Příklad
+#### <a name="example"></a>Příklad
 
 ```cpp
 // std__memory__shared_ptr_reset.cpp
@@ -521,7 +572,7 @@ int main()
 *sp == 15
 ```
 
-## <a name="shared_ptr"></a>  shared_ptr::shared_ptr
+### <a name="shared_ptr"></a> shared_ptr
 
 Vytvoří `shared_ptr`.
 
@@ -535,76 +586,76 @@ shared_ptr(const shared_ptr& sp);
 shared_ptr(shared_ptr&& sp);
 
 template <class Other>
-explicit shared_ptr(Other* ptr);
+    explicit shared_ptr(Other* ptr);
 
 template <class Other, class D>
-shared_ptr(Other* ptr, D dtor);
+    shared_ptr(Other* ptr, D dtor);
 
 template <class D>
-shared_ptr(nullptr_t ptr, D dtor);
+    shared_ptr(nullptr_t ptr, D dtor);
 
 template <class Other, class D, class A>
-shared_ptr(Other* ptr, D dtor, A  alloc);
+    shared_ptr(Other* ptr, D dtor, A  alloc);
 
 template <class D, class A>
-shared_ptr(nullptr_t ptr, D dtor, A alloc);
+    shared_ptr(nullptr_t ptr, D dtor, A alloc);
 
 template <class Other>
-shared_ptr(const shared_ptr<Other>& sp);
+    shared_ptr(const shared_ptr<Other>& sp);
 
 template <class Other>
-shared_ptr(const weak_ptr<Other>& wp);
+    shared_ptr(const weak_ptr<Other>& wp);
 
 template <class &>
-shared_ptr(std::auto_ptr<Other>& ap);
+    shared_ptr(std::auto_ptr<Other>& ap);
 
 template <class &>
-shared_ptr(std::auto_ptr<Other>&& ap);
+    shared_ptr(std::auto_ptr<Other>&& ap);
 
 template <class Other, class D>
-shared_ptr(unique_ptr<Other, D>&& up);
+    shared_ptr(unique_ptr<Other, D>&& up);
 
 template <class Other>
-shared_ptr(const shared_ptr<Other>& sp, T* ptr);
+    shared_ptr(const shared_ptr<Other>& sp, T* ptr);
 
 template <class Other, class D>
-shared_ptr(const unique_ptr<Other, D>& up) = delete;
+    shared_ptr(const unique_ptr<Other, D>& up) = delete;
 ```
 
-### <a name="parameters"></a>Parametry
+#### <a name="parameters"></a>Parametry
 
-*Jiné*<br/>
+*Ostatní*\
 Typ řízený ukazatelem argumentu.
 
-*ptr*<br/>
+*PTR*\
 Ukazatel na kopii.
 
-*D*<br/>
+*D*\
 Typ odstraňovače.
 
-*A*<br/>
+*A*\
 Typ alokátoru.
 
-*dtor*<br/>
+*dtor*\
 Odstraňovač.
 
-*operátor*<br/>
+*operátor*\
 Alokátor.
 
-*sp*<br/>
+*SP*\
 Inteligentní ukazatel na kopii.
 
-*wp*<br/>
+*webové části*\
 Slabý ukazatel.
 
-*ap*<br/>
+*Asie a Tichomoří*\
 Automatický ukazatel na kopii.
 
-### <a name="remarks"></a>Poznámky
+#### <a name="remarks"></a>Poznámky
 
 Konstruktory jednotlivých vytvořit objekt, který vlastní prostředek s názvem podle sekvenci operandů. Konstruktor `shared_ptr(const weak_ptr<Other>& wp)` vyvolá objekt výjimky typu [bad_weak_ptr – třída](../standard-library/bad-weak-ptr-class.md) Pokud `wp.expired()`.
 
-### <a name="example"></a>Příklad
+#### <a name="example"></a>Příklad
 
 ```cpp
 // std__memory__shared_ptr_construct.cpp
@@ -656,7 +707,7 @@ int main()
 *sp5 == 15
 ```
 
-## <a name="dtorshared_ptr"></a>  shared_ptr::~shared_ptr
+### <a name="dtorshared_ptr"></a> ~ shared_ptr
 
 Odstraní `shared_ptr`.
 
@@ -664,11 +715,11 @@ Odstraní `shared_ptr`.
 ~shared_ptr();
 ```
 
-### <a name="remarks"></a>Poznámky
+#### <a name="remarks"></a>Poznámky
 
 Destruktor sníží počet odkazů prostředku aktuálně vlastníkem `*this`. Pokud klesne počet odkazů na nulu, zdroj je uvolněn.
 
-### <a name="example"></a>Příklad
+#### <a name="example"></a>Příklad
 
 ```cpp
 // std__memory__shared_ptr_destroy.cpp
@@ -711,7 +762,14 @@ use count == 2
 use count == 1
 ```
 
-## <a name="swap"></a>  shared_ptr::swap
+### <a name="static_pointer_cast"></a> static_pointer_cast –
+
+```cpp
+template<class T, class U>
+shared_ptr<T> static_pointer_cast(const shared_ptr<U>& r) noexcept;
+```
+
+### <a name="swap"></a> Prohození
 
 Prohodí dva `shared_ptr` objekty.
 
@@ -719,16 +777,16 @@ Prohodí dva `shared_ptr` objekty.
 void swap(shared_ptr& sp);
 ```
 
-### <a name="parameters"></a>Parametry
+#### <a name="parameters"></a>Parametry
 
-*sp*<br/>
+*SP*\
 Sdílený ukazatel na Prohodit s.
 
-### <a name="remarks"></a>Poznámky
+#### <a name="remarks"></a>Poznámky
 
 Členská funkce opustí prostředku původně vlastněné `*this` následně vlastněné *sp*a prostředky původně vlastněné *sp* následně vlastněné `*this`. Funkce nezmění počty odkazů pro tyto dva prostředky a nevyvolá žádné výjimky.
 
-### <a name="example"></a>Příklad
+#### <a name="example"></a>Příklad
 
 ```cpp
 // std__memory__shared_ptr_swap.cpp
@@ -781,7 +839,7 @@ int main()
 *wp1 == 5
 ```
 
-## <a name="unique"></a>  shared_ptr::Unique
+### <a name="unique"></a> Jedinečný
 
 Testuje, zda je vlastněný zdroj jedinečný.
 
@@ -789,11 +847,11 @@ Testuje, zda je vlastněný zdroj jedinečný.
 bool unique() const;
 ```
 
-### <a name="remarks"></a>Poznámky
+#### <a name="remarks"></a>Poznámky
 
 Členská funkce vrátí **true** Pokud žádné jiné `shared_ptr` objekt vlastníkem prostředku, který je vlastněn `*this`, jinak **false**.
 
-### <a name="example"></a>Příklad
+#### <a name="example"></a>Příklad
 
 ```cpp
 // std__memory__shared_ptr_unique.cpp
@@ -828,7 +886,7 @@ sp1.unique() == true
 sp1.unique() == false
 ```
 
-## <a name="use_count"></a>  shared_ptr::use_count
+### <a name="use_count"></a> use_count –
 
 Počítá vlastníky zdrojů.
 
@@ -836,11 +894,11 @@ Počítá vlastníky zdrojů.
 long use_count() const;
 ```
 
-### <a name="remarks"></a>Poznámky
+#### <a name="remarks"></a>Poznámky
 
 Členská funkce vrátí počet `shared_ptr` objekty, které vlastní prostředek, který je vlastněn `*this`.
 
-### <a name="example"></a>Příklad
+#### <a name="example"></a>Příklad
 
 ```cpp
 // std__memory__shared_ptr_use_count.cpp
@@ -866,8 +924,3 @@ int main()
 sp1.use_count() == 1
 sp1.use_count() == 2
 ```
-
-## <a name="see-also"></a>Viz také:
-
-[weak_ptr – třída](../standard-library/weak-ptr-class.md)<br/>
-[Bezpečný přístup z více vláken ve standardní knihovně C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>

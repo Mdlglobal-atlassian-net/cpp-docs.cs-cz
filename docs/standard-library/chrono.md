@@ -10,53 +10,56 @@ f1_keywords:
 - chrono/std::chrono::milliseconds
 - chrono/std::chrono::microseconds
 ms.assetid: 844de749-f306-482e-89bc-6f53c99c8324
-ms.openlocfilehash: 44620b6ea6c970027a8e9a023c0972c6dec43ee0
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.openlocfilehash: 72d16b068f337fe935d07e1eb2d0e2b74de6268f
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65220241"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68244867"
 ---
 # <a name="ltchronogt"></a>&lt;chrono&gt;
 
 Zahrnout standardní hlavička \<chrono > k definování třídy a funkce, které představují a manipulaci s dob trvání a okamžiky čas.
 
-V sadě Visual Studio 2015, provádění od `steady_clock` došlo ke změně pro splnění požadavků standardu C++ steadiness a monotonicity. `steady_clock` Teď vychází QueryPerformanceCounter() a `high_resolution_clock` je nyní definice typu `steady_clock`. V důsledku toho v Microsoftu C++ kompilátoru `steady_clock::time_point` je nyní definice typu `chrono::time_point<steady_clock>`, nicméně toto není nutně případ v jiných implementacích.
+V sadě Visual Studio 2015, provádění od `steady_clock` došlo ke změně pro splnění požadavků standardu C++ steadiness a monotonicity. `steady_clock` Teď vychází QueryPerformanceCounter() a `high_resolution_clock` je nyní definice typu `steady_clock`. V důsledku toho v Microsoftu C++ kompilátoru `steady_clock::time_point` je nyní definice typu `chrono::time_point<steady_clock>`, nicméně toto pravidlo není nutně případ v jiných implementacích.
 
-## <a name="syntax"></a>Syntaxe
+## <a name="requirements"></a>Požadavky
 
-```cpp
-#include <chrono>
-```
+**Záhlaví:** \<chrono >
+
+**Namespace:** std
+
+## <a name="members"></a>Členové
 
 ### <a name="classes"></a>Třídy
 
-|Name|Popis|
-|----------|-----------------|
+|||
+|-|-|
 |[duration – třída](../standard-library/duration-class.md)|Popisuje typ, který obsahuje časový interval.|
 |[time_point – třída](../standard-library/time-point-class.md)|Popisuje typ, který představuje bod v čase.|
 
 ### <a name="structs"></a>Struktury
 
-|Name|Popis|
-|----------|-----------------|
+|||
+|-|-|
 |[common_type – struktura](../standard-library/common-type-structure.md)|Popisuje specializace třídy šablony [common_type](../standard-library/common-type-class.md) pro konkretizací `duration` a `time_point`.|
 |[duration_values – struktura](../standard-library/duration-values-structure.md)|Poskytuje specifické hodnoty pro `duration` parametr šablony `Rep`.|
+|[Opravili jsme high_resolution_clock – struktura](../standard-library/high-resolution-clock-struct.md)||
 |[steady_clock – struktura](../standard-library/steady-clock-struct.md)|Představuje `steady` hodiny.|
 |[system_clock – struktura](../standard-library/system-clock-structure.md)|Představuje *typ hodin* , který je založen na reálného času systému.|
 |[treat_as_floating_point – struktura](../standard-library/treat-as-floating-point-structure.md)|Určuje, zda typ lze považovat za typ s plovoucí desetinnou čárkou.|
 
 ### <a name="functions"></a>Funkce
 
-|Name|Popis|
-|----------|-----------------|
+|||
+|-|-|
 |[duration_cast](../standard-library/chrono-functions.md#duration_cast)|Přetypování `duration` objekt zadaného typu.|
 |[time_point_cast](../standard-library/chrono-functions.md#time_point_cast)|Přetypování `time_point` objekt zadaného typu.|
 
 ### <a name="operators"></a>Operátory
 
-|Name|Popis|
-|----------|-----------------|
+|||
+|-|-|
 |[Operator-](../standard-library/chrono-operators.md#operator-)|Operátor odčítání nebo negace objektů `duration` a `time_point` objekty.|
 |[operator!=](../standard-library/chrono-operators.md#op_neq)|Operátor nerovnosti, který se používá s `duration` nebo `time_point` objekty.|
 |[Operátor modulo](../standard-library/chrono-operators.md#op_modulo)|Operátor modulo operace `duration` objekty.|
@@ -69,38 +72,30 @@ V sadě Visual Studio 2015, provádění od `steady_clock` došlo ke změně pro
 |[– Operátor&gt;](../standard-library/chrono-operators.md#op_gt)|Určuje, zda jeden `duration` nebo `time_point` je větší než jiný objekt `duration` nebo `time_point` objektu.|
 |[– Operátor&gt;=](../standard-library/chrono-operators.md#op_gt_eq)|Určuje, zda jeden `duration` nebo `time_point` objekt je větší než nebo roven jinému `duration` nebo `time_point` objektu.|
 
-### <a name="predefined-duration-types"></a>Doba trvání předdefinované typy
+### <a name="typedefs-predefined-duration-types"></a>Definice TypeDef (doba trvání předdefinované typy)
 
 Další informace o poměr typy, které se používají v následujících – definice TypeDef, naleznete v tématu [ \<poměr >](../standard-library/ratio.md).
 
-|Definice TypeDef|Popis|
-|-------------|-----------------|
-|`typedef duration<long long, nano> nanoseconds;`|Synonymum pro `duration` typ, který má jeden nanosekund s dobou značek.|
-|`typedef duration<long long, micro> microseconds;`|Synonymum pro `duration` typ, který má určitou značek jedné úrovni mikrosekund.|
-|`typedef duration<long long, milli> milliseconds;`|Synonymum pro `duration` typ, který má jeden milisekund s dobou značek.|
-|`typedef duration<long long> seconds;`|Synonymum pro `duration` typ, který má značek uplynutí jedné sekundy.|
-|`typedef duration<int, ratio<60> > minutes;`|Synonymum pro `duration` typ, který má značek dobu jedné minuty.|
-|`typedef duration<int, ratio<3600> > hours;`|Synonymum pro `duration` typ, který má určitou značek jednu hodinu.|
+||| ||| | `typedef duration<long long, nano> nanoseconds;`| Synonymum pro `duration` typ, který má určité značky nanosekund 1. | |`typedef duration<long long, micro> microseconds;`| Synonymum pro `duration` typ, který má určitou značek 1 úrovni mikrosekund. | |`typedef duration<long long, milli> milliseconds;`| Synonymum pro `duration` typ, který má určité značky 1 milisekundu. | |`typedef duration<long long> seconds;`| Synonymum pro `duration` typ, který má značek období 1 sekundu. | |`typedef duration<int, ratio<60> > minutes;`| Synonymum pro `duration` typ, který má značek období 1 minuta. | |`typedef duration<int, ratio<3600> > hours;`| Synonymum pro `duration` typ, který má značek období 1 hodina. |
 
 ### <a name="literals"></a>Literály
 
 **(C ++ 11)**  \<Chrono > záhlaví definuje následující [uživateli definované literály](../cpp/user-defined-literals-cpp.md) , můžete použít pro větší pohodlí, bezpečnost typů a udržovatelnosti kódu. Tyto literály jsou definovány v `literals::chrono_literals` vložené obor názvů a jsou v oboru při std::chrono je v oboru.
 
-|literál|Popis|
-|-------------|-----------------|
-|operátor chrono::hours "" h (unsigned long long Val)|Určuje hodiny jako celé číslo.|
-|chrono::Duration\<double, poměr\<3600 >> operátor "" h (long double Val)|Určuje hodiny jako hodnotu s plovoucí desetinnou čárkou.|
-|chrono::minutes (operátor "" min) (unsigned long long Val)|Určuje minuty jako celé číslo.|
-|chrono::Duration\<double, poměr\<60 >> (operátor "" min) (long dvakrát Val)|Určuje minuty jako hodnotu s plovoucí desetinnou čárkou.|
-|operátor chrono::seconds "" s (unsigned long long Val)|Určuje minuty jako celé číslo.|
-|chrono::Duration\<double > – operátor "" s (long double Val)|Určuje sekundy jako hodnotu s plovoucí desetinnou čárkou.|
-|operátor chrono::milliseconds "" ms (unsigned long long Val)|Určuje milisekundy jako celé číslo.|
-|chrono::Duration\<double milli > – operátor "" ms (long double Val)|Určuje milisekundy jako hodnotu s plovoucí desetinnou čárkou.|
-|operátor chrono::microseconds "" USA (unsigned long long Val)|Určuje mikrosekundy jako celé číslo.|
-|chrono::Duration\<double micro > – operátor "" USA (long double Val)|Určuje mikrosekundy jako hodnotu s plovoucí desetinnou čárkou.|
-|operátor chrono::nanoseconds "" ns (unsigned long long Val)|Určuje nanosekundách jako celé číslo.|
-|chrono::Duration\<double nano > – operátor "" ns (long double Val)|Určuje nanosekundách jako hodnotu s plovoucí desetinnou čárkou.|
 |||
+|-|-|
+|operátor hodin "" h (unsigned long long Val)|Určuje hodiny jako celé číslo.|
+|Doba trvání\<double, poměr\<3600 >> operátor "" h (long double Val)|Určuje hodiny jako hodnotu s plovoucí desetinnou čárkou.|
+|minut (operátor "" min) (unsigned long long Val)|Určuje minuty jako celé číslo.|
+|Doba trvání\<double, poměr\<60 >> (operátor "" min) (long dvakrát Val)|Určuje minuty jako hodnotu s plovoucí desetinnou čárkou.|
+|operátor sekund "" s (unsigned long long Val)|Určuje minuty jako celé číslo.|
+|Doba trvání\<double > – operátor "" s (long double Val)|Určuje sekundy jako hodnotu s plovoucí desetinnou čárkou.|
+|operátor milisekund "" ms (unsigned long long Val)|Určuje milisekundy jako celé číslo.|
+|Doba trvání\<double milli > – operátor "" ms (long double Val)|Určuje milisekundy jako hodnotu s plovoucí desetinnou čárkou.|
+|operátor mikrosekundy "" USA (unsigned long long Val)|Určuje mikrosekundy jako celé číslo.|
+|Doba trvání\<double micro > – operátor "" USA (long double Val)|Určuje mikrosekundy jako hodnotu s plovoucí desetinnou čárkou.|
+|operátor nanosekundách "" ns (unsigned long long Val)|Určuje nanosekundách jako celé číslo.|
+|Doba trvání\<double nano > – operátor "" ns (long double Val)|Určuje nanosekundách jako hodnotu s plovoucí desetinnou čárkou.|
 
 Následující příklady ukazují, jak používat literály typu chrono.
 
@@ -109,8 +104,6 @@ constexpr auto day = 24h;
 constexpr auto week = 24h* 7;
 constexpr auto my_duration_unit = 108ms;
 ```
-
-## <a name="remarks"></a>Poznámky
 
 ## <a name="see-also"></a>Viz také:
 

@@ -30,25 +30,16 @@ helpviewer_keywords:
 - std::operator&lt; (valarray)
 - std::operator&lt;&lt; (valarray)
 - std::operator&lt;= (valarray), std::operator== (valarray)
-ms.openlocfilehash: 6de4b4ad75f9240fb86ff5e363f4a7d9062925d9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 231bad65e2af1ee2ab800890c83cc50e584a8c6a
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62365485"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68246114"
 ---
 # <a name="ltvalarraygt-operators"></a>&lt;valarray –&gt; operátory
 
-||||
-|-|-|-|
-|[operator!=](#op_neq)|[% – operátor](#op_mod)|[– Operátor&amp;](#op_amp)|
-|[– Operátor&amp;&amp;](#op_amp_amp)|[– Operátor&gt;](#op_gt)|[– Operátor&gt;&gt;](#op_gt_gt)|
-|[– Operátor&gt;=](#op_gt_eq)|[– Operátor&lt;](#op_lt)|[– Operátor&lt;&lt;](#op_lt_lt)|
-|[– Operátor&lt;=](#op_lt_eq)|[Operator *](#op_star)|[Operator +](#op_add)|
-|[Operator-](#operator-)|[Operator /](#op_div)|[operator==](#op_eq_eq)|
-|[operátor ^](#op_xor)|[operator&#124;](#op_or)|[operator&#124;&#124;](#op_lor)|
-
-## <a name="op_neq"></a>  Operator! =
+## <a name="op_neq"></a> Operator! =
 
 Testuje, jestli odpovídající prvky dvou stejně velké valarrays nestejné nebo zda jsou všechny prvky valarray – nerovné zadanou hodnotu.
 
@@ -74,10 +65,10 @@ operator!=(
 
 ### <a name="parameters"></a>Parametry
 
-*doleva*<br/>
+*doleva*\
 První dva valarrays, jehož prvky mají být testovány z hlediska nerovnost.
 
-*doprava*<br/>
+*doprava*\
 Druhé dvě valarrays, jehož prvky mají být testovány z hlediska nerovnost.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -136,15 +127,16 @@ int main( )
          cout << vaNE [ i ] << " ";
    cout << ")." << endl;
 }
-/* Output:
+```
+
+```Output
 The initial Left valarray is: ( 0 1 -2 3 -4 5 -6 7 -8 9 ).
 The initial Right valarray is: ( 0 1 2 3 4 5 6 7 8 9 ).
 The element-by-element result of the not equal comparison test is the
 valarray: ( 0 0 1 0 1 0 1 0 1 0 ).
-*/
 ```
 
-## <a name="op_mod"></a>  % – operátor
+## <a name="op_mod"></a> % – operátor
 
 Získá zbytek po dělení odpovídající prvky dva stejně velké valarrays nebo rozdělení valarray zadanou hodnotou nebo dělení valarray zadanou hodnotu.
 
@@ -170,10 +162,10 @@ operator%(
 
 ### <a name="parameters"></a>Parametry
 
-*doleva*<br/>
+*doleva*\
 Hodnota nebo valarray –, který slouží jako podíl na jinou hodnotu, která nebo valarray – je možné rozdělit.
 
-*doprava*<br/>
+*doprava*\
 Hodnota nebo valarray –, který slouží jako dělitel a, která vydělí jinou hodnotu nebo valarray.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -220,15 +212,16 @@ int main( )
          cout << vaREM [ i ] << " ";
    cout << ")." << endl;
 }
-/* Output:
+```
+
+```Output
 The initial Left valarray is: ( 53 -67 53 -67 53 -67 ).
 The initial Right valarray is: ( 1 4 7 10 13 16 ).
 The remainders from the element-by-element division is the
 valarray: ( 0 -3 4 -7 1 -3 ).
-*/
 ```
 
-## <a name="op_amp"></a>  – Operátor&amp;
+## <a name="op_amp"></a> – Operátor&amp;
 
 Získá bitový **a** mezi odpovídající prvky dvou valarrays stejně velké nebo valarray a určitou hodnotu na typ prvku.
 
@@ -254,10 +247,10 @@ operator&(
 
 ### <a name="parameters"></a>Parametry
 
-*doleva*<br/>
+*doleva*\
 První dva valarrays jehož příslušné prvky mají být kombinované pomocí bitového `AND` nebo hodnotu zadaného typu prvku a nelze jej zkombinovat bitovým operátorem pomocí každý prvek valarray.
 
-*doprava*<br/>
+*doprava*\
 Druhé dvě valarrays jehož příslušné prvky mají být kombinované pomocí bitového `AND` nebo hodnotu zadaného typu prvku a nelze jej zkombinovat bitovým operátorem pomocí každý prvek valarray.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -310,15 +303,16 @@ int main( )
          cout << vaBWA [ i ] << " ";
    cout << ")." << endl;
 }
-/* Output:
+```
+
+```Output
 The initial Left valarray is:  ( 0 2 0 4 0 6 0 8 0 10 ).
 The initial Right valarray is: ( 0 1 2 3 4 5 6 7 8 9 ).
 The element-by-element result of the bitwise operator & is the
 valarray: ( 0 0 0 0 0 4 0 0 0 8 ).
-*/
 ```
 
-## <a name="op_amp_amp"></a>  – Operátor&amp;&amp;
+## <a name="op_amp_amp"></a> – Operátor&amp;&amp;
 
 Získá logickou **a** mezi odpovídající prvky dvou valarrays stejně velké nebo valarray a určitou hodnotu valarray element typu.
 
@@ -344,10 +338,10 @@ operator&&(
 
 ### <a name="parameters"></a>Parametry
 
-*doleva*<br/>
+*doleva*\
 První dva valarrays jehož příslušné prvky mají být spojeny s logickou `AND` nebo hodnotu zadaného typu prvku a nelze jej zkombinovat s každý prvek valarray.
 
-*doprava*<br/>
+*doprava*\
 Druhé dvě valarrays jehož příslušné prvky mají být spojeny s logickou `AND` nebo hodnotu zadaného typu prvku a nelze jej zkombinovat s každý prvek valarray.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -398,15 +392,16 @@ int main( )
          cout << vaLAA [ i ] << " ";
    cout << ")." << endl;
 }
-/* Output:
+```
+
+```Output
 The initial Left valarray is:  ( 0 0 0 2 0 4 0 6 0 8 ).
 The initial Right valarray is: ( 0 1 2 3 4 5 6 7 8 9 ).
 The element-by-element result of the logical AND operator&& is the
 valarray: ( 0 0 0 1 0 1 0 1 0 1 ).
-*/
 ```
 
-## <a name="op_gt"></a>  – Operátor&gt;
+## <a name="op_gt"></a> – Operátor&gt;
 
 Ověřuje, zda prvky jeden valarray jsou větší než prvků stejně velké valarray nebo zda jsou všechny prvky valarray větší nebo menší než zadanou hodnotou.
 
@@ -432,10 +427,10 @@ operator>(
 
 ### <a name="parameters"></a>Parametry
 
-*doleva*<br/>
+*doleva*\
 První dva valarrays, jehož prvky mají být porovnány nebo zadanou hodnotu k porovnání s každý prvek valarray.
 
-*doprava*<br/>
+*doprava*\
 Druhé dvě valarrays, jehož prvky mají být porovnány nebo zadanou hodnotu k porovnání s každý prvek valarray.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -490,15 +485,16 @@ int main( )
          cout << vaNE [ i ] << " ";
    cout << ")." << endl;
 }
-/* Output:
+```
+
+```Output
 The initial Left valarray is: ( 0 1 -2 3 -4 5 -6 7 -8 9 ).
 The initial Right valarray is: ( -1 0 1 2 3 4 5 6 7 8 ).
 The element-by-element result of the greater than comparison test is the
 valarray: ( 1 1 0 1 0 1 0 1 0 1 ).
-*/
 ```
 
-## <a name="op_gt_eq"></a>  – Operátor&gt;=
+## <a name="op_gt_eq"></a> – Operátor&gt;=
 
 Ověřuje, zda jsou elementy jeden valarray větší než nebo rovna hodnotě prvky stejně velké valarray nebo určuje, zda všechny prvky valarray jsou větší než nebo rovno nebo menší než nebo rovna zadané hodnotě.
 
@@ -524,10 +520,10 @@ operator>=(
 
 ### <a name="parameters"></a>Parametry
 
-*doleva*<br/>
+*doleva*\
 První dva valarrays, jehož prvky mají být porovnány nebo zadanou hodnotu k porovnání s každý prvek valarray.
 
-*doprava*<br/>
+*doprava*\
 Druhé dvě valarrays, jehož prvky mají být porovnány nebo zadanou hodnotu k porovnání s každý prvek valarray.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -582,15 +578,16 @@ int main( )
          cout << vaNE [ i ] << " ";
    cout << ")." << endl;
 }
-/* Output:
+```
+
+```Output
 The initial Left valarray is: ( 0 1 -2 3 -4 5 -6 7 -8 9 ).
 The initial Right valarray is: ( -1 0 1 2 3 4 5 6 7 8 ).
 The element-by-element result of the greater than or equal test is the
 valarray: ( 1 1 0 1 0 1 0 1 0 1 ).
-*/
 ```
 
-## <a name="op_gt_gt"></a>  – Operátor&gt;&gt;
+## <a name="op_gt_gt"></a> – Operátor&gt;&gt;
 
 Posuny doprava bity pro každý prvek valarray zadaný počet pozic, nebo částku element-wise určené druhý valarray.
 
@@ -616,10 +613,10 @@ operator>>(
 
 ### <a name="parameters"></a>Parametry
 
-*doleva*<br/>
+*doleva*\
 Hodnota posunutí nebo valarray, jehož prvky mají být změněn.
 
-*doprava*<br/>
+*doprava*\
 Hodnota udávající dobu posunutí doprava nebo valarray jejíž prvky označovat element-wise množství posunutí doprava.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -670,15 +667,16 @@ int main( )
          cout << vaNE [ i ] << " ";
    cout << ")." << endl;
 }
-/* Output:
+```
+
+```Output
 The initial Left valarray is: ( 64 -64 64 -64 64 -64 64 -64 ).
 The initial Right valarray is: ( 0 1 2 3 4 5 6 7 ).
 The element-by-element result of the right shift is the
 valarray: ( 64 -32 16 -8 4 -2 1 -1 ).
-*/
 ```
 
-## <a name="op_lt"></a>  – Operátor&lt;
+## <a name="op_lt"></a> – Operátor&lt;
 
 Ověřuje, zda prvky valarray – jeden je menší než prvky stejně velké valarray nebo zda jsou všechny prvky valarray větší nebo menší než zadanou hodnotou.
 
@@ -704,10 +702,10 @@ operator<(
 
 ### <a name="parameters"></a>Parametry
 
-*doleva*<br/>
+*doleva*\
 První dva valarrays, jehož prvky mají být porovnány nebo zadanou hodnotu k porovnání s každý prvek valarray.
 
-*doprava*<br/>
+*doprava*\
 Druhé dvě valarrays, jehož prvky mají být porovnány nebo zadanou hodnotu k porovnání s každý prvek valarray.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -762,15 +760,16 @@ int main( )
          cout << vaNE [ i ] << " ";
    cout << ")." << endl;
 }
-/* Output:
+```
+
+```Output
 The initial Left valarray is: ( 0 1 -2 3 -4 5 -6 7 -8 9 ).
 The initial Right valarray is: ( 0 1 2 3 4 5 6 7 8 9 ).
 The element-by-element result of the less-than comparson test is the
 valarray: ( 0 0 1 0 1 0 1 0 1 0 ).
-*/
 ```
 
-## <a name="op_lt_eq"></a>  – Operátor&lt;=
+## <a name="op_lt_eq"></a> – Operátor&lt;=
 
 Testuje, jestli prvky jeden valarray jsou menší než nebo rovna hodnotě elementy stejně velké valarray nebo zda všechny prvky valarray jsou větší než nebo rovno nebo menší než nebo rovna zadané hodnotě.
 
@@ -796,10 +795,10 @@ operator<=(
 
 ### <a name="parameters"></a>Parametry
 
-*doleva*<br/>
+*doleva*\
 První dva valarrays, jehož prvky mají být porovnány nebo zadanou hodnotu k porovnání s každý prvek valarray.
 
-*doprava*<br/>
+*doprava*\
 Druhé dvě valarrays, jehož prvky mají být porovnány nebo zadanou hodnotu k porovnání s každý prvek valarray.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -854,15 +853,16 @@ int main( )
          cout << vaNE [ i ] << " ";
    cout << ")." << endl;
 }
-/* Output:
+```
+
+```Output
 The initial Left valarray is: ( 0 1 -2 3 -4 5 -6 7 -8 9 ).
 The initial Right valarray is: ( -1 0 1 2 3 4 5 6 7 8 ).
 The element-by-element result of the less than or equal test is the
 valarray: ( 0 0 1 0 1 0 1 0 1 0 ).
-*/
 ```
 
-## <a name="op_lt_lt"></a>  – Operátor&lt;&lt;
+## <a name="op_lt_lt"></a> – Operátor&lt;&lt;
 
 Vlevo posune bitů pro každý prvek valarray zadaný počet pozic, nebo částku element-wise určené druhý valarray.
 
@@ -888,10 +888,10 @@ operator<<(
 
 ### <a name="parameters"></a>Parametry
 
-*doleva*<br/>
+*doleva*\
 Hodnota posunutí nebo valarray, jehož prvky mají být změněn.
 
-*doprava*<br/>
+*doprava*\
 Hodnota udávající dobu posunutí doleva nebo valarray jejíž prvky označovat element-wise množství operátor posunu vlevo.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -942,15 +942,16 @@ int main( )
          cout << vaNE [ i ] << " ";
    cout << ")." << endl;
 }
-/* Output:
+```
+
+```Output
 The initial Left valarray is: ( 1 -1 1 -1 1 -1 1 -1 ).
 The initial Right valarray is: ( 0 1 2 3 4 5 6 7 ).
 The element-by-element result of the left shift is the
 valarray: ( 1 -2 4 -8 16 -32 64 -128 ).
-*/
 ```
 
-## <a name="op_star"></a>  Operator *
+## <a name="op_star"></a> Operator *
 
 Získá produktu mezi odpovídající elementy ve dva stejně velké valarrays nebo mezi valarray zadanou hodnotu.
 
@@ -976,10 +977,10 @@ operator*(
 
 ### <a name="parameters"></a>Parametry
 
-*doleva*<br/>
+*doleva*\
 První dva valarrays, jehož prvky mají být vynásobené nebo zadanou hodnotou vynásobí každý prvek valarray.
 
-*doprava*<br/>
+*doprava*\
 Druhé dvě valarrays, jehož prvky mají být vynásobené nebo zadanou hodnotou vynásobí každý prvek valarray.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -1026,15 +1027,16 @@ int main( )
          cout << vaNE [ i ] << " ";
    cout << ")." << endl;
 }
-/* Output:
+```
+
+```Output
 The initial Left valarray is: ( 2 -1 2 -1 2 -1 2 -1 ).
 The initial Right valarray is: ( 0 1 2 3 4 5 6 7 ).
 The element-by-element result of the multiplication is the
 valarray: ( 0 -1 4 -3 8 -5 12 -7 ).
-*/
 ```
 
-## <a name="op_add"></a>  Operator +
+## <a name="op_add"></a> Operator +
 
 Získá element-wise součet mezi odpovídající elementy ve dva stejně velké valarrays nebo mezi valarray zadanou hodnotu.
 
@@ -1060,10 +1062,10 @@ operator+(
 
 ### <a name="parameters"></a>Parametry
 
-*doleva*<br/>
+*doleva*\
 První dva valarrays, jehož prvky mají být přidány nebo zadanou hodnotou přidat ke každému elementu valarray.
 
-*doprava*<br/>
+*doprava*\
 Druhé dvě valarrays, jehož prvky mají být přidány nebo zadanou hodnotou přidat ke každému elementu valarray.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -1110,15 +1112,16 @@ int main( )
          cout << vaNE [ i ] << " ";
    cout << ")." << endl;
 }
-/* Output:
+```
+
+```Output
 The initial Left valarray is: ( 2 -1 2 -1 2 -1 2 -1 ).
 The initial Right valarray is: ( 0 1 2 3 4 5 6 7 ).
 The element-by-element result of the sum is the
 valarray: ( 2 0 4 2 6 4 8 6 ).
-*/
 ```
 
-## <a name="operator-"></a>  Operator-
+## <a name="operator-"></a> Operator-
 
 Získá element-wise rozdíl mezi odpovídající elementy ve dva stejně velké valarrays nebo mezi valarray zadanou hodnotu.
 
@@ -1144,10 +1147,10 @@ operator-(
 
 ### <a name="parameters"></a>Parametry
 
-*doleva*<br/>
+*doleva*\
 Hodnota nebo valarray –, který slouží jako minuend, ze kterého jiných hodnot nebo valarrays se bude odečítat v které tvoří rozdíl.
 
-*doprava*<br/>
+*doprava*\
 Hodnota nebo valarray –, který slouží jako, který se bude odečítat od jiných hodnot nebo valarrays v které tvoří rozdíl menšitel.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -1200,15 +1203,16 @@ int main( )
          cout << vaNE [ i ] << " ";
    cout << ")." << endl;
 }
-/* Output:
+```
+
+```Output
 The initial Left valarray is: ( 10 0 10 0 10 0 10 0 ).
 The initial Right valarray is: ( 0 1 2 3 4 5 6 7 ).
 The element-by-element result of the difference is the
 valarray: ( 10 -1 8 -3 6 -5 4 -7 ).
-*/
 ```
 
-## <a name="op_div"></a>  Operator /
+## <a name="op_div"></a> Operator /
 
 Získá element-wise podíl mezi odpovídající elementy ve dva stejně velké valarrays nebo mezi valarray zadanou hodnotu.
 
@@ -1234,10 +1238,10 @@ operator/(
 
 ### <a name="parameters"></a>Parametry
 
-*doleva*<br/>
+*doleva*\
 Hodnota nebo valarray –, který slouží jako podíl na jinou hodnotu, která nebo valarray – je možné rozdělit do tvořící podíl.
 
-*doprava*<br/>
+*doprava*\
 Hodnota nebo valarray –, který slouží jako dělitel a, která vydělí jinou hodnotu nebo valarray v tvořící podíl.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -1290,15 +1294,16 @@ int main( )
          cout << vaNE [ i ] << " ";
    cout << ")." << endl;
 }
-/* Output:
+```
+
+```Output
 The initial Left valarray is: ( 100 -100 100 -100 100 -100 ).
 The initial Right valarray is: ( 0 2 4 6 8 10 ).
 The element-by-element result of the quotient is the
 valarray: ( inf -50 25 -16.6667 12.5 -10 ).
-*/
 ```
 
-## <a name="op_eq_eq"></a>  Operator ==
+## <a name="op_eq_eq"></a> Operator ==
 
 Testy, zda odpovídající prvky dvou stejně velké valarrays se rovná nebo zda jsou všechny prvky valarray roven zadané hodnotě.
 
@@ -1324,10 +1329,10 @@ operator==(
 
 ### <a name="parameters"></a>Parametry
 
-*doleva*<br/>
+*doleva*\
 První dva valarrays, jehož prvky mají být testovány z hlediska rovnosti.
 
-*doprava*<br/>
+*doprava*\
 Druhé dvě valarrays, jehož prvky mají být testovány z hlediska rovnosti.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -1382,15 +1387,16 @@ int main( )
          cout << vaNE [ i ] << " ";
    cout << ")." << endl;
 }
-/* Output:
+```
+
+```Output
 The initial Left valarray is: ( 0 1 -2 3 -4 5 -6 7 -8 9 ).
 The initial Right valarray is: ( 0 1 2 3 4 5 6 7 8 9 ).
 The element-by-element result of the equality comparison test is the
 valarray: ( 1 1 0 1 0 1 0 1 0 1 ).
-*/
 ```
 
-## <a name="op_xor"></a>  operátor ^
+## <a name="op_xor"></a> operátor ^
 
 Získá bitový exkluzivní `OR` ( **XOR**) mezi odpovídající prvky dvou valarrays stejně velké nebo valarray a určitou hodnotu na typ prvku.
 
@@ -1416,10 +1422,10 @@ operator^(
 
 ### <a name="parameters"></a>Parametry
 
-*doleva*<br/>
+*doleva*\
 První dva valarrays jehož příslušné prvky mají být kombinované pomocí bitového **XOR** nebo hodnotu zadaného typu prvku a nelze jej zkombinovat bitovým operátorem pomocí každý prvek valarray.
 
-*doprava*<br/>
+*doprava*\
 Druhé dvě valarrays jehož příslušné prvky mají být kombinované pomocí bitového **XOR** nebo hodnotu zadaného typu prvku a nelze jej zkombinovat bitovým operátorem pomocí každý prvek valarray.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -1476,15 +1482,16 @@ int main( )
          cout << vaLAA [ i ] << " ";
    cout << ")." << endl;
 }
-/* Output:
+```
+
+```Output
 The initial Left valarray is:  ( 1 0 1 0 1 0 1 0 1 0 ).
 The initial Right valarray is: ( 0 0 1 3 3 4 6 6 7 9 ).
 The element-by-element result of the bitwise XOR operator^ is the
 valarray: ( 1 0 0 3 2 4 7 6 6 9 ).
-*/
 ```
 
-## <a name="op_or"></a>  – operátor&#124;
+## <a name="op_or"></a> – operátor&#124;
 
 Získá bitový `OR` mezi odpovídající prvky dvou valarrays stejně velké nebo valarray a určitou hodnotu na typ prvku.
 
@@ -1510,10 +1517,10 @@ operator|(
 
 ### <a name="parameters"></a>Parametry
 
-*doleva*<br/>
+*doleva*\
 První dva valarrays jehož příslušné prvky mají být kombinované pomocí bitového `OR` nebo hodnotu zadaného typu prvku a nelze jej zkombinovat bitovým operátorem pomocí každý prvek valarray.
 
-*doprava*<br/>
+*doprava*\
 Druhé dvě valarrays jehož příslušné prvky mají být kombinované pomocí bitového `OR` nebo hodnotu zadaného typu prvku a nelze jej zkombinovat bitovým operátorem pomocí každý prvek valarray.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -1570,15 +1577,16 @@ int main( )
          cout << vaLAA [ i ] << " ";
    cout << ")." << endl;
 }
-/* Output:
+```
+
+```Output
 The initial Left valarray is:  ( 1 0 1 0 1 0 1 0 1 0 ).
 The initial Right valarray is: ( 0 0 1 3 3 4 6 6 7 9 ).
 The element-by-element result of the bitwise OR operator| is the
 valarray: ( 1 0 1 3 3 4 7 6 7 9 ).
-*/
 ```
 
-## <a name="op_lor"></a>  – operátor&#124;&#124;
+## <a name="op_lor"></a> – operátor&#124;&#124;
 
 Získá logickou `OR` mezi odpovídající prvky dvou valarrays stejně velké nebo valarray a určitou hodnotu na typ prvku valarray.
 
@@ -1604,10 +1612,10 @@ operator||(
 
 ### <a name="parameters"></a>Parametry
 
-*doleva*<br/>
+*doleva*\
 První dva valarrays jehož příslušné prvky mají být spojeny s logickou `OR` nebo hodnotu zadaného typu prvku a nelze jej zkombinovat s každý prvek valarray.
 
-*doprava*<br/>
+*doprava*\
 Druhé dvě valarrays jehož příslušné prvky mají být spojeny s logickou `OR` nebo hodnotu zadaného typu prvku a nelze jej zkombinovat s každý prvek valarray.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -1662,14 +1670,11 @@ int main( )
          cout << vaLOR [ i ] << " ";
    cout << ")." << endl;
 }
-/* Output:
+```
+
+```Output
 The initial Left valarray is:  ( 0 0 0 2 0 4 0 6 0 8 ).
 The initial Right valarray is: ( 0 0 0 3 0 0 6 0 0 9 ).
 The element-by-element result of the logical OR operator|| is the
 valarray: ( 0 0 0 1 0 1 1 1 0 1 ).
-*/
 ```
-
-## <a name="see-also"></a>Viz také:
-
-[\<valarray>](../standard-library/valarray.md)<br/>

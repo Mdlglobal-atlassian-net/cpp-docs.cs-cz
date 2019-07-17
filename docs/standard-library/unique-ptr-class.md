@@ -22,12 +22,12 @@ helpviewer_keywords:
 - std::unique_ptr [C++], reset
 - std::unique_ptr [C++], swap
 ms.assetid: acdf046b-831e-4a4a-83aa-6d4ee467db9a
-ms.openlocfilehash: b0751d7716e2f8587ab410e57c2bea17c5dd3e21
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3aff30e2e23feb85c6b93d79ddd4552849d3ba05
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62295458"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68243475"
 ---
 # <a name="uniqueptr-class"></a>unique_ptr – třída
 
@@ -93,16 +93,16 @@ public:
 
 ### <a name="parameters"></a>Parametry
 
-*doprava*<br/>
+*doprava*\
 A `unique_ptr`.
 
-*Nptr*<br/>
+*Nptr*\
 `rvalue` Typu `std::nullptr_t`.
 
-*Ptr*<br/>
+*PTR*\
 A `pointer`.
 
-*Odstraňovač*<br/>
+*Odstraňovač*\
 A `deleter` funkce, která je vázána na `unique_ptr`.
 
 ## <a name="exceptions"></a>Výjimky
@@ -125,21 +125,21 @@ Uložený ukazatel na vlastní prostředek, `stored_ptr` má typ `pointer`. Je `
 
 ### <a name="constructors"></a>Konstruktory
 
-|Konstruktor|Popis|
+|||
 |-|-|
 |[unique_ptr](#unique_ptr)|Existuje sedm konstruktorů pro `unique_ptr`.|
 
 ### <a name="typedefs"></a>Typedefs
 
-|Název typu|Popis|
+|||
 |-|-|
 |[deleter_type](#deleter_type)|Synonymum pro parametr šablony `Del`.|
 |[element_type](#element_type)|Synonymum pro parametr šablony `T`.|
 |[pointer](#pointer)|Synonymum pro `Del::pointer` li definováno, jinak `T *`.|
 
-### <a name="member-functions"></a>Členské funkce
+### <a name="functions"></a>Funkce
 
-|Členská funkce|Popis|
+|||
 |-|-|
 |[get](#get)|Vrátí `stored_ptr`.|
 |[get_deleter](#get_deleter)|Vrátí odkaz na `stored_deleter`.|
@@ -149,20 +149,14 @@ Uložený ukazatel na vlastní prostředek, `stored_ptr` má typ `pointer`. Je `
 
 ### <a name="operators"></a>Operátory
 
-|Operátor|Popis|
+|||
 |-|-|
 |**bool – operátor**|Operátor vrátí hodnotu typu, který lze převést na **bool**. Výsledek převodu na **bool** je **true** při `get() != pointer()`, jinak **false**.|
 |`operator->`|Členská funkce vrátí `stored_ptr`.|
 |`operator*`|Členská funkce vrátí `*stored_ptr`.|
-|[unique_ptr operator=](#unique_ptr_operator_eq)|Přiřadí hodnotu `unique_ptr` (nebo `pointer-type`) na aktuální `unique_ptr`.|
+|[operátor =](#unique_ptr_operator_eq)|Přiřadí hodnotu `unique_ptr` (nebo `pointer-type`) na aktuální `unique_ptr`.|
 
-## <a name="requirements"></a>Požadavky
-
-**Záhlaví:** \<paměti >
-
-**Namespace:** std
-
-## <a name="deleter_type"></a>  deleter_type
+### <a name="deleter_type"></a> deleter_type
 
 Typ je synonymum pro parametr šablony `Del`.
 
@@ -170,11 +164,11 @@ Typ je synonymum pro parametr šablony `Del`.
 typedef Del deleter_type;
 ```
 
-### <a name="remarks"></a>Poznámky
+#### <a name="remarks"></a>Poznámky
 
 Typ je synonymum pro parametr šablony `Del`.
 
-## <a name="element_type"></a>  ELEMENT_TYPE
+### <a name="element_type"></a> ELEMENT_TYPE
 
 Typ je synonymum pro parametr šablony `Type`.
 
@@ -182,11 +176,11 @@ Typ je synonymum pro parametr šablony `Type`.
 typedef Type element_type;
 ```
 
-### <a name="remarks"></a>Poznámky
+#### <a name="remarks"></a>Poznámky
 
 Typ je synonymum pro parametr šablony `Ty`.
 
-## <a name="get"></a>  unique_ptr::Get
+### <a name="get"></a> získat
 
 Vrátí `stored_ptr`.
 
@@ -194,11 +188,11 @@ Vrátí `stored_ptr`.
 pointer get() const;
 ```
 
-### <a name="remarks"></a>Poznámky
+#### <a name="remarks"></a>Poznámky
 
 Členská funkce vrátí `stored_ptr`.
 
-## <a name="get_deleter"></a>  unique_ptr::get_deleter
+### <a name="get_deleter"></a> get_deleter –
 
 Vrátí odkaz na `stored_deleter`.
 
@@ -208,11 +202,11 @@ Del& get_deleter();
 const Del& get_deleter() const;
 ```
 
-### <a name="remarks"></a>Poznámky
+#### <a name="remarks"></a>Poznámky
 
 Členská funkce vrátí odkaz na `stored_deleter`.
 
-## <a name="unique_ptr_operator_eq"></a>  unique_ptr operator =
+### <a name="unique_ptr_operator_eq"></a> operátor =
 
 Přiřadí adresu poskytnutého `unique_ptr` do aktuálního.
 
@@ -223,15 +217,15 @@ unique_ptr& operator=(unique_ptr<Type, Del>&& right);
 unique_ptr& operator=(pointer-type);
 ```
 
-### <a name="parameters"></a>Parametry
+#### <a name="parameters"></a>Parametry
 
 A `unique_ptr` odkaz lze přiřadit hodnotu na aktuální `unique_ptr`.
 
-### <a name="remarks"></a>Poznámky
+#### <a name="remarks"></a>Poznámky
 
 Členské funkce volání `reset(right.release())` a přesunout `right.stored_deleter` k `stored_deleter`a pak se vrátit `*this`.
 
-## <a name="pointer"></a>  Ukazatel
+### <a name="pointer"></a> Ukazatel
 
 Synonymum pro `Del::pointer` li definováno, jinak `Type *`.
 
@@ -239,11 +233,11 @@ Synonymum pro `Del::pointer` li definováno, jinak `Type *`.
 typedef T1 pointer;
 ```
 
-### <a name="remarks"></a>Poznámky
+#### <a name="remarks"></a>Poznámky
 
 Typ je synonymum pro `Del::pointer` li definováno, jinak `Type *`.
 
-## <a name="release"></a>  unique_ptr::Release
+### <a name="release"></a> Vydání verze
 
 Uvolní vlastnictví objektu vráceného uložený ukazatel volajícímu a nastaví hodnotu uložený ukazatel **nullptr**.
 
@@ -251,11 +245,11 @@ Uvolní vlastnictví objektu vráceného uložený ukazatel volajícímu a nasta
 pointer release();
 ```
 
-### <a name="remarks"></a>Poznámky
+#### <a name="remarks"></a>Poznámky
 
 Použití `release` převzít vlastnictví nezpracovaný ukazatel uložené `unique_ptr`. Volající zodpovídá za odstranění vrácenému ukazateli. `unique-ptr` Je nastavena na prázdný stav vytvořené s výchozím nastavením. Můžete přiřadit jinému ukazateli kompatibilní typ `unique_ptr` po volání `release`.
 
-### <a name="example"></a>Příklad
+#### <a name="example"></a>Příklad
 
 Tento příklad ukazuje, jak je zodpovědný za objekt vrácený volající verze:
 
@@ -296,8 +290,6 @@ int main() {
 }
 ```
 
-Výstup počítače:
-
 ```Output
 Constructing Sample(3)
 Constructing Sample(42)
@@ -305,7 +297,7 @@ Deleting Sample(42)
 Deleting Sample(3)
 ```
 
-## <a name="reset"></a>  unique_ptr::Reset
+### <a name="reset"></a> Resetovat
 
 Převezme vlastnictví parametr ukazatele a poté odstraní původní uložený ukazatel. Pokud je nový ukazatel stejný jako původní uložený ukazatel `reset` odstraní ukazatel a nastaví uložený ukazatel na **nullptr**.
 
@@ -314,19 +306,18 @@ void reset(pointer ptr = pointer());
 void reset(nullptr_t ptr);
 ```
 
-### <a name="parameters"></a>Parametry
+#### <a name="parameters"></a>Parametry
 
-|Parametr|Popis|
-|---------------|-----------------|
-|*ptr*|Ukazatel na prostředek, který chcete převzít vlastnictví.|
+*PTR*\
+Ukazatel na prostředek, který chcete převzít vlastnictví.
 
-### <a name="remarks"></a>Poznámky
+#### <a name="remarks"></a>Poznámky
 
 Použití `reset` změnit uloženou [ukazatel](#pointer) vlastněné `unique_ptr` k *ptr* a pak odstraňte původní uložený ukazatel. Pokud `unique_ptr` nebyla prázdná, `reset` vyvolá funkci deleter vrácený [get_deleter –](#get_deleter) na původní uložený ukazatel.
 
 Protože `reset` nejdřív uloží nový ukazatel *ptr*a poté odstraní původní uložený ukazatel, je možné, `reset` okamžitě odstranit *ptr* Pokud je stejný jako původní uložený ukazatel.
 
-## <a name="swap"></a>  unique_ptr::swap
+### <a name="swap"></a> Prohození
 
 Vymění ukazatelů mezi dvěma `unique_ptr` objekty.
 
@@ -334,16 +325,16 @@ Vymění ukazatelů mezi dvěma `unique_ptr` objekty.
 void swap(unique_ptr& right);
 ```
 
-### <a name="parameters"></a>Parametry
+#### <a name="parameters"></a>Parametry
 
-*doprava*<br/>
+*doprava*\
 A `unique_ptr` používají k přehazování ukazatele.
 
-### <a name="remarks"></a>Poznámky
+#### <a name="remarks"></a>Poznámky
 
 Členská funkce Zamění `stored_ptr` s `right.stored_ptr` a `stored_deleter` s `right.stored_deleter`.
 
-## <a name="unique_ptr"></a>  unique_ptr::unique_ptr
+### <a name="unique_ptr"></a> unique_ptr
 
 Existuje sedm konstruktorů pro `unique_ptr`.
 
@@ -363,24 +354,27 @@ unique_ptr(
 unique_ptr(pointer ptr, typename remove_reference<Del>::type&& _Deleter);
 unique_ptr(unique_ptr&& right);
 template <class Ty2, Class Del2>
-unique_ptr(unique_ptr<Ty2, Del2>&& right);
+    unique_ptr(unique_ptr<Ty2, Del2>&& right);
 ```
 
-### <a name="parameters"></a>Parametry
+#### <a name="parameters"></a>Parametry
 
-|Parametr|Popis|
-|---------------|-----------------|
-|*ptr*|Ukazatel na prostředek, který má být přiřazená `unique_ptr.`|
-|*_Deleter*|A `deleter` přiřazení `unique_ptr`.|
-|*doprava*|`rvalue reference` k `unique_ptr` odkud `unique_ptr` pole jsou přiřazené do nově vytvořeného přesunout `unique_ptr`.|
+*PTR*\
+Ukazatel na prostředek, který chcete přiřadit k `unique_ptr`.
 
-### <a name="remarks"></a>Poznámky
+*_Deleter*\
+A `deleter` přiřazení `unique_ptr`.
+
+*doprava*\
+`rvalue reference` k `unique_ptr` odkud `unique_ptr` pole jsou přiřazené do nově vytvořeného přesunout `unique_ptr`.
+
+#### <a name="remarks"></a>Poznámky
 
 První dva konstruktory vytvořit objekt, který spravuje žádný prostředek. Třetí konstruktor ukládá *ptr* v `stored_ptr`. Čtvrtý konstruktor ukládá *ptr* v `stored_ptr` a `deleter` v `stored_deleter`.
 
 Pátý konstruktor ukládá *ptr* v `stored_ptr` a přesune `deleter` do `stored_deleter`. Šestý a sedmý konstruktor úložiště `right.release()` v `stored_ptr` a přesune `right.get_deleter()` do `stored_deleter`.
 
-## <a name="dtorunique_ptr"></a>  unique_ptr ~unique_ptr
+### <a name="dtorunique_ptr"></a> ~ unique_ptr
 
 Destruktor `unique_ptr`, odstraní `unique_ptr` objektu.
 
@@ -388,10 +382,6 @@ Destruktor `unique_ptr`, odstraní `unique_ptr` objektu.
 ~unique_ptr();
 ```
 
-### <a name="remarks"></a>Poznámky
+#### <a name="remarks"></a>Poznámky
 
 Volání destruktoru `get_deleter()(stored_ptr)`.
-
-## <a name="see-also"></a>Viz také:
-
-[\<memory>](../standard-library/memory.md)<br/>

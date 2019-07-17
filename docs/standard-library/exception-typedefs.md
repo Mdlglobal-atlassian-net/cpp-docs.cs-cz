@@ -6,18 +6,14 @@ f1_keywords:
 - exception/std::terminate_handler
 - exception/std::unexpected_handler
 ms.assetid: 2a338480-35e2-46f7-b223-52d4e84a5768
-ms.openlocfilehash: 98a7e8197a0d729ab3a4e9ec0daf55a28cdaeb2d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e3904393096422a8986414a253d515342c7382f0
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62412641"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68246049"
 ---
 # <a name="ltexceptiongt-typedefs"></a>&lt;výjimka&gt; – definice TypeDef
-
-||||
-|-|-|-|
-|[exception_ptr](#exception_ptr)|[terminate_handler](#terminate_handler)|[unexpected_handler](#unexpected_handler)|
 
 ## <a name="exception_ptr"></a>  exception_ptr
 
@@ -43,7 +39,7 @@ Bez ohledu na její název `exception_ptr` objektu je sám není ukazatel. Nedod
 
 Můžete použít rovnosti ( `==`) a není rovno ( `!=`) operátory pro porovnání dvou `exception_ptr` objekty. Operátory neporovnávají binární hodnoty (bitový vzor) z `EXCEPTION_RECORD` struktury, které představují výjimky. Místo toho operátory porovnávají adresy v referenčním poli výjimky z `exception_ptr` objekty. V důsledku toho s hodnotou null `exception_ptr` a hodnota NULL rovnají.
 
-## <a name="terminate_handler"></a>  terminate_handler
+## <a name="terminate_handler"></a> terminate_handler
 
 Typ, který popisuje ukazatele na funkci vhodný pro použití jako `terminate_handler`.
 
@@ -59,7 +55,7 @@ Typ, který popisuje ukazatele na funkci vhodný pro použití jako obslužná r
 
 Zobrazit [set_terminate](../standard-library/exception-functions.md#set_terminate) příklad použití `terminate_handler`.
 
-## <a name="unexpected_handler"></a>  unexpected_handler
+## <a name="unexpected_handler"></a> unexpected_handler
 
 Typ, který popisuje ukazatele na funkci vhodný pro použití jako `unexpected_handler`.
 
@@ -70,7 +66,3 @@ typedef void (*unexpected_handler)();
 ### <a name="example"></a>Příklad
 
 Zobrazit [set_unexpected](../standard-library/exception-functions.md#set_unexpected) příklad použití `unexpected_handler`.
-
-## <a name="see-also"></a>Viz také:
-
-[\<exception>](../standard-library/exception.md)<br/>

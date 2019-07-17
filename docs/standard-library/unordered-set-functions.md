@@ -5,20 +5,16 @@ f1_keywords:
 - unordered_set/std::swap (set)
 - unordered_set/std::swap (unordered_multiset)
 ms.assetid: 66b35671-4023-4411-ad50-83786580d8ee
-ms.openlocfilehash: a6e005918730a2ca1f52469130e2ea2cf1547fc8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f34d818c1829baba1740bf2776b2d47a8808bf68
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62376991"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68243414"
 ---
 # <a name="ltunorderedsetgt-functions"></a>&lt;unordered_set –&gt; funkce
 
-|||
-|-|-|
-|[swap (set)](#swap)|[swap (unordered_multiset)](#swap_unordered_multiset)|
-
-## <a name="swap"></a>  swap (unordered_set)
+## <a name="swap"></a> swap (unordered_set)
 
 Zamění obsah dvou kontejnerů.
 
@@ -32,22 +28,22 @@ void swap(
 
 ### <a name="parameters"></a>Parametry
 
-*Key*<br/>
+*Klíč*\
 Klíčový typ
 
-*Hash*<br/>
+*Hodnota hash*\
 Typ objektu hashovací funkce
 
-*Před*<br/>
+*Před*\
 Typ objektu funkce porovnání rovnosti
 
-*ALLOC*<br/>
+*ALLOC*\
 Třída alokátoru
 
-*doleva*<br/>
+*doleva*\
 První kontejner přepínat.
 
-*doprava*<br/>
+*doprava*\
 Druhý kontejner přepínat.
 
 ### <a name="remarks"></a>Poznámky
@@ -102,18 +98,16 @@ return (0);
 ```
 
 ```Output
-
 [c] [b] [a]
 [f] [e] [d]
 [c] [b] [a]
 ```
 
-## <a name="swap_unordered_multiset"></a>  swap (unordered_multiset)
+## <a name="swap_unordered_multiset"></a> swap (unordered_multiset)
 
 Zamění obsah dvou kontejnerů.
 
 ```
-
 template <class Key, class Hash, class Pred, class Alloc>
 void swap(
    unordered_multiset <Key, Hash, Pred, Alloc>& left,
@@ -122,22 +116,22 @@ void swap(
 
 ### <a name="parameters"></a>Parametry
 
-*Key*<br/>
+*Klíč*\
 Klíčový typ
 
-*Hash*<br/>
+*Hodnota hash*\
 Typ objektu hashovací funkce
 
-*Před*<br/>
+*Před*\
 Typ objektu funkce porovnání rovnosti
 
-*ALLOC*<br/>
+*ALLOC*\
 Třída alokátoru
 
-*doleva*<br/>
+*doleva*\
 První kontejner přepínat.
 
-*doprava*<br/>
+*doprava*\
 Druhý kontejner přepínat.
 
 ### <a name="remarks"></a>Poznámky
@@ -194,12 +188,7 @@ int main()
 ```
 
 ```Output
-
 [c] [b] [a]
 [f] [e] [d]
 [c] [b] [a]
 ```
-
-## <a name="see-also"></a>Viz také:
-
-[<unordered_set>](../standard-library/unordered-set.md)<br/>
