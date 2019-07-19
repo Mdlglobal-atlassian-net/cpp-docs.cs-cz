@@ -414,6 +414,8 @@
                   href: build/reference/general-property-page-project.md
                 - name: Obecná stránka vlastností
                   href: build/reference/general-property-page-file.md
+                - name: Stránka vlastností Upřesnit
+                  href: build/reference/advanced-property-page.md
                 - name: Stránka vlastností adresářů VC++
                   href: build/reference/vcpp-directories-property-page.md
                 - name: Stránky vlastností příkazového řádku
