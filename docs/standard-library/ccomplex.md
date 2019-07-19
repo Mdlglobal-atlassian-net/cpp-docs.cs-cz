@@ -1,33 +1,40 @@
 ---
 title: '&lt;ccomplex&gt;'
-ms.date: 11/04/2016
+ms.date: 07/11/2019
 f1_keywords:
 - <ccomplex>
+- ccomplex
+helpviewer_keywords:
+- ccomplex header
 ms.assetid: a9fcb5f0-88e3-464b-a5fd-d1afb8cd7e6f
-ms.openlocfilehash: ab9e95eb7b432a85a75d73d388ec069b0d04ac62
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5b5383b1eca4fda72f5f9e3a78637373acbcf7ab
+ms.sourcegitcommit: 0867d648e0955ebad7260b5fbebfd6cd4d58f3c7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62351102"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68341139"
 ---
 # <a name="ltccomplexgt"></a>&lt;ccomplex&gt;
 
-Obsahuje hlavičku standardní knihovny C++ [ \<komplexní >](../standard-library/complex.md), která ve skutečnosti obsahuje hlavičku knihovny Standard C \<complex.h > a přidá názvy přidružené k `std` oboru názvů.
+Zahrnuje C++ standardní [ \<>](complex.md)hlaviček standardní knihovny.
 
-## <a name="syntax"></a>Syntaxe
+> [!NOTE]
+> \<Standardní knihovna C složitá. h > hlavička není \<součástí ccomplex >, protože je účinně nahrazena C++ přetíženími v \<komplexním > a \<cmath >. Tím se \<ccomplex > redundantní záhlaví. Hlavička Complex. h > je zastaralá v C++ \< Hlavička \<> ccomplex je v c++ 17 zastaralá a odebrala se v konceptu c++ 20 Standard.
 
-```cpp
-#include <ccomplex>
-```
+## <a name="requirements"></a>Požadavky
+
+**Hlavička:** \<ccomplex >
+
+**Obor názvů:** std
 
 ## <a name="remarks"></a>Poznámky
 
-Včetně této hlavičky zajišťuje, že názvy deklarované s vnějším spojením v záhlaví knihovny Standard C jsou deklarovány v `std` oboru názvů.
-
-Název `clog`, který je deklarován v \<complex.h >, není definována v `std` obor názvů kvůli možným konfliktům s `clog` , která je deklarována v [ \<iostream – >](../standard-library/iostream.md).
+Název `clog`, který je deklarován v \<Complex. h > `std` , není definován v oboru názvů z důvodu potenciálních konfliktů s `clog` deklarací, která je deklarována v [ \<iostream – >](iostream.md).
 
 ## <a name="see-also"></a>Viz také:
 
-[Odkaz na soubory hlaviček](../standard-library/cpp-standard-library-header-files.md)<br/>
-[Standardní knihovna C++ – přehled](../standard-library/cpp-standard-library-overview.md)<br/>
+[\<komplexní >](complex.md)\
+[\<cmath>](cmath.md)\
+[Odkazy na hlavičkové soubory](cpp-standard-library-header-files.md)\
+[C++Přehled standardní knihovny](cpp-standard-library-overview.md)\
+[Bezpečnost vlákna ve C++ standardní knihovně](thread-safety-in-the-cpp-standard-library.md)

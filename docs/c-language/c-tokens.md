@@ -5,12 +5,12 @@ helpviewer_keywords:
 - tokens
 - translation units
 ms.assetid: 05e5f6f1-b8ea-4f74-af17-c0b9b5dbd3b5
-ms.openlocfilehash: 8f92692fb19b0eeff2fe9af179fc8fe3fa6c2f7e
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
+ms.openlocfilehash: 44d8956313053ca6c7a55994f241c00bd71092b4
+ms.sourcegitcommit: 0867d648e0955ebad7260b5fbebfd6cd4d58f3c7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56149723"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68340979"
 ---
 # <a name="c-tokens"></a>Tokeny jazyka C
 
@@ -18,22 +18,22 @@ Ve zdrojovém programu jazyka C je „token“ základním prvkem rozpoznatelný
 
 ## <a name="syntax"></a>Syntaxe
 
-*token*: *– klíčové slovo*
+*token*: *klíčové slovo*
 
-*identifier*
+*RID*
 
-*constant*
+*změnil*
 
-*string-literal*
+*řetězcový literál*
 
 *operator*
 
-*interpunkci*
+*punctuator*
 
 > [!NOTE]
->  Naleznete v úvodu do[souhrn syntaxe jazyka C](../c-language/c-language-syntax-summary.md) vysvětlení konvencí syntaxe standardu ANSI.
+>  Vysvětlení konvencí syntaxe standardu ANSI naleznete v úvodu do [souhrnu syntaxe jazyka C](../c-language/c-language-syntax-summary.md) .
 
-Klíčová slova, identifikátory, konstanty, textové literály a operátory popsané v tomto oddíle jsou příklady tokenů. Interpunkční znaménka, např. hranaté závorky (**[] č.**), složené závorky (**{}**), závorek ( **()** ) a čárky (**,**) jsou také tokeny.
+Klíčová slova, identifikátory, konstanty, textové literály a operátory popsané v tomto oddíle jsou příklady tokenů. Také tokeny jsou interpunkční znaky, jako jsou závorky ( **[]** ), složené závorky ( **{}** ), kulaté závorky ( **()** ) a čárky ( **,** ).
 
 ## <a name="see-also"></a>Viz také:
 

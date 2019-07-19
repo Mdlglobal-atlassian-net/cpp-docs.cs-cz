@@ -1,33 +1,38 @@
 ---
 title: '&lt;cstdbool&gt;'
-ms.date: 11/04/2016
+ms.date: 07/11/2019
+f1_keywords:
+- <cstdbool>
+- cstdbool
+helpviewer_keywords:
+- cstdbool header
 ms.assetid: 44ccb8b2-d808-4715-8097-58ba09ab33ed
-ms.openlocfilehash: 0bc21753b108dbdbfee86ea1319223e49753b8dc
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: ed780e059a5e456731fd6a4f651639e282016f5e
+ms.sourcegitcommit: 0867d648e0955ebad7260b5fbebfd6cd4d58f3c7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68244492"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68341098"
 ---
 # <a name="ltcstdboolgt"></a>&lt;cstdbool&gt;
 
-Obsahuje hlavičku knihovny Standard C \<stdbool.h > a přidá názvy přidružené k `std` oboru názvů.
+Obsahuje hlavičku \<standardní knihovny jazyka C stdbool. h > a přidává přidružené názvy `std` do oboru názvů.
 
 > [!NOTE]
-> Tato hlavička se už nepoužívá v C++ 17.
+> Vzhledem k \<tomu, že hlavička stdbool. h > definuje makra, C++která jsou klíčová slova v, včetně nemá žádný vliv. Hlavička stdbool. h > je zastaralá v C++ \< Hlavička \<> cstdbool je v c++ 17 zastaralá a odebrala se v konceptu c++ 20 Standard.
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** \<cstdbool >
+**Hlavička:** \<cstdbool >
 
-**Namespace:** std
+**Obor názvů:** std
 
 ## <a name="remarks"></a>Poznámky
 
-Včetně této hlavičky zajišťuje, že názvy deklarované s vnějším spojením v záhlaví knihovny Standard C jsou deklarovány v `std` oboru názvů.
+Včetně této hlavičky zajišťuje, že názvy deklarované s vnějším propojením v záhlaví standardní knihovny jazyka C jsou deklarovány v `std` oboru názvů.
 
 ## <a name="see-also"></a>Viz také:
 
-[Odkaz na soubory hlaviček](../standard-library/cpp-standard-library-header-files.md)<br/>
-[Standardní knihovna C++ – přehled](../standard-library/cpp-standard-library-overview.md)<br/>
-[Bezpečný přístup z více vláken ve standardní knihovně C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[Odkazy na hlavičkové soubory](cpp-standard-library-header-files.md)\
+[C++Přehled standardní knihovny](cpp-standard-library-overview.md)\
+[Bezpečnost vlákna ve C++ standardní knihovně](thread-safety-in-the-cpp-standard-library.md)

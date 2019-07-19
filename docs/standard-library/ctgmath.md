@@ -1,34 +1,40 @@
 ---
 title: '&lt;ctgmath&gt;'
-ms.date: 11/04/2016
+ms.date: 07/11/2019
+f1_keywords:
+- <ctgmath>
+- ctgmath
+helpviewer_keywords:
+- ctgmath header
 ms.assetid: ff521893-f445-4dc8-a2f6-699185bb7024
-ms.openlocfilehash: 85099f3cb206dd791aade59bf9a531a714e68ac3
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 30eca273ac41139251c024c27c16d4adefe7f784
+ms.sourcegitcommit: 0867d648e0955ebad7260b5fbebfd6cd4d58f3c7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68246609"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68341106"
 ---
 # <a name="ltctgmathgt"></a>&lt;ctgmath&gt;
 
-Ve skutečnosti obsahuje C++ hlavičky standardní knihovny \<komplexní > a \<cmath >, které poskytují rovnocenná obecná matematická makra ekvivalentní \<tgmath.h >.
+V důsledku toho zahrnuje standardní C++ záhlaví \<knihoven, které jsou složité \<> a cmath >, které poskytují generická matematické makra ekvivalentní \<tgmath. h >.
+
+> [!NOTE]
+> \<Standardní knihovna jazyka C tgmath. h > hlavička není \<součástí ctgmath >, protože je účinně nahrazena C++ přetíženími v \<komplexních > a \<cmath >. Tím se \<ctgmath > redundantní záhlaví. Hlavička tgmath. h > je zastaralá v C++ \< Hlavička \<> ctgmath je v c++ 17 zastaralá a odebrala se v konceptu c++ 20 Standard.
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** \<ctgmath >
+**Hlavička:** \<ctgmath >
 
-**Namespace:** std
+**Obor názvů:** std
 
 ## <a name="remarks"></a>Poznámky
 
-Funkce záhlaví knihovny Standard C \<tgmath.h > je poskytována přetížení v \<komplexní > a \<cmath >.
-
-Včetně této hlavičky zajišťuje, že názvy deklarované s vnějším spojením v záhlaví knihovny Standard C jsou deklarovány v `std` oboru názvů.
+Funkce hlavičky \<standardní knihovny jazyka C tgmath. h > poskytují přetížení v \<komplexních > a \<cmath >.
 
 ## <a name="see-also"></a>Viz také:
 
-[\<ccomplex>](../standard-library/ccomplex.md)<br/>
-[\<cmath>](../standard-library/cmath.md)<br/>
-[Odkaz na soubory hlaviček](../standard-library/cpp-standard-library-header-files.md)<br/>
-[Standardní knihovna C++ – přehled](../standard-library/cpp-standard-library-overview.md)<br/>
-[Bezpečný přístup z více vláken ve standardní knihovně C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[\<komplexní >](complex.md)\
+[\<cmath>](cmath.md)\
+[Odkazy na hlavičkové soubory](cpp-standard-library-header-files.md)\
+[C++Přehled standardní knihovny](cpp-standard-library-overview.md)\
+[Bezpečnost vlákna ve C++ standardní knihovně](thread-safety-in-the-cpp-standard-library.md)
