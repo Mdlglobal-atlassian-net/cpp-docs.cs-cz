@@ -11,12 +11,12 @@ helpviewer_keywords:
 - constants [C++], file translation mode
 - file translation [C++]
 ms.assetid: 49b13bf3-442e-4d19-878b-bd1029fa666a
-ms.openlocfilehash: ef9b986753de05c45b3071e55f9b163fa5a6a7da
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ed2fae935850837ebace880d78c206754b3061bd
+ms.sourcegitcommit: 878a164fe6d550ca81ab87d8425c8d3cd52fe384
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62343656"
+ms.lasthandoff: 07/22/2019
+ms.locfileid: "68375915"
 ---
 # <a name="file-translation-constants"></a>Konstanty posunutí souboru
 
@@ -28,22 +28,22 @@ ms.locfileid: "62343656"
 
 ## <a name="remarks"></a>Poznámky
 
-Tyto konstanty určení režimu překladu (**"b"** nebo **"t"**). Režim je součástí řetězce, který specifikuje typ přístupu (**"r"**, **"w"**, **"a"**, **"r +"**, **"w +"**, **"a +"**).
+Tyto konstanty určují režim překladu ( **"b"** nebo **"t"** ). Tento režim je součástí řetězce určujícího typ přístupu ( **"r"** , **"w"** , **"a"** , **"r +"** , **"w +** ", **"a +"** ).
 
 Režimy překladu jsou následující:
 
 - **t**
 
-   Otevře se v textovém (přeloženém) režimu. V tomto režimu kombinace návrat na začátek řádku return nebo odřádkování (CR-LF) jsou přeloženy (LF) na vstupu a znaků LF jsou přeloženy do na výstupu jako kombinace CR-LF. Příkaz CTRL+Z je na vstupu interpretován jako znak konce souboru. V souborech otevřených pro čtení nebo čtení/zápis `fopen` vyhledává CTRL + Z na konci souboru a odstraní ji, pokud je to možné. Toto je provedeno z důvodu použití `fseek` a `ftell` může způsobit, že funkce pro přesun v rámci souboru končí CTRL + Z `fseek` nesprávné chování na konci souboru.
+   Otevře se v textovém (přeloženém) režimu. V tomto režimu jsou kombinace pro návrat vozíku (CR-LF) přeloženy do jednoduchých čar (LF) na vstupu a znaky LF jsou přeloženy na výstup do kombinací znaků CR-LF. Příkaz CTRL+Z je na vstupu interpretován jako znak konce souboru. V souborech otevřených pro čtení nebo čtení a zápis `fopen` vyhledá klávesovou zkratku CTRL + Z na konci souboru a pokud je to možné, odebere ji. K tomu je potřeba, protože `fseek` použití `ftell` funkcí a k přesunu v rámci souboru končícího klávesami CTRL `fseek` + Z může způsobit nesprávné chování na konci souboru.
 
    > [!NOTE]
-   > **t** možnost není součástí standardu ANSI `fopen` a `freopen`. Je rozšířením společnosti Microsoft a neměl by se používat, kde je žádoucí přenositelnost ANSI.
+   > Možnost **t** není součástí standardu ANSI pro `fopen` a. `freopen` Je to rozšíření Microsoftu a nemělo by se používat tam, kde je žádoucí přenositelnost ANSI.
 
 - **b**
 
-   Otevře se v binárním (nepřeloženém) režimu. Překlady uvedené výše jsou potlačeny.
+   Otevře se v binárním (nepřeloženém) režimu. Výše uvedené překlady jsou potlačeny.
 
-Pokud **t** nebo **b** není uveden v *režimu*, režim překladu definován proměnnou výchozího režimu [_fmode](../c-runtime-library/fmode.md). Další informace o používání textovém a binárním režimu najdete v tématu [textového a binárního režimu souboru vstupně-výstupních operací](../c-runtime-library/text-and-binary-mode-file-i-o.md).
+Pokud **t** nebo **b** není uveden v *režimu*, je režim překladu definován pomocí proměnné ve výchozím režimu [_fmode](../c-runtime-library/fmode.md). Další informace o používání textových a binárních režimů najdete v tématu [vstupně-výstupní operace se soubory v textovém a binárním režimu](../c-runtime-library/text-and-binary-mode-file-i-o.md).
 
 ## <a name="see-also"></a>Viz také:
 

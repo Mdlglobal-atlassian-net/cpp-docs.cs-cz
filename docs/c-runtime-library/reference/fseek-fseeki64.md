@@ -28,12 +28,12 @@ helpviewer_keywords:
 - file pointers [C++]
 - seek file pointers
 ms.assetid: f6bb1f8b-891c-426e-9e14-0e7e5c62df70
-ms.openlocfilehash: e5f775eab370f8f4a3b6a5c1d7f0918ec7efa3ff
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4cfb4bcea4a110cf8a9c9db664c42d6603328cf0
+ms.sourcegitcommit: 878a164fe6d550ca81ab87d8425c8d3cd52fe384
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62287583"
+ms.lasthandoff: 07/22/2019
+ms.locfileid: "68376085"
 ---
 # <a name="fseek-fseeki64"></a>fseek, _fseeki64
 
@@ -57,43 +57,43 @@ int _fseeki64(
 ### <a name="parameters"></a>Parametry
 
 *stream*<br/>
-Ukazatel na **souboru** struktury.
+Ukazatel na strukturu **souborů** .
 
-*Posun*<br/>
-Počet bajtů z *původu*.
+*polohy*<br/>
+Počet bajtů od *počátku*
 
-*Počátek*<br/>
+*zdroji*<br/>
 Počáteční pozice.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-V případě úspěšného ověření **fseek** a **_fseeki64 –** vrátí hodnotu 0. V opačném případě vrací nenulovou hodnotu. Na zařízeních nepodporující vyhledávání návratová hodnota není definována. Pokud *stream* je ukazatel s hodnotou null, nebo pokud *původu* není jedním z povolených hodnot je popsáno níže, **fseek** a **_fseeki64 –** vyvolat neplatné Obslužná rutina parametru, jak je popsáno v [Parameter Validation](../../c-runtime-library/parameter-validation.md). Pokud smí provádění pokračovat, tyto funkce nastaví **errno** k **EINVAL** a vrátí hodnotu -1.
+V případě úspěchu vrátí **fseek** a **_fseeki64** hodnotu 0. V opačném případě vrátí nenulovou hodnotu. U zařízení, která neumožňují hledání, není tato návratová hodnota definována. Pokud je *datový proud* ukazatel s hodnotou null, nebo pokud není *zdrojem* jedna z povolených hodnot uvedených níže, **fseek** a **_fseeki64** vyvolá obslužnou rutinu neplatného parametru, jak je popsáno v tématu [ověřování parametru](../../c-runtime-library/parameter-validation.md). Pokud provádění může pokračovat, tyto funkce nastaví **errno** na **EINVAL** a vrátí-1.
 
 ## <a name="remarks"></a>Poznámky
 
-**Fseek** a **_fseeki64 –** funkce přesune ukazatel na soubor (pokud existuje) přidružené k *stream* do nového umístění, která je *posun* bajty z *původu*. Další operace v datovém proudu se provádí v novém umístění. Na datový proud otevřen pro úpravy může být další operace čtení nebo zápis. Argument *původu* musí být jedna z následujících konstant, definované v STDIO. V:
+Funkce **fseek** a **_fseeki64** přesune ukazatel na soubor (pokud existuje) přidružený ke *streamu* do nového umístění, které má *posun* bajtů od *počátku*. Další operace s datovým proudem probíhá na novém místě. U datového proudu otevřeného pro aktualizaci může být další operace buď čtení, nebo zápis. *Počátek* argumentu musí být jedna z následujících konstant definovaná v stdio. Y
 
-|původní hodnota|Význam|
+|hodnota počátku|Význam|
 |-|-|
-| **SEEK_CUR** | Aktuální pozici ukazatele na soubor. |
-| **SEEK_END** | Konec souboru. |
-| **SEEK_SET** | Začátku souboru. |
+| **SEEK_CUR** | Aktuální pozice ukazatele na soubor |
+| **SEEK_END** | Konec souboru |
+| **SEEK_SET** | Začátek souboru. |
 
-Můžete použít **fseek** a **_fseeki64 –** přesuňte ukazatel myši kdekoli v souboru. Ukazatel může také být umístěné za koncem souboru. **fseek** a **_fseeki64 –** vymaže indikátor konce souboru a Neguje působení jakékoli předchozí [ungetc –](ungetc-ungetwc.md) volá proti *stream*.
+Pomocí **fseek** a **_fseeki64** můžete změnit umístění ukazatele kdekoli v souboru. Ukazatel lze také umístit za konec souboru. **fseek** a **_fseeki64** vymaže indikátor konce souboru a negaci účinku všech předchozích [ungetc –](ungetc-ungetwc.md) volání na *datový proud*.
 
-Když je soubor otevřen pro připojení dat, aktuální pozice v souboru je určen poslední vstupně-výstupní operace, nikoli kde by tomu bylo další zápis. Pokud nemá žádné vstupně-výstupní operace, ale došlo k chybě na soubor otevřen pro přidávání, pozice v souboru je začátku souboru.
+Když se pro připojená data otevře soubor, určí se aktuální pozice souboru podle poslední vstupně-výstupní operace, ne podle toho, kde by se mohlo objevit další zápis. Pokud v souboru otevřeném pro připojení ještě nedošlo k žádné vstupně-výstupní operaci, je pozice souboru na začátku souboru.
 
-Pro datové proudy otevřít v textovém režimu **fseek** a **_fseeki64 –** mají omezenou použití, protože může způsobit návrat na začátek řádku návratový znak odřádkování překlady **fseek** a **_ fseeki64 –** k vést k neočekávaným výsledkům. Jediná **fseek** a **_fseeki64 –** operace zaručeno, že fungují u streamů otevřít v textovém režimu jsou:
+Pro datové proudy otevřené v textovém režimu mají **fseek** a **_fseeki64** omezené použití, protože překlady kanálu návratového řádku můžou způsobit, že **fseek** a **_fseeki64** vytvářejí neočekávané výsledky. Pro práci s datovými proudy otevřenými v textovém režimu jsou zaručené jenom **fseek** a **_fseeki64** operace:
 
-- Hledání s posunem 0 vzhledem k některé z původní hodnoty.
+- Hledání s posunem 0 relativně k libovolnému z původních hodnot.
 
-- Hledání od začátku souboru s hodnoty posunu vrácená z volání [ftell –](ftell-ftelli64.md) při použití **fseek** nebo [_ftelli64 –](ftell-ftelli64.md) při použití **_fseeki64 –**.
+- Hledání od začátku souboru s hodnotou posunu vrácenou voláním [ftell](ftell-ftelli64.md) při použití **fseek** nebo [_ftelli64](ftell-ftelli64.md) při použití **_fseeki64**.
 
-Také v textovém režimu je CTRL + Z interpretováno jako endovém souborovém znak na vstupu. V souborech otevřených pro čtení/zápis [fopen](fopen-wfopen.md) a všechny související rutiny kontrolovat CTRL + Z na konci souboru a pokud je to možné ho odebrat. To se provádí, protože používá kombinaci **fseek** a [ftell –](ftell-ftelli64.md) nebo **_fseeki64 –** a [_ftelli64 –](ftell-ftelli64.md), pro přesun v rámci souboru, který končí CTRL + Z může způsobit, že **fseek** nebo **_fseeki64 –** nesprávné chování na konci souboru.
+V textovém režimu je také kombinace kláves CTRL + Z interpretována jako znak konce souboru na vstupu. V souborech otevřených pro čtení/zápis [fopen](fopen-wfopen.md) a všechny související rutiny kontrolují CTRL + Z na konci souboru a pokud je to možné, odeberte je. K tomu dochází, protože použití kombinace **fseek** a [ftell](ftell-ftelli64.md) nebo **_fseeki64** a [_ftelli64](ftell-ftelli64.md)pro přesun v rámci souboru, který končí kombinací kláves CTRL + Z, může způsobit, že **fseek** nebo **_fseeki64** se chovají nesprávně na konci souborů.
 
-Když CRT otevře soubor, který začíná s značky pořadí bajtů (BOM), ukazatel na soubor je umístěn za BOM (to znamená, že na začátku souboru skutečný obsah). Pokud budete muset **fseek** na začátek souboru, použijte [ftell –](ftell-ftelli64.md) získat počáteční pozice a **fseek** k němu, nikoli na pozici 0.
+Když CRT otevře soubor, který začíná znakem pořadí bajtů (BOM), ukazatel na soubor se umístí po kusovníku (tj. na začátku aktuálního obsahu souboru). Pokud je třeba **fseek** na začátek souboru, použijte [ftell](ftell-ftelli64.md) k získání počáteční pozice a **fseek** místo pozice 0.
 
-Tato funkce zamezí ostatní vlákna během provádění a proto je bezpečná pro vlákno. Nezamykací verzi naleznete v tématu [_fseek_nolock – _fseeki64_nolock –](fseek-nolock-fseeki64-nolock.md).
+Tato funkce zamkne další vlákna během provádění a je proto bezpečná pro přístup z více vláken. Neuzamykání verze naleznete v tématu [_fseek_nolock, _fseeki64_nolock](fseek-nolock-fseeki64-nolock.md).
 
 ## <a name="requirements"></a>Požadavky
 
@@ -102,7 +102,7 @@ Tato funkce zamezí ostatní vlákna během provádění a proto je bezpečná p
 |**fseek**|\<stdio.h>|
 |**_fseeki64**|\<stdio.h>|
 
-Další informace o kompatibilitě, naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Příklad
 
@@ -146,7 +146,7 @@ This is the file 'fseek.out'.
 
 ## <a name="see-also"></a>Viz také:
 
-[Stream vstupně-výstupních operací](../../c-runtime-library/stream-i-o.md)<br/>
+[Vstup/výstup datového proudu](../../c-runtime-library/stream-i-o.md)<br/>
 [fopen, _wfopen](fopen-wfopen.md)<br/>
 [ftell, _ftelli64](ftell-ftelli64.md)<br/>
 [_lseek, _lseeki64](lseek-lseeki64.md)<br/>

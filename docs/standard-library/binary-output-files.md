@@ -6,16 +6,16 @@ helpviewer_keywords:
 - files [C++], binary output files
 - binary data, binary output files
 ms.assetid: 180954af-8cd6-444b-9a76-2f630a3389d8
-ms.openlocfilehash: 99445275a8f92622f451e8a88082dc2b28fb60b6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4562f5c1167aeadc6689313e73545ed1ad9bbcf8
+ms.sourcegitcommit: 878a164fe6d550ca81ab87d8425c8d3cd52fe384
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62414058"
+ms.lasthandoff: 07/22/2019
+ms.locfileid: "68376329"
 ---
 # <a name="binary-output-files"></a>Binární výstupní soubory
 
-Datové proudy byly původně navržen pro text, tak režim výstupu výchozí je text. V textovém režimu rozšíří znak nového řádku (hexadecimální 10) návrat na začátek řádku vrátit – znak odřádkování (pouze 16 bitů). Rozšíření může způsobit potíže, jak je znázorněno zde:
+Datové proudy byly původně určeny pro text, takže výchozí režim výstupu je text. V textovém režimu se znak posunu řádku (nový řádek) rozšíří na dvojici kanálů návratového řádku. Rozšíření může způsobit problémy, jak je znázorněno zde:
 
 ```cpp
 // binary_output_files.cpp
@@ -30,7 +30,7 @@ int main( )
 }
 ```
 
-Očekáváte-li tento program do výstupního sekvence bajtů {99, 0, 10, 0}; Místo toho výstupu {99, 0, 13, 10, 0}, což způsobí, že problémy pro program očekává se binární vstup. Pokud potřebujete true binární výstup, ve kterém jsou zapsány znaků zůstanou nepřevedeny, budete moci zadat binární výstup s použitím [ofstream](../standard-library/basic-ofstream-class.md#basic_ofstream) openmode argument konstruktoru:
+Můžete očekávat, že tento program vypíše bajtovou sekvenci {99, 0, 10, 0}; místo toho produkuje výstup {99, 0, 13, 10, 0}, což způsobuje problémy programu, který očekává binární vstup. Pokud potřebujete skutečný binární výstup, ve kterém jsou znaky zapsány nepřeloženy, můžete zadat binární výstup pomocí argumentu konstruktoru `openmode` [ofstream](../standard-library/basic-ofstream-class.md#basic_ofstream) :
 
 ```cpp
 // binary_output_files2.cpp
@@ -50,4 +50,4 @@ int main()
 
 ## <a name="see-also"></a>Viz také:
 
-[Výstupní streamy](../standard-library/output-streams.md)<br/>
+[Výstupní streamy](../standard-library/output-streams.md)

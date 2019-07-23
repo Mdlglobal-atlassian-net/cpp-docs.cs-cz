@@ -1,5 +1,5 @@
 ---
-title: Tokeny (C++)
+title: TokenyC++()
 ms.date: 11/04/2016
 helpviewer_keywords:
 - tokens [C++]
@@ -7,18 +7,18 @@ helpviewer_keywords:
 - translation units
 - white space, in C++ tokens
 ms.assetid: aa812fd0-6d47-4f3f-aee0-db002ee4d8b9
-ms.openlocfilehash: 1606df56191ec00ffea543dedd3fd4eda98d01c2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: cd104b7308716ca182374bbff2df61731c84d574
+ms.sourcegitcommit: 878a164fe6d550ca81ab87d8425c8d3cd52fe384
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62330437"
+ms.lasthandoff: 07/22/2019
+ms.locfileid: "68376252"
 ---
-# <a name="tokens-c"></a>Tokeny (C++)
+# <a name="tokens-c"></a>TokenyC++()
 
 Token je nejmenší prvek programu C++, který je smysluplný pro kompilátor. Analyzátor jazyka C++ rozpoznává tyto druhy tokenů: identifikátory, klíčová slova, literály, operátory, interpunkční znaky a jiné oddělovače. Proud těchto tokenů tvoří jednotku překladu.
 
-Tokeny jsou odděleny obvykle *prázdných*. Prázdný znak může být jeden nebo jich může být více:
+Tokeny jsou obvykle odděleny *prázdným znakem*. Prázdný znak může být jeden nebo jich může být více:
 
 - Prázdné hodnoty
 
@@ -26,13 +26,13 @@ Tokeny jsou odděleny obvykle *prázdných*. Prázdný znak může být jeden ne
 
 - Nové řádky
 
-- Zakončení stránky
+- Informační kanály formuláře
 
 - Komentáře
 
-Analyzátor rozpozná klíčová slova, identifikátory, literály, operátory a interpunkční znaky. Informace o konkrétní typy tokenů, naleznete v tématu [klíčová slova](../cpp/keywords-cpp.md), [identifikátory](../cpp/identifiers-cpp.md), [číselné, logické a literály typu ukazatele](../cpp/numeric-boolean-and-pointer-literals-cpp.md), [řetězcové a znakové literály ](../cpp/string-and-character-literals-cpp.md), [Uživateli definované literály](../cpp/user-defined-literals-cpp.md), [integrované operátory C++, Priorita a asociativita](../cpp/cpp-built-in-operators-precedence-and-associativity.md), a [interpunkční znaky](../cpp/punctuators-cpp.md). Prázdné místo je ignorován, s výjimkou podle potřeby k oddělení tokeny.
+Analyzátor rozpozná klíčová slova, identifikátory, literály, operátory a interpunkční znaky. Informace o konkrétních typech tokenů naleznete v [tématu Klíčová slova](../cpp/keywords-cpp.md), [identifikátory](../cpp/identifiers-cpp.md), [číselné, logické a literály ukazatelů](../cpp/numeric-boolean-and-pointer-literals-cpp.md), [řetězcové a znakové literály](../cpp/string-and-character-literals-cpp.md), uživatelsky [definované literály](../cpp/user-defined-literals-cpp.md), [ C++ předdefinované operátory, Priority a asociativita](../cpp/cpp-built-in-operators-precedence-and-associativity.md)a [interpunkční znaky](../cpp/punctuators-cpp.md). Prázdné znaky jsou ignorovány, s výjimkou požadavků na samostatné tokeny.
 
-Tokeny předběžného zpracování se používají ve fázích předběžného zpracování k vygenerování tokenu stream předány kompilátoru. Předzpracování token kategorií jsou názvy záhlaví, identifikátory, předzpracování čísla, znakových literálů, řetězcové literály, operátory předběžného zpracování a interpunkční znaky a jednotlivé znaky prázdné znaky, které se neshodují s některou z jiných kategorií. Znakové a řetězcové literály se dá uživateli definované literály. Tokeny předzpracování mohou být odděleny prázdným znakem nebo komentáře.
+Tokeny předběžného zpracování se používají ve fázích předzpracování ke generování streamu tokenu předaného kompilátoru. Kategorie tokenu předběžného zpracování jsou názvy hlaviček, identifikátory, předzpracovaná čísla, literály znaků, řetězcové literály, operátory předzpracování a interpunkční znaky a jednoduché neprázdné znaky, které se neshodují s jednou z ostatních kategorií. Literály znaků a řetězce můžou být uživatelsky definované literály. Tokeny předběžného zpracování mohou být odděleny mezerami nebo komentáři.
 
 Analyzátor oddělí tokeny ze vstupního datového proudu vytvořením nejdelšího možného tokenu použitím vstupních znaků při skenování zleva doprava. Prohlédněte si tento fragment kódu:
 

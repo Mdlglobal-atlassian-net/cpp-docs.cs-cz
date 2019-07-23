@@ -1,40 +1,28 @@
 ---
 title: Členské funkce vstupního datového proudu
-ms.date: 11/04/2016
+ms.date: 07/19/2019
 helpviewer_keywords:
 - input stream objects
 - input streams, member functions
 ms.assetid: b4b9465d-0da9-4ccf-859d-72a68418982e
-ms.openlocfilehash: b046ea1995d5a8eaa39dced9feb7a5e4c422c253
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3b028090c9b91c7f0dde195243a5d2daef55fbbc
+ms.sourcegitcommit: 878a164fe6d550ca81ab87d8425c8d3cd52fe384
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62159284"
+ms.lasthandoff: 07/22/2019
+ms.locfileid: "68376245"
 ---
 # <a name="input-stream-member-functions"></a>Členské funkce vstupního datového proudu
 
-Členské funkce vstupního streamu se používají pro vstup disků. Členské funkce patří:
+Členské funkce vstupního datového proudu se používají pro vstup disku.
 
-- [Funkce open pro vstupní datové proudy](#vclrftheopenfunctionforinputstreamsanchor11)
+## <a name="vclrftheopenfunctionforinputstreamsanchor11"></a>otevírají
 
-- [Get](#vclrfthegetfunctionanchor12)
+Pokud používáte datový proud vstupního souboru (`ifstream`), musíte tento datový proud přidružit k určitému souboru na disku. Můžete to provést v konstruktoru nebo můžete použít `open` funkci. V obou případech jsou argumenty stejné.
 
-- [Getline](#vclrfthegetlinefunctionanchor13)
+Při otevření souboru přidruženého ke vstupnímu datovému proudu je obecně nutné zadat příznak [ios_base:: openmode](../standard-library/ios-base-class.md#openmode) (výchozí režim je `ios::in`). Seznam `openmode` příznaků naleznete v tématu [ios_base:: openmode](../standard-library/ios-base-class.md#openmode). Příznaky lze kombinovat pomocí operátoru OR ( &#124; ).
 
-- [Čtení](#vclrfthereadfunctionanchor14)
-
-- [Seekg – a tellg – funkce](#vclrftheseekgandtellgfunctionsanchor7)
-
-- [Zavřít funkce pro vstupní datové proudy](#vclrftheclosefunctionforinputstreamsanchor15)
-
-## <a name="vclrftheopenfunctionforinputstreamsanchor11"></a> Funkce open pro vstupní datové proudy
-
-Pokud používáte proud vstupní soubor (ifstream), je třeba přidružit k souboru na konkrétní disku tohoto datového proudu. Můžete to provést v konstruktoru, nebo můžete použít `open` funkce. V obou případech argumenty jsou stejné.
-
-Obecně určíte [ios_base::openmode](../standard-library/ios-base-class.md#openmode) příznak po otevření souboru přidruženého vstupního datového proudu (je výchozí režim `ios::in`). Seznam `open_mode` příznaky viz [otevřít](#vclrftheopenfunctionforinputstreamsanchor11). Příznaků je možné kombinovat s bitový operátor OR ( &#124; ) – operátor.
-
-Ke čtení souboru, nejprve pomocí `fail` členskou funkci k určení, zda existuje:
+Chcete-li číst soubor, nejprve pomocí `fail` členské funkce určete, zda existuje:
 
 ```cpp
 istream ifile("FILENAME");
@@ -43,11 +31,11 @@ if (ifile.fail())
 // The file does not exist ...
 ```
 
-## <a name="vclrfthegetfunctionanchor12"></a> Get
+## <a name="vclrfthegetfunctionanchor12"></a>Čtěte
 
-Neformátovaný `get` členská funkce funguje stejně jako `>>` operátor se dvěma výjimkami. Nejprve je potřeba `get` funkce zahrnuje prázdné znaky, vzhledem k tomu, Extraktor vyloučí prázdné znaky při `skipws` je nastavený příznak (výchozí). Druhý, `get` funkce je méně pravděpodobné, že způsobit vázané výstupního datového proudu (`cout`, například) zapsány.
+Neformátovaná `get` členská funkce funguje `>>` jako operátor se dvěma výjimkami. Za prvé, `get` funkce obsahuje prázdné znaky, zatímco extraktor `skipws` při nastavení příznaku nevylučuje prázdné místo (výchozí). Za druhé, `get` funkce je méně pravděpodobný způsob, jak vyprázdnit vázaný`cout`výstupní datový proud (například).
 
-Varianta `get` funkce určuje adresa vyrovnávací paměti a maximální počet znaků pro čtení. To je užitečné pro omezení počtu znaků odeslané do určité proměnné, jak ukazuje tento příklad:
+Variace `get` funkce určuje adresu vyrovnávací paměti a maximální počet znaků, které se mají přečíst. To je užitečné pro omezení počtu znaků odesílaných konkrétní proměnnou, jak ukazuje tento příklad:
 
 ```cpp
 // ioo_get_function.cpp
@@ -78,11 +66,11 @@ int main()
 1234
 ```
 
-## <a name="vclrfthegetlinefunctionanchor13"></a> Getline
+## <a name="vclrfthegetlinefunctionanchor13"></a>getline
 
-`getline` Členská funkce je podobný `get` funkce. Obě funkce povolit třetí argument, který určuje ukončujícího znaku pro vstup. Výchozí hodnota je znak nového řádku. Obě funkce vyhradit jeden znak pro požadované ukončujícího znaku. Ale `get` opustí ukončovací znak v datovém proudu a `getline` odebere ukončujícího znaku.
+Členská funkce je podobná `get` funkci. `getline` Obě funkce povolují třetí argument, který určuje ukončovací znak pro vstup. Výchozí hodnota je znak nového řádku. Obě funkce vyhradí jeden znak pro požadovaný ukončovací znak. Ale opustí ukončovací znak v proudu a `getline` odstraní ukončovací znak. `get`
 
-Následující příklad určuje ukončující znak vstupního datového proudu:
+Následující příklad určuje ukončovací znak pro vstupní datový proud:
 
 ```cpp
 // getline_func.cpp
@@ -105,11 +93,11 @@ int main( )
 test
 ```
 
-## <a name="vclrfthereadfunctionanchor14"></a> Čtení
+## <a name="vclrfthereadfunctionanchor14"></a>oprávnění
 
-`read` Členská funkce přečte bajtů ze souboru k zadané oblasti paměti. Argument délky určuje počet přečtených bajtů. Pokud nezadáte tento argument, zastaví čtení po dosažení fyzické konec souboru nebo v případě režimu textu souboru vložený `EOF` čtením znaku.
+`read` Členská funkce přečte bajty ze souboru do zadané oblasti paměti. Argument Length určuje počet čtených bajtů. Pokud tento argument nezadáte, přečtení se zastaví, když je dosaženo fyzického konce souboru, nebo v případě souboru textového režimu, když je načten vložený `EOF` znak.
 
-V tomto příkladu čte binární záznam ze souboru výplatních pásek do struktury:
+Tento příklad přečte binární záznam ze souboru mzdy do struktury:
 
 ```cpp
 #include <fstream>
@@ -135,11 +123,11 @@ int main()
 }
 ```
 
-Program se předpokládá, že jsou ve formátu záznamů dat přesně jak je uvedeno ve struktuře bez ukončující znaky návrat na začátek řádku a znak odřádkování.
+Program předpokládá, že datové záznamy jsou formátovány přesně tak, jak jsou určeny strukturou bez ukončujícího návratového znaku nebo znaků kanálu řádku.
 
-## <a name="vclrftheseekgandtellgfunctionsanchor7"></a> Seekg – a tellg – funkce
+## <a name="vclrftheseekgandtellgfunctionsanchor7"></a>seekg a tellg
 
-Vstupní soubor datové proudy zachovat vnitřní ukazatel pozice v souboru, ve kterém jsou data pro další čtení. Nastavit tento ukazatel `seekg` fungovat, jak je znázorněno zde:
+Datové proudy vstupních souborů udržují interní ukazatel na pozici v souboru, kde se mají číst data v dalším umístění. Tento ukazatel nastavíte pomocí `seekg` funkce, jak je znázorněno zde:
 
 ```cpp
 #include <iostream>
@@ -165,9 +153,9 @@ int main( )
 }
 ```
 
-Chcete-li použít `seekg` k implementaci systémů pro správu dat orientovaný na záznam, vynásobte velikost záznamu pevné délky pomocí čísla záznamu získat bajtu vzhledem ke konci souboru, a pak použít `get` objektu určeného ke čtení záznamu.
+Chcete- `seekg` li použít pro implementaci systémů pro správu dat orientovaných na záznamy, vynásobte velikost záznamu pevné délky číslem záznamu pro získání pozice bajtů relativně ke konci souboru a pak `get` použijte objekt pro načtení záznamu.
 
-`tellg` Členská funkce vrátí aktuální pozice v souboru pro čtení. Tato hodnota je typu `streampos`, `typedef` definované v \<iostream – >. Následující příklad načte soubor a zobrazí zprávy zobrazující pozice mezery.
+`tellg` Členská funkce vrátí pozici aktuálního souboru pro čtení. Tato hodnota je typu `streampos`, který `typedef` je definován v \<iostream – >. Následující příklad přečte soubor a zobrazí zprávy ukazující pozice mezer.
 
 ```cpp
 #include <fstream>
@@ -192,9 +180,9 @@ int main( )
 }
 ```
 
-## <a name="vclrftheclosefunctionforinputstreamsanchor15"></a> Zavřít funkce pro vstupní datové proudy
+## <a name="vclrftheclosefunctionforinputstreamsanchor15"></a>uzavírací
 
-`close` Členskou funkci souboru na disku, který je přidružený k datovému proudu vstupního souboru se zavře a uvolní popisovač souboru operačního systému. [Ifstream](../standard-library/basic-ifstream-class.md) destruktor zavře soubor, který pro vás, ale můžete použít `close` fungovat, pokud je potřeba otevřít další soubor pro stejný objekt datového proudu.
+`close` Členská funkce zavře soubor disku, který je přidružený ke vstupnímu streamu vstupních souborů, a uvolní popisovač souborů operačního systému. Destruktor soubor zavře za vás, ale `close` funkci můžete použít, pokud potřebujete otevřít jiný soubor pro stejný objekt streamu. [`ifstream`](../standard-library/basic-ifstream-class.md)
 
 ## <a name="see-also"></a>Viz také:
 

@@ -17,12 +17,12 @@ helpviewer_keywords:
 - translation, modes
 - translation modes (file I/O)
 ms.assetid: a5993bf4-7e7a-47f9-83c3-e46332b85579
-ms.openlocfilehash: 18e0ad8615bbe89c265247041729027f661915fe
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a86c0c1a0b70613c6e7749c78f58f6dfb3602d4d
+ms.sourcegitcommit: 878a164fe6d550ca81ab87d8425c8d3cd52fe384
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62304381"
+ms.lasthandoff: 07/22/2019
+ms.locfileid: "68376276"
 ---
 # <a name="translation-mode-constants"></a>Konstanty režimu posunutí
 
@@ -34,17 +34,17 @@ ms.locfileid: "62304381"
 
 ## <a name="remarks"></a>Poznámky
 
-`_O_BINARY` a `_O_TEXT` konstant manifestu určení režimu překladu pro soubory (`_open` a `_sopen`) nebo režim překladu pro datové proudy (`_setmode`).
+`_open` `_setmode` `_sopen`Konstanty manifestu `_O_TEXT`aurčují režim překladu souborů (a) nebo režim překladu datových proudů (). `_O_BINARY`
 
 Povolené hodnoty jsou následující:
 
 |||
 |-|-|
-`_O_TEXT`  | Otevře soubor v textovém (přeloženém) režimu. Návrat na začátek – kombinace odřádkování (CR-LF) jsou přeloženy do jednoho konce řádku (LF) na vstupu. Znaky odřádkování jsou přeloženy do na výstupu jako kombinace CR-LF. Příkaz CTRL+Z je na vstupu interpretován jako znak konce souboru. V souborech otevřených pro čtení a čtení/zápis `fopen` vyhledává CTRL + Z na konci souboru a odstraní ji, pokud je to možné. Toto je provedeno z důvodu použití `fseek` a `ftell` může způsobit, že funkce pro přesun v rámci souboru končí CTRL + Z `fseek` nesprávné chování na konci souboru.
-`_O_BINARY`  | Otevře soubor v binárním (nepřeloženém) režimu. Překlady uvedené výše jsou potlačeny.
-`_O_RAW`  | Stejné jako `_O_BINARY`. Nepodporuje z důvodu kompatibility C 2.0.
+`_O_TEXT`  | Otevře soubor v textovém (přeloženém) režimu. Kombinace návratového kanálu návratového řádku (CR-LF) jsou přeloženy do jednoduchého řádku (LF) na vstupu. Znaky kanálu čáry se ve výstupu překládají na kombinace znaků CR-LF. Příkaz CTRL+Z je na vstupu interpretován jako znak konce souboru. V souborech otevřených pro čtení a pro čtení a zápis `fopen` kontroluje klávesovou zkratku CTRL + Z na konci souboru a pokud je to možné, odstraní se. K tomu je potřeba, protože `fseek` použití `ftell` funkcí a k přesunu v rámci souboru končícího klávesami CTRL `fseek` + Z může způsobit nesprávné chování na konci souboru.
+`_O_BINARY`  | Otevře soubor v binárním (nepřeloženém) režimu. Výše uvedené překlady jsou potlačeny.
+`_O_RAW`  | Stejné jako `_O_BINARY`. Podporováno pro kompatibilitu s C 2,0.
 
-Další informace najdete v tématu [textového a binárního režimu souboru vstupně-výstupních operací](../c-runtime-library/text-and-binary-mode-file-i-o.md) a [překladu souboru](../c-runtime-library/file-translation-constants.md).
+Další informace naleznete v části [vstupně-výstupní operace souboru v textovém a binárním režimu](../c-runtime-library/text-and-binary-mode-file-i-o.md) a [Překlad souborů](../c-runtime-library/file-translation-constants.md).
 
 ## <a name="see-also"></a>Viz také:
 

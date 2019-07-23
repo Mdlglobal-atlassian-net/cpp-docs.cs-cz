@@ -6,15 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - RW1004
 ms.assetid: 89cfcb02-a5d3-4271-be4f-df2ec3f94f3e
-ms.openlocfilehash: 9ed9c314cf916f3853934de20c1b8f8a20a3695e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0d8ee23393db43637a8694d22ec23a74be78adf8
+ms.sourcegitcommit: 878a164fe6d550ca81ab87d8425c8d3cd52fe384
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62380352"
+ms.lasthandoff: 07/22/2019
+ms.locfileid: "68376346"
 ---
 # <a name="resource-compiler-fatal-error-rw1004"></a>Závažná chyba kompilátoru prostředků RW1004
 
-Neočekávaný konec souboru.
+Neočekávaný konec souboru
 
-Tuto chybu může způsobovat chybějící znak odřádkování a znaky pro návrat na začátek řádku na posledním řádku z textového souboru.
+Tato chyba může být způsobena chybějícím kanálem řádku a návratovým znakem na posledním řádku textového souboru.

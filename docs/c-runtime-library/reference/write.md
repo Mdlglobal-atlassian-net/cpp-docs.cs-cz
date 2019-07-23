@@ -23,16 +23,16 @@ helpviewer_keywords:
 - write function
 - files [C++], writing to
 ms.assetid: 7b868c33-766f-4e1a-95a7-e8d25f0604c4
-ms.openlocfilehash: b3fa53b21d4ea23c5f8e59de673f4074deedb505
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 032bf332caee09fbe17d58eeae16ab44b98402d3
+ms.sourcegitcommit: 878a164fe6d550ca81ab87d8425c8d3cd52fe384
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62383409"
+ms.lasthandoff: 07/22/2019
+ms.locfileid: "68376289"
 ---
 # <a name="write"></a>_write
 
-Zapíše data do souboru.
+Zapisuje data do souboru.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -47,29 +47,29 @@ int _write(
 ### <a name="parameters"></a>Parametry
 
 *fd*<br/>
-Popisovač souboru, do kterého se data zapisují souboru.
+Popisovač souboru, do kterého se zapisují data
 
-*Vyrovnávací paměti*<br/>
-Data k zapsání.
+*vyrovnávací paměti*<br/>
+Data, která mají být zapsána.
 
-*Počet*<br/>
-Počet bajtů.
+*výpočtu*<br/>
+Počet bajtů
 
 ## <a name="return-value"></a>Návratová hodnota
 
-V případě úspěšného ověření **_write** vrátí počet aktuálně zapsaných bajtů. Pokud skutečné zbývající místo na disku je menší než velikost vyrovnávací paměti pro funkci je při zápisu na disk, **_write** nezdaří a není vyprázdnit všechny přípravné vyrovnávací paměti obsah na disku. Návratová hodnota-1 označuje chybu. Pokud jsou předány neplatné parametry, tato funkce vyvolá obslužnou rutinu neplatného parametru, jak je popsáno v [Parameter Validation](../../c-runtime-library/parameter-validation.md). Pokud smí provádění pokračovat, vrátí funkce hodnotu -1 a **errno** nastavena na jednu ze tří hodnot: **EBADF**, což znamená, že popisovač souboru je neplatná nebo soubor není otevřen pro zápis; **ENOSPC**, což znamená, že není k dispozici dostatek volného místa na zařízení pro operaci; nebo **EINVAL**, což znamená, že *vyrovnávací paměti* byl ukazatel s hodnotou null nebo který odlišným *počet* bajtů byl předán k zápisu do souboru v režimu Unicode.
+V případě úspěchu vrátí **_Write** počet zapsaných bajtů. Pokud je aktuální místo na disku menší než velikost vyrovnávací paměti, kterou se funkce pokouší zapsat na disk, **_Write** se nezdařila a neuvolní žádný obsah vyrovnávací paměti na disk. Návratová hodnota-1 označuje chybu. Pokud jsou předány neplatné parametry, tato funkce vyvolá obslužnou rutinu neplatného parametru, jak je popsáno v tématu [ověřování parametru](../../c-runtime-library/parameter-validation.md). Pokud provádění může pokračovat, funkce vrátí hodnotu-1 a **errno** je nastavená na jednu ze tří hodnot: **EBADF**, což znamená, že popisovač souboru je neplatný nebo soubor není otevřen pro zápis; **ENOSPC**, což znamená, že na zařízení není k dispozici dostatek místa pro operaci; nebo **EINVAL**, což znamená, že *vyrovnávací paměť* byla ukazatel s hodnotou null nebo byl před zápisem do souboru v režimu Unicode předán lichý *počet* bajtů.
 
-Další informace o těchto a dalších návratových kódech naleznete v tématu [errno _doserrno, _sys_errlist a _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+Další informace o těchto a dalších návratových kódech naleznete v tématu [errno, _doserrno, _sys_errlist a _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
-Pokud je soubor otevřený v textovém režimu, každý znak odřádkování nahrazena návrat vozíku - odřádkování pár ve výstupu. Nahrazení nemá vliv na návratovou hodnotu.
+Pokud je soubor otevřen v textovém režimu, je každý znak kanálu řádku nahrazen dvojicí kanálu návratového řádku ve výstupu. Náhrada nemá vliv na vrácenou hodnotu.
 
-Když je soubor otevřen v režimu Unicode překladu – například pokud *fd* otevřen použitím **_Otevřít** nebo **_sopen** a režim parametr, který zahrnuje **_O_ WTEXT**, **_O_U16TEXT**, nebo **_O_U8TEXT**, nebo pokud je otevřen pomocí **fopen** a režim parametr, který zahrnuje **ccs = Kódování UNICODE**, **ccs = UTF-16LE**, nebo **ccs = UTF-8**, nebo pokud je režim změnit na režim překladu Unicode pomocí **_setmode**–*vyrovnávací paměti* je interpretován jako ukazatel na pole **wchar_t** obsahující **UTF-16** data. Pokus o zápis lichý počet bajtů v tomto režimu způsobí chybu ověření parametru.
+Když je soubor otevřen v režimu překladu Unicode – například pokud je *FD* otevřeno pomocí **_open** nebo **_sopen** a parametr režimu, který zahrnuje **_O_WTEXT**, **_O_U16TEXT**nebo **_O_U8TEXT**, nebo pokud je otevřen pomocí **fopen** a parametr režimu, který obsahuje **CCS = Unicode**, **CCS = UTF-16LE**nebo **CCS = UTF-8**nebo v případě, že se režim změní na režim překladu Unicode pomocí **_setmode**–*vyrovnávací paměť* je interpretována jako ukazatel na pole **wchar_t** , které obsahuje data **UTF-16** . Pokus o zápis lichého počtu bajtů v tomto režimu způsobí chybu ověření parametru.
 
 ## <a name="remarks"></a>Poznámky
 
-**_Write** funkce zápisy *počet* bajtů z *vyrovnávací paměti* do souboru spojené s *fd*. Zahájení operace zápisu na aktuální pozici ukazatele souboru (pokud existuje) přidružené k danému souboru. Pokud je soubor otevřen pro připojení, zahájení operace na konci aktuálního souboru. Po provedení této operace zápisu ukazatel na soubor je zvýšen počet aktuálně zapsaných bajtů.
+Funkce **_Write** zapisuje *počet* bajtů z *vyrovnávací paměti* do souboru přidruženého ke *FD*. Operace zápisu začíná na aktuální pozici ukazatele souboru (pokud existuje) přidruženého k danému souboru. Pokud je soubor otevřen pro připojení, operace začíná na aktuálním konci souboru. Po operaci zápisu se ukazatel na soubor zvýší o počet zapsaných bajtů.
 
-Při zápisu do soubory otevřené v režimu textu **_write** zpracovává znak CTRL + Z jako logické koncoví souboru. Při zápisu do zařízení, **_write** zpracovává znak CTRL + Z ve vyrovnávací paměti jako výstupu ukončovací znak.
+Při zápisu do souborů otevřených v textovém režimu **_Write** považuje znak CTRL + Z za logický konec souboru. Při zápisu do zařízení **_Write** považovat znak CTRL + Z ve vyrovnávací paměti jako ukončovací výstup.
 
 ## <a name="requirements"></a>Požadavky
 
@@ -77,7 +77,7 @@ Při zápisu do soubory otevřené v režimu textu **_write** zpracovává znak 
 |-------------|---------------------|
 |**_write**|\<io.h>|
 
-Další informace o kompatibilitě, naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Příklad
 

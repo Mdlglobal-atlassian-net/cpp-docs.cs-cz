@@ -9,22 +9,22 @@ helpviewer_keywords:
 - Unicode, stream I/O routines
 - Unicode stream I/O
 ms.assetid: 68be0c3e-a9e6-4fd5-b34a-1b5207f0e7d6
-ms.openlocfilehash: c16d2f74856bb42dfd6ffc4e1af7306f6edd97fb
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 10f77c7142c707d4df841899b50be2807b1b9c7f
+ms.sourcegitcommit: 878a164fe6d550ca81ab87d8425c8d3cd52fe384
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62304218"
+ms.lasthandoff: 07/22/2019
+ms.locfileid: "68376269"
 ---
 # <a name="unicode-stream-io-in-text-and-binary-modes"></a>I/O proudu kódování Unicode v textovém a binárním režimu
 
-Když Unicode Streamovat rutina vstupně-výstupních operací (například **fwprintf –**, **fwscanf –**, **fgetwc –**, **fputwc –**, **fgetws –**, nebo **fputws –**) funguje u souboru, který je otevřen v textovém režimu (výchozí), dva druhy znaků převody se konají:
+V případě, že rutina vstupu/výstupu datového proudu sady Unicode (například **fwprintf**, **fwscanf**, **fgetwc**, **fputwc**, **fgetws**nebo **fputws**) pracuje na souboru otevřeném v textovém režimu (výchozí), jsou dva druhy převodu znaků provedeny:
 
-- Převod kódování Unicode-znaková sada MBCS nebo znaková sada MBCS-Unicode. Pokud funguje funkce datového proudu vstupně-Unicode v textovém režimu, zdroj nebo cílový datový proud brán jako sekvence vícebajtových znaků. Proto se funkce vstupním datovým proudem sady Unicode převodu vícebajtových znaků na široké znaky (jako by volání **mbtowc** funkce). Ze stejného důvodu, převést funkce proudem sady Unicode široké znaky na vícebajtové znaky (jako by volání **wctomb –** funkce).
+- Konverze Unicode na znakovou sadu MBCS nebo znakové sady MBCS na kódování Unicode. Pokud funkce vstupně-výstupních streamů v kódování Unicode funguje v textovém režimu, předpokládá se, že zdrojový nebo cílový Stream je sekvence vícebajtových znaků. Proto funkce vstupního streamu Unicode převádí vícebajtové znaky na velké znaky (jako by bylo volání funkce **mbtowc** ). Ze stejného důvodu funkce výstupní datové proudy Unicode převádějí velké znaky na vícebajtové znaky (jako při volání funkce **wctomb** ).
 
-- Návrat vozíku - nový řádek (CR-LF) překlad. Tento překlad předchází MBCS - Unicode převod (pro funkce vstupního datového proudu Unicode) a po kódování Unicode - převodu znakové sady MBCS (pro funkce výstupního datového proudu Unicode). Při zadávání každý návrat vozíku - kombinaci znak odřádkování přeloženy do znak jeden znak odřádkování. Během výstup každý znak odřádkování přeloženy do návrat vozíku - kombinaci znak odřádkování.
+- Překlad návratového kanálu návratového řádku (CR-LF). K tomuto překladu dochází před převodem znakové sady MBCS-Unicode (pro vstupní funkce streamu Unicode) a po převodu Unicode-MBCS (pro výstupní funkce streamu Unicode). Během vstupu se každá kombinace kanálů pro návrat do řádku vrátí do jednoduchého znaku pro čárové kanály. Během výstupu se každý znak kanálu řádku převede na kombinaci pro návratovou čáru na řádku.
 
-Ale pokud pracuje funkce datového proudu vstupně-Unicode v binárním režimu, soubor je považován za kódování Unicode a převod překladu nebo znak CR-LF spadá vstup nebo výstup. Použít _setmode (_fileno (stdin), _O_BINARY); instrukce, aby bylo možné správně používat wcin na textového souboru UNICODE.
+Pokud však funkce vstupně-výstupních datových proudů v kódování Unicode funguje v binárním režimu, předpokládá se, že se jedná o soubor Unicode a při vstupu nebo výstupu nedochází k převodu znaků CR-LF. Použijte instrukci, aby se správně používal `wcin` textový soubor Unicode. `_setmode( _fileno( stdin ), _O_BINARY );`
 
 ## <a name="see-also"></a>Viz také:
 
