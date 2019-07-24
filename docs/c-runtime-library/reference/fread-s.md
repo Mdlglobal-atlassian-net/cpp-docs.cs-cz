@@ -20,16 +20,16 @@ f1_keywords:
 - fread_s
 - stdio/fread_s
 ms.assetid: ce735de0-f005-435d-a8f2-6f4b80ac775e
-ms.openlocfilehash: 898e813c19fd53cfdacd536c2e9819743a62a8da
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1adc999d37025392f03a11daebfffdeeb637d92b
+ms.sourcegitcommit: 878a164fe6d550ca81ab87d8425c8d3cd52fe384
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62287808"
+ms.lasthandoff: 07/22/2019
+ms.locfileid: "68376133"
 ---
 # <a name="freads"></a>fread_s
 
-Čte data z datového proudu. Tato verze [fread –](fread.md) má rozšíření zabezpečení, jak je popsáno v [funkce zabezpečení v CRT](../../c-runtime-library/security-features-in-the-crt.md).
+Načte data z datového proudu. Tato verze [fread](fread.md) má vylepšení zabezpečení, jak je popsáno v [části funkce zabezpečení v CRT](../../c-runtime-library/security-features-in-the-crt.md).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -45,32 +45,32 @@ size_t fread_s(
 
 ### <a name="parameters"></a>Parametry
 
-*Vyrovnávací paměti*<br/>
-Umístění úložiště pro data.
+*vyrovnávací paměti*<br/>
+Umístění úložiště pro data
 
-*BufferSize*<br/>
-Velikost cílové vyrovnávací paměti v bajtech.
+*bufferSize*<br/>
+Velikost cílové vyrovnávací paměti v bajtech
 
 *elementSize*<br/>
-Velikost položky ke čtení v bajtech.
+Velikost položky, která se má načíst v bajtech
 
-*Počet*<br/>
-Maximální počet položek, které chcete načíst.
+*výpočtu*<br/>
+Maximální počet položek, které se mají přečíst
 
 *stream*<br/>
-Ukazatel na **souboru** struktury.
+Ukazatel na strukturu **souborů** .
 
 ## <a name="return-value"></a>Návratová hodnota
 
-**fread_s** vrátí počet (celá) položky, které byly přečteny do vyrovnávací paměti, který může být kratší než *počet* Pokud je před došlo k chybě čtení nebo na konci souboru *počet* je dosaženo. Použití **feof** nebo **ferror** funkce pro odlišení od podmínku endovém souborovém chybu. Pokud *velikost* nebo *počet* je 0, **fread_s** vrátí 0 a obsah vyrovnávací paměti jsou beze změny. Pokud *stream* nebo *vyrovnávací paměti* je ukazatel s hodnotou null, **fread_s** vyvolá obslužnou rutinu neplatného parametru, jak je popsáno v [Parameter Validation](../../c-runtime-library/parameter-validation.md) . Pokud smí provádění pokračovat, tato funkce nastaví **errno** k **EINVAL** a vrátí hodnotu 0.
+**fread_s** vrátí počet (celých) položek, které byly čteny do vyrovnávací paměti, což může být menší než *počet* , pokud je zjištěna chyba čtení nebo konec souboru před dosažením *počtu* . Použijte funkci **feof** nebo **Deferred** k odlišení chyby z podmínky konce souboru. Pokud je *Velikost* nebo *počet* 0, **fread_s** vrátí 0 a obsah vyrovnávací paměti zůstane beze změny. Pokud je *datový proud* nebo *vyrovnávací paměť* ukazatel s hodnotou null, vyvolá **fread_s** neplatnou obslužnou rutinu parametru, jak je popsáno v tématu [ověřování parametru](../../c-runtime-library/parameter-validation.md). Pokud provádění může pokračovat, tato funkce nastaví **errno** na **EINVAL** a vrátí hodnotu 0.
 
-Další informace o chybových kódech naleznete v tématu [_doserrno, errno, _sys_errlist a _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+Další informace o kódech chyb naleznete v tématu [_doserrno, errno, _sys_errlist a _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Poznámky
 
-**Fread_s** funkce přečte až *počet* položky *elementSize* bajtů ze vstupu *stream* a ukládá je do *vyrovnávací paměti*.  Ukazatel na soubor, který je přidružen *stream* (pokud existuje) je zvýšen počet skutečně přečtených bajtů. Pokud daný datový proud je otevřen v textovém režimu, páry znaků CR návratový znak odřádkování jsou nahrazeny znaky jeden znak odřádkování. Pokud chcete nahrazení nemá žádný vliv na ukazatel na soubor nebo návratovou hodnotu. Ukazatel na soubor pozice je neurčité, pokud dojde k chybě. Hodnota částečně čtení položky nelze určit.
+Funkce **fread_s** čte až do *počtu* položek *elementSize* bajtů ze vstupního *datového proudu* a ukládá je do *vyrovnávací paměti*.  Ukazatel na soubor, který je přidružený  ke streamu (pokud existuje), se zvýší o počet čtených bajtů. Je-li daný datový proud otevřen v textovém režimu, jsou páry datových kanálů návratového řádku nahrazeny znaky jednoduchého znaku čáry. Náhrada nemá žádný vliv na ukazatel na soubor nebo na vrácenou hodnotu. Pozice ukazatele na soubor je neurčitá, pokud dojde k chybě. Nelze určit hodnotu částečného čtení položky.
 
-Tato funkce zamezí jiných vláken. Pokud budete potřebovat nezamykací verzi, použijte **_fread_nolock –**.
+Tato funkce zamkne další vlákna. Pokud vyžadujete neuzamykání verze, použijte **_fread_nolock**.
 
 ## <a name="requirements"></a>Požadavky
 
@@ -78,7 +78,7 @@ Tato funkce zamezí jiných vláken. Pokud budete potřebovat nezamykací verzi,
 |--------------|---------------------|
 |**fread_s**|\<stdio.h>|
 
-Další informace o kompatibilitě, naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Příklad
 
@@ -149,6 +149,6 @@ Contents of buffer after write/read:
 
 ## <a name="see-also"></a>Viz také:
 
-[Stream vstupně-výstupních operací](../../c-runtime-library/stream-i-o.md)<br/>
+[Vstup/výstup datového proudu](../../c-runtime-library/stream-i-o.md)<br/>
 [fwrite](fwrite.md)<br/>
 [_read](read.md)<br/>

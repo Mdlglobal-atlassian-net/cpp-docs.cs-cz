@@ -1,7 +1,7 @@
 ---
-title: Projekty C/C++ a systémy sestavení v sadě Visual Studio
+title: C/C++ projekty a systémy sestavení v aplikaci Visual Studio
 ms.description: Use Visual Studio to compile and build C++ projects for Windows, ARM or Linux based on any project system.
-ms.date: 05/06/2019
+ms.date: 07/17/2019
 helpviewer_keywords:
 - builds [C++]
 - C++ projects, building
@@ -9,84 +9,84 @@ helpviewer_keywords:
 - builds [C++], options
 - C++, build options
 ms.assetid: fa6ed4ff-334a-4d99-b5e2-a1f83d2b3008
-ms.openlocfilehash: b345517bb1202030c9d512d16e80484feb4ba737
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.openlocfilehash: 672dea77c4165ddcd84d3253525dc8c2d8be3e7c
+ms.sourcegitcommit: 610751254a01cba6ad15fb1e1764ecb2e71f66bf
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65220344"
+ms.lasthandoff: 07/18/2019
+ms.locfileid: "68313178"
 ---
-# <a name="cc-projects-and-build-systems-in-visual-studio"></a>Projekty C/C++ a systémy sestavení v sadě Visual Studio
+# <a name="cc-projects-and-build-systems-in-visual-studio"></a>C/C++ projekty a systémy sestavení v aplikaci Visual Studio
 
-Visual Studio 2017 můžete upravit, kompilace a sestavení jakékoli C++ kódovou základnu o plnou podporu technologie IntelliSense bez nutnosti k převedení tohoto kódu do projektu sady Visual Studio nebo proveďte kompilaci s sada nástrojů MSVC. Můžete třeba upravit – multiplatformního projektu CMake v sadě Visual Studio na počítači s Windows a pak kompilovat pro Linux s využitím g ++ na vzdáleném počítači s Linuxem.
+Sadu Visual Studio můžete použít k úpravám, kompilování a sestavení C++ jakékoli základny kódu s plnou podporou technologie IntelliSense bez nutnosti převádět tento kód do projektu sady Visual Studio nebo kompilovat pomocí sady nástrojů MSVC. Například můžete upravit projekt CMake pro různé platformy v sadě Visual Studio na počítači s Windows a potom ho zkompilovat pro Linux pomocí g + + na vzdáleném počítači se systémem Linux.
 
-## <a name="c-compilation"></a>Kompilace jazyka C++
+## <a name="c-compilation"></a>C++kompilace
 
-K *sestavení* programu v jazyce C++ znamená, že ke kompilaci zdrojového kódu z jednoho nebo více souborů a propojit tyto soubory do spustitelného souboru (.exe), zatížení dynamické knihovny (DLL) nebo statická knihovna (.lib). 
+Chcete  -li C++ vytvořit program pro zkompilování zdrojového kódu z jednoho nebo více souborů a pak tyto soubory propojit do spustitelného souboru (. exe), knihovny DLL (. dll) nebo statické knihovny (. lib). 
 
-Základní kompilace jazyka C++ zahrnuje tři hlavní kroky:
+Základní C++ kompilace zahrnuje tři hlavní kroky:
 
-- Preprocesor jazyka C++ transformuje všechny #directives a makra definice v každý zdrojový soubor. Tím se vytvoří *jednotce překladu*.
-- Kompilátor C++ kompiluje každou jednotku převodu do souborů objektů (.obj), použití jakékoli možnosti kompilátoru nebyly nastaveny.
-- *Linkeru* sloučí objektových souborů jeden spustitelný soubor, použití možnosti linkeru, které jste nastavili. 
+- C++ Preprocesor transformuje všechny #directives a definice maker v každém zdrojovém souboru. Tím se vytvoří *jednotka překladu*.
+- C++ Kompilátor zkompiluje každou jednotku překladu do souborových souborů (. obj), přičemž se nastavily jakékoli možnosti kompilátoru.
+- *Linker* sloučí soubory objektů do jediného spustitelného souboru, přičemž použije Možnosti linkeru, které byly nastaveny. 
 
 ## <a name="the-msvc-toolset"></a>Sada nástrojů MSVC
 
-Microsoft C++ kompilátoru, linkeru, standardní knihovny a související nástroje tvoří sada nástrojů kompilátoru MSVC (také nazývané sady nástrojů nebo "nástroje sestavení"). Tyto jsou zahrnuty v sadě Visual Studio. Můžete také stáhnout a použít sadu nástrojů jako samostatného balíčku zdarma z [umístění pro stahování Build Tools pro Visual Studio 2017](https://visualstudio.microsoft.com/downloads/#build-tools-for-visual-studio-2017).
+Kompilátor společnosti C++ Microsoft, linker, standardní knihovny a související nástroje tvoří sadu nástrojů kompilátoru MSVC (označované také jako sada nástrojů nebo "Build Tools"). Ty jsou součástí sady Visual Studio. Můžete si také stáhnout a používat sadu nástrojů jako samostatný balíček zdarma z [umístění pro stahování nástrojů sestavení pro Visual Studio 2019](https://visualstudio.microsoft.com/downloads/#build-tools-for-visual-studio-2019).
 
-Vyvoláním a kompilátorem MSVC (cl.exe) přímo z příkazového řádku můžete vytvářet jednoduché programy. Následující příkaz přijímá jeden zdrojový soubor kódu a vyvolá cl.exe sestavit spustitelný soubor volá *hello.exe*: 
+Jednoduché programy můžete sestavit vyvoláním kompilátoru MSVC (CL. exe) přímo z příkazového řádku. Následující příkaz přijme jeden soubor zdrojového kódu a vyvolá CL. exe pro sestavení spustitelného souboru s názvem Hello *. exe*: 
 
 ```cmd
 cl /EHsc hello.cpp
 ```
-Všimněte si, že tady kompilátoru (cl.exe) automaticky vyvolá preprocesor jazyka C++ a propojovací program vytvoří konečného výstupního souboru.  Další informace najdete v tématu [sestavení na příkazovém řádku](building-on-the-command-line.md).
+Všimněte si, že tady kompilátor (CL. exe) automaticky vyvolá C++ preprocesor a linker, aby vytvořil finální výstupní soubor.  Další informace najdete v tématu [sestavování na příkazovém řádku](building-on-the-command-line.md).
 
-## <a name="build-systems-and-projects"></a>Vytvářejte systémy a projekty
+## <a name="build-systems-and-projects"></a>Systémy a projekty pro sestavování
 
-Většina programů reálného světa pomocí některých druh *sestavovací systém* ke správě složitosti kompilaci více zdrojových souborů pro více konfigurací (tj ladění a vydání), více platforem (x86, x64, ARM, a tak dále), vlastní sestavení kroky a ještě více spustitelné soubory, které musí být zkompilovány v určitém pořadí. Zkontrolujte nastavení v souborech konfigurace sestavení a sestavovací systém tento soubor přijímá jako vstup před volání kompilátoru. Je volána sadu souborů zdrojového kódu a sestavení konfigurační soubory potřebné k sestavení spustitelného souboru *projektu*. 
+Většina reálných programů používá určitý druh *systému sestavení* ke správě složitosti kompilace více zdrojových souborů pro více konfigurací (tj. ladění vs. Release), více platforem (x86, x64, ARM atd.), vlastních kroků sestavení a dokonce i více spustitelné soubory, které musí být kompilovány v určitém pořadí. Nastavení provedete v konfiguračních souborech sestavení a systém sestavení přijímá tento soubor jako vstup před tím, než vyvolá kompilátor. Sada zdrojových souborů a souborů konfigurace sestavení potřebných k sestavení spustitelného souboru se nazývá *projekt*. 
 
-Následující seznam uvádí různé možnosti pro projekty aplikace Visual Studio – C++:
+Následující seznam obsahuje různé možnosti pro projekty sady Visual Studio – C++:
 
-- Vytvořit projekt sady Visual Studio s použitím rozhraní IDE sady Visual Studio a konfigurovat pomocí stránky vlastností. Projekty aplikace Visual Studio vytvářet programy, které běží na Windows. Přehled najdete v tématu [kompilování a sestavování](/visualstudio/ide/compiling-and-building-in-visual-studio) v dokumentaci k sadě Visual Studio.
+- pomocí integrovaného vývojového prostředí (IDE) sady Visual Studio vytvořte projekt sady Visual Studio a nakonfigurujte ho pomocí stránek vlastností. Projekty sady Visual Studio vytváří programy, které běží v systému Windows. Přehled naleznete v tématu [kompilace a](/visualstudio/ide/compiling-and-building-in-visual-studio) sestavování v dokumentaci k sadě Visual Studio.
 
-- Otevřete složku, která obsahuje soubor CMakeLists.txt. Podpora CMake je integrované do sady Visual Studio. Integrované vývojové prostředí můžete upravit, testování a ladění beze změny CMake soubory žádným způsobem. To umožňuje pracovat ve stejném projektu CMake jako ostatní, kdo může používat různými editory. CMake je doporučený postup pro vývoj pro různé platformy. Další informace najdete v tématu [projekty CMake](cmake-projects-in-visual-studio.md).
+- Otevřete složku, která obsahuje soubor CMakeLists. txt. Podpora CMake je integrovaná do sady Visual Studio. Pomocí integrovaného vývojového prostředí (IDE) můžete upravovat, testovat a ladit bez úprav souborů CMake jakýmkoli způsobem. To vám umožní pracovat ve stejném projektu CMake jako jiní uživatelé, kteří mohou používat různé editory. CMake je doporučený postup pro vývoj pro různé platformy. Další informace najdete v tématu [projekty cmake](cmake-projects-in-visual-studio.md).
  
-- Otevřete složku dojde ke ztrátě zdrojových souborů s žádný soubor projektu. Visual Studio použije heuristiku k sestavení souborů. Toto je snadný způsob, jak kompilovat a spouštět malé konzolové aplikace. Další informace najdete v tématu [projekty otevřít složku](open-folder-projects-cpp.md).
+- Otevřete volnou složku zdrojových souborů bez souboru projektu. Visual Studio bude k sestavování souborů používat heuristické metody. Toto je snadný způsob, jak zkompilovat a spustit malé konzolové aplikace. Další informace naleznete v tématu [Otevřít složku projekty](open-folder-projects-cpp.md).
 
-- Otevřete složku, která obsahuje soubor pravidel nebo jakýkoli jiný soubor konfigurace sestavení systému. Můžete nakonfigurovat k vyvolání všechny příkazy libovolného sestavení tak, že přidáte soubory JSON do složky Visual Studio. Další informace najdete v tématu [projekty otevřít složku](open-folder-projects-cpp.md).
+- Otevřete složku, která obsahuje soubor pravidel nebo jakýkoli jiný konfigurační soubor systému sestavení. Aplikaci Visual Studio můžete nakonfigurovat tak, aby vyvolala libovolné příkazy sestavení přidáním souborů JSON do složky. Další informace naleznete v tématu [Otevřít složku projekty](open-folder-projects-cpp.md).
  
-- Otevřete soubor pravidel Windows v sadě Visual Studio. Další informace najdete v tématu [NMake – odkaz](reference/nmake-reference.md).
+- Otevřete soubor pravidel systému Windows v aplikaci Visual Studio. Další informace najdete v tématu [Referenční příručka](reference/nmake-reference.md)k nástroji NMAKE.
 
-## <a name="msbuild-from-the-command-line"></a>Nástroj MSBuild z příkazového řádku 
+## <a name="msbuild-from-the-command-line"></a>MSBuild z příkazového řádku 
 
-MSBuild vyvoláte z příkazového řádku s předáním souboru .vcxproj spolu s možností příkazového řádku. Tento přístup vyžaduje dostatečné povědomí o MSBuild a doporučuje se pouze v případě, že je nezbytně nutné. Další informace najdete v tématu [MSBuild](msbuild-visual-cpp.md).
+Nástroj MSBuild můžete vyvolat z příkazového řádku předáním souboru. vcxproj spolu s parametry příkazového řádku. Tento přístup vyžaduje dobrý význam nástroje MSBuild a je doporučen pouze v případě nezbytně nutného postupu. Další informace najdete v tématu [MSBuild](msbuild-visual-cpp.md).
 
 ## <a name="in-this-section"></a>V tomto oddílu
 
-[Projekty aplikace Visual Studio](creating-and-managing-visual-cpp-projects.md) jak vytvářet, konfigurovat a sestavovat C++ projekty v sadě Visual Studio pomocí jeho nativní sestavovací systém (MSBuild).
+[Projekty sady Visual Studio](creating-and-managing-visual-cpp-projects.md) Jak vytvářet, konfigurovat a sestavovat C++ projekty v aplikaci Visual Studio pomocí jejího nativního sestavovacího systému (MSBuild).
 
-[Projekty CMake](cmake-projects-in-visual-studio.md) kódu, sestavení a nasazení projektů CMake v sadě Visual Studio.
+[Projekty cmake](cmake-projects-in-visual-studio.md) Jak kódovat, sestavovat a nasazovat projekty CMake v sadě Visual Studio.
 
-[Otevřete složku projekty](open-folder-projects-cpp.md) tom, jak pomocí sady Visual Studio code, sestavování a nasazování projektů v jazyce C++ založené na libovolný systém libovolné sestavení nebo žádný systém sestavení. Vůbec. 
+[Projekty otevřené složky](open-folder-projects-cpp.md) Jak používat Visual Studio k vytváření kódu, sestavovat C++ a nasazovat projekty na základě libovolného systému sestavení nebo bez systému sestavení. Vůbec. 
 
-[Sestavení pro vydání](release-builds.md) jak vytvořit a řešení potíží s optimalizovanou verzi sestavení pro nasazení pro koncové uživatele.
+[Sestavení](release-builds.md) vydaných verzí Postup vytvoření a řešení potíží optimalizovaných sestavení vydaných verzí pro nasazení koncovým uživatelům.
 
 [Použití sady nástrojů MSVC z příkazového řádku](building-on-the-command-line.md)<br/>
-Popisuje, jak použít kompilátor jazyka C/C++ a vytváření buildů přímo z příkazového řádku, nikoli pomocí integrovaného vývojového prostředí sady Visual Studio.
+Popisuje, jak používat vývojové nástroje CC++ /Compiler a Build přímo z příkazového řádku namísto použití integrovaného vývojového prostředí (IDE) sady Visual Studio.
 
-[Vytváření knihovny DLL v sadě Visual Studio](dlls-in-visual-cpp.md) tom, jak vytvářet, ladit a nasazovat knihovny DLL jazyka C/C++ (sdílené knihovny) v sadě Visual Studio.
+[Vytváření knihoven DLL v aplikaci Visual Studio](dlls-in-visual-cpp.md) Jak vytvářet, ladit a nasazovat knihovny CC++ /dll (sdílené knihovny) v aplikaci Visual Studio.
 
-[Návod: Vytvoření a použití statické knihovny](walkthrough-creating-and-using-a-static-library-cpp.md) vytvoření binární soubor LIB.
+[Návod: Vytvoření a použití statické knihovny](walkthrough-creating-and-using-a-static-library-cpp.md) , jak vytvořit binární soubor. lib.
 
-[Sestavení izolovaných aplikací C/C++ a sestavení vedle sebe](building-c-cpp-isolated-applications-and-side-by-side-assemblies.md) popisuje model nasazení pro aplikace Windows Desktop, založené na představu o izolovaných aplikací a sestavení vedle sebe.
+[SestavováníC++ aplikací založených na jazyce C/Isolated a souběžných sestavení](building-c-cpp-isolated-applications-and-side-by-side-assemblies.md) Popisuje model nasazení pro desktopové aplikace pro Windows na základě nápadu izolovaných aplikací a souběžných sestavení.
 
-[Konfigurace projektů C++ pro 64bitové, x64 cíle](configuring-programs-for-64-bit-visual-cpp.md) jak k cíli 64-bit x64 hardware s MSVC nástroje sestavení.
+[Konfigurace C++ projektů pro 64 cíle platformy x64](configuring-programs-for-64-bit-visual-cpp.md) Jak cílit na 64 hardware x64 pomocí nástrojů pro sestavení MSVC.
 
-[Konfigurace projektů C++ pro procesory ARM](configuring-programs-for-arm-processors-visual-cpp.md) způsob použití nástroje sestavení MSVC cílit na ARM hardwaru.
+[Konfigurovat C++ projekty pro procesory ARM](configuring-programs-for-arm-processors-visual-cpp.md) Jak používat nástroje pro sestavení MSVC k cílení na hardware ARM
 
-[Optimalizace kódu](optimizing-your-code.md) k optimalizaci kódu různými způsoby, včetně optimalizace programu s asistencí.
+[Optimalizace kódu](optimizing-your-code.md) Způsob optimalizace kódu různými způsoby, včetně optimalizace s asistencí programu.
 
-[Konfigurace programů pro Windows XP](configuring-programs-for-windows-xp.md) jak na cíl Windows XP s MSVC nástroje sestavení.
+[Konfigurace programů pro systém Windows XP](configuring-programs-for-windows-xp.md) Postup cílení na systém Windows XP pomocí nástrojů pro sestavení MSVC.
 
 [Referenční zdroje k sestavení programu v jazyce C/C++](reference/c-cpp-building-reference.md)<br/>
-Poskytuje odkazy na články, referenční informace o programu sestavení v jazyce C++, možnosti kompilátoru a propojovacího programu a různé nástroje pro vytváření.
+Obsahuje odkazy na referenční články týkající se sestavování programu C++, kompilátoru a možností linkeru a různých nástrojů sestavení.

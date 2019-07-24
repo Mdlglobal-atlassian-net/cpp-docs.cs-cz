@@ -1,10 +1,11 @@
 ---
 title: /X (ignorování standardních cest zahrnutí)
-ms.date: 11/04/2016
+ms.date: 07/18/2019
 f1_keywords:
 - /x
 - VC.Project.VCCLCompilerTool.OVERWRITEStandardIncludePath
 - VC.Project.VCCLWCECompilerTool.OVERWRITEStandardIncludePath
+- VC.Project.VCCLCompilerTool.IgnoreStandardIncludePath
 helpviewer_keywords:
 - /X compiler option [C++]
 - include files, ignore standard path
@@ -13,16 +14,16 @@ helpviewer_keywords:
 - X compiler option
 - Ignore Standard Include Paths compiler option
 ms.assetid: 16bdf2cc-c8dc-46e4-bdcc-f3caeba5e1ef
-ms.openlocfilehash: dba7e49880307002a3dee983264e93666adfef17
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 16f903b98d69472fe1a33b084fe6393ecf9ec001
+ms.sourcegitcommit: 0867d648e0955ebad7260b5fbebfd6cd4d58f3c7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62316311"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68341049"
 ---
 # <a name="x-ignore-standard-include-paths"></a>/X (ignorování standardních cest zahrnutí)
 
-Zabraňuje kompilátor hledal soubory k zahrnutí v adresářích zadaných v proměnné prostředí PATH či INCLUDE.
+Zabraňuje kompilátoru v hledání zahrnutých souborů v adresářích zadaných v cestě a proměnných prostředí INCLUDE.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -32,17 +33,17 @@ Zabraňuje kompilátor hledal soubory k zahrnutí v adresářích zadaných v pr
 
 ## <a name="remarks"></a>Poznámky
 
-Můžete použít tuto možnost [/I (další vložené adresáře)](i-additional-include-directories.md) (**/I**`directory`) možnost.
+Tuto možnost můžete použít s možností [/i (další adresáře include)](i-additional-include-directories.md) ( **/i**`directory`).
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Nastavení tohoto parametru kompilátoru ve vývojovém prostředí Visual Studio
 
-1. Otevřete v projektu **stránky vlastností** dialogové okno. Podrobnosti najdete v tématu [vlastnosti kompilátoru a sestavení nastavte C++ v sadě Visual Studio](../working-with-project-properties.md).
+1. Otevřete dialogové okno **stránky vlastností** projektu. Podrobnosti najdete v tématu [nastavení C++ vlastností kompilátoru a sestavení v sadě Visual Studio](../working-with-project-properties.md).
 
-1. Klikněte na tlačítko **C/C++** složky.
+1. Klikněte na složku **CC++ /a** .
 
-1. Klikněte na tlačítko **preprocesor** stránku vlastností.
+1. Klikněte na  stránku vlastností preprocesoru.
 
-1. Upravit **Ignorovat standardní cestu zahrnují** vlastnost.
+1. Upravte vlastnost **umístění Ignore Standard include** .
 
 ### <a name="to-set-this-compiler-option-programmatically"></a>Programové nastavení tohoto parametru kompilátoru
 
@@ -50,7 +51,7 @@ Můžete použít tuto možnost [/I (další vložené adresáře)](i-additional
 
 ## <a name="example"></a>Příklad
 
-V následujícím příkazu `/X` instruuje kompilátor, aby ignorovat umístění zadaná pomocí proměnné prostředí PATH či INCLUDE a `/I` Určuje adresář, do kterého se mají hledat vkládané soubory:
+V následujícím příkazu `/X` instruuje kompilátor, aby ignoroval umístění zadaná cestou a zahrnovala proměnné prostředí, a `/I` Určuje adresář, ve kterém se mají hledat soubory k zahrnutí:
 
 ```
 CL /X /I \ALT\INCLUDE MAIN.C
