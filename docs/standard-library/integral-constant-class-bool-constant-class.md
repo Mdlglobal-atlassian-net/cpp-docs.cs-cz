@@ -1,5 +1,5 @@
 ---
-title: integral_constant – třída, bool_constant – třída
+title: Třída integral_constant, třída bool_constant
 ms.date: 11/04/2016
 f1_keywords:
 - type_traits/std::integral_constant
@@ -10,16 +10,16 @@ helpviewer_keywords:
 - std::integral_constant [C++]
 - std::bool_constant [C++]
 ms.assetid: 11c002c6-4d31-4042-9341-f2543f43e108
-ms.openlocfilehash: f7b9217560bc94c536a7c819276266fd16fa4b07
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c85da1f3be7821f8d82cd2b19dab2a5864426a5a
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62404868"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68452049"
 ---
-# <a name="integralconstant-class-boolconstant-class"></a>integral_constant – třída, bool_constant – třída
+# <a name="integralconstant-class-boolconstant-class"></a>Třída integral_constant, třída bool_constant
 
-Díky integrální konstantní typ a hodnotu.
+Provede celočíselnou konstantu z typu a hodnoty.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -36,17 +36,17 @@ struct integral_constant {
 
 ### <a name="parameters"></a>Parametry
 
-*T*<br/>
+*Š*\
 Typ konstanty.
 
-*v*<br/>
+*ICES*\
 Hodnota konstanty.
 
 ## <a name="remarks"></a>Poznámky
 
-`integral_constant` Třída šablony, když specializovaný s celočíselného typu *T* a hodnotu *v* tohoto typu, představuje objekt, který obsahuje konstantu daného celočíselného typu se zadanou hodnotou. Člen s názvem `type` je alias pro typ specializace vygenerovanou šablonu a `value` člena obsahuje hodnotu *v* použitý k vytvoření specializaci.
+Třída šablony, při specializované s celočíselným typem *T* a hodnotou v typu, představuje objekt, který obsahuje konstantu tohoto integrálního typu se zadanou hodnotou.  `integral_constant` Člen s názvem `type` je alias pro generovaný typ specializace šablony `value` a člen obsahuje hodnotu *v* použitou k vytvoření specializace.
 
-`bool_constant` Je explicitní částečné specializace šablony třídy `integral_constant` , která používá **bool** jako *T* argument.
+Třída šablony je `integral_constant` explicitní Částečná specializace, která jako argument *T* používá **bool.** `bool_constant`
 
 ## <a name="example"></a>Příklad
 
@@ -74,12 +74,12 @@ integral_constant<bool, false> == false
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** \<type_traits >
+**Hlavička:** \<type_traits >
 
-**Namespace:** std
+**Obor názvů:** std
 
 ## <a name="see-also"></a>Viz také:
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
-[false_type](../standard-library/type-traits-typedefs.md#false_type)<br/>
-[true_type](../standard-library/type-traits-typedefs.md#true_type)<br/>
+[< type_traits >](../standard-library/type-traits.md)\
+[false_type](../standard-library/type-traits-typedefs.md#false_type)\
+[true_type](../standard-library/type-traits-typedefs.md#true_type)

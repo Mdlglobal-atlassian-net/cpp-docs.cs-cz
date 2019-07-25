@@ -1,21 +1,21 @@
 ---
-title: is_nothrow_assignable Class
+title: is_nothrow_assignable – třída
 ms.date: 11/04/2016
 f1_keywords:
 - type_traits/std::is_nothrow_assignable
 helpviewer_keywords:
 - is_nothrow_assignable
 ms.assetid: aa3aca92-308b-4b1d-b3f3-c54216c48fe7
-ms.openlocfilehash: c59c3623f9c9548a7b7e59d0c56a2acd4d3883a3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9ee8b5f97c92b6eb378db40f93696e5e6c554205
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62383617"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68456024"
 ---
-# <a name="isnothrowassignable-class"></a>is_nothrow_assignable Class
+# <a name="isnothrowassignable-class"></a>is_nothrow_assignable – třída
 
-Testuje, zda je hodnota *z* typ lze přiřadit k *k* typu a přiřazení se ví, že výjimku.
+Testuje, zda lze přiřadit hodnotu *z* typu *k typu a* přiřazení je známo, že není vyvolána.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -26,22 +26,22 @@ struct is_nothrow_assignable;
 
 ### <a name="parameters"></a>Parametry
 
-*Komu*<br/>
-Typ objektu, která obdrží přiřazení.
+*Schopn*\
+Typ objektu, který přijímá přiřazení.
 
-*z*<br/>
-Typ objektu, který obsahuje hodnotu.
+*Výsledkem*\
+Typ objektu, který poskytuje hodnotu.
 
 ## <a name="remarks"></a>Poznámky
 
-Výraz `declval<To>() = declval<From>()` musí být ve správném formátu a musí být pro kompilátor známým nedochází. Obě *z* a *k* musí být kompletními typy **void**, nebo pole s neznámým rozsahem.
+Výraz `declval<To>() = declval<From>()` musí být ve správném formátu a musí být známý kompilátorem, který nelze vyvolat. *Mezi* i *pro* musí být úplné typy, **void**nebo pole neznámého typu Bound.
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** \<type_traits >
+**Hlavička:** \<type_traits >
 
-**Namespace:** std
+**Obor názvů:** std
 
 ## <a name="see-also"></a>Viz také:
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
+[<type_traits>](../standard-library/type-traits.md)

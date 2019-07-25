@@ -7,16 +7,16 @@ helpviewer_keywords:
 - is_integral class
 - is_integral
 ms.assetid: fe9279d0-4495-4e88-bf23-153cc6602397
-ms.openlocfilehash: c7d0d8b8572c26bfa75b9fab81900c0ae21fb932
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a367bb06f49dd2c9c64f0c257a3573add5645efe
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62336490"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68456241"
 ---
 # <a name="isintegral-class"></a>is_integral – třída
 
-Testuje, zda je typ je nedílnou součástí.
+Testuje, zda je typ integrální.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -27,14 +27,14 @@ struct is_integral;
 
 ### <a name="parameters"></a>Parametry
 
-*Ty*<br/>
+*Ty*\
 Typ, na který chcete odeslat dotaz.
 
 ## <a name="remarks"></a>Poznámky
 
-Instance predikátu typu obsahuje hodnotu true, pokud typ *Ty* je jedním z celočíselných typů nebo `cv-qualified` formě integrální typy, jinak má hodnotu false.
+Instance predikátu typu má hodnotu true, *Pokud typ,* který je jedním z celočíselných typů, nebo `cv-qualified` forma jednoho z celočíselných typů, v opačném případě obsahuje hodnotu false.
 
-Celočíselný typ je jednou z **bool**, **char**, **unsigned char**, **podepsané char**, **wchar_t**, **krátký**, **unsigned short**, **int**, **unsigned int**, **dlouhé**a **unsigned long**. Kromě toho s kompilátory, které získají, integrálový typ může být jeden z **long long**, **unsigned long long.**, **__int64**, a **unsigned __int64**.
+Celočíselný typ je jeden z hodnot **bool**, **char**, **unsigned char**, **signed char**, **wchar_t**, **short**, **unsigned short**, **int**, **unsigned int**, **Long**a **unsigned long**. Kromě toho s kompilátory, které je poskytují, celočíselný typ může být jeden z **dlouhých**Long, **unsigned long long**, **__int64**a **unsigned __int64**.
 
 ## <a name="example"></a>Příklad
 
@@ -70,12 +70,12 @@ is_integral<float> == false
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** \<type_traits >
+**Hlavička:** \<type_traits >
 
-**Namespace:** std
+**Obor názvů:** std
 
 ## <a name="see-also"></a>Viz také:
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
-[is_enum – třída](../standard-library/is-enum-class.md)<br/>
-[is_floating_point – třída](../standard-library/is-floating-point-class.md)<br/>
+[< type_traits >](../standard-library/type-traits.md)\
+[is_enum – třída](../standard-library/is-enum-class.md)\
+[is_floating_point – třída](../standard-library/is-floating-point-class.md)

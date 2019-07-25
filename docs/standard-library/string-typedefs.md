@@ -1,5 +1,5 @@
 ---
-title: '&lt;řetězec&gt; – definice TypeDef'
+title: '&lt;definice typedef&gt; řetězce'
 ms.date: 11/04/2016
 f1_keywords:
 - string/std::string
@@ -7,25 +7,25 @@ f1_keywords:
 - string/std::u32string
 - string/std::wstring
 ms.assetid: fdca01e9-f2f1-4b59-abda-0093d760b3cc
-ms.openlocfilehash: 534c51e8a627ca893ea42e023f12d8bc62d6fb5c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a1ade5547b98e4376a00f33d45d695a328b772d3
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62412329"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68459237"
 ---
-# <a name="ltstringgt-typedefs"></a>&lt;řetězec&gt; – definice TypeDef
+# <a name="ltstringgt-typedefs"></a>&lt;definice typedef&gt; řetězce
 
 ||||
 |-|-|-|
 |[string](#string)|[u16string](#u16string)|[u32string](#u32string)|
 |[wstring](#wstring)|
 
-## <a name="string"></a>  řetězec
+## <a name="string"></a>řetezce
 
-Typ, který popisuje specializace třídy šablony [basic_string](../standard-library/basic-string-class.md) elementy typu **char**.
+Typ, který popisuje specializaci třídy šablony [basic_string](../standard-library/basic-string-class.md) s elementy typu **char**.
 
-Jiné – definice TypeDef, která specialize `basic_string` zahrnují [wstring](../standard-library/string-typedefs.md#wstring), [u16string](../standard-library/string-typedefs.md#u16string), a [u32string](../standard-library/string-typedefs.md#u32string).
+`basic_string` Mezi další definice typedef, které specializují, patří [wstring](../standard-library/string-typedefs.md#wstring), [u16string](../standard-library/string-typedefs.md#u16string)a [u32string](../standard-library/string-typedefs.md#u32string).
 
 ```cpp
 typedef basic_string<char, char_traits<char>, allocator<char>> string;
@@ -33,7 +33,7 @@ typedef basic_string<char, char_traits<char>, allocator<char>> string;
 
 ### <a name="remarks"></a>Poznámky
 
-Níže jsou ekvivalentní deklarace:
+Níže jsou uvedené ekvivalentní deklarace:
 
 ```cpp
 string str("");
@@ -41,13 +41,13 @@ string str("");
 basic_string<char> str("");
 ```
 
-Seznam konstruktory řetězce najdete v tématu [basic_string::basic_string](../standard-library/basic-string-class.md#basic_string).
+Seznam konstruktorů řetězců naleznete v tématu [basic_string:: basic_string](../standard-library/basic-string-class.md#basic_string).
 
-## <a name="u16string"></a>  u16string
+## <a name="u16string"></a>u16string
 
-Typ, který popisuje specializace třídy šablony [basic_string](../standard-library/basic-string-class.md) elementy typu `char16_t`.
+Typ, který popisuje specializaci třídy šablony [basic_string](../standard-library/basic-string-class.md) s prvky typu `char16_t`.
 
-Jiné – definice TypeDef, která specialize `basic_string` zahrnují [wstring](../standard-library/string-typedefs.md#wstring), [řetězec](../standard-library/string-typedefs.md#string), a [u32string](../standard-library/string-typedefs.md#u32string).
+`basic_string` Mezi další definice typedef, které specializují, patří [wstring](../standard-library/string-typedefs.md#wstring), [String](../standard-library/string-typedefs.md#string)a [u32string](../standard-library/string-typedefs.md#u32string).
 
 ```cpp
 typedef basic_string<char16_t, char_traits<char16_t>, allocator<char16_t>> u16string;
@@ -55,13 +55,13 @@ typedef basic_string<char16_t, char_traits<char16_t>, allocator<char16_t>> u16st
 
 ### <a name="remarks"></a>Poznámky
 
-Seznam konstruktory řetězce najdete v tématu [basic_string::basic_string](../standard-library/basic-string-class.md#basic_string).
+Seznam konstruktorů řetězců naleznete v tématu [basic_string:: basic_string](../standard-library/basic-string-class.md#basic_string).
 
-## <a name="u32string"></a>  u32string
+## <a name="u32string"></a>u32string
 
-Typ, který popisuje specializace třídy šablony [basic_string](../standard-library/basic-string-class.md) elementy typu `char32_t`.
+Typ, který popisuje specializaci třídy šablony [basic_string](../standard-library/basic-string-class.md) s prvky typu `char32_t`.
 
-Jiné – definice TypeDef, která specialize `basic_string` zahrnují [řetězec](../standard-library/string-typedefs.md#string), [u16string](../standard-library/string-typedefs.md#u16string), a [wstring](../standard-library/string-typedefs.md#wstring).
+`basic_string` Mezi další definice typedef, které specializují, patří [řetězec](../standard-library/string-typedefs.md#string), [u16string](../standard-library/string-typedefs.md#u16string)a [wstring](../standard-library/string-typedefs.md#wstring).
 
 ```cpp
 typedef basic_string<char32_t, char_traits<char32_t>, allocator<char32_t>> u32string;
@@ -69,13 +69,13 @@ typedef basic_string<char32_t, char_traits<char32_t>, allocator<char32_t>> u32st
 
 ### <a name="remarks"></a>Poznámky
 
-Seznam konstruktory řetězce najdete v tématu [basic_string::basic_string](../standard-library/basic-string-class.md#basic_string).
+Seznam konstruktorů řetězců naleznete v tématu [basic_string:: basic_string](../standard-library/basic-string-class.md#basic_string).
 
-## <a name="wstring"></a>  wstring
+## <a name="wstring"></a>wstring
 
-Typ, který popisuje specializace třídy šablony [basic_string](../standard-library/basic-string-class.md) elementy typu **wchar_t**.
+Typ, který popisuje specializaci třídy šablony [basic_string](../standard-library/basic-string-class.md) s prvky typu **wchar_t**.
 
-Jiné – definice TypeDef, která specialize `basic_string` zahrnují [řetězec](../standard-library/string-typedefs.md#string), [u16string](../standard-library/string-typedefs.md#u16string), a [u32string](../standard-library/string-typedefs.md#u32string).
+`basic_string` Mezi další definice typedef, které specializují, patří [řetězec](../standard-library/string-typedefs.md#string), [u16string](../standard-library/string-typedefs.md#u16string)a [u32string](../standard-library/string-typedefs.md#u32string).
 
 ```cpp
 typedef basic_string<wchar_t, char_traits<wchar_t>, allocator<wchar_t>> wstring;
@@ -83,7 +83,7 @@ typedef basic_string<wchar_t, char_traits<wchar_t>, allocator<wchar_t>> wstring;
 
 ### <a name="remarks"></a>Poznámky
 
-Níže jsou ekvivalentní deklarace:
+Níže jsou uvedené ekvivalentní deklarace:
 
 ```cpp
 wstring wstr(L"");
@@ -91,11 +91,11 @@ wstring wstr(L"");
 basic_string<wchar_t> wstr(L"");
 ```
 
-Seznam konstruktory řetězce najdete v tématu [basic_string::basic_string](../standard-library/basic-string-class.md#basic_string).
+Seznam konstruktorů řetězců naleznete v tématu [basic_string:: basic_string](../standard-library/basic-string-class.md#basic_string).
 
 > [!NOTE]
-> Velikost **wchar_t** je definováno implementací. Pokud váš kód závisí na **wchar_t** být určité velikosti, zkontrolujte implementace pro vaši platformu (třeba index Mei `sizeof(wchar_t)`). Pokud potřebujete znaku řetězec pomocí šířku, která je zaručeně, zůstane na všech platformách, [řetězec](../standard-library/string-typedefs.md#string), [u16string](../standard-library/string-typedefs.md#u16string), nebo [u32string](../standard-library/string-typedefs.md#u32string).
+> Velikost **wchar_t** je definovaná implementací. Pokud váš kód závisí na konkrétní velikosti příznakem **wchar_t** , ověřte implementaci vaší platformy (například pomocí `sizeof(wchar_t)`). Pokud potřebujete typ řetězce znaků s šířkou, která je zaručena, aby zůstala stejná na všech platformách, použijte [řetězec](../standard-library/string-typedefs.md#string), [u16string](../standard-library/string-typedefs.md#u16string)nebo [u32string](../standard-library/string-typedefs.md#u32string).
 
 ## <a name="see-also"></a>Viz také:
 
-[\<řetězec >](../standard-library/string.md)<br/>
+[\<> řetězců](../standard-library/string.md)

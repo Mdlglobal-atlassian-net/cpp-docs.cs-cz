@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - new header
 ms.assetid: 218e2a15-34e8-4ef3-9122-1e90eccf8559
-ms.openlocfilehash: bc873f278461fcdc6dbb42e7c968c691e3dc7f73
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 6155a89c9cbba67ce27253aa64ff70ca7871e748
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68243552"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68457679"
 ---
 # <a name="ltnewgt"></a>&lt;new&gt;
 
-Definuje několik typů a funkce ovládacího prvku přidělení a uvolnění úložiště v rámci řízení programu. Definuje také součásti pro vytváření sestav o chybách správu úložiště.
+Definuje několik typů a funkcí, které řídí přidělování a uvolňování úložiště v rámci řízení programu. Také definuje součásti pro vytváření sestav o chybách správy úložiště.
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** \<nový >
+**Hlavička:** \<nový >
 
-**Namespace:** std
+**Obor názvů:** std
 
 ## <a name="remarks"></a>Poznámky
 
-Některé funkce deklarované v této hlavičky jsou nahraditelné. Implementace poskytuje výchozí verzi, jejíž chování je popsaný v tomto dokumentu. Program můžete definovat však funkce se stejným podpisem nahradit výchozí verze v době spojení. Verze nahrazení musí splňovat požadavky popsané v tomto dokumentu.
+Některé funkce deklarované v této hlavičce jsou nahraditelný. Implementace poskytuje výchozí verzi, jejíž chování je popsáno v tomto dokumentu. Program může však definovat funkci se stejnou signaturou, která má nahradit výchozí verzi v době připojení. Náhradní verze musí splňovat požadavky popsané v tomto dokumentu.
 
 ## <a name="members"></a>Členové
 
@@ -33,13 +33,13 @@ Některé funkce deklarované v této hlavičky jsou nahraditelné. Implementace
 
 |||
 |-|-|
-|[nothrow](../standard-library/new-functions.md#nothrow)|Poskytuje objekt pro použití jako argument **nothrow** verzích **nové** a **odstranit**.|
+|[nothrow](../standard-library/new-functions.md#nothrow)|Poskytuje objekt, který má být použit jako argument pro verze **nového** a **odstranění**ve verzi **throw** .|
 
 ### <a name="typedefs"></a>Typedefs
 
 |||
 |-|-|
-|[new_handler](../standard-library/new-typedefs.md#new_handler)|Typ, který odkazuje na funkci vhodný pro použití jako novou obslužnou rutinu.|
+|[new_handler](../standard-library/new-typedefs.md#new_handler)|Typ, který odkazuje na funkci vhodnou pro použití jako nová obslužná rutina.|
 |[hardware_constructive_interference_size](../standard-library/new-typedefs.md#hardware_destructive_interference_size)||
 |[hardware_destructive_interference_size](../standard-library/new-typedefs.md#hardware_destructive_interference_size)||
 
@@ -48,17 +48,17 @@ Některé funkce deklarované v této hlavičky jsou nahraditelné. Implementace
 |||
 |-|-|
 |[get_new_handler](../standard-library/new-functions.md#get_new_handler)||
-|[praní](../standard-library/new-functions.md#launder)||
-|[set_new_handler](../standard-library/new-functions.md#set_new_handler)|Nainstaluje funkci uživatele, která se volá, když nové selže při jeho pokusu o přidělení paměti.|
+|[peníze](../standard-library/new-functions.md#launder)||
+|[set_new_handler](../standard-library/new-functions.md#set_new_handler)|Nainstaluje uživatelskou funkci, která se zavolá, když se nové v pokusu o přidělení paměti nezdaří.|
 
 ### <a name="operators"></a>Operátory
 
 |||
 |-|-|
-|[delete – operátor](../standard-library/new-operators.md#op_delete)|Funkci volanou třídou výraz delete se zrušit přidělení úložiště pro jednotlivé objekty.|
-|[delete – operátor&#91;&#93;](../standard-library/new-operators.md#op_delete_arr)|Funkci volanou třídou výraz delete se zrušit přidělení úložiště pro pole objektů.|
-|[new – operátor](../standard-library/new-operators.md#op_new)|Funkci volanou třídou výraz new k přidělení úložiště pro jednotlivé objekty.|
-|[new – operátor&#91;&#93;](../standard-library/new-operators.md#op_new_arr)|Funkci volanou třídou výraz new k přidělení úložiště pro pole objektů.|
+|[delete – operátor](../standard-library/new-operators.md#op_delete)|Funkce volaná výrazem delete pro zrušení přidělení úložiště pro jednotlivé objekty.|
+|[delete – operátor&#91;&#93;](../standard-library/new-operators.md#op_delete_arr)|Funkce volaná výrazem delete pro zrušení přidělení úložiště pro pole objektů.|
+|[New – operátor](../standard-library/new-operators.md#op_new)|Funkce, která je volána novým výrazem k přidělení úložiště pro jednotlivé objekty.|
+|[New – operátor&#91;&#93;](../standard-library/new-operators.md#op_new_arr)|Funkce, která je volána novým výrazem k přidělení úložiště pro pole objektů.|
 
 ### <a name="enums"></a>Výčty
 
@@ -70,11 +70,11 @@ Některé funkce deklarované v této hlavičky jsou nahraditelné. Implementace
 
 |||
 |-|-|
-|[bad_alloc – třída](../standard-library/bad-alloc-class.md)|Tato třída popisuje výjimku vyvolanou k označení, že požadavek na přidělení nebylo úspěšné.|
-|[bad_array_new_length třídy](../standard-library/bad-array-new-length.md)||
-|[nothrow_t – třída](../standard-library/nothrow-t-structure.md)|Třída se používá jako parametr funkce operátoru nové k označení, že funkce by měla vrátit ukazatel s hodnotou null pro sestavy k selhání přidělení, spíše než výjimku.|
+|[bad_alloc – třída](../standard-library/bad-alloc-class.md)|Třída popisuje vyvolanou výjimku, která označuje, že žádost o přidělení nebyla úspěšná.|
+|[bad_array_new_length – třída](../standard-library/bad-array-new-length.md)||
+|[nothrow_t – třída](../standard-library/nothrow-t-structure.md)|Třída se používá jako parametr funkce pro operátor New k označení toho, že funkce by měla vracet ukazatel s hodnotou null, aby nahlásila selhání přidělení, namísto vyvolání výjimky.|
 
 ## <a name="see-also"></a>Viz také:
 
-[Odkaz na soubory hlaviček](../standard-library/cpp-standard-library-header-files.md)<br/>
-[Bezpečný přístup z více vláken ve standardní knihovně C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[Odkazy na hlavičkové soubory](../standard-library/cpp-standard-library-header-files.md)\
+[Bezpečný přístup z více vláken ve standardní knihovně C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)

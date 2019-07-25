@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - add_rvalue_reference Class
 ms.assetid: 76b0cb7c-1031-45d0-b409-f03ab0297580
-ms.openlocfilehash: e5e658f16657c0021b78175e87d122a3accd11eb
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 64694f2428c1dd536df4d242a17f3f011cfb290c
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62411163"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68456542"
 ---
 # <a name="addrvaluereference-class"></a>add_rvalue_reference – třída
 
-Odkazový typ parametru šablony vytvoří, pokud je to typ objektu nebo funkce. Jinak kvůli sémantiky pro sbalování odkazu, typ je stejný jako parametru šablony.
+Vytvoří odkazový typ rvalue parametru šablony, pokud se jedná o typ objektu nebo funkce. V opačném případě, vzhledem k sémantikě sbalení odkazů, je typ stejný jako parametr šablony.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -29,18 +29,18 @@ using add_rvalue_reference_t = typename add_rvalue_reference<T>::type;
 
 ### <a name="parameters"></a>Parametry
 
-*T*<br/>
+*Š*\
 Typ, který chcete upravit.
 
 ## <a name="remarks"></a>Poznámky
 
-`add_rvalue_reference` Třída má člen nazvaný `type`, což je alias pro typ odkaz rvalue na parametru šablony *T*. Sémantika pro sbalování odkazu znamenat, že, pro typy neobjektové a funkci bez *T*, `T&&` je *T*. Například když *T* je typem odkazu l-hodnoty `add_rvalue_reference<T>::type` je typ odkazu l-hodnotou, není odkaz rvalue.
+Třída má člena s názvem `type`, což je alias pro typ odkazu rvalue na parametr šablony *T.* `add_rvalue_reference` Sémantika pro sbalení odkazů `T&&` znamená, že pro typy non-Object a non-Function *t*je *t*. Například když *T* je odkazový typ lvalue, `add_rvalue_reference<T>::type` je odkazový typ lvalue, nikoli odkaz rvalue.
 
-Pro usnadnění práce \<type_traits > definuje šablonu pomocné rutiny `add_rvalue_reference_t`, že aliasy `type` člen `add_rvalue_reference`.
+Pro usnadnění \<type_traits > definuje pomocnou `add_rvalue_reference_t`šablonu, `add_rvalue_reference`která je `type` aliasem člena.
 
 ## <a name="example"></a>Příklad
 
-Tento příklad kódu používá k zobrazení, jak typy odkazu r-hodnoty jsou vytvořeny pomocí static_assert `add_rvalue_reference` a `add_rvalue_reference_t`a jak výsledek `add_rvalue_reference` na odkaz na lvalue typ není odkaz rvalue, ale sbalí na typ odkazu l-hodnoty.
+Tento příklad kódu používá static_assert k zobrazení způsobu, jakým jsou vytvořeny typy odkazů `add_rvalue_reference` rvalue `add_rvalue_reference_t`pomocí a a jakým způsobem `add_rvalue_reference` výsledek na odkazovém typu lvalue není odkaz rvalue, ale sbalí na odkazový typ lvalue.
 
 ```cpp
 // ex_add_rvalue_reference.cpp
@@ -73,10 +73,10 @@ All static_assert tests of add_rvalue_reference passed.
 
 Záhlaví: \<type_traits >
 
-Namespace: std
+Obor názvů: std
 
 ## <a name="see-also"></a>Viz také:
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
-[add_lvalue_reference – třída](../standard-library/add-lvalue-reference-class.md)<br/>
-[is_rvalue_reference – třída](../standard-library/is-rvalue-reference-class.md)<br/>
+[< type_traits >](../standard-library/type-traits.md)\
+[add_lvalue_reference – třída](../standard-library/add-lvalue-reference-class.md)\
+[is_rvalue_reference – třída](../standard-library/is-rvalue-reference-class.md)

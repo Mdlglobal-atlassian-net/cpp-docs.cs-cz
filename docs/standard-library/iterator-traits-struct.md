@@ -7,16 +7,16 @@ helpviewer_keywords:
 - iterator_traits struct
 - iterator_traits class
 ms.assetid: 8b92c2c5-f658-402f-8ca1-e7ae301b8514
-ms.openlocfilehash: 6fe9e2d576afcacc7d014d4f5c920ecab3a83fc9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9d2f9d79d200579f539f7d9edc49d4a907e6cdb2
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62224035"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68455585"
 ---
 # <a name="iteratortraits-struct"></a>iterator_traits – struktura
 
-Struktura pomocné šablony používá k určení všech typ kritický pro definice, které by měly mít iterátor.
+Struktura pomocné šablony sloužící k určení všech definic typu kritického typu, které by měl mít iterátor.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -33,7 +33,7 @@ struct iterator_traits {
 
 ## <a name="remarks"></a>Poznámky
 
-Struktura šablony definuje typy členů
+Struktura šablony definuje typy členů.
 
 - `iterator_category`: synonymum pro `Iterator::iterator_category`.
 
@@ -41,15 +41,15 @@ Struktura šablony definuje typy členů
 
 - `difference_type`: synonymum pro `Iterator::difference_type`.
 
-- `distance_type`: synonymum pro `Iterator::difference_type.`
+- `distance_type`: synonymum pro`Iterator::difference_type.`
 
 - `pointer`: synonymum pro `Iterator::pointer`.
 
 - `reference`: synonymum pro `Iterator::reference`.
 
-Částečné specializace určit kritické typy související s ukazatelem na objekt typu **typ** <strong>\*</strong> nebo **typ const**  <strong>\*</strong>.
+Částečné specializace určují kritické typy přidružené k ukazateli <strong>\*</strong> objektu typu **typu nebo typu** const  <strong>\*</strong>.
 
-V této implementaci, kterou můžete použít také několik šablon funkce, které není vhodné dělat použít částečné specializace:
+V této implementaci můžete také použít několik funkcí šablon, které nevyužívají částečnou specializaci:
 
 ```cpp
 template <class Category, class Type, class Diff>
@@ -71,7 +71,7 @@ template <class Ty>
 ptrdiff_t *_Dist_type(const Ty *);
 ```
 
-které určují několik stejné typy víc nepřímo. Tyto funkce jako argumenty ve volání funkce. Jejich jediným účelem je poskytnout parametr užitečné šablony třídy pro volanou funkci.
+což určuje, že některé typy jsou mnohem nepřímo. Tyto funkce použijete jako argumenty volání funkce. Jejich jediným účelem je dodat do volané funkce užitečný parametr třídy šablony.
 
 ## <a name="example"></a>Příklad
 
@@ -118,12 +118,12 @@ struct std::bidirectional_iterator_tag
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** \<iterátor >
+**Hlavička:** \<iterátor >
 
-**Namespace:** std
+**Obor názvů:** std
 
 ## <a name="see-also"></a>Viz také:
 
-[\<iterator>](../standard-library/iterator.md)<br/>
-[Bezpečný přístup z více vláken ve standardní knihovně C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
-[Standardní knihovna C++ – referenční dokumentace](../standard-library/cpp-standard-library-reference.md)<br/>
+[\<iterátor >](../standard-library/iterator.md)\
+[Bezpečnost vlákna ve C++ standardní knihovně](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[Standardní knihovna C++ – referenční dokumentace](../standard-library/cpp-standard-library-reference.md)

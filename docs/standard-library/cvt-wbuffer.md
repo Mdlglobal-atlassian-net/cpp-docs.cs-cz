@@ -8,16 +8,16 @@ f1_keywords:
 helpviewer_keywords:
 - cvt/wbuffer header
 ms.assetid: 6e6eb44c-1bc4-4d8c-a4bd-b39c753ce725
-ms.openlocfilehash: 7e344581ca3457616111a65f8a5856e34ac49c93
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f2ed70eb85a26b5b3e7039b4d430ca85f3131a14
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62394101"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68455418"
 ---
 # <a name="ltcvtwbuffergt"></a>&lt;cvt/wbuffer&gt;
 
-Záhlaví `<cvt/wstring>` v předchozích verzích sady Visual Studio definované šablony třídy [wbuffer_convert – třída](../standard-library/wbuffer-convert-class.md) v oboru názvů stdext::cvt. Záhlaví je zachován z důvodu zpětné kompatibility. Nový kód by měl používat verzi třídy, která je definována v [ \<národní prostředí >](../standard-library/locale.md) v `std` obor názvů
+Hlavička `<cvt/wstring>` v předchozích verzích sady Visual Studio definovala [třídu wbuffer_convert](../standard-library/wbuffer-convert-class.md) třídy šablony v oboru názvů stdext:: CVT. Záhlaví je zachováno z důvodu zpětné kompatibility. Nový kód by měl používat verzi třídy, která je definována v `std` [ \<národním prostředí >](../standard-library/locale.md) v oboru názvů.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -27,4 +27,4 @@ Záhlaví `<cvt/wstring>` v předchozích verzích sady Visual Studio definovan�
 
 ## <a name="see-also"></a>Viz také:
 
-[Odkaz na soubory hlaviček](../standard-library/cpp-standard-library-header-files.md)<br/>
+[Odkazy na hlavičkové soubory](../standard-library/cpp-standard-library-header-files.md)

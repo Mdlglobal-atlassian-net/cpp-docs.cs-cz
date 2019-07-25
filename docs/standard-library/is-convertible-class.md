@@ -7,16 +7,16 @@ helpviewer_keywords:
 - is_convertible class
 - is_convertible
 ms.assetid: 75614008-1894-42ea-bd57-974399628536
-ms.openlocfilehash: cdc3276f229fb9c1ac059a9eeb29e77655b4fc69
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c90fe5687992e4df49e8655387cfdd14b40aa529
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62337372"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68454614"
 ---
 # <a name="isconvertible-class"></a>is_convertible – třída
 
-Testuje, zda je jeden typ lze převést na jiný.
+Testuje, zda je jeden typ převoditelné na jiný typ.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -27,15 +27,15 @@ struct is_convertible;
 
 ### <a name="parameters"></a>Parametry
 
-*z*<br/>
-Typ, který se má převést.
+*Výsledkem*\
+Typ, ze kterého se má převést.
 
-*Ty*<br/>
-Typ k převodu.
+*Ty*\
+Typ, na který se má převést.
 
 ## <a name="remarks"></a>Poznámky
 
-Instance predikátu typu obsahuje hodnotu true, pokud výraz `To to = from;`, kde `from` je objekt typu `From`, je ve správném formátu.
+Instance predikátu typu má hodnotu true, pokud je výraz `To to = from;`, kde `from` je objekt typu `From`, ve správném formátu.
 
 ## <a name="example"></a>Příklad
 
@@ -71,11 +71,11 @@ is_convertible<char, int> == true
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** \<type_traits >
+**Hlavička:** \<type_traits >
 
-**Namespace:** std
+**Obor názvů:** std
 
 ## <a name="see-also"></a>Viz také:
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
-[is_base_of – třída](../standard-library/is-base-of-class.md)<br/>
+[< type_traits >](../standard-library/type-traits.md)\
+[is_base_of – třída](../standard-library/is-base-of-class.md)

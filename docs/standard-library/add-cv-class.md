@@ -7,16 +7,16 @@ helpviewer_keywords:
 - add_cv class
 - add_cv
 ms.assetid: a5572c78-a097-45d7-b476-ed4876889dea
-ms.openlocfilehash: 37001815710b197ec77ed0d45a16ea971ad1edce
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0cc63558ea392976bd6a3c5a43735c592e4606b4
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62411224"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68456596"
 ---
 # <a name="addcv-class"></a>add_cv – třída
 
-Díky **const volatile** typ z typu.
+Převede  typ const volatile z typu.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -30,14 +30,14 @@ using add_cv_t = typename add_cv<T>::type;
 
 ### <a name="parameters"></a>Parametry
 
-*T*<br/>
+*Š*\
 Typ, který chcete upravit.
 
 ## <a name="remarks"></a>Poznámky
 
-Instance typu upravené `add_cv<T>` má `type` člen **– typedef** ekvivalentní *T* upravil obě [add_volatile –](../standard-library/add-volatile-class.md) a [ add_const –](../standard-library/add-const-class.md), není-li *T* již obsahuje kvalifikátory cv, odkazem nebo je funkce.
+Instance `add_cv<T>` upravovaného typu má hodnotu typu `type` member **typedef** ekvivalentní hodnotě *T* , kterou mění [add_volatile](../standard-library/add-volatile-class.md) i [add_const](../standard-library/add-const-class.md), pokud už *T* nemá kvalifikátory CV, je odkaz nebo slouží.
 
-`add_cv_t<T>` Pomocné rutiny typ je zkratka pro přístup k `add_cv<T>` definice typu člena `type`.
+Typ pomocné rutiny je zástupce pro `add_cv<T>` přístup k definici TypeDef `type`člena. `add_cv_t<T>`
 
 ## <a name="example"></a>Příklad
 
@@ -86,12 +86,12 @@ invoked const volatile S.f()
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** \<type_traits >
+**Hlavička:** \<type_traits >
 
-**Namespace:** std
+**Obor názvů:** std
 
 ## <a name="see-also"></a>Viz také:
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
-[remove_const – třída](../standard-library/remove-const-class.md)<br/>
-[remove_volatile – třída](../standard-library/remove-volatile-class.md)<br/>
+[< type_traits >](../standard-library/type-traits.md)\
+[remove_const – třída](../standard-library/remove-const-class.md)\
+[remove_volatile – třída](../standard-library/remove-volatile-class.md)

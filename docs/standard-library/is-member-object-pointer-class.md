@@ -7,16 +7,16 @@ helpviewer_keywords:
 - is_member_object_pointer class
 - is_member_object_pointer
 ms.assetid: 64f9cdf3-4621-4310-a076-a7bc986926b9
-ms.openlocfilehash: 401beed2a45be0492ba1a5cbd57cc92153dbaa91
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 37d836c3626b492750ffa28c378413757119c9d3
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62351076"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68456167"
 ---
 # <a name="ismemberobjectpointer-class"></a>is_member_object_pointer – třída
 
-Testuje, zda je typ ukazatele na člena objektu.
+Testuje, zda je typ ukazatel na členský objekt.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -27,12 +27,12 @@ struct is_member_object_pointer;
 
 ### <a name="parameters"></a>Parametry
 
-*Ty*<br/>
+*Ty*\
 Typ, na který chcete odeslat dotaz.
 
 ## <a name="remarks"></a>Poznámky
 
-Instance predikátu typu obsahuje hodnotu true, pokud typ *Ty* je ukazatel na člena objektu nebo `cv-qualified` ukazatel na člena objektu, jinak má hodnotu false. Všimněte si, že `is_member_object_pointer` false v případě blokování *Ty* je ukazatel na členskou funkci.
+Instance predikátu typu má hodnotu true, *Pokud typ,* který je ukazatelem na členský objekt nebo `cv-qualified` ukazatel na členský objekt, v opačném případě obsahuje hodnotu false. Všimněte si `is_member_object_pointer` , že obsahuje hodnotu false *, pokud je* ta ukazatelem na členskou funkci.
 
 ## <a name="example"></a>Příklad
 
@@ -79,11 +79,11 @@ is_member_object_pointer<int (functional::*)()> == false
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** \<type_traits >
+**Hlavička:** \<type_traits >
 
-**Namespace:** std
+**Obor názvů:** std
 
 ## <a name="see-also"></a>Viz také:
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
-[is_member_pointer – třída](../standard-library/is-member-pointer-class.md)<br/>
+[< type_traits >](../standard-library/type-traits.md)\
+[is_member_pointer – třída](../standard-library/is-member-pointer-class.md)

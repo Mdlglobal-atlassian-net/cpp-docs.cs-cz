@@ -1,21 +1,21 @@
 ---
-title: nested_exception třídy
+title: nested_exception – třída
 ms.date: 11/04/2016
 f1_keywords:
 - exception/std::bad_exception
 helpviewer_keywords:
 - bad_exception class
 ms.assetid: 5ae2c4ef-c7ad-4469-8a9e-a773e86bb000
-ms.openlocfilehash: a568a8d9a3817883656406d63c3dd948539bb385
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 5741b3aa255f915500f5fe79ab5374c8c86f8814
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68267910"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68460179"
 ---
-# <a name="nestedexception-class"></a>nested_exception třídy
+# <a name="nestedexception-class"></a>nested_exception – třída
 
-Tato třída popisuje výjimku pro použití s vícenásobnou dědičnost. Zaznamenává aktuálně zpracování výjimek a uloží jej pro pozdější použití.
+Třída popisuje výjimku pro použití s vícenásobnou dědičností. Zachycuje Aktuálně zpracovávanou výjimku a uloží ji pro pozdější použití.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -40,16 +40,16 @@ class nested_exception {
 
 |||
 |-|-|
-|[rethrow_nested](#rethrow_nested)|Vyvolá výjimku uložené.|
-|[nested_ptr](#nested_ptr)|Vrátí uložené výjimky.|
+|[rethrow_nested](#rethrow_nested)|Vyvolá uloženou výjimku.|
+|[nested_ptr](#nested_ptr)|Vrátí uloženou výjimku.|
 
-### <a name="op_as"></a> operátor =
+### <a name="op_as"></a>operátor =
 
 ```cpp
 nested_exception& operator=(const nested_exception&) = default;
 ```
 
-### <a name="nested_ptr"></a> nested_ptr
+### <a name="nested_ptr"></a>nested_ptr
 
 ```cpp
 exception_ptr nested_ptr() const;
@@ -57,9 +57,9 @@ exception_ptr nested_ptr() const;
 
 #### <a name="return-value"></a>Návratová hodnota
 
-Uložené výjimky zachycené situace `nested_exception` objektu.
+Uložená výjimka zachycená tímto `nested_exception` objektem.
 
-### <a name="rethrow_nested"></a> rethrow_nested
+### <a name="rethrow_nested"></a>rethrow_nested
 
 ```cpp
 [[noreturn]] void rethrow_nested() const;
@@ -67,15 +67,15 @@ Uložené výjimky zachycené situace `nested_exception` objektu.
 
 #### <a name="remarks"></a>Poznámky
 
-Pokud `nested_ptr()` vrátí ukazatel s hodnotou null, volání funkce `std::terminate()`. V opačném případě vyvolá uložené výjimka zachycena `*this`.
+Pokud `nested_ptr()` vrátí ukazatel s hodnotou null, funkce volá `std::terminate()`. V opačném případě vyvolá uloženou výjimku zachycenou `*this`.
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** \<výjimky >
+**Hlavička:** \<> výjimky
 
-**Namespace:** std
+**Obor názvů:** std
 
 ## <a name="see-also"></a>Viz také:
 
-[exception – třída](../standard-library/exception-class.md)<br/>
-[Bezpečný přístup z více vláken ve standardní knihovně C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[Exception – třída](../standard-library/exception-class.md)\
+[Bezpečný přístup z více vláken ve standardní knihovně C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)

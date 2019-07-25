@@ -4,26 +4,26 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - output stream objects
 ms.assetid: 93c8eab6-610c-4f48-b76d-1d960cac7641
-ms.openlocfilehash: 7da7d9dd0fae3ce3fa21ecd774f88643dca49c26
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d7bec211f30986deccc869a879dd5155ea70996b
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62211998"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68457287"
 ---
 # <a name="constructing-output-stream-objects"></a>Vytváření objektů výstupního datového proudu
 
-Pokud používáte pouze předdefinované `cout`, `cerr`, nebo `clog` objekty, není potřeba vytvořit výstupní datový proud. Je nutné použít konstruktory pro:
+Pokud použijete pouze předdefinované `cout` `cerr`objekty, nebo `clog` , nemusíte vytvářet výstupní datový proud. Je nutné použít konstruktory pro:
 
-- [Výstupní soubor Stream konstruktory](#vclrfoutputfilestreamconstructorsanchor1)
+- [Konstruktory datového proudu výstupního souboru](#vclrfoutputfilestreamconstructorsanchor1)
 
-- [Výstupní řetězec Stream konstruktory](#vclrfoutputstringstreamconstructorsanchor2)
+- [Konstruktory výstupních řetězcových streamů](#vclrfoutputstringstreamconstructorsanchor2)
 
-## <a name="vclrfoutputfilestreamconstructorsanchor1"></a> Výstupní soubor Stream konstruktory
+## <a name="vclrfoutputfilestreamconstructorsanchor1"></a>Konstruktory datového proudu výstupního souboru
 
-Můžete vytvořit výstupní datový proud souboru v jednom ze dvou způsobů:
+Datový proud výstupních souborů můžete vytvořit jedním ze dvou způsobů:
 
-- Použít výchozí konstruktor a následně zavolat `open` členskou funkci.
+- Použijte výchozí konstruktor a potom zavolejte `open` členskou funkci.
 
    ```cpp
    ofstream myFile; // Static or on the stack
@@ -33,15 +33,15 @@ Můžete vytvořit výstupní datový proud souboru v jednom ze dvou způsobů:
    pmyFile->open("filename");
    ```
 
-- Zadejte název souboru a režim příznaky ve volání konstruktoru.
+- Zadejte název souboru a příznaky režimu ve volání konstruktoru.
 
    ```cpp
    ofstream myFile("filename", ios_base::out);
    ```
 
-## <a name="vclrfoutputstringstreamconstructorsanchor2"></a> Výstupní řetězec Stream konstruktory
+## <a name="vclrfoutputstringstreamconstructorsanchor2"></a>Konstruktory výstupních řetězcových streamů
 
-Chcete-li vytvořit řetězec výstupní datový proud, můžete použít `ostringstream` následujícím způsobem:
+Chcete-li sestavit výstupní řetězcový proud, můžete použít `ostringstream` následujícím způsobem:
 
 ```cpp
 using namespace std;
@@ -53,8 +53,8 @@ string sp = myString.str(); // Obtain string
 cout << sp << endl;
 ```
 
-`ends` "Manipulátor" přidá potřebné ukončujícího znaku null na řetězec.
+`ends` "Manipulátor" přidá do řetězce nezbytný ukončující znak null.
 
 ## <a name="see-also"></a>Viz také:
 
-[Výstupní streamy](../standard-library/output-streams.md)<br/>
+[Výstupní streamy](../standard-library/output-streams.md)

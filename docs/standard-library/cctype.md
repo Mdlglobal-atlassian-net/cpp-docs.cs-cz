@@ -1,31 +1,31 @@
 ---
-title: '&lt;cctype –&gt;'
+title: '&lt;cctype&gt;'
 ms.date: 11/04/2016
 f1_keywords:
 - <cctype>
 helpviewer_keywords:
 - cctype header
 ms.assetid: 3fd18bfd-c414-4def-bac1-c362e1fe8b71
-ms.openlocfilehash: 19431d02e0742d63df058ca743fc0560131805bd
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: d1d69b5fe125372c489965949b2b59c4012fdec9
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68244953"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68449850"
 ---
-# <a name="ltcctypegt"></a>&lt;cctype –&gt;
+# <a name="ltcctypegt"></a>&lt;cctype&gt;
 
-Obsahuje hlavičku knihovny Standard C \<ctype.h > a přidá názvy přidružené k `std` oboru názvů.
+Obsahuje hlavičku \<standardní knihovny jazyka C CType. h > a přidává přidružené názvy `std` do oboru názvů.
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** \<cctype – >
+**Hlavička:** \<cctype >
 
-**Namespace:** std
+**Obor názvů:** std
 
 ## <a name="remarks"></a>Poznámky
 
-Včetně této hlavičky zajišťuje, že názvy deklarované s vnějším spojením v záhlaví knihovny Standard C jsou deklarovány v `std` oboru názvů.
+Včetně této hlavičky zajišťuje, že názvy deklarované s vnějším propojením v hlavičce standardní knihovny jazyka C jsou deklarovány v `std` oboru názvů.
 
 ## <a name="functions"></a>Funkce
 
@@ -48,6 +48,6 @@ int toupper(int c);
 
 ## <a name="see-also"></a>Viz také:
 
-[Odkaz na soubory hlaviček](../standard-library/cpp-standard-library-header-files.md)<br/>
-[Standardní knihovna C++ – přehled](../standard-library/cpp-standard-library-overview.md)<br/>
-[Bezpečný přístup z více vláken ve standardní knihovně C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[Odkazy na hlavičkové soubory](../standard-library/cpp-standard-library-header-files.md)\
+[C++Přehled standardní knihovny](../standard-library/cpp-standard-library-overview.md)\
+[Bezpečný přístup z více vláken ve standardní knihovně C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)

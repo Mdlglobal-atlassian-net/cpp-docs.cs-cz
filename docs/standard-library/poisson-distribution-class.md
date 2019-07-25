@@ -23,16 +23,16 @@ helpviewer_keywords:
 - std::poisson_distribution [C++], param_type
 - std::poisson_distribution [C++], param_type
 ms.assetid: 09614281-349a-45f7-8e95-c0196be0a937
-ms.openlocfilehash: 2653af7b0582995f8a2643486585fca6a5edc395
-ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
+ms.openlocfilehash: 19fab66c3ffca428114e4586c4ad6d6de3fdbf83
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66450156"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68458468"
 ---
 # <a name="poissondistribution-class"></a>poisson_distribution – třída
 
-Generuje Poissonovo rozdělení.
+Generuje Poissonova rozdělení.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -67,31 +67,31 @@ public:
 
 ### <a name="parameters"></a>Parametry
 
-*IntType*<br/>
-Typ výsledku celého čísla, výchozí hodnota je **int**. Možné typy, najdete v části [ \<náhodné >](../standard-library/random.md).
+*IntType*\
+Celočíselný typ výsledku, výchozí hodnota je **int**. Možné typy naleznete v tématu [ \<Random >](../standard-library/random.md).
 
 ## <a name="remarks"></a>Poznámky
 
-Třída šablony popisuje distribuci, která vytváří hodnoty uživatelem zadaného integrálového typu s Poissonovo rozdělení. Následující tabulka odkazuje na články týkající se jednotlivých členů.
+Třída šablony popisuje distribuci, která vytváří hodnoty celočíselného typu zadaného uživatelem pomocí Poissonova rozdělení. Následující tabulka obsahuje odkazy na články týkající se jednotlivých členů.
 
 ||||
 |-|-|-|
 |[poisson_distribution](#poisson_distribution)|`poisson_distribution::mean`|`poisson_distribution::param`|
 |`poisson_distribution::operator()`||[param_type](#param_type)|
 
-Funkce vlastností `mean()` vrátí hodnotu pro parametr uložené distribuce *znamenat*.
+Funkce `mean()` Property vrátí hodnotu parametru pro uložený distribuční parametr *střední*hodnota.
 
-Vlastnost člena `param()` Nastaví nebo vrátí `param_type` uložené distribuční balíček parametrů.
+Člen `param()` vlastnosti nastaví nebo `param_type` vrátí uložený balíček parametrů distribuce.
 
-`min()` a `max()` členské funkce vrátí nejmenší možné výsledek a největší výsledek je to možné, v uvedeném pořadí.
+Členské funkce `max()` a vracejí nejmenší možný výsledek a největší možný výsledek, v uvedeném pořadí. `min()`
 
-`reset()` Členská funkce odstraní všechny hodnoty uložené v mezipaměti tak, aby výsledek dalšího volání do `operator()` nezávisí na žádné hodnoty získané z modulu před voláním.
+Členská funkce zahodí všechny hodnoty uložené v mezipaměti, takže výsledek dalšího `operator()` volání není závislý na všech hodnotách získaných z modulu před voláním. `reset()`
 
-`operator()` Členské funkce vrátí další vygenerovanou hodnotu založená na modulu URNG z aktuálního balíčku parametrů nebo balíček zadaný parametr.
+`operator()` Členské funkce vrátí další vygenerovanou hodnotu založenou na modulu URNG, buď z aktuálního balíčku parametrů, nebo pomocí zadaného balíčku parametrů.
 
-Další informace o distribuci třídy a jejich členy, naleznete v tématu [ \<náhodné >](../standard-library/random.md).
+Další informace o třídách distribuce a jejich členech naleznete v tématu [ \<Random >](../standard-library/random.md).
 
-Podrobné informace o Poissonovo rozdělení, najdete v článku Wolfram MathWorld [Poissonovo rozdělení](https://go.microsoft.com/fwlink/p/?linkid=401112).
+Podrobné informace o Poissonova rozdělení naleznete v článku Wolfram MathWorld [Poissonova rozdělení](https://go.microsoft.com/fwlink/p/?linkid=401112).
 
 ## <a name="example"></a>Příklad
 
@@ -192,13 +192,13 @@ Distribution for 100 samples:
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** \<náhodné >
+**Hlavička:** \<náhodné >
 
-**Namespace:** std
+**Obor názvů:** std
 
-## <a name="poisson_distribution"></a>  poisson_distribution::poisson_distribution
+## <a name="poisson_distribution"></a>poisson_distribution::p oisson_distribution
 
-Vytvoří rozložení.
+Sestaví rozdělení.
 
 ```cpp
 explicit poisson_distribution(RealType mean = 1.0);
@@ -207,19 +207,19 @@ explicit binomial_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>Parametry
 
-*střední hodnotu*<br/>
-`mean` Parametru distribuce.
+*Průměrná*\
+Parametr `mean` distribuce.
 
-*Parametr*<br/>
-Struktura parametr použít k vytvoření distribuce.
+*parametr*\
+Struktura parametrů používaná k sestavení distribuce.
 
 ### <a name="remarks"></a>Poznámky
 
-**Předběžné podmínky:** `0.0 < mean`
+**Předběžná podmínka:** `0.0 < mean`
 
-První konstruktor vytvoří objekt, jehož uložené `mean` hodnota obsahuje hodnotu *znamenat*.
+První konstruktor vytvoří objekt, jehož uložená `mean` hodnota drží *střední*hodnotu.
 
-Druhý konstruktor vytvoří objekt, jehož uložené parametry jsou inicializovány z *parametr*. Můžete získat a nastavit aktuální parametry existující distribuční voláním `param()` členskou funkci.
+Druhý konstruktor vytvoří objekt, jehož uložené parametry jsou inicializovány z *parametr*. Můžete získat a nastavit aktuální parametry existující distribuce voláním `param()` členské funkce.
 
 ## <a name="param_type"></a>  poisson_distribution::param_type
 
@@ -238,14 +238,14 @@ struct param_type {
 
 ### <a name="parameters"></a>Parametry
 
-Najdete v parametrech konstruktor [poisson_distribution –](#poisson_distribution).
+Viz parametry konstruktoru pro [poisson_distribution](#poisson_distribution).
 
 ### <a name="remarks"></a>Poznámky
 
-**Předběžné podmínky:** `0.0 < mean`
+**Předběžná podmínka:** `0.0 < mean`
 
-Tato struktura může být předán konstruktoru třídy distribuce při vytváření instance, do `param()` členskou funkci pro nastavení uložené parametry existující distribuční a k `operator()` použije místo uložené parametry.
+Tuto strukturu lze předat konstruktoru třídy distribuce při vytváření instance, `param()` členské funkci pro nastavení uložených parametrů stávající distribuce a k `operator()` použití namísto uložených parametrů.
 
 ## <a name="see-also"></a>Viz také:
 
-[\<náhodné >](../standard-library/random.md)<br/>
+[\<náhodné >](../standard-library/random.md)

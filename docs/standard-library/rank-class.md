@@ -7,12 +7,12 @@ helpviewer_keywords:
 - rank class
 - rank
 ms.assetid: bc9f1b8f-800f-46ca-b6f4-d8579ed5406a
-ms.openlocfilehash: a0658d7278ef31d01d371eff11aec09c19c8011e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: cab8d4bb782c7e02df62874a40db14479558da99
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62369745"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68458178"
 ---
 # <a name="rank-class"></a>rank – třída
 
@@ -27,12 +27,12 @@ struct rank;
 
 ### <a name="parameters"></a>Parametry
 
-*Ty*<br/>
+*Ty*\
 Typ, na který chcete odeslat dotaz.
 
 ## <a name="remarks"></a>Poznámky
 
-Dotaz typu obsahuje hodnotu počtu dimenzí pole *Ty*, nebo 0, pokud *Ty* není typem pole.
+Dotaz typu obsahuje hodnotu počtu rozměrů pole typu *ty*, nebo 0 *, pokud není* typu pole.
 
 ## <a name="example"></a>Příklad
 
@@ -63,11 +63,11 @@ rank<int[5][10]> == 2
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** \<type_traits >
+**Hlavička:** \<type_traits >
 
-**Namespace:** std
+**Obor názvů:** std
 
 ## <a name="see-also"></a>Viz také:
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
-[extent – třída](../standard-library/extent-class.md)<br/>
+[< type_traits >](../standard-library/type-traits.md)\
+[extent – třída](../standard-library/extent-class.md)

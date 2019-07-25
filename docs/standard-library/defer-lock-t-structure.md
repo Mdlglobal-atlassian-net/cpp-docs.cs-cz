@@ -4,16 +4,16 @@ ms.date: 11/04/2016
 f1_keywords:
 - mutex/std::defer_lock_t
 ms.assetid: 4c4588eb-ca51-4949-b5d1-8539cc4577ad
-ms.openlocfilehash: ec48b7d7ab7325276682357c78037697cc475857
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a6ead2b1c0eb1b0e18ed7d8a18afb2e4e843e2eb
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62394036"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68459744"
 ---
 # <a name="deferlockt-structure"></a>defer_lock_t – struktura
 
-Představuje typ, který definuje [defer_lock –](../standard-library/mutex-functions.md#defer_lock) objekt, který se používá k vyberte jednu z přetížených konstruktorů z [unique_lock –](../standard-library/unique-lock-class.md).
+Představuje typ, který definuje objekt [defer_lock](../standard-library/mutex-functions.md#defer_lock) , který se používá k výběru jednoho z přetížených konstruktorů [unique_lock](../standard-library/unique-lock-class.md).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -23,11 +23,11 @@ struct defer_lock_t;
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** \<vzájemně vyloučeného přístupu >
+**Hlavička:** \<> mutex
 
-**Namespace:** std
+**Obor názvů:** std
 
 ## <a name="see-also"></a>Viz také:
 
-[Odkaz na soubory hlaviček](../standard-library/cpp-standard-library-header-files.md)<br/>
-[\<mutex>](../standard-library/mutex.md)<br/>
+[Odkazy na hlavičkové soubory](../standard-library/cpp-standard-library-header-files.md)\
+[\<mutex>](../standard-library/mutex.md)

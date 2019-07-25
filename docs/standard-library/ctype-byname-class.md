@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - ctype_byname class
 ms.assetid: a5cec021-a1f8-425f-8757-08e6f064b604
-ms.openlocfilehash: d998747045ece765269ddb013b525b8c06fcdf8b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0b0f33781cc9f1f54661a44a5434c94316432a45
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62394166"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68457896"
 ---
 # <a name="ctypebyname-class"></a>ctype_byname – třída
 
-Odvozená třída šablony popisuje objekt, který může sloužit jako omezující vlastnost ctype daného národního prostředí, který umožňuje klasifikaci znaků a převod znaků mezi případ a nativní a znakovými sadami určenými pro národní prostředí.
+Odvozená třída šablony popisuje objekt, který může sloužit jako omezující vlastnost CType daného národního prostředí, což umožňuje klasifikaci znaků a převod znaků mezi velikostmi písmen a nativním a národním prostředím zadanými znakové sady.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -40,14 +40,14 @@ protected:
 
 ## <a name="remarks"></a>Poznámky
 
-Její chování je určeno s názvem národního prostředí `_Locname`. Každý konstruktor inicializuje jeho základní objekt s [ctype](../standard-library/ctype-class.md)\<CharType > ( `_Refs`) nebo jeho ekvivalent pro základní třídu `ctype<char>`.
+Jeho chování je určeno pojmenovaným národním `_Locname`prostředím. Každý konstruktor inicializuje svůj základní objekt pomocí [CType](../standard-library/ctype-class.md)\<CharType > ( `_Refs`) nebo ekvivalentu pro základní třídu `ctype<char>`.
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** \<národní prostředí >
+**Hlavička:** \<> národního prostředí
 
-**Namespace:** std
+**Obor názvů:** std
 
 ## <a name="see-also"></a>Viz také:
 
-[Bezpečný přístup z více vláken ve standardní knihovně C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[Bezpečný přístup z více vláken ve standardní knihovně C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)

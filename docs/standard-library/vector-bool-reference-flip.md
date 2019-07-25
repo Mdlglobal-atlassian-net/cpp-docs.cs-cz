@@ -1,21 +1,21 @@
 ---
-title: 'vektor&lt;bool&gt;:: reference::flip'
+title: 'Vector&lt;bool&gt;:: Reference:: flip'
 ms.date: 11/04/2016
 f1_keywords:
 - vector/std::vector<bool>::reference::flip
 helpviewer_keywords:
 - reference::flip method
 ms.assetid: ef940365-cbe4-4a87-a3e2-1f3cfa357e29
-ms.openlocfilehash: 68172de6e50a599d5b1822b83787be3a3a94e037
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1743df7773d577e53f054fa4e403cf0d00da8ce7
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62205122"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68452177"
 ---
-# <a name="vectorltboolgtreferenceflip"></a>vektor&lt;bool&gt;:: reference::flip
+# <a name="vectorltboolgtreferenceflip"></a>Vector&lt;bool&gt;:: Reference:: flip
 
-Přemění logickou hodnotu odkazovaného [vektoru\<bool >](../standard-library/vector-bool-class.md) elementu.
+Invertuje logickou hodnotu odkazovaného [\<logického prvku bool >](../standard-library/vector-bool-class.md) .
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -66,11 +66,11 @@ The vector with first element flipped is:
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** \<vektoru >
+**Hlavička:** \<> vektoru
 
-**Namespace:** std
+**Obor názvů:** std
 
 ## <a name="see-also"></a>Viz také:
 
-[vektor\<bool >:: reference – třída](../standard-library/vector-bool-reference-class.md)<br/>
-[Standardní knihovna C++ – referenční dokumentace](../standard-library/cpp-standard-library-reference.md)<br/>
+[Vector\<bool >:: Reference – třída](../standard-library/vector-bool-reference-class.md)\
+[Standardní knihovna C++ – referenční dokumentace](../standard-library/cpp-standard-library-reference.md)

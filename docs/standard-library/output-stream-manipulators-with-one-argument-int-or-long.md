@@ -4,16 +4,16 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - output streams, int or long argument manipulators
 ms.assetid: 338f3164-b5e2-4c5a-a605-7d9dc3629ca1
-ms.openlocfilehash: e093512af2741329c58db0b613453f3388bacdf2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 93e4de25323514eb4105814b565dc3ddc3fbb737
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62370798"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68453000"
 ---
 # <a name="output-stream-manipulators-with-one-argument-int-or-long"></a>Manipulátory výstupního datového proudu s jedním argumentem (int nebo long)
 
-Iostream – knihovna tříd poskytuje sadu makra pro vytváření parametrizovaných manipulátory. Manipulátory s jedním **int** nebo **dlouhé** argument představují zvláštní případ. K vytvoření manipulátor datového proudu výstupu, která přijímá jeden **int** nebo **dlouhé** argument (jako je `setw`), je nutné použít _Smanip makra, která je definována v \<iomanip >. Tento příklad definuje `fillblank` manipulátor, který se vkládá zadaný počet prázdných hodnot do datového proudu:
+Knihovna tříd iostream – poskytuje sadu maker pro vytváření parametrizovaných manipulací. Manipulace s jedním **int** nebo dlouhým  argumentem jsou zvláštní případ. Chcete-li vytvořit výstupní datový proud manipulátor, který přijímá jeden **int** nebo **dlouhý** argument `setw`(jako), je nutné použít makro _Smanip, které je definováno \<v iomanip >. Tento příklad definuje `fillblank` manipulátor, který do datového proudu Vloží zadaný počet prázdných hodnot:
 
 ## <a name="example"></a>Příklad
 
@@ -48,4 +48,4 @@ int main( )
 
 ## <a name="see-also"></a>Viz také:
 
-[Vlastní manipulátory s argumenty](../standard-library/custom-manipulators-with-arguments.md)<br/>
+[Vlastní manipulátory s argumenty](../standard-library/custom-manipulators-with-arguments.md)

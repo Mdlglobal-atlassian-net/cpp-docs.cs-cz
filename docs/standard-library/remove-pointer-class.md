@@ -7,12 +7,12 @@ helpviewer_keywords:
 - remove_pointer class
 - remove_pointer
 ms.assetid: 2cd4e417-32fb-4f53-bd16-4e8a98240832
-ms.openlocfilehash: 6bc735af1c1af292b32b56aae599eef019836254
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 786a1cba5fc35014e33e3e19245271adefec1372
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62368861"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68451244"
 ---
 # <a name="removepointer-class"></a>remove_pointer – třída
 
@@ -30,12 +30,12 @@ using remove_pointer_t = typename remove_pointer<T>::type;
 
 ### <a name="parameters"></a>Parametry
 
-*T*<br/>
+*Š*\
 Typ, který chcete upravit.
 
 ## <a name="remarks"></a>Poznámky
 
-Instance `remove_pointer<T>` obsahuje změněný typ, který je `T1` při *T* má formu `T1*`, `T1* const`, `T1* volatile`, nebo `T1* const volatile`, jinak *T*.
+Instance `remove_pointer<T>` obsahuje změněný typ, který je `T1` v případě, že *t* `T1*`má tvar, `T1* volatile` `T1* const`, nebo `T1* const volatile`, jinak *t*.
 
 ## <a name="example"></a>Příklad
 
@@ -61,11 +61,11 @@ remove_pointer_t<int *> == int
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** \<type_traits >
+**Hlavička:** \<type_traits >
 
-**Namespace:** std
+**Obor názvů:** std
 
 ## <a name="see-also"></a>Viz také:
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
-[add_pointer – třída](../standard-library/add-pointer-class.md)<br/>
+[< type_traits >](../standard-library/type-traits.md)\
+[add_pointer – třída](../standard-library/add-pointer-class.md)

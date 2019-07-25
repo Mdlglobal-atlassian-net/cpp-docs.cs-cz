@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - is_trivially_copy_assignable
 ms.assetid: 7410133e-f367-493f-92a7-e34e3ec5e879
-ms.openlocfilehash: 831e7c5afdd39980876a8e8284a68fec2084a4e5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c0019257a032d3becc268513336ed59e58a2e1d5
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62413460"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68447999"
 ---
 # <a name="istriviallycopyassignable-class"></a>is_trivially_copy_assignable Class
 
-Ověřuje, zda má typ jednoduchého dotazu kopírovacího operátoru přiřazení.
+Testuje, zda má typ operátor přiřazení triviální kopie.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -26,21 +26,21 @@ struct is_trivially_copy_assignable;
 
 ### <a name="parameters"></a>Parametry
 
-*T*<br/>
+*Š*\
 Typ, na který chcete odeslat dotaz.
 
 ## <a name="remarks"></a>Poznámky
 
-Instance predikátu typu obsahuje hodnotu true, pokud typ *T* je třída, která má triviální operátor přiřazení kopie, jinak má hodnotu false.
+Instance predikátu typu má hodnotu true, pokud typ *T* je třída, která má operátor přiřazení triviální kopie, v opačném případě obsahuje hodnotu false.
 
-Přiřazení konstruktor pro třídu *T* je jednoduché, pokud je implicitně určen, třída *T* nemá žádné virtuální funkce třídy *T* nemá žádné virtuální báze třídy všechny nestatické datové členy typu třídy mají operátory jednoduchého dotazu přiřazení a třídy nestatických datových členů typu pole třídy mají operátory přiřazení triviální.
+Konstruktor přiřazení pro třídu *t* je triviální, pokud je implicitně poskytnutý, třída *t* nemá žádné virtuální funkce, třída *t* nemá žádné virtuální základy, třídy všech nestatických datových členů typu třídy mají triviální přiřazení. operátory a třídy všech nestatických datových členů typu Array třídy mají operátory přiřazení triviální.
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** \<type_traits >
+**Hlavička:** \<type_traits >
 
-**Namespace:** std
+**Obor názvů:** std
 
 ## <a name="see-also"></a>Viz také:
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
+[<type_traits>](../standard-library/type-traits.md)

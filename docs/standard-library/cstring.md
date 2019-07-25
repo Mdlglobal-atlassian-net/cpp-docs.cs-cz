@@ -1,5 +1,5 @@
 ---
-title: '&lt;CString –&gt;'
+title: '&lt;CString&gt;'
 ms.date: 11/04/2016
 f1_keywords:
 - <cstring>
@@ -7,16 +7,16 @@ helpviewer_keywords:
 - <cstring> header
 - cstring header
 ms.assetid: d665429f-5d39-4712-9c0a-68c8abcc3536
-ms.openlocfilehash: cc6821d63a42d498347745bb7a96c838fc634415
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 0aa92bc366e6f669c01932c2b44413cfc587c16d
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68246622"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68449342"
 ---
-# <a name="ltcstringgt"></a>&lt;CString –&gt;
+# <a name="ltcstringgt"></a>&lt;CString&gt;
 
-Obsahuje hlavičku knihovny Standard C \<string.h > a přidá názvy přidružené k `std` oboru názvů.
+Zahrnuje řetězec hlavičky \<standardní knihovny jazyka C. h > a přidává přidružené názvy `std` do oboru názvů.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -26,7 +26,7 @@ Obsahuje hlavičku knihovny Standard C \<string.h > a přidá názvy přidružen
 
 ## <a name="remarks"></a>Poznámky
 
-Včetně této hlavičky zajišťuje, že názvy deklarované s vnějším spojením v záhlaví knihovny Standard C jsou deklarovány v `std` oboru názvů.
+Včetně této hlavičky zajišťuje, že názvy deklarované s vnějším propojením v hlavičce standardní knihovny jazyka C jsou deklarovány v `std` oboru názvů.
 
 ## <a name="constants"></a>Konstanty
 
@@ -72,6 +72,6 @@ size_t strlen(const char* s);
 
 ## <a name="see-also"></a>Viz také:
 
-[Odkaz na soubory hlaviček](../standard-library/cpp-standard-library-header-files.md)<br/>
-[Standardní knihovna C++ – přehled](../standard-library/cpp-standard-library-overview.md)<br/>
-[Bezpečný přístup z více vláken ve standardní knihovně C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[Odkazy na hlavičkové soubory](../standard-library/cpp-standard-library-header-files.md)\
+[C++Přehled standardní knihovny](../standard-library/cpp-standard-library-overview.md)\
+[Bezpečný přístup z více vláken ve standardní knihovně C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)

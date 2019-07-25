@@ -10,16 +10,16 @@ helpviewer_keywords:
 - stdext::freelist [C++], pop
 - stdext::freelist [C++], push
 ms.assetid: 8ad7e35c-4c80-4479-8ede-1a2497b06d71
-ms.openlocfilehash: ef1f2e617e93869a1084dc030c6496c819f1ed96
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8a504f58f9f64aa8b0d26b17090387c5c2b5de21
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62159389"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68454132"
 ---
 # <a name="freelist-class"></a>freelist – třída
 
-Spravuje seznam bloky paměti.
+Spravuje seznam bloků paměti.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -33,32 +33,32 @@ class freelist : public Max
 |Parametr|Popis|
 |---------------|-----------------|
 |*Sz*|Počet prvků v poli, které mají být přiděleny.|
-|*Max*|Maximální počet Třída reprezentující maximální počet prvků, které mají být uloženy v seznamu zdarma. Maximální počet třída může být [max_none –](../standard-library/max-none-class.md), [max_unbounded –](../standard-library/max-unbounded-class.md), [max_fixed_size –](../standard-library/max-fixed-size-class.md), nebo [max_variable_size –](../standard-library/max-variable-size-class.md).|
+|*Max*|Maximální třída představující maximální počet prvků, které mají být uloženy v seznamu Free. Maximální třída může být [max_none](../standard-library/max-none-class.md), [max_unbounded](../standard-library/max-unbounded-class.md), [max_fixed_size](../standard-library/max-fixed-size-class.md)nebo [max_variable_size](../standard-library/max-variable-size-class.md).|
 
 ## <a name="remarks"></a>Poznámky
 
-Spravuje seznam paměťových bloků velikosti této třídy šablony *Sz* s maximální délkou seznamu určit maximální třídou předaný *maximální*.
+Tato třída šablony spravuje seznam bloků paměti velikosti *SZ* s maximální délkou seznamu určeného maximální třídou předanou *Max.*
 
 ### <a name="constructors"></a>Konstruktory
 
 |Konstruktor|Popis|
 |-|-|
-|[FreeList –](#freelist)|Vytvoří objekt typu `freelist`.|
+|[freelist –](#freelist)|Vytvoří objekt typu `freelist`.|
 
 ### <a name="member-functions"></a>Členské funkce
 
 |Členská funkce|Popis|
 |-|-|
-|[pop](#pop)|Odebere první blok paměti ze seznamu zdarma.|
-|[push](#push)|Blok paměti se přidá do seznamu.|
+|[výstrah](#pop)|Odebere první blok paměti ze seznamu Free.|
+|[push](#push)|Přidá do seznamu blok paměti.|
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** \<alokátorů >
+**Hlavička:** \<> přidělování
 
-**Namespace:** stdext
+**Obor názvů:** stdext
 
-## <a name="freelist"></a>  FreeList::FreeList
+## <a name="freelist"></a>freelist –:: freelist –
 
 Vytvoří objekt typu `freelist`.
 
@@ -68,9 +68,9 @@ freelist();
 
 ### <a name="remarks"></a>Poznámky
 
-## <a name="pop"></a>  FreeList::POP
+## <a name="pop"></a>freelist –::p op
 
-Odebere první blok paměti ze seznamu zdarma.
+Odebere první blok paměti ze seznamu Free.
 
 ```cpp
 void *pop();
@@ -78,15 +78,15 @@ void *pop();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vrací ukazatel na blok paměti odebrán ze seznamu.
+Vrátí ukazatel na blok paměti odebraný ze seznamu.
 
 ### <a name="remarks"></a>Poznámky
 
 Členská funkce vrátí hodnotu NULL, pokud je seznam prázdný. V opačném případě Odebere první blok paměti ze seznamu.
 
-## <a name="push"></a>  FreeList::push
+## <a name="push"></a>freelist –::p USH
 
-Blok paměti se přidá do seznamu.
+Přidá do seznamu blok paměti.
 
 ```cpp
 bool push(void* ptr);
@@ -96,16 +96,16 @@ bool push(void* ptr);
 
 |Parametr|Popis|
 |---------------|-----------------|
-|*ptr*|Ukazatele na blok paměti mají být přidány do seznamu zdarma.|
+|*ptr*|Ukazatel na blok paměti, který se má přidat do bezplatného seznamu.|
 
 ### <a name="return-value"></a>Návratová hodnota
 
-**true** Pokud `full` vrátí maximální třídy **false**; v opačném případě `push` vrací funkce **false**.
+**true** , pokud `full` funkce maximální třídy vrátí `push` **hodnotu false**. v opačném případě vrátí funkce **hodnotu false**.
 
 ### <a name="remarks"></a>Poznámky
 
-Pokud `full` vrátí maximální třídy **false**, přidá bloku paměti, na které odkazuje tato členská funkce *ptr* k začátku seznamu.
+Pokud funkce Max Class vrátí **hodnotu false**, přidá tato členská funkce blok paměti, na který odkazuje PTR, na záhlaví seznamu.  `full`
 
 ## <a name="see-also"></a>Viz také:
 
-[\<allocators>](../standard-library/allocators-header.md)<br/>
+[\<allocators>](../standard-library/allocators-header.md)

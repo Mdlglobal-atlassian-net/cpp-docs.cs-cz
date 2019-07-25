@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - out_of_range class
 ms.assetid: d0e14dc0-065e-4666-9ac9-51e52223c503
-ms.openlocfilehash: 59d1a0dc987ddb0dc538fb02bfe28e0b073d3a7e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5f965e45e765f0c0cef6bc9cd8a175e2fdc50af7
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62370811"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68453077"
 ---
 # <a name="outofrange-class"></a>out_of_range – třída
 
-Tato třída slouží jako základní třída pro všechny výjimky vyvolané argument, který je mimo platný rozsah hlášení.
+Třída slouží jako základní třída pro všechny výjimky vyvolané pro hlášení argumentu, který je mimo platný rozsah.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -31,7 +31,7 @@ public:
 
 ## <a name="remarks"></a>Poznámky
 
-Hodnota vrácená [co](../standard-library/exception-class.md) je kopie **zpráva**`.`[data](../standard-library/basic-string-class.md#data).
+Hodnota vrácená funkcí [co](../standard-library/exception-class.md) je kopie[dat](../standard-library/basic-string-class.md#data) **zprávy**`.`.
 
 ## <a name="example"></a>Příklad
 
@@ -65,11 +65,11 @@ Caught: invalid string position
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** \<stdexcept – >
+**Hlavička:** \<stdexcept >
 
-**Namespace:** std
+**Obor názvů:** std
 
 ## <a name="see-also"></a>Viz také:
 
-[logic_error – třída](../standard-library/logic-error-class.md)<br/>
-[Bezpečný přístup z více vláken ve standardní knihovně C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[logic_error – třída](../standard-library/logic-error-class.md)\
+[Bezpečný přístup z více vláken ve standardní knihovně C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)

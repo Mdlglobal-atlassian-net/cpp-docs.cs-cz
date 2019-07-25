@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - is_final
 ms.assetid: 9dbad82f-6685-4909-94e8-98e4a93994b9
-ms.openlocfilehash: f605b160f6ed71aaafcc7c391e17180e4b243444
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: 14efbeb33193cc674c6e766b880e89d9b76d140a
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64346446"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68452658"
 ---
 # <a name="isfinal-class"></a>is_final – třída
 
-Ověřuje, zda typ není typem třídy označené `final`.
+Testuje, zda je typ typu třídy označeno `final`.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -26,20 +26,20 @@ struct is_final;
 
 ### <a name="parameters"></a>Parametry
 
-*T*<br/>
+*Š*\
 Typ, na který chcete odeslat dotaz.
 
 ## <a name="remarks"></a>Poznámky
 
-Instance predikátu typu obsahuje hodnotu true, pokud typ *T* je označená typem třídy `final`, v opačném případě obsahuje hodnotu false. Pokud *T* je typ třídy, musí být dokončený typ.
+Instance predikátu typu má hodnotu true, pokud typ *T* je typ třídy označený jako `final`, jinak obsahuje hodnotu false. Pokud *T* je typ třídy, musí být úplný typ.
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** \<type_traits >
+**Hlavička:** \<type_traits >
 
-**Namespace:** std
+**Obor názvů:** std
 
 ## <a name="see-also"></a>Viz také:
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
-[final – specifikátor](../cpp/final-specifier.md)<br/>
+[< type_traits >](../standard-library/type-traits.md)\
+[final – specifikátor](../cpp/final-specifier.md)

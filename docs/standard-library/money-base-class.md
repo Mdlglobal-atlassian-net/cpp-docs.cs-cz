@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - money_base class
 ms.assetid: 1a303c15-9272-4f26-ae16-dcf43a0fd38a
-ms.openlocfilehash: b0c77b523dbe31bc5b07ae3d736441880fe04546
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5b19635cf4d2cce58ec50226c463a075cfac5b0f
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62383565"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68455569"
 ---
 # <a name="moneybase-class"></a>money_base – třída
 
-Tato třída popisuje výčet a strukturu společné pro všechny specializace šablony třídy [moneypunct](../standard-library/moneypunct-class.md).
+Třída popisuje výčet a strukturu společnou pro všechny specializace třídy template [moneypunct](../standard-library/moneypunct-class.md).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -28,24 +28,24 @@ struct pattern
 
 ## <a name="remarks"></a>Poznámky
 
-Výčet `part` popisuje možné hodnoty prvků pole ve struktuře vzoru. Hodnoty `part` jsou:
+Výčet `part` popisuje možné hodnoty v prvcích pole Array ve vzoru struktury. Hodnoty `part` jsou:
 
-- `none` pro vyhledání nula nebo více mezer, nebo generovat žádnou akci.
+- `none`pro vyhledání žádného nebo více mezer nebo vygenerování nic.
 
-- `sign` pro vyhledání nebo generovat kladného či záporného znaménka.
+- `sign`pro spárování nebo vygenerování kladného nebo záporného znaménka.
 
-- `space` pro vyhledání nula nebo více mezer, nebo vytvořit mezeru.
+- `space`pro vyhledání žádného nebo více mezer nebo vygenerování prostoru.
 
-- `symbol` pro vyhledání nebo generovat symbol měny.
+- `symbol`pro spárování nebo vygenerování symbolu měny.
 
-- `value` pro vyhledání nebo generování peněžní hodnoty.
+- `value`pro spárování nebo vygenerování peněžní hodnoty.
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** \<národní prostředí >
+**Hlavička:** \<> národního prostředí
 
-**Namespace:** std
+**Obor názvů:** std
 
 ## <a name="see-also"></a>Viz také:
 
-[Bezpečný přístup z více vláken ve standardní knihovně C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[Bezpečný přístup z více vláken ve standardní knihovně C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)

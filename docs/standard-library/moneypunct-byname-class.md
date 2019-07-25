@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - moneypunct_byname class
 ms.assetid: e8a544d2-6aee-420d-b513-deb385c9b416
-ms.openlocfilehash: 003ba2136e779c444c7edad9b1759a861a8b0803
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 47c9d2281973cb57288bfdcf865926fb6dd9ed0e
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62383552"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68460210"
 ---
 # <a name="moneypunctbyname-class"></a>moneypunct_byname – třída
 
-Odvozená třída šablony popisující objekt, který může sloužit jako `moneypunct` omezující vlastnost daného národního prostředí, který umožňuje formátování peněžní vstupní pole nebo polí peněžní výstup.
+Odvozená třída šablony popisující objekt, který může sloužit jako `moneypunct` omezující vlastnost daného národního prostředí a který povoluje formátování peněžních vstupních polí nebo peněžních výstupních polí.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -40,14 +40,14 @@ protected:
 
 ## <a name="remarks"></a>Poznámky
 
-Její chování je určeno s názvem národního prostředí `_Locname`. Každý konstruktor inicializuje jeho základní objekt s [moneypunct](../standard-library/moneypunct-class.md#moneypunct)\<CharType, Intl > ( `_Refs`).
+Jeho chování je určeno pojmenovaným národním `_Locname`prostředím. Každý konstruktor inicializuje svůj základní objekt pomocí [moneypunct](../standard-library/moneypunct-class.md#moneypunct)\<CharType, Intl > ( `_Refs`).
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** \<národní prostředí >
+**Hlavička:** \<> národního prostředí
 
-**Namespace:** std
+**Obor názvů:** std
 
 ## <a name="see-also"></a>Viz také:
 
-[Bezpečný přístup z více vláken ve standardní knihovně C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[Bezpečný přístup z více vláken ve standardní knihovně C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)

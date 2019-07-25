@@ -4,16 +4,16 @@ ms.date: 04/20/2018
 f1_keywords:
 - atomic/std::atomic
 ms.assetid: 261628ed-7049-41ac-99b9-cfe49f696b44
-ms.openlocfilehash: 258812f033d34f040d96847581d6f51692a933b6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1b3b60d71fcdf68fdf215820535c3bfb3d4dfb2b
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62376666"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68456736"
 ---
 # <a name="atomic-structure"></a>atomic – struktura
 
-Popisuje objekt, který provádí atomické operace na uložené hodnotě typu *Ty*.
+Popisuje objekt, který provádí atomické operace s uloženou hodnotou typu *ty*.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -26,57 +26,57 @@ struct atomic;
 
 |Člen|Popis|
 |----------|-----------------|
-|**Konstruktor**||
-|[atomic](#atomic)|Sestaví Atomický objekt.|
+|**BeginRequestEventArgs**||
+|[atomic](#atomic)|Vytvoří atomový objekt.|
 |**Operátory**||
-|[Atomic::Operator Ty](#op_ty)|Přečte a vrátí uloženou hodnotu. ([Atomic::Load –](#load))|
-|[Atomic::Operator =](#op_eq)|Používá zadanou hodnotu k nahrazení uložené hodnoty. ([Atomic::Store –](#store))|
-|[Atomic::Operator ++](#op_inc)|Zvýší uloženou hodnotu. Používá se pouze specializacemi integrálu a ukazatele.|
-|[Atomic::Operator +=](#op_add_eq)|Přidá zadanou hodnotu k uložené hodnotě. Používá se pouze specializacemi integrálu a ukazatele.|
-|[atomic::operator--](#op_dec)|Sníží uloženou hodnotu. Používá se pouze specializacemi integrálu a ukazatele.|
-|[Atomic::Operator-=](#op_sub_eq)|Odečte zadanou hodnotu od uložené hodnoty. Používá se pouze specializacemi integrálu a ukazatele.|
-|[Atomic::Operator & =](#op_and_eq)|Provádí logické bitové a na zadanou hodnotu a uloženou hodnotu. Používá se pouze specializacemi integrálu.|
-|[atomic::operator&#124;=](#op_or_eq)|Provádí logické bitové nebo na zadanou hodnotu a uloženou hodnotu. Používá se pouze specializacemi integrálu.|
-|[Atomic::Operator ^ =](#op_xor_eq)|Provádí bitový exkluzivní nebo na zadanou hodnotu a uloženou hodnotu. Používá se pouze specializacemi integrálu.|
+|[Atomic:: operator ty](#op_ty)|Přečte a vrátí uloženou hodnotu. ([atomická:: Load](#load))|
+|[Atomic:: operator =](#op_eq)|Použije zadanou hodnotu k nahrazení uložené hodnoty. ([atomická:: Store](#store))|
+|[Atomic:: operator + +](#op_inc)|Zvýší uloženou hodnotu. Používá se pouze specializacemi integrálního a ukazatele.|
+|[Atomic:: operator + =](#op_add_eq)|Přidá zadanou hodnotu k uložené hodnotě. Používá se pouze specializacemi integrálního a ukazatele.|
+|[Atomic:: operator--](#op_dec)|Sníží uloženou hodnotu. Používá se pouze specializacemi integrálního a ukazatele.|
+|[Atomic:: operator-=](#op_sub_eq)|Odečte zadanou hodnotu od uložené hodnoty. Používá se pouze specializacemi integrálního a ukazatele.|
+|[Atomic:: operator & =](#op_and_eq)|Provede bitovou a zadanou hodnotu a uloženou hodnotu. Používá se pouze pro celočíselné specializace.|
+|[Atomic:: operator&#124;=](#op_or_eq)|Provede logickou nebo zadanou hodnotu a uloženou hodnotu. Používá se pouze pro celočíselné specializace.|
+|[Atomic:: operator ^ =](#op_xor_eq)|Provede bitovou exkluzivní nebo zadanou hodnotu a uloženou hodnotu. Používá se pouze pro celočíselné specializace.|
 |**Funkce**||
-|[compare_exchange_strong](#compare_exchange_strong)|Provádí *atomic_compare_and_exchange* operace **to** a vrátí výsledek.|
-|[compare_exchange_weak](#compare_exchange_weak)|Provádí *weak_atomic_compare_and_exchange* operace **to** a vrátí výsledek.|
+|[compare_exchange_strong](#compare_exchange_strong)|Provede operaci *atomic_compare_and_exchange* **a vrátí** výsledek.|
+|[compare_exchange_weak](#compare_exchange_weak)|Provede operaci *weak_atomic_compare_and_exchange* **a vrátí** výsledek.|
 |[fetch_add](#fetch_add)|Přidá zadanou hodnotu k uložené hodnotě.|
-|[fetch_and](#fetch_and)|Provádí logické bitové a na zadanou hodnotu a uloženou hodnotu.|
-|[fetch_or](#fetch_or)|Provádí logické bitové nebo na zadanou hodnotu a uloženou hodnotu.|
+|[fetch_and](#fetch_and)|Provede bitovou a zadanou hodnotu a uloženou hodnotu.|
+|[fetch_or](#fetch_or)|Provede logickou nebo zadanou hodnotu a uloženou hodnotu.|
 |[fetch_sub](#fetch_sub)|Odečte zadanou hodnotu od uložené hodnoty.|
-|[fetch_xor](#fetch_xor)|Provádí bitový exkluzivní nebo na zadanou hodnotu a uloženou hodnotu.|
-|[is_lock_free](#is_lock_free)|Určuje, zda atomické operace na **to** jsou *bez zámku*. Atomický typ je *bez zámku* Pokud žádné atomické operace na daném typu nepoužívají zámky.|
-|[Zatížení](#load)|Přečte a vrátí uloženou hodnotu.|
-|[store](#store)|Používá zadanou hodnotu k nahrazení uložené hodnoty.|
+|[fetch_xor](#fetch_xor)|Provede bitovou exkluzivní nebo zadanou hodnotu a uloženou hodnotu.|
+|[is_lock_free](#is_lock_free)|Určuje, jestli jsou atomické operace s **tímto** *zámkem bezplatné*. Atomický typ je *bez zámku* , pokud žádné atomické operace na tomto typu nepoužívají zámky.|
+|[spustit](#load)|Přečte a vrátí uloženou hodnotu.|
+|[store](#store)|Použije zadanou hodnotu k nahrazení uložené hodnoty.|
 
 ## <a name="remarks"></a>Poznámky
 
-Typ *Ty* musí být *triviálně kopírovatelné*. To znamená, že použití [memcpy](../c-runtime-library/reference/memcpy-wmemcpy.md) ke kopírování jeho bajtů musí vytvořit platný *Ty* objekt, který porovnání roven původnímu objektu. [Compare_exchange_weak](#compare_exchange_weak) a [compare_exchange_strong](#compare_exchange_strong) členské funkce pomocí [memcmp](../c-runtime-library/reference/memcmp-wmemcmp.md) k určení, zda dva *Ty* hodnoty jsou si rovny. Tyto funkce nepoužijí *Ty*-definované `operator==`. Členské funkce `atomic` použít `memcpy` ke kopírování hodnot typu *Ty*.
+*Typ daného* typu musí být *triviální*a kopírovatelné. To znamená, že použití [memcpy](../c-runtime-library/reference/memcpy-wmemcpy.md) ke zkopírování jeho bajtů musí vytvořit *platný objekt* , který se porovná s původním objektem. Členské funkce [compare_exchange_weak](#compare_exchange_weak) a [compare_exchange_strong](#compare_exchange_strong) používají [memcmp](../c-runtime-library/reference/memcmp-wmemcmp.md) k určení, zda se dvě *ty* hodnoty rovnají. U těchto funkcí nebudou použity `operator==`definované *ty*. Členské funkce `atomic` použití `memcpy` ke zkopírování hodnot typu *ty*.
 
-Částečná specializace **atomické\<Ty \* >** , existuje pro všechny typy ukazatelů. Specializace umožňuje přidání posunu k hodnotě spravovaného ukazatele nebo odečtení posunu od něj. Aritmetické operace přijímají argument typu `ptrdiff_t` a upravují tento argument v závislosti na velikosti *Ty* pro zajištění konzistence s běžnou aritmetikou adres.
+Částečná specializace **,\< \* >atomická** , existuje pro všechny typy ukazatelů. Specializace umožňuje přidání posunu k hodnotě spravovaného ukazatele nebo odečtení posunu od něj. Aritmetické operace přebírají argument typu `ptrdiff_t` a upravují tento argument podle velikosti těch, aby byly  konzistentní s běžnými aritmetickými adresami.
 
-Specializace existuje pro každý integrální typ kromě **bool**. Jednotlivé specializace poskytují bohatou sadu metod pro atomické aritmetické a logické operace.
+Specializace existuje pro každý celočíselný typ kromě **bool**. Každá specializace poskytuje bohatou sadu metod pro atomovou aritmetické a logické operace.
 
 ||||
 |-|-|-|
-|**Atomic\<char >**|**Atomic\<podepsané char >**|**Atomic\<unsigned char >**|
+|**atomický\<znak >**|**neatomická\<> znak typu se znaménkem**|**Ne> znak pro atomovou\<bez znaménka**|
 |**atomic\<char16_t>**|**atomic\<char32_t>**|**atomic\<wchar_t>**|
-|**atomic\<short>**|**Atomic\<unsigned short >**|**atomic\<int>**|
-|**Atomic\<unsigned int >**|**Atomic\<dlouhé >**|**Atomic\<unsigned long >**|
-|**Atomic\<long long >**|**Atomic\<unsigned long long. >**|
+|**atomic\<short>**|**krátkodobý\<nepodepsaný krátký >**|**atomická\<>**|
+|**atomická\<nepodepsaná int >**|**atomická\<dlouhá >**|**Ne>á atomická\<nepodepsaná dlouhá**|
+|**atomická\<dlouhodobá >**|**Ne>é atomické\<nepodepsané dlouhé dlouhé**|
 
-Integrální specializace jsou odvozeny z odpovídajících `atomic_integral` typy. Například **atomické\<unsigned int >** je odvozen z `atomic_uint`.
+Integrální specializace jsou odvozeny z `atomic_integral` odpovídajících typů. Například atomická **\<nepodepsaná int >** je odvozena `atomic_uint`z.
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** \<atomické >
+**Hlavička:** \<atomická >
 
-**Namespace:** std
+**Obor názvů:** std
 
-## <a name="atomic"></a> Atomic::Atomic –
+## <a name="atomic"></a>Atomic:: Atomic
 
-Sestaví Atomický objekt.
+Vytvoří atomový objekt.
 
 ```cpp
 atomic();
@@ -86,23 +86,23 @@ atomic( Ty Value ) noexcept;
 
 ### <a name="parameters"></a>Parametry
 
-*Hodnota*<br/>
-Hodnota inicializace.
+*Osa*\
+Inicializační hodnota.
 
 ### <a name="remarks"></a>Poznámky
 
-Atomické objekty nelze kopírovat nebo přesunout.
+Atomické objekty nelze kopírovat ani přesouvat.
 
-Objekty, které jsou instancemi atomic\<*Ty*> může být inicializovány pouze pomocí konstruktoru, který přebírá argument typu *Ty* a nikoli pomocí agregační inicializace. Objekty atomic_integral však mohou být inicializovány pouze pomocí agregační inicializace.
+Objekty, které jsou\<instancemi*atomicky*> mohou být inicializovány pouze konstruktorem, který přebírá argument typu *ta a nikoli* pomocí agregační inicializace. Objekty atomic_integral lze ale inicializovat pouze pomocí agregační inicializace.
 
 ```cpp
 atomic<int> ai0 = ATOMIC_VAR_INIT(0);
 atomic<int> ai1(0);
 ```
 
-## <a name="op_ty"></a> Atomic::Operator *Ty*
+## <a name="op_ty"></a>Atomic:: operator *ty*
 
-Operátor pro typ určený k šabloně atomic\<*Ty*>. Načte uloženou hodnotu do  **\*to**.
+Operátor pro typ zadaný pro šablonu\< *, atomická*>. Načte uloženou hodnotu v  **\*tomto**poli.
 
 ```cpp
 atomic<Ty>::operator Ty() const volatile noexcept;
@@ -111,11 +111,11 @@ atomic<Ty>::operator Ty() const noexcept;
 
 ### <a name="remarks"></a>Poznámky
 
-Tento operátor se vztahuje `memory_order_seq_cst` [memory_order](atomic-enums.md).
+Tento operátor použije `memory_order_seq_cst` [memory_order](atomic-enums.md).
 
-## <a name="op_eq"></a> Atomic::Operator =
+## <a name="op_eq"></a>Atomic:: operator =
 
-Uloží zadanou hodnotu.
+Ukládá zadanou hodnotu.
 
 ```cpp
 Ty operator=(
@@ -128,16 +128,16 @@ Ty operator=(
 
 ### <a name="parameters"></a>Parametry
 
-*Hodnota*<br/>
-A *Ty* objektu.
+*Osa*\
+Objekt *,* který je.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vrátí *hodnota*.
+Vrátí *hodnotu*.
 
-## <a name="op_inc"></a> Atomic::Operator ++
+## <a name="op_inc"></a>Atomic:: operator + +
 
-Zvýší uloženou hodnotu. Používá se pouze specializacemi integrálu a ukazatele.
+Zvýší uloženou hodnotu. Používá se pouze specializacemi integrálního a ukazatele.
 
 ```cpp
 Ty atomic<Ty>::operator++(int) volatile noexcept;
@@ -148,11 +148,11 @@ Ty atomic<Ty>::operator++() noexcept;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-První dva operátory vrací hodnotu parametru zvýšena. poslední dva operátory vrací hodnotu před inkrementací. Použijte operátory `memory_order_seq_cst` [memory_order](atomic-enums.md).
+První dva operátory vrátí zvýšenou hodnotu; Poslední dva operátory vrátí hodnotu před přírůstku. Operátory používají rozhraní `memory_order_seq_cst` [memory_order](atomic-enums.md).
 
-## <a name="op_add_eq"></a> Atomic::Operator +=
+## <a name="op_add_eq"></a>Atomic:: operator + =
 
-Přidá zadanou hodnotu k uložené hodnotě. Používá se pouze specializacemi integrálu a ukazatele.
+Přidá zadanou hodnotu k uložené hodnotě. Používá se pouze specializacemi integrálního a ukazatele.
 
 ```cpp
 Ty atomic<Ty>::operator+=(
@@ -165,20 +165,20 @@ Ty atomic<Ty>::operator+=(
 
 ### <a name="parameters"></a>Parametry
 
-*Hodnota*<br/>
-Hodnota typu celé číslo nebo ukazatel.
+*Osa*\
+Celočíselná hodnota nebo hodnota ukazatele.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-A *Ty* objekt, který obsahuje výsledek součtu.
+Objekt *ty* , který obsahuje výsledek přidání.
 
 ### <a name="remarks"></a>Poznámky
 
-Tento operátor se používá `memory_order_seq_cst` [memory_order](atomic-enums.md).
+Tento operátor používá `memory_order_seq_cst` [memory_order](atomic-enums.md).
 
-## <a name="op_dec"></a> Atomic::Operator--
+## <a name="op_dec"></a>Atomic:: operator--
 
-Sníží uloženou hodnotu. Používá se pouze specializacemi integrálu a ukazatele.
+Sníží uloženou hodnotu. Používá se pouze specializacemi integrálního a ukazatele.
 
 ```cpp
 Ty atomic<Ty>::operator--(int) volatile noexcept;
@@ -189,11 +189,11 @@ Ty atomic<Ty>::operator--() noexcept;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-První dva operátory vrací hodnotu snížen; poslední dva operátory vrací hodnotu před snížení. Použijte operátory `memory_order_seq_cst` [memory_order](atomic-enums.md).
+První dva operátory vrátí sníženou hodnotu; Poslední dva operátory vrátí hodnotu před sníženou hodnotou. Operátory používají rozhraní `memory_order_seq_cst` [memory_order](atomic-enums.md).
 
-## <a name="op_sub_eq"></a> Atomic::Operator-=
+## <a name="op_sub_eq"></a>Atomic:: operator-=
 
-Odečte zadanou hodnotu od uložené hodnoty. Používá se pouze specializacemi integrálu a ukazatele.
+Odečte zadanou hodnotu od uložené hodnoty. Používá se pouze specializacemi integrálního a ukazatele.
 
 ```cpp
 Ty atomic<Ty>::operator-=(
@@ -206,20 +206,20 @@ Ty atomic<Ty>::operator-=(
 
 ### <a name="parameters"></a>Parametry
 
-*Hodnota*<br/>
-Hodnota typu celé číslo nebo ukazatel.
+*Osa*\
+Celočíselná hodnota nebo hodnota ukazatele.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-A *Ty* objekt, který obsahuje výsledek odčítání.
+Objekt *ty* , který obsahuje výsledek odčítání.
 
 ### <a name="remarks"></a>Poznámky
 
-Tento operátor se používá `memory_order_seq_cst` [memory_order](atomic-enums.md).
+Tento operátor používá `memory_order_seq_cst` [memory_order](atomic-enums.md).
 
-## <a name="op_and_eq"></a> Atomic::Operator & =
+## <a name="op_and_eq"></a>Atomic:: operator & =
 
-Provádí logické bitové a na zadanou hodnotu a uloženou hodnotu  **\*to**. Používá se pouze specializacemi integrálu.
+Provede bitovou a zadanou hodnotu a uloženou  **\*hodnotu.** Používá se pouze pro celočíselné specializace.
 
 ```cpp
 atomic<Ty>::operator&= (
@@ -232,8 +232,8 @@ atomic<Ty>::operator&= (
 
 ### <a name="parameters"></a>Parametry
 
-*Hodnota*<br/>
-Hodnotu typu *Ty*.
+*Osa*\
+Hodnota typu *ty*.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -241,11 +241,11 @@ Výsledek bitového a.
 
 ### <a name="remarks"></a>Poznámky
 
-Tento operátor provádí operaci čtení modify-write k nahrazení uložené hodnoty  **\*to** logickou bitovou hodnotou a z *hodnotu* a aktuální hodnotou, která je uložena v  **\*to**, v rámci omezení `memory_order_seq_cst` [memory_order](atomic-enums.md).
+Tento operátor provádí operaci čtení a úprav-zápisu, která nahradí uloženou  **\*hodnotu s** bitovým a *hodnotou* a aktuální hodnotou, která je  **\*uložena v rámci**omezení `memory_order_seq_cst` [memory_order](atomic-enums.md).
 
-## <a name="op_or_eq"></a> Atomic::Operator&#124;=
+## <a name="op_or_eq"></a>Atomic:: operator&#124;=
 
-Provádí logické bitové nebo na zadanou hodnotu a uloženou hodnotu  **\*to**. Používá se pouze specializacemi integrálu.
+Provede logickou nebo zadanou hodnotu a uloženou  **\*hodnotu.** Používá se pouze pro celočíselné specializace.
 
 ```cpp
 atomic<Ty>::operator|= (
@@ -258,20 +258,20 @@ atomic<Ty>::operator|= (
 
 ### <a name="parameters"></a>Parametry
 
-*Hodnota*<br/>
-Hodnotu typu *Ty*.
+*Osa*\
+Hodnota typu *ty*.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Výsledek bitového nebo.
+Výsledek bitového operátoru OR.
 
 ### <a name="remarks"></a>Poznámky
 
-Tento operátor provádí operaci čtení modify-write k nahrazení uložené hodnoty  **\*to** logickou bitovou hodnotou nebo z *hodnotu* a aktuální hodnotou, která je uložena v  **\*to**, v rámci omezení `memory_order_seq_cst` [memory_order](atomic-enums.md) omezení.
+Tento operátor provádí operaci čtení a úprav-zápisu, která nahradí uloženou  **\*hodnotu s** bitovým nebo *hodnotou* a aktuální hodnotou, která je  **\*uložena v rámci**omezení `memory_order_seq_cst`omezení [memory_order](atomic-enums.md) .
 
-## <a name="op_xor_eq"></a> Atomic::Operator ^ =
+## <a name="op_xor_eq"></a>Atomic:: operator ^ =
 
-Provádí bitový exkluzivní nebo na zadanou hodnotu a uloženou hodnotu  **\*to**. Používá se pouze specializacemi integrálu.
+Provede bitovou exkluzivní nebo zadanou hodnotu a uloženou  **\*hodnotu.** Používá se pouze pro celočíselné specializace.
 
 ```cpp
 atomic<Ty>::operator^= (
@@ -284,20 +284,20 @@ atomic<Ty>::operator^= (
 
 ### <a name="parameters"></a>Parametry
 
-*Hodnota*<br/>
-Hodnotu typu *Ty*.
+*Osa*\
+Hodnota typu *ty*.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Výsledek bitový exkluzivní nebo.
+Výsledek bitového exkluzivního nebo.
 
 ### <a name="remarks"></a>Poznámky
 
-Tento operátor provádí operaci čtení modify-write k nahrazení uložené hodnoty  **\*to** s bitový exkluzivní nebo *hodnotu* a aktuální hodnotou, která je uložena v  **\*to**, v rámci omezení `memory_order_seq_cst` [memory_order](atomic-enums.md) omezení.
+Tento operátor provádí operaci čtení a úprav-zápisu, která nahradí uloženou  **\*hodnotu s** bitovým výhradním nebo *hodnotou* a aktuální hodnotou, která je  **\*uložena v rámci**omezení `memory_order_seq_cst` omezení [memory_order](atomic-enums.md) .
 
-## <a name="compare_exchange_strong"></a> Atomic::compare_exchange_strong –
+## <a name="compare_exchange_strong"></a>Atomic:: compare_exchange_strong
 
-Provádí operaci atomické porovnání a záměna  **\*to**.
+Provede operaci  **\*** atomické porovnání a výměny.
 
 ```cpp
 bool compare_exchange_strong(
@@ -326,33 +326,33 @@ bool compare_exchange_strong(
 
 ### <a name="parameters"></a>Parametry
 
-*Exp*<br/>
-Hodnotu typu *Ty*.
+*Oček*\
+Hodnota typu *ty*.
 
-*Hodnota*<br/>
-Hodnotu typu *Ty*.
+*Osa*\
+Hodnota typu *ty*.
 
-*Order1*<br/>
+*Order1*\
 První `memory_order` argument.
 
-*Order2*<br/>
+*Order2*\
 Druhý `memory_order` argument.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-A **bool** označuje výsledek porovnání hodnoty.
+**Logická** hodnota, která určuje výsledek porovnání hodnoty.
 
 ### <a name="remarks"></a>Poznámky
 
-Operaci atomické porovnání a záměna porovnává hodnotu uloženou v  **\*to** s *Exp*. Pokud jsou hodnoty stejné, operace nahradí hodnotu, která je uložena v  **\*to** s *hodnotu* pomocí operace čtení modify-write a použitím omezení pořadí paměti, které jsou určená *Order1*. Pokud nejsou hodnoty stejné, operace použije hodnotu uloženou v  **\*to** nahradit *Exp* a použije omezení pořadí paměti, která jsou určena podle *Order2* .
+Tato operace atomické porovnání a výměny porovnává hodnotu uloženou v  **\*tomto** případě s hodnotou *exp*. Pokud jsou hodnoty stejné, operace nahradí hodnotu uloženou v  **\*této** *hodnotě hodnotou* pomocí operace read-modify-write a použitím omezení pořadí paměti, která jsou určena parametrem *Order1*. Pokud se hodnoty neshodují, operace používá hodnotu, která je uložena v  **\*tomto** argumentu k nahrazení *exp* a použije omezení pořadí paměti, která jsou určena *Order2*.
 
-Přetížení, která nemají druhý `memory_order` použít implicitní *Order2* , která je založena na hodnotě *Order1*. Pokud *Order1* je `memory_order_acq_rel`, *Order2* je `memory_order_acquire`. Pokud *Order1* je `memory_order_release`, *Order2* je `memory_order_relaxed`. Ve všech ostatních případech *Order2* rovná *Order1*.
+Přetížení, která nemají druhý `memory_order` , používají implicitní *Order2* , která je založena na hodnotě *Order1*. Pokud  je `memory_order_acq_rel`Order1, *Order2* je `memory_order_acquire`. Pokud  je `memory_order_release`Order1, *Order2* je `memory_order_relaxed`. Ve všech ostatních případech se *Order2* rovná *Order1*.
 
-Pro přetížení, která berou dva `memory_order` parametry, hodnota *Order2* nesmí být `memory_order_release` nebo `memory_order_acq_rel`a nesmí být silnější než hodnota *Order1*.
+Pro přetížení, která přijímají dva `memory_order` parametry, nesmí být `memory_order_release` hodnota *Order2* nebo `memory_order_acq_rel`a nesmí být silnější než hodnota *Order1*.
 
-## <a name="compare_exchange_weak"></a> Atomic::compare_exchange_weak –
+## <a name="compare_exchange_weak"></a>Atomic:: compare_exchange_weak
 
-Provede slabé atomické porovnání a záměna operace  **\*to**.
+Provádí v  **\*tomto**případě slabé operace atomické porovnání a výměny.
 
 ```cpp
 bool compare_exchange_weak(
@@ -381,35 +381,35 @@ bool compare_exchange_weak(
 
 ### <a name="parameters"></a>Parametry
 
-*Exp*<br/>
-Hodnotu typu *Ty*.
+*Oček*\
+Hodnota typu *ty*.
 
-*Hodnota*<br/>
-Hodnotu typu *Ty*.
+*Osa*\
+Hodnota typu *ty*.
 
-*Order1*<br/>
+*Order1*\
 První `memory_order` argument.
 
-*Order2*<br/>
+*Order2*\
 Druhý `memory_order` argument.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-A **bool** označuje výsledek porovnání hodnoty.
+**Logická** hodnota, která určuje výsledek porovnání hodnoty.
 
 ### <a name="remarks"></a>Poznámky
 
-Operaci atomické porovnání a záměna porovnává hodnotu uloženou v  **\*to** s *Exp*. Pokud jsou hodnoty stejné, operace nahradí hodnotu, která je uložena v  **\*to** s*hodnotu* pomocí operace čtení modify-write a použitím omezení pořadí paměti, které jsou určená *Order1*. Pokud nejsou hodnoty stejné, operace použije hodnotu uloženou v  **\*to** nahradit *Exp* a použije omezení pořadí paměti, která jsou určena podle *Order2* .
+Tato operace atomické porovnání a výměny porovnává hodnotu uloženou v  **\*tomto** případě s hodnotou *exp*. Pokud jsou hodnoty stejné, operace nahradí hodnotu uloženou v  **\*této** *hodnotě hodnotou* pomocí operace read-modify-write a použitím omezení pořadí paměti, která jsou určena parametrem *Order1*. Pokud se hodnoty neshodují, operace používá hodnotu, která je uložena v  **\*tomto** argumentu k nahrazení *exp* a použije omezení pořadí paměti, která jsou určena *Order2*.
 
-Slabé atomické porovnání a operace výměny provádějí výměnu, pokud porovnávané hodnoty jsou si rovny. Pokud nejsou hodnoty stejné, operace není zaručeno provedení výměny.
+Slabé atomické porovnání a operace Exchange provádí výměnu, pokud se porovnávané hodnoty rovnají. Pokud se hodnoty neshodují, operace není zaručena k provedení výměny.
 
-Přetížení, která nemají druhý `memory_order` použít implicitní *Order2* , která je založena na hodnotě *Order1*. Pokud *Order1* je `memory_order_acq_rel`, *Order2* je `memory_order_acquire`. Pokud *Order1* je `memory_order_release`, *Order2* je `memory_order_relaxed`. Ve všech ostatních případech *Order2* rovná *Order1*.
+Přetížení, která nemají druhý `memory_order` , používají implicitní *Order2* , která je založena na hodnotě *Order1*. Pokud  je `memory_order_acq_rel`Order1, *Order2* je `memory_order_acquire`. Pokud  je `memory_order_release`Order1, *Order2* je `memory_order_relaxed`. Ve všech ostatních případech se *Order2* rovná *Order1*.
 
-Pro přetížení, která berou dva `memory_order` parametry, hodnota *Order2* nesmí být `memory_order_release` nebo `memory_order_acq_rel`a nesmí být silnější než hodnota *Order1*.
+Pro přetížení, která přijímají dva `memory_order` parametry, nesmí být `memory_order_release` hodnota *Order2* nebo `memory_order_acq_rel`a nesmí být silnější než hodnota *Order1*.
 
-## <a name="exchange"></a> Atomic::Exchange –
+## <a name="exchange"></a>Atomic:: Exchange
 
-Používá zadanou hodnotu k nahrazení uložené hodnoty  **\*to**.
+Použije zadanou hodnotu k nahrazení uložené hodnoty  **\*this**.
 
 ```cpp
 Ty atomic<Ty>::exchange(
@@ -424,23 +424,23 @@ Ty atomic<Ty>::exchange(
 
 ### <a name="parameters"></a>Parametry
 
-*Hodnota*<br/>
-Hodnotu typu *Ty*.
+*Osa*\
+Hodnota typu *ty*.
 
-*Order*<br/>
+*Za*\
 A `memory_order`.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Uložené hodnoty  **\*to** před výměnou.
+Uložená hodnota  **\*tohoto** serveru před výměnou.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato operace provádí operaci čtení modify-write používat *hodnotu* k nahrazení hodnoty, která je uložena v  **\*to**, v rámci omezení paměti, která jsou určena podle  *Pořadí*.
+Tato operace provede operaci čtení a úprav-zápisu k použití *hodnoty* k nahrazení hodnoty, která je  **\*uložena v rámci**omezení paměti, která jsou určena podle *pořadí*.
 
-## <a name="fetch_add"></a> Atomic::fetch_add –
+## <a name="fetch_add"></a>Atomic:: fetch_add
 
-Načte hodnotu uloženou v  **\*to**a poté přičte zadanou hodnotu k uložené hodnotě.
+Načte hodnotu uloženou v  **\*tomto**a potom do uložené hodnoty přidá zadanou hodnotu.
 
 ```cpp
 Ty atomic<Ty>::fetch_add (
@@ -455,23 +455,23 @@ Ty atomic<Ty>::fetch_add (
 
 ### <a name="parameters"></a>Parametry
 
-*Hodnota*<br/>
-Hodnotu typu *Ty*.
+*Osa*\
+Hodnota typu *ty*.
 
-*Order*<br/>
+*Za*\
 A `memory_order`.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-A *Ty* objekt, který obsahuje hodnotu uloženou v  **\*to** před přidáním.
+Objekt *,* který obsahuje hodnotu uloženou v  **\*této** části před sčítáním.
 
 ### <a name="remarks"></a>Poznámky
 
-`fetch_add` Metoda provádí operaci čtení modify-write a přidává tak atomicky *hodnotu* do hodnoty uložené v proměnné  **\*to**a použije omezení paměti, která jsou určena podle *Pořadí*.
+Metoda provádí operaci čtení a úprav-zápisu k atomické přidání *hodnoty* do uložené hodnoty v  **\*tomto**a aplikuje omezení paměti, která jsou určena podle *pořadí.* `fetch_add`
 
-## <a name="fetch_and"></a> Atomic::fetch_and –
+## <a name="fetch_and"></a>Atomic:: fetch_and
 
-Provádí logické bitové a na hodnotu a existující hodnotu, která je uložena v  **\*to**.
+Provede bitové a na hodnotu a existující hodnotu, která je uložena v  **\*tomto**.
 
 ```cpp
 Ty atomic<Ty>::fetch_and (
@@ -486,23 +486,23 @@ Ty atomic<Ty>::fetch_and (
 
 ### <a name="parameters"></a>Parametry
 
-*Hodnota*<br/>
-Hodnotu typu *Ty*.
+*Osa*\
+Hodnota typu *ty*.
 
-*Order*<br/>
+*Za*\
 A `memory_order`.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-A *Ty* objekt, který obsahuje výsledek bitového a.
+Objekt *ty* , který obsahuje výsledek bitového operátoru and.
 
 ### <a name="remarks"></a>Poznámky
 
-`fetch_and` Metoda provádí operaci čtení modify-write k nahrazení uložené hodnoty  **\*to** logickou bitovou hodnotou a z *hodnota* a aktuální hodnotou, která je uložena v  **\*to**, v rámci omezení paměti, která jsou určena podle *pořadí*.
+Metoda provádí operaci čtení a úprav-zápisu, která nahradí uloženou  **\*hodnotu s** bitovým a *hodnotou* a aktuální hodnotou, která je  **\*uložena v rámci paměti** `fetch_and` omezení, která jsou určena podle *pořadí*.
 
-## <a name="fetch_or"></a> Atomic::fetch_or –
+## <a name="fetch_or"></a>Atomic:: fetch_or
 
-Provádí logické bitové nebo na hodnotu a existující hodnotu, která je uložena v  **\*to**.
+Provede logickou hodnotu nebo na hodnotu a existující hodnotu, která je uložena v  **\*tomto**.
 
 ```cpp
 Ty atomic<Ty>::fetch_or (
@@ -517,21 +517,21 @@ Ty atomic<Ty>::fetch_or (
 
 ### <a name="parameters"></a>Parametry
 
-*Hodnota*<br/>
-Hodnotu typu *Ty*.
+*Osa*\
+Hodnota typu *ty*.
 
-*Order*<br/>
+*Za*\
 A `memory_order`.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-A *Ty* objekt, který obsahuje výsledek bitového nebo.
+Objekt *ty* , který obsahuje výsledek bitového operátoru OR.
 
 ### <a name="remarks"></a>Poznámky
 
-`fetch_or` Metoda provádí operaci čtení modify-write k nahrazení uložené hodnoty  **\*to** logickou bitovou hodnotou nebo z *hodnota* a aktuální hodnotou, která je uložena v  **\*to**, v rámci omezení paměti, která jsou určena podle *pořadí*.
+Metoda provádí operaci čtení a úprav-zápisu, která nahradí uloženou  **\*hodnotu s** bitovým nebo *hodnotou* a aktuální hodnotou, která je  **\*uložena v rámci paměti** `fetch_or` omezení, která jsou určena podle *pořadí*.
 
-## <a name="fetch_sub"></a> Atomic::fetch_sub –
+## <a name="fetch_sub"></a>Atomic:: fetch_sub
 
 Odečte zadanou hodnotu od uložené hodnoty.
 
@@ -548,23 +548,23 @@ Ty atomic<Ty>::fetch_sub (
 
 ### <a name="parameters"></a>Parametry
 
-*Hodnota*<br/>
-Hodnotu typu *Ty*.
+*Osa*\
+Hodnota typu *ty*.
 
-*Order*<br/>
+*Za*\
 A `memory_order`.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-A *Ty* objekt, který obsahuje výsledek odčítání.
+Objekt *ty* , který obsahuje výsledek odčítání.
 
 ### <a name="remarks"></a>Poznámky
 
-`fetch_sub` Metoda provádí operaci čtení modify-write a odebírá tak atomicky *hodnotu* z hodnoty uložené v proměnné  **\*to**, v rámci omezení paměti, která jsou určena podle *Pořadí*.
+Metoda provádí operaci čtení a úprav-zápisu pro atomovou odčítání *hodnoty* z uložené  **\*hodnoty v rámci**omezení paměti, která jsou určena podle *pořadí.* `fetch_sub`
 
-## <a name="fetch_xor"></a> Atomic::fetch_xor –
+## <a name="fetch_xor"></a>Atomic:: fetch_xor
 
-Provádí bitový exkluzivní nebo na hodnotu a existující hodnotu, která je uložena v  **\*to**.
+Provede bitovou exkluzivní nebo na hodnotu a existující hodnotu, která je uložena v  **\*tomto**.
 
 ```cpp
 Ty atomic<Ty>::fetch_xor (
@@ -579,23 +579,23 @@ Ty atomic<Ty>::fetch_xor (
 
 ### <a name="parameters"></a>Parametry
 
-*Hodnota*<br/>
-Hodnotu typu *Ty*.
+*Osa*\
+Hodnota typu *ty*.
 
-*Order*<br/>
+*Za*\
 A `memory_order`.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-A *Ty* objekt, který obsahuje výsledek bitový exkluzivní nebo.
+Objekt *,* který obsahuje výsledek bitového exkluzivního nebo.
 
 ### <a name="remarks"></a>Poznámky
 
-`fetch_xor` Metoda provádí operaci čtení modify-write k nahrazení uložené hodnoty  **\*to** s bitový exkluzivní nebo *hodnota* a aktuální hodnota uložená v  **\*to**a použije omezení paměti, která jsou určena podle *pořadí*.
+Metoda provádí operaci čtení a úprav-zápisu, která nahradí uloženou  **\*hodnotu s** bitovým výhradním nebo *hodnotou* a aktuální hodnotou, která je uložena v  **\*tomto**a použije `fetch_xor` omezení paměti, která jsou určena podle *pořadí*.
 
-## <a name="is_lock_free"></a> Atomic::is_lock_free –
+## <a name="is_lock_free"></a>Atomic:: is_lock_free
 
-Určuje, zda atomické operace na  **\*to** jsou bez zámku.
+Určuje, jestli jsou atomické operace s  **\*tímto** zámkem bezplatné.
 
 ```cpp
 bool is_lock_free() const volatile noexcept;
@@ -603,15 +603,15 @@ bool is_lock_free() const volatile noexcept;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Hodnota TRUE, pokud atomické operace na  **\*to** se zámek zdarma; jinak false.
+true, pokud jsou atomické operace v  **\*tomto** případě zamčené. v opačném případě false.
 
 ### <a name="remarks"></a>Poznámky
 
-Atomický typ je bez zámku, pokud žádné atomické operace na daném typu nepoužívají zámky.
+Atomický typ je bez zámku, pokud žádné atomické operace na tomto typu nepoužívají zámky.
 
-## <a name="load"></a> Atomic::Load –
+## <a name="load"></a>atomická:: Load
 
-Načte uloženou hodnotu do  **\*to**, v rámci určených omezení paměti.
+Načte uloženou  **\*hodnotu v rámci**zadaného omezení paměti.
 
 ```cpp
 Ty atomic::load(
@@ -624,16 +624,16 @@ Ty atomic::load(
 
 ### <a name="parameters"></a>Parametry
 
-*Order*<br/>
+*Za*\
 A `memory_order`. *Pořadí* nesmí být `memory_order_release` nebo `memory_order_acq_rel`.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Načtená hodnota, která je uložena v  **\*to**.
+Načtená hodnota, která je uložena v  **\*tomto**.
 
-## <a name="store"></a> Atomic::Store –
+## <a name="store"></a>Atomic:: Store
 
-Uloží zadanou hodnotu.
+Ukládá zadanou hodnotu.
 
 ```cpp
 void atomic<Ty>::store(
@@ -648,17 +648,17 @@ void atomic<Ty>::store(
 
 ### <a name="parameters"></a>Parametry
 
-*Hodnota*<br/>
-A *Ty* objektu.
+*Osa*\
+Objekt *,* který je.
 
-*Order*<br/>
-A `memory_order` omezení.
+*Za*\
+`memory_order` Omezení.
 
 ### <a name="remarks"></a>Poznámky
 
-Atomicky ukládá tato členská funkce *hodnotu* v `*this`, v rámci omezení paměti, která jsou určena podle *pořadí*.
+Tato členská funkce atomicky  ukládá hodnotu `*this`v v rámci omezení paměti, která jsou určena podle *pořadí*.
 
 ## <a name="see-also"></a>Viz také:
 
-[\<Atomic >](../standard-library/atomic.md)<br/>
-[Odkaz na soubory hlaviček](../standard-library/cpp-standard-library-header-files.md)<br/>
+[\<atomická >](../standard-library/atomic.md)\
+[Odkazy na hlavičkové soubory](../standard-library/cpp-standard-library-header-files.md)

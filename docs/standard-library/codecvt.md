@@ -7,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - codecvt header
 ms.assetid: d44ee229-00d5-4761-9b48-0c702122789d
-ms.openlocfilehash: 56cd4263d3dcddd23246a05466275b8b7d370b95
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: fc711b14a2d30041b4585a9515a95e42280f5306
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62405206"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68458592"
 ---
 # <a name="ltcodecvtgt"></a>&lt;codecvt&gt;
 
-Definuje několik tříd šablon, které popisují objekty na základě šablony třídy [codecvt](../standard-library/codecvt-class.md). Tyto objekty může sloužit jako [omezující vlastnosti národního prostředí](../standard-library/locale-class.md#facet_class) , které řídí převodů mezi sekvencí hodnot typu `Elem` a sekvencí hodnot typu **char**.
+Definuje několik tříd šablon, které popisují objekty založené na třídě šablony [codecvt](../standard-library/codecvt-class.md). Tyto objekty mohou sloužit jako [omezující vlastnosti národního prostředí](../standard-library/locale-class.md#facet_class) , které řídí převody mezi sekvencí hodnot typu `Elem` a sekvencí hodnot typu **char**.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -26,42 +26,42 @@ Definuje několik tříd šablon, které popisují objekty na základě šablony
 
 ## <a name="remarks"></a>Poznámky
 
-Omezující vlastnosti národního prostředí, které jsou deklarované v této hlavičky převod mezi několika kódování znaků. Pro široké znaky (uložené v rámci programu v celých čísel pevné velikosti):
+Omezující vlastnosti národního prostředí deklarované v této hlavičce převádějí mezi několika kódováními znaků. Pro velké znaky (uložené v programu v celých číslech s pevnou velikostí):
 
-- UCS-4 je v rámci programu jako 32bitové celé číslo kódování Unicode (ISO 10646).
+- UCS-4 je Unicode (ISO 10646) kódovaný v programu jako 32 celé číslo.
 
-- UCS-2 je v programu jako 16bitové celé číslo v kódování Unicode.
+- UCS-2 je kódování Unicode kódované v programu jako 16bitové celé číslo.
 
-- UTF-16 je Unicode kódované v rámci programu jako jeden nebo dva 16bitová celá čísla. (Všimněte si, že nesplňuje všechny požadavky platné kódování širokých znaků pro Standard C nebo Standard C++. Nicméně se běžně používá jako takové.)
+- UTF-16 je kódování Unicode kódované v rámci programu jako jedno nebo 2 16 celé číslo. (Všimněte si, že se neshodují se všemi požadavky na platné kódování ve velkých znacích Standard C nebo standard C++. Nicméně se běžně používá jako takový.)
 
-Pro datové proudy bajtů (uložené v souboru, jako sekvence bajtů nepřenáší ani neukládá v rámci programu v poli **char**):
+Pro bajtové datové proudy (uložené v souboru, přenesené jako bajtové sekvenci nebo uložené v rámci programu v poli **char**):
 
-- UTF-8 je zakódován jako jednoho nebo více bajtů osmibitové s pořadím bajtů deterministické v rámci datového proudu bajtů kódování Unicode.
+- UTF-8 je kódování Unicode kódované v rámci bajtového datového proudu jako jedna nebo více osmi bitových bajtů s deterministickým pořadím bajtů.
 
-- Je v rámci datového proudu bajtů jako UTF-16 kódování Unicode UTF-16LE s 16bitové celé číslo nejprve zobrazí jako dva bajty osmibitové méně významný bajt.
+- UTF-16LE je kódování Unicode kódované v rámci bajtového datového proudu jako UTF-16 s každým 16 bitovým číslem uvedeným jako 2 8 bajtů, což je méně významný bajt jako první.
 
-- Je v rámci datového proudu bajtů jako UTF-16 kódování Unicode UTF-16BE s 16bitové celé číslo nejprve zobrazí jako dva bajty osmibitové, více významný bajt.
+- UTF-16BE je kódování Unicode kódované v rámci bajtového datového proudu jako UTF-16 s každým 16 bitovým číslem uvedeným jako 2 8 bajtů, a to mnohem významnějšího bajtu.
 
 ### <a name="enumerations"></a>Výčty
 
 |||
 |-|-|
-|[codecvt_mode](../standard-library/codecvt-enums.md#codecvt_mode)|Určuje konfigurační informace pro omezující vlastnosti národního prostředí.|
+|[codecvt_mode](../standard-library/codecvt-enums.md#codecvt_mode)|Určuje informace o konfiguraci pro omezující vlastnosti národního prostředí.|
 
 ### <a name="classes"></a>Třídy
 
 |Třída|Popis|
 |-|-|
-|[codecvt_utf8](codecvt-utf8-class.md)|Představuje omezující vlastnost národního prostředí, který převede mezi široké znaky zakódován jako UCS-2 nebo UCS-4 a datový proud bajtů kódováním UTF-8.|
-|[codecvt_utf8_utf16](codecvt-utf8-utf16-class.md)|Představuje omezující vlastnost národního prostředí, který převede mezi široké znaky s kódováním UTF-16 a datový proud bajtů kódováním UTF-8.|
-|[codecvt_utf16](codecvt-utf16-class.md)|Představuje omezující vlastnost národního prostředí, který převede mezi široké znaky zakódován jako UCS-2 nebo UCS-4 a kódováním UTF-16LE nebo UTF-16BE datový proud bajtů.|
+|[codecvt_utf8](codecvt-utf8-class.md)|Představuje omezující vlastnost národního prostředí, která převádí mezi znaky zakódovanými jako UCS-2 nebo UCS-4 a datový proud bajtů kódovaný jako UTF-8.|
+|[codecvt_utf8_utf16](codecvt-utf8-utf16-class.md)|Představuje omezující vlastnost národního prostředí, která je převedena mezi velké znaky kódované jako UTF-16 a datový proud bajtů kódovaný jako UTF-8.|
+|[codecvt_utf16](codecvt-utf16-class.md)|Představuje omezující vlastnost národního prostředí, která je převedena mezi velké znaky kódované jako UCS-2 nebo UCS-4 a datový proud bajtů kódovaný jako UTF-16LE nebo UTF-16BE.|
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** \<codecvt – >
+**Hlavička:** \<codecvt >
 
-**Namespace:** std
+**Obor názvů:** std
 
 ## <a name="see-also"></a>Viz také:
 
-[Odkaz na soubory hlaviček](../standard-library/cpp-standard-library-header-files.md)<br/>
+[Odkazy na hlavičkové soubory](../standard-library/cpp-standard-library-header-files.md)

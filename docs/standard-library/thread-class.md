@@ -23,12 +23,12 @@ helpviewer_keywords:
 - std::thread [C++], joinable
 - std::thread [C++], native_handle
 - std::thread [C++], swap
-ms.openlocfilehash: d1405062ef553dbfea3b60b5f39e0546707343b6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f663034cdc7985dd440a1cdfdd659358c4e250f4
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62412069"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68458576"
 ---
 # <a name="thread-class"></a>thread – třída
 
@@ -42,7 +42,7 @@ class thread;
 
 ## <a name="remarks"></a>Poznámky
 
-Můžete použít **vlákno** pro sledování a správu vlákna provádění v rámci aplikace. Objekt vlákna, který je vytvořen pomocí výchozího konstruktoru, není přidružen k žádnému vláknu provádění. Objekt vlákna, který byl vytvořen pomocí volatelného objektu, vytváří nové vlákno provádění a volá v něm volatelný objekt. Objekty vláken mohou být přesunuty, ale nemohou být zkopírovány. Proto může být vlákno provádění přidruženo pouze k jednomu objektu vlákna.
+Můžete použít objekt **vlákna** ke sledování a správě vlákna provádění v rámci aplikace. Objekt vlákna, který je vytvořen pomocí výchozího konstruktoru, není přidružen k žádnému vláknu provádění. Objekt vlákna, který byl vytvořen pomocí volatelného objektu, vytváří nové vlákno provádění a volá v něm volatelný objekt. Objekty vláken mohou být přesunuty, ale nemohou být zkopírovány. Proto může být vlákno provádění přidruženo pouze k jednomu objektu vlákna.
 
 Každé vlákno provádění má jedinečný identifikátor typu `thread::id`. Funkce `this_thread::get_id` vrací identifikátor volajícího vlákna. Členská funkce `thread::get_id` vrací identifikátor vlákna, které je objektem vlákna spravováno. Pro objekt vlákna vytvořený s výchozím nastavením vrací metoda `thread::get_id` objekt, který má hodnotu shodnou pro všechny objekty vlákna vytvořené s výchozím nastavením a rozdílnou od hodnoty, která je metodou `this_thread::get_id` vrácena pro jakékoli vlákno provádění, které by mohlo být připojeno v době volání.
 
@@ -50,43 +50,43 @@ Každé vlákno provádění má jedinečný identifikátor typu `thread::id`. F
 
 ### <a name="public-classes"></a>Veřejné třídy
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
-|[Thread::ID – třída](#id_class)|Jednoznačně identifikuje přidružené vlákno.|
+|[Thread:: ID – třída](#id_class)|Jednoznačně identifikuje přidružené vlákno.|
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
-|[thread](#thread)|Vytvoří **vlákno** objektu.|
+|[thread](#thread)|Vytvoří objekt **vlákna** .|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
-|[Odpojení](#detach)|Odpojí přidružené vlákno od **vlákno** objektu.|
+|[dělitel](#detach)|Odpojí přidružené vlákno od objektu **vlákna** .|
 |[get_id](#get_id)|Vrací jedinečný identifikátor přidruženého vlákna.|
-|[hardware_concurrency](#hardware_concurrency)|Statické. Vrací odhadovaný počet kontextů hardwarových vláken.|
+|[hardware_concurrency](#hardware_concurrency)|Tras. Vrací odhadovaný počet kontextů hardwarových vláken.|
 |[join](#join)|Blokuje, dokud se přidružené vlákno nedokončí.|
 |[joinable](#joinable)|Určuje, zda je přidružené vlákno spojitelné.|
 |[native_handle](#native_handle)|Vrátí typ specifický pro implementaci představující popisovač vlákna.|
-|[swap](#swap)|Zamění stav objektu se zadaným **vlákno** objektu.|
+|[swap](#swap)|Zamění stav objektu pomocí zadaného objektu **vlákna** .|
 
 ### <a name="public-operators"></a>Veřejné operátory
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
-|[Thread::Operator =](#op_eq)|Přidruží vlákno s aktuálním **vlákno** objektu.|
+|[Thread:: operator =](#op_eq)|Přidruží vlákno k aktuálnímu objektu **vlákna** .|
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** \<vlákna >
+**Hlavička:** \<> vlákna
 
-**Namespace:** std
+**Obor názvů:** std
 
-## <a name="detach"></a>  Thread::detach –
+## <a name="detach"></a>vlákno::d etach
 
-Odpojí přidružené vlákno. Operační systém zodpovědná za uvolnění prostředků vlákno na ukončení.
+Odpojí přidružené vlákno. Operační systém se bude zodpovědná za uvolnění prostředků vlákna při ukončení.
 
 ```cpp
 void detach();
@@ -94,15 +94,15 @@ void detach();
 
 ### <a name="remarks"></a>Poznámky
 
-Po volání `detach`, následné volání [get_id –](#get_id) vrátit [id](#id_class).
+Po volání `detach`, následné volání [get_id](#get_id) návratového [ID](#id_class).
 
-Pokud není, který je spojen s objektem neúčastnícím se volání vlákno spojitelné, funkce vyvolá [system_error](../standard-library/system-error-class.md) , který má kód chyby `invalid_argument`.
+Pokud vlákno, které je přidruženo k volajícímu objektu, není spojeno, funkce vyvolá [system_error](../standard-library/system-error-class.md) s kódem `invalid_argument`chyby.
 
-Pokud podproces, který je spojen s objektem neúčastnícím se volání je neplatný, funkce vyvolá `system_error` , který má kód chyby `no_such_process`.
+Pokud je vlákno přidružené k volajícímu objektu neplatné, funkce vyvolá výjimku `system_error` , která má `no_such_process`kód chyby.
 
-## <a name="get_id"></a>  Thread::get_id –
+## <a name="get_id"></a>vlákno:: get_id
 
-Vrací jedinečný identifikátor pro přidružené vlákno.
+Vrátí jedinečný identifikátor pro přidružené vlákno.
 
 ```cpp
 id get_id() const noexcept;
@@ -110,11 +110,11 @@ id get_id() const noexcept;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-A [Thread::ID –](#id_class) objekt, který jednoznačně identifikuje přidružené vlákno nebo `thread::id()` Pokud žádné vlákno je přidružený k objektu.
+[Vlákno:: ID](#id_class) objekt, který jednoznačně identifikuje přidružené vlákno, nebo `thread::id()` Pokud není k objektu přidruženo žádné vlákno.
 
-## <a name="hardware_concurrency"></a>  Thread::hardware_concurrency –
+## <a name="hardware_concurrency"></a>vlákno:: hardware_concurrency
 
-Statická metoda, která vrací odhadovaný počet kontextů hardwarových vláken.
+Statická metoda, která vrací odhad počtu kontextů hardwarových vláken.
 
 ```cpp
 static unsigned int hardware_concurrency() noexcept;
@@ -122,9 +122,9 @@ static unsigned int hardware_concurrency() noexcept;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Odhadovaný počet kontextů hardwarových vláken. Pokud hodnotu nelze vypočítat, nebo není dobře definované, tato metoda vrátí hodnotu 0.
+Odhad počtu kontextů hardwarových vláken. Pokud hodnotu nelze vypočítat nebo není správně definována, vrátí tato metoda hodnotu 0.
 
-## <a name="id_class"></a>  Thread::ID – třída
+## <a name="id_class"></a>Thread:: ID – třída
 
 Poskytuje jedinečný identifikátor pro každé vlákno provádění v procesu.
 
@@ -136,13 +136,13 @@ class thread::id {
 
 ### <a name="remarks"></a>Poznámky
 
-Výchozí konstruktor vytvoří objekt, který není výsledkem porovnání rovna `thread::id` objektu pro jakékoli existující vlákno.
+Výchozí konstruktor vytvoří objekt, který se nerovná se rovná `thread::id` objektu pro jakékoli existující vlákno.
 
-Všechny vytvořené s výchozím nastavením `thread::id` objekty rovnají.
+Všechny `thread::id` objekty ve výchozím nastavení se rovnají hodnotě EQUAL.
 
-## <a name="join"></a>  Thread::JOIN –
+## <a name="join"></a>vlákno:: JOIN
 
-Blokuje, dokud vlákno provádění, který je spojen s objektem neúčastnícím se volání nedokončí.
+Blokuje až do dokončení vlákna, které je spojeno s volajícím objektem.
 
 ```cpp
 void join();
@@ -150,11 +150,11 @@ void join();
 
 ### <a name="remarks"></a>Poznámky
 
-Pokud bude volání úspěšné, následných volání [get_id –](#get_id) objektem neúčastnícím se volání vrátí výchozí [Thread::ID –](#id_class) , který není výsledkem porovnání `thread::id` existující vlákna; Pokud volání selže , hodnotu, která je vrácena `get_id` se nezmění.
+Pokud je volání úspěšné, následné volání [get_id](#get_id) pro volající objekt vrátí výchozí [vlákno:: ID](#id_class) , které se neporovnání `thread::id` rovná s žádným existujícím vláknem; Pokud volání není úspěšné, hodnota vrácená `get_id`je beze změny.
 
-## <a name="joinable"></a>  Thread::joinable –
+## <a name="joinable"></a>vlákno:: JOINED
 
-Určuje, zda je přidružené vlákno *spojitelné*.
+Určuje, zda je přidružené vlákno k.
 
 ```cpp
 bool joinable() const noexcept;
@@ -162,15 +162,15 @@ bool joinable() const noexcept;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-**Hodnota TRUE** Pokud přidružené vlákno *spojitelné*; v opačném případě **false**.
+**true** , pokud je přidružené vlákno k. v opačném případě **false**.
 
 ### <a name="remarks"></a>Poznámky
 
-Objekt vlákna je *spojitelné* Pokud `get_id() != id()`.
+Objekt vlákna je *spojen* , pokud `get_id() != id()`.
 
-## <a name="native_handle"></a>  Thread::native_handle –
+## <a name="native_handle"></a>vlákno:: native_handle
 
-Vrátí typ specifický pro implementaci představující popisovač vlákna. Popisovač vlákna je možné způsoby specifický pro implementaci.
+Vrátí typ specifický pro implementaci představující popisovač vlákna. Popisovač vlákna lze použít v způsobech specifických pro implementaci.
 
 ```cpp
 native_handle_type native_handle();
@@ -178,11 +178,11 @@ native_handle_type native_handle();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-`native_handle_type` je definován jako Win32 `HANDLE` , který je typovaná jako `void *`.
+`native_handle_type`je definován jako Win32 `HANDLE` , který se přetypování jako. `void *`
 
-## <a name="op_eq"></a>  Thread::Operator =
+## <a name="op_eq"></a>Thread:: operator =
 
-Přidruží vlákno zadaného objektu aktuálního objektu.
+Přidruží vlákno zadaného objektu k aktuálnímu objektu.
 
 ```cpp
 thread& operator=(thread&& Other) noexcept;
@@ -190,8 +190,8 @@ thread& operator=(thread&& Other) noexcept;
 
 ### <a name="parameters"></a>Parametry
 
-*Jiné*<br/>
-A **vlákno** objektu.
+*Jiná*\
+Objekt **vlákna** .
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -199,13 +199,13 @@ A **vlákno** objektu.
 
 ### <a name="remarks"></a>Poznámky
 
-Volání metody odpojit, pokud je objektem neúčastnícím se volání spojitelné.
+Metoda volá metodu detach, pokud je volající objekt spojený.
 
-Po přidružení `Other` nastavena do stavu vytvořené s výchozím nastavením.
+Po navázání `Other` přidružení je nastaveno na výchozí stav vytvořený.
 
-## <a name="swap"></a>  Thread::swap –
+## <a name="swap"></a>Thread:: swap
 
-Zamění stav objektu s u určeného **vlákno** objektu.
+Zamění stav objektu pomocí zadaného objektu **vlákna** .
 
 ```cpp
 void swap(thread& Other) noexcept;
@@ -213,12 +213,12 @@ void swap(thread& Other) noexcept;
 
 ### <a name="parameters"></a>Parametry
 
-*Jiné*<br/>
-A **vlákno** objektu.
+*Jiná*\
+Objekt **vlákna** .
 
-## <a name="thread"></a>  Thread::Thread – konstruktor
+## <a name="thread"></a>Thread:: Thread – konstruktor
 
-Vytvoří **vlákno** objektu.
+Vytvoří objekt **vlákna** .
 
 ```cpp
 thread() noexcept;
@@ -230,24 +230,24 @@ thread(thread&& Other) noexcept;
 
 ### <a name="parameters"></a>Parametry
 
-*F*<br/>
-Aplikacemi definovaná funkce ke spuštění podle vlákna.
+*FJ*\
+Funkce definovaná aplikací, která má být provedena vláknem.
 
-*A*<br/>
+*URČITÉHO*\
 Seznam argumentů, které mají být předány *F*.
 
-*Jiné*<br/>
-Existující **vlákno** objektu.
+*Jiná*\
+Existující objekt **vlákna** .
 
 ### <a name="remarks"></a>Poznámky
 
-První konstruktor vytvoří objekt, který není přidružený k vláknu spuštění. Hodnota vrácená voláním `get_id` vytvořeného objektu je `thread::id()`.
+První konstruktor vytvoří objekt, který není přidružen ke vláknu provádění. Hodnota, která je vrácena voláním `get_id` pro konstruovaný objekt je. `thread::id()`
 
-Druhý konstruktor vytvoří objekt, který je spojen s nové vlákno provádění a spustí pseudofunkce `INVOKE` , která je definována v [ \<funkční >](../standard-library/functional.md). Pokud není k dispozici dostatek prostředků je možné vytvořit nové vlákno, funkce vyvolá [system_error](../standard-library/system-error-class.md) objekt, který má kód chyby `resource_unavailable_try_again`. Pokud volání *F* se ukončí se vydá nezachycenou výjimku [ukončit](../standard-library/exception-functions.md#terminate) je volána.
+Druhý konstruktor vytvoří objekt, který je přidružen k novému vláknu provádění a spustí pseudo funkci `INVOKE` , která je definována ve [ \<funkční >](../standard-library/functional.md). Pokud není k dispozici dostatek prostředků pro spuštění nového vlákna, funkce vyvolá objekt [system_error](../standard-library/system-error-class.md) , který má kód `resource_unavailable_try_again`chyby. Pokud se volání *jazyka F* ukončí s nezachycenou výjimkou, je volána metoda [Terminate](../standard-library/exception-functions.md#terminate) .
 
-Třetí konstruktor vytvoří objekt, který je spojen s vláknem, který je přidružen `Other`. `Other` je nastaven na stav vytvořené s výchozím nastavením.
+Třetí konstruktor vytvoří objekt, který je přidružen k vláknu, které je přidruženo `Other`k. `Other`je pak nastaveno na výchozí stav vytvořen.
 
 ## <a name="see-also"></a>Viz také:
 
-[Odkaz na soubory hlaviček](../standard-library/cpp-standard-library-header-files.md)<br/>
-[\<vlákna >](../standard-library/thread.md)<br/>
+[Odkazy na hlavičkové soubory](../standard-library/cpp-standard-library-header-files.md)\
+[\<> vlákna](../standard-library/thread.md)

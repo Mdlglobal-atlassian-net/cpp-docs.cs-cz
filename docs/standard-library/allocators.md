@@ -5,16 +5,16 @@ helpviewer_keywords:
 - allocators
 - C++ Standard Library, allocators
 ms.assetid: ac95023b-9e7d-49f5-861a-bf7a9a340746
-ms.openlocfilehash: 1f11d1b007a728b32d27afd733df271f361864e7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: cb1b0e0d1466d4af5ba255bdf3d00b11cd921fd6
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62252724"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68457544"
 ---
 # <a name="allocators"></a>Alokátory
 
-Alokátory používají standardní knihovny C++ pro zpracování přidělování a navracení zpět prvků uložených v kontejnerech. Všechny kontejnery standardní knihovny C++ s výjimkou std::array mít parametr šablony typu `allocator<Type>`, kde `Type` představuje typ prvku kontejneru. Například třída vektoru je deklarována následovně:
+Přidělování jsou používána C++ standardní knihovnou ke zpracování přidělování a navracení prvků uložených v kontejnerech. Všechny C++ standardní kontejnery knihovny s výjimkou std:: Array mají parametr šablony typu `allocator<Type>`, kde `Type` představuje typ prvku kontejneru. Například Třída Vector je deklarována takto:
 
 ```cpp
 template <
@@ -24,15 +24,15 @@ template <
 class vector
 ```
 
-Standardní knihovny C++ poskytuje výchozí implementaci pro přidělování. V C ++ 11 a novějším výchozího přidělujícího modulu se aktualizuje na vystavení menší rozhraní; nové allocator je volána *minimálních alokátorů*. Zejména minimálních alokátorů `construct()` člen podporuje sémantiku přesunu, což může výrazně zlepšit výkon. Ve většině případů by měla stačit tohoto výchozího přidělujícího modulu. V C ++ 11 standardní knihovny typů a funkcí, které provést všechny alokátoru typu parametru podporu rozhraní minimálních alokátorů včetně `std::function`, `shared_ptr, allocate_shared()`, a `basic_string`.  Další informace o výchozího přidělujícího modulu najdete v tématu [Allocator – třída](../standard-library/allocator-class.md).
+C++ Standardní knihovna poskytuje výchozí implementaci pro přidělování. V jazyce C++ 11 a novějším je výchozí přidělování Aktualizováno pro vystavení menšího rozhraní; nové přidělování se nazývá *minimální přidělování*. Konkrétně `construct()` člen minimálního přidělování podporuje sémantiku přesunutí, což může výrazně zlepšit výkon. Ve většině případů by měl být tento výchozí Alokátor dostačující. V jazyce c++ 11 všechny standardní typy knihoven a funkce, které přijímají parametr typu přidělování, podporují rozhraní minimálního přidělování `std::function`, `shared_ptr, allocate_shared()`včetně, `basic_string`a.  Další informace o výchozím přidělování najdete v tématu [Třída přidělování](../standard-library/allocator-class.md).
 
-## <a name="writing-your-own-allocator-c11"></a>Psaní vlastního alokátoru (C ++ 11)
+## <a name="writing-your-own-allocator-c11"></a>Zápis vlastního přidělujícího modulu (C++ 11)
 
-Pomocí výchozího přidělujícího modulu **nové** a **odstranit** přidělení a uvolnění paměti. Pokud chcete použít jinou metodu přidělení paměti, jako je třeba použití sdílené paměti, musíte vytvořit vlastní Alokátor. Pokud cílíte na C ++ 11 a budete muset napsat nový vlastní Alokátor, nastavte ji minimálních alokátorů. Pokud je to možné. I v případě, že už jste implementovali alokátoru starého typu, zvažte úpravu to přijde *minimálních alokátorů* abyste mohli využívat mnohem efektivnější `construct()` metodu, která vám poskytneme vám automaticky.
+Výchozí Alokátor pomocí **New** a **Delete** přiděluje a uvolní paměť. Pokud chcete použít jinou metodu přidělování paměti, jako je například použití sdílené paměti, je nutné vytvořit vlastní přidělování. Pokud cílíte na C++ 11 a potřebujete napsat nový vlastní Alokátor, udělejte mu minimální přidělující, pokud je to možné. I v případě, že jste už implementovali přidělování starého stylu, zvažte jeho úpravu na *minimální přidělování* , aby bylo možné využít `construct()` efektivnější metodu, která bude k dispozici automaticky.
 
-Minimálních alokátorů vyžaduje mnohem méně často používaný text a umožní vám zaměřit se na `allocate` a `deallocate` členské funkce, které všechnu práci udělat. Při vytváření minimálních alokátorů, neimplementuje žádné členy s výjimkou těch, které je znázorněno v následujícím příkladu:
+Minimální Alokátor vyžaduje mnohem méně často používaný text a umožňuje zaměřit se na `allocate` členské funkce a `deallocate` , které provedly veškerou práci. Při vytváření minimálního přidělujícího modulu Neimplementujte žádné členy kromě těch, které jsou uvedeny v následujícím příkladu:
 
-1. Převod kopírovacího konstruktoru (viz příklad)
+1. převádění kopírovacího konstruktoru (viz příklad)
 
 1. operator==
 
@@ -40,14 +40,14 @@ Minimálních alokátorů vyžaduje mnohem méně často používaný text a umo
 
 1. allocate
 
-1. zrušit přidělení
+1. uvolnit
 
-C ++ 11 výchozí `construct()` člena, který vám poskytneme vám perfektní přesměrování a umožňuje sémantiky přesunutí; je v mnoha případech mnohem efektivnější než starší verze.
+Výchozí `construct()` člen c++ 11, který bude poskytnut pro vás, provede dokonalé přesměrování a umožní sémantiku přesunutí. je mnohem efektivnější v mnoha případech, než je starší verze.
 
 > [!WARNING]
-> V době kompilace C++ standardní knihovny používá třídu allocator_traits zjistit členy, které jste explicitně zadali a poskytuje výchozí implementaci členů, které nejsou k dispozici. Nejsou v konfliktu s Tento mechanismus poskytnutím specializací allocator_traits – pro vašeho allocator!
+> V době kompilace používá C++ standardní knihovna třídu allocator_traits k detekci členů, které jste výslovně zadali, a poskytuje výchozí implementaci pro všechny členy, kteří nejsou přítomni. Nekoliduje s tímto mechanismem tím, že poskytujete specializaci allocator_traits pro váš Alokátor.
 
-Následující příklad ukazuje minimální implementaci alokátoru, který používá `malloc` a `free`. Všimněte si použití nový typ výjimky `std::bad_array_new_length` která je vyvolána, pokud je velikost pole menší než nula nebo větší než maximální povolená velikost.
+Následující příklad ukazuje minimální implementaci přidělování, který používá `malloc` a. `free` Všimněte si použití nového typu `std::bad_array_new_length` výjimky, který je vyvolána, pokud je velikost pole menší než nula nebo větší než maximální povolená velikost.
 
 ```cpp
 #pragma once
@@ -97,9 +97,9 @@ void Mallocator<T>::deallocate(T * const p, size_t) const noexcept
 }
 ```
 
-## <a name="writing-your-own-allocator-c03"></a>Psaní vlastního alokátoru (C ++ 03)
+## <a name="writing-your-own-allocator-c03"></a>Zápis vlastního přidělujícího modulu (C++ 03)
 
-V C ++ 03 musí implementovat všechny Alokátor použitý s kontejnery standardní knihovny C++ následující definice typu:
+V jazyce C++ 03 musí jakýkoli Alokátor použitý C++ se standardními kontejnery knihovny implementovat následující definice typů:
 
 |||
 |-|-|
@@ -108,7 +108,7 @@ V C ++ 03 musí implementovat všechny Alokátor použitý s kontejnery standard
 |`difference_type`|`size_type`|
 |`pointer`|`value_type`|
 
-Kromě toho všechny Alokátor použitý s kontejnery standardní knihovny C++ musí používat následující metody:
+Kromě toho jakýkoli Alokátor použitý u C++ kontejnerů standardní knihovny musí implementovat následující metody:
 
 |||
 |-|-|
@@ -119,8 +119,8 @@ Kromě toho všechny Alokátor použitý s kontejnery standardní knihovny C++ m
 |`allocate`|`operator!=`|
 |`construct`||
 
-Další informace o těchto definic typů a metod najdete v tématu [Allocator – třída](../standard-library/allocator-class.md).
+Další informace o těchto definicích a metodách typů naleznete v tématu [Třída přidělování](../standard-library/allocator-class.md).
 
 ## <a name="see-also"></a>Viz také:
 
-[Standardní knihovna C++ – referenční dokumentace](../standard-library/cpp-standard-library-reference.md)<br/>
+[Standardní knihovna C++ – referenční dokumentace](../standard-library/cpp-standard-library-reference.md)

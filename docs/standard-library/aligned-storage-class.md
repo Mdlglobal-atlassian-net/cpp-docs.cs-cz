@@ -7,12 +7,12 @@ helpviewer_keywords:
 - aligned_storage class
 - aligned_storage
 ms.assetid: f255e345-1f05-4d07-81e4-017f420839fb
-ms.openlocfilehash: 6a3145cb1837a3ea95c48022db391ddbccf55199
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8a4e907faa6175b9e03f5367d09501aaea388bce
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62411094"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68456481"
 ---
 # <a name="alignedstorage-class"></a>aligned_storage – třída
 
@@ -30,15 +30,15 @@ using aligned_storage_t = typename aligned_storage<Len, Align>::type;
 
 ### <a name="parameters"></a>Parametry
 
-*Délka*<br/>
+*Funkce*\
 Velikost objektu.
 
-*zarovnání*<br/>
+*Vztahují*\
 Zarovnání objektu.
 
 ## <a name="remarks"></a>Poznámky
 
-Definice typu člena šablony `type` je synonymum pro typ POD se zarovnáním *zarovnat* a velikost *Len*. *Zarovnat* musí být rovna `alignment_of<T>::value` pro nějaký typ `T`, nebo výchozí zarovnání.
+Definice typedef `type` člena šablony je synonymum pro typ pod, *Zarovnání a velikost* *len*. *Zarovnání* musí být `alignment_of<T>::value` pro určitý typ `T`nebo na výchozí zarovnání rovno.
 
 ## <a name="example"></a>Příklad
 
@@ -66,11 +66,11 @@ aligned to double == 8
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** \<type_traits >
+**Hlavička:** \<type_traits >
 
-**Namespace:** std
+**Obor názvů:** std
 
 ## <a name="see-also"></a>Viz také:
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
-[alignment_of – třída](../standard-library/alignment-of-class.md)<br/>
+[< type_traits >](../standard-library/type-traits.md)\
+[alignment_of – třída](../standard-library/alignment-of-class.md)

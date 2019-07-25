@@ -16,16 +16,16 @@ helpviewer_keywords:
 - std::regex_iterator::operator->
 - std::regex_iterator::operator++
 ms.assetid: 0cfd8fd0-5a95-4f3c-bf8e-6ef028c423d3
-ms.openlocfilehash: 937c217cdef6895aaa3adb1499f1fde8f67fd513
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ccf806a7918100c58e04ab403f3a8b895e8dc256
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62369487"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68451561"
 ---
 # <a name="regexiterator-class"></a>regex_iterator – třída
 
-Iterator – třída pro shody.
+Iterátor třídy pro shody
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -38,18 +38,18 @@ class regex_iterator
 
 ## <a name="parameters"></a>Parametry
 
-*BidIt*<br/>
-Typ iterátoru pro dílčí shody.
+*BidI*\
+Typ iterátoru pro podshody.
 
-*Elem*<br/>
+*Elem*\
 Typ prvků, které se mají spárovat.
 
-*RXtraits*<br/>
+*RXtraits*\
 Třída vlastností prvků.
 
 ## <a name="remarks"></a>Poznámky
 
-Třída šablony popisuje objekt konstanty dopředný iterátor. Extrahuje objekty typu `match_results<BidIt>` opakovaně použitím jeho objekt regulárního výrazu `*pregex` do sekvence znaků, které jsou definovány rozsahem iterátoru `[begin, end)`.
+Třída šablony popisuje objekt konstanty dopředné iterátory. Extrahuje objekty typu `match_results<BidIt>` tím, že opakovaně aplikuje objekt `*pregex` regulárního výrazu do sekvence znaků definované rozsahem `[begin, end)`iterátoru.
 
 ### <a name="constructors"></a>Konstruktory
 
@@ -62,31 +62,31 @@ Třída šablony popisuje objekt konstanty dopředný iterátor. Extrahuje objek
 |Název typu|Popis|
 |-|-|
 |[difference_type](#difference_type)|Typ rozdílu iterátoru.|
-|[iterator_category](#iterator_category)|Typ iterátoru kategorie.|
+|[iterator_category](#iterator_category)|Typ kategorie iterátoru|
 |[pointer](#pointer)|Typ ukazatele na shodu.|
 |[Referenční dokumentace](#reference)|Typ odkazu na shodu.|
-|[regex_type](#regex_type)|Typ odpovídající regulární výraz.|
+|[regex_type](#regex_type)|Typ regulárního výrazu, který se má shodovat.|
 |[value_type](#value_type)|Typ shody.|
 
 ### <a name="operators"></a>Operátory
 
 |Operátor|Popis|
 |-|-|
-|[operator!=](#op_neq)|Porovná nerovnost iterátory.|
-|[Operator *](#op_star)|Přistupuje k určené shoda.|
-|[Operator ++](#op_add_add)|Zvýší iterátor.|
-|[operátor =](#op_eq)|Porovná rovnost iterátory.|
-|[operator->](#op_arrow)|Přistupuje k určené shoda.|
+|[operator!=](#op_neq)|Porovná iterátory pro nerovnost.|
+|[podnikatel](#op_star)|Přistupuje k určené shodě.|
+|[operator + + – operátor](#op_add_add)|Zvýší iterátor.|
+|[operátor =](#op_eq)|Porovná iterátory o rovnosti.|
+|[operátor->](#op_arrow)|Přistupuje k určené shodě.|
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** \<regulární výraz >
+**Hlavička:** \<> regulárního výrazu
 
-**Namespace:** std
+**Obor názvů:** std
 
 ## <a name="examples"></a>Příklady
 
-V regulárních výrazech naleznete v následujících tématech příklady:
+Příklady regulárních výrazů najdete v následujících tématech:
 
 - [regex_match](../standard-library/regex-functions.md#regex_match)
 
@@ -149,9 +149,9 @@ typedef std::ptrdiff_t difference_type;
 
 Typ je synonymum pro `std::ptrdiff_t`.
 
-## <a name="iterator_category"></a>  regex_iterator::iterator_category
+## <a name="iterator_category"></a>regex_iterator::iterator_category
 
-Typ iterátoru kategorie.
+Typ kategorie iterátoru
 
 ```cpp
 typedef std::forward_iterator_tag iterator_category;
@@ -161,9 +161,9 @@ typedef std::forward_iterator_tag iterator_category;
 
 Typ je synonymum pro `std::forward_iterator_tag`.
 
-## <a name="op_neq"></a>  regex_iterator::Operator! =
+## <a name="op_neq"></a>regex_iterator:: operator! =
 
-Porovná nerovnost iterátory.
+Porovná iterátory pro nerovnost.
 
 ```cpp
 bool operator!=(const regex_iterator& right);
@@ -171,16 +171,16 @@ bool operator!=(const regex_iterator& right);
 
 ### <a name="parameters"></a>Parametry
 
-*doprava*<br/>
-Iterátor, který má být porovnán s.
+*Kliknutím*\
+Iterátor, pro který se má porovnat.
 
 ### <a name="remarks"></a>Poznámky
 
-Členská funkce vrátí `!(*this == right)`.
+Vrátí `!(*this == right)`členské funkce.
 
-## <a name="op_star"></a>  regex_iterator::Operator *
+## <a name="op_star"></a>regex_iterator:: operator * – operátor
 
-Přistupuje k určené shoda.
+Přistupuje k určené shodě.
 
 ```cpp
 const match_results<BidIt>& operator*();
@@ -190,7 +190,7 @@ const match_results<BidIt>& operator*();
 
 Členská funkce vrátí uloženou hodnotu `match`.
 
-## <a name="op_add_add"></a>  regex_iterator::Operator ++
+## <a name="op_add_add"></a>regex_iterator:: operator + +
 
 Zvýší iterátor.
 
@@ -201,13 +201,13 @@ regex_iterator& operator++(int);
 
 ### <a name="remarks"></a>Poznámky
 
-Pokud aktuální shoda nemá žádné znaky první operátor zavolá `regex_search(begin, end, match, *pregex, flags | regex_constants::match_prev_avail | regex_constants::match_not_null)`; v opačném případě zálohy uložené hodnoty `begin` tak, aby odkazoval na první znak za aktuální shodovat pak volání `regex_search(begin, end, match, *pregex, flags | regex_constants::match_prev_avail)`. V obou případech Pokud vyhledávání selže operátor, který nastaví objekt iterátoru koncová sekvence. Operátor vrací objekt.
+Pokud aktuální shoda nemá žádné znaky pro první volání `regex_search(begin, end, match, *pregex, flags | regex_constants::match_prev_avail | regex_constants::match_not_null)`operátoru; v opačném případě posune uloženou hodnotu `begin` tak, aby odkazovala na první znak po `regex_search(begin, end, match, *pregex, flags | regex_constants::match_prev_avail)`aktuální shodě, potom volání. V obou případech, pokud vyhledávání neuspěje, operátor nastaví objekt na iteraci na konci sekvence. Operátor vrací objekt.
 
-Druhý operátor vytvoří kopii tohoto objektu, zvýší na objekt a potom vrátí kopii.
+Druhý operátor vytvoří kopii objektu, zvýší objekt a vrátí kopii.
 
-## <a name="op_eq"></a>  regex_iterator::operator=
+## <a name="op_eq"></a>regex_iterator:: operator =
 
-Porovná rovnost iterátory.
+Porovná iterátory o rovnosti.
 
 ```cpp
 bool operator==(const regex_iterator& right);
@@ -215,16 +215,16 @@ bool operator==(const regex_iterator& right);
 
 ### <a name="parameters"></a>Parametry
 
-*doprava*<br/>
-Iterátor, který má být porovnán s.
+*Kliknutím*\
+Iterátor, pro který se má porovnat.
 
 ### <a name="remarks"></a>Poznámky
 
-Členská funkce vrátí hodnotu true, pokud `*this` a *správné* koncová sekvence iterátory nebo pokud ani jeden není iterátor koncová sekvence a `begin == right.begin`, `end == right.end`, `pregex == right.pregex`, a `flags == right.flags`. V opačném případě vrátí hodnotu false.
+Členská funkce vrátí hodnotu true `*this` , pokud a *Right* jsou iterace koncového pořadí nebo `begin == right.begin`Pokud ani není iterátorem konci sekvence a, `end == right.end`, `pregex == right.pregex`a `flags == right.flags`. V opačném případě vrátí hodnotu false.
 
-## <a name="op_arrow"></a>  regex_iterator::operator-&gt;
+## <a name="op_arrow"></a>regex_iterator:: operator-&gt;
 
-Přistupuje k určené shoda.
+Přistupuje k určené shodě.
 
 ```cpp
 const match_results<BidIt> * operator->();
@@ -232,9 +232,9 @@ const match_results<BidIt> * operator->();
 
 ### <a name="remarks"></a>Poznámky
 
-Členská funkce vrátí adresu uloženou hodnotu `match`.
+Členská funkce vrátí adresu uložené hodnoty `match`.
 
-## <a name="pointer"></a>  regex_iterator::pointer
+## <a name="pointer"></a>regex_iterator::p ointer
 
 Typ ukazatele na shodu.
 
@@ -246,7 +246,7 @@ typedef match_results<BidIt> *pointer;
 
 Typ je synonymum pro `match_results<BidIt>*`, kde `BidIt` je parametr šablony.
 
-## <a name="reference"></a>  regex_iterator::Reference
+## <a name="reference"></a>regex_iterator:: Reference
 
 Typ odkazu na shodu.
 
@@ -258,7 +258,7 @@ typedef match_results<BidIt>& reference;
 
 Typ je synonymum pro `match_results<BidIt>&`, kde `BidIt` je parametr šablony.
 
-## <a name="regex_iterator"></a>  regex_iterator::regex_iterator
+## <a name="regex_iterator"></a>regex_iterator::regex_iterator
 
 Vytvoří iterátor.
 
@@ -273,25 +273,25 @@ regex_iterator(BidIt first,
 
 ### <a name="parameters"></a>Parametry
 
-*první*<br/>
-Začátek pořadí tak, aby odpovídaly.
+*první*\
+Začátek sekvence, která se má shodovat
 
-*last*<br/>
-Konec pořadí tak, aby odpovídaly.
+*posledního*\
+Konec sekvence, která se má shodovat.
 
-*re*<br/>
-Regulárních výrazů pro shody.
+*odebrat*\
+Regulární výraz pro shody
 
-*f*<br/>
-Příznaky pro shody.
+*FJ*\
+Příznaky pro shody
 
 ### <a name="remarks"></a>Poznámky
 
-První konstruktor vytvoří iterátor koncová sekvence. Druhý konstruktor inicializuje uložené hodnoty `begin` s *první*, uloženou hodnotu `end` s *poslední*, uloženou hodnotu `pregex` s `&re`a uložená hodnota `flags` s *f*. Poté zavolá `regex_search(begin, end, match, *pregex, flags)`. Pokud se hledání nezdaří, nastaví konstruktor objektu na iterátor koncová sekvence.
+První konstruktor vytvoří iterátor konec sekvence. Druhý konstruktor inicializuje uloženou hodnotu `begin` jako *první*, uloženou hodnotu `end` s *Poslední*, uloženou `pregex` hodnotou s `&re`a uloženou hodnotou `flags` v *f*. Pak volá `regex_search(begin, end, match, *pregex, flags)`. Pokud se hledání nepovede, konstruktor nastaví objekt na iteraci na konci sekvence.
 
 ## <a name="regex_type"></a>  regex_iterator::regex_type
 
-Typ odpovídající regulární výraz.
+Typ regulárního výrazu, který se má shodovat.
 
 ```cpp
 typedef basic_regex<Elem, RXtraits> regex_type;
@@ -301,7 +301,7 @@ typedef basic_regex<Elem, RXtraits> regex_type;
 
 Typedef je synonymum pro `basic_regex<Elem, RXtraits>`.
 
-## <a name="value_type"></a>  regex_iterator::value_type
+## <a name="value_type"></a>regex_iterator::value_type
 
 Typ shody.
 
@@ -315,12 +315,12 @@ Typ je synonymum pro `match_results<BidIt>`, kde `BidIt` je parametr šablony.
 
 ## <a name="see-also"></a>Viz také:
 
-[\<regex>](../standard-library/regex.md)<br/>
-[regex_constants – třída](../standard-library/regex-constants-class.md)<br/>
-[regex_error – třída](../standard-library/regex-error-class.md)<br/>
-[\<regulární výraz > funkce](../standard-library/regex-functions.md)<br/>
-[regex_iterator – třída](../standard-library/regex-iterator-class.md)<br/>
-[\<regulární výraz > operátory](../standard-library/regex-operators.md)<br/>
-[regex_token_iterator – třída](../standard-library/regex-token-iterator-class.md)<br/>
-[regex_traits – třída](../standard-library/regex-traits-class.md)<br/>
-[\<regulární výraz > – Definice TypeDef](../standard-library/regex-typedefs.md)<br/>
+[\<regex>](../standard-library/regex.md)\
+[regex_constants – třída](../standard-library/regex-constants-class.md)\
+[regex_error – třída](../standard-library/regex-error-class.md)\
+[\<regulární funkce >](../standard-library/regex-functions.md)\
+[regex_iterator – třída](../standard-library/regex-iterator-class.md)\
+[\<operátory > Regex](../standard-library/regex-operators.md)\
+[regex_token_iterator – třída](../standard-library/regex-token-iterator-class.md)\
+[regex_traits – třída](../standard-library/regex-traits-class.md)\
+[\<Regex > definice typedef](../standard-library/regex-typedefs.md)

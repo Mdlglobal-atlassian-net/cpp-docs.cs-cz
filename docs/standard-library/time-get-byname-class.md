@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - time_get_byname class
 ms.assetid: 6e54153e-da40-4bb9-a942-1a6ce57b30c9
-ms.openlocfilehash: e18f210dba03d66fa3a4ea111a6dfc61f0d0c12a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b466f8a893a14f7a94ee7b9e54b72e43aa6cf6e3
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62412004"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68460019"
 ---
 # <a name="timegetbyname-class"></a>time_get_byname – třída
 
@@ -40,22 +40,22 @@ protected:
 
 ### <a name="parameters"></a>Parametry
 
-*_Locname*<br/>
-S názvem národního prostředí.
+*_Locname*\
+Pojmenované národní prostředí.
 
-*_Refs*<br/>
-Počet počáteční odkazů.
-
-## <a name="requirements"></a>Požadavky
-
-Její chování je určeno s názvem národního prostředí *_Locname*. Každý konstruktor inicializuje jeho základní objekt s [time_get](../standard-library/time-get-class.md#time_get)\<CharType, InputIterator > ( `_Refs`).
+*_Refs*\
+Počáteční počet odkazů
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** \<národní prostředí >
+Jeho chování je určeno názvem národního prostředí *_Locname*. Každý konstruktor inicializuje svůj základní objekt pomocí [time_get](../standard-library/time-get-class.md#time_get)\<CharType, InputIterator > ( `_Refs`).
 
-**Namespace:** std
+## <a name="requirements"></a>Požadavky
+
+**Hlavička:** \<> národního prostředí
+
+**Obor názvů:** std
 
 ## <a name="see-also"></a>Viz také:
 
-[Bezpečný přístup z více vláken ve standardní knihovně C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[Bezpečný přístup z více vláken ve standardní knihovně C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)

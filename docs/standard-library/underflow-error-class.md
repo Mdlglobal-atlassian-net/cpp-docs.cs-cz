@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - underflow_error class
 ms.assetid: d632f1f9-9c6c-4954-b96b-03041bfab22d
-ms.openlocfilehash: 84657677fc672fc227d40423ffb217b1b550761b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 41e3c8606cb8c6c90a84927f01eb953be138534a
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62411848"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68454995"
 ---
 # <a name="underflowerror-class"></a>underflow_error – třída
 
-Tato třída slouží jako základní třída pro všechny výjimky vyvolané hlásit k podtečení aritmetické.
+Třída slouží jako základní třída pro všechny výjimky vyvolané pro hlášení aritmetického podtečení.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -31,7 +31,7 @@ public:
 
 ## <a name="remarks"></a>Poznámky
 
-Hodnota vrácená [co](../standard-library/exception-class.md) je kopie **zpráva**`.`[data](../standard-library/basic-string-class.md#data).
+Hodnota vrácená funkcí [co](../standard-library/exception-class.md) je kopie[dat](../standard-library/basic-string-class.md#data) **zprávy**`.`.
 
 ## <a name="example"></a>Příklad
 
@@ -61,11 +61,11 @@ Type: class std::underflow_error
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** \<stdexcept – >
+**Hlavička:** \<stdexcept >
 
-**Namespace:** std
+**Obor názvů:** std
 
 ## <a name="see-also"></a>Viz také:
 
-[runtime_error – třída](../standard-library/runtime-error-class.md)<br/>
-[Bezpečný přístup z více vláken ve standardní knihovně C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[runtime_error – třída](../standard-library/runtime-error-class.md)\
+[Bezpečný přístup z více vláken ve standardní knihovně C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)

@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - codecvt_utf16 class
 ms.assetid: a9897f98-f84d-4db6-90ad-858b2727570c
-ms.openlocfilehash: 18b95884bb673305398739968ef2530e8c4778d1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ca66a3273567a8d30a982211a6e977c129b00f5f
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62405219"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68459714"
 ---
 # <a name="codecvtutf16"></a>codecvt_utf16
 
-Představuje [národní prostředí](../standard-library/locale-class.md) omezující vlastnost, která převede mezi široké znaky zakódován jako UCS-2 nebo UCS-4 a kódováním UTF-16LE nebo UTF-16BE datový proud bajtů.
+Představuje omezující vlastnost [národního prostředí](../standard-library/locale-class.md) , která je převedena mezi velké znaky kódované jako UCS-2 nebo UCS-4 a datový proud bajtů KÓDOVANÝ jako UTF-16LE nebo UTF-16BE.
 
 ```cpp
 template<class Elem, unsigned long Maxcode = 0x10ffff, codecvt_mode Mode = (codecvt_mode)0>
@@ -24,23 +24,23 @@ class codecvt_utf16 : public std::codecvt<Elem, char, StateType>
 
 ## <a name="parameters"></a>Parametry
 
-*Elem*<br/>
-Typ elementu širokého znaku.
+*Elem*\
+Typ elementu s velkým znakem.
 
-*Maxcode*<br/>
+*Maxcode*\
 Maximální počet znaků pro omezující vlastnost národního prostředí.
 
-*Mode*<br/>
-Informace o konfiguraci pro omezující vlastnost národního prostředí.
+*Mode*\
+Konfigurační informace pro omezující vlastnost národního prostředí.
 
 ## <a name="remarks"></a>Poznámky
 
-Této třídy šablony převede mezi široké znaky zakódován jako UCS-2 nebo UCS-4 a datový proud bajtů kódováním UTF-16LE, pokud režim & little_endian nebo UTF-16BE jinak.
+Tato třída šablony převádí mezi znaky s kódováním UCS-2 nebo UCS-4 a datový proud bajtů kódovaný jako UTF-16LE, pokud mode & little_endian nebo UTF-16BE v opačném případě.
 
-Bajtový proud by měly být zapsány do binárního souboru; může být poškozený, pokud zapsána do textového souboru.
+Datový proud bajtů by měl být zapsán do binárního souboru; může být poškozený, pokud je zapsán do textového souboru.
 
 ## <a name="requirements"></a>Požadavky
 
-Záhlaví: \<codecvt – >
+Záhlaví: \<codecvt >
 
-Namespace: std
+Obor názvů: std

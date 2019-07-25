@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - is_literal_type
 ms.assetid: a03a4ebb-ee66-48d6-91bb-41cf72b2401f
-ms.openlocfilehash: 804ef0462308b967fc0c4c95d8dfa96476475aab
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 450c32d050a18f64e71992bd7a30412ebafe93de
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62336464"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68456214"
 ---
 # <a name="isliteraltype-class"></a>is_literal_type Class
 
-Ověřuje, zda typ lze použít jako `constexpr` proměnné nebo vytvořen, používá nebo vrácená z `constexpr` funkce.
+Testuje, zda lze typ použít jako `constexpr` proměnnou nebo jej sestavit, použít nebo vrátit z `constexpr` funkcí.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -26,19 +26,19 @@ struct is_literal_type;
 
 ### <a name="parameters"></a>Parametry
 
-*T*<br/>
+*Š*\
 Typ, na který chcete odeslat dotaz.
 
 ## <a name="remarks"></a>Poznámky
 
-Instance predikátu typu obsahuje hodnotu true, pokud typ *T* je *typ literálu*, v opačném případě obsahuje hodnotu false. Typ literálu je buď **void**, skalárního typu, typ odkazu, pole literálu typu nebo typu literál třídy. Typ literálu třídy je typ třídy, který má destruktor triviální, je typ agregace nebo má alespoň jeden bez – přesun, bez kopírování `constexpr` konstruktor a všechny její základní třídy a nestatické datové členy jsou typy literálu není typu volatile. Typ literálu je vždy typu literálu, koncept literál zahrnuje cokoli, co kompilátor můžete vyhodnotit jako `constexpr` v době kompilace.
+Instance predikátu typu má hodnotu true, pokud typ *T* je literální *typ*, jinak obsahuje hodnotu false. Typ literálu je **void**, skalární typ, odkazový typ, pole typu literálu, nebo literální typ třídy. Typ třídy literálu je typ třídy, která má triviální destruktor, je buď agregovaný typ, nebo má alespoň jeden nepřesunutý a nekopírovací `constexpr` konstruktor a všechny jeho základní třídy a nestatické datové členy jsou nestálé literální typy. I když je typ literálu vždycky typu literálu, koncept typu literálu obsahuje cokoli, co kompilátor může vyhodnotit jako `constexpr` v době kompilace.
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** \<type_traits >
+**Hlavička:** \<type_traits >
 
-**Namespace:** std
+**Obor názvů:** std
 
 ## <a name="see-also"></a>Viz také:
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
+[<type_traits>](../standard-library/type-traits.md)

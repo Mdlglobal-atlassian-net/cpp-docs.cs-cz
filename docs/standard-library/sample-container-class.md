@@ -4,55 +4,55 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - container classes [C++]
 ms.assetid: 5b1451f2-c708-45da-bbf0-9e42fd687a1a
-ms.openlocfilehash: c797a893549c8ec708cfb60e6f002b35c27cd35c
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.openlocfilehash: 2024574633069cc70f0885fdce63f3afc09227c0
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65220227"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68451110"
 ---
 # <a name="sample-container-class"></a>Ukázkový kontejner – třída
 
 > [!NOTE]
-> Toto téma je v Microsoft C++ dokumentaci jako funkční příklad kontejnerů používané C++ standardní knihovny. Další informace najdete v tématu [kontejnery standardní knihovny C++](../standard-library/stl-containers.md).
+> Toto téma se nachází v dokumentaci C++ společnosti Microsoft jako nefunkční příklad kontejnerů použitých ve C++ standardní knihovně. Další informace najdete v tématu [ C++ standardní kontejnery knihovny](../standard-library/stl-containers.md).
 
-Popisuje objekt, který řídí různé délky sekvence elementů typu obvykle `Ty`. Sekvence je uložen různými způsoby v závislosti na skutečné kontejneru.
+Popisuje objekt, který ovládá proměnlivou délku sekvence prvků, obvykle typu `Ty`. Sekvence je ukládána různými způsoby v závislosti na skutečném kontejneru.
 
-Kontejner konstruktor nebo členským funkcím zjistit příležitosti k volání konstruktoru **Ty**(**const Ty &**) nebo funkci **Ty::operator =**(**const Ty &**). Pokud takové volání vyvolá výjimku, objekt kontejneru musí zachovat svou integritu a znovu vyvolat jakoukoli výjimku, který zachycuje. Můžete bezpečně odkládacího souboru, můžete přiřadit k vymazání nebo zničit objekt kontejneru po vyvolá jednu z těchto výjimek. Obecně platí ale nemůžete jinak předpovědět, stav sekvence řízenou parametrem objektu kontejneru.
+Konstruktor kontejneru nebo členská funkce se mohou setkat s voláním konstruktoru **daného (** const ta **&** ) nebo funkcí **:: operator =** (**const Ty &** ). Pokud takové volání vyvolá výjimku, objekt kontejneru je povinen zachovat jeho integritu a znovu vyvolat všechny výjimky, které zachytí. Můžete bezpečně prohodit, přiřadit, smazat nebo zničit objekt kontejneru poté, co vyvolá jednu z těchto výjimek. Obecně však nemůžete odhadnout stav sekvence řízené objektem kontejneru.
 
-Několik dalších upozornění:
+Několik dalších aspektů:
 
 - Pokud výraz `~Ty` vyvolá výjimku, výsledný stav objektu kontejneru není definován.
 
-- Pokud kontejner ukládají objekt alokátoru *al*, a *al* vyvolá výjimku jako výsledek volání do jiných než `al.allocate`, výsledný stav objektu kontejneru není definován.
+- Pokud kontejner ukládá objekt přidělování *Al*a *Al* vyvolá výjimku jinou než v důsledku volání `al.allocate`, výsledný stav objektu kontejneru není definován.
 
-- Pokud kontejner ukládá objekt funkce *kompozice*určete způsob řazení řízené sekvence a *comp* vyvolává výjimky jakéhokoli druhu, výsledný stav objektu kontejneru není definován.
+- Pokud kontejner ukládá kompozici objektů funkcí , aby bylo možné určit, jak sestavovat řízený sekvenci, a *comp* vyvolá výjimku jakéhokoli druhu, výsledný stav objektu kontejneru není definován.
 
-Třídy kontejnerů, které jsou definované ve standardní knihovně C++ splnit několik dalších požadavků, jak je popsáno v následujících odstavcích.
+Třídy kontejneru definované C++ standardní knihovnou splňují několik dalších požadavků, jak je popsáno v následujících odstavcích.
 
-Kontejner šablony třídy [seznamu](../standard-library/list-class.md) poskytuje chování deterministické a užitečné i v případě výskytu výjimky je popsáno výše. Pokud dojde k výjimce při vložení jedné nebo víc elementů kontejneru je beze změny doleva a je znovu vyvolána výjimka.
+[Seznam](../standard-library/list-class.md) tříd šablony kontejneru poskytuje deterministické a užitečné chování i v přítomnosti výše popsaných výjimek. Například pokud je vyvolána výjimka během vložení jednoho nebo více prvků, kontejner zůstane nezměněn a výjimka je znovu vyvolána.
 
-Pro *všechny* třídy kontejnerů definované standardní knihovny C++, pokud dojde k výjimce během volání následující členské funkce `insert`, `push_back`, nebo `push_front`, kontejner zůstane beze změny a znovu se vyvolá výjimka.
+Pro *všechny* třídy kontejneru C++ definované standardní knihovnou, pokud je vyvolána výjimka během volání následujících členských funkcí `insert`,, `push_back`nebo `push_front`, kontejner zůstane nezměněn a výjimka je znovu vyvolána.
 
-Pro *všechny* tříd kontejnerů definovaných výčtem standardní knihovny C++, není vyvolána žádná výjimka při volání na tyto členské funkce: `pop_back`, `pop_front`.
+Pro *všechny* třídy kontejneru definované C++ standardní knihovnou není během volání následujících členských funkcí vyvolána žádná výjimka: `pop_back`,. `pop_front`
 
-Členská funkce [vymazat](../standard-library/container-class-erase.md) vyvolá výjimku, pouze v případě, že operace kopírování (přiřazení nebo kopírování konstrukce) dojde k výjimce.
+[Vymazání](../standard-library/container-class-erase.md) členské funkce vyvolá výjimku pouze v případě, že operace kopírování (přiřazení nebo konstrukce kopírování) vyvolá výjimku.
 
-Kromě toho není vyvolána žádná výjimka při kopírování iterátor vrácený členskou funkci.
+Kromě toho není vyvolána žádná výjimka při kopírování iterátoru vráceného členskou funkcí.
 
-Členská funkce [prohození](../standard-library/container-class-swap.md) učiní další příslibů *všechny* kontejneru tříd definovaných výčtem standardní knihovny jazyka C++:
+[Swap](../standard-library/container-class-swap.md) členské funkce poskytuje další příslibů pro *všechny* třídy kontejneru definované C++ standardní knihovnou:
 
-- Členská funkce vyvolá výjimku, pouze v případě, že kontejner ukládá objekt přidělování al a `al` vyvolá výjimku při kopírování.
+- Členská funkce vyvolá výjimku pouze v případě, že kontejner ukládá objekt přidělování Al a `al` vyvolá výjimku při zkopírování.
 
-- Odkazy, ukazatele a iterátory, které určují prvky řízené sekvencí prohazují zůstávají platné.
+- Odkazy, ukazatele a iterátory, které označují prvky kontrolovaných kontrolovaných sekvencí, zůstávají platné.
 
-Objekt třídy kontejneru standardní knihovny C++ definované přiděluje a uvolňuje úložiště pro sekvenci řídí, prostřednictvím uloženého objektu typu `Alloc`, což je obvykle parametru šablony. Takový objekt alokátoru musí mít stejné externí rozhraní jako objekt třídy `allocator<Ty>`. Zejména `Alloc` musí být stejného typu jako `Alloc::rebind<value_type>::other`
+Objekt třídy kontejneru definované C++ standardní knihovnou přiděluje a uvolňuje úložiště pro sekvenci, kterou ovládá, prostřednictvím uloženého objektu typu `Alloc`, což je obvykle parametr šablony. Takový objekt přidělování musí mít stejné externí rozhraní jako objekt třídy `allocator<Ty>`. Konkrétně `Alloc` musí být stejný typ jako`Alloc::rebind<value_type>::other`
 
-Pro *všechny* definované standardní knihovny C++, členské funkce třídy kontejnerů `Alloc get_allocator const;` vrátí kopii objektu uložený objekt alokátoru. Všimněte si, že je uložený objekt alokátoru *není* zkopírován při přiřazení objektu kontejneru. Všechny konstruktory inicializují hodnotu uloženou v `allocator`do `Alloc` Pokud konstruktor obsahuje parametr allocator.
+Pro *všechny* třídy kontejneru definované C++ standardní knihovnou vrátí členská funkce `Alloc get_allocator const;` kopii uloženého objektu přidělování. Všimněte si, že uložený objekt přidělování *není zkopírován při* přiřazení objektu kontejneru. Všechny konstruktory inicializují hodnotu uloženou `allocator`v, `Alloc` na, pokud konstruktor neobsahuje parametr přidělování.
 
-Podle standardu jazyka C++ kontejneru třídy definované ve standardní knihovně C++ můžete předpokládat, že:
+V souladu se C++ standardem může třída kontejneru definovaná C++ standardní knihovnou předpokládat, že:
 
-- Všechny objekty třídy `Alloc` porovnání rovnosti.
+- Všechny objekty třídy `Alloc` Compare EQUAL.
 
 - Typ `Alloc::const_pointer` je stejný jako `const Ty *`.
 
@@ -62,18 +62,18 @@ Podle standardu jazyka C++ kontejneru třídy definované ve standardní knihovn
 
 - Typ `Alloc::reference` je stejný jako `Ty&`.
 
-V této implementaci ale kontejnerů Nedovolte, aby byly tyto předpoklady. To znamená fungují správně s přidělování objektů, které jsou náročnějších:
+V této implementaci ale kontejnery nedělají takové zjednodušení předpokladů. Proto fungují správně s objekty přidělování, které jsou více výzvám souvisejícím:
 
-- Všechny objekty třídy `Alloc` nemusí porovnávání stejné. (Můžete spravovat více fondů úložiště.)
+- Všechny objekty třídy `Alloc` nemusejí porovnat stejné. (Můžete udržovat více fondů úložiště.)
 
-- Typ `Alloc::const_pointer` nemusí být stejné jako `const Ty *`. (Ukazatel const musí být třída)
+- Typ `Alloc::const_pointer` nemusí být stejný jako `const Ty *`. (Ukazatel const může být třída.)
 
-- Typ `Alloc::pointer` nemusí být stejné jako `Ty *`. (Ukazatel může být třída).
+- Typ `Alloc::pointer` nemusí být stejný jako `Ty *`. (Ukazatel může být třída.)
 
 ## <a name="requirements"></a>Požadavky
 
-**Hlavička**: \<ukázkový kontejner >
+**Záhlaví**: \<ukázkový kontejnerový >
 
 ## <a name="see-also"></a>Viz také:
 
-[\<Ukázkový kontejner >](../standard-library/sample-container.md)<br/>
+[\<Ukázkový > kontejneru](../standard-library/sample-container.md)

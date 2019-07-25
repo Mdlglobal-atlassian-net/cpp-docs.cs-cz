@@ -16,16 +16,16 @@ helpviewer_keywords:
 - stdext::max_fixed_size [C++], released
 - stdext::max_fixed_size [C++], saved
 ms.assetid: 8c8f4588-37e9-4579-8168-ba3553800914
-ms.openlocfilehash: 08510ecc3b7469e8f88a61dcb0df28541e170892
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: bbc39a169f9a4bbac3e78b208b3a1a31e4e30ff2
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62412953"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68456368"
 ---
 # <a name="maxfixedsize-class"></a>max_fixed_size – třída
 
-Popisuje [maximálního počtu tříd](../standard-library/allocators-header.md) objekt, který omezuje [freelist](../standard-library/freelist-class.md) objektu na pevnou maximální délku.
+Popisuje [maximální objekt třídy](../standard-library/allocators-header.md) , který omezuje objekt [freelist –](../standard-library/freelist-class.md) na pevnou maximální délku.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -38,7 +38,7 @@ class max_fixed_size
 
 |Parametr|Popis|
 |---------------|-----------------|
-|*Max*|Maximální třídu, která určuje maximální počet prvků k ukládání `freelist`.|
+|*Max*|Maximální třída, která určuje maximální počet prvků, které mají být uloženy v `freelist`.|
 
 ### <a name="constructors"></a>Konstruktory
 
@@ -50,21 +50,21 @@ class max_fixed_size
 
 |Členská funkce|Popis|
 |-|-|
-|[přidělené](#allocated)|Zvýší počet přidělených paměťových bloků.|
-|[přidělení](#deallocated)|Sníží počet přidělených paměťových bloků.|
-|[Úplné](#full)|Vrátí hodnotu, která určuje, zda by měl být další bloky paměti přidat do seznamu zdarma.|
-|[Všeobecně dostupné](#released)|Sníží počet paměti blokuje v seznamu zdarma.|
-|[saved](#saved)|Zvýší počet paměťových bloků v seznamu zdarma.|
+|[přidělování](#allocated)|Zvýší počet přidělených bloků paměti.|
+|[přidělení zrušeno](#deallocated)|Sníží počet přidělených bloků paměti.|
+|[kompletní](#full)|Vrátí hodnotu, která určuje, zda mají být do bezplatného seznamu přidány další bloky paměti.|
+|[vydané](#released)|Sníží počet bloků paměti v bezplatném seznamu.|
+|[saved](#saved)|Zvýší počet bloků paměti v bezplatném seznamu.|
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** \<alokátorů >
+**Hlavička:** \<> přidělování
 
-**Namespace:** stdext
+**Obor názvů:** stdext
 
-## <a name="allocated"></a>  max_fixed_size::allocated
+## <a name="allocated"></a>max_fixed_size:: přiděleno
 
-Zvýší počet přidělených paměťových bloků.
+Zvýší počet přidělených bloků paměti.
 
 ```cpp
 void allocated(std::size_t _Nx = 1);
@@ -78,11 +78,11 @@ void allocated(std::size_t _Nx = 1);
 
 ### <a name="remarks"></a>Poznámky
 
-Členská funkce nemá žádný účinek. Tato členská funkce je volána po úspěšné volání podle `cache_freelist::allocate` operátoru **nové**. Argument *_Nx* je počet paměťových bloků v bloku dat přidělena pomocí operátoru **nové**.
+Členské funkce neprovádí žádnou akci. Tato členská funkce se volá po každém úspěšném `cache_freelist::allocate` volání funkce operator **New**. Argument *_Nx* je počet paměťových bloků v bloku, který je přidělený operátorem **New**.
 
-## <a name="deallocated"></a>  max_fixed_size::deallocated
+## <a name="deallocated"></a>max_fixed_size::d eallocated
 
-Sníží počet přidělených paměťových bloků.
+Sníží počet přidělených bloků paměti.
 
 ```cpp
 void deallocated(std::size_t _Nx = 1);
@@ -96,11 +96,11 @@ void deallocated(std::size_t _Nx = 1);
 
 ### <a name="remarks"></a>Poznámky
 
-Členská funkce nemá žádný účinek. Tato členská funkce je volána po každé volání podle `cache_freelist::deallocate` operátoru **odstranit**. Argument *_Nx* je počet paměťových bloků v bloku dat navrácena pomocí operátoru **odstranit**.
+Členské funkce neprovádí žádnou akci. Tato členská funkce se volá po každém volání `cache_freelist::deallocate` operátoru **Delete**. Argument *_Nx* je počet bloků paměti v bloku, který byl odstraněn pomocí operátoru **Delete**.
 
-## <a name="full"></a>  max_fixed_size::full
+## <a name="full"></a>max_fixed_size:: Full
 
-Vrátí hodnotu, která určuje, zda by měl být další bloky paměti přidat do seznamu zdarma.
+Vrátí hodnotu, která určuje, zda mají být do bezplatného seznamu přidány další bloky paměti.
 
 ```cpp
 bool full();
@@ -108,13 +108,13 @@ bool full();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-**Hodnota TRUE** Pokud `Max <= _Nblocks`; v opačném případě **false**.
+**true** , `Max <= _Nblocks`Pokud; v opačném případě **false**.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato členská funkce je volána `cache_freelist::deallocate`. Pokud volání vrátí **true**, `deallocate` vloží blok paměti v seznamu zdarma; Pokud vrátí hodnotu false, `deallocate` operátor volání **odstranit** se uvolnit bloku.
+Tato členská funkce je volána `cache_freelist::deallocate`nástrojem. Pokud volání vrátí **hodnotu true**, `deallocate` umístí blok paměti do bezplatného seznamu; Pokud vrátí hodnotu false, `deallocate` volá operátor **DELETE pro zrušení** přidělení bloku.
 
-## <a name="max_fixed_size"></a>  max_fixed_size::max_fixed_size
+## <a name="max_fixed_size"></a>max_fixed_size::max_fixed_size
 
 Vytvoří objekt typu `max_fixed_size`.
 
@@ -124,11 +124,11 @@ max_fixed_size();
 
 ### <a name="remarks"></a>Poznámky
 
-Tento konstruktor inicializuje uložené hodnoty `_Nblocks` na nulu.
+Tento konstruktor inicializuje uloženou hodnotu `_Nblocks` na nulu.
 
-## <a name="released"></a>  max_fixed_size::released
+## <a name="released"></a>max_fixed_size:: vydáno
 
-Sníží počet paměti blokuje v seznamu zdarma.
+Sníží počet bloků paměti v bezplatném seznamu.
 
 ```cpp
 void released();
@@ -136,11 +136,11 @@ void released();
 
 ### <a name="remarks"></a>Poznámky
 
-Sníží uloženou hodnotu `_Nblocks`. `released` Členskou funkci aktuálního [maximálního počtu tříd](../standard-library/allocators-header.md) je volán `cache_freelist::allocate` vždy, když ji odebere blok paměti ze seznamu zdarma.
+Sníží uloženou hodnotu `_Nblocks`. Členská funkce aktuální [třídy maxima](../standard-library/allocators-header.md) je volána `cache_freelist::allocate` při každém odebrání bloku paměti ze seznamu Free. `released`
 
-## <a name="saved"></a>  max_fixed_size::saved
+## <a name="saved"></a>max_fixed_size:: Uloženo
 
-Zvýší počet paměťových bloků v seznamu zdarma.
+Zvýší počet bloků paměti v bezplatném seznamu.
 
 ```cpp
 void saved();
@@ -148,8 +148,8 @@ void saved();
 
 ### <a name="remarks"></a>Poznámky
 
-Tato členská funkce zvýší uloženou hodnotu `_Nblocks`. Tato členská funkce je volána `cache_freelist::deallocate` vždy, když umístí blok paměti v seznamu zdarma.
+Tato členská funkce zvýší uloženou hodnotu `_Nblocks`. Tato členská funkce je volána `cache_freelist::deallocate` vždy, když umístí blok paměti do bezplatného seznamu.
 
 ## <a name="see-also"></a>Viz také:
 
-[\<allocators>](../standard-library/allocators-header.md)<br/>
+[\<allocators>](../standard-library/allocators-header.md)

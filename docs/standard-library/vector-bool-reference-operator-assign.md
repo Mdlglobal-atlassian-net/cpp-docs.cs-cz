@@ -1,5 +1,5 @@
 ---
-title: 'vektor&lt;bool&gt;:: reference::operator ='
+title: 'Vector&lt;bool&gt;:: Reference:: operator ='
 ms.date: 11/04/2016
 f1_keywords:
 - =
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - = operator, with specific C++ Standard Library objects
 - reference::operator=
 ms.assetid: eed20d81-36b9-40b2-a3b6-340ed0bb4f34
-ms.openlocfilehash: b829a0b6224ca93192f15b088fcb98155bc3963a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 738f86bd6163a827b43d78f29c6e3a7124400fb7
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62410925"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68452166"
 ---
-# <a name="vectorltboolgtreferenceoperator"></a>vektor&lt;bool&gt;:: reference::operator =
+# <a name="vectorltboolgtreferenceoperator"></a>Vector&lt;bool&gt;:: Reference:: operator =
 
 Přiřadí k bitu logickou hodnotu nebo hodnotu obsaženou referenčním prvkem.
 
@@ -31,10 +31,10 @@ reference& operator=(bool Val);
 
 ### <a name="parameters"></a>Parametry
 
-*doprava*<br/>
+*Kliknutím*\
 Odkaz prvku, jehož hodnota má být přiřazena k bitu.
 
-*Val*<br/>
+*Počítává*\
 Logická hodnota, která má být přiřazena k bitu.
 
 ## <a name="example"></a>Příklad
@@ -112,11 +112,11 @@ The original value of the 3rd element still stored in a bool: false
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** \<vektoru >
+**Hlavička:** \<> vektoru
 
-**Namespace:** std
+**Obor názvů:** std
 
 ## <a name="see-also"></a>Viz také:
 
-[vektor\<bool >:: reference – třída](../standard-library/vector-bool-reference-class.md)<br/>
-[Standardní knihovna C++ – referenční dokumentace](../standard-library/cpp-standard-library-reference.md)<br/>
+[Vector\<bool >:: Reference – třída](../standard-library/vector-bool-reference-class.md)\
+[Standardní knihovna C++ – referenční dokumentace](../standard-library/cpp-standard-library-reference.md)

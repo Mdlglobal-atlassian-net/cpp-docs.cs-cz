@@ -4,16 +4,16 @@ ms.date: 09/10/2018
 f1_keywords:
 - filesystem/std::tr2::sys::space_info
 ms.assetid: f2b35b42-06ff-45bd-8617-39a0f5358a54
-ms.openlocfilehash: b6998f4ac7ced2d85063186edbd47227b6d24ca5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2a9856746a8bbc796871663a81bd8911d34dcd4a
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62399444"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68457559"
 ---
 # <a name="spaceinfo-structure"></a>space_info – struktura
 
-Obsahuje informace o svazku.
+Uchovává informace o svazku.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -30,20 +30,20 @@ struct space_info
 
 ### <a name="public-data-members"></a>Veřejné datové členy
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
-|`unsigned long long capacity`|Představuje celkový počet bajtů, které mohou představovat svazku.|
-|`unsigned long long free`|Představuje počet bajtů, které nejsou použity pro reprezentaci dat na svazku.|
+|`unsigned long long capacity`|Představuje celkový počet bajtů, které může svazek reprezentovat.|
+|`unsigned long long free`|Představuje počet bajtů, které se nepoužívají k reprezentaci dat na svazku.|
 |`unsigned long long available`|Představuje počet bajtů, které jsou k dispozici pro reprezentaci dat na svazku.|
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** \<filesystem >
+**Hlavička:** \<> systému souborů
 
-**Namespace:** std::experimental::filesystem
+**Obor názvů:** std:: experimentální:: FileSystem
 
 ## <a name="see-also"></a>Viz také:
 
-[Odkaz na soubory hlaviček](../standard-library/cpp-standard-library-header-files.md)<br/>
-[\<filesystem>](../standard-library/filesystem.md)<br/>
-[Navigace v systému souborů (C++)](../standard-library/file-system-navigation.md)<br/>
+[Odkazy na hlavičkové soubory](../standard-library/cpp-standard-library-header-files.md)\
+[\<> systému souborů](../standard-library/filesystem.md)\
+[Navigace v systému souborůC++()](../standard-library/file-system-navigation.md)

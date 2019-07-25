@@ -7,16 +7,16 @@ helpviewer_keywords:
 - is_standard_layout class
 - is_standard_layout
 ms.assetid: 15ccf111-f537-45ef-b552-59152a7ba312
-ms.openlocfilehash: 75691c1b09b71580474cc22cdc8382bff55a5e29
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4f999eaa4a5c1ea7e9672a5efdc6000a4d3d9759
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62413492"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68457419"
 ---
 # <a name="isstandardlayout-class"></a>is_standard_layout – třída
 
-Testuje, zda je typ standardního rozložení.
+Testuje, zda je typ standardní rozložení.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -29,18 +29,18 @@ struct is_standard_layout;
 
 |Parametr|Popis|
 |---------------|-----------------|
-|*Ty*|Typ, který má dotaz|
+|*Ty*|Typ, který se má dotazovat|
 
 ## <a name="remarks"></a>Poznámky
 
-Instance této predikátu typu obsahuje hodnotu true, pokud typ *Ty* je třída, která má standardní rozložení objektů členů v paměti, jinak má hodnotu false.
+Instance tohoto predikátu typu má hodnotu true, *Pokud typ this* je třída, která má standardní rozložení členských objektů v paměti, v opačném případě obsahuje hodnotu false.
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** \<type_traits >
+**Hlavička:** \<type_traits >
 
-**Namespace:** std
+**Obor názvů:** std
 
 ## <a name="see-also"></a>Viz také:
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
+[<type_traits>](../standard-library/type-traits.md)

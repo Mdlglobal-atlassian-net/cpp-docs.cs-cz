@@ -2,16 +2,16 @@
 title: '&lt;initializer_list&gt;'
 ms.date: 11/04/2016
 ms.assetid: 820b6448-fb01-49a4-aeaa-546ad7576ea4
-ms.openlocfilehash: 6f8e1a72b7de97f5dd0376dedd0d4246a46276eb
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5d0778fde6b7a7b6182b8e57cd4c663ec77ca85a
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62404972"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68455338"
 ---
 # <a name="ltinitializerlistgt"></a>&lt;initializer_list&gt;
 
-Definuje kontejner šablony třídy `initializer_list` a několik podpůrných šablon.
+Definuje třídu `initializer_list` šablony kontejneru a několik podpůrných šablon.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -27,4 +27,4 @@ Definuje kontejner šablony třídy `initializer_list` a několik podpůrných �
 
 ## <a name="see-also"></a>Viz také:
 
-[Odkaz na soubory hlaviček](../standard-library/cpp-standard-library-header-files.md)<br/>
+[Odkazy na hlavičkové soubory](../standard-library/cpp-standard-library-header-files.md)

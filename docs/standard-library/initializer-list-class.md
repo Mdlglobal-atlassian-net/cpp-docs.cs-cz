@@ -12,12 +12,12 @@ helpviewer_keywords:
 - std::initializer_list::begin
 - std::initializer_list::end
 - std::initializer_list::size
-ms.openlocfilehash: de925f73ac206113aafb8661a8d5b347503150c5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: acd11f3b3a3bf0ba17e34a802cc8988410e17b12
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62159298"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68455360"
 ---
 # <a name="initializerlist-class"></a>initializer_list – třída
 
@@ -34,17 +34,17 @@ class initializer_list
 
 |Parametr|Popis|
 |---------------|-----------------|
-|*Typ*|Typ dat prvku, který bude uložen do `initializer_list`.|
+|*Typ*|Datový typ prvku, který bude uložen v `initializer_list`.|
 
 ## <a name="remarks"></a>Poznámky
 
-`initializer_list` Lze sestavit pomocí seznamu inicializátorů v závorkách:
+`initializer_list` Může být vytvořen pomocí seznamu inicializátorů v závorkách:
 
 ```cpp
 initializer_list<int> i1{ 1, 2, 3, 4 };
 ```
 
-Kompilátor převede seznamy inicializátorů v závorkách se homogenní prvky do `initializer_list` vždy, když se podpis funkce vyžaduje `initializer_list`. Další podrobnosti o použití `initializer_list`, naleznete v tématu [jednotná inicializace a delegování konstruktorů](../cpp/uniform-initialization-and-delegating-constructors.md)
+Kompilátor transformuje seznam inicializátorů v závorkách s homogenními prvky na `initializer_list` vždy, když signatura funkce `initializer_list`vyžaduje. Další informace o použití `initializer_list`naleznete v tématu [jednotná inicializace a delegování konstruktorů](../cpp/uniform-initialization-and-delegating-constructors.md) .
 
 ### <a name="constructors"></a>Konstruktory
 
@@ -67,19 +67,19 @@ Kompilátor převede seznamy inicializátorů v závorkách se homogenní prvky 
 
 |Členská funkce|Popis|
 |-|-|
-|[začít](#begin)|Vrací ukazatel na první prvek v `initializer_list`.|
-|[ukončení](#end)|Vrací ukazatel na jedno místo za posledním prvkem v `initializer_list`.|
-|[Velikost](#size)|Vrátí počet prvků v `initializer_list`.|
+|[ifunctiondiscovery](#begin)|Vrátí ukazatel na první prvek v `initializer_list`.|
+|[účelu](#end)|Vrátí ukazatel na jeden za poslední prvek v `initializer_list`.|
+|[hodnota](#size)|Vrátí počet prvků v `initializer_list`.|
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** \<initializer_list >
+**Hlavička:** \<initializer_list >
 
-**Namespace:** std
+**Obor názvů:** std
 
-## <a name="begin"></a>  initializer_list::begin
+## <a name="begin"></a>initializer_list:: begin
 
-Vrací ukazatel na první prvek v `initializer_list`.
+Vrátí ukazatel na první prvek v `initializer_list`.
 
 ```cpp
 constexpr const InputIterator* begin() const noexcept;
@@ -87,13 +87,13 @@ constexpr const InputIterator* begin() const noexcept;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Ukazatel na první prvek `initializer_list`. Pokud je seznam prázdný, ukazatel je stejný jako začátek a konec seznamu.
+Ukazatel na první prvek `initializer_list`. Pokud je seznam prázdný, ukazatel je stejný jako na začátku a na konci seznamu.
 
 ### <a name="remarks"></a>Poznámky
 
-## <a name="end"></a>  initializer_list::end
+## <a name="end"></a>initializer_list:: end
 
-Vrací ukazatel na jedno místo za posledním prvkem v `initializer list`.
+Vrátí ukazatel na jeden za poslední prvek v `initializer list`.
 
 ```cpp
 constexpr const InputIterator* end() const noexcept;
@@ -101,9 +101,9 @@ constexpr const InputIterator* end() const noexcept;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Ukazatel na jedno místo za posledním prvkem v seznamu. Pokud je seznam prázdný, to je stejný jako ukazatel na první prvek v seznamu.
+Ukazatel na jeden za poslední prvek v seznamu. Pokud je seznam prázdný, je stejný jako ukazatel na první prvek v seznamu.
 
-## <a name="initializer_list"></a>  initializer_list::initializer_list
+## <a name="initializer_list"></a>initializer_list::initializer_list
 
 Vytvoří objekt typu `initializer_list`.
 
@@ -116,12 +116,12 @@ initializer_list(const InputIterator First, const InputIterator Last);
 
 |Parametr|Popis|
 |---------------|-----------------|
-|*první*|Pozice prvního prvku v rozsahu prvků, které se mají zkopírovat.|
-|*poslední*|Pozice prvního prvku mimo rozsah prvků, které se mají zkopírovat.|
+|*První*|Pozice prvního prvku v rozsahu prvků, které mají být zkopírovány.|
+|*Posledního*|Pozice prvního prvku mimo rozsah prvků, které mají být zkopírovány.|
 
 ### <a name="remarks"></a>Poznámky
 
-`initializer_list` Je založen na poli objektů zadaného typu. Kopírování `initializer_list` vytvoří druhou instanci seznamu ukazující na stejné objekty; objekty nejsou zkopírovány.
+`initializer_list` Je založen na poli objektů zadaného typu. `initializer_list` Kopírování vytvoří druhou instanci seznamu ukazující na stejné objekty; zdrojové objekty nejsou zkopírovány.
 
 ### <a name="example"></a>Příklad
 
@@ -186,7 +186,7 @@ int main()
 c1 = 3c2 = 5 4 3 2 1c3 = 5 4 3 2 1c4 = 5 4c5 = 5 4
 ```
 
-## <a name="size"></a>  initializer_list::size
+## <a name="size"></a>initializer_list:: size
 
 Vrátí počet prvků v seznamu.
 
@@ -202,4 +202,4 @@ Počet prvků v seznamu.
 
 ## <a name="see-also"></a>Viz také:
 
-[<forward_list>](../standard-library/forward-list.md)<br/>
+[<forward_list>](../standard-library/forward-list.md)

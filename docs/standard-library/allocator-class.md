@@ -34,16 +34,16 @@ helpviewer_keywords:
 - std::allocator [C++], max_size
 - std::allocator [C++], rebind
 ms.assetid: 3fd58076-56cc-43bb-ad58-b4b7c9c6b410
-ms.openlocfilehash: 1a0c8a04dda6c396b4f56d0939838fb6cb8e7455
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 09c30eb58655113ef3daa8338829ad43b37bc415
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68245929"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68456410"
 ---
 # <a name="allocator-class"></a>allocator – třída
 
-Třída šablony popisuje objekt, který spravuje rozdělení úložiště a uvolnění pro pole objektů typu `Type`. Objekt třídy `allocator` je výchozí objekt alokátoru podle konstruktory pro třídy šablony několik kontejnerů ve standardní knihovně jazyka C++.
+Třída šablony popisuje objekt, který spravuje přidělování úložiště a uvolnění pro pole objektů typu `Type`. Objekt třídy `allocator` je výchozí objekt přidělování zadaný v konstruktorech pro několik tříd šablon kontejneru ve C++ standardní knihovně.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -54,30 +54,30 @@ class allocator
 
 ### <a name="parameters"></a>Parametry
 
-*Typ*<br/>
-Typ objektu, pro který se ještě úložiště přidělené nebo uvolnit.
+*Textový*\
+Typ objektu, pro který je úložiště přiděleno nebo zrušeno.
 
 ## <a name="remarks"></a>Poznámky
 
-Všechny kontejnery standardní knihovny C++ mají parametr šablony, která jako výchozí `allocator`. Vytváření kontejneru pomocí vlastního alokátoru poskytují kontrolu nad přidělování a uvolňování prvků tohoto kontejneru.
+Všechny C++ standardní kontejnery knihovny mají parametr šablony, který je výchozím nastavením `allocator`. Sestavování kontejneru s vlastním přidělováním poskytuje kontrolu nad přidělením a uvolněním prvků kontejneru.
 
-Například objekt alokátoru může přidělit úložiště na privátní haldy nebo ve sdílené paměti, nebo může optimalizovat pro objekt malé nebo velké velikosti. To může také určit, prostřednictvím definice typu, který poskytne, aby prvky přístupná prostřednictvím speciální přistupující objekty, které spravovat sdílené paměti nebo provést automatické uvolňování paměti. Třídu, která přiděluje úložiště pomocí objekt alokátoru proto by měl používat tyto typy deklarace ukazatele a odkazovat na objekty, stejně jako kontejnery ve standardní knihovně C++.
+Například objekt přidělování může přidělit úložiště na privátní haldě nebo ve sdílené paměti nebo může optimalizovat pro malé nebo velké velikosti objektů. Může také specifikovat, prostřednictvím definic typů, které poskytuje, k těmto prvkům přistupovat prostřednictvím speciálních přístupových objektů, které spravují sdílenou paměť, nebo provádět automatické uvolňování paměti. Proto třída, která přiděluje úložiště pomocí objektu Alokátor, by měla používat tyto typy pro deklaraci ukazatelů a referenčních objektů, jako kontejnery ve C++ standardní knihovně.
 
-<strong>(C ++ 98/03 jenom)</strong>  Pokud odvozujete od třídy allocator, je nutné zadat [rebind](#rebind) – struktura, jejíž `_Other` definice typu odkazuje na vaše nově odvozených tříd.
+<strong>(Pouze C++ 98/03)</strong> Při odvozování od třídy přidělování je nutné zadat strukturu opětovné [vazby](#rebind) , jejíž `_Other` definice typedef odkazuje na vaši nově odvozenou třídu.
 
-Díky tomu se přidělování definuje následující typy:
+Proto Alokátor definuje následující typy:
 
 - [ukazatel](#pointer) se chová jako ukazatel na `Type`.
 
-- [const_pointer](#const_pointer) se chová jako konstantní ukazatel na `Type`.
+- [const_pointer](#const_pointer) se chová jako ukazatel const na `Type`.
 
-- [referenční dokumentace](#reference) se chová jako odkaz na `Type`.
+- [odkaz](#reference) se chová jako odkaz na `Type`.
 
-- [const_reference](#const_reference) se chová jako konstantní odkaz na `Type`.
+- [const_reference](#const_reference) se chová jako odkaz const na `Type`.
 
-Tyto `Type`s zadejte formulář, který ukazatele a reference musí přijmout přidělené elementů. ( [allocator::pointer](#pointer) není nutně stejné jako `Type*` pro všechny objekty přidělování, i když má tato zřejmé definice pro třídu `allocator`.)
+Tyto `Type`typy s určují, které ukazatele a odkazy musí převzít pro přidělené elementy. ( [Alokátor::p ointer](#pointer) není nutně stejný jako `Type*` u všech objektů přidělování, i když má tuto zjevnou definici třídy `allocator`.)
 
-**C ++ 11 a novější:**  Povolení operací přesunu ve vašich allocator, použijte rozhraní minimálních alokátorů a implementovat kopírovací konstuktor, == a! = operátory, přidělit a uvolnit. Další informace a příklad najdete v tématu [Alokátorů](../standard-library/allocators.md)
+**C++ 11 a novější:**  Chcete-li povolit operace přesunu ve vašem přidělování, použijte rozhraní minimálního přidělování a implementujte kopírovací konstruktor = = a! = Operators, allocate a unallocate. Další informace a příklad najdete v tématu [přidělování](../standard-library/allocators.md)
 
 ## <a name="members"></a>Členové
 
@@ -85,41 +85,41 @@ Tyto `Type`s zadejte formulář, který ukazatele a reference musí přijmout p�
 
 |||
 |-|-|
-|[allocator](#allocator)|Umožňuje vytvořit konstruktory `allocator` objekty.|
+|[allocator](#allocator)|Konstruktory používané pro vytváření `allocator` objektů.|
 
 ### <a name="typedefs"></a>Typedefs
 
 |||
 |-|-|
-|[const_pointer](#const_pointer)|Typ, který poskytuje konstantní ukazatel na typ objektu spravovaného pomocí přidělujícího modulu.|
-|[const_reference](#const_reference)|Typ, který poskytuje konstantní odkaz na typ objektu spravovaného pomocí přidělujícího modulu.|
-|[difference_type](#difference_type)|Celočíselný typ se znaménkem, které mohou představovat rozdíl mezi hodnotami ukazatelů na typ objektu spravovaného pomocí přidělujícího modulu.|
-|[pointer](#pointer)|Typ, který poskytuje ukazatel na typ objektu spravovaného pomocí přidělujícího modulu.|
-|[Referenční dokumentace](#reference)|Typ, který poskytuje odkaz na typ objektu spravovaného pomocí přidělujícího modulu.|
-|[size_type](#size_type)|Bez znaménka celočíselného typu, který může představovat Délka libovolného pořadí, které objekt třídy šablony `allocator` můžete přidělit.|
-|[value_type](#value_type)|Typ, který je spravovaný nástrojem přidělujícího modulu.|
+|[const_pointer](#const_pointer)|Typ, který poskytuje konstantní ukazatel na typ objektu spravovaného přidělováním.|
+|[const_reference](#const_reference)|Typ, který poskytuje konstantní odkaz na typ objektu spravovaného přidělováním.|
+|[difference_type](#difference_type)|Podepsaný integrální typ, který může představovat rozdíl mezi hodnotami ukazatelů na typ objektu spravovaného přidělováním.|
+|[pointer](#pointer)|Typ, který poskytuje ukazatel na typ objektu spravovaného přidělováním.|
+|[Referenční dokumentace](#reference)|Typ, který poskytuje odkaz na typ objektu spravovaného přidělováním.|
+|[size_type](#size_type)|Celočíselný typ bez znaménka, který může představovat délku jakékoli sekvence, kterou může objekt třídy `allocator` šablony přidělit.|
+|[value_type](#value_type)|Typ, který je spravován přidělováním.|
 
 ### <a name="functions"></a>Funkce
 
 |||
 |-|-|
-|[address](#address)|Vyhledá adresu objektu, jehož hodnota je určena.|
-|[allocate](#allocate)|Přiděluje blok paměti dostatečně velký pro uložení alespoň nějaké zadaný počet prvků.|
-|[Konstrukce](#construct)|Vytvoří konkrétní typ objektu na zadané adrese, který je inicializován se zadanou hodnotou.|
-|[zrušit přidělení](#deallocate)|Uvolní zadaný počet objektů z úložiště počínaje na určené pozici.|
-|[zrušení](#destroy)|Volá destruktor objekty bez rušení přidělení paměti uložení objektu.|
-|[max_size](#max_size)|Vrátí počet prvků typu `Type` , které by mohly být přiděleny objektem třídy `allocator` předtím, než se využilo volné paměti.|
-|[obnovení vazby](#rebind)|Struktura, která umožňuje alokátoru pro objekty jednoho typu pro přidělení úložiště pro objekty jiného typu.|
+|[address](#address)|Najde adresu objektu, jehož hodnota je určena.|
+|[allocate](#allocate)|Přidělí dostatečně velký blok paměti pro uložení alespoň některého zadaného počtu prvků.|
+|[Contains](#construct)|Vytvoří konkrétní typ objektu na zadané adrese, která je inicializována se zadanou hodnotou.|
+|[uvolnit](#deallocate)|Uvolní zadaný počet objektů od úložiště, které začínají na zadané pozici.|
+|[způsobit](#destroy)|Volá destruktor objektů bez zrušení přidělení paměti, kde byl objekt uložen.|
+|[max_size](#max_size)|Vrátí počet prvků typu `Type` , které mohou být přiděleny objektem třídy `allocator` před použitím volné paměti.|
+|[Rebind](#rebind)|Struktura, která umožňuje Alokátor pro objekty jednoho typu přidělit úložiště pro objekty jiného typu.|
 
 ### <a name="operators"></a>Operátory
 
 |||
 |-|-|
-|[operátor =](#op_eq)|Přiřadí jednu `allocator` objektu na jiný `allocator` objektu.|
+|[operátor =](#op_eq)|Přiřadí `allocator` jeden objekt k `allocator` jinému objektu.|
 
-### <a name="address"></a> Adresa
+### <a name="address"></a>adresáře
 
-Vyhledá adresu objektu, jehož hodnota je určena.
+Najde adresu objektu, jehož hodnota je určena.
 
 ```cpp
 pointer address(reference val) const;
@@ -128,16 +128,16 @@ const_pointer address(const_reference val) const;
 
 #### <a name="parameters"></a>Parametry
 
-*Val*\
-Const nebo nonconst hodnotu objektu, jehož adresu má být vyhledán pro.
+*počítává*\
+Hodnota konstanty nebo nepodílu objektu, jehož adresa je prohledávána.
 
 #### <a name="return-value"></a>Návratová hodnota
 
-Najít hodnoty, resp. const nebo nonconst konstantní nebo nonconst ukazatel na objekt.
+Typ const nebo nepodílu na objektu nalezený, v uvedeném pořadí, konstanta nebo hodnota nenevýhody.
 
 #### <a name="remarks"></a>Poznámky
 
-Členské funkce vrátí adresu *val*ve formuláři, který ukazatele musíte provést pro přidělené elementy.
+Členské funkce vrátí adresu *Val*, ve tvaru, který ukazatelé musí přijmout pro přidělené prvky.
 
 #### <a name="example"></a>Příklad
 
@@ -183,9 +183,9 @@ The original vector v1 is:
 The integer addressed by v1Ptr has a value of: *v1Ptr = 8.
 ```
 
-### <a name="allocate"></a> přidělení
+### <a name="allocate"></a>FISIM
 
-Přiděluje blok paměti dostatečně velký pro uložení alespoň nějaké zadaný počet prvků.
+Přidělí dostatečně velký blok paměti pro uložení alespoň některého zadaného počtu prvků.
 
 ```cpp
 pointer allocate(size_type count, const void* _Hint);
@@ -193,19 +193,19 @@ pointer allocate(size_type count, const void* _Hint);
 
 #### <a name="parameters"></a>Parametry
 
-*Počet*\
-Počet elementů, u kterých má být přidělené dostatečné úložiště.
+*výpočtu*\
+Počet prvků, pro které má být přiděleno dostatečné úložiště.
 
 *_Hint*\
-Konstantní ukazatel, který vám mohou pomoci objekt alokátoru, který vyhověli žádosti pro úložiště vyhledáním adresu objektu přidělena před požadavku.
+Ukazatel const, který může pomoci objektu přidělování, splnit požadavek na úložiště hledáním adresy objektu přiděleného před požadavkem.
 
 #### <a name="return-value"></a>Návratová hodnota
 
-Ukazatel na přidělený objekt nebo hodnota null, pokud nebyla přidělena paměť.
+Ukazatel na přidělený objekt nebo hodnotu null, pokud nebyla přidělena paměť.
 
 #### <a name="remarks"></a>Poznámky
 
-Členská funkce alokují prostor pro pole count prvků typu `Type`, podle volání new – operátor (*počet*). Vrací ukazatel na přidělený objekt. Pomocný parametr argument pomáhá zlepšit místo odkazu; některé alokátorů platná volba je adresu objektu dříve přidělenou na stejný objekt alokátoru a ještě nebyla uvolněna. Slouží k poskytování žádné pomocný parametr, použijte argument ukazatele s hodnotou null.
+Členská funkce přiděluje úložiště pro pole počtu elementů typu `Type`, voláním operátoru new (*Count*). Vrátí ukazatel na přidělený objekt. Argument pomocného parametru pomáhá některým alokátorům zlepšit místní informace; platná volba je adresa objektu dříve přidělená stejným objektem přidělování a ještě není navrácená. Chcete-li zadat žádný pomocný parametr, použijte místo toho argument ukazatele s hodnotou null.
 
 #### <a name="example"></a>Příklad
 
@@ -243,9 +243,9 @@ int main( )
 0 1 2 3 4 5 6 7 8 9
 ```
 
-### <a name="allocator"></a> Allocator –
+### <a name="allocator"></a>dělující
 
-Konstruktory, které slouží k vytvoření objektů alokátoru.
+Konstruktory používané pro vytváření objektů přidělování
 
 ```cpp
 allocator();
@@ -256,12 +256,12 @@ template <class Other>
 
 #### <a name="parameters"></a>Parametry
 
-*doprava*\
-Objekt alokátoru, který má být zkopírován.
+*Kliknutím*\
+Objekt přidělování, který se má zkopírovat
 
 #### <a name="remarks"></a>Poznámky
 
-Konstruktor nemá žádný účinek. Obecně platí ale objekt alokátoru, který je vytvořen z jiného objektu allocator by měl porovnávají se stejně k němu a povolit intermixing objekt přidělení a uvolnění mezi dvěma objekty alokátoru.
+Konstruktor neprovede žádnou akci. Obecně platí, že objekt přidělování vytvořený z jiného objektu přidělování by se měl porovnat se stejnou hodnotou a povolit vzájemné kombinování přidělování objektů a uvolnění mezi dvěma objekty přidělování.
 
 #### <a name="example"></a>Příklad
 
@@ -326,9 +326,9 @@ The allocator objects cv1Alloc & v1Alloc are equal.
 The allocator objects cAlloc & Alloc are equal.
 ```
 
-### <a name="const_pointer"></a> const_pointer
+### <a name="const_pointer"></a>const_pointer
 
-Typ, který poskytuje konstantní ukazatel na typ objektu spravovaného pomocí přidělujícího modulu.
+Typ, který poskytuje konstantní ukazatel na typ objektu spravovaného přidělováním.
 
 ```cpp
 typedef const value_type *const_pointer;
@@ -336,7 +336,7 @@ typedef const value_type *const_pointer;
 
 #### <a name="remarks"></a>Poznámky
 
-Typ ukazatele, který popisuje objekt `ptr` , které můžete určit, pomocí výrazu `*ptr`, libovolný objekt const, můžete přidělit objekt alokátoru třídy šablony.
+Typ ukazatele popisuje objekt `ptr` , který může být určen pomocí výrazu `*ptr`, libovolný objekt const, který objekt pro přidělování tříd šablon může přidělit.
 
 #### <a name="example"></a>Příklad
 
@@ -381,9 +381,9 @@ The original vector v1 is:
 The integer's address found has a value of: 10.
 ```
 
-### <a name="const_reference"></a> const_reference
+### <a name="const_reference"></a>const_reference
 
-Typ, který poskytuje konstantní odkaz na typ objektu spravovaného pomocí přidělujícího modulu.
+Typ, který poskytuje konstantní odkaz na typ objektu spravovaného přidělováním.
 
 ```cpp
 typedef const value_type& const_reference;
@@ -391,7 +391,7 @@ typedef const value_type& const_reference;
 
 #### <a name="remarks"></a>Poznámky
 
-Typ odkazu, který popisuje objekt, který můžete určit všechny konstantní objekt, který můžete přidělit objekt alokátoru třídy šablony.
+Typ odkazu popisuje objekt, který může určit libovolný objekt const, který může přidělit objekt objektu pro přidělování tříd šablon.
 
 #### <a name="example"></a>Příklad
 
@@ -447,9 +447,9 @@ The value of the element referred to by vcref,
 after nofication through its nonconst iterator, is: 175.
 ```
 
-### <a name="construct"></a> Konstrukce
+### <a name="construct"></a>Contains
 
-Vytvoří konkrétní typ objektu na zadané adrese, který je inicializován se zadanou hodnotou.
+Vytvoří konkrétní typ objektu na zadané adrese, která je inicializována se zadanou hodnotou.
 
 ```cpp
 void construct(pointer ptr, const Type& val);
@@ -460,15 +460,15 @@ template <class _Other>
 
 #### <a name="parameters"></a>Parametry
 
-*PTR*\
-Ukazatel na umístění, kde má být vytvořen objekt.
+*střed*\
+Ukazatel na umístění, kde má být objekt vytvořen.
 
-*Val*\
-Hodnota, pomocí kterého je inicializovat objekt vytváří.
+*počítává*\
+Hodnota, se kterou má být inicializován objekt vytvořen.
 
 #### <a name="remarks"></a>Poznámky
 
-První členská funkce je ekvivalentní **nové** ((`void` \*) `ptr`) **typ** (`val`).
+První členská funkce je ekvivalentní typu **New** ((`void` \*) `ptr`) **Type** (`val`).
 
 #### <a name="example"></a>Příklad
 
@@ -519,9 +519,9 @@ The modified vector v1 is:
 ( 3 7 9 12 15 18 21 ).
 ```
 
-### <a name="deallocate"></a> zrušit přidělení
+### <a name="deallocate"></a>uvolnit
 
-Uvolní zadaný počet objektů z úložiště počínaje na určené pozici.
+Uvolní zadaný počet objektů od úložiště, které začínají na zadané pozici.
 
 ```cpp
 void deallocate(pointer ptr, size_type count);
@@ -529,23 +529,23 @@ void deallocate(pointer ptr, size_type count);
 
 #### <a name="parameters"></a>Parametry
 
-*PTR*\
-Ukazatel na první objekt k zrušeno přidělení úložiště.
+*střed*\
+Ukazatel na první objekt, který má být vrácen z úložiště.
 
-*Počet*\
-Počet objektů pro zrušeno přidělení úložiště.
+*výpočtu*\
+Počet objektů, které se mají uvolnit z úložiště
 
 #### <a name="remarks"></a>Poznámky
 
-Členská funkce uvolňuje úložiště pro počet objektů typu pole `Type` počínaje *ptr*, voláním `operator delete(ptr)`. Ukazatel *ptr* musí vrácení dříve voláním [přidělit](#allocate) pro objekt alokátoru, který při porovnání rovna  **\*to**, přidělení matici objekt stejné velikosti a typu. `deallocate` nikdy nevyvolá výjimku.
+Členská funkce uvolní úložiště pro pole počtu objektů typu `Type` začínající na *PTR*, voláním. `operator delete(ptr)` Ukazatel *PTR* musí být vrácen dříve voláním pro [přidělení](#allocate) objektu alokace, který se rovná  **\*tomuto**, a přidělení objektu pole stejné velikosti a typu. `deallocate`nikdy nevyvolává výjimku.
 
 #### <a name="example"></a>Příklad
 
-Příklad použití členská funkce, najdete v části [allocator::allocate](#allocate).
+Příklad použití členské funkce naleznete v tématu [přidělování:: allocate](#allocate).
 
-### <a name="destroy"></a> zrušení
+### <a name="destroy"></a>způsobit
 
-Volá destruktor objekty bez rušení přidělení paměti uložení objektu.
+Volá destruktor objektů bez zrušení přidělení paměti, kde byl objekt uložen.
 
 ```cpp
 void destroy(pointer ptr);
@@ -553,12 +553,12 @@ void destroy(pointer ptr);
 
 #### <a name="parameters"></a>Parametry
 
-*PTR*\
-Ukazatel s vyznačením adresu objektu, který se má zničit.
+*střed*\
+Ukazatel označující adresu objektu, který má být zničen.
 
 #### <a name="remarks"></a>Poznámky
 
-Členská funkce odstraní objektu určeném *ptr*, voláním destruktoru `ptr->` **typ**:: **~ typ**.
+Členská funkce zničí objekt, který je určen *PTR*, voláním `ptr->` **typu**destruktoru:: **~ Type**.
 
 #### <a name="example"></a>Příklad
 
@@ -609,9 +609,9 @@ The modified vector v1 is:
 ( 2 4 6 8 10 -99 14 ).
 ```
 
-### <a name="difference_type"></a> difference_type
+### <a name="difference_type"></a>difference_type
 
-Celočíselný typ se znaménkem, které mohou představovat rozdíl mezi hodnotami ukazatelů na typ objektu spravovaného pomocí přidělujícího modulu.
+Podepsaný integrální typ, který může představovat rozdíl mezi hodnotami ukazatelů na typ objektu spravovaného přidělováním.
 
 ```cpp
 typedef ptrdiff_t difference_type;
@@ -619,7 +619,7 @@ typedef ptrdiff_t difference_type;
 
 #### <a name="remarks"></a>Poznámky
 
-Typ celé číslo se znaménkem, který popisuje objekt, který může představovat rozdíl mezi adresami jakékoli dva prvky v sekvenci, která může přidělit objekt alokátoru třídy šablony.
+Typ signed integer popisuje objekt, který může představovat rozdíl mezi adresami všech dvou prvků v sekvenci, které může objekt pro přidělování tříd šablon přidělit.
 
 #### <a name="example"></a>Příklad
 
@@ -670,9 +670,9 @@ Pointer v1PtrB addresses 12.
 The difference between the integer's addresses is: 8.
 ```
 
-### <a name="max_size"></a> max_size
+### <a name="max_size"></a>max_size
 
-Vrátí počet prvků typu `Type` , které by mohly být přiděleny v objektu alokátoru třídy předtím, než se využilo volné paměti.
+Vrátí počet prvků typu `Type` , které mohou být přiděleny objektem Alokátor třídy před vyřazením volné paměti.
 
 ```cpp
 size_type max_size() const;
@@ -680,7 +680,7 @@ size_type max_size() const;
 
 #### <a name="return-value"></a>Návratová hodnota
 
-Počet prvků, které by mohly být přiděleny.
+Počet prvků, které mohou být přiděleny.
 
 #### <a name="example"></a>Příklad
 
@@ -739,9 +739,9 @@ int main( )
 }
 ```
 
-### <a name="op_eq"></a> operátor =
+### <a name="op_eq"></a>operátor =
 
-Přiřadí jeden objekt přidělování na jiný objekt alokátoru.
+Přiřadí jeden objekt přidělování k jinému objektu přidělování.
 
 ```cpp
 template <class Other>
@@ -750,16 +750,16 @@ template <class Other>
 
 #### <a name="parameters"></a>Parametry
 
-*doprava*\
-Objekt alokátoru pro přiřazení jiného takový objekt.
+*Kliknutím*\
+Objekt přidělování, který má být přiřazen k jinému takovému objektu.
 
 #### <a name="return-value"></a>Návratová hodnota
 
-Odkaz na objekt alokátoru, který
+Odkaz na objekt přidělování
 
 #### <a name="remarks"></a>Poznámky
 
-Operátor přiřazení šablony nemá žádný účinek. Obecně platí ale objekt alokátoru, který je přiřazen k jinému objektu allocator by měl porovnávají se stejně k němu a povolit intermixing objekt přidělení a uvolnění mezi dvěma objekty alokátoru.
+Operátor přiřazení šablony neprovádí žádnou akci. Obecně platí, že objekt přidělování přiřazený jinému objektu přidělování by se měl porovnat se stejnou hodnotou a povolit vzájemné kombinování přidělování objektů a uvolnění mezi dvěma objekty přidělování.
 
 #### <a name="example"></a>Příklad
 
@@ -802,9 +802,9 @@ int main( )
 }
 ```
 
-### <a name="pointer"></a> Ukazatel
+### <a name="pointer"></a>ukazatele
 
-Typ, který poskytuje ukazatel na typ objektu spravovaného pomocí přidělujícího modulu.
+Typ, který poskytuje ukazatel na typ objektu spravovaného přidělováním.
 
 ```cpp
 typedef value_type *pointer;
@@ -812,7 +812,7 @@ typedef value_type *pointer;
 
 #### <a name="remarks"></a>Poznámky
 
-Typ ukazatele, který popisuje objekt `ptr` , které můžete určit, pomocí výrazu  **\*ptr**, libovolný objekt, který můžete přidělit objekt alokátoru třídy šablony.
+Typ ukazatele popisuje objekt `ptr` , který lze určit pomocí výrazu  **\*PTR**, libovolný objekt, který může přidělit objekt objektu pro přidělování tříd šablon.
 
 #### <a name="example"></a>Příklad
 
@@ -857,9 +857,9 @@ The original vector v1 is:
 The integer addressed by v1Ptr has a value of: *v1Ptr = 12.
 ```
 
-### <a name="rebind"></a> obnovení vazby
+### <a name="rebind"></a>Rebind
 
-Struktura, která umožňuje alokátoru pro objekty jednoho typu pro přidělení úložiště pro objekty jiného typu.
+Struktura, která umožňuje Alokátor pro objekty jednoho typu přidělit úložiště pro objekty jiného typu.
 
 ```cpp
 struct rebind { typedef allocator<_Other> other; };
@@ -867,22 +867,22 @@ struct rebind { typedef allocator<_Other> other; };
 
 #### <a name="parameters"></a>Parametry
 
-*Ostatní*\
-Typ prvku, pro kterou je přidělena paměť.
+*jiná*\
+Typ elementu, pro který je přidělena paměť.
 
 #### <a name="remarks"></a>Poznámky
 
-Tato struktura je užitečné pro přidělení paměti pro typ, který se liší od typu elementu kontejneru se implementuje.
+Tato struktura je užitečná pro přidělení paměti pro typ, který se liší od typu elementu implementovaného kontejneru.
 
-Člen šablony třídy definuje typ jiné. Jejím jediným účelem je poskytnout název typu **alokátoru**\<_ **jiných**>, název typu **alokátoru** \< **typu** >.
+Třída šablony člena definuje typ jiný. Jeho jediným účelem je poskytnout **Alokátor**\<názvu typu _ **jiné**>, s ohledem na **typ** **přidělování** \< názvu typu >.
 
-Mějme například objekt alokátoru `al` typu `A`, kterou můžete přidělit objekt typu `_Other` s výrazem:
+Například s ohledem na objekt `al` Alokátor typu `A`můžete přidělit objekt typu `_Other` s výrazem:
 
 ```cpp
 A::rebind<Other>::other(al).allocate(1, (Other *)0)
 ```
 
-Nebo můžete pojmenovat jeho typ ukazatele napsáním typ:
+Nebo můžete pojmenovat jeho typ ukazatele zápisem typu:
 
 ```cpp
 A::rebind<Other>::other::pointer
@@ -913,9 +913,9 @@ int main( )
 }
 ```
 
-### <a name="reference"></a> Referenční dokumentace
+### <a name="reference"></a>odkaz
 
-Typ, který poskytuje odkaz na typ objektu spravovaného pomocí přidělujícího modulu.
+Typ, který poskytuje odkaz na typ objektu spravovaného přidělováním.
 
 ```cpp
 typedef value_type& reference;
@@ -923,7 +923,7 @@ typedef value_type& reference;
 
 #### <a name="remarks"></a>Poznámky
 
-Typ odkazu, který popisuje objekt, který můžete určit libovolný objekt, který můžete přidělit objekt alokátoru třídy šablony.
+Odkazový typ popisuje objekt, který může určit libovolný objekt, který může přidělit objekt objektu pro přidělování tříd šablon.
 
 #### <a name="example"></a>Příklad
 
@@ -973,9 +973,9 @@ the first element in the vector.
 The element referred to by vref after being modified is: 150.
 ```
 
-### <a name="size_type"></a> size_type
+### <a name="size_type"></a>size_type
 
-Celočíselný typ bez znaménka představující délku jakékoli sekvenci, která může přidělit objekt alokátoru třídy šablony.
+Celočíselný typ bez znaménka, který může představovat délku jakékoli sekvence, kterou může objekt přidělování tříd šablony přidělit.
 
 ```cpp
 typedef size_t size_type;
@@ -1018,9 +1018,9 @@ int main( )
 }
 ```
 
-### <a name="value_type"></a> value_type
+### <a name="value_type"></a>value_type
 
-Typ, který je spravovaný nástrojem přidělujícího modulu.
+Typ, který je spravován přidělováním.
 
 ```cpp
 typedef Type value_type;
@@ -1028,7 +1028,7 @@ typedef Type value_type;
 
 #### <a name="remarks"></a>Poznámky
 
-Typ je synonymum pro parametr šablony `Type`.
+Typ je synonymum pro parametr `Type`šablony.
 
 #### <a name="example"></a>Příklad
 
@@ -1081,14 +1081,14 @@ The modified vector v is:
 
 ## <a name="helpers"></a>Pomocné rutiny
 
-### <a name="allocator_arg_t"></a> allocator_arg_t
+### <a name="allocator_arg_t"></a>allocator_arg_t
 
 ```cpp
 struct allocator_arg_t { explicit allocator_arg_t() = default; };
 inline constexpr allocator_arg_t allocator_arg{};
 ```
 
-### <a name="uses_allocator"></a> uses_allocator –
+### <a name="uses_allocator"></a>uses_allocator
 
 ```cpp
 template <class T, class Alloc> struct uses_allocator;

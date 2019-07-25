@@ -7,16 +7,16 @@ helpviewer_keywords:
 - add_volatile class
 - add_volatile
 ms.assetid: cde57277-d764-402d-841e-97611ebaab14
-ms.openlocfilehash: ff48b1848e2d7631d789621a5ef845d04d8e8821
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: becea4ff52342a79d0b87ffe0022e2cf84c47949
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62411133"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68456532"
 ---
 # <a name="addvolatile-class"></a>add_volatile – třída
 
-Díky **volatile** typu ze zadaného typu.
+Vytvoří **stálý** typ ze zadaného typu.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -30,12 +30,12 @@ using add_volatile_t = typename add_volatile<T>::type;
 
 ### <a name="parameters"></a>Parametry
 
-*T*<br/>
+*Š*\
 Typ, který chcete upravit.
 
 ## <a name="remarks"></a>Poznámky
 
-Instance `add_volatile<T>` má člen **typedef** `type` , který je *T* Pokud *T* je odkaz, funkce nebo přechodný typ, jinak **volatile** *T*. Alias `add_volatile_t` je zástupce pro přístup k členu **typedef** `type`.
+`add_volatile<T>` Instance má **typedef**     člena, který je t, pokud t je odkaz, funkce nebo volatile typu, jinak volatile T. `type` Alias `add_volatile_t` je zástupce pro přístup k **definici TypeDef** `type`člena.
 
 ## <a name="example"></a>Příklad
 
@@ -61,11 +61,11 @@ add_volatile<int> == int
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** \<type_traits >
+**Hlavička:** \<type_traits >
 
-**Namespace:** std
+**Obor názvů:** std
 
 ## <a name="see-also"></a>Viz také:
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
-[remove_volatile – třída](../standard-library/remove-volatile-class.md)<br/>
+[< type_traits >](../standard-library/type-traits.md)\
+[remove_volatile – třída](../standard-library/remove-volatile-class.md)

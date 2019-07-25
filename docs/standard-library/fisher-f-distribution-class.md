@@ -26,16 +26,16 @@ helpviewer_keywords:
 - std::fisher_f_distribution [C++], param_type
 - std::fisher_f_distribution [C++], param_type
 ms.assetid: 9513b6ce-3309-4be1-829b-f504bca35bbf
-ms.openlocfilehash: 643c564d7407a79bd9e2e776946c4b8df37a2974
-ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
+ms.openlocfilehash: c5e45af5d350ba9c3f1e4e240dec2c13366318c3
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66449921"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68457047"
 ---
 # <a name="fisherfdistribution-class"></a>fisher_f_distribution – třída
 
-Generuje Fisher F rozdělení.
+Vygeneruje Fisherskou distribuci F.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -69,34 +69,34 @@ public:
 
 ### <a name="parameters"></a>Parametry
 
-*RealType*<br/>
-Výchozí hodnota typu s plovoucí desetinnou čárkou výsledku **double**. Možné typy, najdete v části [ \<náhodné >](../standard-library/random.md).
+*RealType*\
+Typ výsledku s plovoucí desetinnou čárkou, výchozí hodnota je **Double**. Možné typy naleznete v tématu [ \<Random >](../standard-library/random.md).
 
-*URNG*<br/>
-Jednotné náhodných čísel generátor modul. Možné typy, najdete v části [ \<náhodné >](../standard-library/random.md).
+*URNG*\
+Jednotný modul generátoru náhodných čísel. Možné typy naleznete v tématu [ \<Random >](../standard-library/random.md).
 
 ## <a name="remarks"></a>Poznámky
 
-Třída šablony popisuje distribuci, která vytváří hodnoty uživatelem zadaného s plovoucí desetinnou čárkou, typu nebo typu **double** Pokud se žádný nezadá, rozděleny podle Fisher F-rozdělení. Následující tabulka odkazuje na články týkající se jednotlivých členů.
+Třída šablony popisuje distribuci, která vytváří hodnoty typu s plovoucí desetinnou čárkou, nebo typ **Double** , pokud není k dispozici, distribuované podle rozdělení v fisherích. Následující tabulka obsahuje odkazy na články týkající se jednotlivých členů.
 
 ||||
 |-|-|-|
 |[fisher_f_distribution](#fisher_f_distribution)|`fisher_f_distribution::m`|`fisher_f_distribution::param`|
 |`fisher_f_distribution::operator()`|`fisher_f_distribution::n`|[param_type](#param_type)|
 
-Funkce vlastností `m()` a `n()` návratové hodnoty pro parametry uložené distribuce `m` a `n` v uvedeném pořadí.
+Vlastnosti `m()` a `n()` vrátí hodnoty pro uložené parametry `m` distribuce a `n` v uvedeném pořadí.
 
-Vlastnost člena `param()` Nastaví nebo vrátí `param_type` uložené distribuční balíček parametrů.
+Člen `param()` vlastnosti nastaví nebo `param_type` vrátí uložený balíček parametrů distribuce.
 
-`min()` a `max()` členské funkce vrátí nejmenší možné výsledek a největší výsledek je to možné, v uvedeném pořadí.
+Členské funkce `max()` a vracejí nejmenší možný výsledek a největší možný výsledek, v uvedeném pořadí. `min()`
 
-`reset()` Členská funkce odstraní všechny hodnoty uložené v mezipaměti tak, aby výsledek dalšího volání do `operator()` nezávisí na žádné hodnoty získané z modulu před voláním.
+Členská funkce zahodí všechny hodnoty uložené v mezipaměti, takže výsledek dalšího `operator()` volání není závislý na všech hodnotách získaných z modulu před voláním. `reset()`
 
-`operator()` Členské funkce vrátí další vygenerovanou hodnotu založená na modulu URNG z aktuálního balíčku parametrů nebo balíček zadaný parametr.
+`operator()` Členské funkce vrátí další vygenerovanou hodnotu založenou na modulu URNG, buď z aktuálního balíčku parametrů, nebo pomocí zadaného balíčku parametrů.
 
-Další informace o distribuci třídy a jejich členy, naleznete v tématu [ \<náhodné >](../standard-library/random.md).
+Další informace o třídách distribuce a jejich členech naleznete v tématu [ \<Random >](../standard-library/random.md).
 
-Podrobné informace o rozdělení F, najdete v článku Wolfram MathWorld [F rozdělení](https://go.microsoft.com/fwlink/p/?linkid=400899).
+Podrobné informace o distribuci F naleznete v článku Wolfram MathWorld v článku [f-distribuce](https://go.microsoft.com/fwlink/p/?linkid=400899).
 
 ## <a name="example"></a>Příklad
 
@@ -159,7 +159,7 @@ int main()
 
 ## <a name="output"></a>Výstup
 
-Nejprve spusťte:
+První spuštění:
 
 ```Output
 Enter a floating point value for the 'm' distribution parameter (must be greater than zero): 1
@@ -183,7 +183,7 @@ Distribution for 10 samples:
     10: 3.4320929653
 ```
 
-Druhé spuštění:
+Druhý běh:
 
 ```Output
 Enter a floating point value for the 'm' distribution parameter (must be greater than zero): 1
@@ -207,7 +207,7 @@ Distribution for 10 samples:
     10: 20829747131.7185860000
 ```
 
-Třetí spustit:
+Třetí běh:
 
 ```Output
 Enter a floating point value for the 'm' distribution parameter (must be greater than zero): .1
@@ -233,13 +233,13 @@ Distribution for 10 samples:
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** \<náhodné >
+**Hlavička:** \<náhodné >
 
-**Namespace:** std
+**Obor názvů:** std
 
-## <a name="fisher_f_distribution"></a>  fisher_f_distribution::fisher_f_distribution
+## <a name="fisher_f_distribution"></a>fisher_f_distribution::fisher_f_distribution
 
-Vytvoří rozložení.
+Sestaví rozdělení.
 
 ```cpp
 explicit fisher_f_distribution(result_type m = 1.0, result_type n = 1.0);
@@ -248,22 +248,22 @@ explicit fisher_f_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>Parametry
 
-*m*<br/>
-`m` Parametru distribuce.
+*4m*\
+Parametr `m` distribuce.
 
-*n*<br/>
-`n` Parametru distribuce.
+*n*\
+Parametr `n` distribuce.
 
-*Parametr*<br/>
-`param_type` Struktura používaná k vytvoření distribuce.
+*parametr*\
+`param_type` Struktura použitá k sestavení distribuce.
 
 ### <a name="remarks"></a>Poznámky
 
-**Předpoklad:** `0.0 < m` a `0.0 < n`
+**Předběžná podmínka:** `0.0 < m` a`0.0 < n`
 
-První konstruktor vytvoří objekt, jehož uložené `m` hodnota obsahuje hodnotu *m* a jehož uložená `n` hodnota obsahuje hodnotu *n*.
+První konstruktor vytvoří objekt `m` , jehož uložená hodnota obsahuje hodnotu *m* a jehož uložená `n` hodnota obsahuje hodnotu *n*.
 
-Druhý konstruktor vytvoří objekt, jehož uložené parametry jsou inicializovány z *parametr*. Můžete získat a nastavit aktuální parametry existující distribuční voláním `param()` členskou funkci.
+Druhý konstruktor vytvoří objekt, jehož uložené parametry jsou inicializovány z *parametr*. Můžete získat a nastavit aktuální parametry existující distribuce voláním `param()` členské funkce.
 
 ## <a name="param_type"></a>  fisher_f_distribution::param_type
 
@@ -283,21 +283,21 @@ struct param_type {
 
 ### <a name="parameters"></a>Parametry
 
-*m*<br/>
-`m` Parametru distribuce.
+*4m*\
+Parametr `m` distribuce.
 
-*n*<br/>
-`n` Parametru distribuce.
+*n*\
+Parametr `n` distribuce.
 
-*doprava*<br/>
-`param_type` Objekt k porovnání s tím.
+*Kliknutím*\
+`param_type` Objekt, který se má porovnat.
 
 ### <a name="remarks"></a>Poznámky
 
-**Předpoklad:** `0.0 < m` a `0.0 < n`
+**Předběžná podmínka:** `0.0 < m` a`0.0 < n`
 
-Tato struktura může být předán konstruktoru třídy distribuce při vytváření instance, do `param()` členskou funkci pro nastavení uložené parametry existující distribuční a k `operator()` použije místo uložené parametry.
+Tuto strukturu lze předat konstruktoru třídy distribuce při vytváření instance, `param()` členské funkci pro nastavení uložených parametrů stávající distribuce a k `operator()` použití namísto uložených parametrů.
 
 ## <a name="see-also"></a>Viz také:
 
-[\<náhodné >](../standard-library/random.md)<br/>
+[\<náhodné >](../standard-library/random.md)

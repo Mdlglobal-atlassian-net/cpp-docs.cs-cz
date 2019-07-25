@@ -7,12 +7,12 @@ helpviewer_keywords:
 - add_pointer class
 - add_pointer
 ms.assetid: d8095cb0-6578-4143-b78f-87f82485298c
-ms.openlocfilehash: fda2bcbd3484b9244d69358aac3e9baf5d37a4ad
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 759867a542aa128755ba31e090984eb5b3fe6963
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62411211"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68456549"
 ---
 # <a name="addpointer-class"></a>add_pointer – třída
 
@@ -30,18 +30,18 @@ using add_pointer_t = typename add_pointer<T>::type;
 
 ### <a name="parameters"></a>Parametry
 
-*T*<br/>
+*Š*\
 Typ, který chcete upravit.
 
 ## <a name="remarks"></a>Poznámky
 
-Člen **typedef** `type` pojmenovává stejný typ jako `remove_reference<T>::type*`. Alias `add_pointer_t` je zástupce pro přístup k členu **typedef** `type`.
+**Definice typedef** `type` člena má stejný typ jako `remove_reference<T>::type*`. Alias `add_pointer_t` je zástupce pro přístup k **definici TypeDef** `type`člena.
 
-Protože je vytvořit ukazatel z odkazu, `add_pointer` odebere odkaz, pokud existuje, z určeného typu dříve, než se provede ukazatel na typ. V důsledku toho můžete použít typ s `add_pointer` bez nutnosti zabývat o tom, zda je typ odkaz.
+Vzhledem k tomu, že je neplatný pro vytvoření ukazatele z odkazu `add_pointer` , odebere odkaz, pokud existuje, ze zadaného typu před tím, než vytvoří ukazatel na typ. V důsledku toho můžete použít typ `add_pointer` bez ohledu na to, zda je typ odkaz.
 
 ## <a name="example"></a>Příklad
 
-Následující příklad ukazuje, že `add_pointer` typu je stejné jako ukazatel na typu.
+Následující příklad ukazuje, že `add_pointer` typ je stejný jako ukazatel na tento typ.
 
 ```cpp
 #include <type_traits>
@@ -65,11 +65,11 @@ add_pointer_t<int> == int *
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** \<type_traits >
+**Hlavička:** \<type_traits >
 
-**Namespace:** std
+**Obor názvů:** std
 
 ## <a name="see-also"></a>Viz také:
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
-[remove_pointer – třída](../standard-library/remove-pointer-class.md)<br/>
+[< type_traits >](../standard-library/type-traits.md)\
+[remove_pointer – třída](../standard-library/remove-pointer-class.md)

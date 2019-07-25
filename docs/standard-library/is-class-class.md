@@ -7,16 +7,16 @@ helpviewer_keywords:
 - is_class class
 - is_class
 ms.assetid: 96fc34a3-a81b-4ec6-b7fb-baafde1a0f4e
-ms.openlocfilehash: 43a4211d9841e754cefbe1bdf405001f0f4657d0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7dc71622a37164e996b067276ddf8a5d1dd88b62
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62383643"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68456642"
 ---
 # <a name="isclass-class"></a>is_class – třída
 
-Testuje, zda je typ je třída.
+Testuje, zda je typ třída.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -27,12 +27,12 @@ struct is_class;
 
 ### <a name="parameters"></a>Parametry
 
-*Ty*<br/>
+*Ty*\
 Typ, na který chcete odeslat dotaz.
 
 ## <a name="remarks"></a>Poznámky
 
-Instance predikátu typu obsahuje hodnotu true, pokud typ *Ty* je typ definován jako **třídy** nebo **struktura**, nebo `cv-qualified` formu jeden z nich, jinak má hodnotu false.
+Instance predikátu typu má hodnotu true, pokud je typ, *který je typ* definovaný jako **Třída** nebo `cv-qualified` **Struktura**, nebo forma jednoho z nich, v opačném případě obsahuje hodnotu false.
 
 ## <a name="example"></a>Příklad
 
@@ -65,12 +65,12 @@ is_class<int> == false
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** \<type_traits >
+**Hlavička:** \<type_traits >
 
-**Namespace:** std
+**Obor názvů:** std
 
 ## <a name="see-also"></a>Viz také:
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
-[is_compound – třída](../standard-library/is-compound-class.md)<br/>
-[is_union – třída](../standard-library/is-union-class.md)<br/>
+[< type_traits >](../standard-library/type-traits.md)\
+[is_compound – třída](../standard-library/is-compound-class.md)\
+[is_union – třída](../standard-library/is-union-class.md)

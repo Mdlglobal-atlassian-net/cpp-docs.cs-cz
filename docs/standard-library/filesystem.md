@@ -1,5 +1,5 @@
 ---
-title: '&lt;systém souborů&gt;'
+title: '&lt;systému souborů&gt;'
 ms.date: 11/04/2016
 f1_keywords:
 - filesystem/std::experimental::filesystem::directory_entry
@@ -9,16 +9,16 @@ f1_keywords:
 - filesystem/std::experimental::filesystem::directory_iterator
 - <filesystem>
 ms.assetid: 5005753b-46fa-43e1-8d4e-1b38617d3cfd
-ms.openlocfilehash: a44fc3c6c6a37c20e1e1c294929ae3cb15cece58
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 6f97ad75dcf3f01406f305b713b9d14cbe527c52
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68240700"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68457026"
 ---
-# <a name="ltfilesystemgt"></a>&lt;systém souborů&gt;
+# <a name="ltfilesystemgt"></a>&lt;systému souborů&gt;
 
-Zahrnout hlavičku &lt;filesystem > pro přístup k třídy a funkce, které pracují a načtení informací o cesty, soubory a adresáře.
+Zahrňte > &lt;systému souborů hlaviček pro přístup ke třídám a funkcím, které pracují a načítají informace o cestách, souborech a adresářích.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -29,65 +29,65 @@ using namespace std::experimental::filesystem::v1;
 ```
 
 > [!IMPORTANT]
-> Od verze Visual Studio 2017 \<systému souborů > hlavička nebyla dosud standard jazyka C++. C++v sadě Visual Studio 2017 (verze 141 MSVC) implementuje součástí standardu konečný návrh [ISO/IEC JTC 1/SC 22/WG 21 N4100](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n4100.pdf).
+> Od verze sady Visual Studio 2017 \<dosud nebyla hlavička > systému souborů C++ standardem. C++v aplikaci Visual Studio 2017 (MSVC v141) implementuje finální koncept Standard, který se nachází v [ISO/IEC JTC 1/SC 22/WG 21 N4100](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n4100.pdf).
 
-Tato hlavička podporuje systémy souborů z jednoho z dvě různé třídy hostitelských operačních systémech: Microsoft Windows a Posix.
+Tato hlavička podporuje systémy souborů pro jednu ze dvou hlavních tříd hostitelských operačních systémů: Microsoft Windows a POSIX.
 
-Většina funkcí je společná pro obě operačních systémů, tento dokument identifikuje, kde dojde k rozdíly. Příklad:
+I když je většina funkcí společná pro oba operační systémy, tento dokument určuje, kde dochází k rozdílům. Příklad:
 
-- Windows podporuje více názvů root, například c: nebo \\\network_name. Systém souborů se skládá z doménové struktury stromů, každý s vlastní kořenový adresář, jako je například c:\ nebo \\\network_name\\a každou s vlastní aktuální adresář pro dokončení relativní cesta (jeden, který není absolutní cesta).
+- Systém Windows podporuje několik kořenových názvů, například c: \\nebo \network_name. Systém souborů se skládá z doménové struktury stromů, z nichž každý má vlastní kořenový adresář, například c:\. nebo \\\network_name\\a každý s aktuálním adresářem pro dokončení relativní cesty (jeden, který není absolutní cesta).
 
-- POSIX podporuje jeden stromu, bez názvu kořenového jeden kořenový adresář / a jeden aktuální adresář.
+- POSIX podporuje jeden strom bez názvu root, jeden kořenový adresář/a jeden aktuální adresář.
 
-Jiné podstatný rozdíl je nativní reprezentaci cest:
+Dalším významným rozdílem je nativní reprezentace cest:
 
-- Windows používá posloupnost zakončená hodnotou null wchar_t kódováním UTF-16 (jeden nebo dva prvky pro každý znak).
+- Systém Windows používá sekvenci wchar_t zakončenou hodnotou null, která je zakódována jako UTF-16 (jeden nebo dva prvky pro každý znak).
 
-- POSIX využívá posloupnost zakončená hodnotou null typu char, kódováním UTF-8 (jeden nebo více prvků pro každý znak).
+- POSIX používá sekvenci znaků zakončenou znakem null, která je zakódována jako UTF-8 (jeden nebo více prvků pro každý znak).
 
-- Objekt třídy cesty ukládá cesty v nativním formátu, ale podporuje snadný převod mezi touto uložené formulář a externí několika způsoby:
+- Objekt cesty třídy uchovává cestu v nativním formátu, ale podporuje jednoduchý převod mezi tímto uloženým formulářem a několika externími formuláři:
 
-- Posloupnost zakončená hodnotou null char zakódován jako dána podle operačního systému.
+- Sekvence znaku zakončeného hodnotou null, kódovaná jako příznaku pro operační systém.
 
-- Posloupnost zakončená hodnotou null char kódováním UTF-8.
+- Sekvence znaků zakončená hodnotou null, kódovaná jako UTF-8.
 
-- Posloupnost zakončená hodnotou null wchar_t zakódován jako dána podle operačního systému.
+- Sekvence wchar_t zakončená hodnotou null, která je zakódovaná pro operační systém.
 
-- Posloupnost zakončená hodnotou null char16_t kódováním UTF-16.
+- Sekvence char16_t zakončené znakem null kódovaná jako UTF-16.
 
-- Posloupnost zakončená hodnotou null char32_t kódováním UTF-32.
+- Sekvence char32_t zakončené znakem null kódovaná jako UTF-32.
 
-Mezi tyto reprezentace interconversions zprostředkovaného, podle potřeby pomocí jednoho nebo více `codecvt` omezujících vlastností. Pokud objekt konkrétní národní prostředí není došlo ke shodě, těchto omezujících vlastností jsou získávány z globální národní prostředí.
+Vzájemné převody mezi těmito reprezentacemi jsou podle potřeby využívány pomocí jedné nebo více `codecvt` omezujících vlastností. Pokud není určen konkrétní objekt národního prostředí, jsou tyto omezující vlastnosti získány z globálního národního prostředí.
 
-Další rozdíl je podrobností, které každý operační systém vám umožní určit soubor nebo adresář přístupová oprávnění:
+Dalším rozdílem je podrobnosti, se kterými jednotlivé operační systémy umožňují zadat přístupová oprávnění k souboru nebo adresáři:
 
-1. Záznamy Windows určuje, zda je soubor číst pouze nebo zapisovatelný, atribut, který nemá žádný význam pro adresáře.
+1. Systém Windows zaznamenává, zda je soubor jen pro čtení, nebo zapisovatelný, což je atribut, který nemá pro adresáře žádný význam.
 
-1. POSIX zaznamenává, jestli soubor lze číst, písemné nebo spuštěn (zkontrolovat, zda adresář), vlastník, podle vlastníka skupiny nebo podle všichni a navíc několik dalších oprávnění.
+1. POSIX zaznamenává, zda lze soubor číst, zapisovat nebo spustit (zkontrolováno v případě, že se jedná o adresář), vlastník, skupina vlastníka nebo každý, a navíc několik dalších oprávnění.
 
-Společné pro oba systémy je struktura uložené na cestu po vyřešení název kořenového adresáře. Pro c:/abc/xyz/def.ext cesta:
+Společné pro oba systémy jsou strukturou uloženou v cestě, jakmile se dostanete do kořenového názvu. Pro cestu c:/abc/xyz/def. ext:
 
 - Název kořenového adresáře je c:.
 
-- Kořenový adresář je /.
+- Kořenový adresář je/.
 
-- Kořenová cesta je c: /.
+- Kořenová cesta je c:/.
 
-- Relativní cesta je abc/xyz/def.ext.
+- Relativní cesta je abc/xyz/def. ext.
 
-- Cesta k nadřazenému je c:/abc/xyz.
+- Nadřazená cesta je c:/abc/xyz.
 
-- Název souboru je def.ext.
+- Název souboru je def. ext.
 
-- Stopky je def.
+- Kmen je def.
 
-- Rozšíření. externí
+- Přípona je. ext.
 
-Malý rozdíl je **upřednostňované oddělovač**, mezi pořadí adresáře v cestě. V obou operačních systémech umožňují napsat lomítkem /, ale v některých kontextech Windows upřednostňuje zpětné lomítko \\.
+Malým rozdílem je **upřednostňovaný oddělovač**mezi posloupností adresářů v cestě. Oba operační systémy umožňují napsat lomítko/, ale v některých kontextech Windows upřednostňují zpětné lomítko \\.
 
-Nakonec se o důležitou funkci objekty cesty je, že je můžete využít bez ohledu na to argument souboru filename je nutné v třídy definovaná v hlavičce \<fstream – >.
+Nakonec důležitou funkcí objektů cesty je, že je můžete použít všude, kde je vyžadován argument filename v třídách definovaných v hlavičce \<fstream – >.
 
-Další informace a příklady kódu naleznete v tématu [navigace systému souborů (C++)](../standard-library/file-system-navigation.md).
+Další informace a příklady kódu naleznete v tématu [Navigace v systému souborůC++()](../standard-library/file-system-navigation.md).
 
 ## <a name="members"></a>Členové
 
@@ -95,38 +95,38 @@ Další informace a příklady kódu naleznete v tématu [navigace systému soub
 
 |||
 |-|-|
-|[directory_entry – třída](../standard-library/directory-entry-class.md)|Popisuje objekt, který je vrácen `directory_iterator` nebo `recursive_directory_iterator` a obsahuje cestu.|
-|[directory_iterator – třída](../standard-library/directory-iterator-class.md)|Popisuje vstupní iterátor, který pořadí pomocí názvů souboru v adresáři systému souborů.|
-|[filesystem_error – třída](../standard-library/filesystem-error-class.md)|Základní třída pro výjimky, které jsou vyvolány hlášení nižší úrovně systému přetečení.|
-|[path – třída](../standard-library/path-class.md)|Definuje třídu, která ukládá objekt typu šablony `String` , který je vhodný pro použití jako název souboru.|
-|[recursive_directory_iterator – třída](../standard-library/recursive-directory-iterator-class.md)|Popisuje vstupní iterátor, který pořadí pomocí názvů souboru v adresáři systému souborů. Iterátor může také sestup do podadresáře.|
-|[file_status – třída](../standard-library/file-status-class.md)|Zabalí `file_type`.|
+|[directory_entry – třída](../standard-library/directory-entry-class.md)|Popisuje objekt, který je vrácen pomocí `directory_iterator` `recursive_directory_iterator` nebo a a obsahuje cestu.|
+|[directory_iterator – třída](../standard-library/directory-iterator-class.md)|Popisuje vstupní iterátor, který sekvencí názvy souborů v adresářovém systému souborů.|
+|[filesystem_error – třída](../standard-library/filesystem-error-class.md)|Základní třída pro výjimky, které jsou vyvolány pro hlášení přetečení systému nízké úrovně.|
+|[path – třída](../standard-library/path-class.md)|Definuje třídu, která ukládá objekt typu `String` šablony, který je vhodný pro použití jako název souboru.|
+|[recursive_directory_iterator – třída](../standard-library/recursive-directory-iterator-class.md)|Popisuje vstupní iterátor, který sekvencí názvy souborů v adresářovém systému souborů. Iterátor může také dohlížet na podadresáře.|
+|[file_status – třída](../standard-library/file-status-class.md)|Zabalí a `file_type`.|
 
 ### <a name="structs"></a>Struktury
 
 |||
 |-|-|
-|[space_info – struktura](../standard-library/space-info-structure.md)|Obsahuje informace o svazku.|
+|[space_info – struktura](../standard-library/space-info-structure.md)|Uchovává informace o svazku.|
 
 ## <a name="functions"></a>Funkce
 
-[\<FileSystem > funkce](../standard-library/filesystem-functions.md)
+[\<Funkce > systému souborů](../standard-library/filesystem-functions.md)
 
 ## <a name="operators"></a>Operátory
 
-[\<FileSystem > operátory](../standard-library/filesystem-operators.md)
+[\<operátoři > systému souborů](../standard-library/filesystem-operators.md)
 
 ## <a name="enumerations"></a>Výčty
 
 |||
 |-|-|
-|[copy_options](../standard-library/filesystem-enumerations.md#copy_options)|Výčet, který se používá s [copy_file –](../standard-library/filesystem-functions.md#copy_file) a určuje chování, pokud cílový soubor už existuje.|
-|[copy_options](../standard-library/filesystem-enumerations.md#copy_options)|Výčet, který se používá s [copy_file –](../standard-library/filesystem-functions.md#copy_file) a určuje chování, pokud cílový soubor už existuje.|
-|[directory_options –](../standard-library/filesystem-enumerations.md#directory_options)|Výčet, který určuje možnosti pro adresář iterátory.|
+|[copy_options](../standard-library/filesystem-enumerations.md#copy_options)|Výčet, který se používá s [copy_file](../standard-library/filesystem-functions.md#copy_file) a určuje chování, pokud cílový soubor již existuje.|
+|[copy_options](../standard-library/filesystem-enumerations.md#copy_options)|Výčet, který se používá s [copy_file](../standard-library/filesystem-functions.md#copy_file) a určuje chování, pokud cílový soubor již existuje.|
+|[directory_options](../standard-library/filesystem-enumerations.md#directory_options)|Výčet, který určuje možnosti pro iterátory adresáře.|
 |[file_type](../standard-library/filesystem-enumerations.md#file_type)|Výčet pro typy souborů.|
 |[perm_options](../standard-library/filesystem-enumerations.md#perm_options)||
-|[oprávnění](../standard-library/filesystem-enumerations.md#perms)|Typ bitové masky využít k předání možnosti oprávnění a oprávnění|
+|[oprávnění](../standard-library/filesystem-enumerations.md#perms)|Typ maskování, který slouží k předávání oprávnění a možností oprávnění|
 
 ## <a name="see-also"></a>Viz také:
 
-[Odkaz na soubory hlaviček](../standard-library/cpp-standard-library-header-files.md)<br/>
+[Odkazy na hlavičkové soubory](../standard-library/cpp-standard-library-header-files.md)

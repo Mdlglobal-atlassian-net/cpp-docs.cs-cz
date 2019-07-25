@@ -1,21 +1,21 @@
 ---
-title: komplexní&lt;plovoucí desetinnou čárkou&gt;
+title: komplexní&lt;float&gt;
 ms.date: 11/04/2016
 f1_keywords:
 - complex/std::complex<float>
 helpviewer_keywords:
 - complex<float> function
 ms.assetid: 1178eb1e-39bd-4017-89cd-aea95f813939
-ms.openlocfilehash: a09b6d0306f633754cad4b12a652eac557f96634
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: bfe0e9dcb0bf8f8b74487404998e06d233097a39
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62279083"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68453104"
 ---
-# <a name="complexltfloatgt"></a>komplexní&lt;plovoucí desetinnou čárkou&gt;
+# <a name="complexltfloatgt"></a>komplexní&lt;float&gt;
 
-Popisuje objekt, který ukládá seřazená dvojice objektů typu **float**, nejprve představující skutečný součástí komplexní čísla a druhý představující imaginární části.
+Popisuje objekt, který ukládá seřazený pár objektů typu **float**, první představuje skutečnou část komplexního čísla a druhý představující imaginární část.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -41,24 +41,24 @@ constexpr complex(
 
 ### <a name="parameters"></a>Parametry
 
-*_RealVal*<br/>
-Hodnota typu **float** pro skutečné součástí komplexní čísla při konstrukci.
+*_RealVal*\
+Hodnota typu **float** pro reálnou část komplexního čísla, který je vytvářen.
 
-*_ImagVal*<br/>
-Hodnota typu **float** imaginární části komplexního čísla při konstrukci.
+*_ImagVal*\
+Hodnota typu **float** pro imaginární část komplexního čísla, která je konstruována.
 
-*complexNum*<br/>
-Komplexní čísla typu **double** nebo typu **long double** jehož reálné a imaginární části se používají k inicializaci komplexního čísla typu **float** vytváří.
+*complexNum*\
+Komplexní číslo typu **Double** nebo typu **Long Double** , jehož reálné a imaginární části jsou použity k inicializaci komplexního čísla typu **float** , který je konstruován.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Komplexní čísla typu **float**.
+Komplexní číslo typu **float**.
 
 ## <a name="remarks"></a>Poznámky
 
-Explicitní specializace šablony třídy komplexní complex – třída typu **float** se liší od třídy šablony pouze v konstruktorech definuje. Převod z **float** k **double** může být implicitní, ale je méně bezpečný převod z **float** k **long double** je musí být **explicitní**. Použití **explicitní** Vylučuje zahájení s převod typu pomocí syntaxe přiřazení.
+Explicitní specializace třídy Template složitá na komplexní třídu typu **float** se liší od třídy Template pouze v konstruktorech, které definuje. Převod z **float** na **Double** může být implicitní, ale méně bezpečný převod z **float** na **Long Double** musí být **explicitní**. Použití explicitních  pravidel je vycházející z inicializace s převodem typu pomocí syntaxe přiřazení.
 
-Další informace o šablony třídy `complex`, naleznete v tématu [complex – třída](../standard-library/complex-class.md). Pro seznam členů třídy šablony `complex`, naleznete v tématu.
+Další informace o třídě `complex`šablon naleznete v tématu [Complex Class](../standard-library/complex-class.md). Seznam členů třídy `complex`šablony naleznete v tématu.
 
 ## <a name="example"></a>Příklad
 
@@ -118,11 +118,11 @@ arg ( c3 ) = 0.927295 radians, which is 53.1301 degrees.
 
 ## <a name="requirements"></a>Požadavky
 
-**Hlavička**: \<komplexní >
+**Záhlaví**: \<komplexní >
 
-**Namespace:** std
+**Obor názvů:** std
 
 ## <a name="see-also"></a>Viz také:
 
-[complex – třída](../standard-library/complex-class.md)<br/>
-[Bezpečný přístup z více vláken ve standardní knihovně C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[Complex – třída](../standard-library/complex-class.md)\
+[Bezpečný přístup z více vláken ve standardní knihovně C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)

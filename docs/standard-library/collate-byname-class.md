@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - collate_byname class
 ms.assetid: 3dc380df-867c-4763-b60e-ba62a8e63ca7
-ms.openlocfilehash: 46eb139bafcf7368688f32cce37e38362c158c91
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b8ed428da05e706796a981b8ca9d601033156c6f
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62405180"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68458627"
 ---
 # <a name="collatebyname-class"></a>collate_byname – třída
 
@@ -39,22 +39,22 @@ protected:
 
 ### <a name="parameters"></a>Parametry
 
-*_Locname*<br/>
-S názvem národního prostředí.
+*_Locname*\
+Pojmenované národní prostředí.
 
-*_Refs*<br/>
-Počet počáteční odkazů.
+*_Refs*\
+Počáteční počet odkazů
 
 ## <a name="remarks"></a>Poznámky
 
-Třída šablony popisuje objekt, který může sloužit jako [omezující vlastnost národního prostředí](../standard-library/locale-class.md#facet_class) typu [collate](../standard-library/collate-class.md#collate)\<CharType >. Je dáno jeho chování [s názvem](../standard-library/locale-class.md#name) národní prostředí *_Locname*. Každý konstruktor inicializuje jeho základní objekt s [collate](../standard-library/collate-class.md#collate)\<CharType > ( `_Refs`).
+Třída šablony popisuje objekt, který může sloužit jako [omezující vlastnost národního prostředí](../standard-library/locale-class.md#facet_class) typu [COLLATE](../standard-library/collate-class.md#collate)\<CharType >. Jeho chování je určeno [názvem](../standard-library/locale-class.md#name) národního prostředí *_Locname*. Každý konstruktor inicializuje svůj základní objekt pomocí [COLLATE](../standard-library/collate-class.md#collate)\<CharType > ( `_Refs`).
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** \<národní prostředí >
+**Hlavička:** \<> národního prostředí
 
-**Namespace:** std
+**Obor názvů:** std
 
 ## <a name="see-also"></a>Viz také:
 
-[Bezpečný přístup z více vláken ve standardní knihovně C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[Bezpečný přístup z více vláken ve standardní knihovně C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)

@@ -4,19 +4,19 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - rbegin method
 ms.assetid: c1f0d60c-93aa-4313-81b9-04e3f9c796c2
-ms.openlocfilehash: 799ea3ce23f705872fb930f78bc21a1ac25bbd5b
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.openlocfilehash: 9772120ceeeaa906363037ad4f6cd830bc636255
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65221570"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68453324"
 ---
 # <a name="container-classrbegin"></a>Třída kontejneru::rbegin
 
 > [!NOTE]
-> Toto téma je v Microsoft C++ dokumentaci jako funkční příklad kontejnerů používané C++ standardní knihovny. Další informace najdete v tématu [kontejnery standardní knihovny C++](../standard-library/stl-containers.md).
+> Toto téma se nachází v dokumentaci C++ společnosti Microsoft jako nefunkční příklad kontejnerů použitých ve C++ standardní knihovně. Další informace najdete v tématu [ C++ standardní kontejnery knihovny](../standard-library/stl-containers.md).
 
-Vrátí zpětný iterátor, který ukazuje přesně za konec řízené sekvence označení začátku opačném pořadí.
+Vrátí reverzní iterátor, který odkazuje hned za konec řízené sekvence a určí začátek reverzní sekvence.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -28,4 +28,4 @@ reverse_iterator rbegin();
 
 ## <a name="see-also"></a>Viz také:
 
-[Ukázkový kontejner – třída](../standard-library/sample-container-class.md)<br/>
+[Ukázkový kontejner – třída](../standard-library/sample-container-class.md)

@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - is_nothrow_copy_constructible
 ms.assetid: f13a0bea-63b1-492a-9a45-d445df35c282
-ms.openlocfilehash: 7682ce8fd8f127ac20a20fb0918e69d8c2d76947
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 229083f4569647bd65d1ce7e640f753a9418371d
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62413668"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68455950"
 ---
 # <a name="isnothrowcopyconstructible-class"></a>is_nothrow_copy_constructible – třída
 
-Testuje, jestli má typ **nothrow** kopírovací konstruktor.
+Testuje, zda typ obsahuje  kopírovací konstruktor typu webthrow.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -26,19 +26,19 @@ struct is_nothrow_copy_constructible;
 
 ### <a name="parameters"></a>Parametry
 
-*Ty*<br/>
+*Ty*\
 Typ, na který chcete odeslat dotaz.
 
 ## <a name="remarks"></a>Poznámky
 
-Instance predikátu typu obsahuje hodnotu true, pokud typ *Ty* má nothrow kopírovací konstruktor, jinak má hodnotu false.
+Instance predikátu typu má hodnotu true, pokud *má typ,* který má konstruktor Copy, v opačném případě obsahuje hodnotu false.
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** \<type_traits >
+**Hlavička:** \<type_traits >
 
-**Namespace:** std
+**Obor názvů:** std
 
 ## <a name="see-also"></a>Viz také:
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
+[<type_traits>](../standard-library/type-traits.md)

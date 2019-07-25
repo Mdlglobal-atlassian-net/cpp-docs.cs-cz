@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - is_constructible
 ms.assetid: 7cdec5ff-73cf-4f78-a9db-ced2e9c0fd7f
-ms.openlocfilehash: c921efd5b7e12873ce986952029ae39f118ad763
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: dc0596ac7a3fc2bcbcbe49f5fa4b20a971e5e445
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62336852"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68452865"
 ---
 # <a name="isconstructible-class"></a>is_constructible – třída
 
-Ověřuje, zda typ constructible zadáním zadanými typy argumentu.
+Testuje, zda je typ constructible při použití zadaných typů argumentů.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -26,22 +26,22 @@ struct is_constructible;
 
 ### <a name="parameters"></a>Parametry
 
-*T*<br/>
+*Š*\
 Typ, na který chcete odeslat dotaz.
 
-*Args*<br/>
-Typy argumentů tak, aby odpovídaly v konstruktoru sady *T*.
+*Argumentů*\
+Typy argumentů, které se mají spárovat v konstruktoru *T*.
 
 ## <a name="remarks"></a>Poznámky
 
-Instance predikátu typu obsahuje hodnotu true, pokud typ *T* je constructible pomocí typy argumentů v *Args*, v opačném případě obsahuje hodnotu false. Typ *T* je constructible Pokud za definicí proměnné `T t(std::declval<Args>()...);` ve správném formátu. Obě *T* a všechny typy v *Args* musí být kompletními typy **void**, nebo pole s neznámým rozsahem.
+Instance predikátu typu má hodnotu *true, pokud*je typ *T* constructible pomocí typů argumentů v argumentech. v opačném případě obsahuje hodnotu false. Typ *T* je constructible v případě, že `T t(std::declval<Args>()...);` definice proměnné je ve správném formátu. *T* i všechny typy v argumentech *argumentů* musí být úplné typy, **void**nebo pole neznámého typu Bound.
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** \<type_traits >
+**Hlavička:** \<type_traits >
 
-**Namespace:** std
+**Obor názvů:** std
 
 ## <a name="see-also"></a>Viz také:
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
+[<type_traits>](../standard-library/type-traits.md)

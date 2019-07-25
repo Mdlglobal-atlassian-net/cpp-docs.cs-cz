@@ -1,21 +1,21 @@
 ---
-title: is_trivially_move_assignable Class
+title: is_trivially_move_assignable – třída
 ms.date: 11/04/2016
 f1_keywords:
 - type_traits/std::is_trivially_move_assignable
 helpviewer_keywords:
 - is_trivially_move_assignable
 ms.assetid: 374f7322-0706-4bc1-a1a5-4191d0315e28
-ms.openlocfilehash: b25d16658def4e3cf620ab707d2dabacb2620f33
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 324e4a1f1bd3528f09f21c5e485ac814038b7517
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62413385"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68448372"
 ---
-# <a name="istriviallymoveassignable-class"></a>is_trivially_move_assignable Class
+# <a name="istriviallymoveassignable-class"></a>is_trivially_move_assignable – třída
 
-Ověřuje, zda tento typ nemá operátor přiřazení přesunutí triviální.
+Testuje, zda má typ operátor přiřazení triviálního přesunutí.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -26,31 +26,31 @@ struct is_trivially_move_assignable;
 
 ### <a name="parameters"></a>Parametry
 
-*Ty*<br/>
+*Ty*\
 Typ, na který chcete odeslat dotaz.
 
 ## <a name="remarks"></a>Poznámky
 
-Instance predikátu typu obsahuje hodnotu true, pokud typ *Ty* je třída, která má triviální operátor přiřazení přesunutí, jinak má hodnotu false.
+Instance predikátu typu má hodnotu true, *Pokud typ je* třída, která má operátor přiřazení triviálního přesunu, jinak obsahuje hodnotu false.
 
-Operátor přiřazení přesunu pro třídu *Ty* triviální pokud:
+Operátor přiřazení přesunu pro *danou třídu je* triviální, pokud:
 
 implicitně se poskytuje
 
-Třída *Ty* nemá žádné virtuální funkce
+Třída *ty* nemá žádné virtuální funkce.
 
-Třída *Ty* nemá žádné virtuálních základních tříd
+Třída *ty* nemá žádné virtuální základy.
 
-třídy všechny nestatické datové členy typu třídy mají operátory přiřazení pro přesunutí jednoduchého dotazu
+třídy všech nestatických datových členů typu třídy mají operátory přiřazení triviálního přesunutí.
 
-třídy nestatických datových členů typu pole třídy mají operátory přiřazení pro přesunutí jednoduchého dotazu
+třídy všech nestatických datových členů typu Array třídy mají operátory přiřazení triviálního přesunutí.
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** \<type_traits >
+**Hlavička:** \<type_traits >
 
-**Namespace:** std
+**Obor názvů:** std
 
 ## <a name="see-also"></a>Viz také:
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
+[<type_traits>](../standard-library/type-traits.md)

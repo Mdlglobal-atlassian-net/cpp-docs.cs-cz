@@ -4,26 +4,26 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - output streams [C++], member functions
 ms.assetid: 38aaf710-8035-4a34-a0c4-123a5327f28a
-ms.openlocfilehash: eba627c69437754a9c0a819167443aa00c025fef
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8c23008d0c46a532f11e89442328ed25cc203077
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62370837"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68453055"
 ---
 # <a name="output-file-stream-member-functions"></a>Členské funkce datového proudu výstupního souboru
 
-Výstupní datový proud členské funkce mají tři typy: ty, které jsou ekvivalentní manipulátory, ty, které provádějí neformátovaný operace zápisu, a ty, které jinak upravit datový proud stavu a mít žádná ekvivalentní manipulátor nebo operátor vkládání. Pro sekvenční, formátovaný výstup můžete použít pouze operátorů insertion a manipulátory. Pro výstup disku binární náhodný přístup použijte jiné členské funkce, s nebo bez něj operátorů insertion.
+Členské funkce výstupního datového proudu mají tři typy: ty, které jsou ekvivalentní manipulacím, ty, které provádějí neformátované operace zápisu, a ty, které jinak mění stav datového proudu a nemají ekvivalentní manipulátor nebo operátor vložení. U sekvenčních, formátovaných výstupů můžete použít jenom operátory vložení a manipuluje. Pro výstup binárního disku s náhodným přístupem můžete použít jiné členské funkce s operátory vložení nebo bez nich.
 
-## <a name="the-open-function-for-output-streams"></a>Funkce open pro výstupní datové proudy
+## <a name="the-open-function-for-output-streams"></a>Funkce Open pro výstupní datové proudy
 
-Použití výstupní datový proud souboru ([ofstream](../standard-library/basic-ofstream-class.md)), musíte přidružit k tohoto datového proudu souboru na konkrétní disku v konstruktoru nebo `open` funkce. Pokud používáte `open` funkce, můžete znovu použít stejný objekt stream s řadou soubory. V obou případech jsou argumenty popisující soubor stejné.
+Chcete-li použít výstupní soubor Stream ([ofstream](../standard-library/basic-ofstream-class.md)), je nutné tento datový proud přidružit k určitému souboru na disku v `open` konstruktoru nebo funkci. Použijete-li `open` funkci, můžete použít stejný objekt datového proudu s řadou souborů. V obou případech jsou argumenty popisující soubor stejné.
 
-Když otevřete soubor přidružený k výstupní datový proud, obvykle určují `open_mode` příznak. Můžete kombinovat tyto příznaky, které jsou definovány jako výčty v `ios` třídy s bitový operátor OR ( &#124; ) – operátor. Zobrazit [ios_base::openmode](../standard-library/ios-base-class.md#openmode) seznam čítačů.
+Když otevřete soubor přidružený k výstupnímu datovému proudu, obecně určíte `open_mode` příznak. Tyto příznaky, které jsou definovány jako enumerátory ve `ios` třídě, lze kombinovat pomocí operátoru bitového operátoru OR ( &#124; ). Seznam enumerátorů naleznete v tématu [ios_base:: openmode](../standard-library/ios-base-class.md#openmode) .
 
-Tři běžné situace výstupní datový proud zahrnují možnosti režimu:
+Mezi tři běžné situace výstupního streamu patří možnosti režimu:
 
-- Vytvoření souboru. Pokud soubor již existuje, se odstraní staré verze.
+- Vytváření souboru. Pokud soubor už existuje, stará verze se odstraní.
 
    ```cpp
    ostream ofile("FILENAME");
@@ -33,13 +33,13 @@ Tři běžné situace výstupní datový proud zahrnují možnosti režimu:
    // Equivalent to above
    ```
 
-- Přidání záznamů do existujícího souboru nebo vytvoření nového, pokud neexistuje.
+- Připojení záznamů k existujícímu souboru nebo vytvoření jednoho, pokud neexistuje.
 
    ```cpp
    ofstream ofile("FILENAME", ios::app);
    ```
 
-- Otevírá dva soubory, jeden po druhém, stejný datový proud.
+- Otevírání dvou souborů současně ve stejném datovém proudu.
 
    ```cpp
    ofstream ofile();
@@ -52,9 +52,9 @@ Tři běžné situace výstupní datový proud zahrnují možnosti režimu:
    // When ofile goes out of scope it is destroyed.
    ```
 
-## <a name="the-put"></a>Put
+## <a name="the-put"></a>Vložení
 
-**Umístit** funkce zapíše jeden znak do výstupního datového proudu. Následující dva příkazy jsou stejné ve výchozím nastavení, ale druhá je ovlivněna argumentů formátu datového proudu:
+Funkce **Put** zapisuje jeden znak do výstupního datového proudu. Následující dva příkazy jsou ve výchozím nastavení stejné, ale druhá má vliv na argumenty formátu datového proudu:
 
 ```cpp
 cout.put('A');
@@ -65,7 +65,7 @@ cout <<'A'; // Format arguments 'width' and 'fill' apply
 
 ## <a name="the-write"></a>Zápis
 
-`write` Funkce zapíše do výstupního datového proudu souboru blok paměti. Argument délky určuje počet zapsaných bajtů. Tento příklad vytvoří výstupní datový proud souboru a zapíše binární hodnotu `Date` strukturu do ní:
+`write` Funkce zapisuje do datového proudu výstupního souboru blok paměti. Argument Length určuje počet zapsaných bajtů. Tento příklad vytvoří datový proud výstupního souboru a zapíše do něj binární `Date` hodnotu struktury:
 
 ```cpp
 // write_function.cpp
@@ -86,32 +86,32 @@ int main( )
 }
 ```
 
-`write` Funkce nezastaví ji po dosažení prázdný znak, takže zapisován struktura úplné třídy. Funkce přebírá dva argumenty: **char** ukazatele a počet znaků k zápisu. Poznámka: vyžaduje přetypování na **char** <strong>\*</strong> než adresu objektu struktury.
+`write` Funkce se nezastaví, když dosáhne znaku null, takže je zapsána kompletní struktura třídy. Funkce přebírá dva argumenty: ukazatel typu **char** a počet znaků, které mají být zapsány. Všimněte si, že požadované přetypování na typ **char** <strong>\*</strong> před adresou objektu struktury.
 
-## <a name="the-seekp-and-tellp-functions"></a>Seekp – a tellp – funkce
+## <a name="the-seekp-and-tellp-functions"></a>Funkce seekp a tellp
 
-Výstupní datový proud souboru udržuje interní ukazatel, který odkazuje na umístění, ve kterém jsou data k zapsání dále. `seekp` Členská funkce nastaví tento ukazatel a tak poskytuje náhodný přístup disku výstupního souboru. `tellp` Členská funkce vrátí pozice v souboru. Příklady, které používají ekvivalenty vstupního datového proudu k `seekp` a `tellp`, naleznete v tématu [funkce seekg – a tellg –](../standard-library/input-stream-member-functions.md).
+Stream výstupního souboru udržuje vnitřní ukazatel, který odkazuje na pozici, kde se mají data zapsat. `seekp` Členská funkce nastaví tento ukazatel, takže poskytuje výstup souboru disku s náhodným přístupem. `tellp` Členská funkce vrátí pozici souboru. Příklady, které používají ekvivalent `seekp` vstupního datového proudu v a `tellp`, naleznete v tématu [funkce seekg a tellg](../standard-library/input-stream-member-functions.md).
 
-## <a name="the-close-function-for-output-streams"></a>Zavřít funkce pro výstupní datové proudy
+## <a name="the-close-function-for-output-streams"></a>Funkce Close pro výstupní datové proudy
 
-`close` Členská funkce se zavře souboru na disku, který je přidružený k výstupní datový proud souboru. Soubor musí být uzavřena do dokončení veškerý výstup disku. V případě potřeby `ofstream` destruktor zavře soubor, který pro vás, ale můžete použít `close` fungovat, pokud je potřeba otevřít další soubor pro stejný objekt datového proudu.
+`close` Členská funkce zavře soubor disku přidružený ke streamu výstupního souboru. Aby bylo možné dokončit všechny výstupy na disku, je třeba zavřít soubor. V případě potřeby `ofstream` destruktor soubor zavře za vás, ale `close` funkci můžete použít, pokud potřebujete otevřít jiný soubor pro stejný objekt streamu.
 
-Výstupní datový proud destruktor automaticky zavře datový proud souboru pouze tehdy, pokud konstruktor nebo `open` členská funkce Otevřít soubor. Pokud předáte konstruktoru popisovač souboru pro soubor již otevřít nebo použít `attach` členskou funkci, musíte zavřít soubor explicitně.
+Destruktor výstupního datového proudu automaticky zavře soubor datového proudu pouze v případě, že konstruktor `open` nebo členská funkce otevřela soubor. Pokud předáte konstruktoru popisovač souboru pro již otevřený soubor nebo použijete `attach` členskou funkci, musíte soubor explicitně zavřít.
 
-## <a name="vclrferrorprocessingfunctionsanchor10"></a> Funkce zpracování chyb
+## <a name="vclrferrorprocessingfunctionsanchor10"></a>Chyba při zpracování funkcí
 
-K testování chyby při zápisu do datového proudu použijte tyto členské funkce:
+Pomocí těchto členských funkcí otestujete chyby při zápisu do datového proudu:
 
 |Funkce|Návratová hodnota|
 |--------------|------------------|
-|[Špatné](basic-ios-class.md#bad)|Vrátí **true** Pokud dojde k neodstranitelné chybě.|
-|[Selhání](basic-ios-class.md#fail)|Vrátí **true** dojde k neodstranitelné chybě nebo "očekávané" podmínku, třeba Chyba převodu, nebo pokud se nenajde soubor. Zpracování může často pokračovat po volání `clear` s argumentem nula.|
-|[Dobré](basic-ios-class.md#good)|Vrátí **true** Pokud neexistuje žádná chybová podmínka (neobnovitelná nebo jinak) a není nastaven příznak end souboru.|
-|[eof](basic-ios-class.md#eof)|Vrátí **true** ve stavu ukončení souboru.|
-|[clear](basic-ios-class.md#clear)|Nastaví stav vnitřní chyba. Pokud je volána pomocí výchozích argumentů, vymaže všechny bity chyby.|
-|[rdstate](basic-ios-class.md#rdstate|Vrátí aktuální chybový stav.|
+|[Špatné](basic-ios-class.md#bad)|Vrátí **hodnotu true** , pokud dojde k neopravitelné chybě.|
+|[proběhne](basic-ios-class.md#fail)|Vrátí **hodnotu true** , pokud existuje Neopravitelná chyba nebo podmínka "Očekávaná", například Chyba převodu, nebo pokud soubor nebyl nalezen. Zpracování může často pokračovat po volání `clear` s nulovým argumentem.|
+|[Dobré](basic-ios-class.md#good)|Vrátí **hodnotu true** , pokud neexistuje chybový stav (neobnovitelné nebo jinak) a příznak konce souboru není nastaven.|
+|[eof](basic-ios-class.md#eof)|Vrátí **hodnotu true** pro podmínku konce souboru.|
+|[jejich](basic-ios-class.md#clear)|Nastaví stav interní chyby. Pokud se volá s výchozími argumenty, vymaže všechny chybové bity.|
+|[rdstate] (Basic-iOS-Class. MD # rdstate|Vrátí aktuální chybový stav.|
 
-**!** k provedení stejné funkce jako je operátor přetížen `fail` funkce. Proto výraz:
+**.** operátor je přetížen, aby prováděl stejnou funkci jako `fail` funkce. Výraz tedy:
 
 ```cpp
 if(!cout)...
@@ -123,7 +123,7 @@ je ekvivalentní:
 if(cout.fail())...
 ```
 
-**Void\*()** je operátor přetížen, chcete-li být opakem toho, **!** operátor; proto výraz:
+Operátor **void\*()** je přetížený tak, aby byl opakem **!** podnikatel výraz tedy:
 
 ```cpp
 if(cout)...
@@ -135,8 +135,8 @@ je rovno:
 if(!cout.fail())...
 ```
 
-**Void\*()** operátor není ekvivalentní `good` protože netestuje konec souboru.
+Operátor **void\*()** není ekvivalentní k `good` tomu, protože netestuje na konci souboru.
 
 ## <a name="see-also"></a>Viz také:
 
-[Výstupní streamy](../standard-library/output-streams.md)<br/>
+[Výstupní streamy](../standard-library/output-streams.md)

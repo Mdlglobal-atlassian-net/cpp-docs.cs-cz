@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - slice_array class
 ms.assetid: a182d5f7-f35c-4e76-86f2-b5ac64ddc846
-ms.openlocfilehash: 9577447b2201c1c9e53192b99abad1979f45d15f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: cf33c5f627a88698c84947f9b803edaebccf5566
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62412537"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68450405"
 ---
 # <a name="slicearray-class"></a>slice_array – třída
 
-Třída interní, pomocné šablony, která podporuje objekty řez tím, že poskytuje operace mezi dílčí pole určené řezu valarray –.
+Interní pomocná třída šablony, která podporuje objekty řezu tím, že poskytuje operace mezi podmnožinou polí definovaných v řezu valarray.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -42,24 +42,24 @@ public:
 
 ## <a name="remarks"></a>Poznámky
 
-Tato třída popisuje objekt, který uchovává odkaz na objekt třídy [valarray](../standard-library/valarray-class.md)**\<typ >**, spolu s objekt třídy [řez](../standard-library/slice-class.md), který Popisuje pořadí prvků, které mají vybrat z **valarray\<typ >** objektu.
+Třída popisuje objekt, který ukládá odkaz na objekt třídy [valarray](../standard-library/valarray-class.md) **\<typu >** společně s objektem [řezu](../standard-library/slice-class.md)třídy, který popisuje sekvenci prvků, které se mají vybrat z valarray. **\<Zadejte >** Object.
 
-Třída šablony je nepřímo vytvořil určité valarray – operace a nelze jej použít přímo v aplikaci. Interní, pomocné šablony třídy, který používá operátor dolního indexu řez:
+Třída šablony je vytvořena nepřímo některými valarray operacemi a nelze ji použít přímo v programu. Interní pomocná třída šablony, která je používána operátorem dolního indexu řezu:
 
-`slice_array`\< **Typ**> `valarray`< **typ**:: `operator[]` ( `slice`).
+`slice_array`\<**Typ** >  **Typ:** : (`operator[]` ). `valarray` <  `slice`
 
-Můžete vytvořit `slice_array<Type>` pouze v případě, že napíšeme výrazu v podobě [posouzení ohrožení zabezpečení&#91;sl&#93;](../standard-library/valarray-class.md#op_at), řezu `sl` z valarray `va`. Členské funkce třídy slice_array – potom chovají jako odpovídající funkce podpisy definované pro `valarray<Type>`, s tím rozdílem, že má vliv jenom pořadí vybraných elementů. Sekvence řízenou parametrem slice_array – je definován pomocí tří parametrů volanému konstruktoru řez, index prvního prvku v řez, počet prvků a vzdálenost mezi prvky. Slice_array – vyjmout z valarray `va` deklaroval **posouzení ohrožení zabezpečení**[ `slice`(2, 5, 3)] vybere prvků s indexy 2, 5, 8, 11 a 14 z `va`. Indexy musí být platný postup, jak platit.
+Objekt vytvoříte pouze tak, že zapíšete výraz ve formátu [VA&#91;SL&#93;](../standard-library/valarray-class.md#op_at)pro `sl` řez valarray `va`. `slice_array<Type>` Členské funkce třídy slice_array se pak chovají jako odpovídající signatury funkce definované pro `valarray<Type>`, s tím rozdílem, že jsou ovlivněny pouze sekvence vybraných elementů. Sekvence řízená slice_array je definována třemi parametry konstruktoru řezu, indexem prvního prvku v řezu, počtem prvků a vzdáleností mezi prvky. Slice_array vyjmutí z valarray `va` deklarovaného pomocí VA `slice`[(2, 5, 3)] vybere prvky s indexy 2, 5, 8, 11 a 14 z. `va` Indexy musí být platné, aby byl postup platný.
 
 ## <a name="example"></a>Příklad
 
-Podívejte se na příklad pro [slice::slice](../standard-library/slice-class.md#slice) příklad toho, jak deklarovat a použít slice_array –.
+Příklad, jak deklarovat a používat slice_array, naleznete v příkladu pro [průřez:: Slice](../standard-library/slice-class.md#slice) .
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** \<valarray – >
+**Hlavička:** \<valarray >
 
-**Namespace:** std
+**Obor názvů:** std
 
 ## <a name="see-also"></a>Viz také:
 
-[Bezpečný přístup z více vláken ve standardní knihovně C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[Bezpečný přístup z více vláken ve standardní knihovně C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)

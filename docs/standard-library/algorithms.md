@@ -8,50 +8,50 @@ helpviewer_keywords:
 - algorithm template function C++ library conventions
 - conventions [C++], C++ algorithm
 ms.assetid: dec9b373-7d5c-46cc-b7d2-21a938ecd0a6
-ms.openlocfilehash: a0a1165d731e44568d530e3ed919d73e2a3e8e5e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d363dc3f06222121ac5efc79b30516ebd55ff539
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62411120"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68456490"
 ---
 # <a name="algorithms"></a>Algoritmy
 
-Algoritmy jsou základní součástí standardní knihovny C++. Algoritmy, nebudou fungovat s kontejnery, sami, ale s iterátory. Proto stejný algoritmus může využívat většinu není-li všechny kontejnery standardní knihovny C++. Tato část popisuje konvence a terminologie algoritmů standardní knihovny C++.
+Algoritmy jsou základní součástí C++ standardní knihovny. Algoritmy nefungují s vlastními kontejnery, ale spíše pomocí iterátorů. Proto je možné stejný algoritmus použít většinou v případě, že ne všechny C++ standardní kontejnery knihovny. Tato část popisuje konvence a terminologie C++ standardních algoritmů knihovny.
 
 ## <a name="remarks"></a>Poznámky
 
-Popis jednotlivých funkcí šablony algoritmus využívat několik Zkrácený tvar vlastností frází:
+Popisy funkcí šablon algoritmu používají několik zkratek:
 
-- Fráze "v rozsahu \[ *A*, *B*)" znamená, že posloupnost nula nebo více jednotlivých hodnot počínaje *A* až, ale bez zahrnutí *B* . Rozsah je platný pouze tehdy, pokud *B* dosažitelný z *A;* můžete ukládat *A* v objektu *N* (*N*  =  *A*), zvýší objekt nulakrát nebo vícekrát (++*N*), a mít objekt rovnají *B* po konečné číslo navyšuje (*N*   ==  *B*).
+- Fráze "v \[rozsahu *a*, *B*)" označuje sekvenci nula nebo více diskrétních hodnot, které *začínají až,* ale ne včetně *B*. Rozsah je platný pouze v případě, že je *B* dosažitelný z *A;* můžete *Uložit v* objektu *n* (*n* = *a*), zvýšit počet objektů nula nebo vícekrát (+ +*N*) a nechat objekt porovnat se rovná *B* po konečném počtu přírůstcích (*N* == *B*).
 
-- Fráze "každý *N* v rozsahu \[ *A*, *B*)" znamená, že *N* začíná hodnotou *A*a je zvýšen nulakrát nebo vícekrát, dokud se rovná hodnotě *B*. Tento případ *N* == *B* není v rozsahu.
+- Fráze "každé *n* v rozsahu \[ *A*, *B*)" znamená, že *N* začíná hodnotou *a* a je zvýšena nula nebo vícekrát, dokud se nerovná hodnotě *B*. Případ *N* == *B* není v rozsahu.
 
-- Fráze "nejnižší hodnotu *N* v rozsahu \[ *A*, *B*) tak, aby *X*" znamená, že podmínka *X* je určen pro každou *N* v rozsahu \[ *A*, *B*) až do podmínky *X*je splněna.
+- Fráze "nejnižší hodnota *N* v rozsahu \[ *a*, *b*) tak, že *x*" znamená, že podmínka *x* je určena pro každý *N* v rozsahu \[ *a*, *b*) až do podmínka *X* je splněná.
 
-- Fráze "nejvyšší hodnotu *N* v rozsahu \[ *A*, *B*) tak, aby *X* znamená, že *X* je určen pro každou *N* v rozsahu \[ *A*, *B*). Funkce ukládá *K* kopii *N* pokaždé, když podmínka *X* je splněna. Pokud dojde k takové úložiště, funkce nahrazuje konečná hodnota *N*, které se rovná *B*, s hodnotou *K*. Obousměrné nebo iterátor s náhodným přístupem, ale může také to, který *N* začíná nejvyšší číslo v rozsahu a je snížen přes oblast, dokud se podmínka *X* je splněna.
+- Fráze "nejvyšší hodnota *N* v \[rozsahu *a*, *b*) tak, že *x* znamená, že *x* je určeno pro každý *N* v \[rozsahu *a*, *b*). Funkce ukládá do *k* a kopii *N* pokaždé, když je splněna podmínka *X* . Pokud takové úložiště dojde, funkce nahradí konečnou hodnotu *N*, která se rovná *B*, s hodnotou *K*. U iterátoru obousměrného nebo náhodného přístupu ale může také znamenat, že *N* začíná nejvyšší hodnotou v rozsahu a bude snížena nad rozsah, dokud není splněna podmínka *X* .
 
-- Výrazy, jako *X* - *Y*, kde *X* a *Y* může být iterátory než iterátory s náhodným přístupem, jsou určeny v matematickém smyslu. Funkce není nutně vyhodnocen operátor **-** Pokud je třeba určit tato hodnota. Totéž platí také pro výrazy, jako *X* + *N* a *X* - *N*, kde *N*  je typu integer.
+- Výrazy jako *x* - *Y*, kde *x* a *Y* můžou být iterátory jiné než iterátory náhodného přístupu, jsou určené matematickému smyslu. Funkce nemusí nutně vyhodnotit operátor **-** , pokud musí určit takovou hodnotu. Totéž platí také pro výrazy jako *X* + *n* a *x* - *N*, kde *N* je typ Integer.
 
-Ujistěte se několik algoritmů využívání predikát, který provádí pairwise porovnání, například s `operator==`, pozastavit **bool** výsledek. Funkce predikátu `operator==`, nebo všechny náhražkou nesmí změnit jeden z operandů. Musí zaručit, stejné **bool** způsobit pokaždé, když je vyhodnocen, a pokud kopii některý operand je nahrazen pro operand ho musí poskytovat stejný výsledek.
+Několik algoritmů používá predikát, který provádí srovnávací porovnání, jako je například s `operator==`, pro zajištění **logického** výsledku. Funkce `operator==`predikátu, nebo jakákoli náhrada, nesmí měnit žádný z jeho operandů. Musí vracet stejný **logický** výsledek pokaždé, když je vyhodnocen a musí vracet stejný výsledek, pokud je pro operand nahrazena kopie jednoho operandu.
 
-Ujistěte se několik algoritmů pomocí predikátu, které musí ukládat přísné slabé seřazení na dvojice prvků z posloupnosti. Pro predikát *před*(*X*, *Y*):
+Několik algoritmů používá predikát, který musí způsobit striktní slabé řazení párů prvků z sekvence. Pro predikát *před*(*X*, *Y*):
 
-- Strict znamená, že *před*(*X*, *X*) má hodnotu false.
+- Striktní znamená, že *před*(*x*, *x*) je NEPRAVDA.
 
-- Slabé znamená, že *X* a *Y* mají ekvivalentní řazení if \! *před*(*X*, *Y*) & & \! *před*(*Y*, *X*) (*X* == *Y*nemusí být definovány).
+- Slabý znamená, že *X* a *Y* mají ekvivalentní řazení, \!Pokud *před*(*X*, *Y*) & \!& *před*(*Y*, *X*) (*x* == *y* ). musí být definována).
 
-- Řazení znamená, že *před*(*X*, *Y*) & & *před*(*Y*, *Z*) zahrnuje *před*(*X*, *Z*).
+- Řazení znamená, že *před*(*x*, *Y*) & *& před*(*y*, *z*) implikuje *před*(*x*, *z*).
 
-Některé z těchto algoritmů implicitně pomocí predikátů *X* \< *Y*. Jsou ostatní predikáty, které zpravidla odpovídají přísné slabé seřazení požadavek *X* > *Y*, `less`(*X*, *Y*), a `greater`(*X*, *Y*). Všimněte si, ale, který predikáty například *X* \< =  *Y* a *X* >= *Y* nesplňují Tento požadavek.
+Některé z těchto algoritmů implicitně používají predikát *X* \< *Y*. Další predikáty, které obvykle odpovídají přísně slabému požadavku na řazení, `less`jsou *x* > *Y*, (*X*, `greater` *Y*) a (*x*, *y*). Všimněte si ale, že predikáty jako *x* \< =  *y* a *x* >= *y* nesplňují tento požadavek.
 
-Pořadí prvků určených iterátory v rozsahu \[ *první*, *poslední*) je sekvence seřazené podle operátor **<** po dobu každý  *N* v rozsahu \[0, *poslední* - *první*) a pro každou *M* v rozsahu (*N*, *Poslední* - *první*) predikát \!(\*(*první*  +  *M*) < \*(*první* + *N*)) má hodnotu true. (Všimněte si, že prvky jsou seřazeny vzestupně.) Funkce predikátu `operator<`, nebo všechny náhražkou nesmí změnit jeden z operandů. Musí zaručit, stejné **bool** způsobit pokaždé, když je vyhodnocen, a pokud kopii některý operand je nahrazen pro operand ho musí poskytovat stejný výsledek. Kromě toho musíte uložit přísné slabé seřazení operandy, které porovnává.
+Sekvence prvků určených \[iterátory v rozsahu *First*, *Last*) je sekvence seřazená podle operátoru **<** , pokud pro každý *N* v rozsahu \[0, *nakonec* - jako*první.* ) a pro každý *M* v rozsahu (*N*, *nakonec* - *nejdříve* \!) predikát (\*(*první* + *m*) < \*(First + *N*)) má hodnotu true. (Všimněte si, že prvky jsou seřazené ve vzestupném pořadí.) Funkce `operator<`predikátu, nebo jakákoli náhrada, nesmí měnit žádný z jeho operandů. Musí vracet stejný **logický** výsledek pokaždé, když je vyhodnocen a musí vracet stejný výsledek, pokud je pro operand nahrazena kopie jednoho operandu. Kromě toho musí být pro operandy, které porovnává, přísně slabé řazení.
 
-Pořadí prvků určených iterátory v rozsahu \[ `First`, `Last`) je haldu seřazené podle `operator<` if, pro každou *N* v rozsahu \[1, *naposledy*  -  *První*) predikát \!(\*_první_ < \*(*první*  +  *N*)) má hodnotu true. (První prvek je největší.) Její vnitřní struktura je označováno pouze pro šablony funkce [make_heap –](../standard-library/algorithm-functions.md#make_heap), [pop_heap –](../standard-library/algorithm-functions.md#pop_heap), a [push_heap –](../standard-library/algorithm-functions.md#push_heap). Stejně jako v seřazené posloupnosti, funkce predikátu `operator<`, nebo všechny náhražkou nesmí změnit některý z jeho operandy a musí ukládat přísné slabé seřazení u operandů porovná. Musí zaručit, stejné **bool** způsobit pokaždé, když je vyhodnocen, a pokud kopii některý operand je nahrazen pro operand ho musí poskytovat stejný výsledek.
+Sekvence prvků, které jsou určeny iterátory \[v rozsahu \[ `Last` `First`,) je halda seřazená podle `operator<` if, pro každou *N* v rozsahu 1, *Poslední* - *první*). predikát \!(\*_First_ *(First*N))má hodnotu true. +  < \* (První prvek je největší.) Jeho interní struktura je jinak známá pouze pro šablony funkce [make_heap](../standard-library/algorithm-functions.md#make_heap), [pop_heap](../standard-library/algorithm-functions.md#pop_heap)a [push_heap](../standard-library/algorithm-functions.md#push_heap). Stejně jako u seřazených sekvencí, funkce `operator<`predikátu nebo jakékoli náhrady pro ni nesmí měnit žádný z jeho operandů a musí pro ně způsobit striktní slabé řazení u operandů, které porovnávají. Musí vracet stejný **logický** výsledek pokaždé, když je vyhodnocen a musí vracet stejný výsledek, pokud je pro operand nahrazena kopie jednoho operandu.
 
-Algoritmy standardní knihovny C++ jsou umístěny v [ \<algoritmus >](../standard-library/algorithm.md) a [ \<číselné >](../standard-library/numeric.md) hlavičkové soubory.
+C++ Standardní algoritmy knihovny se nacházejí v [ \<> algoritmu](../standard-library/algorithm.md) a [ \<číselné >](../standard-library/numeric.md) hlavičkových souborů.
 
 ## <a name="see-also"></a>Viz také:
 
-[Standardní knihovna C++ – referenční dokumentace](../standard-library/cpp-standard-library-reference.md)<br/>
-[Bezpečný přístup z více vláken ve standardní knihovně C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[C++Odkaz na standardní knihovnu](../standard-library/cpp-standard-library-reference.md)\
+[Bezpečný přístup z více vláken ve standardní knihovně C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)

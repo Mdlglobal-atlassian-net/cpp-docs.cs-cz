@@ -1,26 +1,26 @@
 ---
-title: '&lt;scoped_allocator –&gt; operátory'
+title: '&lt;scoped_allocator&gt; operátory'
 ms.date: 11/04/2016
 f1_keywords:
 - scoped_allocator/std::operator!=
 - scoped_allocator/std::operator==
 ms.assetid: 4dfe0805-cc6e-479f-887f-a1c164f73837
-ms.openlocfilehash: 7c9f2c3a2425bf3ac6e62ce7fcecfe9315c3e04e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 071fc3b73cd3378b110d6d412bb7575e35a77478
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62348195"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68447331"
 ---
-# <a name="ltscopedallocatorgt-operators"></a>&lt;scoped_allocator –&gt; operátory
+# <a name="ltscopedallocatorgt-operators"></a>&lt;scoped_allocator&gt; operátory
 
 |||
 |-|-|
 |[operator!=](#op_neq)|[operator==](#op_eq_eq)|
 
-## <a name="op_neq"></a>  Operator! =
+## <a name="op_neq"></a>! = – operátor
 
-Testuje dva `scoped_allocator_adaptor` objekty nerovnost.
+Testuje dva `scoped_allocator_adaptor` objekty pro nerovnost.
 
 ```cpp
 template <class Outer, class... Inner>
@@ -31,19 +31,19 @@ bool operator!=(
 
 ### <a name="parameters"></a>Parametry
 
-*doleva*<br/>
-Levé straně `scoped_allocator_adaptor` objektu.
+*zbývá*\
+Levý `scoped_allocator_adaptor` objekt
 
-*doprava*<br/>
-Vpravo `scoped_allocator_adaptor` objektu.
+*Kliknutím*\
+Pravý `scoped_allocator_adaptor` objekt.
 
 ### <a name="return-value"></a>Návratová hodnota
 
 `!(left == right)`
 
-## <a name="op_eq_eq"></a>  Operator ==
+## <a name="op_eq_eq"></a>operator = = – operátor
 
-Testuje dva `scoped_allocator_adaptor` objekty pro rovnost.
+Testuje rovnost `scoped_allocator_adaptor` dvou objektů.
 
 ```cpp
 template <class Outer, class... Inner>
@@ -54,11 +54,11 @@ bool operator==(
 
 ### <a name="parameters"></a>Parametry
 
-*doleva*<br/>
-Levé straně `scoped_allocator_adaptor` objektu.
+*zbývá*\
+Levý `scoped_allocator_adaptor` objekt
 
-*doprava*<br/>
-Vpravo `scoped_allocator_adaptor` objektu.
+*Kliknutím*\
+Pravý `scoped_allocator_adaptor` objekt.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -66,4 +66,4 @@ Vpravo `scoped_allocator_adaptor` objektu.
 
 ## <a name="see-also"></a>Viz také:
 
-[<scoped_allocator>](../standard-library/scoped-allocator.md)<br/>
+[<scoped_allocator>](../standard-library/scoped-allocator.md)

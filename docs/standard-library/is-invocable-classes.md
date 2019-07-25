@@ -1,5 +1,5 @@
 ---
-title: is_invocable is_invocable_r, is_nothrow_invocable, is_nothrow_invocable_r třídy
+title: třídy is_invocable, is_invocable_r, is_nothrow_invocable, is_nothrow_invocable_r
 ms.date: 02/21/2019
 f1_keywords:
 - type_traits/std::is_invocable
@@ -15,16 +15,16 @@ helpviewer_keywords:
 - is_nothrow_invocable
 - is_nothrow_invocable_r class
 - is_nothrow_invocable_r
-ms.openlocfilehash: bb5e75a897029ded2e00e491d93d2df41a3e115b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 20fec55fc3ad1924ee85db3b2f78812e4847f447
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62336228"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68456235"
 ---
-# <a name="isinvocable-isinvocabler-isnothrowinvocable-isnothrowinvocabler-classes"></a>is_invocable is_invocable_r, is_nothrow_invocable, is_nothrow_invocable_r třídy
+# <a name="isinvocable-isinvocabler-isnothrowinvocable-isnothrowinvocabler-classes"></a>třídy is_invocable, is_invocable_r, is_nothrow_invocable, is_nothrow_invocable_r
 
-Tyto šablony určit, pokud typ lze vyvolat se zadanými typy argumentu. `is_invocable_r` a `is_nothrow_invocable_r` také určit, zda je lze převést na konkrétní typ výsledek volání. `is_nothrow_invocable` a `is_nothrow_invocable_r` také určit, pokud se známými vyvolání není k vyvolání výjimky. Přidáno v C ++ 17.
+Tyto šablony určují, zda lze typ vyvolat se zadanými typy argumentů. `is_invocable_r`a `is_nothrow_invocable_r` také určíte, zda je výsledek vyvolání převeden na konkrétní typ. `is_nothrow_invocable`a `is_nothrow_invocable_r` také určete, zda je vyvolání známo, že nevyvolává výjimky. Přidáno v C++ 17.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -61,26 +61,26 @@ inline constexpr bool is_nothrow_invocable_r_v =
 
 ### <a name="parameters"></a>Parametry
 
-*Volatelný*<br/>
-Volatelný typ dotazu.
+*Kompatibilní*\
+Typ, který se má volat pro dotaz
 
-*Args*<br/>
+*Argumentů*\
 Typy argumentů pro dotazování.
 
-*Převoditelné*<br/>
-Typ výsledku z *Callable* musí být převeditelný na.
+*Cenný*\
+Typ, na který se má *volat* , se musí převést na.
 
 ## <a name="remarks"></a>Poznámky
 
-`is_invocable` Predikátu typu obsahuje hodnotu true, pokud volatelného typu *Callable* lze vyvolat pomocí argumentů *Args* v nevyhodnoceném kontextu.
+Predikát typu má hodnotu true, pokud lze volat *typ Invoke* pomocí argumentů argumenty v nehodnoceném kontextu.  `is_invocable`
 
-`is_invocable_r` Predikátu typu obsahuje hodnotu true, pokud volatelného typu *Callable* lze vyvolat pomocí argumentů *Args* v nevyhodnoceném kontextu. k vytvoření výsledku typ lze převést na  *Převoditelné*.
+Predikát typu má hodnotu true, *Pokud typ možné* volání lze vyvolat pomocí argumentů *argumentů v* nehodnoceném kontextu pro vytvoření typu výsledku převoditelného pro převoditelné.  `is_invocable_r`
 
-`is_nothrow_invocable` Predikátu typu obsahuje hodnotu true, pokud volatelného typu *Callable* lze vyvolat pomocí argumentů *Args* v nevyhodnoceném kontextu a že takové volání se ví, že vyvolat výjimku.
+Predikát typu má hodnotu true, pokud volaný typ *Invoke lze vyvolat* pomocí argumentů *argumentů v* nehodnoceném kontextu a že takové volání je známo, že nevyvolává výjimku. `is_nothrow_invocable`
 
-`is_nothrow_invocable_r` Predikátu typu obsahuje hodnotu true, pokud volatelného typu *Callable* lze vyvolat pomocí argumentů *Args* v nevyhodnoceném kontextu. k vytvoření výsledku typ lze převést na  *Převoditelné*, a že takové volání se ví, že vyvolat výjimku.
+Predikát typu má hodnotu true, pokud *volaný typ Invoke* lze vyvolat pomocí argumentů *argumentů v* nehodnoceném kontextu pro vytvoření typu výsledku převoditelného pro převoditelné a že takové volání je známo, že není throw.  `is_nothrow_invocable_r` výjimka.
 
-Každý typ *převoditelné*, *Callable*a typy v balíček parametrů *Args* musí být dokončený typ, pole neznámým rozsahem nebo sepravděpodobněkvalifikacícv**void**. Chování predikátu. v opačném případě není definováno.
+Každý z typů převoditelné, *volatelné*a typy v argumentech sady *parametrů musí být* úplný typ, pole neznámého objektu Bound nebo pravděpodobně **typ void**, který je typu CV kvalifikován. V opačném případě chování predikátu není definováno.
 
 ## <a name="example"></a>Příklad
 
@@ -116,11 +116,11 @@ int main()
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** \<type_traits >
+**Hlavička:** \<type_traits >
 
-**Namespace:** std
+**Obor názvů:** std
 
 ## <a name="see-also"></a>Viz také:
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
-[invoke](functional-functions.md#invoke)<br/>
+[< type_traits >](../standard-library/type-traits.md)\
+[invoke](functional-functions.md#invoke)

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - remove_cv class
 - remove_cv
 ms.assetid: 8502602a-1c80-479c-84e0-33bd1d6496d6
-ms.openlocfilehash: dcabf9b4687d473898dea98f1001647299a40b76
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: dbe21d8e9f0ed0dc7c72a19584f24ee1bce0803c
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62368900"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68451329"
 ---
 # <a name="removecv-class"></a>remove_cv – třída
 
@@ -30,12 +30,12 @@ using remove_cv_t = typename remove_cv<T>::type;
 
 ### <a name="parameters"></a>Parametry
 
-*T*<br/>
+*Š*\
 Typ, který chcete upravit.
 
 ## <a name="remarks"></a>Poznámky
 
-Instance `remove_cv<T>` obsahuje změněný typ, který je `T1` při *T* má formu `const T1`, `volatile T1`, nebo `const volatile T1`, jinak *T*.
+Instance `remove_cv<T>` obsahuje změněný typ, který je `T1` v případě, že *t* má tvar `const T1`, `volatile T1`nebo `const volatile T1`, jinak *t*.
 
 ## <a name="example"></a>Příklad
 
@@ -61,12 +61,12 @@ remove_cv_t<const volatile int> == int
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** \<type_traits >
+**Hlavička:** \<type_traits >
 
-**Namespace:** std
+**Obor názvů:** std
 
 ## <a name="see-also"></a>Viz také:
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
-[remove_const – třída](../standard-library/remove-const-class.md)<br/>
-[remove_volatile – třída](../standard-library/remove-volatile-class.md)<br/>
+[< type_traits >](../standard-library/type-traits.md)\
+[remove_const – třída](../standard-library/remove-const-class.md)\
+[remove_volatile – třída](../standard-library/remove-volatile-class.md)

@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - indirect_array class
 ms.assetid: 10e1eaea-ba5a-405c-a25e-7bdd3eee7fc7
-ms.openlocfilehash: 43c54bf3dae02eb117b15cae0dd7de9bb4a9db51
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5db5f2ce60038267b70ae8e77d9dd929d972af6a
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62404985"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68456328"
 ---
 # <a name="indirectarray-class"></a>indirect_array – třída
 
-Třída interní, pomocné šablony, která podporuje objekty, které jsou podmnožinou tohoto valarrays tím, že poskytuje operace mezi dílčí pole definovaná zadáním podmnožinu indexy valarray nadřazené.
+Interní pomocná třída šablony, která podporuje objekty, které jsou podmnožinou valarrays, poskytováním operací mezi poli podmnožiny, které jsou definovány určením podmnožiny indexů nadřazené valarray.
 
 ## <a name="syntax"></a>Syntaxe
 
 ## <a name="remarks"></a>Poznámky
 
-Tato třída popisuje objekt, který uchovává odkaz na objekt `va` třídy [valarray](../standard-library/valarray-class.md)**\<typ >**, spolu s objektem `xa` třídy `valarray<size_t>`, která popisuje řadu prvků, můžete vybírat z `valarray<Type>` objektu.
+Třída popisuje objekt, který ukládá odkaz na `va` objekt třídy [valarray](../standard-library/valarray-class.md) **\<typu >** společně s objektem `xa` třídy `valarray<size_t>`, který popisuje sekvenci prvků, ze kterých lze vybírat. `valarray<Type>` objekt.
 
-Vytvoření `indirect_array<Type>` pouze v případě, že napíšeme výrazu v podobě `va[xa]`. Členské funkce třídy indirect_array – potom chovají jako odpovídající funkce podpisy definované pro `valarray<Type>`, s tím rozdílem, že má vliv jenom pořadí vybraných elementů.
+Objekt vytvoříte pouze pomocí zápisu výrazu formuláře `va[xa]`. `indirect_array<Type>` Členské funkce třídy indirect_array se pak chovají jako odpovídající signatury funkce definované pro `valarray<Type>`, s tím rozdílem, že jsou ovlivněny pouze sekvence vybraných elementů.
 
-Sekvence se skládá z **xa.** [velikost](../standard-library/valarray-class.md#size) prvků, kde element `I` stane index **xa**[ `I`] v rámci `va`.
+Sekvence se skládá z protokolu **XA.** prvky [velikosti](../standard-library/valarray-class.md#size) , kde se `I` element změní na index XA `I`[] `va`v rámci.
 
 ## <a name="example"></a>Příklad:
 
@@ -75,10 +75,10 @@ The modified operand valarray is:  (0 -1 10 -1 10 -1 10 -1 8 -1).
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** \<valarray – >
+**Hlavička:** \<valarray >
 
-**Namespace:** std
+**Obor názvů:** std
 
 ## <a name="see-also"></a>Viz také:
 
-[Bezpečný přístup z více vláken ve standardní knihovně C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[Bezpečný přístup z více vláken ve standardní knihovně C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)

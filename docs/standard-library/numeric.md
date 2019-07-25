@@ -1,33 +1,33 @@
 ---
-title: '&lt;Číselné&gt;'
+title: '&lt;číselné&gt;'
 ms.date: 11/04/2016
 f1_keywords:
 - <numeric>
 helpviewer_keywords:
 - <numeric> header
 ms.assetid: 6d6ccb94-48cc-479b-b4a9-bd9c78d4896a
-ms.openlocfilehash: ce195742605c3dd2e127c84ac2f4e1e696c75bd0
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 5862ddd812308c7bf81a5029249caf7e9b4a1168
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68246700"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68453557"
 ---
-# <a name="ltnumericgt"></a>&lt;Číselné&gt;
+# <a name="ltnumericgt"></a>&lt;číselné&gt;
 
 Definuje funkce šablony kontejneru, které provádějí algoritmy numerického zpracování.
 
 ## <a name="requirements"></a>Požadavky
 
-**Hlavička**: \<číselné >
+**Záhlaví**: \<číselná >
 
-**Namespace:** std
+**Obor názvů:** std
 
 ## <a name="remarks"></a>Poznámky
 
-Numerické algoritmy se podobají algoritmy standardní knihovny C++ [ \<algoritmus >](algorithm.md)a může pracovat na různých datových strukturách. Mezi ně patří třídy kontejneru standardní knihovny, například [vektoru](../standard-library/vector-class.md) a [seznamu](../standard-library/list-class.md)a programem definované datové struktury a pole prvků, které splňují požadavky konkrétního algoritmu. Algoritmy této úrovně obecnosti dosahují přístupem k prvkům kontejneru a jejich přecházením nepřímo prostřednictvím iterátorů. Algoritmy zpracovávají rozsahy iterátoru, které jsou obvykle určeny počáteční a koncovou pozicí. Tyto rozsahy musí být platné v tom smyslu, že na všechny ukazatele v rozsazích musí být možné nepřímo odkazovat a v rámci sekvencí každého rozsahu musí být poslední pozice dosažitelná z první pomocí přírůstku.
+Číselné algoritmy připomínají C++ standardní algoritmy knihovny v [ \<algoritmech >](algorithm.md)a můžou pracovat na různých datových strukturách. Patří mezi ně standardní knihovny tříd kontejneru – například [vektory](../standard-library/vector-class.md) a [seznamy](../standard-library/list-class.md)a datové struktury definované programem a pole prvků, které splňují požadavky konkrétního algoritmu. Algoritmy této úrovně obecnosti dosahují přístupem k prvkům kontejneru a jejich přecházením nepřímo prostřednictvím iterátorů. Algoritmy zpracovávají rozsahy iterátoru, které jsou obvykle určeny počáteční a koncovou pozicí. Tyto rozsahy musí být platné v tom smyslu, že na všechny ukazatele v rozsazích musí být možné nepřímo odkazovat a v rámci sekvencí každého rozsahu musí být poslední pozice dosažitelná z první pomocí přírůstku.
 
-Algoritmy rozšiřují akce podporované operacemi a funkcemi členů každého kontejnery standardní knihovny C++ a umožňují interakci s různými typy objektů kontejnerů ve stejnou dobu.
+Algoritmy rozšíří akce podporované operacemi a členskými funkcemi každého ze C++ standardních kontejnerů knihoven a umožňují interakci s různými typy objektů kontejnerů současně.
 
 ## <a name="members"></a>Členové
 
@@ -41,16 +41,16 @@ Algoritmy rozšiřují akce podporované operacemi a funkcemi členů každého 
 |[GCD](../standard-library/numeric-functions.md#gcd)||
 |[inclusive_scan](../standard-library/numeric-functions.md#inclusive_scan)||
 |[inner_product](../standard-library/numeric-functions.md#inner_product)|Vypočítá součet prvků produktu ve dvou rozsazích a přidá jej k zadané počáteční hodnotě nebo vypočítá výsledek zobecněné procedury, kde jsou operace součtu a produktu nahrazeny jinými zadanými binárními operacemi.|
-|[iota](../standard-library/numeric-functions.md#iota)|Obsahuje počáteční hodnotu počínaje prvním prvkem a následně postupné přírůstky hodnoty (`value++`) v každém z prvků intervalu `[first, last)`.|
-|[LCM](../standard-library/numeric-functions.md#lcm)||
-|[partial_sum](../standard-library/numeric-functions.md#partial_sum)|Vypočítá sérii součtů ve vstupním rozsahu od prvního prvku po *můžu*tý prvek a uloží výsledek každého součtu v *můžu*-tém prvku cílového rozsahu nebo vypočítá výsledek generalizovaný postup, kde operace součtu je nahrazena jinou zadanou binární operací.|
-|[snížení](../standard-library/numeric-functions.md#reduce)||
+|[iota](../standard-library/numeric-functions.md#iota)|Ukládá počáteční hodnotu počínaje prvním prvkem a naplňuje po sobě jdoucí přírůstky hodnoty (`value++`) v každém elementu v intervalu. `[first, last)`|
+|[chyb](../standard-library/numeric-functions.md#lcm)||
+|[partial_sum](../standard-library/numeric-functions.md#partial_sum)|Vypočítá sérii součtů ve vstupním rozsahu od prvního prvku *po i*-tý prvek a uloží výsledek každého součtu v *i*-tém prvku cílového rozsahu nebo vypočítá výsledek zobecněné procedury, kde je operace součtu nahradila jinou zadanou binární operací.|
+|[úrovně](../standard-library/numeric-functions.md#reduce)||
 |[transform_exclusive_scan](../standard-library/numeric-functions.md#transform_exclusive_scan)||
 |[transform_inclusive_scan](../standard-library/numeric-functions.md#transform_inclusive_scan)||
 |[transform_reduce](../standard-library/numeric-functions.md#transform_reduce)||
 
 ## <a name="see-also"></a>Viz také:
 
-[Odkaz na soubory hlaviček](../standard-library/cpp-standard-library-header-files.md)<br/>
-[Bezpečný přístup z více vláken ve standardní knihovně C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
-[Standardní knihovna C++ – referenční dokumentace](../standard-library/cpp-standard-library-reference.md)<br/>
+[Odkazy na hlavičkové soubory](../standard-library/cpp-standard-library-header-files.md)\
+[Bezpečnost vlákna ve C++ standardní knihovně](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[Standardní knihovna C++ – referenční dokumentace](../standard-library/cpp-standard-library-reference.md)

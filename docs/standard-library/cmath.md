@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - cmath header
 ms.assetid: 80df1dba-60ca-4918-9c2e-fbf446eaa7d6
-ms.openlocfilehash: 1b581e19d53be6faddb983f12d739f2a199b2e9c
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: d01b02d8fa169aa7fddbc3e51d75e5328b400d2b
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68244749"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68459270"
 ---
 # <a name="ltcmathgt"></a>&lt;cmath&gt;
 
-Obsahuje hlavičku knihovny Standard C \<math.h > a přidá názvy přidružené k `std` oboru názvů.
+Obsahuje hlavičku \<standardní knihovny jazyka C Math. h > a přidává přidružené názvy `std` do oboru názvů.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -217,7 +217,7 @@ float hypotf(float x, float y);
 long double hypotl(long double x, long double y);
 ```
 
-## <a name="three-dimensional-hypotenuse"></a>Trojrozměrného přepony
+## <a name="three-dimensional-hypotenuse"></a>Trojrozměrné přepony
 
 ```cpp
 float hypot(float x, float y, float z);
@@ -358,7 +358,7 @@ float fmaf(float x, float y, float z);
 long double fmal(long double x, long double y, long double z);
 ```
 
-## <a name="classification--comparison-functions"></a>Klasifikace a porovnání funkcí
+## <a name="classification--comparison-functions"></a>Funkce klasifikace/porovnání
 
 ```cpp
 int fpclassify(float x);
@@ -399,9 +399,9 @@ int isunordered(double x, double y);
 int isunordered(long double x, long double y);
 ```
 
-## <a name="mathematical-special-functions"></a>speciální matematické funkce
+## <a name="mathematical-special-functions"></a>Matematické speciální funkce
 
-### <a name="associated-laguerre-polynomials"></a>Přidružené polynomials Laguerre
+### <a name="associated-laguerre-polynomials"></a>Přidružené Laguerreové polynomy
 
 ```cpp
 double assoc_laguerre(unsigned n, unsigned m, double x);
@@ -417,7 +417,7 @@ float assoc_legendref(unsigned l, unsigned m, float x);
 long double assoc_legendrel(unsigned l, unsigned m, long double x);
 ```
 
-### <a name="beta-function"></a>Beta verze funkce
+### <a name="beta-function"></a>Funkce beta
 
 ```cpp
 double beta(double x, double y);
@@ -425,7 +425,7 @@ float betaf(float x, float y);
 long double betal(long double x, long double y);
 ```
 
-### <a name="complete-elliptic-integral-of-the-first-kind"></a>Dokončení eliptické integrálového typu první
+### <a name="complete-elliptic-integral-of-the-first-kind"></a>Kompletní eliptický integrál prvního druhu
 
 ```cpp
 double comp_ellint_1(double k);
@@ -433,7 +433,7 @@ float comp_ellint_1f(float k);
 long double comp_ellint_1l(long double k);
 ```
 
-### <a name="complete-elliptic-integral-of-the-second-kind"></a>Dokončení eliptické celočíselný typ druhého typu
+### <a name="complete-elliptic-integral-of-the-second-kind"></a>Kompletní eliptický integrál druhého druhu
 
 ```cpp
 double comp_ellint_2(double k);
@@ -441,7 +441,7 @@ float comp_ellint_2f(float k);
 long double comp_ellint_2l(long double k);
 ```
 
-### <a name="complete-elliptic-integral-of-the-third-kind"></a>Dokončení eliptické integral třetí druhu
+### <a name="complete-elliptic-integral-of-the-third-kind"></a>Kompletní eliptický integrál třetího druhu
 
 ```cpp
 double comp_ellint_3(double k, double nu);
@@ -449,7 +449,7 @@ float comp_ellint_3f(float k, float nu);
 long double comp_ellint_3l(long double k, long double nu);
 ```
 
-### <a name="regular-modified-cylindrical-bessel-functions"></a>Standardní upravit válcových Besselovy funkce
+### <a name="regular-modified-cylindrical-bessel-functions"></a>Běžné upravené válcové Besselova funkce
 
 ```cpp
 double cyl_bessel_i(double nu, double x);
@@ -457,7 +457,7 @@ float cyl_bessel_if(float nu, float x);
 long double cyl_bessel_il(long double nu, long double x);
 ```
 
-### <a name="cylindrical-bessel-functions-of-the-first-kind"></a>První druh válcových Besselovy funkce
+### <a name="cylindrical-bessel-functions-of-the-first-kind"></a>Válcové Besselova funkce prvního druhu
 
 ```cpp
 double cyl_bessel_j(double nu, double x);
@@ -465,7 +465,7 @@ float cyl_bessel_jf(float nu, float x);
 long double cyl_bessel_jl(long double nu, long double x);
 ```
 
-### <a name="irregular-modified-cylindrical-bessel-functions"></a>Nepravidelné upravit válcových Besselovy funkce
+### <a name="irregular-modified-cylindrical-bessel-functions"></a>Nepravidelné úpravy válcových Besselova funkcí
 
 ```cpp
 double cyl_bessel_k(double nu, double x);
@@ -473,7 +473,7 @@ float cyl_bessel_kf(float nu, float x);
 long double cyl_bessel_kl(long double nu, long double x);
 ```
 
-### <a name="cylindrical-neumann-functions"></a>Válcových Neumannova funkce
+### <a name="cylindrical-neumann-functions"></a>Funkce válcového Neumann
 
 ```cpp
 double cyl_neumann(double nu, double x);
@@ -481,7 +481,7 @@ float cyl_neumannf(float nu, float x);
 long double cyl_neumannl(long double nu, long double x);
 ```
 
-### <a name="incomplete-elliptic-integral-of-the-first-kind"></a>Neúplné eliptické integral první druhu
+### <a name="incomplete-elliptic-integral-of-the-first-kind"></a>Neúplný elipsovitý integrál prvního druhu
 
 ```cpp
 double ellint_1(double k, double phi);
@@ -489,7 +489,7 @@ float ellint_1f(float k, float phi);
 long double ellint_1l(long double k, long double phi);
 ```
 
-### <a name="incomplete-elliptic-integral-of-the-second-kind"></a>Neúplné eliptické celočíselný typ druhého typu
+### <a name="incomplete-elliptic-integral-of-the-second-kind"></a>Neúplný elipsovitý integrál druhého druhu
 
 ```cpp
 double ellint_2(double k, double phi);
@@ -497,7 +497,7 @@ float ellint_2f(float k, float phi);
 long double ellint_2l(long double k, long double phi);
 ```
 
-### <a name="incomplete-elliptic-integral-of-the-third-kind"></a>Neúplné eliptické integral třetí druhu
+### <a name="incomplete-elliptic-integral-of-the-third-kind"></a>Neúplný elipsovitý integrál třetího druhu
 
 ```cpp
 double ellint_3(double k, double nu, double phi);
@@ -505,7 +505,7 @@ float ellint_3f(float k, float nu, float phi);
 long double ellint_3l(long double k, long double nu, long double phi);
 ```
 
-### <a name="exponential-integral"></a>Exponenciální celočíselný typ
+### <a name="exponential-integral"></a>Exponenciální integrál
 
 ```cpp
 double expint(double x);
@@ -513,7 +513,7 @@ float expintf(float x);
 long double expintl(long double x);
 ```
 
-### <a name="hermite-polynomials"></a>Hermitovu polynomials
+### <a name="hermite-polynomials"></a>Hermitovuové polynomy
 
 ```cpp
 double hermite(unsigned n, double x);
@@ -521,7 +521,7 @@ float hermitef(unsigned n, float x);
 long double hermitel(unsigned n, long double x);
 ```
 
-### <a name="laguerre-polynomials"></a>Laguerre polynomials
+### <a name="laguerre-polynomials"></a>Laguerreové polynomy
 
 ```cpp
 double laguerre(unsigned n, double x);
@@ -529,7 +529,7 @@ float laguerref(unsigned n, float x);
 long double laguerrel(unsigned n, long double x);
 ```
 
-### <a name="legendre-polynomials"></a>Legendre polynomials
+### <a name="legendre-polynomials"></a>Legendreové polynomy
 
 ```cpp
 double legendre(unsigned l, double x);
@@ -537,7 +537,7 @@ float legendref(unsigned l, float x);
 long double legendrel(unsigned l, long double x);
 ```
 
-### <a name="riemann-zeta-function"></a>Riemannův zéta – funkce
+### <a name="riemann-zeta-function"></a>Riemann – funkce zeta
 
 ```cpp
 double riemann_zeta(double x);
@@ -545,7 +545,7 @@ float riemann_zetaf(float x);
 long double riemann_zetal(long double x);
 ```
 
-### <a name="spherical-bessel-functions-of-the-first-kind"></a>První druh kulovité Besselovy funkce
+### <a name="spherical-bessel-functions-of-the-first-kind"></a>Kulové Besselova funkce prvního druhu
 
 ```cpp
 double sph_bessel(unsigned n, double x);
@@ -553,7 +553,7 @@ float sph_besself(unsigned n, float x);
 long double sph_bessell(unsigned n, long double x);
 ```
 
-### <a name="spherical-associated-legendre-functions"></a>Ke kulovému přidružené funkce Legendre
+### <a name="spherical-associated-legendre-functions"></a>Sféry přidružené k funkcím Legendre
 
 ```cpp
 double sph_legendre(unsigned l, unsigned m, double theta);
@@ -561,7 +561,7 @@ float sph_legendref(unsigned l, unsigned m, float theta);
 long double sph_legendrel(unsigned l, unsigned m, long double theta);
 ```
 
-### <a name="spherical-neumann-functions"></a>Ke kulovému Neumannova funkce
+### <a name="spherical-neumann-functions"></a>Funkce kulového Neumann
 
 ```cpp
 double sph_neumann(unsigned n, double x);
@@ -571,10 +571,10 @@ long double sph_neumannl(unsigned n, long double x);
 
 ## <a name="remarks"></a>Poznámky
 
-Včetně této hlavičky zajišťuje, že názvy deklarované s vnějším spojením v záhlaví knihovny Standard C jsou deklarovány v `std` oboru názvů.
+Včetně této hlavičky zajišťuje, že názvy deklarované s vnějším propojením v hlavičce standardní knihovny jazyka C jsou deklarovány v `std` oboru názvů.
 
 ## <a name="see-also"></a>Viz také:
 
-[Odkaz na soubory hlaviček](../standard-library/cpp-standard-library-header-files.md)<br/>
-[Standardní knihovna C++ – přehled](../standard-library/cpp-standard-library-overview.md)<br/>
-[Bezpečný přístup z více vláken ve standardní knihovně C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[Odkazy na hlavičkové soubory](../standard-library/cpp-standard-library-header-files.md)\
+[C++Přehled standardní knihovny](../standard-library/cpp-standard-library-overview.md)\
+[Bezpečný přístup z více vláken ve standardní knihovně C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)

@@ -4,18 +4,18 @@ ms.date: 09/27/2018
 f1_keywords:
 - filesystem/std::experimental::filesystem::path
 ms.assetid: 8a1227ca-aeb2-4e0e-84aa-86e34e4f4fe8
-ms.openlocfilehash: 486245df3433f552c289786a0b20deb33c8fb6c0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 10c865aa2bc2431850c69e9dfedbef37414b2cb9
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62370447"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68455102"
 ---
 # <a name="path-class"></a>path – třída
 
-**Cesta** třída uchovává objekt typu `string_type`, označované jako `myname` zde pro účely budeme vhodný pro použití jako cestu. `string_type` je synonymum pro `basic_string<value_type>`, kde `value_type` je synonymum pro **wchar_t** na Windows nebo **char** v rámci specifikace POSIX.
+Třída **path** ukládá objekt typu `string_type`, který je zde volán `myname` pro účely Exposition, vhodný pro použití jako cesta. `string_type`je synonymum pro `basic_string<value_type>`, kde `value_type` je synonymum pro **wchar_t** ve Windows nebo **char** v POSIX.
 
-Další informace a příklady kódu naleznete v tématu [navigace systému souborů (C++)](../standard-library/file-system-navigation.md).
+Další informace a příklady kódu naleznete v tématu [Navigace v systému souborů (C++)](../standard-library/file-system-navigation.md).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -27,36 +27,36 @@ class path;
 
 |Konstruktor|Popis|
 |-|-|
-|[Cesta](#path)|Vytvoří `path`.|
+|[Cesta](#path)|`path`Vytvoří.|
 
 ### <a name="typedefs"></a>Typedefs
 
 |Název typu|Popis|
 |-|-|
 |[const_iterator](#const_iterator)|Synonymum pro `iterator`.|
-|[iterator](#iterator)|Obousměrný konstantní iterátor, který určuje `path` součástí `myname`.|
+|[iterator](#iterator)|Obousměrný konstantní iterátor, který určuje `path` `myname`komponenty.|
 |[string_type](#string_type)|Typ je synonymum pro `basic_string<value_type>`.|
 
 ### <a name="member-functions"></a>Členské funkce
 
 |Členská funkce|Popis|
 |-|-|
-|[Připojení](#append)|Připojí k zadané pořadí `mypath`, převést a vkládání preferred_separator podle potřeby.|
-|[assign](#assign)|Nahradí `mypath` s zadané pořadí převede podle potřeby.|
-|[začít](#begin)|Vrátí `path::iterator` označující první element path v názvu cesty, pokud jsou k dispozici.|
-|[c_str](#c_str)|Vrací ukazatel na první znak v `mypath`.|
-|[clear](#clear)|Spustí `mypath.clear()`.|
+|[příloh](#append)|Připojí určenou sekvenci k `mypath`, převede a vloží preferred_separator podle potřeby.|
+|[assign](#assign)|Nahradí `mypath` zadanou sekvencí podle potřeby.|
+|[ifunctiondiscovery](#begin)|`path::iterator` Vrátí označení prvního prvku cesty v cestě, pokud je k dispozici.|
+|[c_str](#c_str)|Vrátí ukazatel na první znak v `mypath`.|
+|[jejich](#clear)|Provede `mypath.clear()`.|
 |[compare](#compare)|Vrátí hodnoty porovnání.|
-|[concat](#compare)|Připojí k zadané pořadí `mypath`, převést (ale ne vkládání oddělovač) podle potřeby.|
-|[prázdný](#empty)|Vrátí `mypath.empty()`.|
-|[ukončení](#end)|Vrátí iterátor koncová sekvence typu `iterator`.|
-|[Rozšíření](#extension)|Vrátí přípona `filename()`.|
-|[Název souboru](#filename)|Vrátí komponentu kořenové adresáře Jmeno, konkrétně `empty() path() : *--end()`. Komponenta může být prázdný.|
-|[generic_string](#generic_string)|Vrátí `this->string<Elem, Traits, Alloc>(al)` s (v části Windows) převést všechny zpětné lomítko na dopředné lomítko.|
-|[generic_u16string](#generic_u16string)|Vrátí `u16string()` s (v části Windows) převést všechny zpětné lomítko na dopředné lomítko.|
-|[generic_u32string](#generic_u32string)|Vrátí `u32string()` s (v části Windows) převést všechny zpětné lomítko na dopředné lomítko.|
-|[generic_u8string](#generic_u8string)|Vrátí `u8string()` s (v části Windows) převést všechny zpětné lomítko na dopředné lomítko.|
-|[generic_wstring](#generic_wstring)|Vrátí `wstring()` s (v části Windows) převést všechny zpětné lomítko na dopředné lomítko.|
+|[concat](#compare)|Připojí určenou sekvenci k `mypath`převedené (ale nevloží oddělovač) podle potřeby.|
+|[empty](#empty)|Vrátí `mypath.empty()`.|
+|[účelu](#end)|Vrátí iterátor typu `iterator`konec sekvence.|
+|[klapk](#extension)|Vrátí příponu `filename()`.|
+|[Bitmap](#filename)|Vrátí součást kořenového adresáře pro pole jmen, `empty() path() : *--end()`konkrétně. Komponenta může být prázdná.|
+|[generic_string](#generic_string)|Vrátí `this->string<Elem, Traits, Alloc>(al)` s (pod Windows) jakékoli zpětné lomítko převedené na lomítko.|
+|[generic_u16string](#generic_u16string)|Vrátí `u16string()` s (pod Windows) jakékoli zpětné lomítko převedené na lomítko.|
+|[generic_u32string](#generic_u32string)|Vrátí `u32string()` s (pod Windows) jakékoli zpětné lomítko převedené na lomítko.|
+|[generic_u8string](#generic_u8string)|Vrátí `u8string()` s (pod Windows) jakékoli zpětné lomítko převedené na lomítko.|
+|[generic_wstring](#generic_wstring)|Vrátí `wstring()` s (pod Windows) jakékoli zpětné lomítko převedené na lomítko.|
 |[has_extension](#has_extension)|Vrátí `!extension().empty()`.|
 |[has_filename](#has_filename)|Vrátí `!filename().empty()`.|
 |[has_parent_path](#has_parent_path)|Vrátí `!parent_path().empty()`.|
@@ -65,46 +65,46 @@ class path;
 |[has_root_name](#has_root_name)|Vrátí `!root_name().empty()`.|
 |[has_root_path](#has_root_path)|Vrátí `!root_path().empty()`.|
 |[has_stem](#has_stem)|Vrátí `!stem().empty()`.|
-|[is_absolute](#is_absolute)|Pro Windows, funkce vrátí `has_root_name() && has_root_directory()`. Pro specifikace Posix, funkce vrátí `has_root_directory()`.|
+|[is_absolute](#is_absolute)|Pro Windows vrátí `has_root_name() && has_root_directory()`funkce. U POSIX funkce vrátí `has_root_directory()`.|
 |[is_relative](#is_relative)|Vrátí `!is_absolute()`.|
-|[make_preferred](#make_preferred)|Převede každý oddělovače preferred_separator podle potřeby.|
-|[Nativní](#native)|Vrátí `myname`.|
-|[parent_path](#parent_path)|Vrátí nadřazenou součást cesty `myname`.|
-|[preferred_separator](#preferred_separator)|Objekt konstanty poskytuje upřednostňované znak pro oddělení součásti cesty, v závislosti na operačním systému hostitele. |
-|[relative_path](#relative_path)|Vrátí komponentu relativní cesta `myname`. |
-|[remove_filename –](#remove_filename)|Odebere název souboru.|
-|[replace_extension](#replace_extension)|Nahrazuje rozšíření `myname`. |
+|[make_preferred](#make_preferred)|Převede jednotlivé oddělovače na preferred_separator podle potřeby.|
+|[nativní](#native)|Vrátí `myname`.|
+|[parent_path](#parent_path)|Vrátí komponentu nadřazené cesty pro `myname`.|
+|[preferred_separator](#preferred_separator)|Objekt konstanty dává preferovanému znaku pro oddělení součástí cesty v závislosti na hostitelském operačním systému. |
+|[relative_path](#relative_path)|Vrátí součást relativní cesty pro `myname`. |
+|[remove_filename](#remove_filename)|Odstraní název souboru.|
+|[replace_extension](#replace_extension)|Nahradí rozšíření `myname`. |
 |[replace_filename](#replace_filename)|RReplaces název souboru.|
-|[root_directory](#root_directory)|Vrátí komponentu kořenové adresáře `myname`. |
-|[root_name](#root_name)|Vrátí komponentu názvu kořenového `myname`. |
-|[root_path](#root_path)|Vrátí komponentu kořenové cesty `myname`.|
-|[stem](#stem)|Vrátí `stem` komponentu `myname`.|
-|[string](#string)|Převede sekvenci uložené v `mypath`.|
-|[swap](#swap)|Spustí `swap(mypath, right.mypath)`.|
-|[u16string](#u16string)|Převede sekvenci uložené v `mypath` UTF-16 a vrátí je uložená v objektu typu `u16string`.|
-|[u32string](#u32string)|Převede sekvenci uložené v `mypath` UTF-32 a vrátí je uložená v objektu typu `u32string`.|
-|[u8string](#u8string)|Převede sekvenci uložené v `mypath` UTF-8 a vrátí je uložená v objektu typu `u8string`.|
-|[value_type](#value_type)|Typ, který popisuje prvků cesty podporuje operačním systémem hostitele.|
-|[wstring](#wstring)|Převede sekvenci uložené v `mypath` kódování podporuje pro systém hostitele `wchar_t` pořadí a vrátí je uložená v objektu typu `wstring`.|
+|[root_directory](#root_directory)|Vrátí součást `myname`kořenového adresáře. |
+|[root_name](#root_name)|Vrátí komponentu `myname`názvu kořenového adresáře. |
+|[root_path](#root_path)|Vrátí součást kořenové cesty pro `myname`.|
+|[stonek](#stem)|Vrátí komponentu prvku `myname`. `stem`|
+|[string](#string)|Převede sekvenci uloženou `mypath`v.|
+|[swap](#swap)|Provede `swap(mypath, right.mypath)`.|
+|[u16string](#u16string)|Převede sekvenci uloženou `mypath` v do UTF-16 a vrátí ji uloženou v objektu typu `u16string`.|
+|[u32string](#u32string)|Převede sekvenci uloženou `mypath` v do UTF-32 a vrátí ji uloženou v objektu typu `u32string`.|
+|[u8string](#u8string)|Převede sekvenci uloženou `mypath` v do UTF-8 a vrátí ji uloženou v objektu typu `u8string`.|
+|[value_type](#value_type)|Typ popisuje prvky cesty, které jsou na něj přizpůsobeny hostitelským operačním systémem.|
+|[wstring](#wstring)|Převede sekvenci, která `mypath` je uložena v, do kódování, které upřednostňuje hostitelský systém `wchar_t` pro sekvenci a vrátí ji uloženou v objektu `wstring`typu.|
 
 ### <a name="operators"></a>Operátory
 
 |Operátor|Popis|
 |-|-|
-|[operátor =](#op_as)|Nahradí prvky cesta kopie jinou cestu.|
+|[operátor =](#op_as)|Nahradí prvky cesty kopií jiné cesty.|
 |[operator+=](#op_add)|Různé `concat` výrazy.|
-|[/ = – operátor](#op_divide)|Různé `append` výrazy.|
-|[string_type – operátor](#op_string)|Vrátí `myname`.|
+|[operator/= – operátor](#op_divide)|Různé `append` výrazy.|
+|[operátor string_type](#op_string)|Vrátí `myname`.|
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** \<filesystem >
+**Hlavička:** \<> systému souborů
 
-**Namespace:** std::experimental::filesystem
+**Obor názvů:** std:: experimentální:: FileSystem
 
-## <a name="append"></a> path::append –
+## <a name="append"></a>cesta:: Append
 
-Připojí k zadané pořadí `mypath`převedený a vkládání `preferred_separator` podle potřeby.
+Připojí určenou sekvenci k `mypath`, převede a `preferred_separator` vloží podle potřeby.
 
 ```cpp
 template <class Source>
@@ -116,18 +116,18 @@ path& append(InIt first, InIt last);
 
 ### <a name="parameters"></a>Parametry
 
-*source*<br/>
-Zadané pořadí.
+*Zdrojová*\
+Zadaná sekvence
 
-*první*<br/>
+*první*\
 Začátek zadaného pořadí.
 
-*last*<br/>
+*posledního*\
 Konec zadaného pořadí.
 
-## <a name="assign"></a> path::Assign –
+## <a name="assign"></a>cesta:: přiřadit
 
-Nahradí `mypath` s zadané pořadí převede podle potřeby.
+Nahradí `mypath` zadanou sekvencí podle potřeby.
 
 ```cpp
 template <class Source>
@@ -139,42 +139,42 @@ path& assign(InIt first, InIt last);
 
 ### <a name="parameters"></a>Parametry
 
-*source*<br/>
-Zadané pořadí.
+*Zdrojová*\
+Zadaná sekvence
 
-*první*<br/>
+*první*\
 Začátek zadaného pořadí.
 
-*last*<br/>
+*posledního*\
 Konec zadaného pořadí.
 
-## <a name="begin"></a> path::begin –
+## <a name="begin"></a>cesta:: begin
 
-Vrátí `path::iterator` označující první element path v názvu cesty, pokud jsou k dispozici.
+`path::iterator` Vrátí označení prvního prvku cesty v cestě, pokud je k dispozici.
 
 ```cpp
 iterator begin() const;
 ```
 
-## <a name="c_str"></a> path::c_str
+## <a name="c_str"></a>cesta:: c_str
 
-Vrací ukazatel na první znak v `mypath`.
+Vrátí ukazatel na první znak v `mypath`.
 
 ```cpp
 const value_type& *c_str() const noexcept;
 ```
 
-## <a name="clear"></a> path::clear –
+## <a name="clear"></a>cesta:: Clear
 
-Spustí `mypath.clear()`.
+Provede `mypath.clear()`.
 
 ```cpp
 void clear() noexcept;
 ```
 
-## <a name="compare"></a> path::Compare –
+## <a name="compare"></a>cesta:: Compare
 
-První funkce vrací `mypath.compare(pval.native())`. Druhá funkce vrátí `mypath.compare(str)`. Třetí funkce vrátí `mypath.compare(ptr)`.
+První funkce vrátí `mypath.compare(pval.native())`. Druhá funkce vrátí `mypath.compare(str)`. Třetí funkce vrátí `mypath.compare(ptr)`.
 
 ```cpp
 int compare(const path& pval) const noexcept;
@@ -184,18 +184,18 @@ int compare(const value_type *ptr) const;
 
 ### <a name="parameters"></a>Parametry
 
-*pval*<br/>
-Cesta k porovnání.
+*pval*\
+Cesta, která se má porovnat
 
-*str*<br/>
-Řetězec určený k porovnání.
+*str*\
+Řetězec, který se má porovnat
 
-*ptr*<br/>
-Ukazatel k porovnání.
+*střed*\
+Ukazatel na porovnání
 
-## <a name="concat"></a> path::concat –
+## <a name="concat"></a>cesta:: Concat
 
-Připojí k zadané pořadí `mypath`, převést (ale ne vkládání oddělovač) podle potřeby.
+Připojí určenou sekvenci k `mypath`převedené (ale nevloží oddělovač) podle potřeby.
 
 ```cpp
 template <class Source>
@@ -207,16 +207,16 @@ path& concat(InIt first, InIt last);
 
 ### <a name="parameters"></a>Parametry
 
-*source*<br/>
-Zadané pořadí.
+*Zdrojová*\
+Zadaná sekvence
 
-*první*<br/>
+*první*\
 Začátek zadaného pořadí.
 
-*last*<br/>
+*posledního*\
 Konec zadaného pořadí.
 
-## <a name="const_iterator"></a> path::const_iterator
+## <a name="const_iterator"></a>cesta:: const_iterator
 
 Synonymum pro `iterator`.
 
@@ -224,7 +224,7 @@ Synonymum pro `iterator`.
 typedef iterator const_iterator;
 ```
 
-## <a name="empty"></a> path::Empty –
+## <a name="empty"></a>cesta:: Empty
 
 Vrátí `mypath.empty()`.
 
@@ -232,17 +232,17 @@ Vrátí `mypath.empty()`.
 bool empty() const noexcept;
 ```
 
-## <a name="end"></a> path::end –
+## <a name="end"></a>cesta:: end
 
-Vrátí iterátor koncová sekvence typu `iterator`.
+Vrátí iterátor typu `iterator`konec sekvence.
 
 ```cpp
 iterator end() const;
 ```
 
-## <a name="extension"></a> path::Extension –
+## <a name="extension"></a>cesta:: rozšíření
 
-Vrátí přípona `filename()`.
+Vrátí příponu `filename()`.
 
 ```cpp
 path extension() const;
@@ -250,23 +250,23 @@ path extension() const;
 
 ### <a name="remarks"></a>Poznámky
 
-Vrátí přípona `filename() X` tak, aby:
+Vrátí příponu `filename() X` tohoto typu:
 
-Pokud `X == path(".") || X == path("..")` nebo, pokud `X` obsahuje bez tečky přípona je prázdný.
+Pokud `X == path(".") || X == path("..")` nebo IF `X` neobsahuje tečku, přípona je prázdná.
 
-V opačném případě Přípona začíná (a zahrnuje) úplně vpravo tečkou.
+V opačném případě přípona začíná (a obsahuje) tečku vpravo.
 
-## <a name="filename"></a> path::filename –
+## <a name="filename"></a>cesta:: filename
 
-Vrátí komponentu kořenové adresáře Jmeno, konkrétně `empty() path() : *--end()`. Komponenta může být prázdný.
+Vrátí součást kořenového adresáře pro pole jmen, `empty() path() : *--end()`konkrétně. Komponenta může být prázdná.
 
 ```cpp
 path filename() const;
 ```
 
-## <a name="generic_string"></a> path::generic_string
+## <a name="generic_string"></a>cesta:: generic_string
 
-Vrátí `this->string<Elem, Traits, Alloc>(al)` s (v části Windows) převést všechny zpětné lomítko na dopředné lomítko.
+Vrátí `this->string<Elem, Traits, Alloc>(al)` s (pod Windows) jakékoli zpětné lomítko převedené na lomítko.
 
 ```cpp
 template <class Elem,
@@ -278,39 +278,39 @@ template <class Elem,
 string generic_string() const;
 ```
 
-## <a name="generic_u16string"></a> path::generic_u16string
+## <a name="generic_u16string"></a>cesta:: generic_u16string
 
-Vrátí `u16string()` s (v části Windows) převést všechny zpětné lomítko na dopředné lomítko.
+Vrátí `u16string()` s (pod Windows) jakékoli zpětné lomítko převedené na lomítko.
 
 ```cpp
 u16string generic_u16string() const;
 ```
 
-## <a name="generic_u32string"></a> path::generic_u32string
+## <a name="generic_u32string"></a>cesta:: generic_u32string
 
-Vrátí `u32string()` s (v části Windows) převést všechny zpětné lomítko na dopředné lomítko.
+Vrátí `u32string()` s (pod Windows) jakékoli zpětné lomítko převedené na lomítko.
 
 ```cpp
 u32string generic_u32string() const;
 ```
 
-## <a name="generic_u8string"></a> path::generic_u8string
+## <a name="generic_u8string"></a>cesta:: generic_u8string
 
-Vrátí `u8string()` s (v části Windows) převést všechny zpětné lomítko na dopředné lomítko.
+Vrátí `u8string()` s (pod Windows) jakékoli zpětné lomítko převedené na lomítko.
 
 ```cpp
 string generic_u8string() const;
 ```
 
-## <a name="generic_wstring"></a> path::generic_wstring
+## <a name="generic_wstring"></a>cesta:: generic_wstring
 
-Vrátí `wstring()` s (v části Windows) převést všechny zpětné lomítko na dopředné lomítko.
+Vrátí `wstring()` s (pod Windows) jakékoli zpětné lomítko převedené na lomítko.
 
 ```cpp
 wstring generic_wstring() const;
 ```
 
-## <a name="has_extension"></a> path::has_extension
+## <a name="has_extension"></a>cesta:: has_extension
 
 Vrátí `!extension().empty()`.
 
@@ -318,7 +318,7 @@ Vrátí `!extension().empty()`.
 bool has_extension() const;
 ```
 
-## <a name="has_filename"></a> path::has_filename –
+## <a name="has_filename"></a>cesta:: has_filename
 
 Vrátí `!filename().empty()`.
 
@@ -326,7 +326,7 @@ Vrátí `!filename().empty()`.
 bool has_filename() const;
 ```
 
-## <a name="has_parent_path"></a> path::has_parent_path
+## <a name="has_parent_path"></a>cesta:: has_parent_path
 
 Vrátí `!parent_path().empty()`.
 
@@ -334,7 +334,7 @@ Vrátí `!parent_path().empty()`.
 bool has_parent_path() const;
 ```
 
-## <a name="has_relative_path"></a> path::has_relative_path –
+## <a name="has_relative_path"></a>cesta:: has_relative_path
 
 Vrátí `!relative_path().empty()`.
 
@@ -342,7 +342,7 @@ Vrátí `!relative_path().empty()`.
 bool has_relative_path() const;
 ```
 
-## <a name="has_root_directory"></a> path::has_root_directory –
+## <a name="has_root_directory"></a>cesta:: has_root_directory
 
 Vrátí `!root_directory().empty()`.
 
@@ -350,7 +350,7 @@ Vrátí `!root_directory().empty()`.
 bool has_root_directory() const;
 ```
 
-## <a name="has_root_name"></a> path::has_root_name –
+## <a name="has_root_name"></a>cesta:: has_root_name
 
 Vrátí `!root_name().empty()`.
 
@@ -358,7 +358,7 @@ Vrátí `!root_name().empty()`.
 bool has_root_name() const;
 ```
 
-## <a name="has_root_path"></a> path::has_root_path –
+## <a name="has_root_path"></a>cesta:: has_root_path
 
 Vrátí `!root_path().empty()`.
 
@@ -366,7 +366,7 @@ Vrátí `!root_path().empty()`.
 bool has_root_path() const;
 ```
 
-## <a name="has_stem"></a> path::has_stem
+## <a name="has_stem"></a>cesta:: has_stem
 
 Vrátí `!stem().empty()`.
 
@@ -374,15 +374,15 @@ Vrátí `!stem().empty()`.
 bool has_stem() const;
 ```
 
-## <a name="is_absolute"></a> path::is_absolute –
+## <a name="is_absolute"></a>cesta:: is_absolute
 
-Pro Windows, funkce vrátí `has_root_name() && has_root_directory()`. Pro specifikace Posix, funkce vrátí `has_root_directory()`.
+Pro Windows vrátí `has_root_name() && has_root_directory()`funkce. U POSIX funkce vrátí `has_root_directory()`.
 
 ```cpp
 bool is_absolute() const;
 ```
 
-## <a name="is_relative"></a> path::is_relative –
+## <a name="is_relative"></a>cesta:: is_relative
 
 Vrátí `!is_absolute()`.
 
@@ -390,9 +390,9 @@ Vrátí `!is_absolute()`.
 bool is_relative() const;
 ```
 
-## <a name="iterator"></a> path::iterator
+## <a name="iterator"></a>cesta:: iterátor
 
-Obousměrné konstantní iterátor, který určuje cestu součástí `myname`.
+Obousměrný konstantní iterátor, který určuje součásti cesty pro `myname`.
 
 ```cpp
 class iterator
@@ -409,37 +409,37 @@ class iterator
 
 ### <a name="remarks"></a>Poznámky
 
-Tato třída popisuje obousměrný konstantní iterátor, který určuje `path` součástí `myname` v pořadí:
+Třída popisuje obousměrný konstantní iterátor, který určuje `path` `myname` komponenty v sekvenci:
 
-1. název kořenového adresáře, pokud jsou k dispozici
+1. název kořenového adresáře, pokud je k dispozici
 
-1. kořenový adresář, pokud jsou k dispozici
+1. kořenový adresář, pokud je k dispozici
 
-1. zbývající prvky adresáři nadřazeného `path`, pokud jsou k dispozici, a končí název souboru, pokud jsou k dispozici
+1. zbývající prvky adresáře nadřazeného objektu `path`, pokud jsou k dispozici, končící názvem souboru, pokud je k dispozici
 
 Pro `pval` objekt typu `path`:
 
-1. `path::iterator X = pval.begin()` Určuje první `path` element v názvu cesty, pokud jsou k dispozici.
+1. `path::iterator X = pval.begin()`Určuje první `path` prvek v cestě, pokud je k dispozici.
 
-1. `X == pval.end()` platí v případě `X` body pouze za koncem sekvence komponent.
+1. `X == pval.end()`má hodnotu true `X` , pokud body hned za koncem sekvence komponent.
 
-3. `*X` Vrátí řetězec, který odpovídá aktuální komponenty
+3. `*X`Vrátí řetězec, který odpovídá aktuální součásti.
 
-1. `++X` Určuje další komponenta v pořadí, pokud jsou k dispozici.
+1. `++X`Určuje další komponentu v sekvenci, pokud je k dispozici.
 
-1. `--X` Určuje předchozí komponenty v pořadí, pokud jsou k dispozici.
+1. `--X`určí předchozí komponentu v sekvenci, pokud je k dispozici.
 
-1. Změna `myname` zruší platnost všech iterátorů označující prvky v `myname`.
+1. Změna neověřuje všechny iterátory, které mají za následek určení `myname`prvků v. `myname`
 
-## <a name="make_preferred"></a> path::make_preferred –
+## <a name="make_preferred"></a>cesta:: make_preferred
 
-Každý oddělovač, který se převede `preferred_separator` podle potřeby.
+Převede každý oddělovač `preferred_separator` podle potřeby.
 
 ```cpp
 path& make_preferred();
 ```
 
-## <a name="native"></a> path::Native
+## <a name="native"></a>cesta:: nativní
 
 Vrátí `myname`.
 
@@ -447,9 +447,9 @@ Vrátí `myname`.
 const string_type& native() const noexcept;
 ```
 
-## <a name="op_as"></a> path::Operator =
+## <a name="op_as"></a>Path:: operator =
 
-Nahradí prvky cesta kopie jinou cestu.
+Nahradí prvky cesty kopií jiné cesty.
 
 ```cpp
 path& operator=(const path& right);
@@ -461,17 +461,17 @@ path& operator=(const Source& source);
 
 ### <a name="parameters"></a>Parametry
 
-*doprava*<br/>
-[Cesta](../standard-library/path-class.md) kopírovaná do `path`.
+*Kliknutím*\
+[Cesta](../standard-library/path-class.md) , která se kopíruje `path`do.
 
-*source*<br/>
-Cesta ke zdroji.
+*Zdrojová*\
+Zdrojová cesta
 
 ### <a name="remarks"></a>Poznámky
 
-První operátor kopie člen `right.myname` k `myname`. Druhý operátor člen přesune `right.myname` k `myname`. Třetí členský operátor se chová stejně jako `*this = path(source)`.
+První operátor členu `right.myname` kopíruje `myname`do. Druhý operátor členu přesune `right.myname` na `myname`. Třetí členský operátor se chová stejně jako `*this = path(source)`.
 
-## <a name="op_add"></a> path::Operator +=
+## <a name="op_add"></a>Path:: operator + =
 
 Různé `concat` výrazy.
 
@@ -490,20 +490,20 @@ path& operator+=(Elem elem);
 
 ### <a name="parameters"></a>Parametry
 
-*doprava*<br/>
-Přidání cesty.
+*Kliknutím*\
+Přidaná cesta
 
-*str*<br/>
+*str*\
 Přidaný řetězec.
 
-*ptr*<br/>
-Přidání ukazatele.
+*střed*\
+Přidaný ukazatel.
 
-*Elem*<br/>
-Přidaný `value_type` nebo `Elem`.
+*elem*\
+Přidané `value_type` nebo .`Elem`
 
-*source*<br/>
-Přidání zdroje.
+*Zdrojová*\
+Přidaný zdroj.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -521,7 +521,7 @@ Přidání zdroje.
 
 1. `concat(path(basic_string<Elem>(1, elem)));`
 
-## <a name="op_divide"></a> path::Operator / =
+## <a name="op_divide"></a>Path:: operator/=
 
 Různé `append` výrazy.
 
@@ -534,11 +534,11 @@ path& operator/=(const Source& source);
 
 ### <a name="parameters"></a>Parametry
 
-*doprava*<br/>
-Přidání cesty.
+*Kliknutím*\
+Přidaná cesta
 
-*source*<br/>
-Přidání zdroje.
+*Zdrojová*\
+Přidaný zdroj.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -548,7 +548,7 @@ Přidání zdroje.
 
 1. `append(source);`
 
-## <a name="op_string"></a> path::Operator string_type
+## <a name="op_string"></a>cesta:: operator string_type
 
 Vrátí `myname`.
 
@@ -556,9 +556,9 @@ Vrátí `myname`.
 operator string_type() const;
 ```
 
-## <a name="parent_path"></a> path::parent_path
+## <a name="parent_path"></a>cesta::p arent_path
 
-Vrátí nadřazenou součást cesty `myname`.
+Vrátí komponentu nadřazené cesty pro `myname`.
 
 ```cpp
 path parent_path() const;
@@ -566,11 +566,11 @@ path parent_path() const;
 
 ### <a name="remarks"></a>Poznámky
 
-Vrátí nadřazenou součást cesty `myname`, konkrétně předponu `myname` po odebrání `filename().native()` a bezprostředně předcházející oddělovačů adresáře. (Stejně, pokud `begin() != end()`, je kombinování všechny prvky v rozsahu `[begin(), --end())` postupně použitím `operator/=`.) Komponenta může být prázdný.
+Vrátí komponentu nadřazené cesty pro `myname`, specifickou `myname` předponu po odebrání `filename().native()` a všechny bezprostředně předchozí oddělovače adresářů. (Pokud je, `begin() != end()`je-li kombinace všech prvků v rozsahu `[begin(), --end())` kombinována po sobě `operator/=`, použije se.) Komponenta může být prázdná.
 
-## <a name="path"></a> path::path –
+## <a name="path"></a>cesta::p ATH
 
-Vytvoří `path` různými způsoby.
+`path` Sestaví různými způsoby.
 
 ```cpp
 path();
@@ -593,42 +593,42 @@ path(InIt first, InIt last, const locale& loc);
 
 ### <a name="parameters"></a>Parametry
 
-*doprava*<br/>
-Cesta, z nichž má být kopie vytvořené cesty.
+*Kliknutím*\
+Cesta, na kterou má být vytvořená cesta kopie.
 
-*source*<br/>
-Zdroj, z nichž má být kopie vytvořené cesty.
+*Zdrojová*\
+Zdroj, jehož vytvořená cesta má být kopie.
 
-*loc*<br/>
-Zadanému národnímu prostředí.
+*Loc*\
+Zadané národní prostředí.
 
-*první*<br/>
+*první*\
 Pozice prvního prvku, který chcete zkopírovat.
 
-*last*<br/>
-Pozice posledního prvku, které se mají zkopírovat.
+*posledního*\
+Pozice posledního prvku, který má být zkopírován.
 
 ### <a name="remarks"></a>Poznámky
 
-Konstruktory všechny vytvořit `myname` různými způsoby:
+Všechny konstruktory jsou `myname` v různých způsobech:
 
-Pro `path()` je `myname()`.
+Pro `path()` něj je `myname()`.
 
 Pro `path(const path& right`) je `myname(right.myname)`.
 
-Pro `path(path&& right)` je `myname(right.myname)`.
+Pro `path(path&& right)` něj je `myname(right.myname)`.
 
-Pro `template<class Source> path(const Source& source)` je `myname(source)`.
+Pro `template<class Source> path(const Source& source)` něj je `myname(source)`.
 
-Pro `template<class Source> path(const Source& source, const locale& loc)` je `myname(source)`, získání všechny potřebné codecvt omezující vlastnosti z `loc`.
+K `template<class Source> path(const Source& source, const locale& loc)` tomu je `myname(source)`potřeba získat všechny potřebné omezující vlastnosti codecvt z `loc`.
 
-Pro `template<class InIt> path(InIt first, InIt last)` je `myname(first, last)`.
+Pro `template<class InIt> path(InIt first, InIt last)` něj je `myname(first, last)`.
 
-Pro `template<class InIt> path(InIt first, InIt last, const locale& loc)` je `myname(first, last)`, získání všechny potřebné codecvt omezující vlastnosti z `loc`.
+K `template<class InIt> path(InIt first, InIt last, const locale& loc)` tomu je `myname(first, last)`potřeba získat všechny potřebné omezující vlastnosti codecvt z `loc`.
 
-## <a name="preferred_separator"></a> path::preferred_separator
+## <a name="preferred_separator"></a>cesta::p referred_separator
 
-Objekt konstanty poskytuje upřednostňované znak pro oddělení součásti cesty, v závislosti na operačním systému hostitele.
+Objekt konstanty dává preferovanému znaku pro oddělení součástí cesty v závislosti na hostitelském operačním systému.
 
 ```cpp
 #if _WIN32_C_LIB
@@ -640,11 +640,11 @@ static constexpr value_type preferred_separator == '/';
 
 ### <a name="remarks"></a>Poznámky
 
-Všimněte si, že se jedná o stejnou měrou přípustné ve většině případů v rámci Windows použijte L "/" na příslušné místo.
+Všimněte si, že je ve Windows stejně přípustný i pro použití L '/' na svém místě.
 
-## <a name="relative_path"></a> path::RELATIVE_PATH –
+## <a name="relative_path"></a>cesta:: RELATIVE_PATH
 
-Vrátí komponentu relativní cesta `myname`.
+Vrátí součást relativní cesty pro `myname`.
 
 ```cpp
 path relative_path() const;
@@ -652,19 +652,19 @@ path relative_path() const;
 
 ### <a name="remarks"></a>Poznámky
 
-Vrátí komponentu relativní cesta `myname`, konkrétně příponu `myname` po odebrání `root_path().native()` a všechny následné okamžitě redundantní oddělovač. Komponenta může být prázdný.
+Vrátí komponentu relativní cesty pro `myname`, specifickou `myname` příponu po odebrání `root_path().native()` a všechny bezprostředně následné nadbytečné oddělovače adresářů. Komponenta může být prázdná.
 
-## <a name="remove_filename"></a> path::remove_filename –
+## <a name="remove_filename"></a>cesta:: remove_filename
 
-Odebere název souboru.
+Odstraní název souboru.
 
 ```cpp
 path& remove_filename();
 ```
 
-## <a name="replace_extension"></a> path::replace_extension –
+## <a name="replace_extension"></a>cesta:: replace_extension
 
-Nahrazuje rozšíření `myname`.
+Nahradí rozšíření `myname`.
 
 ```cpp
 path& replace_extension(const path& newext = path());
@@ -672,14 +672,14 @@ path& replace_extension(const path& newext = path());
 
 ### <a name="parameters"></a>Parametry
 
-*newext*<br/>
+*newext*\
 Nové rozšíření.
 
 ### <a name="remarks"></a>Poznámky
 
-Nejprve Odebere příponu `extension().native()` z `myname`. Pak v případě `!newext.empty() && newext[0] != dot` (kde `dot` je `*path(".").c_str()`), pak `dot` se připojí k `myname`. Potom *newext* se připojí k `myname`.
+Nejprve odebere příponu `extension().native()` z `myname`. Pak pokud `!newext.empty() && newext[0] != dot` (kde `dot` je `*path(".").c_str()`), pak `dot` je připojen k `myname`. Pak *NewExt* je připojen k `myname`.
 
-## <a name="replace_filename"></a> path::replace_filename –
+## <a name="replace_filename"></a>cesta:: replace_filename
 
 Nahradí název souboru.
 
@@ -689,12 +689,12 @@ path& replace_filename(const path& pval);
 
 ### <a name="parameters"></a>Parametry
 
-*pval*<br/>
-Cesta k souboru.
+*pval*\
+Cesta k názvu souboru.
 
 ### <a name="remarks"></a>Poznámky
 
-Členské funkce provede:
+Členská funkce se spustí:
 
 ```cpp
 remove_filename();
@@ -703,9 +703,9 @@ remove_filename();
 return (*this);
 ```
 
-## <a name="root_directory"></a> path::root_directory –
+## <a name="root_directory"></a>cesta:: root_directory
 
-Vrátí komponentu kořenové adresáře `myname`.
+Vrátí součást `myname`kořenového adresáře.
 
 ```cpp
 path root_directory() const;
@@ -713,11 +713,11 @@ path root_directory() const;
 
 ### <a name="remarks"></a>Poznámky
 
-Komponenta může být prázdný.
+Komponenta může být prázdná.
 
-## <a name="root_name"></a> path::root_name –
+## <a name="root_name"></a>cesta:: root_name
 
-Vrátí komponentu názvu kořenového `myname`.
+Vrátí komponentu `myname`názvu kořenového adresáře.
 
 ```cpp
 path root_name() const;
@@ -725,11 +725,11 @@ path root_name() const;
 
 ### <a name="remarks"></a>Poznámky
 
-Komponenta může být prázdný.
+Komponenta může být prázdná.
 
-## <a name="root_path"></a> path::root_path –
+## <a name="root_path"></a>cesta:: root_path
 
-Vrátí komponentu kořenové cesty `myname`.
+Vrátí součást kořenové cesty pro `myname`.
 
 ```cpp
 path root_path() const;
@@ -737,11 +737,11 @@ path root_path() const;
 
 ### <a name="remarks"></a>Poznámky
 
-Vrátí komponentu kořenové cesty `myname`, konkrétně `root_name()`  /  `root_directory`. Komponenta může být prázdný.
+Vrátí komponentu `myname`kořenové cesty, konkrétně `root_name()`  / . `root_directory` Komponenta může být prázdná.
 
-## <a name="stem"></a> path::stem –
+## <a name="stem"></a>cesta:: kmen
 
-Vrátí `stem` komponentu `myname`.
+Vrátí komponentu prvku `myname`. `stem`
 
 ```cpp
 path stem() const;
@@ -749,11 +749,11 @@ path stem() const;
 
 ### <a name="remarks"></a>Poznámky
 
-Vrátí `stem` komponentu `myname`, konkrétně `filename().native()` ukončené jakékoli `extension().native()` odebrat. Komponenta může být prázdný.
+`stem` Vrátí komponentu`myname`, konkrétně`filename().native()`s jakýmkoliv koncovým odebráním.`extension().native()` Komponenta může být prázdná.
 
-## <a name="string"></a> path::String
+## <a name="string"></a>cesta:: řetězec
 
-Převede sekvenci uložené v `mypath`.
+Převede sekvenci uloženou `mypath`v.
 
 ```cpp
 template \<class Elem, class Traits = char_traits\<Elem>, class Alloc = allocator\<Elem>>
@@ -763,7 +763,7 @@ string string() const;
 
 ### <a name="remarks"></a>Poznámky
 
-První členská funkce (šablona) převede sekvenci uložené v `mypath` stejným způsobem jako:
+První členská funkce (Template) převede sekvenci uloženou `mypath` stejným způsobem jako:
 
 1. `string()` pro `string<char, Traits, Alloc>()`
 
@@ -773,9 +773,9 @@ První členská funkce (šablona) převede sekvenci uložené v `mypath` stejn�
 
 1. `u32string()` pro `string<char32_t, Traits, Alloc>()`
 
-Druhá členská funkce převede sekvenci uložené v `mypath` kódování podporuje pro systém hostitele **char** pořadí a vrátí je uložená v objektu typu `string`.
+Druhá členská funkce převede sekvenci uloženou `mypath` v na kódování, které upřednostňuje hostitelský systém pro sekvenci **znaků** a vrátí ji uloženou v objektu typu `string`.
 
-## <a name="string_type"></a> path::string_type
+## <a name="string_type"></a>cesta:: string_type
 
 Typ je synonymum pro `basic_string<value_type>`.
 
@@ -783,41 +783,41 @@ Typ je synonymum pro `basic_string<value_type>`.
 typedef basic_string<value_type> string_type;
 ```
 
-## <a name="swap"></a> path::swap
+## <a name="swap"></a>cesta:: swap
 
-Spustí `swap(mypath, right.mypath)`.
+Provede `swap(mypath, right.mypath)`.
 
 ```cpp
 void swap(path& right) noexcept;
 ```
 
-## <a name="u16string"></a> path::u16string
+## <a name="u16string"></a>cesta:: u16string
 
-Převede sekvenci uložené v `mypath` UTF-16 a vrátí je uložená v objektu typu `u16string`.
+Převede sekvenci uloženou `mypath` v do UTF-16 a vrátí ji uloženou v objektu typu `u16string`.
 
 ```cpp
 u16string u16string() const;
 ```
 
-## <a name="u32string"></a> path::u32string
+## <a name="u32string"></a>cesta:: u32string
 
-Převede sekvenci uložené v `mypath` UTF-32 a vrátí je uložená v objektu typu `u32string`.
+Převede sekvenci uloženou `mypath` v do UTF-32 a vrátí ji uloženou v objektu typu `u32string`.
 
 ```cpp
 u32string u32string() const;
 ```
 
-## <a name="u8string"></a> path::u8string
+## <a name="u8string"></a>cesta:: u8string
 
-Převede sekvenci uložené v `mypath` UTF-8 a vrátí je uložená v objektu typu `u8string`.
+Převede sekvenci uloženou `mypath` v do UTF-8 a vrátí ji uloženou v objektu typu `u8string`.
 
 ```cpp
 string u8string() const;
 ```
 
-## <a name="value_type"></a> path::value_type
+## <a name="value_type"></a>cesta:: value_type
 
-Typ, který popisuje `path` prvky podporuje operačním systémem hostitele.
+Typ popisuje prvky, `path` které jsou na něj přizpůsobeny hostitelským operačním systémem.
 
 ```cpp
 #if _WIN32_C_LIB
@@ -827,9 +827,9 @@ typedef char value_type;
 #endif // filesystem model now defined
 ```
 
-## <a name="wstring"></a> path::wstring
+## <a name="wstring"></a>cesta:: wstring
 
-Převede sekvenci uložené v `mypath` kódování podporuje pro systém hostitele **wchar_t** pořadí a vrátí je uložená v objektu typu `wstring`.
+Převede sekvenci uloženou `mypath` v na kódování, které upřednostňuje hostitelský systém pro sekvenci **wchar_t** a vrátí ji uloženou v objektu typu `wstring`.
 
 ```cpp
 wstring wstring() const;
@@ -837,4 +837,4 @@ wstring wstring() const;
 
 ## <a name="see-also"></a>Viz také:
 
-[Odkaz na soubory hlaviček](../standard-library/cpp-standard-library-header-files.md)<br/>
+[Odkazy na hlavičkové soubory](../standard-library/cpp-standard-library-header-files.md)

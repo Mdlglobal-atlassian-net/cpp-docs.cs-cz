@@ -1,5 +1,5 @@
 ---
-title: '&lt;pole&gt; funkce'
+title: '&lt;funkce&gt; pole'
 ms.date: 11/04/2016
 f1_keywords:
 - array/std::array::get
@@ -10,24 +10,24 @@ helpviewer_keywords:
 - std::array [C++], get
 - std::get [C++]
 - std::swap [C++]
-ms.openlocfilehash: 719377be2ac130100e3f9e9ea608c5c27be3101f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 61b5404d0f22cd902e35f6bee680df3c719804f2
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62377267"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68456776"
 ---
-# <a name="ltarraygt-functions"></a>&lt;pole&gt; funkce
+# <a name="ltarraygt-functions"></a>&lt;funkce&gt; pole
 
-\<Pole > záhlaví obsahuje dvě funkce bez členů `get` a `swap`, které pracují na **pole** objekty.
+Pole > záhlaví obsahuje dvě nečlenské `get` funkce a `swap`, které pracují s objekty **Array** . \<
 
 |||
 |-|-|
 |[get](#get)|[swap](#swap)|
 
-## <a name="get"></a>  získat
+## <a name="get"></a>Čtěte
 
-Vrátí odkaz na zadaný prvek pole.
+Vrátí odkaz na určený prvek pole.
 
 ```cpp
 template <int Index, class T, size_t N>
@@ -42,17 +42,17 @@ constexpr T&& get(array<T, N>&& arr) noexcept;
 
 ### <a name="parameters"></a>Parametry
 
-*Index*<br/>
+*Indexovacím*\
 Posunutí elementu.
 
-*T*<br/>
+*Š*\
 Typ prvku
 
-*N*<br/>
+*N*\
 Počet prvků v poli.
 
-*arr*<br/>
-Pole lze vybírat.
+*šipka*\
+Pole, ze kterého se má vybírat
 
 ### <a name="example"></a>Příklad
 
@@ -86,9 +86,9 @@ int main()
 1 3
 ```
 
-## <a name="swap"></a>  Prohození
+## <a name="swap"></a>adresu
 
-Specializace šablony nečlenské `std::swap` Prohodí dva **pole** objekty.
+Specializace `std::swap` šablony bez člena, která zahodí dva objekty **Array** .
 
 ```cpp
 template <class Ty, std::size_t N>
@@ -97,21 +97,21 @@ void swap(array<Ty, N>& left, array<Ty, N>& right);
 
 ### <a name="parameters"></a>Parametry
 
-*Ty*<br/>
+*Ty*\
 Typ prvku
 
-*N*<br/>
+*N*\
 Velikost pole.
 
-*doleva*<br/>
-První pole se prohodit.
+*zbývá*\
+První pole k proměně.
 
-*doprava*<br/>
-Druhé pole se prohodit.
+*Kliknutím*\
+Druhé pole pro prohození.
 
 ### <a name="remarks"></a>Poznámky
 
-Funkce šablony provede `left.swap(right)`.
+Funkce šablony se spustí `left.swap(right)`.
 
 ### <a name="example"></a>Příklad
 
@@ -161,4 +161,4 @@ int main()
 
 ## <a name="see-also"></a>Viz také:
 
-[\<array>](../standard-library/array.md)<br/>
+[\<> pole](../standard-library/array.md)

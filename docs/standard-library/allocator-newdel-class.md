@@ -9,16 +9,16 @@ helpviewer_keywords:
 - stdext::allocators [C++], allocator_newdel
 - stdext::allocator_newdel
 ms.assetid: 62666cd2-3afe-49f7-9dd1-9bbbb154da98
-ms.openlocfilehash: eac2fb993eb3e9aab5d043debe6402576d7b49b0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d49a1596371e4a69873b826d3e756f263539d034
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62411016"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68448313"
 ---
 # <a name="allocatornewdel-class"></a>allocator_newdel – třída
 
-Implementuje alokátoru, který používá **operátor delete** k uvolnění paměti bloku a **operátor new** přidělení bloku paměti.
+Implementuje Alokátor, který používá **operátor delete** k navrácení bloku paměti a **operátoru new** pro přidělení bloku paměti.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -31,18 +31,18 @@ class allocator_newdel;
 
 |Parametr|Popis|
 |---------------|-----------------|
-|*Typ*|Typ prvků přidělaná přidělujícího modulu.|
+|*Typ*|Typ prvků přidělených přidělováním.|
 
 ## <a name="remarks"></a>Poznámky
 
-[ALLOCATOR_DECL](../standard-library/allocators-functions.md#allocator_decl) – makro předá tuto třídu jako *název* parametr v následujícím příkazu: `ALLOCATOR_DECL(CACHE_FREELIST stdext::allocators::max_none), SYNC_DEFAULT, allocator_newdel);`
+Makro [ALLOCATOR_DECL](../standard-library/allocators-functions.md#allocator_decl) předá tuto třídu jako parametr *Name* v následujícím příkazu:`ALLOCATOR_DECL(CACHE_FREELIST stdext::allocators::max_none), SYNC_DEFAULT, allocator_newdel);`
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** \<alokátorů >
+**Hlavička:** \<> přidělování
 
-**Namespace:** stdext
+**Obor názvů:** stdext
 
 ## <a name="see-also"></a>Viz také:
 
-[\<allocators>](../standard-library/allocators-header.md)<br/>
+[\<allocators>](../standard-library/allocators-header.md)

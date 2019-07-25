@@ -15,16 +15,16 @@ helpviewer_keywords:
 - std::shuffle_order_engine [C++], base_type
 - std::shuffle_order_engine [C++], seed
 ms.assetid: 0bcd1fb0-44d7-4e59-bb1b-4a9b673a960d
-ms.openlocfilehash: bf767c12a19e4ae47c34a8f01e1b1a2f1e028eb3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 972ba83afb5478cd89314817ba823b8d5657c9c8
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62399431"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68450418"
 ---
 # <a name="shuffleorderengine-class"></a>shuffle_order_engine – třída
 
-Generuje náhodné posloupnosti opětovným uspořádáním hodnot ze základního modulu.
+Vygeneruje náhodnou sekvenci změnou pořadí hodnot vrácených z jeho základního modulu.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -35,11 +35,11 @@ class shuffle_order_engine;
 
 ### <a name="parameters"></a>Parametry
 
-*Modul*<br/>
+*Jádra*\
 Typ základního modulu.
 
-*K*<br/>
-**Velikost tabulky**. Počet prvků ve vyrovnávací paměti (tabulka). **Předběžná podmínka**: `0 < K`
+*K*\
+**Velikost tabulky** Počet prvků ve vyrovnávací paměti (tabulce). **Předběžná podmínka**:`0 < K`
 
 ## <a name="members"></a>Členové
 
@@ -48,18 +48,18 @@ Typ základního modulu.
 |`shuffle_order_engine::shuffle_order_engine`|`shuffle_order_engine::base`|`shuffle_order_engine::discard`|
 |`shuffle_order_engine::operator()`|`shuffle_order_engine::base_type`|`shuffle_order_engine::seed`|
 
-Další informace o členech modul, naleznete v tématu [ \<náhodné >](../standard-library/random.md).
+Další informace o členech motoru naleznete v tématu [ \<Random >](../standard-library/random.md).
 
 ## <a name="remarks"></a>Poznámky
 
-Tato třída šablony popisuje *modul adaptér* , která vytváří hodnoty opětovným uspořádáním hodnot vrácených základním modulem. Každý konstruktor vyplní interní tabulku *K* hodnoty vrácené základním modulem a náhodného prvku je vybrán z tabulky, pokud je požadována hodnota.
+Tato třída šablony popisuje *adaptér modulu* , který vytváří hodnoty změnou pořadí hodnot vrácených základním modulem. Každý konstruktor vyplní interní tabulku hodnotami *K* , které vrátil základní modul, a z tabulky se vybere náhodný prvek, když je požadovaná hodnota.
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** \<náhodné >
+**Hlavička:** \<náhodné >
 
-**Namespace:** std
+**Obor názvů:** std
 
 ## <a name="see-also"></a>Viz také:
 
-[\<náhodné >](../standard-library/random.md)<br/>
+[\<náhodné >](../standard-library/random.md)

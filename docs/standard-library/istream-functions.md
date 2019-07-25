@@ -1,26 +1,26 @@
 ---
-title: '&lt;IStream&gt; funkce'
+title: '&lt;funkce&gt; IStream'
 ms.date: 11/04/2016
 f1_keywords:
 - istream/std::swap
 - istream/std::ws
 ms.assetid: 0301ea0d-4ded-4841-83dd-4253b55b3188
-ms.openlocfilehash: b590559b01bb8f5db21fca9f78d220d8bad5c27e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: fc512558969bc25d2b16afa2b93219e13d0b28ca
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62413330"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68458763"
 ---
-# <a name="ltistreamgt-functions"></a>&lt;IStream&gt; funkce
+# <a name="ltistreamgt-functions"></a>&lt;funkce&gt; IStream
 
 |||
 |-|-|
 |[swap](#istream_swap)|[ws](#ws)|
 
-## <a name="istream_swap"></a>  Prohození
+## <a name="istream_swap"></a>adresu
 
-Vymění prvky dvou objektů datového proudu.
+Vyměňuje prvky dvou objektů streamu.
 
 ```cpp
 template <class Elem, class Tr>
@@ -36,15 +36,15 @@ void swap(
 
 ### <a name="parameters"></a>Parametry
 
-*doleva*<br/>
+*zbývá*\
 Datový proud.
 
-*doprava*<br/>
+*Kliknutím*\
 Datový proud.
 
 ## <a name="ws"></a>  ws
 
-Přeskočí prázdné místo v datovém proudu.
+Přeskočí prázdné znaky v datovém proudu.
 
 ```cpp
 template class<Elem, Tr> basic_istream<Elem, Tr>& ws(basic_istream<Elem, Tr>& _Istr);
@@ -52,7 +52,7 @@ template class<Elem, Tr> basic_istream<Elem, Tr>& ws(basic_istream<Elem, Tr>& _I
 
 ### <a name="parameters"></a>Parametry
 
-*_Istr*<br/>
+*_Istr*\
 Datový proud.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -61,14 +61,14 @@ Datový proud.
 
 ### <a name="remarks"></a>Poznámky
 
-Manipulátor extrahuje a zahodí všechny prvky `ch` pro kterou [use_facet](../standard-library/basic-filebuf-class.md#open)< **ctype** \< **Elem**>> ( [getloc –](../standard-library/ios-base-class.md#getloc)). **je**( **ctype** \< **Elem**>:: **místo**, **ch**) má hodnotu true.
+Manipulátor extrahuje a zahodí `ch` všechny prvky, pro které [use_facet](../standard-library/basic-filebuf-class.md#open)< **CType** \< **elem**> > ( [getloc](../standard-library/ios-base-class.md#getloc)). **je** ( **CType** \< **elem**>:: **Space**, **ch**) má hodnotu true.
 
-Volání funkcí [setstate](../standard-library/basic-ios-class.md#setstate)( **eofbit**), pokud dojde při extrahování prvků konec souboru. Vrátí *_Istr*.
+Funkce volá [setstate](../standard-library/basic-ios-class.md#setstate)( **eofbit**), pokud při extrakci prvků narazí na konec souboru. Vrátí *_Istr*.
 
 ### <a name="example"></a>Příklad
 
-Zobrazit [operátor >>](../standard-library/istream-operators.md#op_gt_gt) pro příklad použití `ws`.
+Příklad použití `ws`prvku naleznete v tématu [operátor > >](../standard-library/istream-operators.md#op_gt_gt) .
 
 ## <a name="see-also"></a>Viz také:
 
-[\<istream>](../standard-library/istream.md)<br/>
+[\<IStream >](../standard-library/istream.md)

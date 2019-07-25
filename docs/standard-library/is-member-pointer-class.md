@@ -7,12 +7,12 @@ helpviewer_keywords:
 - is_member_pointer class
 - is_member_pointer
 ms.assetid: da07ff4e-9ee0-4baa-ad93-1741f10913d1
-ms.openlocfilehash: a02d8a156a861367f34ac0cda4744c3de9e43efe
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f07e32c8ab1ea82a0c3616e96baca920a95e3042
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62404777"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68456138"
 ---
 # <a name="ismemberpointer-class"></a>is_member_pointer – třída
 
@@ -27,12 +27,12 @@ struct is_member_pointer;
 
 ### <a name="parameters"></a>Parametry
 
-*Ty*<br/>
+*Ty*\
 Typ, na který chcete odeslat dotaz.
 
 ## <a name="remarks"></a>Poznámky
 
-Instance predikátu typu obsahuje hodnotu true, pokud typ *Ty* je ukazatel na členskou funkci nebo ukazatel na člena objektu nebo `cv-qualified` formu jeden z nich, jinak má hodnotu false.
+Instance predikátu typu má hodnotu true, pokud typ, *který je ukazatel* na členskou funkci, nebo ukazatel na členský objekt nebo `cv-qualified` formu jednoho z nich, v opačném případě obsahuje hodnotu false.
 
 ## <a name="example"></a>Příklad
 
@@ -79,13 +79,13 @@ is_member_pointer<int (functional::*)()> == true
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** \<type_traits >
+**Hlavička:** \<type_traits >
 
-**Namespace:** std
+**Obor názvů:** std
 
 ## <a name="see-also"></a>Viz také:
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
-[is_member_function_pointer – třída](../standard-library/is-member-function-pointer-class.md)<br/>
-[is_member_object_pointer – třída](../standard-library/is-member-object-pointer-class.md)<br/>
-[is_pointer – třída](../standard-library/is-pointer-class.md)<br/>
+[< type_traits >](../standard-library/type-traits.md)\
+[is_member_function_pointer – třída](../standard-library/is-member-function-pointer-class.md)\
+[is_member_object_pointer – třída](../standard-library/is-member-object-pointer-class.md)\
+[is_pointer – třída](../standard-library/is-pointer-class.md)

@@ -6,19 +6,19 @@ f1_keywords:
 helpviewer_keywords:
 - cstddef header
 ms.assetid: be8d1e39-5974-41ee-b41d-eafa6c82ffce
-ms.openlocfilehash: 15d13a3af35cb41950df8aeba0c86d779e701ddb
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 87d268977ee46112fedce517e66a9e68071863db
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68244448"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68457563"
 ---
 # <a name="ltcstddefgt"></a>&lt;cstddef&gt;
 
-Obsahuje hlavičku standardní knihovny C \<stddef.h > a přidá názvy přidružené k `std` oboru názvů. Včetně této hlavičky zajišťuje, že názvy deklarované s vnějším spojením v hlavičce standardní knihovny jazyka C jsou deklarovány v `std` oboru názvů.
+Obsahuje hlavičku \<standardní knihovny jazyka C STDDEF. h > a přidává k `std` oboru názvů přidružené názvy. Včetně této hlavičky zajišťuje, že názvy deklarované s vnějším propojením v záhlaví standardní knihovny jazyka C jsou deklarovány v `std` oboru názvů.
 
 > [!NOTE]
-> \<cstddef – > obsahuje typ **bajtů** a neobsahuje typ **wchar_t**.
+> \<cstddef > zahrnuje typ **Byte** a nezahrnuje typ **wchar_t**.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -26,7 +26,7 @@ Obsahuje hlavičku standardní knihovny C \<stddef.h > a přidá názvy přidru�
 #include <cstddef>
 ```
 
-## <a name="namespace-and-macros"></a>Namespace a makra
+## <a name="namespace-and-macros"></a>Obor názvů a makra
 
 ```cpp
 namespace std {
@@ -43,18 +43,18 @@ namespace std {
 ### <a name="parameters"></a>Parametry
 
 *ptrdiff_t*\
-Implementaci definované podepsané celočíselný typ, který může obsahovat rozdíl dvou dolní indexy v objektu array.
+Typ celého čísla se znaménkem definovaný pro implementaci, který může obsahovat rozdíl dvou dolních indexů v objektu Array.
 
 *size_t*\
-Typ unsigned integer definovanou implementací, který je dostatečně velký, aby se tak, aby obsahovala velikost v bajtech libovolného objektu.
+Uživatelsky definovaný typ unsigned integer, který je dostatečně velký, aby obsahoval velikost v bajtech libovolného objektu.
 
 *max_align_t*\
-Typ POD jehož požadavek na zarovnání je minimálně stejně velká jako u každé skalárního typu a jejichž požadavek na zarovnání je podporovaná v každé kontextu.
+Typ POD, jehož požadavek na zarovnání je nejméně stejně skvělý jako u každého skalárního typu a jehož požadavek na zarovnání je podporován v každém kontextu.
 
 *nullptr_t*\
-Synonymum pro typ **nullptr** výrazu. I když **nullptr** adresu nelze přijmout, adresu jiného *nullptr_t* objekt, který je l-hodnoty. je možné provést.
+Synonymum pro typ výrazu **nullptr** . I když adresu **nullptr** nelze vzít, adresa jiného objektu *nullptr_t* , která je l-hodnotou, může být provedena.
 
-## <a name="byte-class"></a>bajty třídy
+## <a name="byte-class"></a>Byte – třída
 
 ```cpp
 enum class byte : unsigned char {};
@@ -79,6 +79,6 @@ template <class IntType>
 
 ## <a name="see-also"></a>Viz také:
 
-[Odkaz na soubory hlaviček](../standard-library/cpp-standard-library-header-files.md)<br/>
-[Standardní knihovna C++ – přehled](../standard-library/cpp-standard-library-overview.md)<br/>
-[Bezpečný přístup z více vláken ve standardní knihovně C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[Odkazy na hlavičkové soubory](../standard-library/cpp-standard-library-header-files.md)\
+[C++Přehled standardní knihovny](../standard-library/cpp-standard-library-overview.md)\
+[Bezpečný přístup z více vláken ve standardní knihovně C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)

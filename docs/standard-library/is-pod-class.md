@@ -7,12 +7,12 @@ helpviewer_keywords:
 - is_pod class
 - is_pod
 ms.assetid: d73ebdee-746b-4082-9fa4-2db71432eb0e
-ms.openlocfilehash: 3dff4650cf0337a5ff54065d3b1644e11008ecfe
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1249e9a3689d4b91334e545ba294c28984898035
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62413616"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68455763"
 ---
 # <a name="ispod-class"></a>is_pod – třída
 
@@ -27,20 +27,20 @@ struct is_pod;
 
 ### <a name="parameters"></a>Parametry
 
-*T*<br/>
+*Š*\
 Typ, na který chcete odeslat dotaz.
 
 ## <a name="remarks"></a>Poznámky
 
-`is_pod<T>::value` je **true** Pokud typ *T* je prostý starých dat (POD). V opačném případě je **false**.
+`is_pod<T>::value`má **hodnotu true** , pokud je typ *T* prostá stará data (pod). V opačném případě je **hodnota false**.
 
-Aritmetické typy, výčtové typy, typy ukazatele a typy ukazatelů na členy jsou POD.
+Aritmetické typy, výčtové typy, typy ukazatelů a ukazatele na typy členů jsou POD.
 
-Verze cv kvalifikovaný typ POD samotného je typ POD.
+Verze typu POD, která je kvalifikována na základě CV, je typu POD.
 
-Pole POD patří POD.
+Pole POD je samo POD.
 
-Struktura nebo sjednocení, jehož nestatických datových členů jsou POD, je samotný POD Pokud má:
+Struktura nebo sjednocení, jejichž nestatické datové členy jsou POD, jsou mimo jiné, pokud má:
 
 - Žádné uživatelem deklarované konstruktory.
 
@@ -52,11 +52,11 @@ Struktura nebo sjednocení, jehož nestatických datových členů jsou POD, je 
 
 - Žádné nestatické datové členy typu odkazu.
 
-- Žádné uživatelem definovaného kopírovacího operátoru přiřazení.
+- Bez uživatelsky definovaného operátoru přiřazení kopírování.
 
-- Žádné uživatelem definovaný destruktor.
+- Neexistuje žádný uživatelsky definovaný destruktor.
 
-Proto můžete rekurzivně sestavení POD struktury a pole, které obsahují POD struktury a pole.
+Proto můžete rekurzivně sestavovat struktury POD a pole, která obsahují struktury POD a pole.
 
 ## <a name="example"></a>Příklad
 
@@ -96,10 +96,10 @@ is_pod<throws> == false
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** \<type_traits >
+**Hlavička:** \<type_traits >
 
-**Namespace:** std
+**Obor názvů:** std
 
 ## <a name="see-also"></a>Viz také:
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
+[<type_traits>](../standard-library/type-traits.md)

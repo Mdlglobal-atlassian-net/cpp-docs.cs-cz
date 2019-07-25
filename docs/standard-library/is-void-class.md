@@ -7,16 +7,16 @@ helpviewer_keywords:
 - is_void class
 - is_void
 ms.assetid: 99b0de3b-1b38-4949-b053-080e5363174e
-ms.openlocfilehash: 7ceecfd4751d3c86e26f9a6911776de92c9471f9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 28c162f6a868c8d6640ba17af875d84fef78c79a
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62413343"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68458863"
 ---
 # <a name="isvoid-class"></a>is_void – třída
 
-Ověřuje, zda je typ void.
+Testuje, zda je typ void.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -27,12 +27,12 @@ struct is_void;
 
 ### <a name="parameters"></a>Parametry
 
-*T*<br/>
+*Š*\
 Typ, na který chcete odeslat dotaz.
 
 ## <a name="remarks"></a>Poznámky
 
-Instance predikátu typu obsahuje hodnotu true, pokud typ *T* je **void** nebo kvalifikovaný cv formu **void**, v opačném případě obsahuje hodnotu false.
+Instance predikátu typu má hodnotu true, pokud typ *T* je **void** nebo forma typu **void**, v opačném případě obsahuje hodnotu false.
 
 ## <a name="example"></a>Příklad
 
@@ -68,10 +68,10 @@ is_void<void> == true
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** \<type_traits >
+**Hlavička:** \<type_traits >
 
-**Namespace:** std
+**Obor názvů:** std
 
 ## <a name="see-also"></a>Viz také:
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
+[<type_traits>](../standard-library/type-traits.md)

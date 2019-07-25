@@ -7,16 +7,16 @@ helpviewer_keywords:
 - make_unsigned class
 - make_unsigned
 ms.assetid: 7a6a3c4f-1a4c-47e8-9ee2-ac1f7b669353
-ms.openlocfilehash: 42c722c5250a4989b930d8f1e6fe52f2eccc614a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4c0224bd5fd7dc8c6589ae474bb9acb9a8f09cf6
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62413044"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68456315"
 ---
 # <a name="makeunsigned-class"></a>make_unsigned – třída
 
-Vytvoří typ nebo nejmenší bez znaménka typu větší než nebo rovno velikosti typu.
+Předává typ nebo nejmenší typ bez znaménka větší než nebo rovno velikosti pro typ.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -36,14 +36,14 @@ using make_unsigned_t = typename make_unsigned<T>::type;
 
 ## <a name="remarks"></a>Poznámky
 
-Instance modifikátoru typu obsahuje změněný typ, který je *T* Pokud `is_unsigned<T>` platí. V opačném případě je nejmenší typ se znaménkem `ST` pro kterou `sizeof (T) <= sizeof (ST)`.
+Instance modifikátoru typu obsahuje upravený typ, který je *T* , pokud `is_unsigned<T>` má hodnotu true. V opačném případě je to nejmenší `ST` podepsaný typ `sizeof (T) <= sizeof (ST)`, pro který.
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** \<type_traits >
+**Hlavička:** \<type_traits >
 
-**Namespace:** std
+**Obor názvů:** std
 
 ## <a name="see-also"></a>Viz také:
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
+[<type_traits>](../standard-library/type-traits.md)

@@ -30,16 +30,16 @@ helpviewer_keywords:
 - std::numpunct [C++], thousands_sep
 - std::numpunct [C++], truename
 ms.assetid: 73fb93cc-ac11-4c98-987c-bfa6267df596
-ms.openlocfilehash: 6084392c5cae151f6c7111fbe9fe7a45e103b74d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c23f23172894ce0b5adcbff1d2db58c78caf7a03
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62371474"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68454186"
 ---
 # <a name="numpunct-class"></a>numpunct – třída
 
-Třída šablony popisující objekt, který může sloužit jako místní omezující vlastnost pro popis sekvencí typu `CharType` používaných ke znázornění informací o formátování a interpunkci numerických a logických výrazů.
+Třída šablony popisující objekt, který může sloužit jako místní omezující vlastnost k popisu sekvencí typu `CharType` používaného k reprezentaci informací o formátování a interpunkci číselných a logických výrazů.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -50,18 +50,18 @@ class numpunct : public locale::facet;
 
 ### <a name="parameters"></a>Parametry
 
-*CharType*<br/>
+*CharType*\
 Typ používaný v rámci programu ke kódování znaků v národním prostředí.
 
 ## <a name="remarks"></a>Poznámky
 
-Stejně jako u omezující vlastnosti národního prostředí má ID statického objektu počáteční uloženou hodnotu nula. První pokus o přístup k jeho uložené hodnotě uloží jedinečnou kladnou hodnotu v **id.**
+Stejně jako u omezující vlastnosti národního prostředí má ID statického objektu počáteční uloženou hodnotu nula. První pokus o přístup k uložené hodnotě ukládá v ID jedinečnou kladnou hodnotu **.**
 
 ### <a name="constructors"></a>Konstruktory
 
 |Konstruktor|Popis|
 |-|-|
-|[numpunct –](#numpunct)|Konstruktor pro objekty typu `numpunct`.|
+|[numpunct](#numpunct)|Konstruktor pro objekty typu `numpunct`.|
 
 ### <a name="typedefs"></a>Typedefs
 
@@ -76,22 +76,22 @@ Stejně jako u omezující vlastnosti národního prostředí má ID statického
 |-|-|
 |[decimal_point](#decimal_point)|Vrátí prvek specifický pro národní prostředí, který se použije jako desetinná čárka.|
 |[do_decimal_point](#do_decimal_point)|Chráněná virtuální členská funkce, která je volána k vrácení prvku specifického pro národní prostředí, který se použije jako desetinná čárka.|
-|[do_falsename](#do_falsename)|Chráněná virtuální členská funkce, která je volána k vrácení řetězce, který se použije jako textové vyjádření hodnoty **false**.|
+|[do_falsename](#do_falsename)|Chráněná virtuální členská funkce, která je volána k vrácení řetězce, který má být použit jako textová reprezentace hodnoty **false**.|
 |[do_grouping](#do_grouping)|Chráněná virtuální členská funkce, která je volána k vrácení pravidla specifického pro národní prostředí k určení způsobu seskupení číslic vlevo od desetinné čárky.|
 |[do_thousands_sep](#do_thousands_sep)|Chráněná virtuální členská funkce, která je volána k vrácení prvku specifického pro národní prostředí, který se použije jako oddělovač tisíců.|
-|[do_truename](#do_truename)|Chráněná virtuální členská funkce, která je volána k vrácení řetězce, který se použije jako textové vyjádření hodnoty **true**.|
-|[falsename –](#falsename)|Vrátí řetězec, který se použije jako textové vyjádření hodnoty **false**.|
-|[Seskupení](#grouping)|Vrátí pravidlo specifické pro národní prostředí určující způsob seskupení číslic nalevo od desetinné čárky.|
+|[do_truename](#do_truename)|Chráněná virtuální členská funkce, která je volána k vrácení řetězce, který má být použit jako textová reprezentace hodnoty **true**.|
+|[hodnota false](#falsename)|Vrátí řetězec, který má být použit jako textová reprezentace hodnoty **false**.|
+|[sloučení](#grouping)|Vrátí pravidlo specifické pro národní prostředí určující způsob seskupení číslic nalevo od desetinné čárky.|
 |[thousands_sep](#thousands_sep)|Vrátí prvek specifický pro národní prostředí, který se použije jako oddělovač tisíců.|
-|[truename –](#truename)|Vrátí řetězec, který se použije jako textové vyjádření hodnoty **true**.|
+|[hodnota true](#truename)|Vrátí řetězec, který má být použit jako textová reprezentace hodnoty **true**.|
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** \<národní prostředí >
+**Hlavička:** \<> národního prostředí
 
-**Namespace:** std
+**Obor názvů:** std
 
-## <a name="char_type"></a>  numpunct::char_type
+## <a name="char_type"></a>numpunct:: char_type
 
 Typ, který se používá k popisu znaku používaného národním prostředním.
 
@@ -103,7 +103,7 @@ typedef CharType char_type;
 
 Typ je synonymum pro parametr šablony **CharType.**
 
-## <a name="decimal_point"></a>  numpunct::decimal_point
+## <a name="decimal_point"></a>numpunct::d ecimal_point
 
 Vrátí prvek specifický pro národní prostředí, který se použije jako desetinná čárka.
 
@@ -113,11 +113,11 @@ CharType decimal_point() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Prvek specifických pro národní prostředí, který se použije jako desetinná čárka.
+Prvek specifický pro národní prostředí, který se použije jako desetinná čárka.
 
 ### <a name="remarks"></a>Poznámky
 
-Členská funkce vrátí [do_decimal_point –](#do_decimal_point).
+Členská funkce vrátí [do_decimal_point](#do_decimal_point).
 
 ### <a name="example"></a>Příklad
 
@@ -146,7 +146,7 @@ German_Germany.1252 decimal point ,
 German_Germany.1252 thousands separator .
 ```
 
-## <a name="do_decimal_point"></a>  numpunct::do_decimal_point
+## <a name="do_decimal_point"></a>numpunct::d o_decimal_point
 
 Chráněná virtuální členská funkce, která je volána k vrácení prvku specifického pro národní prostředí, který se použije jako desetinná čárka.
 
@@ -156,15 +156,15 @@ virtual CharType do_decimal_point() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Prvek specifických pro národní prostředí, který se použije jako desetinná čárka.
+Prvek specifický pro národní prostředí, který se použije jako desetinná čárka.
 
 ### <a name="example"></a>Příklad
 
-Podívejte se na příklad pro [decimal_point –](#decimal_point), kde je virtuální členská funkce volána `decimal_point`.
+Podívejte se na příklad pro [decimal_point](#decimal_point), kde je virtuální členská funkce volána `decimal_point`nástrojem.
 
-## <a name="do_falsename"></a>  numpunct::do_falsename
+## <a name="do_falsename"></a>numpunct::d o_falsename
 
-Chráněná virtuální členská funkce vrátí sekvenci, který se použije jako textové vyjádření hodnoty **false**.
+Chráněná virtuální členská funkce vrátí sekvenci, která se použije jako textová reprezentace hodnoty **false**.
 
 ```cpp
 virtual string_type do_falsename() const;
@@ -172,17 +172,17 @@ virtual string_type do_falsename() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Řetězec obsahující sekvenci, který se použije jako textové vyjádření hodnoty **false**.
+Řetězec obsahující sekvenci, která má být použita jako textová reprezentace hodnoty **false**.
 
 ### <a name="remarks"></a>Poznámky
 
-Členská funkce vrátí řetězec "false" k reprezentaci hodnoty **false** ve všech národních prostředích.
+Členská funkce vrátí řetězec "false", který bude reprezentovat hodnotu **false** ve všech národních prostředích.
 
 ### <a name="example"></a>Příklad
 
-Podívejte se na příklad pro [falsename –](#falsename), kde je virtuální členská funkce volána `falsename`.
+Podívejte se na příklad pro [hodnotu false](#falsename), kde je virtuální členská funkce volána `falsename`nástrojem.
 
-## <a name="do_grouping"></a>  numpunct::do_grouping
+## <a name="do_grouping"></a>numpunct::d o_grouping
 
 Chráněná virtuální členská funkce, která je volána k vrácení pravidla specifického pro národní prostředí k určení způsobu seskupení číslic vlevo od desetinné čárky.
 
@@ -192,17 +192,17 @@ virtual string do_grouping() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Pravidlo specifické pro národní prostředí pro určení způsobu seskupení číslic vlevo od desetinné čárky.
+Pravidlo specifické pro národní prostředí pro určení, jak jsou číslice seskupeny nalevo od libovolné desetinné čárky.
 
 ### <a name="remarks"></a>Poznámky
 
-Chráněná virtuální členská funkce, která vrátí pravidlo specifické pro národní prostředí k určení způsobu seskupení číslic vlevo od desetinné čárky. Kódování je stejné jako v případě **lconv::grouping**.
+Chráněná virtuální členská funkce, která vrátí pravidlo specifické pro národní prostředí k určení způsobu seskupení číslic vlevo od desetinné čárky. Kódování je stejné jako pro **lconv:: Grouping**.
 
 ### <a name="example"></a>Příklad
 
-Podívejte se na příklad pro [seskupení](#grouping), kde je virtuální členská funkce volána `grouping`.
+Podívejte se na příklad [seskupení](#grouping), kde je virtuální členská funkce volána nástrojem `grouping`.
 
-## <a name="do_thousands_sep"></a>  numpunct::do_thousands_sep
+## <a name="do_thousands_sep"></a>numpunct::d o_thousands_sep
 
 Chráněná virtuální členská funkce, která je volána k vrácení prvku specifického pro národní prostředí, který se použije jako oddělovač tisíců.
 
@@ -216,15 +216,15 @@ Vrátí prvek specifický pro národní prostředí, který se použije jako odd
 
 ### <a name="remarks"></a>Poznámky
 
-Chráněná virtuální členská funkce vrátí prvek specifický pro národní prostředí typu `CharType` který se použije jako oddělovač skupin vlevo od desetinné čárky.
+Chráněná virtuální členská funkce vrátí prvek specifický pro národní prostředí typu `CharType` , který se použije jako oddělovač skupin nalevo od libovolné desetinné čárky.
 
 ### <a name="example"></a>Příklad
 
-Podívejte se na příklad pro [thousands_sep –](#thousands_sep), kde je virtuální členská funkce volána `thousands_sep`.
+Podívejte se na příklad pro [thousands_sep](#thousands_sep), kde je virtuální členská funkce volána `thousands_sep`nástrojem.
 
-## <a name="do_truename"></a>  numpunct::do_truename
+## <a name="do_truename"></a>numpunct::d o_truename
 
-Chráněná virtuální členská funkce, která je volána k vrácení řetězce, který se použije jako textové vyjádření hodnoty **true**.
+Chráněná virtuální členská funkce, která je volána k vrácení řetězce, který má být použit jako textová reprezentace hodnoty **true**.
 
 ```cpp
 virtual string_type do_truename() const;
@@ -232,17 +232,17 @@ virtual string_type do_truename() const;
 
 ### <a name="remarks"></a>Poznámky
 
-Řetězec, který se použije jako textové vyjádření hodnoty **true**.
+Řetězec, který má být použit jako textová reprezentace hodnoty **true**.
 
-Vrátí řetězec "true" k reprezentaci hodnoty všech národních prostředích **true**.
+Všechna národní prostředí vrátí řetězec "true", který bude představovat hodnotu **true**.
 
 ### <a name="example"></a>Příklad
 
-Podívejte se na příklad pro [truename –](#truename), kde je virtuální členská funkce volána `truename`.
+Podívejte se na příklad pro [hodnotu true](#truename), kde je virtuální členská funkce volána `truename`nástrojem.
 
-## <a name="falsename"></a>  numpunct::falsename
+## <a name="falsename"></a>numpunct:: false
 
-Vrátí řetězec, který se použije jako textové vyjádření hodnoty **false**.
+Vrátí řetězec, který má být použit jako textová reprezentace hodnoty **false**.
 
 ```cpp
 string_type falsename() const;
@@ -250,13 +250,13 @@ string_type falsename() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Řetězec obsahující posloupnost `CharType`s, který se použije jako textové vyjádření hodnoty **false**.
+Řetězec obsahující sekvenci `CharType`s pro použití jako text reprezentace hodnoty **false**.
 
 ### <a name="remarks"></a>Poznámky
 
-Členská funkce vrátí řetězec "false" k reprezentaci hodnoty **false** ve všech národních prostředích.
+Členská funkce vrátí řetězec "false", který bude reprezentovat hodnotu **false** ve všech národních prostředích.
 
-Členská funkce vrátí [do_falsename –](#do_falsename).
+Členská funkce vrátí [do_falsename](#do_falsename).
 
 ### <a name="example"></a>Příklad
 
@@ -289,7 +289,7 @@ French_France.1252 truename true
 French_France.1252 falsename false
 ```
 
-## <a name="grouping"></a>  numpunct::Grouping
+## <a name="grouping"></a>numpunct:: Grouping
 
 Vrátí pravidlo specifické pro národní prostředí určující způsob seskupení číslic nalevo od desetinné čárky.
 
@@ -299,11 +299,11 @@ string grouping() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Pravidlo specifické pro národní prostředí pro určení způsobu seskupení číslic vlevo od desetinné čárky.
+Pravidlo specifické pro národní prostředí pro určení, jak jsou číslice seskupeny nalevo od libovolné desetinné čárky.
 
 ### <a name="remarks"></a>Poznámky
 
-Členská funkce vrátí [do_grouping –](#do_grouping).
+Členská funkce vrátí [do_grouping](#do_grouping).
 
 ### <a name="example"></a>Příklad
 
@@ -335,7 +335,7 @@ German_Germany.1252 international grouping:
 the 0th group to the left of the radix character is of size 3
 ```
 
-## <a name="numpunct"></a>  numpunct::numpunct
+## <a name="numpunct"></a>numpunct:: numpunct
 
 Konstruktor pro objekty typu `numpunct`.
 
@@ -345,24 +345,24 @@ explicit numpunct(size_t _Refs = 0);
 
 ### <a name="parameters"></a>Parametry
 
-*_Refs*<br/>
-Celočíselná hodnota určuje typ Správa paměti pro objekt.
+*_Refs*\
+Celočíselná hodnota používaná k určení typu správy paměti pro daný objekt.
 
 ### <a name="remarks"></a>Poznámky
 
-Možné hodnoty parametru *_Refs* parametrů a jejich význam:
+Možné hodnoty pro parametr *_Refs* a jejich význam jsou:
 
-- 0: Životnost objektu se spravuje přes národní prostředí, které je obsahují.
+- 0: Životnost objektu je spravována národními prostředími, která jej obsahují.
 
-- 1: Doba života objektu se musí spravovat ručně.
+- 1: Životnost objektu musí být ručně spravovaná.
 
 - \> 1: Tyto hodnoty nejsou definovány.
 
-Žádné přímé příklady je to možné, protože destruktor je chráněn.
+Nejsou možné žádné přímé příklady, protože je destruktor chráněný.
 
-Konstruktor inicializuje jeho základní objekt s **locale::**[omezující vlastnost](../standard-library/locale-class.md#facet_class)(`_Refs`).
+Konstruktor inicializuje svůj základní objekt pomocí **locale::** [Face](../standard-library/locale-class.md#facet_class)(`_Refs`).
 
-## <a name="string_type"></a>  numpunct::string_type
+## <a name="string_type"></a>numpunct:: string_type
 
 Typ, který popisuje řetězec obsahující znaky typu **CharType**.
 
@@ -372,9 +372,9 @@ typedef basic_string<CharType, Traits, Allocator> string_type;
 
 ### <a name="remarks"></a>Poznámky
 
-Typ, který popisuje specializace třídy šablony [basic_string](../standard-library/basic-string-class.md) jejíž objekty mohou ukládat kopie pořadí interpunkční znaménka.
+Typ popisuje specializaci třídy šablony [basic_string](../standard-library/basic-string-class.md) , jejíž objekty mohou ukládat kopie sekvencí interpunkce.
 
-## <a name="thousands_sep"></a>  numpunct::thousands_sep
+## <a name="thousands_sep"></a>numpunct:: thousands_sep
 
 Vrátí prvek specifický pro národní prostředí, který se použije jako oddělovač tisíců.
 
@@ -384,11 +384,11 @@ CharType thousands_sep() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Prvek specifických pro národní prostředí, který se použije jako tisíců oddělovač.
+Prvek specifický pro národní prostředí, který se použije jako oddělovač tisíců.
 
 ### <a name="remarks"></a>Poznámky
 
-Členská funkce vrátí [do_thousands_sep –](#do_thousands_sep).
+Členská funkce vrátí [do_thousands_sep](#do_thousands_sep).
 
 ### <a name="example"></a>Příklad
 
@@ -417,9 +417,9 @@ German_Germany.1252 decimal point ,
 German_Germany.1252 thousands separator .
 ```
 
-## <a name="truename"></a>  numpunct::truename
+## <a name="truename"></a>numpunct:: true
 
-Vrátí řetězec, který se použije jako textové vyjádření hodnoty **true**.
+Vrátí řetězec, který má být použit jako textová reprezentace hodnoty **true**.
 
 ```cpp
 string_type falsename() const;
@@ -427,13 +427,13 @@ string_type falsename() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Řetězec, který se použije jako textové vyjádření hodnoty **true**.
+Řetězec, který má být použit jako textová reprezentace hodnoty **true**.
 
 ### <a name="remarks"></a>Poznámky
 
-Členská funkce vrátí [do_truename –](#do_truename).
+Členská funkce vrátí [do_truename](#do_truename).
 
-Vrátí řetězec "true" k reprezentaci hodnoty všech národních prostředích **true**.
+Všechna národní prostředí vrátí řetězec "true", který bude představovat hodnotu **true**.
 
 ### <a name="example"></a>Příklad
 
@@ -468,6 +468,6 @@ French_France.1252 falsename false
 
 ## <a name="see-also"></a>Viz také:
 
-[\<národní prostředí >](../standard-library/locale.md)<br/>
-[facet – třída](../standard-library/locale-class.md#facet_class)<br/>
-[Bezpečný přístup z více vláken ve standardní knihovně C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[\<> národního prostředí](../standard-library/locale.md)\
+[Face – třída](../standard-library/locale-class.md#facet_class)\
+[Bezpečný přístup z více vláken ve standardní knihovně C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)

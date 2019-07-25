@@ -7,16 +7,16 @@ helpviewer_keywords:
 - is_lvalue_reference class
 - is_lvalue_reference
 ms.assetid: 7f11896b-935c-4de1-9c87-9d0127f904e2
-ms.openlocfilehash: e032522e790b7027886ba1a6199ed7fdf86c0936
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5bcd5c8333f011475cb11a452759c8986ab22215
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62351940"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68456205"
 ---
 # <a name="islvaluereference-class"></a>is_lvalue_reference – třída
 
-Testuje, zda je typ reference na lvalue.
+Testuje, zda je typ odkaz l-hodnota.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -27,20 +27,20 @@ struct is_lvalue_reference;
 
 ### <a name="parameters"></a>Parametry
 
-*Ty*<br/>
+*Ty*\
 Typ, na který chcete odeslat dotaz.
 
 ## <a name="remarks"></a>Poznámky
 
-Instance této predikátu typu obsahuje hodnotu true, pokud typ *Ty* je odkaz na objekt nebo na funkci; v opačném případě obsahuje hodnotu false. Všimněte si, že *Ty* nemusí být odkaz rvalue. Další informace o hodnotách rvalue naleznete v tématu [Rvalue Reference Declarator: & &](../cpp/rvalue-reference-declarator-amp-amp.md).
+Instance tohoto predikátu typu má hodnotu true, pokud je *typ,* který je odkazem na objekt nebo funkci, jinak obsahuje hodnotu false. Upozorňujeme, že *ty* nemusí být odkaz rvalue. Další informace o rvalue naleznete v tématu [rvalue reference deklarátor: & &](../cpp/rvalue-reference-declarator-amp-amp.md).
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** \<type_traits >
+**Hlavička:** \<type_traits >
 
-**Namespace:** std
+**Obor názvů:** std
 
 ## <a name="see-also"></a>Viz také:
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
-[L-hodnoty a r-hodnoty](../cpp/lvalues-and-rvalues-visual-cpp.md)<br/>
+[< type_traits >](../standard-library/type-traits.md)\
+[L-hodnoty a r-hodnoty](../cpp/lvalues-and-rvalues-visual-cpp.md)

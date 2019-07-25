@@ -7,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - char_traits<char32_t> class
 ms.assetid: c0315466-45d0-4a99-b83e-3b1dbfbfbbc3
-ms.openlocfilehash: 12fc36a9256a8a744e789fc95bb8603ee6cbf3d4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9a5cf2eb7734a20d04ec5c47ae71e80180a7b29d
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62379490"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68459056"
 ---
 # <a name="chartraitsltchar32tgt-struct"></a>char_traits&lt;char32_t&gt; – struktura
 
-Struktura, která je specializací šablony struktury **char_traits\<CharType >** na prvek typu `char32_t`.
+Struktura, která je specializací struktury template **\<char_traits CharType >** k elementu typu. `char32_t`
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -27,15 +27,15 @@ struct char_traits<char32_t>;
 
 ## <a name="remarks"></a>Poznámky
 
-Specializace umožňuje využívat funkce knihovny, které pracují s objekty tohoto typu struktury `char32_t`.
+Specializace umožňuje struktuře využít funkce knihovny, které pracují s objekty tohoto typu `char32_t`.
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** \<řetězec >
+**Hlavička:** \<> řetězců
 
-**Namespace:** std
+**Obor názvů:** std
 
 ## <a name="see-also"></a>Viz také:
 
-[\<řetězec >](../standard-library/string.md)<br/>
-[char_traits – struktura](../standard-library/char-traits-struct.md)<br/>
+[\<> řetězců](../standard-library/string.md)\
+[char_traits – struktura](../standard-library/char-traits-struct.md)

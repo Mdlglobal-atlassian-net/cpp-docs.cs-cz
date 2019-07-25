@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - range_error class
 ms.assetid: 8afb3e88-fc49-4213-b096-ed63d7aea37c
-ms.openlocfilehash: a4b7e90e5806713408c6779b288cafe008e2b4ed
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3e741604a3bb23fa8166023d115f79e7a288e2f7
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62369799"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68458244"
 ---
 # <a name="rangeerror-class"></a>range_error – třída
 
-Tato třída slouží jako základní třída pro všechny výjimky vyvolané rozsah chybové zprávě.
+Třída slouží jako základní třída pro všechny výjimky vyvolané k nahlášení chyby rozsahu.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -29,7 +29,7 @@ public:
 
 ## <a name="remarks"></a>Poznámky
 
-Hodnota vrácená [co](../standard-library/exception-class.md) je kopie `message.data`. Další informace najdete v tématu [basic_string::data](../standard-library/basic-string-class.md#data).
+Hodnota vrácená funkcí [co](../standard-library/exception-class.md) je kopií `message.data`. Další informace najdete v tématu [basic_string::d ATA](../standard-library/basic-string-class.md#data).
 
 ## <a name="example"></a>Příklad
 
@@ -58,11 +58,11 @@ Type: class std::range_error
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** \<stdexcept – >
+**Hlavička:** \<stdexcept >
 
-**Namespace:** std
+**Obor názvů:** std
 
 ## <a name="see-also"></a>Viz také:
 
-[runtime_error – třída](../standard-library/runtime-error-class.md)<br/>
-[Bezpečný přístup z více vláken ve standardní knihovně C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[runtime_error – třída](../standard-library/runtime-error-class.md)\
+[Bezpečný přístup z více vláken ve standardní knihovně C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)

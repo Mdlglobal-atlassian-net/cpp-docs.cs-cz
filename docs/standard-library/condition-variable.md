@@ -4,58 +4,58 @@ ms.date: 11/04/2016
 f1_keywords:
 - <condition_variable>
 ms.assetid: 8567f7cc-20bd-42a7-9137-87c46f878009
-ms.openlocfilehash: ed98966f651df76078fa47b05f5a2d8ae1b71d05
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: e63dc5a494f471997c28be8b2cd237aba45a6fd6
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68244579"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68457387"
 ---
 # <a name="ltconditionvariablegt"></a>&lt;condition_variable&gt;
 
-Definuje třídy [condition_variable](../standard-library/condition-variable-class.md) a [condition_variable_any –](../standard-library/condition-variable-any-class.md) , která se používají k vytváření objektů, které čekání na podmínku jako true.
+Definuje třídy [condition_variable](../standard-library/condition-variable-class.md) a [condition_variable_any](../standard-library/condition-variable-any-class.md) , které se používají k vytváření objektů, které čekají na hodnotu true podmínky.
 
-Toto záhlaví používá Concurrency Runtime (ConcRT), takže ho můžete použít společně s další mechanismy ConcRT. Další informace o ConcRT najdete v tématu [Concurrency Runtime](../parallel/concrt/concurrency-runtime.md).
+Tato hlavička používá Concurrency Runtime (ConcRT), takže ji můžete použít spolu s dalšími mechanismy ConcRT. Další informace o ConcRT najdete v tématu [Concurrency Runtime](../parallel/concrt/concurrency-runtime.md).
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** \<condition_variable >
+**Hlavička:** \<condition_variable >
 
-**Namespace:** std
+**Obor názvů:** std
 
 > [!NOTE]
-> V kódu, který je zkompilován s použitím **/CLR**, tato hlavička se zablokuje.
+> V kódu, který je zkompilován pomocí **/CLR**, je tato hlavička zablokována.
 
 ### <a name="remarks"></a>Poznámky
 
-Kód, který čeká musíte taky použít podmínku proměnné `mutex`. Volající vlákno musí uzamčení `mutex` před voláním funkce, které počkejte podmínku proměnné. `mutex` Se následně možnosti změnit po návratu volané funkce. `mutex` Není uzamčeno době vlákno čeká podmínku jako true. Tak, že neexistují žádné nepředvídatelné výsledky, každý podproces, který čeká na proměnnou podmínku musíte použít stejné `mutex` objektu.
+Kód, který čeká na proměnnou podmínky `mutex`, musí také použít. Volající vlákno musí uzamknout `mutex` před voláním funkce, které čekají na proměnnou podmínky. Po návratu volané funkce jepakuzamčena.`mutex` Není `mutex` uzamčen, dokud vlákno počká, než se podmínka stane true. Aby nedocházelo k nepředvídatelným výsledkům, každé vlákno, které čeká na proměnnou podmínky, musí používat stejný `mutex` objekt.
 
-Objekty typu `condition_variable_any` jde použít s mutex libovolného typu. Typ vzájemně vyloučený přístup, který se používá k poskytování nemá `try_lock` metody. Objekty typu `condition_variable` jde použít jenom s vzájemně vyloučený přístup typu `unique_lock<mutex>`. Objekty tohoto typu může být rychlejší než u objektů typu `condition_variable_any<unique_lock<mutex>>`.
+Objekty typu `condition_variable_any` lze použít s objektem mutex libovolného typu. Typ mutex, který je použit, nemusí poskytovat `try_lock` metodu. Objekty typu `condition_variable` lze použít pouze s objektem mutex typu `unique_lock<mutex>`. Objekty tohoto typu mohou být rychlejší než objekty typu `condition_variable_any<unique_lock<mutex>>`.
 
-Čekání na událost, nejprve zamknout vyloučený a pak volat jednu z `wait` metody podmínku proměnné. `wait` Volání bloky, dokud signály podmínku proměnné jiného vlákna.
+Chcete-li počkat na událost, nejprve uzamkněte mutex a potom zavolejte jednu z `wait` metod pro proměnnou podmínky. Bloky `wait` volání, dokud jiné vlákno nesignalizuje proměnnou podmínky.
 
-*Detekováno falešné wakeups* dojít, když vláken, která čekají pro podmínku proměnné budou odblokována bez potřeby oznámení. K rozpoznání takových detekováno falešné wakeups, by měl kód, který čeká na podmínku jako true explicitně zkontrolujte tuto podmínku, kód návratu z funkce čekání. To se obvykle provádí pomocí smyčky; můžete použít `wait(unique_lock<mutex>& lock, Predicate pred)` nedokázala tuto smyčku.
+K *Spurious probuzení* dojde, když se vlákna, která čekají na proměnné podmínky, odblokují bez příslušných oznámení. Aby bylo možné takové probuzení spurious rozpoznat, kód, který čeká na hodnotu true, by měl explicitně kontrolovat podmínku, když se kód vrátí z funkce Wait. To se obvykle provádí pomocí smyčky. můžete použít `wait(unique_lock<mutex>& lock, Predicate pred)` k provedení této smyčky za vás.
 
 ```cpp
 while (condition is false)
     wait for condition variable;
 ```
 
-`condition_variable_any` a `condition_variable` třídy každý mají tři metody, které čekání na podmínku.
+Třídy `condition_variable_any` a`condition_variable` mají tři metody, které čekají na určitou podmínku.
 
-- `wait` čeká bez vazby časové období.
+- `wait`čeká na neohraničené časové období.
 
-- `wait_until` počká, dokud zadané `time`.
+- `wait_until`čeká na zadání `time`.
 
-- `wait_for` čeká zadaný `time interval`.
+- `wait_for`čeká na zadanou `time interval`hodnotu.
 
-Každá z těchto metod má dvě přetížené verze. Jeden právě čeká a může probudit falešně. Druhý přebírá argument další šablony, která definuje predikátu. Metoda nevrací dokud predikát je **true**.
+Každá z těchto metod má dvě přetížené verze. Stačí pouze počkat a může probudit falešně. Druhý použije další argument šablony, který definuje predikát. Metoda nevrátí hodnotu, dokud predikát nebude **pravda**.
 
-Každá třída také obsahuje dvě metody, které se používají pro oznámení proměnnou podmínku, která je jeho stav **true**.
+Každá třída má také dvě metody, které slouží k oznamování proměnné podmínky, že její podmínka je **pravdivá**.
 
-- `notify_one` probudí jedno z vláken, které čeká na proměnnou podmínku.
+- `notify_one`probudí jedno z vláken, která čekají na proměnnou podmínky.
 
-- `notify_all` probudí všechna vlákna, které čekají na proměnnou podmínku.
+- `notify_all`probudí všechna vlákna, která čekají na proměnnou podmínky.
 
 ## <a name="functions-and-enums"></a>Funkce a výčty
 
@@ -67,6 +67,6 @@ enum class cv_status { no_timeout, timeout };
 
 ## <a name="see-also"></a>Viz také:
 
-[Odkaz na soubory hlaviček](../standard-library/cpp-standard-library-header-files.md)<br/>
-[condition_variable – třída](../standard-library/condition-variable-class.md)<br/>
-[condition_variable_any – třída](../standard-library/condition-variable-any-class.md)<br/>
+[Odkazy na hlavičkové soubory](../standard-library/cpp-standard-library-header-files.md)\
+[condition_variable – třída](../standard-library/condition-variable-class.md)\
+[condition_variable_any – třída](../standard-library/condition-variable-any-class.md)

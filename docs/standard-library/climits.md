@@ -1,21 +1,21 @@
 ---
-title: '&lt;climits –&gt;'
+title: '&lt;climits&gt;'
 ms.date: 11/04/2016
 f1_keywords:
 - <climits>
 helpviewer_keywords:
 - climits header
 ms.assetid: 7ca8a539-aa45-4ac3-86e8-74513be3f07e
-ms.openlocfilehash: 67cddab4f42d10c4d1c78762c32ed1e4fd1e6175
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 6cff0975fb61e30bc96390f345cd67d7b1fbec41
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68244791"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68459341"
 ---
-# <a name="ltclimitsgt"></a>&lt;climits –&gt;
+# <a name="ltclimitsgt"></a>&lt;climits&gt;
 
-Obsahuje hlavičku standardní knihovny C \<limits.h > a přidá názvy přidružené k `std` oboru názvů. Včetně této hlavičky zajišťuje, že názvy deklarované s vnějším spojením v hlavičce standardní knihovny jazyka C jsou deklarovány v `std` oboru názvů.
+Zahrnuje limity hlavičky \<standardní knihovny jazyka C. h > a přidává přidružené názvy `std` do oboru názvů. Včetně této hlavičky zajišťuje, že názvy deklarované s vnějším propojením v záhlaví standardní knihovny jazyka C jsou deklarovány v `std` oboru názvů.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -49,6 +49,6 @@ Obsahuje hlavičku standardní knihovny C \<limits.h > a přidá názvy přidru�
 
 ## <a name="see-also"></a>Viz také:
 
-[Odkaz na soubory hlaviček](../standard-library/cpp-standard-library-header-files.md)<br/>
-[Standardní knihovna C++ – přehled](../standard-library/cpp-standard-library-overview.md)<br/>
-[Bezpečný přístup z více vláken ve standardní knihovně C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[Odkazy na hlavičkové soubory](../standard-library/cpp-standard-library-header-files.md)\
+[C++Přehled standardní knihovny](../standard-library/cpp-standard-library-overview.md)\
+[Bezpečný přístup z více vláken ve standardní knihovně C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)

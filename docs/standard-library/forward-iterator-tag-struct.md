@@ -7,16 +7,16 @@ helpviewer_keywords:
 - forward_iterator_tag struct
 - forward_iterator_tag class
 ms.assetid: 68b633ac-b135-4e9e-837d-14248a262ec5
-ms.openlocfilehash: 04d526e7778dc219a8d9a49db40751b4418cc82d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 687e39ce752bc0d4d289421887570dea6870f8f3
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62159792"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68457127"
 ---
 # <a name="forwarditeratortag-struct"></a>forward_iterator_tag – struktura
 
-Třída, která poskytuje návratový typ pro **iterator_category** funkce, která představuje iterátor předání.
+Třída, která poskytuje návratový typ pro funkci **iterator_category** , která představuje dopředný iterátor.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -26,22 +26,22 @@ struct forward_iterator_tag    : public input_iterator_tag {};
 
 ## <a name="remarks"></a>Poznámky
 
-Kategorie značky tříd se používají při kompilaci značky pro algoritmus výběru. Funkce šablony musí zjistit, co nejspecifičtější kategorie svůj argument iterátoru je tak, aby v době kompilace může použít co nejúčinnější algoritmus. Pro každý iterátor typu `Iterator`, `iterator_traits` <  `Iterator` >  **:: iterator_category** musí být definovány nejspecifičtější značky kategorii, která popisuje chování iterátoru.
+Třídy značek kategorie jsou používány jako kompilovat Tagy pro výběr algoritmu. Funkce šablony potřebuje zjistit, co je nejvíce specifická kategorie argumentu iterátoru, aby mohla používat nejúčinnější algoritmus v době kompilace. Pro `Iterator`každý iterátor typu,  `iterator_traits` <  ::iterator_category> musí být definován jako nejvíce specifická značka kategorie, která popisuje chování iterátoru. `Iterator`
 
-Typ je stejný jako **iterátoru** \< **Iter**> **:: iterator_category** při **Iter** popisuje objekt, který může sloužit jako iterátor předání.
+Typ je stejný jako **iterátor** \< **ITER**>  **:: iterator_category** , pokud **ITERA** popisuje objekt, který může sloužit jako dopředný iterátor.
 
 ## <a name="example"></a>Příklad
 
-Zobrazit [iterator_traits –](../standard-library/iterator-traits-struct.md) nebo [random_access_iterator_tag –](../standard-library/random-access-iterator-tag-struct.md) příklad, jak používat **iterator_tag**s.
+Příklad použití **iterator_tag**s naleznete v tématu [iterator_traits](../standard-library/iterator-traits-struct.md) nebo [random_access_iterator_tag](../standard-library/random-access-iterator-tag-struct.md) .
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** \<iterátor >
+**Hlavička:** \<iterátor >
 
-**Namespace:** std
+**Obor názvů:** std
 
 ## <a name="see-also"></a>Viz také:
 
-[input_iterator_tag – struktura](../standard-library/input-iterator-tag-struct.md)<br/>
-[Bezpečný přístup z více vláken ve standardní knihovně C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
-[Standardní knihovna C++ – referenční dokumentace](../standard-library/cpp-standard-library-reference.md)<br/>
+[input_iterator_tag – struktura](../standard-library/input-iterator-tag-struct.md)\
+[Bezpečnost vlákna ve C++ standardní knihovně](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[Standardní knihovna C++ – referenční dokumentace](../standard-library/cpp-standard-library-reference.md)

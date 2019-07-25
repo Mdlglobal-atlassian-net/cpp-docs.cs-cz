@@ -7,19 +7,19 @@ f1_keywords:
 helpviewer_keywords:
 - hash_set header
 ms.assetid: 6b556967-c808-4869-9b4d-f9e030864435
-ms.openlocfilehash: ba7716c1c84e8a74495a67f10a78eeaad2a6c3d7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 559bbff00b8e5204dd4f381abaf9987b4752db48
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62159272"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68452023"
 ---
 # <a name="lthashsetgt"></a>&lt;hash_set&gt;
 
 > [!NOTE]
-> Tato hlavička je zastaralý. Alternativou je [< unordered_set >](../standard-library/unordered-set.md).
+> Tato hlavička je zastaralá. Alternativou je [< unordered_set >](../standard-library/unordered-set.md).
 
-Definuje kontejner šablony třídy hash_set a hash_multiset – a jejich podpůrných šablon.
+Definuje třídy šablon kontejnerů hash_set a hash_multiset a jejich podpůrné šablony.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -31,27 +31,27 @@ Definuje kontejner šablony třídy hash_set a hash_multiset – a jejich podpů
 
 ### <a name="operators"></a>Operátory
 
-|Hash_set – verze|Hash_multiset – verze|Popis|
+|Verze hash_set|Verze hash_multiset|Popis|
 |-----------------------|----------------------------|-----------------|
-|[Operator! = (hash_set)](../standard-library/hash-set-operators.md#op_neq)|[operator!= (hash_multiset)](../standard-library/hash-set-operators.md#op_neq)|Testuje, zda je objekt hash_set nebo hash_multiset na levé straně operátoru není roven objektu hash_set nebo hash_multiset na pravé straně.|
-|[Operator == (hash_set)](../standard-library/hash-set-operators.md#op_eq_eq)|[Operator == (hash_multiset)](../standard-library/hash-set-operators.md#op_eq_eq)|Testuje, zda hash_set nebo hash_multiset objekt na levé straně operátoru roven objektu hash_set nebo hash_multiset na pravé straně.|
+|[operator! = (hash_set) – operátor](../standard-library/hash-set-operators.md#op_neq)|[operator! = (hash_multiset) – operátor](../standard-library/hash-set-operators.md#op_neq)|Testuje, zda objekt hash_set nebo hash_multiset na levé straně operátoru není roven objektu hash_set nebo hash_multiset na pravé straně.|
+|[operator = = (hash_set) – operátor](../standard-library/hash-set-operators.md#op_eq_eq)|[operator = = (hash_multiset) – operátor](../standard-library/hash-set-operators.md#op_eq_eq)|Testuje, zda je objekt hash_set nebo hash_multiset na levé straně operátoru roven objektu hash_set nebo hash_multiset na pravé straně.|
 
 ### <a name="specialized-template-functions"></a>Specializované funkce šablon
 
-|Hash_set – verze|Hash_multiset – verze|Popis|
+|Verze hash_set|Verze hash_multiset|Popis|
 |-----------------------|----------------------------|-----------------|
-|[swap (hash_set)](../standard-library/hash-set-functions.md#swap)|[swap (hash_multiset)](../standard-library/hash-set-functions.md#swap_hash_multiset)|Vymění prvky dvou hash_sets nebo hash_multisets.|
+|[swap (hash_set)](../standard-library/hash-set-functions.md#swap)|[swap (hash_multiset)](../standard-library/hash-set-functions.md#swap_hash_multiset)|Vyměňuje prvky dvou hash_sets nebo hash_multisets.|
 
 ### <a name="classes"></a>Třídy
 
 |Třída|Popis|
 |-|-|
-|[hash_compare – třída](../standard-library/hash-compare-class.md)|Popisuje objekt, který můžete použít některou z hodnot hash asociativní kontejnery – hash_map – hash_multimap, hash_set, nebo hash_multiset – jako výchozí `Traits` parametr objektu pořadí a hodnoty hash, který obsahují elementy.|
-|[hash_set – třída](../standard-library/hash-set-class.md)|Používá pro ukládání a rychlé načítání dat z kolekce, ve kterém hodnoty elementů obsažených jsou jedinečné a slouží jako klíčové hodnoty.|
-|[hash_multiset – třída](../standard-library/hash-multiset-class.md)|Používá pro ukládání a rychlé načítání dat z kolekce, ve kterém hodnoty elementů obsažených jsou jedinečné a slouží jako klíčové hodnoty.|
+|[hash_compare – třída](../standard-library/hash-compare-class.md)|Popisuje objekt, který může být použit jakýmkoli z asociativních kontejnerů hash – hash_map, hash_multimap, hash_set nebo hash_multiset – jako výchozí `Traits` objekt parametru pro řazení a hash prvků, které obsahují.|
+|[hash_set – třída](../standard-library/hash-set-class.md)|Slouží k ukládání a rychlému načítání dat z kolekce, ve které jsou hodnoty prvků, které jsou obsaženy, jedinečné a slouží jako klíčové hodnoty.|
+|[hash_multiset – třída](../standard-library/hash-multiset-class.md)|Slouží k ukládání a rychlému načítání dat z kolekce, ve které jsou hodnoty prvků, které jsou obsaženy, jedinečné a slouží jako klíčové hodnoty.|
 
 ## <a name="see-also"></a>Viz také:
 
-[Odkaz na soubory hlaviček](../standard-library/cpp-standard-library-header-files.md)<br/>
-[Bezpečný přístup z více vláken ve standardní knihovně C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
-[Standardní knihovna C++ – referenční dokumentace](../standard-library/cpp-standard-library-reference.md)<br/>
+[Odkazy na hlavičkové soubory](../standard-library/cpp-standard-library-header-files.md)\
+[Bezpečnost vlákna ve C++ standardní knihovně](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[Standardní knihovna C++ – referenční dokumentace](../standard-library/cpp-standard-library-reference.md)

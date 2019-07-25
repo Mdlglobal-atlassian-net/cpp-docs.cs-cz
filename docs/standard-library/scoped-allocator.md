@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - scoped_allocator Header
 ms.assetid: d20175b8-96be-4896-8141-3faba45e0005
-ms.openlocfilehash: 101edcf31114252911eac90d07f5f44249f98fb1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8e1a51f1f9f5693b422ec1e680784a199541bb4a
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62295757"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68451802"
 ---
 # <a name="ltscopedallocatorgt"></a>&lt;scoped_allocator&gt;
 
-Definuje scoped_allocator – kontejner šablony třídy.
+Definuje třídu šablony kontejneru scoped_allocator.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -27,17 +27,17 @@ Definuje scoped_allocator – kontejner šablony třídy.
 
 |Operátor|Popis|
 |-|-|
-|[operator!=](../standard-library/scoped-allocator-operators.md#op_neq)|Testuje, zda je objekt scoped_allocator – na levé straně operátoru není roven objektu seznamu na pravé straně.|
-|[operator==](../standard-library/scoped-allocator-operators.md#op_eq_eq)|Testuje, zda scoped_allocator – objekt na levé straně operátoru roven objektu seznamu na pravé straně.|
+|[operator!=](../standard-library/scoped-allocator-operators.md#op_neq)|Testuje, zda objekt scoped_allocator na levé straně operátoru není roven objektu seznamu na pravé straně.|
+|[operator==](../standard-library/scoped-allocator-operators.md#op_eq_eq)|Testuje, zda je objekt scoped_allocator na levé straně operátoru roven objektu seznamu na pravé straně.|
 
 ### <a name="classes"></a>Třídy
 
 |Třída|Popis|
 |-|-|
-|[scoped_allocator_adaptor – třída](../standard-library/scoped-allocator-adaptor-class.md)|Třída šablony, který zapouzdřuje vnoření z jednoho nebo více alokátorů.|
+|[scoped_allocator_adaptor – třída](../standard-library/scoped-allocator-adaptor-class.md)|Třída šablony, která zapouzdřuje vnořování jednoho nebo více přidělování.|
 
 ## <a name="see-also"></a>Viz také:
 
-[Odkaz na soubory hlaviček](../standard-library/cpp-standard-library-header-files.md)<br/>
-[Bezpečný přístup z více vláken ve standardní knihovně C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
-[Standardní knihovna C++ – referenční dokumentace](../standard-library/cpp-standard-library-reference.md)<br/>
+[Odkazy na hlavičkové soubory](../standard-library/cpp-standard-library-header-files.md)\
+[Bezpečnost vlákna ve C++ standardní knihovně](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[Standardní knihovna C++ – referenční dokumentace](../standard-library/cpp-standard-library-reference.md)

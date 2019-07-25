@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - is_trivially_default_constructible
 ms.assetid: 653ecd73-909f-4dd8-b95a-d1164d1c2da4
-ms.openlocfilehash: b35458ca280285eb699c9b12b15b705660299ef2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 19a5e8afedf3e59d5dafa937af4f7d35343eb7d9
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62413408"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68459642"
 ---
 # <a name="istriviallydefaultconstructible-class"></a>is_trivially_default_constructible – třída
 
-Testuje, zda má typ jednoduchého dotazu výchozí konstruktor.
+Testuje, zda má typ triviální výchozí konstruktor.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -26,33 +26,33 @@ struct is_trivially_default_constructible;
 
 ### <a name="parameters"></a>Parametry
 
-*Ty*<br/>
+*Ty*\
 Typ, na který chcete odeslat dotaz.
 
 ## <a name="remarks"></a>Poznámky
 
-Instance predikátu typu obsahuje hodnotu true, pokud typ *Ty* je třída, která má triviální konstruktor, jinak má hodnotu false.
+Instance predikátu typu má hodnotu true, pokud *je typ,* který je třída, která má triviální konstruktor, jinak obsahuje hodnotu false.
 
-Výchozí konstruktor pro třídu *Ty* triviální pokud:
+Výchozí konstruktor třídy *ty* je triviální, pokud:
 
-- je implicitně deklarovaný výchozí konstruktor
+- je implicitně deklarovaný výchozí konstruktor.
 
-- Třída *Ty* nemá žádné virtuální funkce
+- Třída *ty* nemá žádné virtuální funkce.
 
-- Třída *Ty* nemá žádné virtuálních základních tříd
+- Třída *ty* nemá žádné virtuální základy.
 
-- všechny přímo základů třídy *Ty* mít triviální konstruktory
+- všechny přímé základny třídy *ty* mají triviální konstruktory.
 
-- třídy všechny nestatické datové členy typu třídy mají triviální konstruktory
+- třídy všech nestatických datových členů typu třídy mají triviální konstruktory.
 
-- třídy nestatických datových členů typu pole třídy mají triviální konstruktory
+- třídy všech nestatických datových členů typu Array třídy mají triviální konstruktory.
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** \<type_traits >
+**Hlavička:** \<type_traits >
 
-**Namespace:** std
+**Obor názvů:** std
 
 ## <a name="see-also"></a>Viz také:
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
+[<type_traits>](../standard-library/type-traits.md)

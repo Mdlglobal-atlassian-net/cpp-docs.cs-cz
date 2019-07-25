@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - match_results class
 ms.assetid: b504fdca-e5dd-429d-9960-6e27c9167fa6
-ms.openlocfilehash: 32a5f9d20999740d4368f7901c797d87acce0be9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 72a948c7f8422b36b94a16cdb2c815bca92d20c7
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62412966"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68456389"
 ---
 # <a name="matchresults-class"></a>match_results – třída
 
-Obsahuje posloupnost dílčí shody.
+Obsahuje posloupnost dílčích shod.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -26,15 +26,15 @@ class match_results
 
 ## <a name="parameters"></a>Parametry
 
-*BidIt*<br/>
-Typ iterátoru pro dílčí shody.
+*BidI*\
+Typ iterátoru pro podshody.
 
-*ALLOC*<br/>
+*Vyhrazen*\
 Typ alokátoru pro správu úložiště
 
 ## <a name="remarks"></a>Poznámky
 
-Třída šablony popisuje objekt, který řídí neupravitelnými sekvence elementů typu `sub_match<BidIt>` generovaných hledání regulárního výrazu. Každý prvek odkazuje na dílčí sekvenci, který odpovídá skupině zachycení odpovídá prvku.
+Třída šablony popisuje objekt, který ovládá neupravitelnou sekvenci prvků typu `sub_match<BidIt>` vygenerovaných hledáním regulárního výrazu. Každý prvek odkazuje na dílčí sekvenci, která odpovídá skupině zachycení odpovídající tomuto prvku.
 
 ### <a name="constructors"></a>Konstruktory
 
@@ -48,45 +48,45 @@ Třída šablony popisuje objekt, který řídí neupravitelnými sekvence eleme
 |-|-|
 |[allocator_type](#allocator_type)|Typ alokátoru pro správu úložiště|
 |[char_type](#char_type)|Typ prvku|
-|[const_iterator](#const_iterator)|Typ const iterator pro dílčí shody.|
-|[const_reference](#const_reference)|Typ const odkaz na element.|
+|[const_iterator](#const_iterator)|Typ iterátoru const pro podshody.|
+|[const_reference](#const_reference)|Typ odkazu const elementu.|
 |[difference_type](#difference_type)|Typ rozdílu iterátoru.|
-|[iterator](#iterator)|Typ iterátoru pro dílčí shody.|
-|[Referenční dokumentace](#reference)|Typ odkazu na element.|
-|[size_type](#size_type)|Typ počtu dílčí shoda.|
-|[string_type](#string_type)|Typ řetězec.|
-|[value_type](#value_type)|Typ dílčí shoda.|
+|[iterator](#iterator)|Typ iterátoru pro podshody.|
+|[Referenční dokumentace](#reference)|Typ odkazu elementu.|
+|[size_type](#size_type)|Typ počtu odpovídajících položek.|
+|[string_type](#string_type)|Typ řetězce.|
+|[value_type](#value_type)|Typ podshody.|
 
 ### <a name="member-functions"></a>Členské funkce
 
 |Členská funkce|Popis|
 |-|-|
-|[začít](#begin)|Určuje začátek pořadí dílčí shoda.|
-|[prázdný](#empty)|Testy pro žádné dílčí shody.|
-|[ukončení](#end)|Určuje konec pořadí dílčí shoda.|
-|[Formát](#format)|Formátuje dílčí shody.|
-|[get_allocator](#get_allocator)|Vrátí uložené alokátoru.|
-|[Délka](#length)|Vrátí délku objektu dílčí shoda.|
-|[max_size](#max_size)|Získá maximální počet dílčí shody.|
-|[Pozice](#position)|Získejte počáteční posun podskupiny.|
-|[prefix](#prefix)|Získá pořadí před první dílčí shoda.|
-|[Velikost](#size)|Spočítá počet dílčí shody.|
-|[str](#str)|Vrátí hodnotu dílčí shoda.|
-|[Přípona](#suffix)|Získá pořadí po poslední dílčí shoda.|
-|[swap](#swap)|Prohodí dva objekty match_results –.|
+|[ifunctiondiscovery](#begin)|Určuje začátek posloupnosti porovnávání.|
+|[empty](#empty)|Testuje neshody.|
+|[účelu](#end)|Označuje konec posloupnosti porovnávání.|
+|[format](#format)|Formátuje dílčí shody.|
+|[get_allocator](#get_allocator)|Vrátí uložený Alokátor.|
+|[length](#length)|Vrátí délku podshody.|
+|[max_size](#max_size)|Získá největší počet podshod.|
+|[poziční](#position)|Získá počáteční posun podskupiny.|
+|[prefix](#prefix)|Získá sekvenci před prvním podshodou.|
+|[hodnota](#size)|Spočítá počet podshod.|
+|[str](#str)|Vrátí podshodu.|
+|[Přípona](#suffix)|Získá sekvenci po poslední shodě.|
+|[swap](#swap)|Zahodí dva objekty match_results.|
 
 ### <a name="operators"></a>Operátory
 
 |Operátor|Popis|
 |-|-|
-|[operátor =](#op_eq)|Match_results – objekt kopírovat.|
-|[– Operátor\[\]](#op_at)|Přístup k podřízeným objektům.|
+|[operátor =](#op_eq)|Zkopírujte objekt match_results.|
+|[podnikatel\[\]](#op_at)|Přístup k podobjektu.|
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** \<regulární výraz >
+**Hlavička:** \<> regulárního výrazu
 
-**Namespace:** std
+**Obor názvů:** std
 
 ## <a name="example"></a>Příklad
 
@@ -188,7 +188,7 @@ next submatch: matched == false
 empty == false
 ```
 
-## <a name="allocator_type"></a>  match_results::allocator_type
+## <a name="allocator_type"></a>match_results::allocator_type
 
 Typ alokátoru pro správu úložiště
 
@@ -198,11 +198,11 @@ typedef Alloc allocator_type;
 
 ### <a name="remarks"></a>Poznámky
 
-Typedef je synonymum pro argument šablony *alokační*.
+Typedef je synonymum pro *přidělení*argumentu šablony.
 
-## <a name="begin"></a>  match_results::begin
+## <a name="begin"></a>match_results:: begin
 
-Určuje začátek pořadí dílčí shoda.
+Určuje začátek posloupnosti porovnávání.
 
 ```cpp
 const_iterator begin() const;
@@ -210,9 +210,9 @@ const_iterator begin() const;
 
 ### <a name="remarks"></a>Poznámky
 
-Členská funkce vrátí iterátor náhodného přístupu, na kterou odkazuje na první prvek pořadí (nebo přesně za konec k prázdné sekvenci).
+Členská funkce vrátí iterátor náhodného přístupu, který odkazuje na první prvek sekvence (nebo těsně za konec prázdné sekvence).
 
-## <a name="char_type"></a>  match_results::char_type
+## <a name="char_type"></a>match_results::char_type
 
 Typ prvku
 
@@ -222,11 +222,11 @@ typedef typename iterator_traits<BidIt>::value_type char_type;
 
 ### <a name="remarks"></a>Poznámky
 
-Typedef je synonymum pro typ `iterator_traits<BidIt>::value_type`, což je typ prvku, který byl vyhledán sekvence znaků.
+Typedef je synonymum pro typ `iterator_traits<BidIt>::value_type`, což je typ prvku sekvence znaků, která byla prohledána.
 
-## <a name="const_iterator"></a>  match_results::const_iterator
+## <a name="const_iterator"></a>match_results::const_iterator
 
-Typ const iterator pro dílčí shody.
+Typ iterátoru const pro podshody.
 
 ```cpp
 typedef T0 const_iterator;
@@ -234,11 +234,11 @@ typedef T0 const_iterator;
 
 ### <a name="remarks"></a>Poznámky
 
-Definice typu popisuje objekt, který může sloužit jako konstantní iterátor s náhodným přístupem řízené sekvence.
+Definice typedef popisuje objekt, který může sloužit jako konstantní iterátor náhodného přístupu pro řízenou sekvenci.
 
-## <a name="const_reference"></a>  match_results::const_reference
+## <a name="const_reference"></a>match_results::const_reference
 
-Typ const odkaz na element.
+Typ odkazu const elementu.
 
 ```cpp
 typedef const typename Alloc::const_reference const_reference;
@@ -246,9 +246,9 @@ typedef const typename Alloc::const_reference const_reference;
 
 ### <a name="remarks"></a>Poznámky
 
-Definice typu popisuje objekt, který může sloužit jako konstantní odkaz na prvek řízené sekvence.
+Definice typedef popisuje objekt, který může sloužit jako konstantní odkaz na prvek řízené sekvence.
 
-## <a name="difference_type"></a>  match_results::difference_type
+## <a name="difference_type"></a>match_results::d ifference_type
 
 Typ rozdílu iterátoru.
 
@@ -258,11 +258,11 @@ typedef typename iterator_traits<BidIt>::difference_type difference_type;
 
 ### <a name="remarks"></a>Poznámky
 
-Typedef je synonymum pro typ `iterator_traits<BidIt>::difference_type`; popisuje objekt, který může představovat rozdíl mezi všechny dvěma iterátory, které odkazují na prvky řízené sekvence.
+Typedef je synonymum pro typ `iterator_traits<BidIt>::difference_type`; popisuje objekt, který může představovat rozdíl mezi všemi dvěma iterátory, které ukazují na prvky řízené sekvence.
 
-## <a name="empty"></a>  match_results::Empty
+## <a name="empty"></a>match_results:: Empty
 
-Testy pro žádné dílčí shody.
+Testuje neshody.
 
 ```cpp
 bool empty() const;
@@ -270,11 +270,11 @@ bool empty() const;
 
 ### <a name="remarks"></a>Poznámky
 
-Členská funkce vrátí hodnotu true, pouze pokud hledání regulárního výrazu se nezdařilo.
+Členská funkce vrátí hodnotu true pouze v případě, že se nepovedlo hledání regulárního výrazu.
 
-## <a name="end"></a>  match_results::end
+## <a name="end"></a>match_results:: end
 
-Určuje konec pořadí dílčí shoda.
+Označuje konec posloupnosti porovnávání.
 
 ```cpp
 const_iterator end() const;
@@ -282,9 +282,9 @@ const_iterator end() const;
 
 ### <a name="remarks"></a>Poznámky
 
-Členská funkce vrátí iterátor, který ukazuje za konec sekvence.
+Členská funkce vrátí iterátor, který ukazuje hned za konec sekvence.
 
-## <a name="format"></a>  match_results::Format
+## <a name="format"></a>match_results:: Format
 
 Formátuje dílčí shody.
 
@@ -298,27 +298,27 @@ string_type format(const string_type& fmt, match_flag_type flags = format_defaul
 
 ### <a name="parameters"></a>Parametry
 
-*OutIt*<br/>
+*OutIt*\
 Typ výstupního iterátoru.
 
-*out*<br/>
+*mimo*\
 Výstupní tok, do kterého se má zapisovat.
 
-*fmt*<br/>
+*Formát*\
 Řetězec formátu.
 
-*příznaky*<br/>
+*Flag*\
 Příznaky formátu.
 
 ### <a name="remarks"></a>Poznámky
 
-Každá členská funkce generuje formátovaný text ovládaný formát *fmt*. První členská funkce zapíše formátovaný text do sekvence definované jejím argumentem *si* a vrátí *si*. Druhá členská funkce vrátí objekt řetězce s kopií formátovaného textu.
+Každá členská funkce generuje formátovaný text v ovládacím prvku formát *FMT*. První členská funkce zapíše formátovaný text do sekvence definované podle jeho argumentu *out* *a vrátí hodnotu*. Druhá členská funkce vrátí objekt řetězce s kopií formátovaného textu.
 
-Pro účely generování formátovaného textu. text literálu v řetězci formátu je obvykle zkopírován do cílové sekvenci. Každá sekvence escape v řetězci formátu je nahrazena textem, který reprezentuje. Podrobnosti kopírování a nahrazování jsou ovládány příznaky formátu předanými funkci.
+K vygenerování formátovaného textu. textový literál v řetězci formátu je obvykle zkopírován do cílové sekvence. Každá sekvence escape v řetězci formátu je nahrazena textem, který reprezentuje. Podrobnosti kopírování a nahrazování jsou ovládány příznaky formátu předanými funkci.
 
-## <a name="get_allocator"></a>  match_results::get_allocator
+## <a name="get_allocator"></a>match_results::get_allocator
 
-Vrátí uložené alokátoru.
+Vrátí uložený Alokátor.
 
 ```cpp
 allocator_type get_allocator() const;
@@ -326,11 +326,11 @@ allocator_type get_allocator() const;
 
 ### <a name="remarks"></a>Poznámky
 
-Členská funkce vrátí kopii přidělování objektu používanou podle `*this` přidělit jeho `sub_match` objekty.
+Členská funkce vrátí kopii objektu přidělování, kterou používá `*this` k přidělení svých `sub_match` objektů.
 
-## <a name="iterator"></a>  match_results::iterator
+## <a name="iterator"></a>match_results:: iterátor
 
-Typ iterátoru pro dílčí shody.
+Typ iterátoru pro podshody.
 
 ```cpp
 typedef const_iterator iterator;
@@ -338,11 +338,11 @@ typedef const_iterator iterator;
 
 ### <a name="remarks"></a>Poznámky
 
-Typ popisuje objekt, který může sloužit jako iterátor náhodného přístupu řízené sekvence.
+Typ popisuje objekt, který může sloužit jako iterátor náhodného přístupu pro řízenou sekvenci.
 
-## <a name="length"></a>  match_results::length
+## <a name="length"></a>match_results:: Length
 
-Vrátí délku objektu dílčí shoda.
+Vrátí délku podshody.
 
 ```cpp
 difference_type length(size_type sub = 0) const;
@@ -350,14 +350,14 @@ difference_type length(size_type sub = 0) const;
 
 ### <a name="parameters"></a>Parametry
 
-*sub*<br/>
-Index dílčí shoda.
+*jednotk*\
+Index podshody.
 
 ### <a name="remarks"></a>Poznámky
 
-Členská funkce vrátí `(*this)[sub].length()`.
+Vrátí `(*this)[sub].length()`členské funkce.
 
-## <a name="match_results"></a>  match_results::match_results
+## <a name="match_results"></a>match_results::match_results
 
 Vytvoří objekt.
 
@@ -369,19 +369,19 @@ match_results(const match_results& right);
 
 ### <a name="parameters"></a>Parametry
 
-*alloc*<br/>
+*vyhrazen*\
 Objekt alokátoru, který se má uložit.
 
-*doprava*<br/>
-Match_results – objekt ke kopírování.
+*Kliknutím*\
+Objekt match_results, který se má zkopírovat
 
 ### <a name="remarks"></a>Poznámky
 
-První konstruktor zkonstruuje `match_results` objekt, který obsahuje žádné dílčí shody. Druhý konstruktor vytvoří `match_results` objekt, který je kopií *správné*.
+První konstruktor vytvoří `match_results` objekt, který obsahuje žádné podshody. Druhý konstruktor vytvoří `match_results` objekt, který je kopií *pravého*.
 
-## <a name="max_size"></a>  match_results::max_size
+## <a name="max_size"></a>match_results::max_size
 
-Získá maximální počet dílčí shody.
+Získá největší počet podshod.
 
 ```cpp
 size_type max_size() const;
@@ -389,11 +389,11 @@ size_type max_size() const;
 
 ### <a name="remarks"></a>Poznámky
 
-Členská funkce vrátí délku objektu nejdelší sekvenci, která můžete řídit objektu.
+Členská funkce vrátí délku nejdelší sekvence, kterou může objekt ovládat.
 
-## <a name="op_eq"></a>  match_results::Operator =
+## <a name="op_eq"></a>match_results:: operator =
 
-Match_results – objekt kopírovat.
+Zkopírujte objekt match_results.
 
 ```cpp
 match_results& operator=(const match_results& right);
@@ -401,16 +401,16 @@ match_results& operator=(const match_results& right);
 
 ### <a name="parameters"></a>Parametry
 
-*doprava*<br/>
-Match_results – objekt ke kopírování.
+*Kliknutím*\
+Objekt match_results, který se má zkopírovat
 
 ### <a name="remarks"></a>Poznámky
 
-Členský operátor nahradí sekvence řízenou parametrem `*this` kopii sekvence řízenou parametrem *správné*.
+Členský operátor nahradí sekvenci řízenou `*this` kopií sekvence řízenou *vpravo*.
 
-## <a name="op_at"></a>  [] match_results::Operator
+## <a name="op_at"></a>match_results:: operator [] – operátor
 
-Přístup k podřízeným objektům.
+Přístup k podobjektu.
 
 ```cpp
 const_reference operator[](size_type n) const;
@@ -418,16 +418,16 @@ const_reference operator[](size_type n) const;
 
 ### <a name="parameters"></a>Parametry
 
-*n*<br/>
-Index dílčí shoda.
+*n*\
+Index podshody
 
 ### <a name="remarks"></a>Poznámky
 
-Členská funkce vrátí odkaz na prvek *n* řízenou sekvenci nebo odkaz na prázdný `sub_match` objekt by `size() <= n` nebo, pokud skupina zachycení *n* nebyla součástí shody.
+Členská funkce vrátí odkaz na prvek *n* řízené sekvence nebo odkaz na prázdný `sub_match` objekt, pokud `size() <= n` nebo pokud skupina zachycení *n* nebyla součástí shody.
 
-## <a name="position"></a>  match_results::position
+## <a name="position"></a>match_results::p ozice
 
-Získejte počáteční posun podskupiny.
+Získá počáteční posun podskupiny.
 
 ```cpp
 difference_type position(size_type sub = 0) const;
@@ -435,16 +435,16 @@ difference_type position(size_type sub = 0) const;
 
 ### <a name="parameters"></a>Parametry
 
-*sub*<br/>
-Index dílčí shoda.
+*jednotk*\
+Index podshody
 
 ### <a name="remarks"></a>Poznámky
 
-Členská funkce vrátí `std::distance(prefix().first, (*this)[sub].first)`, tedy vzdálenost od prvního znaku v cílové sekvenci první znak dílčí shoda odkazuje element `n` řízené sekvence.
+Členská funkce vrátí `std::distance(prefix().first, (*this)[sub].first)`, to znamená, že vzdálenost od prvního znaku v cílové sekvenci k prvnímu znaku v dílčí shodě, na který ukazuje prvek `n` řízené sekvence.
 
-## <a name="prefix"></a>  match_results::prefix
+## <a name="prefix"></a>match_results::p refix
 
-Získá pořadí před první dílčí shoda.
+Získá sekvenci před prvním podshodou.
 
 ```cpp
 const_reference prefix() const;
@@ -452,11 +452,11 @@ const_reference prefix() const;
 
 ### <a name="remarks"></a>Poznámky
 
-Členská funkce vrátí odkaz na objekt typu `sub_match<BidIt>` , která odkazuje na sekvenci znaků, který začíná na začátku cílové sekvence a končí `(*this)[0].first`, to znamená, odkazuje na text, který předchází dílčí sekvenci odpovídající.
+Členská funkce vrátí odkaz na objekt typu `sub_match<BidIt>` , který odkazuje na sekvenci znaků, která začíná na začátku cílové sekvence a `(*this)[0].first`končí na, tj. odkazuje na text, který předchází odpovídající podsekvenci.
 
-## <a name="reference"></a>  match_results::Reference
+## <a name="reference"></a>match_results:: Reference
 
-Typ odkazu na element.
+Typ odkazu elementu.
 
 ```cpp
 typedef const_reference reference;
@@ -466,9 +466,9 @@ typedef const_reference reference;
 
 Typ je synonymum pro typ `const_reference`.
 
-## <a name="size"></a>  match_results::size
+## <a name="size"></a>match_results:: size
 
-Spočítá počet dílčí shody.
+Spočítá počet podshod.
 
 ```cpp
 size_type size() const;
@@ -476,11 +476,11 @@ size_type size() const;
 
 ### <a name="remarks"></a>Poznámky
 
-Člen funkce vrátí jeden vyšší než počet skupin zachycení v regulárním výrazu, které bylo použito pro vyhledávání, nebo nula, pokud byly provedeny žádné vyhledávání.
+Členská funkce vrátí více než počet skupin zachycení v regulárním výrazu, který byl použit pro hledání, nebo nula, pokud nebylo provedeno žádné hledání.
 
-## <a name="size_type"></a>  match_results::size_type
+## <a name="size_type"></a>match_results::size_type
 
-Typ počtu dílčí shoda.
+Typ počtu odpovídajících položek.
 
 ```cpp
 typedef typename Alloc::size_type size_type;
@@ -490,9 +490,9 @@ typedef typename Alloc::size_type size_type;
 
 Typ je synonymum pro typ `Alloc::size_type`.
 
-## <a name="str"></a>  match_results::str
+## <a name="str"></a>match_results:: str
 
-Vrátí hodnotu dílčí shoda.
+Vrátí podshodu.
 
 ```cpp
 string_type str(size_type sub = 0) const;
@@ -500,16 +500,16 @@ string_type str(size_type sub = 0) const;
 
 ### <a name="parameters"></a>Parametry
 
-*sub*<br/>
-Index dílčí shoda.
+*jednotk*\
+Index podshody
 
 ### <a name="remarks"></a>Poznámky
 
-Členská funkce vrátí `string_type((*this)[sub])`.
+Vrátí `string_type((*this)[sub])`členské funkce.
 
-## <a name="string_type"></a>  match_results::string_type
+## <a name="string_type"></a>match_results::string_type
 
-Typ řetězec.
+Typ řetězce.
 
 ```cpp
 typedef basic_string<char_type> string_type;
@@ -519,9 +519,9 @@ typedef basic_string<char_type> string_type;
 
 Typ je synonymum pro typ `basic_string<char_type>`.
 
-## <a name="suffix"></a>  match_results::suffix
+## <a name="suffix"></a>match_results:: Přípona
 
-Získá pořadí po poslední dílčí shoda.
+Získá sekvenci po poslední shodě.
 
 ```cpp
 const_reference suffix() const;
@@ -529,11 +529,11 @@ const_reference suffix() const;
 
 ### <a name="remarks"></a>Poznámky
 
-Členská funkce vrátí odkaz na objekt typu `sub_match<BidIt>` , která odkazuje na sekvenci znaků, který začíná na `(*this)[size() - 1].second` a končí na konci cílové sekvence, to znamená, odkazuje na text, který následuje za dílčí sekvencí odpovídající.
+Členská funkce vrátí odkaz na objekt typu `sub_match<BidIt>` , který odkazuje na sekvenci znaků, která začíná na `(*this)[size() - 1].second` a končí na konci cílové sekvence, to znamená, že odkazuje na text, který následuje po odpovídající podsekvenci.
 
-## <a name="swap"></a>  match_results::swap
+## <a name="swap"></a>match_results:: swap
 
-Prohodí dva objekty match_results –.
+Zahodí dva objekty match_results.
 
 ```cpp
 void swap(const match_results& right) throw();
@@ -541,16 +541,16 @@ void swap(const match_results& right) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*doprava*<br/>
-Match_results – objekt se Prohodit s.
+*Kliknutím*\
+Objekt match_results pro prohození.
 
 ### <a name="remarks"></a>Poznámky
 
-Členská funkce Zamění obsah `*this` a *správné* v konstantním času a nevyvolává výjimky.
+Členská funkce odměňuje obsah `*this` a napravo v konstantním čase a nevyvolá výjimky.
 
-## <a name="value_type"></a>  match_results::value_type
+## <a name="value_type"></a>match_results::value_type
 
-Typ dílčí shoda.
+Typ podshody.
 
 ```cpp
 typedef sub_match<BidIt> value_type;
@@ -558,8 +558,8 @@ typedef sub_match<BidIt> value_type;
 
 ### <a name="remarks"></a>Poznámky
 
-Typedef je synonymum pro typ `sub_match<BidIt>`.
+Typedef je synonymum pro daný typ `sub_match<BidIt>`.
 
 ## <a name="see-also"></a>Viz také:
 
-[\<regex>](../standard-library/regex.md)<br/>
+[\<regex>](../standard-library/regex.md)

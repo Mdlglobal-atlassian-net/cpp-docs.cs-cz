@@ -7,16 +7,16 @@ helpviewer_keywords:
 - is_base_of class
 - is_base_of
 ms.assetid: 436f6213-1d4c-4ffc-a588-fc7c4887dd86
-ms.openlocfilehash: 345301b5eeed7b66f18a54e56b9bee6346078634
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d56222f218033d00583e5e3def9790720ef7bb94
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62383669"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68456624"
 ---
 # <a name="isbaseof-class"></a>is_base_of – třída
 
-Ověřuje, zda je jeden typ základní jiného.
+Testuje, zda je jeden typ založen na jiném typu.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -27,15 +27,15 @@ struct is_base_of;
 
 ### <a name="parameters"></a>Parametry
 
-*základ*<br/>
-Základní třída pro testování.
+*Základ*\
+Základní třída, která se má testovat.
 
-*Odvozené*<br/>
-Odvozený typ pro testování.
+*Třídy*\
+Odvozený typ, který se má testovat.
 
 ## <a name="remarks"></a>Poznámky
 
-Instance predikátu typu obsahuje hodnotu true, pokud typ *základní* je základní třídu typu *Derived*, v opačném případě obsahuje hodnotu false.
+Instance predikátu typu má hodnotu true, pokud je *základem* typu základní třída odvozeného typu. v opačném případě obsahuje hodnotu false.
 
 ## <a name="example"></a>Příklad
 
@@ -74,11 +74,11 @@ is_base_of<derived, base> == false
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** \<type_traits >
+**Hlavička:** \<type_traits >
 
-**Namespace:** std
+**Obor názvů:** std
 
 ## <a name="see-also"></a>Viz také:
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
-[is_convertible – třída](../standard-library/is-convertible-class.md)<br/>
+[< type_traits >](../standard-library/type-traits.md)\
+[is_convertible – třída](../standard-library/is-convertible-class.md)

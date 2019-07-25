@@ -7,12 +7,12 @@ helpviewer_keywords:
 - extent class
 - extent
 ms.assetid: 6d16263d-90b2-4330-9ec7-b59ed898792d
-ms.openlocfilehash: 7463b424d15ee86f851b7d81953abf3fe1c98fee
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0cd53ba8537e706a68ffdcf08df998108266ad20
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62393971"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68457794"
 ---
 # <a name="extent-class"></a>extent – třída
 
@@ -27,15 +27,15 @@ struct extent;
 
 ### <a name="parameters"></a>Parametry
 
-*Ty*<br/>
+*Ty*\
 Typ, na který chcete odeslat dotaz.
 
-*I*<br/>
-Pole vázané k dotazování.
+*DOŠLO*\
+Pole svázané s dotazem
 
 ## <a name="remarks"></a>Poznámky
 
-Pokud *Ty* je typ pole, které mají alespoň *můžu* dimenze, typ dotazu obsahuje počet prvků v dimenzi určené *můžu*. Pokud *Ty* není typem pole nebo jeho pořadí je menší než *můžu*, nebo pokud *můžu* je nula a *Ty* je typu "mez pole neznámé `U` ", dotaz typu obsahuje hodnotu 0.
+Pokud *je* to typ pole, který má *alespoň dimenzi,* dotaz typu obsahuje počet prvků v dimenzi určené parametrem *I*. Pokud *ty* nejsou typu pole nebo je jeho pořadí menší než *i*, *nebo pokud je* *nula a má* `U`typ "pole neznámé hranice", dotaz typu obsahuje hodnotu 0.
 
 ## <a name="example"></a>Příklad
 
@@ -63,12 +63,12 @@ extent 1 == 10
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** \<type_traits >
+**Hlavička:** \<type_traits >
 
-**Namespace:** std
+**Obor názvů:** std
 
 ## <a name="see-also"></a>Viz také:
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
-[remove_all_extents – třída](../standard-library/remove-all-extents-class.md)<br/>
-[remove_extent – třída](../standard-library/remove-extent-class.md)<br/>
+[< type_traits >](../standard-library/type-traits.md)\
+[remove_all_extents – třída](../standard-library/remove-all-extents-class.md)\
+[remove_extent – třída](../standard-library/remove-extent-class.md)

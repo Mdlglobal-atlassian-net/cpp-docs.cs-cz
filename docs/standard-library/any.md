@@ -1,26 +1,26 @@
 ---
-title: '&lt;Všechny&gt;'
+title: '&lt;jakýmikoli&gt;'
 ms.date: 04/04/2019
 f1_keywords:
 - <any>
 helpviewer_keywords:
 - <any>
-ms.openlocfilehash: 169e44880c98248dc1941ccc8c9adfe05f76f358
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 19e30b1ab0a9b0f30c1a4f3d4b614643cb8b50ac
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68267949"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68456287"
 ---
-# <a name="ltanygt"></a>&lt;Všechny&gt;
+# <a name="ltanygt"></a>&lt;jakýmikoli&gt;
 
-Definuje třídu všechny a několik podpůrné funkce a třídy.
+Definuje třídu any a několik podpůrných funkcí a tříd.
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** \<žádné >
+**Hlavička:** \<jakékoli >
 
-**Namespace:** std
+**Obor názvů:** std
 
 ## <a name="members"></a>Členové
 
@@ -28,17 +28,17 @@ Definuje třídu všechny a několik podpůrné funkce a třídy.
 
 |||
 |-|-|
-|[any_cast](../standard-library/any-functions.md#any_cast)|Umožňuje objektu do.|
-|[make_any](../standard-library/any-functions.md#make_any)|Vezme hodnoty a vytvoří libovolný objekt.|
-|[swap](../standard-library/any-functions.md#swap)|Vymění prvky dvou objektů any.|
+|[any_cast](../standard-library/any-functions.md#any_cast)|Vytvoří objekt do libovolného objektu.|
+|[make_any](../standard-library/any-functions.md#make_any)|Přebírá hodnoty a vytvoří libovolný objekt.|
+|[swap](../standard-library/any-functions.md#swap)|Vyměňuje prvky dvou objektů.|
 
 ### <a name="classes"></a>Třídy
 
 |||
 |-|-|
-|[Všechny](../standard-library/any-class.md)|Ukládat jakýkoli typ, který splňuje požadavky na konstruktor nebo nemá žádnou hodnotu.|
-|[bad_any_cast](../standard-library/bad-any-cast-class.md)|Objekty vyvolané nezdařené `any_cast`.|
+|[jakýmikoli](../standard-library/any-class.md)|Ukládá libovolný typ, který splňuje požadavky konstruktoru nebo nemá žádnou hodnotu.|
+|[bad_any_cast](../standard-library/bad-any-cast-class.md)|Objekty, které vyvolala chyba `any_cast`.|
 
 ## <a name="see-also"></a>Viz také:
 
-[Odkaz na soubory hlaviček](../standard-library/cpp-standard-library-header-files.md)<br/>
+[Odkazy na hlavičkové soubory](../standard-library/cpp-standard-library-header-files.md)

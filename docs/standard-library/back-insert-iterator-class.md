@@ -10,16 +10,16 @@ helpviewer_keywords:
 - std::back_insert_iterator [C++], container_type
 - std::back_insert_iterator [C++], reference
 ms.assetid: a1ee07f2-cf9f-46a1-8608-cfaf207f9713
-ms.openlocfilehash: 2a0510b6df656b7925fd42a4c97d768336537424
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d8f48b1f714697aff63a4ee658a69fce6dab8041
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62376442"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68459526"
 ---
 # <a name="backinsertiterator-class"></a>back_insert_iterator – třída
 
-Popisuje adaptér iterátoru, který splňuje požadavky výstupního iterátoru. Vloží, spíše než přepíše, prvky do zadní části sekvence a poskytne tak sémantiku, která se liší od sémantiky přepsání poskytnuté iterátory kontejnerů sekvence jazyka C++. `back_insert_iterator` Třídy je založena na typu kontejneru.
+Popisuje adaptér iterátoru, který splňuje požadavky výstupního iterátoru. Vloží, spíše než přepíše, prvky do zadní části sekvence a poskytne tak sémantiku, která se liší od sémantiky přepsání poskytnuté iterátory kontejnerů sekvence jazyka C++. `back_insert_iterator` Třída je založena na typu kontejneru.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -30,18 +30,18 @@ class back_insert_iterator;
 
 ### <a name="parameters"></a>Parametry
 
-*Kontejner*<br/>
-Typ kontejneru, do zadní prvky, které mají být vloženy podle `back_insert_iterator`.
+*Vnitřního*\
+Typ kontejneru na pozadí, které prvky mají být vloženy `back_insert_iterator`.
 
 ## <a name="remarks"></a>Poznámky
 
-Kontejner musí splňovat požadavky pro sekvenci vložení do zadní části, je-li možné vložit prvky na konec sekvence v amortizovaném konstantním času. Kontejnery sekvence standardní knihovny C++ definované [třídou deque](../standard-library/deque-class.md), [list – třída](../standard-library/list-class.md) a [vector – třída](../standard-library/vector-class.md) poskytují potřebnou `push_back` členské funkce a Tyto požadavky splňují. Tyto tři kontejnery stejně jako řetězce lze jednotlivě adaptovat k použití s `back_insert_iterator`s. A `back_insert_iterator` je vždy nutné inicializovat s jejím kontejnerem.
+Kontejner musí splňovat požadavky pro sekvenci vložení do zadní části, je-li možné vložit prvky na konec sekvence v amortizovaném konstantním času. C++Standardní kontejnery sekvence knihovny definované třídou [deque](../standard-library/deque-class.md), třída [seznamu](../standard-library/list-class.md) a [Třída Vector](../standard-library/vector-class.md) poskytují potřebnou `push_back` členskou funkci a splňují tyto požadavky. Tyto tři kontejnery i řetězce můžou být přizpůsobené pro použití s `back_insert_iterator`. Objekt `back_insert_iterator` musí být vždy inicializován s jeho kontejnerem.
 
 ### <a name="constructors"></a>Konstruktory
 
 |Konstruktor|Popis|
 |-|-|
-|[back_insert_iterator](#back_insert_iterator)|Vytvoří `back_insert_iterator` , která vloží prvky za posledním prvkem v kontejneru.|
+|[back_insert_iterator](#back_insert_iterator)|Vytvoří objekt `back_insert_iterator` , který vloží prvky za poslední prvek v kontejneru.|
 
 ### <a name="typedefs"></a>Typedefs
 
@@ -54,19 +54,19 @@ Kontejner musí splňovat požadavky pro sekvenci vložení do zadní části, j
 
 |Operátor|Popis|
 |-|-|
-|[Operator *](#op_star)|Operátor přesměrování používaný k implementaci výrazu výstupního iterátoru \* `i`  =  `x` pro zpětné vložení.|
-|[Operator ++](#op_add_add)|Zvýší `back_insert_iterator` do následujícího umístění, do kterého mohou být uloženy hodnotu.|
-|[operátor =](#op_eq)|Operátor přiřazení používaný k implementaci výrazu výstupního iterátoru \* `i`  =  `x` pro zpětné vložení.|
+|[podnikatel](#op_star)|Operátor přesměrování \* používaný k implementaci výrazu `i`  =  `x` výstupního iterátoru pro zpětné vložení.|
+|[operator + + – operátor](#op_add_add)|`back_insert_iterator` Zvýší na další místo, do kterého může být hodnota uložená.|
+|[operátor =](#op_eq)|Operátor přiřazení \* používaný k implementaci výrazu `i`  =  `x` výstupního iterátoru pro zpětné vložení.|
 
 ## <a name="requirements"></a>Požadavky
 
-**Hlavička**: \<iterátor >
+**Záhlaví**: \<iterátor >
 
-**Namespace:** std
+**Obor názvů:** std
 
-## <a name="back_insert_iterator"></a>  back_insert_iterator::back_insert_iterator
+## <a name="back_insert_iterator"></a>back_insert_iterator::back_insert_iterator
 
-Vytvoří `back_insert_iterator` , která vloží prvky za posledním prvkem v kontejneru.
+Vytvoří objekt `back_insert_iterator` , který vloží prvky za poslední prvek v kontejneru.
 
 ```cpp
 explicit back_insert_iterator(Container& _Cont);
@@ -74,12 +74,12 @@ explicit back_insert_iterator(Container& _Cont);
 
 ### <a name="parameters"></a>Parametry
 
-*_Cont*<br/>
-Kontejner, který `back_insert_iterator` je pro vložení elementu do.
+*_Cont*\
+Kontejner, do kterého `back_insert_iterator` má být vložen element.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-A `back_insert_iterator` parametr kontejneru.
+`back_insert_iterator` Pro kontejner parametru.
 
 ### <a name="example"></a>Příklad
 
@@ -129,7 +129,7 @@ The initial vector vec is: ( 1 2 3 ).
 After the insertions, the vector vec is: ( 1 2 3 40 50 600 700 ).
 ```
 
-## <a name="container_type"></a>  back_insert_iterator::container_type
+## <a name="container_type"></a>back_insert_iterator::container_type
 
 Typ, který poskytuje kontejner pro `back_insert_iterator`.
 
@@ -140,7 +140,7 @@ container_type;
 
 ### <a name="remarks"></a>Poznámky
 
-Typ je synonymum pro parametr šablony **kontejneru**.
+Typ je synonymum pro **kontejner**parametrů šablony.
 
 ### <a name="example"></a>Příklad
 
@@ -183,9 +183,9 @@ The original vector vec is: ( 1 2 3 ).
 After the insertion, the vector is: ( 1 2 3 40 ).
 ```
 
-## <a name="op_star"></a>  back_insert_iterator::Operator\*
+## <a name="op_star"></a>back_insert_iterator:: operator\*
 
-Operátor přesměrování používaný k implementaci výrazu výstupního iterátoru \* *můžu* = *x*.
+Operátor přesměrování používaný k \* implementaci výrazu výstupního iterátoru *i* = *x*.
 
 ```cpp
 back_insert_iterator<Container>& operator*();
@@ -193,11 +193,11 @@ back_insert_iterator<Container>& operator*();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Odkaz na element vloží zádi kontejneru.
+Odkaz na element vložený na pozadí kontejneru.
 
 ### <a name="remarks"></a>Poznámky
 
-Používaný k implementaci výrazu výstupního iterátoru  **\*Iter** = **hodnota**. Pokud **Iter** je iterátor adresující prvek v sekvenci, pak  **\*Iter** = **hodnotu** nahrazuje tento element s hodnotou a ne Změňte celkový počet prvků v sekvenci.
+Slouží k implementaci**hodnoty**  **\*ITER** = výrazu výstupního iterátoru. Pokud **ITER** je iterátor, který adresuje prvek v sekvenci, pak  **\*** **hodnota** ITER = nahradí tento prvek hodnotou a nezmění celkový počet prvků v sekvenci.
 
 ### <a name="example"></a>Příklad
 
@@ -243,9 +243,9 @@ The vector vec is: ( 1 2 3 ).
 After the insertions, the vector vec becomes: ( 1 2 3 10 20 ).
 ```
 
-## <a name="op_add_add"></a>  back_insert_iterator::Operator ++
+## <a name="op_add_add"></a>back_insert_iterator:: operator + +
 
-Zvýší `back_insert_iterator` do následujícího umístění, do kterého mohou být uloženy hodnotu.
+`back_insert_iterator` Zvýší na další místo, do kterého může být hodnota uložená.
 
 ```cpp
 back_insert_iterator<Container>& operator++();
@@ -254,11 +254,11 @@ back_insert_iterator<Container> operator++(int);
 
 ### <a name="return-value"></a>Návratová hodnota
 
-A `back_insert_iterator` adresování další umístění, do kterého mohou být uloženy hodnotu.
+`back_insert_iterator` Adresování dalšího umístění, do kterého může být uložena hodnota.
 
 ### <a name="remarks"></a>Poznámky
 
-Operátory preincrementation a postincrementation vrací stejný výsledek.
+Jak předpřírůstkový operátor, tak operátory postincrementation vrací stejný výsledek.
 
 ### <a name="example"></a>Příklad
 
@@ -304,9 +304,9 @@ The vector vec is: ( 10 20 ).
 After the insertions, the vector vec becomes: ( 10 20 30 40 ).
 ```
 
-## <a name="op_eq"></a>  back_insert_iterator::Operator =
+## <a name="op_eq"></a>back_insert_iterator:: operator =
 
-Připojí nebo vložení hodnoty do back-endu kontejneru.
+Připojí nebo vloží hodnotu do back-endu kontejneru.
 
 ```cpp
 back_insert_iterator<Container>& operator=(typename Container::const_reference val);
@@ -315,22 +315,22 @@ back_insert_iterator<Container>& operator=(typename Container::value_type&& val)
 
 ### <a name="parameters"></a>Parametry
 
-*Val*<br/>
-Hodnota má být vložen do kontejneru.
+*počítává*\
+Hodnota, která má být vložena do kontejneru.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Odkaz na poslední prvek vložený zádi kontejneru.
+Odkaz na poslední prvek vložený na pozadí kontejneru.
 
 ### <a name="remarks"></a>Poznámky
 
-První členský operátor vyhodnotí `Container.push_back( val)`,
+První operátor členu vyhodnotí `Container.push_back( val)`,
 
-Vrátí `*this`. Vyhodnotí se druhý členský operátor
+pak vrátí `*this`. Druhý členský operátor vyhodnocuje
 
 `container->push_back((typename Container::value_type&&)val)`,
 
-Vrátí `*this`.
+pak vrátí `*this`.
 
 ### <a name="example"></a>Příklad
 
@@ -371,7 +371,7 @@ int main( )
 }
 ```
 
-## <a name="reference"></a>  back_insert_iterator::Reference
+## <a name="reference"></a>back_insert_iterator:: Reference
 
 Typ, který poskytuje odkaz pro `back_insert_iterator`.
 
@@ -381,7 +381,7 @@ typedef typename Container::reference reference;
 
 ### <a name="remarks"></a>Poznámky
 
-Typ, který popisuje odkaz na element sekvenci řízené přiřazeným kontejnerem.
+Typ popisuje odkaz na prvek sekvence řízené přidruženým kontejnerem.
 
 ### <a name="example"></a>Příklad
 
@@ -423,6 +423,6 @@ The last element in the vector vec is: 3.
 
 ## <a name="see-also"></a>Viz také:
 
-[\<iterator>](../standard-library/iterator.md)<br/>
-[Bezpečný přístup z více vláken ve standardní knihovně C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
-[Standardní knihovna C++ – referenční dokumentace](../standard-library/cpp-standard-library-reference.md)<br/>
+[\<iterátor >](../standard-library/iterator.md)\
+[Bezpečnost vlákna ve C++ standardní knihovně](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[Standardní knihovna C++ – referenční dokumentace](../standard-library/cpp-standard-library-reference.md)

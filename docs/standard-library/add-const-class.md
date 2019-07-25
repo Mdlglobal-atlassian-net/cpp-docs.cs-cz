@@ -7,16 +7,16 @@ helpviewer_keywords:
 - add_const class
 - add_const
 ms.assetid: 1262a1eb-8c9c-4dd6-9f43-88ba280182f1
-ms.openlocfilehash: dc457fd4efba538e96200f7f42f84a73fc1b5228
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6f27a8e4bc0bea3a469d46a56e8885dabe5894df
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62411237"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68456586"
 ---
 # <a name="addconst-class"></a>add_const – třída
 
-Vytvoří konstantní typ z typu.
+Vytvoří typ const z typu.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -27,12 +27,12 @@ struct add_const;
 
 ### <a name="parameters"></a>Parametry
 
-*Ty*<br/>
+*Ty*\
 Typ, který chcete upravit.
 
 ## <a name="remarks"></a>Poznámky
 
-Instance modifikátoru typu obsahuje změněný typ, který je *Ty* Pokud *Ty* jinak je odkaz, funkci nebo typ const-qualified `const Ty`.
+Instance modifikátoru typu obsahuje upravený typ, *který je v* *případě,* že je to odkaz, funkce nebo typ const-Qualified, v opačném `const Ty`případě.
 
 ## <a name="example"></a>Příklad
 
@@ -60,11 +60,11 @@ add_const<int> == int
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** \<type_traits >
+**Hlavička:** \<type_traits >
 
-**Namespace:** std
+**Obor názvů:** std
 
 ## <a name="see-also"></a>Viz také:
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
-[remove_const – třída](../standard-library/remove-const-class.md)<br/>
+[< type_traits >](../standard-library/type-traits.md)\
+[remove_const – třída](../standard-library/remove-const-class.md)

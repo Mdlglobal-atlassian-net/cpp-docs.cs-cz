@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - is_trivial
 ms.assetid: 6beb11d4-2f38-4c7e-9959-ca5d26250df7
-ms.openlocfilehash: 609fdd9c3d0d00eea607db4aefd31163234a9a00
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1d218848fd65ca68022e3e66df02201582626711
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62413512"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68457426"
 ---
 # <a name="istrivial-class"></a>is_trivial – třída
 
-Ověřuje, zda typ je typ jednoduchého dotazu.
+Testuje, zda je typ triviální typ.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -26,19 +26,19 @@ struct is_trivial;
 
 ### <a name="parameters"></a>Parametry
 
-*T*<br/>
+*Š*\
 Typ, na který chcete odeslat dotaz.
 
 ## <a name="remarks"></a>Poznámky
 
-Instance predikátu typu obsahuje hodnotu true, pokud typ *T* triviální typ, jinak má hodnotu false. Triviální typy jsou Skalární typy, typy triviálně kopírovatelné tříd, polí těchto typů a verzích kvalifikovaných cv tyto typy.
+Instance predikátu typu má hodnotu true, pokud je typ *T* triviální typ, jinak má hodnotu false. Triviální typy jsou skalární typy, triviální kopírovací typy tříd, pole těchto typů a verze, které jsou kvalifikovány u těchto typů.
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** \<type_traits >
+**Hlavička:** \<type_traits >
 
-**Namespace:** std
+**Obor názvů:** std
 
 ## <a name="see-also"></a>Viz také:
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
+[<type_traits>](../standard-library/type-traits.md)

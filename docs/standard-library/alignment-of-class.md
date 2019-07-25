@@ -7,16 +7,16 @@ helpviewer_keywords:
 - alignment_of class
 - alignment_of
 ms.assetid: 4141c59a-f94e-41c4-93fd-9ea578b27387
-ms.openlocfilehash: 2633749a72ceeea197579dca4300b58250f60d73
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5222e70965db69d33ec62039bf9013a52d145705
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62411081"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68456454"
 ---
 # <a name="alignmentof-class"></a>alignment_of – třída
 
-Získá zarovnání zadaného typu. Tato struktura je implementován z hlediska [alignof](../cpp/alignof-and-alignas-cpp.md). Použití `alignof` přímo kdy stačí jednoduše k dotazování na zarovnání hodnotu. Alignment_of – použijte v případě potřebujete integrální konstantou, například při odbavení značky.
+Získá zarovnání určeného typu. Tato struktura je implementována z podmínek [alignof](../cpp/alignof-and-alignas-cpp.md). Použijte `alignof` přímo v případě, že jednoduše potřebujete zadat dotaz na hodnotu zarovnání. Použijte alignment_of, pokud potřebujete integrální konstantu, například při odeslání značky.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -27,20 +27,20 @@ struct alignment_of;
 
 ### <a name="parameters"></a>Parametry
 
-*Ty*<br/>
+*Ty*\
 Typ, na který chcete odeslat dotaz.
 
 ## <a name="remarks"></a>Poznámky
 
-Dotaz typu obsahuje hodnotu zarovnání typu *Ty*.
+Dotaz typu obsahuje hodnotu zarovnání *typu.*
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** \<type_traits >
+**Hlavička:** \<type_traits >
 
-**Namespace:** std
+**Obor názvů:** std
 
 ## <a name="see-also"></a>Viz také:
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
-[aligned_storage – třída](../standard-library/aligned-storage-class.md)<br/>
+[< type_traits >](../standard-library/type-traits.md)\
+[aligned_storage – třída](../standard-library/aligned-storage-class.md)

@@ -1,6 +1,6 @@
 ---
-title: 'Postupy: Povolení 64bitovým kompilátorem MSVC sady nástrojů příkazového řádku'
-ms.date: 05/16/2019
+title: 'Postupy: Povolení MSVC sady nástrojů pro 64 na příkazovém řádku'
+ms.date: 07/24/2019
 helpviewer_keywords:
 - x64 [C++]
 - 64-bit compiler [C++], command line usage
@@ -12,32 +12,38 @@ helpviewer_keywords:
 - IPF, command-line compiler
 - x64 [C++], command-line compiler
 ms.assetid: 4da93a19-e20d-4778-902a-5eee9a6a90b5
-ms.openlocfilehash: 24dd6355578e8e9e00064ccfdf31bc51b7fd12ec
-ms.sourcegitcommit: a10c9390413978d36b8096b684d5ed4cf1553bc8
+ms.openlocfilehash: fa02e49ecc820835275e50f116f7abed8133e1a8
+ms.sourcegitcommit: ce3393846c86e7905ff0c86e4cd6610476809585
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/17/2019
-ms.locfileid: "65836978"
+ms.lasthandoff: 07/25/2019
+ms.locfileid: "68492284"
 ---
-# <a name="how-to-enable-a-64-bit-x64-hosted-msvc-toolset-on-the-command-line"></a>Postupy: Povolit 64-Bit, x64 hostované MSVC sady nástrojů v příkazovém řádku
+# <a name="how-to-enable-a-64-bit-x64-hosted-msvc-toolset-on-the-command-line"></a>Postupy: Povolení MSVC 64 sady nástrojů hostované pro platformu x64 v příkazovém řádku
 
-Visual Studio obsahuje kompilátory C++, linkers a dalších nástrojů, které vám umožní vytvářet specifické pro platformu verze aplikací, které poběží v operačních systémech Windows 32bitové, 64bitové nebo založené na ARM. Další volitelné úlohy sady Visual Studio umožňují použijte nástroje C++ k cílení na jiných platformách, jako je iOS, Androidu a Linuxu. Výchozí architektura sestavení používá 32bitové, hostované x86 nástroje k vytvoření 32-bit, x86 nativní kód Windows. Ale pravděpodobně máte 64bitový počítač. Můžete využít výhod procesoru a paměti k dispozici pro 64bitový kód pomocí nástrojů 64-bit, hostované x64 při sestavování kódu pro x86, x64 nebo procesory ARM.
+Visual Studio obsahuje C++ kompilátory, propojování a další nástroje, které můžete použít k vytvoření verzí aplikací specifických pro platformu, které mohou běžet na 32, 64 nebo operačních systémech Windows na bázi ARM. Jiné volitelné pracovní úlohy sady Visual Studio umožňují používat C++ nástroje pro cílení na jiné platformy, jako je iOS, Android a Linux. Výchozí architektura sestavení používá pro se32 stavování nativního kódu systému Windows pro systém x86 rozhraní 32, které jsou hostovány x86. Máte ale pravděpodobně 64 počítač. Pokud je aplikace Visual Studio nainstalována na 64. operační systém Windows, jsou k dispozici další zástupci příkazového řádku pro vývojáře pro 64 nativní a křížové kompilátory hostované v x64. Při vytváření kódu pro procesory x86, x64 nebo ARM můžete využít výhod procesoru a paměťového prostoru dostupného pro 64 bitový kód pomocí 64 sady nástrojů hostované pro platformu x64.
+
+## <a name="use-a-64-bit-hosted-developer-command-prompt-shortcut"></a>Použijte zástupce hostovaného příkazového řádku pro vývojáře, který je 64.
+
+ Chcete-li získat přístup k těmto příkazům ve Windows 10, otevřete v nabídce **Start** složku pro vaši verzi sady Visual Studio, například sadu **Visual Studio 2019**, a pak zvolte jednu z nativních příkazů pro vývojáře x64 nebo více nástrojů. 
+
+![x64 Native Tools Command Prompt](media/x64-native-tools-command-prompt.png "nativní nástroje x64 v nabídce Start")
+
+Chcete-li získat přístup k těmto příkazům v systému Windows 8, otevřete na obrazovce **Start** **všechny aplikace**. V nadpisu pro nainstalovanou verzi sady Visual Studio otevřete složku sady **Visual Studio** (ve starších verzích sady Visual Studio, může se jednat o název **Visual Studio Tools**). V dřívějších verzích systému Windows klikněte na tlačítko **Start**, rozbalte položku **všechny programy**, složku pro vaši verzi sady **Visual Studio** (a ve starších verzích sady Visual Studio **Visual Studio Tools**). Další informace najdete v tématu [zástupce příkazového řádku pro vývojáře](building-on-the-command-line.md#developer_command_prompt_shortcuts).
+
+## <a name="use-vcvarsallbat-to-set-a-64-bit-hosted-build-architecture"></a>Použití vcvarsall. bat k nastavení architektury hostovaného sestavení s 64
+
+Všechny konfigurace buildu nativního nebo nástroje pro více kompilátorů se dají použít na příkazovém řádku spuštěním souboru příkazu vcvarsall. bat. Tento soubor příkazů konfiguruje cestu a proměnné prostředí, které povolují konkrétní architekturu sestavení v existujícím okně příkazového řádku. Konkrétní pokyny najdete v tématu [umístění souborů příkazů pro vývojáře](building-on-the-command-line.md#developer_command_file_locations).
+
+## <a name="remarks"></a>Poznámky
 
 > [!NOTE]
-> Informace o konkrétních nástrojích, které jsou součástí každé edici sady Visual Studio najdete v tématu [nástrojů Visual C++ a funkcí v edicích nástroje Visual Studio](../overview/visual-cpp-tools-and-features-in-visual-studio-editions.md).
+> Informace o konkrétních nástrojích, které jsou součástí každé edice sady Visual Studio, naleznete v tématu [Visual C++ Tools and features in Visual Studio](../overview/visual-cpp-tools-and-features-in-visual-studio-editions.md)Editions.
 >
-> Informace o tom, jak použít rozhraní IDE sady Visual Studio k vytvoření 64bitových aplikací naleznete v tématu [jak: Konfigurace projektů Visual C++ pro cílení 64-Bit, x64 platformy](how-to-configure-visual-cpp-projects-to-target-64-bit-platforms.md).
+> Informace o použití integrovaného vývojového prostředí (IDE) sady Visual Studio k vytváření 64 aplikací [naleznete v tématu How to: Nakonfigurujte vizuální C++ projekty tak, aby byly cílené na 64 platforem](how-to-configure-visual-cpp-projects-to-target-64-bit-platforms.md)x64.
 
-Když nainstalujete sadu funkcí jazyka C++ v instalačním programu sady Visual Studio, vždy nainstaluje 32bitové, hostované x86, nativní a multiplatformní kompilátoru nástroje potřebné k vytváření x86 a x64 kódu. Pokud zahrnete úlohu univerzální platformy Windows, nainstaluje taky hostované x86 křížovým kompilátorem nástroje potřebné k vytváření kódu ARM. Pokud nainstalujete tyto úlohy na 64-bit, x64 procesoru, můžete také získat 64bitové nativní a křížový kompilátor nástroje pro vytváření x86, x 64 a ARM kódu. 32bitová verze a 64bitová verze nástrojů generují stejný kód, ale 64bitové nástroje podporují více paměti pro předkompilované symboly a optimalizace celého programu ([/GL](reference/gl-whole-program-optimization.md) a [parametru/LTCG](reference/ltcg-link-time-code-generation.md)) možnosti. Pokud narazíte na limity paměti při použití nástroje 32-bit, zkuste 64bitových nástrojů.
-
-## <a name="use-a-64-bit-hosted-developer-command-prompt-shortcut"></a>Použít zástupce příkazového řádku prostředí pro vývojáře 64-bit
-
-Při instalaci systému Visual Studio v operačním systému Windows 64-bit, nejsou k dispozici další vývojářské příkazového řádku zkratky pro 64-bit, hostované x64 nativní a křížové kompilátory. Pro přístup k těmto příkazového řádku ve Windows 10 na **Start** nabídky, otevřete složku pro vaši verzi sady Visual Studio, třeba **Visual Studio 2019**a pak vyberte jednu z x64 nativních nebo křížových nástrojů příkazový řádek pro vývojáře. Pro přístup k těmto příkazové řádky v systému Windows 8 na **Start** obrazovce otevřete **všechny aplikace**. V části pro nainstalovanou verzi sady Visual Studio, otevřete **sady Visual Studio** složku (ve starších verzích sady Visual Studio, může mít název **Visual Studio Tools**). Ve starších verzích Windows, zvolte **Start**, rozbalte **všechny programy**, složku pro vaši verzi **sady Visual Studio** (a ke starším verzím sady Visual Studio,  **Nástroje sady Visual Studio**). Další informace najdete v tématu [zkratky příkazového řádku pro vývojáře](building-on-the-command-line.md#developer_command_prompt_shortcuts).
-
-## <a name="use-vcvarsallbat-to-set-a-64-bit-hosted-build-architecture"></a>Nastavení architektury 64-bit hostovaného sestavení pomocí Vcvarsall.bat
-
-Všechny nativní nebo nástrojů kompilátoru můžou být použité konfigurace sestavení na příkazovém řádku spuštěním vcvarsall.bat pro různé soubor příkazů. Soubor tento příkaz nastaví cesty a proměnných prostředí, které umožňují konkrétní sestavení architektury ve stávajícím okně příkazového řádku. Konkrétní pokyny najdete v tématu [umístění souborů pro vývojáře příkaz](building-on-the-command-line.md#developer_command_file_locations).
+Když nainstalujete C++ úlohu v instalačním programu sady Visual Studio, vždy nainstaluje 32 nástroje hostované na platformě x86, nativní a křížové kompilátory k sestavení kódu x86 a x64. Pokud zahrnete úlohu Univerzální platforma Windows, nainstaluje také nástroj pro křížové kompilátory hostované v x86 k sestavení kódu ARM. Pokud tyto úlohy nainstalujete na 64 procesor x64, získáte také 64 nativní a nástroje pro křížové kompilátory k sestavení kódu x86, x64 a ARM. 32 bitové a 64 nástroje generují stejný kód, ale 64-bit nástroje podporují více paměti pro předkompilované symboly hlaviček a možnosti pro celou optimalizaci programu ([/GL](reference/gl-whole-program-optimization.md) a [/LTCG](reference/ltcg-link-time-code-generation.md)). Pokud při používání 32 bitových nástrojů spustíte limity paměti, vyzkoušejte nástroje na 64.
 
 ## <a name="see-also"></a>Viz také:
 
-[Konfigurace projektů C++ pro 64bitové, x64 cíle](configuring-programs-for-64-bit-visual-cpp.md)<br/>
+[Konfigurace C++ projektů pro 64 cíle platformy x64](configuring-programs-for-64-bit-visual-cpp.md)<br/>

@@ -8,16 +8,16 @@ f1_keywords:
 helpviewer_keywords:
 - cvt/wstring header
 ms.assetid: d78b04bb-9ac0-4adb-8ffe-3aefb9b14c2d
-ms.openlocfilehash: d2183d7bfbe0f4f6cd2848e7a032d2f166283361
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7b540644d0d1ba0f539688e9d7e30ef7ae631f91
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62394114"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68455388"
 ---
 # <a name="ltcvtwstringgt"></a>&lt;cvt/wstring&gt;
 
-Záhlaví `<cvt/wstring>` v předchozích verzích sady Visual Studio definované šablony třídy [wstring_convert – třída](../standard-library/wstring-convert-class.md) v oboru názvů stdext::cvt. Záhlaví je zachován z důvodu zpětné kompatibility. Nový kód by měl používat verzi třídy, která je definována v [ \<národní prostředí >](../standard-library/locale.md) v `std` obor názvů
+Hlavička `<cvt/wstring>` v předchozích verzích sady Visual Studio definovala [třídu wstring_convert](../standard-library/wstring-convert-class.md) třídy šablony v oboru názvů stdext:: CVT. Záhlaví je zachováno z důvodu zpětné kompatibility. Nový kód by měl používat verzi třídy, která je definována v `std` [ \<národním prostředí >](../standard-library/locale.md) v oboru názvů.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -29,4 +29,4 @@ Záhlaví `<cvt/wstring>` v předchozích verzích sady Visual Studio definovan�
 
 ## <a name="see-also"></a>Viz také:
 
-[Odkaz na soubory hlaviček](../standard-library/cpp-standard-library-header-files.md)<br/>
+[Odkazy na hlavičkové soubory](../standard-library/cpp-standard-library-header-files.md)

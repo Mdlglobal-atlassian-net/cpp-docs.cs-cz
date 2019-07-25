@@ -7,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - allocator_suballoc class
 ms.assetid: 50c6a5c0-d00d-4276-9285-d908fd4f6483
-ms.openlocfilehash: 9136a2ce744e19754b3a660e7bc9c15f05babbbf
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3e5b69ef3f47a173ef768283bbae4f6e3b5f5190
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62411003"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68458144"
 ---
 # <a name="allocatorsuballoc-class"></a>allocator_suballoc – třída
 
-Popisuje objekt, který spravuje rozdělení úložiště a uvolnění pro objekt typu *typ* použití mezipaměti typu [cache_suballoc –](../standard-library/cache-suballoc-class.md).
+Popisuje objekt, který spravuje přidělování úložiště a uvolňuje pro objekty typu typ *pomocí mezipaměti* typu [cache_suballoc](../standard-library/cache-suballoc-class.md).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -29,18 +29,18 @@ class allocator_suballoc;
 
 |Parametr|Popis|
 |---------------|-----------------|
-|*Typ*|Typ prvků přidělaná přidělujícího modulu.|
+|*Typ*|Typ prvků přidělených přidělováním.|
 
 ## <a name="remarks"></a>Poznámky
 
-[ALLOCATOR_DECL](../standard-library/allocators-functions.md#allocator_decl) – makro předá tuto třídu jako *název* parametr v následujícím příkazu: `ALLOCATOR_DECL(CACHE_SUBALLOC, SYNC_DEFAULT, allocator_suballoc);`
+Makro [ALLOCATOR_DECL](../standard-library/allocators-functions.md#allocator_decl) předá tuto třídu jako parametr *Name* v následujícím příkazu:`ALLOCATOR_DECL(CACHE_SUBALLOC, SYNC_DEFAULT, allocator_suballoc);`
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** \<alokátorů >
+**Hlavička:** \<> přidělování
 
-**Namespace:** stdext
+**Obor názvů:** stdext
 
 ## <a name="see-also"></a>Viz také:
 
-[\<allocators>](../standard-library/allocators-header.md)<br/>
+[\<allocators>](../standard-library/allocators-header.md)

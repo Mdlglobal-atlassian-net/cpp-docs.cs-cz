@@ -8,31 +8,31 @@ helpviewer_keywords:
 - Safe Libraries, C++ Standard Library
 - Safe C++ Standard Library
 ms.assetid: 3993340f-1f29-4d81-b3f5-52a52bc8e148
-ms.openlocfilehash: 0c8f2de77255015254eabe018399f913b4582b7c
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.openlocfilehash: 782a3610909de01e1a1991dee3a74aee9a131da3
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65220465"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68454547"
 ---
 # <a name="safe-libraries-c-standard-library"></a>Bezpečné knihovny: Standardní knihovna C++
 
-Provedli několik vylepšení knihovny, které se dodávají s Microsoftem C++, včetně C++ standardní knihovny, aby se daly bezpečnější.
+Pro knihovny dodávané s Microsoftem C++, včetně C++ standardní knihovny, bylo provedeno několik vylepšení, které jim umožní bezpečnější zabezpečení.
 
-Několik metod ve standardní knihovně C++ byly identifikovány jako potenciálně nebezpečná vzhledem k tomu by mohlo vést k přetečení vyrovnávací paměti nebo jiných vad kódu. Používání těchto metod se nedoporučuje a pokud je Pokud chcete nahradit byly vytvořeny novým a lépe zabezpečeným metody. Tyto nové metody všechny končit `_s`.
+Několik metod ve C++ standardní knihovně bylo označeno jako potenciálně nebezpečné, protože by mohlo způsobit přetečení vyrovnávací paměti nebo jiná vada kódu. Použití těchto metod se nedoporučuje a jsou vytvořeny nové a bezpečnější metody, které je nahrazují. Tyto nové metody jsou všechny na `_s`konci.
 
-Několik vylepšení byly provedeny také kvůli většímu zabezpečení iterátorů a algoritmů. Další informace najdete v tématu [Checked Iterators](../standard-library/checked-iterators.md), [Debug Iterator Support](../standard-library/debug-iterator-support.md) a [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md).
+Pro zvýšení zabezpečení iterátorů a algoritmů bylo také provedeno několik vylepšení. Další informace najdete v tématech [kontrolované iterátory](../standard-library/checked-iterators.md), [Podpora iterátoru ladění](../standard-library/debug-iterator-support.md) a [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md).
 
 ## <a name="remarks"></a>Poznámky
 
-Následující tabulka uvádí metody standardní knihovny C++, které mohou být nebezpečné, jakož i jejich bezpečnější ekvivalentní:
+V následující tabulce jsou uvedeny C++ standardní metody knihovny, které jsou potenciálně nebezpečné, a také jejich bezpečnější ekvivalent:
 
-|Potenciálně nebezpečné – metoda|Bezpečnější ekvivalent|
+|Potenciálně nebezpečná metoda|Bezpečnější ekvivalent|
 |-------------------------------|----------------------|
-|[kopírování](../standard-library/basic-string-class.md#copy)|[basic_string::_Copy_s](../standard-library/basic-string-class.md#copy_s)|
-|[kopírování](../standard-library/char-traits-struct.md#copy)|[char_traits::_Copy_s](../standard-library/char-traits-struct.md#copy_s)|
+|[kopií](../standard-library/basic-string-class.md#copy)|[basic_string::_Copy_s](../standard-library/basic-string-class.md#copy_s)|
+|[kopií](../standard-library/char-traits-struct.md#copy)|[char_traits::_Copy_s](../standard-library/char-traits-struct.md#copy_s)|
 
-Pokud volání jedné z potenciálně nebezpečných metod uvedených výše, nebo pokud nesprávně používáte iterátory, bude kompilátor generovat [upozornění kompilátoru (úroveň 3) C4996](../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md). Informace o tom, jak zakázat tato upozornění najdete v tématu [_SCL_SECURE_NO_WARNINGS](../standard-library/scl-secure-no-warnings.md).
+Pokud voláte jednu z potenciálně nebezpečných metod nebo pokud používáte iterátory nesprávně, kompilátor vygeneruje [Upozornění kompilátoru (úroveň 3) C4996](../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md). Informace o tom, jak tato upozornění zakázat, najdete v tématu [_SCL_SECURE_NO_WARNINGS](../standard-library/scl-secure-no-warnings.md).
 
 ## <a name="in-this-section"></a>V tomto oddílu
 
@@ -46,4 +46,4 @@ Pokud volání jedné z potenciálně nebezpečných metod uvedených výše, ne
 
 ## <a name="see-also"></a>Viz také:
 
-[Standardní knihovna C++ – přehled](../standard-library/cpp-standard-library-overview.md)<br/>
+[Standardní knihovna C++ – přehled](../standard-library/cpp-standard-library-overview.md)

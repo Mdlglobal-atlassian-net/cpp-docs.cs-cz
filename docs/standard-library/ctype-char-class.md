@@ -1,5 +1,5 @@
 ---
-title: ctype&lt;char&gt; třídy
+title: Třída&lt;CType&gt; char
 ms.date: 11/04/2016
 f1_keywords:
 - ctype<char>
@@ -7,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - ctype<char> class
 ms.assetid: ee30acb4-a743-405e-b3d4-13602092da84
-ms.openlocfilehash: adaad8f76de5b712aea13794ef2d7b9a096fb8ef
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7fe1eef32741d63e7b2e2c2320d18f445784c44f
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62394153"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68455456"
 ---
-# <a name="ctypeltchargt-class"></a>ctype&lt;char&gt; třídy
+# <a name="ctypeltchargt-class"></a>Třída&lt;CType&gt; char
 
-Explicitní specializace šablony třídy je třída `ctype\<CharType>` na typ **char**, popisující objekt, který může sloužit jako omezující vlastnost národního prostředí k charakterizaci různých vlastností znaku typu **char**.
+Třída je explicitní specializace třídy `ctype\<CharType>` šablony pro typ **char**, popisující objekt, který může sloužit jako omezující vlastnost národního prostředí pro charakterizaci různých vlastností znaku typu **char**.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -108,28 +108,28 @@ protected:
 
 Explicitní specializace se liší od třídy šablony několika způsoby:
 
-- Objekt třídy ctype < `char`> uchovává ukazatel na první prvek ctype maska tabulku, pole UCHAR_MAX + 1 prvků typu `ctype_base::mask`. Také ukládá logická objekt, který označuje, zda pole by měla být odstraněna (pomocí `operator delete[]`) při ctype\< **Elem**> objekt zničen.
+- Objekt třídy CType < `char`> ukládá ukazatel na první prvek tabulky masky CType, pole UCHAR_MAX + 1 prvky typu. `ctype_base::mask` Také ukládá logický objekt, který označuje, zda má být pole smazáno (pomocí `operator delete[]`), když je\< objekt CType **elem**> zničen.
 
-- Jeho jediný veřejný konstruktor umožňuje určit `tab`, maska tabulce ctype a `del`, Booleovským objektem, který má hodnotu true, pokud má být pole odstranit, když ctype < `char`> objekt je zničen, a také počet odkazů Parametr odolný systém souborů.
+- Jeho jediný veřejný konstruktor umožňuje zadat `tab`, tabulku masky CType a `del`objekt Boolean, který má hodnotu true, pokud má být pole smazáno při zničení objektu CType < `char`> a také podle počtu odkazů. parametry ReFS.
 
-- Chráněný člen funkce `table` vrátí tabulku masky uložená ctype.
+- Chráněná členská `table` funkce vrátí uloženou tabulku CType masek.
 
-- Statický člen objektu `table_size` Určuje minimální počet prvků v tabulce maska ctype.
+- Statický členský objekt `table_size` určuje minimální počet prvků v tabulce CType masek.
 
-- Chráněné statickou členskou funkci `classic_table`(Tabulka maska ctype vrátí odpovídající národní prostředí "C".
+- Chráněná statická členská `classic_table`funkce (vrátí tabulku masek CType, která je vhodná pro národní prostředí "C".
 
-- Neexistují žádné chráněná virtuální členská funkce [do_is –](../standard-library/ctype-class.md#do_is), [do_scan_is –](../standard-library/ctype-class.md#do_scan_is), nebo [do_scan_not –](../standard-library/ctype-class.md#do_scan_not). Odpovídající veřejné členské funkce provádět ekvivalentní operace sami.
+- Neexistují žádné chráněné virtuální členské funkce [do_is](../standard-library/ctype-class.md#do_is), [do_scan_is](../standard-library/ctype-class.md#do_scan_is)nebo [do_scan_not](../standard-library/ctype-class.md#do_scan_not). Odpovídající veřejné členské funkce provádějí ekvivalentní operace sami.
 
-Členské funkce [do_narrow –](../standard-library/ctype-class.md#do_narrow) a [do_widen –](../standard-library/ctype-class.md#do_widen) kopírovat prvky v nezměněném stavu.
+Prvky členů [do_narrow](../standard-library/ctype-class.md#do_narrow) a [do_widen](../standard-library/ctype-class.md#do_widen) kopírování nezměnily.
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** \<národní prostředí >
+**Hlavička:** \<> národního prostředí
 
-**Namespace:** std
+**Obor názvů:** std
 
 ## <a name="see-also"></a>Viz také:
 
-[facet – třída](locale-class.md#facet_class)<br/>
-[ctype_base – třída](../standard-library/ctype-base-class.md)<br/>
-[Bezpečný přístup z více vláken ve standardní knihovně C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[Face – třída](locale-class.md#facet_class)\
+[ctype_base – třída](../standard-library/ctype-base-class.md)\
+[Bezpečný přístup z více vláken ve standardní knihovně C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)

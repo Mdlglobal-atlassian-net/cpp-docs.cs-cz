@@ -10,16 +10,16 @@ helpviewer_keywords:
 - stdext::cache_freelist [C++], allocate
 - stdext::cache_freelist [C++], deallocate
 ms.assetid: 840694de-36ba-470f-8dae-2b723d5a8cd9
-ms.openlocfilehash: 56fdfb191f9208a5ffa692e1d599545ddeaeb36c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 05260d6800597b64908ff0aeffac47b09fed9a0e
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62352109"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68449690"
 ---
 # <a name="cachefreelist-class"></a>cache_freelist – třída
 
-Definuje [blokovat allocator](../standard-library/allocators-header.md) , který přiděluje a zruší přidělení bloků paměti z jednoho velikost.
+Definuje [přidělování bloků](../standard-library/allocators-header.md) , které přiděluje a odděluje bloky paměti s jednou velikostí.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -33,13 +33,13 @@ class cache_freelist
 |Parametr|Popis|
 |---------------|-----------------|
 |*Sz*|Počet prvků v poli, které mají být přiděleny.|
-|*Max*|Maximální počet Třída reprezentující maximální velikost seznamu zdarma. To může být [max_fixed_size –](../standard-library/max-fixed-size-class.md), [max_none –](../standard-library/max-none-class.md), [max_unbounded –](../standard-library/max-unbounded-class.md), nebo [max_variable_size –](../standard-library/max-variable-size-class.md).|
+|*Max*|Maximální třída představující maximální velikost volného seznamu. To může být [max_fixed_size](../standard-library/max-fixed-size-class.md), [max_none](../standard-library/max-none-class.md), [max_unbounded](../standard-library/max-unbounded-class.md)nebo [max_variable_size](../standard-library/max-variable-size-class.md).|
 
 ## <a name="remarks"></a>Poznámky
 
-Cache_freelist – třída šablony udržuje seznam paměťových bloků velikosti volného *Sz*. Bezplatné seznamu je plná používá **operátor delete** k uvolnění paměti blokuje. Bezplatné seznam je prázdný používá **operátor new** přidělení nové bloky paměti. Maximální velikost seznamu zdarma určuje třídou maximální třídy předaný *maximální* parametru.
+Třída šablony cache_freelist udržuje volný seznam bloků paměti velikosti *SZ*. Když je bezplatný seznam plný, používá **operátor delete** k navrácení bloků paměti. Když je seznam free prázdný, používá **operátor New** k přidělení nových paměťových bloků. Maximální velikost volného seznamu je určena třídou Max třídy předanou v parametru *Max* .
 
-Každý blok paměti obsahuje *Sz* bajtů použitelné paměti a data, která **operátor new** a **operátor delete** vyžadují.
+Každý blok paměti obsahuje z paměti *SZ až SZ* bajtů a data, která **operátor New** a **operátor delete** vyžadují.
 
 ### <a name="constructors"></a>Konstruktory
 
@@ -51,18 +51,18 @@ Každý blok paměti obsahuje *Sz* bajtů použitelné paměti a data, která **
 
 |Členská funkce|Popis|
 |-|-|
-|[allocate](#allocate)|Přiděluje blok paměti.|
-|[zrušit přidělení](#deallocate)|Uvolní zadaný počet objektů z úložiště počínaje na určené pozici.|
+|[allocate](#allocate)|Přidělí blok paměti.|
+|[uvolnit](#deallocate)|Uvolní zadaný počet objektů od úložiště, které začínají na zadané pozici.|
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** \<alokátorů >
+**Hlavička:** \<> přidělování
 
-**Namespace:** stdext
+**Obor názvů:** stdext
 
-## <a name="allocate"></a>  cache_freelist::allocate
+## <a name="allocate"></a>cache_freelist:: allocate
 
-Přiděluje blok paměti.
+Přidělí blok paměti.
 
 ```cpp
 void *allocate(std::size_t count);
@@ -72,7 +72,7 @@ void *allocate(std::size_t count);
 
 |Parametr|Popis|
 |---------------|-----------------|
-|*Počet*|Počet prvků v poli, které mají být přiděleny.|
+|*výpočtu*|Počet prvků v poli, které mají být přiděleny.|
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -80,7 +80,7 @@ Ukazatel na přidělený objekt.
 
 ### <a name="remarks"></a>Poznámky
 
-## <a name="cache_freelist"></a>  cache_freelist::cache_freelist
+## <a name="cache_freelist"></a>cache_freelist::cache_freelist
 
 Vytvoří objekt typu `cache_freelist`.
 
@@ -90,9 +90,9 @@ cache_freelist();
 
 ### <a name="remarks"></a>Poznámky
 
-## <a name="deallocate"></a>  cache_freelist::deallocate
+## <a name="deallocate"></a>cache_freelist::d eallocate
 
-Uvolní zadaný počet objektů z úložiště počínaje na určené pozici.
+Uvolní zadaný počet objektů od úložiště, které začínají na zadané pozici.
 
 ```cpp
 void deallocate(void* ptr, std::size_t count);
@@ -102,11 +102,11 @@ void deallocate(void* ptr, std::size_t count);
 
 |Parametr|Popis|
 |---------------|-----------------|
-|*ptr*|Ukazatel na první objekt k zrušeno přidělení úložiště.|
-|*Počet*|Počet objektů pro zrušeno přidělení úložiště.|
+|*ptr*|Ukazatel na první objekt, který má být vrácen z úložiště.|
+|*výpočtu*|Počet objektů, které se mají uvolnit z úložiště|
 
 ### <a name="remarks"></a>Poznámky
 
 ## <a name="see-also"></a>Viz také:
 
-[\<allocators>](../standard-library/allocators-header.md)<br/>
+[\<allocators>](../standard-library/allocators-header.md)

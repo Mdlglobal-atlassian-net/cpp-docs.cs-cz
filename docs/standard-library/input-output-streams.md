@@ -1,38 +1,38 @@
 ---
-title: Vstupně výstupní streamy
+title: Vstupní výstupní proudy
 ms.date: 11/04/2016
 helpviewer_keywords:
 - I/O [C++], stream
 - stream I/O
 ms.assetid: 21a97566-91a7-42d6-b2f8-a4c16bc926f1
-ms.openlocfilehash: d426baacb52095ab2d933263fdac8e312fc29558
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3d5344ede3a62375c4c8102d1fc39445518eb0c4
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62159233"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68455263"
 ---
 # <a name="inputoutput-streams"></a>Vstupní/výstupní datové proudy
 
-`basic_iostream`, která je definována v hlavičkovém souboru \<istream >, je šablona třídy pro objekty, které obě zpracování vstupu a výstupu znakový vstupně-výstupních operací datové proudy.
+`basic_iostream`, který je definován v hlavičkovém souboru \<IStream >, je šablona třídy pro objekty, které zpracovávají vstupní i výstupní datové proudy vstupně-výstupních znaků.
 
-Existují dvě definice typedefs jazyka, které definují konkrétní znak specializace `basic_iostream` a může pomoct, aby byl kód lépe čitelný: `iostream` (Nezaměňovat s hlavičkový soubor \<iostream – >) vstupně-výstupních operací datový proud, který je založen na `basic_iostream<char>`; `wiostream` vstupně-výstupních operací datový proud, který je založen na `basic_iostream<wchar_t>`.
+Existují dva definice typedefy `basic_iostream` , které definují specializace specifické pro znaky a mohou usnadnit čtení kódu: `iostream` (Nezaměňujte se souborem \<hlaviček iostream – >) je vstupně-výstupní proud, který je založen na `basic_iostream<char>`. je vstupně-výstupní proud, který je založen na `basic_iostream<wchar_t>`. `wiostream`
 
-Další informace najdete v tématu [basic_iostream – třída](../standard-library/basic-iostream-class.md), [iostream –](../standard-library/basic-iostream-class.md), a [wiostream](../standard-library/basic-iostream-class.md).
+Další informace naleznete v tématu [Třída basic_iostream](../standard-library/basic-iostream-class.md), [iostream –](../standard-library/basic-iostream-class.md)a [wiostream](../standard-library/basic-iostream-class.md).
 
-Odvozování z `basic_iostream` je šablona třídy `basic_fstream`, který se používá k datového proudu znaků dat do a ze souborů.
+Odvození z `basic_iostream` je šablona `basic_fstream`třídy, která se používá ke streamování znakových dat do a ze souborů.
 
-Existují také definice TypeDef, která poskytují konkrétní znak specializace `basic_fstream`. Jsou `fstream`, což je datový proud souboru vstupně-výstupní operace, která je založena na **char**, a `wfstream`, což je datový proud souboru vstupně-výstupní operace, která je založena na **wchar_t**. Další informace najdete v tématu [basic_fstream – třída](../standard-library/basic-fstream-class.md), [fstream –](../standard-library/basic-fstream-class.md), a [wfstream](../standard-library/basic-fstream-class.md). Použití tyto funkce TypeDef vyžaduje zahrnutí souboru hlaviček \<fstream – >.
+Existují také definice typedef, které poskytují specializace specifické pro jednotlivé znakové `basic_fstream`sady. Jsou `fstream`to, jedná se o datový proud v/v souboru, který je založen na typu `wfstream` **char**a, což je datový proud v/v souboru, který je založen na **wchar_t**. Další informace naleznete v tématu [Třída basic_fstream](../standard-library/basic-fstream-class.md), [fstream –](../standard-library/basic-fstream-class.md)a [wfstream](../standard-library/basic-fstream-class.md). Použití těchto definice typedef vyžaduje zahrnutí hlavičkového souboru \<fstream – >.
 
 > [!NOTE]
-> Když `basic_fstream` objektu se používá k provedení vstup a výstup souborů, i když základní vyrovnávací paměť obsahuje samostatně určené pozice pro čtení a zápis, aktuální vstup a aktuální pozice výstup spojených dohromady, a proto čtení některá data přesouvá umístění výstupu.
+> Když se pro vstup/výstup souboru použije objekt,přestožepodkladovávyrovnávacípaměťobsahujesamostatněurčenépozicepročteníazápis,aktuálnívstupníaaktuálnívýstupnípozicejsouvzájemněvázané,aprotočteníněkterýchdatpřesune`basic_fstream` výstupní pozice.
 
-Šablona třídy `basic_stringstream` a jeho běžné specializace `stringstream`, často se používají k práci s objekty vstupně-výstupních operací datového proudu pro vložení a extrahovat znaková data. Další informace najdete v tématu [basic_stringstream – třída](../standard-library/basic-stringstream-class.md).
+Šablona `basic_stringstream` třídy a její společná `stringstream`specializace jsou často používány pro práci s objekty vstupně-výstupních proudů pro vkládání a extrahování znakových dat. Další informace naleznete v tématu [Třída basic_stringstream](../standard-library/basic-stringstream-class.md).
 
 ## <a name="see-also"></a>Viz také:
 
-[stringstream](../standard-library/basic-stringstream-class.md)<br/>
-[basic_stringstream – třída](../standard-library/basic-stringstream-class.md)<br/>
-[\<sstream>](../standard-library/sstream.md)<br/>
-[iostream – programování](../standard-library/iostream-programming.md)<br/>
-[Standardní knihovna C++](../standard-library/cpp-standard-library-reference.md)<br/>
+[stringstream](../standard-library/basic-stringstream-class.md)\
+[basic_stringstream – třída](../standard-library/basic-stringstream-class.md)\
+[\<sstream >](../standard-library/sstream.md)\
+[Programování iostream –](../standard-library/iostream-programming.md)\
+[Standardní knihovna C++](../standard-library/cpp-standard-library-reference.md)

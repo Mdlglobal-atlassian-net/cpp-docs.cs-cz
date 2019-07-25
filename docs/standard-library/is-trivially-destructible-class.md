@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - is_trivially_destructible
 ms.assetid: 3f7a787d-2448-40c5-ac51-a228318e02ce
-ms.openlocfilehash: 61d626c308338595a64031a45908ab299ae1a957
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6a978b7cc32e6de3d4b1d811b9aa6f52cf0370d7
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62409769"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68459641"
 ---
 # <a name="istriviallydestructible-class"></a>is_trivially_destructible – třída
 
-Ověřuje, zda typ triviálně zničitelné.
+Testuje, zda je typ triviální zničitelné.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -26,19 +26,19 @@ struct is_trivially_destructible;
 
 ### <a name="parameters"></a>Parametry
 
-*T*<br/>
+*Š*\
 Typ, na který chcete odeslat dotaz.
 
 ## <a name="remarks"></a>Poznámky
 
-Instance predikátu typu obsahuje hodnotu true, pokud typ *T* zničitelné typ a destruktor je pro kompilátor známým používat žádné netriviální operace. V opačném případě obsahuje hodnotu false.
+Instance predikátu typu má hodnotu true, pokud typ *T* je typ zničitelné a destruktor je známý pro kompilátor, aby nepoužíval žádné netriviální operace. V opačném případě obsahuje hodnotu NEPRAVDA.
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** \<type_traits >
+**Hlavička:** \<type_traits >
 
-**Namespace:** std
+**Obor názvů:** std
 
 ## <a name="see-also"></a>Viz také:
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
+[<type_traits>](../standard-library/type-traits.md)

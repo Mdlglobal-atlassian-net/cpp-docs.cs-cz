@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - is_error_code_enum class
 ms.assetid: cee5be2d-7c20-4cec-a352-1ab8b7d32601
-ms.openlocfilehash: bc4ed7cd2e058414448c9366011b9efab97ee3d5
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 4080c62034b224a9553eca2787aa1c2f2cf69ab8
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68245193"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68454634"
 ---
 # <a name="iserrorcodeenum-class"></a>is_error_code_enum – třída
 
-Představuje typ predikát, který testuje [error_code](../standard-library/error-code-class.md) výčtu.
+Představuje predikát typu, který testuje výčet [error_code](../standard-library/error-code-class.md) .
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -26,10 +26,10 @@ template <_Enum>
 
 ## <a name="remarks"></a>Poznámky
 
-Instanci tohoto objektu [predikát typu](../standard-library/type-traits.md) obsahuje hodnotu true, pokud typ `_Enum` je vhodná pro ukládání v objektu typu hodnoty výčtu `error_code`.
+Instance tohoto predikátu [typu](../standard-library/type-traits.md) má hodnotu true, pokud typ `_Enum` je hodnota výčtu vhodná pro ukládání do objektu typu. `error_code`
 
-Je přípustné, chcete-li přidat specializace k tomuto typu pro typy definované uživatelem.
+Je povoleno přidat do tohoto typu specializace pro uživatelsky definované typy.
 
 ## <a name="see-also"></a>Viz také:
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
+[<type_traits>](../standard-library/type-traits.md)

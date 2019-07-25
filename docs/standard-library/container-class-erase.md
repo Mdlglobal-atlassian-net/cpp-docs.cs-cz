@@ -4,19 +4,19 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - erase method
 ms.assetid: abc091c5-5a80-4bd8-93a8-a2d9bde2efec
-ms.openlocfilehash: 0ef4db1c14942fc896f10095ff2331648d27c820
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.openlocfilehash: 1463a854c314884f0b3b6bffa5d37dfb7fec4a6f
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65221635"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68454511"
 ---
 # <a name="container-classerase"></a>Třída kontejneru::erase
 
 > [!NOTE]
-> Toto téma je v Microsoft C++ dokumentaci jako funkční příklad kontejnerů používané C++ standardní knihovny. Další informace najdete v tématu [kontejnery standardní knihovny C++](../standard-library/stl-containers.md).
+> Toto téma se nachází v dokumentaci C++ společnosti Microsoft jako nefunkční příklad kontejnerů použitých ve C++ standardní knihovně. Další informace najdete v tématu [ C++ standardní kontejnery knihovny](../standard-library/stl-containers.md).
 
-Odstraní prvek.
+Vymaže element.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -32,10 +32,10 @@ iterator erase(
 
 ## <a name="remarks"></a>Poznámky
 
-První členská funkce odstraní prvek řízené sekvence, na které odkazuje *_Where*. Druhá členská funkce odebere prvky řízené sekvence v rozsahu [`first`, `last`). Oba vracejí iterátor, který určuje první prvek zbývající za všemi odstraněnými prvky, nebo [end](../standard-library/container-class-end.md) Pokud žádný takový prvek neexistuje.
+První členská funkce odstraní prvek řízené sekvence, na kterou ukazuje *_Where*. Druhá členská funkce odstraní prvky řízené sekvence v rozsahu [`first`, `last`). Vrátí iterátor, který určí první prvek zbývající za odebranými prvky, nebo [ukončí](../standard-library/container-class-end.md) , pokud žádný takový prvek neexistuje.
 
-Členské funkce výjimku pouze v případě, že operace kopírování dojde k výjimce.
+Členské funkce vyvolávají výjimku pouze v případě, že operace kopírování vyvolá výjimku.
 
 ## <a name="see-also"></a>Viz také:
 
-[Ukázkový kontejner – třída](../standard-library/sample-container-class.md)<br/>
+[Ukázkový kontejner – třída](../standard-library/sample-container-class.md)

@@ -23,16 +23,16 @@ helpviewer_keywords:
 - std::scoped_allocator_adaptor::outer_allocator
 - std::scoped_allocator_adaptor::select_on_container_copy_construction
 ms.assetid: 0d9b06a1-9a4a-4669-9470-8805cae48e89
-ms.openlocfilehash: 5101f5c7b6ae1a032df94b912252c24f2c2853bf
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 1fb2842df50b0e803419e3cccdeb921c9b4fa591
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68245595"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68458014"
 ---
 # <a name="scopedallocatoradaptor-class"></a>scoped_allocator_adaptor – třída
 
-Představuje vnořených alokátorů.
+Představuje vnoření přidělování.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -43,19 +43,19 @@ class scoped_allocator_adaptor;
 
 ## <a name="remarks"></a>Poznámky
 
-Třída šablony zapouzdřuje vnoření z jednoho nebo více alokátorů. Každá tato třída má nejkrajnější alokátoru typu `outer_allocator_type`, synonymum pro `Outer`, což je veřejné základ `scoped_allocator_adaptor` objektu. `Outer` slouží k přidělení paměti pro kontejner. Odkaz na tento základní objekt alokátoru lze získat voláním `outer_allocator`.
+Třída šablony zapouzdřuje vnoření jednoho nebo více přidělování. Každá taková třída má nejvzdálenější přidělující typ `outer_allocator_type`, synonymum pro `Outer`, což je veřejný základ `scoped_allocator_adaptor` objektu. `Outer`slouží k přidělení paměti, kterou má použít kontejner. Odkaz na tento objekt základu přidělování získáte voláním metody `outer_allocator`.
 
-Zbývající část přivítat má typ `inner_allocator_type`. Vnitřní alokátoru slouží k přidělení paměti pro elementům v kontejneru. Odkaz na uložený objekt tohoto typu lze získat voláním `inner_allocator`. Pokud `Inner...` není prázdná, `inner_allocator_type` má typ `scoped_allocator_adaptor<Inner...>`, a `inner_allocator` označí objekt člena. V opačném případě `inner_allocator_type` má typ `scoped_allocator_adaptor<Outer>`, a `inner_allocator` označí celý objekt.
+Zbytek vnořování má typ `inner_allocator_type`. Vnitřní Alokátor se používá k přidělení paměti pro prvky v rámci kontejneru. Můžete získat odkaz na uložený objekt tohoto typu voláním `inner_allocator`. Pokud `Inner...` není prázdné, `inner_allocator_type` má typ `scoped_allocator_adaptor<Inner...>`a `inner_allocator` určí členský objekt. Jinak má typ `scoped_allocator_adaptor<Outer>` a`inner_allocator` určí celý objekt. `inner_allocator_type`
 
-Přivítat se chová jako v případě, že má libovolné hloubky replikaci jeho vnitřní zapouzdřený objekt alokátoru, podle potřeby.
+Vnořování se chová, jako by měla libovolnou hloubku a replikuje své nejvnitřnější zapouzdřený přidělování podle potřeby.
 
-Výpomoc s několika koncepty, které nejsou součástí rozhraní viditelné popisující chování této třídy šablony. *Nejkrajnější allocator* zprostředkovává všechna volání konstrukce a zničení metody. Rekurzivní funkci účinně definuje ho `OUTERMOST(X)`, kde `OUTERMOST(X)` je jedním z následujících akcí.
+Několik konceptů, které nejsou součástí podpory rozhraní Visible v popisu chování této třídy šablony. *Vnější přidělování* vypravuje všechna volání metod konstrukce a zničení. Je efektivně definováno rekurzivní funkcí `OUTERMOST(X)`, kde `OUTERMOST(X)` je jedna z následujících.
 
-- Pokud `X.outer_allocator()` je ve správném, pak `OUTERMOST(X)` je `OUTERMOST(X.outer_allocator())`.
+- Pokud `X.outer_allocator()` je ve správném formátu, `OUTERMOST(X)` pak `OUTERMOST(X.outer_allocator())`je.
 
-- V opačném případě `OUTERMOST(X)` je `X`.
+- V opačném `X`případě je.`OUTERMOST(X)`
 
-Tři typy jsou definovány pro účely budeme:
+Tři typy jsou definovány pro Exposition v zájmu:
 
 |type|Popis|
 |----------|-----------------|
@@ -67,43 +67,43 @@ Tři typy jsou definovány pro účely budeme:
 
 |Name|Popis|
 |----------|-----------------|
-|[scoped_allocator_adaptor](#scoped_allocator_adaptor)|Vytvoří `scoped_allocator_adaptor` objektu.|
+|[scoped_allocator_adaptor](#scoped_allocator_adaptor)|`scoped_allocator_adaptor` Vytvoří objekt.|
 
 ### <a name="typedefs"></a>Typedefs
 
 |Name|Popis|
 |----------|-----------------|
-|`const_pointer`|Tento typ je synonymum pro `const_pointer` , který je přidružen alokátoru `Outer`.|
-|`const_void_pointer`|Tento typ je synonymum pro `const_void_pointer` , který je přidružen alokátoru `Outer`.|
-|`difference_type`|Tento typ je synonymum pro `difference_type` , který je přidružen alokátoru `Outer`.|
-|`inner_allocator_type`|Tento typ je synonymum pro typ vnořeného adaptér `scoped_allocator_adaptor<Inner...>`.|
-|`outer_allocator_type`|Tento typ je synonymum pro typ alokátoru základní `Outer`.|
-|`pointer`|Tento typ je synonymum pro `pointer` přidružené alokátoru `Outer`.|
-|`propagate_on_container_copy_assignment`|Typ obsahuje hodnotu true pouze v případě `Outer_traits::propagate_on_container_copy_assignment` platí nebo `inner_allocator_type::propagate_on_container_copy_assignment` platí.|
-|`propagate_on_container_move_assignment`|Typ obsahuje hodnotu true pouze v případě `Outer_traits::propagate_on_container_move_assignment` platí nebo `inner_allocator_type::propagate_on_container_move_assignment` platí.|
-|`propagate_on_container_swap`|Typ obsahuje hodnotu true pouze v případě `Outer_traits::propagate_on_container_swap` platí nebo `inner_allocator_type::propagate_on_container_swap` platí.|
-|`size_type`|Tento typ je synonymum pro `size_type` přidružené alokátoru `Outer`.|
-|`value_type`|Tento typ je synonymum pro `value_type` přidružené alokátoru `Outer`.|
-|`void_pointer`|Tento typ je synonymum pro `void_pointer` přidružené alokátoru `Outer`.|
+|`const_pointer`|Tento typ je synonymem pro `const_pointer` , který je přidružen k přidělování. `Outer`|
+|`const_void_pointer`|Tento typ je synonymem pro `const_void_pointer` , který je přidružen k přidělování. `Outer`|
+|`difference_type`|Tento typ je synonymem pro `difference_type` , který je přidružen k přidělování. `Outer`|
+|`inner_allocator_type`|Tento typ je synonymum pro typ vnořeného adaptéru `scoped_allocator_adaptor<Inner...>`.|
+|`outer_allocator_type`|Tento typ je synonymum pro typ základního přidělování `Outer`.|
+|`pointer`|Tento typ je synonymem `pointer` asociovaného s přidělováním. `Outer`|
+|`propagate_on_container_copy_assignment`|Typ drží hodnotu true pouze v `Outer_traits::propagate_on_container_copy_assignment` případě, že `inner_allocator_type::propagate_on_container_copy_assignment` má hodnotu true nebo má hodnotu true.|
+|`propagate_on_container_move_assignment`|Typ drží hodnotu true pouze v `Outer_traits::propagate_on_container_move_assignment` případě, že `inner_allocator_type::propagate_on_container_move_assignment` má hodnotu true nebo má hodnotu true.|
+|`propagate_on_container_swap`|Typ drží hodnotu true pouze v `Outer_traits::propagate_on_container_swap` případě, že `inner_allocator_type::propagate_on_container_swap` má hodnotu true nebo má hodnotu true.|
+|`size_type`|Tento typ je synonymem `size_type` asociovaného s přidělováním. `Outer`|
+|`value_type`|Tento typ je synonymem `value_type` asociovaného s přidělováním. `Outer`|
+|`void_pointer`|Tento typ je synonymem `void_pointer` asociovaného s přidělováním. `Outer`|
 
 ### <a name="structs"></a>Struktury
 
 |Name|Popis|
 |----------|-----------------|
-|[scoped_allocator_adaptor::rebind – struktura](#rebind_struct)|Definuje typ `Outer::rebind\<Other>::other` jako synonymum pro `scoped_allocator_adaptor\<Other, Inner...>`.|
+|[scoped_allocator_adaptor:: Rebind – struktura](#rebind_struct)|Definuje typ `Outer::rebind\<Other>::other` jako synonymum pro `scoped_allocator_adaptor\<Other, Inner...>`.|
 
 ### <a name="methods"></a>Metody
 
 |Name|Popis|
 |----------|-----------------|
-|[allocate](#allocate)|Přiděluje paměť pomocí `Outer` alokátoru.|
-|[Konstrukce](#construct)|Vytvoří objekt.|
-|[zrušit přidělení](#deallocate)|Zruší přidělení objektů pomocí vnější alokátoru.|
-|[zrušení](#destroy)|Odstraní zadaný objekt.|
-|[inner_allocator](#inner_allocator)|Získá odkaz na uložený objekt typu `inner_allocator_type`.|
-|[max_size](#max_size)|Určuje maximální počet objektů, které mohou být přiděleny podle vnější alokátoru.|
-|[outer_allocator](#outer_allocator)|Získá odkaz na uložený objekt typu `outer_allocator_type`.|
-|[select_on_container_copy_construction](#select_on_container_copy_construction)|Vytvoří novou `scoped_allocator_adaptor` objekt s každou uložený objekt alokátoru inicializován pomocí volání `select_on_container_copy_construction` pro každý odpovídající alokátoru.|
+|[allocate](#allocate)|Přidělí paměť pomocí `Outer` přidělujícího modulu.|
+|[Contains](#construct)|Vytvoří objekt.|
+|[uvolnit](#deallocate)|Zruší přidělení objektů pomocí vnějšího přidělování.|
+|[způsobit](#destroy)|Odstraní zadaný objekt.|
+|[inner_allocator](#inner_allocator)|Načte odkaz na uložený objekt typu `inner_allocator_type`.|
+|[max_size](#max_size)|Určuje maximální počet objektů, které mohou být přiděleny vnějším přidělováním.|
+|[outer_allocator](#outer_allocator)|Načte odkaz na uložený objekt typu `outer_allocator_type`.|
+|[select_on_container_copy_construction](#select_on_container_copy_construction)|Vytvoří nový `scoped_allocator_adaptor` objekt s každým uloženým objektem přidělování inicializovaným `select_on_container_copy_construction` voláním pro každý odpovídající Alokátor.|
 
 ### <a name="operators"></a>Operátory
 
@@ -115,13 +115,13 @@ Tři typy jsou definovány pro účely budeme:
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** \<scoped_allocator – >
+**Hlavička:** \<scoped_allocator >
 
-**Namespace:** std
+**Obor názvů:** std
 
-## <a name="allocate"></a>  scoped_allocator_adaptor::allocate –
+## <a name="allocate"></a>scoped_allocator_adaptor:: allocate
 
-Přiděluje paměť pomocí `Outer` alokátoru.
+Přidělí paměť pomocí `Outer` přidělujícího modulu.
 
 ```cpp
 pointer allocate(size_type count);pointer allocate(size_type count, const_void_pointer hint);
@@ -129,17 +129,17 @@ pointer allocate(size_type count);pointer allocate(size_type count, const_void_p
 
 ### <a name="parameters"></a>Parametry
 
-*Počet*<br/>
-Počet elementů, u kterých má být přidělené dostatečné úložiště.
+*výpočtu*\
+Počet prvků, pro které má být přiděleno dostatečné úložiště.
 
-*pomocný parametr*<br/>
-Ukazatel, který může pomoct objekt alokátoru, který vyhledává adresu objektu přidělena před žádost.
+*#c0*\
+Ukazatel, který může pomoci objektu přidělování tím, že hledá adresu objektu přiděleného před požadavkem.
 
 ### <a name="return-value"></a>Návratová hodnota
 
 První členská funkce vrátí `Outer_traits::allocate(outer_allocator(), count)`. Druhá členská funkce vrátí `Outer_traits::allocate(outer_allocator(), count, hint)`.
 
-## <a name="construct"></a>  scoped_allocator_adaptor::Construct –
+## <a name="construct"></a>scoped_allocator_adaptor:: Construct
 
 Vytvoří objekt.
 
@@ -168,44 +168,44 @@ void construct(pair<Ty1, Ty2>* ptr, pair<Uy1, Uy2>&& right);
 
 ### <a name="parameters"></a>Parametry
 
-*ptr*<br/>
-Ukazatel na umístění v paměti, kde má být vytvořen objekt.
+*střed*\
+Ukazatel na umístění paměti, kde má být objekt vytvořen.
 
-*argumenty*<br/>
+*argumentů*\
 Seznam argumentů.
 
-*první*<br/>
-Objekt typu první v páru.
+*první*\
+Objekt prvního typu v páru.
 
-*Sekundy*<br/>
-Objekt typu druhé v páru.
+*první*\
+Objekt druhého typu v páru.
 
-*doprava*<br/>
-Existující objekt pro přesunutí nebo kopírování.
+*Kliknutím*\
+Existující objekt k přesunutí nebo zkopírování.
 
 ### <a name="remarks"></a>Poznámky
 
-První metoda vytvoří objekt v *ptr* voláním `Outermost_traits::construct(OUTERMOST(*this), ptr, xargs...)`, kde `xargs...` je jedním z následujících akcí.
+První metoda vytvoří objekt na *PTR* voláním `Outermost_traits::construct(OUTERMOST(*this), ptr, xargs...)`, kde `xargs...` je jedna z následujících.
 
-- Pokud `uses_allocator<Ty, inner_allocator_type>` obsahuje hodnotu false, pak `xargs...` je `args...`.
+- Pokud `uses_allocator<Ty, inner_allocator_type>` má hodnotu false, `xargs...` pak `args...`je.
 
-- Pokud `uses_allocator<Ty, inner_allocator_type>` platí, a `is_constructible<Ty, allocator_arg_t, inner_allocator_type, args...>` obsahuje hodnotu true, pak `xargs...` je `allocator_arg, inner_allocator(), args...`.
+- Pokud `uses_allocator<Ty, inner_allocator_type>` drží hodnotu true a `is_constructible<Ty, allocator_arg_t, inner_allocator_type, args...>` má hodnotu true, `xargs...` pak `allocator_arg, inner_allocator(), args...`je.
 
-- Pokud `uses_allocator<Ty, inner_allocator_type>` platí, a `is_constructible<Ty, args..., inner_allocator()>` obsahuje hodnotu true, pak `xargs...` je `args..., inner_allocator()`.
+- Pokud `uses_allocator<Ty, inner_allocator_type>` drží hodnotu true a `is_constructible<Ty, args..., inner_allocator()>` má hodnotu true, `xargs...` pak `args..., inner_allocator()`je.
 
-Druhá metoda vytvoří objekt dvojice v *ptr* voláním `Outermost_traits::construct(OUTERMOST(*this), &ptr->first, xargs...)`, kde `xargs...` je `first...` upravovat stejně jako v seznamu výše a `Outermost_traits::construct(OUTERMOST(*this), &ptr->second, xargs...)`, kde `xargs...` je `second...` upravit stejně jako v seznamu výše.
+Druhá metoda vytvoří dvojici objektu na *PTR* `Outermost_traits::construct(OUTERMOST(*this), &ptr->first, xargs...)`voláním, kde `xargs...` `xargs...` je `first...` upravena jako v seznamu výše, a `Outermost_traits::construct(OUTERMOST(*this), &ptr->second, xargs...)`tam, kde je `second...` upraven jako v seznamu výše.
 
-Třetí metoda chová se stejně jako `this->construct(ptr, piecewise_construct, tuple<>, tuple<>)`.
+Třetí metoda se chová stejně jako `this->construct(ptr, piecewise_construct, tuple<>, tuple<>)`.
 
-Čtvrtá metoda chová se stejně jako `this->construct(ptr, piecewise_construct, forward_as_tuple(std::forward<Uy1>(first), forward_as_tuple(std::forward<Uy2>(second))`.
+Čtvrtá metoda se chová stejně jako `this->construct(ptr, piecewise_construct, forward_as_tuple(std::forward<Uy1>(first), forward_as_tuple(std::forward<Uy2>(second))`.
 
-Pátý metoda chová se stejně jako `this->construct(ptr, piecewise_construct, forward_as_tuple(right.first), forward_as_tuple(right.second))`.
+Pátá metoda se chová stejně jako `this->construct(ptr, piecewise_construct, forward_as_tuple(right.first), forward_as_tuple(right.second))`.
 
-Šestý metoda chová se stejně jako `this->construct(ptr, piecewise_construct, forward_as_tuple(std::forward<Uy1>(right.first), forward_as_tuple(std::forward<Uy2>(right.second))`.
+Šestá metoda se chová stejně jako `this->construct(ptr, piecewise_construct, forward_as_tuple(std::forward<Uy1>(right.first), forward_as_tuple(std::forward<Uy2>(right.second))`.
 
-## <a name="deallocate"></a>  scoped_allocator_adaptor::deallocate –
+## <a name="deallocate"></a>scoped_allocator_adaptor::d eallocate
 
-Zruší přidělení objektů pomocí vnější alokátoru.
+Zruší přidělení objektů pomocí vnějšího přidělování.
 
 ```cpp
 void deallocate(pointer ptr, size_type count);
@@ -213,13 +213,13 @@ void deallocate(pointer ptr, size_type count);
 
 ### <a name="parameters"></a>Parametry
 
-*ptr*<br/>
-Ukazatel na počáteční umístění objekty, které chcete být navrácena.
+*střed*\
+Ukazatel na počáteční umístění objektů, které mají být přiděleny.
 
-*Počet*<br/>
-Počet objektů, které chcete uvolnit.
+*výpočtu*\
+Počet objektů, které mají být přiděleny.
 
-## <a name="destroy"></a>  scoped_allocator_adaptor::Destroy –
+## <a name="destroy"></a>scoped_allocator_adaptor::d estroy
 
 Odstraní zadaný objekt.
 
@@ -230,16 +230,16 @@ void destroy(Ty* ptr)
 
 ### <a name="parameters"></a>Parametry
 
-*ptr*<br/>
-Ukazatel na objekt, který se má zničit.
+*střed*\
+Ukazatel na objekt, který má být zničen.
 
 ### <a name="return-value"></a>Návratová hodnota
 
 `Outermost_traits::destroy(OUTERMOST(*this), ptr)`
 
-## <a name="inner_allocator"></a>  scoped_allocator_adaptor::inner_allocator –
+## <a name="inner_allocator"></a>scoped_allocator_adaptor::inner_allocator
 
-Získá odkaz na uložený objekt typu `inner_allocator_type`.
+Načte odkaz na uložený objekt typu `inner_allocator_type`.
 
 ```cpp
 inner_allocator_type& inner_allocator() noexcept;
@@ -250,9 +250,9 @@ const inner_allocator_type& inner_allocator() const noexcept;
 
 Odkaz na uložený objekt typu `inner_allocator_type`.
 
-## <a name="max_size"></a>  scoped_allocator_adaptor::max_size –
+## <a name="max_size"></a>scoped_allocator_adaptor::max_size
 
-Určuje maximální počet objektů, které mohou být přiděleny podle vnější alokátoru.
+Určuje maximální počet objektů, které mohou být přiděleny vnějším přidělováním.
 
 ```cpp
 size_type max_size();
@@ -262,14 +262,14 @@ size_type max_size();
 
 `Outer_traits::max_size(outer_allocator())`
 
-## <a name="a-nameopas--scopedallocatoradaptoroperator"></a><a name="op_as">  scoped_allocator_adaptor::Operator =
+## <a name="a-nameopas--scopedallocatoradaptoroperator"></a><a name="op_as">scoped_allocator_adaptor:: operator =
 
 ```cpp
 scoped_allocator_adaptor& operator=(const scoped_allocator_adaptor&) = default;
 scoped_allocator_adaptor& operator=(scoped_allocator_adaptor&&) = default;
 ```
 
-## <a name="a-nameopeqeq--scopedallocatoradaptoroperator"></a><a name="op_eq_eq">  scoped_allocator_adaptor::Operator ==
+## <a name="a-nameopeqeq--scopedallocatoradaptoroperator"></a><a name="op_eq_eq">scoped_allocator_adaptor:: operator = = – operátor
 
 ```cpp
 template <class OuterA1, class OuterA2, class... InnerAllocs>
@@ -277,7 +277,7 @@ bool operator==(const scoped_allocator_adaptor<OuterA1, InnerAllocs...>& a,
 const scoped_allocator_adaptor<OuterA2, InnerAllocs...>& b) noexcept;
 ```
 
-## <a name="a-nameopnoeq--scopedallocatoradaptoroperator"></a><a name="op_noeq">  scoped_allocator_adaptor::Operator! =
+## <a name="a-nameopnoeq--scopedallocatoradaptoroperator"></a><a name="op_noeq">scoped_allocator_adaptor:: operator! =
 
 ```cpp
 template <class OuterA1, class OuterA2, class... InnerAllocs>
@@ -285,9 +285,9 @@ bool operator!=(const scoped_allocator_adaptor<OuterA1, InnerAllocs...>& a,
 const scoped_allocator_adaptor<OuterA2, InnerAllocs...>& b) noexcept;
 ```
 
-## <a name="outer_allocator"></a>  scoped_allocator_adaptor::outer_allocator –
+## <a name="outer_allocator"></a>scoped_allocator_adaptor::outer_allocator
 
-Získá odkaz na uložený objekt typu `outer_allocator_type`.
+Načte odkaz na uložený objekt typu `outer_allocator_type`.
 
 ```cpp
 outer_allocator_type& outer_allocator() noexcept;
@@ -298,15 +298,15 @@ const outer_allocator_type& outer_allocator() const noexcept;
 
 Odkaz na uložený objekt typu `outer_allocator_type`.
 
-## <a name="rebind_struct"></a>  scoped_allocator_adaptor::rebind – struktura
+## <a name="rebind_struct"></a>scoped_allocator_adaptor:: Rebind – struktura
 
 Definuje typ `Outer::rebind\<Other>::other` jako synonymum pro `scoped_allocator_adaptor\<Other, Inner...>`.
 
-Struktura obnovení vazby {typedef Other_traits::rebind\<jiných > Other_alloc; scoped_allocator_adaptor – definice typedef\<Other_alloc, vnitřní... > ostatní; };
+znovu navázání struktury {typedef Other_traits::\<Rebind jiné > Other_alloc;\<typedef scoped_allocator_adaptor Other_alloc, Inner... > jiné; };
 
-## <a name="scoped_allocator_adaptor"></a>  scoped_allocator_adaptor::scoped_allocator_adaptor – konstruktor
+## <a name="scoped_allocator_adaptor"></a>scoped_allocator_adaptor:: scoped_allocator_adaptor – konstruktor
 
-Vytvoří `scoped_allocator_adaptor` objektu. Také obsahuje destruktor.
+`scoped_allocator_adaptor` Vytvoří objekt. Zahrnuje také destruktor.
 
 ```cpp
 scoped_allocator_adaptor();
@@ -327,22 +327,22 @@ scoped_allocator_adaptor(Outer2&& al,
 
 ### <a name="parameters"></a>Parametry
 
-*doprava*<br/>
+*Kliknutím*\
 Existující `scoped_allocator_adaptor`.
 
-*Al*<br/>
-Existující alokátoru pro použití jako vnější alokátoru.
+*VŠ*\
+Existující Alokátor, který se má použít jako vnější přidělování.
 
-*REST*<br/>
-Seznam alokátorů má být použit jako vnitřní alokátorů.
+*REST*\
+Seznam přidělování, která se mají používat jako vnitřní přidělování.
 
 ### <a name="remarks"></a>Poznámky
 
-První výchozí konstruktor zkonstruuje jeho objekty uložené přidělování. Všechny následující tři konstruktory vytvoří její objekty uložené přidělování z odpovídajícími objekty ve *správné*. Poslední konstruktor vytvoří její objekty uložené přidělování z odpovídajícího argumenty v seznamu argumentů.
+První konstruktor vytvoří výchozí konstrukce svých uložených objektů přidělování. Každý z následujících tří konstruktorů sestaví své uložené objekty přidělování z odpovídajících objektů *vpravo*. Poslední konstruktor vytvoří své uložené objekty přidělování z odpovídajících argumentů v seznamu argumentů.
 
-## <a name="select_on_container_copy_construction"></a>  scoped_allocator_adaptor::select_on_container_copy_construction –
+## <a name="select_on_container_copy_construction"></a>scoped_allocator_adaptor::select_on_container_copy_construction
 
-Vytvoří novou `scoped_allocator_adaptor` objekt s každou uložený objekt alokátoru inicializován pomocí volání `select_on_container_copy_construction` pro každý odpovídající alokátoru.
+Vytvoří nový `scoped_allocator_adaptor` objekt s každým uloženým objektem přidělování inicializovaným `select_on_container_copy_construction` voláním pro každý odpovídající Alokátor.
 
 ```cpp
 scoped_allocator_adaptor select_on_container_copy_construction();
@@ -350,8 +350,8 @@ scoped_allocator_adaptor select_on_container_copy_construction();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Tato metoda vrátí efektivně `scoped_allocator_adaptor(Outer_traits::select_on_container_copy_construction(*this), inner_allocator().select_on_container_copy_construction())`. Výsledkem je nový `scoped_allocator_adaptor` objekt s každou uložený objekt alokátoru inicializován pomocí volání `al.select_on_container_copy_construction()` pro odpovídající allocator *al*.
+Tato metoda efektivně vrátí `scoped_allocator_adaptor(Outer_traits::select_on_container_copy_construction(*this), inner_allocator().select_on_container_copy_construction())`. Výsledkem je nový `scoped_allocator_adaptor` objekt s každým uloženým objektem přidělování inicializovaným voláním `al.select_on_container_copy_construction()` pro odpovídající modul přidělování *Al*.
 
 ## <a name="see-also"></a>Viz také:
 
-[Odkaz na soubory hlaviček](../standard-library/cpp-standard-library-header-files.md)<br/>
+[Odkazy na hlavičkové soubory](../standard-library/cpp-standard-library-header-files.md)

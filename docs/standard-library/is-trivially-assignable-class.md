@@ -1,21 +1,21 @@
 ---
-title: is_trivially_assignable Class
+title: is_trivially_assignable – třída
 ms.date: 11/04/2016
 f1_keywords:
 - type_traits/std::is_trivially_assignable
 helpviewer_keywords:
 - is_trivially_assignable
 ms.assetid: 1284a8f7-4093-426d-9c9a-dabb46f90d6d
-ms.openlocfilehash: eeef85a0b26c25eb745258c7e0e35394f0cab979
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 11aed7fbe2540984d8ed69f88b2a95649e8fee70
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62413488"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68457494"
 ---
-# <a name="istriviallyassignable-class"></a>is_trivially_assignable Class
+# <a name="istriviallyassignable-class"></a>is_trivially_assignable – třída
 
-Testuje, zda je hodnota `From` typ lze snadno přiřadit `To` typu
+Testuje, zda může být `From` hodnota typu triviálním `To` přiřazená typu
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -26,22 +26,22 @@ struct is_trivially_assignable;
 
 ### <a name="parameters"></a>Parametry
 
-*Komu*<br/>
-Typ objektu, která obdrží přiřazení.
+*Schopn*\
+Typ objektu, který přijímá přiřazení.
 
-*z*<br/>
-Typ objektu, který obsahuje hodnotu.
+*Výsledkem*\
+Typ objektu, který poskytuje hodnotu.
 
 ## <a name="remarks"></a>Poznámky
 
-Výraz `declval<To>() = declval<From>()` musí být ve správném formátu a musí být pro kompilátor známým tak, aby vyžadovala žádné netriviální operace. Obě `From` a `To` musí být kompletními typy **void**, nebo pole s neznámým rozsahem.
+Výraz `declval<To>() = declval<From>()` musí být ve správném formátu a musí být známý kompilátorem, aby nevyžadoval žádné operace bez triviálních operací. Oba `From` a`To` musí být úplnými typy, **void**nebo poli neznámých vazeb.
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** \<type_traits >
+**Hlavička:** \<type_traits >
 
-**Namespace:** std
+**Obor názvů:** std
 
 ## <a name="see-also"></a>Viz také:
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
+[<type_traits>](../standard-library/type-traits.md)

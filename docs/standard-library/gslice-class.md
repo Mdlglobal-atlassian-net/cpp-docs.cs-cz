@@ -12,56 +12,56 @@ helpviewer_keywords:
 - std::gslice [C++], start
 - std::gslice [C++], stride
 ms.assetid: f47cffd0-ea59-4b13-848b-7a5ce1d7e2a3
-ms.openlocfilehash: bee6fec3e09f7c5758112ba8b0c171a300797f9a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9290fabc86ffbdb051b7c61fe1600cd2f7f17dca
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62159467"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68448902"
 ---
 # <a name="gslice-class"></a>gslice – třída
 
-Třídy nástrojů pro valarray –, který se používá k definování multidimenzionální podmnožiny valarray. Pokud valarray se považuje za multidimenzionální matice s všechny elementy v matici, řez extrahuje vektor z multidimenzionálního pole.
+Třída nástrojů pro valarray, která se používá k definování multidimenzionálních podmnožin valarray. Pokud je valarray považována za multidimenzionální matici se všemi prvky v poli, pak řez vyextrahuje vektor z multidimenzionálního pole.
 
 ## <a name="remarks"></a>Poznámky
 
-Třída obsahuje parametry, které charakterizují objekt typu [gslice_array –](../standard-library/gslice-array-class.md). Dílčí sadu valarray zkonstruování nepřímo když objekt gslice – třída se objeví jako argument pro objekt třídy [valarray](../standard-library/valarray-class.md#op_at)**\<typ >**. Uložené hodnoty, které určují dílčí vybrat z nadřazené valarray patří:
+Třída ukládá parametry, které charakterizují objekt typu [gslice_array](../standard-library/gslice-array-class.md). Podmnožina valarray je nepřímo vytvořena, když se objekt třídy gslice zobrazí jako argument pro objekt typu třídy [valarray](../standard-library/valarray-class.md#op_at) **\<>** . Uložené hodnoty, které určují podmnožinu vybrané z nadřazené valarray, zahrnují:
 
 - Počáteční index.
 
 - Délka vektoru třídy `valarray<size_t>`.
 
-- Vektor stride třídy `valarray<size_t>`.
+- Vektor pro Rozteč třídy `valarray<size_t>`.
 
 Dva vektory musí mít stejnou délku.
 
-Pokud množiny definované gslice – je podmnožinou konstantní valarray, gslice – je nová valarray. Pokud množiny definované gslice – je podmnožinou nekonstantním valarray, gslice – má sémantiku odkazu pro původní valarray. Vyhodnocení mechanismus pro nekonstantním valarrays šetří čas a paměti.
+Pokud je sada definovaná pomocí gslice podmnožinou konstanty valarray, pak je gslice novým valarray. Pokud je sada definovaná pomocí gslice podmnožinou nekonstantního valarrayu, pak má gslice odkaz na původní valarray. Mechanismus vyhodnocení pro nekonstantní valarrays šetří čas a paměť.
 
-Operace s valarrays zaručeno pouze v případě, že zdrojové a cílové podmnožiny určené gslices se liší a jsou platné všechny indexy.
+Operace na valarrays jsou zaručeny pouze v případě, že zdrojové a cílové podmnožiny, které jsou definovány v gslices, jsou jedinečné a všechny indexy jsou platné.
 
 ### <a name="constructors"></a>Konstruktory
 
 |Konstruktor|Popis|
 |-|-|
-|[gslice](#gslice)|Definuje podmnožinu `valarray` , který se skládá z více částí `valarray` všechny začínají na zadaný prvek.|
+|[gslice](#gslice)|Definuje podmnožinu `valarray` , která se skládá z více řezů `valarray` , které vše začínají v zadaném elementu.|
 
 ### <a name="member-functions"></a>Členské funkce
 
 |Členská funkce|Popis|
 |-|-|
-|[Velikost](#size)|Vyhledá pole hodnoty určující počet prvků v obecné řezu `valarray`.|
-|[start](#start)|Vyhledá počáteční index obecné řezu `valarray`.|
-|[stride](#stride)|Vyhledá vzdálenost mezi prvky v obecné řezu `valarray`.|
+|[hodnota](#size)|Najde hodnoty pole, které určují počet prvků v obecné výseči `valarray`.|
+|[start](#start)|Najde počáteční index obecného řezu `valarray`.|
+|[mezer](#stride)|Najde vzdálenost mezi prvky v obecném řezu `valarray`.|
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** \<valarray – >
+**Hlavička:** \<valarray >
 
-**Namespace:** std
+**Obor názvů:** std
 
-## <a name="gslice"></a>  gslice::gslice
+## <a name="gslice"></a>gslice:: gslice
 
-Třídy nástrojů pro valarray –, který se používá k definování multidimenzionální řezů valarray.
+Třída nástrojů pro valarray, která slouží k definování multidimenzionálních řezů valarray.
 
 ```cpp
 gslice();
@@ -74,22 +74,22 @@ gslice(
 
 ### <a name="parameters"></a>Parametry
 
-*_StartIndex*<br/>
-Valarray – index prvního prvku v podmnožině rozhraní.
+*_StartIndex*\
+Index valarray prvního prvku v podmnožině.
 
-*_LenArray*<br/>
+*_LenArray*\
 Pole určující počet prvků v každém řezu.
 
-*_IncArray*<br/>
-Pole určující stride v každém řezu.
+*_IncArray*\
+Pole, které určuje rozteč v jednotlivých výsečích.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Výchozí konstruktor ukládá nulu pro počáteční index a vektory nulové délky pro délku a stride vektory. Druhý konstruktor ukládá *_StartIndex* pro počáteční index *_LenArray* pro pole délky a *_IncArray* stride pole.
+Výchozí konstruktor ukládá hodnotu nula pro počáteční index a vektory s nulovou délkou pro délky a vektory mezer. Druhý konstruktor ukládá *_StartIndex* pro počáteční index, *_LenArray* pro pole length a *_IncArray* pro pole Rozteč.
 
 ### <a name="remarks"></a>Poznámky
 
-**gslice –** definuje podmnožinu valarray –, který se skládá z více částí valarray, že každý začínají na stejné zadaný element. Možnost používat pole k definování více řezů je jediným rozdílem mezi `gslice` a [slice::slice](../standard-library/slice-class.md#slice). První řez je první prvek s indexem *_StartIndex*, počet elementů určené na první prvek *_LenArray*a stride Dal první prvek *_IncArray* . Další sadu ortogonální řezy má první prvků Dal první řez. Druhý prvek *_LenArray* určuje počet prvků. Stride je dán druhý prvek *_IncArray*. Třetí rozměr řezů by trvat prvky dvourozměrné pole jako počáteční elementy a pokračovat analogicky
+**gslice** definuje podmnožinu valarray, která se skládá z více řezů valarray, které každý spustí na stejném zadaném elementu. Možnost použít pole k definování více řezů je jediný rozdíl mezi `gslice` a [řezů:: Slice](../standard-library/slice-class.md#slice). První řez má první element s indexem *_StartIndex*, počet prvků určený prvním prvkem *_LenArray*a mezerou určenou prvním prvkem *_IncArray*. Další sada kolmých řezů má první prvky, které jsou uvedeny v prvním řezu. Druhý prvek *_LenArray* určuje počet prvků. Rozteč je dána druhým prvkem *_IncArray*. Třetí rozměr řezů by převzal prvky dvojrozměrného pole jako počáteční prvky a pokračovaly obdobně.
 
 ### <a name="example"></a>Příklad
 
@@ -138,9 +138,9 @@ The valarray for vaGSlice is vaResult:
 va[vaGSlice] = ( 0 4 8 12 7 11 15 19)
 ```
 
-## <a name="size"></a>  gslice::size
+## <a name="size"></a>gslice:: size
 
-Vyhledá zadání počtu elementů v obecné řezu valarray hodnoty pole.
+Najde hodnoty pole, které určují počet prvků v obecné výseči valarray.
 
 ```cpp
 valarray<size_t> size() const;
@@ -148,11 +148,11 @@ valarray<size_t> size() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Valarray – zadání počtu elementů v každém řezu obecné řezu valarray.
+Valarray určující počet prvků v každém řezu řezu v rámci valarray.
 
 ### <a name="remarks"></a>Poznámky
 
-Členská funkce vrátí uložený délky řezy.
+Členská funkce vrací uložené délky řezů.
 
 ### <a name="example"></a>Příklad
 
@@ -216,9 +216,9 @@ The size of vaResult is:
 vaGSlice.size ( ) = ( 4 4 ).
 ```
 
-## <a name="start"></a>  gslice::Start
+## <a name="start"></a>gslice:: Start
 
-Počáteční index obecné řezu valarray najde.
+Najde počáteční index obecného řezu valarray.
 
 ```cpp
 size_t start() const;
@@ -226,7 +226,7 @@ size_t start() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Počáteční index obecné řezu valarray.
+Počáteční index celkového řezu valarray
 
 ### <a name="example"></a>Příklad
 
@@ -279,9 +279,9 @@ va[vaGSlice] = ( 0 4 8 12 7 11 15 19 ).
 The index of the first element of vaResult is: 0.
 ```
 
-## <a name="stride"></a>  gslice::STRIDE
+## <a name="stride"></a>gslice:: rozteč
 
-Vyhledá vzdálenost mezi prvky v obecné řezu valarray.
+Najde vzdálenost mezi prvky v obecném řezu valarray.
 
 ```cpp
 valarray<size_t> stride() const;
@@ -289,7 +289,7 @@ valarray<size_t> stride() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Valarray – určení vzdálenosti mezi prvky v obecné řezu valarray každý řez.
+Valarray určující vzdálenosti mezi elementy v každém řezu řezu v rámci valarray.
 
 ### <a name="example"></a>Příklad
 
@@ -349,4 +349,4 @@ vaGSlice.stride ( ) = ( 7 4 ).
 
 ## <a name="see-also"></a>Viz také:
 
-[Bezpečný přístup z více vláken ve standardní knihovně C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[Bezpečný přístup z více vláken ve standardní knihovně C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)

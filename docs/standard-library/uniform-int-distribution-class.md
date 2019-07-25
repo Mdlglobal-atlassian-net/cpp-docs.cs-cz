@@ -26,16 +26,16 @@ helpviewer_keywords:
 - std::uniform_int_distribution [C++], param_type
 - std::uniform_int_distribution [C++], param_type
 ms.assetid: a1867dcd-3bd9-4787-afe3-4b62692c1d04
-ms.openlocfilehash: 5e37f21e19be730d3437507e83f2417fa2dc020a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1307f64fb5f92b59337665d108d950b28c6ff63e
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62348169"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68454960"
 ---
 # <a name="uniformintdistribution-class"></a>uniform_int_distribution – třída
 
-Generuje jednotné (každá hodnota byla stejně pravděpodobná) rozdělení celého čísla v rámci výstupní oblasti, která je včetně včetně.
+Vygeneruje jednotný (každá hodnota je stejně pravděpodobná) rozdělení celého čísla v rámci výstupní oblasti, která je zahrnutá (včetně).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -71,29 +71,29 @@ public:
 
 ### <a name="parameters"></a>Parametry
 
-*IntType*<br/>
-Typ výsledku celého čísla, výchozí hodnota je **int**. Možné typy, najdete v části [ \<náhodné >](../standard-library/random.md).
+*IntType*\
+Celočíselný typ výsledku, výchozí hodnota je **int**. Možné typy naleznete v tématu [ \<Random >](../standard-library/random.md).
 
 ## <a name="remarks"></a>Poznámky
 
-Třída šablony popisuje inkluzivní distribuce, která vytváří hodnoty uživatelem zadaného integrálového typu rozdělení tak, aby každá hodnota byla stejně pravděpodobná. Následující tabulka odkazuje na články týkající se jednotlivých členů.
+Třída šablony popisuje zahrnutou distribuci, která vytvoří hodnoty celočíselného typu zadaného uživatelem s distribucí, aby každá hodnota byla stejně pravděpodobná. Následující tabulka obsahuje odkazy na články týkající se jednotlivých členů.
 
 ||||
 |-|-|-|
 |[uniform_int_distribution](#uniform_int_distribution)|`uniform_int_distribution::a`|`uniform_int_distribution::param`|
 |`uniform_int_distribution::operator()`|`uniform_int_distribution::b`|[param_type](#param_type)|
 
-Vlastnost člena `a()` vrátí aktuálně uložené minimální mez distribuci, zatímco `b()` vrátí aktuálně uložené maximální mez. Pro tuto třídu distribuční tyto minimální a maximální hodnoty se shodují s nastaveními vrácený běžné funkce vlastností `min()` a `max()`.
+Člen `a()` vlastnosti vrátí aktuálně uloženou minimální hranici distribuce, zatímco `b()` vrátí aktuálně uloženou maximální vazbu. Pro tuto třídu distribuce jsou tyto minimální a maximální hodnoty stejné jako ty, které jsou vráceny funkcemi `min()` společných vlastností a. `max()`
 
-Vlastnost člena `param()` Nastaví nebo vrátí `param_type` uložené distribuční balíček parametrů.
+Člen `param()` vlastnosti nastaví nebo `param_type` vrátí uložený balíček parametrů distribuce.
 
-`min()` a `max()` členské funkce vrátí nejmenší možné výsledek a největší výsledek je to možné, v uvedeném pořadí.
+Členské funkce `max()` a vracejí nejmenší možný výsledek a největší možný výsledek, v uvedeném pořadí. `min()`
 
-`reset()` Členská funkce odstraní všechny hodnoty uložené v mezipaměti tak, aby výsledek dalšího volání do `operator()` nezávisí na žádné hodnoty získané z modulu před voláním.
+Členská funkce zahodí všechny hodnoty uložené v mezipaměti, takže výsledek dalšího `operator()` volání není závislý na všech hodnotách získaných z modulu před voláním. `reset()`
 
-`operator()` Členské funkce vrátí další vygenerovanou hodnotu založená na modulu URNG z aktuálního balíčku parametrů nebo balíček zadaný parametr.
+`operator()` Členské funkce vrátí další vygenerovanou hodnotu založenou na modulu URNG, buď z aktuálního balíčku parametrů, nebo pomocí zadaného balíčku parametrů.
 
-Další informace o distribuci třídy a jejich členy, naleznete v tématu [ \<náhodné >](../standard-library/random.md).
+Další informace o třídách distribuce a jejich členech naleznete v tématu [ \<Random >](../standard-library/random.md).
 
 ## <a name="example"></a>Příklad
 
@@ -175,13 +175,13 @@ Distribution for 200 samples:
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** \<náhodné >
+**Hlavička:** \<náhodné >
 
-**Namespace:** std
+**Obor názvů:** std
 
-## <a name="uniform_int_distribution"></a>  uniform_int_distribution::uniform_int_distribution
+## <a name="uniform_int_distribution"></a>uniform_int_distribution::uniform_int_distribution
 
-Vytvoří rozložení.
+Sestaví rozdělení.
 
 ```cpp
 explicit uniform_int_distribution(
@@ -191,22 +191,22 @@ explicit uniform_int_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>Parametry
 
-*a*<br/>
+*určitého*\
 Dolní mez pro náhodné hodnoty, včetně.
 
-*b*<br/>
+*b*\
 Horní mez pro náhodné hodnoty, včetně.
 
-*Parametr*<br/>
-`param_type` Struktura používaná k vytvoření distribuce.
+*parametr*\
+`param_type` Struktura použitá k sestavení distribuce.
 
 ### <a name="remarks"></a>Poznámky
 
-**Předběžné podmínky:** `a ≤ b`
+**Předběžná podmínka:** `a ≤ b`
 
 První konstruktor vytvoří objekt, jehož uložená hodnota *a* drží hodnotu *a* a jehož uložená hodnota *b* drží hodnotu *b*.
 
-Druhý konstruktor vytvoří objekt, jehož uložené parametry jsou inicializovány z *parametr*. Můžete získat a nastavit aktuální parametry existující distribuční voláním `param()` členskou funkci.
+Druhý konstruktor vytvoří objekt, jehož uložené parametry jsou inicializovány z *parametr*. Můžete získat a nastavit aktuální parametry existující distribuce voláním `param()` členské funkce.
 
 ## <a name="param_type"></a>  uniform_int_distribution::param_type
 
@@ -227,21 +227,21 @@ struct param_type {
 
 ### <a name="parameters"></a>Parametry
 
-*a*<br/>
+*určitého*\
 Dolní mez pro náhodné hodnoty, včetně.
 
-*b*<br/>
+*b*\
 Horní mez pro náhodné hodnoty, včetně.
 
-*doprava*<br/>
-`param_type` Objekt k porovnání s tím.
+*Kliknutím*\
+`param_type` Objekt, který se má porovnat.
 
 ### <a name="remarks"></a>Poznámky
 
-**Předběžné podmínky:** `a ≤ b`
+**Předběžná podmínka:** `a ≤ b`
 
-Tato struktura může být předán konstruktoru třídy distribuce při vytváření instance, do `param()` členskou funkci pro nastavení uložené parametry existující distribuční a k `operator()` použije místo uložené parametry.
+Tuto strukturu lze předat konstruktoru třídy distribuce při vytváření instance, `param()` členské funkci pro nastavení uložených parametrů stávající distribuce a k `operator()` použití namísto uložených parametrů.
 
 ## <a name="see-also"></a>Viz také:
 
-[\<náhodné >](../standard-library/random.md)<br/>
+[\<náhodné >](../standard-library/random.md)

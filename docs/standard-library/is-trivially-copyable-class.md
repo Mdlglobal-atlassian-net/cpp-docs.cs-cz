@@ -1,21 +1,21 @@
 ---
-title: is_trivially_copyable Class
+title: is_trivially_copyable – třída
 ms.date: 11/04/2016
 f1_keywords:
 - type_traits/std::is_trivially_copyable
 helpviewer_keywords:
 - is_trivially_copyable
 ms.assetid: 89a53bf8-036c-4108-91e1-fe34adbde8b3
-ms.openlocfilehash: 181152bff1d7c2e4f97678b48310f744080822ce
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d3062ae311b63be76ba07185f4f8173afa4229cc
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62413447"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68459752"
 ---
-# <a name="istriviallycopyable-class"></a>is_trivially_copyable Class
+# <a name="istriviallycopyable-class"></a>is_trivially_copyable – třída
 
-Ověřuje, zda typ typu snadno kopírovatelná.
+Testuje, zda je typ triviálním kopírovacím typem.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -26,19 +26,19 @@ struct is_trivially_copyable;
 
 ### <a name="parameters"></a>Parametry
 
-*T*<br/>
+*Š*\
 Typ, na který chcete odeslat dotaz.
 
 ## <a name="remarks"></a>Poznámky
 
-Instance predikátu typu obsahuje hodnotu true, pokud typ *T* triviálně kopírovatelné typ, jinak má hodnotu false. Triviálně kopírovatelné typy mít žádné operace kopírování netriviální, operací přesunutí nebo destruktory. Obecně platí operace kopírování je považovány za bezvýznamné, pokud je možné implementovat jako bitové kopie. Předdefinované typy a pole triviálně kopírovatelné typy jsou snadno kopírovatelná.
+Instance predikátu typu má hodnotu true, pokud typ *T* je triviální kopírovací typ, jinak má hodnotu false. Triviální typy bez operace kopírování, operace přesunutí nebo destruktorů. Obecně platí, že operace kopírování je považována za triviální, pokud může být implementována jako bitová kopie. Předdefinované typy a pole triviálních kopírovaných typů jsou triviální kopie.
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** \<type_traits >
+**Hlavička:** \<type_traits >
 
-**Namespace:** std
+**Obor názvů:** std
 
 ## <a name="see-also"></a>Viz také:
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
+[<type_traits>](../standard-library/type-traits.md)

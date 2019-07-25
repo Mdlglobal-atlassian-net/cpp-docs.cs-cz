@@ -1,5 +1,5 @@
 ---
-title: invoke_result třídy
+title: invoke_result – třída
 ms.date: 02/21/2019
 f1_keywords:
 - type_traits/std::invoke_result
@@ -9,16 +9,16 @@ helpviewer_keywords:
 - std::invoke_result
 - std::invoke_result_t
 - std::invoke_result::type
-ms.openlocfilehash: 7c03240d3ee666fcda30562279a8dbda2ca8dc7b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2b2051b0c854151cff9b439f5ec0a951c25a6387
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62404843"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68447631"
 ---
-# <a name="invokeresult-class"></a>invoke_result třídy
+# <a name="invokeresult-class"></a>invoke_result – třída
 
-Určuje návratový typ volatelného typu, který přijímá zadanými typy argumentu v době kompilace. Přidáno v C ++ 17.
+Určuje návratový typ typu volat, který přebírá zadané typy argumentů v době kompilace. Přidáno v C++ 17.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -33,23 +33,23 @@ template<lass Callable, class... Args>
 
 ### <a name="parameters"></a>Parametry
 
-*Volatelný*<br/>
-Volatelný typ dotazu.
+*Kompatibilní*\
+Typ, který se má volat pro dotaz
 
-*Args*<br/>
-Typy seznamu argumentů na volatelný typ dotazu.
+*Argumentů*\
+Typy seznamu argumentů pro dotaz na typ, který se má volat
 
 ## <a name="remarks"></a>Poznámky
 
-Pomocí této šablony můžete určit typ výsledku *Callable*(*Args*...) v době kompilace, ve kterém *Callable* a všechny typy v *Args* jsou všechny úplný typ, pole neznámým rozsahem nebo pravděpodobně cv kvalifikovaný `void`. `type` Názvy členů třídy šablony návratový typ *Callable* při vyvolání pomocí argumentů *Args*... `type` Člen je definováno pouze, pokud *Callable* lze volat při vyvolání pomocí argumentů *Args*... v nevyhodnoceném kontextu. V opačném případě šablony třídy nemá žádný člen `type`, který umožňuje sfinae u testů na určitou sadu typy argumentů v době kompilace.
+Pomocí této šablony lze určit typ výsledku pro vyžádání *k vyžádání (* *args*...) v době kompilace, kde je možné *volat* a všechny typy v argumentech *argumentů* jsou kompletní typ, pole neznámého objektu Bound nebo případně `void`hodnota typu CV-Qualified. Člen třídy šablony pojmenovává návratový typ, který se má *volat* při vyvolání pomocí argumentů argumentů *..* .. `type` Člen je definován pouze *v případě,* že lze volat při volání pomocí argumentů argumentů *..* . `type` v nehodnoceném kontextu. V opačném případě třída šablony nemá žádného člena `type`, což umožňuje SFINAE testy na konkrétní sadě typů argumentů v době kompilace.
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** \<type_traits >
+**Hlavička:** \<type_traits >
 
-**Namespace:** std
+**Obor názvů:** std
 
 ## <a name="see-also"></a>Viz také:
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
+[< type_traits >](../standard-library/type-traits.md)\
 [invoke](functional-functions.md#invoke)

@@ -7,18 +7,18 @@ helpviewer_keywords:
 - streams [C++], in iostream classes
 - streams [C++]
 ms.assetid: a7e661e9-6cd1-4543-a9a4-c58ee9fd32f3
-ms.openlocfilehash: 9b8821861baed53880a00695204a4555994dccb3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 80f2d17d7de2ddca1ef1501cacdb44f41c06594b
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62410808"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68450939"
 ---
 # <a name="what-a-stream-is"></a>Co je datový proud
 
-Jako je C C++ nemá integrovanou funkci vstupu a výstupu. Všechny kompilátory C++, jsou však jako součást balíčku s systematické, objektově orientované vstupně-výstupní operace balíčku, označované jako iostream – třídy. Datový proud je centrální konceptu iostream – třídy. Objekt datového proudu můžete představit jako inteligentní soubor, který funguje jako zdroj a cíl bajtů. Datový proud vlastnosti jsou určeny ve své třídě a přizpůsobené vkládání a extrakci operátory.
+Podobně jako v C++ jazyce C nemá vestavěnou funkci vstupu a výstupu. Všechny C++ kompilátory jsou však součástí sady se systematickým objektem orientovaným na vstupně-výstupní balíček, který se označuje jako třídy iostream –. Datový proud je centrální pojem tříd iostream –. Objekt Stream si můžete představit jako inteligentní soubor, který funguje jako zdroj a cíl pro bajty. Vlastnosti datového proudu jsou určeny jeho třídou a přizpůsobenými operátory vložení a extrakce.
 
-Prostřednictvím ovladače zařízení operační systém disku se zabývá klávesnice, obrazovky, tiskárny a portů pro komunikaci jako rozšířené soubory. Iostream – třídy pracovat s těmito rozšířené soubory. Předdefinované třídy podporují čtení a zápis do paměti se syntaxí stejná jako u disku vstupně-výstupních operací, které umožňuje snadno odvozovat datového proudu.
+Přes ovladače zařízení se operační systém disku zabývá pomocí klávesnice, obrazovky, tiskárny a komunikačních portů jako rozšířené soubory. Třídy iostream – komunikují s těmito rozšířenými soubory. Integrované třídy podporují čtení z paměti a zápis do paměti s syntaxí shodnou se pro vstupně-výstupní operace disku, což usnadňuje odvození tříd streamu.
 
 ## <a name="in-this-section"></a>V tomto oddílu
 
@@ -26,4 +26,4 @@ Prostřednictvím ovladače zařízení operační systém disku se zabývá kl�
 
 ## <a name="see-also"></a>Viz také:
 
-[iostream – programování](../standard-library/iostream-programming.md)<br/>
+[iostream – programování](../standard-library/iostream-programming.md)

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - codecvt_byname class
 ms.assetid: b63b6c04-f60c-47b9-8e30-a933f24a8ffb
-ms.openlocfilehash: 62aac6abca3dce45ff3cc875823df04c69618b10
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 62781d575d6b9dda3f3c1e2a744091221c6f9584
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62405271"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68459850"
 ---
 # <a name="codecvtbyname-class"></a>codecvt_byname – třída
 
@@ -43,24 +43,24 @@ protected:
 
 ### <a name="parameters"></a>Parametry
 
-*_Locname*<br/>
-S názvem národního prostředí.
+*_Locname*\
+Pojmenované národní prostředí.
 
-*_Refs*<br/>
-Počet počáteční odkazů.
+*_Refs*\
+Počáteční počet odkazů
 
 ## <a name="remarks"></a>Poznámky
 
-Omezující vlastnosti byname se automaticky vytvoří při je sestavený s názvem národního prostředí.
+Charakteristiky byname se automaticky vytvoří při vytváření pojmenovaného národního prostředí.
 
-Její chování je určeno s názvem národního prostředí *_Locname*. Každý konstruktor inicializuje jeho základní objekt s [codecvt](../standard-library/codecvt-class.md)\<CharType, Byte, StateType > ( `_Refs`).
+Jeho chování je určeno názvem národního prostředí *_Locname*. Každý konstruktor inicializuje svůj základní objekt pomocí [codecvt](../standard-library/codecvt-class.md)\<CharType, Byte, StateType > ( `_Refs`).
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** \<národní prostředí >
+**Hlavička:** \<> národního prostředí
 
-**Namespace:** std
+**Obor názvů:** std
 
 ## <a name="see-also"></a>Viz také:
 
-[Bezpečný přístup z více vláken ve standardní knihovně C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[Bezpečný přístup z více vláken ve standardní knihovně C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)

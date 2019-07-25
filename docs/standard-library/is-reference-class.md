@@ -7,12 +7,12 @@ helpviewer_keywords:
 - is_reference class
 - is_reference
 ms.assetid: 3d9e631f-3092-430c-843e-e914ab58c257
-ms.openlocfilehash: 793a84f03dba762ff686627004ffe3830a5d98d8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 99aae64bcaef1e17956c3b3001627d128f966352
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62413564"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68455678"
 ---
 # <a name="isreference-class"></a>is_reference – třída
 
@@ -27,12 +27,12 @@ struct is_reference;
 
 ### <a name="parameters"></a>Parametry
 
-*Ty*<br/>
+*Ty*\
 Typ, na který chcete odeslat dotaz.
 
 ## <a name="remarks"></a>Poznámky
 
-Instance predikátu typu obsahuje hodnotu true, pokud typ *Ty* je odkaz na objekt nebo na funkci; v opačném případě obsahuje hodnotu false.
+Instance predikátu typu má hodnotu true, pokud *je typ,* který je odkazem na objekt nebo funkci, jinak obsahuje hodnotu false.
 
 ## <a name="example"></a>Příklad
 
@@ -71,11 +71,11 @@ is_reference<int(&)()> == true
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** \<type_traits >
+**Hlavička:** \<type_traits >
 
-**Namespace:** std
+**Obor názvů:** std
 
 ## <a name="see-also"></a>Viz také:
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
-[is_pointer – třída](../standard-library/is-pointer-class.md)<br/>
+[< type_traits >](../standard-library/type-traits.md)\
+[is_pointer – třída](../standard-library/is-pointer-class.md)

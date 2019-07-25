@@ -26,12 +26,12 @@ helpviewer_keywords:
 - std::normal_distribution [C++], param_type
 - std::normal_distribution [C++], param_type
 ms.assetid: bf92cdbd-bc72-4d4a-b588-173d748f0d7d
-ms.openlocfilehash: df30ddb910cf2fa266a603a3ab285379ea45ec7c
-ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
+ms.openlocfilehash: daf9ab6b91eb4af19fdd563937b626515c4bc99b
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66449853"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68457665"
 ---
 # <a name="normaldistribution-class"></a>normal_distribution – třída
 
@@ -71,31 +71,31 @@ public:
 
 ### <a name="parameters"></a>Parametry
 
-*RealType*<br/>
-Výchozí hodnota typu s plovoucí desetinnou čárkou výsledku **double**. Možné typy, najdete v části [ \<náhodné >](../standard-library/random.md).
+*RealType*\
+Typ výsledku s plovoucí desetinnou čárkou, výchozí hodnota je **Double**. Možné typy naleznete v tématu [ \<Random >](../standard-library/random.md).
 
 ## <a name="remarks"></a>Poznámky
 
-Třída šablony popisuje distribuci, která vytváří hodnoty uživatelem zadaného celočíselný typ nebo typ **double** Pokud se žádný nezadá, které jsou rozděleny podle normální rozdělení. Následující tabulka odkazuje na články týkající se jednotlivých členů.
+Třída šablony popisuje distribuci, která vytváří hodnoty celočíselného typu zadaného uživatelem, nebo typ **Double** , pokud není k dispozici, distribuované podle normální distribuce. Následující tabulka obsahuje odkazy na články týkající se jednotlivých členů.
 
 ||||
 |-|-|-|
 |[normal_distribution](#normal_distribution)|`normal_distribution::mean`|`normal_distribution::param`|
 |`normal_distribution::operator()`|`normal_distribution::stddev`|[param_type](#param_type)|
 
-Funkce vlastností `mean()` a `stddev()` návratové hodnoty pro parametry uložené distribuce *znamenat* a *stddev* v uvedeném pořadí.
+Funkce `mean()` vlastností a `stddev()` vrátí hodnoty pro uložené parametry distribuce *střední* a *StdDev* v uvedeném pořadí.
 
-Vlastnost člena `param()` Nastaví nebo vrátí `param_type` uložené distribuční balíček parametrů.
+Člen `param()` vlastnosti nastaví nebo `param_type` vrátí uložený balíček parametrů distribuce.
 
-`min()` a `max()` členské funkce vrátí nejmenší možné výsledek a největší výsledek je to možné, v uvedeném pořadí.
+Členské funkce `max()` a vracejí nejmenší možný výsledek a největší možný výsledek, v uvedeném pořadí. `min()`
 
-`reset()` Členská funkce odstraní všechny hodnoty uložené v mezipaměti tak, aby výsledek dalšího volání do `operator()` nezávisí na žádné hodnoty získané z modulu před voláním.
+Členská funkce zahodí všechny hodnoty uložené v mezipaměti, takže výsledek dalšího `operator()` volání není závislý na všech hodnotách získaných z modulu před voláním. `reset()`
 
-`operator()` Členské funkce vrátí další vygenerovanou hodnotu založená na modulu URNG z aktuálního balíčku parametrů nebo balíček zadaný parametr.
+`operator()` Členské funkce vrátí další vygenerovanou hodnotu založenou na modulu URNG, buď z aktuálního balíčku parametrů, nebo pomocí zadaného balíčku parametrů.
 
-Další informace o distribuci třídy a jejich členy, naleznete v tématu [ \<náhodné >](../standard-library/random.md).
+Další informace o třídách distribuce a jejich členech naleznete v tématu [ \<Random >](../standard-library/random.md).
 
-Podrobné informace o normální rozdělení, najdete v článku Wolfram MathWorld [normální rozdělení](https://go.microsoft.com/fwlink/p/?linkid=400924).
+Podrobné informace o normální distribuci najdete v tématu [normální distribuce](https://go.microsoft.com/fwlink/p/?linkid=400924)v článku Wolfram MathWorld.
 
 ## <a name="example"></a>Příklad
 
@@ -183,13 +183,13 @@ Distribution for 10 samples:
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** \<náhodné >
+**Hlavička:** \<náhodné >
 
-**Namespace:** std
+**Obor názvů:** std
 
-## <a name="normal_distribution"></a>  normal_distribution::normal_distribution
+## <a name="normal_distribution"></a>normal_distribution::normal_distribution
 
-Vytvoří rozložení.
+Sestaví rozdělení.
 
 ```cpp
 explicit normal_distribution(result_type mean = 0.0, result_type stddev = 1.0);
@@ -198,22 +198,22 @@ explicit normal_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>Parametry
 
-*střední hodnotu*<br/>
-`mean` Parametru distribuce.
+*Průměrná*\
+Parametr `mean` distribuce.
 
-*stddev*<br/>
-`stddev` Parametru distribuce.
+*StdDev*\
+Parametr `stddev` distribuce.
 
-*Parametr*<br/>
-Struktura parametr použít k vytvoření distribuce.
+*parametr*\
+Struktura parametrů používaná k sestavení distribuce.
 
 ### <a name="remarks"></a>Poznámky
 
-**Předběžné podmínky:** `0.0 < stddev`
+**Předběžná podmínka:** `0.0 < stddev`
 
-První konstruktor vytvoří objekt, jehož uložené `mean` hodnota obsahuje hodnotu *znamenat* a jehož uložené `stddev` hodnota obsahuje hodnotu *stddev*.
+První konstruktor vytvoří objekt `mean` , jehož uložená hodnota drží hodnotu *střední* a jehož uložená `stddev` hodnota obsahuje hodnotu *StdDev*.
 
-Druhý konstruktor vytvoří objekt, jehož uložené parametry jsou inicializovány z *parametr*. Můžete získat a nastavit aktuální parametry existující distribuční voláním `param()` členskou funkci.
+Druhý konstruktor vytvoří objekt, jehož uložené parametry jsou inicializovány z *parametr*. Můžete získat a nastavit aktuální parametry existující distribuce voláním `param()` členské funkce.
 
 ## <a name="param_type"></a>  normal_distribution::param_type
 
@@ -233,21 +233,21 @@ struct param_type {
 
 ### <a name="parameters"></a>Parametry
 
-*střední hodnotu*<br/>
-`mean` Parametru distribuce.
+*Průměrná*\
+Parametr `mean` distribuce.
 
-*stddev*<br/>
-`stddev` Parametru distribuce.
+*StdDev*\
+Parametr `stddev` distribuce.
 
-*doprava*<br/>
-`param_type` Strukturu použit k porovnání.
+*Kliknutím*\
+`param_type` Struktura použitá k porovnání
 
 ### <a name="remarks"></a>Poznámky
 
-**Předběžné podmínky:** `0.0 < stddev`
+**Předběžná podmínka:** `0.0 < stddev`
 
-Tato struktura může být předán konstruktoru třídy distribuce při vytváření instance, do `param()` členskou funkci pro nastavení uložené parametry existující distribuční a k `operator()` použije místo uložené parametry.
+Tuto strukturu lze předat konstruktoru třídy distribuce při vytváření instance, `param()` členské funkci pro nastavení uložených parametrů stávající distribuce a k `operator()` použití namísto uložených parametrů.
 
 ## <a name="see-also"></a>Viz také:
 
-[\<náhodné >](../standard-library/random.md)<br/>
+[\<náhodné >](../standard-library/random.md)

@@ -1,5 +1,5 @@
 ---
-title: operátor&lt;= (&lt;ukázkový kontejner&gt;)
+title: operator&lt;= (&lt;ukázkový kontejner&gt;)
 ms.date: 11/04/2016
 f1_keywords:
 - std::<=
@@ -14,19 +14,19 @@ helpviewer_keywords:
 - <= operator, with specific objects
 - <= operator
 ms.assetid: 338577dd-dc88-4a2b-9e12-0379c54fc8a2
-ms.openlocfilehash: 78d49f82f39bc0e96f88ffdcad2cde8a20b0f123
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.openlocfilehash: c559838f66c483f7c1a76fd17f6a4c07b8aa1fec
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65221379"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68456605"
 ---
-# <a name="operatorlt-ltsample-containergt"></a>operátor&lt;= (&lt;ukázkový kontejner&gt;)
+# <a name="operatorlt-ltsample-containergt"></a>operator&lt;= (&lt;ukázkový kontejner&gt;)
 
 > [!NOTE]
-> Toto téma je v Microsoft C++ dokumentaci jako funkční příklad kontejnerů používané C++ standardní knihovny. Další informace najdete v tématu [kontejnery standardní knihovny C++](../standard-library/stl-containers.md).
+> Toto téma se nachází v dokumentaci C++ společnosti Microsoft jako nefunkční příklad kontejnerů použitých ve C++ standardní knihovně. Další informace najdete v tématu [ C++ standardní kontejnery knihovny](../standard-library/stl-containers.md).
 
-Přetížení **operator < =** k porovnání dvou objektů třídy šablony [kontejneru](../standard-library/sample-container-class.md).
+**Operátor přetížení < =** k porovnání dvou objektů [kontejneru](../standard-library/sample-container-class.md)tříd šablony.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -43,4 +43,4 @@ Vrátí `!(right < left)`.
 
 ## <a name="see-also"></a>Viz také:
 
-[\<Ukázkový kontejner >](../standard-library/sample-container.md)<br/>
+[\<Ukázkový > kontejneru](../standard-library/sample-container.md)

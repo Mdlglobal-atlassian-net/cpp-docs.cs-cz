@@ -1,5 +1,5 @@
 ---
-title: '&lt;národní prostředí&gt; funkce'
+title: '&lt;funkce&gt; národního prostředí'
 ms.date: 11/04/2016
 f1_keywords:
 - locale/std::has_facet
@@ -34,22 +34,22 @@ helpviewer_keywords:
 - std::tolower [C++]
 - std::toupper [C++]
 - std::use_facet [C++]
-ms.openlocfilehash: b1ffe9e5294e4b945f81dbecbabba64c15c188a7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3c5d81aecb5e78a8fd3c3f32da82f6048ae4fac8
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62413161"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68453570"
 ---
-# <a name="ltlocalegt-functions"></a>&lt;národní prostředí&gt; funkce
+# <a name="ltlocalegt-functions"></a>&lt;funkce&gt; národního prostředí
 
 ||||
 |-|-|-|
 |[has_facet](#has_facet)|[isalnum](#isalnum)|[isalpha](#isalpha)|
-|[iscntrl](#iscntrl)|[isdigit](#isdigit)|[isgraph](#isgraph)|
-|[islower](#islower)|[isprint](#isprint)|[ispunct](#ispunct)|
+|[iscntrl](#iscntrl)|[isdigit](#isdigit)|[graf](#isgraph)|
+|[islower](#islower)|[Tisk](#isprint)|[ispunct](#ispunct)|
 |[isspace](#isspace)|[isupper](#isupper)|[isxdigit](#isxdigit)|
-|[tolower](#tolower)|[toupper](#toupper)|[use_facet](#use_facet)|
+|[tolower](#tolower)|[ToUpper](#toupper)|[use_facet](#use_facet)|
 
 ## <a name="has_facet"></a>  has_facet
 
@@ -62,16 +62,16 @@ bool has_facet(const locale& Loc);
 
 ### <a name="parameters"></a>Parametry
 
-*Loc*<br/>
-Národní prostředí má být testována přítomnost omezující vlastnost.
+*Loc*\
+Národní prostředí, které se má testovat pro přítomnost omezující vlastnosti.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-**Hodnota TRUE** Pokud jsou testovány z hlediska; omezující vlastnost národního prostředí **false** Pokud tomu tak není.
+**true** , pokud má národní prostředí testovaný aspekt pro; **false** , pokud ne.
 
 ### <a name="remarks"></a>Poznámky
 
-Funkce šablon je užitečné pro kontrolu, jestli nonmandatory omezujících vlastností jsou uvedeny v národním prostředí než `use_facet` je volána k výjimce, která bude vyvolána, pokud by nebyl k dispozici vyhnout.
+Funkce šablony je užitečná pro kontrolu, zda jsou nepovinné omezující vlastnosti uvedeny v národním prostředí před `use_facet` voláním, aby se zabránilo výjimce, která by byla vyvolána, pokud nebyla přítomna.
 
 ### <a name="example"></a>Příklad
 
@@ -94,7 +94,7 @@ int main( )
 1
 ```
 
-## <a name="isalnum"></a>  isalnum
+## <a name="isalnum"></a>isalnum
 
 Ověřuje, zda je prvek v národním prostředí abecední, nebo číselný znak.
 
@@ -105,15 +105,15 @@ bool isalnum(CharType Ch, const locale& Loc)
 
 ### <a name="parameters"></a>Parametry
 
-*Ch*<br/>
-Alfanumerické elementu, který chcete testovat.
+*Zvolte*\
+Alfanumerický prvek, který má být testován.
 
-*Loc*<br/>
-Národní prostředí obsahující alfanumerické element má být testována.
+*Loc*\
+Národní prostředí obsahující alfanumerický prvek, který má být testován.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-**Hodnota TRUE** Pokud testovaný prvek je alfanumerické; **false** nesplnění.
+**true** , pokud je testovaný prvek alfanumerický; **false** , pokud není.
 
 ### <a name="example"></a>Příklad
 
@@ -161,7 +161,7 @@ The character '@' in the locale is  not alphanumeric.
 The character '3' in the locale is alphanumeric.
 ```
 
-## <a name="isalpha"></a>  isalpha
+## <a name="isalpha"></a>v-alfa
 
 Testuje, zda je prvek v národním prostředí abecední znak.
 
@@ -172,19 +172,19 @@ bool isalpha(CharType Ch, const locale& Loc)
 
 ### <a name="parameters"></a>Parametry
 
-*Ch*<br/>
-Element, který má být testována.
+*Zvolte*\
+Prvek, který má být testován.
 
-*Loc*<br/>
-Národní prostředí, který obsahuje abecední element má být testována.
+*Loc*\
+Národní prostředí obsahující abecední prvek, který má být testován.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-**Hodnota TRUE** Pokud testovaný prvek je abecední; **false** nesplnění.
+**true** , pokud je testovaný element abecední; **false** , pokud není.
 
 ### <a name="remarks"></a>Poznámky
 
-Šablona funkce vrátí [use_facet](../standard-library/locale-functions.md#use_facet)< [ctype](../standard-library/ctype-class.md) \< **CharType**>> ( `Loc`). [je](../standard-library/ctype-class.md#is)( **ctype** \< **CharType**>:: **alfa**, `Ch`).
+Funkce šablony vrátí [use_facet](../standard-library/locale-functions.md#use_facet)< [CType](../standard-library/ctype-class.md) \< **CharType**> > ( `Loc`). [je](../standard-library/ctype-class.md#is) ( **CType** \< **CharType**>:: **Alpha**, `Ch`).
 
 ### <a name="example"></a>Příklad
 
@@ -226,7 +226,7 @@ int main( )
 }
 ```
 
-## <a name="iscntrl"></a>  iscntrl
+## <a name="iscntrl"></a>iscntrl
 
 Ověřuje, zda je prvek v národním prostředí řídicí znak.
 
@@ -237,19 +237,19 @@ bool iscntrl(CharType Ch, const locale& Loc)
 
 ### <a name="parameters"></a>Parametry
 
-*Ch*<br/>
-Element, který má být testována.
+*Zvolte*\
+Prvek, který má být testován.
 
-*Loc*<br/>
-Národní prostředí, který obsahuje element, který má být testována.
+*Loc*\
+Národní prostředí obsahující prvek, který má být testován.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-**Hodnota TRUE** Pokud testovaný prvek je řídicí znak; **false** nesplnění.
+**true** , pokud je testovaný element řídicím znakem; **false** , pokud není.
 
 ### <a name="remarks"></a>Poznámky
 
-Šablona funkce vrátí [use_facet](../standard-library/locale-functions.md#use_facet)< [ctype](../standard-library/ctype-class.md) \< **CharType**>> ( `Loc`). [je](../standard-library/ctype-class.md#is)( **ctype** \< **CharType**>:: **stisknutím kláves CTRL +**, `Ch`).
+Funkce šablony vrátí [use_facet](../standard-library/locale-functions.md#use_facet)< [CType](../standard-library/ctype-class.md) \< **CharType**> > ( `Loc`). [je](../standard-library/ctype-class.md#is) ( **CType** \< **CharType**>:: **TAB**, `Ch`).
 
 ### <a name="example"></a>Příklad
 
@@ -291,7 +291,7 @@ int main( )
 }
 ```
 
-## <a name="isdigit"></a>  IsDigit
+## <a name="isdigit"></a>IsDigit
 
 Ověřuje, zda je prvek v národním prostředí číselný znak.
 
@@ -302,19 +302,19 @@ bool isdigit(CharType Ch, const locale& Loc)
 
 ### <a name="parameters"></a>Parametry
 
-*Ch*<br/>
-Element, který má být testována.
+*Zvolte*\
+Prvek, který má být testován.
 
-*Loc*<br/>
-Národní prostředí, který obsahuje element, který má být testována.
+*Loc*\
+Národní prostředí obsahující prvek, který má být testován.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-**Hodnota TRUE** Pokud testovaný prvek je číselný znak; **false** nesplnění.
+**true** , pokud je testovaný prvek číselným znakem; **false** , pokud není.
 
 ### <a name="remarks"></a>Poznámky
 
-Šablona funkce vrátí [use_facet](../standard-library/locale-functions.md#use_facet)< [ctype](../standard-library/ctype-class.md) \< **CharType**>> ( `Loc`). [je](../standard-library/ctype-class.md#is)( **ctype** \< **CharType**>:: **číslice**, `Ch`).
+Funkce šablony vrátí [use_facet](../standard-library/locale-functions.md#use_facet)< [CType](../standard-library/ctype-class.md) \< **CharType**> > ( `Loc`). [je](../standard-library/ctype-class.md#is) ( **CType** \< **CharType**>:: **číslice**, `Ch`).
 
 ### <a name="example"></a>Příklad
 
@@ -356,7 +356,7 @@ int main( )
 }
 ```
 
-## <a name="isgraph"></a>  isgraph
+## <a name="isgraph"></a>graf
 
 Ověřuje, zda je prvek v národním prostředí alfanumerický znak nebo znak interpunkce.
 
@@ -367,19 +367,19 @@ bool isgraph(CharType Ch, const locale& Loc)
 
 ### <a name="parameters"></a>Parametry
 
-*Ch*<br/>
-Element, který má být testována.
+*Zvolte*\
+Prvek, který má být testován.
 
-*Loc*<br/>
-Národní prostředí, který obsahuje element, který má být testována.
+*Loc*\
+Národní prostředí obsahující prvek, který má být testován.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-**Hodnota TRUE** Pokud testovaný prvek je alfanumerické znaky nebo znak interpunkce; **false** nesplnění.
+**true** , pokud je testovaný prvek alfanumerický, nebo znakem interpunkce; **false** , pokud není.
 
 ### <a name="remarks"></a>Poznámky
 
-Šablona funkce vrátí [use_facet](../standard-library/locale-functions.md#use_facet)< [ctype](../standard-library/ctype-class.md) \< **CharType**>> ( `Loc`). [je](../standard-library/ctype-class.md#is)( **ctype** \< **CharType**>:: **grafu**, `Ch`).
+Funkce šablony vrátí [use_facet](../standard-library/locale-functions.md#use_facet)< [CType](../standard-library/ctype-class.md) \< **CharType**> > ( `Loc`). [je](../standard-library/ctype-class.md#is) ( **CType** \< **CharType**>:: **Graph**, `Ch`).
 
 ### <a name="example"></a>Příklad
 
@@ -421,7 +421,7 @@ int main( )
 }
 ```
 
-## <a name="islower"></a>  islower
+## <a name="islower"></a>snížit
 
 Ověřuje, zda je prvek v národním prostředí malé písmeno.
 
@@ -432,19 +432,19 @@ bool islower(CharType Ch, const locale& Loc)
 
 ### <a name="parameters"></a>Parametry
 
-*Ch*<br/>
-Element, který má být testována.
+*Zvolte*\
+Prvek, který má být testován.
 
-*Loc*<br/>
-Národní prostředí, který obsahuje element, který má být testována.
+*Loc*\
+Národní prostředí obsahující prvek, který má být testován.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-**Hodnota TRUE** Pokud testovaný prvek je znak malého písmene; **false** nesplnění.
+**true** , pokud je testovaný prvek malý znak; **false** , pokud není.
 
 ### <a name="remarks"></a>Poznámky
 
-Šablona funkce vrátí [use_facet](../standard-library/locale-functions.md#use_facet)< [ctype](../standard-library/ctype-class.md) \< **CharType**>> ( `Loc`). [je](../standard-library/ctype-class.md#is)( **ctype** \< **CharType**>:: **nižší**, `Ch`).
+Funkce šablony vrátí [use_facet](../standard-library/locale-functions.md#use_facet)< [CType](../standard-library/ctype-class.md) \< **CharType**> > ( `Loc`). [je](../standard-library/ctype-class.md#is) ( **CType** \< **CharType**>:: **Lower**, `Ch`).
 
 ### <a name="example"></a>Příklad
 
@@ -486,7 +486,7 @@ int main( )
 }
 ```
 
-## <a name="isprint"></a>  isprint
+## <a name="isprint"></a>Tisk
 
 Ověřuje, zda je prvek v národním prostředí znak, který lze vytisknout.
 
@@ -497,19 +497,19 @@ bool isprint(CharType Ch, const locale& Loc)
 
 ### <a name="parameters"></a>Parametry
 
-*Ch*<br/>
-Element, který má být testována.
+*Zvolte*\
+Prvek, který má být testován.
 
-*Loc*<br/>
-Národní prostředí, který obsahuje element, který má být testována.
+*Loc*\
+Národní prostředí obsahující prvek, který má být testován.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-**Hodnota TRUE** Pokud testovaný prvek je tisknutelný; **false** nesplnění.
+**true** , pokud je testovaný element tisknutelný; **false** , pokud není.
 
 ### <a name="remarks"></a>Poznámky
 
-Šablona funkce vrátí [use_facet](../standard-library/locale-functions.md#use_facet)< [ctype](../standard-library/ctype-class.md) \< **CharType**>> ( `Loc`). [je](../standard-library/ctype-class.md#is)( **ctype** \< **CharType**>:: **tisk**, `Ch`).
+Funkce šablony vrátí [use_facet](../standard-library/locale-functions.md#use_facet)< [CType](../standard-library/ctype-class.md) \< **CharType**> > ( `Loc`). [je](../standard-library/ctype-class.md#is) ( **CType** \< **CharType**>:: **Print**, `Ch`).
 
 ### <a name="example"></a>Příklad
 
@@ -550,7 +550,7 @@ int main( )
 }
 ```
 
-## <a name="ispunct"></a>  ispunct
+## <a name="ispunct"></a>ispunct
 
 Ověřuje, zda je prvek v národním prostředí znak interpunkce.
 
@@ -561,19 +561,19 @@ bool ispunct(CharType Ch, const locale& Loc)
 
 ### <a name="parameters"></a>Parametry
 
-*Ch*<br/>
-Element, který má být testována.
+*Zvolte*\
+Prvek, který má být testován.
 
-*Loc*<br/>
-Národní prostředí, který obsahuje element, který má být testována.
+*Loc*\
+Národní prostředí obsahující prvek, který má být testován.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-**Hodnota TRUE** Pokud testovaný prvek je znak interpunkce; **false** nesplnění.
+**true** , pokud je testovaný prvek interpunkční znakem; **false** , pokud není.
 
 ### <a name="remarks"></a>Poznámky
 
-Šablona funkce vrátí [use_facet](../standard-library/locale-functions.md#use_facet)`<`[ctype](../standard-library/ctype-class.md) \< **CharType**>> ( `Loc`). [je](../standard-library/ctype-class.md#is)( **ctype** \< **CharType**>:: **punct**, `Ch`).
+Funkce šablony vrátí [use_facet](../standard-library/locale-functions.md#use_facet)`<`[CType](../standard-library/ctype-class.md) \< **CharType**> > ( `Loc`). [je](../standard-library/ctype-class.md#is) ( **CType** \< **CharType**>:: **punct**, `Ch`).
 
 ### <a name="example"></a>Příklad
 
@@ -615,7 +615,7 @@ int main( )
 }
 ```
 
-## <a name="isspace"></a>  isspace
+## <a name="isspace"></a>místo
 
 Ověřuje, zda je prvek v národním prostředí prázdný znak.
 
@@ -626,19 +626,19 @@ bool isspace(CharType Ch, const locale& Loc)
 
 ### <a name="parameters"></a>Parametry
 
-*Ch*<br/>
-Element, který má být testována.
+*Zvolte*\
+Prvek, který má být testován.
 
-*Loc*<br/>
-Národní prostředí, který obsahuje element, který má být testována.
+*Loc*\
+Národní prostředí obsahující prvek, který má být testován.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-**Hodnota TRUE** Pokud testovaný prvek je prázdný znak; **false** nesplnění.
+**true** , pokud je testovaný element prázdným znakem; **false** , pokud není.
 
 ### <a name="remarks"></a>Poznámky
 
-Šablona funkce vrátí [use_facet](../standard-library/locale-functions.md#use_facet)< [ctype](../standard-library/ctype-class.md) \< **CharType**>> ( `Loc`). [je](../standard-library/ctype-class.md#is)( **ctype** \< **CharType**>:: **místo**, `Ch`).
+Funkce šablony vrátí [use_facet](../standard-library/locale-functions.md#use_facet)< [CType](../standard-library/ctype-class.md) \< **CharType**> > ( `Loc`). [je](../standard-library/ctype-class.md#is) ( **CType** \< **CharType**>:: **Space**, `Ch`).
 
 ### <a name="example"></a>Příklad
 
@@ -680,9 +680,9 @@ int main( )
 }
 ```
 
-## <a name="isupper"></a>  isupper
+## <a name="isupper"></a>– horní
 
-Testuje, zda je prvek v národním prostředí velkými písmeny.
+Testuje, zda je prvek v národním prostředí v horním případě.
 
 ```cpp
 template <class CharType>
@@ -691,19 +691,19 @@ bool isupper(CharType Ch, const locale& Loc)
 
 ### <a name="parameters"></a>Parametry
 
-*Ch*<br/>
-Element, který má být testována.
+*Zvolte*\
+Prvek, který má být testován.
 
-*Loc*<br/>
-Národní prostředí, který obsahuje element, který má být testována.
+*Loc*\
+Národní prostředí obsahující prvek, který má být testován.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-**Hodnota TRUE** Pokud testovaný prvek je znak velkého písmene; **false** nesplnění.
+**true** , pokud je testovaný prvek velkým znakem; **false** , pokud není.
 
 ### <a name="remarks"></a>Poznámky
 
-Šablona funkce vrátí [use_facet](../standard-library/locale-functions.md#use_facet)< [ctype](../standard-library/ctype-class.md) \< **CharType**>> ( `Loc`). [je](../standard-library/ctype-class.md#is)( **ctype** \< **CharType**>:: **horní**, `Ch`).
+Funkce šablony vrátí [use_facet](../standard-library/locale-functions.md#use_facet)< [CType](../standard-library/ctype-class.md) \< **CharType**> > ( `Loc`). [je](../standard-library/ctype-class.md#is) ( **CType** \< **CharType**>:: **Upper**, `Ch`).
 
 ### <a name="example"></a>Příklad
 
@@ -745,7 +745,7 @@ int main( )
 }
 ```
 
-## <a name="isxdigit"></a>  isxdigit
+## <a name="isxdigit"></a>isxdigit
 
 Ověřuje, zda je prvek v národním prostředí znak používaný ke znázornění šestnáctkového čísla.
 
@@ -756,21 +756,21 @@ bool isxdigit(CharType Ch, const locale& Loc)
 
 ### <a name="parameters"></a>Parametry
 
-*Ch*<br/>
-Element, který má být testována.
+*Zvolte*\
+Prvek, který má být testován.
 
-*Loc*<br/>
-Národní prostředí, který obsahuje element, který má být testována.
+*Loc*\
+Národní prostředí obsahující prvek, který má být testován.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-**Hodnota TRUE** Pokud testovaný prvek je znak používaný ke znázornění šestnáctkového čísla; **false** nesplnění.
+**true** , pokud je testovaný element znakem, který představuje hexadecimální číslo; **false** , pokud není.
 
 ### <a name="remarks"></a>Poznámky
 
-Šablona funkce vrátí [use_facet](../standard-library/locale-functions.md#use_facet)< [ctype](../standard-library/ctype-class.md) \< **CharType**>> ( `Loc`). [je](../standard-library/ctype-class.md#is)( **ctype** \< **CharType**>:: **xdigit**, `Ch`).
+Funkce šablony vrátí [use_facet](../standard-library/locale-functions.md#use_facet)< [CType](../standard-library/ctype-class.md) \< **CharType**> > ( `Loc`). [je](../standard-library/ctype-class.md#is) ( **CType** \< **CharType**>:: **xdigit**, `Ch`).
 
-Šestnáctkové číslice použít základní 16 pro reprezentaci čísel pomocí čísla 0 až 9 a písmena velká a malá písmena A až F představující desetinné číslice 0 až 15.
+Šestnáctkové číslice používají základ 16 pro reprezentaci čísel pomocí čísel 0 až 9 plus velká a malá písmena A až F k vyjádření desítkových čísel 0 až 15.
 
 ### <a name="example"></a>Příklad
 
@@ -812,7 +812,7 @@ int main( )
 }
 ```
 
-## <a name="tolower"></a>  ToLower
+## <a name="tolower"></a>ToLower
 
 Převede znak na malé písmeno.
 
@@ -823,19 +823,19 @@ CharType tolower(CharType Ch, const locale& Loc)
 
 ### <a name="parameters"></a>Parametry
 
-*Ch*<br/>
+*Zvolte*\
 Znak, který má být převeden na malá písmena.
 
-*Loc*<br/>
-Národní prostředí, který obsahuje znak, který má být převeden.
+*Loc*\
+Národní prostředí obsahující znak, který má být převeden.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Znak je převeden na malá písmena.
+Znak převedený na malá písmena.
 
 ### <a name="remarks"></a>Poznámky
 
-Šablona funkce vrátí [use_facet](../standard-library/locale-functions.md#use_facet)< [ctype](../standard-library/ctype-class.md) \< **CharType**>> ( `Loc`). [ToLower](../standard-library/ctype-class.md#tolower)( `Ch`).
+Funkce šablony vrátí [use_facet](../standard-library/locale-functions.md#use_facet)< [CType](../standard-library/ctype-class.md) \< **CharType**> > ( `Loc`). [ToLower](../standard-library/ctype-class.md#tolower) ( `Ch`).
 
 ### <a name="example"></a>Příklad
 
@@ -861,7 +861,7 @@ int main( )
 }
 ```
 
-## <a name="toupper"></a>  ToUpper
+## <a name="toupper"></a>ToUpper
 
 Převede znak na velké písmeno.
 
@@ -872,19 +872,19 @@ CharType toupper(CharType Ch, const locale& Loc)
 
 ### <a name="parameters"></a>Parametry
 
-*Ch*<br/>
+*Zvolte*\
 Znak, který má být převeden na velká písmena.
 
-*Loc*<br/>
-Národní prostředí, který obsahuje znak, který má být převeden.
+*Loc*\
+Národní prostředí obsahující znak, který má být převeden.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Znak je převeden na velká písmena.
+Znak převedený na velká písmena.
 
 ### <a name="remarks"></a>Poznámky
 
-Šablona funkce vrátí [use_facet](../standard-library/locale-functions.md#use_facet)< [ctype](../standard-library/ctype-class.md) \< **CharType**>> ( `Loc`). [ToUpper](../standard-library/ctype-class.md#toupper)( `Ch`).
+Funkce šablony vrátí [use_facet](../standard-library/locale-functions.md#use_facet)< [CType](../standard-library/ctype-class.md) \< **CharType**> > ( `Loc`). [ToUpper](../standard-library/ctype-class.md#toupper) ( `Ch`).
 
 ### <a name="example"></a>Příklad
 
@@ -910,7 +910,7 @@ int main( )
 }
 ```
 
-## <a name="use_facet"></a>  use_facet
+## <a name="use_facet"></a>use_facet
 
 Vrátí odkaz na omezující vlastnost určitého typu uloženou v národním prostředí.
 
@@ -921,16 +921,16 @@ const Facet& use_facet(const locale& Loc);
 
 ### <a name="parameters"></a>Parametry
 
-*Loc*<br/>
-Const národní prostředí obsahující typ omezující vlastnost, na kterou se odkazuje.
+*Loc*\
+Const locale obsahující typ odkazované omezující vlastnosti.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Odkaz na omezující vlastnost třídy `Facet` obsažené v argumentu národního prostředí.
+Odkaz na omezující vlastnost třídy `Facet` obsažené v rámci národního prostředí argumentu.
 
 ### <a name="remarks"></a>Poznámky
 
-Odkaz na omezující vlastnost vrácené funkcí šablony zůstává v platnosti, dokud všechny kopie obsahující národního prostředí existuje. Pokud žádný takový objekt omezující vlastnosti třídy `Facet` je uveden v národním prostředí argument, funkce vyvolá výjimku `bad_cast` výjimky.
+Odkaz na omezující vlastnost vrácenou funkcí Template zůstane platný, pokud existuje libovolná kopie obsahujícího národního prostředí. Pokud žádný takový objekt omezující vlastnosti třídy `Facet` není uveden v národním prostředí argumentu, funkce `bad_cast` vyvolá výjimku.
 
 ### <a name="example"></a>Příklad
 
@@ -973,4 +973,4 @@ The character '!' in locale loc2 is not alphabetic.
 
 ## <a name="see-also"></a>Viz také:
 
-[\<národní prostředí >](../standard-library/locale.md)<br/>
+[\<> národního prostředí](../standard-library/locale.md)

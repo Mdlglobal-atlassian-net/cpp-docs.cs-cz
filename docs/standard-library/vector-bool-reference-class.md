@@ -1,25 +1,25 @@
 ---
-title: 'vektor&lt;bool&gt;:: reference – třída'
+title: 'Vector&lt;bool&gt;:: Reference – třída'
 ms.date: 11/04/2016
 f1_keywords:
 - vector/vector<bool>::reference
 helpviewer_keywords:
 - vector<bool> reference class
 ms.assetid: f27854f9-0ef0-4e7e-ad2e-cd53b6cb3334
-ms.openlocfilehash: 7930c1cd93cd05a752d4997b9480c766ee26bd99
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 65bfc91cf5dc79fb1e5151a6f62c394b4579883b
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62407715"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68453215"
 ---
-# <a name="vectorltboolgtreference-class"></a>vektor&lt;bool&gt;:: reference – třída
+# <a name="vectorltboolgtreference-class"></a>Vector&lt;bool&gt;:: Reference – třída
 
-`vector<bool>::reference` Třídy je třída proxy poskytnutá [vektoru\<bool > třída](../standard-library/vector-bool-class.md) pro simulaci `bool&`.
+Třída je proxy třída poskytovaná `bool&`vektorovou [\<bool > třídy](../standard-library/vector-bool-class.md) pro simulaci. `vector<bool>::reference`
 
 ## <a name="remarks"></a>Poznámky
 
-Simulovaný odkaz je vyžadován, protože jazyk C++ nativně neumožňuje přímé odkazy na bity. `vector<bool>` používá pouze jeden bit na element, který můžete odkazovat pomocí této třídy proxy serveru. Simulace odkazu však není kompletní, protože určitá přiřazení nejsou platná. Například protože adresu `vector<bool>::reference` nelze přijmout, následující kód, který se pokusí použít `vector<bool>::operator&` není správná:
+Simulovaný odkaz je vyžadován, protože jazyk C++ nativně neumožňuje přímé odkazy na bity. `vector<bool>`používá pouze jeden bit na prvek, na který lze odkazovat pomocí této třídy proxy. Simulace odkazu však není kompletní, protože určitá přiřazení nejsou platná. Například vzhledem k tomu, že adresa `vector<bool>::reference` objektu nemůže být pořízena, následující kód, který se pokouší použít `vector<bool>::operator&` , není správný:
 
 ```cpp
 vector<bool> vb;
@@ -32,18 +32,18 @@ bool& refb = vb[1];   // conversion error - do not use
 
 |Členská funkce|Popis|
 |-|-|
-|[Převrátit na ose](../standard-library/vector-bool-reference-flip.md)|Přemění logickou hodnotu prvku vektoru.|
-|[bool – operátor](../standard-library/vector-bool-reference-operator-bool.md)|Poskytuje implicitní převod z `vector<bool>::reference` k **bool**.|
+|[funkci](../standard-library/vector-bool-reference-flip.md)|Přemění logickou hodnotu prvku vektoru.|
+|[operátor bool](../standard-library/vector-bool-reference-operator-bool.md)|Poskytuje implicitní převod z `vector<bool>::reference` na **bool**.|
 |[operátor =](../standard-library/vector-bool-reference-operator-assign.md)|Přiřadí k bitu logickou hodnotu nebo hodnotu obsaženou referenčním prvkem.|
 
 ## <a name="requirements"></a>Požadavky
 
-**Hlavička**: \<vektoru >
+**Záhlaví**: \<vektorový >
 
-**Namespace:** std
+**Obor názvů:** std
 
 ## <a name="see-also"></a>Viz také:
 
-[\<vector>](../standard-library/vector.md)<br/>
-[Bezpečný přístup z více vláken ve standardní knihovně C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
-[Standardní knihovna C++ – referenční dokumentace](../standard-library/cpp-standard-library-reference.md)<br/>
+[\<> vektoru](../standard-library/vector.md)\
+[Bezpečnost vlákna ve C++ standardní knihovně](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[Standardní knihovna C++ – referenční dokumentace](../standard-library/cpp-standard-library-reference.md)

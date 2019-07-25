@@ -7,16 +7,16 @@ helpviewer_keywords:
 - is_enum class
 - is_enum
 ms.assetid: df3b00b7-4f98-4b3a-96ce-10ad958ee69c
-ms.openlocfilehash: 623bda13a12ac311618e1b9fffdbc3f676013df6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4c8ac69bacf72cc9a281e239263a14a42f4a0efe
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62336503"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68452682"
 ---
 # <a name="isenum-class"></a>is_enum – třída
 
-Testuje, zda je typ výčtu.
+Testuje, zda je typ výčet.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -27,12 +27,12 @@ struct is_enum;
 
 ### <a name="parameters"></a>Parametry
 
-*Ty*<br/>
+*Ty*\
 Typ, na který chcete odeslat dotaz.
 
 ## <a name="remarks"></a>Poznámky
 
-Instance predikátu typu obsahuje hodnotu true, pokud typ *Ty* je typu výčtu nebo `cv-qualified` formuláře výčtového typu, jinak má hodnotu false.
+Instance predikátu typu má hodnotu true, pokud je typ, *který je* výčtovým typem, `cv-qualified` nebo forma typu výčtu. v opačném případě obsahuje hodnotu false.
 
 ## <a name="example"></a>Příklad
 
@@ -71,11 +71,11 @@ is_enum<int> == false
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** \<type_traits >
+**Hlavička:** \<type_traits >
 
-**Namespace:** std
+**Obor názvů:** std
 
 ## <a name="see-also"></a>Viz také:
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
-[is_integral – třída](../standard-library/is-integral-class.md)<br/>
+[< type_traits >](../standard-library/type-traits.md)\
+[is_integral – třída](../standard-library/is-integral-class.md)

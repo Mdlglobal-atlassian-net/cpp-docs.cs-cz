@@ -1,5 +1,5 @@
 ---
-title: '&lt;systém souborů&gt; výčty'
+title: '&lt;výčty&gt; systému souborů'
 ms.date: 11/04/2016
 f1_keywords:
 - filesystem/std::filesystem::copy_options
@@ -11,26 +11,26 @@ f1_keywords:
 - filesystem/std::filesystem::perms
 - filesystem/std::experimental::filesystem::perms
 ms.assetid: 0096c046-d101-464c-8259-b878a48280b0
-ms.openlocfilehash: 9bf5f0231fbc5b694c1f4ae507feb82b0d19d600
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: dfbcf65462f0bb7bc6ca44f43507efa7b753e7bc
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68240746"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68457714"
 ---
-# <a name="ltfilesystemgt-enumerations"></a>&lt;systém souborů&gt; výčty
+# <a name="ltfilesystemgt-enumerations"></a>&lt;výčty&gt; systému souborů
 
 Toto téma popisuje výčty v hlavičce systému souborů.
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** \<experimentální/filesystem >
+**Hlavička:** \<experimentální/FileSystem >
 
-**Namespace:** std::experimental::filesystem
+**Obor názvů:** std:: experimentální:: FileSystem
 
-## <a name="copy_options"></a>  copy_options
+## <a name="copy_options"></a>copy_options
 
-Výčet hodnot bitová maska, které se používá s [kopírování](filesystem-functions.md#copy) a [copy_file –](filesystem-functions.md#copy_file) funkce k určení chování.
+Výčet hodnot bitových kopií, které se používají s funkcemi [kopírování](filesystem-functions.md#copy) a [copy_file](filesystem-functions.md#copy_file) k určení chování.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -53,20 +53,20 @@ enum class copy_options {
 
 |`Name`|Popis|
 |------------|-----------------|
-|`none`|Pro tuto operaci proveďte výchozí.|
-|`skip_existing`|Pokud soubor již existuje, nekopírujte nehlásí chybu.|
-|`overwrite_existing`|Přepište soubor, pokud již existuje.|
-|`update_existing`|Přepište soubor, pokud již existuje a je starší než nahrazení.|
-|`recursive`|Podadresáře rekurzivně kopírovat a jejich obsah.|
-|`copy_symlinks`|Kopírovat jako symbolické odkazy, namísto kopírování souborů, které ukazují na symbolické odkazy.|
-|`skip_symlinks`|Ignorujte symbolické odkazy.|
-|`directories_only`|Pouze iterovat adresáře, ignorování souborů.|
-|`create_symlinks`|Vytvořte symbolické odkazy namísto kopírování souborů. Absolutní cesta musí použít jako zdrojovou cestu, pokud cíl je aktuální adresář.|
-|`create_hard_links`|Ujistěte se, pevné odkazy namísto kopírování souborů.|
+|`none`|Pro operaci proveďte výchozí chování.|
+|`skip_existing`|Nekopírovat, pokud soubor již existuje, Neoznamovat chybu.|
+|`overwrite_existing`|Přepsat soubor, pokud již existuje.|
+|`update_existing`|Přepsat soubor, pokud již existuje a je starší než náhrada.|
+|`recursive`|Rekurzivně kopíruje podadresáře a jejich obsah.|
+|`copy_symlinks`|Zkopírujte symbolické odkazy jako symbolické odkazy namísto kopírování souborů, na které odkazuje.|
+|`skip_symlinks`|Ignorovat symbolické odkazy.|
+|`directories_only`|Iterujte jenom přes adresáře a Ignorujte soubory.|
+|`create_symlinks`|Místo kopírování souborů zajistěte symbolické odkazy. Absolutní cesta musí být použita jako zdrojová cesta, pokud cíl není aktuální adresář.|
+|`create_hard_links`|Místo kopírování souborů je třeba provést pevné odkazy.|
 
-## <a name="directory_options"></a> directory_options –
+## <a name="directory_options"></a>directory_options
 
-Určuje, zda chcete postupovat podle symbolické odkazy na adresáře nebo je chcete ignorovat.
+Určuje, zda se mají sledovat symbolické odkazy na adresáře nebo ignorovat.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -81,12 +81,12 @@ enum class directory_options {
 
 |Name|Popis|
 |----------|-----------------|
-|`none`|Výchozí chování: Ignorovat symbolické odkazy na adresáře. Oprávnění byla odepřena se o chybu.|
-|`follow_directory_symlink`|Považovat za symbolické odkazy k adresářům skutečné adresáře.|
+|`none`|Výchozí chování: ignorovat symbolické odkazy na adresáře. Odepření oprávnění je chyba.|
+|`follow_directory_symlink`|Považovat symbolické odkazy na adresáře jako skutečné adresáře.|
 
-## <a name="file_type"></a>  file_type –
+## <a name="file_type"></a>file_type
 
-Výčet pro typy souborů. Podporované hodnoty jsou standardní, adresář, not_found a neznámý.
+Výčet pro typy souborů. Podporované hodnoty jsou Regular, Directory, NOT_FOUND a Unknown.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -107,30 +107,30 @@ enum class file_type {
 
 ### <a name="values"></a>Hodnoty
 
-|Name|Hodnota|Popis|
+|Name|Value|Popis|
 |----------|-----------|-----------------|
 |`not_found`|-1|Představuje soubor, který neexistuje.|
-|`none`|0|Představuje soubor, který nemá žádné atributy typu. (Není podporováno.)|
-|`regular`|1|Představuje soubor konvenční disku.|
-|`directory`|2|Představuje adresáře.|
+|`none`|0|Představuje soubor, který nemá žádný atribut typu. (Není podporováno.)|
+|`regular`|1|Představuje soubor konvenčního disku.|
+|`directory`|2|Představuje adresář.|
 |`symlink`|3|Představuje symbolický odkaz. (Není podporováno.)|
-|`block`|4|Představuje soubor speciálních bloku na systémech UNIX. (Není podporováno.)|
-|`character`|5|Představuje soubor speciálních znaků v systémech UNIX. (Není podporováno.)|
-|`fifo`|6|Představuje soubor FIFO na systémech UNIX. (Není podporováno.)|
-|`socket`|7|Představuje soketu v systémech UNIX založené. (Není podporováno.)|
-|`unknown`|8|Představuje soubor nelze zjistit jejichž stav.|
+|`block`|4|Představuje zvláštní blokový soubor v systémech založených na systému UNIX. (Není podporováno.)|
+|`character`|5|Představuje speciální znakový soubor v systémech založených na systému UNIX. (Není podporováno.)|
+|`fifo`|6|Představuje soubor FIFO v systémech UNIX. (Není podporováno.)|
+|`socket`|7|Představuje soket v systémech UNIX. (Není podporováno.)|
+|`unknown`|8|Představuje soubor, jehož stav nelze určit.|
 
-## <a name="perm_options"></a>  perm_options
+## <a name="perm_options"></a>perm_options
 
-Obsahuje hodnoty `replace`, `add`, `remove`, a `nofollow`.
+Zahrnuje hodnoty `replace` `add` ,,a`nofollow`. `remove`
 
 ```cpp
 enum class perm_options;
 ```
 
-## <a name="perms"></a>  oprávnění
+## <a name="perms"></a>oprávnění
 
-Příznaky pro oprávnění k souboru. Podporované hodnoty jsou v podstatě "jen pro čtení" a všechny. Pro soubor jen pro čtení, žádný z * _write bity jsou nastaveny. V opačném případě `all` nastaven bit (0x0777).
+Příznaky pro oprávnění k souborům Podporované hodnoty jsou v podstatě "ReadOnly" a všechny. Pro soubor, který je jen pro čtení, není nastaven žádný z těchto * _Write bitů. V opačném případě je nastaven bit(0x0777).`all`
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -163,5 +163,5 @@ enum class perms {// names for permissions
 
 ## <a name="see-also"></a>Viz také:
 
-[Odkaz na soubory hlaviček](../standard-library/cpp-standard-library-header-files.md)<br/>
-[\<FileSystem >](../standard-library/filesystem.md)<br/>
+[Odkazy na hlavičkové soubory](../standard-library/cpp-standard-library-header-files.md)\
+[\<> systému souborů](../standard-library/filesystem.md)

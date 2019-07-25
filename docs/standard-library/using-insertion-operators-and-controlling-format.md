@@ -4,30 +4,30 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - insertion operators
 ms.assetid: cdefe986-6548-4cd1-8a67-b431d7d36a1c
-ms.openlocfilehash: 8c04cc6d5deeaf5dfea65a7f8e92a8569084c077
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2cf399501c0eab32e8bee80dfcb98d870c0193cb
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62362267"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68458029"
 ---
 # <a name="using-insertion-operators-and-controlling-format"></a>Používání operátorů insertion a řízení formátu
 
-Toto téma ukazuje, jak řídit formát a jak vytvořit operátorů insertion pro vaše vlastní třídy. Vložení (**<<**) operátor, který je předem naprogramovaných pro všechny datové typy standard C++, odešle do výstupní objekt datového proudu bajtů. Operátorů insertion pracovat s předdefinovanou "manipulátory,", které jsou prvky, které Změna výchozího formátu celočíselné argumenty.
+Toto téma ukazuje, jak ovládat formátování a jak vytvořit operátory vkládání pro vlastní třídy. Operátor vložení ( **<<** ), který je přednaprogramován pro všechny standardní C++ datové typy, odesílá bajty do objektu výstupního datového proudu. Operátory vkládání fungují s předdefinovanými "manipulacemi", které jsou prvky, které mění výchozí formát celočíselných argumentů.
 
-Můžete řídit formát s následujícími možnostmi:
+Formát můžete řídit pomocí následujících možností:
 
 - [Šířka výstupu](#vclrfoutputwidthanchor3)
 
-- [Zarovnání](#vclrfalignmentanchor4)
+- [Bod](#vclrfalignmentanchor4)
 
-- [Přesnost](#vclrfprecisionanchor5)
+- [Číslic](#vclrfprecisionanchor5)
 
 - [Radix](#vclrfradixanchor6)
 
-## <a name="vclrfoutputwidthanchor3"></a> Šířka výstupu
+## <a name="vclrfoutputwidthanchor3"></a>Šířka výstupu
 
-Zarovnat výstup, určíte tak, že šířka výstupu pro každou položku `setw` manipulátor v datovém proudu nebo voláním `width` členskou funkci. V tomto příkladu vpravo – zarovná hodnoty ve sloupci minimálně 10 znaků široký:
+Pro zarovnávání výstupu zadáte šířku výstupu pro každou položku tak, že `setw` umístíte manipulátor do datového proudu nebo `width` zavoláte členskou funkci. V tomto příkladu se vpravo zarovnají hodnoty ve sloupci, které mají aspoň 10 znaků v šířce:
 
 ```cpp
 // output_width.cpp
@@ -53,9 +53,9 @@ int main( )
    4358.24
 ```
 
-Počátečními nulami přidají na libovolnou hodnotu míň než 10 znaků na šířku.
+Úvodní prázdné znaky jsou přidány do libovolné hodnoty menší než 10 znaků.
 
-K vyplnění pole, použijte `fill` členskou funkci, která nastaví hodnotu pro pole, která mají nastavená Šířka znaku odsazení. Výchozí hodnota je prázdné. Pro vyplnění sloupce čísel hvězdičkami, upravit předchozí **pro** smyčky následujícím způsobem:
+Chcete-li doplnit pole, použijte `fill` členskou funkci, která nastaví hodnotu ohraničujícího znaku pro pole, která mají zadanou šířku. Výchozí hodnota je prázdná. Chcete-li odblokovat sloupec čísel pomocí hvězdiček, upravte předchozí smyčku **for** následujícím způsobem:
 
 ```cpp
 for (int i = 0; i <4; i++)
@@ -66,7 +66,7 @@ for (int i = 0; i <4; i++)
 }
 ```
 
-`endl` Manipulátor nahradí znak nového řádku (`'\n'`). Výstup vypadá takto:
+Manipulátor nahrazuje znak nového řádku (`'\n'`). `endl` Výstup bude vypadat nějak takto:
 
 ```Output
 ******1.23
@@ -75,7 +75,7 @@ for (int i = 0; i <4; i++)
 ***4358.24
 ```
 
-Pokud chcete zadat šířku datových prvků na stejném řádku, použijte `setw` manipulátor:
+K určení šířky datových prvků na stejném řádku použijte `setw` manipulátor:
 
 ```cpp
 // setw.cpp
@@ -94,7 +94,7 @@ int main( )
 }
 ```
 
-`width` Členská funkce je deklarována v \<iostream – >. Pokud používáte `setw` nebo jakékoli jiné manipulátor s argumenty, je nutné zahrnout \<iomanip >. Ve výstupu jsou řetězce vytištěn v pole šířky 6 a celá čísla v poli šířky 10:
+Členská funkce je deklarována \<v iostream – >. `width` Pokud používáte \<nebo jakékoli jiné manipulátor s argumenty, musíte zahrnout iomanip >. `setw` Ve výstupu jsou řetězce vytištěny v poli šířky 6 a celá čísla v poli šířky 10:
 
 ```Output
    Zoot      1.23
@@ -103,11 +103,11 @@ int main( )
    Stan   4358.24
 ```
 
-Ani `setw` ani `width` zkrátí hodnoty. Pokud formátovaný výstup přesahuje šířku, vytiskne celou hodnotu v souladu s přesností nastavení datového proudu. Obě `setw` a `width` ovlivňují jenom následující pole. Šířka pole se vrátí do jeho výchozí chování (nezbytná šířka) po vytisknutí jedno pole. Však další možnosti formátu datového proudu zůstávají v platnosti až do změnit.
+`setw` Ani ani nezkrátíhodnoty`width` . Pokud formátovaný výstup přesahuje šířku, vytiskne se celá hodnota v závislosti na nastavení přesnosti datového proudu. `setw` A`width` mají vliv pouze na následující pole. Šířka pole se vrátí k výchozímu chování (potřebná šířka) po vytištění jednoho pole. Ostatní možnosti formátu datového proudu ale zůstanou v platnosti, dokud se nezmění.
 
-## <a name="vclrfalignmentanchor4"></a> Zarovnání
+## <a name="vclrfalignmentanchor4"></a>Bod
 
-Výstupní datové proudy výchozí text zarovnaný vpravo. Názvy v předchozím příkladu zarovnání doleva a čísel Zarovnat doprava, nahraďte **pro** smyčky následujícím způsobem:
+Výstupní datové proudy jsou standardně zarovnané na text vpravo. Pokud chcete názvy v předchozím příkladu Zarovnat doleva a zarovnat je vpravo, nahraďte smyčku **for** následujícím způsobem:
 
 ```cpp
 for (int i = 0; i <4; i++)
@@ -117,7 +117,7 @@ for (int i = 0; i <4; i++)
          << setw(10) << values[i] << endl;
 ```
 
-Výstup vypadá takto:
+Výstup bude vypadat nějak takto:
 
 ```Output
 Zoot        1.23
@@ -126,13 +126,13 @@ Al         653.7
 Stan     4358.24
 ```
 
-Příznak left-align je nastaven pomocí [setiosflags](../standard-library/iomanip-functions.md#setiosflags) manipulátor s `left` enumerátor. Tento výčet je definován v [ios](../standard-library/basic-ios-class.md) třídy, proto musí obsahovat svůj odkaz **ios::** předponu. [Resetiosflags](../standard-library/iomanip-functions.md#resetiosflags) manipulátor vypne left-align příznak. Na rozdíl od `width` a `setw`, účinek `setiosflags` a `resetiosflags` je trvalá.
+Příznak levého zarovnání se nastaví pomocí [setiosflags](../standard-library/iomanip-functions.md#setiosflags) manipulátor s `left` enumerátorem. Tento enumerátor je definovaný ve třídě [iOS](../standard-library/basic-ios-class.md) , takže jeho reference musí zahrnovat předponu **iOS::** . [Resetiosflags](../standard-library/iomanip-functions.md#resetiosflags) manipulátor vypne příznak vlevo. Na rozdíl `width` od `setw`a, efekt `setiosflags` a `resetiosflags` je trvalý.
 
-## <a name="vclrfprecisionanchor5"></a> Přesnost
+## <a name="vclrfprecisionanchor5"></a>Číslic
 
-Výchozí hodnota pro přesnost s plovoucí desetinnou čárkou je šest. Například číslo 3466.9768 vytiskne jako 3466.98. Chcete-li změnit způsob, jakým vytiskne tuto hodnotu, použijte [setprecision](../standard-library/iomanip-functions.md#setprecision) manipulátor. Manipulátor má dva příznaky: [oprava](../standard-library/ios-functions.md#fixed) a [vědecké](../standard-library/ios-functions.md#scientific). Pokud [oprava](../standard-library/ios-functions.md#fixed) nastavena číslo vytiskne jako 3466.976800. Pokud `scientific` je nastaven, vytiskne jako 3.4669773 + 003.
+Výchozí hodnota pro přesnost s plovoucí desetinnou čárkou je šest. Například číslo 3466,9768 se vytiskne jako 3466,98. Chcete-li změnit způsob, jakým se tato hodnota tiskne, použijte [setprecision](../standard-library/iomanip-functions.md#setprecision) manipulátor. Manipulátor má dva příznaky: [fixed](../standard-library/ios-functions.md#fixed) a [vědecký](../standard-library/ios-functions.md#scientific). Pokud je nastavená hodnota [pevná](../standard-library/ios-functions.md#fixed) , číslo se vytiskne jako 3466,976800. Pokud `scientific` je nastavena, bude vytištěna jako 3.4669773 + 003.
 
-Chcete-li zobrazit číslo s plovoucí desetinnou čárkou uvedené v [zarovnání](#vclrfalignmentanchor4) jednu číslici, nahradit **pro** smyčky následujícím způsobem:
+Chcete-li zobrazit čísla s plovoucí desetinnou čárkou, která jsou uvedena v [Zarovnání](#vclrfalignmentanchor4) s jednou platnou číslicí, nahraďte smyčku **for** následujícím způsobem:
 
 ```cpp
 for (int i = 0; i <4; i++)
@@ -155,13 +155,13 @@ Al        7e+02
 Stan      4e+03
 ```
 
-Chcete-li odstranit vědecký zápis, vložte tento příkaz před **pro** smyčka:
+Chcete-li odstranit vědecký zápis, vložte tento příkaz před smyčku **for** :
 
 ```cpp
 cout << setiosflags(ios::fixed);
 ```
 
-S pevnou zápisu program vytiskne se jedna číslice za desetinnou čárkou.
+S pevným zápisem program tiskne za desetinnou čárkou jednu číslici.
 
 ```Output
 Zoot         1.2
@@ -170,7 +170,7 @@ Al         653.7
 Stan      4358.2
 ```
 
-Pokud změníte `ios::fixed` příznak, který `ios::scientific`, program zobrazí toto:
+Pokud `ios::fixed` příznak změníte na, program `ios::scientific`ho vytiskne:
 
 ```cpp
 Zoot    1.2e+00
@@ -179,15 +179,15 @@ Al      6.5e+02
 Stan    4.4e+03
 ```
 
-Program znovu, vytiskne jednu číslici za desetinnou čárkou. Pokud `ios::fixed` nebo `ios::scientific` je nastaven, hodnota přesnosti určuje počet číslic za desetinnou čárkou. Pokud ani příznak nastaven, hodnota přesnosti určuje celkový počet platných číslic. `resetiosflags` Manipulátor vymaže tyto příznaky.
+Program znovu vytiskne jednu číslici za desetinnou čárkou. Pokud je nastavená `ios::scientific`nebo, hodnota přesnosti určuje počet číslic za desetinnou čárkou. `ios::fixed` Pokud není nastaven žádný příznak, hodnota přesnosti určí celkový počet platných číslic. `resetiosflags` Manipulátor tyto příznaky vymaže.
 
 ## <a name="vclrfradixanchor6"></a> Radix
 
-`dec`, `oct`, A `hex` manipulátory nastavit výchozí základ pro vstup a výstup. Například, pokud je vložit `hex` manipulátor do výstupního datového proudu objekt správně přeloží reprezentaci vnitřního dat celých čísel do šestnáctkové výstupní formát. Jsou čísla zobrazena pomocí číslic a až f v malá písmena v případě [velká](../standard-library/ios-functions.md#uppercase) příznak je vymazat (výchozí); v opačném případě se zobrazí velkými písmeny. Výchozí základ číselné soustavy je `dec` (decimal).
+Manipulace s `oct` ,a`hex` nastavují výchozí základ pro vstup a výstup. `dec` Například pokud vložíte `hex` manipulátor do výstupního datového proudu, objekt správně přeloží interní reprezentace celých čísel do hexadecimálního formátu. Čísla se zobrazí s číslicemi a až f v malých případech, pokud je příznak [velkými](../standard-library/ios-functions.md#uppercase) písmeny jasný (výchozí). v opačném případě se zobrazí v horním případě. Výchozí základ číselné soustavy `dec` je (desítková).
 
-## <a name="quoted-strings-c14"></a>Řetězce v uvozovkách (C ++ 14)
+## <a name="quoted-strings-c14"></a>Řetězce v uvozovkách (C++ 14)
 
-Když řetězec vložíte do datového proudu, můžete snadno načíst stejný řetězec zpět voláním členské funkce stringstream::str(). Nicméně, pokud chcete použít operátor extrakce k vložení datový proud do nového řetězce později, může získáte neočekávaný výsledek protože >> operátor ve výchozím nastavení se zastaví, jakmile nalezne první prázdným znakem.
+Když vložíte řetězec do datového proudu, můžete snadno načíst stejný řetězec zpět voláním členské funkce stringstream:: str (). Pokud však chcete použít operátor extrakce pro vložení datového proudu do nového řetězce později, může dojít k neočekávanému výsledku, protože > operátor > ve výchozím nastavení zastaví, když nalezne první prázdný znak.
 
 ```cpp
 std::stringstream ss;
@@ -201,14 +201,14 @@ std::cout << inserted;     //  This is a sentence.
 std::cout << extracted;    //  This
 ```
 
-Toto chování je možné překonat ručně, ale aby verzemi řetězec pohodlnější, C ++ 14 přidá `std::quoted` manipulátor v datový proud stream \<iomanip >. Při vložení `quoted()` obklopuje řetězci s oddělovačem (dvojité uvozovky "" "ve výchozím nastavení) a při extrakci zpracovává datový proud se mají extrahovat všechny znaky až do konečného oddělovač. Žádné vložené uvozovky jsou uvozeny řídicími znaky s řídicím znakem ("\\\\' ve výchozím nastavení).
+Toto chování se dá překonat ručně, ale pokud chcete, aby se Trip řetězec, c++ 14 přidá `std::quoted` manipulátor Stream do \<iomanip >. Po vložení `quoted()` ohraničuje řetězec pomocí oddělovače (ve výchozím nastavení dvojité uvozovky) a po extrakci zpracovává všechny znaky, dokud není nalezen konečný oddělovač. Všechny vložené uvozovky jsou uvozeny řídicím znakem (\\\\ve výchozím nastavení).
 
-Oddělovače jsou k dispozici pouze v objektu datového proudu. nejsou k dispozici v extrahovaných řetězců, ale jsou k dispozici v řetězec vrácený funkcí [basic_stringstream::str](../standard-library/basic-stringstream-class.md#str).
+Oddělovače jsou k dispozici pouze v objektu Stream; nejsou přítomny v extrahovaném řetězci, ale jsou přítomny v řetězci vráceném funkcí [basic_stringstream:: str](../standard-library/basic-stringstream-class.md#str).
 
-Prázdné znaky chování operace vložení a extrakci nezávisí jak řetězec je reprezentován v kódu, tak je užitečné bez ohledu na to, jestli je vstupní řetězec literálu nezpracovaného řetězce nebo regulárního řetězec v uvozovkách operátor. Vstupní řetězec, ať formátem, lze mít vkládat uvozovky, konce řádků, karty a podobně a všechny tyto se zachovají quoted() manipulátor.
+Chování prázdných znaků při vkládání a extrakci je nezávislé na způsobu reprezentace řetězce v kódu, takže operátor v uvozovkách je užitečný bez ohledu na to, zda je vstupní řetězec nezpracovaným řetězcovým literálem nebo regulárním řetězcem. Vstupní řetězec bez ohledu na formát může mít vložené uvozovky, zalomení řádků, tabulátory atd. a všechny tyto řetězce budou zachovány v uvozovkách () manipulátor.
 
-Další informace a příklady celý kód, naleznete v tématu [v uvozovkách](../standard-library/iomanip-functions.md#quoted).
+Další informace a příklady úplných kódů naleznete v [uvozovkách](../standard-library/iomanip-functions.md#quoted).
 
 ## <a name="see-also"></a>Viz také:
 
-[Výstupní streamy](../standard-library/output-streams.md)<br/>
+[Výstupní streamy](../standard-library/output-streams.md)

@@ -1,5 +1,5 @@
 ---
-title: '&lt;ratio&gt;'
+title: '&lt;stran&gt;'
 ms.date: 11/04/2016
 f1_keywords:
 - ratio/std::mega
@@ -31,16 +31,16 @@ f1_keywords:
 - ratio/std::deci
 - ratio/std::deca
 ms.assetid: 8543e912-2d84-45ea-b3c0-bd7bfacee405
-ms.openlocfilehash: 4279aa75bf4e9b8a0c7a86f102f70164bbb620e0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f84bea2e3f4a01bb9428eddde3efbf53b73bc2f3
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62369628"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68458169"
 ---
-# <a name="ltratiogt"></a>&lt;ratio&gt;
+# <a name="ltratiogt"></a>&lt;stran&gt;
 
-Zahrnout standardní hlavička \<poměr > pro definice konstanty a šablony, které se používají k ukládání a manipulaci s racionální čísla v době kompilace.
+Zahrňte standardní poměr \<hlaviček > k definování konstant a šablon, které se používají k ukládání a manipulaci s racionálními čísly v době kompilace.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -48,7 +48,7 @@ Zahrnout standardní hlavička \<poměr > pro definice konstanty a šablony, kte
 #include <ratio>
 ```
 
-### <a name="ratio-template"></a>poměr šablony
+### <a name="ratio-template"></a>Šablona poměru
 
 ```cpp
 template<std::intmax_t Numerator, std::intmax_t Denominator = 1>
@@ -60,17 +60,17 @@ struct ratio // holds the ratio of Numerator to Denominator
 }
 ```
 
-Šablona `ratio` definuje statické konstanty `num` a `den` tak, aby `num`  /  `den` == čitatel / jmenovatel a `num` a `den` mít žádné běžných faktorů. `num` / `den` je hodnota, která je reprezentována šablony třídy. Proto `type` určuje instance `ratio<num, den>`.
+`ratio` Šablona definuje statické `num` konstanty `num` , `num` jakoje`den` = čitatel/jmenovatel a a nemá žádné společné faktory. `den`  /  `den` `num` / `den`je hodnota reprezentovaná třídou šablony. `type` Proto určí`ratio<num, den>`instanci.
 
 ### <a name="specializations"></a>Specializace
 
-\<poměr > také definuje specializace `ratio` , které mají následující podobu.
+\<poměr > také definuje specializace `ratio` , které mají následující formu.
 
 `template <class R1, class R2> struct ratio_specialization`
 
-Jednotlivé specializace přebírá dva parametry šablony, které musí být také specializace `ratio`. Hodnota `type` se určuje podle přidružené logické operace.
+Každá specializace má dva parametry šablony, které musí být také specializace `ratio`. Hodnota `type` je určena přidruženou logickou operací.
 
-|Název|`type` Hodnota|
+|Name|`type`Osa|
 |----------|------------------|
 |`ratio_add`|`R1 + R2`|
 |`ratio_divide`|`R1 / R2`|
@@ -85,7 +85,7 @@ Jednotlivé specializace přebírá dva parametry šablony, které musí být ta
 
 ### <a name="typedefs"></a>definice Typedef
 
-Pro usnadnění práce definuje záhlaví poměry pro standardní SI předpony:
+Pro pohodlí definuje hlavička poměry pro standardní předpony SI:
 
 ```cpp
 typedef ratio<1, 1000000000000000000> atto;
@@ -108,4 +108,4 @@ typedef ratio<1000000000000000000, 1> exa;
 
 ## <a name="see-also"></a>Viz také:
 
-[Odkaz na soubory hlaviček](../standard-library/cpp-standard-library-header-files.md)<br/>
+[Odkazy na hlavičkové soubory](../standard-library/cpp-standard-library-header-files.md)

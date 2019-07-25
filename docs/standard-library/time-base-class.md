@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - time_base class
 ms.assetid: 9ae37f0b-9a42-496e-9870-3d9b71bab8fb
-ms.openlocfilehash: e790237e506aa32bafdb39938d841307bbc4d9c3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 85565dc0c0ec904551eb8dd981cfacc9a2e1f256
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62412017"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68460042"
 ---
 # <a name="timebase-class"></a>time_base – třída
 
-Tato třída slouží jako základní třída pro omezující vlastnosti třídy šablony time_get, definující pouze výčtového typu `dateorder` a několik konstant tohoto typu.
+Třída slouží jako základní třída pro omezující vlastnosti třídy Template time_get a definuje pouze Výčtový typ `dateorder` a několik konstant tohoto typu.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -36,24 +36,24 @@ public:
 
 ## <a name="remarks"></a>Poznámky
 
-Jednotlivých konstantách charakterizuje jiný způsob, jak uspořádat součásti datum. Konstanty jsou:
+Každá konstanta charakterizuje jiný způsob uspořádání komponent data. Konstanty jsou:
 
-- `no_order` Určuje bez určitého pořadí.
+- `no_order`neurčuje žádné konkrétní pořadí.
 
-- `dmy` Určuje pořadí den, měsíc a rok, stejně jako v 2 1979 dne.
+- `dmy`Určuje den objednávky, měsíc a rok, jako 2. prosince 1979.
 
-- `mdy` Určuje pořadí měsíc, den a rok, stejně jako v 2. prosince 1979.
+- `mdy`Určuje měsíc, den a rok v řádu 2. prosince 1979.
 
-- `ymd` Určuje pořadí rok, měsíc a den jako 1979/12/2.
+- `ymd`Určuje rok, měsíc a den v řádu, jako v 1979/12/2.
 
-- `ydm` Určuje pořadí roku, den a měsíc, stejně jako v 1979: 2 Dec.
+- `ydm`Určuje rok, den a měsíc v řádu 1979: 2 prosinec.
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** \<národní prostředí >
+**Hlavička:** \<> národního prostředí
 
-**Namespace:** std
+**Obor názvů:** std
 
 ## <a name="see-also"></a>Viz také:
 
-[Bezpečný přístup z více vláken ve standardní knihovně C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[Bezpečný přístup z více vláken ve standardní knihovně C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)

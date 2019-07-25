@@ -14,16 +14,16 @@ helpviewer_keywords:
 - std::random_device [C++], entropy
 - std::random_device [C++], entropy
 ms.assetid: 4393d515-0cb6-4e0d-a2ba-c780f05dc1bf
-ms.openlocfilehash: 783b8f587094c6d603cc02f41b516ebd7b1e9a08
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 184513bc63975bd8eaaf0e53300e5a6be7986389
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62369888"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68448539"
 ---
 # <a name="randomdevice-class"></a>random_device – třída
 
-Generuje náhodné pořadí z externího zařízení.
+Vygeneruje náhodnou posloupnost z externího zařízení.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -58,17 +58,17 @@ public:
 
 ## <a name="remarks"></a>Poznámky
 
-Třída popisuje zdroj náhodných čísel a je povoleno ale není třeba, aby nedeterministické a kryptograficky zabezpečené podle standardu ISO C++. V sadě Visual Studio implementaci hodnoty vytvořené jsou nedeterministické a kryptograficky zabezpečené, ale pracuje pomaleji než generátorů vytvořené z modulů a adaptéry stroj (například [mersenne_twister_engine –](../standard-library/mersenne-twister-engine-class.md), vysoce kvalitní a rychlé enginu podle výběru pro většinu aplikací).
+Třída popisuje zdroj náhodných čísel a je povolená, ale není nutná k nedeterministickému nebo kryptografickému zabezpečení standardem ISO C++ . V implementaci sady Visual Studio jsou vytvářené hodnoty nedeterministické a kryptograficky zabezpečené, ale jsou pomalejší než generátory vytvořené z modulů a adaptérů motorů (například [mersenne_twister_engine](../standard-library/mersenne-twister-engine-class.md), vysoká kvalita a rychlé. zvolený modul pro většinu aplikací.
 
-`random_device` výsledky jsou rovnoměrně rozloženy v uzavřeném intervalu [ `0, 2` <sup>32</sup>).
+`random_device`výsledky jsou rovnoměrně rozloženy v uzavřeném rozsahu [ `0, 2` <sup>32</sup>].
 
-`random_device` není zaručeno, že za následek neblokující volání.
+`random_device`není zaručeno mít za následek neblokující volání.
 
-Obecně platí `random_device` se používá pro jiné generátorů vytvořené pomocí modulů nebo modul adaptéry. Další informace najdete v tématu [ \<náhodné >](../standard-library/random.md).
+`random_device` Obecně se používá k osazení dalších generátorů vytvořených pomocí motorů nebo adaptérů motorů. Další informace najdete v tématu [ \<náhodné >](../standard-library/random.md).
 
 ## <a name="example"></a>Příklad
 
-Následující kód ukazuje základní funkce této třídy a Příkladové výsledky. Vzhledem k Nedeterministický povaze `random_device`, náhodné hodnoty zobrazené v **výstup** části nebudou odpovídat výsledkům. To je normální a očekávané.
+Následující kód ukazuje základní funkce této třídy a příklady výsledků. Z důvodu nedeterministické povahy `random_device`, náhodné hodnoty uvedené v oddílu **Output** nebudou odpovídat vašim výsledkům. To je normální a očekává se.
 
 ```cpp
 // random_device_engine.cpp
@@ -100,17 +100,17 @@ a random value == 3633694716
 a random value == 213725214
 ```
 
-V tomto příkladu je zjednodušenou a ne shodovat s obecné případ použití pro tento generátor. Více reprezentativní příklad kódu naleznete v tématu [ \<náhodné >](../standard-library/random.md).
+Tento příklad je zjednodušený a není zástupcem obecného případu použití pro tento generátor. Další reprezentativní příklad kódu naleznete v tématu [ \<Random >](../standard-library/random.md).
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** \<náhodné >
+**Hlavička:** \<náhodné >
 
-**Namespace:** std
+**Obor názvů:** std
 
-## <a name="random_device"></a>  random_device::random_device
+## <a name="random_device"></a>random_device::random_device
 
-Vytvoří generátor kódu.
+Sestaví generátor.
 
 ```cpp
 random_device(const std::string& = "");
@@ -118,11 +118,11 @@ random_device(const std::string& = "");
 
 ### <a name="remarks"></a>Poznámky
 
-Konstruktor inicializuje generátor podle potřeby a ignoruje parametr řetězce. Vyvolá hodnotu odvozen od typu definované implementací [výjimka](../standard-library/exception-class.md) Pokud `random_device` se nepovedlo inicializovat.
+Konstruktor inicializuje generátor podle potřeby a ignoruje parametr řetězce. Vyvolá hodnotu uživatelsky definovaného typu odvozeného z [výjimky](../standard-library/exception-class.md) , `random_device` Pokud nelze inicializovat.
 
-## <a name="entropy"></a>  random_device::entropy
+## <a name="entropy"></a>random_device:: entropie
 
-Odhady náhodnosti zdroje.
+Odhadne náhodnost zdroje.
 
 ```cpp
 double entropy() const noexcept;
@@ -130,11 +130,11 @@ double entropy() const noexcept;
 
 ### <a name="remarks"></a>Poznámky
 
-Členská funkce vrátí odhadu náhodnosti zdroje měřený v bitech.
+Členská funkce vrátí odhad náhodnosti zdroje, jak je měřeno v bitech.
 
-## <a name="op_call"></a>  random_device::Operator()
+## <a name="op_call"></a>random_device:: operator () – operátor ()
 
-Vrací náhodnou hodnota.
+Vrací náhodnou hodnotu.
 
 ```cpp
 result_type operator()();
@@ -142,8 +142,8 @@ result_type operator()();
 
 ### <a name="remarks"></a>Poznámky
 
-Vrátí hodnoty, které jsou rovnoměrně rozloženy v uzavřeném intervalu [ `min, max`] podle členské funkce `min()` a `max()`. Vyvolá hodnotu odvozen od typu definované implementací [výjimka](../standard-library/exception-class.md) Pokud nebylo možné získat náhodné číslo.
+Vrátí hodnoty rovnoměrně distribuované v uzavřeném intervalu [ `min, max`] podle určení členských funkcí `min()` a `max()`. Vyvolá hodnotu typu definovaného implementací odvozenou od [výjimky](../standard-library/exception-class.md) , pokud nelze získat náhodné číslo.
 
 ## <a name="see-also"></a>Viz také:
 
-[\<náhodné >](../standard-library/random.md)<br/>
+[\<náhodné >](../standard-library/random.md)

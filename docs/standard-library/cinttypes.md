@@ -2,16 +2,16 @@
 title: '&lt;cinttypes&gt;'
 ms.date: 11/04/2016
 ms.assetid: 18eb738c-aa74-4ed3-9cdd-049ef4c64b80
-ms.openlocfilehash: ce0da1dd1454c3216d7a4f012f00f3af3cb89daa
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: be2bb16b21c7ea42211d2e04068cb1a32f5beaf4
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62279109"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68459368"
 ---
 # <a name="ltcinttypesgt"></a>&lt;cinttypes&gt;
 
-Obsahuje hlavičku knihovny Standard C \<inttypes.h >. Včetně této hlavičky obsahuje také \<cstdint >.
+Zahrnuje hlavičku \<standardní knihovny jazyka C inttypes. h >. Včetně této hlavičky zahrnuje \<také cstdint >.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -21,11 +21,11 @@ Obsahuje hlavičku knihovny Standard C \<inttypes.h >. Včetně této hlavičky 
 
 ## <a name="remarks"></a>Poznámky
 
-Včetně této hlavičky zajišťuje, že názvy deklarované s vnějším spojením v záhlaví knihovny Standard C jsou deklarovány v `std` oboru názvů.
+Včetně této hlavičky zajišťuje, že názvy deklarované pomocí vnějšího propojení v hlavičce standardní knihovny jazyka C jsou deklarovány v `std` oboru názvů.
 
 ## <a name="see-also"></a>Viz také:
 
-[\<cstdint>](../standard-library/cstdint.md)<br/>
-[Odkaz na soubory hlaviček](../standard-library/cpp-standard-library-header-files.md)<br/>
-[Standardní knihovna C++ – přehled](../standard-library/cpp-standard-library-overview.md)<br/>
-[Bezpečný přístup z více vláken ve standardní knihovně C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[\<cstdint>](../standard-library/cstdint.md)\
+[Odkazy na hlavičkové soubory](../standard-library/cpp-standard-library-header-files.md)\
+[C++Přehled standardní knihovny](../standard-library/cpp-standard-library-overview.md)\
+[Bezpečný přístup z více vláken ve standardní knihovně C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)

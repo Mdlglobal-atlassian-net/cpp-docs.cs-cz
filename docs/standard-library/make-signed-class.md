@@ -7,16 +7,16 @@ helpviewer_keywords:
 - make_signed class
 - make_signed
 ms.assetid: 686247c0-247c-496b-9b1b-ba9dcd633621
-ms.openlocfilehash: c9fe9d54d503f1aa1dfb3debfaeb7649f2e5c18d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c3c35e28dec3270299329c0186273e324effc2bb
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62413057"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68453682"
 ---
 # <a name="makesigned-class"></a>make_signed – třída
 
-Vytvoří typ nebo nejmenší znaménkem typu větší než nebo rovno velikosti typu.
+Typ nebo nejmenší podepsaný typ, který je větší nebo roven velikosti pro typ.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -30,19 +30,19 @@ using make_signed_t = typename make_signed<T>::type;
 
 ### <a name="parameters"></a>Parametry
 
-*T*<br/>
+*Š*\
 Typ, který chcete upravit.
 
 ## <a name="remarks"></a>Poznámky
 
-Instance modifikátoru typu obsahuje změněný typ, který je *T* Pokud `is_signed<T>` platí. V opačném případě je nejmenší typ bez znaménka `UT` pro kterou `sizeof (T) <= sizeof (UT)`.
+Instance modifikátoru typu obsahuje upravený typ, který je *T* , pokud `is_signed<T>` má hodnotu true. V opačném případě je to nejmenší `UT` typ bez `sizeof (T) <= sizeof (UT)`znaménka, pro který.
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** \<type_traits >
+**Hlavička:** \<type_traits >
 
-**Namespace:** std
+**Obor názvů:** std
 
 ## <a name="see-also"></a>Viz také:
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
+[<type_traits>](../standard-library/type-traits.md)
