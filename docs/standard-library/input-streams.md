@@ -7,22 +7,22 @@ helpviewer_keywords:
 - input streams
 - input stream objects
 ms.assetid: f14d8954-8f8c-4c3c-8b99-14ddb3683f94
-ms.openlocfilehash: 0f56f5ffc8e61c0881eddbbd65e1c431b9219674
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5dc3fa0af76f73897fe1181d944eb34c8d05bc64
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62404920"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68449330"
 ---
 # <a name="input-streams"></a>Vstupní datové proudy
 
-Objekt vstupního datového proudu je zdrojem bajtů. Jsou tři třídy nejdůležitější vstupního datového proudu [istream](../standard-library/basic-istream-class.md), [ifstream](../standard-library/basic-ifstream-class.md), a [istringstream](../standard-library/basic-istringstream-class.md).
+Vstupní objekt datového proudu je zdrojem bajtů. Tři nejdůležitější třídy vstupního datového proudu jsou [IStream](../standard-library/basic-istream-class.md), [ifstream](../standard-library/basic-ifstream-class.md)a [istringstream –](../standard-library/basic-istringstream-class.md).
 
-`istream` Třídy je nejvhodnější pro sekvenční režim textové zadání. Můžete nakonfigurovat objekty třídy `istream` pro operace bez vyrovnávací paměti nebo ve vyrovnávací paměti. Všechny funkce základní třídy `ios`, je součástí `istream`. Se jen zřídka objekty je možné vytvořit z třídy `istream`. Místo toho se obvykle použijete předdefinovanou `cin` objekt, který je ve skutečnosti objekt třídy [ostream](../standard-library/basic-ostream-class.md). V některých případech můžete přiřadit `cin` jiným objektům datového proudu po spuštění programu.
+`istream` Třída se nejlépe používá pro sekvenční vstup v textovém režimu. Můžete nakonfigurovat objekty třídy `istream` pro operaci vyrovnávací paměti nebo neuloženou v vyrovnávací paměti. Všechny funkce základní třídy `ios`jsou obsaženy v. `istream` Nebudete pouze vytvářet objekty ze `istream`třídy. Místo toho budete obecně používat předdefinovaný `cin` objekt, který je ve skutečnosti objekt třídy [ostream](../standard-library/basic-ostream-class.md). V některých případech se můžete po spuštění `cin` programu přiřadit k ostatním objektům streamu.
 
-`ifstream` Třída podporuje vstupního souboru disku. Pokud potřebujete použití pouze soubor na disku, sestavte objekt třídy `ifstream`. Můžete zadat režim textové nebo binární data. Pokud zadáte filename v konstruktoru, soubor se automaticky otevře při vytvoření objektu. V opačném případě můžete použít `open` funkce po vyvolání výchozího konstruktoru. Mnoho formátování možnosti a členských funkcí platí pro `ifstream` objekty. Všechny funkce základní třídy `ios` a `istream` je součástí `ifstream`.
+`ifstream` Třída podporuje vstup ze souboru na disku. Pokud potřebujete soubor s pouze vstupním diskem, Sestavte objekt třídy `ifstream`. Můžete zadat binární data nebo data v textovém režimu. Pokud zadáte název souboru v konstruktoru, soubor se automaticky otevře při sestavení objektu. V opačném případě můžete `open` funkci použít po vyvolání výchozího konstruktoru. Mnoho možností formátování a členských funkcí se vztahuje `ifstream` na objekty. Všechny funkce základních tříd `ios` a `istream` jsou součástí `ifstream`.
 
-Funkce knihovny, jako jsou `sscanf_s`, `istringstream` třída podporuje vstup z řetězců v paměti. Extrahovat data z pole znaků, který má ukončovací znak null, přidělit a inicializuje řetězec a pak vytvořit objekt třídy `istringstream`.
+Podobně jako funkce `sscanf_s` `istringstream` knihovny podporuje třída vstup z řetězců v paměti. Chcete-li extrahovat data z pole znaků, které má ukončovací znak null, přidělte a inicializujte řetězec a poté Sestavte objekt třídy `istringstream`.
 
 ## <a name="in-this-section"></a>V tomto oddílu
 
@@ -40,4 +40,4 @@ Funkce knihovny, jako jsou `sscanf_s`, `istringstream` třída podporuje vstup z
 
 ## <a name="see-also"></a>Viz také:
 
-[iostream – programování](../standard-library/iostream-programming.md)<br/>
+[iostream – programování](../standard-library/iostream-programming.md)

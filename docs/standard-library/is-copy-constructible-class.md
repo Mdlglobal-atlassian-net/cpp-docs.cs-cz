@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - is_copy_constructible
 ms.assetid: d8db9d4c-21ed-4884-bead-0b0b562de007
-ms.openlocfilehash: c85d036efda2509885a079cf59a130a63c0389bc
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 70de134fa0cb3e9d6b0259135372f37b9c017e92
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62336628"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68452798"
 ---
 # <a name="iscopyconstructible-class"></a>is_copy_constructible – třída
 
-Testuje, zda je typ má konstruktor kopie.
+Testuje, zda typ obsahuje kopírovací konstruktor.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -26,12 +26,12 @@ struct is_copy_constructible;
 
 ### <a name="parameters"></a>Parametry
 
-*Ty*<br/>
+*Ty*\
 Typ, na který chcete odeslat dotaz.
 
 ## <a name="remarks"></a>Poznámky
 
-Instance predikátu typu obsahuje hodnotu true, pokud typ *Ty* je třída, která má konstruktor kopie, jinak má hodnotu false.
+Instance predikátu typu má hodnotu true, pokud *je typ,* který je třída, která má kopírovací konstruktor, jinak obsahuje hodnotu false.
 
 ## <a name="example"></a>Příklad
 
@@ -69,10 +69,10 @@ is_copy_constructible<NotCopyable > == false
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** \<type_traits >
+**Hlavička:** \<type_traits >
 
-**Namespace:** std
+**Obor názvů:** std
 
 ## <a name="see-also"></a>Viz také:
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
+[<type_traits>](../standard-library/type-traits.md)

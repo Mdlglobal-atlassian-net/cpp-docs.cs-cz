@@ -13,19 +13,19 @@ helpviewer_keywords:
 - operator!=
 - operator !=
 ms.assetid: ef2be7f0-1c94-4edc-b65c-731fddd519f4
-ms.openlocfilehash: e29088b64b46e3aa907f4a09ec131c6f9b68a74b
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.openlocfilehash: 1214dd7d5034b80b14f8dd1422aa1a3b8a253023
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65220511"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68447653"
 ---
 # <a name="operator"></a>operator!=
 
 > [!NOTE]
-> Toto téma je v Microsoft C++ dokumentaci jako funkční příklad kontejnerů používané C++ standardní knihovny. Další informace najdete v tématu [kontejnery standardní knihovny C++](../standard-library/stl-containers.md).
+> Toto téma se nachází v dokumentaci C++ společnosti Microsoft jako nefunkční příklad kontejnerů použitých ve C++ standardní knihovně. Další informace najdete v tématu [ C++ standardní kontejnery knihovny](../standard-library/stl-containers.md).
 
-Přetížení `operator!=` k porovnání dvou objektů třídy šablony [kontejneru](../standard-library/sample-container-class.md).
+Přetížení `operator!=` pro porovnání dvou objektů [kontejneru](../standard-library/sample-container-class.md)tříd šablony.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -42,4 +42,4 @@ Vrátí `!(left == right)`.
 
 ## <a name="see-also"></a>Viz také:
 
-[\<Ukázkový kontejner >](../standard-library/sample-container.md)<br/>
+[\<Ukázkový > kontejneru](../standard-library/sample-container.md)

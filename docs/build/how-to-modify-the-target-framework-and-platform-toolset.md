@@ -1,62 +1,70 @@
 ---
-title: 'Postupy: Změna cílové architektury a sady nástrojů'
+title: 'Postupy: Úprava cílové architektury a sady nástrojů platformy'
 ms.custom: conceptual
-ms.date: 05/06/2019
+ms.date: 07/24/2019
 helpviewer_keywords:
 - 'msbuild (c++), howto: modify target framework and platform toolset'
 ms.assetid: 031b1d54-e6e1-4da7-9868-3e75a87d9ffe
-ms.openlocfilehash: b2cf5ac5c6a339917b87a25001be568a7caa2247
-ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
+ms.openlocfilehash: 6af7a4eb47c1d3f8b9c52eec39795c9307ca9d8e
+ms.sourcegitcommit: ce3393846c86e7905ff0c86e4cd6610476809585
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66450748"
+ms.lasthandoff: 07/25/2019
+ms.locfileid: "68492222"
 ---
-# <a name="how-to-modify-the-target-framework-and-platform-toolset"></a>Postupy: Změna cílové architektury a sady nástrojů
+# <a name="how-to-modify-the-target-framework-and-platform-toolset"></a>Postupy: Úprava cílové architektury a sady nástrojů platformy
 
-Visual Studio můžete změnit C++ nastavení pro jiné cílové verze rozhraní .NET Framework a jiné sady nástrojů platformy projektu. Ve výchozím nastavení používá systém projektu verzi rozhraní .NET Framework a verzi sady nástrojů, které odpovídají verzi sady Visual Studio, který použijete k vytvoření projektu. Můžete změnit cílovou sadu nástrojů platformy úpravou vlastností projektu. Cílové rozhraní Framework lze změnit úpravou souboru projektu (.vcxproj). Nemusíte udržovat samostatnou kód základní pro každý cíl kompilace.
+Můžete upravit soubor projektu sady Visual C++ Studio pro cílení na různé verze sady C++ nástrojů platformy, Windows SDK a .NET Framework (C++pouze projekty/CLI). Ve výchozím nastavení používá projektový systém verzi .NET Framework a verzi sady nástrojů, která odpovídá verzi sady Visual Studio, kterou používáte k vytvoření projektu. Můžete upravit všechny tyto hodnoty v souboru. vcxproj tak, abyste mohli použít stejný základ kódu pro každý cíl kompilace.
 
-> [!IMPORTANT]
->  Některé edice nemusí podporovat změny cílových rozhraní nebo sad nástrojů platformy. Informace o kompatibilitě naleznete v tématu [Port, migrace a Upgrade projektů sady Visual Studio](/visualstudio/porting/port-migrate-and-upgrade-visual-studio-projects).
+## <a name="platform-toolset"></a>Sada nástrojů platformy
 
-Pokud změníte cílový rámec, také změňte sadu nástrojů platformy na verzi, která podporuje tento rámec. Například chcete-li cílit na rozhraní .NET Framework 4.5, musíte použít sadu nástrojů kompatibilní platformy, jako je Visual Studio 2015 (v140), Visual Studio 2013 (v120) nebo Visual Studio 2012 (v110). Můžete použít **Windows7.1SDK** sada nástrojů platformy cílit na rozhraní .NET Framework 2.0, 3.0, 3.5 a 4 a x86, Itanium a x64 platformy.
+Sada nástrojů platformy se skládá z C++ kompilátoru (CL. exe) a Linker (Link. exe) společně s knihovnami C/C++ Standard. Vzhledem k tomu, že sada Visual Studio 2015, hlavní verze sady nástrojů zůstala v rozmezí 14, což znamená, že projekty zkompilované se sadou Visual Studio 2019 nebo Visual Studio 2017 jsou s projekty kompilovanými se sadou Visual Studio 2015 kompatibilní. Dílčí verze se aktualizovala o 1 pro každou verzi od Visual Studia 2015:
 
-> [!NOTE]
->  Chcete-li změnit sadu nástrojů cílové platformy, musíte mít přidružené verze sady Visual Studio nebo Windows Platform SDK nainstalovány. Například pro zaměření na platformu Itanium se **Windows7.1SDK** sada nástrojů platformy, musíte mít [Microsoft Windows SDK pro Windows 7 a rozhraní .NET Framework 4 SP1](https://www.microsoft.com/download/details.aspx?id=8279) nainstalované, ale můžete použít jinou kompatibilní verzi sady Visual Studio k provedení vývojové práce, za předpokladu, že se zaměříte správnou Framework verze a platformy sadu nástrojů.
+- Visual Studio 2015: v140
+- Visual Studio 2017: v141
+- Visual Studio 2019: V142
 
-Můžete rozšířit cílovou platformu další tak, že vytvoříte vlastní sady nástrojů platformy. Další informace najdete v tématu [cílení na více verzí v nativním C++](https://blogs.msdn.microsoft.com/vcblog/2009/12/08/c-native-multi-targeting/) na blogu Visual C++.
+Tyto sady nástrojů podporují .NET Framework 4,5 a novější.
 
-### <a name="to-change-the-target-framework"></a>Chcete-li změnit cílový rámec
+Visual Studio také podporuje více cílů pro C++ projekty. Pomocí integrovaného vývojového prostředí sady Visual Studio můžete upravovat a sestavovat projekty, které byly vytvořeny pomocí starších verzí sady Visual Studio, aniž by bylo nutné je upgradovat, aby používaly novou verzi sady nástrojů. V počítači musíte mít nainstalované starší sady nástrojů. Další informace najdete v tématu [Jak používat nativní cílení na více platforem v aplikaci Visual Studio](../porting/use-native-multi-targeting.md). Například v sadě Visual Studio 2015 můžete *cílit* .NET Framework 2,0, ale je nutné použít starší sadu nástrojů, která ji podporuje.
 
-1. V sadě Visual Studio v **Průzkumníka řešení**, vyberte svůj projekt. Na panelu nabídky otevřete **projektu** nabídku a zvolte **uvolnit projekt**. To uvolní soubor projektu (.vcxproj) pro váš projekt.
+## <a name="target-framework-ccli-project-only"></a>Cílová architektura (C++jenom projekt/CLI)
 
-    > [!NOTE]
-    >  Projekt C++ nelze načíst, když probíhá úprava souboru projektu v sadě Visual Studio. Ale můžete použít jiný editor, například Poznámkový blok pro úpravu souboru projektu při načtení projektu v sadě Visual Studio. Visual Studio zjistí, že došlo ke změně souboru projektu a vyzve k opětovnému načtení projektu.
+Když změníte cílovou architekturu, změňte také sadu nástrojů platformy na verzi, která rozhraní podporuje. Chcete-li například cílit na .NET Framework 4,5, je nutné použít sadu nástrojů kompatibilní platformy, jako je například Visual Studio 2015 (v140), Visual Studio 2013 (v120) nebo Visual Studio 2012 (v110). Sadu nástrojů platformy [Windows 7,1 SDK](https://www.microsoft.com/en-us/download/details.aspx?id=8279) můžete použít k cílení na .NET Framework 2,0, 3,0, 3,5 a 4 a platformy x86/x64.
 
-1. Na panelu nabídek vyberte **souboru**, **otevřít**, **souboru**. V **otevřít soubor** dialogové okno, přejděte do složky vašeho projektu a pak otevřete soubor projektu (.vcxproj).
+Cílovou platformu můžete rozšířit ještě tak, že vytvoříte vlastní sadu nástrojů platformy. Další informace najdete v tématu [ C++ nativní cílení na více](https://blogs.msdn.microsoft.com/vcblog/2009/12/08/c-native-multi-targeting/) platforem na C++ blogu vizuálu.
 
-1. V souboru projektu vyhledejte položku pro cílovou verzi rozhraní Framework. Například pokud váš projekt je navržen pro použití rozhraní .NET Framework 4.5, vyhledejte `<TargetFrameworkVersion>v4.5</TargetFrameworkVersion>` v `<PropertyGroup Label="Globals">` elementu `<Project>` elementu. Pokud `<TargetFrameworkVersion>` element není přítomen, váš projekt nepoužívá rozhraní .NET Framework a není nutná žádná změna.
+### <a name="to-change-the-target-framework"></a>Změna cílového rozhraní .NET Framework
 
-1. Změňte hodnotu na požadovanou verzi Frameworku, třeba v3.5 nebo v4.6.
+1. V aplikaci Visual Studio v **Průzkumník řešení**vyberte svůj projekt. V panelu nabídek otevřete nabídku **projekt** a vyberte možnost **Uvolnit projekt**. Tím se uvolní soubor projektu (. vcxproj) pro váš projekt.
 
-1. Uložte změny a zavřete editor.
+   > [!NOTE]
+   >  Během C++ úprav souboru projektu v aplikaci Visual Studio nelze načíst projekt. Můžete však použít jiný editor, například Poznámkový blok, pro úpravu souboru projektu, když je projekt načten v aplikaci Visual Studio. Visual Studio zjistí, že se soubor projektu změnil, a zobrazí výzvu k opětovnému načtení projektu.
 
-1. V **Průzkumníka řešení**, otevřete místní nabídku pro váš projekt a klikněte na tlačítko **znovu načíst projekt**.
+1. Na panelu nabídek vyberte **soubor**, **otevřít**, **soubor**. V dialogovém okně **otevřít soubor** přejděte do složky projektu a pak otevřete soubor projektu (. vcxproj).
 
-1. Chcete-li ověřit změny, v **Průzkumníka řešení**, klikněte pravým tlačítkem a otevřete místní nabídku pro projekt (ne pro vaše řešení) a klikněte na tlačítko **vlastnosti** otevření projektu **vlastnost Stránky** dialogové okno. V levém podokně dialogového okna rozbalte **vlastnosti konfigurace** a pak vyberte **Obecné**. Ověřte, že **cílové verze rozhraní .NET** ukazuje novou verzi Frameworku.
+1. V souboru projektu vyhledejte položku pro cílovou verzi rozhraní .NET Framework. Například pokud je váš projekt navržen pro použití .NET Framework 4,5, vyhledejte `<TargetFrameworkVersion>v4.5</TargetFrameworkVersion>` `<PropertyGroup Label="Globals">` v prvku `<Project>` prvku. `<TargetFrameworkVersion>` Pokud prvek není k dispozici, projekt nepoužívá .NET Framework a není vyžadována žádná změna.
 
-### <a name="to-change-the-project-toolset"></a>Chcete-li změnit sadu nástrojů projektu
+1. Změňte hodnotu na požadovanou verzi rozhraní, například v 3.5 nebo v 4.6.
 
-1. V sadě Visual Studio v **Průzkumníka řešení**, otevřete místní nabídku pro projekt (ne pro vaše řešení) a klikněte na tlačítko **vlastnosti** otevření projektu **stránky vlastností**dialogové okno.
+1. Uložte změny a zavřete Editor.
 
-1. V **stránky vlastností** dialogovém okně Otevřít **konfigurace** rozevíracího seznamu a pak vyberte **všechny konfigurace**.
+1. V **Průzkumník řešení**otevřete místní nabídku pro projekt a pak zvolte možnost **znovu načíst projekt**.
 
-1. V levém podokně dialogového okna rozbalte **vlastnosti konfigurace** a pak vyberte **Obecné**.
+1. Chcete-li ověřit změnu, v **Průzkumník řešení**klikněte pravým tlačítkem myši a otevřete místní nabídku pro projekt (ne pro vaše řešení) a poté zvolte možnost **vlastnosti** , čímž otevřete dialogové okno **stránky vlastností** projektu. V levém podokně dialogového okna rozbalte položku **Vlastnosti konfigurace** a pak vyberte možnost **Obecné**. Ověřte, zda **verze rozhraní .NET Target Framework** zobrazuje novou verzi rozhraní .NET Framework.
 
-1. V pravém podokně vyberte **sada nástrojů platformy** a pak vyberte požadovanou sadu nástrojů v rozevíracím seznamu. Například, pokud jste nainstalovali sadu nástrojů Visual Studio 2010, vyberte **Visual Studio 2010 (v100)** určený pro váš projekt.
+### <a name="to-change-the-platform-toolset"></a>Změna sady nástrojů platformy
+
+1. V aplikaci Visual Studio v **Průzkumník řešení**otevřete místní nabídku pro váš projekt (ne pro vaše řešení) a pak zvolte **vlastnosti** . otevře se dialogové okno **stránky vlastností** projektu.
+
+1. V dialogovém okně **stránky vlastností** otevřete rozevírací seznam **Konfigurace** a vyberte možnost **všechny konfigurace**.
+
+1. V levém podokně dialogového okna rozbalte položku **Vlastnosti konfigurace** a pak vyberte možnost **Obecné**.
+
+1. V pravém podokně vyberte **sadu nástrojů platformy** a v rozevíracím seznamu vyberte požadovanou sadu nástrojů. Pokud jste například nainstalovali sadu nástrojů sady Visual Studio 2010, vyberte sadu **Visual studio 2010 (V100)** a použijte ji pro svůj projekt.
 
 1. Zvolte **OK** tlačítko.
 
 ## <a name="see-also"></a>Viz také:
 
-[MSBuild na příkazovém řádku - C++](msbuild-visual-cpp.md)
+[MSBuild na příkazovém řádku –C++](msbuild-visual-cpp.md)

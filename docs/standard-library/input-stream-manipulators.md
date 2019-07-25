@@ -5,19 +5,19 @@ helpviewer_keywords:
 - input streams, manipulators
 - input stream objects
 ms.assetid: 0addcacb-7b7b-4d70-9775-a59abc400fb3
-ms.openlocfilehash: 17f18aa127b84538229b3cf4e4246dfefb6c1f98
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d9a6f00f1b5a52d4d388ace376676b45547bdd49
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62404907"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68451032"
 ---
 # <a name="input-stream-manipulators"></a>Manipulátory vstupního datového proudu
 
-Mnoho manipulátory, jako například [setprecision](../standard-library/iomanip-functions.md#setprecision), jsou definovány pro `ios` třídy a tedy platí pro vstupní datové proudy. Několik manipulátory, ale ve skutečnosti vliv objektů vstupního datového proudu. To, které, nejdůležitější jsou manipulátory základ číselné soustavy `dec`, `oct`, a `hex`, které určují základní převod používá s čísly ze vstupního datového proudu.
+Pro`ios` třídu je definováno mnoho různých manipulátorů, jako je [setprecision](../standard-library/iomanip-functions.md#setprecision), a proto se aplikují na vstupní datové proudy. Několik manipulací ale ve skutečnosti ovlivňuje vstupní objekty datového proudu. Z těch, které jsou, nejdůležitějšími jsou manipulace s číselnou soustavou `dec`, `oct`, a `hex`, které určují základ pro převod, který se používá s čísly ze vstupního datového proudu.
 
-Na extrakci `hex` manipulátor umožňuje zpracování různé vstupní formáty. Například, c C, 0xc, 0xC, 0Xc a 0XC jsou všechny interpretováno jako desítkové celé číslo 12. Jakéhokoliv znaku jiného než 0 – 9, A až F, a až f, x nebo X ukončí převod čísla. Proto pořadí `"124n5"` je převeden na číslo 124 s [basic_ios::fail](../standard-library/basic-ios-class.md#fail) nastaven bit.
+Při extrakci `hex` manipulátor umožňuje zpracování různých vstupních formátů. Například c, C, 0xC, 0xC, 0Xc a 0XC jsou interpretovány jako desítkové celé číslo 12. Libovolný znak jiný než 0 až 9, a až F, a až f, x a X ukončí číselný převod. Proto je sekvence `"124n5"` převedena na číslo 124 s nastavenou bitovou sadou [basic_ios:: selhání](../standard-library/basic-ios-class.md#fail) .
 
 ## <a name="see-also"></a>Viz také:
 
-[Vstupní streamy](../standard-library/input-streams.md)<br/>
+[Vstupní streamy](../standard-library/input-streams.md)

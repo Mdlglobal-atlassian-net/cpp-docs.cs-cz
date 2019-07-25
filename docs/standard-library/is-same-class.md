@@ -7,16 +7,16 @@ helpviewer_keywords:
 - is_same class
 - is_same
 ms.assetid: d9df6c1d-c270-4ec2-802a-af275648dd1d
-ms.openlocfilehash: 5bb306ec29da225293affd0207f67271f59ec599
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f4e4babeef89960762ebb2ccf0f733f60eadfa47
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62413551"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68450048"
 ---
 # <a name="issame-class"></a>is_same – třída
 
-Testuje, zda dva typy jsou stejné.
+Testuje, zda jsou dva typy stejné.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -27,15 +27,15 @@ struct is_same;
 
 ### <a name="parameters"></a>Parametry
 
-*Ty1*<br/>
-Prvním typem dotazu.
+*Ty1*\
+První typ dotazu.
 
-*Ty2*<br/>
-Druhým typem dotazu.
+*TY2*\
+Druhý typ pro dotazování.
 
 ## <a name="remarks"></a>Poznámky
 
-Instance predikátu typu obsahuje hodnotu true, pokud typy *Ty1* a *Ty2* jsou stejného typu, v opačném případě obsahuje hodnotu false.
+Instance predikátu typu má hodnotu true, pokud typy *Ty1* a *TY2* mají stejný typ, jinak obsahuje false.
 
 ## <a name="example"></a>Příklad
 
@@ -82,12 +82,12 @@ is_same<int, const int> == false
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** \<type_traits >
+**Hlavička:** \<type_traits >
 
-**Namespace:** std
+**Obor názvů:** std
 
 ## <a name="see-also"></a>Viz také:
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
-[is_convertible – třída](../standard-library/is-convertible-class.md)<br/>
-[is_base_of – třída](../standard-library/is-base-of-class.md)<br/>
+[< type_traits >](../standard-library/type-traits.md)\
+[is_convertible – třída](../standard-library/is-convertible-class.md)\
+[is_base_of – třída](../standard-library/is-base-of-class.md)

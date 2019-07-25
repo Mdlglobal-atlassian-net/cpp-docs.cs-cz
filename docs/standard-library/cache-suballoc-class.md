@@ -10,16 +10,16 @@ helpviewer_keywords:
 - stdext::cache_suballoc [C++], allocate
 - stdext::cache_suballoc [C++], deallocate
 ms.assetid: 9ea9c5e9-1dcc-45d0-b3a7-a56a93d88898
-ms.openlocfilehash: 06d0ef390e6ae1980b9ab20b8ceb67213837148b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: aa0ceda69fc169593719c3a4f81d308bb6cde284
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62380114"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68449646"
 ---
 # <a name="cachesuballoc-class"></a>cache_suballoc – třída
 
-Definuje [blokovat allocator](../standard-library/allocators-header.md) , který přiděluje a zruší přidělení bloků paměti z jednoho velikost.
+Definuje [přidělování bloků](../standard-library/allocators-header.md) , které přiděluje a odděluje bloky paměti s jednou velikostí.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -36,9 +36,9 @@ class cache_suballoc
 
 ## <a name="remarks"></a>Poznámky
 
-Cache_suballoc – třída šablony ukládá uvolnění paměťových bloků v bezplatné seznam o délce bez vazby, pomocí `freelist<sizeof(Type), max_unbounded>`a suballocates bloky paměti z větších bloků dat, kterým je přiřazen výraz **operátor new** po seznamu zdarma prázdný.
+Třída šablony cache_suballoc ukládá nepřidělené bloky paměti do bezplatného seznamu s nevázanou délkou, `freelist<sizeof(Type), max_unbounded>`pomocí a rozděluje bloky paměti z většího bloku, který je přidělen s **operátorem New** , pokud je seznam volných hodnot prázdný.
 
-Každý blok obsahuje `Sz * Nelts` bajtů použitelné paměti a data, která **operátor new** a **operátor delete** vyžadují. Přidělené bloky dat jsou nikdy uvolněna.
+Každý blok dat `Sz * Nelts` uchovává bajty použitelné paměti a data, která **operátor New** a **operátor delete** vyžadují. Přidělené bloky dat nejsou nikdy uvolněny.
 
 ### <a name="constructors"></a>Konstruktory
 
@@ -50,18 +50,18 @@ Každý blok obsahuje `Sz * Nelts` bajtů použitelné paměti a data, která **
 
 |Členská funkce|Popis|
 |-|-|
-|[allocate](#allocate)|Přiděluje blok paměti.|
-|[zrušit přidělení](#deallocate)|Uvolní zadaný počet objektů z úložiště počínaje na určené pozici.|
+|[allocate](#allocate)|Přidělí blok paměti.|
+|[uvolnit](#deallocate)|Uvolní zadaný počet objektů od úložiště, které začínají na zadané pozici.|
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** \<alokátorů >
+**Hlavička:** \<> přidělování
 
-**Namespace:** stdext
+**Obor názvů:** stdext
 
-## <a name="allocate"></a>  cache_suballoc::allocate
+## <a name="allocate"></a>cache_suballoc:: allocate
 
-Přiděluje blok paměti.
+Přidělí blok paměti.
 
 ```cpp
 void *allocate(std::size_t count);
@@ -71,7 +71,7 @@ void *allocate(std::size_t count);
 
 |Parametr|Popis|
 |---------------|-----------------|
-|*Počet*|Počet prvků v poli, které mají být přiděleny.|
+|*výpočtu*|Počet prvků v poli, které mají být přiděleny.|
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -79,7 +79,7 @@ Ukazatel na přidělený objekt.
 
 ### <a name="remarks"></a>Poznámky
 
-## <a name="cache_suballoc"></a>  cache_suballoc::cache_suballoc
+## <a name="cache_suballoc"></a>cache_suballoc::cache_suballoc
 
 Vytvoří objekt typu `cache_suballoc`.
 
@@ -89,9 +89,9 @@ cache_suballoc();
 
 ### <a name="remarks"></a>Poznámky
 
-## <a name="deallocate"></a>  cache_suballoc::deallocate
+## <a name="deallocate"></a>cache_suballoc::d eallocate
 
-Uvolní zadaný počet objektů z úložiště počínaje na určené pozici.
+Uvolní zadaný počet objektů od úložiště, které začínají na zadané pozici.
 
 ```cpp
 void deallocate(void* ptr, std::size_t count);
@@ -101,11 +101,11 @@ void deallocate(void* ptr, std::size_t count);
 
 |Parametr|Popis|
 |---------------|-----------------|
-|*ptr*|Ukazatel na první objekt k zrušeno přidělení úložiště.|
-|*Počet*|Počet objektů pro zrušeno přidělení úložiště.|
+|*ptr*|Ukazatel na první objekt, který má být vrácen z úložiště.|
+|*výpočtu*|Počet objektů, které se mají uvolnit z úložiště|
 
 ### <a name="remarks"></a>Poznámky
 
 ## <a name="see-also"></a>Viz také:
 
-[\<allocators>](../standard-library/allocators-header.md)<br/>
+[\<allocators>](../standard-library/allocators-header.md)

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - remove_volatile class
 - remove_volatile
 ms.assetid: 8b87e2c2-a581-4eb3-8691-c5603910d61d
-ms.openlocfilehash: b327bb8362e1f6523d22950974012747e0de99f8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 19514d1839fa6e0afcecb690dcb12657a85f3c2e
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62185929"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68451266"
 ---
 # <a name="removevolatile-class"></a>remove_volatile – třída
 
@@ -30,12 +30,12 @@ using remove_volatile_t = typename remove_volatile<T>::type;
 
 ### <a name="parameters"></a>Parametry
 
-*T*<br/>
+*Š*\
 Typ, který chcete upravit.
 
 ## <a name="remarks"></a>Poznámky
 
-Instance `remove_volatile<T>` obsahuje změněný typ, který je `T1` při *T* má formu `volatile T1`, jinak *T*.
+Instance `remove_volatile<T>` obsahuje upravený typ, který je `T1` v případě *t* formuláře `volatile T1`, jinak *t*.
 
 ## <a name="example"></a>Příklad
 
@@ -61,11 +61,11 @@ remove_volatile_t<volatile int> == int
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** \<type_traits >
+**Hlavička:** \<type_traits >
 
-**Namespace:** std
+**Obor názvů:** std
 
 ## <a name="see-also"></a>Viz také:
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
-[add_volatile – třída](../standard-library/add-volatile-class.md)<br/>
+[< type_traits >](../standard-library/type-traits.md)\
+[add_volatile – třída](../standard-library/add-volatile-class.md)

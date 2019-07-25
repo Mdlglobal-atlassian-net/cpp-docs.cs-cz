@@ -1,5 +1,5 @@
 ---
-title: 'vektor&lt;bool&gt;:: reference::operator bool'
+title: 'Vector&lt;bool&gt;:: Reference:: operator bool'
 ms.date: 11/04/2016
 f1_keywords:
 - operatorbool
@@ -10,16 +10,16 @@ helpviewer_keywords:
 - BOOL operator
 - reference::operator bool
 ms.assetid: b0e57869-18cc-4296-9061-da502f30120d
-ms.openlocfilehash: 7fa95b3037538ccbbf27fa5b9749dc21f72670cd
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ca2d21a7706248cd84ca3591eb717e4081972f9c
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62410912"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68452126"
 ---
-# <a name="vectorltboolgtreferenceoperator-bool"></a>vektor&lt;bool&gt;:: reference::operator bool
+# <a name="vectorltboolgtreferenceoperator-bool"></a>Vector&lt;bool&gt;:: Reference:: operator bool
 
-Poskytuje implicitní převod z `vector<bool>::reference` k **bool**.
+Poskytuje implicitní převod z `vector<bool>::reference` na **bool**.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -29,19 +29,19 @@ operator bool() const;
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Logická hodnota elementu [vektoru\<bool >](../standard-library/vector-bool-class.md) objektu.
+Logická hodnota prvku objektu [\<Vector bool >](../standard-library/vector-bool-class.md) .
 
 ## <a name="remarks"></a>Poznámky
 
-`vector<bool>` Objektu nelze změnit tímto operátorem.
+`vector<bool>` Objekt nelze změnit pomocí tohoto operátoru.
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** \<vektoru >
+**Hlavička:** \<> vektoru
 
-**Namespace:** std
+**Obor názvů:** std
 
 ## <a name="see-also"></a>Viz také:
 
-[vektor\<bool >:: reference – třída](../standard-library/vector-bool-reference-class.md)<br/>
-[Standardní knihovna C++ – referenční dokumentace](../standard-library/cpp-standard-library-reference.md)<br/>
+[Vector\<bool >:: Reference – třída](../standard-library/vector-bool-reference-class.md)\
+[Standardní knihovna C++ – referenční dokumentace](../standard-library/cpp-standard-library-reference.md)

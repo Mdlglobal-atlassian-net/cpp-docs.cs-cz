@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - is_trivially_copy_constructible
 ms.assetid: 4274cef5-afdd-4f2d-bc83-7562e7944ddf
-ms.openlocfilehash: aa6d6b19ae2bd5d6967c57db61c5697c0c6153e9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f8c4026da424e77b57555dd4c342c9ac7a386591
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62413434"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68447990"
 ---
 # <a name="istriviallycopyconstructible-class"></a>is_trivially_copy_constructible – třída
 
-Testuje, zda je typ má konstruktor kopie triviální.
+Testuje, zda má typ konstruktor triviální kopie.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -26,21 +26,21 @@ struct is_trivially_copy_constructible;
 
 ### <a name="parameters"></a>Parametry
 
-*T*<br/>
+*Š*\
 Typ, na který chcete odeslat dotaz.
 
 ## <a name="remarks"></a>Poznámky
 
-Instance predikátu typu obsahuje hodnotu true, pokud typ *T* je třída, která má triviální kopírovací konstruktor, jinak má hodnotu false.
+Instance predikátu typu má hodnotu true, pokud typ *T* je třída, která má konstruktor triviální kopie, v opačném případě obsahuje hodnotu false.
 
-Kopírovací konstruktor pro třídu *T* je jednoduché, pokud je implicitně deklarován, třída *T* nemá žádné virtuální funkce a virtuálních základních tříd, všechny báze s přímým přístupem třídy *T* mají triviální kopírovací konstruktory tříd všechny nestatické datové členy typu třídy musí mít triviální kopírovací konstruktory a třídy nestatických datových členů typu pole třídy musí mít triviální kopírovací konstruktory.
+Kopírovací konstruktor pro třídu *t* je triviální, pokud je implicitně deklarována, třída *t* nemá žádné virtuální funkce ani virtuální základy, všechny přímé základy třídy *t* mají konstruktory triviální kopie, třídy všech nestatických datových členů. Třída typu má konstruktory triviální kopie a třídy všech nestatických datových členů typu Array třídy mají konstruktory triviálního kopírování.
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** \<type_traits >
+**Hlavička:** \<type_traits >
 
-**Namespace:** std
+**Obor názvů:** std
 
 ## <a name="see-also"></a>Viz také:
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
+[<type_traits>](../standard-library/type-traits.md)

@@ -4,16 +4,16 @@ ms.date: 11/04/2016
 f1_keywords:
 - future/std::is_error_code_enum
 ms.assetid: 84ae4b99-66d2-41ba-9b50-645fcbe14630
-ms.openlocfilehash: 54def287aa6b4bbb06d88006615b5df45b482051
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f2a9f0d6b812b430ba3fca2d39343f912791da6f
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62336580"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68452616"
 ---
 # <a name="iserrorcodeenum-structure"></a>is_error_code_enum – struktura
 
-Specializace, která označuje, že [future_errc](../standard-library/future-enums.md#future_errc) je vhodná pro ukládání [error_code](../standard-library/error-code-class.md).
+Specializace, která označuje, že [future_errc](../standard-library/future-enums.md#future_errc) je vhodný pro ukládání [error_code](../standard-library/error-code-class.md).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -24,11 +24,11 @@ struct is_error_code_enum<Future_errc> : public true_type;
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** \<budoucí >
+**Hlavička:** \<budoucí >
 
-**Namespace:** std
+**Obor názvů:** std
 
 ## <a name="see-also"></a>Viz také:
 
-[Odkaz na soubory hlaviček](../standard-library/cpp-standard-library-header-files.md)<br/>
-[\<Další >](../standard-library/future.md)<br/>
+[Odkazy na hlavičkové soubory](../standard-library/cpp-standard-library-header-files.md)\
+[\<budoucí >](../standard-library/future.md)

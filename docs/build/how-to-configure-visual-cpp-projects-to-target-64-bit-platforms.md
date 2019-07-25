@@ -1,62 +1,62 @@
 ---
-title: 'Postupy: Konfigurace sady Visual Studio C++ projekty se mají cíl 64-Bit, x64 platformy'
+title: 'Postupy: Konfigurace projektů sady C++ Visual Studio pro cílení na 64 platforem x64'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - platforms [C++], 64-bit
 - 64-bit programming [C++], configuring projects
 - project configurations [C++]
 ms.assetid: 2b9ae001-df36-4750-83b2-982145d632ad
-ms.openlocfilehash: a063c2f333a755ab86a4f91c9d14d0c65a6d1414
-ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.openlocfilehash: 762fd5d6ddbb55713cf2fc5e34cb33fb91b08eb9
+ms.sourcegitcommit: ce3393846c86e7905ff0c86e4cd6610476809585
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65446391"
+ms.lasthandoff: 07/25/2019
+ms.locfileid: "68492244"
 ---
-# <a name="how-to-configure-visual-studio-c-projects-to-target-64-bit-x64-platforms"></a>Postupy: Konfigurace sady Visual Studio C++ projekty se mají cíl 64-Bit, x64 platformy
+# <a name="how-to-configure-visual-studio-c-projects-to-target-64-bit-x64-platforms"></a>Postupy: Konfigurace projektů sady C++ Visual Studio pro cílení na 64 platforem x64
 
-Konfigurace projektu v integrovaném vývojovém prostředí sady Visual Studio můžete použít k nastavení aplikací v jazyce C++ pro cílení 64-bit, x64 platformy. Můžete také migrovat nastavení projektu Win32 do 64-bit projektové konfigurace.
+Můžete použít konfigurace projektu v integrovaném vývojovém prostředí sady Visual Studio k C++ nastavení aplikací pro cílení na 64 platforem x64. Můžete také migrovat nastavení projektu Win32 do 64 konfigurace projektu.
 
-### <a name="to-set-up-c-applications-to-target-64-bit-platforms"></a>K nastavení aplikací v jazyce C++ cílit na 64bitové platformy
+### <a name="to-set-up-c-applications-to-target-64-bit-platforms"></a>Nastavení C++ aplikací pro cílení na 64 platforem
 
-1. Otevřete projekt C++, který chcete konfigurovat.
+1. Otevřete C++ projekt, který chcete konfigurovat.
 
-1. Otevření stránek vlastností pro daný projekt. Další informace najdete v tématu [vlastnosti kompilátoru a sestavení nastavte C++ v sadě Visual Studio](working-with-project-properties.md).
-
-   > [!NOTE]
-   > Pro projekty .NET, ujistěte se, že **vlastnosti konfigurace** uzlu nebo jeden z jeho podřízených uzlů, je vybrán v  **\<Projectname > stránky vlastností** dialogové okno; v opačném případě  **Nástroj Configuration Manager** tlačítko zůstane k dispozici.
-
-1. Zvolte **nástroje Configuration Manager** tlačítko Otevřít **nástroje Configuration Manager** dialogové okno.
-
-1. V **aktivní platforma řešení** rozevíracího seznamu, vyberte  **\<nový … >** možnost otevření **nová platforma řešení** dialogové okno.
-
-1. V **zadejte nebo vyberte novou platformu** rozevíracího seznamu, vyberte 64bitová verze cílové platformy.
+1. Otevřete stránky vlastností pro daný projekt. Další informace najdete v tématu [nastavení C++ vlastností kompilátoru a sestavení v sadě Visual Studio](working-with-project-properties.md).
 
    > [!NOTE]
-   > V **nová platforma řešení** dialogové okno, můžete použít **Kopírovat nastavení z:** možnost zkopírovat existující nastavení projektu do nové konfigurace projektu 64-bit.
+   > V případě projektů .NET se ujistěte, že je vybrán uzel **Vlastnosti konfigurace** nebo některý z jeho podřízených uzlů v  **\<dialogovém okně Vlastnosti ProjectName > stránky vlastností** . v opačném případě tlačítko **Configuration Manager** zůstane znemožnit.
 
-1. Zvolte **OK** tlačítko. Platforma, která jste vybrali v předchozím kroku se zobrazí v části **aktivní platforma řešení** v **nástroje Configuration Manager** dialogové okno.
+1. Kliknutím na tlačítko **Configuration Manager** otevřete dialogové okno **Configuration Manager** .
 
-1. Zvolte **Zavřít** tlačítko **nástroje Configuration Manager** dialogové okno pole a klikněte na tlačítko **OK** tlačítko  **\<Projectname > Stránky vlastností** dialogové okno.
+1. V rozevíracím seznamu **Aktivní platforma řešení** vyberte  **\<nový... >** možnost otevření dialogového okna **Nová platforma řešení** .
 
-### <a name="to-copy-win32-project-settings-into-a-64-bit-project-configuration"></a>Kopírování nastavení projektu Win32 do 64-bit projektové konfigurace
+1. V rozevíracím seznamu **typ nebo vyberte Nová platforma** vyberte 64 cílovou platformu.
 
-- Když **nová platforma řešení** dialogové okno je otevřený, když nastavíte projekt, aby mířil 64bitové platformě v **Kopírovat nastavení z:** rozevíracího seznamu vyberte **Win32**. Tato nastavení projektu se automaticky aktualizují na úrovni projektu:
+   > [!NOTE]
+   > V dialogovém okně **Nová platforma řešení** můžete pomocí možnosti **Kopírovat nastavení z** zkopírovat existující nastavení projektu do nové 64 konfigurace projektu.
 
-  - [/MACHINE](reference/machine-specify-target-platform.md) – možnost linkeru nastavená na **/MACHINE:X 64**.
+1. Zvolte **OK** tlačítko. Platforma, kterou jste vybrali v předchozím kroku, se zobrazí v části **aktivní řešení platforma** v dialogovém okně **Configuration Manager** .
 
-  - **Registrovat výstup** je vypnuté. Další informace najdete v tématu [stránky vlastností Linkeru](reference/linker-property-pages.md).
+1. Zvolte tlačítko **Zavřít** v dialogovém okně **Configuration Manager** a pak klikněte na tlačítko   **\<ok v dialogovém okně > stránky vlastností ProjectName** .
 
-  - **Cílové prostředí** je nastavena na **/env x64**. Další informace najdete v tématu [MIDL – stránky vlastností: Obecné](reference/midl-property-pages-general.md).
+### <a name="to-copy-win32-project-settings-into-a-64-bit-project-configuration"></a>Kopírování nastavení projektu Win32 do 64 konfigurace projektu
 
-  - **Ověřit parametry** je vymazána a resetovat na výchozí hodnotu. Další informace najdete v tématu [MIDL – stránky vlastností: Pokročilé](reference/midl-property-pages-advanced.md).
+- Když je dialogové okno **Nová platforma řešení** otevřené, zatímco nastavíte projekt na cílovou platformu 64, v rozevíracím seznamu **Kopírovat nastavení z** vyberte **Win32**. Tato nastavení projektu se automaticky aktualizují na úrovni projektu:
 
-  - Pokud **formát informací o ladění** byl nastaven na **/zi** v konfiguraci projektu Win32, pak bude nastaven **/zi** v konfiguraci projektu 64-bit. Další informace najdete v tématu [/Z7, / zi, /ZI (formát informací o ladění)](reference/z7-zi-zi-debug-information-format.md).
+  - Možnost linkeru [/Machine](reference/machine-specify-target-platform.md) je nastavená na **/Machine: x64**.
+
+  - **Výstup registru** je vypnutý. Další informace najdete v tématu [stránky vlastností linkeru](reference/linker-property-pages.md).
+
+  - **Cílové prostředí** je nastavené na **/ENV x64**. Další informace naleznete v tématu [MIDL – stránky vlastností](reference/midl-property-pages.md).
+
+  - **Ověřte** , že parametry jsou vymazány a obnoveny na výchozí hodnotu. Další informace naleznete v tématu [MIDL – stránky vlastností](reference/midl-property-pages.md).
+
+  - Pokud byl **formát ladicích informací** nastaven na **/Zi** v konfiguraci projektu Win32, pak je v konfiguraci projektu 64 nastavena na **/Zi** . Další informace naleznete v tématu [/Z7,/Zi,/Zi (formát ladicích informací)](reference/z7-zi-zi-debug-information-format.md).
 
   > [!NOTE]
-  > Žádná z těchto vlastností projektu se změní, pokud jsou přepsány na úrovni souboru.
+  > Žádná z těchto vlastností projektu se nezmění, pokud jsou přepsány na úrovni souboru.
 
 ## <a name="see-also"></a>Viz také:
 
-[Konfigurace projektů C++ pro 64bitové, x64 cíle](configuring-programs-for-64-bit-visual-cpp.md)<br/>
+[Konfigurace C++ projektů pro 64 cíle platformy x64](configuring-programs-for-64-bit-visual-cpp.md)<br/>
 [Ladění 64bitových aplikací](/visualstudio/debugger/debug-64-bit-applications)

@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - stdexcept header
 ms.assetid: 495c10b1-1e60-4514-9f8f-7fda11a2f522
-ms.openlocfilehash: 8a8c99f2651d10d4fc2aff413a06256127f32d7d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d4028d57a6e8898f85a37d9731e7e8d4cda19a2f
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62412498"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68453720"
 ---
 # <a name="ltstdexceptgt"></a>&lt;stdexcept&gt;
 
-Definuje několik standardní třídy používané pro generování sestav výjimky. Třídy tvoří hierarchii odvození všechny odvozené od třídy [výjimka](../standard-library/exception-class.md) a zahrnují dva hlavní typy výjimek: logické chyby a chyby za běhu. Logické chyby jsou způsobeny programátor chyby. Tyto jsou odvozeny z logic_error – základní třída a zahrnují:
+Definuje několik standardních tříd používaných pro vytváření sestav výjimek. Třídy tvoří hierarchii odvození vše odvozenou z [výjimky](../standard-library/exception-class.md) třídy a zahrnují dva obecné typy výjimek: logické chyby a běhové chyby. Logické chyby způsobují chyby programátora. Jsou odvozeny ze základní třídy logic_error a zahrnují:
 
 - `domain_error`
 
@@ -25,7 +25,7 @@ Definuje několik standardní třídy používané pro generování sestav výji
 
 - `out_of_range`
 
-Z důvodu chyby v knihovně funkce nebo v systému za běhu dojít k chybám za běhu. Tyto jsou odvozeny z runtime_error – základní třída a zahrnují:
+K chybám za běhu dochází z důvodu chyb v knihovně funkcí nebo v systému za běhu. Jsou odvozeny ze základní třídy runtime_error a zahrnují:
 
 - `overflow_error`
 
@@ -37,17 +37,17 @@ Z důvodu chyby v knihovně funkce nebo v systému za běhu dojít k chybám za 
 
 |Třída|Popis|
 |-|-|
-|[domain_error – třída](../standard-library/domain-error-class.md)|Tato třída slouží jako základní třída pro všechny výjimky vyvolané domény chybové zprávě.|
-|[invalid_argument – třída](../standard-library/invalid-argument-class.md)|Tato třída slouží jako základní třída pro všechny výjimky vyvolané oznamuje neplatný argument.|
-|[length_error – třída](../standard-library/length-error-class.md)|Tato třída slouží jako základní třída pro všechny výjimky vyvolané hlášení pokus o generování příliš dlouhý a zadat objekt.|
-|[logic_error – třída](../standard-library/logic-error-class.md)|Tato třída slouží jako základní třída pro všechny výjimky vyvolané pro hlášení chyb pravděpodobně zjistitelná před spuštěním programu, jako jsou porušení předběžné podmínky logické.|
-|[out_of_range – třída](../standard-library/out-of-range-class.md)|Tato třída slouží jako základní třída pro všechny výjimky vyvolané argument, který je mimo platný rozsah hlášení.|
-|[overflow_error – třída](../standard-library/overflow-error-class.md)|Tato třída slouží jako základní třída pro všechny výjimky vyvolané hlášení aritmetické přetečení.|
-|[range_error – třída](../standard-library/range-error-class.md)|Tato třída slouží jako základní třída pro všechny výjimky vyvolané rozsah chybové zprávě.|
-|[runtime_error – třída](../standard-library/runtime-error-class.md)|Tato třída slouží jako základní třída pro všechny výjimky vyvolané pro hlášení chyb pravděpodobně zjistitelná jenom v případě, že se program spustí.|
-|[underflow_error – třída](../standard-library/underflow-error-class.md)|Tato třída slouží jako základní třída pro všechny výjimky vyvolané hlásit k podtečení aritmetické.|
+|[domain_error – třída](../standard-library/domain-error-class.md)|Třída slouží jako základní třída pro všechny výjimky vyvolané k nahlášení chyby domény.|
+|[invalid_argument – třída](../standard-library/invalid-argument-class.md)|Třída slouží jako základní třída pro všechny výjimky vyvolané k nahlášení neplatného argumentu.|
+|[length_error – třída](../standard-library/length-error-class.md)|Třída slouží jako základní třída pro všechny výjimky vyvolané pro hlášení pokusu o vygenerování objektu, který je příliš dlouhý.|
+|[logic_error – třída](../standard-library/logic-error-class.md)|Třída slouží jako základní třída pro všechny výjimky vyvolané k nahlášení chyb, které byly zjištěny před provedením programu, například porušení logických podmínek.|
+|[out_of_range – třída](../standard-library/out-of-range-class.md)|Třída slouží jako základní třída pro všechny výjimky vyvolané pro hlášení argumentu, který je mimo platný rozsah.|
+|[overflow_error – třída](../standard-library/overflow-error-class.md)|Třída slouží jako základní třída pro všechny výjimky vyvolané k nahlášení aritmetického přetečení.|
+|[range_error – třída](../standard-library/range-error-class.md)|Třída slouží jako základní třída pro všechny výjimky vyvolané k nahlášení chyby rozsahu.|
+|[runtime_error – třída](../standard-library/runtime-error-class.md)|Třída slouží jako základní třída pro všechny výjimky vyvolané k ohlášení chyb, které jsou pravděpodobně zjišťovány pouze v případě, že je program proveden.|
+|[underflow_error – třída](../standard-library/underflow-error-class.md)|Třída slouží jako základní třída pro všechny výjimky vyvolané pro hlášení aritmetického podtečení.|
 
 ## <a name="see-also"></a>Viz také:
 
-[Odkaz na soubory hlaviček](../standard-library/cpp-standard-library-header-files.md)<br/>
-[Bezpečný přístup z více vláken ve standardní knihovně C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[Odkazy na hlavičkové soubory](../standard-library/cpp-standard-library-header-files.md)\
+[Bezpečný přístup z více vláken ve standardní knihovně C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)

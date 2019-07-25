@@ -6,44 +6,44 @@ f1_keywords:
 helpviewer_keywords:
 - hash_compare class
 ms.assetid: d502bb59-de57-4585-beb9-00e3a998c0af
-ms.openlocfilehash: f535122b67f854b8b204664b829ce9da5fe3c6a6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 399b412c41128f513cf01d1e034bad2bbc5ef79f
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62159818"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68448810"
 ---
 # <a name="hashcompare-class"></a>hash_compare – třída
 
-Třída šablony popisuje objekt, který můžete použít některou z hodnot hash asociativní kontejnery – hash_map – hash_multimap, hash_set, nebo hash_multiset – jako výchozí **osobnostní rysy** parametr objektu pořadí a hodnoty hash, který obsahují elementy .
+Třída šablony popisuje objekt, který může být použit jakýmkoli z asociativních kontejnerů hash – hash_map, hash_multimap, hash_set nebo hash_multiset – **jako výchozí objekt** parametru pro řazení a hash prvků, které obsahují.
 
 ## <a name="syntax"></a>Syntaxe
 
-hash_compare – třída {osobnostní rysy comp; veřejného: const bucket_size – size_t = 4; const size_t min_buckets = 8; hash_compare() hash_compare – (před vlastností); size_t operator() (const Key & klíč) const; bool operator() (const Key & klíč1, const Key & key2) const;};
+hash_compare třídy {resize_ts; Public: const bucket_size = 4; const size_t min_buckets = 8; hash_compare (); hash_compare (vlastnosti před); size_t operátor () (const Key & Key) const; bool operator () (const Key & klíč1, const Key & key2) const;};
 
 ## <a name="remarks"></a>Poznámky
 
-Každá hodnota hash asociativní kontejner ukládá objekt hash vlastností typu `Traits` (parametr šablony). Třídu lze odvodit z specializací hash_compare – pro selektivní přepsání některých funkce a objekty, nebo můžete zadat vlastní verzi této třídy, pokud jsou splněné určité minimální požadavky na. Konkrétně pro hash_comp objektu typu `hash_compare<Key, Traits>`, podle výše uvedených kontejnerů se vyžaduje následující chování:
+Každý asociativní kontejner hash ukládá objekt zatřiďovacích vlastností typu `Traits` (parametr šablony). Třídu můžete odvodit od specializace hash_compare pro selektivní přepsání určitých funkcí a objektů, nebo můžete předat vlastní verzi této třídy, pokud splňujete určité minimální požadavky. Konkrétně pro objekt hash_comp typu `hash_compare<Key, Traits>`je vyžadováno následující chování výše uvedenými kontejnery:
 
-- Pro všechny hodnoty `key` typu `Key`, volání **hash_comp**(`key`) slouží jako funkce hash, která získá distribuci hodnot typu `size_t`. Funkce poskytnuté hash_compare – vrátí `key`.
+- Pro všechny hodnoty `key` typu `Key`volání **hash_comp**(`key`) slouží jako funkce hash, která poskytuje distribuci hodnot typu `size_t`. Funkce poskytnutá funkcí hash_compare vrací `key`.
 
-- Jakoukoli hodnotu `key1` typu `Key` , která předchází `key2` v pořadí a má stejnou hodnotu (hodnoty vrácené funkce hash), hodnoty hash **hash_comp**(`key2`, `key1`) má hodnotu false. Funkce musí uložit celkem řazení u hodnot typu `Key`. Funkce poskytnuté hash_compare – vrátí *kompozice*(`key2`, `key1`) `,` kde *kompozice* je uložený objekt typu `Traits` , můžete určit, kdy jste Vytvořte objekt hash_comp. Pro výchozí `Traits` typ parametru `less<Key>`, klíče řazení nikdy snížení hodnoty.
+- Pro libovolnou hodnotu `key1` typu `Key` , která předchází `key2` v sekvenci a má stejnou hodnotu hash (hodnota vrácená funkcí hash), **hash_comp**(`key2`, `key1`) je false. Funkce musí stanovit celkové řazení hodnot typu `Key`. Funkce poskytnutá funkcí hash_compare vrací *comp*(`key2`, `key1`) `,` , kde *comp* je uložený objekt typu `Traits` , který můžete zadat při vytváření objektu hash_comp. Pro výchozí `Traits` typ `less<Key>`parametru se klíče řazení nikdy nesnižují.
 
-- Celočíselná konstanta `bucket_size` určuje střední počet prvků na "kbelík" (zatřiďovací tabulku položka), který se kontejner by měl která nepřekročí. Musí být větší než nula. Hodnota zadaná pomocí hash_compare – je 4.
+- Celočíselná konstanta `bucket_size` určuje průměrný počet prvků na hodnotu "interval" (hodnota hash-Table Entry), které by měl kontejner zkusit přesáhnout. Musí být větší než nula. Hodnota zadaná v hash_compare je 4.
 
-- Celočíselná konstanta `min_buckets` Určuje minimální počet kbelíků udržovat v zatřiďovací tabulce. Musí být mocninou čísla 2 a větší než nula. Hodnota zadaná pomocí hash_compare – je 8.
+- Celočíselná konstanta `min_buckets` určuje minimální počet intervalů, které se mají zachovat v zatřiďovací tabulce. Musí to být Mocnina dvou a větší než nula. Hodnota zadaná v hash_compare je 8.
 
 ## <a name="example"></a>Příklad
 
-Viz příklady pro [hash_map::hash_map](../standard-library/hash-map-class.md#hash_map), [hash_multimap::hash_multimap](../standard-library/hash-multimap-class.md#hash_multimap), [hash_set::hash_set](../standard-library/hash-set-class.md#hash_set), a [hash_multiset::hash_multiset](../standard-library/hash-multiset-class.md#hash_multiset), příklady toho, jak deklarace a používání hash_compare –.
+Příklady, jak deklarovat a používat hash_set, naleznete v tématu Příklady pro [hash_map:: hash_map](../standard-library/hash-map-class.md#hash_map), [hash_multimap:: hash_multimap](../standard-library/hash-multimap-class.md#hash_multimap), [hash_set:: hash_multiset](../standard-library/hash-set-class.md#hash_set)a [hash_multiset:: hash_compare](../standard-library/hash-multiset-class.md#hash_multiset).
 
 ## <a name="requirements"></a>Požadavky
 
 **Header:** \<hash_map>
 
-**Namespace:** stdext
+**Obor názvů:** stdext
 
 ## <a name="see-also"></a>Viz také:
 
-[Bezpečný přístup z více vláken ve standardní knihovně C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
-[Standardní knihovna C++ – referenční dokumentace](../standard-library/cpp-standard-library-reference.md)<br/>
+[Bezpečnost vlákna ve C++ standardní knihovně](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[Standardní knihovna C++ – referenční dokumentace](../standard-library/cpp-standard-library-reference.md)

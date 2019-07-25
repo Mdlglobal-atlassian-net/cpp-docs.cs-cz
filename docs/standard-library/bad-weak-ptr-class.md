@@ -7,12 +7,12 @@ helpviewer_keywords:
 - bad_weak_ptr
 - bad_weak_ptr class
 ms.assetid: a09336d5-7237-4480-ab6b-3787e0e6025e
-ms.openlocfilehash: 8ea29f12a8a86bd6b58c5051645182d69ff43389
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: e1d536eed6727a5d1e828d358aa6b64521d748b8
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68246188"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68454270"
 ---
 # <a name="badweakptr-class"></a>bad_weak_ptr – třída
 
@@ -30,7 +30,7 @@ class bad_weak_ptr : public std::exception
 
 ## <a name="remarks"></a>Poznámky
 
-Tato třída popisuje výjimku, která mohou být vyvolány z [shared_ptr – třída](../standard-library/shared-ptr-class.md) konstruktor, který přebírá argument typu [weak_ptr – třída](../standard-library/weak-ptr-class.md). Členská funkce `what` vrátí `"bad_weak_ptr"`.
+Třída popisuje výjimku, kterou lze vyvolat z konstruktoru [třídy shared_ptr](../standard-library/shared-ptr-class.md) , který přebírá argument typu [třídy weak_ptr](../standard-library/weak-ptr-class.md). `what` Vrátí`"bad_weak_ptr"`členské funkce.
 
 ## <a name="example"></a>Příklad
 
@@ -72,4 +72,4 @@ bad weak pointer
 
 ## <a name="see-also"></a>Viz také:
 
-[weak_ptr – třída](../standard-library/weak-ptr-class.md)<br/>
+[weak_ptr – třída](../standard-library/weak-ptr-class.md)

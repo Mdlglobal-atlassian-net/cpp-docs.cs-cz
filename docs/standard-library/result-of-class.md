@@ -10,16 +10,16 @@ helpviewer_keywords:
 - std::result_of_t
 - std::result_of::type
 ms.assetid: 5374a096-4b4a-4712-aa97-6852c5cdd6be
-ms.openlocfilehash: f60a3ef6528da33fd1117fc940e961e9fe0987df
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5a3265cfe4b2629bf02925ea6e3eeb0c4acb1e0e
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62185903"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68451217"
 ---
 # <a name="resultof-class"></a>result_of – třída
 
-Určuje návratový typ volatelného typu, který přijímá zadanými typy argumentu. Přidáno v C ++ 14, zastaralé v C ++ 17.
+Určuje návratový typ typu volat, který přebírá zadané typy argumentů. Přidáno v C++ 14, zastaralé v C++ 17.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -37,23 +37,23 @@ template<class T>
 
 ### <a name="parameters"></a>Parametry
 
-*Fn*<br/>
-Volatelný typ dotazu.
+*VistaScan*\
+Typ, který se má volat pro dotaz
 
-*ArgTypes*<br/>
-Typy seznamu argumentů na volatelný typ dotazu.
+*ArgTypes*\
+Typy seznamu argumentů pro dotaz na typ, který se má volat
 
 ## <a name="remarks"></a>Poznámky
 
-Pomocí této šablony můžete určit výsledný typ v době kompilace `Fn`(`ArgTypes`), kde *Fn* je volatelný typ, odkaz na funkci nebo odkaz na volatelný typ vyvolán pomocí seznam argumentů typů v  *ArgTypes*. `type` Názvy výsledný typ členů třídy šablony `decltype(std::invoke(declval<Fn>(), declval<ArgTypes>()...))` Pokud nevyhodnoceném výrazu `std::invoke(declval<Fn>(), declval<ArgTypes>()...)` ve správném formátu. V opačném případě šablony třídy nemá žádný člen `type`. Typ *Fn* a všechny typy v balíček parametrů *ArgTypes* musí být kompletními typy **void**, nebo pole s neznámým rozsahem. Nepoužívané nahrazený [invoke_result](invoke-result-class.md) v C ++ 17.
+Pomocí této šablony lze určit v `Fn`době kompilace typ výsledku (`ArgTypes`), kde *FN* je typ, který lze volat, odkaz na funkci nebo odkaz na typ volání, vyvolán pomocí seznamu argumentů typů v *ArgTypes*. Člen třídy šablony pojmenovává `decltype(std::invoke(declval<Fn>(), declval<ArgTypes>()...))` typ výsledku, pokud je vyhodnocený výraz `std::invoke(declval<Fn>(), declval<ArgTypes>()...)` správně vytvořen. `type` V opačném případě třída šablony nemá žádné `type`členy. Typ *FN* a všechny typy v sadě parametrů *ArgTypes* musí být úplné typy, **void**nebo pole neznámého typu Bound. Zastaralé namísto [invoke_result](invoke-result-class.md) v c++ 17.
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** \<type_traits >
+**Hlavička:** \<type_traits >
 
-**Namespace:** std
+**Obor názvů:** std
 
 ## <a name="see-also"></a>Viz také:
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
-[Třída invoke_result](invoke-result-class.md)<br/>
+[< type_traits >](../standard-library/type-traits.md)\
+[invoke_result – třída](invoke-result-class.md)

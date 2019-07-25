@@ -1,5 +1,5 @@
 ---
-title: '&lt;alokátory&gt; makra'
+title: '&lt;&gt; makra přidělování'
 ms.date: 11/04/2016
 f1_keywords:
 - allocators/std::ALLOCATOR_DECL
@@ -14,23 +14,23 @@ helpviewer_keywords:
 - std::CACHE_FREELIST [C++]
 - std::CACHE_SUBALLOC [C++]
 - std::SYNC_DEFAULT [C++]
-ms.openlocfilehash: 736e587a41fa1006801dcf6930b33ee434c9a5ea
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 10cd1d51c2cd6053dcbaa0f5bf1548f80ed01659
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62179208"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68448230"
 ---
-# <a name="ltallocatorsgt-macros"></a>&lt;alokátory&gt; makra
+# <a name="ltallocatorsgt-macros"></a>&lt;&gt; makra přidělování
 
 ||||
 |-|-|-|
 |[ALLOCATOR_DECL](#allocator_decl)|[CACHE_CHUNKLIST](#cache_chunklist)|[CACHE_FREELIST](#cache_freelist)|
 |[CACHE_SUBALLOC](#cache_suballoc)|[SYNC_DEFAULT](#sync_default)|
 
-## <a name="allocator_decl"></a>  ALLOCATOR_DECL
+## <a name="allocator_decl"></a>ALLOCATOR_DECL
 
-Vrací alokátoru třídy šablony.
+Poskytne třídu šablony pro přidělování.
 
 ```cpp
 #define ALLOCATOR_DECL(cache, sync, name) <alloc_template>
@@ -38,9 +38,9 @@ Vrací alokátoru třídy šablony.
 
 ### <a name="remarks"></a>Poznámky
 
-Makro provede definice šablony `template <class Type> class name {.....}` a specializace `template <> class name<void> {.....}` které společně definují třídu šablony alokátoru, který používá filtr synchronizace `sync` a mezipaměti typu `cache`.
+Makro vytvoří definici `template <class Type> class name {.....}` šablony a specializaci `template <> class name<void> {.....}` , která společně definuje třídu šablony pro přidělování, která používá filtr `sync` synchronizace a mezipaměť typu `cache`.
 
-Kompilátory, které můžete zkompilovat obnovení vazby výsledný definice šablony vypadá například takto:
+Pro kompilátory, které mohou kompilovat opětovnou vazby, výsledná definice šablony vypadá takto:
 
 ```cpp
 struct rebind
@@ -49,7 +49,7 @@ struct rebind
    };
 ```
 
-Kompilátory, které nelze zkompilovat obnovení vazby výsledný definice šablony vypadá například takto:
+Pro kompilátory, které nemohou kompilovat opětovnou vazby výsledné definice šablony, vypadá takto:
 
 ```cpp
 template <class Type<class name
@@ -68,9 +68,9 @@ public:
 };
 ```
 
-## <a name="cache_chunklist"></a>  CACHE_CHUNKLIST –
+## <a name="cache_chunklist"></a>CACHE_CHUNKLIST
 
-Vrací `stdext::allocators::cache_chunklist<sizeof(Type)>`.
+Výnosy `stdext::allocators::cache_chunklist<sizeof(Type)>`.
 
 ```cpp
 #define CACHE_CHUNKLIST <cache_class>
@@ -78,9 +78,9 @@ Vrací `stdext::allocators::cache_chunklist<sizeof(Type)>`.
 
 ### <a name="remarks"></a>Poznámky
 
-## <a name="cache_freelist"></a>  CACHE_FREELIST –
+## <a name="cache_freelist"></a>CACHE_FREELIST
 
-Vrací `stdext::allocators::cache_freelist<sizeof(Type), max>`.
+Výnosy `stdext::allocators::cache_freelist<sizeof(Type), max>`.
 
 ```cpp
 #define CACHE_FREELIST(max) <cache_class>
@@ -90,7 +90,7 @@ Vrací `stdext::allocators::cache_freelist<sizeof(Type), max>`.
 
 ## <a name="cache_suballoc"></a>  CACHE_SUBALLOC
 
-Vrací `stdext::allocators::cache_suballoc<sizeof(Type)>`.
+Výnosy `stdext::allocators::cache_suballoc<sizeof(Type)>`.
 
 ```cpp
 #define CACHE_SUBALLOC <cache_class>
@@ -98,9 +98,9 @@ Vrací `stdext::allocators::cache_suballoc<sizeof(Type)>`.
 
 ### <a name="remarks"></a>Poznámky
 
-## <a name="sync_default"></a>  SYNC_DEFAULT
+## <a name="sync_default"></a>SYNC_DEFAULT
 
-Vrací filtr synchronizace.
+Vypočítá filtr synchronizace.
 
 ```cpp
 #define SYNC_DEFAULT <sync_template>
@@ -108,8 +108,8 @@ Vrací filtr synchronizace.
 
 ### <a name="remarks"></a>Poznámky
 
-Pokud kompilátor podporuje kompilace s jedním vláknem i vícevláknové aplikace, pro aplikace s jedním vláknem makro provede `stdext::allocators::sync_none`; ve všech ostatních případech bude vrácen `stdext::allocators::sync_shared`.
+Pokud kompilátor podporuje kompilování vícevláknové i vícevláknové aplikace, pro aplikace s jedním vláknem `stdext::allocators::sync_none` `stdext::allocators::sync_shared`vydává makro; ve všech ostatních případech to vede.
 
 ## <a name="see-also"></a>Viz také:
 
-[\<allocators>](../standard-library/allocators-header.md)<br/>
+[\<allocators>](../standard-library/allocators-header.md)

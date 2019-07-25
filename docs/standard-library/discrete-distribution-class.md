@@ -23,16 +23,16 @@ helpviewer_keywords:
 - std::discrete_distribution [C++], param_type
 - std::discrete_distribution [C++], param_type
 ms.assetid: 8c8ba8f8-c06f-4f07-b354-f53950142fcf
-ms.openlocfilehash: 7ad375c14e9034a55d280a2927d6ef00f098ddbc
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ce668ebfdafc4a53bfc71ecf1f2fa76abb1c7532
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62413837"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68454383"
 ---
 # <a name="discretedistribution-class"></a>discrete_distribution – třída
 
-Generuje rozdělení samostatného celého čísla, která má šířku uniform intervalech pomocí jednotného pravděpodobnost v každém intervalu.
+Vygeneruje diskrétní rozdělení celého čísla, které má v každém intervalu jednotnou šířku a jednotnou pravděpodobnost.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -72,23 +72,23 @@ public:
 
 ### <a name="parameters"></a>Parametry
 
-*IntType*<br/>
-Typ výsledku celého čísla, výchozí hodnota je **int**. Možné typy, najdete v části [ \<náhodné >](../standard-library/random.md).
+*IntType*\
+Celočíselný typ výsledku, výchozí hodnota je **int**. Možné typy naleznete v tématu [ \<Random >](../standard-library/random.md).
 
 ## <a name="remarks"></a>Poznámky
 
-Toto rozdělení vzorkování má jednotné šířkou intervalech pomocí jednotného pravděpodobnost v každém intervalu. Informace o dalších vzorkování distribucích najdete v tématu [piecewise_linear_distribution – třída](../standard-library/piecewise-linear-distribution-class.md) a [piecewise_constant_distribution – třída](../standard-library/piecewise-constant-distribution-class.md).
+Tato distribuce vzorkování má v každém intervalu jednotnou šířku jako intervaly s jednotnou pravděpodobností. Informace o dalších distribucích vzorkování naleznete v tématu Třída [piecewise_linear_distribution](../standard-library/piecewise-linear-distribution-class.md) a [Třída piecewise_constant_distribution](../standard-library/piecewise-constant-distribution-class.md).
 
-Následující tabulka odkazuje na články týkající se jednotlivých členů:
+Následující tabulka obsahuje odkazy na články týkající se jednotlivých členů:
 
 |||
 |-|-|
 |[discrete_distribution](#discrete_distribution)|`discrete_distribution::param`|
 |`discrete_distribution::operator()`|[param_type](#param_type)|
 
-Funkce vlastností `vector<double> probabilities()` vrátí jednotlivé pravděpodobnosti pro každé celé číslo, vygeneruje.
+Funkce `vector<double> probabilities()` Property vrátí jednotlivé pravděpodobnosti pro každé vygenerované celé číslo.
 
-Další informace o distribuci třídy a jejich členy, naleznete v tématu [ \<náhodné >](../standard-library/random.md).
+Další informace o třídách distribuce a jejich členech naleznete v tématu [ \<Random >](../standard-library/random.md).
 
 ## <a name="example"></a>Příklad
 
@@ -171,13 +171,13 @@ Distribution for 100 samples:
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** \<náhodné >
+**Hlavička:** \<náhodné >
 
-**Namespace:** std
+**Obor názvů:** std
 
-## <a name="discrete_distribution"></a>  discrete_distribution::discrete_distribution
+## <a name="discrete_distribution"></a>discrete_distribution::d iscrete_distribution
 
-Vytvoří rozložení.
+Sestaví rozdělení.
 
 ```cpp
 // default constructor
@@ -200,48 +200,48 @@ explicit discrete_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>Parametry
 
-*firstW*<br/>
-První iterátor v seznamu, ze které k vytvoření distribuce.
+*firstW*\
+První iterátor v seznamu, ze kterého se má vytvořit distribuce.
 
-*lastW*<br/>
-Poslední iterátor v seznamu, ze kterého se má vytvořit distribuce (inkluzivní protože iterátorů, použijte prázdný element end).
+*lastW*\
+Poslední iterátor v seznamu, ze kterého se má sestavit rozdělení (nezahrnuje se, protože iterátory používají prázdný element pro konec).
 
-*weightlist*<br/>
-[Initializer_list](../cpp/initializers.md) odkud k vytvoření distribuce.
+*weightlist*\
+[Initializer_list](../cpp/initializers.md) , ze kterého se má sestavit rozdělení.
 
-*Počet*<br/>
-Počet prvků v rozsahu distribuce. Pokud `count==0`, ekvivalentní výchozí konstruktor (generuje vždy nula).
+*výpočtu*\
+Počet prvků v rozsahu distribuce. IF `count==0`, ekvivalent k výchozímu konstruktoru (vždy generuje nulu).
 
-*Nízká*<br/>
-Nejnižší hodnotu v rozsahu distribuce.
+*slab*\
+Nejnižší hodnota v rozsahu distribuce.
 
-*Vysoká*<br/>
-Nejvyšší číslo v rozsahu distribuce.
+*maximální*\
+Nejvyšší hodnota v rozsahu distribuce.
 
-*weightfunc*<br/>
-Objekt, který představuje funkci pravděpodobnosti pro distribuci. Parametr a vrácená hodnota musí být převeditelný na **double**.
+*weightfunc*\
+Objekt představující funkci pravděpodobnosti pro rozdělení. Parametr i návratová hodnota musí být převoditelné na **typ Double**.
 
-*Parametr*<br/>
-`param_type` Struktura používaná k vytvoření distribuce.
+*parametr*\
+`param_type` Struktura použitá k sestavení distribuce.
 
 ### <a name="remarks"></a>Poznámky
 
-Výchozí konstruktor vytvoří objekt, jehož hodnota pravděpodobnosti uložené má jeden prvek s hodnotou 1. Výsledkem bude distribuci, která generuje vždy nula.
+Výchozí konstruktor vytvoří objekt, jehož uložená hodnota pravděpodobnosti má jeden prvek s hodnotou 1. Výsledkem bude distribuce, která vždy vygeneruje nulu.
 
-Konstruktor rozsah iterátoru, který obsahuje parametry *firstW* a *lastW* vytvoří objekt distribuce pomocí hodnot váhu převzetí interval pořadí z iterátory [ *firstW*, *lastW*).
+Konstruktor rozsahu iterátoru, který má parametry *firstW* a *lastW* , vytvoří distribuční objekt pomocí hodnot váhy převzatých z iterátorů v intervalu sekvence [*firstW*, *lastW*).
 
-Inicializátor seznamu konstruktor, který má *weightlist* parametr vytvoří objekt distribuce s váhy ze seznamu inicializátorů *weightlist*.
+Konstruktor seznamu inicializátorů, který má parametr *weightlist* , vytvoří distribuční objekt s závaží ze seznamu inicializátorů *weightlist*.
 
-Konstruktor, který má *počet*, *nízké*, *vysokou*, a *weightfunc* na základě parametrů konstruktorů distribuce objekt inicializován v těchto pravidlech:
+Konstruktor, který má parametry *Count*, *low*, *High*a *weightfunc* , vytvoří objekt distribuce inicializovaný na základě těchto pravidel:
 
-- Pokud *počet* < 1, **n** = 1 a proto je ekvivalentní výchozí konstruktor, generuje se vždy nula.
-- Pokud *počet* > 0, **n** = *počet*. K dispozici **d** = (*vysokou* - *nízké*) / **n** je větší než nula, pomocí **d** jednotné podrozsahů, každý váha je přiřazena následujícím způsobem: `weight[k] = weightfunc(x)`, kde **x** = *nízké* + **k**  *  **d** + **d** / 2, pro **k** = 0,..., **n** - 1.
+- Pokud je *počet* < 1, **n** = 1 a jako takový je ekvivalentní výchozímu konstruktoru, vždy vygeneruje nula.
+- Pokud je *počet* > 0, **n** = *počet*. Poskytnutá hodnota **d** = (*Vysoká* - *Nízká*)/ **n** je větší než nula **, přičemž používá v** nich rovnoměrné dílčí rozsahy, každá váha je `weight[k] = weightfunc(x)`přiřazena následujícím způsobem:, kde **x** = *Nízká*  +  **k**     d d/2, pro k = 0,..., n-1. +  * 
 
-Konstruktor, který má `param_type` parametr *parametr* vytvoří objekt distribuce pomocí *parametr* jako struktury uloženými parametry.
+Konstruktor, který má `param_type` parametr *parametr* , vytvoří distribuční objekt jako uloženou strukturu parametrů pomocí *parametr* .
 
-## <a name="param_type"></a>  discrete_distribution::param_type
+## <a name="param_type"></a>discrete_distribution::p aram_type
 
-Obsahuje všechny parametry distribuce.
+Ukládá všechny parametry distribuce.
 
 ```cpp
 struct param_type {
@@ -268,34 +268,34 @@ struct param_type {
 
 ### <a name="parameters"></a>Parametry
 
-*firstW*<br/>
-První iterátor v seznamu, ze které k vytvoření distribuce.
+*firstW*\
+První iterátor v seznamu, ze kterého se má vytvořit distribuce.
 
-*lastW*<br/>
-Poslední iterátor v seznamu, ze kterého se má vytvořit distribuce (inkluzivní protože iterátorů, použijte prázdný element end).
+*lastW*\
+Poslední iterátor v seznamu, ze kterého se má sestavit rozdělení (nezahrnuje se, protože iterátory používají prázdný element pro konec).
 
-*weightlist*<br/>
-[Initializer_list](../cpp/initializers.md) odkud k vytvoření distribuce.
+*weightlist*\
+[Initializer_list](../cpp/initializers.md) , ze kterého se má sestavit rozdělení.
 
-*Počet*<br/>
-Počet prvků v rozsahu distribuce. Pokud *počet* je 0, jedná se o ekvivalent výchozího konstruktoru (generuje vždy nula).
+*výpočtu*\
+Počet prvků v rozsahu distribuce. Pokud je *počet* 0, jedná se o ekvivalent výchozího konstruktoru (vždy generuje nulu).
 
-*Nízká*<br/>
-Nejnižší hodnotu v rozsahu distribuce.
+*slab*\
+Nejnižší hodnota v rozsahu distribuce.
 
-*Vysoká*<br/>
-Nejvyšší číslo v rozsahu distribuce.
+*maximální*\
+Nejvyšší hodnota v rozsahu distribuce.
 
-*weightfunc*<br/>
-Objekt, který představuje funkci pravděpodobnosti pro distribuci. Parametr a vrácená hodnota musí být převeditelný na **double**.
+*weightfunc*\
+Objekt představující funkci pravděpodobnosti pro rozdělení. Parametr i návratová hodnota musí být převoditelné na **typ Double**.
 
-*doprava*<br/>
-`param_type` Objekt k porovnání s tím.
+*Kliknutím*\
+`param_type` Objekt, který se má porovnat.
 
 ### <a name="remarks"></a>Poznámky
 
-Tento balíček parametrů může být předán `operator()` ke generování návratovou hodnotu.
+Tento balíček parametrů lze předat `operator()` pro vygenerování návratové hodnoty.
 
 ## <a name="see-also"></a>Viz také:
 
-[\<náhodné >](../standard-library/random.md)<br/>
+[\<náhodné >](../standard-library/random.md)

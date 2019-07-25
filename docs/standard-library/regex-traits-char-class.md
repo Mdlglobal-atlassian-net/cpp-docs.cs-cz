@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - regex_traits<char> class
 ms.assetid: ce95ebcd-3687-4ad5-bf1d-b89fdc633675
-ms.openlocfilehash: 6a685dfa00b49ecfa7c2da2a8618b49cbc38cc01
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d359e8dcc2778c6b312b24fea93f96c3c18f9f05
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62369368"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68451525"
 ---
 # <a name="regextraitsltchargt-class"></a>regex_traits&lt;char&gt; Class
 
-Specializace `regex_traits` pro **char**.
+Specializace pro char  `regex_traits`
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -26,22 +26,22 @@ class regex_traits<char>
 
 ## <a name="remarks"></a>Poznámky
 
-Explicitní specializace šablony třídy je třída [regex_traits](../standard-library/regex-traits-class.md) pro prvky typu **char** (tak, aby ji můžete využít výhod funkce knihovny, které pracují s objekty tohoto typu).
+Třída je explicitní specializace třídy šablony [regex_traits](../standard-library/regex-traits-class.md) pro prvky typu **char** (tak, aby mohla využít výhod funkcí knihovny, které pracují s objekty tohoto typu).
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** \<regulární výraz >
+**Hlavička:** \<> regulárního výrazu
 
-**Namespace:** std
+**Obor názvů:** std
 
 ## <a name="see-also"></a>Viz také:
 
-[\<regex>](../standard-library/regex.md)<br/>
-[regex_constants – třída](../standard-library/regex-constants-class.md)<br/>
-[regex_error – třída](../standard-library/regex-error-class.md)<br/>
-[\<regulární výraz > funkce](../standard-library/regex-functions.md)<br/>
-[regex_iterator – třída](../standard-library/regex-iterator-class.md)<br/>
-[\<regulární výraz > operátory](../standard-library/regex-operators.md)<br/>
-[regex_token_iterator – třída](../standard-library/regex-token-iterator-class.md)<br/>
-[regex_traits – třída](../standard-library/regex-traits-class.md)<br/>
-[\<regulární výraz > – Definice TypeDef](../standard-library/regex-typedefs.md)<br/>
+[\<regex>](../standard-library/regex.md)\
+[regex_constants – třída](../standard-library/regex-constants-class.md)\
+[regex_error – třída](../standard-library/regex-error-class.md)\
+[\<regulární funkce >](../standard-library/regex-functions.md)\
+[regex_iterator – třída](../standard-library/regex-iterator-class.md)\
+[\<operátory > Regex](../standard-library/regex-operators.md)\
+[regex_token_iterator – třída](../standard-library/regex-token-iterator-class.md)\
+[regex_traits – třída](../standard-library/regex-traits-class.md)\
+[\<Regex > definice typedef](../standard-library/regex-typedefs.md)

@@ -1,5 +1,5 @@
 ---
-title: '&lt;type_traits&gt; funkce'
+title: '&lt;funkce&gt; type_traits'
 ms.date: 11/04/2016
 f1_keywords:
 - type_traits/std::is_assignable
@@ -24,14 +24,14 @@ helpviewer_keywords:
 - std::is_trivially_copy_assignable
 - std::is_trivially_move_assignable
 - std::is_trivially_move_constructible
-ms.openlocfilehash: d607e68bd61a4f9aa6c00ab66c5ded3ecd508082
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 48ca51d56994f3d487af6744801acedf5c6cc79c
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68241510"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68447034"
 ---
-# <a name="lttypetraitsgt-functions"></a>&lt;type_traits&gt; funkce
+# <a name="lttypetraitsgt-functions"></a>&lt;funkce&gt; type_traits
 
 ||||
 |-|-|-|
@@ -41,9 +41,9 @@ ms.locfileid: "68241510"
 |[is_swappable](#is_swappable)|[is_swappable_with](#is_swappable_with)|[is_trivially_copy_assignable](#is_trivially_copy_assignable)|
 |[is_trivially_move_assignable](#is_trivially_move_assignable)|[is_trivially_move_constructible](#is_trivially_move_constructible)|
 
-## <a name="is_assignable"></a>  is_assignable –
+## <a name="is_assignable"></a>is_assignable
 
-Testuje, zda je hodnota *z* typ lze přiřadit k *k* typu.
+Testuje, zda lze *k typu přiřadit* hodnotu *z* typu.
 
 ```cpp
 template <class To, class From>
@@ -52,19 +52,19 @@ struct is_assignable;
 
 ### <a name="parameters"></a>Parametry
 
-*To*<br/>
-Typ objektu, která obdrží přiřazení.
+*Schopn*\
+Typ objektu, který přijímá přiřazení.
 
-*from*<br/>
-Typ objektu, který obsahuje hodnotu.
+*Výsledkem*\
+Typ objektu, který poskytuje hodnotu.
 
 ### <a name="remarks"></a>Poznámky
 
-Nevyhodnoceném výrazu `declval<To>() = declval<From>()` musí být ve správném formátu. Obě *z* a *k* musí být kompletními typy **void**, nebo pole s neznámým rozsahem.
+Vyhodnocený výraz `declval<To>() = declval<From>()` musí být ve správném formátu. *Mezi* i *pro* musí být úplné typy, **void**nebo pole neznámého typu Bound.
 
-## <a name="is_copy_assignable"></a>  is_copy_assignable –
+## <a name="is_copy_assignable"></a>is_copy_assignable
 
-Testy, zda má typ je zkopírovat na přiřazení.
+Testuje, zda je možné kopírovat typ při přiřazení.
 
 ```cpp
 template <class Ty>
@@ -73,16 +73,16 @@ struct is_copy_assignable;
 
 ### <a name="parameters"></a>Parametry
 
-*Ty*<br/>
+*Ty*\
 Typ, na který chcete odeslat dotaz.
 
 ### <a name="remarks"></a>Poznámky
 
-Instance predikátu typu obsahuje hodnotu true, pokud typ *Ty* je třída, která má operátor přiřazení kopie, jinak má hodnotu false. Ekvivalentní is_assignable –\<Ty & const Ty & >.
+Instance predikátu typu má hodnotu true, *Pokud typ je* třída, která má operátor přiřazení kopie, v opačném případě obsahuje hodnotu false. Ekvivalentem is_assignable\<&, const Ty & >.
 
-## <a name="is_copy_constructible"></a>  is_copy_constructible –
+## <a name="is_copy_constructible"></a>is_copy_constructible
 
-Testuje, zda je typ má konstruktor kopie.
+Testuje, zda typ obsahuje kopírovací konstruktor.
 
 ```cpp
 template <class Ty>
@@ -91,12 +91,12 @@ struct is_copy_constructible;
 
 ### <a name="parameters"></a>Parametry
 
-*Ty*<br/>
+*Ty*\
 Typ, na který chcete odeslat dotaz.
 
 ### <a name="remarks"></a>Poznámky
 
-Instance predikátu typu obsahuje hodnotu true, pokud typ *Ty* je třída, která má konstruktor kopie, jinak má hodnotu false.
+Instance predikátu typu má hodnotu true, pokud *je typ,* který je třída, která má kopírovací konstruktor, jinak obsahuje hodnotu false.
 
 ### <a name="example"></a>Příklad
 
@@ -132,7 +132,7 @@ is_copy_constructible<Copyable> == true
 is_copy_constructible<NotCopyable > == false
 ```
 
-## <a name="is_default_constructible"></a>  is_default_constructible –
+## <a name="is_default_constructible"></a>is_default_constructible
 
 Testuje, zda má typ výchozí konstruktor.
 
@@ -143,12 +143,12 @@ struct is_default_constructible;
 
 ### <a name="parameters"></a>Parametry
 
-*T*<br/>
+*Š*\
 Typ, na který chcete odeslat dotaz.
 
 ### <a name="remarks"></a>Poznámky
 
-Instance predikátu typu obsahuje hodnotu true, pokud typ *T* je typ třídy, která má výchozí konstruktor, jinak má hodnotu false. Jedná se o ekvivalent predikátu `is_constructible<T>`. Typ *T* musí být dokončený typ **void**, nebo pole neznámým rozsahem.
+Instance predikátu typu má hodnotu true, pokud typ *T* je typ třídy, která má výchozí konstruktor, jinak má hodnotu false. To je ekvivalentní predikátu `is_constructible<T>`. Typ *T* musí být úplný typ, **void**nebo pole s neznámou vazbou.
 
 ### <a name="example"></a>Příklad
 
@@ -184,9 +184,9 @@ is_default_constructible<Simple> == true
 is_default_constructible<Simple2> == false
 ```
 
-## <a name="is_move_assignable"></a>  is_move_assignable –
+## <a name="is_move_assignable"></a>is_move_assignable
 
-Testuje, zda může být typu přesuňte přiřazené.
+Testuje, zda lze typ přesunout přiřazeno.
 
 ```cpp
 template <class T>
@@ -195,16 +195,16 @@ struct is_move_assignable;
 
 ### <a name="parameters"></a>Parametry
 
-*T*<br/>
+*Š*\
 Typ, na který chcete odeslat dotaz.
 
 ### <a name="remarks"></a>Poznámky
 
-Typ je přiřaditelný přesunout, pokud odkaz rvalue na typ, je možné přiřadit na odkaz na typ. Predikát typu je ekvivalentní `is_assignable<T&, T&&>`. Přesuňte přiřadit typy zahrnují označím Skalární typy a typy tříd, které se mají generované kompilátorem nebo uživatelem definované operátory přiřazení přesunutí.
+Typ je přesunutý, pokud odkaz na rvalue typ může být přiřazený odkaz na typ. Predikát typu je ekvivalentem `is_assignable<T&, T&&>`. Přesunoutelné typy zahrnují referenční skalární typy a typy tříd, které mají buď operátory vygenerované kompilátorem, nebo uživatelsky definované operátory přiřazení přesunutí.
 
-## <a name="is_move_constructible"></a>  is_move_constructible –
+## <a name="is_move_constructible"></a>is_move_constructible
 
-Ověřuje, zda typ má konstruktor move.
+Testuje, zda typ obsahuje konstruktor Move.
 
 ```cpp
 template <class T>
@@ -213,16 +213,16 @@ struct is_move_constructible;
 
 ### <a name="parameters"></a>Parametry
 
-*T*<br/>
-Typ, který má být vyhodnocen
+*Š*\
+Typ, který se má vyhodnotit
 
 ### <a name="remarks"></a>Poznámky
 
-Predikát typu, který se vyhodnotí jako true, pokud typ *T* lze sestavit pomocí operace přesunu. Tento predikát je ekvivalentní `is_constructible<T, T&&>`.
+Predikát typu, který se vyhodnotí jako true, pokud typ *T* může být vytvořen pomocí operace přesunutí. Tento predikát je ekvivalentem `is_constructible<T, T&&>`.
 
-## <a name="is_nothrow_move_assignable"></a>  is_nothrow_move_assignable –
+## <a name="is_nothrow_move_assignable"></a>is_nothrow_move_assignable
 
-Testuje, jestli má typ **nothrow** operátor move assignment.
+Testuje, zda typ obsahuje operátor **přiřazení přesunu** .
 
 ```cpp
 template <class Ty>
@@ -231,40 +231,40 @@ struct is_nothrow_move_assignable;
 
 ### <a name="parameters"></a>Parametry
 
-*Ty*<br/>
+*Ty*\
 Typ, na který chcete odeslat dotaz.
 
 ### <a name="remarks"></a>Poznámky
 
-Instance predikátu typu obsahuje hodnotu true, pokud typ *Ty* má nothrow operátor přiřazení přesunutí, jinak má hodnotu false.
+Instance predikátu typu má hodnotu true, pokud *má typ s* operátorem přiřazení přesunutí, v opačném případě má hodnotu false.
 
-## <a name="is_nothrow_swappable"></a>  is_nothrow_swappable
+## <a name="is_nothrow_swappable"></a>is_nothrow_swappable
 
 ```cpp
 template <class T> struct is_nothrow_swappable;
 ```
 
-## <a name="is_nothrow_swappable_with"></a>  is_nothrow_swappable_with
+## <a name="is_nothrow_swappable_with"></a>is_nothrow_swappable_with
 
 ```cpp
 template <class T, class U> struct is_nothrow_swappable_with;
 ```
 
-## <a name="is_swappable"></a>  is_swappable
+## <a name="is_swappable"></a>is_swappable
 
 ```cpp
 template <class T> struct is_swappable;
 ```
 
-## <a name="is_swappable_with"></a>  is_swappable_with
+## <a name="is_swappable_with"></a>is_swappable_with
 
 ```cpp
 template <class T, class U> struct is_swappable_with;
 ```
 
-## <a name="is_trivially_copy_assignable"></a>  is_trivially_copy_assignable –
+## <a name="is_trivially_copy_assignable"></a>is_trivially_copy_assignable
 
-Ověřuje, zda má typ jednoduchého dotazu kopírovacího operátoru přiřazení.
+Testuje, zda má typ operátor přiřazení triviální kopie.
 
 ```cpp
 template <class Ty>
@@ -273,18 +273,18 @@ struct is_trivially_copy_assignable;
 
 ### <a name="parameters"></a>Parametry
 
-*T*<br/>
+*Š*\
 Typ, na který chcete odeslat dotaz.
 
 ### <a name="remarks"></a>Poznámky
 
-Instance predikátu typu obsahuje hodnotu true, pokud typ *T* je třída, která má triviální operátor přiřazení kopie, jinak má hodnotu false.
+Instance predikátu typu má hodnotu true, pokud typ *T* je třída, která má operátor přiřazení triviální kopie, v opačném případě obsahuje hodnotu false.
 
-Přiřazení konstruktor pro třídu *T* je jednoduché, pokud je implicitně určen, třída *T* nemá žádné virtuální funkce třídy *T* nemá žádné virtuální báze třídy všechny nestatické datové členy typu třídy mají operátory jednoduchého dotazu přiřazení a třídy nestatických datových členů typu pole třídy mají operátory přiřazení triviální.
+Konstruktor přiřazení pro třídu *t* je triviální, pokud je implicitně poskytnutý, třída *t* nemá žádné virtuální funkce, třída *t* nemá žádné virtuální základy, třídy všech nestatických datových členů typu třídy mají triviální přiřazení. operátory a třídy všech nestatických datových členů typu Array třídy mají operátory přiřazení triviální.
 
-## <a name="is_trivially_move_assignable"></a>  is_trivially_move_assignable –
+## <a name="is_trivially_move_assignable"></a>is_trivially_move_assignable
 
-Ověřuje, zda tento typ nemá operátor přiřazení přesunutí triviální.
+Testuje, zda má typ operátor přiřazení triviálního přesunutí.
 
 ```cpp
 template <class Ty>
@@ -293,28 +293,28 @@ struct is_trivially_move_assignable;
 
 ### <a name="parameters"></a>Parametry
 
-*Ty*<br/>
+*Ty*\
 Typ, na který chcete odeslat dotaz.
 
 ### <a name="remarks"></a>Poznámky
 
-Instance predikátu typu obsahuje hodnotu true, pokud typ *Ty* je třída, která má triviální operátor přiřazení přesunutí, jinak má hodnotu false.
+Instance predikátu typu má hodnotu true, *Pokud typ je* třída, která má operátor přiřazení triviálního přesunu, jinak obsahuje hodnotu false.
 
-Operátor přiřazení přesunu pro třídu *Ty* triviální pokud:
+Operátor přiřazení přesunu pro *danou třídu je* triviální, pokud:
 
 implicitně se poskytuje
 
-Třída *Ty* nemá žádné virtuální funkce
+Třída *ty* nemá žádné virtuální funkce.
 
-Třída *Ty* nemá žádné virtuálních základních tříd
+Třída *ty* nemá žádné virtuální základy.
 
-třídy všechny nestatické datové členy typu třídy mají operátory přiřazení pro přesunutí jednoduchého dotazu
+třídy všech nestatických datových členů typu třídy mají operátory přiřazení triviálního přesunutí.
 
-třídy nestatických datových členů typu pole třídy mají operátory přiřazení pro přesunutí jednoduchého dotazu
+třídy všech nestatických datových členů typu Array třídy mají operátory přiřazení triviálního přesunutí.
 
-## <a name="is_trivially_move_constructible"></a>  is_trivially_move_constructible –
+## <a name="is_trivially_move_constructible"></a>is_trivially_move_constructible
 
-Konstruktor přesunu testuje, zda má typ jednoduchého dotazu.
+Testuje, zda typ obsahuje konstruktor triviálního přesunu.
 
 ```cpp
 template <class Ty>
@@ -323,31 +323,31 @@ struct is_trivially_move_constructible;
 
 ### <a name="parameters"></a>Parametry
 
-*Ty*<br/>
+*Ty*\
 Typ, na který chcete odeslat dotaz.
 
 ### <a name="remarks"></a>Poznámky
 
-Instance predikátu typu obsahuje hodnotu true, pokud typ *Ty* je třída, která má triviální konstruktor přesunutí, jinak má hodnotu false.
+Instance predikátu typu má hodnotu true, pokud *je typ,* který je třída, která má konstruktor triviálního přesunu, v opačném případě obsahuje hodnotu false.
 
-Konstruktor přesunu pro třídu *Ty* triviální pokud:
+Konstruktor přesunu pro třídu *ty* je triviální, pokud:
 
-je implicitně deklarován
+je implicitně deklarována
 
-typy parametrů jsou rovnocenné těm implicitní deklaraci
+jeho typy parametrů jsou ekvivalentní k těm implicitní deklarace.
 
-Třída *Ty* nemá žádné virtuální funkce
+Třída *ty* nemá žádné virtuální funkce.
 
-Třída *Ty* nemá žádné virtuálních základních tříd
+Třída *ty* nemá žádné virtuální základy.
 
-Třída nemá žádné nestálá nestatické datové členy
+Třída nemá žádné nestálé nestatické datové členy.
 
-všechny přímo základů třídy *Ty* mají triviální konstruktorů
+všechny přímé základny třídy *ty* mají konstruktory triviálního přesunu.
 
-třídy všechny nestatické datové členy typu třídy mají triviální konstruktorů
+třídy všech nestatických datových členů typu třídy mají konstruktory triviálního přesunu.
 
-třídy nestatických datových členů typu pole třídy mají triviální konstruktorů
+třídy všech nestatických datových členů typu Array třídy mají konstruktory triviálního přesunu.
 
 ## <a name="see-also"></a>Viz také:
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
+[<type_traits>](../standard-library/type-traits.md)

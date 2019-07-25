@@ -4,34 +4,34 @@ ms.date: 09/17/2018
 f1_keywords:
 - mutex/std::once_flag
 ms.assetid: 71bfb88d-ca8c-4082-a6e1-ff52151e8629
-ms.openlocfilehash: 004a5545e2eccab83b0846e2ae30b88c8431c99d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: fb85bd48f9b1ac10ec2fefbc6738aae777f67bcf
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62371435"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68455196"
 ---
 # <a name="onceflag-structure"></a>once_flag – struktura
 
-Představuje **struktura** , který se používá funkce šablony [call_once –](../standard-library/mutex-functions.md#call_once) zajistit, že inicializace kód je volán pouze jednou, i v případě výskytu více vláken provádění.
+Představuje **strukturu** , která se používá se šablonou funkce [call_once](../standard-library/mutex-functions.md#call_once) , aby se zajistilo, že inicializační kód se volá jenom jednou, a to i v případě, že je v přítomnosti více podprocesů provádění.
 
 ## <a name="syntax"></a>Syntaxe
 
-once_flag – struktura {constexpr once_flag() noexcept;};
+once_flag struktury {constexpr once_flag (), s výjimkou;};
 
 ## <a name="remarks"></a>Poznámky
 
-`once_flag` **Struktura** nemá výchozí konstruktor.
+Struktura má pouze výchozí konstruktor.  `once_flag`
 
-Objekty typu `once_flag` mohou být vytvořeny, ale nemůže být zkopírován.
+Objekty typu `once_flag` lze vytvořit, ale nelze je zkopírovat.
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** \<vzájemně vyloučeného přístupu >
+**Hlavička:** \<> mutex
 
-**Namespace:** std
+**Obor názvů:** std
 
 ## <a name="see-also"></a>Viz také:
 
-[Odkaz na soubory hlaviček](../standard-library/cpp-standard-library-header-files.md)<br/>
-[\<mutex>](../standard-library/mutex.md)<br/>
+[Odkazy na hlavičkové soubory](../standard-library/cpp-standard-library-header-files.md)\
+[\<mutex>](../standard-library/mutex.md)

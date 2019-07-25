@@ -1,5 +1,5 @@
 ---
-title: '&lt;sstream&gt; – definice TypeDef'
+title: '&lt;sstream&gt; definice typedef'
 ms.date: 11/04/2016
 f1_keywords:
 - iosfwd/std::istringstream
@@ -11,24 +11,24 @@ f1_keywords:
 - iosfwd/std::wstringbuf
 - iosfwd/std::wstringstream
 ms.assetid: d102edd2-ecea-4a35-a398-cf96e58dd422
-ms.openlocfilehash: 12eb7a23c2986223de38ccb0fe763ff42c5e48b1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 27aed1d92b4893e054d7416dc5933ab23b843297
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62412485"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68451816"
 ---
-# <a name="ltsstreamgt-typedefs"></a>&lt;sstream&gt; – definice TypeDef
+# <a name="ltsstreamgt-typedefs"></a>&lt;sstream&gt; definice typedef
 
 ||||
 |-|-|-|
-|[istringstream](#istringstream)|[ostringstream](#ostringstream)|[stringbuf](#stringbuf)|
+|[istringstream](#istringstream)|[ostringstream](#ostringstream)|[stringbuf –](#stringbuf)|
 |[stringstream](#stringstream)|[wistringstream](#wistringstream)|[wostringstream](#wostringstream)|
-|[wstringbuf](#wstringbuf)|[wstringstream](#wstringstream)|
+|[wstringbuf –](#wstringbuf)|[wstringstream](#wstringstream)|
 
-## <a name="istringstream"></a>  istringstream
+## <a name="istringstream"></a>istringstream –
 
-Umožňuje vytvořit typ `basic_istringstream` specializované na **char** parametr šablony.
+Vytvoří typ `basic_istringstream` specializovaný na parametr **znak** šablony.
 
 ```cpp
 typedef basic_istringstream<char> istringstream;
@@ -36,11 +36,11 @@ typedef basic_istringstream<char> istringstream;
 
 ### <a name="remarks"></a>Poznámky
 
-Typ je synonymum pro šablony třídy [basic_istringstream –](../standard-library/basic-istringstream-class.md)specializované pro prvky typu **char**.
+Typ je synonymum pro třídu šablony [basic_istringstream](../standard-library/basic-istringstream-class.md)specializované pro prvky typu **char**.
 
-## <a name="ostringstream"></a>  ostringstream
+## <a name="ostringstream"></a>ostringstream –
 
-Umožňuje vytvořit typ `basic_ostringstream` specializované na **char** parametr šablony.
+Vytvoří typ `basic_ostringstream` specializovaný na parametr **znak** šablony.
 
 ```cpp
 typedef basic_ostringstream<char> ostringstream;
@@ -48,11 +48,11 @@ typedef basic_ostringstream<char> ostringstream;
 
 ### <a name="remarks"></a>Poznámky
 
-Typ je synonymum pro šablony třídy [basic_ostringstream –](../standard-library/basic-ostringstream-class.md)specializované pro prvky typu **char**.
+Typ je synonymum pro třídu šablony [basic_ostringstream](../standard-library/basic-ostringstream-class.md)specializované pro prvky typu **char**.
 
-## <a name="stringbuf"></a>  stringbuf
+## <a name="stringbuf"></a>stringbuf –
 
-Umožňuje vytvořit typ `basic_stringbuf` specializované na **char** parametr šablony.
+Vytvoří typ `basic_stringbuf` specializovaný na parametr **znak** šablony.
 
 ```cpp
 typedef basic_stringbuf<char> stringbuf;
@@ -60,11 +60,11 @@ typedef basic_stringbuf<char> stringbuf;
 
 ### <a name="remarks"></a>Poznámky
 
-Typ je synonymum pro šablony třídy [basic_stringbuf –](../standard-library/basic-stringbuf-class.md)specializované pro prvky typu **char**.
+Typ je synonymum pro třídu šablony [basic_stringbuf](../standard-library/basic-stringbuf-class.md)specializované pro prvky typu **char**.
 
-## <a name="stringstream"></a>  stringstream
+## <a name="stringstream"></a>stringstream
 
-Umožňuje vytvořit typ `basic_stringstream` specializované na **char** parametr šablony.
+Vytvoří typ `basic_stringstream` specializovaný na parametr **znak** šablony.
 
 ```cpp
 typedef basic_stringstream<char> stringstream;
@@ -72,11 +72,11 @@ typedef basic_stringstream<char> stringstream;
 
 ### <a name="remarks"></a>Poznámky
 
-Typ je synonymum pro šablony třídy [basic_stringstream –](../standard-library/basic-stringstream-class.md)specializované pro prvky typu **char**.
+Typ je synonymum pro třídu šablony [basic_stringstream](../standard-library/basic-stringstream-class.md)specializované pro prvky typu **char**.
 
-## <a name="wistringstream"></a>  wistringstream
+## <a name="wistringstream"></a>wistringstream –
 
-Umožňuje vytvořit typ `basic_istringstream` specializované na **wchar_t** parametr šablony.
+Vytvoří typ `basic_istringstream` specializovaný na parametr šablony **wchar_t** .
 
 ```cpp
 typedef basic_istringstream<wchar_t> wistringstream;
@@ -84,11 +84,11 @@ typedef basic_istringstream<wchar_t> wistringstream;
 
 ### <a name="remarks"></a>Poznámky
 
-Typ je synonymum pro šablony třídy [basic_istringstream –](../standard-library/basic-istringstream-class.md)specializované pro prvky typu **wchar_t**.
+Typ je synonymum pro třídu šablony [basic_istringstream](../standard-library/basic-istringstream-class.md)specializované pro prvky typu **wchar_t**.
 
-## <a name="wostringstream"></a>  wostringstream
+## <a name="wostringstream"></a>wostringstream –
 
-Umožňuje vytvořit typ `basic_ostringstream` specializované na **wchar_t** parametr šablony.
+Vytvoří typ `basic_ostringstream` specializovaný na parametr šablony **wchar_t** .
 
 ```cpp
 typedef basic_ostringstream<wchar_t> wostringstream;
@@ -96,11 +96,11 @@ typedef basic_ostringstream<wchar_t> wostringstream;
 
 ### <a name="remarks"></a>Poznámky
 
-Typ je synonymum pro šablony třídy [basic_ostringstream –](../standard-library/basic-ostringstream-class.md)specializované pro prvky typu **wchar_t**.
+Typ je synonymum pro třídu šablony [basic_ostringstream](../standard-library/basic-ostringstream-class.md)specializované pro prvky typu **wchar_t**.
 
-## <a name="wstringbuf"></a>  wstringbuf
+## <a name="wstringbuf"></a>wstringbuf –
 
-Umožňuje vytvořit typ `basic_stringbuf` specializované na **wchar_t** parametr šablony.
+Vytvoří typ `basic_stringbuf` specializovaný na parametr šablony **wchar_t** .
 
 ```cpp
 typedef basic_stringbuf<wchar_t> wstringbuf;
@@ -108,11 +108,11 @@ typedef basic_stringbuf<wchar_t> wstringbuf;
 
 ### <a name="remarks"></a>Poznámky
 
-Typ je synonymum pro šablony třídy [basic_stringbuf –](../standard-library/basic-stringbuf-class.md)specializované pro prvky typu **wchar_t**.
+Typ je synonymum pro třídu šablony [basic_stringbuf](../standard-library/basic-stringbuf-class.md)specializované pro prvky typu **wchar_t**.
 
-## <a name="wstringstream"></a>  wstringstream
+## <a name="wstringstream"></a>wstringstream –
 
-Umožňuje vytvořit typ `basic_stringstream` specializované na **wchar_t** parametr šablony.
+Vytvoří typ `basic_stringstream` specializovaný na parametr šablony **wchar_t** .
 
 ```cpp
 typedef basic_stringstream<wchar_t> wstringstream;
@@ -120,8 +120,8 @@ typedef basic_stringstream<wchar_t> wstringstream;
 
 ### <a name="remarks"></a>Poznámky
 
-Typ je synonymum pro šablony třídy [basic_stringstream –](../standard-library/basic-stringstream-class.md)specializované pro prvky typu **wchar_t**.
+Typ je synonymum pro třídu šablony [basic_stringstream](../standard-library/basic-stringstream-class.md)specializované pro prvky typu **wchar_t**.
 
 ## <a name="see-also"></a>Viz také:
 
-[\<sstream>](../standard-library/sstream.md)<br/>
+[\<sstream>](../standard-library/sstream.md)

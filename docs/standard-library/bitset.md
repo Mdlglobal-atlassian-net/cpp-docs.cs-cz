@@ -7,22 +7,22 @@ helpviewer_keywords:
 - <bitset> header
 - bitset header
 ms.assetid: af30a9b9-489e-46e3-9d29-5f3ea07ae6dc
-ms.openlocfilehash: b0a5a01ca04d01d9535291e3c4a254143bc09e5a
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 5de13e66523ee5a5dbcb4c2c54d38037909a4c95
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68243303"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68449697"
 ---
 # <a name="ltbitsetgt"></a>&lt;bitset&gt;
 
-Definuje bitset – třída šablony a dvě podpůrné funkce šablony pro představující a manipulaci s pevnou velikostí pořadí bitů.
+Definuje třídu šablony bitset a dvě podpůrné funkce šablon pro reprezentaci a manipulaci s pevnými sekvencemi bitů.
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** \<bitset – >
+**Hlavička:** \<bitset >
 
-**Namespace:** std
+**Obor názvů:** std
 
 ## <a name="members"></a>Členové
 
@@ -30,19 +30,19 @@ Definuje bitset – třída šablony a dvě podpůrné funkce šablony pro před
 
 |||
 |-|-|
-|[operátor &](../standard-library/bitset-operators.md#op_amp)|Provádí bitové operace AND mezi dvěma bitsets.|
-|[Operator <\<](../standard-library/bitset-operators.md#op_lt_lt)|Vloží textové znázornění sekvence bit do standardního výstupního datového proudu.|
-|[operátor >>](../standard-library/bitset-operators.md#op_gt_gt)|Vloží textové znázornění sekvence bit do standardního vstupního proudu.|
-|[operátor ^](../standard-library/bitset-operators.md#op_xor)|Provádí logické bitové EXKLUZIVNÍ disjunkce OR mezi dvěma bitsets.|
-|[operator&#124;](../standard-library/bitset-operators.md#op_or)|Provádí bitové operace OR mezi dvěma bitsets.|
+|[operátor &](../standard-library/bitset-operators.md#op_amp)|Provede bitovou a mezi dvěma bitsetsy.|
+|[operátor <\<](../standard-library/bitset-operators.md#op_lt_lt)|Vloží textovou reprezentaci bitové sekvence do standardního výstupního proudu.|
+|[operátor > >](../standard-library/bitset-operators.md#op_gt_gt)|Vloží textovou reprezentaci bitové sekvence do standardního vstupního proudu.|
+|[operátor ^](../standard-library/bitset-operators.md#op_xor)|Provede bitovou exkluzivní nebo mezi dvěma bitsetsy.|
+|[operator&#124;](../standard-library/bitset-operators.md#op_or)|Provede bitovou nebo mezi dvěma bitsetsy.|
 
 ### <a name="classes"></a>Třídy
 
 |||
 |-|-|
-|[bitset](../standard-library/bitset-class.md)|Třída šablony popisuje typ objektu, který ukládá pořadí skládající se z pevný počet bitů, které umožňují compact udržování příznaky pro sadu položek nebo podmínky.|
+|[bitset](../standard-library/bitset-class.md)|Třída šablony popisuje typ objektu, který ukládá sekvenci sestávající z pevného počtu bitů, který poskytuje kompaktní způsob uchování příznaků pro sadu položek nebo podmínek.|
 
 ## <a name="see-also"></a>Viz také:
 
-[Odkaz na soubory hlaviček](../standard-library/cpp-standard-library-header-files.md)<br/>
-[Bezpečný přístup z více vláken ve standardní knihovně C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[Odkazy na hlavičkové soubory](../standard-library/cpp-standard-library-header-files.md)\
+[Bezpečný přístup z více vláken ve standardní knihovně C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)

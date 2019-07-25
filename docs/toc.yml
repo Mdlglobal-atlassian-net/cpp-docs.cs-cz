@@ -444,16 +444,7 @@
                 - name: Stránka vlastností spravovaných prostředků
                   href: build/reference/managed-resources-property-page.md
                 - name: MIDL – stránky vlastností
-                  expanded: false
-                  items:
-                    - name: MIDL – stránky vlastností
-                      href: build/reference/midl-property-pages.md
-                    - name: 'MIDL – stránky vlastností: Obecné'
-                      href: build/reference/midl-property-pages-general.md
-                    - name: 'MIDL – stránky vlastností: Výstup'
-                      href: build/reference/midl-property-pages-output.md
-                    - name: 'MIDL – stránky vlastností: Upřesnit'
-                      href: build/reference/midl-property-pages-advanced.md
+                  href: build/reference/midl-property-pages.md
                 - name: Stránka vlastností webových odkazů
                   href: build/reference/web-references-property-page.md
                 - name: Stránka vlastností nástroje generátoru dat XML

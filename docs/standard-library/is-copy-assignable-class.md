@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - is_copy_assignable
 ms.assetid: 3ae6bca1-85fb-4829-9ee9-0183b081ff50
-ms.openlocfilehash: 75e0e8d995fbb3c6bfb1af3142a98651d7a29e96
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5fedd32f026828e49ea29cb2975a2529ca28c862
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62336748"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68452830"
 ---
 # <a name="iscopyassignable-class"></a>is_copy_assignable Class
 
-Testy, zda má typ je zkopírovat na přiřazení.
+Testuje, zda je možné kopírovat typ při přiřazení.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -26,19 +26,19 @@ struct is_copy_assignable;
 
 ### <a name="parameters"></a>Parametry
 
-*Ty*<br/>
+*Ty*\
 Typ, na který chcete odeslat dotaz.
 
 ## <a name="remarks"></a>Poznámky
 
-Instance predikátu typu obsahuje hodnotu true, pokud typ *Ty* je třída, která má operátor přiřazení kopie, jinak má hodnotu false. Ekvivalentní is_assignable –\<Ty & const Ty & >.
+Instance predikátu typu má hodnotu true, *Pokud typ je* třída, která má operátor přiřazení kopie, v opačném případě obsahuje hodnotu false. Ekvivalentem is_assignable\<&, const Ty & >.
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** \<type_traits >
+**Hlavička:** \<type_traits >
 
-**Namespace:** std
+**Obor názvů:** std
 
 ## <a name="see-also"></a>Viz také:
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
+[<type_traits>](../standard-library/type-traits.md)

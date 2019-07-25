@@ -1,21 +1,21 @@
 ---
-title: komplexní&lt;double&gt;
+title: složitý&lt;typ Double&gt;
 ms.date: 11/04/2016
 f1_keywords:
 - complex/std::complex<double>
 helpviewer_keywords:
 - complex<double> function
 ms.assetid: 0d0b9d2a-9b9b-410b-82a0-86b6df127e47
-ms.openlocfilehash: 7cb516363df7267c2870d2188a14208f54f7ffe9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 565a2e6b5ee4eb495cb4cc3241bb8ce72de538a2
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62148403"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68453152"
 ---
-# <a name="complexltdoublegt"></a>komplexní&lt;double&gt;
+# <a name="complexltdoublegt"></a>složitý&lt;typ Double&gt;
 
-Popisuje objekt, který ukládá seřazená dvojice objektů typu **double**, nejprve představující skutečný součástí komplexní čísla a druhý představující imaginární části.
+Popisuje objekt, který ukládá seřazený pár objektů typu **Double**, první představuje skutečnou část komplexního čísla a druhý představující imaginární část.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -36,24 +36,24 @@ constexpr explicit complex(const complex<long double>& complexNum);
 
 ### <a name="parameters"></a>Parametry
 
-*RealVal*<br/>
-Hodnota typu **double** pro skutečné součástí komplexní čísla při konstrukci.
+*RealVal*\
+Hodnota typu **Double** pro skutečnou část složeného čísla konstrukce
 
-*ImagVal*<br/>
-Hodnota typu **double** imaginární části komplexního čísla při konstrukci.
+*ImagVal*\
+Hodnota typu **Double** pro imaginární část složeného čísla, které je konstruováno.
 
-*complexNum*<br/>
-Komplexní čísla typu **float** nebo typu **long double** jehož reálné a imaginární části se používají k inicializaci komplexního čísla typu **double** vytváří.
+*complexNum*\
+Komplexní číslo typu **float** nebo typu **Long Double** , jehož reálné a imaginární části jsou použity k inicializaci komplexního čísla typu **Double** .
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Komplexní čísla typu **double**.
+Komplexní číslo typu **Double**.
 
 ## <a name="remarks"></a>Poznámky
 
-Explicitní specializace šablony třídy komplexní complex – třída typu **double** se liší od třídy šablony pouze v konstruktorech definuje. Převod z **float** k **double** může být implicitní, ale převod z **long double** k **double** musí být **explicitní**. Použití **explicitní** Vylučuje zahájení s převod typu pomocí syntaxe přiřazení.
+Explicitní specializace třídy Template složitá na komplexní třídu typu **Double** se liší od třídy Template pouze v konstruktorech, které definuje. Převod z float na **Double** je povolen implicitní, ale převod z **typu** **Long Double** na **typ Double** musí být **explicitní**. Použití explicitních  pravidel je vycházející z inicializace s převodem typu pomocí syntaxe přiřazení.
 
-Další informace o šablony třídy `complex`, naleznete v tématu [complex – třída](../standard-library/complex-class.md). Pro seznam členů třídy šablony `complex`, naleznete v tématu.
+Další informace o třídě `complex`šablon naleznete v tématu [Complex Class](../standard-library/complex-class.md). Seznam členů třídy `complex`šablony naleznete v tématu.
 
 ## <a name="example"></a>Příklad
 
@@ -112,11 +112,11 @@ arg ( c3 ) = 0.896055 radians, which is 51.3402 degrees.
 
 ## <a name="requirements"></a>Požadavky
 
-**Hlavička**: \<komplexní >
+**Záhlaví**: \<komplexní >
 
-**Namespace:** std
+**Obor názvů:** std
 
 ## <a name="see-also"></a>Viz také:
 
-[complex – třída](../standard-library/complex-class.md)<br/>
-[Bezpečný přístup z více vláken ve standardní knihovně C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[Complex – třída](../standard-library/complex-class.md)\
+[Bezpečný přístup z více vláken ve standardní knihovně C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)
