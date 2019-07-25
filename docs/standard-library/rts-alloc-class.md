@@ -12,16 +12,16 @@ helpviewer_keywords:
 - stdext::rts_alloc [C++], deallocate
 - stdext::rts_alloc [C++], equals
 ms.assetid: ab41bffa-83d1-4a1c-87b9-5707d516931f
-ms.openlocfilehash: 2c77f93a2311dbf21959b0d2a7830c20ba6dce96
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 065c0eaf936a438f48dbb8aa28704e0f53926a03
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62409743"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68451128"
 ---
 # <a name="rtsalloc-class"></a>rts_alloc – třída
 
-Rts_alloc – třída šablony popisuje [filtr](../standard-library/allocators-header.md) , který obsahuje celou řadu mezipaměti instancí a určuje, kterou instanci chcete použít pro přidělování a navracení zpět za běhu místo v době kompilace.
+Třída šablony rts_alloc popisuje [Filtr](../standard-library/allocators-header.md) , který obsahuje pole instancí mezipaměti a určuje, která instance se má použít pro přidělení a zrušení přidělení za běhu místo v době kompilace.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -34,29 +34,29 @@ class rts_alloc
 
 |Parametr|Popis|
 |---------------|-----------------|
-|*Mezipaměť*|Typ instance mezipaměti obsažené v poli. To může být [cache_chunklist – třída](../standard-library/cache-chunklist-class.md), [cache_freelist –](../standard-library/cache-freelist-class.md), nebo [cache_suballoc –](../standard-library/cache-suballoc-class.md).|
+|*Mezipaměť*|Typ instancí mezipaměti obsažených v poli. Může se jednat o [třídu cache_chunklist](../standard-library/cache-chunklist-class.md), [cache_freelist](../standard-library/cache-freelist-class.md)nebo [cache_suballoc](../standard-library/cache-suballoc-class.md).|
 
 ## <a name="remarks"></a>Poznámky
 
-Této třídy šablony obsahuje více bloku přidělování instancí a určuje, kterou instanci chcete použít pro přidělení nebo zrušení přidělení v době běhu místo v době kompilace. Používá se s kompilátory, které nelze zkompilovat obnovení vazby.
+Tato třída šablony obsahuje více instancí přidělování bloků a určuje, která instance má být použita pro přidělení nebo zrušení přidělení za běhu místo v době kompilace. Používá se s kompilátory, které nemohou kompilovat opětovnou vazby.
 
 ### <a name="member-functions"></a>Členské funkce
 
 |Členská funkce|Popis|
 |-|-|
-|[allocate](#allocate)|Přiděluje blok paměti.|
-|[zrušit přidělení](#deallocate)|Uvolní zadaný počet objektů z úložiště počínaje na určené pozici.|
-|[equals](#equals)|Porovná rovnost dvou mezipamětí.|
+|[allocate](#allocate)|Přidělí blok paměti.|
+|[uvolnit](#deallocate)|Uvolní zadaný počet objektů od úložiště, které začínají na zadané pozici.|
+|[equals](#equals)|Porovná dvě mezipaměti pro rovnost.|
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** \<alokátorů >
+**Hlavička:** \<> přidělování
 
-**Namespace:** stdext
+**Obor názvů:** stdext
 
-## <a name="allocate"></a>  rts_alloc::allocate
+## <a name="allocate"></a>rts_alloc:: allocate
 
-Přiděluje blok paměti.
+Přidělí blok paměti.
 
 ```cpp
 void *allocate(std::size_t count);
@@ -66,7 +66,7 @@ void *allocate(std::size_t count);
 
 |Parametr|Popis|
 |---------------|-----------------|
-|*Počet*|Počet prvků v poli, které mají být přiděleny.|
+|*výpočtu*|Počet prvků v poli, které mají být přiděleny.|
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -74,11 +74,11 @@ Ukazatel na přidělený objekt.
 
 ### <a name="remarks"></a>Poznámky
 
-Členská funkce vrátí `caches[_IDX].allocate(count)`, kde index `_IDX` se určuje podle velikosti požadovaný blok *počet*, nebo pokud *počet* je příliš velký, vrátí `operator new(count)`. `cache`, který představuje objekt mezipaměti.
+Vrátí `caches[_IDX].allocate(count)`členské funkce, kde je index `_IDX` určen podle požadovaného *počtu*velikost bloku nebo, pokud je *počet* příliš velký, vrátí `operator new(count)`. `cache`, který představuje objekt mezipaměti.
 
-## <a name="deallocate"></a>  rts_alloc::deallocate
+## <a name="deallocate"></a>rts_alloc::d eallocate
 
-Uvolní zadaný počet objektů z úložiště počínaje na určené pozici.
+Uvolní zadaný počet objektů od úložiště, které začínají na zadané pozici.
 
 ```cpp
 void deallocate(void* ptr, std::size_t count);
@@ -88,16 +88,16 @@ void deallocate(void* ptr, std::size_t count);
 
 |Parametr|Popis|
 |---------------|-----------------|
-|*ptr*|Ukazatel na první objekt k zrušeno přidělení úložiště.|
-|*Počet*|Počet objektů pro zrušeno přidělení úložiště.|
+|*ptr*|Ukazatel na první objekt, který má být vrácen z úložiště.|
+|*výpočtu*|Počet objektů, které se mají uvolnit z úložiště|
 
 ### <a name="remarks"></a>Poznámky
 
-Volání členských funkcí `caches[_IDX].deallocate(ptr, count)`, kde index `_IDX` se určuje podle velikosti požadovaný blok *počet*, nebo pokud *počet* je příliš velký, vrátí `operator delete(ptr)`.
+Členská funkce volá `caches[_IDX].deallocate(ptr, count)`, kde je index `_IDX` určen podle požadovaného *počtu*velikostí bloku, nebo pokud je *počet* příliš velký, vrátí `operator delete(ptr)`.
 
-## <a name="equals"></a>  rts_alloc::Equals
+## <a name="equals"></a>rts_alloc:: Equals
 
-Porovná rovnost dvou mezipamětí.
+Porovná dvě mezipaměti pro rovnost.
 
 ```cpp
 bool equals(const sync<_Cache>& _Other) const;
@@ -107,14 +107,14 @@ bool equals(const sync<_Cache>& _Other) const;
 
 |Parametr|Popis|
 |---------------|-----------------|
-|*_Cache*|Objekt mezipaměti přidružené k filtru.|
-|*Ji_né*|Mezipaměť objekt k porovnání rovnosti.|
+|*_Cache*|Objekt mezipaměti přidružený k filtru.|
+|*_Other*|Objekt mezipaměti, který se má porovnat s rovností.|
 
 ### <a name="remarks"></a>Poznámky
 
-**Hodnota TRUE** Pokud výsledek `caches[0].equals(other.caches[0])`; v opačném případě **false**. `caches` představuje pole objektů mezipaměti.
+**true** , pokud výsledek `caches[0].equals(other.caches[0])`, v opačném případě **false**. `caches`představuje pole objektů mezipaměti.
 
 ## <a name="see-also"></a>Viz také:
 
-[ALLOCATOR_DECL](../standard-library/allocators-functions.md#allocator_decl)<br/>
-[\<allocators>](../standard-library/allocators-header.md)<br/>
+[ALLOCATOR_DECL](../standard-library/allocators-functions.md#allocator_decl)\
+[\<allocators>](../standard-library/allocators-header.md)

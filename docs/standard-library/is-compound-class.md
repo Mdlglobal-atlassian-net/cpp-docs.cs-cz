@@ -7,16 +7,16 @@ helpviewer_keywords:
 - is_compound class
 - is_compound
 ms.assetid: bdad1167-cf3f-4f37-8321-62a5df159ead
-ms.openlocfilehash: f270a1a58bb8023d91d84b0d1ca3395d36298c95
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 003ddcf77c30bc2dc5491218dfbf00731517bdeb
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62337099"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68452901"
 ---
 # <a name="iscompound-class"></a>is_compound – třída
 
-Testuje, zda zadaný typ není základní.
+Testuje, zda zadaný typ není zásadní.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -27,12 +27,12 @@ struct is_compound;
 
 ### <a name="parameters"></a>Parametry
 
-*Ty*<br/>
+*Ty*\
 Typ, na který chcete odeslat dotaz.
 
 ## <a name="remarks"></a>Poznámky
 
-Instance predikátu typu obsahuje **false** Pokud typ *Ty* základní typ (tj. Pokud [is_fundamental –](../standard-library/is-fundamental-class.md)\<Ty > obsahuje  **Hodnota TRUE**); v opačném případě obsahuje **true**. Proto obsahuje predikát **true** Pokud *Ty* je typem pole, typ funkce, ukazatele na **void** nebo objekt nebo funkci, odkaz, třídu, sjednocení, výčtu nebo ukazatel na člen nestatické třídy nebo *kvalifikovaný cv* formu jeden z nich.
+Instance predikátu typu obsahuje **hodnotu false** , pokud je *typ takového typu* základní (tj. Pokud [is_fundamental](../standard-library/is-fundamental-class.md)\<> drží **hodnotu true**), jinak drží **hodnotu true**. Proto predikát má **hodnotu true** *, pokud je* to typ pole, typ funkce, ukazatel na **void** nebo objekt nebo funkce, odkaz, třída, sjednocení, výčet nebo ukazatel na nestatický člen třídy nebo formulář s oprávněním *CV* . jedna z nich.
 
 ## <a name="example"></a>Příklad
 
@@ -77,11 +77,11 @@ is_compound<int> == false
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** \<type_traits >
+**Hlavička:** \<type_traits >
 
-**Namespace:** std
+**Obor názvů:** std
 
 ## <a name="see-also"></a>Viz také:
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
-[is_class – třída](../standard-library/is-class-class.md)<br/>
+[< type_traits >](../standard-library/type-traits.md)\
+[is_class – třída](../standard-library/is-class-class.md)

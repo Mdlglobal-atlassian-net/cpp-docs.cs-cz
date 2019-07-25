@@ -4,32 +4,32 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - output streams
 ms.assetid: b49410e3-5caa-4153-9d0d-c4266408dc83
-ms.openlocfilehash: c64c46acca405f948e8314fb23944682adf09c43
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e650f9fd0bbc7ad483363706e632686e8ec3749e
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62370785"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68450172"
 ---
 # <a name="output-streams"></a>Výstupní datové proudy
 
-Výstupní objekt datového proudu je cíl bajtů. Jsou tři nejdůležitější třídy datového proudu výstupního `ostream`, `ofstream`, a `ostringstream`.
+Výstupní datový proud je cílovým objektem pro bajty. Tři nejdůležitější třídy výstupního datového proudu jsou `ostream`, `ofstream`a `ostringstream`.
 
-`ostream` Třídy prostřednictvím odvozené třídy `basic_ostream`, podporuje objekty předdefinovaných datového proudu:
+Třída prostřednictvím odvozené třídy `basic_ostream`podporuje předdefinované objekty datového proudu: `ostream`
 
-- `cout` Standardní výstup
+- `cout`standardní výstup
 
-- `cerr` Standardní chyba s omezenou ukládání do vyrovnávací paměti
+- `cerr`standardní chyba s omezeným ukládáním do vyrovnávací paměti
 
-- `clog` Podobně jako `cerr` , ale s úplnou ukládání do vyrovnávací paměti
+- `clog``cerr` podobně jako u plného ukládání do vyrovnávací paměti
 
-Objekty jen zřídka se vytvářejí na základě `ostream`; předdefinované objekty se obecně používají. V některých případech se může změnit přiřazení předdefinované objekty, které po spuštění programu. `ostream` Třídu, která můžete nakonfigurovat pro operace bez vyrovnávací paměti nebo ve vyrovnávací paměti, je nejvhodnější pro výstup sekvenčního režimu textu. Všechny funkce základní třídy `ios`, je součástí `ostream`. Je-li vytvořit objekt třídy `ostream`, je nutné zadat `streambuf` objekt konstruktoru.
+Objekty jsou zřídka postaveny `ostream`. předdefinované objekty jsou obecně používány. V některých případech můžete znovu přiřadit předdefinované objekty po spuštění programu. `ostream` Třída, která se dá nakonfigurovat pro operaci s vyrovnávací pamětí nebo bez vyrovnávací paměti, je nejvhodnější pro sekvenční výstup v textovém režimu. Všechny funkce základní třídy `ios`jsou obsaženy v. `ostream` Při vytváření objektu třídy `ostream`je nutné `streambuf` zadat objekt do konstruktoru.
 
-`ofstream` Třída podporuje výstup souboru disku. Pokud budete potřebovat disk s pouze pro výstup, sestavte objekt třídy `ofstream`. Můžete určit, zda `ofstream` objekty přijímat textové nebo binární data při vytváření `ofstream` objektu nebo při volání `open` členské funkce objektu. Mnoho formátování možnosti a členských funkcí platí pro `ofstream` objekty a všechny funkce základní třídy `ios` a `ostream` je součástí.
+`ofstream` Třída podporuje výstup souboru na disku. Pokud potřebujete jenom výstupní disk, vytvořte objekt třídy `ofstream`. Můžete určit, zda `ofstream` objekty při vytváření `ofstream` `open` objektu nebo při volání členské funkce objektu přijímají data binárního nebo textového režimu. Mnoho možností formátování a členských funkcí platí pro `ofstream` objekty a `ostream` je součástí všech funkcí základních tříd `ios` .
 
-Pokud zadáte filename v konstruktoru, je tento soubor automaticky otevře při vytvoření objektu. V opačném případě můžete použít `open` členskou funkci po vyvolání výchozího konstruktoru.
+Pokud zadáte název souboru v konstruktoru, tento soubor se automaticky otevře, když je objekt vytvořen. V opačném případě můžete použít `open` členskou funkci po vyvolání výchozího konstruktoru.
 
-Funkce modulu runtime, jako jsou `sprintf_s`, `ostringstream` třída podporuje výstup do řetězce v paměti. Pro vytvoření řetězce v paměti s použitím formátování vstupně-výstupní datový proud, vytvořte objekt třídy `ostringstream`.
+Podobně jako funkce `sprintf_s` `ostringstream` modulu runtime podporuje třída výstup do řetězců v paměti. Chcete-li vytvořit řetězec v paměti pomocí formátování vstupně-výstupních proudů, vytvořte objekt třídy `ostringstream`.
 
 ## <a name="in-this-section"></a>V tomto oddílu
 
@@ -49,6 +49,6 @@ Funkce modulu runtime, jako jsou `sprintf_s`, `ostringstream` třída podporuje 
 
 ## <a name="see-also"></a>Viz také:
 
-[ofstream](../standard-library/basic-ofstream-class.md)<br/>
-[ostringstream](../standard-library/basic-ostringstream-class.md)<br/>
-[iostream – programování](../standard-library/iostream-programming.md)<br/>
+[ofstream](../standard-library/basic-ofstream-class.md)\
+[ostringstream –](../standard-library/basic-ostringstream-class.md)\
+[iostream – programování](../standard-library/iostream-programming.md)

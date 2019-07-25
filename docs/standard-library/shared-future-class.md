@@ -18,16 +18,16 @@ helpviewer_keywords:
 - std::shared_future [C++], wait
 - std::shared_future [C++], wait_for
 - std::shared_future [C++], wait_until
-ms.openlocfilehash: 2280c17c4ce58fe06365c107ad26d646c7ae2d72
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3b08a1341ed450dd5d5cee93cdfcbab57f8d6760
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62412602"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68450496"
 ---
 # <a name="sharedfuture-class"></a>shared_future – třída
 
-Popisuje, *asynchronní vrácený objekt*. Rozdíl od s [budoucí](../standard-library/future-class.md) objekt, *asynchronního poskytovatele* lze přidružit libovolný počet `shared_future` objekty.
+Popisuje *asynchronní návratový objekt*. Na rozdíl od [budoucího](../standard-library/future-class.md) objektu může být *asynchronní zprostředkovatel* spojen s `shared_future` libovolným počtem objektů.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -38,43 +38,43 @@ class shared_future;
 
 ## <a name="remarks"></a>Poznámky
 
-Nevolejte jakékoli metody jiné než `valid`, `operator=`a destruktor na `shared_future` objektu, která *prázdný*.
+Nevolejte žádné jiné metody `valid`než, `operator=` `shared_future` a destruktor na objektu, který je *prázdný*.
 
-`shared_future` objekty nejsou synchronizovány. Volání metod na stejný objekt z více vláken představuje závodu data, která má nepředvídatelné výsledky.
+`shared_future`objekty nejsou synchronizovány. Volání metod u stejného objektu z více vláken zavádí datový závod, který má nepředvídatelné výsledky.
 
 ## <a name="members"></a>Členové
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
-|[shared_future](#shared_future)|Vytvoří `shared_future` objektu.|
+|[shared_future](#shared_future)|`shared_future` Vytvoří objekt.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
-|[get](#get)|Získá výsledek, který je uložený v *přidružený asynchronní stav*.|
+|[get](#get)|Načte výsledek, který je uložen v *přidruženém asynchronním stavu*.|
 |[platný](#valid)|Určuje, zda objekt není prázdný.|
-|[Počkej](#wait)|Blokuje aktuální vlákno, dokud není přidružený asynchronní stav připraven.|
-|[wait_for](#wait_for)|Blokuje až do přidruženého asynchronní stavu připravený nebo dokud určený čas uplynul.|
-|[wait_until](#wait_until)|Blokuje až do přidruženého asynchronní stavu je připravený, nebo dokud určitému bodu v čase.|
+|[Počkej](#wait)|Zablokuje aktuální vlákno, dokud není přidružený asynchronní stav připraven.|
+|[wait_for](#wait_for)|Blokuje, dokud je přidružený asynchronní stav připraven nebo dokud neuplyne zadaný čas.|
+|[wait_until](#wait_until)|Blokuje, dokud je přidružený asynchronní stav připraven nebo dokud není stanovený bod v čase.|
 
 ### <a name="public-operators"></a>Veřejné operátory
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
-|[shared_future::operator=](#op_eq)|Přiřadí nové přidružený asynchronní stav.|
+|[shared_future::operator=](#op_eq)|Přiřadí nový přidružený asynchronní stav.|
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** \<budoucí >
+**Hlavička:** \<budoucí >
 
-**Namespace:** std
+**Obor názvů:** std
 
-## <a name="get"></a>  shared_future::Get –
+## <a name="get"></a>shared_future:: Get
 
-Získá výsledek, který je uložený v *přidružený asynchronní stav*.
+Načte výsledek, který je uložen v *přidruženém asynchronním stavu*.
 
 ```cpp
 const Ty& get() const;
@@ -86,17 +86,17 @@ void get() const;
 
 ### <a name="remarks"></a>Poznámky
 
-Pokud je výsledkem výjimka, znovu vyvolá metodu ho. Jinak se vrátí výsledek.
+Pokud je výsledkem výjimka, metoda ji znovu vyvolá. V opačném případě se vrátí výsledek.
 
-Předtím, než načte výsledky, tato metoda blokuje aktuální vlákno, dokud není přidružený asynchronní stav připraven.
+Před tím, než bude načten výsledek, tato metoda zablokuje aktuální vlákno, dokud není přidružený asynchronní stav připraven.
 
-Pro částečnou specializaci `shared_future<Ty&>`, je uložená hodnota je v podstatě odkaz na objekt, který byl předán *asynchronního poskytovatele* jako návratovou hodnotu.
+Pro částečnou specializaci `shared_future<Ty&>`je uložená hodnota efektivně odkaz na objekt, který byl předán *asynchronnímu zprostředkovateli* jako návratová hodnota.
 
-Protože neexistuje žádná uložená hodnota pro specializaci `shared_future<void>`, vrátí metoda **void**.
+Vzhledem k tomu, že pro specializaci `shared_future<void>`neexistuje uložená hodnota, vrátí metoda hodnotu **void**.
 
-## <a name="op_eq"></a>  shared_future::Operator =
+## <a name="op_eq"></a>shared_future:: operator =
 
-Přenosy *přidružený asynchronní stav* ze zadaného objektu.
+Převede *přidružený asynchronní stav* ze zadaného objektu.
 
 ```cpp
 shared_future& operator=(shared_future&& Right) noexcept;
@@ -105,7 +105,7 @@ shared_future& operator=(const shared_future& Right);
 
 ### <a name="parameters"></a>Parametry
 
-*doprava*<br/>
+*Kliknutím*\
 A `shared_future` objektu.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -114,13 +114,13 @@ A `shared_future` objektu.
 
 ### <a name="remarks"></a>Poznámky
 
-Pro první operátor *vpravo* již nemá přidružený asynchronní stav po provedení této operace.
+Pro první operátor už *práva* k asynchronnímu stavu po operaci nemá přidružený asynchronní stav.
 
-Pro druhý způsob *vpravo* udržuje příslušném asynchronním stavu.
+Pro druhou metodu *pravá* udržuje svůj přidružený asynchronní stav.
 
-## <a name="shared_future"></a>  shared_future::shared_future – konstruktor
+## <a name="shared_future"></a>shared_future:: shared_future – konstruktor
 
-Vytvoří `shared_future` objektu.
+`shared_future` Vytvoří objekt.
 
 ```cpp
 shared_future() noexcept;
@@ -131,18 +131,18 @@ shared_future(const shared_future& Right);
 
 ### <a name="parameters"></a>Parametry
 
-*doprava*<br/>
-A [budoucí](../standard-library/future-class.md) nebo `shared_future` objektu.
+*Kliknutím*\
+[Budoucí](../standard-library/future-class.md) nebo `shared_future` objekt.
 
 ### <a name="remarks"></a>Poznámky
 
-První konstruktor zkonstruuje `shared_future` objekt, který nemá žádné *přidružený asynchronní stav*.
+První konstruktor vytvoří `shared_future` objekt, který nemá *přidružený asynchronní stav*.
 
-Sestavit druhý a třetí konstruktor `shared_future` objektu a přenos přidružený asynchronní stav z *vpravo*. *Pravé* již nemá přidružený asynchronní stav.
+Druhý a třetí konstruktory vytvoří `shared_future` objekt a přenesí přidružený asynchronní stav *zprava*. *Právo* již nemá přidružený asynchronní stav.
 
-Čtvrtý konstruktor vytvoří `shared_future` objekt, který má stejný připojený asynchronní stav jako *vpravo*.
+Čtvrtý konstruktor vytvoří `shared_future` objekt, který má stejný přidružený asynchronní stav jako *pravý*.
 
-## <a name="valid"></a>  shared_future::valid –
+## <a name="valid"></a>shared_future:: platný
 
 Určuje, zda má objekt *přidružený asynchronní stav*.
 
@@ -152,11 +152,11 @@ bool valid() noexcept;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-**Hodnota TRUE** Pokud objekt má přidružený asynchronní stav; v opačném případě **false**.
+**true** , pokud má objekt přidružený asynchronní stav; v opačném případě **false**.
 
-## <a name="wait"></a>  shared_future::wait –
+## <a name="wait"></a>shared_future:: wait
 
-Blokuje aktuální vlákno, dokud *přidružený asynchronní stav* je *připravené*.
+Zablokuje aktuální vlákno, dokud není *přidružený asynchronní stav* *připraven*.
 
 ```cpp
 void wait() const;
@@ -164,11 +164,11 @@ void wait() const;
 
 ### <a name="remarks"></a>Poznámky
 
-Přidružený asynchronní stav připravený, pouze v případě, že jeho asynchronního poskytovatele má uložené návratovou hodnotu nebo uložené výjimku.
+Přidružený asynchronní stav je připraven pouze v případě, že jeho asynchronní zprostředkovatel uložil návratovou hodnotu nebo uložila výjimku.
 
-## <a name="wait_for"></a>  shared_future::wait_for –
+## <a name="wait_for"></a>shared_future::wait_for
 
-Blokuje aktuální vlákno, dokud není přidružený asynchronní stav *připravené* nebo dokud neuplyne určitou dobu.
+Zablokuje aktuální vlákno, dokud není přidružený asynchronní stav *připraven* nebo dokud neuplyne zadaný čas.
 
 ```cpp
 template <class Rep, class Period>
@@ -178,20 +178,20 @@ future_status wait_for(
 
 ### <a name="parameters"></a>Parametry
 
-*Rel_time*<br/>
-A [chrono::duration](../standard-library/duration-class.md) objekt, který určuje maximální časový interval, který vlákno blokováno.
+*Rel_time*\
+Objekt [chrono::d uration](../standard-library/duration-class.md) , který určuje maximální časový interval, který vlákno blokuje.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-A [future_status –](../standard-library/future-enums.md#future_status) , který označuje důvod pro vrácení.
+[Future_status](../standard-library/future-enums.md#future_status) , který označuje důvod vrácení.
 
 ### <a name="remarks"></a>Poznámky
 
-Je přidružený asynchronní stav *připravené* pouze v případě, že jeho asynchronního poskytovatele má uložené návratovou hodnotu nebo uložené výjimku.
+Přidružený asynchronní stav je *připraven* pouze v případě, že jeho asynchronní zprostředkovatel uložil návratovou hodnotu nebo uložila výjimku.
 
-## <a name="wait_until"></a>  shared_future::wait_until –
+## <a name="wait_until"></a>shared_future::wait_until
 
-Blokuje aktuální vlákno, dokud není přidružený asynchronní stav *připravené* nebo až po zadaný časový bod.
+Zablokuje aktuální vlákno, dokud není přidružený asynchronní stav *připraven* nebo dokud není za zadaným časovým bodem.
 
 ```cpp
 template <class Clock, class Duration>
@@ -201,18 +201,18 @@ future_status wait_until(
 
 ### <a name="parameters"></a>Parametry
 
-*Abs_time*<br/>
-A [chrono::time_point](../standard-library/time-point-class.md) objekt, který určuje dobu, po jejímž uplynutí může odblokovat vlákna.
+*Abs_time*\
+Objekt [chrono:: time_point](../standard-library/time-point-class.md) , který určuje čas, po jehož uplynutí může vlákno odblokovat.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-A [future_status –](../standard-library/future-enums.md#future_status) , který označuje důvod pro vrácení.
+[Future_status](../standard-library/future-enums.md#future_status) , který označuje důvod vrácení.
 
 ### <a name="remarks"></a>Poznámky
 
-Přidružený asynchronní stav připravený, pouze v případě, že jeho asynchronního poskytovatele má uložené návratovou hodnotu nebo uložené výjimku.
+Přidružený asynchronní stav je připraven pouze v případě, že jeho asynchronní zprostředkovatel uložil návratovou hodnotu nebo uložila výjimku.
 
 ## <a name="see-also"></a>Viz také:
 
-[Odkaz na soubory hlaviček](../standard-library/cpp-standard-library-header-files.md)<br/>
-[\<Další >](../standard-library/future.md)<br/>
+[Odkazy na hlavičkové soubory](../standard-library/cpp-standard-library-header-files.md)\
+[\<budoucí >](../standard-library/future.md)

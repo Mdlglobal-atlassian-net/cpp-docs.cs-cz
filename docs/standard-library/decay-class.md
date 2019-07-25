@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - decay class
 ms.assetid: 96baa2fd-c8e0-49af-be91-ba375ba7f9dc
-ms.openlocfilehash: 23c2cff37e67e78ba68c37468c110d7a3725b785
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 73b9e2d8ef9a14830c13ee3f6566137bb51e939d
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62394054"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68450645"
 ---
 # <a name="decay-class"></a>decay – třída
 
-Vytvoří typ jako předán podle hodnoty. Díky není typ odkazu, nekonstantní, není typu volatile nebo vytvoří ukazatel na typ z typu pole nebo funkce.
+Vytvoří typ jako předaný hodnotou. Vytvoří neodkazový typ, který není typu const, není volatile, nebo vytvoří ukazatel na typ z funkce nebo typu pole.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -29,27 +29,27 @@ using decay_t = typename decay<T>::type;
 
 ### <a name="parameters"></a>Parametry
 
-*T*<br/>
+*Š*\
 Typ, který chcete upravit.
 
 ## <a name="remarks"></a>Poznámky
 
-Šablona decay vytvoří výsledný typ, jako kdyby byl předán typ podle hodnoty jako argument. Definice typu člena šablony třídy `type` obsahuje upravený typ, který je definován v následujících fázích:
+Použijte šablonu Decay k vytvoření výsledného typu, jako by byl typ předán pomocí value jako argument. Definice typedef `type` člena třídy šablony obsahuje upravený typ, který je definován v následujících fázích:
 
 - Typ `U` je definován jako `remove_reference<T>::type`.
 
-- Pokud `is_array<U>::value` PRAVDA, upravený typ `type` je `remove_extent<U>::type *`.
+- Pokud `is_array<U>::value` má hodnotu true, je upravený `remove_extent<U>::type *`typ `type` .
 
-- Jinak, pokud `is_function<U>::value` PRAVDA, upravený typ `type` je `add_pointer<U>::type`.
+- V opačném `is_function<U>::value` případě, pokud má hodnotu true `type` , `add_pointer<U>::type`je upravený typ.
 
-- V opačném případě upravený typ `type` je `remove_cv<U>::type`.
+- V opačném případě je `type` `remove_cv<U>::type`upravený typ.
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** \<type_traits >
+**Hlavička:** \<type_traits >
 
-**Namespace:** std
+**Obor názvů:** std
 
 ## <a name="see-also"></a>Viz také:
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
+[<type_traits>](../standard-library/type-traits.md)

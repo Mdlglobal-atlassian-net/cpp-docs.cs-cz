@@ -20,16 +20,16 @@ helpviewer_keywords:
 - std::sub_match [C++], iterator
 - std::sub_match [C++], value_type
 ms.assetid: 804e2b9e-d16a-4c4c-ac60-024e0b2dd0e8
-ms.openlocfilehash: e0edfbc69d6cba6ee352a34406860e4c999dc3a7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 07ec6f0dc9daaec19fa97a6220da4d4ea93b254b
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62412212"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68447432"
 ---
 # <a name="submatch-class"></a>sub_match – třída
 
-Popisuje dílčí shoda.
+Popisuje podshodu.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -41,20 +41,20 @@ class sub_match
 
 ## <a name="parameters"></a>Parametry
 
-*BidIt*<br/>
-Typ iterátoru pro dílčí shody.
+*BidI*\
+Typ iterátoru pro podshody.
 
 ## <a name="remarks"></a>Poznámky
 
-Třída šablony popisuje objekt, který určuje posloupnost znaků, které odpovídá skupině zachycení ve volání [regex_match –](../standard-library/regex-functions.md#regex_match) nebo [regex_search –](../standard-library/regex-functions.md#regex_search). Objekty typu [match_results – třída](../standard-library/match-results-class.md) obsahují pole hodnot tyto objekty, jeden pro každou skupinou zachycení v regulárním výrazu, který byl použit v hledání.
+Třída šablony popisuje objekt, který určuje sekvenci znaků, která se shoduje se skupinou zachycení ve volání [regex_match](../standard-library/regex-functions.md#regex_match) nebo [regex_search](../standard-library/regex-functions.md#regex_search). Objekty typu [třídy match_results](../standard-library/match-results-class.md) obsahují pole těchto objektů, jeden pro každou skupinu zachycení v regulárním výrazu, který byl použit ve vyhledávání.
 
-Pokud se skupina zachycení odpovídá objektu datový člen `matched` obsahuje hodnotu false a dvěma iterátory `first` a `second` (zděděné ze základní třídy `std::pair`) jsou si rovny. Pokud byla odpovídající skupina zachycení, `matched` obsahuje hodnotu true, iterátor `first` odkazuje na první znak v cílové sekvenci, který odpovídá skupině zachycení a iterátor `second` odkazuje jednu pozici za posledním znakem v cíli pořadí, který odpovídá skupině zachycení. Všimněte si, že pro nulové délky odpovídat členu `matched` obsahuje hodnotu true, bude rovnat dvěma iterátory a obě bude odkazovat na pozici shody.
+Pokud se skupina zachycení neshodovala `matched` s datovým členem objektu, je uložena hodnota false a dva `first` iterátory `second` a (zděděné ze `std::pair`základní) jsou stejné. Pokud se skupina zachycení shodovala, `matched` je hodnota true, iterátor `first` ukazuje na první znak v cílové sekvenci, který se shoduje se skupinou zachycení, a iterátor `second` ukazuje jednu pozici za posledním znakem v cíli. sekvence, která se shodovala se skupinou zachycení. Všimněte si, že u hodnoty s nulovou délkou `matched` má člen hodnotu true, dva iterátory budou stejné a obě budou ukazovat na pozici shody.
 
-Shoda nulovou délkou může dojít při zachycení skupina se skládá pouze z kontrolní výraz nebo o opakování, který umožňuje nula opakování. Příklad:
+Pokud se skupina zachycení skládá výhradně z kontrolního výrazu nebo opakování, které umožňuje nula opakování, může dojít k porovnávání s nulovou délkou. Příklad:
 
-"^" odpovídá cílové sekvenci "a"; `sub_match` objektu odpovídající skupinu 0 zachycení obsahuje iterátory obě přejděte prvního znaku v sekvenci.
+"^" odpovídá cílové sekvenci "a"; `sub_match` objekt odpovídající skupině zachycení 0 uchovává iterátory, které odkazují na první znak v sekvenci.
 
-"b(a*) b" odpovídá cílové sekvenci "bb"; `sub_match` objektu odpovídající skupinu zachycení 1 obsahuje iterátory obě přejděte na druhém znaku v sekvenci.
+"b (a *) b" odpovídá cílové sekvenci "BB"; `sub_match` objekt odpovídající skupině zachycení 1 obsahuje iterátory, které odkazují na druhý znak v sekvenci.
 
 ### <a name="typedefs"></a>Typedefs
 
@@ -68,16 +68,16 @@ Shoda nulovou délkou může dojít při zachycení skupina se skládá pouze z 
 
 |Členská funkce|Popis|
 |-|-|
-|[compare](#compare)|Porovnejte dílčí shoda proti sekvenci.|
-|[Délka](#length)|Vrátí délku objektu dílčí shoda.|
-|[Shoda](#matched)|Označuje, pokud byla úspěšná shoda.|
-|[str](#str)|Dílčí shoda převede na řetězec.|
+|[compare](#compare)|Porovnat dílčí shodu s posloupností.|
+|[length](#length)|Vrátí délku podshody.|
+|[vzájem](#matched)|Určuje, zda shoda proběhla úspěšně.|
+|[str](#str)|Převede dílčí shodu na řetězec.|
 
 ### <a name="operators"></a>Operátory
 
 |Operátor|Popis|
 |-|-|
-|[Operator basic_string < value_type >](#op_basic_string_lt_value_type_gt)|Dílčí shoda přetypování na řetězec.|
+|[operator basic_string < value_type >](#op_basic_string_lt_value_type_gt)|Přetypování odpovídá na řetězec.|
 
 ## <a name="example"></a>Příklad
 
@@ -133,13 +133,13 @@ compare(sub) == 0
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** \<regulární výraz >
+**Hlavička:** \<> regulárního výrazu
 
-**Namespace:** std
+**Obor názvů:** std
 
-## <a name="compare"></a>  sub_match::Compare
+## <a name="compare"></a>sub_match:: Compare
 
-Porovnejte dílčí shoda proti sekvenci.
+Porovnat dílčí shodu s posloupností.
 
 ```cpp
 int compare(const sub_match& right) const;
@@ -149,28 +149,28 @@ int compare(const value_type *ptr) const;
 
 ### <a name="parameters"></a>Parametry
 
-*doprava*<br/>
-Dílčí shoda pro porovnání.
+*Kliknutím*\
+Shoda pro porovnání s.
 
-*str*<br/>
-Řetězec, který má být porovnán s.
+*str*\
+Řetězec, na který se má porovnat.
 
-*ptr*<br/>
-Posloupnost zakončená hodnotou null pro porovnání.
+*střed*\
+Sekvence zakončená hodnotou null pro porovnání.
 
 ### <a name="remarks"></a>Poznámky
 
-První členská funkce porovná odpovídající pořadí `[first, second)` odpovídající pořadí `[right.first, right.second)`. Druhá členská funkce porovná odpovídající pořadí `[first, second)` na sekvenci znaků `[right.begin(), right.end())`. Třetí členská funkce porovná odpovídající pořadí `[first, second)` na sekvenci znaků `[right, right + std::char_traits<value_type>::length(right))`.
+První členská funkce porovná odpovídající `[first, second)` sekvenci s odpovídající sekvencí. `[right.first, right.second)` Druhá členská funkce porovnává odpovídající sekvenci `[first, second)` se sekvencí `[right.begin(), right.end())`znaků. Třetí členská funkce porovnává odpovídající sekvenci `[first, second)` se sekvencí `[right, right + std::char_traits<value_type>::length(right))`znaků.
 
 Každá funkce vrátí:
 
-Záporná hodnota, pokud první různý hodnotu odpovídající postupně porovnává méně než odpovídající element v sekvenci operandů (počítáno od `std::char_traits<value_type>::compare`), nebo pokud máte dva běžnou předponu, ale cílové sekvenci je delší
+záporná hodnota v případě, že první odlišná hodnota v porovnané sekvenci porovnává méně než odpovídající element v sekvenci operandů (jak `std::char_traits<value_type>::compare`je určeno), nebo pokud mají dva společný prefix, ale cílová sekvence je delší
 
-nula, pokud dva porovnání rovna prvek po prvku a mít stejnou délku
+nula, pokud dva porovnat rovnající se elementu a mají stejnou délku
 
-jinak kladnou hodnotu
+kladná hodnota, jinak
 
-## <a name="difference_type"></a>  sub_match::difference_type
+## <a name="difference_type"></a>sub_match::d ifference_type
 
 Typ rozdílu iterátoru.
 
@@ -182,7 +182,7 @@ typedef typename iterator_traits<BidIt>::difference_type difference_type;
 
 Typedef je synonymum pro `iterator_traits<BidIt>::difference_type`.
 
-## <a name="iterator"></a>  sub_match::iterator
+## <a name="iterator"></a>sub_match:: iterátor
 
 Typ iterátoru.
 
@@ -192,11 +192,11 @@ typedef BidIt iterator;
 
 ### <a name="remarks"></a>Poznámky
 
-Typedef je synonymum pro argument šablony typu `Bidit`.
+Typedef je synonymum pro argument `Bidit`typu šablony.
 
-## <a name="length"></a>  sub_match::length
+## <a name="length"></a>sub_match:: Length
 
-Vrátí délku objektu dílčí shoda.
+Vrátí délku podshody.
 
 ```cpp
 difference_type length() const;
@@ -204,11 +204,11 @@ difference_type length() const;
 
 ### <a name="remarks"></a>Poznámky
 
-Členská funkce vrátí délku odpovídající pořadí nebo nula, pokud se žádný odpovídající pořadí.
+Členská funkce vrátí délku porovnané sekvence nebo hodnotu nula, pokud neexistuje odpovídající sekvence.
 
-## <a name="matched"></a>  sub_match::matched
+## <a name="matched"></a>sub_match:: matched
 
-Označuje, pokud byla úspěšná shoda.
+Určuje, zda shoda proběhla úspěšně.
 
 ```cpp
 bool matched;
@@ -216,11 +216,11 @@ bool matched;
 
 ### <a name="remarks"></a>Poznámky
 
-Obsahuje člen **true** pouze v případě, že přidružené skupině zachycení `*this` byla součástí shoda s regulárním výrazem.
+Člen má **hodnotu true** pouze v případě, že skupina zachycení `*this` přidružená k byla součástí regulárního výrazu.
 
-## <a name="op_basic_string_lt_value_type_gt"></a>  sub_match::Operator basic_string&lt;value_type&gt;
+## <a name="op_basic_string_lt_value_type_gt"></a>sub_match:: operator basic_string&lt;value_type&gt;
 
-Dílčí shoda přetypování na řetězec.
+Přetypování odpovídá na řetězec.
 
 ```cpp
 operator basic_string<value_type>() const;
@@ -228,11 +228,11 @@ operator basic_string<value_type>() const;
 
 ### <a name="remarks"></a>Poznámky
 
-Členský operátor vrátí `str()`.
+Vrátí `str()`operátor member.
 
-## <a name="str"></a>  sub_match::str
+## <a name="str"></a>sub_match:: str
 
-Dílčí shoda převede na řetězec.
+Převede dílčí shodu na řetězec.
 
 ```cpp
 basic_string<value_type> str() const;
@@ -240,9 +240,9 @@ basic_string<value_type> str() const;
 
 ### <a name="remarks"></a>Poznámky
 
-Členská funkce vrátí `basic_string<value_type>(first, second)`.
+Vrátí `basic_string<value_type>(first, second)`členské funkce.
 
-## <a name="value_type"></a>  sub_match::value_type
+## <a name="value_type"></a>sub_match::value_type
 
 Typ prvku
 
@@ -256,5 +256,5 @@ Typedef je synonymum pro `iterator_traits<BidIt>::value_type`.
 
 ## <a name="see-also"></a>Viz také:
 
-[\<regex>](../standard-library/regex.md)<br/>
-[sub_match](../standard-library/sub-match-class.md)<br/>
+[\<regex>](../standard-library/regex.md)\
+[sub_match](../standard-library/sub-match-class.md)

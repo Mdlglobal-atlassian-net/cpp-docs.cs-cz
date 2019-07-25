@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - cfloat header
 ms.assetid: 25ec4ab9-3c1d-46e3-9e68-ad9a8762cadb
-ms.openlocfilehash: 7a839c7c8d06c29523b1b0d612355abcabb5c9cb
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 0ce5a4612363dde1daa991d4f84eb8a77aebaaa5
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68244927"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68449003"
 ---
 # <a name="ltcfloatgt"></a>&lt;cfloat&gt;
 
-Obsahuje hlavičku knihovny Standard C \<float.h >.
+Obsahuje hlavičku \<standardní knihovny jazyka C s plovoucí desetinnou čárkou. h >.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -70,6 +70,6 @@ Obsahuje hlavičku knihovny Standard C \<float.h >.
 
 ## <a name="see-also"></a>Viz také:
 
-[Odkaz na soubory hlaviček](../standard-library/cpp-standard-library-header-files.md)<br/>
-[Standardní knihovna C++ – přehled](../standard-library/cpp-standard-library-overview.md)<br/>
-[Bezpečný přístup z více vláken ve standardní knihovně C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[Odkazy na hlavičkové soubory](../standard-library/cpp-standard-library-header-files.md)\
+[C++Přehled standardní knihovny](../standard-library/cpp-standard-library-overview.md)\
+[Bezpečný přístup z více vláken ve standardní knihovně C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)

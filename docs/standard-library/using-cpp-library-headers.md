@@ -10,50 +10,50 @@ helpviewer_keywords:
 - library headers
 - C++ Standard Library, headers
 ms.assetid: a36e889e-1af2-4cd9-a211-bfc7a3fd8e85
-ms.openlocfilehash: b9841d1045a6d2d1126414f1ce4cfc93f9667eef
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9cc0bb51b159f6668adad05ebd2d386364ae2f81
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62362358"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68450065"
 ---
 # <a name="using-c-library-headers"></a>Používání hlaviček knihoven C++
 
-Zahrnout obsah standardní hlavičku pojmenováním v direktivě include.
+Obsah standardní hlavičky zahrnete pojmenováním do direktivy include.
 
 ```cpp
 #include <iostream>// include I/O facilities
 ```
 
-Můžete zahrnout standardní záhlaví v libovolném pořadí, standardní hlavičku více než jednou nebo dvěma nebo více standardními záhlavími, které definují stejné – makro nebo stejného typu. Standardní hlavička v rámci deklarace nezahrnují. Nedefinujte makra, která mají stejné názvy jako klíčová slova před zahrnout standardní hlavička.
+Standardní hlavičky můžete zahrnout v libovolném pořadí, standardní záhlaví více než jednou nebo dvě nebo více standardních hlaviček, které definují stejné makro nebo stejný typ. Nezahrnovat standardní hlavičku v rámci deklarace. Nedefinujte makra, která mají stejné názvy jako klíčová slova předtím, než zahrnete standardní hlavičku.
 
-Záhlaví knihovny C++ obsahuje všechny ostatní hlaviček knihoven C++ je potřeba definovat potřebné typy. (Vždy zahrnovat explicitně C++ knihovny záhlaví v jednotce překladu, ale potřeba, přidejte odhad nesprávné informace o jeho skutečné závislosti.) Záhlaví Standard C nikdy obsahuje jiné standardní hlavičku. Standardní hlavičku deklaruje a definuje pouze entity pro něj popsané v tomto dokumentu.
+Hlavička C++ knihovny zahrnuje všechny další C++ hlavičky knihoven, které potřebuje k definování potřebných typů. (Vždy zahrňte explicitně C++ všechna záhlaví knihoven potřebná v jednotce překladu, ale lesti špatného odhadu jeho skutečných závislostí.) Standardní hlavička jazyka C nikdy neobsahuje další standardní hlavičku. Standardní hlavička deklaruje nebo definuje pouze ty entity, které jsou pro něj popsány v tomto dokumentu.
 
-Každá funkce v knihovně je deklarován ve standardní hlavičku. Na rozdíl od ve standardním C standardní hlavičku nikdy poskytuje maskování makro se stejným názvem jako funkce, která skrývá deklaraci funkce a dosáhne stejného výsledku. Další informace o maskování makra, naleznete v tématu [konvence knihovny C++](../standard-library/cpp-library-conventions.md).
+Každá funkce v knihovně je deklarována ve standardním záhlaví. Na rozdíl od standardu C, standardní hlavička nikdy neposkytuje maskující makro se stejným názvem jako funkce, která maskuje deklaraci funkce a dosahuje stejného efektu. Další informace o maskování maker naleznete v tématu [ C++ konvence knihovny](../standard-library/cpp-library-conventions.md).
 
-Všechny názvy jiných než **operátor delete** a **operátor new** v knihovně C++ hlavičky jsou definovány v `std` obor názvů, nebo v oboru vnořené `std` oboru názvů. Odkaz na název `cin`, například jako `std::cin`. Pamatujte však, že názvy maker se nevztahují kvalifikace názvů, takže vždy psát `__STD_COMPLEX` bez kvalifikátoru oboru názvů.
+Všechny názvy jiné než **operátor delete** a **operator new** v `std` hlavičce C++ knihovny jsou definovány v oboru názvů nebo v oboru názvů vnořeném v rámci `std` oboru názvů. Odkaz na název `cin`, například jako `std::cin`. Všimněte si však, že názvy maker nejsou předmětem kvalifikace oboru názvů, takže můžete vždy zapisovat `__STD_COMPLEX` bez kvalifikátoru oboru názvů.
 
-V některých prostředích překladu, včetně hlaviček knihoven C++ může zahrnul externí názvy deklarované v `std` oboru názvů do globálního oboru názvů, u jednotlivých **pomocí** deklarace pro jednotlivé názvy. V opačném případě nemá hlavičku *není* představovat všechny názvy knihoven na aktuální obor názvů.
+V některých převodových prostředích, C++ včetně hlavičky knihovny, může být také možné použít `std` externí názvy deklarované v oboru názvů do globálního oboru názvů, přičemž jednotlivec **používá** deklarace pro každý z názvů. Jinak hlavička v aktuálním oboru názvů *nezavádí žádné* názvy knihoven.
 
-Standard jazyka C++ vyžaduje, aby C standardními záhlavími deklarovat všechny externí názvy v oboru názvů `std`, pak je zahrnul do globální obor názvů u jednotlivých **pomocí** deklarace pro jednotlivé názvy. Ale v některých prostředích překlad standardní knihovnou jazyka c. hlavičky zahrnují žádné deklarace oboru názvů deklarovat všechny názvy přímo v globálním oboru názvů. Díky tomu se nejvíce přenosný způsob, jak zacházet s obory názvů má následovat dvě pravidla:
+C++ Standard vyžaduje, aby standardní hlavičky jazyka C deklarovaly všechny externí názvy v `std`oboru názvů a pak je nahlásily do globálního oboru názvů s individuálním **použitím** deklarace pro každý název. Ale v některých prostředích překladu standardní hlavičky jazyka C neobsahují deklarace oboru názvů a deklaruje všechny názvy přímo v globálním oboru názvů. Nejspolehlivějším způsobem, jak se vypořádat s obory názvů, je tedy postupovat podle dvou pravidel:
 
-- Chcete-li assuredly deklarovat v oboru názvů `std` externí název, který je obvykle deklarované v \<stdlib.h >, například zahrnout hlavičku \<cstdlib – >. Vědět, že název může být také deklarovány v globálním oboru názvů.
+- Pro zaručenou deklaraci v `std` oboru názvů externí název, který je tradičně \<deklarovaný v Stdlib. h > například zahrnout hlavičku \<cstdlib >. Víte, že název může být také deklarován v globálním oboru názvů.
 
-- Chcete-li assuredly deklarovat v globálním oboru názvů deklarovaný v externí název \<stdlib.h >, zahrnout hlavičku \<stdlib.h > přímo. Vědět, že název může být také deklarovány v oboru názvů `std`.
+- Pro zaručenou deklaraci v globálním oboru názvů externí název deklarovaný v \<Stdlib. h >, zahrňte > \<záhlaví Stdlib. h. Víte, že název může být také deklarován v oboru `std`názvů.
 
-Proto pokud chcete volat `std::abort` způsobit neobvyklé ukončení, měli byste zahrnout \<cstdlib – >. Pokud chcete volat `abort`, měli byste zahrnout \<stdlib.h >.
+Proto pokud chcete zavolat `std::abort` , aby způsobila abnormální ukončení, měli byste zahrnout \<cstdlib >. Pokud chcete volat `abort`, měli byste zahrnout \<Stdlib. h >.
 
-Alternativně můžete napsat deklarace:
+Alternativně můžete zapsat deklaraci:
 
 ```cpp
 using namespace std;
 ```
 
-všechny názvy knihoven což přináší do aktuální obor názvů. Při zápisu této deklarace okamžitě direktivy přece zahrnout, zahrnul názvy do globálního oboru názvů. Následně můžete ignorovat aspekty oboru názvů ve zbývající jednotky překladu. Také vyhnout většina rozdílů mezi prostředími různých překladu.
+který do aktuálního oboru názvů převede všechny názvy knihoven. Pokud zapíšete tuto deklaraci hned po všech direktivách include, získáte názvy v globálním oboru názvů. Následně můžete ignorovat požadavky oboru názvů ve zbývající části jednotky překladu. Vyhnete se také většině rozdílů v různých prostředích překladu.
 
-Pokud není výslovně uvedeno jinak, nesmí definovat názvy v `std` obor názvů, nebo v oboru vnořené `std` oboru názvů, v rámci programu.
+Pokud není výslovně uvedeno jinak, nesmíte v rámci programu definovat názvy `std` v oboru názvů nebo v oboru názvů vnořeném `std` v rámci oboru názvů.
 
 ## <a name="see-also"></a>Viz také:
 
-[Standardní knihovna C++ – přehled](../standard-library/cpp-standard-library-overview.md)<br/>
-[Bezpečný přístup z více vláken ve standardní knihovně C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[C++Přehled standardní knihovny](../standard-library/cpp-standard-library-overview.md)\
+[Bezpečný přístup z více vláken ve standardní knihovně C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)

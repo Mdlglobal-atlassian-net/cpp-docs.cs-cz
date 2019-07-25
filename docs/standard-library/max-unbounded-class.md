@@ -16,16 +16,16 @@ helpviewer_keywords:
 - stdext::max_unbounded [C++], released
 - stdext::max_unbounded [C++], saved
 ms.assetid: e34627a9-c231-4031-a483-cbb0514fff46
-ms.openlocfilehash: ba99d6ed3af34363bf88cde1a40e4bf37841cd8d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: cea2f09837e5efc6969e4ab305d106b9c9728412
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62412914"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68447203"
 ---
 # <a name="maxunbounded-class"></a>max_unbounded – třída
 
-Popisuje [maximálního počtu tříd](../standard-library/allocators-header.md) objekt, který neomezuje maximální délku [freelist](../standard-library/freelist-class.md) objektu.
+Popisuje [maximální objekt třídy](../standard-library/allocators-header.md) , který neomezuje maximální délku objektu [freelist –](../standard-library/freelist-class.md) .
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -37,21 +37,21 @@ class max_unbounded
 
 |Členská funkce|Popis|
 |-|-|
-|[přidělené](#allocated)|Zvýší počet přidělených paměťových bloků.|
-|[přidělení](#deallocated)|Sníží počet přidělených paměťových bloků.|
-|[Úplné](#full)|Vrátí hodnotu, která určuje, zda by měl být další bloky paměti přidat do seznamu zdarma.|
-|[Všeobecně dostupné](#released)|Sníží počet paměti blokuje v seznamu zdarma.|
-|[saved](#saved)|Zvýší počet paměťových bloků v seznamu zdarma.|
+|[přidělování](#allocated)|Zvýší počet přidělených bloků paměti.|
+|[přidělení zrušeno](#deallocated)|Sníží počet přidělených bloků paměti.|
+|[kompletní](#full)|Vrátí hodnotu, která určuje, zda mají být do bezplatného seznamu přidány další bloky paměti.|
+|[vydané](#released)|Sníží počet bloků paměti v bezplatném seznamu.|
+|[saved](#saved)|Zvýší počet bloků paměti v bezplatném seznamu.|
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** \<alokátorů >
+**Hlavička:** \<> přidělování
 
-**Namespace:** stdext
+**Obor názvů:** stdext
 
-## <a name="allocated"></a>  max_unbounded::allocated
+## <a name="allocated"></a>max_unbounded:: přiděleno
 
-Zvýší počet přidělených paměťových bloků.
+Zvýší počet přidělených bloků paměti.
 
 ```cpp
 void allocated(std::size_t _Nx = 1);
@@ -65,11 +65,11 @@ void allocated(std::size_t _Nx = 1);
 
 ### <a name="remarks"></a>Poznámky
 
-Tato členská funkce nemá žádný účinek. Volá se po každé úspěšné volání podle `cache_freelist::allocate` operátoru **nové**. Argument *_Nx* je počet paměťových bloků v bloku dat přidělena pomocí operátoru **nové**.
+Tato členská funkce neprovede žádnou akci. Je volána po každém úspěšném volání metody `cache_freelist::allocate` operator **New**. Argument *_Nx* je počet paměťových bloků v bloku, který je přidělený operátorem **New**.
 
-## <a name="deallocated"></a>  max_unbounded::deallocated
+## <a name="deallocated"></a>max_unbounded::d eallocated
 
-Sníží počet přidělených paměťových bloků.
+Sníží počet přidělených bloků paměti.
 
 ```cpp
 void deallocated(std::size_t _Nx = 1);
@@ -83,11 +83,11 @@ void deallocated(std::size_t _Nx = 1);
 
 ### <a name="remarks"></a>Poznámky
 
-Členská funkce nemá žádný účinek. Tato členská funkce je volána po každé volání podle `cache_freelist::deallocate` operátoru **odstranit**. Argument *_Nx* je počet paměťových bloků v bloku dat navrácena pomocí operátoru **odstranit**.
+Členské funkce neprovádí žádnou akci. Tato členská funkce se volá po každém volání `cache_freelist::deallocate` operátoru **Delete**. Argument *_Nx* je počet bloků paměti v bloku, který byl odstraněn pomocí operátoru **Delete**.
 
-## <a name="full"></a>  max_unbounded::full
+## <a name="full"></a>max_unbounded:: Full
 
-Vrátí hodnotu, která určuje, zda by měl být další bloky paměti přidat do seznamu zdarma.
+Vrátí hodnotu, která určuje, zda mají být do bezplatného seznamu přidány další bloky paměti.
 
 ```cpp
 bool full();
@@ -95,15 +95,15 @@ bool full();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Členská funkce vždy vrátí **false**.
+Členská funkce vždycky vrátí **hodnotu false**.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato členská funkce je volána `cache_freelist::deallocate`. Pokud volání vrátí **true**, `deallocate` vloží blok paměti v seznamu zdarma; Pokud vrátí hodnotu false, `deallocate` operátor volání **odstranit** se uvolnit bloku.
+Tato členská funkce je volána `cache_freelist::deallocate`nástrojem. Pokud volání vrátí **hodnotu true**, `deallocate` umístí blok paměti do bezplatného seznamu; Pokud vrátí hodnotu false, `deallocate` volá operátor **DELETE pro zrušení** přidělení bloku.
 
-## <a name="released"></a>  max_unbounded::released
+## <a name="released"></a>max_unbounded:: vydáno
 
-Sníží počet paměti blokuje v seznamu zdarma.
+Sníží počet bloků paměti v bezplatném seznamu.
 
 ```cpp
 void released();
@@ -111,11 +111,11 @@ void released();
 
 ### <a name="remarks"></a>Poznámky
 
-Tato členská funkce nemá žádný účinek. `released` Členské funkce třídy aktuální maximální volá `cache_freelist::allocate` vždy, když ji odebere blok paměti ze seznamu zdarma.
+Tato členská funkce neprovede žádnou akci. Členská funkce aktuální třídy maxima je `cache_freelist::allocate` volána při každém odebrání bloku paměti ze seznamu Free. `released`
 
-## <a name="saved"></a>  max_unbounded::saved
+## <a name="saved"></a>max_unbounded:: Uloženo
 
-Zvýší počet paměťových bloků v seznamu zdarma.
+Zvýší počet bloků paměti v bezplatném seznamu.
 
 ```cpp
 void saved();
@@ -123,8 +123,8 @@ void saved();
 
 ### <a name="remarks"></a>Poznámky
 
-Tato členská funkce nemá žádný účinek. Je volána metodou `cache_freelist::deallocate` vždy, když umístí blok paměti v seznamu zdarma.
+Tato členská funkce neprovede žádnou akci. Je volána `cache_freelist::deallocate` při každém vložení bloku paměti do bezplatného seznamu.
 
 ## <a name="see-also"></a>Viz také:
 
-[\<allocators>](../standard-library/allocators-header.md)<br/>
+[\<allocators>](../standard-library/allocators-header.md)

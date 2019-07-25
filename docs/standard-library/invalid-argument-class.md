@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - invalid_argument class
 ms.assetid: af6c227d-ad7c-4e63-9dee-67af81d83506
-ms.openlocfilehash: e6b56e98a1adc7426fe0d1b65d623549a4391c8d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1c5caa0129730750a6429d9f7fa883e9af30f225
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62404848"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68449264"
 ---
 # <a name="invalidargument-class"></a>invalid_argument – třída
 
-Tato třída slouží jako základní třída pro všechny výjimky vyvolané oznamuje neplatný argument.
+Třída slouží jako základní třída pro všechny výjimky vyvolané k nahlášení neplatného argumentu.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -31,7 +31,7 @@ public:
 
 ## <a name="remarks"></a>Poznámky
 
-Hodnota vrácená [co](../standard-library/exception-class.md) je kopie **zpráva**`.`[data](../standard-library/basic-string-class.md#data).
+Hodnota vrácená funkcí [co](../standard-library/exception-class.md) je kopie[dat](../standard-library/basic-string-class.md#data) **zprávy**`.`.
 
 ## <a name="example"></a>Příklad
 
@@ -63,11 +63,11 @@ Type class std::invalid_argument
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** \<stdexcept – >
+**Hlavička:** \<stdexcept >
 
-**Namespace:** std
+**Obor názvů:** std
 
 ## <a name="see-also"></a>Viz také:
 
-[logic_error – třída](../standard-library/logic-error-class.md)<br/>
-[Bezpečný přístup z více vláken ve standardní knihovně C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[logic_error – třída](../standard-library/logic-error-class.md)\
+[Bezpečný přístup z více vláken ve standardní knihovně C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)

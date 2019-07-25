@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - messages_byname class
 ms.assetid: c6c64841-3e80-43c8-b54c-fed41833ad6b
-ms.openlocfilehash: 7b341f3e1dbf76021911c70560b83932b5302191
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b8fe1ab2db792819831f5c50aa99a02559f71cdd
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62404790"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68451810"
 ---
 # <a name="messagesbyname-class"></a>messages_byname – třída
 
-Odvozená třída šablony popisuje objekt, který může sloužit jako omezující vlastnost zprávy daného národního prostředí, který umožňuje načtení lokalizovaných zpráv.
+Odvozená třída šablony popisuje objekt, který může sloužit jako omezující vlastnost zprávy daného národního prostředí a který umožňuje načtení lokalizovaných zpráv.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -39,22 +39,22 @@ protected:
 
 ### <a name="parameters"></a>Parametry
 
-*_Locname*<br/>
-S názvem národního prostředí.
+*_Locname*\
+Pojmenované národní prostředí.
 
-*_Refs*<br/>
-Počet počáteční odkazů.
+*_Refs*\
+Počáteční počet odkazů
 
 ## <a name="remarks"></a>Poznámky
 
-Její chování je určeno s názvem národního prostředí *_Locname*. Každý konstruktor inicializuje jeho základní objekt s [zprávy](../standard-library/messages-class.md#messages)\<CharType > ( `_Refs`).
+Jeho chování je určeno názvem národního prostředí *_Locname*. Každý konstruktor inicializuje svůj základní objekt se [zprávami](../standard-library/messages-class.md#messages)\<CharType > `_Refs`().
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** \<národní prostředí >
+**Hlavička:** \<> národního prostředí
 
-**Namespace:** std
+**Obor názvů:** std
 
 ## <a name="see-also"></a>Viz také:
 
-[Bezpečný přístup z více vláken ve standardní knihovně C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[Bezpečný přístup z více vláken ve standardní knihovně C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)

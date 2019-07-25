@@ -9,58 +9,58 @@ helpviewer_keywords:
 - functors
 - functional header
 ms.assetid: 7dd463e8-a29f-49bc-aedd-8fa53b54bfbc
-ms.openlocfilehash: 7a72941c7b8c351f7b4fb8fa0e40afb809ea7cbe
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 2f8ef031731e4213ce8cda326d05f1241cd03625
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68243762"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68447394"
 ---
 # <a name="ltfunctionalgt"></a>&lt;funkční&gt;
 
-Definuje funkce standardní knihovny C++, které pomáhají při vytváření *objekty funkce*, označované také jako *funktory*a jejich vazačů. Objekt funkce je objekt typu, který definuje `operator()`. Objekt funkce může být ukazatel na funkci, ale častěji tento objekt slouží k ukládání dalších informací, ke kterým lze získat přístup během volání funkce.
+Definuje C++ standardní funkce knihovny, které vám pomůžou vytvářet *objekty funkcí*, označované také jako *funktory*a jejich pořadače. Objekt funkce je objekt typu, který definuje `operator()`. Objekt funkce může být ukazatel na funkci, ale častěji tento objekt slouží k ukládání dalších informací, ke kterým lze získat přístup během volání funkce.
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** \<funkční >
+**Hlavička:** \<funkční >
 
-**Namespace:** std
+**Obor názvů:** std
 
 ## <a name="remarks"></a>Poznámky
 
-Algoritmy vyžadují dva druhy objektů funkce: *unární* a *binární*. Jednočlenné objekty funkce vyžadují jeden argument a binární objekty funkce vyžadují dva argumenty. Objekt funkce a ukazatelů na funkce lze předat jako predikát algoritmus, ale objekty funkce jsou také přizpůsobivé a zvýšit rozsah, flexibilitu a efektivitu standardní knihovny C++. Například, pokud potřebná hodnota musí být navázána na funkci před předáním algoritmu, nelze ukazatel na funkci použít. Adaptéry funkce převádějí ukazatele na funkci na přizpůsobitelné objekty funkce, které lze navázat na hodnotu. Záhlaví \<funkční > také obsahuje adaptéry členské funkce, které umožňují členské funkce, která se má volat jako přizpůsobitelné objekty funkce. Funkce jsou přizpůsobitelné, pokud obsahují deklarace vnořených typů určující jejich argumenty a návratové typy. Objekty funkcí a jejich adaptéry umožňují upgrade existujících aplikací a pomáhají integrovat knihovnu do programovacího prostředí jazyka C++ standardní knihovny C++.
+Algoritmy vyžadují dva typy objektů Functions: *unární* a *binární*. Jednočlenné objekty funkce vyžadují jeden argument a binární objekty funkce vyžadují dva argumenty. Objekt funkce a ukazatele na funkce mohou být předány jako predikát pro algoritmus, ale objekty funkcí jsou také upravitelné a zvyšují rozsah, flexibilitu a efektivitu C++ standardní knihovny. Například, pokud potřebná hodnota musí být navázána na funkci před předáním algoritmu, nelze ukazatel na funkci použít. Adaptéry funkce převádějí ukazatele na funkci na přizpůsobitelné objekty funkce, které lze navázat na hodnotu. Funkce Header \<> také obsahuje adaptéry členské funkce, které umožňují volat členské funkce jako přizpůsobitelné objekty funkce. Funkce jsou přizpůsobitelné, pokud obsahují deklarace vnořených typů určující jejich argumenty a návratové typy. Objekty funkce a jejich adaptéry umožňují C++ standardní knihovně upgradovat stávající aplikace a pomáhat integrovat knihovnu do C++ programovacího prostředí.
 
-Implementace objektů funkce v \<funkční > obsahuje *transparentní funktory operátorů*. což jsou specializované standardní funkci objektů a nepřebírající žádné parametry šablony a provádět dokonalé předávání argumentů funkce a dokonalé vrácení výsledku. Tyto specializace šablony nevyžadují určení typů argumentu při vyvolání aritmetických, relačních, logických a bitových operátorů funktorů. Lze přetěžovat aritmetické, relační, logické a bitové operátory vlastních typů nebo heterogenní kombinace typů, a potom použít funktory transparentního operátoru jako argumenty funkce. Například pokud váš typ *MyType* implementuje `operator<`, můžete volat `sort(my_collection.begin(), my_collection.end(), less<>())` namísto explicitního určení typu `sort(my_collection.begin(), my_collection.end(), less<MyType>())`.
+Implementace objektů funkce ve \<funkčních > zahrnuje *funktory transparentního operátoru*. což jsou specializace standardních objektů funkcí a neobsahují žádné parametry šablony a provádějí dokonalé přesměrování argumentů funkce a dokonalého vrácení výsledku. Tyto specializace šablony nevyžadují určení typů argumentu při vyvolání aritmetických, relačních, logických a bitových operátorů funktorů. Lze přetěžovat aritmetické, relační, logické a bitové operátory vlastních typů nebo heterogenní kombinace typů, a potom použít funktory transparentního operátoru jako argumenty funkce. Například pokud váš typ *MyType* implementuje `operator<`, můžete volat `sort(my_collection.begin(), my_collection.end(), less<>())` namísto explicitního určení typu `sort(my_collection.begin(), my_collection.end(), less<MyType>())`.
 
-V C ++ 11, C ++ 14 a C ++ 17 jsou přidány následující funkce:
+Do C++ 11, C++ 14 a C++ 17 jsou přidány následující funkce:
 
-- A *signatura volání* je název návratového typu následovaného seznamem oddělených čárkou v závorkách nula nebo více typů argumentů.
+- *Signatura volání* je název návratového typu následovaný čárkou odděleným seznamem nula nebo více typů argumentů.
 
-- A *volatelného typu* je ukazatel na funkci, ukazatel na členskou funkci, ukazatel na členská data nebo typ třídy, jejichž objekty se mohou zobrazit bezprostředně nalevo od operátoru volání funkce.
+- Typ, který lze *volat* , je ukazatel na funkci, ukazatel na členskou funkci, ukazatel na Členská data nebo typ třídy, jejíž objekty se mohou objevit hned vlevo od operátoru volání funkce.
 
-- A *volatelný objekt* je objekt volatelného typu.
+- Objekt, který se může *volat* , je objektem typu, který je k.
 
-- A *typ obálky volání* je typ, který uchovává volatelný objekt a podporuje operaci volání, které přeposílá požadavky do tohoto objektu.
+- *Typ obálky volání* je typ, který obsahuje volající objekt a podporuje operaci volání, která je předána tomuto objektu.
 
-- A *Obálka volání* je objekt typu obálky volání.
+- *Obálka volání* je objekt typu obálky volání.
 
-- A *cílový objekt* je volatelný objekt uchovaný objektem obálky volání.
+- *Cílový objekt* je volající objekt, který je držen objektem obálky volání.
 
 Pseudofunkcí `INVOKE(f, t1, t2, ..., tN)` se rozumí jedna z následujících možností:
 
-- `(t1.*f)(t2, ..., tN)` Když `f` je ukazatel na členskou funkci třídy `T` a `t1` je objekt typu `T` nebo odkaz na objekt typu `T` nebo odkaz na objekt typu odvozeného z `T`.
+- `(t1.*f)(t2, ..., tN)`Když `f` je ukazatel na členskou funkci třídy `T` a `t1` je objekt typu `T` nebo odkaz na objekt `T` typu nebo odkaz na objekt typu odvozeného z `T`.
 
-- `((*t1).*f)(t2, ..., tN)` Když `f` je ukazatel na členskou funkci třídy `T` a `t1` není jedním z typů uvedených v předchozí položce.
+- `((*t1).*f)(t2, ..., tN)`Když `f` je ukazatel na členskou funkci třídy `T` a `t1` není jedním z typů popsaných v předchozí položce.
 
-- `t1.*f` Když N == 1 a `f` je ukazatel na členská data třídy `T` a `t1` je objekt typu `T` nebo odkaz na objekt typu `T` nebo odkaz na objekt typu odvozeného z `T`.
+- `t1.*f`Když N = = 1 a `f` je ukazatel na Členská data třídy `T` a `t1` je objekt typu `T` nebo odkaz na objekt `T` typu nebo odkaz na objekt typu odvozeného z `T`.
 
-- `(*t1).*f` Když N == 1 a `f` je ukazatel na členská data třídy `T` a `t1` není jedním z typů uvedených v předchozí položce.
+- `(*t1).*f`Když N = = 1 a `f` je ukazatel na Členská data třídy `T` a `t1` není jedním z typů popsaných v předchozí položce.
 
-- `f(t1, t2, ..., tN)` ve všech ostatních případech.
+- `f(t1, t2, ..., tN)`ve všech ostatních případech.
 
 Pseudofunkce `INVOKE(f, t1, t2, ..., tN, R)` znamená `INVOKE(f, t1, t2, ..., tN)` implicitně převedenou na `R`.
 
-Pokud má obálka volání *slabý typ výsledku*, typ jeho členského typu `result_type` je založená na typu `T` cílového objektu obálky následujícím způsobem:
+Pokud má obálka volání *slabý typ výsledku*, typ jeho členského typu `result_type` je založen na typu `T` cílového objektu obálky, a to následujícím způsobem:
 
 - Pokud je `T` ukazatel na funkci, je `result_type` synonymem návratového typu `T`.
 
@@ -70,7 +70,7 @@ Pokud má obálka volání *slabý typ výsledku*, typ jeho členského typu `re
 
 - Jinak neexistuje žádný člen `result_type`.
 
-Každá obálka volání má konstruktor přesunutí a konstruktor kopírování. A *jednoduchou obálku volání* je obálka volání obsahující operátor a jehož kopírovací konstruktor, konstruktor přesunutí a operátor přiřazení nevyvolají výjimky přiřazení. A *Obálka předání volání* je obálka volání, kterou lze volat pomocí libovolného seznamu argumentů a která přenáší tyto argumenty zkomprimovaným volatelným objektům jako reference. Všechny argumenty r-hodnot jsou dodávány jako odkazy r-hodnot a argumenty l-hodnot jsou dodávány jako odkazy l-hodnot.
+Každá obálka volání má konstruktor přesunutí a konstruktor kopírování. *Jednoduchá obálka volání* je obálka volání, která má operátor přiřazení a jehož kopírovací konstruktor, konstruktor Move a operátor přiřazení nevyvolají výjimky. *Obálka přesměrování volání* je obálka volání, která může být volána pomocí libovolného seznamu argumentů a který doručuje argumenty zabaleného volajícího objektu jako odkazy. Všechny argumenty r-hodnot jsou dodávány jako odkazy r-hodnot a argumenty l-hodnot jsou dodávány jako odkazy l-hodnot.
 
 ## <a name="members"></a>Členové
 
@@ -78,74 +78,74 @@ Každá obálka volání má konstruktor přesunutí a konstruktor kopírování
 
 |||
 |-|-|
-|[bad_function_call –](../standard-library/bad-function-call-class.md)|Třída, která popisuje vyvolanou výjimku k označení, že volání `operator()` na [funkce](../standard-library/function-class.md) se nezdařilo, protože byl tento objekt prázdný.|
-|[binary_negate](../standard-library/binary-negate-class.md)|Třída šablony poskytující členské funkce, které negují návratovou hodnotu zadané binární funkce.<br/> (Zastaralé v C ++ 17.) |
-|[binder1st –](../standard-library/binder1st-class.md)|Třída šablony poskytující konstruktor, který převádí objekt binární funkce na objekt jednočlenné funkce navázáním prvního argumentu binární funkce na zadanou hodnotu.<br/> (Zastaralé v C ++ 11 v C ++ 17 odebrané.) |
-|[binder2nd –](../standard-library/binder2nd-class.md)|Třída šablony poskytující konstruktor, který převádí objekt binární funkce na objekt jednočlenné funkce navázáním druhého argumentu binární funkce na zadanou hodnotu.<br/> (Zastaralé v C ++ 11 v C ++ 17 odebrané.) |
+|[bad_function_call](../standard-library/bad-function-call-class.md)|Třída, která popisuje vyvolanou výjimku pro indikaci, že `operator()` volání na objekt [funkce](../standard-library/function-class.md) se nezdařilo, protože objekt byl prázdný.|
+|[binary_negate](../standard-library/binary-negate-class.md)|Třída šablony poskytující členské funkce, které negují návratovou hodnotu zadané binární funkce.<br/> (Zastaralé v C++ 17.) |
+|[binder1st –](../standard-library/binder1st-class.md)|Třída šablony poskytující konstruktor, který převádí objekt binární funkce na objekt jednočlenné funkce navázáním prvního argumentu binární funkce na zadanou hodnotu.<br/> (Zastaralé v C++ 11, odebrané v C++ 17.) |
+|[binder2nd –](../standard-library/binder2nd-class.md)|Třída šablony poskytující konstruktor, který převádí objekt binární funkce na objekt jednočlenné funkce navázáním druhého argumentu binární funkce na zadanou hodnotu.<br/> (Zastaralé v C++ 11, odebrané v C++ 17.) |
 |[boyer_moore_horspool_searcher](../standard-library/boyer-moore-horspool-searcher-class.md)||
 |[boyer_moore_searcher](../standard-library/boyer-moore-searcher-class.md)||
-|[const_mem_fun_ref_t](../standard-library/const-mem-fun-ref-t-class.md)|Třída adaptéru umožňující volat konstantní členskou funkci, která nepřijímá žádné argumenty, jako objekt jednočlenné funkce při inicializaci s argumentem reference.<br/> (Zastaralé v C ++ 11 v C ++ 17 odebrané.) |
-|[const_mem_fun_t](../standard-library/const-mem-fun-t-class.md)|Třída adaptéru umožňující volat konstantní členskou funkci, která nepřijímá žádné argumenty, jako objekt jednočlenné funkce při inicializaci s argumentem ukazatele.<br/> (Zastaralé v C ++ 11 v C ++ 17 odebrané.) |
-|[const_mem_fun1_ref_t](../standard-library/const-mem-fun1-ref-t-class.md)|Třída adaptéru umožňující volat konstantní členskou funkci, která přijímá jeden argument, jako objekt binární funkce při inicializaci s argumentem reference.<br/> (Zastaralé v C ++ 11 v C ++ 17 odebrané.) |
-|[const_mem_fun1_t](../standard-library/const-mem-fun1-t-class.md)|Třída adaptéru umožňující volat konstantní členskou funkci, která přijímá jeden argument, jako objekt binární funkce při inicializaci s argumentem ukazatele.<br/> (Zastaralé v C ++ 11 v C ++ 17 odebrané.) |
+|[const_mem_fun_ref_t](../standard-library/const-mem-fun-ref-t-class.md)|Třída adaptéru umožňující volat konstantní členskou funkci, která nepřijímá žádné argumenty, jako objekt jednočlenné funkce při inicializaci s argumentem reference.<br/> (Zastaralé v C++ 11, odebrané v C++ 17.) |
+|[const_mem_fun_t](../standard-library/const-mem-fun-t-class.md)|Třída adaptéru umožňující volat konstantní členskou funkci, která nepřijímá žádné argumenty, jako objekt jednočlenné funkce při inicializaci s argumentem ukazatele.<br/> (Zastaralé v C++ 11, odebrané v C++ 17.) |
+|[const_mem_fun1_ref_t](../standard-library/const-mem-fun1-ref-t-class.md)|Třída adaptéru umožňující volat konstantní členskou funkci, která přijímá jeden argument, jako objekt binární funkce při inicializaci s argumentem reference.<br/> (Zastaralé v C++ 11, odebrané v C++ 17.) |
+|[const_mem_fun1_t](../standard-library/const-mem-fun1-t-class.md)|Třída adaptéru umožňující volat konstantní členskou funkci, která přijímá jeden argument, jako objekt binární funkce při inicializaci s argumentem ukazatele.<br/> (Zastaralé v C++ 11, odebrané v C++ 17.) |
 |[default_searcher](../standard-library/default-searcher-class.md)||
-|[– funkce](../standard-library/function-class.md)|Třída, která obaluje volatelný objekt.|
-|[Hodnota hash](../standard-library/hash-class.md)|Třída, která vypočítá kód hash hodnoty.|
+|[slouží](../standard-library/function-class.md)|Třída, která obaluje volatelný objekt.|
+|[kontrole](../standard-library/hash-class.md)|Třída, která vypočítá kód hash hodnoty.|
 |[is_bind_expression](../standard-library/is-bind-expression-class.md)|Třída, která testuje, zda je určitý typ generován voláním metody `bind`.|
 |[is_placeholder](../standard-library/is-placeholder-class.md)|Třída, která testuje, zda je určitý typ zástupným symbolem.|
-|[mem_fun_ref_t](../standard-library/mem-fun-ref-t-class.md)|Třída adaptéru umožňující `non_const` členskou funkci, která nepřijímá žádné argumenty, která se má volat jako objekt jednočlenné funkce při inicializaci s argumentem reference.<br/> (Zastaralé v C ++ 11 v C ++ 17 odebrané.) |
-|[mem_fun_t](../standard-library/mem-fun-t-class.md)|Třída adaptéru umožňující `non_const` členskou funkci, která nepřijímá žádné argumenty, která se má volat jako objekt jednočlenné funkce při inicializaci s argumentem ukazatele.<br/> (Zastaralé v C ++ 11 v C ++ 17 odebrané.) |
-|[mem_fun1_ref_t](../standard-library/mem-fun1-ref-t-class.md)|Třída adaptéru umožňující `non_const` členskou funkci, která přijímá jeden argument, která se má volat jako objekt binární funkce při inicializaci s argumentem reference.<br/> (Zastaralé v C ++ 11 v C ++ 17 odebrané.) |
-|[mem_fun1_t](../standard-library/mem-fun1-t-class.md)|Třída adaptéru umožňující `non_const` členskou funkci, která přijímá jeden argument, která se má volat jako objekt binární funkce při inicializaci s argumentem ukazatele.<br/> (Zastaralé v C ++ 11 v C ++ 17 odebrané.) |
-|[pointer_to_binary_function](../standard-library/pointer-to-binary-function-class.md)|Převede ukazatel na binární funkci na přizpůsobitelnou binární funkci.<br/> (Zastaralé v C ++ 11 v C ++ 17 odebrané.) |
-|[pointer_to_unary_function](../standard-library/pointer-to-unary-function-class.md)|Převede ukazatel na jednočlennou funkci na přizpůsobitelnou jednočlennou funkci.<br/> (Zastaralé v C ++ 11 v C ++ 17 odebrané.) |
+|[mem_fun_ref_t](../standard-library/mem-fun-ref-t-class.md)|Třída adaptéru, která umožňuje `non_const` volání členské funkce, která nepřijímá žádné argumenty jako unární objekt funkce při inicializaci s argumentem odkazu.<br/> (Zastaralé v C++ 11, odebrané v C++ 17.) |
+|[mem_fun_t](../standard-library/mem-fun-t-class.md)|Třída adaptéru, která umožňuje `non_const` volání členské funkce, která nepřijímá žádné argumenty jako unární objekt funkce při inicializaci s argumentem ukazatele.<br/> (Zastaralé v C++ 11, odebrané v C++ 17.) |
+|[mem_fun1_ref_t](../standard-library/mem-fun1-ref-t-class.md)|Třída adaptéru, která umožňuje `non_const` volání členské funkce, která přijímá jeden argument jako objekt binární funkce při inicializaci s argumentem odkazu.<br/> (Zastaralé v C++ 11, odebrané v C++ 17.) |
+|[mem_fun1_t](../standard-library/mem-fun1-t-class.md)|Třída adaptéru, která umožňuje `non_const` , aby byla při inicializaci s argumentem ukazatele volána členská funkce, která přijímá jeden argument jako objekt binární funkce.<br/> (Zastaralé v C++ 11, odebrané v C++ 17.) |
+|[pointer_to_binary_function](../standard-library/pointer-to-binary-function-class.md)|Převede ukazatel na binární funkci na přizpůsobitelnou binární funkci.<br/> (Zastaralé v C++ 11, odebrané v C++ 17.) |
+|[pointer_to_unary_function](../standard-library/pointer-to-unary-function-class.md)|Převede ukazatel na jednočlennou funkci na přizpůsobitelnou jednočlennou funkci.<br/> (Zastaralé v C++ 11, odebrané v C++ 17.) |
 |[reference_wrapper](../standard-library/reference-wrapper-class.md)|Třída, která obaluje referenci.|
-|[unary_negate](../standard-library/unary-negate-class.md)|Třída šablony poskytující členské funkce, které negují návratovou hodnotu zadané jednočlenné funkce.<br/> (Zastaralé v C ++ 17.)  |
+|[unary_negate](../standard-library/unary-negate-class.md)|Třída šablony poskytující členské funkce, které negují návratovou hodnotu zadané jednočlenné funkce.<br/> (Zastaralé v C++ 17.)  |
 
 ### <a name="functions"></a>Funkce
 
 |||
 |-|-|
-|[Vytvoření vazby](../standard-library/functional-functions.md#bind)|Naváže argumenty na volatelný objekt.|
-|[bind1st](../standard-library/functional-functions.md#bind1st)|Pomocná funkce šablony, která vytvoří adaptér pro převedení objektu binární funkce na objekt jednočlenné funkce pomocí vazby prvního argumentu binární funkce na zadanou hodnotu.<br/> (Zastaralé v C ++ 11 v C ++ 17 odebrané.) |
-|[bind2nd –](../standard-library/functional-functions.md#bind2nd)|Pomocná funkce šablony, která vytvoří adaptér pro převedení objektu binární funkce na objekt jednočlenné funkce pomocí vazby druhého argumentu binární funkce na zadanou hodnotu.<br/> (Zastaralé v C ++ 11 v C ++ 17 odebrané.) |
-|[bit_and](../standard-library/functional-functions.md#bit_and)|Vrací bitové logické AND (binární operátor &) dvou parametrů.|
-|[bit_not](../standard-library/functional-functions.md#bit_not)|Vrací bitový logický doplněk (operátor ~) parametru.<br/> (Přidáno v C ++ 14.) |
-|[bit_or](../standard-library/functional-functions.md#bit_or)|Vrací bitové logické OR (operátor&#124;) dvou parametrů.|
+|[zapisovat](../standard-library/functional-functions.md#bind)|Naváže argumenty na volatelný objekt.|
+|[bind1st](../standard-library/functional-functions.md#bind1st)|Pomocná funkce šablony, která vytvoří adaptér pro převedení objektu binární funkce na objekt jednočlenné funkce pomocí vazby prvního argumentu binární funkce na zadanou hodnotu.<br/> (Zastaralé v C++ 11, odebrané v C++ 17.) |
+|[bind2nd –](../standard-library/functional-functions.md#bind2nd)|Pomocná funkce šablony, která vytvoří adaptér pro převedení objektu binární funkce na objekt jednočlenné funkce pomocí vazby druhého argumentu binární funkce na zadanou hodnotu.<br/> (Zastaralé v C++ 11, odebrané v C++ 17.) |
+|[bit_and](../standard-library/functional-functions.md#bit_and)|Vrátí bitový logický operátor AND (binární operátor &) dvou parametrů.|
+|[bit_not](../standard-library/functional-functions.md#bit_not)|Vrací bitový logický doplněk (operátor ~) parametru.<br/> (Přidáno v C++ 14.) |
+|[bit_or](../standard-library/functional-functions.md#bit_or)|Vrátí bitový logický operátor OR (operátor&#124;) dvou parametrů.|
 |[bit_xor](../standard-library/functional-functions.md#bit_xor)|Vrací bitové logické XOR (operátor ^) dvou parametrů.|
 |[cref](../standard-library/functional-functions.md#cref)|Z argumentu vytvoří konstantní `reference_wrapper`.|
 |[invoke](../standard-library/functional-functions.md#invoke)||
 |[mem_fn](../standard-library/functional-functions.md#mem_fn)|Vygeneruje jednoduchou obálku volání.|
-|[mem_fun](../standard-library/functional-functions.md#mem_fun)|Pomocné funkce šablony použité k vytvoření adaptérů objektu funkce pro členské funkce při inicializaci pomocí argumentů ukazatelů.<br/> (Zastaralé v C ++ 11 v C ++ 17 odebrané.) |
+|[mem_fun](../standard-library/functional-functions.md#mem_fun)|Pomocné funkce šablony použité k vytvoření adaptérů objektu funkce pro členské funkce při inicializaci pomocí argumentů ukazatelů.<br/> (Zastaralé v C++ 11, odebrané v C++ 17.) |
 |[mem_fun_ref](../standard-library/functional-functions.md#mem_fun_ref)|Pomocná funkce šablony použitá k vytvoření adaptérů objektu funkce pro členské funkce při inicializaci pomocí argumentů reference.|
-|[not1 –](../standard-library/functional-functions.md#not1)|Vrací doplněk jednočlenného predikátu.<br/> (Zastaralé v C ++ 17.) |
-|[not2 –](../standard-library/functional-functions.md#not2)|Vrací doplněk binárního predikátu.<br/> (Zastaralé v C ++ 17.) |
-|[not_fn](../standard-library/functional-functions.md#not_fn)|Vrací doplněk výsledkem jeho objekt funkce.<br/> (Přidáno v C ++ 17.) |
-|[ptr_fun](../standard-library/functional-functions.md#ptr_fun)|Pomocná funkce šablony použitá k převedení ukazatelů na jednočlenné a binární funkce do jednočlenných a binárních přizpůsobitelných funkcí.<br/> (Zastaralé v C ++ 11 v C ++ 17 odebrané.) |
+|[not1 –](../standard-library/functional-functions.md#not1)|Vrací doplněk jednočlenného predikátu.<br/> (Zastaralé v C++ 17.) |
+|[not2 –](../standard-library/functional-functions.md#not2)|Vrací doplněk binárního predikátu.<br/> (Zastaralé v C++ 17.) |
+|[not_fn](../standard-library/functional-functions.md#not_fn)|Vrátí KOMPLEMENT výsledku jeho objektu Function.<br/> (Přidáno v C++ 17.) |
+|[ptr_fun](../standard-library/functional-functions.md#ptr_fun)|Pomocná funkce šablony použitá k převedení ukazatelů na jednočlenné a binární funkce do jednočlenných a binárních přizpůsobitelných funkcí.<br/> (Zastaralé v C++ 11, odebrané v C++ 17.) |
 |[ref](../standard-library/functional-functions.md#ref)|Vytvoří `reference_wrapper` z argumentu.|
-|[swap](../standard-library/functional-functions.md#swap)|Prohodí dva `function` objekty.|
+|[swap](../standard-library/functional-functions.md#swap)|Zamění dva `function` objekty.|
 
 ### <a name="structs"></a>Struktury
 
 |||
 |-|-|
-|[binary_function –](../standard-library/binary-function-struct.md)|Prázdná základní třída definující typy, které mohou být zděděny odvozenou třídou obsahující objekt binární funkce.<br/> (Zastaralé v C ++ 11 v C ++ 17 odebrané.) |
+|[binary_function](../standard-library/binary-function-struct.md)|Prázdná základní třída definující typy, které mohou být zděděny odvozenou třídou obsahující objekt binární funkce.<br/> (Zastaralé v C++ 11, odebrané v C++ 17.) |
 |[vydělí](../standard-library/divides-struct.md)|Třída poskytující předdefinovaný objekt funkce, který provádí aritmetické operace dělení na prvcích zadaného typu hodnoty.|
 |[equal_to](../standard-library/equal-to-struct.md)|Binární predikát, který testuje, zda je hodnota zadaného typu rovna jiné hodnotě tohoto typu.|
-|[větší](../standard-library/greater-struct.md)|Binární predikát, který testuje, zda je hodnota zadaného typu větší než jiná hodnota tohoto typu.|
+|[zvýšen](../standard-library/greater-struct.md)|Binární predikát, který testuje, zda je hodnota zadaného typu větší než jiná hodnota tohoto typu.|
 |[greater_equal](../standard-library/greater-equal-struct.md)|Binární predikát, který testuje, zda je hodnota zadaného typu větší nebo rovna jiné hodnotě tohoto typu.|
-|[méně](../standard-library/less-struct.md)|Binární predikát, který testuje, zda je hodnota zadaného typu menší než jiná hodnota tohoto typu.|
+|[tolik](../standard-library/less-struct.md)|Binární predikát, který testuje, zda je hodnota zadaného typu menší než jiná hodnota tohoto typu.|
 |[less_equal](../standard-library/less-equal-struct.md)|Binární predikát, který testuje, zda je hodnota zadaného typu menší nebo rovna jiné hodnotě tohoto typu.|
 |[logical_and](../standard-library/logical-and-struct.md)|Třída poskytující předdefinovaný objekt funkce, který provádí logické operace konjunkce prvků zadaného typu hodnoty a testuje pravdivost nebo nepravdivost výsledku.|
 |[logical_not](../standard-library/logical-not-struct.md)|Třída poskytující předdefinovaný objekt funkce, který provádí logické operace negace prvků zadaného typu hodnoty a testuje pravdivost nebo nepravdivost výsledku.|
 |[logical_or](../standard-library/logical-or-struct.md)|Třída poskytující předdefinovaný objekt funkce, který provádí logické operace disjunkce prvků zadaného typu hodnoty a testuje pravdivost nebo nepravdivost výsledku.|
-|[minus](../standard-library/minus-struct.md)|Třída poskytující předdefinovaný objekt funkce, který provádí aritmetické operace odčítání na prvcích zadaného typu hodnoty.|
-|[numerického zbytku](../standard-library/modulus-struct.md)|Třída poskytující předdefinovaný objekt funkce, který provádí aritmetické operace numerického zbytku (modulus) na prvcích zadaného typu hodnoty.|
-|[Vynásobí](../standard-library/multiplies-struct.md)|Třída poskytující předdefinovaný objekt funkce, který provádí aritmetické operace násobení na prvcích zadaného typu hodnoty.|
-|[negate –](../standard-library/negate-struct.md)|Třída poskytující předdefinovaný objekt funkce, který vrací záporné hodnoty prvku.|
+|[symbol](../standard-library/minus-struct.md)|Třída poskytující předdefinovaný objekt funkce, který provádí aritmetické operace odčítání na prvcích zadaného typu hodnoty.|
+|[Modulus](../standard-library/modulus-struct.md)|Třída poskytující předdefinovaný objekt funkce, který provádí aritmetické operace numerického zbytku (modulus) na prvcích zadaného typu hodnoty.|
+|[vynásobí](../standard-library/multiplies-struct.md)|Třída poskytující předdefinovaný objekt funkce, který provádí aritmetické operace násobení na prvcích zadaného typu hodnoty.|
+|[Negate](../standard-library/negate-struct.md)|Třída poskytující předdefinovaný objekt funkce, který vrací záporné hodnoty prvku.|
 |[not_equal_to](../standard-library/not-equal-to-struct.md)|Binární predikát, který testuje, zda není hodnota zadaného typu rovna jiné hodnotě tohoto typu.|
 |[plus](../standard-library/plus-struct.md)|Třída poskytující předdefinovaný objekt funkce, který provádí aritmetické operace sčítání na prvcích zadaného typu hodnoty.|
-|[unary_function –](../standard-library/unary-function-struct.md)|Prázdná základní třída definující typy, které mohou být zděděny odvozenou třídou obsahující objekt jednočlenné funkce.<br/> (Zastaralé v C ++ 11 v C ++ 17 odebrané.) |
+|[unary_function](../standard-library/unary-function-struct.md)|Prázdná základní třída definující typy, které mohou být zděděny odvozenou třídou obsahující objekt jednočlenné funkce.<br/> (Zastaralé v C++ 11, odebrané v C++ 17.) |
 
 ### <a name="objects"></a>Objekty
 
@@ -162,6 +162,6 @@ Každá obálka volání má konstruktor přesunutí a konstruktor kopírování
 
 ## <a name="see-also"></a>Viz také:
 
-[Odkaz na soubory hlaviček](../standard-library/cpp-standard-library-header-files.md)<br/>
-[Bezpečný přístup z více vláken ve standardní knihovně C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
-[Standardní knihovna C++ – referenční dokumentace](../standard-library/cpp-standard-library-reference.md)<br/>
+[Odkazy na hlavičkové soubory](../standard-library/cpp-standard-library-header-files.md)\
+[Bezpečnost vlákna ve C++ standardní knihovně](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[Standardní knihovna C++ – referenční dokumentace](../standard-library/cpp-standard-library-reference.md)

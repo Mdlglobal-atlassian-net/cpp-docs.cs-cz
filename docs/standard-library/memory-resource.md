@@ -5,16 +5,16 @@ f1_keywords:
 - <memory_resource>
 helpviewer_keywords:
 - memory_resource header
-ms.openlocfilehash: b5957412d2beff0dc709dc71a77834f13eeacb41
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: d4b25c6ee575191f1e17b0202d33298e2e9e67f0
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68268156"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68451907"
 ---
 # <a name="ltmemoryresourcegt"></a>&lt;memory_resource&gt;
 
-Definuje kontejner šablony třídy memory_resource a jeho podpůrných šablon.
+Definuje třídu šablony kontejneru memory_resource a její podpůrné šablony.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -28,8 +28,8 @@ Definuje kontejner šablony třídy memory_resource a jeho podpůrných šablon.
 
 |||
 |-|-|
-|[operator!=](../standard-library/memory-resource-operators.md#op_neq)|Testuje, zda je objekt memory_resource na levé straně operátoru není roven objektu memory_resource na pravé straně.|
-|[operator==](../standard-library/memory-resource-operators.md#op_eq_eq)|Testuje, zda objekt memory_resource na levé straně operátoru roven objektu memory_resource na pravé straně.|
+|[operator!=](../standard-library/memory-resource-operators.md#op_neq)|Testuje, zda objekt memory_resource na levé straně operátoru není roven objektu memory_resource na pravé straně.|
+|[operator==](../standard-library/memory-resource-operators.md#op_eq_eq)|Testuje, zda je objekt memory_resource na levé straně operátoru roven objektu memory_resource na pravé straně.|
 
 ### <a name="specialized-template-functions"></a>Specializované funkce šablon
 
@@ -50,14 +50,14 @@ Definuje kontejner šablony třídy memory_resource a jeho podpůrných šablon.
 
 |||
 |-|-|
-|[memory_resource třídy](../standard-library/memory-resource-class.md)||
-|[monotonic_buffer_resource třídy](../standard-library/monotonic-buffer-resource-class.md)||
+|[memory_resource – třída](../standard-library/memory-resource-class.md)||
+|[monotonic_buffer_resource – třída](../standard-library/monotonic-buffer-resource-class.md)||
 |[pool_options – struktura](../standard-library/pool-options-structure.md)||
-|[synchronized_pool_resource třídy](../standard-library/synchronized-pool-resource-class.md)||
-|[unsynchronized_pool_resource třídy](../standard-library/unsynchronized-pool-resource-class.md)||
+|[synchronized_pool_resource – třída](../standard-library/synchronized-pool-resource-class.md)||
+|[unsynchronized_pool_resource – třída](../standard-library/unsynchronized-pool-resource-class.md)||
 
 ## <a name="see-also"></a>Viz také:
 
-[Odkaz na soubory hlaviček](../standard-library/cpp-standard-library-header-files.md)<br/>
-[Bezpečný přístup z více vláken ve standardní knihovně C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
-[Standardní knihovna C++ – referenční dokumentace](../standard-library/cpp-standard-library-reference.md)<br/>
+[Odkazy na hlavičkové soubory](../standard-library/cpp-standard-library-header-files.md)\
+[Bezpečnost vlákna ve C++ standardní knihovně](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[Standardní knihovna C++ – referenční dokumentace](../standard-library/cpp-standard-library-reference.md)

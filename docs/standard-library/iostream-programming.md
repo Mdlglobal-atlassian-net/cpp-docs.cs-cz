@@ -17,18 +17,18 @@ helpviewer_keywords:
 - programming [C++], iostream programming
 - text input [C++]
 ms.assetid: 1aa0a0be-4dd8-4dac-ac1f-d2afdaeab769
-ms.openlocfilehash: 56b6d2a69372c9c8232823feb085780c38c00f0e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 883050c8ad838d642156dc6dac4c779d2dd3420a
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62385153"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68449070"
 ---
 # <a name="iostream-programming"></a>iostream – programování
 
-V této části najdete [obecný popis](../standard-library/what-a-stream-is.md) z iostream – třídy a pak popisuje [výstupním datovým proudům](../standard-library/output-streams.md), [vstupní datové proudy](../standard-library/input-streams.md), a [vstup/výstup datové proudy](../standard-library/input-output-streams.md). Konci sekce obsahuje informace o pokročilých iostream – programování.
+Tato část obsahuje [obecný popis](../standard-library/what-a-stream-is.md) tříd iostream – a potom popisuje [výstupní datové proudy](../standard-library/output-streams.md), [vstupní proudy](../standard-library/input-streams.md)a [vstupní/výstupní proudy](../standard-library/input-output-streams.md). Konec oddílu poskytuje informace o pokročilém programování iostream –.
 
-Je také diskusi na [bezpečnost vlákna ve standardní knihovně C++](../standard-library/thread-safety-in-the-cpp-standard-library.md) a [stdext – obor názvů](../standard-library/stdext-namespace.md).
+K dispozici je také diskuze o [bezpečnosti vláken C++ ve standardní knihovně](../standard-library/thread-safety-in-the-cpp-standard-library.md) a [oboru názvů stdext](../standard-library/stdext-namespace.md).
 
 ## <a name="in-this-section"></a>V tomto oddílu
 
@@ -44,5 +44,5 @@ Je také diskusi na [bezpečnost vlákna ve standardní knihovně C++](../standa
 
 ## <a name="see-also"></a>Viz také:
 
-[Standardní knihovna C++](../standard-library/cpp-standard-library-reference.md)<br/>
-[iostreams – konvence](../standard-library/iostreams-conventions.md)<br/>
+[C++Standardní knihovna](../standard-library/cpp-standard-library-reference.md)\
+[iostreams – konvence](../standard-library/iostreams-conventions.md)

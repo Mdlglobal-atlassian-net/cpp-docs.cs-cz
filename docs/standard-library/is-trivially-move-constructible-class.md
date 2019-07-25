@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - is_trivially_move_constructible
 ms.assetid: 740bdec7-65e5-47b3-b94f-a2479ceac3ec
-ms.openlocfilehash: a1aef356716fac903b4e44a358602c709572e8ff
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 279da956eaff21c39c6e5ca563f26989105f7e74
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62413386"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68448365"
 ---
 # <a name="istriviallymoveconstructible-class"></a>is_trivially_move_constructible – třída
 
-Konstruktor přesunu testuje, zda má typ jednoduchého dotazu.
+Testuje, zda typ obsahuje konstruktor triviálního přesunu.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -26,37 +26,37 @@ struct is_trivially_move_constructible;
 
 ### <a name="parameters"></a>Parametry
 
-*Ty*<br/>
+*Ty*\
 Typ, na který chcete odeslat dotaz.
 
 ## <a name="remarks"></a>Poznámky
 
-Instance predikátu typu obsahuje hodnotu true, pokud typ *Ty* je třída, která má triviální konstruktor přesunutí, jinak má hodnotu false.
+Instance predikátu typu má hodnotu true, pokud *je typ,* který je třída, která má konstruktor triviálního přesunu, v opačném případě obsahuje hodnotu false.
 
-Konstruktor přesunu pro třídu *Ty* triviální pokud:
+Konstruktor přesunu pro třídu *ty* je triviální, pokud:
 
-je implicitně deklarován
+je implicitně deklarována
 
-typy parametrů jsou rovnocenné těm implicitní deklaraci
+jeho typy parametrů jsou ekvivalentní k těm implicitní deklarace.
 
-Třída *Ty* nemá žádné virtuální funkce
+Třída *ty* nemá žádné virtuální funkce.
 
-Třída *Ty* nemá žádné virtuálních základních tříd
+Třída *ty* nemá žádné virtuální základy.
 
-Třída nemá žádné nestálá nestatické datové členy
+Třída nemá žádné nestálé nestatické datové členy.
 
-všechny přímo základů třídy *Ty* mají triviální konstruktorů
+všechny přímé základny třídy *ty* mají konstruktory triviálního přesunu.
 
-třídy všechny nestatické datové členy typu třídy mají triviální konstruktorů
+třídy všech nestatických datových členů typu třídy mají konstruktory triviálního přesunu.
 
-třídy nestatických datových členů typu pole třídy mají triviální konstruktorů
+třídy všech nestatických datových členů typu Array třídy mají konstruktory triviálního přesunu.
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** \<type_traits >
+**Hlavička:** \<type_traits >
 
-**Namespace:** std
+**Obor názvů:** std
 
 ## <a name="see-also"></a>Viz také:
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
+[<type_traits>](../standard-library/type-traits.md)

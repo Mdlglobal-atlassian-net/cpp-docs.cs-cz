@@ -9,32 +9,32 @@ helpviewer_keywords:
 - startup code, and C++ program termination
 - main function, program startup
 ms.assetid: f72c8f76-f507-4ddd-a270-7b60f4fed625
-ms.openlocfilehash: 2246e50c81da9eb505fd30cfa31f9f24e3fe4703
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e59e8852172a998e4bf4f42f9f919dc29c2ded85
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62210759"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68450656"
 ---
 # <a name="c-program-startup-and-termination"></a>Spuštění a ukončení programu C++
 
-Program jazyka C++ provede stejné operace jako při spuštění programu a při ukončení programu a navíc několik více podle zde uvedeného programu jazyka C.
+C++ Program provádí stejné operace jako program v jazyce C při spuštění programu a ukončení programu a ještě více popsaných zde.
 
-Před cílové prostředí volá funkci `main`, a po ukládá všechny konstantní počáteční hodnoty zadáte všechny objekty, které mají statické trvání, program se spustí všechny zbývající konstruktory pro taková statických objektů. Pořadí provádění není určena mezi jednotkami překladu, ale je můžete přesto předpokládat, že některé [iostreams](../standard-library/iostreams-conventions.md) objekty jsou správně inicializovány pro použití těchto statické konstruktory. Tyto ovládací prvek textové datové proudy jsou:
+Předtím, než cílový prostředí zavolá `main`funkci a po uložení všech konstantních počátečních hodnot, které zadáte ve všech objektech, které mají statickou dobu trvání, program provede všechny zbývající konstruktory těchto statických objektů. Pořadí provádění není zadáno mezi jednotkami překladu, ale můžete předpokládat, že některé objekty [iostreams](../standard-library/iostreams-conventions.md) jsou správně inicializovány pro použití těmito statickými konstruktory. Tyto řídicí textové datové proudy jsou:
 
 - [CIN](../standard-library/iostream.md#cin) – pro standardní vstup.
 
 - [cout](../standard-library/iostream.md#cout) – pro standardní výstup.
 
-- [cerr](../standard-library/iostream.md#cerr) – pro bez vyrovnávací paměti standardní chybový výstup.
+- [cerr](../standard-library/iostream.md#cerr) – pro standardní chybový výstup bez vyrovnávací paměti.
 
-- [clog](../standard-library/iostream.md#clog) – pro vyrovnávací paměť standardní chybový výstup.
+- [CLOG](../standard-library/iostream.md#clog) – pro standardní chybový výstup v bufferu.
 
-Můžete také použít tyto objekty v rámci destruktory pro statické objekty, volá se při ukončení programu.
+Tyto objekty lze použít také v rámci destruktorů, které jsou volány pro statické objekty během ukončení programu.
 
-Stejně jako u C, vrácení z `main` nebo volání `exit` volá všechny funkce zaregistrovaného `atexit` v obráceném pořadí z registru. Výjimka vyvolaná z těchto registrovaných funkce volá `terminate`.
+Stejně jako u jazyka C vrací `main` `atexit` volání nebo `exit` volání všech funkcí zaregistrovaných v v obráceném pořadí registru. Výjimka vyvolaná z takových volání `terminate`zaregistrovaných funkcí.
 
 ## <a name="see-also"></a>Viz také:
 
-[Standardní knihovna C++ – přehled](../standard-library/cpp-standard-library-overview.md)<br/>
-[Bezpečný přístup z více vláken ve standardní knihovně C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[C++Přehled standardní knihovny](../standard-library/cpp-standard-library-overview.md)\
+[Bezpečný přístup z více vláken ve standardní knihovně C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)

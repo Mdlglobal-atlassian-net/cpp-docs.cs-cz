@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - length_error class
 ms.assetid: d53c46c5-4626-400d-bd76-bf3e1e0f64ae
-ms.openlocfilehash: 67de20907dcf13fa54119d8886aabc8d521165cf
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c88b9e3af5d00a3d2c0b3146783b0babe9d0a01a
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62223966"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68447602"
 ---
 # <a name="lengtherror-class"></a>length_error – třída
 
-Tato třída slouží jako základní třída pro všechny výjimky vyvolané hlášení pokus o generování příliš dlouhý a zadat objekt.
+Třída slouží jako základní třída pro všechny výjimky vyvolané pro hlášení pokusu o vygenerování objektu, který je příliš dlouhý.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -31,7 +31,7 @@ public:
 
 ## <a name="remarks"></a>Poznámky
 
-Hodnota vrácená [co](../standard-library/exception-class.md) je kopie **zpráva**`.`[data](../standard-library/basic-string-class.md#data).
+Hodnota vrácená funkcí [co](../standard-library/exception-class.md) je kopie[dat](../standard-library/basic-string-class.md#data) **zprávy**`.`.
 
 ## <a name="example"></a>Příklad
 
@@ -77,11 +77,11 @@ Type class std::length_error
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** \<stdexcept – >
+**Hlavička:** \<stdexcept >
 
-**Namespace:** std
+**Obor názvů:** std
 
 ## <a name="see-also"></a>Viz také:
 
-[logic_error – třída](../standard-library/logic-error-class.md)<br/>
-[Bezpečný přístup z více vláken ve standardní knihovně C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[logic_error – třída](../standard-library/logic-error-class.md)\
+[Bezpečný přístup z více vláken ve standardní knihovně C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)

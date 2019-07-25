@@ -10,57 +10,57 @@ helpviewer_keywords:
 - iterators, checked
 - checked iterators
 ms.assetid: cfc87df8-e3d9-403b-ab78-e9483247d940
-ms.openlocfilehash: 163729b401fa917d7df0002c621998f5021757f6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f5a31843386d2246f5d74eae1f40b93f0ae35c90
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62279161"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68452129"
 ---
 # <a name="checked-iterators"></a>Checked – iterátory
 
-Kontrolované iterátory zajistí, že hranice vašeho kontejneru nebudou přepsány. Checked – iterátory se vztahují na sestavení pro vydání i sestavení pro ladění. Další informace o tom, jak používat ladění iterátorů při kompilaci v režimu ladění, naleznete v tématu [Debug Iterator Support](../standard-library/debug-iterator-support.md).
+Kontrolované iterátory zajistí, že hranice vašeho kontejneru nebudou přepsány. Kontrolované iterátory platí pro sestavení vydaných verzí i pro sestavení pro ladění. Další informace o tom, jak používat iterátory ladění při kompilaci v režimu ladění, naleznete v tématu [Podpora iterátoru ladění](../standard-library/debug-iterator-support.md).
 
 ## <a name="remarks"></a>Poznámky
 
-Informace o tom, jak zakázat varování, která jsou generována kontrolovanými iterátory, naleznete v tématu [_SCL_SECURE_NO_WARNINGS](../standard-library/scl-secure-no-warnings.md).
+Informace o tom, jak zakázat upozornění, která jsou generována pomocí zkontrolovaných iterátorů, najdete v tématu [_SCL_SECURE_NO_WARNINGS](../standard-library/scl-secure-no-warnings.md).
 
-Můžete použít [ \_ITERÁTORU\_ladění\_úroveň](../standard-library/iterator-debug-level.md) makro preprocesoru k povolení nebo zakázání funkcí kontrolovaných iterátorů. Pokud _ITERATOR_DEBUG_LEVEL je definováno jako 1 nebo 2, potenciálně nebezpečné používání iterátorů způsobí runtime chybu a program se ukončí. Pokud je definováno jako 0, jsou kontrolované iterátory zakázány. Hodnota pro _ITERATOR_DEBUG_LEVEL je ve výchozím nastavení, 0 pro buildy vydaných verzí a 2 pro sestavení pro ladění.
+Pomocí makra preprocesoru [ \_na\_úrovni\_ladění iterátoru](../standard-library/iterator-debug-level.md) můžete povolit nebo zakázat funkci kontrolované iterátory. Pokud je _ITERATOR_DEBUG_LEVEL definováno jako 1 nebo 2, nezabezpečené použití iterátorů způsobí chybu za běhu a program se ukončí. Pokud je definováno jako 0, jsou kontrolované iterátory zakázány. Ve výchozím nastavení je hodnota _ITERATOR_DEBUG_LEVEL 0 pro sestavení vydaných verzí a 2 pro sestavení ladění.
 
 > [!IMPORTANT]
-> Starší dokumentaci a zdrojový kód může odkazovat [_SECURE_SCL](../standard-library/secure-scl.md) – makro. Pomocí _ITERATOR_DEBUG_LEVEL _SECURE_SCL. Další informace najdete v tématu [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md).
+> Starší dokumentace a zdrojový kód můžou odkazovat na makro [_SECURE_SCL](../standard-library/secure-scl.md) . Použijte _ITERATOR_DEBUG_LEVEL k řízení _SECURE_SCL. Další informace najdete v tématu [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md).
 
-Když _ITERATOR_DEBUG_LEVEL je definováno jako 1 nebo 2, se provádí tyto kontroly iterátoru:
+Pokud je _ITERATOR_DEBUG_LEVEL definováno jako 1 nebo 2, jsou provedeny tyto kontroly iterátoru:
 
-- Všechny standardní iterátory (například [vector::iterator](../standard-library/vector-class.md#iterator)) nebyly zvoleny.
+- Jsou zaškrtnuty všechny standardní iterátory (například [Vector:: iterátor](../standard-library/vector-class.md#iterator)).
 
-- Pokud je výstupní iterátor kontrolovaný iterátor, volání funkce standardní knihovny jako [std::copy](../standard-library/algorithm-functions.md#copy) získáte kontrolované chování.
+- Pokud je výstupní iterátor kontrolovaného iterátoru, volání do standardních funkcí knihovny, jako je například [std:: Copy](../standard-library/algorithm-functions.md#copy) Get Checked chování.
 
-- Pokud je výstupní iterátor nekontrolovaný iterátor, volání funkce standardní knihovny způsobí upozornění kompilátoru.
+- Pokud je výstupní iterátor nekontrolované iterátor, volání funkcí standardní knihovny způsobí upozornění kompilátoru.
 
-- Následující funkce generovat Chyba za běhu, pokud dojde k přístupu, která je mimo hranice kontejneru:
+- Následující funkce generují běhovou chybu, pokud existuje přístup, který je mimo hranice kontejneru:
 
 |||||
 |-|-|-|-|
-|[basic_string::operator\[\]](../standard-library/basic-string-class.md#op_at)|[bitset::operator\[\]](../standard-library/bitset-class.md#op_at)|[Zpět](../standard-library/deque-class.md#back)|[Přední](../standard-library/deque-class.md#front)|
-|[deque::operator\[\]](../standard-library/deque-class.md#op_at)|[Zpět](../standard-library/list-class.md#back)|[Přední](../standard-library/list-class.md#front)|[Zpět](../standard-library/queue-class.md#back)|
-|[Přední](../standard-library/queue-class.md#front)|[Vector::Operator\[\]](../standard-library/vector-class.md#op_at)|[Zpět](../standard-library/vector-class.md#back)|[Přední](../standard-library/vector-class.md#front)|
+|[basic_string::operator\[\]](../standard-library/basic-string-class.md#op_at)|[bitset:: operator\[\]](../standard-library/bitset-class.md#op_at)|[návrat](../standard-library/deque-class.md#back)|[dopředu](../standard-library/deque-class.md#front)|
+|[deque:: operator\[\]](../standard-library/deque-class.md#op_at)|[návrat](../standard-library/list-class.md#back)|[dopředu](../standard-library/list-class.md#front)|[návrat](../standard-library/queue-class.md#back)|
+|[dopředu](../standard-library/queue-class.md#front)|[Vector:: – operátor\[\]](../standard-library/vector-class.md#op_at)|[návrat](../standard-library/vector-class.md#back)|[dopředu](../standard-library/vector-class.md#front)|
 
-Pokud _ITERATOR_DEBUG_LEVEL je definován jako 0:
+Když je _ITERATOR_DEBUG_LEVEL definováno jako 0:
 
-- Všechny standardní iterátory nekontrolované. Iterátory se mohou pohybovat za hranice kontejneru, což vede k nedefinovanému chování.
+- Všechny standardní iterátory nejsou zaškrtnuté. Iterátory lze přesunout za hranice kontejneru, což vede k nedefinovanému chování.
 
-- Pokud je výstupní iterátor kontrolovaný iterátor, volání funkce standardní knihovny jako `std::copy` získáte kontrolované chování.
+- Pokud je výstupní iterátor kontrolovaného iterátoru, volání funkcí standardní knihovny, jako je `std::copy` například kontrolované chování Get.
 
-- Pokud je výstupní iterátor nekontrolovaný iterátor, volání funkce standardní knihovny získáte nekontrolované chování.
+- Pokud je výstupní iterátor nezaškrtnutý iterátor, volání funkcí standardní knihovny získá nekontrolované chování.
 
-Kontrolovaný iterátor označuje iterátor, který volá `invalid_parameter_handler` Pokud se pokusíte přesunout za hranice kontejneru. Další informace o `invalid_parameter_handler`, naleznete v tématu [Parameter Validation](../c-runtime-library/parameter-validation.md).
+Kontrolovaný iterátor odkazuje na iterátor, který volá `invalid_parameter_handler` , pokud se pokusíte přesunout za hranice kontejneru. Další informace o `invalid_parameter_handler`naleznete v tématu [ověření parametru](../c-runtime-library/parameter-validation.md).
 
-Jsou adaptéry iterátoru, které podporují kontrolované iterátory [třídy checked_array_iterator](../standard-library/checked-array-iterator-class.md) a [unchecked_array_iterator – třída](../standard-library/unchecked-array-iterator-class.md).
+Adaptér iterátoru, který podporuje kontrolované iterátory, je třídou [checked_array_iterator](../standard-library/checked-array-iterator-class.md) a [unchecked_array_iterator](../standard-library/unchecked-array-iterator-class.md).
 
 ## <a name="example"></a>Příklad
 
-Při kompilaci pomocí _ITERATOR_DEBUG_LEVEL nastavena na 1 nebo 2, Chyba za běhu dojde, pokud se pokusíte o přístup k prvku, který je mimo hranice kontejneru pomocí operátoru indexace určitých tříd.
+Při kompilaci pomocí _ITERATOR_DEBUG_LEVEL nastaveného na 1 nebo 2 dojde k chybě za běhu, pokud se pokusíte o přístup k prvku, který je mimo hranice kontejneru, pomocí operátoru indexování určitých tříd.
 
 ```cpp
 // checked_iterators_1.cpp
@@ -85,11 +85,11 @@ int main()
 }
 ```
 
-Tento program zobrazí "67" a nastavení assertion dialogové okno chyby s dalšími informacemi o selhání.
+Tento program vytiskne "67", čímž se zobrazí dialogové okno chyby kontrolního výrazu s dalšími informacemi o selhání.
 
 ## <a name="example"></a>Příklad
 
-Podobně při kompilaci pomocí _ITERATOR_DEBUG_LEVEL nastavena na 1 nebo 2, dojde k chybě při pokusu o přístup k prvku pomocí `front` nebo `back` ve třídách kontejneru, když je kontejner prázdný.
+Podobně pokud kompilujete pomocí _ITERATOR_DEBUG_LEVEL nastavené na 1 nebo 2, dojde k chybě za běhu, pokud se pokusíte o přístup k prvku pomocí `front` třídy `back` nebo v kontejnerových třídách, pokud je kontejner prázdný.
 
 ```cpp
 // checked_iterators_2.cpp
@@ -109,11 +109,11 @@ int main()
 }
 ```
 
-Tento program zobrazí kontrolní výraz selhání dialogové okno s doplňujícími informacemi o selhání.
+Tento program zobrazí dialogové okno selhání kontrolního výrazu s dalšími informacemi o selhání.
 
 ## <a name="example"></a>Příklad
 
-Následující kód ukazuje různé scénáře použití iterátoru s komentáři. Ve výchozím nastavení _ITERATOR_DEBUG_LEVEL nastavena na 2 v sestavení pro ladění a na 0 v prodejní buildy.
+Následující kód ukazuje různé scénáře použití iterátoru s komentáři. Ve výchozím nastavení je _ITERATOR_DEBUG_LEVEL nastaveno na 2 v sestavení ladění a na hodnotu 0 v maloobchodních sestaveních.
 
 ```cpp
 // checked_iterators_3.cpp
@@ -195,7 +195,7 @@ int main()
 }
 ```
 
-Při kompilaci tohoto kódu s použitím `cl.exe /EHsc /W4 /MTd checked_iterators_3.cpp` kompilátor vydá upozornění, ale zkompiluje bez chyb do spustitelného souboru:
+Při kompilaci tohoto kódu pomocí `cl.exe /EHsc /W4 /MTd checked_iterators_3.cpp` kompilátoru vygeneruje upozornění, ale zkompiluje bez chyby do spustitelného souboru:
 
 ```Output
 algorithm(1026) : warning C4996: 'std::_Transform1': Function call with parameters
@@ -204,7 +204,7 @@ are correct. To disable this warning, use -D_SCL_SECURE_NO_WARNINGS. See documen
 on how to use Visual C++ 'Checked Iterators'
 ```
 
-Při spuštění příkazového řádku, spustitelný soubor se generuje tento výstup:
+Při spuštění z příkazového řádku vygeneruje spustitelný soubor tento výstup:
 
 ```Output
 v: 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15
@@ -219,5 +219,5 @@ a8: 0 8 16 24 32 40 48 56 64 72 80 88 96 104 112 120
 
 ## <a name="see-also"></a>Viz také:
 
-[Standardní knihovna C++ – přehled](../standard-library/cpp-standard-library-overview.md)<br/>
-[Podpora ladění iterátorů](../standard-library/debug-iterator-support.md)<br/>
+[C++Přehled standardní knihovny](../standard-library/cpp-standard-library-overview.md)\
+[Podpora ladění iterátorů](../standard-library/debug-iterator-support.md)

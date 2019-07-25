@@ -14,16 +14,16 @@ helpviewer_keywords:
 - std::seed_seq [C++], size
 - std::seed_seq [C++], param
 ms.assetid: cba114f7-9ac6-4f2f-b773-9c84805401d6
-ms.openlocfilehash: 5309042e9f26875e0cf5c2024cc74910fef21148
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d2dc561a9160188507a61ec3734cfbf9f3e74199
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62295718"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68450513"
 ---
 # <a name="seedseq-class"></a>seed_seq – třída
 
-Ukládá vektor nepodepsaných celočíselných hodnot, které dokáží poskytovat náhodnou hodnotu seed pro modul náhodných čísel.
+Ukládá vektor hodnot unsigned integer, které mohou poskytovat náhodnou počáteční hodnotu pro modul náhodného číslování.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -62,7 +62,7 @@ public:
 typedef unsigned int result_type;
 ```
 
-Typ prvků pořadí počáteční hodnoty. 32bitové celé číslo bez znaménka typu.
+Typ prvků sekvence počáteční hodnoty. 32 typ bitové unsigned integer.
 
 ## <a name="constructors"></a>Konstruktory
 
@@ -70,27 +70,27 @@ Typ prvků pořadí počáteční hodnoty. 32bitové celé číslo bez znaménka
 seed_seq();
 ```
 
-Výchozí konstruktor, inicializuje prázdnou interní sekvenci.
+Výchozí konstruktor inicializuje, aby měl prázdnou interní sekvenci.
 
 ```cpp
 template<class T>
 seed_seq(initializer_list<T> initlist);
 ```
 
-Používá `initlist` nastavit interní pořadí.
-`T` musí být celočíselného typu.
+Používá `initlist` k nastavení interní sekvence.
+`T`musí se jednat o celočíselný typ.
 
 ```cpp
 template<class InputIterator>
 seed_seq(InputIterator begin, InputIterator end);
 ```
 
-Inicializuje interní pořadí pomocí všechny prvky v rozsahu vstupní iterátor, k dispozici.
-`iterator_traits<InputIterator>::value_type` musí být celočíselného typu.
+Inicializuje vnitřní sekvenci pomocí všech prvků v poskytnutém vstupním rozsahu iterátoru.
+`iterator_traits<InputIterator>::value_type`musí se jednat o celočíselný typ.
 
 ## <a name="members"></a>Členové
 
-### <a name="generating-functions"></a>Generuje se funkce
+### <a name="generating-functions"></a>Generování funkcí
 
 ```cpp
 template<class RandomAccessIterator>
@@ -98,8 +98,8 @@ void generate(RandomAccessIterator begin,
           RandomAccessIterator end);
 ```
 
-Naplní prvky zadané pořadí pomocí algoritmu interní. Je tento algoritmus vliv na interní pořadím, pomocí kterého `seed_seq` byl inicializován.
-Nemá žádný účinek, pokud `begin == end`.
+Naplní prvky poskytnuté sekvence pomocí interního algoritmu. Tento algoritmus je ovlivněn vnitřní sekvencí, která `seed_seq` byla inicializována.
+Neprovede žádnou akci `begin == end`, pokud.
 
 ### <a name="property-functions"></a>Funkce vlastností
 
@@ -114,11 +114,11 @@ template<class OutputIterator>
 void param(OutputIterator dest) const;
 ```
 
-Zkopíruje do výstupního iterátoru interní pořadí `dest`.
+Zkopíruje interní sekvenci do výstupního iterátoru `dest`.
 
 ## <a name="example"></a>Příklad
 
-Následující příklad kódu vykonává tři konstruktory a vygeneruje výstup z výsledné `seed_seq` instancí, když je přiřazený k matici. Příklad, který používá `seed_seq` s generátor náhodných čísel, přečtěte si téma [ \<náhodné >](../standard-library/random.md).
+Následující příklad kódu vykonává tři konstruktory a generuje výstup z výsledných `seed_seq` instancí, pokud jsou přiřazeny k poli. Příklad, který používá `seed_seq` s generátorem náhodných čísel, naleznete v tématu [ \<Random >](../standard-library/random.md).
 
 ```cpp
 #include <iostream>
@@ -187,14 +187,14 @@ Generating a sequence of 5 elements into an array:
 
 ## <a name="remarks"></a>Poznámky
 
-Členské funkce této třídy nevyvolají výjimky.
+Členské funkce této třídy nevyvolávají výjimky.
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** \<náhodné >
+**Hlavička:** \<náhodné >
 
-**Namespace:** std
+**Obor názvů:** std
 
 ## <a name="see-also"></a>Viz také:
 
-[\<náhodné >](../standard-library/random.md)<br/>
+[\<náhodné >](../standard-library/random.md)

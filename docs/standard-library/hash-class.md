@@ -23,16 +23,16 @@ helpviewer_keywords:
 - std::hash [C++]
 - std::hash [C++]
 ms.assetid: e1b500c6-a5c8-4f6f-ad33-7ec52eb8e2e4
-ms.openlocfilehash: 2f7206e3764df384004b78e6df2127833a784f70
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 61446ab6b79496024d44a99fcf5f500bb871bb80
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62405089"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68448822"
 ---
 # <a name="hash-class"></a>hash – třída
 
-Výpočetní prostředí hodnota hash pro hodnotu.
+Vypočítá kód hodnoty hash pro hodnotu.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -45,7 +45,7 @@ struct hash {
 
 ## <a name="remarks"></a>Poznámky
 
-Objekt funkce definuje funkci hash, vhodná pro mapování hodnot typu *Ty* k distribuci hodnot indexu. Člen `operator()` vrátí hodnotu hash pro *val*. to se hodí pro použití s tříd šablon `unordered_map`, `unordered_multimap`, `unordered_set`, a `unordered_multiset`. Standardní knihovna obsahuje specializace pro základní typy: *Ty* může být libovolného skalárního typu, včetně typů ukazatele a typy výčtu. Kromě toho existují specializace pro typy knihoven `string`, `wstring`, `u16string`, `u32string`, `string_view`, `wstring_view`, `u16string_view`, `u32string_view`, `bitset`, `error_code`, `error_condition`, `optional`, `shared_ptr`, `thread`, `type_index`, `unique_ptr`, `variant`, a `vector<bool>`.
+Objekt funkce definuje funkci hash, která je vhodná pro mapování hodnot typu *ty* na distribuci hodnot indexu. Člen `operator()` vrátí hodnotu hash pro *Val*, vhodná pro použití s `unordered_map`třídami šablon, `unordered_multimap`, `unordered_set`a `unordered_multiset`. Standardní knihovna poskytuje specializace pro základní typy: *Ty* mohou být jakýkoli skalární typ, včetně typů ukazatelů a výčtových typů. Kromě toho existují specializace pro typy `string`knihoven, `u16string_view` `wstring_view` `string_view` `wstring`, `u16string` `u32string`,,,,, `u32string_view`, `bitset`,, `error_code` `error_condition`, ,`optional` ,,`type_index`, ,`unique_ptr`a. `shared_ptr` `thread` `variant` `vector<bool>`
 
 ## <a name="example"></a>Příklad
 
@@ -72,13 +72,13 @@ int main()
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** \<funkční >
+**Hlavička:** \<funkční >
 
-**Namespace:** std
+**Obor názvů:** std
 
 ## <a name="see-also"></a>Viz také:
 
-[<unordered_map>](../standard-library/unordered-map.md)<br/>
-[unordered_multimap – třída](../standard-library/unordered-multimap-class.md)<br/>
-[unordered_multiset – třída](../standard-library/unordered-multiset-class.md)<br/>
-[<unordered_set>](../standard-library/unordered-set.md)<br/>
+[<unordered_map>](../standard-library/unordered-map.md)\
+[unordered_multimap – třída](../standard-library/unordered-multimap-class.md)\
+[unordered_multiset – třída](../standard-library/unordered-multiset-class.md)\
+[<unordered_set>](../standard-library/unordered-set.md)

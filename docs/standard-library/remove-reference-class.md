@@ -7,12 +7,12 @@ helpviewer_keywords:
 - remove_reference class
 - remove_reference
 ms.assetid: 294e1965-3ae3-46ee-bc42-4fdf60c24717
-ms.openlocfilehash: 76f700b488d78af77e39ec91c7328604d18931fc
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f185994f943b2419a67fe86ce957751dc4031cbe
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62186033"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68451277"
 ---
 # <a name="removereference-class"></a>remove_reference – třída
 
@@ -30,12 +30,12 @@ using remove_reference_t = typename remove_reference<T>::type;
 
 ### <a name="parameters"></a>Parametry
 
-*T*<br/>
+*Š*\
 Typ, který chcete upravit.
 
 ## <a name="remarks"></a>Poznámky
 
-Instance `remove_reference<T>` obsahuje změněný typ, který je `T1` při *T* má formu `T1&`, jinak *T*.
+Instance `remove_reference<T>` obsahuje upravený typ, který je `T1` v případě *t* formuláře `T1&`, jinak *t*.
 
 ## <a name="example"></a>Příklad
 
@@ -61,11 +61,11 @@ remove_reference_t<int&> == int
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** \<type_traits >
+**Hlavička:** \<type_traits >
 
-**Namespace:** std
+**Obor názvů:** std
 
 ## <a name="see-also"></a>Viz také:
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
-[add_lvalue_reference – třída](../standard-library/add-lvalue-reference-class.md)<br/>
+[< type_traits >](../standard-library/type-traits.md)\
+[add_lvalue_reference – třída](../standard-library/add-lvalue-reference-class.md)

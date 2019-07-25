@@ -6,16 +6,16 @@ f1_keywords:
 - atomic/std::atomic_flag::clear
 - atomic/std::atomic_flag::test_and_set
 ms.assetid: 17f0c2f5-fd39-4a44-873a-b569720a670e
-ms.openlocfilehash: 13af0c26b765aa7ebbbd1ec22b5a0ed1b8cce0ec
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 36944c3c3bdc58272d87bbcdfb119d1c52c43995
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62377254"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68447408"
 ---
 # <a name="atomicflag-structure"></a>atomic_flag – struktura
 
-Popisuje objekt, který atomicky Nastaví nebo vymaže **bool** příznak. Operace na atomických příznacích jsou vždy bez zámku.
+Popisuje objekt, který atomicky nastavuje a maže příznak **bool** . Operace na atomických příznacích jsou vždycky bez zámku.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -27,24 +27,24 @@ struct atomic_flag;
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
-|[clear](#clear)|Nastaví uložený příznak na **false**.|
-|[test_and_set](#test_and_set)|Nastaví uložený příznak na **true** a vrátí počáteční hodnotu příznaku.|
+|[jejich](#clear)|Nastaví uložený příznak na **false**.|
+|[test_and_set](#test_and_set)|Nastaví uložený příznak na **hodnotu true** a vrátí počáteční hodnotu příznaku.|
 
 ## <a name="remarks"></a>Poznámky
 
-`atomic_flag` objekty mohou být předány nečlenské funkce [atomic_flag_clear](../standard-library/atomic-functions.md#atomic_flag_clear), [atomic_flag_clear_explicit](../standard-library/atomic-functions.md#atomic_flag_clear_explicit), [atomic_flag_test_and_set](../standard-library/atomic-functions.md#atomic_flag_test_and_set), a [atomic _flag_test_and_set_explicit](../standard-library/atomic-functions.md#atomic_flag_test_and_set_explicit). Mohou být inicializovány pomocí hodnoty `ATOMIC_FLAG_INIT`.
+`atomic_flag`objekty mohou být předány nečlenským funkcím [atomic_flag_clear](../standard-library/atomic-functions.md#atomic_flag_clear), [atomic_flag_clear_explicit](../standard-library/atomic-functions.md#atomic_flag_clear_explicit), [atomic_flag_test_and_set](../standard-library/atomic-functions.md#atomic_flag_test_and_set)a [atomic_flag_test_and_set_explicit](../standard-library/atomic-functions.md#atomic_flag_test_and_set_explicit). Lze je inicializovat pomocí hodnoty `ATOMIC_FLAG_INIT`.
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** \<atomické >
+**Hlavička:** \<atomická >
 
-**Namespace:** std
+**Obor názvů:** std
 
-## <a name="clear"></a>  atomic_flag::clear –
+## <a name="clear"></a>atomic_flag:: Clear
 
-Nastaví **bool** příznak, který je uložen v `*this` k **false**, v rámci zadaného [memory_order](../standard-library/atomic-enums.md#memory_order_enum) omezení.
+Nastaví příznak **bool** , který je uložen v `*this` **hodnotě false**v rámci zadaného omezení [memory_order](../standard-library/atomic-enums.md#memory_order_enum) .
 
 ```cpp
 void atomic_flag::clear(memory_order Order = memory_order_seq_cst) volatile noexcept;
@@ -53,12 +53,12 @@ void atomic_flag::clear(memory_order Order = memory_order_seq_cst) noexcept;
 
 ### <a name="parameters"></a>Parametry
 
-*Order*<br/>
-A [memory_order](../standard-library/atomic-enums.md#memory_order_enum).
+*Za*\
+[Memory_order](../standard-library/atomic-enums.md#memory_order_enum).
 
-## <a name="test_and_set"></a>  atomic_flag::test_and_set –
+## <a name="test_and_set"></a>atomic_flag::test_and_set
 
-Nastaví **bool** příznak, který je uložen v `*this` k **true**, v rámci zadaného [memory_order](../standard-library/atomic-enums.md#memory_order_enum) omezení.
+Nastaví příznak **bool** , který je uložen v `*this` **hodnotě true**v rámci zadaného omezení [memory_order](../standard-library/atomic-enums.md#memory_order_enum) .
 
 ```cpp
 bool atomic_flag::test_and_set(memory_order Order = memory_order_seq_cst) volatile noexcept;
@@ -67,13 +67,13 @@ bool atomic_flag::test_and_set(memory_order Order = memory_order_seq_cst) noexce
 
 ### <a name="parameters"></a>Parametry
 
-*Order*<br/>
-A [memory_order](../standard-library/atomic-enums.md#memory_order_enum).
+*Za*\
+[Memory_order](../standard-library/atomic-enums.md#memory_order_enum).
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Počáteční hodnota příznaku, která je uložena v `*this`.
+Počáteční hodnota příznaku, který je uložen v `*this`.
 
 ## <a name="see-also"></a>Viz také:
 
-[\<Atomic >](../standard-library/atomic.md)<br/>
+[\<atomická >](../standard-library/atomic.md)
