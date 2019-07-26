@@ -6,54 +6,54 @@ f1_keywords:
 helpviewer_keywords:
 - _ITERATOR_DEBUG_LEVEL
 ms.assetid: 718549cd-a9a9-4ab3-867b-aac00b321e67
-ms.openlocfilehash: a584fe5a97e251205e750507b27e53e6e7b9a20e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7b573127518969accdfdcc4a25a50269dd6aa002
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62224191"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68456392"
 ---
 # <a name="iteratordebuglevel"></a>_ITERATOR_DEBUG_LEVEL
 
-Ovládací prvky makru _ITERATOR_DEBUG_LEVEL, zda [checked iterators](../standard-library/checked-iterators.md) a [podpora ladění iterátorů](../standard-library/debug-iterator-support.md) jsou povolené. Toto makro nahrazuje a kombinuje funkci starší _SECURE_SCL a _HAS_ITERATOR_DEBUGGING makra.
+Makro _ITERATOR_DEBUG_LEVEL určuje, zda [](../standard-library/checked-iterators.md) jsou povoleny Zaškrtnuté iterátory a [Podpora iterátoru ladění](../standard-library/debug-iterator-support.md) . Toto makro nahrazuje a kombinuje funkce starších maker _SECURE_SCL a _HAS_ITERATOR_DEBUGGING.
 
-## <a name="macro-values"></a>Hodnoty – makro
+## <a name="macro-values"></a>Hodnoty maker
 
-Následující tabulka shrnuje možných hodnot pro makru _ITERATOR_DEBUG_LEVEL.
+Následující tabulka shrnuje možné hodnoty pro _ITERATOR_DEBUG_LEVEL makro.
 
-|Režim kompilace|Hodnota – makro|Popis|
+|Režim kompilace|Hodnota makra|Popis|
 |----------------------|----------------|-----------------|
 |**Ladění**|||
-||0|Zakáže kontrolované iterátory a zakáže pro iterační ladění.|
-||1|Checked – iterátory povolí nebo zakáže pro iterační ladění.|
-||2 (výchozí)|Umožňuje pro iterační ladění; checked – iterátory nejsou relevantní.|
+||0|Zakáže kontrolované iterátory a zakáže ladění iterátoru.|
+||1|Povoluje kontrolované iterátory a zakáže ladění iterátoru.|
+||2 (výchozí)|Povolí ladění iterátoru; kontrolované iterátory nejsou relevantní.|
 |**Vydaná verze**|||
-||0 (výchozí)|Zakáže kontroluje iterátory.|
-||1|Umožňuje zkontrolovat iterátory; iterační ladění není relevantní.|
+||0 (výchozí)|Zakáže kontrolované iterátory.|
+||1|Povoluje kontrolované iterátory; ladění iterátoru není relevantní.|
 
 V režimu vydání kompilátor vygeneruje chybu, pokud zadáte _ITERATOR_DEBUG_LEVEL jako 2.
 
 ## <a name="remarks"></a>Poznámky
 
-Ovládací prvky makru _ITERATOR_DEBUG_LEVEL, zda [checked iterators](../standard-library/checked-iterators.md) jsou povolené a v režimu ladění, ať už [podpora ladění iterátorů](../standard-library/debug-iterator-support.md) je povolená. Pokud _ITERATOR_DEBUG_LEVEL je definováno jako 1 nebo 2, kontrolované iterátory zajistí, že se nepřepíšou hranice vaše kontejnery. Pokud _ITERATOR_DEBUG_LEVEL je 0, nebudou kontrolovány iterátory. Při _ITERATOR_DEBUG_LEVEL je definováno jako 1, nebezpečné iterátoru použitím způsobí chybu modulu runtime a program se ukončí. Při _ITERATOR_DEBUG_LEVEL je definován jako 2, použít nezabezpečený iterátoru příčiny, které assert a dialogové okno chyby modulu runtime, která vám umožní proniknout do ladicího programu.
+Makro _ITERATOR_DEBUG_LEVEL řídí, zda jsou povoleny [kontrolované iterátory](../standard-library/checked-iterators.md) a v režimu ladění, zda je povolena [Podpora iterátoru ladění](../standard-library/debug-iterator-support.md) . Pokud je _ITERATOR_DEBUG_LEVEL definováno jako 1 nebo 2, kontrolované iterátory zajistí, že hranice vašich kontejnerů nebudou přepsány. Pokud je _ITERATOR_DEBUG_LEVEL 0, iterátory nejsou zaškrtnuté. Pokud je _ITERATOR_DEBUG_LEVEL definováno jako 1, nezabezpečené použití iterátoru způsobí chybu za běhu a program se ukončí. Když je _ITERATOR_DEBUG_LEVEL definováno jako 2, nezabezpečené použití iterátoru způsobí vyhodnocení a běhový chybový dialog, který umožňuje přerušit ladicí program.
 
-Makru _ITERATOR_DEBUG_LEVEL podporuje podobné funkce jako makra _SECURE_SCL a _HAS_ITERATOR_DEBUGGING, vám může být jisti které makra a makra hodnoty pro použití v konkrétních situacích. Pokud chcete zabránit nejasnostem, doporučujeme používat pouze makru _ITERATOR_DEBUG_LEVEL. Tato tabulka popisuje hodnotu makra ekvivalentní _ITERATOR_DEBUG_LEVEL pro různé hodnoty _SECURE_SCL a _HAS_ITERATOR_DEBUGGING v existujícím kódu.
+Vzhledem k tomu, že makro _ITERATOR_DEBUG_LEVEL podporuje podobnou funkci pro makra _SECURE_SCL a _HAS_ITERATOR_DEBUGGING, možná nebudete chtít, aby makro a hodnota makra používaly v konkrétní situaci. Chcete-li zabránit nejasnostem, doporučujeme použít pouze makro _ITERATOR_DEBUG_LEVEL. Tato tabulka popisuje ekvivalentní hodnotu makra _ITERATOR_DEBUG_LEVEL, která se má použít pro různé hodnoty _SECURE_SCL a _HAS_ITERATOR_DEBUGGING v existujícím kódu.
 
 |**_ITERATOR_DEBUG_LEVEL** |**_SECURE_SCL** |**_HAS_ITERATOR_DEBUGGING**|
 |---|---|---|
 |0 (výchozí verze)|0 (zakázáno)|0 (zakázáno)|
 |1|1 (povoleno)|0 (zakázáno)|
-|2 (výchozí nastavení ladění)|(není potřeba)|1 (Povolit v režimu ladění)|
+|2 (výchozí ladění)|(není relevantní)|1 (povoleno v režimu ladění)|
 
-Informace o tom, jak zakázat varování o kontrolovaných iterátorech naleznete v tématu [_SCL_SECURE_NO_WARNINGS](../standard-library/scl-secure-no-warnings.md).
+Informace o tom, jak zakázat upozornění na kontrolované iterátory, najdete v tématu [_SCL_SECURE_NO_WARNINGS](../standard-library/scl-secure-no-warnings.md).
 
 ### <a name="example"></a>Příklad
 
-Chcete-li zadat hodnotu makru _ITERATOR_DEBUG_LEVEL, použijte [/D](../build/reference/d-preprocessor-definitions.md) – možnost kompilátoru definujte ho v příkazovém řádku, nebo použít `#define` před C++ hlavičky standardní knihovny, které jsou zahrnuté ve zdrojových souborech. Například na příkazovém řádku, chcete-li zkompilovat *sample.cpp* v režimu ladění a používat iterátor podporu ladění, můžete zadat _ITERATOR_DEBUG_LEVEL definice makra:
+Chcete-li zadat hodnotu pro makro _ITERATOR_DEBUG_LEVEL, použijte možnost [/d](../build/reference/d-preprocessor-definitions.md) Compiler k jejímu definování na příkazovém řádku, nebo použijte `#define` před zahrnutím C++ standardních hlaviček knihoven do zdrojových souborů. Například na příkazovém řádku pro zkompilování *Sample. cpp* v režimu ladění a použití podpory ladění iterátorů můžete zadat definici makra _ITERATOR_DEBUG_LEVEL:
 
 `cl /EHsc /Zi /MDd /D_ITERATOR_DEBUG_LEVEL=1 sample.cpp`
 
-Ve zdrojovém souboru zadejte – makro před záhlaví standardní knihovny, které definují iterátory.
+Ve zdrojovém souboru určete makro před všemi standardními hlavičkami knihovny, které definují iterátory.
 
 ```cpp
 // sample.cpp
@@ -67,6 +67,6 @@ Ve zdrojovém souboru zadejte – makro před záhlaví standardní knihovny, kt
 
 ## <a name="see-also"></a>Viz také:
 
-[Checked – iterátory](../standard-library/checked-iterators.md)<br/>
-[Podpora ladění iterátorů](../standard-library/debug-iterator-support.md)<br/>
-[Bezpečné knihovny: Standardní knihovna C++](../standard-library/safe-libraries-cpp-standard-library.md)<br/>
+[Kontrolované iterátory](../standard-library/checked-iterators.md)\
+[Podpora ladění iterátorů](../standard-library/debug-iterator-support.md)\
+[Bezpečné knihovny: Standardní knihovna C++](../standard-library/safe-libraries-cpp-standard-library.md)

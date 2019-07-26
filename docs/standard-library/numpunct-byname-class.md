@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - numpunct_byname class
 ms.assetid: 18412924-e085-4771-b5e9-7a200cbdd7c0
-ms.openlocfilehash: 64e8918b052b05088ff48aefb0f0f9ab8c6df586
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0c9eb565c2dbf54da449411aa11a4c5661debf1d
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62371489"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68452322"
 ---
 # <a name="numpunctbyname-class"></a>numpunct_byname – třída
 
-Odvozená třída šablony popisuje objekt, který může sloužit jako `numpunct` omezující vlastnosti daného národního prostředí a který umožňuje formátování a interpunkci numerických a logických výrazů.
+Odvozená třída šablony popisuje objekt, který může sloužit jako `numpunct` omezující vlastnost daného národního prostředí a který umožňuje formátování a interpunkci číselných a logických výrazů.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -39,14 +39,14 @@ protected:
 
 ## <a name="remarks"></a>Poznámky
 
-Je dáno jeho chování [s názvem](../standard-library/locale-class.md#name) národní prostředí `_Locname`. Konstruktor inicializuje jeho základní objekt s [numpunct –](../standard-library/numpunct-class.md#numpunct)\<CharType > ( `_Refs`).
+Jeho chování je určeno pojmenovaným národním prostředím. [](../standard-library/locale-class.md#name) `_Locname` Konstruktor inicializuje svůj základní objekt pomocí [numpunct](../standard-library/numpunct-class.md#numpunct)\<CharType > ( `_Refs`).
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** \<národní prostředí >
+**Hlavička:** \<> národního prostředí
 
-**Namespace:** std
+**Obor názvů:** std
 
 ## <a name="see-also"></a>Viz také:
 
-[Bezpečný přístup z více vláken ve standardní knihovně C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[Bezpečný přístup z více vláken ve standardní knihovně C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)

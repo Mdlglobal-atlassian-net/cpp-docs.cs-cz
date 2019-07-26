@@ -1,5 +1,5 @@
 ---
-title: vektor&lt;bool&gt; třídy
+title: Vector&lt;–&gt; třída bool
 ms.date: 11/04/2016
 f1_keywords:
 - vector<bool>
@@ -15,16 +15,16 @@ helpviewer_keywords:
 - std::vector [C++], flip
 - std::vector [C++], swap
 ms.assetid: 8028c8ed-ac9c-4f06-aba1-5de45c00aafb
-ms.openlocfilehash: f7663987b2759c762d1f6c1604923478915f5726
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d4ae53f9a14f04d5656a13c32e75494688c5cdd0
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62364997"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68452258"
 ---
-# <a name="vectorltboolgt-class"></a>vektor&lt;bool&gt; třídy
+# <a name="vectorltboolgt-class"></a>Vector&lt;–&gt; třída bool
 
-`vector<bool>` Třída je částečná specializace [vektoru](../standard-library/vector-class.md) pro prvky typu **bool**. Má Alokátor pro základní typ, který je používán specializací a zajišťuje optimalizaci prostoru ukládáním **bool** hodnotu na bit.
+Třída je Částečná specializace vektoru pro prvky typu **bool**. [](../standard-library/vector-class.md) `vector<bool>` Má Alokátor pro základní typ, který je použit specializací, která poskytuje optimalizaci místa uložením jedné **bool** hodnoty na bit.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -35,52 +35,52 @@ class vector<bool, Allocator>
 
 ## <a name="remarks"></a>Poznámky
 
-Tato specializace šablony třídy se chová jako vektor, s výjimkou rozdílů popsaných v tomto článku.
+Tato specializace šablony třídy se chová jako vektor, s výjimkou rozdílů, které jsou vysvětleny v tomto článku.
 
-Operace, které se zabývají **bool** typu odpovídají hodnotám v kontejneru úložiště. `allocator_traits::construct` se nepoužívá k vytváření těchto hodnot.
+Operace, které se zabývat s typem **bool** , odpovídají hodnotám v kontejneru úložiště. `allocator_traits::construct`se nepoužívá k vytvoření těchto hodnot.
 
 ### <a name="typedefs"></a>Typedefs
 
 |Název typu|Popis|
 |-|-|
-|[const_pointer](#const_pointer)|Typedef pro `const_iterator` , který může sloužit jako konstantní ukazatel na prvek logické hodnoty `vector<bool>`.|
-|[const_reference](#const_reference)|Definice typu **bool**. Po inicializaci nekontroluje aktualizace původní hodnoty.|
-|[pointer](#pointer)|Typedef pro `iterator` , který může sloužit jako ukazatel na prvek logické hodnoty `vector<bool>`.|
+|[const_pointer](#const_pointer)|Definice `const_iterator` typu, která může sloužit jako konstantní ukazatel na logický prvek `vector<bool>`.|
+|[const_reference](#const_reference)|Typedef pro **bool**. Po inicializaci nekontroluje aktualizace původní hodnoty.|
+|[pointer](#pointer)|Definice `iterator` typu, která může sloužit jako ukazatel na logický prvek prvku `vector<bool>`.|
 
 ### <a name="member-functions"></a>Členské funkce
 
 |Členská funkce|Popis|
 |-|-|
-|[Převrátit na ose](#flip)|Obrátí všechny bity v `vector<bool>`.|
-|[swap](#swap)|Vymění prvky dvou `vector<bool>`s.|
-|[– operátor&#91;&#93;](#op_at)|Vrátí simulovaný odkaz `vector<bool>` prvek na zadané pozici.|
-|`at`|Funguje stejně jako nespecializovaná [vektoru](../standard-library/vector-class.md):: ve funkci, s tím rozdílem, že používá třídu proxy [vektoru\<bool >:: reference](#reference_class). Viz také [operátor&#91;&#93;](#op_at).|
-|`front`|Funguje stejně jako nespecializovaná [vektoru](../standard-library/vector-class.md):: přední funkce, s tím rozdílem, že používá třídu proxy [vektoru\<bool >:: reference](#reference_class). Viz také [operátor&#91;&#93;](#op_at).|
-|`back`|Funguje stejně jako nespecializovaná [vektoru](../standard-library/vector-class.md):: zpět funkce, s tím rozdílem, že používá třídu proxy [vektoru\<bool >:: reference](#reference_class). Viz také [operátor&#91;&#93;](#op_at).|
+|[funkci](#flip)|Obrátí všechny bity v `vector<bool>`.|
+|[swap](#swap)|Vyměňuje prvky dvou `vector<bool>`s.|
+|[podnikatel&#91;&#93;](#op_at)|Vrátí simulovaný odkaz na `vector<bool>` prvek na zadané pozici.|
+|`at`|Funguje stejně jako nespecializovaná funkce [Vector](../standard-library/vector-class.md):: at s tím rozdílem, že používá třídu proxy [Vector\<bool >:: Reference](#reference_class). Viz také [operátor&#91;](#op_at).|
+|`front`|Funguje stejně jako nespecializovaná funkce [Vector](../standard-library/vector-class.md):: front s tím rozdílem, že používá třídu proxy [Vector\<bool >:: Reference](#reference_class). Viz také [operátor&#91;](#op_at).|
+|`back`|Funguje stejně jako nespecializovaná funkce [Vector](../standard-library/vector-class.md):: back s tím rozdílem, že používá třídu proxy [Vector\<bool >:: Reference](#reference_class). Viz také [operátor&#91;](#op_at).|
 
 ### <a name="proxy-class"></a>Třída proxy
 
 |||
 |-|-|
-|[vektor\<bool > reference – třída](#reference_class)|Třída, která funguje jako proxy pro simulaci `bool&` chování a jejíž objekty mohou poskytnout odkazy na prvky (jeden bit) v rámci `vector<bool>` objektu.|
+|[Vektorová\<třída bool > Reference](#reference_class)|Třída, která funguje jako proxy pro simulaci `bool&` chování a jejíž objekty mohou poskytnout odkazy na elementy (jednotlivé bity) `vector<bool>` v rámci objektu.|
 
 ## <a name="requirements"></a>Požadavky
 
-**Hlavička**: \<vektoru >
+**Záhlaví**: \<vektorový >
 
-**Namespace:** std
+**Obor názvů:** std
 
-## <a name="const_pointer"></a>  vector\<bool>::const_pointer
+## <a name="const_pointer"></a>Vektorová\<bool >:: const_pointer
 
-Typ, který popisuje objekt, který může sloužit jako konstantní ukazatel na prvek logické hodnoty sekvence obsažený objektem `vector<bool>` objektu.
+Typ, který popisuje objekt, který může sloužit jako konstantní ukazatel na logický prvek sekvence obsažené v `vector<bool>` objektu.
 
 ```cpp
 typedef const_iterator const_pointer;
 ```
 
-## <a name="const_reference"></a>  vektor\<bool >:: const_reference
+## <a name="const_reference"></a>Vektorová\<bool >:: const_reference
 
-Typ, který popisuje objekt, který může sloužit jako konstantní odkaz na prvek logické hodnoty sekvence obsažený objektem `vector<bool>` objektu.
+Typ, který popisuje objekt, který může sloužit jako konstantní odkaz na logický element sekvence obsažený v `vector<bool>` objektu.
 
 ```cpp
 typedef bool const_reference;
@@ -88,9 +88,9 @@ typedef bool const_reference;
 
 ### <a name="remarks"></a>Poznámky
 
-Další informace a příklady kódu naleznete v tématu [vektoru&lt;bool&gt;:: reference::operator =](#reference_operator_eq).
+Další informace a příklady kódu naleznete v tématu [Vector&lt;bool&gt;:: Reference:: operator =](#reference_operator_eq).
 
-## <a name="flip"></a>  vektor\<bool >:: flip
+## <a name="flip"></a>Vector\<bool >:: flip
 
 Obrátí všechny bity v `vector<bool>`.
 
@@ -128,9 +128,9 @@ int main()
 }
 ```
 
-## <a name="op_at"></a>  vektor\<bool >:: operator [].
+## <a name="op_at"></a>Vector\<bool >:: operator []
 
-Vrátí simulovaný odkaz `vector<bool>` prvek na zadané pozici.
+Vrátí simulovaný odkaz na `vector<bool>` prvek na zadané pozici.
 
 ```cpp
 vector<bool>::reference operator[](size_type Pos);
@@ -146,17 +146,17 @@ vector&<bool&>::const_reference operator[](size_type Pos) const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-A [vektoru\<bool >:: reference](#reference_class) nebo [vektoru\<bool >:: const_reference](#const_reference) objekt, který obsahuje hodnotu indexovaného prvku.
+[Vector\<bool >:: Reference](#reference_class) nebo [\<Vector bool >:: const_reference](#const_reference) , který obsahuje hodnotu indexovaného elementu.
 
 Pokud je zadaná pozice větší nebo rovna velikosti kontejneru, výsledek je nedefinován.
 
 ### <a name="remarks"></a>Poznámky
 
-Pokud kompilujete s nastavenou _ITERATOR_DEBUG_LEVEL, nastane chyba za běhu při pokusu o přístup k prvku mimo hranice vektoru.  Další informace najdete v tématu [Checked Iterators](../standard-library/checked-iterators.md).
+Pokud kompilujete pomocí _ITERATOR_DEBUG_LEVEL sady, dojde k chybě za běhu, pokud se pokusíte o přístup k prvku mimo hranice vektoru.  Další informace najdete v tématu [kontrolované iterátory](../standard-library/checked-iterators.md).
 
 ### <a name="example"></a>Příklad
 
-Tento příklad kódu ukazuje správné použití `vector<bool>::operator[]` a dvě časté chyby kódování, které jsou okomentovány. Protože tyto chyby způsobují další chyby adresu `vector<bool>::reference` objekt, který `vector<bool>::operator[]` vrátí nelze provést.
+Tento příklad kódu ukazuje správné použití `vector<bool>::operator[]` a dvou běžných chyb kódování, které jsou zakomentovány. Tyto chyby způsobují chyby, protože nelze považovat `vector<bool>::reference` adresu objektu `vector<bool>::operator[]` , který se vrátí.
 
 ```cpp
 // cl.exe /EHsc /nologo /W4 /MTd
@@ -185,21 +185,21 @@ int main()
 }
 ```
 
-## <a name="pointer"></a>  vektor\<bool >:: ukazatele
+## <a name="pointer"></a>Vector\<bool >::p ointer
 
-Typ, který popisuje objekt, který může sloužit jako ukazatel na prvek logické hodnoty sekvence obsažený objektem `vector<bool>` objektu.
+Typ, který popisuje objekt, který může sloužit jako ukazatel na logický prvek sekvence obsažený v `vector<bool>` objektu.
 
 ```cpp
 typedef iterator pointer;
 ```
 
-## <a name="reference_class"></a>  vektor\<bool >:: reference – třída
+## <a name="reference_class"></a>Vector\<bool >:: Reference – třída
 
-`vector<bool>::reference` Třídy je třída proxy poskytnutá [vektoru\<bool > třída](../standard-library/vector-bool-class.md) pro simulaci `bool&`.
+Třída je proxy třída poskytovaná `bool&`vektorovou [\<bool > třídy](../standard-library/vector-bool-class.md) pro simulaci. `vector<bool>::reference`
 
 ### <a name="remarks"></a>Poznámky
 
-Simulovaný odkaz je vyžadován, protože jazyk C++ nativně neumožňuje přímé odkazy na bity. `vector<bool>` používá pouze jeden bit na element, který můžete odkazovat pomocí této třídy proxy serveru. Simulace odkazu však není kompletní, protože určitá přiřazení nejsou platná. Například protože adresu `vector<bool>::reference` nelze přijmout, následující kód, který používá [vektoru\<bool >:: – operátor&#91; &#93; ](#op_at) není správná:
+Simulovaný odkaz je vyžadován, protože jazyk C++ nativně neumožňuje přímé odkazy na bity. `vector<bool>`používá pouze jeden bit na prvek, na který lze odkazovat pomocí této třídy proxy. Simulace odkazu však není kompletní, protože určitá přiřazení nejsou platná. Například vzhledem k tomu, že adresa `vector<bool>::reference` objektu nemůže být použita, následující kód, který používá [Vector\<bool >:: operator&#91; ](#op_at) není správný:
 
 ```cpp
 vector<bool> vb;
@@ -208,9 +208,9 @@ bool* pb = &vb[1]; // conversion error - do not use
 bool& refb = vb[1];   // conversion error - do not use
 ```
 
-###  <a name="reference_flip"></a>  vektor\<bool >:: reference::flip
+###  <a name="reference_flip"></a>Vector\<bool >:: Reference:: flip
 
-Přemění logickou hodnotu odkazovaného [vektoru\<bool >](../standard-library/vector-bool-class.md) elementu.
+Invertuje logickou hodnotu odkazovaného [\<logického prvku bool >](../standard-library/vector-bool-class.md) .
 
 ```cpp
 void flip();
@@ -255,9 +255,9 @@ The vector with first element flipped is:
     false false false true true
 ```
 
-###  <a name="reference_operator_bool"></a>  vektor\<bool >:: reference::operator bool
+###  <a name="reference_operator_bool"></a>Vector\<bool >:: Reference:: operator bool
 
-Poskytuje implicitní převod z `vector<bool>::reference` k **bool**.
+Poskytuje implicitní převod z `vector<bool>::reference` na **bool**.
 
 ```cpp
 operator bool() const;
@@ -265,13 +265,13 @@ operator bool() const;
 
 #### <a name="return-value"></a>Návratová hodnota
 
-Logická hodnota prvku vektoru\<bool > objektu.
+Logická hodnota prvku objektu Vector\<bool >.
 
 #### <a name="remarks"></a>Poznámky
 
-`vector<bool>` Objektu nelze změnit tímto operátorem.
+`vector<bool>` Objekt nelze změnit pomocí tohoto operátoru.
 
-###  <a name="reference_operator_eq"></a>  vektor\<bool >:: reference::operator =
+###  <a name="reference_operator_eq"></a>Vector\<bool >:: Reference:: operator =
 
 Přiřadí k bitu logickou hodnotu nebo hodnotu obsaženou referenčním prvkem.
 
@@ -282,10 +282,10 @@ reference& operator=(bool Val);
 
 ### <a name="parameters"></a>Parametry
 
-*doprava*<br/>
+*Kliknutím*\
 Odkaz prvku, jehož hodnota má být přiřazena k bitu.
 
-*Val*<br/>
+*Počítává*\
 Logická hodnota, která má být přiřazena k bitu.
 
 #### <a name="example"></a>Příklad
@@ -361,7 +361,7 @@ The original value of the 3rd element still stored in a bool: false
 
 ## <a name="swap"></a>  vector\<bool>::swap
 
-Statická členská funkce, která vyměňuje dva prvky vektorů logické hodnoty ( `vector<bool>`) pomocí serveru proxy třídy [vektoru\<bool >:: reference](#reference_class).
+Statická členská funkce, která vyměňuje dva prvky logických `vector<bool>`vektorů () pomocí třídy [proxy\<Vector bool >:: Reference](#reference_class).
 
 ```cpp
 static void swap(
@@ -371,17 +371,17 @@ static void swap(
 
 ### <a name="parameters"></a>Parametry
 
-*doleva*<br/>
-Element, který bude vyměněn za *vpravo* elementu.
+*Zbývá*\
+Prvek, který má být vyměněn  pomocí pravého prvku.
 
-*doprava*<br/>
-Element, který bude vyměněn za *vlevo* elementu.
+*Kliknutím*\
+Prvek, který má být vyměněn pomocí *levého* prvku.
 
 ### <a name="remarks"></a>Poznámky
 
-Toto přetížení podporuje zvláštní proxy požadavky `vector<bool>`. [vektor](../standard-library/vector-class.md):: swap má stejné funkce jako přetížení jedním argumentem `vector<bool>::swap()`.
+Toto přetížení podporuje speciální požadavky `vector<bool>`proxy serveru. [Vector](../standard-library/vector-class.md):: swap má stejné funkce jako přetížení `vector<bool>::swap()`s jedním argumentem.
 
 ## <a name="see-also"></a>Viz také:
 
-[Bezpečný přístup z více vláken ve standardní knihovně C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
-[Standardní knihovna C++ – referenční dokumentace](../standard-library/cpp-standard-library-reference.md)<br/>
+[Bezpečnost vlákna ve C++ standardní knihovně](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[Standardní knihovna C++ – referenční dokumentace](../standard-library/cpp-standard-library-reference.md)

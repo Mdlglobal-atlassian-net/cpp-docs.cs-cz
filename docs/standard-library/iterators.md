@@ -5,20 +5,20 @@ helpviewer_keywords:
 - iterator conventions
 - C++ Standard Library, iterator conventions
 ms.assetid: 2f746be7-b37d-4bfc-bf05-be4336ca982f
-ms.openlocfilehash: d72cd26f2642816efae2ec826df1bd9fa02e7531
-ms.sourcegitcommit: 8bb2bea1384b290b7570b01608a86c7488ae7a02
+ms.openlocfilehash: ec23cbea63bc6884a361600362fcf0061e927ca6
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67400427"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68449965"
 ---
 # <a name="iterators"></a>Iterátory
 
-Iterátor je objekt, který může iterovat prvky v kontejneru standardní knihovny C++ a poskytují přístup k jednotlivým prvkům. Kontejnery standardní knihovny C++, všechny poskytnuté iterátory tak, aby algoritmů můžete ke jejich prvky standardním způsobem, aniž byste museli být obeznámeni s typu kontejneru elementů jsou uloženy v.
+Iterátor je objekt, který může iterovat prvky ve C++ standardním kontejneru knihovny a poskytnout přístup k jednotlivým prvkům. C++ Standardní kontejnery knihovny poskytují iterátory, aby algoritmy mohly přistupovat ke svým prvkům standardním způsobem, aniž by museli mít obavy z typu kontejneru, v němž jsou uloženy prvky.
 
-Můžete použít iterátory explicitně pomocí členské a globální funkce, jako `begin()` a `end()` a operátory, jako například **++** a **--** přesunout vpřed nebo zpětně. Můžete také použít iterátory implicitně s rozsahem-smyčky for nebo (pro některé typy iterátoru) operátor dolního indexu  **\[]** .
+Můžete použít `begin()` iterátory explicitně pomocí členů a globálních funkcí, jako jsou a `end()` a **--** a **++** přesunout dopředu nebo zpět. Můžete také použít iterátory implicitně s rozsahem smyčky for nebo (u některých typů iterátorů) operátoru  **\[** dolního indexu].
 
-Na začátek pořadí nebo rozsahu ve standardní knihovně jazyka C++ je první prvek. Konec pořadí nebo rozsah je vždy definována jako jedno místo za posledním prvkem. Globální funkce `begin` a `end` vrátí iterátory do zadaného kontejneru. Typické explicitní iterace smyčky přes všechny prvky v kontejneru vypadá takto:
+Ve C++ standardní knihovně je začátek sekvence nebo rozsahu prvním prvkem. Konec sekvence nebo rozsahu je vždy definován jako první prvek za posledním prvkem. Globální funkce `begin` a `end` vracejí iterátory do určeného kontejneru. Typický explicitní cyklus iterátoru u všech prvků v kontejneru vypadá takto:
 
 ```cpp
 vector<int> vec{ 0,1,2,3,4 };
@@ -29,7 +29,7 @@ for (auto it = begin(vec); it != end(vec); it++)
 }
 ```
 
-Totéž lze provést jednoduše pomocí rozsah-smyčka for:
+Stejnou věc lze dosáhnout více jednoduše pomocí cyklu Range-for:
 
 ```cpp
 for (auto num : vec)
@@ -39,56 +39,56 @@ for (auto num : vec)
 }
 ```
 
-Existuje pět kategorií iterátorů. V pořadí podle zvýšení výkonu kategorie jsou:
+Existuje pět kategorií iterátorů. V rámci zvýšení výkonu jsou tyto kategorie:
 
-- **Výstup**. *Výstupního iterátoru* `X` můžete Iterujte vpřed přes posloupnosti pomocí **++** operátorů a můžete napsat jenom jednou, elementu s použitím __\*__ operátor.
+- **Výstup**. *Výstupní iterátor* `X` může iterovat přes **++** sekvenci pomocí operátoru a může napsat __\*__ element pouze jednou pomocí operátoru.
 
-- **Vstup**. *Vstupní iterátor* `X` můžete Iterujte vpřed přes posloupnosti pomocí ++ operátor a může číst prvek libovolný počet pokusů s použitím **&ast;** operátor. Můžete porovnat vstupní iterátory s použitím **++** a **! =** operátory. Po zvýšit libovolné kopii vstupní iterátor žádné další kopie lze bezpečně porovnat, přes ukazatel nebo zvýšena po tomto datu.
+- **Vstup**. *Vstupní iterátor* `X` může iterovat přes sekvenci pomocí operátoru + + a může číst prvek libovolným počtem **&ast;** pokusů pomocí operátoru. Vstupní iterátory můžete porovnat pomocí **++** operátorů a **! =** . Po zvýšení jakékoli kopie vstupního iterátoru není možné žádná z ostatních kopií bezpečně porovnat, odkázat nebo zvýšit.
 
-- **Vpřed**. A *dopředný iterátor, který* `X` můžete Iterujte vpřed přes posloupnosti pomocí ++ – operátor a může číst libovolný prvek nebo zapisovat elementy nekonstantní libovolný počet pokusů s použitím **&ast;** operátor. Získáte přístup k členům elementu s použitím **->** operátor a porovnejte dál iterátory s použitím **==** a **! =** operátory. Může vytvářet více kopií dopředný iterátor, z nichž každý lze přistoupit přes ukazatel a zvýší, nezávisle na sobě. Dopředný iterátor, který je inicializován bez odkazu na kterýkoli kontejner se volá *null dopředný iterátor, který*. Null dopředných iterátorů vždy porovnávají se stejně.
+- **Předá**. Dopředný *iterátor* `X` může iterovat přes sekvenci pomocí operátoru + + a může číst libovolný element nebo zapisovat nekonstantní prvky libovolným počtem **&ast;** pokusů pomocí operátoru. Ke členům elementu můžete přistupovat pomocí **->** operátoru a porovnat dopředné iterátory **==** pomocí operátorů a **! =** . Můžete vytvořit několik kopií dopředných iterátorů, z nichž každý může být přesměrován a zvýšen nezávisle. Dopředný iterátor, který je inicializován bez odkazu na libovolný kontejner, se nazývá *iterátor s hodnotou null*. Nevydávané iterátory s hodnotou null vždy porovnají.
 
-- **Obousměrné**. A *obousměrný iterátor, který* `X` může proběhnout iterátor předání. Vám může, ale také snížení obousměrný iterátor, stejně jako v `--X`, `X--`, nebo `(V = *X--)`. Je možné přistupovat k členům elementu a porovnat obousměrných iterátorů stejným způsobem jako dopředných iterátorů.
+- **Obousměrný**. *Obousměrný iterátor* `X` může místo dopředný iterátor uskutečnit. Můžete ale také snížit obousměrný iterátor, jako v `--X`, `X--`nebo `(V = *X--)`. Můžete přistupovat ke členům prvků a porovnat obousměrné iterátory stejným způsobem jako dopředné iterátory.
 
-- **Náhodný přístup**. A *iterátor s náhodným přístupem* `X` může proběhnout obousměrný iterátor. S iterátor náhodného přístupu můžete použít operátor dolního indexu  **\[]** k přístupu k prvkům. Můžete použít **+** , **-** , **+=** a **-=** operátory přesunutí dopředu nebo dozadu zadaný počet prvků a vzdálenosti mezi vzájemně iterátory. Můžete porovnat s použitím obousměrných iterátorů **==** , **! =** , **\<** , **>** , **\< =** , a **>=** .
+- **Náhodný přístup**. Iterátor`X` náhodného přístupu může vzít místo obousměrného iterátoru. Pomocí iterátoru náhodného přístupu můžete k prvkům přistupovat pomocí  **\[** operátoru dolního indexu]. Operátory **+** **,-** **a-=můžete** použít k přesunutí dopředu nebo dozadu určeného počtu prvků a k výpočtu vzdálenosti mezi iterátory. **+=** Obousměrné iterátory můžete **==** porovnat pomocí, **! =** , **\<** , **>** , **\< =** a. **>=**
 
-Všechny iterátory můžete přiřadit nebo zkopírován. Jsou považovány za jednoduché objekty a jsou často předané a vrácené hodnoty není odkazem. Všimněte si také, že žádná z operací výše popsaný může vyvolat výjimku při provádění na iterátor platný.
+Všechny iterátory je možné přiřadit nebo zkopírovat. Předpokládá se, že jsou prosté objekty a jsou často předávány a vraceny hodnotou, nikoli odkazem. Všimněte si také, že žádná z dříve popsaných operací nemůže vyvolat výjimku, pokud je provedena na platné iterátory.
 
-Hierarchie kategorií iterátoru můžeme shrnout tím, že zobrazuje tři pořadí. Pro přístup pouze pro zápis do sekvence můžete použít některý z:
+Hierarchii kategorií iterátoru lze shrnout zobrazením tří sekvencí. Pro přístup k sekvenci pouze pro zápis můžete použít některý z těchto možností:
 
-> výstupní iterátor<br/>
-> Dopředný iterátor, který -><br/>
-> obousměrný iterátor, který -><br/>
+> výstupní iterátor \
+> -> dopředný iterátor \
+> -> obousměrný iterátor \
 > -> iterátor s náhodným přístupem
 
-Na šipku vpravo znamená "může být nahrazen." Libovolný algoritmus, který volá pro výstupní iterátor by měl fungovat například krásně pro dopředný iterátor, ale *není* naopak.
+Šipka doprava znamená, že může být nahrazena. Jakýkoli algoritmus, který volá pro výstupní iterátor, by měl pracovat s dopředný iterátorem, například  jiným způsobem.
 
-Pro přístup jen pro čtení do sekvence můžete použít některý z:
+Pro přístup ke sekvenci jen pro čtení můžete použít libovolný z těchto:
 
-> vstupní iterátor<br/>
-> Dopředný iterátor, který -><br/>
-> obousměrný iterátor, který -><br/>
+> vstupní iterátor \
+> -> dopředný iterátor \
+> -> obousměrný iterátor \
 > -> iterátor s náhodným přístupem
 
-Vstupní iterátor v tomto případě je nejnižší prioritu všech kategorií.
+Vstupní iterátor je nejslabší ze všech kategorií, v tomto případě.
 
-Nakonec pro přístup pro čtení a zápis do pořadí, můžete použít některý z:
+Nakonec můžete pro přístup pro čtení a zápis do sekvence použít některý z těchto možností:
 
-> Dopředný iterátor, který<br/>
-> obousměrný iterátor, který -><br/>
+> dopředný iterátor \
+> -> obousměrný iterátor \
 > -> iterátor s náhodným přístupem
 
-Ukazatelem na objekt může vždycky sloužit jako iterátor náhodného přístupu, aby mohl sloužit jako libovolnou kategorii iterátoru, pokud podporuje přístup správné čtení a zápis do sekvence, které určí.
+Ukazatel objektu může vždy sloužit jako iterátor náhodného přístupu, takže může sloužit jako libovolná kategorie iterátoru, pokud podporuje správný přístup pro čtení a zápis do sekvence, kterou určuje.
 
-Iterátor `Iterator` jiného než objekt musí ukazatel také definovat typy členů vyžadované specializace `iterator_traits<Iterator>`. Všimněte si, že tyto požadavky můžete splnit odvozením `Iterator` ze základní třídy veřejné [iterátoru](../standard-library/iterator-struct.md).
+Iterátor `Iterator` jiný než ukazatel na objekt musí také definovat typy členů vyžadované specializací `iterator_traits<Iterator>`. Všimněte si, že tyto požadavky lze splnit odvozením `Iterator` z veřejného iterátoru základní [](../standard-library/iterator-struct.md)třídy.
 
-Je důležité pochopit, co a omezení jednotlivých kategorií iterátoru zobrazíte používání iterátorů tak, že kontejnery a algoritmy ve standardní knihovně jazyka C++.
+Je důležité pochopit příslibů a omezení každé kategorie iterátoru a zjistit, jak jsou iterátory používány kontejnery a algoritmy ve C++ standardní knihovně.
 
 > [!NOTE]
-> Používání iterátorů explicitně pomocí rozsahu můžete vyhnout-smyčky for. Další informace najdete v tématu [Range-based pro příkaz](../cpp/range-based-for-statement-cpp.md).
+> Můžete se vyhnout používání iterátorů explicitně pomocí cyklu Range-for. Další informace naleznete v tématu [Range-based for Statement](../cpp/range-based-for-statement-cpp.md).
 
-Microsoft C++ teď nabízí zaškrtnutí iterátory a iterátory ladění Ujistěte se, že nedojde k přepsání hranice vašeho kontejneru. Další informace najdete v tématu [Checked Iterators](../standard-library/checked-iterators.md) a [Debug Iterator Support](../standard-library/debug-iterator-support.md).
+Microsoft C++ teď nabízí kontrolované iterátory a ladicí iterátory, aby se zajistilo, že nepřepisujete hranice vašeho kontejneru. Další informace najdete v tématech [kontrolované iterátory](../standard-library/checked-iterators.md) a [Podpora pro ladění iterátorů](../standard-library/debug-iterator-support.md).
 
 ## <a name="see-also"></a>Viz také:
 
-[Standardní knihovna C++ – referenční dokumentace](../standard-library/cpp-standard-library-reference.md)<br/>
-[Bezpečný přístup z více vláken ve standardní knihovně C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[C++Odkaz na standardní knihovnu](../standard-library/cpp-standard-library-reference.md)\
+[Bezpečný přístup z více vláken ve standardní knihovně C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)

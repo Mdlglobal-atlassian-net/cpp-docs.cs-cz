@@ -22,16 +22,16 @@ helpviewer_keywords:
 - std::queue [C++], push
 - std::queue [C++], size
 ms.assetid: 28c20ab0-3a72-4185-9e0f-5a44eea0e204
-ms.openlocfilehash: 78479a05f8957aea5ca0f78fd3a086a49b9ef009
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 512b9499e63933a71a27a87f91a3bef8a65339e1
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68240403"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68458342"
 ---
 # <a name="queue-class"></a>queue – třída
 
-Kontejner adaptér třídu šablony, která poskytuje omezení funkcí pro některé základní typ kontejneru, omezíte přístup k prvkům přední a zadní. Elementy lze přidat na pozadí nebo odebrán z front a prvky můžete prozkoumat na jednom konci fronty.
+Třída adaptéru pro kontejner šablon, která poskytuje omezení funkčnosti pro určitý typ kontejneru, a omezuje přístup k předním a zadním prvkům. Prvky lze přidat zpět nebo odebrat z front a prvky lze kontrolovat na konci fronty.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -42,27 +42,27 @@ class queue
 
 ### <a name="parameters"></a>Parametry
 
-*Typ*\
-Typ dat prvku mají být uloženy ve frontě
+*Textový*\
+Typ dat prvku, který bude uložen ve frontě
 
-*Kontejner*\
-Typ základního kontejneru používaný k implementaci fronty.
+*Vnitřního*\
+Typ podkladového kontejneru, který se používá k implementaci fronty.
 
 ## <a name="remarks"></a>Poznámky
 
-Prvky třídy `Type` stanovené v šabloně první parametr objekt fronty je synonymní s [value_type](#value_type) a musí shodovat s typem elementu v základní třídě kontejneru `Container` stanovených druhý parametr šablony. `Type` Musí být možné přiřadit, takže je možné zkopírovat objekty daného typu a přiřadit proměnné typu hodnoty.
+Prvky třídy `Type` specifikované v prvním parametru šablony objektu Queue jsou synonyma s [value_type](#value_type) a musí odpovídat typu elementu v základní třídě `Container` kontejneru, která je stanovena druhou šablonou. ukazatele. `Type` Musí být přiřazen, aby bylo možné zkopírovat objekty daného typu a přiřadit hodnoty proměnným tohoto typu.
 
-Zahrnout vhodný základní třídy kontejnerů pro frontu [deque](../standard-library/deque-class.md) a [seznamu](../standard-library/list-class.md), nebo jiném pořadí kontejneru, který podporuje operace `front`, `back`, `push_back`, a `pop_front`. Základní třída kontejneru je zapouzdřen v rámci kontejneru adaptér, který zpřístupňuje pouze omezená sada členské funkce kontejneru pořadí jako veřejné rozhraní.
+Vhodné základní třídy kontejnerů pro frontu zahrnují [deque](../standard-library/deque-class.md) a [list](../standard-library/list-class.md)nebo jakýkoli jiný kontejner sekvence, který podporuje operace `front`, `back`, `push_back` `pop_front`a. Základní třída kontejneru je zapouzdřena v rámci adaptéru kontejneru, který zpřístupňuje pouze omezené sady členských funkcí kontejneru sekvence jako veřejné rozhraní.
 
-Fronty objekty jsou srovnatelné if rovnosti a pouze v případě elementů třídy `Type` lze porovnávat rovnosti a jsou méně – než srovnatelné Pokud a pouze v případě elementů třídy `Type` jsou méně – než srovnatelná s hodnotou.
+Objekty fronty jsou porovnatelný z rovnosti, pokud a pouze pokud jsou prvky `Type` třídy srovnatelné, a jsou menší než srovnatelné, pokud je a pouze v případě, že prvky `Type` třídy jsou menší než srovnatelné.
 
-Existují tři typy určené adaptéry kontejneru C++ standardní knihovny: zásobník, fronty a priority_queue –. Každý omezuje funkčnost některé základní třídy kontejneru a poskytuje tak přesně řízené rozhraní standardní datovou strukturu.
+Existují tři typy adaptérů kontejneru definovaných C++ standardní knihovnou: stack, Queue a priority_queue. Každý z nich omezuje funkčnost některé základní třídy kontejneru, aby poskytovala přesně kontrolované rozhraní pro standardní datovou strukturu.
 
-- [Stack – třída](../standard-library/stack-class.md) podporuje poslední dovnitř, první (ven LIFO) datové struktury. Dobré analogové brát v úvahu by stoh talířů shora. Elementy (tabulky) může vložit, prozkoumat nebo odebrat jenom z horní části zásobníku, což je poslední prvek na konci kontejneru základní. Omezení přístupu jenom k prvku na vrcholu je důvod horizontálních oddílů pomocí třídy zásobníku.
+- [Třída Stack](../standard-library/stack-class.md) podporuje strukturu dat Last-in, First-out (LIFO). Dobrým analogem k tomu, že byste měli mít na paměti, je zásobník talířů. Prvky (pláty) mohou být vloženy, zkontrolovány nebo odebrány pouze z horní části zásobníku, což je poslední prvek na konci základního kontejneru. Omezení pro přístup pouze k hornímu prvku je důvodem pro použití třídy Stack.
 
-- Třída fronty podporuje první dovnitř, první ven (FIFO) datová struktura. Dobré analogové brát v úvahu by zarovnání pro bankovní pokladnu lidí. Elementy (lidé) mohou být přidány do pozadí řádku a odeberou se ze začátku řádku. Přední a zadní řádku může být kontrolována. Omezení přístupu jenom přední a zadní prvky tímto způsobem je důvod horizontálních oddílů pomocí třídy fronty.
+- Třída Queue podporuje strukturu dat first in, First-out (FIFO). Dobrým analogovým, kdo by měl mít na paměti, jsou lidé, kteří se budou podělit o bankovní informace. Prvky (lidé) mohou být přidány do zadní části řádku a jsou odebrány z přední části řádku. Může být zkontrolován jak přední, tak zadní strana řádku. Omezení pro přístup pouze k prvkům front a back tímto způsobem je důvodem použití třídy Queue.
 
-- [Priority_queue – třída](../standard-library/priority-queue-class.md) orders jeho prvky tak, aby největšího prvku je vždy na nejvyšší pozici. Podporuje vložení elementu a kontrolu a odstranění prvku na vrcholu. Dobré analogové brát v úvahu by uživatelé zarovnání ve kterém jsou uspořádané podle věku, výšku ani jiné kritérium.
+- [Třída priority_queue](../standard-library/priority-queue-class.md) řadí své prvky, aby největší prvek byl vždy na nejvyšší pozici. Podporuje vložení elementu a kontrolu a odebrání horního prvku. Dobrým analogovým, co je potřeba mít na paměti, jsou lidé, kteří se doplňují, kde jsou seřazené podle stáří, výšky nebo jiného kritéria.
 
 ## <a name="members"></a>Členové
 
@@ -70,30 +70,30 @@ Existují tři typy určené adaptéry kontejneru C++ standardní knihovny: zás
 
 |||
 |-|-|
-|[fronty](#queue)|Vytvoří `queue` , který je prázdný nebo který je kopií základní kontejnerového objektu.|
+|[provedených](#queue)|Vytvoří objekt, který je prázdný nebo který je kopií základního objektu kontejneru. `queue`|
 
 ### <a name="typedefs"></a>Typedefs
 
 |||
 |-|-|
-|[container_type](#container_type)|Typ, který poskytuje základní kontejneru upraví `queue`.|
-|[size_type](#size_type)|Typ celé číslo bez znaménka představující počet prvků v `queue`.|
-|[value_type](#value_type)|Typ, který představuje typ uložený jako prvek v objektu `queue`.|
+|[container_type](#container_type)|Typ, který poskytuje základní kontejner, který má být upraven pomocí `queue`.|
+|[size_type](#size_type)|Typ unsigned integer, který může představovat počet prvků v `queue`.|
+|[value_type](#value_type)|Typ, který představuje typ objektu uložený jako prvek v `queue`.|
 
 ### <a name="functions"></a>Funkce
 
 |||
 |-|-|
-|[Zpět](#back)|Vrátí odkaz na poslední a naposledy přidat prvek při zálohování `queue`.|
-|[prázdný](#empty)|Testuje, zda `queue` je prázdný.|
-|[Přední](#front)|Vrátí odkaz na první prvek na začátku `queue`.|
-|[POP](#pop)|Odstraní prvek z přední části `queue`.|
+|[návrat](#back)|Vrátí odkaz na poslední a naposledy přidaný prvek na pozadí `queue`.|
+|[empty](#empty)|Testuje, zda `queue` je pole prázdné.|
+|[dopředu](#front)|Vrátí odkaz na první prvek na začátku `queue`.|
+|[výstrah](#pop)|Odebere prvek z přední části `queue`.|
 |[push](#push)|Přidá prvek na pozadí `queue`.|
-|[Velikost](#size)|Vrátí počet prvků v `queue`.|
+|[hodnota](#size)|Vrátí počet prvků v `queue`.|
 
-## <a name="back"></a> Zpět
+## <a name="back"></a>návrat
 
-Vrátí že odkaz na poslední a naposledy přidat element zádi fronty.
+Vrátí odkaz na poslední a naposledy přidaný prvek na zadní stranu fronty.
 
 ```cpp
 reference back();
@@ -103,13 +103,13 @@ const_reference back() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Poslední element objektu do fronty. Pokud je fronta prázdná, návratová hodnota není definována.
+Poslední prvek fronty. Pokud je fronta prázdná, návratová hodnota není definována.
 
 ### <a name="remarks"></a>Poznámky
 
-Pokud návratová hodnota `back` je přiřazen `const_reference`, nelze upravit objekt fronty. Pokud návratová hodnota `back` je přiřazen `reference`, objekt fronty je možné upravit.
+Pokud `back` je vrácená hodnota přiřazena `const_reference`k, nelze objekt Queue upravit. Pokud `back` je vrácená hodnota přiřazena `reference`k, lze objekt fronty upravit.
 
-Při kompilaci pomocí [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md) definováno jako 1 nebo 2, dojde k chybě při pokusu o přístup k prvku v prázdné frontě.  Zobrazit [Checked Iterators](../standard-library/checked-iterators.md) Další informace.
+Při kompilaci pomocí [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md) definovaného jako 1 nebo 2 dojde k chybě za běhu, pokud se pokusíte o přístup k elementu v prázdné frontě.  Další informace najdete v tématu [kontrolované iterátory](../standard-library/checked-iterators.md) .
 
 ### <a name="example"></a>Příklad
 
@@ -137,9 +137,9 @@ int main( )
 }
 ```
 
-## <a name="container_type"></a> container_type –
+## <a name="container_type"></a>container_type
 
-Typ, který poskytuje základní kontejner, aby ho upravit.
+Typ, který poskytuje přizpůsobení základního kontejneru.
 
 ```cpp
 typedef Container container_type;
@@ -147,17 +147,17 @@ typedef Container container_type;
 
 ### <a name="remarks"></a>Poznámky
 
-Typ je synonymum pro parametr šablony `Container`. Dvě třídy kontejnerů sekvence standardní knihovny C++ – třídy seznamu a výchozí deque – požadavkům má být použit jako základní kontejneru pro objekt fronty. Uživatelem definované typy splňující požadavky může také sloužit.
+Typ je synonymum pro parametr `Container`šablony. Dvě C++ standardní třídy kontejneru sekvence knihovny – Třída list a výchozí třída deque – splňují požadavky, které se mají použít jako základní kontejner pro objekt Queue. Mohou být také použity uživatelsky definované typy splňující požadavky.
 
-Další informace o `Container`, najdete v části poznámky [front třídy](../standard-library/queue-class.md) tématu.
+Další informace o `Container`naleznete v části poznámky v tématu [Třída fronty](../standard-library/queue-class.md) .
 
 ### <a name="example"></a>Příklad
 
-Podívejte se na příklad pro [fronty](#queue) příklad toho, jak deklarace a používání `container_type`.
+Příklad, jak deklarovat [](#queue) a používat `container_type`, naleznete v příkladu pro frontu.
 
-## <a name="empty"></a> prázdný
+## <a name="empty"></a>obsahovat
 
-Testuje, zda je fronta je prázdná.
+Testuje, zda je fronta prázdná.
 
 ```cpp
 bool empty() const;
@@ -165,7 +165,7 @@ bool empty() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-**Hodnota TRUE** Pokud fronta je prázdná. **false** Pokud fronta je prázdný.
+**true** , pokud je fronta prázdná; **false** , pokud je fronta neprázdná.
 
 ### <a name="example"></a>Příklad
 
@@ -201,7 +201,7 @@ The queue q1 is not empty.
 The queue q2 is empty.
 ```
 
-## <a name="front"></a> Přední
+## <a name="front"></a>dopředu
 
 Vrátí odkaz na první prvek na začátku fronty.
 
@@ -217,11 +217,11 @@ První prvek fronty. Pokud je fronta prázdná, návratová hodnota není defino
 
 ### <a name="remarks"></a>Poznámky
 
-Pokud návratová hodnota `front` je přiřazen `const_reference`, nelze upravit objekt fronty. Pokud návratová hodnota `front` je přiřazen `reference`, objekt fronty je možné upravit.
+Pokud `front` je vrácená hodnota přiřazena `const_reference`k, nelze objekt Queue upravit. Pokud `front` je vrácená hodnota přiřazena `reference`k, lze objekt fronty upravit.
 
-Členská funkce vrátí `reference` na první prvek řízené sekvence, která musí být prázdný.
+Členská funkce vrátí `reference` na první prvek řízené sekvence, který nesmí být prázdný.
 
-Při kompilaci pomocí [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md) definováno jako 1 nebo 2, dojde k chybě při pokusu o přístup k prvku v prázdné frontě.  Zobrazit [Checked Iterators](../standard-library/checked-iterators.md) Další informace.
+Při kompilaci pomocí [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md) definovaného jako 1 nebo 2 dojde k chybě za běhu, pokud se pokusíte o přístup k elementu v prázdné frontě.  Další informace najdete v tématu [kontrolované iterátory](../standard-library/checked-iterators.md) .
 
 ### <a name="example"></a>Příklad
 
@@ -253,9 +253,9 @@ int main() {
 }
 ```
 
-## <a name="pop"></a> POP
+## <a name="pop"></a>výstrah
 
-Odebere element ze začátku fronty.
+Odebere prvek z přední části fronty.
 
 ```cpp
 void pop();
@@ -263,7 +263,7 @@ void pop();
 
 ### <a name="remarks"></a>Poznámky
 
-Fronty musí být neprázdné použít členskou funkci. Na začátek fronty je obsazena naposledy přidaný prvek pozice a poslední prvek na konci kontejneru.
+Aby bylo možné použít členskou funkci, musí být fronta neprázdná. Horní část fronty je pozice obsazená naposledy přidaným prvkem a je posledním prvkem na konci kontejneru.
 
 ### <a name="example"></a>Příklad
 
@@ -309,9 +309,9 @@ After a pop the queue length is 2.
 After a pop, the element at the front of the queue is 20.
 ```
 
-## <a name="push"></a> nabízených oznámení
+## <a name="push"></a>replik
 
-Přidá prvek na pozadí do fronty.
+Přidá prvek do pozadí fronty.
 
 ```cpp
 void push(const Type& val);
@@ -319,12 +319,12 @@ void push(const Type& val);
 
 ### <a name="parameters"></a>Parametry
 
-*Val*\
-Prvek přidán na pozadí do fronty.
+*počítává*\
+Prvek byl přidán do pozadí fronty.
 
 ### <a name="remarks"></a>Poznámky
 
-Zpět do fronty je obsazena naposledy přidaný prvek pozice a poslední prvek na konci kontejneru.
+Zadní část fronty je pozice obsazená naposledy přidaným prvkem a je posledním prvkem na konci kontejneru.
 
 ### <a name="example"></a>Příklad
 
@@ -358,9 +358,9 @@ The queue length is 3.
 The element at the front of the queue is 10.
 ```
 
-## <a name="queue"></a> fronty
+## <a name="queue"></a>provedených
 
-Vytvoří frontu, který je prázdný nebo který je kopii základní kontejnerového objektu.
+Vytvoří frontu, která je prázdná nebo je kopií základního objektu kontejneru.
 
 ```cpp
 queue();
@@ -370,12 +370,12 @@ explicit queue(const container_type& right);
 
 ### <a name="parameters"></a>Parametry
 
-*doprava*\
-**Const** kontejneru je vytvořený fronty kopií.
+*Kliknutím*\
+Kontejner **const** , jehož vytvořená fronta bude kopií.
 
 ### <a name="remarks"></a>Poznámky
 
-Výchozí základní kontejner pro frontu je deque. Můžete také zadat seznam jako kontejner základní, ale vektoru, nelze zadat, protože postrádá požadovaný `pop_front` členskou funkci.
+Výchozí základní kontejner pro frontu je deque. Seznam můžete také zadat jako základní kontejner, ale nelze zadat Vector, protože neobsahuje požadovanou `pop_front` členskou funkci.
 
 ### <a name="example"></a>Příklad
 
@@ -425,7 +425,7 @@ The element at the front of queue q5 is 1.
 The element at the back of queue q5 is 2.
 ```
 
-## <a name="size"></a> Velikost
+## <a name="size"></a>hodnota
 
 Vrátí počet prvků ve frontě.
 
@@ -466,9 +466,9 @@ The queue length is 1.
 The queue length is now 2.
 ```
 
-## <a name="size_type"></a> size_type
+## <a name="size_type"></a>size_type
 
-Typ celé číslo bez znaménka představující počet prvků ve frontě.
+Typ unsigned integer, který může představovat počet prvků ve frontě.
 
 ```cpp
 typedef typename Container::size_type size_type;
@@ -476,13 +476,13 @@ typedef typename Container::size_type size_type;
 
 ### <a name="remarks"></a>Poznámky
 
-Typ je synonymum pro `size_type` základní kontejneru přizpůsobené fronty.
+Typ je synonymum pro `size_type` základní kontejner přizpůsobený frontou.
 
 ### <a name="example"></a>Příklad
 
-Podívejte se na příklad pro [queue::front](#front) příklad toho, jak deklarace a používání `size_type`.
+Příklad, jak deklarovat a používat `size_type`, naleznete v příkladu pro [front:: front](#front) .
 
-## <a name="value_type"></a> value_type
+## <a name="value_type"></a>value_type
 
 Typ, který představuje typ objektu uložený jako prvek ve frontě.
 
@@ -492,7 +492,7 @@ typedef typename Container::value_type value_type;
 
 ### <a name="remarks"></a>Poznámky
 
-Typ je synonymum pro `value_type` základní kontejneru přizpůsobené fronty.
+Typ je synonymum pro `value_type` základní kontejner přizpůsobený frontou.
 
 ### <a name="example"></a>Příklad
 
@@ -526,5 +526,5 @@ The element at the front of the queue is 69.
 
 ## <a name="see-also"></a>Viz také:
 
-[Bezpečný přístup z více vláken ve standardní knihovně C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
-[Standardní knihovna C++ – referenční dokumentace](../standard-library/cpp-standard-library-reference.md)<br/>
+[Bezpečnost vlákna ve C++ standardní knihovně](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[Standardní knihovna C++ – referenční dokumentace](../standard-library/cpp-standard-library-reference.md)

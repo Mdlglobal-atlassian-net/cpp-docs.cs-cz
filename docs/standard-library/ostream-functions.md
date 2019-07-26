@@ -1,5 +1,5 @@
 ---
-title: '&lt;ostream&gt; funkce'
+title: '&lt;funkce&gt; ostream'
 ms.date: 11/04/2016
 f1_keywords:
 - ostream/std::swap
@@ -12,25 +12,25 @@ helpviewer_keywords:
 - std::endl [C++]
 - std::ends [C++]
 - std::flush [C++]
-ms.openlocfilehash: fa498f4acbb151eab4321bcddc6af027ee266237
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8d93e46b0323058d93c6d0bd8c1ee566998aef61
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62370985"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68447197"
 ---
-# <a name="ltostreamgt-functions"></a>&lt;ostream&gt; funkce
+# <a name="ltostreamgt-functions"></a>&lt;funkce&gt; ostream
 
-Toto jsou globální šablona funkce definované v &lt;ostream&gt;. Členské funkce, najdete v článku [basic_ostream – třída](basic-ostream-class.md) dokumentaci.
+Jedná se o funkce globálních šablon definované v &lt;ostream&gt;. Pro členské funkce si přečtěte dokumentaci ke [třídě basic_ostream](basic-ostream-class.md) .
 
 ||||
 |-|-|-|
-|[endl](#endl)|[končí](#ends)|[Vyprázdnění](#flush)|
+|[endl](#endl)|[přípon](#ends)|[zaznamenány](#flush)|
 |[swap](#swap)|
 
 ## <a name="endl"></a>endl
 
-Ukončení řádku a vyprázdní vyrovnávací paměť.
+Ukončí řádek a vyprázdní vyrovnávací paměť.
 
 ```cpp
 template class<Elem, Tr>
@@ -40,22 +40,22 @@ basic_ostream<Elem, Tr>& endl(
 
 ### <a name="parameters"></a>Parametry
 
-*Elem*<br/>
+*Elem*\
 Typ elementu.
 
-*Ostr*<br/>
-Objekt typu **basic_ostream –**.
+*Ostr*\
+Objekt typu **basic_ostream**.
 
-*tr*<br/>
+*Recenzent*\
 Vlastnosti znaků.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Objekt typu **basic_ostream –**.
+Objekt typu **basic_ostream**.
 
 ### <a name="remarks"></a>Poznámky
 
-Volání manipulátor *Ostr*.[ Vložit](../standard-library/basic-ostream-class.md#put)(*Ostr*.[ rozšířit](../standard-library/basic-ios-class.md#widen)('\n')) a pak zavolá *Ostr*.[ vyprázdnění](../standard-library/basic-ostream-class.md#flush). Vrátí *Ostr*.
+Manipulátor volá *OSTR*. [Vložit](../standard-library/basic-ostream-class.md#put) (*OSTR*. [rozšířit](../standard-library/basic-ios-class.md#widen) (' \n ')) a potom zavolá *OSTR*. [](../standard-library/basic-ostream-class.md#flush)vyprázdnit. Vrátí *OSTR*.
 
 ### <a name="example"></a>Příklad
 
@@ -87,13 +87,13 @@ basic_ostream<Elem, Tr>& ends(
 
 ### <a name="parameters"></a>Parametry
 
-*Elem*<br/>
+*Elem*\
 Typ elementu.
 
-*Ostr*<br/>
+*Ostr*\
 Objekt typu `basic_ostream`.
 
-*tr*<br/>
+*Recenzent*\
 Vlastnosti znaků.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -102,7 +102,7 @@ Objekt typu `basic_ostream`.
 
 ### <a name="remarks"></a>Poznámky
 
-Volání manipulátor *Ostr*.[ Vložit](../standard-library/basic-ostream-class.md#put)(*Elem*('\0')). Vrátí *Ostr*.
+Manipulátor volá *OSTR*. [Vložit](../standard-library/basic-ostream-class.md#put) (*Elem*(\ 0)). Vrátí *OSTR*.
 
 ### <a name="example"></a>Příklad
 
@@ -136,13 +136,13 @@ basic_ostream<Elem, Tr>& flush(
 
 ### <a name="parameters"></a>Parametry
 
-*Elem*<br/>
+*Elem*\
 Typ elementu.
 
-*Ostr*<br/>
+*Ostr*\
 Objekt typu `basic_ostream`.
 
-*tr*<br/>
+*Recenzent*\
 Vlastnosti znaků.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -151,7 +151,7 @@ Objekt typu `basic_ostream`.
 
 ### <a name="remarks"></a>Poznámky
 
-Volání manipulátor *Ostr*.[ vyprázdnění](../standard-library/basic-ostream-class.md#flush). Vrátí *Ostr*.
+Manipulátor volá *OSTR*. [](../standard-library/basic-ostream-class.md#flush)vyprázdnit. Vrátí *OSTR*.
 
 ### <a name="example"></a>Příklad
 
@@ -173,7 +173,7 @@ testing
 
 ## <a name="swap"></a>swap
 
-Vymění hodnoty dvou `basic_ostream` objekty.
+Vyměňuje hodnoty dvou `basic_ostream` objektů.
 
 ```cpp
 template <class Elem, class Tr>
@@ -184,21 +184,21 @@ void swap(
 
 ### <a name="parameters"></a>Parametry
 
-*Elem*<br/>
+*Elem*\
 Typ elementu.
 
-*tr*<br/>
+*Recenzent*\
 Vlastnosti znaků.
 
-*doleva*<br/>
-Odkaz na lvalue k `basic_ostream` objektu.
+*zbývá*\
+Odkaz l-hodnoty na `basic_ostream` objekt.
 
-*doprava*<br/>
-Odkaz na lvalue k `basic_ostream` objektu.
+*Kliknutím*\
+Odkaz l-hodnoty na `basic_ostream` objekt.
 
 ### <a name="remarks"></a>Poznámky
 
-Funkce šablony `swap` spustí `left.swap(right)`.
+Funkce `swap` šablony se spustí `left.swap(right)`.
 
 ## <a name="see-also"></a>Viz také:
 

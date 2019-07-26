@@ -7,16 +7,16 @@ f1_keywords:
 - chrono/std::chrono::duration_values::min
 - chrono/std::chrono::duration_values::zero
 ms.assetid: 7f66d2e3-1faf-47c3-b47e-08f2a87f20e8
-ms.openlocfilehash: bc382bbc408b11cbc18210f3ab944dda39adc8f2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ba4b202a5c8c6da742ac884bf58a5b8c55373d14
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62413772"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68454293"
 ---
 # <a name="durationvalues-structure"></a>duration_values – struktura
 
-Poskytuje specifické hodnoty pro [doba trvání](../standard-library/duration-class.md) parametr šablony `Rep`.
+Poskytuje konkrétní hodnoty pro parametr [](../standard-library/duration-class.md) `Rep`šablony Duration.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -29,19 +29,19 @@ struct duration_values;
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
-|[max](#max)|Statické. Určuje horní mez pro hodnotu typu `Rep`.|
-|[min](#min)|Statické. Určuje dolní mez pro hodnotu typu `Rep`.|
-|[Nula](#zero)|Statické. Vrátí `Rep(0)`.|
+|[max](#max)|Tras. Určuje horní limit hodnoty typu `Rep`.|
+|[dlouhé](#min)|Tras. Určuje dolní limit hodnoty typu `Rep`.|
+|[vynulujte](#zero)|Tras. Vrátí `Rep(0)`.|
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** \<chrono >
+**Hlavička:** \<Chrono >
 
-**Namespace:** std::chrono
+**Obor názvů:** std:: chrono
 
-## <a name="max"></a>  duration_values::max –
+## <a name="max"></a>duration_values:: max
 
 Statická metoda, která vrátí horní mez pro hodnoty typu `Ref`.
 
@@ -55,9 +55,9 @@ V důsledku toho vrátí `numeric_limits<Rep>::max()`.
 
 ### <a name="remarks"></a>Poznámky
 
-Když `Rep` je uživatelem definovaný typ, vrácená hodnota musí být větší než [duration_values::zero](#zero).
+Když `Rep` je uživatelem definovaný typ, vrácená hodnota musí být větší než [duration_values:: Zero](#zero).
 
-## <a name="min"></a>  duration_values::min –
+## <a name="min"></a>duration_values:: min
 
 Statická metoda, která vrátí dolní mez pro hodnoty typu `Ref`.
 
@@ -71,9 +71,9 @@ V důsledku toho vrátí `numeric_limits<Rep>::lowest()`.
 
 ### <a name="remarks"></a>Poznámky
 
-Když `Rep` je uživatelem definovaný typ, vrácená hodnota musí být menší než nebo rovno [duration_values::zero](#zero).
+Když `Rep` je uživatelem definovaný typ, vrácená hodnota musí být menší nebo rovna [duration_values:: Zero](#zero).
 
-## <a name="zero"></a>  duration_values::Zero
+## <a name="zero"></a>duration_values:: Zero
 
 Vrátí `Rep(0)`.
 
@@ -83,9 +83,9 @@ static constexpr Rep zero();
 
 ### <a name="remarks"></a>Poznámky
 
-Když `Rep` je uživatelem definovaný typ, vrácená hodnota musí představovat aditivní nekonečno.
+Když `Rep` je uživatelem definovaný typ, návratová hodnota musí představovat nekonečno pro doplňkové látky.
 
 ## <a name="see-also"></a>Viz také:
 
-[Odkaz na soubory hlaviček](../standard-library/cpp-standard-library-header-files.md)<br/>
-[\<chrono>](../standard-library/chrono.md)<br/>
+[Odkazy na hlavičkové soubory](../standard-library/cpp-standard-library-header-files.md)\
+[\<chrono>](../standard-library/chrono.md)

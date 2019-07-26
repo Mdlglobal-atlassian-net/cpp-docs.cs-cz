@@ -1,42 +1,34 @@
 ---
 title: '&lt;cuchar&gt;'
-ms.date: 04/04/2019
+ms.date: 07/17/2019
 f1_keywords:
 - <cuchar>
+- cuchar
 helpviewer_keywords:
 - cuchar header
-ms.openlocfilehash: 9fe161d5079aa2fe82dfaef0a483c3a3e600408b
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 004ca23ea86134fb7cd6149015ac31cc51b5a403
+ms.sourcegitcommit: 0867d648e0955ebad7260b5fbebfd6cd4d58f3c7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68267925"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68341054"
 ---
-# <a name="ltcwchargt"></a>&lt;cwchar&gt;
+# <a name="ltcuchargt"></a>&lt;cuchar&gt;
 
-Obsahuje hlavičku knihovny Standard C \<uchar.h > a přidá názvy přidružené k `std` oboru názvů.
+Obsahuje hlavičku \<standardní knihovny jazyka C uchar. h > a přidává přidružené názvy `std` do oboru názvů.
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** \<cuchar >
+**Hlavička:** \<cuchar >
 
-**Namespace:** std
-
-## <a name="member-functions"></a>Členské funkce
-
-|||
-|-|-|
-|[c16rtomb](../standard-library/cuchar-functions.md#c16rtomb)|Žádný popis.|
-|[c32rtomb](../standard-library/cuchar-functions.md#c32rtomb)|Žádný popis.|
-|[mbrtoc16](../standard-library/cuchar-functions.md#mbrtoc16)|Žádný popis.|
-|[mbrtoc32](../standard-library/cuchar-functions.md#mbrtoc32)|Žádný popis.|
+**Obor názvů:** std
 
 ## <a name="remarks"></a>Poznámky
 
-Včetně této hlavičky zajišťuje, že názvy deklarované s vnějším spojením v záhlaví knihovny Standard C jsou deklarovány v `std` oboru názvů.
+Tato hlavička přidá standardní typy `mbstate_t` knihovny jazyka C a `size_t`a funkce [c16rtomb](../c-runtime-library/reference/c16rtomb-c32rtomb1.md), [](../c-runtime-library/reference/c16rtomb-c32rtomb1.md) `std` c32rtomb, [mbrtoc16](../c-runtime-library/reference/mbrtoc16-mbrtoc323.md)a [mbrtoc32](../c-runtime-library/reference/mbrtoc16-mbrtoc323.md) na obor názvů.
 
 ## <a name="see-also"></a>Viz také:
 
-[Odkaz na soubory hlaviček](../standard-library/cpp-standard-library-header-files.md)<br/>
-[Standardní knihovna C++ – přehled](../standard-library/cpp-standard-library-overview.md)<br/>
-[Bezpečný přístup z více vláken ve standardní knihovně C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[Odkazy na hlavičkové soubory](cpp-standard-library-header-files.md)\
+[C++Přehled standardní knihovny](cpp-standard-library-overview.md)\
+[Bezpečnost vlákna ve C++ standardní knihovně](thread-safety-in-the-cpp-standard-library.md)

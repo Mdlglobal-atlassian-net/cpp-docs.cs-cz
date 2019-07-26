@@ -52,16 +52,16 @@ helpviewer_keywords:
 - CArchive [MFC], WriteString
 - CArchive [MFC], m_pDocument
 ms.assetid: 9e950d23-b874-456e-ae4b-fe00781a7699
-ms.openlocfilehash: 8f169964c6a313f37b5ea50a5105af29af7b59b1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3cf5c3b7a79e846928b5a7ee0af12a3324e141a3
+ms.sourcegitcommit: 878a164fe6d550ca81ab87d8425c8d3cd52fe384
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62391319"
+ms.lasthandoff: 07/22/2019
+ms.locfileid: "68376357"
 ---
 # <a name="carchive-class"></a>CArchive – třída
 
-Umožňuje uložit složitou síť objektů v trvalém binárním formátu (obvykle úložiště na disku), který bude zachován po odstranění těchto objektů.
+Umožňuje uložit složitou síť objektů do trvalého binárního formátu (obvykle úložiště na disku), která po odstranění těchto objektů přetrvává.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -73,66 +73,66 @@ class CArchive
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
-|[CArchive::CArchive](#carchive)|Vytvoří `CArchive` objektu.|
+|[CArchive:: CArchive](#carchive)|`CArchive` Vytvoří objekt.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
-|[CArchive::Abort](#abort)|Archiv se zavře bez vyvolání výjimky.|
-|[CArchive::Close](#close)|Vyprázdní nepsaná dat a odpojí od `CFile`.|
-|[CArchive::Flush](#flush)|Vyprázdní nepsaná dat z vyrovnávací paměti archivu.|
-|[CArchive::GetFile](#getfile)|Získá `CFile` ukazatel objektu u tohoto archivu.|
-|[CArchive::GetObjectSchema](#getobjectschema)|Volá se z `Serialize` funkce k určení verze objektu, který je deserializován.|
-|[CArchive::IsBufferEmpty](#isbufferempty)|Určuje, zda vyrovnávací paměť vyprázdnění během Windows Sockets přijímat procesu.|
-|[CArchive::IsLoading](#isloading)|Určuje, zda se načítá archivu.|
-|[CArchive::IsStoring](#isstoring)|Určuje, zda je ukládání archivu.|
-|[CArchive::MapObject](#mapobject)|Umístí objektů v objektu map, který není serializován do souboru, ale které jsou k dispozici pro podobjekty tak, aby odkazovaly.|
-|[CArchive::Read](#read)|Přečte nezpracovaná bajtů.|
-|[CArchive::ReadClass](#readclass)|Čtení odkaz na třídu s dříve uložili `WriteClass`.|
-|[CArchive::ReadObject](#readobject)|Volání objektu `Serialize` funkce pro načtení.|
-|[CArchive::ReadString](#readstring)|Načte jeden řádek textu.|
-|[CArchive::SerializeClass](#serializeclass)|Čtení nebo zápis odkazu na třídu `CArchive` objekt v závislosti na směru `CArchive`.|
-|[CArchive::SetLoadParams](#setloadparams)|Nastaví velikost, ke kterému poli zatížení roste. Musí být volána před načtením libovolného objektu, nebo před `MapObject` nebo `ReadObject` je volána.|
-|[CArchive::SetObjectSchema](#setobjectschema)|Nastaví objekt schématu uloženou v objektu archivu.|
-|[CArchive::SetStoreParams](#setstoreparams)|Nastaví velikost tabulky hash a velikost bloku na mapě používá k identifikaci počet jedinečných objektů: během procesu serializace.|
-|[CArchive::Write](#write)|Zapíše nezpracovaná bajtů.|
-|[CArchive::WriteClass](#writeclass)|Zapíše odkaz na `CRuntimeClass` k `CArchive`.|
-|[CArchive::WriteObject](#writeobject)|Volání objektu `Serialize` funkce pro ukládání.|
-|[CArchive::WriteString](#writestring)|Zapíše jeden řádek textu.|
+|[CArchive:: Abort](#abort)|Zavře archiv bez vyvolání výjimky.|
+|[CArchive:: Close](#close)|Vyprázdní nezapsaná data a odpojí je `CFile`od.|
+|[CArchive:: flush](#flush)|Vyprázdní nezapsaná data z archivní vyrovnávací paměti.|
+|[CArchive:: GetFile](#getfile)|Získá ukazatel `CFile` objektu pro tento archiv.|
+|[CArchive:: GetObjectSchema](#getobjectschema)|Volána z `Serialize` funkce k určení verze objektu, který je deserializován.|
+|[CArchive::IsBufferEmpty](#isbufferempty)|Určuje, zda byla vyrovnávací paměť vyprázdněna během procesu přijímání rozhraní Windows Sockets.|
+|[CArchive:: IsLoaded](#isloading)|Určuje, zda se archiv načítá.|
+|[CArchive:: ukládá se](#isstoring)|Určuje, zda archiv ukládá.|
+|[CArchive:: MapObject](#mapobject)|Umístí objekty do mapy, které nejsou serializovány do souboru, ale jsou k dispozici pro podobjekty, na které se má odkazovat.|
+|[CArchive:: Read](#read)|Přečte nezpracované bajty.|
+|[CArchive:: ReadClass](#readclass)|Přečte odkaz na třídu dříve uložený pomocí `WriteClass`.|
+|[CArchive:: ReadObject](#readobject)|Volá `Serialize` funkci objektu pro načtení.|
+|[CArchive:: ReadString](#readstring)|Přečte jeden řádek textu.|
+|[CArchive:: SerializeClass](#serializeclass)|Přečte nebo zapíše odkaz na třídu `CArchive` do objektu v závislosti na směru. `CArchive`|
+|[CArchive:: SetLoadParams](#setloadparams)|Nastaví velikost, na kterou se pole zatížení zvětšuje. Musí být volána před načtením objektu nebo před `MapObject` `ReadObject` jeho voláním.|
+|[CArchive:: SetObjectSchema](#setobjectschema)|Nastaví schéma objektu uložené v archivním objektu.|
+|[CArchive:: SetStoreParams](#setstoreparams)|Nastaví velikost zatřiďovací tabulky a velikost bloku mapy použitou k identifikaci jedinečných objektů během procesu serializace.|
+|[CArchive:: Write](#write)|Zapisuje nezpracované bajty.|
+|[CArchive:: WriteClass](#writeclass)|Zapíše odkaz `CRuntimeClass` `CArchive`na.|
+|[CArchive:: WriteObject](#writeobject)|Zavolá `Serialize` funkci objektu pro uložení.|
+|[CArchive:: WriteString](#writestring)|Zapíše jeden řádek textu.|
 
 ### <a name="public-operators"></a>Veřejné operátory
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
-|[CArchive::operator &lt;&lt;](#operator_lt_lt)|Ukládá objekty a primitivní typy do archivu.|
-|[CArchive::operator &gt;&gt;](#operator_gt_gt)|Načte objekty a primitivní typy z archivu.|
+|[CArchive:: operator&lt;&lt;](#operator_lt_lt)|Ukládá objekty a primitivní typy do archivu.|
+|[CArchive:: operator&gt;&gt;](#operator_gt_gt)|Načte objekty a primitivní typy z archivu.|
 
 ### <a name="public-data-members"></a>Veřejné datové členy
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CArchive::m_pDocument](#m_pdocument)||
 
 ## <a name="remarks"></a>Poznámky
 
-`CArchive` nemá základní třídu.
+`CArchive`nemá základní třídu.
 
-Objekty můžete později načíst z trvalého úložiště rekonstrukce v paměti. Tento proces vytváření trvalých dat se nazývá "serializace."
+Později můžete načíst objekty z trvalého úložiště, které je retvoří v paměti. Tento proces, který provádí data trvalě, se nazývá "serializace".
 
-Si můžete představit archivu objektu jako druh binárního datového proudu. Archiv jako vstupní/výstupní datový proud, je přidružený k souboru a umožňuje ve vyrovnávací paměti zápis a čtení dat do a z úložiště. Vstupní/výstupní datový proud zpracovává sekvence znaků ASCII, ale archiv zpracovává data binární objekt ve formátu efektivní, nonredundant.
+Archivní objekt si můžete představit jako typ binárního datového proudu. Podobně jako vstupní/výstupní datový proud je archiv přidružen k souboru a povoluje zápis do vyrovnávací paměti a čtení dat do a z úložiště. Vstupní a výstupní datový proud zpracovává sekvence znaků ASCII, ale archiv zpracovává binární data objektů v efektivním, neredundantním formátu.
 
-Je nutné vytvořit [cfile –](../../mfc/reference/cfile-class.md) objektu před vytvořením `CArchive` objektu. Kromě toho musíte zajistit, že stav načtení/uložení archivu je kompatibilní s režim otevření souboru. Platí omezení na jeden aktivní archiv na soubor.
+Objekt [CFile –](../../mfc/reference/cfile-class.md) je nutné vytvořit předtím, než budete moci vytvořit `CArchive` objekt. Kromě toho je nutné zajistit, aby stav zatížení a uložení archivu byl kompatibilní s režimem otevírání souboru. Máte omezené na jednu aktivní archivaci na jeden soubor.
 
-Při sestavování `CArchive` objektu, abyste ho připojili k objektu třídy `CFile` (nebo z odvozené třídy), který představuje otevřený soubor. Můžete také určit, zda archivu se použije pro načítání nebo ukládání. A `CArchive` objekt může zpracovat pouze primitivní typy, ale také objekty [CObject](../../mfc/reference/cobject-class.md)-odvozené třídy pro serializaci. Serializovatelné třídy má obvykle `Serialize` členská funkce a obvykle používá [DECLARE_SERIAL](../../mfc/reference/run-time-object-model-services.md#declare_serial) a [IMPLEMENT_SERIAL](../../mfc/reference/run-time-object-model-services.md#implement_serial) makra, jak je popsáno v části třídy `CObject`.
+Při vytváření `CArchive` objektu ho připojíte k objektu třídy `CFile` (nebo odvozené třídě), která představuje otevřený soubor. Také určete, jestli se má archiv použít k načtení nebo uložení. Objekt může zpracovat nejen primitivní typy, ale také objekty tříd odvozených od CObject, které jsou navrženy pro serializaci. [](../../mfc/reference/cobject-class.md) `CArchive` Serializovatelný třída má `Serialize` obvykle členskou funkci a obvykle používá makra [DECLARE_SERIAL](../../mfc/reference/run-time-object-model-services.md#declare_serial) a [IMPLEMENT_SERIAL](../../mfc/reference/run-time-object-model-services.md#implement_serial) , jak je popsáno v části Class `CObject`.
 
-Přetížená extrakce ( **>>**) a vložení ( **<<**) operátory jsou vhodné archivu programovací rozhraní, které podporují i primitivní typy a `CObject` -odvozené třídy.
+Přetížené operátory pro extrakci **>>** () a vložení **<<** () jsou praktické archivační rozhraní pro programování, které podporuje oba primitivní `CObject`typy i odvozené třídy.
 
-`CArchive` také pro podporu programování pomocí třídy soketů knihovny MFC Windows [csocket –](../../mfc/reference/csocket-class.md) a [csocketfile –](../../mfc/reference/csocketfile-class.md). [IsBufferEmpty](#isbufferempty) členská funkce podporuje určité použití.
+`CArchive`podporuje také programování se třídami MFC Windows Sockets [CSocket –](../../mfc/reference/csocket-class.md) a [CSocketFile](../../mfc/reference/csocketfile-class.md). Členská funkce [IsBufferEmpty](#isbufferempty) podporuje toto využití.
 
-Další informace o `CArchive`, najdete v článcích [serializace](../../mfc/serialization-in-mfc.md) a [rozhraní Windows Sockets: Použití soketů s archivy](../../mfc/windows-sockets-using-sockets-with-archives.md).
+Další informace o `CArchive`naleznete v článku serializace [](../../mfc/serialization-in-mfc.md) a [rozhraní Windows Sockets: Použití soketů s](../../mfc/windows-sockets-using-sockets-with-archives.md)archivy.
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
@@ -140,11 +140,11 @@ Další informace o `CArchive`, najdete v článcích [serializace](../../mfc/se
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** afx.h
+**Záhlaví:** AFX –. h
 
-##  <a name="abort"></a>  CArchive::Abort
+##  <a name="abort"></a>CArchive:: Abort
 
-Voláním této funkce archivu okno zavřít bez vyvolání výjimky.
+Voláním této funkce zavřete archiv bez vyvolání výjimky.
 
 ```
 void Abort ();
@@ -152,19 +152,19 @@ void Abort ();
 
 ### <a name="remarks"></a>Poznámky
 
-`CArchive` – Destruktor se běžně volání `Close`, které se vyprázdní všechna data, která nebyla uložena do přidruženého `CFile` objektu. To může způsobit výjimky.
+Destruktor bude obvykle volat `Close`, čímž se zaprázdní všechna data, která nebyla uložena do přidruženého `CFile` objektu. `CArchive` To může způsobit výjimky.
 
-Při zachytávání těchto výjimek, je vhodné použít `Abort`tak, aby destructing `CArchive` objekt nezpůsobí další výjimky. Při zpracování výjimek, `CArchive::Abort` nebude vyvolání výjimky na chyby, protože se na rozdíl od [CArchive::Close](#close), `Abort` ignoruje chyby.
+Při zachycení těchto výjimek je vhodné použít `Abort`, aby destruktura `CArchive` objektu nezpůsobila další výjimky. Při zpracování výjimek `CArchive::Abort` nebude vyvolána výjimka při selhání, protože na rozdíl od [CArchive:: Close](#close), `Abort` ignoruje selhání.
 
-Pokud jste použili **nové** přidělení `CArchive` objektů na haldě, pak je nutné odstranit až po zavření souboru.
+Pokud jste použili **New** pro přidělení `CArchive` objektu na haldě, je nutné jej po zavření souboru odstranit.
 
 ### <a name="example"></a>Příklad
 
-  Podívejte se na příklad pro [CArchive::WriteClass](#writeclass).
+  Podívejte se na příklad pro [CArchive:: WriteClass](#writeclass).
 
-##  <a name="carchive"></a>  CArchive::CArchive
+##  <a name="carchive"></a>CArchive:: CArchive
 
-Vytvoří `CArchive` objektu a určuje, zda bude možné použít pro načítání nebo ukládání objektů.
+`CArchive` Vytvoří objekt a určí, zda bude použit pro načítání nebo ukládání objektů.
 
 ```
 CArchive(
@@ -177,36 +177,36 @@ CArchive(
 ### <a name="parameters"></a>Parametry
 
 *pFile*<br/>
-Ukazatel `CFile` objekt, který je ultimate zdroji nebo cíli trvalá data.
+Ukazatel na `CFile` objekt, který je konečným zdrojem nebo cílem trvalých dat.
 
 *nMode*<br/>
-Příznak, který určuje, zda se objekty načtené z nebo uložit do archivu. *NMode* parametr musí mít jednu z následujících hodnot:
+Příznak, který určuje, zda budou objekty načteny nebo uloženy do archivu. Parametr *nMode* musí mít jednu z následujících hodnot:
 
-- `CArchive::load` Načte data z archivu. Vyžaduje pouze `CFile` oprávnění ke čtení.
+- `CArchive::load`Načte data z archivu. Vyžaduje pouze `CFile` oprávnění ke čtení.
 
-- `CArchive::store` Ukládá data do archivu. Vyžaduje `CFile` oprávnění k zápisu.
+- `CArchive::store`Ukládá data do archivu. Vyžaduje `CFile` oprávnění k zápisu.
 
-- `CArchive::bNoFlushOnDelete` Brání automaticky volání archivu `Flush` když je volán destruktor archivu. Pokud nastavíte tento příznak, zodpovídáte za explicitně voláním `Close` předtím, než je volán destruktor. Pokud ho nevidíte, bude vaše data poškozena.
+- `CArchive::bNoFlushOnDelete`Zabraňuje automatickému volání `Flush` archivu při volání destruktoru archivu. Pokud jste tento příznak nastavili, zodpovídáte za explicitní `Close` volání před voláním destruktoru. Pokud to neuděláte, vaše data budou poškozena.
 
 *nBufSize*<br/>
-Celé číslo, které určuje velikost vnitřní vyrovnávací paměti souboru, v bajtech. Všimněte si, že je výchozí velikost vyrovnávací paměti 4 096 bajtů. Pokud pravidelně archivovat velkých objektů, pomůže zvýšit výkon, pokud používáte větší velikost vyrovnávací paměti, které je násobkem velikosti vyrovnávací paměti souboru.
+Celé číslo, které určuje velikost vnitřní vyrovnávací paměti souborů (v bajtech). Všimněte si, že výchozí velikost vyrovnávací paměti je 4 096 bajtů. Pokud často archivujete velké objekty, zvýšíte výkon, pokud použijete větší vyrovnávací paměť, která je násobkem velikosti vyrovnávací paměti souborů.
 
 *lpBuf*<br/>
-Volitelné ukazatele do uživatelem zadané vyrovnávací paměti o velikosti *nBufSize*. Pokud tento parametr nezadáte, archivu přidělí vyrovnávací paměť z lokální haldy a uvolní jej při zničení objektu. Archiv neuvolní uživatelem zadané vyrovnávací paměti.
+Volitelný ukazatel na vyrovnávací paměť zadanou uživatelem velikosti *nBufSize*. Pokud tento parametr nezadáte, archiv přidělí vyrovnávací paměť z místní haldy a uvolní ji při zničení objektu. Archiv neuvolňuje vyrovnávací paměť poskytnutou uživatelem.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato specifikace nelze změnit po vytvoření archivu.
+Po vytvoření archivu už tuto specifikaci nemůžete změnit.
 
-Nesmíte používat `CFile` operace mění stav souboru, dokud neukončíte archivu. Tato operace bude poškození integrity archivu. Pozice ukazatele souboru může přístup kdykoli během serializace získáním objektu soubor archivu z [GetFile](#getfile) členské funkce a následným použitím [CFile::GetPosition](../../mfc/reference/cfile-class.md#getposition) – funkce . Měli byste zavolat [CArchive::Flush](#flush) před získávání polohy ukazatele souboru.
+Operace nemůžete `CFile` použít k změně stavu souboru, dokud jste archiv nezavřeli. Každá taková operace bude mít za škodu integritu archivu. K pozici ukazatele souboru můžete přistupovat kdykoli během serializace tím, že získáte objekt souboru archivu z členské funkce GetFile [](#getfile) a potom použijete funkci [CFile –:: GetPosition](../../mfc/reference/cfile-class.md#getposition) . Před získáním pozice ukazatele souboru byste měli zavolat metodu [CArchive:: flush](#flush) .
 
 ### <a name="example"></a>Příklad
 
 [!code-cpp[NVC_MFCSerialization#12](../../mfc/codesnippet/cpp/carchive-class_1.cpp)]
 
-##  <a name="close"></a>  CArchive::Close
+##  <a name="close"></a>CArchive:: Close
 
-Vyprázdní žádná data zbývajících ve vyrovnávací paměti, archivu se zavře a odpojení ze souboru archivu.
+Vyprázdní všechna zbývající data ve vyrovnávací paměti, zavře archiv a odpojí archiv ze souboru.
 
 ```
 void Close();
@@ -214,17 +214,17 @@ void Close();
 
 ### <a name="remarks"></a>Poznámky
 
-Nejsou povoleny žádné další operace v archivu. Po zavření archiv, můžete vytvořit jiný archivu pro stejný soubor nebo můžete zavřít soubor.
+V archivu nejsou povoleny žádné další operace. Po zavření archivu můžete vytvořit další archiv pro stejný soubor nebo můžete soubor zavřít.
 
-Členská funkce `Close` zajistí, že všechna data se přenáší z archivu do souboru a jeho znepřístupní archivu. K dokončení přenosu ze souboru na paměťové médium, musíte nejprve použít [CFile::Close](../../mfc/reference/cfile-class.md#close) a pak zničilo `CFile` objektu.
+Členská funkce `Close` zajistí, že všechna data budou přenesena z archivu do souboru a nebude tak k dispozici archiv. Chcete-li dokončit přenos ze souboru na médium úložiště, je nutné nejprve použít [CFile –:: Close](../../mfc/reference/cfile-class.md#close) a potom zničit `CFile` objekt.
 
 ### <a name="example"></a>Příklad
 
-  Podívejte se na příklad pro [CArchive::WriteString](#writestring).
+  Podívejte se na příklad pro [CArchive:: WriteString](#writestring).
 
-##  <a name="flush"></a>  CArchive::Flush
+##  <a name="flush"></a>CArchive:: flush
 
-Vynutí žádná data zbývajících ve vyrovnávací paměti archiv k zápisu do souboru.
+Vynutí zápis všech dat zbývajících ve vyrovnávací paměti archivu do souboru.
 
 ```
 void Flush();
@@ -232,15 +232,15 @@ void Flush();
 
 ### <a name="remarks"></a>Poznámky
 
-Členská funkce `Flush` zajistí, že všechna data se přenáší z archivu do souboru. Je nutné volat [CFile::Close](../../mfc/reference/cfile-class.md#close) dokončit přenos ze souboru k paměťovému médiu.
+Členská funkce `Flush` zajišťuje, že všechna data budou přenesena z archivu do souboru. Chcete-li dokončit přenos ze souboru na médium úložiště, je nutné zavolat [CFile –:: Close](../../mfc/reference/cfile-class.md#close) .
 
 ### <a name="example"></a>Příklad
 
 [!code-cpp[NVC_MFCSerialization#13](../../mfc/codesnippet/cpp/carchive-class_2.cpp)]
 
-##  <a name="getfile"></a>  CArchive::GetFile
+##  <a name="getfile"></a>CArchive:: GetFile
 
-Získá `CFile` ukazatel objektu u tohoto archivu.
+Získá ukazatel `CFile` objektu pro tento archiv.
 
 ```
 CFile* GetFile() const;
@@ -248,19 +248,19 @@ CFile* GetFile() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Konstantní ukazatel `CFile` objektu používá.
+Konstantní ukazatel na `CFile` objekt, který se používá.
 
 ### <a name="remarks"></a>Poznámky
 
-Archiv před použitím musí vyprázdnění `GetFile`.
+Před použitím `GetFile`je nutné archiv vyprázdnit.
 
 ### <a name="example"></a>Příklad
 
 [!code-cpp[NVC_MFCSerialization#14](../../mfc/codesnippet/cpp/carchive-class_3.cpp)]
 
-##  <a name="getobjectschema"></a>  CArchive::GetObjectSchema
+##  <a name="getobjectschema"></a>CArchive:: GetObjectSchema
 
-Voláním této funkce z `Serialize` funkce k určení verze objektu, který je aktuálně deserializován.
+Voláním této funkce z `Serialize` funkce určete verzi objektu, který je právě deserializován.
 
 ```
 UINT GetObjectSchema();
@@ -268,21 +268,21 @@ UINT GetObjectSchema();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Během deserializace, verze objektu, který je čten.
+Během deserializace je načtená verze objektu.
 
 ### <a name="remarks"></a>Poznámky
 
-Volání této funkce je platná pouze při `CArchive` načítání objektu ( [CArchive::IsLoading](#isloading) vrátí nenulovou hodnotu). Měla by být v prvním volání `Serialize` funkce a volané jen jednou. Návratová hodnota (UINT) -1 označuje, že číslo verze neznámý.
+Volání této funkce je platné pouze v případě `CArchive` , že je objekt načítán ( [CArchive:: Overloads](#isloading) vrátí nenulovou hodnotu). Mělo by se jednat o první volání `Serialize` funkce a volá se jenom jednou. Návratová hodnota (UINT) – 1 označuje, že číslo verze je neznámé.
 
-A `CObject`-odvozené třídy mohou používat kombinaci VERSIONABLE_SCHEMA (bitovým operátorem pomocí **nebo**) s verzí schématu (v IMPLEMENT_SERIAL – makro) k vytvoření "verzování objektu," to znamená, že objekt jehož `Serialize` Členská funkce může číst více verzí. Výchozí funkce framework (bez VERSIONABLE_SCHEMA) je vyvolání výjimky, když se neshoduje verze.
+Třída odvozená od třídy může používat VERSIONABLE_SCHEMA kombinovaných (pomocí bitových **nebo**) se samotnou verzí schématu (v makru IMPLEMENT_SERIAL) k vytvoření "objektu s možnostmi správy", který je `Serialize` objektem, jehož členská funkce může číst. `CObject` více verzí. Výchozí funkce architektury (bez VERSIONABLE_SCHEMA) je vyvolat výjimku, pokud se verze neshoduje.
 
 ### <a name="example"></a>Příklad
 
 [!code-cpp[NVC_MFCSerialization#15](../../mfc/codesnippet/cpp/carchive-class_4.cpp)]
 
-##  <a name="isbufferempty"></a>  CArchive::IsBufferEmpty
+##  <a name="isbufferempty"></a>CArchive:: IsBufferEmpty
 
-Voláním této členské funkce k určení, zda objekt archivu vnitřní vyrovnávací paměť je prázdná.
+Voláním této členské funkce určíte, zda je vnitřní vyrovnávací paměť objektu archivu prázdná.
 
 ```
 BOOL IsBufferEmpty() const;
@@ -290,19 +290,19 @@ BOOL IsBufferEmpty() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Nenulové, pokud vyrovnávací paměť archivu je prázdná. jinak 0.
+Nenulové, pokud je vyrovnávací paměť archivu prázdná; v opačném případě 0.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato funkce je zadaný pro podporu programování pomocí třídy soketů knihovny MFC Windows `CSocketFile`. Není potřeba ho použít pro archiv přidružené `CFile` objektu.
+Tato funkce je poskytována pro podporu programování pomocí třídy `CSocketFile`MFC rozhraní Windows Sockets. Nemusíte ho používat pro archiv přidružený `CFile` k objektu.
 
-Důvod pro použití `IsBufferEmpty` s archiv přidružené `CSocketFile` objektu je, že archivu vyrovnávací paměti může obsahovat více než jeden záznam nebo zprávy. Po přijetí zpráv, byste měli použít `IsBufferEmpty` pro řízení smyčky, který se bude přijímat data, dokud vyrovnávací paměť je prázdná. Další informace najdete v tématu [Receive](../../mfc/reference/casyncsocket-class.md#receive) členské funkce třídy `CAsyncSocket`, který ukazuje způsob použití `IsBufferEmpty`.
+Důvodem použití `IsBufferEmpty` s archivem přidruženým `CSocketFile` k objektu je, že vyrovnávací paměť archivu může obsahovat více než jednu zprávu nebo záznam. Po přijetí jedné zprávy byste měli použít `IsBufferEmpty` k řízení smyčky, která bude nadále přijímat data, dokud není vyrovnávací paměť prázdná. Další informace naleznete v tématu funkce [Receive](../../mfc/reference/casyncsocket-class.md#receive) member třídy `CAsyncSocket`, která ukazuje, jak použít `IsBufferEmpty`.
 
-Další informace najdete v tématu [rozhraní Windows Sockets: Použití soketů s archivy](../../mfc/windows-sockets-using-sockets-with-archives.md).
+Další informace najdete v tématu [Windows Sockets: Použití soketů s](../../mfc/windows-sockets-using-sockets-with-archives.md)archivy.
 
-##  <a name="isloading"></a>  CArchive::IsLoading
+##  <a name="isloading"></a>CArchive:: IsLoaded
 
-Určuje, zda archivu načítá data.
+Určuje, zda archiv načítá data.
 
 ```
 BOOL IsLoading() const;
@@ -310,19 +310,19 @@ BOOL IsLoading() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Nenulové, pokud archiv se aktuálně používá pro načítání; jinak 0.
+Nenulové, pokud se archiv aktuálně používá pro načítání; v opačném případě 0.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato členská funkce je volána `Serialize` funkce archivované tříd.
+Tato členská funkce je volána `Serialize` funkcemi archivovaných tříd.
 
 ### <a name="example"></a>Příklad
 
 [!code-cpp[NVC_MFCSerialization#16](../../mfc/codesnippet/cpp/carchive-class_5.cpp)]
 
-##  <a name="isstoring"></a>  CArchive::IsStoring
+##  <a name="isstoring"></a>CArchive:: ukládá se
 
-Určuje, zda archivu je ukládat data.
+Určuje, zda archiv ukládá data.
 
 ```
 BOOL IsStoring() const;
@@ -330,21 +330,21 @@ BOOL IsStoring() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Nenulové, pokud archiv se aktuálně používá pro ukládání; jinak 0.
+Nenulové, pokud se archiv aktuálně používá k ukládání; v opačném případě 0.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato členská funkce je volána `Serialize` funkce archivované tříd.
+Tato členská funkce je volána `Serialize` funkcemi archivovaných tříd.
 
-Pokud `IsStoring` stav archivu je nenulovou hodnotu, pak jeho `IsLoading` stav je 0 a naopak.
+Pokud je `IsLoading` stav archivu nenulová, je jeho stav 0 a naopak. `IsStoring`
 
 ### <a name="example"></a>Příklad
 
 [!code-cpp[NVC_MFCSerialization#17](../../mfc/codesnippet/cpp/carchive-class_6.cpp)]
 
-##  <a name="mapobject"></a>  CArchive::MapObject
+##  <a name="mapobject"></a>CArchive:: MapObject
 
-Voláním této členské funkce umisťuje objekty na mapě, které nejsou ve skutečnosti serializován do souboru, ale které jsou k dispozici pro podobjekty tak, aby odkazovaly.
+Zavolejte tuto členskou funkci pro umístění objektů do mapy, které nejsou ve skutečnosti serializovány do souboru, ale jsou k dispozici pro podobjekty k referenci.
 
 ```
 void MapObject(const CObject* pOb);
@@ -353,13 +353,13 @@ void MapObject(const CObject* pOb);
 ### <a name="parameters"></a>Parametry
 
 *pOb*<br/>
-Konstantní ukazatel na objekt uložené.
+Konstantní ukazatel na objekt, který se ukládá.
 
 ### <a name="remarks"></a>Poznámky
 
-Například nemusí serializovat dokumentu, ale by serializovat položky, které jsou součástí dokumentu. Voláním `MapObject`, umožňují tyto položky nebo podobjektů, tak, aby odkazovaly dokument. Navíc může serializovat serializovaná podpoložek jejich *m_pDocument* zpětný ukazatel.
+Například nemůžete serializovat dokument, ale měli byste serializovat položky, které jsou součástí dokumentu. Voláním `MapObject`povolíte tyto položky nebo podobjektům odkaz na dokument. Serializované podpoložky také mohou serializovat svůj ukazatel *m_pDocument* zpátky.
 
-Můžete volat `MapObject` při ukládání do a načtení z `CArchive` objektu. `MapObject` Přidá zadaný objekt do interních datových struktur udržuje `CArchive` objektu během serializace a deserializace, ale na rozdíl od [se operace ReadObject](#readobject) a [operace WriteObject](#writeobject), nevolá serializace objektu.
+Můžete zavolat `MapObject` při ukládání do a načítání `CArchive` z objektu. `MapObject`Přidá zadaný objekt do vnitřních datových struktur udržovaných `CArchive` objektem během serializace a deserializace, ale na rozdíl od [ReadObject](#readobject) a [WriteObject](#writeobject)nevolá serializaci objektu.
 
 ### <a name="example"></a>Příklad
 
@@ -373,7 +373,7 @@ Můžete volat `MapObject` při ukládání do a načtení z `CArchive` objektu.
 
 ##  <a name="m_pdocument"></a>  CArchive::m_pDocument
 
-Nastavit na hodnotu NULL ve výchozím nastavení tento ukazatel `CDocument` lze nastavit k ničemu uživatele `CArchive` instance potřebuje.
+Ve výchozím nastavení nastavte na hodnotu null. Tento ukazatel `CDocument` na může být nastaven na cokoli, co uživatel `CArchive` instance chce.
 
 ```
 CDocument* m_pDocument;
@@ -381,17 +381,17 @@ CDocument* m_pDocument;
 
 ### <a name="remarks"></a>Poznámky
 
-Běžné použití ukazatele this je k předání dalších informací o procesu serializace pro všechny objekty serializována. To se provádí inicializace ukazatele s dokumentem ( `CDocument`-odvozené třídy), který probíhá serializace, tak, že objekty v rámci dokumentu můžete přístup k dokumentu v případě potřeby. This – ukazatel také používá `COleClientItem` objekty během serializace.
+Běžným použitím tohoto ukazatele je předat dodatečné informace o procesu serializace všem serializovaným objektům. Toho je dosaženo inicializací ukazatele s dokumentem ( `CDocument`odvozenou třídou), která je serializována tak, že objekty v dokumentu budou mít v případě potřeby přístup k dokumentu. Tento ukazatel je používán `COleClientItem` také objekty během serializace.
 
-Nastaví framework *m_pDocument* v dokumentu se serializovat, když uživatel vydá soubor otevřít nebo uložit příkazu. Pokud serializujete propojování a vkládání (OLE) kontejneru dokumentu jiných důvodů než otevřít nebo uložit, je nutné explicitně nastavit *m_pDocument*. Například je třeba provést při serializaci dokumentu kontejneru do schránky.
+Rozhraní nastaví *m_pDocument* na serializovaný dokument, když uživatel vydá příkaz k otevření nebo uložení souboru. Pokud jste serializováni dokument kontejneru Linking and Embeddinging (OLE) pro jiné důvody než soubor otevřít nebo uložit, musíte explicitně nastavit *m_pDocument*. To můžete provést například při serializaci dokumentu kontejneru do schránky.
 
 ### <a name="example"></a>Příklad
 
 [!code-cpp[NVC_MFCSerialization#35](../../mfc/codesnippet/cpp/carchive-class_11.cpp)]
 
-##  <a name="operator_lt_lt"></a>  CArchive::operator &lt;&lt;
+##  <a name="operator_lt_lt"></a>CArchive:: operator&lt;&lt;
 
-Uloží zadaný objekt nebo primitivní typ archivu.
+Ukládá do archivu zadaný objekt nebo primitivní typ.
 
 ```
 friend CArchive& operator<<(
@@ -437,29 +437,29 @@ CArchive& operator<<(LONGLONG dwdw);
 
 ### <a name="return-value"></a>Návratová hodnota
 
-A `CArchive` odkaz, který umožňuje více operátorů insertion na jednom řádku.
+`CArchive` Odkaz, který umožňuje více operátorů vkládání na jednom řádku.
 
 ### <a name="remarks"></a>Poznámky
 
-Poslední dvě verze výše jsou speciálně pro ukládání 64bitová celá čísla.
+Poslední dvě verze jsou určené konkrétně pro ukládání 64 celých čísel.
 
-Pokud jste použili IMPLEMENT_SERIAL – makro v implementaci třídy, je přetížený operátor vkládání pro `CObject` zavolá chráněné `WriteObject`. Tato funkce volá `Serialize` funkce třídy.
+Pokud jste v implementaci třídy použili makro IMPLEMENT_SERIAL, operátor vložení je přetížen pro `CObject` volání Protected. `WriteObject` Tato funkce zase volá `Serialize` funkci třídy.
 
-[CStringT](../../atl-mfc-shared/reference/cstringt-class.md) operátor vkládání (<<) podporuje diagnostiku vypsání a ukládání do archivu.
+Operátor [](../../atl-mfc-shared/reference/cstringt-class.md) vložení CStringT (< <) podporuje diagnostický dumping a ukládání do archivu.
 
 ### <a name="example"></a>Příklad
 
-Tento příklad ukazuje použití `CArchive` operátor vkládání << s **int** a **dlouhé** typy.
+Tento příklad ukazuje použití `CArchive` operátoru vložení < < s typy **int** a **Long** .
 
 [!code-cpp[NVC_MFCSerialization#31](../../mfc/codesnippet/cpp/carchive-class_12.cpp)]
 
 ### <a name="example"></a>Příklad
 
-V tomto příkladu 2 ukazuje použití `CArchive` operátor vkládání << s `CStringT` typu.
+Tento příklad 2 ukazuje použití `CArchive` operátoru vložení < < `CStringT` s typem.
 
 [!code-cpp[NVC_MFCSerialization#32](../../mfc/codesnippet/cpp/carchive-class_13.cpp)]
 
-##  <a name="operator_gt_gt"></a>  CArchive::operator &gt;&gt;
+##  <a name="operator_gt_gt"></a>CArchive:: operator&gt;&gt;
 
 Načte zadaný objekt nebo primitivní typ z archivu.
 
@@ -517,29 +517,29 @@ CArchive& operator>>(LONGLONG& dwdw);
 
 ### <a name="return-value"></a>Návratová hodnota
 
-A `CArchive` odkaz, který umožňuje více operátorů extrakce na jednom řádku.
+`CArchive` Odkaz, který umožňuje více operátorů extrakce na jednom řádku.
 
 ### <a name="remarks"></a>Poznámky
 
-Poslední dvě verze výše jsou speciálně pro načítání 64bitová celá čísla.
+Poslední dvě verze jsou určené konkrétně pro načítání 64 celých čísel.
 
-Pokud jste použili IMPLEMENT_SERIAL – makro v implementaci třídy, pak přetížení operátorů extrakce pro `CObject` volat rozhraní `ReadObject` – funkce (s nenulovou run-time třída ukazatele). Tato funkce volá `Serialize` funkce třídy.
+Pokud jste použili makro IMPLEMENT_SERIAL v implementaci vaší třídy, pak rozhraní extrakce přetížené pro `CObject` volání chráněné `ReadObject` funkce (s nenulovým ukazatelem třídy run-time). Tato funkce zase volá `Serialize` funkci třídy.
 
-[CStringT](../../atl-mfc-shared/reference/cstringt-class.md) extrakce – operátor (>>) podporuje načítání z archivu.
+Operátor [](../../atl-mfc-shared/reference/cstringt-class.md) extrakce CStringT (> >) podporuje načítání z archivu.
 
 ### <a name="example"></a>Příklad
 
-Tento příklad ukazuje použití `CArchive` extrakce operátor >> s **int** typu.
+Tento příklad ukazuje použití `CArchive` operátoru extrakce > > s typem **int** .
 
 [!code-cpp[NVC_MFCSerialization#33](../../mfc/codesnippet/cpp/carchive-class_14.cpp)]
 
 ### <a name="example"></a>Příklad
 
-Tento příklad ukazuje použití `CArchive` vkládání a extrakci operátory <\< a >> s `CStringT` typu.
+Tento příklad ukazuje použití `CArchive` operátorů vložení a extrakce <\< `CStringT` a > > s typem.
 
 [!code-cpp[NVC_MFCSerialization#34](../../mfc/codesnippet/cpp/carchive-class_15.cpp)]
 
-##  <a name="read"></a>  CArchive::Read
+##  <a name="read"></a>CArchive:: Read
 
 Přečte zadaný počet bajtů z archivu.
 
@@ -550,28 +550,28 @@ UINT Read(void* lpBuf, UINT nMax);
 ### <a name="parameters"></a>Parametry
 
 *lpBuf*<br/>
-Ukazatel do vyrovnávací paměti, uživatelem zadané, která se zobrazí data načtená z archivu.
+Ukazatel na vyrovnávací paměť zadanou uživatelem, která přijímá data načtená z archivu.
 
-*nMax*<br/>
-Celé číslo bez znaménka určující počet bajtů ke čtení z archivu.
+*Nmaximum*<br/>
+Unsigned integer určující počet bajtů, které mají být načteny z archivu.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Celé číslo bez znaménka obsahující počet skutečně přečtených bajtů. Pokud vrácená hodnota je menší než požadovaný, bylo dosaženo konce souboru. Ve stavu ukončení souboru není vyvolána žádná výjimka.
+Unsigned integer obsahující počet bajtů, které jsou ve skutečnosti čteny. Pokud je vrácená hodnota menší než požadované číslo, bylo dosaženo konce souboru. V podmínce konec souboru není vyvolána žádná výjimka.
 
 ### <a name="remarks"></a>Poznámky
 
-Archiv neinterpretuje bajtů.
+Archiv neinterpretuje bajty.
 
-Můžete použít `Read` členské funkce v rámci vaší `Serialize` funkce pro běžný struktury, které jsou obsaženy v objekty pro čtení.
+Můžete použít `Read` členskou funkci v rámci své `Serialize` funkce pro čtení běžných struktur, které jsou obsaženy ve vašich objektech.
 
 ### <a name="example"></a>Příklad
 
 [!code-cpp[NVC_MFCSerialization#24](../../mfc/codesnippet/cpp/carchive-class_16.cpp)]
 
-##  <a name="readclass"></a>  CArchive::ReadClass
+##  <a name="readclass"></a>CArchive:: ReadClass
 
-Voláním této členské funkce získat odkaz na třídu s dříve uložené [WriteClass](#writeclass).
+Volejte tuto členskou funkci pro čtení odkazu na třídu dříve uloženou pomocí [WriteClass](#writeclass).
 
 ```
 CRuntimeClass* ReadClass(
@@ -583,33 +583,33 @@ CRuntimeClass* ReadClass(
 ### <a name="parameters"></a>Parametry
 
 *pClassRefRequested*<br/>
-Ukazatel [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) struktura, která odpovídá odkazech na třídy rozhraní požadované. Může mít hodnotu NULL.
+Ukazatel na strukturu [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) , která odpovídá požadovanému odkazu na třídu. Může mít hodnotu NULL.
 
 *pSchema*<br/>
-Ukazatel na schéma run-time třída dříve uložena.
+Ukazatel na schéma běhové třídy, která byla dříve uložena.
 
 *pObTag*<br/>
-Číslo, které odkazuje na jedinečné značka objektu. Interně jej využívá provádění [se operace ReadObject](#readobject). Vystavené pro rozšířené programování. *pObTag* obvykle by měl mít hodnotu NULL.
+Číslo, které odkazuje na jedinečnou značku objektu. Používá se interně implementací [ReadObject](#readobject). Vystaveno pouze pro pokročilé programování; *pObTag* by normálně měla mít hodnotu null.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Ukazatel [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) struktury.
+Ukazatel na strukturu [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) .
 
 ### <a name="remarks"></a>Poznámky
 
-Pokud *pClassRefRequested* nemá hodnotu NULL, `ReadClass` ověří, jestli je kompatibilní s vaší třídy modulu runtime třídy archivované informace. Pokud není kompatibilní, `ReadClass` vyvolá výjimku [carchiveexception –](../../mfc/reference/carchiveexception-class.md).
+Pokud *pClassRefRequested* není null, `ReadClass` ověří, že informace o archivovaných třídách jsou kompatibilní s vaší třídou prostředí Runtime. Pokud není kompatibilní, `ReadClass` vyvolá výjimku [CArchiveException](../../mfc/reference/carchiveexception-class.md).
 
-Musíte použít modul runtime třídu [DECLARE_SERIAL](../../mfc/reference/run-time-object-model-services.md#declare_serial) a [IMPLEMENT_SERIAL](../../mfc/reference/run-time-object-model-services.md#implement_serial); v opačném případě `ReadClass` vyvolá výjimku [cnotsupportedexception –](../../mfc/reference/cnotsupportedexception-class.md).
+Třída runtime musí používat [DECLARE_SERIAL](../../mfc/reference/run-time-object-model-services.md#declare_serial) a [IMPLEMENT_SERIAL](../../mfc/reference/run-time-object-model-services.md#implement_serial); v opačném případě vyvolá výjimku [CNotSupportedException.](../../mfc/reference/cnotsupportedexception-class.md) `ReadClass`
 
-Pokud *pSchema* má hodnotu NULL, schématem uložené třídy může být načten voláním [CArchive::GetObjectSchema](#getobjectschema); v opačném případě <strong>\*</strong>  *pSchema* bude obsahovat schéma run-time třída, která byla dřív uložená.
+Pokud má *pSchema* hodnotu null, schéma uložené třídy lze načíst voláním [CArchive:: GetObjectSchema](#getobjectschema); v opačném případě pSchema bude obsahovat schéma běhové třídy, která byla dříve uložena.  <strong>\*</strong>
 
-Můžete použít [SerializeClass](#serializeclass) místo `ReadClass`, která zpracovává čtení i zápis odkazech na třídy rozhraní.
+Můžete použít [SerializeClass](#serializeclass) namísto `ReadClass`, který zpracovává čtení i zápis odkazu na třídu.
 
 ### <a name="example"></a>Příklad
 
-  Podívejte se na příklad pro [CArchive::WriteClass](#writeclass).
+  Podívejte se na příklad pro [CArchive:: WriteClass](#writeclass).
 
-##  <a name="readobject"></a>  CArchive::ReadObject
+##  <a name="readobject"></a>CArchive:: ReadObject
 
 Přečte data objektu z archivu a vytvoří objekt příslušného typu.
 
@@ -620,25 +620,25 @@ CObject* ReadObject(const CRuntimeClass* pClass);
 ### <a name="parameters"></a>Parametry
 
 *pClass*<br/>
-Konstantní ukazatel [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) struktura, která odpovídá objektu očekáváte, že ke čtení.
+Konstantní ukazatel na strukturu [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) , která odpovídá objektu, který očekáváte ke čtení.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-A [CObject](../../mfc/reference/cobject-class.md) ukazatel, který musí být bezpečné přetypovat na správné odvozené třídy pomocí [CObject::IsKindOf](../../mfc/reference/cobject-class.md#iskindof).
+Ukazatel [CObject](../../mfc/reference/cobject-class.md) , který musí být bezpečně převeden na správnou odvozenou třídu pomocí [CObject:: IsKindOf](../../mfc/reference/cobject-class.md#iskindof).
 
 ### <a name="remarks"></a>Poznámky
 
-Tato funkce je obvykle volána `CArchive` extrakce ( **>>**) operátor přetížen pro [CObject](../../mfc/reference/cobject-class.md) ukazatele. `ReadObject`, volá `Serialize` funkce archivované třídy.
+Tato funkce je obvykle volána `CArchive` operátorem extrakce ( **>>** ) přetíženým pro ukazatel [CObject](../../mfc/reference/cobject-class.md) . `ReadObject`pak volá `Serialize` funkci archivní třídy.
 
-Pokud zadáte nenulovou hodnotu *pClass* parametr, který byl získán [RUNTIME_CLASS](../../mfc/reference/run-time-object-model-services.md#runtime_class) – makro, pak funkce ověří run-time třída archivovaného objektu. Předpokladem je, že jste použili IMPLEMENT_SERIAL – makro v implementaci třídy.
+Pokud zadáte nenulový parametr *pClass* , který je získán pomocí makra [RUNTIME_CLASS](../../mfc/reference/run-time-object-model-services.md#runtime_class) , funkce ověří třídu run-time archivovaného objektu. To předpokládá, že jste v implementaci třídy použili makro IMPLEMENT_SERIAL.
 
 ### <a name="example"></a>Příklad
 
-  Podívejte se na příklad pro [CArchive::WriteObject](#writeobject).
+  Podívejte se na příklad pro [CArchive:: WriteObject](#writeobject).
 
-##  <a name="readstring"></a>  CArchive::ReadString
+##  <a name="readstring"></a>CArchive:: ReadString
 
-Voláním této členské funkce ke čtení textových dat do vyrovnávací paměti ze souboru spojené s `CArchive` objektu.
+Zavolejte tuto členskou funkci pro čtení textových dat do vyrovnávací paměti ze souboru přidruženého k `CArchive` objektu.
 
 ```
 BOOL ReadString(CString& rString);
@@ -648,33 +648,33 @@ LPTSTR ReadString(LPTSTR lpsz, UINT nMax);
 ### <a name="parameters"></a>Parametry
 
 *rString*<br/>
-Odkaz na [CString](../../atl-mfc-shared/reference/cstringt-class.md) poté, co je pro čtení ze souboru přidružená k objektu CArchive, která bude obsahovat výsledný řetězec.
+Odkaz na [CString](../../atl-mfc-shared/reference/cstringt-class.md) , který bude obsahovat výsledný řetězec poté, co je načten ze souboru přidruženého k objektu CArchive.
 
 *lpsz*<br/>
-Určuje ukazatel do vyrovnávací paměti, zadané uživatele, který bude příjemcem řetězec zakončený hodnotou null text.
+Určuje ukazatel na vyrovnávací paměť zadanou uživatelem, která bude přijímat textový řetězec zakončený hodnotou null.
 
-*nMax*<br/>
-Určuje maximální počet znaků pro čtení. By měl být menší než velikost *lpsz* vyrovnávací paměti.
+*Nmaximum*<br/>
+Určuje maximální počet znaků, které mají být čteny. Hodnota by měla být menší než velikost vyrovnávací paměti *lpsz* .
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Ve verzi, která vrací hodnotu TRUE v případě úspěchu; BOOL FALSE v opačném případě.
+Ve verzi, která vrací BOOL, TRUE v případě úspěchu; V opačném případě NEPRAVDA.
 
-Ve verzi, která se vrátí `LPTSTR`, ukazatel do vyrovnávací paměti obsahující textových dat; Hodnota NULL, pokud bylo dosaženo souboru.
+Ve verzi, která vrací `LPTSTR`, ukazatel na vyrovnávací paměť obsahující textová data; Hodnota NULL, pokud bylo dosaženo konce souboru.
 
 ### <a name="remarks"></a>Poznámky
 
-Ve verzi členská funkce se *Nmaximum* parametr, vyrovnávací paměti, když bude vyřizovat k omezení *Nmaximum* – 1 znaků. Čtení zastavena pár návratový znak odřádkování návrat na začátek řádku. Koncové znaky nového řádku jsou vždy odebrat. V obou případech je připojen znak null ('\0').
+Ve verzi členské funkce s parametrem *nmaximum* bude vyrovnávací paměť obsahovat limit *nmaximum* -1 znaků. Čtení je zastaveno dvojicí kanálu návratového řádku. Koncové znaky nového řádku jsou vždy odebrány. Znak null (' \ 0 ') je připojen v obou případech.
 
-[CArchive::Read](#read) je k dispozici také pro režim textové zadání, ale neukončí na pár návratový znak odřádkování návrat na začátek řádku.
+[CArchive:: Read](#read) je také k dispozici pro vstup v textovém režimu, ale nekončí dvojicí kanálu návratového řádku.
 
 ### <a name="example"></a>Příklad
 
-  Podívejte se na příklad pro [CArchive::WriteString](#writestring).
+  Podívejte se na příklad pro [CArchive:: WriteString](#writestring).
 
-##  <a name="serializeclass"></a>  CArchive::SerializeClass
+##  <a name="serializeclass"></a>CArchive:: SerializeClass
 
-Voláním této členské funkce, pokud chcete uložit a načíst informace o verzi základní třídy.
+Tuto členskou funkci volejte, pokud chcete uložit a načíst informace o verzi základní třídy.
 
 ```
 void SerializeClass(const CRuntimeClass* pClassRef);
@@ -683,25 +683,25 @@ void SerializeClass(const CRuntimeClass* pClassRef);
 ### <a name="parameters"></a>Parametry
 
 *pClassRef*<br/>
-Ukazatel na objekt třídy za běhu pro základní třídu.
+Ukazatel na objekt běhové třídy pro základní třídu.
 
 ### <a name="remarks"></a>Poznámky
 
-`SerializeClass` čtení nebo zápis odkaz na třídu `CArchive` objekt, v závislosti na směru `CArchive`. Použití `SerializeClass` místo [ReadClass](#readclass) a [WriteClass](#writeclass) jako pohodlný způsob, jak serializovat objekty základní třídy. `SerializeClass` vyžaduje méně kódu a méně parametrů.
+`SerializeClass`přečte nebo zapíše odkaz na třídu do `CArchive` objektu v závislosti na směru. `CArchive` Používejte `SerializeClass` místo [ReadClass](#readclass) a [WriteClass](#writeclass) jako pohodlný způsob, jak serializovat objekty základní třídy; `SerializeClass` vyžaduje méně kódu a méně parametrů.
 
-Stejně jako `ReadClass`, `SerializeClass` ověří, jestli je kompatibilní s vaší třídy modulu runtime třídy archivované informace. Pokud není kompatibilní, `SerializeClass` vyvolá výjimku [carchiveexception –](../../mfc/reference/carchiveexception-class.md).
+`ReadClass` Napříkladověřuje,žeinformaceoarchivovanýchtřídáchjsoukompatibilnísvaší`SerializeClass` třídou modulu runtime. Pokud není kompatibilní, `SerializeClass` vyvolá výjimku [CArchiveException](../../mfc/reference/carchiveexception-class.md).
 
-Musíte použít modul runtime třídu [DECLARE_SERIAL](../../mfc/reference/run-time-object-model-services.md#declare_serial) a [IMPLEMENT_SERIAL](../../mfc/reference/run-time-object-model-services.md#implement_serial); v opačném případě `SerializeClass` vyvolá výjimku [cnotsupportedexception –](../../mfc/reference/cnotsupportedexception-class.md).
+Třída runtime musí používat [DECLARE_SERIAL](../../mfc/reference/run-time-object-model-services.md#declare_serial) a [IMPLEMENT_SERIAL](../../mfc/reference/run-time-object-model-services.md#implement_serial); v opačném případě vyvolá výjimku [CNotSupportedException.](../../mfc/reference/cnotsupportedexception-class.md) `SerializeClass`
 
-Použití [RUNTIME_CLASS](../../mfc/reference/run-time-object-model-services.md#runtime_class) – makro k načtení hodnoty pro *pRuntimeClass* parametru. Základní třída musí mít použita [IMPLEMENT_SERIAL](../../mfc/reference/run-time-object-model-services.md#implement_serial) – makro.
+Použijte makro [RUNTIME_CLASS](../../mfc/reference/run-time-object-model-services.md#runtime_class) k načtení hodnoty pro parametr *pRuntimeClass* . Základní třída musí používat makro [IMPLEMENT_SERIAL](../../mfc/reference/run-time-object-model-services.md#implement_serial) .
 
 ### <a name="example"></a>Příklad
 
 [!code-cpp[NVC_MFCSerialization#25](../../mfc/codesnippet/cpp/carchive-class_17.h)]
 
-##  <a name="setloadparams"></a>  CArchive::SetLoadParams
+##  <a name="setloadparams"></a>CArchive:: SetLoadParams
 
-Volání `SetLoadParams` kdy se chystá čtení velký počet `CObject`-odvozené objekty z archivu.
+Zavolejte `SetLoadParams` , když budete číst velký `CObject`počet objektů odvozených z archivu.
 
 ```
 void SetLoadParams(UINT nGrowBy = 1024);
@@ -710,21 +710,21 @@ void SetLoadParams(UINT nGrowBy = 1024);
 ### <a name="parameters"></a>Parametry
 
 *nGrowBy*<br/>
-Minimální počet slotů element přidělit, pokud je nutné zvýšit velikost.
+Minimální počet slotů pro prvky, které mají být přiděleny, je-li nutné zvětšit velikost.
 
 ### <a name="remarks"></a>Poznámky
 
-`CArchive` používá pole zatížení při řešení odkazů na objekty uložené v archivu. `SetLoadParams` Umožňuje nastavit velikost, ke kterému poli zatížení roste.
+`CArchive`používá pole Load k překladu odkazů na objekty uložené v archivu. `SetLoadParams`umožňuje nastavit velikost, na kterou se pole zatížení zvětšuje.
 
-Nesmějí volat `SetLoadParams` po načtení všech objektů, nebo po [MapObject](#mapobject) nebo [se operace ReadObject](#readobject) je volána.
+Po načtení libovolného objektu `SetLoadParams` nebo po volání [MapObject](#mapobject) nebo [ReadObject](#readobject) se nemusíte volat.
 
 ### <a name="example"></a>Příklad
 
 [!code-cpp[NVC_MFCSerialization#26](../../mfc/codesnippet/cpp/carchive-class_18.h)]
 
-##  <a name="setobjectschema"></a>  CArchive::SetObjectSchema
+##  <a name="setobjectschema"></a>CArchive:: SetObjectSchema
 
-Voláním této členské funkce pro nastavení schématu objektu uložená v archivní objekt *nSchema*.
+Zavolejte tuto členskou funkci pro nastavení schématu objektu uloženého v objektu archivu na *nSchema*.
 
 ```
 void SetObjectSchema(UINT nSchema);
@@ -737,17 +737,17 @@ Určuje schéma objektu.
 
 ### <a name="remarks"></a>Poznámky
 
-Další volání [GetObjectSchema](#getobjectschema) vrátí hodnotu uloženou v *nSchema*.
+Při dalším volání [GetObjectSchema](#getobjectschema) se vrátí hodnota uložená v *nSchema*.
 
-Použití `SetObjectSchema` pokročilé správy verzí, například pokud chcete vynutit konkrétní verzi pro čtení v `Serialize` funkce odvozené třídy.
+Použijte `SetObjectSchema` pro pokročilou správu verzí, například pokud chcete vynutit, aby byla konkrétní verze čtena `Serialize` ve funkci odvozené třídy.
 
 ### <a name="example"></a>Příklad
 
 [!code-cpp[NVC_MFCSerialization#27](../../mfc/codesnippet/cpp/carchive-class_19.cpp)]
 
-##  <a name="setstoreparams"></a>  CArchive::SetStoreParams
+##  <a name="setstoreparams"></a>CArchive:: SetStoreParams
 
-Použití `SetStoreParams` při ukládání velkého počtu `CObject`-odvozené objekty v archivu.
+Použijte `SetStoreParams` při ukládání velkého `CObject`počtu objektů odvozených v archivu.
 
 ```
 void SetStoreParams(UINT nHashSize = 2053, UINT nBlockSize = 128);
@@ -756,24 +756,24 @@ void SetStoreParams(UINT nHashSize = 2053, UINT nBlockSize = 128);
 ### <a name="parameters"></a>Parametry
 
 *nHashSize*<br/>
-Mapuje velikost zatřiďovací tabulky pro ukazatel rozhraní. By měl být Prvočíslo.
+Velikost zatřiďovací tabulky pro mapy ukazatelů rozhraní Mělo by být hlavní číslo.
 
 *nBlockSize*<br/>
-Určuje členitosti přidělení paměti pro rozšíření parametry. Musí být mocninou čísla 2 pro zajištění nejlepšího výkonu.
+Určuje členitost přidělení paměti pro rozšíření parametrů. Pro nejlepší výkon by měl být mocnina 2.
 
 ### <a name="remarks"></a>Poznámky
 
-`SetStoreParams` Umožňuje nastavit velikost tabulky hash a velikost bloku na mapě používá k identifikaci počet jedinečných objektů: během procesu serializace.
+`SetStoreParams`umožňuje nastavit velikost zatřiďovací tabulky a velikost bloku mapy, která se používá k identifikaci jedinečných objektů během procesu serializace.
 
-Nesmějí volat `SetStoreParams` jsou uložené všechny objekty, nebo po [MapObject](#mapobject) nebo [operace WriteObject](#writeobject) je volána.
+Po uložení žádného `SetStoreParams` objektu nebo po volání [MapObject](#mapobject) nebo [WriteObject](#writeobject) se nemusíte volat.
 
 ### <a name="example"></a>Příklad
 
 [!code-cpp[NVC_MFCSerialization#26](../../mfc/codesnippet/cpp/carchive-class_18.h)]
 
-##  <a name="write"></a>  CArchive::Write
+##  <a name="write"></a>CArchive:: Write
 
-Zapíše zadaný počet bajtů do archivu.
+Zapíše do archivu zadaný počet bajtů.
 
 ```
 void Write(const void* lpBuf, INT nMax);
@@ -782,24 +782,24 @@ void Write(const void* lpBuf, INT nMax);
 ### <a name="parameters"></a>Parametry
 
 *lpBuf*<br/>
-Ukazatel do vyrovnávací paměti zadaných uživatelem, který obsahuje data, která mají být zapsána do archivu.
+Ukazatel na vyrovnávací paměť zadanou uživatelem, která obsahuje data, která mají být zapsána do archivu.
 
-*nMax*<br/>
-Celé číslo určující počet bajtů, které mají být zapsána do archivu.
+*Nmaximum*<br/>
+Celé číslo, které určuje počet bajtů, které mají být zapsány do archivu.
 
 ### <a name="remarks"></a>Poznámky
 
-Archiv neformátuje bajtů.
+Archiv neformátuje bajty.
 
-Můžete použít `Write` členské funkce v rámci vaší `Serialize` funkce k zapsání běžných struktury, které jsou obsaženy v objekty.
+Můžete použít `Write` členskou funkci v rámci vaší `Serialize` funkce k zápisu běžných struktur, které jsou obsaženy ve vašich objektech.
 
 ### <a name="example"></a>Příklad
 
 [!code-cpp[NVC_MFCSerialization#23](../../mfc/codesnippet/cpp/carchive-class_20.cpp)]
 
-##  <a name="writeclass"></a>  CArchive::WriteClass
+##  <a name="writeclass"></a>CArchive:: WriteClass
 
-Použití `WriteClass` ukládat informace o verzi a třídy základní třídy během serializace odvozené třídy.
+Slouží `WriteClass` k uložení informací o verzi a třídě základní třídy během serializace odvozené třídy.
 
 ```
 void WriteClass(const CRuntimeClass* pClassRef);
@@ -808,25 +808,25 @@ void WriteClass(const CRuntimeClass* pClassRef);
 ### <a name="parameters"></a>Parametry
 
 *pClassRef*<br/>
-Ukazatel [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) struktura, která odpovídá odkazech na třídy rozhraní požadované.
+Ukazatel na strukturu [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) , která odpovídá požadovanému odkazu na třídu.
 
 ### <a name="remarks"></a>Poznámky
 
-`WriteClass` zapíše odkaz na [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) pro základní třídu `CArchive`. Použití [CArchive::ReadClass](#readclass) k načtení odkazu.
+`WriteClass`Zapíše odkaz na [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) pro základní třídu na `CArchive`. K načtení odkazu použijte [CArchive:: ReadClass](#readclass) .
 
-`WriteClass` ověří, zda informace o archivovaném třídě je kompatibilní s vaší třídy modulu runtime. Pokud není kompatibilní, `WriteClass` vyvolá výjimku [carchiveexception –](../../mfc/reference/carchiveexception-class.md).
+`WriteClass`ověřuje, že informace o archivovaných třídách jsou kompatibilní s vaší třídou prostředí Runtime. Pokud není kompatibilní, `WriteClass` vyvolá výjimku [CArchiveException](../../mfc/reference/carchiveexception-class.md).
 
-Musíte použít modul runtime třídu [DECLARE_SERIAL](../../mfc/reference/run-time-object-model-services.md#declare_serial) a [IMPLEMENT_SERIAL](../../mfc/reference/run-time-object-model-services.md#implement_serial); v opačném případě `WriteClass` vyvolá výjimku [cnotsupportedexception –](../../mfc/reference/cnotsupportedexception-class.md).
+Třída runtime musí používat [DECLARE_SERIAL](../../mfc/reference/run-time-object-model-services.md#declare_serial) a [IMPLEMENT_SERIAL](../../mfc/reference/run-time-object-model-services.md#implement_serial); v opačném případě vyvolá výjimku [CNotSupportedException.](../../mfc/reference/cnotsupportedexception-class.md) `WriteClass`
 
-Můžete použít [SerializeClass](#serializeclass) místo `WriteClass`, která zpracovává čtení i zápis odkazech na třídy rozhraní.
+Můžete použít [SerializeClass](#serializeclass) namísto `WriteClass`, který zpracovává čtení i zápis odkazu na třídu.
 
 ### <a name="example"></a>Příklad
 
 [!code-cpp[NVC_MFCSerialization#28](../../mfc/codesnippet/cpp/carchive-class_21.cpp)]
 
-##  <a name="writeobject"></a>  CArchive::WriteObject
+##  <a name="writeobject"></a>CArchive:: WriteObject
 
-Uloží zadaný `CObject` do archivu.
+Ukládá zadaný `CObject` do archivu.
 
 ```
 void WriteObject(const CObject* pOb);
@@ -835,28 +835,28 @@ void WriteObject(const CObject* pOb);
 ### <a name="parameters"></a>Parametry
 
 *pOb*<br/>
-Konstantní ukazatel na objekt uložené.
+Konstantní ukazatel na objekt, který se ukládá.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato funkce je obvykle volána `CArchive` vložení ( **<<**) operátor přetížen pro `CObject`. `WriteObject`, volá `Serialize` funkce archivované třídy.
+Tato funkce je obvykle volána `CArchive` operátorem vložení ( **<<** ) přetíženým pro. `CObject` `WriteObject`pak volá `Serialize` funkci archivní třídy.
 
-IMPLEMENT_SERIAL – makro musíte použít k povolení archivace. `WriteObject` Název třídy ASCII zapíše do archivu. Třída s tímto názvem se ověří později během procesu načtení. Speciální schéma kódování zabráníte zdvojení název třídy pro více objektů třídy. Toto schéma také zabrání redundantnímu úložišti s objekty, které se cílí více než jeden ukazatel.
+K povolení archivace je nutné použít makro IMPLEMENT_SERIAL. `WriteObject`zapíše název třídy ASCII do archivu. Tento název třídy se ověří později během procesu načítání. Speciální schéma kódování zabraňuje zbytečnému duplikaci názvu třídy pro více objektů třídy. Toto schéma také zabraňuje redundantnímu úložišti objektů, které jsou cíleny na více než jeden ukazatel.
 
-Přesné objekt encoding – metoda (včetně názvu třídy ASCII) je podrobnost implementace a může změnit v budoucích verzích knihovny.
+Přesná metoda kódování objektu (včetně přítomnosti názvu třídy ASCII) je detailní detail implementace a může se změnit v budoucích verzích knihovny.
 
 > [!NOTE]
->  Dokončení vytváření, odstraňování a aktualizuje všechny objekty, než začnete jejich archivace. Archiv se poškozený, jsou-li zkombinovány archivaci pomocí úpravy objektu.
+>  Než začnete archivovat své objekty, dokončete vytváření, odstraňování a aktualizace všech svých objektů. Archiv bude poškozený, pokud budete kombinovat archivaci se změnou objektu.
 
 ### <a name="example"></a>Příklad
 
-Definice třídy `CAge`, podívejte se na příklad pro [CObList::CObList](../../mfc/reference/coblist-class.md#coblist).
+Definici třídy `CAge`naleznete v příkladu pro [CObList:: CObList](../../mfc/reference/coblist-class.md#coblist).
 
 [!code-cpp[NVC_MFCSerialization#29](../../mfc/codesnippet/cpp/carchive-class_22.cpp)]
 
-##  <a name="writestring"></a>  CArchive::WriteString
+##  <a name="writestring"></a>CArchive:: WriteString
 
-Tato členská funkce slouží k zápisu dat z vyrovnávací paměti souboru spojené s `CArchive` objektu.
+Tuto členskou funkci použijte k zápisu dat z vyrovnávací paměti do souboru přidruženého `CArchive` k objektu.
 
 ```
 void WriteString(LPCTSTR lpsz);
@@ -865,15 +865,15 @@ void WriteString(LPCTSTR lpsz);
 ### <a name="parameters"></a>Parametry
 
 *lpsz*<br/>
-Určuje ukazatel do vyrovnávací paměti, který obsahuje řetězec zakončený hodnotou null text.
+Určuje ukazatel na vyrovnávací paměť obsahující textový řetězec zakončený hodnotou null.
 
 ### <a name="remarks"></a>Poznámky
 
-Ukončující znak null ('\0') není zapsána do souboru. ani je nový řádek automaticky zapisovat.
+Ukončující znak null (' \ 0 ') není zapsán do souboru; automaticky se zapisuje i nový řádek.
 
-`WriteString` vyvolá výjimku v reakci na několika podmínek, včetně stavu zaplnění disku.
+`WriteString`vyvolá výjimku v reakci na několik podmínek, včetně podmínky úplného disku.
 
-`Write` je také k dispozici, ale místo se ukončuje na znak null, zapíše požadovaný počet bajtů do souboru.
+`Write`je také k dispozici, ale místo ukončení na znaku null zapisuje požadovaný počet bajtů do souboru.
 
 ### <a name="example"></a>Příklad
 

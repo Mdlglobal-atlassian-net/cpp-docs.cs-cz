@@ -1,5 +1,5 @@
 ---
-title: value_compare – třída (&lt;mapy&gt;)
+title: value_compare – třída&lt;(&gt;map)
 ms.date: 11/04/2016
 f1_keywords:
 - std::value_compare
@@ -9,16 +9,16 @@ f1_keywords:
 helpviewer_keywords:
 - std::value_compare
 ms.assetid: ea97c1d0-04b2-4d42-8d96-23522c04cc41
-ms.openlocfilehash: 69b484944c9ce30dc28fceacfb082051da31c053
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d098e947aec1ea543f29c168a632d1f4c9412e82
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62365011"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68448329"
 ---
-# <a name="valuecompare-class-ltmapgt"></a>value_compare – třída (&lt;mapy&gt;)
+# <a name="valuecompare-class-ltmapgt"></a>value_compare – třída&lt;(&gt;map)
 
-Poskytuje objekt funkce, který může porovnat prvky objektu map porovnáním hodnot jejich klíče pro určení jejich relativního pořadí v objektu map.
+Poskytuje objekt funkce, který může porovnat prvky mapy porovnáním hodnot jejich klíčů a určením jejich relativního pořadí v mapě.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -35,22 +35,22 @@ protected:
 
 ## <a name="remarks"></a>Poznámky
 
-Kritérium porovnání poskytované `value_compare` mezi `value_types` celé elementů obsažených mapy je vyvolaných z porovnání mezi službou klíče příslušných elementů pomocí vytváření pomocná třída. Objekt používá operátor členské funkce `comp` typu `key_compare` uloženou v objektu funkce poskytované `value_compare` k porovnání dvou prvků komponenty klíč řazení.
+Kritérium porovnání, které `value_compare` je zadáno mezi `value_types` celými prvky obsaženými v mapě, je vyvolaným porovnáním mezi klíči příslušných prvků konstrukcí pomocné třídy. Operátor členské funkce používá objekt `comp` typu `key_compare` uložený v objektu Function, `value_compare` který poskytuje k porovnání komponent pro seřazení klíčů dvou prvků.
 
-Pro sady a multisets, které jsou jednoduché kontejnery, ve kterém jsou shodné s hodnoty prvků hodnoty klíče, `value_compare` je ekvivalentní `key_compare`; pro mapy a multimaps nejsou, jako hodnotu typu `pair` prvky není stejný jako hodnotu klíče prvku.
+Pro sady a množiny, které jsou jednoduché kontejnery, kde jsou klíčové hodnoty identické s hodnotami prvků, `value_compare` je `key_compare`ekvivalentní hodnotě; pro mapy a pro více map nejsou, protože hodnota elementů Type `pair` není shodná s hodnotou hodnota klíče elementu
 
 ## <a name="example"></a>Příklad
 
-Viz příklad pro [value_comp –](../standard-library/map-class.md#value_comp) příklad toho, jak deklarace a používání `value_compare`.
+Příklad, jak [](../standard-library/map-class.md#value_comp) deklarovat a používat `value_compare`, naleznete v části příklad pro value_comp.
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** \<mapy >
+**Hlavička:** \<mapování >
 
-**Namespace:** std
+**Obor názvů:** std
 
 ## <a name="see-also"></a>Viz také:
 
-[binary_function – struktura](../standard-library/binary-function-struct.md)<br/>
-[Bezpečný přístup z více vláken ve standardní knihovně C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
-[Standardní knihovna C++ – referenční dokumentace](../standard-library/cpp-standard-library-reference.md)<br/>
+[binary_function – struktura](../standard-library/binary-function-struct.md)\
+[Bezpečnost vlákna ve C++ standardní knihovně](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[Standardní knihovna C++ – referenční dokumentace](../standard-library/cpp-standard-library-reference.md)

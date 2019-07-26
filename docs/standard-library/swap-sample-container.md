@@ -8,19 +8,19 @@ f1_keywords:
 helpviewer_keywords:
 - swap function
 ms.assetid: d8dd6436-fb97-46ed-bec5-052cfd710462
-ms.openlocfilehash: 48238e4a67fb656eac714a8732ee071e26847768
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.openlocfilehash: 8d89a59e90c3e4258c8ca7bf9e981536f3779d4b
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65220294"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68450341"
 ---
 # <a name="swap-ltsample-containergt"></a>swap (&lt;ukázkový kontejner&gt;)
 
 > [!NOTE]
-> Toto téma je v Microsoft C++ dokumentaci jako funkční příklad kontejnerů používané C++ standardní knihovny. Další informace najdete v tématu [kontejnery standardní knihovny C++](../standard-library/stl-containers.md).
+> Toto téma se nachází v dokumentaci C++ společnosti Microsoft jako nefunkční příklad kontejnerů použitých ve C++ standardní knihovně. Další informace najdete v tématu [ C++ standardní kontejnery knihovny](../standard-library/stl-containers.md).
 
-Spustí `left.` [prohození](../standard-library/container-class-swap.md)`(right)`.
+Provede `left.`prohození. [](../standard-library/container-class-swap.md)`(right)`
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -33,4 +33,4 @@ void swap(
 
 ## <a name="see-also"></a>Viz také:
 
-[\<Ukázkový kontejner >](../standard-library/sample-container.md)<br/>
+[\<Ukázkový > kontejneru](../standard-library/sample-container.md)

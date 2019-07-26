@@ -11,26 +11,26 @@ helpviewer_keywords:
 - incompatible iterators
 - debug iterator support
 ms.assetid: f3f5bd15-4be8-4d64-a4d0-8bc0761c68b6
-ms.openlocfilehash: 9042093bb073807e9bb1476ab514c82010aeab70
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3ccb618c9a3c6b21d6ffe3fbbce7b6c1140e0564
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62394051"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68450593"
 ---
 # <a name="debug-iterator-support"></a>Podpora ladění iterátorů
 
-Běhové knihovny jazyka Visual C++ zjistí použití nesprávné iterátoru, vyhodnotí a zobrazí dialogové okno v době běhu. Pokud chcete povolit – podpora ladění iterátorů, musíte použít ladicí verze knihovny Runtime jazyka C a standardní knihovny C++ kompilace programu. Další informace najdete v tématu [funkce knihovny CRT](../c-runtime-library/crt-library-features.md). Informace o tom, jak pomocí kontrolovaných iterátorech naleznete v tématu [Checked Iterators](../standard-library/checked-iterators.md).
+Běhová C++ Knihovna Visual runtime detekuje nesprávné použití iterátoru a vyhodnotí a zobrazí dialogové okno za běhu. Chcete-li povolit podporu iterátoru ladění, je nutné použít ladicí C++ verze standardní knihovny a běhové knihovny jazyka C pro zkompilování programu. Další informace najdete v tématu [funkce knihovny CRT](../c-runtime-library/crt-library-features.md). Informace o tom, jak používat kontrolované iterátory, najdete v tématu [kontrolované iterátory](../standard-library/checked-iterators.md).
 
-C++ standard popisuje, jak členské funkce může způsobit, že iterátory do kontejneru stanou neplatnými. Dva příklady jsou:
+C++ Standard popisuje, jak mohou členské funkce způsobit, že iterátory do kontejneru nebudou platné. Existují dva příklady:
 
-- Mazání element z kontejneru způsobí, že iterátory na prvek stanou neplatnými.
+- Mazání elementu z kontejneru způsobí, že iterátory elementu se stanou neplatnými.
 
-- Zvětšení velikosti [vektoru](../standard-library/vector.md) s využitím push nebo vložit iterátorů způsobí, že do `vector` stanou neplatnými.
+- Zvětšení velikosti vektoru pomocí [](../standard-library/vector.md) operace push nebo INSERT způsobí, že `vector` iterátory se stanou neplatnými.
 
-## <a name="invalid-iterators"></a>Neplatný iterátorů
+## <a name="invalid-iterators"></a>Neplatné iterátory
 
-Pokud kompilujete tento ukázkový program v režimu ladění, za běhu se vyhodnotí a ukončí.
+Pokud kompilujete tento ukázkový program v režimu ladění, v době běhu, který vystavuje a ukončí.
 
 ```cpp
 // iterator_debugging_0.cpp
@@ -54,9 +54,9 @@ int main() {
 }
 ```
 
-## <a name="using-iteratordebuglevel"></a>Pomocí _ITERATOR_DEBUG_LEVEL
+## <a name="using-iteratordebuglevel"></a>Použití _ITERATOR_DEBUG_LEVEL
 
-Můžete použít preprocesor makro [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md) vypnout iterační ladění funkcí v sestavení pro ladění. Tento program není výraz, ale stále vyvolá nedefinované chování.
+Pomocí makra preprocesoru [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md) můžete vypnout funkci iterátoru ladění v sestavení ladění. Tento program neuplatňuje, ale stále spouští nedefinované chování.
 
 ```cpp
 // iterator_debugging_1.cpp
@@ -87,9 +87,9 @@ int main() {
 -572662307
 ```
 
-## <a name="unitialized-iterators"></a>Neinicializovaných iterátorů
+## <a name="unitialized-iterators"></a>Unitialized iterátory
 
-Vyhodnocení také v případě pokusu o použití iterátor před inicializací, jak je znázorněno zde:
+K vyhodnocení dojde také v případě, že se pokusíte použít iterátor před inicializací, jak je znázorněno zde:
 
 ```cpp
 // iterator_debugging_2.cpp
@@ -106,7 +106,7 @@ int main() {
 
 ## <a name="incompatible-iterators"></a>Nekompatibilní iterátory
 
-Následující příklad kódu způsobí, že kontrolní výraz protože dvěma iterátory, které chcete [for_each](../standard-library/algorithm-functions.md#for_each) algoritmus jsou nekompatibilní. Algoritmy zaškrtněte, pokud chcete zjistit, zda iterátory, které jsou dodávány na ně odkazují stejný kontejner.
+Následující příklad kódu vyvolá kontrolní výraz, protože dva iterátory k [for_each](../standard-library/algorithm-functions.md#for_each) algoritmu jsou nekompatibilní. Zkontrolujte algoritmy a určete, zda iterátory, které jsou dodány, odkazují na stejný kontejner.
 
 ```cpp
 // iterator_debugging_3.cpp
@@ -126,11 +126,11 @@ int main()
 }
 ```
 
-Všimněte si, že tento příklad používá výraz lambda `[] (int& elem) { elem *= 2; }` místo funktor. I když se tato možnost nemá žádný vliv na selhání assert – podobně jako funktor by způsobilo stejná chyba – výrazy lambda jsou velmi užitečný způsob, jak provádět úlohy compact funkce objektu. Další informace o výrazech lambda naleznete v tématu [výrazy Lambda](../cpp/lambda-expressions-in-cpp.md).
+Všimněte si, že tento příklad používá výraz `[] (int& elem) { elem *= 2; }` lambda namísto funktor. I když tato volba nemá žádný vliv na chybu kontrolního výrazu – podobný funktor by způsobil stejné selhání – výrazy lambda představují velmi užitečný způsob, jak provádět úlohy kompaktních objektů funkce. Další informace o výrazech lambda naleznete v tématu [lambda Expressions](../cpp/lambda-expressions-in-cpp.md).
 
-## <a name="iterators-going-out-of-scope"></a>Iterátory probíhající mimo rozsah
+## <a name="iterators-going-out-of-scope"></a>Iterátory vycházející z rozsahu
 
-Iterátor kontroly ladění také způsobit iterační proměnná, která je deklarována v **pro** smyčka bude z oboru, kdy **pro** oboru skončení smyčky.
+K ladění kontrol iterátoru také způsobí, že proměnná iterátoru, která je deklarována ve smyčce **for** , je mimo rozsah, když končí rozsah smyčky **for** .
 
 ```cpp
 // iterator_debugging_4.cpp
@@ -146,9 +146,9 @@ int main() {
 }
 ```
 
-## <a name="destructors-for-debug-iterators"></a>Destruktory pro ladění iterátorů
+## <a name="destructors-for-debug-iterators"></a>Destruktory pro iterátory ladění
 
-Ladění iterátory mají netriviální destruktory. Pokud destruktor se nespustí, ale uvolnění paměti objektu, může dojít k poškození data a narušení přístupu. Podívejte se například:
+Iterátory ladění mají netriviální destruktory. Pokud se destruktor nespustí, ale paměť objektu je uvolněna, může dojít k narušením přístupu a poškození dat. Vezměte v úvahu tento příklad:
 
 ```cpp
 // iterator_debugging_5.cpp
@@ -175,4 +175,4 @@ struct derived : base {
 
 ## <a name="see-also"></a>Viz také:
 
-[Standardní knihovna C++ – přehled](../standard-library/cpp-standard-library-overview.md)<br/>
+[Standardní knihovna C++ – přehled](../standard-library/cpp-standard-library-overview.md)

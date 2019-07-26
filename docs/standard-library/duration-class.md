@@ -11,16 +11,16 @@ f1_keywords:
 ms.assetid: 06b863b3-65be-4ded-a72e-6e1eb1531077
 helpviewer_keywords:
 - std::chrono [C++], duration
-ms.openlocfilehash: 49c68b1650ced36ebcf949ae2594508480e15136
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4c537b7dfdd23ba641438e0caf6306cf5549b2d7
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62413798"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68454308"
 ---
 # <a name="duration-class"></a>duration – třída
 
-Popisuje typ, který obsahuje *časový interval*, což je uplynulý čas mezi dvěma body v čase.
+Popisuje typ, který obsahuje *časový interval*, což je uplynulý čas mezi dvěma časovými body.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -35,53 +35,53 @@ class duration <duration<Rep, Period1>, Period2>;
 
 ## <a name="remarks"></a>Poznámky
 
-Argument šablony `Rep` popisuje typ, který se používá k ukládání počtu taktů v intervalu. Argument šablony `Period` je instance [poměr](../standard-library/ratio.md) , který označuje velikost intervalu, který jednotlivé takty představují.
+Argument `Rep` šablony popisuje typ, který se používá k uchování počtu taktů v intervalu. Argument `Period` šablony je instance poměru, který [](../standard-library/ratio.md) popisuje velikost intervalu, který jednotlivé značky představují.
 
 ## <a name="members"></a>Členové
 
-### <a name="public-typedefs"></a>Veřejné definice TypeDef
+### <a name="public-typedefs"></a>Veřejné definice typedef
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
-|DURATION::period – Typedef|Představuje synonymum pro parametr šablony `Period`.|
-|DURATION::rep – Typedef|Představuje synonymum pro parametr šablony `Rep`.|
+|Doba trvání::p eriod typedef|Představuje synonymum pro parametr `Period`šablony.|
+|Duration:: REP – definice|Představuje synonymum pro parametr `Rep`šablony.|
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
-|[Doba trvání](#duration)|Vytvoří `duration` objektu.|
+|[Doba trvání](#duration)|`duration` Vytvoří objekt.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
-|[Počet](#count)|Vrátí počet taktů v časovém intervalu.|
-|[max](#max)|Statické. Vrátí maximální povolenou hodnotou parametru šablony `Ref`.|
-|[min](#min)|Statické. Vrátí nejnižší povolenou hodnotou parametru šablony `Ref`.|
-|[Nula](#zero)|Statické. V důsledku toho vrátí `Rep`(0).|
+|[výpočtu](#count)|Vrátí počet taktů v časovém intervalu.|
+|[max](#max)|Tras. Vrátí maximální povolenou hodnotu parametru `Ref`šablony.|
+|[dlouhé](#min)|Tras. Vrátí nejnižší povolenou hodnotu parametru `Ref`šablony.|
+|[vynulujte](#zero)|Tras. V důsledku toho vrátí `Rep`(0).|
 
 ### <a name="public-operators"></a>Veřejné operátory
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
-|[DURATION::Operator-](#operator-)|Vrátí kopii objektu `duration` společně s negovaným čítačem značek.|
-|[DURATION::Operator--](#operator--)|Sníží počet uložených impulzů.|
-|[DURATION::Operator =](#op_eq)|Sníží uložený čítač značek modulo zadaná hodnota.|
-|[DURATION::Operator * =](#op_star_eq)|Vynásobí uložený čítač impulzů zadanou hodnotou.|
-|[DURATION::Operator / =](#op_div_eq)|Vydělí uložený čítač impulzů počtem impulzů zadaného `duration` objektu.|
-|[DURATION::Operator +](#op_add)|Vrátí `*this`.|
-|[DURATION::Operator ++](#op_add_add)|Zvýší počet uložených impulzů.|
-|[DURATION::Operator +=](#op_add_eq)|Přidá počet impulsů zadaného `duration` objektu do uloženého počtu impulsů.|
-|[DURATION::Operator-=](#operator-_eq)|Odečte počet impulsů zadaného `duration` objekt od uloženého počtu impulsů.|
+|[Duration:: operator-](#operator-)|Vrátí kopii `duration` objektu společně se počtem impulzů typu negace.|
+|[Duration:: operator--](#operator--)|Sníží počet uložených impulsů.|
+|[Duration:: operator =](#op_eq)|Snižuje počet uložených impulsů modulo podle zadané hodnoty.|
+|[Duration:: operator * =](#op_star_eq)|Vynásobí uložený počet impulsů zadanou hodnotou.|
+|[Duration:: operator/=](#op_div_eq)|Vydělí uložený počet impulsů podle počtu impulsů zadaného `duration` objektu.|
+|[Duration:: operator + – operátor](#op_add)|Vrátí `*this`.|
+|[Duration:: operator + +](#op_add_add)|Zvýší počet uložených impulsů.|
+|[Duration:: operator + =](#op_add_eq)|Přidá počet impulsů zadaného `duration` objektu do uloženého počtu impulsů.|
+|[Duration:: operator-=](#operator-_eq)|Odečte počet impulsů zadaného `duration` objektu od uloženého počtu impulsů.|
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** \<chrono >
+**Hlavička:** \<Chrono >
 
-**Namespace:** std::chrono
+**Obor názvů:** std:: chrono
 
-## <a name="count"></a>  DURATION::Count –
+## <a name="count"></a>Doba trvání:: počet
 
 Načte počet taktů v časovém intervalu.
 
@@ -93,9 +93,9 @@ constexpr Rep count() const;
 
 Počet taktů v časovém intervalu.
 
-## <a name="duration"></a>  DURATION::Duration – konstruktor
+## <a name="duration"></a>Duration::d konstruktor uration
 
-Vytvoří `duration` objektu.
+`duration` Vytvoří objekt.
 
 ```cpp
 constexpr duration() = default;
@@ -109,35 +109,35 @@ constexpr duration(const duration<Rep2, Period2>& Dur);
 
 ### <a name="parameters"></a>Parametry
 
-*Rep2*<br/>
-Aritmetický typ představující počet taktů.
+*Rep2*\
+Aritmetický typ, který představuje počet tiků.
 
-*Period2*<br/>
-A `std::ratio` specializace šablony pro počet dob taktů v jednotkách sady sekund.
+*Period2*\
+Specializace `std::ratio` šablony představující období zatržení v jednotkách sekund.
 
-*R*<br/>
-Počet taktů výchozí období.
+*R*\
+Počet taktů výchozího období.
 
-*Doba trvání*<br/>
-Počet taktů limitu určeného *Period2*.
+*Doba*\
+Počet tiků periody určených parametrem *Period2*.
 
 ### <a name="remarks"></a>Poznámky
 
-Výchozí konstruktor vytvoří objekt, který není inicializován. Inicializace hodnoty pomocí prázdné závorky inicializuje objekt, který představuje časový interval nula taktů.
+Výchozí konstruktor vytvoří objekt, který není inicializovaný. Inicializace hodnoty pomocí prázdných složených závorek inicializuje objekt, který představuje časový interval s nulovými takty.
 
-Druhé, jedna šablona argument konstruktor vytvoří objekt, který představuje časový interval *R* pomocí výchozí období v taktech `std::ratio<1>`. Chcete-li zabránit zaokrouhlování počtu impulsů, je chybou konstruovat objekt trvání z typu reprezentace *Rep2* , který lze zacházet jako plovoucí desetinnou čárkou když `duration::rep` nemůže být zpracován jako typ s plovoucí desetinnou čárkou.
+Druhý, jeden konstruktor argumentu šablony vytvoří objekt, který představuje časový interval časových taktů *R* , pomocí výchozího období `std::ratio<1>`. Chcete-li se vyhnout zaokrouhlení počtu impulsů, jedná se o chybu při vytváření objektu doby trvání z typu reprezentace *Rep2* , který lze považovat za typ s plovoucí desetinnou čárkou, pokud `duration::rep` nelze považovat za typ s plovoucí desetinnou čárkou.
 
-Třetí, dvě šablony argument konstruktor vytvoří objekt, který představuje časový interval, jehož délka je časový interval, který je určen *doba trvání*. Chcete-li zabránit zkrácení čítače impulzů, je chybou konstruovat objekt trvání z jiného objektu trvání, jehož typ je *incommensurable* s cílovým typem.
+Třetí, dva konstruktory argumentů šablony vytvoří objekt, který představuje časový interval, jehož délka je časový interval, který je určen dobou *Trvání*. Aby nedošlo ke zkrácení počtu impulsů, je chyba při vytváření objektu Duration z jiného objektu Duration, jehož typ je *nezpracovatelný* s cílovým typem.
 
-Typ trvání `D1` je *incommensurable* s dalším typem trvání `D2` Pokud `D2` nemůže být zpracován jako typ s plovoucí desetinnou čárkou a [ratio_divide\<D1::period, D2:: období >:: type::den](../standard-library/ratio.md) není 1.
+Typ `D1` trvání je *nezpracovatelný* s jiným typem `D2` trvání, pokud `D2` nelze považovat za typ s plovoucí desetinnou čárkou a [\<ratio_divide D1::p eriod, D2::p eriod >:: Type::d EN](../standard-library/ratio.md) není 1.
 
-Není-li *Rep2* implicitně převést na `rep` a buď `treat_as_floating_point<rep>` *platí* nebo `treat_as_floating_point<Rep2>` *obsahuje hodnotu false*, druhý konstruktor není součástí řešení přetížení. Další informace najdete v tématu [< type_traits >](../standard-library/type-traits.md).
+Pokud je *Rep2* implicitně převoditelná `rep` na a `treat_as_floating_point<rep>`buď má *hodnotu true* , nebo `treat_as_floating_point<Rep2>` *má hodnotu false*, druhý konstruktor se nepodílí na řešení přetížení. Další informace najdete v tématu [< type_traits >](../standard-library/type-traits.md).
 
-Pokud je způsobený bez přetečení při převodu a `treat_as_floating_point<rep>` *platí*, nebo obojí `ratio_divide<Period2, period>::den` je rovno 1 a `treat_as_floating_point<Rep2>` *obsahuje hodnotu false*, třetí konstruktor není součástí řešení přetížení. Další informace najdete v tématu [< type_traits >](../standard-library/type-traits.md).
+Není-li v převodu vyvoláno přetečení `treat_as_floating_point<rep>`a *má hodnotu true*, `ratio_divide<Period2, period>::den` nebo se v obou `treat_as_floating_point<Rep2>`případech rovná 1 a *obsahuje hodnotu false*, třetí konstruktor se nepodílí na řešení přetížení. Další informace najdete v tématu [< type_traits >](../standard-library/type-traits.md).
 
-## <a name="max"></a>  DURATION::max –
+## <a name="max"></a>Doba trvání:: max
 
-Statická metoda, která vrátí horní mez pro hodnoty typu parametru šablony `Ref`.
+Statická metoda, která vrátí horní mez pro hodnoty typu `Ref`parametru šablony.
 
 ```cpp
 static constexpr duration max();
@@ -147,9 +147,9 @@ static constexpr duration max();
 
 V důsledku toho vrátí `duration(duration_values<rep>::max())`.
 
-## <a name="min"></a>  DURATION::min –
+## <a name="min"></a>Doba trvání:: min
 
-Statická metoda, která vrátí dolní mez pro hodnoty typu parametru šablony `Ref`.
+Statická metoda, která vrátí dolní mez pro hodnoty typu `Ref`parametru šablony.
 
 ```cpp
 static constexpr duration min();
@@ -159,17 +159,17 @@ static constexpr duration min();
 
 V důsledku toho vrátí `duration(duration_values<rep>::min())`.
 
-## <a name="operator-"></a>  DURATION::Operator-
+## <a name="operator-"></a>Duration:: operator-
 
-Vrátí kopii objektu `duration` společně s negovaným čítačem značek.
+Vrátí kopii `duration` objektu společně se počtem impulzů typu negace.
 
 ```cpp
 constexpr duration operator-() const;
 ```
 
-## <a name="operator--"></a>  DURATION::Operator--
+## <a name="operator--"></a>Duration:: operator--
 
-Sníží počet uložených impulzů.
+Sníží počet uložených impulsů.
 
 ```cpp
 duration& operator--();
@@ -181,11 +181,11 @@ duration operator--(int);
 
 První metoda vrátí `*this`.
 
-Druhá metoda vrátí kopii objektu `*this` , která je provedena před snížení.
+Druhá metoda vrátí kopii `*this` , která je vytvořena před snížením.
 
-## <a name="op_eq"></a>  DURATION::Operator =
+## <a name="op_eq"></a>Duration:: operator =
 
-Sníží uložený čítač značek modulo zadaná hodnota.
+Snižuje počet uložených impulsů modulo podle zadané hodnoty.
 
 ```cpp
 duration& operator%=(const rep& Div);
@@ -195,16 +195,16 @@ duration& operator%=(const duration& Div);
 
 ### <a name="parameters"></a>Parametry
 
-*div*<br/>
-První metoda *Div* představuje počet cyklů. Pro druhý způsob *Div* je `duration` objekt, který obsahuje počet cyklů.
+*Značek*\
+Pro první metodu představuje *div* počet impulsů. Pro druhou metodu je `duration` *div* objekt, který obsahuje počet impulsů.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-`duration` Objektu po operace modulo.
+`duration` Objekt po provedení operace modulo.
 
-## <a name="op_star_eq"></a>  DURATION::Operator * =
+## <a name="op_star_eq"></a>Duration:: operator * =
 
-Vynásobí uložený čítač impulzů zadanou hodnotou.
+Vynásobí uložený počet impulsů zadanou hodnotou.
 
 ```cpp
 duration& operator*=(const rep& Mult);
@@ -212,16 +212,16 @@ duration& operator*=(const rep& Mult);
 
 ### <a name="parameters"></a>Parametry
 
-*Mult*<br/>
-Hodnota typu, která je zadána `duration::rep`.
+*Mult*\
+Hodnota typu, který je určen parametrem `duration::rep`.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-`duration` Objektu po provedení násobení.
+`duration` Objekt po provedení násobení.
 
-## <a name="op_div_eq"></a>  DURATION::Operator / =
+## <a name="op_div_eq"></a>Duration:: operator/=
 
-Vydělí uložený čítač impulzů zadanou hodnotou.
+Vydělí uložený počet impulsů zadanou hodnotou.
 
 ```cpp
 duration& operator/=(const rep& Div);
@@ -229,14 +229,14 @@ duration& operator/=(const rep& Div);
 
 ### <a name="parameters"></a>Parametry
 
-*div*<br/>
-Hodnota typu, která je zadána `duration::rep`.
+*Značek*\
+Hodnota typu, který je určen parametrem `duration::rep`.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-`duration` Objektu po provedení odečítání.
+`duration` Objekt po dělení.
 
-## <a name="op_add"></a>  DURATION::Operator +
+## <a name="op_add"></a>Duration:: operator + – operátor
 
 Vrátí `*this`.
 
@@ -244,9 +244,9 @@ Vrátí `*this`.
 constexpr duration operator+() const;
 ```
 
-## <a name="op_add_add"></a>  DURATION::Operator ++
+## <a name="op_add_add"></a>Duration:: operator + +
 
-Zvýší počet uložených impulzů.
+Zvýší počet uložených impulsů.
 
 ```cpp
 duration& operator++();
@@ -258,9 +258,9 @@ duration operator++(int);
 
 První metoda vrátí `*this`.
 
-Druhá metoda vrátí kopii objektu `*this` , která je provedena před inkrementací.
+Druhá metoda vrátí kopii `*this` , která je vytvořena před přírůstem.
 
-## <a name="op_add_eq"></a>  DURATION::Operator +=
+## <a name="op_add_eq"></a>Duration:: operator + =
 
 Přidá počet impulsů zadaného `duration` objektu do uloženého počtu impulsů.
 
@@ -270,16 +270,16 @@ duration& operator+=(const duration& Dur);
 
 ### <a name="parameters"></a>Parametry
 
-*Doba trvání*<br/>
+*Doba*\
 A `duration` objektu.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-`duration` Objektu po provedení sčítání.
+`duration` Objekt po provedení přidání.
 
-## <a name="operator-_eq"></a>  DURATION::Operator-=
+## <a name="operator-_eq"></a>Duration:: operator-=
 
-Odečte počet impulsů zadaného `duration` objekt od uloženého počtu impulsů.
+Odečte počet impulsů zadaného `duration` objektu od uloženého počtu impulsů.
 
 ```cpp
 duration& operator-=(const duration& Dur);
@@ -287,14 +287,14 @@ duration& operator-=(const duration& Dur);
 
 ### <a name="parameters"></a>Parametry
 
-*Doba trvání*<br/>
+*Doba*\
 A `duration` objektu.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-`duration` Objektu po provedení odečtení.
+`duration` Objekt po odčítání.
 
-## <a name="zero"></a>  DURATION::Zero
+## <a name="zero"></a>Doba trvání:: nula
 
 Vrátí `duration(duration_values<rep>::zero())`.
 
@@ -302,9 +302,9 @@ Vrátí `duration(duration_values<rep>::zero())`.
 static constexpr duration zero();
 ```
 
-## <a name="op_mod_eq"></a>  DURATION::Operator mod =
+## <a name="op_mod_eq"></a>Duration:: operator mod =
 
-Sníží uložený čítač značek modulo Div nebo Div.count().
+Snižuje počet uložených impulsů modulo Div nebo div. Count ().
 
 ```cpp
 duration& operator%=(const rep& Div);duration& operator%=(const duration& Div);
@@ -312,15 +312,15 @@ duration& operator%=(const rep& Div);duration& operator%=(const duration& Div);
 
 ### <a name="parameters"></a>Parametry
 
-*div*<br/>
-Dělitel, který je buď objekt trvání, nebo hodnotu, která představuje čítače impulzů.
+*Značek*\
+Dělitel, což je buď objekt duration, nebo hodnota, která představuje počty impulsů.
 
 ### <a name="remarks"></a>Poznámky
 
-První členská funkce sníží uložený čítač značek modulo Div a vrátí * to. Druhá členská funkce sníží uložený čítač značek modulo Div.count() a vrátí \*to.
+První členská funkce zmenší počet uložených impulsů modulo Div a vrátí hodnotu * this. Druhá členská funkce zmenší počet uložených impulsů modulo Div. Count () a vrátí \*tuto hodnotu.
 
 ## <a name="see-also"></a>Viz také:
 
-[Odkaz na soubory hlaviček](../standard-library/cpp-standard-library-header-files.md)<br/>
-[\<chrono>](../standard-library/chrono.md)<br/>
-[duration_values – struktura](../standard-library/duration-values-structure.md)<br/>
+[Odkazy na hlavičkové soubory](../standard-library/cpp-standard-library-header-files.md)\
+[\<chrono>](../standard-library/chrono.md)\
+[duration_values – struktura](../standard-library/duration-values-structure.md)

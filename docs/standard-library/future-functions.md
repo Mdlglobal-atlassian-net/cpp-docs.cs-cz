@@ -14,23 +14,23 @@ helpviewer_keywords:
 - std::make_error_code [C++]
 - std::make_error_condition [C++]
 - std::swap [C++]
-ms.openlocfilehash: 56ae0da7e86e092cee46d24d1a2a27d9d54709e4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5435c3b9e10f151fc77c72b58c93510b6a867ce1
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62159506"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68447330"
 ---
 # <a name="ltfuturegt-functions"></a>&lt;budoucí&gt; funkce
 
 ||||
 |-|-|-|
-|[async](#async)|[future_category –](#future_category)|[make_error_code](#make_error_code)|
+|[async](#async)|[future_category](#future_category)|[make_error_code](#make_error_code)|
 |[make_error_condition](#make_error_condition)|[swap](#swap)|
 
-## <a name="async"></a>  asynchronní
+## <a name="async"></a>Async
 
-Představuje *asynchronního poskytovatele*.
+Představuje *asynchronního zprostředkovatele*.
 
 ```cpp
 template <class Fn, class... ArgTypes>
@@ -44,8 +44,8 @@ future<typename result_of<Fn(ArgTypes...)>::type>
 
 ### <a name="parameters"></a>Parametry
 
-*policy*<br/>
-A [spuštění](../standard-library/future-enums.md#launch) hodnotu.
+*politických*\
+Hodnota [spuštění](../standard-library/future-enums.md#launch) .
 
 ### <a name="remarks"></a>Poznámky
 
@@ -59,32 +59,32 @@ Definice zkratek:
 
 První šablona funkce vrátí funkci `async(launch::any, fn, args...)`.
 
-Druhá funkce vrátí `future<Ty>` jehož *přidružený asynchronní stav* uchovává výsledek spolu s hodnotami *dfn* a *dargs* a vlákno objekt pro správu samostatného vlákna provádění.
+`future<Ty>` Druhá funkce vrátí objekt, jehož *přidružený asynchronní stav* obsahuje výsledek společně s hodnotami *DFN* a *dargs* a objekt vlákna ke správě samostatného vlákna provádění.
 
 Není-li typ `decay<Fn>::type` jiný typ než spuštění, nebude se druhá funkce účastnit rozlišení přetížení.
 
-C++ standard uvádí, že pokud je zásada launch::async, funkce vytvoří nové vlákno. Ale implementace společnosti Microsoft je aktuálně nonkonformní. Získá podprocesy z fondu podprocesů Windows, což v některých případech může poskytnout recyklován vlákno spíše než nové. To znamená, že `launch::async` zásad je ve skutečnosti implementovat jako `launch::async|launch::deferred`.  Jiné nepřímo provádění na základě fondu vláken je, že neexistuje žádná záruka, že místní proměnné vlákna zničí po dokončení vlákna. Pokud je vlákno recyklaci a k dispozici nové volání na `async`, bude stále existují staré proměnné. Doporučujeme proto, že je velmi riskantní používat místní proměnné vlákna s `async`.
+Standardní C++ stavy, které jsou spuštěny v případě, že je spuštěna zásada:: Async, funkce vytvoří nové vlákno. Implementace Microsoftu ale v tuto chvíli nevyhovuje. Získává svá vlákna z fondu vláken systému Windows, což v některých případech může poskytnout recyklovaný podproces místo nového. To znamená, že `launch::async` zásada je skutečně implementována `launch::async|launch::deferred`jako.  Dalším odvozením implementace založeného na podprocesu je, že není nijak zaručeno, že místní proměnné vlákna budou zničeny po dokončení vlákna. Pokud se vlákno recykluje a poskytne novému volání `async`, staré proměnné budou pořád existovat. Proto doporučujeme, abyste místní proměnné vlákna nepoužívali s `async`.
 
-Pokud *zásady* je `launch::deferred`, označí tato funkce jeho přidružený asynchronní stav jako držení *odložené funkce* a vrátí. První volání jakékoli nečasové funkce, která čeká, až bude související asynchronní stav připraven, v důsledku volá odloženou funkci pomocí vyhodnocení funkce `INVOKE(dfn, dargs..., Ty)`.
+Pokud  je `launch::deferred`zásada, funkce označí svůj přidružený asynchronní stav jako drží odloženou *funkci* a vrátí. První volání jakékoli nečasové funkce, která čeká, až bude související asynchronní stav připraven, v důsledku volá odloženou funkci pomocí vyhodnocení funkce `INVOKE(dfn, dargs..., Ty)`.
 
-Ve všech případech přidružený asynchronní stav `future` není nastaven na *připravené* dokud vyhodnocení funkce `INVOKE(dfn, dargs..., Ty)` dokončení vyvoláním výjimky nebo normálním vrácením. Výsledek přidruženého asynchronního stavu je výjimka, pokud byla nějaká vyvolána, nebo libovolná hodnota, která je vrácena vyhodnocením.
+Ve všech případech není přidružený asynchronní stav `future` objektu nastaven na *připraveno* , `INVOKE(dfn, dargs..., Ty)` dokud se nedokončí vyhodnocení, buď vyvoláním výjimky, nebo vrácením normálně. Výsledek přidruženého asynchronního stavu je výjimka, pokud byla nějaká vyvolána, nebo libovolná hodnota, která je vrácena vyhodnocením.
 
 > [!NOTE]
-> Pro `future`– nebo poslední [shared_future –](../standard-library/shared-future-class.md)–, který je připojen k úloze spuštěné pomocí `std::async`je destruktor blokován, pokud úkol nebyl dokončen, tedy blokuje, pokud toto vlákno dosud nevolalo `.get()` nebo `.wait()` a je stále spuštěn úkol. Pokud je objekt `future` získaný z volání funkce `std::async` přesunut mimo místní rozsah, jiný kód, který jej používá, musí vědět, že jeho destruktor může být blokován, než sdílený stav změní na stav připraven.
+> `.wait()` `std::async` `.get()` [](../standard-library/shared-future-class.md)Pro (nebo poslední shared_future), které jsou připojeny k úloze spuštěné pomocí, destruktor zablokuje, jestli se úloha nedokončila. to znamená, že pokud toto vlákno ještě nevolalo, nebo a úkol je `future` pořád běží. Pokud je objekt `future` získaný z volání funkce `std::async` přesunut mimo místní rozsah, jiný kód, který jej používá, musí vědět, že jeho destruktor může být blokován, než sdílený stav změní na stav připraven.
 
-Pseudofunkce `INVOKE` je definována v [ \<funkční >](../standard-library/functional.md).
+Funkce pseudo-function `INVOKE` je definována ve [ \<funkční >](../standard-library/functional.md).
 
-## <a name="future_category"></a>  future_category –
+## <a name="future_category"></a>future_category
 
-Vrátí odkaz na [error_category](../standard-library/error-category-class.md) objekt, který charakterizuje chyby, které jsou přidružené k `future` objekty.
+Vrátí odkaz na objekt [error_category](../standard-library/error-category-class.md) , který charakterizuje chyby spojené s `future` objekty.
 
 ```cpp
 const error_category& future_category() noexcept;
 ```
 
-## <a name="make_error_code"></a>  make_error_code –
+## <a name="make_error_code"></a>make_error_code
 
-Vytvoří [error_code](../standard-library/error-code-class.md) spolu s [error_category](../standard-library/error-category-class.md) objekt, který charakterizuje [budoucí](../standard-library/future-class.md) chyby.
+Vytvoří [error_code](../standard-library/error-code-class.md) spolu s objektem [error_category](../standard-library/error-category-class.md) , který charakterizuje [budoucí](../standard-library/future-class.md) chyby.
 
 ```cpp
 inline error_code make_error_code(future_errc Errno) noexcept;
@@ -92,16 +92,16 @@ inline error_code make_error_code(future_errc Errno) noexcept;
 
 ### <a name="parameters"></a>Parametry
 
-*Errno*<br/>
-A [future_errc](../standard-library/future-enums.md#future_errc) hodnotu, která identifikuje ohlášenou chybu.
+*Errno*\
+Hodnota [future_errc](../standard-library/future-enums.md#future_errc) , která identifikuje oznámenou chybu.
 
 ### <a name="return-value"></a>Návratová hodnota
 
 `error_code(static_cast<int>(Errno), future_category());`
 
-## <a name="make_error_condition"></a>  make_error_condition
+## <a name="make_error_condition"></a>make_error_condition
 
-Vytvoří [error_condition –](../standard-library/error-condition-class.md) spolu s [error_category](../standard-library/error-category-class.md) objekt, který charakterizuje [budoucí](../standard-library/future-class.md) chyby.
+Vytvoří [error_condition](../standard-library/error-condition-class.md) spolu s objektem [error_category](../standard-library/error-category-class.md) , který charakterizuje [budoucí](../standard-library/future-class.md) chyby.
 
 ```cpp
 inline error_condition make_error_condition(future_errc Errno) noexcept;
@@ -109,16 +109,16 @@ inline error_condition make_error_condition(future_errc Errno) noexcept;
 
 ### <a name="parameters"></a>Parametry
 
-*Errno*<br/>
-A [future_errc](../standard-library/future-enums.md#future_errc) hodnotu, která identifikuje ohlášenou chybu.
+*Errno*\
+Hodnota [future_errc](../standard-library/future-enums.md#future_errc) , která identifikuje oznámenou chybu.
 
 ### <a name="return-value"></a>Návratová hodnota
 
 `error_condition(static_cast<int>(Errno), future_category());`
 
-## <a name="swap"></a>  Prohození
+## <a name="swap"></a>adresu
 
-Výměna *přidružený asynchronní stav* jednoho `promise` objektu z jiného.
+Vyměňuje *přidružený asynchronní stav* jednoho `promise` objektu s jiným objektem.
 
 ```cpp
 template <class Ty>
@@ -130,12 +130,12 @@ void swap(packaged_task<Ty(ArgTypes...)>& Left, packaged_task<Ty(ArgTypes...)>& 
 
 ### <a name="parameters"></a>Parametry
 
-*doleva*<br/>
-Levé straně `promise` objektu.
+*Zbývá*\
+Levý `promise` objekt
 
-*doprava*<br/>
-Vpravo `promise` objektu.
+*Kliknutím*\
+Pravý `promise` objekt.
 
 ## <a name="see-also"></a>Viz také:
 
-[\<Další >](../standard-library/future.md)<br/>
+[\<budoucí >](../standard-library/future.md)

@@ -86,16 +86,16 @@ helpviewer_keywords:
 - std::multimap [C++], upper_bound
 - std::multimap [C++], value_comp
 ms.assetid: 8796ae05-37c4-475a-9e61-75fde9d4a463
-ms.openlocfilehash: caffa84052f774803b92730f7906bf53cb3c824a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e78997745ca1fae740b1ee2de2b29f1fa22a954b
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62348364"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68448459"
 ---
 # <a name="multimap-class"></a>multimap – třída
 
-Multimap – třída standardní knihovny C++ se používá pro ukládání a načítání dat z kolekce, ve kterém je každý prvek pár, který má datovou hodnotu a klíč řazení. Hodnota klíče nemusí být jedinečná a je použita k automatickému seřazení dat. Hodnotu prvku v objektu multimap, ale ne jeho přidruženou hodnotu klíče, lze změnit přímo. Namísto toho hodnoty klíčů přidružené ke starým prvkům musí být odstraněny a vloženy nové hodnoty klíče související s novými prvky.
+C++ Standardní knihovna multimap třída se používá pro ukládání a načítání dat z kolekce, ve které je každý prvek dvojice, která má hodnotu dat i klíč řazení. Hodnota klíče nemusí být jedinečná a je použita k automatickému seřazení dat. Hodnotu prvku v objektu multimap, ale ne jeho přidruženou hodnotu klíče, lze změnit přímo. Namísto toho hodnoty klíčů přidružené ke starým prvkům musí být odstraněny a vloženy nové hodnoty klíče související s novými prvky.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -109,23 +109,23 @@ class multimap;
 
 ### <a name="parameters"></a>Parametry
 
-*Key*<br/>
+*Zkrat*\
 Datový typ klíče, který se uloží v objektu multimap.
 
-*Typ*<br/>
+*Textový*\
 Typ dat prvku, který bude uložen do objektu multimap.
 
-*Osobnostní rysy*<br/>
+*Traits*\
 Typ poskytující objekt funkce, který může porovnat dvě hodnoty prvků pro určení jejich relativního pořadí v objektu multimap. Binární predikát `less<Key>` je výchozí hodnota.
 
-V C ++ 14 můžete povolit heterogenní vyhledávání tak, že zadáte `std::less<>` nebo `std::greater<>` predikát, který nemá žádné parametry typu. Další informace najdete v tématu [heterogenní vyhledávání v asociativních kontejnerech](../standard-library/stl-containers.md#heterogeneous-lookup-in-associative-containers-c14)
+V jazyce c++ 14 můžete povolit heterogenní vyhledávání zadáním `std::less<>` predikátu nebo `std::greater<>` , který nemá žádné parametry typu. Další informace najdete v tématu [heterogenní vyhledávání v asociativních kontejnerech](../standard-library/stl-containers.md#heterogeneous-lookup-in-associative-containers-c14) .
 
-*Allocator –*<br/>
-Typ představující uložený objekt alokátoru, který zapouzdřuje informace o přidělování a navrácení paměti zpět objektu map. Tento argument je nepovinný a výchozí hodnota je `allocator<pair <const Key, Type> >`.
+*Dělující*\
+Typ představující uložený objekt alokátoru, který zapouzdřuje informace o přidělování a navrácení paměti zpět objektu map. Tento argument je nepovinný a výchozí hodnota `allocator<pair <const Key, Type> >`je.
 
 ## <a name="remarks"></a>Poznámky
 
-Standardní knihovny C++, který je multimap – třída
+Třída C++ multimap standardní knihovny je
 
 - Asociativní kontejner, což je kontejner proměnné velikosti, který podporuje efektivní načtení hodnoty prvku založené na přiřazené hodnotě klíče.
 
@@ -139,15 +139,15 @@ Standardní knihovny C++, který je multimap – třída
 
 - Třída šablony, protože poskytuje obecné funkce a to nezávisle na určitém typu dat obsažených jako prvky nebo klíče. Datové typy použité pro prvky a klíče jsou místo toho zadány jako parametry v šabloně třídy společně s funkcí porovnání a alokátorem.
 
-Iterátor poskytovaný třídou map je obousměrný iterátor, ale členské funkce třídy [vložit](#insert) a [multimap](#multimap) mají verze, které jako parametry šablony berou slabší vstupní iterátor, jehož požadavky na funkce jsou minimálnější než ty zaručeny třídou obousměrných iterátorů. Různé koncepty iterátorů tvoří rodinu týkající se upřesnění jejich funkčnosti. Každý koncept iterátoru má vlastní sadu požadavků a algoritmy, které s nimi pracují, musí omezit jejich předpoklady na požadavky podle typu iterátoru. Lze předpokládat, že ke vstupnímu iterátoru lze přistoupit přes ukazatel pro odkazování na některý objekt a že může být zvýšen na další iterátor v pořadí. Toto je minimální sada funkcí, ale je dostatečná pro srozumitelnou komunikaci o rozsahu u iterátorů `[First, Last)` v rámci členských funkcí třídy.
+Iterátor poskytovaný třídou map je obousměrný iterátor, ale funkce členských funkcí [INSERT](#insert) a [multimap](#multimap) mají verze, které přebírají jako parametry šablony slabší vstupní iterátor, jehož požadavky na funkce jsou více minimální. než jsou zaručené třídou Obousměrných iterátorů. Různé koncepty iterátorů tvoří rodinu týkající se upřesnění jejich funkčnosti. Každý koncept iterátoru má vlastní sadu požadavků a algoritmy, které s nimi pracují, musí omezit jejich předpoklady na požadavky podle typu iterátoru. Lze předpokládat, že ke vstupnímu iterátoru lze přistoupit přes ukazatel pro odkazování na některý objekt a že může být zvýšen na další iterátor v pořadí. Toto je minimální sada funkcí, ale je dostatečná pro to, aby bylo možné mluvit smysluplně o rozsahu iterátorů `[First, Last)` v kontextu členských funkcí třídy.
 
 Volba typu kontejneru by měla obecně vycházet z typu vyhledávání a vkládání vyžadovaného aplikací. Asociativní kontejnery jsou optimalizovány pro operace vyhledávání, vkládání a odstranění. Členské funkce, které explicitně podporují tyto operace, jsou efektivní a jsou prováděny v čase, který je průměrně úměrný logaritmu počtu prvků v kontejneru. Vkládání prvků nezruší platnost žádných iterátorů a odstranění prvků zruší platnost pouze těch iterátorů, které výslovně odkazovaly na odstraněné prvky.
 
 Objekt multimap by měl být asociativní kontejner dle výběru, kdy jsou podmínky přiřazení hodnot k jejich klíčům splněny aplikací. Model pro tento typ struktury je uspořádaný seznam klíčových slov s přidruženými řetězcovými hodnotami poskytujícími (řekněme) definice, kde slova nebyla vždy jednoznačně definována. Pokud místo toho klíčová slova byla jedinečně definovaná tak, aby byly klíče jedinečné, bude objekt map správným kontejnerem výběru. Naopak pokud je pouze uložen seznam slov, bude objekt set tím správným kontejnerem. Pokud bylo povoleno více výskytů jednoho slova, je objekt multiset odpovídající strukturou kontejneru.
 
-Třída multimap seřadí sekvence pomocí volání uloženého objektu funkce typu [key_compare](#key_compare). Tento uložený objekt je funkce porovnání, která může získat přístup k voláním členské funkce [key_comp](#key_comp). Obecně, tyto prvky musí být menší než srovnatelné pro toto pořadí, což znamená, že když jsou uvedeny dva prvky, může být stanoveno, zda jsou ekvivalentní (v tom smyslu, že ani jeden není menší než ten druhý), nebo že jeden je menší než druhý. To má za výsledek řazení mezi neekvivalentními prvky. Technicky je funkce porovnání binárním predikátem, který indukuje přísné slabé řazení, standardním matematickým způsobem. Binární predikát `f(x,y)` je objekt funkce, který má dva objekty argumentu `x` a `y` a návratovou hodnotu true nebo false. Na sadě je přísné slabé seřazení, pokud je binární predikát Nereflexivní, antisymetrický a tranzitivní a je-li ekvivalence tranzitivní, kde dva objekty `x` a `y` jsou definovány jako ekvivalentní, když oba `f(x,y)`a `f(y,x)` jsou false. Pokud silnější podmínka rovnosti mezi klíči nahradí ekvivalenci, stane se pořadí celkovým (v tom smyslu, že všechny prvky jsou uspořádány ve vztahu k sobě navzájem) a odpovídající klíče budou od sebe nerozeznatelné.
+Multimap objedná sekvenci, kterou řídí, voláním uloženého objektu funkce typu [key_compare](#key_compare). Tento uložený objekt je funkce porovnání, ke které může být přistup voláním členské funkce [key_comp](#key_comp). Obecně, tyto prvky musí být menší než srovnatelné pro toto pořadí, což znamená, že když jsou uvedeny dva prvky, může být stanoveno, zda jsou ekvivalentní (v tom smyslu, že ani jeden není menší než ten druhý), nebo že jeden je menší než druhý. To má za výsledek řazení mezi neekvivalentními prvky. Technicky je funkce porovnání binárním predikátem, který indukuje přísné slabé řazení, standardním matematickým způsobem. Binární predikát `f(x,y)` je objekt funkce, který má dva objekty `x` argumentu a `y` a návratovou hodnotu true nebo false. Řazení uložené na objektu set je přísné slabé řazení, pokud je binární predikát Nereflexivní, antisymetrický a tranzitivní a je-li ekvivalence tranzitivní, kde jsou dva `x` objekty `y` a jsou definovány tak, aby byly rovnocenné `f(x,y)`. a`f(y,x)` jsou nepravdivé. Pokud silnější podmínka rovnosti mezi klíči nahradí ekvivalenci, stane se pořadí celkovým (v tom smyslu, že všechny prvky jsou uspořádány ve vztahu k sobě navzájem) a odpovídající klíče budou od sebe nerozeznatelné.
 
-V C ++ 14 můžete povolit heterogenní vyhledávání tak, že zadáte `std::less<>` nebo `std::greater<>` predikát, který nemá žádné parametry typu. Další informace najdete v tématu [heterogenní vyhledávání v asociativních kontejnerech](../standard-library/stl-containers.md#sequence_containers)
+V jazyce c++ 14 můžete povolit heterogenní vyhledávání zadáním `std::less<>` predikátu nebo `std::greater<>` , který nemá žádné parametry typu. Další informace najdete v tématu [heterogenní vyhledávání v asociativních kontejnerech](../standard-library/stl-containers.md#sequence_containers) .
 
 ## <a name="members"></a>Členové
 
@@ -155,75 +155,75 @@ V C ++ 14 můžete povolit heterogenní vyhledávání tak, že zadáte `std::le
 
 |Konstruktor|Popis|
 |-|-|
-|[multimap](#multimap)|Vytvoří `multimap` , který je prázdný nebo, který je kopií celého nebo části některého jiného `multimap`.|
+|[multimap](#multimap)|Vytvoří objekt `multimap` , který je prázdný nebo který je kopií všech nebo částí jiného `multimap`.|
 
 ### <a name="typedefs"></a>Typedefs
 
 |Název typu|Popis|
 |-|-|
-|[allocator_type](#allocator_type)|Typ, který představuje `allocator` třídy pro `multimap` objektu.|
-|[const_iterator](#const_iterator)|Typ, který poskytuje obousměrný iterátor, který může číst **const** prvek `multimap`.|
-|[const_pointer](#const_pointer)|Typ, který poskytuje ukazatel na **const** prvek `multimap`.|
-|[const_reference](#const_reference)|Typ, který poskytuje odkaz na **const** element uložené v `multimap` pro čtení a provádění **const** operace.|
-|[const_reverse_iterator](#const_reverse_iterator)|Typ, který poskytuje obousměrný iterátor, který může přečíst jakýkoli **const** prvek `multimap`.|
-|[difference_type](#difference_type)|Celočíselný typ se znaménkem, který slouží k vyjádření počtu prvků `multimap` v rozsahu mezi prvky, na které odkazují iterátory.|
-|[iterator](#iterator)|Typ, který obsahuje rozdíl mezi dvěma iterátory, které odkazují na prvky v rámci stejného `multimap`.|
-|[key_compare](#key_compare)|Typ poskytující objekt funkce, který může porovnat dva klíče řazení pro určení relativního pořadí dvou prvků v `multimap`.|
-|[key_type](#key_type)|Typ, který popisuje řazení objektu klíče, který představuje každý prvek objektu `multimap`.|
-|[mapped_type](#mapped_type)|Typ, který představuje typ dat uložených v `multimap`.|
-|[pointer](#pointer)|Typ, který poskytuje ukazatel na **const** prvek `multimap`.|
+|[allocator_type](#allocator_type)|Typ, který představuje `allocator` třídu `multimap` pro objekt.|
+|[const_iterator](#const_iterator)|Typ, který poskytuje obousměrný iterátor, který může číst prvek **const** v `multimap`.|
+|[const_pointer](#const_pointer)|Typ, který poskytuje ukazatel na prvek const v.  `multimap`|
+|[const_reference](#const_reference)|Typ, který poskytuje odkaz na prvek **const** uložený v a `multimap` pro čtení a provádění operací **const** .|
+|[const_reverse_iterator](#const_reverse_iterator)|Typ, který poskytuje obousměrný iterátor, který může číst libovolný  element const v `multimap`.|
+|[difference_type](#difference_type)|Typ se znaménkem typu Integer, který lze použít k reprezentaci počtu prvků `multimap` v rozsahu mezi prvky, na které odkazují iterátory.|
+|[iterator](#iterator)|Typ, který poskytuje rozdíl mezi dvěma iterátory, které odkazují na prvky v rámci stejné `multimap`.|
+|[key_compare](#key_compare)|Typ, který poskytuje objekt funkce, který může porovnat dva klíče řazení pro určení relativního pořadí dvou prvků v `multimap`.|
+|[key_type](#key_type)|Typ, který popisuje objekt klíče řazení, který představuje jednotlivé prvky `multimap`.|
+|[mapped_type](#mapped_type)|Typ, který představuje datový typ uložený v `multimap`.|
+|[pointer](#pointer)|Typ, který poskytuje ukazatel na prvek const v.  `multimap`|
 |[Referenční dokumentace](#reference)|Typ, který poskytuje odkaz na prvek uložený v `multimap`.|
-|[reverse_iterator](#reverse_iterator)|Typ, který poskytuje obousměrný iterátor, který může číst nebo upravovat prvek v obráceném objektu `multimap`.|
-|[size_type](#size_type)|Který poskytuje ukazatel na typ unsigned integer **const** prvek `multimap`.|
-|[value_type](#value_type)|Typ poskytující objekt funkce, který může porovnat dva prvky jako klíče řazení pro určení jejich relativního pořadí v `multimap`.|
+|[reverse_iterator](#reverse_iterator)|Typ, který poskytuje obousměrný iterátor, který může číst nebo upravovat prvek v obráceném pořadí `multimap`.|
+|[size_type](#size_type)|Typ unsigned integer, který poskytuje ukazatel na prvek const v.  `multimap`|
+|[value_type](#value_type)|Typ, který poskytuje objekt funkce, který může porovnat dva prvky jako klíče řazení pro určení jejich relativního pořadí v `multimap`.|
 
 ### <a name="member-functions"></a>Členské funkce
 
 |Členská funkce|Popis|
 |-|-|
-|[začít](#begin)|Vrátí iterátor adresující první prvek `multimap`.|
-|[cbegin](#cbegin)|Vrátí konstantní iterátor adresující první prvek `multimap`.|
-|[cend](#cend)|Vrátí konstantní iterátor adresující umístění následující po posledním prvku v `multimap`.|
-|[clear](#clear)|Vymaže všechny prvky `multimap`.|
-|[Počet](#count)|Vrátí počet prvků v `multimap` jejichž klíč odpovídá klíči se zadaným parametrem.|
-|[crbegin](#crbegin)|Vrátí konstantní iterátor adresující první prvek v obráceném objektu `multimap`.|
-|[crend](#crend)|Vrátí konstantní iterátor adresující umístění následující po posledním prvku v obráceném objektu `multimap`.|
-|[emplace](#emplace)|Vloží vytvořený prvek na místo do `multimap`.|
-|[emplace_hint](#emplace_hint)|Vloží vytvořený prvek na místo do `multimap`, s náznakem umístění|
-|[prázdný](#empty)|Testuje, zda `multimap` je prázdný.|
-|[ukončení](#end)|Vrátí iterátor adresující umístění následující po posledním prvku v `multimap`.|
+|[ifunctiondiscovery](#begin)|Vrátí iterátor adresující první prvek v `multimap`.|
+|[cbegin](#cbegin)|Vrátí konstantní iterátor adresující první prvek v `multimap`.|
+|[cend](#cend)|Vrátí konstantní iterátor, který adresuje umístění následující po posledním prvku v `multimap`.|
+|[jejich](#clear)|Smaže všechny prvky `multimap`.|
+|[výpočtu](#count)|Vrátí počet prvků, `multimap` jejichž klíč odpovídá klíči určenému parametrem.|
+|[crbegin](#crbegin)|Vrátí konstantní iterátor adresující první prvek v obráceném pořadí `multimap`.|
+|[crend](#crend)|Vrátí konstantní iterátor, který adresuje umístění následující po posledním prvku v obráceném pořadí `multimap`.|
+|[emplace](#emplace)|Vloží prvek konstruovaný na místo `multimap`.|
+|[emplace_hint](#emplace_hint)|Vloží element konstruovaný do a `multimap`s pomocným parametrem umístění.|
+|[empty](#empty)|Testuje, zda `multimap` je objekt prázdný.|
+|[účelu](#end)|Vrátí iterátor, který adresuje umístění následující po posledním prvku v `multimap`.|
 |[equal_range](#equal_range)|Vyhledá rozsahu prvků, kde klíče prvku odpovídají zadané hodnotě.|
-|[vymazání](#erase)|Odebere prvek nebo rozsah prvků `multimap` od zadané pozice nebo odebere prvky, které odpovídají zadanému klíči.|
-|[Najít](#find)|Vrátí iterátor adresující první umístění prvku v `multimap` , který má klíč odpovídající zadanému klíči.|
-|[get_allocator](#get_allocator)|Vrátí kopii objektu `allocator` objekt použitý k vytvoření `multimap`.|
-|[Vložit](#insert)|Vloží prvek nebo rozsah prvků do `multimap`.|
-|[key_comp](#key_comp)|Získá kopii objektu porovnání použitého pro seřazení klíčů v `multimap`.|
-|[lower_bound –](#lower_bound)|Vrátí iterátor na první prvek v `multimap` s klíčem, který je roven nebo větší než zadaný klíč.|
-|[max_size](#max_size)|Vrátí maximální délku objektu `multimap`.|
-|[rbegin](#rbegin)|Vrátí iterátor adresující první prvek v obráceném objektu `multimap`.|
-|[rend –](#rend)|Vrátí iterátor adresující umístění následující po posledním prvku v obráceném objektu `multimap`.|
-|[Velikost](#size)|Vrátí počet prvků v `multimap`.|
-|[swap](#swap)|Vymění prvky dvou `multimap`s.|
-|[upper_bound](#upper_bound)|Vrátí iterátor na první prvek v `multimap` s klíčem, který je větší než zadaný klíč.|
-|[value_comp](#value_comp)|Členská funkce vrátí objekt funkce, která určuje pořadí prvků v `multimap` porovnáním jejich hodnoty klíče.|
+|[ověřování](#erase)|Odebere prvek nebo rozsah prvků v `multimap` zadané pozici nebo odstraní prvky, které odpovídají zadanému klíči.|
+|[najít](#find)|Vrátí iterátor adresující první umístění elementu v `multimap` , který má klíč odpovídající zadanému klíči.|
+|[get_allocator](#get_allocator)|Vrátí kopii `allocator` objektu použitou k `multimap`vytvoření.|
+|[zadat](#insert)|Vloží prvek nebo rozsah prvků do `multimap`.|
+|[key_comp](#key_comp)|Načte kopii objektu porovnání, která se používá k řazení klíčů v `multimap`.|
+|[lower_bound](#lower_bound)|Vrátí iterátor na první prvek v `multimap` objektu, který má klíč, který je roven nebo větší než zadaný klíč.|
+|[max_size](#max_size)|Vrátí maximální délku `multimap`.|
+|[rbegin](#rbegin)|Vrátí iterátor adresující první prvek v obráceném pořadí `multimap`.|
+|[rend](#rend)|Vrátí iterátor, který adresuje umístění následující po posledním prvku v obráceném pořadí `multimap`.|
+|[hodnota](#size)|Vrátí počet prvků v `multimap`.|
+|[swap](#swap)|Vyměňuje prvky dvou `multimap`s.|
+|[upper_bound](#upper_bound)|Vrátí iterátor na první prvek v `multimap` objektu, který má klíč, který je větší než zadaný klíč.|
+|[value_comp](#value_comp)|Členská funkce vrátí objekt funkce, který určuje pořadí prvků v `multimap` porovnání s jejich klíčovými hodnotami.|
 
 ### <a name="operators"></a>Operátory
 
 |Operátor|Popis|
 |-|-|
-|[operátor =](#op_eq)|Nahradí prvky objektu `multimap` s kopií jiného `multimap`.|
+|[operátor =](#op_eq)|Nahradí prvky a `multimap` jinou `multimap`kopií.|
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** \<mapy >
+**Hlavička:** \<mapování >
 
-**Namespace:** std
+**Obor názvů:** std
 
-( **Klíč**, **hodnotu**) páry se ukládají v objektech multimap jako objekty typu `pair`. Třída pair vyžaduje hlavičku \<nástroje >, která je automaticky zahrnut objektem \<map >.
+Páry ( **klíč**, **hodnota**) jsou uloženy ve multimap jako objekty typu `pair`. Třída párové vyžaduje nástroj Header \<>, který je automaticky \<zahrnutý > mapy.
 
-## <a name="allocator_type"></a>  multimap::allocator_type
+## <a name="allocator_type"></a>multimap:: allocator_type
 
-Typ, který představuje třídu alokátoru pro objekt multimap.
+Typ, který představuje třídu přidělování pro objekt multimap.
 
 ```cpp
 typedef Allocator allocator_type;
@@ -231,11 +231,11 @@ typedef Allocator allocator_type;
 
 ### <a name="example"></a>Příklad
 
-Podívejte se na příklad pro [get_allocator](#get_allocator) příklad použití `allocator_type`.
+Příklad použití `allocator_type`naleznete v příkladu pro [get_allocator](#get_allocator) .
 
-## <a name="begin"></a>  multimap::begin
+## <a name="begin"></a>multimap:: begin
 
-Vrátí iterátor adresující první prvek v objektu multimap.
+Vrátí iterátor adresující první prvek v multimap.
 
 ```cpp
 const_iterator begin() const;
@@ -245,7 +245,7 @@ iterator begin();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Obousměrný iterátor adresující první prvek v objektu multimap nebo umístění následující po prázdný objektu multimap.
+Obousměrný iterátor, který adresuje první prvek v multimap nebo umístění, které je úspěšné pro prázdné multimap.
 
 ### <a name="example"></a>Příklad
 
@@ -288,9 +288,9 @@ The first element of m1 is 0
 First element of m1 is now 1
 ```
 
-## <a name="cbegin"></a>  multimap::cbegin
+## <a name="cbegin"></a>multimap:: cbegin
 
-Vrátí **const** iterátor adresující první prvek v rozsahu.
+Vrátí **konstantní** iterátor, který adresuje první prvek v rozsahu.
 
 ```cpp
 const_iterator cbegin() const;
@@ -298,13 +298,13 @@ const_iterator cbegin() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-A **const** iterátor s obousměrným přístupem, který ukazuje na první prvek rozsahu nebo na umístění hned za koncem prázdného rozsahu (pro prázdný rozsah `cbegin() == cend()`).
+Iterátor  s obousměrným přístupem const, který odkazuje na první prvek rozsahu nebo umístění hned za konec prázdného rozsahu (pro prázdný rozsah `cbegin() == cend()`).
 
 ### <a name="remarks"></a>Poznámky
 
-S návratovou hodnotou `cbegin`, nejde upravit prvky v rozsahu.
+V případě návratové hodnoty `cbegin`nelze prvky v rozsahu upravovat.
 
-Můžete použít tuto členskou funkci místo `begin()` členskou funkci pro zajištění, že návratová hodnota je `const_iterator`. Obvykle se používá ve spojení s [automaticky](../cpp/auto-cpp.md) zadejte klíčovým slovem odvození, jak je znázorněno v následujícím příkladu. V tomto příkladu zvažte `Container` jako upravitelný (jinou hodnotu než **const**) kontejner jakéhokoli druhu, který podporuje `begin()` a `cbegin()`.
+Tuto členskou funkci můžete použít místo `begin()` členské funkce k zajištění, že návratová hodnota je. `const_iterator` Obvykle se používá ve spojení s klíčovým slovem srážky typu [auto](../cpp/auto-cpp.md) , jak je znázorněno v následujícím příkladu. `Container` V příkladu zvažte, že se jedná o upravitelný kontejner (nekonstantní) jakýkoli druh, který podporuje `begin()` a. `cbegin()`
 
 ```cpp
 auto i1 = Container.begin();
@@ -314,9 +314,9 @@ auto i2 = Container.cbegin();
 // i2 is Container<T>::const_iterator
 ```
 
-## <a name="cend"></a>  multimap::cend
+## <a name="cend"></a>multimap:: cend
 
-Vrátí **const** iterátor adresující umístění hned za posledním prvkem v rozsahu.
+Vrátí **konstantní** iterátor, který adresuje umístění hned za poslední prvek v rozsahu.
 
 ```cpp
 const_iterator cend() const;
@@ -324,13 +324,13 @@ const_iterator cend() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-A **const** iterátor s obousměrným přístupem, který ukazuje přesně za konec rozsahu.
+Iterátor  s obousměrným přístupem const, který odkazuje hned za konec rozsahu.
 
 ### <a name="remarks"></a>Poznámky
 
-`cend` slouží k otestování, zda iterátor prošel konec rozsahu.
+`cend`slouží k otestování, zda iterátor prošl na konci rozsahu.
 
-Můžete použít tuto členskou funkci místo `end()` členskou funkci pro zajištění, že návratová hodnota je `const_iterator`. Obvykle se používá ve spojení s [automaticky](../cpp/auto-cpp.md) zadejte klíčovým slovem odvození, jak je znázorněno v následujícím příkladu. V tomto příkladu zvažte `Container` jako upravitelný (jinou hodnotu než **const**) kontejner jakéhokoli druhu, který podporuje `end()` a `cend()`.
+Tuto členskou funkci můžete použít místo `end()` členské funkce k zajištění, že návratová hodnota je. `const_iterator` Obvykle se používá ve spojení s klíčovým slovem srážky typu [auto](../cpp/auto-cpp.md) , jak je znázorněno v následujícím příkladu. `Container` V příkladu zvažte, že se jedná o upravitelný kontejner (nekonstantní) jakýkoli druh, který podporuje `end()` a. `cend()`
 
 ```cpp
 auto i1 = Container.end();
@@ -340,11 +340,11 @@ auto i2 = Container.cend();
 // i2 is Container<T>::const_iterator
 ```
 
-Hodnota vrácená `cend` by neměla být dereferencována.
+Hodnota vrácená `cend` by neměla být zpětně odkazovaná.
 
-## <a name="clear"></a>  multimap::clear
+## <a name="clear"></a>multimap:: Clear
 
-Odstraní všechny prvky objektu multimap.
+Smaže všechny prvky multimap.
 
 ```cpp
 void clear();
@@ -352,7 +352,7 @@ void clear();
 
 ### <a name="example"></a>Příklad
 
-Následující příklad ukazuje použití multimap::clear členskou funkci.
+Následující příklad ukazuje použití členské funkce multimap:: Clear.
 
 ```cpp
 // multimap_clear.cpp
@@ -386,9 +386,9 @@ The size of the multimap is initially 2.
 The size of the multimap after clearing is 0.
 ```
 
-## <a name="const_iterator"></a>  multimap::const_iterator
+## <a name="const_iterator"></a>multimap:: const_iterator
 
-Typ, který poskytuje obousměrný iterátor, který může číst **const** prvek v objektu multimap.
+Typ, který poskytuje obousměrný iterátor, který může číst prvek **const** v multimap.
 
 ```cpp
 typedef implementation-defined const_iterator;
@@ -396,21 +396,21 @@ typedef implementation-defined const_iterator;
 
 ### <a name="remarks"></a>Poznámky
 
-Typ `const_iterator` nelze použít ke změně hodnoty prvku.
+Typ `const_iterator` nelze použít pro úpravu hodnoty prvku.
 
-`const_iterator` Určené multimap – odkazuje na objekty [value_type](#value_type), které jsou typu `pair<const Key, Type>`. Hodnota klíče je k dispozici prostřednictvím první pár členů, hodnota elementu pro mapovanou je k dispozici druhý člen, které odpovídá páru licencí.
+Definice multimap odkazuje na objekty [value_type](#value_type), které jsou typu `pair<const Key, Type>`. `const_iterator` Hodnota klíče je k dispozici prostřednictvím prvního páru členů a hodnota mapovaného prvku je k dispozici prostřednictvím druhého člena dvojice.
 
-Ke zrušení `const_iterator` *cIter* odkazující na prvek v objektu multimap, použijte **->** operátor.
+Chcete-li odkázat `const_iterator` na *citaci* ukazatel ukazující na prvek v **->** multimap, použijte operátor.
 
-Chcete-li přistupovat k hodnotě klíče pro element, použijte `cIter->first`, což je totéž jako `(*cIter).first`. Chcete-li získat přístup k hodnotě z namapované datum pro element, použijte `cIter->second`, což je totéž jako `(*cIter).second`.
+Chcete-li získat přístup k hodnotě klíče pro element, použijte `cIter->first`, který je `(*cIter).first`ekvivalentní. Pro přístup k hodnotě mapovaného pro datum elementu použijte `cIter->second`, který je `(*cIter).second`ekvivalentní.
 
 ### <a name="example"></a>Příklad
 
-Podívejte se na příklad pro [začít](#begin) příklad použití `const_iterator`.
+Podívejte se na příklad pro [začátek](#begin) příkladu pomocí `const_iterator`.
 
-## <a name="const_pointer"></a>  multimap::const_pointer
+## <a name="const_pointer"></a>multimap:: const_pointer
 
-Typ, který poskytuje ukazatel **const** prvek v objektu multimap.
+Typ, který poskytuje ukazatel na prvek **const** v multimap.
 
 ```cpp
 typedef typename allocator_type::const_pointer const_pointer;
@@ -418,13 +418,13 @@ typedef typename allocator_type::const_pointer const_pointer;
 
 ### <a name="remarks"></a>Poznámky
 
-Typ `const_pointer` nelze použít ke změně hodnoty prvku.
+Typ `const_pointer` nelze použít pro úpravu hodnoty prvku.
 
-Ve většině případů [iterátoru](#iterator) by měla sloužit pro přístup k prvkům v objektu multimap.
+Ve většině případů by měl být použit [iterátor](#iterator) pro přístup k prvkům v objektu multimap.
 
-## <a name="const_reference"></a>  multimap::const_reference
+## <a name="const_reference"></a>multimap:: const_reference
 
-Typ, který poskytuje odkaz na **const** prvek uložený v objektu multimap pro čtení a provádění **const** operace.
+Typ, který poskytuje odkaz na prvek **const** uložený v multimap pro čtení a provádění operací **const** .
 
 ```cpp
 typedef typename allocator_type::const_reference const_reference;
@@ -472,9 +472,9 @@ The key of the first element in the multimap is 1.
 The data value of the first element in the multimap is 10.
 ```
 
-## <a name="const_reverse_iterator"></a>  multimap::const_reverse_iterator
+## <a name="const_reverse_iterator"></a>multimap:: const_reverse_iterator
 
-Typ, který poskytuje obousměrný iterátor, který může přečíst jakýkoli **const** prvek v objektu multimap.
+Typ, který poskytuje obousměrný iterátor, který může číst libovolný  element const v multimap.
 
 ```cpp
 typedef std::reverse_iterator<const_iterator> const_reverse_iterator;
@@ -482,21 +482,21 @@ typedef std::reverse_iterator<const_iterator> const_reverse_iterator;
 
 ### <a name="remarks"></a>Poznámky
 
-Typ `const_reverse_iterator` hodnotu prvku nelze změnit a použít k iteraci v rámci objektu multimap, v opačném pořadí.
+Typ `const_reverse_iterator` nemůže změnit hodnotu prvku a použít k iteraci přes multimap v obráceném pořadí.
 
-`const_reverse_iterator` Určené multimap – odkazuje na objekty [value_type](#value_type), které jsou typu `pair<const Key, Type>`. Hodnota klíče je k dispozici prostřednictvím první pár členů, hodnota elementu pro mapovanou je k dispozici druhý člen, které odpovídá páru licencí.
+Definice multimap odkazuje na objekty [value_type](#value_type), které jsou typu `pair<const Key, Type>`. `const_reverse_iterator` Hodnota klíče je k dispozici prostřednictvím prvního páru členů a hodnota mapovaného prvku je k dispozici prostřednictvím druhého člena dvojice.
 
-Ke zrušení `const_reverse_iterator` *crIter* odkazující na prvek v objektu multimap, použijte **->** operátor.
+Chcete-li odkázat `const_reverse_iterator` na *crIter* ukazující na prvek v **->** multimap, použijte operátor.
 
-Chcete-li přistupovat k hodnotě klíče pro element, použijte `crIter->first`, což je totéž jako `(*crIter).first`. Chcete-li získat přístup k hodnotě z namapované datum pro element, použijte `crIter->second`, což je totéž jako `(*crIter).first`.
+Chcete-li získat přístup k hodnotě klíče pro element, použijte `crIter->first`, který je `(*crIter).first`ekvivalentní. Pro přístup k hodnotě mapovaného pro datum elementu použijte `crIter->second`, který je `(*crIter).first`ekvivalentní.
 
 ### <a name="example"></a>Příklad
 
-Podívejte se na příklad pro [rend](#rend) příklad toho, jak deklarace a používání `const_reverse_iterator`.
+Příklad, jak deklarovat [](#rend) a používat `const_reverse_iterator`, naleznete v příkladu pro rend.
 
-## <a name="count"></a>  multimap::Count
+## <a name="count"></a>multimap:: Count
 
-Vrátí počet prvků v objektu multimap klíči odpovídá klíči se zadaným parametrem.
+Vrátí počet prvků v multimap, jejichž klíče odpovídají klíči zadanému parametru.
 
 ```cpp
 size_type count(const Key& key) const;
@@ -504,24 +504,24 @@ size_type count(const Key& key) const;
 
 ### <a name="parameters"></a>Parametry
 
-*key*<br/>
-Klíč prvky, které mají být odpovídat z objektu multimap.
+*zkrat*\
+Klíč prvků, které mají být porovnány s multimap.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Počet prvků, jejichž klíče řazení odpovídat klíč parametru; 0, pokud objektu multimap neobsahuje prvek s odpovídajícím klíčem.
+Počet elementů, jejichž klíče řazení odpovídají klíči parametru; 0, pokud multimap neobsahuje element se shodným klíčem.
 
 ### <a name="remarks"></a>Poznámky
 
-Členská funkce vrátí počet prvků v rozsahu
+Členská funkce vrátí počet prvků v rozsahu.
 
-\[ lower_bound (*klíč*), upper_bound (*klíč*))
+\[lower_bound (*klíč*); Upper_bound (*klíč*))
 
-které mají hodnotu klíče *klíč*.
+obsahující *klíč*hodnoty klíče.
 
 ### <a name="example"></a>Příklad
 
-Následující příklad ukazuje použití multimap::count členskou funkci.
+Následující příklad ukazuje použití členské funkce multimap:: Count.
 
 ```cpp
 // multimap_count.cpp
@@ -563,9 +563,9 @@ The number of elements in m1 with a sort key of 2 is: 2.
 The number of elements in m1 with a sort key of 3 is: 0.
 ```
 
-## <a name="crbegin"></a>  multimap::crbegin
+## <a name="crbegin"></a>multimap:: crbegin –
 
-Vrátí konstantní iterátor adresující první prvek v obráceném objektu multimap.
+Vrátí konstantní iterátor adresující první prvek v obráceném multimapě.
 
 ```cpp
 const_reverse_iterator crbegin() const;
@@ -573,15 +573,15 @@ const_reverse_iterator crbegin() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Konstantní reverzní obousměrný iterátor adresující první prvek v obráceném objektu [multimap](../standard-library/multimap-class.md) nebo co bylo posledním prvkem v neobráceném adresování `multimap`.
+Konstantní reverzní obousměrný iterátor, který adresuje první prvek v obráceném [multimap](../standard-library/multimap-class.md) nebo řeší, co byl poslední prvek v neobráceném pořadí `multimap`.
 
 ### <a name="remarks"></a>Poznámky
 
-`crbegin` se používá s obráceném objektu `multimap` stejně jako [začít](#begin) se používá s `multimap`.
+`crbegin`se používá s obráceným znaménkem `multimap` jako [Begin](#begin) `multimap`se používá s.
 
-S návratovou hodnotou `crbegin`, `multimap` objekt nelze změnit.
+S návratovou hodnotou `crbegin` `multimap` nelze objekt upravit.
 
-`crbegin` můžete použít k iteraci v rámci `multimap` zpětně.
+`crbegin`lze použít k iteraci `multimap` zpětně.
 
 ### <a name="example"></a>Příklad
 
@@ -613,9 +613,9 @@ int main( )
 The first element of the reversed multimap m1 is 3.
 ```
 
-## <a name="crend"></a>  multimap::crend
+## <a name="crend"></a>multimap:: crend
 
-Vrátí konstantní iterátor adresující umístění následující po posledním prvku v obráceném objektu multimap.
+Vrátí konstantní iterátor, který adresuje umístění následující po posledním prvku v obráceném multimapě.
 
 ```cpp
 const_reverse_iterator crend() const;
@@ -623,17 +623,17 @@ const_reverse_iterator crend() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Konstantní reverzní obousměrný iterátor adresující umístění následující po posledním prvku v obráceném objektu [multimap](../standard-library/multimap-class.md) (umístění, ke které došlo před první prvek v neobráceném `multimap`).
+Konstantní reverzní obousměrný iterátor, který adresuje umístění následující po posledním prvku v obráceném [multimap](../standard-library/multimap-class.md) (umístění, které předchází prvnímu prvku v opačném případě `multimap`).
 
 ### <a name="remarks"></a>Poznámky
 
-`crend` se používá s obráceném objektu `multimap` stejně jako [multimap::end](#end) se používá s `multimap`.
+`crend`se používá s obráceným znaménkem `multimap` jako [multimap:: end](#end) `multimap`se používá s.
 
-S návratovou hodnotou `crend`, `multimap` objekt nelze změnit.
+S návratovou hodnotou `crend` `multimap` nelze objekt upravit.
 
-`crend` můžete použít k testování na tom, zda zpětný iterátor dosáhl konce jeho `multimap`.
+`crend`dá se použít k otestování, jestli reverzní iterátor dosáhl konce jeho platnosti `multimap`.
 
-Hodnota vrácená `crend` by neměla být dereferencována.
+Hodnota vrácená `crend` by neměla být zpětně odkazovaná.
 
 ### <a name="example"></a>Příklad
 
@@ -668,7 +668,7 @@ The last element of the reversed multimap m1 is 1.
 
 ## <a name="difference_type"></a>  multimap::difference_type
 
-Celočíselný typ se znaménkem, který slouží k vyjádření počtu prvků objektu multimap v rozsahu mezi prvky, na které odkazují iterátory.
+Typ se znaménkem typu Integer, který lze použít k reprezentaci počtu prvků multimap v rozsahu mezi prvky, na které odkazují iterátory.
 
 ```cpp
 typedef typename allocator_type::difference_type difference_type;
@@ -676,9 +676,9 @@ typedef typename allocator_type::difference_type difference_type;
 
 ### <a name="remarks"></a>Poznámky
 
-`difference_type` Typ dochází při přičítání nebo zvýšení prostřednictvím iterátorů kontejneru. `difference_type` Se obvykle používá k vyjádření počtu prvků v rozsahu [*první*, *poslední*) mezi iterátory `first` a `last`, obsahuje prvek, na který podle `first` a rozsahu prvků až, ale bez zahrnutí elementu odkazované `last`.
+`difference_type` Je typ vrácený při odečítání nebo přírůstcích pomocí iterátorů kontejneru. `first` `last` `first` Obvykle se používá k reprezentaci počtu prvků v rozsahu [First, Last) mezi iterátory a, zahrnuje element, na který odkazuje, a rozsah prvků až do, ale `difference_type` bez zahrnutí prvku, na `last`který ukazuje.
 
-Všimněte si, že i když `difference_type` je k dispozici pro všechny iterátory, které splňují požadavky na vstupní iterátor, který obsahuje třídou obousměrných iterátorů, které jsou podporovány reverzibilního kontejnery, jako je sada odčítání mezi iterátory pouze podporuje iterátory s náhodným přístupem k dispozici kontejnerem náhodného přístupu, jako je například vektoru.
+Všimněte si, `difference_type` že i když je k dispozici pro všechny iterátory, které splňují požadavky vstupního iterátoru, což zahrnuje třídu Obousměrných iterátorů podporovaných vratnými kontejnery, jako je například set, odečítání mezi iterátory je pouze podporováno iterátory náhodného přístupu, které jsou poskytovány kontejnerem s náhodným přístupem, jako je například Vector.
 
 ### <a name="example"></a>Příklad
 
@@ -724,9 +724,9 @@ int main( )
 The number of elements in the multimap m1 is: 4.
 ```
 
-## <a name="emplace"></a>  multimap::emplace
+## <a name="emplace"></a>multimap:: emplace
 
-Vloží vytvořený prvek na místo (jsou prováděny žádné operace kopírování nebo přesunutí).
+Vloží prvek sestavený na místě (nejsou provedeny žádné operace kopírování nebo přesunutí).
 
 ```cpp
 template <class... Args>
@@ -737,19 +737,19 @@ iterator emplace(Args&&... args);
 
 |Parametr|Popis|
 |-|-|
-|*argumenty*|Argumenty předané vytvořit element, který má být vložen do objektu multimap.|
+|*argumentů*|Argumenty předané k vytvoření prvku, který má být vložen do multimap.|
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Iterátor na nově vložený prvek.
+Iterátor nově vloženého prvku.
 
 ### <a name="remarks"></a>Poznámky
 
-Touto funkcí nejsou zneplatněny žádné odkazy na prvky kontejneru, ale to může zneplatnit všechny iterátory do kontejneru.
+Tato funkce neověřila žádné odkazy na prvky kontejneru, ale může zrušit platnost všech iterátorů do kontejneru.
 
-Pokud při vkládání je vyvolána výjimka, kontejner zůstane beze změny a je znovu vyvolána výjimka.
+Pokud je při vložení vyvolána výjimka, kontejner zůstane nezměněný a výjimka je znovu vyvolána.
 
-[Value_type](../standard-library/map-class.md#value_type) elementu je pár, tak, aby hodnota elementu bude seřazená dvojice s první komponenta rovna hodnotě klíče a druhá komponenta rovna hodnotě dat tohoto prvku.
+[Value_type](../standard-library/map-class.md#value_type) elementu je pár, takže hodnota elementu bude seřazená dvojice s první komponentou, která se rovná hodnotě klíče a druhá komponenta se rovná hodnotě dat elementu.
 
 ### <a name="example"></a>Příklad
 
@@ -792,9 +792,9 @@ int main()
 }
 ```
 
-## <a name="emplace_hint"></a>  multimap::emplace_hint
+## <a name="emplace_hint"></a>multimap:: emplace_hint
 
-Vloží vytvořený prvek na místo (jsou prováděny žádné operace kopírování nebo přesunutí), s náznakem umístění.
+Vloží prvek sestavený na místě (nejsou provedeny žádné operace kopírování nebo přesunutí) s pomocným parametrem umístění.
 
 ```cpp
 template <class... Args>
@@ -807,26 +807,26 @@ iterator emplace_hint(
 
 |Parametr|Popis|
 |-|-|
-|*argumenty*|Argumenty předané vytvořit element, který má být vložen do objektu multimap.|
-|*kde*|Místo zahájení vyhledání správného bodu vložení. (Pokud bezprostředně předchází tento bod *kde*, vložení, může dojít v amortizovaném konstantním času místo logaritmické čas.)|
+|*argumentů*|Argumenty předané k vytvoření prvku, který má být vložen do multimap.|
+|*,*|Místo zahájení vyhledání správného bodu vložení. (Pokud tento bod bezprostředně předchází *místu, k*vložení může dojít v konstantním času v čase namísto logaritmické doby.)|
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Iterátor na nově vložený prvek.
+Iterátor nově vloženého prvku.
 
 ### <a name="remarks"></a>Poznámky
 
-Touto funkcí nejsou zneplatněny žádné odkazy na prvky kontejneru, ale to může zneplatnit všechny iterátory do kontejneru.
+Tato funkce neověřila žádné odkazy na prvky kontejneru, ale může zrušit platnost všech iterátorů do kontejneru.
 
-Při uložení Pokud je vyvolána výjimka, stav kontejneru se nezmění.
+V případě, že je vyvolána výjimka, stav kontejneru není změněn.
 
-[Value_type](../standard-library/map-class.md#value_type) elementu je pár, tak, aby hodnota elementu bude seřazená dvojice s první komponenta rovna hodnotě klíče a druhá komponenta rovna hodnotě dat tohoto prvku.
+[Value_type](../standard-library/map-class.md#value_type) elementu je pár, takže hodnota elementu bude seřazená dvojice s první komponentou, která se rovná hodnotě klíče a druhá komponenta se rovná hodnotě dat elementu.
 
-Příklad kódu naleznete v tématu [map::emplace_hint](../standard-library/map-class.md#emplace_hint).
+Příklad kódu naleznete v tématu [map:: emplace_hint](../standard-library/map-class.md#emplace_hint).
 
-## <a name="empty"></a>  multimap::Empty
+## <a name="empty"></a>multimap:: Empty
 
-Testuje, zda multimap je prázdný.
+Testuje, zda je multimap prázdné.
 
 ```cpp
 bool empty() const;
@@ -834,7 +834,7 @@ bool empty() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-**Hodnota TRUE** Pokud objektu multimap je prázdná. **false** Pokud objektu multimap je prázdný.
+**true** , pokud je multimap prázdné; **false** , pokud je multimap neprázdné.
 
 ### <a name="example"></a>Příklad
 
@@ -869,7 +869,7 @@ The multimap m1 is not empty.
 The multimap m2 is empty.
 ```
 
-## <a name="end"></a>  multimap::end
+## <a name="end"></a>multimap:: end
 
 Vrátí iterátor za koncem.
 
@@ -881,17 +881,17 @@ iterator end();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Minulosti koncem iterátor. Pokud objektu multimap je prázdný, pak `multimap::end() == multimap::begin()`.
+Iterace po konci. Pokud je multimap prázdné, pak `multimap::end() == multimap::begin()`.
 
 ### <a name="remarks"></a>Poznámky
 
-**end** slouží k otestování, zda iterátor prošel konec jeho objektu multimap.
+**End** slouží k otestování, zda iterátor prošl na konci jeho multimap.
 
-Hodnota vrácená **end** by neměla být dereferencována.
+Hodnota vrácená funkcí **End** nesmí být zpětně odkazovaná.
 
-Příklad kódu naleznete v tématu [multimap::find](#find).
+Příklad kódu naleznete v tématu [multimap:: Find](#find).
 
-## <a name="equal_range"></a>  multimap::equal_range
+## <a name="equal_range"></a>multimap:: equal_range
 
 Vyhledá rozsahu prvků, kde klíče prvku odpovídají zadané hodnotě.
 
@@ -903,14 +903,14 @@ pair <iterator, iterator> equal_range (const Key& key);
 
 ### <a name="parameters"></a>Parametry
 
-*key*<br/>
-Klíč argumentu k porovnání s klíči řazení prvek z objektu multimap vyhledaly.
+*zkrat*\
+Klíč argumentu, který se má porovnat s klíčem řazení prvku z prohledávané multimapy.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Pár iterátorů tak, že je první [lower_bound](#lower_bound) klíče a druhá je [upper_bound](#upper_bound) klíče.
+Pár iterátorů, jako je první [lower_bound](#lower_bound) klíče a druhý je [Upper_bound](#upper_bound) klíče.
 
-Pro přístup k první iterace dvojice `pr` vrácený členskou funkci, použijte `pr`. **první** a pokouší dereferencovat iterátoru dolní mez, použijte \*( `pr`. **nejprve**). Pro přístup k druhé iterátoru dvojice `pr` vrácený členskou funkci, použijte `pr`. **druhý** a pokouší dereferencovat iterátoru horní mez, použijte \*( `pr`. **za druhé**).
+Pro přístup k prvnímu iterátoru páru `pr` vráceného členskou funkcí použijte `pr`. **nejprve** a pro zpětnou vazbu dolního iterátoru použijte \*( `pr`. **první**). Pro přístup k druhému iterátoru páru `pr` vráceného členskou funkcí použijte `pr`. **sekundy** a pro zpětnou vazbu horního iterátoru, \*použijte `pr`(. **sekundy**).
 
 ### <a name="example"></a>Příklad
 
@@ -972,9 +972,9 @@ matching the 2nd element of the pair returned by equal_range( 2 ).
 The multimap m1 doesn't have an element with a key less than 4.
 ```
 
-## <a name="erase"></a>  multimap::Erase
+## <a name="erase"></a>multimap:: Erase
 
-Odebere prvek nebo rozsah prvků v objektu multimap od zadané pozice nebo odebere prvky, které odpovídají zadanému klíči.
+Odebere prvek nebo rozsah prvků v objektu multimap ze zadané pozice nebo odstraní prvky, které odpovídají zadanému klíči.
 
 ```cpp
 iterator erase(
@@ -990,31 +990,31 @@ size_type erase(
 
 ### <a name="parameters"></a>Parametry
 
-*kde*<br/>
+*,* \
 Pozice prvku, který má být odebrán.
 
-*první*<br/>
+*První*\
 Pozice prvního prvku, který má být odebrán.
 
-*poslední*<br/>
+*Posledního*\
 Pozice bezprostředně za posledním prvkem, který má být odebrán.
 
-*Key*<br/>
-Klíč prvky, které mají být odebrány.
+*Zkrat*\
+Klíč prvků, které mají být odebrány.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Pro první dvě členské funkce obousměrný iterátor, který označí první prvek zbývající za jakýmikoli odstraněnými prvky, nebo element, který je koncem objektu na mapě, pokud žádný takový prvek neexistuje.
+Pro první dvě členské funkce obousměrný iterátor, který určuje první prvek zbývající za odebranými prvky, nebo element, který je konci mapy, pokud žádný takový prvek neexistuje.
 
-Třetí členská funkce vrátí počet prvků, které byly odebrány z objektu multimap.
+Třetí členská funkce vrátí počet prvků, které byly odebrány z multimap.
 
 ### <a name="remarks"></a>Poznámky
 
-Příklad kódu naleznete v tématu [map::erase](../standard-library/map-class.md#erase).
+Příklad kódu naleznete v tématu [map:: Erase](../standard-library/map-class.md#erase).
 
-## <a name="find"></a>  multimap::Find
+## <a name="find"></a>multimap:: Find
 
-Vrátí iterátor odkazující na první umístění prvku v objektu multimap, který má klíč odpovídající zadanému klíči.
+Vrátí iterátor, který odkazuje na první umístění elementu v multimap, který má klíč shodný se zadaným klíčem.
 
 ```cpp
 iterator find(const Key& key);
@@ -1024,18 +1024,18 @@ const_iterator find(const Key& key) const;
 
 ### <a name="parameters"></a>Parametry
 
-*key*<br/>
-Hodnota klíče k porovnání s klíči řazení prvek z objektu multimap vyhledaly.
+*zkrat*\
+Hodnota klíče, která má být porovnána klíčem řazení prvku z prohledávané multimapy.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Iterátor, který odkazuje na umístění element se zadaným klíčem nebo umístění následující po posledním prvku v objektu multimap (`multimap::end()`) Pokud není nalezena žádná shoda pro klíč.
+Iterátor, který odkazuje na umístění elementu se zadaným klíčem, nebo umístění, které následuje po posledním prvku v multimap (`multimap::end()`), pokud se pro klíč nenajde shoda.
 
 ### <a name="remarks"></a>Poznámky
 
-Členská funkce vrátí iterátor odkazující na prvek v objektu multimap jehož klíč řazení je ekvivalentní argumentu klíče pod binární predikát, který indukuje má za výsledek řazení podle méně než srovnání vztah.
+Členská funkce vrátí iterátor, který odkazuje na element v multimap, jehož klíč řazení je ekvivalentem klíče argumentu v binárním predikátu, který vystaví řazení na základě vztahu menšího, než je srovnatelnost.
 
-Pokud návratová hodnota `find` je přiřazena `const_iterator`, nelze upravit objekt multimap. Pokud návratová hodnota `find` je přiřazena `iterator`, objektem multimap je možné upravit.
+Pokud `find` je vrácená hodnota přiřazena `const_iterator`k, objekt multimap nelze změnit. Pokud `find` je vrácená hodnota přiřazena `iterator`k, lze objekt multimap upravit.
 
 ### <a name="example"></a>Příklad
 
@@ -1099,9 +1099,9 @@ int main()
 }
 ```
 
-## <a name="get_allocator"></a>  multimap::get_allocator
+## <a name="get_allocator"></a>multimap:: get_allocator
 
-Vrátí kopii přidělování objektu používanou k vytvoření objektu multimap.
+Vrátí kopii objektu přidělování, která se používá k vytvoření multimap.
 
 ```cpp
 allocator_type get_allocator() const;
@@ -1109,11 +1109,11 @@ allocator_type get_allocator() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Alokátor použitý v objektu multimap.
+Alokátor používaný multimapem.
 
 ### <a name="remarks"></a>Poznámky
 
-Alokátory pro multimap – Třída zadejte, jak spravuje třídu úložiště. Výchozí alokátorů součástí třídy kontejneru standardní knihovny C++ postačí pro většinu programovacích potřeb. Psaní a použití vlastní třídu alokátoru je rozšířená C++.
+Přidělování pro třídu multimap určují, jak Třída spravuje úložiště. Výchozí přidělující třídy kontejnerů C++ standardní knihovny jsou dostačující pro většinu programovacích potřeb. Psaní a používání vlastního třídy přidělování je pokročilým C++ tématem.
 
 ### <a name="example"></a>Příklad
 
@@ -1171,9 +1171,9 @@ int main( )
 }
 ```
 
-## <a name="insert"></a>  multimap::Insert
+## <a name="insert"></a>multimap:: INSERT
 
-Vloží prvek nebo rozsah prvků do multimap.
+Vloží prvek nebo rozsah prvků do objektu multimap.
 
 ```cpp
 // (1) single element
@@ -1213,33 +1213,33 @@ IList);
 
 |Parametr|Popis|
 |-|-|
-|*Val*|Hodnota element, který má být vložen do objektu multimap.|
-|*kde*|Místo zahájení vyhledání správného bodu vložení. (Pokud bezprostředně předchází tento bod *kde*, vložení, může dojít v amortizovaném konstantním času místo logaritmické čas.)|
-|*ValTy*|Parametr šablony určující typ argumentu, na mapě můžete použít k vytvoření prvku [value_type](../standard-library/map-class.md#value_type)a dokonalému předání *Val* jako argument.|
-|*první*|Pozice prvního prvku, který chcete zkopírovat.|
-|*poslední*|Pozice bezprostředně za posledním prvkem, který chcete zkopírovat.|
-|*InputIterator*|Argument funkce šablony, který splňuje požadavky [vstupní iterátor](../standard-library/input-iterator-tag-struct.md) , která odkazuje na prvky typu, který lze použít k sestavení kompletních [value_type](../standard-library/map-class.md#value_type) objekty.|
-|*IList*|[Initializer_list](../standard-library/initializer-list.md) ze kterého chcete kopírovat prvky.|
+|*Počítává*|Hodnota prvku, který má být vložen do multimap.|
+|*,*|Místo zahájení vyhledání správného bodu vložení. (Pokud tento bod bezprostředně předchází *místu, k*vložení může dojít v konstantním času v čase namísto logaritmické doby.)|
+|*ValTy*|Parametr šablony, který určuje typ argumentu, který může mapa použít k vytvoření prvku [value_type](../standard-library/map-class.md#value_type)a Perfect-forwarding *Val* jako argument.|
+|*První*|Pozice prvního prvku, který chcete zkopírovat.|
+|*Posledního*|Pozice bezprostředně za posledním prvkem, který chcete zkopírovat.|
+|*InputIterator*|Argument funkce šablony, který splňuje požadavky [vstupního iterátoru](../standard-library/input-iterator-tag-struct.md) , který odkazuje na prvky typu, které lze použít k vytvoření objektů [value_type](../standard-library/map-class.md#value_type) .|
+|*IList*|[Initializer_list](../standard-library/initializer-list.md) , ze kterého se mají kopírovat prvky|
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Jeden element vložení členských funkcí (1) a (2) vrátí iterátor na místo, kde byl vložen nový prvek do objektu multimap.
+Funkce pro vložení členů s jedním elementem, (1) a (2), vrátí iterátor na pozici, kam byl nový prvek vložen do multimap.
 
-Jeden element s nápovědu členské funkce, (3) a (4) vrátí iterátor, který odkazuje na místo, kde byl vložen nový prvek do objektu multimap.
+Členské funkce s jedním prvkem, (3) a (4), vrátí iterátor, který odkazuje na pozici, kam byl nový prvek vložen do multimap.
 
 ### <a name="remarks"></a>Poznámky
 
-Touto funkcí nejsou zneplatněny žádné ukazatele nebo odkazy, ale to může zneplatnit všechny iterátory do kontejneru.
+Tato funkce neověřuje žádné ukazatele nebo odkazy, ale může zrušit platnost všech iterátorů do kontejneru.
 
-Při vložení pouze jednoho prvku Pokud je vyvolána výjimka, stav kontejneru se nezmění. Pokud je při vkládání více prvků vyvolána výjimka, kontejner zůstane v neurčeném, ale platném stavu.
+Při vložení pouze jednoho prvku, pokud je vyvolána výjimka, není změněn stav kontejneru. Pokud je při vkládání více prvků vyvolána výjimka, kontejner zůstane v neurčeném, ale platném stavu.
 
-[Value_type](../standard-library/map-class.md#value_type) kontejneru je definice typu, který patří do tohoto kontejneru a pro mapu, `multimap<K, V>::value_type` je `pair<const K, V>`. Hodnota prvku je seřazená dvojice, ve které je první komponenta rovna hodnotě klíče a druhá komponenta je rovna datové hodnotě prvku.
+[Value_type](../standard-library/map-class.md#value_type) kontejneru je definice typu, která patří do kontejneru a pro mapu `multimap<K, V>::value_type` je. `pair<const K, V>` Hodnota prvku je seřazená dvojice, ve které je první komponenta rovna hodnotě klíče a druhá komponenta je rovna datové hodnotě prvku.
 
-Rozsah členské funkce (5) vloží sekvenci hodnot prvků do objektu multimap, který odpovídá každému prvku určenému pomocí iterátoru v rozsahu `[First, Last)`; proto *poslední* nebude vložen. Členská funkce kontejneru `end()` vztahuje k pozici hned za posledním prvkem v kontejneru, například příkaz `m.insert(v.begin(), v.end());` vloží všechny prvky `v` do `m`.
+Člen rozsahu (5) vloží sekvenci hodnot elementu do multimap, který odpovídá každému elementu řešenému iterátorem v rozsahu `[First, Last)`; proto *Poslední* se nevloží. Členská funkce `end()` kontejneru odkazuje na pozici hned za posledním prvkem v kontejneru – například příkaz `m.insert(v.begin(), v.end());` vloží všechny prvky `v` do `m`.
 
-Funkce člena seznamu inicializátorů (6) používá [initializer_list](../standard-library/initializer-list.md) pro kopírování prvků do objektu map.
+Členská funkce seznamu inicializátorů (6) používá [initializer_list](../standard-library/initializer-list.md) ke zkopírování prvků do mapy.
 
-Pro vložení prvku vytvořeného na místě – to znamená, jsou prováděny žádné operace kopírování nebo přesunutí – naleznete v tématu [multimap::emplace](#emplace) a [multimap::emplace_hint](#emplace_hint).
+Pro vložení elementu vytvořeného na místě – to znamená, že nejsou provedeny žádné operace kopírování nebo přesunutí – viz [multimap:: emplace](#emplace) a [multimap:: emplace_hint](#emplace_hint).
 
 ### <a name="example"></a>Příklad
 
@@ -1331,9 +1331,9 @@ int main()
 }
 ```
 
-## <a name="iterator"></a>  multimap::iterator
+## <a name="iterator"></a>multimap:: iterátor
 
-Typ, který poskytuje obousměrný iterátor, který může číst nebo upravovat libovolný prvek v objektu multimap.
+Typ, který poskytuje obousměrný iterátor, který může číst nebo upravovat libovolný prvek v multimap.
 
 ```cpp
 typedef implementation-defined iterator;
@@ -1341,21 +1341,21 @@ typedef implementation-defined iterator;
 
 ### <a name="remarks"></a>Poznámky
 
-`iterator` Určené multimap – odkazuje na objekty [value_type](#value_type), které jsou typu `pair<const Key, Type>`. Hodnota klíče je k dispozici prostřednictvím první pár členů, hodnota elementu pro mapovanou je k dispozici druhý člen, které odpovídá páru licencí.
+Definice multimap odkazuje na objekty [value_type](#value_type), které jsou typu `pair<const Key, Type>`. `iterator` Hodnota klíče je k dispozici prostřednictvím prvního páru členů a hodnota mapovaného prvku je k dispozici prostřednictvím druhého člena dvojice.
 
-Ke zrušení `iterator` *Iter* odkazující na prvek v objektu multimap, použijte **->** operátor.
+Chcete-li odkázat `iterator` na *ITER* ukazující na prvek v **->** multimap, použijte operátor.
 
-Chcete-li přistupovat k hodnotě klíče pro element, použijte `Iter->first`, což je totéž jako `(*Iter).first`. Chcete-li získat přístup k hodnotě z namapované datum pro element, použijte `Iter->second`, což je totéž jako `(*Iter).second`.
+Chcete-li získat přístup k hodnotě klíče pro element, použijte `Iter->first`, který je `(*Iter).first`ekvivalentní. Pro přístup k hodnotě mapovaného pro datum elementu použijte `Iter->second`, který je `(*Iter).second`ekvivalentní.
 
-Typ `iterator` lze použít ke změně hodnoty prvku.
+Typ `iterator` lze použít pro úpravu hodnoty prvku.
 
 ### <a name="example"></a>Příklad
 
-Podívejte se na příklad pro [začít](#begin) příklad toho, jak deklarace a používání `iterator`.
+Podívejte se na příklad pro [začátek](#begin) příkladu, jak deklarovat a použít `iterator`.
 
-## <a name="key_comp"></a>  multimap::key_comp
+## <a name="key_comp"></a>multimap:: key_comp
 
-Načte kopii objektu porovnání, použita pro seřazení klíčů v objektu multimap.
+Načte kopii objektu porovnání, která se používá k řazení klíčů v multimap.
 
 ```cpp
 key_compare key_comp() const;
@@ -1363,15 +1363,15 @@ key_compare key_comp() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vrátí objekt funkce, která používá multimap řazení jeho prvků.
+Vrátí objekt funkce, který multimap používá k seřazení jeho prvků.
 
 ### <a name="remarks"></a>Poznámky
 
-Uložený objekt definuje členskou funkci
+Uložený objekt definuje členskou funkci.
 
 `bool operator( const Key& x, const Key& y);`
 
-který vrátí hodnotu true, pokud *x* výhradně předchází *y* v pořadí řazení.
+Vrátí hodnotu true, pokud *x* přesně předchází *y* v pořadí řazení.
 
 ### <a name="example"></a>Příklad
 
@@ -1424,9 +1424,9 @@ kc1( 2,3 ) returns value of true, where kc1 is the function object of m1.
 kc2( 2,3 ) returns value of false, where kc2 is the function object of m2.
 ```
 
-## <a name="key_compare"></a>  multimap::key_compare
+## <a name="key_compare"></a>multimap:: key_compare
 
-Typ poskytující objekt funkce, který může porovnat dva klíče řazení pro určení relativního pořadí dvou prvků v objektu multimap.
+Typ, který poskytuje objekt funkce, který může porovnat dva klíče řazení pro určení relativního pořadí dvou prvků v multimap.
 
 ```cpp
 typedef Traits key_compare;
@@ -1434,17 +1434,17 @@ typedef Traits key_compare;
 
 ### <a name="remarks"></a>Poznámky
 
-`key_compare` je synonymum pro parametr šablony `Traits`.
+`key_compare`je synonymum pro parametr `Traits`šablony.
 
-Další informace o `Traits` najdete v článku [multimap – třída](../standard-library/multimap-class.md) tématu.
+Další informace `Traits` naleznete v tématu [třídy multimap](../standard-library/multimap-class.md) .
 
 ### <a name="example"></a>Příklad
 
-Podívejte se na příklad pro [key_comp](#key_comp) příklad toho, jak deklarace a používání `key_compare`.
+Příklad, jak deklarovat [](#key_comp) a používat `key_compare`, naleznete v příkladu pro key_comp.
 
-## <a name="key_type"></a>  multimap::key_type
+## <a name="key_type"></a>multimap:: key_type
 
-Typ, který popisuje řazení objektu klíče, který představuje každý prvek objektu multimap.
+Typ, který popisuje objekt klíče řazení, který představuje každý prvek multimap.
 
 ```cpp
 typedef Key key_type;
@@ -1452,17 +1452,17 @@ typedef Key key_type;
 
 ### <a name="remarks"></a>Poznámky
 
-`key_type` je synonymum pro parametr šablony `Key`.
+`key_type`je synonymum pro parametr `Key`šablony.
 
-Další informace o `Key`, najdete v části poznámky [multimap – třída](../standard-library/multimap-class.md) tématu.
+Další informace o `Key`naleznete v části poznámky v tématu [Třída multimap](../standard-library/multimap-class.md) .
 
 ### <a name="example"></a>Příklad
 
-Podívejte se na příklad pro [value_type](#value_type) příklad toho, jak deklarace a používání `key_type`.
+Příklad, jak deklarovat [](#value_type) a používat `key_type`, naleznete v příkladu pro value_type.
 
-## <a name="lower_bound"></a>  multimap::lower_bound
+## <a name="lower_bound"></a>multimap:: lower_bound
 
-Vrátí iterátor na první prvek v objektu multimap, který s klíčem, který je roven nebo větší než zadaný klíč.
+Vrátí iterátor na první prvek v multimap, který má klíč, který je roven nebo větší než zadaný klíč.
 
 ```cpp
 iterator lower_bound(const Key& key);
@@ -1472,14 +1472,14 @@ const_iterator lower_bound(const Key& key) const;
 
 ### <a name="parameters"></a>Parametry
 
-*key*<br/>
-Klíč argumentu k porovnání s klíči řazení prvek z objektu multimap vyhledaly.
+*zkrat*\
+Klíč argumentu, který se má porovnat s klíčem řazení prvku z prohledávané multimapy.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Iterátor nebo `const_iterator` adresy umístění prvku v objektu multimap, s klíčem, který je roven nebo větší než tento klíč argument nebo který adresuje umístění následující po posledním prvku v objektu multimap, pokud žádné odpovídají je nalezen klíč.
+Iterátor nebo `const_iterator` , který řeší umístění elementu v multimap, který má klíč, který je roven nebo větší než klíč argumentu nebo který řeší umístění, které následuje po posledním prvku v multimap, pokud se pro klíč nenajde žádná shoda.
 
-Pokud návratová hodnota `lower_bound` je přiřazena `const_iterator`, nelze upravit objekt multimap. Pokud návratová hodnota `lower_bound` je přiřazena **iterátoru**, objektem multimap je možné upravit.
+Pokud `lower_bound` je vrácená hodnota přiřazena `const_iterator`k, objekt multimap nelze změnit. Pokud `lower_bound` je vrácená hodnota přiřazena k iterátoru, lze objekt multimap změnit.
 
 ### <a name="example"></a>Příklad
 
@@ -1548,9 +1548,9 @@ that of the last element is: 20.
 This is not the last element of multimap m1.
 ```
 
-## <a name="mapped_type"></a>  multimap::mapped_type
+## <a name="mapped_type"></a>multimap:: mapped_type
 
-Typ, který představuje datový typ uložený v objektu multimap.
+Typ, který představuje datový typ uložený ve multimap.
 
 ```cpp
 typedef Type mapped_type;
@@ -1558,17 +1558,17 @@ typedef Type mapped_type;
 
 ### <a name="remarks"></a>Poznámky
 
-`mapped_type` je synonymum pro parametr šablony `Type`.
+`mapped_type`je synonymum pro parametr `Type`šablony.
 
-Další informace o `Type` najdete v článku [multimap – třída](../standard-library/multimap-class.md) tématu.
+Další informace `Type` naleznete v tématu [třídy multimap](../standard-library/multimap-class.md) .
 
 ### <a name="example"></a>Příklad
 
-Podívejte se na příklad pro [value_type](#value_type) příklad toho, jak deklarace a používání `key_type`.
+Příklad, jak deklarovat [](#value_type) a používat `key_type`, naleznete v příkladu pro value_type.
 
-## <a name="max_size"></a>  multimap::max_size
+## <a name="max_size"></a>multimap:: max_size
 
-Vrátí maximální délku objektu multimap.
+Vrátí maximální délku multimap.
 
 ```cpp
 size_type max_size() const;
@@ -1576,7 +1576,7 @@ size_type max_size() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Maximální možná délka objektu multimap.
+Maximální možná délka multimap.
 
 ### <a name="example"></a>Příklad
 
@@ -1598,7 +1598,7 @@ int main( )
 }
 ```
 
-## <a name="multimap"></a>  multimap::multimap
+## <a name="multimap"></a>multimap:: multimap
 
 Zkonstruuje objekt multimap, který je prázdný nebo který je kopií celého objektu multimap nebo části některého jiného objektu multimap.
 
@@ -1653,30 +1653,30 @@ multimap(
 
 |Parametr|Popis|
 |-|-|
-|*Al*|Třída úložiště alokátoru pro použití s tímto objektem multimap, kterou je standardně třída Allocator.|
-|*Kompozice*|Funkce porovnání typu `constTraits` používají k seřazení prvků v objektu map, kde je použit výchozí `Traits`.|
-|*doprava*|Objekt map, ze kterého je kopií vytvořen objekt set.|
-|*první*|Pozice prvního prvku v rozsahu prvků, které se mají zkopírovat.|
-|*poslední*|Pozice prvního prvku mimo rozsah prvků, které se mají zkopírovat.|
+|*VŠ*|Třída úložiště alokátoru pro použití s tímto objektem multimap, kterou je standardně třída Allocator.|
+|*Zajištění*|Funkce porovnání typu `constTraits` sloužící k uspořádání prvků v mapě, což je `Traits`výchozí hodnota.|
+|*Kliknutím*|Objekt map, ze kterého je kopií vytvořen objekt set.|
+|*První*|Pozice prvního prvku v rozsahu prvků, které mají být zkopírovány.|
+|*Posledního*|Pozice prvního prvku mimo rozsah prvků, které mají být zkopírovány.|
 |*IList*|Seznam initializer_list, ze kterého chcete kopírovat prvky.|
 
 ### <a name="remarks"></a>Poznámky
 
-Všechny konstruktory ukládají typ objektu allocator, který spravuje úložiště paměti objektu multimap a který lze později vrátit voláním [get_allocator](#get_allocator). Parametr allocator je často v deklaraci třídy vynechán a makra předběžného zpracování jsou použita k nahrazení alternativních alokátorů.
+Všechny konstruktory ukládají typ objektu přidělování, který spravuje paměťové úložiště pro multimap a který lze později vrátit voláním [get_allocator](#get_allocator). Parametr allocator je často v deklaraci třídy vynechán a makra předběžného zpracování jsou použita k nahrazení alternativních alokátorů.
 
 Všechny konstruktory inicializují své objekty multimap.
 
-Všechny konstruktory ukládají objekt funkce typu `Traits` , který slouží k vytvoření pořadí mezi klíči objektu multimap a který lze později vrátit voláním [key_comp](#key_comp).
+Všechny konstruktory ukládají objekt funkce typu `Traits` , který se používá k navázání objednávky mezi klíči multimap a které mohou být později vráceny voláním [key_comp](#key_comp).
 
-První tři konstruktory určují prázdný počáteční objekt multimap, druhý určuje typ funkce porovnání (*kompozici*) který se má použít při stanovení pořadí prvků a třetí explicitně určuje typ alokátoru (*Al*) který se má použít. Klíčové slovo **explicitní** potlačí některé druhy automatického převodu typu.
+První tři konstruktory určují prázdné počáteční multimap, druhý, který určuje typ funkce porovnání (*comp*), který se použije při vytváření pořadí prvků, a třetí explicitně určující typ přidělování (*Al*), který se má pro. Klíčové slovo **výslovně** potlačí určité druhy automatických převodů typu.
 
-Čtvrtý konstruktor určuje kopii objektu multimap *vpravo*.
+Čtvrtý konstruktor určuje kopii pravého multimapu.
 
-Pátý konstruktor určuje kopii objektu multimap přesunutím *vpravo*.
+Pátý konstruktor určuje kopii multimap posunutím *doprava*.
 
 Šestý, sedmý a osmý konstruktor kopírují členy objektu initializer_list.
 
-Následující tři konstruktory kopírují rozsah `[First, Last)` objektu map se zvyšující se explicitností v určování typu funkce porovnání třídy `Traits` a alokátorem.
+Následující tři konstruktory kopírují rozsah `[First, Last)` mapy se zvýšením explicitního určení typu funkce porovnání třídy `Traits` a přidělování.
 
 ### <a name="example"></a>Příklad
 
@@ -1786,9 +1786,9 @@ int main()
 }
 ```
 
-## <a name="op_eq"></a>  multimap::Operator =
+## <a name="op_eq"></a>multimap:: operator =
 
-Nahradí prvky objektu multimap kopií jiného objektu multimap.
+Nahradí prvky multimap kopií jiného multimap.
 
 ```cpp
 multimap& operator=(const multimap& right);
@@ -1800,11 +1800,11 @@ multimap& operator=(multimap&& right);
 
 |Parametr|Popis|
 |-|-|
-|*doprava*|[Multimap](../standard-library/multimap-class.md) kopírovaná do `multimap`.|
+|*Kliknutím*|[Multimap](../standard-library/multimap-class.md) , který se kopíruje `multimap`do.|
 
 ### <a name="remarks"></a>Poznámky
 
-Po odstranění jakýchkoli prvků v `multimap`, `operator=` kopíruje nebo přesouvá obsah *správné* do `multimap`.
+Po vymazání všech existujících prvků `multimap`v, `operator=` buď zkopíruje nebo přesune `multimap`obsah *přímo* do.
 
 ### <a name="example"></a>Příklad
 
@@ -1843,9 +1843,9 @@ int main( )
    }
 ```
 
-## <a name="pointer"></a>  multimap::Pointer
+## <a name="pointer"></a>multimap::p ointer
 
-Typ, který poskytuje ukazatel na prvek v objektu multimap.
+Typ, který poskytuje ukazatel na prvek v multimap.
 
 ```cpp
 typedef typename allocator_type::pointer pointer;
@@ -1853,13 +1853,13 @@ typedef typename allocator_type::pointer pointer;
 
 ### <a name="remarks"></a>Poznámky
 
-Typ `pointer` lze použít ke změně hodnoty prvku.
+Typ `pointer` lze použít pro úpravu hodnoty prvku.
 
-Ve většině případů [iterátoru](#iterator) by měla sloužit pro přístup k prvkům v objektu multimap.
+Ve většině případů by měl být použit [iterátor](#iterator) pro přístup k prvkům v objektu multimap.
 
-## <a name="rbegin"></a>  multimap::rbegin
+## <a name="rbegin"></a>multimap:: rbegin
 
-Vrátí iterátor adresující první prvek v obráceném objektu multimap.
+Vrátí iterátor adresující první prvek v obráceném multimapě.
 
 ```cpp
 const_reverse_iterator rbegin() const;
@@ -1869,15 +1869,15 @@ reverse_iterator rbegin();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Reverzní obousměrný iterátor adresující první prvek v obráceném objektu multimap nebo adresování, co bylo posledním prvkem v neobráceném objektu multimap.
+Reverzní obousměrný iterátor, který adresuje první prvek v obráceném multimap nebo řeší, co byl posledním prvkem v neobráceném multimap.
 
 ### <a name="remarks"></a>Poznámky
 
-`rbegin` se používá s obráceném objektu multimap stejně jako [začít](#begin) se používá s multimap.
+`rbegin`se používá s obráceným multimap stejně jako [Begin](#begin) se používá s multimap.
 
-Pokud návratová hodnota `rbegin` je přiřazena `const_reverse_iterator`, pak nelze upravit objekt multimap. Pokud návratová hodnota `rbegin` je přiřazena `reverse_iterator`, pak je možné upravit objektem multimap.
+Pokud `rbegin` je vrácená hodnota přiřazena `const_reverse_iterator`k, nelze objekt multimap změnit. Pokud `rbegin` je vrácená hodnota přiřazena `reverse_iterator`k, lze objekt multimap upravit.
 
-`rbegin` můžete použít k iteraci v rámci multimap zpětně.
+`rbegin`dá se použít k iteraci multimap dozadu.
 
 ### <a name="example"></a>Příklad
 
@@ -1937,7 +1937,7 @@ The reversed multimap is: 3 2 1 .
 After the erasure, the first element in the reversed multimap is 2.
 ```
 
-## <a name="reference"></a>  multimap::Reference
+## <a name="reference"></a>multimap:: Reference
 
 Typ, který poskytuje odkaz na prvek uložený v objektu multimap.
 
@@ -1994,9 +1994,9 @@ The data value of first element in the multimap is 10.
 The modified data value of first element is 15.
 ```
 
-## <a name="rend"></a>  multimap::rend
+## <a name="rend"></a>multimap:: rend
 
-Vrátí iterátor adresující umístění následující po posledním prvku v obráceném objektu multimap.
+Vrátí iterátor, který adresuje umístění následující po posledním prvku v obráceném multimapě.
 
 ```cpp
 const_reverse_iterator rend() const;
@@ -2006,17 +2006,17 @@ reverse_iterator rend();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Reverzní obousměrný iterátor adresující umístění následující po posledním prvku v obráceném objektu multimap (umístění, ke které došlo před první prvek v neobráceném multimap).
+Zpětný obousměrný iterátor, který adresuje umístění následující po posledním prvku v obráceném multimap (umístění, které předchází prvnímu prvku v neobráceném multimap).
 
 ### <a name="remarks"></a>Poznámky
 
-`rend` se používá s obráceném objektu multimap stejně jako [end](../standard-library/map-class.md#end) se používá s multimap.
+`rend`se používá s obráceným multimap jako [End](../standard-library/map-class.md#end) se používá s multimap.
 
-Pokud návratová hodnota `rend` je přiřazena `const_reverse_iterator`, pak nelze upravit objekt multimap. Pokud návratová hodnota `rend` je přiřazena `reverse_iterator`, pak je možné upravit objektem multimap.
+Pokud `rend` je vrácená hodnota přiřazena `const_reverse_iterator`k, nelze objekt multimap změnit. Pokud `rend` je vrácená hodnota přiřazena `reverse_iterator`k, lze objekt multimap upravit.
 
-`rend` slouží k otestování pro Určuje, zda zpětný iterátor dosáhl konce jeho objektu multimap.
+`rend`dá se použít k otestování, jestli reverzní iterátor dosáhl konce jeho multimap.
 
-Hodnota vrácená `rend` by neměla být dereferencována.
+Hodnota vrácená `rend` by neměla být zpětně odkazovaná.
 
 ### <a name="example"></a>Příklad
 
@@ -2078,9 +2078,9 @@ The reversed multimap is: 3 2 1 .
 After the erasure, the last element in the reversed multimap is 2.
 ```
 
-## <a name="reverse_iterator"></a>  multimap::reverse_iterator
+## <a name="reverse_iterator"></a>multimap:: reverse_iterator
 
-Typ, který poskytuje obousměrný iterátor, který může číst nebo upravovat prvek v obráceném objektu multimap.
+Typ, který poskytuje obousměrný iterátor, který může číst nebo upravovat prvek v obráceném multimapě.
 
 ```cpp
 typedef std::reverse_iterator<iterator> reverse_iterator;
@@ -2088,21 +2088,21 @@ typedef std::reverse_iterator<iterator> reverse_iterator;
 
 ### <a name="remarks"></a>Poznámky
 
-Typ `reverse_iterator` se používá k iteraci v rámci objektu multimap, v opačném pořadí.
+Typ `reverse_iterator` se používá k iterování přes multimap v obráceném pořadí.
 
-`reverse_iterator` Určené multimap – odkazuje na objekty [value_type](#value_type), které jsou typu `pair<const Key, Type>`. Hodnota klíče je k dispozici prostřednictvím první pár členů, hodnota elementu pro mapovanou je k dispozici druhý člen, které odpovídá páru licencí.
+Definice multimap odkazuje na objekty [value_type](#value_type), které jsou typu `pair<const Key, Type>`. `reverse_iterator` Hodnota klíče je k dispozici prostřednictvím prvního páru členů a hodnota mapovaného prvku je k dispozici prostřednictvím druhého člena dvojice.
 
-Ke zrušení `reverse_iterator` *rIter* odkazující na prvek v objektu multimap, použijte **->** operátor.
+Chcete-li odkázat `reverse_iterator` na *rIter* ukazující na prvek v **->** multimap, použijte operátor.
 
-Chcete-li přistupovat k hodnotě klíče pro element, použijte `rIter->first`, což je totéž jako `(*rIter).first`. Chcete-li získat přístup k hodnotě z namapované datum pro element, použijte `rIter->second`, což je totéž jako `(*rIter).second`.
+Chcete-li získat přístup k hodnotě klíče pro element, použijte `rIter->first`, který je `(*rIter).first`ekvivalentní. Pro přístup k hodnotě mapovaného pro datum elementu použijte `rIter->second`, který je `(*rIter).second`ekvivalentní.
 
 ### <a name="example"></a>Příklad
 
-Podívejte se na příklad pro [rbegin –](#rbegin) příklad toho, jak deklarace a používání `reverse_iterator`.
+Příklad, jak deklarovat [](#rbegin) a používat `reverse_iterator`, naleznete v příkladu pro rbegin.
 
-## <a name="size"></a>  multimap::size
+## <a name="size"></a>multimap:: size
 
-Vrátí počet prvků v objektu multimap.
+Vrátí počet prvků v multimap.
 
 ```cpp
 size_type size() const;
@@ -2110,11 +2110,11 @@ size_type size() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Aktuální délka objektu multimap.
+Aktuální délka multimap.
 
 ### <a name="example"></a>Příklad
 
-Následující příklad ukazuje použití multimap::size členskou funkci.
+Následující příklad ukazuje použití členské funkce multimap:: size.
 
 ```cpp
 // multimap_size.cpp
@@ -2146,7 +2146,7 @@ The multimap length is now 2.
 
 ## <a name="size_type"></a>  multimap::size_type
 
-Typ unsigned integer, která vrátí počet prvků v objektu multimap.
+Typ unsigned integer, který počítá počet prvků v multimap.
 
 ```cpp
 typedef typename allocator_type::size_type size_type;
@@ -2154,11 +2154,11 @@ typedef typename allocator_type::size_type size_type;
 
 ### <a name="example"></a>Příklad
 
-Podívejte se na příklad pro [velikost](#size) příklad toho, jak deklarace a používání `size_type`
+Podívejte se na příklad pro [Velikost](#size) pro příklad, jak deklarovat a použít`size_type`
 
-## <a name="swap"></a>  multimap::swap
+## <a name="swap"></a>multimap:: swap
 
-Vymění prvky dvou multimaps.
+Vyměňuje prvky dvou více map.
 
 ```cpp
 void swap(
@@ -2167,12 +2167,12 @@ void swap(
 
 ### <a name="parameters"></a>Parametry
 
-*doprava*<br/>
-Multimap poskytující prvky pro záměnu nebo objektu multimap, jehož prvky mají být zaměněny objektu multimap `left`.
+*Kliknutím*\
+Multimap poskytuje prvky, které mají být měněny, nebo multimap, jejichž prvky mají být vyměňovány pomocí těch multimap `left`.
 
 ### <a name="remarks"></a>Poznámky
 
-Žádné odkazy, ukazatele nebo iterátory, které určují prvky ve dvou multimaps, jehož prvky jsou během výměny nezruší platnost členskou funkci.
+Členská funkce neověřuje žádné odkazy, ukazatele nebo iterátory, které určují elementy ve dvou více mapách, jejichž prvky se vyměňují.
 
 ### <a name="example"></a>Příklad
 
@@ -2225,9 +2225,9 @@ After swapping with m2, multimap m1 is: 100 200.
 After swapping with m3, multimap m1 is: 300.
 ```
 
-## <a name="upper_bound"></a>  multimap::upper_bound
+## <a name="upper_bound"></a>multimap:: Upper_bound
 
-Vrátí iterátor na první prvek v objektu multimap, který s klíčem, který je větší než zadaný klíč.
+Vrátí iterátor na první prvek v multimap, který má klíč, který je větší než zadaný klíč.
 
 ```cpp
 iterator upper_bound(const Key& key);
@@ -2237,14 +2237,14 @@ const_iterator upper_bound(const Key& key) const;
 
 ### <a name="parameters"></a>Parametry
 
-*key*<br/>
-Klíč argumentu k porovnání s klíči řazení prvek z objektu multimap vyhledaly.
+*zkrat*\
+Klíč argumentu, který se má porovnat s klíčem řazení prvku z prohledávané multimapy.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Iterátor nebo `const_iterator` adresy umístění prvku v objektu multimap, s klíčem, který je větší než tento klíč argument nebo který adresuje umístění následující po posledním prvku v objektu multimap, pokud žádné odpovídají je nalezen klíč.
+Iterátor nebo `const_iterator` , který řeší umístění elementu v multimap s klíčem, který je větší než klíč argumentu, nebo který řeší umístění, které následuje po posledním prvku v multimap, pokud není nalezena shoda pro klíč.
 
-Pokud vrácená hodnota je přiřazena k `const_iterator`, nelze upravit objekt multimap. Pokud vrácená hodnota je přiřazena k `iterator`, je možné upravit objektem multimap.
+Pokud je vrácená hodnota přiřazena k `const_iterator`, objekt multimap nelze změnit. Pokud je vrácená hodnota přiřazena k `iterator`, lze objekt multimap upravit.
 
 ### <a name="example"></a>Příklad
 
@@ -2304,9 +2304,9 @@ The first element of m1 with a key greater than
 that of the initial element of m1 is: 20.
 ```
 
-## <a name="value_comp"></a>  multimap::value_comp
+## <a name="value_comp"></a>multimap:: value_comp
 
-Členská funkce vrátí objekt funkce, která určuje pořadí prvků v objektu multimap porovnáním jejich hodnoty klíče.
+Členská funkce vrátí objekt funkce, který určuje pořadí prvků v multimap porovnáním jejich hodnot klíče.
 
 ```cpp
 value_compare value_comp() const;
@@ -2314,11 +2314,11 @@ value_compare value_comp() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vrátí objekt funkce porovnání, která používá multimap řazení jeho prvků.
+Vrátí objekt funkce porovnání, který multimap používá k seřazení jeho prvků.
 
 ### <a name="remarks"></a>Poznámky
 
-Pro multimap *m*, pokud dva prvky *e1*(*k1*, *d1*) a *e2*(*k2*, *d2*) jsou objekty typu `value_type`, kde *k1* a *k2* jsou jejich klíče typu `key_type` a *d1*  a *d2* jsou jejich data typu `mapped_type`, pak `m.value_comp(e1, e2)` je ekvivalentní `m.key_comp(k1, k2)`.
+Pro multimap *m*, pokud dva prvky *E1*(*K1*, *D1*) a *E2*(*K2*, *D2*) jsou `value_type`objekty typu, kde *K1* a *K2* jsou jejich klíče typu `key_type` a *D1* a *D2* jsou jejich data typu `mapped_type`, `m.key_comp(k1, k2)`pak `m.value_comp(e1, e2)` je ekvivalentem.
 
 ### <a name="example"></a>Příklad
 
@@ -2370,9 +2370,9 @@ The element ( 1,10 ) precedes the element ( 2,5 ).
 The element ( 2,5 ) does not precede the element ( 1,10 ).
 ```
 
-## <a name="value_type"></a>  multimap::value_type
+## <a name="value_type"></a>multimap:: value_type
 
-Typ, který představuje typ objektu uložený jako prvek v objektu map.
+Typ, který představuje typ objektu uložený jako prvek v mapě.
 
 ```cpp
 typedef pair<const Key, Type> value_type;
@@ -2438,6 +2438,6 @@ The values of the mapped elements are: 10 20.
 
 ## <a name="see-also"></a>Viz také:
 
-[Kontejnery](../cpp/containers-modern-cpp.md)<br/>
-[Bezpečný přístup z více vláken ve standardní knihovně C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
-[Standardní knihovna C++ – referenční dokumentace](../standard-library/cpp-standard-library-reference.md)<br/>
+[Kontejnery](../cpp/containers-modern-cpp.md)\
+[Bezpečnost vlákna ve C++ standardní knihovně](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[Standardní knihovna C++ – referenční dokumentace](../standard-library/cpp-standard-library-reference.md)

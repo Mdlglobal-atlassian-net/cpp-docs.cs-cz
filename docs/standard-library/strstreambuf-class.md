@@ -20,16 +20,16 @@ helpviewer_keywords:
 - std::strstreambuf [C++], str
 - std::strstreambuf [C++], underflow
 ms.assetid: b040b8ea-0669-4eba-8908-6a9cc159c54b
-ms.openlocfilehash: 75c9a96b727ef60280055536296f850f492d16ac
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f24d8fe99bc211e026172e42669cf5e430ad31e8
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62412277"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68459081"
 ---
 # <a name="strstreambuf-class"></a>strstreambuf – třída
 
-Popisuje vyrovnávací paměť datového proudu, který řídí přenosu prvky do a z pořadí prvků uložených v **char** objektu array.
+Popisuje vyrovnávací paměť datového proudu, která řídí přenos prvků do a z sekvence prvků uložených v objektu pole typu **char** .
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -39,53 +39,53 @@ class strstreambuf : public streambuf
 
 ## <a name="remarks"></a>Poznámky
 
-V závislosti na tom, jak je objekt vytvořen může být přiděleny, rozšířit a uvolnění podle potřeby a vyřešit tak změny v pořadí.
+V závislosti na tom, jak je objekt vytvořen, lze přidělit, rozšířit a uvolnit podle potřeby pro přizpůsobení změn v sekvenci.
 
-Objekt třídy `strstreambuf` ukládá několik bits informace o režimu jako jeho `strstreambuf` režimu. Tyto bity označují, zda řízenou sekvenci:
+Objekt třídy `strstreambuf` ukládá několik bitů informací o režimu jako svůj `strstreambuf` režim. Tyto bity označují, zda řízená sekvence:
 
-- Byl přidělen a musí být nakonec uvolněna.
+- Bylo přiděleno a je nutné je uvolnit nakonec.
 
-- Je upravitelné.
+- Lze upravovat.
 
-- Je možné rozšířit změna přidělení úložiště.
+- Je širším přidělením úložiště.
 
-- Je zmrazen a proto musí být subjektem než objekt zmrazen předtím, než je objekt zničen, nebo uvolnění (je-li přidělit).
+- Bylo zmrazeno a je třeba jej před zničením objektu nebo uvolněním (Pokud je přiděleno) jiným subjektem, než je objekt, zrušit zmrazením.
 
-Nelze změnit ani rozšířené, bez ohledu na stav těchto samostatný režim bitů řízené sekvence, která je zmrazen.
+Kontrolované pořadí, které je zmrazeno, nelze změnit ani rozšířit, bez ohledu na stav těchto oddělených bitů režimu.
 
-Objekt také uchovává ukazatele na dvě funkce, které řídí `strstreambuf` přidělení. Pokud jsou ukazatelé s hodnotou null, objekt devises své vlastní metody přidělení a uvolnění úložiště řízené sekvence.
+Objekt také ukládá ukazatele na dvě funkce, které řídí `strstreambuf` přidělení. Pokud jsou ukazatelé s hodnotou null, objekt navrhuje svou vlastní metodu přidělení a uvolnění úložiště pro řízenou sekvenci.
 
 > [!NOTE]
-> Tato třída je zastaralá. Zvažte použití [stringbuf](../standard-library/sstream-typedefs.md#stringbuf) nebo [wstringbuf](../standard-library/sstream-typedefs.md#wstringbuf) místo.
+> Tato třída je zastaralá. Místo toho zvažte použití [stringbuf –](../standard-library/sstream-typedefs.md#stringbuf) nebo [wstringbuf –](../standard-library/sstream-typedefs.md#wstringbuf) .
 
 ### <a name="constructors"></a>Konstruktory
 
 |Konstruktor|Popis|
 |-|-|
-|[strstreambuf –](#strstreambuf)|Vytvoří objekt typu `strstreambuf`.|
+|[strstreambuf](#strstreambuf)|Vytvoří objekt typu `strstreambuf`.|
 
 ### <a name="member-functions"></a>Členské funkce
 
 |Členská funkce|Popis|
 |-|-|
-|[zablokování](#freeze)|Způsobí, že vyrovnávací paměť datového proudu do nedostupný prostřednictvím operací vyrovnávací paměť datového proudu.|
-|[overflow](#overflow)|Chráněné virtuální funkce, která může být volána při vložení nového znaku do plné vyrovnávací paměti.|
-|[pbackfail](#pbackfail)|Chráněná virtuální členská funkce, který se pokusí vložit element zpět do vstupního datového proudu a proveďte aktuálního elementu (ukazuje další ukazatel).|
-|[pcount](#pcount)|Vrátí počet prvků zapsaných pro řízenou sekvenci.|
-|[seekoff](#seekoff)|Chráněná virtuální členská funkce, který se pokouší změnit aktuální pozice řízené datových proudů.|
-|[seekpos](#seekpos)|Chráněná virtuální členská funkce, který se pokouší změnit aktuální pozice řízené datových proudů.|
-|[str](#str)|Volání [ukotvit](#freeze)a vrátí ukazatel na začátek řízené sekvence.|
-|[underflow](#underflow)|Chráněné virtuální funkce se extrahovat aktuálního elementu ze vstupního datového proudu.|
+|[uvolnění](#freeze)|Způsobí, že vyrovnávací paměť datového proudu nebude k dispozici prostřednictvím operací vyrovnávací paměti datového proudu.|
+|[overflow](#overflow)|Chráněná virtuální funkce, která může být volána při vložení nového znaku do úplné vyrovnávací paměti.|
+|[pbackfail](#pbackfail)|Chráněná virtuální členská funkce, která se pokusí vrátit prvek do vstupního datového proudu a následně jej nastavit na aktuální prvek (ukazuje na další ukazatel).|
+|[pcount](#pcount)|Vrátí počet prvků zapsaných do řízené sekvence.|
+|[seekoff](#seekoff)|Chráněná virtuální členská funkce, která se pokusí změnit aktuální pozice pro řízené streamy.|
+|[seekpos](#seekpos)|Chráněná virtuální členská funkce, která se pokusí změnit aktuální pozice pro řízené streamy.|
+|[str](#str)|Volání [](#freeze)se zablokují a pak vrátí ukazatel na začátek řízené sekvence.|
+|[podtečení](#underflow)|Chráněná virtuální funkce pro extrakci aktuálního prvku ze vstupního datového proudu.|
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** \<strstream – >
+**Hlavička:** \<strstream >
 
-**Namespace:** std
+**Obor názvů:** std
 
-## <a name="freeze"></a>  strstreambuf::freeze
+## <a name="freeze"></a>strstreambuf:: zmrazit
 
-Způsobí, že vyrovnávací paměť datového proudu do nedostupný prostřednictvím operací vyrovnávací paměť datového proudu.
+Způsobí, že vyrovnávací paměť datového proudu nebude k dispozici prostřednictvím operací vyrovnávací paměti datového proudu.
 
 ```cpp
 void freeze(bool _Freezeit = true);
@@ -93,17 +93,17 @@ void freeze(bool _Freezeit = true);
 
 ### <a name="parameters"></a>Parametry
 
-*_Freezeit*<br/>
-A **bool** označující, zda chcete datového proudu k zmrazit.
+*_Freezeit*\
+**Logická** hodnota označující, zda má být datový proud zmrazen.
 
 ### <a name="remarks"></a>Poznámky
 
-Pokud *_Freezeit* má hodnotu true, funkce mění uloženou `strstreambuf` režimu, aby zmrazené řízené sekvence. Jinak umožní řízené sekvence není zmrazen.
+Pokud má *_Freezeit* hodnotu true, funkce změní uložený `strstreambuf` režim tak, aby se kontrolované pořadí zablokované. V opačném případě se řízená sekvence nezmrazují.
 
-[Str](#str) znamená `freeze`.
+[str](#str) implikuje `freeze`.
 
 > [!NOTE]
-> Zmrazené vyrovnávací paměť se neuvolní během `strstreambuf` zničení. Vyrovnávací paměť musí uvolnit předtím, než je uvolněn aby se zabránilo nevrácení paměti.
+> Zmrazená vyrovnávací paměť nebude uvolněna během `strstreambuf` zničení. Vyrovnávací paměť je nutné uvolnit před uvolněním, aby nedošlo k nevracení paměti.
 
 ### <a name="example"></a>Příklad
 
@@ -171,9 +171,9 @@ after clearing stream: stream good
 test1test3
 ```
 
-## <a name="overflow"></a>  strstreambuf::Overflow
+## <a name="overflow"></a>strstreambuf:: přetečení
 
-Chráněné virtuální funkce, která může být volána při vložení nového znaku do plné vyrovnávací paměti.
+Chráněná virtuální funkce, která může být volána při vložení nového znaku do úplné vyrovnávací paměti.
 
 ```cpp
 virtual int overflow(int _Meta = EOF);
@@ -181,24 +181,24 @@ virtual int overflow(int _Meta = EOF);
 
 ### <a name="parameters"></a>Parametry
 
-*_Meta*<br/>
-Znak k vložení do vyrovnávací paměti, nebo `EOF`.
+*_Meta*\
+Znak, který má být vložen do vyrovnávací paměti `EOF`, nebo.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Pokud funkce nemůže být úspěšná, vrátí `EOF`. Jinak, pokud  *\_Meta* == `EOF`, vrátí některá z hodnot jiných než `EOF`. V opačném případě vrátí  *\_Meta*.
+Pokud funkce nemůže být úspěšná, vrátí `EOF`se. V opačném případě, pokud  *\_meta* == `EOF`, vrátí jinou hodnotu `EOF`než. V opačném případě vrátí hodnotu  *\_meta*.
 
 ### <a name="remarks"></a>Poznámky
 
-Pokud  *\_Meta* ! = `EOF`, chráněná virtuální členská funkce se pokusí vložit element `(char)_Meta` do výstupní vyrovnávací paměť. To lze provést různými způsoby:
+`EOF`Pokud  *\_se meta* ! =, chráněná virtuální členská funkce se pokusí vložit element `(char)_Meta` do výstupní vyrovnávací paměti. To lze provést různými způsoby:
 
-- Pokud pozici zápisu je k dispozici, můžete uložit prvek na pozici zápisu a zvýšit další ukazatele pro výstupní vyrovnávací paměť.
+- Pokud je k dispozici pozice pro zápis, může prvek Uložit do pozice pro zápis a zvýšit další ukazatel pro výstupní vyrovnávací paměť.
 
-- Pokud je režim uložené strstreambuf – zobrazeno řízené sekvence je upravitelná Dal a ne zmrazené, funkce zpřístupnit pozici zápisu přidělením nové pro výstupní vyrovnávací paměť. Rozšíření do vyrovnávací paměti výstupních tímto způsobem rozšiřuje také všechny přidružené vstupní vyrovnávací paměť.
+- Pokud uložený režim strstreambuf uvádí, že řízená sekvence je upravitelná, dá se nastavit jako nezmrazená, funkce může vytvořit pozici pro zápis přidělením nového pro výstupní vyrovnávací paměť. Rozšiřování výstupní vyrovnávací paměti tímto způsobem také rozšiřuje jakoukoli přidruženou vstupní vyrovnávací paměť.
 
-## <a name="pbackfail"></a>  strstreambuf::pbackfail
+## <a name="pbackfail"></a>strstreambuf::p neúspěšného selhání
 
-Chráněná virtuální členská funkce, která se pokusí vrátit elementu do vstupního datového proudu a pak jej aktuálního elementu (ukazuje další ukazatel).
+Chráněná virtuální členská funkce, která se pokusí vrátit prvek do vstupního datového proudu a poté nastaví aktuální prvek (ukazuje na další ukazatel).
 
 ```cpp
 virtual int pbackfail(int _Meta = EOF);
@@ -206,26 +206,26 @@ virtual int pbackfail(int _Meta = EOF);
 
 ### <a name="parameters"></a>Parametry
 
-*_Meta*<br/>
-Znak k vložení do vyrovnávací paměti, nebo `EOF`.
+*_Meta*\
+Znak, který má být vložen do vyrovnávací paměti `EOF`, nebo.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Pokud funkce nemůže být úspěšná, vrátí `EOF`. Jinak, pokud  *\_Meta* == `EOF`, vrátí některá z hodnot jiných než `EOF`. V opačném případě vrátí  *\_Meta*.
+Pokud funkce nemůže být úspěšná, vrátí `EOF`se. V opačném případě, pokud  *\_meta* == `EOF`, vrátí jinou hodnotu `EOF`než. V opačném případě vrátí hodnotu  *\_meta*.
 
 ### <a name="remarks"></a>Poznámky
 
-Chráněná virtuální členská funkce se pokusí vrátit elementu do vstupní vyrovnávací paměť a nastavte ji aktuálního elementu (ukazuje další ukazatel).
+Chráněná virtuální členská funkce se pokusí vrátit prvek do vstupní vyrovnávací paměti a poté jej nastavit na aktuální prvek (ukazuje na další ukazatel).
 
-Pokud  *\_Meta* == `EOF`, elementu, který chcete vložit zpět je v podstatě je již ve službě stream před aktuální prvek. V opačném případě se nahrazuje tento prvek `ch = (char)_Meta`. Funkci lze vrátit zpět element různými způsoby:
+Je-li  *\_meta* == , element pro zpětný zápis je efektivně ten, který je již v datovém proudu před aktuálním prvkem.`EOF` V opačném případě je tento prvek `ch = (char)_Meta`nahrazen. Funkce může vložit element zpět různými způsoby:
 
-- Pokud putback – pozice je k dispozici a element v ní uloženy při porovnání rovna `ch`, je snížení další ukazatele pro vstupní vyrovnávací paměť.
+- Pokud je k dispozici putback pozice a element, na který se ukládá `ch`, se rovná, může snížit další ukazatel pro vstupní vyrovnávací paměť.
 
-- Pokud putback – pozice je k dispozici, a pokud režimu strstreambuf – uvádí, že je upravitelná řízené sekvence, můžete uložit funkce `ch` do pozice putback – a snížení další ukazatele pro vstupní vyrovnávací paměť.
+- Pokud je k dispozici putback pozice a pokud režim strstreambuf říká kontrolované sekvenci, může funkce ukládat `ch` do putback pozice a snížit další ukazatel pro vstupní vyrovnávací paměť.
 
-## <a name="pcount"></a>  strstreambuf::pcount
+## <a name="pcount"></a>strstreambuf: počet:p
 
-Vrátí počet prvků zapsaných pro řízenou sekvenci.
+Vrátí počet prvků zapsaných do řízené sekvence.
 
 ```cpp
 streamsize pcount() const;
@@ -233,11 +233,11 @@ streamsize pcount() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Počet počet zapsaných pro řízenou sekvenci prvků.
+Počet prvků zapsaných do řízené sekvence.
 
 ### <a name="remarks"></a>Poznámky
 
-Konkrétně Pokud [pptr –](../standard-library/basic-streambuf-class.md#pptr) je ukazatel s hodnotou null, vrátí funkce hodnotu nula. V opačném případě vrátí `pptr`  -  [pbase –](../standard-library/basic-streambuf-class.md#pbase).
+Konkrétně, pokud je [pptr](../standard-library/basic-streambuf-class.md#pptr) ukazatel s hodnotou null, vrátí funkce hodnotu nula. V opačném případě `pptr`vrátí  -  [pbase](../standard-library/basic-streambuf-class.md#pbase).
 
 ### <a name="example"></a>Příklad
 
@@ -258,9 +258,9 @@ int main( )
 }
 ```
 
-## <a name="seekoff"></a>  strstreambuf::seekoff
+## <a name="seekoff"></a>strstreambuf:: seekoff
 
-Chráněná virtuální členská funkce, který se pokouší změnit aktuální pozice řízené datových proudů.
+Chráněná virtuální členská funkce, která se pokusí změnit aktuální pozice pro řízené streamy.
 
 ```cpp
 virtual streampos seekoff(streamoff _Off,
@@ -270,38 +270,38 @@ virtual streampos seekoff(streamoff _Off,
 
 ### <a name="parameters"></a>Parametry
 
-*_Off*<br/>
-Pozice hledání pro relativně *_Way*.
+*_Off*\
+Pozice pro hledání vzhledem k *_Way*.
 
-*_Way*<br/>
-Výchozí bod pro operace. Zobrazit [seekdir](../standard-library/ios-base-class.md#seekdir) možných hodnot.
+*_Way*\
+Výchozí bod pro operace posunu. Možné hodnoty najdete v tématu [seekdir](../standard-library/ios-base-class.md#seekdir) .
 
-*_Which*<br/>
-Určuje režim pro ukazatel pozice. Výchozí hodnota je můžete změnit čtení a zápis pozic.
+*_Which*\
+Určuje režim pro pozici ukazatele. Ve výchozím nastavení je to, aby bylo možné upravovat pozice pro čtení a zápis.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Pokud funkce uspěje v změna buď nebo obojí datového proudu pozic, vrátí pozici výsledný datový proud. V opačném případě selže a vrátí pozici neplatný datový proud.
+Pokud funkce proběhne při změně buď na pozici datového proudu, nebo na obou místech, vrátí výslednou pozici streamu. V opačném případě selže a vrátí neplatnou pozici streamu.
 
 ### <a name="remarks"></a>Poznámky
 
-Chráněná virtuální členská funkce endeavors ke změně aktuální pozice řízené datových proudů. Pro objekt strstreambuf – třída pozici v datovém proudu se skládá čistě posun datového proudu. Posunutí nula označí první prvek řízené sekvence.
+Chráněná virtuální členská funkce budoucna změnu aktuální pozice pro řízené streamy. V případě objektu třídy strstreambuf se pozice datového proudu skládá čistě z posunu datového proudu. Nula odsazení určuje první prvek řízené sekvence.
 
-Na nové pozici je stanoven následujícím způsobem:
+Nová pozice je určena následujícím způsobem:
 
-- Pokud `_Way == ios_base::beg`, na nové pozici je začátku datového proudu plus *_Off*.
+- Pokud `_Way == ios_base::beg`je nová pozice začátek datového proudu a *_Off*.
 
-- Pokud `_Way == ios_base::cur`, na nové pozici, je aktuální pozici v datovém proudu plus *_Off*.
+- Pokud `_Way == ios_base::cur`je nová pozice aktuální pozice datového proudu a *_Off*.
 
-- Pokud `_Way == ios_base::end`, na nové pozici je konec datového proudu plus *_Off*.
+- Pokud `_Way == ios_base::end`je nová pozice koncem datového proudu plus *_Off*.
 
-Pokud `_Which & ios_base::in` je nenulová a neexistuje vstupní vyrovnávací paměť, funkce mění na další pozici pro čtení ve vstupní vyrovnávací paměti. Pokud `_Which & ios_base::out` je nenulová `_Way != ios_base::cur`a existuje výstupní vyrovnávací paměť, funkce nastaví také další pozici pro zápis do odpovídá další pozici ke čtení.
+Pokud `_Which & ios_base::in` je hodnota nenulová a vstupní vyrovnávací paměť existuje, funkce změní další pozici pro čtení ve vstupní vyrovnávací paměti. Pokud `_Which & ios_base::out` je také nenulová, `_Way != ios_base::cur`a výstupní vyrovnávací paměť existuje, funkce také nastaví další pozici, která se má zapsat, aby odpovídala další pozici ke čtení.
 
-Jinak, pokud `_Which & ios_base::out` je nenulová a existuje výstupní vyrovnávací paměť, funkce mění na další pozici pro zápis do výstupní vyrovnávací paměť. V opačném případě umístění operace se nezdaří. Umístění operace úspěšná musí být v řízené sekvenci od výsledný pozici v datovém proudu.
+V opačném `_Which & ios_base::out` případě, pokud je nenulová a výstupní vyrovnávací paměť existuje, funkce změní další pozici pro zápis do výstupní vyrovnávací paměti. V opačném případě se operace umístění nezdařila. Aby operace umístění byla úspěšná, výsledná pozice v datovém proudu musí spadat do kontrolované sekvence.
 
-## <a name="seekpos"></a>  strstreambuf::seekpos
+## <a name="seekpos"></a>strstreambuf:: seekpos
 
-Chráněná virtuální členská funkce, který se pokouší změnit aktuální pozice řízené datových proudů.
+Chráněná virtuální členská funkce, která se pokusí změnit aktuální pozice pro řízené streamy.
 
 ```cpp
 virtual streampos seekpos(streampos _Sp, ios_base::openmode _Which = ios_base::in | ios_base::out);
@@ -309,25 +309,25 @@ virtual streampos seekpos(streampos _Sp, ios_base::openmode _Which = ios_base::i
 
 ### <a name="parameters"></a>Parametry
 
-*_Sp*<br/>
-Pozice k vyhledání pro.
+*_Sp*\
+Pozice pro hledání.
 
-*_Which*<br/>
-Určuje režim pro ukazatel pozice. Výchozí hodnota je můžete změnit čtení a zápis pozic.
+*_Which*\
+Určuje režim pro pozici ukazatele. Ve výchozím nastavení je to, aby bylo možné upravovat pozice pro čtení a zápis.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Pokud funkce uspěje v změna buď nebo obojí datového proudu pozic, vrátí pozici výsledný datový proud. V opačném případě selže a vrátí pozici neplatný datový proud. Chcete-li zjistit, zda pozici v datovém proudu je neplatný, porovnejte návratovou hodnotu s `pos_type(off_type(-1))`.
+Pokud funkce proběhne při změně buď na pozici datového proudu, nebo na obou místech, vrátí výslednou pozici streamu. V opačném případě selže a vrátí neplatnou pozici streamu. Chcete-li zjistit, zda je pozice datového proudu neplatná, porovnejte `pos_type(off_type(-1))`návratovou hodnotu hodnotou.
 
 ### <a name="remarks"></a>Poznámky
 
-Chráněná virtuální členská funkce endeavors ke změně aktuální pozice řízené datových proudů. Pro objekt strstreambuf – třída pozici v datovém proudu se skládá čistě posun datového proudu. Posunutí nula označí první prvek řízené sekvence. Je určená na nové pozici *_Sp*.
+Chráněná virtuální členská funkce budoucna změnu aktuální pozice pro řízené streamy. V případě objektu třídy strstreambuf se pozice datového proudu skládá čistě z posunu datového proudu. Nula odsazení určuje první prvek řízené sekvence. Nová pozice je určena pomocí *_Sp*.
 
-Pokud `_Which`  &  **ios_base::in** je nenulová a existuje vstupní vyrovnávací paměť, funkce mění na další pozici pro čtení ve vstupní vyrovnávací paměti. Pokud `_Which`  &  `ios_base::out` je nenulová a existuje výstupní vyrovnávací paměť, funkce nastaví také další pozici pro zápis do odpovídá další pozici ke čtení. Jinak, pokud `_Which`  &  `ios_base::out` je nenulová a existuje výstupní vyrovnávací paměť, funkce mění na další pozici pro zápis do výstupní vyrovnávací paměť. V opačném případě umístění operace se nezdaří. Umístění operace úspěšná musí být v řízené sekvenci od výsledný pozici v datovém proudu.
+Pokud `_Which` ios_base &  **:: in** je nenulové a vstupní vyrovnávací paměť existuje, funkce změní další pozici pro čtení ve vstupní vyrovnávací paměti. Pokud `_Which`  &  je hodnotanenulováavýstupnívyrovnávacípaměťexistuje,funkcetakénastavídalšípozici,kterásemázapsat,abyodpovídaladalšípozicikečtení.`ios_base::out` V opačném `_Which` případě, pokud  &  `ios_base::out` je nenulová a výstupní vyrovnávací paměť existuje, funkce změní další pozici pro zápis do výstupní vyrovnávací paměti. V opačném případě se operace umístění nezdařila. Aby operace umístění byla úspěšná, výsledná pozice v datovém proudu musí spadat do kontrolované sekvence.
 
-## <a name="str"></a>  strstreambuf::str
+## <a name="str"></a>strstreambuf:: str
 
-Volání [ukotvit](#freeze)a vrátí ukazatel na začátek řízené sekvence.
+Volání [](#freeze)se zablokují a pak vrátí ukazatel na začátek řízené sekvence.
 
 ```cpp
 char *str();
@@ -339,13 +339,13 @@ Ukazatel na začátek řízené sekvence.
 
 ### <a name="remarks"></a>Poznámky
 
-Neexistuje žádný ukončujícího znaku null prvek, pokud explicitně vložit jednu.
+Neexistují žádné ukončující prázdné prvky, pokud jej explicitně nevložíte.
 
 ### <a name="example"></a>Příklad
 
-Zobrazit [strstreambuf::freeze](#freeze) ukázku, která používá **str**.
+Ukázku, která používá **str**, najdete v tématu [strstreambuf:: zmrazení](#freeze) .
 
-## <a name="strstreambuf"></a>  strstreambuf::strstreambuf
+## <a name="strstreambuf"></a>strstreambuf:: strstreambuf
 
 Vytvoří objekt typu `strstreambuf`.
 
@@ -379,26 +379,26 @@ strstreambuf(const unsigned char* _Getptr,
 
 ### <a name="parameters"></a>Parametry
 
-*_Allocfunc*<br/>
+*_Allocfunc*\
 Funkce použitá k přidělení vyrovnávací paměti.
 
-*Počet*<br/>
-Určuje délku vyrovnávací paměti, na které odkazuje *_Getptr*. Pokud *_Getptr* není argument (první konstruktoru formuláře), navrhované přidělení velikost pro vyrovnávací paměti.
+*výpočtu*\
+Určuje délku vyrovnávací paměti, na kterou odkazuje *_Getptr*. Pokud *_Getptr* není argumentem (první konstruktorový formulář), navrhovaná velikost přidělení pro vyrovnávací paměti.
 
-*_Freefunc*<br/>
-Funkce použitá k uvolnění vyrovnávací paměti.
+*_Freefunc*\
+Funkce, která se používá k uvolnění vyrovnávací paměti.
 
-*_Getptr*<br/>
-Vyrovnávací paměti použili pro vstup.
+*_Getptr*\
+Vyrovnávací paměť použitá pro vstup.
 
-*_Putptr*<br/>
-Vyrovnávací paměť pro výstup.
+*_Putptr*\
+Vyrovnávací paměť použitá pro výstup.
 
 ### <a name="remarks"></a>Poznámky
 
-První konstruktor uloží ukazatel s hodnotou null v všechny ukazatele řízení vstupní vyrovnávací paměť, vyrovnávací paměti výstupních a strstreambuf – přidělení. Nastaví režim uložené strstreambuf – aby řízené sekvence upravitelnými a prodloužit. Přijímá také *počet* jako navrhované přidělení počáteční velikost.
+První konstruktor ukládá ukazatel s hodnotou null ve všech ukazatelích řídících vstupní vyrovnávací paměť, výstupní vyrovnávací paměť a přidělení strstreambuf. Nastaví uložený režim strstreambuf, aby se řízená sekvence dá upravovat a rozšířila. Také přijímá *počet* jako navrhovanou počáteční velikost přidělení.
 
-Druhý konstruktor se chová jako první, s tím rozdílem, že ukládá  *\_Allocfunc* jako ukazatel na funkci, která má být volána pro přidělení úložiště a  *\_Freefunc* jako ukazatel do funkce volání k uvolnění tohoto úložiště.
+Druhý konstruktor se chová jako první, s tím rozdílem, že ukládá  *\_Allocfunc* jako ukazatel na funkci, která volá k přidělení úložiště a  *\_Freefunc* jako ukazatel na funkci, která je volána pro uvolnění tohoto úložiště.
 
 Tři konstruktory:
 
@@ -416,13 +416,13 @@ strstreambuf(unsigned char *_Getptr,
     unsigned char *putptr = 0);
 ```
 
-také se chovat jako první, s tím rozdílem, že `_Getptr` označí objekt pole sloužící k uchování řízené sekvence. (Proto to nesmí být ukazatel s hodnotou null.) Počet prvků, které *N* v poli je stanoven následujícím způsobem:
+také se chová jako první, s tím rozdílem, že `_Getptr` určuje objekt Array použitý pro uchování řízené sekvence. (Proto nesmí být ukazatel s hodnotou null.) Počet elementů *N* v poli je určen následujícím způsobem:
 
-- Pokud (`count` > 0), pak *N* je `count`.
+- If (`count` > 0); pak *N* `count`.
 
-- Pokud (`count` == 0), pak *N* je `strlen`(( **const** `char` *) `_Getptr` ).
+- If (`count` = = 0); Then *N* je `strlen`(( **const** `char` * `_Getptr` )).
 
-- Pokud (`count` < 0), pak *N* je **INT_MAX**.
+- If (`count` < 0); pak *N* je **INT_MAX**.
 
 Pokud `_Putptr` je ukazatel s hodnotou null, funkce vytvoří pouze vstupní vyrovnávací paměť spuštěním:
 
@@ -432,7 +432,7 @@ setg(_Getptr,
     _Getptr + N);
 ```
 
-V opačném případě určuje vstupní i výstupní vyrovnávací paměti spuštěním:
+V opačném případě vytvoří vstupní i výstupní vyrovnávací paměť spuštěním:
 
 ```cpp
 setg(_Getptr,
@@ -443,7 +443,7 @@ setp(_Putptr,
     _Getptr + N);
 ```
 
-V takovém případě `_Putptr` musí být v rozsahu [ `_Getptr`, `_Getptr`  +  *N*].
+V takovém případě `_Putptr` musí být v intervalu [ `_Getptr`, `_Getptr`  +  *N*].
 
 Nakonec tři konstruktory:
 
@@ -458,17 +458,17 @@ strstreambuf(const unsigned char *_Getptr,
     streamsize count);
 ```
 
-všechny se chová stejně jako:
+vše se chová stejně jako:
 
 ```cpp
 streambuf((char *)_Getptr, count);
 ```
 
-s tím rozdílem, že uložené režimu díky řízenou sekvenci lze měnit ani prodloužit.
+s tím rozdílem, že uložený režim neumožňuje upravovat ani měnitelné sekvence.
 
-## <a name="underflow"></a>  strstreambuf::underflow
+## <a name="underflow"></a>strstreambuf:: subflow
 
-Chráněné virtuální funkce se extrahovat aktuálního elementu ze vstupního datového proudu.
+Chráněná virtuální funkce pro extrakci aktuálního prvku ze vstupního datového proudu.
 
 ```cpp
 virtual int underflow();
@@ -476,15 +476,15 @@ virtual int underflow();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Pokud funkce nemůže být úspěšná, vrátí `EOF`. V opačném případě vrátí aktuální prvek ve vstupní datový proud, převést, jak je popsáno výše.
+Pokud funkce nemůže být úspěšná, vrátí `EOF`se. V opačném případě vrátí aktuální prvek ve vstupním datovém proudu, který je převeden tak, jak je popsáno výše.
 
 ### <a name="remarks"></a>Poznámky
 
-Chráněná virtuální členská funkce endeavors extrahovat aktuálního elementu `ch` ze vstupní vyrovnávací paměť, pak přejděte aktuální pozici v datovém proudu a vrátí prvek jako (`int`) (`unsigned char`) **ch**. To lze provést pouze jedním ze způsobů: Pokud je k dispozici pozici pro čtení, trvá `ch` jako element uložené v pozici pro čtení a přejde na další ukazatele pro vstupní vyrovnávací paměť.
+Chráněná virtuální členská funkce budoucna extrahování aktuálního prvku `ch` ze vstupní vyrovnávací paměti, následnému posunutí aktuálního umístění datového proudu a vrácení prvku jako (`int`) (`unsigned char`) () () **ch**. Může tak učinit pouze jedním ze způsobů: Pokud je dostupná pozice pro čtení, přebírá `ch` se jako element uložený na pozici pro čtení a předává další ukazatel pro vstupní vyrovnávací paměť.
 
 ## <a name="see-also"></a>Viz také:
 
-[streambuf –](../standard-library/streambuf-typedefs.md#streambuf)<br/>
-[Bezpečný přístup z více vláken ve standardní knihovně C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
-[iostream – programování](../standard-library/iostream-programming.md)<br/>
-[iostreams – konvence](../standard-library/iostreams-conventions.md)<br/>
+[streambuf](../standard-library/streambuf-typedefs.md#streambuf)\
+[Bezpečnost vlákna ve C++ standardní knihovně](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[Programování iostream –](../standard-library/iostream-programming.md)\
+[iostreams – konvence](../standard-library/iostreams-conventions.md)
