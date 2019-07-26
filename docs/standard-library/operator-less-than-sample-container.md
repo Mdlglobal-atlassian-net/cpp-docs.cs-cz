@@ -1,5 +1,5 @@
 ---
-title: operátor&lt; (&lt;ukázkový kontejner&gt;)
+title: –&lt; operátor&lt;(ukázkový&gt;kontejner)
 ms.date: 11/04/2016
 f1_keywords:
 - std::operator<
@@ -14,19 +14,19 @@ helpviewer_keywords:
 - < operator
 - operator <, valarrays
 ms.assetid: 31027dd6-53be-428b-b950-1dcb25393597
-ms.openlocfilehash: e5e53f02da52837b29b6bca4b49662174d6392a1
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.openlocfilehash: a286833d96e913a66240d25798e1cc230adf58b0
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65220530"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68458729"
 ---
-# <a name="operatorlt-ltsample-containergt"></a>operátor&lt; (&lt;ukázkový kontejner&gt;)
+# <a name="operatorlt-ltsample-containergt"></a>–&lt; operátor&lt;(ukázkový&gt;kontejner)
 
 > [!NOTE]
-> Toto téma je v Microsoft C++ dokumentaci jako funkční příklad kontejnerů používané C++ standardní knihovny. Další informace najdete v tématu [kontejnery standardní knihovny C++](../standard-library/stl-containers.md).
+> Toto téma se nachází v dokumentaci C++ společnosti Microsoft jako nefunkční příklad kontejnerů použitých ve C++ standardní knihovně. Další informace najdete v tématu [ C++ standardní kontejnery knihovny](../standard-library/stl-containers.md).
 
-Přetížení **operátor <** k porovnání dvou objektů třídy šablony [kontejneru](../standard-library/sample-container-class.md).
+**Operátor přetížení <** pro porovnání dvou objektů [kontejneru](../standard-library/sample-container-class.md)tříd šablony.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -43,6 +43,6 @@ Vrátí `lexicographical_compare(left.begin, left.end, right.begin, right.end)`.
 
 ## <a name="see-also"></a>Viz také:
 
-[\<Ukázkový kontejner >](../standard-library/sample-container.md)<br/>
-[začít](../standard-library/container-class-begin.md)<br/>
-[ukončení](../standard-library/container-class-end.md)
+[\<Ukázkový > kontejneru](../standard-library/sample-container.md)\
+[ifunctiondiscovery](../standard-library/container-class-begin.md)\
+[účelu](../standard-library/container-class-end.md)
