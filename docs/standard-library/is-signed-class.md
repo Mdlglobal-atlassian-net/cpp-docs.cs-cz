@@ -7,16 +7,16 @@ helpviewer_keywords:
 - is_signed class
 - is_signed
 ms.assetid: 20ae44d9-22ad-4fbd-b26a-f18c62689451
-ms.openlocfilehash: eacc271697930bec64630c0a1be612bd89eeb91f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 153970412f324f070bb66ae4a1bb6a8c204a5886
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62413526"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68457509"
 ---
 # <a name="issigned-class"></a>is_signed – třída
 
-Test, pokud je typ celé číslo se znaménkem.
+Otestuje, zda je typ podepsané celé číslo.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -27,12 +27,12 @@ struct is_signed;
 
 ### <a name="parameters"></a>Parametry
 
-*Ty*<br/>
+*Ty*\
 Typ, na který chcete odeslat dotaz.
 
 ## <a name="remarks"></a>Poznámky
 
-Instance predikátu typu obsahuje hodnotu true, pokud typ *Ty* je celočíselný typ se znaménkem nebo `cv-qualified` celočíselný typ se znaménkem, jinak má hodnotu false.
+Instance predikátu typu má hodnotu true, pokud *je typ,* který je typu se znaménkem, `cv-qualified` nebo podepsaný integrálový typ, jinak obsahuje hodnotu false.
 
 ## <a name="example"></a>Příklad
 
@@ -71,11 +71,11 @@ is_signed<float> == true
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** \<type_traits >
+**Hlavička:** \<type_traits >
 
-**Namespace:** std
+**Obor názvů:** std
 
 ## <a name="see-also"></a>Viz také:
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
-[is_unsigned – třída](../standard-library/is-unsigned-class.md)<br/>
+[< type_traits >](../standard-library/type-traits.md)\
+[is_unsigned – třída](../standard-library/is-unsigned-class.md)

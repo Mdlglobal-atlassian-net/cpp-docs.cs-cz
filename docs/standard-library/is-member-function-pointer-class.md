@@ -7,12 +7,12 @@ helpviewer_keywords:
 - is_member_function_pointer class
 - is_member_function_pointer
 ms.assetid: 02e372c4-2714-40f2-b376-2e10ca91c8ed
-ms.openlocfilehash: 0eb758977abf889a7d5ec8cdec9213980493ba2e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1f51c389e86f2d0550a6418d04080f40f4bf4204
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62351927"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68456172"
 ---
 # <a name="ismemberfunctionpointer-class"></a>is_member_function_pointer – třída
 
@@ -27,12 +27,12 @@ struct is_member_function_pointer;
 
 ### <a name="parameters"></a>Parametry
 
-*Ty*<br/>
+*Ty*\
 Typ, na který chcete odeslat dotaz.
 
 ## <a name="remarks"></a>Poznámky
 
-Instance predikátu typu obsahuje hodnotu true, pokud typ *Ty* je ukazatel na členskou funkci nebo `cv-qualified` ukazatel na členskou funkci, jinak má hodnotu false.
+Instance predikátu typu má hodnotu true, *Pokud typ,* který je ukazatel na členskou funkci, nebo `cv-qualified` ukazatel na členskou funkci, v opačném případě obsahuje hodnotu false.
 
 ## <a name="example"></a>Příklad
 
@@ -79,11 +79,11 @@ is_member_function_pointer<int (functional::*)()> == true
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** \<type_traits >
+**Hlavička:** \<type_traits >
 
-**Namespace:** std
+**Obor názvů:** std
 
 ## <a name="see-also"></a>Viz také:
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
-[is_member_pointer – třída](../standard-library/is-member-pointer-class.md)<br/>
+[< type_traits >](../standard-library/type-traits.md)\
+[is_member_pointer – třída](../standard-library/is-member-pointer-class.md)
