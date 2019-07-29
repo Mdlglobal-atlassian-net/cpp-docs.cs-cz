@@ -429,18 +429,7 @@
                 - name: NMake – stránka vlastností
                   href: build/reference/nmake-property-page.md
                 - name: Stránky vlastností nástroje manifest
-                  expanded: false
-                  items:
-                    - name: Stránky vlastností nástroje manifest
-                      href: build/reference/manifest-tool-property-pages.md
-                    - name: 'Obecné, Nástroj manifest, Vlastnosti konfigurace, Dialogové okno Stránky vlastností projektu <Projectname>'
-                      href: build/reference/general-manifest-tool-configuration-properties.md
-                    - name: 'Vstup a výstup, Nástroj manifest, Vlastnosti konfigurace, Dialogové okno Stránky vlastností projektu <Projectname>'
-                      href: build/reference/input-and-output-manifest-tool.md
-                    - name: 'Izolované modely COM, Nástroj manifest, Vlastnosti konfigurace, Dialogové okno Stránky vlastností projektu <Projectname>'
-                      href: build/reference/isolated-com-manifest-tool.md
-                    - name: 'Upřesnit, Nástroj manifest, Vlastnosti konfigurace, Dialogové okno Stránky vlastností projektu <Projectname>'
-                      href: build/reference/advanced-manifest-tool.md
+                  href: build/reference/manifest-tool-property-pages.md
                 - name: Stránky vlastností prostředků
                   href: build/reference/resources-property-pages.md
                 - name: Stránka vlastností spravovaných prostředků
@@ -456,16 +445,7 @@
                 - name: 'Stránka vlastností vlastního kroku sestavení: Obecné'
                   href: build/reference/custom-build-step-property-page-general.md
                 - name: HLSL – stránky vlastností
-                  expanded: false
-                  items:
-                    - name: HLSL – stránky vlastností
-                      href: build/reference/hlsl-property-pages.md
-                    - name: 'HLSL – stránky vlastností: Obecné'
-                      href: build/reference/hlsl-property-pages-general.md
-                    - name: 'HLSL – stránky vlastností: Upřesnit'
-                      href: build/reference/hlsl-property-pages-advanced.md
-                    - name: 'HLSL – stránky vlastností: Výstupní soubory'
-                      href: build/reference/hlsl-property-pages-output-files.md
+                  href: build/reference/hlsl-property-pages.md
         - name: Referenční zdroje ke kompilátorům MSVC
           expanded: false
           items:
@@ -1607,10 +1587,10 @@
 - name: Vývoj desktopových aplikací pro Windows
   expanded: false
   items:
-    - name: Desktopové aplikace v C++
-      href: windows/desktop-applications-visual-cpp.md
     - name: "Přehled programování v\_C++ v\_systému Windows"
       href: windows/overview-of-windows-programming-in-cpp.md
+    - name: Desktopové aplikace v C++
+      href: windows/desktop-applications-visual-cpp.md
     - name: 'Návod: Vytvoření programu ve standardním C++'
       href: windows/walkthrough-creating-a-standard-cpp-program-cpp.md
     - name: 'Návod: Vytváření desktopových aplikací pro Windows'

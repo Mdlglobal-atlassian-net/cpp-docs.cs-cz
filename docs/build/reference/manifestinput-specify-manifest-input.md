@@ -1,17 +1,17 @@
 ---
 title: /MANIFESTINPUT (Určit vstup manifestu)
-ms.date: 11/04/2016
+ms.date: 07/24/2019
 ms.assetid: a0b0c21e-1f9b-4d8c-bb3f-178f57fa7f1b
-ms.openlocfilehash: bf192664a7a2402b06621167d91dff67ce0741a9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7b7bd54f98003d9158276fcf75fd61ffb5348585
+ms.sourcegitcommit: 720b74dddb1cdf4e570d55103158304ee1df81f8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62321355"
+ms.lasthandoff: 07/29/2019
+ms.locfileid: "68606463"
 ---
 # <a name="manifestinput-specify-manifest-input"></a>/MANIFESTINPUT (Určit vstup manifestu)
 
-Určuje vstupní soubor manifestu pro zahrnutí do manifestu, který je vložený v obrazu.
+Určuje vstupní soubor manifestu, který má být zahrnut do manifestu vloženého do obrázku.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -21,14 +21,14 @@ Určuje vstupní soubor manifestu pro zahrnutí do manifestu, který je vložen�
 
 ### <a name="parameters"></a>Parametry
 
-*Název souboru*<br/>
-Soubor manifestu pro zahrnutí do vloženého manifestu.
+*Bitmap*<br/>
+Soubor manifestu, který má být zahrnut do vloženého manifestu.
 
 ## <a name="remarks"></a>Poznámky
 
-**/MANIFESTINPUT** Určuje cestu vstupního souboru pro použití k tvorbě vloženého manifestu spustitelné bitové kopie. Pokud máte více vstupních souborů manifestu, použijte přepínač vícekrát – jednou pro každý vstupní soubor. Vstupní soubory manifestu jsou sloučeny pro tvorbu vloženého manifestu. Tato možnost vyžaduje **/MANIFEST: EMBED** možnost.
+Možnost **/MANIFESTINPUT** Určuje cestu ke vstupnímu souboru, který se má použít k vytvoření vloženého manifestu ve spustitelné imagi. Máte-li více vstupních souborů manifestu, použijte přepínač několikrát pro každý vstupní soubor. Vstupní soubory manifestu jsou sloučeny pro vytvoření vloženého manifestu. Tato možnost vyžaduje možnost **/manifest: EMBED** .
 
-Tuto možnost nelze nastavit přímo v sadě Visual Studio. Místo toho použijte **přídavné soubory manifestu** vlastnosti projektu, chcete-li určit další soubory manifestu k zahrnutí. Další informace najdete v tématu [vstup a výstup, Nástroj Manifest, vlastnosti konfigurace, \<Projectname > dialogového okna stránky vlastností](input-and-output-manifest-tool.md).
+Tuto možnost nelze nastavit přímo v sadě Visual Studio. Místo toho použijte vlastnost **Další soubory manifestu** projektu k určení dalších souborů manifestu, které mají být zahrnuty. Další informace najdete v tématu [stránky vlastností nástroje manifestu](manifest-tool-property-pages.md).
 
 ## <a name="see-also"></a>Viz také:
 
