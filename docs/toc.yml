@@ -405,7 +405,7 @@
                   href: build/reference/vcxproj-file-structure.md
                 - name: Ukázkový soubor projektu
                   href: build/reference/project-files.md
-            - name: Referenční zdroje k vlastnostem projektu C++
+            - name: Stránky vlastností projektu v C++
               expanded: false
               items:
                 - name: Referenční zdroje k vlastnostem projektu C++
@@ -416,6 +416,8 @@
                   href: build/reference/general-property-page-file.md
                 - name: Stránka vlastností Upřesnit
                   href: build/reference/advanced-property-page.md
+                - name: Ladění stránek vlastností
+                  href: build/reference/debugging-prop-pages.md
                 - name: Stránka vlastností adresářů VC++
                   href: build/reference/vcpp-directories-property-page.md
                 - name: Stránky vlastností C/C++
@@ -4351,6 +4353,13 @@
                   href: cpp/assertion-and-user-supplied-messages-cpp.md
                 - name: static_assert
                   href: cpp/static-assert.md
+            - name: Moduly
+              expanded: false
+              items:
+                - name: Přehled modulů v C++
+                  href: cpp/modules-cpp.md
+                - name: 'modul, import, export'
+                  href: cpp/import-export-module.md
             - name: Šablony
               expanded: false
               items:
