@@ -12,39 +12,29 @@ helpviewer_keywords:
 - macros [C++], converting parameters to strings
 - '# preprocessor operator'
 ms.assetid: 1175dd19-4538-43b3-ad97-a008ab80e7b1
-ms.openlocfilehash: 4f23eea017197ae1f984e097bb3967c1228fef09
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 720817b34326d822ef797351655e4ace907e4baf
+ms.sourcegitcommit: 20a1356193fbe0ddd1002e798b952917eafc3439
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62179643"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68661631"
 ---
 # <a name="stringizing-operator-"></a>Operátor nastavení velikosti řetězce (#)
 
-Znak čísla neboli operátor "převodu na řetězec" (**#**) převede parametry maker na řetězcové literály bez rozvíjení definice parametru. Používá se pouze spolu s makry, která přijímají argumenty. Je-li operátor uveden v definici makra před formálním parametrem, je skutečný argument předaný voláním makra uzavřen do uvozovek a považován za řetězcový literál. Řetězcový literál pak nahradí všechny výskyty kombinace operátoru převodu na řetězec a formálního parametru v definici makra.
+Symbol čísla nebo operátor "převodu" ( **#** ) převede parametry makra na řetězcové literály bez rozšíření definice parametru. Používá se pouze spolu s makry, která přijímají argumenty. Je-li operátor uveden v definici makra před formálním parametrem, je skutečný argument předaný voláním makra uzavřen do uvozovek a považován za řetězcový literál. Řetězcový literál pak nahradí všechny výskyty kombinace operátoru převodu na řetězec a formálního parametru v definici makra.
 
 > [!NOTE]
-> Rozšíření standardu ANSI jazyka C společností Microsoft (verze 6.0 a starší), ve kterém byly dříve rozvíjeny formální argumenty maker uvnitř řetězcových literálů a znakových konstant, již není podporováno. Kód opírající se o toto rozšíření by měl být přepsán pomocí převodu na řetězec (**#**) – operátor.
+> Rozšíření standardu ANSI jazyka C společností Microsoft (verze 6.0 a starší), ve kterém byly dříve rozvíjeny formální argumenty maker uvnitř řetězcových literálů a znakových konstant, již není podporováno. Kód, který se spoléhat na toto rozšíření, by měl být přepsán pomocí **#** operátoru převodu ().
 
 Prázdný znak před prvním a za posledním tokenem skutečného argumentu je ignorován. Všechny prázdné znaky mezi tokeny ve skutečném argumentu jsou ve výsledném řetězcovém literálu redukovány na jediný prázdný znak. Proto vyskytne-li se mezi dvěma tokeny ve skutečném argumentu komentář, je redukován na jediný prázdný znak. K výslednému řetězcovému literálu jsou automaticky připojeny všechny sousedící řetězcové literály, od nichž je výsledný literál oddělen pouze prázdnými znaky.
 
-Dále, pokud znak obsažený v argumentu, obvykle vyžaduje řídicí sekvenci při použití v řetězcovém literálu (například znak uvozovek (**"**) nebo zpětné lomítko (**\\**) znaků), potřebné zpětné lomítko před něj vloženo automaticky znak.
+Pokud znak obsažený v argumentu obvykle vyžaduje řídící sekvenci při použití v řetězcovém literálu (například znak uvozovky ( **"** ) nebo zpětného lomítka ( **\\** )), je nutné automaticky vložit zpětné lomítko. před znakem.
 
-Operátor převodu na řetězec jazyka Visual C++ nechoval správně při použití s řetězci, které zahrnují řídicí sekvence. V takovém případě kompilátor generuje [Chyba kompilátoru C2017](../error-messages/compiler-errors-1/compiler-error-c2017.md).
+Operátor Visual C++ převodu se chová správně, když je použit s řetězci, které obsahují řídicí sekvence. V této situaci kompilátor generuje [chybu kompilátoru C2017](../error-messages/compiler-errors-1/compiler-error-c2017.md).
 
 ## <a name="examples"></a>Příklady
 
 Následující příklad ukazuje definici makra obsahující operátor převodu na řetězec a hlavní funkci, která makro volá:
-
-Taková volání by byla rozvinuta během předběžného zpracování a vytvořila by následující kód:
-
-```cpp
-int main() {
-   printf_s( "In quotes in the printf function call\n" "\n" );
-   printf_s( "\"In quotes when printed to the screen\"\n" "\n" );
-   printf_s( "\"This: \\\" prints an escaped double quote\"" "\n" );
-}
-```
 
 ```cpp
 // stringizer.cpp
@@ -54,6 +44,16 @@ int main() {
    stringer( In quotes in the printf function call );
    stringer( "In quotes when printed to the screen" );
    stringer( "This: \"  prints an escaped double quote" );
+}
+```
+
+Taková volání by byla rozvinuta během předběžného zpracování a vytvořila by následující kód:
+
+```cpp
+int main() {
+   printf_s( "In quotes in the printf function call\n" "\n" );
+   printf_s( "\"In quotes when printed to the screen\"\n" "\n" );
+   printf_s( "\"This: \\\" prints an escaped double quote\"" "\n" );
 }
 ```
 

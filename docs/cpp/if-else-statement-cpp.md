@@ -1,29 +1,29 @@
 ---
 title: if-else – příkaz (C++)
-ms.date: 07/17/2017
+ms.date: 07/20/2019
+description: Použijte příkazy if-else v C++ k řízení podmíněného větvení.
 f1_keywords:
 - else_cpp
 - if_cpp
 helpviewer_keywords:
 - if keyword [C++]
 - else keyword [C++]
-- if keyword [C++], if-else
 ms.assetid: f8c45cde-6bce-42ae-81db-426b3dbd4caa
-ms.openlocfilehash: 16aa65ab64d9fd855ae3306da88f8eb14eec759c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0e9de2d39e09e148c7e4f3ea82c3dadb173c2d0c
+ms.sourcegitcommit: 20a1356193fbe0ddd1002e798b952917eafc3439
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62183645"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68661641"
 ---
 # <a name="if-else-statement-c"></a>if-else – příkaz (C++)
 
-Ovládá podmíněné větvení. Příkazy v *blok if* jsou spouštěny pouze v případě *výraz if* vyhodnotí jako nenulové hodnoty (nebo TRUE). Pokud hodnota *výraz* nenulové, *statement1* další příkazy v bloku jsou vykonány a else bloku, pokud jsou k dispozici, se přeskočí. Pokud hodnota *výraz* je nula, pak se přeskočila blok if a else bloku, pokud jsou k dispozici, je proveden. Jsou výrazy, které vedou na nenulovou
+Ovládá podmíněné větvení. Příkazy v *bloku If* jsou spouštěny pouze v případě, že *výraz IF-Expression* je vyhodnocen jako nenulová hodnota (nebo true). Pokud je hodnota *výrazu* nenulová, *příkaz1* a všechny ostatní příkazy v bloku jsou spuštěny a blok else-Block, pokud je k dispozici, je vynechán. Pokud je hodnota *výrazu* nula, pak je if-Block vynechán a je proveden blok else-Block, pokud je k dispozici. Výrazy, které se vyhodnotí jako nenulové, jsou
 
-- HODNOTA TRUE
-- nenulový ukazatel
-- žádné jiné hodnoty než nula aritmetické, nebo
-- Zadejte typ třídy definující jednoznačný převod na aritmetický, logickou hodnotu nebo ukazatele. (Informace o převodech naleznete v tématu [standardní převody](../cpp/standard-conversions.md).)
+- PODMÍNKA
+- ukazatel, který není null,
+- Jakákoli nenulová hodnota aritmetického typu nebo
+- typ třídy, který definuje jednoznačnou konverzi na aritmetický typ, logickou hodnotu nebo typ ukazatele. (Informace o převodech naleznete v tématu [standardní převody](../cpp/standard-conversions.md).)
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -39,7 +39,7 @@ else  // optional
    ...
 }
 
-// Visual Studio 2017 version 15.3 and later:
+// C++17 - Visual Studio 2017 version 15.3 and later:
 if ( initialization; expression )
 {
    statement1;
@@ -51,7 +51,7 @@ else  // optional
    ...
 }
 
-// Visual Studio 2017 version 15.3 and later:
+// C++17 - Visual Studio 2017 version 15.3 and later:
 if constexpr (expression)
 {
     statement1;
@@ -111,9 +111,9 @@ int main()
 }
 ```
 
-## <a name="if_with_init"></a> Pokud příkaz pomocí inicializátoru
+## <a name="if_with_init"></a>If – příkaz s inicializátorem
 
-**Visual Studio 2017 verze 15.3 nebo novější** (k dispozici [/std: c ++ 17](../build/reference/std-specify-language-standard-version.md)): **Pokud** příkaz může také obsahovat výraz, který deklaruje a inicializuje proměnnou s názvem. Používejte tento formulář příkaz if proměnné je potřeba pouze v rámci oboru bloku if.
+**Visual Studio 2017 verze 15,3 a novější** (k dispozici v [/std: c++ 17](../build/reference/std-specify-language-standard-version.md)): Příkaz **if** může obsahovat také výraz, který deklaruje a inicializuje pojmenovanou proměnnou. Tuto formu příkazu if-Statement použijte, pokud je proměnná požadována pouze v rámci rozsahu bloku If-Block.
 
 ## <a name="example"></a>Příklad
 
@@ -159,13 +159,13 @@ int main()
 }
 ```
 
-Ve všech typech **Pokud** příkazu *výraz*, což může mít libovolnou hodnotu, s výjimkou struktury, vyhodnocen včetně všechny vedlejší účinky. Ovládání přejde z **Pokud** příkaz dalšímu příkazu v programu není-li jeden z *příkaz*neobsahuje [přerušení](../cpp/break-statement-cpp.md), [pokračovat](../cpp/continue-statement-cpp.md), nebo [goto](../cpp/goto-statement-cpp.md).
+Ve všech formulářích příkazu **if** je *výraz*, který může mít libovolnou hodnotu s výjimkou struktury, vyhodnocen, včetně všech vedlejších účinků. Řízení se předává z příkazu **if** do dalšího příkazu v programu, pokud některý z *příkazů neobsahuje příkaz* [Break](../cpp/break-statement-cpp.md), [Continue](../cpp/continue-statement-cpp.md)nebo [goto](../cpp/goto-statement-cpp.md).
 
-**Else** klauzuli `if...else` je přidružena k nejbližšímu příkazu předchozí **Pokud** příkaz ve stejném oboru, který nemá odpovídající **else** příkaz.
+Klauzule `if...else` ELSE příkazu je přidružená k nejbližšímu předchozímu příkazu **if** ve stejném oboru, který nemá odpovídající příkaz else.
 
-## <a name="a-nameifconstexpr-if-constexpr-statements"></a><a name="if_constexpr"> Pokud se příkazy constexpr.
+## <a name="a-nameifconstexpr-if-constexpr-statements"></a><a name="if_constexpr">Pokud příkazy constexpr
 
-**Visual Studio 2017 verze 15.3 nebo novější** (k dispozici [/std: c ++ 17](../build/reference/std-specify-language-standard-version.md)): V rámci šablony funkce, můžete použít **Pokud constexpr** příkaz rozhodnutí kompilace větvení bez nutnosti uchýlit se k více přetížení funkce. Můžete například napsat jedinou funkci tohoto popisovače parametru při rozbalování (je vyžadována žádná přetížená metoda parametr nula):
+**Visual Studio 2017 verze 15,3 a novější** (k dispozici v [/std: c++ 17](../build/reference/std-specify-language-standard-version.md)): V šablonách funkcí můžete použít příkaz **if constexpr** k provedení rozhodování o rozvětvení v době kompilace, aniž by bylo nutné se uchýlit k více funkcím přetížení. Můžete například napsat jednu funkci, která zpracovává parametr unpacking (žádné přetížení nula parametrů není nutné):
 
 ```cpp
 template <class T, class... Rest>

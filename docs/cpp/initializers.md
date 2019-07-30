@@ -1,19 +1,17 @@
 ---
 title: Inicializátory
-ms.date: 11/19/2018
+ms.date: 07/29/2019
+description: Jak inicializovat třídy, struktury, pole a základní typy v C++.
 helpviewer_keywords:
-- array-element initializers
-- initializing arrays [C++], initializers
 - arrays [C++], array-element initializers
-- declarators, as initializers
-- initializers, array element
+- aggregate initializers [C++]
 ms.assetid: ce301ed8-aa1c-47b2-bb39-9f0541b4af85
-ms.openlocfilehash: 1890899fb2ad63bff06d514ae8b18f9dc3ff9e21
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: fd926177dd7540d8dc1e8512e9f17e20a0b8238c
+ms.sourcegitcommit: 20a1356193fbe0ddd1002e798b952917eafc3439
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62183525"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68661619"
 ---
 # <a name="initializers"></a>Inicializátory
 
@@ -53,7 +51,7 @@ Inicializátory mohou mít tyto formy:
     string s = "hello";
     ```
 
-- Seznam inicializátorů v závorkách. Seznam může být prázdný, nebo může sestávat z několika seznamů, jako v následujícím příkladu:
+- Seznam inicializátorů v závorkách. Seznam může být prázdný nebo může sestávat ze sady seznamů, jako v následujícím příkladu:
 
     ```cpp
     struct Point{
@@ -73,21 +71,21 @@ Inicializátory mohou mít tyto formy:
     }
     ```
 
-## <a name="kinds-of-initialization"></a>Druhy inicializace
+## <a name="kinds-of-initialization"></a>Typy inicializace
 
 Existuje několik druhů inicializace, které mohou nastat v různých fázích provádění programu. Různé druhy inicializace se vzájemně nevylučují, například inicializační seznam může spustit inicializační hodnotu a za jiných okolností to může spustit agregační inicializaci.
 
-### <a name="zero-initialization"></a>Inicializace nula
+### <a name="zero-initialization"></a>Nulová inicializace
 
 Inicializace nula je nastavení proměnné na hodnotu nula implicitně převedenou na typ:
 
 - Číselné proměnné jsou inicializovány na hodnotu 0 (nebo 0,0 nebo 0,0000000000 atd.).
 
-- Proměnné typu CHAR jsou inicializovány na hodnotu `'\0'`.
+- Proměnné typu char jsou inicializovány na `'\0'`.
 
-- Ukazatele jsou inicializovány na hodnotu **nullptr**.
+- Ukazatele jsou inicializovány na **nullptr**.
 
-- Pole, [POD](../standard-library/is-pod-class.md) třídy, struktury a sjednocení mají své členy inicializovány na hodnotu nula.
+- Pole, třídy [pod](../standard-library/is-pod-class.md) , struktury a sjednocení mají své členy inicializovány na nulovou hodnotu.
 
 Inicializace nula je provedena v různých časech:
 
@@ -116,9 +114,9 @@ int main() {
 }
 ```
 
-### <a name="default_initialization"></a> Výchozí inicializace
+### <a name="default_initialization"></a>Výchozí inicializace
 
-Výchozí inicializace pro třídy, struktury a sjednocení je inicializace s výchozím konstruktorem. Výchozí konstruktor může být volána bez výrazu inicializace nebo s **nové** – klíčové slovo:
+Výchozí inicializace pro třídy, struktury a sjednocení je inicializační s výchozím konstruktorem. Výchozí konstruktor lze volat bez inicializačního výrazu nebo s klíčovým slovem **New** :
 
 ```cpp
 MyClass mc1;
@@ -127,7 +125,7 @@ MyClass* mc3 = new MyClass;
 
 Pokud třída, struktura nebo sjednocení nemá výchozí konstruktor, kompilátor vydává chybu.
 
-Skalární proměnné jsou inicializované, když jsou definovány bez výraz inicializace ve výchozím nastavení. Mají neurčité hodnoty.
+Skalární proměnné jsou implicitně inicializovány, když jsou definovány bez inicializačního výrazu. Mají neurčité hodnoty.
 
 ```cpp
 int i1;
@@ -135,7 +133,7 @@ float f;
 char c;
 ```
 
-Pole jsou inicializované, když jsou definovány bez výraz inicializace ve výchozím nastavení. Pokud je pole inicializována ve výchozím nastavení, jeho členové jsou inicializované ve výchozím nastavení a mají neurčité hodnoty, jako v následujícím příkladu:
+Pole jsou nastavena jako výchozí, pokud jsou definována bez inicializačního výrazu. V případě, že je pole inicializováno jako výchozí, jeho členové jsou výchozí inicializováni a mají neurčité hodnoty, jako v následujícím příkladu:
 
 ```cpp
 int int_arr[3];
@@ -145,7 +143,7 @@ Pokud členové pole nemají výchozí konstruktor, kompilátor vydává chybu.
 
 #### <a name="default-initialization-of-constant-variables"></a>Výchozí inicializace konstantních proměnných
 
-Konstantní proměnné musí být deklarovány společně s inicializátorem. Pokud jsou Skalární typy způsobí chybu kompilátoru, a pokud jsou typy tříd, které mají výchozí konstruktor, způsobují upozornění:
+Konstantní proměnné musí být deklarovány společně s inicializátorem. Pokud jsou skalární typy, které způsobují chybu kompilátoru, a pokud jsou typy třídy, které mají výchozí konstruktor, způsobují upozornění:
 
 ```cpp
 class MyClass{};
@@ -158,7 +156,7 @@ int main() {
 
 #### <a name="default-initialization-of-static-variables"></a>Výchozí inicializace statických proměnných
 
-Statické proměnné, které jsou deklarovány pomocí žádný inicializátor jsou inicializovány na hodnotu 0 (implicitně převeden na typ).
+Statické proměnné, které jsou deklarovány bez inicializátoru, jsou inicializovány na hodnotu 0 (implicitně převedeny na typ).
 
 ```cpp
 class MyClass {
@@ -175,27 +173,27 @@ int main() {
 }
 ```
 
-Další informace o inicializaci globálních statických objektů naleznete v tématu [Additional Startup Considerations](../cpp/additional-startup-considerations.md).
+Další informace o inicializaci globálních statických objektů naleznete v tématu [Další](../cpp/additional-startup-considerations.md)informace o spuštění.
 
 ### <a name="value-initialization"></a>Inicializace hodnoty
 
-V následujících případech dojde k inicializaci hodnoty:
+K inicializaci hodnoty dochází v následujících případech:
 
-- Pojmenovaná hodnota je inicializována pomocí inicializace prázdné závorky
+- pojmenovaná hodnota je inicializovaná pomocí inicializace prázdné závorky.
 
-- anonymní dočasný objekt je inicializován pomocí prázdných kulatých závorek nebo složených závorek
+- anonymní dočasný objekt je inicializován pomocí prázdných kulatých závorek nebo složených závorek.
 
-- objekt je inicializován s **nové** – klíčové slovo a prázdných kulatých závorek nebo složených závorek
+- objekt je inicializován pomocí klíčového slova **New** a prázdných kulatých závorek nebo složených závorek.
 
-Inicializace hodnoty provede následující akce:
+Inicializace hodnoty provede následující:
 
-- u tříd s nejméně jeden veřejný konstruktor je zavolán výchozí konstruktor
+- pro třídy s alespoň jedním veřejným konstruktorem je volán výchozí konstruktor.
 
-- pro třídy mimo sjednocení s žádné deklarované konstruktory je objekt inicializován nulou a je zavolán výchozí konstruktor
+- pro třídy, které nejsou sjednoceny bez deklarovaných konstruktorů, je objekt inicializován nulou a je volán výchozí konstruktor.
 
-- pro pole je každý prvek inicializovat pomocí hodnoty.
+- pro pole je každý prvek inicializovaný jako hodnota.
 
-- ve všech ostatních případech je proměnná inicializována nula
+- ve všech ostatních případech je proměnná nula inicializovaná.
 
 ```cpp
 class BaseClass {
@@ -212,21 +210,21 @@ int main() {
 }
 ```
 
-### <a name="copy-initialization"></a>Kopírovat inicializaci
+### <a name="copy-initialization"></a>Inicializace kopírování
 
-Kopírování inicializace je inicializace jednoho objektu pomocí jiného objektu. Vyvolá se v následujících případech:
+Inicializace kopírování je inicializace jednoho objektu pomocí jiného objektu. K tomu dochází v následujících případech:
 
-- Proměnná je inicializována pomocí znaménko rovná se
+- proměnná se inicializuje pomocí znaku rovná se.
 
-- argument předaný do funkce
+- do funkce se předává argument.
 
-- objekt je vrácen z funkce
+- objekt se vrátí z funkce.
 
-- Výjimka je vyvolána nebo zachycena
+- je vyvolána nebo zachycena výjimka
 
-- Nestatický datový člen je inicializován pomocí znaménko rovná se
+- Nestatický datový člen je inicializován pomocí znaku rovná se.
 
-- třídy, struktury a unie členy jsou inicializovány kopírováním inicializace během inicializace agregace. Zobrazit [inicializace agregace](#agginit) příklady.
+- členy třídy, struktury a sjednocení jsou inicializovány inicializací kopírování během inicializace agregace. Příklady naleznete v tématu [Aggregate Initialization](#agginit) .
 
 Následující kód ukazuje několik příkladů Inicializace kopírování:
 
@@ -272,17 +270,17 @@ V některých případech, pokud je kopírovací konstruktu třídy odstraněn n
 
 ### <a name="direct-initialization"></a>Přímá inicializace
 
-Přímá inicializace je inicializace pomocí složených závorek (prázdný) nebo složených závorek. Na rozdíl od kopírování inicializace nemůže vyvolat explicitní konstruktory. Vyvolá se v následujících případech:
+Přímá inicializace je inicializace pomocí (neprázdných) závorek nebo závorek. Na rozdíl od kopírování inicializace nemůže vyvolat explicitní konstruktory. K tomu dochází v následujících případech:
 
-- Proměnná je inicializována s neprázdný závorek nebo složených závorek
+- proměnná je inicializovaná pomocí neprázdných složených závorek nebo závorek.
 
-- Proměnná je inicializována s **nové** – klíčové slovo a neprázdný závorek nebo složených závorek
+- proměnná je inicializována pomocí klíčového slova **New** a neprázdných složených závorek nebo závorek.
 
-- Proměnná je inicializována s **static_cast**
+- proměnná je inicializována pomocí **static_cast** .
 
-- v konstruktoru jsou základní třídy a nestatické členy inicializovány pomocí seznamu inicializátorů
+- v konstruktoru se pro základní třídy a nestatické členy inicializuje seznam inicializátorů.
 
-- v kopii zachycené proměnné ve výrazu lambda
+- v kopii zachycené proměnné uvnitř výrazu lambda
 
 Následující kód ukazuje některé příklady přímé inicializace:
 
@@ -315,19 +313,19 @@ int main(){
 
 ### <a name="list-initialization"></a>Inicializace seznamu
 
-Inicializační seznam se vyvolá při proměnná je inicializována pomocí seznamu inicializátorů v závorkách. V následujících případech můžete použít seznamy inicializátorů v závorkách:
+K inicializaci seznamu dojde, když je proměnná inicializována pomocí seznamu inicializátorů v závorkách. Seznamy inicializátorů v závorkách se dají použít v následujících případech:
 
-- Proměnná je inicializována.
+- proměnná je inicializovaná.
 
-- Třída je inicializována s **nové** – klíčové slovo
+- Třída je inicializována pomocí klíčového slova **New** .
 
-- objekt je vrácen z funkce
+- objekt se vrátí z funkce.
 
-- argument předaný do funkce
+- argument předaný funkci
 
 - jeden z argumentů v přímé inicializaci
 
-- v inicializátoru nestatický datový člen
+- v inicializátoru nestatického datového členu
 
 - v seznamu inicializátorů konstruktoru
 
@@ -364,22 +362,22 @@ int main() {
 }
 ```
 
-### <a name="agginit"></a> Inicializace agregace
+### <a name="agginit"></a>Agregovat inicializaci
 
 Inicializace agregace je forma inicializace seznamu pro pole nebo typy tříd (často struktury nebo sjednocení), které mají:
 
-- žádné soukromé nebo chráněné členy
+- žádní privátní nebo chránění členové
 
-- žádné uživatelem zadané konstruktory s výjimkou výslovně nastavených výchozích nebo odstraněných konstruktorů
+- žádné uživatelsky poskytnuté konstruktory, s výjimkou explicitně nastavených nebo odstraněných konstruktorů
 
 - žádné základní třídy
 
 - žádné virtuální členské funkce
 
 > [!NOTE]
-> <!--conformance note-->V sadě Visual Studio 2015 a starší agregace není povoleno mít inicializátory složenou závorku nebo rovná pro nestatické členy. Toto omezení byl v C ++ 14 standard odebrána a implementovaná v sadě Visual Studio 2017.
+> <!--conformance note-->V aplikaci Visual Studio 2015 a dřívější agregace nesmí mít Inicializátory ve složených závorkách pro nestatické členy. Toto omezení bylo odebráno v jazyce C++ 14 Standard a implementováno v aplikaci Visual Studio 2017.
 
-Inicializátory agregace se skládají z inicializačního seznamu v závorkách, s nebo bez něj znak rovná se, stejně jako v následujícím příkladu:
+Agregační Inicializátory se skládají ze seznamu inicializace v závorkách s nebo bez znaménka rovná se, jako v následujícím příkladu:
 
 ```cpp
 #include <iostream>
@@ -390,9 +388,14 @@ struct MyAggregate{
     char myChar;
 };
 
+struct MyAggregate2{
+    int myInt;
+    char myChar = 'Z'; // member-initializer OK in C++14
+};
+
 int main() {
     MyAggregate agg1{ 1, 'c' };
-
+    MyAggregate2 agg2{2};
     cout << "agg1: " << agg1.myChar << ": " << agg1.myInt << endl;
     cout << "agg2: " << agg2.myChar << ": " << agg2.myInt << endl;
 
@@ -414,21 +417,21 @@ int main() {
 }
 ```
 
-Byste měli vidět následující výstup:
+Měl by se zobrazit následující výstup:
 
 ```Output
 agg1: c: 1
-agg2: d: 2
+agg2: Z: 2
 myArr1: 1 2 3 4
 myArr3: 8 9 10 0 0
 ```
 
 > [!IMPORTANT]
-> Členy pole, které jsou deklarovány, ale během inicializace agregace nebyly explicitně inicializovány inicializovány nulou, stejně jako v `myArr3` výše.
+> Členy pole, které jsou deklarovány, ale nejsou explicitně inicializovány během inicializace agregace, jsou inicializovány nulou, jak `myArr3` je uvedeno výše.
 
 #### <a name="initializing-unions-and-structs"></a>Inicializace sjednocení a struktur
 
-Pokud sjednocení nemá konstruktor, inicializovat s jedinou hodnotu (nebo pomocí jiné instance sjednocení). Hodnota slouží k inicializaci prvního nestatické pole. Tím se liší od inicializace struktury, ve které první hodnota v inicializátoru slouží k inicializaci prvního pole, druhá k inicializaci druhé pole a tak dále. Porovnejte inicializace sjednocení a struktur v následujícím příkladu:
+Pokud sjednocení nemá konstruktor, můžete jej inicializovat s jednou hodnotou (nebo s jinou instancí sjednocení). Hodnota slouží k inicializaci prvního nestatické pole. Tím se liší od inicializace struktury, ve které první hodnota v inicializátoru slouží k inicializaci prvního pole, druhá k inicializaci druhé pole a tak dále. Porovnejte inicializaci sjednocení a struktur v následujícím příkladu:
 
 ```cpp
 struct MyStruct {
@@ -459,9 +462,9 @@ int main() {
 }
 ```
 
-#### <a name="initializing-aggregates-that-contain-aggregates"></a>Inicializace agregátů, které obsahují agregáty
+#### <a name="initializing-aggregates-that-contain-aggregates"></a>Inicializace agregací, které obsahují agregace
 
-Typy agregátů mohou obsahovat další typy agregátů, pro příklad pole polí, pole struktur a tak dále. Tyto typy jsou inicializovány pomocí vnořených sad závorek, například:
+Agregované typy mohou obsahovat jiné agregované typy, například pole polí, pole struktury a tak dále. Tyto typy jsou inicializovány pomocí vnořených sad složených závorek, například:
 
 ```cpp
 struct MyStruct {
@@ -520,7 +523,7 @@ Proměnné typu odkazu mohou být deklarovány bez použití inicializátorů po
     class c {public:   int& i;};
     ```
 
-- Deklarace proměnné explicitně zadané jako **extern**. Příklad:
+- Deklarace proměnné se explicitně zadala jako **extern**. Příklad:
 
     ```cpp
     extern int& iVal;
@@ -528,13 +531,13 @@ Proměnné typu odkazu mohou být deklarovány bez použití inicializátorů po
 
 Při inicializaci proměnné typu odkazu používá kompilátor graf rozhodnutí zobrazený na následujícím obrázku pro výběr mezi vytvořením odkazu na objekt nebo vytvořením dočasného objektu, na který odkaz směřuje.
 
-![Graf rozhodnutí inicializace typů odkazů](../cpp/media/vc38s71.gif "graf rozhodnutí inicializace typů odkazů") <br/>
-Graf rozhodnutí inicializace typů odkazů
+![Graf rozhodnutí pro inicializaci typů odkazů](../cpp/media/vc38s71.gif "Graf rozhodnutí pro inicializaci typů odkazů") <br/>
+Graf rozhodnutí pro inicializaci typů odkazů
 
-Odkazy na **volatile** typy (deklarované jako **volatile** *typename* <strong>&</strong> *identifikátor*) mohou být inicializovány pomocí **volatile** objekty stejného typu nebo objekty, které nejsou deklarovány jako **volatile**. Nelze je však, inicializovat pomocí **const** objekty daného typu. Podobně, odkazy na **const** typy (deklarované jako **const** *typename* <strong>&</strong> *identifikátor* ) mohou být inicializovány pomocí **const** objekty stejného typu (nebo čímkoli, kde existuje převod na daný typ nebo pomocí objektů, které nejsou deklarovány jako **const**). Nelze je však, inicializovat pomocí **volatile** objekty daného typu.
+Odkazy na typy volatile (deklarované jako volatile *identifikátor* *TypeName* <strong>&</strong> ) lze inicializovat s nestálými objekty stejného typu nebo s objekty, které nebyly deklarovány jako volatile. . Nelze je však inicializovat pomocí objektů const tohoto typu. Podobně odkazy na typy **const** (deklarované jako **const** *TypeName* <strong>&</strong> *Identifier*) mohou být inicializovány objekty **const** stejného typu (nebo cokoli, co má převod na tento typ nebo s objekty. které nebyly deklarovány jako **const**). Nelze je však inicializovat pomocí nestálých objektů tohoto typu.
 
-Odkazy, které nejsou kvalifikovány buď pomocí **const** nebo **volatile** – klíčové slovo lze inicializovat pouze objekty deklarovanými jako **const** ani  **volatile**.
+Odkazy, které nejsou kvalifikovány buď klíčovým slovem **const** nebo **volatile** , lze inicializovat pouze pomocí objektů deklarovaných jako **konstanta** nebo **volatile**.
 
 ### <a name="initialization-of-external-variables"></a>Inicializace externích proměnných
 
-Deklarace automatické, statických a externích proměnných mohou obsahovat inicializátory. Deklarace externích proměnných však mohou obsahovat inicializátory, pouze v případě, že proměnné nejsou deklarovány jako **extern**.
+Deklarace automatických, statických a externích proměnných mohou obsahovat inicializátory. Deklarace externích proměnných však mohou obsahovat inicializátory pouze v případě, že proměnné nejsou deklarovány jako **extern**.

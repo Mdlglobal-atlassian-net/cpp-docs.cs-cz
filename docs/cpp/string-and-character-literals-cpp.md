@@ -1,22 +1,29 @@
 ---
-title: Řetězcové a znakové literály (C++)
-ms.date: 05/07/2019
+title: Řetězcové a znakové literályC++()
+description: Jak deklarovat a definovat řetězcové a znakové literály v C++.
+ms.date: 07/29/2019
 f1_keywords:
 - R
+- L
+- u
+- u8
+- LR
+- uR
+- u8R
 helpviewer_keywords:
 - literal strings [C++]
 - string literals [C++]
 ms.assetid: 61de8f6f-2714-4e7b-86b6-a3f885d3b9df
-ms.openlocfilehash: d3c85854256816d5553959a16526ad0d13cf14b4
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.openlocfilehash: 9fce1ef9636aaa85be71cafffb5c4247e5c2e2d9
+ms.sourcegitcommit: 20a1356193fbe0ddd1002e798b952917eafc3439
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65221971"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68661516"
 ---
-# <a name="string-and-character-literals--c"></a>Řetězcové a znakové literály (C++)
+# <a name="string-and-character-literals--c"></a>Řetězcové a znakové literályC++()
 
-C++ podporuje různé typy řetězců a znaků a nabízí způsobů, jak vyjádřit jednu hodnotu literálu každý z těchto typů. Ve zdrojovém kódu express obsah vaší znakové a řetězcové literály pomocí znakové sady. Univerzální názvy znaků a řídicích znaků umožňují express libovolný řetězec za použití pouze základní zdrojové znakové sady. Nezpracovaný Textový literál vám umožní předcházet pomocí řídicí znaky a je možné vyjádřit všech typů řetězcových literálů. Můžete také vytvořit std::string literály bez nutnosti provádět další konstrukci nebo převod kroky.
+C++podporuje různé typy řetězců a znaků a poskytuje způsoby, jak vyjádřit hodnoty literálu každého z těchto typů. Ve vašem zdrojovém kódu budete vyjadřovat obsah znakových a řetězcových literálů pomocí znakové sady. Univerzální názvy znaků a řídicí znaky umožňují vyjádřit libovolný řetězec pouze pomocí základní zdrojové znakové sady. Nezpracovaný řetězcový literál umožňuje vyhnout se použití ukončovacích znaků a lze jej použít k vyjádření všech typů řetězcových literálů. Můžete také vytvořit `std::string` literály bez nutnosti provádět dodatečné kroky konstrukce nebo převodu.
 
 ```cpp
 #include <string>
@@ -61,60 +68,60 @@ int main()
 }
 ```
 
-Řetězcové literály může mít žádná předpona nebo `u8`, `L`, `u`, a `U` předpony k označení zúžit znak (jednobajtové nebo vícebajtové), UTF-8, široký znak (UCS-2 nebo UTF-16), UTF-16 a UTF-32 kódování, v uvedeném pořadí. Nezpracovaný řetězcový literál může mít `R`, `u8R`, `LR`, `uR` a `UR` předpony pro ekvivalenty nezpracovaná verze těchto kódování.  K vytvoření dočasné nebo statické std::string hodnoty, můžete použít řetězcových literálů nebo nezpracované řetězcové literály s `s` příponu. Další informace najdete v článku následující části literály řetězce. Další informace o základní zdrojové znakové nastavit, univerzální názvy znaků a pomocí znaků z rozšířené kódové stránky ve zdrojovém kódu, najdete v tématu [znakových sad](../cpp/character-sets.md).
+Řetězcové literály nemohou mít předpony, `u8`ani `L`, `u`, `U` a předpony k označení úzkého znaku (jednobajtové nebo vícebajtového), UTF-8, roztažitelné znaku (UCS-2 nebo UTF-16 32), v uvedeném pořadí. Nezpracovaný řetězcový literál může obsahovat `R`předpony `LR`, `uR` `u8R`,, `UR` a pro nezpracované ekvivalenty verzí těchto kódování.  Chcete-li vytvořit dočasné `std::string` nebo statické hodnoty, můžete použít řetězcové literály nebo nezpracované řetězcové `s` literály s příponou. Další informace naleznete níže v části [řetězcové literály](#string-literals) . Další informace o základní zdrojové znakové sadě, univerzální názvy znaků a použití znaků z rozšířených znakových sad ve zdrojovém kódu naleznete v tématu [znakové sady](../cpp/character-sets.md).
 
-## <a name="character-literals"></a>Znakové literály
+## <a name="character-literals"></a>Literály znaků
 
-A *znakový literál* je tvořen konstantním znakem. Je reprezentován znakem uzavřeným v jednoduchých uvozovkách. Existuje pět typů literálů znaku:
+*Znakový literál* se skládá z konstantního znaku. Je reprezentován znakem uzavřeným do jednoduchých uvozovek. Existuje pět druhů znakových literálů:
 
-- Běžný znak literálů typu **char**, například `'a'`
+- Běžné znakové literály typu **char**, například`'a'`
 
-- UTF-8 znakových literálů typu **char**, například `u8'a'`
+- Znakové literály UTF-8 typu **char**, například`u8'a'`
 
-- Literály širokých znaků typu `wchar_t`, například `L'a'`
+- Literály s velkým znakem typu `wchar_t`, například`L'a'`
 
-- UTF-16 znakových literálů typu `char16_t`, například `u'a'`
+- Literály znaků UTF-16 typu `char16_t`, například`u'a'`
 
-- UTF-32 znakových literálů typu `char32_t`, například `U'a'`
+- Literály znaků UTF-32 typu `char32_t`, například`U'a'`
 
-Znak použitý pro znak literálu může být libovolný znak, s výjimkou vyhrazených znaků zpětného lomítka ("\\"), jednoduché uvozovky (') nebo znaku nového řádku. Vyhrazené znaky lze zadat pomocí řídící sekvence. Znaky lze zadat pomocí univerzální názvy znaků, za předpokladu, typ je dostatečně velký pro znak.
+Znak použitý pro znakový literál může být libovolný znak, s výjimkou zpětného lomítka (\\' '), jednoduché uvozovky (') nebo nového řádku. Vyhrazené znaky lze zadat pomocí řídicí sekvence. Znaky mohou být zadány pomocí univerzálních názvů znaků, pokud je typ dostatečně velký pro uložení znaku.
 
 ### <a name="encoding"></a>Kódování
 
-Znakové literály jsou kódovány odlišně podle jejich předpony.
+Znakové literály se kódují odlišně na základě jejich předpony.
 
-- Běžný znak literálu je znak literálu bez předpony. Hodnota literálu běžný znak obsahující jeden znak řídicí sekvence, nebo univerzální název znaku, který může být reprezentována ve znakové sadě spuštění má hodnota se shoduje s číselnou hodnotu kódování ve znakové sadě spuštění. Běžný znak literálu, který obsahuje více než jeden znak řídicí sekvence a univerzální název znaku je *víceznakové literálu*. Víceznaková literál nebo běžný znak literálu, který nemůže být reprezentovaný ve znakové sadě spuštění je podmíněně podporovaný, má typ int a její hodnota je definován implementací.
+- Znakový literál bez předpony je běžný znakový literál. Hodnota obyčejného znakového literálu, který obsahuje jeden znak, řídicí sekvenci nebo univerzální název znaku, který lze reprezentovat ve znakové sadě spuštění, má hodnotu rovnou číselné hodnotě jeho kódování ve znakové sadě spuštění. Běžný znakový literál, který obsahuje více než jeden znak, řídicí sekvenci nebo univerzální název znaku, je *literální znak*. Literál s více znakovými písmeny nebo běžný znakový literál, který nelze reprezentovat ve znakové sadě spuštění, je podmíněně podporován, je typu **int**a jeho hodnota je definovaná implementací.
 
-- Znakový literál, který začíná příslušnou předponou L je literál širokého znaku. Hodnota literálu širokého znaku obsahující znak, řídicí sekvence nebo univerzální název znaku má hodnota se shoduje s číselnou hodnotu kódování v nastavit, pokud znakového literálu nemá zastoupení širokoznaké provádění nastavit širokého znaku spuštění, v takovém případě hodnota je definováno implementací. Hodnota literálu širokého znaku obsahující více znaků, řídicích sekvencí nebo univerzální názvy znaků je definován implementací.
+- Znakový literál, který začíná `L` předponou, je literál s velkým znakem. Hodnota literálu s velkým znakem obsahující jeden znak, řídicí sekvence nebo univerzální název znaku má hodnotu rovnající se číselnou hodnotou svého kódování v sadě s velkým znakem, pokud znak literálu nemá žádné reprezentace v je-li nastavena 64bitová znaková sada, v takovém případě je hodnota definována jako implementace. Hodnota literálu s velkým znakem, který obsahuje více znaků, řídicí sekvence nebo názvy univerzálních znaků, je definována implementací.
 
-- Znakový literál, který začíná příslušnou předponou u8 je literální znak kódování UTF-8. Hodnota UTF-8 znakový literál obsahující jeden znak řídicí sekvence, nebo univerzální název znaku má hodnota se shoduje s jeho hodnota bodu kódu ISO 10646, pokud může být reprezentována jednu jednotku kódu UTF-8 (odpovídající C0 ovládací prvky a základní latinky Blok sady Unicode). Pokud hodnota nemůže být reprezentována jednu jednotku kódu UTF-8, program má chybný formát. Znak kódování UTF-8 literál obsahující více než jeden znak řídicí sekvence a univerzální název znaku je chybně vytvořený.
+- Znakový literál, který začíná `u8` předponou, je znakový literál UTF-8. Hodnota literálu znaku UTF-8 obsahující jeden znak, řídicí sekvence nebo univerzální název znaku má hodnotu rovnající se hodnotě bodu kódu ISO 10646, pokud může být reprezentována jednou jednotkou znakové sady UTF-8 (odpovídající ovládacím prvkům C0 a základní latinkou Blok kódování Unicode). Pokud hodnota nemůže být reprezentovaná jednou jednotkou znakové sady UTF-8, program je nesprávně vytvořen. Znakový literál UTF-8, který obsahuje více než jeden znak, řídicí sekvenci nebo univerzální název znaku, je nesprávně vytvořen.
 
-- Znakový literál, který začíná u předpony je UTF-16 znakový literál. Hodnota UTF-16 znakový literál obsahující jeden znak řídicí sekvence, nebo univerzální název znaku má hodnota se shoduje s jeho hodnota bodu kódu ISO 10646, pokud může být reprezentována jednu jednotku kódu UTF-16 (odpovídající základní vícejazyčné roviny ). Pokud hodnota nemůže být reprezentována jednu jednotku kódu UTF-16, program má chybný formát. Literál obsahující více než jeden znak řídicí sekvence a univerzální název znaku UTF-16 znak má chybný formát.
+- Znakový literál začínající `u` předponou je znakový literál UTF-16. Hodnota znakového literálu ve formátu UTF-16 obsahující jeden znak, řídicí sekvence nebo univerzální název znaku má hodnotu rovnající se hodnotě bodu kódu ISO 10646, pokud může být reprezentovaná jednou jednotkou UTF-16 (odpovídající rovině Basic multi-Sequence). ). Pokud hodnota nemůže být reprezentovaná jednou jednotkou znakové sady UTF-16, program je nesprávně vytvořen. Znakový literál UTF-16, který obsahuje více než jeden znak, řídicí sekvenci nebo univerzální název znaku, je nesprávně vytvořen.
 
-- Znakový literál, který začíná U předpony je UTF-32 znakový literál. Hodnota UTF-32 znakový literál obsahující jeden znak řídicí sekvence, nebo univerzální název znaku má hodnota se shoduje s jeho hodnota bodu kódu ISO 10646. Znak kódování UTF-8 literál obsahující více než jeden znak řídicí sekvence a univerzální název znaku je chybně vytvořený.
+- Znakový literál začínající `U` předponou je znakový literál UTF-32. Hodnota literálu znaku UTF-32 obsahující jeden znak, řídicí sekvence nebo univerzální název znaku má hodnotu rovnající se hodnotě bodu kódu ISO 10646. Znakový literál UTF-32, který obsahuje více než jeden znak, řídicí sekvenci nebo univerzální název znaku, je nesprávně vytvořen.
 
-###  <a name="bkmk_Escape"></a> Řídicí sekvence
+###  <a name="bkmk_Escape"></a>Řídicí sekvence
 
-Existují tři typy sekvence úniku: jednoduchá, osmičková a šestnáctková. Řídicí sekvence může být libovolná z následujících akcí:
+Existují tři druhy řídicích sekvencí: jednoduché, osmičkové a hexadecimální. Řídicí sekvence mohou být následující:
 
 |Value|Řídicí sekvence|
 |-----------|---------------------|
 | newline | \\n |
-| Zpětné lomítko | \\\\ |
-| horizontální tabulátor | \\t |
+| zpětné lomítko | \\\\ |
+| horizontální karta | \\t |
 | otazník | ? nebo \\? |
-| vertikální tabulátor | \\v |
-| jednoduché uvozovky | \\' |
+| svislá karta | \\v |
+| jednoduchá uvozovka | \\' |
 | BACKSPACE | \\b |
 | dvojité uvozovky | \\" |
 | návrat na začátek řádku | \\r |
 | znak null | \\0 |
 | Posun strany | \\f |
-| osmičkové | \\ooo |
+| osmičkové | \\OOO |
 | upozornění (zvonek) | \\a |
 | hexadecimální | \\xhhh |
 
-Následující kód ukazuje příklady použití literály běžný znak řídicí znaky. Podle stejné syntaxe řídicí sekvence je platný pro další znak literálu typy.
+Tento vzorový kód ukazuje několik příkladů řídicích znaků pomocí běžných literálů znaků. Stejná syntaxe sekvence Escape je platná pro jiné typy literálů znaků.
 
 ```cpp
 #include <iostream>
@@ -136,23 +143,23 @@ int main() {
 }
 ```
 
-**Microsoft Specific**
+**Specifické pro společnost Microsoft**
 
-K vytvoření hodnoty z běžný znak literálu, (ta bez předpony), kompilátor převede znak nebo posloupnost znaků mezi jednoduchými uvozovkami na 8bitové hodnoty v rámci 32bitové celé číslo. Více znaků v literálu vyplnit odpovídající bajtů podle potřeby od nejvyšší k nejnižší. Chcete-li vytvořit **char** hodnota, kompilátor má nejnižší bajt. Chcete-li vytvořit **wchar_t** nebo `char16_t` hodnota, kompilátor má nižší řád slova. Kompilátor vás upozorní, že výsledek je zkrácen, pokud všechny bity jsou nastaveny nad přiřazené bajtů nebo word.
+Chcete-li vytvořit hodnotu z obyčejného znakového literálu (bez předpony), kompilátor převede znak nebo sekvenci znaků mezi jednotlivými uvozovkami na 8bitové hodnoty v rámci 32 celého čísla. Více znaků v literálu vyplní odpovídající bajty podle potřeby z vysokého řádu na nižší. Chcete-li vytvořit hodnotu typu **char** , kompilátor vezme bajt s nižším pořadím. Chcete-li vytvořit wchar_t `char16_t` nebo hodnotu, kompilátor vezme slovo s nižším pořadím. Kompilátor upozorní, že výsledek je zkrácen, pokud jsou všechny bity nastaveny nad přiřazeným bajtem nebo slovem.
 
 ```cpp
 char c0    = 'abcd';    // C4305, C4309, truncates to 'd'
 wchar_t w0 = 'abcd';    // C4305, C4309, truncates to '\x6364'
 ```
 
-Osmičková řídicí sekvence je zpětné lomítko následované sekvencí až 3 osmičkových číslic. Chování oktalových řídících sekvencí, které se zobrazí tak, aby obsahovala více než tři číslice, je považováno za 3 číslice osmičková sekvence a následné číslicemi jako znaků. To vám může poskytnout překvapivé výsledky. Příklad:
+Osmičková řídicí sekvence je zpětné lomítko následované sekvencí až 3 osmičkových číslic. Chování osmičkové řídicí sekvence, která se zdá, že obsahuje více než tři číslice, je považována za tři číslice, následované následujícími číslicemi jako znaky, což může vést k překvapivé výsledkům. Příklad:
 
 ```cpp
 char c1 = '\100';   // '@'
 char c2 = '\1000';  // C4305, C4309, truncates to '0'
 ```
 
-Řídicí sekvence, které se zobrazují na obsahují neosmičkové znaky jsou vyhodnoceny jako osmičková sekvence až po poslední znak osmičkové, za nímž následuje zbývající znaky. Příklad:
+Řídicí sekvence, které vypadají jako obsahující neosmičkové znaky, jsou vyhodnocovány jako osmičková sekvence až po poslední osmičkový znak následovaný zbývajícími znaky. Příklad:
 
 ```cpp
 char c3 = '\009';   // '9'
@@ -160,14 +167,14 @@ char c4 = '\089';   // C4305, C4309, truncates to '9'
 char c5 = '\qrs';   // C4129, C4305, C4309, truncates to 's'
 ```
 
-Šestnáctková řídicí sekvence je zpětné lomítko následované znakem `x`, následované posloupnosti hexadecimálních číslic. Sekvence escape neobsahuje žádné šestnáctkové číslice způsobí chybu kompilátoru C2153: "šestnáctkové literály musí mít alespoň jednu číslici hex". Počáteční nuly jsou ignorovány. Sekvence escape, která má šestnáctkové a nešestnáctkové znaky je vyhodnocena jako šestnáctková řídicí sekvence až po poslední znak šestnáctkové, následované znaky nešestnáctkový.   V běžné nebo tvoří jeho předponu u8 znak literálu nejvyšší šestnáctková hodnota je 0xFF. Nejvyšší šestnáctková hodnota v předponu L u předpony široký znak nebo literálu, je 0xFFFF. V U předpony široký znak literálu je nejvyšší šestnáctková hodnota 0xFFFFFFFF.
+Šestnáctková řídicí sekvence je zpětné lomítko následované znakem `x`následovaný sekvencí šestnáctkových číslic. Řídicí sekvence, která neobsahuje žádné šestnáctkové číslice, způsobí chybu kompilátoru C2153: "hex literály musí mít alespoň jednu šestnáctkovou číslici". Úvodní nuly jsou ignorovány. Řídicí sekvence, která se jeví jako šestnáctkové a nešestnáctkové znaky, je vyhodnocena jako šestnáctková řídicí sekvence až do posledního šestnáctkového znaku následovaný nešestnáctkovými znaky. V běžném nebo U8 s předem opraveným znakovým literálem je nejvyšší šestnáctková hodnota 0xFF. V literálu předplatného, který je v předplatném, je nejvyšší šestnáctková hodnota 0xFFFF. V rámci předplatného literálu U znaku U, nejvyšší šestnáctková hodnota je 0xFFFFFFFF.
 
 ```cpp
 char c6 = '\x0050'; // 'P'
 char c7 = '\x0pqr'; // C4305, C4309, truncates to 'r'
 ```
 
-Pokud literál širokého znaku s předponou `L` obsahuje více než jeden znak, hodnota je převzata z prvního znaku. Následující znaky jsou ignorovány, na rozdíl od chování odpovídá běžnému znaku literálu.
+Pokud se literály s `L` velkým znakem a obsahují více než jeden znak, hodnota se převezme z prvního znaku. Další znaky jsou ignorovány na rozdíl od chování ekvivalentního obyčejného znakového literálu.
 
 ```cpp
 wchar_t w1 = L'\100';   // L'@'
@@ -179,13 +186,13 @@ wchar_t w6 = L'\x0050'; // L'P'
 wchar_t w7 = L'\x0pqr'; // C4066 L'\0', pqr ignored
 ```
 
-**Specifické pro END Microsoft**
+**Specifické pro konec Microsoftu**
 
-Znak zpětného lomítka (\\) je znak pro pokračování řádku, pokud je umístěn na konci řádku. Pokud chcete, aby zpětné lomítko jako literální znak, musí zadat dvě zpětná lomítka v řadě (`\\`). Další informace o znak pro pokračování řádku naleznete v tématu [fáze překladu](../preprocessor/phases-of-translation.md).
+Znak zpětného lomítka\\() je znak pro pokračování řádku, když je umístěn na konci řádku. Pokud chcete, aby se znak zpětného lomítka zobrazil jako znakový literál, je nutné zadat dvě zpětná lomítka v řádku`\\`(). Další informace o znaku pro pokračování řádku naleznete v tématu [fáze překladu](../preprocessor/phases-of-translation.md).
 
-###  <a name="bkmk_UCN"></a> Univerzální názvy znaků
+###  <a name="bkmk_UCN"></a>Univerzální názvy znaků
 
-Znakové literály a nativní (bez –) literály nezpracovaných řetězců může být libovolný znak zastoupen univerzální název znaku.  Univerzální názvy znaků jsou tvořeny předpony, které následují \U bodem kódu Unicode v osmi číslicemi, nebo předponou \u za nímž následuje bod kódu Unicode čtyři číslice. Všechny osmi nebo čtyři číslice, v uvedeném pořadí, musí být k dispozici, aby ve správném formátu univerzální název znaku.
+V literálech znaků a nativních (nezpracovaných) řetězcových literálů může být libovolný znak reprezentován univerzálním názvem znaku.  Univerzální názvy znaků jsou tvořeny předponou `\U` následovanou osmimístným bodem kódování Unicode nebo prefixem `\u` následovaným čtyřmi číslicemi bod kódu Unicode. Aby se vytvořil název univerzálního znaku, musí být k dispozici všechny osm nebo čtyři číslice (v uvedeném pořadí).
 
 ```cpp
 char u1 = 'A';          // 'A'
@@ -195,19 +202,19 @@ char u4 = '\u0041';     // \u UCN 'A'
 char u5 = '\U00000041'; // \U UCN 'A'
 ```
 
-#### <a name="surrogate-pairs"></a>Náhradní dvojice
+#### <a name="surrogate-pairs"></a>Náhradní páry
 
-Univerzální názvy znaků nelze dekódovat hodnoty v náhradní rozsah bodového kódu D800 DFFF. Páry nahrazení Unicode, zadat název univerzálních znaků pomocí `\UNNNNNNNN`, kde je NNNNNNNN bodu osm 6místným číselným kódem znaku. Kompilátor generuje náhradní pár v případě potřeby.
+Univerzální názvy znaků nemůžou kódovat hodnoty v rozsahu bodu nahrazení D800-DFFF. Pro náhradní páry Unicode zadejte univerzální název znaku pomocí `\UNNNNNNNN`, kde nnnnnnnn je osmimístný bod kódu pro daný znak. Kompilátor vygeneruje v případě potřeby náhradní dvojici.
 
-V C ++ 03 jazyk pouze povolené podmnožinu znaků a nelze je reprezentovat podle jejich univerzální názvy znaků a povoleny některé univerzální názvy znaků, které skutečně nepředstavovala platnou znaky Unicode. Tato chyba byla opravena v C ++ 11 standard. V C ++ 11 můžete použít univerzální názvy znaků znakové a řetězcové literály a identifikátory.  Další informace o univerzální názvy znaků, naleznete v tématu [znakových sad](../cpp/character-sets.md). Další informace o kódování Unicode naleznete v tématu [Unicode](https://msdn.microsoft.com/library/dd374081). Další informace o náhradních párech naleznete v tématu [náhradní páry a doplňující znaky](/windows/desktop/Intl/surrogates-and-supplementary-characters).
+V jazyce C++ 03 jazyk povoluje pouze podmnožinu znaků, které mají být reprezentovány svými názvy univerzálních znaků, a povoluje některé univerzální názvy znaků, které ve skutečnosti nepředstavovaly platné znaky kódování Unicode. Tato chyba byla opravena ve standardu C++ 11. V jazyce C++ 11 mohou znakové a řetězcové literály a identifikátory používat univerzální názvy znaků.  Další informace o univerzálních názvech znaků naleznete v tématu [znakové sady](../cpp/character-sets.md). Další informace o kódování Unicode naleznete v tématu [Unicode](https://msdn.microsoft.com/library/dd374081). Další informace o náhradních dvojicích naleznete v tématu [náhradní páry a doplňující znaky](/windows/desktop/Intl/surrogates-and-supplementary-characters).
 
 ## <a name="string-literals"></a>Řetězcové literály
 
-Textový literál představuje posloupnost znaků, které společně tvoří řetězec zakončený hodnotou null. Znaky musí být uzavřeny mezi dvojité uvozovky. Existují následující typy řetězcových literálů:
+Řetězcový literál představuje posloupnost znaků, které dohromady tvoří řetězec zakončený hodnotou null. Znaky musí být uzavřeny mezi dvojité uvozovky. Existují následující typy řetězcových literálů:
 
-### <a name="narrow-string-literals"></a>Úzký řetězcové literály
+### <a name="narrow-string-literals"></a>Úzké řetězcové literály
 
-Úzký řetězcový literál je mimo předponou, dvojité uvozovky s oddělovači, zakončený hodnotou null pole typu `const char[n]`, kde n je délka pole v bajtech. Úzký řetězcový literál může obsahovat libovolný grafický znak kromě dvojité uvozovky (`"`), zpětného lomítka (`\`), nebo znak nového řádku. Úzký řetězcový literál může obsahovat také názvy uvedené výše a univerzální znak řídicí sekvence, které přizpůsobit v bajtu.
+Úzký řetězcový literál je nepevné, dvojité uvozovky, pole `const char[n]`zakončené znakem null, kde n je délka pole v bajtech. Úzký řetězcový literál může obsahovat libovolný grafický znak kromě dvojité uvozovky (`"`), zpětného lomítka (`\`) nebo znaku nového řádku. Úzký řetězcový literál může obsahovat také řídicí sekvence uvedené výše a univerzální názvy znaků, které se vejdou do bajtu.
 
 ```cpp
 const char *narrow = "abcd";
@@ -216,36 +223,36 @@ const char *narrow = "abcd";
 const char *escaped = "yes\\no";
 ```
 
-#### <a name="utf-8-encoded-strings"></a>Kódovaný řetězec UTF-8
+#### <a name="utf-8-encoded-strings"></a>Řetězce kódované v kódování UTF-8
 
-Řetězec UTF-8 je u8 předponou, dvojité uvozovky s oddělovači, zakončený hodnotou null pole typu `const char[n]`, kde n je délka kódovaného pole v bajtech. Předponu u8 řetězcový literál může obsahovat libovolný grafický znak kromě dvojité uvozovky (`"`), zpětného lomítka (`\`), nebo znak nového řádku. Řetězcový literál s předponou u8 může také obsahovat řídicí sekvence je uvedena výše a všechny univerzální název znaku.
+Řetězec zakódovaný v kódování UTF-8 je typ `const char[n]`"předpevněný", oddělený uvozovky, pole zakončené znakem null, kde *n* je délka kódovaného pole v bajtech. Textový literál U8 a-fixed může obsahovat libovolný grafický znak kromě dvojité uvozovky (`"`), zpětného lomítka (`\`) nebo znaku nového řádku. Textový literál s názvem U8 může také obsahovat řídicí sekvence, které jsou uvedeny výše, a jakýkoli univerzální název znaku.
 
 ```cpp
 const char* str1 = u8"Hello World";
 const char* str2 = u8"\U0001F607 is O:-)";
 ```
 
-### <a name="wide-string-literals"></a>Široké řetězcové literály
+### <a name="wide-string-literals"></a>Velké řetězcové literály
 
-Široký řetězcový literál je pole zakončené znakem null konstanty **wchar_t** , který má předponu "`L`" a obsahuje libovolný grafický znak kromě dvojité uvozovky ("), zpětného lomítka (\\), nebo znak nového řádku. Široký řetězcový literál může obsahovat řídicí sekvence je uvedena výše a všechny univerzální název znaku.
+Velký řetězcový literál je pole zakončené znakem null konstanty **wchar_t** , které má předponu`L`' ' a obsahuje libovolný grafický znak kromě dvojité uvozovky ("), zpětného lomítka (\\) nebo znaku nového řádku. Libovolný řetězcový literál může obsahovat řídicí sekvence uvedené výše a jakýkoli univerzální název znaku.
 
 ```cpp
 const wchar_t* wide = L"zyxw";
 const wchar_t* newline = L"hello\ngoodbye";
 ```
 
-#### <a name="char16t-and-char32t-c11"></a>char16_t a char32_t (C ++ 11)
+#### <a name="char16t-and-char32t-c11"></a>char16_t a char32_t (C++ 11)
 
-C ++ 11 zavádí přenosný počítač `char16_t` (16-bit Unicode) a `char32_t` (32bitová verze Unicode) znakové typy:
+C++ 11 zavádí přenosné `char16_t` (16bitové znakové sady Unicode) a `char32_t` (32-bit Unicode) typy znaků:
 
 ```cpp
 auto s3 = u"hello"; // const char16_t*
 auto s4 = U"hello"; // const char32_t*
 ```
 
-### <a name="raw-string-literals-c11"></a>Literály nezpracovaných řetězců (C ++ 11)
+### <a name="raw-string-literals-c11"></a>Nezpracované řetězcové literály (C++ 11)
 
-Nezpracovaný Textový literál je pole zakončené znakem null – znak typu –, která obsahuje libovolný grafický znak včetně dvojité uvozovky ("), zpětného lomítka (\\), nebo znak nového řádku. Nezpracované řetězcové literály se často používají v regulárních výrazech, které používají třídy znaků a v řetězcích HTML a XML. Příklady naleznete v následujícím článku: [Bjarne Stroustrup – nejčastější dotazy o C ++ 11](http://www.stroustrup.com/C++11FAQ.html).
+Nezpracovaný řetězcový literál je pole zakončené znakem null – libovolný typ znaku, který obsahuje libovolný grafický znak, včetně dvojité uvozovky ("), zpětného lomítka\\() nebo znaku nového řádku. Nezpracované řetězcové literály se často používají v regulárních výrazech, které používají třídy znaků, a v řetězcích HTML a v řetězcích XML. Příklady najdete v následujícím článku: [Nejčastější dotazy k Bjarne Stroustrup na c++ 11](http://www.stroustrup.com/C++11FAQ.html).
 
 ```cpp
 // represents the string: An unescaped \ character
@@ -256,20 +263,20 @@ const char16_t* raw_utf16 = uR"(An unescaped \ character)";
 const char32_t* raw_utf32 = UR"(An unescaped \ character)";
 ```
 
-Oddělovač je uživatelem definované sekvence až 16 znaků, která bezprostředně předchází levé závorce nezpracovaného textového literálu a následuje jeho pravou závorku.  Například v `R"abc(Hello"\()abc"` pořadí oddělovačů `abc` a obsah řetězce je `Hello"\(`. Můžete použít oddělovač k rozlišení nezpracovaných řetězců, které obsahují dvojité uvozovky i závorky. To způsobí chybu kompilátoru:
+Oddělovač je uživatelsky definovaná sekvence až 16 znaků, která bezprostředně předchází levé závorce nezpracovaného řetězcového literálu a hned následuje za pravou závorkou.  Například v `R"abc(Hello"\()abc"` sekvenci oddělovače je `abc` a obsah řetězce je `Hello"\(`. Pomocí oddělovače můžete určit nezpracované řetězce, které obsahují dvojité uvozovky a závorky. Tento řetězcový literál způsobí chybu kompilátoru:
 
 ```cpp
 // meant to represent the string: )"
 const char* bad_parens = R"()")";  // error C2059
 ```
 
-Ale to je řešeno oddělovačem:
+Ale tento oddělovač ho vyřeší:
 
 ```cpp
 const char* good_parens = R"xyz()")xyz";
 ```
 
-Můžete sestavit nezpracovaný řetězcový literál ve kterém je nový řádek (ne znak sekvence escape) ve zdroji:
+Můžete sestavit nezpracovaný řetězcový literál, který obsahuje nový řádek (ne řídicí znak) ve zdroji:
 
 ```cpp
 // represents the string: hello
@@ -278,9 +285,9 @@ const wchar_t* newline = LR"(hello
 goodbye)";
 ```
 
-### <a name="stdstring-literals-c14"></a>std::String literálů (C ++ 14)
+### <a name="stdstring-literals-c14"></a>std:: String – literály (C++ 14)
 
-std::String literály jsou uživatelem definované literály (viz níže), které jsou reprezentovány ve formě "xyx" s implementace standardní knihovny (s `s` přípony). Tento typ řetězcového literálu vytvoří dočasný objekt typu std::string, std::wstring, std::u32string nebo std::u16string v závislosti na předponu, která je zadána. Při použití žádná předpona jako výše, std::string je vytvořen. L "xyz" s vytváří std::wstring. vytvoří s u "xyz" [std::u16string](../standard-library/string-typedefs.md#u16string)a vytvoří s U "xyz" [std::u32string](../standard-library/string-typedefs.md#u32string).
+`std::string`literály jsou standardní implementace knihoven literálů definovaných uživatelem (viz níže), které jsou reprezentovány `"xyz"s` jako ( `s` s příponou). Tento druh řetězcového literálu vytváří dočasný objekt `std::string`typu `std::u32string`, `std::wstring`, nebo `std::u16string`, v závislosti na zadané předponě. Není- `std::string` li použita žádná předpona, jak je uvedeno výše, je vytvořena. `L"xyz"s``std::wstring`vytvoří. `u"xyz"s`vytvoří [std:: u16string](../standard-library/string-typedefs.md#u16string)a `U"xyz"s` vytvoří [std:: u32string](../standard-library/string-typedefs.md#u32string).
 
 ```cpp
 //#include <string>
@@ -292,86 +299,86 @@ u16string str4{ u"hello"s };
 u32string str5{ U"hello"s };
 ```
 
-Přípona s může být také použita na literály nezpracovaných řetězců:
+`s` Přípona se dá použít taky u nezpracovaných řetězcových literálů:
 
 ```cpp
 u32string str6{ UR"(She said "hello.")"s };
 ```
 
-std::String literály jsou definovány v oboru názvů `std::literals::string_literals` v \<řetězec > soubor hlaviček. Protože `std::literals::string_literals`, a `std::literals` jsou deklarovány jako [pomocí vložených oborů názvů](../cpp/namespaces-cpp.md), `std::literals::string_literals` automaticky zpracovávány jako by to patří, vytvářela přímo v oboru názvů `std`.
+`std::string`literály jsou definovány v oboru názvů `std::literals::string_literals` \<v řetězcové > hlavičkovém souboru. Vzhledem `std::literals::string_literals`k tomu `std::literals` , že a jsou deklarovány jako `std::literals::string_literals` [vložené obory názvů](../cpp/namespaces-cpp.md), se automaticky považují za, `std`jako by patřily přímo do oboru názvů.
 
 ### <a name="size-of-string-literals"></a>Velikost řetězcových literálů
 
-Pro ANSI char\* řetězce a další jednobajtové kódování (nikoli UTF-8), velikost (v bajtech) řetězcového literálu je počet znaků plus 1 pro ukončující znak null. Pro všechny ostatní typy řetězce velikost není v relaci výhradně na počet znaků. UTF-8 až čtyři prvky char používá ke kódování některé *znakové jednotky*a char16_t nebo wchar_t kódovaný jako UTF-16, můžete používat dva prvky (k celkem čtyři bajty) určený ke kódování jediného *jednotku kódu*.   Tento příklad ukazuje velikost širokého řetězce literálu v bajtech:
+V případě `char*` řetězců ANSI a dalších jednobajtových kódování (ale ne UTF-8) je velikost řetězcového literálu (v bajtech) řetězcového literálu počet znaků plus 1 pro ukončující znak null. Pro všechny ostatní typy řetězců není velikost přesně spojena s počtem znaků. Kódování UTF-8 používá **až čtyři prvky** pro kódování některých *jednotek kódu* `char16_t` a nebo `wchar_t` zakódovaných jako UTF-16 může použít dva prvky (celkem čtyři bajty) ke kódování jedné *jednotky kódu*. V tomto příkladu se zobrazuje velikost textového literálu v bajtech:
 
 ```cpp
 const wchar_t* str = L"Hello!";
 const size_t byteSize = (wcslen(str) + 1) * sizeof(wchar_t);
 ```
 
-Všimněte si, že `strlen()` a `wcslen()` neobsahují velikost ukončujícího znaku null, jejichž velikost se rovná velikosti elementu typu řetězec: jeden bajt na znak\* string, dva bajty na wchar_t\* nebo char16_t\*řetězce a čtyři bajty v char32_t\* řetězce.
+Všimněte si `strlen()` , `wcslen()` že a neobsahují velikost ukončujícího znaku null, jehož velikost je rovna velikosti prvku typu řetězec `char*` : jeden bajt v řetězci, dva bajty na `wchar_t*` nebo `char16_t*` řetězce a čtyři počet bajtů `char32_t*` v řetězcích.
 
-Maximální délka řetězce literálu je 65535 bajtů. Toto omezení platí pro úzké i široké řetězcové literály.
+Maximální délka řetězcového literálu je 65 535 bajtů. Toto omezení platí pro úzké řetězcové literály i pro velké řetězcové literály.
 
 ### <a name="modifying-string-literals"></a>Úprava literálů řetězce
 
-Protože (nezahrnuje std:string literály) řetězcové literály jsou konstanty, pokus upravit je – například `str[2] = 'A'`– způsobí chybu kompilátoru.
+Vzhledem k tomu, že řetězcové `std::string` literály (bez literálů) jsou konstanty, pokusí se je `str[2] = 'A'`změnit, například – způsobí chybu kompilátoru.
 
-**Microsoft Specific**
+**Specifické pro společnost Microsoft**
 
-V aplikaci Microsoft C++ můžete použít textový literál k inicializaci ukazatele na nekonstantní **char** nebo **wchar_t**. To je povoleno v kódu C99, ale je zastaralé v C ++ 98 odebírají a v C ++ 11. Pokus upravit řetězec způsobuje narušení přístupu, jako v následujícím příkladu:
+V Microsoftu C++můžete použít řetězcový literál k inicializaci ukazatele na nekonstantní **znak** nebo **wchar_t**. Tato nekonstantní inicializace je povolena v C99 kódu, ale je zastaralá v C++ 98 a odebrána v C++ 11. Pokus o změnu řetězce způsobí porušení přístupu, jako v tomto příkladu:
 
 ```cpp
 wchar_t* str = L"hello";
 str[2] = L'a'; // run-time error: access violation
 ```
 
-Může způsobit, že kompilátor generuje chybu při převodu řetězcového literálu na ukazatel na nekonstantní znak při nastavení [/Zc: strictstrings (zakázání převodů typů řetězcových literálů)](../build/reference/zc-strictstrings-disable-string-literal-type-conversion.md) – možnost kompilátoru. Doporučujeme ho pro standardům přenosného kódu. Je také vhodné k použití **automaticky** – klíčové slovo deklarovat řetězec iniciovaný textovým literálem ukazatele, protože se překládá na správný typ (const). Tento příklad kódu například zachycen například pokus o zápis do řetězcového literálu v době kompilace:
+Můžete způsobit, že kompilátor vygeneruje chybu, pokud je řetězcový literál převeden na ukazatel non_const znaku při nastavení možnosti kompilátoru [/Zc: strictStrings (Disable převod typu string literal)](../build/reference/zc-strictstrings-disable-string-literal-type-conversion.md) . Doporučujeme pro přenos přenositelného kódu kompatibilního se standardem. Je také vhodné použít klíčové slovo **auto** k deklaraci ukazatelů inicializovaných řetězcovým literálem, protože se překládá na správný typ (const). Tento příklad kódu například zachytí pokus o zápis do řetězcového literálu v době kompilace:
 
 ```cpp
 auto str = L"hello";
 str[2] = L'a'; // C3892: you cannot assign to a variable that is const.
 ```
 
-V některých případech mohou být shromážděny identické řetězcové literály a šetřit tak místo ve spustitelném souboru. Ve sdružování řetězcového literálu kompilátor způsobí, že všechny odkazy na konkrétní řetězcový literál budou odkazovat do stejného umístění v paměti namísto toho, aby každý odkaz přejděte na samostatnou instanci řetězcového literálu. Chcete-li povolit sdružování řetězců, použijte [/GF](../build/reference/gf-eliminate-duplicate-strings.md) – možnost kompilátoru.
+V některých případech mohou být do fondu uloženy identické řetězcové literály, aby se ušetřilo místo ve spustitelném souboru. V rámci sdružování řetězcového literálu kompilátor způsobí, že všechny odkazy na konkrétní řetězcový literál odkazují na stejné místo v paměti, místo aby každý odkaz odkazoval na samostatnou instanci řetězcového literálu. Chcete-li povolit sdružování řetězců, použijte možnost kompilátoru [/GF](../build/reference/gf-eliminate-duplicate-strings.md) .
 
-**Specifické pro end Microsoft**
+**Specifické pro konec Microsoftu**
 
-### <a name="concatenating-adjacent-string-literals"></a>Zřetězení sousedních řetězcových literálů
+### <a name="concatenating-adjacent-string-literals"></a>Zřetězení sousedících řetězcových literálů
 
-Sousední široký nebo úzký řetězcové literály jsou zřetězeny. Tato deklarace:
+Sousední a úzké řetězcové literály jsou zřetězeny. Tato deklarace:
 
 ```cpp
 char str[] = "12" "34";
 ```
 
-je stejný jako tato deklarace:
+je stejná jako tato deklarace:
 
 ```cpp
 char atr[] = "1234";
 ```
 
-a tato deklarace:
+a do této deklarace:
 
 ```cpp
 char atr[] =  "12\
 34";
 ```
 
-Použití vložených hexadecimálních řídicích kódů k určení řetězcových literálů může způsobit neočekávané výsledky. Následující příklad se snaží o vytvoření literálu řetězce obsahujícího znaky ASCII 5, následované znaky f, i, v a e:
+Použití vložených hexadecimálních řídicích kódů pro určení řetězcových literálů může způsobit neočekávané výsledky. V následujícím příkladu se vytvoří řetězcový literál, který obsahuje znak ASCII 5 následovaný znaky f, i, v a e:
 
 ```cpp
 "\x05five"
 ```
 
-Skutečný výsledek je hexadecimální 5F, což je kód ASCII pro podtržítko, následované znaky i, v a e. Chcete-li získat správný výsledek, můžete použít jednu z těchto:
+Skutečný výsledek je hexadecimální 5F, což je kód ASCII pro podtržítko následovaný znaky i, v a e. Chcete-li získat správný výsledek, můžete použít jednu z těchto akcí:
 
 ```cpp
 "\005five"     // Use octal literal.
 "\x05" "five"  // Use string splicing.
 ```
 
-literály std::String, protože jsou typy std::string, mohou být spojeny s + – operátor, který je definován pro [basic_string](../standard-library/basic-string-class.md) typy. Také mohou být spojeny stejným způsobem jako sousedních textových literálů. V obou případech musí odpovídat kódování, řetězce a přípony:
+`std::string`literály, protože jsou `std::string` typy, mohou být zřetězeny `+` s operátorem definovaným pro typy [basic_string](../standard-library/basic-string-class.md) . Lze je také zřetězit stejným způsobem jako sousední řetězcové literály. V obou případech musí kódování řetězce a přípona odpovídat:
 
 ```cpp
 auto x1 = "hello" " " " world"; // OK
@@ -380,9 +387,9 @@ auto x3 = u8"hello" " "s u8"world"s; // OK, agree on prefixes and suffixes
 auto x4 = u8"hello" " "s u8"world"z; // C3688, disagree on suffixes
 ```
 
-### <a name="string-literals-with-universal-character-names"></a>Řetězcové literály s univerzální názvy znaků
+### <a name="string-literals-with-universal-character-names"></a>Řetězcové literály s názvy univerzálních znaků
 
-Nativní (bez –) literály nezpracovaných řetězců mohou používat univerzální názvy znaků k zastupování libovolného znaku tak dlouho, dokud univerzální název znaku může být zakódován jako jeden nebo více znaků v typu řetězec.  Například univerzální název znaku představující znak rozšířené nemůže být kódovaný v úzký řetězcový pomocí znakovou stránku ANSI, ale může být zakódován v úzkém řetězce v některých vícebajtové znakové stránky, nebo řetězce UTF-8 nebo širokého řetězce. Podpora kódování Unicode je v C ++ 11, prodloužena char16_t\* a char32_t\* typy řetězců:
+Nativní (nezpracované) řetězcové literály mohou používat univerzální názvy znaků k reprezentaci libovolného znaku, pokud je název Universal Character možné kódovat jako jeden nebo více znaků v typu řetězce.  Například univerzální název znaku představující rozšířený znak nelze zakódovat v úzkém řetězci pomocí znakové stránky ANSI, ale může být kódovaný v úzkých řetězcích v některých vícebajtových znakových stránkách nebo v řetězcích UTF-8 nebo v rámci celé řady. V jazyce c++ 11 je podpora kódování Unicode rozšířena `char16_t*` o `char32_t*` typy řetězců a:
 
 ```cpp
 // ASCII smiling face
