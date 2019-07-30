@@ -3,14 +3,12 @@ title: Vlastnosti CC++ /Project (Visual Studio)
 ms.date: 7/18/2019
 ms.topic: article
 ms.assetid: 16375038-4917-4bd0-9a2a-26343c1708b7
-author: mikeblome
-ms.author: mblome
-ms.openlocfilehash: bf457366f1818593e937d4c9e95651f48db64528
-ms.sourcegitcommit: 0867d648e0955ebad7260b5fbebfd6cd4d58f3c7
-ms.translationtype: HT
+ms.openlocfilehash: 91edf30ef0e5f38088727c0280d2edf07cdebfa5
+ms.sourcegitcommit: 7b039b5f32f6c59be6c6bb1cffafd69c3bfadd35
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68342245"
+ms.lasthandoff: 07/26/2019
+ms.locfileid: "68537571"
 ---
 # <a name="cc-property-pages"></a>Stránky vlastnostíC++ C/a
 
@@ -436,7 +434,7 @@ Vyberte výchozí konvenci volání aplikace (může být přepsána funkcí). N
 **Vlastnit**
 
 - **__cdecl** – určuje konvenci volání __cdecl pro všechny funkce s C++ výjimkou členských funkcí a funkcí označených jako __stdcall nebo __fastcall.
-- **__fastcall** – určuje konvenci volání __fastcall pro všechny funkce s C++ výjimkou členských členských a funkcí označených jako __cdecl nebo __stdcall. Všechny funkce __fastcall musí mít prototypy.
+- **__fastcall** – určuje konvenci volání __fastcall pro všechny funkce s C++ výjimkou členských funkcí a funkcí označených jako __cdecl nebo __stdcall. Všechny funkce __fastcall musí mít prototypy.
 - **__stdcall** – určuje konvenci volání __stdcall pro všechny funkce s C++ výjimkou členských funkcí a funkcí označených jako __cdecl nebo __fastcall. Všechny funkce __stdcall musí mít prototypy.
 - **__vectorcall** – určuje konvenci volání __vectorcall pro všechny funkce s C++ výjimkou členských funkcí a funkcí označených jako __cdecl, __fastcall nebo __stdcall. Všechny funkce __vectorcall musí mít prototypy.
 
