@@ -1,6 +1,6 @@
 ---
 title: 'Syntaxe specifikace formátu: funkce printf a wprintf'
-ms.date: 07/02/2019
+ms.date: 07/30/2019
 helpviewer_keywords:
 - format specification fields for printf function
 - printf function format specification fields
@@ -9,27 +9,27 @@ helpviewer_keywords:
 - width fields, printf function
 - precision fields, printf function
 ms.assetid: 664b1717-2760-4c61-bd9c-22eee618d825
-ms.openlocfilehash: 07565da17eb53274e0c3203abbc8cddb9e61da90
-ms.sourcegitcommit: 9b904e490b1e262293a602bd1291a8f3045e755b
+ms.openlocfilehash: 95573821ff2b213765184e7c121e693e1eb0ac0a
+ms.sourcegitcommit: 725e86dabe2901175ecc63261c3bf05802dddff4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67552257"
+ms.lasthandoff: 07/31/2019
+ms.locfileid: "68682361"
 ---
 # <a name="format-specification-syntax-printf-and-wprintf-functions"></a>Syntaxe specifikace formátu: funkce printf a wprintf
 
-Různé `printf` a `wprintf` funkce řetězec formátu a nepovinné argumenty. a vytvoří formátovaných posloupnosti znaků pro výstup. Formátovací řetězec obsahuje nula nebo více *direktivy*, které jsou buď literálními znaky pro výstupní nebo kódovaného *převod specifikací* , která popisují, jak formátovat argument ve výstupu. Toto téma popisuje syntaxi použít ke kódování převod specifikací ve formátovacím řetězci. Seznam těchto funkcí naleznete v tématu [vstupně-výstupní operace Stream](../c-runtime-library/stream-i-o.md).
+Různé `printf` funkce a `wprintf` mají řetězec formátu a volitelné argumenty a vytvoří formátovanou sekvenci znaků pro výstup. Formátovací řetězec obsahuje nula nebo více *direktiv*, což jsou buď literálové znaky pro výstupní nebo kódované *specifikace převodu* , které popisují, jak formátovat argument ve výstupu. Tento článek popisuje syntaxi použitou ke kódování specifikace převodu v řetězci formátu. Seznam těchto funkcí najdete v tématu [vstupně-výstupní operace streamu](../c-runtime-library/stream-i-o.md).
 
-Specifikace převodu se skládá z povinných a volitelných polí v tomto formuláři:
+Specifikace převodu se skládá z volitelných a povinných polí v tomto formuláři:
 
-**%** [[*příznaky*](#flags)] [[*šířka*](#width)] [.[ *přesnost*](#precision)] [[*velikost*](#size)][*typu*](#type)
+**%** [[*příznaky*](#flags)] [[*Šířka*](#width)] [. [*přesnost*](#precision)] [[*Velikost*](#size)] [*typ*](#type)
 
-Každé pole specifikace převodu je znak nebo číslo, které označuje, že danou formátovací volbu nebo specifikátor převodu. Požadovaný *typ* pole určuje druh převodu na argument použit. Volitelný *příznaky*, *šířka*, a *přesnost* polí určují další aspekty formátu například mezery nebo nuly, zarovnání a zobrazené přesnosti. *Velikost* pole určuje velikost argumentu spotřebované a převést.
+Každé pole specifikace převodu je znak nebo číslo, které označuje konkrétní možnost formátu nebo specifikátor převodu. Požadovaný *typ* pole určuje druh převodu, který má být použit na argument. Volitelnápole Flags, *Width*a *Precision* řídí další aspekty formátování, jako jsou například počáteční mezery nebo nuly, zdůvodnění a zobrazená přesnost. Pole *Velikost* určuje velikost spotřebovaného a převedeného argumentu.
 
-Specifikace základní převodu obsahuje pouze znak procent a *typ* znak. Například `%s` specifikuje konverzi na řetězec. Pro výpis znaku procent je třeba použít `%%`. Pokud je znak procent následován znakem, který nemá žádný význam jako pole formátu, je vyvolána obslužná rutina neplatného parametru. Další informace najdete v tématu [Parameter Validation](../c-runtime-library/parameter-validation.md).
+Základní specifikace převodu obsahuje pouze znak procenta a znak *typu* . Například `%s` určuje převod řetězce. Pro výpis znaku procent je třeba použít `%%`. Je-li znak procenta následován znakem, který nemá žádný význam jako pole Format, je vyvolána obslužná rutina neplatného parametru. Další informace najdete v tématu [ověření parametru](../c-runtime-library/parameter-validation.md).
 
 > [!IMPORTANT]
-> Zabezpečení a stability zkontrolujte této specifikace převodu řetězců není definována uživatelem. Zvažte například program, který vyžaduje od uživatele zadání jména a ukládá vstup do proměnné řetězce s názvem `user_name`. Pro výpis `user_name` není vhodné použít:
+> Pro zabezpečení a stabilitu zajistěte, aby se řetězce specifikace převodu nedefinovaly uživatelem. Zvažte například program, který vyžaduje od uživatele zadání jména a ukládá vstup do proměnné řetězce s názvem `user_name`. Pro výpis `user_name` není vhodné použít:
 >
 > `printf( user_name ); /* Danger!  If user_name contains "%s", program will crash */`
 >
@@ -39,169 +39,169 @@ Specifikace základní převodu obsahuje pouze znak procent a *typ* znak. Např�
 
 <a name="type"></a>
 
-## <a name="type-conversion-specifier"></a>Specifikátoru převodu typu.
+## <a name="type-conversion-specifier"></a>Specifikátor převodu typu
 
-*Typ* znak specifikátoru převodu určuje, jestli se má odpovídající argument interpretovat jako znak, řetězec, ukazatel, celé číslo nebo číslo s plovoucí desetinnou čárkou. *Typ* znak je pouze požadovaná převod pole pro specifikaci a zobrazí se po volitelných polí.
+Znak specifikátoru převodu *typu* určuje, zda se má interpretovat odpovídající argument jako znak, řetězec, ukazatel, celé číslo nebo číslo s plovoucí desetinnou čárkou. Znak *typu* je jediná požadovaná pole specifikace převodu, která se zobrazí po všech volitelných polích.
 
-Argumenty, které následují formátovacím řetězci interpretovány podle odpovídající *typ* znak a volitelné [velikost](#size) předponu. Převody pro typy znaků `char` a `wchar_t` je určené vlastností **c** nebo **C**, a jednobajtové a vícebajtové nebo široký znak řetězce je určené vlastností **s** nebo **S**, v závislosti na formátování funkci, která se používá. Znakové a řetězcové argumenty, které je určené vlastností **c** a **s** jsou interpretovány jako `char` a `char*` podle `printf` produktovou řadu funkcí, nebo jako `wchar_t` a `wchar_t*` podle `wprintf` řady funkcí. Znakové a řetězcové argumenty, které je určené vlastností **C** a **S** jsou interpretovány jako `wchar_t` a `wchar_t*` podle `printf` produktovou řadu funkcí, nebo jako `char` a `char*` podle `wprintf` řady funkcí. Toto chování je specifické pro Microsoft.
+Argumenty, které následují formátovací řetězec, jsou interpretovány podle odpovídajícího znaku *typu* a volitelné předpony [velikosti](#size) . Převody `char` pro typy znaků a `wchar_t` jsou určeny pomocí **jazyka c** nebo **c**a jednobajtové a vícebajtové a dvoubajtové znakové řetězce jsou určeny pomocí **s** nebo **s**v závislosti na tom, které formátování je používána funkce. Znakové a řetězcové argumenty, které jsou zadány pomocí **jazyka c** a **s** , jsou `printf` interpretovány jako `char` a `char*` funkcemi `wchar_t` rodiny nebo `wprintf` jako a `wchar_t*` podle rodinných funkcí. Znakové a řetězcové argumenty, které jsou zadány pomocí **jazyka C** a **S** , jsou `printf` interpretovány jako `wchar_t` a `wchar_t*` funkcemi `char` rodiny nebo `wprintf` jako a `char*` podle rodinných funkcí. Toto chování je specifické pro společnost Microsoft.
 
-Celočíselné typy, jako `short`, `int`, `long`, `long long` a jejich `unsigned` variant, jsou určené pomocí **d**, **i**, **o**, **u**, **x**, a **X**. Typy s plovoucí desetinnou čárkou, jako `float`, `double`, a `long double`, jsou určené pomocí **a**, **A**, **e**, **E**, **f**, **F**, **g**, a **G**. Ve výchozím nastavení Pokud se změnil *velikost* předponu, jsou přiřazeny celočíselné argumenty do `int` typu a argumentů s plovoucí desetinnou čárkou jsou přiřazeny do `double`. V 64bitových systémech `int` je 32bitová hodnota; proto bude 64bitová celá čísla zkrácena, když jsou formátována pro výstup, není-li *velikost* předponu **ll** nebo **I64**se používá. Typy ukazatelů, která jsou určena podle **p** použít výchozí velikost ukazatele pro platformu.
+Celočíselné typy, jako `short`, `int`, `long`, `long long` a jejich `unsigned` variant, jsou určené pomocí **d**, **i**, **o**, **u**, **x**, a **X**. Typy s plovoucí desetinnou čárkou, jako `float`, `double`, a `long double`, jsou určené pomocí **a**, **A**, **e**, **E**, **f**, **F**, **g**, a **G**. Ve výchozím nastavení, pokud nejsou upraveny předponou *velikosti* , jsou `int` celočíselné argumenty přiřazeny typu a argumenty s plovoucí desetinnou čárkou jsou přizpůsobeny na `double`. V `int` 64 bitových systémech je hodnota 32; proto se při formátování pro výstup 64 zkrátí celá čísla, pokud není použita předpona s *velikostí* **ll** nebo **I64** . Typy ukazatelů, které jsou určeny pomocí **p** , používají pro platformu výchozí velikost ukazatele.
 
 > [!NOTE]
-> **Specifické pro Microsoft** **Z** zadejte znak a chování **c**, **C**, **s**, a **S** znaky při jejich použití se službou `printf` a `wprintf` funkce, jsou rozšíření společnosti Microsoft. Standard ISO C používá **c** a **s** konzistentně pro úzkých znaků a řetězce, a **C** a **S** pro široké znaky a řetězce v všechny funkce, formátování.
+> **Specifické pro společnost Microsoft** Znak typu **Z** a chování znaků **jazyka c**, **c**, **s**a **s** v případě použití s `printf` funkcemi a `wprintf` jsou rozšířeními společnosti Microsoft. Standard ISO C používá jazyky **c** a **y** konzistentně pro zúžené znaky a řetězce a jazyky **c** a **s** pro celé znaky a řetězce, a to ve všech funkcích formátování.
 
 ### <a name="type-field-characters"></a>Znaky pole typu
 
 |Znak typu|Argument|Výstupní formát|
 |--------------------|--------------|-------------------|
-|**c**|Znak|Při použití s `printf` funkce, určuje jednobajtový znak; při použití s `wprintf` funkce, určuje širokého znaku.|
-|**C**|Znak|Při použití s `printf` funkce, určuje širokého znaku; při použití s `wprintf` funkce, určuje jednobajtový znak.|
+|**c**|Znak|Při použití s `printf` funkcemi určuje znak s jedním Byte; při použití s `wprintf` funkcemi určuje velký znak.|
+|**C**|Znak|Při použití s `printf` funkcemi, určuje velký znak; při použití s `wprintf` funkcemi určuje znak s jedním Byte.|
 |**d**|Integer|Desítkové celé číslo se znaménkem.|
 |**i**|Integer|Desítkové celé číslo se znaménkem.|
 |**o**|Integer|Osmičkové celé číslo bez znaménka.|
-|**u**|Integer|Desítkové celé číslo bez znaménka.|
-|**x**|Integer|Šestnáctkové celé číslo bez znaménka; používá "abcdef".|
+|**u**|Integer|Celé číslo bez znaménka.|
+|**x**|Integer|Šestnáctkové celé číslo bez znaménka; používá "ABCDEF".|
 |**X**|Integer|Šestnáctkové celé číslo bez znaménka; používá "ABCDEF".|
-|**e**|Floating-point|Hodnota, která má tvar [-] podepsané*d.dddd*__e±__*dd*[*d*] kde *d* je jedním desítkovým číslem, *dddd* je jeden nebo více desítkových číslic v závislosti na zadané přesnosti nebo šest ve výchozím nastavení, a *dd*[*d*] je dvě nebo tři desítkové číslice v závislosti na tom, [výstupní formát](../c-runtime-library/set-output-format.md) a velikost exponent.|
-|**E**|Floating-point|Stejné jako **e** formátu s výjimkou, že **E** spíše než **e** zavádí exponent.|
-|**f**|Floating-point|Hodnota, která má tvar [-] podepsané*dddd* __.__ *dddd*, kde *dddd* je jeden nebo více desítkových číslic. Počet číslic od desetinné čárky závisí na velikosti číslo a počet číslic po desetinné čárky, závisí na požadovaná přesnost nebo šest ve výchozím nastavení.|
-|**F**|Floating-point|Stejné jako **f** naformátovat s tím rozdílem, že velké výstup nekonečno a nan.|
-|**g**|Floating-point|Hodnoty se znaménkem jsou zobrazeny v **f** nebo **e** formátování, podle toho, co je kompaktnější pro dané hodnoty a přesnosti. **e** formátu se používá jenom v případě, že exponent hodnota je menší než -4 nebo větší než nebo rovna hodnotě *přesnost* argument. Koncové nuly jsou zkrácena a oddělovač desetinných míst se zobrazí pouze v případě, že je jeden nebo více číslic na něho.|
-|**G**|Floating-point|Stejné jako **g** formátu, s výjimkou, že **E**, spíše než **e**, zavádí exponent (kde je to vhodné).|
-|**a**|Floating-point|Podepsané šestnáctkovou hodnotu s plovoucí desetinnou čárkou dvojité přesnosti, která má tvar [-] 0 x*h.hhhh*__p±__*dd*, kde *h.hhhh* jsou šestnáctkové soustavě číslice (pomocí malých písmen) v mantise a *dd* je jeden nebo více číslic exponentu. Přesnosti určuje počet číslic za čárkou.|
-|**A**|Floating-point|Podepsané šestnáctkovou hodnotu s plovoucí desetinnou čárkou dvojité přesnosti, která má tvar [-] 0 X*h.hhhh*__P±__*dd*, kde *h.hhhh* jsou šestnáctkové soustavě číslice (použití velkých písmen) v mantise a *dd* je jeden nebo více číslic exponentu. Přesnosti určuje počet číslic za čárkou.|
-|**n**|Ukazatel na celé číslo|Počet znaků, které se zatím zapisují úspěšně do datového proudu nebo vyrovnávací paměti. Tato hodnota je uložena v celé číslo, jehož adresa je zadána jako argument. Velikost celé číslo, na které mohou být řízena předponu specifikace velikost argumentu. **n** specifikátor je ve výchozím nastavení zakázané, informace naleznete v tématu poznámky pro důležité zabezpečení.|
-|**p**|Typ ukazatele|Argument se zobrazí jako adresy v šestnáctkové číslice.|
-|**s**|String|Při použití s `printf` funkce, určuje jednobajtové nebo vícebajtové znakové řetězce; při použití s `wprintf` funkce, určí širokoznaký řetězec. Až po první znak null, nebo dokud se zobrazí znaky *přesnost* nebude dosaženo hodnoty.|
-|**S**|String|Při použití s `printf` funguje, určí širokoznaký řetězec; při použití s `wprintf` funkce, určuje jednobajtové nebo vícebajtové znakové řetězce. Až po první znak null, nebo dokud se zobrazí znaky *přesnost* nebude dosaženo hodnoty.|
-|**Z**|`ANSI_STRING` nebo `UNICODE_STRING` struktura|Když adresu [ANSI_STRING](/windows/desktop/api/ntdef/ns-ntdef-_string) nebo [UNICODE_STRING](/windows/win32/api/ntdef/ns-ntdef-_unicode_string) struktura je předán jako argument, zobrazí řetězec obsažený ve vyrovnávací paměti, na které odkazují `Buffer` pole struktury. Použití *velikost* modifikátor předponu **w** k určení `UNICODE_STRING` argument – například `%wZ`. `Length` Pole struktury musí být nastaveno na délku řetězce v bajtech. `MaximumLength` Pole struktury musí být nastavené na délka vyrovnávací paměti v bajtech.<br /><br /> Obvykle **Z** – znak typu se používá jenom v ladění funkcí, které používají specifikace převodu, jako například ovladače `dbgPrint` a `kdPrint`.|
+|**e**|Plovoucí desetinná čárka|Podepsaná hodnota, která má tvar [-]*d. dddd*__e ±__*DD*\[*d*], kde *d* je jedna desítková číslice, *dddd* je jedna nebo více desítkových číslic v závislosti na zadané přesnosti nebo šest ve výchozím nastavení a *DD* d] jsou dvě nebo tři desítkové číslice v závislosti na [formátu výstupu](../c-runtime-library/set-output-format.md) a velikosti exponentu. \[|
+|**E**|Plovoucí desetinná čárka|Stejné jako ve formátu **e** s výjimkou **, že** místo **e** představuje exponent.|
+|**f**|Plovoucí desetinná čárka|Podepsaná hodnota, která má tvar [-]*dddd* __.__ *dddd*, kde *dddd* je jedna nebo více desítkových číslic. Počet číslic před desetinnou čárkou závisí na velikosti čísla a počet číslic po desetinné čárkě závisí na požadované přesnosti nebo šesti ve výchozím nastavení.|
+|**F**|Plovoucí desetinná čárka|Stejné jako ve formátu **f** s tím rozdílem, že nekonečno a NaN výstup je velkými písmeny.|
+|**g**|Plovoucí desetinná čárka|Podepsané hodnoty se zobrazí ve formátu **f** nebo **e** , podle toho, která je pro danou hodnotu a přesnost kompaktnější. Formát **e** se používá pouze v případě, že je exponent hodnoty menší než-4 nebo větší nebo roven argumentu *přesnosti* . Koncové nuly jsou zkráceny a desetinná čárka se zobrazí pouze v případě, že se na ni bude řídit jedna nebo více číslic.|
+|**G**|Plovoucí desetinná čárka|Stejné jako ve formátu **g** , s výjimkou písmene e, představuje exponent (tam, kde je to vhodné).|
+|**a**|Plovoucí desetinná čárka|Podepsaná hexadecimální hodnota s dvojitou přesností a plovoucí desetinnou čárkou, která má tvar [-] 0x*h. hhhh*__p__. hhhh *, kde* *h.* jsou šestnáctkové číslice (s malými písmeny) mantisy a *DD* jsou jedna nebo více číslic pro zmocněn. Přesnost určuje počet číslic za bodem.|
+|**A**|Plovoucí desetinná čárka|Podepsaná hexadecimální hodnota s dvojitou přesností a plovoucí desetinnou čárkou, která má tvar [-] 0X*h. hhhh*__P__. hhhh *, kde* *h.* jsou šestnáctkové číslice (s velkými písmeny) mantisy a *DD* jsou jedna nebo více číslic pro exponent. . Přesnost určuje počet číslic za bodem.|
+|**n**|Ukazatel na celé číslo|Počet znaků, které byly dosud úspěšně zapsány do datového proudu nebo vyrovnávací paměti. Tato hodnota je uložena v celé číslo, jehož adresa je uvedena jako argument. Velikost celého čísla, na které se odkazuje, se dá řídit předponou specifikace velikosti argumentu. Specifikátor **n** je ve výchozím nastavení zakázaný. informace najdete v důležité poznámce zabezpečení.|
+|**p**|Typ ukazatele|Zobrazí argument jako adresu v šestnáctkových číslicích.|
+|**s**|String|Při použití s `printf` funkcemi Určuje jeden bajt nebo vícebajtový řetězec znaků; při použití s `wprintf` funkcemi určuje řetězec s velkým znakem. Znaky jsou zobrazeny až do prvního znaku null nebo do dosažení hodnoty *přesnosti* .|
+|**S**|String|Při použití s `printf` funkcemi určuje řetězec s velkým znakem; při použití s `wprintf` funkcemi určuje jednobajtové nebo dvoubajtové znakové řetězce. Znaky jsou zobrazeny až do prvního znaku null nebo do dosažení hodnoty *přesnosti* .|
+|**Z**|`ANSI_STRING`nebo `UNICODE_STRING` struktura|Když je adresa struktury [ANSI_STRING](/windows/desktop/api/ntdef/ns-ntdef-_string) nebo [UNICODE_STRING](/windows/win32/api/ntdef/ns-ntdef-_unicode_string) předána jako argument, zobrazuje řetězec obsažený ve vyrovnávací paměti, `Buffer` na kterou odkazuje pole struktury. Použijte předponu modifikátoru velikosti **w** `UNICODE_STRING` pro určení argumentu – například. `%wZ` `Length` Pole struktury musí být nastaveno na délku řetězce v bajtech. `MaximumLength` Pole struktury musí být nastavené na délku vyrovnávací paměti (v bajtech).<br /><br /> Obvykle se znak typu **z** používá pouze v ladicích funkcích ovladače, které používají specifikaci převodu, jako `dbgPrint` je například a. `kdPrint`|
 
-Od verze sady Visual Studio 2015, pokud argument, který odpovídá specifikátor převody plovoucí desetinné čárky (**a**, **A**, **e**, **E**, **f**, **F**, **g**, **G**) je nekonečné neomezené, nebo NaN, formátovaný výstup vyhovuje C99 standard. Tato tabulka shrnuje formátovaný výstup:
+Od verze sady Visual Studio 2015, pokud argument, který odpovídá specifikátor převody plovoucí desetinné čárky (**a**, **A**, **e**, **E**, **f**, **F**, **g**, **G**) je nekonečné neomezené, nebo NaN, formátovaný výstup vyhovuje C99 standard. V této tabulce je uveden formátovaný výstup:
 
-|Hodnota|Výstup|
+|Value|Výstup|
 |-----------|------------|
-|Infinity|`inf`|
-|Tichý NaN|`nan`|
-|Signalizace NaN|`nan(snan)`|
-|Neomezené NaN|`nan(ind)`|
+|konečný|`inf`|
+|Tiché NaN|`nan`|
+|Signalizace – NaN|`nan(snan)`|
+|Nekonečný NaN|`nan(ind)`|
 
-Některé z těchto hodnot mohou začínat znakem. Pokud plovoucí desetinné čárky *typ* znak specifikátoru převodu je velké písmeno, pak je výstup formátovaný také velkými písmeny. Například, pokud je specifikátor formátu `%F` místo `%f`, nekonečno je formátován jako `INF` místo `inf`. `scanf` Funkce můžete také analyzovat tyto řetězce, takže se tyto hodnoty zpátečního převodu prostřednictvím `printf` a `scanf` funkce.
+Kterákoli z těchto hodnot může být předponou. Pokud je znak konverze *typu* s plovoucí desetinnou čárkou velké písmeno, výstup je také zformátován velkými písmeny. Například pokud je `%F` specifikátor formátu `%f`namísto, `inf`je nekonečno naformátováno jako `INF` místo. Funkce mohou také analyzovat tyto řetězce, takže tyto hodnoty mohou vytvořit kruhové `printf` odezvy a `scanf` funkce. `scanf`
 
-Před Visual Studio 2015 CRT používá jiný, nestandardní formát pro výstup nekonečno, nekonečno a NaN hodnoty:
+Před Visual Studio 2015 se CRT používal jiný nestandardní formát pro výstup nekonečných, nekonečných a NaN hodnot:
 
-|Hodnota|Výstup|
+|Value|Výstup|
 |-----------|------------|
-|+ nekonečno|`1.#INF` *náhodné číslic*|
-|-nekonečno|`-1.#INF` *náhodné číslic*|
-|Nekonečný (stejné jako tichý NaN)|*číslice* `.#IND` *náhodné číslic*|
-|NaN|*číslice* `.#NAN` *náhodné číslic*|
+|+ nekonečno|`1.#INF`*náhodné číslice*|
+|– nekonečno|`-1.#INF`*náhodné číslice*|
+|Neomezeno (stejné jako tiché NaN)|*číslice* `.#IND` *náhodné číslice*|
+|NaN|*číslice* `.#NAN` *náhodné číslice*|
 
-Některé z těchto může mít předponu znakem a může formátována mírně liší v závislosti na šířku pole a přesnosti, někdy s neobvyklou účinky. Například `printf("%.2f\n", INFINITY)` vytiskne `1.#J` vzhledem k tomu, #INF by "zaokrouhlované" s přesností na 2 číslice.
+Některé z nich mohou být označeny znaménkem a mohou být mírně formátovány v závislosti na šířce a přesnosti pole, někdy u neobvyklých efektů. Například by byl `printf("%.2f\n", INFINITY)` vytištěn `1.#J` , protože #INF by byl "zaokrouhleno" na 2 číslice přesnosti.
 
 > [!NOTE]
-> Pokud argument, který odpovídá `%s` nebo `%S`, nebo `Buffer` pole argumentu, který odpovídá `%Z`, je ukazatel s hodnotou null, se zobrazí "(null).
+> Pokud argument, který `%s` odpovídá nebo `%S`, nebo `Buffer` `%Z`pole argumentu, který odpovídá, je zobrazen ukazatel s hodnotou null (hodnota null).
 
 > [!NOTE]
-> V exponenciální formáty minimální počet číslic exponentu zobrazíte je dvě, tři použití pouze v případě potřeby. S použitím [_set_output_format –](../c-runtime-library/set-output-format.md) funkce, můžete nastavit počet zobrazených na tři z důvodu zpětné kompatibility s kódem napsaným pro Visual Studio 2013 a před číslic.
+> Ve všech exponenciálních formátech je minimální počet číslic exponentu k zobrazení dva a v případě potřeby pouze tři. Pomocí funkce [_set_output_format](../c-runtime-library/set-output-format.md) můžete nastavit počet číslic zobrazených na tři pro zpětnou kompatibilitu s kódem napsaným pro Visual Studio 2013 a před.
 
 > [!IMPORTANT]
-> Vzhledem k tomu, `%n` formát je ze své podstaty nezabezpečené, je ve výchozím nastavení zakázána. Pokud `%n` dochází v řetězci formátu, je vyvolána obslužná rutina neplatného parametru, jak je popsáno v [Parameter Validation](../c-runtime-library/parameter-validation.md). Chcete-li povolit `%n` podporovat, najdete v článku [_set_printf_count_output –](../c-runtime-library/reference/set-printf-count-output.md).
+> Vzhledem k `%n` tomu, že tento formát je z podstaty nezabezpečený, je ve výchozím nastavení zakázán. Pokud `%n` je nalezen ve formátovacím řetězci, je vyvolána obslužná rutina neplatného parametru, jak je popsáno v tématu [ověřování parametru](../c-runtime-library/parameter-validation.md). Pokud chcete `%n` povolit podporu, přečtěte si téma [_set_printf_count_output](../c-runtime-library/reference/set-printf-count-output.md).
 
 <a name="flags"></a>
 
-## <a name="flag-directives"></a>Direktivy příznaku
+## <a name="flag-directives"></a>Direktivy Flag
 
-První volitelné pole ve specifikaci převod obsahuje *příznak direktivy*, nula nebo více znaků, které zadejte zarovnání výstupu a výstup znaménka, prázdné hodnoty, počátečních nul, desetinných míst a interpretace osmičková příznak a šestnáctkových předpon. Specifikace převodu se může vyskytovat více než jedna direktiva příznak a příznak znaky se mohou objevit v libovolném pořadí.
+První volitelné pole ve specifikaci převodu obsahuje direktivy *příznaků*, nula nebo více znaků označení, které určují výstup odůvodnění a řízení výstupů značek, prázdných, počátečních nul, desetinných míst a osmičkových a šestnáctkových předpon. Ve specifikaci převodu se může vyskytovat více než jedna direktiva příznaku a znaky příznaku se mohou zobrazit v libovolném pořadí.
 
-### <a name="flag-characters"></a>Příznak znaků
+### <a name="flag-characters"></a>Znaky příznaku
 
 |Příznak|Význam|Výchozí|
 |----------|-------------|-------------|
-|**-**|Zarovnat vlevo výsledků v rámci dané pole šířky.|Zarovnejte doprava.|
-|**+**|Symbol (+ nebo -) jako předpona výstupní hodnota, pokud se jedná o typ se znaménkem.|Přihlášení se zobrazí pouze pro záporné hodnoty se znaménkem (-).|
-|**0**|Pokud *šířka* má předponu **0**, počáteční nuly jsou přidány, dokud nebude dosaženo minimální šířku. Pokud oba **0** a **-** se zobrazí, **0** je ignorována. Pokud **0** je určená pro celočíselný formát (**můžu**, **u**, **x**, **X**, **o**, **d**) a specifikace přesnosti je také k dispozici – například `%04.d`– **0** se ignoruje. Pokud **0** pro je zadána **a** nebo **A** s plovoucí desetinnou čárkou formátu úvodní nuly se přidá jako předpona k mantisa, po `0x` nebo `0X` předponu.|Bez oddělovačů.|
-|**prázdné** ("")|Pomocí prázdné předpony výstupní hodnota, pokud je podepsaný a kladné. Začátku se ignoruje, pokud obě prázdnou a + příznaky se zobrazí.|Zobrazí se žádné prázdné.|
-|**#**|Při použití s **o**, **x**, nebo **X** formátu, **#** příznak používá 0, 0 x, nebo 0 X, na každém nenulovou předponu výstupní hodnota.|Zobrazí se žádné prázdné.|
-||Pokud se používá s **e**, **E**, **f**, **F**, **a** nebo **A** formát, **#** příznak vynutí výstupní hodnotu tak, aby obsahovala desetinné čárky.|Desetinné čárky se zobrazí jenom v případě, že na něho číslic.|
-||Při použití s **g** nebo **G** formátu, **#** příznak vynutí výstupní hodnotu tak, aby obsahovala desetinné čárky a brání zkrácení koncovými nulami.<br /><br /> Ignoruje při použití s **c**, **d**, **můžu**, **u**, nebo **s**.|Desetinné čárky se zobrazí jenom v případě, že na něho číslic. Koncové nuly jsou zkrácena.|
+|**-**|Vlevo zarovná výsledek v rámci dané šířky pole.|Zarovnat doprava.|
+|**+**|Použijte znaménko (+ nebo-) k označení výstupní hodnoty, pokud se jedná o typ se znaménkem.|Znaménko se zobrazí pouze pro záporné hodnoty se znaménkem (-).|
+|**0**|Pokud je *Šířka* předpona **0**, jsou přidány počáteční nuly, dokud není dosaženo minimální šířky. Pokud oba **0** a **-** se zobrazí, **0** je ignorována. Je-li **hodnota 0** zadána pro celočíselný formát (**i**, **u**, **x**, **x**, **o**, **d**) a specifikace přesnosti, například, `%04.d`je **hodnota 0** ignorována. Pokud **0** pro je zadána **a** nebo **A** s plovoucí desetinnou čárkou formátu úvodní nuly se přidá jako předpona k mantisa, po `0x` nebo `0X` předponu.|Bez odsazení.|
+|**prázdné** (' ')|Použijte prázdnou pro vytvoření předpony výstupní hodnoty, pokud je podepsaná a kladná. Prázdné pole se ignoruje, pokud se objeví prázdné a + příznaky.|Nezobrazí se žádné prázdné znaky.|
+|**#**|Pokud se používá s formátem **o**, **x**nebo **#** **x** , příznak používá 0, 0x nebo 0x pro předponu libovolné nenulové výstupní hodnoty.|Nezobrazí se žádné prázdné znaky.|
+||Pokud se používá s formátem **e**, **e**, **f**, **f**, **a**nebo, **#** příznak vynutí, aby výstupní hodnota obsahovala desetinnou čárku.|Desetinná čárka se zobrazí pouze v případě, že následují číslice.|
+||Pokud se používá ve **#** formátu **g** nebo **g** , příznak vynutí, aby výstupní hodnota obsahovala desetinnou čárku a zabránila zkrácení koncových nul.<br /><br /> Ignoruje se, pokud se používá v jazyce **c**, **d**, **i**, **u**nebo **s**.|Desetinná čárka se zobrazí pouze v případě, že následují číslice. Koncové nuly jsou zkráceny.|
 
 <a name="width"></a>
 
 ## <a name="width-specification"></a>Specifikace šířky
 
-Ve specifikaci převodu, zobrazí se pole pro specifikaci šířky volitelné po všech *příznaky* znaků. *Šířka* argument je záporná desítkové celé číslo, která určuje minimální počet znaků, které jsou výstupem. Pokud počet znaků v výstupní hodnota je menší než nastavená šířka, prázdné hodnoty se přidají do nalevo nebo napravo od hodnoty – v závislosti na tom, zda příznak zarovnání doleva ( **-** ) je zadán – dokud minimum bylo dosaženo šířku. Pokud *šířka* předchází 0, počáteční nuly jsou přidány do celé číslo nebo číslo s plovoucí desetinnou čárkou převody až do dosažení minimální šířku, s výjimkou případu, kdy převod na nekonečno nebo na NaN.
+Ve specifikaci převodu se pole volitelná šířka zobrazí za znaky *příznaků* . Argument *Width* je nezáporné celé číslo bez znaménka, které určuje minimální počet znaků, které jsou výstupem. Pokud je počet znaků ve výstupní hodnotě menší než zadaná šířka, prázdné znaky jsou přidány vlevo nebo vpravo od hodnot – v závislosti na tom, zda je zadána příznak zarovnání vlevo ( **-** ), dokud není dosaženo minimální šířky. Pokud je *Šířka* Předpona 0, jsou počáteční nuly přidány do celočíselného nebo plovoucího převodu, dokud není dosaženo minimální šířky, s výjimkou, kdy je převod na nekonečno nebo NaN.
 
-Specifikace šířky nikdy způsobí, že hodnota má být zkráceno. Pokud počet znaků ve výstupní hodnota je větší než nastavená šířka, nebo pokud *šířka* není zadaný, jsou všechny znaky hodnoty výstupu se vztahuje *přesnost* specifikace.
+Specifikace šířky nikdy nezpůsobí zkrácení hodnoty. Je-li počet znaků ve výstupní hodnotě větší, než je zadaná šířka, nebo pokud není zadána *Šířka* , jsou všechny znaky hodnoty výstupem v souladu se specifikací *přesnosti* .
 
-Pokud specifikace šířky je hvězdička (`*`), `int` poskytuje hodnotu argumentu v seznam argumentů. *Šířka* argumentu musí předcházet hodnotě, která se chystáte formátovat v seznamu argumentů tak, jak je znázorněno v tomto příkladu:
+Pokud je specifikace šířky hvězdička (`*`) `int` , argument ze seznamu argumentů dodá hodnotu. Argument *Width* musí předcházet hodnotě, která je naformátována v seznamu argumentů, jak je znázorněno v následujícím příkladu:
 
-`printf("%0*f", 5, 3);  /* 00003 is output */`
+`printf("%0*d", 5, 3);  /* 00003 is output */`
 
-Chybějící nebo malé *šířka* hodnotu ve specifikaci převod nezpůsobí zkrácení výstupní hodnoty. Pokud je výsledkem převodu širší než *šířka* hodnotu, rozbalí pole tak, aby obsahovala výsledku převodu.
+Chybějící nebo malá hodnota *šířky* ve specifikaci převodu nezpůsobí zkrácení výstupní hodnoty. Pokud je výsledek převodu širší než hodnota *Width* , pole se rozšíří, aby obsahovalo výsledek převodu.
 
 <a name="precision"></a>
 
 ## <a name="precision-specification"></a>Specifikace přesnosti
 
-Ve specifikaci převod třetí volitelné pole je specifikace přesnosti. Zahrnuje tečka (.), za nímž následuje záporná desítkové celé číslo určující, v závislosti na typu převodu řetězce znaků, počet desetinných míst nebo počet platných číslic pro výstup.
+Ve specifikaci převodu je třetí volitelné pole specifikací přesnosti. Skládá se z tečky (.) následovaný nezáporným desítkovým číslem, které v závislosti na typu převodu určuje počet řetězcových znaků, počet desetinných míst nebo počet platných číslic, které mají být výstupem.
 
-Na rozdíl od specifikace šířky může způsobit specifikace přesnosti buď zkrácení výstupní hodnotu nebo zaokrouhlení s plovoucí desetinnou čárkou. Pokud *přesnost* je zadán jako 0 a hodnota má být převeden je 0, výsledek je žádný výstup znaků, jak je znázorněno v tomto příkladu:
+Na rozdíl od specifikace šířky může specifikace přesnosti způsobit buď zkracování výstupní hodnoty, nebo zaokrouhlení hodnoty s plovoucí desetinnou čárkou. Pokud je *přesnost* zadána jako 0 a hodnota, která má být převedena, je 0, výsledek není výstupní znaky, jak je znázorněno v následujícím příkladu:
 
 `printf( "%.0d", 0 );      /* No characters output */`
 
-Pokud je specifikace přesnosti hvězdičku (\*), `int` poskytuje hodnotu argumentu v seznam argumentů. V seznamu argumentů tak *přesnost* argumentu musí předcházet hodnotě, která se chystáte formátovat, jak je znázorněno v tomto příkladu:
+Pokud je specifikace přesnosti hvězdičkou (\*) `int` , argument ze seznamu argumentů dodá hodnotu. V seznamu argumentů musí argument *přesnost* předcházet hodnotě, která je formátována, jak je znázorněno v následujícím příkladu:
 
 `printf( "%.*f", 3, 3.14159265 );  /* 3.142 output */`
 
-*Typ* znaků určuje buď výklad *přesnost* nebo přesnost při *přesnost* je vynechán, jak je znázorněno v následující tabulce.
+Znak *typu* Určuje buď výklad *přesnosti* , nebo výchozí přesnost, pokud je vynechána *přesnost* , jak je znázorněno v následující tabulce.
 
-### <a name="how-precision-values-affect-type"></a>Jak hodnoty přesnosti ovlivňují typ
+### <a name="how-precision-values-affect-type"></a>Vliv hodnot přesnosti na typ
 
 |type|Význam|Výchozí|
 |----------|-------------|-------------|
-|**a**, **A**|Přesnosti určuje počet číslic za čárkou.|Přesnost je 13. Pokud přesnost je 0, pokud není, vytiskne se žádné desetinné čárky **#** příznak se používá.|
-|**c**, **C**|Přesnost nemá žádný vliv.|Znak je vytištěna.|
-|**d**, **i**, **o**, **u**, **x**, **X**|Přesnost určuje minimální počet číslic, které se mají vytisknout. Pokud počet číslic v argumentu je menší než *přesnost*, výstupní hodnota je, aby bylo vytvořeno na levé straně nulami. Hodnota není zkrácena, když překročí počet číslic *přesnost*.|Přesnost je 1.|
-|**e**, **E**|Přesnosti určuje počet číslic, které se mají vytisknout za desetinnou čárkou. Poslední číslice tištěné zaokrouhleno.|Přesnost je 6. Pokud *přesnost* je 0 nebo tečku (.) se zobrazí bez čísla následující, vytiskne se žádné desetinné čárky.|
-|**f**, **F**|Hodnota přesnosti určuje počet číslic za desetinnou čárkou. Pokud se zobrazí desetinné čárky, dříve, než se zobrazí alespoň jednu číslici. Hodnota se zaokrouhlí na odpovídající počet číslic.|Přesnost je 6. Pokud *přesnost* je 0, nebo pokud se bez čísla následující tečka (.), vytiskne se žádné desetinné čárky.|
-|**g**, **G**|Přesnost určuje maximální počet nejvýznamnějších číslic vytisknout.|Jsou vypsány šest nejvýznamnějších číslic a všechny koncové nuly jsou zkrácena.|
-|**s**, **S**|Přesnost určuje maximální počet znaků, které se mají vytisknout. Znaky překračuje *přesnost* nejsou zobrazeny.|Znaky jsou zobrazeny, dokud je zjištěn znak null.|
+|**a**, **A**|Přesnost určuje počet číslic za bodem.|Výchozí přesnost je 13. Pokud je přesnost 0, není vytištěna desetinná čárka **#** , pokud se nepoužije příznak.|
+|**c**, **C**|Přesnost nemá žádný vliv.|Znak je vytištěn.|
+|**d**, **i**, **o**, **u**, **x**, **X**|Přesnost určuje minimální počet číslic, které mají být vytištěny. Je-li počet číslic v argumentu menší než *přesnost*, je výstupní hodnota odsazena vlevo s nulami. Hodnota není zkrácena v případě, že počet číslic překračuje *přesnost*.|Výchozí přesnost je 1.|
+|**e**, **E**|Přesnost určuje počet číslic, které mají být vytištěny po desetinné místo. Poslední vytištěná číslice je zaokrouhlena.|Výchozí přesnost je 6. Pokud je *přesnost* 0 nebo tečka (.) se zobrazí bez čísla za ní, není vytištěna žádná desetinná čárka.|
+|**f**, **F**|Hodnota přesnosti určuje počet číslic za desetinnou čárkou. Pokud se zobrazí desetinná čárka, před ní se zobrazí alespoň jedna číslice. Hodnota je zaokrouhlena na příslušný počet číslic.|Výchozí přesnost je 6. Pokud je *přesnost* 0, nebo pokud se tečka (.) objeví bez čísla za ní, není vytištěna žádná desetinná čárka.|
+|**g**, **G**|Přesnost určuje maximální počet platných číslic, které se vytisknou.|Vytiskne se šest platných číslic a všechny koncové nuly se zkrátí.|
+|**s**, **S**|Přesnost určuje maximální počet znaků, které mají být vytištěny. Znaky přesahující *přesnost* nejsou vytištěny.|Znaky jsou vytištěny, dokud není zjištěn znak null.|
 
 <a name="size"></a>
 
-## <a name="argument-size-specification"></a>Argument specifikace velikosti
+## <a name="argument-size-specification"></a>Specifikace velikosti argumentu
 
-Ve specifikaci převod *velikost* je pole modifikátor délky argumentu pro *typ* specifikátoru převodu. *Velikost* polí předpony, jež mají *typ* pole –**hh**, **h**, **j**, **l** (malé písmeno L), **L**, **ll**, **t**, **w**, **z**, **můžu**(velká písmena i) **I32**, a **I64**– určují "velikost" odpovídajícího argumenty – long nebo short, 32bitovou verzi nebo 64-bit, jednobajtový znak nebo široký znak – v závislosti na tom specifikátoru převodu, který mění. Tyto předpony velikosti se používají s *typ* znaků `printf` a `wprintf` rodinách funkcí pro určení velikosti argument, jak je znázorněno v následující tabulce. *Velikost* pole je nepovinné pro některé typy argumentů. Když se nezadá žádná předpona velikosti, formátovací modul používá celočíselné argumenty – například podepsaná nebo nepodepsaná `char`, `short`, `int`, `long`a výčtové typy – jako 32-bit `int` typů, a `float`, `double`, a `long double` spotřebovávají argumentů s plovoucí desetinnou čárkou jako 64bitové `double` typy. To odpovídá výchozí argument propagační akce pravidla pro seznamy argumentů s proměnnou délkou. Další informace o podpoře argument, najdete v článku výpustky a výchozí argumenty v [výrazy přípony](../cpp/postfix-expressions.md). V 32bitových a 64bitových systémech, musí obsahovat specifikace převodu 64bitové celé číslo argumentu Předpona velikosti **ll** nebo **I64**. V opačném případě není definováno chování formátovacího modulu.
+Ve specifikaci převodu pole *Size* je modifikátor délky argumentu pro specifikátor převodu *typu* . Pole *Velikost* předpony na pole *typ* –**HH**, **h**, **j**, **l** (malá l), **l**, **ll**, **t**, **w**, **z**, **I** (velká písmena i), **i32**a **I64** – Určete "velikost" odpovídajícího argumentu – dlouhý nebo krátký, 32 nebo 64 bajtový znak nebo velký znak – v závislosti na specifikátoru převodu, který upravují. Tyto předpony velikosti se používají s znaky *typu* v rámci `printf` řady `wprintf` funkcí a k určení interpretace velikostí argumentů, jak je znázorněno v následující tabulce. Pole *Size* je pro některé typy argumentů volitelné. Pokud není zadána žádná předpona velikosti, formátovací modul spotřebovává celočíselné argumenty, například signed nebo unsigned `char`, `short`, `int` `long`,, a výčtové typy, jako 32 `int` typy a `float`, a argumenty s plovoucí desetinnou čárkou jsou spotřebovány jako typy 64-bit `double`. `double` `long double` Toto chování odpovídá výchozím pravidlům pro povýšení argumentů pro seznamy argumentů proměnných. Další informace o povýšení argumentů naleznete v tématu elipsy a výchozí argumenty ve [výrazech přípony](../cpp/postfix-expressions.md). V systémech 32 a 64 musí specifikace převodu argumentu celočíselné hodnoty 64 obsahovat předponu Size s hodnotou **ll** nebo **I64**. V opačném případě chování formátovacího modulu není definováno.
 
-Některé typy v 32bitové a 64bitové kódu jsou různých velikostí. Například `size_t` je 32 bitů dlouhý v kódu zkompilovaném pro x86 a 64 bitů v kódu zkompilovaném pro x64. K vytvoření formátování kódu pro více platforem pro typy proměnné šířky, můžete použít modifikátor velikost argumentu proměnné šířky. Můžete také použít modifikátor velikost 64-bit argument a explicitně podporovat typ argumentu proměnné šířky na 64 bitů. Specifické pro Microsoft **můžu** (velkými písmeny psané i) zpracovává modifikátor velikost argumentu proměnné šířky celočíselné argumenty, ale doporučujeme konkrétní typ **j**, **t**a **z** modifikátory pro přenositelnost.
+Některé typy jsou různé velikosti v 32 a 64 bitového kódu. Například `size_t` je 32 bitů dlouhý v kódu kompilovaném pro x86 a 64 bitů v kódu zkompilovaném pro x64. Chcete-li vytvořit kód pro formátování Platform-nezávislá pro typy s proměnlivou šířkou, můžete použít modifikátor velikosti argumentu proměnné šířky. Alternativně použijte modifikátor velikosti 64 bitového argumentu a explicitně zvyšte úroveň typu argumentu s proměnnou šířkou na 64 bitů. Modifikátor velikosti argumentu specifického pro Microsoft **i** (velká i malá) zpracovává celočíselné argumenty proměnné šířky, ale pro přenositelnost doporučujeme použít Modifikátory specifické pro typ **j**, **t**a **z** .
 
-### <a name="size-prefixes-for-printf-and-wprintf-format-type-specifiers"></a>Předpony velikosti pro printf a wprintf specifikátory formátu
+### <a name="size-prefixes-for-printf-and-wprintf-format-type-specifiers"></a>Předpony velikosti pro specifikátory typu printf a wprintf formátu
 
-|Chcete-li určit|Použijte předponu|Pomocí specifikátoru typu|
+|Zadání|Použít předponu|Se specifikátorem typu|
 |----------------|----------------|-------------------------|
-|`char`<br />`unsigned char`|**hh**|**d**, **můžu**, **o**, **u**, **x**, nebo **X**|
-|`short int`<br />`short unsigned int`|**h**|**d**, **můžu**, **o**, **u**, **x**, nebo **X**|
-|`__int32`<br />`unsigned __int32`|**I32**|**d**, **můžu**, **o**, **u**, **x**, nebo **X**|
-|`__int64`<br />`unsigned __int64`|**I64**|**d**, **můžu**, **o**, **u**, **x**, nebo **X**|
-|`intmax_t`<br />`uintmax_t`|**j** nebo **I64**|**d**, **můžu**, **o**, **u**, **x**, nebo **X**|
-|`long double`|**l** (malé písmeno L) nebo **L**|**a**, **A**, **e**, **E**, **f**, **F**, **g**, nebo **G**|
-|`long int`<br />`long unsigned int`|**l** (malé písmeno L)|**d**, **můžu**, **o**, **u**, **x**, nebo **X**|
-|`long long int`<br />`unsigned long long int`|**všechny** (malá písmena vše)|**d**, **můžu**, **o**, **u**, **x**, nebo **X**|
-|`ptrdiff_t`|**t** nebo **můžu** (i velká)|**d**, **můžu**, **o**, **u**, **x**, nebo **X**|
-|`size_t`|**z** nebo **můžu** (i velká)|**d**, **můžu**, **o**, **u**, **x**, nebo **X**|
-|Jednobajtový znak|**h**|**c** nebo **C**|
-|široký znak|**l** (malé písmeno L) nebo **w**|**c** nebo **C**|
-|Jednobajtové znakové řetězce|**h**|**s**, **S**, nebo **Z**|
-|Řetězec širokých znaků|**l** (malé písmeno L) nebo **w**|**s**, **S**, nebo **Z**|
+|`char`<br />`unsigned char`|**hh**|**d**, **i**, **o**, **u**, **x**nebo **x**|
+|`short int`<br />`short unsigned int`|**h**|**d**, **i**, **o**, **u**, **x**nebo **x**|
+|`__int32`<br />`unsigned __int32`|**I32**|**d**, **i**, **o**, **u**, **x**nebo **x**|
+|`__int64`<br />`unsigned __int64`|**I64**|**d**, **i**, **o**, **u**, **x**nebo **x**|
+|`intmax_t`<br />`uintmax_t`|**j** nebo **I64**|**d**, **i**, **o**, **u**, **x**nebo **x**|
+|`long double`|**l** (malé písmeno l) nebo **l**|**a**, **A**, **e**, **E**, **f**, **F**, **g**, nebo **G**|
+|`long int`<br />`long unsigned int`|**l** (malé písmeno l)|**d**, **i**, **o**, **u**, **x**nebo **x**|
+|`long long int`<br />`unsigned long long int`|**vše** (malé písmeno ll)|**d**, **i**, **o**, **u**, **x**nebo **x**|
+|`ptrdiff_t`|**t** nebo **I** (velká písmena I)|**d**, **i**, **o**, **u**, **x**nebo **x**|
+|`size_t`|**z** nebo **I** (velká písmena i)|**d**, **i**, **o**, **u**, **x**nebo **x**|
+|Jednobajtové znak|**h**|**c** nebo **c**|
+|Velký znak|**l** (malé písmeno l) nebo **w**|**c** nebo **c**|
+|Jednobajtové znakové řetězce|**h**|**s**, **s**nebo **Z**|
+|Řetězec s velkým znakem|**l** (malé písmeno l) nebo **w**|**s**, **s**nebo **Z**|
 
-`ptrdiff_t` a `size_t` typy jsou `__int32` nebo `unsigned __int32` na 32bitových platformách a `__int64` nebo `unsigned __int64` na 64bitových platformách. **můžu** (velká písmena i) **j**, **t**, a **z** velikosti předponami trvat šířku správné argument pro platformu.
+`ptrdiff_t` Typy a `size_t` jsou nebona`unsigned __int32` 32 a`__int64` na 64`unsigned __int64`platformách. `__int32` Předpony velikost **i** (velká i), **j**, **t**a **z** mají pro platformu správnou šířku argumentu.
 
-V jazyce Visual C++ i když `long double` je odlišný typ se má stejnou vnitřní reprezentaci jako `double`.
+V jazyce C++Visual, `long double` i když je odlišný typ, má stejnou vnitřní reprezentaci jako `double`.
 
-**Hc** nebo **hybridní připojení** specifikátor typu je synonymní s **c** v `printf` funkce a s **C** v `wprintf` funkce. **Lc**, **lC**, **RC** nebo **RC** specifikátor typu je synonymní s **C** v `printf` Funkce a s **c** v `wprintf` funkce. **Hs** nebo **hS** specifikátor typu je synonymní s **s** v `printf` funkce a s **S** v `wprintf` funkce. **Ls**, **lS**, **ws** nebo **wS** specifikátor typu je synonymní s **S** v `printf` Funkce a s **s** v `wprintf` funkce.
+Specifikátor **typu HC** nebo **HC** je synonymum s **c** `printf` ve funkcích a s **c** v `wprintf` Functions. Specifikátor typu **LC**, **LC**, **WC**nebo **WC** je synonymum s **c** ve `printf` funkcích a s **c** v `wprintf` Functions. Specifikátor typu **HS** nebo **HS** je synonymum **s ve** `printf` funkcích a s s v `wprintf` funkce. Specifikátor **typu ls**, **ls**, **WS** nebo **WS** je synonymum s **s** `printf` ve funkcích a s s **v** `wprintf` funkce.
 
 > [!NOTE]
-> **Specifické pro Microsoft** **můžu** (velká písmena i) **I32**, **I64**, a **w** předpony modifikující velikost argumentu jsou společnosti Microsoft rozšíření a jsou není kompatibilní s ISO C. **h** předpony při použití s daty typu `char` a **l** (malé písmeno L) předpony při použití s daty typu `double` jsou rozšíření společnosti Microsoft.
+> **Specifické pro společnost Microsoft** **I** (velká písmena i), **i32**, **I64**a **w** argumenty modifikátoru velikosti ARGUMENTŮ jsou rozšíření Microsoft a nejsou kompatibilní s ISO C. Předpona **h** , pokud se používá s daty typu `char` a předponou **l** (v malých l), pokud se používá s daty typu `double` jsou rozšíření společnosti Microsoft.
 
 ## <a name="see-also"></a>Viz také:
 

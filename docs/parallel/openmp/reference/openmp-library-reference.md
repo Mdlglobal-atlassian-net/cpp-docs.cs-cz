@@ -1,39 +1,39 @@
 ---
 title: OpenMP – Referenční dokumentace knihoven
-ms.date: 03/20/2019
+ms.date: 07/30/2019
 ms.assetid: a25188c6-edde-43d0-84b5-780e797b08fc
-ms.openlocfilehash: 6f4bbeca54bff1fc44a3576362edca9c30926d5a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c78c2677741714ab48d49a4443ad753369ec4500
+ms.sourcegitcommit: 725e86dabe2901175ecc63261c3bf05802dddff4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62362514"
+ms.lasthandoff: 07/31/2019
+ms.locfileid: "68682596"
 ---
 # <a name="openmp-library-reference"></a>OpenMP – Referenční dokumentace knihoven
 
-Obsahuje odkazy na objektů, které používá v rozhraní API OpenMP.
+Obsahuje odkazy na konstrukce používané v rozhraní OpenMP API.
 
-Implementace jazyka Visual C++, OpenMP úrovně Standard zahrnuje následující konstrukce.
+Visual C++ implementace standardu OpenMP zahrnuje následující konstrukce.
 
 |Konstrukce|Popis|
 |---------------|-----------------|
-|[Direktivy](openmp-directives.md)|Obsahuje odkazy na direktivy použité v rozhraní API OpenMP.|
-|[Klauzule](openmp-directives.md)|Obsahuje odkazy na použité v rozhraní API OpenMP – klauzule.|
-|[Funkce](openmp-functions.md)|Obsahuje odkazy na funkcí používaných v rozhraní API OpenMP.|
-|[Proměnné prostředí](openmp-environment-variables.md)|Obsahuje odkazy na proměnné prostředí použít v rozhraní API OpenMP.|
+|[Direktivy](openmp-directives.md)|Obsahuje odkazy na direktivy používané v rozhraní OpenMP API.|
+|[Klauzule](openmp-clauses.md)|Obsahuje odkazy na klauzule používané v rozhraní OpenMP API.|
+|[Funkce](openmp-functions.md)|Obsahuje odkazy na funkce používané v rozhraní OpenMP API.|
+|[Proměnné prostředí](openmp-environment-variables.md)|Obsahuje odkazy na proměnné prostředí používané v rozhraní OpenMP API.|
 
-Vizuál C++ OpenMP – knihovny run-time funkcí je obsažena v následujících knihoven.
+Funkce běhové knihovny jazyka Visual C++ OpenMP jsou obsaženy v následujících knihovnách.
 
-|OpenMP – knihovny run-time|Vlastnosti|
+|Knihovna run-time OpenMP|Svých|
 |------------------------------|---------------------|
-|VCOMP. LIB|Odkaz s více vlákny, dynamické (knihovnu importu VCOMP. LIB).|
-|VCOMPD.LIB|Odkaz s více vlákny, dynamické (knihovnu importu VCOMPD. VÍKO) (ladění)|
+|VCOMP. KNIHOVNA|Multithreading, dynamické propojení (import knihovny pro VCOMP. LIB).|
+|VCOMPD.LIB|Multithreading, dynamické propojení (import knihovny pro VCOMPD. VÍKA) (ladění)|
 
-Pokud _DEBUG je definována v kompilaci a `#include omp.h` je ve zdrojovém kódu, VCOMPD. Lib – bude výchozí lib, v opačném případě VCOMP. LIB se použije.
+Pokud je v kompilaci definováno _DEBUG a pokud `#include omp.h` je ve zdrojovém kódu, VCOMPD. LIB bude výchozí lib, jinak VCOMP. Použije se LIB.
 
-Můžete použít [: / NODEFAULTLIB (ignorování knihoven)](../../../build/reference/nodefaultlib-ignore-libraries.md) odebrat výchozí lib a explicitní propojení s lib podle vašeho výběru.
+Můžete použít [/NODEFAULTLIB (Ignorovat knihovny)](../../../build/reference/nodefaultlib-ignore-libraries.md) k odebrání výchozí knihovny LIB a explicitní propojení s knihovnou dle vašeho výběru.
 
-OpenMP – knihovny DLL v adresáři distribuovatelné součásti Visual C++ a potřebujete distribuovat s aplikací, které používají OpenMP.
+Knihovny DLL OpenMP jsou ve Visual C++ Redistributable adresáři a je nutné je distribuovat s aplikacemi, které používají OpenMP.
 
 ## <a name="see-also"></a>Viz také:
 

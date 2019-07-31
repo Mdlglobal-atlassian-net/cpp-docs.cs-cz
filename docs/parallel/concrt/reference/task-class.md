@@ -1,6 +1,6 @@
 ---
 title: task – třída (Concurrency Runtime)
-ms.date: 11/04/2016
+ms.date: 07/30/2019
 f1_keywords:
 - task
 - PPLTASKS/concurrency::task
@@ -14,74 +14,68 @@ f1_keywords:
 helpviewer_keywords:
 - task class
 ms.assetid: cdc3a8c0-5cbe-45a0-b5d5-e9f81d94df1a
-ms.openlocfilehash: 99676ac0fff9584cd8453562f8918f6cadd66666
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e0f876b3c0971e70763f36622fb72a3dea671461
+ms.sourcegitcommit: 725e86dabe2901175ecc63261c3bf05802dddff4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62385203"
+ms.lasthandoff: 07/31/2019
+ms.locfileid: "68682522"
 ---
 # <a name="task-class-concurrency-runtime"></a>task – třída (Concurrency Runtime)
 
-Knihovna paralelních vzorů (PPL) `task` třídy. A `task` objekt představuje práci, kterou lze provádět asynchronně a současně další úkoly a paralelní práci vytvořeno paralelní algoritmy v modulu Runtime souběžnosti. Vygeneruje výsledek typu `_ResultType` při úspěšném dokončení. Úkoly typu `task<void>` nevyrábějí žádný výsledek. Úkol lze počkat a zrušit jej nezávisle na jiných úkolech. Je možné také skládání s ostatními úlohami pokračování ( `then`) a spojení ( `when_all`) a možnost výběru ( `when_any`) vzory.
+Třída knihovny PPL (Parallel Patterns `task` Library). `task` Objekt představuje práci, kterou lze provádět asynchronně a souběžně s jinými úkoly a paralelní práci vytvořenou pomocí paralelních algoritmů v Concurrency Runtime. Vytvoří výsledek typu `_ResultType` po úspěšném dokončení. Úkoly typu `task<void>` nevyvolávají žádný výsledek. Úkol může čekat a zrušit nezávisle na jiných úkolech. Může se také skládat s dalšími úlohami pomocí pokračování ( `then`) a vzorů spojení ( `when_all`) a volby ( `when_any`). Když je objekt úlohy přiřazen nové proměnné, chování je takové `std::shared_ptr`; jinými slovy, oba objekty reprezentují stejnou základní úlohu.
 
 ## <a name="syntax"></a>Syntaxe
 
 ```
-template <typename T>
-class task;
-
 template <>
 class task<void>;
 
-template<typename _ReturnType>
+template<typename _ResultType>
 class task;
 ```
 
 #### <a name="parameters"></a>Parametry
 
-*T*<br/>
-Typ objektu úlohy.
-
-*_ReturnType*<br/>
-Typ výsledku tohoto úkolu.
+*_ResultType*<br/>
+Typ výsledku, který úkol vytvoří. 
 
 ## <a name="members"></a>Členové
 
-### <a name="public-typedefs"></a>Veřejné definice TypeDef
+### <a name="public-typedefs"></a>Veřejné definice typedef
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
-|`result_type`|Typ výsledku objekt této třídy vytváří.|
+|`result_type`|Typ výsledku, který objekt této třídy vytvoří.|
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
-|[Úloha](#ctor)|Přetíženo. Vytvoří `task` objektu.|
+|[hybn](#ctor)|Přetíženo. `task` Vytvoří objekt.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
-|[get](#get)|Přetíženo. Vrátí výsledek tohoto úkolu. Pokud není úloha v terminálu stavu, volání `get` bude čekat na dokončení úlohy. Tato metoda nevrací hodnotu při volání na úkol `result_type` z `void`.|
-|[is_apartment_aware](#is_apartment_aware)|Určuje, zda úkol rozbalí Windows Runtime `IAsyncInfo` rozhraní nebo je potomkem takového úkolu.|
-|[is_done](#is_done)|Určuje, pokud je úloha dokončena.|
-|[scheduler](#scheduler)|Vrátí Plánovač pro tento úkol|
-|[Potom](#then)|Přetíženo. Přidá úlohu pokračování k tomuto úkolu.|
-|[Počkej](#wait)|Čeká se na tento úkol dosáhne konečného stavu. Je možné, `wait` k provedla úlohu jako vloženou, pokud jsou splněny všechny závislosti úlohy, a to není již vyzvednuty pro provedení pracovníkem na pozadí.|
+|[get](#get)|Přetíženo. Vrátí výsledek, který vytvořil tento úkol. Pokud úloha není v terminálu, `get` bude volání čekat na dokončení úlohy. Tato metoda nevrací hodnotu, pokud je volána na úkolu s `result_type`. `void`|
+|[is_apartment_aware](#is_apartment_aware)|Určuje, zda úloha rozbalí prostředí Windows Runtime `IAsyncInfo` rozhraní nebo je od takového úkolu popotomkem.|
+|[is_done](#is_done)|Určuje, zda je úloha dokončena.|
+|[scheduler](#scheduler)|Vrátí Plánovač pro tuto úlohu.|
+|[Stisknutím](#then)|Přetíženo. Přidá úlohu pokračování do této úlohy.|
+|[Počkej](#wait)|Počká, až tento úkol dorazí na stav terminálu. Je možné `wait` spustit vloženou úlohu, pokud jsou splněné všechny závislosti úkolů a ještě nebyly vyzvednuty pro spuštění pracovníkem na pozadí.|
 
 ### <a name="public-operators"></a>Veřejné operátory
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
-|[operator!=](#operator_neq)|Přetíženo. Určuje, zda dva `task` objekty představují různé interní úlohy.|
-|[operátor =](#operator_eq)|Přetíženo. Nahradí obsah jednoho `task` objekt s jiným.|
-|[operator==](#operator_eq_eq)|Přetíženo. Určuje, zda dva `task` objekty představují stejnou interní úlohu.|
+|[operator!=](#operator_neq)|Přetíženo. Určuje, zda `task` dva objekty reprezentují různé interní úlohy.|
+|[operátor =](#operator_eq)|Přetíženo. Nahradí obsah jednoho `task` objektu jiným objektem.|
+|[operator==](#operator_eq_eq)|Přetíženo. Určuje, zda `task` dva objekty reprezentují stejnou interní úlohu.|
 
 ## <a name="remarks"></a>Poznámky
 
-Další informace najdete v tématu [paralelismus](../../../parallel/concrt/task-parallelism-concurrency-runtime.md).
+Další informace najdete v tématu [Task paralelismus](../../../parallel/concrt/task-parallelism-concurrency-runtime.md).
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
@@ -89,34 +83,34 @@ Další informace najdete v tématu [paralelismus](../../../parallel/concrt/task
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** ppltasks.h
+**Záhlaví:** ppltasks. h
 
-**Namespace:** souběžnosti
+**Obor názvů:** souběžnost
 
-##  <a name="get"></a> získat
+##  <a name="get"></a>Čtěte
 
-Vrátí výsledek tohoto úkolu. Pokud není úloha v terminálu stavu, volání `get` bude čekat na dokončení úlohy. Tato metoda nevrací hodnotu při volání na úkol `result_type` z `void`.
+Vrátí výsledek, který vytvořil tento úkol. Pokud úloha není v terminálu, `get` bude volání čekat na dokončení úlohy. Tato metoda nevrací hodnotu, pokud je volána na úkolu s `result_type`. `void`
 
 ```
-_ReturnType get() const;
+_ResultType get() const;
 
 void get() const;
 ```
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Výsledek úkolu.
+Výsledek úlohy
 
 ### <a name="remarks"></a>Poznámky
 
-Pokud dojde ke zrušení úlohy, volání `get` vyvolá výjimku [task_canceled](task-canceled-class.md) výjimky. Pokud úloha zjistila jinou výjimku nebo byla výjimka rozšířena z předchozí úlohy, volání `get` vyvolá tuto výjimku.
+Pokud je úloha zrušena, volání metody `get` vyvolá výjimku [task_canceled](task-canceled-class.md) . V případě, že úloha zjistila jinou výjimku nebo k ní byla výjimka rozšířena z předchozí úlohy, volání `get` vyvolá tuto výjimku.
 
 > [!IMPORTANT]
->  V aplikaci pro univerzální platformu Windows (UPW), nevolejte [Concurrency::Task:: wait](#wait) nebo `get` ( `wait` volání `get`) v kódu, který běží na vlákně uživatelského rozhraní. V opačném případě modul runtime vyvolá [concurrency::invalid_operation](invalid-operation-class.md) vzhledem k tomu, že tyto metody blokují aktuální vlákno a může způsobit, že aplikace přestane reagovat. Můžete však volat `get` metody pro získání výsledku předchozího úkolu v pokračování založeném na úkolech, protože výsledek je ihned k dispozici.
+>  V aplikaci Univerzální platforma Windows (UWP) Nevolejte metodu [Concurrency:: task:: wait](#wait) nebo `get` ( `wait` Calling `get`) v kódu, který běží ve vlákně uživatelského rozhraní. V opačném případě modul runtime vyvolá [Concurrency:: invalid_operation](invalid-operation-class.md) , protože tyto metody blokují aktuální vlákno a může způsobit, že aplikace přestane reagovat. Nicméně můžete zavolat `get` metodu pro přijetí výsledku předchozí úlohy v pokračování založeném na úkolech, protože výsledek je okamžitě k dispozici.
 
-##  <a name="is_apartment_aware"></a> is_apartment_aware
+##  <a name="is_apartment_aware"></a>is_apartment_aware
 
-Určuje, zda úkol rozbalí Windows Runtime `IAsyncInfo` rozhraní nebo je potomkem takového úkolu.
+Určuje, zda úloha rozbalí prostředí Windows Runtime `IAsyncInfo` rozhraní nebo je od takového úkolu popotomkem.
 
 ```
 bool is_apartment_aware() const;
@@ -124,11 +118,11 @@ bool is_apartment_aware() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-**Hodnota TRUE** Pokud úkol rozbaluje `IAsyncInfo` rozhraní nebo je potomkem takového úkolu **false** jinak.
+**true** , pokud úloha rozbalí `IAsyncInfo` rozhraní nebo je následníkem takové úlohy, jinak **false** .
 
-##  <a name="is_done"></a>  Task::is_done – metoda (Concurrency Runtime)
+##  <a name="is_done"></a>Task:: is_done – metoda (Concurrency Runtime)
 
-Určuje, pokud je úloha dokončena.
+Určuje, zda je úloha dokončena.
 
 ```
 bool is_done() const;
@@ -136,18 +130,18 @@ bool is_done() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-True, pokud úkol je dokončen, jinak false.
+True, pokud je úkol dokončený, jinak false.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato funkce vrací true, pokud je úloha dokončena nebo zrušena (s nebo bez výjimky uživatele).
+Funkce vrátí hodnotu true, pokud je úkol dokončený nebo zrušený (s výjimkou uživatele nebo bez něj).
 
-##  <a name="operator_neq"></a> Operator! =
+##  <a name="operator_neq"></a>! = – operátor
 
-Určuje, zda dva `task` objekty představují různé interní úlohy.
+Určuje, zda `task` dva objekty reprezentují různé interní úlohy.
 
 ```
-bool operator!= (const task<_ReturnType>& _Rhs) const;
+bool operator!= (const task<_ResultType>& _Rhs) const;
 
 bool operator!= (const task<void>& _Rhs) const;
 ```
@@ -155,15 +149,15 @@ bool operator!= (const task<void>& _Rhs) const;
 ### <a name="parameters"></a>Parametry
 
 *_Rhs*<br/>
-Úloha k porovnání.
+Úkol, který se má porovnat
 
 ### <a name="return-value"></a>Návratová hodnota
 
-**Hodnota TRUE** Pokud objekty odkazují na různé základní úkoly a **false** jinak.
+**true** , pokud objekty odkazují na různé podkladové úlohy, a jinak **false** .
 
-##  <a name="operator_eq"></a> operátor =
+##  <a name="operator_eq"></a>operátor =
 
-Nahradí obsah jednoho `task` objekt s jiným.
+Nahradí obsah jednoho `task` objektu jiným objektem.
 
 ```
 task& operator= (const task& _Other);
@@ -173,21 +167,21 @@ task& operator= (task&& _Other);
 
 ### <a name="parameters"></a>Parametry
 
-*Ji_né*<br/>
-Zdroj `task` objektu.
+*_Other*<br/>
+Zdrojový `task` objekt.
 
 ### <a name="return-value"></a>Návratová hodnota
 
 ### <a name="remarks"></a>Poznámky
 
-Jako `task` se chová jako inteligentní ukazatel, po přiřazení kopie, to `task` objekty představuje stejné skutečné úlohy jako `_Other` nepodporuje.
+Jak `task` se chová jako inteligentní ukazatel po přiřazení kopírování, představují tyto `task` objekty stejný aktuální úkol jako `_Other` .
 
-##  <a name="operator_eq_eq"></a> Operator ==
+##  <a name="operator_eq_eq"></a>operator = = – operátor
 
-Určuje, zda dva `task` objekty představují stejnou interní úlohu.
+Určuje, zda `task` dva objekty reprezentují stejnou interní úlohu.
 
 ```
-bool operator== (const task<_ReturnType>& _Rhs) const;
+bool operator== (const task<_ResultType>& _Rhs) const;
 
 bool operator== (const task<void>& _Rhs) const;
 ```
@@ -195,15 +189,15 @@ bool operator== (const task<void>& _Rhs) const;
 ### <a name="parameters"></a>Parametry
 
 *_Rhs*<br/>
-Úloha k porovnání.
+Úkol, který se má porovnat
 
 ### <a name="return-value"></a>Návratová hodnota
 
-**Hodnota TRUE** Pokud objekty odkazují na stejný základní úkol a **false** jinak.
+**true** , pokud objekty odkazují na stejnou základní úlohu a jinak **false** .
 
-##  <a name="scheduler"></a>  Task::Scheduler – metoda (Concurrency Runtime)
+##  <a name="scheduler"></a>Task:: Scheduler – metoda (Concurrency Runtime)
 
-Vrátí Plánovač pro tento úkol
+Vrátí Plánovač pro tuto úlohu.
 
 ```
 scheduler_ptr scheduler() const;
@@ -213,9 +207,9 @@ scheduler_ptr scheduler() const;
 
 Ukazatel na Plánovač
 
-##  <a name="ctor"></a> Úloha
+##  <a name="ctor"></a>hybn
 
-Vytvoří `task` objektu.
+`task` Vytvoří objekt.
 
 ```
 task();
@@ -238,55 +232,55 @@ task(
 ### <a name="parameters"></a>Parametry
 
 *T*<br/>
-Typ parametru, ze kterého se má úloha sestavit.
+Typ parametru, ze kterého má být vytvořen úkol
 
 *_Param*<br/>
-Parametr, ze kterého se má úloha sestavit. To může být lambda, objekt funkce `task_completion_event<result_type>` objektu nebo Windows::Foundation:: iasyncinfo, pokud používáte úkoly v aplikaci pro Windows Runtime. Objekt lambda nebo funkce by měl být odpovídající typ `std::function<X(void)>`, kde X může být proměnná typu `result_type`, `task<result_type>`, nebo Windows::Foundation:: iasyncinfo v aplikacích pro Windows Runtime.
+Parametr, ze kterého má být vytvořen úkol Může to být lambda, objekt funkce, `task_completion_event<result_type>` objekt nebo Windows:: Foundation:: IAsyncInfo, pokud používáte úkoly v aplikaci prostředí Windows Runtime. Lambda nebo objekt funkce by měl být typu ekvivalentního k `std::function<X(void)>`, kde X může být proměnná typu `result_type`, `task<result_type>`nebo Windows:: Foundation:: IAsyncInfo v aplikacích prostředí Windows Runtime.
 
 *_TaskOptions*<br/>
-Mezi možnosti úkolů patří token zrušení, Plánovač atd
+Mezi možnosti úlohy patří token zrušení, Plánovač atd.
 
-*Ji_né*<br/>
-Zdroj `task` objektu.
+*_Other*<br/>
+Zdrojový `task` objekt.
 
 ### <a name="remarks"></a>Poznámky
 
-Výchozí konstruktor `task` nachází pouze aby byly povoleny úlohy pro použití v rámci kontejnerů. Výchozí vyrobený úkol nelze použít, dokud nepřiřadíte platný úkol k němu. Metody jako `get`, `wait` nebo `then` vyvolá výjimku [invalid_argument](../../../standard-library/invalid-argument-class.md) výjimka při volání na výchozí vytvořené úloze.
+Výchozí konstruktor pro `task` je přítomen pouze v případě, že chcete, aby bylo možné úlohy používat v rámci kontejnerů. Výchozí vytvořenou úlohu nelze použít, dokud do ní nebudete přiřazovat platnou úlohu. Metody, jako například `wait` , `then` nebo vyvolávají výjimku [invalid_argument](../../../standard-library/invalid-argument-class.md) při volání na výchozí vytvořenou úlohu. `get`
 
-Úloha, která je vytvořena z `task_completion_event` bude dokončen (a bude naplánováno jeho pokračování) je-li nastavena událost dokončení úkolu.
+Úkol, který je vytvořen z, `task_completion_event` bude dokončen (a bude naplánováno jejich pokračování) při nastavení události dokončení úkolu.
 
-Verze konstruktoru, který přijímá token zrušení, vytvoří se úkol, který může být zrušen pomocí `cancellation_token_source` token, který byl získán z. Úkoly vytvořené bez zrušení tokenu nejsou zrušitelné.
+Verze konstruktoru, který přijímá token zrušení, vytvoří úlohu, která může být zrušena pomocí `cancellation_token_source` tokenu, který byl získán z. Úkoly vytvořené bez tokenu zrušení nelze zrušit.
 
-Úkoly vytvořené z `Windows::Foundation::IAsyncInfo` rozhraní nebo lambda vracející `IAsyncInfo` rozhraní dosáhnou svého stavu terminálu, když uzavřené asynchronní operaci Windows Runtime nebo skončení akce. Podobně úkoly vytvořené z lambda, který vrací `task<result_type>` dosáhnou svého stavu terminálu, když vnitřní úkol dosáhne stavu terminálu, a ne v případě, že se vrátí hodnota lambda.
+Úkoly vytvořené z `Windows::Foundation::IAsyncInfo` rozhraní nebo lambda, které `IAsyncInfo` vrací rozhraní, dosáhnou stavu terminálu, když se dokončí prostředí Windows Runtime asynchronní operace nebo akce. Podobně se úlohy vytvořené z lambda, které vrací `task<result_type>` stav terminálu, když vnitřní úkol dosáhne svého stavu terminálu, a ne když lambda vrátí.
 
-`task` se chová jako inteligentní ukazatel a je bezpečné předávat podle hodnoty. Je přístupný prostřednictvím více vláken bez potřeby zámků.
+`task`se chová jako inteligentní ukazatel a je bezpečné předávat podle hodnoty. Dá se k němu přistupovat pomocí více vláken bez nutnosti zámků.
 
-Přetížení konstruktoru, které trvat rozhraní Windows::Foundation:: iasyncinfo nebo lambda vracející takovéto rozhraní, jsou dostupné pouze pro aplikace Windows Runtime.
+Přetížení konstruktoru, která přijímají rozhraní Windows:: Foundation:: IAsyncInfo nebo lambda vracející takové rozhraní, jsou k dispozici pouze pro prostředí Windows Runtime aplikace.
 
-Další informace najdete v tématu [paralelismus](../../../parallel/concrt/task-parallelism-concurrency-runtime.md).
+Další informace najdete v tématu [Task paralelismus](../../../parallel/concrt/task-parallelism-concurrency-runtime.md).
 
-##  <a name="then"></a> Potom
+##  <a name="then"></a>Stisknutím
 
-Přidá úlohu pokračování k tomuto úkolu.
+Přidá úlohu pokračování do této úlohy.
 
 ```
 template<typename _Function>
 __declspec(
     noinline) auto then(const _Function& _Func) const -> typename details::_ContinuationTypeTraits<_Function,
-    _ReturnType>::_TaskOfType;
+    _ResultType>::_TaskOfType;
 
 template<typename _Function>
 __declspec(
     noinline) auto then(const _Function& _Func,
     const task_options& _TaskOptions) const -> typename details::_ContinuationTypeTraits<_Function,
-    _ReturnType>::_TaskOfType;
+    _ResultType>::_TaskOfType;
 
 template<typename _Function>
 __declspec(
     noinline) auto then(const _Function& _Func,
     cancellation_token _CancellationToken,
     task_continuation_context _ContinuationContext) const -> typename details::_ContinuationTypeTraits<_Function,
-    _ReturnType>::_TaskOfType;
+    _ResultType>::_TaskOfType;
 
 template<typename _Function>
 __declspec(
@@ -305,33 +299,33 @@ __declspec(
 ### <a name="parameters"></a>Parametry
 
 *_Function*<br/>
-Typ objektu funkce, který bude vyvolán tímto úkolem.
+Typ objektu funkce, který bude vyvolán touto úlohou.
 
 *_Func*<br/>
-Pokračování funkce pro spuštění při dokončení této úlohy. Tato funkce pokračování musí brát jako vstupní proměnnou buď `result_type` nebo `task<result_type>`, kde `result_type` je typ výsledku tento úkol vytvoří.
+Funkce pokračování, která se má provést po dokončení této úlohy Tato funkce pokračování musí jako vstup přebírat proměnnou buď `result_type` nebo `task<result_type>`, kde `result_type` je typ výsledku, který tato úloha vytvoří.
 
 *_TaskOptions*<br/>
-Mezi možnosti úkolů patří zrušení tokenu, Plánovač a kontext pokračování. Ve výchozím nastavení jsou bývalé 3 možnosti zděděné z předchozí úlohy
+Mezi možnosti úlohy patří token zrušení, Plánovač a kontext pokračování. Ve výchozím nastavení jsou předchozí 3 možnosti zděděné od předchozí úlohy.
 
 *_CancellationToken*<br/>
-Token rušení, který chcete přidružit k úloze pokračování. Pokračování úlohy vytvořené bez rušícího tokenu zdědí token svého předchozího úkolu.
+Token zrušení, který se má přidružit k úloze pokračování Pokračující úkol, který je vytvořen bez tokenu zrušení, zdědí token jeho předchozí úlohy.
 
 *_ContinuationContext*<br/>
-Proměnná, která určuje, kde by se měl spustit pokračování. Tato proměnná je užitečná pouze při používaných pro aplikace pro UPW. Další informace najdete v tématu [task_continuation_context –](task-continuation-context-class.md)
+Proměnná, která určuje, kde by mělo být pokračování spuštěno. Tato proměnná je užitečná jenom při použití v aplikaci pro UWP. Další informace najdete v tématu [task_continuation_context](task-continuation-context-class.md) .
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Nově vytvořené pokračování úkolu. Typ výsledku vrácené úlohy je určen tím, co `_Func` vrátí.
+Nově vytvořený úkol pokračování. Výsledný typ vrácené úlohy je určen podle toho, co `_Func` vrátí.
 
 ### <a name="remarks"></a>Poznámky
 
-Přetížení `then` , které přijímají lambdu nebo funktor, který vrací rozhraní Windows::Foundation:: iasyncinfo, jsou dostupné jenom pro aplikace Windows Runtime.
+Přetížení `then` , která přijímají lambda nebo funktor, které vrací rozhraní Windows:: Foundation:: IAsyncInfo, jsou k dispozici pouze pro prostředí Windows Runtime aplikace.
 
-Další informace o tom, jak pomocí úloh pokračování k vytvoření asynchronní práce, naleznete v tématu [paralelismus](../../../parallel/concrt/task-parallelism-concurrency-runtime.md).
+Další informace o tom, jak používat pokračování úlohy pro vytváření asynchronní práce, najdete v tématu [Task paralelismus](../../../parallel/concrt/task-parallelism-concurrency-runtime.md).
 
-##  <a name="wait"></a> Počkej
+##  <a name="wait"></a>Počkej
 
-Čeká se na tento úkol dosáhne konečného stavu. Je možné, `wait` k provedla úlohu jako vloženou, pokud jsou splněny všechny závislosti úlohy, a to není již vyzvednuty pro provedení pracovníkem na pozadí.
+Počká, až tento úkol dorazí na stav terminálu. Je možné `wait` spustit vloženou úlohu, pokud jsou splněné všechny závislosti úkolů a ještě nebyly vyzvednuty pro spuštění pracovníkem na pozadí.
 
 ```
 task_status wait() const;
@@ -339,12 +333,12 @@ task_status wait() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-A `task_status` hodnotu, která by mohla být `completed` nebo `canceled`. Pokud úloha zjistila výjimku během provádění, nebo byla výjimka rozšířena z předchozí úlohy, `wait` vyvolá tuto výjimku.
+Hodnota, která může být buď `completed` nebo `canceled`. `task_status` Pokud došlo k výjimce během provádění nebo byla výjimka rozšířena z předchozí úlohy, `wait` vyvolá tuto výjimku.
 
 ### <a name="remarks"></a>Poznámky
 
 > [!IMPORTANT]
->  V aplikaci pro univerzální platformu Windows (UPW), nevolejte `wait` v kódu, který běží na vlákně uživatelského rozhraní. V opačném případě modul runtime vyvolá [concurrency::invalid_operation](invalid-operation-class.md) vzhledem k tomu, že tato metoda blokuje aktuální vlákno a může způsobit, že aplikace přestane reagovat. Můžete však volat [Concurrency::Task:: Get](#get) metody pro získání výsledku předchozího úkolu v pokračování založeném na úkolech.
+>  V aplikaci Univerzální platforma Windows (UWP) Nevolejte `wait` v kódu, který běží ve vlákně uživatelského rozhraní. V opačném případě modul runtime vyvolá [Concurrency:: invalid_operation](invalid-operation-class.md) , protože tato metoda blokuje aktuální vlákno a může způsobit, že aplikace přestane reagovat. Můžete však zavolat metodu [Concurrency:: task:: Get](#get) pro přijetí výsledku předchozí úlohy v pokračování založeném na úlohách.
 
 ## <a name="see-also"></a>Viz také:
 
