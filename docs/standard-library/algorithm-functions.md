@@ -200,12 +200,12 @@ helpviewer_keywords:
 - std::count_if [C++]
 - std::partition_copy [C++]
 - std::swap [C++]
-ms.openlocfilehash: cf6c1267b1dea86c2cad62708192a4c0a1970ed8
-ms.sourcegitcommit: 610751254a01cba6ad15fb1e1764ecb2e71f66bf
+ms.openlocfilehash: f389d38cf84f8f72d12242e798010d53a26f81a8
+ms.sourcegitcommit: 20a1356193fbe0ddd1002e798b952917eafc3439
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/18/2019
-ms.locfileid: "68313398"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68661530"
 ---
 # <a name="ltalgorithmgt-functions"></a>&lt;funkce&gt; algoritmu
 
@@ -611,6 +611,14 @@ int main()
 }
 ```
 
+```Output
+List1 = ( 5 10 20 25 30 50 )
+There is an element in list List1 with a value equal to 10.
+There is an element in list List1 with a value greater than 10 under greater than.
+Ordered using mod_lesser, vector v1 = ( 0 -1 1 -2 2 3 4 )
+There is an element with a value equivalent to -3 under mod_lesser.
+```
+
 ## <a name="clamp"></a>Clamp
 
 Porovná hodnotu s horní a dolní mezí a vrátí odkaz na hodnotu, pokud je mezi hranicemi, nebo odkazem na horní nebo dolní mez, pokud je hodnota nad nebo pod nimi, v uvedeném pořadí.
@@ -687,7 +695,7 @@ Výstupní iterátor adresující pozici prvního prvku v cílovém rozsahu.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Výstupní iterátor adresující pozici, která je jedno za posledním `result` prvkem v cílovém rozsahu, tj. adresy iterátoru + (*Poslední* - ).
+Výstupní iterace adresující pozici, která je jedno místo za posledním prvek v cílové oblasti, tedy iterátor adresuje  `result`_DestEnd`result` – ( *_Last* -  *_First*).
 
 ### <a name="remarks"></a>Poznámky
 
@@ -845,6 +853,13 @@ int main() {
 }
 ```
 
+```Output
+v1 = ( 0 10 20 30 40 50 )
+v2 = ( 0 3 6 9 12 15 18 21 24 27 30 )
+v2 with v1 insert = ( 0 3 6 9 0 10 20 21 24 27 30 )
+v2 with shifted insert = ( 0 3 6 9 0 10 0 10 20 27 30 )
+```
+
 ## <a name="copy_if"></a>copy_if
 
 V rozsahu prvků zkopíruje prvky, které jsou pro zadanou podmínku **pravdivé** .
@@ -894,6 +909,61 @@ Funkce šablony vyhodnocuje
 `if (pred(*first + N)) * dest++ = *(first + N))`
 
 jednou pro každou `N` v rozsahu `[0, last - first)`, `N` pro striktní zvýšení hodnot od nejnižší hodnoty. Pokud *cíl* a *první* označení oblastí úložiště, *cíl* nesmí být v rozsahu `[ first, last )`.
+
+### <a name="example"></a>Příklad
+
+```cpp
+// alg_copy_if.cpp
+// compile with: /EHsc
+#include <list>
+#include <algorithm>
+#include <iostream>
+
+void listlist(std::list<int> l)
+{
+    std::cout << "( ";
+    for (auto const& el : l)
+        std::cout << el << " ";
+    std::cout << ")" << std::endl;
+}
+
+int main()
+{
+    using namespace std;
+    list<int> li{ 46, 59, 88, 72, 79, 71, 60, 5, 40, 84 };
+    list<int> le(li.size()); // le = { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
+    list<int> lo(li.size()); // lo = { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
+
+    cout << "li = ";
+    listlist(li);
+
+    // is_even checks if the element is even.
+    auto is_even = [](int const elem) { return !(elem % 2); };
+    // use copy_if to select only even elements from li 
+    // and copy them to le, starting from le's begin position
+    auto ec = copy_if(li.begin(),li.end(), le.begin(), is_even);
+    le.resize(std::distance(le.begin(), ec));  // shrink le to new size
+
+    cout << "Even numbers are le = ";
+    listlist(le);
+
+    // is_odd checks if the element is odd.
+    auto is_odd = [](int const elem) { return (elem % 2); };
+    // use copy_if to select only odd elements from li
+    // and copy them to lo, starting from lo's begin position
+    auto oc = copy_if(li.begin(), li.end(), lo.begin(), is_odd);
+    lo.resize(std::distance(lo.begin(), oc));  // shrink lo to new size
+
+    cout << "Odd numbers are lo = ";
+    listlist(lo);
+}
+```
+
+```Output
+li = ( 46 59 88 72 79 71 60 5 40 84 )
+Even numbers are le = ( 46 88 72 60 40 84 )
+Odd numbers are lo = ( 59 79 71 5 )
+```
 
 ## <a name="copy_n"></a>copy_n
 
@@ -2000,7 +2070,7 @@ Vstupní iterátor adresující pozici prvního prvku v rozsahu, který má být
 Vstupní iterátor adresující pozici jednu za poslední prvek v rozsahu, který chcete prohledat.
 
 *čekání*\
-Objekt funkce predikátu definovaný uživatelem nebo [výraz lambda](../cpp/lambda-expressions-in-cpp.md) definující podmínku, která má být splněna prvkem, který má být vyhledán. Unární predikát přijímá jediný argument a vrátí **hodnotu true** , pokud je splněna, nebo **false** , pokud není splněna. Signatura `InputIterator` předchází *musí být* `bool pred(const T& arg);`, kde `T` je typ, na který lze implicitně převést při zpětném odkazování. Klíčové  slovo const je zobrazeno pouze k ilustraci, že objekt funkce nebo výraz lambda by neměl upravovat argument.
+Objekt funkce predikátu definovaný uživatelem nebo [výraz lambda](../cpp/lambda-expressions-in-cpp.md) definující podmínku, která má být splněna prvkem, který má být vyhledán. Unární predikát přijímá jediný argument a vrátí **hodnotu true** , pokud je splněna, nebo **false** , pokud není splněna. Signatura `InputIterator` předchází *musí být* `bool pred(const T& arg);`, kde `T` je typ, na který lze implicitně převést při zpětném odkazování. Klíčové slovo const je zobrazeno pouze k ilustraci, že objekt funkce nebo výraz lambda by neměl upravovat argument.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -2122,7 +2192,7 @@ Vstupní iterátor adresující pozici prvního prvku v rozsahu, který má být
 Vstupní iterátor adresující pozici jednu za poslední prvek v rozsahu, který chcete prohledat.
 
 *čekání*\
-Objekt funkce predikátu definovaný uživatelem nebo [výraz lambda](../cpp/lambda-expressions-in-cpp.md) definující podmínku, která nebude splněna prvkem, který je prohledáván. Unární predikát přijímá jediný argument a vrátí **hodnotu true** , pokud je splněna, nebo **false** , pokud není splněna. Signatura `InputIterator` předchází *musí být* `bool pred(const T& arg);`, kde `T` je typ, na který lze implicitně převést při zpětném odkazování. Klíčové  slovo const je zobrazeno pouze k ilustraci, že objekt funkce nebo výraz lambda by neměl upravovat argument.
+Objekt funkce predikátu definovaný uživatelem nebo [výraz lambda](../cpp/lambda-expressions-in-cpp.md) definující podmínku, která nebude splněna prvkem, který je prohledáván. Unární predikát přijímá jediný argument a vrátí **hodnotu true** , pokud je splněna, nebo **false** , pokud není splněna. Signatura `InputIterator` předchází *musí být* `bool pred(const T& arg);`, kde `T` je typ, na který lze implicitně převést při zpětném odkazování. Klíčové slovo const je zobrazeno pouze k ilustraci, že objekt funkce nebo výraz lambda by neměl upravovat argument.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -3078,7 +3148,7 @@ Predikát, který testuje rovnost a vrací **bool**.
 
 `is_permutation`má v nejhorším případě kvadratickou složitost.
 
-První funkce šablony předpokládá, že existuje tolik prvků v rozsahu, který začíná na *First2* , protože v rozsahu, který je určen `[first1, last1)`. Pokud je ve druhém rozsahu více prvků, jsou ignorovány; Pokud je k dispozici méně, dojde k nedefinovanému chování. Třetí funkce šablony (C++ 14 a novější) neprovádí tento předpoklad. Obě vrátí **hodnotu true** pouze v případě, že pro každý element X v rozsahu `[first1, last1)` určeném je to mnoho elementů Y ve stejném rozsahu, pro který je X = = Y, jak je v rozsahu  od First2 `[first2, last2)`nebo. V `operator==` tomto příkladu musí probíhat srovnávací porovnání mezi operandy.
+První funkce šablony předpokládá, že existuje tolik prvků v rozsahu, který začíná na *First2* , protože v rozsahu, který je určen `[first1, last1)`. Pokud je ve druhém rozsahu více prvků, jsou ignorovány; Pokud je k dispozici méně, dojde k nedefinovanému chování. Třetí funkce šablony (C++ 14 a novější) neprovádí tento předpoklad. Obě vrátí **hodnotu true** pouze v případě, že pro každý element X v rozsahu `[first1, last1)` určeném je to mnoho elementů Y ve stejném rozsahu, pro který je X = = Y, jak je v rozsahu od First2 `[first2, last2)`nebo. V `operator==` tomto příkladu musí probíhat srovnávací porovnání mezi operandy.
 
 Druhá a čtvrtá funkce šablony se chovají stejně, s tím rozdílem, `operator==(X, Y)` že `Pred(X, Y)`nahrazují. Aby bylo možné správně fungovat, musí být predikát symetrický, reflexivní a tranzitivní.
 
@@ -5344,7 +5414,7 @@ Objekt funkce predikátu definovaný uživatelem, který definuje kritérium por
 
 Odkazovaný rozsah musí být platný; všechny ukazatele musí být možné odkázat a v rámci sekvence je poslední pozice dosažitelná z první pomocí přírůstku.
 
-Algoritmus nezaručuje, že prvky v dílčích rozsahech v rámci n elementu jsou seřazeny.  `nth_element` Proto má méně záruky než `partial_sort`, které řadí prvky v rozsahu pod nějaký vybraný prvek a lze jej použít jako rychlejší `partial_sort` alternativu, pokud není vyžadováno řazení dolního rozsahu.
+Algoritmus nezaručuje, že prvky v dílčích rozsahech v rámci n elementu jsou seřazeny. `nth_element` Proto má méně záruky než `partial_sort`, které řadí prvky v rozsahu pod nějaký vybraný prvek a lze jej použít jako rychlejší `partial_sort` alternativu, pokud není vyžadováno řazení dolního rozsahu.
 
 Prvky jsou ekvivalentní, ale nejsou nutně stejné, pokud není ani méně než druhá.
 
@@ -5890,7 +5960,7 @@ Podmínka, která se má testovat. Toto je poskytováno uživatelem definovaný 
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vrátí, který odkazuje na první prvek, který nesplňuje podmínku testovaný před, nebo vrátí *Poslední* , pokud nebyl nalezen.  `ForwardIterator`
+Vrátí, který odkazuje na první prvek, který nesplňuje podmínku testovaný před, nebo vrátí *Poslední* , pokud nebyl nalezen. `ForwardIterator`
 
 ### <a name="remarks"></a>Poznámky
 
