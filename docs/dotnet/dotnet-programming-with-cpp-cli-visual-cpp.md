@@ -1,5 +1,5 @@
 ---
-title: Programování s .NET C++vyhodnocovací (Visual C++)
+title: Programování .NET s C++/CLI (vizuální C++)
 ms.date: 09/18/2018
 helpviewer_keywords:
 - programming [C++], .NET programming
@@ -7,18 +7,18 @@ helpviewer_keywords:
 - .NET applications [C++]
 - Visual C++, .NET programming
 ms.assetid: 2c7f3b0f-a266-4f0e-b318-d6f1371e04a9
-ms.openlocfilehash: 21a45dbff2b02ccce5444706c158e5bdcc6e6cc2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5ac73ec4921b57f5a4c8e1fdeb16edc4d92f57e1
+ms.sourcegitcommit: 40ffe764244784c715b086c79626ac390b855d47
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62303793"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68711132"
 ---
-# <a name="net-programming-with-ccli-visual-c"></a>Programování s .NET C++vyhodnocovací (Visual C++)
+# <a name="net-programming-with-ccli-visual-c"></a>Programování .NET s C++/CLI (vizuální C++)
 
-**Visual Studio 2015**: Ve výchozím nastavení CLR projekty vytvořené pomocí sady Visual Studio 2015 cíleny na rozhraní .NET Framework 4.5.2. Pro cílové rozhraní .NET Framework 4.6 při vytváření nového projektu v **nový projekt** dialogu změnit cílovou architekturu v rozevírací nabídce nahoře uprostřed dialogového okna. Chcete-li změnit cílový rámec pro existující projekt, Zavřít projekt, upravte soubor projektu (.vcxproj) a změňte hodnotu cílovou architekturu na verzi 4.6. Při příštím otevření projektu, nastavení se projeví.
+**Visual Studio 2015**: Ve výchozím nastavení projekty CLR vytvořené pomocí sady Visual Studio 2015 Target .NET Framework 4.5.2. Chcete-li cílit na .NET Framework 4,6 při vytváření nového projektu, v dialogovém okně **Nový projekt** Změňte cílovou architekturu v rozevíracím seznamu v horní polovině dialogového okna. Chcete-li změnit cílovou verzi rozhraní .NET Framework pro existující projekt, zavřete projekt, upravte soubor projektu (. vcxproj) a změňte hodnotu cílové verze rozhraní na 4,6. Při příštím otevření projektu se nastavení projeví.
 
-**Visual Studio 2017**: V sadě Visual Studio 2017, je výchozí framework 4.6.1 a výběru verze rozhraní Framework je v dolní části **dialogové okno nového projektu**. C++Nebo ve výchozím nastavení není nainstalována rozhraní příkazového řádku samotný. Pro instalaci součásti, spusťte instalační program sady Visual Studio a zvolte C++vyhodnocovací komponenty v rámci Visual C++.
+**Visual Studio 2017**: V aplikaci Visual Studio 2017 je výchozí rozhraní 4.6.1 a selektor verze rozhraní je v dolní části **dialogového okna Nový projekt**. C++Samotný/CLI není ve výchozím nastavení nainstalovaná. Chcete-li nainstalovat součást, otevřete Instalační program pro Visual Studio a vyberte komponentu C++/CLI v kategorii Visual C++.
 
 ## <a name="in-this-section"></a>V tomto oddílu
 
@@ -26,13 +26,11 @@ ms.locfileid: "62303793"
 
 [Nativní funkce a vzájemná funkční spolupráce rozhraní .NET](../dotnet/native-and-dotnet-interoperability.md)
 
-[Základy migrace v jazyce C++/CLI](../dotnet/cpp-cli-migration-primer.md)
-
 [Čistý a ověřitelný kód (C++/CLI)](../dotnet/pure-and-verifiable-code-cpp-cli.md)
 
 [Regulární výrazy (C++/CLI)](../dotnet/regular-expressions-cpp-cli.md)
 
-[Práce se soubory a vstupně-výstupních operací (C++vyhodnocovací)](../dotnet/file-handling-and-i-o-cpp-cli.md)
+[Zpracování souborů a vstupně-výstupní operaceC++(/CLI)](../dotnet/file-handling-and-i-o-cpp-cli.md)
 
 [Grafické operace (C++/CLI)](../dotnet/graphics-operations-cpp-cli.md)
 
