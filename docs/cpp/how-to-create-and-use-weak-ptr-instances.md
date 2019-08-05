@@ -1,25 +1,25 @@
 ---
-title: 'Postupy: Vytvoření a používání instancí ukazatelů weak_ptr'
+title: 'Postupy: Vytváření a používání instancí weak_ptr'
 ms.custom: how-to
 ms.date: 07/12/2018
 ms.topic: conceptual
 ms.assetid: 8dd6909b-b070-4afa-9696-f2fc94579c65
-ms.openlocfilehash: 1a0e2880e97a77a0c9975553631a6024072745f0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 63eed40117d1a79c69bd05e5bd1503d4222f556d
+ms.sourcegitcommit: af4ab63866ed09b5988ed53f1bb6996a54f02484
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62184698"
+ms.lasthandoff: 08/05/2019
+ms.locfileid: "68787078"
 ---
-# <a name="how-to-create-and-use-weakptr-instances"></a>Postupy: Vytvoření a používání instancí ukazatelů weak_ptr
+# <a name="how-to-create-and-use-weak_ptr-instances"></a>Postupy: Vytváření a používání instancí weak_ptr
 
-Někdy musí objekt uložit cestu pro přístup k objektu `shared_ptr` aniž by došlo k navýšení počtu odkazů. Obvykle k této situaci dochází, když máte cyklické odkazy mezi `shared_ptr` instancí.
+V některých případech musí objekt ukládat způsob, jak přistupovat k základnímu objektu `shared_ptr` a bez toho, aby bylo možné zvýšit počet odkazů. K této situaci obvykle dochází, když máte cyklické odkazy mezi `shared_ptr` instancemi.
 
-Nejlepší je vyhnout se sdílenému vlastnictví ukazatelů, kdykoli je to možné. Nicméně pokud musíte mít sdílené vlastnictví `shared_ptr` instancí, vyhněte se cyklickým odkazům mezi nimi. Pokud z nějakého důvodu jsou cyklické odkazy nevyhnutelné nebo dokonce výhodnější, použijte `weak_ptr` poskytnout jednu nebo více vlastníkům nestálý odkaz na jiný `shared_ptr`. Pomocí `weak_ptr`, můžete vytvořit `shared_ptr` , který se připojí k existující sadě souvisejících instancí, ale pouze pokud jsou prostředky základní paměti stále platné. A `weak_ptr` sám se neúčastní počítání odkazů, a proto ji nelze zabránit počet odkazů v dosažení nuly. Můžete však použít `weak_ptr` pro pokus o získání nové kopie `shared_ptr` s kterou byla inicializována. Je-li paměť již byla odstraněna, `bad_weak_ptr` je vyvolána výjimka. Pokud je paměť stále platná, nový sdílený ukazatel zvýší počet odkazů a zaručuje, že paměť bude platit za předpokladu, `shared_ptr` proměnná zůstane v oboru.
+Nejlepším návrhem je vyhnout se sdílenému vlastnictví ukazatelů, kdykoli můžete. Pokud však musíte mít sdílené vlastnictví `shared_ptr` instancí, vyhněte se cyklickým odkazům mezi nimi. Pokud jsou cyklické odkazy nenevyhnutelné nebo dokonce vhodnější z nějakého důvodu, použijte `weak_ptr` k tomu, aby jeden nebo více vlastníků poskytoval slabý odkaz na jiný. `shared_ptr` Pomocí nástroje `weak_ptr`můžete `shared_ptr` vytvořit spojení s existující sadou souvisejících instancí, ale pouze pokud je základní paměťový prostředek stále platný. Sám `weak_ptr` o sobě se neúčastní počítání odkazů, a proto nemůže zabránit tomu, aby se počet odkazů přečetl na nulu. Můžete však použít `weak_ptr` k pokusu o získání nové kopie, `shared_ptr` pomocí které byla inicializována. Pokud je paměť již odstraněna, `bad_weak_ptr` je vyvolána výjimka. Pokud je paměť stále platná, nový sdílený ukazatel zvýší počet odkazů a zaručí, že paměť bude platná, dokud `shared_ptr` proměnná zůstane v oboru.
 
 ## <a name="example"></a>Příklad
 
-Následující příklad kódu ukazuje případ kde `weak_ptr` se používá k zajištění řádného odstranění objektů, které mají cyklické závislosti. Při prohlížení příkladu, se předpokládá, že byl vytvořen pouze poté, co byla zvážena alternativní řešení. `Controller` Objekty představují některé aspekty procesu počítače a fungují nezávisle na sobě. Každý řadič musí být schopen kdykoli zjistit stav ostatních řadičů a každý z nich obsahuje privátní `vector<weak_ptr<Controller>>` pro tento účel. Každý vektor obsahuje cyklický odkaz a proto `weak_ptr` instancí se používají místo `shared_ptr`.
+Následující příklad kódu ukazuje případ, kde `weak_ptr` se používá k zajištění správného odstranění objektů, které mají cyklické závislosti. Při kontrole příkladu Předpokládejme, že byl vytvořen až po zvážení alternativních řešení. `Controller` Objekty představují nějaký aspekt procesu počítače a pracují nezávisle. Každý kontroler musí být schopný dotazovat se na stav jiných řadičů kdykoli a každý z nich obsahuje pro tento účel privátní `vector<weak_ptr<Controller>>` . Každý vektor obsahuje cyklický odkaz, a proto `weak_ptr` se `shared_ptr`místo toho používají instance.
 
 [!code-cpp[stl_smart_pointers#222](../cpp/codesnippet/CPP/how-to-create-and-use-weak-ptr-instances_1.cpp)]
 
@@ -65,8 +65,8 @@ Status of 1 = On
 Status of 3 = On
 Status of 4 = On
 use_count = 1
-Status of 0 = O
-nStatus of 1 = On
+Status of 0 = On
+Status of 1 = On
 Status of 2 = On
 Status of 4 = On
 use_count = 1
@@ -82,7 +82,7 @@ Destroying Controller4
 Press any key
 ```
 
-Jako experiment upravte vektor `others` bude `vector<shared_ptr<Controller>>`a potom ve výstupu Všimněte si, že nejsou vyvolány žádné destruktory při `TestRun` vrátí.
+V rámci experimentu změňte vektor `others` tak `vector<shared_ptr<Controller>>`, aby byl a pak ve výstupu Všimněte si, že při `TestRun` návratu nejsou vyvolány žádné destruktory.
 
 ## <a name="see-also"></a>Viz také:
 
