@@ -1,5 +1,5 @@
 ---
-title: CMFCRibbonApplicationButton Class
+title: CMFCRibbonApplicationButton – třída
 ms.date: 11/04/2016
 f1_keywords:
 - CMFCRibbonApplicationButton
@@ -10,16 +10,16 @@ helpviewer_keywords:
 - CMFCRibbonApplicationButton [MFC], CMFCRibbonApplicationButton
 - CMFCRibbonApplicationButton [MFC], SetImage
 ms.assetid: beb81757-fabd-4641-9130-876ba8505b78
-ms.openlocfilehash: 01b6937ee597766922597fda5664c78f75be6b67
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.openlocfilehash: d1dc8ef6e801623aa96cb4b47936413cd17f24f0
+ms.sourcegitcommit: c3bf94210bdb73be80527166264d49e33784152c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58772160"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68821242"
 ---
-# <a name="cmfcribbonapplicationbutton-class"></a>CMFCRibbonApplicationButton Class
+# <a name="cmfcribbonapplicationbutton-class"></a>CMFCRibbonApplicationButton – třída
 
-Implementuje speciální tlačítko umístěné v levém horním rohu okna aplikace. Po kliknutí na tlačítko otevře nabídku, která obvykle obsahuje běžné **souboru** příkazy jako **otevřít**, **Uložit**, a **ukončovací**.
+Implementuje speciální tlačítko, které se nachází v levém horním rohu okna aplikace. Po kliknutí na toto tlačítko se otevře nabídka, která obvykle obsahuje běžné příkazy **souborů** , jako je například **otevřít**, **Uložit**a **ukončit**.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -33,28 +33,28 @@ class CMFCRibbonApplicationButton : public CMFCRibbonButton
 
 |Name|Popis|
 |----------|-----------------|
-|[CMFCRibbonApplicationButton::CMFCRibbonApplicationButton](#cmfcribbonapplicationbutton)|Vytvoří a inicializuje `CMFCRibbonApplicationButton` objektu.|
+|[CMFCRibbonApplicationButton::CMFCRibbonApplicationButton](#cmfcribbonapplicationbutton)|Vytvoří a inicializuje `CMFCRibbonApplicationButton` objekt.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
 |Name|Popis|
 |----------|-----------------|
-|`CMFCRibbonApplicationButton::CreateObject`|Rozhraní používá k vytvoření dynamické instance tohoto typu třídy.|
-|`CMFCRibbonApplicationButton::GetThisClass`|Používá k získání ukazatele na rámec [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) objekt, který je přidružený k typu třídy.|
-|[CMFCRibbonApplicationButton::SetImage](#setimage)|Přiřadí obrázku tlačítka pásu karet aplikace.|
+|`CMFCRibbonApplicationButton::CreateObject`|Používá se rozhraním k vytvoření dynamické instance tohoto typu třídy.|
+|`CMFCRibbonApplicationButton::GetThisClass`|Používá se rozhraním, aby se získal ukazatel na objekt [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) , který je přidružený k tomuto typu třídy.|
+|[CMFCRibbonApplicationButton::SetImage](#setimage)|Přiřadí obrázek tlačítku aplikace pásu karet.|
 
 ## <a name="example"></a>Příklad
 
-Následující příklad ukazuje, jak použít různé metody v `CMFCRibbonApplicationButton` třídy. Příklad ukazuje, jak přiřadit obrázek pro tlačítko aplikace a jak nastavit jeho popis. Tento fragment kódu je součástí [nakreslit Client sample](../../overview/visual-cpp-samples.md).
+Následující příklad ukazuje, jak použít různé metody ve `CMFCRibbonApplicationButton` třídě. Příklad ukazuje, jak přiřadit obrázek tlačítku aplikace a jak nastavit jeho popis. Tento fragment kódu je součástí ukázkového [klienta pro vykreslování](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_DrawClient#4](../../mfc/reference/codesnippet/cpp/cmfcribbonapplicationbutton-class_1.h)]
 [!code-cpp[NVC_MFC_DrawClient#5](../../mfc/reference/codesnippet/cpp/cmfcribbonapplicationbutton-class_2.cpp)]
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
-[Třídy CObject](../../mfc/reference/cobject-class.md)
+[CObject](../../mfc/reference/cobject-class.md)
 
-[Cmfcribbonbaseelement –](../../mfc/reference/cmfcribbonbaseelement-class.md)
+[CMFCRibbonBaseElement](../../mfc/reference/cmfcribbonbaseelement-class.md)
 
 [CMFCRibbonButton](../../mfc/reference/cmfcribbonbutton-class.md)
 
@@ -62,33 +62,33 @@ Následující příklad ukazuje, jak použít různé metody v `CMFCRibbonAppli
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** afxRibbonBar.h
+**Záhlaví:** afxRibbonBar. h
 
-##  <a name="cmfcribbonapplicationbutton"></a>  CMFCRibbonApplicationButton::CMFCRibbonApplicationButton
+##  <a name="cmfcribbonapplicationbutton"></a>CMFCRibbonApplicationButton::CMFCRibbonApplicationButton
 
-Vytvoří a inicializuje [cmfcribbonapplicationbutton –](../../mfc/reference/cmfcribbonapplicationbutton-class.md) objektu.
+Vytvoří a inicializuje objekt [CMFCRibbonApplicationButton](../../mfc/reference/cmfcribbonapplicationbutton-class.md) .
 
 ```
 CMFCRibbonApplicationButton();
 CMFCRibbonApplicationButton(UINT uiBmpResID);
-  CMFCRibbonApplicationButton(HBITMAP hBmp);
+CMFCRibbonApplicationButton(HBITMAP hBmp);
 ```
 
 ### <a name="parameters"></a>Parametry
 
 *uiBmpResID*<br/>
-ID prostředku bitové kopie se zobrazí na tlačítku aplikace.
+ID prostředku obrázku, který má být zobrazen na tlačítku aplikace
 
 *hBmp*<br/>
-Popisovač rastrový obrázek se zobrazí na tlačítku aplikace.
+Popisovač rastrového obrázku, který má být zobrazen na tlačítku aplikace.
 
 ### <a name="remarks"></a>Poznámky
 
-Tlačítko aplikace pásu karet je speciální tlačítko, které se nachází v levém horním rohu okna aplikace. Když uživatel klikne na toto tlačítko, aplikace se otevře nabídka, která obvykle obsahuje běžné **souboru** příkazy, jako například **otevřít**, **Uložit**, a **ukončení**.
+Tlačítko aplikace pásu karet je speciální tlačítko, které se nachází v levém horním rohu okna aplikace. Když uživatel klikne na toto tlačítko, aplikace otevře nabídku, která obvykle obsahuje běžné příkazy **souborů** , například **otevřít**, **Uložit**a **ukončit**.
 
-##  <a name="setimage"></a>  CMFCRibbonApplicationButton::SetImage
+##  <a name="setimage"></a>CMFCRibbonApplicationButton::SetImage
 
-Přiřadí obrázek pro tlačítko aplikace.
+Přiřadí obrázek tlačítku aplikace.
 
 ```
 void SetImage(UINT uiBmpResID);
@@ -98,14 +98,14 @@ void SetImage(HBITMAP hBmp);
 ### <a name="parameters"></a>Parametry
 
 *uiBmpResID*<br/>
-[in] ID prostředku bitové kopie se zobrazí na tlačítku aplikace.
+pro ID prostředku obrázku, který má být zobrazen na tlačítku aplikace
 
 *hBmp*<br/>
-[in] Popisovač rastrový obrázek se zobrazí na tlačítku aplikace.
+pro Popisovač rastrového obrázku, který má být zobrazen na tlačítku aplikace.
 
 ### <a name="remarks"></a>Poznámky
 
-Pomocí této metody můžete po vytvoření tlačítka přiřadit novou bitovou kopii na pásu karet tlačítko aplikace. Tlačítko aplikace se nachází v levém horním rohu okna aplikace.
+Tuto metodu použijte, chcete-li přiřadit nový obrázek tlačítku aplikace pásu karet po vytvoření tlačítka. Tlačítko aplikace se nachází v levém horním rohu okna aplikace.
 
 ## <a name="see-also"></a>Viz také:
 

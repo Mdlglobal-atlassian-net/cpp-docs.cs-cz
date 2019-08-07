@@ -1,19 +1,19 @@
 ---
 ms.openlocfilehash: 980cdc1c4ac82015cab61133a64fa54fbd030843
-ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66451292"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68821115"
 ---
 > [!IMPORTANT]
-> Kompilátory sady Visual Studio a nástroje sestavení mohou hlásit různé druhy chyb a upozornění. Po chybě nebo upozornění nenajde, nástroje sestavení mohou vytvářet předpoklady o záměru kódu a pokusí se pokračovat, takže další problémy mohou být hlášeny ve stejnou dobu. Pokud nástroje vytvoří chybný předpoklad, pozdější upozornění nebo chyby nemusí vztahovat na váš projekt. Při opravách problémů v projektu vždy začněte první chybou nebo varováním, který se použije v hlášení a často provádějte opakovaná sestavení. Jednu opravu může provést mnoho dalších chyb odstranit.
+> Kompilátory a nástroje sady Visual Studio mohou hlásit mnoho druhů chyb a upozornění. Po nalezení chyby nebo upozornění mohou nástroje sestavení vytvářet předpoklady o záměru kódu a pokusit se pokračovat, aby bylo možné nahlásit více problémů současně. Pokud nástroje vedou k chybnému předpokladu, pozdější chyby nebo upozornění se nemusí vztahovat na váš projekt. Když opravíte problémy v projektu, vždy zahajte první chybu nebo upozornění, které je hlášeno a často se sestaví. Jedna oprava může udělat mnoho dalších chyb.
 
-Můžete zobrazit nápovědu pro konkrétní diagnostické zprávy v sadě Visual Studio, vyberte ho v **výstup** podokna a stiskněte **F1** klíč. Visual Studio otevře na stránce dokumentace pro tuto chybu, pokud existuje. Nástroje hledání výše můžete také vyhledat články týkající se konkrétní chyby nebo upozornění. Nebo můžete procházet seznam chyb a upozornění tak, že nástroj a typ v navigačním podokně na této stránce.
+Chcete-li získat nápovědu ke konkrétní diagnostické zprávě v aplikaci Visual Studio, vyberte ji v okně **výstup** a stiskněte klávesu **F1** . Visual Studio otevře stránku dokumentace pro tuto chybu, pokud existuje. Můžete také použít vyhledávací nástroj výše a vyhledat články týkající se konkrétních chyb nebo upozornění. Nebo si Projděte seznam chyb a upozornění podle nástroje a zadejte v navigačním podokně na této stránce.
 
 > [!NOTE]
-> Ne každá chyba Visual Studio nebo upozornění jsou popsány. V mnoha případech diagnostické zprávy poskytují všechny informace, které je k dispozici. Pokud jste dostali na této stránce, když jste použili **F1** si myslíte, že chyby a upozornění potřebuje další vysvětlení, dejte nám vědět. Ke zvýšení problém s dokumentací k na můžete použít tlačítka zpětné vazby na této stránce [Githubu](https://github.com/MicrosoftDocs/cpp-docs/issues), nebo problém s produktem na [komunity vývojářů](https://developercommunity.visualstudio.com/spaces/8/index.html) lokality. Můžete taky poslat svůj názor a zadat chyb v integrovaném vývojovém prostředí. V sadě Visual Studio, přejděte na řádku nabídek a zvolte **pomáhají > Odeslat názor > ohlásit problém**, nebo odešlete návrh s použitím **Nápověda > odeslat zpětnou vazbu > Poslat návrh**.
+> Nemusíte si zdokumentovat všechny chyby nebo upozornění sady Visual Studio. V mnoha případech diagnostická zpráva poskytuje všechny informace, které jsou k dispozici. Pokud jste tuto stránku vyložili při použití **klávesy F1** a myslíme na to, že zpráva o chybě nebo upozornění bude potřebovat další vysvětlení, dejte nám informace. Pomocí tlačítek zpětná vazba na této stránce můžete vyvolávat problémy s dokumentací [](https://github.com/MicrosoftDocs/cpp-docs/issues)na GitHubu nebo problémy s produktem na webu [komunity vývojářů](https://developercommunity.visualstudio.com/spaces/8/index.html) . Můžete také odeslat zpětnou vazbu a zadat chyby v rámci integrovaného vývojového prostředí. V aplikaci Visual Studio přejděte na panel nabídek a vyberte možnost **help > Odeslat názor > nahlásit problém**nebo Odeslat návrh pomocí **pomoci > Odeslat názor > Odeslat návrh**.
 
-Můžete zjistit další pomoc pro chyby a upozornění na veřejných fórech od Microsoftu. Nebo vyhledejte chyby nebo upozornění číslo v sadě Visual Studio C++ [komunity vývojářů](https://developercommunity.visualstudio.com/spaces/8/index.html) lokality. Můžete také vyhledat chyby a upozornění a pokládání otázek na [Stack Overflow](https://stackoverflow.com/) najít řešení.
+Můžete najít další pomoc při chybách a upozorněních ve veřejných fórech Microsoftu. Případně můžete vyhledat chybu nebo číslo upozornění na webu C++ [komunity vývojářů](https://developercommunity.visualstudio.com/spaces/8/index.html) sady Visual Studio. Můžete také vyhledat chyby a upozornění a klást otázky na [Stack Overflow](https://stackoverflow.com/) k hledání řešení.
 
-Odkazy na další pomoc a zdroje poskytované komunitou, naleznete v části [Nápověda pro Visual C++ a komunity](../../overview/visual-cpp-help-and-community.md).
+Odkazy na další materiály a zdroje informací o komunitě najdete v tématu [Visual C++ Help and Community](../../overview/visual-cpp-help-and-community.md).

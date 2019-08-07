@@ -1,5 +1,5 @@
 ---
-title: Cmfcribbonbutton – třída
+title: CMFCRibbonButton – třída
 ms.date: 11/04/2016
 f1_keywords:
 - CMFCRibbonButton
@@ -114,18 +114,18 @@ helpviewer_keywords:
 - CMFCRibbonButton [MFC], SetText
 - CMFCRibbonButton [MFC], OnClick
 ms.assetid: 732e941c-9504-4b83-a691-d18075965d53
-ms.openlocfilehash: 9d0d16062f6808cbeb2d3e73fac9f4bbdfd7e69c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e3c0af8b608afd4effab710479108f1eb07fdaba
+ms.sourcegitcommit: c3bf94210bdb73be80527166264d49e33784152c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62358202"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68821289"
 ---
-# <a name="cmfcribbonbutton-class"></a>Cmfcribbonbutton – třída
+# <a name="cmfcribbonbutton-class"></a>CMFCRibbonButton – třída
 
-`CMFCRibbonButton` Třída implementuje tlačítka, které můžete umístit na prvky panelu pásu karet, jako je například panely, panely nástrojů Rychlý přístup a místní nabídky.
+`CMFCRibbonButton` Třída implementuje tlačítka, která můžete umístit na prvky panelu pásu karet, jako jsou panely, panely nástrojů pro rychlý přístup a místní nabídky.
 
-Další podrobnosti najdete ve zdrojovém kódu v **VC\\atlmfc\\src\\mfc** složce instalace sady Visual Studio.
+Další podrobnosti najdete ve zdrojovém kódu ve složce **VC\\atlmfc\\src\\MFC** v instalaci sady Visual Studio.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -137,84 +137,84 @@ class CMFCRibbonButton : public CMFCRibbonBaseElement
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CMFCRibbonButton::CMFCRibbonButton](#cmfcribbonbutton)|Vytvoří objekt tlačítka pásu karet.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
-|[CMFCRibbonButton::AddSubItem](#addsubitem)|Přidá položku nabídky v rozbalovací nabídce, který je přidružený k tlačítku.|
-|[CMFCRibbonButton::CanBeStretched](#canbestretched)|(Přepíše [CMFCRibbonBaseElement::CanBeStretched](../../mfc/reference/cmfcribbonbaseelement-class.md#canbestretched).)|
-|[CMFCRibbonButton::CleanUpSizes](#cleanupsizes)|(Přepíše [CMFCRibbonBaseElement::CleanUpSizes](../../mfc/reference/cmfcribbonbaseelement-class.md#cleanupsizes).)|
-|[CMFCRibbonButton::ClosePopupMenu](#closepopupmenu)|(Přepíše [CMFCRibbonBaseElement::ClosePopupMenu](../../mfc/reference/cmfcribbonbaseelement-class.md#closepopupmenu).)|
+|[CMFCRibbonButton::AddSubItem](#addsubitem)|Přidá položku nabídky do místní nabídky, která je přidružena k tlačítku.|
+|[CMFCRibbonButton::CanBeStretched](#canbestretched)|(Overrides [CMFCRibbonBaseElement:: CanBeStretched](../../mfc/reference/cmfcribbonbaseelement-class.md#canbestretched).)|
+|[CMFCRibbonButton::CleanUpSizes](#cleanupsizes)|(Overrides [CMFCRibbonBaseElement:: CleanUpSizes](../../mfc/reference/cmfcribbonbaseelement-class.md#cleanupsizes).)|
+|[CMFCRibbonButton::ClosePopupMenu](#closepopupmenu)|(Overrides [CMFCRibbonBaseElement:: ClosePopupMenu](../../mfc/reference/cmfcribbonbaseelement-class.md#closepopupmenu).)|
 |[CMFCRibbonButton::DrawBottomText](#drawbottomtext)||
-|[CMFCRibbonButton::DrawImage](#drawimage)|(Přepíše [CMFCRibbonBaseElement::DrawImage](../../mfc/reference/cmfcribbonbaseelement-class.md#drawimage).)|
+|[CMFCRibbonButton::DrawImage](#drawimage)|(Overrides [CMFCRibbonBaseElement::D rawimage](../../mfc/reference/cmfcribbonbaseelement-class.md#drawimage).)|
 |[CMFCRibbonButton::DrawRibbonText](#drawribbontext)||
-|[CMFCRibbonButton::FindSubItemIndexByID](#findsubitemindexbyid)|Vrátí index položky místní nabídky, která souvisí s ID zadaného příkazu.|
+|[CMFCRibbonButton::FindSubItemIndexByID](#findsubitemindexbyid)|Vrátí index položky místní nabídky, která je přidružena k zadanému ID příkazu.|
 |[CMFCRibbonButton::GetCommandRect](#getcommandrect)||
-|[CMFCRibbonButton::GetCompactSize](#getcompactsize)|Vrátí velikost compact elementu pásu karet. (Přepíše [CMFCRibbonBaseElement::GetCompactSize](../../mfc/reference/cmfcribbonbaseelement-class.md#getcompactsize).)|
-|[CMFCRibbonButton::GetIcon](#geticon)||
-|[CMFCRibbonButton::GetImageIndex](#getimageindex)|Vrátí index obrázku, který je přidružený k tlačítku.|
-|[CMFCRibbonButton::GetImageSize](#getimagesize)|Vrátí velikost bitové kopie prvek pásu karet. (Přepíše [CMFCRibbonBaseElement::GetImageSize](../../mfc/reference/cmfcribbonbaseelement-class.md#getimagesize).)|
-|[CMFCRibbonButton::GetIntermediateSize](#getintermediatesize)|Vrátí velikost položky prvek pásu karet v jeho přechodném stavu. (Přepíše [CMFCRibbonBaseElement::GetIntermediateSize](../../mfc/reference/cmfcribbonbaseelement-class.md#getintermediatesize).)|
-|[CMFCRibbonButton::GetMenu](#getmenu)|Vrátí popisovač do nabídky Windows, která je přiřazena tlačítko pásu karet.|
+|[CMFCRibbonButton::GetCompactSize](#getcompactsize)|Vrátí kompaktní velikost elementu pásu karet. (Overrides [CMFCRibbonBaseElement:: GetCompactSize](../../mfc/reference/cmfcribbonbaseelement-class.md#getcompactsize).)|
+|[CMFCRibbonButton:: GetIcon](#geticon)||
+|[CMFCRibbonButton::GetImageIndex](#getimageindex)|Vrátí index obrázku, který je spojen s tlačítkem.|
+|[CMFCRibbonButton::GetImageSize](#getimagesize)|Vrátí velikost obrázku elementu pásu karet. (Overrides [CMFCRibbonBaseElement:: GetImageSize](../../mfc/reference/cmfcribbonbaseelement-class.md#getimagesize).)|
+|[CMFCRibbonButton::GetIntermediateSize](#getintermediatesize)|Vrátí velikost prvku pásu karet v jeho zprostředkujícím stavu. (Overrides [CMFCRibbonBaseElement:: GetIntermediateSize](../../mfc/reference/cmfcribbonbaseelement-class.md#getintermediatesize).)|
+|[CMFCRibbonButton:: Get– nabídka](#getmenu)|Vrátí popisovač do nabídky systému Windows, která je přiřazena tlačítku pásu karet.|
 |[CMFCRibbonButton::GetMenuRect](#getmenurect)||
-|[CMFCRibbonButton::GetRegularSize](#getregularsize)|Vrátí regulární velikost elementu pásu karet. (Přepíše [CMFCRibbonBaseElement::GetRegularSize](../../mfc/reference/cmfcribbonbaseelement-class.md#getregularsize).)|
+|[CMFCRibbonButton::GetRegularSize](#getregularsize)|Vrátí běžnou velikost elementu pásu karet. (Overrides [CMFCRibbonBaseElement:: GetRegularSize](../../mfc/reference/cmfcribbonbaseelement-class.md#getregularsize).)|
 |[CMFCRibbonButton::GetSubItems](#getsubitems)||
 |[CMFCRibbonButton::GetTextRowHeight](#gettextrowheight)||
-|[CMFCRibbonButton::GetToolTipText](#gettooltiptext)|Vrátí text popisku elementu pásu karet. (Přepíše [CMFCRibbonBaseElement::GetToolTipText](../../mfc/reference/cmfcribbonbaseelement-class.md#gettooltiptext).)|
-|[CMFCRibbonButton::HasCompactMode](#hascompactmode)|Určuje, zda má prvek pásu karet kompaktní režim. (Přepíše [CMFCRibbonBaseElement::HasCompactMode](../../mfc/reference/cmfcribbonbaseelement-class.md#hascompactmode).)|
-|[CMFCRibbonButton::HasIntermediateMode](#hasintermediatemode)|Určuje, zda má prvek pásu karet zprostředkující režim. (Přepíše [CMFCRibbonBaseElement::HasIntermediateMode](../../mfc/reference/cmfcribbonbaseelement-class.md#hasintermediatemode).)|
-|[CMFCRibbonButton::HasLargeMode](#haslargemode)|Určuje, zda prvek pásu karet má velkém režimu. (Přepíše [CMFCRibbonBaseElement::HasLargeMode](../../mfc/reference/cmfcribbonbaseelement-class.md#haslargemode).)|
-|[CMFCRibbonButton::HasMenu](#hasmenu)|(Přepíše [CMFCRibbonBaseElement::HasMenu](../../mfc/reference/cmfcribbonbaseelement-class.md#hasmenu).)|
+|[CMFCRibbonButton::GetToolTipText](#gettooltiptext)|Vrátí text popisku prvku pásu karet. (Overrides [CMFCRibbonBaseElement:: GetToolTipText](../../mfc/reference/cmfcribbonbaseelement-class.md#gettooltiptext).)|
+|[CMFCRibbonButton::HasCompactMode](#hascompactmode)|Určuje, zda má element pásu karet kompaktní režim. (Overrides [CMFCRibbonBaseElement:: HasCompactMode](../../mfc/reference/cmfcribbonbaseelement-class.md#hascompactmode).)|
+|[CMFCRibbonButton::HasIntermediateMode](#hasintermediatemode)|Určuje, zda má element pásu karet režim mezilehlého režimu. (Overrides [CMFCRibbonBaseElement:: HasIntermediateMode](../../mfc/reference/cmfcribbonbaseelement-class.md#hasintermediatemode).)|
+|[CMFCRibbonButton::HasLargeMode](#haslargemode)|Určuje, zda má element pásu karet velký režim. (Overrides [CMFCRibbonBaseElement:: HasLargeMode](../../mfc/reference/cmfcribbonbaseelement-class.md#haslargemode).)|
+|[CMFCRibbonButton::HasMenu](#hasmenu)|(Overrides [CMFCRibbonBaseElement:: HasMenu](../../mfc/reference/cmfcribbonbaseelement-class.md#hasmenu).)|
 |[CMFCRibbonButton::IsAlwaysDrawBorder](#isalwaysdrawborder)||
-|[CMFCRibbonButton::IsAlwaysLargeImage](#isalwayslargeimage)|(Přepíše [CMFCRibbonBaseElement::IsAlwaysLargeImage](../../mfc/reference/cmfcribbonbaseelement-class.md#isalwayslargeimage).)|
+|[CMFCRibbonButton::IsAlwaysLargeImage](#isalwayslargeimage)|(Overrides [CMFCRibbonBaseElement:: IsAlwaysLargeImage](../../mfc/reference/cmfcribbonbaseelement-class.md#isalwayslargeimage).)|
 |[CMFCRibbonButton::IsApplicationButton](#isapplicationbutton)||
 |[CMFCRibbonButton::IsCommandAreaHighlighted](#iscommandareahighlighted)||
-|[CMFCRibbonButton::IsDefaultCommand](#isdefaultcommand)|Určuje, zda jste povolili výchozí příkaz pro tlačítko pásu karet.|
+|[CMFCRibbonButton::IsDefaultCommand](#isdefaultcommand)|Určuje, zda byl pro tlačítko pásu karet povolen výchozí příkaz.|
 |[CMFCRibbonButton::IsDefaultPanelButton](#isdefaultpanelbutton)||
 |[CMFCRibbonButton::IsDrawTooltipImage](#isdrawtooltipimage)||
 |[CMFCRibbonButton::IsLargeImage](#islargeimage)||
 |[CMFCRibbonButton::IsMenuAreaHighlighted](#ismenuareahighlighted)||
 |[CMFCRibbonButton::IsMenuOnBottom](#ismenuonbottom)||
 |[CMFCRibbonButton::IsPopupDefaultMenuLook](#ispopupdefaultmenulook)||
-|[CMFCRibbonButton::IsRightAlignMenu](#isrightalignmenu)|Určuje, zda je v nabídce zarovnaný doprava.|
+|[CMFCRibbonButton::IsRightAlignMenu](#isrightalignmenu)|Určuje, zda je nabídka zarovnána vpravo.|
 |[CMFCRibbonButton::IsSingleLineText](#issinglelinetext)||
-|[CMFCRibbonButton::OnCalcTextSize](#oncalctextsize)|(Přepíše [CMFCRibbonBaseElement::OnCalcTextSize](../../mfc/reference/cmfcribbonbaseelement-class.md#oncalctextsize).)|
+|[CMFCRibbonButton::OnCalcTextSize](#oncalctextsize)|(Overrides [CMFCRibbonBaseElement:: OnCalcTextSize](../../mfc/reference/cmfcribbonbaseelement-class.md#oncalctextsize).)|
 |[CMFCRibbonButton::OnDrawBorder](#ondrawborder)||
-|[CMFCRibbonButton::OnDraw](#ondraw)|Volá se rozhraním, chcete-li nakreslit prvek pásu karet. (Přepíše [CMFCRibbonBaseElement::OnDraw](../../mfc/reference/cmfcribbonbaseelement-class.md#ondraw).)|
+|[CMFCRibbonButton::OnDraw](#ondraw)|Volá se rozhraním, aby se nakreslil element pásu karet. (Overrides [CMFCRibbonBaseElement:: nakreslit](../../mfc/reference/cmfcribbonbaseelement-class.md#ondraw).)|
 |[CMFCRibbonButton::OnFillBackground](#onfillbackground)||
-|[CMFCRibbonButton::RemoveAllSubItems](#removeallsubitems)|Odebere všechny položky nabídky v místní nabídce.|
-|[CMFCRibbonButton::RemoveSubItem](#removesubitem)|Odebere položku nabídky v místní nabídce.|
-|[CMFCRibbonButton::SetACCData](#setaccdata)|(Přepíše [CMFCRibbonBaseElement::SetACCData](../../mfc/reference/cmfcribbonbaseelement-class.md#setaccdata).)|
-|[CMFCRibbonButton::SetAlwaysLargeImage](#setalwayslargeimage)|Určuje, zda na tomto tlačítku zobrazí velké nebo malé image při sbalení uživatel na tlačítko.|
+|[CMFCRibbonButton::RemoveAllSubItems](#removeallsubitems)|Odebere všechny položky nabídky z místní nabídky.|
+|[CMFCRibbonButton::RemoveSubItem](#removesubitem)|Odstraní položku nabídky z místní nabídky.|
+|[CMFCRibbonButton::SetACCData](#setaccdata)|(Overrides [CMFCRibbonBaseElement:: SetACCData](../../mfc/reference/cmfcribbonbaseelement-class.md#setaccdata).)|
+|[CMFCRibbonButton::SetAlwaysLargeImage](#setalwayslargeimage)|Určuje, zda tlačítko zobrazí velký nebo malý obrázek, když uživatel sbalí tlačítko.|
 |[CMFCRibbonButton::SetDefaultCommand](#setdefaultcommand)|Povolí výchozí příkaz pro tlačítko pásu karet.|
-|[CMFCRibbonButton::SetDescription](#setdescription)|Nastaví popis pro prvek pásu karet. (Přepíše [CMFCRibbonBaseElement::SetDescription](../../mfc/reference/cmfcribbonbaseelement-class.md#setdescription).)|
-|[CMFCRibbonButton::SetImageIndex](#setimageindex)|Přiřadí index obrázku tlačítku.|
-|[CMFCRibbonButton::SetMenu](#setmenu)|Místní nabídka přiřadí tlačítko pásu karet.|
-|[CMFCRibbonButton::SetParentCategory](#setparentcategory)|(Přepíše [CMFCRibbonBaseElement::SetParentCategory](../../mfc/reference/cmfcribbonbaseelement-class.md#setparentcategory).)|
-|[CMFCRibbonButton::SetRightAlignMenu](#setrightalignmenu)|Zarovná v rozbalovací nabídce na pravé straně tlačítka.|
-|[CMFCRibbonButton::SetText](#settext)|Nastaví text pro prvek pásu karet. (Přepíše [CMFCRibbonBaseElement::SetText](../../mfc/reference/cmfcribbonbaseelement-class.md#settext).)|
+|[CMFCRibbonButton::SetDescription](#setdescription)|Nastaví popis elementu pásu karet. (Overrides [CMFCRibbonBaseElement:: SetDescription](../../mfc/reference/cmfcribbonbaseelement-class.md#setdescription).)|
+|[CMFCRibbonButton::SetImageIndex](#setimageindex)|Přiřadí index k obrázku tlačítka.|
+|[CMFCRibbonButton::SetMenu](#setmenu)|Přiřadí místní nabídku na tlačítko pásu karet.|
+|[CMFCRibbonButton::SetParentCategory](#setparentcategory)|(Overrides [CMFCRibbonBaseElement:: SetParentCategory](../../mfc/reference/cmfcribbonbaseelement-class.md#setparentcategory).)|
+|[CMFCRibbonButton::SetRightAlignMenu](#setrightalignmenu)|Zarovná rozbalovací nabídku napravo od tlačítka.|
+|[CMFCRibbonButton::SetText](#settext)|Nastaví text elementu pásu karet. (Overrides [CMFCRibbonBaseElement:: SetText](../../mfc/reference/cmfcribbonbaseelement-class.md#settext).)|
 
 ### <a name="protected-methods"></a>Chráněné metody
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
-|[CMFCRibbonButton::OnClick](#onclick)|Volá se rozhraním, když uživatel klikne na tlačítko.|
+|[CMFCRibbonButton:: Click](#onclick)|Volá se rozhraním, když uživatel klikne na tlačítko.|
 
 ## <a name="example"></a>Příklad
 
-Následující příklad ukazuje, jak použít různé metody v `CMFCRibbonButton` třídy. Tento příklad ukazuje, jak vytvořit objekt `CMFCRibbonButton` třídy, na pásu karet tlačítko přiřadit místní nabídky, nastavení popisu tlačítka, odebrání položky nabídky v místní nabídce a zarovnání vpravo v rozbalovací nabídce na hraničních zařízeních tlačítka.
+Následující příklad ukazuje, jak použít různé metody ve `CMFCRibbonButton` třídě. Tento příklad ukazuje, jak vytvořit objekt `CMFCRibbonButton` třídy, přiřadit místní nabídku tlačítku na pásu karet, nastavit popis tlačítka, odebrat položku nabídky z místní nabídky a vpravo zarovnat místní nabídku na okraj tohoto tlačítka.
 
 [!code-cpp[NVC_MFC_RibbonApp#7](../../mfc/reference/codesnippet/cpp/cmfcribbonbutton-class_1.cpp)]
 
 ## <a name="remarks"></a>Poznámky
 
-Na pásu karet tlačítko použít v aplikaci, sestavit objekt tlačítka a přidejte ho do příslušné pásu karet [panel](../../mfc/reference/cmfcribbonpanel-class.md).
+Chcete-li použít tlačítko pásu karet v aplikaci, Sestavte objekt tlačítka a přidejte jej na příslušný [panel](../../mfc/reference/cmfcribbonpanel-class.md)pásu karet.
 
-```
+```cpp
 CMFCRibbonPanel* pPanel = pCategory->AddPanel (
     _T("Clipboard"), // Panel name
     m_PanelIcons.ExtractIcon (0)); // Panel icon
@@ -236,19 +236,19 @@ pPanel->Add (new CMFCRibbonButton (ID_EDIT_PAINT, _T("Paint"), 9));
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
-[Třídy CObject](../../mfc/reference/cobject-class.md)
+[CObject](../../mfc/reference/cobject-class.md)
 
-[Cmfcribbonbaseelement –](../../mfc/reference/cmfcribbonbaseelement-class.md)
+[CMFCRibbonBaseElement](../../mfc/reference/cmfcribbonbaseelement-class.md)
 
 [CMFCRibbonButton](../../mfc/reference/cmfcribbonbutton-class.md)
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** afxribbonbutton.h
+**Záhlaví:** afxribbonbutton. h
 
-##  <a name="addsubitem"></a>  CMFCRibbonButton::AddSubItem
+##  <a name="addsubitem"></a>CMFCRibbonButton::AddSubItem
 
-Přidá položku nabídky v rozbalovací nabídce, který je přidružený k tlačítku.
+Přidá položku nabídky do místní nabídky, která je přidružena k tlačítku.
 
 ```
 void AddSubItem(
@@ -259,12 +259,12 @@ void AddSubItem(
 ### <a name="parameters"></a>Parametry
 
 *pSubItem*<br/>
-[in] Určuje ukazatel na nový element přidat.
+pro Určuje ukazatel na nový prvek, který chcete přidat.
 
 *nIndex*<br/>
-[in] Určuje index, na kterém chcete-li přidat prvek k poli položky nabídky tlačítka; -1, chcete-li přidat prvek na konec pole položek nabídky.
+pro Určuje index, do kterého se má přidat element do pole položek nabídky tlačítka. -1 pro přidání prvku na konec pole položek nabídky.
 
-##  <a name="canbestretched"></a>  CMFCRibbonButton::CanBeStretched
+##  <a name="canbestretched"></a>CMFCRibbonButton::CanBeStretched
 
 ```
 virtual BOOL CanBeStretched();
@@ -274,7 +274,7 @@ virtual BOOL CanBeStretched();
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="cleanupsizes"></a>  CMFCRibbonButton::CleanUpSizes
+##  <a name="cleanupsizes"></a>CMFCRibbonButton::CleanUpSizes
 
 ```
 virtual void CleanUpSizes();
@@ -282,7 +282,7 @@ virtual void CleanUpSizes();
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="closepopupmenu"></a>  CMFCRibbonButton::ClosePopupMenu
+##  <a name="closepopupmenu"></a>CMFCRibbonButton::ClosePopupMenu
 
 ```
 virtual void ClosePopupMenu();
@@ -290,7 +290,7 @@ virtual void ClosePopupMenu();
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="cmfcribbonbutton"></a>  CMFCRibbonButton::CMFCRibbonButton
+##  <a name="cmfcribbonbutton"></a>CMFCRibbonButton::CMFCRibbonButton
 
 Vytvoří objekt tlačítka pásu karet.
 
@@ -315,27 +315,27 @@ CMFCRibbonButton(
 ### <a name="parameters"></a>Parametry
 
 *nID*<br/>
-[in] Určuje Identifikátor příkazu tlačítka.
+pro Určuje ID příkazu pro tlačítko.
 
 *lpszText*<br/>
-[in] Určuje textový popisek tlačítka.
+pro Určuje textový popisek tlačítka.
 
 *nSmallImageIndex*<br/>
-[in] V seznamu obrázků nadřazené kategorie určuje z nuly vycházející index malý obrázek tlačítka.
+pro Určuje index založený na nule malého obrázku tlačítka v seznamu obrázků nadřazené kategorie.
 
 *nLargeImageIndex*<br/>
-[in] V seznamu obrázků nadřazené kategorie určuje z nuly vycházející index velkého obrázku tlačítka.
+pro Určuje index velkého obrázku tlačítka vycházející z nuly v seznamu obrázků nadřazené kategorie.
 
 *hIcon*<br/>
-[in] Určuje popisovač pro ikonu, která aplikace používá jako obrázek na tlačítko.
+pro Určuje popisovač pro ikonu, kterou aplikace používá jako obrázek tlačítka.
 
 ### <a name="example"></a>Příklad
 
-Následující příklad ukazuje, jak vytvořit `CMFCRibbonButton` objektu.
+Následující příklad ukazuje, jak vytvořit `CMFCRibbonButton` objekt.
 
 [!code-cpp[NVC_MFC_RibbonApp#6](../../mfc/reference/codesnippet/cpp/cmfcribbonbutton-class_2.cpp)]
 
-##  <a name="drawbottomtext"></a>  CMFCRibbonButton::DrawBottomText
+##  <a name="drawbottomtext"></a>CMFCRibbonButton::D rawBottomText
 
 ```
 CSize DrawBottomText(
@@ -345,14 +345,14 @@ CSize DrawBottomText(
 
 ### <a name="parameters"></a>Parametry
 
-[in] *pDC*<br/>
-[in] *bCalcOnly*<br/>
+pro *primární řadič domény*<br/>
+pro *bCalcOnly*<br/>
 
 ### <a name="return-value"></a>Návratová hodnota
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="drawimage"></a>  CMFCRibbonButton::DrawImage
+##  <a name="drawimage"></a>CMFCRibbonButton::D rawImage
 
 ```
 virtual void DrawImage(
@@ -363,13 +363,13 @@ virtual void DrawImage(
 
 ### <a name="parameters"></a>Parametry
 
-[in] *pDC*<br/>
-[in] *typu*<br/>
-[in] *rectImage*<br/>
+pro *primární řadič domény*<br/>
+pro *typ*<br/>
+pro *rectImage*<br/>
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="drawribbontext"></a>  CMFCRibbonButton::DrawRibbonText
+##  <a name="drawribbontext"></a>CMFCRibbonButton::D rawRibbonText
 
 ```
 virtual int DrawRibbonText(
@@ -382,19 +382,19 @@ virtual int DrawRibbonText(
 
 ### <a name="parameters"></a>Parametry
 
-[in] *pDC*<br/>
-[in] *strText*<br/>
-[in] *rectText*<br/>
+pro *primární řadič domény*<br/>
+pro *strText*<br/>
+pro *rectText*<br/>
 [in] *uiDTFlags*<br/>
-[in] *clrText*<br/>
+pro *clrText*<br/>
 
 ### <a name="return-value"></a>Návratová hodnota
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="findsubitemindexbyid"></a>  CMFCRibbonButton::FindSubItemIndexByID
+##  <a name="findsubitemindexbyid"></a>CMFCRibbonButton::FindSubItemIndexByID
 
-Vrátí index položky místní nabídky, která souvisí s ID zadaného příkazu.
+Vrátí index položky místní nabídky, která je přidružena k zadanému ID příkazu.
 
 ```
 int FindSubItemIndexByID(UINT uiID) const;
@@ -403,13 +403,13 @@ int FindSubItemIndexByID(UINT uiID) const;
 ### <a name="parameters"></a>Parametry
 
 *uiID*<br/>
-[in] Určuje Identifikátor příkazu položku rozbalovací nabídky.
+pro Určuje ID příkazu pro položku místní nabídky.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Index založený na nule, který je přidružen dílčí položky *uiID*. -1, pokud neexistuje žádný takový podřízenou položku.
+Index založený na nule pro dílčí položku, která je přidružena k *uiID*. -1, pokud neexistuje žádná taková dílčí položka.
 
-##  <a name="getcommandrect"></a>  CMFCRibbonButton::GetCommandRect
+##  <a name="getcommandrect"></a>CMFCRibbonButton::GetCommandRect
 
 ```
 CRect GetCommandRect() const;
@@ -419,7 +419,7 @@ CRect GetCommandRect() const;
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="getcompactsize"></a>  CMFCRibbonButton::GetCompactSize
+##  <a name="getcompactsize"></a>CMFCRibbonButton::GetCompactSize
 
 ```
 virtual CSize GetCompactSize(CDC* pDC);
@@ -427,13 +427,13 @@ virtual CSize GetCompactSize(CDC* pDC);
 
 ### <a name="parameters"></a>Parametry
 
-[in] *pDC*<br/>
+pro *primární řadič domény*<br/>
 
 ### <a name="return-value"></a>Návratová hodnota
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="geticon"></a>  CMFCRibbonButton::GetIcon
+##  <a name="geticon"></a>CMFCRibbonButton:: GetIcon
 
 ```
 HICON GetIcon(BOOL bLargeIcon = TRUE) const;
@@ -441,15 +441,15 @@ HICON GetIcon(BOOL bLargeIcon = TRUE) const;
 
 ### <a name="parameters"></a>Parametry
 
-[in] *bLargeIcon*<br/>
+pro *bLargeIcon*<br/>
 
 ### <a name="return-value"></a>Návratová hodnota
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="getimageindex"></a>  CMFCRibbonButton::GetImageIndex
+##  <a name="getimageindex"></a>CMFCRibbonButton:: GetImageIndex
 
-Vrátí index obrázku, který je přidružený k tlačítku.
+Vrátí index obrázku, který je spojen s tlačítkem.
 
 ```
 int GetImageIndex(BOOL bLargeImage) const;
@@ -458,13 +458,13 @@ int GetImageIndex(BOOL bLargeImage) const;
 ### <a name="parameters"></a>Parametry
 
 *bLargeImage*<br/>
-[in] Pokud je hodnota TRUE, vrátí index obrázku v seznamu obrázků, který obsahuje velké obrázky; v opačném případě vrátí index obrázku v seznamu obrázků, který obsahuje malé obrázky.
+pro Pokud má hodnotu TRUE, vrátí index obrázku v seznamu obrázků, který obsahuje velké obrázky. v opačném případě vrátí index obrázku v seznamu obrázků, který obsahuje malé obrázky.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Index obrázku tlačítka v seznamu přidružené image.
+Index obrázku tlačítka v přidruženém seznamu obrázků
 
-##  <a name="getimagesize"></a>  CMFCRibbonButton::GetImageSize
+##  <a name="getimagesize"></a>CMFCRibbonButton::GetImageSize
 
 ```
 virtual CSize GetImageSize(RibbonImageType type) const;
@@ -472,13 +472,13 @@ virtual CSize GetImageSize(RibbonImageType type) const;
 
 ### <a name="parameters"></a>Parametry
 
-[in] *typu*<br/>
+pro *typ*<br/>
 
 ### <a name="return-value"></a>Návratová hodnota
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="getintermediatesize"></a>  CMFCRibbonButton::GetIntermediateSize
+##  <a name="getintermediatesize"></a>CMFCRibbonButton::GetIntermediateSize
 
 ```
 virtual CSize GetIntermediateSize(CDC* pDC);
@@ -486,15 +486,15 @@ virtual CSize GetIntermediateSize(CDC* pDC);
 
 ### <a name="parameters"></a>Parametry
 
-[in] *pDC*<br/>
+pro *primární řadič domény*<br/>
 
 ### <a name="return-value"></a>Návratová hodnota
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="getmenu"></a>  CMFCRibbonButton::GetMenu
+##  <a name="getmenu"></a>CMFCRibbonButton:: Get– nabídka
 
-Vrátí popisovač do nabídky Windows, která je přiřazena tlačítko pásu karet.
+Vrátí popisovač do nabídky systému Windows, která je přiřazena tlačítku pásu karet.
 
 ```
 HMENU GetMenu() const;
@@ -502,9 +502,9 @@ HMENU GetMenu() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Popisovač nabídky Windows přiřadit k tlačítku; Hodnota NULL, pokud neexistuje žádná nabídka přiřazené.
+Popisovač pro nabídku systému Windows přiřazenou tlačítku; Hodnota NULL, pokud není přiřazena žádná nabídka
 
-##  <a name="getmenurect"></a>  CMFCRibbonButton::GetMenuRect
+##  <a name="getmenurect"></a>CMFCRibbonButton::GetMenuRect
 
 ```
 CRect GetMenuRect() const;
@@ -514,7 +514,7 @@ CRect GetMenuRect() const;
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="getregularsize"></a>  CMFCRibbonButton::GetRegularSize
+##  <a name="getregularsize"></a>CMFCRibbonButton::GetRegularSize
 
 ```
 virtual CSize GetRegularSize(CDC* pDC);
@@ -522,13 +522,13 @@ virtual CSize GetRegularSize(CDC* pDC);
 
 ### <a name="parameters"></a>Parametry
 
-[in] *pDC*<br/>
+pro *primární řadič domény*<br/>
 
 ### <a name="return-value"></a>Návratová hodnota
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="getsubitems"></a>  CMFCRibbonButton::GetSubItems
+##  <a name="getsubitems"></a>CMFCRibbonButton::GetSubItems
 
 ```
 const CArray<CMFCRibbonBaseElement*, CMFCRibbonBaseElement*>& GetSubItems() const;
@@ -538,7 +538,7 @@ const CArray<CMFCRibbonBaseElement*, CMFCRibbonBaseElement*>& GetSubItems() cons
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="gettextrowheight"></a>  CMFCRibbonButton::GetTextRowHeight
+##  <a name="gettextrowheight"></a>CMFCRibbonButton::GetTextRowHeight
 
 ```
 int GetTextRowHeight() const;
@@ -548,7 +548,7 @@ int GetTextRowHeight() const;
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="gettooltiptext"></a>  CMFCRibbonButton::GetToolTipText
+##  <a name="gettooltiptext"></a>CMFCRibbonButton::GetToolTipText
 
 ```
 virtual CString GetToolTipText() const;
@@ -558,7 +558,7 @@ virtual CString GetToolTipText() const;
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="hascompactmode"></a>  CMFCRibbonButton::HasCompactMode
+##  <a name="hascompactmode"></a>CMFCRibbonButton::HasCompactMode
 
 ```
 virtual BOOL HasCompactMode() const;
@@ -568,7 +568,7 @@ virtual BOOL HasCompactMode() const;
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="hasintermediatemode"></a>  CMFCRibbonButton::HasIntermediateMode
+##  <a name="hasintermediatemode"></a>CMFCRibbonButton::HasIntermediateMode
 
 ```
 virtual BOOL HasIntermediateMode() const;
@@ -578,7 +578,7 @@ virtual BOOL HasIntermediateMode() const;
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="haslargemode"></a>  CMFCRibbonButton::HasLargeMode
+##  <a name="haslargemode"></a>CMFCRibbonButton::HasLargeMode
 
 ```
 virtual BOOL HasLargeMode() const;
@@ -588,7 +588,7 @@ virtual BOOL HasLargeMode() const;
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="hasmenu"></a>  CMFCRibbonButton::HasMenu
+##  <a name="hasmenu"></a>CMFCRibbonButton::HasMenu
 
 ```
 virtual BOOL HasMenu() const;
@@ -598,7 +598,7 @@ virtual BOOL HasMenu() const;
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="isalwaysdrawborder"></a>  CMFCRibbonButton::IsAlwaysDrawBorder
+##  <a name="isalwaysdrawborder"></a>CMFCRibbonButton::IsAlwaysDrawBorder
 
 ```
 virtual BOOL IsAlwaysDrawBorder() const;
@@ -608,7 +608,7 @@ virtual BOOL IsAlwaysDrawBorder() const;
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="isalwayslargeimage"></a>  CMFCRibbonButton::IsAlwaysLargeImage
+##  <a name="isalwayslargeimage"></a>CMFCRibbonButton::IsAlwaysLargeImage
 
 ```
 virtual BOOL IsAlwaysLargeImage() const;
@@ -618,7 +618,7 @@ virtual BOOL IsAlwaysLargeImage() const;
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="isapplicationbutton"></a>  CMFCRibbonButton::IsApplicationButton
+##  <a name="isapplicationbutton"></a>CMFCRibbonButton::IsApplicationButton
 
 ```
 virtual BOOL IsApplicationButton() const;
@@ -628,7 +628,7 @@ virtual BOOL IsApplicationButton() const;
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="iscommandareahighlighted"></a>  CMFCRibbonButton::IsCommandAreaHighlighted
+##  <a name="iscommandareahighlighted"></a>CMFCRibbonButton::IsCommandAreaHighlighted
 
 ```
 virtual BOOL IsCommandAreaHighlighted() const;
@@ -638,9 +638,9 @@ virtual BOOL IsCommandAreaHighlighted() const;
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="isdefaultcommand"></a>  CMFCRibbonButton::IsDefaultCommand
+##  <a name="isdefaultcommand"></a>CMFCRibbonButton::IsDefaultCommand
 
-Určuje, jestli je povolené výchozí příkaz pro tlačítko pásu karet.
+Určuje, zda je povolen výchozí příkaz pro tlačítko pásu karet.
 
 ```
 BOOL IsDefaultCommand() const;
@@ -648,9 +648,9 @@ BOOL IsDefaultCommand() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Hodnota TRUE, pokud jste povolili výchozí příkaz pro tlačítko pásu karet; FALSE v opačném případě.
+TRUE, pokud jste povolili výchozí příkaz pro tlačítko pásu karet; V opačném případě NEPRAVDA.
 
-##  <a name="isdefaultpanelbutton"></a>  CMFCRibbonButton::IsDefaultPanelButton
+##  <a name="isdefaultpanelbutton"></a>CMFCRibbonButton::IsDefaultPanelButton
 
 ```
 virtual BOOL IsDefaultPanelButton() const;
@@ -660,7 +660,7 @@ virtual BOOL IsDefaultPanelButton() const;
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="isdrawtooltipimage"></a>  CMFCRibbonButton::IsDrawTooltipImage
+##  <a name="isdrawtooltipimage"></a>CMFCRibbonButton::IsDrawTooltipImage
 
 ```
 virtual BOOL IsDrawTooltipImage() const;
@@ -670,7 +670,7 @@ virtual BOOL IsDrawTooltipImage() const;
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="islargeimage"></a>  CMFCRibbonButton::IsLargeImage
+##  <a name="islargeimage"></a>CMFCRibbonButton::IsLargeImage
 
 ```
 BOOL IsLargeImage() const;
@@ -680,7 +680,7 @@ BOOL IsLargeImage() const;
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="ismenuareahighlighted"></a>  CMFCRibbonButton::IsMenuAreaHighlighted
+##  <a name="ismenuareahighlighted"></a>CMFCRibbonButton::IsMenuAreaHighlighted
 
 ```
 virtual BOOL IsMenuAreaHighlighted() const;
@@ -690,7 +690,7 @@ virtual BOOL IsMenuAreaHighlighted() const;
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="ismenuonbottom"></a>  CMFCRibbonButton::IsMenuOnBottom
+##  <a name="ismenuonbottom"></a>CMFCRibbonButton::IsMenuOnBottom
 
 ```
 BOOL IsMenuOnBottom() const;
@@ -700,7 +700,7 @@ BOOL IsMenuOnBottom() const;
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="ispopupdefaultmenulook"></a>  CMFCRibbonButton::IsPopupDefaultMenuLook
+##  <a name="ispopupdefaultmenulook"></a>CMFCRibbonButton::IsPopupDefaultMenuLook
 
 ```
 virtual BOOL IsPopupDefaultMenuLook() const;
@@ -710,9 +710,9 @@ virtual BOOL IsPopupDefaultMenuLook() const;
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="isrightalignmenu"></a>  CMFCRibbonButton::IsRightAlignMenu
+##  <a name="isrightalignmenu"></a>CMFCRibbonButton::IsRightAlignMenu
 
-Určuje, zda nabídce zarovnán doprava.
+Určuje, zda je nabídka zarovnána vpravo.
 
 ```
 BOOL IsRightAlignMenu() const;
@@ -720,9 +720,9 @@ BOOL IsRightAlignMenu() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Hodnota TRUE, pokud je nabídka zarovnaný doprava; v opačném případě FALSE.
+TRUE, pokud je nabídka zarovnána vpravo; v opačném případě FALSE.
 
-##  <a name="issinglelinetext"></a>  CMFCRibbonButton::IsSingleLineText
+##  <a name="issinglelinetext"></a>CMFCRibbonButton::IsSingleLineText
 
 ```
 BOOL IsSingleLineText() const;
@@ -732,7 +732,7 @@ BOOL IsSingleLineText() const;
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="oncalctextsize"></a>  CMFCRibbonButton::OnCalcTextSize
+##  <a name="oncalctextsize"></a>CMFCRibbonButton::OnCalcTextSize
 
 ```
 virtual void OnCalcTextSize(CDC* pDC);
@@ -740,11 +740,11 @@ virtual void OnCalcTextSize(CDC* pDC);
 
 ### <a name="parameters"></a>Parametry
 
-[in] *pDC*<br/>
+pro *primární řadič domény*<br/>
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="onclick"></a>  CMFCRibbonButton::OnClick
+##  <a name="onclick"></a>CMFCRibbonButton:: Click
 
 Volá se rozhraním, když uživatel klikne na tlačítko.
 
@@ -754,14 +754,14 @@ virtual void OnClick(CPoint point);
 
 ### <a name="parameters"></a>Parametry
 
-*point*<br/>
-[in] Určuje pozici kliknutí myší.
+*Vyberte*<br/>
+pro Určuje umístění kliknutí myší.
 
 ### <a name="remarks"></a>Poznámky
 
-Potlačí tuto metodu v odvozené třídě, pokud chcete pro zpracování této události.
+Tuto metodu přepište v odvozené třídě, pokud chcete tuto událost zpracovat.
 
-##  <a name="ondraw"></a>  CMFCRibbonButton::OnDraw
+##  <a name="ondraw"></a>CMFCRibbonButton:: Draw
 
 ```
 virtual void OnDraw(CDC* pDC);
@@ -769,11 +769,11 @@ virtual void OnDraw(CDC* pDC);
 
 ### <a name="parameters"></a>Parametry
 
-[in] *pDC*<br/>
+pro *primární řadič domény*<br/>
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="ondrawborder"></a>  CMFCRibbonButton::OnDrawBorder
+##  <a name="ondrawborder"></a>CMFCRibbonButton::OnDrawBorder
 
 ```
 virtual void OnDrawBorder(CDC* pDC);
@@ -781,11 +781,11 @@ virtual void OnDrawBorder(CDC* pDC);
 
 ### <a name="parameters"></a>Parametry
 
-[in] *pDC*<br/>
+pro *primární řadič domény*<br/>
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="onfillbackground"></a>  CMFCRibbonButton::OnFillBackground
+##  <a name="onfillbackground"></a>CMFCRibbonButton::OnFillBackground
 
 ```
 virtual COLORREF OnFillBackground(CDC* pDC);
@@ -793,23 +793,23 @@ virtual COLORREF OnFillBackground(CDC* pDC);
 
 ### <a name="parameters"></a>Parametry
 
-[in] *pDC*<br/>
+pro *primární řadič domény*<br/>
 
 ### <a name="return-value"></a>Návratová hodnota
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="removeallsubitems"></a>  CMFCRibbonButton::RemoveAllSubItems
+##  <a name="removeallsubitems"></a>CMFCRibbonButton::RemoveAllSubItems
 
-Odebere všechny položky nabídky v místní nabídce.
+Odebere všechny položky nabídky z místní nabídky.
 
 ```
 void RemoveAllSubItems();
 ```
 
-##  <a name="removesubitem"></a>  CMFCRibbonButton::RemoveSubItem
+##  <a name="removesubitem"></a>CMFCRibbonButton::RemoveSubItem
 
-Odebere položku nabídky v místní nabídce.
+Odstraní položku nabídky z místní nabídky.
 
 ```
 BOOL RemoveSubItem(int nIndex);
@@ -818,15 +818,15 @@ BOOL RemoveSubItem(int nIndex);
 ### <a name="parameters"></a>Parametry
 
 *nIndex*<br/>
-[in] Určuje index založený na nule, který chcete odebrat položky nabídky.
+pro Určuje index založený na nule položky nabídky, kterou chcete odebrat.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Hodnota TRUE, pokud zadaná položka úspěšně odebral; v opačném případě FALSE v případě *nIndex* je záporná nebo přesahuje počet položek nabídky v místní nabídce.
+TRUE, pokud byla zadaná položka úspěšně odebrána; jinak FALSE, pokud je *nIndex* záporné nebo překračuje počet položek nabídky v místní nabídce.
 
-##  <a name="setaccdata"></a>  CMFCRibbonButton::SetACCData
+##  <a name="setaccdata"></a>CMFCRibbonButton::SetACCData
 
-Nastaví data pro usnadnění pro tlačítko pásu karet.
+Nastaví data přístupnosti pro tlačítko pásu karet.
 
 ```
 virtual BOOL SetACCData(
@@ -837,20 +837,20 @@ virtual BOOL SetACCData(
 ### <a name="parameters"></a>Parametry
 
 *pParent*<br/>
-Nadřazené okno pro prvek pásu karet.
+Nadřazené okno elementu pásu karet.
 
 *data*<br/>
-Dostupnost dat pro prvek pásu karet.
+Data přístupnosti prvku pásu karet.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vrátí hodnotu TRUE v případě úspěchu; v opačném případě FALSE.
+Vrátí hodnotu TRUE, pokud je úspěšná; v opačném případě FALSE.
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="setalwayslargeimage"></a>  CMFCRibbonButton::SetAlwaysLargeImage
+##  <a name="setalwayslargeimage"></a>CMFCRibbonButton::SetAlwaysLargeImage
 
-Určuje, zda na tomto tlačítku zobrazí velké nebo malé image při sbalení uživatel na tlačítko.
+Určuje, zda tlačítko zobrazí velký nebo malý obrázek, když uživatel sbalí tlačítko.
 
 ```
 void SetAlwaysLargeImage(BOOL bSet=TRUE);
@@ -859,9 +859,9 @@ void SetAlwaysLargeImage(BOOL bSet=TRUE);
 ### <a name="parameters"></a>Parametry
 
 *bSet*<br/>
-[in] Při hodnotě TRUE se na tomto tlačítku zobrazí velký obrázek. V opačném případě na tomto tlačítku zobrazí malý obrázek.
+pro Je-li nastavena hodnota TRUE, tlačítko zobrazí velký obrázek. V opačném případě tlačítko zobrazí malý obrázek.
 
-##  <a name="setdefaultcommand"></a>  CMFCRibbonButton::SetDefaultCommand
+##  <a name="setdefaultcommand"></a>CMFCRibbonButton::SetDefaultCommand
 
 Povolí výchozí příkaz pro tlačítko pásu karet.
 
@@ -872,13 +872,13 @@ void SetDefaultCommand(BOOL bSet=TRUE);
 ### <a name="parameters"></a>Parametry
 
 *bSet*<br/>
-[in] Při hodnotě TRUE může spustit tlačítko jeho výchozí příkaz. Pokud má hodnotu FALSE, tlačítko nelze provést její výchozí příkaz.
+pro V případě hodnoty TRUE může tlačítko Spustit výchozí příkaz. Pokud má hodnotu FALSE, tlačítko nemůže spustit svůj výchozí příkaz.
 
 ### <a name="remarks"></a>Poznámky
 
-*bSet* platí, pouze pokud má tlačítka nabídky. Pokud *bSet* hodnotu TRUE, na tlačítko můžete provést její výchozí příkaz a přiřazené rozbalovací nabídce se zobrazí, pouze když uživatel klikne na šipku na pravé straně tlačítka. V opačném případě tlačítka nelze provést její výchozí příkaz a zobrazí se místní nabídka, bez ohledu na to, jaké oblasti uživatel klikne.
+*bSet* je relevantní pouze v případě, že tlačítko obsahuje nabídku. Pokud má *bSet* hodnotu true, tlačítko může spustit výchozí příkaz a přiřazená místní nabídka se zobrazí pouze v případě, že uživatel klikne na šipku na pravém okraji tlačítka. V opačném případě tlačítko nemůže spustit výchozí příkaz a místní nabídka se zobrazí bez ohledu na to, jakou oblast tlačítka uživatel klikne.
 
-##  <a name="setdescription"></a>  CMFCRibbonButton::SetDescription
+##  <a name="setdescription"></a>CMFCRibbonButton::SetDescription
 
 ```
 virtual void SetDescription(LPCTSTR lpszText);
@@ -890,9 +890,9 @@ virtual void SetDescription(LPCTSTR lpszText);
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="setimageindex"></a>  CMFCRibbonButton::SetImageIndex
+##  <a name="setimageindex"></a>CMFCRibbonButton::SetImageIndex
 
-Přiřadí index obrázku tlačítku.
+Přiřadí index k obrázku tlačítka.
 
 ```
 void SetImageIndex(
@@ -903,14 +903,14 @@ void SetImageIndex(
 ### <a name="parameters"></a>Parametry
 
 *nIndex*<br/>
-[in] Určuje index bitové kopie.
+pro Určuje index obrázku.
 
 *bLargeImage*<br/>
-[in] Při hodnotě TRUE se zadaným indexem odkazuje na seznamu velkých obrázků. V opačném případě index odkazuje na seznamu malých obrázků.
+pro Pokud má hodnotu TRUE, zadaný index odkazuje na seznam velkých imagí. V opačném případě index odkazuje na seznam malých obrázků.
 
-##  <a name="setmenu"></a>  CMFCRibbonButton::SetMenu
+##  <a name="setmenu"></a>CMFCRibbonButton::SetMenu
 
-Místní nabídka přiřadí tlačítko pásu karet.
+Přiřadí místní nabídku na tlačítko pásu karet.
 
 ```
 void SetMenu(
@@ -927,22 +927,22 @@ void SetMenu(
 ### <a name="parameters"></a>Parametry
 
 *hMenu*<br/>
-Popisovač pro nabídku Windows.
+Popisovač nabídky systému Windows.
 
 *bIsDefaultCommand*<br/>
-Při hodnotě TRUE se na tlačítko můžete provést její výchozí příkaz; v opačném případě na tomto tlačítku zobrazí rozbalovací nabídky.
+V případě hodnoty TRUE může tlačítko Spustit výchozí příkaz; v opačném případě tlačítko zobrazí místní nabídku.
 
 *bRightAlign*<br/>
-Pokud je hodnota TRUE, v nabídce zarovnán doprava. V opačném případě nabídce zarovnané vlevo.
+V případě hodnoty TRUE je nabídka zarovnána vpravo. V opačném případě je nabídka zarovnána doleva.
 
 *uiMenuResID*<br/>
 ID prostředku nabídky
 
 ### <a name="remarks"></a>Poznámky
 
-Pokud aplikace přiřadí v nabídce na tlačítko, na tomto tlačítku zobrazí šipkou vpravo. Pokud *bIsDefaultCommand* má hodnotu TRUE, v nabídce se zobrazí, pouze když uživatel klepne na šipku. Pokud uživatel klikne na tlačítko, jeho výchozí příkaz je proveden. Pokud *bIsDefaultCommand* má hodnotu FALSE, v nabídce se zobrazí po kliknutí na tlačítko kdekoli.
+Když aplikace přiřadí nabídku tlačítku, zobrazí se na pravé straně tlačítko se šipkou. Pokud má *bIsDefaultCommand* hodnotu true, nabídka se zobrazí pouze v případě, že uživatel klikne na šipku. Pokud uživatel klikne na tlačítko, jeho výchozí příkaz se spustí. Pokud má *bIsDefaultCommand* hodnotu false, zobrazí se nabídka Kliknutím kamkoli na tlačítko.
 
-##  <a name="setparentcategory"></a>  CMFCRibbonButton::SetParentCategory
+##  <a name="setparentcategory"></a>CMFCRibbonButton::SetParentCategory
 
 ```
 virtual void SetParentCategory(CMFCRibbonCategory* pParent);
@@ -950,13 +950,13 @@ virtual void SetParentCategory(CMFCRibbonCategory* pParent);
 
 ### <a name="parameters"></a>Parametry
 
-[in] *pParent*<br/>
+pro *pParent*<br/>
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="setrightalignmenu"></a>  CMFCRibbonButton::SetRightAlignMenu
+##  <a name="setrightalignmenu"></a>CMFCRibbonButton::SetRightAlignMenu
 
-Zarovná v rozbalovací nabídce na hraničních zařízeních tlačítka.
+Zarovná rozbalovací nabídku k okraji tlačítka.
 
 ```
 void SetRightAlignMenu(BOOL bSet=TRUE);
@@ -965,9 +965,9 @@ void SetRightAlignMenu(BOOL bSet=TRUE);
 ### <a name="parameters"></a>Parametry
 
 *bSet*<br/>
-[in] Pokud je hodnota TRUE, v nabídce zarovnán doprava. V opačném případě je v nabídce vlevo zarovnaný
+pro V případě hodnoty TRUE je nabídka zarovnána vpravo. V opačném případě je nabídka zarovnána doleva.
 
-##  <a name="settext"></a>  CMFCRibbonButton::SetText
+##  <a name="settext"></a>CMFCRibbonButton::SetText
 
 ```
 virtual void SetText(LPCTSTR lpszText);

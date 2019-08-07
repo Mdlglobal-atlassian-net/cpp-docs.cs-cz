@@ -4,18 +4,18 @@ ms.date: 04/22/2019
 helpviewer_keywords:
 - warnings, by compiler version
 - cl.exe compiler, setting warning options
-ms.openlocfilehash: e417de57292e4b21d81e8d6643ba77d8b169af07
-ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.openlocfilehash: 07c2e8e9ff061e20f9a3bceaa3d12d051e975e1e
+ms.sourcegitcommit: c3bf94210bdb73be80527166264d49e33784152c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65448174"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68821086"
 ---
 # <a name="compiler-warnings-by-compiler-version"></a>Upozornění kompilátoru podle verze kompilátoru
 
-Kompilátor může potlačit upozornění, která byla zavedená po verzi určíte pomocí [/WV:](../../build/reference/compiler-option-warning-level.md) – možnost kompilátoru. Tato možnost je užitečná pro správu vašeho procesu sestavení, když představují novou verzi sady nástrojů a chcete dočasně potlačení nové upozornění. Tato volba pouze potlačí případná upozornění, nikoli nové chybové zprávy. Nepotlačovat všechna nová upozornění trvale! Doporučujeme vždy kompilaci na nejvyšší úrovni regulární upozornění `/W4`a odeberte `/Wv` možnost co nejdříve praktické ve vašem buildu.
+Kompilátor může potlačit upozornění, která byla představena po zadané verzi, pomocí možnosti kompilátoru [/WV](../../build/reference/compiler-option-warning-level.md) . Tato možnost je užitečná pro správu procesu sestavení, když zavádíte novou verzi sady nástrojů a chcete dočasně potlačit nová upozornění. Tato možnost potlačí jenom upozornění, ne nové chybové zprávy. Potlačit všechna nová upozornění trvale! Doporučujeme, abyste vždycky zkompilujete na nejvyšší úrovni běžné výstrahy, `/W4`a později v buildu `/Wv` odebrali možnost, a to hned jako v praxi.
 
-Tyto verze kompilátoru zavedená nová upozornění:
+Tyto verze kompilátoru představily nová upozornění:
 
 | Produkt | Číslo verze kompilátoru |
 |-|-|
@@ -31,23 +31,23 @@ Tyto verze kompilátoru zavedená nová upozornění:
 | Visual Studio 2015 Update 2 | 19.00.23918.0 |
 | Visual Studio 2015 Update 3 | 19.00.24215.1 |
 | Visual Studio 2017 RTM | 19.10.25017.0 |
-| Visual Studio 2017 version 15.3 | 19.11.25506.0 |
+| Visual Studio 2017 verze 15,3 | 19.11.25506.0 |
 | Visual Studio 2017 verze 15.5 | 19.12.25830.0 |
 | Visual Studio 2017 verze 15.6 | 19.13.26128.0 |
-| Visual Studio 2017 verze 15.7 | 19.14.26428.0 |
+| Visual Studio 2017 verze 15,7 | 19.14.26428.0 |
 | Visual Studio 2017 verze 15.8 | 19.15.26726.0 |
-| Visual Studio 2017 verze 15.9 | 19.16.26926.0 |
+| Visual Studio 2017 verze 15,9 | 19.16.26926.0 |
 | Visual Studio 2019 RTM | 19.20.27004.0 |
 
-Můžete zadat pouze hlavní číslo, číslo hlavní a dílčí nebo hlavní, vedlejší verzi a čísla do sestavení `/Wv` možnost. Kompilátor oznámí všechna upozornění, které odpovídají verze, které začínat zadaným číslem a potlačí všechna upozornění pro větší než zadané číslo verze. Například `/Wv:17` zprávy upozornění zavedená v rámci nebo před jakoukoli verzi nástroje Visual Studio 2012 a potlačí upozornění zavedená jakékoli kompilátorem z Visual Studio 2013 (verzi 18) nebo novější. Potlačit upozornění zavedená v sadě Visual Studio 2015 update 2 a novější, je možné použít `/Wv:19.00.23506`. Použití `/Wv:19.11` hlásit upozornění zavedená v libovolné verzi sady Visual Studio před Visual Studio 2017 verze 15.5, ale potlačit upozornění zavedená v sadě Visual Studio 2017 verze 15.5 nebo novější.
+Můžete zadat pouze hlavní číslo, hlavní a vedlejší čísla nebo čísla `/Wv` hlavních, vedlejších a buildů. Kompilátor hlásí všechna upozornění, která splňují verze začínající zadaným číslem, a potlačí všechna upozornění pro verze větší než zadané číslo. Například `/Wv:17` sestavy upozornění zavedená ve verzi sady Visual Studio 2012 nebo před ní a potlačí upozornění zavedená libovolným kompilátorem z Visual Studio 2013 (verze 18) nebo novější. Chcete-li potlačit upozornění zavedená v aplikaci Visual Studio 2015 Update 2 `/Wv:19.00.23506`a novější, můžete použít. Použijte `/Wv:19.11` k hlášení upozornění zavedených ve verzi sady Visual Studio před verzí Visual Studio 2017 verze 15,5, ale potlačit upozornění zavedená v aplikaci Visual Studio 2017 verze 15,5 a novější.
 
-V následujících oddílech najdete seznam upozornění zavedená v každé verzi Visual C++ , který můžete potlačit pomocí `/Wv` – možnost kompilátoru. `/Wv` Možnost nelze potlačit upozornění, které nejsou uvedené, které jsou staršího data než zadanou verzí kompilátoru.
+V následujících částech jsou uvedena upozornění zavedená jednotlivými verzemi C++ vizuálů, která lze potlačit pomocí `/Wv` možnosti kompilátoru. `/Wv` Možnost neumožňuje potlačit upozornění, která nejsou uvedena, která zadáte aktuální verzi kompilátoru.
 
 ::: moniker range=">= vs-2019"
 
-## <a name="warnings-introduced-in-visual-studio-2019-rtw-compiler-version-1920270040"></a>Upozornění zavedená ve verzi Visual Studio. 2019 RTW (verze kompilátoru 19.20.27004.0)
+## <a name="warnings-introduced-in-visual-studio-2019-rtw-compiler-version-1920270040"></a>Upozornění zavedená v aplikaci Visual Studio 2019 RTW (kompilátor verze 19.20.27004.0)
 
-Tato upozornění a všechna upozornění v pozdějších verzích jsou potlačeny pomocí možnosti kompilátoru `/Wv:19.15`.
+Tato upozornění a všechna upozornění v novějších verzích jsou potlačeny pomocí možnosti `/Wv:19.15`kompilátoru.
 
 |||
 |-|-|
@@ -57,9 +57,9 @@ Tato upozornění a všechna upozornění v pozdějších verzích jsou potlače
 ::: moniker range=">= vs-2017"
 
 
-## <a name="warnings-introduced-in-visual-studio-2017-version-158-compiler-version-1915267260"></a>Upozornění zavedená v sadě Visual Studio 2017 verze 15.8 (verze kompilátoru 19.15.26726.0)
+## <a name="warnings-introduced-in-visual-studio-2017-version-158-compiler-version-1915267260"></a>Upozornění zavedená v aplikaci Visual Studio 2017 verze 15,8 (kompilátor verze 19.15.26726.0)
 
-Tato upozornění a všechna upozornění v pozdějších verzích jsou potlačeny pomocí možnosti kompilátoru `/Wv:19.14`.
+Tato upozornění a všechna upozornění v novějších verzích jsou potlačeny pomocí možnosti `/Wv:19.14`kompilátoru.
 
 |||
 |-|-|
@@ -83,26 +83,26 @@ Tato upozornění a všechna upozornění v pozdějších verzích jsou potlače
 | C5106 | `macro redefined with different parameter names` |
 | C5107 | `missing terminating 'char' character` |
 
-## <a name="warnings-introduced-in-visual-studio-2017-version-157-compiler-version-1914264280"></a>Upozornění zavedená v sadě Visual Studio 2017 verze 15.7 (verze kompilátoru 19.14.26428.0)
+## <a name="warnings-introduced-in-visual-studio-2017-version-157-compiler-version-1914264280"></a>Upozornění zavedená v aplikaci Visual Studio 2017 verze 15,7 (kompilátor verze 19.14.26428.0)
 
-Tato upozornění a všechna upozornění v pozdějších verzích jsou potlačeny pomocí možnosti kompilátoru `/Wv:19.13`.
+Tato upozornění a všechna upozornění v novějších verzích jsou potlačeny pomocí možnosti `/Wv:19.13`kompilátoru.
 
 |||
 |-|-|
 | C4642 | `'issue': could not import the constraints for generic parameter 'parameter'` |
 | C5045 | `Compiler will insert Spectre mitigation for memory load if /Qspectre switch specified` |
 
-## <a name="warnings-introduced-in-visual-studio-2017-version-156-compiler-version-1913261280"></a>Upozornění zavedená v sadě Visual Studio 2017 verze 15.6 (verze kompilátoru 19.13.26128.0)
+## <a name="warnings-introduced-in-visual-studio-2017-version-156-compiler-version-1913261280"></a>Upozornění zavedená v aplikaci Visual Studio 2017 verze 15,6 (kompilátor verze 19.13.26128.0)
 
-Tato upozornění a všechna upozornění v pozdějších verzích jsou potlačeny pomocí možnosti kompilátoru `/Wv:19.12`.
+Tato upozornění a všechna upozornění v novějších verzích jsou potlačeny pomocí možnosti `/Wv:19.12`kompilátoru.
 
 |||
 |-|-|
 | C5044 | `An argument to command-line option option points to a path 'path' that does not exist` |
 
-## <a name="warnings-introduced-in-visual-studio-2017-version-155-compiler-version-1912258300"></a>Upozornění zavedená v sadě Visual Studio 2017 verze 15.5 (verze kompilátoru 19.12.25830.0)
+## <a name="warnings-introduced-in-visual-studio-2017-version-155-compiler-version-1912258300"></a>Upozornění zavedená v aplikaci Visual Studio 2017 verze 15,5 (kompilátor verze 19.12.25830.0)
 
-Tato upozornění a všechna upozornění v pozdějších verzích jsou potlačeny pomocí možnosti kompilátoru `/Wv:19.11`.
+Tato upozornění a všechna upozornění v novějších verzích jsou potlačeny pomocí možnosti `/Wv:19.11`kompilátoru.
 
 |||
 |-|-|
@@ -114,9 +114,9 @@ Tato upozornění a všechna upozornění v pozdějších verzích jsou potlače
 | C5042 | `'declaration': function declarations at block scope cannot be specified 'inline' in standard C++; remove 'inline' specifier` |
 | C5043 | `'specification': exception specification does not match previous declaration` |
 
-## <a name="warnings-introduced-in-visual-studio-2017-version-153-compiler-version-1911255060"></a>Upozornění zavedená v sadě Visual Studio 2017 verze 15.3 (verze kompilátoru 19.11.25506.0)
+## <a name="warnings-introduced-in-visual-studio-2017-version-153-compiler-version-1911255060"></a>Upozornění zavedená v aplikaci Visual Studio 2017 verze 15,3 (kompilátor verze 19.11.25506.0)
 
-Tato upozornění a všechna upozornění v pozdějších verzích jsou potlačeny pomocí možnosti kompilátoru `/Wv:19.10`.
+Tato upozornění a všechna upozornění v novějších verzích jsou potlačeny pomocí možnosti `/Wv:19.10`kompilátoru.
 
 |||
 |-|-|
@@ -135,9 +135,9 @@ Tato upozornění a všechna upozornění v pozdějších verzích jsou potlače
 | C5037 | `'*member-function*': an out-of-line definition of a member of a class template cannot have default arguments` |
 | C5038 | `data member 'member1' will be initialized after data member 'member2'` |
 
-## <a name="warnings-introduced-in-visual-studio-2017-rtm-compiler-version-1910250170"></a>Upozornění zavedená v sadě Visual Studio 2017 RTM (verze kompilátoru 19.10.25017.0)
+## <a name="warnings-introduced-in-visual-studio-2017-rtm-compiler-version-1910250170"></a>Upozornění zavedená ve Visual Studiu 2017 RTM (kompilátor verze 19.10.25017.0)
 
-Tato upozornění a všechna upozornění v pozdějších verzích jsou potlačeny pomocí možnosti kompilátoru `/Wv:19.00`.
+Tato upozornění a všechna upozornění v novějších verzích jsou potlačeny pomocí možnosti `/Wv:19.00`kompilátoru.
 
 |||
 |-|-|
@@ -148,9 +148,9 @@ Tato upozornění a všechna upozornění v pozdějších verzích jsou potlače
 
 ::: moniker-end
 
-## <a name="warnings-introduced-in-visual-studio-2015-update-3-compiler-version-1900242151"></a>Upozornění zavedená ve Visual Studio 2015 Update 3 (verze kompilátoru 19.00.24215.1)
+## <a name="warnings-introduced-in-visual-studio-2015-update-3-compiler-version-1900242151"></a>Upozornění zavedená v aktualizaci Visual Studio 2015 Update 3 (kompilátor verze 19.00.24215.1)
 
-Tato upozornění a všechna upozornění v pozdějších verzích jsou potlačeny pomocí možnosti kompilátoru `/Wv:19.00.23918`.
+Tato upozornění a všechna upozornění v novějších verzích jsou potlačeny pomocí možnosti `/Wv:19.00.23918`kompilátoru.
 
 |||
 |-|-|
@@ -159,9 +159,9 @@ Tato upozornění a všechna upozornění v pozdějších verzích jsou potlače
 | C4598 | `'#include <header>': header number number in the source does not match source at that position` |
 | C4599 | `'argument': source argument number number does not match source` |
 
-## <a name="warnings-introduced-in-visual-studio-2015-update-2-compiler-version-1900239180"></a>Upozornění zavedená ve Visual Studio 2015 Update 2 (verze kompilátoru 19.00.23918.0)
+## <a name="warnings-introduced-in-visual-studio-2015-update-2-compiler-version-1900239180"></a>Upozornění zavedená v aktualizaci Visual Studio 2015 Update 2 (kompilátor verze 19.00.23918.0)
 
-Tato upozornění a všechna upozornění v pozdějších verzích jsou potlačeny pomocí možnosti kompilátoru `/Wv:19.00.23506`.
+Tato upozornění a všechna upozornění v novějších verzích jsou potlačeny pomocí možnosti `/Wv:19.00.23506`kompilátoru.
 
 |||
 |-|-|
@@ -170,9 +170,9 @@ Tato upozornění a všechna upozornění v pozdějších verzích jsou potlače
 | C4828 | `The file contains a character starting at offset 0xvalue that is illegal in the current source character set (codepage number).` |
 | C4868 | `compiler may not enforce left-to-right evaluation order in braced initializer list` |
 
-## <a name="warnings-introduced-in-visual-studio-2015-update-1-compiler-version-1900235060"></a>Upozornění zavedená ve Visual Studio 2015 Update 1 (verze kompilátoru 19.00.23506.0)
+## <a name="warnings-introduced-in-visual-studio-2015-update-1-compiler-version-1900235060"></a>Upozornění zavedená v aktualizaci Visual Studio 2015 Update 1 (kompilátor verze 19.00.23506.0)
 
-Tato upozornění a všechna upozornění v pozdějších verzích jsou potlačeny pomocí možnosti kompilátoru `/Wv:19.00.23026`.
+Tato upozornění a všechna upozornění v novějších verzích jsou potlačeny pomocí možnosti `/Wv:19.00.23026`kompilátoru.
 
 |||
 |-|-|
@@ -181,9 +181,9 @@ Tato upozornění a všechna upozornění v pozdějších verzích jsou potlače
 | C5031 | `#pragma warning(pop): likely mismatch, popping warning state pushed in different file` |
 | C5032 | `detected #pragma warning(push) with no corresponding #pragma warning(pop)` |
 
-## <a name="warnings-introduced-in-visual-studio-2015-rtm-compiler-version-1900230260"></a>Upozornění zavedená ve Visual Studio 2015 RTM (verze kompilátoru 19.00.23026.0)
+## <a name="warnings-introduced-in-visual-studio-2015-rtm-compiler-version-1900230260"></a>Upozornění zavedená ve Visual Studiu 2015 RTM (kompilátor verze 19.00.23026.0)
 
-Tato upozornění a všechna upozornění v pozdějších verzích jsou potlačeny pomocí možnosti kompilátoru `/Wv:18`.
+Tato upozornění a všechna upozornění v novějších verzích jsou potlačeny pomocí možnosti `/Wv:18`kompilátoru.
 
 |||
 |-|-|
@@ -240,9 +240,9 @@ Tato upozornění a všechna upozornění v pozdějších verzích jsou potlače
 | C5029 | `nonstandard extension used: alignment attributes in C++ apply to variables, data members and tag types only` |
 | C5030 | `attribute 'attribute' is not recognized` |
 
-## <a name="warnings-introduced-in-visual-studio-2013-compiler-version-1800210051"></a>Upozornění zavedená v sadě Visual Studio 2013 (verzi kompilátoru 18.00.21005.1)
+## <a name="warnings-introduced-in-visual-studio-2013-compiler-version-1800210051"></a>Upozornění zavedená v Visual Studio 2013 (kompilátor verze 18.00.21005.1)
 
-Tato upozornění a všechna upozornění v pozdějších verzích jsou potlačeny pomocí možnosti kompilátoru `/Wv:17`.
+Tato upozornění a všechna upozornění v novějších verzích jsou potlačeny pomocí možnosti `/Wv:17`kompilátoru.
 
 |||
 |-|-|
@@ -269,9 +269,9 @@ Tato upozornění a všechna upozornění v pozdějších verzích jsou potlače
 | C4991 | `Warbird: function 'declaration' marked as __forceinline not inlined because protection level of inlinee is greater than the parent` |
 | C4992 | `Warbird: function 'declaration' marked as __forceinline not inlined because it contains inline assembly which cannot be protected` |
 
-## <a name="warnings-introduced-in-visual-studio-2012-compiler-version-1700511061"></a>Upozornění zavedená v sadě Visual Studio 2012 (verze kompilátoru 17.00.51106.1)
+## <a name="warnings-introduced-in-visual-studio-2012-compiler-version-1700511061"></a>Upozornění zavedená v aplikaci Visual Studio 2012 (kompilátor verze 17.00.51106.1)
 
-Tato upozornění a všechna upozornění v pozdějších verzích jsou potlačeny pomocí možnosti kompilátoru `/Wv:16`.
+Tato upozornění a všechna upozornění v novějších verzích jsou potlačeny pomocí možnosti `/Wv:16`kompilátoru.
 
 |||
 |-|-|
@@ -304,7 +304,7 @@ Tato upozornění a všechna upozornění v pozdějších verzích jsou potlače
 | C4703 | `potentially uninitialized local pointer variable 'name' used` |
 | C4728 | `/Yl- option ignored because PCH reference is required` |
 | C4745 | `volatile access of 'name' cannot be honored due to its size` |
-| C4746|přístup typu "name" je/volatile: < iso | MS > Nastavení; Zvažte použití vnitřních funkcí Using __iso_volatile_load/store |
+| C4746|nestálý přístup k názvu podléhá/volatile: < ISO | nastavení MS >; Zvažte použití vnitřních funkcí __iso_volatile_load/Store. |
 | C4872 | `floating point division by zero detected when compiling the call graph for the concurrency::parallel_for_each at: 'description'` |
 | C4880 | `casting from 'type' to 'type': casting away constness from a pointer or reference may result in undefined behavior in an amp restricted function` |
 | C4881 | `the constructor and/or the destructor will not be invoked for tile_static variable 'type'` |
@@ -312,9 +312,9 @@ Tato upozornění a všechna upozornění v pozdějších verzích jsou potlače
 | C4988 | `'type': variable declared outside class/function scope` |
 | C4989 | `'description': type has conflicting definitions.` |
 
-## <a name="warnings-introduced-in-visual-studio-2010-compiler-version-16004021901"></a>Upozornění zavedená v sadě Visual Studio 2010 (verze kompilátoru 16.00.40219.01)
+## <a name="warnings-introduced-in-visual-studio-2010-compiler-version-16004021901"></a>Upozornění zavedená v aplikaci Visual Studio 2010 (kompilátor verze 16.00.40219.01)
 
-Tato upozornění a všechna upozornění v pozdějších verzích jsou potlačeny pomocí možnosti kompilátoru `/Wv:15`.
+Tato upozornění a všechna upozornění v novějších verzích jsou potlačeny pomocí možnosti `/Wv:15`kompilátoru.
 
 |||
 |-|-|
@@ -328,9 +328,9 @@ Tato upozornění a všechna upozornění v pozdějších verzích jsou potlače
 | C4986 | `'declaration': exception specification does not match previous declaration` |
 | C4987 | `nonstandard extension used: 'throw (...)'` |
 
-## <a name="warnings-introduced-in-visual-studio-2008-compiler-version-15002102208"></a>Upozornění zavedená v sadě Visual Studio 2008 (verze kompilátoru 15.00.21022.08)
+## <a name="warnings-introduced-in-visual-studio-2008-compiler-version-15002102208"></a>Upozornění zavedená v aplikaci Visual Studio 2008 (kompilátor verze 15.00.21022.08)
 
-Tato upozornění a všechna upozornění v pozdějších verzích jsou potlačeny pomocí možnosti kompilátoru `/Wv:14`.
+Tato upozornění a všechna upozornění v novějších verzích jsou potlačeny pomocí možnosti `/Wv:14`kompilátoru.
 
 |||
 |-|-|
@@ -343,9 +343,9 @@ Tato upozornění a všechna upozornění v pozdějších verzích jsou potlače
 | C4910 | `'type': '__declspec(dllexport)' and 'extern' are incompatible on an explicit instantiation` |
 | C4985 | `'declaration': attributes not present on previous declaration.` |
 
-## <a name="warnings-introduced-in-visual-studio-2005-compiler-version-140050727762"></a>Upozornění zavedená v sadě Visual Studio 2005 (verze kompilátoru 14.00.50727.762)
+## <a name="warnings-introduced-in-visual-studio-2005-compiler-version-140050727762"></a>Upozornění zavedená v aplikaci Visual Studio 2005 (kompilátor verze 14.00.50727.762)
 
-Tato upozornění a všechna upozornění v pozdějších verzích jsou potlačeny pomocí možnosti kompilátoru `/Wv:13`.
+Tato upozornění a všechna upozornění v novějších verzích jsou potlačeny pomocí možnosti `/Wv:13`kompilátoru.
 
 |||
 |-|-|
@@ -486,9 +486,9 @@ Tato upozornění a všechna upozornění v pozdějších verzích jsou potlače
 | C4971 | `Argument order: <target object>, <target function> for delegate constructor is deprecated, use <target function>, <target object>` |
 | C4972 | `Directly modifying or treating the result of an unbox operation as an lvalue is unverifiable` |
 
-## <a name="warnings-introduced-in-visual-studio-2003-compiler-version-13103077"></a>Upozornění zavedená v aplikaci Visual Studio 2003 (verze kompilátoru 13.10.3077)
+## <a name="warnings-introduced-in-visual-studio-2003-compiler-version-13103077"></a>Upozornění zavedená v aplikaci Visual Studio 2003 (kompilátor verze 13.10.3077)
 
-Tato upozornění a všechna upozornění v pozdějších verzích jsou potlačeny pomocí možnosti kompilátoru `/Wv:13.00.9466`.
+Tato upozornění a všechna upozornění v novějších verzích jsou potlačeny pomocí možnosti `/Wv:13.00.9466`kompilátoru.
 
 |||
 |-|-|
@@ -522,9 +522,9 @@ Tato upozornění a všechna upozornění v pozdějších verzích jsou potlače
 | C4953 | `Inlinee 'description' has been edited since profile data was collected, profile data not used` |
 | C4954 | `'description': not profiled (contains __int64 switch expression)` |
 
-## <a name="warnings-introduced-in-visual-studio-2002-compiler-version-13009466"></a>Upozornění zavedená v sadě Visual Studio 2002 (verze kompilátoru 13.00.9466)
+## <a name="warnings-introduced-in-visual-studio-2002-compiler-version-13009466"></a>Upozornění zavedená v aplikaci Visual Studio 2002 (kompilátor verze 13.00.9466)
 
-Tato upozornění a všechna upozornění v pozdějších verzích jsou potlačeny pomocí možnosti kompilátoru `/Wv:12`.
+Tato upozornění a všechna upozornění v novějších verzích jsou potlačeny pomocí možnosti `/Wv:12`kompilátoru.
 
 |||
 |-|-|
@@ -667,14 +667,14 @@ Tato upozornění a všechna upozornění v pozdějších verzích jsou potlače
 | C4945 | `'name': cannot import symbol from 'source': as 'declaration' has already been imported from another assembly 'source'` |
 | C4946 | `reinterpret_cast used between related classes: 'declaration' and 'declaration'` |
 | C4995 | `'name': name was marked as #pragma deprecated` |
-| C4996 | `'issue': description` |
+| C4996 | `'deprecated declaration': deprecation message (or "was declared deprecated")` |
 | C4997 | `'type': coclass does not implement a COM interface or pseudo-interface` |
 | C4998 | `EXPECTATION FAILED: description(number)` |
 
 ## <a name="see-also"></a>Viz také:
 
-[C /C++ nástroje chyby a upozornění kompilátoru a sestavení](../compiler-errors-1/c-cpp-build-errors.md) \
-[Upozornění kompilátoru C4000 - C5999](compiler-warnings-c4000-c5999.md) \
-[– Možnost kompilátoru/WV:](../../build/reference/compiler-option-warning-level.md) \
-[Upozornění kompilátoru, které jsou ve výchozím nastavení vypnuta](../../preprocessor/compiler-warnings-that-are-off-by-default.md) \
+[Chyby aC++ upozornění pro nástroje C/kompilátor a sestavení](../compiler-errors-1/c-cpp-build-errors.md) \
+[Upozornění kompilátoru C4000-C5999](compiler-warnings-c4000-c5999.md) \
+[/WV – možnost kompilátoru](../../build/reference/compiler-option-warning-level.md) \
+[Upozornění kompilátoru, která jsou ve výchozím nastavení vypnutá](../../preprocessor/compiler-warnings-that-are-off-by-default.md) \
 [warning](../../preprocessor/warning.md)

@@ -1,5 +1,5 @@
 ---
-title: Cmfceditbrowsectrl – třída
+title: CMFCEditBrowseCtrl – třída
 ms.date: 11/04/2016
 f1_keywords:
 - CMFCEditBrowseCtrl
@@ -26,16 +26,16 @@ helpviewer_keywords:
 - CMFCEditBrowseCtrl [MFC], OnIllegalFileName
 - CMFCEditBrowseCtrl [MFC], SetBrowseButtonImage
 ms.assetid: 69cfd886-3d35-4bee-8901-7c88fcf9520f
-ms.openlocfilehash: 0c6fb39e17e22bcac60d50b87f7370c6a9f91db9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 31fadc0a960ddfcf216951e1af481983b122ea0f
+ms.sourcegitcommit: c3bf94210bdb73be80527166264d49e33784152c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62237639"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68821314"
 ---
-# <a name="cmfceditbrowsectrl-class"></a>Cmfceditbrowsectrl – třída
+# <a name="cmfceditbrowsectrl-class"></a>CMFCEditBrowseCtrl – třída
 
-`CMFCEditBrowseCtrl` Třída podporuje textové pole procházení, což je upravitelné textové pole, který volitelně obsahuje tlačítko Procházet. Když uživatel klikne na tlačítko Procházet, ovládací prvek provede vlastní akci nebo zobrazí standardní dialogové okno, které obsahuje prohlížeč souborů nebo prohlížeč složek.
+`CMFCEditBrowseCtrl` Třída podporuje ovládací prvek pro úpravy, který je upravitelný textový rámeček, který může volitelně obsahovat tlačítko pro procházení. Když uživatel klikne na tlačítko Procházet, ovládací prvek provede vlastní akci nebo zobrazí standardní dialogové okno, které obsahuje prohlížeč souborů nebo prohlížeč složek.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -47,68 +47,68 @@ class CMFCEditBrowseCtrl : public CEdit
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
-|`CMFCEditBrowseCtrl::CMFCEditBrowseCtrl`|Výchozí konstruktor.|
+|`CMFCEditBrowseCtrl::CMFCEditBrowseCtrl`|Výchozí konstruktor|
 |`CMFCEditBrowseCtrl::~CMFCEditBrowseCtrl`|Destruktor.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
-|[CMFCEditBrowseCtrl::EnableBrowseButton](#enablebrowsebutton)|Povolí nebo zakáže (skryje) na tlačítko Procházet.|
-|[CMFCEditBrowseCtrl::EnableFileBrowseButton](#enablefilebrowsebutton)|Povolí tlačítko Procházet a umístí ovládací prvek pro úpravy Procházet *procházení souborů* režimu.|
-|[CMFCEditBrowseCtrl::EnableFolderBrowseButton](#enablefolderbrowsebutton)|Povolí tlačítko Procházet a umístí ovládací prvek pro úpravy Procházet *procházení složek* režimu.|
+|[CMFCEditBrowseCtrl::EnableBrowseButton](#enablebrowsebutton)|Povolí nebo zakáže (skryje) tlačítko Procházet.|
+|[CMFCEditBrowseCtrl::EnableFileBrowseButton](#enablefilebrowsebutton)|Povolí tlačítko Procházet a vloží ovládací prvek pro úpravy do režimu *procházení souborů* .|
+|[CMFCEditBrowseCtrl::EnableFolderBrowseButton](#enablefolderbrowsebutton)|Povolí tlačítko Procházet a vloží ovládací prvek pro procházení do složky do režimu *procházení* .|
 |[CMFCEditBrowseCtrl::GetMode](#getmode)|Vrátí aktuální režim procházení.|
-|[CMFCEditBrowseCtrl::OnAfterUpdate](#onafterupdate)|Volá se rozhraním po aktualizaci textové pole procházení s výsledek akce procházení.|
-|[CMFCEditBrowseCtrl::OnBrowse](#onbrowse)|Volá se rozhraním po kliknutí na tlačítko Procházet.|
-|[CMFCEditBrowseCtrl::OnChangeLayout](#onchangelayout)|Překreslí aktuální textové pole procházení.|
-|[CMFCEditBrowseCtrl::OnDrawBrowseButton](#ondrawbrowsebutton)|Volá se rozhraním, chcete-li nakreslit tlačítko Procházet.|
-|[CMFCEditBrowseCtrl::OnIllegalFileName](#onillegalfilename)|Volá se rozhraním, když byl zadán neplatný název souboru v textovém poli.|
-|`CMFCEditBrowseCtrl::PreTranslateMessage`|Přeloží okno zprávy před odesláním do [TranslateMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage) a [DispatchMessage](/windows/desktop/api/winuser/nf-winuser-dispatchmessage) funkce Windows. Syntaxe a další informace najdete v tématu [CWnd::PreTranslateMessage](../../mfc/reference/cwnd-class.md#pretranslatemessage).|
+|[CMFCEditBrowseCtrl::OnAfterUpdate](#onafterupdate)|Volá se rozhraním, když se ovládací prvek pro procházení úprav aktualizuje s výsledkem akce procházení.|
+|[CMFCEditBrowseCtrl::OnBrowse](#onbrowse)|Volá se rozhraním, když uživatel klikne na tlačítko Procházet.|
+|[CMFCEditBrowseCtrl::OnChangeLayout](#onchangelayout)|Překreslí aktuální ovládací prvek pro úpravy.|
+|[CMFCEditBrowseCtrl::OnDrawBrowseButton](#ondrawbrowsebutton)|Volá se rozhraním, aby se nakreslilo tlačítko pro procházení.|
+|[CMFCEditBrowseCtrl::OnIllegalFileName](#onillegalfilename)|Volá se rozhraním, když se v textovém poli zadal neplatný název souboru.|
+|`CMFCEditBrowseCtrl::PreTranslateMessage`|Přeloží zprávy oken před odesláním do funkcí Windows [TranslateMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage) a [DispatchMessage](/windows/desktop/api/winuser/nf-winuser-dispatchmessage) . Syntaxi a další informace naleznete v tématu [CWnd::P retranslatemessage](../../mfc/reference/cwnd-class.md#pretranslatemessage).|
 |[CMFCEditBrowseCtrl::SetBrowseButtonImage](#setbrowsebuttonimage)|Nastaví vlastní obrázek pro tlačítko Procházet.|
 
 ## <a name="remarks"></a>Poznámky
 
-Použití ovládacího prvku úprav Procházet a vyberte název souboru nebo složky. Volitelně můžete použijte ovládací prvek k provedení vlastní akce, například k zobrazení dialogového okna. Můžete zobrazit nebo se nezobrazí tlačítko Procházet a na tlačítko můžete použít vlastní popisek nebo image.
+Pomocí ovládacího prvku pro úpravu procházení vyberte název souboru nebo složky. Volitelně můžete použít ovládací prvek k provedení vlastní akce, například k zobrazení dialogového okna. Tlačítko Procházet můžete zobrazit nebo nezobrazit a můžete použít vlastní popisek nebo obrázek na tlačítku.
 
-*Režimu procházení* procházet upravit ovládací prvek určuje, zda se zobrazí tlačítko Procházet a jaká akce se vyvolá se při kliknutí na tlačítko. Další informace najdete v tématu [GetMode](#getmode) metody.
+*Režim procházení* ovládacího prvku pro úpravy určuje, zda se zobrazí tlačítko Procházet a jaká akce nastane při kliknutí na tlačítko. Další informace naleznete v tématu metoda [GetMode](#getmode) .
 
 `CMFCEditBrowseCtrl` Třída podporuje následující režimy.
 
 - **vlastní režim**
 
-   Vlastní akce se provádí, když uživatel klikne na tlačítko Procházet. Například může zobrazit dialogové okno s konkrétní aplikace.
+   Vlastní akce se provede, když uživatel klikne na tlačítko Procházet. Můžete například zobrazit dialogové okno specifické pro aplikaci.
 
 - **režim souboru**
 
-   Když uživatel klikne na tlačítko Procházet, zobrazí se dialogové okno Výběr standardní soubor.
+   Standardní dialogové okno pro výběr souboru se zobrazí, když uživatel klikne na tlačítko Procházet.
 
-- **režimu složky**
+- **režim složky**
 
-   Když uživatel klikne na tlačítko Procházet, zobrazí se dialogové okno Výběr standardní složku.
+   Dialogové okno pro výběr standardní složky se zobrazí, když uživatel klikne na tlačítko Procházet.
 
-## <a name="how-to-specify-an-edit-browse-control"></a>Postupy: Zadejte textové pole procházení
+## <a name="how-to-specify-an-edit-browse-control"></a>Postupy: Zadání ovládacího prvku pro procházení pro úpravy
 
-Proveďte následující kroky a začlenit procházet ovládacího prvku pro úpravy ve vaší aplikaci:
+Provedením následujících kroků zahrňte do své aplikace ovládací prvek pro procházení úprav:
 
-1. Pokud chcete implementovat vlastní procházecí režim, odvodit vlastní třídu z `CMFCEditBrowseCtrl` třídy a pak přepsat [CMFCEditBrowseCtrl::OnBrowse](#onbrowse) metoda. Přepsané metody provést akci vlastní procházení a aktualizace textové pole procházení k výsledku.
+1. Pokud chcete implementovat vlastní režim procházení, odvodit z `CMFCEditBrowseCtrl` třídy vlastní třídu a potom přepsat metodu [CMFCEditBrowseCtrl:: Browse](#onbrowse) . V přepsané metodě spusťte vlastní akci procházení a aktualizujte ovládací prvek pro úpravu procházení s výsledkem.
 
-1. Buď pro vložení `CMFCEditBrowseCtrl` nebo objektu odvozené úpravy procházet ovládacího prvku do nadřazeného okna objektu.
+1. Vložte buď `CMFCEditBrowseCtrl` objekt, nebo odvozený objekt ovládacího prvku pro úpravy procházení do objektu nadřazeného okna.
 
-1. Pokud používáte **Průvodce třídami** vytvořit dialogové okno, přidejte ovládací prvek úprav ( `CEdit`) do pole formuláře dialogového okna. Přidejte také proměnnou pro přístup k ovládacímu prvku v hlavičkovém souboru. V souboru záhlaví změnit typ proměnné z `CEdit` k `CMFCEditBrowseCtrl`. Textové pole procházení se vytvoří automaticky. Pokud použijete **Průvodce třídami**, přidat `CMFCEditBrowseCtrl` proměnné pro hlavičku souboru a poté zavolejte jeho `Create` metoda.
+1. Použijete-li **Průvodce třídami** k vytvoření dialogového okna, přidejte ovládací prvek pro úpravy `CEdit`() do formuláře dialogového okna. Přidejte také proměnnou pro přístup k ovládacímu prvku v hlavičkovém souboru. V souboru hlaviček změňte typ proměnné z `CEdit` na. `CMFCEditBrowseCtrl` Ovládací prvek pro procházení úprav bude vytvořen automaticky. Pokud nepoužijete **Průvodce třídami**, přidejte `CMFCEditBrowseCtrl` do hlavičkového souboru proměnnou a potom zavolejte její `Create` metodu.
 
-1. Pokud přidáte ovládací prvek pro procházení úpravy do dialogového okna, použijte **ClassWizard** nástroj nastavení dat systému exchange.
+1. Přidáte-li do dialogového okna Ovládací prvek pro úpravy, použijte nástroj **ClassWizard** k nastavení výměny dat.
 
-1. Volání [EnableFolderBrowseButton](#enablefolderbrowsebutton), [EnableFileBrowseButton](#enablefilebrowsebutton), nebo [enablebrowsebutton –](#enablebrowsebutton) metodu pro nastavení režimu procházení a zobrazení tlačítka Procházet. Volání [GetMode](#getmode) metodu k získání aktuální procházecí režim.
+1. Pro nastavení režimu procházení a zobrazení tlačítka Procházet volejte metodu [EnableFolderBrowseButton](#enablefolderbrowsebutton), [EnableFileBrowseButton](#enablefilebrowsebutton)nebo [EnableBrowseButton](#enablebrowsebutton) . Pro získání [](#getmode) aktuálního režimu procházení volejte metodu GetMode.
 
-1. Pokud chcete poskytnout vlastní image pro tlačítko procházení, zavolejte [SetBrowseButtonImage](#setbrowsebuttonimage) metody nebo přepsání [OnDrawBrowseButton](#ondrawbrowsebutton) metody.
+1. Chcete-li zadat vlastní obrázek pro tlačítko Procházet, zavolejte metodu [SetBrowseButtonImage](#setbrowsebuttonimage) nebo přepište metodu [OnDrawBrowseButton](#ondrawbrowsebutton) .
 
-1. Chcete-li na tlačítko Procházet odebrání textové pole procházení, zavolejte [enablebrowsebutton –](#enablebrowsebutton) metodu *bEnable* parametr nastaven na hodnotu FALSE.
+1. Chcete-li odebrat tlačítko Procházet z ovládacího prvku pro procházení úprav, zavolejte metodu [EnableBrowseButton](#enablebrowsebutton) s parametrem *bEnable* nastaveným na hodnotu false.
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
-[Třídy CObject](../../mfc/reference/cobject-class.md)
+[CObject](../../mfc/reference/cobject-class.md)
 
 [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)
 
@@ -120,18 +120,18 @@ Proveďte následující kroky a začlenit procházet ovládacího prvku pro úp
 
 ## <a name="example"></a>Příklad
 
-Následující příklad ukazuje, jak použít dvě metody v `CMFCEditBrowseCtrl` třídy: `EnableFolderBrowseButton` a `EnableFileBrowseButton`. V tomto příkladu je součástí [nové ovládací prvky ukázka](../../overview/visual-cpp-samples.md).
+Následující příklad ukazuje, jak použít dvě metody ve `CMFCEditBrowseCtrl` třídě: `EnableFolderBrowseButton` a `EnableFileBrowseButton`. Tento příklad je součástí [ukázky nové ovládací prvky](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_NewControls#6](../../mfc/reference/codesnippet/cpp/cmfceditbrowsectrl-class_1.h)]
 [!code-cpp[NVC_MFC_NewControls#7](../../mfc/reference/codesnippet/cpp/cmfceditbrowsectrl-class_2.cpp)]
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** afxeditbrowsectrl.h
+**Záhlaví:** afxeditbrowsectrl. h
 
 ##  <a name="enablebrowsebutton"></a>  CMFCEditBrowseCtrl::EnableBrowseButton
 
-Zobrazí nebo nejsou zobrazeny na tlačítko Procházet na aktuální textové pole procházení.
+Zobrazí nebo nezobrazuje tlačítko pro procházení v aktuálním ovládacím prvku pro úpravy.
 
 ```
 void EnableBrowseButton(
@@ -142,20 +142,20 @@ void EnableBrowseButton(
 ### <a name="parameters"></a>Parametry
 
 *bEnable*<br/>
-TRUE, pokud chcete zobrazit tlačítko procházení; FALSE, nedojde k zobrazení na tlačítko Procházet. Výchozí hodnota je TRUE.
+TRUE pro zobrazení tlačítka Procházet; FALSE – nezobrazit tlačítko pro procházení Výchozí hodnota je TRUE (pravda).
 
 *szLabel*<br/>
-Popisek, který je zobrazený na tlačítku pro procházení. Výchozí hodnota je " **...** ".
+Popisek, který se zobrazí na tlačítku pro procházení. Výchozí hodnota je " **...** ".
 
 ### <a name="remarks"></a>Poznámky
 
-Pokud *bEnable* parametr má hodnotu TRUE, implementujte vlastní akce k provedení po kliknutí na tlačítko Procházet. K provedení vlastní akce, odvoďte třídu z `CMFCEditBrowseCtrl` třídy a potom přepíše jeho [onbrowse –](#onbrowse) metoda.
+Pokud má parametr *bEnable* hodnotu true, implementujte vlastní akci, která se provede při kliknutí na tlačítko Procházet. Chcete-li implementovat vlastní akci, odvodit třídu z `CMFCEditBrowseCtrl` třídy a potom přepsat svou metodu pro [procházení](#onbrowse) .
 
-Pokud *bEnable* parametr má hodnotu TRUE, je procházecí režim ovládacího prvku `BrowseMode_Default`; v opačném případě je procházecí režim `BrowseMode_None`. Další informace o procházení režimech najdete v článku [GetMode](#getmode) metody.
+Pokud má parametr *bEnable* hodnotu true, je `BrowseMode_Default`režim procházení ovládacího prvku. v opačném případě je `BrowseMode_None`režim procházení. Další informace o režimech procházení naleznete v tématu [](#getmode) metoda GetMode.
 
 ##  <a name="enablefilebrowsebutton"></a>  CMFCEditBrowseCtrl::EnableFileBrowseButton
 
-Zobrazí tlačítko procházení v aktuální textové pole procházení a umístí ovládací prvek *procházení souborů* režimu.
+Zobrazí tlačítko Procházet v aktuálním ovládacím prvku pro úpravy a vloží ovládací prvek do režimu *procházení souborů* .
 
 ```
 void EnableFileBrowseButton(
@@ -167,23 +167,23 @@ void EnableFileBrowseButton(
 ### <a name="parameters"></a>Parametry
 
 *lpszDefExt*<br/>
-Určuje výchozí příponu souboru, který se používá v dialogovém okně Výběr souboru. Výchozí hodnota je NULL.
+Určuje výchozí příponu názvu souboru, která se používá v dialogovém okně Výběr souboru. Výchozí hodnota je NULL.
 
 *lpszFilter*<br/>
 Určuje výchozí řetězec filtru, který se používá v dialogovém okně Výběr souboru. Výchozí hodnota je NULL.
 
 *dwFlags*<br/>
-Dialogové okno pole příznaky. Výchozí hodnota je bitová kombinace (nebo) OFN_HIDEREADONLY a OFN_OVERWRITEPROMPT.
+Příznaky dialogových oken Výchozí hodnota je bitová kombinace (nebo) hodnot OFN_HIDEREADONLY a OFN_OVERWRITEPROMPT.
 
 ### <a name="remarks"></a>Poznámky
 
-Když je textové pole procházení v režimu procházení souboru a uživatel klikne na tlačítko Procházet, ovládací prvek zobrazí dialogové okno Výběr standardní soubor.
+Když je ovládací prvek pro procházení úprav v režimu procházení souborů a uživatel klikne na tlačítko Procházet, ovládací prvek zobrazí standardní dialogové okno pro výběr souboru.
 
-Úplný seznam dostupných příznaků najdete v tématu [LPSTRFILE struktury](/windows/desktop/api/commdlg/ns-commdlg-tagofna).
+Úplný seznam dostupných příznaků najdete v tématu [Struktura lpstrFile](/windows/win32/api/commdlg/ns-commdlg-openfilenamew).
 
 ##  <a name="enablefolderbrowsebutton"></a>  CMFCEditBrowseCtrl::EnableFolderBrowseButton
 
-Zobrazí tlačítko procházení v aktuální textové pole procházení a umístí ovládací prvek *procházení složek* režimu.
+Zobrazí tlačítko Procházet v aktuálním ovládacím prvku pro úpravy a vloží ovládací prvek do režimu *procházení složky* .
 
 ```
 void EnableFolderBrowseButton();
@@ -191,11 +191,11 @@ void EnableFolderBrowseButton();
 
 ### <a name="remarks"></a>Poznámky
 
-Když je textové pole procházení v režimu procházení složky a uživatel klikne na tlačítko Procházet, ovládací prvek zobrazí dialogové okno Výběr standardní složku.
+Když je ovládací prvek procházení pro úpravy v režimu procházení složky a uživatel klikne na tlačítko Procházet, ovládací prvek zobrazí standardní dialogové okno pro výběr složky.
 
-##  <a name="getmode"></a>  CMFCEditBrowseCtrl::GetMode
+##  <a name="getmode"></a>CMFCEditBrowseCtrl:: GetMode
 
-Načte režim procházení aktuální textové pole procházení.
+Načte režim procházení aktuálního ovládacího prvku pro úpravy.
 
 ```
 CMFCEditBrowseCtrl::BrowseMode GetMode() const;
@@ -203,24 +203,24 @@ CMFCEditBrowseCtrl::BrowseMode GetMode() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Jedna z hodnot výčtu, které určuje aktuální režim úpravy procházet ovládacího prvku. Procházecí režim určuje, zda zobrazí rozhraní na tlačítko Procházet a jaké akce nastane, pokud uživatel klikne na toto tlačítko.
+Jedna z hodnot výčtu, která určuje aktuální režim ovládacího prvku pro procházení úprav. Režim procházení určuje, zda rozhraní zobrazí tlačítko Procházet a k čemu dojde, když uživatel klikne na toto tlačítko.
 
-Následující tabulka obsahuje seznam možných vrácených hodnot.
+V následující tabulce jsou uvedeny možné návratové hodnoty.
 
 |Value|Popis|
 |-----------|-----------------|
-|`BrowseMode_Default`|**vlastní režim**. Programátorem definované akce je provedena.|
-|`BrowseMode_File`|**režim souboru**. Zobrazí se dialogové okno Prohlížeč standardní soubor.|
-|`BrowseMode_Folder`|**režimu složky**. Zobrazí se dialogové okno Prohlížeč standardní složku.|
-|`BrowseMode_None`|Není zobrazeno tlačítko Procházet.|
+|`BrowseMode_Default`|**vlastní režim**. Provede se akce definovaná programátorem.|
+|`BrowseMode_File`|**režim souboru**. Zobrazí se standardní dialogové okno prohlížeče souborů.|
+|`BrowseMode_Folder`|**režim složky**. Zobrazí se dialogové okno standardní prohlížeč složek.|
+|`BrowseMode_None`|Tlačítko Procházet není zobrazeno.|
 
 ### <a name="remarks"></a>Poznámky
 
-Ve výchozím nastavení `CMFCEditBrowseCtrl` objekt je inicializován na `BrowseMode_None` režimu. Upravit procházecí režim s [CMFCEditBrowseCtrl::EnableBrowseButton](#enablebrowsebutton), [CMFCEditBrowseCtrl::EnableFileBrowseButton](#enablefilebrowsebutton), a [CMFCEditBrowseCtrl::EnableFolderBrowseButton ](#enablefolderbrowsebutton) metody.
+Ve výchozím nastavení `CMFCEditBrowseCtrl` je objekt inicializován do `BrowseMode_None` režimu. Upravte režim procházení pomocí metod [CMFCEditBrowseCtrl:: EnableBrowseButton](#enablebrowsebutton), [CMFCEditBrowseCtrl:: EnableFileBrowseButton](#enablefilebrowsebutton)a [CMFCEditBrowseCtrl:: EnableFolderBrowseButton](#enablefolderbrowsebutton) .
 
-##  <a name="onafterupdate"></a>  CMFCEditBrowseCtrl::OnAfterUpdate
+##  <a name="onafterupdate"></a>CMFCEditBrowseCtrl::OnAfterUpdate
 
-Volá se rozhraním po aktualizaci textové pole procházení s výsledek akce procházení.
+Volá se rozhraním, když se ovládací prvek pro procházení úprav aktualizuje s výsledkem akce procházení.
 
 ```
 virtual void OnAfterUpdate();
@@ -228,11 +228,11 @@ virtual void OnAfterUpdate();
 
 ### <a name="remarks"></a>Poznámky
 
-Potlačí tuto metodu v odvozené třídě k provedení vlastní akce.
+Přepsat tuto metodu v odvozené třídě pro implementaci vlastní akce.
 
 ##  <a name="onbrowse"></a>  CMFCEditBrowseCtrl::OnBrowse
 
-Volá se rozhraním po kliknutí na tlačítko Procházet ovládacích prvků pro úpravy Procházet.
+Volá se rozhraním, když uživatel klikne na tlačítko Procházet v ovládacím prvku pro procházení úprav.
 
 ```
 virtual void OnBrowse();
@@ -240,11 +240,11 @@ virtual void OnBrowse();
 
 ### <a name="remarks"></a>Poznámky
 
-Pomocí této metody můžete spouštět vlastní kód, když uživatel klikne na tlačítko Procházet ovládacích prvků pro úpravy Procházet. Odvodit vlastní třídu z `CMFCEditBrowseCtrl` třídy a přepsat její `OnBrowse` metody. V této metodě implementovat vlastní procházení akce a volitelně aktualizaci textového pole ovládacích prvků pro úpravy Procházet. Ve vaší aplikaci používat [enablebrowsebutton –](#enablebrowsebutton) metoda vložit textové pole procházení *vlastní procházení* režimu.
+Tuto metodu použijte, chcete-li spustit vlastní kód, když uživatel klikne na tlačítko Procházet v ovládacím prvku upravit procházení. Odvodit vlastní třídu od `CMFCEditBrowseCtrl` třídy a přepsat její `OnBrowse` metodu. V této metodě implementujte vlastní akci procházení a volitelně aktualizujte textové pole ovládacího prvku pro procházení. V aplikaci použijte metodu [EnableBrowseButton](#enablebrowsebutton) k umístění ovládacího prvku pro procházení pro úpravy v režimu *vlastního procházení* .
 
-##  <a name="onchangelayout"></a>  CMFCEditBrowseCtrl::OnChangeLayout
+##  <a name="onchangelayout"></a>CMFCEditBrowseCtrl::OnChangeLayout
 
-Překreslí aktuální textové pole procházení.
+Překreslí aktuální ovládací prvek pro úpravy.
 
 ```
 virtual void OnChangeLayout();
@@ -252,11 +252,11 @@ virtual void OnChangeLayout();
 
 ### <a name="remarks"></a>Poznámky
 
-Rozhraní volá tuto metodu, když procházecí režim úpravy procházet řízení změn. Další informace najdete v tématu [CMFCEditBrowseCtrl::GetMode](#getmode).
+Rozhraní volá tuto metodu, když se změní režim procházení ovládacího prvku pro procházení. Další informace naleznete v tématu [CMFCEditBrowseCtrl:: GetMode](#getmode).
 
 ##  <a name="ondrawbrowsebutton"></a>  CMFCEditBrowseCtrl::OnDrawBrowseButton
 
-Volá se rozhraním, chcete-li nakreslit tlačítko Procházet na textové pole procházení.
+Volá se rozhraním, aby se nakreslilo tlačítko pro procházení v ovládacím prvku pro úpravy.
 
 ```
 virtual void OnDrawBrowseButton(
@@ -271,22 +271,22 @@ virtual void OnDrawBrowseButton(
 *pDC*<br/>
 Ukazatel na kontext zařízení.
 
-*Rect*<br/>
-Ohraničující obdélník na tlačítko Procházet.
+*OBD*<br/>
+Ohraničující obdélník tlačítka pro procházení
 
 *bIsButtonPressed*<br/>
-Hodnota TRUE, pokud se stiskne tlačítko; v opačném případě hodnota FALSE.
+TRUE, pokud je stisknuto tlačítko; v opačném případě FALSE.
 
 *bIsButtonHot*<br/>
-Hodnota TRUE, pokud je zvýrazněný na tlačítko. v opačném případě hodnota FALSE.
+TRUE, pokud je tlačítko zvýrazněno; v opačném případě FALSE.
 
 ### <a name="remarks"></a>Poznámky
 
-Potlačí tuto funkci v odvozené třídě přizpůsobit vzhled na tlačítko Procházet.
+Tuto funkci můžete přepsat v odvozené třídě a přizpůsobit tak vzhled tlačítka Procházet.
 
-##  <a name="setbrowsebuttonimage"></a>  CMFCEditBrowseCtrl::SetBrowseButtonImage
+##  <a name="setbrowsebuttonimage"></a>CMFCEditBrowseCtrl::SetBrowseButtonImage
 
-Nastaví vlastní obrázek na tlačítko procházení u ovládacího prvku pro úpravy Procházet.
+Nastaví vlastní obrázek na tlačítku pro procházení ovládacího prvku pro procházení.
 
 ```
 void SetBrowseButtonImage(
@@ -306,21 +306,21 @@ void SetBrowseButtonImage(UINT uiBmpResId);
 Popisovač ikony.
 
 *hBitmap*<br/>
-Popisovač rastrový obrázek.
+Popisovač rastrového obrázku.
 
 *uiBmpResId*<br/>
 ID prostředku rastrového obrázku.
 
 *bAutoDestroy*<br/>
-TRUE, pokud chcete odstranit zadané ikona nebo rastrový obrázek, když se tato metoda ukončí; v opačném případě hodnota FALSE. Výchozí hodnota je TRUE.
+TRUE pro odstranění zadané ikony nebo rastrového obrázku při ukončení této metody; v opačném případě FALSE. Výchozí hodnota je TRUE (pravda).
 
 ### <a name="remarks"></a>Poznámky
 
-Pomocí této metody můžete použít vlastní obrázek na tlačítko Procházet. Ve výchozím nastavení, rozhraní získá standardní bitové kopie, když je textové pole procházení v *procházení souborů* nebo *procházení složek* režimu.
+Tuto metodu použijte, chcete-li použít vlastní image na tlačítko Procházet. Ve výchozím nastavení rozhraní získá standardní obrázek, když je ovládací prvek pro procházení úprav v režimu procházení *souborů* nebo *Složka procházení* .
 
-##  <a name="onillegalfilename"></a>  CMFCEditBrowseCtrl::OnIllegalFileName
+##  <a name="onillegalfilename"></a>CMFCEditBrowseCtrl::OnIllegalFileName
 
-Volá se rozhraním, když byl zadán neplatný název souboru v textovém poli.
+Volá se rozhraním, když se v textovém poli zadal neplatný název souboru.
 
 ```
 virtual BOOL OnIllegalFileName(CString& strFileName);
@@ -329,11 +329,11 @@ virtual BOOL OnIllegalFileName(CString& strFileName);
 ### <a name="parameters"></a>Parametry
 
 *strFileName*<br/>
-Určuje název souboru neplatné.
+Určuje neplatný název souboru.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-By měl vrátit hodnotu FALSE, pokud tento název souboru nelze předat dál dialogového okna souboru. V tomto případě fokus se nastaví zpátky do ovládacího prvku edit a uživatel by měl pokračovat v úpravách. Výchozí implementace zobrazí okno se zprávou sděluje uživateli o neplatný název souboru a vrátí hodnotu FALSE. Potlačí tuto metodu, opravte název souboru a vrátí hodnotu TRUE pro další zpracování.
+By měla vracet hodnotu FALSE, pokud tento název souboru nelze předat dál do dialogového okna souboru. V takovém případě se fokus nastaví zpátky na ovládací prvek pro úpravy a uživatel by měl pokračovat v úpravách. Výchozí implementace zobrazí okno se zprávou oznamující uživateli nepovolený název souboru a vrátí hodnotu FALSE. Tuto metodu můžete přepsat, opravit název souboru a pro další zpracování vrátit hodnotu TRUE.
 
 ### <a name="remarks"></a>Poznámky
 
