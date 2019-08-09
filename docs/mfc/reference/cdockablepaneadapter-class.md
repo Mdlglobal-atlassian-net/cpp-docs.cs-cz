@@ -1,5 +1,5 @@
 ---
-title: Cdockablepaneadapter – třída
+title: CDockablePaneAdapter – třída
 ms.date: 11/04/2016
 f1_keywords:
 - CDockablePaneAdapter
@@ -14,16 +14,16 @@ helpviewer_keywords:
 - CDockablePaneAdapter [MFC], SaveState
 - CDockablePaneAdapter [MFC], SetWrappedWnd
 ms.assetid: 6ed6cf82-f39c-4d0c-bf7c-8641495cf8f3
-ms.openlocfilehash: 8f184bab564b4867138608b735c67b328e1a21cc
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 88c125c63f9dbfe272f5d543e996366575fc533b
+ms.sourcegitcommit: bd7ddc044f9083246614b602ef6a758775313214
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62391241"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68866226"
 ---
-# <a name="cdockablepaneadapter-class"></a>Cdockablepaneadapter – třída
+# <a name="cdockablepaneadapter-class"></a>CDockablePaneAdapter – třída
 
-Poskytuje podporu dokování pro `CWnd`-odvozené podoken.
+Poskytuje podporu ukotvení pro `CWnd`podoken odvozená od sebe.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -35,34 +35,36 @@ class CDockablePaneAdapter : public CDockablePane
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CDockablePaneAdapter::GetWrappedWnd](#getwrappedwnd)|Vrátí zabalené okno.|
-|[CDockablePaneAdapter::LoadState](#loadstate)|(Přepíše [CDockablePane::LoadState](cdockablepane-class.md#loadstate).)|
-|[CDockablePaneAdapter::SaveState](#savestate)|(Přepíše [CDockablePane::SaveState](cdockablepane-class.md).)|
+|[CDockablePaneAdapter:: LoadState](#loadstate)|(Overrides [CDockablePane:: LoadState](cdockablepane-class.md#loadstate).)|
+|[CDockablePaneAdapter:: SaveState](#savestate)|(Overrides [CDockablePane:: SaveState](cdockablepane-class.md).)|
 |[CDockablePaneAdapter::SetWrappedWnd](#setwrappedwnd)||
 
 ## <a name="remarks"></a>Poznámky
 
-Obvykle rozhraní vytvoří objekty této třídy při použití [CMFCBaseTabCtrl::AddTab](../../mfc/reference/cmfcbasetabctrl-class.md#addtab) nebo [CMFCBaseTabCtrl::InsertTab](../../mfc/reference/cmfcbasetabctrl-class.md#inserttab) metody.
+Rozhraní .NET Framework obvykle vytváří instance objektů této třídy při použití metod [CMFCBaseTabCtrl:: AddTab](../../mfc/reference/cmfcbasetabctrl-class.md#addtab) nebo [CMFCBaseTabCtrl:: InsertTab](../../mfc/reference/cmfcbasetabctrl-class.md#inserttab) .
 
-Pokud chcete přizpůsobit `CDockablePaneAdapter` chování, stačí odvozovat nové třídy a nastavit informace o třídě modulu runtime na okno s kartami pomocí [CMFCBaseTabCtrl::SetDockingBarWrapperRTC](../../mfc/reference/cmfcbasetabctrl-class.md#setdockingbarwrapperrtc).
+Chcete-li přizpůsobit `CDockablePaneAdapter` chování, stačí odvodit z ní novou třídu a nastavit informace třídy modulu runtime na okno s kartami pomocí [CMFCBaseTabCtrl:: SetDockingBarWrapperRTC](../../mfc/reference/cmfcbasetabctrl-class.md#setdockingbarwrapperrtc).
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
-[CObject –](../../mfc/reference/cobject-class.md) [CCmdTarget –](../../mfc/reference/ccmdtarget-class.md) [CWnd](../../mfc/reference/cwnd-class.md)
-
-[CBasePane](../../mfc/reference/cbasepane-class.md) [CPane](../../mfc/reference/cpane-class.md) [CDockablePane](../../mfc/reference/cdockablepane-class.md)
-
-[CDockablePaneAdapter](../../mfc/reference/cdockablepaneadapter-class.md)
+[CObject](../../mfc/reference/cobject-class.md)\
+└&nbsp;[CCmdTarget](../../mfc/reference/ccmdtarget-class.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;└&nbsp;[CWnd](../../mfc/reference/cwnd-class.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└&nbsp;[CBasePane](../../mfc/reference/cbasepane-class.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└&nbsp;[CPane](../../mfc/reference/cpane-class.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└&nbsp;[CDockablePane](../../mfc/reference/cdockablepane-class.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└&nbsp;[CDockablePaneAdapter](../../mfc/reference/cdockablepaneadapter-class.md)
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** afxDockablePaneAdapter.h
+**Záhlaví:** afxDockablePaneAdapter. h
 
-##  <a name="getwrappedwnd"></a>  CDockablePaneAdapter::GetWrappedWnd
+##  <a name="getwrappedwnd"></a>CDockablePaneAdapter::GetWrappedWnd
 
-Vrátí základní okno ukotvitelné podokně adaptéru.
+Vrátí podkladové okno pro adaptér ukotvit podokna.
 
 ```
 virtual CWnd* GetWrappedWnd() const;
@@ -70,15 +72,15 @@ virtual CWnd* GetWrappedWnd() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Ukazatel na okno zabalené.
+Ukazatel na zabalené okno.
 
 ### <a name="remarks"></a>Poznámky
 
-Tuto funkci použijte pro přístup k zabalené okna.
+Pomocí této funkce lze získat přístup k zabalenému oknu.
 
-##  <a name="loadstate"></a>  CDockablePaneAdapter::LoadState
+##  <a name="loadstate"></a>CDockablePaneAdapter:: LoadState
 
-Stav v podokně se načte z registru.
+Načte stav podokna z registru.
 
 ```
 virtual BOOL LoadState(
@@ -90,21 +92,21 @@ virtual BOOL LoadState(
 ### <a name="parameters"></a>Parametry
 
 *lpszProfileName*<br/>
-[in] Název profilu.
+pro Název profilu.
 
 *nIndex*<br/>
-[in] Index profilu.
+pro Index profilu.
 
 *uiID*<br/>
-[in] ID podokně.
+pro ID podokna
 
 ### <a name="return-value"></a>Návratová hodnota
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="savestate"></a>  CDockablePaneAdapter::SaveState
+##  <a name="savestate"></a>CDockablePaneAdapter:: SaveState
 
-Uloží stav v podokně do registru.
+Uloží stav podokna do registru.
 
 ```
 virtual BOOL SaveState(
@@ -116,21 +118,21 @@ virtual BOOL SaveState(
 ### <a name="parameters"></a>Parametry
 
 *lpszProfileName*<br/>
-[in] Název profilu.
+pro Název profilu.
 
 *nIndex*<br/>
-[in] Profil indexu (výchozí nastavení ID ovládacího prvku v okně).
+pro Index profilu (ve výchozím nastavení ID ovládacího prvku okna).
 
 *uiID*<br/>
-[in] ID podokně.
+pro ID podokna
 
 ### <a name="return-value"></a>Návratová hodnota
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="setwrappedwnd"></a>  CDockablePaneAdapter::SetWrappedWnd
+##  <a name="setwrappedwnd"></a>CDockablePaneAdapter::SetWrappedWnd
 
-Nastaví základní okno ukotvitelné podokně adaptéru.
+Nastaví základní okno pro adaptér ukotvit podokna.
 
 ```
 virtual BOOL SetWrappedWnd(CWnd* pWnd);
@@ -139,7 +141,7 @@ virtual BOOL SetWrappedWnd(CWnd* pWnd);
 ### <a name="parameters"></a>Parametry
 
 *pWnd*<br/>
-[in] Ukazatel do okna pro podokno adaptér zabalit.
+pro Ukazatel na okno pro zabalení adaptéru podokna
 
 ### <a name="return-value"></a>Návratová hodnota
 

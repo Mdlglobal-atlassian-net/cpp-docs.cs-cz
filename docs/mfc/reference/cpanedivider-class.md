@@ -1,5 +1,5 @@
 ---
-title: Cpanedivider – třída
+title: CPaneDivider – třída
 ms.date: 11/04/2016
 f1_keywords:
 - CPaneDivider
@@ -84,18 +84,18 @@ helpviewer_keywords:
 - CPaneDivider [MFC], m_nDefaultWidth
 - CPaneDivider [MFC], m_pSliderRTC
 ms.assetid: 8e828a5d-232f-4127-b8e3-7fa45a7a476e
-ms.openlocfilehash: 43cba977d50e161c58d3e240e1282049a415c88d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d4888fbf2a95652b0a38adc8ecd059a7515636cb
+ms.sourcegitcommit: bd7ddc044f9083246614b602ef6a758775313214
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62373099"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68866119"
 ---
-# <a name="cpanedivider-class"></a>Cpanedivider – třída
+# <a name="cpanedivider-class"></a>CPaneDivider – třída
 
-Další podrobnosti najdete ve zdrojovém kódu v **VC\\atlmfc\\src\\mfc** složce instalace sady Visual Studio.
+Další podrobnosti najdete ve zdrojovém kódu ve složce **VC\\atlmfc\\src\\MFC** v instalaci sady Visual Studio.
 
-`CPaneDivider` Třídy rozdělí dvě podokna, rozdělí dvě skupiny podoken nebo oddělí skupinu podoken od klientské oblasti okna hlavního rámce.
+`CPaneDivider` Třída rozdělí dvě podokna, rozdělí dvě skupiny podoken nebo oddělí skupinu podoken z klientské oblasti hlavního okna rámce.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -107,22 +107,22 @@ class CPaneDivider : public CBasePane
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CPaneDivider::CPaneDivider](#cpanedivider)||
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CPaneDivider::AddPaneContainer](#addpanecontainer)||
 |[CPaneDivider::AddPane](#addpane)||
 |[CPaneDivider::AddRecentPane](#addrecentpane)||
 |[CPaneDivider::CalcExpectedDockedRect](#calcexpecteddockedrect)||
-|[CPaneDivider::CalcFixedLayout](#calcfixedlayout)|(Přepíše [CBasePane::CalcFixedLayout](../../mfc/reference/cbasepane-class.md#calcfixedlayout).)|
+|[CPaneDivider::CalcFixedLayout](#calcfixedlayout)|(Overrides [CBasePane:: CalcFixedLayout](../../mfc/reference/cbasepane-class.md#calcfixedlayout).)|
 |[CPaneDivider::CheckVisibility](#checkvisibility)||
-|[CPaneDivider::CreateEx](#createex)|(Přepíše [CBasePane::CreateEx](../../mfc/reference/cbasepane-class.md#createex).)|
-|[CPaneDivider::DoesAllowDynInsertBefore](#doesallowdyninsertbefore)|(Přepíše [CBasePane::DoesAllowDynInsertBefore](../../mfc/reference/cbasepane-class.md#doesallowdyninsertbefore).)|
+|[CPaneDivider::CreateEx](#createex)|(Overrides [CBasePane:: CreateEx](../../mfc/reference/cbasepane-class.md#createex).)|
+|[CPaneDivider::DoesAllowDynInsertBefore](#doesallowdyninsertbefore)|(Overrides [CBasePane::D oesallowdyninsertbefore](../../mfc/reference/cbasepane-class.md#doesallowdyninsertbefore).)|
 |[CPaneDivider::DoesContainFloatingPane](#doescontainfloatingpane)||
 |[CPaneDivider::FindPaneContainer](#findpanecontainer)||
 |[CPaneDivider::FindTabbedPane](#findtabbedpane)||
@@ -130,12 +130,12 @@ class CPaneDivider : public CBasePane
 |[CPaneDivider::GetFirstPane](#getfirstpane)||
 |[CPaneDivider::GetPaneDividerStyle](#getpanedividerstyle)||
 |[CPaneDivider::GetRootContainerRect](#getrootcontainerrect)||
-|[CPaneDivider::GetWidth](#getwidth)||
+|[CPaneDivider:: getwidth](#getwidth)||
 |[CPaneDivider::Init](#init)||
 |[CPaneDivider::InsertPane](#insertpane)||
-|[CPaneDivider::IsAutoHideMode](#isautohidemode)|(Přepíše [CBasePane::IsAutoHideMode](../../mfc/reference/cbasepane-class.md#isautohidemode).)|
-|[CPaneDivider::IsDefault](#isdefault)||
-|[CPaneDivider::IsHorizontal](#ishorizontal)|(Přepíše [CBasePane::IsHorizontal](../../mfc/reference/cbasepane-class.md#ishorizontal).)|
+|[CPaneDivider::IsAutoHideMode](#isautohidemode)|(Overrides [CBasePane:: IsAutoHideMode](../../mfc/reference/cbasepane-class.md#isautohidemode).)|
+|[CPaneDivider::-Default](#isdefault)||
+|[CPaneDivider::IsHorizontal](#ishorizontal)|(Overrides [CBasePane::](../../mfc/reference/cbasepane-class.md#ishorizontal)inhorizontal.)|
 |[CPaneDivider::Move](#move)||
 |[CPaneDivider::NotifyAboutRelease](#notifyaboutrelease)||
 |[CPaneDivider::OnShowPane](#onshowpane)||
@@ -143,7 +143,7 @@ class CPaneDivider : public CBasePane
 |[CPaneDivider::RemovePane](#removepane)||
 |[CPaneDivider::ReplacePane](#replacepane)||
 |[CPaneDivider::RepositionPanes](#repositionpanes)||
-|[CPaneDivider::Serialize](#serialize)|(Přepíše `CBasePane::Serialize`.)|
+|[CPaneDivider:: serializovat](#serialize)|(Overrides `CBasePane::Serialize`.)|
 |[CPaneDivider::SetAutoHideMode](#setautohidemode)||
 |[CPaneDivider::SetPaneContainerManager](#setpanecontainermanager)||
 |[CPaneDivider::ShowWindow](#showwindow)||
@@ -152,45 +152,47 @@ class CPaneDivider : public CBasePane
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
-|[CPaneDivider::GetPanes](#getpanes)|Vrátí seznam podoken, které se nacházejí v [cpanecontainer – třída](../../mfc/reference/cpanecontainer-class.md). Tuto metodu lze volat pouze pro výchozí podokně oddělovače.|
-|[CPaneDivider::GetPaneDividers](#getpanedividers)|Vrátí seznam oddělovačů podokno, které se nacházejí v [cpanecontainer – třída](../../mfc/reference/cpanecontainer-class.md). Tuto metodu lze volat pouze pro výchozí podokně oddělovače.|
+|[CPaneDivider:: getpodokna](#getpanes)|Vrátí seznam podoken, která jsou umístěna ve [třídě CPaneContainer](../../mfc/reference/cpanecontainer-class.md). Tato metoda by měla být volána pouze pro výchozí oddělovače podokna.|
+|[CPaneDivider::GetPaneDividers](#getpanedividers)|Vrátí seznam oddělovačů podokna, které jsou umístěny ve [třídě CPaneContainer](../../mfc/reference/cpanecontainer-class.md). Tato metoda by měla být volána pouze pro výchozí oddělovače podokna.|
 
 ### <a name="data-members"></a>Datové členy
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
-|[CPaneDivider::m_nDefaultWidth](#m_ndefaultwidth)|Určuje výchozí šířku v pixelech všechny oddělovače podokno v aplikaci.|
-|[CPaneDivider::m_pSliderRTC](#m_psliderrtc)|Drží ukazatel o informace o třídě modulu runtime `CPaneDivider`-odvozenému objektu.|
+|[CPaneDivider::m_nDefaultWidth](#m_ndefaultwidth)|Určuje výchozí šířku v pixelech všech oddělovačů podokna v aplikaci.|
+|[CPaneDivider::m_pSliderRTC](#m_psliderrtc)|Obsahuje ukazatel na informace třídy modulu runtime o `CPaneDivider`objektu odvozeného od.|
 
 ## <a name="remarks"></a>Poznámky
 
-Vytvoří rozhraní `CPaneDivider` objekty automaticky, pokud je ukotven na stavového řádku.
+Rozhraní vytváří `CPaneDivider` objekty automaticky, když je podokno ukotveno.
 
-Existují dva druhy podokně oddělovače:
+Existují dva typy oddělovačů podokna:
 
-- rozdělovač podokna výchozím nastavení se vytvoří při skupinu podoken je ukotven k okraji okna hlavního rámce. Oddělovač podokna výchozí uchovává ukazatel na [cpanecontainermanager – třída](../../mfc/reference/cpanecontainermanager-class.md) a přesměruje většinu operací na skupinu podoken (jako je například změna velikosti panelu nebo jiného ukotvení podokno nebo kontejner) do kontejneru správce. Každý ukotvené podokno uchovává ukazatel na jeho výchozí rozdělovač podokna.
+- výchozí oddělovač podokna se vytvoří, když je skupina podoken ukotvena na stranu hlavního okna rámce. Výchozí oddělovač podokna drží ukazatel na [třídu CPaneContainerManager](../../mfc/reference/cpanecontainermanager-class.md) a přesměruje většinu operací na skupinu podoken (například změnu velikosti podokna nebo ukotvení jiného podokna nebo kontejneru) do správce kontejnerů. Každé ukotvené podokno udržuje ukazatel na jeho výchozí oddělovač podokna.
 
-- Oddělovač podokna regulární právě rozdělí dvě podokna v kontejneru. Další informace najdete v tématu [cpanecontainer – třída](../../mfc/reference/cpanecontainer-class.md).
+- Oddělovač regulárního podokna pouze rozděluje dvě podokna v kontejneru. Další informace naleznete v tématu [Třída CPaneContainer](../../mfc/reference/cpanecontainer-class.md).
 
 ## <a name="example"></a>Příklad
 
-Následující příklad ukazuje, jak získat `CPaneDivider` objektu z `CWorkspaceBar` objektu. Tento fragment kódu je součástí [MDI karty demonstrační ukázka](../../overview/visual-cpp-samples.md).
+Následující příklad ukazuje, jak získat `CPaneDivider` objekt `CWorkspaceBar` z objektu. Tento fragment kódu je součástí ukázkové ukázky [karet MDI](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_MDITabsDemo#5](../../mfc/reference/codesnippet/cpp/cpanedivider-class_1.cpp)]
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
-[CObject –](../../mfc/reference/cobject-class.md) [CCmdTarget –](../../mfc/reference/ccmdtarget-class.md) [CWnd](../../mfc/reference/cwnd-class.md)
-
-[CBasePane](../../mfc/reference/cbasepane-class.md) [CPaneDivider](../../mfc/reference/cpanedivider-class.md)
+[CObject](../../mfc/reference/cobject-class.md)\
+└&nbsp;[CCmdTarget](../../mfc/reference/ccmdtarget-class.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;└&nbsp;[CWnd](../../mfc/reference/cwnd-class.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└&nbsp;[CBasePane](../../mfc/reference/cbasepane-class.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└&nbsp;[CPaneDivider](../../mfc/reference/cpanedivider-class.md)
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** afxPaneDivider.h
+**Záhlaví:** afxPaneDivider. h
 
-##  <a name="setautohidemode"></a>  CPaneDivider::SetAutoHideMode
+##  <a name="setautohidemode"></a>CPaneDivider::SetAutoHideMode
 
 ```
 void SetAutoHideMode(BOOL bMode);
@@ -198,11 +200,11 @@ void SetAutoHideMode(BOOL bMode);
 
 ### <a name="parameters"></a>Parametry
 
-[in] *bMode*<br/>
+pro *bMode*<br/>
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="setpanecontainermanager"></a>  CPaneDivider::SetPaneContainerManager
+##  <a name="setpanecontainermanager"></a>CPaneDivider::SetPaneContainerManager
 
 ```
 void SetPaneContainerManager(CPaneContainerManager* p);
@@ -210,11 +212,11 @@ void SetPaneContainerManager(CPaneContainerManager* p);
 
 ### <a name="parameters"></a>Parametry
 
-[in] *p*<br/>
+pro *p*<br/>
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="addpane"></a>  CPaneDivider::AddPane
+##  <a name="addpane"></a>CPaneDivider::AddPane
 
 ```
 virtual void AddPane(CDockablePane* pBar);
@@ -222,11 +224,11 @@ virtual void AddPane(CDockablePane* pBar);
 
 ### <a name="parameters"></a>Parametry
 
-[in] *pBar*<br/>
+pro *pBar*<br/>
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="addpanecontainer"></a>  CPaneDivider::AddPaneContainer
+##  <a name="addpanecontainer"></a>CPaneDivider::AddPaneContainer
 
 ```
 virtual BOOL AddPaneContainer(
@@ -242,15 +244,15 @@ virtual BOOL AddPaneContainer(
 ### <a name="parameters"></a>Parametry
 
 [in] *barContainerManager*<br/>
-[in] *bOuterEdge*<br/>
-[in] *pTargetBar*<br/>
-[in] *dwAlignment*<br/>
+pro *bOuterEdge*<br/>
+pro *pTargetBar*<br/>
+pro *dwAlignment*<br/>
 
 ### <a name="return-value"></a>Návratová hodnota
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="addrecentpane"></a>  CPaneDivider::AddRecentPane
+##  <a name="addrecentpane"></a>CPaneDivider::AddRecentPane
 
 ```
 virtual CDockablePane* AddRecentPane(CDockablePane* pBar);
@@ -258,13 +260,13 @@ virtual CDockablePane* AddRecentPane(CDockablePane* pBar);
 
 ### <a name="parameters"></a>Parametry
 
-[in] *pBar*<br/>
+pro *pBar*<br/>
 
 ### <a name="return-value"></a>Návratová hodnota
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="calcexpecteddockedrect"></a>  CPaneDivider::CalcExpectedDockedRect
+##  <a name="calcexpecteddockedrect"></a>CPaneDivider::CalcExpectedDockedRect
 
 ```
 virtual void CalcExpectedDockedRect(
@@ -279,13 +281,13 @@ virtual void CalcExpectedDockedRect(
 
 [in] *pWndToDock*<br/>
 [in] *ptMouse*<br/>
-[in] *rectResult*<br/>
-[in] *bDrawTab*<br/>
+pro *rectResult*<br/>
+pro *bDrawTab*<br/>
 [in] *ppTargetBar*<br/>
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="calcfixedlayout"></a>  CPaneDivider::CalcFixedLayout
+##  <a name="calcfixedlayout"></a>CPaneDivider::CalcFixedLayout
 
 ```
 virtual CSize CalcFixedLayout(
@@ -295,14 +297,14 @@ virtual CSize CalcFixedLayout(
 
 ### <a name="parameters"></a>Parametry
 
-[in] *bStretch*<br/>
+pro *bStretch*<br/>
 [in] *bHorz*<br/>
 
 ### <a name="return-value"></a>Návratová hodnota
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="checkvisibility"></a>  CPaneDivider::CheckVisibility
+##  <a name="checkvisibility"></a>CPaneDivider::CheckVisibility
 
 ```
 virtual BOOL CheckVisibility();
@@ -312,7 +314,7 @@ virtual BOOL CheckVisibility();
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="cpanedivider"></a>  CPaneDivider::CPaneDivider
+##  <a name="cpanedivider"></a>CPaneDivider::CPaneDivider
 
 ```
 CPaneDivider();
@@ -324,14 +326,14 @@ CPaneDivider(
 
 ### <a name="parameters"></a>Parametry
 
-[in] *bDefaultSlider*<br/>
-[in] *pParent*<br/>
+pro *bDefaultSlider*<br/>
+pro *pParent*<br/>
 
 ### <a name="return-value"></a>Návratová hodnota
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="createex"></a>  CPaneDivider::CreateEx
+##  <a name="createex"></a>CPaneDivider::CreateEx
 
 ```
 virtual BOOL CreateEx(
@@ -345,18 +347,18 @@ virtual BOOL CreateEx(
 
 ### <a name="parameters"></a>Parametry
 
-[in] *dwStyleEx*<br/>
-[in] *dwStyle*<br/>
-[in] *rect*<br/>
-[in] *pParentWnd*<br/>
-[in] *nID*<br/>
-[in] *pContext*<br/>
+pro *dwStyleEx*<br/>
+pro *dwStyle*<br/>
+pro *Rect*<br/>
+pro *pParentWnd*<br/>
+pro *NID*<br/>
+pro *pContext*<br/>
 
 ### <a name="return-value"></a>Návratová hodnota
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="doesallowdyninsertbefore"></a>  CPaneDivider::DoesAllowDynInsertBefore
+##  <a name="doesallowdyninsertbefore"></a>CPaneDivider::D oesAllowDynInsertBefore
 
 ```
 virtual BOOL DoesAllowDynInsertBefore() const;
@@ -376,7 +378,7 @@ virtual BOOL DoesContainFloatingPane();
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="findpanecontainer"></a>  CPaneDivider::FindPaneContainer
+##  <a name="findpanecontainer"></a>CPaneDivider::FindPaneContainer
 
 ```
 CPaneContainer* FindPaneContainer(
@@ -386,14 +388,14 @@ CPaneContainer* FindPaneContainer(
 
 ### <a name="parameters"></a>Parametry
 
-[in] *pBar*<br/>
-[in] *bLeftBar*<br/>
+pro *pBar*<br/>
+pro *bLeftBar*<br/>
 
 ### <a name="return-value"></a>Návratová hodnota
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="findtabbedpane"></a>  CPaneDivider::FindTabbedPane
+##  <a name="findtabbedpane"></a>CPaneDivider::FindTabbedPane
 
 ```
 CDockablePane* FindTabbedPane(UINT nID);
@@ -401,13 +403,13 @@ CDockablePane* FindTabbedPane(UINT nID);
 
 ### <a name="parameters"></a>Parametry
 
-[in] *nID*<br/>
+pro *NID*<br/>
 
 ### <a name="return-value"></a>Návratová hodnota
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="getdefaultwidth"></a>  CPaneDivider::GetDefaultWidth
+##  <a name="getdefaultwidth"></a>CPaneDivider::GetDefaultWidth
 
 ```
 static int __stdcall GetDefaultWidth();
@@ -417,7 +419,7 @@ static int __stdcall GetDefaultWidth();
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="getfirstpane"></a>  CPaneDivider::GetFirstPane
+##  <a name="getfirstpane"></a>CPaneDivider::GetFirstPane
 
 ```
 const CBasePane* GetFirstPane() const;
@@ -427,9 +429,9 @@ const CBasePane* GetFirstPane() const;
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="getpanedividers"></a>  CPaneDivider::GetPaneDividers
+##  <a name="getpanedividers"></a>CPaneDivider::GetPaneDividers
 
-Vrátí seznam oddělovačů podokno, které se nacházejí v [cpanecontainer – třída](../../mfc/reference/cpanecontainer-class.md). Tuto metodu lze volat pouze pro výchozí podokně oddělovače.
+Vrátí seznam oddělovačů podokna, které jsou umístěny ve [třídě CPaneContainer](../../mfc/reference/cpanecontainer-class.md). Tato metoda by měla být volána pouze pro výchozí oddělovače podokna.
 
 ```
 void GetPaneDividers(CObList& lstSliders);
@@ -438,13 +440,13 @@ void GetPaneDividers(CObList& lstSliders);
 ### <a name="parameters"></a>Parametry
 
 *lstSliders*<br/>
-[out] Obsahuje seznam podokně oddělovače, které se nacházejí v kontejneru podokně.
+mimo Obsahuje seznam oddělovacích čar podokna, které se nacházejí v kontejneru podokna.
 
 ### <a name="remarks"></a>Poznámky
 
-Tuto metodu lze volat pro pouze výchozí podokně oddělovače. Oddělovač podokna výchozí je oddělovač, který změní velikost kontejneru celé podokno.
+Tato metoda by měla být volána pouze pro výchozí oddělovače podokna. Výchozí oddělovač podokna je oddělovač, který mění velikost celého kontejneru podokna.
 
-##  <a name="getpanedividerstyle"></a>  CPaneDivider::GetPaneDividerStyle
+##  <a name="getpanedividerstyle"></a>CPaneDivider::GetPaneDividerStyle
 
 ```
 DWORD GetPaneDividerStyle() const;
@@ -454,9 +456,9 @@ DWORD GetPaneDividerStyle() const;
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="getpanes"></a>  CPaneDivider::GetPanes
+##  <a name="getpanes"></a>CPaneDivider:: getpodokna
 
-Vrátí seznam podoken, které se nacházejí v [cpanecontainer – třída](../../mfc/reference/cpanecontainer-class.md). Tuto metodu lze volat pouze k načtení oddělovače podokně výchozí.
+Vrátí seznam podoken, která jsou umístěna ve [třídě CPaneContainer](../../mfc/reference/cpanecontainer-class.md). Tato metoda by měla být volána pouze pro načtení výchozích oddělovačů podokna.
 
 ```
 void GetPanes(CObList& lstBars);
@@ -465,13 +467,13 @@ void GetPanes(CObList& lstBars);
 ### <a name="parameters"></a>Parametry
 
 *lstBars*<br/>
-[out] Obsahuje seznam podoken, které se nacházejí v kontejneru podokně.
+mimo Obsahuje seznam podoken, která se nacházejí v kontejneru podokna.
 
 ### <a name="remarks"></a>Poznámky
 
-Tuto metodu lze volat pro pouze výchozí podokně oddělovače. Oddělovač podokna výchozí je oddělovač, který změní velikost kontejneru celé podokno.
+Tato metoda by měla být volána pouze pro výchozí oddělovače podokna. Výchozí oddělovač podokna je oddělovač, který mění velikost celého kontejneru podokna.
 
-##  <a name="getrootcontainerrect"></a>  CPaneDivider::GetRootContainerRect
+##  <a name="getrootcontainerrect"></a>CPaneDivider::GetRootContainerRect
 
 ```
 CRect GetRootContainerRect();
@@ -481,7 +483,7 @@ CRect GetRootContainerRect();
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="getwidth"></a>  CPaneDivider::GetWidth
+##  <a name="getwidth"></a>CPaneDivider:: getwidth
 
 ```
 int GetWidth() const;
@@ -491,7 +493,7 @@ int GetWidth() const;
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="init"></a>  CPaneDivider::Init
+##  <a name="init"></a>CPaneDivider:: init
 
 ```
 void Init(
@@ -501,12 +503,12 @@ void Init(
 
 ### <a name="parameters"></a>Parametry
 
-[in] *bDefaultSlider*<br/>
-[in] *pParent*<br/>
+pro *bDefaultSlider*<br/>
+pro *pParent*<br/>
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="insertpane"></a>  CPaneDivider::InsertPane
+##  <a name="insertpane"></a>CPaneDivider::InsertPane
 
 ```
 virtual BOOL InsertPane(
@@ -518,16 +520,16 @@ virtual BOOL InsertPane(
 
 ### <a name="parameters"></a>Parametry
 
-[in] *pBarToInsert*<br/>
-[in] *pTargetBar*<br/>
-[in] *dwAlignment*<br/>
-[in] *lpRect*<br/>
+pro *pBarToInsert*<br/>
+pro *pTargetBar*<br/>
+pro *dwAlignment*<br/>
+pro *lpRect*<br/>
 
 ### <a name="return-value"></a>Návratová hodnota
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="isautohidemode"></a>  CPaneDivider::IsAutoHideMode
+##  <a name="isautohidemode"></a>CPaneDivider::IsAutoHideMode
 
 ```
 BOOL IsAutoHideMode() const;
@@ -537,7 +539,7 @@ BOOL IsAutoHideMode() const;
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="isdefault"></a>  CPaneDivider::IsDefault
+##  <a name="isdefault"></a>CPaneDivider::-Default
 
 ```
 BOOL IsDefault() const;
@@ -547,7 +549,7 @@ BOOL IsDefault() const;
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="ishorizontal"></a>  CPaneDivider::IsHorizontal
+##  <a name="ishorizontal"></a>CPaneDivider::-Horizontal
 
 ```
 BOOL IsHorizontal() const;
@@ -557,15 +559,15 @@ BOOL IsHorizontal() const;
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="m_ndefaultwidth"></a>  CPaneDivider::m_nDefaultWidth
+##  <a name="m_ndefaultwidth"></a>CPaneDivider::m_nDefaultWidth
 
-Určuje výchozí šířku v pixelech všechny oddělovače podokno v aplikaci.
+Určuje výchozí šířku všech oddělovačů podokna v aplikaci v pixelech.
 
 ```
 AFX_IMPORT_DATA static int m_nDefaultWidth;
 ```
 
-##  <a name="move"></a>  CPaneDivider::Move
+##  <a name="move"></a>CPaneDivider:: Move
 
 ```
 virtual void Move(
@@ -575,14 +577,14 @@ virtual void Move(
 
 ### <a name="parameters"></a>Parametry
 
-[in] *ptOffset*<br/>
-[in] *bAdjustLayout*<br/>
+pro *ptOffset*<br/>
+pro *bAdjustLayout*<br/>
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="m_psliderrtc"></a>  CPaneDivider::m_pSliderRTC
+##  <a name="m_psliderrtc"></a>CPaneDivider::m_pSliderRTC
 
-Drží ukazatel o informace o třídě modulu runtime `CPaneDivider`-odvozenému objektu.
+Drží ukazatel na informace třídy modulu runtime o `CPaneDivider`objektu odvozeného od.
 
 ```
 AFX_IMPORT_DATA static CRuntimeClass* m_pSliderRTC;
@@ -590,11 +592,11 @@ AFX_IMPORT_DATA static CRuntimeClass* m_pSliderRTC;
 
 ### <a name="remarks"></a>Poznámky
 
-Pokud vytvoříte vlastní podokno oddělovač, nastavte tuto proměnnou člena. To umožňuje, aby se vytvořily vaše rozdělovač podokna při vykreslení v podokně.
+Tuto členskou proměnnou nastavte, pokud vytvoříte rozdělovač vlastního podokna. To umožňuje rozhraní vytvořit rozdělovač podokna při vykreslení podokna.
 
 ### <a name="example"></a>Příklad
 
-Následující příklad ukazuje, jak nastavit `m_pSliderRTC` členské proměnné:
+Následující příklad ukazuje, jak nastavit `m_pSliderRTC` členskou proměnnou:
 
 ```
 class CMySplitter : public CPaneDivider
@@ -605,7 +607,7 @@ class CMySplitter : public CPaneDivider
 CPaneDivider::m_pSliderRTC = RUNTIME_CLASS(CMySpliter);
 ```
 
-##  <a name="notifyaboutrelease"></a>  CPaneDivider::NotifyAboutRelease
+##  <a name="notifyaboutrelease"></a>CPaneDivider::NotifyAboutRelease
 
 ```
 virtual void NotifyAboutRelease();
@@ -613,7 +615,7 @@ virtual void NotifyAboutRelease();
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="onshowpane"></a>  CPaneDivider::OnShowPane
+##  <a name="onshowpane"></a>CPaneDivider::OnShowPane
 
 ```
 virtual void OnShowPane(
@@ -623,12 +625,12 @@ virtual void OnShowPane(
 
 ### <a name="parameters"></a>Parametry
 
-[in] *pBar*<br/>
-[in] *bShow*<br/>
+pro *pBar*<br/>
+pro *bShow*<br/>
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="releaseemptypanecontainers"></a>  CPaneDivider::ReleaseEmptyPaneContainers
+##  <a name="releaseemptypanecontainers"></a>CPaneDivider::ReleaseEmptyPaneContainers
 
 ```
 void ReleaseEmptyPaneContainers();
@@ -636,7 +638,7 @@ void ReleaseEmptyPaneContainers();
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="removepane"></a>  CPaneDivider::RemovePane
+##  <a name="removepane"></a>CPaneDivider::RemovePane
 
 ```
 virtual void RemovePane(CDockablePane* pBar);
@@ -644,11 +646,11 @@ virtual void RemovePane(CDockablePane* pBar);
 
 ### <a name="parameters"></a>Parametry
 
-[in] *pBar*<br/>
+pro *pBar*<br/>
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="replacepane"></a>  CPaneDivider::ReplacePane
+##  <a name="replacepane"></a>CPaneDivider::ReplacePane
 
 ```
 virtual BOOL ReplacePane(
@@ -658,14 +660,14 @@ virtual BOOL ReplacePane(
 
 ### <a name="parameters"></a>Parametry
 
-[in] *pBarToReplace*<br/>
+pro *pBarToReplace*<br/>
 [in] *pBarToReplaceWith*<br/>
 
 ### <a name="return-value"></a>Návratová hodnota
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="repositionpanes"></a>  CPaneDivider::RepositionPanes
+##  <a name="repositionpanes"></a>CPaneDivider::RepositionPanes
 
 ```
 virtual void RepositionPanes(
@@ -675,12 +677,12 @@ virtual void RepositionPanes(
 
 ### <a name="parameters"></a>Parametry
 
-[in] *rectNew*<br/>
-[in] *hdwp*<br/>
+pro *rectNew*<br/>
+pro *hdwp*<br/>
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="serialize"></a>  CPaneDivider::Serialize
+##  <a name="serialize"></a>CPaneDivider:: serializovat
 
 ```
 void Serialize(CArchive& ar);
@@ -688,11 +690,11 @@ void Serialize(CArchive& ar);
 
 ### <a name="parameters"></a>Parametry
 
-[in] *ar*<br/>
+pro *ar*<br/>
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="showwindow"></a>  CPaneDivider::ShowWindow
+##  <a name="showwindow"></a>CPaneDivider::: ShowWindow
 
 ```
 void ShowWindow(int nCmdShow);
@@ -700,11 +702,11 @@ void ShowWindow(int nCmdShow);
 
 ### <a name="parameters"></a>Parametry
 
-[in] *nCmdShow*<br/>
+pro *nCmdShow*<br/>
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="storerecentdocksiteinfo"></a>  CPaneDivider::StoreRecentDockSiteInfo
+##  <a name="storerecentdocksiteinfo"></a>CPaneDivider::StoreRecentDockSiteInfo
 
 ```
 void StoreRecentDockSiteInfo(CDockablePane* pBar);
@@ -712,11 +714,11 @@ void StoreRecentDockSiteInfo(CDockablePane* pBar);
 
 ### <a name="parameters"></a>Parametry
 
-[in] *pBar*<br/>
+pro *pBar*<br/>
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="storerecenttabrelatedinfo"></a>  CPaneDivider::StoreRecentTabRelatedInfo
+##  <a name="storerecenttabrelatedinfo"></a>CPaneDivider::StoreRecentTabRelatedInfo
 
 ```
 void StoreRecentTabRelatedInfo(
@@ -726,8 +728,8 @@ void StoreRecentTabRelatedInfo(
 
 ### <a name="parameters"></a>Parametry
 
-[in] *pDockingBar*<br/>
-[in] *pTabbedBar*<br/>
+pro *pDockingBar*<br/>
+pro *pTabbedBar*<br/>
 
 ### <a name="remarks"></a>Poznámky
 

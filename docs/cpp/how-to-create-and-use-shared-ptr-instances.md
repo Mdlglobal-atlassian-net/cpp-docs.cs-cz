@@ -1,27 +1,27 @@
 ---
-title: 'Postupy: Vytvoření a používání instancí ukazatelů shared_ptr'
+title: 'Postupy: Vytváření a používání instancí shared_ptr'
 ms.custom: how-to
 ms.date: 05/22/2019
 ms.topic: conceptual
 ms.assetid: 7d6ebb73-fa0d-4b0b-a528-bf05de96518e
-ms.openlocfilehash: ac6db74122383ef8adb0f208860a6f6fba02dcc7
-ms.sourcegitcommit: 8adabe177d557c74566c13145196c11cef5d10d4
+ms.openlocfilehash: d0ee1a5e8c5d26e8e0bec060ffe3d5fea30ce0fa
+ms.sourcegitcommit: bd7ddc044f9083246614b602ef6a758775313214
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/10/2019
-ms.locfileid: "66821692"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68866138"
 ---
-# <a name="how-to-create-and-use-sharedptr-instances"></a>Postupy: Vytvoření a používání instancí ukazatelů shared_ptr
+# <a name="how-to-create-and-use-shared_ptr-instances"></a>Postupy: Vytváření a používání instancí shared_ptr
 
 Typ `shared_ptr` je inteligentní ukazatel ve standardní knihovně jazyka C++ určený pro scénáře, ve kterých musí více než jeden vlastník spravovat dobu života objektu v paměti. Po inicializaci typu `shared_ptr` jej lze zkopírovat, předat hodnotou argumentům funkce nebo přiřadit dalším instancím typu `shared_ptr`. Všechny tyto instance ukazují na stejný objekt a sdílejí přístup k jednomu „řídicímu bloku“, který zvyšuje a snižuje počet odkazů, kdykoli je nová instance typu `shared_ptr` přidána, dostane se mimo rozsah nebo je obnovena. Když počet odkazů dosáhne nuly, řídicí blok odstraní prostředky paměti a sám sebe.
 
 Následující obrázek znázorňuje několik instancí typu `shared_ptr`, které odkazují na jedno umístění v paměti.
 
-![Sdílený ukazatel diagram](../cpp/media/shared_ptr.png "diagram sdílený ukazatel")
+![Sdílený diagram ukazatelů](../cpp/media/shared_ptr.png "Sdílený diagram ukazatelů")
 
 ## <a name="example-setup"></a>Příklad nastavení
 
-Příklady, které následují všechny Předpokládejme, že jste zahrnout požadované záhlaví a deklarovat požadované typy, jak je znázorněno zde:
+Následující příklady předpokládají, že jste zahrnuli požadované hlavičky a deklarovali požadované typy, jak je znázorněno zde:
 
 ```cpp
 // shared_ptr-examples.cpp
@@ -72,7 +72,7 @@ int main()
 
 ## <a name="example-1"></a>Příklad 1
 
-Kdykoli je to možné, použijte [make_shared](../standard-library/memory-functions.md#make_shared) funkci, která vytvoří `shared_ptr` kdy je prostředek paměti vytvořen poprvé. Funkce `make_shared` zaručuje bezpečnost výjimek. Používá stejné volání pro přidělení paměti řídicímu bloku a prostředku, což snižuje zatížení při jejich konstrukci. Pokud nepoužíváte `make_shared`, pak je nutné použít explicitní `new` výrazu k vytvoření objektu před jeho předáním `shared_ptr` konstruktoru. Následující příklad ukazuje různé způsoby deklarace a inicializace instancí typu `shared_ptr` společně s novým objektem.
+Kdykoli je to možné, použijte funkci [make_shared](../standard-library/memory-functions.md#make_shared) , která `shared_ptr` vytvoří čas vytvoření prostředku paměti poprvé. Funkce `make_shared` zaručuje bezpečnost výjimek. Používá stejné volání k přidělení paměti řídicímu bloku a prostředku, což snižuje režii konstrukce. Pokud nepoužíváte `make_shared`, je nutné použít explicitní `new` výraz pro vytvoření objektu před jeho `shared_ptr` předáním konstruktoru. Následující příklad ukazuje různé způsoby deklarace a inicializace instancí typu `shared_ptr` společně s novým objektem.
 
 [!code-cpp[stl_smart_pointers#1](../cpp/codesnippet/CPP/how-to-create-and-use-shared-ptr-instances_1.cpp)]
 
@@ -84,7 +84,7 @@ Následující příklad ukazuje deklaraci a inicializaci instancí typu `shared
 
 ## <a name="example-3"></a>Příklad 3
 
-`shared_ptr` je také užitečný v C++ kontejnery standardní knihovny, při použití algoritmů, které kopírují prvky. Prvky lze zabalit do instance typu `shared_ptr` a poté je zkopírovat do jiných kontejnerů s vědomím, že základní paměť je platná tak dlouho, dokud ji potřebujete a ne déle. Následující příklad ukazuje, jak použít algoritmus `replace_copy_if` s instancemi typu `shared_ptr` v instanci typu vector.
+`shared_ptr`je také užitečné v C++ kontejnerech knihovny Standard, pokud používáte algoritmy, které kopírují prvky. Prvky lze zabalit do instance typu `shared_ptr` a poté je zkopírovat do jiných kontejnerů s vědomím, že základní paměť je platná tak dlouho, dokud ji potřebujete a ne déle. Následující příklad ukazuje, jak použít algoritmus `remove_copy_if` s instancemi typu `shared_ptr` v instanci typu vector.
 
 [!code-cpp[stl_smart_pointers#4](../cpp/codesnippet/CPP/how-to-create-and-use-shared-ptr-instances_3.cpp)]
 
@@ -98,17 +98,17 @@ K přetypování instance typu `dynamic_pointer_cast` lze použít funkce `stati
 
 Instanci typu `shared_ptr` lze předat jiné funkci následujícími způsoby:
 
-- Předání instance typu `shared_ptr` hodnotou. To zavolá kopii konstruktoru, zvýší počet odkazů a volaného učiní vlastníkem. Existuje malé množství režie při této operaci, což může být významné v závislosti na tom, kolik `shared_ptr` při předávání objektů. Tuto možnost použijte, pokud implicitní nebo explicitní kontrakt mezi volajícím a volaným vyžaduje, aby volaný byl vlastníkem.
+- Předání instance typu `shared_ptr` hodnotou. To zavolá kopii konstruktoru, zvýší počet odkazů a volaného učiní vlastníkem. Tato operace je malým množstvím režie, což může být významné v závislosti na tom `shared_ptr` , kolik objektů předáváte. Tuto možnost použijte, pokud implicitní nebo explicitní kontrakt kódu mezi volajícím a volaným vyžaduje, aby volaný byl vlastníkem.
 
-- Předání instance typu `shared_ptr` odkazem nebo konstantním odkazem. V takovém případě není počet odkazů zvýšen a volaný může přistupovat k ukazatele, pokud volající nemá dostanou mimo rozsah. Nebo volaný může rozhodnout o vytvoření `shared_ptr` založeném na tomto odkazu a stát sdíleným vlastníkem. Tuto možnost použijte, když volající nezná volaného nebo když je nutné předat instanci typu `shared_ptr` a chcete se vyhnout operaci kopírování z důvodů výkonu.
+- Předání instance typu `shared_ptr` odkazem nebo konstantním odkazem. V tomto případě není počet odkazů zvýšen a volaný má k ukazateli přístup, pokud se volající nepřesune do rozsahu. Nebo volaný se může rozhodnout vytvořit `shared_ptr` na základě odkazu a stane se sdíleným vlastníkem. Tuto možnost použijte, když volající nezná volaného nebo když je nutné předat instanci typu `shared_ptr` a chcete se vyhnout operaci kopírování z důvodů výkonu.
 
-- Předání základního ukazatele nebo odkazu na základní objekt. To umožňuje volanému tento objekt použít, ale neumožňuje sdílení vlastnictví ani prodloužení doby života ho. Pokud volaný vytvoří `shared_ptr` z nezpracovaný ukazatel nové `shared_ptr` je nezávislá na původním a nemá pod kontrolou tento základní prostředek spravovat. Tuto možnost použijte, pokud kontrakt mezi volajícím a volaným jasně určuje, že volajícímu zůstane vlastnictví po dobu života instance typu `shared_ptr`.
+- Předání základního ukazatele nebo odkazu na základní objekt. To umožňuje, aby volaný objekt používal, ale nepovolil sdílení vlastnictví nebo prodloužení doby života. Pokud volaný vytvoří `shared_ptr` z nezpracovaného ukazatele, nový `shared_ptr` je nezávislý na původní a neřídí základní prostředek. Tuto možnost použijte, pokud kontrakt mezi volajícím a volaným jasně určuje, že volajícímu zůstane vlastnictví po dobu života instance typu `shared_ptr`.
 
-- Pokud se rozhodujete, jak předat `shared_ptr`, určete, zda volaný musí sdílet vlastnictví základního prostředku. „Vlastník“ je objekt nebo funkce, která může základní prostředek zachovat naživu tak dlouho, dokud jej potřebuje. Pokud volající musí zaručit, že volaný může prodloužit dobu života ukazatele nad rámec své doby života (funkce), použijte první možnost. Pokud není důležité, zda volaný prodlouží dobu života, použijte předání odkazem a nechte volaného, aby je zkopíroval či nikoli.
+- Když rozhodujete `shared_ptr`, jak předat, určete, zda volaný musí sdílet vlastnictví podkladového prostředku. „Vlastník“ je objekt nebo funkce, která může základní prostředek zachovat naživu tak dlouho, dokud jej potřebuje. Pokud volající musí zaručit, že volaný může prodloužit dobu života ukazatele nad rámec své doby života (funkce), použijte první možnost. Pokud není důležité, zda volaný prodlouží dobu života, použijte předání odkazem a nechte volaného, aby je zkopíroval či nikoli.
 
-- Pokud máte k udělení přístupu k pomocné funkce základního ukazatele, a vědět, že pomocnou funkci se právě použijete tento ukazatel a vrátí se před vrácením volající funkce vrátí tuto funkci a nemusí sdílet vlastnictví základního ukazatele. K tomuto ukazateli má přístup jen během doby života instance typu `shared_ptr` volajícího. V takovém případě je bezpečné předat instanci typu `shared_ptr` podle odkazem nebo předat obyčejný ukazatel nebo odkaz na základní objekt. Předání tímto způsobem mírně zlepšuje výkon a může také pomoci lépe vyjádřit záměr programu.
+- Pokud je nutné poskytnout pomocnou funkci přístup k základnímu ukazateli a víte, že pomocná funkce bude pouze používat ukazatel a vracet před vrácením volání funkce, pak tato funkce nemusí sdílet vlastnictví základního ukazatele. K tomuto ukazateli má přístup jen během doby života instance typu `shared_ptr` volajícího. V tomto případě je bezpečné předat `shared_ptr` odkaz po, nebo předat nezpracovaný ukazatel nebo odkaz na základní objekt. Předání tímto způsobem mírně zlepšuje výkon a může také pomoci lépe vyjádřit záměr programu.
 
-- Někdy, například pro typ `std::vector<shared_ptr<T>>`, bude pravděpodobně nutné předat každou instanci typu `shared_ptr` tělu výrazu lambda nebo objektu pojmenované funkce. Pokud výraz lambda nebo funkce ukazatel neukládá, předejte `shared_ptr` odkazem, abyste zabránili volání kopie konstruktoru pro každý prvek.
+- Někdy, například pro typ `std::vector<shared_ptr<T>>`, bude pravděpodobně nutné předat každou instanci typu `shared_ptr` tělu výrazu lambda nebo objektu pojmenované funkce. Pokud výraz lambda nebo funkce neuloží ukazatel, pak předejte `shared_ptr` odkaz pomocí, aby nedošlo k vyvolání kopírovacího konstruktoru pro každý prvek.
 
 ## <a name="example-6"></a>Příklad 6
 

@@ -7,18 +7,18 @@ f1_keywords:
 helpviewer_keywords:
 - namespaces [C++]
 ms.assetid: d1a5a9ab-1cad-47e6-a82d-385bb77f4188
-ms.openlocfilehash: 15717c6f2f34836de9b546af203a45dc8099d4d4
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.openlocfilehash: ae3006dd1b17ec38240a318af6cfcac5c7d6bf49
+ms.sourcegitcommit: bd7ddc044f9083246614b602ef6a758775313214
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65222351"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68866044"
 ---
 # <a name="namespaces-c"></a>Obory názvů (C++)
 
-Obor názvů je deklarativní oblast, která nabízí obor na identifikátory (názvy typů, funkce, proměnné atd) uvnitř. Obory názvů slouží k uspořádání kódu do logických skupin a zabránit kolize názvů, které mohou nastat, zejména v případě, že vašeho základu kódu obsahuje více knihoven. Všechny identifikátory v oboru názvů jsou navzájem viditelné bez kvalifikace. Identifikátory mimo obor názvů, můžete přistupovat ke členům pomocí plně kvalifikovaný název pro jednotlivé identifikátory, třeba `std::vector<std::string> vec;`, nebo podle [using – deklarace](../cpp/using-declaration.md) pro jednoho identifikátoru (`using std::string`), nebo [direktiva using](../cpp/namespaces-cpp.md#using_directives) pro všechny identifikátory v oboru názvů (`using namespace std;`). Kód v souborech hlaviček vždy používejte plně kvalifikovaný obor názvů.
+Obor názvů je deklarativní oblast, která poskytuje obor k identifikátorům (názvy typů, funkcí, proměnných atd.) uvnitř ní. Obory názvů slouží k uspořádání kódu do logických skupin a k zabránění kolizím názvů, ke kterým může dojít hlavně v případě, že váš základní kód obsahuje více knihoven. Všechny identifikátory v oboru názvů jsou viditelné vedle sebe bez kvalifikace. Identifikátory mimo obor názvů mají přístup ke členům pomocí `std::vector<std::string> vec;`plně kvalifikovaného názvu pro každý identifikátor, například nebo jinak pomocí [deklarace](../cpp/using-declaration.md) pro jeden identifikátor (`using std::string`) nebo direktivy [using](../cpp/namespaces-cpp.md#using_directives) pro všechny. identifikátory v oboru názvů (`using namespace std;`). Kód v hlavičkových souborech by měl vždycky používat plně kvalifikovaný název oboru názvů.
 
-Následující příklad ukazuje deklaraci oboru názvů a tři způsoby, tento kód mimo obor názvů, můžete přistupuje k jejich členy.
+Následující příklad ukazuje deklaraci oboru názvů a tři způsoby, které kód mimo obor názvů má přístup ke svým členům.
 
 ```cpp
 namespace ContosoData
@@ -40,7 +40,7 @@ mgr.DoSomething();
 ContosoData::Func(mgr);
 ```
 
-Použít, a s použitím deklarace převeďte do rozsahu jednoho identifikátoru:
+Použijte deklaraci using k uvedení jednoho identifikátoru do oboru:
 
 ```cpp
 using ContosoData::ObjectManager;
@@ -48,7 +48,7 @@ ObjectManager mgr;
 mgr.DoSomething();
 ```
 
-Použít using – direktiva všechno, co vám v oboru názvů do oboru:
+Použijte direktivu using k uvedení všeho v oboru názvů do rozsahu:
 
 ```cpp
 using namespace ContosoData;
@@ -58,18 +58,18 @@ mgr.DoSomething();
 Func(mgr);
 ```
 
-## <a id="using_directives"></a> direktivy using
+## <a id="using_directives"></a>direktivy using
 
-**Pomocí** – direktiva umožňuje použití všech názvů v **obor názvů** bez *název oboru názvů* jako explicitního kvalifikátoru. Použijte sadu pomocí direktivy v souboru implementace (tj. *.cpp), pokud používáte několik různých identifikátorů v oboru názvů; Pokud používáte pouze jeden nebo dva identifikátory, zvažte using deklarace pouze přenést tyto identifikátory do oboru a ne všechny identifikátory v oboru názvů. Pokud má lokální proměnná stejný název jako proměnná oboru názvů, je proměnná oboru názvů skryta. Jedná se o chybu, pokud má proměnná oboru názvů stejný název jako globální proměnná.
+Direktiva **using** povoluje použití všech názvů v **názvovém prostoru** bez *názvu oboru názvů* jako explicitního kvalifikátoru. Použijte direktivu using v implementačním souboru (například *. cpp), pokud používáte několik různých identifikátorů v oboru názvů; Pokud jste právě používali jeden nebo dva identifikátory, zvažte použití deklarace deklarací, aby se tyto identifikátory přenesly do oboru, a ne do všech identifikátorů v oboru názvů. Pokud má lokální proměnná stejný název jako proměnná oboru názvů, je proměnná oboru názvů skryta. Jedná se o chybu, pokud má proměnná oboru názvů stejný název jako globální proměnná.
 
 > [!NOTE]
->  Using – direktiva mohou být umístěny v horní části souboru s příponou .cpp (v oboru souboru), nebo uvnitř definice třídy nebo funkce.
+>  Direktiva using se dá umístit na začátek souboru. cpp (v rozsahu souboru) nebo uvnitř definice třídy nebo funkce.
 >
->  Obecně platí, vyhněte se vložení pomocí direktivy v hlavičkových souborech (* .h) vzhledem k tomu, že každý soubor, který obsahuje tuto hlavičku přinese všechno, co v oboru názvů do oboru, které můžou způsobovat skrývání názvů a názvů kolizí problémy, které jsou velmi obtížné ladit. Vždy používejte plně kvalifikované názvy v záhlaví souboru. Pokud se zobrazí názvy příliš dlouhý, můžete zkrátit je alias oboru názvů. (Viz níže).
+>  Obecně platí, že Nezahrnovat direktivy using v hlavičkových souborech (*. h), protože každý soubor, který obsahuje tuto hlavičku, přenese vše v oboru názvů do oboru, což může způsobit skrývání názvů a problémy kolize názvů, které jsou velmi obtížné ladit. V hlavičkovém souboru vždy používejte plně kvalifikované názvy. Pokud se tyto názvy dostanou příliš dlouho, můžete k jejich zkrácení použít alias oboru názvů. (Viz níže)
 
-## <a name="declaring-namespaces-and-namespace-members"></a>Deklarace oborů názvů a názvů členů
+## <a name="declaring-namespaces-and-namespace-members"></a>Deklarace oborů názvů a členů oboru názvů
 
-Obvykle deklarujte obor názvů v souboru hlaviček. Pokud vaše implementace funkce jsou v samostatném souboru, pak kvalifikovat názvy funkcí, jako v následujícím příkladu.
+Obvykle deklarujete obor názvů v hlavičkovém souboru. Pokud jsou vaše implementace funkcí v samostatném souboru, pak kvalifikováním názvů funkcí, jako v tomto příkladu.
 
 ```cpp
 //contosoData.h
@@ -81,7 +81,7 @@ namespace ContosoDataServer
 }
 ```
 
-Implementace funkce v contosodata.cpp by měl použít plně kvalifikovaný název, i v případě, že umístíte **pomocí** direktiv v horní části souboru:
+Implementace funkcí v contosodata. cpp by měly používat plně kvalifikovaný název, i když do horní části souboru umístíte direktivu **using** :
 
 ```cpp
 #include "contosodata.h"
@@ -96,39 +96,38 @@ void ContosoDataServer::Foo() // use fully-qualified name here
 int ContosoDataServer::Bar(){return 0;}
 ```
 
-Obor názvů lze deklarovat ve více blocích v jednom souboru a ve více souborech. Kompilátor připojí části společně během předběžného zpracování a výsledný obor názvů obsahuje všechny členy deklarované ve všech částech. Příkladem je obor názvů std, který je deklarován v každém ze souborů záhlaví ve standardní knihovně.
+Obor názvů lze deklarovat ve více blocích v jednom souboru a ve více souborech. Kompilátor spojuje části společně během předběžného zpracování a výsledný obor názvů obsahuje všechny členy deklarované ve všech částech. Příkladem je standardní obor názvů, který je deklarován v každém hlavičkovém souboru ve standardní knihovně.
 
-Členy pojmenovaného oboru názvů lze definovat mimo obor názvů, ve kterém jsou deklarovány pomocí explicitní kvalifikace definovaného názvu. Definice však musí vyskytovat za deklarací v oboru názvů, který obklopuje obor názvů deklarace. Příklad:
+Členy pojmenovaného oboru názvů lze definovat mimo obor názvů, ve kterém jsou deklarovány explicitní kvalifikací definovaného názvu. Definice se však musí objevit za bodem deklarace v oboru názvů, který je ohraničující obor názvů deklarace. Příklad:
 
 ```cpp
 // defining_namespace_members.cpp
 // C2039 expected
 namespace V {
-        void f();
-    }
+    void f();
+}
 
-    void V::f() { }        // ok
-    void V::g() { }        // C2039, g() is not yet a member of V
+void V::f() { }        // ok
+void V::g() { }        // C2039, g() is not yet a member of V
 
-    namespace V {
-        void g();
-    }
+namespace V {
+    void g();
 }
 ```
 
-Této chybě může dojít, pokud obor názvů členů jsou deklarovány napříč více souborů záhlaví a nezahrnuli jste těchto záhlaví ve správném pořadí.
+K této chybě může dojít, pokud jsou členy oboru názvů deklarovány napříč více hlavičkových souborů a nezahrnuli jste tyto hlavičky ve správném pořadí.
 
 ## <a name="the-global-namespace"></a>Globální obor názvů
 
-Pokud není identifikátor deklarovaný v explicitní obor názvů, je součástí implicitní globální obor názvů. Obecně platí, snažte se vyhnout prohlášení v globálním oboru, pokud je to možné, s výjimkou vstupní bod [hlavní funkci](../c-language/main-function-and-program-execution.md), které musí být v globálním oboru názvů. Pro explicitní kvalifikaci globálního identifikátoru, použijte operátor rozlišení rozsahu bez názvu jako v `::SomeFunction(x);`. To bude rozlišovat identifikátor z ničeho se stejným názvem v jiné oboru názvů a vám také pomůže snadněji ostatním uživatelům pochopit, aby váš kód.
+Pokud identifikátor není deklarován v explicitním oboru názvů, je součástí implicitního globálního oboru názvů. Obecně se snažte vyhnout vytváření deklarací v globálním rozsahu, pokud je to možné, s výjimkou [hlavní funkce](../c-language/main-function-and-program-execution.md)vstupního bodu, která musí být v globálním oboru názvů. K explicitnímu zařazení globálního identifikátoru použijte operátor rozlišení oboru bez názvu, jako v `::SomeFunction(x);`. Tím se identifikátor odlišuje od cokoli se stejným názvem v jakémkoli jiném oboru názvů, a pomůže vám to usnadnit pochopení kódu ostatním.
 
 ## <a name="the-std-namespace"></a>Obor názvů std
 
-Všechny typy standardní knihovny C++ a funkce jsou deklarovány v `std` oboru názvů nebo obory názvů vnořit do `std`.
+Všechny C++ standardní typy a funkce knihovny jsou deklarovány v `std` oboru názvů nebo obory `std`názvů vnořené uvnitř.
 
 ## <a name="nested-namespaces"></a>Vnořené obory názvů
 
-Mohou být vnořené obory názvů. Je běžné vnořené obory názvů nekvalifikované přístup k členům svého nadřazeného objektu, ale členové nadřazené nemají nekvalifikované přístup k vnořené oboru názvů (Pokud je deklarovaná jako inline), jak je znázorněno v následujícím příkladu:
+Obory názvů můžou být vnořené. Běžný vnořený obor názvů má neoprávněný přístup ke svým nadřazeným členům, ale nadřazené členy nemají neúplný přístup k vnořenému oboru názvů (Pokud není deklarován jako inline), jak je znázorněno v následujícím příkladu:
 
 ```cpp
 namespace ContosoDataServer
@@ -146,11 +145,11 @@ namespace ContosoDataServer
 }
 ```
 
-Běžné vnořené obory názvů lze použít k zapouzdření podrobnosti interní implementace, které nejsou součástí veřejného rozhraní nadřazený obor názvů.
+Běžné vnořené obory názvů lze použít k zapouzdření podrobností interní implementace, které nejsou součástí veřejného rozhraní nadřazeného oboru názvů.
 
-## <a name="inline-namespaces-c-11"></a>Pomocí vložených oborů názvů (C++ 11)
+## <a name="inline-namespaces-c-11"></a>Vložené oboryC++ názvů (11)
 
-Na rozdíl od běžných vnořené oboru jsou členy oboru názvů vloženého považovány za členy nadřazený obor názvů. Tato vlastnost umožňuje vyhledávání závislé argument týkající se přetížených funkcí pro práci na funkcích, které mají přetížení v nadřazený a vnořený vložené oboru názvů. Také umožňuje deklarovat v oboru nadřazené šablony, která je deklarována v oboru názvů vložené specializace. Následující příklad ukazuje, jak externí kód váže k oboru názvů vloženého ve výchozím nastavení:
+Na rozdíl od obyčejného vnořeného oboru názvů se členové vloženého oboru názvů považují za členy nadřazeného oboru názvů. Tato vlastnost umožňuje vyhledávání závislých na argumentu u přetížených funkcí pro práci s funkcemi, které mají přetížení nadřazeného a vnořeného oboru názvů. Umožňuje také deklarovat specializaci v nadřazeném oboru názvů pro šablonu, která je deklarována v rámci vloženého oboru názvů. Následující příklad ukazuje, jak se externí kód váže k vloženému oboru názvů standardně:
 
 ```cpp
 //Header.h
@@ -184,7 +183,7 @@ int main()
 }
 ```
 
-Následující příklad ukazuje, jak je možné deklarovat jako specializaci té v nadřazené šablony, která je deklarována v oboru názvů vloženého:
+Následující příklad ukazuje, jak lze deklarovat specializaci v nadřazené šabloně šablony, která je deklarována v rámci vloženého oboru názvů:
 
 ```cpp
 namespace Parent
@@ -202,11 +201,11 @@ namespace Parent
 }
 ```
 
-Pomocí vložených oborů názvů jako mechanismus správy verzí můžete spravovat změny veřejné rozhraní knihovny. Můžete například vytvořit jeden nadřazený obor názvů a zapouzdřují jednotlivé verze rozhraní v svůj vlastní obor názvů, vnořené uvnitř nadřazeného objektu. Obor názvů, který obsahuje verzi nejnovějšího nebo upřednostňované je kvalifikován jako vložený a proto je vystavena jako by šlo přímým členem nadřazený obor názvů. Klientský kód, který vyvolá Parent::Class bude automaticky svázán s novým kódem. Klienti, kteří dávají přednost používání starší verze k němu přístup pomocí plně kvalifikovanou cestu k vnořené oboru názvů, který má tento kód.
+Můžete použít vložené obory názvů jako mechanismus správy verzí ke správě změn ve veřejném rozhraní knihovny. Můžete například vytvořit jeden nadřazený obor názvů a zapouzdřit každou verzi rozhraní ve vlastním oboru názvů vnořeném do nadřazeného objektu. Obor názvů, který obsahuje nejnovější nebo upřednostňovanou verzi, je kvalifikován jako inline a je proto vystaven, jako by byl přímým členem nadřazeného oboru názvů. Kód klienta, který vyvolá nadřazenou třídu::, bude automaticky svázán s novým kódem. Klienti, kteří preferují použití starší verze, k němu stále mají přístup pomocí plně kvalifikované cesty k vnořenému oboru názvů, který má tento kód.
 
-Klíčové slovo inline se musí použít pro první deklaraci oboru názvů v jednotce kompilace.
+Klíčové slovo inline se musí použít na první deklaraci oboru názvů v kompilační jednotce.
 
-Následující příklad ukazuje dvě verze rozhraní, každá do vnořené oboru názvů. `v_20` Má některé změny z oboru názvů `v_10` rozhraní a je označen jako vložené. Klientský kód, který používá novou knihovnu a volání `Contoso::Funcs::Add` vyvolá v_20 verze. Kód, který se pokusí volat `Contoso::Funcs::Divide` teď získají chybu v době kompilace. Pokud je opravdu nutné tuto funkci, můžete stále přistupují `v_10` verze explicitně voláním `Contoso::v_10::Funcs::Divide`.
+Následující příklad ukazuje dvě verze rozhraní, každý ve vnořeném oboru názvů. Obor názvů má nějakou úpravu `v_10` z rozhraní a je označený jako inline. `v_20` Klientský kód, který používá novou knihovnu a volání `Contoso::Funcs::Add` , vyvolá verzi v_20. Kód, který se pokouší `Contoso::Funcs::Divide` zavolat, teď získá chybu při kompilaci. Pokud tyto funkce skutečně potřebují, mohou stále přistupovat `v_10` k verzi pomocí explicitního volání. `Contoso::v_10::Funcs::Divide`
 
 ```cpp
 namespace Contoso
@@ -242,9 +241,9 @@ namespace Contoso
 }
 ```
 
-## <a id="namespace_aliases"></a> Aliasy Namespace
+## <a id="namespace_aliases"></a>Aliasy oboru názvů
 
-Názvy Namespace musí být jedinečný, což znamená, že často neměly by být moc krátký. Pokud délka názvu je kód obtížné číst, nebo je únavné na typ v hlavičkovém souboru, kde direktiv using nelze použít, pak můžete provádět aliasem oboru názvů, která slouží jako zkratka pro skutečný název. Příklad:
+Názvy názvových prostorů musí být jedinečné, což znamená, že by obvykle neměly být příliš krátké. Pokud je délka názvu obtížná pro čtení kódu nebo je únavné zadat v hlavičkovém souboru, kde nelze použít direktivy using, pak můžete vytvořit alias oboru názvů, který slouží jako zkratka pro skutečný název. Příklad:
 
 ```cpp
 namespace a_very_long_namespace_name { class Foo {}; }
@@ -254,7 +253,7 @@ void Bar(AVLNN::Foo foo){ }
 
 ## <a name="anonymous-or-unnamed-namespaces"></a>anonymní nebo nepojmenované obory názvů
 
-Můžete vytvořit explicitní obor názvů, ale ne pojmenujte ho:
+Můžete vytvořit explicitní obor názvů, ale nemusíte mu dát název:
 
 ```cpp
 namespace
@@ -263,7 +262,7 @@ namespace
 }
 ```
 
-To se označuje jako obor názvů služby Nepojmenovaná nebo anonymní, a to je užitečné, když chcete skrytí deklarace proměnných kódu v jiných souborech (tedy můžete svým uživatelům umožnit vnitřní propojení) bez nutnosti vytvářet pojmenovaného oboru názvů. Veškerý kód ve stejném souboru můžete zobrazit identifikátory v nepojmenovaného oboru názvů ale identifikátory, spolu s oboru názvů, nejsou viditelné mimo tento soubor, nebo přesněji mimo jednotky překladu.
+Tento postup se nazývá nepojmenovaný nebo anonymní obor názvů a je užitečný, pokud chcete, aby deklarace proměnných byly neviditelné pro kód v jiných souborech (tj. přidávají interní propojení) bez nutnosti vytvořit pojmenovaný obor názvů. Veškerý kód ve stejném souboru může zobrazit identifikátory v nenázvovém oboru názvů, ale identifikátory spolu s samotným oborem názvů nejsou viditelné vně tohoto souboru – nebo přesněji mimo jednotku překladu.
 
 ## <a name="see-also"></a>Viz také:
 
