@@ -1,5 +1,5 @@
 ---
-title: CPropertyPage – třída
+title: CPropertyPage – – třída
 ms.date: 11/04/2016
 f1_keywords:
 - CPropertyPage
@@ -40,16 +40,16 @@ helpviewer_keywords:
 - CPropertyPage [MFC], SetModified
 - CPropertyPage [MFC], m_psp
 ms.assetid: d9000a21-aa81-4530-85d9-f43432afb4dc
-ms.openlocfilehash: 9d4100037c5a6cd2eeef1a50fb2d5a46b2cb6505
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f9116306fd2bd6145096b055025bd4dd2075b0c1
+ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62372462"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68916881"
 ---
-# <a name="cpropertypage-class"></a>CPropertyPage – třída
+# <a name="cpropertypage-class"></a>CPropertyPage – – třída
 
-Představuje jednotlivé stránky seznamu vlastností, jinak známé jako dialogové okno Karta.
+Představuje jednotlivé stránky seznamu vlastností, jinak označované jako dialogové okno karty.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -61,47 +61,47 @@ class CPropertyPage : public CDialog
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
-|[CPropertyPage::CPropertyPage](#cpropertypage)|Vytvoří `CPropertyPage` objektu.|
+|[CPropertyPage::CPropertyPage](#cpropertypage)|`CPropertyPage` Vytvoří objekt.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
-|[CPropertyPage::CancelToClose](#canceltoclose)|Změní na tlačítko OK číst zavřít a zakáže tlačítko Storno po neopravitelné změnit na stránce modální seznam vlastností.|
-|[CPropertyPage::Construct](#construct)|Vytvoří `CPropertyPage` objektu. Použití `Construct` Pokud chcete zadat parametry v době běhu, nebo pokud používáte pole.|
-|[CPropertyPage::GetPSP](#getpsp)|Načte Windows [PROPSHEETPAGE](/windows/desktop/api/prsht/ns-prsht-_propsheetpagea_v2) struktura `CPropertyPage` objektu.|
-|[CPropertyPage::OnApply](#onapply)|Volá se rozhraním, když dojde ke kliknutí na tlačítko použít.|
-|[CPropertyPage::OnCancel](#oncancel)|Volá se rozhraním, když dojde ke kliknutí na tlačítko Storno.|
-|[CPropertyPage::OnKillActive](#onkillactive)|Volá se rozhraním, když aktuální stránka už není aktivní stránkou. Ověřování dat v tomto poli.|
-|[CPropertyPage::OnOK](#onok)|Volá se rozhraním, když je kliknutí OK, použít nebo zavřít.|
-|[CPropertyPage::OnQueryCancel](#onquerycancel)|Volá se rozhraním, když dojde ke kliknutí na tlačítko Storno a před místo zrušení.|
-|[CPropertyPage::OnReset](#onreset)|Volá se rozhraním, když dojde ke kliknutí na tlačítko Storno.|
+|[CPropertyPage –:: CancelToClose](#canceltoclose)|Změní tlačítko OK pro čtení zavřít a zakáže tlačítko zrušit po neopravitelné změně stránky modálního seznamu vlastností.|
+|[CPropertyPage::Construct](#construct)|`CPropertyPage` Vytvoří objekt. Použijte `Construct` , pokud chcete zadat parametry za běhu, nebo pokud používáte pole.|
+|[CPropertyPage::GetPSP](#getpsp)|Načte strukturu [PROPSHEETPAGE](/windows/desktop/api/prsht/ns-prsht-propsheetpagea_v2) Windows přidruženou `CPropertyPage` k objektu.|
+|[CPropertyPage::OnApply](#onapply)|Volá se rozhraním, když se klikne na tlačítko použít.|
+|[CPropertyPage::OnCancel](#oncancel)|Volá se rozhraním, když se klikne na tlačítko Storno.|
+|[CPropertyPage::OnKillActive](#onkillactive)|Volá se rozhraním, když aktuální stránka už není aktivní stránkou. Sem proveďte ověření dat.|
+|[CPropertyPage::OnOK](#onok)|Volá se rozhraním, když se klikne na tlačítko OK, použít nebo zavřít.|
+|[CPropertyPage::OnQueryCancel](#onquerycancel)|Volá se rozhraním, když se klikne na tlačítko Storno a před tím, než bylo zrušení provedeno.|
+|[CPropertyPage::OnReset](#onreset)|Volá se rozhraním, když se klikne na tlačítko Storno.|
 |[CPropertyPage::OnSetActive](#onsetactive)|Volá se rozhraním, když se stránka stane aktivní stránkou.|
-|[CPropertyPage::OnWizardBack](#onwizardback)|Volá se rozhraním při kliknutí na tlačítko zpět při používání seznamu vlastností wizard-type.|
-|[CPropertyPage::OnWizardFinish](#onwizardfinish)|Volá se rozhraním, když je kliknutí na tlačítko Dokončit při používání seznamu vlastností wizard-type.|
-|[CPropertyPage::OnWizardNext](#onwizardnext)|Volá se rozhraním při kliknutí na tlačítko Další při používání seznamu vlastností wizard-type.|
-|[CPropertyPage::QuerySiblings](#querysiblings)|Předá zprávu na každou stránku vlastností.|
-|[CPropertyPage::SetModified](#setmodified)|Volání za účelem aktivace nebo deaktivace tlačítko použít.|
+|[CPropertyPage::OnWizardBack](#onwizardback)|Volá se rozhraním, když se klikne na tlačítko zpět při použití seznamu vlastností Průvodce-typ.|
+|[CPropertyPage::OnWizardFinish](#onwizardfinish)|Volá se rozhraním, když se klikne na tlačítko Dokončit při použití seznamu vlastností Průvodce-typ.|
+|[CPropertyPage::OnWizardNext](#onwizardnext)|Volá se rozhraním, když se klikne na tlačítko Další při použití seznamu vlastností Průvodce-typ.|
+|[CPropertyPage::QuerySiblings](#querysiblings)|Přepošle zprávu na každou stránku seznamu vlastností.|
+|[CPropertyPage::SetModified](#setmodified)|Zavolejte na aktivovat nebo deaktivovat tlačítko použít nyní.|
 
 ### <a name="public-data-members"></a>Veřejné datové členy
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
-|[CPropertyPage::m_psp](#m_psp)|Windows [PROPSHEETPAGE](/windows/desktop/api/prsht/ns-prsht-_propsheetpagea_v2) struktury. Poskytuje přístup k základní vlastnost parametry stránky.|
+|[CPropertyPage::m_psp](#m_psp)|Struktura [PROPSHEETPAGE](/windows/desktop/api/prsht/ns-prsht-propsheetpagea_v2) systému Windows. Poskytuje přístup k základním parametrům stránky vlastností.|
 
 ## <a name="remarks"></a>Poznámky
 
-Jak se standardní dialogová okna, odvoďte třídu z `CPropertyPage` pro každou stránku vašeho seznamu vlastností. Použití `CPropertyPage`-nejprve vytvořit odvozené objekty [cpropertysheet –](../../mfc/reference/cpropertysheet-class.md) objektu a pak vytvořte objekt pro každou stránku, který odkazuje v seznamu vlastností. Volání [CPropertySheet::AddPage](../../mfc/reference/cpropertysheet-class.md#addpage) pro každou stránku v seznamu a zobrazte seznam vlastností voláním [CPropertySheet::DoModal](../../mfc/reference/cpropertysheet-class.md#domodal) pro modální seznam vlastností, nebo [cpropertysheet –:: Vytvoření](../../mfc/reference/cpropertysheet-class.md#create) pro nemodálního seznamu vlastností.
+Stejně jako u standardních dialogových oken odvozujete třídu `CPropertyPage` od pro každou stránku v seznamu vlastností. Chcete- `CPropertyPage`li použít objekty odvozené od, vytvořte nejprve objekt [CPropertySheet –](../../mfc/reference/cpropertysheet-class.md) a pak vytvořte objekt pro každou stránku, která se nachází v seznamu vlastností. Zavolejte [CPropertySheet –:: addPage](../../mfc/reference/cpropertysheet-class.md#addpage) pro každou stránku v listu a potom zobrazte seznam vlastností voláním [CPropertySheet –::D omodal](../../mfc/reference/cpropertysheet-class.md#domodal) pro modální seznam vlastností nebo [CPropertySheet –:: Create](../../mfc/reference/cpropertysheet-class.md#create) pro nemodální seznam vlastností.
 
-Můžete vytvořit typ dialogové okno Karta nazývá průvodce, který se skládá z seznam vlastností s posloupnost stránky vlastností, které provedou uživatele kroky operace, jako je například nastavení zařízení nebo vytváření bulletinu. V dialogovém okně wizard-type. karta na stránkách vlastností nemají karty a pouze jednu vlastnost stránka není viditelná v čase. Namísto toho tlačítka OK a použít dialogové okno Karta wizard-type. má také tlačítko Zpět, tlačítko Další nebo Dokončit a tlačítko Storno.
+Můžete vytvořit typ dialogového okna karta s názvem průvodce, který se skládá ze seznamu vlastností se sekvencí stránek vlastností, které provedou uživatele prostřednictvím kroků operace, jako je například nastavení zařízení nebo vytvoření bulletinu. V dialogovém okně Průvodce – typ karty stránky vlastností nejsou karty a v jednu chvíli je viditelná jenom jedna stránka vlastností. Místo toho, abyste měli tlačítka OK a použít nyní, má dialogové okno Karta typ průvodce tlačítko zpět, tlačítko Další nebo dokončit a tlačítko Storno.
 
-Další informace o vytvoření seznamu vlastností jako průvodce najdete v tématu [CPropertySheet::SetWizardMode](../../mfc/reference/cpropertysheet-class.md#setwizardmode). Další informace o používání `CPropertyPage` objekty, najdete v článku [seznamy vlastností a stránky vlastností](../../mfc/property-sheets-and-property-pages-in-mfc.md).
+Další informace o tom, jak vytvořit seznam vlastností jako průvodce, najdete v tématu [CPropertySheet –:: SetWizardMode](../../mfc/reference/cpropertysheet-class.md#setwizardmode). Další informace o používání `CPropertyPage` objektů naleznete v článku seznam [vlastností a stránky vlastností](../../mfc/property-sheets-and-property-pages-in-mfc.md).
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
-[Třídy CObject](../../mfc/reference/cobject-class.md)
+[CObject](../../mfc/reference/cobject-class.md)
 
 [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)
 
@@ -113,11 +113,11 @@ Další informace o vytvoření seznamu vlastností jako průvodce najdete v té
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** afxdlgs.h
+**Záhlaví:** afxdlgs. h
 
-##  <a name="canceltoclose"></a>  CPropertyPage::CancelToClose
+##  <a name="canceltoclose"></a>CPropertyPage –:: CancelToClose
 
-Voláním této funkce po provedení neopravitelné změny dat na stránce modální seznam vlastností.
+Volání této funkce poté, co byla provedena neopravitelná změna na data na stránce modálního seznamu vlastností.
 
 ```
 void CancelToClose();
@@ -125,17 +125,17 @@ void CancelToClose();
 
 ### <a name="remarks"></a>Poznámky
 
-Tato funkce se změnit na tlačítko OK zavřete a zakázat tlačítko Storno. Tato změna upozornění, která uživatele, že změna je trvalé a změny se nedá zrušit.
+Tato funkce změní tlačítko OK na Zavřít a zakáže tlačítko Storno. Tato změna upozorní uživatele, že změna je trvalá a změny nelze zrušit.
 
-`CancelToClose` Členská funkce neprovede v nemodálního seznamu vlastností, protože nemodálního seznamu vlastností nemá žádné tlačítko Storno ve výchozím nastavení.
+`CancelToClose` Členská funkce neprovede v nemodálním seznamu vlastností nic, protože nemodální seznam vlastností nemá ve výchozím nastavení tlačítko Storno.
 
 ### <a name="example"></a>Příklad
 
-  Podívejte se na příklad pro [CPropertyPage::QuerySiblings](#querysiblings).
+  Podívejte se na příklad pro [CPropertyPage –:: QuerySiblings](#querysiblings).
 
-##  <a name="construct"></a>  CPropertyPage::Construct
+##  <a name="construct"></a>CPropertyPage –:: Construct
 
-Voláním této členské funkce k vytvoření `CPropertyPage` objektu.
+Chcete-li vytvořit `CPropertyPage` objekt, zavolejte tuto členskou funkci.
 
 ```
 void Construct(
@@ -162,41 +162,41 @@ void Construct(
 ### <a name="parameters"></a>Parametry
 
 *nIDTemplate*<br/>
-ID šablony použité pro tuto stránku.
+ID šablony použité pro tuto stránku
 
 *nIDCaption*<br/>
-ID názvu umístit na kartě pro tuto stránku. Pokud je 0, název se provedou v šabloně dialogu pro tuto stránku.
+ID názvu, který se má umístit na kartu pro tuto stránku Pokud je hodnota 0, název bude proveden ze šablony dialogového okna pro tuto stránku.
 
 *lpszTemplateName*<br/>
-Obsahuje řetězec zakončený hodnotou null, který je název prostředku šablony.
+Obsahuje řetězec zakončený hodnotou null, který je názvem prostředku šablony.
 
 *nIDHeaderTitle*<br/>
-ID názvu budou umístěny v umístění názvu vlastnosti záhlaví stránky. Ve výchozím nastavení 0.
+ID názvu, který se má umístit do umístění názvu záhlaví stránky vlastností Ve výchozím nastavení 0.
 
 *nIDHeaderSubTitle*<br/>
-ID názvu budou umístěny v umístění podnadpis vlastnosti záhlaví stránky. Ve výchozím nastavení 0.
+ID názvu, který se má umístit do umístění podnadpisu záhlaví stránky vlastností Ve výchozím nastavení 0.
 
 ### <a name="remarks"></a>Poznámky
 
-Objekt se zobrazí, jakmile jsou splněny všechny následující podmínky:
+Objekt se zobrazí po splnění všech následujících podmínek:
 
-- Na stránce byl přidán do listu vlastností pomocí [CPropertySheet::AddPage](../../mfc/reference/cpropertysheet-class.md#addpage).
+- Stránka byla přidána do seznamu vlastností pomocí [CPropertySheet –:: addPage](../../mfc/reference/cpropertysheet-class.md#addpage).
 
-- Seznam vlastností [DoModal](../../mfc/reference/cpropertysheet-class.md#domodal) nebo [vytvořit](../../mfc/reference/cpropertysheet-class.md#create) byla volána funkce.
+- Byla volána funkce [DoModal](../../mfc/reference/cpropertysheet-class.md#domodal) nebo [Create](../../mfc/reference/cpropertysheet-class.md#create) v seznamu vlastností.
 
-- Uživatel vybral (s kartami k) na této stránce.
+- Uživatel vybral tuto stránku (na kartách).
 
-Volání `Construct` Pokud jeden z jiné třídy konstruktory se nevolala. `Construct` Členská funkce je flexibilní, protože můžete nechat prázdné parametr příkazu a pak zadejte více parametrů a konstrukce v libovolném bodě v kódu.
+Volejte `Construct` , pokud nebyl volán jeden z konstruktorů třídy. `Construct` Členská funkce je flexibilní, protože můžete nechat příkaz Parameter prázdný a pak v jakémkoli bodě kódu zadat více parametrů a konstrukce.
 
-Je nutné použít `Construct` při práci s poli, a je nutné volat `Construct` pro každého člena pole tak, aby datové členy jsou přiřazeny odpovídajícími hodnotami.
+Je nutné použít `Construct` při práci s poli a je nutné zavolat `Construct` pro každého člena pole tak, aby datovým členům byly přiřazeny správné hodnoty.
 
 ### <a name="example"></a>Příklad
 
 [!code-cpp[NVC_MFCDocView#112](../../mfc/codesnippet/cpp/cpropertypage-class_1.cpp)]
 
-##  <a name="cpropertypage"></a>  CPropertyPage::CPropertyPage
+##  <a name="cpropertypage"></a>CPropertyPage –:: CPropertyPage –
 
-Vytvoří `CPropertyPage` objektu.
+`CPropertyPage` Vytvoří objekt.
 
 ```
 CPropertyPage();
@@ -229,39 +229,39 @@ CPropertyPage(
 ### <a name="parameters"></a>Parametry
 
 *nIDTemplate*<br/>
-ID šablony použité pro tuto stránku.
+ID šablony použité pro tuto stránku
 
 *nIDCaption*<br/>
-ID názvu umístit na kartě pro tuto stránku. Pokud je 0, název se provedou v šabloně dialogu pro tuto stránku.
+ID názvu, který se má umístit na kartu pro tuto stránku Pokud je hodnota 0, název bude proveden ze šablony dialogového okna pro tuto stránku.
 
-*dwSize*<br/>
-*lpszTemplateName* odkazuje na řetězec obsahující název šablony pro tuto stránku. Nemůže mít hodnotu NULL.
+*nenulového dwSize funkci*<br/>
+*lpszTemplateName* Odkazuje na řetězec obsahující název šablony pro tuto stránku. Nemůže mít hodnotu NULL.
 
 *nIDHeaderTitle*<br/>
-ID názvu budou umístěny v umístění názvu vlastnosti záhlaví stránky.
+ID názvu, který se má umístit do umístění názvu záhlaví stránky vlastností
 
 *nIDHeaderSubTitle*<br/>
-ID názvu budou umístěny v umístění podnadpis vlastnosti záhlaví stránky.
+ID názvu, který se má umístit do umístění podnadpisu záhlaví stránky vlastností
 
 ### <a name="remarks"></a>Poznámky
 
-Objekt se zobrazí, jakmile jsou splněny všechny následující podmínky:
+Objekt se zobrazí po splnění všech následujících podmínek:
 
-- Na stránce byl přidán do listu vlastností pomocí [CPropertySheet::AddPage](../../mfc/reference/cpropertysheet-class.md#addpage).
+- Stránka byla přidána do seznamu vlastností pomocí [CPropertySheet –:: addPage](../../mfc/reference/cpropertysheet-class.md#addpage).
 
-- Seznam vlastností [DoModal](../../mfc/reference/cpropertysheet-class.md#domodal) nebo [vytvořit](../../mfc/reference/cpropertysheet-class.md#create) byla volána funkce.
+- Byla volána funkce [DoModal](../../mfc/reference/cpropertysheet-class.md#domodal) nebo [Create](../../mfc/reference/cpropertysheet-class.md#create) v seznamu vlastností.
 
-- Uživatel vybral (s kartami k) na této stránce.
+- Uživatel vybral tuto stránku (na kartách).
 
-Pokud máte více parametrů (například, pokud používáte pole), použijte [CPropertySheet::Construct](../../mfc/reference/cpropertysheet-class.md#construct) místo `CPropertyPage`.
+Pokud máte více parametrů (například pokud používáte pole), použijte [CPropertySheet –:: Construct](../../mfc/reference/cpropertysheet-class.md#construct) namísto `CPropertyPage`.
 
 ### <a name="example"></a>Příklad
 
 [!code-cpp[NVC_MFCDocView#113](../../mfc/codesnippet/cpp/cpropertypage-class_2.cpp)]
 
-##  <a name="getpsp"></a>  CPropertyPage::GetPSP
+##  <a name="getpsp"></a>CPropertyPage –:: GetPSP
 
-Načte Windows [PROPSHEETPAGE](/windows/desktop/api/prsht/ns-prsht-_propsheetpagea_v2) struktura `CPropertyPage` objektu.
+Načte strukturu [PROPSHEETPAGE](/windows/desktop/api/prsht/ns-prsht-propsheetpagea_v2) Windows přidruženou `CPropertyPage` k objektu.
 
 ```
 const PROPSHEETPAGE& GetPSP() const;
@@ -271,11 +271,11 @@ PROPSHEETPAGE& GetPSP();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Odkaz na `PROPSHEETPAGE` struktury.
+Odkaz na `PROPSHEETPAGE` strukturu.
 
 ##  <a name="m_psp"></a>  CPropertyPage::m_psp
 
-`m_psp` je struktura, jejíž členové uložení vlastnosti [PROPSHEETPAGE](/windows/desktop/api/prsht/ns-prsht-_propsheetpagea_v2).
+`m_psp`je struktura, jejíž členové ukládají vlastnosti [PROPSHEETPAGE](/windows/desktop/api/prsht/ns-prsht-propsheetpagea_v2).
 
 ```
 PROPSHEETPAGE m_psp;
@@ -283,17 +283,17 @@ PROPSHEETPAGE m_psp;
 
 ### <a name="remarks"></a>Poznámky
 
-Tuto strukturu použijte pro inicializaci vzhled stránky vlastností po jejím vytváření.
+Tuto strukturu použijte k inicializaci vzhledu stránky vlastností poté, co je vytvořena.
 
-Další informace o této struktuře, včetně seznamu členů, naleznete v tématu `PROPSHEETPAGE` v sadě Windows SDK.
+Další informace o této struktuře, včetně výpisu jejích členů, naleznete v části `PROPSHEETPAGE` v Windows SDK.
 
 ### <a name="example"></a>Příklad
 
 [!code-cpp[NVC_MFCDocView#128](../../mfc/codesnippet/cpp/cpropertypage-class_3.cpp)]
 
-##  <a name="onapply"></a>  CPropertyPage::OnApply
+##  <a name="onapply"></a>CPropertyPage –:: Apply
 
-Tato členská funkce je voláno rozhraním, když se uživatel rozhodne OK nebo tlačítko použít.
+Tato členská funkce je volána rozhraním, když uživatel zvolí tlačítko OK nebo použít nyní.
 
 ```
 virtual BOOL OnApply();
@@ -301,25 +301,25 @@ virtual BOOL OnApply();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Nenulové, pokud jsou změny přijaty; jinak 0.
+Nenulové, pokud jsou změny přijaty; v opačném případě 0.
 
 ### <a name="remarks"></a>Poznámky
 
-Když tuto funkci volá rozhraní framework, přijímají se změny provedené na všechny stránky vlastností v okně vlastností, seznamu vlastností zachová fokus, a `OnApply` vrátí hodnotu TRUE (hodnota 1). Před `OnApply` může být volána rozhraním, musíte zavoláte [SetModified](#setmodified) a nastavte její parametr na hodnotu TRUE. Aktivuje toto tlačítko použít. poté, co uživatel provede změny na stránce vlastností.
+Když rozhraní volá tuto funkci, změny provedené na všech stránkách vlastností v seznamu vlastností jsou přijímány, seznam vlastností zachová fokus a `OnApply` vrátí hodnotu true (hodnota 1). Předtím `OnApply` , než může být rozhraní Voláno rozhraním, je nutné volat [SetModified](#setmodified) a nastavit jeho parametr na hodnotu true. Tím se aktivuje tlačítko použít nyní, jakmile uživatel provede změnu na stránce vlastností.
 
-Přepsání této členské funkce lze určit, jakou akci program provede, když uživatel klikne na tlačítko použít. Při přepsání, funkce by měla vrátit TRUE, pokud chcete přijmout změny a hodnotu FALSE a znemožnit změny tak vliv.
+Přepište tuto členskou funkci, pokud chcete určit akci, kterou program provede, když uživatel klikne na tlačítko použít nyní. Při přepsání by měla funkce vracet hodnotu TRUE, aby přijímala změny a nedocházelo k tomu, aby se změny projevily.
 
 Výchozí implementace `OnApply` volání `OnOK`.
 
-Další informace o oznámení poslaných zpráv, když uživatel stiskne použít na tlačítko OK v okně vlastností najdete v tématu [PSN_APPLY](/windows/desktop/Controls/psn-apply) v sadě Windows SDK.
+Další informace o oznamovacích zprávách odeslaných po stisknutí tlačítka použít nyní nebo OK v seznamu vlastností naleznete v tématu [PSN_APPLY](/windows/desktop/Controls/psn-apply) v Windows SDK.
 
 ### <a name="example"></a>Příklad
 
-  Podívejte se na příklad pro [CPropertyPage::OnOK](#onok).
+  Podívejte se na příklad pro [CPropertyPage –:: OnOK –](#onok).
 
-##  <a name="oncancel"></a>  CPropertyPage::OnCancel
+##  <a name="oncancel"></a>CPropertyPage –::-Cancel
 
-Tato členská funkce je voláno rozhraním při výběru tlačítka Storno.
+Tato členská funkce je volána rozhraním, když je vybráno tlačítko Storno.
 
 ```
 virtual void OnCancel();
@@ -327,7 +327,7 @@ virtual void OnCancel();
 
 ### <a name="remarks"></a>Poznámky
 
-Přepište tato členská funkce k provedení akce pro tlačítko Storno. Výchozí nastavení Neguje změnách, které byly provedeny.
+Přepište tuto členskou funkci pro provádění akcí tlačítek Storno. Výchozí negace všech změn, které byly provedeny.
 
 ### <a name="example"></a>Příklad
 
@@ -335,7 +335,7 @@ Přepište tato členská funkce k provedení akce pro tlačítko Storno. Výcho
 
 ##  <a name="onkillactive"></a>  CPropertyPage::OnKillActive
 
-Tato členská funkce je voláno rozhraním, když stránku už není aktivní stránkou.
+Tato členská funkce je volána rozhraním, když stránka již není aktivní stránkou.
 
 ```
 virtual BOOL OnKillActive();
@@ -343,23 +343,23 @@ virtual BOOL OnKillActive();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Nenulové, pokud data se aktualizují úspěšně, jinak 0.
+Nenulové, pokud byla data úspěšně aktualizována, jinak 0.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato členská funkce k provádění úloh ověření speciální datové přepište.
+Přepište tuto členskou funkci pro provádění speciálních úloh ověření dat.
 
-Výchozí implementace tato členská funkce zkopíruje nastavení z ovládacích prvků na stránce vlastností do členské proměnné stránky vlastností. Pokud data nebyla úspěšně aktualizována z důvodu chyby ověření (DDV) dat dialogového okna, stránky zachová fokus.
+Výchozí implementace této členské funkce kopíruje nastavení z ovládacích prvků na stránce vlastností na členské proměnné stránky vlastností. Pokud se data úspěšně neaktualizovala z důvodu chyby ověření dat dialogového okna (DDV), stránka si zachová fokus.
 
-Až tato členská funkce vrátí úspěšně, zavolá rozhraní na stránce [onok –](#onok) funkce.
+Po úspěšném vrácení této členské funkce bude rozhraní volat funkci [OnOK –](#onok) stránky.
 
 ### <a name="example"></a>Příklad
 
 [!code-cpp[NVC_MFCDocView#115](../../mfc/codesnippet/cpp/cpropertypage-class_5.cpp)]
 
-##  <a name="onok"></a>  CPropertyPage::OnOK
+##  <a name="onok"></a>CPropertyPage –:: OnOK –
 
-Tato členská funkce se volá se rozhraním, když se uživatel rozhodne OK nebo použít tlačítko ihned po volání rozhraní framework [onkillactive –](#onkillactive).
+Tato členská funkce je volána rozhraním, když uživatel zvolí tlačítko OK nebo použít nyní hned po volání rozhraní [OnKillActive](#onkillactive).
 
 ```
 virtual void OnOK();
@@ -367,11 +367,11 @@ virtual void OnOK();
 
 ### <a name="remarks"></a>Poznámky
 
-Když se uživatel rozhodne OK nebo použít tlačítko, rozhraní přijímá [PSN_APPLY](/windows/desktop/Controls/psn-apply) oznámení na stránce vlastností. Volání `OnOK` nebudou provedeny při volání [CPropertySheet::PressButton](../../mfc/reference/cpropertysheet-class.md#pressbutton) vzhledem k tomu, že na stránce vlastností neodešle oznámení v takovém případě.
+Když uživatel zvolí tlačítko OK nebo použít nyní, rozhraní obdrží oznámení [PSN_APPLY](/windows/desktop/Controls/psn-apply) ze stránky vlastností. Volání se `OnOK` neprovede, pokud zavoláte [CPropertySheet –::P ressbutton](../../mfc/reference/cpropertysheet-class.md#pressbutton) , protože stránka vlastností neposílá oznámení v takovém případě.
 
-Přepište tato členská funkce implementovat další chování specifické pro aktuálně aktivní stránkou. když uživatel nezavře celý seznam vlastností.
+Přepište tuto členskou funkci pro implementaci dalšího chování, které je specifické pro aktuálně aktivní stránku, když uživatel vynechává celý seznam vlastností.
 
-Výchozí implementace tato členská funkce, označení stránky jako "clean" tak, aby odrážely, že data se aktualizují v `OnKillActive` funkce.
+Výchozí implementace této členské funkce označí stránku jako "vyčistit", aby odrážela to, že byla data aktualizována ve `OnKillActive` funkci.
 
 ### <a name="example"></a>Příklad
 
@@ -379,7 +379,7 @@ Výchozí implementace tato členská funkce, označení stránky jako "clean" t
 
 ##  <a name="onquerycancel"></a>  CPropertyPage::OnQueryCancel
 
-Tato členská funkce je volána rozhraním, když uživatel klikne na tlačítko Storno a před zrušení akce proběhla.
+Tato členská funkce je volána rozhraním, když uživatel klikne na tlačítko Storno a před tím, než dojde k akci zrušit.
 
 ```
 virtual BOOL OnQueryCancel();
@@ -387,19 +387,19 @@ virtual BOOL OnQueryCancel();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vrátí hodnotu FALSE, aby se zabránilo operace zrušení nebo TRUE, pokud chcete povolit.
+Vrátí hodnotu FALSE, chcete-li zabránit operaci zrušení nebo hodnotě TRUE, aby ji bylo možné použít.
 
 ### <a name="remarks"></a>Poznámky
 
-Přepsání této členské funkce lze určit akci, kterou program provede, když uživatel klikne na tlačítko Storno.
+Tuto členskou funkci přepište, pokud chcete určit akci, kterou program provede, když uživatel klikne na tlačítko Storno.
 
-Výchozí implementace `OnQueryCancel` vrátí hodnotu TRUE.
+Výchozí implementace `OnQueryCancel` funkce vrátí hodnotu true.
 
 ### <a name="example"></a>Příklad
 
 [!code-cpp[NVC_MFCDocView#117](../../mfc/codesnippet/cpp/cpropertypage-class_7.cpp)]
 
-##  <a name="onreset"></a>  CPropertyPage::OnReset
+##  <a name="onreset"></a>CPropertyPage –::-Reset
 
 Tato členská funkce je volána rozhraním, když uživatel klikne na tlačítko Storno.
 
@@ -409,19 +409,19 @@ virtual void OnReset();
 
 ### <a name="remarks"></a>Poznámky
 
-Když tuto funkci volá rozhraní framework, pro všechny stránky vlastností, které byly provedené uživatelem dříve kliknutím na tlačítko použít změny se zahodí a seznam vlastností uchovává fokus.
+Když rozhraní volá tuto funkci, změny všech stránek vlastností, které byly provedeny uživatelem dříve výběr tlačítka použít nyní, jsou zahozeny a seznam vlastností zachová fokus.
 
-Přepsání této členské funkce lze určit, jakou akci provede program, když uživatel klikne na tlačítko Storno.
+Tuto členskou funkci přepište, pokud chcete určit, jakou akci program provede, když uživatel klikne na tlačítko Storno.
 
-Výchozí implementace `OnReset` nemá žádný účinek.
+Výchozí implementace `OnReset` neprovede žádnou akci.
 
 ### <a name="example"></a>Příklad
 
-  Podívejte se na příklad pro [CPropertyPage::OnCancel](#oncancel).
+  Podívejte se na příklad pro [CPropertyPage –::-Cancel](#oncancel).
 
-##  <a name="onsetactive"></a>  CPropertyPage::OnSetActive
+##  <a name="onsetactive"></a>CPropertyPage –:: OnSetActive
 
-Tato členská funkce je voláno rozhraním při stránky je vybrán uživatelem a stane aktivní stránkou.
+Tato členská funkce je volána rozhraním, když uživatel vybere stránku a bude se jednat o aktivní stránku.
 
 ```
 virtual BOOL OnSetActive();
@@ -429,21 +429,21 @@ virtual BOOL OnSetActive();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Nenulové, pokud na stránce se úspěšně nastavila aktivní; jinak 0.
+Nenulové, pokud byla stránka úspěšně nastavena jako aktivní; v opačném případě 0.
 
 ### <a name="remarks"></a>Poznámky
 
-Přepište tato členská funkce k provádění úloh, když je aktivován na stránce. Přepsání metody tato členská funkce by obvykle volání výchozí verze po aktualizaci datové členy, aby mělo aktualizovat stránku ovládací prvky s novými daty.
+Přepište tuto členskou funkci, aby se prováděly úlohy při aktivaci stránky. Vaše přepsání této členské funkce by obvykle volalo výchozí verzi po aktualizaci datových členů, aby mohla aktualizovat ovládací prvky stránky s novými daty.
 
-Výchozí implementace vytvoří okno pro stránku, není-li dřív vytvořili a díky tomu aktivní stránkou.
+Výchozí implementace vytvoří okno pro stránku, pokud se dřív nevytvořilo, a stane se aktivní stránkou.
 
 ### <a name="example"></a>Příklad
 
-  Podívejte se na příklad pro [CPropertySheet::SetFinishText](../../mfc/reference/cpropertysheet-class.md#setfinishtext).
+  Podívejte se na příklad pro [CPropertySheet –:: SetFinishText](../../mfc/reference/cpropertysheet-class.md#setfinishtext).
 
-##  <a name="onwizardback"></a>  CPropertyPage::OnWizardBack
+##  <a name="onwizardback"></a>CPropertyPage –:: OnWizardBack
 
-Tato členská funkce je volána rozhraním, když uživatel klikne na tlačítko Zpět v průvodci.
+Tato členská funkce je volána rozhraním, když uživatel klikne na tlačítko zpět v průvodci.
 
 ```
 virtual LRESULT OnWizardBack();
@@ -451,19 +451,19 @@ virtual LRESULT OnWizardBack();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-0 na automatický přechod na další stránku. na stránce zabránit ve změně hodnotu -1. Přejít na stránku, než na kterém další vrátíte identifikátor zobrazení dialogového okna.
+0 pro automatické přechodu na další stránku; -1, pokud chcete zabránit změně stránky. Chcete-li přejít na jinou stránku, než na další, vraťte identifikátor dialogového okna, který se má zobrazit.
 
 ### <a name="remarks"></a>Poznámky
 
-Přepsání této členské funkce lze zadat některá z akcí, které musí uživatel provést, když se stiskne tlačítko Zpět.
+Přepište tuto členskou funkci, pokud chcete určit určitou akci, kterou musí uživatel provést při stisknutí tlačítka zpět.
 
-Další informace o tom, aby seznamu vlastností wizard-type, naleznete v tématu [CPropertySheet::SetWizardMode](../../mfc/reference/cpropertysheet-class.md#setwizardmode).
+Další informace o tom, jak vytvořit seznam vlastností typu průvodce, naleznete v tématu [CPropertySheet –:: SetWizardMode](../../mfc/reference/cpropertysheet-class.md#setwizardmode).
 
 ### <a name="example"></a>Příklad
 
 [!code-cpp[NVC_MFCDocView#118](../../mfc/codesnippet/cpp/cpropertypage-class_8.cpp)]
 
-##  <a name="onwizardfinish"></a>  CPropertyPage::OnWizardFinish
+##  <a name="onwizardfinish"></a>CPropertyPage –:: OnWizardFinish
 
 Tato členská funkce je volána rozhraním, když uživatel klikne na tlačítko Dokončit v průvodci.
 
@@ -473,17 +473,17 @@ virtual BOOL OnWizardFinish();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Nenulové, pokud seznam vlastností je zničen při dokončení Průvodce; jinak nula.
+Nenulové, pokud je seznam vlastností zničen po dokončení Průvodce; jinak nula.
 
 ### <a name="remarks"></a>Poznámky
 
-Když uživatel klikne **Dokončit** tlačítko v průvodci, rozhraní volá tuto funkci, kdy `OnWizardFinish` vrátí hodnotu TRUE (nenulovou hodnotu), seznam vlastností je možné, který se má zničit (ale není ve skutečnosti zničen). Volání `DestroyWindow` zničit okno vlastností. Nevolejte `DestroyWindow` z `OnWizardFinish`; to uděláte tak způsobí poškození haldy nebo jiné chyby.
+Když uživatel klikne na tlačítko **Dokončit** v průvodci, rozhraní zavolá tuto funkci. Pokud `OnWizardFinish` vrátí hodnotu true (nenulovou hodnotu), seznam vlastností může být zničen (ale není ve skutečnosti zničen). Zavolá `DestroyWindow` se, aby se zničil seznam vlastností. Nevolejte `DestroyWindow` z `OnWizardFinish`. při tomto důsledku dojde k poškození haldy nebo k jiným chybám.
 
-Můžete přepsat tato členská funkce k určení některá z akcí, které musí uživatel provést, když se stiskne tlačítko Dokončit. Při přepisování tuto funkci, vrátí hodnotu FALSE, aby seznam vlastností z zničen.
+Tuto členskou funkci můžete přepsat a určit tak určitou akci, kterou musí uživatel provést při stisknutí tlačítka Dokončit. Při přepsání této funkce vrátí hodnotu FALSE, aby se zabránilo zničení seznamu vlastností.
 
-Další informace o oznámení poslaných zpráv, když uživatel stiskne tlačítko pro dokončení v seznamu vlastností průvodce najdete v tématu [PSN_WIZFINISH](/windows/desktop/Controls/psn-wizfinish) v sadě Windows SDK.
+Další informace o oznamovacích zprávách odeslaných po stisknutí tlačítka dokončit v seznamu vlastností průvodce najdete v tématu [PSN_WIZFINISH](/windows/desktop/Controls/psn-wizfinish) v Windows SDK.
 
-Další informace o tom, aby seznamu vlastností wizard-type, naleznete v tématu [CPropertySheet::SetWizardMode](../../mfc/reference/cpropertysheet-class.md#setwizardmode).
+Další informace o tom, jak vytvořit seznam vlastností typu průvodce, naleznete v tématu [CPropertySheet –:: SetWizardMode](../../mfc/reference/cpropertysheet-class.md#setwizardmode).
 
 ### <a name="example"></a>Příklad
 
@@ -495,7 +495,7 @@ Další informace o tom, aby seznamu vlastností wizard-type, naleznete v témat
 
 [!code-cpp[NVC_MFCDocView#122](../../mfc/codesnippet/cpp/cpropertypage-class_12.cpp)]
 
-##  <a name="onwizardnext"></a>  CPropertyPage::OnWizardNext
+##  <a name="onwizardnext"></a>CPropertyPage –:: OnWizardNext
 
 Tato členská funkce je volána rozhraním, když uživatel klikne na tlačítko Další v průvodci.
 
@@ -505,13 +505,13 @@ virtual LRESULT OnWizardNext();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-0 na automatický přechod na další stránku. na stránce zabránit ve změně hodnotu -1. Přejít na stránku, než na kterém další vrátíte identifikátor zobrazení dialogového okna.
+0 pro automatické přechodu na další stránku; -1, pokud chcete zabránit změně stránky. Chcete-li přejít na jinou stránku, než na další, vraťte identifikátor dialogového okna, který se má zobrazit.
 
 ### <a name="remarks"></a>Poznámky
 
-Přepsání této členské funkce lze zadat některá z akcí, které musí uživatel provést, když se stiskne tlačítko Další.
+Přepište tuto členskou funkci, pokud chcete určit určitou akci, kterou musí uživatel provést při stisknutí tlačítka Další.
 
-Další informace o tom, aby seznamu vlastností wizard-type, naleznete v tématu [CPropertySheet::SetWizardMode](../../mfc/reference/cpropertysheet-class.md#setwizardmode).
+Další informace o tom, jak vytvořit seznam vlastností typu průvodce, naleznete v tématu [CPropertySheet –:: SetWizardMode](../../mfc/reference/cpropertysheet-class.md#setwizardmode).
 
 ### <a name="example"></a>Příklad
 
@@ -519,7 +519,7 @@ Další informace o tom, aby seznamu vlastností wizard-type, naleznete v témat
 
 ##  <a name="querysiblings"></a>  CPropertyPage::QuerySiblings
 
-Voláním této členské funkce pro předávání zpráv na každou stránku v seznamu vlastností.
+Tuto členskou funkci volejte pro přeposlání zprávy na každou stránku v seznamu vlastností.
 
 ```
 LRESULT QuerySiblings(
@@ -530,18 +530,18 @@ LRESULT QuerySiblings(
 ### <a name="parameters"></a>Parametry
 
 *wParam*<br/>
-Určuje další informace, závislé na zprávu.
+Určuje další informace závislé na zprávě.
 
 *lParam*<br/>
-Určuje další informace, závislé na zprávu
+Určuje další informace závislé na zprávě.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Nenulovou hodnotu ze stránky seznamu vlastností, nebo 0, pokud všechny stránky vrátit hodnotu 0.
+Nenulová hodnota ze stránky v seznamu vlastností nebo 0, pokud všechny stránky vrátí hodnotu 0.
 
 ### <a name="remarks"></a>Poznámky
 
-Pokud na stránce vrátí nenulovou hodnotu, seznam vlastností neodešle zprávy na následujících stránkách.
+Pokud stránka vrátí nenulovou hodnotu, seznam vlastností zprávu nepošle na další stránky.
 
 ### <a name="example"></a>Příklad
 
@@ -551,9 +551,9 @@ Pokud na stránce vrátí nenulovou hodnotu, seznam vlastností neodešle zpráv
 
 [!code-cpp[NVC_MFCDocView#126](../../mfc/codesnippet/cpp/cpropertypage-class_16.cpp)]
 
-##  <a name="setmodified"></a>  CPropertyPage::SetModified
+##  <a name="setmodified"></a>CPropertyPage –:: SetModified
 
-Zavolejte tuto členskou funkci chcete povolit nebo zakázat tlačítko použít, založené na tom, zda bude použito nastavení na stránce vlastností pro příslušný objekt externí.
+Voláním této členské funkce povolíte nebo zakážete tlačítko použít nyní na základě toho, zda by mělo být nastavení na stránce vlastností použito na příslušný externí objekt.
 
 ```
 void SetModified(BOOL bChanged = TRUE);
@@ -562,11 +562,11 @@ void SetModified(BOOL bChanged = TRUE);
 ### <a name="parameters"></a>Parametry
 
 *bChanged*<br/>
-Hodnota TRUE označuje, že nastavení stránky vlastností byl změněn od posledního se uplatňují; FALSE označuje, že nastavení stránky vlastností se použily, nebo třeba ji ignorovat.
+TRUE pro indikaci, že nastavení stránky vlastností bylo od posledního použití změněno; FALSE pro indikaci, že nastavení stránky vlastností bylo použito nebo by mělo být ignorováno.
 
 ### <a name="remarks"></a>Poznámky
 
-Rozhraní framework udržuje sledování, které stránky jsou "nečisté", to znamená, u kterých jste volali stránky vlastností `SetModified( TRUE )`. Tlačítko použít. bude vždy povolen při volání `SetModified( TRUE )` pro jednu ze stránek. Tlačítko použít. bude zakázáno, při volání `SetModified( FALSE )` pro jednu ze stránek, ale pouze pokud žádná z ostatních stránek není "dirty."
+Rozhraní uchovává přehled o tom, které stránky jsou "dirty", což jsou stránky vlastností, pro které jste `SetModified( TRUE )`volali. Tlačítko použít nyní bude vždy povoleno, pokud zavoláte `SetModified( TRUE )` jednu ze stránek. Tlačítko použít nyní bude zakázáno při volání `SetModified( FALSE )` na jednu ze stránek, ale pouze v případě, že žádná z ostatních stránek není "dirty".
 
 ### <a name="example"></a>Příklad
 
@@ -574,10 +574,10 @@ Rozhraní framework udržuje sledování, které stránky jsou "nečisté", to z
 
 ## <a name="see-also"></a>Viz také:
 
-[Ukázka CMNCTRL1 knihovny MFC](../../overview/visual-cpp-samples.md)<br/>
-[Ukázka CMNCTRL2 knihovny MFC](../../overview/visual-cpp-samples.md)<br/>
-[Ukázky knihovny MFC PROPDLG](../../overview/visual-cpp-samples.md)<br/>
-[Ukázky knihovny MFC SNAPVW](../../overview/visual-cpp-samples.md)<br/>
+[CMNCTRL1 Sample MFC](../../overview/visual-cpp-samples.md)<br/>
+[CMNCTRL2 Sample MFC](../../overview/visual-cpp-samples.md)<br/>
+[PROPDLG Sample MFC](../../overview/visual-cpp-samples.md)<br/>
+[SNAPVW Sample MFC](../../overview/visual-cpp-samples.md)<br/>
 [CDialog – třída](../../mfc/reference/cdialog-class.md)<br/>
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>
 [CPropertySheet – třída](../../mfc/reference/cpropertysheet-class.md)<br/>

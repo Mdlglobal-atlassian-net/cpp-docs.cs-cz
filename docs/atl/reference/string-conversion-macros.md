@@ -11,24 +11,24 @@ f1_keywords:
 - atlconv/ATL::DEVMODEW2A
 - atlconv/ATL::TEXTMETRICW2A
 ms.assetid: 2ff7c0b6-2bde-45fe-897f-6128e18e0c27
-ms.openlocfilehash: 889f8459e81418197420bc2efd410225d4f220bc
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6a84424de81eba2e6ab1e1baf60f567ebf2739ee
+ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62197252"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68915510"
 ---
 # <a name="string-conversion-macros"></a>Makra převodu řetězců
 
 Tato makra poskytují funkce pro převod řetězce.
 
-##  <a name="atl_and_mfc_string_conversion_macros"></a>  ATL a MFC – makra převodu řetězců
+##  <a name="atl_and_mfc_string_conversion_macros"></a>Makra pro převod řetězců ATL a MFC
 
-Makra převodů řetězec popsaném jsou platné pro knihovny ATL a MFC. Další informace o převodu řetězce knihovny MFC naleznete v tématu [TN059: Použití knihovny MFC znakové sady MBCS/Unicode převodních maker](../../mfc/tn059-using-mfc-mbcs-unicode-conversion-macros.md) a [v makrech MFC a Globals](../../mfc/reference/mfc-macros-and-globals.md).
+Makra převodu řetězců popsané tady jsou platné pro ATL i MFC. Další informace o konverzi řetězců MFC naleznete v [tématu TN059: Použití převodních maker](../../mfc/tn059-using-mfc-mbcs-unicode-conversion-macros.md) MBCS/Unicode znakové sady MFC a [maker MFC a Globals](../../mfc/reference/mfc-macros-and-globals.md).
 
-##  <a name="devmode_and_textmetric_string_conversion_macros"></a>  DEVMODE a makra převodů TEXTMETRIC řetězec
+##  <a name="devmode_and_textmetric_string_conversion_macros"></a>Makra pro převod řetězce DEVMODE a TEXTMETRIC
 
-Vytvořte kopii těchto maker [DEVMODE](/windows/desktop/api/wingdi/ns-wingdi-_devicemodea) nebo [TEXTMETRIC](/windows/desktop/api/wingdi/ns-wingdi-tagtextmetrica) struktury a převod řetězců v rámci nové struktury na nový typ řetězec. Makra přidělení paměti na zásobníku pro novou strukturu a vrácen ukazatel na novou strukturu.
+Tato makra vytvářejí kopii struktury [DEVMODE](/windows/win32/api/wingdi/ns-wingdi-devmodea) nebo [TEXTMETRIC](/windows/desktop/api/wingdi/ns-wingdi-tagtextmetrica) a převádějí řetězce v rámci nové struktury na nový typ řetězce. Makra přidělují paměť v zásobníku pro novou strukturu a vracejí ukazatel na novou strukturu.
 
 ```cpp
 MACRONAME( address_of_structure )
@@ -44,24 +44,24 @@ a:
 
 [!code-cpp[NVC_ATL_Utilities#129](../../atl/codesnippet/cpp/string-conversion-macros_2.cpp)]
 
-V názvech – makro je typ řetězce ve struktuře zdroje na levé straně (například **A**) a typ řetězce ve struktuře cíl je na pravé straně (například **W**). **A** zastupuje LPSTR, **OLE** zastupuje LPOLESTR, **T** zastupuje LPTSTR, a **W** zastupuje LPWSTR.
+V názvech maker je typ řetězce ve zdrojové struktuře vlevo (například **a**) a typ řetězce v cílové struktuře je na pravé straně (například **W**). Zkratka pro typem LPStr, **OLE** představuje LPOLESTR, **T** pro LPTStr a **W** představuje LPWStr.
 
-Proto DEVMODEA2W zkopíruje `DEVMODE` strukturu s typem LPSTR řetězce do `DEVMODE` struktura s řetězci LPWSTR, TEXTMETRICOLE2T kopie `TEXTMETRIC` strukturu s LPOLESTR řetězce do `TEXTMETRIC` struktury s řetězci LPTSTR a tak dále.
+Proto DEVMODEA2W kopíruje `DEVMODE` strukturu s typem LPStr řetězců `DEVMODE` do struktury s `TEXTMETRIC` řetězci LPWStr, TEXTMETRICOLE2T kopíruje strukturu pomocí LPOLESTR řetězců do `TEXTMETRIC` struktury s řetězci LPTStr atd.
 
-Dva řetězce převedeny do `DEVMODE` struktury jsou názvu zařízení (`dmDeviceName`) a název formuláře (`dmFormName`). `DEVMODE` Makra převodu řetězců také aktualizovat velikost struktury (`dmSize`).
+Dva řetězce převedené ve `DEVMODE` struktuře jsou název zařízení (`dmDeviceName`) a název formuláře (`dmFormName`). Makra převodu`dmSize`řetězce také aktualizují velikost struktury (). `DEVMODE`
 
-Čtyři řetězce převedeny do `TEXTMETRIC` struktury jsou prvním znakem (`tmFirstChar`), poslední znak (`tmLastChar`), výchozí znak (`tmDefaultChar`) a znak konce (`tmBreakChar`).
+Čtyři řetězce převedené ve `TEXTMETRIC` struktuře jsou první znak (`tmFirstChar`), poslední znak (`tmLastChar`), výchozí znak (`tmDefaultChar`) a znak break (`tmBreakChar`).
 
-Chování `DEVMODE` a `TEXTMETRIC` makra převodu řetězců závisí na direktivy kompilátoru účinek, pokud existuje. Pokud zdrojové a cílové typy jsou stejné, se provádí převod. Direktivy kompilátoru změnit **T** a **OLE** následujícím způsobem:
+Chování maker převodu řetězce `DEVMODE` a `TEXTMETRIC` je závislé na direktivě kompilátoru v platném případě. Pokud jsou zdrojové a cílové typy stejné, převod se neprovádí. Direktivy kompilátoru mění **T** a **OLE** následujícím způsobem:
 
-|Direktivy kompilátoru platná|Změní T|Změní OLE|
+|Platí direktiva kompilátoru.|T se|OLE se přestanou|
 |----------------------------------|---------------|-----------------|
 |žádná|**A**|**W**|
-|**\_KÓDOVÁNÍ UNICODE**|**W**|**W**|
+|**\_SADY**|**W**|**W**|
 |**OLE2ANSI**|**A**|**A**|
-|**\_Kódování UNICODE** a **OLE2ANSI**|**W**|**A**|
+|Unicode a **OLE2ANSI**  **\_**|**W**|**A**|
 
-Následující tabulce jsou uvedeny `DEVMODE` a `TEXTMETRIC` makra převodu řetězců.
+V následující tabulce jsou uvedena `DEVMODE` makra `TEXTMETRIC` a převod řetězců.
 
 |||
 |-|-|
@@ -72,4 +72,4 @@ Následující tabulce jsou uvedeny `DEVMODE` a `TEXTMETRIC` makra převodu řet
 
 ## <a name="see-also"></a>Viz také:
 
-[Makra](../../atl/reference/atl-macros.md)
+[Makr](../../atl/reference/atl-macros.md)

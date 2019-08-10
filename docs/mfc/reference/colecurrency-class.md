@@ -22,16 +22,16 @@ helpviewer_keywords:
 - COleCurrency [MFC], m_cur
 - COleCurrency [MFC], m_status
 ms.assetid: 3a36e345-303f-46fb-a57c-858274378a8d
-ms.openlocfilehash: 64f2b00c8a5aefe8a39c24d26af2a97625225059
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6fac62e396791da69d8d94f6c42337c8c3afd528
+ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62375740"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68916988"
 ---
 # <a name="colecurrency-class"></a>COleCurrency – třída
 
-Zapouzdřuje `CURRENCY` datovým typem automatizace OLE.
+Zapouzdřuje `CURRENCY` datový typ automatizace OLE.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -43,48 +43,48 @@ class COleCurrency
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
-|[COleCurrency::COleCurrency](#colecurrency)|Vytvoří `COleCurrency` objektu.|
+|[COleCurrency::COleCurrency](#colecurrency)|`COleCurrency` Vytvoří objekt.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
-|[COleCurrency::Format](#format)|Generuje formátovaný řetězec představující `COleCurrency` objektu.|
-|[COleCurrency::GetStatus](#getstatus)|Získá stav (platnosti) to `COleCurrency` objektu.|
-|[COleCurrency::ParseCurrency](#parsecurrency)|Načte hodnotu měny z řetězce a nastaví hodnotu `COleCurrency`.|
+|[COleCurrency::Format](#format)|Generuje formátovanou řetězcovou reprezentaci `COleCurrency` objektu.|
+|[COleCurrency:: GetStatus](#getstatus)|Získá stav (platnost) tohoto `COleCurrency` objektu.|
+|[COleCurrency::P arseCurrency](#parsecurrency)|Přečte hodnotu měny z řetězce a nastaví hodnotu `COleCurrency`.|
 |[COleCurrency::SetCurrency](#setcurrency)|Nastaví hodnotu tohoto `COleCurrency` objektu.|
-|[COleCurrency::SetStatus](#setstatus)|Nastaví stav (platnosti) pro tuto `COleCurrency` objektu.|
+|[COleCurrency:: SetStatus](#setstatus)|Nastaví stav (platnost) pro tento `COleCurrency` objekt.|
 
 ### <a name="public-operators"></a>Veřejné operátory
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
-|[operátor =](#operator_eq)|Zkopíruje `COleCurrency` hodnotu.|
-|[operátor +, -](#operator_plus_minus)|Přidá odečte a změní znaménko `COleCurrency` hodnoty.|
-|[Operator +=-=](#operator_plus_minus_eq)|Přidá a odečte `COleCurrency` hodnotu z této `COleCurrency` objektu.|
-|[Operator * /](#operator_star)|Škálování `COleCurrency` hodnoty celočíselnou hodnotu.|
-|[Operator * =, / =](#operator_star_div_eq)|To se škáluje `COleCurrency` hodnoty celočíselnou hodnotu.|
-|[operátor <<](#operator_stream)|Výstupy `COleCurrency` hodnota, která se `CArchive` nebo `CDumpContext`.|
-|[operátor >>](#operator_stream)|Vstupy `COleCurrency` objektu z `CArchive`.|
-|[operátor měny](#operator_currency)|Převede `COleCurrency` hodnotu do měny.|
-|[operátor ==, <, < =, atd.](#colecurrency_relational_operators)|Porovná dva `COleCurrency` hodnoty.|
+|[operátor =](#operator_eq)|`COleCurrency` Zkopíruje hodnotu.|
+|[operator +,-](#operator_plus_minus)|Přidá, odečte a změní znaménka `COleCurrency` hodnot.|
+|[operator + =,-=](#operator_plus_minus_eq)|Přidá a odečte `COleCurrency` hodnotu z tohoto `COleCurrency` objektu.|
+|[*/– operátor](#operator_star)|Škáluje `COleCurrency` hodnotu pomocí celočíselné hodnoty.|
+|[operator * =,/=](#operator_star_div_eq)|Škáluje `COleCurrency` tuto hodnotu celočíselnou hodnotou.|
+|[operátor < <](#operator_stream)|Vytvoří `COleCurrency` výstup hodnoty do `CArchive` nebo `CDumpContext`.|
+|[operátor > >](#operator_stream)|Vstup objektu z `CArchive`. `COleCurrency`|
+|[operátor CURRENCY](#operator_currency)|`COleCurrency` Převede hodnotu na měnu.|
+|[operator = =, <, < = atd.](#colecurrency_relational_operators)|Porovná `COleCurrency` dvě hodnoty.|
 
 ### <a name="public-data-members"></a>Veřejné datové členy
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
-|[COleCurrency::m_cur](#m_cur)|Obsahuje základní měny pro tuto `COleCurrency` objektu.|
+|[COleCurrency::m_cur](#m_cur)|Obsahuje základní měnu pro tento `COleCurrency` objekt.|
 |[COleCurrency::m_status](#m_status)|Obsahuje stav tohoto `COleCurrency` objektu.|
 
 ## <a name="remarks"></a>Poznámky
 
-`COleCurrency` nemá základní třídu.
+`COleCurrency`nemá základní třídu.
 
-MĚNY je implementovaný jako 8 bajtů, celé číslo dvojkového doplňku měřítkem řídit 10 000. Díky tomu číslo s pevnou desetinnou čárkou s 15 číslic nalevo od desetinné čárky a 4 číslice vpravo. Datový typ MĚNA je velmi užitečné pro peněžních výpočtů nebo pro všechny s pevnou desetinnou čárkou výpočet kdy přesnost je důležité. Je jedním z možných typů `VARIANT` datovým typem automatizace OLE.
+MĚNA je implementována jako 8 bajtů, celočíselná hodnota 2 doplňku škálovaná hodnotou 10 000. To poskytuje číslo s pevnou desetinnou čárkou s 15 číslicemi nalevo od desetinné čárky a 4 číslicemi vpravo. Datový typ měna je velmi užitečný pro výpočty zahrnující peníze nebo pro výpočty s pevnou desetinnou čárkou, kde je přesnost důležitá. Je jedním z možných typů pro `VARIANT` datový typ automatizace OLE.
 
-`COleCurrency` také implementuje některé základní aritmetické operace u tohoto typu s pevnou desetinnou čárkou. Podporované operace byly vybrány pro řízení zaokrouhlovací chyby, ke kterým dochází při výpočty s pevnou desetinnou čárkou.
+`COleCurrency`také implementuje některé základní aritmetické operace typu s pevnou desetinnou čárkou. Byly vybrány podporované operace pro řízení chyb zaokrouhlení, ke kterým dochází při výpočtech s pevnou desetinnou čárkou.
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
@@ -92,11 +92,11 @@ MĚNY je implementovaný jako 8 bajtů, celé číslo dvojkového doplňku měř
 
 ## <a name="requirements"></a>Požadavky
 
-**Header:** afxdisp.h
+**Záhlaví:** afxdisp. h
 
-##  <a name="colecurrency"></a>  COleCurrency::COleCurrency
+##  <a name="colecurrency"></a>COleCurrency::COleCurrency
 
-Vytvoří `COleCurrency` objektu.
+`COleCurrency` Vytvoří objekt.
 
 ```
 COleCurrency();
@@ -112,41 +112,41 @@ COleCurrency(
 ### <a name="parameters"></a>Parametry
 
 *cySrc*<br/>
-Hodnota měny, které se mají zkopírovat do nové `COleCurrency` objektu.
+Hodnota měny, která se má zkopírovat do nového `COleCurrency` objektu
 
 *curSrc*<br/>
-Existující `COleCurrency` objektu, které se mají zkopírovat do nové `COleCurrency` objektu.
+Existující `COleCurrency` objekt, který má být zkopírován do nového `COleCurrency` objektu.
 
 *varSrc*<br/>
-Existující `VARIANT` datovou strukturu (pravděpodobně `COleVariant` objektu) převést na hodnotu měny (VT_CY) a zkopírovány do nového `COleCurrency` objektu.
+Existující `VARIANT` datová struktura ( `COleVariant` pravděpodobně objekt), která má být převedena na hodnotu měny (VT_CY) a zkopírována do nového `COleCurrency` objektu.
 
-*nUnits*, *nFractionalUnits* označení jednotky a zlomkovou část (v 1/10 000's) hodnota, které se mají zkopírovat do nové `COleCurrency` objektu.
+*nUnits*, *nFractionalUnits* značí jednotky a zlomkovou část (v 1/10000) hodnoty, které mají být zkopírovány do nového `COleCurrency` objektu.
 
 ### <a name="remarks"></a>Poznámky
 
-Všechny tyto konstruktory vytvořit nový `COleCurrency` objekty inicializovány na zadanou hodnotu. Následuje stručný popis každého z těchto konstruktorů. Pokud není uvedeno jinak, stav nového `COleCurrency` položku nastavena na platný.
+Všechny tyto konstruktory vytvoří nové `COleCurrency` objekty inicializované na zadanou hodnotu. Následuje stručný popis každého z těchto konstruktorů. Pokud není uvedeno jinak, je stav nové `COleCurrency` položky nastavený na platná.
 
-- Konstrukce COleCurrency() `COleCurrency` objekt je inicializován na hodnotu 0 (nula).
+- COleCurrency () vytvoří `COleCurrency` objekt inicializovaný jako 0 (nula).
 
-- COleCurrency (`cySrc`) sestaví `COleCurrency` objektu z [měny](/windows/desktop/api/wtypes/ns-wtypes-tagcy) hodnotu.
+- COleCurrency (`cySrc`) vytvoří `COleCurrency` objekt z hodnoty [měny](/windows/desktop/api/wtypes/ns-wtypes-tagcy) .
 
-- COleCurrency (`curSrc`) sestaví `COleCurrency` objekt z existující `COleCurrency` objektu. Nový objekt je stejného stavu jako zdrojový objekt.
+- COleCurrency (`curSrc`) vytvoří `COleCurrency` objekt z existujícího `COleCurrency` objektu. Nový objekt má stejný stav jako zdrojový objekt.
 
-- COleCurrency (`varSrc`) sestaví `COleCurrency` objektu. Se pokusí převést [VARIANT](/windows/desktop/api/oaidl/ns-oaidl-tagvariant) struktury nebo `COleVariant` objektu na hodnotu měny (VT_CY). Pokud tento převod je úspěšný, převedená hodnota zkopírován do nové `COleCurrency` objektu. Pokud ne, je hodnota `COleCurrency` objektu je nastavena na nulu (0) a její stav na neplatný.
+- COleCurrency (`varSrc`) vytvoří `COleCurrency` objekt. Pokusí se převést strukturu [variant](/windows/desktop/api/oaidl/ns-oaidl-tagvariant) nebo `COleVariant` objekt na hodnotu Currency (VT_CY). Pokud je tento převod úspěšný, převedená hodnota se zkopíruje do nového `COleCurrency` objektu. Pokud není, hodnota `COleCurrency` objektu je nastavena na hodnotu nula (0) a jeho stav na neplatné.
 
-- `COleCurrency(`nUnits`, `nFractionalUnits`) Constructs a `COleCurrency "objekt ze zadané číselné součásti. Pokud absolutní hodnota zlomkové části je větší než 10 000 operací, je vhodné úpravy provedené s jednotkami. Všimněte si, že jsou určeny jednotky a desetinná část dlouhé hodnoty se znaménkem.
+- `COleCurrency(`nUnits`, `nFractionalUnits`) Constructs a `COleCurrency objekt ze zadaných číselných komponent. Pokud je absolutní hodnota zlomkové části větší než 10 000, provede se příslušná úprava jednotek. Všimněte si, že jednotky a zlomkové součásti jsou určeny pomocí podepsaných dlouhých hodnot.
 
-Další informace najdete v tématu [měny](/windows/desktop/api/wtypes/ns-wtypes-tagcy) a [VARIANT](/windows/desktop/api/oaidl/ns-oaidl-tagvariant) položky v sadě Windows SDK.
+Další informace naleznete v části [Měna](/windows/desktop/api/wtypes/ns-wtypes-tagcy) a [varianty](/windows/desktop/api/oaidl/ns-oaidl-tagvariant) v Windows SDK.
 
 ### <a name="example"></a>Příklad
 
-Následující příklady ukazují účinky konstruktory parametr nula a dvěma parametr:
+Následující příklady znázorňují účinky nulového parametru a konstruktorů dvou parametrů:
 
 [!code-cpp[NVC_MFCOleContainer#10](../../mfc/codesnippet/cpp/colecurrency-class_1.cpp)]
 
-##  <a name="format"></a>  COleCurrency::Format
+##  <a name="format"></a>COleCurrency:: Format
 
-Voláním této členské funkce k vytvoření formátovaného reprezentace hodnoty měny.
+Zavolejte tuto členskou funkci pro vytvoření formátované reprezentace hodnoty měny.
 
 ```
 CString Format(DWORD  dwFlags = 0, LCID  lcid = LANG_USER_DEFAULT) const;
@@ -155,28 +155,28 @@ CString Format(DWORD  dwFlags = 0, LCID  lcid = LANG_USER_DEFAULT) const;
 ### <a name="parameters"></a>Parametry
 
 *dwFlags*<br/>
-Určuje příznaky pro nastavení národního prostředí. Pouze následující příznak je relevantní pro měny:
+Označuje příznaky pro nastavení národního prostředí. Pro měnu je relevantní jenom tento příznak:
 
-- LOCALE_NOUSEROVERRIDE použijte výchozí nastavení národního prostředí systému, raději vlastní uživatelská nastavení.
+- LOCALE_NOUSEROVERRIDE místo vlastního nastavení uživatele použít výchozí nastavení národního prostředí systému.
 
 *lcid*<br/>
-Určuje ID národního prostředí pro převod.
+Označuje ID národního prostředí, které se má použít pro převod.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-A `CString` , který obsahuje hodnotu ve formátu Měna.
+A `CString` který obsahuje formátovanou hodnotu měny.
 
 ### <a name="remarks"></a>Poznámky
 
-Formátuje hodnoty pomocí specifikace místní jazyka (ID národních prostředí). Vrácená hodnota není součástí symbol měny. Pokud se stav tohoto `COleCurrency` objekt má hodnotu null, vrácená hodnota je prázdný řetězec. Pokud je neplatný stav, vrácený řetězec je určená IDS_INVALID_CURRENCY prostředek řetězce.
+Formátuje hodnotu pomocí specifikací místního jazyka (ID národního prostředí). V vrácené hodnotě není zahrnutý symbol měny. Pokud je stav tohoto `COleCurrency` objektu null, vrácená hodnota je prázdný řetězec. Pokud je stav neplatný, vrácený řetězec je určen řetězcovým prostředkem IDS_INVALID_CURRENCY.
 
 ### <a name="example"></a>Příklad
 
 [!code-cpp[NVC_MFCOleContainer#11](../../mfc/codesnippet/cpp/colecurrency-class_2.cpp)]
 
-##  <a name="getstatus"></a>  COleCurrency::GetStatus
+##  <a name="getstatus"></a>COleCurrency:: GetStatus
 
-Voláním této členské funkce k získání stavu (platnost) daném `COleCurrency` objektu.
+Chcete-li získat stav (platnost) daného `COleCurrency` objektu, zavolejte tuto členskou funkci.
 
 ```
 CurrencyStatus GetStatus() const;
@@ -184,11 +184,11 @@ CurrencyStatus GetStatus() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vrátí stav této `COleCurrency` hodnotu.
+Vrátí stav této `COleCurrency` hodnoty.
 
 ### <a name="remarks"></a>Poznámky
 
-Návratová hodnota je definována `CurrencyStatus` Výčtový typ, který je definován v rámci `COleCurrency` třídy.
+Návratová hodnota je definována `CurrencyStatus` výčtovým typem, který je definován `COleCurrency` v rámci třídy.
 
 ```
 enum CurrencyStatus {
@@ -198,56 +198,56 @@ enum CurrencyStatus {
     };
 ```
 
-Stručný popis tyto hodnoty stavu najdete v následujícím seznamu:
+Stručný popis těchto hodnot stavu naleznete v následujícím seznamu:
 
-  - `COleCurrency::valid` Označuje, že tento `COleCurrency` objektu je neplatný.
+  - `COleCurrency::valid`Označuje, že `COleCurrency` tento objekt je platný.
 
-  - `COleCurrency::invalid` Označuje, že tento `COleCurrency` objekt je neplatný; to znamená, jeho hodnota může být nesprávný.
+  - `COleCurrency::invalid`Indikuje, že `COleCurrency` tento objekt je neplatný. to znamená, že jeho hodnota může být nesprávná.
 
-  - `COleCurrency::null` Označuje, že tento `COleCurrency` objekt má hodnotu null, to znamená, že byla zadána žádná hodnota pro tento objekt. (To je v tom smyslu databáze "mít žádnou hodnotu" na rozdíl od C++ NULL "null".)
+  - `COleCurrency::null`Označuje, že `COleCurrency` tento objekt má hodnotu null, to znamená, že pro tento objekt nebyla zadána žádná hodnota. (Jedná se o hodnotu null ve smyslu databáze "bez hodnoty", a to na rozdíl od C++ hodnoty null.)
 
-Stav `COleCurrency` objekt není platný v následujících případech:
+Stav `COleCurrency` objektu je neplatný v následujících případech:
 
-- Pokud je jeho hodnota v rozsahu od hodnotu typu VARIANT nebo `COleVariant` hodnotu, která nelze převést na hodnotu měny.
+- Je-li jeho hodnota nastavena z hodnoty typu `COleVariant` variant nebo hodnota, která nemohla být převedena na hodnotu měny.
 
-- Pokud tento objekt došlo přetečení nebo podtečení během přiřazení aritmetické operace, například `+=` nebo **\* =**.
+- V případě, že došlo k přetečení nebo podtečení během operace aritmetického přiřazení, například `+=` nebo **\* =** .
 
-- Pokud na tento objekt byl přiřazen neplatnou hodnotu.
+- Pokud byla tomuto objektu přiřazena neplatná hodnota.
 
-- Pokud se stav tohoto objektu explicitně nastavit na neplatné použití [SetStatus](#setstatus).
+- Pokud byl stav tohoto objektu explicitně nastaven na hodnotu neplatné pomocí funkci [SetStatus](#setstatus).
 
-Další informace o operacích, které může nastavit stav na neplatné, viz následující členské funkce:
+Další informace o operacích, které můžou nastavit stav na neplatné, najdete v následujících členských funkcích:
 
 - [COleCurrency](#colecurrency)
 
 - [operátor =](#operator_eq)
 
-- [Operator + –](#operator_plus_minus)
+- [operátor + –](#operator_plus_minus)
 
-- [Operator += a-=](#operator_plus_minus_eq)
+- [operator + = a-= – operátor](#operator_plus_minus_eq)
 
-- [Operator * /](#operator_star)
+- [*/– operátor](#operator_star)
 
-- [Operator * = a / =](#operator_star_div_eq)
+- [operator * = a/=](#operator_star_div_eq)
 
 ### <a name="example"></a>Příklad
 
 [!code-cpp[NVC_MFCOleContainer#12](../../mfc/codesnippet/cpp/colecurrency-class_3.cpp)]
 
-##  <a name="m_cur"></a>  COleCurrency::m_cur
+##  <a name="m_cur"></a>COleCurrency::m_cur
 
-Základní [měny](/windows/desktop/api/wtypes/ns-wtypes-tagcy) strukturu pro to `COleCurrency` objektu.
+Základní struktura [měny](/windows/desktop/api/wtypes/ns-wtypes-tagcy) pro tento `COleCurrency` objekt.
 
 ### <a name="remarks"></a>Poznámky
 
 > [!CAUTION]
->  Změna hodnoty v `CURRENCY` struktura přistupuje vrácený touto funkcí ukazatel se změní hodnota tohoto `COleCurrency` objektu. Nezmění stav této `COleCurrency` objektu.
+>  Změna hodnoty ve `CURRENCY` struktuře, k níž se přistupovalo pomocí ukazatele vráceného touto funkcí, změní hodnotu `COleCurrency` tohoto objektu. Nemění stav tohoto `COleCurrency` objektu.
 
-Další informace najdete v tématu [měny](/windows/desktop/api/wtypes/ns-wtypes-tagcy) položku v sadě Windows SDK.
+Další informace najdete v tématu o [měně](/windows/desktop/api/wtypes/ns-wtypes-tagcy) v Windows SDK.
 
-##  <a name="m_status"></a>  COleCurrency::m_status
+##  <a name="m_status"></a>COleCurrency::m_status
 
-Typ tomuto datovému členu je výčtového typu `CurrencyStatus`, který je definován v rámci `COleCurrency` třídy.
+Typ tohoto datového členu je výčtový typ `CurrencyStatus`, který je definován `COleCurrency` v rámci třídy.
 
 ```
 enum CurrencyStatus{
@@ -259,70 +259,70 @@ enum CurrencyStatus{
 
 ### <a name="remarks"></a>Poznámky
 
-Stručný popis tyto hodnoty stavu najdete v následujícím seznamu:
+Stručný popis těchto hodnot stavu naleznete v následujícím seznamu:
 
-- `COleCurrency::valid` Označuje, že tento `COleCurrency` objektu je neplatný.
+- `COleCurrency::valid`Označuje, že `COleCurrency` tento objekt je platný.
 
-- `COleCurrency::invalid` Označuje, že tento `COleCurrency` objekt je neplatný; to znamená, jeho hodnota může být nesprávný.
+- `COleCurrency::invalid`Indikuje, že `COleCurrency` tento objekt je neplatný. to znamená, že jeho hodnota může být nesprávná.
 
-- `COleCurrency::null` Označuje, že tento `COleCurrency` objekt má hodnotu null, to znamená, že byla zadána žádná hodnota pro tento objekt. (To je v tom smyslu databáze "mít žádnou hodnotu" na rozdíl od C++ NULL "null".)
+- `COleCurrency::null`Označuje, že `COleCurrency` tento objekt má hodnotu null, to znamená, že pro tento objekt nebyla zadána žádná hodnota. (Jedná se o hodnotu null ve smyslu databáze "bez hodnoty", a to na rozdíl od C++ hodnoty null.)
 
-Stav `COleCurrency` objekt není platný v následujících případech:
+Stav `COleCurrency` objektu je neplatný v následujících případech:
 
-- Pokud je jeho hodnota v rozsahu od hodnotu typu VARIANT nebo `COleVariant` hodnotu, která nelze převést na hodnotu měny.
+- Je-li jeho hodnota nastavena z hodnoty typu `COleVariant` variant nebo hodnota, která nemohla být převedena na hodnotu měny.
 
-- Pokud tento objekt došlo přetečení nebo podtečení během přiřazení aritmetické operace, například `+=` nebo **\* =**.
+- V případě, že došlo k přetečení nebo podtečení během operace aritmetického přiřazení, například `+=` nebo **\* =** .
 
-- Pokud na tento objekt byl přiřazen neplatnou hodnotu.
+- Pokud byla tomuto objektu přiřazena neplatná hodnota.
 
-- Pokud se stav tohoto objektu explicitně nastavit na neplatné použití [SetStatus](#setstatus).
+- Pokud byl stav tohoto objektu explicitně nastaven na hodnotu neplatné pomocí funkci [SetStatus](#setstatus).
 
-Další informace o operacích, které může nastavit stav na neplatné, viz následující členské funkce:
+Další informace o operacích, které můžou nastavit stav na neplatné, najdete v následujících členských funkcích:
 
 - [COleCurrency](#colecurrency)
 
 - [operátor =](#operator_eq)
 
-- [operátor +, -](#operator_plus_minus)
+- [operator +,-](#operator_plus_minus)
 
-- [Operator +=-=](#operator_plus_minus_eq)
+- [operator + =,-=](#operator_plus_minus_eq)
 
-- [Operator * /](#operator_star)
+- [*/– operátor](#operator_star)
 
-- [Operator * =, / =](#operator_star_div_eq)
+- [operator * =,/=](#operator_star_div_eq)
 
 > [!CAUTION]
->  Pro pokročilé situacích programování je tomuto datovému členu. Používejte vložené členské funkce [GetStatus](#getstatus) a [SetStatus](#setstatus). Zobrazit `SetStatus` pro další upozornění týkající se explicitním nastavením tomuto datovému členu.
+>  Tento datový člen slouží k pokročilým programovacím situacím. Měli byste použít funkce GetStatus a [](#getstatus) [SetStatus](#setstatus)vložených členů. Další `SetStatus` upozornění týkající se explicitního nastavení tohoto datového člena najdete v tématu.
 
-##  <a name="operator_eq"></a>  COleCurrency::operator =
+##  <a name="operator_eq"></a>COleCurrency:: operator =
 
-Zkopírování těchto přetížených operátorech přiřazení zdrojová hodnota měny do tohoto `COleCurrency` objektu.
+Tyto přetížené operátory přiřazení zkopírují hodnotu zdrojové měny do tohoto `COleCurrency` objektu.
 
 ```
 const COleCurrency& operator=(CURRENCY cySrc);
 const COleCurrency& operator=(const COleCurrency& curSrc);
-  const COleCurrency& operator=(const VARIANT& varSrc);
+const COleCurrency& operator=(const VARIANT& varSrc);
 ```
 
 ### <a name="remarks"></a>Poznámky
 
-Následuje stručný popis jednotlivých operátorů:
+Následuje stručný popis každého operátoru:
 
-- **Operator = (** `cySrc` **)** `CURRENCY` zkopírování hodnoty do `COleCurrency` objektu a jeho stav je nastaven na platný.
+- **operator = (** `cySrc` `COleCurrency` )`CURRENCY` hodnota je zkopírována do objektu a její stav je nastaven na hodnotu platné.
 
-- **operátor = (** `curSrc` **)** hodnotu a stav operandu, existující `COleCurrency` objektu jsou zkopírovány do tohoto `COleCurrency` objektu.
+- **operator = (** `curSrc` **)** hodnota a stav operandu, existující `COleCurrency` objekt je zkopírován do tohoto `COleCurrency` objektu.
 
-- **operátor = (** *varSrc* **)** Pokud převod `VARIANT` hodnotu (nebo [COleVariant](../../mfc/reference/colevariant-class.md) objekt) do měny ( `VT_CY`) je úspěšné, převedená hodnota se zkopíruje do tohoto `COleCurrency` objektu a jeho stav je nastaven na platný. Pokud neproběhne úspěšně, převod hodnoty `COleCurrency` objektu je nastavena na 0 a její stav na neplatný.
+- **operator = (** *varSrc* **)** – operátor Je-li `VARIANT` převod hodnoty (nebo objektu [COleVariant](../../mfc/reference/colevariant-class.md) ) na měnu ( `VT_CY`) úspěšný, je převedená hodnota zkopírována do tohoto `COleCurrency` objektu a její stav je nastaven na hodnotu platné. Pokud převod není úspěšný, hodnota `COleCurrency` objektu je nastavena na 0 a jeho stav na neplatné.
 
-Další informace najdete v tématu [měny](/windows/desktop/api/wtypes/ns-wtypes-tagcy) a [VARIANT](/windows/desktop/api/oaidl/ns-oaidl-tagvariant) položky v sadě Windows SDK.
+Další informace naleznete v části [Měna](/windows/desktop/api/wtypes/ns-wtypes-tagcy) a [varianty](/windows/desktop/api/oaidl/ns-oaidl-tagvariant) v Windows SDK.
 
 ### <a name="example"></a>Příklad
 
 [!code-cpp[NVC_MFCOleContainer#15](../../mfc/codesnippet/cpp/colecurrency-class_4.cpp)]
 
-##  <a name="operator_plus_minus"></a>  COleCurrency::operator +, -
+##  <a name="operator_plus_minus"></a>COleCurrency:: operator +,-
 
-Tyto operátory vám operátorů sčítání a odečítání dvě umožní `COleCurrency` hodnot a od sebe navzájem a ke změně znaménka `COleCurrency` hodnotu.
+Tyto operátory umožňují přidat a odečíst dvě `COleCurrency` hodnoty mezi sebou a a změnit znaménko `COleCurrency` hodnoty.
 
 ```
 COleCurrency operator+(const COleCurrency& cur) const;
@@ -332,21 +332,21 @@ COleCurrency operator-() const;
 
 ### <a name="remarks"></a>Poznámky
 
-Pokud platí některá z operandů s hodnotou null, výsledný stav `COleCurrency` hodnotu null.
+Pokud je jeden z operandů null, stav výsledné `COleCurrency` hodnoty je null.
 
-Pokud aritmetické přetečení, výsledná `COleCurrency` hodnota není platná.
+Pokud dojde k přetečení aritmetické operace, výsledná `COleCurrency` hodnota je neplatná.
 
-Je-li operand neplatné a druhý není null, výsledný stav `COleCurrency` hodnota není platná.
+Pokud je operand neplatný a druhý není null, stav výsledné `COleCurrency` hodnoty je neplatný.
 
-Další informace o stavu platný, neplatné a null hodnoty, najdete v článku [m_status](#m_status) členské proměnné.
+Další informace o platných, neplatných a hodnotách stavu s hodnotou null naleznete v části členské proměnné [m_status](#m_status) .
 
 ### <a name="example"></a>Příklad
 
 [!code-cpp[NVC_MFCOleContainer#16](../../mfc/codesnippet/cpp/colecurrency-class_5.cpp)]
 
-##  <a name="operator_plus_minus_eq"></a>  COleCurrency::operator +=-=
+##  <a name="operator_plus_minus_eq"></a>COleCurrency:: operator + =,-=
 
-Umožňují operátorů sčítání a odečítání `COleCurrency` hodnotu do a z tohoto `COleCurrency` objektu.
+Umožňuje přidat a odečíst `COleCurrency` hodnotu z a do tohoto `COleCurrency` objektu.
 
 ```
 const COleCurrency& operator+=(const COleCurrency& cur);
@@ -355,21 +355,21 @@ const COleCurrency& operator-=(const COleCurrency& cur);
 
 ### <a name="remarks"></a>Poznámky
 
-Pokud jeden z operandů je null, použije stav této `COleCurrency` objekt je nastaven na hodnotu null.
+Pokud je jeden z operandů null, je stav tohoto `COleCurrency` objektu nastaven na hodnotu null.
 
-Pokud aritmetické přetečení, stav této `COleCurrency` objekt je nastaven na neplatný.
+Pokud dojde k přetečení aritmetické operace, je stav tohoto `COleCurrency` objektu nastaven na hodnotu neplatné.
 
-Pokud jeden z operandů je neplatný a druhá nemá hodnotu null, stav této `COleCurrency` objekt je nastaven na neplatný.
+Pokud je jeden z operandů neplatný a druhý není null, stav tohoto `COleCurrency` objektu je nastaven na neplatné.
 
-Další informace o stavu platný, neplatné a null hodnoty, najdete v článku [m_status](#m_status) členské proměnné.
+Další informace o platných, neplatných a hodnotách stavu s hodnotou null naleznete v části členské proměnné [m_status](#m_status) .
 
 ### <a name="example"></a>Příklad
 
 [!code-cpp[NVC_MFCOleContainer#17](../../mfc/codesnippet/cpp/colecurrency-class_6.cpp)]
 
-##  <a name="operator_star"></a>  COleCurrency::operator \* a /
+##  <a name="operator_star"></a>COleCurrency:: operator \* a/
 
-Umožňují škálování `COleCurrency` hodnoty celočíselnou hodnotu.
+Umožňuje škálovat `COleCurrency` hodnotu celočíselnou hodnotou.
 
 ```
 COleCurrency operator*(long nOperand) const;
@@ -378,21 +378,21 @@ COleCurrency operator/(long nOperand) const;
 
 ### <a name="remarks"></a>Poznámky
 
-Pokud `COleCurrency` operand má hodnotu null, výsledný stav `COleCurrency` hodnotu null.
+Pokud je `COleCurrency` operand null, stav výsledné hodnoty je null. `COleCurrency`
 
-Pokud aritmetické přetečení nebo podtečení, výsledný stav `COleCurrency` hodnota není platná.
+Pokud aritmetické operace přetečení nebo podtečení, stav výsledné `COleCurrency` hodnoty je neplatný.
 
-Pokud `COleCurrency` operand je neplatný, výsledný stav `COleCurrency` hodnota není platná.
+Pokud je `COleCurrency` operand neplatný, stav výsledné hodnoty je neplatný. `COleCurrency`
 
-Další informace o stavu platný, neplatné a null hodnoty, najdete v článku [m_status](#m_status) členské proměnné.
+Další informace o platných, neplatných a hodnotách stavu s hodnotou null naleznete v části členské proměnné [m_status](#m_status) .
 
 ### <a name="example"></a>Příklad
 
 [!code-cpp[NVC_MFCOleContainer#18](../../mfc/codesnippet/cpp/colecurrency-class_7.cpp)]
 
-##  <a name="operator_star_div_eq"></a>  COleCurrency::operator \*=, / =
+##  <a name="operator_star_div_eq"></a>COleCurrency:: operator \*=,/=
 
-Bylo možné kapacitu rozšířit `COleCurrency` hodnoty celočíselnou hodnotu.
+Umožňuje škálovat tuto `COleCurrency` hodnotu celočíselnou hodnotou.
 
 ```
 const COleCurrency& operator*=(long nOperand);
@@ -401,21 +401,21 @@ const COleCurrency& operator/=(long nOperand);
 
 ### <a name="remarks"></a>Poznámky
 
-Pokud `COleCurrency` operand má hodnotu null, stav této `COleCurrency` objekt je nastaven na hodnotu null.
+Pokud má `COleCurrency` operand hodnotu null, je stav tohoto objektu nastaven na hodnotu null. `COleCurrency`
 
-Pokud aritmetické přetečení, stav této `COleCurrency` objekt je nastaven na neplatný.
+Pokud dojde k přetečení aritmetické operace, je stav tohoto `COleCurrency` objektu nastaven na hodnotu neplatné.
 
-Pokud `COleCurrency` operand je neplatný, stav této `COleCurrency` objekt je nastaven na neplatný.
+Pokud je `COleCurrency` operand neplatný, je stav tohoto objektu nastaven na hodnotu neplatné. `COleCurrency`
 
-Další informace o stavu platný, neplatné a null hodnoty, najdete v článku [m_status](#m_status) členské proměnné.
+Další informace o platných, neplatných a hodnotách stavu s hodnotou null naleznete v části členské proměnné [m_status](#m_status) .
 
 ### <a name="example"></a>Příklad
 
 [!code-cpp[NVC_MFCOleContainer#19](../../mfc/codesnippet/cpp/colecurrency-class_8.cpp)]
 
-##  <a name="operator_stream"></a>  COleCurrency::operator &lt; &lt;, &gt;&gt;
+##  <a name="operator_stream"></a>COleCurrency:: operator &lt;, &lt;&gt;&gt;
 
-Podporuje diagnostiku vypsání a ukládání do archivu.
+Podporuje diagnostický dumping a ukládání do archivu.
 
 ```
 friend CDumpContext& operator<<(
@@ -433,11 +433,11 @@ friend CArchive& operator>>(
 
 ### <a name="remarks"></a>Poznámky
 
-Extrakce ( **>>**) – operátor podporuje načítání z archivu.
+Operátor pro extrakci ( **>>** ) podporuje načítání z archivu.
 
-##  <a name="operator_currency"></a>  COleCurrency::operator měny
+##  <a name="operator_currency"></a>COleCurrency:: operator – měna
 
-Vrátí `CURRENCY` strukturu, jejíž hodnota je zkopírován z tohoto `COleCurrency` objektu.
+Vrátí strukturu, jejíž hodnota je zkopírována z `COleCurrency` tohoto objektu. `CURRENCY`
 
 ```
 operator CURRENCY() const;
@@ -445,9 +445,9 @@ operator CURRENCY() const;
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="parsecurrency"></a>  COleCurrency::ParseCurrency
+##  <a name="parsecurrency"></a>COleCurrency::P arseCurrency
 
-Zavolejte tuto členskou funkci k analýze řetězce ke čtení hodnoty měny.
+Zavolejte tuto členskou funkci pro analýzu řetězce pro čtení hodnoty měny.
 
 ```
 BOOL ParseCurrency(
@@ -465,36 +465,36 @@ throw(COleException*);
 Ukazatel na řetězec zakončený hodnotou null, který má být analyzován.
 
 *dwFlags*<br/>
-Určuje příznaky pro nastavení národního prostředí, může být příznak následující:
+Označuje příznaky pro nastavení národního prostředí, možná následující příznak:
 
-- LOCALE_NOUSEROVERRIDE použijte výchozí nastavení národního prostředí systému, raději vlastní uživatelská nastavení.
+- LOCALE_NOUSEROVERRIDE místo vlastního nastavení uživatele použít výchozí nastavení národního prostředí systému.
 
 *lcid*<br/>
-Určuje ID národního prostředí pro převod.
+Označuje ID národního prostředí, které se má použít pro převod.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Nenulové, pokud řetězec byl úspěšně převeden na hodnotu měny, jinak 0.
+Nenulové, pokud byl řetězec úspěšně převeden na hodnotu měny, jinak 0.
 
 ### <a name="remarks"></a>Poznámky
 
-Specifikace místní jazyka (ID národních prostředí) používá pro význam číselného typu znaků ve zdrojovém řetězci.
+Používá specifikace místních jazyků (ID národního prostředí) pro význam nenumerických znaků ve zdrojovém řetězci.
 
-Diskuzi o hodnoty ID národního prostředí, najdete v článku [podpora více jazyků](/previous-versions/windows/desktop/automat/supporting-multiple-national-languages).
+Diskuzi o hodnotách ID národního prostředí najdete v tématu [Podpora více jazyků](/previous-versions/windows/desktop/automat/supporting-multiple-national-languages).
 
-Pokud řetězec byl úspěšně převeden do měny hodnotu, hodnota tohoto `COleCurrency` objekt je nastaven na tuto hodnotu a její stav na platný.
+Pokud byl řetězec úspěšně převeden na hodnotu měny, hodnota tohoto `COleCurrency` objektu je nastavena na tuto hodnotu a její stav na platná.
 
-Pokud řetězec nelze převést na hodnotu měny, nebo pokud byla číselné přetečení, stav této `COleCurrency` objekt je neplatný.
+Pokud řetězec nelze převést na hodnotu měny nebo pokud došlo k numerickému přetečení, je stav tohoto `COleCurrency` objektu neplatný.
 
-Pokud převod řetězce se nezdařilo z důvodu chyb přidělení paměti, vyvolá tato funkce [cmemoryexception –](../../mfc/reference/cmemoryexception-class.md). V jiných chybový stav, tato funkce vyvolá [coleexception –](../../mfc/reference/coleexception-class.md).
+Pokud převod řetězce se nezdařil z důvodu chyb přidělení paměti, tato funkce vyvolá výjimku [CMemoryException](../../mfc/reference/cmemoryexception-class.md). V jakémkoli jiném chybovém stavu Tato funkce vyvolá výjimku [COleException](../../mfc/reference/coleexception-class.md).
 
 ### <a name="example"></a>Příklad
 
 [!code-cpp[NVC_MFCOleContainer#13](../../mfc/codesnippet/cpp/colecurrency-class_9.cpp)]
 
-##  <a name="colecurrency_relational_operators"></a>  COleCurrency – relační operátory
+##  <a name="colecurrency_relational_operators"></a>Relační operátory COleCurrency
 
-Porovnat dvě hodnoty měny a vrátí nenulovou hodnotu, pokud je podmínka true. jinak 0.
+Porovná dvě hodnoty měny a vrátí nenulovou hodnotu, pokud je podmínka pravdivá. v opačném případě 0.
 
 ```
 BOOL operator==(const COleCurrency& cur) const;
@@ -508,15 +508,15 @@ BOOL operator>=(const COleCurrency& cur) const;
 ### <a name="remarks"></a>Poznámky
 
 > [!NOTE]
->  Návratová hodnota pořadí operací ( **<**, **\< =**, **>**, **>=**) není definována, pokud stav některý operand je null nebo je neplatný. Operátory rovnosti ( `==`, `!=`) vezměte v úvahu stav operandy.
+>  Návratová hodnota operací řazení **<** (, **\< =** , **>** , **>=** ) není definována, pokud je stav obou operandů null nebo neplatný. Operátory rovnosti ( `==`, `!=`) berou v úvahu stav operandů.
 
 ### <a name="example"></a>Příklad
 
 [!code-cpp[NVC_MFCOleContainer#20](../../mfc/codesnippet/cpp/colecurrency-class_10.cpp)]
 
-##  <a name="setcurrency"></a>  COleCurrency::SetCurrency
+##  <a name="setcurrency"></a>COleCurrency::SetCurrency
 
-Voláním této členské funkce pro nastavení jednotky a zlomkovou část `COleCurrency` objektu.
+Zavolejte tuto členskou funkci pro nastavení jednotek a zlomkové části tohoto `COleCurrency` objektu.
 
 ```
 void SetCurrency(
@@ -526,21 +526,21 @@ void SetCurrency(
 
 ### <a name="parameters"></a>Parametry
 
-*nUnits*, *nFractionalUnits* označení jednotky a zlomkovou část (v 1/10 000's) hodnota, které se mají zkopírovat do tohoto `COleCurrency` objektu.
+*nUnits*, *nFractionalUnits* značí jednotky a zlomkovou část (v 1/10000) hodnoty, která se má zkopírovat do tohoto `COleCurrency` objektu.
 
 ### <a name="remarks"></a>Poznámky
 
-Pokud absolutní hodnota zlomkové části je větší než 10 000 operací, příslušné úpravy provedené v jednotkách, jak je znázorněno v jiných následující příklady.
+Je-li absolutní hodnota zlomkové části větší než 10 000, je provedena příslušná úprava jednotek, jak je znázorněno ve třetí části následujících příkladů.
 
-Všimněte si, že jsou určeny jednotky a desetinná část dlouhé hodnoty se znaménkem. Čtvrtý následující příklady ukazuje, co se stane, když parametry mají odlišná znaménka.
+Všimněte si, že jednotky a zlomkové součásti jsou určeny pomocí podepsaných dlouhých hodnot. Čtvrtý z následujících příkladů ukazuje, co se stane, když mají parametry jiné znaménko.
 
 ### <a name="example"></a>Příklad
 
 [!code-cpp[NVC_MFCOleContainer#14](../../mfc/codesnippet/cpp/colecurrency-class_11.cpp)]
 
-##  <a name="setstatus"></a>  COleCurrency::SetStatus
+##  <a name="setstatus"></a>COleCurrency:: SetStatus
 
-Voláním této členské funkce pro nastavení stavu (platnost) to `COleCurrency` objektu.
+Chcete-li nastavit stav (platnosti) tohoto `COleCurrency` objektu, zavolejte tuto členskou funkci.
 
 ```
 void SetStatus(CurrencyStatus  status  );
@@ -549,11 +549,11 @@ void SetStatus(CurrencyStatus  status  );
 ### <a name="parameters"></a>Parametry
 
 *status*<br/>
-Nový stav `COleCurrency` objektu.
+Nový stav tohoto `COleCurrency` objektu.
 
 ### <a name="remarks"></a>Poznámky
 
-*Stav* hodnota parametru je definována `CurrencyStatus` Výčtový typ, který je definován v rámci `COleCurrency` třídy.
+Hodnota parametru *status* je definována `CurrencyStatus` výčtovým typem, který `COleCurrency` je definován v rámci třídy.
 
 ```
 enum CurrencyStatus {
@@ -563,16 +563,16 @@ enum CurrencyStatus {
     };
 ```
 
-Stručný popis tyto hodnoty stavu najdete v následujícím seznamu:
+Stručný popis těchto hodnot stavu naleznete v následujícím seznamu:
 
-- `COleCurrency::valid` Označuje, že tento `COleCurrency` objektu je neplatný.
+- `COleCurrency::valid`Označuje, že `COleCurrency` tento objekt je platný.
 
-- `COleCurrency::invalid` Označuje, že tento `COleCurrency` objekt je neplatný; to znamená, jeho hodnota může být nesprávný.
+- `COleCurrency::invalid`Indikuje, že `COleCurrency` tento objekt je neplatný. to znamená, že jeho hodnota může být nesprávná.
 
-- `COleCurrency::null` Označuje, že tento `COleCurrency` objekt má hodnotu null, to znamená, že byla zadána žádná hodnota pro tento objekt. (To je v tom smyslu databáze "mít žádnou hodnotu" na rozdíl od C++ NULL "null".)
+- `COleCurrency::null`Označuje, že `COleCurrency` tento objekt má hodnotu null, to znamená, že pro tento objekt nebyla zadána žádná hodnota. (Jedná se o hodnotu null ve smyslu databáze "bez hodnoty", a to na rozdíl od C++ hodnoty null.)
 
 > [!CAUTION]
->  Tato funkce je pro pokročilé situacích programování. Tato funkce nezmění data v tomto objektu. Bude se nejčastěji používají k nastavení stavu na null nebo neplatná. Všimněte si, že operátor přiřazení ( [operátoru =](#operator_eq)) a [SetCurrency](#setcurrency) nastavit stav na objektu podle hodnoty, které zdroj.
+>  Tato funkce je určena pro pokročilé programovací situace. Tato funkce nemění data v tomto objektu. Nejčastěji se použije k nastavení stavu na hodnotu null nebo neplatný. Všimněte si, že operátor přiřazení ( [Operator =](#operator_eq)) a [SetCurrency](#setcurrency) nastaví stav na objekt na základě zdrojových hodnot (y).
 
 ## <a name="see-also"></a>Viz také:
 

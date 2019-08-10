@@ -1,5 +1,5 @@
 ---
-title: Cfilefind – třída
+title: CFileFind – třída
 ms.date: 11/04/2016
 f1_keywords:
 - CFileFind
@@ -56,16 +56,16 @@ helpviewer_keywords:
 - CFileFind [MFC], CloseContext
 - CFileFind [MFC], m_pTM
 ms.assetid: 9990068c-b023-4114-9580-a50182d15240
-ms.openlocfilehash: 5534b61b3c588c79c0120f1a5bc8064b5a605e8a
-ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
+ms.openlocfilehash: f2dfd3421d2154b4894b62b71d7993c483a77c53
+ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66503783"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68916128"
 ---
-# <a name="cfilefind-class"></a>Cfilefind – třída
+# <a name="cfilefind-class"></a>CFileFind – třída
 
-Provede vyhledávání místních souborů a je základní třídou pro [cgopherfilefind –](../../mfc/reference/cgopherfilefind-class.md) a [cftpfilefind –](../../mfc/reference/cftpfilefind-class.md), které provádí hledání internetových souborů.
+Provede vyhledávání místních souborů a je základní třídou pro [CGopherFileFind](../../mfc/reference/cgopherfilefind-class.md) a [CFtpFileFind](../../mfc/reference/cftpfilefind-class.md), které provádí hledání internetových souborů.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -79,74 +79,74 @@ class CFileFind : public CObject
 
 |Name|Popis|
 |----------|-----------------|
-|[CFileFind::CFileFind](#cfilefind)|Vytvoří `CFileFind` objektu.|
+|[CFileFind::CFileFind](#cfilefind)|`CFileFind` Vytvoří objekt.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
 |Name|Popis|
 |----------|-----------------|
-|[CFileFind::Close](#close)|Uzavře žádost o vyhledávání.|
-|[CFileFind::FindFile](#findfile)|Vyhledá v adresáři pro zadaný název souboru.|
-|[CFileFind::FindNextFile](#findnextfile)|Pokračuje v hledání souborů z předchozího volání [FindFile](#findfile).|
-|[CFileFind::GetCreationTime](#getcreationtime)|Získá čas, kdy byl soubor vytvořen.|
-|[CFileFind::GetFileName](#getfilename)|Získá název včetně přípony souboru nalezen|
-|[CFileFind::GetFilePath](#getfilepath)|Získá celou cestu k souboru nalezen.|
-|[CFileFind::GetFileTitle](#getfiletitle)|Získá název souboru nalezen. Název neobsahuje rozšíření.|
-|[CFileFind::GetFileURL](#getfileurl)|Získá adresu URL, včetně cesta k souboru, souboru nalezen.|
-|[CFileFind::GetLastAccessTime](#getlastaccesstime)|Získá čas posledního přístupu k souboru.|
-|[CFileFind::GetLastWriteTime](#getlastwritetime)|Získá dobu, byl soubor naposledy změnil a uložen.|
-|[CFileFind::GetLength](#getlength)|Získá délku nalezený soubor v bajtech.|
-|[CFileFind::GetRoot](#getroot)|Získá kořenový adresář souboru nalezen.|
-|[CFileFind::IsArchived](#isarchived)|Určuje, pokud je nalezen soubor archivovat.|
-|[CFileFind::IsCompressed](#iscompressed)|Určuje, pokud je komprimován nalezený soubor.|
-|[CFileFind::IsDirectory](#isdirectory)|Určuje, zda nalezený soubor do adresáře.|
-|[CFileFind::IsDots](#isdots)|Určuje, zda název nalezený soubor má název "."nebo"..", což indikuje, že je ve skutečnosti adresář.|
-|[CFileFind::IsHidden](#ishidden)|Určuje, zda je skrytý nalezený soubor.|
-|[CFileFind::IsNormal](#isnormal)|Určuje, zda je normální nalezený soubor (jinými slovy, nemá žádné atributy).|
-|[CFileFind::IsReadOnly](#isreadonly)|Určuje, zda nalezený soubor je jen pro čtení.|
-|[CFileFind::IsSystem](#issystem)|Určuje, zda je soubor nalezen systémový soubor.|
-|[CFileFind::IsTemporary](#istemporary)|Určuje, zda je dočasný nalezený soubor.|
-|[CFileFind::MatchesMask](#matchesmask)|Označuje atributy požadovaného souboru soubor, který má být nalezena.|
+|[CFileFind:: Close](#close)|Zavře požadavek hledání.|
+|[CFileFind:: FindFile –](#findfile)|Vyhledá v adresáři zadaný název souboru.|
+|[CFileFind::FindNextFile](#findnextfile)|Pokračuje v hledání souborů od předchozího volání [FindFile –](#findfile).|
+|[CFileFind::GetCreationTime](#getcreationtime)|Získá čas vytvoření souboru.|
+|[CFileFind:: getsoubor](#getfilename)|Získá název, včetně rozšíření nalezeného souboru.|
+|[CFileFind:: GetFilePath](#getfilepath)|Načte celou cestu k nalezenému souboru.|
+|[CFileFind::GetFileTitle](#getfiletitle)|Získá název nalezeného souboru. Název nezahrnuje příponu.|
+|[CFileFind::GetFileURL](#getfileurl)|Získá adresu URL, včetně cesty k souboru nalezeného souboru.|
+|[CFileFind::GetLastAccessTime](#getlastaccesstime)|Získá čas posledního otevření souboru.|
+|[CFileFind::GetLastWriteTime](#getlastwritetime)|Získá čas poslední změny a uložení souboru.|
+|[CFileFind:: GetLength](#getlength)|Získá délku nalezeného souboru v bajtech.|
+|[CFileFind:: GetRoot](#getroot)|Načte kořenový adresář nalezeného souboru.|
+|[CFileFind:: archivu](#isarchived)|Určuje, zda byl nalezen soubor archivován.|
+|[CFileFind:: dekomprimovaná](#iscompressed)|Určuje, zda je nalezen soubor komprimovaný.|
+|[CFileFind::-adresář](#isdirectory)|Určuje, zda je nalezený soubor adresářem.|
+|[CFileFind::-tečky](#isdots)|Určuje, zda název nalezeného souboru obsahuje název "." nebo "..", což značí, že je ve skutečnosti adresář.|
+|[CFileFind:: Hidden](#ishidden)|Určuje, zda je nalezený soubor skrytý.|
+|[CFileFind:: Normal – Normální](#isnormal)|Určuje, zda je nalezený soubor normální (jinými slovy, nemá žádné další atributy).|
+|[CFileFind::IsReadOnly](#isreadonly)|Určuje, zda je nalezený soubor určen jen pro čtení.|
+|[CFileFind:: FileSystem](#issystem)|Určuje, zda je nalezený soubor systémovým souborem.|
+|[CFileFind::-dočasná](#istemporary)|Určuje, zda je nalezený soubor dočasný.|
+|[CFileFind::MatchesMask](#matchesmask)|Určuje požadované atributy souboru souboru, který se má najít.|
 
 ### <a name="protected-methods"></a>Chráněné metody
 
 |Name|Popis|
 |----------|-----------------|
-|[CFileFind::CloseContext](#closecontext)|Zavře soubor určeného popisovačem aktuální hledání.|
+|[CFileFind::CloseContext](#closecontext)|Zavře soubor určený aktuálním popisovačem hledání.|
 
 ### <a name="protected-data-members"></a>Chránění členové dat
 
 |Name|Popis|
 |----------|-----------------|
-|[CFileFind::m_pTM](#m_ptm)|Ukazatel `CAtlTransactionManager` objektu.|
+|[CFileFind::m_pTM](#m_ptm)|Ukazatel na `CAtlTransactionManager` objekt.|
 
 ## <a name="remarks"></a>Poznámky
 
-`CFileFind` zahrnuje členské funkce, které začínají vyhledávání, vyhledání souboru a vrátí název, název nebo cesta k souboru. Pro hledání na Internetu, členské funkce [GetFileURL](#getfileurl) vrátí adresu URL k souboru.
+`CFileFind`zahrnuje členské funkce, které začínají hledání, vyhledají soubor a vrátí název, název nebo cestu k souboru. V případě hledání v Internetu vrátí [GetFileURL](#getfileurl) členské funkce adresu URL souboru.
 
-`CFileFind` Základní třída pro dvě další třídy knihovny MFC slouží k vyhledávání určitého serveru typy: `CGopherFileFind` konkrétně spolupracuje serverech gopher, a `CFtpFileFind` funguje konkrétně s FTP servery. Společně tyto tři třídy poskytují bezproblémovou mechanismus pro klienta k vyhledání souborů, bez ohledu na to, protokol serveru, typ souboru nebo umístění, na místním počítači nebo na vzdáleném serveru.
+`CFileFind`je základní třídou pro dvě další třídy knihovny MFC, které jsou navržené tak, `CGopherFileFind` aby prohledaly konkrétní typy serverů `CFtpFileFind` : pracují konkrétně se servery gopher a pracují výhradně se servery FTP. Tyto tři třídy společně poskytují bezproblémové mechanismy, jak klientovi najít soubory bez ohledu na serverový protokol, typ souboru nebo umístění na místním počítači nebo na vzdáleném serveru.
 
-Následující kód projde všechny soubory v aktuálním adresáři, tisk název každého souboru:
+Následující kód vytvoří výčet všech souborů v aktuálním adresáři a vytiskne název každého souboru:
 
 [!code-cpp[NVC_MFCFiles#31](../../atl-mfc-shared/reference/codesnippet/cpp/cfilefind-class_1.cpp)]
 
-Pro zjednodušení tento příklad, tento kód používá standardní knihovny C++ `cout` třídy. `cout` Řádku mohou nahradit volání `CListBox::AddString`, například v programu s grafickým uživatelským rozhraním.
+Aby byl příklad jednoduchý, používá tento kód C++ standardní knihovnu `cout` třídy. Řádek může být nahrazen `CListBox::AddString`voláním, například v programu s grafickým uživatelským rozhraním. `cout`
 
-Další informace o tom, jak používat `CFileFind` a jiných tříd WinInet, najdete v článku [Internet programování pomocí rozhraní WinInet](../../mfc/win32-internet-extensions-wininet.md).
+Další informace o tom, jak používat `CFileFind` a jiné třídy WinInet, najdete v článku [internetové programování s](../../mfc/win32-internet-extensions-wininet.md)rozhraním Wininet.
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
-[Třídy CObject](../../mfc/reference/cobject-class.md)
+[CObject](../../mfc/reference/cobject-class.md)
 
 `CFileFind`
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** afx.h
+**Záhlaví:** AFX –. h
 
-##  <a name="cfilefind"></a>  CFileFind::CFileFind
+##  <a name="cfilefind"></a>CFileFind::CFileFind
 
-Tato členská funkce je volána, když `CFileFind` objekt je vytvořen.
+Tato členská funkce je volána, `CFileFind` když je objekt vytvořen.
 
 ```
 CFileFind();
@@ -156,15 +156,15 @@ CFileFind(CAtlTransactionManager* pTM);
 ### <a name="parameters"></a>Parametry
 
 *pTM*<br/>
-Ukazatel na catltransactionmanager – objekt
+Ukazatel na objekt CAtlTransactionManager
 
 ### <a name="example"></a>Příklad
 
-  Podívejte se na příklad pro [CFileFind::GetFileName](#getfilename).
+  Podívejte se na příklad pro [CFileFind:: getsouboru](#getfilename).
 
-##  <a name="close"></a>  CFileFind::Close
+##  <a name="close"></a>CFileFind:: Close
 
-Voláním této členské funkce ukončit vyhledávání, resetování kontextu a uvolnit všechny prostředky.
+Voláním této členské funkce ukončíte hledání, resetujete kontext a uvolníte všechny prostředky.
 
 ```
 void Close();
@@ -172,15 +172,15 @@ void Close();
 
 ### <a name="remarks"></a>Poznámky
 
-Po volání `Close`, není nutné vytvořit novou `CFileFind` instance před voláním [FindFile](#findfile) zahájíte hledání.
+Po volání `Close`není nutné před voláním metody [FindFile –](#findfile) vytvořit `CFileFind` novou instanci a zahájit nové hledání.
 
 ### <a name="example"></a>Příklad
 
-  Podívejte se na příklad pro [CFileFind::GetFileName](#getfilename).
+  Podívejte se na příklad pro [CFileFind:: getsouboru](#getfilename).
 
-##  <a name="closecontext"></a>  CFileFind::CloseContext
+##  <a name="closecontext"></a>CFileFind::CloseContext
 
-Zavře soubor určeného popisovačem aktuální hledání.
+Zavře soubor určený aktuálním popisovačem hledání.
 
 ```
 virtual void CloseContext();
@@ -188,13 +188,13 @@ virtual void CloseContext();
 
 ### <a name="remarks"></a>Poznámky
 
-Zavře soubor určený aktuální hodnotou popisovače vyhledávání. Tuto funkci chcete-li změnit výchozí chování přepište.
+Zavře soubor určený aktuální hodnotou popisovače hledání. Přepsáním této funkce změníte výchozí chování.
 
-Je třeba zavolat [FindFile](#findfile) nebo [FindNextFile](#findnextfile) načíst popisovač platný vyhledávací funkce alespoň jednou. `FindFile` a `FindNextFile` funkce popisovač vyhledávání použijte k vyhledání souborů s názvy, které odpovídají zadaným názvem.
+Chcete-li načíst platný popisovač hledání, je nutné volat funkce [FindFile –](#findfile) nebo [FindNextFile](#findnextfile) alespoň jednou. Funkce `FindFile` a`FindNextFile` používají popisovač hledání k vyhledání souborů s názvy, které odpovídají danému názvu.
 
-##  <a name="findfile"></a>  CFileFind::FindFile
+##  <a name="findfile"></a>CFileFind:: FindFile –
 
-Zavolejte tuto členskou funkci, otevřete hledání souborů.
+Chcete-li otevřít hledání souborů, zavolejte tuto členskou funkci.
 
 ```
 virtual BOOL FindFile(
@@ -205,18 +205,18 @@ virtual BOOL FindFile(
 ### <a name="parameters"></a>Parametry
 
 *pstrName*<br/>
-Ukazatel na řetězec obsahující název souboru, který má najít. Pokud předáte hodnotu NULL *pstrName*, `FindFile` nemá zástupný znak (*.\*) vyhledávání.
+Ukazatel na řetězec obsahující název souboru, který se má najít. Pokud předáte hodnotu nullpro pstrName `FindFile` , provede se zástupné\*vyhledávání (*.).
 
 *dwUnused*<br/>
-Vyhrazené aby `FindFile` polymorfní s odvozené třídy. Musí být 0.
+Vyhrazeno pro `FindFile` vytvoření polymorfního s odvozenými třídami. Musí mít hodnotu 0.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Nenulové, pokud je úspěšná. jinak 0. Chcete-li získat rozšířené informace o chybě, zavolejte funkci Win32 [GetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror).
+Nenulové, pokud bylo úspěšné; v opačném případě 0. Chcete-li získat rozšířené informace o chybě, zavolejte funkci Win32 [GetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror).
 
 ### <a name="remarks"></a>Poznámky
 
-Po volání `FindFile` zahájíte hledání souborů volání [FindNextFile](#findnextfile) načíst následující soubory. Je nutné volat `FindNextFile` alespoň jednou před voláním některé z následujících atributů členské funkce:
+Po volání `FindFile` k zahájení hledání souborů zavolejte [FindNextFile](#findnextfile) pro načtení následných souborů. Před voláním `FindNextFile` kterékoli z následujících členských funkcí atributu je nutné zavolat alespoň jednou:
 
 - [GetCreationTime](#getcreationtime)
 
@@ -232,17 +232,17 @@ Po volání `FindFile` zahájíte hledání souborů volání [FindNextFile](#fi
 
 - [GetLastWriteTime](#getlastwritetime)
 
-- [GetLength](#getlength)
+- [GetLength –](#getlength)
 
-- [GetRoot](#getroot)
+- [GetRoot selhalo](#getroot)
 
-- [IsArchived](#isarchived)
+- [Archivované](#isarchived)
 
 - [IsCompressed](#iscompressed)
 
-- [IsDirectory](#isdirectory)
+- [Adresář](#isdirectory)
 
-- [IsDots](#isdots)
+- [V bodech](#isdots)
 
 - [IsHidden](#ishidden)
 
@@ -250,19 +250,19 @@ Po volání `FindFile` zahájíte hledání souborů volání [FindNextFile](#fi
 
 - [IsReadOnly](#isreadonly)
 
-- [IsSystem](#issystem)
+- [Zadaným atributem IsSystem](#issystem)
 
-- [IsTemporary](#istemporary)
+- [Velmi dočasné](#istemporary)
 
 - [MatchesMask](#matchesmask)
 
 ### <a name="example"></a>Příklad
 
-  Podívejte se na příklad pro [CFileFind::IsDirectory](#isdirectory).
+  Podívejte se na příklad pro [CFileFind::](#isdirectory).
 
-##  <a name="findnextfile"></a>  CFileFind::FindNextFile
+##  <a name="findnextfile"></a>CFileFind::FindNextFile
 
-Voláním této členské funkce, chcete-li pokračovat v hledání souborů z předchozího volání [FindFile](#findfile).
+Volejte tuto členskou funkci, aby pokračovala v hledání souboru z předchozího volání [FindFile –](#findfile).
 
 ```
 virtual BOOL FindNextFile();
@@ -270,11 +270,11 @@ virtual BOOL FindNextFile();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Nenulové, pokud existují další soubory. nula, pokud je nalezen soubor jako poslední v adresáři nebo pokud došlo k chybě. Chcete-li získat rozšířené informace o chybě, zavolejte funkci Win32 [GetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror). Pokud je nalezen soubor poslední soubor v adresáři nebo neexistuje odpovídající soubory najdete, `GetLastError` funkce vrátí ERROR_NO_MORE_FILES.
+Nenulové, pokud existuje více souborů; nula, pokud se soubor našel jako poslední v adresáři, nebo pokud došlo k chybě Chcete-li získat rozšířené informace o chybě, zavolejte funkci Win32 [GetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror). Pokud je nalezen poslední soubor v adresáři, nebo pokud nelze nalézt žádné vyhovující soubory, `GetLastError` vrátí funkce ERROR_NO_MORE_FILES.
 
 ### <a name="remarks"></a>Poznámky
 
-Je nutné volat `FindNextFile` alespoň jednou před voláním některé z následujících atributů členské funkce:
+Před voláním `FindNextFile` kterékoli z následujících členských funkcí atributu je nutné zavolat alespoň jednou:
 
 - [GetCreationTime](#getcreationtime)
 
@@ -290,17 +290,17 @@ Je nutné volat `FindNextFile` alespoň jednou před voláním některé z násl
 
 - [GetLastWriteTime](#getlastwritetime)
 
-- [GetLength](#getlength)
+- [GetLength –](#getlength)
 
-- [GetRoot](#getroot)
+- [GetRoot selhalo](#getroot)
 
-- [IsArchived](#isarchived)
+- [Archivované](#isarchived)
 
 - [IsCompressed](#iscompressed)
 
-- [IsDirectory](#isdirectory)
+- [Adresář](#isdirectory)
 
-- [IsDots](#isdots)
+- [V bodech](#isdots)
 
 - [IsHidden](#ishidden)
 
@@ -308,21 +308,21 @@ Je nutné volat `FindNextFile` alespoň jednou před voláním některé z násl
 
 - [IsReadOnly](#isreadonly)
 
-- [IsSystem](#issystem)
+- [Zadaným atributem IsSystem](#issystem)
 
-- [IsTemporary](#istemporary)
+- [Velmi dočasné](#istemporary)
 
 - [MatchesMask](#matchesmask)
 
-`FindNextFile` zabalí funkci Win32 [FindNextFile](/windows/desktop/api/fileapi/nf-fileapi-findnextfilea).
+`FindNextFile`zabalí funkci Win32 [FindNextFile](/windows/desktop/api/fileapi/nf-fileapi-findnextfilea).
 
 ### <a name="example"></a>Příklad
 
-  Podívejte se na příklad pro [CFileFind::IsDirectory](#isdirectory).
+  Podívejte se na příklad pro [CFileFind::](#isdirectory).
 
-##  <a name="getcreationtime"></a>  CFileFind::GetCreationTime
+##  <a name="getcreationtime"></a>CFileFind::GetCreationTime
 
-Voláním této členské funkce, chcete-li získat čas vytvoření zadaného souboru.
+Chcete-li získat čas vytvoření zadaného souboru, zavolejte tuto členskou funkci.
 
 ```
 virtual BOOL GetCreationTime(FILETIME* pTimeStamp) const;
@@ -332,29 +332,29 @@ virtual BOOL GetCreationTime(CTime& refTime) const;
 ### <a name="parameters"></a>Parametry
 
 *pTimeStamp*<br/>
-Ukazatel [hodnota FILETIME](/windows/desktop/api/minwinbase/ns-minwinbase-filetime) struktury obsahující čas vytvoření souboru.
+Ukazatel na strukturu [času](/windows/desktop/api/minwinbase/ns-minwinbase-filetime) souboru obsahující čas, kdy byl soubor vytvořen.
 
 *refTime*<br/>
-Odkaz na [CTime](../../atl-mfc-shared/reference/ctime-class.md) objektu.
+Odkaz na objekt [CTime –](../../atl-mfc-shared/reference/ctime-class.md) .
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Nenulové, pokud je úspěšná. 0, pokud není úspěšné. `GetCreationTime` Vrátí hodnotu 0, pouze pokud [FindNextFile](#findnextfile) nikdy byla volána na tomto `CFileFind` objektu.
+Nenulové, pokud bylo úspěšné; 0, pokud neproběhla úspěšně. `GetCreationTime`Vrátí hodnotu 0 pouze v případě, že [FindNextFile](#findnextfile) nebyl nikdy `CFileFind` volán u tohoto objektu.
 
 ### <a name="remarks"></a>Poznámky
 
-Je nutné volat [FindNextFile](#findnextfile) alespoň jednou před voláním `GetCreationTime`.
+Před voláním [](#findnextfile) `GetCreationTime`je nutné volat FindNextFile alespoň jednou.
 
 > [!NOTE]
->  Ne všechny systémy souborů implementace časové razítko vrácená touto funkcí pomocí stejné sémantiky. Tato funkce může vrátit stejnou hodnotu vrácenou příkazem jiné časové razítko funkce, pokud podkladový systém souborů nebo server nepodporuje atribut doby uchování. Zobrazit [Win32_FIND_DATA](/windows/desktop/api/minwinbase/ns-minwinbase-_win32_find_dataa) strukturu pro informace o formáty času. V některých systémech operace vrácený čas je v čase místní zóny na počítači se, že se soubor nachází. Zobrazit Win32 [FileTimeToLocalFileTime](/windows/desktop/api/fileapi/nf-fileapi-filetimetolocalfiletime) rozhraní API pro další informace.
+>  Ne všechny systémy souborů používají stejnou sémantiku k implementaci časového razítka vráceného touto funkcí. Tato funkce může vracet stejnou hodnotu vrácenou jinými funkcemi časového razítka, Pokud podkladový systém souborů nebo server nepodporuje zachování atributu Time. Informace o formátech času najdete v [WIN32_FIND_DATA](/windows/desktop/api/minwinbase/ns-minwinbase-win32_find_dataa) struktuře. V některých operačních systémech byl vrácený čas v časovém pásmu, které se nachází v místním počítači, ale soubor je umístěný. Další informace najdete v tématu rozhraní Win32 [FileTimeToLocalFileTime](/windows/desktop/api/fileapi/nf-fileapi-filetimetolocalfiletime) API.
 
 ### <a name="example"></a>Příklad
 
-  Podívejte se na příklad pro [CFileFind::GetLength](#getlength).
+  Podívejte se na příklad pro [CFileFind:: GetLength](#getlength).
 
-##  <a name="getfilename"></a>  CFileFind::GetFileName
+##  <a name="getfilename"></a>CFileFind:: getsoubor
 
-Voláním této členské funkce a získat tak název souboru nalezen.
+Zavolejte tuto členskou funkci, aby získala název nalezeného souboru.
 
 ```
 virtual CString GetFileName() const;
@@ -362,27 +362,27 @@ virtual CString GetFileName() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Název souboru nedávno zjištěno.
+Název souboru naposledy nalezeného souboru.
 
 ### <a name="remarks"></a>Poznámky
 
-Je nutné volat [FindNextFile](#findnextfile) alespoň jednou před voláním GetFileName.
+Před voláním metody getfiletable je nutné volat [FindNextFile](#findnextfile) alespoň jednou.
 
-`GetFileName` je jednou tři `CFileFind` členské funkce, které vracejí nějakou formu názvu souboru. Následující seznam popisuje tři a jak se liší:
+`GetFileName`je jedna ze tří `CFileFind` členských funkcí, které vracejí určitou formu názvu souboru. Následující seznam popisuje tři a jak se liší:
 
-- `GetFileName` Vrátí název souboru, včetně přípony. Například volání `GetFileName` generovat zprávu uživatele o souboru *c:\myhtml\myfile.txt* vrátí název souboru *myfile.txt*.
+- `GetFileName`Vrátí název souboru, včetně přípony. Například volání `GetFileName` pro vygenerování zprávy uživatele o souboru *c:\myhtml\myfile.txt* vrátí název souboru *MyFile. txt*.
 
-- [GetFilePath](#getfilepath) vrátí celou cestu k souboru. Například volání `GetFilePath` generovat zprávu uživatele o souboru *c:\myhtml\myfile.txt* vrátí cestu k souboru *c:\myhtml\myfile.txt*.
+- [](#getfilepath) Funkce GetFilePath vrátí celou cestu k souboru. Například volání `GetFilePath` pro vygenerování zprávy uživatele o souboru *c:\myhtml\myfile.txt* vrátí cestu k souboru *c:\myhtml\myfile.txt*.
 
-- [GetFileTitle](#getfiletitle) vrátí název souboru bez přípony souboru. Například volání `GetFileTitle` generovat zprávu uživatele o souboru *c:\myhtml\myfile.txt* vrátí název souboru *myfile*.
+- [GetFileTitle](#getfiletitle) vrátí název souboru s výjimkou přípony souboru. Například volání `GetFileTitle` pro vygenerování zprávy uživatele o souboru *c:\myhtml\myfile.txt* vrátí název souboru *MyFile*.
 
 ### <a name="example"></a>Příklad
 
 [!code-cpp[NVC_MFCFiles#32](../../atl-mfc-shared/reference/codesnippet/cpp/cfilefind-class_2.cpp)]
 
-##  <a name="getfilepath"></a>  CFileFind::GetFilePath
+##  <a name="getfilepath"></a>CFileFind:: GetFilePath
 
-Voláním této členské funkce získat úplnou cestu zadaného souboru.
+Chcete-li získat úplnou cestu k zadanému souboru, zavolejte tuto členskou funkci.
 
 ```
 virtual CString GetFilePath() const;
@@ -390,27 +390,27 @@ virtual CString GetFilePath() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Cesta zadaného souboru.
+Cesta k zadanému souboru.
 
 ### <a name="remarks"></a>Poznámky
 
-Je nutné volat [FindNextFile](#findnextfile) alespoň jednou před voláním `GetFilePath`.
+Před voláním [](#findnextfile) `GetFilePath`je nutné volat FindNextFile alespoň jednou.
 
-`GetFilePath` je jednou tři `CFileFind` členské funkce, které vracejí nějakou formu názvu souboru. Následující seznam popisuje tři a jak se liší:
+`GetFilePath`je jedna ze tří `CFileFind` členských funkcí, které vracejí určitou formu názvu souboru. Následující seznam popisuje tři a jak se liší:
 
-- [GetFileName](#getfilename) vrátí název souboru, včetně přípony. Například volání `GetFileName` generovat zprávu uživatele o souboru *c:\myhtml\myfile.txt* vrátí název souboru *myfile.txt*.
+- [Getfiletable](#getfilename) vrátí název souboru včetně přípony. Například volání `GetFileName` pro vygenerování zprávy uživatele o souboru *c:\myhtml\myfile.txt* vrátí název souboru *MyFile. txt*.
 
-- `GetFilePath` Vrátí celou cestu k souboru. Například volání `GetFilePath` generovat zprávu uživatele o souboru `c:\myhtml\myfile.txt` vrátí cestu k souboru `c:\myhtml\myfile.txt`.
+- `GetFilePath`Vrátí celou cestu k souboru. Například volání `GetFilePath` pro vygenerování zprávy uživatele o souboru `c:\myhtml\myfile.txt` vrátí cestu `c:\myhtml\myfile.txt`k souboru.
 
-- [GetFileTitle](#getfiletitle) vrátí název souboru bez přípony souboru. Například volání `GetFileTitle` generovat zprávu uživatele o souboru *c:\myhtml\myfile.txt* vrátí název souboru *myfile*.
+- [GetFileTitle](#getfiletitle) vrátí název souboru s výjimkou přípony souboru. Například volání `GetFileTitle` pro vygenerování zprávy uživatele o souboru *c:\myhtml\myfile.txt* vrátí název souboru *MyFile*.
 
 ### <a name="example"></a>Příklad
 
-  Podívejte se na příklad pro [CFileFind::GetFileName](#getfilename).
+  Podívejte se na příklad pro [CFileFind:: getsouboru](#getfilename).
 
-##  <a name="getfiletitle"></a>  CFileFind::GetFileTitle
+##  <a name="getfiletitle"></a>CFileFind::GetFileTitle
 
-Voláním této členské funkce se získat název souboru nalezen.
+Zavolejte tuto členskou funkci, aby se získal název nalezeného souboru.
 
 ```
 virtual CString GetFileTitle() const;
@@ -418,27 +418,27 @@ virtual CString GetFileTitle() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Název souboru.
+Název souboru
 
 ### <a name="remarks"></a>Poznámky
 
-Je nutné volat [FindNextFile](#findnextfile) alespoň jednou před voláním `GetFileTitle`.
+Před voláním [](#findnextfile) `GetFileTitle`je nutné volat FindNextFile alespoň jednou.
 
-`GetFileTitle` je jednou tři `CFileFind` členské funkce, které vracejí nějakou formu názvu souboru. Následující seznam popisuje tři a jak se liší:
+`GetFileTitle`je jedna ze tří `CFileFind` členských funkcí, které vracejí určitou formu názvu souboru. Následující seznam popisuje tři a jak se liší:
 
-- [GetFileName](#getfilename) vrátí název souboru, včetně přípony. Například volání `GetFileName` generovat zprávu uživatele o souboru *c:\myhtml\myfile.txt* vrátí název souboru *myfile.txt*.
+- [Getfiletable](#getfilename) vrátí název souboru včetně přípony. Například volání `GetFileName` pro vygenerování zprávy uživatele o souboru *c:\myhtml\myfile.txt* vrátí název souboru *MyFile. txt*.
 
-- [GetFilePath](#getfilepath) vrátí celou cestu k souboru. Například volání `GetFilePath` generovat zprávu uživatele o souboru *c:\myhtml\myfile.txt* vrátí cestu k souboru *c:\myhtml\myfile.txt*.
+- [](#getfilepath) Funkce GetFilePath vrátí celou cestu k souboru. Například volání `GetFilePath` pro vygenerování zprávy uživatele o souboru *c:\myhtml\myfile.txt* vrátí cestu k souboru *c:\myhtml\myfile.txt*.
 
-- `GetFileTitle` Vrátí název souboru bez přípony souboru. Například volání `GetFileTitle` generovat zprávu uživatele o souboru *c:\myhtml\myfile.txt* vrátí název souboru *myfile*.
+- `GetFileTitle`Vrátí název souboru s výjimkou přípony souboru. Například volání `GetFileTitle` pro vygenerování zprávy uživatele o souboru *c:\myhtml\myfile.txt* vrátí název souboru *MyFile*.
 
 ### <a name="example"></a>Příklad
 
-  Podívejte se na příklad pro [CFileFind::GetFileName](#getfilename).
+  Podívejte se na příklad pro [CFileFind:: getsouboru](#getfilename).
 
-##  <a name="getfileurl"></a>  CFileFind::GetFileURL
+##  <a name="getfileurl"></a>CFileFind::GetFileURL
 
-Voláním této členské funkce načíst zadané adresy URL.
+Chcete-li načíst zadanou adresu URL, zavolejte tuto členskou funkci.
 
 ```
 virtual CString GetFileURL() const;
@@ -446,21 +446,21 @@ virtual CString GetFileURL() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Úplnou adresu URL.
+Úplná adresa URL.
 
 ### <a name="remarks"></a>Poznámky
 
-Je nutné volat [FindNextFile](#findnextfile) alespoň jednou před voláním `GetFileURL`.
+Před voláním [](#findnextfile) `GetFileURL`je nutné volat FindNextFile alespoň jednou.
 
-`GetFileURL` se podobá na členskou funkci [GetFilePath](#getfilepath), s tím rozdílem, že vrátí adresu URL ve formě `file://path`. Například volání `GetFileURL` získat úplnou adresu URL pro *myfile.txt* vrátí adresu URL `file://c:\myhtml\myfile.txt`.
+`GetFileURL`se podobá funkci GetFilePath [](#getfilepath)členské funkce s tím rozdílem, že vrátí adresu URL ve `file://path`formuláři. Například volání `GetFileURL` pro získání úplné adresy URL pro *soubor MyFile. txt* vrátí adresu URL `file://c:\myhtml\myfile.txt`.
 
 ### <a name="example"></a>Příklad
 
-  Podívejte se na příklad pro [CFileFind::GetFileName](#getfilename).
+  Podívejte se na příklad pro [CFileFind:: getsouboru](#getfilename).
 
-##  <a name="getlastaccesstime"></a>  CFileFind::GetLastAccessTime
+##  <a name="getlastaccesstime"></a>CFileFind::GetLastAccessTime
 
-Voláním této členské funkce, chcete-li získat čas posledního přístupu k souboru.
+Zavolejte tuto členskou funkci, aby se získal čas posledního otevření zadaného souboru.
 
 ```
 virtual BOOL GetLastAccessTime(CTime& refTime) const;
@@ -470,29 +470,29 @@ virtual BOOL GetLastAccessTime(FILETIME* pTimeStamp) const;
 ### <a name="parameters"></a>Parametry
 
 *refTime*<br/>
-Odkaz na [CTime](../../atl-mfc-shared/reference/ctime-class.md) objektu.
+Odkaz na objekt [CTime –](../../atl-mfc-shared/reference/ctime-class.md) .
 
 *pTimeStamp*<br/>
-Ukazatel [hodnota FILETIME](/windows/desktop/api/minwinbase/ns-minwinbase-filetime) struktury obsahující čas posledního přístupu k souboru.
+Ukazatel na strukturu [času](/windows/desktop/api/minwinbase/ns-minwinbase-filetime) souboru obsahující čas posledního otevření souboru.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Nenulové, pokud je úspěšná. 0, pokud není úspěšné. `GetLastAccessTime` Vrátí hodnotu 0, pouze pokud [FindNextFile](#findnextfile) nikdy byla volána na tomto `CFileFind` objektu.
+Nenulové, pokud bylo úspěšné; 0, pokud neproběhla úspěšně. `GetLastAccessTime`Vrátí hodnotu 0 pouze v případě, že [FindNextFile](#findnextfile) nebyl nikdy `CFileFind` volán u tohoto objektu.
 
 ### <a name="remarks"></a>Poznámky
 
-Je nutné volat [FindNextFile](#findnextfile) alespoň jednou před voláním `GetLastAccessTime`.
+Před voláním [](#findnextfile) `GetLastAccessTime`je nutné volat FindNextFile alespoň jednou.
 
 > [!NOTE]
->  Ne všechny systémy souborů implementace časové razítko vrácená touto funkcí pomocí stejné sémantiky. Tato funkce může vrátit stejnou hodnotu vrácenou příkazem jiné časové razítko funkce, pokud podkladový systém souborů nebo server nepodporuje atribut doby uchování. Zobrazit [Win32_FIND_DATA](/windows/desktop/api/minwinbase/ns-minwinbase-_win32_find_dataa) strukturu pro informace o formáty času. V některých systémech operace vrácený čas je v čase místní zóny na počítači se, že se soubor nachází. Zobrazit Win32 [FileTimeToLocalFileTime](/windows/desktop/api/fileapi/nf-fileapi-filetimetolocalfiletime) rozhraní API pro další informace.
+>  Ne všechny systémy souborů používají stejnou sémantiku k implementaci časového razítka vráceného touto funkcí. Tato funkce může vracet stejnou hodnotu vrácenou jinými funkcemi časového razítka, Pokud podkladový systém souborů nebo server nepodporuje zachování atributu Time. Informace o formátech času najdete v [WIN32_FIND_DATA](/windows/desktop/api/minwinbase/ns-minwinbase-win32_find_dataa) struktuře. V některých operačních systémech byl vrácený čas v časovém pásmu, které se nachází v místním počítači, ale soubor je umístěný. Další informace najdete v tématu rozhraní Win32 [FileTimeToLocalFileTime](/windows/desktop/api/fileapi/nf-fileapi-filetimetolocalfiletime) API.
 
 ### <a name="example"></a>Příklad
 
-  Podívejte se na příklad pro [CFileFind::GetLength](#getlength).
+  Podívejte se na příklad pro [CFileFind:: GetLength](#getlength).
 
-##  <a name="getlastwritetime"></a>  CFileFind::GetLastWriteTime
+##  <a name="getlastwritetime"></a>CFileFind::GetLastWriteTime
 
-Voláním této členské funkce zobrazíte čas poslední změny souboru.
+Zavolejte tuto členskou funkci, aby se získal čas poslední změny souboru.
 
 ```
 virtual BOOL GetLastWriteTime(FILETIME* pTimeStamp) const;
@@ -502,29 +502,29 @@ virtual BOOL GetLastWriteTime(CTime& refTime) const;
 ### <a name="parameters"></a>Parametry
 
 *pTimeStamp*<br/>
-Ukazatel [hodnota FILETIME](/windows/desktop/api/minwinbase/ns-minwinbase-filetime) struktury obsahující času posledního zápisu souboru na.
+Ukazatel na strukturu [času](/windows/desktop/api/minwinbase/ns-minwinbase-filetime) souboru obsahující čas, kdy byl soubor naposledy zapsán.
 
 *refTime*<br/>
-Odkaz na [CTime](../../atl-mfc-shared/reference/ctime-class.md) objektu.
+Odkaz na objekt [CTime –](../../atl-mfc-shared/reference/ctime-class.md) .
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Nenulové, pokud je úspěšná. 0, pokud není úspěšné. `GetLastWriteTime` Vrátí hodnotu 0, pouze pokud [FindNextFile](#findnextfile) nikdy byla volána na tomto `CFileFind` objektu.
+Nenulové, pokud bylo úspěšné; 0, pokud neproběhla úspěšně. `GetLastWriteTime`Vrátí hodnotu 0 pouze v případě, že [FindNextFile](#findnextfile) nebyl nikdy `CFileFind` volán u tohoto objektu.
 
 ### <a name="remarks"></a>Poznámky
 
-Je nutné volat [FindNextFile](#findnextfile) alespoň jednou před voláním `GetLastWriteTime`.
+Před voláním [](#findnextfile) `GetLastWriteTime`je nutné volat FindNextFile alespoň jednou.
 
 > [!NOTE]
->  Ne všechny systémy souborů implementace časové razítko vrácená touto funkcí pomocí stejné sémantiky. Tato funkce může vrátit stejnou hodnotu vrácenou příkazem jiné časové razítko funkce, pokud podkladový systém souborů nebo server nepodporuje atribut doby uchování. Zobrazit [Win32_Find_Data](/windows/desktop/api/minwinbase/ns-minwinbase-_win32_find_dataa) strukturu pro informace o formáty času. V některých systémech operace vrácený čas je v čase místní zóny na počítači se, že se soubor nachází. Zobrazit Win32 [FileTimeToLocalFileTime](/windows/desktop/api/fileapi/nf-fileapi-filetimetolocalfiletime) rozhraní API pro další informace.
+>  Ne všechny systémy souborů používají stejnou sémantiku k implementaci časového razítka vráceného touto funkcí. Tato funkce může vracet stejnou hodnotu vrácenou jinými funkcemi časového razítka, Pokud podkladový systém souborů nebo server nepodporuje zachování atributu Time. Informace o formátech času najdete v [Win32_Find_Data](/windows/desktop/api/minwinbase/ns-minwinbase-win32_find_dataa) struktuře. V některých operačních systémech byl vrácený čas v časovém pásmu, které se nachází v místním počítači, ale soubor je umístěný. Další informace najdete v tématu rozhraní Win32 [FileTimeToLocalFileTime](/windows/desktop/api/fileapi/nf-fileapi-filetimetolocalfiletime) API.
 
 ### <a name="example"></a>Příklad
 
-  Podívejte se na příklad pro [CFileFind::GetLength](#getlength).
+  Podívejte se na příklad pro [CFileFind:: GetLength](#getlength).
 
-##  <a name="getlength"></a>  CFileFind::GetLength
+##  <a name="getlength"></a>CFileFind:: GetLength
 
-Voláním této členské funkce získání délky nalezený soubor v bajtech.
+Voláním této členské funkce získáte délku nalezeného souboru v bajtech.
 
 ```
 ULONGLONG GetLength() const;
@@ -532,24 +532,24 @@ ULONGLONG GetLength() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Délka souboru nalezený v bajtech.
+Délka nalezeného souboru v bajtech
 
 ### <a name="remarks"></a>Poznámky
 
-Je nutné volat [FindNextFile](#findnextfile) alespoň jednou před voláním `GetLength`.
+Před voláním [](#findnextfile) `GetLength`je nutné volat FindNextFile alespoň jednou.
 
-`GetLength` používá strukturu Win32 [WIN32_FIND_DATA](/windows/desktop/api/minwinbase/ns-minwinbase-_win32_find_dataa) k získání a návratová hodnota velikosti souboru v bajtech.
+`GetLength`pomocí [WIN32_FIND_DATA](/windows/desktop/api/minwinbase/ns-minwinbase-win32_find_dataa) struktury Win32 získá a vrátí hodnotu velikosti souboru (v bajtech).
 
 > [!NOTE]
->  Od verze MFC 7.0 `GetLength` podporuje 64bitové celočíselné typy. Dříve existující kód vytvořený s touto novější verzí knihovny může vést ke zkrácení upozornění.
+>  V případě knihovny MFC 7,0 `GetLength` podporuje typy celočíselného celého čísla (64). Dříve existující kód sestavený pomocí této novější verze knihovny může mít za následek upozornění na zkrácení.
 
 ### <a name="example"></a>Příklad
 
 [!code-cpp[NVC_MFCFiles#33](../../atl-mfc-shared/reference/codesnippet/cpp/cfilefind-class_3.cpp)]
 
-##  <a name="getroot"></a>  CFileFind::GetRoot
+##  <a name="getroot"></a>CFileFind:: GetRoot
 
-Voláním této členské funkce kořenu nalezený soubor.
+Zavolejte tuto členskou funkci, aby se získal kořen nalezeného souboru.
 
 ```
 virtual CString GetRoot() const;
@@ -557,21 +557,21 @@ virtual CString GetRoot() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Kořen aktivní vyhledávání.
+Kořen aktivního hledání
 
 ### <a name="remarks"></a>Poznámky
 
-Je nutné volat [FindNextFile](#findnextfile) alespoň jednou před voláním `GetRoot`.
+Před voláním [](#findnextfile) `GetRoot`je nutné volat FindNextFile alespoň jednou.
 
-Tato členská funkce vrátí specifikátor jednotky a cestu používat k zahájení hledání. Například volání [FindFile](#findfile) s `*.dat` výsledkem `GetRoot` vrací prázdný řetězec. Předejte cestu, například `c:\windows\system\*.dll`do `FindFile` výsledky `GetRoot` vrácení `c:\windows\system\`.
+Tato členská funkce vrátí specifikátor jednotky a název cesty, který se používá ke spuštění hledání. Například volání [FindFile –](#findfile) s `*.dat` výsledkem `GetRoot` vrácení prázdného řetězce. Předání cesty, `c:\windows\system\*.dll`jako je například, do `FindFile` vrácených `c:\windows\system\`výsledků. `GetRoot`
 
 ### <a name="example"></a>Příklad
 
-  Podívejte se na příklad pro [CFileFind::GetFileName](#getfilename).
+  Podívejte se na příklad pro [CFileFind:: getsouboru](#getfilename).
 
-##  <a name="isarchived"></a>  CFileFind::IsArchived
+##  <a name="isarchived"></a>CFileFind:: archivu
 
-Voláním této členské funkce k určení, pokud je nalezen soubor archivovat.
+Voláním této členské funkce určíte, zda byl nalezen soubor archivován.
 
 ```
 BOOL IsArchived() const;
@@ -579,23 +579,23 @@ BOOL IsArchived() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Nenulové, pokud je úspěšná. jinak 0.
+Nenulové, pokud bylo úspěšné; v opačném případě 0.
 
 ### <a name="remarks"></a>Poznámky
 
-Soubor archivu, které chcete zálohovat nebo odebrat pomocí FILE_ATTRIBUTE_ARCHIVE atribut souboru identifikované v označení aplikace [WIN32_FIND_DATA](/windows/desktop/api/minwinbase/ns-minwinbase-_win32_find_dataa) struktury.
+Aplikace označí archivní soubor, který se má zálohovat nebo odebrat, s FILE_ATTRIBUTE_ARCHIVE atributem souboru, který je identifikovaný ve struktuře [WIN32_FIND_DATA](/windows/desktop/api/minwinbase/ns-minwinbase-win32_find_dataa) .
 
-Je nutné volat [FindNextFile](#findnextfile) alespoň jednou před voláním `IsArchived`.
+Před voláním [](#findnextfile) `IsArchived`je nutné volat FindNextFile alespoň jednou.
 
-Naleznete v členské funkci [MatchesMask](#matchesmask) úplný seznam atributů souboru.
+Úplný seznam atributů souborů najdete v tématu [MatchesMask](#matchesmask) členské funkce.
 
 ### <a name="example"></a>Příklad
 
-  Podívejte se na příklad pro [CFileFind::GetLength](#getlength).
+  Podívejte se na příklad pro [CFileFind:: GetLength](#getlength).
 
-##  <a name="iscompressed"></a>  CFileFind::IsCompressed
+##  <a name="iscompressed"></a>CFileFind:: dekomprimovaná
 
-Voláním této členské funkce k určení, pokud je komprimován nalezený soubor.
+Zavolejte tuto členskou funkci, abyste zjistili, jestli je nalezený soubor komprimovaný.
 
 ```
 BOOL IsCompressed() const;
@@ -603,23 +603,23 @@ BOOL IsCompressed() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Nenulové, pokud je úspěšná. jinak 0.
+Nenulové, pokud bylo úspěšné; v opačném případě 0.
 
 ### <a name="remarks"></a>Poznámky
 
-Komprimovaný soubor je označené FILE_ATTRIBUTE_COMPRESSED, podle atributu souboru [WIN32_FIND_DATA](/windows/desktop/api/minwinbase/ns-minwinbase-_win32_find_dataa) struktury. Pro soubor tento atribut označuje, že všechna data v souboru je komprimován. Pro adresář tento atribut označuje, že komprese je výchozí pro nově vytvořené soubory a podadresáře.
+Komprimovaný soubor je označený jako FILE_ATTRIBUTE_COMPRESSED, atribut souboru identifikovaný ve struktuře [WIN32_FIND_DATA](/windows/desktop/api/minwinbase/ns-minwinbase-win32_find_dataa) . U souboru tento atribut označuje, že všechna data v souboru jsou komprimována. V případě adresáře tento atribut označuje, že komprese je výchozím nastavením pro nově vytvořené soubory a podadresáře.
 
-Je nutné volat [FindNextFile](#findnextfile) alespoň jednou před voláním `IsCompressed`.
+Před voláním [](#findnextfile) `IsCompressed`je nutné volat FindNextFile alespoň jednou.
 
-Naleznete v členské funkci [MatchesMask](#matchesmask) úplný seznam atributů souboru.
+Úplný seznam atributů souborů najdete v tématu [MatchesMask](#matchesmask) členské funkce.
 
 ### <a name="example"></a>Příklad
 
-  Podívejte se na příklad pro [CFileFind::GetLength](#getlength).
+  Podívejte se na příklad pro [CFileFind:: GetLength](#getlength).
 
-##  <a name="isdirectory"></a>  CFileFind::IsDirectory
+##  <a name="isdirectory"></a>CFileFind::-adresář
 
-Voláním této členské funkce k určení, zda je nalezen soubor do adresáře.
+Zavolejte tuto členskou funkci, abyste zjistili, jestli je nalezený soubor adresářem.
 
 ```
 BOOL IsDirectory() const;
@@ -627,25 +627,25 @@ BOOL IsDirectory() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Nenulové, pokud je úspěšná. jinak 0.
+Nenulové, pokud bylo úspěšné; v opačném případě 0.
 
 ### <a name="remarks"></a>Poznámky
 
-Soubor, který je adresář je označené FILE_ATTRIBUTE_DIRECTORY podle atributu souboru [WIN32_FIND_DATA](/windows/desktop/api/minwinbase/ns-minwinbase-_win32_find_dataa) struktury.
+Soubor, který je adresářem, je označený jako FILE_ATTRIBUTE_DIRECTORY atribut souboru identifikovaný ve struktuře [WIN32_FIND_DATA](/windows/desktop/api/minwinbase/ns-minwinbase-win32_find_dataa) .
 
-Je nutné volat [FindNextFile](#findnextfile) alespoň jednou před voláním `IsDirectory`.
+Před voláním [](#findnextfile) `IsDirectory`je nutné volat FindNextFile alespoň jednou.
 
-Naleznete v členské funkci [MatchesMask](#matchesmask) úplný seznam atributů souboru.
+Úplný seznam atributů souborů najdete v tématu [MatchesMask](#matchesmask) členské funkce.
 
 ### <a name="example"></a>Příklad
 
-Tento program malý recurses každý adresář na jednotce C:\ a vytiskne název adresáře.
+Tento malý program rozchází všechny adresáře na C:\. jednotka a vytiskne název adresáře.
 
 [!code-cpp[NVC_MFCFiles#34](../../atl-mfc-shared/reference/codesnippet/cpp/cfilefind-class_4.cpp)]
 
-##  <a name="isdots"></a>  CFileFind::IsDots
+##  <a name="isdots"></a>CFileFind::-tečky
 
-Voláním této členské funkce pro testování pro aktuální adresář a nadřazené značky adresáře při procházení souborů.
+Voláním této členské funkce otestujete aktuální adresář a značky nadřazených adresářů při iteracích souborů.
 
 ```
 virtual BOOL IsDots() const;
@@ -653,19 +653,19 @@ virtual BOOL IsDots() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Nenulové, pokud je nalezen soubor má název "."nebo"..", což znamená, že nalezený soubor je ve skutečnosti adresář. Jinak 0.
+Nenulová, pokud má nalezený soubor název "." nebo "..", který označuje, že nalezený soubor je ve skutečnosti adresář. V opačném případě 0.
 
 ### <a name="remarks"></a>Poznámky
 
-Je nutné volat [FindNextFile](#findnextfile) alespoň jednou před voláním `IsDots`.
+Před voláním [](#findnextfile) `IsDots`je nutné volat FindNextFile alespoň jednou.
 
 ### <a name="example"></a>Příklad
 
-  Podívejte se na příklad pro [CFileFind::IsDirectory](#isdirectory).
+  Podívejte se na příklad pro [CFileFind::](#isdirectory).
 
-##  <a name="ishidden"></a>  CFileFind::IsHidden
+##  <a name="ishidden"></a>CFileFind:: Hidden
 
-Voláním této členské funkce k určení, pokud je nalezen soubor skrytý.
+Zavolejte tuto členskou funkci, abyste zjistili, jestli je nalezený soubor skrytý.
 
 ```
 BOOL IsHidden() const;
@@ -673,23 +673,23 @@ BOOL IsHidden() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Nenulové, pokud je úspěšná. jinak 0.
+Nenulové, pokud bylo úspěšné; v opačném případě 0.
 
 ### <a name="remarks"></a>Poznámky
 
-Skryté soubory, které jsou označené FILE_ATTRIBUTE_HIDDEN, podle atributu souboru [WIN32_FIND_DATA](/windows/desktop/api/minwinbase/ns-minwinbase-_win32_find_dataa) struktury. Skrytý soubor není součástí běžných adresářů.
+Skryté soubory, které jsou označeny FILE_ATTRIBUTE_HIDDEN, atribut souboru identifikovaný ve struktuře [WIN32_FIND_DATA](/windows/desktop/api/minwinbase/ns-minwinbase-win32_find_dataa) . Skrytý soubor není zahrnutý v běžném výpisu adresáře.
 
-Je nutné volat [FindNextFile](#findnextfile) alespoň jednou před voláním `IsHidden`.
+Před voláním [](#findnextfile) `IsHidden`je nutné volat FindNextFile alespoň jednou.
 
-Naleznete v členské funkci [MatchesMask](#matchesmask) úplný seznam atributů souboru.
+Úplný seznam atributů souborů najdete v tématu [MatchesMask](#matchesmask) členské funkce.
 
 ### <a name="example"></a>Příklad
 
-  Podívejte se na příklad pro [CFileFind::GetLength](#getlength).
+  Podívejte se na příklad pro [CFileFind:: GetLength](#getlength).
 
-##  <a name="isnormal"></a>  CFileFind::IsNormal
+##  <a name="isnormal"></a>CFileFind:: Normal – Normální
 
-Voláním této členské funkce k určení, zda nalezený soubor je soubor normální.
+Zavolejte tuto členskou funkci, abyste zjistili, jestli je nalezený soubor normálním souborem.
 
 ```
 BOOL IsNormal() const;
@@ -697,23 +697,23 @@ BOOL IsNormal() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Nenulové, pokud je úspěšná. jinak 0.
+Nenulové, pokud bylo úspěšné; v opačném případě 0.
 
 ### <a name="remarks"></a>Poznámky
 
-Soubory označené FILE_ATTRIBUTE_NORMAL, podle atributu souboru [WIN32_FIND_DATA](/windows/desktop/api/minwinbase/ns-minwinbase-_win32_find_dataa) struktury. Normální soubor nemá nastavené žádné jiné atributy. Všechny ostatní atributy souboru přepíše tento atribut.
+Soubory označené FILE_ATTRIBUTE_NORMAL, atribut souboru identifikovaný ve struktuře [WIN32_FIND_DATA](/windows/desktop/api/minwinbase/ns-minwinbase-win32_find_dataa) . V normálním souboru nejsou nastaveny žádné další atributy. Všechny ostatní atributy souboru přepíšou tento atribut.
 
-Je nutné volat [FindNextFile](#findnextfile) alespoň jednou před voláním `IsNormal`.
+Před voláním [](#findnextfile) `IsNormal`je nutné volat FindNextFile alespoň jednou.
 
-Naleznete v členské funkci [MatchesMask](#matchesmask) úplný seznam atributů souboru.
+Úplný seznam atributů souborů najdete v tématu [MatchesMask](#matchesmask) členské funkce.
 
 ### <a name="example"></a>Příklad
 
-  Podívejte se na příklad pro [CFileFind::GetLength](#getlength).
+  Podívejte se na příklad pro [CFileFind:: GetLength](#getlength).
 
-##  <a name="isreadonly"></a>  CFileFind::IsReadOnly
+##  <a name="isreadonly"></a>CFileFind:: IsReadOnly
 
-Voláním této členské funkce k určení, zda nalezený soubor je jen pro čtení.
+Zavolejte tuto členskou funkci, abyste zjistili, jestli je nalezený soubor jen pro čtení.
 
 ```
 BOOL IsReadOnly() const;
@@ -721,23 +721,23 @@ BOOL IsReadOnly() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Nenulové, pokud je úspěšná. jinak 0.
+Nenulové, pokud bylo úspěšné; v opačném případě 0.
 
 ### <a name="remarks"></a>Poznámky
 
-Soubor určený jen pro čtení je označené FILE_ATTRIBUTE_READONLY, atribut souboru identifikované v [WIN32_FIND_DATA](/windows/desktop/api/minwinbase/ns-minwinbase-_win32_find_dataa) struktury. Aplikace může číst takový soubor, ale nemůže zapisovat do něj nebo ho odstranit.
+Soubor, který je jen pro čtení, je označený jako FILE_ATTRIBUTE_READONLY, atribut souboru identifikovaný ve struktuře [WIN32_FIND_DATA](/windows/desktop/api/minwinbase/ns-minwinbase-win32_find_dataa) . Aplikace můžou takový soubor číst, ale nemůžou do něj zapisovat ani ho odstraňovat.
 
-Je nutné volat [FindNextFile](#findnextfile) alespoň jednou před voláním `IsReadOnly`.
+Před voláním [](#findnextfile) `IsReadOnly`je nutné volat FindNextFile alespoň jednou.
 
-Naleznete v členské funkci [MatchesMask](#matchesmask) úplný seznam atributů souboru.
+Úplný seznam atributů souborů najdete v tématu [MatchesMask](#matchesmask) členské funkce.
 
 ### <a name="example"></a>Příklad
 
-  Podívejte se na příklad pro [CFileFind::GetLength](#getlength).
+  Podívejte se na příklad pro [CFileFind:: GetLength](#getlength).
 
-##  <a name="issystem"></a>  CFileFind::IsSystem
+##  <a name="issystem"></a>CFileFind:: FileSystem
 
-Voláním této členské funkce k určení, zda je soubor nalezen systémový soubor.
+Voláním této členské funkce určíte, zda je nalezený soubor systémový soubor.
 
 ```
 BOOL IsSystem() const;
@@ -745,23 +745,23 @@ BOOL IsSystem() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Nenulové, pokud je úspěšná. jinak 0.
+Nenulové, pokud bylo úspěšné; v opačném případě 0.
 
 ### <a name="remarks"></a>Poznámky
 
-Systém souborů je označené FILE_ATTRIBUTE_SYSTEM, atribut souboru identifikované v [WIN32_FIND_DATA](/windows/desktop/api/minwinbase/ns-minwinbase-_win32_find_dataa) struktury. Systém souborů je součástí nebo používá výhradně, operační systém.
+Systémový soubor je označený jako FILE_ATTRIBUTE_SYSTEM, atribut File identifikovaný ve struktuře [WIN32_FIND_DATA](/windows/desktop/api/minwinbase/ns-minwinbase-win32_find_dataa) . Systémový soubor je součástí systému, nebo je používán výhradně operačním systémem.
 
-Je nutné volat [FindNextFile](#findnextfile) alespoň jednou před voláním `IsSystem`.
+Před voláním [](#findnextfile) `IsSystem`je nutné volat FindNextFile alespoň jednou.
 
-Naleznete v členské funkci [MatchesMask](#matchesmask) úplný seznam atributů souboru.
+Úplný seznam atributů souborů najdete v tématu [MatchesMask](#matchesmask) členské funkce.
 
 ### <a name="example"></a>Příklad
 
-  Podívejte se na příklad pro [CFileFind::GetLength](#getlength).
+  Podívejte se na příklad pro [CFileFind:: GetLength](#getlength).
 
-##  <a name="istemporary"></a>  CFileFind::IsTemporary
+##  <a name="istemporary"></a>CFileFind::-dočasná
 
-Voláním této členské funkce k určení, zda nalezený soubor je dočasný soubor.
+Zavolejte tuto členskou funkci, abyste zjistili, jestli je nalezený soubor dočasným souborem.
 
 ```
 BOOL IsTemporary() const;
@@ -769,23 +769,23 @@ BOOL IsTemporary() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Nenulové, pokud je úspěšná. jinak 0.
+Nenulové, pokud bylo úspěšné; v opačném případě 0.
 
 ### <a name="remarks"></a>Poznámky
 
-Dočasný soubor je označené FILE_ATTRIBUTE_TEMPORARY, podle atributu souboru [WIN32_FIND_DATA](/windows/desktop/api/minwinbase/ns-minwinbase-_win32_find_dataa) struktury. Dočasný soubor se používá jako dočasné úložiště. Aplikace by měla zapisovat do souboru pouze v případě, že je nezbytně nutné. Většina dat souboru zůstane v paměti bez vyprazdňuje na médiu, protože ho budou brzy odstraněny.
+Dočasný soubor je označený jako FILE_ATTRIBUTE_TEMPORARY, atribut souboru identifikovaný ve struktuře [WIN32_FIND_DATA](/windows/desktop/api/minwinbase/ns-minwinbase-win32_find_dataa) . Dočasný soubor se používá pro dočasné úložiště. Aplikace by měly zapisovat do souboru pouze v případě, že je to nezbytně nutné. Většina dat souboru zůstává v paměti, aniž by byla vyprázdněna na médium, protože soubor bude brzy odstraněn.
 
-Je nutné volat [FindNextFile](#findnextfile) alespoň jednou před voláním `IsTemporary`.
+Před voláním [](#findnextfile) `IsTemporary`je nutné volat FindNextFile alespoň jednou.
 
-Naleznete v členské funkci [MatchesMask](#matchesmask) úplný seznam atributů souboru.
+Úplný seznam atributů souborů najdete v tématu [MatchesMask](#matchesmask) členské funkce.
 
 ### <a name="example"></a>Příklad
 
-  Podívejte se na příklad pro [CFileFind::GetLength](#getlength).
+  Podívejte se na příklad pro [CFileFind:: GetLength](#getlength).
 
-##  <a name="m_ptm"></a>  CFileFind::m_pTM
+##  <a name="m_ptm"></a>CFileFind::m_pTM
 
-Ukazatel `CAtlTransactionManager` objektu.
+Ukazatel na `CAtlTransactionManager` objekt.
 
 ```
 CAtlTransactionManager* m_pTM;
@@ -793,9 +793,9 @@ CAtlTransactionManager* m_pTM;
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="matchesmask"></a>  CFileFind::MatchesMask
+##  <a name="matchesmask"></a>CFileFind::MatchesMask
 
-Voláním této členské funkce pro testování atributů souboru nalezený soubor.
+Zavolejte tuto členskou funkci pro otestování atributů souboru v nalezeném souboru.
 
 ```
 virtual BOOL MatchesMask(DWORD dwMask) const;
@@ -804,31 +804,31 @@ virtual BOOL MatchesMask(DWORD dwMask) const;
 ### <a name="parameters"></a>Parametry
 
 *dwMask*<br/>
-Určuje jeden nebo více atributů souboru identifikované v [WIN32_FIND_DATA](/windows/desktop/api/minwinbase/ns-minwinbase-_win32_find_dataa) strukturu pro nalezený soubor. K vyhledání více atributů, použít bitový operátor OR (&#124;) – operátor. Je přijatelné jakoukoli kombinaci následujících atributů:
+Určuje jeden nebo více atributů souboru identifikovaných ve struktuře [WIN32_FIND_DATA](/windows/desktop/api/minwinbase/ns-minwinbase-win32_find_dataa) pro nalezený soubor. Chcete-li vyhledat více atributů, použijte operátor bitového&#124;operátoru OR (). Je přijatelné jakékoli kombinace následujících atributů:
 
-- FILE_ATTRIBUTE_ARCHIVE soubor je soubor archivu. K označení souborů pro zálohování nebo odebrání aplikací použijte tento atribut.
+- FILE_ATTRIBUTE_ARCHIVE soubor je archivní soubor. Aplikace používají tento atribut k označení souborů pro zálohování nebo odebrání.
 
-- Je komprimován FILE_ATTRIBUTE_COMPRESSED souboru nebo adresáře. Pro soubor to znamená, že všechna data v souboru je komprimován. Pro adresář to znamená, že komprese je výchozí pro nově vytvořené soubory a podadresáře.
+- FILE_ATTRIBUTE_COMPRESSED, že se soubor nebo adresář komprimuje. V případě souboru to znamená, že všechna data v souboru jsou komprimována. V případě adresáře to znamená, že komprese je výchozím nastavením pro nově vytvořené soubory a podadresáře.
 
-- FILE_ATTRIBUTE_DIRECTORY souboru je adresář.
+- FILE_ATTRIBUTE_DIRECTORY soubor je adresář.
 
-- FILE_ATTRIBUTE_NORMAL soubor nemá nastavené žádné jiné atributy. Tento atribut je platný jenom v případě, že používat samostatně. Všechny ostatní atributy souboru přepíše tento atribut.
+- FILE_ATTRIBUTE_NORMAL soubor nemá nastavené žádné další atributy. Tento atribut je platný pouze v případě, že je použit samostatně. Všechny ostatní atributy souboru přepíšou tento atribut.
 
-- FILE_ATTRIBUTE_HIDDEN souboru je skrytý. Není součástí běžných adresářů.
+- FILE_ATTRIBUTE_HIDDEN soubor je skrytý. Není zahrnutý do běžného výpisu adresáře.
 
-- FILE_ATTRIBUTE_READONLY soubor je jen pro čtení. Aplikace může číst soubor, ale nelze do ní zapisovat nebo ho odstranit.
+- FILE_ATTRIBUTE_READONLY soubor je jen pro čtení. Aplikace můžou soubor číst, ale nemůžou do něj zapisovat ani ho odstraňovat.
 
-- FILE_ATTRIBUTE_SYSTEM soubor je součástí nebo používá výhradně operační systém.
+- FILE_ATTRIBUTE_SYSTEM soubor je součástí nebo je používán výhradně operačním systémem.
 
-- FILE_ATTRIBUTE_TEMPORARY soubor se používá jako dočasné úložiště. Aplikace by měla zapisovat do souboru pouze v případě, že je nezbytně nutné. Většina dat souboru zůstane v paměti bez vyprazdňuje na médiu, protože ho budou brzy odstraněny.
+- FILE_ATTRIBUTE_TEMPORARY soubor se používá pro dočasné úložiště. Aplikace by měly zapisovat do souboru pouze v případě, že je to nezbytně nutné. Většina dat souboru zůstává v paměti, aniž by byla vyprázdněna na médium, protože soubor bude brzy odstraněn.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Nenulové, pokud je úspěšná. jinak 0. Chcete-li získat rozšířené informace o chybě, zavolejte funkci Win32 [GetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror).
+Nenulové, pokud bylo úspěšné; v opačném případě 0. Chcete-li získat rozšířené informace o chybě, zavolejte funkci Win32 [GetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror).
 
 ### <a name="remarks"></a>Poznámky
 
-Je nutné volat [FindNextFile](#findnextfile) alespoň jednou před voláním `MatchesMask`.
+Před voláním [](#findnextfile) `MatchesMask`je nutné volat FindNextFile alespoň jednou.
 
 ### <a name="example"></a>Příklad
 

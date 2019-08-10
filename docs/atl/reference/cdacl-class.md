@@ -1,5 +1,5 @@
 ---
-title: Cdacl – třída
+title: CDacl – třída
 ms.date: 11/04/2016
 f1_keywords:
 - CDacl
@@ -13,19 +13,19 @@ f1_keywords:
 helpviewer_keywords:
 - CDacl class
 ms.assetid: 2dc76616-6362-4967-b6cf-e2d39ca37ddd
-ms.openlocfilehash: 1beac6106b825c775012b85ccd01226c3dfab795
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2bc962407bac947f475368b43f5039bca3c1da1e
+ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62258959"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68915817"
 ---
-# <a name="cdacl-class"></a>Cdacl – třída
+# <a name="cdacl-class"></a>CDacl – třída
 
-Tato třída představuje obálku pro strukturu DACL (seznam volitelných řízení přístupu).
+Tato třída je obálkou pro seznam DACL (volitelný seznam řízení přístupu).
 
 > [!IMPORTANT]
->  Tato třída a jejích členů nelze použít v aplikacích, které jsou spouštěny v modulu Windows Runtime.
+>  Tato třída a její členové nelze použít v aplikacích, které jsou spouštěny v prostředí Windows Runtime.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -37,36 +37,36 @@ class CDacl : public CAcl
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CDacl::CDacl](#cdacl)|Konstruktor|
 |[CDacl::~CDacl](#dtor)|Destruktor.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
-|[CDacl::AddAllowedAce](#addallowedace)|Přidá povolený ACE (položky řízení přístupu) `CDacl` objektu.|
-|[CDacl::AddDeniedAce](#adddeniedace)|Přidá ACE odepření `CDacl` objektu.|
-|[CDacl::GetAceCount](#getacecount)|Vrátí počet položek řízení přístupu (položky řízení přístupu) `CDacl` objektu.|
-|[CDacl::RemoveAce](#removeace)|Odebere z konkrétní ACE (položky řízení přístupu) `CDacl` objektu.|
-|[CDacl::RemoveAllAces](#removeallaces)|Odebere všechny položky obsažené v řízení přístupu `CDacl` objektu.|
+|[CDacl::AddAllowedAce](#addallowedace)|Přidá do `CDacl` objektu povolený záznam ACE (řízení přístupu).|
+|[CDacl::AddDeniedAce](#adddeniedace)|Přidá do `CDacl` objektu objekt ACE s odepřeným přístupem.|
+|[CDacl::GetAceCount](#getacecount)|Vrátí počet položek řízení přístupu (ACE) v `CDacl` objektu.|
+|[CDacl::RemoveAce](#removeace)|Odebere z `CDacl` objektu konkrétní položku ACE (řízení přístupu).|
+|[CDacl::RemoveAllAces](#removeallaces)|Odebere všechny položky řízení přístupu obsažené v `CDacl` objektu.|
 
 ### <a name="public-operators"></a>Veřejné operátory
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
-|[CDacl::operator =](#operator_eq)|Operátor přiřazení.|
+|[CDacl:: operator =](#operator_eq)|Operátor přiřazení|
 
 ## <a name="remarks"></a>Poznámky
 
-Popisovač zabezpečení objektu může obsahovat seznam DACL. DACL obsahuje nula nebo víc položek řízení přístupu (položky řízení přístupu), které identifikují uživatele a skupiny, kteří mohou přistupovat k objektu. Pokud je prázdný DACL (to znamená, neobsahuje žádnou ACE), přístup se explicitně udělí oprávnění, takže implicitně byl odepřen přístup. Pokud není popisovač zabezpečení objektu DACL, objekt není chráněný a všichni mají úplný přístup.
+Popisovač zabezpečení objektu může obsahovat DACL. DACL obsahuje nula nebo více položek řízení přístupu (ACE), které identifikují uživatele a skupiny, kteří mají k tomuto objektu přístup. Pokud je seznam DACL prázdný (to znamená, že obsahuje nulové položky ACE), neudělí se přístup explicitně, takže se přístup implicitně odepře. Pokud však popisovač zabezpečení objektu nemá DACL, je objekt nechráněn a každý má úplný přístup.
 
-K načtení objektu DACL, musí být vlastníka objektu nebo mít READ_CONTROL přístup k objektu. Chcete-li změnit DACL objektu, musíte mít WRITE_DAC přístup k objektu.
+Chcete-li načíst seznam DACL objektu, musíte být vlastníkem objektu nebo mít READ_CONTROL přístup k objektu. Chcete-li změnit DACL objektu, musíte mít WRITE_DAC přístup k objektu.
 
-Použití metod třídy zadaná k vytvoření, přidat, odebrat nebo odstranit položky řízení přístupu z `CDacl` objektu. Viz také [AtlGetDacl](security-global-functions.md#atlgetdacl) a [AtlSetDacl](security-global-functions.md#atlsetdacl).
+Použijte metody třídy poskytované k vytváření, přidávání, odebírání a odstraňování položek řízení přístupu (ACE `CDacl` ) z objektu. Viz také [AtlGetDacl](security-global-functions.md#atlgetdacl) a [AtlSetDacl](security-global-functions.md#atlsetdacl).
 
-Úvod do modelu řízení přístupu ve Windows najdete v tématu [řízení přístupu](/windows/desktop/SecAuthZ/access-control) v sadě Windows SDK.
+Úvod do modelu řízení přístupu v systému Windows naleznete v tématu [Access Control](/windows/desktop/SecAuthZ/access-control) v Windows SDK.
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
@@ -76,11 +76,11 @@ Použití metod třídy zadaná k vytvoření, přidat, odebrat nebo odstranit p
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** atlsecurity.h
+**Záhlaví:** atlsecurity. h
 
 ##  <a name="addallowedace"></a>  CDacl::AddAllowedAce
 
-Přidá povolený ACE (položky řízení přístupu) `CDacl` objektu.
+Přidá do `CDacl` objektu povolený záznam ACE (řízení přístupu).
 
 ```
 bool AddAllowedAce(
@@ -99,33 +99,33 @@ bool AddAllowedAce(
 ### <a name="parameters"></a>Parametry
 
 *rSid*<br/>
-A [identifikační číslo volané stanice](../../atl/reference/csid-class.md) objektu.
+Objekt [CSID](../../atl/reference/csid-class.md) .
 
 *AccessMask*<br/>
-Určuje masku přístupová práva, povolit pro danou `CSid` objektu.
+Určuje masku přístupových práv, která mají být pro zadaný `CSid` objekt povolena.
 
 *AceFlags*<br/>
-Sadu bitových příznaků, které řídí ACE dědičnosti.
+Sada bitových příznaků, které řídí dědění ACE.
 
 *pObjectType*<br/>
 Typ objektu.
 
 *pInheritedObjectType*<br/>
-Typ zděděných objektů.
+Typ zděděného objektu.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vrátí TRUE, pokud je položka řízení přístupu se přidá do `CDacl` objektu NEPRAVDA při selhání.
+Vrátí hodnotu true, pokud je položka ACE přidána `CDacl` do objektu, hodnota false při selhání.
 
 ### <a name="remarks"></a>Poznámky
 
-A `CDacl` objekt obsahuje nula nebo víc položek řízení přístupu (položky řízení přístupu), které identifikují uživatele a skupiny, kteří mohou přistupovat k objektu. Tato metoda přidá ACE, která umožňuje přístup k `CDacl` objektu.
+`CDacl` Objekt obsahuje nula nebo více položek řízení přístupu (ACE), které identifikují uživatele a skupiny, kteří mají přístup k objektu. Tato metoda přidá položku ACE, která umožňuje přístup k `CDacl` objektu.
 
-Zobrazit [ACE_HEADER](/windows/desktop/api/winnt/ns-winnt-_ace_header) popis různé příznaky, které je možné nastavit v `AceFlags` parametru.
+Popis [](/windows/desktop/api/winnt/ns-winnt-ace_header) různých příznaků, které lze nastavit v `AceFlags` parametru, naleznete v tématu ACE_HEADER.
 
-##  <a name="adddeniedace"></a>  CDacl::AddDeniedAce
+##  <a name="adddeniedace"></a>CDacl::AddDeniedAce
 
-Přidá k odepření přístupu (položky řízení přístupu) `CDacl` objektu.
+Přidá do `CDacl` objektu zamítnutý přístup ACE (položka řízení přístupu).
 
 ```
 bool AddDeniedAce(
@@ -147,28 +147,28 @@ bool AddDeniedAce(
 A `CSid` objektu.
 
 *AccessMask*<br/>
-Určuje masku přístupová práva k odepřen pro zadaný rozbočovač `CSid` objektu.
+Určuje masku přístupových práv, která se mají Odepřít pro zadaný `CSid` objekt.
 
 *AceFlags*<br/>
-Sadu bitových příznaků, které řídí ACE dědičnosti. Výchozí hodnota je 0 v prvním metody.
+Sada bitových příznaků, které řídí dědění ACE. Výchozí hodnota je 0 v prvním formuláři metody.
 
 *pObjectType*<br/>
 Typ objektu.
 
 *pInheritedObjectType*<br/>
-Typ zděděných objektů.
+Typ zděděného objektu.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vrátí TRUE, pokud je položka řízení přístupu se přidá do `CDacl` objektu NEPRAVDA při selhání.
+Vrátí hodnotu true, pokud je položka ACE přidána `CDacl` do objektu, hodnota false při selhání.
 
 ### <a name="remarks"></a>Poznámky
 
-A `CDacl` objekt obsahuje nula nebo víc položek řízení přístupu (položky řízení přístupu), které identifikují uživatele a skupiny, kteří mohou přistupovat k objektu. Tato metoda přidá ACE odepření přístupu k `CDacl` objektu.
+`CDacl` Objekt obsahuje nula nebo více položek řízení přístupu (ACE), které identifikují uživatele a skupiny, kteří mají přístup k objektu. Tato metoda přidá ACE, které odepře přístup k `CDacl` objektu.
 
-Zobrazit [ACE_HEADER](/windows/desktop/api/winnt/ns-winnt-_ace_header) popis různé příznaky, které je možné nastavit v `AceFlags` parametru.
+Popis [](/windows/desktop/api/winnt/ns-winnt-ace_header) různých příznaků, které lze nastavit v `AceFlags` parametru, naleznete v tématu ACE_HEADER.
 
-##  <a name="cdacl"></a>  CDacl::CDacl
+##  <a name="cdacl"></a>CDacl::CDacl
 
 Konstruktor
 
@@ -179,12 +179,12 @@ CDacl () throw();
 
 ### <a name="parameters"></a>Parametry
 
-*Zarovnání indirekce RHS*<br/>
-Existující `ACL` struktury (seznamu řízení přístupu).
+*zarovnání indirekce RHS*<br/>
+Existující `ACL` struktura (seznam řízení přístupu).
 
 ### <a name="remarks"></a>Poznámky
 
-`CDacl` Objekt můžete případně vytvořit pomocí existující `ACL` struktury. Je důležité si uvědomit pouze DACL (seznam volitelných řízení přístupu), a ne SACL (seznam řízení přístupu systému), by měly být předány jako tento parametr. V ladicím buildu předávání SACL způsobí vyhodnocení. V sestaveních pro vydání předávání SACL způsobí, že položky řízení přístupu (položky řízení přístupu) v seznamu ACL k ignorovat a dojde k žádné chybě.
+Objekt může být volitelně vytvořen pomocí existující `ACL` struktury. `CDacl` Je důležité si uvědomit, že jako tento parametr by měl být předán pouze seznam DACL (volitelný seznam řízení přístupu), nikoli seznam SACL (seznam řízení přístupu k systému). V ladicích sestaveních, předávání SACL způsobí vyhodnocení. V sestavách vydaných verzí bude předávání seznamu SACL způsobit ignorování položek ACE (řízení přístupu) v seznamu ACL a nebude k dispozici žádná chyba.
 
 ##  <a name="dtor"></a>  CDacl::~CDacl
 
@@ -196,11 +196,11 @@ Destruktor.
 
 ### <a name="remarks"></a>Poznámky
 
-Destruktor uvolní všechny prostředky získané v objektu, včetně všech položek řízení přístupu (položky řízení přístupu) pomocí [CDacl::RemoveAllAces](#removeallaces).
+Destruktor uvolní všechny prostředky, které objekt získal, včetně všech položek řízení přístupu (ACE) pomocí [CDacl:: RemoveAllAces](#removeallaces).
 
-##  <a name="getacecount"></a>  CDacl::GetAceCount
+##  <a name="getacecount"></a>CDacl::GetAceCount
 
-Vrátí počet položek řízení přístupu (položky řízení přístupu) `CDacl` objektu.
+Vrátí počet položek řízení přístupu (ACE) v `CDacl` objektu.
 
 ```
 UINT GetAceCount() const throw();
@@ -208,11 +208,11 @@ UINT GetAceCount() const throw();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vrátí počet součástí položky řízení přístupu `CDacl` objektu.
+Vrátí počet položek řízení přístupu obsažených v `CDacl` objektu.
 
-##  <a name="operator_eq"></a>  CDacl::operator =
+##  <a name="operator_eq"></a>CDacl:: operator =
 
-Operátor přiřazení.
+Operátor přiřazení
 
 ```
 CDacl& operator= (const ACL& rhs) throw(...);
@@ -220,20 +220,20 @@ CDacl& operator= (const ACL& rhs) throw(...);
 
 ### <a name="parameters"></a>Parametry
 
-*Zarovnání indirekce RHS*<br/>
-Seznam ACL (seznam řízení přístupu) přiřadit existující objekt.
+*zarovnání indirekce RHS*<br/>
+Seznam řízení přístupu (ACL) pro přiřazení k existujícímu objektu.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vrátí odkaz na aktualizovaný `CDacl` objektu.
+Vrátí odkaz na aktualizovaný `CDacl` objekt.
 
 ### <a name="remarks"></a>Poznámky
 
-Měli byste zajistit, že předáte pouze DACL (seznam volitelných řízení přístupu) pro tuto funkci. Předání SACL (seznam řízení přístupu systému) pro tuto funkci způsobí, že ASSERT v sestavení ladění, ale způsobí, že žádná chyba v sestaveních pro vydání.
+Měli byste se ujistit, že k této funkci budete předávat jenom DACL (volitelný seznam řízení přístupu). Předání příkazu SACL (seznam řízení přístupu k systému) do této funkce způsobí, že se v sestavení ladění vyvolá kontrolní výraz, ale v sestaveních pro vydání nedojde k žádné chybě.
 
-##  <a name="removeace"></a>  CDacl::RemoveAce
+##  <a name="removeace"></a>CDacl::RemoveAce
 
-Odebere z konkrétní ACE (položky řízení přístupu) `CDacl` objektu.
+Odebere z `CDacl` objektu konkrétní položku ACE (řízení přístupu).
 
 ```
 void RemoveAce(UINT nIndex) throw();
@@ -242,15 +242,15 @@ void RemoveAce(UINT nIndex) throw();
 ### <a name="parameters"></a>Parametry
 
 *nIndex*<br/>
-Index položky ACE odebrat.
+Index položky ACE, která se má odebrat
 
 ### <a name="remarks"></a>Poznámky
 
-Tato metoda je odvozen z [CAtlArray::RemoveAt](../../atl/reference/catlarray-class.md#removeat).
+Tato metoda je odvozena z [CAtlArray:: funkce RemoveAt](../../atl/reference/catlarray-class.md#removeat).
 
-##  <a name="removeallaces"></a>  CDacl::RemoveAllAces
+##  <a name="removeallaces"></a>CDacl::RemoveAllAces
 
-Odebere všechny položky řízení přístupu (položky řízení přístupu) součástí `CDacl` objektu.
+Odebere všechny položky řízení přístupu (ACE) obsažené v `CDacl` objektu.
 
 ```
 void RemoveAllAces() throw();
@@ -258,13 +258,13 @@ void RemoveAllAces() throw();
 
 ### <a name="remarks"></a>Poznámky
 
-Odebere všechny `ACE` strukturu (položky řízení přístupu) (pokud existuje) v `CDacl` objektu.
+Odebere všechny `ACE` (pokud existují) strukturu (pokud existuje) `CDacl` v objektu.
 
 ## <a name="see-also"></a>Viz také:
 
 [Ukázka zabezpečení](../../overview/visual-cpp-samples.md)<br/>
 [CAcl – třída](../../atl/reference/cacl-class.md)<br/>
 [Seznamy ACL](/windows/desktop/SecAuthZ/access-control-lists)<br/>
-[Položky řízení přístupu](/windows/desktop/SecAuthZ/access-control-entries)<br/>
-[Přehled tříd](../../atl/atl-class-overview.md)<br/>
+[ACE](/windows/desktop/SecAuthZ/access-control-entries)<br/>
+[Přehled třídy](../../atl/atl-class-overview.md)<br/>
 [Globální funkce zabezpečení](../../atl/reference/security-global-functions.md)

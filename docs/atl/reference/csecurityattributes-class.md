@@ -1,5 +1,5 @@
 ---
-title: Csecurityattributes – třída
+title: CSecurityAttributes – třída
 ms.date: 11/04/2016
 f1_keywords:
 - CSecurityAttributes
@@ -9,19 +9,19 @@ f1_keywords:
 helpviewer_keywords:
 - CSecurityAttributes class
 ms.assetid: a094880c-52e1-4a28-97ff-752d5869908e
-ms.openlocfilehash: b26de7a2a3426ed2fe86bd7ef50f6c5410fa5364
-ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
+ms.openlocfilehash: 2139c25cb6d941d9debe0655ba91ba458b1f8c09
+ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66503199"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68915718"
 ---
-# <a name="csecurityattributes-class"></a>Csecurityattributes – třída
+# <a name="csecurityattributes-class"></a>CSecurityAttributes – třída
 
-Tato třída představuje dynamického zajišťování obálku pro strukturu atributy zabezpečení.
+Tato třída je tenkou obálkou pro strukturu atributů zabezpečení.
 
 > [!IMPORTANT]
->  Tato třída a jejích členů nelze použít v aplikacích, které jsou spouštěny v modulu Windows Runtime.
+>  Tato třída a její členové nelze použít v aplikacích, které jsou spouštěny v prostředí Windows Runtime.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -41,13 +41,13 @@ class CSecurityAttributes : public SECURITY_ATTRIBUTES
 
 |Name|Popis|
 |----------|-----------------|
-|[CSecurityAttributes::Set](#set)|Volejte tuto metodu za účelem nastavení atributů `CSecurityAttributes` objektu.|
+|[CSecurityAttributes:: set](#set)|Zavolejte tuto metodu pro nastavení atributů `CSecurityAttributes` objektu.|
 
 ## <a name="remarks"></a>Poznámky
 
-`SECURITY_ATTRIBUTES` Struktura obsahuje [popisovače zabezpečení](/windows/desktop/api/winnt/ns-winnt-_security_descriptor) používají k vytvoření objektu a určuje, zda je popisovač načíst tak, že zadáte tuto strukturu odvoditelný.
+Struktura obsahuje popisovač zabezpečení, který se používá pro vytvoření objektu a určuje, zda popisovač načtený zadáním této struktury je dědičný. [](/windows/desktop/api/winnt/ns-winnt-security_descriptor) `SECURITY_ATTRIBUTES`
 
-Úvod do modelu řízení přístupu ve Windows najdete v tématu [řízení přístupu](/windows/desktop/SecAuthZ/access-control) v sadě Windows SDK.
+Úvod do modelu řízení přístupu v systému Windows naleznete v tématu [Access Control](/windows/desktop/SecAuthZ/access-control) v Windows SDK.
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
@@ -57,9 +57,9 @@ class CSecurityAttributes : public SECURITY_ATTRIBUTES
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** atlsecurity.h
+**Záhlaví:** atlsecurity. h
 
-##  <a name="csecurityattributes"></a>  CSecurityAttributes::CSecurityAttributes
+##  <a name="csecurityattributes"></a>CSecurityAttributes::CSecurityAttributes
 
 Konstruktor
 
@@ -71,14 +71,14 @@ explicit CSecurityAttributes(const CSecurityDesc& rSecurityDescriptor, bool bInh
 ### <a name="parameters"></a>Parametry
 
 *rSecurityDescriptor*<br/>
-Odkaz na popisovač zabezpečení.
+Odkaz na popisovač zabezpečení
 
 *bInheritsHandle*<br/>
-Určuje, zda Vrácený popisovač se dědí, když se vytvoří nový proces. Pokud je tento člen má hodnotu true, nový proces zdědí popisovač.
+Určuje, zda je vrácený popisovač děděn při vytvoření nového procesu. Pokud je tento člen pravdivý, nový proces zdědí popisovač.
 
-##  <a name="set"></a>  CSecurityAttributes::Set
+##  <a name="set"></a>CSecurityAttributes:: set
 
-Volejte tuto metodu za účelem nastavení atributů `CSecurityAttributes` objektu.
+Zavolejte tuto metodu pro nastavení atributů `CSecurityAttributes` objektu.
 
 ```
 void Set(const CSecurityDesc& rSecurityDescriptor, bool bInheritHandle = false) throw(...);
@@ -87,19 +87,19 @@ void Set(const CSecurityDesc& rSecurityDescriptor, bool bInheritHandle = false) 
 ### <a name="parameters"></a>Parametry
 
 *rSecurityDescriptor*<br/>
-Odkaz na popisovač zabezpečení.
+Odkaz na popisovač zabezpečení
 
 *bInheritHandle*<br/>
-Určuje, zda Vrácený popisovač se dědí, když se vytvoří nový proces. Pokud je tento člen má hodnotu true, nový proces zdědí popisovač.
+Určuje, zda je vrácený popisovač děděn při vytvoření nového procesu. Pokud je tento člen pravdivý, nový proces zdědí popisovač.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato metoda používá konstruktor k inicializaci `CSecurityAttributes` objektu.
+Tato metoda je používána konstruktorem k inicializaci `CSecurityAttributes` objektu.
 
 ## <a name="see-also"></a>Viz také:
 
 [Ukázka zabezpečení](../../overview/visual-cpp-samples.md)<br/>
 [SECURITY_ATTRIBUTES](/previous-versions/windows/desktop/legacy/aa379560\(v=vs.85\))<br/>
-[Popisovač zabezpečení](/windows/desktop/api/winnt/ns-winnt-_security_descriptor)<br/>
-[Přehled tříd](../../atl/atl-class-overview.md)<br/>
+[popisovač zabezpečení](/windows/desktop/api/winnt/ns-winnt-security_descriptor)<br/>
+[Přehled třídy](../../atl/atl-class-overview.md)<br/>
 [Globální funkce zabezpečení](../../atl/reference/security-global-functions.md)

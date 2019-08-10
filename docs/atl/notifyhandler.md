@@ -5,16 +5,16 @@ ms.topic: reference
 helpviewer_keywords:
 - NotifyHandler function
 ms.assetid: 5ff953ec-de35-42bc-8b3c-d384d636c139
-ms.openlocfilehash: 292a1c6606585dc0694ee678ba8bc9b5fbc42681
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d875a039b01b7458a1df46a2539cf5c68aa67e41
+ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62261443"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68915931"
 ---
 # <a name="notifyhandler"></a>NotifyHandler
 
-Název funkce identifikovaný třetí parametr makra NOTIFY_HANDLER do mapy zpráv.
+Název funkce identifikovaný třetím parametrem makra NOTIFY_HANDLER ve vaší mapě zpráv.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -28,21 +28,21 @@ LRESULT NotifyHandler(
 #### <a name="parameters"></a>Parametry
 
 *idCtrl*<br/>
-Identifikátor ovládacího prvku odeslání zprávy.
+Identifikátor ovládacího prvku, který odesílá zprávu
 
 *pnmh*<br/>
-Adresa [NMHDR](/windows/desktop/api/richedit/ns-richedit-_nmhdr) strukturu, která obsahuje kód upozornění a další informace. Pro některé zpráv s oznámením, tento parametr odkazuje na větší struktury, která má `NMHDR` strukturu jako jeho prvním členem.
+Adresa struktury [NMHDR](/windows/desktop/api/richedit/ns-richedit-nmhdr) , která obsahuje kód oznámení a další informace. U některých oznamovacích zpráv tento parametr odkazuje na větší strukturu, která má `NMHDR` strukturu jako svůj první člen.
 
 *bHandled*<br/>
-Mapování sady zpráv *bHandled* na hodnotu TRUE před *NotifyHandler* je volána. Pokud *NotifyHandler* plně nezpracovává zprávy, měli nastavit *bHandled* k **FALSE** k označení je zprávu zapotřebí další zpracování.
+Mapa zpráv nastaví *bHandled* na hodnotu true před voláním *NotifyHandler* . Pokud *NotifyHandler* zprávu zcela nezpracovává, měla by nastavit *bHandled* na **false** , aby označovala, že zpráva potřebuje další zpracování.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Výsledek zpracování zprávy. 0 v případě úspěchu.
+Výsledek zpracování zprávy 0, pokud bylo úspěšné.
 
 ## <a name="remarks"></a>Poznámky
 
-Příklad použití této obslužné rutiny zpráv v mapování zprávy, naleznete v tématu [NOTIFY_HANDLER](reference/message-map-macros-atl.md#notify_handler)).
+Příklad použití této obslužné rutiny zpráv v mapě zpráv naleznete v tématu [NOTIFY_HANDLER](reference/message-map-macros-atl.md#notify_handler)).
 
 ## <a name="see-also"></a>Viz také:
 

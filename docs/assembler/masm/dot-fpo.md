@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - .FPO directive
 ms.assetid: 35f4cd61-32f9-4262-b657-73f04f775d09
-ms.openlocfilehash: 83d6e81ea7dd35038f27f2721f3cc41fe49ef1bc
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3bdb6af98aa71fef3d4af24091dc7463d917ce15
+ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62204055"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68915952"
 ---
 # <a name="fpo"></a>.FPO
 
-Na. FPO – direktiva určuje emisí záznamů ladění .debug$ F segment nebo část.
+Okně. Rpcrt4 direktiva řídí emise ladících záznamů do segmentu nebo oddílu. Debug $ F.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -24,22 +24,22 @@ Na. FPO – direktiva určuje emisí záznamů ladění .debug$ F segment nebo �
 ### <a name="parameters"></a>Parametry
 
 *cdwLocals*<br/>
-Počet místních proměnných, je hodnota bez znaménka 32 bitů.
+Počet místních proměnných, nepodepsaná 32 bitová hodnota.
 
 *cdwParams*<br/>
-Velikost parametrů v DWORD, je hodnota bez znaménka 16 bitů.
+Velikost parametrů v hodnotách DWORD, nepodepsaná 16bitová hodnota.
 
 *cbProlog*<br/>
-Počet bajtů v kódu prologu funkce, je hodnota bez znaménka 8 bitů.
+Počet bajtů v kódu prologu funkce, nepodepsaná hodnota 8 bitů.
 
 *cbRegs*<br/>
-Uložit číslo registrů.
+Počet uložených registrů.
 
 *fUseBP*<br/>
-Určuje, zda byl přidělen do registru EBP. 0 nebo 1.
+Uvádí, zda byl přidělen EBP registr. buď 0, nebo 1.
 
 *cbFrame*<br/>
-Určuje typ rámce.  Zobrazit [FPO_DATA](/windows/desktop/api/winnt/ns-winnt-_fpo_data) Další informace.
+Určuje typ rámce.  Další informace najdete v tématu [FPO_DATA](/windows/desktop/api/winnt/ns-winnt-fpo_data) .
 
 ## <a name="see-also"></a>Viz také:
 

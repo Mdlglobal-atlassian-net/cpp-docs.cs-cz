@@ -1,5 +1,5 @@
 ---
-title: CSID – třída
+title: CSid – třída
 ms.date: 03/27/2019
 f1_keywords:
 - CSid
@@ -21,19 +21,19 @@ f1_keywords:
 helpviewer_keywords:
 - CSid class
 ms.assetid: be58b7ca-5958-49c3-a833-ca341aaaf753
-ms.openlocfilehash: 87f889a079b1c55d82f547230a1917540de276af
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: fb496e3bd58d0fe134c37b240eb2698302c6aa64
+ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62277978"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68915701"
 ---
-# <a name="csid-class"></a>CSID – třída
+# <a name="csid-class"></a>CSid – třída
 
-Tato třída představuje obálku pro `SID` strukturu (security identifier).
+Tato třída je obálkou `SID` struktury (identifikátoru zabezpečení).
 
 > [!IMPORTANT]
->  Tato třída a jejích členů nelze použít v aplikacích, které jsou spouštěny v modulu Windows Runtime.
+>  Tato třída a její členové nelze použít v aplikacích, které jsou spouštěny v prostředí Windows Runtime.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -43,69 +43,69 @@ class CSid
 
 ## <a name="members"></a>Členové
 
-### <a name="public-typedefs"></a>Veřejné definice TypeDef
+### <a name="public-typedefs"></a>Veřejné definice typedef
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
-|[CSid::CSidArray](#csidarray)|Pole `CSid` objekty.|
+|[ID CSid:: CSidArray](#csidarray)|Pole `CSid` objektů.|
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
-|[CSid::CSid](#csid)|Konstruktor|
+|[ID CSid:: CSid](#csid)|Konstruktor|
 |[CSid::~CSid](#dtor)|Destruktor.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
-|[CSid::AccountName](#accountname)|Vrátí název účtu přidruženého k `CSid` objektu.|
-|[CSid::Domain](#domain)|Vrátí název domény přidružené k `CSid` objektu.|
-|[CSid::EqualPrefix](#equalprefix)|Testy `SID` předpony (security identifier) pro rovnost.|
-|[CSid::GetLength](#getlength)|Vrátí délku objektu `CSid` objektu.|
-|[CSid::GetPSID](#getpsid)|Vrací ukazatel `SID` struktury.|
-|[CSid::GetPSID_IDENTIFIER_AUTHORITY](#getpsid_identifier_authority)|Vrací ukazatel `SID_IDENTIFIER_AUTHORITY` struktury.|
-|[CSid::GetSubAuthority](#getsubauthority)|Vrátí zadaný podautority v `SID` struktury.|
-|[CSid::GetSubAuthorityCount](#getsubauthoritycount)|Vrátí počet podautority.|
-|[CSid::IsValid](#isvalid)|Testy `CSid` objekt platnost.|
-|[CSid::LoadAccount](#loadaccount)|Aktualizace `CSid` objekt dle názvu účtu a doménu nebo z existujícího `SID` struktury.|
-|[CSid::Sid](#sid)|Vrátí řetězec ID.|
-|[CSid::SidNameUse](#sidnameuse)|Vrátí popis stavu `CSid` objektu.|
+|[CSid:: account.](#accountname)|Vrátí název účtu přidruženého `CSid` k objektu.|
+|[CSid::D omain](#domain)|Vrátí název domény přidružené `CSid` k objektu.|
+|[CSid::EqualPrefix](#equalprefix)|Testuje `SID` předpony (identifikátor zabezpečení) pro rovnost.|
+|[CSid:: GetLength](#getlength)|Vrátí délku `CSid` objektu.|
+|[ID CSid:: GetPSID](#getpsid)|Vrátí ukazatel na `SID` strukturu.|
+|[ID CSid:: GetPSID_IDENTIFIER_AUTHORITY](#getpsid_identifier_authority)|Vrátí ukazatel na `SID_IDENTIFIER_AUTHORITY` strukturu.|
+|[ID CSid:: GetSubAuthority](#getsubauthority)|Vrátí zadanou podautoritu ve `SID` struktuře.|
+|[ID CSid:: GetSubAuthorityCount](#getsubauthoritycount)|Vrátí počet podúřadů.|
+|[CSid:: IsValid](#isvalid)|Testuje platnost `CSid` objektu.|
+|[ID CSid:: LoadAccount](#loadaccount)|Aktualizuje objekt daného názvu a domény účtu nebo existující `SID` struktury. `CSid`|
+|[ID CSid:: SID](#sid)|Vrátí řetězec ID.|
+|[ID CSid:: SidNameUse](#sidnameuse)|Vrátí popis stavu `CSid` objektu.|
 
 ### <a name="operators"></a>Operátory
 
 |||
 |-|-|
-|[operátor =](#operator_eq)|Operátor přiřazení.|
-|[operátor SID const *](#operator_const_sid__star)|Přetypování `CSid` na ukazatel na objekt `SID` struktury.|
+|[operátor =](#operator_eq)|Operátor přiřazení|
+|[operátor const SID *](#operator_const_sid__star)|Přetypování `SID` objektu na ukazatel na strukturu. `CSid`|
 
 ### <a name="global-operators"></a>Globální operátory
 
 |||
 |-|-|
-|[Operator ==](#operator_eq_eq)|Testuje dva objekty popisovač zabezpečení pro rovnost|
-|[Operator! =](#operator_neq)|Testuje dva objekty popisovač zabezpečení pro nerovnost|
-|[– Operátor \<](#operator_lt)|Porovná relativní hodnotu dvou objektů popisovač zabezpečení.|
-|[Operator >](#operator_gt)|Porovná relativní hodnotu dvou objektů popisovač zabezpečení.|
-|[– Operátor \<=](#operator_lt__eq)|Porovná relativní hodnotu dvou objektů popisovač zabezpečení.|
-|[Operator > =](#operator_gt__eq)|Porovná relativní hodnotu dvou objektů popisovač zabezpečení.|
+|[operator = = – operátor](#operator_eq_eq)|Testuje dva objekty popisovače zabezpečení pro rovnost|
+|[! = – operátor](#operator_neq)|Testuje dva objekty popisovače zabezpečení pro nerovnost|
+|[podnikatel\<](#operator_lt)|Porovná relativní hodnotu dvou objektů popisovače zabezpečení.|
+|[operátor >](#operator_gt)|Porovná relativní hodnotu dvou objektů popisovače zabezpečení.|
+|[podnikatel\<=](#operator_lt__eq)|Porovná relativní hodnotu dvou objektů popisovače zabezpečení.|
+|[operátor > =](#operator_gt__eq)|Porovná relativní hodnotu dvou objektů popisovače zabezpečení.|
 
 ## <a name="remarks"></a>Poznámky
 
-`SID` Struktura je struktura proměnné délky sloužící k jednoznačné identifikaci uživatele nebo skupiny.
+`SID` Struktura je struktura s proměnlivou délkou, která slouží k jednoznačné identifikaci uživatelů nebo skupin.
 
-Aplikace by neměla změnit `SID` struktura přímo, ale místo toho použijte metody poskytované v této obálkové třídy. Viz také [AtlGetOwnerSid](security-global-functions.md#atlgetownersid), [AtlSetGroupSid](security-global-functions.md#atlsetgroupsid), [AtlGetGroupSid](security-global-functions.md#atlgetgroupsid), a [AtlSetOwnerSid](security-global-functions.md#atlsetownersid).
+Aplikace by neměly měnit `SID` strukturu přímo, ale místo toho používají metody poskytované v této obálkové třídě. Viz také [AtlGetOwnerSid](security-global-functions.md#atlgetownersid), [AtlSetGroupSid](security-global-functions.md#atlsetgroupsid), [AtlGetGroupSid](security-global-functions.md#atlgetgroupsid)a [AtlSetOwnerSid](security-global-functions.md#atlsetownersid).
 
-Úvod do modelu řízení přístupu ve Windows najdete v tématu [řízení přístupu](/windows/desktop/SecAuthZ/access-control) v sadě Windows SDK.
+Úvod do modelu řízení přístupu v systému Windows naleznete v tématu [Access Control](/windows/desktop/SecAuthZ/access-control) v Windows SDK.
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** atlsecurity.h
+**Záhlaví:** atlsecurity. h
 
-##  <a name="accountname"></a>  CSid::AccountName
+##  <a name="accountname"></a>CSid:: account.
 
-Vrátí název účtu přidruženého k `CSid` objektu.
+Vrátí název účtu přidruženého `CSid` k objektu.
 
 ```
 LPCTSTR AccountName() const throw(...);
@@ -113,15 +113,15 @@ LPCTSTR AccountName() const throw(...);
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vrátí LPCTSTR odkazující na název účtu.
+Vrátí LPCTSTR ukazující na název účtu.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato metoda se pokusí najít název zadaného `SID` (security identifier). Úplné podrobnosti najdete v tématu [LookupAccountSid](/windows/desktop/api/winbase/nf-winbase-lookupaccountsida).
+Tato metoda se pokusí najít název zadaného `SID` (identifikátoru zabezpečení). Úplné podrobnosti najdete v tématu [funkce LookupAccountSid](/windows/desktop/api/winbase/nf-winbase-lookupaccountsida).
 
-Pokud žádný název účtu pro `SID` najdete, `AccountName` vrátí prázdný řetězec. Tato situace může nastat, pokud vypršel časový limit sítě zabraňuje tato metoda vyhledání názvu. Je také dojde k pro identifikátory zabezpečení bez odpovídající názvu účtu, jako například `SID` identifikující přihlašovací relace.
+Pokud není `SID` možné najít žádný název účtu, `AccountName` vrátí prázdný řetězec. K tomu může dojít, pokud časový limit sítě brání této metodě v hledání názvu. K tomu dochází taky u identifikátorů zabezpečení, které nemají odpovídající název účtu, `SID` jako je například, který identifikuje přihlašovací relaci.
 
-##  <a name="csid"></a>  CSid::CSid
+##  <a name="csid"></a>ID CSid:: CSid
 
 Konstruktor
 
@@ -146,31 +146,31 @@ explicit CSid(
 
 ### <a name="parameters"></a>Parametry
 
-*Zarovnání indirekce RHS*<br/>
-Existující `CSid` objektu nebo `SID` strukturu (security identifier).
+*zarovnání indirekce RHS*<br/>
+Existující `CSid` struktura objektu nebo `SID` (identifikátor zabezpečení).
 
 *IdentifierAuthority*<br/>
-Oprávnění.
+Autorita.
 
 *nSubAuthorityCount*<br/>
-Počet podautority.
+Počet podúřadů.
 
 *pszAccountName*<br/>
 Název účtu.
 
 *pszSystem*<br/>
-Název systému. Tento řetězec může být název vzdáleného počítače. Pokud tento řetězec hodnotu NULL, použije se místo toho místní systém.
+Název systému. Tento řetězec může být název vzdáleného počítače. Pokud je tento řetězec NULL, použije se místo toho místní systém.
 
 *pSid*<br/>
-Ukazatel `SID` struktury.
+Ukazatel na `SID` strukturu.
 
 ### <a name="remarks"></a>Poznámky
 
-Konstruktor inicializuje `CSid` objekt nastavení na interní datový člen *SidTypeInvalid*, nebo zkopírováním nastavení z existující `CSid`, `SID`, nebo existující účet.
+Konstruktor inicializuje `CSid` objekt, nastavení interního datového členu na *SidTypeInvalid*nebo zkopírováním nastavení `CSid` `SID`z existujícího nebo existujícího účtu.
 
-Jestliže se inicializace nezdaří, vyvolá výjimku konstruktoru [catlexception – třída](../../atl/reference/catlexception-class.md).
+Pokud se inicializace nezdaří, konstruktor vyvolá [třídu CAtlException](../../atl/reference/catlexception-class.md).
 
-##  <a name="dtor"></a>  CSid::~CSid
+##  <a name="dtor"></a>CSid:: ~ CSid
 
 Destruktor.
 
@@ -180,11 +180,11 @@ virtual ~CSid() throw();
 
 ### <a name="remarks"></a>Poznámky
 
-Destruktor uvolní všechny prostředky získané v objektu.
+Destruktor uvolní všechny prostředky, které objekt získal.
 
-##  <a name="csidarray"></a>  CSid::CSidArray
+##  <a name="csidarray"></a>ID CSid:: CSidArray
 
-Pole [identifikační číslo volané stanice](../../atl/reference/csid-class.md) objekty.
+Pole objektů [CSID](../../atl/reference/csid-class.md) .
 
 ```
 typedef CAtlArray<CSid> CSidArray;
@@ -192,11 +192,11 @@ typedef CAtlArray<CSid> CSidArray;
 
 ### <a name="remarks"></a>Poznámky
 
-Tato definice typu Určuje typ pole, který slouží k načtení identifikátory zabezpečení ze seznamu ACL portu (seznam řízení přístupu). Zobrazit [CAcl::GetAclEntries](../../atl/reference/cacl-class.md#getaclentries).
+Tato definice typedef určuje typ pole, který lze použít k načtení identifikátorů zabezpečení ze seznamu řízení přístupu (ACL). Viz [CACL:: GetAclEntries](../../atl/reference/cacl-class.md#getaclentries).
 
-##  <a name="domain"></a>  CSid::Domain
+##  <a name="domain"></a>CSid::D omain
 
-Vrátí název domény přidružené k `CSid` objektu.
+Vrátí název domény přidružené `CSid` k objektu.
 
 ```
 LPCTSTR Domain() const throw(...);
@@ -204,17 +204,17 @@ LPCTSTR Domain() const throw(...);
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vrátí `LPCTSTR` odkazující na doménu.
+`LPCTSTR` Vrátí ukazující na doménu.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato metoda se pokusí najít název zadaného `SID` (security identifier). Úplné podrobnosti najdete v tématu [LookupAccountSid](/windows/desktop/api/winbase/nf-winbase-lookupaccountsida).
+Tato metoda se pokusí najít název zadaného `SID` (identifikátoru zabezpečení). Úplné podrobnosti najdete v tématu [funkce LookupAccountSid](/windows/desktop/api/winbase/nf-winbase-lookupaccountsida).
 
-Pokud žádný název účtu pro `SID` najdete, `Domain` vrátí název domény jako prázdný řetězec. Tato situace může nastat, pokud vypršel časový limit sítě zabraňuje tato metoda vyhledání názvu. Je také dojde k pro identifikátory zabezpečení bez odpovídající názvu účtu, jako například `SID` identifikující přihlašovací relace.
+Pokud není `SID` možné najít žádný název účtu, `Domain` vrátí doménu jako prázdný řetězec. K tomu může dojít, pokud časový limit sítě brání této metodě v hledání názvu. K tomu dochází taky u identifikátorů zabezpečení, které nemají odpovídající název účtu, `SID` jako je například, který identifikuje přihlašovací relaci.
 
-##  <a name="equalprefix"></a>  CSid::EqualPrefix
+##  <a name="equalprefix"></a>ID CSid:: EqualPrefix
 
-Testy `SID` předpony (security identifier) pro rovnost.
+Testuje `SID` předpony (identifikátor zabezpečení) pro rovnost.
 
 ```
 bool EqualPrefix(const SID& rhs) const throw();
@@ -223,20 +223,20 @@ bool EqualPrefix(const CSid& rhs) const throw();
 
 ### <a name="parameters"></a>Parametry
 
-*Zarovnání indirekce RHS*<br/>
-`SID` Strukturu (security identifier) nebo `CSid` objekt k porovnání.
+*zarovnání indirekce RHS*<br/>
+Struktura nebo`CSid` objekt pro porovnání (identifikátorzabezpečení).`SID`
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vrátí hodnotu TRUE v případě úspěchu; při neúspěchu hodnotu FALSE.
+Vrátí hodnotu TRUE při úspěchu, FALSE při selhání.
 
 ### <a name="remarks"></a>Poznámky
 
-Zobrazit [EqualPrefixSid](/windows/desktop/api/securitybaseapi/nf-securitybaseapi-equalprefixsid) v sadě Windows SDK pro další podrobnosti.
+Další podrobnosti najdete v tématu [EqualPrefixSid](/windows/desktop/api/securitybaseapi/nf-securitybaseapi-equalprefixsid) v Windows SDK.
 
-##  <a name="getlength"></a>  CSid::GetLength
+##  <a name="getlength"></a>CSid:: GetLength
 
-Vrátí délku objektu `CSid` objektu.
+Vrátí délku `CSid` objektu.
 
 ```
 UINT GetLength() const throw();
@@ -244,18 +244,18 @@ UINT GetLength() const throw();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vrátí délku v bajtech `CSid` objektu.
+Vrátí délku `CSid` objektu v bajtech.
 
 ### <a name="remarks"></a>Poznámky
 
-Pokud `CSid` struktura není platná, návratová hodnota není definována. Před voláním `GetLength`, použijte [CSid::IsValid](#isvalid) členské funkce a ověřte, zda `CSid` je platný.
+`CSid` Pokud struktura není platná, návratová hodnota není definována. Před voláním `GetLength`pomocí členské funkce [CSID:: IsValid](#isvalid) ověřte, zda `CSid` je platný.
 
 > [!NOTE]
->  V části sestavení pro ladění funkce způsobí ASSERT, pokud `CSid` objekt není platný.
+>  V části ladění sestavení funkce způsobí vyhodnocení v případě, `CSid` že objekt není platný.
 
-##  <a name="getpsid"></a>  CSid::GetPSID
+##  <a name="getpsid"></a>ID CSid:: GetPSID
 
-Vrací ukazatel `SID` struktury (security identifier).
+Vrátí ukazatel na `SID` strukturu (identifikátor zabezpečení).
 
 ```
 const SID* GetPSID() const throw(...);
@@ -263,11 +263,11 @@ const SID* GetPSID() const throw(...);
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vrátí adresu `CSid` podkladového objektu `SID` struktury.
+Vrátí adresu `CSid` podkladové `SID` struktury objektu.
 
-##  <a name="getpsid_identifier_authority"></a>  CSid::GetPSID_IDENTIFIER_AUTHORITY
+##  <a name="getpsid_identifier_authority"></a>ID CSid:: GetPSID_IDENTIFIER_AUTHORITY
 
-Vrací ukazatel `SID_IDENTIFIER_AUTHORITY` struktury.
+Vrátí ukazatel na `SID_IDENTIFIER_AUTHORITY` strukturu.
 
 ```
 const SID_IDENTIFIER_AUTHORITY* GetPSID_IDENTIFIER_AUTHORITY() const throw();
@@ -275,14 +275,14 @@ const SID_IDENTIFIER_AUTHORITY* GetPSID_IDENTIFIER_AUTHORITY() const throw();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Pokud metoda uspěje, vrátí adresu `SID_IDENTIFIER_AUTHORITY` struktury. Pokud selže, návratová hodnota není definována. Selhání může dojít, pokud `CSid` objekt není platný, v takovém případě [CSid::IsValid](#isvalid) metoda vrátí hodnotu FALSE. Funkce `GetLastError` lze volat pro rozšířené informace o chybě.
+Pokud je metoda úspěšná, vrátí adresu `SID_IDENTIFIER_AUTHORITY` struktury. Pokud dojde k chybě, návratová hodnota není definována. K selhání může dojít v `CSid` případě, že objekt není platný. v takovém případě metoda [CSID:: IsValid](#isvalid) vrátí hodnotu false. Funkci `GetLastError` lze volat pro rozšířené informace o chybě.
 
 > [!NOTE]
->  V části sestavení pro ladění funkce způsobí ASSERT, pokud `CSid` objekt není platný.
+>  V části ladění sestavení funkce způsobí vyhodnocení v případě, `CSid` že objekt není platný.
 
-##  <a name="getsubauthority"></a>  CSid::GetSubAuthority
+##  <a name="getsubauthority"></a>ID CSid:: GetSubAuthority
 
-Vrátí zadaný podautority v `SID` strukturu (security identifier).
+Vrátí zadanou podautoritu ve `SID` struktuře (identifikátoru zabezpečení).
 
 ```
 DWORD GetSubAuthority(DWORD nSubAuthority) const throw();
@@ -291,22 +291,22 @@ DWORD GetSubAuthority(DWORD nSubAuthority) const throw();
 ### <a name="parameters"></a>Parametry
 
 *nSubAuthority*<br/>
-Podautority.
+Podautorita.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vrátí podautority odkazuje *nSubAuthority.* Hodnota podautority je relativní identifikátor (RID).
+Vrátí podautoritu, na kterou odkazuje *NSubAuthority.* Hodnota subauthority je relativní identifikátor (RID).
 
 ### <a name="remarks"></a>Poznámky
 
-*NSubAuthority* parametr určuje hodnotu indexu identifikace prvek podautority pole, metoda vrátí. Metoda provádí žádné ověřovací testy na této hodnotě. Aplikace může volat [CSid::GetSubAuthorityCount](#getsubauthoritycount) ke zjištění rozsahu přijatelných hodnot.
+Parametr *NSubAuthority* Určuje hodnotu indexu identifikující prvek pole podautority, který bude metoda vracet. Metoda neprovede pro tuto hodnotu žádné ověřovací testy. Aplikace může volat identifikátor [CSID:: GetSubAuthorityCount](#getsubauthoritycount) , aby zjistila rozsah přijatelných hodnot.
 
 > [!NOTE]
->  V části sestavení pro ladění funkce způsobí ASSERT, pokud `CSid` objekt není platný.
+>  V části ladění sestavení funkce způsobí vyhodnocení v případě, `CSid` že objekt není platný.
 
-##  <a name="getsubauthoritycount"></a>  CSid::GetSubAuthorityCount
+##  <a name="getsubauthoritycount"></a>ID CSid:: GetSubAuthorityCount
 
-Vrátí počet podautority.
+Vrátí počet podúřadů.
 
 ```
 UCHAR GetSubAuthorityCount() const throw();
@@ -314,16 +314,16 @@ UCHAR GetSubAuthorityCount() const throw();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Pokud metoda uspěje, vrácená hodnota je počet podautority.
+Pokud je metoda úspěšná, návratová hodnota je počet podautorit.
 
-Jestliže metoda selže, návratová hodnota není definována. Metoda selže, pokud `CSid` objekt je neplatný. Chcete-li získat rozšířené informace o chybě, volejte `GetLastError`.
+Pokud se metoda nezdařila, návratová hodnota není definována. Metoda se nezdařila `CSid` , pokud je objekt neplatný. Chcete-li získat rozšířené informace o `GetLastError`chybě, zavolejte.
 
 > [!NOTE]
->  V části sestavení pro ladění funkce způsobí ASSERT, pokud `CSid` objekt není platný.
+>  V části ladění sestavení funkce způsobí vyhodnocení v případě, `CSid` že objekt není platný.
 
-##  <a name="isvalid"></a>  CSid::IsValid
+##  <a name="isvalid"></a>CSid:: IsValid
 
-Testy `CSid` objekt platnost.
+Testuje platnost `CSid` objektu.
 
 ```
 bool IsValid() const throw();
@@ -331,15 +331,15 @@ bool IsValid() const throw();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vrátí TRUE, pokud `CSid` je objekt platný, FALSE. Pokud tomu tak není. Neexistuje žádné rozšířené informace o chybě pro tuto metodu; Nevolejte `GetLastError`.
+Vrátí hodnotu true, `CSid` Pokud je objekt platný, false, pokud není. Pro tuto metodu nejsou k dispozici žádné rozšířené informace o chybě. Nevolejte `GetLastError`.
 
 ### <a name="remarks"></a>Poznámky
 
-`IsValid` Metoda ověřuje `CSid` objektu tak, že ověříte, že číslo revize je v určeném rozsahu a, počet subauthorities je menší než maximum.
+`IsValid` Metoda ověří`CSid` objekt tím, že ověřuje, zda se číslo revize nachází v známém rozsahu a že počet subúřadů je menší než maximální hodnota.
 
-##  <a name="loadaccount"></a>  CSid::LoadAccount
+##  <a name="loadaccount"></a>ID CSid:: LoadAccount
 
-Aktualizace `CSid` objekt dle názvu účtu a doménu nebo existující strukturu identifikátoru SID (security identifier).
+`CSid` Aktualizuje objekt daného názvu a domény účtu nebo existující struktury identifikátoru SID (identifikátoru zabezpečení).
 
 ```
 bool LoadAccount(
@@ -357,22 +357,22 @@ bool LoadAccount(
 Název účtu.
 
 *pszSystem*<br/>
-Název systému. Tento řetězec může být název vzdáleného počítače. Pokud tento řetězec hodnotu NULL, použije se místo toho místní systém.
+Název systému. Tento řetězec může být název vzdáleného počítače. Pokud je tento řetězec NULL, použije se místo toho místní systém.
 
 *pSid*<br/>
-Ukazatel [SID](/windows/desktop/api/winnt/ns-winnt-_sid) struktury.
+Ukazatel na strukturu [identifikátoru SID](/windows/desktop/api/winnt/ns-winnt-sid) .
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vrátí hodnotu TRUE v případě úspěchu; při neúspěchu hodnotu FALSE. Chcete-li získat rozšířené informace o chybě, volejte `GetLastError`.
+Vrátí hodnotu TRUE při úspěchu, FALSE při selhání. Chcete-li získat rozšířené informace o `GetLastError`chybě, zavolejte.
 
 ### <a name="remarks"></a>Poznámky
 
-`LoadAccount` pokusí se najít identifikátor zabezpečení pro zadaný název. Zobrazit [LookupAccountSid](/windows/desktop/api/winbase/nf-winbase-lookupaccountsida) další podrobnosti.
+`LoadAccount`pokusí se najít identifikátor zabezpečení pro zadaný název. Další podrobnosti najdete v tématu [funkce LookupAccountSid](/windows/desktop/api/winbase/nf-winbase-lookupaccountsida) .
 
-##  <a name="operator_eq"></a>  CSid::operator =
+##  <a name="operator_eq"></a>CSid:: operator =
 
-Operátor přiřazení.
+Operátor přiřazení
 
 ```
 CSid& operator= (const CSid& rhs) throw(...);
@@ -381,16 +381,16 @@ CSid& operator= (const SID& rhs) throw(...);
 
 ### <a name="parameters"></a>Parametry
 
-*Zarovnání indirekce RHS*<br/>
-`SID` (Security identifier) nebo `CSid` přiřadit `CSid` objektu.
+*zarovnání indirekce RHS*<br/>
+(Identifikátor zabezpečení) nebo `CSid` přiřadit k `CSid` objektu. `SID`
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vrátí odkaz na aktualizovaný `CSid` objektu.
+Vrátí odkaz na aktualizovaný `CSid` objekt.
 
-##  <a name="operator_eq_eq"></a>  CSid::operator ==
+##  <a name="operator_eq_eq"></a>CSid:: operator = =
 
-Testuje dva objekty popisovač zabezpečení pro rovnost.
+Testuje dva objekty popisovače zabezpečení pro rovnost.
 
 ```
 bool operator==(
@@ -401,18 +401,18 @@ bool operator==(
 ### <a name="parameters"></a>Parametry
 
 *lhs*<br/>
-`SID` (Security identifier) nebo `CSid` , který se zobrazí na levé straně == – operátor.
+(Identifikátor zabezpečení) nebo `CSid` , který se zobrazí na levé straně operátoru = =. `SID`
 
-*Zarovnání indirekce RHS*<br/>
-`SID` (Security identifier) nebo `CSid` , který se zobrazí na pravé straně == – operátor.
+*zarovnání indirekce RHS*<br/>
+(Identifikátor zabezpečení) nebo `CSid` , který se zobrazí na pravé straně operátoru = =. `SID`
 
 ### <a name="return-value"></a>Návratová hodnota
 
-TRUE, pokud popisovače zabezpečení jsou stejné, jinak hodnota FALSE.
+TRUE, pokud jsou popisovače zabezpečení stejné, jinak FALSE.
 
-##  <a name="operator_neq"></a>  CSid::operator! =
+##  <a name="operator_neq"></a>CSid:: operator! =
 
-Testuje dva objekty popisovač zabezpečení pro nerovnost.
+Testuje dva objekty popisovače zabezpečení pro nerovnost.
 
 ```
 bool operator!=(
@@ -423,18 +423,18 @@ bool operator!=(
 ### <a name="parameters"></a>Parametry
 
 *lhs*<br/>
-`SID` (Security identifier) nebo `CSid` , který se zobrazí na levé straně! = – operátor.
+(Identifikátor zabezpečení) nebo `CSid` , který se zobrazí na levé straně operátoru! =. `SID`
 
-*Zarovnání indirekce RHS*<br/>
-`SID` (Security identifier) nebo `CSid` , který se zobrazí na pravé straně! = – operátor.
+*zarovnání indirekce RHS*<br/>
+(Identifikátor zabezpečení) nebo `CSid` , který se zobrazí na pravé straně operátoru! =. `SID`
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Hodnota TRUE, pokud popisovače zabezpečení nejsou stejné; jinak hodnota FALSE.
+TRUE, pokud popisovače zabezpečení nejsou stejné, jinak FALSE.
 
-##  <a name="operator_lt"></a>  CSid::operator &lt;
+##  <a name="operator_lt"></a>CSid:: operator&lt;
 
-Porovná relativní hodnotu dvou objektů popisovač zabezpečení.
+Porovná relativní hodnotu dvou objektů popisovače zabezpečení.
 
 ```
 bool operator<(
@@ -445,18 +445,18 @@ bool operator<(
 ### <a name="parameters"></a>Parametry
 
 *lhs*<br/>
-`SID` (Security identifier) nebo `CSid` , který se zobrazí na levé straně! = – operátor.
+(Identifikátor zabezpečení) nebo `CSid` , který se zobrazí na levé straně operátoru! =. `SID`
 
-*Zarovnání indirekce RHS*<br/>
-`SID` (Security identifier) nebo `CSid` , který se zobrazí na pravé straně! = – operátor.
+*zarovnání indirekce RHS*<br/>
+(Identifikátor zabezpečení) nebo `CSid` , který se zobrazí na pravé straně operátoru! =. `SID`
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Hodnota TRUE v případě *lhs* je menší než *zarovnání indirekce rhs*; jinak hodnota FALSE.
+TRUE, pokud je *LHS* menší než *Zarovnání indirekce RHS*, v opačném případě false.
 
-##  <a name="operator_lt__eq"></a>  CSid::operator &lt;=
+##  <a name="operator_lt__eq"></a>CSid:: operator&lt;=
 
-Porovná relativní hodnotu dvou objektů popisovač zabezpečení.
+Porovná relativní hodnotu dvou objektů popisovače zabezpečení.
 
 ```
 bool operator<=(
@@ -467,18 +467,18 @@ bool operator<=(
 ### <a name="parameters"></a>Parametry
 
 *lhs*<br/>
-`SID` (Security identifier) nebo `CSid` , který se zobrazí na levé straně! = – operátor.
+(Identifikátor zabezpečení) nebo `CSid` , který se zobrazí na levé straně operátoru! =. `SID`
 
-*Zarovnání indirekce RHS*<br/>
-`SID` (Security identifier) nebo `CSid` , který se zobrazí na pravé straně! = – operátor.
+*zarovnání indirekce RHS*<br/>
+(Identifikátor zabezpečení) nebo `CSid` , který se zobrazí na pravé straně operátoru! =. `SID`
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Hodnota TRUE v případě *lhs* je menší než nebo rovna hodnotě *zarovnání indirekce rhs*; jinak hodnota FALSE.
+TRUE, pokud je *LHS* menší nebo roven *Zarovnání indirekce RHS*, v opačném případě false.
 
-##  <a name="operator_gt"></a>  CSid::operator &gt;
+##  <a name="operator_gt"></a>CSid:: operator&gt;
 
-Porovná relativní hodnotu dvou objektů popisovač zabezpečení.
+Porovná relativní hodnotu dvou objektů popisovače zabezpečení.
 
 ```
 bool operator>(
@@ -489,18 +489,18 @@ bool operator>(
 ### <a name="parameters"></a>Parametry
 
 *lhs*<br/>
-`SID` (Security identifier) nebo `CSid` , který se zobrazí na levé straně! = – operátor.
+(Identifikátor zabezpečení) nebo `CSid` , který se zobrazí na levé straně operátoru! =. `SID`
 
-*Zarovnání indirekce RHS*<br/>
-`SID` (Security identifier) nebo `CSid` , který se zobrazí na pravé straně! = – operátor.
+*zarovnání indirekce RHS*<br/>
+(Identifikátor zabezpečení) nebo `CSid` , který se zobrazí na pravé straně operátoru! =. `SID`
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Hodnota TRUE v případě *lhs* je větší než *zarovnání indirekce rhs*; jinak hodnota FALSE.
+TRUE, pokud je *LHS* větší než *Zarovnání indirekce RHS*, v opačném případě false.
 
-##  <a name="operator_gt__eq"></a>  CSid::operator &gt;=
+##  <a name="operator_gt__eq"></a>CSid:: operator&gt;=
 
-Porovná relativní hodnotu dvou objektů popisovač zabezpečení.
+Porovná relativní hodnotu dvou objektů popisovače zabezpečení.
 
 ```
 bool operator>=(
@@ -511,18 +511,18 @@ bool operator>=(
 ### <a name="parameters"></a>Parametry
 
 *lhs*<br/>
-`SID` (Security identifier) nebo `CSid` , který se zobrazí na levé straně! = – operátor.
+(Identifikátor zabezpečení) nebo `CSid` , který se zobrazí na levé straně operátoru! =. `SID`
 
-*Zarovnání indirekce RHS*<br/>
-`SID` (Security identifier) nebo `CSid` , který se zobrazí na pravé straně! = – operátor.
+*zarovnání indirekce RHS*<br/>
+(Identifikátor zabezpečení) nebo `CSid` , který se zobrazí na pravé straně operátoru! =. `SID`
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Hodnota TRUE v případě *lhs* je větší než nebo rovna hodnotě *zarovnání indirekce rhs*; jinak hodnota FALSE.
+TRUE, pokud je *LHS* větší než nebo rovno *Zarovnání INDIREKCE RHS*, jinak false.
 
-##  <a name="operator_const_sid__star"></a>  CSid::operator const SID \*
+##  <a name="operator_const_sid__star"></a>ID CSid:: operator const SID\*
 
-Přetypování `CSid` na ukazatel na objekt `SID` strukturu (security identifier).
+Přetypování `SID` objektu na ukazatel na strukturu (identifikátor zabezpečení). `CSid`
 
 ```
 operator const SID *() const throw(...);
@@ -532,9 +532,9 @@ operator const SID *() const throw(...);
 
 Vrátí adresu `SID` struktury.
 
-##  <a name="sid"></a>  CSid::Sid
+##  <a name="sid"></a>ID CSid:: SID
 
-Vrátí `SID` strukturu (security identifier) jako řetězec.
+Vrátí strukturu `SID` (identifikátor zabezpečení) jako řetězec.
 
 ```
 LPCTSTR Sid() const throw(...);
@@ -542,9 +542,9 @@ LPCTSTR Sid() const throw(...);
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vrátí `SID` struktura jako řetězec ve formátu vhodném pro zobrazení, úložiště nebo přenos. Ekvivalentní [funkce ConvertSidToStringSid](/windows/desktop/api/sddl/nf-sddl-convertsidtostringsida).
+`SID` Vrátí strukturu jako řetězec ve formátu vhodném pro zobrazení, ukládání nebo přenos. Ekvivalent [funkce ConvertSidToStringSid](/windows/desktop/api/sddl/nf-sddl-convertsidtostringsida).
 
-##  <a name="sidnameuse"></a>  CSid::SidNameUse
+##  <a name="sidnameuse"></a>ID CSid:: SidNameUse
 
 Vrátí popis stavu `CSid` objektu.
 
@@ -558,23 +558,23 @@ Vrací hodnotu datového člena, který ukládá hodnotu popisující stav `CSid
 
 |Value|Popis|
 |-----------|-----------------|
-|SidTypeUser|Označuje uživatele `SID` (security identifier).|
-|SidTypeGroup|Určuje skupinu `SID`.|
-|SidTypeDomain|Určuje doménu `SID`.|
-|SidTypeAlias|Signalizuje možnost vytvořit zástupce `SID`.|
-|SidTypeWellKnownGroup|Označuje `SID` pro známá skupina.|
-|SidTypeDeletedAccount|Označuje `SID` odstraněného účtu.|
-|SidTypeInvalid|Určuje neplatnou `SID`.|
-|SidTypeUnknown|Určuje neznámou `SID` typu.|
-|SidTypeComputer|Označuje `SID` pro počítač.|
+|SidTypeUser|Označuje uživatele `SID` (identifikátor zabezpečení).|
+|SidTypeGroup|Označuje skupinu `SID`.|
+|SidTypeDomain|Označuje doménu `SID`.|
+|SidTypeAlias|Označuje alias `SID`.|
+|SidTypeWellKnownGroup|`SID` Označuje pro dobře známou skupinu.|
+|SidTypeDeletedAccount|`SID` Označuje pro odstraněný účet.|
+|SidTypeInvalid|Indikuje neplatný `SID`.|
+|SidTypeUnknown|Označuje neznámý `SID` typ.|
+|SidTypeComputer|`SID` Označuje pro počítač.|
 
 ### <a name="remarks"></a>Poznámky
 
-Volání [CSid::LoadAccount](#loadaccount) aktualizovat `CSid` objekt před voláním `SidNameUse` vrátit svůj stav. `SidNameUse` nedojde ke změně stavu objektu (pomocí volání do `LookupAccountName` nebo `LookupAccountSid`), ale pouze vrátí aktuální stav.
+Chcete-li aktualizovat objekt před voláním `CSid` metody `SidNameUse` , která vrátí svůj stav, zavolejte identifikátor [CSID:: LoadAccount](#loadaccount) . `SidNameUse`nemění stav objektu (voláním metody `LookupAccountName` nebo `LookupAccountSid`), ale vrací pouze aktuální stav.
 
 ## <a name="see-also"></a>Viz také:
 
 [Ukázka zabezpečení](../../overview/visual-cpp-samples.md)<br/>
-[Přehled tříd](../../atl/atl-class-overview.md)<br/>
+[Přehled třídy](../../atl/atl-class-overview.md)<br/>
 [Globální funkce zabezpečení](../../atl/reference/security-global-functions.md)<br/>
 [Operátory](../../atl/reference/atl-operators.md)

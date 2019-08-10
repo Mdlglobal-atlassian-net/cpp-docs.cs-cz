@@ -1,5 +1,5 @@
 ---
-title: Cinterpolatorbase – třída
+title: CInterpolatorBase – třída
 ms.date: 11/04/2016
 f1_keywords:
 - CInterpolatorBase
@@ -26,16 +26,16 @@ helpviewer_keywords:
 - CInterpolatorBase [MFC], SetDuration
 - CInterpolatorBase [MFC], SetInitialValueAndVelocity
 ms.assetid: bbc3dce7-8398-47f9-b97e-e4fd2d737232
-ms.openlocfilehash: 379aa5607e459ad8acfd99c5899315afb84ac4a3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d1fc675b1014ab9a099e8310b52b7458f2bff65f
+ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62392656"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68916198"
 ---
-# <a name="cinterpolatorbase-class"></a>Cinterpolatorbase – třída
+# <a name="cinterpolatorbase-class"></a>CInterpolatorBase – třída
 
-Implementuje zpětné volání, které je voláno rozhraním API animace, když má vypočítat nové hodnoty proměnné animace.
+Implementuje zpětné volání, které je voláno rozhraním API animace, když má vypočítat novou hodnotu proměnné animace.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -47,27 +47,27 @@ class CInterpolatorBase : public CUIAnimationInterpolatorBase<CInterpolatorBase>
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
-|[CInterpolatorBase::CInterpolatorBase](#cinterpolatorbase)|Vytvoří `CInterpolatorBase` objektu.|
+|[CInterpolatorBase::CInterpolatorBase](#cinterpolatorbase)|`CInterpolatorBase` Vytvoří objekt.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
-|[CInterpolatorBase::CreateInstance](#createinstance)|Vytvoří instanci `CInterpolatorBase` a uchovává ukazatel na vlastní interpolator, který bude zpracovávat události.|
-|[CInterpolatorBase::GetDependencies](#getdependencies)|Získá závislosti interpolator. (Přepíše `CUIAnimationInterpolatorBase::GetDependencies`.)|
-|[CInterpolatorBase::GetDuration](#getduration)|Získá dobu trvání interpolator. (Přepíše `CUIAnimationInterpolatorBase::GetDuration`.)|
-|[CInterpolatorBase::GetFinalValue](#getfinalvalue)|Získá konečnou hodnotu, na který vede interpolator. (Přepíše `CUIAnimationInterpolatorBase::GetFinalValue`.)|
-|[CInterpolatorBase::InterpolateValue](#interpolatevalue)|Argument interpolaci hodnotu daného posunem (přepíše `CUIAnimationInterpolatorBase::InterpolateValue`.)|
-|[CInterpolatorBase::InterpolateVelocity](#interpolatevelocity)|Argument interpolaci rychlosti na dané pozici (přepíše `CUIAnimationInterpolatorBase::InterpolateVelocity`.)|
-|[CInterpolatorBase::SetCustomInterpolator](#setcustominterpolator)|Uchovává ukazatel na vlastní interpolator, který bude zpracovávat události.|
-|[CInterpolatorBase::SetDuration](#setduration)|Nastaví dobu trvání interpolator (přepíše `CUIAnimationInterpolatorBase::SetDuration`.)|
-|[CInterpolatorBase::SetInitialValueAndVelocity](#setinitialvalueandvelocity)|Nastaví počáteční hodnotu interpolator a rychlost. (Přepíše `CUIAnimationInterpolatorBase::SetInitialValueAndVelocity`.)|
+|[CInterpolatorBase:: CreateInstance](#createinstance)|Vytvoří instanci `CInterpolatorBase` a ukládá ukazatel na vlastní interpolaci, která bude zpracovávat události.|
+|[CInterpolatorBase:: getzávislosti](#getdependencies)|Získá závislosti interpolace. (Overrides `CUIAnimationInterpolatorBase::GetDependencies`.)|
+|[CInterpolatorBase:: GetDuration](#getduration)|Získá dobu trvání interpolace. (Overrides `CUIAnimationInterpolatorBase::GetDuration`.)|
+|[CInterpolatorBase::GetFinalValue](#getfinalvalue)|Získá konečnou hodnotu, na kterou interpoluje vedoucí. (Overrides `CUIAnimationInterpolatorBase::GetFinalValue`.)|
+|[CInterpolatorBase::InterpolateValue](#interpolatevalue)|Interpoluje hodnotu u daného posunu (Overrides `CUIAnimationInterpolatorBase::InterpolateValue`.).|
+|[CInterpolatorBase::InterpolateVelocity](#interpolatevelocity)|Interpoluje rychlost na daném posunu (potlačení `CUIAnimationInterpolatorBase::InterpolateVelocity`).|
+|[CInterpolatorBase::SetCustomInterpolator](#setcustominterpolator)|Ukládá ukazatel na vlastní interpolaci, která bude zpracovávat události.|
+|[CInterpolatorBase::SetDuration](#setduration)|Nastaví dobu trvání hodnoty interpolace (přepsání `CUIAnimationInterpolatorBase::SetDuration`.)|
+|[CInterpolatorBase::SetInitialValueAndVelocity](#setinitialvalueandvelocity)|Nastaví počáteční hodnotu a rychlost interpolace. (Overrides `CUIAnimationInterpolatorBase::SetInitialValueAndVelocity`.)|
 
 ## <a name="remarks"></a>Poznámky
 
-Tato obslužná rutina je vytvořen a předán `IUIAnimationTransitionFactory::CreateTransition` při `CCustomTransition` objekt vytváří jako součást procesu inicializace animace (tím, že `CAnimationController::AnimateGroup`). Obvykle není nutné k použití této třídy přímo, stačí routs všech událostí `CCustomInterpolator`-odvozené třídy, jejíž ukazatel je předán konstruktoru `CCustomTransition`.
+Tato obslužná rutina je vytvořena a `IUIAnimationTransitionFactory::CreateTransition` předána `CCustomTransition` do okamžiku, kdy je objekt vytvořen jako součást procesu `CAnimationController::AnimateGroup`inicializace animace (spuštěno). Obvykle tuto třídu nemusíte používat přímo, stačí routs všechny události na `CCustomInterpolator`odvozenou třídu, jejíž ukazatel je předán `CCustomTransition`konstruktoru třídy.
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
@@ -79,19 +79,19 @@ Tato obslužná rutina je vytvořen a předán `IUIAnimationTransitionFactory::C
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** afxanimationcontroller.h
+**Záhlaví:** afxanimationcontroller. h
 
-##  <a name="cinterpolatorbase"></a>  CInterpolatorBase::CInterpolatorBase
+##  <a name="cinterpolatorbase"></a>CInterpolatorBase::CInterpolatorBase
 
-Vytvoří objekt cinterpolatorbase –.
+Vytvoří objekt CInterpolatorBase.
 
 ```
 CInterpolatorBase();
 ```
 
-##  <a name="createinstance"></a>  CInterpolatorBase::CreateInstance
+##  <a name="createinstance"></a>CInterpolatorBase:: CreateInstance
 
-Vytvoří instanci cinterpolatorbase – a uchovává ukazatel na vlastní interpolator, který bude zpracovávat události.
+Vytvoří instanci třídy CInterpolatorBase a ukládá ukazatel na vlastní interpolaci, která bude zpracovávat události.
 
 ```
 static COM_DECLSPEC_NOTHROW HRESULT CreateInstance(
@@ -102,16 +102,16 @@ static COM_DECLSPEC_NOTHROW HRESULT CreateInstance(
 ### <a name="parameters"></a>Parametry
 
 *pInterpolator*<br/>
-Ukazatel na vlastní interpolator.
+Ukazatel na vlastní interpolaci.
 
 *ppHandler*<br/>
-Výstup. Ukazatel na instanci cinterpolatorbase – obsahuje po návratu funkce.
+Výkonem. Obsahuje ukazatel na instanci CInterpolatorBase, když se funkce vrátí.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-##  <a name="getdependencies"></a>  CInterpolatorBase::GetDependencies
+##  <a name="getdependencies"></a>CInterpolatorBase:: getzávislosti
 
-Získá závislosti interpolator.
+Získá závislosti interpolace.
 
 ```
 IFACEMETHOD(GetDependencies)(
@@ -123,21 +123,21 @@ IFACEMETHOD(GetDependencies)(
 ### <a name="parameters"></a>Parametry
 
 *initialValueDependencies*<br/>
-Výstup. Aspekty interpolator, které jsou závislé na počáteční hodnota předána SetInitialValueAndVelocity.
+Výkonem. Aspekty interpolování, které závisí na počáteční hodnotě předané do SetInitialValueAndVelocity.
 
 *initialVelocityDependencies*<br/>
-Výstup. Aspekty interpolator, které jsou závislé na počáteční předán SetInitialValueAndVelocity.
+Výkonem. Aspekty interpolování, které závisí na počáteční rychlosti předané do SetInitialValueAndVelocity.
 
 *durationDependencies*<br/>
-Výstup. Aspekty interpolator, které jsou závislé na době trvání předán SetDuration.
+Výkonem. Aspekty interpolace, které závisejí na době trvání předané do SetDuration.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Pokud metoda uspěje, vrátí hodnotu S_OK. Pokud není nastaven ccustominterpolator – nebo vlastní implementace vrací hodnotu FALSE z metody GetDependencies vrátí E_FAIL.
+Pokud je metoda úspěšná, vrátí S_OK. Vrátí E_FAIL, pokud CCustomInterpolator není nastaven, nebo vlastní implementace vrátí hodnotu FALSE z metody getzávislosti.
 
-##  <a name="getduration"></a>  CInterpolatorBase::GetDuration
+##  <a name="getduration"></a>CInterpolatorBase:: GetDuration
 
-Získá dobu trvání interpolator.
+Získá dobu trvání interpolace.
 
 ```
 IFACEMETHOD(GetDuration)(__out UI_ANIMATION_SECONDS* duration);
@@ -146,15 +146,15 @@ IFACEMETHOD(GetDuration)(__out UI_ANIMATION_SECONDS* duration);
 ### <a name="parameters"></a>Parametry
 
 *Doba trvání*<br/>
-Výstup. Doba trvání přechodu během několika sekund.
+Výkonem. Doba trvání přechodu v sekundách.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Pokud metoda uspěje, vrátí hodnotu S_OK. Pokud není nastaven ccustominterpolator – nebo vlastní implementace vrací hodnotu FALSE z metody GetDuration vrátí E_FAIL.
+Pokud je metoda úspěšná, vrátí S_OK. Vrátí E_FAIL, pokud CCustomInterpolator není nastaven, nebo vlastní implementace vrátí hodnotu FALSE z metody GetDuration.
 
-##  <a name="getfinalvalue"></a>  CInterpolatorBase::GetFinalValue
+##  <a name="getfinalvalue"></a>CInterpolatorBase::GetFinalValue
 
-Získá konečnou hodnotu, na který vede interpolator.
+Získá konečnou hodnotu, na kterou interpoluje vedoucí.
 
 ```
 IFACEMETHOD(GetFinalValue)(__out DOUBLE* value);
@@ -163,59 +163,59 @@ IFACEMETHOD(GetFinalValue)(__out DOUBLE* value);
 ### <a name="parameters"></a>Parametry
 
 *value*<br/>
-Výstup. Konečná hodnota proměnné na konci přechodu.
+Výkonem. Poslední hodnota proměnné na konci přechodu.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Pokud metoda uspěje, vrátí hodnotu S_OK. Pokud není nastaven ccustominterpolator – nebo vlastní implementace vrací hodnotu FALSE z metody GetFinalValue vrátí E_FAIL.
+Pokud je metoda úspěšná, vrátí S_OK. Vrátí E_FAIL, pokud CCustomInterpolator není nastaven, nebo vlastní implementace vrátí FALSE z metody GetFinalValue.
 
-##  <a name="interpolatevalue"></a>  CInterpolatorBase::InterpolateValue
+##  <a name="interpolatevalue"></a>CInterpolatorBase::InterpolateValue
 
-Argument interpolaci hodnotu na dané pozici
+Interpoluje hodnotu u daného posunutí.
 
 ```
 IFACEMETHOD(InterpolateValue)(
-  __in UI_ANIMATION_SECONDS offset,
-  __out DOUBLE* value);
+    __in UI_ANIMATION_SECONDS offset,
+    __out DOUBLE* value);
 ```
 
 ### <a name="parameters"></a>Parametry
 
-*Posun*<br/>
-Posun od začátku přechod. Posun je vždy větší než nebo rovna nule a menší než doba trvání přechodu. Tato metoda není volána, pokud doba trvání přechodu je nula.
+*polohy*<br/>
+Posun od začátku přechodu. Posun je vždy větší nebo roven nule a menší než doba trvání přechodu. Tato metoda není volána, pokud je doba trvání přechodu nulová.
 
 *value*<br/>
-Výstup. Interpolované hodnotu.
+Výkonem. Interpolovaná hodnota.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Pokud metoda uspěje, vrátí hodnotu S_OK. Pokud není nastaven ccustominterpolator – nebo vlastní implementace vrací hodnotu FALSE z metody InterpolateValue vrátí E_FAIL.
+Pokud je metoda úspěšná, vrátí S_OK. Vrátí E_FAIL, pokud CCustomInterpolator není nastaven, nebo vlastní implementace vrátí FALSE z metody InterpolateValue.
 
-##  <a name="interpolatevelocity"></a>  CInterpolatorBase::InterpolateVelocity
+##  <a name="interpolatevelocity"></a>CInterpolatorBase::InterpolateVelocity
 
-Argument interpolaci rychlosti na dané pozici
+Interpoluje rychlost na daném posunu.
 
 ```
 IFACEMETHOD(InterpolateVelocity)(
-  __in UI_ANIMATION_SECONDS offset,
-  __out DOUBLE* velocity);
+    __in UI_ANIMATION_SECONDS offset,
+    __out DOUBLE* velocity);
 ```
 
 ### <a name="parameters"></a>Parametry
 
-*Posun*<br/>
-Posun od začátku přechod. Posun je vždy větší nebo rovna nule a menší než doba trvání přechodu. Tato metoda není volána, pokud doba trvání přechodu je nula.
+*polohy*<br/>
+Posun od začátku přechodu. Posun je vždy větší nebo roven nule a menší nebo roven délce trvání přechodu. Tato metoda není volána, pokud je doba trvání přechodu nulová.
 
-*velocity*<br/>
-Výstup. Rychlost proměnnou na posunu.
+*rychlostí*<br/>
+Výkonem. Rychlost proměnné na posunu.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Pokud metoda uspěje, vrátí hodnotu S_OK. Pokud není nastaven ccustominterpolator – nebo vlastní implementace vrací hodnotu FALSE z metody InterpolateVelocity vrátí E_FAIL.
+Pokud je metoda úspěšná, vrátí S_OK. Vrátí E_FAIL, pokud CCustomInterpolator není nastaven, nebo vlastní implementace vrátí FALSE z metody InterpolateVelocity.
 
-##  <a name="setcustominterpolator"></a>  CInterpolatorBase::SetCustomInterpolator
+##  <a name="setcustominterpolator"></a>CInterpolatorBase::SetCustomInterpolator
 
-Uchovává ukazatel na vlastní interpolator, který bude zpracovávat události.
+Ukládá ukazatel na vlastní interpolaci, která bude zpracovávat události.
 
 ```
 void SetCustomInterpolator(CCustomInterpolator* pInterpolator);
@@ -224,11 +224,11 @@ void SetCustomInterpolator(CCustomInterpolator* pInterpolator);
 ### <a name="parameters"></a>Parametry
 
 *pInterpolator*<br/>
-Ukazatel na vlastní interpolator.
+Ukazatel na vlastní interpolaci.
 
-##  <a name="setduration"></a>  CInterpolatorBase::SetDuration
+##  <a name="setduration"></a>CInterpolatorBase::SetDuration
 
-Nastaví dobu trvání interpolator.
+Nastaví dobu trvání interpolace.
 
 ```
 IFACEMETHOD(SetDuration)(__in UI_ANIMATION_SECONDS duration);
@@ -241,29 +241,29 @@ Doba trvání přechodu.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Pokud metoda uspěje, vrátí hodnotu S_OK. Pokud není nastaven ccustominterpolator – nebo vlastní implementace vrací hodnotu FALSE z metody SetDuration vrátí E_FAIL.
+Pokud je metoda úspěšná, vrátí S_OK. Vrátí E_FAIL, pokud CCustomInterpolator není nastaven, nebo vlastní implementace vrátí FALSE z metody SetDuration.
 
-##  <a name="setinitialvalueandvelocity"></a>  CInterpolatorBase::SetInitialValueAndVelocity
+##  <a name="setinitialvalueandvelocity"></a>CInterpolatorBase::SetInitialValueAndVelocity
 
-Nastaví počáteční hodnotu interpolator a rychlost.
+Nastaví počáteční hodnotu a rychlost interpolace.
 
 ```
 IFACEMETHOD(SetInitialValueAndVelocity)(
-  __in DOUBLE initialValue,
-  __in DOUBLE initialVelocity);
+    __in DOUBLE initialValue,
+    __in DOUBLE initialVelocity);
 ```
 
 ### <a name="parameters"></a>Parametry
 
 *initialValue*<br/>
-Hodnota proměnné na začátku přechod.
+Hodnota proměnné na začátku přechodu.
 
 *initialVelocity*<br/>
-Rychlost proměnnou na začátku přechod.
+Rychlost proměnné na začátku přechodu.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Pokud metoda uspěje, vrátí hodnotu S_OK. Pokud není nastaven ccustominterpolator – nebo vlastní implementace vrací hodnotu FALSE z metody SetInitialValueAndVelocity vrátí E_FAIL.
+Pokud je metoda úspěšná, vrátí S_OK. Vrátí E_FAIL, pokud CCustomInterpolator není nastaven, nebo vlastní implementace vrátí FALSE z metody SetInitialValueAndVelocity.
 
 ## <a name="see-also"></a>Viz také:
 

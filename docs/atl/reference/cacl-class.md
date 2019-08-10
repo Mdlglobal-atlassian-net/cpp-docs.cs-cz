@@ -1,5 +1,5 @@
 ---
-title: Cacl – třída
+title: CAcl – třída
 ms.date: 11/04/2016
 f1_keywords:
 - CAcl
@@ -22,19 +22,19 @@ f1_keywords:
 helpviewer_keywords:
 - CAcl class
 ms.assetid: 20bcb9af-dc1c-4737-b923-3864776680d6
-ms.openlocfilehash: 05d9d5fe9cc344be3f903f247f34003056404c9d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ba791ddc46fd59a470943bb30f415da01966dc61
+ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62247648"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68915894"
 ---
-# <a name="cacl-class"></a>Cacl – třída
+# <a name="cacl-class"></a>CAcl – třída
 
-Tato třída představuje obálku pro `ACL` struktury (seznamu řízení přístupu).
+Tato třída je obálkou `ACL` struktury (seznam řízení přístupu).
 
 > [!IMPORTANT]
->  Tato třída a jejích členů nelze použít v aplikacích, které jsou spouštěny v modulu Windows Runtime.
+>  Tato třída a její členové nelze použít v aplikacích, které jsou spouštěny v prostředí Windows Runtime.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -44,9 +44,9 @@ class CAcl
 
 ## <a name="members"></a>Členové
 
-### <a name="public-typedefs"></a>Veřejné definice TypeDef
+### <a name="public-typedefs"></a>Veřejné definice typedef
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CAcl::CAccessMaskArray](#caccessmaskarray)|Pole ACCESS_MASKs.|
 |[CAcl::CAceFlagArray](#caceflagarray)|Pole bajtů.|
@@ -54,59 +54,59 @@ class CAcl
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CAcl::CAcl](#cacl)|Konstruktor|
 |[CAcl::~CAcl](#dtor)|Destruktor.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
-|[CAcl::GetAceCount](#getacecount)|Vrátí počet řízení přístupu položky (ACE) objekty.|
-|[CAcl::GetAclEntries](#getaclentries)|Načte seznam (ACL) položky řízení přístupu z `CAcl` objektu.|
+|[CAcl::GetAceCount](#getacecount)|Vrátí počet objektů ACE (Access Control Entry).|
+|[CAcl::GetAclEntries](#getaclentries)|Načte položky seznamu řízení přístupu (ACL) z `CAcl` objektu.|
 |[CAcl::GetAclEntry](#getaclentry)|Načte všechny informace o položce v `CAcl` objektu.|
-|[CAcl::GetLength](#getlength)|Vrátí délku objektu seznamu ACL.|
+|[CAcl:: GetLength](#getlength)|Vrátí délku seznamu ACL.|
 |[CAcl::GetPACL](#getpacl)|Vrátí PACL (ukazatel na seznam ACL).|
-|[CAcl::IsEmpty](#isempty)|Testy `CAcl` objektu pro položky.|
+|[CAcl::IsEmpty](#isempty)|`CAcl` Testuje objekt pro položky.|
 |[CAcl::IsNull](#isnull)|Vrátí stav `CAcl` objektu.|
-|[CAcl::RemoveAce](#removeace)|Odebere z konkrétní ACE (položky řízení přístupu) `CAcl` objektu.|
-|[CAcl::RemoveAces](#removeaces)|Odebere všechny položky řízení přístupu (položky řízení přístupu) z `CAcl` , které se týkají daný `CSid`.|
-|[CAcl::SetEmpty](#setempty)|Značky `CAcl` objektu jako prázdný.|
-|[CAcl::SetNull](#setnull)|Značky `CAcl` objektu jako hodnota NULL.|
+|[CAcl::RemoveAce](#removeace)|Odebere z `CAcl` objektu konkrétní položku ACE (řízení přístupu).|
+|[CAcl::RemoveAces](#removeaces)|Odebere všechny položky řízení přístupu (ACE) z rozhraní `CAcl` , které platí pro daný. `CSid`|
+|[CAcl::SetEmpty](#setempty)|`CAcl` Označí objekt jako prázdný.|
+|[CAcl::SetNull](#setnull)|`CAcl` Označí objekt jako null.|
 
 ### <a name="public-operators"></a>Veřejné operátory
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
-|[Seznam ACL const CAcl::operator *](#operator_const_acl__star)|Přetypování `CAcl` objektu `ACL` struktury.|
-|[CAcl::operator =](#operator_eq)|Operátor přiřazení.|
+|[CAcl:: operator – seznam ACL *](#operator_const_acl__star)|Přetypování `ACL` objektu na strukturu. `CAcl`|
+|[CAcl:: operator =](#operator_eq)|Operátor přiřazení|
 
 ## <a name="remarks"></a>Poznámky
 
-`ACL` Struktura je hlavička seznamu ACL portu (seznam řízení přístupu). Seznam ACL obsahuje sekvenční seznam nula nebo více [ACE](/windows/desktop/SecAuthZ/access-control-entries) (položky řízení přístupu). Jednotlivé položky řízení přístupu v seznamu ACL portu jsou číslovány od 0 do *n-1*, kde *n* je počet ACE v seznamu ACL. Při úpravě seznamu ACL portu, aplikace se odkazuje na záznam řízení přístupu (ACE) v rámci seznamu ACL podle jeho indexu.
+`ACL` Struktura je hlavičkou seznamu řízení přístupu (ACL). Seznam ACL zahrnuje sekvenční seznam nula nebo více položek [ACE](/windows/desktop/SecAuthZ/access-control-entries) (položky řízení přístupu). Jednotlivé položky ACE v seznamu ACL jsou číslovány od 0 do *n-1*, kde *n* je počet položek ACE v seznamu ACL. Když upravujete seznam řízení přístupu (ACL), aplikace odkazuje na položku řízení přístupu (ACE) v seznamu ACL podle jejího indexu.
 
-Existují dva typy seznamu ACL:
+Existují dva typy seznamů ACL:
 
-- Volitelný
+- Volitelného
 
 - Systém
 
-Volitelný seznam řízení přístupu řídí vlastníka objektu nebo všem uživatelům oprávnění WRITE_DAC přístup k objektu. Určuje konkrétní přístup uživatele a skupiny nesmí být na objekt. Vlastníkovi souboru, například můžete použít volitelný seznam řízení přístupu na ovládací prvek, který uživatelé a skupiny může a nemůže mít přístup k souboru.
+Volitelný seznam řízení přístupu (ACL) je řízen vlastníkem objektu nebo kýmkoli udělenému WRITE_DAC přístupu k objektu. Určuje přístup konkrétního uživatele a skupiny může být objektem. Vlastník souboru může například použít volitelný seznam řízení přístupu (ACL), který řídí, kteří uživatelé a skupiny můžou a nemají přístup k tomuto souboru.
 
-Objekt může mít také informace o zabezpečení na úrovni systému spojené s ním, ve formuláři systému řízení přístupu řídí správce systému. Systém seznamu ACL můžete povolit na správce systému a auditovat pokusy o získání přístupu k objektu.
+Objekt může mít také související informace o zabezpečení na úrovni systému, ve formě seznamu ACL systému, který je řízen správcem systému. Seznam řízení přístupu k systému může správcům systému umožnit auditovat jakékoli pokusy o získání přístupu k objektu.
 
-Další podrobnosti najdete v tématu [ACL](/windows/desktop/SecAuthZ/access-control-lists) diskuze v sadě Windows SDK.
+Další podrobnosti najdete v diskuzi [ACL](/windows/desktop/SecAuthZ/access-control-lists) v Windows SDK.
 
-Úvod do modelu řízení přístupu ve Windows najdete v tématu [řízení přístupu](/windows/desktop/SecAuthZ/access-control) v sadě Windows SDK.
+Úvod do modelu řízení přístupu v systému Windows naleznete v tématu [Access Control](/windows/desktop/SecAuthZ/access-control) v Windows SDK.
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** atlsecurity.h
+**Záhlaví:** atlsecurity. h
 
 ##  <a name="caccessmaskarray"></a>  CAcl::CAccessMaskArray
 
-Pole objektů ACCESS_MASK.
+Pole objektů ACCESS_MASK
 
 ```
 typedef CAtlArray<ACCESS_MASK> CAccessMaskArray;
@@ -114,7 +114,7 @@ typedef CAtlArray<ACCESS_MASK> CAccessMaskArray;
 
 ### <a name="remarks"></a>Poznámky
 
-Tato definice typu Určuje typ pole, který slouží k ukládání přístupová práva používat v položky řízení přístupu (ACE).
+Tato definice typedef určuje typ pole, které lze použít k uložení přístupových práv používaných v položkách řízení přístupu (ACE).
 
 ##  <a name="caceflagarray"></a>  CAcl::CAceFlagArray
 
@@ -126,9 +126,9 @@ typedef CAtlArray<BYTE> CAceFlagArray;
 
 ### <a name="remarks"></a>Poznámky
 
-Tato definice typu Určuje typ pole používá k definování příznaky řízení přístupu položky (ACE) specifické pro typ ovládacího prvku. Zobrazit [ACE_HEADER](/windows/desktop/api/winnt/ns-winnt-_ace_header) definice pro úplný seznam příznaků je to možné.
+Tato definice typedef určuje typ pole, který slouží k definování příznaků ovládacího prvku specifického pro položku řízení přístupu (ACE). Úplný seznam možných příznaků najdete v definici [ACE_HEADER](/windows/desktop/api/winnt/ns-winnt-ace_header) .
 
-##  <a name="cacetypearray"></a>  CAcl::CAceTypeArray
+##  <a name="cacetypearray"></a>CAcl::CAceTypeArray
 
 Pole bajtů.
 
@@ -138,9 +138,9 @@ typedef CAtlArray<BYTE> CAceTypeArray;
 
 ### <a name="remarks"></a>Poznámky
 
-Tato definice typu určuje sloužících k definování povahy objektů položka (ACE) řízení přístupu, jako je například ACCESS_ALLOWED_ACE_TYPE nebo ACCESS_DENIED_ACE_TYPE typ pole. Zobrazit [ACE_HEADER](/windows/desktop/api/winnt/ns-winnt-_ace_header) definice pro úplný seznam možných typů.
+Tato definice typedef určuje typ pole, který slouží k definování povahy objektů řízení přístupu (ACE), jako je například ACCESS_ALLOWED_ACE_TYPE nebo ACCESS_DENIED_ACE_TYPE. Úplný seznam možných typů najdete v definici [ACE_HEADER](/windows/desktop/api/winnt/ns-winnt-ace_header) .
 
-##  <a name="cacl"></a>  CAcl::CAcl
+##  <a name="cacl"></a>CAcl::CAcl
 
 Konstruktor
 
@@ -151,14 +151,14 @@ CAcl(const CAcl& rhs) throw(...);
 
 ### <a name="parameters"></a>Parametry
 
-*Zarovnání indirekce RHS*<br/>
+*zarovnání indirekce RHS*<br/>
 Existující objekt `CAcl`.
 
 ### <a name="remarks"></a>Poznámky
 
-`CAcl` Objekt můžete případně vytvořit pomocí existující `CAcl` objektu.
+Objekt lze volitelně vytvořit pomocí existujícího `CAcl` objektu. `CAcl`
 
-##  <a name="dtor"></a>  CAcl::~CAcl
+##  <a name="dtor"></a>CAcl:: ~ CAcl
 
 Destruktor.
 
@@ -168,11 +168,11 @@ virtual ~CAcl() throw();
 
 ### <a name="remarks"></a>Poznámky
 
-Destruktor uvolní všechny prostředky získané v objektu.
+Destruktor uvolní všechny prostředky, které objekt získal.
 
-##  <a name="getacecount"></a>  CAcl::GetAceCount
+##  <a name="getacecount"></a>CAcl::GetAceCount
 
-Vrátí počet řízení přístupu položky (ACE) objekty.
+Vrátí počet objektů ACE (Access Control Entry).
 
 ```
 virtual UINT GetAceCount() const throw() = 0;
@@ -182,9 +182,9 @@ virtual UINT GetAceCount() const throw() = 0;
 
 Vrátí počet položek ACE v `CAcl` objektu.
 
-##  <a name="getaclentries"></a>  CAcl::GetAclEntries
+##  <a name="getaclentries"></a>CAcl::GetAclEntries
 
-Načte seznam (ACL) položky řízení přístupu z `CAcl` objektu.
+Načte položky seznamu řízení přístupu (ACL) z `CAcl` objektu.
 
 ```
 void GetAclEntries(
@@ -197,26 +197,26 @@ void GetAclEntries(
 ### <a name="parameters"></a>Parametry
 
 *pSids*<br/>
-Ukazatel na pole [identifikační číslo volané stanice](../../atl/reference/csid-class.md) objekty.
+Ukazatel na pole objektů [CSID](../../atl/reference/csid-class.md) .
 
 *pAccessMasks*<br/>
 Masky přístupu.
 
 *pAceTypes*<br/>
-Typy vstupu (ACE) řízení přístupu.
+Typy položek řízení přístupu (ACE).
 
 *pAceFlags*<br/>
 Příznaky ACE.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato metoda vyplní pole parametrů s podrobnostmi o každého objektu ACE součástí `CAcl` objektu. Když podrobnosti pro toto konkrétní pole nejsou vyžadovány, použijte hodnotu NULL.
+Tato metoda vyplní parametry pole podrobnostmi všech objektů ACE obsažených v `CAcl` objektu. Pokud nejsou požadovány podrobnosti pro dané pole, použijte hodnotu NULL.
 
-Obsah každého pole odpovídat k sobě navzájem, tedy první prvek `CAccessMaskArray` pole odpovídá na první prvek v `CSidArray` pole a tak dále.
+Obsah každého pole odpovídá sobě navzájem, tedy první prvek `CAccessMaskArray` pole odpovídá prvnímu prvku `CSidArray` v poli a tak dále.
 
-Zobrazit [ACE_HEADER](/windows/desktop/api/winnt/ns-winnt-_ace_header) podrobné informace o typech ACE a příznaky.
+Další podrobnosti o typech a příznacích ACE najdete v tématu [ACE_HEADER](/windows/desktop/api/winnt/ns-winnt-ace_header) .
 
-##  <a name="getaclentry"></a>  CAcl::GetAclEntry
+##  <a name="getaclentry"></a>CAcl::GetAclEntry
 
 Načte všechny informace o položce v seznamu řízení přístupu (ACL).
 
@@ -234,35 +234,35 @@ void GetAclEntry(
 ### <a name="parameters"></a>Parametry
 
 *nIndex*<br/>
-Index k položce seznamu ACL k načtení.
+Index položky seznamu ACL, která se má načíst
 
 *pSid*<br/>
-[Identifikační číslo volané stanice](../../atl/reference/csid-class.md) objektu, pro kterou platí položce seznamu ACL.
+Objekt [CSID](../../atl/reference/csid-class.md) , na který se vztahuje položka seznamu ACL.
 
 *pMask*<br/>
-Maska určující oprávnění udělit nebo odepřít přístup.
+Maska určující oprávnění pro udělení nebo zamítnutí přístupu.
 
 *pType*<br/>
-Typu položky ACE.
+Typ ACE.
 
 *pFlags*<br/>
 Příznaky ACE.
 
 *pObjectType*<br/>
-Typ objektu. Tím se nastaví na GUID_NULL Pokud není zadán typ objektu v ACE nebo pokud je položka řízení přístupu není objektu ACE.
+Typ objektu. Tato akce bude nastavena na GUID_NULL, pokud není typ objektu zadán v ACE, nebo pokud ACE není OBJEKTem ACE.
 
 *pInheritedObjectType*<br/>
-Typ zděděných objektů. Tím se nastaví na GUID_NULL Pokud není zadaný typ zděděných objektů v této položky řízení přístupu, nebo pokud ACE není objektu ACE.
+Typ zděděného objektu. Tato položka se nastaví na GUID_NULL, pokud typ zděděného objektu není zadaný v ACE, nebo pokud ACE není OBJEKTem ACE.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato metoda se načtou všechny informace o jednotlivých prostředí ACE poskytnutí dalších informací, než [CAcl::GetAclEntries](#getaclentries) samostatně zpřístupňuje.
+Tato metoda načte všechny informace o individuální položce ACE a poskytne více informací, než [CACL:: GetAclEntries](#getaclentries) zpřístupňuje sám.
 
-Zobrazit [ACE_HEADER](/windows/desktop/api/winnt/ns-winnt-_ace_header) podrobné informace o typech ACE a příznaky.
+Další podrobnosti o typech a příznacích ACE najdete v tématu [ACE_HEADER](/windows/desktop/api/winnt/ns-winnt-ace_header) .
 
-##  <a name="getlength"></a>  CAcl::GetLength
+##  <a name="getlength"></a>CAcl:: GetLength
 
-Vrátí délku objektu seznamu řízení přístupu (ACL).
+Vrátí délku seznamu řízení přístupu (ACL).
 
 ```
 UINT GetLength() const throw();
@@ -270,11 +270,11 @@ UINT GetLength() const throw();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vrátí má požadovanou délku v bajtech nezbytné pro uchování `ACL` struktury.
+Vrátí požadovanou délku v bajtech potřebných k uložení `ACL` struktury.
 
-##  <a name="getpacl"></a>  CAcl::GetPACL
+##  <a name="getpacl"></a>CAcl::GetPACL
 
-Vrací ukazatel na seznam řízení přístupu (ACL).
+Vrátí ukazatel na seznam řízení přístupu (ACL).
 
 ```
 const ACL* GetPACL() const throw(...);
@@ -282,11 +282,11 @@ const ACL* GetPACL() const throw(...);
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vrací ukazatel `ACL` struktury.
+Vrátí ukazatel na `ACL` strukturu.
 
-##  <a name="isempty"></a>  CAcl::IsEmpty
+##  <a name="isempty"></a>CAcl::-Empty
 
-Testy `CAcl` objektu pro položky.
+`CAcl` Testuje objekt pro položky.
 
 ```
 bool IsEmpty() const throw();
@@ -294,9 +294,9 @@ bool IsEmpty() const throw();
 
 ### <a name="remarks"></a>Poznámky
 
-Vrátí TRUE, pokud `CAcl` objekt nemá hodnotu NULL a neobsahuje žádné položky. Vrátí hodnotu FALSE, pokud `CAcl` objekt má hodnotu NULL nebo obsahuje alespoň jednu položku.
+Vrátí hodnotu true, `CAcl` Pokud objekt není null a neobsahuje žádné položky. Vrátí hodnotu false, `CAcl` Pokud má objekt hodnotu null nebo obsahuje alespoň jednu položku.
 
-##  <a name="isnull"></a>  CAcl::IsNull
+##  <a name="isnull"></a>CAcl:: IsNull
 
 Vrátí stav `CAcl` objektu.
 
@@ -306,11 +306,11 @@ bool IsNull() const throw();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vrátí TRUE, pokud `CAcl` objekt má hodnotu NULL, hodnota FALSE v opačném případě.
+Vrátí hodnotu true, `CAcl` Pokud je objekt null, jinak false.
 
-##  <a name="operator_const_acl__star"></a>  Seznam ACL const CAcl::operator *
+##  <a name="operator_const_acl__star"></a>CAcl:: operator – seznam ACL *
 
-Přetypování `CAcl` objektu `ACL` struktury (seznamu řízení přístupu).
+Přetypování `ACL` objektu na strukturu (seznam řízení přístupu). `CAcl`
 
 ```
 operator const ACL *() const throw(...);
@@ -320,9 +320,9 @@ operator const ACL *() const throw(...);
 
 Vrátí adresu `ACL` struktury.
 
-##  <a name="operator_eq"></a>  CAcl::operator =
+##  <a name="operator_eq"></a>CAcl:: operator =
 
-Operátor přiřazení.
+Operátor přiřazení
 
 ```
 CAcl& operator= (const CAcl& rhs) throw(...);
@@ -330,16 +330,16 @@ CAcl& operator= (const CAcl& rhs) throw(...);
 
 ### <a name="parameters"></a>Parametry
 
-*Zarovnání indirekce RHS*<br/>
-`CAcl` Přiřadit existující objekt.
+*zarovnání indirekce RHS*<br/>
+`CAcl` Pro přiřazení k existujícímu objektu.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vrátí odkaz na aktualizovaný `CAcl` objektu.
+Vrátí odkaz na aktualizovaný `CAcl` objekt.
 
-##  <a name="removeace"></a>  CAcl::RemoveAce
+##  <a name="removeace"></a>CAcl::RemoveAce
 
-Odebere z konkrétní ACE (položky řízení přístupu) `CAcl` objektu.
+Odebere z `CAcl` objektu konkrétní položku ACE (řízení přístupu).
 
 ```
 void RemoveAce(UINT nIndex) throw();
@@ -348,15 +348,15 @@ void RemoveAce(UINT nIndex) throw();
 ### <a name="parameters"></a>Parametry
 
 *nIndex*<br/>
-Index položky ACE odebrat.
+Index položky ACE, která se má odebrat
 
 ### <a name="remarks"></a>Poznámky
 
-Tato metoda je odvozen z [CAtlArray::RemoveAt](../../atl/reference/catlarray-class.md#removeat).
+Tato metoda je odvozena z [CAtlArray:: funkce RemoveAt](../../atl/reference/catlarray-class.md#removeat).
 
-##  <a name="removeaces"></a>  CAcl::RemoveAces
+##  <a name="removeaces"></a>CAcl::RemoveAces
 
-Zruší alls položky řízení přístupu (položky řízení přístupu) `CAcl` , které se týkají daný `CSid`.
+Odebere Alls ACE (položky řízení přístupu) z rozhraní `CAcl` , které platí pro daný. `CSid`
 
 ```
 bool RemoveAces(const CSid& rSid) throw(...)
@@ -365,11 +365,11 @@ bool RemoveAces(const CSid& rSid) throw(...)
 ### <a name="parameters"></a>Parametry
 
 *rSid*<br/>
-Odkaz na `CSid` objektu.
+Odkaz na `CSid` objekt.
 
-##  <a name="setempty"></a>  CAcl::SetEmpty
+##  <a name="setempty"></a>CAcl::SetEmpty
 
-Značky `CAcl` objektu jako prázdný.
+`CAcl` Označí objekt jako prázdný.
 
 ```
 void SetEmpty() throw();
@@ -377,11 +377,11 @@ void SetEmpty() throw();
 
 ### <a name="remarks"></a>Poznámky
 
-`CAcl` Lze nastavit na prázdnou nebo na hodnotu NULL: dva stavy se liší.
+`CAcl` Lze nastavit na hodnotu Empty nebo na hodnotu null: tyto dva stavy jsou odlišné.
 
-##  <a name="setnull"></a>  CAcl::SetNull
+##  <a name="setnull"></a>CAcl::SetNull
 
-Značky `CAcl` objektu jako hodnota NULL.
+`CAcl` Označí objekt jako null.
 
 ```
 void SetNull() throw();
@@ -389,9 +389,9 @@ void SetNull() throw();
 
 ### <a name="remarks"></a>Poznámky
 
-`CAcl` Lze nastavit na prázdnou nebo na hodnotu NULL: dva stavy se liší.
+`CAcl` Lze nastavit na hodnotu Empty nebo na hodnotu null: tyto dva stavy jsou odlišné.
 
 ## <a name="see-also"></a>Viz také:
 
-[Přehled tříd](../../atl/atl-class-overview.md)<br/>
+[Přehled třídy](../../atl/atl-class-overview.md)<br/>
 [Globální funkce zabezpečení](../../atl/reference/security-global-functions.md)

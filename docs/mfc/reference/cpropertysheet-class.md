@@ -1,5 +1,5 @@
 ---
-title: Cpropertysheet – třída
+title: CPropertySheet – – třída
 ms.date: 11/04/2016
 f1_keywords:
 - CPropertySheet
@@ -52,16 +52,16 @@ helpviewer_keywords:
 - CPropertySheet [MFC], SetWizardMode
 - CPropertySheet [MFC], m_psh
 ms.assetid: 8461ccff-d14f-46e0-a746-42ad642ef94e
-ms.openlocfilehash: 0e5194a356684f2ff86d74a0ed1f37f332bcffeb
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: edae0e3d4751461bc8a5eb6644f5fdc62b0a5e8a
+ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62372449"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68916849"
 ---
-# <a name="cpropertysheet-class"></a>Cpropertysheet – třída
+# <a name="cpropertysheet-class"></a>CPropertySheet – – třída
 
-Představuje seznam vlastností, označovaný také jako dialogová okna Karta.
+Představuje seznamy vlastností, označované také jako dialogová okna karty.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -73,53 +73,53 @@ class CPropertySheet : public CWnd
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
-|[CPropertySheet::CPropertySheet](#cpropertysheet)|Vytvoří `CPropertySheet` objektu.|
+|[CPropertySheet::CPropertySheet](#cpropertysheet)|`CPropertySheet` Vytvoří objekt.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
-|[CPropertySheet::AddPage](#addpage)|Na stránce se přidá do seznamu vlastností.|
-|[CPropertySheet::Construct](#construct)|Vytvoří `CPropertySheet` objektu.|
-|[CPropertySheet::Create](#create)|Zobrazí nemodálního seznamu vlastností.|
+|[CPropertySheet::AddPage](#addpage)|Přidá stránku do seznamu vlastností.|
+|[CPropertySheet::Construct](#construct)|`CPropertySheet` Vytvoří objekt.|
+|[CPropertySheet::Create](#create)|Zobrazí nemodální seznam vlastností.|
 |[CPropertySheet::DoModal](#domodal)|Zobrazí modální seznam vlastností.|
-|[CPropertySheet::EnableStackedTabs](#enablestackedtabs)|Označuje, zda seznam vlastností používá skládaný nebo posouvání karty.|
+|[CPropertySheet::EnableStackedTabs](#enablestackedtabs)|Označuje, zda seznam vlastností používá karty skládaného nebo posunutí.|
 |[CPropertySheet::EndDialog](#enddialog)|Ukončí seznam vlastností.|
-|[CPropertySheet::GetActiveIndex](#getactiveindex)|Načte index active stránky vlastností.|
-|[CPropertySheet::GetActivePage](#getactivepage)|Vrátí objekt aktivní stránkou.|
-|[CPropertySheet::GetPage](#getpage)|Načte ukazatel na zadanou stránku.|
-|[CPropertySheet::GetPageCount](#getpagecount)|Získá počet stránek v seznamu vlastností.|
-|[CPropertySheet::GetPageIndex](#getpageindex)|Načte index zadané stránky vlastností.|
-|[CPropertySheet::GetTabControl](#gettabcontrol)|Načte ukazatel na ovládací prvek karty.|
-|[CPropertySheet::MapDialogRect](#mapdialogrect)|Převede jednotkách dialogového okna obdélník na obrazovce jednotky.|
+|[CPropertySheet::GetActiveIndex](#getactiveindex)|Načte index aktivní stránky seznamu vlastností.|
+|[CPropertySheet::GetActivePage](#getactivepage)|Vrátí objekt aktivní stránky.|
+|[CPropertySheet::GetPage](#getpage)|Načte ukazatel na určenou stránku.|
+|[CPropertySheet::GetPageCount](#getpagecount)|Načte počet stránek v seznamu vlastností.|
+|[CPropertySheet::GetPageIndex](#getpageindex)|Načte index zadané stránky seznamu vlastností.|
+|[CPropertySheet::GetTabControl](#gettabcontrol)|Načte ukazatel na ovládací prvek karta.|
+|[CPropertySheet::MapDialogRect](#mapdialogrect)|Převede jednotky dialogového okna obdélníku na jednotky obrazovky.|
 |[CPropertySheet::OnInitDialog](#oninitdialog)|Přepsání pro rozšíření Inicializace seznamu vlastností.|
-|[CPropertySheet::PressButton](#pressbutton)|Simuluje volba od určeného tlačítka v seznamu vlastností.|
+|[CPropertySheet::PressButton](#pressbutton)|Simuluje výběr zadaného tlačítka v seznamu vlastností.|
 |[CPropertySheet::RemovePage](#removepage)|Odebere stránku ze seznamu vlastností.|
-|[CPropertySheet::SetActivePage](#setactivepage)|Prostřednictvím kódu programu nastaví objekt aktivní stránkou.|
-|[CPropertySheet::SetFinishText](#setfinishtext)|Nastaví text pro tlačítko pro dokončení.|
-|[CPropertySheet::SetTitle](#settitle)|Nastaví popisek seznamu vlastností.|
-|[CPropertySheet::SetWizardButtons](#setwizardbuttons)|Umožňuje Průvodce tlačítka.|
+|[CPropertySheet::SetActivePage](#setactivepage)|Programově nastavuje objekt aktivní stránky.|
+|[CPropertySheet::SetFinishText](#setfinishtext)|Nastaví text pro tlačítko Dokončit.|
+|[CPropertySheet –:: SetTitle](#settitle)|Nastaví titulek seznamu vlastností.|
+|[CPropertySheet –:: SetWizardButtons](#setwizardbuttons)|Povolí tlačítka průvodce.|
 |[CPropertySheet::SetWizardMode](#setwizardmode)|Povolí režim průvodce.|
 
 ### <a name="public-data-members"></a>Veřejné datové členy
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
-|[CPropertySheet::m_psh](#m_psh)|Windows [PROPSHEETHEADER](/windows/desktop/api/prsht/ns-prsht-_propsheetheadera_v2) struktury. Poskytuje přístup k základní vlastnost seznamu parametrů.|
+|[CPropertySheet::m_psh](#m_psh)|Struktura [PROPSHEETHEADER](/windows/desktop/api/prsht/ns-prsht-propsheetheadera_v2) systému Windows. Poskytuje přístup k základním parametrům seznamu vlastností.|
 
 ## <a name="remarks"></a>Poznámky
 
-Seznam vlastností se skládá z `CPropertySheet` objekt a jeden nebo více [CPropertyPage](../../mfc/reference/cpropertypage-class.md) objekty. Seznam vlastností zobrazí rozhraní jako okno se sadou kartu indexy a oblasti, která obsahuje aktuálně vybrané stránky. Uživatel přejde na určitou stránku pomocí příslušné karty.
+Seznam vlastností se skládá z `CPropertySheet` objektu a jednoho nebo více objektů [CPropertyPage –](../../mfc/reference/cpropertypage-class.md) . Rozhraní zobrazí seznam vlastností jako okno se sadou indexů karet a oblastí, která obsahuje aktuálně vybranou stránku. Uživatel přejde na konkrétní stránku pomocí příslušné karty.
 
-`CPropertySheet` poskytuje podporu pro rozbalených [PROPSHEETHEADER](/windows/desktop/api/prsht/ns-prsht-_propsheetheadera_v2) struktura zavedená ve Windows 98 a Windows NT 2000. Struktura obsahuje další příznaky a členy, které podporují použití rastrový obrázek pozadí "vodoznak".
+`CPropertySheet`poskytuje podporu pro rozšířenou strukturu [PROPSHEETHEADER](/windows/desktop/api/prsht/ns-prsht-propsheetheadera_v2) představenou ve Windows 98 a windows NT 2000. Struktura obsahuje další příznaky a členy, které podporují použití rastrového obrázku pozadí vodoznaku.
 
-K těmto novým obrázkům zobrazení automaticky v váš objekt seznamu vlastností, předejte platné hodnoty pro Image rastrového obrázku a palety volání [CPropertySheet::Construct](#construct) nebo [CPropertySheet::CPropertySheet](#cpropertysheet).
+Chcete-li tyto nové obrázky zobrazit automaticky v objektu seznamu vlastností, předejte platné hodnoty imagí rastrového obrázku a palety ve volání metody [CPropertySheet –:: Construct](#construct) nebo [CPropertySheet –:: CPropertySheet –](#cpropertysheet).
 
-I když `CPropertySheet` není odvozen od [CDialog](../../mfc/reference/cdialog-class.md)Správa `CPropertySheet` objektu je třeba pro správu `CDialog` objektu. Příklad vytvoření seznamu vlastností vyžaduje skládá ze dvou částí: volání konstruktoru a následně zavolat [DoModal](#domodal) pro modální seznam vlastností nebo [vytvořit](#create) pro nemodálního seznamu vlastností. `CPropertySheet` má dva typy konstruktorů: [CPropertySheet::Construct](#construct) a [CPropertySheet::CPropertySheet](#cpropertysheet).
+I když `CPropertySheet` není odvozen z [CDialog](../../mfc/reference/cdialog-class.md), Správa `CPropertySheet` objektu je jako správa `CDialog` objektu. Například vytvoření seznamu vlastností vyžaduje konstrukci dvou částí: volejte konstruktor a potom zavolejte [DoModal](#domodal) pro modální seznam vlastností nebo [vytvořte](#create) pro nemodální seznam vlastností. `CPropertySheet`má dva typy konstruktorů: [CPropertySheet –:: Construct](#construct) a [CPropertySheet –:: CPropertySheet –](#cpropertysheet).
 
-Při sestavování `CPropertySheet` objektu některé [styly oken](../../mfc/reference/styles-used-by-mfc.md#window-styles) může způsobit, že první odpovídající výjimce dojde k. Výsledkem pokusu o změnu stylu seznam vlastností, před vytvořením listu systému. Chcete-li předejít této výjimce, ujistěte se, že jste nastavili následující styly při vytváření vašeho `CPropertySheet`:
+Při vytváření `CPropertySheet` objektu mohou některé [styly oken](../../mfc/reference/styles-used-by-mfc.md#window-styles) způsobit výskyt výjimky s první pravděpodobností. Výsledkem je systém, který se pokouší změnit styl seznamu vlastností před vytvořením listu. Chcete-li se této výjimce vyhnout, nezapomeňte při vytváření `CPropertySheet`těchto stylů nastavit následující styly:
 
 - DS_3DLOOK
 
@@ -129,7 +129,7 @@ Při sestavování `CPropertySheet` objektu některé [styly oken](../../mfc/ref
 
 - WS_TABSTOP
 
-Tyto styly jsou volitelné a nesmí způsobit, že první odpovídající výjimce:
+Následující styly jsou volitelné a nezpůsobí se tím první výjimka:
 
 - DS_SHELLFONT
 
@@ -137,19 +137,19 @@ Tyto styly jsou volitelné a nesmí způsobit, že první odpovídající výjim
 
 - WS_CLIPCHILDREN
 
-Jakýkoli jiný `Window Styles` jsou zakázané a neměli byste je povolit.
+Jakékoli jiné `Window Styles` jsou zakázané a neměli byste je povolit.
 
-Výměna dat mezi `CPropertySheet` objekt a externí objekt je podobný výměna dat se `CDialog` objektu. Podstatným rozdílem je, že nastavení vlastností jsou obvykle členské proměnné `CPropertyPage` objekty, nikoli z `CPropertySheet` samotného objektu.
+Výměna dat mezi `CPropertySheet` objektem a externím objektem je podobná výměně dat `CDialog` s objektem. Důležitým rozdílem je, že nastavení seznamu vlastností jsou obvykle členské proměnné `CPropertyPage` objektů namísto `CPropertySheet` samotného objektu.
 
-Můžete vytvořit typ dialogové okno Karta nazývá průvodce, který se skládá z seznam vlastností s posloupnost stránky vlastností, které provedou uživatele kroky operace, jako je například nastavení zařízení nebo vytváření bulletinu. V dialogovém okně wizard-type. karta na stránkách vlastností nemají karty a pouze jednu vlastnost stránka není viditelná v čase. Také, namísto toho, aby **OK** a **použít** má dialogové okno Karta wizard-type. tlačítka, **zpět** tlačítko, **Další** nebo  **Dokončit** tlačítko, **zrušit** tlačítko a **pomáhají** tlačítko.
+Můžete vytvořit typ dialogového okna karta s názvem průvodce, který se skládá ze seznamu vlastností se sekvencí stránek vlastností, které provedou uživatele prostřednictvím kroků operace, jako je například nastavení zařízení nebo vytvoření bulletinu. V dialogovém okně Průvodce – typ karty stránky vlastností nejsou karty a v jednu chvíli je viditelná jenom jedna stránka vlastností. Místo toho, abyste měli tlačítka **OK** a **použít nyní** , má dialogové okno Karta typ průvodce tlačítko **zpět** , tlačítko **Další** nebo **Dokončit** , tlačítko **Storno** a tlačítko **help** .
 
-Vytvoření dialogového okna typ průvodce, postupujte podle stejných kroků, které byste použili k vytvoření standardní vlastností, ale volání [SetWizardMode](#setwizardmode) před voláním [DoModal](#domodal). Chcete-li povolit Průvodce tlačítka, zavolejte [SetWizardButtons](#setwizardbuttons), pomocí příznaků přizpůsobit jejich funkce a vzhledu. Povolit **Dokončit** tlačítko, volání [SetFinishText](#setfinishtext) poté, co uživatel má provést akce na poslední stránce průvodce.
+Chcete-li vytvořit dialogové okno typu průvodce, postupujte podle kroků, které byste měli provést, abyste vytvořili standardní seznam vlastností, ale zavolejte [SetWizardMode](#setwizardmode) před voláním [DoModal](#domodal). Chcete-li povolit tlačítka průvodce, zavolejte [SetWizardButtons](#setwizardbuttons)pomocí příznaků k přizpůsobení jejich funkcí a vzhledu. Chcete-li povolit tlačítko **Dokončit** , zavolejte [SetFinishText](#setfinishtext) poté, co uživatel provedl akci na poslední stránce průvodce.
 
-Další informace o tom, jak používat `CPropertySheet` objekty, najdete v článku [seznamy vlastností a stránky vlastností](../../mfc/property-sheets-and-property-pages-in-mfc.md).
+Další informace o použití `CPropertySheet` objektů naleznete na stránce vlastností článku a na [stránkách vlastností](../../mfc/property-sheets-and-property-pages-in-mfc.md).
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
-[Třídy CObject](../../mfc/reference/cobject-class.md)
+[CObject](../../mfc/reference/cobject-class.md)
 
 [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)
 
@@ -159,11 +159,11 @@ Další informace o tom, jak používat `CPropertySheet` objekty, najdete v čl�
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** afxdlgs.h
+**Záhlaví:** afxdlgs. h
 
-##  <a name="addpage"></a>  CPropertySheet::AddPage
+##  <a name="addpage"></a>CPropertySheet –:: AddPage
 
-Přidá zadaný stránku s kartou úplně vpravo v seznamu vlastností.
+Přidá zadanou stránku pomocí karty vpravo v seznamu vlastností.
 
 ```
 void AddPage(CPropertyPage* pPage);
@@ -172,27 +172,27 @@ void AddPage(CPropertyPage* pPage);
 ### <a name="parameters"></a>Parametry
 
 *pPage*<br/>
-Odkazuje na stránku chcete přidat do seznamu vlastností. Nemůže mít hodnotu NULL.
+Odkazuje na stránku, která má být přidána do seznamu vlastností. Nemůže mít hodnotu NULL.
 
 ### <a name="remarks"></a>Poznámky
 
-Přidání stránek do seznamu vlastností v pořadí zleva doprava, že chcete, aby se mohly zobrazit.
+Do seznamu vlastností v levém pořadí přidejte stránky, které chcete zobrazit.
 
-`AddPage` Přidá [CPropertyPage](../../mfc/reference/cpropertypage-class.md#cpropertypage) objektu `CPropertySheet` objektu v seznamu stránek, ale ve skutečnosti nevytváří v okně na stránce. Rozhraní framework odloží vytváření okna pro na stránce, až uživatel vybere tuto stránku.
+`AddPage`Přidá objekt [CPropertyPage –](../../mfc/reference/cpropertypage-class.md#cpropertypage) do `CPropertySheet` seznamu stránek objektu, ale ve skutečnosti nevytvoří okno pro stránku. Rozhraní odloží vytvoření okna pro stránku, dokud uživatel nevybere tuto stránku.
 
-Po přidání vlastností stránky pomocí `AddPage`, `CPropertySheet` je nadřazeného člena `CPropertyPage`. Chcete-li získat přístup k seznamu vlastností na stránce vlastností, zavolejte [CWnd::GetParent](../../mfc/reference/cwnd-class.md#getparent).
+Když přidáte stránku vlastností pomocí `AddPage` `CPropertySheet` , `CPropertyPage`je nadřazeným prvkem. Chcete-li získat přístup k seznamu vlastností ze stránky vlastností, zavolejte [CWnd:: GetParent](../../mfc/reference/cwnd-class.md#getparent).
 
-Není nutné čekat až do vytvoření okna listu vlastností pro volání `AddPage`. Obvykle budete volat `AddPage` před voláním [DoModal](#domodal) nebo [vytvořit](#create).
+Pro volání `AddPage`není nutné čekat na vytvoření okna seznamu vlastností. Obvykle budete volat `AddPage` před voláním [DoModal](#domodal) nebo [Create](#create).
 
-Při volání `AddPage` po zobrazení stránky vlastností, bude odrážet řádku kartu nově přidané stránky.
+Pokud voláte `AddPage` po zobrazení stránky vlastností, řádek karty bude odrážet nově přidanou stránku.
 
 ### <a name="example"></a>Příklad
 
 [!code-cpp[NVC_MFCDocView#129](../../mfc/codesnippet/cpp/cpropertysheet-class_1.cpp)]
 
-##  <a name="construct"></a>  CPropertySheet::Construct
+##  <a name="construct"></a>CPropertySheet –:: Construct
 
-Vytvoří `CPropertySheet` objektu.
+`CPropertySheet` Vytvoří objekt.
 
 ```
 void Construct(
@@ -225,43 +225,43 @@ void Construct(
 ### <a name="parameters"></a>Parametry
 
 *nIDCaption*<br/>
-ID popisku se použije pro seznam vlastností.
+ID titulku, který se má použít pro seznam vlastností
 
 *pParentWnd*<br/>
-Ukazatel do nadřazeného okna vlastností. Pokud má hodnotu NULL, bude nadřazené okno hlavní okno aplikace.
+Ukazatel na nadřazené okno seznamu vlastností. Pokud má hodnotu NULL, nadřazené okno bude hlavním oknem aplikace.
 
 *iSelectPage*<br/>
-Index, který bude zpočátku v horní části stránky. Výchozí hodnota je první stránka Přidat do listu.
+Index stránky, která bude zpočátku nahoře Výchozí je první stránka přidaná do listu.
 
 *pszCaption*<br/>
-Ukazatel na řetězec, který obsahuje popisek, který má být použit pro seznam vlastností. Nemůže mít hodnotu NULL.
+Ukazatel na řetězec obsahující titulek, který má být použit pro seznam vlastností. Nemůže mít hodnotu NULL.
 
 *hbmWatermark*<br/>
-Popisovač rastrový obrázek vodoznaku stránky vlastností.
+Pořídí rastrový obrázek vodoznaku stránky vlastností.
 
 *hpalWatermark*<br/>
-Popisovač na paletě rastrový obrázek vodoznaku a/nebo rastrový obrázek záhlaví.
+Pořídí paletu rastrového obrázku vodoznaku a/nebo rastrového obrázku záhlaví.
 
 *hbmHeader*<br/>
-Popisovač rastrový obrázek záhlaví stránky vlastností.
+Zařídí se hlavičkou rastrového obrázku stránky vlastností.
 
 ### <a name="remarks"></a>Poznámky
 
-Voláním této členské funkce, pokud jeden z konstruktorů třídy již nebyla volána. Například volání `Construct` při deklaraci nebo přidělit pole `CPropertySheet` objekty. V případě pole, je nutné volat `Construct` pro každého člena v poli.
+Tuto členskou funkci volejte, pokud některý z konstruktorů třídy již nebyl volán. Například volejte `Construct` , pokud deklarujete nebo přidělíte `CPropertySheet` pole objektů. V případě polí je nutné volat `Construct` pro každého člena v poli.
 
-Chcete-li zobrazit seznam vlastností, zavolejte [DoModal](#domodal) nebo [vytvořit](#create). Řetězec obsažený v první parametr bude umístěn v záhlaví pro seznam vlastností.
+Chcete-li zobrazit seznam vlastností, zavolejte [DoModal](#domodal) nebo [vytvořte](#create). Řetězec obsažený v prvním parametru bude umístěn v záhlaví seznamu vlastností.
 
-Můžete zobrazit vodoznak a/nebo hlavičce bitové kopie automaticky používáte třetí a čtvrtý prototypů `Construct`, uvedené výše a předejte platné hodnoty *hbmWatermark*, *hpalWatermark* , a/nebo *hbmHeader* parametry.
+Obrázky vodoznaku a/nebo hlavičky můžete zobrazit `Construct`automaticky, pokud použijete třetí nebo čtvrtý prototypy, které jsou uvedené výše, a předáte platné hodnoty pro parametry *hbmWatermark*, *hpalWatermark*a/nebo *hbmHeader* .
 
 ### <a name="example"></a>Příklad
 
-Následující příklad ukazuje, v části Co je okolností by volat `Construct`.
+Následující příklad ukazuje, za jakých okolností byste volali `Construct`.
 
 [!code-cpp[NVC_MFCDocView#130](../../mfc/codesnippet/cpp/cpropertysheet-class_2.cpp)]
 
-##  <a name="cpropertysheet"></a>  CPropertySheet::CPropertySheet
+##  <a name="cpropertysheet"></a>CPropertySheet –:: CPropertySheet –
 
-Vytvoří `CPropertySheet` objektu.
+`CPropertySheet` Vytvoří objekt.
 
 ```
 CPropertySheet();
@@ -296,41 +296,41 @@ CPropertySheet(
 ### <a name="parameters"></a>Parametry
 
 *nIDCaption*<br/>
-ID popisku se použije pro seznam vlastností.
+ID titulku, který se má použít pro seznam vlastností
 
 *pParentWnd*<br/>
-Body do nadřazeného okna vlastností. Pokud má hodnotu NULL, bude nadřazené okno hlavní okno aplikace.
+Odkazuje na nadřazené okno seznamu vlastností. Pokud má hodnotu NULL, nadřazené okno bude hlavním oknem aplikace.
 
 *iSelectPage*<br/>
-Index, který bude zpočátku v horní části stránky. Výchozí hodnota je první stránka Přidat do listu.
+Index stránky, která bude zpočátku nahoře Výchozí je první stránka přidaná do listu.
 
 *pszCaption*<br/>
-Odkazuje na řetězec, který obsahuje popisek, který má být použit pro seznam vlastností. Nemůže mít hodnotu NULL.
+Odkazuje na řetězec obsahující titulek, který se má použít pro seznam vlastností. Nemůže mít hodnotu NULL.
 
 *hbmWatermark*<br/>
-Popisovač vlastností rastrového obrázku na pozadí.
+Popisovač rastrového obrázku pozadí seznamu vlastností.
 
 *hpalWatermark*<br/>
-Popisovač na paletě rastrový obrázek vodoznaku a/nebo rastrový obrázek záhlaví.
+Popisovač palety rastrového obrázku vodoznaku nebo rastrového obrázku záhlaví.
 
 *hbmHeader*<br/>
-Popisovač rastrový obrázek záhlaví stránky vlastností.
+Popisovač rastrového obrázku stránky vlastností.
 
 ### <a name="remarks"></a>Poznámky
 
-Chcete-li zobrazit seznam vlastností, zavolejte [DoModal](#domodal) nebo [vytvořit](#create). Řetězec obsažený v první parametr bude umístěn v záhlaví pro seznam vlastností.
+Chcete-li zobrazit seznam vlastností, zavolejte [DoModal](#domodal) nebo [vytvořte](#create). Řetězec obsažený v prvním parametru bude umístěn v záhlaví seznamu vlastností.
 
-Pokud máte více parametrů (například, pokud používáte pole), použijte [vytvořit](#construct) místo `CPropertySheet`.
+Máte-li více parametrů (například pokud používáte pole), použijte spíše [konstrukce](#construct) namísto `CPropertySheet`.
 
-Můžete zobrazit vodoznak a/nebo hlavičce bitové kopie automaticky používáte třetí a čtvrtý prototypů `CPropertySheet`výše, a předejte platné hodnoty *hbmWatermark*, *hpalWatermark*, a / nebo *hbmHeader* parametry.
+Obrázky vodoznaku a/nebo hlavičky můžete zobrazit automaticky, pokud používáte `CPropertySheet`třetí nebo čtvrtý prototypy, výše a předáte platné hodnoty pro parametry *hbmWatermark*, *hpalWatermark*a/nebo *hbmHeader* .
 
 ### <a name="example"></a>Příklad
 
 [!code-cpp[NVC_MFCDocView#131](../../mfc/codesnippet/cpp/cpropertysheet-class_3.cpp)]
 
-##  <a name="create"></a>  CPropertySheet::Create
+##  <a name="create"></a>CPropertySheet –:: Create
 
-Zobrazí nemodálního seznamu vlastností.
+Zobrazí nemodální seznam vlastností.
 
 ```
 virtual BOOL Create(CWnd* pParentWnd = NULL,
@@ -341,29 +341,29 @@ virtual BOOL Create(CWnd* pParentWnd = NULL,
 ### <a name="parameters"></a>Parametry
 
 *pParentWnd*<br/>
-Body do nadřazeného okna. Pokud má hodnotu NULL, nadřazený prvek je ploše.
+Odkazuje na nadřazené okno. Pokud má hodnotu NULL, nadřazený objekt je plocha.
 
 *dwStyle*<br/>
-Styly oken pro seznam vlastností. Úplný seznam dostupných stylů, najdete v části [styly oken](../../mfc/reference/styles-used-by-mfc.md#window-styles).
+Styly oken pro seznam vlastností Úplný seznam dostupných stylů naleznete v tématu [styly oken](../../mfc/reference/styles-used-by-mfc.md#window-styles).
 
 *dwExStyle*<br/>
-Rozšířené styly oken pro seznam vlastností. Úplný seznam dostupných stylů, najdete v části [rozšířené styly oken](../../mfc/reference/styles-used-by-mfc.md#extended-window-styles)
+Rozšířené styly oken pro seznam vlastností Úplný seznam dostupných stylů najdete v tématu [Rozšířené styly oken](../../mfc/reference/styles-used-by-mfc.md#extended-window-styles) .
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Nenulové, pokud úspěšně; vytvoření seznamu vlastností jinak 0.
+Nenulové, pokud je seznam vlastností úspěšně vytvořen; v opačném případě 0.
 
 ### <a name="remarks"></a>Poznámky
 
-Volání `Create` může být v rámci konstruktoru, nebo je můžete volat po vyvolání konstruktoru.
+Volání `Create` může být uvnitř konstruktoru nebo může být voláno po vyvolání konstruktoru.
 
-Výchozí styl, vyjádřené předáním -1 jako *dwStyle*, je ve skutečnosti WS_SYSMENU&#124;WS_POPUP&#124;WS_CAPTION&#124;DS_MODALFRAME&#124;DS_CONTEXTHELP&#124;WS_VISIBLE. Výchozí hodnota rozšířený styl okna, vyjádřené jako 0 předáním *dwExStyle*, je ve skutečnosti WS_EX_DLGMODALFRAME.
+Výchozí styl vyjádřený předáním-1 jako *dwStyle*je vlastně WS_SYSMENU&#124;WS_POPUP&#124;WS_CAPTION&#124;DS_MODALFRAME&#124;DS_CONTEXTHELP&#124;WS_VISIBLE. Výchozí rozšířený styl okna vyjádřený předáním 0 jako *dwExStyle*je vlastně WS_EX_DLGMODALFRAME.
 
-`Create` Členská funkce vrátí ihned po vytvoření seznamu vlastností. Chcete-li zničit seznam vlastností, zavolejte [CWnd::DestroyWindow](../../mfc/reference/cwnd-class.md#destroywindow).
+Členská funkce se `Create` vrátí hned po vytvoření seznamu vlastností. Chcete-li zničit seznam vlastností, zavolejte [CWnd::D estroywindow](../../mfc/reference/cwnd-class.md#destroywindow).
 
-Modeless – seznam vlastností zobrazuje voláním `Create` nemají tlačítka OK, zrušení, použít a pomoc, stejně jako modální dialogové okno vlastností. Požadované tlačítka musí být vytvořený uživatelem.
+Nemodální seznamy vlastností zobrazené s voláním `Create` nejsou k dispozici tlačítka OK, zrušit, použít nyní a pomáhat jako modální seznamy vlastností. Požadovaná tlačítka musí uživatel vytvořit.
 
-Chcete-li zobrazit modální seznam vlastností, zavolejte [DoModal](#domodal) místo.
+Chcete-li zobrazit modální seznam vlastností, zavolejte místo toho [DoModal](#domodal) .
 
 ### <a name="example"></a>Příklad
 
@@ -381,20 +381,20 @@ virtual INT_PTR DoModal();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-IDOK nebo IDCANCEL byla-li funkce úspěšná; v opačném případě 0 nebo -1. Pokud seznam vlastností se vytvořilo jako průvodce (viz [SetWizardMode](#setwizardmode)), `DoModal` vrátí ID_WIZFINISH nebo IDCANCEL.
+IDOK nebo IDCANCEL, pokud byla funkce úspěšná; v opačném případě 0 nebo-1. Pokud seznam vlastností byl vytvořen jako průvodce (viz [SetWizardMode](#setwizardmode)), vrátí buď ID_WIZFINISH `DoModal` , nebo IDCANCEL.
 
 ### <a name="remarks"></a>Poznámky
 
-Návratová hodnota odpovídá ID ovládacího prvku, který zavření seznamu vlastností. Po návratu tato funkce windows odpovídající seznam vlastností a všechny stránky budou zničení. Samotných objektech budou i nadále existovat. Obvykle se načtou data z [CPropertyPage](../../mfc/reference/cpropertypage-class.md) objekty po `DoModal` vrátí IDOK.
+Vrácená hodnota odpovídá ID ovládacího prvku, který zavřel seznam vlastností. Až tato funkce vrátí, okna odpovídající seznamu vlastností a všem stránkám budou zničeny. Objekty, které jsou v takovém případě, stále existují. Data se obvykle načítají z objektů [CPropertyPage –](../../mfc/reference/cpropertypage-class.md) po `DoModal` návratu IDOK.
 
-Chcete-li zobrazit nemodálního seznamu vlastností, zavolejte [vytvořit](#create) místo.
+Chcete-li zobrazit nemodální seznam vlastností, zavolejte místo toho příkaz [Create](#create) .
 
-Když se vytvoří jeho odpovídající prostředek dialogového okna stránky vlastností, může to způsobit první odpovídající výjimce. To vyplývá z vlastností změnu stylu prostředku dialogového okna na požadovaný styl předtím, než se vytvoří na stránce. Protože prostředky jsou obecně jen pro čtení, tím dojde k výjimce. Systém zpracovává výjimku a vytvoří kopii tohoto změněného prostředku. První odpovídající výjimce se proto dá ignorovat.
+Když je vytvořena stránka vlastností z odpovídajícího prostředku dialogu, může to způsobit výjimku s první pravděpodobností. Výsledkem je stránka vlastností, která mění styl prostředku dialogového okna na požadovaný styl před vytvořením stránky. Vzhledem k tomu, že prostředky jsou obecně jen pro čtení, způsobuje výjimku. Systém zpracuje výjimku a vytvoří kopii upraveného prostředku. Výjimku první pravděpodobnost lze proto ignorovat.
 
 > [!NOTE]
->  Operační systém musí zpracovat tuto výjimku při kompilaci s modelem asynchronní zpracování výjimek. Další informace o modelech zpracování výjimek naleznete v tématu [/EH (Model zpracování výjimek)](../../build/reference/eh-exception-handling-model.md). V takovém případě není obalují volání `CPropertySheet::DoModal` pomocí bloku try-catch C++ ve kterém catch zpracovává všechny výjimky, například `catch (...)`. Tento blok by zpracovat výjimku určené pro operační systém a příčinu nepředvídatelné chování. Zpracování typů specifickou výjimku nebo strukturované zpracování výjimek, kde se výjimka narušení přístupu předává do operačního systému výjimek jazyka C++ však můžete bez obav použít.
+>  Tato výjimka musí být zpracována operačním systémem, pokud kompilujete s modelem zpracování asynchronních výjimek. Další informace o modelech zpracování výjimek naleznete v tématu [/EH (model zpracování výjimek)](../../build/reference/eh-exception-handling-model.md). V takovém případě nezalomí volání do `CPropertySheet::DoModal` bloku C++ try-catch, ve kterém catch zpracovává všechny výjimky `catch (...)`, například. Tento blok by zpracovával výjimku, která je určená pro operační systém, a způsobuje nepředvídatelné chování. Můžete však bezpečně použít C++ zpracování výjimek s konkrétními typy výjimek nebo strukturované zpracování výjimek, kde je výjimka narušení přístupu předána do operačního systému.
 
-Aby nedošlo k vygenerování této první odpovídající výjimce, můžete ručně zaručit, že seznam vlastností má správný [styly oken](../../mfc/reference/styles-used-by-mfc.md#window-styles). Je nutné nastavit následující styly pro seznam vlastností:
+Chcete-li se vyhnout generování této výjimky s první pravděpodobností, můžete ručně zaručit, že seznam vlastností má správné [styly oken](../../mfc/reference/styles-used-by-mfc.md#window-styles). Pro seznam vlastností musíte nastavit následující styly:
 
 - DS_3DLOOK
 
@@ -404,7 +404,7 @@ Aby nedošlo k vygenerování této první odpovídající výjimce, můžete ru
 
 - WS_TABSTOP
 
-Můžete použít následující volitelné styly bez způsobení první odpovídající výjimce:
+Můžete použít následující volitelné styly, aniž by došlo k výjimce s první pravděpodobností:
 
 - DS_SHELLFONT
 
@@ -412,15 +412,15 @@ Můžete použít následující volitelné styly bez způsobení první odpoví
 
 - WS_CLIPCHILDREN
 
-Všechny další styly Windows zakážete, protože nejsou kompatibilní s vlastností. Toto doporučení se nevztahuje na rozšířené styly. Nastavení těchto standardní stylů odpovídajícím způsobem zaručí, že seznam vlastností není potřeba změnit a zabrání generování první odpovídající výjimce.
+Zakáže všechny ostatní styly Windows, protože nejsou kompatibilní s seznamy vlastností. Tato doporučení neplatí pro rozšířené styly. Pokud tyto standardní styly nastavíte správně, bude zárukou, že seznam vlastností nebude nutné upravovat a vyhněte se generování první výjimky.
 
 ### <a name="example"></a>Příklad
 
-Podívejte se na příklad pro [CPropertySheet::AddPage](#addpage).
+Podívejte se na příklad pro [CPropertySheet –:: addPage](#addpage).
 
-##  <a name="enablestackedtabs"></a>  CPropertySheet::EnableStackedTabs
+##  <a name="enablestackedtabs"></a>CPropertySheet –:: EnableStackedTabs
 
-Označuje, zda zásobníku řádků karet v seznamu vlastností.
+Označuje, zda se mají v seznamu vlastností skládat řádky karet.
 
 ```
 void EnableStackedTabs(BOOL bStacked);
@@ -429,13 +429,13 @@ void EnableStackedTabs(BOOL bStacked);
 ### <a name="parameters"></a>Parametry
 
 *bStacked*<br/>
-Označuje, zda jsou povoleny skládaný karty v seznamu vlastností. Zakázat skládaný řádky značek nastavením *bStacked* na hodnotu FALSE.
+Určuje, zda jsou v seznamu vlastností povoleny skládané karty. Zakažte skládané řádky značek nastavením *bStacked* na hodnotu false.
 
 ### <a name="remarks"></a>Poznámky
 
-Ve výchozím nastavení Pokud má více záložek, než se vejde v jediném řádku na šířku vlastností, seznamu vlastností se karty zásobníku z více řádků. Místo překrývání karet použít posouvání karty, volání `EnableStackedTabs` s *bStacked* nastavena na hodnotu FALSE před voláním [DoModal](#domodal) nebo [vytvořit](#create).
+Ve výchozím nastavení, pokud má seznam vlastností více karet, než se vejde do jednoho řádku na šířku seznamu vlastností, karty budou vyvrstveny ve více řádcích. Chcete-li použít tabulátory pro posouvání místo skládání karet `EnableStackedTabs` , zavolejte *bStacked* nastaven na false před voláním [DoModal](#domodal) nebo [Create](#create).
 
-Je nutné volat `EnableStackedTabs` při vytváření modální nebo nemodálního seznamu vlastností. Tento styl v začlenit `CPropertySheet`-odvozené třídy, zápis obslužné rutiny zpráv pro WM_CREATE. V přepsaného verzi [CWnd::OnCreate](../../mfc/reference/cwnd-class.md#oncreate), volání `EnableStackedTabs( FALSE )` před voláním implementaci základní třídy.
+Je nutné zavolat `EnableStackedTabs` při vytváření modálního nebo nemodálního seznamu vlastností. Chcete `CPropertySheet`-li začlenit tento styl do odvozené třídy, zapište obslužnou rutinu zprávy pro WM_CREATE. V přepsané verzi [CWnd:: Create](../../mfc/reference/cwnd-class.md#oncreate)volejte `EnableStackedTabs( FALSE )` před voláním implementace základní třídy.
 
 ### <a name="example"></a>Příklad
 
@@ -452,21 +452,21 @@ void EndDialog(int nEndID);
 ### <a name="parameters"></a>Parametry
 
 *nEndID*<br/>
-Identifikátor, který se použije jako návratovou hodnotu vlastností.
+Identifikátor, který má být použit jako návratová hodnota seznamu vlastností.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato členská funkce je voláno rozhraním, když se stiskne OK, zrušit nebo tlačítko Zavřít. Volání, že tato členská funkce, pokud dojde k události, která by se měla zavřít okno vlastností.
+Tato členská funkce je volána rozhraním, když je stisknuto tlačítko OK, zrušit nebo zavřít. Pokud dojde k události, která by měla zavřít seznam vlastností, zavolejte tuto členskou funkci.
 
-Tato členská funkce používá jenom s modální dialogové okno.
+Tato členská funkce se používá jenom s modálním dialogovým oknem.
 
 ### <a name="example"></a>Příklad
 
-Podívejte se na příklad pro [CPropertySheet::PressButton](#pressbutton).
+Podívejte se na příklad pro [CPropertySheet –::P ressbutton](#pressbutton).
 
-##  <a name="getactiveindex"></a>  CPropertySheet::GetActiveIndex
+##  <a name="getactiveindex"></a>CPropertySheet –:: GetActiveIndex
 
-Získá číslo indexu stránky aktivní okno seznam vlastností a použije je jako parametr pro vrácený číslo indexu `GetPage`.
+Získá číslo indexu aktivní stránky okna seznamu vlastností a potom použije vrácené číslo indexu jako parametr pro `GetPage`.
 
 ```
 int GetActiveIndex() const;
@@ -474,15 +474,15 @@ int GetActiveIndex() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Indexové číslo aktivní stránkou.
+Číslo indexu aktivní stránky.
 
 ### <a name="example"></a>Příklad
 
-Podívejte se na příklad pro [CPropertySheet::GetActivePage](#getactivepage).
+Podívejte se na příklad pro [CPropertySheet –:: GetActivePage](#getactivepage).
 
-##  <a name="getactivepage"></a>  CPropertySheet::GetActivePage
+##  <a name="getactivepage"></a>CPropertySheet –:: GetActivePage
 
-Načte aktivní stránkou. okna List vlastností.
+Načte aktivní stránku okna seznamu vlastností.
 
 ```
 CPropertyPage* GetActivePage() const;
@@ -490,19 +490,19 @@ CPropertyPage* GetActivePage() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Ukazatel na aktivní stránkou.
+Ukazatel na aktivní stránku.
 
 ### <a name="remarks"></a>Poznámky
 
-Tuto funkci člena můžete použijte k provedení nějaké akce na aktivní stránce.
+Tuto členskou funkci použijte k provedení některé akce na aktivní stránce.
 
 ### <a name="example"></a>Příklad
 
 [!code-cpp[NVC_MFCDocView#135](../../mfc/codesnippet/cpp/cpropertysheet-class_7.cpp)]
 
-##  <a name="getpage"></a>  CPropertySheet::GetPage
+##  <a name="getpage"></a>CPropertySheet –:: GetPage
 
-Vrací ukazatel na zadanou stránku v tomto seznamu vlastností.
+Vrátí ukazatel na určenou stránku v tomto seznamu vlastností.
 
 ```
 CPropertyPage* GetPage(int nPage) const;
@@ -511,19 +511,19 @@ CPropertyPage* GetPage(int nPage) const;
 ### <a name="parameters"></a>Parametry
 
 *nPage*<br/>
-Index požadovanou stránku začínajícím hodnotou 0. Musí být mezi 0 a menší než počet stránek v seznamu vlastností (včetně).
+Index požadované stránky, počínaje hodnotou 0 Hodnota musí být mezi 0 a menší než počet stránek v seznamu vlastností (včetně).
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Ukazatel na odpovídající stránku na *nPage* parametru.
+Ukazatel na stránku odpovídající parametru *nPage* .
 
 ### <a name="example"></a>Příklad
 
-Podívejte se na příklad pro [CPropertyPage::OnWizardFinish](../../mfc/reference/cpropertypage-class.md#onwizardfinish).
+Podívejte se na příklad pro [CPropertyPage –:: OnWizardFinish](../../mfc/reference/cpropertypage-class.md#onwizardfinish).
 
 ##  <a name="getpagecount"></a>  CPropertySheet::GetPageCount
 
-Určuje, kolik stránek se nyní v seznamu vlastností.
+Určuje počet stránek, které jsou aktuálně v seznamu vlastností.
 
 ```
 int GetPageCount() const;
@@ -535,11 +535,11 @@ Počet stránek v seznamu vlastností.
 
 ### <a name="example"></a>Příklad
 
-Podívejte se na příklad pro [CPropertyPage::OnWizardFinish](../../mfc/reference/cpropertypage-class.md#onwizardfinish).
+Podívejte se na příklad pro [CPropertyPage –:: OnWizardFinish](../../mfc/reference/cpropertypage-class.md#onwizardfinish).
 
-##  <a name="getpageindex"></a>  CPropertySheet::GetPageIndex
+##  <a name="getpageindex"></a>CPropertySheet –:: GetPageIndex
 
-Načte index zadané stránky v seznamu vlastností.
+Načte číslo indexu zadané stránky v seznamu vlastností.
 
 ```
 int GetPageIndex(CPropertyPage* pPage);
@@ -548,23 +548,23 @@ int GetPageIndex(CPropertyPage* pPage);
 ### <a name="parameters"></a>Parametry
 
 *pPage*<br/>
-Odkazuje na stránku s indexem nalezen. Nemůže mít hodnotu NULL.
+Odkazuje na stránku s indexem, který se má najít. Nemůže mít hodnotu NULL.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Indexové číslo stránky.
+Číslo indexu stránky
 
 ### <a name="remarks"></a>Poznámky
 
-Například byste použili `GetPageIndex` získat index stránky, chcete-li použít [SetActivePage](#setactivepage) nebo [GetPage](#getpage).
+Například můžete použít `GetPageIndex` k získání indexu stránky, aby bylo možné použít [SetActivePage](#setactivepage) nebo GetPage. [](#getpage)
 
 ### <a name="example"></a>Příklad
 
-Podívejte se na příklad pro [CPropertySheet::GetActivePage](#getactivepage).
+Podívejte se na příklad pro [CPropertySheet –:: GetActivePage](#getactivepage).
 
 ##  <a name="gettabcontrol"></a>  CPropertySheet::GetTabControl
 
-Načte ukazatel na něco specifické pro ovládací prvek karty ovládacího prvku karta (to znamená, že k používání některé z rozhraní API v [atributu CTabCtrl](../../mfc/reference/ctabctrl-class.md)).
+Načte ukazatel na ovládací prvek karta a provede něco konkrétního ovládacího prvku karta (to znamená, aby bylo možné použít kterékoli rozhraní API v [atributu CTabCtrl](../../mfc/reference/ctabctrl-class.md)).
 
 ```
 CTabCtrl* GetTabControl() const;
@@ -572,11 +572,11 @@ CTabCtrl* GetTabControl() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Ukazatel na ovládací prvek karty.
+Ukazatel na ovládací prvek karta.
 
 ### <a name="remarks"></a>Poznámky
 
-Voláním této členské funkce, například pokud chcete přidat rastrových obrázků na každé kartě během inicializace.
+Například volejte tuto členskou funkci, pokud chcete přidat rastrové obrázky na každou kartu během inicializace.
 
 ### <a name="example"></a>Příklad
 
@@ -584,21 +584,21 @@ Voláním této členské funkce, například pokud chcete přidat rastrových o
 
 ##  <a name="m_psh"></a>  CPropertySheet::m_psh
 
-Strukturu, jejíž členové uložení vlastnosti [PROPSHEETHEADER](/windows/desktop/api/prsht/ns-prsht-_propsheetheadera_v2).
+Struktura, jejíž členové ukládají vlastnosti [PROPSHEETHEADER](/windows/desktop/api/prsht/ns-prsht-propsheetheadera_v2).
 
 ### <a name="remarks"></a>Poznámky
 
-Tuto strukturu použít pro inicializaci vzhled seznamu vlastností po je vytvořena, ale než se zobrazí s [DoModal](#domodal) členskou funkci. Například nastavit *dwSize* člen `m_psh` velikosti chcete mít seznam vlastností.
+Tuto strukturu použijte k inicializaci vzhledu seznamu vlastností po jeho vytvoření, ale před jeho zobrazením s členskou funkcí [DoModal](#domodal) . Například nastavte člena `m_psh` *nenulového dwSize funkci* na velikost, kterou má mít seznam vlastností.
 
-Další informace o této struktuře, včetně seznamu členů naleznete v tématu PROPSHEETHEADER v sadě Windows SDK.
+Další informace o této struktuře, včetně výpisu jejích členů, najdete v tématu PROPSHEETHEADER v Windows SDK.
 
 ### <a name="example"></a>Příklad
 
 [!code-cpp[NVC_MFCDocView#143](../../mfc/codesnippet/cpp/cpropertysheet-class_9.cpp)]
 
-##  <a name="mapdialogrect"></a>  CPropertySheet::MapDialogRect
+##  <a name="mapdialogrect"></a>CPropertySheet –:: MapDialogRect
 
-Převede jednotkách dialogového okna obdélník na obrazovce jednotky.
+Převede jednotky dialogového okna obdélníku na jednotky obrazovky.
 
 ```
 void MapDialogRect(LPRECT lpRect) const;
@@ -607,15 +607,15 @@ void MapDialogRect(LPRECT lpRect) const;
 ### <a name="parameters"></a>Parametry
 
 *lpRect*<br/>
-Odkazuje na [RECT](/previous-versions/dd162897\(v=vs.85\)) struktury nebo [crect –](../../atl-mfc-shared/reference/crect-class.md) objekt, který obsahuje – dialogové okno koordinuje má být převeden.
+Odkazuje na strukturu [Rect](/previous-versions/dd162897\(v=vs.85\)) nebo objekt [CRect](../../atl-mfc-shared/reference/crect-class.md) , který obsahuje souřadnice dialogových oken, které mají být převedeny.
 
 ### <a name="remarks"></a>Poznámky
 
-Jsou dialogového okna jednotky vyjádřený jako aktuální základní jednotku dialogového okna odvozený od průměrné šířku a výšku znaků v písmo použité pro text dialogového okna. Jedna jednotka na vodorovné čtvrtinu jednotku base šířky dialogového okna a jedna jednotka na svislé je 28 jedné jednotky základní výška dialogového okna.
+Jednotky dialogového okna jsou uvedeny ve smyslu aktuální základní jednotky dialogového okna odvozené od průměrné šířky a výšky znaků v písmu použitém pro text dialogového okna. Jedna vodorovná jednotka je jednou ze čtvrté jednotky základní šířky dialogového okna a jedna svislá jednotka je o jednu osmina jednotky základní výšky dialogového okna.
 
-[GetDialogBaseUnits](/windows/desktop/api/winuser/nf-winuser-getdialogbaseunits) vrátí informace o velikosti písma systému Windows, můžete ale zadat písmo pro každý seznam vlastností použití stylu DS_SETFONT v souboru definice prostředků. [MapDialogRect](/windows/desktop/api/winuser/nf-winuser-mapdialogrect) funkce Windows, je popsáno v sadě Windows SDK, používá odpovídající písmo pro toto dialogové okno.
+Funkce [GetDialogBaseUnits](/windows/desktop/api/winuser/nf-winuser-getdialogbaseunits) systému Windows vrací informace o velikosti systémového písma, ale pro každý seznam vlastností lze zadat jiné písmo, pokud použijete styl DS_SETFONT v souboru definice prostředků. Funkce [MapDialogRect](/windows/desktop/api/winuser/nf-winuser-mapdialogrect) systému Windows, která je popsána v Windows SDK, používá vhodná písma pro toto dialogové okno.
 
-`MapDialogRect` Členskou funkci nahrazuje jednotky dialogového okna v *lprect –* s obrazovky jednotek (v pixelech) tak, že obdélník lze použít k vytvoření dialogového nebo umístit ovládací prvek v poli.
+Členská funkce nahradí jednotky dialogového okna v lpRect s jednotkami obrazovky (pixely) tak, aby obdélník mohl být použit k vytvoření dialogového okna nebo umístění ovládacího prvku v rámci pole. `MapDialogRect`
 
 ##  <a name="oninitdialog"></a>  CPropertySheet::OnInitDialog
 
@@ -627,19 +627,19 @@ virtual BOOL OnInitDialog();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Určuje, zda v aplikaci je nastaven vstupní fokus na některý ovládací prvky v seznamu vlastností. Pokud `OnInitDialog` vrátí nenulovou hodnotu, Windows nastaví zaměření pro vstup na první prvek v seznamu vlastností. Aplikace může vrátit 0 pouze v případě, že je explicitně nastaveno zaměření pro vstup na jeden z ovládacích prvků v seznamu vlastností.
+Určuje, zda aplikace nastavila vstupní fokus na jeden z ovládacích prvků v seznamu vlastností. Pokud `OnInitDialog` vrátí nenulovou hodnotu, systém Windows nastaví fokus vstupu na první ovládací prvek v seznamu vlastností. Aplikace může vrátit 0 pouze v případě, že explicitně nastaví fokus vstupu na jeden z ovládacích prvků v seznamu vlastností.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato členská funkce je volána v reakci na nezavěsíte zprávu. Tato zpráva se pošle do seznamu vlastností během [vytvořit](#create) nebo [DoModal](#domodal) volání, ke kterým dochází, bezprostředně před zobrazením seznamu vlastností je.
+Tato členská funkce se volá v reakci na zprávu WM_INITDIALOG. Tato zpráva se odešle do seznamu vlastností během volání [Create](#create) nebo [DoModal](#domodal) , která se objeví těsně před zobrazením seznamu vlastností.
 
-Tato členská funkce přepište, pokud je třeba provést zvláštní zpracování při inicializaci vlastností. Přepsané verze nejprve volat základní třídy `OnInitDialog` ale ignorovat jeho návratovou hodnotu. Obvykle se vrací TRUE, z vaší funkce přepsanému členu.
+Tuto členskou funkci přepište, pokud při inicializaci seznamu vlastností potřebujete provést zvláštní zpracování. V přepsané verzi nejdříve zavolejte základní třídu `OnInitDialog` , ale Nezabereme její návratovou hodnotu. Obvykle se vrátí TRUE z přepsané členské funkce.
 
-Není nutné položka mapy zpráv pro tuto členskou funkci.
+Pro tuto členskou funkci nepotřebujete položku mapování zpráv.
 
 ##  <a name="pressbutton"></a>  CPropertySheet::PressButton
 
-Simuluje volba od určeného tlačítka v seznamu vlastností.
+Simuluje výběr zadaného tlačítka v seznamu vlastností.
 
 ```
 void PressButton(int nButton);
@@ -647,36 +647,36 @@ void PressButton(int nButton);
 
 ### <a name="parameters"></a>Parametry
 
-*nButton*<br/>
-nButton: Určuje tlačítko, aby se aktivovala. Tento parametr může být jeden z následujících hodnot:
+*nNový*<br/>
+nNový Identifikuje tlačítko, které se má stisknout. Tento parametr může být jedna z následujících hodnot:
 
-- PSBTN_BACK klikne na tlačítko Zpět.
+- PSBTN_BACK klikne na tlačítko zpět.
 
-- PSBTN_NEXT klikne na tlačítko Další.
+- PSBTN_NEXT klepne na tlačítko Další.
 
 - PSBTN_FINISH klikne na tlačítko Dokončit.
 
 - PSBTN_OK klikne na tlačítko OK.
 
-- PSBTN_APPLYNOW zvolí tlačítko použít.
+- PSBTN_APPLYNOW klikne na tlačítko použít.
 
 - PSBTN_CANCEL klikne na tlačítko Storno.
 
-- PSBTN_HELP klikne na tlačítko Nápověda.
+- PSBTN_HELP zvolí tlačítko Help.
 
 ### <a name="remarks"></a>Poznámky
 
-Zobrazit [PSM_PRESSBUTTON](/windows/desktop/Controls/psm-pressbutton) Další informace o zprávě Windows SDK Pressbutton.
+Další informace o Windows SDK zprávě PressButton najdete v tématu [PSM_PRESSBUTTON](/windows/desktop/Controls/psm-pressbutton) .
 
-Volání `PressButton` nebudou odesílat [PSN_APPLY](/windows/desktop/Controls/psn-apply) oznámení ze stránky vlastností rozhraní Framework. Chcete-li/nepošle toto oznámení, zavolejte [CPropertyPage::OnOK](../../mfc/reference/cpropertypage-class.md#onok).
+Volání `PressButton` nebudou odesílat oznámení [PSN_APPLY](/windows/desktop/Controls/psn-apply) ze stránky vlastností do rozhraní. Chcete-li odeslat toto oznámení, zavolejte [CPropertyPage –:: OnOK –](../../mfc/reference/cpropertypage-class.md#onok).
 
 ### <a name="example"></a>Příklad
 
 [!code-cpp[NVC_MFCDocView#137](../../mfc/codesnippet/cpp/cpropertysheet-class_10.cpp)]
 
-##  <a name="removepage"></a>  CPropertySheet::RemovePage
+##  <a name="removepage"></a>CPropertySheet –:: volat RemovePage
 
-Odebere stránku ze seznamu vlastností a odstraní přidružené okno.
+Odebere ze seznamu vlastností stránku a odstraní přidružené okno.
 
 ```
 void RemovePage(CPropertyPage* pPage);
@@ -686,18 +686,18 @@ void RemovePage(int nPage);
 ### <a name="parameters"></a>Parametry
 
 *pPage*<br/>
-Odkazuje na stránku, kde odeberou ze seznamu vlastností. Nemůže mít hodnotu NULL.
+Odkazuje na stránku, která má být odebrána ze seznamu vlastností. Nemůže mít hodnotu NULL.
 
 *nPage*<br/>
-Index stránky k odebrání. Musí být mezi 0 a menší než počet stránek v seznamu vlastností (včetně).
+Index stránky, která se má odebrat Hodnota musí být mezi 0 a menší než počet stránek v seznamu vlastností (včetně).
 
 ### <a name="remarks"></a>Poznámky
 
-[CPropertyPage](../../mfc/reference/cpropertypage-class.md) samotného objektu není zničen až vlastník `CPropertySheet` zavření časového intervalu.
+Samotný objekt [CPropertyPage –](../../mfc/reference/cpropertypage-class.md) nebude zničen, dokud není zavřen vlastník `CPropertySheet` okna.
 
-##  <a name="setactivepage"></a>  CPropertySheet::SetActivePage
+##  <a name="setactivepage"></a>CPropertySheet –:: SetActivePage
 
-Mění aktivní stránkou.
+Změní aktivní stránku.
 
 ```
 BOOL SetActivePage(int nPage);
@@ -707,26 +707,26 @@ BOOL SetActivePage(CPropertyPage* pPage);
 ### <a name="parameters"></a>Parametry
 
 *nPage*<br/>
-Index stránky lze nastavit. Musí být mezi 0 a menší než počet stránek v seznamu vlastností (včetně).
+Index stránky, která se má nastavit Musí být mezi 0 a menší než počet stránek v seznamu vlastností (včetně).
 
 *pPage*<br/>
-Odkazuje na stránku nastavení v seznamu vlastností. Nemůže být NULL.
+Odkazuje na stránku, která má být nastavena v seznamu vlastností. Nemůže mít hodnotu NULL.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Nenulové, pokud se úspěšně; aktivuje seznam vlastností jinak 0.
+Nenulové, pokud je seznam vlastností úspěšně aktivován; v opačném případě 0.
 
 ### <a name="remarks"></a>Poznámky
 
-Například použít `SetActivePage` Pokud akce uživatele na jedné stránce by neměly způsobit jinou stránku stane aktivní stránkou.
+Například použijte `SetActivePage` v případě, že akce uživatele na jedné stránce by měla způsobit, že se na aktivní stránce stane jiná stránka.
 
 ### <a name="example"></a>Příklad
 
-Podívejte se na příklad pro [CPropertySheet::GetActivePage](#getactivepage).
+Podívejte se na příklad pro [CPropertySheet –:: GetActivePage](#getactivepage).
 
-##  <a name="setfinishtext"></a>  CPropertySheet::SetFinishText
+##  <a name="setfinishtext"></a>CPropertySheet –:: SetFinishText
 
-Nastaví text v příkazové tlačítko Dokončit.
+Nastaví text na příkazovém tlačítku dokončit.
 
 ```
 void SetFinishText(LPCTSTR lpszText);
@@ -735,19 +735,19 @@ void SetFinishText(LPCTSTR lpszText);
 ### <a name="parameters"></a>Parametry
 
 *lpszText*<br/>
-Odkazuje na text, který se zobrazí na příkazové tlačítko Dokončit.
+Odkazuje na text, který se má zobrazit na příkazovém tlačítku pro dokončení.
 
 ### <a name="remarks"></a>Poznámky
 
-Volání `SetFinishText` zobrazit text na tlačítku pro příkaz Dokončit a po dokončení akce na poslední stránce průvodce uživatel skrýt tlačítka Další a zpět.
+Voláním `SetFinishText` zobrazíte text na příkazovém tlačítku dokončit a skryjete tlačítko Další a zpět, jakmile uživatel dokončí akci na poslední stránce průvodce.
 
 ### <a name="example"></a>Příklad
 
 [!code-cpp[NVC_MFCDocView#138](../../mfc/codesnippet/cpp/cpropertysheet-class_11.cpp)]
 
-##  <a name="settitle"></a>  CPropertySheet::SetTitle
+##  <a name="settitle"></a>CPropertySheet –:: SetTitle
 
-Určuje titulek seznam vlastností (text zobrazený v záhlaví okna rámce).
+Určuje titulek seznamu vlastností (text zobrazený v záhlaví okna rámce).
 
 ```
 void SetTitle(
@@ -758,22 +758,22 @@ void SetTitle(
 ### <a name="parameters"></a>Parametry
 
 *nStyle*<br/>
-Určuje styl listu název vlastnosti. Styl musí nastavit na 0 nebo jako PSH_PROPTITLE. Pokud je styl nastavená jako PSH_PROPTITLE, slovo "Properties" se zobrazí po textem zadaným jako popisek. Například volání `SetTitle`("Simple", PSH_PROPTITLE) bude mít za následek titulek list vlastností "Jednoduchých vlastností."
+Určuje styl názvu seznamu vlastností. Styl musí být zadán na hodnotu 0 nebo jako PSH_PROPTITLE. Pokud je styl nastaven jako PSH_PROPTITLE, zobrazí se po textu zadaném jako popisek slovo Properties (vlastnosti). Například volání `SetTitle`("Simple", PSH_PROPTITLE) bude mít za následek nadpis seznamu vlastností "jednoduché vlastnosti".
 
 *lpszText*<br/>
-Odkazuje na text, který se použije jako popisek v záhlaví okna vlastností.
+Odkazuje na text, který má být použit jako titulek v záhlaví seznamu vlastností.
 
 ### <a name="remarks"></a>Poznámky
 
-Ve výchozím nastavení používá seznam vlastností titulek parametr v konstruktoru list vlastností.
+Ve výchozím nastavení seznam vlastností používá parametr Caption v konstruktoru seznamu vlastností.
 
 ### <a name="example"></a>Příklad
 
 [!code-cpp[NVC_MFCDocView#139](../../mfc/codesnippet/cpp/cpropertysheet-class_12.cpp)]
 
-##  <a name="setwizardbuttons"></a>  CPropertySheet::SetWizardButtons
+##  <a name="setwizardbuttons"></a>CPropertySheet –:: SetWizardButtons
 
-Povolí nebo zakáže tlačítko Zpět, další nebo dokončit v seznamu vlastností průvodce.
+Povolí nebo zakáže tlačítko zpět, další nebo dokončit v seznamu vlastností průvodce.
 
 ```
 void SetWizardButtons(DWORD dwFlags);
@@ -782,25 +782,25 @@ void SetWizardButtons(DWORD dwFlags);
 ### <a name="parameters"></a>Parametry
 
 *dwFlags*<br/>
-Sada příznaků, které funkce a vzhled tlačítek průvodce přizpůsobit. Tento parametr může být kombinací následujícího:
+Sada příznaků, které přizpůsobují funkce a vzhled tlačítek průvodce. Tento parametr může být kombinací následujících hodnot:
 
-- Tlačítko Zpět PSWIZB_BACK
+- PSWIZB_BACK – tlačítko zpět
 
 - Tlačítko Další PSWIZB_NEXT
 
-- Tlačítko Dokončit PSWIZB_FINISH
+- Tlačítko pro dokončení PSWIZB_FINISH
 
-- Tlačítko PSWIZB_DISABLEDFINISH zakázané dokončit
+- PSWIZB_DISABLEDFINISH zakázané tlačítko pro dokončení
 
 ### <a name="remarks"></a>Poznámky
 
-Volání `SetWizardButtons` pouze po otevření; dialogového okna nelze volat `SetWizardButtons` před voláním [DoModal](#domodal). Obvykle byste měli volat `SetWizardButtons` z [CPropertyPage::OnSetActive](../../mfc/reference/cpropertypage-class.md#onsetactive).
+Volání `SetWizardButtons` až po otevření dialogového okna; nemůžete volat `SetWizardButtons` před voláním [DoModal](#domodal). Obvykle byste měli zavolat `SetWizardButtons` z [CPropertyPage –:: OnSetActive](../../mfc/reference/cpropertypage-class.md#onsetactive).
 
-Pokud chcete změnit text na tlačítko Dokončit nebo skrýt další a tlačítka zpět po uživatel dokončí Průvodce volání [SetFinishText](#setfinishtext). Všimněte si, že stejné tlačítko sdílí pro dokončení a další. Můžete zobrazit dokončení nebo na tlačítko Další najednou, ale ne obojí.
+Pokud chcete změnit text na tlačítku dokončit nebo skrýt tlačítko Další a zpět, jakmile uživatel průvodce dokončí, zavolejte [SetFinishText](#setfinishtext). Všimněte si, že stejné tlačítko je sdíleno pro možnost Dokončit a další. V jednom okamžiku můžete zobrazit tlačítko Dokončit nebo další, ale ne obojí.
 
 ### <a name="example"></a>Příklad
 
-A `CPropertySheet` má tři stránky vlastností Průvodce: `CStylePage`, `CColorPage`, a `CShapePage`.  Následující fragment kódu ukazuje, jak povolit a zakázat **zpět** a **Další** tlačítka na stránce průvodce vlastností.
+Má tři stránky vlastností Průvodce: `CStylePage`, `CColorPage`, a `CShapePage`. `CPropertySheet`  Následující fragment kódu ukazuje, jak povolit a zakázat tlačítka **zpět** a **Další** na stránce vlastností průvodce.
 
 [!code-cpp[NVC_MFCDocView#140](../../mfc/codesnippet/cpp/cpropertysheet-class_13.cpp)]
 
@@ -808,9 +808,9 @@ A `CPropertySheet` má tři stránky vlastností Průvodce: `CStylePage`, `CColo
 
 [!code-cpp[NVC_MFCDocView#138](../../mfc/codesnippet/cpp/cpropertysheet-class_11.cpp)]
 
-##  <a name="setwizardmode"></a>  CPropertySheet::SetWizardMode
+##  <a name="setwizardmode"></a>CPropertySheet –:: SetWizardMode
 
-Stránky vlastností se zavádí jako průvodce.
+Vytvoří stránku vlastností jako průvodce.
 
 ```
 void SetWizardMode();
@@ -818,11 +818,11 @@ void SetWizardMode();
 
 ### <a name="remarks"></a>Poznámky
 
-Klíčovou charakteristikou stránky průvodce vlastností je, že uživatel přejde pomocí další nebo dokončit, zpět a stornovací tlačítka namísto tabulátorů.
+Klíčovou charakteristikou stránky průvodce je, že uživatel přejde pomocí tlačítek Další nebo dokončit, zpět a zrušit místo na kartách.
 
-Volání `SetWizardMode` před voláním [DoModal](#domodal). Po zavolání `SetWizardMode`, `DoModal` vrátí ID_WIZFINISH (Pokud je uživatel nezavře pomocí tlačítka pro dokončení) nebo IDCANCEL.
+Zavolejte `SetWizardMode` před voláním [DoModal](#domodal). Po volání `SetWizardMode` `DoModal` vrátí buď ID_WIZFINISH (Pokud uživatel zavírá tlačítko Dokončit), nebo IDCANCEL.
 
-`SetWizardMode` Nastaví příznak PSH_WIZARD.
+`SetWizardMode`nastaví příznak PSH_WIZARD.
 
 ### <a name="example"></a>Příklad
 
@@ -830,9 +830,9 @@ Volání `SetWizardMode` před voláním [DoModal](#domodal). Po zavolání `Set
 
 ## <a name="see-also"></a>Viz také:
 
-[Ukázka CMNCTRL1 knihovny MFC](../../overview/visual-cpp-samples.md)<br/>
-[Ukázka CMNCTRL2 knihovny MFC](../../overview/visual-cpp-samples.md)<br/>
-[Ukázky knihovny MFC PROPDLG](../../overview/visual-cpp-samples.md)<br/>
-[Ukázky knihovny MFC SNAPVW](../../overview/visual-cpp-samples.md)<br/>
+[CMNCTRL1 Sample MFC](../../overview/visual-cpp-samples.md)<br/>
+[CMNCTRL2 Sample MFC](../../overview/visual-cpp-samples.md)<br/>
+[PROPDLG Sample MFC](../../overview/visual-cpp-samples.md)<br/>
+[SNAPVW Sample MFC](../../overview/visual-cpp-samples.md)<br/>
 [CWnd – třída](../../mfc/reference/cwnd-class.md)<br/>
 [Graf hierarchie](../../mfc/hierarchy-chart.md)

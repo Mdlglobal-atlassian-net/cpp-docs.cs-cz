@@ -1,5 +1,5 @@
 ---
-title: CRichEditDoc Class
+title: CRichEditDoc – třída
 ms.date: 11/04/2016
 f1_keywords:
 - CRichEditDoc
@@ -14,16 +14,16 @@ helpviewer_keywords:
 - CRichEditDoc [MFC], GetView
 - CRichEditDoc [MFC], m_bRTF
 ms.assetid: c936ec18-d516-49d4-b7fb-c9aa0229eddc
-ms.openlocfilehash: 4cc3af7649d30a153b67cd8269e595c11018833f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d296185fe2ea2216f4abe17b191f71b6fa36e1f9
+ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62372085"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68916713"
 ---
-# <a name="cricheditdoc-class"></a>CRichEditDoc Class
+# <a name="cricheditdoc-class"></a>CRichEditDoc – třída
 
-S [cricheditview –](../../mfc/reference/cricheditview-class.md) a [cricheditcntritem –](../../mfc/reference/cricheditcntritem-class.md), poskytuje funkce pro ovládací prvek RTF v rámci kontextu architektury zobrazení dokumentu MFC.
+Pomocí [CRichEditView –](../../mfc/reference/cricheditview-class.md) a [CRichEditCntrItem](../../mfc/reference/cricheditcntritem-class.md)poskytuje funkce ovládacího prvku Rich Edit v rámci kontextu architektury zobrazení dokumentu knihovny MFC.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -35,35 +35,35 @@ class CRichEditDoc : public COleServerDoc
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
-|[CRichEditDoc::CreateClientItem](#createclientitem)|Volá se, aby, vyčistěte dokumentu.|
-|[CRichEditDoc::GetStreamFormat](#getstreamformat)|Určuje, zda datový proud vstup a výstup by měl obsahovat informace o formátování.|
-|[CRichEditDoc::GetView](#getview)|Načte asssociated [cricheditview –](../../mfc/reference/cricheditview-class.md) objektu.|
+|[CRichEditDoc::CreateClientItem](#createclientitem)|Volá se, aby se provedlo vyčištění dokumentu.|
+|[CRichEditDoc::GetStreamFormat](#getstreamformat)|Určuje, zda by měl vstup a výstup streamu zahrnovat informace o formátování.|
+|[CRichEditDoc:: GetView](#getview)|Načte objekt asssociated [CRichEditView –](../../mfc/reference/cricheditview-class.md) .|
 
 ### <a name="public-data-members"></a>Veřejné datové členy
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
-|[CRichEditDoc::m_bRTF](#m_brtf)|Určuje, zda by měl obsahovat datový proud vstupně-výstupní operace formátování.|
+|[CRichEditDoc::m_bRTF](#m_brtf)|Určuje, zda má vstupní/výstupní datový proud zahrnovat formátování.|
 
 ## <a name="remarks"></a>Poznámky
 
-"Ovládacího prvku rich edit" je okno, ve kterém můžete uživatele zadat a upravit text. Text je možné přiřadit formátování znaků a odstavců a může obsahovat vložené objekty OLE. Bohaté ovládacích prvcích pro úpravy poskytují programovací rozhraní pro formátování textu. Však musí aplikace implementovat součásti potřebné k zajištění operací formátování pro uživatele k dispozici žádné uživatelského rozhraní.
+"Ovládací prvek" Rich Edit "je okno, ve kterém může uživatel text zadat a upravit. Textu lze přiřadit formátování znaků a odstavců a může obsahovat vložené objekty OLE. Ovládací prvky s bohatým úpravou poskytují programovací rozhraní pro formátování textu. Aplikace však musí implementovat všechny součásti uživatelského rozhraní, které jsou nezbytné k zpřístupnění operací formátování uživateli.
 
-`CRichEditView` udržuje textu a formátování vlastnosti textu. `CRichEditDoc` udržuje seznam klientské položky, které jsou v zobrazení. `CRichEditCntrItem` poskytuje kontejner straně přístup ke klientské položky OLE.
+`CRichEditView`zachová text a formátuje charakteristiky textu. `CRichEditDoc`udržuje seznam položek klienta, které jsou v zobrazení. `CRichEditCntrItem`poskytuje přístup na straně kontejneru k položkám klienta OLE.
 
-Tento ovládací prvek Windows běžné (a tedy [CRichEditCtrl](../../mfc/reference/cricheditctrl-class.md) a související třídy) je dostupná jenom pro programy spuštěné v rámci Windows 95/98 a Windows NT verze 3.51 a vyšší.
+Tento běžný ovládací prvek systému Windows (a proto [CRichEditCtrl](../../mfc/reference/cricheditctrl-class.md) a související třídy) je k dispozici pouze pro programy, které jsou spuštěny v systémech Windows 95/98 a Windows NT verze 3,51 a novější.
 
-Příklad použití RichEdit dokumentu v aplikaci knihovny MFC, najdete v článku [WORDPAD](../../overview/visual-cpp-samples.md) ukázkovou aplikaci.
+Příklad použití dokumentu s bohatou úpravou v aplikaci knihovny MFC naleznete v ukázkové aplikaci [WordPad](../../overview/visual-cpp-samples.md) .
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
-[Třídy CObject](../../mfc/reference/cobject-class.md)
+[CObject](../../mfc/reference/cobject-class.md)
 
 [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)
 
-[CDocument](../../mfc/reference/cdocument-class.md)
+[Objektu CDocument](../../mfc/reference/cdocument-class.md)
 
 [COleDocument](../../mfc/reference/coledocument-class.md)
 
@@ -75,11 +75,11 @@ Příklad použití RichEdit dokumentu v aplikaci knihovny MFC, najdete v člán
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** afxrich.h
+**Záhlaví:** afxrich. h
 
-##  <a name="createclientitem"></a>  CRichEditDoc::CreateClientItem
+##  <a name="createclientitem"></a>CRichEditDoc:: CreateClientItem
 
-Volání této funkce můžete vytvořit `CRichEditCntrItem` objektu a přidejte ho do tohoto dokumentu.
+Voláním této funkce vytvoříte `CRichEditCntrItem` objekt a přidáte ho do tohoto dokumentu.
 
 ```
 virtual CRichEditCntrItem* CreateClientItem(REOBJECT* preo = NULL) const = 0;
@@ -88,21 +88,21 @@ virtual CRichEditCntrItem* CreateClientItem(REOBJECT* preo = NULL) const = 0;
 ### <a name="parameters"></a>Parametry
 
 *preo*<br/>
-Ukazatel [REOBJECT](/windows/desktop/api/richole/ns-richole-_reobject) struktura, která popisuje položky OLE. Nové `CRichEditCntrItem` objektu je postavena na tuto položku OLE. Pokud *preo* má hodnotu NULL, nová položka klienta je prázdná.
+Ukazatel na přeobjektovou strukturu, která popisuje položku OLE. [](/windows/desktop/api/richole/ns-richole-reobject) Nový `CRichEditCntrItem` objekt je vytvořen kolem této položky OLE. Pokud má *preo* hodnotu null, nová položka klienta je prázdná.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Ukazatel na novou [cricheditcntritem –](../../mfc/reference/cricheditcntritem-class.md) objekt, který byl přidán do tohoto dokumentu.
+Ukazatel na nový objekt [CRichEditCntrItem](../../mfc/reference/cricheditcntritem-class.md) , který byl přidán do tohoto dokumentu.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato funkce není udělat všechny inicializace technologie OLE.
+Tato funkce neprovádí žádnou inicializaci technologie OLE.
 
-Další informace najdete v tématu [REOBJECT](/windows/desktop/api/richole/ns-richole-_reobject) struktura v sadě Windows SDK.
+Další informace naleznete v tématu struktura [přeobjektů](/windows/desktop/api/richole/ns-richole-reobject) v Windows SDK.
 
-##  <a name="getstreamformat"></a>  CRichEditDoc::GetStreamFormat
+##  <a name="getstreamformat"></a>CRichEditDoc:: GetStreamFormat
 
-Voláním této funkce k určení formátu textu pro streamování obsahu RichEdit.
+Voláním této funkce určíte textový formát pro streamování obsahu s bohatou úpravou.
 
 ```
 int GetStreamFormat() const;
@@ -112,17 +112,17 @@ int GetStreamFormat() const;
 
 Jeden z následujících příznaků:
 
-- SF_TEXT označuje, že získáte bohaté ovládací prvek textové pole neumožňuje spravovat informace o formátování.
+- SF_TEXT označuje, že ovládací prvek RichEdit pro úpravy neudržuje informace o formátování.
 
-- SF_RTF označuje, že pro úpravy s formátováním ovládací prvek Udržovat informace o formátování.
+- SF_RTF označuje, že ovládací prvek RichEdit pro úpravy udržuje informace o formátování.
 
 ### <a name="remarks"></a>Poznámky
 
-Návratová hodnota je založena na [m_bRTF](#m_brtf) datový člen. Tato funkce vrací SF_RTF Pokud `m_bRTF` je TRUE; v opačném případě SF_TEXT.
+Vrácená hodnota je založena na datovém členu [m_bRTF](#m_brtf) . Tato funkce vrátí SF_RTF, `m_bRTF` Pokud je true, jinak SF_TEXT.
 
-##  <a name="getview"></a>  CRichEditDoc::GetView
+##  <a name="getview"></a>CRichEditDoc:: GetView
 
-Voláním této funkce pro přístup k [cricheditview –](../../mfc/reference/cricheditview-class.md) objekt přidružený k tomuto `CRichEditDoc` objektu.
+Voláním této funkce získáte přístup k objektu [CRichEditView –](../../mfc/reference/cricheditview-class.md) přidruženému `CRichEditDoc` k tomuto objektu.
 
 ```
 virtual CRichEditView* GetView() const;
@@ -130,15 +130,15 @@ virtual CRichEditView* GetView() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Ukazatel `CRichEditView` objekt přidružený k dokumentu.
+Ukazatel na `CRichEditView` objekt přidružený k dokumentu.
 
 ### <a name="remarks"></a>Poznámky
 
-Souhrnný text a informace o formátování `CRichEditView` objektu. `CRichEditDoc` Udržuje položky OLE pro serializaci objektu. Měl by existovat pouze jeden `CRichEditView` pro každou `CRichEditDoc`.
+Text a informace o formátování jsou obsaženy v rámci `CRichEditView` objektu. `CRichEditDoc` Objekt udržuje položky OLE pro serializaci. Pro každý `CRichEditView` `CRichEditDoc`by měl být jenom jeden.
 
 ##  <a name="m_brtf"></a>  CRichEditDoc::m_bRTF
 
-V případě hodnoty TRUE označuje, že [CRichEditCtrl::StreamIn](../../mfc/reference/cricheditctrl-class.md#streamin) a [CRichEditCtrl::StreamOut](../../mfc/reference/cricheditctrl-class.md#streamout) měli uložit charakteristiky formátování znaků a odstavců.
+V případě hodnoty TRUE označuje, že [CRichEditCtrl:: streamin](../../mfc/reference/cricheditctrl-class.md#streamin) a [CRichEditCtrl:: Stream](../../mfc/reference/cricheditctrl-class.md#streamout) by měl ukládat charakteristiky formátování odstavců a znaků.
 
 ```
 BOOL m_bRTF;
@@ -146,7 +146,7 @@ BOOL m_bRTF;
 
 ## <a name="see-also"></a>Viz také:
 
-[Ukázky knihovny MFC WORDPAD](../../overview/visual-cpp-samples.md)<br/>
+[Ukázka knihovny MFC v programu WORDPAD](../../overview/visual-cpp-samples.md)<br/>
 [COleServerDoc – třída](../../mfc/reference/coleserverdoc-class.md)<br/>
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>
 [CRichEditView – třída](../../mfc/reference/cricheditview-class.md)<br/>

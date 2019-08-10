@@ -1,5 +1,5 @@
 ---
-title: Cspinbuttonctrl – třída
+title: Atributu CSpinButtonCtrl – třída
 ms.date: 11/04/2016
 f1_keywords:
 - CSpinButtonCtrl
@@ -32,16 +32,16 @@ helpviewer_keywords:
 - CSpinButtonCtrl [MFC], SetPos
 - CSpinButtonCtrl [MFC], SetRange
 ms.assetid: 509bfd76-1c5a-4af6-973f-e133c0b87734
-ms.openlocfilehash: 6f864a37c46158ab98776cd96d9f50d7cfaeb13d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: da247524dae77627bbf041b83bc1534a75c3b073
+ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62324399"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68916693"
 ---
-# <a name="cspinbuttonctrl-class"></a>Cspinbuttonctrl – třída
+# <a name="cspinbuttonctrl-class"></a>Atributu CSpinButtonCtrl – třída
 
-Poskytuje funkce pro Windows běžné tlačítko číselníku.
+Poskytuje funkce obecného ovládacího prvku číselníku pro Windows.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -53,44 +53,44 @@ class CSpinButtonCtrl : public CWnd
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
-|[CSpinButtonCtrl::CSpinButtonCtrl](#cspinbuttonctrl)|Vytvoří `CSpinButtonCtrl` objektu.|
+|[CSpinButtonCtrl::CSpinButtonCtrl](#cspinbuttonctrl)|`CSpinButtonCtrl` Vytvoří objekt.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
-|[CSpinButtonCtrl::Create](#create)|Ovládací prvek číselníku vytvoří a připojí ho k `CSpinButtonCtrl` objektu.|
-|[CSpinButtonCtrl::CreateEx](#createex)|Vytvoří ovládací prvek číselníku se zadaným rozšířené styly Windows a připojí ho k `CSpinButtonCtrl` objektu.|
-|[CSpinButtonCtrl::GetAccel](#getaccel)|Načte informace o zrychlení pro ovládací prvek číselníku.|
-|[CSpinButtonCtrl::GetBase](#getbase)|Načte aktuální základ pro ovládací prvek číselníku.|
-|[CSpinButtonCtrl::GetBuddy](#getbuddy)|Načte ukazatel na aktuální asociovaného okna.|
-|[CSpinButtonCtrl::GetPos](#getpos)|Načte aktuální pozici ovládací prvek číselníku.|
-|[CSpinButtonCtrl::GetRange](#getrange)|Načte horní a dolní mez (oblast) pro ovládací prvek číselníku.|
+|[CSpinButtonCtrl::Create](#create)|Vytvoří ovládací prvek číselníku a připojí ho k `CSpinButtonCtrl` objektu.|
+|[CSpinButtonCtrl::CreateEx](#createex)|Vytvoří ovládací prvek číselníku se zadanými rozšířenými styly Windows a připojí ho k `CSpinButtonCtrl` objektu.|
+|[CSpinButtonCtrl::GetAccel](#getaccel)|Načte informace o akceleraci pro ovládací prvek číselníku.|
+|[CSpinButtonCtrl::GetBase](#getbase)|Načte aktuální základ ovládacího prvku číselníku.|
+|[CSpinButtonCtrl::GetBuddy](#getbuddy)|Načte ukazatel na aktuální kamarád okno.|
+|[CSpinButtonCtrl::GetPos](#getpos)|Načte aktuální pozici ovládacího prvku číselníku.|
+|[CSpinButtonCtrl::GetRange](#getrange)|Načte horní a dolní meze (rozsah) pro ovládací prvek číselníku.|
 |[CSpinButtonCtrl::SetAccel](#setaccel)|Nastaví zrychlení pro ovládací prvek číselníku.|
 |[CSpinButtonCtrl::SetBase](#setbase)|Nastaví základ pro ovládací prvek číselníku.|
-|[CSpinButtonCtrl::SetBuddy](#setbuddy)|Nastaví asociovaného okna pro ovládací prvek číselníku.|
-|[CSpinButtonCtrl::SetPos](#setpos)|Nastaví aktuální pozici pro ovládací prvek.|
-|[CSpinButtonCtrl::SetRange](#setrange)|Nastaví horní a dolní mez (oblast) pro ovládací prvek číselníku.|
+|[CSpinButtonCtrl::SetBuddy](#setbuddy)|Nastaví kamarád okno pro ovládací prvek číselníku.|
+|[CSpinButtonCtrl::SetPos](#setpos)|Nastaví aktuální pozici ovládacího prvku.|
+|[CSpinButtonCtrl::SetRange](#setrange)|Nastaví horní a dolní meze (rozsah) pro ovládací prvek číselníku.|
 
 ## <a name="remarks"></a>Poznámky
 
-"Otočný ovládací prvek tlačítko" (označované také jako ovládací prvek směrem nahoru a dolů) je pár tlačítek, které uživatel může klepnout a zvýšit nebo snížit hodnotu, jako je například pozici posunutí nebo číslo zobrazí v ovládacím prvku Průvodce vyhledáváním. Hodnota přidružená k ovládací prvek číselníku se nazývá své aktuální pozici. Ovládací prvek číselníku se nejčastěji používá s ovládacím prvkem Průvodce vyhledáváním, nazývá "asociované okno."
+"Ovládací prvek číselníku" (označovaný také jako ovládací prvek rozevíracího seznamu) je dvojice tlačítek se šipkami, na které může uživatel kliknout na zvýšení nebo snížení hodnoty, jako je například pozice posunutí nebo číslo zobrazené v doprovodném ovládacím prvku. Hodnota přidružená k ovládacímu prvku číselníku se nazývá aktuální pozice. Ovládací prvek číselníku se nejčastěji používá u doprovodného ovládacího prvku, který se nazývá "přítel okno".
 
-Tento ovládací prvek (a tedy `CSpinButtonCtrl` třídy) je dostupná jenom pro programy spuštěné v rámci Windows 95/98 a Windows NT verze 3.51 a vyšší.
+Tento ovládací prvek (a `CSpinButtonCtrl` třída) je k dispozici pouze pro programy, které jsou spuštěny v systémech Windows 95/98 a Windows NT verze 3,51 a novější.
 
-Pro uživatele ovládací prvek číselníku a jeho asociované okno často vypadat jako jeden ovládací prvek. Můžete určit, že ovládací prvek číselníku umožňuje automatické umísťování samotné vedle jeho asociované okno, a to automaticky nastaví titulek asociovaného okna na aktuální pozici. Ovládací prvek číselníku pomocí ovládacího prvku pro úpravy můžete požádat uživatele o číselných údajů na vstupu.
+Uživateli se ovládací prvek číselníku a jeho přítelní okno často podobají jednomu ovládacímu prvku. Můžete určit, že ovládací prvek číselníku se automaticky umístí vedle jeho kamarádho okna a automaticky nastaví titulek okna pro kamarády na aktuální pozici. Pomocí ovládacího prvku číselník můžete v ovládacím prvku pro úpravy vyzvat uživatele k zadání číselného vstupu.
 
-Kliknutím na šipku nahoru Přesune aktuální pozice směrem k maximální a kliknutím na šipku dolů přesune aktuální pozice směrem k minimální. Ve výchozím nastavení minimální hodnota je 100 a maximální hodnota je 0. Pokaždé, když je větší než maximální nastavení (například když použijete výchozí nastavení), klepnutím na položku nahoru šipka snížení nastavení minimální hodnota pozice a kliknutím na šipku dolů zvyšuje.
+Kliknutím na šipku nahoru přesunete aktuální pozici směrem k maximálnímu počtu a kliknutím na šipku dolů přesunete aktuální pozici směrem k minimálnímu umístění. Ve výchozím nastavení je minimum 100 a maximum je 0. Pokaždé, když je minimální nastavení větší než maximální nastavení (například při použití výchozího nastavení), kliknutím na šipku nahoru snížíte hodnotu pozice a kliknete na šipku dolů.
 
-Ovládací prvek číselníku bez asociované okno funguje jako řazení zjednodušené posuvníku. Například ovládací prvek karty zobrazí někdy ovládací prvek číselníku umožňující uživateli přejděte do zobrazení další záložky.
+Ovládací prvek číselníku bez okna s kamarádem funguje jako řazení zjednodušeného posuvníku. Například ovládací prvek karta někdy zobrazí ovládací prvek číselníku, který uživateli umožňuje přejít na další karty v zobrazení.
 
-Další informace o používání `CSpinButtonCtrl`, naleznete v tématu [ovládací prvky](../../mfc/controls-mfc.md) a [používání atributu CSpinButtonCtrl](../../mfc/using-cspinbuttonctrl.md).
+Další informace o použití `CSpinButtonCtrl`naleznete v tématu [Controls](../../mfc/controls-mfc.md) and [using atributu CSpinButtonCtrl](../../mfc/using-cspinbuttonctrl.md).
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
-[Třídy CObject](../../mfc/reference/cobject-class.md)
+[CObject](../../mfc/reference/cobject-class.md)
 
 [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)
 
@@ -100,11 +100,11 @@ Další informace o používání `CSpinButtonCtrl`, naleznete v tématu [ovlád
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** afxcmn.h
+**Záhlaví:** afxcmn. h
 
-##  <a name="create"></a>  CSpinButtonCtrl::Create
+##  <a name="create"></a>Atributu CSpinButtonCtrl:: Create
 
-Ovládací prvek číselníku vytvoří a připojí ho k `CSpinButtonCtrl` objektu...
+Vytvoří ovládací prvek číselníku a připojí ho k `CSpinButtonCtrl` objektu..
 
 ```
 virtual BOOL Create(
@@ -117,30 +117,30 @@ virtual BOOL Create(
 ### <a name="parameters"></a>Parametry
 
 *dwStyle*<br/>
-Určuje styl tlačítka číselníku. Použijte libovolnou kombinaci styly ovládací prvek typu číselník tlačítek do ovládacího prvku. Tyto styly jsou popsány v [– styly ovládacího prvku číselník](/windows/desktop/Controls/up-down-control-styles) v sadě Windows SDK.
+Určuje styl ovládacího prvku číselníku. Použijte libovolnou kombinaci stylů ovládacího prvku číselník pro ovládací prvek. Tyto styly jsou popsány v následujících [stylech ovládacích prvků](/windows/desktop/Controls/up-down-control-styles) v Windows SDK.
 
-*Rect*<br/>
-Určuje velikost a umístění tlačítko číselníku. Může být buď [crect –](../../atl-mfc-shared/reference/crect-class.md) objektu nebo [RECT](/previous-versions/dd162897\(v=vs.85\)) struktura
+*OBD*<br/>
+Určuje velikost a polohu ovládacího prvku číselníku. Může to být buď objekt [CRect](../../atl-mfc-shared/reference/crect-class.md) , nebo struktura [Rect](/previous-versions/dd162897\(v=vs.85\))
 
 *pParentWnd*<br/>
-Ukazatel na prvek typu číselník button nadřazené okno, obvykle `CDialog`. Nesmí být NULL.
+Ukazatel na nadřazené okno ovládacího prvku tlačítko, obvykle a `CDialog`. Nesmí mít hodnotu NULL.
 
 *nID*<br/>
-Určuje ID tlačítko číselníku.
+Určuje ID ovládacího prvku číselníku.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Nenulové, pokud se inicializace byla úspěšná. jinak 0.
+Nenulová, pokud byla inicializace úspěšná; v opačném případě 0.
 
 ### <a name="remarks"></a>Poznámky
 
-Můžete vytvořit `CSpinButtonCtrl` objekt ve dvou krocích, volání konstruktoru a následně zavolat `Create`, otočný ovládací prvek tlačítko vytvoří a připojí ho k `CSpinButtonCtrl` objektu.
+Nejprve vytvoříte `Create` `CSpinButtonCtrl` objekt ve dvou krocích, zavoláte konstruktor a potom zavoláte, čímž se vytvoří ovládací prvek číselníku a připojí se k objektu. `CSpinButtonCtrl`
 
-Chcete-li vytvořit ovládací prvek číselníku s rozšířené styly oken, zavolejte [CSpinButtonCtrl::CreateEx](#createex) místo `Create`.
+Chcete-li vytvořit ovládací prvek číselníku s rozšířenými styly oken, zavolejte [atributu CSpinButtonCtrl:: CreateEx](#createex) namísto `Create`.
 
-##  <a name="createex"></a>  CSpinButtonCtrl::CreateEx
+##  <a name="createex"></a>Atributu CSpinButtonCtrl:: CreateEx
 
-Vytvoří ovládací prvek (podřízené okno) a přidruží ji k `CSpinButtonCtrl` objektu.
+Vytvoří ovládací prvek (podřízené okno) a přidruží ho k `CSpinButtonCtrl` objektu.
 
 ```
 virtual BOOL CreateEx(
@@ -154,39 +154,39 @@ virtual BOOL CreateEx(
 ### <a name="parameters"></a>Parametry
 
 *dwExStyle*<br/>
-Určuje rozšířený styl ovládacího prvku vytváří. Seznam rozšířených windows stylů, najdete v článku *dwExStyle* parametr pro [CreateWindowEx](/windows/desktop/api/winuser/nf-winuser-createwindowexa) v sadě Windows SDK.
+Určuje rozšířený styl ovládacího prvku, který se vytváří. Seznam rozšířených stylů Windows naleznete v parametru *dwExStyle* pro [CreateWindowEx](/windows/desktop/api/winuser/nf-winuser-createwindowexa) v Windows SDK.
 
 *dwStyle*<br/>
-Určuje styl tlačítka číselníku. Použijte libovolnou kombinaci styly ovládací prvek typu číselník tlačítek do ovládacího prvku. Tyto styly jsou popsány v [– styly ovládacího prvku číselník](/windows/desktop/Controls/up-down-control-styles) v sadě Windows SDK.
+Určuje styl ovládacího prvku číselníku. Použijte libovolnou kombinaci stylů ovládacího prvku číselník pro ovládací prvek. Tyto styly jsou popsány v následujících [stylech ovládacích prvků](/windows/desktop/Controls/up-down-control-styles) v Windows SDK.
 
-*Rect*<br/>
-Odkaz na [RECT](/previous-versions/dd162897\(v=vs.85\)) struktura popisující, velikost a umístění okna, které nelze v souřadnice klienta *pParentWnd*.
+*OBD*<br/>
+Odkaz na strukturu [Rect](/previous-versions/dd162897\(v=vs.85\)) popisující velikost a umístění okna, které má být vytvořeno, v souřadnicích klienta *pParentWnd*.
 
 *pParentWnd*<br/>
-Ukazatel na okno, který je nadřazeného ovládacího prvku.
+Ukazatel na okno, které je nadřazený ovládacímu prvku.
 
 *nID*<br/>
-ID ovládacího prvku podřízené okno.
+ID podřízeného okna ovládacího prvku
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Nenulové, pokud je úspěšná. jinak 0.
+Nenulové, pokud bylo úspěšné; v opačném případě 0.
 
 ### <a name="remarks"></a>Poznámky
 
-Použití `CreateEx` místo [vytvořit](#create) použít rozšířené styly Windows určené předponu rozšířeného stylu Windows WS_EX_.
+Použijte `CreateEx` místo příkaz [vytvořit](#create) pro použití rozšířených stylů Windows, které jsou určené WS_EX_ rozšířeným stylem Windows.
 
-##  <a name="cspinbuttonctrl"></a>  CSpinButtonCtrl::CSpinButtonCtrl
+##  <a name="cspinbuttonctrl"></a>Atributu CSpinButtonCtrl:: atributu CSpinButtonCtrl
 
-Vytvoří `CSpinButtonCtrl` objektu.
+`CSpinButtonCtrl` Vytvoří objekt.
 
 ```
 CSpinButtonCtrl();
 ```
 
-##  <a name="getaccel"></a>  CSpinButtonCtrl::GetAccel
+##  <a name="getaccel"></a>Atributu CSpinButtonCtrl:: GetAccel
 
-Načte informace o zrychlení pro ovládací prvek číselníku.
+Načte informace o akceleraci pro ovládací prvek číselníku.
 
 ```
 UINT GetAccel(
@@ -197,18 +197,18 @@ UINT GetAccel(
 ### <a name="parameters"></a>Parametry
 
 *nAccel*<br/>
-Počet prvků v poli určeném *pAccel*.
+Počet elementů v poli určeném parametrem *pAccel*.
 
 *pAccel*<br/>
-Ukazatel na pole [UDACCEL](/windows/desktop/api/commctrl/ns-commctrl-_udaccel) struktury, které obdrží informace o zrychlení.
+Ukazatel na pole [UDACCEL](/windows/desktop/api/commctrl/ns-commctrl-udaccel) struktury, které obdrží informace o akceleraci.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Počet struktur akcelerátoru načtení.
+Počet načtených struktur akcelerátoru
 
-##  <a name="getbase"></a>  CSpinButtonCtrl::GetBase
+##  <a name="getbase"></a>Atributu CSpinButtonCtrl:: GetBase
 
-Načte aktuální základ pro ovládací prvek číselníku.
+Načte aktuální základ ovládacího prvku číselníku.
 
 ```
 UINT GetBase() const;
@@ -216,11 +216,11 @@ UINT GetBase() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Aktuální základní hodnoty.
+Aktuální základní hodnota.
 
-##  <a name="getbuddy"></a>  CSpinButtonCtrl::GetBuddy
+##  <a name="getbuddy"></a>Atributu CSpinButtonCtrl:: getkamarád
 
-Načte ukazatel na aktuální asociovaného okna.
+Načte ukazatel na aktuální kamarád okno.
 
 ```
 CWnd* GetBuddy() const;
@@ -228,11 +228,11 @@ CWnd* GetBuddy() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Ukazatel na aktuální asociovaného okna.
+Ukazatel na aktuální okno kamaráda.
 
-##  <a name="getpos"></a>  CSpinButtonCtrl::GetPos
+##  <a name="getpos"></a>Atributu CSpinButtonCtrl:: GetPos
 
-Načte aktuální pozici ovládací prvek číselníku.
+Načte aktuální pozici ovládacího prvku číselníku.
 
 ```
 int GetPos() const;  int GetPos32(LPBOOL lpbError = NULL) const;
@@ -241,21 +241,21 @@ int GetPos() const;  int GetPos32(LPBOOL lpbError = NULL) const;
 ### <a name="parameters"></a>Parametry
 
 *lpbError*<br/>
-Ukazatel na logickou hodnotu, která je nastavena na hodnotu nula, pokud hodnota je úspěšně načtena, nebo nenulovou Pokud dojde k chybě. Pokud tento parametr je nastaven na hodnotu NULL, nejsou hlášeny chyby.
+Ukazatel na logickou hodnotu, která je nastavena na hodnotu nula, pokud je hodnota úspěšně načtena nebo není nula, pokud dojde k chybě. Pokud je tento parametr nastaven na hodnotu NULL, chyby nejsou hlášeny.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-První verze vrací aktuální pozici 16 bitů v nižší řád slova. Vyšší řád slova je nenulová, pokud došlo k chybě.
+První verze vrátí 16bitové aktuální pozici v aplikaci s nízkým pořadím. Slovo s vysokým pořadím je nenulové, pokud došlo k chybě.
 
-Druhá verze vrátí pozici 32-bit.
+Druhá verze vrátí 32 bitovou pozici.
 
 ### <a name="remarks"></a>Poznámky
 
-Po zpracování vrácená hodnota, ovládací prvek aktualizuje aktuální pozici založené na titulek asociovaného okna. Ovládací prvek vrátí chybu, pokud neexistuje žádný časový interval kamaráda nebo pokud titulek určuje neplatné nebo mimo rozsah hodnoty.
+Když zpracovává vrácenou hodnotu, ovládací prvek aktualizuje svou aktuální polohu na základě titulku okna kamarád. Ovládací prvek vrátí chybu, pokud není k dispozici žádné okno pro kamarády, nebo pokud titulek určuje neplatnou nebo mimo rozsah hodnoty.
 
-##  <a name="getrange"></a>  CSpinButtonCtrl::GetRange
+##  <a name="getrange"></a>Atributu CSpinButtonCtrl:: GetRange
 
-Načte horní a dolní mez (oblast) pro ovládací prvek číselníku.
+Načte horní a dolní meze (rozsah) pro ovládací prvek číselníku.
 
 ```
 DWORD GetRange() const;
@@ -271,21 +271,21 @@ void GetRange32(
 
 ### <a name="parameters"></a>Parametry
 
-*lower*<br/>
-Odkaz na celé číslo, které přijímá dolní mez pro ovládací prvek.
+*malým*<br/>
+Odkaz na celé číslo, které obdrží dolní limit ovládacího prvku.
 
 *upper*<br/>
-Odkaz na celé číslo, které přijímá horní mez pro ovládací prvek.
+Odkaz na celé číslo, které získá horní limit ovládacího prvku.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-První verze vrací hodnotu 32-bit obsahující horní a dolní limity. Horní mez pro ovládací prvek je nižší řád slova a vyšší řád slova je dolní mez.
+První verze vrací hodnotu 32 obsahující horní a dolní meze. Slovo s nižším pořadím je horním limitem pro ovládací prvek a slovo s vyšším pořadím je dolní limit.
 
 ### <a name="remarks"></a>Poznámky
 
-Členská funkce `GetRange32` načte rozsah tlačítko číselníku jako 32bitové celé číslo.
+Členská funkce `GetRange32` Získá rozsah ovládacího prvku číselníku jako 32 celé číslo.
 
-##  <a name="setaccel"></a>  CSpinButtonCtrl::SetAccel
+##  <a name="setaccel"></a>Atributu CSpinButtonCtrl:: SetAccel
 
 Nastaví zrychlení pro ovládací prvek číselníku.
 
@@ -298,16 +298,16 @@ BOOL SetAccel(
 ### <a name="parameters"></a>Parametry
 
 *nAccel*<br/>
-Počet [UDACCEL](/windows/desktop/api/commctrl/ns-commctrl-_udaccel) struktury určené *pAccel*.
+Počet [UDACCEL](/windows/desktop/api/commctrl/ns-commctrl-udaccel) struktur určených *pAccel*.
 
 *pAccel*<br/>
-Ukazatel na pole UDACCEL struktur, které obsahují informace o zrychlení. Prvky mají být řazeny ve vzestupném pořadí podle `nSec` člena.
+Ukazatel na pole UDACCEL struktury, které obsahují informace o akceleraci. Prvky by měly být seřazeny vzestupně podle `nSec` členů.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Nenulové, pokud je úspěšná. jinak 0.
+Nenulové, pokud bylo úspěšné; v opačném případě 0.
 
-##  <a name="setbase"></a>  CSpinButtonCtrl::SetBase
+##  <a name="setbase"></a>Atributu CSpinButtonCtrl:: SetBase
 
 Nastaví základ pro ovládací prvek číselníku.
 
@@ -318,19 +318,19 @@ int SetBase(int nBase);
 ### <a name="parameters"></a>Parametry
 
 *nBase*<br/>
-Nové základní hodnotu ovládacího prvku. Může být pro desetinné číslo 10 nebo 16 pro šestnáctkové číslo.
+Nová základní hodnota pro ovládací prvek Pro šestnáctkové číslo může být desítkový nebo 16.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Předchozí základní hodnoty v případě úspěchu, nebo nula, pokud je zadána neplatná základna.
+Předchozí základní hodnota, je-li úspěšná, nebo nula, pokud je zadána neplatná základ.
 
 ### <a name="remarks"></a>Poznámky
 
-Základní hodnota určuje, zda asociovaného okna zobrazuje čísel v desítkové nebo šestnáctkové číslice. Šestnáctková čísla jsou vždycky bez znaménka; desetinná čísla jsou podepsané.
+Základní hodnota určuje, zda se v okně kamaráda zobrazují čísla v desítkové nebo šestnáctkové čísle. Šestnáctková čísla jsou vždycky bez znaménka; desetinná čísla jsou podepsaná.
 
-##  <a name="setbuddy"></a>  CSpinButtonCtrl::SetBuddy
+##  <a name="setbuddy"></a>Atributu CSpinButtonCtrl:: SetBuddy
 
-Nastaví asociovaného okna pro ovládací prvek číselníku.
+Nastaví kamarád okno pro ovládací prvek číselníku.
 
 ```
 CWnd* SetBuddy(CWnd* pWndBuddy);
@@ -339,19 +339,19 @@ CWnd* SetBuddy(CWnd* pWndBuddy);
 ### <a name="parameters"></a>Parametry
 
 *pWndBuddy*<br/>
-Ukazatel na novou asociovaného okna.
+Ukazatel na nové okno kamaráda.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Ukazatel na předchozí asociovaného okna.
+Ukazatel na předchozí okno kamaráda.
 
 ### <a name="remarks"></a>Poznámky
 
-Ovládací prvek typu číselník je téměř vždy další okno, jako je například ovládací prvek úprav, zobrazující nějaký obsah. Toto okno se nazývá "kamarádské" číselníku.
+Číselník je téměř vždy přidružen k jinému oknu, například k ovládacímu prvku pro úpravy, který zobrazuje nějaký obsah. Toto druhé okno se nazývá "kamarád" číselníku.
 
-##  <a name="setpos"></a>  CSpinButtonCtrl::SetPos
+##  <a name="setpos"></a>Atributu CSpinButtonCtrl:: SetPos
 
-Nastaví aktuální pozici pro ovládací prvek číselníku.
+Nastaví aktuální pozici ovládacího prvku číselníku.
 
 ```
 int SetPos(int nPos);
@@ -361,19 +361,19 @@ int SetPos32(int nPos);
 ### <a name="parameters"></a>Parametry
 
 *nPos*<br/>
-Nové pozice ovládacího prvku. Tato hodnota musí být v rozsahu určeném horní a dolní limity pro ovládací prvek.
+Nová pozice ovládacího prvku Tato hodnota musí být v rozsahu určeném horním a dolním omezením ovládacího prvku.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Předchozí pozice (16 bitů přesnosti pro `SetPos`, 32 bitů přesnosti pro `SetPos32`).
+Předchozí pozice (16bitová přesnost pro `SetPos`, 32-bit přesnosti pro `SetPos32`).
 
 ### <a name="remarks"></a>Poznámky
 
-`SetPos32` Nastaví pozici 32-bit.
+`SetPos32`Nastaví 32 bitovou pozici.
 
-##  <a name="setrange"></a>  CSpinButtonCtrl::SetRange
+##  <a name="setrange"></a>Atributu CSpinButtonCtrl:: SetRange
 
-Nastaví horní a dolní mez (oblast) pro ovládací prvek číselníku.
+Nastaví horní a dolní meze (rozsah) pro ovládací prvek číselníku.
 
 ```
 void SetRange(
@@ -388,18 +388,18 @@ void SetRange32(
 ### <a name="parameters"></a>Parametry
 
 *nLower* a *nUpper*<br/>
-Horní a dolní limity pro ovládací prvek. Pro `SetRange`, ani jedno z těchto omezení může být větší než UD_MAXVAL nebo menší než UD_MINVAL; navíc rozdíl mezi dvě omezení nemůže být delší než UD_MAXVAL. `SetRange32` umístí bez omezení na omezení; použijte libovolný celých čísel.
+Horní a dolní meze ovládacího prvku. `SetRange`V případě nemůže být žádná hodnota větší než UD_MAXVAL nebo menší než UD_MINVAL; rozdíl mezi dvěma omezeními nesmí překročit UD_MAXVAL. `SetRange32`neomezuje omezení; Použijte jakákoli celá čísla.
 
 ### <a name="remarks"></a>Poznámky
 
-Členská funkce `SetRange32` Nastaví rozsah 32bitové otočný ovládací prvek tlačítko.
+Členská funkce `SetRange32` nastavuje rozsah 32 pro ovládací prvek číselníku.
 
 > [!NOTE]
->  Výchozí rozsah pro číselníku je nastavena na hodnotu 100 minimální a maximální doba, nastavit na nulu (0). Vzhledem k tomu, že maximální hodnota je menší než minimální hodnota, kliknutím na šipku nahoru nižší pozici a kliknutím na šipku dolů zvýší ho. Použití `CSpinButtonCtrl::SetRange` upravit tyto hodnoty.
+>  Výchozí rozsah pro tlačítko číselníku má maximální hodnotu nula (0) a minimální hodnotu nastavenou na 100. Vzhledem k tomu, že maximální hodnota je menší než minimální hodnota, kliknutím na šipku nahoru zmenšete polohu a kliknutím na šipku dolů ji zvýšíte. Použijte `CSpinButtonCtrl::SetRange` k úpravě těchto hodnot.
 
 ## <a name="see-also"></a>Viz také:
 
-[Ukázka CMNCTRL2 knihovny MFC](../../overview/visual-cpp-samples.md)<br/>
+[CMNCTRL2 Sample MFC](../../overview/visual-cpp-samples.md)<br/>
 [CWnd – třída](../../mfc/reference/cwnd-class.md)<br/>
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>
 [CSliderCtrl – třída](../../mfc/reference/csliderctrl-class.md)

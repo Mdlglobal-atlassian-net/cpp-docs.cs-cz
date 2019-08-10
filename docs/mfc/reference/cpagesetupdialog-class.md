@@ -30,16 +30,16 @@ helpviewer_keywords:
 - CPageSetupDialog [MFC], PreDrawPage
 - CPageSetupDialog [MFC], m_psd
 ms.assetid: 049c0ac8-f254-4854-9414-7a8271d1447a
-ms.openlocfilehash: 01a320fbcd9760bab484f3c75553613852ca9aed
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a9009c4ea08771949cea2c44e4f6265783ced35a
+ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62373164"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68916937"
 ---
 # <a name="cpagesetupdialog-class"></a>CPageSetupDialog Class
 
-Zapouzdřuje služby poskytované dialogovým oknem běžných nastavení stránky OLE Windows s další podporou nastavení a úprav okrajů tisku.
+Zapouzdřuje služby poskytované dialogovým oknem nastavení běžné stránky OLE systému Windows s další podporou pro nastavení a úpravy okrajů tisku.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -51,47 +51,47 @@ class CPageSetupDialog : public CCommonDialog
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
-|[CPageSetupDialog::CPageSetupDialog](#cpagesetupdialog)|Vytvoří `CPageSetupDialog` objektu.|
+|[CPageSetupDialog::CPageSetupDialog](#cpagesetupdialog)|`CPageSetupDialog` Vytvoří objekt.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CPageSetupDialog::CreatePrinterDC](#createprinterdc)|Vytvoří kontext zařízení pro tisk.|
-|[CPageSetupDialog::DoModal](#domodal)|Zobrazí dialogové okno a umožňuje vytvořit uživatele s výběrem.|
+|[CPageSetupDialog::DoModal](#domodal)|Zobrazí dialogové okno a umožní uživateli vybrat výběr.|
 |[CPageSetupDialog::GetDeviceName](#getdevicename)|Vrátí název zařízení tiskárny.|
-|[CPageSetupDialog::GetDevMode](#getdevmode)|Vrátí aktuální DEVMODE tiskárny.|
-|[CPageSetupDialog::GetDriverName](#getdrivername)|Vrátí bude ovladač používaný tiskárny.|
+|[CPageSetupDialog::GetDevMode](#getdevmode)|Vrátí aktuální režim DEVMODE tiskárny.|
+|[CPageSetupDialog::GetDriverName](#getdrivername)|Vrátí ovladač používaný tiskárnou.|
 |[CPageSetupDialog::GetMargins](#getmargins)|Vrátí aktuální nastavení okrajů tiskárny.|
 |[CPageSetupDialog::GetPaperSize](#getpapersize)|Vrátí velikost papíru tiskárny.|
-|[CPageSetupDialog::GetPortName](#getportname)|Vrátí název výstupního portu.|
-|[CPageSetupDialog::OnDrawPage](#ondrawpage)|Volá se rozhraním, aby se vykreslil obraz tištěné stránky.|
-|[CPageSetupDialog::PreDrawPage](#predrawpage)|Volá se rozhraním, před vykreslením obraz tištěné stránky.|
+|[CPageSetupDialog:: GetPort](#getportname)|Vrátí název výstupního portu.|
+|[CPageSetupDialog::OnDrawPage](#ondrawpage)|Volá se rozhraním, aby se vygenerovala obrazová obrazovka tištěné stránky.|
+|[CPageSetupDialog::PreDrawPage](#predrawpage)|Volá se rozhraním před vykreslením obrázku na obrazovce tištěné stránky.|
 
 ### <a name="public-data-members"></a>Veřejné datové členy
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
-|[CPageSetupDialog::m_psd](#m_psd)|Struktura používané k úpravám `CPageSetupDialog` objektu.|
+|[CPageSetupDialog::m_psd](#m_psd)|Struktura používaná k přizpůsobení `CPageSetupDialog` objektu.|
 
 ## <a name="remarks"></a>Poznámky
 
-Tato třída je navržené tak, aby místo dialogovém okně Nastavení tisku.
+Tato třída je navržena tak, aby vybrala místo v dialogovém okně nastavení tisku.
 
-Použití `CPageSetupDialog` objektu, musíte nejprve vytvořit objekt pomocí `CPageSetupDialog` konstruktoru. Jakmile byl vytvořen dialogových oken, můžete nastavit nebo změnit všechny hodnoty v `m_psd` datový člen inicializace hodnot ovládacích prvků v dialogovém okně. [M_psd](#m_psd) struktury je typu PAGESETUPDLG.
+Chcete-li `CPageSetupDialog` použít objekt, nejprve vytvořte objekt `CPageSetupDialog` pomocí konstruktoru. Po vytvoření dialogového okna můžete nastavit nebo upravit jakékoli hodnoty v `m_psd` datovém členu pro inicializaci hodnot ovládacích prvků dialogového okna. Struktura [m_psd](#m_psd) je typu PAGESETUPDLG.
 
-Po inicializaci ovládací prvky dialogového okna, zavolejte `DoModal` členské funkce k zobrazení dialogového okna a umožnit uživateli vybrat možnosti tisku. `DoModal` Vrátí, zda uživatel vybral tlačítko OK (IDOK) nebo zrušit (IDCANCEL).
+Po inicializaci ovládacích prvků dialogového okna zavolejte `DoModal` členskou funkci pro zobrazení dialogového okna a umožněte uživateli vybrat možnosti tisku. `DoModal`Vrátí, zda uživatel vybral tlačítko OK (IDOK) nebo zrušit (IDCANCEL).
 
-Pokud `DoModal` vrátí IDOK, můžete použít několik `CPageSetupDialog`pro členské funkce nebo přístup `m_psd` datový člen načíst informace o vstup uživatele.
+Pokud `DoModal` vrátí IDOK, můžete použít `CPageSetupDialog`několik členských `m_psd` funkcí nebo získat přístup k datovému členu a načíst informace vstupem uživatele.
 
 > [!NOTE]
->  Po běžných dialogových oken OLE stránky instalace je zrušená, neuloží se rozhraním, všechny změny provedené uživatelem. Je až po samotné aplikace chcete-li uložit všechny hodnoty z tohoto dialogového okna do trvalého umístění, jako je například člen třídy aplikace nebo aplikace dokument.
+>  Po ukončení dialogového okna běžné nastavení stránky OLE nebude rozhraní ukládat žádné změny provedené uživatelem. Je až do samotné aplikace, aby ukládala jakékoli hodnoty z tohoto dialogového okna do trvalého umístění, jako je například člen dokumentu aplikace nebo třídy aplikace.
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
-[Třídy CObject](../../mfc/reference/cobject-class.md)
+[CObject](../../mfc/reference/cobject-class.md)
 
 [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)
 
@@ -105,11 +105,11 @@ Pokud `DoModal` vrátí IDOK, můžete použít několik `CPageSetupDialog`pro �
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** afxdlgs.h
+**Záhlaví:** afxdlgs. h
 
 ##  <a name="cpagesetupdialog"></a>  CPageSetupDialog::CPageSetupDialog
 
-Voláním této funkce k vytvoření `CPageSetupDialog` objektu.
+Voláním této funkce vytvoříte `CPageSetupDialog` objekt.
 
 ```
 CPageSetupDialog(
@@ -120,50 +120,50 @@ CPageSetupDialog(
 ### <a name="parameters"></a>Parametry
 
 *dwFlags*<br/>
-Jeden nebo více příznaků, které vám umožní přizpůsobit nastavení dialogového okna. Hodnoty lze spojovat pomocí operátoru bitového operátoru OR. Tyto hodnoty mají následující význam:
+Jeden nebo více příznaků, které lze použít k přizpůsobení nastavení dialogového okna. Hodnoty lze kombinovat pomocí bitového operátoru OR. Tyto hodnoty mají následující význam:
 
-- PSD_DEFAULTMINMARGINS Nastaví minimální šířku povolená pro okraje stránky patřit tiskárny minima. Tento příznak se ignoruje, pokud jsou také uvedeny příznaky PSD_MARGINS a PSD_MINMARGINS.
+- PSD_DEFAULTMINMARGINS Nastaví minimální možné šířky okrajů stránky tak, aby byly stejné jako minimum tiskárny. Tento příznak je ignorován, pokud jsou také zadány příznaky PSD_MARGINS a PSD_MINMARGINS.
 
-- PSD_INWININIINTLMEASURE není implementována.
+- PSD_INWININIINTLMEASURE není implementováno.
 
-- PSD_MINMARGINS způsobí, že systém použít hodnoty uvedené v `rtMinMargin` člena jako minimální povolená šířku doleva, horní, pravé a dolní okraj. Systém znemožní uživateli zadat šířku, která je nižší než zadané minimum. Pokud není zadán PSD_MINMARGINS, systém Nastaví minimální šířka povolená těm tiskárna.
+- PSD_MINMARGINS způsobí, že systém použije hodnoty zadané v `rtMinMargin` členu jako minimální povolené šířky pro levý, horní, pravý a dolní okraj. Systém brání uživateli v zadání šířky, která je menší než zadané minimum. Pokud není zadán parametr PSD_MINMARGINS, systém nastaví minimální povolené šířky pro ty, které tiskárna povoluje.
 
-- PSD_MARGINS aktivuje oblast okraje ovládacího prvku.
+- PSD_MARGINS aktivuje oblast ovládacího prvku okraj.
 
-- PSD_INTHOUSANDTHSOFINCHES způsobí, že jednotky dialogu měřený v 1/1 000 palce.
+- PSD_INTHOUSANDTHSOFINCHES způsobí, že se jednotky dialogového okna budou měřit v 1/1000 palcích.
 
-- PSD_INHUNDREDTHSOFMILLIMETERS způsobí, že jednotky dialogu měřený v 1/100 milimetru.
+- PSD_INHUNDREDTHSOFMILLIMETERS způsobí, že se jednotky dialogového okna budou měřit v milimetrech 1/100.
 
-- PSD_DISABLEMARGINS zakáže ovládací prvky dialogového okna pole okraj.
+- PSD_DISABLEMARGINS zakáže ovládací prvky dialogového okna okraj.
 
 - PSD_DISABLEPRINTER zakáže tlačítko tiskárna.
 
-- PSD_NOWARNING zabraňuje upozornění se zobrazí, když není žádná výchozí tiskárna.
+- PSD_NOWARNING zabraňuje zobrazení zprávy upozornění, když není k dispozici žádná výchozí tiskárna.
 
-- PSD_DISABLEORIENTATION zakáže ovládací prvek dialogového okna orientace stránky.
+- PSD_DISABLEORIENTATION zakáže ovládací prvek dialogu orientace stránky.
 
-- Způsobí, že PSD_RETURNDEFAULT `CPageSetupDialog` vrátit [DEVMODE](/windows/desktop/api/wingdi/ns-wingdi-_devicemodea) a [DEVNAMES –](/windows/desktop/api/commdlg/ns-commdlg-tagdevnames) struktury, které jsou inicializovány pro výchozí tiskárna systému bez zobrazení dialogového okna. Předpokládá se, jak `hDevNames` a `hDevMode` hodnotu Null; v opačném případě vrátí chybu. Pokud se výchozí tiskárna systému je podporována staré ovladače tiskárny (dřívější než Windows verze 3.0), pouze `hDevNames` je vrácena. `hDevMode` má hodnotu NULL.
+- PSD_RETURNDEFAULT způsobí `CPageSetupDialog` vrácení struktury [DEVMODE](/windows/win32/api/wingdi/ns-wingdi-devmodea) a [DEVNAMES –](/windows/desktop/api/commdlg/ns-commdlg-tagdevnames) , které jsou inicializovány pro výchozí tiskárnu systému bez zobrazení dialogového okna. Předpokládá se, že obojí `hDevNames` a `hDevMode` má hodnotu null. v opačném případě vrátí funkce chybu. Pokud je výchozí systémová tiskárna podporovaná starším ovladačem tiskárny (starším než Windows verze 3,0), `hDevNames` vrátí se jenom hodnota. `hDevMode` má hodnotu null.
 
-- PSD_DISABLEPAPER zakáže ovládacího prvku pro výběr dokumentu.
+- PSD_DISABLEPAPER zakáže ovládací prvek pro výběr papíru.
 
-- PSD_SHOWHELP způsobí, že dialogovém okně zobrazeno tlačítko Nápověda. `hwndOwner` Člen nesmí mít hodnotu NULL, pokud je tento příznak zadán.
+- PSD_SHOWHELP způsobí, že dialogové okno zobrazí tlačítko Help. Pokud je tento příznak zadán, nesmí členmíthodnotunull.`hwndOwner`
 
-- PSD_ENABLEPAGESETUPHOOK umožňuje funkci připojení zadaný v `lpfnSetupHook`.
+- PSD_ENABLEPAGESETUPHOOK povolí funkci zavěšení určenou v `lpfnSetupHook`.
 
-- PSD_ENABLEPAGESETUPTEMPLATE způsobí, že operační systém dialogové okno vytvořit pomocí šablony dialogového identifikovaný `hInstance` a `lpSetupTemplateName`.
+- PSD_ENABLEPAGESETUPTEMPLATE způsobí, že operační systém vytvoří dialogové okno pomocí pole šablony dialogového okna identifikovaného `hInstance` a. `lpSetupTemplateName`
 
-- PSD_ENABLEPAGESETUPTEMPLATEHANDLE znamená, že `hInstance` identifikuje blok dat, který obsahuje šablony předem dialogového okna. Systém ignoruje `lpSetupTemplateName` Pokud je tento příznak zadán.
+- PSD_ENABLEPAGESETUPTEMPLATEHANDLE označuje, `hInstance` že identifikuje datový blok, který obsahuje předem načtenou šablonu dialogového okna. Pokud je tento `lpSetupTemplateName` příznak zadán, systém ignoruje.
 
-- PSD_ENABLEPAGEPAINTHOOK umožňuje funkci připojení zadaný v `lpfnPagePaintHook`.
+- PSD_ENABLEPAGEPAINTHOOK povolí funkci zavěšení určenou v `lpfnPagePaintHook`.
 
-- PSD_DISABLEPAGEPAINTING zakáže vystavení oblasti dialogového okna.
+- PSD_DISABLEPAGEPAINTING zakáže oblast vykreslování dialogového okna.
 
 *pParentWnd*<br/>
-Ukazatel na nadřazenou nebo vlastník dialogových oken.
+Ukazatel na nadřazenou položku nebo vlastníka dialogového okna.
 
 ### <a name="remarks"></a>Poznámky
 
-Použití [DoModal](../../mfc/reference/cdialog-class.md#domodal) funkce k zobrazení dialogového okna.
+Použijte funkci [DoModal](../../mfc/reference/cdialog-class.md#domodal) k zobrazení dialogového okna.
 
 ### <a name="example"></a>Příklad
 
@@ -171,7 +171,7 @@ Použití [DoModal](../../mfc/reference/cdialog-class.md#domodal) funkce k zobra
 
 ##  <a name="createprinterdc"></a>  CPageSetupDialog::CreatePrinterDC
 
-Vytvoří kontext zařízení tiskárny ze [DEVMODE](/windows/desktop/api/wingdi/ns-wingdi-_devicemodea) a [DEVNAMES –](/windows/desktop/api/commdlg/ns-commdlg-tagdevnames) struktury.
+Vytvoří kontext zařízení tiskárny ze struktur [DEVMODE](/windows/win32/api/wingdi/ns-wingdi-devmodea) a [DEVNAMES –](/windows/desktop/api/commdlg/ns-commdlg-tagdevnames) .
 
 ```
 HDC CreatePrinterDC();
@@ -179,11 +179,11 @@ HDC CreatePrinterDC();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Popisovač kontextu zařízení nově vytvořené tiskárny (DC).
+Popisovač nově vytvořeného kontextu zařízení tiskárny (DC).
 
 ##  <a name="domodal"></a>  CPageSetupDialog::DoModal
 
-Voláním této funkce Zobrazit dialogové okno nastavení stránky OLE Windows běžné a umožnit uživateli vybrat různé možnosti nastavení tisku, jako je například okraje pro tisk, velikosti a orientace papíru a cílovou tiskárnu.
+Voláním této funkce zobrazíte dialogové okno běžné nastavení stránky OLE systému Windows a umožníte uživateli vybrat různé možnosti nastavení tisku, například okraje tisku, velikost a orientaci papíru a cílovou tiskárnu.
 
 ```
 virtual INT_PTR DoModal();
@@ -191,27 +191,27 @@ virtual INT_PTR DoModal();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-IDOK nebo IDCANCEL. Pokud je vrácena IDCANCEL, zavolejte Windows [CommDlgExtendedError](/windows/desktop/api/commdlg/nf-commdlg-commdlgextendederror) funkce k určení, zda došlo k chybě.
+IDOK nebo IDCANCEL. Pokud se vrátí IDCANCEL, zavolejte funkci Windows [CommDlgExtendedError](/windows/desktop/api/commdlg/nf-commdlg-commdlgextendederror) a určete, jestli došlo k chybě.
 
-IDOK a IDCANCEL jsou konstanty, které označují, zda uživatel vybral tlačítko OK nebo zrušit.
+IDOK a IDCANCEL jsou konstanty, které označují, zda uživatel vybral tlačítko OK nebo Storno.
 
 ### <a name="remarks"></a>Poznámky
 
-Kromě toho má uživatel přístup možnosti nastavení tiskárny, jako je umístění v síti a vlastnosti specifické pro vybrané tiskárny.
+Kromě toho uživatel má přístup k možnostem nastavení tiskárny, například k síťovému umístění a vlastnostem, které jsou specifické pro vybranou tiskárnu.
 
-Pokud chcete inicializovat různé možnosti nastavení stránky dialogového okna tak, že nastavíte členy `m_psd` strukturu, měli byste tak činit před voláním `DoModal`, a po vytvoření objektu dialogového okna. Po volání `DoModal`, volat ostatní členské funkce k načtení nastavení nebo informace o vstup uživatelem do dialogových oken.
+Pokud chcete inicializovat různé možnosti dialogu nastavení stránky nastavením členů `m_psd` struktury, měli byste tak učinit před voláním `DoModal`a po vytvoření objektu dialogového okna. Po volání `DoModal`volejte jiné členské funkce pro načtení nastavení nebo zadání informací uživatelem do dialogového okna.
 
-Pokud chcete rozšířit aktuální nastavení zadá uživatel, proveďte volání [CWinApp::SelectPrinter](../../mfc/reference/cwinapp-class.md#selectprinter). Tato funkce přebírá informace z `CPageSetupDialog` objektu a inicializuje a vybere nové tiskárny řadič domény pomocí vlastních atributech.
+Pokud chcete rozšířit aktuální nastavení zadané uživatelem, zavolejte na [CWinApp:: SelectPrinter](../../mfc/reference/cwinapp-class.md#selectprinter). Tato funkce přebírá informace z `CPageSetupDialog` objektu a inicializuje a vybere nový řadič domény tiskárny se správnými atributy.
 
 [!code-cpp[NVC_MFCDocView#95](../../mfc/codesnippet/cpp/cpagesetupdialog-class_2.cpp)]
 
 ### <a name="example"></a>Příklad
 
-  Podívejte se na příklad pro [CPageSetupDialog::CPageSetupDialog](#cpagesetupdialog).
+  Podívejte se na příklad pro [CPageSetupDialog:: CPageSetupDialog](#cpagesetupdialog).
 
-##  <a name="getdevicename"></a>  CPageSetupDialog::GetDeviceName
+##  <a name="getdevicename"></a>CPageSetupDialog:: getnázev_zařízení
 
-Voláním této funkce po `DoModal` načíst název aktuálně vybrané tiskárny.
+Tuto funkci zavolejte po `DoModal` načtení názvu aktuálně vybrané tiskárny.
 
 ```
 CString GetDeviceName() const;
@@ -219,11 +219,11 @@ CString GetDeviceName() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Název zařízení, které se používají `CPageSetupDialog` objektu.
+Název zařízení používaný `CPageSetupDialog` objektem.
 
-##  <a name="getdevmode"></a>  CPageSetupDialog::GetDevMode
+##  <a name="getdevmode"></a>CPageSetupDialog:: getdevmode
 
-Voláním této funkce po volání `DoModal` k načtení informací o kontextu zařízení tiskárny `CPageSetupDialog` objektu.
+Tuto funkci volejte po volání `DoModal` metody pro načtení informací o kontextu `CPageSetupDialog` zařízení tiskárny objektu.
 
 ```
 LPDEVMODE GetDevMode() const;
@@ -231,11 +231,11 @@ LPDEVMODE GetDevMode() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-[DEVMODE](/windows/desktop/api/wingdi/ns-wingdi-_devicemodea) datová struktura, která obsahuje informace o inicializaci zařízení a prostředí, které ovladače tiskárny. Musíte odemknout paměť provedenou tato struktura se Windows [GlobalUnlock](/windows/desktop/api/winbase/nf-winbase-globalunlock) funkce, která je popsána v sadě Windows SDK.
+Struktura dat [DEVMODE](/windows/win32/api/wingdi/ns-wingdi-devmodea) , která obsahuje informace o inicializaci zařízení a prostředí ovladače tiskárny. Paměť, kterou tato struktura provedla, je nutné odemknout pomocí funkce Windows [GlobalUnlock](/windows/desktop/api/winbase/nf-winbase-globalunlock) , která je popsána v Windows SDK.
 
-##  <a name="getdrivername"></a>  CPageSetupDialog::GetDriverName
+##  <a name="getdrivername"></a>CPageSetupDialog:: getnázev_ovladače
 
-Voláním této funkce po volání [DoModal](../../mfc/reference/cprintdialog-class.md#domodal) načíst název definovaných systémem ovladače zařízení.
+Tuto funkci zavolejte po volání metody [DoModal](../../mfc/reference/cprintdialog-class.md#domodal) , která načte název ovladače zařízení definovaného systémem.
 
 ```
 CString GetDriverName() const;
@@ -243,15 +243,15 @@ CString GetDriverName() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-A `CString` určující název ovladače definovaná systémem.
+`CString` Zadání názvu ovladače definovaného systémem.
 
 ### <a name="remarks"></a>Poznámky
 
-Použít ukazatel `CString` vrácený `GetDriverName` jako hodnotu `lpszDriverName` ve volání [CDC::CreateDC](../../mfc/reference/cdc-class.md#createdc).
+Použijte ukazatel na `CString` objekt `GetDriverName` vrácený jako hodnota `lpszDriverName` v volání metody [CDC:: CreateDC](../../mfc/reference/cdc-class.md#createdc).
 
-##  <a name="getmargins"></a>  CPageSetupDialog::GetMargins
+##  <a name="getmargins"></a>CPageSetupDialog:: getmarže
 
-Voláním této funkce po volání `DoModal` načíst okraje ovladač zařízení.
+Tuto funkci zavolejte po volání `DoModal` , aby se načetly okraje ovladače zařízení tiskárny.
 
 ```
 void GetMargins(
@@ -262,14 +262,14 @@ void GetMargins(
 ### <a name="parameters"></a>Parametry
 
 *lpRectMargins*<br/>
-Ukazatel [RECT](/windows/desktop/api/windef/ns-windef-tagrect) struktury nebo [crect –](../../atl-mfc-shared/reference/crect-class.md) objekt, který popisuje (v palcích 1/1 000 nebo 1/100 mm) okrajů tisku pro aktuálně vybrané tiskárny. Pro tento parametr předejte hodnotu NULL, pokud vás nezajímají v obdélníku.
+Ukazatel na strukturu [Rect](/windows/desktop/api/windef/ns-windef-tagrect) nebo objekt [CRect](../../atl-mfc-shared/reference/crect-class.md) , který popisuje (v 1/1000 palcích nebo 1/100 mm) okraje pro tisk aktuálně vybrané tiskárny. Pokud si nejste zajímat tento obdélník, předejte pro tento parametr hodnotu NULL.
 
 *lpRectMinMargins*<br/>
-Ukazatel `RECT` struktury nebo `CRect` objekt, který popisuje (v palcích 1/1 000 nebo 1/100 mm) minimální okrajů tisku pro aktuálně vybrané tiskárny. Pro tento parametr předejte hodnotu NULL, pokud vás nezajímají v obdélníku.
+Ukazatel na `RECT` strukturu nebo `CRect` objekt, který popisuje (v 1/1000 palcích nebo 1/100 mm) minimální okraje pro tisk aktuálně vybrané tiskárny. Pokud si nejste zajímat tento obdélník, předejte pro tento parametr hodnotu NULL.
 
-##  <a name="getpapersize"></a>  CPageSetupDialog::GetPaperSize
+##  <a name="getpapersize"></a>CPageSetupDialog::GetPaperSize
 
-Voláním této funkce načtete velikosti papíru vybraná pro tisk.
+Voláním této funkce načtete velikost papíru vybraného pro tisk.
 
 ```
 CSize GetPaperSize() const;
@@ -277,11 +277,11 @@ CSize GetPaperSize() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-A [CSize](../../atl-mfc-shared/reference/csize-class.md) objekt, který obsahuje formát papíru (v palcích 1/1 000 nebo 1/100 mm) vybraný pro tisk.
+Objekt [CSize](../../atl-mfc-shared/reference/csize-class.md) , který obsahuje velikost papíru (v 1/1000 palců nebo 1/100 mm) vybraných pro tisk.
 
-##  <a name="getportname"></a>  CPageSetupDialog::GetPortName
+##  <a name="getportname"></a>CPageSetupDialog:: GetPort
 
-Voláním této funkce po volání `DoModal` načíst název portu aktuálně vybrané tiskárny.
+Voláním této funkce po `DoModal` volání načtěte název aktuálně vybraného portu tiskárny.
 
 ```
 CString GetPortName() const;
@@ -289,11 +289,11 @@ CString GetPortName() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Název portu aktuálně vybrané tiskárny.
+Název aktuálně vybraného portu tiskárny.
 
 ##  <a name="m_psd"></a>  CPageSetupDialog::m_psd
 
-Struktura typu PAGESETUPDLG, jejíž členové uložení vlastnosti z objektu dialogového okna.
+Struktura typu PAGESETUPDLG, jejíž členové ukládají charakteristiky objektu dialogového okna.
 
 ```
 PAGESETUPDLG m_psd;
@@ -301,17 +301,17 @@ PAGESETUPDLG m_psd;
 
 ### <a name="remarks"></a>Poznámky
 
-Po sestavení `CPageSetupDialog` objektu, můžete použít `m_psd` nastavit různé aspekty dialogového okna před voláním `DoModal` členskou funkci.
+Po sestavení `CPageSetupDialog` objektu lze použít `m_psd` k nastavení různých aspektů `DoModal` dialogového okna před voláním členské funkce.
 
-Pokud změníte `m_psd` datový člen přímo, budou všechny výchozí chování přepsat.
+Změníte-li datový člen přímo, přepíšete všechny výchozí chování. `m_psd`
 
-Další informace o [PAGESETUPDLG](/windows/desktop/api/commdlg/ns-commdlg-tagpsda) struktury, naleznete v sadě Windows SDK.
+Další informace o struktuře [PAGESETUPDLG](/windows/desktop/api/commdlg/ns-commdlg-tagpsda) naleznete v Windows SDK.
 
-Podívejte se na příklad pro [CPageSetupDialog::CPageSetupDialog](#cpagesetupdialog).
+Podívejte se na příklad pro [CPageSetupDialog:: CPageSetupDialog](#cpagesetupdialog).
 
 ##  <a name="ondrawpage"></a>  CPageSetupDialog::OnDrawPage
 
-Volá se rozhraním, chcete-li nakreslit obraz tištěné stránky.
+Volá se rozhraním, aby se nakreslil obrázek tištěné stránky.
 
 ```
 virtual UINT OnDrawPage(
@@ -325,41 +325,41 @@ virtual UINT OnDrawPage(
 *pDC*<br/>
 Ukazatel na kontext zařízení tiskárny.
 
-*nMessage*<br/>
-Určuje zprávu, s upozorněním oblasti na stránce se vykreslí. Může být jedna z následujících akcí:
+*Nzpráva*<br/>
+Určuje zprávu, která označuje oblast aktuálně vykreslené stránky. Může být jedna z následujících akcí:
 
-- WM_PSD_FULLPAGERECT oblasti celou stránku.
+- WM_PSD_FULLPAGERECT celou oblast stránky.
 
 - WM_PSD_MINMARGINRECT aktuální minimální okraje.
 
-- Aktuální WM_PSD_MARGINRECT okraje.
+- WM_PSD_MARGINRECT aktuální okraje.
 
-- WM_PSD_GREEKTEXTRECT obsah stránky.
+- WM_PSD_GREEKTEXTRECT obsah stránky
 
-- WM_PSD_ENVSTAMPRECT oblasti vyhrazené pro reprezentaci známka.
+- WM_PSD_ENVSTAMPRECT oblast vyhrazenou pro vyjádření razítka razítka.
 
-- WM_PSD_YAFULLPAGERECT oblast pro reprezentaci návratovou hodnotu. Tato oblast se rozšiřuje na okraji oblasti ukázkové stránky.
+- WM_PSD_YAFULLPAGERECT oblast pro reprezentaci návratových adres. Tato oblast se rozšíří na okraje oblasti vzorové stránky.
 
 *lpRect*<br/>
-Ukazatel [crect –](../../atl-mfc-shared/reference/crect-class.md) nebo [RECT](/windows/desktop/api/windef/ns-windef-tagrect) objekt, který obsahuje souřadnice oblasti pro kreslení.
+Ukazatel na objekt [CRect](../../atl-mfc-shared/reference/crect-class.md) nebo [Rect](/windows/desktop/api/windef/ns-windef-tagrect) obsahující souřadnice oblasti kreslení.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Nenulová hodnota, pokud zpracovává; jinak 0.
+Nenulová hodnota, pokud je zpracována; v opačném případě 0.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato image se následně zobrazí jako součást běžné dialogových oken OLE stránku nastavení. Výchozí implementace nakreslí obrázek stránky textu.
+Tento obrázek se pak zobrazí jako součást dialogového okna běžné nastavení stránky OLE. Výchozí implementace nakreslí obrázek stránky s textem.
 
-Přepsání této funkce můžete přizpůsobit kreslení určitou oblast obrázku nebo celého obrázku. Můžete to provést pomocí **přepnout** příkazem **případ** příkazy kontrolou hodnoty *nZpráva*. Například pro přizpůsobení vykreslování obsahu stránky image, můžete použít následující příklad kódu:
+Přepište tuto funkci, pokud chcete přizpůsobit vykreslování konkrétní oblasti obrázku nebo celého obrázku. To lze provést pomocí příkazu **Switch** s příkazy **case** , který kontroluje hodnotu *nzpráva*. Například pro přizpůsobení vykreslování obsahu obrázku stránky můžete použít následující příklad kódu:
 
 [!code-cpp[NVC_MFCDocView#96](../../mfc/codesnippet/cpp/cpagesetupdialog-class_3.cpp)]
 
-Všimněte si, že není potřeba zpracovávat každý případ *nZpráva*. Můžete pro zpracování jedné ze součástí bitové kopie, několik součástí image nebo celou oblast.
+Všimněte si, že nemusíte zpracovávat všechny případy *nzpráva*. Můžete se rozhodnout, že budete zpracovávat jednu komponentu obrázku, několik součástí bitové kopie nebo celou oblast.
 
 ##  <a name="predrawpage"></a>  CPageSetupDialog::PreDrawPage
 
-Volá se rozhraním před kreslením obraz tištěné stránky.
+Volá se rozhraním, než se nakreslí obraz obrazovky tištěné stránky.
 
 ```
 virtual UINT PreDrawPage(
@@ -371,40 +371,40 @@ virtual UINT PreDrawPage(
 ### <a name="parameters"></a>Parametry
 
 *wPaper*<br/>
-Určuje hodnotu, která určuje velikost papíru. Tato hodnota může být jedna z **DMPAPER_** hodnoty uvedené v popisu [DEVMODE](/windows/desktop/api/wingdi/ns-wingdi-_devicemodea) struktury.
+Určuje hodnotu, která určuje velikost papíru. Tato hodnota může být jedna z hodnot **DMPAPER_** uvedených v popisu struktury [DEVMODE](/windows/win32/api/wingdi/ns-wingdi-devmodea) .
 
 *wFlags*<br/>
-Určuje orientaci ovládacího prvku dokument nebo obálky, a jestli je tiskárna jehličkové nebo zařízení HPPCL (jazyk pro ovládací prvek Hewlett Packard tiskárny). Tento parametr může mít jednu z následujících hodnot:
+Určuje orientaci dokumentu nebo obálky a to, jestli je tiskárna zařízení s tečkovou maticí nebo HPPCL (jazykem tiskáren Hewlett-Packard Control Language). Tento parametr může mít jednu z následujících hodnot:
 
-- 0x001 papír v režimu na šířku (jehličkové tiskárny)
+- 0x001 papír v režimu na šířku (Jehličková matice)
 
 - 0x003 papír v režimu na šířku (HPPCL)
 
-- 0x005 papír v režimu na výšku (jehličkové tiskárny)
+- 0x005 papír v režimu na výšku (Jehličková matice)
 
 - 0x007 papír v režimu na výšku (HPPCL)
 
-- 0x00b Obálka v režimu na šířku (HPPCL)
+- Obálka 0x00b v režimu na šířku (HPPCL)
 
-- 0x00d Obálka v režimu na výšku (jehličkové tiskárny)
+- 0x00 obálka v režimu na výšku (Jehličková matice)
 
-- 0x019 Obálka v režimu na šířku (jehličkové tiskárny)
+- Obálka 0x019 v režimu na šířku (Jehličková matice)
 
-- 0x01f Obálka v režimu na výšku (jehličkové tiskárny)
+- Obálka 0x01f v režimu na výšku (Jehličková matice)
 
 *pPSD*<br/>
-Ukazatel `PAGESETUPDLG` struktury. Další informace o [PAGESETUPDLG](/windows/desktop/api/commdlg/ns-commdlg-tagpsda), naleznete v sadě Windows SDK.
+Ukazatel na `PAGESETUPDLG` strukturu. Další informace o [PAGESETUPDLG](/windows/desktop/api/commdlg/ns-commdlg-tagpsda)najdete v Windows SDK.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Nenulová hodnota, pokud zpracovává; jinak 0.
+Nenulová hodnota, pokud je zpracována; v opačném případě 0.
 
 ### <a name="remarks"></a>Poznámky
 
-Přepsání této funkce můžete přizpůsobit kreslení obrázku. Je-li přepsat tuto funkci a vrátí hodnotu TRUE, musí vykreslení celého obrázku. Je-li přepsat tuto funkci a vrátí hodnotu FALSE, je celý výchozí image vykreslené rozhraní framework.
+Přepsáním této funkce upravíte vykreslování obrázku. Pokud tuto funkci přepíšete a vrátíte hodnotu TRUE, je nutné vykreslit celý obrázek. Pokud tuto funkci potlačíte a vrátíte hodnotu FALSE, bude rozhraní vykreslováno pomocí celého výchozího obrázku.
 
 ## <a name="see-also"></a>Viz také:
 
-[Ukázky knihovny MFC WORDPAD](../../overview/visual-cpp-samples.md)<br/>
+[Ukázka knihovny MFC v programu WORDPAD](../../overview/visual-cpp-samples.md)<br/>
 [CCommonDialog – třída](../../mfc/reference/ccommondialog-class.md)<br/>
 [Graf hierarchie](../../mfc/hierarchy-chart.md)

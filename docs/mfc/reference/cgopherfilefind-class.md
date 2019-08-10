@@ -1,5 +1,5 @@
 ---
-title: Cgopherfilefind – třída
+title: CGopherFileFind – třída
 ms.date: 11/04/2016
 f1_keywords:
 - CGopherFileFind
@@ -26,19 +26,19 @@ helpviewer_keywords:
 - CGopherFileFind [MFC], GetScreenName
 - CGopherFileFind [MFC], IsDots
 ms.assetid: 8465a979-6323-496d-ab4b-e81383fb999d
-ms.openlocfilehash: bced5a95f65713915a1f06094bfe059db79aab2d
-ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
+ms.openlocfilehash: 31b013a14f24dcd59b9e7f23bc5284d882039990
+ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66503644"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68916180"
 ---
-# <a name="cgopherfilefind-class"></a>Cgopherfilefind – třída
+# <a name="cgopherfilefind-class"></a>CGopherFileFind – třída
 
-Pomáhá při hledání internetových souborů na serverech gopher.
+Pomůcky při hledání internetových souborů na serverech Gopher.
 
 > [!NOTE]
->  Třídy `CGopherConnection`, `CGopherFile`, `CGopherFileFind`, `CGopherLocator` a jejich členy jsou zastaralé, protože nebude fungovat na platformě Windows XP, ale budou i nadále fungovat na starší platformy.
+>  Třídy `CGopherConnection` `CGopherFile` ,`CGopherLocator` , a jejich členové jsou zastaralí, protože nefungují na platformě Windows XP, ale budou fungovat i na `CGopherFileFind`starších platformách.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -52,32 +52,32 @@ class CGopherFileFind : public CFileFind
 
 |Name|Popis|
 |----------|-----------------|
-|[CGopherFileFind::CGopherFileFind](#cgopherfilefind)|Vytvoří `CGopherFileFind` objektu.|
+|[CGopherFileFind::CGopherFileFind](#cgopherfilefind)|`CGopherFileFind` Vytvoří objekt.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
 |Name|Popis|
 |----------|-----------------|
-|[CGopherFileFind::FindFile](#findfile)|Vyhledá soubor na gopher serveru.|
-|[CGopherFileFind::FindNextFile](#findnextfile)|Pokračuje v hledání souborů z předchozího volání [FindFile](#findfile).|
+|[CGopherFileFind:: FindFile –](#findfile)|Najde soubor na serveru Gopher.|
+|[CGopherFileFind::FindNextFile](#findnextfile)|Pokračuje v hledání souborů od předchozího volání [FindFile –](#findfile).|
 |[CGopherFileFind::GetCreationTime](#getcreationtime)|Získá čas vytvoření zadaného souboru.|
-|[CGopherFileFind::GetLastAccessTime](#getlastaccesstime)|Získá čas posledního přístupu k souboru.|
-|[CGopherFileFind::GetLastWriteTime](#getlastwritetime)|Získá dobu do posledního zápisu zadaného souboru.|
-|[CGopherFileFind::GetLength](#getlength)|Získá délku nalezený soubor v bajtech.|
-|[CGopherFileFind::GetLocator](#getlocator)|Získání `CGopherLocator` objektu.|
-|[CGopherFileFind::GetScreenName](#getscreenname)|Získá název obrazovky gopher.|
-|[CGopherFileFind::IsDots](#isdots)|Testy pro aktuální adresář a nadřazené značky adresáře při procházení souborů.|
+|[CGopherFileFind::GetLastAccessTime](#getlastaccesstime)|Získá čas posledního otevření zadaného souboru.|
+|[CGopherFileFind::GetLastWriteTime](#getlastwritetime)|Získá čas posledního zápisu zadaného souboru do.|
+|[CGopherFileFind:: GetLength](#getlength)|Získá délku nalezeného souboru v bajtech.|
+|[CGopherFileFind:: GetLocator](#getlocator)|`CGopherLocator` Získat objekt.|
+|[CGopherFileFind:: getscreen](#getscreenname)|Získá název obrazovky protokolu Gopher.|
+|[CGopherFileFind::-tečky](#isdots)|Testuje aktuální adresář a značky nadřazených adresářů během iterace souborů.|
 
 ## <a name="remarks"></a>Poznámky
 
-`CGopherFileFind` zahrnuje členské funkce, které začínají vyhledávání, vyhledání souboru a vrátí adresu URL souboru.
+`CGopherFileFind`zahrnuje členské funkce, které zahájí hledání, vyhledá soubor a vrátí adresu URL souboru.
 
-Jiné třídy knihovny MFC navržené pro Internet a prohledávat místní soubor k zahrnutí [cftpfilefind –](../../mfc/reference/cftpfilefind-class.md) a [cfilefind –](../../mfc/reference/cfilefind-class.md). Spolu s `CGopherFileFind`, tyto třídy poskytnout bezproblémové mechanismus pro uživatele o nalezení konkrétní soubory, bez ohledu na to, protokol serveru, typ souboru nebo umístění (místní počítač nebo na vzdálený server.) Všimněte si, že neexistuje žádná třída knihovny MFC pro vyhledávání na serverech HTTP, protože HTTP nepodporuje manipulace s přímým přístupem soubor vyžadují vyhledávání.
+Mezi další třídy knihovny MFC, které jsou určeny pro hledání na internetu a místní soubory, patří [CFtpFileFind](../../mfc/reference/cftpfilefind-class.md) a [CFileFind](../../mfc/reference/cfilefind-class.md). Spolu s `CGopherFileFind`nástrojem poskytují tyto třídy bezproblémové mechanizmus pro uživatele, aby našli konkrétní soubory bez ohledu na protokol serveru, typ souboru nebo umístění (buď místní počítač nebo vzdálený server). Všimněte si, že pro hledání na serverech HTTP není k dispozici žádná třída knihovny MFC, protože protokol HTTP nepodporuje přímou manipulaci se soubory požadovanou hledáním.
 
 > [!NOTE]
-> `CGopherFileFind` nepodporuje následující funkce člena základní třídy [cfilefind –](../../mfc/reference/cfilefind-class.md):
+> `CGopherFileFind`nepodporuje následující členské funkce své základní třídy [CFileFind](../../mfc/reference/cfilefind-class.md):
 
-- [GetRoot](../../mfc/reference/cfilefind-class.md#getroot)
+- [GetRoot selhalo](../../mfc/reference/cfilefind-class.md#getroot)
 
 - [GetFileName](../../mfc/reference/cfilefind-class.md#getfilename)
 
@@ -87,13 +87,13 @@ Jiné třídy knihovny MFC navržené pro Internet a prohledávat místní soubo
 
 - [GetFileURL](../../mfc/reference/cfilefind-class.md#getfileurl)
 
-Kromě toho při použití s `CGopherFileFind`, `CFileFind` členskou funkci [IsDots](../../mfc/reference/cfilefind-class.md#isdots) má vždy hodnotu FALSE.
+Kromě toho, když se používá `CGopherFileFind`s `CFileFind` , je členská funkce vždycky false. [](../../mfc/reference/cfilefind-class.md#isdots)
 
-Další informace o tom, jak používat `CGopherFileFind` a jiných tříd WinInet, najdete v článku [Internet programování pomocí rozhraní WinInet](../../mfc/win32-internet-extensions-wininet.md).
+Další informace o tom, jak používat `CGopherFileFind` a jiné třídy WinInet, najdete v článku [internetové programování s](../../mfc/win32-internet-extensions-wininet.md)rozhraním Wininet.
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
-[Třídy CObject](../../mfc/reference/cobject-class.md)
+[CObject](../../mfc/reference/cobject-class.md)
 
 [CFileFind](../../mfc/reference/cfilefind-class.md)
 
@@ -101,11 +101,11 @@ Další informace o tom, jak používat `CGopherFileFind` a jiných tříd WinIn
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** afxinet.h
+**Záhlaví:** afxinet. h
 
-##  <a name="cgopherfilefind"></a>  CGopherFileFind::CGopherFileFind
+##  <a name="cgopherfilefind"></a>CGopherFileFind::CGopherFileFind
 
-Tato členská funkce je volána k sestavení kompletních `CGopherFileFind` objektu.
+Tato členská funkce je volána k vytvoření `CGopherFileFind` objektu.
 
 ```
 explicit CGopherFileFind(
@@ -116,18 +116,18 @@ explicit CGopherFileFind(
 ### <a name="parameters"></a>Parametry
 
 *pConnection*<br/>
-Ukazatel [cgopherconnection –](../../mfc/reference/cgopherconnection-class.md) objektu.
+Ukazatel na objekt [CGopherConnection](../../mfc/reference/cgopherconnection-class.md) .
 
 *dwContext*<br/>
-Identifikátor kontextu operace. Zobrazit **poznámky** Další informace o *dwContext*.
+Identifikátor kontextu operace. Další informace o *dwContext*najdete v tématu **poznámky** .
 
 ### <a name="remarks"></a>Poznámky
 
-Výchozí hodnota pro *dwContext* odesílají knihovny MFC pro `CGopherFileFind` objektu z [cinternetsession –](../../mfc/reference/cinternetsession-class.md) objekt vytvořený `CGopherFileFind` objektu. Při sestavování `CGopherFileFind` objektu, můžete přepsat výchozí identifikátor kontextu nastavena na hodnotu podle vašeho výběru. Identifikátor kontextu se vrátí do [CInternetSession::OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback) poskytnout stav objektu, pomocí kterého je identifikován. Přečtěte si článek [Internet první kroky: WinInet](../../mfc/wininet-basics.md) Další informace o identifikátor kontextu.
+Výchozí hodnota pro *dwContext* je odeslána knihovnou MFC do `CGopherFileFind` objektu z objektu [](../../mfc/reference/cinternetsession-class.md) `CGopherFileFind` CInternetSession, který objekt vytvořil. Při vytváření `CGopherFileFind` objektu můžete přepsat výchozí hodnotu pro nastavení identifikátoru kontextu na hodnotu, kterou zvolíte. Identifikátor kontextu je vrácen do [CInternetSession:: OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback) , aby poskytoval stav objektu, se kterým je identifikován. Přečtěte si [článek Internet First Step: Rozhraní](../../mfc/wininet-basics.md) WinInet pro další informace o identifikátoru kontextu.
 
-##  <a name="findfile"></a>  CGopherFileFind::FindFile
+##  <a name="findfile"></a>CGopherFileFind:: FindFile –
 
-Voláním této členské funkce gopher soubor se nenašel.
+Chcete-li najít soubor protokolu Gopher, zavolejte tuto členskou funkci.
 
 ```
 virtual BOOL FindFile(
@@ -143,33 +143,33 @@ virtual BOOL FindFile(
 ### <a name="parameters"></a>Parametry
 
 *refLocator*<br/>
-Odkaz na [cgopherlocator –](../../mfc/reference/cgopherlocator-class.md) objektu.
+Odkaz na objekt [CGopherLocator](../../mfc/reference/cgopherlocator-class.md) .
 
 *pstrString*<br/>
 Ukazatel na řetězec obsahující název souboru.
 
 *dwFlags*<br/>
-Příznaky popisující, jak zpracovat tuto relaci. Platný příznaky jsou:
+Příznaky popisující, jak tuto relaci zpracovat. Platné příznaky jsou:
 
-- INTERNET_FLAG_RELOAD získat data ze vzdáleného serveru i v případě, že je v místní mezipaměti.
+- INTERNET_FLAG_RELOAD získá data ze vzdáleného serveru i v případě, že je místně uložené v mezipaměti.
 
-- INTERNET_FLAG_DONT_CACHE Neukládat do mezipaměti dat, místně nebo v žádné brány.
+- INTERNET_FLAG_DONT_CACHE data Neukládat do mezipaměti, a to buď místně, nebo v žádné bráně.
 
-- Požádat o INTERNET_FLAG_SECURE zabezpečené transakce na lince Secure Sockets Layer nebo v PROC. Tento příznak se vztahuje pouze na požadavky HTTP.
+- INTERNET_FLAG_SECURE vyžadují zabezpečené transakce na lince s SSL (Secure Sockets Layer) nebo PCT. Tento příznak se vztahuje pouze na požadavky HTTP.
 
-- INTERNET_FLAG_USE_EXISTING Pokud je to možné, opakovaně používat existující připojení k serveru na nový `FindFile` požadavky, místo vytvoření nové relace pro každý požadavek.
+- INTERNET_FLAG_USE_EXISTING Pokud je to možné, znovu znovu použijte existující připojení na server `FindFile` pro nové požadavky, místo aby se vytvořila nová relace pro každý požadavek.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Nenulové, pokud je úspěšná. jinak 0. Chcete-li získat rozšířené informace o chybě, zavolejte funkci Win32 [GetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror).
+Nenulové, pokud bylo úspěšné; v opačném případě 0. Chcete-li získat rozšířené informace o chybě, zavolejte funkci Win32 [GetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror).
 
 ### <a name="remarks"></a>Poznámky
 
-Po volání `FindFile` načíst první objekt gopher, můžete volat [FindNextFile](#findnextfile) načíst soubory následné gopher.
+Po volání `FindFile` načtení prvního objektu gopher můžete volat [FindNextFile](#findnextfile) a načíst další soubory Gopher.
 
-##  <a name="findnextfile"></a>  CGopherFileFind::FindNextFile
+##  <a name="findnextfile"></a>CGopherFileFind::FindNextFile
 
-Voláním této členské funkce pokračujte hledání souborů začal s voláním [CGopherFileFind::FindFile](#findfile).
+Zavolejte tuto členskou funkci, aby bylo možné pokračovat v hledání souborů s voláním [CGopherFileFind:: FindFile –](#findfile).
 
 ```
 virtual BOOL FindNextFile();
@@ -177,11 +177,11 @@ virtual BOOL FindNextFile();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Nenulové, pokud existují další soubory. nula, pokud je nalezen soubor jako poslední v adresáři nebo pokud došlo k chybě. Chcete-li získat rozšířené informace o chybě, zavolejte funkci Win32 [GetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror). Pokud je nalezen soubor poslední soubor v adresáři nebo neexistuje odpovídající soubory najdete, `GetLastError` funkce vrátí ERROR_NO_MORE_FILES.
+Nenulové, pokud existuje více souborů; nula, pokud se soubor našel jako poslední v adresáři, nebo pokud došlo k chybě Chcete-li získat rozšířené informace o chybě, zavolejte funkci Win32 [GetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror). Pokud je nalezen poslední soubor v adresáři, nebo pokud nelze nalézt žádné vyhovující soubory, `GetLastError` vrátí funkce ERROR_NO_MORE_FILES.
 
-##  <a name="getcreationtime"></a>  CGopherFileFind::GetCreationTime
+##  <a name="getcreationtime"></a>CGopherFileFind::GetCreationTime
 
-Získá čas vytvoření pro aktuální soubor.
+Získá čas vytvoření aktuálního souboru.
 
 ```
 virtual BOOL GetCreationTime(FILETIME* pTimeStamp) const;
@@ -191,25 +191,25 @@ virtual BOOL GetCreationTime(CTime& refTime) const;
 ### <a name="parameters"></a>Parametry
 
 *pTimeStamp*<br/>
-Ukazatel [hodnota FILETIME](/windows/desktop/api/minwinbase/ns-minwinbase-filetime) struktury obsahující čas vytvoření souboru.
+Ukazatel na strukturu [času](/windows/desktop/api/minwinbase/ns-minwinbase-filetime) souboru obsahující čas, kdy byl soubor vytvořen.
 
 *refTime*<br/>
-Odkaz na [CTime](../../atl-mfc-shared/reference/ctime-class.md) objektu.
+Odkaz na objekt [CTime –](../../atl-mfc-shared/reference/ctime-class.md) .
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Nenulové, pokud je úspěšná. 0, pokud není úspěšné. `GetCreationTime` Vrátí hodnotu 0, pouze pokud [FindNextFile](#findnextfile) nikdy byla volána na tomto `CGopherFileFind` objektu.
+Nenulové, pokud bylo úspěšné; 0, pokud neproběhla úspěšně. `GetCreationTime`Vrátí hodnotu 0 pouze v případě, že [FindNextFile](#findnextfile) nebyl nikdy `CGopherFileFind` volán u tohoto objektu.
 
 ### <a name="remarks"></a>Poznámky
 
-Je nutné volat [FindNextFile](#findnextfile) alespoň jednou před voláním `GetCreationTime`.
+Před voláním [](#findnextfile) `GetCreationTime`je nutné volat FindNextFile alespoň jednou.
 
 > [!NOTE]
->  Ne všechny systémy souborů implementace časové razítko vrácená touto funkcí pomocí stejné sémantiky. Tato funkce může vrátit stejnou hodnotu vrácenou příkazem jiné časové razítko funkce, pokud podkladový systém souborů nebo server nepodporuje atribut doby uchování. Zobrazit [Win32_FIND_DATA](/windows/desktop/api/minwinbase/ns-minwinbase-_win32_find_dataa) strukturu pro informace o formáty času. U některých operačních systémů vrácený čas je v čase místní zóny na počítači se, že se soubor nachází. Zobrazit Win32 [FileTimeToLocalFileTime](/windows/desktop/api/fileapi/nf-fileapi-filetimetolocalfiletime) rozhraní API pro další informace.
+>  Ne všechny systémy souborů používají stejnou sémantiku k implementaci časového razítka vráceného touto funkcí. Tato funkce může vracet stejnou hodnotu vrácenou jinými funkcemi časového razítka, Pokud podkladový systém souborů nebo server nepodporuje zachování atributu Time. Informace o formátech času najdete v [WIN32_FIND_DATA](/windows/desktop/api/minwinbase/ns-minwinbase-win32_find_dataa) struktuře. V některých operačních systémech byl vrácený čas v časovém pásmu, které se nachází v místním počítači, kde se nachází soubor. Další informace najdete v tématu rozhraní Win32 [FileTimeToLocalFileTime](/windows/desktop/api/fileapi/nf-fileapi-filetimetolocalfiletime) API.
 
-##  <a name="getlastaccesstime"></a>  CGopherFileFind::GetLastAccessTime
+##  <a name="getlastaccesstime"></a>CGopherFileFind::GetLastAccessTime
 
-Získá čas posledního přístupu k souboru.
+Získá čas posledního otevření zadaného souboru.
 
 ```
 virtual BOOL GetLastAccessTime(CTime& refTime) const;
@@ -219,23 +219,23 @@ virtual BOOL GetLastAccessTime(FILETIME* pTimeStamp) const;
 ### <a name="parameters"></a>Parametry
 
 *refTime*<br/>
-Odkaz na [CTime](../../atl-mfc-shared/reference/ctime-class.md) objektu.
+Odkaz na objekt [CTime –](../../atl-mfc-shared/reference/ctime-class.md) .
 
 *pTimeStamp*<br/>
-Ukazatel [hodnota FILETIME](/windows/desktop/api/minwinbase/ns-minwinbase-filetime) struktury obsahující čas posledního přístupu k souboru.
+Ukazatel na strukturu [času](/windows/desktop/api/minwinbase/ns-minwinbase-filetime) souboru obsahující čas posledního otevření souboru.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Nenulové, pokud je úspěšná. 0, pokud není úspěšné. `GetLastAccessTime` Vrátí hodnotu 0, pouze pokud [FindNextFile](#findnextfile) nikdy byla volána na tomto `CGopherFileFind` objektu.
+Nenulové, pokud bylo úspěšné; 0, pokud neproběhla úspěšně. `GetLastAccessTime`Vrátí hodnotu 0 pouze v případě, že [FindNextFile](#findnextfile) nebyl nikdy `CGopherFileFind` volán u tohoto objektu.
 
 ### <a name="remarks"></a>Poznámky
 
-Je nutné volat [FindNextFile](#findnextfile) alespoň jednou před voláním `GetLastAccessTime`.
+Před voláním [](#findnextfile) `GetLastAccessTime`je nutné volat FindNextFile alespoň jednou.
 
 > [!NOTE]
->  Ne všechny systémy souborů implementace časové razítko vrácená touto funkcí pomocí stejné sémantiky. Tato funkce může vrátit stejnou hodnotu vrácenou příkazem jiné časové razítko funkce, pokud podkladový systém souborů nebo server nepodporuje atribut doby uchování. Zobrazit [Win32_FIND_DATA](/windows/desktop/api/minwinbase/ns-minwinbase-_win32_find_dataa) strukturu pro informace o formáty času. U některých operačních systémů vrácený čas je v čase místní zóny na počítači se, že se soubor nachází. Zobrazit Win32 [FileTimeToLocalFileTime](/windows/desktop/api/fileapi/nf-fileapi-filetimetolocalfiletime) rozhraní API pro další informace.
+>  Ne všechny systémy souborů používají stejnou sémantiku k implementaci časového razítka vráceného touto funkcí. Tato funkce může vracet stejnou hodnotu vrácenou jinými funkcemi časového razítka, Pokud podkladový systém souborů nebo server nepodporuje zachování atributu Time. Informace o formátech času najdete v [WIN32_FIND_DATA](/windows/desktop/api/minwinbase/ns-minwinbase-win32_find_dataa) struktuře. V některých operačních systémech byl vrácený čas v časovém pásmu, které se nachází v místním počítači, kde se nachází soubor. Další informace najdete v tématu rozhraní Win32 [FileTimeToLocalFileTime](/windows/desktop/api/fileapi/nf-fileapi-filetimetolocalfiletime) API.
 
-##  <a name="getlastwritetime"></a>  CGopherFileFind::GetLastWriteTime
+##  <a name="getlastwritetime"></a>CGopherFileFind::GetLastWriteTime
 
 Získá čas poslední změny souboru.
 
@@ -247,25 +247,25 @@ virtual BOOL GetLastWriteTime(CTime& refTime) const;
 ### <a name="parameters"></a>Parametry
 
 *pTimeStamp*<br/>
-Ukazatel [hodnota FILETIME](/windows/desktop/api/minwinbase/ns-minwinbase-filetime) struktury obsahující času posledního zápisu souboru na.
+Ukazatel na strukturu [času](/windows/desktop/api/minwinbase/ns-minwinbase-filetime) souboru obsahující čas, kdy byl soubor naposledy zapsán.
 
 *refTime*<br/>
-Odkaz na [CTime](../../atl-mfc-shared/reference/ctime-class.md) objektu.
+Odkaz na objekt [CTime –](../../atl-mfc-shared/reference/ctime-class.md) .
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Nenulové, pokud je úspěšná. 0, pokud není úspěšné. `GetLastWriteTime` Vrátí hodnotu 0, pouze pokud [FindNextFile](#findnextfile) nikdy byla volána na tomto `CGopherFileFind` objektu.
+Nenulové, pokud bylo úspěšné; 0, pokud neproběhla úspěšně. `GetLastWriteTime`Vrátí hodnotu 0 pouze v případě, že [FindNextFile](#findnextfile) nebyl nikdy `CGopherFileFind` volán u tohoto objektu.
 
 ### <a name="remarks"></a>Poznámky
 
-Je nutné volat [FindNextFile](#findnextfile) alespoň jednou před voláním `GetLastWriteTime`.
+Před voláním [](#findnextfile) `GetLastWriteTime`je nutné volat FindNextFile alespoň jednou.
 
 > [!NOTE]
->  Ne všechny systémy souborů implementace časové razítko vrácená touto funkcí pomocí stejné sémantiky. Tato funkce může vrátit stejnou hodnotu vrácenou příkazem jiné časové razítko funkce, pokud podkladový systém souborů nebo server nepodporuje atribut doby uchování. Zobrazit [Win32_FIND_DATA](/windows/desktop/api/minwinbase/ns-minwinbase-_win32_find_dataa) strukturu pro informace o formáty času. U některých operačních systémů vrácený čas je v čase místní zóny na počítači se, že se soubor nachází. Zobrazit Win32 [FileTimeToLocalFileTime](/windows/desktop/api/fileapi/nf-fileapi-filetimetolocalfiletime) rozhraní API pro další informace.
+>  Ne všechny systémy souborů používají stejnou sémantiku k implementaci časového razítka vráceného touto funkcí. Tato funkce může vracet stejnou hodnotu vrácenou jinými funkcemi časového razítka, Pokud podkladový systém souborů nebo server nepodporuje zachování atributu Time. Informace o formátech času najdete v [WIN32_FIND_DATA](/windows/desktop/api/minwinbase/ns-minwinbase-win32_find_dataa) struktuře. V některých operačních systémech byl vrácený čas v časovém pásmu, které se nachází v místním počítači, kde se nachází soubor. Další informace najdete v tématu rozhraní Win32 [FileTimeToLocalFileTime](/windows/desktop/api/fileapi/nf-fileapi-filetimetolocalfiletime) API.
 
-##  <a name="getlength"></a>  CGopherFileFind::GetLength
+##  <a name="getlength"></a>CGopherFileFind:: GetLength
 
-Voláním této členské funkce, chcete-li získat délku v bajtech nalezený soubor.
+Voláním této členské funkce získáte délku nalezeného souboru v bajtech.
 
 ```
 virtual ULONGLONG GetLength() const;
@@ -273,22 +273,22 @@ virtual ULONGLONG GetLength() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Délka v bajtech, souboru nalezen.
+Délka nalezeného souboru v bajtech
 
 ### <a name="remarks"></a>Poznámky
 
-`GetLength` používá strukturu Win32 [WIN32_FIND_DATA](/windows/desktop/api/minwinbase/ns-minwinbase-_win32_find_dataa) má být získána hodnota velikosti souboru v bajtech.
+`GetLength`používá strukturu Win32 [WIN32_FIND_DATA](/windows/desktop/api/minwinbase/ns-minwinbase-win32_find_dataa) k získání hodnoty velikosti souboru v bajtech.
 
 > [!NOTE]
->  Od verze MFC 7.0 `GetLength` podporuje 64bitové celočíselné typy. Dříve existující kód vytvořený s touto novější verzí knihovny může vést ke zkrácení upozornění.
+>  V případě knihovny MFC 7,0 `GetLength` podporuje typy celočíselného celého čísla (64). Dříve existující kód sestavený pomocí této novější verze knihovny může způsobit upozornění na zkrácení.
 
 ### <a name="example"></a>Příklad
 
-  Podívejte se na příklad pro [CFile::GetLength](../../mfc/reference/cfile-class.md#getlength) (implementaci základní třídy).
+  Podívejte se na příklad pro [CFile –:: GetLength](../../mfc/reference/cfile-class.md#getlength) (implementace základní třídy).
 
-##  <a name="getlocator"></a>  CGopherFileFind::GetLocator
+##  <a name="getlocator"></a>CGopherFileFind:: GetLocator
 
-Zavolat tuto členskou funkci zobrazíte [cgopherlocator –](../../mfc/reference/cgopherlocator-class.md) objekt, který [FindFile](#findfile) používá k vyhledání souboru gopher.
+Voláním této členské funkce získáte objekt [CGopherLocator](../../mfc/reference/cgopherlocator-class.md) , který [FindFile –](#findfile) používá k vyhledání souboru protokolu Gopher.
 
 ```
 CGopherLocator GetLocator() const;
@@ -298,9 +298,9 @@ CGopherLocator GetLocator() const;
 
 A `CGopherLocator` objektu.
 
-##  <a name="getscreenname"></a>  CGopherFileFind::GetScreenName
+##  <a name="getscreenname"></a>CGopherFileFind:: getscreen
 
-Voláním této členské funkce a získat tak název obrazovky gopher.
+Chcete-li získat název obrazovky protokolu Gopher, zavolejte tuto členskou funkci.
 
 ```
 CString GetScreenName() const;
@@ -308,11 +308,11 @@ CString GetScreenName() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Název obrazovky gopher.
+Název obrazovky protokolu Gopher
 
-##  <a name="isdots"></a>  CGopherFileFind::IsDots
+##  <a name="isdots"></a>CGopherFileFind::-tečky
 
-Testy pro aktuální adresář a nadřazené značky adresáře při procházení souborů.
+Testuje aktuální adresář a značky nadřazených adresářů během iterace souborů.
 
 ```
 virtual BOOL IsDots() const;
@@ -320,11 +320,11 @@ virtual BOOL IsDots() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Nenulové, pokud je nalezen soubor má název "."nebo"..", což znamená, že nalezený soubor je ve skutečnosti adresář. Jinak 0.
+Nenulová, pokud má nalezený soubor název "." nebo "..", který označuje, že nalezený soubor je ve skutečnosti adresář. V opačném případě 0.
 
 ### <a name="remarks"></a>Poznámky
 
-Je nutné volat [FindNextFile](#findnextfile) alespoň jednou před voláním `IsDots`.
+Před voláním [](#findnextfile) `IsDots`je nutné volat FindNextFile alespoň jednou.
 
 ## <a name="see-also"></a>Viz také:
 

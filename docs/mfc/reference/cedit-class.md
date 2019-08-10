@@ -94,12 +94,12 @@ helpviewer_keywords:
 - CEdit [MFC], ShowBalloonTip
 - CEdit [MFC], Undo
 ms.assetid: b1533c30-7f10-4663-88d3-8b7f2c9f7024
-ms.openlocfilehash: a66597f7a43e0730ae8b32369235ac860f51a0f1
-ms.sourcegitcommit: 878a164fe6d550ca81ab87d8425c8d3cd52fe384
+ms.openlocfilehash: ccf7445100977e1205bbcffe230e1919ac33adea
+ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/22/2019
-ms.locfileid: "68375852"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68916144"
 ---
 # <a name="cedit-class"></a>CEdit – třída
 
@@ -1205,7 +1205,7 @@ Když je nastaven znak hesla, zobrazí se tento znak pro každý znak typu uživ
 
 Tato členská funkce nemá žádný vliv na víceřádkový ovládací prvek pro úpravy.
 
-`SetPasswordChar` Při volání členské funkce překreslí všechny viditelné znaky pomocí znaku určeného parametrem ch `CEdit` .
+`SetPasswordChar` Přivolání členské funkce překreslí všechny viditelné znaky pomocí znaku určeného parametrem ch `CEdit` .
 
 Pokud je ovládací prvek pro úpravy vytvořen pomocí stylu [ES_PASSWORD](styles-used-by-mfc.md#edit-styles) , je výchozí znak hesla nastaven na hvězdičku ( <strong>\*</strong>). Tento styl se odebere, `SetPasswordChar` Pokud se volá s *ch* nastaveným na 0.
 
@@ -1400,10 +1400,10 @@ BOOL ShowBalloonTip(
 
 |Parametr|Popis|
 |---------------|-----------------|
-|*pEditBalloonTip*|pro Ukazatel na strukturu [EDITBALLOONTIP](/windows/desktop/api/commctrl/ns-commctrl-_tageditballoontip) , která popisuje Tip v bublině.|
+|*pEditBalloonTip*|pro Ukazatel na strukturu [EDITBALLOONTIP](/windows/desktop/api/commctrl/ns-commctrl-editballoontip) , která popisuje Tip v bublině.|
 |*lpszTitle*|pro Ukazatel na řetězec v kódování Unicode, který obsahuje název tipu bubliny.|
 |*lpszText*|pro Ukazatel na řetězec v kódování Unicode, který obsahuje text tipu bubliny.|
-|*ttiIcon*|pro **Int** , která určuje typ ikony k přidružení s tipem v bublině. Výchozí hodnota je TTI_NONE. Další informace naleznete v tématu `ttiIcon` člen struktury [EDITBALLOONTIP](/windows/desktop/api/commctrl/ns-commctrl-_tageditballoontip) .|
+|*ttiIcon*|pro **Int** , která určuje typ ikony k přidružení s tipem v bublině. Výchozí hodnota je TTI_NONE. Další informace naleznete v tématu `ttiIcon` člen struktury [EDITBALLOONTIP](/windows/desktop/api/commctrl/ns-commctrl-editballoontip) .|
 
 ### <a name="return-value"></a>Návratová hodnota
 

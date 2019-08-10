@@ -1,5 +1,5 @@
 ---
-title: Cthreadpool – třída
+title: CThreadPool – třída
 ms.date: 11/04/2016
 f1_keywords:
 - CThreadPool
@@ -20,16 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - CThreadPool class
 ms.assetid: 06683718-01b9-413c-9481-2dc1734ec70f
-ms.openlocfilehash: 7d363de0d787ecc5015093005b39a379acd82e71
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 07fd470a6aeab0575f2733d72650bd695b8e2752
+ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62277393"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68915691"
 ---
-# <a name="cthreadpool-class"></a>Cthreadpool – třída
+# <a name="cthreadpool-class"></a>CThreadPool – třída
 
-Tato třída poskytuje fondu pracovních vláken, které zpracovávají fronty pracovních položek.
+Tato třída poskytuje fond pracovních vláken, která zpracovávají frontu pracovních položek.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -40,49 +40,49 @@ class CThreadPool : public IThreadPoolConfig
 
 #### <a name="parameters"></a>Parametry
 
-*Pracovního procesu*<br/>
-Třída odpovídají [archetyp pracovního procesu](../../atl/reference/worker-archetype.md) poskytuje kód používá ke zpracování pracovní položky ve frontě fondu vláken.
+*Zaměstnanec*<br/>
+Třída, která odpovídá [Archetype pracovního procesu](../../atl/reference/worker-archetype.md) , poskytuje kód používaný ke zpracování pracovních položek ve frontě ve fondu vláken.
 
 *ThreadTraits*<br/>
-Třída poskytující funkce použitá k vytvoření vláken ve fondu.
+Třída, která poskytuje funkci použitou k vytvoření vláken ve fondu.
 
 ## <a name="members"></a>Členové
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CThreadPool::CThreadPool](#cthreadpool)|Konstruktor pro fond vláken.|
 |[CThreadPool::~CThreadPool](#dtor)|Destruktor pro fond vláken.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
-|[CThreadPool::AddRef](#addref)|Provádění `IUnknown::AddRef`.|
-|[CThreadPool::GetNumThreads](#getnumthreads)|Volejte tuto metodu za účelem získání počet vláken ve fondu.|
-|[CThreadPool::GetQueueHandle](#getqueuehandle)|Voláním této metody lze získat popisovač sloužící k vytvoření fronty pracovních položek port dokončení vstupně-výstupních operací.|
-|[CThreadPool::GetSize](#getsize)|Volejte tuto metodu za účelem získání počet vláken ve fondu.|
-|[CThreadPool::GetTimeout](#gettimeout)|Volejte tuto metodu za účelem získání maximální dobu v milisekundách, fondu vláken bude čekání na vlákno pro vypnutí.|
-|[CThreadPool::Initialize](#initialize)|Volejte tuto metodu za účelem inicializace fondu vláken.|
-|[CThreadPool::QueryInterface](#queryinterface)|Provádění `IUnknown::QueryInterface`.|
-|[CThreadPool::QueueRequest](#queuerequest)|Volání této metody do fronty pracovní položku zpracovávat vláken ve fondu.|
-|[CThreadPool::Release](#release)|Provádění `IUnknown::Release`.|
-|[CThreadPool::SetSize](#setsize)|Voláním této metody nastavte počet vláken ve fondu.|
-|[CThreadPool::SetTimeout](#settimeout)|Volejte tuto metodu za účelem nastavení maximální doby v milisekundách, fondu vláken bude čekání na vlákno pro vypnutí.|
-|[CThreadPool::Shutdown](#shutdown)|Volejte tuto metodu k vypnutí fondu vláken.|
+|[CThreadPool:: AddRef](#addref)|`IUnknown::AddRef`Implementace.|
+|[CThreadPool::GetNumThreads](#getnumthreads)|Voláním této metody získáte počet vláken ve fondu.|
+|[CThreadPool::GetQueueHandle](#getqueuehandle)|Voláním této metody získáte popisovač portu pro vstupně-výstupní operace, který se používá k zařazení pracovních položek do fronty.|
+|[CThreadPool:: GetSize](#getsize)|Voláním této metody získáte počet vláken ve fondu.|
+|[CThreadPool::GetTimeout](#gettimeout)|Voláním této metody získáte maximální dobu v milisekundách, po kterou bude fond vláken čekat na vypnutí vlákna.|
+|[CThreadPool:: Initialize](#initialize)|Voláním této metody inicializujete fond vláken.|
+|[CThreadPool::QueryInterface](#queryinterface)|`IUnknown::QueryInterface`Implementace.|
+|[CThreadPool::QueueRequest](#queuerequest)|Voláním této metody zařadíte do fronty pracovní položku, která má být zpracována vláknem ve fondu.|
+|[CThreadPool:: Release](#release)|`IUnknown::Release`Implementace.|
+|[CThreadPool:: SetSize](#setsize)|Voláním této metody nastavíte počet vláken ve fondu.|
+|[CThreadPool:: SetTimeout](#settimeout)|Voláním této metody nastavíte maximální dobu v milisekundách, po kterou bude fond vláken čekat na vypnutí vlákna.|
+|[CThreadPool::Shutdown](#shutdown)|Voláním této metody vypnete fond vláken.|
 
 ## <a name="remarks"></a>Poznámky
 
-Vláken ve fondu se vytvoří a zničeno při inicializován, změně velikosti nebo vypnutí fondu. Instance třídy *pracovního procesu* se vytvoří v zásobníku každého pracovního vlákna ve fondu. Každá instance bude live pro životnost vlákna.
+Vlákna ve fondu jsou vytvořena a zničena při inicializaci fondu, změně velikosti nebo vypnutí. Instance *pracovního procesu* třídy se vytvoří v zásobníku všech pracovních vláken ve fondu. Každá instance bude po celou dobu životnosti vlákna živá.
 
-Ihned po vytvoření vlákna *pracovního procesu*::`Initialize` bude volána na objektu souvisejícího s tímto vláknem. Bezprostředně před ničení vlákna *pracovního procesu*::`Terminate` , zavolá se. Obě metody musíte souhlasit **void** <strong>\*</strong> argument. Byla předána hodnota tohoto argumentu do fondu vláken prostřednictvím *pvWorkerParam* parametr [CThreadPool::Initialize](#initialize).
+Ihned po vytvoření vlákna *pracovní*proces::`Initialize` bude volána u objektu přidruženého k danému vláknu. Bezprostředně před zničením vlákna, *Worker*::`Terminate` bude volána. Obě metody musí přijmout argument **void** <strong>\*</strong> . Hodnota tohoto argumentu je předána fondu vláken prostřednictvím parametru *PvWorkerParam* [CThreadPool:: Initialize](#initialize).
 
-Pokud nejsou pracovní položky ve vláknech frontu a pracovní proces k dispozici pro práci, pracovní vlákno přetáhne položky fronty a volání `Execute` metodu *pracovního procesu* objektu pro toto vlákno. Tři položky jsou potom předány metodě: položky z fronty, stejné `pvWorkerParam` předán *pracovního procesu*:: `Initialize` a *pracovního procesu*:: `Terminate`a ukazatel [OVERLAPPED](/windows/desktop/api/minwinbase/ns-minwinbase-_overlapped) struktura používaná pro frontu port dokončení vstupně-výstupních operací.
+Pokud jsou ve frontě dostupné pracovní položky a pracovní vlákna jsou k dispozici pro práci, pracovní podproces vyžádá položku mimo frontu a zavolá `Execute` metodu objektu *Worker* daného vlákna. Tři položky `pvWorkerParam` jsou následně předány do metody: položka z fronty, která byla předána `Initialize` pracovnímu procesu:: a *Worker*: `Terminate`:, a ukazatel na překrývající se strukturu použitou pro frontu portů při dokončování v/v. [](/windows/desktop/api/minwinbase/ns-minwinbase-overlapped) .
 
-*Pracovního procesu* třída deklaruje typ položky, které bude zařazená do fronty ve fondu vláken poskytuje definice typu, *pracovního procesu*:: `RequestType`. Tento typ musí být schopné přetypování do a z ULONG_PTR.
+Třída *Worker* deklaruje typ položek, které budou zařazeny do fronty ve fondu vláken poskytnutím typedef, Worker:: `RequestType`. Tento typ musí být schopný přetypování do a z ULONG_PTR.
 
-Příklad *pracovního procesu* třída je [cnonstatelessworker – třída](../../atl/reference/cnonstatelessworker-class.md).
+Příkladem třídy *pracovního procesu* je [Třída CNonStatelessWorker](../../atl/reference/cnonstatelessworker-class.md).
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
@@ -94,11 +94,11 @@ Příklad *pracovního procesu* třída je [cnonstatelessworker – třída](../
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** atlutil.h
+**Záhlaví:** atlutil. h
 
-##  <a name="addref"></a>  CThreadPool::AddRef
+##  <a name="addref"></a>CThreadPool:: AddRef
 
-Provádění `IUnknown::AddRef`.
+`IUnknown::AddRef`Implementace.
 
 ```
 ULONG STDMETHODCALLTYPE AddRef() throw();
@@ -106,13 +106,13 @@ ULONG STDMETHODCALLTYPE AddRef() throw();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vždy vrátí hodnotu 1.
+Vždycky vrátí hodnotu 1.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato třída neimplementuje životnost ovládací prvek s použitím počítání odkazů.
+Tato třída neimplementuje řízení životnosti pomocí počítání odkazů.
 
-##  <a name="cthreadpool"></a>  CThreadPool::CThreadPool
+##  <a name="cthreadpool"></a>CThreadPool::CThreadPool
 
 Konstruktor pro fond vláken.
 
@@ -122,9 +122,9 @@ CThreadPool() throw();
 
 ### <a name="remarks"></a>Poznámky
 
-Hodnota časového limitu pro ATLS_DEFAULT_THREADPOOLSHUTDOWNTIMEOUT inicializuje. Výchozí doba je 36 sekund. V případě potřeby můžete definovat vlastní kladnou celočíselnou hodnotu pro tento symbol před zahrnutím atlutil.h.
+Inicializuje hodnotu timeout na ATLS_DEFAULT_THREADPOOLSHUTDOWNTIMEOUT. Výchozí čas je 36 sekund. V případě potřeby můžete pro tento symbol definovat vlastní kladnou celočíselnou hodnotu před zahrnutím atlutil. h.
 
-##  <a name="dtor"></a>  CThreadPool::~CThreadPool
+##  <a name="dtor"></a>CThreadPool:: ~ CThreadPool
 
 Destruktor pro fond vláken.
 
@@ -134,11 +134,11 @@ Destruktor pro fond vláken.
 
 ### <a name="remarks"></a>Poznámky
 
-Volání [CThreadPool::Shutdown](#shutdown).
+Volá [CThreadPool:: Shutdown](#shutdown).
 
-##  <a name="getnumthreads"></a>  CThreadPool::GetNumThreads
+##  <a name="getnumthreads"></a>CThreadPool::GetNumThreads
 
-Volejte tuto metodu za účelem získání počet vláken ve fondu.
+Voláním této metody získáte počet vláken ve fondu.
 
 ```
 int GetNumThreads() throw();
@@ -148,9 +148,9 @@ int GetNumThreads() throw();
 
 Vrátí počet vláken ve fondu.
 
-##  <a name="getqueuehandle"></a>  CThreadPool::GetQueueHandle
+##  <a name="getqueuehandle"></a>CThreadPool::GetQueueHandle
 
-Voláním této metody lze získat popisovač sloužící k vytvoření fronty pracovních položek port dokončení vstupně-výstupních operací.
+Voláním této metody získáte popisovač portu pro vstupně-výstupní operace, který se používá k zařazení pracovních položek do fronty.
 
 ```
 HANDLE GetQueueHandle() throw();
@@ -158,11 +158,11 @@ HANDLE GetQueueHandle() throw();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vrátí popisovač fronty nebo hodnota NULL, pokud nebyla inicializována fondu vláken.
+Vrátí popisovač fronty nebo hodnotu NULL, pokud fond vláken nebyl inicializován.
 
-##  <a name="getsize"></a>  CThreadPool::GetSize
+##  <a name="getsize"></a>CThreadPool:: GetSize
 
-Volejte tuto metodu za účelem získání počet vláken ve fondu.
+Voláním této metody získáte počet vláken ve fondu.
 
 ```
 HRESULT STDMETHODCALLTYPE GetSize(int* pnNumThreads) throw();
@@ -171,15 +171,15 @@ HRESULT STDMETHODCALLTYPE GetSize(int* pnNumThreads) throw();
 ### <a name="parameters"></a>Parametry
 
 *pnNumThreads*<br/>
-[out] Adresa proměnné, která v případě úspěchu, obdrží počet vláken ve fondu.
+mimo Adresa proměnné, která po úspěchu obdrží počet vláken ve fondu.
 
 ### <a name="return-value"></a>Návratová hodnota
 
 Vrátí hodnotu S_OK při úspěchu nebo chybu HRESULT při selhání.
 
-##  <a name="gettimeout"></a>  CThreadPool::GetTimeout
+##  <a name="gettimeout"></a>CThreadPool:: GetTime
 
-Volejte tuto metodu za účelem získání maximální dobu v milisekundách, fondu vláken bude čekání na vlákno pro vypnutí.
+Voláním této metody získáte maximální dobu v milisekundách, po kterou bude fond vláken čekat na vypnutí vlákna.
 
 ```
 HRESULT STDMETHODCALLTYPE GetTimeout(DWORD* pdwMaxWait) throw();
@@ -188,7 +188,7 @@ HRESULT STDMETHODCALLTYPE GetTimeout(DWORD* pdwMaxWait) throw();
 ### <a name="parameters"></a>Parametry
 
 *pdwMaxWait*<br/>
-[out] Adresa proměnné, která v případě úspěchu, obdrží maximální dobu v milisekundách, fondu vláken bude čekání na vlákno pro vypnutí.
+mimo Adresa proměnné, která po úspěchu získá maximální dobu v milisekundách, po kterou bude fond vláken čekat na vypnutí vlákna.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -196,11 +196,11 @@ Vrátí hodnotu S_OK při úspěchu nebo chybu HRESULT při selhání.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato hodnota časového limitu je používán [CThreadPool::Shutdown](#shutdown) Pokud k této metodě není zadána žádná hodnota.
+Tuto hodnotu časového limitu používá [CThreadPool:: Shutdown](#shutdown) , pokud k této metodě není dodána žádná jiná hodnota.
 
-##  <a name="initialize"></a>  CThreadPool::Initialize
+##  <a name="initialize"></a>CThreadPool:: Initialize
 
-Volejte tuto metodu za účelem inicializace fondu vláken.
+Voláním této metody inicializujete fond vláken.
 
 ```
 HRESULT Initialize(
@@ -213,20 +213,20 @@ HRESULT Initialize(
 ### <a name="parameters"></a>Parametry
 
 *pvWorkerParam*<br/>
-Parametr pracovního procesu se mají předat objekt vlákna pracovního procesu `Initialize`, `Execute`, a `Terminate` metody.
+Parametr pracovního procesu, který se má předat metodám objektu `Initialize`pracovního vlákna, `Execute`a. `Terminate`
 
 *nNumThreads*<br/>
 Požadovaný počet vláken ve fondu.
 
-Pokud *nNumThreads* je záporný, jeho absolutní hodnota se vynásobí číslo odpovídající počtu procesorů v počítači, chcete-li získat celkový počet vláken.
+Pokud je *nNumThreads* záporné, jeho absolutní hodnota se vynásobí počtem procesorů v počítači, aby se získal celkový počet vláken.
 
-Pokud *nNumThreads* je nula, ATLS_DEFAULT_THREADSPERPROC bude vynásobené celkovým počtem procesorů v počítači, chcete-li získat celkový počet vláken.  Výchozí hodnota je 2 vláken na procesor. V případě potřeby můžete definovat vlastní kladnou celočíselnou hodnotu pro tento symbol před zahrnutím atlutil.h.
+Pokud má *nNumThreads* hodnotu nula, ATLS_DEFAULT_THREADSPERPROC se vynásobí počtem procesorů v počítači, aby se získal celkový počet vláken.  Výchozí hodnota je 2 vlákna na procesor. V případě potřeby můžete pro tento symbol definovat vlastní kladnou celočíselnou hodnotu před zahrnutím atlutil. h.
 
 *dwStackSize*<br/>
 Velikost zásobníku pro každé vlákno ve fondu.
 
 *hCompletion*<br/>
-Popisovač objektu pro přidružení k port dokončení.
+Popisovač objektu, který má být přidružen k portu pro dokončení.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -234,7 +234,7 @@ Vrátí hodnotu S_OK při úspěchu nebo chybu HRESULT při selhání.
 
 ##  <a name="queryinterface"></a>  CThreadPool::QueryInterface
 
-Provádění `IUnknown::QueryInterface`.
+`IUnknown::QueryInterface`Implementace.
 
 ```
 HRESULT STDMETHODCALLTYPE QueryInterface(REFIID riid, void** ppv) throw();
@@ -242,11 +242,11 @@ HRESULT STDMETHODCALLTYPE QueryInterface(REFIID riid, void** ppv) throw();
 
 ### <a name="remarks"></a>Poznámky
 
-Objekty této třídy může být dotázán úspěšně pro `IUnknown` a [ithreadpoolconfig –](../../atl/reference/ithreadpoolconfig-interface.md) rozhraní.
+K `IUnknown` objektům této třídy se můžete úspěšně dotázat na rozhraní a [IThreadPoolConfig](../../atl/reference/ithreadpoolconfig-interface.md) .
 
-##  <a name="queuerequest"></a>  CThreadPool::QueueRequest
+##  <a name="queuerequest"></a>CThreadPool::QueueRequest
 
-Volání této metody do fronty pracovní položku zpracovávat vláken ve fondu.
+Voláním této metody zařadíte do fronty pracovní položku, která má být zpracována vláknem ve fondu.
 
 ```
 BOOL QueueRequest(Worker::RequestType request) throw();
@@ -254,20 +254,20 @@ BOOL QueueRequest(Worker::RequestType request) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*Požadavek*<br/>
-Požadavek na zařadí do fronty.
+*Request*<br/>
+Požadavek, který se má zařadit do fronty
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vrátí hodnotu TRUE v případě úspěchu; při neúspěchu hodnotu FALSE.
+Vrátí hodnotu TRUE při úspěchu, FALSE při selhání.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato metoda přidá do fronty pracovní položku. Vláken ve fondu v pořadí, ve kterém jsou přijímány vybrat položky z fronty.
+Tato metoda přidá do fronty pracovní položku. Vlákna ve fondu umožňují vybrat položky mimo frontu v pořadí, ve kterém byly přijaty.
 
-##  <a name="release"></a>  CThreadPool::Release
+##  <a name="release"></a>CThreadPool:: Release
 
-Provádění `IUnknown::Release`.
+`IUnknown::Release`Implementace.
 
 ```
 ULONG STDMETHODCALLTYPE Release() throw();
@@ -275,15 +275,15 @@ ULONG STDMETHODCALLTYPE Release() throw();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vždy vrátí hodnotu 1.
+Vždycky vrátí hodnotu 1.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato třída neimplementuje životnost ovládací prvek s použitím počítání odkazů.
+Tato třída neimplementuje řízení životnosti pomocí počítání odkazů.
 
-##  <a name="setsize"></a>  CThreadPool::SetSize
+##  <a name="setsize"></a>CThreadPool:: SetSize
 
-Voláním této metody nastavte počet vláken ve fondu.
+Voláním této metody nastavíte počet vláken ve fondu.
 
 ```
 HRESULT STDMETHODCALLTYPE SetSizeint nNumThreads) throw();
@@ -294,9 +294,9 @@ HRESULT STDMETHODCALLTYPE SetSizeint nNumThreads) throw();
 *nNumThreads*<br/>
 Požadovaný počet vláken ve fondu.
 
-Pokud *nNumThreads* je záporný, jeho absolutní hodnota se vynásobí číslo odpovídající počtu procesorů v počítači, chcete-li získat celkový počet vláken.
+Pokud je *nNumThreads* záporné, jeho absolutní hodnota se vynásobí počtem procesorů v počítači, aby se získal celkový počet vláken.
 
-Pokud *nNumThreads* je nula, ATLS_DEFAULT_THREADSPERPROC bude vynásobené celkovým počtem procesorů v počítači, chcete-li získat celkový počet vláken. Výchozí hodnota je 2 vláken na procesor. V případě potřeby můžete definovat vlastní kladnou celočíselnou hodnotu pro tento symbol před zahrnutím atlutil.h.
+Pokud má *nNumThreads* hodnotu nula, ATLS_DEFAULT_THREADSPERPROC se vynásobí počtem procesorů v počítači, aby se získal celkový počet vláken. Výchozí hodnota je 2 vlákna na procesor. V případě potřeby můžete pro tento symbol definovat vlastní kladnou celočíselnou hodnotu před zahrnutím atlutil. h.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -304,11 +304,11 @@ Vrátí hodnotu S_OK při úspěchu nebo chybu HRESULT při selhání.
 
 ### <a name="remarks"></a>Poznámky
 
-Pokud zadaný počet podprocesů je menší než počet vláken aktuálně ve fondu, převede objekt vypnutí zprávu ve frontě na vyzvednutí vláknem čekání. Při čekání vlákno přebírá zprávu z fronty, upozorní fondu vláken a ukončí proceduru vlákna. Tento postup se opakuje, dokud nedosáhne zadané číslo počet vláken ve fondu, nebo dokud žádné vlákno neskončí v rámci zadané období [GetTimeout](#gettimeout)/ [SetTimeout](#settimeout). V této situaci metoda vrátí odpovídající WAIT_TIMEOUT HRESULT a zprávu čeká na vypnutí se zruší.
+Pokud je zadaný počet podprocesů menší než počet vláken, která jsou aktuálně ve fondu, objekt umístí do fronty zprávu o vypnutí, která má být vyzvednuta čekajícím vláknem. Když čekající vlákno odešle zprávu z fronty, upozorní fond vláken a ukončí proceduru vlákna. Tento proces se opakuje, dokud počet vláken ve fondu nedosáhne zadaného počtu nebo dokud se žádné vlákno neukončilo během období určeného parametrem [GetTime](#gettimeout)/ -[setTimeout](#settimeout). V této situaci metoda vrátí hodnotu HRESULT odpovídající WAIT_TIMEOUT a zpráva čeká na vypnutí se zruší.
 
-##  <a name="settimeout"></a>  CThreadPool::SetTimeout
+##  <a name="settimeout"></a>CThreadPool:: SetTimeout
 
-Volejte tuto metodu za účelem nastavení maximální doby v milisekundách, fondu vláken bude čekání na vlákno pro vypnutí.
+Voláním této metody nastavíte maximální dobu v milisekundách, po kterou bude fond vláken čekat na vypnutí vlákna.
 
 ```
 HRESULT STDMETHODCALLTYPE SetTimeout(DWORD dwMaxWait) throw();
@@ -317,7 +317,7 @@ HRESULT STDMETHODCALLTYPE SetTimeout(DWORD dwMaxWait) throw();
 ### <a name="parameters"></a>Parametry
 
 *dwMaxWait*<br/>
-Maximální požadovaný čas v milisekundách, fondu vláken bude čekání na vlákno pro vypnutí.
+Požadovaný maximální čas v milisekundách, po který bude fond vláken čekat na vypnutí vlákna.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -325,13 +325,13 @@ Vrátí hodnotu S_OK při úspěchu nebo chybu HRESULT při selhání.
 
 ### <a name="remarks"></a>Poznámky
 
-Časový limit je inicializován na ATLS_DEFAULT_THREADPOOLSHUTDOWNTIMEOUT. Výchozí doba je 36 sekund. V případě potřeby můžete definovat vlastní kladnou celočíselnou hodnotu pro tento symbol před zahrnutím atlutil.h.
+Časový limit se inicializuje do ATLS_DEFAULT_THREADPOOLSHUTDOWNTIMEOUT. Výchozí čas je 36 sekund. V případě potřeby můžete pro tento symbol definovat vlastní kladnou celočíselnou hodnotu před zahrnutím atlutil. h.
 
-Všimněte si, že *dwMaxWait* je doba, kterou fond počká na jedno vlákno pro vypnutí. Maximální doba, kterou lze provést z fondu odebrat více vláken může být o něco menší než *dwMaxWait* počtem vláken.
+Všimněte si, že *dwMaxWait* je čas, po který bude fond čekat na vypnutí jednoho vlákna. Maximální doba, kterou by bylo možné učinit pro odebrání více vláken z fondu, může být trochu menší než *dwMaxWait* vynásobená počtem vláken.
 
-##  <a name="shutdown"></a>  CThreadPool::Shutdown
+##  <a name="shutdown"></a>CThreadPool:: Shutdown
 
-Volejte tuto metodu k vypnutí fondu vláken.
+Voláním této metody vypnete fond vláken.
 
 ```
 void Shutdown(DWORD dwMaxWait = 0) throw();
@@ -340,11 +340,11 @@ void Shutdown(DWORD dwMaxWait = 0) throw();
 ### <a name="parameters"></a>Parametry
 
 *dwMaxWait*<br/>
-Maximální požadovaný čas v milisekundách, fondu vláken bude čekání na vlákno pro vypnutí. Pokud je zadána žádná hodnota nebo 0, tato metoda použije časový limit nastavený [CThreadPool::SetTimeout](#settimeout).
+Požadovaný maximální čas v milisekundách, po který bude fond vláken čekat na vypnutí vlákna. Pokud není zadána hodnota 0 nebo žádná hodnota, tato metoda použije časový limit nastavený hodnotou [CThreadPool:: setTimeout](#settimeout).
 
 ### <a name="remarks"></a>Poznámky
 
-Tato metoda odešle žádost o vypnutí na všechna vlákna ve fondu. Pokud vyprší časový limit bude volat tuto metodu [TerminateThread](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-terminatethread) v libovolném vlákně, které se neukončil. Tato metoda je volána automaticky z destruktoru třídy.
+Tato metoda účtuje požadavek na vypnutí do všech vláken ve fondu. Pokud časový limit vyprší, tato metoda bude volat [TerminateThread](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-terminatethread) na jakémkoli vlákně, které nebylo ukončeno. Tato metoda je volána automaticky z destruktoru třídy.
 
 ## <a name="see-also"></a>Viz také:
 

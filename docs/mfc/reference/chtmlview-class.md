@@ -1,5 +1,5 @@
 ---
-title: CHtmlView – třída
+title: CHtmlView – – třída
 ms.date: 11/04/2016
 f1_keywords:
 - CHtmlView
@@ -194,16 +194,16 @@ helpviewer_keywords:
 - CHtmlView [MFC], SetWidth
 - CHtmlView [MFC], Stop
 ms.assetid: 904976af-73de-4aba-84ac-cfae8e2be09a
-ms.openlocfilehash: 5ea7b59ccb95078324ae85bbf04c11c537f0f525
-ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
+ms.openlocfilehash: 5c7204f5207b85e4b9ada4b68e9feedaf83deccd
+ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66503567"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68916222"
 ---
-# <a name="chtmlview-class"></a>CHtmlView – třída
+# <a name="chtmlview-class"></a>CHtmlView – – třída
 
-Poskytuje funkce ovládání prvku WebBrowser v rámci kontextu architektury dokumentu/zobrazení MFC.
+Poskytuje funkce ovládacího prvku WebBrowser v kontextu architektury document/view knihovny MFC.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -217,115 +217,115 @@ class CHtmlView : public CFormView
 
 |Name|Popis|
 |----------|-----------------|
-|[CHtmlView::Create](#create)|Vytvoří ovládací prvek WebBrowser.|
-|[CHtmlView::CreateControlSite](#createcontrolsite)|Overridable umožňuje vytvořit instanci ovládacího prvku serveru pro hostování ovládacího prvku na formuláři.|
-|[CHtmlView::ExecFormsCommand](#execformscommand)|Zadaný příkaz pomocí provádí `IOleCommandTarget::Exec` metody.|
-|[CHtmlView::ExecWB](#execwb)|Spustí příkaz.|
-|[CHtmlView::GetAddressBar](#getaddressbar)|Určuje, zda je viditelný adresního řádku Internet Exploreru objektu. (Ovládací prvek WebBrowser ignoruje; Pouze Internet Explorer.)|
-|[CHtmlView::GetApplication](#getapplication)|Načte objekt aplikace, který reprezentuje aplikaci, která obsahuje aktuální instanci aplikace Internet Explorer.|
-|[CHtmlView::GetBusy](#getbusy)|Načte hodnotu určující, zda je stále probíhá stahování nebo jiné aktivity.|
-|[CHtmlView::GetContainer](#getcontainer)|Získá kontejner ovládacího prvku WebBrowser.|
-|[CHtmlView::GetFullName](#getfullname)|Načte úplný název, včetně cesty prostředku zobrazí ve webovém prohlížeči. (Ovládací prvek WebBrowser ignoruje; Pouze Internet Explorer.)|
-|[CHtmlView::GetFullScreen](#getfullscreen)|Určuje, zda ovládací prvek WebBrowser funguje v režimu celé obrazovky nebo v režimu normálního okna.|
-|[CHtmlView::GetHeight](#getheight)|Získá výšku hlavní okno aplikace Internet Explorer.|
+|[CHtmlView –:: Create](#create)|Vytvoří ovládací prvek WebBrowser.|
+|[CHtmlView –:: CreateControlSite](#createcontrolsite)|Přepsatelné slouží k vytvoření instance webu ovládacího prvku pro hostování ovládacího prvku ve formuláři.|
+|[CHtmlView::ExecFormsCommand](#execformscommand)|Provede zadaný příkaz pomocí `IOleCommandTarget::Exec` metody.|
+|[CHtmlView –:: ExecWB](#execwb)|Provede příkaz.|
+|[CHtmlView::GetAddressBar](#getaddressbar)|Určuje, zda je panel Adresa objektu aplikace Internet Explorer viditelný. (Ovládací prvek WebBrowser ignoruje; Jenom Internet Explorer.)|
+|[CHtmlView::GetApplication](#getapplication)|Načte objekt aplikace představující aplikaci, která obsahuje aktuální instanci aplikace Internet Explorer.|
+|[CHtmlView –:: getbusy](#getbusy)|Načte hodnotu, která označuje, jestli stále probíhá stahování nebo jiná aktivita.|
+|[CHtmlView::GetContainer](#getcontainer)|Načte kontejner ovládacího prvku WebBrowser.|
+|[CHtmlView::GetFullName](#getfullname)|Načte úplný název, včetně cesty, prostředku zobrazeného ve webovém prohlížeči. (Ovládací prvek WebBrowser ignoruje; Jenom Internet Explorer.)|
+|[CHtmlView::GetFullScreen](#getfullscreen)|Označuje, zda ovládací prvek WebBrowser pracuje v režimu zobrazení na celé obrazovce nebo v normálním režimu okna.|
+|[CHtmlView –:: GetHeight](#getheight)|Načte výšku hlavního okna aplikace Internet Explorer.|
 |[CHtmlView::GetHtmlDocument](#gethtmldocument)|Načte aktivní dokument HTML.|
-|[CHtmlView::GetLeft](#getleft)|Načte obrazovky souřadnice levého okraje hlavní okno aplikace Internet Explorer.|
-|[CHtmlView::GetLocationName](#getlocationname)|Načte název prostředku, který se aktuálně zobrazuje WebBrowser|
-|[CHtmlView::GetLocationURL](#getlocationurl)|Načte adresu URL prostředku, který se aktuálně zobrazuje WebBrowser.|
-|[CHtmlView::GetMenuBar](#getmenubar)|Načte hodnotu, která určuje, zda je zobrazen panel nabídky.|
-|[CHtmlView::GetOffline](#getoffline)|Načte hodnotu, která určuje, zda je ovládací prvek v režimu offline.|
-|[CHtmlView::GetParentBrowser](#getparentbrowser)|Načte ukazatel `IDispatch` rozhraní. Další informace najdete v tématu [implementace rozhraní IDispatch](/previous-versions/windows/desktop/automat/implementing-the-idispatch-interface).|
-|[CHtmlView::GetProperty](#getproperty)|Načte aktuální hodnotu vlastnosti přidružené k daný objekt.|
-|[CHtmlView::GetReadyState](#getreadystate)|Načte připravena objekt webového prohlížeče.|
-|[CHtmlView::GetRegisterAsBrowser](#getregisterasbrowser)|Označuje, zda je ovládací prvek WebBrowser registrován jako prohlížeč nejvyšší úrovně pro překlad názvů cíl.|
-|[CHtmlView::GetRegisterAsDropTarget](#getregisterasdroptarget)|Označuje, zda ovládací prvek WebBrowser je registrován jako cíl přetažení pro navigaci.|
-|[CHtmlView::GetSilent](#getsilent)|Určuje, zda lze zobrazit všechna dialogová okna.|
+|[CHtmlView –:: GetLeft](#getleft)|Načte souřadnici obrazovky levého okraje hlavního okna aplikace Internet Explorer.|
+|[CHtmlView::GetLocationName](#getlocationname)|Načte název prostředku, který aktuálně zobrazuje webový prohlížeč.|
+|[CHtmlView::GetLocationURL](#getlocationurl)|Načte adresu URL prostředku, který aktuálně zobrazuje webový prohlížeč.|
+|[CHtmlView –:: getmenubar](#getmenubar)|Načte hodnotu, která určuje, zda je panel nabídek viditelný.|
+|[CHtmlView –:: getoffline](#getoffline)|Načte hodnotu, která určuje, zda je ovládací prvek offline.|
+|[CHtmlView::GetParentBrowser](#getparentbrowser)|Načte ukazatel na `IDispatch` rozhraní. Další informace naleznete v tématu [implementace rozhraní IDispatch](/previous-versions/windows/desktop/automat/implementing-the-idispatch-interface).|
+|[CHtmlView –:: GetProperty](#getproperty)|Načte aktuální hodnotu vlastnosti přidružené k danému objektu.|
+|[CHtmlView::GetReadyState](#getreadystate)|Načte stav připraveného objektu webového prohlížeče.|
+|[CHtmlView::GetRegisterAsBrowser](#getregisterasbrowser)|Určuje, zda je ovládací prvek WebBrowser zaregistrován jako prohlížeč nejvyšší úrovně pro překlad cílového názvu.|
+|[CHtmlView::GetRegisterAsDropTarget](#getregisterasdroptarget)|Určuje, zda je ovládací prvek WebBrowser zaregistrován jako cíl přetažení pro navigaci.|
+|[CHtmlView –:: getsilent](#getsilent)|Určuje, zda lze zobrazit některá dialogová okna.|
 |[CHtmlView::GetSource](#getsource)|Zdrojový kód HTML webové stránky.|
-|[CHtmlView::GetStatusBar](#getstatusbar)|Označuje, zda je viditelný stavový řádek Internet Exploreru. (Ovládací prvek WebBrowser ignoruje; Pouze Internet Explorer.)|
-|[CHtmlView::GetTheaterMode](#gettheatermode)|Označuje, zda ovládací prvek WebBrowser v režimu celé obrazovky.|
-|[CHtmlView::GetToolBar](#gettoolbar)|Načte hodnotu, která určuje, zda je zobrazen panel nástrojů.|
-|[CHtmlView::GetTop](#gettop)|Načte souřadnice obrazovky horním okrajem jeho hlavní okno aplikace Internet Explorer.|
-|[CHtmlView::GetTopLevelContainer](#gettoplevelcontainer)|Načte hodnotu určující, zda je aktuální objekt nejvyšší úrovně kontejner ovládacího prvku WebBrowser.|
+|[CHtmlView::GetStatusBar](#getstatusbar)|Určuje, zda je stavový řádek aplikace Internet Explorer viditelný. (Ovládací prvek WebBrowser ignoruje; Jenom Internet Explorer.)|
+|[CHtmlView::GetTheaterMode](#gettheatermode)|Určuje, zda je ovládací prvek WebBrowser v režimu v režimu celé obrazovky.|
+|[CHtmlView::GetToolBar](#gettoolbar)|Načte hodnotu, která určuje, zda je panel nástrojů viditelný.|
+|[CHtmlView::GetTop](#gettop)|Načte souřadnici obrazovky horního okraje hlavního okna aplikace Internet Explorer.|
+|[CHtmlView::GetTopLevelContainer](#gettoplevelcontainer)|Načte hodnotu, která označuje, zda je aktuální objekt kontejner nejvyšší úrovně ovládacího prvku WebBrowser.|
 |[CHtmlView::GetType](#gettype)|Načte název typu objektu dokumentu.|
-|[CHtmlView::GetVisible](#getvisible)|Načte hodnotu určující, zda je objekt viditelný nebo skrytý.|
-|[CHtmlView::GetWidth](#getwidth)|Zjišťuje šířku hlavního okna aplikace Internet Explorer.|
-|[CHtmlView::GoBack](#goback)|Přejde na předchozí položky v seznamu historie.|
+|[CHtmlView –:: getVisible](#getvisible)|Načte hodnotu, která označuje, zda je objekt viditelný nebo skrytý.|
+|[CHtmlView –:: getwidth](#getwidth)|Načte šířku hlavního okna aplikace Internet Explorer.|
+|[CHtmlView::GoBack](#goback)|Přejde na předchozí položku v seznamu historie.|
 |[CHtmlView::GoForward](#goforward)|Přejde na další položku v seznamu historie.|
-|[CHtmlView::GoHome](#gohome)|Přejde na aktuální home nebo úvodní stránka.|
-|[CHtmlView::GoSearch](#gosearch)|Odkazuje na aktuální stránku vyhledávání.|
-|[CHtmlView::LoadFromResource](#loadfromresource)|Načte prostředek v ovládacím prvku WebBrowser.|
-|[CHtmlView::Navigate](#navigate)|Přejde na prostředek určený adresou URL.|
-|[CHtmlView::Navigate2](#navigate2)|Přejde na prostředku označeném identifikátorem adresu URL, nebo soubor určený úplnou cestu.|
-|[CHtmlView::OnBeforeNavigate2](#onbeforenavigate2)|Volá se, než dojde k navigaci v daném prohlížeči WebBrowser (na buď okno nebo pro element frameset).|
-|[CHtmlView::OnCommandStateChange](#oncommandstatechange)|Volá se, aby se aplikaci oznámilo, změnil povolený stav příkazu webového prohlížeče.|
-|[CHtmlView::OnDocumentComplete](#ondocumentcomplete)|Volá se, aby se aplikaci oznámilo, že dokument bylo dosaženo stavu READYSTATE_COMPLETE.|
-|[CHtmlView::OnDocWindowActivate](#ondocwindowactivate)|Volána z aplikace Internet Explorer nebo MSHTML provádění [IOleInPlaceActiveObject::OnDocWindowActivate](/windows/desktop/api/oleidl/nf-oleidl-ioleinplaceactiveobject-ondocwindowactivate), což upozorňuje na aktivní objekt v místní, když se aktivuje nebo deaktivuje okno dokumentu kontejneru.|
-|[CHtmlView::OnDownloadBegin](#ondownloadbegin)|Volá se, aby se aplikaci oznámilo, začíná navigační operace.|
-|[CHtmlView::OnDownloadComplete](#ondownloadcomplete)|Volá se, když operace navigace dokončení, zastavení nebo se nezdařilo.|
-|[CHtmlView::OnEnableModeless](#onenablemodeless)|Volá se, k povolení nebo zakázání nemodálních dialogových oken, pokud kontejner vytvoří nebo odstraní modální dialogové okno.|
-|[CHtmlView::OnFilterDataObject](#onfilterdataobject)|Volá se na hostiteli aplikace Internet Explorer nebo MSHTML povolí hostitelské nahrazuje aplikaci Internet Explorer nebo MSHTML na datový objekt.|
-|[CHtmlView::OnFrameWindowActivate](#onframewindowactivate)|Volá se z [IOleInPlaceActiveObject::OnFrameWindowActivate](/windows/desktop/api/oleidl/nf-oleidl-ioleinplaceactiveobject-onframewindowactivate) upozornit objektu kontejneru je nejvyšší úrovně se aktivuje nebo deaktivuje okno rámce.|
-|[CHtmlView::OnFullScreen](#onfullscreen)|Volá se při změně vlastnosti FullScreen.|
-|[CHtmlView::OnGetDropTarget](#ongetdroptarget)|Voláno rozhraním aplikace Internet Explorer nebo MSHTML aplikace, když se používá se jako cíl přetažení k hostiteli umožní zadat alternativní [IDropTarget](/windows/desktop/api/oleidl/nn-oleidl-idroptarget).|
-|[CHtmlView::OnGetExternal](#ongetexternal)|Volané aplikace Internet Explorer nebo MSHTML k získání hostitele `IDispatch` rozhraní.|
-|[CHtmlView::OnGetHostInfo](#ongethostinfo)|Načte možností uživatelského rozhraní v aplikaci Internet Explorer nebo MSHTML hostitele.|
-|[CHtmlView::OnGetOptionKeyPath](#ongetoptionkeypath)|Vrátí klíč registru, ve které aplikace Internet Explorer nebo MSHTML ukládá uživatelských předvoleb.|
-|[CHtmlView::OnHideUI](#onhideui)|Volá se, když aplikace Internet Explorer nebo MSHTML odebere jeho nabídek a panelů nástrojů.|
-|[CHtmlView::OnMenuBar](#onmenubar)|Volá se při změně vlastnosti MenuBar.|
-|[CHtmlView::OnNavigateComplete2](#onnavigatecomplete2)|Volá se, až se dokončí přechod na hypertextový odkaz (na buď okno nebo pro element frameset).|
-|[CHtmlView::OnNavigateError](#onnavigateerror)|Volá se rozhraním, pokud selže přechod na hypertextový odkaz.|
-|[CHtmlView::OnNewWindow2](#onnewwindow2)|Volá se, když se má vytvořit pro zobrazení prostředku. nové okno.|
-|[CHtmlView::OnProgressChange](#onprogresschange)|Volá se, aby se aplikaci oznámilo, že probíhá operace nástroje download byl aktualizován.|
-|[CHtmlView::OnPropertyChange](#onpropertychange)|Volá se, aby se aplikaci oznámilo, [PutProperty](#putproperty) změnila hodnotu vlastnosti.|
-|[CHtmlView::OnQuit](#onquit)|Volá se, aby se aplikaci oznámilo, aplikace Internet Explorer je připravené ukončení. (Týká se pouze Internet Explorer)|
-|[CHtmlView::OnResizeBorder](#onresizeborder)|Volána z aplikace Internet Explorer nebo MSHTML provádění [IOleInPlaceActiveObject::ResizeBorder](/windows/desktop/api/oleidl/nf-oleidl-ioleinplaceactiveobject-resizeborder), která upozorní objekt, který je potřeba změnit velikost místa jeho ohraničení.|
-|[CHtmlView::OnShowContextMenu](#onshowcontextmenu)|Volá se z aplikace Internet Explorer nebo MSHTML aplikace, když se chystá zobrazit kontextovou nabídku.|
-|[CHtmlView::OnShowUI](#onshowui)|Volá se před Internet Explorer nebo MSHTML zobrazí jeho nabídek a panelů nástrojů.|
-|[CHtmlView::OnStatusBar](#onstatusbar)|Volá se při změně vlastnosti StatusBar.|
-|[CHtmlView::OnStatusTextChange](#onstatustextchange)|Volá se, aby se aplikaci oznámilo, došlo ke změně textu ve stavovém řádku přidružený k ovládacímu prvku WebBrowser.|
-|[CHtmlView::OnTheaterMode](#ontheatermode)|Volá se při změně vlastnosti TheaterMode.|
-|[CHtmlView::OnTitleChange](#ontitlechange)|Volá se, aby upozornění aplikace, pokud se název dokumentu v ovládacím prvku WebBrowser stane dostupná nebo změny.|
-|[CHtmlView::OnToolBar](#ontoolbar)|Volá se při změně vlastnosti ToolBar.|
-|[CHtmlView::OnTranslateAccelerator](#ontranslateaccelerator)|Volané aplikace Internet Explorer nebo MSHTML při [IOleInPlaceActiveObject::TranslateAccelerator](/windows/desktop/api/oleidl/nf-oleidl-ioleinplaceactiveobject-translateaccelerator) nebo [IOleControlSite::TranslateAccelerator](/windows/desktop/api/ocidl/nf-ocidl-iolecontrolsite-translateaccelerator) nazývá ke zpracování zpráv nabídky přístupové klíče z Fronta zpráv kontejneru.|
-|[CHtmlView::OnTranslateUrl](#ontranslateurl)|Voláno rozhraním aplikace Internet Explorer nebo MSHTML povolit hostitele příležitost změnit adresu URL načíst.|
-|[CHtmlView::OnUpdateUI](#onupdateui)|Upozorňuje hostitele, stav příkazu se změnila.|
-|[CHtmlView::OnVisible](#onvisible)|Volá se, když by okna pro ovládací prvek WebBrowser zobrazené/skryté.|
-|[CHtmlView::PutProperty](#putproperty)|Nastaví hodnotu vlastnosti přidružené k daný objekt.|
-|[CHtmlView::QueryFormsCommand](#queryformscommand)|Dotazy na stav jednoho nebo více příkazů vygenerované uživatelské rozhraní události.|
-|[CHtmlView::QueryStatusWB](#querystatuswb)|Dotazuje se na stav příkazu zpracovává ovládacího prvku WebBrowser.|
-|[CHtmlView::Refresh](#refresh)|Znovu načte aktuální soubor.|
-|[CHtmlView::Refresh2](#refresh2)|Znovu načte aktuální soubor a volitelně brání `pragma:nocache` záhlaví nezabránil odesílání.|
-|[CHtmlView::SetAddressBar](#setaddressbar)|Zobrazí nebo skryje panel Adresa objektu aplikace Internet Explorer. (Ovládací prvek WebBrowser ignoruje; Pouze Internet Explorer.)|
-|[CHtmlView::SetFullScreen](#setfullscreen)|Nastaví hodnotu, která určuje, zda ovládací prvek funguje v režimu celé obrazovky nebo v režimu normálního okna. (Ovládací prvek WebBrowser ignoruje; Pouze Internet Explorer.)|
-|[CHtmlView::SetHeight](#setheight)|Nastaví výšku hlavní okno aplikace Internet Explorer.|
-|[CHtmlView::SetLeft](#setleft)|Nastaví vodorovnou pozici hlavní okno aplikace Internet Explorer.|
-|[CHtmlView::SetMenuBar](#setmenubar)|Nastaví hodnotu, která určuje, zda je zobrazen panel nabídek ovládacího prvku. (Ovládací prvek WebBrowser ignoruje; Pouze Internet Explorer.)|
-|[CHtmlView::SetOffline](#setoffline)|Nastaví hodnotu, která určuje, zda je ovládací prvek v režimu offline.|
-|[CHtmlView::SetRegisterAsBrowser](#setregisterasbrowser)|Nastaví hodnotu označující, jestli je ovládací prvek WebBrowser zaregistrované jako prohlížeč nejvyšší úrovně pro překlad názvů cíl.|
-|[CHtmlView::SetRegisterAsDropTarget](#setregisterasdroptarget)|Nastaví hodnotu označující, jestli je ovládací prvek WebBrowser zaregistrované jako cíl přetažení pro navigaci.|
-|[CHtmlView::SetSilent](#setsilent)|Nastaví hodnotu, která určuje, zda ovládací prvek zobrazí dialogových oknech.|
-|[CHtmlView::SetStatusBar](#setstatusbar)|Nastaví hodnotu, která určuje, jestli je viditelný stavový řádek Internet Exploreru. (Ovládací prvek WebBrowser ignoruje; Pouze Internet Explorer.)|
-|[CHtmlView::SetTheaterMode](#settheatermode)|Nastaví hodnotu určující, zda je ovládací prvek WebBrowser v režimu celé obrazovky.|
-|[CHtmlView::SetToolBar](#settoolbar)|Nastaví hodnotu, která určuje, zda je zobrazen na ovládacím prvku panel nástrojů. (Ovládací prvek WebBrowser ignoruje; Pouze Internet Explorer.)|
-|[CHtmlView::SetTop](#settop)|Nastaví svislou pozici hlavní okno aplikace Internet Explorer.|
-|[CHtmlView::SetVisible](#setvisible)|Nastaví hodnotu označující, zda je objekt viditelný nebo skrytý.|
-|[CHtmlView::SetWidth](#setwidth)|Nastavuje šířku hlavní okno aplikace Internet Explorer.|
-|[CHtmlView::Stop](#stop)|Otevření souboru se zastaví.|
+|[CHtmlView –:: GoHome](#gohome)|Přejde na aktuální domovskou nebo úvodní stránku.|
+|[CHtmlView::GoSearch](#gosearch)|Přejde na aktuální vyhledávací stránku.|
+|[CHtmlView –:: LoadFromResource](#loadfromresource)|Načte prostředek v ovládacím prvku WebBrowser.|
+|[CHtmlView –:: Navigate](#navigate)|Přejde k prostředku identifikovanému adresou URL.|
+|[CHtmlView::Navigate2](#navigate2)|Přejde k prostředku identifikovanému adresou URL nebo k souboru určenému úplnou cestou.|
+|[CHtmlView –:: OnBeforeNavigate2](#onbeforenavigate2)|Volá se před tím, než dojde k navigaci v daném objektu WebBrowser (na ovládacím prvku okno nebo sada rámců).|
+|[CHtmlView::OnCommandStateChange](#oncommandstatechange)|Volá se, aby se aplikaci oznámilo, že se změnil povolený stav příkazu webového prohlížeče.|
+|[CHtmlView –:: OnDocumentComplete](#ondocumentcomplete)|Volá se, aby se aplikaci oznámilo, že dokument dosáhl stavu READYSTATE_COMPLETE.|
+|[CHtmlView::OnDocWindowActivate](#ondocwindowactivate)|Volá se z implementace Internet Exploreru nebo MSHTML [IOleInPlaceActiveObject:: OnDocWindowActivate](/windows/desktop/api/oleidl/nf-oleidl-ioleinplaceactiveobject-ondocwindowactivate), která upozorní aktivní místní objekt, když se aktivuje nebo deaktivuje okno dokumentu kontejneru.|
+|[CHtmlView::OnDownloadBegin](#ondownloadbegin)|Volá se, aby se aplikaci oznámilo, že se začíná operace navigace.|
+|[CHtmlView –:: OnDownloadComplete](#ondownloadcomplete)|Volá se po dokončení operace navigace, zastavení nebo selhání.|
+|[CHtmlView::OnEnableModeless](#onenablemodeless)|Volá se, aby se povolilo nebo zakázal nemodální dialogová okna, když kontejner vytvoří nebo zničí modální dialogové okno.|
+|[CHtmlView –:: OnFilterDataObject](#onfilterdataobject)|Volá se na hostiteli aplikací Internet Explorer nebo MSHTML, aby mohl hostitel nahradit datový objekt aplikace Internet Explorer nebo MSHTML.|
+|[CHtmlView::OnFrameWindowActivate](#onframewindowactivate)|Volá se z [IOleInPlaceActiveObject:: OnFrameWindowActivate](/windows/desktop/api/oleidl/nf-oleidl-ioleinplaceactiveobject-onframewindowactivate) a upozorní objekt, když se aktivuje nebo deaktivuje okno rámce na nejvyšší úrovni kontejneru.|
+|[CHtmlView –:: v celoobrazovkovém zobrazení](#onfullscreen)|Volá se, když se změní vlastnost celoobrazovkového.|
+|[CHtmlView::OnGetDropTarget](#ongetdroptarget)|Volá se aplikací Internet Explorer nebo MSHTML, když se používá jako cíl přetažení, aby mohl hostitel poskytnout alternativní [IDropTarget](/windows/desktop/api/oleidl/nn-oleidl-idroptarget).|
+|[CHtmlView::OnGetExternal](#ongetexternal)|Volá se aplikací Internet Explorer nebo MSHTML, aby se získalo `IDispatch` rozhraní hostitele.|
+|[CHtmlView::OnGetHostInfo](#ongethostinfo)|Načte možnosti uživatelského rozhraní hostitele Internet Exploreru nebo MSHTML.|
+|[CHtmlView::OnGetOptionKeyPath](#ongetoptionkeypath)|Vrátí klíč registru, pod kterým aplikace Internet Explorer nebo MSHTML ukládá předvolby uživatele.|
+|[CHtmlView –:: OnHideUI](#onhideui)|Volá se, když Internet Explorer nebo MSHTML odebere své nabídky a panely nástrojů.|
+|[CHtmlView –::-MenuBar](#onmenubar)|Volá se při změně vlastnosti MenuBar.|
+|[CHtmlView –:: OnNavigateComplete2](#onnavigatecomplete2)|Volá se po dokončení navigace na hypertextový odkaz (buď v okně, nebo na elementu FRAMESET).|
+|[CHtmlView –:: OnNavigateError](#onnavigateerror)|Volá se rozhraním, pokud se nezdařila navigace na hypertextový odkaz.|
+|[CHtmlView –:: OnNewWindow2](#onnewwindow2)|Volá se, když se má vytvořit nové okno pro zobrazení prostředku.|
+|[CHtmlView::OnProgressChange](#onprogresschange)|Volá se, aby se aplikaci oznámilo, že se aktualizoval průběh operace stahování.|
+|[CHtmlView::OnPropertyChange](#onpropertychange)|Volá se, aby se aplikaci oznámilo, že metoda [PutProperty](#putproperty) změnila hodnotu vlastnosti.|
+|[CHtmlView –::-quite](#onquit)|Volá se, aby se aplikace informoval, že aplikace Internet Exploreru je připravená k ukončení. (Platí jenom pro Internet Explorer)|
+|[CHtmlView –:: OnResizeBorder](#onresizeborder)|Voláno z implementace aplikace Internet Explorer nebo MSHTML objektu [IOleInPlaceActiveObject:: ResizeBorder](/windows/desktop/api/oleidl/nf-oleidl-ioleinplaceactiveobject-resizeborder), která upozorní objekt, který potřebuje, aby se změnila velikost prostoru ohraničení.|
+|[CHtmlView::OnShowContextMenu](#onshowcontextmenu)|Volá se z aplikace Internet Explorer nebo MSHTML, když se chystá zobrazit jeho kontextovou nabídku.|
+|[CHtmlView –:: OnShowUI](#onshowui)|Volá se před tím, než aplikace Internet Explorer nebo MSHTML zobrazí své nabídky a panely nástrojů.|
+|[CHtmlView –::-stavový řádek](#onstatusbar)|Volá se, když se změní vlastnost stavového pole.|
+|[CHtmlView::OnStatusTextChange](#onstatustextchange)|Volá se, aby se aplikaci oznámilo, že se změnil text stavového řádku přidruženého k ovládacímu prvku WebBrowser.|
+|[CHtmlView –:: OnTheaterMode](#ontheatermode)|Volá se, když se změní vlastnost změně theatermode.|
+|[CHtmlView –:: OnTitleChange](#ontitlechange)|Volá se, aby se aplikaci upozornila, pokud se název dokumentu v ovládacím prvku WebBrowser změní na k dispozici nebo změny.|
+|[CHtmlView –:: ToolBar – panel nástrojů](#ontoolbar)|Volá se při změně vlastnosti ToolBar.|
+|[CHtmlView::OnTranslateAccelerator](#ontranslateaccelerator)|Volá se aplikací Internet Explorer nebo MSHTML, pokud [IOleInPlaceActiveObject:: TranslateAccelerator](/windows/desktop/api/oleidl/nf-oleidl-ioleinplaceactiveobject-translateaccelerator) nebo [IOleControlSite:: TranslateAccelerator](/windows/desktop/api/ocidl/nf-ocidl-iolecontrolsite-translateaccelerator) se volá ke zprávám klíče akcelerátoru v nabídce procesu z fronty zpráv kontejneru.|
+|[CHtmlView::OnTranslateUrl](#ontranslateurl)|Volá se aplikací Internet Explorer nebo MSHTML, aby mohl hostitel možnost změnit adresu URL, která se má načíst.|
+|[CHtmlView::OnUpdateUI](#onupdateui)|Upozorní hostitele, že došlo ke změně stavu příkazu.|
+|[CHtmlView –:: Visible](#onvisible)|Volá se, když by se měl zobrazit nebo skrýt okno pro ovládací prvek WebBrowser.|
+|[CHtmlView::PutProperty](#putproperty)|Nastaví hodnotu vlastnosti přidružené k danému objektu.|
+|[CHtmlView::QueryFormsCommand](#queryformscommand)|Dotaz na stav jednoho nebo více příkazů generovaných událostmi uživatelského rozhraní.|
+|[CHtmlView::QueryStatusWB](#querystatuswb)|Dotazuje stav příkazu zpracovávaného ovládacím prvkem WebBrowser.|
+|[CHtmlView –:: Refresh](#refresh)|Znovu načte aktuální soubor.|
+|[CHtmlView –:: Refresh2](#refresh2)|Znovu načte aktuální soubor a volitelně zabrání `pragma:nocache` odeslání hlavičky.|
+|[CHtmlView::SetAddressBar](#setaddressbar)|Zobrazí nebo skryje panel Adresa objektu Internet Exploreru. (Ovládací prvek WebBrowser ignoruje; Jenom Internet Explorer.)|
+|[CHtmlView –:: SetFullScreen](#setfullscreen)|Nastaví hodnotu pro určení, zda ovládací prvek pracuje v režimu celé obrazovky nebo v normálním režimu okna. (Ovládací prvek WebBrowser ignoruje; Jenom Internet Explorer.)|
+|[CHtmlView –:: SetHeight](#setheight)|Nastaví výšku hlavního okna aplikace Internet Explorer.|
+|[CHtmlView –:: SetLeft](#setleft)|Nastaví vodorovnou pozici hlavního okna aplikace Internet Explorer.|
+|[CHtmlView –:: SetMenuBar](#setmenubar)|Nastaví hodnotu pro určení, zda je panel nabídek ovládacího prvku viditelný. (Ovládací prvek WebBrowser ignoruje; Jenom Internet Explorer.)|
+|[CHtmlView –:: SetOffline](#setoffline)|Nastaví hodnotu pro určení, zda je ovládací prvek offline.|
+|[CHtmlView –:: SetRegisterAsBrowser](#setregisterasbrowser)|Nastaví hodnotu označující, zda je ovládací prvek WebBrowser zaregistrován jako prohlížeč nejvyšší úrovně pro překlad cílového názvu.|
+|[CHtmlView –:: SetRegisterAsDropTarget](#setregisterasdroptarget)|Nastaví hodnotu, která označuje, zda je ovládací prvek WebBrowser zaregistrován jako cíl přetažení pro navigaci.|
+|[CHtmlView –:: SetSilent](#setsilent)|Nastaví hodnotu pro určení, zda se ovládací prvek zobrazí dialogová okna.|
+|[CHtmlView –:: SetStatusBar](#setstatusbar)|Nastaví hodnotu, která určuje, zda je stavový řádek aplikace Internet Explorer viditelný. (Ovládací prvek WebBrowser ignoruje; Jenom Internet Explorer.)|
+|[CHtmlView –:: SetTheaterMode](#settheatermode)|Nastaví hodnotu, která označuje, zda je ovládací prvek WebBrowser v režimu celé obrazovky.|
+|[CHtmlView –:: SetToolBar](#settoolbar)|Nastaví hodnotu pro určení, zda je panel nástrojů ovládacího prvku viditelný. (Ovládací prvek WebBrowser ignoruje; Jenom Internet Explorer.)|
+|[CHtmlView –:: SetTop](#settop)|Nastaví svislou pozici hlavního okna aplikace Internet Explorer.|
+|[CHtmlView –:: SetVisible](#setvisible)|Nastaví hodnotu, která označuje, zda je objekt viditelný nebo skrytý.|
+|[CHtmlView –:: SetWidth](#setwidth)|Nastaví šířku hlavního okna aplikace Internet Explorer.|
+|[CHtmlView –:: stop](#stop)|Zastaví otevírání souboru.|
 
 ## <a name="remarks"></a>Poznámky
 
-Ovládací prvek WebBrowser je okno, ve které uživatelé můžou procházet servery na webu, jakož i složek v místním systému souborů a v síti. Ovládací prvek WebBrowser podporuje vytvoření navigační Uniform Resource Locator (URL) a udržuje seznam historie.
+Ovládací prvek WebBrowser je okno, ve kterém může uživatel procházet weby na webu, stejně jako složky v místním systému souborů a v síti. Ovládací prvek WebBrowser podporuje odkazování, navigaci pomocí adresy URL (Uniform Resource Locator) a udržuje seznam historie.
 
-## <a name="using-the-chtmlview-class-in-an-mfc-application"></a>Použití v aplikaci knihovny MFC CHtmlView – třída
+## <a name="using-the-chtmlview-class-in-an-mfc-application"></a>Použití třídy CHtmlView – v aplikaci MFC
 
-Ve standardní rozhraní framework aplikace MFC (SDI nebo MDI na základě) je objekt zobrazení běžně odvozen od speciální sadu tříd. Tyto třídy je všechny odvozené z `CView`, poskytují specializované funkce nad rámec, který poskytuje `CView`.
+V standardní aplikaci rozhraní MFC Framework (buď na základě SDI nebo MDI) je objekt zobrazení obvykle odvozen od specializované sady tříd. Tyto třídy, které jsou odvozeny z `CView`, poskytují specializované funkce nad rámec, který `CView`poskytuje.
 
-Odvození třídy zobrazení aplikace na `CHtmlView` poskytuje zobrazení pomocí ovládacího prvku WebBrowser. To efektivně způsobí, že aplikace webový prohlížeč. Preferovanou metodu vytváření webové aplikace ve stylu prohlížeče je k použití Průvodce aplikací knihovny MFC a určete `CHtmlView` jako třídu zobrazení. Další informace o implementaci a použití ovládacího prvku WebBrowser v rámci aplikace knihovny MFC naleznete v tématu [vytvořte webovou aplikaci ve stylu prohlížeče](../../mfc/reference/creating-a-web-browser-style-mfc-application.md).
+Odvození třídy zobrazení aplikace na `CHtmlView` poskytuje zobrazení s ovládacím prvkem WebBrowser. Díky tomu se aplikace stane webovým prohlížečem. Upřednostňovanou metodou vytvoření aplikace ve stylu webového prohlížeče je použití Průvodce aplikací knihovny MFC a určení `CHtmlView` jako třídy zobrazení. Další informace o implementaci a použití ovládacího prvku WebBrowser v aplikacích knihovny MFC naleznete v tématu [Vytvoření aplikace ve stylu webového prohlížeče](../../mfc/reference/creating-a-web-browser-style-mfc-application.md).
 
 > [!NOTE]
->  Ovládací prvek WebBrowser ActiveX (a tedy `CHtmlView`) je dostupná jenom pro programy spuštěné v systému Windows NT verze 4.0 nebo novější, ve které aplikace Internet Explorer 4.0 nebo novější bylo nainstalováno.
+>  Ovládací prvek ActiveX WebBrowser (a proto `CHtmlView`) je dostupný jenom pro programy, které běží v systému Windows NT verze 4,0 nebo novějším, ve kterém je nainstalovaná aplikace Internet Explorer 4,0 nebo novější.
 
-`CHtmlView` je určená pro aplikace, které přistupují k webu (a/nebo dokumentů HTML). Následující `CHtmlView` členských funkcí platí pro pouze aplikace Internet Explorer. Tyto funkce budou úspěšné ovládací prvek WebBrowser, ale nemají žádný viditelný účinek.
+`CHtmlView`je určen pro aplikace, které přistupují k webu (a/nebo dokumentům HTML). Následující `CHtmlView` členské funkce platí pouze pro aplikaci Internet Explorer. Tyto funkce budou v ovládacím prvku WebBrowser úspěšné, ale nebudou mít žádný viditelný efekt.
 
 - [GetAddressBar](#getaddressbar)
 
@@ -345,7 +345,7 @@ Odvození třídy zobrazení aplikace na `CHtmlView` poskytuje zobrazení pomoc�
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
-[Třídy CObject](../../mfc/reference/cobject-class.md)
+[CObject](../../mfc/reference/cobject-class.md)
 
 [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)
 
@@ -361,11 +361,11 @@ Odvození třídy zobrazení aplikace na `CHtmlView` poskytuje zobrazení pomoc�
 
 ## <a name="requirements"></a>Požadavky
 
-**Header:** afxhtml.h
+**Záhlaví:** afxhtml. h
 
-##  <a name="create"></a>  CHtmlView::Create
+##  <a name="create"></a>CHtmlView –:: Create
 
-Voláním této členské funkce a vytvořit ovládací prvek WebBrowser nebo kontejneru pro aplikaci Internet Explorer spustitelný soubor.
+Zavolejte tuto členskou funkci pro vytvoření ovládacího prvku WebBrowser nebo kontejneru pro spustitelný soubor aplikace Internet Explorer.
 
 ```
 virtual BOOL Create(
@@ -381,29 +381,29 @@ virtual BOOL Create(
 ### <a name="parameters"></a>Parametry
 
 *lpszClassName*<br/>
-Odkazuje na řetězec znaků zakončené znakem null, která pojmenuje třídu Windows. Název třídy může být jakýkoli název zaregistrované [afxregisterwndclass –](../../mfc/reference/application-information-and-management.md#afxregisterwndclass) globální funkce nebo `RegisterClass` funkce Windows. Pokud má hodnotu NULL, používá předdefinované výchozí [CFrameWnd](../../mfc/reference/cframewnd-class.md) atributy.
+Odkazuje na řetězec znaků zakončený hodnotou null, který pojmenovává třídu systému Windows. Název třídy může být jakýkoli název, který je zaregistrován s globální funkcí [AfxRegisterWndClass –](../../mfc/reference/application-information-and-management.md#afxregisterwndclass) nebo `RegisterClass` funkcí Windows. Pokud má hodnotu NULL, používá předdefinované výchozí atributy [CFrameWnd](../../mfc/reference/cframewnd-class.md) .
 
 *lpszWindowName*<br/>
-Odkazuje na řetězec znaků zakončené znakem null představující název okna.
+Odkazuje na řetězec znaků zakončený hodnotou null, který představuje název okna.
 
 *dwStyle*<br/>
-Určuje atributy stylu okna. Ve výchozím nastavení jsou nastavené styly WS_VISIBLE a WS_CHILD Windows.
+Určuje atributy stylu okna. Ve výchozím nastavení jsou styly Windows WS_VISIBLE a WS_CHILD nastaveny.
 
-*Rect*<br/>
-Odkaz na [RECT](/previous-versions/dd162897\(v=vs.85\)) struktura určující velikost a umístění okna. *RectDefault* hodnota umožňuje určit velikost a umístění nového okna Windows.
+*OBD*<br/>
+Odkaz na strukturu [Rect](/previous-versions/dd162897\(v=vs.85\)) , která určuje velikost a polohu okna. Hodnota *rectDefault* umožňuje systému Windows určit velikost a polohu nového okna.
 
 *pParentWnd*<br/>
 Ukazatel na nadřazené okno ovládacího prvku.
 
 *nID*<br/>
-Číslo ID zobrazení. Ve výchozím nastavení AFX_IDW_PANE_FIRST.
+Číslo ID zobrazení Ve výchozím nastavení nastavte na AFX_IDW_PANE_FIRST.
 
 *pContext*<br/>
-Ukazatel [ccreatecontext –](../../mfc/reference/ccreatecontext-structure.md). Ve výchozím nastavení s hodnotou NULL.
+Ukazatel na [CCreateContext](../../mfc/reference/ccreatecontext-structure.md). Ve výchozím nastavení je NULL.
 
-##  <a name="createcontrolsite"></a>  CHtmlView::CreateControlSite
+##  <a name="createcontrolsite"></a>CHtmlView –:: CreateControlSite
 
-Overridable umožňuje vytvořit instanci ovládacího prvku serveru pro hostování ovládacího prvku na formuláři.
+Přepsatelné slouží k vytvoření instance webu ovládacího prvku pro hostování ovládacího prvku ve formuláři.
 
 ```
 virtual BOOL CreateControlSite(
@@ -416,28 +416,28 @@ virtual BOOL CreateControlSite(
 ### <a name="parameters"></a>Parametry
 
 *pContainer*<br/>
-Ukazatel [colecontrolcontainer –](../../mfc/reference/colecontrolcontainer-class.md) objekt, který obsahuje ovládací prvek.
+Ukazatel na objekt [COleControlContainer](../../mfc/reference/colecontrolcontainer-class.md) obsahující ovládací prvek.
 
 *ppSite*<br/>
-Ukazatel na ukazatel [colecontrolsite –](../../mfc/reference/colecontrolsite-class.md) objektu, poskytuje serveru pro ovládací prvek.
+Ukazatel na ukazatel na objekt [COleControlSite](../../mfc/reference/colecontrolsite-class.md) , který poskytuje web pro ovládací prvek.
 
 *nID*<br/>
-Identifikátor ovládacího prvku zajistit také jejich hostování.
+Identifikátor ovládacího prvku, který se má hostovat
 
-*clsid*<br/>
-Identifikátor CLSID ovládacího prvku zajistit také jejich hostování
+*CLSID*<br/>
+Identifikátor CLSID ovládacího prvku, který se má hostovat
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vrátí hodnotu TRUE v případě úspěchu; při neúspěchu hodnotu FALSE.
+Vrátí hodnotu TRUE při úspěchu, FALSE při selhání.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato členská funkce vrátit instanci třídy vlastní ovládací prvek webu můžete přepsat.
+Tuto členskou funkci můžete přepsat tak, aby vracela instanci třídy webu vlastního ovládacího prvku.
 
-##  <a name="execformscommand"></a>  CHtmlView::ExecFormsCommand
+##  <a name="execformscommand"></a>CHtmlView –:: ExecFormsCommand
 
-Zadaný příkaz pomocí provádí `IOleCommandTarget::Exec` metody.
+Provede zadaný příkaz pomocí `IOleCommandTarget::Exec` metody.
 
 ```
 HRESULT ExecFormsCommand(
@@ -449,25 +449,25 @@ HRESULT ExecFormsCommand(
 ### <a name="parameters"></a>Parametry
 
 *dwCommandID*<br/>
-Příkaz, který se spustí. Tento příkaz musí patřit do skupiny CMDSETID3_Forms3.
+Příkaz, který má být spuštěn. Tento příkaz musí patřit do skupiny CMDSETID3_Forms3.
 
 *pVarIn*<br/>
-Ukazatel `VARIANT` struktury obsahující vstupní argumenty. Může mít hodnotu NULL.
+Ukazatel na `VARIANT` strukturu, která obsahuje vstupní argumenty. Může mít hodnotu NULL.
 
 *pVarOut*<br/>
-Ukazatel `VARIANT` strukturu pro příjem výstup příkazu. Může mít hodnotu NULL.
+Ukazatel na `VARIANT` strukturu pro příjem výstupu příkazu. Může mít hodnotu NULL.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Standardní hodnoty HRESULT. Úplný seznam všech možných hodnot, naleznete v tématu [IOleCommandTarget::Exec](/windows/desktop/api/docobj/nf-docobj-iolecommandtarget-exec) v sadě Windows SDK.
+Standardní hodnota HRESULT. Úplný seznam možných hodnot naleznete v tématu [IOleCommandTarget –:: exec](/windows/desktop/api/docobj/nf-docobj-iolecommandtarget-exec) v Windows SDK.
 
 ### <a name="remarks"></a>Poznámky
 
-`ExecFormsCommand` implementuje chování [IOleCommandTarget::Exec](/windows/desktop/api/docobj/nf-docobj-iolecommandtarget-exec) metody.
+`ExecFormsCommand`implementuje chování metody [IOleCommandTarget –:: exec](/windows/desktop/api/docobj/nf-docobj-iolecommandtarget-exec) .
 
-##  <a name="execwb"></a>  CHtmlView::ExecWB
+##  <a name="execwb"></a>CHtmlView –:: ExecWB
 
-Voláním této členské funkce ke spuštění příkazu v WebBrowser nebo Internet Explorer.
+Voláním této členské funkce spustíte příkaz v ovládacím prvku WebBrowser nebo v aplikaci Internet Explorer.
 
 ```
 void ExecWB(
@@ -480,24 +480,24 @@ void ExecWB(
 ### <a name="parameters"></a>Parametry
 
 *cmdID*<br/>
-Příkaz ke spuštění.
+Příkaz, který má být spuštěn.
 
 *cmdexecopt*<br/>
-Možnosti nastavení pro provádění příkazu.
+Možnosti nastavené pro spuštění příkazu
 
 *pvaIn*<br/>
-Hodnotu typu variant použit k určení vstupní argumenty příkazu.
+Varianta použitá pro zadání vstupních argumentů příkazu.
 
 *pvaOut*<br/>
-Hodnotu typu variant pro zadávání argumentů výstup příkazu.
+Varianta použitá pro zadání výstupních argumentů příkazu.
 
 ### <a name="remarks"></a>Poznámky
 
-Zobrazit [IWebBrowser2::ExecWB](/previous-versions//aa752117\(v=vs.85\)) ve Windows SDK.
+Viz [IWebBrowser2:: ExecWB](/previous-versions//aa752117\(v=vs.85\)) v Windows SDK.
 
-##  <a name="getaddressbar"></a>  CHtmlView::GetAddressBar
+##  <a name="getaddressbar"></a>CHtmlView –:: GetAddressBar
 
-Voláním této členské funkce k načtení adresního řádku Internet Exploreru.
+Voláním této členské funkce načtěte adresní řádek aplikace Internet Explorer.
 
 ```
 BOOL GetAddressBar() const;
@@ -505,15 +505,15 @@ BOOL GetAddressBar() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Nenulové, pokud je viditelný; do adresního řádku jinak nula.
+Nenulové, pokud je panel Adresa viditelný; jinak nula.
 
 ### <a name="remarks"></a>Poznámky
 
-Platí pro aplikaci Internet Explorer. Pokud použijete toto volání s ovládacím prvkem WebBrowser, vrátí žádná chybová zpráva, ale toto volání se bude ignorovat.
+Platí pro Internet Explorer. Použijete-li toto volání s ovládacím prvkem WebBrowser, nebude vrácena žádná chyba, ale bude toto volání ignorováno.
 
-##  <a name="getapplication"></a>  CHtmlView::GetApplication
+##  <a name="getapplication"></a>CHtmlView –:: getapplication
 
-Voláním této členské funkce k načtení objektu automatizace podporováno v aplikaci, která obsahuje ovládací prvek WebBrowser.
+Zavolejte tuto členskou funkci pro načtení automatizačního objektu podporovaného aplikací, která obsahuje ovládací prvek WebBrowser.
 
 ```
 LPDISPATCH GetApplication() const;
@@ -521,15 +521,15 @@ LPDISPATCH GetApplication() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Ukazatel `IDispatch` rozhraní objektu aktivní dokument. Další informace najdete v tématu [implementace rozhraní IDispatch](/previous-versions/windows/desktop/automat/implementing-the-idispatch-interface).
+Ukazatel na `IDispatch` rozhraní aktivního objektu dokumentu. Další informace naleznete v tématu [implementace rozhraní IDispatch](/previous-versions/windows/desktop/automat/implementing-the-idispatch-interface).
 
 ### <a name="remarks"></a>Poznámky
 
-Platí pro aplikaci Internet Explorer a WebBrowser.
+Platí pro Internet Explorer a WebBrowser.
 
-##  <a name="getbusy"></a>  CHtmlView::GetBusy
+##  <a name="getbusy"></a>CHtmlView –:: getbusy
 
-Voláním této členské funkce k určení, zda je ovládací prvek WebBrowser zabývají navigace nebo operace stahování.
+Voláním této členské funkce určíte, zda je ovládací prvek WebBrowser zapojen do operace navigace nebo stahování.
 
 ```
 BOOL GetBusy() const;
@@ -537,15 +537,15 @@ BOOL GetBusy() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Nenulové, pokud webový prohlížeč je přetížen. jinak nula.
+Nenulové, pokud je webový prohlížeč zaneprázdněný; jinak nula.
 
 ### <a name="remarks"></a>Poznámky
 
-Platí pro aplikaci Internet Explorer a WebBrowser.
+Platí pro Internet Explorer a WebBrowser.
 
-##  <a name="getcontainer"></a>  CHtmlView::GetContainer
+##  <a name="getcontainer"></a>CHtmlView –:: getzahrnutí
 
-Voláním této členské funkce k načtení objektu, který se vyhodnotí kontejneru webového prohlížeče.
+Zavolejte tuto členskou funkci pro načtení objektu, který se vyhodnotí do kontejneru webového prohlížeče.
 
 ```
 LPDISPATCH GetContainer() const;
@@ -553,15 +553,15 @@ LPDISPATCH GetContainer() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Ukazatel `IDispatch` rozhraní objektu aktivní dokument.
+Ukazatel na `IDispatch` rozhraní aktivního objektu dokumentu.
 
 ### <a name="remarks"></a>Poznámky
 
-Platí pro aplikaci Internet Explorer a WebBrowser.
+Platí pro Internet Explorer a WebBrowser.
 
-##  <a name="getfullname"></a>  CHtmlView::GetFullName
+##  <a name="getfullname"></a>CHtmlView –:: getfull
 
-Voláním této členské funkce úplná cestu k souboru, který se aktuálně zobrazuje aplikace Internet Explorer.
+Voláním této členské funkce načtěte úplnou cestu k souboru, který aktuálně zobrazuje Internet Explorer.
 
 ```
 CString GetFullName() const;
@@ -569,15 +569,15 @@ CString GetFullName() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-A [CString](../../atl-mfc-shared/reference/cstringt-class.md) objekt, který obsahuje cestu a název souboru aktuálně zobrazené. Pokud neexistuje žádná cesta a název souboru, `GetFullName` vrátí prázdnou `CString`.
+Objekt [CString](../../atl-mfc-shared/reference/cstringt-class.md) obsahující cestu a název aktuálně zobrazeného souboru. Pokud cesta a název souboru neexistují `GetFullName` , vrátí prázdnou `CString`hodnotu.
 
 ### <a name="remarks"></a>Poznámky
 
-Platí pro aplikaci Internet Explorer. Pokud použijete toto volání s ovládacím prvkem WebBrowser, vrátí žádná chybová zpráva, ale toto volání se bude ignorovat.
+Platí pro Internet Explorer. Použijete-li toto volání s ovládacím prvkem WebBrowser, nebude vrácena žádná chyba, ale bude toto volání ignorováno.
 
-##  <a name="getfullscreen"></a>  CHtmlView::GetFullScreen
+##  <a name="getfullscreen"></a>CHtmlView –:: getceloobrazovkovém
 
-Voláním této členské funkce k určení, zda ovládací prvek WebBrowser funguje v režimu celé obrazovky nebo v režimu normálního okna.
+Voláním této členské funkce určíte, zda ovládací prvek WebBrowser pracuje v režimu celé obrazovky nebo v normálním režimu okna.
 
 ```
 BOOL GetFullScreen() const;
@@ -585,17 +585,17 @@ BOOL GetFullScreen() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Nenulové, pokud ovládací prvek WebBrowser funguje v režimu celé obrazovky. jinak nula.
+Nenulové, pokud je WebBrowser funkční v režimu celé obrazovky; jinak nula.
 
 ### <a name="remarks"></a>Poznámky
 
-V režimu celé obrazovky maximalizované hlavní okno aplikace Internet Explorer a jsou skryté stavového řádku, nástrojů, nabídek a záhlaví okna.
+V režimu celé obrazovky se hlavní okno aplikace Internet Explorer maximalizuje a stavový řádek, panel nástrojů, panel nabídek a záhlaví jsou skryté.
 
-Platí pro aplikaci Internet Explorer a WebBrowser.
+Platí pro Internet Explorer a WebBrowser.
 
-##  <a name="getheight"></a>  CHtmlView::GetHeight
+##  <a name="getheight"></a>CHtmlView –:: GetHeight
 
-Voláním této členské funkce k načtení výšku v pixelech, okna rámce ovládacího prvku WebBrowser.
+Zavolejte tuto členskou funkci, aby se načetla výška okna rámce ovládacího prvku WebBrowser (v pixelech).
 
 ```
 long GetHeight() const;
@@ -603,11 +603,11 @@ long GetHeight() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Ovládací prvek rámce okna výška v pixelech.
+Výška okna rámce ovládacího prvku v pixelech
 
-##  <a name="gethtmldocument"></a>  CHtmlView::GetHtmlDocument
+##  <a name="gethtmldocument"></a>CHtmlView –:: GetHtmlDocument
 
-Voláním této členské funkce k načtení dokumentu HTML pro aktivní dokument.
+Zavolejte tuto členskou funkci pro načtení dokumentu HTML pro aktivní dokument.
 
 ```
 LPDISPATCH GetHtmlDocument() const;
@@ -615,15 +615,15 @@ LPDISPATCH GetHtmlDocument() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Ukazatel `IDispatch` rozhraní objektu aktivní dokument.
+Ukazatel na `IDispatch` rozhraní aktivního objektu dokumentu.
 
 ### <a name="remarks"></a>Poznámky
 
-Platí pro aplikaci Internet Explorer a WebBrowser.
+Platí pro Internet Explorer a WebBrowser.
 
-##  <a name="getleft"></a>  CHtmlView::GetLeft
+##  <a name="getleft"></a>CHtmlView –:: GetLeft
 
-Voláním této členské funkce k načtení vzdálenost mezi vnitřní levým okrajem ovládacího prvku WebBrowser a levým okrajem jeho kontejneru.
+Zavolejte tuto členskou funkci, aby se načetla vzdálenost mezi vnitřním levým okrajem ovládacího prvku WebBrowser a levým okrajem jeho kontejneru.
 
 ```
 long GetLeft() const;
@@ -631,15 +631,15 @@ long GetLeft() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Levý okraj vzdálenost v pixelech.
+Vzdálenost levého okraje v pixelech
 
 ### <a name="remarks"></a>Poznámky
 
-Platí pro aplikaci Internet Explorer a WebBrowser.
+Platí pro Internet Explorer a WebBrowser.
 
-##  <a name="getlocationname"></a>  CHtmlView::GetLocationName
+##  <a name="getlocationname"></a>CHtmlView –:: getLocation
 
-Voláním této členské funkce a získat tak název prostředku se zobrazí v rámci objektu WebBrowser.
+Zavolejte tuto členskou funkci, aby se získal název prostředku zobrazeného v ovládacím prvku WebBrowser.
 
 ```
 CString GetLocationName() const;
@@ -647,17 +647,17 @@ CString GetLocationName() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-A [CString](../../atl-mfc-shared/reference/cstringt-class.md) objekt, který obsahuje název prostředku aktuálně zobrazují v rámci objektu WebBrowser.
+Objekt [CString](../../atl-mfc-shared/reference/cstringt-class.md) obsahující název prostředku, který je aktuálně zobrazen v ovládacím prvku WebBrowser.
 
 ### <a name="remarks"></a>Poznámky
 
-Pokud prostředek je stránka HTML na webu, název je název této stránky. Pokud prostředek je složky nebo souboru v síti nebo místního počítače, název je název UNC nebo úplnou cestu ke složce nebo souboru.
+Pokud je prostředkem stránka HTML na webu, název této stránky je název této stránky. Pokud je prostředkem složka nebo soubor v síti nebo v místním počítači, název je UNC nebo úplná cesta k souboru nebo složce.
 
-Platí pro aplikaci Internet Explorer a WebBrowser.
+Platí pro Internet Explorer a WebBrowser.
 
-##  <a name="getlocationurl"></a>  CHtmlView::GetLocationURL
+##  <a name="getlocationurl"></a>CHtmlView –:: GetLocationURL
 
-Voláním této členské funkce se načíst adresu URL prostředku, který se aktuálně zobrazuje ovládací prvek WebBrowser.
+Zavolejte tuto členskou funkci pro načtení adresy URL prostředku, který aktuálně zobrazuje ovládací prvek WebBrowser.
 
 ```
 CString GetLocationURL() const;
@@ -665,17 +665,17 @@ CString GetLocationURL() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-A [CString](../../atl-mfc-shared/reference/cstringt-class.md) objekt, který obsahuje adresu URL prostředku aktuálně zobrazují v rámci objektu WebBrowser.
+Objekt [CString](../../atl-mfc-shared/reference/cstringt-class.md) obsahující adresu URL prostředku, který je aktuálně zobrazen v ovládacím prvku WebBrowser.
 
 ### <a name="remarks"></a>Poznámky
 
-Pokud prostředek je složky nebo souboru v síti nebo místního počítače, název je název UNC nebo úplnou cestu ke složce nebo souboru.
+Pokud je prostředkem složka nebo soubor v síti nebo v místním počítači, název je UNC nebo úplná cesta k souboru nebo složce.
 
-Platí pro aplikaci Internet Explorer a WebBrowser.
+Platí pro Internet Explorer a WebBrowser.
 
-##  <a name="getmenubar"></a>  CHtmlView::GetMenuBar
+##  <a name="getmenubar"></a>CHtmlView –:: getmenubar
 
-Voláním této členské funkce určuje, jestli je viditelný řádku nabídek.
+Voláním této členské funkce určíte, zda je panel nabídek viditelný.
 
 ```
 BOOL GetMenuBar() const;
@@ -683,15 +683,15 @@ BOOL GetMenuBar() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Nenulové, pokud je viditelný; nabídek jinak nula.
+Nenulové, pokud je panel nabídek viditelný; jinak nula.
 
 ### <a name="remarks"></a>Poznámky
 
-Platí pro aplikaci Internet Explorer a WebBrowser.
+Platí pro Internet Explorer a WebBrowser.
 
-##  <a name="getoffline"></a>  CHtmlView::GetOffline
+##  <a name="getoffline"></a>CHtmlView –:: getoffline
 
-Voláním této členské funkce k určení, zda webový prohlížeč pracuje v režimu offline.
+Voláním této členské funkce určíte, zda webový prohlížeč pracuje v režimu offline.
 
 ```
 BOOL GetOffline() const;
@@ -699,15 +699,15 @@ BOOL GetOffline() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Nenulové, pokud webový prohlížeč je momentálně offline; jinak nula.
+Nenulové, pokud je webový prohlížeč aktuálně offline; jinak nula.
 
 ### <a name="remarks"></a>Poznámky
 
-Platí pro aplikaci Internet Explorer a WebBrowser.
+Platí pro Internet Explorer a WebBrowser.
 
-##  <a name="getparentbrowser"></a>  CHtmlView::GetParentBrowser
+##  <a name="getparentbrowser"></a>CHtmlView –:: GetParentBrowser
 
-Voláním této členské funkce níž načítají ukazatel na objekt nadřazeného ovládacího prvku WebBrowser.
+Zavolejte tuto členskou funkci, aby načetla ukazatel na nadřazený objekt ovládacího prvku WebBrowser.
 
 ```
 LPDISPATCH GetParentBrowser() const;
@@ -715,15 +715,15 @@ LPDISPATCH GetParentBrowser() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Ukazatel `IDispatch` rozhraní objektu, který je nadřazeného ovládacího prvku WebBrowser.
+Ukazatel na `IDispatch` rozhraní objektu, který je nadřazeným prvkem ovládacího prvku WebBrowser.
 
 ### <a name="remarks"></a>Poznámky
 
-Platí pro aplikaci Internet Explorer a WebBrowser.
+Platí pro Internet Explorer a WebBrowser.
 
-##  <a name="getproperty"></a>  CHtmlView::GetProperty
+##  <a name="getproperty"></a>CHtmlView –:: GetProperty
 
-Voláním této členské funkce k získání hodnoty vlastnosti aktuálně přidružený k ovládacímu prvku.
+Zavolejte tuto členskou funkci pro získání hodnoty vlastnosti, která je aktuálně přidružena k ovládacímu prvku.
 
 ```
 BOOL GetProperty(
@@ -736,22 +736,22 @@ COleVariant GetProperty(LPCTSTR lpszProperty);
 ### <a name="parameters"></a>Parametry
 
 *lpszProperty*<br/>
-Ukazatel na řetězec obsahující vlastnosti, která má načíst.
+Ukazatel na řetězec obsahující vlastnost, která má být načtena.
 
 *strValue*<br/>
-Odkaz na [CString](../../atl-mfc-shared/reference/cstringt-class.md) objekt, který přijme aktuální hodnoty vlastnosti.
+Odkaz na objekt [CString](../../atl-mfc-shared/reference/cstringt-class.md) , který přijímá aktuální hodnotu vlastnosti.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-V první verzi nenulové, pokud úspěšně; jinak nula. V druhém verzi [COleVariant](../../mfc/reference/colevariant-class.md) objektu.
+V první verzi, nenulová, pokud bylo úspěšně dokončeno; jinak nula. Ve druhé verzi je objekt [COleVariant](../../mfc/reference/colevariant-class.md) .
 
 ### <a name="remarks"></a>Poznámky
 
-Platí pro aplikaci Internet Explorer a WebBrowser.
+Platí pro Internet Explorer a WebBrowser.
 
-##  <a name="getreadystate"></a>  CHtmlView::GetReadyState
+##  <a name="getreadystate"></a>CHtmlView –:: GetReadyState
 
-Voláním této členské funkce k načtení stavu Připraveno objektu WebBrowser.
+Zavolejte tuto členskou funkci pro načtení stavu připraveného objektu WebBrowser.
 
 ```
 READYSTATE GetReadyState() const;
@@ -759,15 +759,15 @@ READYSTATE GetReadyState() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-A [READYSTATE](/previous-versions//aa768362\(v=vs.85\)) hodnoty, jak je popsáno v sadě Windows SDK.
+Hodnota pro [ReadyState](/previous-versions//aa768362\(v=vs.85\)) , jak je popsáno v Windows SDK.
 
 ### <a name="remarks"></a>Poznámky
 
-Platí pro aplikaci Internet Explorer a WebBrowser.
+Platí pro Internet Explorer a WebBrowser.
 
-##  <a name="getregisterasbrowser"></a>  CHtmlView::GetRegisterAsBrowser
+##  <a name="getregisterasbrowser"></a>CHtmlView –:: GetRegisterAsBrowser
 
-Voláním této členské funkce k určení, jestli je jako prohlížeč nejvyšší úrovně pro překlad názvů cílové zaregistrované objektu WebBrowser.
+Voláním této členské funkce určíte, zda je objekt WebBrowser zaregistrován jako prohlížeč nejvyšší úrovně pro překlad cílového názvu.
 
 ```
 BOOL GetRegisterAsBrowser() const;
@@ -775,15 +775,15 @@ BOOL GetRegisterAsBrowser() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Nenulové, pokud v prohlížeči je zaregistrovaný jako nejvyšší úrovně prohlížeči. jinak nula.
+Nenulové, pokud je prohlížeč zaregistrován jako prohlížeč nejvyšší úrovně; jinak nula.
 
 ### <a name="remarks"></a>Poznámky
 
-Platí pro aplikaci Internet Explorer a WebBrowser.
+Platí pro Internet Explorer a WebBrowser.
 
-##  <a name="getregisterasdroptarget"></a>  CHtmlView::GetRegisterAsDropTarget
+##  <a name="getregisterasdroptarget"></a>CHtmlView –:: GetRegisterAsDropTarget
 
-Voláním této členské funkce k určení, jestli je ovládací prvek WebBrowser zaregistrované jako cíl přetažení pro navigaci.
+Voláním této členské funkce určíte, zda je ovládací prvek WebBrowser zaregistrován jako cíl přetažení pro navigaci.
 
 ```
 BOOL GetRegisterAsDropTarget() const;
@@ -791,15 +791,15 @@ BOOL GetRegisterAsDropTarget() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Nenulové, pokud v prohlížeči je zaregistrovaný jako cíl přetažení; jinak nula.
+Nenulové, pokud je prohlížeč zaregistrován jako cíl přetažení; jinak nula.
 
 ### <a name="remarks"></a>Poznámky
 
-Platí pro aplikaci Internet Explorer a WebBrowser.
+Platí pro Internet Explorer a WebBrowser.
 
-##  <a name="getsilent"></a>  CHtmlView::GetSilent
+##  <a name="getsilent"></a>CHtmlView –:: getsilent
 
-Voláním této členské funkce k určení, zda všechna dialogová okna je možné zobrazit v ovládacím prvku WebBrowser.
+Zavolejte tuto členskou funkci, aby se určilo, jestli se některá dialogová okna dají zobrazit v ovládacím prvku WebBrowser.
 
 ```
 BOOL GetSilent() const;
@@ -807,15 +807,15 @@ BOOL GetSilent() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Nenulové, pokud z ovládacího prvku WebBrowser; nelze zobrazit dialogová okna jinak nula.
+Nenulové, pokud dialogová okna nelze zobrazit z ovládacího prvku WebBrowser; jinak nula.
 
 ### <a name="remarks"></a>Poznámky
 
-Platí pro aplikaci Internet Explorer a WebBrowser.
+Platí pro Internet Explorer a WebBrowser.
 
-##  <a name="getsource"></a>  CHtmlView::GetSource
+##  <a name="getsource"></a>CHtmlView –:: GetSource
 
-Voláním této členské funkce načíst zdrojový kód HTML pro webovou stránku.
+Voláním této členské funkce načtěte zdrojový kód HTML webové stránky.
 
 ```
 BOOL GetSource(CString& strRef);
@@ -823,20 +823,20 @@ BOOL GetSource(CString& strRef);
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Nenulové, pokud je úspěšná. jinak nula.
+Nenulové, pokud bylo úspěšné; jinak nula.
 
 ### <a name="parameters"></a>Parametry
 
 *refString*<br/>
-A [CString](../../atl-mfc-shared/reference/cstringt-class.md) zdrojový kód, který bude obsahovat.
+[CString](../../atl-mfc-shared/reference/cstringt-class.md) , který bude obsahovat zdrojový kód.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato funkce je ekvivalentní příkazu "Zdroj zobrazení" v aplikaci Internet Explorer, s tím rozdílem, že zdrojový kód se vrátí v `CString`.
+Tato funkce je ekvivalentní příkazu "Zobrazit zdroj" v aplikaci Internet Explorer s tím rozdílem, že zdrojový kód je vrácen v `CString`.
 
-##  <a name="getstatusbar"></a>  CHtmlView::GetStatusBar
+##  <a name="getstatusbar"></a>CHtmlView –:: getstavový řádek
 
-Voláním této členské funkce k určení, zda ovládací prvek WebBrowser zobrazuje stavový řádek.
+Voláním této členské funkce určíte, zda ovládací prvek WebBrowser zobrazuje stavový řádek.
 
 ```
 BOOL GetStatusBar() const;
@@ -844,15 +844,15 @@ BOOL GetStatusBar() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Nenulové, pokud je možné zobrazit stavový řádek; jinak nula.
+Nenulové, pokud se stavový řádek může zobrazit; jinak nula.
 
 ### <a name="remarks"></a>Poznámky
 
-Platí pro aplikaci Internet Explorer. Pokud použijete toto volání s ovládacím prvkem WebBrowser, vrátí žádná chybová zpráva, ale toto volání se bude ignorovat.
+Platí pro Internet Explorer. Použijete-li toto volání s ovládacím prvkem WebBrowser, nebude vrácena žádná chyba, ale bude toto volání ignorováno.
 
-##  <a name="gettheatermode"></a>  CHtmlView::GetTheaterMode
+##  <a name="gettheatermode"></a>CHtmlView –:: GetTheaterMode
 
-Voláním této členské funkce určuje, jestli webový prohlížeč je v režimu celé obrazovky.
+Voláním této členské funkce určíte, zda je webový prohlížeč v režimu celé obrazovky.
 
 ```
 BOOL GetTheaterMode() const;
@@ -860,17 +860,17 @@ BOOL GetTheaterMode() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Nenulové, pokud webový prohlížeč je v režimu celé obrazovky. jinak nula.
+Nenulové, pokud je webový prohlížeč v režimu celé obrazovky; jinak nula.
 
 ### <a name="remarks"></a>Poznámky
 
-Když webový prohlížeč je v režimu celé obrazovky, hlavní okno prohlížeče vyplní celou obrazovku, zobrazí se panel nástrojů s minimální sadu nástrojů pro navigační a stavového řádku se zobrazí v pravém horním rohu obrazovky.
+Když je webový prohlížeč v režimu celé obrazovky, hlavní okno prohlížeče vyplní celou obrazovku, zobrazí se panel nástrojů s minimální sadou navigačních nástrojů a v pravém horním rohu obrazovky se zobrazí stavový řádek.
 
-Platí pro aplikaci Internet Explorer a WebBrowser.
+Platí pro Internet Explorer a WebBrowser.
 
-##  <a name="gettoolbar"></a>  CHtmlView::GetToolBar
+##  <a name="gettoolbar"></a>CHtmlView –:: gettoolbar
 
-Voláním této členské funkce k určení, zda je zobrazen panel nástrojů.
+Voláním této členské funkce určíte, zda je panel nástrojů viditelný.
 
 ```
 int GetToolBar() const;
@@ -878,11 +878,11 @@ int GetToolBar() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Hodnota určující, zda je zobrazen panelu nástrojů. Nenulové, pokud je zobrazen; panel nástrojů jinak nula.
+Hodnota, která označuje, zda je panel nástrojů viditelný. Nenulové, pokud je panel nástrojů viditelný; jinak nula.
 
-##  <a name="gettop"></a>  CHtmlView::GetTop
+##  <a name="gettop"></a>CHtmlView –:: GetTop
 
-Voláním této členské funkce k načtení souřadnice obrazovky horním okrajem ovládacího prvku WebBrowser hlavního okna.
+Voláním této členské funkce načtěte souřadnici obrazovky horního okraje hlavního okna ovládacího prvku WebBrowser.
 
 ```
 long GetTop() const;
@@ -890,15 +890,15 @@ long GetTop() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Adresa proměnné, která přijímá obrazovky souřadnice horního okraje hlavního okna.
+Adresa proměnné, která přijímá souřadnici obrazovky horního okraje hlavního okna.
 
 ### <a name="remarks"></a>Poznámky
 
-Platí pro aplikaci Internet Explorer a WebBrowser.
+Platí pro Internet Explorer a WebBrowser.
 
-##  <a name="gettoplevelcontainer"></a>  CHtmlView::GetTopLevelContainer
+##  <a name="gettoplevelcontainer"></a>CHtmlView –:: GetTopLevelContainer
 
-Voláním této členské funkce určuje, jestli aplikace Internet Explorer je kontejner nejvyšší úrovně ovládacího prvku WebBrowser.
+Voláním této členské funkce určíte, zda je Internet Explorer kontejner nejvyšší úrovně ovládacího prvku WebBrowser.
 
 ```
 BOOL GetTopLevelContainer() const;
@@ -906,15 +906,15 @@ BOOL GetTopLevelContainer() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Nenulový kontejneru se kontejner nejvyšší úrovně; jinak nula.
+Nenulový kontejner je kontejner nejvyšší úrovně; jinak nula.
 
 ### <a name="remarks"></a>Poznámky
 
-Platí pro aplikaci Internet Explorer a WebBrowser.
+Platí pro Internet Explorer a WebBrowser.
 
-##  <a name="gettype"></a>  CHtmlView::GetType
+##  <a name="gettype"></a>CHtmlView –:: GetType
 
-Voláním této členské funkce načíst název typu obsažené aktivní dokument.
+Zavolejte tuto členskou funkci, aby se načetl název typu obsaženého aktivního dokumentu.
 
 ```
 CString GetType() const;
@@ -922,15 +922,15 @@ CString GetType() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-A [CString](../../atl-mfc-shared/reference/cstringt-class.md) objekt, který obsahuje název typu obsažené aktivní dokument.
+Objekt [CString](../../atl-mfc-shared/reference/cstringt-class.md) obsahující název typu obsaženého aktivního dokumentu.
 
 ### <a name="remarks"></a>Poznámky
 
-Platí pro aplikaci Internet Explorer a WebBrowser.
+Platí pro Internet Explorer a WebBrowser.
 
-##  <a name="getvisible"></a>  CHtmlView::GetVisible
+##  <a name="getvisible"></a>CHtmlView –:: getVisible
 
-Voláním této členské funkce k určení, pokud je obsažený objekt viditelný.
+Voláním této členské funkce určíte, zda je obsažený objekt viditelný.
 
 ```
 BOOL GetVisible() const;
@@ -942,11 +942,11 @@ Nenulové, pokud je objekt viditelný; jinak nula.
 
 ### <a name="remarks"></a>Poznámky
 
-Platí pro aplikaci Internet Explorer a WebBrowser.
+Platí pro Internet Explorer a WebBrowser.
 
-##  <a name="getwidth"></a>  CHtmlView::GetWidth
+##  <a name="getwidth"></a>CHtmlView –:: getwidth
 
-Zjišťuje šířku hlavního okna aplikace Internet Explorer.
+Načte šířku hlavního okna aplikace Internet Explorer.
 
 ```
 long GetWidth() const;
@@ -954,11 +954,11 @@ long GetWidth() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Aktuální šířku okna v pixelech.
+Aktuální šířka okna v pixelech
 
-##  <a name="goback"></a>  CHtmlView::GoBack
+##  <a name="goback"></a>CHtmlView –:: GoBack
 
-Přejde zpět jedna položka v seznamu historie.
+Přejde zpět o jednu položku v seznamu historie.
 
 ```
 void GoBack();
@@ -966,19 +966,19 @@ void GoBack();
 
 ### <a name="remarks"></a>Poznámky
 
-Platí pro aplikaci Internet Explorer a WebBrowser.
+Platí pro Internet Explorer a WebBrowser.
 
-##  <a name="goforward"></a>  CHtmlView::GoForward
+##  <a name="goforward"></a>CHtmlView –:: GoForward
 
-Přejde vpřed jedna položka v seznamu historie.
+Naviguje vpřed jednu položku v seznamu historie.
 
 ```
 void GoForward();
 ```
 
-##  <a name="gohome"></a>  CHtmlView::GoHome
+##  <a name="gohome"></a>CHtmlView –:: GoHome
 
-Přejde na aktuální home nebo úvodní stránka zadané v dialogovém okně Možnosti Internetu aplikace Internet Explorer nebo dialogovém okně Vlastnosti Internetu k němu přistupovat z ovládacích panelů.
+Přejde na aktuální domovskou nebo úvodní stránku určenou v dialogovém okně Možnosti Internetu aplikace Internet Explorer nebo v dialogovém okně Vlastnosti Internetu, ke kterým se přistupovalo z ovládacích panelů.
 
 ```
 void GoHome();
@@ -986,11 +986,11 @@ void GoHome();
 
 ### <a name="remarks"></a>Poznámky
 
-Platí pro aplikaci Internet Explorer a WebBrowser.
+Platí pro Internet Explorer a WebBrowser.
 
-##  <a name="gosearch"></a>  CHtmlView::GoSearch
+##  <a name="gosearch"></a>CHtmlView –:: GoSearch
 
-Přejde na aktuální stránce hledání, jak je uvedeno v dialogovém okně Možnosti Internetu aplikace Internet Explorer nebo dialogovém okně Vlastnosti Internetu k němu přistupovat z ovládacích panelů.
+Přejde na stránku aktuální vyhledávání, jak je uvedeno v dialogovém okně Možnosti Internetu aplikace Internet Explorer nebo v dialogovém okně Vlastnosti Internetu, k nimž přistupovalo z ovládacích panelů.
 
 ```
 void GoSearch();
@@ -998,11 +998,11 @@ void GoSearch();
 
 ### <a name="remarks"></a>Poznámky
 
-Platí pro aplikaci Internet Explorer a WebBrowser.
+Platí pro Internet Explorer a WebBrowser.
 
-##  <a name="loadfromresource"></a>  CHtmlView::LoadFromResource
+##  <a name="loadfromresource"></a>CHtmlView –:: LoadFromResource
 
-Voláním této členské funkce načíst zadaný prostředek do ovládacího prvku WebBrowser.
+Zavolejte tuto členskou funkci pro načtení zadaného prostředku do ovládacího prvku WebBrowser.
 
 ```
 BOOL LoadFromResource(LPCTSTR lpszResource);
@@ -1012,22 +1012,22 @@ BOOL LoadFromResource(UINT nRes);
 ### <a name="parameters"></a>Parametry
 
 *lpszResource*<br/>
-Ukazatel na řetězec obsahující název prostředku, který chcete načíst.
+Ukazatel na řetězec obsahující název prostředku, který se má načíst.
 
 *nRes*<br/>
-ID vyrovnávací paměti, který obsahuje název prostředku se má načíst.
+ID vyrovnávací paměti obsahující název prostředku, který se má načíst
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Nenulové, pokud je úspěšná. jinak nula.
+Nenulové, pokud bylo úspěšné; jinak nula.
 
 ### <a name="remarks"></a>Poznámky
 
-Platí pro aplikaci Internet Explorer a WebBrowser.
+Platí pro Internet Explorer a WebBrowser.
 
-##  <a name="navigate"></a>  CHtmlView::Navigate
+##  <a name="navigate"></a>CHtmlView –:: Navigate
 
-Voláním této členské funkce Přejít k prostředku označeném identifikátorem adresy URL.
+Tuto členskou funkci zavolejte, pokud chcete přejít k prostředku identifikovanému adresou URL.
 
 ```
 void Navigate(
@@ -1042,30 +1042,30 @@ void Navigate(
 ### <a name="parameters"></a>Parametry
 
 *Adresa URL*<br/>
-Volající – přidělené řetězec, který obsahuje adresu URL pro navigaci na, nebo úplnou cestu souboru, který se zobrazí.
+Řetězec přidělený volajícímu, který obsahuje adresu URL, na kterou se má přejít, nebo úplná cesta k souboru, který se má zobrazit
 
 *dwFlags*<br/>
-Příznaky proměnná, která určuje, zda bude příslušný materiál přidán do seznamu historie, jestli se má ke čtení nebo zápisu z mezipaměti a jestli se mají zobrazovat prostředku v novém okně. Proměnná může být kombinací hodnot určené [BrowserNavConstants](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa768360\(v=vs.85\)) výčtu.
+Příznaky proměnné, která určuje, zda se má prostředek přidat do seznamu historie, zda se má číst nebo zapisovat z mezipaměti a zda se má zobrazit prostředek v novém okně. Proměnná může být kombinací hodnot definovaných výčtem [BrowserNavConstants](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa768360\(v=vs.85\)) .
 
 *lpszTargetFrameName*<br/>
-Ukazatel na řetězec, který obsahuje název rámce, ve kterém chcete zobrazit zdroj.
+Ukazatel na řetězec, který obsahuje název rámce, ve kterém se má zobrazit prostředek.
 
 *lpszHeaders*<br/>
-Ukazatel na hodnotu, která určuje hlavičky protokolu HTTP k odeslání na server. Tyto hlavičky se přidají do výchozí hlavičky aplikace Internet Explorer. Záhlaví můžete zadat takové věci jako dělat serveru typu dat předávaných do serveru nebo stavovým kódem. Tento parametr se ignoruje, pokud *URL* není adresu URL protokolu HTTP.
+Ukazatel na hodnotu, která určuje hlavičky protokolu HTTP, které se mají odeslat na server. Tato záhlaví jsou přidána do výchozích hlaviček aplikace Internet Explorer. Hlavičky mohou určovat takové věci jako akce vyžadované serverem, typ dat předávaných do serveru nebo stavový kód. Tento parametr se ignoruje, pokud *Adresa URL* není adresa URL protokolu HTTP.
 
 *lpvPostData*<br/>
-Ukazatel na data k odeslání se transakce HTTP POST. Například transakce POST slouží k odesílání dat shromážděných z formuláře HTML. Pokud tento parametr není zadán všechna data účtovat `Navigate` vydá transakci HTTP GET. Tento parametr se ignoruje, pokud *URL* není adresu URL protokolu HTTP.
+Ukazatel na data, která se mají odeslat pomocí transakce HTTP POST. Například transakce POST slouží k odesílání dat shromážděných formulářem HTML. Pokud tento parametr neurčuje žádná data post, `Navigate` vydá transakce HTTP GET. Tento parametr se ignoruje, pokud *Adresa URL* není adresa URL protokolu HTTP.
 
 *dwPostDataLen*<br/>
-Data k odeslání se transakce HTTP POST. Například transakce POST slouží k odesílání dat shromážděných z formuláře HTML. Pokud tento parametr není zadán všechna data účtovat `Navigate` vydá transakci HTTP GET. Tento parametr se ignoruje, pokud *URL* není adresu URL protokolu HTTP.
+Data, která se mají odeslat pomocí transakce HTTP POST Například transakce POST slouží k odesílání dat shromážděných formulářem HTML. Pokud tento parametr neurčuje žádná data post, `Navigate` vydá transakce HTTP GET. Tento parametr se ignoruje, pokud *Adresa URL* není adresa URL protokolu HTTP.
 
 ### <a name="remarks"></a>Poznámky
 
-Platí pro aplikaci Internet Explorer a WebBrowser.
+Platí pro Internet Explorer a WebBrowser.
 
-##  <a name="navigate2"></a>  CHtmlView::Navigate2
+##  <a name="navigate2"></a>CHtmlView –:: Navigate2
 
-Voláním této členské funkce pro navigaci v prostředku označeném identifikátorem adresu URL, nebo soubor určený úplnou cestu.
+Zavolejte tuto členskou funkci, pokud chcete přejít k prostředku identifikovanému adresou URL nebo k souboru určenému úplnou cestou.
 
 ```
 void Navigate2(
@@ -1092,42 +1092,42 @@ void Navigate2(
 ### <a name="parameters"></a>Parametry
 
 *pIDL*<br/>
-Ukazatel [ITEMIDLIST](/windows/desktop/api/shtypes/ns-shtypes-_itemidlist) struktury.
+Ukazatel na strukturu [ITEMIDLIST](/windows/desktop/api/shtypes/ns-shtypes-itemidlist) .
 
 *dwFlags*<br/>
-Příznaky proměnná, která určuje, zda bude příslušný materiál přidán do seznamu historie, jestli se má ke čtení nebo zápisu z mezipaměti a jestli se mají zobrazovat prostředku v novém okně. Proměnná může být kombinací hodnot určené [BrowserNavConstants](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa768360\(v=vs.85\)) výčtu.
+Příznaky proměnné, která určuje, zda se má prostředek přidat do seznamu historie, zda se má číst nebo zapisovat z mezipaměti a zda se má zobrazit prostředek v novém okně. Proměnná může být kombinací hodnot definovaných výčtem [BrowserNavConstants](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa768360\(v=vs.85\)) .
 
 *lpszTargetFrameName*<br/>
-Ukazatel na řetězec, který obsahuje název rámce, ve kterém chcete zobrazit zdroj.
+Ukazatel na řetězec, který obsahuje název rámce, ve kterém se má zobrazit prostředek.
 
 *lpszURL*<br/>
 Ukazatel na řetězec obsahující adresu URL.
 
 *lpvPostData*<br/>
-Data k odeslání se transakce HTTP POST. Například transakce POST slouží k odesílání dat shromážděných z formuláře HTML. Pokud tento parametr není zadán všechna data účtovat `Navigate2` vydá transakci HTTP GET. Tento parametr se ignoruje, pokud *URL* není adresa URL protokolu HTTPS nebo HTTP.
+Data, která se mají odeslat pomocí transakce HTTP POST Například transakce POST slouží k odesílání dat shromážděných formulářem HTML. Pokud tento parametr neurčuje žádná data post, `Navigate2` vydá transakce HTTP GET. Tento parametr se ignoruje, pokud *Adresa URL* není adresa URL protokolu HTTP nebo HTTPS.
 
 *dwPostDataLen*<br/>
-Délka v bajtech dat, na které odkazují *lpvPostData* parametru.
+Délka dat, na která odkazuje parametr *lpvPostData* , v bajtech.
 
 *lpszHeaders*<br/>
-Ukazatel na hodnotu, která určuje hlavičky protokolu HTTP nebo HTTPS k odeslání na server. Tyto hlavičky se přidají do výchozí hlavičky aplikace Internet Explorer. Záhlaví můžete zadat takové věci jako dělat serveru typu dat předávaných do serveru nebo stavovým kódem. Tento parametr se ignoruje, pokud *URL* není adresa URL protokolu HTTPS nebo HTTP.
+Ukazatel na hodnotu, která určuje hlavičky HTTP nebo HTTPS, které se mají odeslat na server. Tato záhlaví jsou přidána do výchozích hlaviček aplikace Internet Explorer. Hlavičky mohou určovat takové věci jako akce vyžadované serverem, typ dat předávaných do serveru nebo stavový kód. Tento parametr se ignoruje, pokud *Adresa URL* není adresa URL protokolu HTTP nebo HTTPS.
 
 *baPostedData*<br/>
-Odkaz na [CByteArray](../../mfc/reference/cbytearray-class.md) objektu.
+Odkaz na objekt [CByteArray](../../mfc/reference/cbytearray-class.md) .
 
 ### <a name="remarks"></a>Poznámky
 
-Tato členská funkce rozšiřuje `Navigate` členská funkce, díky podpoře procházení na speciální složky, jako je například Desktop a tento počítač, které jsou reprezentovány parametr *pIDL*.
+Tato členská funkce rozšiřuje `Navigate` členskou funkci tím, že podporuje procházení na speciálních složkách, jako je například plocha a můj počítač, které jsou reprezentovány parametrem *pIDL*.
 
-Platí pro aplikaci Internet Explorer a WebBrowser.
+Platí pro Internet Explorer a WebBrowser.
 
 ### <a name="example"></a>Příklad
 
 [!code-cpp[NVC_MFCHtmlHttp#7](../../mfc/reference/codesnippet/cpp/chtmlview-class_1.cpp)]
 
-##  <a name="onbeforenavigate2"></a>  CHtmlView::OnBeforeNavigate2
+##  <a name="onbeforenavigate2"></a>CHtmlView –:: OnBeforeNavigate2
 
-Tato členská funkce se volá se rozhraním vyvolat událost, která aktivuje předtím, než dojde k navigaci ve webovém prohlížeči.
+Tato členská funkce je volána rozhraním, aby způsobila vyvolání události před navigací ve webovém prohlížeči.
 
 ```
 virtual void OnBeforeNavigate2(
@@ -1142,26 +1142,26 @@ virtual void OnBeforeNavigate2(
 ### <a name="parameters"></a>Parametry
 
 *lpszURL*<br/>
-Ukazatel na řetězec obsahující adresu URL přejděte k položce.
+Ukazatel na řetězec obsahující adresu URL, na kterou se má přejít
 
 *nFlags*<br/>
 Vyhrazeno pro budoucí použití.
 
 *lpszTargetFrameName*<br/>
-Řetězec, který obsahuje název rámce, ve kterém má být zobrazeno prostředek, nebo hodnota NULL, pokud žádné pojmenované rámce je určená pro prostředek.
+Řetězec, který obsahuje název rámce, ve kterém se má zobrazit prostředek, nebo hodnota NULL, pokud pro prostředek není cílen žádný pojmenovaný rámec.
 
 *baPostedData*<br/>
-Odkaz na `CByteArray` objekt, který obsahuje data k odeslání do serveru, pokud se používá transakce HTTP POST.
+Odkaz na `CByteArray` objekt obsahující data, která se mají odeslat na server, pokud se používá transakce http post.
 
 *lpszHeaders*<br/>
-Ukazatel na řetězec obsahující další hlavičky protokolu HTTP k odeslání na server (pouze adresy HTTP URL). Záhlaví můžete zadat takové věci jako dělat serveru typu dat předávaných do serveru nebo stavovým kódem.
+Ukazatel na řetězec obsahující další hlavičky protokolu HTTP pro odeslání na server (pouze adresy URL protokolu HTTP). Hlavičky mohou určovat takové věci jako akce vyžadované serverem, typ dat předávaných do serveru nebo stavový kód.
 
 *pbCancel*<br/>
-Ukazatel na zrušit příznak. Aplikace může tento parametr nastavit na nenulovou hodnotu, zrušit operaci navigace nebo nula, aby mohla pokračovat.
+Ukazatel na příznak zrušení. Aplikace může nastavit tento parametr na nenulovou hodnotu pro zrušení operace navigace nebo nula, aby bylo možné pokračovat.
 
-##  <a name="oncommandstatechange"></a>  CHtmlView::OnCommandStateChange
+##  <a name="oncommandstatechange"></a>CHtmlView –:: OnCommandStateChange
 
-Tato členská funkce je volána rozhraním, aby se aplikaci oznámilo, změnil povolený stav příkazu webového prohlížeče.
+Tato členská funkce je volána rozhraním pro oznamování aplikace, že došlo ke změně povoleného stavu příkazu webového prohlížeče.
 
 ```
 virtual void OnCommandStateChange(
@@ -1171,15 +1171,15 @@ virtual void OnCommandStateChange(
 
 ### <a name="parameters"></a>Parametry
 
-*Npříkaz*<br/>
-Identifikátor příkazu, jehož povolený stav se změnil.
+*Npříkazový*<br/>
+Identifikátor příkazu, jehož povolený stav byl změněn.
 
 *bEnable*<br/>
-Stav povoleno. Tento parametr je nenulové, pokud příkaz je povolena, nebo nula, pokud je zakázaná.
+Povolený stav. Tento parametr je nenulový, pokud je příkaz povolený, nebo nula, pokud je zakázaný.
 
-##  <a name="ondocumentcomplete"></a>  CHtmlView::OnDocumentComplete
+##  <a name="ondocumentcomplete"></a>CHtmlView –:: OnDocumentComplete
 
-Tato členská funkce se volá se rozhraním, aby se aplikaci oznámilo, že dokument bylo dosaženo stavu READYSTATE_COMPLETE.
+Tato členská funkce je volána rozhraním, aby upozornila aplikaci, že dokument dosáhl stavu READYSTATE_COMPLETE.
 
 ```
 virtual void OnDocumentComplete(LPCTSTR lpszURL);
@@ -1188,17 +1188,17 @@ virtual void OnDocumentComplete(LPCTSTR lpszURL);
 ### <a name="parameters"></a>Parametry
 
 *lpszURL*<br/>
-Ukazatel na řetězec, který se vyhodnotí na adresu URL ve formátu UNC souboru název, nebo PIDL (ukazatel na seznam položek identifier), na kterou se přejde.
+Ukazatel na řetězec, který je vyhodnocen jako adresa URL, název souboru UNC nebo PIDL (ukazatel na seznam identifikátorů položky), který byl přesměrován na.
 
 ### <a name="remarks"></a>Poznámky
 
-Ne všechny rámce se aktivuje tuto událost, ale každý snímek, který se aktivuje [OnDownloadBegin](#ondownloadbegin) událost se aktivuje odpovídající `OnDocumentComplete` událostí.
+Ne každý snímek vyvolá tuto událost, ale každý rámec, který aktivuje událost [OnDownloadBegin](#ondownloadbegin) , vyvolá odpovídající `OnDocumentComplete` událost.
 
-Adresa URL označená *lpszURL* může lišit od adresu URL, kterou prohlížeč se některého přejděte do umístění, protože tato adresa URL je adresa URL kanonizovaného a kvalifikovaný. Například, pokud aplikace určuje adresu URL "www.microsoft.com" ve volání do [Navigovat](#navigate) nebo [Navigate2](#navigate2), adresa URL předaná `OnNavigateComplete2` bude "<http://www.microsoft.com/>". Také pokud server má v prohlížeči přesměrován na jinou adresu URL, přesměrovaného adresy URL se zobrazí tady.
+Adresa URL uvedená v *lpszURL* může být odlišná od adresy URL, na kterou se prohlížeč dozvěděl, protože tato adresa URL je kanonická a kvalifikovaná adresa URL. Například pokud aplikace určuje adresu URL "www.Microsoft.com" ve volání metody [Navigate](#navigate) nebo [Navigate2](#navigate2), adresa URL předaná pomocí `OnNavigateComplete2` bude "<http://www.microsoft.com/>". Také pokud Server přesměroval prohlížeč na jinou adresu URL, Přesměrovaná adresa URL se zobrazí zde.
 
-##  <a name="ondocwindowactivate"></a>  CHtmlView::OnDocWindowActivate
+##  <a name="ondocwindowactivate"></a>CHtmlView –:: OnDocWindowActivate
 
-Volána z aplikace Internet Explorer nebo MSHTML provádění `IOleInPlaceActiveObject::OnDocWindowActivate`, což upozorňuje na aktivní objekt v místní, když se aktivuje nebo deaktivuje okno dokumentu kontejneru.
+Volá se z implementace `IOleInPlaceActiveObject::OnDocWindowActivate`Internet Exploreru nebo MSHTML, která upozorní aktivní místní objekt, když se aktivuje nebo deaktivuje okno dokumentu kontejneru.
 
 ```
 virtual HRESULT OnDocWindowActivate(BOOL fActivate);
@@ -1207,19 +1207,19 @@ virtual HRESULT OnDocWindowActivate(BOOL fActivate);
 ### <a name="parameters"></a>Parametry
 
 *fActivate*<br/>
-Označuje stav okna dokumentu. Pokud je tato hodnota nenulová, okno se aktivuje. Pokud tato hodnota je nula, v okně se deaktivuje.
+Určuje stav okna dokumentu. Pokud je tato hodnota nenulová, okno se aktivuje. Pokud je tato hodnota nula, dojde k deaktivaci okna.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-S_OK, pokud je úspěšná, nebo jinak kód chyby definované OLE.
+S_OK v případě úspěchu nebo v opačném případě kód chyby definovaný v OLE.
 
 ### <a name="remarks"></a>Poznámky
 
-Přepsat `OnDocWindowActivate` reagovat `OnDocWindowActivate` oznámení z ovládacího prvku Microsoft webový prohlížeč. Zobrazit [IDocHostUIHandler::OnDocWindowActivate](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753261\(v=vs.85\)) v sadě Windows SDK pro další informace.
+Přepište `OnDocWindowActivate` , pokud chcete `OnDocWindowActivate` reagovat na oznámení od ovládacího prvku webového prohlížeče Microsoftu. Další informace naleznete v tématu [IDocHostUIHandler:: OnDocWindowActivate](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753261\(v=vs.85\)) v Windows SDK.
 
-##  <a name="ondownloadbegin"></a>  CHtmlView::OnDownloadBegin
+##  <a name="ondownloadbegin"></a>CHtmlView –:: OnDownloadBegin
 
-Tato členská funkce je volána rozhraním, aby se začne stahovat dokumentu.
+Tato členská funkce je volána rozhraním pro zahájení stahování dokumentu.
 
 ```
 virtual void OnDownloadBegin();
@@ -1227,19 +1227,19 @@ virtual void OnDownloadBegin();
 
 ### <a name="remarks"></a>Poznámky
 
-Tato událost se aktivuje krátce po [OnBeforeNavigate2](#onbeforenavigate2) událost, pokud se zruší navigaci. Žádné animaci nebo "zaneprázdněný" najevo, že kontejner potřebuje ke zobrazení musí být připojené k této události.
+Tato událost se aktivuje krátce po události [OnBeforeNavigate2](#onbeforenavigate2) , pokud se nezruší navigace. K této události by se měla připojit jakákoli animace nebo "zaneprázdněná" indikace, že je potřeba zobrazit kontejner.
 
-##  <a name="ondownloadcomplete"></a>  CHtmlView::OnDownloadComplete
+##  <a name="ondownloadcomplete"></a>CHtmlView –:: OnDownloadComplete
 
-Tato členská funkce se volá se rozhraním k označení, že byla operace navigace dokončení, zastavení nebo selhání.
+Tato členská funkce je volána rozhraním, aby označovala, že operace navigace byla dokončena, byla zastavena nebo se nezdařila.
 
 ```
 virtual void OnDownloadComplete();
 ```
 
-##  <a name="onenablemodeless"></a>  CHtmlView::OnEnableModeless
+##  <a name="onenablemodeless"></a>CHtmlView –:: OnEnableModeless
 
-Volá se, když aplikace Internet Explorer nebo MSHTML zobrazí modální uživatelské rozhraní.
+Volá se, když Internet Explorer nebo MSHTML zobrazuje modální uživatelské rozhraní.
 
 ```
 virtual HRESULT OnEnableModeless(BOOL fEnable);
@@ -1248,19 +1248,19 @@ virtual HRESULT OnEnableModeless(BOOL fEnable);
 ### <a name="parameters"></a>Parametry
 
 *fEnable*<br/>
-Označuje, jestli jsou povolené hostitele nemodálních dialogových oken. Pokud je tato hodnota nenulovou hodnotu, jsou povolené nemodálních dialogových oken. Pokud tato hodnota je nula, nemodální dialogová okna jsou zakázané.
+Určuje, zda jsou nemodální dialogová okna hostitele povolena nebo zakázána. Pokud je tato hodnota nenulová, jsou povolena nemodální dialogová okna. Pokud je tato hodnota nula, nemodální dialogová okna jsou zakázaná.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-S_OK, pokud je úspěšná, nebo jinak kód chyby definované OLE.
+S_OK v případě úspěchu nebo v opačném případě kód chyby definovaný v OLE.
 
 ### <a name="remarks"></a>Poznámky
 
-Povolí nebo zakáže nemodálních dialogových oken, pokud kontejner vytvoří nebo odstraní modální dialogové okno. Přepsat `OnEnableModeless` reagovat `EnableModeless` oznámení z ovládacího prvku Microsoft webový prohlížeč. Zobrazit [IDocHostUIHandler::EnableModeless](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753253\(v=vs.85\)) v sadě Windows SDK pro další informace.
+Povolí nebo zakáže nemodální dialogová okna, když kontejner vytvoří nebo zničí modální dialogové okno. Přepište `OnEnableModeless` , pokud chcete `EnableModeless` reagovat na oznámení od ovládacího prvku webového prohlížeče Microsoftu. Další informace naleznete v tématu [IDocHostUIHandler:: EnableModeless](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753253\(v=vs.85\)) v Windows SDK.
 
-##  <a name="onfilterdataobject"></a>  CHtmlView::OnFilterDataObject
+##  <a name="onfilterdataobject"></a>CHtmlView –:: OnFilterDataObject
 
-Volá se na hostiteli aplikace Internet Explorer nebo MSHTML povolí hostitelské nahrazuje aplikaci Internet Explorer nebo MSHTML na datový objekt.
+Volá se na hostiteli aplikací Internet Explorer nebo MSHTML, aby mohl hostitel nahradit datový objekt aplikace Internet Explorer nebo MSHTML.
 
 ```
 virtual HRESULT OnFilterDataObject(
@@ -1271,22 +1271,22 @@ virtual HRESULT OnFilterDataObject(
 ### <a name="parameters"></a>Parametry
 
 *pDataObject*<br/>
-Adresa [IDataObject](/windows/desktop/api/objidl/nn-objidl-idataobject) rozhraní poskytnutých aplikace Internet Explorer nebo MSHTML aplikace.
+Adresa rozhraní [IDataObject](/windows/desktop/api/objidl/nn-objidl-idataobject) poskytovaného aplikací Internet Explorer nebo Mshtml.
 
 *ppDataObject*<br/>
-Adresa, která přijímá `IDataObject` ukazatel rozhraní, získáte ho od hostitele. Obsah tohoto parametru by měl vždy inicializován na hodnotu NULL, i v případě, že metoda selže.
+Adresa, která přijímá `IDataObject` ukazatel rozhraní dodaného hostitelem. Obsah tohoto parametru by měl být vždy inicializován na hodnotu NULL, i v případě, že metoda se nezdařila.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-S_OK, pokud se nahradí datový objekt, S_FALSE, pokud nedojde k nahrazení datového objektu nebo kód chyby definované OLE, pokud dojde k chybě.
+S_OK Pokud je datový objekt nahrazen, S_FALSE Pokud datový objekt není nahrazen, nebo kód chyby definovaný OLE, pokud dojde k chybě.
 
 ### <a name="remarks"></a>Poznámky
 
-Přepsat `OnFilterDataObject` reagovat `FilterDataObject` oznámení z ovládacího prvku Microsoft webový prohlížeč. Zobrazit [IDocHostUIHandler::FilterDataObject](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753254\(v=vs.85\)) v sadě Windows SDK pro další informace.
+Přepište `OnFilterDataObject` , pokud chcete `FilterDataObject` reagovat na oznámení od ovládacího prvku webového prohlížeče Microsoftu. Další informace naleznete v tématu [IDocHostUIHandler:: FilterDataObject](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753254\(v=vs.85\)) v Windows SDK.
 
-##  <a name="onframewindowactivate"></a>  CHtmlView::OnFrameWindowActivate
+##  <a name="onframewindowactivate"></a>CHtmlView –:: OnFrameWindowActivate
 
-Volá se z [IOleInPlaceActiveObject::OnFrameWindowActivate](/windows/desktop/api/oleidl/nf-oleidl-ioleinplaceactiveobject-onframewindowactivate) upozornit objektu kontejneru je nejvyšší úrovně se aktivuje nebo deaktivuje okno rámce.
+Volá se z [IOleInPlaceActiveObject:: OnFrameWindowActivate](/windows/desktop/api/oleidl/nf-oleidl-ioleinplaceactiveobject-onframewindowactivate) a upozorní objekt, když se aktivuje nebo deaktivuje okno rámce na nejvyšší úrovni kontejneru.
 
 ```
 virtual HRESULT OnFrameWindowActivate(BOOL fActivate);
@@ -1295,19 +1295,19 @@ virtual HRESULT OnFrameWindowActivate(BOOL fActivate);
 ### <a name="parameters"></a>Parametry
 
 *fActivate*<br/>
-Označuje stav okna nejvyšší úrovně rámce kontejneru. Pokud je tato hodnota nenulová, okno se aktivuje. Pokud tato hodnota je nula, v okně se deaktivuje.
+Určuje stav okna rámce nejvyšší úrovně kontejneru. Pokud je tato hodnota nenulová, okno se aktivuje. Pokud je tato hodnota nula, dojde k deaktivaci okna.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-S_OK, pokud je úspěšná, nebo jinak kód chyby definované OLE.
+S_OK v případě úspěchu nebo v opačném případě kód chyby definovaný v OLE.
 
 ### <a name="remarks"></a>Poznámky
 
-Přepsat `OnFrameWindowActivate` reagovat `OnFrameWindowActivate` oznámení z ovládacího prvku Microsoft webový prohlížeč. Zobrazit [IDocHostUIHandler::OnFrameWindowActivate](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753262\(v=vs.85\)) v sadě Windows SDK pro další informace.
+Přepište `OnFrameWindowActivate` , pokud chcete `OnFrameWindowActivate` reagovat na oznámení od ovládacího prvku webového prohlížeče Microsoftu. Další informace naleznete v tématu [IDocHostUIHandler:: OnFrameWindowActivate](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753262\(v=vs.85\)) v Windows SDK.
 
-##  <a name="onfullscreen"></a>  CHtmlView::OnFullScreen
+##  <a name="onfullscreen"></a>CHtmlView –:: v celoobrazovkovém zobrazení
 
-Tato členská funkce je volána rozhraním, když [na celou obrazovku –](/previous-versions/aa752119\(v=vs.85\)) je změněna vlastnost.
+Tato členská funkce je volána rozhraním, když se změní vlastnost [celoobrazovkového](/previous-versions/aa752119\(v=vs.85\)) .
 
 ```
 virtual void OnFullScreen(BOOL bFullScreen);
@@ -1316,11 +1316,11 @@ virtual void OnFullScreen(BOOL bFullScreen);
 ### <a name="parameters"></a>Parametry
 
 *bFullScreen*<br/>
-Nenulové, pokud je aplikace Internet Explorer v režimu zobrazení na celé obrazovce. jinak nula.
+Nenulové, pokud je Internet Explorer v režimu celé obrazovky; v opačném případě nenulová.
 
-##  <a name="ongetdroptarget"></a>  CHtmlView::OnGetDropTarget
+##  <a name="ongetdroptarget"></a>CHtmlView –:: OnGetDropTarget
 
-Voláno rozhraním aplikace Internet Explorer nebo MSHTML aplikace, když se používá se jako cíl přetažení k hostiteli umožní zadat alternativní `IDropTarget`.
+Volá se aplikací Internet Explorer nebo MSHTML, když se používá jako cíl přetažení, aby mohl hostitel poskytnout alternativu `IDropTarget`.
 
 ```
 virtual HRESULT OnGetDropTarget(
@@ -1331,22 +1331,22 @@ virtual HRESULT OnGetDropTarget(
 ### <a name="parameters"></a>Parametry
 
 *pDropTarget*<br/>
-[IDropTarget](/windows/desktop/api/oleidl/nn-oleidl-idroptarget) aplikace Internet Explorer nebo MSHTML navrhuje použití.
+[IDropTarget](/windows/desktop/api/oleidl/nn-oleidl-idroptarget) Aplikaci Internet Explorer nebo MSHTML navrhne k použití.
 
 *ppDropTarget*<br/>
-Adresa `IDropTarget` , který přijímá `IDropTarget` ukazatel rozhraní, které jsou hostiteli chce poskytovat.
+Adresa, která přijímá ukazatel `IDropTarget` rozhraní, kterou hostitel chce poskytnout. `IDropTarget`
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Zobrazit [IDocHostUIHandler::GetDropTarget](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753255\(v=vs.85\)) v sadě Windows SDK pro seznam návratových kódů.
+Seznam návratových kódů naleznete v tématu [IDocHostUIHandler:: GetDropTarget](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753255\(v=vs.85\)) v Windows SDK.
 
 ### <a name="remarks"></a>Poznámky
 
-Přepsat `OnGetDropTarget` reagovat `GetDropTarget` oznámení z ovládacího prvku Microsoft webový prohlížeč. Zobrazit [IDocHostUIHandler::GetDropTarget](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753255\(v=vs.85\)) v sadě Windows SDK pro další informace.
+Přepište `OnGetDropTarget` , pokud chcete `GetDropTarget` reagovat na oznámení od ovládacího prvku webového prohlížeče Microsoftu. Další informace naleznete v tématu [IDocHostUIHandler:: GetDropTarget](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753255\(v=vs.85\)) v Windows SDK.
 
-##  <a name="ongetexternal"></a>  CHtmlView::OnGetExternal
+##  <a name="ongetexternal"></a>CHtmlView –:: OnGetExternal
 
-Volané aplikace Internet Explorer nebo MSHTML k získání hostitele `IDispatch` rozhraní.
+Volá se aplikací Internet Explorer nebo MSHTML, aby se získalo `IDispatch` rozhraní hostitele.
 
 ```
 virtual HRESULT OnGetExternal(LPDISPATCH* lppDispatch);
@@ -1355,19 +1355,19 @@ virtual HRESULT OnGetExternal(LPDISPATCH* lppDispatch);
 ### <a name="parameters"></a>Parametry
 
 *lppDispatch*<br/>
-Ukazatel na adresu, která přijímá `IDispatch` ukazatel rozhraní hostitelské aplikace. Pokud hostitel poskytuje rozhraní automatizace, může poskytnout odkaz na aplikaci Internet Explorer nebo MSHTML prostřednictvím tohoto parametru. Obsah tohoto parametru by měl vždy inicializován na hodnotu NULL, i v případě, že metoda selže.
+Ukazatel na adresu, která přijímá `IDispatch` ukazatel rozhraní hostitelské aplikace. Pokud hostitel zpřístupňuje rozhraní automatizace, může prostřednictvím tohoto parametru poskytnout odkaz na Internet Explorer nebo MSHTML. Obsah tohoto parametru by měl být vždy inicializován na hodnotu NULL, i v případě, že metoda se nezdařila.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-S_OK, pokud je úspěšná, nebo jinak kód chyby definované OLE.
+S_OK v případě úspěchu nebo v opačném případě kód chyby definovaný v OLE.
 
 ### <a name="remarks"></a>Poznámky
 
-Přepsat `OnGetExternal` reagovat `GetExternal` oznámení z ovládacího prvku Microsoft webový prohlížeč. Zobrazit [IDocHostUIHandler::GetExternal](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753256\(v=vs.85\)) v sadě Windows SDK pro další informace.
+Přepište `OnGetExternal` , pokud chcete `GetExternal` reagovat na oznámení od ovládacího prvku webového prohlížeče Microsoftu. Další informace naleznete v tématu [IDocHostUIHandler:: getexternal](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753256\(v=vs.85\)) v Windows SDK.
 
-##  <a name="ongethostinfo"></a>  CHtmlView::OnGetHostInfo
+##  <a name="ongethostinfo"></a>CHtmlView –:: OnGetHostInfo
 
-Načte možností uživatelského rozhraní v aplikaci Internet Explorer nebo MSHTML hostitele.
+Načte možnosti uživatelského rozhraní hostitele Internet Exploreru nebo MSHTML.
 
 ```
 virtual HRESULT OnGetHostInfo(DOCHOSTUIINFO* pInfo);
@@ -1376,19 +1376,19 @@ virtual HRESULT OnGetHostInfo(DOCHOSTUIINFO* pInfo);
 ### <a name="parameters"></a>Parametry
 
 *pInfo*<br/>
-Adresa [DOCHOSTUIINFO](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa770044\(v=vs.85\)) struktura, která přijímá funkce uživatelského rozhraní hostiteli.
+Adresa struktury [DOCHOSTUIINFO](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa770044\(v=vs.85\)) , která přijímá možnosti uživatelského rozhraní hostitele.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-S_OK, pokud je úspěšná, nebo jinak kód chyby definované OLE.
+S_OK v případě úspěchu nebo v opačném případě kód chyby definovaný v OLE.
 
 ### <a name="remarks"></a>Poznámky
 
-Přepsat `OnGetHostInfo` reagovat `GetHostInfo` oznámení z ovládacího prvku Microsoft webový prohlížeč. Zobrazit [IDocHostUIHandler::GetHostInfo](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753257\(v=vs.85\)) v sadě Windows SDK pro další informace.
+Přepište `OnGetHostInfo` , pokud chcete `GetHostInfo` reagovat na oznámení od ovládacího prvku webového prohlížeče Microsoftu. Další informace naleznete v tématu [IDocHostUIHandler:: GetHostInfo](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753257\(v=vs.85\)) v Windows SDK.
 
-##  <a name="ongetoptionkeypath"></a>  CHtmlView::OnGetOptionKeyPath
+##  <a name="ongetoptionkeypath"></a>CHtmlView –:: OnGetOptionKeyPath
 
-Voláním této členské funkce, chcete-li získat klíč registru, ve které aplikace Internet Explorer nebo MSHTML ukládá uživatelských předvoleb.
+Voláním této členské funkce získáte klíč registru, pod kterým aplikace Internet Explorer nebo MSHTML ukládá předvolby uživatele.
 
 ```
 virtual HRESULT OnGetOptionKeyPath(
@@ -1399,22 +1399,22 @@ virtual HRESULT OnGetOptionKeyPath(
 ### <a name="parameters"></a>Parametry
 
 *pchKey*<br/>
-Adresa `LPOLESTR` , který přijímá řetězec podklíče registru, kde hostitele ukládá jeho výchozí možnosti. Tento podklíč bude pod klíčem HKEY_CURRENT_USER. Přidělení paměti pomocí [CoTaskMemAlloc](/windows/desktop/api/combaseapi/nf-combaseapi-cotaskmemalloc). Volající aplikace je zodpovědná za uvolnění paměti pomocí [CoTaskMemFree](/windows/desktop/api/combaseapi/nf-combaseapi-cotaskmemfree). Tento parametr by měl vždy inicializován na hodnotu NULL, i v případě, že metoda selže.
+`LPOLESTR` Adresa, která přijímá řetězec podklíče registru, kde hostitel ukládá výchozí možnosti. Tento podklíč se nachází pod klíčem HKEY_CURRENT_USER. Přidělte tuto paměť pomocí [CoTaskMemAlloc](/windows/desktop/api/combaseapi/nf-combaseapi-cotaskmemalloc). Volající aplikace zodpovídá za uvolnění této paměti pomocí [CoTaskMemFree](/windows/desktop/api/combaseapi/nf-combaseapi-cotaskmemfree). Tento parametr by měl být vždy inicializován na hodnotu NULL, i v případě, že metoda se nezdařila.
 
 *dwReserved*<br/>
-Vyhrazeno pro budoucí použití. Není v současné době nepoužívá.
+Vyhrazeno pro budoucí použití. Aktuálně se nepoužívá.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-S_OK, pokud je úspěšná, nebo jinak S_FALSE. Pokud S_FALSE, Internet Explorer nebo MSHTML aplikace bude ve výchozím nastavení možnosti vlastní uživatele.
+S_OK, pokud bylo úspěšné, nebo S_FALSE jinak. Pokud S_FALSE, Internet Explorer nebo MSHTML budou ve výchozím nastavení nastavené na vlastní uživatelské možnosti.
 
 ### <a name="remarks"></a>Poznámky
 
-Přepsat `OnGetOptionKeyPath` reagovat `GetOptionKeyPath` oznámení z ovládacího prvku Microsoft webový prohlížeč. Zobrazit [IDocHostUIHandler::GetOptionKeyPath](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753258\(v=vs.85\)) v sadě Windows SDK pro další informace.
+Přepište `OnGetOptionKeyPath` , pokud chcete `GetOptionKeyPath` reagovat na oznámení od ovládacího prvku webového prohlížeče Microsoftu. Další informace naleznete v tématu [IDocHostUIHandler:: GetOptionKeyPath](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753258\(v=vs.85\)) v Windows SDK.
 
-##  <a name="onhideui"></a>  CHtmlView::OnHideUI
+##  <a name="onhideui"></a>CHtmlView –:: OnHideUI
 
-Tato členská funkce je voláno rozhraním, když aplikace Internet Explorer nebo MSHTML odebere jeho nabídek a panelů nástrojů.
+Tato členská funkce je volána rozhraním, když aplikace Internet Explorer nebo MSHTML odebere své nabídky a panely nástrojů.
 
 ```
 virtual HRESULT OnHideUI();
@@ -1422,15 +1422,15 @@ virtual HRESULT OnHideUI();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-S_OK, pokud je úspěšná, nebo jinak kód chyby definované OLE.
+S_OK v případě úspěchu nebo v opačném případě kód chyby definovaný v OLE.
 
 ### <a name="remarks"></a>Poznámky
 
-Přepsat `OnHideUI` reagovat `HideUI` oznámení z ovládacího prvku Microsoft webový prohlížeč. Zobrazit [IDocHostUIHandler::HideUI](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753259\(v=vs.85\)) v sadě Windows SDK pro další informace.
+Přepište `OnHideUI` , pokud chcete `HideUI` reagovat na oznámení od ovládacího prvku webového prohlížeče Microsoftu. Další informace naleznete v tématu [IDocHostUIHandler:: HideUI](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753259\(v=vs.85\)) v Windows SDK.
 
-##  <a name="onmenubar"></a>  CHtmlView::OnMenuBar
+##  <a name="onmenubar"></a>CHtmlView –::-MenuBar
 
-Tato členská funkce je volána rozhraním, když [řádku nabídek](/previous-versions/aa752131\(v=vs.85\)) je změněna vlastnost.
+Tato členská funkce je volána rozhraním, když se změní vlastnost [MenuBar](/previous-versions/aa752131\(v=vs.85\)) .
 
 ```
 virtual void OnMenuBar(BOOL bMenuBar);
@@ -1439,11 +1439,11 @@ virtual void OnMenuBar(BOOL bMenuBar);
 ### <a name="parameters"></a>Parametry
 
 *bMenuBar*<br/>
-Nenulové, pokud je viditelný; nabídek aplikaci Internet Explorer jinak nula.
+Nenulové, pokud je panel nabídek Internet Exploreru viditelný; v opačném případě nenulová.
 
-##  <a name="onnavigatecomplete2"></a>  CHtmlView::OnNavigateComplete2
+##  <a name="onnavigatecomplete2"></a>CHtmlView –:: OnNavigateComplete2
 
-Tato členská funkce je volána rozhraním, až se dokončí přechod na hypertextový odkaz (na buď okno nebo pro element frameset).
+Tato členská funkce je volána rozhraním po dokončení navigace na hypertextový odkaz (buď v okně, nebo v elementu FRAMESET).
 
 ```
 virtual void OnNavigateComplete2(LPCTSTR strURL);
@@ -1452,17 +1452,17 @@ virtual void OnNavigateComplete2(LPCTSTR strURL);
 ### <a name="parameters"></a>Parametry
 
 *strURL*<br/>
-Výraz řetězce, který se vyhodnotí na adresu URL ve formátu UNC název souboru, nebo PIDL (ukazatel na seznam položek identifier), na kterou se přejde.
+Řetězcový výraz, který je vyhodnocen jako adresa URL, název souboru UNC nebo PIDL (ukazatel na seznam identifikátorů položky), který byl přesměrován na.
 
 ### <a name="remarks"></a>Poznámky
 
-Parametr adresy URL může být PIDL v případě entity název místa prostředí, pro který neexistuje žádná adresa URL reprezentace.
+Parametr URL může být PIDL v případě entity oboru názvů prostředí, pro kterou neexistuje reprezentace adresy URL.
 
-Všimněte si, že adresa URL součástí *%{strurl/* může lišit od adresu URL, kterou prohlížeč se některého přejděte do umístění, protože tato adresa URL je adresa URL kanonizovaného a kvalifikovaný. Například, pokud aplikace určuje adresu URL "www.microsoft.com" ve volání do [Navigovat](#navigate) nebo [Navigate2](#navigate2), adresa URL předaná `OnNavigateComplete2` bude "<http://www.microsoft.com/>". Také pokud server má v prohlížeči přesměrován na jinou adresu URL, přesměrovaného adresy URL se zobrazí tady.
+Všimněte si, že adresa URL obsažená v *strURL* může být odlišná od adresy URL, na kterou se prohlížeč dozvěděl, protože tato adresa URL je kanonická a kvalifikovaná adresa URL. Například pokud aplikace určuje adresu URL "www.Microsoft.com" ve volání metody [Navigate](#navigate) nebo [Navigate2](#navigate2), adresa URL předaná pomocí `OnNavigateComplete2` bude "<http://www.microsoft.com/>". Také pokud Server přesměroval prohlížeč na jinou adresu URL, Přesměrovaná adresa URL se zobrazí zde.
 
-##  <a name="onnavigateerror"></a>  CHtmlView::OnNavigateError
+##  <a name="onnavigateerror"></a>CHtmlView –:: OnNavigateError
 
-Volá se rozhraním, pokud selže přechod na hypertextový odkaz.
+Volá se rozhraním, pokud se nezdařila navigace na hypertextový odkaz.
 
 ```
 virtual void OnNavigateError(
@@ -1475,26 +1475,26 @@ virtual void OnNavigateError(
 ### <a name="parameters"></a>Parametry
 
 *lpszURL*<br/>
-Adresa URL, pro kterou navigace se nezdařila.
+Adresa URL, pro kterou se navigace nezdařila
 
 *lpszFrame*<br/>
-Název rámce, ve kterém prostředek je zobrazený, nebo hodnotu NULL, pokud žádné pojmenované rámce je určený pro prostředek.
+Název rámce, ve kterém se má prostředek zobrazit, nebo hodnota NULL, pokud se pro prostředek necílí žádný pojmenovaný rámec.
 
 *dwError*<br/>
-Stavový kód chyby, pokud je k dispozici. Seznam možných stavů HRESULT a HTTP najdete v tématu [NavigateError události stavové kódy.](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa768365\(v=vs.85\)).
+Chybový kód stavu, pokud je k dispozici. Seznam možných stavových kódů HRESULT a HTTP naleznete v tématu [NavigateError stavových kódů událostí.](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa768365\(v=vs.85\)).
 
 *pbCancel*<br/>
-Určuje, jestli se má zrušit navigaci na chybovou stránku nebo žádné další automatické hledání. Pokud hodnotu TRUE (výchozí), pokračovat s navigací na chybové stránky nebo automatické hledání; Pokud má hodnotu FALSE, zrušte navigace na chybové stránky nebo automatické hledání.
+Určuje, zda se má zrušit navigace na chybovou stránku nebo jakékoli další autovyhledávání. Pokud je hodnota TRUE (výchozí), pokračujte s navigací na chybovou stránku nebo s možností automaticky Hledat. Pokud je hodnota FALSE, zrušte navigaci na chybovou stránku nebo na tlačítko pro hledání.
 
 ### <a name="remarks"></a>Poznámky
 
-Přepsáním této metody můžete zadat vlastní navigační zpracování chyb.
+Přepište tuto metodu, aby poskytovala vlastní zpracování chyb navigace.
 
-Další informace najdete v tématu [DWebBrowserEvents2::NavigateError](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa768286\(v=vs.85\))
+Další informace najdete v tématu [DWebBrowserEvents2:: NavigateError](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa768286\(v=vs.85\))
 
-##  <a name="onnewwindow2"></a>  CHtmlView::OnNewWindow2
+##  <a name="onnewwindow2"></a>CHtmlView –:: OnNewWindow2
 
-Tato členská funkce je voláno rozhraním při novém okně se má vytvořit pro zobrazení prostředku.
+Tato členská funkce je volána rozhraním, když se má vytvořit nové okno pro zobrazení prostředku.
 
 ```
 virtual void OnNewWindow2(
@@ -1505,18 +1505,18 @@ virtual void OnNewWindow2(
 ### <a name="parameters"></a>Parametry
 
 *ppDisp*<br/>
-Ukazatel na ukazatel rozhraní, který volitelně přijímá `IDispatch` ukazatel rozhraní nového objektu WebBrowser nebo Internet Explorer.
+Ukazatel na ukazatel rozhraní, který volitelně obdrží `IDispatch` ukazatel rozhraní nového objektu WebBrowser nebo objektu aplikace Internet Explorer.
 
 *Zrušení*<br/>
-Ukazatel na zrušit příznak. Aplikace může tento parametr nastavit na nenulovou hodnotu, zrušit operaci navigace nebo nula, aby mohla pokračovat.
+Ukazatel na příznak zrušení. Aplikace může nastavit tento parametr na nenulovou hodnotu pro zrušení operace navigace nebo nula, aby bylo možné pokračovat.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato událost předchází vytvoření nového okna z v rámci objektu WebBrowser.
+Tato událost předchází vytvoření nového okna v ovládacím prvku WebBrowser.
 
-##  <a name="onprogresschange"></a>  CHtmlView::OnProgressChange
+##  <a name="onprogresschange"></a>CHtmlView –:: OnProgressChange
 
-Tato členská funkce je volána rozhraním, aby se aplikaci oznámilo, že probíhá operace nástroje download byl aktualizován.
+Tato členská funkce je volána rozhraním pro oznamování aplikace, že průběh operace stahování byl aktualizován.
 
 ```
 virtual void OnProgressChange(
@@ -1527,18 +1527,18 @@ virtual void OnProgressChange(
 ### <a name="parameters"></a>Parametry
 
 *nProgress*<br/>
-Množství celkový průběh zobrazit nebo -1, průběh dokončení.
+Celkový průběh, který se má zobrazit, nebo hodnota-1, když je průběh dokončen
 
 *nProgressMax*<br/>
-Hodnota maximální průběh.
+Maximální hodnota průběhu
 
 ### <a name="remarks"></a>Poznámky
 
-Kontejner můžete použít tuto událost na základě informací poskytnutých zobrazíte počet bajtů stáhli zatím nebo aktualizovat indikátor průběhu.
+Kontejner může použít informace poskytované touto událostí k zobrazení počtu stažených bajtů, zatím nebo k aktualizaci indikátoru průběhu.
 
-##  <a name="onpropertychange"></a>  CHtmlView::OnPropertyChange
+##  <a name="onpropertychange"></a>CHtmlView –::-PropertyChanged
 
-Tato členská funkce se volá se rozhraním, aby se aplikaci oznámilo, který [PutProperty](#putproperty) došlo ke změně hodnoty vlastnosti.
+Tato členská funkce je volána rozhraním, aby upozornila aplikaci, že [PutProperty](#putproperty) změnila hodnotu vlastnosti.
 
 ```
 virtual void OnPropertyChange(LPCTSTR lpszProperty);
@@ -1549,17 +1549,17 @@ virtual void OnPropertyChange(LPCTSTR lpszProperty);
 *lpszProperty*<br/>
 Ukazatel na řetězec obsahující název vlastnosti.
 
-##  <a name="onquit"></a>  CHtmlView::OnQuit
+##  <a name="onquit"></a>CHtmlView –::-quite
 
-Tato členská funkce se volá se rozhraním, aby se aplikaci oznámilo, aplikace Internet Explorer je připravené ukončení.
+Tato členská funkce je volána rozhraním, aby upozornila aplikaci, že aplikace Internet Explorer je připravena k ukončení.
 
 ```
 virtual void OnQuit();
 ```
 
-##  <a name="onresizeborder"></a>  CHtmlView::OnResizeBorder
+##  <a name="onresizeborder"></a>CHtmlView –:: OnResizeBorder
 
-Volána z aplikace Internet Explorer nebo MSHTML provádění [IOleInPlaceActiveObject::ResizeBorder](/windows/desktop/api/oleidl/nf-oleidl-ioleinplaceactiveobject-resizeborder), která upozorní objekt, který je potřeba změnit velikost místa jeho ohraničení.
+Voláno z implementace aplikace Internet Explorer nebo MSHTML objektu [IOleInPlaceActiveObject:: ResizeBorder](/windows/desktop/api/oleidl/nf-oleidl-ioleinplaceactiveobject-resizeborder), která upozorní objekt, který potřebuje, aby se změnila velikost prostoru ohraničení.
 
 ```
 virtual HRESULT OnResizeBorder(
@@ -1571,25 +1571,25 @@ virtual HRESULT OnResizeBorder(
 ### <a name="parameters"></a>Parametry
 
 *prcBorder*<br/>
-Nové vnější obdélník prostoru ohraničení.
+Nový vnější obdélník pro prostor ohraničení
 
 *pUIWindow*<br/>
-Ukazatel na rozhraní pro objekt okna rámce nebo dokumentu došlo ke změně jehož ohraničení.
+Ukazatel na rozhraní pro objekt rámečku nebo okna dokumentu, jehož ohraničení bylo změněno.
 
 *fFrameWindow*<br/>
-Hodnota TRUE, pokud je okno rámce volání [IOleInPlaceActiveObject::ResizeBorder](/windows/desktop/api/oleidl/nf-oleidl-ioleinplaceactiveobject-resizeborder); jinak hodnota FALSE.
+TRUE, pokud okno rámce volá [IOleInPlaceActiveObject:: ResizeBorder](/windows/desktop/api/oleidl/nf-oleidl-ioleinplaceactiveobject-resizeborder), jinak false.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-S_OK, pokud je úspěšná, nebo jinak kód chyby definované OLE.
+S_OK v případě úspěchu nebo v opačném případě kód chyby definovaný v OLE.
 
 ### <a name="remarks"></a>Poznámky
 
-Přepsat `OnResizeBorder` reagovat `ResizeBorder` oznámení z ovládacího prvku Microsoft webový prohlížeč. Zobrazit [IDocHostUIHandler::ResizeBorder](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753263\(v=vs.85\)) v sadě Windows SDK pro další informace.
+Přepište `OnResizeBorder` , pokud chcete `ResizeBorder` reagovat na oznámení od ovládacího prvku webového prohlížeče Microsoftu. Další informace naleznete v tématu [IDocHostUIHandler:: ResizeBorder](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753263\(v=vs.85\)) v Windows SDK.
 
-##  <a name="onshowcontextmenu"></a>  CHtmlView::OnShowContextMenu
+##  <a name="onshowcontextmenu"></a>CHtmlView –:: OnShowContextMenu
 
-Volá se z aplikace Internet Explorer nebo MSHTML aplikace, když se chystá zobrazit kontextovou nabídku.
+Volá se z aplikace Internet Explorer nebo MSHTML, když se chystá zobrazit jeho kontextovou nabídku.
 
 ```
 virtual HRESULT OnShowContextMenu(
@@ -1602,28 +1602,28 @@ virtual HRESULT OnShowContextMenu(
 ### <a name="parameters"></a>Parametry
 
 *dwID*<br/>
-Identifikátor kontextové nabídky, který se má zobrazit. Zobrazit `IDocHostUIHandler::ShowContextMenu` v sadě Windows SDK pro seznam hodnot.
+Identifikátor kontextové nabídky, která se má zobrazit Seznam `IDocHostUIHandler::ShowContextMenu` hodnot najdete v části Windows SDK.
 
 *ppt*<br/>
-Souřadnice obrazovky pro nabídku.
+Souřadnice obrazovky pro nabídku
 
 *pcmdtReserved*<br/>
-[Iolecommandtarget –](/windows/desktop/api/docobj/nn-docobj-iolecommandtarget) rozhraní sloužící k dotazování stavu příkazu a spusťte příkazy v tomto objektu.
+Rozhraní [IOleCommandTarget –](/windows/desktop/api/docobj/nn-docobj-iolecommandtarget) , které se používá k dotazování na stav příkazu a provádění příkazů v tomto objektu.
 
 *pdispReserved*<br/>
-Rozhraní IDispatch objektu na souřadnice obrazovky. To umožňuje k rozlišení konkrétní objekty k zajištění konkrétnější kontextu hostitele.
+Rozhraní IDispatch objektu na souřadnicích obrazovky Díky tomu může hostitel odlišit určité objekty, aby poskytoval konkrétnější kontext.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Zobrazit [IDocHostUIHandler::ShowContextMenu](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753264\(v=vs.85\)) v sadě Windows SDK pro seznam hodnot.
+Seznam hodnot naleznete v tématu [IDocHostUIHandler:: ShowContextMenu](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753264\(v=vs.85\)) v Windows SDK.
 
 ### <a name="remarks"></a>Poznámky
 
-Přepsat `OnShowContextMenu` reagovat `ShowContextMenu` oznámení z ovládacího prvku Microsoft webový prohlížeč. Zobrazit [IDocHostUIHandler::ShowContextMenu](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753264\(v=vs.85\)) v sadě Windows SDK pro další informace.
+Přepište `OnShowContextMenu` , pokud chcete `ShowContextMenu` reagovat na oznámení od ovládacího prvku webového prohlížeče Microsoftu. Další informace naleznete v tématu [IDocHostUIHandler:: ShowContextMenu](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753264\(v=vs.85\)) v Windows SDK.
 
-##  <a name="onshowui"></a>  CHtmlView::OnShowUI
+##  <a name="onshowui"></a>CHtmlView –:: OnShowUI
 
-Volá se před Internet Explorer nebo MSHTML zobrazí jeho nabídek a panelů nástrojů.
+Volá se před tím, než aplikace Internet Explorer nebo MSHTML zobrazí své nabídky a panely nástrojů.
 
 ```
 virtual HRESULT OnShowUI(
@@ -1643,25 +1643,25 @@ Vyhrazeno pro budoucí použití.
 [IOleInPlaceActiveObject](/windows/desktop/api/oleidl/nn-oleidl-ioleinplaceactiveobject) rozhraní aktuálně aktivního objektu.
 
 *pCommandTarget*<br/>
-[Iolecommandtarget –](/windows/desktop/api/docobj/nn-docobj-iolecommandtarget) rozhraní objektu.
+[IOleCommandTarget –](/windows/desktop/api/docobj/nn-docobj-iolecommandtarget) rozhraní objektu.
 
 *pFrame*<br/>
-[IOleInPlaceFrame](/windows/desktop/api/oleidl/nn-oleidl-ioleinplaceframe) rozhraní objektu. To je potřeba nabídek a panelů nástrojů.
+[IOleInPlaceFrame](/windows/desktop/api/oleidl/nn-oleidl-ioleinplaceframe) rozhraní objektu. To je potřeba pro nabídky a panely nástrojů.
 
 *pDoc*<br/>
-[IOleInPlaceUIWindow](/windows/desktop/api/oleidl/nn-oleidl-ioleinplaceuiwindow) rozhraní pro objekt. To je potřeba pro panely nástrojů.
+Rozhraní [IOleInPlaceUIWindow](/windows/desktop/api/oleidl/nn-oleidl-ioleinplaceuiwindow) pro objekt To je potřeba pro panely nástrojů.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Zobrazit [IDocHostUIHandler::ShowUI](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753265\(v=vs.85\)) v sadě Windows SDK pro seznam hodnot.
+Seznam hodnot naleznete v tématu [IDocHostUIHandler:: showUI](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753265\(v=vs.85\)) v Windows SDK.
 
 ### <a name="remarks"></a>Poznámky
 
-Přepsat `OnShowUI` reagovat `ShowUI` oznámení z ovládacího prvku Microsoft webový prohlížeč. Zobrazit [IDocHostUIHandler::ShowUI](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753265\(v=vs.85\)) v sadě Windows SDK pro další informace.
+Přepište `OnShowUI` , pokud chcete `ShowUI` reagovat na oznámení od ovládacího prvku webového prohlížeče Microsoftu. Další informace naleznete v tématu [IDocHostUIHandler:: showUI](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753265\(v=vs.85\)) v Windows SDK.
 
-##  <a name="onstatusbar"></a>  CHtmlView::OnStatusBar
+##  <a name="onstatusbar"></a>CHtmlView –::-stavový řádek
 
-Tato členská funkce je volána rozhraním, když [StatusBar](/previous-versions//aa768270\(v=vs.85\)) je změněna vlastnost.
+Tato členská funkce je volána rozhraním, když se změní vlastnost stavový [řádek](/previous-versions//aa768270\(v=vs.85\)) .
 
 ```
 virtual void OnStatusBar(BOOL bStatusBar);
@@ -1670,11 +1670,11 @@ virtual void OnStatusBar(BOOL bStatusBar);
 ### <a name="parameters"></a>Parametry
 
 *bStatusBar*<br/>
-Nenulové, pokud je zobrazen stavový řádek Internet Explorer nebo jinak nulová.
+Nenulové, pokud je stavový řádek aplikace Internet Explorer viditelný nebo nula, jinak.
 
-##  <a name="onstatustextchange"></a>  CHtmlView::OnStatusTextChange
+##  <a name="onstatustextchange"></a>CHtmlView –:: OnStatusTextChange
 
-Tato členská funkce se volá se rozhraním, aby se aplikaci oznámilo, došlo ke změně textu ve stavovém řádku přidružený k ovládacímu prvku WebBrowser.
+Tato členská funkce je volána rozhraním, aby upozornila aplikaci na změnu textu stavového řádku přidruženého k ovládacímu prvku WebBrowser.
 
 ```
 virtual void OnStatusTextChange(LPCTSTR lpszText);
@@ -1685,9 +1685,9 @@ virtual void OnStatusTextChange(LPCTSTR lpszText);
 *lpszText*<br/>
 Řetězec, který obsahuje nový text stavového řádku.
 
-##  <a name="ontheatermode"></a>  CHtmlView::OnTheaterMode
+##  <a name="ontheatermode"></a>CHtmlView –:: OnTheaterMode
 
-Tato členská funkce je volána rozhraním, když [TheaterMode](/previous-versions/aa768273\(v=vs.85\)) je změněna vlastnost.
+Tato členská funkce je volána rozhraním, když se změní vlastnost [změně theatermode](/previous-versions/aa768273\(v=vs.85\)) .
 
 ```
 virtual void OnTheaterMode(BOOL bTheaterMode);
@@ -1696,11 +1696,11 @@ virtual void OnTheaterMode(BOOL bTheaterMode);
 ### <a name="parameters"></a>Parametry
 
 *bTheaterMode*<br/>
-Nenulové, pokud je aplikace Internet Explorer v režimu celé obrazovky. jinak nula.
+Nenulové, pokud je aplikace Internet Explorer v režimu v režimu celé obrazovky; v opačném případě nenulová.
 
-##  <a name="ontitlechange"></a>  CHtmlView::OnTitleChange
+##  <a name="ontitlechange"></a>CHtmlView –:: OnTitleChange
 
-Tato členská funkce je volána rozhraní framework, aby se aplikaci oznámilo, pokud se název dokumentu v ovládacím prvku WebBrowser stane dostupná nebo změny.
+Tato členská funkce je volána rozhraním pro oznamování aplikace, pokud je název dokumentu v ovládacím prvku WebBrowser k dispozici nebo se změní.
 
 ```
 virtual void OnTitleChange(LPCTSTR lpszText);
@@ -1713,11 +1713,11 @@ Nový název dokumentu.
 
 ### <a name="remarks"></a>Poznámky
 
-Pro kód HTML může změnit název; zatímco HTML se ještě stahuje, adresa URL dokumentu je nastaven jako název. Po skutečný název (pokud existuje) je analyzován z kódu HTML, názvu se změní tak, aby odrážely skutečný název.
+V případě HTML se nadpis může změnit. i když se kód HTML pořád stahuje, adresa URL dokumentu se nastaví jako název. Po skutečném titulu (pokud existuje) se analyzuje z HTML, nadpis se změní tak, aby odrážel skutečný nadpis.
 
-##  <a name="ontoolbar"></a>  CHtmlView::OnToolBar
+##  <a name="ontoolbar"></a>CHtmlView –:: ToolBar – panel nástrojů
 
-Tato členská funkce je volána rozhraním, když [nástrojů](/previous-versions/aa768274\(v=vs.85\)) je změněna vlastnost.
+Tato členská funkce je volána rozhraním v případě, že došlo ke změně vlastnosti [Toolbar](/previous-versions/aa768274\(v=vs.85\)) .
 
 ```
 virtual void OnToolBar(BOOL bToolBar);
@@ -1726,11 +1726,11 @@ virtual void OnToolBar(BOOL bToolBar);
 ### <a name="parameters"></a>Parametry
 
 *bToolBar*<br/>
-Nenulové, pokud je zobrazen panel nástrojů aplikace Internet Explorer nebo jinak nulová.
+Nenulové, pokud je panel nástrojů v aplikaci Internet Explorer viditelný nebo nula.
 
-##  <a name="ontranslateaccelerator"></a>  CHtmlView::OnTranslateAccelerator
+##  <a name="ontranslateaccelerator"></a>CHtmlView –:: OnTranslateAccelerator
 
-Volané aplikace Internet Explorer nebo MSHTML při [IOleInPlaceActiveObject::TranslateAccelerator](/windows/desktop/api/oleidl/nf-oleidl-ioleinplaceactiveobject-translateaccelerator) nebo [IOleControlSite::TranslateAccelerator](/windows/desktop/api/ocidl/nf-ocidl-iolecontrolsite-translateaccelerator) nazývá ke zpracování zpráv nabídky přístupové klíče z Fronta zpráv kontejneru.
+Volá se aplikací Internet Explorer nebo MSHTML, pokud [IOleInPlaceActiveObject:: TranslateAccelerator](/windows/desktop/api/oleidl/nf-oleidl-ioleinplaceactiveobject-translateaccelerator) nebo [IOleControlSite:: TranslateAccelerator](/windows/desktop/api/ocidl/nf-ocidl-iolecontrolsite-translateaccelerator) se volá ke zprávám klíče akcelerátoru v nabídce procesu z fronty zpráv kontejneru.
 
 ```
 virtual HRESULT OnTranslateAccelerator(
@@ -1742,25 +1742,25 @@ virtual HRESULT OnTranslateAccelerator(
 ### <a name="parameters"></a>Parametry
 
 *lpMsg*<br/>
-Odkazuje na zprávu, která může být nutné k převodu.
+Odkazuje na zprávu, která může být nutné přeložit.
 
 *pguidCmdGroup*<br/>
-Identifikátor příkazu skupiny.
+Identifikátor skupiny příkazů
 
 *nCmdID*<br/>
-Identifikátor příkazu.
+Identifikátor příkazu
 
 ### <a name="return-value"></a>Návratová hodnota
 
-S_OK, pokud je úspěšná, nebo jinak S_FALSE.
+S_OK, pokud bylo úspěšné, nebo S_FALSE jinak.
 
 ### <a name="remarks"></a>Poznámky
 
-Přepsat `OnTranslateAccelerator` reagovat `TranslateAccelerator` oznámení z ovládacího prvku Microsoft webový prohlížeč. Zobrazit [IDocHostUIHandler::TranslateAccelerator](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753266\(v=vs.85\)) v sadě Windows SDK pro další informace.
+Přepište `OnTranslateAccelerator` , pokud chcete `TranslateAccelerator` reagovat na oznámení od ovládacího prvku webového prohlížeče Microsoftu. Další informace naleznete v tématu [IDocHostUIHandler:: TranslateAccelerator](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753266\(v=vs.85\)) v Windows SDK.
 
-##  <a name="ontranslateurl"></a>  CHtmlView::OnTranslateUrl
+##  <a name="ontranslateurl"></a>CHtmlView –:: OnTranslateUrl
 
-Voláno rozhraním aplikace Internet Explorer nebo MSHTML povolit hostitele příležitost změnit adresu URL načíst.
+Volá se aplikací Internet Explorer nebo MSHTML, aby mohl hostitel možnost změnit adresu URL, která se má načíst.
 
 ```
 virtual HRESULT OnTranslateUrl(
@@ -1775,22 +1775,22 @@ virtual HRESULT OnTranslateUrl(
 Vyhrazeno pro budoucí použití.
 
 *pchURLIn*<br/>
-Adresa řetězce poskytované aplikace Internet Explorer nebo MSHTML aplikace, která představuje adresu URL k převodu.
+Adresa řetězce zadaného aplikací Internet Explorer nebo MSHTML, která představuje adresu URL, která má být přeložena.
 
 *ppchURLOut*<br/>
-Adresa ukazatele na řetězec, který přijímá adresy přeložené adresy URL. Hostitel přidělí vyrovnávací paměti, pomocí přidělování paměti úloh. Obsah tohoto parametru by měl vždy inicializován na hodnotu NULL, i v případě, že adresa URL není přeložen. nebo metoda selže.
+Adresa ukazatele na řetězec, který přijímá adresu přeložené adresy URL. Hostitel přidělí vyrovnávací paměť pomocí přidělování paměti úlohy. Obsah tohoto parametru by měl být vždy inicializován na hodnotu NULL, i když adresa URL není přeložena nebo metoda se nezdařila.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-`S_OK` Pokud adresa URL přeloží, S_FALSE, je-li nebyl přeložen adresu URL nebo kód chyby definované OLE Pokud došlo k chybě.
+`S_OK`Pokud byla adresa URL přeložena, S_FALSE, pokud nebyla adresa URL přeložena, nebo kód chyby definovaný OLE, pokud došlo k chybě.
 
 ### <a name="remarks"></a>Poznámky
 
-Přepsat `OnTranslateUrl` reagovat `TranslateUrl` oznámení z ovládacího prvku Microsoft webový prohlížeč. Zobrazit [IDocHostUIHandler::TranslateUrl](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753267\(v=vs.85\)) v sadě Windows SDK pro další informace.
+Přepište `OnTranslateUrl` , pokud chcete `TranslateUrl` reagovat na oznámení od ovládacího prvku webového prohlížeče Microsoftu. Další informace naleznete v tématu [IDocHostUIHandler:: TranslateUrl](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753267\(v=vs.85\)) v Windows SDK.
 
-##  <a name="onupdateui"></a>  CHtmlView::OnUpdateUI
+##  <a name="onupdateui"></a>CHtmlView –:: OnUpdateUI
 
-Upozorňuje hostitele, stav příkazu se změnila.
+Upozorní hostitele, že došlo ke změně stavu příkazu.
 
 ```
 virtual HRESULT OnUpdateUI();
@@ -1798,15 +1798,15 @@ virtual HRESULT OnUpdateUI();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-S_OK, pokud je úspěšná, nebo jinak kód chyby definované OLE.
+S_OK v případě úspěchu nebo v opačném případě kód chyby definovaný v OLE.
 
 ### <a name="remarks"></a>Poznámky
 
-Hostitele by měl aktualizovat stav tlačítka na panelu nástrojů. Tato metoda je volána bez ohledu na návratovou hodnotu z `ShowUI`. Přepsat `OnUpdateUI` reagovat `UpdateUI` oznámení z ovládacího prvku Microsoft webový prohlížeč.
+Hostitel by měl aktualizovat stav tlačítek panelu nástrojů. Tato metoda je volána bez ohledu na návratovou hodnotu z `ShowUI`. Přepište `OnUpdateUI` , pokud chcete `UpdateUI` reagovat na oznámení od ovládacího prvku webového prohlížeče Microsoftu.
 
-##  <a name="onvisible"></a>  CHtmlView::OnVisible
+##  <a name="onvisible"></a>CHtmlView –:: Visible
 
-Tato členská funkce je voláno rozhraním, když v okně Ovládací prvek WebBrowser by měl být zobrazený nebo skrytý.
+Tato členská funkce je volána rozhraním, když by se mělo zobrazit nebo skrýt okno pro ovládací panel WebBrowser.
 
 ```
 virtual void OnVisible(BOOL bVisible);
@@ -1815,15 +1815,15 @@ virtual void OnVisible(BOOL bVisible);
 ### <a name="parameters"></a>Parametry
 
 *bVisible*<br/>
-Nenulové, pokud je objekt viditelný nebo jinak nulová.
+Nenulové, pokud je objekt viditelný nebo nula, jinak.
 
 ### <a name="remarks"></a>Poznámky
 
-Díky tomu okno hostitele ovládacího prvku objektu do chovají stejným způsobem, který by se chovalo okno aplikace Internet Explorer.
+To umožňuje, aby se v hostitelském okně ovládacího prvku objektů choval stejný způsob, jakým se bude chovat okno aplikace Internet Explorer.
 
-##  <a name="putproperty"></a>  CHtmlView::PutProperty
+##  <a name="putproperty"></a>CHtmlView –::P utProperty
 
-Voláním této členské funkce pro nastavení vlastnosti související se zadaným objektem.
+Chcete-li nastavit vlastnost přidruženou k danému objektu, zavolejte tuto členskou funkci.
 
 ```
 void PutProperty(
@@ -1850,33 +1850,33 @@ void PutProperty(
 ### <a name="parameters"></a>Parametry
 
 *lpszProperty*<br/>
-Řetězec obsahující vlastnosti, které chcete nastavit.
+Řetězec obsahující vlastnost, která má být nastavena.
 
 *vtValue*<br/>
-Nová hodnota vlastnosti indikován *lpszProperty*.
+Nová hodnota vlastnosti uvedená v *lpszProperty*.
 
 *lpszPropertyName*<br/>
-Ukazatel na řetězec obsahující název vlastnosti, které chcete nastavit.
+Ukazatel na řetězec obsahující název vlastnosti, která má být nastavena.
 
 *dValue*<br/>
-Nová hodnota vlastnosti.
+Nová hodnota vlastnosti
 
-*lValue*<br/>
-Nová hodnota vlastnosti.
+*Hodnotou*<br/>
+Nová hodnota vlastnosti
 
 *lpszValue*<br/>
-Ukazatel na řetězec, který obsahuje novou hodnotu vlastnosti.
+Ukazatel na řetězec obsahující novou hodnotu vlastnosti.
 
-*nValue*<br/>
-Nová hodnota vlastnosti.
+*nHodnota*<br/>
+Nová hodnota vlastnosti
 
 ### <a name="remarks"></a>Poznámky
 
-Platí pro aplikaci Internet Explorer a WebBrowser.
+Platí pro Internet Explorer a WebBrowser.
 
-##  <a name="queryformscommand"></a>  CHtmlView::QueryFormsCommand
+##  <a name="queryformscommand"></a>CHtmlView –:: QueryFormsCommand
 
-Dotazy na stav jednoho nebo více příkazů vygenerované uživatelské rozhraní události.
+Dotaz na stav jednoho nebo více příkazů generovaných událostmi uživatelského rozhraní.
 
 ```
 HRESULT QueryFormsCommand(
@@ -1889,28 +1889,28 @@ HRESULT QueryFormsCommand(
 ### <a name="parameters"></a>Parametry
 
 *dwCommandID*<br/>
-Identifikátor příkazu, pro která je dotazována.
+Identifikátor příkazu, na který se dotazuje.
 
 *pbSupported*<br/>
-Ukazatel na hodnotu určující, zda příkaz (identifikovaný *dwCommandID*) se nepodporuje. Při hodnotě TRUE je příkaz podporovány. v opačném případě FALSE.
+Ukazatel na LOGICKou hodnotu určující, zda je podporován příkaz (identifikovaný pomocí *dwCommandID*). Je-li nastavena hodnota TRUE, je příkaz podporován. v opačném případě FALSE.
 
 *pbEnabled*<br/>
-Ukazatel na hodnotu určující, zda příkaz (identifikovaný *dwCommandID*) je povolená. Při hodnotě TRUE je příkaz podporovány. v opačném případě FALSE.
+Ukazatel na LOGICKou hodnotu určující, zda je povolen příkaz (identifikovaný pomocí *dwCommandID*). Je-li nastavena hodnota TRUE, je příkaz podporován. v opačném případě FALSE.
 
 *pbChecked*<br/>
-Ukazatel na hodnotu určující, zda příkaz (identifikovaný *dwCommandID*) je zaškrtnuté políčko. Při hodnotě TRUE je příkaz podporovány. v opačném případě FALSE.
+Ukazatel na LOGICKou hodnotu určující, zda je zaškrtnut příkaz (identifikovaný pomocí *dwCommandID*). Je-li nastavena hodnota TRUE, je příkaz podporován. v opačném případě FALSE.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Standardní hodnoty HRESULT. Úplný seznam všech možných hodnot, naleznete v tématu [IOleCommandTarget::QueryStatus](/windows/desktop/api/docobj/nf-docobj-iolecommandtarget-querystatus) v sadě Windows SDK.
+Standardní hodnota HRESULT. Úplný seznam možných hodnot naleznete v tématu [IOleCommandTarget –:: QueryStatus](/windows/desktop/api/docobj/nf-docobj-iolecommandtarget-querystatus) v Windows SDK.
 
 ### <a name="remarks"></a>Poznámky
 
-`QueryFormsCommand` implementuje chování [IOleCommandTarget::QueryStatus](/windows/desktop/api/docobj/nf-docobj-iolecommandtarget-querystatus) metody.
+`QueryFormsCommand`implementuje chování metody [IOleCommandTarget –:: QueryStatus](/windows/desktop/api/docobj/nf-docobj-iolecommandtarget-querystatus) .
 
-##  <a name="querystatuswb"></a>  CHtmlView::QueryStatusWB
+##  <a name="querystatuswb"></a>CHtmlView –:: QueryStatusWB
 
-Voláním této členské funkce k dotazování stavu příkazu.
+Zavolejte tuto členskou funkci pro dotaz na stav příkazu.
 
 ```
 OLECMDF QueryStatusWB(OLECMDID cmdID) const;
@@ -1919,21 +1919,21 @@ OLECMDF QueryStatusWB(OLECMDID cmdID) const;
 ### <a name="parameters"></a>Parametry
 
 *cmdID*<br/>
-[OLECMDID](/windows/desktop/api/docobj/ne-docobj-olecmdid) hodnotu příkazu, pro který volající potřebuje informace o stavu.
+Hodnota [OLECMDID](/windows/desktop/api/docobj/ne-docobj-olecmdid) příkazu, pro který volající potřebuje informace o stavu.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Adresa [OLECMDF](/windows/desktop/api/docobj/ne-docobj-olecmdf) hodnotu, která přijímá stav příkazu.
+Adresa hodnoty [OLECMDF](/windows/desktop/api/docobj/ne-docobj-olecmdf) , která přijímá stav příkazu.
 
 ### <a name="remarks"></a>Poznámky
 
-`QueryStatusWB` implementuje chování [IOleCommandTarget::QueryStatus](/windows/desktop/api/docobj/nf-docobj-iolecommandtarget-querystatus) metody.
+`QueryStatusWB`implementuje chování metody [IOleCommandTarget –:: QueryStatus](/windows/desktop/api/docobj/nf-docobj-iolecommandtarget-querystatus) .
 
-Platí pro aplikaci Internet Explorer a WebBrowser.
+Platí pro Internet Explorer a WebBrowser.
 
-##  <a name="refresh"></a>  CHtmlView::Refresh
+##  <a name="refresh"></a>CHtmlView –:: Refresh
 
-Znovu načte adresu URL nebo soubor, který se aktuálně zobrazuje webový prohlížeč.
+Znovu načte adresu URL nebo soubor, který aktuálně zobrazuje webový prohlížeč.
 
 ```
 void Refresh();
@@ -1941,13 +1941,13 @@ void Refresh();
 
 ### <a name="remarks"></a>Poznámky
 
-`Refresh` neobsahuje žádné parametry pro nastavení úrovně obnovení.
+`Refresh`neobsahuje žádné parametry pro nastavení úrovně aktualizace.
 
-Platí pro aplikaci Internet Explorer a WebBrowser.
+Platí pro Internet Explorer a WebBrowser.
 
-##  <a name="refresh2"></a>  CHtmlView::Refresh2
+##  <a name="refresh2"></a>CHtmlView –:: Refresh2
 
-Znovu načte soubor, který se aktuálně zobrazuje aplikace Internet Explorer.
+Znovu načte soubor, který je aktuálně zobrazen v aplikaci Internet Explorer.
 
 ```
 void Refresh2(int nLevel);
@@ -1956,17 +1956,17 @@ void Refresh2(int nLevel);
 ### <a name="parameters"></a>Parametry
 
 *nLevel*<br/>
-Adresa proměnné zadání úrovně obnovení. Je to možné proměnné jsou definovány v [RefreshConstants](/previous-versions/aa768363\(v=vs.85\)), v sadě Windows SDK.
+Adresa proměnné, která určuje úroveň aktualizace. Možné proměnné jsou definovány v [RefreshConstants](/previous-versions/aa768363\(v=vs.85\))v Windows SDK.
 
 ### <a name="remarks"></a>Poznámky
 
-Na rozdíl od [aktualizovat](#refresh), `Refresh2` obsahuje parametr, který určuje úroveň aktualizace.
+Na rozdíl [](#refresh)od aktualizace `Refresh2` obsahuje parametr, který určuje úroveň aktualizace.
 
-Platí pro aplikaci Internet Explorer a WebBrowser.
+Platí pro Internet Explorer a WebBrowser.
 
-##  <a name="setaddressbar"></a>  CHtmlView::SetAddressBar
+##  <a name="setaddressbar"></a>CHtmlView –:: SetAddressBar
 
-Voláním této členské funkce k zobrazení nebo skrytí panelu Adresa objektu aplikace Internet Explorer.
+Chcete-li zobrazit nebo skrýt adresní řádek objektu aplikace Internet Explorer, zavolejte tuto členskou funkci.
 
 ```
 void SetAddressBar(BOOL bNewValue);
@@ -1975,15 +1975,15 @@ void SetAddressBar(BOOL bNewValue);
 ### <a name="parameters"></a>Parametry
 
 *bNewValue*<br/>
-Do adresního řádku; zobrazit nenulovou hodnotu jinak nula.
+Nenulová hodnota, pokud chcete zobrazit adresní řádek; jinak nula.
 
 ### <a name="remarks"></a>Poznámky
 
-Platí pro aplikaci Internet Explorer. Pokud použijete toto volání s ovládacím prvkem WebBrowser, vrátí žádná chybová zpráva, ale toto volání se bude ignorovat.
+Platí pro Internet Explorer. Použijete-li toto volání s ovládacím prvkem WebBrowser, nebude vrácena žádná chyba, ale bude toto volání ignorováno.
 
-##  <a name="setfullscreen"></a>  CHtmlView::SetFullScreen
+##  <a name="setfullscreen"></a>CHtmlView –:: SetFullScreen
 
-Voláním této členské funkce pro nastavení aplikace Internet Explorer buď režim celé obrazovky nebo normální okna.
+Voláním této členské funkce nastavte aplikaci Internet Explorer na režim celé obrazovky nebo normálního okna.
 
 ```
 void SetFullScreen(BOOL bNewValue);
@@ -1992,17 +1992,17 @@ void SetFullScreen(BOOL bNewValue);
 ### <a name="parameters"></a>Parametry
 
 *bNewValue*<br/>
-Nenulovou hodnotu pro režim celé obrazovky jinak nula.
+Nenulové pro režim zobrazení na celé obrazovce; jinak nula.
 
 ### <a name="remarks"></a>Poznámky
 
-V režimu celé obrazovky maximalizované hlavní okno aplikace Internet Explorer a jsou skryté stavového řádku, nástrojů, nabídek a záhlaví okna.
+V režimu celé obrazovky se hlavní okno aplikace Internet Explorer maximalizuje a stavový řádek, panel nástrojů, panel nabídek a záhlaví jsou skryté.
 
-Platí pro aplikaci Internet Explorer. Pokud použijete toto volání s ovládacím prvkem WebBrowser, vrátí žádná chybová zpráva, ale toto volání se bude ignorovat.
+Platí pro Internet Explorer. Použijete-li toto volání s ovládacím prvkem WebBrowser, nebude vrácena žádná chyba, ale bude toto volání ignorováno.
 
-##  <a name="setheight"></a>  CHtmlView::SetHeight
+##  <a name="setheight"></a>CHtmlView –:: SetHeight
 
-Voláním této členské funkce k nastavení výšky hlavní okno aplikace Internet Explorer.
+Chcete-li nastavit výšku hlavního okna aplikace Internet Explorer, zavolejte tuto členskou funkci.
 
 ```
 void SetHeight(long nNewValue);
@@ -2011,15 +2011,15 @@ void SetHeight(long nNewValue);
 ### <a name="parameters"></a>Parametry
 
 *nNewValue*<br/>
-Výška v pixelech, hlavního okna.
+Výška hlavního okna v pixelech.
 
 ### <a name="remarks"></a>Poznámky
 
-Platí pro aplikaci Internet Explorer a WebBrowser.
+Platí pro Internet Explorer a WebBrowser.
 
-##  <a name="setleft"></a>  CHtmlView::SetLeft
+##  <a name="setleft"></a>CHtmlView –:: SetLeft
 
-Nastaví vodorovnou pozici hlavní okno aplikace Internet Explorer.
+Nastaví vodorovnou pozici hlavního okna aplikace Internet Explorer.
 
 ```
 void SetLeft(long nNewValue);
@@ -2028,11 +2028,11 @@ void SetLeft(long nNewValue);
 ### <a name="parameters"></a>Parametry
 
 *nNewValue*<br/>
-Obrazovka souřadnice levého okraje hlavního okna.
+Souřadnice obrazovky levého okraje hlavního okna
 
-##  <a name="setmenubar"></a>  CHtmlView::SetMenuBar
+##  <a name="setmenubar"></a>CHtmlView –:: SetMenuBar
 
-Voláním této členské funkce k zobrazení nebo skrytí panelu nabídek v aplikaci Internet Explorer.
+Voláním této členské funkce zobrazíte nebo skryjete panel nabídek Internet Exploreru.
 
 ```
 void SetMenuBar(BOOL bNewValue);
@@ -2041,15 +2041,15 @@ void SetMenuBar(BOOL bNewValue);
 ### <a name="parameters"></a>Parametry
 
 *bNewValue*<br/>
-Nenulový zobrazíte řádek nabídek. jinak nula.
+Nenulové zobrazení řádku nabídek; jinak nula.
 
 ### <a name="remarks"></a>Poznámky
 
-Platí pro aplikaci Internet Explorer. Pokud použijete toto volání s ovládacím prvkem WebBrowser, vrátí žádná chybová zpráva, ale toto volání se bude ignorovat.
+Platí pro Internet Explorer. Použijete-li toto volání s ovládacím prvkem WebBrowser, nebude vrácena žádná chyba, ale bude toto volání ignorováno.
 
-##  <a name="setoffline"></a>  CHtmlView::SetOffline
+##  <a name="setoffline"></a>CHtmlView –:: SetOffline
 
-Voláním této členské funkce, chcete-li nastavit hodnotu, která udává, zda ovládací prvek WebBrowser aktuálně funguje v režimu offline.
+Chcete-li nastavit hodnotu, která označuje, zda je ovládací prvek WebBrowser aktuálně provozován v offline režimu, zavolejte tuto členskou funkci.
 
 ```
 void SetOffline(BOOL bNewValue);
@@ -2058,17 +2058,17 @@ void SetOffline(BOOL bNewValue);
 ### <a name="parameters"></a>Parametry
 
 *bNewValue*<br/>
-Nenulový ke čtení z místní mezipaměti; jinak nula.
+Nenulové pro čtení z místní mezipaměti; jinak nula.
 
 ### <a name="remarks"></a>Poznámky
 
-V režimu offline načte v prohlížeči stránky HTML z místní mezipaměti, nikoli ze zdrojového dokumentu.
+V offline režimu čte Prohlížeč stránky HTML z místní mezipaměti, nikoli ze zdrojového dokumentu.
 
-Platí pro aplikaci Internet Explorer a WebBrowser.
+Platí pro Internet Explorer a WebBrowser.
 
-##  <a name="setregisterasbrowser"></a>  CHtmlView::SetRegisterAsBrowser
+##  <a name="setregisterasbrowser"></a>CHtmlView –:: SetRegisterAsBrowser
 
-Voláním této členské funkce se nastavit hodnotu, která udává, jestli je ovládací prvek WebBrowser zaregistrované jako prohlížeč nejvyšší úrovně pro překlad názvů cíl.
+Chcete-li nastavit hodnotu, která označuje, zda je ovládací prvek WebBrowser zaregistrován jako prohlížeč nejvyšší úrovně pro překlad cílového názvu, zavolejte tuto členskou funkci.
 
 ```
 void SetRegisterAsBrowser(BOOL bNewValue);
@@ -2077,17 +2077,17 @@ void SetRegisterAsBrowser(BOOL bNewValue);
 ### <a name="parameters"></a>Parametry
 
 *bNewValue*<br/>
-Určuje, zda aplikace Internet Explorer je zaregistrovaný jako nejvyšší úrovně prohlížeče. Pokud nenulovou hodnotu, webový prohlížeč je zaregistrovaný jako nejvyšší úrovně prohlížeči. Pokud je nula, není nejvyšší úrovně prohlížeče. Výchozí hodnota je nula.
+Určuje, zda je aplikace Internet Explorer registrována jako prohlížeč nejvyšší úrovně. Pokud nenulová, webový prohlížeč je zaregistrován jako prohlížeč nejvyšší úrovně. Pokud je nula, nejedná se o prohlížeč nejvyšší úrovně. Výchozí hodnota je nula.
 
 ### <a name="remarks"></a>Poznámky
 
-Nejvyšší úrovně prohlížeč je nastaven v registru jako výchozího prohlížeče prohlížeče.
+Prohlížeč nejvyšší úrovně je prohlížeč nastavený v registru jako výchozí prohlížeč.
 
-Platí pro aplikaci Internet Explorer a WebBrowser.
+Platí pro Internet Explorer a WebBrowser.
 
-##  <a name="setregisterasdroptarget"></a>  CHtmlView::SetRegisterAsDropTarget
+##  <a name="setregisterasdroptarget"></a>CHtmlView –:: SetRegisterAsDropTarget
 
-Voláním této členské funkce, chcete-li nastavit hodnotu, která udává, jestli je ovládací prvek WebBrowser zaregistrované jako cíl přetažení pro navigaci.
+Chcete-li nastavit hodnotu, která označuje, zda je ovládací prvek WebBrowser zaregistrován jako cíl přetažení pro navigaci, zavolejte tuto členskou funkci.
 
 ```
 void SetRegisterAsDropTarget(BOOL bNewValue);
@@ -2096,15 +2096,15 @@ void SetRegisterAsDropTarget(BOOL bNewValue);
 ### <a name="parameters"></a>Parametry
 
 *bNewValue*<br/>
-Určuje, zda je ovládací prvek WebBrowser zaregistrován jako cíl přetažení pro navigaci. Pokud nenulovou hodnotu, objekt je zaregistrovaný jako cíl přetažení; Pokud je nula, není cíl přetažení.
+Určuje, zda je ovládací prvek WebBrowser zaregistrován jako cíl přetažení pro navigaci. Pokud je nenulová, je objekt zaregistrován jako cíl přetažení; Pokud je nula, nejedná se o cíl přetažení.
 
 ### <a name="remarks"></a>Poznámky
 
-Platí pro aplikaci Internet Explorer a WebBrowser.
+Platí pro Internet Explorer a WebBrowser.
 
-##  <a name="setsilent"></a>  CHtmlView::SetSilent
+##  <a name="setsilent"></a>CHtmlView –:: SetSilent
 
-Voláním této členské funkce, chcete-li nastavit hodnotu, která udává, zda lze zobrazit všechna dialogová okna.
+Zavolejte tuto členskou funkci pro nastavení hodnoty, která určuje, zda lze zobrazit některá dialogová okna.
 
 ```
 void SetSilent(BOOL bNewValue);
@@ -2113,15 +2113,15 @@ void SetSilent(BOOL bNewValue);
 ### <a name="parameters"></a>Parametry
 
 *bNewValue*<br/>
-Pokud je nenulový, dialogová okna se nezobrazí; Pokud je nula, dialogová okna se zobrazí. Výchozí hodnota je nula.
+Pokud nenulová, dialogová okna se nezobrazí. Pokud má hodnotu nula, zobrazí se dialogová okna. Výchozí hodnota je nula.
 
 ### <a name="remarks"></a>Poznámky
 
-Platí pro aplikaci Internet Explorer a WebBrowser.
+Platí pro Internet Explorer a WebBrowser.
 
-##  <a name="setstatusbar"></a>  CHtmlView::SetStatusBar
+##  <a name="setstatusbar"></a>CHtmlView –:: SetStatusBar
 
-Voláním této členské funkce, chcete-li zobrazit stavový řádek.
+Chcete-li zobrazit stavový řádek, zavolejte tuto členskou funkci.
 
 ```
 void SetStatusBar(BOOL bNewValue);
@@ -2130,15 +2130,15 @@ void SetStatusBar(BOOL bNewValue);
 ### <a name="parameters"></a>Parametry
 
 *bNewValue*<br/>
-Nenulové, pokud je zobrazen; stavový řádek jinak nula.
+Nenulové, pokud je stavový řádek viditelný; jinak nula.
 
 ### <a name="remarks"></a>Poznámky
 
-Platí pro aplikaci Internet Explorer. Pokud použijete toto volání s ovládacím prvkem WebBrowser, vrátí žádná chybová zpráva, ale toto volání se bude ignorovat.
+Platí pro Internet Explorer. Použijete-li toto volání s ovládacím prvkem WebBrowser, nebude vrácena žádná chyba, ale bude toto volání ignorováno.
 
-##  <a name="settheatermode"></a>  CHtmlView::SetTheaterMode
+##  <a name="settheatermode"></a>CHtmlView –:: SetTheaterMode
 
-Voláním této členské funkce a nastavit hodnotu určující, zda je ovládací prvek WebBrowser v režimu celé obrazovky.
+Chcete-li nastavit hodnotu, která označuje, zda je ovládací prvek WebBrowser v režimu v/v, zavolejte tuto členskou funkci.
 
 ```
 void SetTheaterMode(BOOL bNewValue);
@@ -2147,17 +2147,17 @@ void SetTheaterMode(BOOL bNewValue);
 ### <a name="parameters"></a>Parametry
 
 *bNewValue*<br/>
-Nenulový nastavit do režimu celé obrazovky, ovládací prvek WebBrowser jinak nula. Výchozí hodnota je nula.
+Nenulové, pokud chcete nastavit ovládací prvek WebBrowser na režim na celé obrazovce; jinak nula. Výchozí hodnota je nula.
 
 ### <a name="remarks"></a>Poznámky
 
-Když webový prohlížeč je v režimu celé obrazovky, hlavní okno prohlížeče vyplní celou obrazovku, zobrazí se panel nástrojů s minimální sadu nástrojů pro navigační a stavového řádku se zobrazí v pravém horním rohu obrazovky.
+Když je webový prohlížeč v režimu celé obrazovky, hlavní okno prohlížeče vyplní celou obrazovku, zobrazí se panel nástrojů s minimální sadou navigačních nástrojů a v pravém horním rohu obrazovky se zobrazí stavový řádek.
 
-Platí pro aplikaci Internet Explorer a WebBrowser.
+Platí pro Internet Explorer a WebBrowser.
 
-##  <a name="settoolbar"></a>  CHtmlView::SetToolBar
+##  <a name="settoolbar"></a>CHtmlView –:: SetToolBar
 
-Voláním této členské funkce k zobrazení nebo skrytí panelu nástrojů aplikace Internet Explorer.
+Volejte tuto členskou funkci pro zobrazení nebo skrytí panelu nástrojů Internet Exploreru.
 
 ```
 void SetToolBar(int nNewValue);
@@ -2166,15 +2166,15 @@ void SetToolBar(int nNewValue);
 ### <a name="parameters"></a>Parametry
 
 *nNewValue*<br/>
-Určuje, jestli se má zobrazit panelu nástrojů. Nenulové, pokud je panel nástrojů, který se má zobrazit; jinak nula.
+Označuje, zda se má zobrazit panel nástrojů. Nenulové, pokud se má panel nástrojů Zobrazit; jinak nula.
 
 ### <a name="remarks"></a>Poznámky
 
-Platí pro aplikaci Internet Explorer. Pokud použijete toto volání s ovládacím prvkem WebBrowser, vrátí žádná chybová zpráva, ale toto volání se bude ignorovat.
+Platí pro Internet Explorer. Použijete-li toto volání s ovládacím prvkem WebBrowser, nebude vrácena žádná chyba, ale bude toto volání ignorováno.
 
-##  <a name="settop"></a>  CHtmlView::SetTop
+##  <a name="settop"></a>CHtmlView –:: SetTop
 
-Voláním této členské funkce nastavte vzdálenost mezi vnitřní horním okrajem ovládacího prvku WebBrowser a horním okrajem jeho kontejneru
+Zavolejte tuto členskou funkci pro nastavení vzdálenosti mezi vnitřním horním okrajem ovládacího prvku WebBrowser a horním okrajem jeho kontejneru.
 
 ```
 void SetTop(long nNewValue);
@@ -2183,15 +2183,15 @@ void SetTop(long nNewValue);
 ### <a name="parameters"></a>Parametry
 
 *nNewValue*<br/>
-Souřadnice obrazovky horním okrajem jeho hlavního okna.
+Souřadnice obrazovky horního okraje hlavního okna
 
 ### <a name="remarks"></a>Poznámky
 
-Platí pro aplikaci Internet Explorer a WebBrowser.
+Platí pro Internet Explorer a WebBrowser.
 
-##  <a name="setvisible"></a>  CHtmlView::SetVisible
+##  <a name="setvisible"></a>CHtmlView –:: SetVisible
 
-Voláním této členské funkce se nastavit stav viditelnosti ovládacího prvku WebBrowser.
+Chcete-li nastavit stav viditelnosti ovládacího prvku WebBrowser, zavolejte tuto členskou funkci.
 
 ```
 void SetVisible(BOOL bNewValue);
@@ -2204,11 +2204,11 @@ Nenulové, pokud je ovládací prvek viditelný; jinak nula.
 
 ### <a name="remarks"></a>Poznámky
 
-Platí pro aplikaci Internet Explorer a WebBrowser.
+Platí pro Internet Explorer a WebBrowser.
 
-##  <a name="setwidth"></a>  CHtmlView::SetWidth
+##  <a name="setwidth"></a>CHtmlView –:: SetWidth
 
-Nastavuje šířku hlavní okno aplikace Internet Explorer.
+Nastaví šířku hlavního okna aplikace Internet Explorer.
 
 ```
 void SetWidth(long nNewValue);
@@ -2217,11 +2217,11 @@ void SetWidth(long nNewValue);
 ### <a name="parameters"></a>Parametry
 
 *nNewValue*<br/>
-Šířka v pixelech, hlavního okna aplikace Internet Explorer.
+Šířka hlavního okna aplikace Internet Explorer v pixelech.
 
-##  <a name="stop"></a>  CHtmlView::Stop
+##  <a name="stop"></a>CHtmlView –:: stop
 
-Voláním této členské funkce zrušte všechny čekající navigace nebo ji stáhněte operace a zastavte všechny prvky dynamické stránky, jako je například zvuků na pozadí a animace.
+Voláním této členské funkce zrušíte všechny probíhající operace navigace nebo stahování a zastavte všechny dynamické prvky stránky, jako jsou například zvuky a animace na pozadí.
 
 ```
 void Stop();
@@ -2229,11 +2229,11 @@ void Stop();
 
 ### <a name="remarks"></a>Poznámky
 
-Platí pro aplikaci Internet Explorer a WebBrowser.
+Platí pro Internet Explorer a WebBrowser.
 
 ## <a name="see-also"></a>Viz také:
 
-[Ukázky knihovny MFC MFCIE](../../overview/visual-cpp-samples.md)<br/>
+[MFCIE Sample MFC](../../overview/visual-cpp-samples.md)<br/>
 [CFormView – třída](../../mfc/reference/cformview-class.md)<br/>
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>
 [IWebBrowser2](/windows/desktop/api/exdisp/nn-exdisp-iwebbrowser2)

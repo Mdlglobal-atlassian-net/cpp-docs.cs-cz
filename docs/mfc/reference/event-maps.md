@@ -4,54 +4,54 @@ ms.date: 06/20/2018
 helpviewer_keywords:
 - event maps [MFC]
 ms.assetid: 1ed53aee-bc53-43cd-834a-6fb935c0d29b
-ms.openlocfilehash: 98614aa41d3131d28c9e0c7584e5a88c2249ef97
-ms.sourcegitcommit: 934cb53fa4cb59fea611bfeb9db110d8d6f7d165
+ms.openlocfilehash: ef730574b26a4c3619df886b72770ce7e035a40e
+ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65612232"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68916468"
 ---
 # <a name="event-maps"></a>Mapy událostí
 
-Pokaždé, když se ovládací prvek chce informovat svého kontejneru, která byla zaznamenána některá z akcí (určeno vývojářem ovládacího prvku) (například jedním stisknutím tlačítka, kliknutí myší nebo ke změně stavu ovládacího prvku) volá funkci vyvolávající události. Tato funkce upozorní, že některé důležité akce došlo k podle vyvoláním související události kontejnerem ovládacího prvku.
+Pokaždé, když si ovládací prvek upozorní svůj kontejner, že došlo k určité akci (určené vývojářem ovládacího prvku) (například stisknutí klávesy, kliknutí myší nebo ke změně stavu ovládacího prvku), volá funkci, která vyvolává událost. Tato funkce upozorní kontejner ovládacího prvku, že při vyvolávání související události došlo k některé důležité akci.
 
-Knihovny Microsoft Foundation Class nabízí programovací model, který je optimalizovaný pro aktivaci událostí. V tomto modelu "mapy událostí" se používají k určení, funkcích, které aktivují události pro konkrétní ovládací prvek. Mapy událostí obsahovat jedno makro pro každou jednotlivou událost. Například mapu událostí, který aktivuje akcie klikněte na událost může vypadat třeba takto:
+Knihovna Microsoft Foundation Class nabízí programovací model optimalizovaný pro vyvolávání událostí. V tomto modelu se používají "mapy událostí" k určení toho, které funkce budou moci události pro určitý ovládací prvek vyvolávat. Mapy událostí obsahují jedno makro pro každou událost. Například mapa událostí, která aktivuje událost kliknutí na akcie, může vypadat takto:
 
 [!code-cpp[NVC_MFCAxCtl#16](../../mfc/reference/codesnippet/cpp/event-maps_1.cpp)]
 
-`EVENT_STOCK_CLICK` – Makro označuje, že se ovládací prvek aktivuje akcie klikněte na událost pokaždé, když se zjistí myš, klikněte na tlačítko. Další podrobné informace o dalších uložených událostí, najdete v článku [ovládací prvky ActiveX: Události](../../mfc/mfc-activex-controls-events.md). Makra jsou také k dispozici k označení vlastní události.
+`EVENT_STOCK_CLICK` Makro indikuje, že ovládací prvek aktivuje událost po kliknutí pokaždé, když detekuje kliknutí myší. Podrobnější seznam dalších uložených událostí najdete v článku [ovládací prvky ActiveX: Události](../../mfc/mfc-activex-controls-events.md). K dispozici jsou také makra, která označují vlastní události.
 
-Makra mapy událostí jsou důležité, obecně není vložen je přímo. Je to proto, že v okně Vlastnosti automaticky vytvoří položky mapa událostí ve zdrojových souborech, když ho použijete pro přidružení k události funkcí vyvolávající události. Pokaždé, když chcete upravit nebo přidat položku mapy událostí můžete použít v okně Vlastnosti.
+I když jsou makra mapování událostí důležitá, obecně je nevložíte přímo. Důvodem je, že okno Vlastnosti automaticky vytvoří položky mapování událostí ve zdrojových souborech, když ji použijete k přidružení funkcí pro spouštění událostí s událostmi. Kdykoli budete chtít upravit nebo přidat položku mapování událostí, můžete použít okno Vlastnosti.
 
-Pro podporu mapy událostí, knihovna MFC poskytuje následující makra:
+Pro podporu map událostí poskytuje MFC následující makra:
 
-## <a name="event-map-macros"></a>Makra mapy událostí
+## <a name="event-map-macros"></a>Makra map událostí
 
-### <a name="event-map-declaration-and-demarcation"></a>Událost mapování deklarace a Rozhraničení
-
-|||
-|-|-|
-|[DECLARE_EVENT_MAP](#declare_event_map)|Deklaruje, že mapu událostí se použije ve třídě pro mapování události funkcí vyvolávající události (musí se použít v deklaraci třídy).|
-|[BEGIN_EVENT_MAP](#begin_event_map)|Začíná definice mapu událostí (musí být použitý v implementaci třídy).|
-|[END_EVENT_MAP](#end_event_map)|Ukončí definici mapy událostí (musí být použitý v implementaci třídy).|
-
-### <a name="event-mapping-macros"></a>Makra mapování události
+### <a name="event-map-declaration-and-demarcation"></a>Deklarace a vymezení mapy událostí
 
 |||
 |-|-|
-|[EVENT_CUSTOM](#event_custom)|Určuje funkci, která vyvolávající události se zadanou událost aktivuje.|
-|[EVENT_CUSTOM_ID](#event_custom_id)|Určuje funkci, která vyvolávající události se aktivuje zadanou událost s ID určené odeslání.|
+|[DECLARE_EVENT_MAP](#declare_event_map)|Deklaruje, že mapa události bude použita ve třídě pro mapování událostí na funkce, které jsou založené na událostech (musí být použity v deklaraci třídy).|
+|[BEGIN_EVENT_MAP](#begin_event_map)|Zahájí definici mapy událostí (musí být použita v implementaci třídy).|
+|[END_EVENT_MAP](#end_event_map)|Ukončí definici mapy událostí (musí být použita v implementaci třídy).|
+
+### <a name="event-mapping-macros"></a>Makra mapování událostí
+
+|||
+|-|-|
+|[EVENT_CUSTOM](#event_custom)|Určuje, která funkce pálení události spustí zadanou událost.|
+|[EVENT_CUSTOM_ID](#event_custom_id)|Určuje, která funkce spuštění události spustí zadanou událost s určeným ID odeslání.|
 
 ### <a name="message-mapping-macros"></a>Makra mapování zpráv
 
 |||
 |-|-|
-|[ON_OLEVERB](#on_oleverb)|Určuje vlastní příkaz zpracovat ovládacího prvku OLE.|
-|[ON_STDOLEVERB](#on_stdoleverb)|Přepsání standardních operací mapování ovládacího prvku OLE.|
+|[ON_OLEVERB](#on_oleverb)|Označuje vlastní příkaz, který je zpracován ovládacím prvkem OLE.|
+|[ON_STDOLEVERB](#on_stdoleverb)|Přepíše mapování standardních příkazů ovládacího prvku OLE.|
 
-##  <a name="declare_event_map"></a>  DECLARE_EVENT_MAP
+##  <a name="declare_event_map"></a>DECLARE_EVENT_MAP
 
-Každý `COleControl`-odvozené třídy ve svém programu můžete zadat mapu událostí k určení události ovládacího prvku se aktivuje.
+Každá `COleControl`třída odvozená v programu může poskytnout mapu události, která určuje události, které ovládací prvek bude moci aktivovat.
 
 ```cpp
 DECLARE_EVENT_MAP()
@@ -59,17 +59,17 @@ DECLARE_EVENT_MAP()
 
 ### <a name="remarks"></a>Poznámky
 
-Použití DECLARE_EVENT_MAP – makro na konec deklarace třídy. Potom v souboru .cpp, který definuje členské funkce třídy, použijte BEGIN_EVENT_MAP – makro, makro položky pro každý z události ovládacího prvku a END_EVENT_MAP – makro deklarovat konce seznamu událostí.
+Použijte makro DECLARE_EVENT_MAP na konci deklarace třídy. Poté v souboru. cpp, který definuje členské funkce pro třídu, použijte makro BEGIN_EVENT_MAP, položky makra pro každou událost ovládacího prvku a makro END_EVENT_MAP pro deklaraci konce seznamu událostí.
 
-Další informace o mapování události, najdete v článku [ovládací prvky ActiveX: Události](../../mfc/mfc-activex-controls-events.md).
+Další informace o mapách událostí najdete v článku [ovládací prvky ActiveX: Události](../../mfc/mfc-activex-controls-events.md).
 
 ### <a name="requirements"></a>Požadavky
 
-**Header** afxctl.h
+**Header** AFXCTL. h
 
-## <a name="begin_event_map"></a>  BEGIN_EVENT_MAP
+## <a name="begin_event_map"></a>BEGIN_EVENT_MAP
 
-Začíná definici mapy událostí.
+Zahájí definici mapy událostí.
 
 ```cpp
 BEGIN_EVENT_MAP(theClass,  baseClass)
@@ -78,24 +78,24 @@ BEGIN_EVENT_MAP(theClass,  baseClass)
 ### <a name="parameters"></a>Parametry
 
 *theClass*<br/>
-Určuje, že je název třídy ovládacího prvku, namapujte tento parametr jehož událost.
+Určuje název třídy ovládacího prvku, jejíž mapa události je.
 
 *baseClass*<br/>
-Určuje název základní třídy *theClass*.
+Určuje název základní třídy *theclass*.
 
 ### <a name="remarks"></a>Poznámky
 
-V souboru implementace (.cpp), který definuje členské funkce třídy mapa událostí začínat BEGIN_EVENT_MAP – makro pak přidat makro položky pro každý z událostí a dokončete mapa událostí s END_EVENT_MAP – makro.
+V souboru implementace (. cpp), který definuje členské funkce pro vaši třídu, spusťte mapu události pomocí makra BEGIN_EVENT_MAP, pak přidejte položky makra pro každou z vašich událostí a dokončete mapu událostí pomocí makra END_EVENT_MAP.
 
-Další informace o mapování události a BEGIN_EVENT_MAP – makro, najdete v článku [ovládací prvky ActiveX: Události](../../mfc/mfc-activex-controls-events.md).
+Další informace o mapách událostí a makru BEGIN_EVENT_MAP najdete v článku [ovládací prvky ActiveX: Události](../../mfc/mfc-activex-controls-events.md).
 
 ### <a name="requirements"></a>Požadavky
 
-**Header** afxctl.h
+**Header** AFXCTL. h
 
-##  <a name="end_event_map"></a>  END_EVENT_MAP
+##  <a name="end_event_map"></a>END_EVENT_MAP
 
-Použíjte END_EVENT_MAP – makro do konce definice mapy událostí.
+K ukončení definice mapy událostí použijte makro END_EVENT_MAP.
 
 ```cpp
 END_EVENT_MAP()
@@ -103,11 +103,11 @@ END_EVENT_MAP()
 
 ### <a name="requirements"></a>Požadavky
 
-**Header** afxctl.h
+**Header** AFXCTL. h
 
-## <a name="event_custom"></a>  EVENT_CUSTOM –
+## <a name="event_custom"></a>EVENT_CUSTOM
 
-Definuje položku Mapa událostí pro vlastní události.
+Definuje položku mapování událostí pro vlastní událost.
 
 ```cpp
 EVENT_CUSTOM(pszName, pfnFire,  vtsParams)
@@ -119,36 +119,36 @@ EVENT_CUSTOM(pszName, pfnFire,  vtsParams)
 Název události
 
 *pfnFire*<br/>
-Název funkce událost.
+Název funkce pro vyvolávání událostí.
 
 *vtsParams*<br/>
-Místo oddělený seznam jednoho nebo více konstant určující seznam parametrů funkce.
+Mezerou oddělený seznam jedné nebo více konstant určujících seznam parametrů funkce.
 
 ### <a name="remarks"></a>Poznámky
 
-*VtsParams* parametr je místo oddělený seznam hodnot z `VTS_` konstanty. Jeden nebo více z těchto hodnot oddělených mezerami (ne čárky) určuje seznam parametrů funkce. Příklad:
+Parametr *vtsParams* je mezerami oddělený seznam hodnot z `VTS_` konstant. Jedna nebo více z těchto hodnot oddělených mezerami (nejedná se o čárky) určuje seznam parametrů funkce. Příklad:
 
 [!code-cpp[NVC_MFCActiveXControl#13](../../mfc/codesnippet/cpp/event-maps_2.cpp)]
 
-Určuje hodnotu, za nímž následuje ukazatel na seznam obsahující 32bitové celé číslo představující RGB barvy `IFontDisp` rozhraní písmo objektu OLE.
+Určuje seznam obsahující 32 celé číslo představující hodnotu barvy RGB následovaný ukazatelem na `IFontDisp` rozhraní objektu písma OLE.
 
-`VTS_` Konstanty a jejich význam, jsou následující:
+`VTS_` Konstanty a jejich významy jsou následující:
 
-|Symbol|Typ parametru|
+|Písmeno|Typ parametru|
 |------------|--------------------|
 |VTS_I2|**short**|
 |VTS_I4|**long**|
 |VTS_R4|**float**|
 |VTS_R8|**double**|
 |VTS_COLOR|OLE_COLOR|
-|VTS_CY|MĚNY|
+|VTS_CY|MĚNĚ|
 |VTS_DATE|DATE|
-|VTS_BSTR|**Const** __char\*__|
+|VTS_BSTR|typ const __znak\*__|
 |VTS_DISPATCH|LPDISPATCH|
 |VTS_FONT|`IFontDispatch*`|
 |VTS_HANDLE|POPISOVAČ|
 |VTS_SCODE|SCODE|
-|VTS_BOOL|BOOL|
+|VTS_BOOL|LOGICK|
 |VTS_VARIANT|`const VARIANT*`|
 |VTS_PVARIANT|`VARIANT*`|
 |VTS_UNKNOWN|LPUNKNOWN|
@@ -165,22 +165,22 @@ Určuje hodnotu, za nímž následuje ukazatel na seznam obsahující 32bitové 
 |VTS_YSIZE_HIMETRIC|OLE_YSIZE_HIMETRIC|
 
 > [!NOTE]
-> Další varianty konstanty byly definovány pro všechny varianty typy, s výjimkou VTS_FONT a VTS_PICTURE, poskytující ukazatel na konstantu dat variant. Tyto konstanty jsou pojmenované pomocí `VTS_Pconstantname` konvence. Například VTS_PCOLOR je ukazatel na VTS_COLOR – konstanta.
+> Pro všechny typy variant byly definovány další konstanty variant s výjimkou hodnot VTS_FONT a VTS_PICTURE, které poskytují ukazatel na konstantu dat variant. Tyto konstanty jsou pojmenovány pomocí `VTS_Pconstantname` konvence. Například VTS_PCOLOR je ukazatel na konstantu VTS_COLOR.
 
 ### <a name="requirements"></a>Požadavky
 
-**Header** afxctl.h
+**Header** AFXCTL. h
 
-## <a name="event_custom_id"></a>  EVENT_CUSTOM_ID
+## <a name="event_custom_id"></a>EVENT_CUSTOM_ID
 
-Definuje událost aktivaci funkce pro vlastní událost, které patří k ID odbavení určené *dispid*.
+Definuje funkci vyvolávání události pro vlastní událost, která patří do ID odeslání určeného identifikátorem *DISPID*.
 
 ```cpp
 EVENT_CUSTOM_ID(
-  pszName,
-  dispid,
-  pfnFire,
-  vtsParams)
+    pszName,
+    dispid,
+    pfnFire,
+    vtsParams)
 ```
 
 ### <a name="parameters"></a>Parametry
@@ -189,31 +189,31 @@ EVENT_CUSTOM_ID(
 Název události
 
 *dispid*<br/>
-Identifikátor odeslání použit v ovládacím prvku při aktivaci události.
+ID odeslání používané ovládacím prvkem při vyvolávání události.
 
 *pfnFire*<br/>
-Název funkce událost.
+Název funkce pro vyvolávání událostí.
 
 *vtsParams*<br/>
-Proměnné seznam parametrů předávaných kontejneru ovládacího prvku, když se aktivuje událost.
+Seznam proměnných parametrů předaných kontejneru ovládacího prvku při vyvolání události.
 
 ### <a name="remarks"></a>Poznámky
 
-*VtsParams* argument je místo oddělený seznam hodnot z `VTS_` konstanty. Jeden nebo více z těchto hodnot oddělených mezerami, ne čárky určuje seznam parametrů funkce. Příklad:
+Argument *vtsParams* je seznam hodnot oddělených mezerami z `VTS_` konstant. Jedna nebo více z těchto hodnot oddělených mezerami, ne čárkami, určuje seznam parametrů funkce. Příklad:
 
 [!code-cpp[NVC_MFCActiveXControl#13](../../mfc/codesnippet/cpp/event-maps_2.cpp)]
 
-Určuje hodnotu, za nímž následuje ukazatel na seznam obsahující 32bitové celé číslo představující RGB barvy `IFontDisp` rozhraní písmo objektu OLE.
+Určuje seznam obsahující 32 celé číslo představující hodnotu barvy RGB následovaný ukazatelem na `IFontDisp` rozhraní objektu písma OLE.
 
-Seznam `VTS_` konstanty, naleznete v tématu [EVENT_CUSTOM](#event_custom).
+Seznam `VTS_` konstant naleznete v tématu [EVENT_CUSTOM](#event_custom).
 
 ### <a name="requirements"></a>Požadavky
 
-**Header** afxctl.h
+**Header** AFXCTL. h
 
-## <a name="on_oleverb"></a>  ON_OLEVERB
+## <a name="on_oleverb"></a>ON_OLEVERB
 
-Toto makro definuje položku mapování zpráv, který se mapuje vlastní příkaz zvláštní členské funkce ovládacího prvku.
+Toto makro definuje položku mapování zpráv, která mapuje vlastní příkaz na konkrétní členskou funkci vašeho ovládacího prvku.
 
 ```cpp
 ON_OLEVERB(idsVerbName,  memberFxn)
@@ -222,16 +222,16 @@ ON_OLEVERB(idsVerbName,  memberFxn)
 ### <a name="parameters"></a>Parametry
 
 *idsVerbName*<br/>
-ID zdroje řetězce názvu operaci.
+ID prostředku řetězce názvu příkazu.
 
 *memberFxn*<br/>
-Funkce, která volá se rozhraním, když uživatel vyvolá příkaz.
+Funkce, která je volána rozhraním, když je vyvolána operace.
 
 ### <a name="remarks"></a>Poznámky
 
-Editor prostředků lze použít k vytvoření vlastní příkaz názvy, které jsou přidány do vaší tabulky řetězců.
+Editor prostředků lze použít k vytvoření vlastních názvů operací, které jsou přidány do tabulky řetězců.
 
-Prototyp funkce *memberFxn* je:
+Prototyp funkce pro *memberFxn* je:
 
 ```cpp
 BOOL memberFxn(
@@ -240,15 +240,15 @@ BOOL memberFxn(
    LPCRECT  lpRect);
 ```
 
-Hodnoty *lpMsg*, *hWndParent*, a *lprect –* parametry jsou převzaty z odpovídajících parametrů `IOleObject::DoVerb` členskou funkci.
+Hodnoty parametrů *lpMsg*, *hwndParent*a *lpRect* jsou odebírány z odpovídajících parametrů `IOleObject::DoVerb` členské funkce.
 
 ### <a name="requirements"></a>Požadavky
 
-**Hlavička** afxole.h
+**Header** AFXOLE. h
 
-## <a name="on_stdoleverb"></a>  ON_STDOLEVERB
+## <a name="on_stdoleverb"></a>ON_STDOLEVERB
 
-Chcete-li přepsat výchozí chování standardní příkaz použijte toto makro.
+Pomocí tohoto makra můžete přepsat výchozí chování standardního příkazu.
 
 ```cpp
 ON_STDOLEVERB(iVerb, memberFxn)
@@ -257,20 +257,20 @@ ON_STDOLEVERB(iVerb, memberFxn)
 ### <a name="parameters"></a>Parametry
 
 *iVerb*<br/>
-Index standardní příkaz pro příkaz přepsání.
+Standardní index příkazu pro operaci, která je přepsána.
 
 *memberFxn*<br/>
-Funkce, která volá se rozhraním, když uživatel vyvolá příkaz.
+Funkce, která je volána rozhraním, když je vyvolána operace.
 
 ### <a name="remarks"></a>Poznámky
 
-Index standardní příkaz má formát `OLEIVERB_`následovaný akci. OLEIVERB_SHOW OLEIVERB_HIDE a OLEIVERB_UIACTIVATE je několik příkladů standardní příkazy.
+Standardní index příkazu má formu `OLEIVERB_`, za nímž následuje akce. OLEIVERB_SHOW, OLEIVERB_HIDE a OLEIVERB_UIACTIVATE jsou příklady standardních sloves.
 
-Zobrazit [ON_OLEVERB](#on_oleverb) popis prototypu funkce se použije jako *memberFxn* parametru.
+Popis prototypu funkce, který se má použít jako parametr *memberFxn* , najdete v tématu [ON_OLEVERB](#on_oleverb) .
 
 ### <a name="requirements"></a>Požadavky
 
-**Hlavička** afxole.h
+**Header** AFXOLE. h
 
 ## <a name="see-also"></a>Viz také:
 

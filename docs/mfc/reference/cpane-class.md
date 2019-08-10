@@ -1,5 +1,5 @@
 ---
-title: CPane Class
+title: CPane – třída
 ms.date: 11/04/2016
 f1_keywords:
 - CPane
@@ -133,16 +133,16 @@ helpviewer_keywords:
 - CPane [MFC], m_bHandleMinSize
 - CPane [MFC], m_recentDockInfo
 ms.assetid: 5c651a64-3c79-4d94-9676-45f6402a6bc5
-ms.openlocfilehash: b660d181aada8abeb61b397fb30b097897e74f65
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9d6a408b6ed7e7ab6f3dd138a4222b262978fd6c
+ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62373151"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68916926"
 ---
-# <a name="cpane-class"></a>CPane Class
+# <a name="cpane-class"></a>CPane – třída
 
-`CPane` Třída je rozšířením [ccontrolbar – třída](../../mfc/reference/ccontrolbar-class.md). Pokud provádíte upgrade existujícího projektu knihovny MFC, nahraďte všechny výskyty `CControlBar` s `CPane`.
+Třída je rozšířením [třídy CControlBar –.](../../mfc/reference/ccontrolbar-class.md) `CPane` Pokud upgradujete existující projekt knihovny MFC, nahraďte všechny výskyty `CControlBar` pomocí. `CPane`
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -154,103 +154,103 @@ class CPane : public CBasePane
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |`CPane::~CPane`|Destruktor.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
-|[CPane::AdjustSizeImmediate](#adjustsizeimmediate)|Okamžitě přepočítá rozložení na stavového řádku.|
-|[CPane::AllocElements](#allocelements)|Alokují prostor pro interní použití.|
-|[CPane::AllowShowOnPaneMenu](#allowshowonpanemenu)|Určuje, zda je v podokně uvedené v seznamu generované modulem runtime podoken pro aplikaci.|
-|[CPane::CalcAvailableSize](#calcavailablesize)|Vypočítá rozdíl ve velikosti mezi zadaným obdélníku a aktuální okno obdélník.|
-|[CPane::CalcInsideRect](#calcinsiderect)|Vypočítá uvnitř obdélník podokně zohledněním ohraničení a úchyty.|
-|[CPane::CalcRecentDockedRect](#calcrecentdockedrect)|Vypočítá nedávno ukotvených obdélník.|
+|[CPane::AdjustSizeImmediate](#adjustsizeimmediate)|Okamžitě přepočítá rozložení podokna.|
+|[CPane::AllocElements](#allocelements)|Přidělí úložiště pro interní použití.|
+|[CPane::AllowShowOnPaneMenu](#allowshowonpanemenu)|Určuje, zda je podokno uvedeno v seznamu podoken generovaných modulem runtime pro aplikaci.|
+|[CPane::CalcAvailableSize](#calcavailablesize)|Vypočítá rozdíl velikosti mezi zadaným obdélníkem a aktuálním obdélníkem okna.|
+|[CPane::CalcInsideRect](#calcinsiderect)|Vypočítá vnitřní obdélník podokna, přičemž vezme v úvahu ohraničení a úchyty.|
+|[CPane::CalcRecentDockedRect](#calcrecentdockedrect)|Vypočítá nedávno ukotvený obdélník.|
 |[CPane::CalcSize](#calcsize)|Vypočítá velikost podokna.|
-|[CPane::CanBeDocked](#canbedocked)|Určuje, zda v podokně lze ukotvit v podokně zadané základní.|
-|[CPane::CanBeTabbedDocument](#canbetabbeddocument)|Určuje, zda v podokně lze převést na dokument s kartami.|
-|[CPane::ConvertToTabbedDocument](#converttotabbeddocument)|Převede ukotvitelné podokně na dokument s kartami.|
-|[CPane::CopyState](#copystate)|Zkopíruje stav podokno. (Přepíše [CBasePane::CopyState](../../mfc/reference/cbasepane-class.md#copystate).)|
-|[CPane::Create](#create)|Ovládací panel vytvoří a připojí ho k `CPane` objektu.|
-|[CPane::CreateDefaultMiniframe](#createdefaultminiframe)|Vytvoří okno s minirámcem pro plovoucího podokna.|
-|[CPane::CreateEx](#createex)|Ovládací panel vytvoří a připojí ho k `CPane` objektu.|
-|`CPane::CreateObject`|Rozhraní používá k vytvoření dynamické instance tohoto typu třídy.|
-|[CPane::DockByMouse](#dockbymouse)|Ukotvené podokno pomocí myši ukotvení metody.|
-|[CPane::DockPane](#dockpane)|Ukotvené podokno s plovoucí desetinnou čárkou na základní podokno.|
-|[CPane::DockPaneStandard](#dockpanestandard)|Ukotvené podokno s využitím osnovy (standard) ukotvení.|
-|[CPane::DockToFrameWindow](#docktoframewindow)|Ukotvené podokno ukotvitelné do frame. (Přepíše `CBasePane::DockToFrameWindow`.)|
-|[CPane::DoesAllowSiblingBars](#doesallowsiblingbars)|Určuje, zda lze ukotvení jiného podokna na stejném řádku, kde je ukotven podokně aktuální.|
-|[CPane::FloatPane](#floatpane)|Čísel s plovoucí čárkou v podokně.|
-|[CPane::GetAvailableExpandSize](#getavailableexpandsize)|Vrátí velikost, v pixelech, které můžete rozbalit v podokně.|
-|[CPane::GetAvailableStretchSize](#getavailablestretchsize)|Vrátí velikost, v pixelech, které můžete zmenšit v podokně.|
-|[CPane::GetBorders](#getborders)|Vrátí šířku ohraničení panelu.|
-|[CPane::GetClientHotSpot](#getclienthotspot)|Vrátí *aktivního* podokna.|
-|[CPane::GetDockSiteRow](#getdocksiterow)|Vrátí řádek dock, ve kterém je ukotven v podokně.|
-|[CPane::GetExclusiveRowMode](#getexclusiverowmode)|Určuje, zda je podokno v režimu exkluzivní řádku.|
-|[CPane::GetHotSpot](#gethotspot)|Vrátí aktivního bodu, který je uložen v podkladové `CMFCDragFrameImpl` objektu.|
-|[CPane::GetMinSize](#getminsize)|Získá minimální povolená velikost podokna.|
-|[CPane::GetPaneName](#getpanename)|Načte název podokna.|
-|`CPane::GetResizeStep`|Interně.|
-|`CPane::GetThisClass`|Používá k získání ukazatele na rámec [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) objekt, který je přidružený k typu třídy.|
+|[CPane::CanBeDocked](#canbedocked)|Určuje, zda může být podokno ukotveno v zadaném základním podokně.|
+|[CPane::CanBeTabbedDocument](#canbetabbeddocument)|Určuje, zda lze podokno převést na dokument s kartami.|
+|[CPane::ConvertToTabbedDocument](#converttotabbeddocument)|Převede podokno ukotvit na dokument s kartami.|
+|[CPane::CopyState](#copystate)|Zkopíruje stav podokna. (Overrides [CBasePane:: CopyState](../../mfc/reference/cbasepane-class.md#copystate).)|
+|[CPane:: Create](#create)|Vytvoří ovládací panel a připojí ho k `CPane` objektu.|
+|[CPane::CreateDefaultMiniframe](#createdefaultminiframe)|Vytvoří okno se zkráceným rámcem pro plovoucí podokno.|
+|[CPane::CreateEx](#createex)|Vytvoří ovládací panel a připojí ho k `CPane` objektu.|
+|`CPane::CreateObject`|Používá se rozhraním k vytvoření dynamické instance tohoto typu třídy.|
+|[CPane::DockByMouse](#dockbymouse)|Ukotví podokno pomocí metody docking myši.|
+|[CPane::DockPane](#dockpane)|Ukotví plovoucí podokno do základního podokna.|
+|[CPane::DockPaneStandard](#dockpanestandard)|Ukotví podokno pomocí ukotvení (Standard) docking.|
+|[CPane::DockToFrameWindow](#docktoframewindow)|Ukotví podokno ukotvit do snímku. (Overrides `CBasePane::DockToFrameWindow`.)|
+|[CPane::D oesAllowSiblingBars](#doesallowsiblingbars)|Určuje, zda lze ukotvit jiné podokno na stejném řádku, ve kterém je ukotveno aktuální podokno.|
+|[CPane::FloatPane](#floatpane)|Odpluje podokno.|
+|[CPane::GetAvailableExpandSize](#getavailableexpandsize)|Vrátí hodnotu v pixelech, kterou může podokno rozbalit.|
+|[CPane::GetAvailableStretchSize](#getavailablestretchsize)|Vrátí hodnotu v pixelech, kterou může podokno zmenšit.|
+|[CPane:: GetBorders](#getborders)|Vrátí šířku ohraničení podokna.|
+|[CPane::GetClientHotSpot](#getclienthotspot)|Vrátí *aktivní bod* pro podokno.|
+|[CPane::GetDockSiteRow](#getdocksiterow)|Vrátí řádek dock, ve kterém je podokno ukotveno.|
+|[CPane::GetExclusiveRowMode](#getexclusiverowmode)|Určuje, zda je podokno v režimu výhradního řádku.|
+|[CPane:: gethotspot](#gethotspot)|Vrátí aktivní bod, který je uložený v podkladovém `CMFCDragFrameImpl` objektu.|
+|[CPane:: getminsize](#getminsize)|Načte minimální povolenou velikost podokna.|
+|[CPane:: getpropan](#getpanename)|Načte název podokna.|
+|`CPane::GetResizeStep`|Používá se interně.|
+|`CPane::GetThisClass`|Používá se rozhraním, aby se získal ukazatel na objekt [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) , který je přidružený k tomuto typu třídy.|
 |[CPane::GetVirtualRect](#getvirtualrect)|Načte *virtuální obdélník* podokna.|
-|[CPane::IsChangeState](#ischangestate)|Jako je podokno přesunutí, tato metoda analyzuje pozici v podokně vzhledem k jiná podokna ukotvit řádků a okna s minirámcem windows a vrátí odpovídající hodnotu AFX_CS_STATUS.|
-|[CPane::IsDragMode](#isdragmode)|Určuje, zda se ocitne v podokně.|
-|[CPane::IsInFloatingMultiPaneFrameWnd](#isinfloatingmultipaneframewnd)|Určuje, zda je v podokně v rámci více podokno okna. (Přepíše `CBasePane::IsInFloatingMultiPaneFrameWnd`.)|
-|[CPane::IsLeftOf](#isleftof)|Určuje, zda je v podokně zleva z (nebo vyšší) zadaný obdélník.|
-|[CPane::IsResizable](#isresizable)|Určuje, zda lze změnit velikost podokna. (Přepíše [CBasePane::IsResizable](../../mfc/reference/cbasepane-class.md#isresizable).)|
-|[CPane::IsTabbed](#istabbed)|Určuje, zda v podokně byla vložena do ovládacího prvku karta okna s kartami. (Přepíše [CBasePane::IsTabbed](../../mfc/reference/cbasepane-class.md#istabbed).)|
-|[CPane::LoadState](#loadstate)|Stav v podokně se načte z registru. (Přepíše [CBasePane::LoadState](../../mfc/reference/cbasepane-class.md#loadstate).)|
-|[CPane::MoveByAlignment](#movebyalignment)|Přesune virtuální obdélník a podokna zadanou velikost.|
-|[CPane::MovePane](#movepane)|V podokně se přesune do určeného obdélníku.|
-|[CPane::OnAfterChangeParent](#onafterchangeparent)|Volá se rozhraním při změně nadřazené podokno.|
-|[CPane::OnBeforeChangeParent](#onbeforechangeparent)|Volá se rozhraním, když nadřazené v podokně se chystá změna.|
-|[CPane::OnPressCloseButton](#onpressclosebutton)|Volá se rozhraním, když uživatel klikne na tlačítko Zavřít na titulek pro podokno.|
-|`CPane::OnProcessDblClk`|Interně.|
-|[CPane::OnShowControlBarMenu](#onshowcontrolbarmenu)|Volá se rozhraním, speciální nabídky se zobrazí.|
-|[CPane::OnShowControlBarMenu](#onshowcontrolbarmenu)|Volá se rozhraním, speciální nabídky se zobrazí.|
-|`CPane::PrepareToDock`|Interně.|
-|[CPane::RecalcLayout](#recalclayout)|Přepočítá rozložení informace o podokně. (Přepíše [CBasePane::RecalcLayout](../../mfc/reference/cbasepane-class.md#recalclayout).)|
-|[CPane::SaveState](#savestate)|Uloží stav v podokně do registru. (Přepíše [CBasePane::SaveState](../../mfc/reference/cbasepane-class.md#savestate).)|
-|[CPane::SetActiveInGroup](#setactiveingroup)|Příznaky podokně jako aktivní.|
-|[CPane::SetBorders](#setborders)|Nastaví hodnoty ohraničení panelu.|
-|[CPane::SetClientHotSpot](#setclienthotspot)|Nastaví aktivního podokna.|
-|[CPane::SetDockState](#setdockstate)|Obnoví informace o stavu pro podokno ukotvení.|
-|[CPane::SetExclusiveRowMode](#setexclusiverowmode)|Povolí nebo zakáže režim exkluzivní řádek.|
-|[CPane::SetMiniFrameRTC](#setminiframertc)|Nastaví informace o třídě modulu runtime pro okno výchozí okna s minirámcem.|
-|[CPane::SetMinSize](#setminsize)|Nastaví minimální povolená velikost podokna.|
+|[CPane::IsChangeState](#ischangestate)|Při přesunu podokna analyzuje tato metoda polohu podokna vzhledem k ostatním podokenm, ukotvených řádků a oknech se zkrácenými snímky a vrátí odpovídající hodnotu AFX_CS_STATUS.|
+|[CPane::IsDragMode](#isdragmode)|Určuje, zda je podokno přetaženo.|
+|[CPane::IsInFloatingMultiPaneFrameWnd](#isinfloatingmultipaneframewnd)|Určuje, zda je podokno v okně rámce s více podokny. (Overrides `CBasePane::IsInFloatingMultiPaneFrameWnd`.)|
+|[CPane::IsLeftOf](#isleftof)|Určuje, zda je podokno ponecháno (nebo vyšší) zadaného obdélníku.|
+|[CPane:: s možností změny velikosti](#isresizable)|Určuje, zda lze změnit velikost podokna. (Overrides [CBasePane:: s možností změny velikosti](../../mfc/reference/cbasepane-class.md#isresizable).)|
+|[CPane:: se záložkami](#istabbed)|Určuje, zda bylo podokno vloženo v ovládacím prvku karta okna s kartami. (Overrides [CBasePane:: s kartami](../../mfc/reference/cbasepane-class.md#istabbed).)|
+|[CPane:: LoadState](#loadstate)|Načte stav podokna z registru. (Overrides [CBasePane:: LoadState](../../mfc/reference/cbasepane-class.md#loadstate).)|
+|[CPane::MoveByAlignment](#movebyalignment)|Přesune podokno a virtuální obdélník o zadanou velikost.|
+|[CPane::MovePane](#movepane)|Přesune podokno do zadaného obdélníku.|
+|[CPane::OnAfterChangeParent](#onafterchangeparent)|Volá se rozhraním, když se změní nadřazený prvek podokna.|
+|[CPane::OnBeforeChangeParent](#onbeforechangeparent)|Volá se rozhraním, když se má změnit nadřazený prvek podokna.|
+|[CPane::OnPressCloseButton](#onpressclosebutton)|Volá se rozhraním, když uživatel klikne na titulek podokna na tlačítko Zavřít.|
+|`CPane::OnProcessDblClk`|Používá se interně.|
+|[CPane::OnShowControlBarMenu](#onshowcontrolbarmenu)|Volá se rozhraním, když se chystá zobrazení speciální nabídky podokna.|
+|[CPane::OnShowControlBarMenu](#onshowcontrolbarmenu)|Volá se rozhraním, když se chystá zobrazení speciální nabídky podokna.|
+|`CPane::PrepareToDock`|Používá se interně.|
+|[CPane::RecalcLayout](#recalclayout)|Přepočítá informace o rozložení podokna. (Overrides [CBasePane:: RecalcLayout](../../mfc/reference/cbasepane-class.md#recalclayout).)|
+|[CPane:: SaveState](#savestate)|Uloží stav podokna do registru. (Overrides [CBasePane:: SaveState](../../mfc/reference/cbasepane-class.md#savestate).)|
+|[CPane::SetActiveInGroup](#setactiveingroup)|Označí podokno jako aktivní.|
+|[CPane::SetBorders](#setborders)|Nastaví hodnoty ohraničení podokna.|
+|[CPane::SetClientHotSpot](#setclienthotspot)|Nastaví aktivní bod pro podokno.|
+|[CPane::SetDockState](#setdockstate)|Obnoví informace o stavu ukotvení pro podokno.|
+|[CPane::SetExclusiveRowMode](#setexclusiverowmode)|Povolí nebo zakáže režim výhradního řádku.|
+|[CPane::SetMiniFrameRTC](#setminiframertc)|Nastaví informace třídy modulu runtime pro výchozí okno se zkráceným rámcem.|
+|[CPane::SetMinSize](#setminsize)|Nastaví minimální povolenou velikost podokna.|
 |[CPane::SetVirtualRect](#setvirtualrect)|Nastaví *virtuální obdélník* podokna.|
-|[CPane::StretchPaneDeferWndPos](#stretchpanedeferwndpos)|Roztáhne podokna vodorovně nebo svisle založené na styl dokování.|
-|[CPane::ToggleAutoHide](#toggleautohide)|Přepíná režim automatického skrytí.|
-|[CPane::UndockPane](#undockpane)|V podokně zruší dokovacím místě, výchozí posuvníku nebo okno minirámcem, ve kterém je aktuálně ukotven. (Přepíše [CBasePane::UndockPane](../../mfc/reference/cbasepane-class.md#undockpane).)|
+|[CPane::StretchPaneDeferWndPos](#stretchpanedeferwndpos)|Roztáhne podokno svisle nebo vodorovně na základě stylu ukotvení.|
+|[CPane::ToggleAutoHide](#toggleautohide)|Přepne režim automatické skrývání.|
+|[CPane::UndockPane](#undockpane)|Odebere podokno z dokovacího webu, výchozího posuvníku nebo okna se zkráceným snímkem, kde je aktuálně ukotveno. (Overrides [CBasePane:: UndockPane](../../mfc/reference/cbasepane-class.md#undockpane).)|
 |[CPane::UpdateVirtualRect](#updatevirtualrect)|Aktualizuje virtuální obdélník.|
 
 ### <a name="protected-methods"></a>Chráněné metody
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
-|[CPane::OnAfterDock](#onafterdock)|Volá se rozhraním, když je ukotven na stavového řádku.|
-|[CPane::OnAfterFloat](#onafterfloat)|Volá se rozhraním, když je plovoucí podokno.|
-|[CPane::OnBeforeDock](#onbeforedock)|Volá se rozhraním, když v podokně se chystá ukotvit.|
-|[CPane::OnBeforeFloat](#onbeforefloat)|Volá se rozhraním, když podokno má být ponechán v neurčitém stavu.|
+|[CPane::OnAfterDock](#onafterdock)|Volá se rozhraním, když je podokno ukotvené.|
+|[CPane::OnAfterFloat](#onafterfloat)|Volá se rozhraním, když je podokno odplovoucí.|
+|[CPane::OnBeforeDock](#onbeforedock)|Volá se rozhraním, když se má ukotvit podokno.|
+|[CPane::OnBeforeFloat](#onbeforefloat)|Volá se rozhraním, když se má uvolnit podokno.|
 
 ### <a name="data-members"></a>Datové členy
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
-|[CPane::m_bHandleMinSize](#m_bhandleminsize)|Umožňuje konzistentní zpracování minimální velikost podokna.|
-|[CPane::m_recentDockInfo](#m_recentdockinfo)|Obsahuje informacemi z nedávné doby ukotvení.|
+|[CPane::m_bHandleMinSize](#m_bhandleminsize)|Povoluje konzistentní zpracování minimální velikosti pro podokna.|
+|[CPane::m_recentDockInfo](#m_recentdockinfo)|Obsahuje nedávné informace o docking.|
 
 ## <a name="remarks"></a>Poznámky
 
-Obvykle `CPane` objekty nejsou přímo vytvořeny instance. Pokud budete potřebovat na stavového řádku, který má funkci ukotvení, odvozovat z objektu [CDockablePane](../../mfc/reference/cdockablepane-class.md). Pokud vyžadujete funkce nástrojů, jsou odvozeny z objektu [cmfctoolbar –](../../mfc/reference/cmfctoolbar-class.md).
+`CPane` Objekty nejsou obvykle vytvořeny přímo. Pokud potřebujete podokno, které má funkci ukotvení, odvodit svůj objekt od [CDockablePane](../../mfc/reference/cdockablepane-class.md). Pokud požadujete funkce panelu nástrojů, odvodíte objekt z [CMFCToolBar](../../mfc/reference/cmfctoolbar-class.md).
 
-Pokud odvodíte třídu od `CPane`, ho lze ukotvit v [cdocksite –](../../mfc/reference/cdocksite-class.md) a může být obtékané v [cpaneframewnd –](../../mfc/reference/cpaneframewnd-class.md).
+Při odvozování třídy z `CPane`, může být ukotvena v [CDockSite](../../mfc/reference/cdocksite-class.md) a může být uvolněna v [CPaneFrameWnd](../../mfc/reference/cpaneframewnd-class.md).
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
-[Třídy CObject](../../mfc/reference/cobject-class.md)
+[CObject](../../mfc/reference/cobject-class.md)
 
 [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)
 
@@ -262,11 +262,11 @@ Pokud odvodíte třídu od `CPane`, ho lze ukotvit v [cdocksite –](../../mfc/r
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** afxPane.h
+**Záhlaví:** afxPane. h
 
-##  <a name="adjustsizeimmediate"></a>  CPane::AdjustSizeImmediate
+##  <a name="adjustsizeimmediate"></a>CPane::AdjustSizeImmediate
 
-Okamžitě přepočítá rozložení na stavového řádku.
+Okamžitě přepočítá rozložení podokna.
 
 ```
 virtual void AdjustSizeImmediate(BOOL bRecalcLayout = TRUE);
@@ -275,15 +275,15 @@ virtual void AdjustSizeImmediate(BOOL bRecalcLayout = TRUE);
 ### <a name="parameters"></a>Parametry
 
 *bRecalcLayout*<br/>
-[in] TRUE, pokud chcete automaticky přepočítat rozložení v podokně; v opačném případě hodnota FALSE.
+pro TRUE pro automatické přepočítání rozvržení podokna; v opačném případě FALSE.
 
 ### <a name="remarks"></a>Poznámky
 
-Tuto metodu volejte, když dynamicky měnit rozložení na stavového řádku. Můžete například tuto metodu volejte při skrytí nebo zobrazení tlačítka na panelu nástrojů.
+Tuto metodu volejte, když dynamicky měníte rozložení podokna. Například můžete chtít zavolat tuto metodu, když skryjete nebo zobrazíte tlačítka panelu nástrojů.
 
-##  <a name="allocelements"></a>  CPane::AllocElements
+##  <a name="allocelements"></a>CPane::AllocElements
 
-Alokují prostor pro interní použití.
+Přidělí úložiště pro interní použití.
 
 ```
 BOOL AllocElements(
@@ -294,18 +294,18 @@ BOOL AllocElements(
 ### <a name="parameters"></a>Parametry
 
 *nElements*<br/>
-[in] Počet prvků, pro které chcete přidělit úložiště.
+pro Počet prvků, pro které se má přidělit úložiště
 
 *cbElement*<br/>
-[in] Velikost v bajtech, elementu.
+pro Velikost elementu v bajtech.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-FALSE, pokud selže přidělování paměti. v opačném případě TRUE.
+FALSE, pokud není přidělení paměti úspěšné; v opačném případě TRUE.
 
-##  <a name="allowshowonpanemenu"></a>  CPane::AllowShowOnPaneMenu
+##  <a name="allowshowonpanemenu"></a>CPane::AllowShowOnPaneMenu
 
-Určuje, zda je v podokně uvedené v seznamu generované modulem runtime podoken pro aplikaci.
+Určuje, zda je podokno uvedeno v seznamu podoken generovaných modulem runtime pro aplikaci.
 
 ```
 virtual BOOL AllowShowOnPaneMenu() const;
@@ -313,15 +313,15 @@ virtual BOOL AllowShowOnPaneMenu() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Hodnota TRUE, pokud se v podokně se zobrazí v seznamu. v opačném případě hodnota FALSE. Základní implementaci vždy vrátí hodnotu TRUE.
+TRUE, pokud se v seznamu zobrazuje podokno; v opačném případě FALSE. Základní implementace vždy vrátí hodnotu TRUE.
 
 ### <a name="remarks"></a>Poznámky
 
-Aplikace vygenerované průvodcem obsahuje položku nabídky, která obsahuje seznam podoken, které obsahuje. Tato metoda určuje, zda v podokně se zobrazí v seznamu.
+Aplikace generovaná AppWizard obsahuje možnost nabídky, která obsahuje seznam podoken, která obsahuje. Tato metoda určuje, zda se podokno zobrazuje v seznamu.
 
-##  <a name="calcavailablesize"></a>  CPane::CalcAvailableSize
+##  <a name="calcavailablesize"></a>CPane::CalcAvailableSize
 
-Vypočítá rozdíl ve velikosti mezi zadaným obdélníku a aktuální okno obdélník.
+Vypočítá rozdíl velikosti mezi zadaným obdélníkem a aktuálním obdélníkem okna.
 
 ```
 virtual CSize CalcAvailableSize(CRect rectRequired);
@@ -330,15 +330,15 @@ virtual CSize CalcAvailableSize(CRect rectRequired);
 ### <a name="parameters"></a>Parametry
 
 *rectRequired*<br/>
-[in] Požadované obdélník.
+pro Požadovaný obdélník.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Rozdíl v šířku a výšku mezi *rectRequired* a aktuální okno obdélník.
+Rozdíl v šířce a výšce mezi *rectRequired* a aktuálním obdélníkem okna.
 
-##  <a name="calcinsiderect"></a>  CPane::CalcInsideRect
+##  <a name="calcinsiderect"></a>CPane::CalcInsideRect
 
-Vypočítá uvnitř obdélník na stavového řádku, včetně ohraničení a úchyty.
+Vypočítá vnitřní obdélník podokna, včetně ohraničení a úchytů.
 
 ```
 void CalcInsideRect(
@@ -348,19 +348,19 @@ void CalcInsideRect(
 
 ### <a name="parameters"></a>Parametry
 
-*Rect*<br/>
-[out] Obsahuje velikost a posun klientské oblasti podokna.
+*OBD*<br/>
+mimo Obsahuje velikost a posun klientské oblasti v podokně.
 
 *bHorz*<br/>
-[in] Hodnota TRUE, pokud je podokno orientovaný vodorovně. v opačném případě hodnota FALSE.
+pro TRUE, pokud je podokno orientované vodorovně; v opačném případě FALSE.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato metoda je volána rozhraním, když má přepočítat rozložení pro podokno. *Rect* parametr je vyplněna velikost a posun klientské oblasti podokna. To zahrnuje jeho ohraničení a úchyty.
+Tato metoda je volána rozhraním, když má přepočítat rozložení podokna. Parametr *Rect* je vyplněn velikostí a posunem klientské oblasti v podokně. Sem patří jeho ohraničení a úchyty.
 
-##  <a name="calcrecentdockedrect"></a>  CPane::CalcRecentDockedRect
+##  <a name="calcrecentdockedrect"></a>CPane::CalcRecentDockedRect
 
-Vypočítá nedávno ukotvených obdélník.
+Vypočítá nedávno ukotvený obdélník.
 
 ```
 void CalcRecentDockedRect();
@@ -368,9 +368,9 @@ void CalcRecentDockedRect();
 
 ### <a name="remarks"></a>Poznámky
 
-Tato metoda aktualizuje [CPane::m_recentDockInfo](#m_recentdockinfo).
+Tato metoda aktualizuje [CPane:: m_recentDockInfo](#m_recentdockinfo).
 
-##  <a name="calcsize"></a>  CPane::CalcSize
+##  <a name="calcsize"></a>CPane::CalcSize
 
 Vypočítá velikost podokna.
 
@@ -381,7 +381,7 @@ virtual CSize CalcSize(BOOL bVertDock);
 ### <a name="parameters"></a>Parametry
 
 *bVertDock*<br/>
-[in] TRUE, pokud se v podokně se ukotven svisle; hodnota FALSE v opačném případě.
+pro TRUE, pokud je podokno ukotveno svisle, v opačném případě FALSE.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -391,9 +391,9 @@ Výchozí implementace této metody vrátí velikost (0, 0).
 
 Odvozené třídy by měly přepsat tuto metodu.
 
-##  <a name="canbedocked"></a>  CPane::CanBeDocked
+##  <a name="canbedocked"></a>CPane::CanBeDocked
 
-Určuje, pokud se v podokně lze ukotvit v podokně zadané základní.
+Určuje, zda může být podokno ukotveno v zadaném základním podokně.
 
 ```
 virtual BOOL CanBeDocked(CBasePane* pDockBar) const;
@@ -402,21 +402,21 @@ virtual BOOL CanBeDocked(CBasePane* pDockBar) const;
 ### <a name="parameters"></a>Parametry
 
 *pDockBar*<br/>
-[in] Určuje podokno, kde je v tomto podokně ukotvit.
+pro Určuje podokno, ve kterém má být toto podokno ukotveno.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Hodnota TRUE, pokud v tomto podokně můžete ukotven na zadané ukotvené podokno; v opačném případě hodnota FALSE.
+TRUE, pokud může být toto podokno ukotveno v zadaném ukotveném podokně; v opačném případě FALSE.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato metoda je obvykle volána rozhraním, chcete-li zjistit, zda podokno lze ukotvit v zadané ukotvené podokno. K určení, že zda lze ukotvit v podokně, vyhodnotí metodu aktuálně v podokně povolené dokovací zarovnání.
+Tato metoda je obvykle volána rozhraním, aby určila, zda může být podokno ukotveno v zadaném ukotveném podokně. K určení, zda může být podokno ukotveno, metoda vyhodnocuje aktuálně povolené zarovnání ukotvení podokna.
 
-Povolit ukotvení na různých strany okna rámce voláním [CBasePane::EnableDocking](../../mfc/reference/cbasepane-class.md#enabledocking).
+Ukotvení povolíte na různých stranách okna rámce voláním [CBasePane:: EnableDocking](../../mfc/reference/cbasepane-class.md#enabledocking).
 
-##  <a name="canbetabbeddocument"></a>  CPane::CanBeTabbedDocument
+##  <a name="canbetabbeddocument"></a>CPane::CanBeTabbedDocument
 
-Určuje, pokud se v podokně lze převést na dokument s kartami.
+Určuje, zda lze podokno převést na dokument s kartami.
 
 ```
 virtual BOOL CanBeTabbedDocument() const;
@@ -424,15 +424,15 @@ virtual BOOL CanBeTabbedDocument() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Hodnota TRUE, pokud se v podokně lze převést na dokument s kartami; v opačném případě hodnota FALSE.
+TRUE, pokud je možné podokno převést na dokument s kartami; v opačném případě FALSE.
 
 ### <a name="remarks"></a>Poznámky
 
-Potlačí tuto metodu v odvozené třídě a vrátí hodnotu FALSE, pokud chcete zabránit podokno převodu na dokument s kartami. Dokument s kartami nebudou zobrazeny v nabídce pozice okna.
+Potlačí tuto metodu v odvozené třídě a vrátí hodnotu false, pokud chcete, aby se podokno převedlo na dokument s kartami. Dokument s kartami nebude uveden v nabídce pozice okna.
 
-##  <a name="converttotabbeddocument"></a>  CPane::ConvertToTabbedDocument
+##  <a name="converttotabbeddocument"></a>CPane::ConvertToTabbedDocument
 
-Převede ukotvitelné podokně na dokument s kartami.
+Převede podokno ukotvit na dokument s kartami.
 
 ```
 virtual void ConvertToTabbedDocument(BOOL bActiveTabOnly = TRUE);
@@ -441,15 +441,15 @@ virtual void ConvertToTabbedDocument(BOOL bActiveTabOnly = TRUE);
 ### <a name="parameters"></a>Parametry
 
 *bActiveTabOnly*<br/>
-[in] Nepoužito v `CPane::ConvertToTabbedDocument`.
+pro Nepoužívá se `CPane::ConvertToTabbedDocument`v.
 
 ### <a name="remarks"></a>Poznámky
 
-Pouze ukotvitelné podoken lze převést na dokumenty s kartami. Informace najdete v tématu [CDockablePane::ConvertToTabbedDocument](../../mfc/reference/cdockablepane-class.md#converttotabbeddocument).
+Pouze podokna ukotvit lze převést na dokumenty s kartami. Informace naleznete v tématu [CDockablePane:: ConvertToTabbedDocument](../../mfc/reference/cdockablepane-class.md#converttotabbeddocument).
 
-##  <a name="copystate"></a>  CPane::CopyState
+##  <a name="copystate"></a>CPane::CopyState
 
-Zkopíruje stav podokno.
+Zkopíruje stav podokna.
 
 ```
 virtual void CopyState(CPane* pOrgBar);
@@ -458,15 +458,15 @@ virtual void CopyState(CPane* pOrgBar);
 ### <a name="parameters"></a>Parametry
 
 *pOrgBar*<br/>
-[in] Ukazatel na stavového řádku.
+pro Ukazatel na podokno.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato metoda zkopíruje stav *pOrgBar* do podokna aktuální.
+Tato metoda zkopíruje stav *pOrgBar* do aktuálního podokna.
 
-##  <a name="create"></a>  CPane::Create
+##  <a name="create"></a>CPane:: Create
 
-Ovládací panel vytvoří a připojí ho k [cpane –](../../mfc/reference/cpane-class.md) objektu.
+Vytvoří ovládací panel a připojí ho k objektu [CPane](../../mfc/reference/cpane-class.md) .
 
 ```
 virtual BOOL Create(
@@ -482,39 +482,39 @@ virtual BOOL Create(
 ### <a name="parameters"></a>Parametry
 
 *lpszClassName*<br/>
-[in] Určuje název třídy Windows.
+pro Určuje název třídy systému Windows.
 
 *dwStyle*<br/>
-[in] Určuje atributy stylu okna. Další informace najdete v tématu [styly oken](../../mfc/reference/styles-used-by-mfc.md#window-styles).
+pro Určuje atributy stylu okna. Další informace naleznete v tématu [styly oken](../../mfc/reference/styles-used-by-mfc.md#window-styles).
 
-*Rect*<br/>
-[in] Určuje počáteční velikost a umístění *pParentWnd* okno, v souřadnicích klienta.
+*OBD*<br/>
+pro Určuje počáteční velikost a polohu okna *pParentWnd* v souřadnicích klienta.
 
 *pParentWnd*<br/>
-[out v] Určuje nadřazené okno v tomto podokně.
+[in, out] Určuje nadřazené okno tohoto podokna.
 
 *nID*<br/>
-[in] Určuje ID v podokně.
+pro Určuje ID podokna.
 
 *dwControlBarStyle*<br/>
-[in] Určuje styl panelu. Další informace najdete v tématu [CBasePane::CreateEx](../../mfc/reference/cbasepane-class.md#createex).
+pro Určuje styl podokna. Další informace najdete v tématu [CBasePane:: CreateEx](../../mfc/reference/cbasepane-class.md#createex).
 
 *pContext*<br/>
-[out v] Určuje kontext vytvořit podokna.
+[in, out] Určuje kontext vytvoření podokna.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Hodnota TRUE, pokud se v podokně vytvořil úspěšně; v opačném případě hodnota FALSE.
+Hodnota TRUE, pokud bylo podokno úspěšně vytvořeno; v opačném případě FALSE.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato metoda vytvoří podokno Windows a připojí ho k `CPane` objektu.
+Tato metoda vytvoří podokno systému Windows a připojí ho k `CPane` objektu.
 
-Pokud nebyly explicitně inicializovány [CPane::m_recentDockInfo](#m_recentdockinfo) před voláním `Create`, parametr *rect* se použije jako obdélník při s plovoucí desetinnou čárkou nebo ukotvení panelu.
+Pokud jste před voláním `Create`explicitně neinicializovali [CPane:: m_recentDockInfo](#m_recentdockinfo) , použije se jako obdélník pro plovoucí nebo ukotvení tohoto podokna parametr *Rect* .
 
-##  <a name="createdefaultminiframe"></a>  CPane::CreateDefaultMiniframe
+##  <a name="createdefaultminiframe"></a>CPane::CreateDefaultMiniframe
 
-Vytvoří okno s minirámcem pro plovoucího podokna.
+Vytvoří okno se zkráceným rámcem pro plovoucí podokno.
 
 ```
 virtual CPaneFrameWnd* CreateDefaultMiniframe(CRect rectInitial);
@@ -523,21 +523,21 @@ virtual CPaneFrameWnd* CreateDefaultMiniframe(CRect rectInitial);
 ### <a name="parameters"></a>Parametry
 
 *rectInitial*<br/>
-[in] Určuje počáteční velikost a umístění, v souřadnicovém systému obrazovky, k vytvoření okna okna s minirámcem.
+pro Určuje počáteční velikost a polohu, v souřadnicích obrazovky okna se zkráceným rámcem, které se má vytvořit.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Okno nově vytvořený minirámcem.
+Nově vytvořené okno se zkrácenými rámečky.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato metoda je volána rozhraním, aby vytvořit okno s minirámcem, když je plovoucí podokno. Okno s minirámcem nemůže být typu [cpaneframewnd –](../../mfc/reference/cpaneframewnd-class.md) nebo typu [cmultipaneframewnd –](../../mfc/reference/cmultipaneframewnd-class.md). Pokud v podokně styl AFX_CBRS_FLOAT_MULTI se vytvořit okno s minirámcem více.
+Tato metoda je volána rozhraním pro vytvoření okna se zkráceným rámcem, když je podokno plovoucí. Okno s minimálním rámcem může být typu [CPaneFrameWnd](../../mfc/reference/cpaneframewnd-class.md) nebo typu [CMultiPaneFrameWnd](../../mfc/reference/cmultipaneframewnd-class.md). Pokud má podokno styl AFX_CBRS_FLOAT_MULTI, vytvoří se více oken s více miniaturními snímky.
 
-Informace o třídě modulu runtime pro okno s minirámcem je uložen v `CPane::m_pMiniFrameRTC` člena. Odvozená třída slouží k nastavení tohoto člena, pokud se rozhodnete vytvořit vlastní okna s minirámcem windows.
+Informace o třídě modulu runtime pro okno se zkráceným rámcem jsou uloženy `CPane::m_pMiniFrameRTC` v členu. Můžete použít odvozenou třídu pro nastavení tohoto člena, pokud se rozhodnete vytvořit vlastní okna se zkrácenými rámečky.
 
-##  <a name="createex"></a>  CPane::CreateEx
+##  <a name="createex"></a>CPane::CreateEx
 
-Ovládací panel vytvoří a připojí ho k [cpane –](../../mfc/reference/cpane-class.md) objektu.
+Vytvoří ovládací panel a připojí ho k objektu [CPane](../../mfc/reference/cpane-class.md) .
 
 ```
 virtual BOOL CreateEx(
@@ -554,42 +554,42 @@ virtual BOOL CreateEx(
 ### <a name="parameters"></a>Parametry
 
 *dwStyleEx*<br/>
-[in] Určuje atributy stylu delší okno. Další informace najdete v tématu [rozšířené styly oken](../../mfc/reference/styles-used-by-mfc.md#extended-window-styles).
+pro Určuje rozšířené atributy stylu okna. Další informace najdete v tématu [Rozšířené styly oken](../../mfc/reference/styles-used-by-mfc.md#extended-window-styles).
 
 *lpszClassName*<br/>
-[in] Určuje název třídy Windows.
+pro Určuje název třídy systému Windows.
 
 *dwStyle*<br/>
-[in] Určuje atributy stylu okna. Další informace najdete v tématu [styly oken](../../mfc/reference/styles-used-by-mfc.md#window-styles).
+pro Určuje atributy stylu okna. Další informace naleznete v tématu [styly oken](../../mfc/reference/styles-used-by-mfc.md#window-styles).
 
-*Rect*<br/>
-[in] Určuje počáteční velikost a umístění *pParentWnd* okno, v souřadnicích klienta.
+*OBD*<br/>
+pro Určuje počáteční velikost a polohu okna *pParentWnd* v souřadnicích klienta.
 
 *pParentWnd*<br/>
-[out v] Určuje nadřazené okno v tomto podokně.
+[in, out] Určuje nadřazené okno tohoto podokna.
 
 *nID*<br/>
-[in] Určuje ID v podokně.
+pro Určuje ID podokna.
 
 *dwControlBarStyle*<br/>
-[in] Určuje styl panelu. Další informace najdete v tématu [CBasePane::CreateEx](../../mfc/reference/cbasepane-class.md#createex).
+pro Určuje styl podokna. Další informace najdete v tématu [CBasePane:: CreateEx](../../mfc/reference/cbasepane-class.md#createex).
 
 *pContext*<br/>
-[out v] Určuje kontext vytvořit pro podokno.
+[in, out] Určuje kontext vytvoření pro podokno.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Hodnota TRUE, pokud se v podokně vytvořil úspěšně; v opačném případě hodnota FALSE.
+Hodnota TRUE, pokud bylo podokno úspěšně vytvořeno; v opačném případě FALSE.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato metoda vytvoří podokno Windows a připojí ho k `CPane` objektu.
+Tato metoda vytvoří podokno systému Windows a připojí ho k `CPane` objektu.
 
-Pokud nebyly explicitně inicializovány [CPane::m_recentDockInfo](#m_recentdockinfo) před voláním `CreateEx`, parametr *rect* se použije jako obdélník při s plovoucí desetinnou čárkou nebo ukotvení panelu.
+Pokud jste před voláním `CreateEx`explicitně neinicializovali [CPane:: m_recentDockInfo](#m_recentdockinfo) , použije se jako obdélník pro plovoucí nebo ukotvení tohoto podokna parametr *Rect* .
 
-##  <a name="dockbymouse"></a>  CPane::DockByMouse
+##  <a name="dockbymouse"></a>CPane::D ockByMouse
 
-Ukotvené podokno pomocí myši.
+Ukotví podokno pomocí myši.
 
 ```
 virtual BOOL DockByMouse(CBasePane* pDockBar);
@@ -598,15 +598,15 @@ virtual BOOL DockByMouse(CBasePane* pDockBar);
 ### <a name="parameters"></a>Parametry
 
 *pDockBar*<br/>
-[in] Určuje základní podokno, do které chcete ukotvit v tomto podokně.
+pro Určuje základní podokno, do kterého se má ukotvit toto podokno.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Hodnota TRUE, pokud byl úspěšně; ukotven podokna v opačném případě hodnota FALSE.
+TRUE, pokud bylo podokno úspěšně ukotveno; v opačném případě FALSE.
 
 ##  <a name="dockpane"></a>  CPane::DockPane
 
-Ukotvené podokno s plovoucí desetinnou čárkou na základní podokno.
+Ukotví plovoucí podokno do základního podokna.
 
 ```
 virtual BOOL DockPane(
@@ -618,34 +618,34 @@ virtual BOOL DockPane(
 ### <a name="parameters"></a>Parametry
 
 *pDockBar*<br/>
-[out v] Určuje základní podokně ukotvení v tomto podokně na.
+[in, out] Určuje základní podokno, do kterého se má toto podokno ukotvit.
 
 *lpRect*<br/>
-[in] Určuje základní podokno, kde je v tomto podokně ukotvit obdélníku.
+pro Určuje obdélník v základním podokně, kde má být toto podokno ukotveno.
 
 *dockMethod*<br/>
-[in] Určuje metodu dokovací používat. Dostupné možnosti jsou následující:
+pro Určuje metodu docking, která se má použít. K dispozici jsou následující možnosti:
 
 |Možnost|Popis|
 |------------|-----------------|
-|DM_UNKNOWN|Rozhraní používá tuto možnost, při ukotvení metody neznámý. V podokně neukládá své aktuální pozici s plovoucí desetinnou čárkou. Tuto možnost můžete použít také programově ukotvení podokno, když není potřeba ukládat na poslední pozici s plovoucí desetinnou čárkou.|
-|DM_MOUSE|Interně.|
-|DM_DBL_CLICK|Tato možnost se používá při poklepání na úchytu. V podokně je přesunout na poslední pozici ukotvení. Pokud je v podokně neukotveno dvojitým kliknutím, v podokně přemístí na aktuální pozici s plovoucí desetinnou čárkou.|
-|DM_SHOW|Tato možnost je možné programově ukotvení panelu. V podokně ukládá své aktuální pozici s plovoucí desetinnou čárkou.|
-|DM_RECT|V podokně je ukotven v oblasti, která je určená *lprect –*.|
-|DM_STANDARD|Když použijete tuto možnost, rozhraní získává v podokně jako obrysu rámce, zatímco se přesouvá.|
+|DM_UNKNOWN|Rozhraní používá tuto možnost, pokud je metoda docking neznámá. V podokně není uložena poslední plovoucí pozice. Tuto možnost můžete použít také k programovému ukotvení podokna, když nemusíte ukládat nedávný plovoucí pozici.|
+|DM_MOUSE|Používá se interně.|
+|DM_DBL_CLICK|Tato možnost se používá při dvojitém kliknutí na úchyt. Podokno se přemístí ve své poslední pozici ukotvení. Pokud je podokno uvolněné dvojitým kliknutím, podokno se přemístí na nejnovější plovoucí pozici.|
+|DM_SHOW|Pomocí této možnosti lze ukotvit podokno. V podokně je uložena poslední plovoucí pozice.|
+|DM_RECT|Podokno je ukotveno v oblasti určené parametrem *lpRect*.|
+|DM_STANDARD|Když použijete tuto možnost, rozhraní při přesunu nakreslí podokno jako obrysový snímek.|
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Hodnota TRUE, pokud byl úspěšně; ukotven podokna v opačném případě hodnota FALSE.
+TRUE, pokud bylo podokno úspěšně ukotveno; v opačném případě FALSE.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato metoda ukotvené v podokně do podokna základní, která je zadána *pDockBar* parametru. Je nutné nejprve povolit ukotvení voláním [CBasePane::EnableDocking](../../mfc/reference/cbasepane-class.md#enabledocking).
+Tato metoda ukotví podokno do základního podokna zadaného parametrem *pDockBar* . Je nutné nejprve povolit ukotvení voláním [CBasePane:: EnableDocking](../../mfc/reference/cbasepane-class.md#enabledocking).
 
 ##  <a name="dockpanestandard"></a>  CPane::DockPaneStandard
 
-Ukotvené podokno s využitím osnovy (standard) ukotvení.
+Ukotví podokno pomocí ukotvení (Standard) docking.
 
 ```
 virtual CPane* DockPaneStandard(BOOL& bWasDocked);
@@ -654,19 +654,19 @@ virtual CPane* DockPaneStandard(BOOL& bWasDocked);
 ### <a name="parameters"></a>Parametry
 
 *bWasDocked*<br/>
-[in] Hodnota TRUE, pokud byl úspěšně ukotven v podokně; v opačném případě hodnota FALSE.
+pro TRUE, pokud se podokno úspěšně dockal; v opačném případě FALSE.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Tato metoda vždy vrátí **to** ukazatele.
+Tato metoda vždy vrátí **Tento** ukazatel.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato metoda se používá pouze pro podoken, které jsou odvozeny z [CDockablePane – třída](../../mfc/reference/cdockablepane-class.md). Další informace najdete v tématu [CDockablePane::DockPaneStandard](../../mfc/reference/cdockablepane-class.md#dockpanestandard).
+Tato metoda se používá pouze pro podokna, která jsou odvozena z [třídy CDockablePane](../../mfc/reference/cdockablepane-class.md). Další informace najdete v tématu [CDockablePane::D ockpanestandard](../../mfc/reference/cdockablepane-class.md#dockpanestandard).
 
 ##  <a name="docktoframewindow"></a>  CPane::DockToFrameWindow
 
-Ukotvené podokno ukotvitelné do frame.
+Ukotví podokno ukotvit do snímku.
 
 ```
 virtual BOOL DockToFrameWindow(
@@ -681,32 +681,32 @@ virtual BOOL DockToFrameWindow(
 ### <a name="parameters"></a>Parametry
 
 *dwAlignment*<br/>
-[in] Na straně, který chcete ukotvit podokně nadřazeného rámce.
+pro Strana nadřazeného rámce, do které chcete ukotvit podokno.
 
 *lpRect*<br/>
-[in] Zadaná velikost.
+pro Zadaná velikost
 
 *dwDockFlags*<br/>
-[in] Ignorovat.
+pro Přeskočen.
 
 *pRelativeBar*<br/>
-[in] Ignorovat.
+pro Přeskočen.
 
 *nRelativeIndex*<br/>
-[in] Ignorovat.
+pro Přeskočen.
 
 *bOuterEdge*<br/>
-[in] Pokud jsou TRUE a existuje jiná ukotvitelné podokna na stranu, která jsou určena podle *dwAlignment*, v podokně je ukotven mimo jiná podokna blíž ke okrajem nadřazeného rámce. Pokud má hodnotu FALSE, v podokně je ukotven blíž k centru pro klientské oblasti.
+pro Je-li nastavena hodnota TRUE a jsou-li k dispozici další podokna ukotvit, která jsou určena parametrem *dwAlignment*, je podokno ukotveno mimo ostatní podokna, blíž k okraji nadřazeného rámce. Pokud má hodnotu FALSE, je podokno ukotveno blíž ke středu oblasti klienta.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-FALSE, pokud rozdělovač podokna ( [cpanedivider – třída](../../mfc/reference/cpanedivider-class.md)) nelze vytvořit; v opačném případě TRUE.
+FALSE, pokud nelze vytvořit rozdělovač podokna ( [třídu CPaneDivider](../../mfc/reference/cpanedivider-class.md)); v opačném případě TRUE.
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="doesallowsiblingbars"></a>  CPane::DoesAllowSiblingBars
+##  <a name="doesallowsiblingbars"></a>CPane::D oesAllowSiblingBars
 
-Určuje, zda lze ukotvení jiného podokna na stejném řádku, kde je ukotven podokně aktuální.
+Určuje, zda lze ukotvit jiné podokno na stejném řádku, ve kterém je ukotveno aktuální podokno.
 
 ```
 virtual BOOL DoesAllowSiblingBars() const;
@@ -714,17 +714,17 @@ virtual BOOL DoesAllowSiblingBars() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Hodnota TRUE, pokud v tomto podokně můžete ukotvit do jiného podokna na stejném řádku jako sama o sobě; v opačném případě hodnota FALSE.
+TRUE, pokud je toto podokno možné ukotvit k jinému podoknu na stejném řádku jako sám sebe; v opačném případě FALSE.
 
 ### <a name="remarks"></a>Poznámky
 
-Můžete povolit nebo zakázat toto chování voláním [CPane::SetExclusiveRowMode](#setexclusiverowmode).
+Toto chování můžete povolit nebo zakázat voláním [CPane:: SetExclusiveRowMode](#setexclusiverowmode).
 
-Ve výchozím nastavení panely nástrojů máte zakázaným režimem exkluzivní řádek a řádku nabídek má povolen režim exkluzivní řádek.
+Ve výchozím nastavení mají panely nástrojů povolený režim výhradního řádku a na řádku nabídek je povolený režim výhradních řádků.
 
-##  <a name="floatpane"></a>  CPane::FloatPane
+##  <a name="floatpane"></a>CPane::FloatPane
 
-Čísel s plovoucí čárkou v podokně.
+Odpluje podokno.
 
 ```
 virtual BOOL FloatPane(
@@ -736,25 +736,25 @@ virtual BOOL FloatPane(
 ### <a name="parameters"></a>Parametry
 
 *rectFloat*<br/>
-[in] Určuje umístění, v souřadnicovém systému obrazovky, na pozici v podokně, když je obtékané.
+pro Určuje umístění v souřadnicích obrazovky, kde má být umístěno plovoucí podokno.
 
 *dockMethod*<br/>
-[in] Určuje metodu ukotvení při podokně je ponechán v neurčitém stavu. Seznam možných hodnot najdete v tématu [CPane::DockPane](#dockpane).
+pro Určuje metodu docking, která se má použít, když je podokno plovoucí. Seznam možných hodnot naleznete v tématu [CPane::D ockpane](#dockpane).
 
 *bShow*<br/>
-[in] TRUE, pokud chcete zobrazit podokno při obtékané; v opačném případě hodnota FALSE.
+pro TRUE pro zobrazení podokna, pokud je plovoucí; v opačném případě FALSE.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Hodnota TRUE, pokud byl úspěšně obtékané podokně nebo pokud v podokně nelze obtékané, protože [CBasePane::CanFloat](../../mfc/reference/cbasepane-class.md#canfloat) vrátí FALSE; v opačném případě FALSE.
+Hodnota TRUE v případě, že podokno bylo úspěšně uvolněno nebo pokud podokno nelze uvolnit, protože [CBasePane:: CanFloat](../../mfc/reference/cbasepane-class.md#canfloat) vrátí hodnotu false; v opačném případě FALSE.
 
 ### <a name="remarks"></a>Poznámky
 
-Volejte tuto metodu za účelem uvolnění podokna na pozici, která je zadána *rectFloat* parametru. Tato metoda automaticky vytvoří okno s minirámcem nadřazené podokna.
+Voláním této metody můžete uvolnit podokno na pozici, která je určena parametrem *rectFloat* . Tato metoda automaticky vytvoří pro podokno nadřazené okno se zkrácenými snímky.
 
-##  <a name="getavailableexpandsize"></a>  CPane::GetAvailableExpandSize
+##  <a name="getavailableexpandsize"></a>CPane::GetAvailableExpandSize
 
-Vrátí velikost, v pixelech, které můžete rozbalit v podokně.
+Vrátí hodnotu v pixelech, kterou může podokno rozbalit.
 
 ```
 virtual int GetAvailableExpandSize() const;
@@ -762,13 +762,13 @@ virtual int GetAvailableExpandSize() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Pokud v podokně je ukotven vodorovně, vrácená hodnota je k dispozici šířka; jinak vrácená hodnota je k dispozici výšku.
+Pokud je podokno ukotveno vodorovně, vrácená hodnota je dostupná šířka; v opačném případě je vrácená hodnota dostupnou výškou.
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="getavailablestretchsize"></a>  CPane::GetAvailableStretchSize
+##  <a name="getavailablestretchsize"></a>CPane::GetAvailableStretchSize
 
-Vrátí velikost, v pixelech, které můžete zmenšit v podokně.
+Vrátí hodnotu v pixelech, kterou může podokno zmenšit.
 
 ```
 virtual int GetAvailableStretchSize() const;
@@ -776,15 +776,15 @@ virtual int GetAvailableStretchSize() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Velikost v pixelech, které můžete zmenšit v podokně. Pokud se v podokně je ukotven ve vodorovném směru, je tato hodnota dostupná šířka; v opačném případě je k dispozici výšku.
+Množství v pixelech, které může podokno zmenšit. Pokud je podokno ukotveno vodorovně, je tato hodnota dostupnou šířkou. v opačném případě je dostupná výška.
 
 ### <a name="remarks"></a>Poznámky
 
-Dostupná velikost stretch se počítá odečtením minimální povolená velikost podokna ( [CPane::GetMinSize](#getminsize)) z aktuální velikosti ( [CWnd::GetWindowRect](../../mfc/reference/cwnd-class.md#getwindowrect)).
+Dostupná velikost roztažení je vypočítána odečtením minimální povolené velikosti podokna ( [CPane:: getminsize](#getminsize)) z aktuální velikosti ( [CWnd:: GetWindowRect](../../mfc/reference/cwnd-class.md#getwindowrect)).
 
-##  <a name="getborders"></a>  CPane::GetBorders
+##  <a name="getborders"></a>CPane:: GetBorders
 
-Vrátí šířku ohraničení panelu.
+Vrátí šířku ohraničení podokna.
 
 ```
 CRect GetBorders() const;
@@ -792,15 +792,15 @@ CRect GetBorders() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-A [crect –](../../atl-mfc-shared/reference/crect-class.md) objekt, který obsahuje aktuální šířka v pixelech každé straně podokna. Například, hodnota `left` člena `CRect` objekt je šířka levého ohraničení.
+Objekt [CRect](../../atl-mfc-shared/reference/crect-class.md) , který obsahuje aktuální šířku každé strany podokna v pixelech. Například hodnota `left` členu `CRect` objektu je šířka levého ohraničení.
 
 ### <a name="remarks"></a>Poznámky
 
-Chcete-li nastavit velikost ohraničení, zavolejte [CPane::SetBorders](#setborders).
+Chcete-li nastavit velikost ohraničení, zavolejte [CPane:: SetBorders](#setborders).
 
-##  <a name="getclienthotspot"></a>  CPane::GetClientHotSpot
+##  <a name="getclienthotspot"></a>CPane::GetClientHotSpot
 
-Vrátí *aktivního* podokna.
+Vrátí *aktivní bod* pro podokno.
 
 ```
 CPoint GetClientHotSpot() const;
@@ -810,11 +810,11 @@ CPoint GetClientHotSpot() const;
 
 ### <a name="remarks"></a>Poznámky
 
-*Aktivního* je bod v podokně, které uživatel vybere a udržuje k přesunutí panelu. Aktivní bod se používá pro plynulé animace při přesunutí od pozice ukotveného podokna.
+*Aktivní bod* je bod na panelu, který uživatel vybere a udržuje pro přesunutí podokna. V případě, že je podokno přesunuto z ukotvené pozice, je pro hladké animace použito aktivní bod.
 
-##  <a name="getdocksiterow"></a>  CPane::GetDockSiteRow
+##  <a name="getdocksiterow"></a>CPane::GetDockSiteRow
 
-Vrátí řádek ukotvení ( [cdockingpanesrow – třída](../../mfc/reference/cdockingpanesrow-class.md)) v podokně je ukotven.
+Vrátí řádek Dock ( [Třída CDockingPanesRow](../../mfc/reference/cdockingpanesrow-class.md)), ve kterém je podokno ukotveno.
 
 ```
 CDockingPanesRow* GetDockSiteRow() const;
@@ -822,11 +822,11 @@ CDockingPanesRow* GetDockSiteRow() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-A `CDockingPanesRow`*, která odkazuje na ukotvení řádku, ve kterém je ukotven v podokně nebo hodnota NULL, pokud není ukotven v podokně.
+A `CDockingPanesRow`* odkazuje na ukotvený řádek, ve kterém je ukotveno podokno, nebo hodnotu null, pokud není podokno ukotveno.
 
-##  <a name="getexclusiverowmode"></a>  CPane::GetExclusiveRowMode
+##  <a name="getexclusiverowmode"></a>CPane::GetExclusiveRowMode
 
-Určuje, zda se v podokně je v režimu exkluzivní řádku.
+Určuje, zda je podokno v režimu výhradního řádku.
 
 ```
 virtual BOOL GetExclusiveRowMode() const;
@@ -834,15 +834,15 @@ virtual BOOL GetExclusiveRowMode() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Hodnota TRUE, pokud je podokno v režimu exkluzivní řádku; v opačném případě hodnota FALSE.
+TRUE, pokud je podokno v režimu výhradního řádku; v opačném případě FALSE.
 
 ### <a name="remarks"></a>Poznámky
 
-Další informace o režimu exkluzivní řádku, naleznete v tématu [CPane::SetExclusiveRowMode](#setexclusiverowmode).
+Další informace o režimu výhradního řádku naleznete v tématu [CPane:: SetExclusiveRowMode](#setexclusiverowmode).
 
-##  <a name="gethotspot"></a>  CPane::GetHotSpot
+##  <a name="gethotspot"></a>CPane:: gethotspot
 
-Vrátí aktivního bodu, který je uložen v podkladové `CMFCDragFrameImpl` objektu.
+Vrátí aktivní bod, který je uložený v podkladovém `CMFCDragFrameImpl` objektu.
 
 ```
 CPoint GetHotSpot() const;
@@ -852,11 +852,11 @@ CPoint GetHotSpot() const;
 
 ### <a name="remarks"></a>Poznámky
 
-`CPane` Obsahuje třídy `CMFCDragFrameImpl` objektu, `m_dragFrameImpl`, která je zodpovědná za kreslení obdélníku, který se zobrazí, když uživatel přesune na stavového řádku v režimu standardního ukotvení. Chcete-li nakreslit obdélník relativně vzhledem k aktuální pozice myši, jak uživatel přesouvá v podokně se používá aktivního bodu.
+Třída obsahuje objekt ,`m_dragFrameImpl`který je zodpovědný za vykreslení obdélníku, který se zobrazí, když uživatel přesune podokno v režimu standardního ukotvení. `CMFCDragFrameImpl` `CPane` Aktivní bod se používá k vykreslení obdélníku relativně k aktuální pozici myši, když uživatel přesune podokno.
 
-##  <a name="getminsize"></a>  CPane::GetMinSize
+##  <a name="getminsize"></a>CPane:: getminsize
 
-Získá minimální povolená velikost podokna.
+Načte minimální povolenou velikost podokna.
 
 ```
 virtual void GetMinSize(CSize& size) const;
@@ -864,12 +864,12 @@ virtual void GetMinSize(CSize& size) const;
 
 ### <a name="parameters"></a>Parametry
 
-*Velikost*<br/>
-[out] A `CSize` objekt, který je vyplněna minimální povolenou velikost.
+*hodnota*<br/>
+mimo `CSize` Objekt, který je vyplněn minimální povolenou velikostí.
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="getpanename"></a>  CPane::GetPaneName
+##  <a name="getpanename"></a>CPane:: getpropan
 
 Načte název podokna.
 
@@ -880,13 +880,13 @@ virtual void GetPaneName(CString& strName) const;
 ### <a name="parameters"></a>Parametry
 
 *strName*<br/>
-[out] A `CString` objekt, který je vyplněna názvu záhlaví.
+mimo `CString` Objekt, který je vyplněn názvem titulku.
 
 ### <a name="remarks"></a>Poznámky
 
-Když je ukotvené nebo plovoucí podokno, zobrazí se podokno název v oblasti titulek. Pokud je podokno součástí skupiny s kartami, název se zobrazí v oblasti karet. Pokud je podokno v režimu automatického skrytí, název se zobrazí na `CMFCAutoHideButton`.
+Název podokna se zobrazí v oblasti titulků, když je podokno ukotveno nebo plovoucí. Pokud je podokno součástí skupiny s kartami, nadpis se zobrazí v oblasti karty. Pokud je podokno v režimu automatického skrývání, zobrazí se nadpis v `CMFCAutoHideButton`.
 
-##  <a name="getvirtualrect"></a>  CPane::GetVirtualRect
+##  <a name="getvirtualrect"></a>CPane::GetVirtualRect
 
 Načte *virtuální obdélník* podokna.
 
@@ -897,17 +897,17 @@ void GetVirtualRect(CRect& rectVirtual) const;
 ### <a name="parameters"></a>Parametry
 
 *rectVirtual*<br/>
-[out] A `CRect` objekt, který je vyplněna virtuální obdélník.
+mimo `CRect` Objekt, který je vyplněn virtuálním obdélníkem.
 
 ### <a name="remarks"></a>Poznámky
 
-Pokud se přesune na stavového řádku, rozhraní framework uloží původní pozice v podokně v obdélníku virtuální. Rozhraní framework můžete použít k obnovení původní pozice v podokně virtuální obdélník.
+Když je přesunuto podokno, rozhraní ukládá původní pozici podokna ve virtuálním obdélníku. Rozhraní může použít virtuální obdélník k obnovení původní pozice podokna.
 
-Nevolejte metody, které se vztahují na virtuální obdélníky, pokud přesouváte podokna prostřednictvím kódu programu.
+Nevolejte metody, které souvisejí s virtuálními obdélníky, pokud nepřesouváte podokna programově.
 
 ##  <a name="ischangestate"></a>  CPane::IsChangeState
 
-Jako je podokno přesunutí, tato metoda analyzuje jeho pozice relativně k jiná podokna ukotvit řádků a okna s minirámcem windows a vrátí odpovídající hodnotu AFX_CS_STATUS.
+Při přesouvání podokna analyzuje tato metoda svou polohu vzhledem k ostatním podokenm, ukotvených řádků a oknech se zkrácenými rámečky a vrátí odpovídající hodnotu AFX_CS_STATUS.
 
 ```
 virtual AFX_CS_STATUS IsChangeState(
@@ -918,25 +918,25 @@ virtual AFX_CS_STATUS IsChangeState(
 ### <a name="parameters"></a>Parametry
 
 *nOffset*<br/>
-[in] Určuje citlivost ukotvení. Například podokno, které je přesunuta v rámci *nOffset* pixelů od ukotvení řádku bude ukotven.
+pro Určuje citlivost ukotvení. Například podokno, které je přesunuto v *nOffset* pixelech z ukotveného řádku, bude ukotveno.
 
 *ppTargetBar*<br/>
-[in] Po návratu metody *ppTargetBar* obsahuje ukazatel na objekt, ke kterému by měl aktuální podokno ukotvit nebo hodnota NULL, pokud by mělo dojít k žádné ukotvení.
+pro Když se metoda vrátí, *ppTargetBar* obsahuje buď ukazatel na objekt, ke kterému má být aktuální podokno ukotveno, nebo hodnotu null, pokud by nemělo dojít k žádnému Docku.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Jeden z následujících hodnot AFX_CS_STATUS:
+Jedna z následujících hodnot AFX_CS_STATUS:
 
 |Value|Popis|
 |-----------|-----------------|
-|CS_NOTHING|V podokně není v dokovacím místě. Rozhraní není ukotvení panelu.|
-|CS_DOCK_IMMEDIATELY|V podokně prostřednictvím dokovacím místě, a styl DT_IMMEDIATE povolen. V podokně ukotvené rozhraní okamžitě.|
-|CS_DELAY_DOCK|V podokně je dokovacího webu, který je jiný ukotvené podokno nebo okraj hlavního rámce. Rozhraní framework ukotvené v podokně, když uživatel uvolní přesunutí.|
-|CS_DELAY_DOCK_TO_TAB|V podokně je dokovacího webu, který způsobí, že v podokně ukotvit v okně s kartami. K tomu dojde, když je podokno přes popisek jiný ukotvené podokno nebo na kartě oblast podokna s kartami. Rozhraní framework ukotvené v podokně, když uživatel uvolní přesunutí.|
+|CS_NOTHING|Podokno není blízko dokovacího webu. Rozhraní není ukotvené v podokně.|
+|CS_DOCK_IMMEDIATELY|Podokno se nachází na dokovacím webu a je povolený styl DT_IMMEDIATE. Rozhraní si toto podokno hned ukotví.|
+|CS_DELAY_DOCK|Podokno se nachází nad dokovací lokalitou, která je buď pod dokovacím podoknem, nebo na okraji hlavního rámce. Rozhraní ukotví podokno, když uživatel uvolní přesunutí.|
+|CS_DELAY_DOCK_TO_TAB|Podokno je přes docking site, který způsobí, že se podokno ukotví v okně s kartami. K tomu dojde, když je podokno buď přes titulek jiného ukotveného podokna, nebo přes oblast karet podokna s kartami. Rozhraní ukotví podokno, když uživatel uvolní přesunutí.|
 
-##  <a name="isdragmode"></a>  CPane::IsDragMode
+##  <a name="isdragmode"></a>CPane::IsDragMode
 
-Určuje, zda je přesouvá v podokně.
+Určuje, zda je přesunuto podokno.
 
 ```
 virtual BOOL IsDragMode() const;
@@ -944,13 +944,13 @@ virtual BOOL IsDragMode() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Hodnota TRUE, pokud je přesouvá v podokně; v opačném případě hodnota FALSE.
+TRUE, pokud se podokno přesouvá; v opačném případě FALSE.
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="isinfloatingmultipaneframewnd"></a>  CPane::IsInFloatingMultiPaneFrameWnd
+##  <a name="isinfloatingmultipaneframewnd"></a>CPane::IsInFloatingMultiPaneFrameWnd
 
-Určuje, zda je v podokně v rámci více podokno okna ( [cmultipaneframewnd – třída](../../mfc/reference/cmultipaneframewnd-class.md)).
+Určuje, zda je podokno v rámci okna s více podokny ( [Třída CMultiPaneFrameWnd](../../mfc/reference/cmultipaneframewnd-class.md)).
 
 ```
 virtual BOOL IsInFloatingMultiPaneFrameWnd() const;
@@ -958,15 +958,15 @@ virtual BOOL IsInFloatingMultiPaneFrameWnd() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Hodnota TRUE, pokud je podokno v okně s rámečkem více podokně; v opačném případě hodnota FALSE.
+TRUE, pokud je podokno v rámci okna s více podokny; v opačném případě FALSE.
 
 ### <a name="remarks"></a>Poznámky
 
-V okně s rámečkem více podokně můžete uvolnit pouze ukotvitelná podokna. Proto `CPane::IsInFloatingMultiPaneFrameWnd` vždy vrátí hodnotu FALSE.
+V okně s více podokny se mohou v rámci okna s více podokny plovoucí pouze podokna ukotvit. `CPane::IsInFloatingMultiPaneFrameWnd` Proto vždy vrátí hodnotu false.
 
-##  <a name="isleftof"></a>  CPane::IsLeftOf
+##  <a name="isleftof"></a>CPane::IsLeftOf
 
-Určuje, zda je v podokně zleva z (nebo vyšší) zadaný obdélník.
+Určuje, zda je podokno ponecháno (nebo vyšší) zadaného obdélníku.
 
 ```
 bool IsLeftOf(
@@ -976,21 +976,21 @@ bool IsLeftOf(
 
 ### <a name="parameters"></a>Parametry
 
-*Rect*<br/>
-[in] A `CRect` objekt, který se používá pro porovnání.
+*OBD*<br/>
+pro `CRect` Objekt, který se používá pro porovnání.
 
 *bWindowRect*<br/>
-[in] Při hodnotě TRUE se *rect* se předpokládá, že obsahují souřadnice obrazovky; Pokud je hodnota FALSE, *rect* se předpokládá, že obsahují souřadnice klienta.
+pro Pokud je nastaveno na TRUE, předpokládá se, že *Rect* obsahuje souřadnice obrazovky. Pokud je hodnota FALSE, předpokládá se, že hodnota *Rect* obsahuje souřadnice klienta.
 
 ### <a name="return-value"></a>Návratová hodnota
 
 ### <a name="remarks"></a>Poznámky
 
-Pokud se v podokně je ukotven vodorovně, tato metoda zkontroluje, zda je jeho umístění levé *rect*. Jinak tato metoda zkontroluje, zda se nachází nad *rect*.
+Pokud je podokno ukotveno vodorovně, tato metoda zkontroluje, zda je jeho umístění ponecháno v *Rect*. V opačném případě tato metoda ověří, zda je umístění nad *Rect*.
 
-##  <a name="isresizable"></a>  CPane::IsResizable
+##  <a name="isresizable"></a>CPane:: s možností změny velikosti
 
-Určuje, zda je v podokně umožňující změnu velikosti.
+Určuje, zda lze změnit velikost podokna.
 
 ```
 virtual BOOL IsResizable() const;
@@ -998,19 +998,19 @@ virtual BOOL IsResizable() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Hodnota TRUE, pokud je podokno umožňující změnu velikosti; v opačném případě hodnota FALSE.
+TRUE, pokud se mění velikost podokna; v opačném případě FALSE.
 
 ### <a name="remarks"></a>Poznámky
 
-Základní `CPane` objekty nejsou umožňující změnu velikosti.
+U `CPane` základních objektů nelze měnit velikost.
 
-Ukotvení správce používá umožňující změnu velikosti příznak k určení rozložení podokna. Non-umožňující změnu velikosti podoken se vždycky nacházejí ve vnější okrajem nadřazeného rámce.
+Správce Docker používá příznak změny velikosti pro určení rozložení podokna. Podokna bez změny velikosti se vždy nacházejí na vnějších okrajích nadřazeného rámce.
 
-Non-umožňující změnu velikosti podoken nemůžou být ve ukotvení kontejnery.
+V dokovacích kontejnerech nelze umístit podokna bez změny velikosti.
 
-##  <a name="istabbed"></a>  CPane::IsTabbed
+##  <a name="istabbed"></a>CPane:: se záložkami
 
-Určuje, zda v podokně byl vložen do ovládacího prvku karta okna s kartami.
+Určuje, zda bylo podokno vloženo do ovládacího prvku karta okna s kartami.
 
 ```
 virtual BOOL IsTabbed() const;
@@ -1018,15 +1018,15 @@ virtual BOOL IsTabbed() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Hodnota TRUE, pokud je s kartami v podokně; v opačném případě hodnota FALSE.
+TRUE, pokud je podokno na kartách; v opačném případě FALSE.
 
 ### <a name="remarks"></a>Poznámky
 
-S kartami stavu je zpracovávat odděleně od plovoucí ukotven a automatického schovávání stavy.
+Stav s kartami se považuje za nezávisle na plovoucí, ukotvené a automaticky skryté stavy.
 
-##  <a name="loadstate"></a>  CPane::LoadState
+##  <a name="loadstate"></a>CPane:: LoadState
 
-Stav v podokně se načte z registru.
+Načte stav podokna z registru.
 
 ```
 virtual BOOL LoadState(
@@ -1038,27 +1038,27 @@ virtual BOOL LoadState(
 ### <a name="parameters"></a>Parametry
 
 *lpszProfileName*<br/>
-[in] Název profilu.
+pro Název profilu
 
 *nIndex*<br/>
-[in] Index profilu.
+pro Index profilu.
 
 *uiID*<br/>
-[in] ID podokně.
+pro ID podokna
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Hodnota TRUE, pokud stav podokně načetla úspěšně; v opačném případě hodnota FALSE.
+TRUE, pokud byl stav podokna úspěšně načten; v opačném případě FALSE.
 
 ### <a name="remarks"></a>Poznámky
 
-Rozhraní volá tuto metodu za účelem načtení stavu podokně z registru. Přepsání v odvozené třídě pro další informace o zatížení, který je uložen ve [CPane::SaveState](#savestate).
+Rozhraní volá tuto metodu, aby načetla stav podokna z registru. Přepište v odvozené třídě a načtěte Další informace, které jsou uloženy pomocí [CPane:: SaveState](#savestate).
 
-Pokud tuto metodu přepíšete, také volat základní metodu a vrátí hodnotu FALSE, pokud základní metoda vrací hodnotu FALSE.
+Pokud přepíšete tuto metodu, zavolejte také základní metodu a vraťte hodnotu FALSE, pokud základní metoda vrátí hodnotu FALSE.
 
-##  <a name="m_bhandleminsize"></a>  CPane::m_bHandleMinSize
+##  <a name="m_bhandleminsize"></a>CPane::m_bHandleMinSize
 
-Umožňuje konzistentní zpracování podokna minimální velikosti.
+Povoluje konzistentní zpracování minimální velikosti podokna.
 
 ```
 AFX_IMPORT_DATA static BOOL m_bHandleMinSize;
@@ -1066,13 +1066,13 @@ AFX_IMPORT_DATA static BOOL m_bHandleMinSize;
 
 ### <a name="remarks"></a>Poznámky
 
-Pokud má přednost před nejméně ukotvitelných podoken ve vaší aplikaci `GetMinSize`, nebo pokud vaše aplikace volá `SetMinSize`, můžete chtít nastavit tento statický člen na hodnotu TRUE, chcete-li povolit rozhraní framework konzistentní zpracování, jak mají velikost podokna.
+Pokud přepíšete `GetMinSize`jedno nebo více ukotvených podoken v aplikaci, nebo pokud vaše `SetMinSize`aplikace volá, je vhodné nastavit tohoto statického člena na hodnotu true, aby systém mohl konzistentně zvládnout, jak mají podokna velikost.
 
-Pokud tato hodnota nastavena na hodnotu TRUE, jsou oříznuté všech podoken, jehož velikost by měla snížit pod jejich minimální velikost, není roztažená. Vzhledem k tomu, že rozhraní používá oblasti okna pro podokno nastavení velikosti účely, neměňte velikost oblasti okna pro ukotvení podoken, pokud tato hodnota nastavena na hodnotu TRUE.
+Pokud je tato hodnota nastavená na true, všechna podokna, jejichž velikost se má snížit pod jejich minimální velikost, se oříznou, roztáhnou. Vzhledem k tomu, že rozhraní používá oblasti okna pro účely velikosti podokna, neměňte velikost oblasti okna pro ukotvená podokna, pokud je tato hodnota nastavená na TRUE.
 
-##  <a name="m_recentdockinfo"></a>  CPane::m_recentDockInfo
+##  <a name="m_recentdockinfo"></a>CPane::m_recentDockInfo
 
-Obsahuje informacemi z nedávné doby ukotvení.
+Obsahuje nedávné informace o docking.
 
 ```
 CRecentDockSiteInfo m_recentDockInfo;
@@ -1080,11 +1080,11 @@ CRecentDockSiteInfo m_recentDockInfo;
 
 ### <a name="remarks"></a>Poznámky
 
-Rozhraní framework ukládá dokovací nejnovější informace o stavu v podokně do tohoto člena.
+Rozhraní ukládá nejnovější informace o stavu doku pro podokno v tomto členovi.
 
-##  <a name="movebyalignment"></a>  CPane::MoveByAlignment
+##  <a name="movebyalignment"></a>CPane::MoveByAlignment
 
-Přesune virtuální obdélník a podokna zadanou velikost.
+Přesune podokno a virtuální obdélník o zadanou velikost.
 
 ```
 BOOL MoveByAlignment(
@@ -1095,30 +1095,30 @@ BOOL MoveByAlignment(
 ### <a name="parameters"></a>Parametry
 
 *dwAlignment*<br/>
-[in] Určuje zarovnání podokně.
+pro Určuje zarovnání podokna.
 
 *nOffset*<br/>
-[in] Velikost v pixelech, podle kterého se má přesunout podokna a virtuální obdélník.
+pro Velikost v pixelech, o kterou se má přesunout podokno a virtuální obdélník
 
 ### <a name="return-value"></a>Návratová hodnota
 
 ### <a name="remarks"></a>Poznámky
 
-*dwAlignment* může být kterýkoli z následujících hodnot:
+*dwAlignment* může být libovolná z následujících hodnot:
 
 |Value|Popis|
 |-----------|-----------------|
-|CBRS_ALIGN_TOP|Umožňuje v podokně ukotvit do horní části klientské oblasti okna rámce.|
-|CBRS_ALIGN_BOTTOM|Umožňuje v podokně ukotvit k dolnímu okraji klientské oblasti okna rámce.|
-|CBRS_ALIGN_LEFT|Umožňuje podokně ukotven k levé části klientské oblasti okna rámce.|
-|CBRS_ALIGN_RIGHT|Umožňuje v podokně ukotvit k pravému okraji klientské oblasti okna rámce.|
-|CBRS_ALIGN_ANY|Umožňuje v podokně ukotvit do libovolné části klientské oblasti okna rámce.|
+|CBRS_ALIGN_TOP|Povolí ukotvení podokna v horní části klientské oblasti okna rámce.|
+|CBRS_ALIGN_BOTTOM|Povolí ukotvení podokna do dolní části klientské oblasti okna rámce.|
+|CBRS_ALIGN_LEFT|Povolí ukotvení podokna na levou stranu klientské oblasti okna rámce.|
+|CBRS_ALIGN_RIGHT|Povolí ukotvení podokna na pravé straně klientské oblasti okna rámce.|
+|CBRS_ALIGN_ANY|Povolí ukotvení podokna na kterékoli straně klientské oblasti okna rámce.|
 
-Pokud *dwAlignment* obsahuje příznak CBRS_ALIGN_LEFT nebo CBRS_ALIGN_RIGHT podokně a virtuální obdélník přesunou vodorovně; jinak vrátí hodnotu, pokud *dwAlignment* obsahuje CBRS_ALIGN_TOP nebo CBRS_ALIGN Příznak _nejhorší, podokno a virtuální obdélník se posunout svisle.
+Pokud *dwAlignment* obsahuje příznak CBRS_ALIGN_LEFT nebo CBRS_ALIGN_RIGHT, podokno a virtuální obdélník se přesunou vodorovně; v opačném případě, pokud *dwAlignment* obsahuje příznak CBRS_ALIGN_TOP nebo CBRS_ALIGN_BOTTOM, podokno a virtuální obdélník budou přesunuty svisle.
 
-##  <a name="movepane"></a>  CPane::MovePane
+##  <a name="movepane"></a>CPane::MovePane
 
-V podokně se přesune do určeného obdélníku.
+Přesune podokno do zadaného obdélníku.
 
 ```
 virtual CSize MovePane(
@@ -1130,25 +1130,25 @@ virtual CSize MovePane(
 ### <a name="parameters"></a>Parametry
 
 *rectNew*<br/>
-[in] Určuje novou obdélník podokna.
+pro Určuje nový obdélník pro podokno.
 
 *bForceMove*<br/>
-[in] Pokud je hodnota TRUE, tato metoda ignoruje minimální povolená velikost podokna ( [CPane::GetMinSize](#getminsize)); v opačném případě je upraven v podokně, v případě potřeby zkontrolujte, zda je alespoň minimální povolenou velikost.
+pro Pokud má hodnotu TRUE, tato metoda ignoruje minimální povolenou velikost podokna ( [CPane:: getminsize](#getminsize)); v opačném případě se podokno v případě potřeby upraví, aby se zajistilo, že je aspoň minimální povolená velikost.
 
 *hdwp*<br/>
-[in] Nepoužívá se.
+pro Nepoužívá se.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-A `CSize` objekt, který obsahuje rozdíly ve šířku a výšku mezi novém i starém obdélníky (starý obdélník - *rectNew*).
+Objekt, který obsahuje rozdíly v šířce a výšce mezi novými a starými obdélníky (starý obdélník – rectNew). `CSize`
 
 ### <a name="remarks"></a>Poznámky
 
-Tato metoda se používá pouze pro ukotvitelná podokna.
+Tato metoda se používá pouze pro podukotvit podokna.
 
-##  <a name="onafterchangeparent"></a>  CPane::OnAfterChangeParent
+##  <a name="onafterchangeparent"></a>CPane::OnAfterChangeParent
 
-Volá se rozhraním při změně nadřazené podokno.
+Volá se rozhraním, když se změní nadřazený prvek podokna.
 
 ```
 virtual void OnAfterChangeParent(CWnd* pWndOldParent);
@@ -1157,15 +1157,15 @@ virtual void OnAfterChangeParent(CWnd* pWndOldParent);
 ### <a name="parameters"></a>Parametry
 
 *pWndOldParent*<br/>
-[out v] V podokně předchozí nadřazené okno.
+[in, out] Předchozí nadřazené okno podokna
 
 ### <a name="remarks"></a>Poznámky
 
-Tato metoda je volána v rámci rozhraní nadřazené podokno se při změně kvůli operaci ukotvené nebo plovoucí.
+Tato metoda je volána rozhraním v případě, že došlo ke změně nadřazeného prvku podokna z důvodu ukotvení nebo plovoucí operace.
 
-##  <a name="onafterdock"></a>  CPane::OnAfterDock
+##  <a name="onafterdock"></a>CPane::OnAfterDock
 
-Volá se rozhraním, když je ukotven na stavového řádku.
+Volá se rozhraním, když je podokno ukotvené.
 
 ```
 virtual void OnAfterDock(
@@ -1177,17 +1177,17 @@ virtual void OnAfterDock(
 ### <a name="parameters"></a>Parametry
 
 *pBar*<br/>
-[in] Tento parametr se nepoužívá.
+pro Tento parametr se nepoužívá.
 
 *lpRect*<br/>
-[in] Tento parametr se nepoužívá.
+pro Tento parametr se nepoužívá.
 
 *dockMethod*<br/>
-[in] Tento parametr se nepoužívá.
+pro Tento parametr se nepoužívá.
 
-##  <a name="onafterfloat"></a>  CPane::OnAfterFloat
+##  <a name="onafterfloat"></a>CPane::OnAfterFloat
 
-Volá se rozhraním po podokno čísel s plovoucí čárkou.
+Volá se rozhraním po plovoucím panelu.
 
 ```
 virtual void OnAfterFloat();
@@ -1195,11 +1195,11 @@ virtual void OnAfterFloat();
 
 ### <a name="remarks"></a>Poznámky
 
-Pokud chcete provádět žádné zpracovávání po čísel s plovoucí čárkou podokno, mohou přepsat tuto metodu v odvozené třídě.
+Tuto metodu můžete přepsat v odvozené třídě, pokud chcete provést jakékoli zpracování po plovoucím panelu.
 
-##  <a name="onbeforechangeparent"></a>  CPane::OnBeforeChangeParent
+##  <a name="onbeforechangeparent"></a>CPane::OnBeforeChangeParent
 
-Volá se rozhraním, když nadřazené v podokně se chystá změna.
+Volá se rozhraním, když se má změnit nadřazený prvek podokna.
 
 ```
 virtual void OnBeforeChangeParent(
@@ -1210,20 +1210,20 @@ virtual void OnBeforeChangeParent(
 ### <a name="parameters"></a>Parametry
 
 *pWndNewParent*<br/>
-[out v] Určuje nové nadřazené okno.
+[in, out] Určuje nové nadřazené okno.
 
 *bDelay*<br/>
-[in] TRUE, pokud chcete zpoždění globální dokovací rozložení úpravy; v opačném případě hodnota FALSE.
+pro TRUE pro zpoždění nastavení globálního ukotvení rozložení; v opačném případě FALSE.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato metoda je volána v rámci nadřazeného člena v podokně se změnit, protože se v podokně ukotven nebo ponechán v neurčitém stavu.
+Tato metoda je volána rozhraním, když se chystá Změna nadřazeného podokna, protože podokno je ukotveno nebo plovoucí.
 
-Ve výchozím nastavení, v podokně se registrace s ukotvené podokno voláním `CDockSite::RemovePane`.
+Ve výchozím nastavení je podokno odregistrováno v dokovacím podokně voláním `CDockSite::RemovePane`.
 
-##  <a name="onbeforedock"></a>  CPane::OnBeforeDock
+##  <a name="onbeforedock"></a>CPane::OnBeforeDock
 
-Volá se rozhraním, když v podokně se chystá ukotvení.
+Volá se rozhraním, když se bude rozdock podokno.
 
 ```
 virtual BOOL OnBeforeDock(
@@ -1235,25 +1235,25 @@ virtual BOOL OnBeforeDock(
 ### <a name="parameters"></a>Parametry
 
 *ppDockBar*<br/>
-[out v] Určuje panel, který je na ukotvení v tomto podokně.
+[in, out] Určuje podokno, ve kterém je toto podokno ukotveno.
 
 *lpRect*<br/>
-[in] Určuje dokovací obdélník.
+pro Určuje rámeček ukotvení.
 
 *dockMethod*<br/>
-[in] Určuje metodu ukotvení.
+pro Určuje metodu docking.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-TRUE, pokud lze ukotvit v podokně. Pokud funkce vrátí hodnotu FALSE, dokovací operace se přeruší.
+TRUE, pokud může být podokno ukotveno. Vrátí-li funkce hodnotu FALSE, operace docking bude přerušena.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato metoda je volána rozhraním, podokno se ukotvit. Pokud chcete provádět žádné zpracovávání předtím, než je nakonec ukotven na stavového řádku, mohou přepsat tuto metodu v odvozené třídě.
+Tato metoda je volána rozhraním, když má být ukotveno podokno. Tuto metodu můžete přepsat v odvozené třídě, pokud chcete provést jakékoli zpracování předtím, než je podokno nakonec ukotveno.
 
-##  <a name="onbeforefloat"></a>  CPane::OnBeforeFloat
+##  <a name="onbeforefloat"></a>CPane::OnBeforeFloat
 
-Volá se rozhraním, když na stavového řádku o plovoucí desetinnou čárkou.
+Volá se rozhraním, když má podokno hodnotu float.
 
 ```
 virtual BOOL OnBeforeFloat(
@@ -1264,22 +1264,22 @@ virtual BOOL OnBeforeFloat(
 ### <a name="parameters"></a>Parametry
 
 *rectFloat*<br/>
-[in] Určuje umístění a velikost podokna, když je ve stavu s plovoucí desetinnou čárkou.
+pro Určuje umístění a velikost podokna, pokud je v plovoucím stavu.
 
 *dockMethod*<br/>
-[in] Určuje metodu ukotvení panelu.
+pro Určuje metodu docking podokna.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Hodnota TRUE, pokud se v podokně mohou obtékané; v opačném případě hodnota FALSE.
+TRUE, pokud může být podokno plovoucí; v opačném případě FALSE.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato metoda je volána rozhraním, když na stavového řádku o plovoucí desetinnou čárkou. Pokud chcete provádět žádné zpracovávání před podokně nakonec čísel s plovoucí čárkou, mohou přepsat tuto metodu v odvozené třídě.
+Tato metoda je volána rozhraním, když se podokno chystá na plovoucí. Tuto metodu můžete přepsat v odvozené třídě, pokud chcete provést jakékoli zpracování před tím, než bude podokno nakonec plovoucí.
 
-##  <a name="onpressclosebutton"></a>  CPane::OnPressCloseButton
+##  <a name="onpressclosebutton"></a>CPane::OnPressCloseButton
 
-Volá se rozhraním, když uživatel stiskne tlačítko Zavřít na titulek pro podokno.
+Volá se rozhraním, když uživatel stiskne tlačítko Zavřít na titulku podokna.
 
 ```
 virtual void OnPressCloseButton();
@@ -1287,11 +1287,11 @@ virtual void OnPressCloseButton();
 
 ### <a name="remarks"></a>Poznámky
 
-Tato metoda je volána rozhraním, když uživatel stiskne klávesu **Zavřít** tlačítko na titulek v podokně. Pokud chcete dostávat oznámení o **Zavřít** události, mohou přepsat tuto metodu v odvozené třídě.
+Tato metoda je volána rozhraním, když uživatel stiskne tlačítko **Zavřít** v popisku podokna. Chcete-li dostávat oznámení o události **zavření** , můžete tuto metodu přepsat v odvozené třídě.
 
-##  <a name="onshowcontrolbarmenu"></a>  CPane::OnShowControlBarMenu
+##  <a name="onshowcontrolbarmenu"></a>CPane::OnShowControlBarMenu
 
-Volá se rozhraním, speciální nabídky se zobrazí.
+Volá se rozhraním, když se chystá zobrazení speciální nabídky podokna.
 
 ```
 virtual BOOL OnShowControlBarMenu(CPoint point);
@@ -1299,20 +1299,20 @@ virtual BOOL OnShowControlBarMenu(CPoint point);
 
 ### <a name="parameters"></a>Parametry
 
-*point*<br/>
-[in] Určuje umístění nabídky.
+*Vyberte*<br/>
+pro Určuje umístění nabídky.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Hodnota TRUE, pokud je možné zobrazit v nabídce; v opačném případě hodnota FALSE.
+TRUE, pokud se nabídka dá zobrazit; v opačném případě FALSE.
 
 ### <a name="remarks"></a>Poznámky
 
-Nabídka obsahuje několik položek, které vám umožní určit chování v podokně, konkrétně: **Číslo s plovoucí čárkou**, **ukotvení**, **automatické skrývání**, a **skrýt**. Tato nabídka pro všechna podokna můžete povolit pomocí volání [CDockingManager::EnableDockSiteMenu](../../mfc/reference/cdockingmanager-class.md#enabledocksitemenu).
+Nabídka obsahuje několik položek, které umožňují určit chování podokna, konkrétně: **Plovoucí**, **ukotvení**, automatické **skrývání**a **skrytí**. Tuto nabídku můžete povolit pro všechna podokna voláním [CDockingManager:: EnableDockSiteMenu](../../mfc/reference/cdockingmanager-class.md#enabledocksitemenu).
 
-##  <a name="recalclayout"></a>  CPane::RecalcLayout
+##  <a name="recalclayout"></a>CPane::RecalcLayout
 
-Přepočítá rozložení informace o podokně.
+Přepočítá informace o rozložení podokna.
 
 ```
 virtual void RecalcLayout();
@@ -1320,13 +1320,13 @@ virtual void RecalcLayout();
 
 ### <a name="remarks"></a>Poznámky
 
-Pokud je ukotven v podokně, tato metoda aktualizuje virtuální obdélník pro podokno nastavením jeho velikosti na aktuální velikost podokna.
+Pokud je podokno ukotveno, tato metoda aktualizuje virtuální obdélník pro podokno nastavením jeho velikosti na aktuální velikost podokna.
 
-Pokud se v podokně je s plovoucí desetinnou čárkou, tato metoda upozorní nadřazené minirámcem a upravte velikost podokna na velikost okna s minirámcem. Rozhraní zajišťuje, že okna s minirámcem alespoň minimální povolená velikost podokna ( [CPane::GetMinSize](#getminsize)) a v případě potřeby změní velikost okna s minirámcem.
+Pokud je podokno plovoucí, tato metoda upozorní nadřazený Mini rámec, aby upravil velikost podokna na velikost minimálního snímku. Rozhraní zajišťuje minimální povolenou velikost pro podokno ( [CPane:: getminsize](#getminsize)), a pokud je to nutné, mění velikost mini-frame.
 
-##  <a name="savestate"></a>  CPane::SaveState
+##  <a name="savestate"></a>CPane:: SaveState
 
-Uloží stav v podokně do registru.
+Uloží stav podokna do registru.
 
 ```
 virtual BOOL SaveState(
@@ -1338,27 +1338,27 @@ virtual BOOL SaveState(
 ### <a name="parameters"></a>Parametry
 
 *lpszProfileName*<br/>
-[in] Název profilu.
+pro Název profilu
 
 *nIndex*<br/>
-[in] Index profilu.
+pro Index profilu.
 
 *uiID*<br/>
-[in] ID podokně.
+pro ID podokna
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Hodnota TRUE, pokud státu byla uložena úspěšně; v opačném případě hodnota FALSE.
+TRUE, pokud byl stav úspěšně uložen; v opačném případě FALSE.
 
 ### <a name="remarks"></a>Poznámky
 
-Rozhraní volá tuto metodu, když ho uloží stav v podokně do registru. Přepsat `SaveState` v odvozené třídě pro ukládání dodatečných informací.
+Rozhraní volá tuto metodu, když ukládá stav podokna do registru. Přepsat `SaveState` v odvozené třídě pro ukládání dalších informací.
 
-Pokud tuto metodu přepíšete, také volat základní metodu a vrátí hodnotu FALSE, pokud základní metoda vrací hodnotu FALSE.
+Pokud přepíšete tuto metodu, zavolejte také základní metodu a vraťte hodnotu FALSE, pokud základní metoda vrátí hodnotu FALSE.
 
-##  <a name="setactiveingroup"></a>  CPane::SetActiveInGroup
+##  <a name="setactiveingroup"></a>CPane::SetActiveInGroup
 
-Příznaky podokně jako aktivní.
+Označí podokno jako aktivní.
 
 ```
 virtual void SetActiveInGroup(BOOL bActive);
@@ -1367,19 +1367,19 @@ virtual void SetActiveInGroup(BOOL bActive);
 ### <a name="parameters"></a>Parametry
 
 *bActive*<br/>
-[in] Logická hodnota, která určuje, zda je v podokně s příznakem jako aktivní.
+pro LOGICKÁ hodnota určující, zda je podokno označeno jako aktivní.
 
 ### <a name="remarks"></a>Poznámky
 
-Když ukotvitelné podokně se zobrazí, nebo se volí automaticky skrýt tlačítko, odpovídající automaticky skrýt podokno je označen jako aktivní.
+Když je zobrazeno podokno ukotvit nebo je vybráno tlačítko pro automatické skrývání, je odpovídající podokno automatického skrývání označeno jako aktivní.
 
-Vzhled automaticky skrýt tlačítko, který je spojen s podoknem je založena na dva faktory. Pokud je aktivní, v podokně a `static BOOL CMFCAutoHideButton::m_bOverlappingTabs` má hodnotu TRUE, zobrazí rozhraní automaticky skrýt tlačítko jako ikonu a popisek. Pro neaktivní podokně zobrazí rozhraní pouze na ikonu automatického skrytí.
+Vzhled tlačítka pro automatické skrývání, které je přidruženo k podoknu, je založený na dvou faktorech. Pokud je podokno aktivní a `static BOOL CMFCAutoHideButton::m_bOverlappingTabs` má hodnotu true, rozhraní zobrazí tlačítko pro automatické skrývání jako ikonu a popisek. V neaktivním podokně se v rozhraní zobrazí pouze ikona automatického skrývání.
 
-Pokud `CMFCAutoHideButton::m_bOverlappingTabs` hodnotu FALSE, nebo pokud není ve skupině v podokně, zobrazí rozhraní přidružené automaticky skrýt tlačítko jako ikonu a popisek.
+Pokud `CMFCAutoHideButton::m_bOverlappingTabs` je hodnota false nebo pokud podokno není umístěno ve skupině, rozhraní zobrazí přidružené tlačítko automatického skrývání jako ikonu a popisek.
 
-##  <a name="setborders"></a>  CPane::SetBorders
+##  <a name="setborders"></a>CPane::SetBorders
 
-Nastaví hodnoty ohraničení panelu.
+Nastaví hodnoty ohraničení podokna.
 
 ```
 void SetBorders(
@@ -1394,27 +1394,27 @@ void SetBorders(LPCRECT lpRect);
 ### <a name="parameters"></a>Parametry
 
 *cxLeft*<br/>
-[in] Určuje šířku v pixelech na levý okraj podokna.
+pro Určuje šířku levého ohraničení podokna v pixelech.
 
 *cyTop*<br/>
-[in] Určuje šířku v pixelech horního ohraničení panelu.
+pro Určuje šířku horního okraje podokna v pixelech.
 
 *cxRight*<br/>
-[in] Určuje šířku v pixelech pravého ohraničení panelu.
+pro Určuje šířku pravého okraje podokna v pixelech.
 
 *cyBottom*<br/>
-[in] Určuje šířku v pixelech dolního ohraničení panelu.
+pro Určuje šířku dolního ohraničení podokna v pixelech.
 
 *lpRect*<br/>
-[in] A [crect –](../../atl-mfc-shared/reference/crect-class.md) objekt, který obsahuje požadovanou šířku v pixelech, každý ohraničení panelu.
+pro Objekt [CRect](../../atl-mfc-shared/reference/crect-class.md) , který obsahuje šířku (v pixelech) každého ohraničení podokna.
 
 ### <a name="remarks"></a>Poznámky
 
-Voláním této funkce nastavit velikost ohraničení v podokně.
+Voláním této funkce nastavíte velikosti ohraničení podokna.
 
-##  <a name="setclienthotspot"></a>  CPane::SetClientHotSpot
+##  <a name="setclienthotspot"></a>CPane::SetClientHotSpot
 
-Nastaví *aktivního* podokna.
+Nastaví *aktivní bod* pro podokno.
 
 ```
 void SetClientHotSpot(const CPoint& ptNew);
@@ -1423,15 +1423,15 @@ void SetClientHotSpot(const CPoint& ptNew);
 ### <a name="parameters"></a>Parametry
 
 *ptNew*<br/>
-[in] A `CPoint` objekt, který určuje nový aktivní bod.
+pro `CPoint` Objekt, který určuje nový aktivní bod.
 
 ### <a name="remarks"></a>Poznámky
 
-*Aktivního* je bod v podokně, které uživatel vybere a udržuje k přesunutí panelu. Aktivní bod se používá pro plynulé animace při přetažení od pozice ukotveného podokna.
+*Aktivní bod* je bod na panelu, který uživatel vybere a udržuje pro přesunutí podokna. V případě, že je podokno přetaženo z ukotvené pozice, je pro hladké animace použito aktivní bod.
 
-##  <a name="setdockstate"></a>  CPane::SetDockState
+##  <a name="setdockstate"></a>CPane::SetDockState
 
-Obnoví informace o stavu pro podokno ukotvení.
+Obnoví informace o stavu ukotvení pro podokno.
 
 ```
 virtual void SetDockState(CDockingManager* pDockManager);
@@ -1440,17 +1440,17 @@ virtual void SetDockState(CDockingManager* pDockManager);
 ### <a name="parameters"></a>Parametry
 
 *pDockManager*<br/>
-[in] Ukazatel na dokovací manager pro hlavní okno rámce.
+pro Ukazatel na správce Docker pro hlavní okno rámce.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato metoda je volána rozhraním, aby obnovit poslední ukotvené informace o stavu pro podokno. Podokno obsahuje poslední ukotvené informace o stavu v [CPane::m_recentDockInfo](#m_recentdockinfo). Další informace najdete v tématu [crecentdocksiteinfo – třída](../../mfc/reference/crecentdocksiteinfo-class.md).
+Tato metoda je volána rozhraním, aby obnovila nedávné informace o stavu doku pro podokno. V podokně jsou uloženy nedávné informace o stavu docking v [CPane:: m_recentDockInfo](#m_recentdockinfo). Další informace naleznete v tématu [Třída CRecentDockSiteInfo](../../mfc/reference/crecentdocksiteinfo-class.md).
 
-Můžete také volat tuto metodu za účelem nastavení dokovací stavu při načtení podokně informace z externího zdroje.
+Tuto metodu můžete také zavolat, chcete-li nastavit stav docking při načítání informací v podokně z externího zdroje.
 
-##  <a name="setexclusiverowmode"></a>  CPane::SetExclusiveRowMode
+##  <a name="setexclusiverowmode"></a>CPane::SetExclusiveRowMode
 
-Povolí nebo zakáže režim exkluzivní řádek.
+Povolí nebo zakáže režim výhradního řádku.
 
 ```
 virtual void SetExclusiveRowMode(BOOL bExclusive = TRUE);
@@ -1459,17 +1459,17 @@ virtual void SetExclusiveRowMode(BOOL bExclusive = TRUE);
 ### <a name="parameters"></a>Parametry
 
 *bExclusive*<br/>
-[in] TRUE pro povolení režimu exkluzivní řádku; v opačném případě hodnota FALSE.
+pro TRUE pro povolení režimu výhradního řádku; v opačném případě FALSE.
 
 ### <a name="remarks"></a>Poznámky
 
-Volejte tuto metodu za účelem povolení nebo zakázání režimu exkluzivní řádku. Když na stavového řádku v režimu exkluzivní řádek, ho nelze sdílet na stejném řádku s ostatní panely nástrojů.
+Voláním této metody povolíte nebo zakážete režim výhradního řádku. Když je podokno v režimu výhradního řádku, nemůže sdílet stejný řádek s žádnými jinými panely nástrojů.
 
-Ve výchozím nastavení všechny panely nástrojů máte zakázaným režimem exkluzivní řádek a řádku nabídek má povolen režim exkluzivní řádek.
+Ve výchozím nastavení mají všechny panely nástrojů zakázaný režim řádku a na řádku nabídek je povolený režim výhradních řádků.
 
-##  <a name="setminsize"></a>  CPane::SetMinSize
+##  <a name="setminsize"></a>CPane::SetMinSize
 
-Nastaví minimální povolená velikost podokna.
+Nastaví minimální povolenou velikost podokna.
 
 ```
 void SetMinSize(const CSize& size);
@@ -1477,12 +1477,12 @@ void SetMinSize(const CSize& size);
 
 ### <a name="parameters"></a>Parametry
 
-*Velikost*<br/>
-[in] A `CSize` objekt, který obsahuje minimální povolená velikost podokna.
+*hodnota*<br/>
+pro `CSize` Objekt, který obsahuje minimální povolenou velikost podokna.
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="setvirtualrect"></a>  CPane::SetVirtualRect
+##  <a name="setvirtualrect"></a>CPane::SetVirtualRect
 
 Nastaví *virtuální obdélník* podokna.
 
@@ -1494,21 +1494,21 @@ void SetVirtualRect(
 
 ### <a name="parameters"></a>Parametry
 
-*Rect*<br/>
-[in] A `CRect` objekt, který určuje virtuální obdélník nastavit.
+*OBD*<br/>
+pro `CRect` Objekt, který určuje, který virtuální obdélník má být nastaven.
 
 *bMapToParent*<br/>
-[in] Zadejte hodnotu PRAVDA, pokud *rect* obsahuje body vzhledem k nadřazeného okna.
+pro Zadejte hodnotu TRUE, pokud *Rect* obsahuje body vzhledem k nadřazenému oknu.
 
 ### <a name="remarks"></a>Poznámky
 
-A *virtuální obdélník* ukládá původní pozice podokno ve chvíli, kdy je přesunut. Rozhraní framework můžete použít k obnovení původní pozice virtuální obdélník.
+*Virtuální obdélník* ukládá původní pozici podokna při jeho přesunutí. Rozhraní může k obnovení původní pozice použít virtuální obdélník.
 
-Nevolejte metody, které se vztahují na virtuální obdélníky, pokud přesouváte podokna prostřednictvím kódu programu.
+Nevolejte metody, které souvisejí s virtuálními obdélníky, pokud nepřesouváte podokna programově.
 
-##  <a name="setminiframertc"></a>  CPane::SetMiniFrameRTC
+##  <a name="setminiframertc"></a>CPane::SetMiniFrameRTC
 
-Nastaví informace o třídě modulu runtime pro okno výchozí okna s minirámcem.
+Nastaví informace třídy modulu runtime pro výchozí okno se zkráceným rámcem.
 
 ```
 void SetMiniFrameRTC(CRuntimeClass* pClass);
@@ -1517,15 +1517,15 @@ void SetMiniFrameRTC(CRuntimeClass* pClass);
 ### <a name="parameters"></a>Parametry
 
 *pClass*<br/>
-[out v] Určuje informace o třídě modulu runtime pro okno s minirámcem.
+[in, out] Určuje informace třídy modulu runtime pro okno se zkráceným rámcem.
 
 ### <a name="remarks"></a>Poznámky
 
-Když je plovoucí podokno, přejde [cpaneframewnd –](../../mfc/reference/cpaneframewnd-class.md) okno (minirámcem). Můžete zadat vlastní `CPaneFrameWnd`-odvozené třídy, které se bude používat, pokud [CPane::CreateDefaultMiniframe](#createdefaultminiframe) je volána.
+Když je podokno plovoucí, je umístěno v okně [CPaneFrameWnd](../../mfc/reference/cpaneframewnd-class.md) (mini-frame). Můžete poskytnout vlastní `CPaneFrameWnd`odvozenou třídu, která bude použita při volání [CPane:: CreateDefaultMiniframe](#createdefaultminiframe) .
 
-##  <a name="stretchpanedeferwndpos"></a>  CPane::StretchPaneDeferWndPos
+##  <a name="stretchpanedeferwndpos"></a>CPane::StretchPaneDeferWndPos
 
-Roztáhne podokna vodorovně nebo svisle založené na styl dokování.
+Roztáhne podokno svisle nebo vodorovně na základě stylu ukotvení.
 
 ```
 virtual int StretchPaneDeferWndPos(
@@ -1536,22 +1536,22 @@ virtual int StretchPaneDeferWndPos(
 ### <a name="parameters"></a>Parametry
 
 *nStretchSize*<br/>
-[in] Velikost v pixelech roztáhnout podokna. Zmenšení podokně použijte zápornou hodnotu.
+pro Množství v pixelech pro roztažení podokna. K zmenšení podokna použijte zápornou hodnotu.
 
 *hdwp*<br/>
-[in] Nepoužívá se.
+pro Nepoužívá se.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Skutečná velikost v pixelech, že se v podokně roztažená.
+Skutečná množství v pixelech, které bylo roztaženo na podokno.
 
 ### <a name="remarks"></a>Poznámky
 
-Pokud nezbytné, tato metoda upraví *nStretchSize* zajistit, že v podokně nepřekročí omezení velikosti. Tato omezení jsou získány pomocí volání [CPane::GetAvailableStretchSize](#getavailablestretchsize) a [CPane::GetAvailableExpandSize](#getavailableexpandsize).
+V případě potřeby tato metoda upraví *nStretchSize* , aby se zajistilo, že podokno nepřekračuje omezení velikosti. Tato omezení se získávají voláním [CPane:: GetAvailableStretchSize](#getavailablestretchsize) a [CPane:: GetAvailableExpandSize](#getavailableexpandsize).
 
-##  <a name="toggleautohide"></a>  CPane::ToggleAutoHide
+##  <a name="toggleautohide"></a>CPane::ToggleAutoHide
 
-Přepíná režim automatického skrytí.
+Přepne režim automatické skrývání.
 
 ```
 virtual void ToggleAutoHide();
@@ -1559,11 +1559,11 @@ virtual void ToggleAutoHide();
 
 ### <a name="remarks"></a>Poznámky
 
-Voláním této metody lze přepnout režim automatického skrytí. Podokno musí být ukotveno do okna hlavního rámce, aby bylo možné se přepnout do režimu automatického skrytí.
+Voláním této metody přepnete režim automatické skrývání. Aby bylo možné přepnout do režimu automatického skrývání, musí být podokno ukotveno v hlavním okně rámce.
 
-##  <a name="undockpane"></a>  CPane::UndockPane
+##  <a name="undockpane"></a>CPane::UndockPane
 
-V podokně zruší dokovacím místě, výchozí posuvníku nebo okno minirámcem, ve kterém je aktuálně ukotven.
+Odebere podokno z dokovacího webu, výchozího posuvníku nebo okna se zkráceným snímkem, kde je aktuálně ukotveno.
 
 ```
 virtual void UndockPane(BOOL bDelay = FALSE);
@@ -1572,37 +1572,37 @@ virtual void UndockPane(BOOL bDelay = FALSE);
 ### <a name="parameters"></a>Parametry
 
 *bDelay*<br/>
-[in] Pokud má hodnotu FALSE, volá framework [CBasePane::AdjustDockingLayout](../../mfc/reference/cbasepane-class.md#adjustdockinglayout) upravit dokovací rozložení.
+pro Pokud má hodnotu FALSE, rozhraní zavolá [CBasePane:: AdjustDockingLayout](../../mfc/reference/cbasepane-class.md#adjustdockinglayout) a upraví ukotvené rozložení.
 
 ### <a name="remarks"></a>Poznámky
 
-Pomocí této metody můžete prostřednictvím kódu programu uvolnit na stavového řádku.
+Tuto metodu použijte k programovému odložení podokna.
 
-##  <a name="updatevirtualrect"></a>  CPane::UpdateVirtualRect
+##  <a name="updatevirtualrect"></a>CPane::UpdateVirtualRect
 
 Aktualizuje virtuální obdélník.
 
 ```
 void UpdateVirtualRect();
 void UpdateVirtualRect(CPoint ptOffset);
-  void UpdateVirtualRect(CSize sizeNew);
+void UpdateVirtualRect(CSize sizeNew);
 ```
 
 ### <a name="parameters"></a>Parametry
 
 *ptOffset*<br/>
-[in] A `CPoint` objekt, který určuje posun, podle kterého chcete-li posunout podokna.
+pro `CPoint` Objekt, který určuje posun, podle kterého má být podokno posunuto.
 
 *sizeNew*<br/>
-[in] A `CSize` objekt, který určuje novou velikost podokna.
+pro `CSize` Objekt, který určuje novou velikost podokna.
 
 ### <a name="remarks"></a>Poznámky
 
-První přetížení nastaví virtuální obdélníku pomocí aktuální pozici a velikost podokna.
+První přetížení nastaví virtuální obdélník pomocí aktuální pozice a velikosti podokna.
 
-Druhé přetížení přesouvá virtuální obdélník částkou, která je zadána *ptOffset*.
+Druhé přetížení posune virtuální obdélník o hodnotu zadanou pomocí *ptOffset*.
 
-Třetí přetížení nastaví virtuální obdélníku pomocí aktuální pozici v podokně a velikost, která je zadána *sizeNew*.
+Třetí přetížení nastaví virtuální obdélník pomocí aktuální pozice podokna a velikosti určené parametrem *sizeNew*.
 
 ## <a name="see-also"></a>Viz také:
 

@@ -1,6 +1,6 @@
 ---
 title: /Ob (rozbalení vložené funkce)
-ms.date: 09/25/2017
+ms.date: 08/08/2019
 f1_keywords:
 - VC.Project.VCCLWCECompilerTool.InlineFunctionExpansion
 - VC.Project.VCCLCompilerTool.InlineFunctionExpansion
@@ -24,52 +24,77 @@ helpviewer_keywords:
 - Ob0 compiler option [C++]
 - inline expansion, compiler option
 ms.assetid: f134e6df-e939-4980-a01d-47425dbc562a
-ms.openlocfilehash: 6bf16e5725916e81e64d80c0a1f96bf502c8826c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7eb3db1e359349eaf5125a6c8a46a3ac7d847f2f
+ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62320224"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68915486"
 ---
 # <a name="ob-inline-function-expansion"></a>/Ob (rozbalení vložené funkce)
 
-Řídí vložené rozšíření funkcí.
+Ovládá vložené rozšíření funkcí. Ve výchozím nastavení, když se optimalizuje, rozšíření proběhne na uvážení kompilátoru u všech funkcí, které se často označují jako *Automatické vkládání*.
 
 ## <a name="syntax"></a>Syntaxe
 
-> /Ob {0 | 1 | 2}
+::: moniker range=">=vs-2019"
+
+> **/Ob** {**0**|12|**3**}|
+
+::: moniker-end
+
+::: moniker range="<=vs-2017"
+
+> **/Ob** {**0**|12|}
+
+::: moniker-end
 
 ## <a name="arguments"></a>Arguments
 
-**0**<br/>
-Zakáže vložené rozšíření. Ve výchozím nastavení, rozbalení dojde podle uvážení kompilátoru pro všechny funkce často označuje jako *auto-inlining*.
+**0,8**\
+Výchozí hodnota v rámci [/od](od-disable-debug.md). Zakáže vložená rozšíření.
 
-**1**<br/>
-Umožňuje rozšíření pouze funkce označené [vložené](../../cpp/inline-functions-cpp.md), `__inline`, nebo `__forceinline`, nebo v C++ členské funkce definované v deklaraci třídy.
+**1**\
+Povoluje rozšíření pouze funkcí označených [](../../cpp/inline-functions-cpp.md)jako inline, [__inline](../../cpp/inline-functions-cpp.md)nebo [__forceinline](../../cpp/inline-functions-cpp.md), nebo v C++ členské funkci definované v deklaraci třídy.
 
-**2**<br/>
-Výchozí hodnota. Povolí rozšíření funkcí označených jako `inline`, `__inline`, nebo `__forceinline`a všechny další funkce, které kompilátor zvolí.
+**odst**\
+Výchozí hodnota pod [/O1](o1-o2-minimize-size-maximize-speed.md) a [/O2](o1-o2-minimize-size-maximize-speed.md). Umožňuje kompilátoru rozšířit všechny funkce, které nejsou explicitně označené pro žádné vkládání.
 
-**/ Ob2** je v účinku po [/O1, / O2 (minimalizovat velikost, maximální rychlost)](o1-o2-minimize-size-maximize-speed.md) nebo [/Ox (povolení většina optimalizací pro rychlost)](ox-full-optimization.md) se používá.
+::: moniker range=">=vs-2019"
 
-Tato možnost vyžaduje, abyste povolili optimalizace pomocí **/O1**, **/O2**, **/Ox**, nebo **/og**.
+**1**\
+Tato možnost určuje více agresivní vkládání než **/Ob2**, ale má stejná omezení. Možnost **/Ob3** je k dispozici od začátku v aplikaci Visual Studio 2019.
+
+::: moniker-end
 
 ## <a name="remarks"></a>Poznámky
 
-Kompilátor zpracovává možnosti vloženého rozšíření a klíčová slova jako návrhy. Není zaručeno, že budou všechny funkce rozbalena po vložení. Vložené rozšíření můžete zakázat, ale nelze provést vynucení kompilátoru k vložení funkce, i když se používá `__forceinline` – klíčové slovo.
+Kompilátor zpracovává možnosti vloženého rozšíření a klíčová slova jako návrhy. Není nijak zaručeno, že všechny funkce budou rozbaleny na vložené. Můžete zakázat vložená rozšíření, ale nemůžete vynutit, aby kompilátor mohl vložit konkrétní funkci, a to ani `__forceinline` při použití klíčového slova.
 
-Můžete použít `#pragma` [auto_inline](../../preprocessor/auto-inline.md) směrnice pro vyloučení funkcí v úvahu jako kandidáty pro vložené rozšíření. Viz také `#pragma` [vnitřní](../../preprocessor/intrinsic.md) směrnice.
+Chcete-li vyloučit funkce ze zvážení jako kandidáty na vložené rozšíření, můžete použít [__declspec (vloženou)](../../cpp/noinline.md)nebo oblast označenou [#pragma auto_inline (off)](../../preprocessor/auto-inline.md) a [#pragma auto_inline (on)](../../preprocessor/auto-inline.md) direktivy. Další informace o tom, jak poskytnout pokyny pro vložení do kompilátoru, naleznete v [#pragma vnitřní](../../preprocessor/intrinsic.md) direktiva.
 
 > [!NOTE]
-> Informace shromážděné z testovacích běhů profilování potlačení optimalizace, které by jinak byly v vliv, pokud zadáte **/Ob**, **/Os**, nebo **/Ot**. Další informace najdete v tématu [Profile-Guided optimalizace](../profile-guided-optimizations.md).
+> Informace, které se shromažďují z testovacích běhů, potlačí optimalizace, které by jinak mohly platit, protože jste zadali **/ob**, **/OS**nebo **/ot**. Další informace najdete v tématu [optimalizace na základě profilu](../profile-guided-optimizations.md).
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Nastavení tohoto parametru kompilátoru ve vývojovém prostředí Visual Studio
 
-1. Otevřete v projektu **stránky vlastností** dialogové okno. Podrobnosti najdete v tématu [vlastnosti kompilátoru a sestavení nastavte C++ v sadě Visual Studio](../working-with-project-properties.md).
+1. Otevřete dialogové okno **stránky vlastností** projektu. Podrobnosti najdete v tématu [nastavení C++ vlastností kompilátoru a sestavení v sadě Visual Studio](../working-with-project-properties.md).
 
-1. Rozbalte **vlastnosti konfigurace**, **C/C++** a vyberte **optimalizace**.
+1. Vyberte stránku vlastností **Konfigurace** > pro**CC++/**  > **optimalizaci** .
 
-1. Upravit **rozbalení vložených funkcí** vlastnost.
+1. Upravte vlastnost **rozšíření vložené funkce** .
+
+::: moniker range=">=vs-2019"
+
+Možnost **/Ob3** není k dispozici ve vlastnosti **rozšíření vložené funkce** . Nastavení **/Ob3**:
+
+1. Otevřete dialogové okno **stránky vlastností** projektu. Podrobnosti najdete v tématu [nastavení C++ vlastností kompilátoru a sestavení v sadě Visual Studio](../working-with-project-properties.md).
+
+1. Vyberte stránku vlastností **Konfigurace** > **C/C++**  > **příkazový řádek** .
+
+1. Do **dalších možností**zadejte **/Ob3** .
+
+::: moniker-end
 
 ### <a name="to-set-this-compiler-option-programmatically"></a>Programové nastavení tohoto parametru kompilátoru
 
@@ -77,6 +102,6 @@ Můžete použít `#pragma` [auto_inline](../../preprocessor/auto-inline.md) sm�
 
 ## <a name="see-also"></a>Viz také:
 
-[/O – možnosti (optimalizace kódu)](o-options-optimize-code.md)<br/>
-[Parametry kompilátoru MSVC](compiler-options.md)<br/>
+[/O – možnosti (optimalizace kódu)](o-options-optimize-code.md)\
+[Možnosti kompilátoru MSVC](compiler-options.md)\
 [Syntaxe příkazového řádku kompilátoru MSVC](compiler-command-line-syntax.md)

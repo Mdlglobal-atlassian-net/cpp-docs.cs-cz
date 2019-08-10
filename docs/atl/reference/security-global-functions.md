@@ -16,19 +16,19 @@ helpviewer_keywords:
 - ACL object global functions
 - security IDs [C++]
 ms.assetid: 6a584bfe-16b7-47f4-8439-9c789c41567a
-ms.openlocfilehash: 2c9a6fd31850ed137167b6987ddf2f83f34c64a1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 435ab4756808a530749e110302b73d16a31c38c6
+ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62197239"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68915515"
 ---
 # <a name="security-global-functions"></a>Globální funkce zabezpečení
 
-Tyto funkce poskytují podporu pro úpravu objektů SID a seznamu ACL.
+Tyto funkce poskytují podporu pro úpravu objektů SID a seznamů ACL.
 
 > [!IMPORTANT]
->  Funkce uvedené v následující tabulce nelze použít v aplikacích, které jsou spouštěny v modulu Windows Runtime.
+>  Funkce uvedené v následující tabulce nelze použít v aplikacích, které jsou spouštěny v prostředí Windows Runtime.
 
 |||
 |-|-|
@@ -44,14 +44,14 @@ Tyto funkce poskytují podporu pro úpravu objektů SID a seznamu ACL.
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** atlsecurity.h
+**Záhlaví:** atlsecurity. h
 
-##  <a name="atlgetdacl"></a>  AtlGetDacl
+##  <a name="atlgetdacl"></a>AtlGetDacl
 
 Voláním této funkce načtete informace o volitelném seznamu řízení přístupu (DACL) zadaného objektu.
 
 > [!IMPORTANT]
->  Tuto funkci nelze použít v aplikacích, které jsou spouštěny v modulu Windows Runtime.
+>  Tuto funkci nelze použít v aplikacích, které jsou spouštěny v prostředí Windows Runtime.
 
 ```
 inline bool AtlGetDacl(
@@ -63,13 +63,13 @@ inline bool AtlGetDacl(
 ### <a name="parameters"></a>Parametry
 
 *hObject*<br/>
-Popisovač objektu, pro které chcete načíst informace o zabezpečení.
+Zpracování objektu, pro který mají být načteny informace o zabezpečení.
 
 *ObjectType*<br/>
-Určuje hodnotu z [SE_OBJECT_TYPE](/windows/desktop/api/accctrl/ne-accctrl-_se_object_type) výčet, který určuje typ objektu identifikován *hObject* parametru.
+Určuje hodnotu z výčtu [SE_OBJECT_TYPE](/windows/desktop/api/accctrl/ne-accctrl-se_object_type) , která označuje typ objektu identifikovaného parametrem *hObject* .
 
 *pDacl*<br/>
-Ukazatel na objekt DACL, který bude obsahovat informace o načtených zabezpečení.
+Ukazatel na objekt DACL, který bude obsahovat načtené informace o zabezpečení.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -77,14 +77,14 @@ Při úspěchu vrátí hodnotu true, při neúspěchu hodnotu false.
 
 ### <a name="remarks"></a>Poznámky
 
-V sestavení ladění, dojde k chybě kontrolního výrazu Pokud *hObject* nebo *pDacl* je neplatný.
+V sestavení ladění dojde k chybě kontrolního výrazu, pokud buď *hObject* nebo *pDacl* není platný.
 
-##  <a name="atlsetdacl"></a>  AtlSetDacl
+##  <a name="atlsetdacl"></a>AtlSetDacl
 
 Voláním této funkce nastavíte informace o volitelném seznamu řízení přístupu (DACL) zadaného objektu.
 
 > [!IMPORTANT]
->  Tuto funkci nelze použít v aplikacích, které jsou spouštěny v modulu Windows Runtime.
+>  Tuto funkci nelze použít v aplikacích, které jsou spouštěny v prostředí Windows Runtime.
 
 ```
 inline bool AtlSetDacl(
@@ -97,13 +97,13 @@ inline bool AtlSetDacl(
 ### <a name="parameters"></a>Parametry
 
 *hObject*<br/>
-Popisovač objektu, pro kterou chcete nastavit informace o zabezpečení.
+Zpracování objektu, pro který chcete nastavit informace o zabezpečení.
 
 *ObjectType*<br/>
-Určuje hodnotu z [SE_OBJECT_TYPE](/windows/desktop/api/accctrl/ne-accctrl-_se_object_type) výčet, který určuje typ objektu identifikován *hObject* parametru.
+Určuje hodnotu z výčtu [SE_OBJECT_TYPE](/windows/desktop/api/accctrl/ne-accctrl-se_object_type) , která označuje typ objektu identifikovaného parametrem *hObject* .
 
 *rDacl*<br/>
-Seznam DACL, který obsahuje nové informace o zabezpečení.
+DACL obsahující nové informace o zabezpečení.
 
 *dwInheritanceFlowControl*<br/>
 Řízení toku dědičnosti. Tato hodnota může být 0 (výchozí), PROTECTED_DACL_SECURITY_INFORMATION nebo UNPROTECTED_DACL_SECURITY_INFORMATION.
@@ -114,17 +114,17 @@ Při úspěchu vrátí hodnotu true, při neúspěchu hodnotu false.
 
 ### <a name="remarks"></a>Poznámky
 
-V sestavení ladění, dojde k chybě kontrolního výrazu Pokud *hObject* je neplatný, nebo pokud *dwInheritanceFlowControl* není jedním ze tří povolených hodnot.
+V sestavení ladění dojde k chybě kontrolního výrazu, pokud je *hObject* neplatný nebo pokud *dwInheritanceFlowControl* není jedna ze tří přípustných hodnot.
 ### <a name="requirements"></a>Požadavky
 
-**Záhlaví:** atlsecurity.h
+**Záhlaví:** atlsecurity. h
 
 ##  <a name="atlgetgroupsid"></a>  AtlGetGroupSid
 
 Voláním této funkce načtete identifikátor zabezpečení skupiny (SID) určitého objektu.
 
 > [!IMPORTANT]
->  Tuto funkci nelze použít v aplikacích, které jsou spouštěny v modulu Windows Runtime.
+>  Tuto funkci nelze použít v aplikacích, které jsou spouštěny v prostředí Windows Runtime.
 
 ```
 inline bool AtlGetGroupSid(
@@ -136,13 +136,13 @@ inline bool AtlGetGroupSid(
 ### <a name="parameters"></a>Parametry
 
 *hObject*<br/>
-Popisovač objektu, ze kterého se má načíst informace o zabezpečení.
+Zpracování objektu, ze kterého mají být načteny informace o zabezpečení.
 
 *ObjectType*<br/>
-Určuje hodnotu z [SE_OBJECT_TYPE](/windows/desktop/api/accctrl/ne-accctrl-_se_object_type) výčet, který určuje typ objektu identifikován *hObject* parametru.
+Určuje hodnotu z výčtu [SE_OBJECT_TYPE](/windows/desktop/api/accctrl/ne-accctrl-se_object_type) , která označuje typ objektu identifikovaného parametrem *hObject* .
 
 *pSid*<br/>
-Ukazatel `CSid` objekt, který bude obsahovat nové informace o zabezpečení.
+Ukazatel na `CSid` objekt, který bude obsahovat nové informace o zabezpečení.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -150,14 +150,14 @@ Při úspěchu vrátí hodnotu true, při neúspěchu hodnotu false.
 
 ### <a name="requirements"></a>Požadavky
 
-**Záhlaví:** atlsecurity.h
+**Záhlaví:** atlsecurity. h
 
 ##  <a name="atlsetgroupsid"></a>  AtlSetGroupSid
 
 Voláním této funkce nastavíte identifikátor zabezpečení skupiny (SID) určitého objektu.
 
 > [!IMPORTANT]
->  Tuto funkci nelze použít v aplikacích, které jsou spouštěny v modulu Windows Runtime.
+>  Tuto funkci nelze použít v aplikacích, které jsou spouštěny v prostředí Windows Runtime.
 
 ```
 inline bool AtlSetGroupSid(
@@ -169,13 +169,13 @@ inline bool AtlSetGroupSid(
 ### <a name="parameters"></a>Parametry
 
 *hObject*<br/>
-Popisovač objektu, pro kterou chcete nastavit informace o zabezpečení.
+Zpracování objektu, pro který chcete nastavit informace o zabezpečení.
 
 *ObjectType*<br/>
-Určuje hodnotu z [SE_OBJECT_TYPE](/windows/desktop/api/accctrl/ne-accctrl-_se_object_type) výčet, který určuje typ objektu identifikován *hObject* parametru.
+Určuje hodnotu z výčtu [SE_OBJECT_TYPE](/windows/desktop/api/accctrl/ne-accctrl-se_object_type) , která označuje typ objektu identifikovaného parametrem *hObject* .
 
 *rSid*<br/>
-`CSid` Objekt, který obsahuje nové informace o zabezpečení.
+`CSid` Objekt obsahující nové informace o zabezpečení.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -183,14 +183,14 @@ Při úspěchu vrátí hodnotu true, při neúspěchu hodnotu false.
 
 ### <a name="requirements"></a>Požadavky
 
-**Záhlaví:** atlsecurity.h
+**Záhlaví:** atlsecurity. h
 
-##  <a name="atlgetownersid"></a>  AtlGetOwnerSid
+##  <a name="atlgetownersid"></a>AtlGetOwnerSid
 
 Voláním této funkce načtete identifikátor zabezpečení vlastníka (SID) určitého objektu.
 
 > [!IMPORTANT]
->  Tuto funkci nelze použít v aplikacích, které jsou spouštěny v modulu Windows Runtime.
+>  Tuto funkci nelze použít v aplikacích, které jsou spouštěny v prostředí Windows Runtime.
 
 ```
 inline bool AtlGetOwnerSid(
@@ -202,13 +202,13 @@ inline bool AtlGetOwnerSid(
 ### <a name="parameters"></a>Parametry
 
 *hObject*<br/>
-Popisovač objektu, ze kterého se má načíst informace o zabezpečení.
+Zpracování objektu, ze kterého mají být načteny informace o zabezpečení.
 
 *ObjectType*<br/>
-Určuje hodnotu z [SE_OBJECT_TYPE](/windows/desktop/api/accctrl/ne-accctrl-_se_object_type) výčet, který určuje typ objektu identifikován *hObject* parametru.
+Určuje hodnotu z výčtu [SE_OBJECT_TYPE](/windows/desktop/api/accctrl/ne-accctrl-se_object_type) , která označuje typ objektu identifikovaného parametrem *hObject* .
 
 *pSid*<br/>
-Ukazatel `CSid` objekt, který bude obsahovat nové informace o zabezpečení.
+Ukazatel na `CSid` objekt, který bude obsahovat nové informace o zabezpečení.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -216,14 +216,14 @@ Při úspěchu vrátí hodnotu true, při neúspěchu hodnotu false.
 
 ### <a name="requirements"></a>Požadavky
 
-**Záhlaví:** atlsecurity.h
+**Záhlaví:** atlsecurity. h
 
-##  <a name="atlsetownersid"></a>  AtlSetOwnerSid
+##  <a name="atlsetownersid"></a>AtlSetOwnerSid
 
 Voláním této funkce nastavíte identifikátor zabezpečení vlastníka (SID) určitého objektu.
 
 > [!IMPORTANT]
->  Tuto funkci nelze použít v aplikacích, které jsou spouštěny v modulu Windows Runtime.
+>  Tuto funkci nelze použít v aplikacích, které jsou spouštěny v prostředí Windows Runtime.
 
 ```
 inline bool AtlSetOwnerSid(
@@ -235,13 +235,13 @@ inline bool AtlSetOwnerSid(
 ### <a name="parameters"></a>Parametry
 
 *hObject*<br/>
-Popisovač objektu, pro kterou chcete nastavit informace o zabezpečení.
+Zpracování objektu, pro který chcete nastavit informace o zabezpečení.
 
 *ObjectType*<br/>
-Určuje hodnotu z [SE_OBJECT_TYPE](/windows/desktop/api/accctrl/ne-accctrl-_se_object_type) výčet, který určuje typ objektu identifikován *hObject* parametru.
+Určuje hodnotu z výčtu [SE_OBJECT_TYPE](/windows/desktop/api/accctrl/ne-accctrl-se_object_type) , která označuje typ objektu identifikovaného parametrem *hObject* .
 
 *rSid*<br/>
-`CSid` Objekt, který obsahuje nové informace o zabezpečení.
+`CSid` Objekt obsahující nové informace o zabezpečení.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -249,14 +249,14 @@ Při úspěchu vrátí hodnotu true, při neúspěchu hodnotu false.
 
 ### <a name="requirements"></a>Požadavky
 
-**Záhlaví:** atlsecurity.h
+**Záhlaví:** atlsecurity. h
 
-##  <a name="atlgetsacl"></a>  AtlGetSacl
+##  <a name="atlgetsacl"></a>AtlGetSacl
 
 Voláním této funkce načtete informace o seznamu řízení auditování přístupu (SACL) zadaného objektu.
 
 > [!IMPORTANT]
->  Tuto funkci nelze použít v aplikacích, které jsou spouštěny v modulu Windows Runtime.
+>  Tuto funkci nelze použít v aplikacích, které jsou spouštěny v prostředí Windows Runtime.
 
 ```
 inline bool AtlGetSacl(
@@ -269,16 +269,16 @@ inline bool AtlGetSacl(
 ### <a name="parameters"></a>Parametry
 
 *hObject*<br/>
-Popisovač objektu, ze kterého se má načíst informace o zabezpečení.
+Zpracování objektu, ze kterého mají být načteny informace o zabezpečení.
 
 *ObjectType*<br/>
-Určuje hodnotu z [SE_OBJECT_TYPE](/windows/desktop/api/accctrl/ne-accctrl-_se_object_type) výčet, který určuje typ objektu identifikován *hObject* parametru.
+Určuje hodnotu z výčtu [SE_OBJECT_TYPE](/windows/desktop/api/accctrl/ne-accctrl-se_object_type) , která označuje typ objektu identifikovaného parametrem *hObject* .
 
 *pSacl*<br/>
-Ukazatel na objekt SACL, která bude obsahovat informace o načtených zabezpečení.
+Ukazatel na objekt SACL, který bude obsahovat načtené informace o zabezpečení.
 
 *bRequestNeededPrivileges*<br/>
-Pokud je hodnota true, funkce se pokusí povolit oprávnění SE_SECURITY_NAME a obnovte ji po dokončení.
+Pokud je hodnota true, funkce se pokusí povolit oprávnění SE_SECURITY_NAME a obnovit ji při dokončení.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -286,18 +286,18 @@ Při úspěchu vrátí hodnotu true, při neúspěchu hodnotu false.
 
 ### <a name="remarks"></a>Poznámky
 
-Pokud `AtlGetSacl` má být volána v mnoha případech na mnoho různých objektů, je efektivnější povolit oprávnění SE_SECURITY_NAME jednou před voláním funkce, s *bRequestNeededPrivileges* nastavena na hodnotu false.
+Pokud `AtlGetSacl` se má volat mnohokrát pro mnoho různých objektů, bude efektivnější povolit oprávnění SE_SECURITY_NAME před voláním funkce s *bRequestNeededPrivileges* nastavenou na hodnotu false.
 
 ### <a name="requirements"></a>Požadavky
 
-**Záhlaví:** atlsecurity.h
+**Záhlaví:** atlsecurity. h
 
-##  <a name="atlsetsacl"></a>  AtlSetSacl
+##  <a name="atlsetsacl"></a>AtlSetSacl
 
 Voláním této funkce nastavíte informace o seznamu řízení auditování přístupu (SACL) zadaného objektu.
 
 > [!IMPORTANT]
->  Tuto funkci nelze použít v aplikacích, které jsou spouštěny v modulu Windows Runtime.
+>  Tuto funkci nelze použít v aplikacích, které jsou spouštěny v prostředí Windows Runtime.
 
 ```
 inline bool AtlSetSacl(
@@ -311,19 +311,19 @@ inline bool AtlSetSacl(
 ### <a name="parameters"></a>Parametry
 
 *hObject*<br/>
-Popisovač objektu, pro kterou chcete nastavit informace o zabezpečení.
+Zpracování objektu, pro který chcete nastavit informace o zabezpečení.
 
 *ObjectType*<br/>
-Určuje hodnotu z [SE_OBJECT_TYPE](/windows/desktop/api/accctrl/ne-accctrl-_se_object_type) výčet, který určuje typ objektu identifikován *hObject* parametru.
+Určuje hodnotu z výčtu [SE_OBJECT_TYPE](/windows/desktop/api/accctrl/ne-accctrl-se_object_type) , která označuje typ objektu identifikovaného parametrem *hObject* .
 
 *rSacl*<br/>
-SACL, který obsahuje nové informace o zabezpečení.
+Seznam SACL obsahující nové informace o zabezpečení.
 
 *dwInheritanceFlowControl*<br/>
 Řízení toku dědičnosti. Tato hodnota může být 0 (výchozí), PROTECTED_SACL_SECURITY_INFORMATION nebo UNPROTECTED_SACL_SECURITY_INFORMATION.
 
 *bRequestNeededPrivileges*<br/>
-Pokud je hodnota true, funkce se pokusí povolit oprávnění SE_SECURITY_NAME a obnovte ji po dokončení.
+Pokud je hodnota true, funkce se pokusí povolit oprávnění SE_SECURITY_NAME a obnovit ji při dokončení.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -331,20 +331,20 @@ Při úspěchu vrátí hodnotu true, při neúspěchu hodnotu false.
 
 ### <a name="remarks"></a>Poznámky
 
-V sestavení ladění, dojde k chybě kontrolního výrazu Pokud *hObject* je neplatný, nebo pokud *dwInheritanceFlowControl* není jedním ze tří povolených hodnot.
+V sestavení ladění dojde k chybě kontrolního výrazu, pokud je *hObject* neplatný nebo pokud *dwInheritanceFlowControl* není jedna ze tří přípustných hodnot.
 
-Pokud `AtlSetSacl` má být volána v mnoha případech na mnoho různých objektů, je efektivnější povolit oprávnění SE_SECURITY_NAME jednou před voláním funkce, s *bRequestNeededPrivileges* nastavena na hodnotu false.
+Pokud `AtlSetSacl` se má volat mnohokrát pro mnoho různých objektů, bude efektivnější povolit oprávnění SE_SECURITY_NAME před voláním funkce s *bRequestNeededPrivileges* nastavenou na hodnotu false.
 
 ### <a name="requirements"></a>Požadavky
 
-**Záhlaví:** atlsecurity.h
+**Záhlaví:** atlsecurity. h
 
-##  <a name="atlgetsecuritydescriptor"></a>  AtlGetSecurityDescriptor
+##  <a name="atlgetsecuritydescriptor"></a>AtlGetSecurityDescriptor
 
 Voláním této funkce načtete popisovač zabezpečení daného objektu.
 
 > [!IMPORTANT]
->  Tuto funkci nelze použít v aplikacích, které jsou spouštěny v modulu Windows Runtime.
+>  Tuto funkci nelze použít v aplikacích, které jsou spouštěny v prostředí Windows Runtime.
 
 ```
 inline bool AtlGetSecurityDescriptor(
@@ -360,19 +360,19 @@ bool bRequestNeededPrivileges = true) throw(...);
 ### <a name="parameters"></a>Parametry
 
 *pszObjectName*<br/>
-Ukazatel na řetězec zakončený hodnotou null, který určuje název objektu, ze kterého se má načíst informace o zabezpečení.
+Ukazatel na řetězec zakončený hodnotou null, který určuje název objektu, ze kterého mají být načteny informace o zabezpečení.
 
 *ObjectType*<br/>
-Určuje hodnotu z [SE_OBJECT_TYPE](/windows/desktop/api/accctrl/ne-accctrl-_se_object_type) výčet, který určuje typ objektu identifikován *pszObjectName* parametru.
+Určuje hodnotu z výčtu [SE_OBJECT_TYPE](/windows/desktop/api/accctrl/ne-accctrl-se_object_type) , která označuje typ objektu identifikovaného parametrem *pszObjectName* .
 
 *pSecurityDescriptor*<br/>
-Objekt, který přijímá požadovanou v popisovači.
+Objekt, který přijímá požadovaný popisovač zabezpečení.
 
 *requestedInfo*<br/>
-Sada [SECURITY_INFORMATION](/windows/desktop/SecAuthZ/security-information) bitové příznaky, které označují typ informací o zabezpečení pro načtení. Tento parametr může být kombinací těchto hodnot.
+Sada [SECURITY_INFORMATION](/windows/desktop/SecAuthZ/security-information) bitových příznaků, které označují typ informací o zabezpečení, které mají být načteny. Tento parametr může být kombinací následujících hodnot.
 
 *bRequestNeededPrivileges*<br/>
-Pokud je hodnota true, funkce se pokusí povolit oprávnění SE_SECURITY_NAME a obnovte ji po dokončení.
+Pokud je hodnota true, funkce se pokusí povolit oprávnění SE_SECURITY_NAME a obnovit ji při dokončení.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -380,11 +380,11 @@ Při úspěchu vrátí hodnotu true, při neúspěchu hodnotu false.
 
 ### <a name="remarks"></a>Poznámky
 
-Pokud `AtlGetSecurityDescriptor` má být volána v mnoha případech na mnoho různých objektů, je efektivnější povolit oprávnění SE_SECURITY_NAME jednou před voláním funkce, s *bRequestNeededPrivileges* nastavena na hodnotu false.
+Pokud `AtlGetSecurityDescriptor` se má volat mnohokrát pro mnoho různých objektů, bude efektivnější povolit oprávnění SE_SECURITY_NAME před voláním funkce s *bRequestNeededPrivileges* nastavenou na hodnotu false.
 
 ### <a name="requirements"></a>Požadavky
 
-**Záhlaví:** atlsecurity.h
+**Záhlaví:** atlsecurity. h
 
 ## <a name="see-also"></a>Viz také:
 

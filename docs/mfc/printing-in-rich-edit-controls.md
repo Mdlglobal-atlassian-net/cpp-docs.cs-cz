@@ -6,22 +6,22 @@ helpviewer_keywords:
 - rich edit controls [MFC], printing
 - CRichEditCtrl class [MFC], printing
 ms.assetid: dbda0e40-018f-424e-b5d8-7b489aaf27af
-ms.openlocfilehash: 2ddc52e43da2e409117ccc5169442002ac27a315
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6ae7212eaa8eed1088a507973c80311f169c7751
+ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62238392"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68916270"
 ---
 # <a name="printing-in-rich-edit-controls"></a>Tisk v ovládacích prvcích pro úpravy s formátováním
 
-Poznáte, ovládacích prvků pro úpravy s formátováním ([CRichEditCtrl](../mfc/reference/cricheditctrl-class.md)) k vykreslení jeho výstupu pro zadané zařízení, třeba tiskárny. Můžete také zadat, že výstupní zařízení, pro kterou bohaté ovládacích prvků pro úpravy formátuje text.
+Můžete říct ovládacímu prvku Rich Edit ([CRichEditCtrl](../mfc/reference/cricheditctrl-class.md)), který vykreslí jeho výstup pro konkrétní zařízení, jako je například tiskárna. Můžete také zadat výstupní zařízení, pro které ovládací prvek s formátováním RTF formátuje text.
 
-Pokud chcete naformátovat část obsahu ovládacího prvku pro konkrétní zařízení, můžete použít [FormatRange](../mfc/reference/cricheditctrl-class.md#formatrange) členskou funkci. [FORMATRANGE](/windows/desktop/api/richedit/ns-richedit-_formatrange) struktury použité s touto funkcí určuje rozsah textu pro formátování a kontext zařízení (DC) pro cílové zařízení.
+Chcete-li formátovat část obsahu ovládacího prvku pro úpravy s formátováním pro konkrétní zařízení, můžete použít členskou funkci [FormatRange](../mfc/reference/cricheditctrl-class.md#formatrange) . Struktura [FormatRange](/windows/desktop/api/richedit/ns-richedit-formatrange) použitá s touto funkcí určuje rozsah textu, který se má formátovat, i kontext zařízení (DC) pro cílové zařízení.
 
-Po naformátování textu pro výstup zařízení, můžete výstup odeslat do zařízení s použitím [DisplayBand](../mfc/reference/cricheditctrl-class.md#displayband) členskou funkci. Opakovaně pomocí `FormatRange` a `DisplayBand`, aplikace, která vytiskne obsah ovládacího prvku můžete implementovat řazení do pásem. (Řazení do pásem je rozdělení výstupu do menších částí pro účely tisku.)
+Po formátování textu pro výstupní zařízení můžete odeslat výstup do zařízení pomocí členské funkce [DisplayBand](../mfc/reference/cricheditctrl-class.md#displayband) . Opakovaným použitím `FormatRange` a `DisplayBand`, aplikace, která tiskne obsah ovládacího prvku pro úpravy s formátováním, může implementovat řazení do pásem. (Pro účely tisku je dělení výstupu rozdělené na menší části.)
 
-Můžete použít [SetTargetDevice](../mfc/reference/cricheditctrl-class.md#settargetdevice) členskou funkci k určení cílového zařízení, pro kterou bohaté ovládacích prvků pro úpravy formátuje text. Tato funkce je užitečná pro WYSIWYG (zobrazené získáte) formátování, ve které aplikace umístí textu s použitím výchozí tiskárna metriky písma místo na obrazovce.
+Členskou funkci [SetTargetDevice](../mfc/reference/cricheditctrl-class.md#settargetdevice) můžete použít k určení cílového zařízení, pro které ovládací prvek s bohatým úpravou formátuje svůj text. Tato funkce je užitečná pro zobrazení WYSIWYG (co vidíte), ve kterém aplikace místo obrazovky umisťuje text pomocí výchozí metriky písma tiskárny.
 
 ## <a name="see-also"></a>Viz také:
 
