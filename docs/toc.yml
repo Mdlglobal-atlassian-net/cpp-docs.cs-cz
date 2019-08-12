@@ -10529,22 +10529,8 @@
                   items:
                     - name: "Multithreading s\_použitím jazyka C a prostředí Win32"
                       href: parallel/multithreading-with-c-and-win32.md
-                    - name: Programy s více vlákny
-                      href: parallel/multithread-programs.md
-                    - name: Podpora knihovny pro multithreading
-                      href: parallel/library-support-for-multithreading.md
-                    - name: Zahrnuté soubory pro multithreading
-                      href: parallel/include-files-for-multithreading.md
-                    - name: Funkce knihovny run-time jazyka C pro řízení vláken
-                      href: parallel/c-run-time-library-functions-for-thread-control.md
                     - name: "Ukázkový vícevláknový program v\_jazyce C"
                       href: parallel/sample-multithread-c-program.md
-                    - name: "Psaní programů s\_více vlákny pro prostředí Win32"
-                      href: parallel/writing-a-multithreaded-win32-program.md
-                    - name: "Kompilování a propojování programů s\_více vlákny"
-                      href: parallel/compiling-and-linking-multithread-programs.md
-                    - name: "Obcházení problémových oblastí pomocí programů s\_více vlákny"
-                      href: parallel/avoiding-problem-areas-with-multithread-programs.md
                     - name: Úložiště Thread Local (TLS)
                       href: parallel/thread-local-storage-tls.md
                 - name: "Multithreading s\_použitím jazyka C++ a prostředí MFC"
