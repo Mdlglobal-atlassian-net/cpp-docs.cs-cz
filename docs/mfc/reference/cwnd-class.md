@@ -818,12 +818,12 @@ helpviewer_keywords:
 - CWnd [MFC], WindowProc
 - CWnd [MFC], m_hWnd
 ms.assetid: 49a832ee-bc34-4126-88b3-bc1d9974f6c4
-ms.openlocfilehash: b5da26c617c23f4dc1e95f3055dbe8dde9319756
-ms.sourcegitcommit: c3bf94210bdb73be80527166264d49e33784152c
+ms.openlocfilehash: 91acc8255cd5f22092790f9dcf45558012caf7dc
+ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68821340"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68916786"
 ---
 # <a name="cwnd-class"></a>CWnd – třída
 
@@ -1818,7 +1818,7 @@ Určuje souřadnice klienta bodu, který má být testován.
 *nflags*<br/>
 Určuje, která podřízená okna se mají přeskočit. Tento parametr může být kombinací následujících hodnot:
 
-|Hodnota|Význam|
+|Value|Význam|
 |-----------|-------------|
 |CWP_ALL|Nepřeskočí žádná podřízená okna.|
 |CWP_SKIPINVISIBLE|Přeskočit neviditelná podřízená okna|
@@ -6536,7 +6536,7 @@ Určuje počet opakování.
 *nFlags*<br/>
 Určuje kód kontroly, kód přechodu na klíč, předchozí stav klíče a kód kontextu, jak je znázorněno v následujícím seznamu:
 
-|Hodnota|Popis|
+|Value|Popis|
 |-----------|-----------------|
 |0-7|Kontrola kódu (hodnota závislá na výrobci OEM). Dolní bajt v aplikaci s vysokým pořadím|
 |8|Rozšířený klíč, například klíč funkce nebo klíč na numerické klávesnici (1, pokud se jedná o rozšířený klíč, jinak 0).|
@@ -11474,7 +11474,7 @@ BOOL SetLayeredWindowAttributes(
 Ukazatel na hodnotu COLORREF, která určuje klíč barvy transparentnosti, který se použije při sestavování vrstveného okna. Všechny pixely vybarvené oknem v této barvě budou transparentní. Pro vygenerování COLORREF použijte makro RGB.
 
 *bAlpha*<br/>
-Hodnota alfa používaná k popisu neprůhlednosti vrstveného okna. Další informace naleznete v tématu `SourceConstantAlpha` člen struktury [BLENDFUNCTION](/windows/desktop/api/wingdi/ns-wingdi-_blendfunction) . Když je *bAlpha* 0, okno je zcela transparentní. Když je *bAlpha* 255, okno je neprůhledné.
+Hodnota alfa používaná k popisu neprůhlednosti vrstveného okna. Další informace naleznete v tématu `SourceConstantAlpha` člen struktury [BLENDFUNCTION](/windows/desktop/api/wingdi/ns-wingdi-blendfunction) . Když je *bAlpha* 0, okno je zcela transparentní. Když je *bAlpha* 255, okno je neprůhledné.
 
 *dwFlags*<br/>
 Určuje akci, která má být provedena. Tento parametr může být jednou nebo více z následujících hodnot. Seznam možných hodnot naleznete v tématu [SetLayeredWindowAttributes](/windows/desktop/api/winuser/nf-winuser-setlayeredwindowattributes).
@@ -12258,7 +12258,7 @@ Pokud má *pDCSrc* hodnotu null, *pptSrc* by měl mít hodnotu null.
 Ukazatel na hodnotu COLORREF, která určuje klíč barvy transparentnosti, který se použije při sestavování vrstveného okna. Všechny pixely vybarvené oknem v této barvě budou transparentní. Pro vygenerování COLORREF použijte makro RGB.
 
 *pblend*<br/>
-Ukazatel na strukturu [BLENDFUNCTION](/windows/desktop/api/wingdi/ns-wingdi-_blendfunction) , která určuje hodnotu průhlednosti, která se má použít při sestavování vrstveného okna.
+Ukazatel na strukturu [BLENDFUNCTION](/windows/desktop/api/wingdi/ns-wingdi-blendfunction) , která určuje hodnotu průhlednosti, která se má použít při sestavování vrstveného okna.
 
 *dwFlags*<br/>
 Určuje akci, která má být provedena. Tento parametr může být jednou nebo více z následujících hodnot. Seznam možných hodnot naleznete v tématu [UpdateLayeredWindow](/windows/desktop/api/winuser/nf-winuser-updatelayeredwindow).
