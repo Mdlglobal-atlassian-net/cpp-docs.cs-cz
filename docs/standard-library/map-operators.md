@@ -1,5 +1,5 @@
 ---
-title: '&lt;Mapa&gt; operátory'
+title: '&lt;operátory&gt; mapování'
 ms.date: 03/27/2019
 f1_keywords:
 - map/std::operator!=
@@ -16,18 +16,18 @@ helpviewer_keywords:
 - std::operator&lt; (map)
 - std::operator&lt;= (map)
 - std::operator== (map)
-ms.openlocfilehash: e05aca75f527e1bc78912ab6b4b5a9de6dcd54c5
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: deb442d0ba1fbd180fdb41b66de73df92bee7fc9
+ms.sourcegitcommit: 16c0392fc8d96e814c3a40b0c5346d7389aeb525
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68246425"
+ms.lasthandoff: 08/12/2019
+ms.locfileid: "68956966"
 ---
-# <a name="ltmapgt-operators"></a>&lt;Mapa&gt; operátory
+# <a name="ltmapgt-operators"></a>&lt;operátory&gt; mapování
 
-## <a name="op_neq"></a>  Operator! =
+## <a name="op_neq"></a>! = – operátor
 
-Testuje, zda je objekt map na levé straně operátoru není roven objektu map na pravé straně.
+Testuje, zda objekt mapy na levé straně operátoru není roven objektu mapy na pravé straně.
 
 ```cpp
 bool operator!=(
@@ -37,19 +37,19 @@ bool operator!=(
 
 ### <a name="parameters"></a>Parametry
 
-*doleva*\
+*zbývá*\
 Objekt typu `map`.
 
-*doprava*\
+*Kliknutím*\
 Objekt typu `map`.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-**Hodnota TRUE** Pokud nejsou stejné; mapy **false** Pokud maps jsou si rovny.
+**true** , pokud mapy nejsou stejné; **false** , pokud jsou mapy stejné.
 
 ### <a name="remarks"></a>Poznámky
 
-Porovnání mezi objekty mapování vychází pairwise porovnání jejich prvky. Dvě mapy jsou stejné, pokud mají stejný počet prvků a jejich odpovídající elementy mají stejné hodnoty. V opačném případě nerovnost.
+Porovnání objektů map je založeno na porovnávacím porovnání jejich prvků. Dvě mapy jsou stejné, pokud mají stejný počet prvků a jejich příslušné prvky mají stejné hodnoty. V opačném případě jsou nerovné.
 
 ### <a name="example"></a>Příklad
 
@@ -90,9 +90,9 @@ The maps m1 and m2 are not equal.
 The maps m1 and m3 are equal.
 ```
 
-## <a name="op_lt"></a> – Operátor&lt;
+## <a name="op_lt"></a>podnikatel&lt;
 
-Testuje, zda je objekt map na levé straně operátoru menší než objekt map na pravé straně.
+Testuje, zda je objekt mapy na levé straně operátoru menší než objekt mapy na pravé straně.
 
 ```cpp
 bool operator<(
@@ -102,19 +102,19 @@ bool operator<(
 
 ### <a name="parameters"></a>Parametry
 
-*doleva*\
+*zbývá*\
 Objekt typu `map`.
 
-*doprava*\
+*Kliknutím*\
 Objekt typu `map`.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-**Hodnota TRUE** Pokud mapa na levé straně operátoru je striktně menší než mapování na pravé straně operátoru; v opačném případě **false**.
+**true** , pokud je mapa na levé straně operátoru výhradně menší než mapa na pravé straně operátoru; v opačném případě **false**.
 
 ### <a name="remarks"></a>Poznámky
 
-Porovnání mezi objekty mapování vychází pairwise porovnání jejich prvky. Větší-než vztah mezi dvěma objekty je založen na porovnání první pár prvků nerovnost.
+Porovnání objektů map je založeno na porovnávacím porovnání jejich prvků. Vztah menší než je mezi dvěma objekty je založen na porovnání první dvojice nerovnosti prvků.
 
 ### <a name="example"></a>Příklad
 
@@ -155,9 +155,9 @@ The map m1 is less than the map m2.
 The map m1 is not less than the map m3.
 ```
 
-## <a name="op_lt_eq"></a> – Operátor&lt;=
+## <a name="op_lt_eq"></a>podnikatel&lt;=
 
-Testuje, zda na mapě objekt na levé straně operátoru je menší než nebo roven objektu map na pravé straně.
+Testuje, zda je objekt mapy na levé straně operátoru menší než nebo roven objektu mapy na pravé straně.
 
 ```cpp
 bool operator<=(
@@ -167,15 +167,15 @@ bool operator<=(
 
 ### <a name="parameters"></a>Parametry
 
-*doleva*\
+*zbývá*\
 Objekt typu `map`.
 
-*doprava*\
+*Kliknutím*\
 Objekt typu `map`.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-**Hodnota TRUE** Pokud mapování na levé straně operátoru menší než nebo rovna mapování na pravé straně operátoru; v opačném případě **false**.
+**true** , pokud je mapa na levé straně operátoru menší než nebo rovna mapě na pravé straně operátoru; v opačném případě **false**.
 
 ### <a name="example"></a>Příklad
 
@@ -223,9 +223,9 @@ The map m1 is greater than the map m3.
 The map m1 is less than or equal to the map m4.
 ```
 
-## <a name="op_eq_eq"></a> Operator ==
+## <a name="op_eq_eq"></a>operator = = – operátor
 
-Testuje, zda je objekt map na levé straně operátoru roven objektu map na pravé straně.
+Testuje, zda je objekt mapy na levé straně operátoru roven objektu mapy na pravé straně.
 
 ```cpp
 bool operator==(
@@ -235,19 +235,19 @@ bool operator==(
 
 ### <a name="parameters"></a>Parametry
 
-*doleva*\
+*zbývá*\
 Objekt typu `map`.
 
-*doprava*\
+*Kliknutím*\
 Objekt typu `map`.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-**Hodnota TRUE** mapování na levé straně operátoru je jinak mapování na pravé straně operátoru roven **false**.
+**true** , pokud je mapa na levé straně operátoru rovna mapě na pravé straně operátoru; v opačném případě **false**.
 
 ### <a name="remarks"></a>Poznámky
 
-Porovnání mezi objekty mapování vychází pairwise porovnání jejich prvky. Dvě mapy jsou stejné, pokud mají stejný počet prvků a jejich odpovídající elementy mají stejné hodnoty. V opačném případě nerovnost.
+Porovnání objektů map je založeno na porovnávacím porovnání jejich prvků. Dvě mapy jsou stejné, pokud mají stejný počet prvků a jejich příslušné prvky mají stejné hodnoty. V opačném případě jsou nerovné.
 
 ### <a name="example"></a>Příklad
 
@@ -288,9 +288,9 @@ The maps m1 and m2 are not equal.
 The maps m1 and m3 are equal.
 ```
 
-## <a name="op_gt"></a> – Operátor&gt;
+## <a name="op_gt"></a>podnikatel&gt;
 
-Testuje, zda je objekt map na levé straně operátoru větší než objekt map na pravé straně.
+Testuje, zda je objekt mapy na levé straně operátoru větší než objekt mapy na pravé straně.
 
 ```cpp
 bool operator>(
@@ -300,19 +300,19 @@ bool operator>(
 
 ### <a name="parameters"></a>Parametry
 
-*doleva*\
+*zbývá*\
 Objekt typu `map`.
 
-*doprava*\
+*Kliknutím*\
 Objekt typu `map`.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-**Hodnota TRUE** při mapování na levé straně operátoru větší než mapování na pravé straně operátoru; v opačném případě **false**.
+**true** , pokud je mapa na levé straně operátoru větší než mapa na pravé straně operátoru; v opačném případě **false**.
 
 ### <a name="remarks"></a>Poznámky
 
-Porovnání mezi objekty mapování vychází pairwise porovnání jejich prvky. Větší-než vztah mezi dvěma objekty je založen na porovnání první pár prvků nerovnost.
+Porovnání objektů map je založeno na porovnávacím porovnání jejich prvků. Větší vztah mezi dvěma objekty je založen na porovnání první dvojice nerovnosti prvků.
 
 ### <a name="example"></a>Příklad
 
@@ -352,9 +352,9 @@ The map m1 is greater than the map m3.
 */
 ```
 
-## <a name="op_gt_eq"></a>  – Operátor&gt;=
+## <a name="op_gt_eq"></a>podnikatel&gt;=
 
-Testuje, zda je objekt map na levé straně operátoru větší než nebo rovna hodnotě objekt map na pravé straně.
+Testuje, zda je objekt mapy na levé straně operátoru větší než nebo roven objektu mapy na pravé straně.
 
 ```cpp
 bool operator>=(
@@ -364,15 +364,15 @@ bool operator>=(
 
 ### <a name="parameters"></a>Parametry
 
-*doleva*\
+*zbývá*\
 Objekt typu `map`.
 
-*doprava*\
+*Kliknutím*\
 Objekt typu `map`.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-**Hodnota TRUE** při mapování na levé straně operátoru větší než nebo rovna hodnotě mapování na pravé straně seznamu; v opačném případě **false**.
+**true** , pokud je mapa na levé straně operátoru větší než nebo rovna mapě na pravé straně seznamu; v opačném případě **false**.
 
 ### <a name="example"></a>Příklad
 
@@ -420,9 +420,9 @@ Map m1 is greater than or equal to map m3.
 Map m1 is greater than or equal to map m4.
 ```
 
-## <a name="op_neq_multimap"></a> Operator! = (multimap)
+## <a name="op_neq_multimap"></a>operator! = (multimap) – operátor
 
-Testuje, zda je objektem multimap na levé straně operátoru není roven objektu multimap na pravé straně.
+Testuje, zda objekt multimap na levé straně operátoru není roven objektu multimap na pravé straně.
 
 ```cpp
 bool operator!=(
@@ -432,19 +432,19 @@ bool operator!=(
 
 ### <a name="parameters"></a>Parametry
 
-*doleva*\
+*zbývá*\
 Objekt typu `multimap`.
 
-*doprava*\
+*Kliknutím*\
 Objekt typu `multimap`.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-**Hodnota TRUE** Pokud multimaps nejsou stejné; **false** Pokud multimaps jsou si rovny.
+**true** , pokud se více map nerovná; **false** , pokud jsou více map stejné.
 
 ### <a name="remarks"></a>Poznámky
 
-Porovnání mezi objekty multimap vychází pairwise porovnání jejich prvky. Pokud mají stejný počet prvků a jejich odpovídající elementy mají stejné hodnoty dvou multimaps jsou si rovny. V opačném případě nerovnost.
+Porovnání mezi objekty multimap je založeno na párovým porovnání jejich prvků. Dvě mapy mají stejnou hodnotu, pokud mají stejný počet prvků a jejich příslušné prvky mají stejné hodnoty. V opačném případě jsou nerovné.
 
 ### <a name="example"></a>Příklad
 
@@ -485,9 +485,9 @@ The multimaps m1 and m2 are not equal.
 The multimaps m1 and m3 are equal.
 ```
 
-## <a name="op_lt_multimap"></a> – Operátor&lt;
+## <a name="op_lt_multimap"></a>podnikatel&lt;
 
-Testuje, zda je multimap objekt na levé straně operátoru menší než objektem multimap na pravé straně.
+Testuje, zda je objekt multimap na levé straně operátoru menší než objekt multimap na pravé straně.
 
 ```cpp
 bool operator<(
@@ -497,19 +497,19 @@ bool operator<(
 
 ### <a name="parameters"></a>Parametry
 
-*doleva*\
+*zbývá*\
 Objekt typu `multimap`.
 
-*doprava*\
+*Kliknutím*\
 Objekt typu `multimap`.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-**Hodnota TRUE** Pokud multimap na levé straně operátoru je striktně menší než multimap na pravé straně operátoru; v opačném případě **false**.
+**true** , pokud je multimap na levé straně operátoru striktně menší než multimap na pravé straně operátoru; v opačném případě **false**.
 
 ### <a name="remarks"></a>Poznámky
 
-Porovnání mezi objekty multimap vychází pairwise porovnání jejich prvky. Větší-než vztah mezi dvěma objekty je založen na porovnání první pár prvků nerovnost.
+Porovnání mezi objekty multimap je založeno na párovým porovnání jejich prvků. Vztah menší než je mezi dvěma objekty je založen na porovnání první dvojice nerovnosti prvků.
 
 ### <a name="example"></a>Příklad
 
@@ -550,13 +550,9 @@ The multimap m1 is less than the multimap m2.
 The multimap m1 is not less than the multimap m3.
 ```
 
-<<<<<<< HEAD
-## <a name="eq_multimap"></a> – Operátor&lt;=
-=======
-## <a name="op_lt_eq_multimap"></a>  – Operátor&lt;=
->>>>>>> 009c7ce384664f2a62ffb0bc61d6586b585ed38a
+## <a name="op_lt_eq_multimap"></a>podnikatel&lt;=
 
-Testuje, zda je objekt multimap na levé straně operátoru je menší než nebo roven objektu multimap na pravé straně.
+Testuje, zda je objekt multimap na levé straně operátoru menší než nebo roven objektu multimap na pravé straně.
 
 ```cpp
 bool operator<=(
@@ -566,15 +562,15 @@ bool operator<=(
 
 ### <a name="parameters"></a>Parametry
 
-*doleva*\
+*zbývá*\
 Objekt typu `multimap`.
 
-*doprava*\
+*Kliknutím*\
 Objekt typu `multimap`.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-**Hodnota TRUE** Pokud multimap na levé straně operátoru menší než nebo roven objektu multimap na pravé straně operátoru; v opačném případě **false**.
+**true** , pokud je multimap na levé straně operátoru menší než nebo rovno multimap na pravé straně operátoru; v opačném případě **false**.
 
 ### <a name="example"></a>Příklad
 
@@ -622,9 +618,9 @@ m1 is greater than m3
 m1 is less than or equal to m4
 ```
 
-## <a name="op_eq_eq_multimap"></a> Operator ==
+## <a name="op_eq_eq_multimap"></a>operator = = – operátor
 
-Testuje, zda je objektem multimap na levé straně operátoru roven objektu multimap na pravé straně.
+Testuje, zda je objekt multimap na levé straně operátoru roven objektu multimap na pravé straně.
 
 ```cpp
 bool operator==(
@@ -634,19 +630,19 @@ bool operator==(
 
 ### <a name="parameters"></a>Parametry
 
-*doleva*\
+*zbývá*\
 Objekt typu `multimap`.
 
-*doprava*\
+*Kliknutím*\
 Objekt typu `multimap`.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-**Hodnota TRUE** Pokud multimap na levé straně operátoru roven objektu multimap na pravé straně operátoru; v opačném případě **false**.
+**true** , pokud je multimap na levé straně operátoru rovno multimap na pravé straně operátoru; v opačném případě **false**.
 
 ### <a name="remarks"></a>Poznámky
 
-Porovnání mezi objekty multimap vychází pairwise porovnání jejich prvky. Pokud mají stejný počet prvků a jejich odpovídající elementy mají stejné hodnoty dvou multimaps jsou si rovny. V opačném případě nerovnost.
+Porovnání mezi objekty multimap je založeno na párovým porovnání jejich prvků. Dvě mapy mají stejnou hodnotu, pokud mají stejný počet prvků a jejich příslušné prvky mají stejné hodnoty. V opačném případě jsou nerovné.
 
 ### <a name="example"></a>Příklad
 
@@ -687,9 +683,9 @@ m1 and m2 are not equal
 m1 and m3 are equal
 ```
 
-## <a name="op_gt_multimap"></a> – Operátor&gt;
+## <a name="op_gt_multimap"></a>podnikatel&gt;
 
-Testuje, zda je objektem multimap na levé straně operátoru větší než objektem multimap na pravé straně.
+Testuje, zda je objekt multimap na levé straně operátoru větší než objekt multimap na pravé straně.
 
 ```cpp
 bool operator>(
@@ -699,19 +695,19 @@ bool operator>(
 
 ### <a name="parameters"></a>Parametry
 
-*doleva*\
+*zbývá*\
 Objekt typu `multimap`.
 
-*doprava*\
+*Kliknutím*\
 Objekt typu `multimap`.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-**Hodnota TRUE** Pokud multimap na levé straně operátoru větší než multimap na pravé straně operátoru; v opačném případě **false**.
+**true** , pokud je multimap na levé straně operátoru větší než multimap na pravé straně operátoru; v opačném případě **false**.
 
 ### <a name="remarks"></a>Poznámky
 
-Porovnání mezi objekty multimap vychází pairwise porovnání jejich prvky. Větší-než vztah mezi dvěma objekty je založen na porovnání první pár prvků nerovnost.
+Porovnání mezi objekty multimap je založeno na párovým porovnání jejich prvků. Větší vztah mezi dvěma objekty je založen na porovnání první dvojice nerovnosti prvků.
 
 ### <a name="example"></a>Příklad
 
@@ -752,9 +748,9 @@ Multimap m1 is not greater than multimap m2.
 The multimap m1 is greater than the multimap m3.
 ```
 
-## <a name="op_gt_eq_multimap"></a> – Operátor&gt;=
+## <a name="op_gt_eq_multimap"></a>podnikatel&gt;=
 
-Testuje, zda je objektem multimap na levé straně operátoru větší než nebo rovna hodnotě objektem multimap na pravé straně.
+Testuje, zda je objekt multimap na levé straně operátoru větší než nebo roven objektu multimap na pravé straně.
 
 ```cpp
 bool operator>=(
@@ -764,15 +760,15 @@ bool operator>=(
 
 ### <a name="parameters"></a>Parametry
 
-*doleva*\
+*zbývá*\
 Objekt typu `multimap`.
 
-*doprava*\
+*Kliknutím*\
 Objekt typu `multimap`.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-**Hodnota TRUE** Pokud multimap na levé straně operátoru větší než nebo roven objektu multimap na pravé straně seznamu; v opačném případě **false**.
+**true** , pokud je multimap na levé straně operátoru větší než nebo rovno multimap na pravé straně seznamu; v opačném případě **false**.
 
 ### <a name="example"></a>Příklad
 

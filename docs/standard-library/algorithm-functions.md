@@ -200,12 +200,12 @@ helpviewer_keywords:
 - std::count_if [C++]
 - std::partition_copy [C++]
 - std::swap [C++]
-ms.openlocfilehash: f389d38cf84f8f72d12242e798010d53a26f81a8
-ms.sourcegitcommit: 20a1356193fbe0ddd1002e798b952917eafc3439
+ms.openlocfilehash: b08d45ac065fe63f6f51e3b63a49e8714a486988
+ms.sourcegitcommit: 16c0392fc8d96e814c3a40b0c5346d7389aeb525
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68661530"
+ms.lasthandoff: 08/12/2019
+ms.locfileid: "68956983"
 ---
 # <a name="ltalgorithmgt-functions"></a>&lt;funkce&gt; algoritmu
 
@@ -695,7 +695,7 @@ Výstupní iterátor adresující pozici prvního prvku v cílovém rozsahu.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Výstupní iterace adresující pozici, která je jedno místo za posledním prvek v cílové oblasti, tedy iterátor adresuje  `result`_DestEnd`result` – ( *_Last* -  *_First*).
+Výstupní iterátor adresující pozici, která je jedno za posledním prvkem v cílovém rozsahu, tj. adresy `result` iterátoru + (*Poslední* - ).
 
 ### <a name="remarks"></a>Poznámky
 
@@ -788,7 +788,7 @@ Obousměrný iterátor, který adresuje umístění jedno místo za posledním p
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Výstupní iterátor adresující pozici, která je jedno za posledním prvkem v cílové oblasti, tedy iterátor adres *destEnd* -(*Poslední* -  *).*
+Výstupní iterátor adresující pozici, která je jedno za posledním prvkem v cílové oblasti, tedy iterátor adres *destEnd* -(*Poslední* - ).
 
 ### <a name="remarks"></a>Poznámky
 
@@ -1071,7 +1071,7 @@ Hodnota prvků, které se mají spočítat.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Rozdílový `InputIterator` typ, který počítá počet prvků v rozsahu [*First*, *Last*), které mají hodnotu *hodnoty.*
+Rozdílový typ `InputIterator` , který počítá počet prvků v rozsahu [*First*, *Last*), které mají hodnotu hodnoty.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -1605,7 +1605,7 @@ ForwardIterator fill_n(
 Zásady spouštění, které se mají použít.
 
 *první*\
-Výstupní iterátor adresující pozici prvního prvku v rozsahu, který má být přiřazena hodnota *hodnoty.*
+Výstupní iterátor adresující pozici prvního prvku v rozsahu, který má být přiřazena hodnota hodnoty.
 
 *výpočtu*\
 Typ podepsaný nebo unsigned integer určující počet prvků, které mají být přiřazeny hodnoty.
@@ -2070,7 +2070,7 @@ Vstupní iterátor adresující pozici prvního prvku v rozsahu, který má být
 Vstupní iterátor adresující pozici jednu za poslední prvek v rozsahu, který chcete prohledat.
 
 *čekání*\
-Objekt funkce predikátu definovaný uživatelem nebo [výraz lambda](../cpp/lambda-expressions-in-cpp.md) definující podmínku, která má být splněna prvkem, který má být vyhledán. Unární predikát přijímá jediný argument a vrátí **hodnotu true** , pokud je splněna, nebo **false** , pokud není splněna. Signatura `InputIterator` předchází *musí být* `bool pred(const T& arg);`, kde `T` je typ, na který lze implicitně převést při zpětném odkazování. Klíčové slovo const je zobrazeno pouze k ilustraci, že objekt funkce nebo výraz lambda by neměl upravovat argument.
+Objekt funkce predikátu definovaný uživatelem nebo [výraz lambda](../cpp/lambda-expressions-in-cpp.md) definující podmínku, která má být splněna prvkem, který má být vyhledán. Unární predikát přijímá jediný argument a vrátí **hodnotu true** , pokud je splněna, nebo **false** , pokud není splněna. Signatura předchází musí být `bool pred(const T& arg);`, kde `T` je typ, na který `InputIterator` lze implicitně převést při zpětném odkazování. Klíčové slovo const je zobrazeno pouze k ilustraci, že objekt funkce nebo výraz lambda by neměl upravovat argument.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -2192,7 +2192,7 @@ Vstupní iterátor adresující pozici prvního prvku v rozsahu, který má být
 Vstupní iterátor adresující pozici jednu za poslední prvek v rozsahu, který chcete prohledat.
 
 *čekání*\
-Objekt funkce predikátu definovaný uživatelem nebo [výraz lambda](../cpp/lambda-expressions-in-cpp.md) definující podmínku, která nebude splněna prvkem, který je prohledáván. Unární predikát přijímá jediný argument a vrátí **hodnotu true** , pokud je splněna, nebo **false** , pokud není splněna. Signatura `InputIterator` předchází *musí být* `bool pred(const T& arg);`, kde `T` je typ, na který lze implicitně převést při zpětném odkazování. Klíčové slovo const je zobrazeno pouze k ilustraci, že objekt funkce nebo výraz lambda by neměl upravovat argument.
+Objekt funkce predikátu definovaný uživatelem nebo [výraz lambda](../cpp/lambda-expressions-in-cpp.md) definující podmínku, která nebude splněna prvkem, který je prohledáván. Unární predikát přijímá jediný argument a vrátí **hodnotu true** , pokud je splněna, nebo **false** , pokud není splněna. Signatura předchází musí být `bool pred(const T& arg);`, kde `T` je typ, na který `InputIterator` lze implicitně převést při zpětném odkazování. Klíčové slovo const je zobrazeno pouze k ilustraci, že objekt funkce nebo výraz lambda by neměl upravovat argument.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -2244,7 +2244,7 @@ Algoritmus `for_each` je velmi flexibilní a umožňuje úpravu každého prvku 
 
 Odkazovaný rozsah musí být platný; všechny ukazatele musí být možné odkázat a v rámci sekvence musí být poslední pozice dosažitelná z první pomocí přírůstku.
 
-Složitost je lineární s nejvyšším (*posledním* -  *)* porovnáním.
+Složitost je lineární s nejvyšším (*posledním* - ) porovnáním.
 
 ### <a name="example"></a>Příklad
 
@@ -5845,7 +5845,7 @@ Odkazovaný rozsah musí být platný; všechny ukazatele musí být možné odk
 
 Prvky *a* a *b* jsou ekvivalentní, ale nemusí být nutně stejné, pokud `pred( a, b )` jsou obě hodnoty `pred( b, a )` false a má hodnotu false, kde *před* je predikát určený parametrem. `partition` Algoritmus není stabilní a nezaručuje, že se zachová relativní pořadí ekvivalentních prvků. Algoritmus `stable_partition` zachovává toto původní řazení.
 
-Složitost je lineární: existují `(last - first)` *aplikace s* nejvyšším `(last - first)/2` a maximálně zahozením.
+Složitost je lineární: existují `(last - first)` aplikace s nejvyšším `(last - first)/2` a maximálně zahozením.
 
 ### <a name="example"></a>Příklad
 
@@ -7646,7 +7646,7 @@ Dopředný iterátor, který adresuje umístění jedno místo za posledním prv
 Objekt funkce predikátu definovaný uživatelem, který definuje podmínku, která má být splněna, pokud mají být provedeny dva prvky jako ekvivalentní. Binární predikát přijímá dva argumenty a vrací **hodnotu true** , pokud je splněno, a **false** , pokud není splněna.
 
 *vyhledávač*\
-Vyhledávací modul, který zapouzdřuje vzor, který se má hledat, a vyhledávací algoritmus, který se má použít.
+Vyhledávací modul, který zapouzdřuje vzor, který se má hledat, a vyhledávací algoritmus, který se má použít. Další informace o vyhledávačích naleznete v tématu [Třída default_searcher](default-searcher-class.md), třída [boyer_moore_horspool_searcher](boyer-moore-horspool-searcher-class.md)a [Třída boyer_moore_searcher](boyer-moore-searcher-class.md).
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -8907,7 +8907,7 @@ Haldy představují ideální způsob implementace front priorit a používají 
 
 Odkazovaný rozsah musí být platný; všechny ukazatele musí být možné odkázat a v rámci sekvence je poslední pozice dosažitelná z první pomocí přírůstku.
 
-`N log N`Složitost je maximálně, kde *N* = *Poslední* -  *.*
+`N log N`Složitost je maximálně, kde *N* = *Poslední* - .
 
 ### <a name="example"></a>Příklad
 

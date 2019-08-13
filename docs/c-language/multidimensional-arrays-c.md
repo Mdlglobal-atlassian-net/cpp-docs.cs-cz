@@ -7,10 +7,10 @@ helpviewer_keywords:
 - subscript expressions
 ms.assetid: 4ba5c360-1f17-4575-b370-45f62e1f2bc2
 ms.openlocfilehash: 34f5c60ba9ba5da869426ae4971808a5d75fee2f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.sourcegitcommit: 16c0392fc8d96e814c3a40b0c5346d7389aeb525
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 08/12/2019
 ms.locfileid: "62233360"
 ---
 # <a name="multidimensional-arrays-c"></a>Vícerozměrná pole (C)
@@ -21,7 +21,7 @@ Výraz dolního indexu může mít také více dolních indexů následovně:
 expression1 [ expression2 ] [ expression3 ] ...
 ```
 
-Výrazy dolního indexu se přiřazují zleva doprava. Úplně vlevo výraz dolního indexu *expression1* **[** *expression2* **]**, je vyhodnocen jako první. Adresa, která je výsledkem přidání *expression1* a *expression2* tvoří výraz ukazatele; potom *expression3* se přidá k tomuto výrazu ukazatele a vytvoří nový výraz ukazatele, a tak dále, dokud se přidala posledního výrazu dolního indexu. Operátor dereference (<strong>\*</strong>) se použije po vyhodnocení posledního výrazu dolního indexu, pokud poslední ukazatel hodnotu typ pole (Další příklady naleznete níže).
+Výrazy dolního indexu se přiřazují zleva doprava. Výraz dolního indexu v levé části, *Výraz1* **[** *Výraz2* **]** , je vyhodnocen jako první. Adresa, která je výsledkem přidávání *Výraz1* a *Výraz2* Forms, výrazu ukazatele; pak se do tohoto výrazu ukazatele přidá *expression3* , aby se vytvořil nový výraz ukazatele, a tak dále, dokud se nepřidá poslední výraz dolního indexu. Operátor dereference (<strong>\*</strong>) je použit po vyhodnocení posledního výrazu v dolním indexu, pokud hodnota koncového ukazatele neadresuje typ pole (viz příklady níže).
 
 Výrazy s více dolními indexy odkazují na prvky „vícerozměrných polí“. Vícerozměrné pole je pole, jehož prvky jsou pole. Například, první prvek trojrozměrného pole je dvourozměrné pole.
 

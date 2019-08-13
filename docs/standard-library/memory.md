@@ -1,18 +1,18 @@
 ---
 title: '&lt;rezident&gt;'
-ms.date: 04/04/2019
+ms.date: 08/04/2019
 f1_keywords:
 - memory/std::<memory>
 - <memory>
 - std::<memory>
 helpviewer_keywords:
 - memory header
-ms.openlocfilehash: 7c30a44de70675af69648fdba79325a173ab62fc
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 869a7590d880beba7ccc1d324fd1ba227eeac4e0
+ms.sourcegitcommit: 16c0392fc8d96e814c3a40b0c5346d7389aeb525
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68451890"
+ms.lasthandoff: 08/12/2019
+ms.locfileid: "68957092"
 ---
 # <a name="ltmemorygt"></a>&lt;rezident&gt;
 
@@ -91,9 +91,9 @@ Definuje třídu, operátor a několik šablon, které pomáhají přidělit a u
 
 |||
 |-|-|
-|[allocator](../standard-library/allocator-class.md)|Třída šablony popisuje objekt, který spravuje přidělování úložiště a uvolnění pro pole objektů typu **typ.**|
+|[allocator](../standard-library/allocator-class.md)|Třída šablony popisuje objekt, který spravuje přidělování úložiště a uvolnění pro pole objektů typu typ.|
 |[allocator_traits](../standard-library/allocator-traits-class.md)|Popisuje objekt, který určuje všechny informace požadované kontejnerem s povoleným přidělováním.|
-|[auto_ptr](../standard-library/auto-ptr-class.md)|Třída šablony popisuje objekt, který ukládá ukazatel na přidělený objekt typu **typ** <strong>\*</strong> , který zajišťuje, že objekt, ke kterému se odkazuje, bude odstraněn, když je jeho ohraničující auto_ptr zničen.|
+|[auto_ptr](../standard-library/auto-ptr-class.md)|Třída šablony popisuje objekt, který ukládá ukazatel na přidělený objekt typu typ <strong>\*</strong> , který zajišťuje, že objekt, ke kterému se odkazuje, bude odstraněn, když je jeho ohraničující auto_ptr zničen.|
 |[bad_weak_ptr](../standard-library/bad-weak-ptr-class.md)|Nahlásí chybnou výjimku weak_ptr.|
 |[enabled_shared_from_this](../standard-library/enable-shared-from-this-class.md)|Pomáhá generovat `shared_ptr`.|
 |[pointer_traits](../standard-library/pointer-traits-struct.md)|Poskytuje informace, které jsou vyžadovány objektem třídy `allocator_traits` šablony pro popis přidělování s typem `Ptr`ukazatele.|
@@ -108,7 +108,7 @@ Definuje třídu, operátor a několik šablon, které pomáhají přidělit a u
 |-|-|
 |[allocator_arg_t](../standard-library/allocator-class.md#allocator_arg_t)||
 |[default_delete](../standard-library/default-delete-struct.md)||
-|[kontrole]()||
+|hash|Poskytuje přetížení specializované na `unique_ptr` a. `shared_ptr`|
 |[owner_less](../standard-library/memory-functions.md#owner_less)|Umožňuje smíšené porovnání sdílených a slabých ukazatelů na základě vlastnictví.|
 |[uses_allocator](../standard-library/allocator-class.md#uses_allocator)||
 
@@ -116,7 +116,7 @@ Definuje třídu, operátor a několik šablon, které pomáhají přidělit a u
 
 |||
 |-|-|
-|[>\<přidělování anulování](../standard-library/allocator-void-class.md)|Specializace alokátoru třídy šablony pro typování void, definující pouze typy členů, které dávají smysl v tomto specializovaném kontextu.|
+|[>\<přidělování anulování](../standard-library/allocator-void-class.md)|Specializace přidělování tříd šablon k typu **void**, definující pouze typy členů, které mají smysl v tomto specializovaném kontextu.|
 
 ## <a name="see-also"></a>Viz také:
 

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - queue header
 ms.assetid: 24fcf350-eb0e-48cf-9fef-978be1aeda1f
-ms.openlocfilehash: d7a13b98ba8cff78839b2afb98371ffba5ced461
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 506ab5fccd44ad37a08a9f741f44f24d3a85b87d
+ms.sourcegitcommit: 16c0392fc8d96e814c3a40b0c5346d7389aeb525
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68458340"
+ms.lasthandoff: 08/12/2019
+ms.locfileid: "68956999"
 ---
 # <a name="ltqueuegt"></a>&lt;provedených&gt;
 
@@ -38,12 +38,6 @@ Definuje třídy šablon priority_queue a Queue a několik podpůrných šablon.
 |[operator==](../standard-library/queue-operators.md#op_eq_eq)|Testuje, zda je objekt Queue na levé straně operátoru roven objektu Queue na pravé straně.|
 |[operátor >](../standard-library/queue-operators.md#op_gt)|Testuje, zda je objekt Queue na levé straně operátoru větší než objekt Queue na pravé straně.|
 |[operator>=](../standard-library/queue-operators.md#op_gt_eq)|Testuje, zda je objekt Queue na levé straně operátoru větší než nebo roven objektu Queue na pravé straně.|
-
-### <a name="functions"></a>Funkce
-
-|||
-|-|-|
-|[swap]()||
 
 ### <a name="classes"></a>Třídy
 

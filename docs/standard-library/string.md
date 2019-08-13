@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - string header
 ms.assetid: a2fb9d00-d7ae-4170-bfea-2dc337aa37cf
-ms.openlocfilehash: fda00cd5a8f8768688c8e10f25a0d1f2370a256f
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 80d5d297cc28cfb019dae99e9e9736e4b2eb654f
+ms.sourcegitcommit: 16c0392fc8d96e814c3a40b0c5346d7389aeb525
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68459193"
+ms.lasthandoff: 08/12/2019
+ms.locfileid: "68957134"
 ---
 # <a name="ltstringgt"></a>&lt;string&gt;
 
@@ -38,8 +38,8 @@ C++ Jazyk a C++ standardní knihovna podporují dva typy řetězců:
 
 |Název typu|Popis|
 |-|-|
-|[string](../standard-library/string-typedefs.md#string)|Typ, který popisuje specializaci třídy `basic_string` šablony s elementy typu  `string`char jako.|
-|[wstring](../standard-library/string-typedefs.md#wstring)|Typ, který popisuje specializaci třídy `basic_string` šablony s prvky typu  `wstring`wchar_t jako.|
+|[string](../standard-library/string-typedefs.md#string)|Typ, který popisuje specializaci třídy `basic_string` šablony s elementy typu `string`char jako.|
+|[wstring](../standard-library/string-typedefs.md#wstring)|Typ, který popisuje specializaci třídy `basic_string` šablony s prvky typu `wstring`wchar_t jako.|
 |[u16string](../standard-library/string-typedefs.md#u16string)|Typ, který popisuje specializaci třídy `basic_string` šablony na základě prvků typu. `char16_t`|
 |[u32string](../standard-library/string-typedefs.md#u32string)|Typ, který popisuje specializaci třídy `basic_string` šablony na základě prvků typu. `char32_t`|
 
@@ -61,9 +61,9 @@ C++ Jazyk a C++ standardní knihovna podporují dva typy řetězců:
 
 |||
 |-|-|
-|[kontrole]()||
+|hash|Vytvoří hodnotu hash řetězce.|
 |[swap](../standard-library/string-functions.md#swap)|Vyměňuje pole znaků dvou řetězců.|
-|[stod](../standard-library/string-functions.md#stod)|Převede posloupnost znaků na dvojitou hodnotu.|
+|[stod](../standard-library/string-functions.md#stod)|Převede posloupnost znaků na dvojitouhodnotu.|
 |[stof](../standard-library/string-functions.md#stof)|Převede sekvenci znaků na **float**.|
 |[stoi](../standard-library/string-functions.md#stoi)|Převede sekvenci znaků na celé číslo.|
 |[stold](../standard-library/string-functions.md#stold)|Převede sekvenci znaků na **Long Double**.|
