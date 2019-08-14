@@ -1,22 +1,22 @@
 ---
 title: Závažná chyba nástroje NMAKE U1045
-ms.date: 11/04/2016
+ms.date: 08/11/2019
 f1_keywords:
 - U1045
 helpviewer_keywords:
 - U1045
 ms.assetid: dc70d162-14b9-4107-9237-7514044d72e3
-ms.openlocfilehash: 0937e83303fefdf1f2aaaa5eea6f43c27159fd57
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: bdc28bcf02aea791a346a0a74915707fef551b8b
+ms.sourcegitcommit: db1ed91fa7451ade91c3fb76bc7a2b857f8a5eef
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64344388"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "68980535"
 ---
 # <a name="nmake-fatal-error-u1045"></a>Závažná chyba nástroje NMAKE U1045
 
-Vytvoření podřízeného procesu selhalo: zpráva
+> Vytvoření se nezdařilo: *zpráva*
 
-Program nebo volané NMAKE se nezdařila z důvodu daný příkaz. Když NMAKE volá jiný program – například kompilátoru nebo linkeru – volání může selhat nebo chybu mohou být vráceny názvem programu. Tato zpráva se používá k ohlaste chybu.
+Program nebo příkaz, který se v nástroji NMAKE nezdařil z důvodu ve *zprávě*. Když NMAKE volá jiný program, například kompilátor nebo linker, volání může selhat. Nebo je možné, že volaný program vrátí chybu. Tato zpráva se používá k nahlášení chyby.
 
-Chcete-li vyřešit tento problém, nejprve určete příčinu chyby. Můžete použít příkazy hlášené NMAKE [/N](../../build/reference/nmake-options.md) možnost, pokud chcete ověřit nastavení prostředí a opakovat akce prováděné NMAKE na příkazovém řádku.
+Chcete-li tento problém vyřešit, je třeba nejprve určit příčinu chyby. Pomocí příkazů, které jsou hlášeny pomocí možnosti NMAKE [/n](../../build/reference/running-nmake.md#nmake-options) , můžete ověřit nastavení prostředí a opakovat akce provedené nástrojem NMAKE na příkazovém řádku.

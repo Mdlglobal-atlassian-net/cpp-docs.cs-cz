@@ -1124,16 +1124,7 @@
                 - name: Projekty NMAKE v sadě Visual Studio
                   href: build/reference/creating-a-makefile-project.md
                 - name: Spuštění příkazu NMAKE
-                  expanded: false
-                  items:
-                    - name: Spuštění příkazu NMAKE
-                      href: build/reference/running-nmake.md
-                    - name: NMAKE – možnosti
-                      href: build/reference/nmake-options.md
-                    - name: Tools.ini a příkaz NMAKE
-                      href: build/reference/tools-ini-and-nmake.md
-                    - name: Ukončovací kódy příkazu NMAKE
-                      href: build/reference/exit-codes-from-nmake.md
+                  href: build/reference/running-nmake.md
                 - name: Obsah souboru pravidel
                   expanded: false
                   items:

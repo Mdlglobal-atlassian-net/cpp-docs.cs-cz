@@ -1,6 +1,6 @@
 ---
 title: Předběžné zpracování direktiv souboru pravidel
-ms.date: 06/14/2018
+ms.date: 08/11/2019
 f1_keywords:
 - '!UNDEF'
 - '!INCLUDE'
@@ -39,70 +39,70 @@ helpviewer_keywords:
 - ELSE directive
 - ELSEIFDEF directive
 ms.assetid: bcedeccb-d981-469d-b9e8-ab5d097fd8c2
-ms.openlocfilehash: 0945d0e1c149b7e1ab31b0dbbd5003f8b15a1e4d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4825ca180cb1b419a9ffa5232575ba1a24f8805d
+ms.sourcegitcommit: db1ed91fa7451ade91c3fb76bc7a2b857f8a5eef
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62321556"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "68980513"
 ---
 # <a name="makefile-preprocessing-directives"></a>Předběžné zpracování direktiv souboru pravidel
 
-Direktivy předběžného zpracování se nerozlišují malá a velká písmena. Počáteční vykřičník (!) musí být uvedena na začátku řádku. Nula nebo více mezerami či tabulátory se mohou objevit za vykřičník pro odsazení.
+Direktivy předběžného zpracování nerozlišují velká a malá písmena. Počáteční vykřičník (!) musí být na začátku řádku. Za vykřičníkem se může zobrazit nula nebo více mezer nebo karet pro odsazení.
 
-- **! CMDSWITCHES** {**+** &#124; **-**}*možnost* ...
+- `!CMDSWITCHES`{`+` &#124; } možnost... `-`
 
-   Změní každou *možnost* uvedené zapnutí nebo vypnutí. Mezery ani tabulátory musí být uvedena před + nebo - – operátor; žádný mohou objevit mezi operátor a [možnost písmena](nmake-options.md). Písmena se nerozlišují malá a jsou zadána bez lomítka (/). Chcete-li některé možnosti na a dalších vypnout, použijte samostatné specifikace **! CMDSWITCHES**.
+   Zapíná nebo vypíná jednotlivé *Možnosti* . Mezery nebo tabulátory se musí vyskytovat `+` před `-` operátorem OR; žádná se může vyskytovat mezi operátorem a [písmeny možností](running-nmake.md#nmake-options). U písmen nejsou rozlišována velká a malá písmena a jsou zadána`/`bez lomítka (). Pokud chcete zapnout některé možnosti a vypnout jiné, použijte samostatné specifikace `!CMDSWITCHES`.
 
-   Pouze /D / můžu /N a /S lze použít v souboru pravidel. V Tools.ini, jsou povoleny všechny možnosti kromě /F, / help, / nologo, / X, a /?. Zadaný v bloku popis změny se projeví až do další blok popis. Tato direktiva aktualizuje **MAKEFLAGS**; změny jsou zděděny během rekurze, pokud **MAKEFLAGS** určena.
+   V souboru pravidel se dá použít jenom/D,/I,/N a/S. V souboru Tools. ini jsou povoleny všechny možnosti s výjimkou/F,/HELP,/NOLOGO,/X a/?. Změny zadané v rámci bloku Description se projeví až po bloku Next Description. Tato direktiva aktualizuje **MAKEFLAGS**; změny jsou zděděny během rekurze, pokud je zadán parametr **MAKEFLAGS** .
 
-- **! Chyba** *text*
+- `!ERROR`*text*
 
-   Zobrazí *text* v chybě nástroje U1050 a zastaví NMAKE, i když /K, /, můžu **. Ignorovat**, **! CMDSWITCHES**, nebo se používá příkaz modifikátor pomlčky (-). Mezery nebo tabulátory před *text* jsou ignorovány.
+   Zobrazí *text* ve U1050 Error a pak zablokuje NMAKE, i když se používá modifikátor `.IGNORE`příkazu `!CMDSWITCHES`/k,/i,,`-`nebo pomlčka (). Mezery nebo tabulátory před *textem* budou ignorovány.
 
-- **! ZPRÁVA** *text*
+- `!MESSAGE`*text*
 
-   Zobrazí *text* do standardního výstupu. Mezery nebo tabulátory před *text* jsou ignorovány.
+   Zobrazí *text* do standardního výstupu. Mezery nebo tabulátory před *textem* budou ignorovány.
 
-- **! ZAHRNOUT** [ **\<** ] *filename* [ **>** ]
+- `!INCLUDE`[ `<` ] *filename* [ `>` ]
 
-   Přečte *filename* jako souboru pravidel, pak bude pokračovat s aktuální soubor pravidel. Vyhledá v NMAKE *filename* nejprve v adresáři zadané nebo aktuální pak rekurzivně prostřednictvím libovolného adresáře nadřazených souborů pravidel, potom, pokud *filename* je uzavřen do lomených závorek (\<>), v adresářích určených **zahrnout** makro, které je zpočátku nastaven proměnná prostředí INCLUDE. Užitečné k předání **. PŘÍPONY** nastavení **. CENNÝ**a odvozená pravidla pro soubory pravidel rekurzivní.
+   Přečte *soubor filename* jako soubor pravidel a pak pokračuje s aktuálním souborem pravidel. NMAKE vyhledává *název souboru* nejprve v zadaném nebo aktuálním adresáři a pak rekurzivně prostřednictvím adresářů všech nadřazených souborů pravidel a potom, pokud je *název souboru* uzavřený pomocí lomených`< >`závorek (), v adresářích určených  **Přidejte** makro, které je zpočátku nastaveno na proměnnou prostředí include. Užitečné pro předání `.SUFFIXES` nastavení, `.PRECIOUS`a odvození pravidel do rekurzivních souborů pravidel.
 
-- **! Pokud** *constant_expression*
+- `!IF`*constant_expression*
 
-   Zpracovává příkazy mezi **! Pokud** a dalších **! OSTATNÍ** nebo **! ENDIF** Pokud *constant_expression* vyhodnocen na nenulovou hodnotu.
+   Příkazy procesů mezi `!IF` a Next `!ELSE` nebo `!ENDIF` IF *constant_expression* se vyhodnotí jako nenulová hodnota.
 
-- **! IFDEF** *makro*
+- `!IFDEF`*název_makra*
 
-   Zpracovává příkazy mezi **! IFDEF** a dalších **! OSTATNÍ** nebo **! ENDIF** Pokud *makro* je definována. Makro s hodnotou null se považuje za definovat.
+   Zpracuje příkazy mezi `!IFDEF` a další `!ELSE` nebo `!ENDIF` , pokud je definován *název_makra* . Je považováno za definováno makro s hodnotou null.
 
-- **! IFNDEF** *makro*
+- `!IFNDEF`*název_makra*
 
-   Zpracovává příkazy mezi **! IFNDEF** a dalších **! OSTATNÍ** nebo **! ENDIF** Pokud *makro* není definován.
+   Zpracovává příkazy `!IFNDEF` a další `!ELSE` nebo `!ENDIF` , pokud není definován parametr *název_makra* .
 
-- **! OSTATNÍ** [**IF** *constant_expression* &#124; **IFDEF** *makro* &#124; **IFNDEF**  *makro*]
+- `!ELSE`[`IF` &#124; &#124; constant_expression makro`IFDEF` ] `IFNDEF`
 
-   Zpracovává příkazy mezi **! OSTATNÍ** a dalších **! ENDIF** Pokud předchozího **! Pokud**, **! IFDEF**, nebo **! IFNDEF** příkaz vyhodnocen na hodnotu nula. Volitelné klíčová slova poskytnout další kontrolu nad předběžného zpracování.
+   Zpracuje příkazy mezi `!ELSE` a další `!ENDIF` , pokud je předchozí `!IF`příkaz `!IFDEF`, nebo `!IFNDEF` , vyhodnocen jako nula. Volitelná klíčová slova poskytují další kontrolu před předzpracováním.
 
-- **!ELSEIF**
+- `!ELSEIF`
 
-   Synonymum pro **! ELSE IF**.
+   Synonyma pro `!ELSE IF`.
 
-- **! ELSEIFDEF**
+- `!ELSEIFDEF`
 
-   Synonymum pro **! OSTATNÍ IFDEF**.
+   Synonyma pro `!ELSE IFDEF`.
 
-- **!ELSEIFNDEF**
+- `!ELSEIFNDEF`
 
-   Synonymum pro **! OSTATNÍ IFNDEF**.
+   Synonyma pro `!ELSE IFNDEF`.
 
-- **! ENDIF**
+- `!ENDIF`
 
-   Označuje konec **! Pokud**, **! IFDEF**, nebo **! IFNDEF** bloku. Žádný text po **! ENDIF** na stejném řádku se ignoruje.
+   Označuje konec `!IF`bloku, `!IFDEF`nebo `!IFNDEF` . Jakýkoli text, `!ENDIF` který následuje po na stejném řádku, se ignoruje.
 
-- **! UNDEF** *makro*
+- `!UNDEF`*název_makra*
 
-   Nedefinovaných hodnot *makro*.
+   Zruší definici *makra*.
 
 ## <a name="see-also"></a>Viz také:
 
