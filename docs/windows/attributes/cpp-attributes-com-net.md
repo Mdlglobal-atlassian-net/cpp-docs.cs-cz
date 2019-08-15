@@ -1,40 +1,40 @@
 ---
-title: Atributy C++ COM a .NET
+title: Atributy C++ pro COM a .NET
 ms.custom: index-page
 ms.date: 11/19/2018
 ms.topic: conceptual
 helpviewer_keywords:
 - attributes [C++/CLI], reference topics
 ms.assetid: 613a3611-b3eb-4347-aa38-99b654600e1c
-ms.openlocfilehash: 9b985799849a268010dff63f9f7bc25e474b365e
-ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.openlocfilehash: 4885edf57988d5f83b56ba6a71da85877354d3ce
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65448511"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69491060"
 ---
-# <a name="c-attributes-for-com-and-net"></a>Atributy C++ COM a .NET
+# <a name="c-attributes-for-com-and-net"></a>Atributy C++ pro COM a .NET
 
-Microsoft definuje sadu atributů C++, které zjednodušují programování v modelu COM a rozhraní .NET Framework common language runtime vývoj. Pokud zahrnete atributy ve zdrojových souborech, kompilátor funguje s poskytovatelem knihoven DLL pro vložení kódu nebo změnit kód v souborech generované objektů. Tyto atributy pomáhají při vytváření souborů .idl, rozhraní, knihovny typů a dalších prvků modelu COM. Atributy jsou podporovány v integrovaném vývojovém prostředí (IDE) podle průvodce a v okně Vlastnosti.
+Microsoft definuje sadu C++ atributů, které zjednodušují programování v modelu COM a .NET Framework vývoj společného jazykového modulu runtime. Při zahrnutí atributů do zdrojových souborů kompilátor pracuje s knihovnami DLL zprostředkovatele pro vložení kódu nebo úpravy kódu v generovaných souborech objektů. Tyto atributy pomáhají při vytváření souborů. idl, rozhraní, knihoven typů a dalších prvků COM. V integrovaném vývojovém prostředí (IDE) jsou atributy podporovány průvodci a okno Vlastnosti.
 
-Zatímco atributy eliminují některý podrobné psaní kódu, které jsou potřebné pro zápis objektů modelu COM, je nutné na pozadí v [COM Základy](/windows/desktop/com/the-component-object-model) nejlépe jejich použití.
+I když atributy eliminují některé podrobné kódování potřebné pro zápis objektů COM, budete potřebovat základní informace v [modelu COM](/windows/win32/com/the-component-object-model) , aby je bylo možné nejlépe použít.
 
 > [!NOTE]
-> Pokud chcete pro atributy standard C++, naleznete v tématu [atributy](../../cpp/attributes.md).
+> Pokud hledáte C++ standardní atributy, přečtěte si téma [atributy](../../cpp/attributes.md).
 
 ## <a name="purpose-of-attributes"></a>Účel atributů
 
-Atributy rozšíření bez narušení classic struktura jazyka C++ v aktuálně možné směry. Atributy umožňují poskytovatelů (samostatné knihovny DLL) rozšíření funkcí jazyka dynamicky. Hlavním cílem atributy je pro zjednodušení vytváření komponent modelu COM, kromě zvýšit úroveň produktivity pro vývojáře komponenty. Atributy lze použít na téměř jakémkoli C++ konstrukce, jako jsou třídy, datové členy nebo členské funkce. Zvýraznění výhody této nové technologie je následující:
+Atributy, C++ které se šíří v směrech, nejsou aktuálně možné, aniž by došlo k narušení klasické struktury jazyka. Atributy povolují poskytovatelům (samostatné knihovny DLL) dynamické rozšiřování funkcí jazyka. Hlavním cílem atributů je zjednodušit vytváření komponent modelu COM, kromě zvýšení úrovně produktivity pro vývojáře komponent. Atributy lze použít pro skoro jakoukoli C++ konstrukci, jako jsou třídy, datové členy nebo členské funkce. Následuje přehled výhod poskytovaných touto novou technologií:
 
-- Uvádí známé a jednoduché konvence volání.
+- Zveřejňuje známou a jednoduchou konvenci volání.
 
-- Používá se vložit kód, který na rozdíl od makra, je rozpoznán v ladicím programu.
+- Pomocí vloženého kódu, který je na rozdíl od maker, je rozpoznáno ladicím programem.
 
-- Umožňuje snadno odvození ze základních tříd bez nákladných implementace podrobnosti.
+- Umožňuje snadné odvození ze základních tříd bez podrobností implementace zatěžujících.
 
-- Nahradí velké množství kódu IDL vyžadované komponenty modelu COM s několika stručné atributy.
+- Nahrazuje velký objem kódu IDL, který je vyžadován komponentou modelu COM, s několika stručnými atributy.
 
-Například implementovat jednoduché událostní jímka pro obecné třídy ATL, můžete použít [event_receiver](event-receiver.md) atribut pro konkrétní třídu jako `CMyReceiver`. `event_receiver` Atribut je poté zkompilován s Microsoft C++ kompilátoru, který vloží správný kód do souboru objektu.
+Například pro implementaci jednoduché jímky událostí pro obecnou třídu ATL můžete použít atribut [event_receiver](event-receiver.md) na konkrétní třídu, jako je například `CMyReceiver`. Atribut je poté zkompilován kompilátorem společnosti Microsoft C++ , který vloží správný kód do souboru objektu. `event_receiver`
 
 ```cpp
 [event_receiver(com)]
@@ -45,60 +45,60 @@ class CMyReceiver
 }
 ```
 
-Potom můžete nastavit `CMyReceiver` metody `handler1` a `handler2` zpracování událostí (použití vnitřních funkcí [__hook](../../cpp/hook.md)) ze zdroje událostí, které můžete vytvořit pomocí [event_source](event-source.md).
+`CMyReceiver` Pak můžete nastavit metody `handler1` a `handler2` zpracovávat události (pomocí vnitřní funkce [__hook](../../cpp/hook.md)) ze zdroje událostí, který můžete vytvořit pomocí [event_source](event-source.md).
 
 ## <a name="basic-mechanics-of-attributes"></a>Základní mechanismy atributů
 
-Existují tři způsoby, jak vložit atributy do projektu. Nejprve můžete je ručně do zdrojového kódu. Za druhé můžete vložit pomocí mřížky vlastností objektu ve vašem projektu. Nakonec můžete vložit pomocí různých průvodců. Další informace o používání **vlastnosti** okno a různých průvodců, najdete v části [projektů sady Visual Studio – C++ ](../../build/creating-and-managing-visual-cpp-projects.md).
+Existují tři způsoby, jak do projektu vložit atributy. Nejprve je můžete vložit do zdrojového kódu ručně. Za druhé je můžete vložit pomocí mřížky vlastností objektu v projektu. Nakonec je můžete vložit pomocí různých průvodců. Další informace o použití okna **vlastnosti** a různých průvodců naleznete v tématu [projekty sady Visual Studio – C++ ](../../build/creating-and-managing-visual-cpp-projects.md).
 
-Jako dříve, při sestavení projektu, kompilátor analyzuje každý zdrojový soubor jazyka C++, vytváření soubor objektu. Ale když kompilátor narazí atribut, je analyzovat a syntakticky ověřit. Kompilátor poté zavolá dynamicky poskytovatele atributu vložení kódu a provádět další úpravy v době kompilace. Implementace zprostředkovatele se liší v závislosti na typu atributu. Například Atlprov.dll implementují související ATL atributy.
+Stejně jako v případě, kdy je projekt sestaven, kompilátor analyzuje každý C++ zdrojový soubor a vytváří soubor objektu. Pokud však kompilátor narazí na atribut, je analyzován a syntakticky ověřen. Kompilátor potom dynamicky volá poskytovatele atributu pro vložení kódu nebo provedení dalších úprav v době kompilace. Implementace poskytovatele se liší v závislosti na typu atributu. Například atributy související s ATL jsou implementovány pomocí Atlprov. dll.
 
-Následující obrázek ukazuje vztah mezi kompilátoru a poskytovatele atributu.
+Následující obrázek ukazuje vztah mezi kompilátorem a poskytovatelem atributu.
 
-![Atribut komunikace komponent](../media/vccompattrcomm.gif "komunikace atribut komponent")
+![Komunikace atributů komponenty](../media/vccompattrcomm.gif "Komunikace atributů komponenty")
 
 > [!NOTE]
-> Použití atributu nezmění obsah zdrojového souboru. Kód vygenerovaný atributu je viditelné se pouze během relace ladění. Kromě toho pro každý zdrojový soubor v projektu, můžete vygenerovat textový soubor, který zobrazuje výsledky atribut nahrazení. Další informace o tomto postupu najdete v tématu [/Fx (sloučení vloženého kódu)](../../build/reference/fx-merge-injected-code.md) a [ladění vloženého kódu](/visualstudio/debugger/how-to-debug-injected-code).
+> Použití atributů nemění obsah zdrojového souboru. Jediným časem, kdy je kód generovaného atributu viditelný, je během ladění relace. Kromě toho můžete pro každý zdrojový soubor v projektu vygenerovat textový soubor, který zobrazí výsledky náhrady atributu. Další informace o tomto postupu naleznete v tématu [/FX (sloučení vloženého kódu)](../../build/reference/fx-merge-injected-code.md) a [ladění vloženého kódu](/visualstudio/debugger/how-to-debug-injected-code).
 
-Jako většina konstruktory jazyka C++ mít atributy sadu vlastností, která definuje jejich správné použití. To se označuje jako kontext atribut a je určena v tabulce atribut kontextu pro každý atribut referenční téma. Například [coclass](coclass.md) atribut lze použít pouze na existující třída nebo struktura, nikoli [cpp_quote –](cpp-quote.md) atribut, který může vložit na libovolné místo v rámci C++ zdrojový soubor.
+Podobně jako C++ u většiny konstrukcí mají atributy sadu vlastností, které definují jejich správné použití. Tato vlastnost je označována jako kontext atributu a je řešena v tabulce kontextu atributů pro každý odkaz na atribut. Například atribut typu [Coclass](coclass.md) lze použít pouze pro existující třídu nebo strukturu, a to na rozdíl od atributu [cpp_quote](cpp-quote.md) , který může být vložen kamkoli do C++ zdrojového souboru.
 
 ## <a name="building-an-attributed-program"></a>Sestavení programu s atributy
 
-Po přepnutí Visual C++ atributy do zdrojového kódu, můžete chtít Microsoft C++ kompilátor vytvoří soubor typu knihovny a .idl za vás. Následující linkeru možnosti tvorbu souborů .tlb a IDL:
+Po umístění vizuálních C++ atributů do zdrojového kódu můžete chtít, aby kompilátor společnosti Microsoft C++ vytvořil pro vás knihovnu typů a soubor. idl. Následující možnosti linkeru vám pomůžou při sestavování souborů. tlb a. idl:
 
-- [/ IDLOUT](../../build/reference/idlout-name-midl-output-files.md)
+- [/IDLOUT](../../build/reference/idlout-name-midl-output-files.md)
 
-- [/ IGNOREIDL](../../build/reference/ignoreidl-don-t-process-attributes-into-midl.md)
+- [/IGNOREIDL](../../build/reference/ignoreidl-don-t-process-attributes-into-midl.md)
 
 - [/MIDL](../../build/reference/midl-specify-midl-command-line-options.md)
 
 - [/TLBOUT](../../build/reference/tlbout-name-dot-tlb-file.md)
 
-Některé projekty obsahují více souborů .idl nezávislé. Slouží k vytvoření dvou nebo více souborů .tlb a svázat ho Volitelně můžete do bloku prostředků. Tento scénář není aktuálně podporován v jazyce Visual C++.
+Některé projekty obsahují více nezávislých souborů. idl. Slouží k vytvoření dvou nebo více souborů. tlb a volitelně k jejich svázání do bloku prostředků. Tento scénář není v současné době podporován ve C++vizuálu.
 
-Kromě toho výstup linkeru jazyka Visual C++ všechny informace o atributu souvisejícím s IDL do jednoho souboru MIDL. Nebude žádný způsob, jak generovat dvě knihovny typů z jednoho projektu.
+Kromě toho vizuální C++ linker vypíše všechny informace o atributu související s IDL do jediného souboru MIDL. Neexistuje žádný způsob, jak vygenerovat dvě knihovny typů z jednoho projektu.
 
-## <a name="contexts"></a> Kontexty atributů
+## <a name="contexts"></a>Kontexty atributů
 
-Atributy C++ lze popsat pomocí čtyři základní pole: cíl se můžou uplatnit na (**platí pro**), pokud jsou opakovatelné nebo ne (**Repeatable**), vyžaduje přítomnost dalších atributů ( **Atributy požadované**) a nekompatibilitu s další atributy (**neplatné atributy**). Tato pole jsou uvedeny v související tabulce v tématu referenční každý atribut. Každá z těchto polí je popsána níže.
+C++atributy je možné popsat pomocí čtyř základních polí: cíl, na který se dá použít (**platí pro**), pokud se dají opakovat nebo ne (**opakovatelné**), požadované přítomnosti ostatních atributů (**povinné atributy**) a nekompatibility. s jinými atributy (**neplatné atributy**). Tato pole jsou uvedena v doprovodné tabulce v referenčním tématu každého atributu. Každé z těchto polí je popsáno níže.
 
 ### <a name="applies-to"></a>Platí pro
 
-Toto pole popisuje různé prvky jazyka C++, které jsou platné cíle pro zadaného atributu. Například pokud atribut určuje "třída" v **platí pro** pole, to znamená, že atribut lze použít pouze na právní třídu C++. Pokud je atribut použit na členskou funkci třídy, výsledkem bude chyba syntaxe.
+Toto pole popisuje různé C++ prvky jazyka, které jsou platnými cíli pro zadaný atribut. Například pokud atribut v poli **platí pro** určuje "Class", znamená to, že atribut lze použít pouze na právní C++ třídu. Pokud je atribut použit na členskou funkci třídy, výsledkem by byla chyba syntaxe.
 
-Další informace najdete v tématu [atributy podle použití](attributes-by-usage.md).
+Další informace naleznete v tématu [atributy podle použití](attributes-by-usage.md).
 
-### <a name="repeatable"></a>Opakovatelné
+### <a name="repeatable"></a>REPEATABLE
 
-Toto pole je uvedeno, zda je atribut pro stejný cíl opakovaně použít. Většina atributy nejsou opakovatelné.
+Toto pole uvádí, zda lze atribut opakovaně použít na stejný cíl. Většinu atributů nelze opakovat.
 
-### <a name="required-attributes"></a>Vyžadované atributy
+### <a name="required-attributes"></a>Požadované atributy
 
-Toto pole obsahuje další atributy, které musí být přítomná (který se použije pro stejný cíl) pro zadaný atribut fungovat správně. Je běžné pro atribut, který má obsahovat žádné položky pro toto pole.
+Toto pole obsahuje seznam atributů, které musí být přítomny (tj. použité na stejný cíl) pro správné fungování zadaného atributu. Pro atribut, který má pro toto pole nějaké položky, není běžné.
 
 ### <a name="invalid-attributes"></a>Neplatné atributy
 
-Toto pole obsahuje další atributy, které nejsou kompatibilní se zadaným atributem. Je běžné pro atribut, který má obsahovat žádné položky pro toto pole.
+Toto pole obsahuje seznam dalších atributů, které nejsou kompatibilní se zadaným atributem. Pro atribut, který má pro toto pole nějaké položky, není běžné.
 
 ## <a name="in-this-section"></a>V tomto oddílu
 

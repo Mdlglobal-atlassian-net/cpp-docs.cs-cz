@@ -1,29 +1,29 @@
 ---
-title: Kompilátor upozornění (úroveň 1) C4312
+title: Upozornění kompilátoru (úroveň 1) C4312
 ms.date: 11/04/2016
 f1_keywords:
 - C4312
 helpviewer_keywords:
 - C4312
 ms.assetid: 541906ed-4f62-4bcb-947f-cf9ae7411bcb
-ms.openlocfilehash: 666df7904a7aac88983af40d31a67271beaa0b1f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1983d7b89688568b8152372328216c2a814f7bc0
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62408313"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69510083"
 ---
-# <a name="compiler-warning-level-1-c4312"></a>Kompilátor upozornění (úroveň 1) C4312
+# <a name="compiler-warning-level-1-c4312"></a>Upozornění kompilátoru (úroveň 1) C4312
 
 'operation': převod z 'type1' na 'type2' větší velikosti
 
-Toto upozornění zjistí pokus o přiřadí hodnotu 32 bitů 64bitového ukazatele typu, například přetypování 32-bit `int` nebo `long` na 64bitový ukazatel.
+Toto upozornění detekuje pokus o přiřazení 32 hodnoty k typu ukazatele na 64, například přetypování 32-bit `int` nebo `long` 64 na 16bitový ukazatel.
 
-To může být potenciálně nebezpečný převod i pro ukazatel hodnot, které odpovídají v 32 bitů, pokud dojde k rozšířením znaménka. Pokud negativní 32bitové celé číslo je přiřazený k typu 64bitového ukazatele, rozšířením znaménka způsobí, že hodnota ukazatele odkazují na adresu paměti liší od hodnoty na celé číslo.
+To může být nebezpečný převod i pro hodnoty ukazatele, které se vejdou v 32 bitech, když dojde k rozšíření podpisu. Pokud je záporné celé číslo 32, které je přiřazeno k typu ukazatele 64, přípona znaménka způsobí, že hodnota ukazatele odkazuje na adresu paměti odlišnou od hodnoty celého čísla.
 
-Jenom se objeví toto upozornění pro kompilaci 64-bit cíle. Další informace najdete v tématu [pravidla pro používání ukazatele](/windows/desktop/WinProg64/rules-for-using-pointers).
+Toto upozornění je vystaveno pouze pro 64 cíle kompilace. Další informace najdete v tématu [pravidla pro použití ukazatelů](/windows/win32/WinProg64/rules-for-using-pointers).
 
-Následující příklad kódu generuje C4312 při kompilaci pro 64bitové cíle:
+Následující příklad kódu generuje C4312 při kompilování pro 64 cíle:
 
 ```
 // C4312.cpp

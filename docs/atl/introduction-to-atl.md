@@ -6,26 +6,26 @@ helpviewer_keywords:
 - COM objects, creating in ATL
 - ATL
 ms.assetid: 77f565e8-c4ec-4a80-af4b-7278fcfe5c98
-ms.openlocfilehash: 8c2dcab962cd9863acf0f8e7070727f3b18117d5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5eba816bc87eeebea2c41489a5d15c48645739e8
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62261914"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69492111"
 ---
 # <a name="introduction-to-atl"></a>Úvod do ATL
 
-Knihovna ATL je knihovnu Active Template Library, sady založené na šablonách C++, třídy, pomocí které můžete snadno vytvořit malé, rychlé objekty modelu COM (Component Object). Má zvláštní podporu pro klíčové funkce modelu COM, včetně: stock implementace [IUnknown](/windows/desktop/api/unknwn/nn-unknwn-iunknown), [IClassFactory](/windows/desktop/api/unknwnbase/nn-unknwnbase-iclassfactory), [IClassFactory2](/windows/desktop/api/ocidl/nn-ocidl-iclassfactory2), a `IDispatch`; duální rozhraní; standardní rozhraní čítače COM; body připojení; odtržených rozhraní; a ovládací prvky ActiveX.
+ATL je knihovna aktivních šablon, sada tříd založených na C++ šablonách, pomocí kterých lze snadno vytvořit malé objekty modelu COM (Fast Component Object Model). Má speciální podporu pro klíčové funkce modelu COM `IDispatch`, mezi které patří: základní implementace rozhraní [IUnknown](/windows/win32/api/unknwn/nn-unknwn-iunknown), [IClassFactory](/windows/win32/api/unknwnbase/nn-unknwnbase-iclassfactory), [IClassFactory2](/windows/win32/api/ocidl/nn-ocidl-iclassfactory2)a; duální rozhraní; standardní rozhraní enumerátorů com; spojovací body; odtrhnout Interfaces a ovládací prvky ActiveX.
 
-ATL kód slouží k vytvoření objektů s jedním vláknem, objekty apartment modelu, model volných vláken objekty nebo objekty volných vláken a apartment model.
+Kód ATL lze použít k vytvoření objektů s jedním vláknem, objektů typu apartment, objektů s volnými vlákny nebo objektů modelu apartment.
 
-V této části probíraná témata zahrnují:
+Témata, která jsou popsaná v tomto oddílu, zahrnují:
 
-- Jak [knihovna šablon](../atl/using-a-template-library.md) se liší od standardní knihovny.
+- Způsob, jakým se [Knihovna šablon](../atl/using-a-template-library.md) liší od standardní knihovny.
 
-- Co jste [lze a nelze provést pomocí knihovny ATL](../atl/scope-of-atl.md).
+- Co můžete [a nelze s knihovnou ATL dělat](../atl/scope-of-atl.md).
 
-- [Doporučení k výběru mezi ATL a MFC](../atl/recommendations-for-choosing-between-atl-and-mfc.md).
+- [Doporučení pro výběr mezi ATL a MFC](../atl/recommendations-for-choosing-between-atl-and-mfc.md).
 
 ## <a name="see-also"></a>Viz také:
 

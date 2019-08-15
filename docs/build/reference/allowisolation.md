@@ -8,12 +8,12 @@ helpviewer_keywords:
 - /ALLOWISOLATION editbin option
 - ALLOWISOLATION editbin option
 ms.assetid: 91430344-f64f-491a-a5a5-7ea3b21cbe68
-ms.openlocfilehash: 02012e7561fe8462f5f25ae13d961c35561666ec
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 359a68d5ec0a8c7390b5f0343530864e880a057c
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62273141"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69493121"
 ---
 # <a name="allowisolation"></a>/ALLOWISOLATION
 
@@ -28,16 +28,16 @@ Určuje chování při vyhledávání manifestu.
 
 ## <a name="remarks"></a>Poznámky
 
-**/ ALLOWISOLATION** způsobí, že operační systém k vyhledání a načtení manifestu.
+**/ALLOWISOLATION** způsobí, že operační systém provede vyhledání a načtení manifestu.
 
-**/ ALLOWISOLATION** je výchozí nastavení.
+Výchozí hodnota je **/ALLOWISOLATION** .
 
-**/ALLOWISOLATION:No** označuje, zda jsou načteny spustitelné soubory, jako by nebyly žádné manifestu a způsobí, že [Editbin – referenční dokumentace](editbin-reference.md) nastavit `IMAGE_DLLCHARACTERISTICS_NO_ISOLATION` bit ve volitelné hlavičce `DllCharacteristics` pole.
+**/ALLOWISOLATION: No** označuje, že spustitelné soubory jsou načteny, jako kdyby neexistoval manifest, a způsobí, že `DllCharacteristics` [nástroje EDITBIN odkaz](editbin-reference.md) nastaví `IMAGE_DLLCHARACTERISTICS_NO_ISOLATION` bit v poli volitelné hlavičky.
 
-Izolace zakázán pro spustitelný soubor, nebude Windows zavaděče pokuste se najít manifest aplikace pro nově vytvořený procesu. Nový proces nemá výchozí aktivační kontext, i když je manifest ve spustitelném souboru, samotné nebo pokud je manifest, který má název *název spustitelného souboru*. exe.manifest.
+Pokud je izolace pro spustitelný soubor zakázaná, zavaděč Windows se nepokusí najít manifest aplikace pro nově vytvořený proces. Nový proces nemá výchozí aktivační kontext, i když je v samotném spustitelném souboru manifest, nebo pokud existuje manifest, který má název *spustitelného souboru-Name*. exe. manifest.
 
 ## <a name="see-also"></a>Viz také:
 
 [EDITBIN – možnosti](editbin-options.md)<br/>
 [/ALLOWISOLATION (vyhledání manifestu)](allowisolation-manifest-lookup.md)<br/>
-[Referenční příručka souborů manifestu](/windows/desktop/SbsCs/manifest-files-reference)
+[Referenční dokumentace souborů manifestu](/windows/win32/SbsCs/manifest-files-reference)

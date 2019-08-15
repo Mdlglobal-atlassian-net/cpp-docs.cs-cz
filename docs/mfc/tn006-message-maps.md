@@ -19,12 +19,12 @@ helpviewer_keywords:
 - ON_COMMAND_EX macro [MFC]
 - message maps [MFC], Windows messaging
 ms.assetid: af4b6794-4b40-4f1e-ad41-603c3b7409bb
-ms.openlocfilehash: 3536cb215da04fb7114853d3fa5d764585cbb58e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 489db046910cc4b44e381b3f9056cfe8f8b7ccfa
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62306141"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69511116"
 ---
 # <a name="tn006-message-maps"></a>TN006: Mapy zpráv
 
@@ -32,25 +32,25 @@ Tato poznámka popisuje zařízení mapy zpráv knihovny MFC.
 
 ## <a name="the-problem"></a>Problém
 
-Microsoft Windows implementuje virtuální funkce třídy oken, které používají jeho zasílání zpráv zařízení. Z důvodu velkého počtu zpráv, které jsou zapojené poskytuje samostatnou virtuální funkci pro každou zprávu Windows by vznikla nepřekonatelně velké vtable.
+Systém Microsoft Windows implementuje virtuální funkce v oknech třídy, které používají své zařízení pro zasílání zpráv. Kvůli velkému počtu zpráv, které zajišťují samostatné virtuální funkce pro každou zprávu Windows, by se vytvořila samostatná Velká tabulka vtable.
 
-Vzhledem k tomu, že počet zpráv definované v systému Windows, které mění v průběhu času, a protože aplikace můžete definovat vlastní zprávy Windows, mapy zpráv zajišťují určitou úroveň dereference, který brání narušení stávajícího kódu rozhraní změny.
+Vzhledem k tomu, že počet systémem definovaných zpráv systému Windows se v průběhu času mění a protože aplikace mohou definovat vlastní zprávy systému Windows, poskytují mapy zpráv úroveň dereference, která zabraňuje změnám rozhraní v přerušení stávajícího kódu.
 
 ## <a name="overview"></a>Přehled
 
-Knihovna MFC poskytuje alternativu k příkazu switch, který byl použit v tradičních aplikacích založených na Windows pro zpracování zprávy odeslané do okna. Mapování ze zprávy do metody může být definován tak, aby při příjmu zprávy podle časového období odpovídající metoda je volána automaticky. Mapování zpráv Azure je navržená tak, aby připomínaly virtuální funkce, ale neobsahuje další výhody, které není možné s virtuální funkcí jazyka C++.
+Knihovna MFC poskytuje alternativu k příkazu switch, který byl použit v tradičních aplikacích pro systém Windows ke zpracování zpráv odesílaných do okna. Mapování zpráv na metody lze definovat tak, aby při přijetí zprávy oknem bylo odpovídající metoda volána automaticky. Toto zařízení pro mapování zpráv je navrženo tak, aby bylo podobné virtuálním funkcím, ale C++ má další výhody, které s virtuálními funkcemi nejsou možné.
 
 ## <a name="defining-a-message-map"></a>Definování mapy zpráv
 
-[DECLARE_MESSAGE_MAP](reference/message-map-macros-mfc.md#declare_message_map) – Makro deklaruje tři členy třídy.
+Makro [DECLARE_MESSAGE_MAP](reference/message-map-macros-mfc.md#declare_message_map) deklaruje tři členy třídy.
 
-- Privátní pole AFX_MSGMAP_ENTRY položek, které se nazývá *_messageEntries*.
+- Soukromé pole AFX_MSGMAP_ENTRYch záznamů s názvem *_messageEntries*.
 
-- Chráněná struktura AFX_MSGMAP volá *messageMap* , která odkazuje na *_messageEntries* pole.
+- Chráněná struktura AFX_MSGMAP s názvem *messageMap* , která odkazuje na pole *_messageEntries* .
 
-- Chráněná virtuální funkce volaná `GetMessageMap` , který vrací adresa *messageMap*.
+- Chráněná virtuální funkce s `GetMessageMap` názvem, která vrací adresu *messageMap*.
 
-Toto makro měly být umístěny v deklaraci libovolné třídy pomocí mapy zpráv. Podle konvence je na konci deklarace třídy. Příklad:
+Toto makro by mělo být vloženo do deklarace jakékoli třídy pomocí map zpráv. Podle konvence je na konci deklarace třídy. Příklad:
 
 ```cpp
 class CMyWnd : public CMyParentWndClass
@@ -66,18 +66,18 @@ protected:
 };
 ```
 
-Toto je má formát generovaný nástrojem AppWizard a ClassWizard při vytváření nových tříd. / / {{A / nebo}} závorky jsou potřeba pro ClassWizard.
+Jedná se o formát generovaný AppWizard a ClassWizard při vytváření nových tříd. Závorky//{{a/}} jsou potřeba pro ClassWizard.
 
-Tabulka mapu zpráv je definována s použitím sady makra, která rozbalte položky mapy zpráv. Začíná na tabulku [BEGIN_MESSAGE_MAP](reference/message-map-macros-mfc.md#begin_message_map) volání makra, která definuje třídu, která zpracovává tuto mapu zpráv a nadřazené třídy, do které se předávají nezpracované zprávy. V tabulce končí [END_MESSAGE_MAP](reference/message-map-macros-mfc.md#end_message_map) volání makra.
+Tabulka mapy zpráv je definována pomocí sady maker, které se rozbalí na položky mapování zpráv. Tabulka začíná voláním makra [BEGIN_MESSAGE_MAP](reference/message-map-macros-mfc.md#begin_message_map) , které definuje třídu, která je zpracována touto mapou zprávy, a nadřazenou třídou, do které jsou předány neošetřené zprávy. Tabulka končí voláním makra [END_MESSAGE_MAP](reference/message-map-macros-mfc.md#end_message_map) .
 
-Mezi tyto dva – makro volání je záznam pro každou zprávu zpracovat tuto mapu zpráv. Všechny standardní zprávy Windows je makro formuláře ON_WM_*MESSAGE_NAME* záznam pro tuto zprávu, která generuje.
+Mezi těmito dvěma voláními makra je položka pro každou zprávu, kterou má tato mapa zpráv zpracovat. Každá standardní zpráva Windows má makro ON_WM_*MESSAGE_NAME* , které generuje položku pro tuto zprávu.
 
-Signatura standardní funkce je definována pro rozbalení parametry každé zprávy Windows a zajištění bezpečnosti typů. Tyto podpisy lze nalézt v souboru Afxwin.h v prohlášení o [CWnd](../mfc/reference/cwnd-class.md). Každý z nich je označen klíčovým slovem **afx_msg** pro snadnější identifikaci.
+Byl definován podpis standardní funkce pro rozbalení parametrů každé zprávy systému Windows a zajištění bezpečnosti typů. Tyto signatury lze nalézt v souboru afxwin. h v deklaraci [CWnd](../mfc/reference/cwnd-class.md). Každá z nich je označena klíčovým slovem **afx_msg** pro snadnější identifikaci.
 
 > [!NOTE]
-> ClassWizard vyžaduje použití **afx_msg** – klíčové slovo v deklaracích zpráva mapování obslužné rutiny.
+> ClassWizard vyžaduje, abyste v deklaracích obslužných rutin mapování zpráv používali klíčové slovo **afx_msg** .
 
-Tyto funkce podpisy byly získány pomocí jednoduchého konvence. Název funkce vždy začíná `"On`". Následuje název zprávy Windows s "WM_" odebrat a první písmeno každého slova velké. Pořadí parametrů je *wParam* následovaný `LOWORD`(*lParam*) pak `HIWORD`(*lParam*). Nepoužité parametry nejsou předány. Všechny obslužné rutiny, které jsou zabaleny ve třídách knihovny MFC jsou převáděna na ukazatele na odpovídající objekty knihovny MFC. Následující příklad ukazuje, jak zpracovat zprávu WM_PAINT a způsobit, `CMyWnd::OnPaint` zavolání funkce:
+Signatury těchto funkcí byly odvozeny pomocí jednoduché konvence. Název funkce vždy začíná `"On`řetězcem ". Následuje název zprávy Windows s odebraným "WM_" a první písmeno každého slova na velká písmena. Pořadí parametrů je *wParam* `LOWORD`následované (*lParam*) Then `HIWORD`(*lParam*). Nepoužité parametry nejsou předány. Všechny obslužné rutiny, které jsou zabaleny pomocí tříd knihovny MFC, jsou převedeny na ukazatele na příslušné objekty knihovny MFC. Následující příklad ukazuje, jak zpracovat zprávu WM_PAINT a způsobit `CMyWnd::OnPaint` volání funkce:
 
 ```cpp
 BEGIN_MESSAGE_MAP(CMyWnd, CMyParentWndClass)
@@ -87,14 +87,14 @@ BEGIN_MESSAGE_MAP(CMyWnd, CMyParentWndClass)
 END_MESSAGE_MAP()
 ```
 
-Tabulka mapy zpráv musí být definovány mimo obor všechny funkce nebo definice třídy. By neměl být umístit do bloku extern "C".
+Tabulka map zpráv musí být definována mimo rozsah jakékoli definice funkce nebo třídy. Neměl by být umístěn v externím bloku "C".
 
 > [!NOTE]
-> ClassWizard slouží k úpravě položek mapy zpráv, ke kterým dochází mezi / / {{a / nebo}} komentář závorky.
+> ClassWizard změní položky mapování zpráv, ke kterým dochází v závorkách//{{a//}}.
 
-## <a name="user-defined-windows-messages"></a>Uživatelem definované zprávy Windows
+## <a name="user-defined-windows-messages"></a>Uživatelem definované zprávy systému Windows
 
-Uživatelem definované zprávy může být součástí mapy zpráv pomocí [ON_MESSAGE](reference/message-map-macros-mfc.md#on_message) – makro. Toto makro přijímá číslo zprávy a metodu ve tvaru:
+Uživatelem definované zprávy mohou být součástí mapy zpráv pomocí makra [ON_MESSAGE](reference/message-map-macros-mfc.md#on_message) . Toto makro přijme číslo zprávy a metodu formuláře:
 
 ```cpp
     // inside the class declaration
@@ -107,21 +107,21 @@ BEGIN_MESSAGE_MAP(CMyWnd, CMyParentWndClass)
 END_MESSAGE_MAP()
 ```
 
-V tomto příkladu jsme navázat obslužnou rutinu pro vlastní zprávu, která má ID zpráv Windows odvozený od standardního WM_USER základ pro uživatelem definované zprávy. Následující příklad ukazuje, jak volat tuto obslužnou rutinu:
+V tomto příkladu vytvoříme obslužnou rutinu pro vlastní zprávu, která má ID zprávy Windows odvozené ze standardního základu WM_USER pro uživatelem definované zprávy. Následující příklad ukazuje, jak zavolat tuto obslužnou rutinu:
 
 ```cpp
 CWnd* pWnd = ...;
 pWnd->SendMessage(WM_MYMESSAGE);
 ```
 
-Rozsah definovaný uživatelem zprávy, které tuto metodu použijte, musí být v rozsahu WM_USER do 0x7fff.
+Rozsah uživatelem definovaných zpráv, které používají tento přístup, musí být v rozsahu WM_USER až 0x7FFF.
 
 > [!NOTE]
-> ClassWizard nepodporuje zadání rutiny obslužná rutina ON_MESSAGE z uživatelského rozhraní ClassWizard. Musíte je ručně zadat z editoru Visual C++. ClassWizard bude parsovat tyto položky a umožňují procházet stejně jako všechny ostatní položky mapování zpráv.
+> ClassWizard nepodporuje zadávání rutin obslužných rutin ON_MESSAGE z uživatelského rozhraní ClassWizard. Je nutné je zadat ručně z vizuálního C++ editoru. ClassWizard bude tyto položky analyzovat a umožní vám jejich procházení stejně jako jiné položky v mapě zpráv.
 
-## <a name="registered-windows-messages"></a>Zprávy Windows registrované
+## <a name="registered-windows-messages"></a>Registrované zprávy systému Windows
 
-[RegisterWindowMessage](/windows/desktop/api/winuser/nf-winuser-registerwindowmessagea) funkce se používá k definování novou zprávu okna, která je zaručeně jedinečná v celém systému. ON_REGISTERED_MESSAGE makro se používá ke zpracování těchto zpráv. Toto makro přijímá název *UINT TÉMĚŘ* proměnnou, která obsahuje windows registrované ID zprávy. Příklad
+Funkce [RegisterWindowMessage](/windows/win32/api/winuser/nf-winuser-registerwindowmessagew) slouží k definování nové zprávy okna, u které je zaručeno, že bude v celém systému jedinečný. Makro ON_REGISTERED_MESSAGE slouží ke zpracování těchto zpráv. Toto makro přijme název proměnné *uint poblíž* , která obsahuje registrované ID zprávy systému Windows. Příklad
 
 ```cpp
 class CMyWnd : public CMyParentWndClass
@@ -145,32 +145,32 @@ BEGIN_MESSAGE_MAP(CMyWnd, CMyParentWndClass)
 END_MESSAGE_MAP()
 ```
 
-Musí být registrované proměnná ID zprávy Windows (WM_FIND v tomto příkladu) *NEAR* proměnné vzhledem ke způsobu ON_REGISTERED_MESSAGE je implementováno.
+Registrovaná proměnná ID zprávy systému Windows (WM_FIND v tomto příkladu) musí být *poblíž* proměnné, protože je implementován způsob, jakým je implementováno ON_REGISTERED_MESSAGE.
 
-Rozsah definovaný uživatelem zpráv, které tuto metodu použijte, bude v rozsahu 0xC000 do 0xFFFF.
+Rozsah uživatelem definovaných zpráv, které používají tento přístup, bude v rozsahu 0xC000 až 0xFFFF.
 
 > [!NOTE]
-> ClassWizard nepodporuje zadání rutiny obslužná rutina ON_REGISTERED_MESSAGE z uživatelského rozhraní ClassWizard. Musíte je ručně zadat v textovém editoru. ClassWizard bude parsovat tyto položky a umožňují procházet stejně jako všechny ostatní položky mapování zpráv.
+> ClassWizard nepodporuje zadávání rutin obslužných rutin ON_REGISTERED_MESSAGE z uživatelského rozhraní ClassWizard. Je nutné je ručně zadat z textového editoru. ClassWizard bude tyto položky analyzovat a umožní vám jejich procházení stejně jako jiné položky v mapě zpráv.
 
 ## <a name="command-messages"></a>Zprávy příkazů
 
-Příkaz zprávy z nabídek a akcelerátorů jsou zpracovány v mapy zpráv s ON_COMMAND – makro. Toto makro přijímá ID příkazu a metody. Pouze konkrétní wm_command – zprávy, který má *wParam* rovna zadaný příkaz ID zařizuje služba metody popsané v položce mapování zprávy. Členské funkce obslužné rutiny příkazů nemít žádné parametry a vrátí **void**. Makro má následující formát:
+Zprávy příkazů z nabídek a akcelerátorů jsou zpracovávány v mapách zpráv pomocí makra ON_COMMAND. Toto makro přijímá ID příkazu a metodu. Pouze konkrétní zpráva WM_COMMAND, která má *wParam* shodná se zadaným ID příkazu, je zpracována metodou určenou v položce mapování zpráv. Členské funkce obslužné rutiny příkazu nevyužívají žádné parametry a vracejí **typ void**. Makro má následující tvar:
 
 ```cpp
 ON_COMMAND(id, memberFxn)
 ```
 
-Příkaz update zprávy se směrují prostřednictvím shodný mechanismus, ale místo toho použijte ON_UPDATE_COMMAND_UI – makro. Příkaz update obslužná rutina členské funkce přijímají jediný parametr, ukazatel [ccmdui –](../mfc/reference/ccmdui-class.md) objekt a vracet **void**. Makro má tvar
+Zprávy o aktualizacích příkazu jsou směrovány stejným mechanismem, ale místo toho použijte Makro ON_UPDATE_COMMAND_UI. Členské funkce obslužné rutiny aktualizačního příkazu mají jeden parametr, ukazatel na objekt [CCmdUI –](../mfc/reference/ccmdui-class.md) a vracejí **typ void**. Makro má formulář
 
 ```cpp
 ON_UPDATE_COMMAND_UI(id, memberFxn)
 ```
 
-Pokročilí uživatelé mohou použít ON_COMMAND_EX – makro, což je rozšířený formát obslužné rutiny zprávy příkazů. Makro nabízí nadmnožinu funkcí ON_COMMAND. Rozšířené obslužná rutina příkazu členské funkce přijímají jediný parametr, **UINT** , která obsahuje Identifikátor příkazu a vrátit **BOOL**. Návratová hodnota by měla být **TRUE** k označení, že příkaz byla zpracována. Jinak směrování bude pokračovat na další příkaz cílové objektů.
+Pokročilí uživatelé mohou používat makro ON_COMMAND_EX, což je rozšířená forma obslužných rutin zpráv příkazu. Makro poskytuje nadmnožinu funkcí ON_COMMAND. Rozšířené funkce členů obslužných rutin příkazu mají jeden parametr, typ **uint** , který obsahuje ID příkazu, a vrací **bool**. Návratová hodnota by měla být **true** , aby označovala, že byl příkaz zpracován. V opačném případě bude směrování pokračovat dalšími cílovými objekty příkazu.
 
-Příklady z těchto forem:
+Příklady těchto forem:
 
-- Uvnitř Resource.h (obvykle generované Visual C++)
+- Uvnitř Resource. h (obvykle generované pomocí vizuálu C++)
 
     ```cpp
     #define    ID_MYCMD      100
@@ -185,7 +185,7 @@ Příklady z těchto forem:
     afx_msg BOOL OnComplexCommand(UINT nID);
     ```
 
-- Uvnitř definice map zpráv
+- Uvnitř definice mapy zpráv
 
     ```cpp
     ON_COMMAND(ID_MYCMD, OnMyCommand)
@@ -193,7 +193,7 @@ Příklady z těchto forem:
     ON_COMMAND_EX(ID_MYCMD, OnComplexCommand)
     ```
 
-- V souboru implementace
+- V implementačním souboru
 
     ```cpp
     void CMyClass::OnMyCommand()
@@ -213,31 +213,31 @@ Příklady z těchto forem:
     }
     ```
 
-Pokročilí uživatelé mohou zpracovávat širokou paletu příkazů pomocí jednoho příkazu rutiny: [ON_COMMAND_RANGE](reference/message-map-macros-mfc.md#on_command_range) nebo ON_COMMAND_RANGE_EX. Další informace o těchto makrech v dokumentaci produktu.
+Pokročilí uživatelé mohou zpracovat rozsah příkazů pomocí jediné obslužné rutiny příkazu: [ON_COMMAND_RANGE](reference/message-map-macros-mfc.md#on_command_range) nebo ON_COMMAND_RANGE_EX. Další informace o těchto makrech najdete v dokumentaci k produktu.
 
 > [!NOTE]
-> ClassWizard podporuje vytváření ON_COMMAND a ON_UPDATE_COMMAND_UI obslužné rutiny, ale nepodporuje vytváření ON_COMMAND_EX nebo ON_COMMAND_RANGE obslužné rutiny. Průvodce třídami však bude parsovat a umožňují procházet všechny varianty obslužná rutina příkazu čtyři.
+> ClassWizard podporuje vytváření obslužných rutin ON_COMMAND a ON_UPDATE_COMMAND_UI, ale nepodporuje vytváření obslužných rutin ON_COMMAND_EX nebo ON_COMMAND_RANGE. Průvodce třídami ale bude analyzovat a umožní vám procházet všechny čtyři varianty obslužných rutin příkazu.
 
-## <a name="control-notification-messages"></a>Zprávy s oznámením ovládacího prvku
+## <a name="control-notification-messages"></a>Řízení zpráv s oznámením
 
-Položka mapy zprávy odeslané z podřízených ovládacích prvků do okna mít speciální bit informací ve zprávě: ID ovládacího prvku. Obslužná rutina zprávy zadaný v položku mapování zpráv je volána, pouze pokud jsou splněny následující podmínky:
+Zprávy, které jsou odeslány z podřízených ovládacích prvků do okna, mají další bitovou informaci ve své položce mapování zpráv: ID ovládacího prvku. Obslužná rutina zprávy zadaná v položce mapování zpráv je volána pouze v případě, že jsou splněny následující podmínky:
 
-- Kód oznámení ovládacího prvku (vysoká slova *lParam*), jako je například BN_CLICKED, odpovídá oznámení kód určený v záznamu map zpráv.
+- Kód oznámení ovládacího prvku (vysoké slovo *lParam*), například BN_CLICKED, odpovídá kódu oznámení uvedenému v položce mapování zpráv.
 
-- ID ovládacího prvku (*wParam*) odpovídá ID ovládacího prvku, který je zadán v mapování zprávy položce.
+- ID ovládacího prvku (*wParam*) odpovídá ID ovládacího prvku zadaného v položce mapování zpráv.
 
-Použít vlastní ovládací prvek zpráv s oznámením [ON_CONTROL](reference/message-map-macros-mfc.md#on_control) – makro definovat položku mapování zprávu s kódem vlastní oznámení. Toto makro má tvar
+Zprávy s oznámením vlastního ovládacího prvku mohou použít makro [ON_CONTROL](reference/message-map-macros-mfc.md#on_control) k definování položky mapování zpráv s vlastním kódem oznámení. Toto makro má formulář
 
 ```cpp
 ON_CONTROL(wNotificationCode, id, memberFxn)
 ```
 
-Pokročilé využití [ON_CONTROL_RANGE](reference/message-map-macros-mfc.md#on_control_range) je možné zpracovat oznámení určitý ovládací prvek z celou řadu ovládacích prvků se stejnou obslužnou rutinu.
+Pro pokročilé použití [ON_CONTROL_RANGE](reference/message-map-macros-mfc.md#on_control_range) lze použít ke zpracování konkrétního oznámení ovládacího prvku z řady ovládacích prvků pomocí stejné obslužné rutiny.
 
 > [!NOTE]
-> ClassWizard nepodporuje vytvoření obslužné rutiny ON_CONTROL nebo ON_CONTROL_RANGE v uživatelském rozhraní. Musíte je ručně zadat v textovém editoru. ClassWizard bude parsovat tyto položky a umožňují procházet stejně jako všechny ostatní položky mapování zprávy.
+> ClassWizard nepodporuje vytváření obslužných rutin ON_CONTROL nebo ON_CONTROL_RANGE v uživatelském rozhraní. Je nutné je ručně zadat pomocí textového editoru. ClassWizard bude tyto položky analyzovat a umožní vám jejich procházení stejně jako jakékoli jiné položky mapování zpráv.
 
-Použití běžných ovládacích prvků Windows výkonnějšího [WM_NOTIFY](/windows/desktop/controls/wm-notify) pro komplexní řízení oznámení. Tato verze knihovny MFC má přímou podporu pro tuto novou zprávu pomocí ON_NOTIFY a on_notify_range – makra. Další informace o těchto makrech v dokumentaci produktu.
+Běžné ovládací prvky Windows využívají výkonnější [WM_NOTIFY](/windows/win32/controls/wm-notify) pro komplexní oznámení o řízení. Tato verze knihovny MFC má přímou podporu této nové zprávy pomocí maker ON_NOTIFY a ON_NOTIFY_RANGE. Další informace o těchto makrech najdete v dokumentaci k produktu.
 
 ## <a name="see-also"></a>Viz také:
 

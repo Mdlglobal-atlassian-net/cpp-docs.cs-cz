@@ -7,51 +7,51 @@ helpviewer_keywords:
 - TN014
 - custom controls [MFC]
 ms.assetid: 1917a498-f643-457c-b570-9a0af7dbf7bb
-ms.openlocfilehash: c68b60f065e69213b3ab32c887bc7af129a70fef
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2960c5b8585519adb535e5611315ec4ececcf53e
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62306217"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69511184"
 ---
 # <a name="tn014-custom-controls"></a>TN014: Vlastní ovládací prvky
 
-Tato poznámka popisuje podporu knihovny MFC pro vlastní vykreslování a vlastní ovládací prvky. Také popisuje dynamické vytváření podtříd a popisuje vztah mezi [CWnd](../mfc/reference/cwnd-class.md) objekty a `HWND`s.
+Tato poznámka popisuje podporu knihovny MFC pro vlastní ovládací prvky a ovládací prvky pro vlastní vykreslení. Popisuje také dynamické podtřídy a popisuje vztah mezi objekty [CWnd](../mfc/reference/cwnd-class.md) a `HWND`s.
 
-Ukázkové aplikace knihovny MFC CTRLTEST ukazuje, jak použít mnoho vlastních ovládacích prvků. Zobrazit zdrojový kód ukázkové MFC Obecné [CTRLTEST](../overview/visual-cpp-samples.md) a online nápovědy.
+Ukázková aplikace MFC CTRLTEST ukazuje, jak použít mnoho vlastních ovládacích prvků. Podívejte se na zdrojový kód pro knihovnu MFC General Sample [CTRLTEST](../overview/visual-cpp-samples.md) a online nápovědu.
 
-## <a name="owner-draw-controlsmenus"></a>Owner Draw ovládacích prvků či nabídek
+## <a name="owner-draw-controlsmenus"></a>Ovládací prvky nebo nabídky pro vykreslování vlastníka
 
-Windows poskytuje podporu pro ovládací prvky vykreslené vlastníkem a nabídek s použitím zpráv Windows. Nadřazené okno ovládacího prvku nebo nabídky obdrží tyto zprávy a volání funkce v odpovědi. Můžete přepsat tyto funkce přizpůsobit vzhled a chování ovládacím prvku vykresleném vlastníkem nebo nabídky.
+Systém Windows poskytuje podporu pro ovládací prvky a nabídky pro kreslení vlastníka pomocí zpráv systému Windows. Nadřazené okno libovolného ovládacího prvku nebo nabídky obdrží tyto zprávy a volání funkcí v reakci. Tyto funkce můžete přepsat, chcete-li přizpůsobit vizuální vzhled a chování ovládacího prvku nebo nabídky vykresleného vlastníkem.
 
-Knihovna MFC přímo podporuje vykreslené vlastníkem s následující funkce:
+MFC přímo podporuje vlastní vykreslování pomocí následujících funkcí:
 
-- [CWnd::OnDrawItem](../mfc/reference/cwnd-class.md#ondrawitem)
+- [CWnd:: OnDrawItem](../mfc/reference/cwnd-class.md#ondrawitem)
 
-- [CWnd::OnMeasureItem](../mfc/reference/cwnd-class.md#onmeasureitem)
+- [CWnd:: OnMeasureItem](../mfc/reference/cwnd-class.md#onmeasureitem)
 
-- [CWnd::OnCompareItem](../mfc/reference/cwnd-class.md#oncompareitem)
+- [CWnd:: OnCompareItem](../mfc/reference/cwnd-class.md#oncompareitem)
 
 - [CWnd::OnDeleteItem](../mfc/reference/cwnd-class.md#ondeleteitem)
 
-Můžete přepsat tyto funkce ve vaší `CWnd` odvozené třídy k implementaci vlastních draw chování.
+Tyto funkce můžete přepsat v `CWnd` odvozené třídě pro implementaci vlastního chování vykreslování.
 
-Tento přístup nenastane opakovaně použitelný kód. Pokud máte dvě podobné ovládací prvky ve dvou různých `CWnd` třídy, je nutné implementovat vlastní ovládací prvek chování ve dvou umístěních. Tento problém řeší architektura knihovny MFC podporována vlastní vykreslení ovládacího prvku.
+Tento přístup nevede k opakovanému použití kódu. Pokud máte dva podobné ovládací prvky ve dvou různých `CWnd` třídách, je nutné implementovat chování vlastního ovládacího prvku ve dvou umístěních. Architektura ovládacího prvku pro samoobslužné vykreslování, který je podporován knihovnou MFC, tento problém vyřeší.
 
-## <a name="self-draw-controls-and-menus"></a>Vlastní vykreslení ovládacích prvků a v nabídkách
+## <a name="self-draw-controls-and-menus"></a>Ovládací prvky a nabídky pro samoobslužné kreslení
 
-Knihovna MFC poskytuje výchozí implementaci (v `CWnd` a [cmenu –](../mfc/reference/cmenu-class.md) třídy) pro standardní vykreslené vlastníkem zprávy. Tato výchozí implementace bude dekódovat vykreslené vlastníkem. parametry a delegovat vykreslené vlastníkem zprávy, které mají ovládací prvky nebo nabídce. Tomu se říká samostatně nakreslit protože kreslení kód je ve třídě ovládacího prvku nebo nabídky není v nadřazenému oknu.
+Knihovna MFC poskytuje výchozí implementaci (v `CWnd` třídách [CMenu –](../mfc/reference/cmenu-class.md) a) pro zprávy standardního vykreslování vlastníka. Tato výchozí implementace dekóduje parametry vykreslování vlastníka a deleguje zprávy nakreslené vlastníkem v ovládacích prvcích nebo nabídce. Tato funkce se nazývá sebe Draw, protože kód kresby je ve třídě ovládacího prvku nebo nabídky, nikoli v nadřazeném okně.
 
-S použitím vlastní vykreslení ovládacích prvků můžete vytvářet opakovaně použitelné ovládací prvek třídy, které používají sémantiku vykreslené vlastníkem. Chcete-li zobrazit ovládací prvek. Kód pro vykreslení ovládacího prvku je ve třídě ovládacího prvku, nikoli jeho nadřazený objekt. Toto je metodiky objektově orientované programování vlastního ovládacího prvku. Přidejte do třídy samostatně nakreslit následující seznam funkcí:
+Pomocí ovládacích prvků pro vlastní vykreslování můžete vytvořit opakovaně použitelné třídy ovládacích prvků, které používají sémantiku vykreslování vlastníka k zobrazení ovládacího prvku. Kód pro vykreslení ovládacího prvku je součástí třídy ovládacího prvku, nikoli jeho nadřazeného objektu. Jedná se o objektově orientovaný přístup k programování vlastního ovládacího prvku. Přidejte následující seznam funkcí do tříd vlastního vykreslování:
 
-- Pro vlastní vykreslení tlačítka:
+- Pro tlačítka pro vnitřní vykreslování:
 
     ```cpp
     CButton:DrawItem(LPDRAWITEMSTRUCT);
     // insert code to draw this button
     ```
 
-- Pro vlastní vykreslení nabídky:
+- Pro nabídky pro samoobslužné kreslení:
 
     ```cpp
     CMenu:MeasureItem(LPMEASUREITEMSTRUCT);
@@ -60,7 +60,7 @@ S použitím vlastní vykreslení ovládacích prvků můžete vytvářet opakov
     // insert code to draw an item in this menu
     ```
 
-- Pro pole se seznamem samostatně nakreslit:
+- Pro pole se seznamem automatického vykreslování:
 
     ```cpp
     CListBox:MeasureItem(LPMEASUREITEMSTRUCT);
@@ -74,7 +74,7 @@ S použitím vlastní vykreslení ovládacích prvků můžete vytvářet opakov
     // insert code to delete an item from this list box
     ```
 
-- Pro vlastní vykreslení pole se seznamem:
+- Pro pole se seznamem automatického vykreslování:
 
     ```cpp
     CComboBox:MeasureItem(LPMEASUREITEMSTRUCT);
@@ -88,49 +88,49 @@ S použitím vlastní vykreslení ovládacích prvků můžete vytvářet opakov
     // insert code to delete an item from this combo box
     ```
 
-Další informace o strukturách vykreslené vlastníkem. ([drawitemstruct –](/windows/desktop/api/winuser/ns-winuser-tagdrawitemstruct), [measureitemstruct –](/windows/desktop/api/winuser/ns-winuser-tagmeasureitemstruct), [compareitemstruct –](/windows/desktop/api/winuser/ns-winuser-tagcompareitemstruct), a [deleteitemstruct –](/windows/desktop/api/winuser/ns-winuser-tagdeleteitemstruct)) najdete v dokumentaci knihovny MFC pro `CWnd::OnDrawItem`, `CWnd::OnMeasureItem`, `CWnd::OnCompareItem`, a `CWnd::OnDeleteItem` v uvedeném pořadí.
+Podrobnosti o strukturách vykreslování vlastníka ([DRAWITEMSTRUCT –](/windows/win32/api/winuser/ns-winuser-drawitemstruct), [MEASUREITEMSTRUCT –](/windows/win32/api/winuser/ns-winuser-measureitemstruct), [COMPAREITEMSTRUCT –](/windows/win32/api/winuser/ns-winuser-compareitemstruct)a [DELETEITEMSTRUCT –](/windows/win32/api/winuser/ns-winuser-deleteitemstruct)) naleznete v dokumentaci knihovny MFC `CWnd::OnDrawItem`pro, `CWnd::OnMeasureItem`, `CWnd::OnCompareItem`a `CWnd::OnDeleteItem` v uvedeném pořadí.
 
-## <a name="using-self-draw-controls-and-menus"></a>Pomocí nabídky a místním vykreslení ovládacích prvků
+## <a name="using-self-draw-controls-and-menus"></a>Použití ovládacích prvků a nabídek pro samoobslužné kreslení
 
-Pro nabídky svým kreslení, je nutné přepsat i `OnMeasureItem` a `OnDrawItem` metody.
+Pro nabídky, které mají samy sebe nakreslit, je `OnMeasureItem` nutné `OnDrawItem` přepsat metody a.
 
-Samostatně nakreslit seznamy a pole se seznamem, je nutné přepsat `OnMeasureItem` a `OnDrawItem`. V šabloně dialogu je nutné zadat LBS_OWNERDRAWVARIABLE styl pro pole se seznamem nebo CBS_OWNERDRAWVARIABLE pro pole se seznamem. Styl OWNERDRAWFIXED nebude fungovat s místním kreslit položky, protože výšku položky pevné závisí před svým nakreslete ovládací prvky jsou připojeny k seznamu. (Můžete použít metody [CListBox::SetItemHeight](../mfc/reference/clistbox-class.md#setitemheight) a [CComboBox::SetItemHeight](../mfc/reference/ccombobox-class.md#setitemheight) k překonání tohoto omezení.)
+Pro pole seznamu a pole se seznamem musíte přepsat `OnMeasureItem` a. `OnDrawItem` Pro pole se seznamem v šabloně dialogového okna je nutné zadat styl LBS_OWNERDRAWVARIABLE pro seznamy nebo CBS_OWNERDRAWVARIABLE styl. Styl OWNERDRAWFIXED nebude fungovat s položkami, které se automaticky kreslí, protože je určena výška pevné položky před tím, než jsou ovládací prvky přichycené do seznamu připojeny k poli. (K překonání tohoto omezení můžete použít metody [CListBox –:: SetItemHeight](../mfc/reference/clistbox-class.md#setitemheight) a [CComboBox –:: SetItemHeight](../mfc/reference/ccombobox-class.md#setitemheight) .)
 
-Přepnutí do stylu OWNERDRAWVARIABLE vynutí systém stylu NOINTEGRALHEIGHT na ovládacím prvku. Vzhledem k tomu, že ovládací prvek nelze vypočítat integrální výška s proměnnou velikostí položek, se ignoruje výchozí styl INTEGRALHEIGHT a ovládacího prvku je vždy NOINTEGRALHEIGHT. Pokud vaše položky jsou pevné výšky, můžete zabránit částečných položek ve které je cílem vykreslování tak, že určíte velikost ovládacího prvku celé číslo multiplikátor velikosti položky.
+Přepnutí na styl OWNERDRAWVARIABLE vynutí, aby systém při použití stylu NOINTEGRALHEIGHT na ovládací prvek. Vzhledem k tomu, že ovládací prvek nemůže vypočítat integrální výšku s proměnlivou velikostí položek, je výchozí styl INTEGRALHEIGHT ignorován a ovládací prvek je vždy NOINTEGRALHEIGHT. Pokud jsou položky pevné výšky, můžete zabránit vykreslení částečných položek zadáním velikosti ovládacího prvku pro celočíselnou násobitel velikosti položky.
 
-Pro vytvoření vlastní pole se seznamem a pole se seznamem se stylem LBS_SORT nebo CBS_SORT, je nutné přepsat `OnCompareItem` metody.
+Pro samoobslužné seznamy a pole se seznamem se stylem LBS_SORT nebo CBS_SORT je nutné přepsat `OnCompareItem` metodu.
 
-Pro vlastní kreslení seznamy a pole se seznamem, `OnDeleteItem` není obvykle přepsána. Můžete přepsat `OnDeleteItem` Pokud chcete provést všechna speciální zpracování. Jeden případ, ve kterém jde použít při další paměť nebo další prostředky se ukládají s každou položku seznamu nebo pole se seznamem pole.
+Pro samoobslužné seznamy a pole se seznamem `OnDeleteItem` není obvykle přepsána. Můžete přepsat `OnDeleteItem` , pokud chcete provést jakékoli speciální zpracování. Jeden případ, ve kterém by se to týká, je případ, kdy se do každého pole seznamu nebo položky pole se seznamem uloží další paměť nebo jiné prostředky.
 
-## <a name="examples-of-self-drawing-controls-and-menus"></a>Příkladem samoobslužné vykreslení ovládacích prvků a v nabídkách
+## <a name="examples-of-self-drawing-controls-and-menus"></a>Příklady ovládacích prvků a nabídek pro samoobslužné kreslení
 
-Ukázky knihovny MFC Obecné [CTRLTEST](../overview/visual-cpp-samples.md) obsahuje ukázky nabídky svým kreslení a místním vykreslení seznamu.
+Knihovna MFC General Sample [CTRLTEST](../overview/visual-cpp-samples.md) poskytuje ukázky pro nabídku, která slouží k samostatnému vykreslení, a seznam automatického vykreslování.
 
-Většina Typickým příkladem samoobslužné výkresu tlačítko je tlačítko rastrového obrázku. Rastrový obrázek tlačítko je tlačítko, které zobrazuje jeden, dva nebo tři bitmapové obrázky pro různé stavy. Příkladem je součástí třídy knihovny MFC [cbitmapbutton –](../mfc/reference/cbitmapbutton-class.md).
+Typickým příkladem tlačítka pro samoobslužné kreslení je rastrové tlačítko. Tlačítko rastrového obrázku je tlačítko, které zobrazuje jednu, dvě nebo tři rastrové obrázky pro různé stavy. Příklad je k dispozici v knihovně MFC třídy [CBitmapButton](../mfc/reference/cbitmapbutton-class.md).
 
-## <a name="dynamic-subclassing"></a>Dynamické vytváření podtříd
+## <a name="dynamic-subclassing"></a>Dynamické roztřídění
 
-Někdy budete chtít změnit funkce objektu, který již existuje. V předchozích příkladech je nutné k přizpůsobení ovládacích prvků, než byly vytvořeny. Dynamické vytváření podtříd umožňuje přizpůsobit ovládací prvek, který již byl vytvořen.
+Občas budete chtít změnit funkčnost objektu, který již existuje. Předchozí příklady vyžadují, abyste ovládací prvky přizpůsobili před jejich vytvořením. Dynamické podtřídy umožňují přizpůsobit ovládací prvek, který již byl vytvořen.
 
-Vytváření podtříd je termín Windows pro nahrazení <xref:System.Windows.Forms.Control.WndProc%2A> okna s přizpůsobeným `WndProc` a volání starého `WndProc` pro výchozí funkce.
+Roztřídění je termín Windows pro nahrazení <xref:System.Windows.Forms.Control.WndProc%2A> okna vlastním přizpůsobeným `WndProc` a voláním starého `WndProc` pro výchozí funkce.
 
-To třeba nezaměňovat s odvození třídy jazyka C++. Pro objasnění, podmínky C++ *základní třída* a *odvozené třídy* jsou podobná *supertřídě* a *podtřídy* v Windows objektový model. Odvození C++ s vytváření podtříd knihovny MFC a Windows jsou funkčně podobné, s výjimkou C++ nepodporuje dynamické vytváření podtříd.
+Nemělo by se zaměňovat s C++ odvozením třídy. Pro objasnění C++ *základní třídy* terms a *odvozené třídy* jsou obdobou na *supertřída* a podtřídu v modelu objektu Windows. C++odvození s využitím podtříd MFC a prostředí Windows je funkčně podobné, C++ s výjimkou dynamického podtříd.
 
-`CWnd` Třída poskytuje připojení mezi objekt jazyka C++ (odvozený od `CWnd`) a objekt okna Windows (označované jako `HWND`).
+Třída poskytuje připojení mezi C++ objektem (odvozeným od `CWnd`) a objektem okna `HWND`systému Windows (známé jako). `CWnd`
 
-Existují tři běžné způsoby, které se týkají:
+Existují tři běžné způsoby, které jsou v relaci:
 
-- `CWnd` vytvoří `HWND`. Můžete změnit chování v odvozené třídě tak, že vytvoříte třídu odvozenou z `CWnd`. `HWND` Se vytvoří, když vaše aplikace volá [CWnd::Create](../mfc/reference/cwnd-class.md#create).
+- `CWnd``HWND`vytvoří. Chování v odvozené třídě lze upravit vytvořením třídy odvozené z `CWnd`. Je `HWND` vytvořena, když vaše aplikace volá [CWnd:: Create](../mfc/reference/cwnd-class.md#create).
 
-- Připojí aplikace `CWnd` do existujícího `HWND`. Chování stávajícím okně se nezmění. To se stává delegování a je možné díky volání [CWnd::Attach](../mfc/reference/cwnd-class.md#attach) na alias z existujícího `HWND` k `CWnd` objektu.
+- Aplikace připojí `CWnd` k existujícímu `HWND`. Chování stávajícího okna se nezmění. Jedná se o případ delegování a je možné ho volat pomocí metody [CWnd:: Attach](../mfc/reference/cwnd-class.md#attach) alias existujícího `HWND` `CWnd` objektu.
 
-- `CWnd` je připojen k existujícímu `HWND` a můžete změnit chování v odvozené třídě. Tomu se říká dynamické vytvoření podtřídy, protože jsme se mění chování a proto třídu Windows objektu v době běhu.
+- `CWnd`je připojen k existujícímu `HWND` a lze upravit chování v odvozené třídě. Tento postup se nazývá dynamické podtříd, protože měníme chování, a proto třídu objektu Windows v době běhu.
 
-Dynamické vytváření podtříd lze dosáhnout pomocí metod [CWnd::SubclassWindow](../mfc/reference/cwnd-class.md#subclasswindow) a[CWnd::SubclassDlgItem](../mfc/reference/cwnd-class.md#subclassdlgitem).
+Dynamické podtříd lze dosáhnout pomocí metod [CWnd:: SubclassWindow](../mfc/reference/cwnd-class.md#subclasswindow) a[CWnd:: SubclassDlgItem](../mfc/reference/cwnd-class.md#subclassdlgitem).
 
-Obě rutiny připojit `CWnd` objektu do existujícího `HWND`. `SubclassWindow` přijímá `HWND` přímo. `SubclassDlgItem` je pomocná funkce, která přijímá ID ovládacího prvku a nadřazeného okna. `SubclassDlgItem` je určená pro objekty C++ se připojuje k ovládací prvky dialogového okna, které jsou vytvořené ze šablony dialogového okna.
+Obě rutiny připojí `CWnd` objekt k existujícímu `HWND`. `SubclassWindow``HWND` provede přímo. `SubclassDlgItem`je pomocná funkce, která přebírá ID ovládacího prvku a nadřazené okno. `SubclassDlgItem`je určen pro připojení C++ objektů k ovládacím prvkům vytvořeným ze šablony dialogového okna.
 
-Zobrazit [CTRLTEST](../overview/visual-cpp-samples.md) příklad pro několik příkladů použití `SubclassWindow` a `SubclassDlgItem`.
+V příkladu [CTRLTEST](../overview/visual-cpp-samples.md) naleznete několik příkladů, kdy použít `SubclassWindow` a. `SubclassDlgItem`
 
 ## <a name="see-also"></a>Viz také:
 

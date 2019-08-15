@@ -132,12 +132,12 @@ helpviewer_keywords:
 - CFileDialog [MFC], OnTypeChange
 - CFileDialog [MFC], m_ofn
 ms.assetid: fda4fd3c-08b8-4ce0-8e9d-7bab23f8c6c0
-ms.openlocfilehash: a7287b2e3011159573f44e9247e016d81d893491
-ms.sourcegitcommit: c3bf94210bdb73be80527166264d49e33784152c
+ms.openlocfilehash: c301766b64af7fc1523b39adad91d9b52a5e88f7
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68821079"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69506599"
 ---
 # <a name="cfiledialog-class"></a>CFileDialog – třída
 
@@ -258,11 +258,11 @@ Chcete-li `CFileDialog` použít objekt, nejprve vytvořte objekt `CFileDialog` 
 Po inicializaci ovládacích prvků dialogového okna zavolejte metodu [CFileDialog::D omodal](#domodal) pro zobrazení dialogového okna tak, aby uživatel mohl zadat cestu a název souboru. `DoModal`Vrátí, zda uživatel kliknul na tlačítko OK (IDOK) nebo zrušit (IDCANCEL). Pokud `DoModal` vrátí IDOK, můžete použít jednu `CFileDialog` z veřejných členských funkcí k načtení informací, které uživatel vloží.
 
 > [!NOTE]
-> V systému Windows Vista nebo novějším je několik volání [IFileDialog:: SetFileTypes](/windows/desktop/api/shobjidl_core/nf-shobjidl_core-ifiledialog-setfiletypes) způsobilo chybu. Druhé volání metody `SetFileTypes` pro všechny instance a `CFileDialog` vrátí E_UNEXPECTED v systému Windows Vista nebo novějším. Některé `CFileDialog` funkce metody volají `SetFileTypes`. Například dvě volání `CFileDialog::DoModal` pro pro stejnou instanci `CFileDialog` vygeneruje [Assert](diagnostic-services.md#assert).
+> V systému Windows Vista nebo novějším je několik volání [IFileDialog:: SetFileTypes](/windows/win32/api/shobjidl_core/nf-shobjidl_core-ifiledialog-setfiletypes) způsobilo chybu. Druhé volání metody `SetFileTypes` pro všechny instance a `CFileDialog` vrátí E_UNEXPECTED v systému Windows Vista nebo novějším. Některé `CFileDialog` funkce metody volají `SetFileTypes`. Například dvě volání `CFileDialog::DoModal` pro pro stejnou instanci `CFileDialog` vygeneruje [Assert](diagnostic-services.md#assert).
 
 `CFileDialog`zahrnuje několik chráněných členů, které umožňují vlastní zpracování narušení sdílení, ověření názvu souboru a oznámení o změně seznamu. Tyto chráněné členy jsou funkce zpětného volání, které není nutné používat pro většinu aplikací, protože výchozí zpracování je prováděno automaticky. Položky mapování zpráv pro tyto funkce nejsou vyžadovány, protože jsou standardními virtuálními funkcemi.
 
-Pomocí funkce Windows [CommDlgExtendedError](/windows/desktop/api/commdlg/nf-commdlg-commdlgextendederror) můžete zjistit, jestli při inicializaci dialogového okna došlo k chybě, a získat další informace o chybě.
+Pomocí funkce Windows [CommDlgExtendedError](/windows/win32/api/commdlg/nf-commdlg-commdlgextendederror) můžete zjistit, jestli při inicializaci dialogového okna došlo k chybě, a získat další informace o chybě.
 
 Zničení `CFileDialog` objektů je prováděno automaticky. Nemusíte volat funkci [CDialog:: EndDialog](../../mfc/reference/cdialog-class.md#enddialog).
 
@@ -604,7 +604,7 @@ virtual INT_PTR DoModal();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-IDOK nebo IDCANCEL. Pokud se vrátí IDCANCEL, zavolejte funkci Windows [CommDlgExtendedError](/windows/desktop/api/commdlg/nf-commdlg-commdlgextendederror) a určete, jestli došlo k chybě.
+IDOK nebo IDCANCEL. Pokud se vrátí IDCANCEL, zavolejte funkci Windows [CommDlgExtendedError](/windows/win32/api/commdlg/nf-commdlg-commdlgextendederror) a určete, jestli došlo k chybě.
 
 IDOK a IDCANCEL jsou konstanty, které označují, zda uživatel vybral tlačítko OK nebo Storno.
 
@@ -827,7 +827,7 @@ Ukazatel na vnitřní objekt modelu COM pro `CFileDialog`. Je vaše zodpovědnos
 
 Tuto funkci použijte pouze v systému Windows Vista nebo novějším s objektem, který má *bVistaStyle* nastaven na hodnotu true. Použijete-li tuto funkci, pokud je *BVISTASTYLE* false, vrátí hodnotu null v režimu vydání a vyvolá kontrolní výraz v režimu ladění.
 
-Další informace o `IFileDialogCustomize` rozhraní naleznete v tématu [IFileDialogCustomize](/windows/desktop/api/shobjidl_core/nn-shobjidl_core-ifiledialogcustomize).
+Další informace o `IFileDialogCustomize` rozhraní naleznete v tématu [IFileDialogCustomize](/windows/win32/api/shobjidl_core/nn-shobjidl_core-ifiledialogcustomize).
 
 ### <a name="example"></a>Příklad
 
@@ -851,7 +851,7 @@ Ukazatel na vnitřní objekt modelu COM pro `CFileDialog`. Je vaše zodpovědnos
 
 Tuto funkci použijte pouze v systému Windows Vista nebo novějším s objektem, který má *bVistaStyle* nastaven na hodnotu true. Tato funkce vrátí hodnotu null, `CFileDialog` Pokud se nejedná o **otevřené** dialogové okno, nebo pokud je *bVistaStyle* nastaveno na false. V tomto posledním případě funkce vrací hodnotu NULL pouze v režimu vydání – v režimu ladění vyvolá kontrolní výraz.
 
-Další informace o `IFileOpenDialog` rozhraní naleznete v tématu [IFileOpenDialog](/windows/desktop/api/shobjidl_core/nn-shobjidl_core-ifileopendialog).
+Další informace o `IFileOpenDialog` rozhraní naleznete v tématu [IFileOpenDialog](/windows/win32/api/shobjidl_core/nn-shobjidl_core-ifileopendialog).
 
 ### <a name="example"></a>Příklad
 
@@ -875,7 +875,7 @@ Ukazatel na vnitřní objekt modelu COM pro `CFileDialog`. Je vaše zodpovědnos
 
 Tuto funkci použijte pouze v systému Windows Vista nebo novějším s objektem, který má *bVistaStyle* nastaven na hodnotu true. Tato funkce vrátí hodnotu null, pokud `CFileDialog` není dialogové okno **Uložit** , nebo pokud je *bVistaStyle* nastaveno na false. V tomto posledním případě funkce vrací hodnotu NULL pouze v režimu vydání – v režimu ladění vyvolá kontrolní výraz.
 
-Další informace o `IFileSaveDialog` rozhraní naleznete v tématu [IFileSaveDialog](/windows/desktop/api/shobjidl_core/nn-shobjidl_core-ifilesavedialog).
+Další informace o `IFileSaveDialog` rozhraní naleznete v tématu [IFileSaveDialog](/windows/win32/api/shobjidl_core/nn-shobjidl_core-ifilesavedialog).
 
 ### <a name="example"></a>Příklad
 
@@ -1185,7 +1185,7 @@ virtual void OnFileNameChange();
 
 Systém odesílá zprávu CDN_SELCHANGE, když uživatel vybere nový soubor nebo složku v seznamu souborů v dialogovém okně **otevřít** nebo **Uložit jako** . Tuto metodu přepište, pokud chcete provádět jakékoli akce v reakci na tuto zprávu.
 
-Systém tuto zprávu pošle jenom v případě, že se dialogové okno vytvořilo se zapnutým příznakem OFN_EXPLORER. Další informace o tomto oznámení najdete v tématu [CDN_SELCHANGE](/windows/desktop/dlgbox/cdn-selchange). Informace o příznaku OFN_EXPLORER najdete v dialogových oknech struktura [lpstrFile](/windows/win32/api/commdlg/ns-commdlg-openfilenamew) a [otevřít a uložit jako](/windows/desktop/dlgbox/open-and-save-as-dialog-boxes).
+Systém tuto zprávu pošle jenom v případě, že se dialogové okno vytvořilo se zapnutým příznakem OFN_EXPLORER. Další informace o tomto oznámení najdete v tématu [CDN_SELCHANGE](/windows/win32/dlgbox/cdn-selchange). Informace o příznaku OFN_EXPLORER najdete v dialogových oknech struktura [lpstrFile](/windows/win32/api/commdlg/ns-commdlg-openfilenamew) a [otevřít a uložit jako](/windows/win32/dlgbox/open-and-save-as-dialog-boxes).
 
 ##  <a name="onfilenameok"></a>CFileDialog::OnFileNameOK
 
@@ -1217,7 +1217,7 @@ virtual void OnFolderChange();
 
 Zpráva oznámení se pošle, když se v dialogovém okně Otevřít nebo Uložit jako otevře nová složka.
 
-Oznámení se odešle jenom v případě, že se dialogové okno vytvořilo se stylem OFN_EXPLORER. Další informace o tomto oznámení najdete v tématu [CDN_FOLDERCHANGE](/windows/desktop/dlgbox/cdn-folderchange). Informace o stylu OFN_EXPLORER naleznete v dialogových oknech struktura [lpstrFile](/windows/win32/api/commdlg/ns-commdlg-openfilenamew) a [otevřít a uložit jako](/windows/desktop/dlgbox/open-and-save-as-dialog-boxes).
+Oznámení se odešle jenom v případě, že se dialogové okno vytvořilo se stylem OFN_EXPLORER. Další informace o tomto oznámení najdete v tématu [CDN_FOLDERCHANGE](/windows/win32/dlgbox/cdn-folderchange). Informace o stylu OFN_EXPLORER naleznete v dialogových oknech struktura [lpstrFile](/windows/win32/api/commdlg/ns-commdlg-openfilenamew) a [otevřít a uložit jako](/windows/win32/dlgbox/open-and-save-as-dialog-boxes).
 
 ##  <a name="oninitdone"></a>CFileDialog::OnInitDone
 
@@ -1231,7 +1231,7 @@ virtual void OnInitDone();
 
 Systém pošle tuto zprávu s oznámením, když systém dokončí uspořádání ovládacích prvků v dialogovém okně **otevřít** nebo **Uložit jako** , aby uvolnil prostor pro ovládací prvky podřízeného dialogového okna.
 
-Systém ho pošle jenom v případě, že se dialogové okno vytvořilo se stylem OFN_EXPLORER. Další informace o tomto oznámení najdete v tématu [CDN_INITDONE](/windows/desktop/dlgbox/cdn-initdone). Informace o stylu OFN_EXPLORER naleznete v dialogových oknech struktura [lpstrFile](/windows/win32/api/commdlg/ns-commdlg-openfilenamew) a [otevřít a uložit jako](/windows/desktop/dlgbox/open-and-save-as-dialog-boxes).
+Systém ho pošle jenom v případě, že se dialogové okno vytvořilo se stylem OFN_EXPLORER. Další informace o tomto oznámení najdete v tématu [CDN_INITDONE](/windows/win32/dlgbox/cdn-initdone). Informace o stylu OFN_EXPLORER naleznete v dialogových oknech struktura [lpstrFile](/windows/win32/api/commdlg/ns-commdlg-openfilenamew) a [otevřít a uložit jako](/windows/win32/dlgbox/open-and-save-as-dialog-boxes).
 
 > [!NOTE]
 > Dialogová okna se systémem Windows Vista nebo novějším nepodporují tuto funkci. Při pokusu o použití této funkce v dialogu Windows Vista nebo novějším souboru stylu se vyvolá [CNotSupportedException](../../mfc/reference/cnotsupportedexception-class.md).
@@ -1331,7 +1331,7 @@ virtual void OnTypeChange();
 
 Zpráva oznámení se odešle, když uživatel vybere nový typ souboru ze seznamu typů souborů v dialogovém okně Otevřít nebo Uložit jako.
 
-Oznámení se odešle jenom v případě, že se dialogové okno vytvořilo se stylem OFN_EXPLORER. Další informace o tomto oznámení najdete v tématu [CDN_TYPECHANGE](/windows/desktop/dlgbox/cdn-typechange). Informace o stylu OFN_EXPLORER naleznete v dialogových oknech struktura [lpstrFile](/windows/win32/api/commdlg/ns-commdlg-openfilenamew) a [otevřít a uložit jako](/windows/desktop/dlgbox/open-and-save-as-dialog-boxes).
+Oznámení se odešle jenom v případě, že se dialogové okno vytvořilo se stylem OFN_EXPLORER. Další informace o tomto oznámení najdete v tématu [CDN_TYPECHANGE](/windows/win32/dlgbox/cdn-typechange). Informace o stylu OFN_EXPLORER naleznete v dialogových oknech struktura [lpstrFile](/windows/win32/api/commdlg/ns-commdlg-openfilenamew) a [otevřít a uložit jako](/windows/win32/dlgbox/open-and-save-as-dialog-boxes).
 
 ##  <a name="removecontrolitem"></a>CFileDialog::RemoveControlItem
 
@@ -1594,7 +1594,7 @@ pro Obsahuje název prostředku šablony objektu Explorer `CFileDialog` . Tato �
 Systém použije jenom jednu ze zadaných šablon. Systém Určuje, která šablona se má použít, na základě přítomnosti stylu OFN_EXPLORER a operačního systému, ve kterém je aplikace spuštěná. Když zadáte šablonu ve stylu non-Explorer a Průzkumník, je snadné podporovat Windows NT 3,51, Windows NT 4,0 a novější verze a Windows 95 a novější verze.
 
 > [!NOTE]
-> Dialogová okna souboru se systémem Windows Vista nebo novějším nepodporují tuto funkci. Při pokusu o použití této funkce v dialogovém okně souboru ve stylu Windows Vista nebo novějším se vyvolá [CNotSupportedException](../../mfc/reference/cnotsupportedexception-class.md). Alternativou je použití přizpůsobeného dialogového okna. Další informace o použití vlastního `CFileDialog`naleznete v tématu [IFileDialogCustomize](/windows/desktop/api/shobjidl_core/nn-shobjidl_core-ifiledialogcustomize).
+> Dialogová okna souboru se systémem Windows Vista nebo novějším nepodporují tuto funkci. Při pokusu o použití této funkce v dialogovém okně souboru ve stylu Windows Vista nebo novějším se vyvolá [CNotSupportedException](../../mfc/reference/cnotsupportedexception-class.md). Alternativou je použití přizpůsobeného dialogového okna. Další informace o použití vlastního `CFileDialog`naleznete v tématu [IFileDialogCustomize](/windows/win32/api/shobjidl_core/nn-shobjidl_core-ifiledialogcustomize).
 
 ##  <a name="startvisualgroup"></a>CFileDialog::StartVisualGroup
 
@@ -1628,7 +1628,7 @@ void UpdateOFNFromShellDialog();
 
 Ve verzích Windows před Windows Vista byla struktura dat členských [lpstrFile](/previous-versions/windows/embedded/ms911906\(v=msdn.10\)) průběžně synchronizovaná se stavem `CFileDialog`. Jakékoli změny členské proměnné [m_ofn](#m_ofn) byly přímo ovlivněny stavem dialogového okna. Všechny změny stavu dialogového okna také okamžitě aktualizují členskou proměnnou m_ofn.
 
-V systému Windows Vista nebo novějších `m_ofn` se datová struktura neaktualizuje automaticky. Chcete-li zaručit přesnost dat v `m_ofn` proměnné členu, měli byste `UpdateOFNFromShellDialog` zavolat funkci před přístupem k datům. Systém Windows volá tuto funkci automaticky během zpracování [IFileDialog:: OnFileOK](/windows/desktop/api/shobjidl_core/nf-shobjidl_core-ifiledialogevents-onfileok).
+V systému Windows Vista nebo novějších `m_ofn` se datová struktura neaktualizuje automaticky. Chcete-li zaručit přesnost dat v `m_ofn` proměnné členu, měli byste `UpdateOFNFromShellDialog` zavolat funkci před přístupem k datům. Systém Windows volá tuto funkci automaticky během zpracování [IFileDialog:: OnFileOK](/windows/win32/api/shobjidl_core/nf-shobjidl_core-ifiledialogevents-onfileok).
 
 Další informace o tom, jak použít `CFileDialog` třídu v systému Windows Vista nebo novější, naleznete v tématu [Třída CFileDialog](../../mfc/reference/cfiledialog-class.md).
 

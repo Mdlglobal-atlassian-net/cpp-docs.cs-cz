@@ -1,5 +1,5 @@
 ---
-title: události (C++vyhodnocovací a C++/CX)
+title: událost (C++/CLI a C++/CX)
 ms.date: 10/12/2018
 ms.topic: reference
 f1_keywords:
@@ -8,20 +8,20 @@ f1_keywords:
 helpviewer_keywords:
 - event keyword [C++]
 ms.assetid: c4998e42-883c-4419-bbf4-36cdc979dd27
-ms.openlocfilehash: 26bfc3bb9892486353f55a71cfd86a17f2de98b5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8b34a4f146cc7961ee1176580def6319185693e9
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62380332"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69509759"
 ---
-# <a name="event--ccli-and-ccx"></a>události (C++vyhodnocovací a C++/CX)
+# <a name="event--ccli-and-ccx"></a>událost (C++/CLI a C++/CX)
 
-**Události** deklaruje klíčové slovo *události*, který je registrovaný odběratelům oznámení (*obslužné rutiny událostí*), která něco zájmu došlo k chybě.
+Klíčové slovo **Event** deklaruje *událost*, což je oznámení registrovaným předplatitelům (*obslužné rutiny událostí*), ke kterým došlo v nějakém zájmu.
 
 ## <a name="all-runtimes"></a>Všechny moduly runtime
 
-C++/CX podporuje deklarace *člen události* nebo *bloku událostí*. Člen události představuje zkratku pro deklarování blok události. Ve výchozím nastavení, deklaruje člen události `add()`, `remove()`, a `raise()` funkce, které jsou explicitně deklarované v bloku události. K přizpůsobení funkcí v člen události, místo toho Deklarujte blok události a pak přepsání funkce, které budete potřebovat.
+C++/CX podporuje deklaraci *členu události* nebo *bloku událostí*. Člen události je zkrácený pro deklaraci bloku události. Ve výchozím nastavení člen události deklaruje `add()`funkce, `remove()`a `raise()` , které jsou deklarovány explicitně v bloku událostí. Chcete-li přizpůsobit funkce v členu události, deklarujte blok události místo toho a potom popište požadované funkce.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -40,52 +40,52 @@ modifiereventdelegate^ event_name
 
 ### <a name="parameters"></a>Parametry
 
-*modifier*<br/>
-Modifikátor, který lze použít v deklaraci události nebo metodu přistupujícího objektu události.  Možné hodnoty jsou **statické** a **virtuální**.
+*upravující*<br/>
+Modifikátor, který lze použít buď pro deklaraci události, nebo pro metodu přístupového objektu události.  Možné hodnoty jsou **statické** a **virtuální**.
 
 *delegate*<br/>
-[Delegovat](delegate-cpp-component-extensions.md), jehož předpis obslužná rutina události se musí shodovat.
+[Delegát](delegate-cpp-component-extensions.md), jehož signatura musí být v obslužné rutině události shodná.
 
-*EVENT_NAME*<br/>
+*event_name*<br/>
 Název události
 
 *return_value*<br/>
-Na návratový typ metody přistupujícího objektu události.  Chcete-li ověřit, návratový typ musí být **void**.
+Návratová hodnota metody přístupového objektu události  Aby bylo možné typ vrácené hodnoty ověřit, musí být návratový typ **void**.
 
 *parameters*<br/>
-(volitelné) Parametry pro `raise` metodu, která odpovídá podpisu *delegovat* parametru.
+volitelné Parametry pro `raise` metodu, která se shoduje s signaturou parametru *delegáta* .
 
 ### <a name="remarks"></a>Poznámky
 
-Událost je přidružení mezi delegáta a členské funkce (Obslužná rutina události), který reaguje na aktivaci události a umožňuje klientům z jiné třídy, metody, které v souladu s podpisem a návratový typ delegáta základní registrace.
+Událost je přidružení mezi delegátem a členskou funkcí (obslužným rutinou události), která reaguje na aktivaci události a umožňuje klientům z libovolné třídy registrovat metody, které odpovídají signatuře a návratový typ nadřazeného delegáta.
 
-Existují dva typy deklarací události:
+Existují dva druhy deklarací událostí:
 
 *datový člen události*<br/>
-Kompilátor automaticky vytvoří úložiště pro události v podobě člena typu delegáta a vytvoří interní `add()`, `remove()`, a `raise()` členské funkce. Datový člen události musí být deklarované uvnitř třídy. Návratový typ návratový typ delegáta musí odpovídat návratový typ obslužné rutiny události.
+Kompilátor automaticky vytvoří úložiště pro událost ve formě člena typu delegáta a vytvoří interní `add()`, `remove()`a `raise()` členské funkce. Datový člen události musí být deklarovaný uvnitř třídy. Návratový typ návratového typu delegáta musí odpovídat návratový typ obslužné rutiny události.
 
-*událost bloku*<br/>
-Blok událostí umožňuje explicitně deklarovat a přizpůsobit chování `add()`, `remove()`, a `raise()` metody.
+*blok událostí*<br/>
+Blok událostí umožňuje explicitně deklarovat a přizpůsobit chování `add()` `raise()` metod, `remove()`a.
 
-Můžete použít **operátory +=** a **operator-=** přidávat a odebírat událost obslužné rutiny nebo volání `add()` a `remove()` metody explicitně.
+**Operátory + =** a **-=** můžete použít k přidání a odebrání obslužné rutiny události `add()` nebo k explicitnímu volání metod a. `remove()`
 
-**událost** je kontextové klíčové slovo; viz [Context-Sensitive Keywords](context-sensitive-keywords-cpp-component-extensions.md) Další informace.
+**událost** je kontextově závislé klíčové slovo; Další informace najdete v tématu [Kontextově závislá klíčová slova](context-sensitive-keywords-cpp-component-extensions.md) .
 
 ## <a name="windows-runtime"></a>prostředí Windows Runtime
 
 ### <a name="remarks"></a>Poznámky
 
-Další informace najdete v tématu [události (C++/CX)](https://msdn.microsoft.com/library/windows/apps/hh755799.aspx).
+Další informace najdete v tématu [události (C++/CX)](../cppcx/events-c-cx.md).
 
-Pokud chcete přidat a pak odebrat obslužnou rutinu události, je nutné uložit, který je vrácen operace přidání struktury EventRegistrationToken. V operaci odebrání pak musíte použít uložené struktura EventRegistrationToken k identifikaci obslužná rutina události, která se má odebrat.
+Pokud máte v úmyslu přidat a poté odebrat obslužnou rutinu události, je nutné uložit strukturu EventRegistrationToken, která je vrácena operací Add. Pak je nutné v operaci odebrat použít uloženou strukturu EventRegistrationToken k identifikaci obslužné rutiny události, která má být odebrána.
 
 ### <a name="requirements"></a>Požadavky
 
-– Možnost kompilátoru: `/ZW`
+Možnost kompilátoru:`/ZW`
 
 ## <a name="common-language-runtime"></a>CLR (Common Language Runtime)
 
-**Události** – klíčové slovo umožňuje deklarovat událost. Událost je, že se stane, tak pro třídu poskytují oznámení, když se něco zájmu.
+Klíčové slovo **události** umožňuje deklarovat událost. Událost je způsob, jakým může Třída poskytnout oznámení v případě, že dojde k nějakému zájmu.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -104,74 +104,74 @@ modifiereventdelegate^ event_name
 
 ### <a name="parameters"></a>Parametry
 
-*modifier*<br/>
-Modifikátor, který lze použít v deklaraci události nebo metodu přistupujícího objektu události.  Možné hodnoty jsou **statické** a **virtuální**.
+*upravující*<br/>
+Modifikátor, který lze použít buď pro deklaraci události, nebo pro metodu přístupového objektu události.  Možné hodnoty jsou **statické** a **virtuální**.
 
 *delegate*<br/>
-[Delegovat](delegate-cpp-component-extensions.md), jehož předpis obslužná rutina události se musí shodovat.
+[Delegát](delegate-cpp-component-extensions.md), jehož signatura musí být v obslužné rutině události shodná.
 
-*EVENT_NAME*<br/>
+*event_name*<br/>
 Název události
 
 *return_value*<br/>
-Na návratový typ metody přistupujícího objektu události.  Chcete-li ověřit, návratový typ musí být **void**.
+Návratová hodnota metody přístupového objektu události  Aby bylo možné typ vrácené hodnoty ověřit, musí být návratový typ **void**.
 
 *parameters*<br/>
-(volitelné) Parametry pro `raise` metodu, která odpovídá podpisu *delegovat* parametru.
+volitelné Parametry pro `raise` metodu, která se shoduje s signaturou parametru *delegáta* .
 
 ### <a name="remarks"></a>Poznámky
 
-Událost je přidružení mezi delegáta a členské funkce (Obslužná rutina události), který reaguje na aktivaci události a umožňuje klientům z jiné třídy, metody, které v souladu s podpisem a návratový typ delegáta základní registrace.
+Událost je přidružení mezi delegátem a členskou funkcí (obslužným rutinou události), která reaguje na aktivaci události a umožňuje klientům z libovolné třídy registrovat metody, které odpovídají signatuře a návratový typ nadřazeného delegáta.
 
-Delegát může mít jeden nebo více přidružených metody, které se má volat při kódu indikuje, že došlo k události. Událost v jednom programu můžete k dispozici další programy, které jsou cíleny na rozhraní .NET Framework common language runtime.
+Delegát může mít jednu nebo více přidružených metod, které budou volány, když váš kód indikuje, že došlo k události. Událost v jednom programu může být zpřístupněna ostatním programům, které cílí na .NET Framework modul CLR (Common Language Runtime).
 
-Existují dva typy deklarací události:
+Existují dva druhy deklarací událostí:
 
-*data události*<br/>
-Úložiště pro události v podobě člena typu delegáta, je vytvořen kompilátorem pro datový člen události.  Datový člen události musí být deklarované uvnitř třídy. Se také označuje jako triviální události (viz následující ukázka kódu).
+*datové členy události*<br/>
+Úložiště pro událost ve formě člena typu delegáta je vytvořeno kompilátorem pro události datových členů.  Datový člen události musí být deklarovaný uvnitř třídy. Toto je také známo jako triviální událost (viz Ukázka kódu níže).
 
-*bloky události*<br/>
-Událost bloky umožňují přizpůsobit chování přidat, odebrat a vyvolat metody implementací přidat, odebrat a vyvolání metody. Podpis přidat, odebrat a vyvolat metody musí odpovídat signatuře delegáta.  Události bloku nejsou datové členy a jakékoli použití jako datový člen vygeneruje chybu kompilátoru.
+*bloky událostí*<br/>
+Bloky událostí umožňují přizpůsobit chování metod přidat, odebrat a vyvolat implementací metod přidání, odebrání a vyvolání. Signatura metod Add, Remove a vyvolávají se musí shodovat s signaturou delegáta.  Události bloku událostí nejsou datové členy a při jakémkoli použití jako datový člen se vygeneruje chyba kompilátoru.
 
-Návratový typ obslužné rutiny události musí odpovídat návratový typ delegáta.
+Návratový typ obslužné rutiny události musí odpovídat návratový typ delegátu.
 
-V rozhraní .NET Framework lze považovat datový člen, jako by šlo metodu samotného (to znamená `Invoke` metoda jeho odpovídající delegáta). Typ delegáta musí předdefinovat deklarace datový člen spravované události. Metoda spravované události naproti tomu implicitně definuje odpovídající spravovaný delegáta, pokud již není definován.  Najdete v ukázce kódu na konci tohoto tématu pro příklad.
+V .NET Framework můžete s datovým členem zacházet, jako by šlo o metodu samotnou (to znamená `Invoke` metoda příslušného delegáta). Musíte předdefinovat typ delegáta pro deklaraci spravovaného datového člena události. Naproti tomu spravovaná metoda události implicitně definuje odpovídající spravovaný delegát, pokud ještě není definovaný.  Příklad najdete v ukázce kódu na konci tohoto tématu.
 
-Při deklaraci spravovaného událostí, můžete přidat nebo odebrat přístupové objekty, které se má volat při přidávání nebo odebírání obslužných rutin událostí pomocí operátorů += a-=. Přidat, odebrat a vyvolat metody lze volat explicitně.
+Při deklaraci spravované události můžete zadat přidat a odebrat přistupující objekty, které budou volány při přidání nebo odebrání obslužných rutin událostí pomocí operátorů + = a-=. Metody přidat, odebrat a vyvolat lze explicitně volat.
 
-Následující kroky musíte provést k vytvoření a používání událostí v jazyce Visual C++:
+Aby bylo možné vytvářet a používat události v jazyce Visual C++, je nutné provést následující kroky:
 
-1. Vytvořte nebo Identifikujte delegáta. Pokud definujete vlastní událost, musíte také zajistit, že je delegát, pomocí **události** – klíčové slovo. Pokud předdefinovaná události v rozhraní .NET Framework například pak příjemci události musí pouze znát název delegáta.
+1. Vytvořte nebo Identifikujte delegáta. Pokud definujete vlastní událost, musíte také zajistit, aby byl delegát pro použití s klíčovým slovem **události** . Pokud je tato událost předdefinovaná, v .NET Framework například, že spotřebitelé události potřebují znát pouze název delegáta.
 
 2. Vytvořte třídu, která obsahuje:
 
-   - Události vytvořené z delegáta.
+   - Událost vytvořená z delegáta.
 
-   - (Volitelné) Metoda, která ověřuje, že instance delegáta deklarovat s **události** – klíčové slovo existuje. V opačném případě tuto logiku musí být umístěn v kódu, který se aktivuje událost.
+   - Volitelné Metoda, která ověřuje, zda existuje instance delegáta deklarované s klíčovým slovem **události** . V opačném případě musí být tato logika umístěna v kódu, který událost aktivuje.
 
-   - Metody, které volají události. Tyto metody mohou být přepsání některé funkce základní třídy.
+   - Metody, které volají událost. Tyto metody mohou být popsány u některých funkcí základní třídy.
 
-   Tato třída definuje události.
+   Tato třída definuje událost.
 
-3. Definujte jednu nebo více tříd, které se připojují k této události metod. Každá z těchto tříd se přidružit k jedné nebo několika metod události v základní třídě.
+3. Definujte jednu nebo více tříd, které spojují metody události. Každá z těchto tříd bude přidružit jednu nebo více metod k události v základní třídě.
 
-4. Použijte události:
+4. Použijte událost:
 
-   - Vytvoření objektu třídy, která obsahuje deklaraci události.
+   - Vytvořte objekt třídy, která obsahuje deklaraci události.
 
-   - Vytvoření objektu třídy obsahující definici události.
+   - Vytvořte objekt třídy, která obsahuje definici události.
 
-Další informace o C++nebo rozhraní příkazového řádku události
+Další informace o událostech C++/CLI najdete v tématu.
 
 - [Události v rozhraní](../dotnet/how-to-use-events-in-cpp-cli.md)
 
 ### <a name="requirements"></a>Požadavky
 
-– Možnost kompilátoru: `/clr`
+Možnost kompilátoru:`/clr`
 
 ### <a name="examples"></a>Příklady
 
-Následující příklad kódu ukazuje deklarující páry delegáty, události a obslužné rutiny události; přihlášení k odběru (přidávání) obslužné rutiny událostí; volání obslužných rutin událostí; a pak Probíhá rušení odběru (odebrat) obslužné rutiny událostí.
+Následující příklad kódu ukazuje deklaraci párů delegátů, událostí a obslužných rutin událostí; odběr (přidávání) obslužných rutin událostí; vyvolání obslužných rutin událostí; a potom odhlášení odběru (odebrání) obslužných rutin událostí.
 
 ```cpp
 // mcppv2_events.cpp
@@ -230,7 +230,7 @@ OnClick: 7, 3.14159
 OnDblClick: Hello
 ```
 
-Následující příklad kódu ukazuje logikou používanou ke generování `raise` metoda triviální události: Pokud má jeden nebo více odběratelům událost, volání `raise` metoda implicitně nebo explicitně volání delegáta. Pokud je delegát návratový typ není **void** a pokud nejsou k dispozici žádný odběratelů událostí `raise` metoda vrátí výchozí hodnotu pro typ delegáta. Pokud neexistují žádné události odběratele, volání `raise` jednoduše vrací metoda a je vyvolána žádná výjimka. Pokud delegát návratový typ není **void**, je vrácen typ delegáta.
+Následující příklad kódu ukazuje logiku použitou k vygenerování `raise` metody triviální události: Pokud má událost jednoho nebo více předplatitelů, zavolejte `raise` metodu implicitně nebo explicitně zavoláte delegáta. Pokud návratový typ delegáta není **void** a pokud jsou k dispozici žádná předplatitelé události, `raise` metoda vrátí výchozí hodnotu pro typ delegáta. Pokud neexistují předplatitelé události, volání `raise` metody jednoduše vrátí a není vyvolána žádná výjimka. Pokud typ vrácené hodnoty delegáta není **void**, je vrácen typ delegáta.
 
 ```cpp
 // trivial_events.cpp

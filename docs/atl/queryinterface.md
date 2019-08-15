@@ -7,22 +7,22 @@ helpviewer_keywords:
 - interfaces, availability
 - QueryInterface method
 ms.assetid: 62fce95e-aafa-4187-b50b-e6611b74c3b3
-ms.openlocfilehash: 28f3781706981b06d49829c0277014c09574ef6b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: de2762cff3d697261e159336d866a5a7cb10fafa
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62250350"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69492006"
 ---
 # <a name="queryinterface"></a>QueryInterface
 
-I když jsou mechanismy, které můžete vyjádřit objekt staticky (dříve, než je vytvořena instance) poskytuje funkce, je použít základní mechanismus COM `IUnknown` metodu s názvem [QueryInterface](/windows/desktop/api/unknwn/nf-unknwn-iunknown-queryinterface(q_)).
+I když existují mechanismy, pomocí kterých může objekt vyjadřovat funkce, které poskytuje staticky (před vytvořením instance), základní mechanismus com je použít `IUnknown` metodu nazvanou [QueryInterface](/windows/win32/api/unknwn/nf-unknwn-iunknown-queryinterface(q_)).
 
-Každé rozhraní je odvozena od `IUnknown`, takže každý rozhraní obsahuje implementace `QueryInterface`. Bez ohledu na implementaci tato metoda dotazuje objektu pomocí identifikátor IID rozhraní, ke kterému volající požaduje ukazatel. Pokud objekt podporuje rozhraní, `QueryInterface` při volání také načte ukazatel rozhraní, `AddRef`. V opačném případě vrátí kód chyby: E_NOINTERFACE.
+Každé rozhraní je odvozeno `IUnknown`z, takže každé rozhraní má `QueryInterface`implementaci. Bez ohledu na implementaci Tato metoda dotazuje objekt pomocí IID rozhraní, na které volající chce ukazatel. Pokud objekt podporuje toto rozhraní, `QueryInterface` načte ukazatel na rozhraní a zároveň zavolá. `AddRef` V opačném případě vrátí kód chyby E_NOINTERFACE.
 
-Všimněte si, že musí dodržovat [počítání odkazů](../atl/reference-counting.md) pravidla za všech okolností. Při volání `Release` na ukazatel rozhraní k snížen počet odkazů na nulu, neměli byste používat tento ukazatel znovu. Občas budete muset získat nestálý odkaz na objekt (to znamená, které staví na získání ukazatele na jedno z jeho rozhraní bez zvyšování počtu odkazů), ale není přijatelné pro toto provést zavoláním `QueryInterface` následovaný `Release`. Ukazatele získaného takovým způsobem, není platný a neměl by se používat. To méně zřejmé, kdy [_ATL_DEBUG_INTERFACES](reference/debugging-and-error-reporting-macros.md#_atl_debug_interfaces) je definován, takže definování toto makro je užitečný způsob počítání chyby hledání referencí.
+Všimněte si, že je nutné vždy dodržovat pravidla [počítání odkazů](../atl/reference-counting.md) . Pokud voláte `Release` ukazatel rozhraní, chcete-li snížit počet odkazů na nulu, neměli byste tento ukazatel používat znovu. Občas může být nutné získat Slabý odkaz na objekt (to znamená, že můžete chtít získat ukazatel na jedno z jeho rozhraní bez zvýšení počtu odkazů), ale není přijatelné, pokud to uděláte voláním metody `QueryInterface` `Release`následovaný. Ukazatel získaný takovým způsobem je neplatný a neměl by být použit. Tato možnost bude přehlednější, když je definována [_ATL_DEBUG_INTERFACES](reference/debugging-and-error-reporting-macros.md#_atl_debug_interfaces) , takže definování tohoto makra je užitečný způsob, jak najít chyby počítání odkazů.
 
 ## <a name="see-also"></a>Viz také:
 
 [Úvod do modelu COM](../atl/introduction-to-com.md)<br/>
-[QueryInterface: Navigace v objektu](/windows/desktop/com/queryinterface--navigating-in-an-object)
+[QueryInterface Navigace v objektu](/windows/win32/com/queryinterface--navigating-in-an-object)

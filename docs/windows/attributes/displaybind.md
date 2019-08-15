@@ -1,21 +1,21 @@
 ---
-title: displaybind (atribut C++ COM)
+title: displaybind (C++ atribut com)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.displaybind
 helpviewer_keywords:
 - displaybind attribute
 ms.assetid: b3d70396-78e4-43d9-9583-16ddb8c9bb1f
-ms.openlocfilehash: b16e809781170d0c5dfe301e6dd73e6a27046835
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 168db224e7b15656308259f9507e1079744f1a73
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62409691"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69490889"
 ---
 # <a name="displaybind"></a>displaybind
 
-Určuje vlastnost, která má být zobrazena uživateli jako s možností vazby.
+Označuje vlastnost, která se má uživateli zobrazit jako vazba.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -25,24 +25,24 @@ Určuje vlastnost, která má být zobrazena uživateli jako s možností vazby.
 
 ## <a name="remarks"></a>Poznámky
 
-**Displaybind** C++ atribut má stejné funkce jako [displaybind](/windows/desktop/Midl/displaybind) atribut MIDL.
+Atribut **displaybind** C++ má stejné funkce jako atribut [displaybind](/windows/win32/Midl/displaybind) MIDL.
 
 ## <a name="example"></a>Příklad
 
-Podívejte se na příklad pro [umožňujících vazbu](bindable.md) příklad, jak používat **displaybind**.
+Příklad použití **displaybind**najdete v příkladu s možností [vazby](bindable.md) .
 
 ## <a name="requirements"></a>Požadavky
 
-### <a name="attribute-context"></a>Atribut kontextu
+### <a name="attribute-context"></a>Kontext atributu
 
 |||
 |-|-|
 |**Platí pro**|Metoda rozhraní|
-|**Opakovatelné**|Ne|
-|**Vyžadované atributy**|Žádné|
+|**REPEATABLE**|Ne|
+|**Požadované atributy**|Žádné|
 |**Neplatné atributy**|Žádné|
 
-Další informace najdete v tématu [kontexty atributů](cpp-attributes-com-net.md#contexts).
+Další informace naleznete v tématu [kontexty atributů](cpp-attributes-com-net.md#contexts).
 
 ## <a name="see-also"></a>Viz také:
 

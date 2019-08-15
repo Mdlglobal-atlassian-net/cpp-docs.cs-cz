@@ -1,21 +1,21 @@
 ---
-title: iid_is – (C++ atributů COM)
+title: iid_is (C++ atribut com)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.iid_is
 helpviewer_keywords:
 - iid_is attribute
 ms.assetid: 2f9b42a9-7130-4b08-9b1e-0d5d360e10ff
-ms.openlocfilehash: b91fb7937bb0e20f2500eace9695bc0ddba21b26
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8bfa20f55afd85019795fdd40548158c2f49e126
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62409522"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69514668"
 ---
-# <a name="iidis"></a>iid_is
+# <a name="iid_is"></a>iid_is
 
-Určuje identifikátor IID rozhraní modelu COM, který ukazuje ukazatel rozhraní.
+Určuje IID rozhraní modelu COM, na které odkazoval ukazatel rozhraní.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -25,16 +25,16 @@ Určuje identifikátor IID rozhraní modelu COM, který ukazuje ukazatel rozhran
 
 ### <a name="parameters"></a>Parametry
 
-*Výraz*<br/>
-Výraz jazyka C, který určuje IID rozhraní modelu COM na které odkazuje ukazatel rozhraní.
+*vyjádření*<br/>
+Výraz jazyka C, který určuje IID rozhraní modelu COM, na které ukazuje ukazatel rozhraní.
 
 ## <a name="remarks"></a>Poznámky
 
-**Iid_is –** C++ atribut má stejné funkce jako [iid_is –](/windows/desktop/Midl/iid-is) atribut MIDL.
+Atribut **iid_is** C++ má stejné funkce jako atribut [iid_is](/windows/win32/Midl/iid-is) MIDL.
 
 ## <a name="example"></a>Příklad
 
-Následující kód ukazuje použití **iid_is –**:
+Následující kód ukazuje použití **iid_is**:
 
 ```cpp
 // cpp_attr_ref_iid_is.cpp
@@ -53,16 +53,16 @@ __interface IFireTabCtrl : IDispatch
 
 ## <a name="requirements"></a>Požadavky
 
-### <a name="attribute-context"></a>Atribut kontextu
+### <a name="attribute-context"></a>Kontext atributu
 
 |||
 |-|-|
-|**Platí pro**|Rozhraní parametr, datový člen|
-|**Opakovatelné**|Ne|
-|**Vyžadované atributy**|Žádné|
+|**Platí pro**|Parametr rozhraní, datový člen|
+|**REPEATABLE**|Ne|
+|**Požadované atributy**|Žádné|
 |**Neplatné atributy**|Žádné|
 
-Další informace najdete v tématu [kontexty atributů](cpp-attributes-com-net.md#contexts).
+Další informace naleznete v tématu [kontexty atributů](cpp-attributes-com-net.md#contexts).
 
 ## <a name="see-also"></a>Viz také:
 

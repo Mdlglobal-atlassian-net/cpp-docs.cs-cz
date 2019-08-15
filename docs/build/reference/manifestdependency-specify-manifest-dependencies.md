@@ -8,12 +8,12 @@ helpviewer_keywords:
 - /MANIFESTDEPENDENCY linker option
 - -MANIFESTDEPENDENCY linker option
 ms.assetid: e4b68313-33a2-4c3e-908e-ac2b9f7d6a73
-ms.openlocfilehash: 676059b8d398fd108d8f8fc163c85a3da3c657b4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 43239efe70cc555d1a7e03c5d67e99e40ccd480e
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62321589"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69492707"
 ---
 # <a name="manifestdependency-specify-manifest-dependencies"></a>/MANIFESTDEPENDENCY (Určit závislosti manifestu)
 
@@ -23,25 +23,25 @@ ms.locfileid: "62321589"
 
 ## <a name="remarks"></a>Poznámky
 
-/ MANIFESTDEPENDENCY umožňuje zadat atributy, které budou umístěny do \<závislost > části souboru manifestu.
+/MANIFESTDEPENDENCY umožňuje zadat atributy, které budou umístěny v \<části > závislostí souboru manifestu.
 
-Zobrazit [volbu/manifest (vytvoření Side-by-Side manifestu sestavení)](manifest-create-side-by-side-assembly-manifest.md) informace o tom, jak vytvořit soubor manifestu.
+Informace o tom, jak vytvořit soubor manifestu, najdete v tématu [/manifest (Vytvoření manifestu souběžného sestavení)](manifest-create-side-by-side-assembly-manifest.md) .
 
-Další informace o \<závislost > části souboru manifestu naleznete v tématu [konfiguračních souborů vydavatele](/windows/desktop/SbsCs/publisher-configuration-files).
+Další informace o \<části > závislostí souboru manifestu najdete v tématu [konfigurační soubory vydavatele](/windows/win32/SbsCs/publisher-configuration-files).
 
-/ MANIFESTDEPENDENCY informace může být předán linkeru v jednom ze dvou způsobů:
+/MANIFESTDEPENDENCY informace mohou být předány do linkeru jedním ze dvou způsobů:
 
-- Přímo na příkazovém řádku (nebo v souboru odpovědí) s /MANIFESTDEPENDENCY.
+- Přímo na příkazovém řádku (nebo v souboru odpovědí) pomocí/MANIFESTDEPENDENCY.
 
-- Prostřednictvím [komentář](../../preprocessor/comment-c-cpp.md) direktivy pragma.
+- Prostřednictvím direktivy pragma [Comment](../../preprocessor/comment-c-cpp.md) .
 
-Následující příklad ukazuje komentář /MANIFESTDEPENDENCY předány prostřednictvím direktivy pragma
+Následující příklad ukazuje/MANIFESTDEPENDENCY komentář předaný prostřednictvím direktivy pragma,
 
 ```cpp
 #pragma comment(linker, "\"/manifestdependency:type='Win32' name='Test.Research.SampleAssembly' version='6.0.0.0' processorArchitecture='X86' publicKeyToken='0000000000000000' language='*'\"")
 ```
 
-Výsledek bude následující položka v souboru manifestu:
+Výsledkem je následující položka v souboru manifestu:
 
 ```xml
 <dependency>
@@ -51,21 +51,21 @@ Výsledek bude následující položka v souboru manifestu:
 </dependency>
 ```
 
-Stejné /MANIFESTDEPENDENCY komentářů mohou být předány do příkazového řádku takto:
+Stejné komentáře/MANIFESTDEPENDENCY lze předat na příkazovém řádku následujícím způsobem:
 
 ```cmd
 "/manifestdependency:type='Win32' name='Test.Research.SampleAssembly' version='6.0.0.0' processorArchitecture='X86' publicKeyToken='0000000000000000' language='*'\"
 ```
 
-Linker se shromažďování /MANIFESTDEPENDENCY komentáře, odstranění duplicitních položek a pak přidejte výsledný řetězec XML do souboru manifestu.  Pokud linker zjistí konfliktní záznamy, v souboru manifestu bude poškozena a se aplikaci nepodaří spustit (záznam může přidat do protokolu událostí udávající příčiny selhání).
+Linker bude shromažďovat komentáře/MANIFESTDEPENDENCY, eliminovat duplicitní položky a pak přidat výsledný řetězec XML do souboru manifestu.  Pokud linker najde konfliktní položky, soubor manifestu se poškodí a aplikace se nespustí (položka může být přidána do protokolu událostí, která indikuje zdroj selhání).
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Nastavení tohoto parametru linkeru ve vývojovém prostředí sady Visual Studio
 
-1. Otevřete v projektu **stránky vlastností** dialogové okno. Podrobnosti najdete v tématu [vlastnosti kompilátoru a sestavení nastavte C++ v sadě Visual Studio](../working-with-project-properties.md).
+1. Otevřete dialogové okno **stránky vlastností** projektu. Podrobnosti najdete v tématu [nastavení C++ vlastností kompilátoru a sestavení v sadě Visual Studio](../working-with-project-properties.md).
 
-1. Vyberte **vlastnosti konfigurace** > **Linkeru** > **soubor manifestu** stránku vlastností.
+1. Vyberte stránku vlastností**souboru manifestu** **linkeru** >  **vlastnosti** > konfigurace.
 
-1. Upravit **Další závislosti manifestu** vlastnost.
+1. Upravte vlastnost **Další závislosti manifestu** .
 
 ### <a name="to-set-this-linker-option-programmatically"></a>Programové nastavení tohoto parametru linkeru
 

@@ -1,5 +1,5 @@
 ---
-title: Cbrush – třída
+title: CBrush – – třída
 ms.date: 11/04/2016
 f1_keywords:
 - CBrush
@@ -24,16 +24,16 @@ helpviewer_keywords:
 - CBrush [MFC], FromHandle
 - CBrush [MFC], GetLogBrush
 ms.assetid: e5ef2c62-dd95-4973-9090-f52f605900e1
-ms.openlocfilehash: f2a2e385a9f210b3644d7fade00b72c4befa47ef
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a99d8c8022d23f627320b66c3f376be803c9c839
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62388394"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69507438"
 ---
-# <a name="cbrush-class"></a>Cbrush – třída
+# <a name="cbrush-class"></a>CBrush – – třída
 
-Zapouzdřuje štětec rozhraní GDI systému Windows grafiky zařízení.
+Zapouzdřuje štětec rozhraní grafického zařízení (GDI) systému Windows.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -45,40 +45,40 @@ class CBrush : public CGdiObject
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
-|[CBrush::CBrush](#cbrush)|Vytvoří `CBrush` objektu.|
+|[CBrush –:: CBrush –](#cbrush)|`CBrush` Vytvoří objekt.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
-|[CBrush::CreateBrushIndirect](#createbrushindirect)|Inicializuje štětce styl, barvu a vzoru určenému v [logbrush –](/windows/desktop/api/wingdi/ns-wingdi-taglogbrush) struktury.|
-|[CBrush::CreateDIBPatternBrush](#createdibpatternbrush)|Inicializuje štětcem pomocí vzoru určené bitmap nezávislých na zařízení (DIB).|
-|[CBrush::CreateHatchBrush](#createhatchbrush)|Inicializuje se zadanému vzoru šrafované a barvou štětce.|
-|[CBrush::CreatePatternBrush](#createpatternbrush)|Inicializuje štětcem pomocí vzoru určené rastrový obrázek.|
-|[CBrush::CreateSolidBrush](#createsolidbrush)|Inicializuje zadaný plnou barvou štětce.|
-|[CBrush::CreateSysColorBrush](#createsyscolorbrush)|Vytvoří štětec, který je výchozí barva systému.|
-|[CBrush::FromHandle](#fromhandle)|Vrací ukazatel na `CBrush` objektu, když je zadaný popisovač Windows `HBRUSH` objektu.|
-|[CBrush::GetLogBrush](#getlogbrush)|Získá [logbrush –](/windows/desktop/api/wingdi/ns-wingdi-taglogbrush) struktury.|
+|[CBrush –:: CreateBrushIndirect](#createbrushindirect)|Inicializuje štětce se stylem, barvou a vzorkem zadaným ve struktuře [LOGBRUSH –](/windows/win32/api/wingdi/ns-wingdi-logbrush) .|
+|[CBrush –:: CreateDIBPatternBrush](#createdibpatternbrush)|Inicializuje štětec pomocí vzoru určeného rastrového obrázku (DIB) nezávislém na zařízení.|
+|[CBrush –:: CreateHatchBrush](#createhatchbrush)|Inicializuje štětec se zadaným vyšrafovaném vzorem a barvou.|
+|[CBrush –:: CreatePatternBrush](#createpatternbrush)|Inicializuje štětec pomocí vzoru určeného rastrovým obrázkem.|
+|[CBrush –:: CreateSolidBrush](#createsolidbrush)|Inicializuje štětec se zadanou plnou barvou.|
+|[CBrush –:: CreateSysColorBrush](#createsyscolorbrush)|Vytvoří štětec, který je výchozí systémovou barvou.|
+|[CBrush –:: FromHandle](#fromhandle)|Vrací ukazatel na `CBrush` objekt, pokud je předána obslužná rutina objektu `HBRUSH` Windows.|
+|[CBrush –:: GetLogBrush](#getlogbrush)|Načte strukturu [LOGBRUSH –](/windows/win32/api/wingdi/ns-wingdi-logbrush) .|
 
 ### <a name="public-operators"></a>Veřejné operátory
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
-|[CBrush::operator HBRUSH](#operator_hbrush)|Vrátí popisovač Windows připojené k `CBrush` objektu.|
+|[CBrush –:: operator HBRUSH](#operator_hbrush)|Vrátí popisovač systému Windows připojený k `CBrush` objektu.|
 
 ## <a name="remarks"></a>Poznámky
 
-Použití `CBrush` objektu, sestavit `CBrush` objektu a předejte jej do libovolné `CDC` členskou funkci, která vyžaduje štětce.
+Chcete-li `CBrush` použít objekt, `CBrush` Sestavte objekt a předejte `CDC` ho libovolné členské funkci, která vyžaduje štětec.
 
-Štětce může být plná, zasílána nebo vzorované.
+Štětce můžou být plné, šrafované nebo vzorované.
 
-Další informace o `CBrush`, naleznete v tématu [grafické objekty](../../mfc/graphic-objects.md).
+Další informace o `CBrush`naleznete v tématu [Graphics Objects](../../mfc/graphic-objects.md).
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
-[Třídy CObject](../../mfc/reference/cobject-class.md)
+[CObject](../../mfc/reference/cobject-class.md)
 
 [CGdiObject](../../mfc/reference/cgdiobject-class.md)
 
@@ -86,11 +86,11 @@ Další informace o `CBrush`, naleznete v tématu [grafické objekty](../../mfc/
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** afxwin.h
+**Záhlaví:** afxwin. h
 
-##  <a name="cbrush"></a>  CBrush::CBrush
+##  <a name="cbrush"></a>CBrush –:: CBrush –
 
-Vytvoří `CBrush` objektu.
+`CBrush` Vytvoří objekt.
 
 ```
 CBrush();
@@ -102,45 +102,45 @@ explicit CBrush(CBitmap* pBitmap);
 ### <a name="parameters"></a>Parametry
 
 *crColor*<br/>
-Určuje barvu popředí štětce jako barva RGB. Pokud je zasílána štětec, tento parametr určuje barvu šrafování.
+Určuje barvu popředí štětce jako barvu RGB. Pokud je štětec Vyšrafované, tento parametr určuje barvu šrafování.
 
 *nIndex*<br/>
-Určuje styl šrafování štětce. To může být jedna z následujících hodnot:
+Určuje styl šrafování štětce. Může to být jedna z následujících hodnot:
 
-- HS_BDIAGONAL Šrafování dolů (zleva doprava) na 45 stupňů
+- HS_BDIAGONAL dolů (zleva doprava) ve stupních 45
 
-- HS_CROSS vodorovné a svislé mřížkovaný
+- HS_CROSS vodorovně a svisle mřížkovaný
 
-- HS_DIAGCROSS šrafování na 45 stupňů
+- HS_DIAGCROSS křížové šrafování na 45 stupňů
 
-- Nahoru HS_FDIAGONAL šrafování (zleva doprava) na 45 stupňů
+- HS_FDIAGONAL šikmé šrafování (zleva doprava) na 45 stupňů
 
-- Vodorovné HS_HORIZONTAL šrafování
+- HS_HORIZONTAL, horizontální šrafování
 
-- Svislé HS_VERTICAL šrafování
+- HS_VERTICAL, Vertikální šrafování
 
 *pBitmap*<br/>
-Odkazuje `CBitmap` objekt, který určuje, které jsou vykreslovány štětec rastrový obrázek.
+Odkazuje na `CBitmap` objekt, který určuje rastrový obrázek, pomocí kterého maluje štětce.
 
 ### <a name="remarks"></a>Poznámky
 
-`CBrush` má čtyři přetížené konstruktory. Konstruktor bez argumentů vytvoří neinicializované `CBrush` objekt, který musí být inicializován před jeho použitím.
+`CBrush`má čtyři přetížené konstruktory. Konstruktor bez argumentů vytvoří Neinicializovaný `CBrush` objekt, který musí být inicializován předtím, než bude možné ho použít.
 
-Pokud použijete konstruktor bez argumentů, musí inicializovat výsledný `CBrush` objekt s [CreateSolidBrush](#createsolidbrush), [CreateHatchBrush](#createhatchbrush), [CreateBrushIndirect](#createbrushindirect), [CreatePatternBrush](#createpatternbrush), nebo [CreateDIBPatternBrush](#createdibpatternbrush). Pokud použijete jeden z konstruktorů, které přebírá argumenty, pak žádné další inicializace je nezbytné. Konstruktory s argumenty může vyvolat výjimku, pokud nedojde k chybám, když bude vždy úspěšné konstruktor bez argumentů.
+Použijete-li `CBrush` konstruktor bez argumentů, je nutné inicializovat výsledný objekt pomocí [CreateSolidBrush](#createsolidbrush), [CreateHatchBrush](#createhatchbrush), [CreateBrushIndirect](#createbrushindirect), [CreatePatternBrush](#createpatternbrush)nebo [ CreateDIBPatternBrush](#createdibpatternbrush). Použijete-li jeden z konstruktorů, které přebírají argumenty, není nutné provádět žádnou další inicializaci. Konstruktory s argumenty mohou vyvolat výjimku, pokud dojde k chybám, ale konstruktor bez argumentů bude vždy úspěšný.
 
-Konstruktor s jedním [COLORREF](/windows/desktop/gdi/colorref) parametru sestaví štětec určenou barvou. Barva určuje hodnota RGB a může být zkonstruovaný pomocí RGB – makro v systému WINDOWS. H.
+Konstruktor s jedním parametrem [COLORREF](/windows/win32/gdi/colorref) vytvoří plný štětec se zadanou barvou. Barva Určuje hodnotu RGB a může být vytvořena pomocí makra RGB v systému WINDOWS. Y.
 
-Konstruktor se dvěma parametry vytvoří štětce šrafování. *NIndex* parametr určuje index šrafované vzor. *CrColor* parametr určuje barvu.
+Konstruktor se dvěma parametry vytvoří šrafované štětce. Parametr *nIndex* určuje index šrafovaného vzoru. Parametr *crColor* Určuje barvu.
 
-Konstruktor `CBitmap` parametru sestaví vzorkem štětce. Tento parametr identifikuje rastrový obrázek. Rastrový obrázek se předpokládá, že byly vytvořeny pomocí [CBitmap::CreateBitmap](../../mfc/reference/cbitmap-class.md#createbitmap), [CBitmap::CreateBitmapIndirect](../../mfc/reference/cbitmap-class.md#createbitmapindirect), [CBitmap::LoadBitmap](../../mfc/reference/cbitmap-class.md#loadbitmap), nebo [ CBitmap::CreateCompatibleBitmap](../../mfc/reference/cbitmap-class.md#createcompatiblebitmap). Minimální velikost rastrového obrázku použije vzorek výplně je 8 x 8 pixelů.
+Konstruktor s `CBitmap` parametrem vytvoří vzorek štětce. Parametr identifikuje rastrový obrázek. Předpokládá se, že je bitmapa vytvořená pomocí [CBitmap –:: CreateBitmap](../../mfc/reference/cbitmap-class.md#createbitmap), [CBitmap –:: CreateBitmapIndirect](../../mfc/reference/cbitmap-class.md#createbitmapindirect), [CBitmap –:: LoadBitmap](../../mfc/reference/cbitmap-class.md#loadbitmap)nebo [CBitmap –:: CreateCompatibleBitmap](../../mfc/reference/cbitmap-class.md#createcompatiblebitmap). Minimální velikost rastrového obrázku, který má být použit ve vzorku výplně, je 8 pixelů o 8 pixelů.
 
 ### <a name="example"></a>Příklad
 
 [!code-cpp[NVC_MFCDocView#21](../../mfc/codesnippet/cpp/cbrush-class_1.cpp)]
 
-##  <a name="createbrushindirect"></a>  CBrush::CreateBrushIndirect
+##  <a name="createbrushindirect"></a>CBrush –:: CreateBrushIndirect
 
-Inicializuje stopy s styl, barvu a vzoru určenému v [logbrush –](/windows/desktop/api/wingdi/ns-wingdi-taglogbrush) struktury.
+Inicializuje štětec se stylem, barvou a vzorkem zadaným ve struktuře [LOGBRUSH –](/windows/win32/api/wingdi/ns-wingdi-logbrush) .
 
 ```
 BOOL CreateBrushIndirect(const LOGBRUSH* lpLogBrush);
@@ -149,7 +149,7 @@ BOOL CreateBrushIndirect(const LOGBRUSH* lpLogBrush);
 ### <a name="parameters"></a>Parametry
 
 *lpLogBrush*<br/>
-Odkazuje [logbrush –](/windows/desktop/api/wingdi/ns-wingdi-taglogbrush) strukturu, která obsahuje informace o stopy.
+Odkazuje na strukturu [LOGBRUSH –](/windows/win32/api/wingdi/ns-wingdi-logbrush) , která obsahuje informace o štětci.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -157,17 +157,17 @@ Nenulové, pokud je funkce úspěšná; jinak 0.
 
 ### <a name="remarks"></a>Poznámky
 
-Štětec je následně vybrat jako aktuální štětec pro jakýkoli kontext zařízení.
+Štětec se následně dá vybrat jako aktuální štětec pro jakékoli kontexty zařízení.
 
-Štětce vytvořené pomocí (1 roviny, 1 bitů na pixel) monochromatický rastrový obrázek je vykreslen aktuální barvy textu a pozadí. Aktuální barvou textu bude vykreslen pixelů reprezentována bit nastaven na hodnotu 0. Aktuální barvou pozadí bude vykreslen pixelů reprezentována bit nastaven na hodnotu 1.
+Obrázek vytvořený pomocí černobílého rastrového obrázku (1 rovina, 1 bitů na pixel) se vykreslí pomocí aktuální barvy textu a pozadí. Pixely reprezentované bitovou sadou nastavenou na hodnotu 0 budou vykresleny pomocí aktuální barvy textu. Pixely reprezentované bitovou sadou nastavenou na hodnotu 1 budou vykresleny pomocí aktuální barvy pozadí.
 
 ### <a name="example"></a>Příklad
 
 [!code-cpp[NVC_MFCDocView#22](../../mfc/codesnippet/cpp/cbrush-class_2.cpp)]
 
-##  <a name="createdibpatternbrush"></a>  CBrush::CreateDIBPatternBrush
+##  <a name="createdibpatternbrush"></a>CBrush –:: CreateDIBPatternBrush
 
-Inicializuje štětce se vzorem určené bitmap nezávislých na zařízení (DIB).
+Inicializuje štětec se vzorkem určeným rastrovým obrázkem, který je nezávislý na zařízení (DIB).
 
 ```
 BOOL CreateDIBPatternBrush(
@@ -182,51 +182,51 @@ BOOL CreateDIBPatternBrush(
 ### <a name="parameters"></a>Parametry
 
 *hPackedDIB*<br/>
-Určuje objekt globální paměť obsahující komprimovat komprimovaný objekt bitmap nezávislých na zařízení (DIB).
+Identifikuje objekt globální paměti obsahující zabalené rastrové obrázky nezávislé na zařízení (DIB).
 
-*Npoužití*<br/>
-Určuje, zda `bmiColors[]` pole [bitmapinfo –](/windows/desktop/api/wingdi/ns-wingdi-tagbitmapinfo) struktury dat (část z "komprimace DIB") obsahují explicitní hodnoty RGB nebo indexů do aktuálně realizované logickou paletu. Parametr musí být jedna z následujících hodnot:
+*nUsage*<br/>
+Určuje, zda `bmiColors[]` pole struktury dat [BITMAPINFO –](/windows/win32/api/wingdi/ns-wingdi-bitmapinfo) (část "zkomprimovaného formátu DIB") obsahují explicitní hodnoty RGB nebo indexy do aktuálně realizované logické palety. Parametr musí být jedna z následujících hodnot:
 
-- DIB_PAL_COLORS tabulku barvy se skládá z pole indexů 16 bitů.
+- DIB_PAL_COLORS tabulka barev se skládá z pole 16bitových indexů.
 
-- Tabulky barev DIB_RGB_COLORS obsahuje literálové hodnoty RGB.
+- DIB_RGB_COLORS tabulka barev obsahuje literálové hodnoty RGB.
 
 *lpPackedDIB*<br/>
-Odkazuje na sbalené DIB skládající se z `BITMAPINFO` struktura bezprostředně následovat pole bajtů definování pixelů rastrového obrázku.
+Odkazuje na zabalený DIB skládající se ze `BITMAPINFO` struktury ihned následované polem bajtů, které definuje pixely rastrového obrázku.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Nenulové, pokud je úspěšná. jinak 0.
+Nenulové, pokud bylo úspěšné; v opačném případě 0.
 
 ### <a name="remarks"></a>Poznámky
 
-Štětec je následně vybrat pro jakýkoli kontext zařízení, který podporuje rastrové operace.
+Štětec se následně dá vybrat pro libovolný kontext zařízení, který podporuje rastrové operace.
 
-Dvě verze se liší v tak, jak zpracovat DIB:
+Tyto dvě verze se liší ve způsobu zpracování formátu DIB:
 
-- V první verze, chcete-li získat popisovač DIB zavoláte Windows `GlobalAlloc` funkce a přidělení bloku paměti globální paměť vyplnit sbalené DIB.
+- V první verzi pro získání popisovače na DIB zavoláte funkci systému Windows `GlobalAlloc` , která přidělí blok globální paměti a pak vyplní paměť sbaleným DIB.
 
-- V druhém verzi, není nutné volat `GlobalAlloc` přidělení paměti pro komprimovaný DIB.
+- Ve druhé verzi není nutné volat `GlobalAlloc` pro přidělení paměti pro zkomprimovaný DIB.
 
-Sbalené DIB se skládá z `BITMAPINFO` datová struktura bezprostředně následovat pole bajtů, který definuje pixelů rastrového obrázku. Použít jako vzorky výplně rastrových obrázků musí být 8 x 8 pixelů. Pokud rastrového obrázku je větší, vytvoří Windows vzorek výplně pomocí pouze bity odpovídající řádky prvních 8 a 8 sloupce v levém horním rohu rastrového obrázku v pixelech.
+Zabalený DIB se skládá z `BITMAPINFO` datové struktury ihned po poli bajtů, které definuje pixely rastrového obrázku. Rastrové obrázky používané jako vzory výplní by měly být 8 pixelů o 8 pixelů. Pokud je rastrový obrázek větší, vytvoří systém Windows vzorek výplně s použitím pouze bitů odpovídajících prvních 8 řádků a 8 sloupců pixelů v levém horním rohu rastrového obrázku.
 
-Když aplikace vybere dvě barvy štětce vzor DIB kontextu monochromatického zařízení, Windows bude ignorovat barvy definované v DIB a namísto toho se zobrazí vzorek štětec pomocí aktuální barvy textu a pozadí kontextu zařízení. Pixely namapované na první barvou DIB (na posunu 0 v tabulce barev DIB) se zobrazí pomocí barvu textu. Pixely namapované na druhý sloupec (na posunu 1 v tabulce barev) se zobrazí barvou pozadí.
+Když aplikace vybere vzorek štětce se dvěma barvami DIB do kontextu monochromatického zařízení, systém Windows ignoruje barvy zadané ve formátu DIB a místo toho zobrazí štětec vzorů s použitím aktuální barvy textu a pozadí kontextu zařízení. Pixely namapované na první barvu (na posunutí 0 v tabulce barev DIB) se zobrazí pomocí barvy textu. Pixely namapované na druhou barvu (na posunu 1 v tabulce barev) se zobrazují pomocí barvy pozadí.
 
-Informace o používání následujících funkcí Windows najdete v tématu Windows SDK:
+Informace o použití následujících funkcí systému Windows naleznete v Windows SDK:
 
-- [CreateDIBPatternBrush](/windows/desktop/api/wingdi/nf-wingdi-createdibpatternbrush) (Tato funkce slouží pouze pro kompatibilitu s aplikace napsané pro verzích Windows starších než 3.0; použijte `CreateDIBPatternBrushPt` funkce.)
+- [CreateDIBPatternBrush](/windows/win32/api/wingdi/nf-wingdi-createdibpatternbrush) (Tato funkce je k dispozici pouze pro kompatibilitu s aplikacemi napsanými ve verzích Windows starších než 3,0 `CreateDIBPatternBrushPt` ; použijte funkci.)
 
-- [CreateDIBPatternBrushPt](/windows/desktop/api/wingdi/nf-wingdi-createdibpatternbrushpt) (Tato funkce by měla sloužit pro aplikace založené na Win32.)
+- [CreateDIBPatternBrushPt](/windows/win32/api/wingdi/nf-wingdi-createdibpatternbrushpt) (Tato funkce by měla být používána pro aplikace založené na Win32.)
 
-- [GlobalAlloc](/windows/desktop/api/winbase/nf-winbase-globalalloc)
+- [GlobalAlloc](/windows/win32/api/winbase/nf-winbase-globalalloc)
 
 ### <a name="example"></a>Příklad
 
 [!code-cpp[NVC_MFCDocView#23](../../mfc/codesnippet/cpp/cbrush-class_3.cpp)]
 
-##  <a name="createhatchbrush"></a>  CBrush::CreateHatchBrush
+##  <a name="createhatchbrush"></a>CBrush –:: CreateHatchBrush
 
-Inicializuje se zadanému vzoru šrafované a barvou štětce.
+Inicializuje štětec se zadaným vyšrafovaném vzorem a barvou.
 
 ```
 BOOL CreateHatchBrush(
@@ -237,38 +237,38 @@ BOOL CreateHatchBrush(
 ### <a name="parameters"></a>Parametry
 
 *nIndex*<br/>
-Určuje styl šrafování štětce. To může být jedna z následujících hodnot:
+Určuje styl šrafování štětce. Může to být jedna z následujících hodnot:
 
-- HS_BDIAGONAL Šrafování dolů (zleva doprava) na 45 stupňů
+- HS_BDIAGONAL dolů (zleva doprava) ve stupních 45
 
-- HS_CROSS vodorovné a svislé mřížkovaný
+- HS_CROSS vodorovně a svisle mřížkovaný
 
-- HS_DIAGCROSS šrafování na 45 stupňů
+- HS_DIAGCROSS křížové šrafování na 45 stupňů
 
-- Nahoru HS_FDIAGONAL šrafování (zleva doprava) na 45 stupňů
+- HS_FDIAGONAL šikmé šrafování (zleva doprava) na 45 stupňů
 
-- Vodorovné HS_HORIZONTAL šrafování
+- HS_HORIZONTAL, horizontální šrafování
 
-- Svislé HS_VERTICAL šrafování
+- HS_VERTICAL, Vertikální šrafování
 
 *crColor*<br/>
-Určuje barvu popředí štětce jako barva RGB (barva šrafování). Zobrazit [COLORREF](/windows/desktop/gdi/colorref) v sadě Windows SDK pro další informace.
+Určuje barvu popředí štětce jako barvu RGB (barvy šrafování). Další informace najdete v tématu [COLORREF](/windows/win32/gdi/colorref) v Windows SDK.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Nenulové, pokud je úspěšná. jinak 0.
+Nenulové, pokud bylo úspěšné; v opačném případě 0.
 
 ### <a name="remarks"></a>Poznámky
 
-Štětec je následně vybrat jako aktuální štětec pro jakýkoli kontext zařízení.
+Štětec se následně dá vybrat jako aktuální štětec pro jakékoli kontexty zařízení.
 
 ### <a name="example"></a>Příklad
 
 [!code-cpp[NVC_MFCDocView#24](../../mfc/codesnippet/cpp/cbrush-class_4.cpp)]
 
-##  <a name="createpatternbrush"></a>  CBrush::CreatePatternBrush
+##  <a name="createpatternbrush"></a>CBrush –:: CreatePatternBrush
 
-Inicializuje štětcem pomocí vzoru určené rastrový obrázek.
+Inicializuje štětec pomocí vzoru určeného rastrovým obrázkem.
 
 ```
 BOOL CreatePatternBrush(CBitmap* pBitmap);
@@ -281,27 +281,27 @@ Identifikuje rastrový obrázek.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Nenulové, pokud je úspěšná. jinak 0.
+Nenulové, pokud bylo úspěšné; v opačném případě 0.
 
 ### <a name="remarks"></a>Poznámky
 
-Štětec je následně vybrat pro jakýkoli kontext zařízení, který podporuje rastrové operace. Rastrový obrázek identifikovaný *pBitmap* je obvykle inicializována pomocí [CBitmap::CreateBitmap](../../mfc/reference/cbitmap-class.md#createbitmap), [CBitmap::CreateBitmapIndirect](../../mfc/reference/cbitmap-class.md#createbitmapindirect), [cbitmap –:: Loadbitmap –](../../mfc/reference/cbitmap-class.md#loadbitmap), nebo [CBitmap::CreateCompatibleBitmap](../../mfc/reference/cbitmap-class.md#createcompatiblebitmap) funkce.
+Štětec se následně dá vybrat pro libovolný kontext zařízení, který podporuje rastrové operace. Rastr identifikovaný *pBitmap* je obvykle inicializován pomocí [CBitmap –:: CreateBitmap](../../mfc/reference/cbitmap-class.md#createbitmap), [CBitmap –:: CreateBitmapIndirect](../../mfc/reference/cbitmap-class.md#createbitmapindirect), [CBitmap –:: LoadBitmap](../../mfc/reference/cbitmap-class.md#loadbitmap)nebo [CBitmap –:: CreateCompatibleBitmap](../../mfc/reference/cbitmap-class.md#createcompatiblebitmap) Function.
 
-Použít jako vzorky výplně rastrových obrázků musí být 8 x 8 pixelů. Pokud rastrového obrázku je větší, Windows použije pouze bity odpovídající prvních 8 řádků a sloupců v levém horním rohu rastrového obrázku v pixelech.
+Rastrové obrázky používané jako vzory výplní by měly být 8 pixelů o 8 pixelů. Pokud je rastrový obrázek větší, systém Windows použije v levém horním rohu rastrového obrázku pouze bity odpovídající prvních 8 řádků a sloupců pixelů.
 
-Štětce vzor je možné odstranit bez ovlivnění přidružený rastrový obrázek. To znamená, že rastrového obrázku je možné vytvořit libovolný počet vzorkem štětce.
+Štětec vzorku lze odstranit, aniž by to ovlivnilo přidružený rastrový obrázek. To znamená, že rastr lze použít k vytvoření libovolného počtu štětců vzorů.
 
-Štětce vytvořené pomocí monochromatický rastrový obrázek (1 barevné roviny 1 bitů na pixel) je vykreslen aktuální barvy textu a pozadí. Obrazových bodů reprezentované bit nastaven na hodnotu 0 jsou vykreslovány pomocí aktuální barvu textu. Obrazové body reprezentované bit nastaven na hodnotu 1, jsou vykreslovány aktuální barvou pozadí.
+Štětec vytvořený pomocí monochromatického rastrového obrázku (1 barevná rovina, 1 bitů na pixel) se vykreslí pomocí aktuální barvy textu a pozadí. Pixely reprezentované bitovou sadou nastavenou na hodnotu 0 jsou vykresleny pomocí aktuální barvy textu. Pixely reprezentované bitovou sadou nastavenou na hodnotu 1 jsou vykresleny pomocí aktuální barvy pozadí.
 
-Informace o používání [CreatePatternBrush](/windows/desktop/api/wingdi/nf-wingdi-createpatternbrush), Windows fungovat, naleznete v sadě Windows SDK.
+Informace o použití funkce [CreatePatternBrush](/windows/win32/api/wingdi/nf-wingdi-createpatternbrush)naleznete v Windows SDK.
 
 ### <a name="example"></a>Příklad
 
 [!code-cpp[NVC_MFCDocView#25](../../mfc/codesnippet/cpp/cbrush-class_5.cpp)]
 
-##  <a name="createsolidbrush"></a>  CBrush::CreateSolidBrush
+##  <a name="createsolidbrush"></a>CBrush –:: CreateSolidBrush
 
-Inicializuje zadaný plnou barvou štětce.
+Inicializuje štětec se zadanou plnou barvou.
 
 ```
 BOOL CreateSolidBrush(COLORREF crColor);
@@ -310,25 +310,25 @@ BOOL CreateSolidBrush(COLORREF crColor);
 ### <a name="parameters"></a>Parametry
 
 *crColor*<br/>
-A [COLORREF](/windows/desktop/gdi/colorref) struktura, která určuje barvu štětce. Barva určuje hodnota RGB a může být zkonstruovaný pomocí RGB – makro v systému WINDOWS. H.
+Struktura [COLORREF](/windows/win32/gdi/colorref) , která určuje barvu štětce. Barva Určuje hodnotu RGB a může být vytvořena pomocí makra RGB v systému WINDOWS. Y.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Nenulové, pokud je úspěšná. jinak 0.
+Nenulové, pokud bylo úspěšné; v opačném případě 0.
 
 ### <a name="remarks"></a>Poznámky
 
-Štětec je následně vybrat jako aktuální štětec pro jakýkoli kontext zařízení.
+Štětec se následně dá vybrat jako aktuální štětec pro jakékoli kontexty zařízení.
 
-Když aplikace dokončí štětce vytvořené využitím `CreateSolidBrush`, ji by měl vybrat štětce mimo kontext zařízení.
+Když aplikace dokončí pomocí štětce vytvořeného nástrojem `CreateSolidBrush`, měl by vybrat stopu z kontextu zařízení.
 
 ### <a name="example"></a>Příklad
 
-  Podívejte se na příklad pro [CBrush::CBrush](#cbrush).
+  Podívejte se na příklad pro [CBrush –:: CBrush –](#cbrush).
 
-##  <a name="createsyscolorbrush"></a>  CBrush::CreateSysColorBrush
+##  <a name="createsyscolorbrush"></a>CBrush –:: CreateSysColorBrush
 
-Inicializuje Barva štětce.
+Inicializuje barvu štětce.
 
 ```
 BOOL CreateSysColorBrush(int nIndex);
@@ -337,25 +337,25 @@ BOOL CreateSysColorBrush(int nIndex);
 ### <a name="parameters"></a>Parametry
 
 *nIndex*<br/>
-Určuje index barev. Tato hodnota odpovídá barva použitá k vykreslení jeden z elementů 21 okna. Zobrazit [GetSysColor](/windows/desktop/api/winuser/nf-winuser-getsyscolor) v sadě Windows SDK pro seznam hodnot.
+Určuje index barvy. Tato hodnota odpovídá barvě použité k vykreslení jednoho z 21 prvků okna. Seznam hodnot naleznete v tématu [GetSysColor](/windows/win32/api/winuser/nf-winuser-getsyscolor) v Windows SDK.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Nenulové, pokud je úspěšná. jinak 0.
+Nenulové, pokud bylo úspěšné; v opačném případě 0.
 
 ### <a name="remarks"></a>Poznámky
 
-Štětec je následně vybrat jako aktuální štětec pro jakýkoli kontext zařízení.
+Štětec se následně dá vybrat jako aktuální štětec pro jakékoli kontexty zařízení.
 
-Když aplikace dokončí štětce vytvořené využitím `CreateSysColorBrush`, ji by měl vybrat štětce mimo kontext zařízení.
+Když aplikace dokončí pomocí štětce vytvořeného nástrojem `CreateSysColorBrush`, měl by vybrat stopu z kontextu zařízení.
 
 ### <a name="example"></a>Příklad
 
 [!code-cpp[NVC_MFCDocView#26](../../mfc/codesnippet/cpp/cbrush-class_6.cpp)]
 
-##  <a name="fromhandle"></a>  CBrush::FromHandle
+##  <a name="fromhandle"></a>CBrush –:: FromHandle
 
-Vrací ukazatel na `CBrush` objektu, když je zadaný popisovač Windows [HBRUSH](#operator_hbrush) objektu.
+Vrací ukazatel na `CBrush` objekt, pokud je předána obslužná rutina objektu [HBRUSH](#operator_hbrush) systému Windows.
 
 ```
 static CBrush* PASCAL FromHandle(HBRUSH hBrush);
@@ -364,25 +364,25 @@ static CBrush* PASCAL FromHandle(HBRUSH hBrush);
 ### <a name="parameters"></a>Parametry
 
 *hBrush*<br/>
-POPISOVAČ Windows GDI štětce.
+ZPRACOVÁNÍ štětce s Windows GDI.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Ukazatel `CBrush` objekt Pokud úspěšné; jinak hodnota NULL.
+Ukazatel na `CBrush` objekt v případě úspěchu; jinak null.
 
 ### <a name="remarks"></a>Poznámky
 
-Pokud `CBrush` objekt už není připojen ke zpracování, dočasný `CBrush` objekt se vytvoří a připojí. Tento dočasný `CBrush` objektu je platná pouze až do příštího aplikace má čas nečinnosti v jeho smyčkou událostí. V tuto chvíli se odstraní všechny dočasné grafických objektů. Jinými slovy dočasný objekt platí pouze při zpracování zprávy jedno okno.
+Pokud objekt již není k popisovači připojen, je vytvořen a připojen `CBrush` dočasný objekt. `CBrush` Tento dočasný `CBrush` objekt je platný pouze do příštího času, kdy aplikace nebude mít čas nečinnosti ve smyčce události. V tuto chvíli se odstraní všechny dočasné grafické objekty. Jinými slovy, dočasný objekt je platný pouze během zpracování jedné zprávy okna.
 
-Další informace o použití grafických objektů najdete v tématu [objektů grafiky](/windows/desktop/gdi/graphic-objects) v sadě Windows SDK.
+Další informace o použití grafických objektů naleznete v tématu [Graphics Objects](/windows/win32/gdi/graphic-objects) in Windows SDK.
 
 ### <a name="example"></a>Příklad
 
-  Podívejte se na příklad pro [CBrush::CBrush](#cbrush).
+  Podívejte se na příklad pro [CBrush –:: CBrush –](#cbrush).
 
-##  <a name="getlogbrush"></a>  CBrush::GetLogBrush
+##  <a name="getlogbrush"></a>CBrush –:: GetLogBrush
 
-Voláním této členské funkce k načtení `LOGBRUSH` struktury.
+Pro načtení `LOGBRUSH` struktury zavolejte tuto členskou funkci.
 
 ```
 int GetLogBrush(LOGBRUSH* pLogBrush);
@@ -391,29 +391,29 @@ int GetLogBrush(LOGBRUSH* pLogBrush);
 ### <a name="parameters"></a>Parametry
 
 *pLogBrush*<br/>
-Odkazuje [logbrush –](/windows/desktop/api/wingdi/ns-wingdi-taglogbrush) strukturu, která obsahuje informace o stopy.
+Odkazuje na strukturu [LOGBRUSH –](/windows/win32/api/wingdi/ns-wingdi-logbrush) , která obsahuje informace o štětci.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Pokud je funkce úspěšná, a *pLogBrush* je platný ukazatel, vrácená hodnota je počet bajtů uložených do vyrovnávací paměti.
+Pokud je funkce úspěšná a *pLogBrush* je platný ukazatel, návratová hodnota je počet bajtů uložených do vyrovnávací paměti.
 
-Pokud je funkce úspěšná, a *pLogBrush* má hodnotu NULL, vrácená hodnota je počet bajtů vyžadovaných k uložení informace o funkci by ukládání do vyrovnávací paměti.
+Pokud je funkce úspěšná a *pLogBrush* má hodnotu null, návratová hodnota je počet bajtů vyžadovaných k uložení informací, které by funkce ukládala do vyrovnávací paměti.
 
-Pokud funkce selže, vrácená hodnota je 0.
+Pokud dojde k chybě funkce, vrácená hodnota je 0.
 
 ### <a name="remarks"></a>Poznámky
 
-`LOGBRUSH` Struktury definuje styl, barvu a vzorkem štětce.
+`LOGBRUSH` Struktura definuje styl, barvu a vzorek štětce.
 
-Například volání `GetLogBrush` tak, aby odpovídaly konkrétní barvu nebo vzorek rastrového obrázku.
+Například volejte `GetLogBrush` , aby odpovídalo konkrétní barvě nebo vzoru rastrového obrázku.
 
 ### <a name="example"></a>Příklad
 
 [!code-cpp[NVC_MFCDocView#27](../../mfc/codesnippet/cpp/cbrush-class_7.cpp)]
 
-##  <a name="operator_hbrush"></a>  CBrush::operator HBRUSH
+##  <a name="operator_hbrush"></a>CBrush –:: operator HBRUSH
 
-Tento operátor se získat popisovač Windows GDI připojené `CBrush` objektu.
+Tento operátor použijte k získání připojené obslužné rutiny `CBrush` Windows GDI objektu.
 
 ```
 operator HBRUSH() const;
@@ -421,13 +421,13 @@ operator HBRUSH() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Pokud úspěchu popisovač objektů Windows GDI reprezentována `CBrush` objektu; v opačném případě hodnota NULL.
+Je-li to úspěšné, popisovač objektu GDI systému Windows reprezentovaný `CBrush` objektem; v opačném případě hodnota null.
 
 ### <a name="remarks"></a>Poznámky
 
-Tento operátor je operátor přetypování, která podporuje přímému použití objektu HBRUSH.
+Tento operátor je operátor přetypování, který podporuje přímé použití objektu HBRUSH.
 
-Další informace o použití grafických objektů najdete v tématu [objektů grafiky](/windows/desktop/gdi/graphic-objects) v sadě Windows SDK.
+Další informace o použití grafických objektů naleznete v tématu [Graphics Objects](/windows/win32/gdi/graphic-objects) in Windows SDK.
 
 ### <a name="example"></a>Příklad
 
@@ -435,7 +435,7 @@ Další informace o použití grafických objektů najdete v tématu [objektů g
 
 ## <a name="see-also"></a>Viz také:
 
-[Ukázky knihovny MFC PROPDLG](../../overview/visual-cpp-samples.md)<br/>
+[PROPDLG Sample MFC](../../overview/visual-cpp-samples.md)<br/>
 [CGdiObject – třída](../../mfc/reference/cgdiobject-class.md)<br/>
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>
 [CBitmap – třída](../../mfc/reference/cbitmap-class.md)<br/>

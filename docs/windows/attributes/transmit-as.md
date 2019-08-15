@@ -1,21 +1,21 @@
 ---
-title: transmit_as – (C++ atributů COM)
+title: transmit_as (C++ atribut com)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.transmit_as
 helpviewer_keywords:
 - transmit_as attribute
 ms.assetid: 53d0b8ab-5b06-423e-83eb-3d01a10424b2
-ms.openlocfilehash: e432d1a8f39cbc5e12f192ed7b07c29421bc403e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 939013e43f08aeda788e468c995f1736cf6b6928
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62407169"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69513910"
 ---
-# <a name="transmitas"></a>transmit_as
+# <a name="transmit_as"></a>transmit_as
 
-Instruuje kompilátor, aby přidružení uvedený typ, který manipulovat s klientské a serverové aplikace, přenášená typu.
+Instruuje kompilátor, aby přidružil prezentovaný typ, který aplikace klienta a serveru zpracovává, s předaným typem.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -26,15 +26,15 @@ Instruuje kompilátor, aby přidružení uvedený typ, který manipulovat s klie
 ### <a name="parameters"></a>Parametry
 
 *type*<br/>
-Určuje typ dat, která se přenášejí mezi klientem a serverem.
+Určuje datový typ, který se přenáší mezi klientem a serverem.
 
 ## <a name="remarks"></a>Poznámky
 
-**Transmit_as –** C++ atribut má stejné funkce jako [transmit_as –](/windows/desktop/Midl/transmit-as) atribut MIDL.
+Atribut **transmit_as** C++ má stejné funkce jako atribut [transmit_as](/windows/win32/Midl/transmit-as) MIDL.
 
 ## <a name="example"></a>Příklad
 
-Následující kód ukazuje použití **transmit_as –** atribut:
+Následující kód ukazuje použití atributu **transmit_as** :
 
 ```cpp
 // cpp_attr_ref_transmit_as.cpp
@@ -66,16 +66,16 @@ struct _TREE_NODE_TYPE * right;
 
 ## <a name="requirements"></a>Požadavky
 
-### <a name="attribute-context"></a>Atribut kontextu
+### <a name="attribute-context"></a>Kontext atributu
 
 |||
 |-|-|
-|**Platí pro**|**Definice TypeDef**|
-|**Opakovatelné**|Ne|
-|**Vyžadované atributy**|Žádné|
-|**Neplatné atributy**|Žádný|
+|**Platí pro**|**definic**|
+|**REPEATABLE**|Ne|
+|**Požadované atributy**|Žádné|
+|**Neplatné atributy**|Žádné|
 
-Další informace o kontexty atributů najdete v tématu [kontexty atributů](cpp-attributes-com-net.md#contexts).
+Další informace o kontextech atributů naleznete v tématu kontexty [atributů](cpp-attributes-com-net.md#contexts).
 
 ## <a name="see-also"></a>Viz také:
 

@@ -8,30 +8,30 @@ helpviewer_keywords:
 - wWinMain function
 - wmain function
 ms.assetid: 41213c41-668c-40a4-8a1e-77d9eded720d
-ms.openlocfilehash: f4705e65551b57e3e52c0c8f060032a93280f67d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4af389c00f6065df631f891dadcb0b2f350f984d
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62410535"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69491200"
 ---
 # <a name="support-for-using-wmain"></a>Podpora použití funkce wmain
 
-Jazyk Visual C++ podporuje definování **wmain** funkce a předávání argumentů širokého znaku Unicode aplikace. Deklarovat formální parametry **wmain**, pomocí ve formátu podobném `main`. Následně je možné do aplikace předat argumenty širokých znaků a volitelně ukazatel prostředí širokých znaků. `argv` a `envp` parametry **wmain** jsou typu `wchar_t*`. Příklad:
+Vizuál C++ podporuje definování funkce **wmain** a předání argumentů pro velké znaky do vaší aplikace pro kódování Unicode. Dodáte deklarace formálních parametrů na **wmain**pomocí formátu podobného `main`. Následně je možné do aplikace předat argumenty širokých znaků a volitelně ukazatel prostředí širokých znaků. Parametry `argv` a `envp` pro **wmain** jsou typu `wchar_t*`. Příklad:
 
 ```cpp
 wmain( int argc, wchar_t *argv[ ], wchar_t *envp[ ] )
 ```
 
 > [!NOTE]
-> Použití aplikace knihovny MFC kódování Unicode `wWinMain` jako vstupní bod. V takovém případě `CWinApp::m_lpCmdLine` je řetězec znaků Unicode. Nezapomeňte nastavit `wWinMainCRTStartup` s [/Entry](../build/reference/entry-entry-point-symbol.md) – možnost linkeru.
+> Aplikace MFC Unicode používají `wWinMain` jako vstupní bod. V tomto případě `CWinApp::m_lpCmdLine` je to řetězec Unicode. Nezapomeňte nastavit `wWinMainCRTStartup` pomocí možnosti linkeru [/entry](../build/reference/entry-entry-point-symbol.md) .
 
-Pokud program používá **hlavní** funkce, vytvoří prostředí vícebajtových znaků knihovny run-time při spuštění programu. Kopie širokého znaku prostředí je vytvořen pouze v případě potřeby (například voláním `_wgetenv` nebo `_wputenv` funkce). Při prvním volání `_wputenv`, nebo při prvním volání `_wgetenv` Pokud prostředí MBCS už existuje, vytvoří se odpovídající prostředí řetězce širokého znaku. Prostředí je následně odkázáno pomocí `_wenviron` globální proměnné, což je verze širokého znaku z `_environ` globální proměnné. Dvě kopie prostředí (znaková sada MBCS a Unicode) v tomto okamžiku existovat současně a spravuje za běhu systému po celou dobu životnosti programu.
+Používá-li program funkci **Main** , je prostředí vícebajtového znaku vytvořeno při spuštění programu v běhové knihovně. Kopie prostředí s velkým počtem znaků je vytvořena pouze v případě potřeby (například voláním `_wgetenv` funkce nebo `_wputenv` ). Při prvním volání `_wputenv`nebo při prvním `_wgetenv` volání, pokud již existuje prostředí znakové sady MBCS, je vytvořeno odpovídající prostředí řetězce s velkým znakem. Prostředí je pak odkazováno pomocí `_wenviron` globální proměnné, což je verze celosvětové proměnné v `_environ` celém znaku. V tomto okamžiku existují dvě kopie prostředí (MBCS a Unicode) současně a jsou udržovány systémem za běhu po celou dobu životnosti programu.
 
-Podobně pokud program používá **wmain** funkce, širokého znaku prostředí je vytvořen při spuštění programu a odkazuje `_wenviron` globální proměnné. Prostředí MBCS (ASCII) se vytvoří při prvním volání `_putenv` nebo `getenv` a odkazuje `_environ` globální proměnné.
+Podobně platí, že pokud váš program používá funkci **wmain** , prostředí s velkým znakem se vytvoří při spuštění programu a ukazuje na `_wenviron` globální proměnnou. Prostředí znakové sady MBCS (ASCII) je vytvořeno při prvním volání `_putenv` nebo `getenv` a `_environ` ukazuje na globální proměnnou.
 
 ## <a name="see-also"></a>Viz také:
 
 [Podpora pro Unicode](../text/support-for-unicode.md)<br/>
 [Souhrn programování s kódem Unicode](../text/unicode-programming-summary.md)<br/>
-[Funkce WinMain](/windows/desktop/api/winbase/nf-winbase-winmain)
+[WinMain – funkce](/windows/win32/api/winbase/nf-winbase-winmain)

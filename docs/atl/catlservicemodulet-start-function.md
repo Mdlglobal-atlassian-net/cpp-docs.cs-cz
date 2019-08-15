@@ -1,24 +1,24 @@
 ---
-title: CAtlServiceModuleT::Start Function
+title: 'CAtlServiceModuleT:: Start – funkce'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - Start method
 ms.assetid: b5193a23-41bc-42d2-8d55-3eb43dc62238
-ms.openlocfilehash: 204d02a1122ee78b38850bedae5f98b1f338ab1d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e6de15f40e89bfffba504db04ee7a16b2a68cac9
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62250742"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69491667"
 ---
-# <a name="catlservicemoduletstart-function"></a>CAtlServiceModuleT::Start Function
+# <a name="catlservicemoduletstart-function"></a>CAtlServiceModuleT:: Start – funkce
 
-Když je služba spuštěna, `_tWinMain` volání `CAtlServiceModuleT::WinMain`, která pak volá `CAtlServiceModuleT::Start`.
+Při spuštění `_tWinMain` služby volání `CAtlServiceModuleT::WinMain`, která zase volá `CAtlServiceModuleT::Start`.
 
-`CAtlServiceModuleT::Start` Nastaví pole `SERVICE_TABLE_ENTRY` struktury, které mapují každé služby na její spuštění funkce. Toto pole je pak předán do funkce rozhraní Win32 API [StartServiceCtrlDispatcher](/windows/desktop/api/winsvc/nf-winsvc-startservicectrldispatchera). Teoreticky vzato jedné EXE dokáže zpracovat víc služeb a pole může mít více `SERVICE_TABLE_ENTRY` struktury. V současné době ale služby generované ATL podporuje jenom jednu službu za EXE. Proto pole má jednu položku, která obsahuje název služby a `_ServiceMain` jako spouštěcí funkci. `_ServiceMain` je statická členská funkce `CAtlServiceModuleT` nestatická členská funkce, který volá `ServiceMain`.
+`CAtlServiceModuleT::Start`nastaví pole `SERVICE_TABLE_ENTRY` struktury, které mapují každou službu na její spouštěcí funkci. Toto pole je pak předáno funkci Win32 API, [StartServiceCtrlDispatcher](/windows/win32/api/winsvc/nf-winsvc-startservicectrldispatcherw). Teoreticky může jeden exe zpracovat více služeb a pole může mít několik `SERVICE_TABLE_ENTRY` struktur. V současné době však služba generovaná knihovnou ATL podporuje pouze jednu službu na soubor EXE. Proto má pole jednu položku, která obsahuje název služby a `_ServiceMain` jako funkci spuštění. `_ServiceMain`je statická členská funkce `CAtlServiceModuleT` , která volá nestatickou členskou funkci,. `ServiceMain`
 
 > [!NOTE]
->  Selhání `StartServiceCtrlDispatcher` pro připojení k řízení služeb manager (SCM) pravděpodobně znamená, že není program spuštěn jako služba. V tomto případě, že program volá `CAtlServiceModuleT::Run` přímo tak, aby se program může spustit jako místního serveru. Další informace o spuštění programu jako místního serveru najdete v tématu [tipy k ladění](../atl/debugging-tips.md).
+>  `StartServiceCtrlDispatcher` Selhání připojení ke Správci řízení služeb pravděpodobně znamená, že program není spuštěn jako služba. V takovém případě program volá `CAtlServiceModuleT::Run` přímo, takže program může běžet jako místní server. Další informace o spuštění programu jako místního serveru naleznete v tématu [tipy pro ladění](../atl/debugging-tips.md).
 
 ## <a name="see-also"></a>Viz také:
 

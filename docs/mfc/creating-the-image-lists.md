@@ -6,23 +6,23 @@ helpviewer_keywords:
 - image lists [MFC], creating for CListCtrl
 - lists [MFC], image
 ms.assetid: c2768515-deba-49e8-a6f3-5be6482afb19
-ms.openlocfilehash: 844bfe71f7b03f299f57b0fd4558b7e9eacf67c2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6687b62b70103894d957a21019008e8781385feb
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62242234"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69508779"
 ---
 # <a name="creating-the-image-lists"></a>Vytváření seznamů obrázků
 
-Vytváření seznamů obrázků je stejný, ať už používáte [CListView](../mfc/reference/clistview-class.md) nebo [CListCtrl](../mfc/reference/clistctrl-class.md).
+Vytváření seznamů obrázků je stejné, ať už používáte [CListView –](../mfc/reference/clistview-class.md) nebo [CListCtrl](../mfc/reference/clistctrl-class.md).
 
 > [!NOTE]
->  Pouze potřebovat bitové kopie seznamy pokud obsahuje ovládací prvek seznamu `LVS_ICON` style.
+>  Seznam obrázků potřebujete pouze v `LVS_ICON` případě, že ovládací prvek seznam obsahuje styl.
 
-Použití třídy `CImageList` vytvořit jeden nebo více seznamů obrázků (pro reklamy ikony, malé ikony a stavy). Naleznete v tématu [atributu CImageList](../mfc/reference/cimagelist-class.md)a najdete v článku [seznamy obrázků zobrazení seznamu](/windows/desktop/Controls/using-list-view-controls) v sadě Windows SDK.
+Použijte třídu `CImageList` k vytvoření jednoho nebo více seznamů obrázků (pro ikony plné velikosti, malé ikony a stavy). Viz [atributu CImageList](../mfc/reference/cimagelist-class.md)a [seznam obrázků zobrazení seznamu](/windows/win32/Controls/using-list-view-controls) v Windows SDK.
 
-Volání [CListCtrl::SetImageList](../mfc/reference/clistctrl-class.md#setimagelist) pro každý obrázek seznamu; můžete předat ukazatel na příslušné `CImageList` objektu.
+Pro každý seznam obrázků zavolejte [CListCtrl:: SetImageList](../mfc/reference/clistctrl-class.md#setimagelist) ; předat ukazatel na příslušný `CImageList` objekt.
 
 ## <a name="see-also"></a>Viz také:
 

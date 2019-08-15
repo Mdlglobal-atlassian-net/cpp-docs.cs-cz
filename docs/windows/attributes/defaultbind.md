@@ -1,21 +1,21 @@
 ---
-title: defaultbind (atribut C++ COM)
+title: defaultbind (C++ atribut com)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.defaultbind
 helpviewer_keywords:
 - defaultbind attribute
 ms.assetid: b20a8437-24e6-4b6d-a2df-09fe5e1006e0
-ms.openlocfilehash: f0dd9101966f22253e6c4098c3c64d22d0a0cba6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a2f612c4869a62a84a6a2af99057ced365f875f2
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62148065"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69490994"
 ---
 # <a name="defaultbind"></a>defaultbind
 
-Označuje vlastnost podporující vazby, jednu, která nejlíp reprezentuje objekt.
+Označuje jedinou vlastnost s možností vazby, která nejlépe představuje objekt.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -25,24 +25,24 @@ Označuje vlastnost podporující vazby, jednu, která nejlíp reprezentuje obje
 
 ## <a name="remarks"></a>Poznámky
 
-**Defaultbind** C++ atribut má stejné funkce jako [defaultbind](/windows/desktop/Midl/defaultbind) atribut MIDL.
+Atribut **defaultbind** C++ má stejné funkce jako atribut [defaultbind](/windows/win32/Midl/defaultbind) MIDL.
 
 ## <a name="example"></a>Příklad
 
-Podívejte se na příklad pro [umožňujících vazbu](bindable.md) příklad, jak používat **defaultbind**.
+Příklad použití **defaultbind**najdete v příkladu s možností [vazby](bindable.md) .
 
 ## <a name="requirements"></a>Požadavky
 
-### <a name="attribute-context"></a>Atribut kontextu
+### <a name="attribute-context"></a>Kontext atributu
 
 |||
 |-|-|
 |**Platí pro**|Metoda rozhraní|
-|**Opakovatelné**|Ne|
-|**Vyžadované atributy**|Žádné|
+|**REPEATABLE**|Ne|
+|**Požadované atributy**|Žádné|
 |**Neplatné atributy**|Žádné|
 
-Další informace najdete v tématu [kontexty atributů](cpp-attributes-com-net.md#contexts).
+Další informace naleznete v tématu [kontexty atributů](cpp-attributes-com-net.md#contexts).
 
 ## <a name="see-also"></a>Viz také:
 

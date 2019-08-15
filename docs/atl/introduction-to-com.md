@@ -5,32 +5,32 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - COM
 ms.assetid: 120735d9-db71-4ad3-a730-ce576ea2354e
-ms.openlocfilehash: 7631ba98b0e2cb00310400206b0b442ab7a23dd7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e29f761e0380357bc999af82cc4bde8bfbaf4d6e
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62262369"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69492356"
 ---
 # <a name="introduction-to-com"></a>Úvod do modelu COM
 
-COM je základní "object model" na jaké ovládací prvky ActiveX a OLE jsou vytvořeny. COM umožňuje vystavit funkčnost pro jiné komponenty a k hostování aplikací. Definuje, jak samotného objektu zpřístupňuje i jak toto ohrožení funguje napříč procesy a v sítích. COM také definuje životního cyklu objektu.
+COM je základní objektový model, na kterém jsou vytvořeny ovládací prvky ActiveX a OLE. Model COM umožňuje objektu zpřístupnit své funkce ostatním komponentám a hostování aplikací. Definuje jak objekt zpřístupňuje sebe, a jak toto ozáření funguje napříč procesy a napříč sítěmi. COM také definuje životní cyklus objektu.
 
-Základní rozhraní COM jsou tyto koncepty:
+Základem modelu COM jsou tyto koncepty:
 
-- [Rozhraní](../atl/interfaces-atl.md) – mechanismus, pomocí kterého objekt zpřístupňuje jeho funkce.
+- [Rozhraní](../atl/interfaces-atl.md) – mechanismus, pomocí kterého objekt zpřístupňuje jeho funkci.
 
-- [IUnknown](../atl/iunknown.md) – základní rozhraní, na kterém jsou všechny ostatní založené. Implementuje počítání odkazů a interface dotazování mechanismy zpracování nástrojem modelu COM.
+- [IUnknown](../atl/iunknown.md) – základní rozhraní, na kterém jsou všechna ostatní založena. Implementuje mechanismy odkazů a mechanizmy dotazování rozhraní spuštěné prostřednictvím modelu COM.
 
-- [Počítání odkazů](../atl/reference-counting.md) – technika, podle kterého objektu (nebo přísně rozhraní) rozhodne, když již nejsou déle používány a je proto zdarma k odebrání samotné.
+- [Počítání odkazů](../atl/reference-counting.md) – způsob, jakým se objekt (nebo výhradně rozhraní) rozhodne, kdy se již nepoužívá a je proto zdarma odebrat sám sebe.
 
-- [QueryInterface](../atl/queryinterface.md) – metoda používá k dotazování na objekt pro dané rozhraní.
+- [QueryInterface](../atl/queryinterface.md) – metoda použitá pro dotazování objektu pro dané rozhraní.
 
-- [Zařazování](../atl/marshaling.md) – mechanismus, který umožňuje objektů, který se má použít pro vlákno, proces i ohraničení sítě, čímž umožní nezávislost umístění.
+- [Zařazování](../atl/marshaling.md) – mechanismus, který umožňuje použití objektů napříč vlákny, procesy a síťovými hranicemi, což umožňuje nezávisle na umístění.
 
-- [Agregace](../atl/aggregation.md) , ve kterém můžete provádět jednoho objektu pomocí jiného.
+- [Agregace](../atl/aggregation.md) – způsob, jakým může jeden objekt využít jiné.
 
 ## <a name="see-also"></a>Viz také:
 
 [Úvod do modelu COM a knihovny ATL](../atl/introduction-to-com-and-atl.md)<br/>
-[Component Object Model](/windows/desktop/com/the-component-object-model)
+[Objektový model součásti](/windows/win32/com/the-component-object-model)

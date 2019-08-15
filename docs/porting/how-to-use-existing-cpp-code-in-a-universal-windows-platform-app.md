@@ -1,37 +1,37 @@
 ---
-title: 'Postupy: Použití existujícího kódu C++ v aplikaci Windows Universal Platform'
+title: 'Postupy: Použití existujícího C++ kódu v aplikaci Univerzální platforma Windows'
 ms.date: 04/08/2019
 ms.assetid: 87e5818c-3081-42f3-a30d-3dca2cf0645c
-ms.openlocfilehash: b46cbdc088908f59d6cbdc0ecd7cd6475da370d8
-ms.sourcegitcommit: 0e3da5cea44437c132b5c2ea522bd229ea000a10
+ms.openlocfilehash: e587ae88fe8d38a22b351d87ae585efe82acf091
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/12/2019
-ms.locfileid: "67861137"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69510384"
 ---
-# <a name="how-to-use-existing-c-code-in-a-universal-windows-platform-app"></a>Postupy: Použití existujícího kódu C++ v aplikaci Windows Universal Platform
+# <a name="how-to-use-existing-c-code-in-a-universal-windows-platform-app"></a>Postupy: Použití existujícího C++ kódu v aplikaci Univerzální platforma Windows
 
-Nejjednodušší způsob, jak získat aplikace klasické pracovní plochy běžící v prostředí pro univerzální platformu Windows (UPW) je možná použití technologie přemostění na Desktop. Patří mezi ně Desktop App Converter, který vytvoří balíček aplikace jako aplikace pro UPW bez nutných změn kódu. Další informace najdete v tématu [přemostění na Desktop](/windows/uwp/porting/desktop-to-uwp-root).
+Možná nejjednodušší způsob, jak si desktopový program běžící v prostředí Univerzální platforma Windows (UWP) použít k používání technologií pro stolní mosty. Patří sem převaděč desktopových aplikací, který zabalí existující aplikaci jako aplikaci UWP bez nutnosti změn kódu. Další informace najdete v tématu [most pro stolní počítače](/windows/uwp/porting/desktop-to-uwp-root).
 
-Zbývající část tohoto tématu popisuje, jak přenést C++ knihovny (DLL a statických knihoven) pro univerzální platformu Windows. Můžete to provést tak, aby vaše základní logiku C++ lze použít s více aplikacemi UWP.
+Zbývající část tohoto tématu popisuje, jak portovat C++ knihovny (knihovny DLL a statické knihovny) do Univerzální platforma Windows. To můžete chtít udělat, aby se základní C++ logika mohla používat s více aplikacemi UWP.
 
-Spouštění aplikací pro UWP v chráněném prostředí a v důsledku toho nejsou povoleny mnoho volání Win32 a COM a rozhraní API CRT, které by mohlo ohrozit zabezpečení platformy. Kompilátor může rozpoznat taková volání a vygenerují chybu, pokud `/ZW` možnost se používá. App Certification Kit na svou aplikaci můžete použít ke zjištění kódu, který volá rozhraní API zakázané. Další informace najdete v tématu [sada Windows App Certification Kit](/windows/uwp/debug-test-perf/windows-app-certification-kit).
+Aplikace UWP běží v chráněném prostředí. v důsledku toho není možné narušit mnoho volání rozhraní API pro Win32, COM a CRT, která by mohla ohrozit zabezpečení platformy. Kompilátor může rozpoznat taková volání a generovat chybu, pokud `/ZW` je použita možnost. K detekci kódu, který volá zakázaná rozhraní API, můžete použít certifikační sadu aplikací v aplikaci. Další informace najdete v tématu [Certifikační sada aplikací pro Windows](/windows/uwp/debug-test-perf/windows-app-certification-kit).
 
-Pokud zdrojový kód je k dispozici pro knihovny, je možné eliminovat zakázané volání rozhraní API. Podrobnosti, včetně seznamu rozhraní API, které jsou povolené nebo zakázané najdete v tématu [Win32 a COM API pro aplikace pro UPW](/uwp/win32-and-com/win32-and-com-for-uwp-apps) a [CRT funkce nejsou podporovány v aplikacích pro univerzální platformu Windows](../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md). Některé alternativy najdete na [alternativy k rozhraní API Windows v aplikacích pro UWP](/uwp/win32-and-com/alternatives-to-windows-apis-uwp).
+Pokud je pro knihovnu k dispozici zdrojový kód, může být možné eliminovat zakázaná volání rozhraní API. Podrobnosti, včetně seznamu povolených nebo zakázaných rozhraní API, najdete v tématu [rozhraní API Win32 a com pro aplikace UWP](/uwp/win32-and-com/win32-and-com-for-uwp-apps) a [funkce CRT nejsou podporované v aplikacích Univerzální platforma Windows](../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md). Některé alternativy najdete [v alternativách k rozhraním API Windows v aplikacích pro UWP](/uwp/win32-and-com/alternatives-to-windows-apis-uwp).
 
-Pokud se pokusíte přidat odkaz z Universal Windows Project do knihovny klasické plochy, obdržíte chybovou zprávu s upozorněním, že knihovna není kompatibilní. V případě statické knihovny můžete propojit do knihovny jednoduše tak, že přidání knihovny (.lib soubor) do váš vstup linkeru stejně, jako byste to udělali v klasické aplikaci Win32. Pro knihovny, kde je k dispozici pouze do binárního souboru to je jedinou možností. Statická knihovna je propojené s vaší aplikace spustitelný soubor, ale Win32 DLL, které skutečně využijete v aplikaci UWP, musí být zabaleny do aplikace tak, že jejich zahrnování do projektu a jeho označení jako obsah. Načtení knihovny DLL Win32 v aplikaci UWP, budete muset volat [LoadPackagedLibrary](/windows/desktop/api/winbase/nf-winbase-loadpackagedlibrary) místo `LoadLibrary` nebo `LoadLibraryEx`.
+Pokud se pouze pokusíte přidat odkaz z univerzálního projektu pro Windows do klasické desktopové knihovny, zobrazí se chybová zpráva s informací, že knihovna není kompatibilní. V případě statické knihovny můžete k vaší knihovně propojit jednoduše přidáním knihovny (soubor. lib) do vstupu linkeru, stejně jako v klasické aplikaci Win32. V případě knihoven, kde je k dispozici pouze binární soubor, je tato možnost jedinou možností. Statická knihovna je propojená se spustitelným souborem vaší aplikace, ale knihovna DLL Win32, kterou využíváte v aplikaci UWP, musí být zabalená do aplikace, a to tak, že ji zahrnete do projektu a označíte ji jako obsah. Pro načtení knihovny DLL Win32 v aplikaci UWP je také nutné volat [LoadPackagedLibrary](/windows/win32/api/winbase/nf-winbase-loadpackagedlibrary) namísto `LoadLibrary` nebo `LoadLibraryEx`.
 
-Pokud máte zdrojový kód pro knihovnu DLL nebo statické knihovny, můžete znovu zkompilovat s `/ZW` jako projekt UPW. Pokud to uděláte, můžete přidat odkaz pomocí **Průzkumníka řešení**a jeho použití v aplikacích pro C++ UWP. V případě knihovny DLL propojení s knihovnou exportu.
+Pokud máte zdrojový kód pro knihovnu DLL nebo statickou knihovnu, můžete znovu kompilovat s `/ZW` jako projekt UWP. Pokud to uděláte, můžete přidat odkaz pomocí **Průzkumník řešení**a použít ho v aplikacích pro C++ UWP. V případě knihovny DLL můžete propojit s knihovnou exportu.
 
-Vystavit funkčnost volajícím v jiných jazycích, můžete převést knihovny do komponenty Windows Runtime. Součástí prostředí Windows Runtime se liší od běžné knihovny DLL, že obsahují metadat ve formě soubory .winmd, které popisují obsah tak, aby vyžadují rozhraní .NET a JavaScript uživatele. Pokud chcete zpřístupnit prvky rozhraní API do jiných jazyků, můžete přidat C++/CX konstrukce, jako je například referenční třídy a daly veřejné nebo použít [modulu Windows Runtime C++ šablony knihovny (WRL)](../windows/windows-runtime-cpp-template-library-wrl.md).  Ve Windows 10 a novější, můžete použít [ C++/WinRT knihovny](https://github.com/microsoft/cppwinrt) místo C++/CX.
+Pro vystavení funkcí volajícím v jiných jazycích můžete knihovnu převést na součást prostředí Windows Runtime. Prostředí Windows Runtime komponenty se liší od běžných knihoven DLL v tom, že obsahují metadata ve formě souborů. winmd, které popisují obsah způsobem, který vyžadují uživatelé rozhraní .NET a JavaScriptu. Chcete-li vystavit prvky rozhraní API jiným jazykům, můžete přidat C++konstrukce/CX, jako jsou referenční třídy, a nastavit je jako veřejné, nebo použít [knihovnu šablon prostředí Windows Runtime C++ (WRL)](../windows/windows-runtime-cpp-template-library-wrl.md).  Ve Windows 10 a novějších verzích C++můžete místo/CX. použít [ C++knihovnu/WinRT](https://github.com/microsoft/cppwinrt) .
 
-Výše uvedené informace neplatí pro případ komponenty modelu COM, které musí být zpracovány jinak. Pokud máte v souboru EXE nebo DLL serveru COM, můžete ho v Universal Windows Project tak dlouho, dokud ji jako balíček [komponenty modelu COM bez registrace](/windows/desktop/sbscs/creating-registration-free-com-objects), přidáte jej do projektu jako soubor s obsahem a vytvořit instanci pomocí [ Funkce CoCreateInstanceFromApp](/windows/desktop/api/combaseapi/nf-combaseapi-cocreateinstancefromapp). Další informace najdete v tématu [pomocí Free COM DLL v projektu C++ Windows Store](https://blogs.msdn.microsoft.com/win8devsupport/2013/05/19/using-free-com-dll-in-windows-store-c-project/).
+Předchozí diskuze se nevztahuje na případ komponent modelu COM, které se musí zpracovat jinak. Pokud máte server COM v souboru EXE nebo DLL, můžete jej použít v univerzálním projektu pro Windows, pokud ho zabalíte jako [komponentu com bez registrace](/windows/win32/sbscs/creating-registration-free-com-objects), přidáte ho do projektu jako soubor obsahu a vytvoříte jeho instanci pomocí [CoCreateInstanceFromApp](/windows/win32/api/combaseapi/nf-combaseapi-cocreateinstancefromapp). Další informace najdete v tématu [použití knihovny DLL Free-com v projektu C++ Windows Store](https://blogs.msdn.microsoft.com/win8devsupport/2013/05/19/using-free-com-dll-in-windows-store-c-project/).
 
-Pokud máte existující knihovny modelu COM, které chcete port pro UPW, může být možné převést do komponenty Windows Runtime s použitím [Windows Runtime C++ šablony knihovny (WRL)](../windows/windows-runtime-cpp-template-library-wrl.md). WRL nepodporuje všechny funkce ATL OLE, tak, jestli je možné takové port závisí na tom, kolik váš kód v modelu COM závisí na funkcích modelu COM, ATL, a OLE vaše komponenta vyžaduje.
+Máte-li existující knihovnu COM, kterou chcete přenést na UWP, je možné ji převést na součást prostředí Windows Runtime pomocí [knihovny šablon prostředí Windows Runtime C++ (WRL)](../windows/windows-runtime-cpp-template-library-wrl.md). WRL nepodporuje všechny funkce ATL a OLE, takže pokud je takový port vhodný, závisí na tom, jaké funkce modelu COM, ATL a OLE vaše komponenta vyžaduje.
 
-Toto jsou různé způsoby, může použití existujícího kódu C++ v projektech UPW. Některé způsoby nevyžadují kód třeba znovu zkompilovat pomocí rozšíření komponent (C++/CX) povolena (tedy s `/ZW` možnost), a některé proveďte, pokud tedy potřebujete mít kód na standard C++, nebo zachovat klasického prostředí kompilace Win32 pro některé kód, můžete tak učiníte, možnosti pro příslušnou architekturu. Kód, který obsahuje UPW uživatelského rozhraní a typy, které mají být vystavená pro C#, Visual Basic a JavaScript volající by měl být v aplikaci Windows projekty a projekty součást prostředí Windows Runtime. Kód, který je potřeba využívat pouze v C++ (včetně C++/CX) kód může být buď v projektu, který se zkompiluje `/WX` možnost nebo standardní C++ projektu. Pouze pro binární kód lze použít v propojením jako statické knihovny, nebo součástí aplikace jako obsah balíčku a načten v knihovně DLL pouze v případě, že ho nepoužívá zakázané rozhraní API.
+Jedná se o různé způsoby, jak můžete použít existující C++ kód v projektech UWP. Některé způsoby nevyžadují, aby byl kód znovu zkompilován s povoleným rozšířenímC++(tj. s `/ZW` možností) a nějakým způsobem, takže pokud potřebujete zachovat kód ve standardu C++nebo zachovat klasické prostředí Win32 kompilace pro některé kód, můžete tak učinit s vhodnými volbami architektury. Například všechen váš kód, který obsahuje uživatelské rozhraní UWP a typy, které mají být vystaveny C#, Visual Basic a volání JavaScriptu by měly být v projektech aplikací pro Windows a v projektech prostředí Windows Runtime komponent. Kód, který je nutné spotřebovat pouze C++ v kódu C++(včetně/CX), může být buď v projektu, který je zkompilován `/WX` s možností nebo standardním C++ projektem. Pouze binární kód lze použít tak, že ho propojíte s jako statickou knihovnou nebo zabalíte do aplikace jako obsah a načtete v knihovně DLL pouze v případě, že nepoužívá zakázaná rozhraní API.
 
-Bez ohledu na to, které z těchto scénářů vývoje zvolíte byste měli vědět, počet definicí maker, které můžete použít ve vašem kódu, takže můžete zkompilovat kód podmíněně Win32 klasické plochy a UPW.
+Bez ohledu na to, který z těchto scénářů vývoje zvolíte, byste měli mít na paměti několik definicí maker, které můžete použít v kódu, aby bylo možné kompilovat kód podmíněně v klasickém desktopovém prostředí Win32 i UWP.
 
 ```cpp
 #if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_PC_APP)
@@ -40,25 +40,25 @@ Bez ohledu na to, které z těchto scénářů vývoje zvolíte byste měli věd
 #if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP)
 ```
 
-Tyto příkazy v uvedeném pořadí se vztahují na aplikacích pro UPW, Windows Phone Store aplikace, obou nebo ani jedna (classic Win32 jenom desktopové verze). Tato makra jsou k dispozici pouze ve Windows SDK 8.1 a novější, takže pokud váš kód musí být možné zkompilovat pomocí předchozích verzí sady Windows SDK nebo pro jiné platformy kromě Windows, pak byste měli také zvážit případě že žádný z nich jsou definovány.
+Tyto příkazy se vztahují na aplikace pro UWP, aplikace Windows Phone Storu, nebo ani žádná (Klasická plocha Win32). Tato makra jsou k dispozici pouze v Windows SDK 8,1 a novějším, takže pokud váš kód potřebuje kompilovat s dřívějšími verzemi Windows SDK nebo pro jiné platformy než Windows, měli byste také vzít v úvahu případ, že není definován žádný z nich.
 
 Toto téma obsahuje následující postupy:
 
-- [Použití Win32 DLL v aplikaci UWP](#BK_Win32DLL)
+- [Použití knihovny DLL Win32 v aplikaci UWP](#BK_Win32DLL)
 
-- [Pomocí nativní statickou knihovnu C++ v aplikaci UWP](#BK_StaticLib)
+- [Použití nativní C++ statické knihovny v aplikaci UWP](#BK_StaticLib)
 
-- [Portování knihovnu C++ ke komponentě ve Windows Runtime](#BK_WinRTComponent)
+- [Přenos C++ knihovny do součásti prostředí Windows Runtime](#BK_WinRTComponent)
 
-##  <a name="BK_Win32DLL"></a> Použití Win32 DLL v aplikaci UWP
+##  <a name="BK_Win32DLL"></a>Použití knihovny DLL Win32 v aplikaci UWP
 
-Pro lepší zabezpečení a spolehlivost spusťte univerzálních aplikací pro Windows v prostředí s omezeným přístupem modulu CLR, proto nelze stačí použít všechny nativní knihovnu DLL způsob, jakým byste to udělali v klasické aplikace klasické pracovní plochy Windows. Pokud máte zdrojový kód pro knihovnu DLL, lze přenést kód tak, aby běžel na UPW. Začnete tím, že změna několik nastavení projektu a soubor metadat projektu k identifikaci projekt jako projekt UPW. Budete potřebovat ke kompilaci kódu pomocí knihovny `/ZW` možnost, která umožňuje C++/CX. Volání určitých rozhraní API nejsou povolené v aplikacích pro UWP z důvodu větší ovládací prvky přidružené k příslušné prostředí. Zobrazit [Win32 a COM API pro aplikace pro UPW](/uwp/win32-and-com/win32-and-com-for-uwp-apps).
+Pro lepší zabezpečení a spolehlivost aplikace pro univerzální aplikace pro Windows běží v běhovém prostředí s omezeným přístupem, takže nemůžete použít jenom nativní knihovnu DLL způsobem, který byste měli v klasické desktopové aplikaci Windows. Pokud máte zdrojový kód pro knihovnu DLL, můžete kód portovat tak, aby běžel na UWP. Začnete změnou několika nastavení projektu a metadaty souboru projektu k identifikaci projektu jako projektu UWP. Je nutné zkompilovat kód knihovny pomocí `/ZW` možnosti, která umožňuje/CX. C++ Některá volání rozhraní API se v aplikacích pro UWP nepovolují kvůli přísnějším kontrolám přidruženým k danému prostředí. Viz [rozhraní API Win32 a com pro aplikace UWP](/uwp/win32-and-com/win32-and-com-for-uwp-apps).
 
-Následující postup platí pro případ, kdy máte nativní knihovnu DLL, který zveřejňuje funkce pomocí `__declspec(dllexport)`.
+Následující postup platí pro případ, kde máte nativní knihovnu DLL, která zpřístupňuje funkce pomocí `__declspec(dllexport)`.
 
-### <a name="to-port-a-native-dll-to-the-uwp-without-creating-a-new-project"></a>Port nativní knihovnu DLL pro UPW bez vytvoření nového projektu
+### <a name="to-port-a-native-dll-to-the-uwp-without-creating-a-new-project"></a>Pro přenos nativní knihovny DLL na UWP bez vytvoření nového projektu
 
-1. Pokud máte nativní knihovnu DLL, která se exportuje funkce s použitím `__declspec(dllexport)`, tyto funkce můžete volat z aplikace pro UPW opětovnou kompilací knihovny DLL jako projekt UPW. Předpokládejme například, že máme knihovnu DLL, která se exportuje do ní několik třídy a jejich metod s kódem jako následujícím souboru hlaviček:
+1. Máte-li nativní knihovnu DLL, která exportuje funkce pomocí `__declspec(dllexport)`, můžete tyto funkce volat z aplikace UWP tím, že knihovnu DLL znovu zkompilujete jako projekt UWP. Předpokládejme například, že máme knihovnu DLL, která exportuje několik tříd a jejich metody s kódem, jako je následující hlavičkový soubor:
 
     ```cpp
     // giraffe.h
@@ -93,7 +93,7 @@ Následující postup platí pro případ, kdy máte nativní knihovnu DLL, kter
     };
     ```
 
-   A souboru následující kód:
+   A následující soubor kódu:
 
     ```cpp
     // giraffe.cpp
@@ -129,15 +129,15 @@ Následující postup platí pro případ, kdy máte nativní knihovnu DLL, kter
     int giraffeFunction();
     ```
 
-   Všechno ostatní v projektu (stdafx.h, dllmain.cpp) je součástí standardní šablony projektu Win32. Pokud chcete postup sledovat, ale nechcete použít vlastní knihovnu DLL ještě tímto postupem, zkuste vytvořit projekt Win32, vyberte knihovny DLL v Průvodce projektem a potom přidat hlavičky souboru giraffe.h a kód souboru giraffe.cpp a zkopírujte obsah z kódu v tomto kroku do aplikace ropriate soubory.
+   Všechno ostatní v projektu (stdafx. h, DllMain. cpp) je součástí standardní šablony projektu Win32. Pokud chcete postupovat podle, ale nechcete používat vlastní knihovnu DLL ještě v těchto krocích, zkuste vytvořit projekt Win32, vybrat knihovnu DLL v Průvodci projektem a pak přidat hlavičkový soubor Giraffe. h a soubor kódu Giraffe. cpp a zkopírovat obsah z kódu v tomto kroku do aplikace. soubory ropriate.
 
-   Kód definuje makro `GIRAFFE_API` která se přeloží na `__declspec(dllexport)` při `_DLL` je definován (při sestavení projektu jako knihovny DLL).
+   Kód definuje makro `GIRAFFE_API` , které se překládá na `_DLL` to `__declspec(dllexport)` , kdy je definována (to znamená, když je projekt sestaven jako knihovna DLL).
 
-2. Otevřít **vlastnosti projektu** pro projekt knihovny DLL a nastavte **konfigurace** k **všechny konfigurace**.
+2. Otevřete **Vlastnosti projektu** pro projekt knihovny DLL a nastavte **konfiguraci** na **všechny konfigurace**.
 
-3. V **vlastnosti projektu**v části **C/C++**  > **Obecné** kartu, nastavte **využívat rozšíření modulu Runtime Windows** k  **Ano (/ZW)** . To umožňuje rozšíření komponent (C++/CX).
+3. Ve **vlastnostech projektu**na kartě >  **C/C++** **Obecné** nastavte použít **rozšíření prostředí Windows Runtime** na **Ano (/ZW)** . To umožňuje rozšíření komponent (C++/CX).
 
-4. V **Průzkumníka řešení**, vyberte uzel projektu, otevřete místní nabídku a zvolte **uvolnit projekt**. Pak otevřete místní nabídku uzlu uvolnit projekt a zvolte pro úpravu souboru projektu. Vyhledejte `WindowsTargetPlatformVersion` prvku a nahraďte ji metodou následující prvky.
+4. V **Průzkumník řešení**vyberte uzel projektu, otevřete místní nabídku a zvolte **Uvolnit projekt**. Pak otevřete místní nabídku na odpojeném uzlu projektu a zvolte možnost upravit soubor projektu. `WindowsTargetPlatformVersion` Vyhledejte prvek a nahraďte ho následujícími prvky.
 
     ```xml
     <AppContainerApplication>true</AppContainerApplication>
@@ -147,31 +147,31 @@ Následující postup platí pro případ, kdy máte nativní knihovnu DLL, kter
     <ApplicationTypeRevision>10.0</ApplicationTypeRevision>
     ```
 
-   Zavřete soubor .vcxproj, znovu otevřete místní nabídku a zvolte **znovu načíst projekt**.
+   Zavřete soubor. vcxproj, znovu otevřete místní nabídku a vyberte možnost **znovu načíst projekt**.
 
-   **Průzkumník řešení** nyní identifikuje projekt jako projekt Windows Universal.
+   **Průzkumník řešení** nyní identifikuje projekt jako univerzální projekt pro Windows.
 
-5. Ujistěte se, že je správný název souboru předkompilované hlavičky. V **předkompilované hlavičky** oddíl, změna **předkompilovaný soubor hlaviček** z soubor pch.h do stdafx.h. Pokud to neuděláte, se zobrazí následující chyba.
+5. Ujistěte se, že název souboru předkompilované hlavičky je správný. V sekci **předkompilované hlavičky** změňte **soubor předkompilované hlavičky** z PCH. h na Stdafx. h. Pokud to neuděláte, zobrazí se následující chyba.
 
-   > Chyba C2857: "#include" ve zdrojovém souboru nebyl nalezen zadaný pomocí možnosti příkazového řádku /Ycpch.h – příkaz
+   > Chyba C2857: příkaz ' #include ' zadaný s parametrem příkazového řádku/Ycpch.h nebyl nalezen ve zdrojovém souboru.
 
-   Tento problém je, že projekty pro Universal Windows použít různé zásady vytváření názvů pro soubor předkompilované hlavičky.
+   Příčinou tohoto problému je, že univerzální projekty Windows používají jiné zásady vytváření názvů pro soubor předkompilované hlavičky.
 
-6. Sestavte projekt. Může se zobrazit některé chyby týkající se možnosti nekompatibilní příkazového řádku. Například možnost teď zastaralé, ale často používaných **povolit minimální opětovné sestavení (/ Gm)** nastaven ve výchozím nastavení v mnoha starší C++ projekty a není kompatibilní s `/ZW`.
+6. Sestavte projekt. Může se zobrazit několik chyb týkajících se nekompatibilních možností příkazového řádku. Například aktuálně zastaralá, ale často používaná možnost **Povolit minimální opětovné sestavení (/GM)** je ve výchozím nastavení nastavena v mnoha starších C++ projektech a není kompatibilní s `/ZW`.
 
-   Některé funkce nebudou k dispozici při kompilaci pro univerzální platformu Windows. Zobrazí se chyby kompilátoru případné potíže. Řeší nezaevidovali čisté sestavení.
+   Některé funkce nejsou k dispozici při kompilaci Univerzální platforma Windows. V případě problémů se zobrazí chyby kompilátoru. Vyřešte je, dokud nebudete mít čisté sestavení.
 
-7. Použití knihovny DLL v aplikaci UWP ve stejném řešení, otevřete místní nabídku pro uzel projektu UPW a zvolte **přidat** > **odkaz**.
+7. Chcete-li použít knihovnu DLL v aplikaci UWP ve stejném řešení, otevřete místní nabídku uzlu projektu UWP a vyberte možnost **Přidat** > **odkaz**.
 
-   V části **projekty** > **řešení**, zaškrtněte políčko vedle projektu knihovny DLL a zvolte **OK** tlačítko.
+   V části**řešení** **projektů** > zaškrtněte políčko vedle projektu knihovny DLL a klikněte na tlačítko **OK** .
 
-8. Soubory hlaviček knihovny zahrňte soubor pch.h aplikaci UPW.
+8. Do souboru PCH. h vaší aplikace pro UWP zahrňte soubory hlaviček knihovny.
 
     ```cpp
     #include "..\MyNativeDLL\giraffe.h"
     ```
 
-9. Přidejte kód jako obvykle v projektu UWP k vyvolání funkce a vytvořit typy z knihovny DLL.
+9. Přidejte kód obvyklým způsobem v projektu UWP pro vyvolání funkcí a vytváření typů z knihovny DLL.
 
     ```cpp
     MainPage::MainPage()
@@ -183,52 +183,52 @@ Následující postup platí pro případ, kdy máte nativní knihovnu DLL, kter
     }
     ```
 
-##  <a name="BK_StaticLib"></a> Pomocí nativní statickou knihovnu C++ v aplikaci UWP
+##  <a name="BK_StaticLib"></a>Použití nativní C++ statické knihovny v aplikaci UWP
 
-Můžete použít nativní statickou knihovnu C++ v projektu UWP, ale existují některá omezení a omezení je potřeba vědět. Začněte tím, že výklad o [statických knihoven v C++/CX](../cppcx/static-libraries-c-cx.md). Nativní kód se dá dostat do statické knihovny z vaší aplikace pro UPW, ale nedoporučujeme k vytvoření typů public ref ve statické knihovně. Pokud kompilujete s statickou knihovnu `/ZW` možnost, varuje librarian (ve skutečnosti linkeru v maskování):
+V projektu UWP můžete použít C++ nativní statickou knihovnu, ale existuje několik omezení a omezení, o kterých byste měli vědět. Začněte tím, že si přečtete informace o [statických knihovnách v C++/CX](../cppcx/static-libraries-c-cx.md). K nativnímu kódu ve vaší statické knihovně můžete přistupovat z aplikace pro UWP, ale nedoporučujeme vytvářet veřejné referenční typy v takové statické knihovně. Pokud zkompilujete statickou knihovnu s `/ZW` možností, Librarian (ve skutečnosti je linker v maskování) varuje:
 
-> LNK4264: archivace objektový soubor zkompiloval s parametrem /ZW do statické knihovny. Všimněte si, že při vytváření typů prostředí Windows Runtime nedoporučuje propojení se statickou knihovnou, která obsahuje metadata prostředí Windows Runtime
+> LNK4264: archivace souboru objektu kompilována s/ZW do statické knihovny; Pamatujte, že při vytváření prostředí Windows Runtime typů se nedoporučuje propojit se statickou knihovnou, která obsahuje prostředí Windows Runtime metadata.
 
-Můžete však použít statické knihovny v UPW bez opětovné kompilace s `/ZW`. Není možné deklarovat typy, které ref nebo použít C++/CX vytvoří, ale pokud vaše účelem je jednoduše použití knihovny nativního kódu a můžete tak učinit pomocí následujících kroků.
+Můžete však použít statickou knihovnu v UWP bez nutnosti jejich `/ZW`opětovné kompilace. Nebudete moci deklarovat žádné typy ref ani použít C++konstrukce/CX, ale pokud je vaším účelem jednoduše použít knihovnu nativního kódu, můžete to provést pomocí následujících kroků.
 
-### <a name="to-use-a-native-c-static-library-in-a-uwp-project"></a>Použít nativní statickou knihovnu C++ v projektu UWP
+### <a name="to-use-a-native-c-static-library-in-a-uwp-project"></a>Použití nativní C++ statické knihovny v projektu UWP
 
-1. Ve vlastnostech projektu pro projekt UPW, zvolte **vlastnosti konfigurace** > **Linkeru** > **vstup** v levém podokně. V pravém podokně, přidejte cestu ke knihovně v **Další závislosti** vlastnost. Například pro knihovnu v projektu, který se umístí výstup ve *SolutionFolder*\Debug\MyNativeLibrary\MyNativeLibrary.lib, zadejte relativní cestu `Debug\MyNativeLibrary\MyNativeLibrary.lib`.
+1. Ve vlastnostech projektu pro projekt UWP v levém podokně vyberte možnost **vlastnosti** > konfigurace**linker** > **input** . V pravém podokně přidejte cestu ke knihovně do vlastnosti **Další závislosti** . Například pro knihovnu v projektu, který umístí svůj výstup do *SolutionFolder –* \Debug\MyNativeLibrary\MyNativeLibrary.lib, přidejte relativní cestu `Debug\MyNativeLibrary\MyNativeLibrary.lib`.
 
-2. Přidejte příkaz zahrnutí odkazu na soubor hlaviček pro váš soubor pch.h (pokud existuje), nebo libovolný soubor .cpp podle potřeby a začněte přidávat kód, který používá knihovnu.
+2. Přidejte příkaz include, který odkazuje na hlavičkový soubor na soubor PCH. h (Pokud je k dispozici), nebo v jakémkoli souboru. cpp podle potřeby a začněte přidávat kód, který používá knihovnu.
 
    ```cpp
    #include "..\MyNativeLibrary\giraffe.h"
    ```
 
-   Nepřidávejte odkaz **odkazy** uzel v **Průzkumníka řešení**. Tento mechanismus funguje jenom pro komponenty Windows Runtime.
+   Nepřidávejte odkaz do uzlu **odkazy** v **Průzkumník řešení**. Tento mechanismus funguje jenom pro prostředí Windows Runtime komponenty.
 
-##  <a name="BK_WinRTComponent"></a> Portování knihovnu C++ ke komponentě ve Windows Runtime
+##  <a name="BK_WinRTComponent"></a>Přenos C++ knihovny do součásti prostředí Windows Runtime
 
-Pokud chcete používat nativní rozhraní API ve statické knihovně z aplikace pro UPW, a vy musíte zdrojový kód pro nativní knihovnu, je port kód ke komponentě ve Windows Runtime. Statická knihovna již nebude, bude knihovny DLL. Můžete ho použít v libovolném C++ aplikace pro UPW, ale na rozdíl od případu statická knihovna, můžete přidat typech a dalších C++/CX konstrukce, které jsou k dispozici pro klienty v žádný kód aplikace UPW, bez ohledu na jazyk. Proto můžete přistupovat těchto typů z jazyka C#, Visual Basic nebo JavaScript.  Základní postup je vytvořit projekt pro součást prostředí Windows Runtime, do něj zkopírovat kód pro statické knihovny a vyřešit všechny chyby, které vznikají v přechod ze standardní kompilace jazyka C++ na kód `/ZW` kompilace.
+Pokud chcete využívat nativní rozhraní API ve statické knihovně z aplikace pro UWP a máte zdrojový kód pro nativní knihovnu, můžete kód portovat do prostředí Windows Runtime komponenty. Už nebude Statická knihovna, bude to knihovna DLL. Můžete ji použít v libovolné C++ aplikaci pro UWP, ale na rozdíl od velikosti statické knihovny můžete přidat typy ref a další C++konstrukce/CX, které jsou k dispozici pro klienty v jakémkoli kódu aplikace UWP bez ohledu na jazyk. Proto máte přístup k těmto typům z C#, Visual Basic nebo JavaScript.  Základní postup je vytvořit projekt komponenty prostředí Windows Runtime, zkopírovat kód pro statickou knihovnu do něj a vyřešit všechny chyby, které vznikají z přesunu kódu ze standardní C++ kompilace do `/ZW` kompilace.
 
-### <a name="to-port-a-c-library-to-a-windows-runtime-component"></a>K portu knihovny C++ ke komponentě ve Windows Runtime
+### <a name="to-port-a-c-library-to-a-windows-runtime-component"></a>Postup při portování C++ knihovny pro komponentu prostředí Windows Runtime
 
-1. Vytvořte projekt pro součást prostředí Windows Runtime.
+1. Vytvořte projekt součásti prostředí Windows Runtime.
 
 2. Zavřete projekt.
 
-3. V **Průzkumníka souborů Windows**, najít projekt. Ve výchozím nastavení používá Visual Studio ve složce Dokumenty 2017\Projects složky sady Visual Studio. Vyhledejte projekt knihovny C++, který obsahuje kód, který chcete port. Zkopírujte zdrojové soubory (hlavičkové soubory, soubory kódu a všechny další prostředky, včetně v podadresářích) z projektu knihovny jazyka C++ a vložte je do složky projektu a ujistěte se, chcete-li zachovat stejné struktury složek.
+3. V **Průzkumníkovi souborů systému Windows**vyhledejte projekt. Ve výchozím nastavení používá Visual Studio složku projekty sady Visual Studio 2017 \ ve složce Dokumenty. Vyhledejte projekt C++ knihovny obsahující kód, který chcete přenést. Zkopírujte zdrojové soubory (soubory hlaviček, soubory kódu a všechny další prostředky, včetně v podadresářích) z projektu C++ knihovny a vložte je do složky projektu a nezapomeňte zachovat stejnou strukturu složek.
 
-4. Znovu otevřete projekt pro součást prostředí Windows Runtime a otevřete místní nabídku pro uzel projektu v **Průzkumníka řešení**a zvolte **přidat** > **existující položku**.
+4. Znovu otevřete projekt součásti prostředí Windows Runtime a otevřete místní nabídku uzlu projektu v **Průzkumník řešení**a vyberte možnost **Přidat** > **existující položku**.
 
-5. Vyberte všechny soubory pro přidání z původní projekt a zvolte **OK**. Opakujte, pokud je to nutné pro podsložky.
+5. Vyberte všechny soubory, které chcete přidat z původního projektu, a zvolte **OK**. Pokud je to nutné pro podsložky, opakujte akci.
 
-6. Může být nyní některé duplikovali jste kód. Pokud máte více než jeden předkompilované hlavičky (třeba stdafx.h a soubor pch.h), vyberte z nich se má zachovat. Zkopírujte všechny kódu, jako například zahrnovat příkazy do ta, kterou už vedení. Odstraňte vlastnosti dalších a v projektu v části **předkompilované hlavičky**, ujistěte se, že je správný název souboru hlaviček.
+6. Teď můžete mít nějaký duplicitní kód. Pokud máte více než jednu předkompilovanou hlavičku (například stdafx. h a PCH. h), vyberte ji, kterou chcete zachovat. Zkopírujte libovolný požadovaný kód, například příkazy include, do kódu, který si zachováte. Pak odstraňte druhý a ve vlastnostech projektu v části **předkompilované hlavičky**Ujistěte se, že název souboru hlaviček je správný.
 
-   Pokud jste změnili soubor, který má používat jako předkompilované hlavičky, ujistěte se, že jsou správné pro každý soubor možností předkompilovaných hlaviček. Pak vyberte každý soubor .cpp, otevřete její okno Vlastnosti a ujistěte se, že všechny jsou nastaveny na **použití (/Yu)** , s výjimkou požadované předkompilované hlavičky, které by mělo být nastavené **vytvořit (/Yc)** .
+   Pokud jste soubor změnili tak, aby používal jako předkompilovanou hlavičku, ujistěte se, že možnosti předkompilovaných hlaviček jsou správné pro každý soubor. Postupně vyberte každý soubor. cpp, otevřete jeho okno Vlastnosti a ujistěte se, že všechny jsou nastaveny na **použití (/Yu)** , s výjimkou požadované předkompilované hlavičky, která by měla být nastavena na hodnotu **vytvořit (/Yc)** .
 
-7. Sestavte projekt a vyřešte všechny chyby. Tyto chyby může být způsobena použitím `/ZW` možnost, nebo může být způsobena novou verzi sady Windows SDK nebo se může dojít k tomu závislosti, jako jsou hlavičkové soubory, knihovny, na kterých závisí nebo rozdíly v nastavení projektu mezi tvojí projekt a novým.
+7. Sestavte projekt a vyřešte všechny chyby. Tyto chyby mohou být způsobeny použitím `/ZW` možnosti, nebo mohou být způsobeny novou verzí Windows SDK, nebo mohou odrážet závislosti, jako jsou soubory hlaviček, na kterých vaše knihovna závisí, nebo rozdíly v nastaveních projektu mezi vaší starou. projekt a nový.
 
-8. Do projektu přidejte typy public ref nebo převést běžné typy na typech, ke zveřejnění vstupních bodů do funkce, které chcete volat z aplikací pro UWP.
+8. Přidejte do projektu veřejné referenční typy nebo převeďte běžné typy na typy ref, abyste vystavili vstupní body do funkcionality, kterou chcete volat z aplikací UWP.
 
-9. Otestovat součást přidáním na ni odkaz z projektu aplikace UPW a přidejte nějaký kód do volání veřejné rozhraní API služby jste vytvořili.
+9. Otestujte komponentu tak, že do ní přidáte odkaz z projektu aplikace pro UWP a přidáte nějaký kód pro volání veřejných rozhraní API, které jste vytvořili.
 
 ## <a name="see-also"></a>Viz také:
 
-[Přenos aplikací do platformy Universal Windows](../porting/porting-to-the-universal-windows-platform-cpp.md)
+[Portování do Univerzální platforma Windows](../porting/porting-to-the-universal-windows-platform-cpp.md)

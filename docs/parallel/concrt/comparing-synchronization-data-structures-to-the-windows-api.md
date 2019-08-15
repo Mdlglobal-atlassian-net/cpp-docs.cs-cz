@@ -5,46 +5,46 @@ helpviewer_keywords:
 - synchronization data structures, compared to Windows API
 - event class, example
 ms.assetid: 8b0b1a3a-ef80-408c-91fa-93e6af920b4e
-ms.openlocfilehash: 4fa0d3fbf3457bfafab731275584d206206161dd
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 16d58431ae3f9859677302010f15a75b37ebedbf
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62414032"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69510589"
 ---
 # <a name="comparing-synchronization-data-structures-to-the-windows-api"></a>Porovnávání synchronizačních datových struktur s rozhraním API systému Windows
 
-Toto téma srovnává chování synchronizačních datových struktur, které jsou k dispozici v modulu Runtime souběžnosti do těch, které poskytuje rozhraní API Windows.
+Toto téma porovnává chování datových struktur synchronizace, které jsou poskytovány Concurrency Runtime, do těch, které poskytuje rozhraní API systému Windows.
 
-Synchronizační datové struktury, které jsou k dispozici v modulu Runtime souběžnosti, postupujte *kooperativní model vláken*. V spolupráce modelu vláken synchronizací primitiv explicitně yield jejich zpracování prostředků jiných vláken. Tím se liší od *preemptive model vláken*, kde jsou přeneseny prostředků pro zpracování pro ostatní vlákna řídící plánovače nebo operačního systému.
+Synchronizační datové struktury, které Concurrency Runtime poskytují, se řídí modelem pro *spolupráci*v družstvu. V modelu vláken v družstvu jsou primitivní primitivi explicitně vydávat prostředky zpracování do jiných vláken. To se liší od modelu nepracovních *vláken*, kde se zpracovávají prostředky, které řídí Scheduler nebo operační systém, a jsou přenášeny do jiných vláken.
 
-## <a name="criticalsection"></a>critical_section
+## <a name="critical_section"></a>critical_section
 
-[Concurrency::critical_section](../../parallel/concrt/reference/critical-section-class.md) třídy vypadá podobně jako Windows `CRITICAL_SECTION` struktury, protože ho lze použít pouze ve vláknech jeden proces. Další informace o kritické oddíly v rozhraní Windows API najdete v tématu [objektů kritických části](/windows/desktop/Sync/critical-section-objects).
+Třída [Concurrency:: critical_section](../../parallel/concrt/reference/critical-section-class.md) se podobá struktuře systému Windows `CRITICAL_SECTION` , protože může být použita pouze vlákny jednoho procesu. Další informace o důležitých oddílech v rozhraní API systému Windows najdete v tématu [Důležité objekty oddílu](/windows/win32/Sync/critical-section-objects).
 
-## <a name="readerwriterlock"></a>reader_writer_lock
+## <a name="reader_writer_lock"></a>reader_writer_lock
 
-[Concurrency::reader_writer_lock](../../parallel/concrt/reference/reader-writer-lock-class.md) třídy se podobá zámky tenký čtení/zápis (SRW) pro Windows. Následující tabulka vysvětluje podobnosti a rozdíly.
+Třída [Concurrency:: reader_writer_lock](../../parallel/concrt/reference/reader-writer-lock-class.md) připomíná zámky Windows Slim Reader/Writer (SRW). V následující tabulce jsou vysvětleny podobnosti a rozdíly.
 
-|Funkce|`reader_writer_lock`|SRW zámku|
+|Funkce|`reader_writer_lock`|SRW zámek|
 |-------------|--------------------------|--------------|
-|Non-reentrant|Ano|Ano|
-|Můžete zvýšit úroveň čtečku pro zápis (podporu upgradu)|Ne|Ne|
-|Můžete snížit úroveň zapisovač pro čtečku (downgrade podpora)|Ne|Ne|
-|Zámek zápisu předvoleb|Ano|Ne|
-|FIFO přístup pro autory|Ano|Ne|
+|Netýká se opětovného zařazení|Ano|Ano|
+|Může zvýšit úroveň čtecího modulu na zapisovač (podpora upgradu).|Ne|Ne|
+|Může snížit úroveň zapisovače na čtenáře (podpora downgrade).|Ne|Ne|
+|Zámek pro zápis a předvolby|Ano|Ne|
+|Přístup FIFO k modulům pro zápis|Ano|Ne|
 
-Další informace o zámky SRW najdete v tématu [tenký čtení/zápis (SRW) zámky](https://msdn.microsoft.com/library/windows/desktop/aa904937) v sadě SDK platformy.
+Další informace o SRW zámkech najdete v tématu zámky funkce [Slim Reader/Writer (SRW)](/windows/win32/sync/slim-reader-writer--srw--locks) v sadě SDK platformy.
 
 ## <a name="event"></a>event
 
-[Concurrency::event](../../parallel/concrt/reference/event-class.md) třídy vypadá podobně jako nepojmenované, ruční obnovení události Windows. Nicméně `event` objekt chová kooperativně, zatímco události Windows chová preventivně. Další informace o událostech Windows najdete v tématu [objekty událostí](/windows/desktop/Sync/event-objects).
+Třída [Concurrency:: Event](../../parallel/concrt/reference/event-class.md) se podobá nepojmenované události Windows ručního vynulování. `event` Objekt se ale chová v družstvě, zatímco se událost systému Windows chová bez přerušení. Další informace o událostech systému Windows naleznete v tématu [objekty událostí](/windows/win32/Sync/event-objects).
 
 ## <a name="example"></a>Příklad
 
 ### <a name="description"></a>Popis
 
-Abyste lépe pochopili rozdíl mezi `event` třídy a události Windows, zvažte následující příklad. Tento příklad povolí, aby vytvořit maximálně dvou souběžných úloh a poté zavolá dvě podobné funkce, které používají `event` třídy a je ruční obnovení události Windows. Každá funkce nejprve vytvoří několik úloh, které čekat sdílené signálování události. Každá funkce potom provede na spuštěné úkoly a pak signalizuje událost. Každá funkce pak čeká signalizovaného událost.
+Pro lepší pochopení rozdílu mezi `event` událostmi třídy a Windows zvažte následující příklad. Tento příklad umožňuje, aby Plánovač vytvořil nejvíce dvou souběžných úloh a pak volal dvě podobné funkce, které používají `event` třídu a událost ručního resetování Windows. Každá funkce nejprve vytvoří několik úloh, které čekají, až se na sdílenou událost zaznamená signál. Každá funkce následně vydává spuštěné úlohy a poté signalizuje událost. Každá funkce potom počká na událost signalizace.
 
 ### <a name="code"></a>Kód
 
@@ -52,7 +52,7 @@ Abyste lépe pochopili rozdíl mezi `event` třídy a události Windows, zvažte
 
 ### <a name="comments"></a>Komentáře
 
-Tento příklad vytvoří následující ukázkový výstup:
+Tento příklad vytvoří následující vzorový výstup:
 
 ```Output
 Cooperative event:
@@ -81,9 +81,9 @@ Windows event:
     Context 13: received the event.
 ```
 
-Vzhledem k tomu, `event` třídy se chová kooperativně, Plánovač může přidělit jinému uživateli prostředků pro zpracování do jiného kontextu při události čeká vstupovat do signalizovaného stavu. Proto další práci provádí verzi, která se používá `event` třídy. Ve verzi, který využívá události Windows musí každý úkol čekání zadejte signalizovaného stavu před spuštěním další krok.
+Vzhledem k `event` tomu, že se třída chová spolu, může Scheduler znovu přidělit prostředky zpracování jinému kontextu, když událost čeká na vstup do signalizace. Proto je více práce provedeno pomocí verze, která používá `event` třídu. V případě verze, která používá události systému Windows, musí každý čekající úkol před zahájením dalšího úkolu zadat signálový stav.
 
-Další informace o úlohách najdete v tématu [paralelismus](../../parallel/concrt/task-parallelism-concurrency-runtime.md).
+Další informace o úlohách najdete v tématu [Task paralelismus](../../parallel/concrt/task-parallelism-concurrency-runtime.md).
 
 ## <a name="see-also"></a>Viz také:
 

@@ -116,16 +116,16 @@ helpviewer_keywords:
 - CDHtmlDialog [MFC], m_strCurrentUrl
 - CDHtmlDialog [MFC], m_szHtmlResID
 ms.assetid: 3f941c85-87e1-4f0f-9cc5-ffee8498b312
-ms.openlocfilehash: d53d3afb464b9dcfa32ab3cf4ee51446f8313a92
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ec424e433dc84bf4188e349eb6450888aeeeb463
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62168060"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69506902"
 ---
 # <a name="cdhtmldialog-class"></a>CDHtmlDialog – třída
 
-Slouží k vytváření dialogových oken používající HTML namísto zdrojů dialogového okna k provedení jejich uživatelské rozhraní.
+Slouží k vytváření dialogových oken, která používají jazyk HTML místo prostředků dialogu k implementaci jejich uživatelského rozhraní.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -137,84 +137,84 @@ class CDHtmlDialog : public CDialog, public CDHtmlEventSink
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CDHtmlDialog::CDHtmlDialog](#cdhtmldialog)|Vytvoří objekt CDHtmlDialog.|
 |[CDHtmlDialog::~CDHtmlDialog](#_dtorcdhtmldialog)|Odstraní objekt CDHtmlDialog.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
-|[CDHtmlDialog::CanAccessExternal](#canaccessexternal)|Overridable, která je volána jako kontroly přístupu se, zda skriptovací objekty na stránce načíst přístup k externí odeslání řízení lokality. Kontroluje, abyste měli jistotu, že odesílání je, že buď bezpečné pro skriptování, nebo aktuální zóny umožňuje pro objekty, které nejsou bezpečné pro skriptování.|
-|[CDHtmlDialog::CreateControlSite](#createcontrolsite)|Overridable umožňuje vytvořit instanci ovládacího prvku serveru pro hostování ovládacího prvku WebBrowser v dialogovém okně.|
-|[CDHtmlDialog::DDX_DHtml_AxControl](#ddx_dhtml_axcontrol)|Výměna dat mezi členské proměnné a hodnotu vlastnosti ovládacího prvku ActiveX na stránku HTML.|
-|[CDHtmlDialog::DDX_DHtml_CheckBox](#ddx_dhtml_checkbox)|Výměna dat mezi členskou proměnnou a zaškrtávacího políčka na stránce HTML.|
-|[CDHtmlDialog::DDX_DHtml_ElementText](#ddx_dhtml_elementtext)|Výměna dat mezi členskou proměnnou a všechny vlastnosti elementu HTML na stránce HTML.|
-|[CDHtmlDialog::DDX_DHtml_Radio](#ddx_dhtml_radio)|Výměna dat mezi členskou proměnnou a přepínač na stránku HTML.|
-|[CDHtmlDialog::DDX_DHtml_SelectIndex](#ddx_dhtml_selectindex)|Získá nebo nastaví index založený na seznamu na stránce HTML.|
-|[CDHtmlDialog::DDX_DHtml_SelectString](#ddx_dhtml_selectstring)|Získá nebo nastaví zobrazení textu položky seznamu pole (podle aktuální index) na stránce HTML.|
-|[CDHtmlDialog::DDX_DHtml_SelectValue](#ddx_dhtml_selectvalue)|Získá nebo nastaví hodnotu pole položky seznamu (podle aktuální index) na stránce HTML.|
-|[CDHtmlDialog::DestroyModeless](#destroymodeless)|Zničí nemodální dialogové okno.|
-|[CDHtmlDialog::EnableModeless](#enablemodeless)|Umožňuje nemodálních dialogových oken.|
-|[CDHtmlDialog::FilterDataObject](#filterdataobject)|Umožňuje filtrovat objekty dat schránky vytvořené hostované prohlížečem dialogového okna.|
-|[CDHtmlDialog::GetControlDispatch](#getcontroldispatch)|Načte `IDispatch` rozhraní na ovládací prvek ActiveX vloží do dokumentu HTML.|
-|[CDHtmlDialog::GetControlProperty](#getcontrolproperty)|Načte požadované vlastnosti zadaný ovládací prvek ActiveX.|
-|[CDHtmlDialog::GetCurrentUrl](#getcurrenturl)|Načte Uniform Resource Locator (URL) přidružené k aktuální dokument.|
-|[CDHtmlDialog::GetDHtmlDocument](#getdhtmldocument)|Načte rozhraní IHTMLDocument2 u aktuálně načtené dokumentu HTML.|
-|[CDHtmlDialog::GetDropTarget](#getdroptarget)|Voláno rozhraním obsažený ovládací prvek WebBrowser, když se používá jako cíl přetažení umožňující dialogového okna slouží k poskytování alternativu [IDropTarget](/windows/desktop/api/oleidl/nn-oleidl-idroptarget).|
-|[CDHtmlDialog::GetElement](#getelement)|Získá rozhraní na prvek jazyka HTML.|
-|[CDHtmlDialog::GetElementHtml](#getelementhtml)|Načte `innerHTML` vlastnost elementu HTML.|
-|[CDHtmlDialog::GetElementInterface](#getelementinterface)|Načte požadované rozhraní ukazatel z prvku HTML.|
+|[CDHtmlDialog::CanAccessExternal](#canaccessexternal)|Overridable, která je volána jako kontrola přístupu, chcete-li zjistit, zda objekty skriptování na načtené stránce mají přístup k externímu odeslání lokality ovládacího prvku. Kontroluje, zda je odesílání buď bezpečné pro skriptování, nebo současná zóna umožňuje objektům, které nejsou bezpečné pro skriptování.|
+|[CDHtmlDialog::CreateControlSite](#createcontrolsite)|Přepsatelné slouží k vytvoření instance řídicího webu pro hostování ovládacího prvku WebBrowser v dialogovém okně.|
+|[CDHtmlDialog::DDX_DHtml_AxControl](#ddx_dhtml_axcontrol)|Vyměňuje data mezi členskou proměnnou a hodnotou vlastnosti ovládacího prvku ActiveX na stránce HTML.|
+|[CDHtmlDialog::DDX_DHtml_CheckBox](#ddx_dhtml_checkbox)|Vyměňuje data mezi členskou proměnnou a zaškrtávacím políčkem na stránce HTML.|
+|[CDHtmlDialog::DDX_DHtml_ElementText](#ddx_dhtml_elementtext)|Vyměňuje data mezi členskou proměnnou a libovolnou vlastností elementu HTML na stránce HTML.|
+|[CDHtmlDialog::DDX_DHtml_Radio](#ddx_dhtml_radio)|Vyměňuje data mezi členskou proměnnou a přepínačem na stránce HTML.|
+|[CDHtmlDialog::DDX_DHtml_SelectIndex](#ddx_dhtml_selectindex)|Získá nebo nastaví index pole seznamu na stránce HTML.|
+|[CDHtmlDialog::DDX_DHtml_SelectString](#ddx_dhtml_selectstring)|Získá nebo nastaví zobrazovaný text položky seznamu (na základě aktuálního indexu) na stránce HTML.|
+|[CDHtmlDialog::DDX_DHtml_SelectValue](#ddx_dhtml_selectvalue)|Získá nebo nastaví hodnotu položky seznamu (na základě aktuálního indexu) na stránce HTML.|
+|[CDHtmlDialog::DestroyModeless](#destroymodeless)|Odstraní nemodální dialogové okno.|
+|[CDHtmlDialog::EnableModeless](#enablemodeless)|Umožňuje používat nemodální dialogová okna.|
+|[CDHtmlDialog::FilterDataObject](#filterdataobject)|Umožňuje dialogovému oknu filtrovat datové objekty schránky vytvořené hostovaným prohlížečem.|
+|[CDHtmlDialog::GetControlDispatch](#getcontroldispatch)|`IDispatch` Načte rozhraní ovládacího prvku ActiveX vloženého v dokumentu HTML.|
+|[CDHtmlDialog::GetControlProperty](#getcontrolproperty)|Načte požadovanou vlastnost zadaného ovládacího prvku ActiveX.|
+|[CDHtmlDialog::GetCurrentUrl](#getcurrenturl)|Načte adresu URL (Uniform Resource Locator), která je přidružená k aktuálnímu dokumentu.|
+|[CDHtmlDialog::GetDHtmlDocument](#getdhtmldocument)|Načte rozhraní IHTMLDocument2 v aktuálně načteném dokumentu HTML.|
+|[CDHtmlDialog::GetDropTarget](#getdroptarget)|Volá se ovládacím prvkem obsaženým v ovládacím prvku WebBrowser, když se používá jako cíl přetažení, aby dialog mohl poskytovat alternativní [IDropTarget](/windows/win32/api/oleidl/nn-oleidl-idroptarget).|
+|[CDHtmlDialog::GetElement](#getelement)|Načte rozhraní elementu HTML.|
+|[CDHtmlDialog::GetElementHtml](#getelementhtml)|`innerHTML` Načte vlastnost elementu HTML.|
+|[CDHtmlDialog::GetElementInterface](#getelementinterface)|Načte požadovaný ukazatel rozhraní z elementu HTML.|
 |[CDHtmlDialog::GetElementProperty](#getelementproperty)|Načte hodnotu vlastnosti elementu HTML.|
-|[CDHtmlDialog::GetElementText](#getelementtext)|Načte `innerText` vlastnost elementu HTML.|
-|[CDHtmlDialog::GetEvent](#getevent)|Získá `IHTMLEventObj` ukazatel na aktuální objekt události.|
-|[CDHtmlDialog::GetExternal](#getexternal)|Získá hostitele `IDispatch` rozhraní.|
-|[CDHtmlDialog::GetHostInfo](#gethostinfo)|Načte možnosti uživatelského rozhraní hostiteli.|
-|[CDHtmlDialog::GetOptionKeyPath](#getoptionkeypath)|Načte klíče registru, ve kterém jsou uložené předvolby uživatele.|
+|[CDHtmlDialog::GetElementText](#getelementtext)|`innerText` Načte vlastnost elementu HTML.|
+|[CDHtmlDialog::GetEvent](#getevent)|`IHTMLEventObj` Získá ukazatel na aktuální objekt události.|
+|[CDHtmlDialog::GetExternal](#getexternal)|Získá `IDispatch` rozhraní hostitele.|
+|[CDHtmlDialog::GetHostInfo](#gethostinfo)|Načte možnosti uživatelského rozhraní hostitele.|
+|[CDHtmlDialog::GetOptionKeyPath](#getoptionkeypath)|Načte klíč registru, ve kterém jsou uložené předvolby uživatele.|
 |[CDHtmlDialog::HideUI](#hideui)|Skryje uživatelské rozhraní hostitele.|
-|[CDHtmlDialog::IsExternalDispatchSafe](#isexternaldispatchsafe)|Označuje, zda hostitel `IDispatch` rozhraní je bezpečný pro skriptování.|
+|[CDHtmlDialog::IsExternalDispatchSafe](#isexternaldispatchsafe)|Označuje, zda je `IDispatch` rozhraní hostitele bezpečné pro skriptování.|
 |[CDHtmlDialog::LoadFromResource](#loadfromresource)|Načte zadaný prostředek do ovládacího prvku WebBrowser.|
 |[CDHtmlDialog::Navigate](#navigate)|Přejde na zadanou adresu URL.|
 |[CDHtmlDialog::OnBeforeNavigate](#onbeforenavigate)|Volá se rozhraním, než se aktivuje událost navigace.|
-|[CDHtmlDialog::OnDocumentComplete](#ondocumentcomplete)|Volá se rozhraním, aby se aplikaci oznámilo, dokument se dosáhne stavu READYSTATE_COMPLETE.|
+|[CDHtmlDialog::OnDocumentComplete](#ondocumentcomplete)|Volá se rozhraním, aby se aplikace upozornila na to, že dokument dosáhl stavu READYSTATE_COMPLETE.|
 |[CDHtmlDialog::OnDocWindowActivate](#ondocwindowactivate)|Volá se rozhraním, když se aktivuje nebo deaktivuje okno dokumentu.|
 |[CDHtmlDialog::OnFrameWindowActivate](#onframewindowactivate)|Volá se rozhraním, když se aktivuje nebo deaktivuje okno rámce.|
-|[CDHtmlDialog::OnInitDialog](#oninitdialog)|Volá se v reakci na nezavěsíte zprávu.|
-|[CDHtmlDialog::OnNavigateComplete](#onnavigatecomplete)|Volá se rozhraním po dokončení navigační události.|
-|[CDHtmlDialog::ResizeBorder](#resizeborder)|Upozorní objekt, který je potřeba změnit velikost místa jeho ohraničení.|
+|[CDHtmlDialog::OnInitDialog](#oninitdialog)|Volá se v reakci na zprávu WM_INITDIALOG.|
+|[CDHtmlDialog:: OnNavigateComplete](#onnavigatecomplete)|Volá se rozhraním po dokončení události navigace.|
+|[CDHtmlDialog::ResizeBorder](#resizeborder)|Upozorní objekt, že potřebuje změnit velikost prostoru ohraničení.|
 |[CDHtmlDialog::SetControlProperty](#setcontrolproperty)|Nastaví vlastnost ovládacího prvku ActiveX na novou hodnotu.|
-|[CDHtmlDialog::SetElementHtml](#setelementhtml)|Nastaví `innerHTML` vlastnost elementu HTML.|
+|[CDHtmlDialog:: SetElementHtml](#setelementhtml)|`innerHTML` Nastaví vlastnost elementu HTML.|
 |[CDHtmlDialog::SetElementProperty](#setelementproperty)|Nastaví vlastnost elementu HTML.|
-|[CDHtmlDialog::SetElementText](#setelementtext)|Nastaví `innerText` vlastnost elementu HTML.|
-|[CDHtmlDialog::SetExternalDispatch](#setexternaldispatch)|Nastaví hostitele `IDispatch` rozhraní.|
-|[CDHtmlDialog::SetHostFlags](#sethostflags)|Nastaví příznaky uživatelského rozhraní hostiteli.|
-|[CDHtmlDialog::ShowContextMenu](#showcontextmenu)|Volá se, když místní nabídka se nezobrazí.|
+|[CDHtmlDialog::SetElementText](#setelementtext)|`innerText` Nastaví vlastnost elementu HTML.|
+|[CDHtmlDialog::SetExternalDispatch](#setexternaldispatch)|Nastaví `IDispatch` rozhraní hostitele.|
+|[CDHtmlDialog:: SetHostFlags](#sethostflags)|Nastaví příznaky uživatelského rozhraní hostitele.|
+|[CDHtmlDialog::ShowContextMenu](#showcontextmenu)|Volá se, když se zobrazí místní nabídka.|
 |[CDHtmlDialog::ShowUI](#showui)|Zobrazuje uživatelské rozhraní hostitele.|
-|[CDHtmlDialog::TranslateAccelerator](#translateaccelerator)|Volá se, aby zpracování nabídky přístupové klíče zpráv.|
-|[CDHtmlDialog::TranslateUrl](#translateurl)|Volá se, aby změnit adresu URL, který se má načíst.|
-|[CDHtmlDialog::UpdateUI](#updateui)|Volá se, aby upozornil hostitele, který se změnil stav příkazu.|
+|[CDHtmlDialog::TranslateAccelerator](#translateaccelerator)|Volá se, aby se zprávy klíče akcelerátoru v nabídce procesu.|
+|[CDHtmlDialog::TranslateUrl](#translateurl)|Volá se, aby se změnila adresa URL, která se má načíst.|
+|[CDHtmlDialog::UpdateUI](#updateui)|Volá se, aby se hostiteli informovalo, že se změnil stav příkazu.|
 
 ### <a name="public-data-members"></a>Veřejné datové členy
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
-|[CDHtmlDialog::m_bUseHtmlTitle](#m_busehtmltitle)|Označuje, zda chcete použít název dokumentu HTML jako dialogové okno popisek.|
-|[CDHtmlDialog::m_nHtmlResID](#m_nhtmlresid)|Resource ID HTML prostředek má být zobrazen.|
-|[CDHtmlDialog::m_pBrowserApp](#m_pbrowserapp)|Ukazatel na aplikace webového prohlížeče.|
+|[CDHtmlDialog::m_bUseHtmlTitle](#m_busehtmltitle)|Označuje, zda se má jako titulek k dialogovému oknu použít název dokumentu HTML.|
+|[CDHtmlDialog::m_nHtmlResID](#m_nhtmlresid)|ID prostředku prostředku HTML, který se má zobrazit|
+|[CDHtmlDialog::m_pBrowserApp](#m_pbrowserapp)|Ukazatel na aplikaci webového prohlížeče.|
 |[CDHtmlDialog::m_spHtmlDoc](#m_sphtmldoc)|Ukazatel na dokument HTML.|
 |[CDHtmlDialog::m_strCurrentUrl](#m_strcurrenturl)|Aktuální adresa URL.|
-|[CDHtmlDialog::m_szHtmlResID](#m_szhtmlresid)|Řetězec verze ID prostředku HTML.|
+|[CDHtmlDialog::m_szHtmlResID](#m_szhtmlresid)|Verze řetězce ID prostředku HTML.|
 
 ## <a name="remarks"></a>Poznámky
 
-`CDHtmlDialog` můžete načíst HTML, který se má zobrazit z buď prostředku HTML nebo adresy URL.
+`CDHtmlDialog`může načíst kód HTML, který se bude zobrazovat buď z prostředku HTML, nebo z adresy URL.
 
-`CDHtmlDialog` Můžete také dat exchange pomocí ovládacích prvků HTML a zpracovávat události z ovládacích prvků HTML, jako je tlačítko klikne.
+`CDHtmlDialog`může také provádět výměnu dat s ovládacími prvky HTML a zpracovávat události z ovládacích prvků HTML, například kliknutím na tlačítko.
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
-[Třídy CObject](../../mfc/reference/cobject-class.md)
+[CObject](../../mfc/reference/cobject-class.md)
 
 `CDHtmlSinkHandlerBase2`
 
@@ -236,26 +236,26 @@ class CDHtmlDialog : public CDialog, public CDHtmlEventSink
 
 **Header:** afxdhtml.h
 
-##  <a name="ddx_dhtml_helper_macros"></a>  Pomocné rutiny Ddx_dhtml
+##  <a name="ddx_dhtml_helper_macros"></a>Makra pomocníka DDX_DHtml
 
-Pomocné rutiny ddx_dhtml umožňují snadný přístup k běžně používaných vlastností ovládacích prvků na stránce HTML.
+Pomocná makra DDX_DHtml umožňují snadný přístup k běžně používaným vlastnostem ovládacích prvků na stránce HTML.
 
 ### <a name="data-exchange-macros"></a>Makra výměny dat
 
 |||
 |-|-|
-|[DDX_DHtml_ElementValue](../../mfc/reference/ddx-dhtml-helper-macros.md#ddx_dhtml_elementvalue)|Nastavuje nebo načítá hodnotu vlastnosti z vybraného ovládacího prvku.|
-|[DDX_DHtml_ElementInnerText](../../mfc/reference/ddx-dhtml-helper-macros.md#ddx_dhtml_elementinnertext)|Nastavuje nebo načítá text mezi počáteční a koncovou značku aktuálního prvku.|
-|[DDX_DHtml_ElementInnerHtml](../../mfc/reference/ddx-dhtml-helper-macros.md#ddx_dhtml_elementinnerhtml)|Nastavuje nebo načítá HTML mezi úvodní a koncovou značkou aktuálního prvku.|
-|[DDX_DHtml_Anchor_Href](../../mfc/reference/ddx-dhtml-helper-macros.md#ddx_dhtml_anchor_href)|Nastavuje nebo načítá cílový bod adresy URL nebo ukotvení.|
-|[DDX_DHtml_Anchor_Target](../../mfc/reference/ddx-dhtml-helper-macros.md#ddx_dhtml_anchor_target)|Nastavuje nebo načítá cílového okna nebo rámce.|
-|[DDX_DHtml_Img_Src](../../mfc/reference/ddx-dhtml-helper-macros.md#ddx_dhtml_img_src)|Nastavuje nebo načítá název obrázkem nebo videoklipem v dokumentu.|
-|[DDX_DHtml_Frame_Src](../../mfc/reference/ddx-dhtml-helper-macros.md#ddx_dhtml_frame_src)|Nastavuje nebo načítá adresy URL přidružené rámce.|
-|[DDX_DHtml_IFrame_Src](../../mfc/reference/ddx-dhtml-helper-macros.md#ddx_dhtml_iframe_src)|Nastavuje nebo načítá adresy URL přidružené rámce.|
+|[DDX_DHtml_ElementValue](../../mfc/reference/ddx-dhtml-helper-macros.md#ddx_dhtml_elementvalue)|Nastaví nebo načte vlastnost Value z vybraného ovládacího prvku.|
+|[DDX_DHtml_ElementInnerText](../../mfc/reference/ddx-dhtml-helper-macros.md#ddx_dhtml_elementinnertext)|Nastaví nebo načte text mezi počátečními a koncovými značkami aktuálního prvku.|
+|[DDX_DHtml_ElementInnerHtml](../../mfc/reference/ddx-dhtml-helper-macros.md#ddx_dhtml_elementinnerhtml)|Nastaví nebo načte kód HTML mezi počátečními a koncovými značkami aktuálního prvku.|
+|[DDX_DHtml_Anchor_Href](../../mfc/reference/ddx-dhtml-helper-macros.md#ddx_dhtml_anchor_href)|Nastaví nebo načte cílovou adresu URL nebo kotvicí bod.|
+|[DDX_DHtml_Anchor_Target](../../mfc/reference/ddx-dhtml-helper-macros.md#ddx_dhtml_anchor_target)|Nastaví nebo načte cílové okno nebo rámec.|
+|[DDX_DHtml_Img_Src](../../mfc/reference/ddx-dhtml-helper-macros.md#ddx_dhtml_img_src)|Nastaví nebo načte název obrázku nebo videoklipu v dokumentu.|
+|[DDX_DHtml_Frame_Src](../../mfc/reference/ddx-dhtml-helper-macros.md#ddx_dhtml_frame_src)|Nastaví nebo načte adresu URL přidruženého rámce.|
+|[DDX_DHtml_IFrame_Src](../../mfc/reference/ddx-dhtml-helper-macros.md#ddx_dhtml_iframe_src)|Nastaví nebo načte adresu URL přidruženého rámce.|
 
 ##  <a name="canaccessexternal"></a>  CDHtmlDialog::CanAccessExternal
 
-Overridable, která je volána jako kontroly přístupu se, zda skriptovací objekty na stránce načíst přístup k externí odeslání řízení lokality. Kontroluje, abyste měli jistotu, že odesílání je, že buď bezpečné pro skriptování, nebo aktuální zóny umožňuje pro objekty, které nejsou bezpečné pro skriptování.
+Overridable, která je volána jako kontrola přístupu, chcete-li zjistit, zda objekty skriptování na načtené stránce mají přístup k externímu odeslání lokality ovládacího prvku. Kontroluje, zda je odesílání buď bezpečné pro skriptování, nebo současná zóna umožňuje objektům, které nejsou bezpečné pro skriptování.
 
 ```
 virtual BOOL CanAccessExternal();
@@ -263,11 +263,11 @@ virtual BOOL CanAccessExternal();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Nenulové, pokud je úspěšná. jinak 0.
+Nenulové, pokud bylo úspěšné; v opačném případě 0.
 
-##  <a name="cdhtmldialog"></a>  CDHtmlDialog::CDHtmlDialog
+##  <a name="cdhtmldialog"></a>CDHtmlDialog:: CDHtmlDialog
 
-Vytvoří pole založené na prostředcích dialogového okna dynamického HTML.
+Vytvoří dialogové okno dynamického HTML založeného na prostředku.
 
 ```
 CDHtmlDialog();
@@ -286,25 +286,25 @@ CDHtmlDialog(
 ### <a name="parameters"></a>Parametry
 
 *lpszTemplateName*<br/>
-Řetězec zakončený hodnotou null, který je název prostředku šablony dialogového okna.
+Řetězec zakončený hodnotou null, který je názvem prostředku šablony dialogového okna.
 
 *szHtmlResID*<br/>
-Řetězec zakončený hodnotou null, který je název prostředku HTML.
+Řetězec zakončený hodnotou null, který je názvem prostředku HTML.
 
 *pParentWnd*<br/>
-Ukazatel na objekt okna nadřazené nebo vlastník (typu [CWnd](../../mfc/reference/cwnd-class.md)), ke které patří objektu dialogového okna. Pokud je hodnota NULL, objektu dialogového okna nadřazené okno bude nastaveno na hlavní okno aplikace.
+Ukazatel na objekt okna nadřazeného objektu nebo vlastníka (typu [CWnd](../../mfc/reference/cwnd-class.md)), ke kterému patří objekt dialogu. Pokud má hodnotu NULL, je nadřazené okno objektu dialogového okna nastaveno na hlavní okno aplikace.
 
 *nIDTemplate*<br/>
-Obsahuje identifikační číslo prostředku šablony dialogového okna.
+Obsahuje číslo ID prostředku šablony dialogového okna.
 
 *nHtmlResID*<br/>
-Obsahuje identifikační číslo prostředku HTML.
+Obsahuje číslo ID prostředku HTML.
 
 ### <a name="remarks"></a>Poznámky
 
-Tedy o druhou podobu konstruktor poskytuje přístup k prostředku dialogového okna pomocí názvu šablony. Třetí forma konstruktor poskytuje přístup k prostředku dialogového okna pomocí ID prostředku šablony. Obvykle ID začíná **IDD_** předponu.
+Druhá forma konstruktoru poskytuje přístup k prostředku dialogového okna prostřednictvím názvu šablony. Třetí forma konstruktoru poskytuje přístup k prostředku dialogového okna prostřednictvím ID šablony prostředků. ID začíná obvykle předponou **IDD_** .
 
-##  <a name="_dtorcdhtmldialog"></a>  CDHtmlDialog::~CDHtmlDialog
+##  <a name="_dtorcdhtmldialog"></a>CDHtmlDialog:: ~ CDHtmlDialog
 
 Odstraní objekt CDHtmlDialog.
 
@@ -314,11 +314,11 @@ virtual ~CDHtmlDialog();
 
 ### <a name="remarks"></a>Poznámky
 
-[CWnd::DestroyWindow](../../mfc/reference/cwnd-class.md#destroywindow) členská funkce použije ke zničení nemodálních dialogových oken, které jsou vytvořeny pomocí [CDialog::Create](../../mfc/reference/cdialog-class.md#create).
+Členské funkce [CWnd::D estroywindow](../../mfc/reference/cwnd-class.md#destroywindow) je nutné použít ke zničení nemodálních dialogových oken, které jsou vytvořeny pomocí funkce [CDialog:: Create](../../mfc/reference/cdialog-class.md#create).
 
-##  <a name="createcontrolsite"></a>  CDHtmlDialog::CreateControlSite
+##  <a name="createcontrolsite"></a>CDHtmlDialog:: CreateControlSite
 
-Overridable umožňuje vytvořit instanci ovládacího prvku serveru pro hostování ovládacího prvku WebBrowser v dialogovém okně.
+Přepsatelné slouží k vytvoření instance řídicího webu pro hostování ovládacího prvku WebBrowser v dialogovém okně.
 
 ```
 virtual BOOL CreateControlSite(
@@ -331,22 +331,22 @@ virtual BOOL CreateControlSite(
 ### <a name="parameters"></a>Parametry
 
 *pContainer*<br/>
-Ukazatel [colecontrolcontainer –](../../mfc/reference/colecontrolcontainer-class.md) objektu
+Ukazatel na objekt [COleControlContainer](../../mfc/reference/colecontrolcontainer-class.md)
 
 *ppSite*<br/>
-Ukazatel na ukazatel [colecontrolsite –](../../mfc/reference/colecontrolsite-class.md).
+Ukazatel na ukazatel na [COleControlSite](../../mfc/reference/colecontrolsite-class.md).
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Nenulové, pokud je úspěšná. jinak 0.
+Nenulové, pokud bylo úspěšné; v opačném případě 0.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato členská funkce vrátit instanci třídy vlastní ovládací prvek webu můžete přepsat.
+Tuto členskou funkci můžete přepsat tak, aby vracela instanci třídy webu vlastního ovládacího prvku.
 
 ##  <a name="ddx_dhtml_axcontrol"></a>  CDHtmlDialog::DDX_DHtml_AxControl
 
-Výměna dat mezi členské proměnné a hodnotu vlastnosti ovládacího prvku ActiveX na stránku HTML.
+Vyměňuje data mezi členskou proměnnou a hodnotou vlastnosti ovládacího prvku ActiveX na stránce HTML.
 
 ```
 void DDX_DHtml_AxControl(
@@ -368,16 +368,16 @@ void DDX_DHtml_AxControl(
 Ukazatel [CDataExchange](../../mfc/reference/cdataexchange-class.md) objektu.
 
 *szId*<br/>
-Hodnota parametru ID značky object ve zdroji HTML pro ovládací prvek ActiveX.
+Hodnota parametru ID značky objektu ve zdroji HTML pro ovládací prvek ActiveX.
 
 *dispId*<br/>
-ID odbavení vlastnosti, se kterým se má pro výměnu dat.
+ID odeslání vlastnosti, se kterou chcete vyměňovat data.
 
 *szPropName*<br/>
 Název vlastnosti
 
 *var*<br/>
-Datový člen typu VARIANT, [COleVariant](../../mfc/reference/colevariant-class.md), nebo [CComVariant](../../atl/reference/ccomvariant-class.md), který obsahuje hodnotu vyměněn za vlastnosti ovládacího prvku ActiveX.
+Datový člen typu VARIANT, [COleVariant](../../mfc/reference/colevariant-class.md)nebo [CComVariant](../../atl/reference/ccomvariant-class.md), který obsahuje hodnotu vyměňované vlastností ovládacího prvku ActiveX.
 
 ### <a name="example"></a>Příklad
 
@@ -385,7 +385,7 @@ Datový člen typu VARIANT, [COleVariant](../../mfc/reference/colevariant-class.
 
 ##  <a name="ddx_dhtml_checkbox"></a>  CDHtmlDialog::DDX_DHtml_CheckBox
 
-Výměna dat mezi členskou proměnnou a zaškrtávacího políčka na stránce HTML.
+Vyměňuje data mezi členskou proměnnou a zaškrtávacím políčkem na stránce HTML.
 
 ```
 void DDX_DHtml_CheckBox(
@@ -400,10 +400,10 @@ void DDX_DHtml_CheckBox(
 Ukazatel [CDataExchange](../../mfc/reference/cdataexchange-class.md) objektu.
 
 *szId*<br/>
-Hodnota zadaná pro parametr ID ovládacího prvku HTML.
+Hodnota, kterou jste zadali pro parametr ID ovládacího prvku HTML.
 
 *value*<br/>
-Hodnota, která se vyměňují.
+Hodnota, která se má vyměňovat
 
 ### <a name="example"></a>Příklad
 
@@ -411,7 +411,7 @@ Hodnota, která se vyměňují.
 
 ##  <a name="ddx_dhtml_elementtext"></a>  CDHtmlDialog::DDX_DHtml_ElementText
 
-Výměna dat mezi členskou proměnnou a všechny vlastnosti elementu HTML na stránce HTML.
+Vyměňuje data mezi členskou proměnnou a libovolnou vlastností elementu HTML na stránce HTML.
 
 ```
 void DDX_DHtml_ElementText(
@@ -463,17 +463,17 @@ void DDX_DHtml_ElementText(
 Ukazatel [CDataExchange](../../mfc/reference/cdataexchange-class.md) objektu.
 
 *szId*<br/>
-Hodnota zadaná pro parametr ID ovládacího prvku HTML.
+Hodnota, kterou jste zadali pro parametr ID ovládacího prvku HTML.
 
 *dispId*<br/>
-Dispatch ID elementu HTML, který chcete pro výměnu dat.
+ID odeslání elementu HTML, se kterým chcete vyměňovat data.
 
 *value*<br/>
-Hodnota, která se vyměňují.
+Hodnota, která se má vyměňovat
 
 ##  <a name="ddx_dhtml_radio"></a>  CDHtmlDialog::DDX_DHtml_Radio
 
-Výměna dat mezi členskou proměnnou a přepínač na stránku HTML.
+Vyměňuje data mezi členskou proměnnou a přepínačem na stránce HTML.
 
 ```
 void DDX_DHtml_Radio(
@@ -488,14 +488,14 @@ void DDX_DHtml_Radio(
 Ukazatel [CDataExchange](../../mfc/reference/cdataexchange-class.md) objektu.
 
 *szId*<br/>
-Hodnota zadaná pro parametr ID ovládacího prvku HTML.
+Hodnota, kterou jste zadali pro parametr ID ovládacího prvku HTML.
 
 *value*<br/>
-Hodnota, která se vyměňují.
+Hodnota, která se má vyměňovat
 
-##  <a name="ddx_dhtml_selectindex"></a>  CDHtmlDialog::DDX_DHtml_SelectIndex
+##  <a name="ddx_dhtml_selectindex"></a>CDHtmlDialog::D DX_DHtml_SelectIndex
 
-Získá nebo nastaví index založený na seznamu na stránce HTML.
+Získá nebo nastaví index pole seznamu na stránce HTML.
 
 ```
 void DDX_DHtml_SelectIndex(
@@ -510,14 +510,14 @@ void DDX_DHtml_SelectIndex(
 Ukazatel [CDataExchange](../../mfc/reference/cdataexchange-class.md) objektu.
 
 *szId*<br/>
-Hodnota, která jste zadali pro ovládací prvek HTML `id` parametru.
+Hodnota, kterou jste zadali pro `id` parametr ovládacího prvku HTML.
 
 *value*<br/>
-Hodnota, která se vyměňují.
+Hodnota, která se má vyměňovat
 
-##  <a name="ddx_dhtml_selectstring"></a>  CDHtmlDialog::DDX_DHtml_SelectString
+##  <a name="ddx_dhtml_selectstring"></a>CDHtmlDialog::D DX_DHtml_SelectString
 
-Získá nebo nastaví zobrazení textu položky seznamu pole (podle aktuální index) na stránce HTML.
+Získá nebo nastaví zobrazovaný text položky seznamu (na základě aktuálního indexu) na stránce HTML.
 
 ```
 void DDX_DHtml_SelectString(
@@ -532,14 +532,14 @@ void DDX_DHtml_SelectString(
 Ukazatel [CDataExchange](../../mfc/reference/cdataexchange-class.md) objektu.
 
 *szId*<br/>
-Hodnota zadaná pro parametr ID ovládacího prvku HTML.
+Hodnota, kterou jste zadali pro parametr ID ovládacího prvku HTML.
 
 *value*<br/>
-Hodnota, která se vyměňují.
+Hodnota, která se má vyměňovat
 
 ##  <a name="ddx_dhtml_selectvalue"></a>  CDHtmlDialog::DDX_DHtml_SelectValue
 
-Získá nebo nastaví hodnotu pole položky seznamu (podle aktuální index) na stránce HTML.
+Získá nebo nastaví hodnotu položky seznamu (na základě aktuálního indexu) na stránce HTML.
 
 ```
 void DDX_DHtml_SelectValue(
@@ -554,10 +554,10 @@ void DDX_DHtml_SelectValue(
 Ukazatel [CDataExchange](../../mfc/reference/cdataexchange-class.md) objektu.
 
 *szId*<br/>
-Hodnota zadaná pro parametr ID ovládacího prvku HTML.
+Hodnota, kterou jste zadali pro parametr ID ovládacího prvku HTML.
 
 *value*<br/>
-Hodnota, která se vyměňují.
+Hodnota, která se má vyměňovat
 
 ### <a name="example"></a>Příklad
 
@@ -565,15 +565,15 @@ Hodnota, která se vyměňují.
 
 ##  <a name="destroymodeless"></a>  CDHtmlDialog::DestroyModeless
 
-Odpojí nemodální dialogové okno z `CDHtmlDialog` objektu a odstraní objekt.
+Odpojí nemodální dialogové okno od `CDHtmlDialog` objektu a odstraní objekt.
 
 ```
 void DestroyModeless();
 ```
 
-##  <a name="enablemodeless"></a>  CDHtmlDialog::EnableModeless
+##  <a name="enablemodeless"></a>CDHtmlDialog:: EnableModeless
 
-Umožňuje nemodálních dialogových oken.
+Umožňuje používat nemodální dialogová okna.
 
 ```
 STDMETHOD(EnableModeless)(BOOL fEnable);
@@ -582,7 +582,7 @@ STDMETHOD(EnableModeless)(BOOL fEnable);
 ### <a name="parameters"></a>Parametry
 
 *fEnable*<br/>
-Zobrazit *fEnable* v [IDocHostUIHandler::EnableModeless](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753253\(v=vs.85\)) v sadě Windows SDK.
+Viz *fEnable* v [IDocHostUIHandler:: EnableModeless](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753253\(v=vs.85\)) v Windows SDK.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -590,11 +590,11 @@ Vrátí E_NOTIMPL.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato členská funkce je implementace společnosti CDHtmlDialog [IDocHostUIHandler::EnableModeless](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753253\(v=vs.85\)), jak je popsáno v sadě Windows SDK.
+Tato členská funkce je CDHtmlDialog implementace [IDocHostUIHandler:: EnableModeless](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753253\(v=vs.85\)), jak je popsáno v Windows SDK.
 
-##  <a name="filterdataobject"></a>  CDHtmlDialog::FilterDataObject
+##  <a name="filterdataobject"></a>CDHtmlDialog:: FilterDataObject
 
-Umožňuje filtrovat objekty dat schránky vytvořené hostované prohlížečem dialogového okna.
+Umožňuje dialogovému oknu filtrovat datové objekty schránky vytvořené hostovaným prohlížečem.
 
 ```
 STDMETHOD(FilterDataObject)(
@@ -605,10 +605,10 @@ STDMETHOD(FilterDataObject)(
 ### <a name="parameters"></a>Parametry
 
 *pDO*<br/>
-Zobrazit *pDO* v [IDocHostUIHandler::FilterDataObject](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753254\(v=vs.85\)) v sadě Windows SDK.
+Viz *CHOP* v [IDocHostUIHandler:: FilterDataObject](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753254\(v=vs.85\)) v Windows SDK.
 
 *ppDORet*<br/>
-Zobrazit *ppDORet* v `IDocHostUIHandler::FilterDataObject` v sadě Windows SDK.
+Viz *ppDORet* v `IDocHostUIHandler::FilterDataObject` tématu Windows SDK.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -616,11 +616,11 @@ Vrátí S_FALSE.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato členská funkce je implementace společnosti CDHtmlDialog [IDocHostUIHandler::FilterDataObject](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753254\(v=vs.85\)), jak je popsáno v sadě Windows SDK.
+Tato členská funkce je CDHtmlDialog implementace [IDocHostUIHandler:: FilterDataObject](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753254\(v=vs.85\)), jak je popsáno v Windows SDK.
 
-##  <a name="getcontroldispatch"></a>  CDHtmlDialog::GetControlDispatch
+##  <a name="getcontroldispatch"></a>CDHtmlDialog:: GetControlDispatch
 
-Načte `IDispatch` rozhraní na ovládací prvek ActiveX vloží do dokumentu HTML vrácené [GetDHtmlDocument](#getdhtmldocument).
+Načte rozhraní v ovládacím prvku ActiveX vloženém do dokumentu HTML vráceného funkcí [GetDHtmlDocument.](#getdhtmldocument) `IDispatch`
 
 ```
 HRESULT GetControlDispatch(
@@ -634,15 +634,15 @@ HRESULT GetControlDispatch(
 ID HTML ovládacího prvku ActiveX.
 
 *ppdisp*<br/>
-`IDispatch` Rozhraní ovládacího prvku-li najít webové stránce.
+`IDispatch` Rozhraní ovládacího prvku, pokud je nalezeno na webové stránce.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Standardní hodnoty HRESULT.
+Standardní hodnota HRESULT.
 
-##  <a name="getcontrolproperty"></a>  CDHtmlDialog::GetControlProperty
+##  <a name="getcontrolproperty"></a>CDHtmlDialog:: GetControlProperty
 
-Načte požadované vlastnosti zadaný ovládací prvek ActiveX.
+Načte požadovanou vlastnost zadaného ovládacího prvku ActiveX.
 
 ```
 VARIANT GetControlProperty(
@@ -664,25 +664,25 @@ VARIANT GetControlProperty(
 ID HTML ovládacího prvku ActiveX.
 
 *szPropName*<br/>
-Název vlastnosti ve výchozím nastavení národního prostředí aktuálního uživatele.
+Název vlastnosti ve výchozím národním prostředí aktuálního uživatele.
 
 *pdispControl*<br/>
 `IDispatch` Ukazatel ovládacího prvku ActiveX.
 
 *dispId*<br/>
-ID odbavení vlastnosti.
+ID odeslání vlastnosti.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Hodnotu typu variant obsahující požadovaná vlastnost nebo prázdný typ variant, pokud ovládací prvek nebo vlastnost nebyla nalezena.
+Varianta obsahující požadovanou vlastnost nebo prázdnou variantu v případě, že nebyl nalezen ovládací prvek nebo vlastnost.
 
 ### <a name="remarks"></a>Poznámky
 
-Přetížení jsou seřazeny od nejméně efektivní v horní části nejúčinnější v dolní části.
+Přetížení jsou v dolní části uvedená v horní části nejefektivnější.
 
 ##  <a name="getcurrenturl"></a>  CDHtmlDialog::GetCurrentUrl
 
-Načte Uniform Resource Locator (URL) přidružené k aktuální dokument.
+Načte adresu URL (Uniform Resource Locator), která je přidružená k aktuálnímu dokumentu.
 
 ```
 void GetCurrentUrl(CString& szUrl);
@@ -691,11 +691,11 @@ void GetCurrentUrl(CString& szUrl);
 ### <a name="parameters"></a>Parametry
 
 *szUrl*<br/>
-A [CString](../../atl-mfc-shared/reference/cstringt-class.md) objekt, který obsahuje adresu URL pro načtení.
+Objekt [CString](../../atl-mfc-shared/reference/cstringt-class.md) obsahující adresu URL, která má být načtena.
 
-##  <a name="getdhtmldocument"></a>  CDHtmlDialog::GetDHtmlDocument
+##  <a name="getdhtmldocument"></a>CDHtmlDialog:: GetDHtmlDocument
 
-Načte [IHTMLDocument2](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa752574\(v=vs.85\)) rozhraní v aktuálně načtených dokumentu HTML.
+Načte rozhraní [IHTMLDocument2](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa752574\(v=vs.85\)) v aktuálně načteném dokumentu HTML.
 
 ```
 HRESULT GetDHtmlDocument(IHTMLDocument2 **pphtmlDoc);
@@ -703,15 +703,15 @@ HRESULT GetDHtmlDocument(IHTMLDocument2 **pphtmlDoc);
 
 ### <a name="parameters"></a>Parametry
 
-*\*\*pphtmlDoc* ukazatel na ukazatel na dokument HTML.
+pphtmlDoc ukazatel na ukazatel na dokument HTML.  *\* \**
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Standardní HRESULT. Pokud je úspěšná, vrátí hodnotu S_OK.
+Standardní hodnota HRESULT. Vrátí S_OK, pokud bylo úspěšné.
 
-##  <a name="getdroptarget"></a>  CDHtmlDialog::GetDropTarget
+##  <a name="getdroptarget"></a>CDHtmlDialog:: GetDropTarget
 
-Voláno rozhraním obsažený ovládací prvek WebBrowser, když se používá jako cíl přetažení umožňující dialogového okna slouží k poskytování alternativu [IDropTarget](/windows/desktop/api/oleidl/nn-oleidl-idroptarget).
+Volá se ovládacím prvkem obsaženým v ovládacím prvku WebBrowser, když se používá jako cíl přetažení, aby dialog mohl poskytovat alternativní [IDropTarget](/windows/win32/api/oleidl/nn-oleidl-idroptarget).
 
 ```
 STDMETHOD(GetDropTarget)(
@@ -722,10 +722,10 @@ STDMETHOD(GetDropTarget)(
 ### <a name="parameters"></a>Parametry
 
 *pDropTarget*<br/>
-Zobrazit *pDropTarget* v [IDocHostUIHandler::GetDropTarget](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753255\(v=vs.85\)) v sadě Windows SDK.
+Viz *pDropTarget* v [IDocHostUIHandler:: GetDropTarget](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753255\(v=vs.85\)) v Windows SDK.
 
 *ppDropTarget*<br/>
-Zobrazit *ppDropTarget* v `IDocHostUIHandler::GetDropTarget` v sadě Windows SDK.
+Viz *ppDropTarget* v `IDocHostUIHandler::GetDropTarget` tématu Windows SDK.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -733,11 +733,11 @@ Vrátí E_NOTIMPL.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato členská funkce je implementace společnosti CDHtmlDialog [IDocHostUIHandler::GetDropTarget](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753255\(v=vs.85\)), jak je popsáno v sadě Windows SDK.
+Tato členská funkce je CDHtmlDialog implementace [IDocHostUIHandler:: GetDropTarget](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753255\(v=vs.85\)), jak je popsáno v Windows SDK.
 
-##  <a name="getelement"></a>  CDHtmlDialog::GetElement
+##  <a name="getelement"></a>CDHtmlDialog:: Get– element
 
-Vrátí rozhraní na prvku HTML určeného *szElementId*.
+Vrátí rozhraní na elementu HTML určeném parametrem *szElementId*.
 
 ```
 HRESULT GetElement(
@@ -756,27 +756,27 @@ HRESULT GetElement(
 ID elementu HTML.
 
 *ppdisp*<br/>
-`IDispatch` Ukazatel na požadovaný element nebo kolekci elementů.
+`IDispatch` Ukazatel na požadovaný prvek nebo kolekci prvků.
 
 *pbCollection*<br/>
-HODNOTU označující, zda objekt reprezentovaný *ppdisp* je jeden element nebo kolekci elementů.
+LOGICKÁ hodnota označující, zda je objekt reprezentovaný prvkem *ppDisp* jediným prvkem nebo kolekcí prvků.
 
 *pphtmlElement*<br/>
 `IHTMLElement` Ukazatel na požadovaný element.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Standardní hodnoty HRESULT.
+Standardní hodnota HRESULT.
 
 ### <a name="remarks"></a>Poznámky
 
-První přetížení použít, pokud je potřeba zpracovat podmínky, ve kterých může být více než jeden element se zadaným ID. Poslední parametr můžete zjistit, zda je vrácený ukazatel rozhraní do kolekce nebo jednu položku. Je-li ukazatel rozhraní na kolekci, můžete zadat dotaz na `IHTMLElementCollection` a použít jeho `item` vlastnost odkazují na prvky podle pořadí.
+První přetížení použijte v případě, že potřebujete zpracovat podmínky, ve kterých může být více než jeden prvek se zadaným ID. Pomocí posledního parametru můžete zjistit, zda je ukazatel rozhraní vrácen do kolekce nebo jedné položky. Pokud je ukazatel rozhraní v kolekci, můžete zadat dotaz `IHTMLElementCollection` na a použít jeho `item` vlastnost pro odkazování na prvky podle pořadového čísla.
 
-Druhé přetížení se nezdaří, pokud existuje více než jeden element se stejným ID na stránce.
+Druhé přetížení selže, pokud je na stránce více než jeden prvek se stejným ID.
 
-##  <a name="getelementhtml"></a>  CDHtmlDialog::GetElementHtml
+##  <a name="getelementhtml"></a>CDHtmlDialog:: GetElementHtml
 
-Načte `innerHTML` vlastnost elementu HTML, který je identifikován *szElementId*.
+Načte vlastnost elementu HTML identifikovaného parametrem *szElementId.* `innerHTML`
 
 ```
 BSTR GetElementHtml(LPCTSTR szElementId);
@@ -789,11 +789,11 @@ ID elementu HTML.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-`innerHTML` Vlastnost elementu HTML, který je identifikován *szElementId* nebo hodnota NULL, pokud element nebyl nalezen.
+Vlastnost elementu HTML identifikovaného parametrem szElementId nebo null, pokud nebyl nalezen prvek. `innerHTML`
 
 ##  <a name="getelementinterface"></a>  CDHtmlDialog::GetElementInterface
 
-Načte požadované rozhraní ukazatel z prvku HTML, který je identifikován *szElementId*.
+Načte požadovaný ukazatel rozhraní z elementu HTML identifikovaného pomocí *szElementId*.
 
 ```
 template <class Q> HRESULT GetElementInterface(
@@ -812,22 +812,22 @@ HRESULT GetElementInterface(
 ID elementu HTML.
 
 *ppvObj*<br/>
-Adresa ukazatel, který bude vyplněn ukazatel požadované rozhraní Pokud je nalezen element a dotaz bude úspěšná.
+Adresa ukazatele, který bude vyplněn požadovaným ukazatelem rozhraní, pokud je nalezen element a dotaz je úspěšný.
 
 *refiid*<br/>
-ID rozhraní (IID) požadovaný rozhraní.
+IDENTIFIKÁTOR rozhraní (IID) požadovaného rozhraní.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Standardní hodnoty HRESULT.
+Standardní hodnota HRESULT.
 
 ### <a name="example"></a>Příklad
 
 [!code-cpp[NVC_MFCHtmlHttp#4](../../mfc/reference/codesnippet/cpp/cdhtmldialog-class_4.cpp)]
 
-##  <a name="getelementproperty"></a>  CDHtmlDialog::GetElementProperty
+##  <a name="getelementproperty"></a>CDHtmlDialog:: GetElementProperty
 
-Načte hodnotu vlastnosti určený podle *dispId* z prvku HTML, který je identifikován *szElementId*.
+Načte hodnotu vlastnosti identifikované identifikátorem *dispId* z elementu HTML identifikovaného parametrem *szElementId*.
 
 ```
 VARIANT GetElementProperty(
@@ -841,15 +841,15 @@ VARIANT GetElementProperty(
 ID elementu HTML.
 
 *dispId*<br/>
-ID odbavení vlastnosti.
+ID odeslání vlastnosti.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Hodnota vlastnosti nebo prázdný variant, pokud vlastnost nebo element nebyl nalezen.
+Hodnota vlastnosti nebo prázdné varianty, pokud nebyla nalezena vlastnost nebo element.
 
 ##  <a name="getelementtext"></a>  CDHtmlDialog::GetElementText
 
-Načte `innerText` vlastnost elementu HTML, který je identifikován *szElementId*.
+Načte vlastnost elementu HTML identifikovaného parametrem *szElementId.* `innerText`
 
 ```
 BSTR GetElementText(LPCTSTR szElementId);
@@ -862,11 +862,11 @@ ID elementu HTML.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-`innerText` Vlastnost elementu HTML, který je identifikován *szElementId* nebo hodnota NULL, pokud vlastnost nebo element nebyl nalezen.
+Vlastnost elementu HTML identifikovaného parametrem szElementId nebo null, pokud nebyla nalezena vlastnost nebo element. `innerText`
 
-##  <a name="getevent"></a>  CDHtmlDialog::GetEvent
+##  <a name="getevent"></a>CDHtmlDialog:: getsudý
 
-Vrátí `IHTMLEventObj` ukazatel na aktuální objekt události.
+`IHTMLEventObj` Vrátí ukazatel na aktuální objekt události.
 
 ```
 HRESULT GetEvent(IHTMLEventObj** ppEventObj);
@@ -875,19 +875,19 @@ HRESULT GetEvent(IHTMLEventObj** ppEventObj);
 ### <a name="parameters"></a>Parametry
 
 *ppEventObj*<br/>
-Adresa ukazatel, který bude vyplněn `IHTMLEventObj` ukazatel rozhraní.
+Adresa ukazatele, který bude vyplněn `IHTMLEventObj` ukazatelem rozhraní.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Standardní hodnoty HRESULT.
+Standardní hodnota HRESULT.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato funkce by měla volat pouze z v rámci obslužné rutiny události DHTML.
+Tato funkce by měla být volána pouze v rámci obslužné rutiny události DHTML.
 
-##  <a name="getexternal"></a>  CDHtmlDialog::GetExternal
+##  <a name="getexternal"></a>CDHtmlDialog:: getexternal
 
-Získá hostitele `IDispatch` rozhraní.
+Získá `IDispatch` rozhraní hostitele.
 
 ```
 STDMETHOD(GetExternal)(IDispatch** ppDispatch);
@@ -896,19 +896,19 @@ STDMETHOD(GetExternal)(IDispatch** ppDispatch);
 ### <a name="parameters"></a>Parametry
 
 *ppDispatch*<br/>
-Zobrazit *ppDispatch* v [IDocHostUIHandler::GetExternal](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753256\(v=vs.85\)) v sadě Windows SDK.
+Viz *ppDispatch* v [IDocHostUIHandler:: getexternal](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753256\(v=vs.85\)) v Windows SDK.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vrátí hodnotu S_OK při úspěchu nebo E_NOTIMPL při selhání.
+Vrací hodnotu S_OK při úspěchu nebo E_NOTIMPL při selhání.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato členská funkce je implementace společnosti CDHtmlDialog [IDocHostUIHandler::GetExternal](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753256\(v=vs.85\)), jak je popsáno v sadě Windows SDK.
+Tato členská funkce je CDHtmlDialog implementace [IDocHostUIHandler:: getexternal](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753256\(v=vs.85\)), jak je popsáno v Windows SDK.
 
 ##  <a name="gethostinfo"></a>  CDHtmlDialog::GetHostInfo
 
-Načte možnosti uživatelského rozhraní hostiteli.
+Načte možnosti uživatelského rozhraní hostitele.
 
 ```
 STDMETHOD(GetHostInfo)(DOCHOSTUIINFO* pInfo);
@@ -917,19 +917,19 @@ STDMETHOD(GetHostInfo)(DOCHOSTUIINFO* pInfo);
 ### <a name="parameters"></a>Parametry
 
 *pInfo*<br/>
-Zobrazit *pInfo* v [IDocHostUIHandler::GetHostInfo](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753257\(v=vs.85\)) v sadě Windows SDK.
+Viz *pInfo* v [IDocHostUIHandler:: GetHostInfo](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753257\(v=vs.85\)) v Windows SDK.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vrátí hodnotu S_OK.
+Vrací hodnotu S_OK.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato členská funkce je implementace společnosti CDHtmlDialog [IDocHostUIHandler::GetHostInfo](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753257\(v=vs.85\)), jak je popsáno v sadě Windows SDK.
+Tato členská funkce je CDHtmlDialog implementace [IDocHostUIHandler:: GetHostInfo](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753257\(v=vs.85\)), jak je popsáno v Windows SDK.
 
-##  <a name="getoptionkeypath"></a>  CDHtmlDialog::GetOptionKeyPath
+##  <a name="getoptionkeypath"></a>CDHtmlDialog:: GetOptionKeyPath
 
-Načte klíče registru, ve kterém jsou uložené předvolby uživatele.
+Načte klíč registru, ve kterém jsou uložené předvolby uživatele.
 
 ```
 STDMETHOD(GetOptionKeyPath)(
@@ -940,10 +940,10 @@ STDMETHOD(GetOptionKeyPath)(
 ### <a name="parameters"></a>Parametry
 
 *pchKey*<br/>
-Zobrazit *pchKey* v [IDocHostUIHandler::GetOptionKeyPath](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753258\(v=vs.85\)) v sadě Windows SDK.
+Viz *pchKey* v [IDocHostUIHandler:: GetOptionKeyPath](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753258\(v=vs.85\)) v Windows SDK.
 
 *dw*<br/>
-Zobrazit *dw* v `IDocHostUIHandler::GetOptionKeyPath` ve Windows SDK.
+Viz *DW* v `IDocHostUIHandler::GetOptionKeyPath` v Windows SDK.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -951,9 +951,9 @@ Vrátí E_NOTIMPL.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato členská funkce je implementace společnosti CDHtmlDialog [IDocHostUIHandler::GetOptionKeyPath](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753258\(v=vs.85\)), jak je popsáno v sadě Windows SDK.
+Tato členská funkce je CDHtmlDialog implementace [IDocHostUIHandler:: GetOptionKeyPath](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753258\(v=vs.85\)), jak je popsáno v Windows SDK.
 
-##  <a name="hideui"></a>  CDHtmlDialog::HideUI
+##  <a name="hideui"></a>CDHtmlDialog:: HideUI
 
 Skryje uživatelské rozhraní hostitele.
 
@@ -967,11 +967,11 @@ Vrátí E_NOTIMPL.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato členská funkce je implementace společnosti CDHtmlDialog [IDocHostUIHandler::HideUI](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753259\(v=vs.85\)), jak je popsáno v sadě Windows SDK.
+Tato členská funkce je CDHtmlDialog implementace [IDocHostUIHandler:: HideUI](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753259\(v=vs.85\)), jak je popsáno v Windows SDK.
 
 ##  <a name="isexternaldispatchsafe"></a>  CDHtmlDialog::IsExternalDispatchSafe
 
-Označuje, zda hostitel `IDispatch` rozhraní je bezpečný pro skriptování.
+Označuje, zda je `IDispatch` rozhraní hostitele bezpečné pro skriptování.
 
 ```
 virtual BOOL IsExternalDispatchSafe();
@@ -981,7 +981,7 @@ virtual BOOL IsExternalDispatchSafe();
 
 Vrátí hodnotu FALSE.
 
-##  <a name="loadfromresource"></a>  CDHtmlDialog::LoadFromResource
+##  <a name="loadfromresource"></a>CDHtmlDialog:: LoadFromResource
 
 Načte zadaný prostředek do ovládacího prvku WebBrowser v dialogovém okně DHTML.
 
@@ -993,18 +993,18 @@ BOOL LoadFromResource(UINT nRes);
 ### <a name="parameters"></a>Parametry
 
 *lpszResource*<br/>
-Ukazatel na řetězec obsahující název prostředku, který chcete načíst.
+Ukazatel na řetězec obsahující název prostředku, který se má načíst.
 
 *nRes*<br/>
-ID prostředku pro načtení.
+ID prostředku, který se má načíst
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Hodnota TRUE v případě úspěchu; v opačném případě FALSE.
+TRUE v případě úspěchu; v opačném případě FALSE.
 
-##  <a name="m_busehtmltitle"></a>  CDHtmlDialog::m_bUseHtmlTitle
+##  <a name="m_busehtmltitle"></a>CDHtmlDialog:: m_bUseHtmlTitle
 
-Označuje, zda chcete použít název dokumentu HTML jako dialogové okno popisek.
+Označuje, zda se má jako titulek k dialogovému oknu použít název dokumentu HTML.
 
 ```
 BOOL m_bUseHtmlTitle;
@@ -1012,11 +1012,11 @@ BOOL m_bUseHtmlTitle;
 
 ### <a name="remarks"></a>Poznámky
 
-Pokud **m**_ **bUseHtmlTitle** má hodnotu TRUE, dialogové okno popisek je nastavena na název dokumentu HTML; v opačném případě se používá titulek v prostředku dialogového okna.
+Pokud má **m**_ **bUseHtmlTitle** hodnotu true, je titulek dialogového okna nastavený na hodnotu název dokumentu HTML; v opačném případě se použije titulek v prostředku dialogového okna.
 
 ##  <a name="m_nhtmlresid"></a>  CDHtmlDialog::m_nHtmlResID
 
-Resource ID HTML prostředek má být zobrazen.
+ID prostředku prostředku HTML, který se má zobrazit
 
 ```
 UINT m_nHtmlResID;
@@ -1028,7 +1028,7 @@ UINT m_nHtmlResID;
 
 ##  <a name="m_pbrowserapp"></a>  CDHtmlDialog::m_pBrowserApp
 
-Ukazatel na aplikace webového prohlížeče.
+Ukazatel na aplikaci webového prohlížeče.
 
 ```
 CComPtr <IWebBrowser2> m_pBrowserApp;
@@ -1052,7 +1052,7 @@ CString m_strCurrentUrl;
 
 ##  <a name="m_szhtmlresid"></a>  CDHtmlDialog::m_szHtmlResID
 
-Řetězec verze ID prostředku HTML.
+Verze řetězce ID prostředku HTML.
 
 ```
 LPTSTR m_szHtmlResID;
@@ -1062,9 +1062,9 @@ LPTSTR m_szHtmlResID;
 
 [!code-cpp[NVC_MFCHtmlHttp#6](../../mfc/reference/codesnippet/cpp/cdhtmldialog-class_6.cpp)]
 
-##  <a name="navigate"></a>  CDHtmlDialog::Navigate
+##  <a name="navigate"></a>CDHtmlDialog:: Navigate
 
-Přejde na prostředku označeném identifikátorem adresu URL, která je určená *lpszURL*.
+Přejde k prostředku identifikovanému adresou URL, která je určena parametrem *lpszURL*.
 
 ```
 void Navigate(
@@ -1079,26 +1079,26 @@ void Navigate(
 ### <a name="parameters"></a>Parametry
 
 *lpszURL*<br/>
-Ukazatel na řetězec obsahující adresu URL, na kterou bude cílit.
+Ukazatel na řetězec obsahující adresu URL, na kterou se má cílit.
 
 *dwFlags*<br/>
-Příznaky proměnná, která určuje, zda bude příslušný materiál přidán do seznamu historie, jestli se z mezipaměti zápisu nebo čtení do mezipaměti a jestli se mají zobrazovat prostředku v novém okně. Proměnná může být kombinací hodnot určené [BrowserNavConstants](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa768360\(v=vs.85\)) výčtu.
+Příznaky proměnné, která určuje, zda se má prostředek přidat do seznamu historie, zda se má číst do mezipaměti nebo zapisovat z mezipaměti a zda se má zobrazit prostředek v novém okně. Proměnná může být kombinací hodnot definovaných výčtem [BrowserNavConstants](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa768360\(v=vs.85\)) .
 
 *lpszTargetFrameName*<br/>
-Ukazatel na řetězec, který obsahuje název rámce, ve kterém chcete zobrazit zdroj.
+Ukazatel na řetězec, který obsahuje název rámce, ve kterém se má zobrazit prostředek.
 
 *lpszHeaders*<br/>
-Ukazatel na hodnotu, která určuje hlavičky protokolu HTTP k odeslání na server. Tyto hlavičky se přidají do výchozí hlavičky aplikace Internet Explorer. Záhlaví můžete zadat tyto informace jako dělat serveru typu dat předávaných do serveru nebo stavovým kódem. Tento parametr je ignorován, pokud adresa URL není adresa URL protokolu HTTP.
+Ukazatel na hodnotu, která určuje hlavičky protokolu HTTP, které se mají odeslat na server. Tato záhlaví jsou přidána do výchozích hlaviček aplikace Internet Explorer. Hlavičky můžou tyto informace určit jako akci nutnou pro server, typ dat předávaný do serveru nebo stavový kód. Tento parametr se ignoruje, pokud adresa URL není adresa URL protokolu HTTP.
 
 *lpvPostData*<br/>
-Ukazatel na data k odeslání se transakce HTTP POST. Například transakce POST slouží k odesílání dat shromážděných z formuláře HTML. Pokud tento parametr není zadán všechna data účtovat `Navigate` vydá transakci HTTP GET. Tento parametr je ignorován, pokud adresa URL není adresa URL protokolu HTTP.
+Ukazatel na data, která se mají odeslat pomocí transakce HTTP POST. Například transakce POST slouží k odesílání dat shromážděných formulářem HTML. Pokud tento parametr neurčuje žádná data post, `Navigate` vydá transakce HTTP GET. Tento parametr se ignoruje, pokud adresa URL není adresa URL protokolu HTTP.
 
 *dwPostDataLen*<br/>
-Data k odeslání se transakce HTTP POST. Například transakce POST slouží k odesílání dat shromážděných z formuláře HTML. Pokud tento parametr není zadán všechna data účtovat `Navigate` vydá transakci HTTP GET. Tento parametr je ignorován, pokud adresa URL není adresa URL protokolu HTTP.
+Data, která se mají odeslat pomocí transakce HTTP POST Například transakce POST slouží k odesílání dat shromážděných formulářem HTML. Pokud tento parametr neurčuje žádná data post, `Navigate` vydá transakce HTTP GET. Tento parametr se ignoruje, pokud adresa URL není adresa URL protokolu HTTP.
 
-##  <a name="onbeforenavigate"></a>  CDHtmlDialog::OnBeforeNavigate
+##  <a name="onbeforenavigate"></a>CDHtmlDialog:: OnBeforeNavigate
 
-Volá se rozhraním, aby událost vyvolána předtím, než dojde k navigaci.
+Volá se rozhraním, aby se vyvolala událost, než dojde k navigaci.
 
 ```
 virtual void OnBeforeNavigate(
@@ -1109,14 +1109,14 @@ virtual void OnBeforeNavigate(
 ### <a name="parameters"></a>Parametry
 
 *pDisp*<br/>
-Ukazatel `IDispatch` objektu.
+Ukazatel na `IDispatch` objekt.
 
 *szUrl*<br/>
-Ukazatel na řetězec obsahující adresu URL přejděte k položce.
+Ukazatel na řetězec obsahující adresu URL, na kterou se má přejít
 
-##  <a name="ondocumentcomplete"></a>  CDHtmlDialog::OnDocumentComplete
+##  <a name="ondocumentcomplete"></a>CDHtmlDialog:: OnDocumentComplete
 
-Volá se rozhraním, aby se aplikaci oznámilo, když dokument má dosáhne stavu READYSTATE_COMPLETE.
+Volá se rozhraním, aby se aplikace upozornila, když dokument splnil stav READYSTATE_COMPLETE.
 
 ```
 virtual void OnDocumentComplete(
@@ -1127,10 +1127,10 @@ virtual void OnDocumentComplete(
 ### <a name="parameters"></a>Parametry
 
 *pDisp*<br/>
-Ukazatel `IDispatch` objektu.
+Ukazatel na `IDispatch` objekt.
 
 *szUrl*<br/>
-Ukazatel na řetězec obsahující adresu URL, na kterou se přejde.
+Ukazatel na řetězec obsahující adresu URL, na kterou byl přesměrován.
 
 ##  <a name="ondocwindowactivate"></a>  CDHtmlDialog::OnDocWindowActivate
 
@@ -1143,7 +1143,7 @@ STDMETHOD(OnDocWindowActivate)(BOOL fActivate);
 ### <a name="parameters"></a>Parametry
 
 *fActivate*<br/>
-Zobrazit *fActivate* v [IDocHostUIHandler::OnDocWindowActivate](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753261\(v=vs.85\)) v sadě Windows SDK.
+Viz *fActivate* v [IDocHostUIHandler:: OnDocWindowActivate](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753261\(v=vs.85\)) v Windows SDK.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -1151,9 +1151,9 @@ Vrátí E_NOTIMPL.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato členská funkce je implementace společnosti CDHtmlDialog [IDocHostUIHandler::OnDocWindowActivate](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753261\(v=vs.85\)), jak je popsáno v sadě Windows SDK.
+Tato členská funkce je CDHtmlDialog implementace [IDocHostUIHandler:: OnDocWindowActivate](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753261\(v=vs.85\)), jak je popsáno v Windows SDK.
 
-##  <a name="onframewindowactivate"></a>  CDHtmlDialog::OnFrameWindowActivate
+##  <a name="onframewindowactivate"></a>CDHtmlDialog:: OnFrameWindowActivate
 
 Volá se rozhraním, když se aktivuje nebo deaktivuje okno rámce.
 
@@ -1164,7 +1164,7 @@ STDMETHOD(OnFrameWindowActivate)(BOOL fActivate);
 ### <a name="parameters"></a>Parametry
 
 *fActivate*<br/>
-Zobrazit *fActivate* v [IDocHostUIHandler::OnFrameWindowActivate](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753262\(v=vs.85\)) v sadě Windows SDK.
+Viz *fActivate* v [IDocHostUIHandler:: OnFrameWindowActivate](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753262\(v=vs.85\)) v Windows SDK.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -1172,11 +1172,11 @@ Vrátí E_NOTIMPL.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato členská funkce je implementace společnosti CDHtmlDialog [IDocHostUIHandler::OnFrameWindowActivate](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753262\(v=vs.85\)), jak je popsáno v sadě Windows SDK.
+Tato členská funkce je CDHtmlDialog implementace [IDocHostUIHandler:: OnFrameWindowActivate](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753262\(v=vs.85\)), jak je popsáno v Windows SDK.
 
-##  <a name="oninitdialog"></a>  CDHtmlDialog::OnInitDialog
+##  <a name="oninitdialog"></a>CDHtmlDialog:: OnInitDialog
 
-Volá se v reakci na nezavěsíte zprávu.
+Volá se v reakci na zprávu WM_INITDIALOG.
 
 ```
 virtual BOOL OnInitDialog();
@@ -1184,19 +1184,19 @@ virtual BOOL OnInitDialog();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Výchozí implementace vrací hodnotu TRUE.
+Výchozí implementace vrátí hodnotu TRUE.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato zpráva se pošle do dialogového okna průběhu `Create`, `CreateIndirect`, nebo `DoModal` volání, ke kterým dochází, těsně před spuštěním zobrazí dialogové okno.
+Tato zpráva se odešle do dialogového okna během `Create`volání, `CreateIndirect`nebo `DoModal` , která se objeví bezprostředně před zobrazením dialogového okna.
 
-Tato členská funkce přepište, pokud je třeba provést zvláštní zpracování při inicializaci dialogových oken. Přepsané verze nejprve volat základní třídy `OnInitDialog` ale ignorovat jeho návratovou hodnotu. Obvykle se vrací TRUE, z vaší funkce přepsanému členu.
+Tuto členskou funkci přepište, pokud potřebujete provést speciální zpracování při inicializaci dialogového okna. V přepsané verzi nejdříve zavolejte základní třídu `OnInitDialog` , ale Nezabereme její návratovou hodnotu. Obvykle se vrátí TRUE z přepsané členské funkce.
 
-Volání Windows `OnInitDialog` funkce prostřednictvím standardní globální – dialogové okno postup společné pro všechny dialogová okna knihovny Microsoft Foundation Class, ne přes mapu zpráv, proto není nutné položka mapy zpráv pro tuto funkci člena.
+Systém Windows volá `OnInitDialog` funkci přes standardní globální proceduru dialogového okna společná pro všechna knihovna Microsoft Foundation Class dialogová okna, nikoli přes mapu zpráv, takže nepotřebujete pro tuto členskou funkci položku mapování zpráv.
 
-##  <a name="onnavigatecomplete"></a>  CDHtmlDialog::OnNavigateComplete
+##  <a name="onnavigatecomplete"></a>CDHtmlDialog:: OnNavigateComplete
 
-Volá se rozhraním, až se dokončí přechod na zadané adrese URL.
+Volá se rozhraním po dokončení navigace na zadanou adresu URL.
 
 ```
 virtual void OnNavigateComplete(
@@ -1207,14 +1207,14 @@ virtual void OnNavigateComplete(
 ### <a name="parameters"></a>Parametry
 
 *pDisp*<br/>
-Ukazatel `IDispatch` objektu.
+Ukazatel na `IDispatch` objekt.
 
 *szUrl*<br/>
-Ukazatel na řetězec obsahující adresu URL, na kterou se přejde.
+Ukazatel na řetězec obsahující adresu URL, na kterou byl přesměrován.
 
-##  <a name="resizeborder"></a>  CDHtmlDialog::ResizeBorder
+##  <a name="resizeborder"></a>CDHtmlDialog:: ResizeBorder
 
-Upozorní objekt, který je potřeba změnit velikost místa jeho ohraničení.
+Upozorní objekt, že potřebuje změnit velikost prostoru ohraničení.
 
 ```
 STDMETHOD(ResizeBorder)(
@@ -1226,19 +1226,19 @@ STDMETHOD(ResizeBorder)(
 ### <a name="parameters"></a>Parametry
 
 *prcBorder*<br/>
-Zobrazit *prcBorder* v [IDocHostUIHandler::ResizeBorder](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753263\(v=vs.85\)) v sadě Windows SDK.
+Viz *prcBorder* v [IDocHostUIHandler:: ResizeBorder](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753263\(v=vs.85\)) v Windows SDK.
 
 *pUIWindow*<br/>
-Zobrazit *pUIWindow* v `IDocHostUIHandler::ResizeBorder` v sadě Windows SDK.
+Viz *pUIWindow* v `IDocHostUIHandler::ResizeBorder` tématu Windows SDK.
 
 *fFrameWindow*<br/>
-Zobrazit *fFrameWindow* v `IDocHostUIHandler::ResizeBorder` v sadě Windows SDK.
+Viz *fFrameWindow* v `IDocHostUIHandler::ResizeBorder` tématu Windows SDK.
 
 ### <a name="return-value"></a>Návratová hodnota
 
 Vrátí E_NOTIMPL.
 
-##  <a name="setcontrolproperty"></a>  CDHtmlDialog::SetControlProperty
+##  <a name="setcontrolproperty"></a>CDHtmlDialog:: SetControlProperty
 
 Nastaví vlastnost ovládacího prvku ActiveX na novou hodnotu.
 
@@ -1265,20 +1265,20 @@ void SetControlProperty(
 ID HTML ovládacího prvku ActiveX.
 
 *dispId*<br/>
-ID odbavení vlastnosti chcete nastavit.
+ID odeslání vlastnosti, kterou chcete nastavit.
 
 *pVar*<br/>
-Ukazatel na hodnotu typu VARIANT obsahující hodnota nové vlastnosti.
+Ukazatel na VARIANTu obsahující novou hodnotu vlastnosti.
 
 *pdispControl*<br/>
-Ukazatel na ovládací prvek ActiveX `IDispatch` rozhraní.
+Ukazatel na `IDispatch` rozhraní ovládacího prvku ActiveX.
 
 *szPropName*<br/>
-Řetězec obsahující název vlastnosti chcete nastavit.
+Řetězec obsahující název vlastnosti, která se má nastavit
 
-##  <a name="setelementhtml"></a>  CDHtmlDialog::SetElementHtml
+##  <a name="setelementhtml"></a>CDHtmlDialog:: SetElementHtml
 
-Nastaví `innerHTML` vlastnost elementu HTML.
+`innerHTML` Nastaví vlastnost elementu HTML.
 
 ```
 void SetElementHtml(
@@ -1296,12 +1296,12 @@ void SetElementHtml(
 ID elementu HTML.
 
 *bstrText*<br/>
-Nová hodnota `innerHTML` vlastnost.
+Nová hodnota `innerHTML` vlastnosti
 
 *punkElem*<br/>
-`IUnknown` Ukazatel elementu HTML.
+`IUnknown` Ukazatel prvku jazyka HTML.
 
-##  <a name="setelementproperty"></a>  CDHtmlDialog::SetElementProperty
+##  <a name="setelementproperty"></a>CDHtmlDialog:: SetElementProperty
 
 Nastaví vlastnost elementu HTML.
 
@@ -1318,14 +1318,14 @@ void SetElementProperty(
 ID elementu HTML.
 
 *dispId*<br/>
-ID odbavení vlastnosti chcete nastavit.
+ID odeslání vlastnosti, kterou chcete nastavit.
 
 *pVar*<br/>
-Nová hodnota vlastnosti.
+Nová hodnota vlastnosti
 
-##  <a name="setelementtext"></a>  CDHtmlDialog::SetElementText
+##  <a name="setelementtext"></a>CDHtmlDialog:: SetElementText
 
-Nastaví `innerText` vlastnost elementu HTML.
+`innerText` Nastaví vlastnost elementu HTML.
 
 ```
 void SetElementText(
@@ -1343,14 +1343,14 @@ void SetElementText(
 ID elementu HTML.
 
 *bstrText*<br/>
-Nová hodnota `innerText` vlastnost.
+Nová hodnota `innerText` vlastnosti
 
 *punkElem*<br/>
-`IUnknown` Ukazatel elementu HTML.
+`IUnknown` Ukazatel prvku jazyka HTML.
 
-##  <a name="setexternaldispatch"></a>  CDHtmlDialog::SetExternalDispatch
+##  <a name="setexternaldispatch"></a>CDHtmlDialog:: SetExternalDispatch
 
-Nastaví hostitele `IDispatch` rozhraní.
+Nastaví `IDispatch` rozhraní hostitele.
 
 ```
 void SetExternalDispatch(IDispatch* pdispExternal);
@@ -1361,9 +1361,9 @@ void SetExternalDispatch(IDispatch* pdispExternal);
 *pdispExternal*<br/>
 Nové `IDispatch` rozhraní.
 
-##  <a name="sethostflags"></a>  CDHtmlDialog::SetHostFlags
+##  <a name="sethostflags"></a>CDHtmlDialog:: SetHostFlags
 
-Nastaví hostitele příznaky uživatelského rozhraní.
+Nastaví příznaky uživatelského rozhraní hostitele.
 
 ```
 void SetHostFlags(DWORD dwFlags);
@@ -1372,11 +1372,11 @@ void SetHostFlags(DWORD dwFlags);
 ### <a name="parameters"></a>Parametry
 
 *dwFlags*<br/>
-Možné hodnoty najdete v části [DOCHOSTUIFLAG](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753277\(v=vs.85\)) v sadě Windows SDK.
+Možné hodnoty naleznete v tématu [DOCHOSTUIFLAG](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753277\(v=vs.85\)) v Windows SDK.
 
-##  <a name="showcontextmenu"></a>  CDHtmlDialog::ShowContextMenu
+##  <a name="showcontextmenu"></a>CDHtmlDialog:: ShowContextMenu
 
-Volá se, když místní nabídka se nezobrazí.
+Volá se, když se zobrazí místní nabídka.
 
 ```
 STDMETHOD(ShowContextMenu)(
@@ -1389,16 +1389,16 @@ STDMETHOD(ShowContextMenu)(
 ### <a name="parameters"></a>Parametry
 
 *dwID*<br/>
-Zobrazit *dwID* v [IDocHostUIHandler::ShowContextMenu](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753264\(v=vs.85\)) v sadě Windows SDK.
+Viz *dwID* v [IDocHostUIHandler:: ShowContextMenu](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753264\(v=vs.85\)) v Windows SDK.
 
 *ppt*<br/>
-Zobrazit *ppt* v `IDocHostUIHandler::ShowContextMenu` ve Windows SDK.
+Viz *PPT* v `IDocHostUIHandler::ShowContextMenu` v Windows SDK.
 
 *pcmdtReserved*<br/>
-Zobrazit *pcmdtReserved* v `IDocHostUIHandler::ShowContextMenu` v sadě Windows SDK.
+Viz *pcmdtReserved* v `IDocHostUIHandler::ShowContextMenu` tématu Windows SDK.
 
 *pdispReserved*<br/>
-Zobrazit *pdispReserved* v `IDocHostUIHandler::ShowContextMenu` v sadě Windows SDK.
+Viz *pdispReserved* v `IDocHostUIHandler::ShowContextMenu` tématu Windows SDK.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -1406,9 +1406,9 @@ Vrátí S_FALSE.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato členská funkce je implementace společnosti CDHtmlDialog [IDocHostUIHandler::ShowContextMenu](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753264\(v=vs.85\)), jak je popsáno v sadě Windows SDK.
+Tato členská funkce je CDHtmlDialog implementace [IDocHostUIHandler:: ShowContextMenu](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753264\(v=vs.85\)), jak je popsáno v Windows SDK.
 
-##  <a name="showui"></a>  CDHtmlDialog::ShowUI
+##  <a name="showui"></a>CDHtmlDialog:: ShowUI
 
 Zobrazuje uživatelské rozhraní hostitele.
 
@@ -1424,19 +1424,19 @@ STDMETHOD(ShowUI)(
 ### <a name="parameters"></a>Parametry
 
 *dwID*<br/>
-Zobrazit *dwID* v [IDocHostUIHandler::ShowUI](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753265\(v=vs.85\)) v sadě Windows SDK.
+Viz *dwID* v [IDocHostUIHandler:: showUI](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753265\(v=vs.85\)) v Windows SDK.
 
 *pActiveObject*<br/>
-Zobrazit *d pActiveObject* v `IDocHostUIHandler::ShowUI` v sadě Windows SDK.
+Podívejte se na téma `IDocHostUIHandler::ShowUI` *d pActiveObject* v tématu Windows SDK.
 
 *pCommandTarget*<br/>
-Zobrazit *pCommandTarget* v `IDocHostUIHandler::ShowUI` v sadě Windows SDK.
+Viz *pCommandTarget* v `IDocHostUIHandler::ShowUI` tématu Windows SDK.
 
 *pFrame*<br/>
-Zobrazit *pFrame* v `IDocHostUIHandler::ShowUI` v sadě Windows SDK.
+Viz *pFrame* v `IDocHostUIHandler::ShowUI` tématu Windows SDK.
 
 *pDoc*<br/>
-Zobrazit *pDoc* v `IDocHostUIHandler::ShowUI` v sadě Windows SDK.
+Viz *pDoc* v `IDocHostUIHandler::ShowUI` tématu Windows SDK.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -1444,11 +1444,11 @@ Vrátí S_FALSE.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato členská funkce je implementace společnosti CDHtmlDialog [IDocHostUIHandler::ShowUI](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753265\(v=vs.85\)), jak je popsáno v sadě Windows SDK.
+Tato členská funkce je CDHtmlDialog implementace [IDocHostUIHandler:: showUI](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753265\(v=vs.85\)), jak je popsáno v Windows SDK.
 
-##  <a name="translateaccelerator"></a>  CDHtmlDialog::TranslateAccelerator
+##  <a name="translateaccelerator"></a>CDHtmlDialog:: TranslateAccelerator
 
-Volá se, aby zpracování nabídky přístupové klíče zpráv.
+Volá se, aby se zprávy klíče akcelerátoru v nabídce procesu.
 
 ```
 STDMETHOD(TranslateAccelerator)(
@@ -1460,13 +1460,13 @@ STDMETHOD(TranslateAccelerator)(
 ### <a name="parameters"></a>Parametry
 
 *lpMsg*<br/>
-Zobrazit *lpMsg* v [IDocHostUIHandler::TranslateAccelerator](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753266\(v=vs.85\)) v sadě Windows SDK.
+Viz *lpMsg* v [IDocHostUIHandler:: TranslateAccelerator](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753266\(v=vs.85\)) v Windows SDK.
 
 *pguidCmdGroup*<br/>
-Zobrazit *pguidCmdGroup* v `IDocHostUIHandler::TranslateAccelerator` v sadě Windows SDK.
+Viz *pguidCmdGroup* v `IDocHostUIHandler::TranslateAccelerator` tématu Windows SDK.
 
 *nCmdID*<br/>
-Zobrazit *nCmdID* v `IDocHostUIHandler::TranslateAccelerator` v sadě Windows SDK.
+Viz *nCmdID* v `IDocHostUIHandler::TranslateAccelerator` tématu Windows SDK.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -1474,11 +1474,11 @@ Vrátí S_FALSE.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato členská funkce je implementace společnosti CDHtmlDialog [IDocHostUIHandler::TranslateAccelerator](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753266\(v=vs.85\)), jak je popsáno v sadě Windows SDK.
+Tato členská funkce je CDHtmlDialog implementace [IDocHostUIHandler:: TranslateAccelerator](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753266\(v=vs.85\)), jak je popsáno v Windows SDK.
 
-##  <a name="translateurl"></a>  CDHtmlDialog::TranslateUrl
+##  <a name="translateurl"></a>CDHtmlDialog:: TranslateUrl
 
-Volá se, aby změnit adresu URL, který se má načíst.
+Volá se, aby se změnila adresa URL, která se má načíst.
 
 ```
 STDMETHOD(TranslateUrl)(
@@ -1490,13 +1490,13 @@ STDMETHOD(TranslateUrl)(
 ### <a name="parameters"></a>Parametry
 
 *dwTranslate*<br/>
-Zobrazit *dwTranslate* v [IDocHostUIHandler::TranslateUrl](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753267\(v=vs.85\)) v sadě Windows SDK.
+Viz *dwTranslate* v [IDocHostUIHandler:: TranslateUrl](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753267\(v=vs.85\)) v Windows SDK.
 
 *pchURLIn*<br/>
-Zobrazit *pchURLIn* v `IDocHostUIHandler::TranslateUrl` v sadě Windows SDK.
+Viz *pchURLIn* v `IDocHostUIHandler::TranslateUrl` tématu Windows SDK.
 
 *ppchURLOut*<br/>
-Zobrazit *ppchURLOut* v `IDocHostUIHandler::TranslateUrl` v sadě Windows SDK.
+Viz *ppchURLOut* v `IDocHostUIHandler::TranslateUrl` tématu Windows SDK.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -1504,11 +1504,11 @@ Vrátí S_FALSE.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato členská funkce je implementace společnosti CDHtmlDialog [IDocHostUIHandler::TranslateUrl](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753267\(v=vs.85\)), jak je popsáno v sadě Windows SDK.
+Tato členská funkce je CDHtmlDialog implementace [IDocHostUIHandler:: TranslateUrl](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753267\(v=vs.85\)), jak je popsáno v Windows SDK.
 
-##  <a name="updateui"></a>  CDHtmlDialog::UpdateUI
+##  <a name="updateui"></a>CDHtmlDialog:: UpdateUI
 
-Volá se, aby upozornil hostitele, který se změnil stav příkazu.
+Volá se, aby se hostiteli informovalo, že se změnil stav příkazu.
 
 ```
 STDMETHOD(UpdateUI)(void);
@@ -1520,10 +1520,10 @@ Vrátí E_NOTIMPL.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato členská funkce je implementace společnosti CDHtmlDialog [IDocHostUIHandler::UpdateUI](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753268\(v=vs.85\)), jak je popsáno v sadě Windows SDK.
+Tato členská funkce je CDHtmlDialog implementace [IDocHostUIHandler:: UpdateUI](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753268\(v=vs.85\)), jak je popsáno v Windows SDK.
 
 ## <a name="see-also"></a>Viz také:
 
-[Ukázka DHtmlExplore knihovny MFC](../../overview/visual-cpp-samples.md)<br/>
+[DHtmlExplore Sample MFC](../../overview/visual-cpp-samples.md)<br/>
 [Makra pomocné rutiny DDX_DHtml](#ddx_dhtml_helper_macros)<br/>
 [Graf hierarchie](../../mfc/hierarchy-chart.md)

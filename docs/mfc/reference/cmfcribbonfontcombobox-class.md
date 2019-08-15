@@ -1,5 +1,5 @@
 ---
-title: Cmfcribbonfontcombobox – třída
+title: CMFCRibbonFontComboBox – třída
 ms.date: 11/04/2016
 f1_keywords:
 - CMFCRibbonFontComboBox
@@ -22,16 +22,16 @@ helpviewer_keywords:
 - CMFCRibbonFontComboBox [MFC], RebuildFonts
 - CMFCRibbonFontComboBox [MFC], SetFont
 ms.assetid: 33b4db50-df4f-45fa-8f05-2e6e73c31435
-ms.openlocfilehash: f17ad9157ff40620a68073eea85acb6fff104bb4
-ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
+ms.openlocfilehash: 186c4bc3e1b26529ed0e000d2893e1b2d81c4304
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66504841"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69504958"
 ---
-# <a name="cmfcribbonfontcombobox-class"></a>Cmfcribbonfontcombobox – třída
+# <a name="cmfcribbonfontcombobox-class"></a>CMFCRibbonFontComboBox – třída
 
-Implementuje pole se seznamem, který obsahuje seznam písem. Pole se seznamem umístíte na panel pásu karet.
+Implementuje pole se seznamem, které obsahuje seznam písem. Pole se seznamem umístěte na panel pásu karet.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -51,31 +51,31 @@ class CMFCRibbonFontComboBox : public CMFCRibbonComboBox
 
 |Name|Popis|
 |----------|-----------------|
-|[CMFCRibbonFontComboBox::CMFCRibbonFontComboBox](#cmfcribbonfontcombobox)|Vytvoří a inicializuje `CMFCRibbonFontComboBox` objektu.|
+|[CMFCRibbonFontComboBox::CMFCRibbonFontComboBox](#cmfcribbonfontcombobox)|Vytvoří a inicializuje `CMFCRibbonFontComboBox` objekt.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
 |Name|Popis|
 |----------|-----------------|
-|[CMFCRibbonFontComboBox::BuildFonts](#buildfonts)|Naplní pásu karet pole se seznamem písma s písmy zadaný font typu, znaková sada a rozteč a rodiny.|
-|`CMFCRibbonFontComboBox::CreateObject`|Rozhraní používá k vytvoření dynamické instance tohoto typu třídy.|
-|[CMFCRibbonFontComboBox::GetCharSet](#getcharset)|Vrátí zadanou znakovou sadu.|
+|[CMFCRibbonFontComboBox::BuildFonts](#buildfonts)|Naplní pole se seznamem fontu na pásu karet písmy zadaného typu písma, znakové sady a sklonu a rodiny.|
+|`CMFCRibbonFontComboBox::CreateObject`|Používá se rozhraním k vytvoření dynamické instance tohoto typu třídy.|
+|[CMFCRibbonFontComboBox:: getcharset](#getcharset)|Vrátí zadanou znakovou sadu.|
 |[CMFCRibbonFontComboBox::GetFontDesc](#getfontdesc)||
-|[CMFCRibbonFontComboBox::GetFontType](#getfonttype)|Vrátí typy písem pro zobrazení v okně se seznamem. Platné možnosti jsou DEVICE_FONTTYPE, RASTER_FONTTYPE a TRUETYPE_FONTTYPE nebo jakékoli bitová kombinace.|
-|[CMFCRibbonFontComboBox::GetPitchAndFamily](#getpitchandfamily)|Vrátí rozteč a rodiny písem, které se zobrazí v poli se seznamem.|
-|`CMFCRibbonFontComboBox::GetThisClass`|Používá k získání ukazatele na rámec [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) objekt, který je přidružený k typu třídy.|
-|[CMFCRibbonFontComboBox::RebuildFonts](#rebuildfonts)|Naplní pásu karet pole se seznamem písma s písmy z dříve zadané písmo, znakové sady a rozteč a rodiny.|
-|[CMFCRibbonFontComboBox::SetFont](#setfont)|Vybere písmo zadaný v poli se seznamem.|
+|[CMFCRibbonFontComboBox::GetFontType](#getfonttype)|Vrátí typy písem, které se mají zobrazit v poli se seznamem. Platné možnosti jsou DEVICE_FONTTYPE, RASTER_FONTTYPE a TRUETYPE_FONTTYPE nebo jakékoli bitové kombinace.|
+|[CMFCRibbonFontComboBox::GetPitchAndFamily](#getpitchandfamily)|Vrátí rozteč a rodinu písem, která jsou zobrazena v poli se seznamem.|
+|`CMFCRibbonFontComboBox::GetThisClass`|Používá se rozhraním, aby se získal ukazatel na objekt [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) , který je přidružený k tomuto typu třídy.|
+|[CMFCRibbonFontComboBox::RebuildFonts](#rebuildfonts)|Naplní pole se seznamem fontu na pásu karet písmy dříve zadaného typu písma, znakové sady a sklonu a rodiny.|
+|[CMFCRibbonFontComboBox::SetFont](#setfont)|Vybere zadané písmo v poli se seznamem.|
 
 ## <a name="remarks"></a>Poznámky
 
-Po vytvoření `CMFCRibbonFontComboBox` objektu, přidejte na panel pásu karet pomocí volání [CMFCRibbonPanel::Add](../../mfc/reference/cmfcribbonpanel-class.md#add).
+Po vytvoření `CMFCRibbonFontComboBox` objektu jej přidejte na panel pásu karet voláním [CMFCRibbonPanel:: Add](../../mfc/reference/cmfcribbonpanel-class.md#add).
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
-[Třídy CObject](../../mfc/reference/cobject-class.md)
+[CObject](../../mfc/reference/cobject-class.md)
 
-[Cmfcribbonbaseelement –](../../mfc/reference/cmfcribbonbaseelement-class.md)
+[CMFCRibbonBaseElement](../../mfc/reference/cmfcribbonbaseelement-class.md)
 
 [CMFCRibbonButton](../../mfc/reference/cmfcribbonbutton-class.md)
 
@@ -87,11 +87,11 @@ Po vytvoření `CMFCRibbonFontComboBox` objektu, přidejte na panel pásu karet 
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** afxRibbonComboBox.h
+**Záhlaví:** afxRibbonComboBox. h
 
-##  <a name="buildfonts"></a>  CMFCRibbonFontComboBox::BuildFonts
+##  <a name="buildfonts"></a>CMFCRibbonFontComboBox::BuildFonts
 
-Naplní pole se seznamem na pásu karet pomocí písem.
+Naplní pole se seznamem na pásu karet písmy.
 
 ```
 void BuildFonts(
@@ -103,17 +103,17 @@ void BuildFonts(
 ### <a name="parameters"></a>Parametry
 
 *nFontType*<br/>
-[in] Určuje písmo typ písma pro přidání.
+pro Určuje typ písma, který se má přidat.
 
 *nCharSet*<br/>
-[in] Určuje znakovou sadu písma pro přidání.
+pro Určuje znakovou sadu písem, která se má přidat.
 
 *nPitchAndFamily*<br/>
-[in] Určuje rozteč a rodiny písem pro přidání.
+pro Určuje rozteč a rodinu přidaných písem.
 
-##  <a name="cmfcribbonfontcombobox"></a>  CMFCRibbonFontComboBox::CMFCRibbonFontComboBox
+##  <a name="cmfcribbonfontcombobox"></a>CMFCRibbonFontComboBox::CMFCRibbonFontComboBox
 
-Vytvoří a inicializuje [cmfcribbonfontcombobox –](../../mfc/reference/cmfcribbonfontcombobox-class.md) objektu.
+Vytvoří a inicializuje objekt [CMFCRibbonFontComboBox](../../mfc/reference/cmfcribbonfontcombobox-class.md) .
 
 ```
 CMFCRibbonFontComboBox(
@@ -127,29 +127,29 @@ CMFCRibbonFontComboBox(
 ### <a name="parameters"></a>Parametry
 
 *nID*<br/>
-[in] ID příkazu, který se spustí, když uživatel vybere položku v poli se seznamem příkazu.
+pro ID příkazu, který se spustí, když uživatel vybere položku z pole se seznamem.
 
 *nFontType*<br/>
-[in] Určuje, které Písmo typy mají zobrazit v poli se seznamem. Platné možnosti jsou DEVICE_FONTTYPE, RASTER_FONTTYPE a TRUETYPE_FONTTYPE nebo jakékoli bitová kombinace.
+pro Určuje typy písem, které se mají zobrazit v poli se seznamem. Platné možnosti jsou DEVICE_FONTTYPE, RASTER_FONTTYPE a TRUETYPE_FONTTYPE nebo jakékoli bitové kombinace.
 
 *nCharSet*<br/>
-[in] Filtry v poli se seznamem na ty, které patří do zadanou znakovou sadu písma...
+pro Filtruje písma v poli se seznamem na ty, které patří do zadané znakové sady.
 
 *nPitchAndFamily*<br/>
-[in] Určuje, rozteč a rodiny písem, které se zobrazí v poli se seznamem.
+pro Určuje rozteč a rodinu písem, která jsou zobrazena v poli se seznamem.
 
 *nWidth*<br/>
-[in] Určuje šířku v pixelech, pole se seznamem.
+pro Určuje šířku pole se seznamem (v pixelech).
 
 ### <a name="remarks"></a>Poznámky
 
-Další informace o možných *nFontType* hodnoty parametrů naleznete v tématu [EnumFontFamProc](/previous-versions/dd162621\(v=vs.85\)) v dokumentaci Windows SDK.
+Další informace o možných hodnotách parametrů *nFontType* naleznete v tématu [EnumFontFamProc](/previous-versions/dd162621\(v=vs.85\)) v dokumentaci k Windows SDK.
 
-Další informace o platné znakových sad, které je možné přiřadit *nCharSet*a platné hodnoty, které je možné přiřadit *nPitchAndFamily*, naleznete v tématu [LOGFONT](/windows/desktop/api/wingdi/ns-wingdi-taglogfonta) v Dokumentace k sadě Windows SDK.
+Další informace o platných znakových sadách, které mohou být přiřazeny *nCharSet*a platné hodnoty, které lze přiřadit k *nPitchAndFamily*, naleznete v tématu [LOGFONT](/windows/win32/api/wingdi/ns-wingdi-logfontw) v dokumentaci Windows SDK.
 
-##  <a name="getfontdesc"></a>  CMFCRibbonFontComboBox::GetFontDesc
+##  <a name="getfontdesc"></a>CMFCRibbonFontComboBox::GetFontDesc
 
-Další podrobnosti najdete ve zdrojovém kódu v **VC\\atlmfc\\src\\mfc** složce instalace sady Visual Studio.
+Další podrobnosti najdete ve zdrojovém kódu ve složce **VC\\atlmfc\\src\\MFC** v instalaci sady Visual Studio.
 
 ```
 const CMFCFontInfo* GetFontDesc(int iIndex = -1) const;
@@ -157,15 +157,15 @@ const CMFCFontInfo* GetFontDesc(int iIndex = -1) const;
 
 ### <a name="parameters"></a>Parametry
 
-[in] *iIndex*<br/>
+pro *iIndex*<br/>
 
 ### <a name="return-value"></a>Návratová hodnota
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="rebuildfonts"></a>  CMFCRibbonFontComboBox::RebuildFonts
+##  <a name="rebuildfonts"></a>CMFCRibbonFontComboBox::RebuildFonts
 
-Naplní pole se seznamem na pásu karet pomocí písem z dříve zadané písmo, znakové sady a rozteč a rodiny.
+Naplní pole se seznamem na pásu karet písmy dříve zadaného typu písma, znakové sady a sklonu a rodiny.
 
 ```
 void RebuildFonts();
@@ -173,11 +173,11 @@ void RebuildFonts();
 
 ### <a name="remarks"></a>Poznámky
 
-Můžete zadat typ písma, znakové sady a rozteč a rodiny písem, které chcete zahrnout do pole se seznamem písma pásu karet pole [konstruktor](#cmfcribbonfontcombobox) pro tuto třídu nebo voláním [CMFCRibbonFontComboBox::BuildFonts](#buildfonts).
+Můžete zadat typ písma, znakovou sadu a rozteč a rodinu písem, které mají být zahrnuty do pole se seznamem písem pásu karet v [konstruktoru](#cmfcribbonfontcombobox) pro tuto třídu, nebo voláním [CMFCRibbonFontComboBox:: BuildFonts](#buildfonts).
 
-##  <a name="setfont"></a>  CMFCRibbonFontComboBox::SetFont
+##  <a name="setfont"></a>CMFCRibbonFontComboBox::SetFont
 
-Vybere písmo zadaný v poli se seznamem.
+Vybere zadané písmo v poli se seznamem.
 
 ```
 BOOL SetFont(
@@ -188,21 +188,21 @@ BOOL SetFont(
 
 ### <a name="parameters"></a>Parametry
 
-"lpszName * Určuje název písma k výběru.
+' lpszName * Určuje název písma, které chcete vybrat.
 
 *nCharSet*<br/>
 Určuje znakovou sadu vybraného písma.
 
 *bExact*<br/>
-TRUE, pokud chcete určit, že při výběru písma; musí odpovídat znakové sady FALSE, pokud chcete určit, že při výběru písma můžete ignorovat znakovou sadu.
+Hodnota TRUE určuje, že znaková sada musí při výběru písma odpovídat. FALSE pro určení, že znaková sada může být při výběru písma ignorována.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Nenulové, pokud zadaný font byl nalezen a zaškrtnuto. jinak, nula.
+Nenulové, pokud zadané písmo bylo nalezeno a vybráno; v opačném případě nula.
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="getcharset"></a>  CMFCRibbonFontComboBox::GetCharSet
+##  <a name="getcharset"></a>CMFCRibbonFontComboBox:: getcharset
 
 Vrátí zadanou znakovou sadu.
 
@@ -212,13 +212,13 @@ BYTE GetCharSet() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Znakové sady (viz LOGFONT v dokumentaci Windows SDK).
+Znaková sada (viz LOGFONT v dokumentaci k Windows SDK).
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="getfonttype"></a>  CMFCRibbonFontComboBox::GetFontType
+##  <a name="getfonttype"></a>CMFCRibbonFontComboBox::GetFontType
 
-Vrátí typy písem pro zobrazení v okně se seznamem. Platné možnosti jsou DEVICE_FONTTYPE, RASTER_FONTTYPE a TRUETYPE_FONTTYPE nebo jakékoli bitová kombinace.
+Vrátí typy písem, které se mají zobrazit v poli se seznamem. Platné možnosti jsou DEVICE_FONTTYPE, RASTER_FONTTYPE a TRUETYPE_FONTTYPE nebo jakékoli bitové kombinace.
 
 ```
 int GetFontType() const;
@@ -226,13 +226,13 @@ int GetFontType() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Typy písem (viz EnumFontFamProc v dokumentaci Windows SDK).
+Typy písem (viz EnumFontFamProc v dokumentaci k Windows SDK).
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="getpitchandfamily"></a>  CMFCRibbonFontComboBox::GetPitchAndFamily
+##  <a name="getpitchandfamily"></a>CMFCRibbonFontComboBox::GetPitchAndFamily
 
-Vrátí rozteč a rodiny písem, které se zobrazí v poli se seznamem.
+Vrátí rozteč a rodinu písem, která jsou zobrazena v poli se seznamem.
 
 ```
 BYTE GetPitchAndFamily() const;
@@ -240,7 +240,7 @@ BYTE GetPitchAndFamily() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Rozteč a rodiny (viz LOGFONT v dokumentaci Windows SDK).
+Rozteč a rodina (viz LOGFONT v dokumentaci k Windows SDK).
 
 ### <a name="remarks"></a>Poznámky
 

@@ -41,62 +41,62 @@ helpviewer_keywords:
 - painting and device context [MFC]
 - CPalette class [MFC], HPALETTE handle type
 ms.assetid: 41963b25-34b7-4343-8446-34ba516b83ca
-ms.openlocfilehash: 3058bc5793a7766b0a6849ba77f0533f0bbbcef6
-ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
+ms.openlocfilehash: 4abc2764abd0f31b83253f37b8cb459be638ae5a
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66503810"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69508543"
 ---
 # <a name="graphic-objects"></a>Grafické objekty
 
-Windows poskytuje celou řadu nástrojů pro použití v kontextech zařízení pro kreslení. Poskytuje pera kreslení čar štětce pro výplň vnitřek a písma pro vykreslení textu. Knihovna MFC poskytuje třídy grafických objektů ekvivalentní nástrojů pro kreslení ve Windows. Následující tabulka uvádí dostupné třídy a ekvivalentní Windows grafiky zařízení rozhraní GDI systému popisovač typů.
+Systém Windows poskytuje celou řadu nástrojů pro kreslení, které lze použít v kontextech zařízení. Nabízí pera k vykreslování čar, štětců k vyplnění vnitřních a k nakreslení textu písem. Knihovna MFC poskytuje třídy grafických objektů, které odpovídají nástrojům kreslení v systému Windows. V následující tabulce jsou uvedeny dostupné třídy a ekvivalentní typy popisovačů rozhraní GDI (Windows Graphics Device Interface).
 
 > [!NOTE]
->  Další informace najdete v tématu [dokumentace k sadě SDK rozhraní GDI +](/windows/desktop/gdiplus/-gdiplus-gdi-start).
+>  Další informace najdete v [dokumentaci k rozhraní GDI+ SDK](/windows/win32/gdiplus/-gdiplus-gdi-start).
 
 Tento článek vysvětluje použití těchto tříd grafických objektů:
 
-### <a name="classes-for-windows-gdi-objects"></a>Třídy pro objektů Windows GDI
+### <a name="classes-for-windows-gdi-objects"></a>Třídy pro objekty GDI systému Windows
 
-|Třída|Typ popisovače Windows|
+|Třída|Typ popisovače systému Windows|
 |-----------|-------------------------|
 |[CPen](../mfc/reference/cpen-class.md)|`HPEN`|
-|[CBrush](../mfc/reference/cbrush-class.md)|`HBRUSH`|
-|[CFont](../mfc/reference/cfont-class.md)|**HFONT**|
+|[CBrush –](../mfc/reference/cbrush-class.md)|`HBRUSH`|
+|[CFont –](../mfc/reference/cfont-class.md)|**HFONT**|
 |[CBitmap](../mfc/reference/cbitmap-class.md)|`HBITMAP`|
 |[CPalette](../mfc/reference/cpalette-class.md)|`HPALETTE`|
 |[CRgn](../mfc/reference/crgn-class.md)|**HRGN**|
 
 > [!NOTE]
->  Třída [služby cimage ve](../atl-mfc-shared/reference/cimage-class.md) poskytuje podporu pro rozšířené rastrového obrázku.
+>  Třída [služby CImage ve](../atl-mfc-shared/reference/cimage-class.md) poskytuje rozšířenou podporu rastrového obrázku.
 
-Každá třída grafických objektů v knihovně tříd má konstruktor, který umožňuje vytváření grafických objektů této třídy, které s odpovídající vytvořit funkci, musíte následně inicializujete, jako `CreatePen`.
+Každá třída grafického objektu v knihovně tříd má konstruktor, který umožňuje vytvořit grafické objekty této třídy, které musíte následně inicializovat pomocí příslušné funkce Create, `CreatePen`jako je například.
 
-Každá třída grafických objektů v knihovně tříd má operátor přetypování, který bude přetypovat objekt knihovny MFC do přidružené popisovače Windows. Výsledný popisovač je platná, dokud ho odpojí přidruženého objektu. Použití objektu `Detach` členská funkce se odpojit popisovač.
+Každá třída grafického objektu v knihovně tříd má operátor přetypování, který přetypování objektu knihovny MFC na přidružený popisovač systému Windows. Výsledný popisovač je platný, dokud jej přidružený objekt odpojí. K odpojení popisovače použijte `Detach` členskou funkci objektu.
 
-Následující kód přetypování `CPen` objektu na popisovač Windows:
+Následující kód přetypování `CPen` objektu na popisovač systému Windows:
 
 [!code-cpp[NVC_MFCDocViewSDI#5](../mfc/codesnippet/cpp/graphic-objects_1.cpp)]
 
 #### <a name="to-create-a-graphic-object-in-a-device-context"></a>Vytvoření grafického objektu v kontextu zařízení
 
-1. Definujte grafického objektu v rámci zásobníku. Inicializace objektu s specifické pro typ. vytvořit funkci, například `CreatePen`. Můžete také inicializují objekt v konstruktoru. Najdete v diskuzi o [vytváření jednofázová a dvoufázová](../mfc/one-stage-and-two-stage-construction-of-objects.md), která poskytuje ukázkový kód.
+1. Definujte grafický objekt v bloku zásobníku. Inicializujte objekt pomocí funkce Create specifické pro typ, například `CreatePen`. Případně Inicializujte objekt v konstruktoru. Podívejte se na diskusi o [jednom kroku a dvoufázové tvorbě](../mfc/one-stage-and-two-stage-construction-of-objects.md), která poskytuje příklad kódu.
 
-1. [Vyberte objekt, do aktuálního kontextu zařízení](../mfc/selecting-a-graphic-object-into-a-device-context.md), před ukládání staré grafický objekt, který jste vybrali.
+1. [Vyberte objekt v kontextu aktuálního zařízení](../mfc/selecting-a-graphic-object-into-a-device-context.md)a uložte starý grafický objekt, který byl vybrán před.
 
-1. Až budete hotovi s aktuální grafického objektu, vyberte původní grafického objektu zpět do kontextu zařízení obnovíte jeho stav.
+1. Po dokončení s aktuálním grafickým objektem vyberte starý grafický objekt zpátky do kontextu zařízení a obnovte jeho stav.
 
-1. Povolte rámec přidělených grafický objekt, který má být automaticky odstraněn, pokud obor je byl ukončen.
+1. Povolí odstranění objektu, který je přidělený snímkům automaticky při ukončení oboru.
 
 > [!NOTE]
->  Pokud budete používat grafického objektu opakovaně, můžete přidělit jednou a pokaždé, když je potřeba vybrat kontextu zařízení. Nezapomeňte odstranit takového objektu, když ho už nepotřebují.
+>  Pokud budete grafický objekt opakovaně používat, můžete ho přidělit jednou a vybrat ho do kontextu zařízení pokaždé, když je potřeba. Nezapomeňte takový objekt odstranit, pokud ho již nepotřebujete.
 
-### <a name="what-do-you-want-to-know-more-about"></a>Co chcete zjistit více informací
+### <a name="what-do-you-want-to-know-more-about"></a>K čemu chcete získat další informace
 
-- [Jednofázová a dvoufázová konstrukce objektů grafiky](../mfc/one-stage-and-two-stage-construction-of-objects.md)
+- [Jedna fáze a dvoufázové konstrukce grafických objektů](../mfc/one-stage-and-two-stage-construction-of-objects.md)
 
-- [Příklad vytvoření pera ve fázi 1 a 2](../mfc/one-stage-and-two-stage-construction-of-objects.md)
+- [Příklad konstrukce pera v jedné a dvou fázích](../mfc/one-stage-and-two-stage-construction-of-objects.md)
 
 - [Výběr grafického objektu v kontextu zařízení](../mfc/selecting-a-graphic-object-into-a-device-context.md)
 

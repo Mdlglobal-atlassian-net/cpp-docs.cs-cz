@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - custom attributes, defining
 ms.assetid: 3abac928-4d55-4ea6-8cf6-8427a4ad79f1
-ms.openlocfilehash: 227e67696e679452a9c6c0e18c04e3d918f7a93f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 19f28963a18abf42c6f629ac0f6491628387aa6d
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62148171"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69491002"
 ---
 # <a name="custom-c"></a>custom (C++)
 
@@ -29,29 +29,29 @@ Definuje metadata pro objekt v knihovně typů.
 ### <a name="parameters"></a>Parametry
 
 *uuid*<br/>
-Jedinečný identifikátor.
+Jedinečné ID.
 
 *value*<br/>
-Hodnota, která můžou být přepnuté do hodnotu typu variant.
+Hodnota, která může být vložena do proměnné typu variant.
 
 ## <a name="remarks"></a>Poznámky
 
-**Vlastní** C++ atribut způsobí, že informace, které jde umístit do knihovny typů. Budete potřebovat nástroj, který čte vlastní hodnotu z knihovny typů.
+**Vlastní** C++ atribut způsobí umístění informací do knihovny typů. Budete potřebovat nástroj, který přečte vlastní hodnotu z knihovny typů.
 
-**Vlastní** atribut má stejné funkce jako [vlastní](/windows/desktop/Midl/custom) atribut MIDL.
+**Vlastní** atribut má stejné funkce jako atribut [vlastního](/windows/win32/Midl/custom) MIDL.
 
 ## <a name="requirements"></a>Požadavky
 
-### <a name="attribute-context"></a>Atribut kontextu
+### <a name="attribute-context"></a>Kontext atributu
 
 |||
 |-|-|
-|**Platí pro**|Non-COM **rozhraní**, **třídy**, **výčtu**s, `idl_module` metody, členy rozhraní, parametry rozhraní **typedef**s, **sjednocení**s, **struktura**s|
-|**Opakovatelné**|Ano|
-|**Vyžadované atributy**|**coclass** (při použití ve třídě)|
+|**Platí pro**|**Rozhraní**, **třídy**, výčtové typy `idl_module` , metody, členy rozhraní, parametry rozhraní, **definice**typu a sjednocení, **struktury**s|
+|**REPEATABLE**|Ano|
+|**Požadované atributy**|**Coclass – třída** (při použití ve třídě)|
 |**Neplatné atributy**|Žádné|
 
-Další informace o kontexty atributů najdete v tématu [kontexty atributů](cpp-attributes-com-net.md#contexts).
+Další informace o kontextech atributů naleznete v tématu kontexty [atributů](cpp-attributes-com-net.md#contexts).
 
 ## <a name="see-also"></a>Viz také:
 

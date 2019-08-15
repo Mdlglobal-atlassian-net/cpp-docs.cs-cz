@@ -1,5 +1,5 @@
 ---
-title: 'TN038: Knihovny MFC-OLE – implementace třídy IUnknown'
+title: 'TN038: MFC – implementace rozhraní IUnknown v technologii OLE'
 ms.date: 06/28/2018
 helpviewer_keywords:
 - aggregation macros [MFC]
@@ -16,23 +16,23 @@ helpviewer_keywords:
 - END_INTERFACE_PART macro [MFC]
 - INTERFACE_PART macro
 ms.assetid: 19d946ba-beaf-4881-85c6-0b598d7f6f11
-ms.openlocfilehash: a366d200c272570b4806a8642f287a7ef69b430e
-ms.sourcegitcommit: 934cb53fa4cb59fea611bfeb9db110d8d6f7d165
+ms.openlocfilehash: fb5ddf7fbbf2b59a8e0434e4b097284e309c918d
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65611310"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69511052"
 ---
-# <a name="tn038-mfcole-iunknown-implementation"></a>TN038: MFC/OLE – implementace třídy IUnknown
+# <a name="tn038-mfcole-iunknown-implementation"></a>TN038: Implementace MFC/OLE IUnknown
 
 > [!NOTE]
-> Následující Technická poznámka nebyla aktualizována, protože byla poprvé zahrnuta v online dokumentaci. V důsledku toho některé postupy a témata mohou být nesprávné nebo zastaralé. Nejnovější informace se doporučuje vyhledat téma zájmu v dokumentaci online index.
+> Následující technická Poznámka nebyla od prvního zařazení do online dokumentace aktualizována. V důsledku toho mohou být některé postupy a témata neaktuální nebo nesprávné. Nejnovější informace najdete v tématu informace o tom, co je důležité v online katalogu dokumentace najít.
 
-V srdci objektu OLE 2 je "OLE Component Object Model" nebo COM. COM definuje standard pro jak spolupracující objekty komunikovat mezi sebou. Jedná se o jaké "objekt" vypadá, včetně jak metody se odesílají v objektu. COM také definuje základní třídu, ze které jsou odvozeny všechny třídy kompatibilní s com. Tato základní třída je [IUnknown](/windows/desktop/api/unknwn/nn-unknwn-iunknown). I když [IUnknown](/windows/desktop/api/unknwn/nn-unknwn-iunknown) rozhraní se označuje jako třída C++, COM není specifický pro žádný jazyk – se dá implementovat v jazyce C, PASCAL nebo jakéhokoli jiného jazyka, který podporuje binární rozložení objektu COM.
+Na srdci OLE 2 je "objektový model komponenty OLE" nebo COM. Model COM definuje standard pro spolupráci vzájemně komunikujících objektů. To zahrnuje podrobné informace o tom, co vypadá "Object", včetně způsobu, jakým jsou metody odesílány u objektu. Model COM také definuje základní třídu, ze které jsou odvozeny všechny třídy kompatibilní s modelem COM. Tato základní třída je [IUnknown](/windows/win32/api/unknwn/nn-unknwn-iunknown). I když je rozhraní [IUnknown](/windows/win32/api/unknwn/nn-unknwn-iunknown) odkazováno jako C++ třída, com není specifické pro žádný jazyk – může být implementováno v jazyce C, Pascal nebo v jakémkoli jiném jazyce, který může podporovat binární rozložení objektu com.
 
-OLE se vztahuje na všechny třídy odvozené od [IUnknown](/windows/desktop/api/unknwn/nn-unknwn-iunknown) jako "rozhraní". Jde o důležité odlišení, protože "rozhraní" jako [IUnknown](/windows/desktop/api/unknwn/nn-unknwn-iunknown) nese s ním žádnou implementaci. Pouze definuje protokol, podle kterého objekty komunikují, ale nespecifikuje, co tyto implementace dělají. To je vhodné pro systém, který umožňuje maximální flexibilitu. Je úlohy MFC implementovat výchozí chování pro programy MFC/C++.
+OLE odkazuje na všechny třídy odvozené z [IUnknown](/windows/win32/api/unknwn/nn-unknwn-iunknown) jako "rozhraní". Jedná se o důležité rozlišení, protože "rozhraní", jako je [IUnknown](/windows/win32/api/unknwn/nn-unknwn-iunknown) , provádí bez implementace. Jednoduše definuje protokol, pomocí kterého objekty komunikují, nikoli specifiky toho, co tyto implementace dělají. To je přijatelné pro systém, který umožňuje maximální flexibilitu. Je to úloha knihovny MFC pro implementaci výchozího chování pro MFC/C++ programy.
 
-Pro pochopení implementace MFC atributu [IUnknown](/windows/desktop/api/unknwn/nn-unknwn-iunknown) musí nejprve porozumět, jaké je toto rozhraní. Zjednodušenou verzi [IUnknown](/windows/desktop/api/unknwn/nn-unknwn-iunknown) je definována níže:
+Aby bylo možné pochopit implementaci rozhraní [IUnknown](/windows/win32/api/unknwn/nn-unknwn-iunknown) knihovny MFC, je nutné nejprve pochopit, co je toto rozhraní. Zjednodušená verze [IUnknown](/windows/win32/api/unknwn/nn-unknwn-iunknown) je definována níže:
 
 ```cpp
 class IUnknown
@@ -45,11 +45,11 @@ public:
 ```
 
 > [!NOTE]
-> Podrobnosti o určité nezbytné konvenci volání, jako například `__stdcall` vynecháno pro tento obrázek.
+> Některé nezbytné podrobnosti o konvenci volání, `__stdcall` například, jsou pro tento obrázek vynechány.
 
-[AddRef](/windows/desktop/api/unknwn/nf-unknwn-iunknown-addref) a [vydání](/windows/desktop/api/unknwn/nf-unknwn-iunknown-release) členské funkce řídí správu paměti objektu. COM používá schéma součtu odkazů ke sledování objektů. Objektu nikdy odkazován přímo jako v jazyce C++. Místo toho jsou objekty COM vždy odkazovány prostřednictvím ukazatele. K uvolnění objektu, když vlastník se provádí pomocí jeho, objekt [Release](/windows/desktop/api/unknwn/nf-unknwn-iunknown-release) člen je volán (na rozdíl od použití operátoru delete, jako by se dělalo pro tradiční objekt jazyka C++). Mechanismus pro počítání referencí umožňuje správu více odkazů na jeden objekt. Implementace [AddRef](/windows/desktop/api/unknwn/nf-unknwn-iunknown-addref) a [vydání](/windows/desktop/api/unknwn/nf-unknwn-iunknown-release) udržuje počet odkazů na objekt – objekt není odstraněn, dokud jeho počet odkazů dosáhne nuly.
+Členské funkce [AddRef](/windows/win32/api/unknwn/nf-unknwn-iunknown-addref) a [release](/windows/win32/api/unknwn/nf-unknwn-iunknown-release) řídí správu paměti objektu. Model COM používá schéma počítání odkazů k udržení přehledu o objektech. Na objekt nikdy neodkazuje přímo jako v C++. Místo toho jsou objekty COM vždy odkazovány prostřednictvím ukazatele. Chcete-li uvolnit objekt, když je jeho vlastník proveden pomocí, je volán člen [verze](/windows/win32/api/unknwn/nf-unknwn-iunknown-release) objektu (na rozdíl od použití operátoru delete, jak by byl proveden pro tradiční C++ objekt). Mechanismus počítání odkazů umožňuje spravovat více odkazů na jeden objekt. Implementace [AddRef](/windows/win32/api/unknwn/nf-unknwn-iunknown-addref) a [release](/windows/win32/api/unknwn/nf-unknwn-iunknown-release) udržuje počet odkazů na objekt – objekt není odstraněn, dokud jeho počet odkazů nedosáhne nuly.
 
-[AddRef](/windows/desktop/api/unknwn/nf-unknwn-iunknown-addref) a [vydání](/windows/desktop/api/unknwn/nf-unknwn-iunknown-release) jsou z hlediska implementace poměrně jednoduché. Zde je triviální implementace:
+[AddRef](/windows/win32/api/unknwn/nf-unknwn-iunknown-addref) a [vydání](/windows/win32/api/unknwn/nf-unknwn-iunknown-release) jsou poměrně jasné z hlediska implementace. Toto je triviální implementace:
 
 ```cpp
 ULONG CMyObj::AddRef()
@@ -68,7 +68,7 @@ ULONG CMyObj::Release()
 }
 ```
 
-[QueryInterface](/windows/desktop/api/unknwn/nf-unknwn-iunknown-queryinterface(q_)) členská funkce je o něco zajímavější. Není velmi výhodné disponovat objektem, jehož jedinými členskými funkcemi je [AddRef](/windows/desktop/api/unknwn/nf-unknwn-iunknown-addref) a [vydání](/windows/desktop/api/unknwn/nf-unknwn-iunknown-release) , bylo by dobré si objektu více příkazů, než [IUnknown](/windows/desktop/api/unknwn/nn-unknwn-iunknown) poskytuje. Tady [QueryInterface](/windows/desktop/api/unknwn/nf-unknwn-iunknown-queryinterface(q_)) je užitečné. Umožňuje získat různá "rozhraní" na stejný objekt. Tato rozhraní jsou obvykle odvozena z [IUnknown](/windows/desktop/api/unknwn/nn-unknwn-iunknown) a přidávají další funkce přidáním nových funkcí člena. Rozhraní COM nikdy nemají členské proměnné deklarované v rozhraní a všechny členské funkce jsou deklarovány jako čistě virtuální. Například
+Členská funkce [QueryInterface](/windows/win32/api/unknwn/nf-unknwn-iunknown-queryinterface(q_)) je trochu zajímavější. Není velmi zajímavá, že by měl být objekt, jehož jenom členské funkce jsou [AddRef](/windows/win32/api/unknwn/nf-unknwn-iunknown-addref) a [release](/windows/win32/api/unknwn/nf-unknwn-iunknown-release) – je vhodné říct objektu, aby provedl více věcí, než poskytuje [IUnknown](/windows/win32/api/unknwn/nn-unknwn-iunknown) . To je místo, kde je funkce [QueryInterface](/windows/win32/api/unknwn/nf-unknwn-iunknown-queryinterface(q_)) užitečná. Umožňuje získat jiné "rozhraní" na stejném objektu. Tato rozhraní jsou obvykle odvozena z [IUnknown](/windows/win32/api/unknwn/nn-unknwn-iunknown) a přidávají další funkce přidáním nových členských funkcí. Rozhraní COM nikdy nemají členské proměnné deklarované v rozhraní a všechny členské funkce jsou deklarovány jako čistě virtuální. Například
 
 ```cpp
 class IPrintInterface : public IUnknown
@@ -78,7 +78,7 @@ public:
 };
 ```
 
-Chcete získat IPrintInterface, pokud budete používat jen [IUnknown](/windows/desktop/api/unknwn/nn-unknwn-iunknown), volání [QueryInterface](/windows/desktop/api/unknwn/nf-unknwn-iunknown-queryinterface(q_)) pomocí `IID` z `IPrintInterface`. `IID` Je 128bitové číslo, které rozhraní jedinečně identifikuje. Je `IID` pro každé rozhraní, které buď které OLE definuje. Pokud *pUnk* je ukazatel [IUnknown](/windows/desktop/api/unknwn/nn-unknwn-iunknown) objektu, může být kód k načtení IPrintInterface z něj:
+Chcete-li získat IPrintInterface, pokud máte pouze [IUnknown](/windows/win32/api/unknwn/nn-unknwn-iunknown), zavolejte [QueryInterface](/windows/win32/api/unknwn/nf-unknwn-iunknown-queryinterface(q_)) pomocí `IID` metody z `IPrintInterface`. `IID` Je 128 číslo, které rozhraní jednoznačně identifikuje. `IID` Existuje pro každé rozhraní, které buď nebo definujete OLE. Pokud *punk* je ukazatel na objekt [IUnknown](/windows/win32/api/unknwn/nn-unknwn-iunknown) , kód, ze kterého se má IPrintInterface načíst, může být:
 
 ```cpp
 IPrintInterface* pPrint = NULL;
@@ -90,7 +90,7 @@ if (pUnk->QueryInterface(IID_IPrintInterface, (void**)&pPrint) == NOERROR)
 }
 ```
 
-Zdá se to být poměrně snadné, ale jak můžete implementovat objekt podporující IPrintInterface a [IUnknown](/windows/desktop/api/unknwn/nn-unknwn-iunknown) rozhraní v tomto případě je jednoduché vzhledem k tomu, že IPrintInterface je odvozen přímo z [IUnknown](/windows/desktop/api/unknwn/nn-unknwn-iunknown) – implementací IPrintInterface je [IUnknown](/windows/desktop/api/unknwn/nn-unknwn-iunknown) je automaticky podporován. Příklad:
+To je poměrně snadné, ale jak byste implementovali objekt podporující rozhraní IPrintInterface a [IUnknown](/windows/win32/api/unknwn/nn-unknwn-iunknown) v tomto případě je to jednoduché, protože IPrintInterface je odvozen přímo z [IUnknown](/windows/win32/api/unknwn/nn-unknwn-iunknown) – implementací IPrintInterface, Rozhraní [IUnknown](/windows/win32/api/unknwn/nn-unknwn-iunknown) je automaticky podporováno. Příklad:
 
 ```cpp
 class CPrintObj : public CPrintInterface
@@ -102,7 +102,7 @@ class CPrintObj : public CPrintInterface
 };
 ```
 
-Implementace [AddRef](/windows/desktop/api/unknwn/nf-unknwn-iunknown-addref) a [vydání](/windows/desktop/api/unknwn/nf-unknwn-iunknown-release) budou naprosto stejné jako implementovanými výše. `CPrintObj::QueryInterface` bude vypadat přibližně takto:
+Implementace [AddRef](/windows/win32/api/unknwn/nf-unknwn-iunknown-addref) a [release](/windows/win32/api/unknwn/nf-unknwn-iunknown-release) budou přesně stejné jako u implementací uvedených výše. `CPrintObj::QueryInterface`by vypadalo přibližně takto:
 
 ```cpp
 HRESULT CPrintObj::QueryInterface(REFIID iid, void FAR* FAR* ppvObj)
@@ -117,7 +117,7 @@ HRESULT CPrintObj::QueryInterface(REFIID iid, void FAR* FAR* ppvObj)
 }
 ```
 
-Jak je vidět, pokud je identifikátor rozhraní (IID) rozpoznán, je vrácen ukazatel na váš objekt; v opačném případě dojde k chybě. Všimněte si také, úspěšného [QueryInterface](/windows/desktop/api/unknwn/nf-unknwn-iunknown-queryinterface(q_)) vede k předpokládanému [AddRef](/windows/desktop/api/unknwn/nf-unknwn-iunknown-addref). Samozřejmě je také třeba implementovat CEditObj::Print. To je jednoduché, protože IPrintInterface byla odvozena přímo z [IUnknown](/windows/desktop/api/unknwn/nn-unknwn-iunknown) rozhraní. Nicméně, pokud jste chtěli podporu dvou různých rozhraní, obě odvozeny od [IUnknown](/windows/desktop/api/unknwn/nn-unknwn-iunknown), vezměte v úvahu následující:
+Jak vidíte, pokud je identifikátor rozhraní (IID) rozpoznán, je vrácen do objektu ukazatel. v opačném případě dojde k chybě. Všimněte si také, že výsledkem úspěchu [QueryInterface](/windows/win32/api/unknwn/nf-unknwn-iunknown-queryinterface(q_)) je implicitní [AddRef](/windows/win32/api/unknwn/nf-unknwn-iunknown-addref). Samozřejmě byste také museli implementovat CEditObj::P isknout. To je jednoduché, protože IPrintInterface byl přímo odvozen od rozhraní [IUnknown](/windows/win32/api/unknwn/nn-unknwn-iunknown) . Pokud jste však chtěli podporovat dvě různá rozhraní, jak je odvozeno od [IUnknown](/windows/win32/api/unknwn/nn-unknwn-iunknown), vezměte v úvahu následující:
 
 ```cpp
 class IEditInterface : public IUnkown
@@ -127,7 +127,7 @@ public:
 };
 ```
 
-I když existuje mnoho různých způsobů, jak implementovat třídu podporující rozhraní IEditInterface a IPrintInterface, včetně použití vícenásobné dědičnosti C++ tato poznámka se soustředí na používání vnořených tříd pro implementaci této funkce.
+I když existuje řada různých způsobů, jak implementovat třídu podporující IEditInterface i IPrintInterface, včetně použití C++ vícenásobné dědičnosti, tato poznámka se soustředí na použití vnořených tříd pro implementaci této funkce.
 
 ```cpp
 class CEditPrintObj
@@ -160,7 +160,7 @@ public:
 };
 ```
 
-Celé provedení je zahrnuto níže:
+Celá implementace je uvedená níže:
 
 ```cpp
 CEditPrintObj::CEditPrintObj()
@@ -232,53 +232,53 @@ HRESULT CEditPrintObj::CPrintObj::QueryInterface(REFIID iid, void** ppvObj)
 }
 ```
 
-Všimněte si, že většina [IUnknown](/windows/desktop/api/unknwn/nn-unknwn-iunknown) implementace je umístěn do třídy CEditPrintObj namísto duplikování kódu v CEditPrintObj::CEditObj a CEditPrintObj::CPrintObj. To snižuje množství kódu a zabraňuje chybám. Klíčovým bodem tedy je, že je možné volat z rozhraní IUnknown [QueryInterface](/windows/desktop/api/unknwn/nf-unknwn-iunknown-queryinterface(q_)) Pokud chcete načíst tak libovolné rozhraní může objekt podporovat a z každého z těchto rozhraní je možné provádět to stejné. To znamená, že všechny [QueryInterface](/windows/desktop/api/unknwn/nf-unknwn-iunknown-queryinterface(q_)) funkce z každého rozhraní se musí chovat přesně stejným způsobem. Aby tyto vložené objekty volaly implementaci ve "vnějším objektu" je ukazatel zpětného ukazatele používané (m_pParent). Během konstruktoru CEditPrintObj je inicializován ukazatel m_pParent. Pak byste implementovali také ceditprintobj::cprintobj:: Printobject a ceditprintobj::ceditobj:: také. Byl přidán poměrně kódu jednu funkci – možnost upravit objekt. Naštěstí je poměrně neobvyklé pro rozhraní, aby měly pouze jednu členskou funkci (i když k tomu dochází) a v takovém případě by EditObject a PrintObject obvykle byly sloučeny do jediného rozhraní.
+Všimněte si, že většina implementace [IUnknown](/windows/win32/api/unknwn/nn-unknwn-iunknown) je umístěna do třídy CEditPrintObj namísto Duplikace kódu v CEditPrintObj:: CEditObj a CEditPrintObj:: CPrintObj. Tím se sníží množství kódu a vyhne se chybám. Klíčovým bodem, který je tady z rozhraní IUnknown, je možné zavolat funkci [QueryInterface](/windows/win32/api/unknwn/nf-unknwn-iunknown-queryinterface(q_)) , aby se načetlo rozhraní, které může objekt podporovat, a z každého z těchto rozhraní je možné provést stejnou činnost. To znamená, že všechny funkce [QueryInterface](/windows/win32/api/unknwn/nf-unknwn-iunknown-queryinterface(q_)) dostupné z každého rozhraní se musí chovat naprosto stejným způsobem. Aby tyto vložené objekty volaly implementaci v "vnějším objektu", je použit zpětný ukazatel (m_pParent). Ukazatel m_pParent je inicializován během konstruktoru CEditPrintObj. Pak byste implementovali CEditPrintObj:: CPrintObj::P rintObject a CEditPrintObj:: CEditObj:: EditObject i. Byl přidán poměrně nějaký bitový kód pro přidání jedné funkce – možnost upravovat objekt. Naštěstí je poměrně Neběžné, že rozhraní mají pouze jednu členskou funkci (i když k tomu dojde) a v tomto případě by EditObject a PrintObject byly obvykle zkombinovány do jediného rozhraní.
 
-To je velké množství vysvětlení a velké množství kódu pro tak jednoduchý scénář. Třídy MFC/OLE poskytují jednodušší alternativu. Implementace MFC používá techniku podobnou způsobu, jakým jsou zprávy Windows zabaleny s mapami zpráv. Toto zařízení se nazývá *mapy rozhraní* a je popsána v následující části.
+To je velké množství vysvětlení a velké množství kódu pro takový jednoduchý scénář. Třídy MFC/OLE poskytují jednodušší alternativu. Implementace MFC používá techniku podobnou způsobu, jakým jsou zprávy systému Windows zabaleny pomocí map zpráv. Toto zařízení se nazývá *mapy rozhraní* a je popsáno v další části.
 
 ## <a name="mfc-interface-maps"></a>Mapy rozhraní MFC
 
-MFC/OLE obsahuje implementaci "Mapy rozhraní" podobné MFC "Mapy zprávy" a "Mapy odeslání" v pojetí a provedení. Základní funkce mapování rozhraní knihovny MFC jsou následující:
+MFC/OLE zahrnuje implementaci "map rozhraní", která se podobá "mapách zpráv v knihovně MFC" Maps "a" Maps "v rámci konceptu a provádění. Základní funkce map rozhraní knihovny MFC jsou následující:
 
-- Standardní implementace [IUnknown](/windows/desktop/api/unknwn/nn-unknwn-iunknown), integrované `CCmdTarget` třídy.
+- Standardní implementace rozhraní `CCmdTarget` [IUnknown](/windows/win32/api/unknwn/nn-unknwn-iunknown), integrovaná do třídy.
 
-- Údržba počtu odkazů upravil [AddRef](/windows/desktop/api/unknwn/nf-unknwn-iunknown-addref) a [vydání verze](/windows/desktop/api/unknwn/nf-unknwn-iunknown-release)
+- Údržba počtu odkazů, který změnil [AddRef](/windows/win32/api/unknwn/nf-unknwn-iunknown-addref) a [release](/windows/win32/api/unknwn/nf-unknwn-iunknown-release)
 
-- Implementace dat řízených [QueryInterface](/windows/desktop/api/unknwn/nf-unknwn-iunknown-queryinterface(q_))
+- Implementovaná implementace [QueryInterface](/windows/win32/api/unknwn/nf-unknwn-iunknown-queryinterface(q_)) na základě dat
 
-Kromě toho mapy rozhraní podporují následující rozšířené funkce:
+Kromě toho mapy rozhraní podporují tyto rozšířené funkce:
 
-- Podpora pro vytváření agregovatelných objektů COM
+- Podpora pro vytváření agregovatelné objekty COM
 
-- Podpora pro používání agregovaných objektů v implementaci objektu COM.
+- Podpora použití agregačních objektů v implementaci objektu COM
 
-- Implementace je připojitelná a rozšiřitelná
+- Implementace je vidlicová a rozšiřitelná.
 
-Další informace o agregaci naleznete v tématu [agregace](/windows/desktop/com/aggregation) tématu.
+Další informace o agregaci naleznete v tématu [agregace](/windows/win32/com/aggregation) .
 
-Podpora mapování rozhraní knihovny MFC je integrován `CCmdTarget` třídy. `CCmdTarget` "*a má*" referenční počet stejně jako všechny členské funkce přidružené [IUnknown](/windows/desktop/api/unknwn/nn-unknwn-iunknown) implementace (počet odkazů je například `CCmdTarget`). Chcete-li vytvořit třídu, která podporuje OLE COM, odvoďte třídu z `CCmdTarget` a použijte různá makra a členské funkce `CCmdTarget` k implementaci požadovaných rozhraní. Implementace MFC používá vnořené třídy pro definici jednotlivých implementací rozhraní, podobně jako v příkladu výše. Tím se usnadní pomocí standardní implementace IUnknown a počtu maker, které eliminují některý opakovaný kód.
+Podpora mapování rozhraní knihovny MFC je ve `CCmdTarget` třídě rootovaná. `CCmdTarget`"*má-a*" počet odkazů a všechny členské funkce přidružené k implementaci [IUnknown](/windows/win32/api/unknwn/nn-unknwn-iunknown) (například počet odkazů je v `CCmdTarget`). Chcete-li vytvořit třídu, která podporuje OLE com, odvodit třídu `CCmdTarget` z a použít různé makra a členské `CCmdTarget` funkce pro implementaci požadovaných rozhraní. Implementace knihovny MFC používá vnořené třídy k definování každé implementace rozhraní podobně jako v příkladu výše. To je snazší díky standardní implementaci rozhraní IUnknown a také k množství maker, které eliminují některé opakující kód.
 
 ## <a name="interface-map-basics"></a>Základy mapování rozhraní
 
-### <a name="to-implement-a-class-using-mfcs-interface-maps"></a>Jak implementovat třídu pomocí rozhraní MFC mapy
+### <a name="to-implement-a-class-using-mfcs-interface-maps"></a>Implementace třídy pomocí map rozhraní MFC
 
-1. Přímo nebo nepřímo odvodit třídu z `CCmdTarget`.
+1. Odvodit třídu buď přímo, nebo nepřímo `CCmdTarget`z.
 
-2. Použití `DECLARE_INTERFACE_MAP` funkce v definici odvozené třídy.
+2. `DECLARE_INTERFACE_MAP` Použijte funkci v definici odvozené třídy.
 
-3. Pro každé rozhraní, které chcete podporovat použijte BEGIN_INTERFACE_PART a END_INTERFACE_PART makra v definici třídy.
+3. Pro každé rozhraní, které chcete podporovat, použijte makra BEGIN_INTERFACE_PART a END_INTERFACE_PART v definici třídy.
 
-4. V souboru implementace pomocí makra BEGIN_INTERFACE_MAP a END_INTERFACE_MAP definovat mapování rozhraní třídy.
+4. V implementačním souboru použijte makra BEGIN_INTERFACE_MAP a END_INTERFACE_MAP k definování mapy rozhraní třídy.
 
-5. Pro každý podporovaný identifikátor IID použijte INTERFACE_PART – makro mezi BEGIN_INTERFACE_MAP a END_INTERFACE_MAP makra pro mapování daného IID na konkrétní "část" vaší třídy.
+5. Pro každý podporovaný identifikátor IID použijte makro INTERFACE_PART mezi makry BEGIN_INTERFACE_MAP a END_INTERFACE_MAP k namapování tohoto IID na konkrétní "část" vaší třídy.
 
-6. Implementace všech vnořených tříd, které představují rozhraní, které podporujete.
+6. Implementujte všechny vnořené třídy, které reprezentují rozhraní, které podporujete.
 
-7. Použít pro přístup k nadřízenému METHOD_PROLOGUE – makro `CCmdTarget`-odvozenému objektu.
+7. Použijte makro METHOD_PROLOGUE pro přístup k nadřazenému objektu `CCmdTarget`, který je odvozen.
 
-8. [AddRef](/windows/desktop/api/unknwn/nf-unknwn-iunknown-addref), [vydání](/windows/desktop/api/unknwn/nf-unknwn-iunknown-release), a [QueryInterface](/windows/desktop/api/unknwn/nf-unknwn-iunknown-queryinterface(q_)) může delegovat `CCmdTarget` implementaci těchto funkcí (`ExternalAddRef`, `ExternalRelease`, a `ExternalQueryInterface`).
+8. [AddRef](/windows/win32/api/unknwn/nf-unknwn-iunknown-addref), [release](/windows/win32/api/unknwn/nf-unknwn-iunknown-release)a [QueryInterface](/windows/win32/api/unknwn/nf-unknwn-iunknown-queryinterface(q_)) mohou `CCmdTarget` delegovat na`ExternalAddRef` implementacitěchto`ExternalRelease`funkcí (, a ).`ExternalQueryInterface`
 
-Může uvedený příklad CPrintEditObj je implementován takto:
+Výše uvedený příklad CPrintEditObj může být implementován následujícím způsobem:
 
 ```cpp
 class CPrintEditObj : public CCmdTarget
@@ -300,9 +300,9 @@ protected:
 };
 ```
 
-Výše uvedené prohlášení vytvoří třídu odvozenou z `CCmdTarget`. DECLARE_INTERFACE_MAP – makro říká rozhraní framework, že tato třída bude mít vlastní mapu rozhraní. Kromě toho makra BEGIN_INTERFACE_PART a END_INTERFACE_PART definují vnořené třídy, v tomto případě s názvy CEditObj a CPrintObj (X slouží pouze k odlišení vnořených tříd od globálních tříd, které začíná "C" a rozhraní, třídy, které Začněte s "I"). Jsou vytvořeny dva vnoření členové těchto tříd: m_CEditObj a m_CPrintObj v uvedeném pořadí. Makra umožňují automaticky deklarovat [AddRef](/windows/desktop/api/unknwn/nf-unknwn-iunknown-addref), [vydání](/windows/desktop/api/unknwn/nf-unknwn-iunknown-release), a [QueryInterface](/windows/desktop/api/unknwn/nf-unknwn-iunknown-queryinterface(q_)) funkce; proto je pouze deklarovat pouze funkce specifické pro toto rozhraní: By EditObject a PrintObject (makro OLE se používá STDMETHOD tak, aby **_stdcall** a virtuální klíčová slova jsou k dispozici pro cílovou platformu podle potřeby).
+Výše uvedená deklarace vytvoří třídu odvozenou z `CCmdTarget`. DECLARE_INTERFACE_MAP makro oznamuje rozhraní, že tato třída bude mít vlastní mapu rozhraní. Kromě toho makra BEGIN_INTERFACE_PART a END_INTERFACE_PART definují vnořené třídy, v tomto případě s názvy CEditObj a CPrintObj (X se používá pouze k odlišení vnořených tříd od globálních tříd, které začínají na "C" a tříd rozhraní, které Začněte s "I"). Vytvoří se dva vnořené členy těchto tříd: m_CEditObj a m_CPrintObj, v uvedeném pořadí. Makra automaticky deklarují funkce [AddRef](/windows/win32/api/unknwn/nf-unknwn-iunknown-addref), [release](/windows/win32/api/unknwn/nf-unknwn-iunknown-release)a [QueryInterface](/windows/win32/api/unknwn/nf-unknwn-iunknown-queryinterface(q_)) ; Proto deklarujete pouze funkce, které jsou specifické pro toto rozhraní: EditObject a PrintObject (makro OLE STDMETHOD se používá, aby se pro cílovou platformu poskytovala klíčová slova **_stdcall** a Virtual).
 
-Chcete-li implementovat mapu rozhraní pro tuto třídu:
+Pro implementaci mapy rozhraní pro tuto třídu:
 
 ```cpp
 BEGIN_INTERFACE_MAP(CPrintEditObj, CCmdTarget)
@@ -311,9 +311,9 @@ BEGIN_INTERFACE_MAP(CPrintEditObj, CCmdTarget)
 END_INTERFACE_MAP()
 ```
 
-To spojí IID_IPrintInterface IID s m_CPrintObj a IID_IEditInterface s m_CEditObj v uvedeném pořadí. `CCmdTarget` Provádění [QueryInterface](/windows/desktop/api/unknwn/nf-unknwn-iunknown-queryinterface(q_)) (`CCmdTarget::ExternalQueryInterface`) používá tuto mapu k vrácení ukazatele do m_CPrintObj a m_CEditObj na požádání. Není nutné zahrnout položku pro `IID_IUnknown`; rámec použije první mapované rozhraní mapy (v tomto případě m_CPrintObj) při `IID_IUnknown` je požadováno.
+Tím se připojí IID IID_IPrintInterface k m_CPrintObj a IID_IEditInterface s m_CEditObj. Implementace QueryInterface(`CCmdTarget::ExternalQueryInterface`) používá tuto mapu k vrácení ukazatelů na m_CPrintObj a m_CEditObj, pokud se požadují. [](/windows/win32/api/unknwn/nf-unknwn-iunknown-queryinterface(q_)) `CCmdTarget` Není nutné zahrnout položku pro `IID_IUnknown`; rozhraní použije první rozhraní v mapě (v tomto případě m_CPrintObj), když `IID_IUnknown` je požadováno.
 
-I když BEGIN_INTERFACE_PART – makro automaticky deklarovalo [AddRef](/windows/desktop/api/unknwn/nf-unknwn-iunknown-addref), [vydání](/windows/desktop/api/unknwn/nf-unknwn-iunknown-release) a [QueryInterface](/windows/desktop/api/unknwn/nf-unknwn-iunknown-queryinterface(q_)) funkce pro vás, je stále potřeba je implementovat:
+I když makro BEGIN_INTERFACE_PART automaticky deklarovalo [AddRef](/windows/win32/api/unknwn/nf-unknwn-iunknown-addref), [vydání](/windows/win32/api/unknwn/nf-unknwn-iunknown-release) a funkce [QueryInterface](/windows/win32/api/unknwn/nf-unknwn-iunknown-queryinterface(q_)) pro vás, je stále nutné je implementovat:
 
 ```cpp
 ULONG FAR EXPORT CEditPrintObj::XEditObj::AddRef()
@@ -343,41 +343,41 @@ void FAR EXPORT CEditPrintObj::XEditObj::EditObject()
 }
 ```
 
-Implementace CEditPrintObj::CPrintObj, bude nějak výše uvedenou definicí pro CEditPrintObj::CEditObj. I když by bylo možné vytvořit makro, které může použít k automatickému generování těchto funkcí (ale dříve při vývoji technologie MFC/OLE to byl tento případ), bude obtížné nastavit body přerušení, když makro vytvoří více než jeden řádek kódu. Z tohoto důvodu tento kód rozbalen ručně.
+Implementace pro CEditPrintObj:: CPrintObj bude podobná výše uvedeným definicím pro CEditPrintObj:: CEditObj. I když by bylo možné vytvořit makro, které by bylo možné použít k automatickému generování těchto funkcí (ale dříve v vývoji MFC/OLE), je obtížné nastavit body přerušení, když makro generuje více než jeden řádek kódu. Z tohoto důvodu je tento kód rozbalen ručně.
 
-Pomocí implementace rozhraní mapování zpráv existuje několik věcí, které nebylo nezbytné učinit:
+Pomocí implementace rozhraní map zpráv je k dispozici několik věcí, které není nutné provést:
 
 - Implementace QueryInterface
 
 - Implementace AddRef a Release
 
-- Deklarace některé z těchto vestavěných metod na obě vaše rozhraní
+- Deklarovat jednu z těchto integrovaných metod na obou vašich rozhraních
 
-Kromě toho rozhraní používá interní mapy zpráv. Díky tomu lze odvodit z třídy systému, Řekněme, že `COleServerDoc`, která již podporuje určitá rozhraní a poskytuje náhrady nebo dodatky k rozhraním poskytovaným rozhraním. Můžete to provést, protože systém plně podporuje dědění mapy rozhraní ze základní třídy. To je důvod, proč BEGIN_INTERFACE_MAP bere jako svůj druhý parametr název základní třídy.
-
-> [!NOTE]
-> Obecně není možné znovu použít implementaci předdefinovaných implementací MFC rozhraní OLE pouhým zděděním vložené specializace rozhraní z verze MFC. To není možné protože použití METHOD_PROLOGUE – makro k získání přístupu do obsahujícího `CCmdTarget`-odvozené objekt implikuje *pevné odsazení* vloženého objektu z `CCmdTarget`-odvozenému objektu. To například znamená, že nemůžete odvodit vestavěnou vložený XMyAdviseSink z implementace MFC v `COleClientItem::XAdviseSink`, protože XAdviseSink spoléhá na to se v konkrétním odsazení od horní části `COleClientItem` objektu.
+Rozhraní navíc používá interní mapování zpráv. To vám umožňuje odvozovat z třídy architektury, `COleServerDoc`například, která již podporuje určitá rozhraní, a poskytuje buď náhrady nebo doplňky rozhraní poskytovaných rozhraním. To lze provést, protože rozhraní plně podporuje dědění mapování rozhraní ze základní třídy. To je důvod, proč BEGIN_INTERFACE_MAP přebírá jako druhý parametr název základní třídy.
 
 > [!NOTE]
-> Můžete však delegovat do implementace MFC pro všechny funkce, které mají výchozí chování knihovny MFC. To se provádí v implementaci MFC `IOleInPlaceFrame` (XOleInPlaceFrame) v `COleFrameHook` třídy (deleguje se do m_xOleInPlaceUIWindow pro mnoho funkcí). Tento návrh byl zvolen ke zmenšení velikosti runtime objektů, které implementují mnoho rozhraní; To eliminuje potřebu ukazatel zpětného ukazatele (jako způsob m_pParent použitý v předchozí části).
+> Obecně není možné znovu použít implementaci předdefinovaných implementací knihovny MFC rozhraní OLE, a to pouze děděním vložené specializace rozhraní z verze knihovny MFC. To není možné, protože použití makra METHOD_PROLOGUE k získání přístupu k objektu obsahujícímu `CCmdTarget`odvození implikuje *pevný posun* `CCmdTarget`vloženého objektu z objektu odvozeného od. To znamená, že nemůžete například odvodit vložené myadvisesink z implementace knihovny MFC v `COleClientItem::XAdviseSink`systému, protože XAdviseSink spoléhá na konkrétní posun od horní `COleClientItem` části objektu.
+
+> [!NOTE]
+> Můžete však delegovat na implementaci knihovny MFC pro všechny funkce, které mají výchozí chování knihovny MFC. K tomu slouží implementace knihovny MFC systému `IOleInPlaceFrame` (XOleInPlaceFrame) `COleFrameHook` ve třídě (která se deleguje pro m_xOleInPlaceUIWindow pro mnoho funkcí). Tento návrh byl zvolen pro snížení běhové velikosti objektů, které implementují mnoho rozhraní; eliminuje nutnost zpětného ukazatele (například způsobu použití m_pParent v předchozí části).
 
 ### <a name="aggregation-and-interface-maps"></a>Agregace a mapy rozhraní
 
-Kromě podpory samostatných objektů COM, MFC také podporuje agregaci. Agregace sama o sobě je příliš složité téma fattica. odkazovat [agregace](/windows/desktop/com/aggregation) tématu pro další informace o agregaci. Tato poznámka bude jednoduše popisovat podporu agregace integrované do mapy rozhraní framework a interface.
+Kromě podpory samostatných objektů COM podporuje i knihovna MFC také agregaci. Vlastní agregace je příliš složitá téma, které by bylo možné diskutovat. Další informace o agregaci naleznete v tématu [agregace](/windows/win32/com/aggregation) . Tato Poznámka bude jednoduše popsat podporu agregace integrované do map rozhraní a rozhraní.
 
-Existují dva způsoby použití agregace: (1) použití objektu COM, který podporuje agregaci a (2) implementace objektu, který může být agregovaný jiným. Tyto možnosti lze odkazovat jako "použití agregovaného objektu" a "nastavení objektu jako jako agregovatelného". MFC podporuje oboje.
+Agregace můžete použít dvěma způsoby: (1) použití objektu COM, který podporuje agregaci a (2) implementace objektu, který může být agregován jiným objektem. Tyto možnosti se dají označovat jako "použití agregačního objektu" a "vytvoření objektu, který lze agregovat". Knihovna MFC podporuje obojí.
 
-### <a name="using-an-aggregate-object"></a>Použití agregovaného objektu
+### <a name="using-an-aggregate-object"></a>Použití agregačního objektu
 
-Chcete-li použít agregovaný objekt, musí existovat způsob, jak navázat agregát na mechanismus QueryInterface. Jinými slovy agregovaný objekt se musí chovat jako by šlo o nativní součást vašeho objektu. Jak se tento tie do mechanismu mapování rozhraní knihovny MFC kromě INTERFACE_PART – makro tam, kde vnořený objekt mapován na IID, můžete také deklarovat agregovaný objekt jako součást vaší `CCmdTarget` odvozené třídy. K tomu slouží makra INTERFACE_AGGREGATE. To vám umožní určit členskou proměnnou (která musí být ukazatel na [IUnknown](/windows/desktop/api/unknwn/nn-unknwn-iunknown) nebo odvozené třídy), které se mají být začleněny do mechanismu mapování rozhraní. Pokud ukazatel není NULL při `CCmdTarget::ExternalQueryInterface` je volána, rozhraní automaticky zavolá agregovaný objekt [QueryInterface](/windows/desktop/api/unknwn/nf-unknwn-iunknown-queryinterface(q_)) členské funkce, pokud `IID` požadovaný není nativní `IID`s nepodporuje `CCmdTarget` samotného objektu.
+Chcete-li použít agregovaný objekt, musí být nějaký způsob, jak spojit agregaci s mechanismem QueryInterface. Jinými slovy, agregovaný objekt se musí chovat, jako by se jednalo o nativní část vašeho objektu. Takže to, jak to dělá do mechanismu mapování rozhraní knihovny MFC, kromě makra INTERFACE_PART, kde je vnořený objekt mapován na identifikátor IID, můžete také deklarovat agregovaný objekt jako součást vaší `CCmdTarget` odvozené třídy. K tomu je použito makro INTERFACE_AGGREGATE. To umožňuje zadat členskou proměnnou (která musí být ukazatel na třídu [IUnknown](/windows/win32/api/unknwn/nn-unknwn-iunknown) nebo odvozenou třídu), která má být integrována do mechanismu mapování rozhraní. Pokud při `CCmdTarget::ExternalQueryInterface` volání není ukazatel na hodnotu null, rozhraní automaticky zavolá členskou `IID` funkci [QueryInterface](/windows/win32/api/unknwn/nf-unknwn-iunknown-queryinterface(q_)) agregačního objektu, pokud požadovaný není jednou z nativních `IID`verzí podporovaných rozhraním `CCmdTarget`samotný objekt.
 
-#### <a name="to-use-the-interfaceaggregate-macro"></a>K použití makra interface_aggregate
+#### <a name="to-use-the-interface_aggregate-macro"></a>Použití makra INTERFACE_AGGREGATE
 
-1. Deklarace členské proměnné ( `IUnknown*`) která bude obsahovat ukazatel na agregovaný objekt.
+1. Deklarujete členskou proměnnou ( `IUnknown*`a), která bude obsahovat ukazatel na agregovaný objekt.
 
-2. Patří makra INTERFACE_AGGREGATE v mapě rozhraní odkazující na členskou proměnnou podle názvu.
+2. Zahrňte do mapy rozhraní INTERFACE_AGGREGATE makro, které odkazuje na členskou proměnnou podle názvu.
 
-3. V určitém okamžiku (obvykle během `CCmdTarget::OnCreateAggregates`), inicializuje členská proměnná na jinou hodnotu než NULL.
+3. V určitém bodě (obvykle `CCmdTarget::OnCreateAggregates`během) inicializujte členskou proměnnou na jinou hodnotu než null.
 
 Příklad:
 
@@ -419,25 +419,25 @@ BEGIN_INTERFACE_MAP(CAggrExample, CCmdTarget)
 END_INTERFACE_MAP()
 ```
 
-Proměnná m_lpAggrInner je inicializována v konstruktoru na hodnotu NULL. Rámec ignoruje členskou proměnnou NULL ve výchozí implementaci [QueryInterface](/windows/desktop/api/unknwn/nf-unknwn-iunknown-queryinterface(q_)). `OnCreateAggregates` je vhodné místo pro vytvoření skutečných agregovaných objektů. Bude nutné jej volat explicitně, pokud vytváříte objekt mimo implementaci MFC `COleObjectFactory`. Důvod vytvoření agregace v `CCmdTarget::OnCreateAggregates` a využití `CCmdTarget::GetControllingUnknown` se stane při vytváření agregovatelných objektů je popsána zřejmý.
+Proměnná m_lpAggrInner je inicializována v konstruktoru na hodnotu NULL. Rozhraní ignoruje členskou proměnnou NULL ve výchozí implementaci [QueryInterface](/windows/win32/api/unknwn/nf-unknwn-iunknown-queryinterface(q_)). `OnCreateAggregates`je vhodným místem pro vytvoření vašich agregačních objektů. Pokud vytváříte objekt mimo implementaci knihovny MFC systému `COleObjectFactory`, bude nutné jej volat explicitně. Důvodem pro vytváření agregací v `CCmdTarget::OnCreateAggregates` nástroji a při `CCmdTarget::GetControllingUnknown` použití nástroje bude zjevné při vytváření agregovaných objektů.
 
-Tato technika vám poskytne vašemu objektu všechna rozhraní, která agregovaný objekt podporuje, a jeho nativní rozhraní. Pokud chcete pouze podmnožinu rozhraní, která podporuje agregace, můžete přepsat `CCmdTarget::GetInterfaceHook`. To vám umožní hookability velmi nízké úrovni, podobné [QueryInterface](/windows/desktop/api/unknwn/nf-unknwn-iunknown-queryinterface(q_)). Obvykle chcete všechna rozhraní, která podporuje agregace.
+Tato technika poskytne vašemu objektu všechna rozhraní, která podporuje agregovaný objekt, a jeho nativní rozhraní. Pokud chcete pouze podmnožinu rozhraní, která podporuje agregace, můžete přepsat `CCmdTarget::GetInterfaceHook`. To vám umožní hodně se zahnutí na nízké úrovni, podobně jako [QueryInterface](/windows/win32/api/unknwn/nf-unknwn-iunknown-queryinterface(q_)). Obvykle požadujete všechna rozhraní, která agregace podporuje.
 
-### <a name="making-an-object-implementation-aggregatable"></a>Vytváření agregovatelných implementace objektu
+### <a name="making-an-object-implementation-aggregatable"></a>Vytvoření agregovatelné implementace objektu
 
-Pro objekt chcete umožnit možnost agregace, provádění [AddRef](/windows/desktop/api/unknwn/nf-unknwn-iunknown-addref), [vydání](/windows/desktop/api/unknwn/nf-unknwn-iunknown-release), a [QueryInterface](/windows/desktop/api/unknwn/nf-unknwn-iunknown-queryinterface(q_)) musí delegovat na "řídící Neznámá". Jinými slovy, aby se jednat o část objektu, je třeba delegovat [AddRef](/windows/desktop/api/unknwn/nf-unknwn-iunknown-addref), [vydání](/windows/desktop/api/unknwn/nf-unknwn-iunknown-release), a [QueryInterface](/windows/desktop/api/unknwn/nf-unknwn-iunknown-queryinterface(q_)) na jiný objekt, také odvozený z [ IUnknown](/windows/desktop/api/unknwn/nn-unknwn-iunknown). Tato "řídící Neznámá" je k dispozici na objekt při jeho vytvoření, to znamená, je poskytována pro implementaci `COleObjectFactory`. Tato implementace provede malé množství režie a v některých případech není žádoucí, takže knihovny MFC volitelné. Chcete-li umožnit možnost agregace objektu, volejte `CCmdTarget::EnableAggregation` z konstruktoru objektu.
+Pro agregaci objektu musí implementace [AddRef](/windows/win32/api/unknwn/nf-unknwn-iunknown-addref), [release](/windows/win32/api/unknwn/nf-unknwn-iunknown-release)a [QueryInterface](/windows/win32/api/unknwn/nf-unknwn-iunknown-queryinterface(q_)) delegovat na "řízení neznámé". Jinými slovy, aby mohl být součástí objektu, musí delegovat [AddRef](/windows/win32/api/unknwn/nf-unknwn-iunknown-addref), [release](/windows/win32/api/unknwn/nf-unknwn-iunknown-release)a [QueryInterface](/windows/win32/api/unknwn/nf-unknwn-iunknown-queryinterface(q_)) na jiný objekt, také odvozený z [IUnknown](/windows/win32/api/unknwn/nn-unknwn-iunknown). Tato "řídicí neznámá" je při vytvoření objektu k dispozici, to znamená, že je k dispozici pro implementaci `COleObjectFactory`. Implementace těchto prostředků přináší menší množství režie a v některých případech není žádoucí, takže knihovna MFC tuto volitelnou. Chcete-li povolit agregaci objektu, zavoláte `CCmdTarget::EnableAggregation` z konstruktoru objektu.
 
-Pokud objekt také používá agregace, musíte být také potřeba správný průchod "řídící Neznámá" pro agregaci objektů. Obvykle to [IUnknown](/windows/desktop/api/unknwn/nn-unknwn-iunknown) ukazatel je předán do objektu při vytvoření agregace. Například parametr pUnkOuter je "řídící Neznámá" pro objekty vytvořené pomocí `CoCreateInstance`. Správný ukazatel "řídící Neznámá" může být načten voláním `CCmdTarget::GetControllingUnknown`. Hodnota vrácená z této funkce však není během sestavování konstruktoru. Z tohoto důvodu doporučujeme vytvořit vaše agregace pouze v přepsání `CCmdTarget::OnCreateAggregates`, kde návratová hodnota z `GetControllingUnknown` je spolehlivá, i v případě vytvoření z `COleObjectFactory` implementace.
+Pokud objekt také používá agregace, je nutné také předat správné "řízení neznámé" do agregovaných objektů. Tento ukazatel [IUnknown](/windows/win32/api/unknwn/nn-unknwn-iunknown) je obvykle předán objektu při vytvoření agregace. Například Parametr pUnkOuter je "řízení neznámé" pro objekty vytvořené pomocí `CoCreateInstance`. Správný ukazatel "řízení neznámá" lze načíst voláním `CCmdTarget::GetControllingUnknown`. Hodnota vrácená z této funkce však není během konstruktoru platná. Z tohoto důvodu je doporučeno vytvořit agregace pouze v přepsání `CCmdTarget::OnCreateAggregates`, kde vrácená hodnota z `GetControllingUnknown` je spolehlivá, `COleObjectFactory` i když je vytvořena z implementace.
 
-Je také důležité, že objekt manipuluje počtem správných odkazů při přidávání nebo uvolnění počtů umělých odkazů. Aby to platí vždy volat `ExternalAddRef` a `ExternalRelease` místo `InternalRelease` a `InternalAddRef`. Zřídka dochází k volání `InternalRelease` nebo `InternalAddRef` na třídu, která podporuje agregace.
+Je také důležité, aby objekt při přidávání nebo uvolňování umělých odkazů spolupracuje se správným počtem odkazů. Chcete-li se ujistit, že se jedná `ExternalAddRef` o tento případ `InternalRelease` , `InternalAddRef`vždy zavolejte a `ExternalRelease` místo a. Je málo pravděpodobné volat `InternalRelease` nebo `InternalAddRef` na třídu, která podporuje agregaci.
 
 ## <a name="reference-material"></a>Referenční materiál
 
-Pokročilé použití OLE, jako je definování vlastního rozhraní nebo přepsání implementace rozhraní OLE, vyžaduje použití základního mechanismu mapování rozhraní.
+Pokročilé použití technologie OLE, jako je definování vlastních rozhraní nebo přepsání implementace rozhraní OLE, vyžaduje použití základního mechanismu mapování rozhraní.
 
-Tato část popisuje jednotlivá makra a rozhraní API, která se používá k implementaci těchto rozšířených funkcí.
+V této části jsou popsána jednotlivá makra a rozhraní API, která slouží k implementaci těchto pokročilých funkcí.
 
-### <a name="ccmdtargetenableaggregation--function-description"></a>CCmdTarget::EnableAggregation – Popis funkce
+### <a name="ccmdtargetenableaggregation--function-description"></a>CCmdTarget:: EnableAggregation – Popis funkce
 
 ```cpp
 void EnableAggregation();
@@ -445,9 +445,9 @@ void EnableAggregation();
 
 #### <a name="remarks"></a>Poznámky
 
-Voláním této funkce v konstruktoru odvozené třídy, pokud si přejete podporovat agregace OLE pro objekty tohoto typu. To připraví speciální implementaci IUnknown, která je požadována pro agregovatelné objekty.
+Voláním této funkce v konstruktoru odvozené třídy, pokud chcete podporovat agregaci OLE pro objekty tohoto typu. Tím se připraví speciální implementace IUnknown, která je nutná pro agregovatelné objekty.
 
-### <a name="ccmdtargetexternalqueryinterface--function-description"></a>CCmdTarget::ExternalQueryInterface – Popis funkce
+### <a name="ccmdtargetexternalqueryinterface--function-description"></a>CCmdTarget:: ExternalQueryInterface – Popis funkce
 
 ```cpp
 DWORD ExternalQueryInterface(
@@ -459,16 +459,16 @@ DWORD ExternalQueryInterface(
 #### <a name="parameters"></a>Parametry
 
 *lpIID*<br/>
-Vzdálenější ukazatel na IID (první argument funkce QueryInterface)
+Zcela ukazatel na IID (první argument pro QueryInterface)
 
 *ppvObj*<br/>
-Ukazatel rozhraní IUnknown * (druhý argument funkce QueryInterface)
+Ukazatel na IUnknown * (druhý argument na QueryInterface)
 
 #### <a name="remarks"></a>Poznámky
 
-Volejte tuto funkce ve vaší implementaci IUnknown pro každé rozhraní vaše třída implementuje. Tato funkce poskytuje standardní řízené daty implementaci QueryInterface na základě mapy rozhraní objektu. Je nezbytné převést vrácenou hodnotu na HRESULT. Pokud objekt je agregován, tato funkce bude volat "Řízení IUnknown" namísto použití místní mapu rozhraní.
+Zavolejte tuto funkci v implementaci IUnknown pro každé rozhraní, které vaše třída implementuje. Tato funkce poskytuje standardní datově řízenou implementaci QueryInterface na základě mapy rozhraní vašeho objektu. Je nutné přetypovat návratovou hodnotu na HRESULT. Pokud je objekt agregovaný, tato funkce místo použití mapování místních rozhraní zavolá "řízení IUnknown".
 
-### <a name="ccmdtargetexternaladdref--function-description"></a>CCmdTarget::ExternalAddRef – Popis funkce
+### <a name="ccmdtargetexternaladdref--function-description"></a>CCmdTarget:: ExternalAddRef – Popis funkce
 
 ```cpp
 DWORD ExternalAddRef();
@@ -476,9 +476,9 @@ DWORD ExternalAddRef();
 
 #### <a name="remarks"></a>Poznámky
 
-Volejte tuto funkce ve vaší implementaci IUnknown::addref pro každé rozhraní vaše třída implementuje. Vrácená hodnota je nový počet odkazů na objekt CCmdTarget. Pokud objekt je agregován, tato funkce bude volat "Řízení IUnknown" bez nutnosti manipulovat počet místních odkazů.
+Zavolejte tuto funkci v implementaci IUnknown:: AddRef pro každé rozhraní, které vaše třída implementuje. Vrácená hodnota je nový počet odkazů na objekt CCmdTarget. Pokud objekt je agregován, tato funkce bude volat "řízení IUnknown" namísto manipulace s místním počtem odkazů.
 
-### <a name="ccmdtargetexternalrelease--function-description"></a>CCmdTarget::ExternalRelease – Popis funkce
+### <a name="ccmdtargetexternalrelease--function-description"></a>CCmdTarget:: ExternalRelease – Popis funkce
 
 ```cpp
 DWORD ExternalRelease();
@@ -486,9 +486,9 @@ DWORD ExternalRelease();
 
 #### <a name="remarks"></a>Poznámky
 
-Volejte tuto funkce ve vaší implementaci IUnknown::Release pro každé rozhraní vaše třída implementuje. Návratová hodnota označuje nový počet odkazů na objekt. Pokud objekt je agregován, tato funkce bude volat "Řízení IUnknown" bez nutnosti manipulovat počet místních odkazů.
+Zavolejte tuto funkci v implementaci IUnknown:: Release pro každé rozhraní, které vaše třída implementuje. Vrácená hodnota označuje nový počet odkazů na objekt. Pokud objekt je agregován, tato funkce bude volat "řízení IUnknown" namísto manipulace s místním počtem odkazů.
 
-### <a name="declareinterfacemap--macro-description"></a>DECLARE_INTERFACE_MAP – Popis makra
+### <a name="declare_interface_map--macro-description"></a>DECLARE_INTERFACE_MAP – popis makra
 
 ```cpp
 DECLARE_INTERFACE_MAP
@@ -496,9 +496,9 @@ DECLARE_INTERFACE_MAP
 
 #### <a name="remarks"></a>Poznámky
 
-Použijte toto makro v libovolné třídě odvozené z `CCmdTarget` , který bude mít mapování rozhraní. Používá se téměř stejným způsobem jako DECLARE_MESSAGE_MAP. Vyvolání toto makra by mělo být umístěno definici třídy, obvykle v záhlaví (. H) file. Třída s atributem DECLARE_INTERFACE_MAP musí definovat mapování rozhraní v souboru implementace (. CPP) s makry BEGIN_INTERFACE_MAP a END_INTERFACE_MAP.
+Použijte toto makro v jakékoli třídě odvozené z `CCmdTarget` , která bude mít mapu rozhraní. Používá se podobným způsobem jako DECLARE_MESSAGE_MAP. Vyvolání makra by mělo být umístěno v definici třídy, obvykle v hlavičce (. H) souboru. Třída s DECLARE_INTERFACE_MAP musí definovat mapu rozhraní v implementačním souboru (. CPP) pomocí maker BEGIN_INTERFACE_MAP a END_INTERFACE_MAP.
 
-### <a name="begininterfacepart-and-endinterfacepart--macro-descriptions"></a>BEGIN_INTERFACE_PART a END_INTERFACE_PART – popisy makra
+### <a name="begin_interface_part-and-end_interface_part--macro-descriptions"></a>BEGIN_INTERFACE_PART a END_INTERFACE_PART – popisy maker
 
 ```cpp
 BEGIN_INTERFACE_PART(localClass, iface);
@@ -511,15 +511,15 @@ END_INTERFACE_PART(localClass)
 Název třídy, která implementuje rozhraní
 
 *iface*<br/>
-Název, který tato třída implementuje rozhraní
+Název rozhraní, které tato třída implementuje
 
 #### <a name="remarks"></a>Poznámky
 
-Pro každé rozhraní, které implementuje vaše třída musíte mít pár BEGIN_INTERFACE_PART a END_INTERFACE_PART. Tato makra definují lokální třídu odvozenou z rozhraní OLE, které definujete, a z vložené členské proměnné této třídy. [AddRef](/windows/desktop/api/unknwn/nf-unknwn-iunknown-addref), [vydání](/windows/desktop/api/unknwn/nf-unknwn-iunknown-release), a [QueryInterface](/windows/desktop/api/unknwn/nf-unknwn-iunknown-queryinterface(q_)) členy jsou deklarováni automaticky. Musíte zahrnout deklarace ostatních funkcí členů, které jsou součástí implementovaného rozhraní (tyto deklarace jsou umístěny mezi BEGIN_INTERFACE_PART a END_INTERFACE_PART makra).
+Pro každé rozhraní, které vaše třída implementuje, je nutné mít dvojici BEGIN_INTERFACE_PART a END_INTERFACE_PART. Tato makra definují místní třídu odvozenou z rozhraní OLE, které definujete, a také vloženou členskou proměnnou této třídy. Členy [AddRef](/windows/win32/api/unknwn/nf-unknwn-iunknown-addref), [release](/windows/win32/api/unknwn/nf-unknwn-iunknown-release)a [QueryInterface](/windows/win32/api/unknwn/nf-unknwn-iunknown-queryinterface(q_)) jsou deklarovány automaticky. Je nutné zahrnout deklarace pro ostatní členské funkce, které jsou součástí implementovaného rozhraní (tyto deklarace jsou umístěny mezi makra BEGIN_INTERFACE_PART a END_INTERFACE_PART).
 
-*Iface* rozhraní OLE, které chcete implementovat, jako je argument `IAdviseSink`, nebo `IPersistStorage` (nebo vlastní rozhraní).
+Argument *iface* je rozhraní OLE, které chcete implementovat, například `IAdviseSink`, nebo `IPersistStorage` (nebo vlastní rozhraní).
 
-*LocalClass* argumentem je název místní třídy, která bude obsahovat definici. "X" bude automaticky předsunuto před název. Tato konvence pojmenování se používá pro zabránění kolizím s globálními třídami se stejným názvem. Navíc název vloženého člena, stejný jako *localClass* název s výjimkou předchází "m_x".
+Argument *localClass* je název místní třídy, která bude definována. K názvu se automaticky přidá znak "X". Tato konvence pojmenování se používá k zamezení kolizí s globálními třídami se stejným názvem. Kromě toho název vloženého člena je stejný jako název *localClass* s výjimkou, že je předpona ' _X '.
 
 Příklad:
 
@@ -533,12 +533,12 @@ BEGIN_INTERFACE_PART(MyAdviseSink, IAdviseSink)
 END_INTERFACE_PART(MyAdviseSink)
 ```
 
-bude definovat místní třídu nazvanou myadvisesink z IAdviseSink a členem třídy, ve kterém je deklarován, nazvané m_xmyadvisesink. Poznámka:
+by definovali místní třídu s názvem Myadvisesink odvozenou z IAdviseSink a člena třídy, ve které je deklarována s názvem m_xMyAdviseSink. Poznámka:
 
 > [!NOTE]
-> Řádky začínající textem `STDMETHOD`_ jsou v podstatě kopírovány z OLE2. H a mírně upraveny. Kopírování z OLE2. H můžete snížit počet chyb, které se těžko řeší.
+> Řádky začínající `STDMETHOD`na _ jsou v podstatě zkopírovány z OLE2. H a mírně se změnily. Kopírují se z OLE2. H může snížit chyby, které je obtížné vyřešit.
 
-### <a name="begininterfacemap-and-endinterfacemap--macro-descriptions"></a>BEGIN_INTERFACE_MAP a END_INTERFACE_MAP – popisy makra
+### <a name="begin_interface_map-and-end_interface_map--macro-descriptions"></a>BEGIN_INTERFACE_MAP a END_INTERFACE_MAP – popisy maker
 
 ```cpp
 BEGIN_INTERFACE_MAP(theClass, baseClass)
@@ -548,16 +548,16 @@ END_INTERFACE_MAP
 #### <a name="parameters"></a>Parametry
 
 *theClass*<br/>
-Třída, ve kterém má definovat mapa rozhraní
+Třída, ve které má být definována mapa rozhraní
 
 *baseClass*<br/>
-Třída, ze které *theClass* odvozena.
+Třída, ze které je odvozeno *theclass* .
 
 #### <a name="remarks"></a>Poznámky
 
-BEGIN_INTERFACE_MAP a END_INTERFACE_MAP makra se používají v souboru implementace skutečnou definici mapy rozhraní. Pro každé rozhraní, která je implementována je jeden nebo více vyvoláním makra INTERFACE_PART. Pro každou agregaci, která používá třídu je jedna volání makra INTERFACE_AGGREGATE.
+Makra BEGIN_INTERFACE_MAP a END_INTERFACE_MAP se v implementačním souboru používají ke skutečnému definování mapy rozhraní. Pro každé rozhraní, které je implementováno, je jedno nebo více volání makra INTERFACE_PART. Pro každou agregaci, kterou třída používá, je k dispozici jedno volání makra INTERFACE_AGGREGATE.
 
-### <a name="interfacepart--macro-description"></a>INTERFACE_PART — Popis makra
+### <a name="interface_part--macro-description"></a>INTERFACE_PART – popis makra
 
 ```cpp
 INTERFACE_PART(theClass, iid, localClass)
@@ -569,14 +569,14 @@ INTERFACE_PART(theClass, iid, localClass)
 Název třídy, která obsahuje mapu rozhraní.
 
 *iid*<br/>
-`IID` , Který se má namapovat na vloženou třídu.
+`IID` Který má být namapován na vloženou třídu.
 
 *localClass*<br/>
-Název místní třídy (menší než "X").
+Název místní třídy (minus znak "X").
 
 #### <a name="remarks"></a>Poznámky
 
-Toto makro se používá mezi – makro BEGIN_INTERFACE_MAP a END_INTERFACE_MAP – makro pro každé rozhraní, které bude váš objekt podporovat. Umožňuje mapovat IID ke členovi třídy podle *theClass* a *localClass*. "m_x" se přidají do *localClass* automaticky. Všimněte si, že více než jeden `IID` může být spojen s jeden člen. To je velmi užitečné, když implementujete pouze "nejvíce odvozené" rozhraní a chcete poskytnout také všechna mezilehlá rozhraní. Dobrým příkladem tohoto je `IOleInPlaceFrameWindow` rozhraní. Jeho hierarchie vypadá takto:
+Toto makro se používá mezi BEGIN_INTERFACE_MAP makrem a makrem END_INTERFACE_MAP pro každé rozhraní, které bude váš objekt podporovat. Umožňuje mapovat IID na člena třídy označené *theclass* a *localClass*. _X ' bude automaticky přidán do *localClass* . Všimněte si, že k `IID` jednomu členovi může být přidruženo více než jeden. To je velmi užitečné, Pokud implementujete pouze "největší odvozené" rozhraní a chcete zajistit také všechna Pokročilá rozhraní. Dobrým příkladem je `IOleInPlaceFrameWindow` rozhraní. Jeho hierarchie vypadá takto:
 
 ```Hierarchy
 IUnknown
@@ -585,7 +585,7 @@ IUnknown
             IOleInPlaceFrameWindow
 ```
 
-Pokud objekt implementuje `IOleInPlaceFrameWindow`, klient může `QueryInterface` na kterékoli z těchto rozhraní: `IOleUIWindow`, `IOleWindow`, nebo [IUnknown](/windows/desktop/api/unknwn/nn-unknwn-iunknown), kromě "nejvíce odvozeného" rozhraní `IOleInPlaceFrameWindow` (ten se ve skutečnosti implementace). Chcete-li se o to postarají můžete použít více než jeden INTERFACE_PART – makro mapovat každého základního rozhraní na `IOleInPlaceFrameWindow` rozhraní:
+`IOleInPlaceFrameWindow`Pokud objekt implementuje, klient se může `QueryInterface` nacházet na kterékoli z těchto rozhraní `IOleUIWindow`: `IOleWindow`, nebo [IUnknown](/windows/win32/api/unknwn/nn-unknwn-iunknown), kromě "nejvíce odvozeného" rozhraní `IOleInPlaceFrameWindow` (ten, který skutečně implementujete). K tomu můžete použít více než jedno makro INTERFACE_PART k namapování každého základního rozhraní a každého základního rozhraní na `IOleInPlaceFrameWindow` rozhraní:
 
 v souboru definice třídy:
 
@@ -603,9 +603,9 @@ BEGIN_INTERFACE_MAP(CMyWnd, CFrameWnd)
 END_INTERFACE_MAP
 ```
 
-Rámec pečuje o IUnknown vzhledem k tomu, že je vždy vyžadován.
+Rozhraní IUnknown má za starosti, protože je vždy vyžadováno.
 
-### <a name="interfacepart--macro-description"></a>INTERFACE_PART — Popis makra
+### <a name="interface_part--macro-description"></a>INTERFACE_PART – popis makra
 
 ```cpp
 INTERFACE_AGGREGATE(theClass, theAggr)
@@ -614,14 +614,14 @@ INTERFACE_AGGREGATE(theClass, theAggr)
 #### <a name="parameters"></a>Parametry
 
 *theClass*<br/>
-Název třídy, která obsahuje mapu rozhraní
+Název třídy, která obsahuje mapu rozhraní,
 
 *theAggr*<br/>
-Název členské proměnné, která se dají agregovat.
+Název členské proměnné, která se má agregovat.
 
 #### <a name="remarks"></a>Poznámky
 
-Toto makro se používá k informování rozhraní framework, že třída používá agregovaný objekt. Musí být mezi BEGIN_INTERFACE_PART a END_INTERFACE_PART makra. Agregovaný objekt je samostatný objekt, odvozený z [IUnknown](/windows/desktop/api/unknwn/nn-unknwn-iunknown). Pomocí agregace a makra INTERFACE_AGGREGATE můžete nastavit všechna rozhraní, která agregace podporuje zdá se být přímo podporována objektem. *TheAggr* argument je jednoduše název proměnné člena vaší třídy, který je odvozen z [IUnknown](/windows/desktop/api/unknwn/nn-unknwn-iunknown) (přímo nebo nepřímo). Všechna makra INTERFACE_AGGREGATE musí následovat makra INTERFACE_PART při umístění v mapě rozhraní.
+Toto makro slouží k oznámení rozhraní, že třída používá agregovaný objekt. Musí se objevit mezi makry BEGIN_INTERFACE_PART a END_INTERFACE_PART. Agregovaný objekt je samostatný objekt odvozený z [IUnknown](/windows/win32/api/unknwn/nn-unknwn-iunknown). Pomocí agregace a makra INTERFACE_AGGREGATE můžete učinit všechna rozhraní, která agregace podporuje, aby byla přímo podporována objektem. Argument *theAggr* je jednoduchý název členské proměnné vaší třídy, která je odvozena z [IUnknown](/windows/win32/api/unknwn/nn-unknwn-iunknown) (buď přímo nebo nepřímo). Všechna makra INTERFACE_AGGREGATE musí dodržovat makra INTERFACE_PART při umístění do mapy rozhraní.
 
 ## <a name="see-also"></a>Viz také:
 

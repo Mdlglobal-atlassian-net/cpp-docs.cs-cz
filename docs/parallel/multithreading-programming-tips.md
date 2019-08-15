@@ -1,5 +1,5 @@
 ---
-title: 'Multithreading: Tipy pro programování MFC'
+title: 'Multithreading: Popisy programování v MFC'
 ms.date: 08/27/2018
 helpviewer_keywords:
 - multithreading [C++], programming tips
@@ -16,48 +16,48 @@ helpviewer_keywords:
 - troubleshooting [C++], multithreading
 - Windows handle maps [C++]
 ms.assetid: ad14cc70-c91c-4c24-942f-13a75e58bf8a
-ms.openlocfilehash: e89d0d534638f7216f142bc3f86633a59b8b0ff7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: deaf53d7b337fd33214bbcc4567e73bd33345d49
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62212425"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69511712"
 ---
-# <a name="multithreading-mfc-programming-tips"></a>Multithreading: Tipy pro programování MFC
+# <a name="multithreading-mfc-programming-tips"></a>Multithreading: Popisy programování v MFC
 
-Vícevláknové aplikace vyžaduje větší péči než aplikace s jedním vláknem zajistíte, že operace prováděny v zamýšleném pořadí a všechna data, která je přístup prostřednictvím více vláken není poškozen. Toto téma popisuje postupy pro předcházení potenciálních problémů při programování aplikací s více vlákny pomocí knihovny Microsoft Foundation Class (MFC).
+Vícevláknové aplikace vyžadují přísnější péči než aplikace s jedním vláknem, aby se zajistilo, že k operacím dojde v zamýšleném pořadí, a že všechna data, ke kterým je přístup více vlákny, nejsou poškozená. Toto téma vysvětluje techniky pro předcházení potenciálním problémům při programování aplikací s více vlákny pomocí knihovny Microsoft Foundation Class (MFC).
 
 - [Přístup k objektům z více vláken](#_core_accessing_objects_from_multiple_threads)
 
-- [Přístup k objektům MFC z vlákna mimo MFC](#_core_accessing_mfc_objects_from_non.2d.mfc_threads)
+- [Přístup k objektům knihovny MFC z non-MFC vláken](#_core_accessing_mfc_objects_from_non.2d.mfc_threads)
 
-- [Mapování zpracování Windows](#_core_windows_handle_maps)
+- [Mapy popisovačů Windows](#_core_windows_handle_maps)
 
 - [Komunikace mezi vlákny](#_core_communicating_between_threads)
 
-##  <a name="_core_accessing_objects_from_multiple_threads"></a> Přístup k objektům z více vláken
+##  <a name="_core_accessing_objects_from_multiple_threads"></a>Přístup k objektům z více vláken
 
-Objekty knihovny MFC nejsou bezpečné pro vlákna samy o sobě. Dvou samostatných vláknech nelze pracovat na stejný objekt, pokud nechcete použít synchronizační třídy knihovny MFC a/nebo synchronizaci objektů Win32, jako je například kritické oddíly. Další informace o kritických oddílů a další související objekty, najdete v článku [synchronizace](/windows/desktop/Sync/synchronization) v sadě Windows SDK.
+Objekty MFC nejsou bezpečné pro přístup z více vláken. Dvě samostatná vlákna nemohou manipulovat se stejným objektem, pokud nepoužíváte synchronizační třídy knihovny MFC a případně příslušné synchronizační objekty Win32, například důležité oddíly. Další informace o důležitých částech a dalších souvisejících objektech naleznete v tématu [synchronizace](/windows/win32/Sync/synchronization) v Windows SDK.
 
-Knihovna tříd kritické oddíly interně používá k ochraně globální datové struktury, jako jsou ty používané ladit přidělování paměti.
+Knihovna tříd interně používá kritické oddíly k ochraně globálních datových struktur, jako jsou ty, které se používají při přidělování paměti ladění.
 
-##  <a name="_core_accessing_mfc_objects_from_non.2d.mfc_threads"></a> Přístup k objektům MFC z vlákna mimo MFC
+##  <a name="_core_accessing_mfc_objects_from_non.2d.mfc_threads"></a>Přístup k objektům knihovny MFC z non-MFC vláken
 
-Pokud máte aplikace s více vlákny, která vytvoří vlákno způsobem než pomocí [CWinThread](../mfc/reference/cwinthread-class.md) objektu nelze přistupovat k ostatním objektům MFC z tohoto vlákna. Jinými slovy, pokud chcete pro přístup k libovolného objektu knihovny MFC z jiného vlákna, musíte vytvořit toto vlákno s některou z metod popsaných v [Multithreading: Vytváření vláken uživatelského rozhraní](multithreading-creating-user-interface-threads.md) nebo [Multithreading: Vytváření pracovních vláken](multithreading-creating-worker-threads.md). Tyto metody jsou pouze ty, které umožňují knihovny tříd inicializovat interní proměnné, které jsou potřeba ke zpracování aplikací s více vlákny.
+Máte-li vícevláknovou aplikaci, která vytváří vlákno v jiném než použití objektu [CWinThread](../mfc/reference/cwinthread-class.md) , nemůžete získat přístup k jiným OBJEKTŮM knihovny MFC z tohoto vlákna. Jinými slovy, pokud chcete získat přístup k libovolnému objektu knihovny MFC ze sekundárního vlákna, je nutné vytvořit toto vlákno pomocí jedné z metod popsaných v [tématu Multithreading: Vytváření vláken](multithreading-creating-user-interface-threads.md) uživatelského rozhraní nebo [Multithreading: Vytváření pracovních vláken](multithreading-creating-worker-threads.md). Tyto metody jsou pouze ty, které umožňují knihovně tříd inicializovat interní proměnné nezbytné pro zpracování vícevláknových aplikací.
 
-##  <a name="_core_windows_handle_maps"></a> Mapování zpracování Windows
+##  <a name="_core_windows_handle_maps"></a>Mapy popisovačů Windows
 
-Obecně platí vlákno můžete přistupovat pouze objekty knihovny MFC, které je vytvořené. Je to proto dočasné a trvalé popisovače mapy Windows jsou uloženy v místním úložišti vláken, který pomáhá zajistit ochranu před mělo současně přístup z více vláken. Například pracovní podproces nelze provést výpočet a poté zavolejte dokumentu `UpdateAllViews` členská funkce systému Windows, které obsahují názory na nová data upravit. Tato akce nemá vliv, protože mapování z `CWnd` objektů HWND je lokální vzhledem k primárnímu vláknu. To znamená, že jedno vlákno může mít mapování z Windows popisovač pro objekt jazyka C++, ale jiné vlákno může mapovat stejné zpracování na jiný objekt jazyka C++. Změny provedené v jednom vlákně se nemusí projevit v jiném.
+Jako obecné pravidlo vlákno má přístup pouze k objektům MFC, které vytvořil. Je to proto, že dočasné a trvalé mapy popisovačů systému Windows jsou uchovávány v thread local úložiště, aby bylo možné udržet ochranu před současným přístupem z více vláken. Pracovní vlákno například nemůže provést výpočet a pak volat `UpdateAllViews` členskou funkci dokumentu tak, aby obsahovala okna, která obsahují zobrazení na nových změněných dat. To nemá žádný vliv, protože mapa z `CWnd` objektů na HWND je místní vůči primárnímu vláknu. To znamená, že jedno vlákno může mít mapování z popisovače Windows na C++ objekt, ale jiné vlákno může mapovat stejný popisovač na jiný C++ objekt. Změny provedené v jednom vlákně by se neprojevily v druhém.
 
-Existuje několik způsobů, jak vyřešit tento problém. První je předat jednotlivé popisovače (například popisovačem HWND) namísto objektů jazyka C++ pracovní podproces. Pracovní podproces poté přidá tyto objekty do své dočasné mapování voláním příslušné `FromHandle` členskou funkci. Můžete také přidat objekt do mapy trvalé vlákna voláním `Attach`, ale to by mělo být provedeno pouze v případě, že je zaručeno, že objekt bude existovat déle než vlákno.
+Existuje několik způsobů, jak tento problém vyřešit. První je předat jednotlivé popisovače (například HWND) místo C++ objektů do pracovního vlákna. Pracovní vlákno následně přidá tyto objekty do jeho dočasné mapy voláním příslušné `FromHandle` členské funkce. Můžete také přidat objekt k trvalé mapě vlákna voláním `Attach`, ale to by mělo být provedeno pouze v případě, že je zaručeno, že objekt bude existovat déle než vlákno.
 
-Jinou metodou je vytvoření nové zprávy uživatelem definované odpovídající pro různé úkoly pracovních vláken provádění se publikovat do hlavního okna aplikace tyto zprávy pomocí `::PostMessage`. Tato metoda komunikace je podobná rozhovory s tím rozdílem, že oba vlákna jsou spuštěny ve stejném adresním prostoru dva různé aplikace.
+Další metodou je vytvořit nové uživatelsky definované zprávy odpovídající různým úlohám, které budou vaše pracovní vlákna provádět, a publikovat tyto zprávy do hlavního okna aplikace pomocí `::PostMessage`. Tato metoda komunikace je podobná dvou různým aplikacím konverzující s tím rozdílem, že obě vlákna jsou spouštěna ve stejném adresním prostoru.
 
-Další informace o mapování najdete v tématu [Technická poznámka 3](../mfc/tn003-mapping-of-windows-handles-to-objects.md). Další informace o místním úložišti vláken naleznete v tématu [úložiště Thread Local](/windows/desktop/ProcThread/thread-local-storage) a [pomocí úložiště Thread Local](/windows/desktop/ProcThread/using-thread-local-storage) v sadě Windows SDK.
+Další informace o mapách popisovačů najdete v části [technická Poznámka 3](../mfc/tn003-mapping-of-windows-handles-to-objects.md). Další informace o službě thread local Storage najdete v tématu věnovaném místnímu úložišti [vláken](/windows/win32/ProcThread/thread-local-storage) a [použití místního úložiště vlákna](/windows/win32/ProcThread/using-thread-local-storage) v Windows SDK.
 
-##  <a name="_core_communicating_between_threads"></a> Komunikace mezi vlákny
+##  <a name="_core_communicating_between_threads"></a>Komunikace mezi vlákny
 
-Knihovna MFC poskytuje několik tříd, které umožňují vláken k synchronizaci přístupu k objektům zajistit bezpečný přístup z více vláken. Použití těchto tříd je popsána v [Multithreading: Jak používat synchronizační třídy](multithreading-how-to-use-the-synchronization-classes.md) a [Multithreading: Kdy použít synchronizační třídy](multithreading-when-to-use-the-synchronization-classes.md). Další informace o těchto objektů najdete v tématu [synchronizace](/windows/desktop/Sync/synchronization) v sadě Windows SDK.
+Knihovna MFC poskytuje několik tříd, které umožňují vláknům synchronizovat přístup k objektům pro zajištění bezpečnosti vláken. Použití těchto tříd je popsáno v [tématu Multithreading: Jak používat synchronizační třídy](multithreading-how-to-use-the-synchronization-classes.md) a [Multithreading: Kdy použít synchronizační třídy](multithreading-when-to-use-the-synchronization-classes.md). Další informace o těchto objektech naleznete v tématu [synchronizace](/windows/win32/Sync/synchronization) v Windows SDK.
 
 ## <a name="see-also"></a>Viz také:
 

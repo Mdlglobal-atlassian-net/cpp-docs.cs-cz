@@ -1,21 +1,21 @@
 ---
-title: switch_type – (C++ atributů COM)
+title: switch_type (C++ atribut com)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.switch_type
 helpviewer_keywords:
 - switch_type attribute
 ms.assetid: e24544dc-b3bc-48ae-b249-f967db49271e
-ms.openlocfilehash: b461769d3d988efae0be7380e1e0112e3f3cf801
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c3a4187c629238fa464a607c0b653f857fa44b6a
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62407117"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69513960"
 ---
-# <a name="switchtype"></a>switch_type
+# <a name="switch_type"></a>switch_type
 
-Určuje typ proměnné použité jako sjednocení discriminant.
+Určuje typ proměnné používané jako Discriminant sjednocení.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -28,13 +28,13 @@ type
 ### <a name="parameters"></a>Parametry
 
 *type*<br/>
-Typ přepínače může být typ integer, znak, logická hodnota nebo výčet.
+Typ přepínače může být celé číslo, znak, logická hodnota nebo Výčtový typ.
 
 ## <a name="remarks"></a>Poznámky
 
-**Switch_type –** C++ atribut má stejné funkce jako [switch_type –](/windows/desktop/Midl/switch-type) atribut MIDL.
+Atribut **switch_type** C++ má stejné funkce jako atribut [switch_type](/windows/win32/Midl/switch-type) MIDL.
 
-Atributy C++ nepodporuje [zapouzdřené sjednocení](/windows/desktop/Midl/encapsulated-unions). [Nonencapsulated sjednocení](/windows/desktop/Midl/nonencapsulated-unions) jsou podporovány pouze v následujícím tvaru:
+C++atributy nepodporují [zapouzdřené sjednocení](/windows/win32/Midl/encapsulated-unions). [](/windows/win32/Midl/nonencapsulated-unions) Nezapouzdřené sjednocení jsou podporovány pouze v následujícím tvaru:
 
 ```cpp
 // cpp_attr_ref_switch_type.cpp
@@ -55,20 +55,20 @@ struct SizedValue2 {
 
 ## <a name="example"></a>Příklad
 
-Najdete v článku [případ](case-cpp.md) příklad ukázkový používání **switch_type –**.
+Podívejte se na příklad použití **switch_type**pomocí ukázkového [případu](case-cpp.md) .
 
 ## <a name="requirements"></a>Požadavky
 
-### <a name="attribute-context"></a>Atribut kontextu
+### <a name="attribute-context"></a>Kontext atributu
 
 |||
 |-|-|
-|**Platí pro**|**Definice TypeDef**|
-|**Opakovatelné**|Ne|
-|**Vyžadované atributy**|Žádný|
-|**Neplatné atributy**|Žádný|
+|**Platí pro**|**definic**|
+|**REPEATABLE**|Ne|
+|**Požadované atributy**|Žádné|
+|**Neplatné atributy**|Žádné|
 
-Další informace o kontexty atributů najdete v tématu [kontexty atributů](cpp-attributes-com-net.md#contexts).
+Další informace o kontextech atributů naleznete v tématu kontexty [atributů](cpp-attributes-com-net.md#contexts).
 
 ## <a name="see-also"></a>Viz také:
 

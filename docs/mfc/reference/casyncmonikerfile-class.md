@@ -32,16 +32,16 @@ helpviewer_keywords:
 - CAsyncMonikerFile [MFC], OnStartBinding
 - CAsyncMonikerFile [MFC], OnStopBinding
 ms.assetid: 17378b66-a49a-4b67-88e3-7756ad26a2fc
-ms.openlocfilehash: b86cba0c2e8f7991902a552d404355d6c1474138
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: cd399368e46e4e9a86b4c6260e07aee07b80defb
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62237854"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69507504"
 ---
 # <a name="casyncmonikerfile-class"></a>CAsyncMonikerFile Class
 
-Poskytuje funkce pro používání asynchronních zástupných názvů v ovládacích prvcích ActiveX (dříve ovládací prvky OLE).
+Poskytuje funkce pro použití asynchronních monikerů v ovládacích prvcích ActiveX (dříve ovládací prvky OLE).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -53,49 +53,49 @@ class CAsyncMonikerFile : public CMonikerFile
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
-|[CAsyncMonikerFile::CAsyncMonikerFile](#casyncmonikerfile)|Vytvoří `CAsyncMonikerFile` objektu.|
+|[CAsyncMonikerFile::CAsyncMonikerFile](#casyncmonikerfile)|`CAsyncMonikerFile` Vytvoří objekt.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CAsyncMonikerFile::Close](#close)|Zavře a uvolní všechny prostředky.|
-|[CAsyncMonikerFile::GetBinding](#getbinding)|Načte ukazatel na asynchronní přenos vazby.|
-|[CAsyncMonikerFile::GetFormatEtc](#getformatetc)|Získá formát dat v datovém proudu.|
+|[CAsyncMonikerFile::GetBinding](#getbinding)|Načte ukazatel na vazbu asynchronního přenosu.|
+|[CAsyncMonikerFile::GetFormatEtc](#getformatetc)|Načte formát dat v datovém proudu.|
 |[CAsyncMonikerFile::Open](#open)|Otevře soubor asynchronně.|
 
 ### <a name="protected-methods"></a>Chráněné metody
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
-|[CAsyncMonikerFile::CreateBindStatusCallback](#createbindstatuscallback)|Vytvoří objekt modelu COM, který implementuje `IBindStatusCallback`.|
-|[CAsyncMonikerFile::GetBindInfo](#getbindinfo)|Voláno rozhraním systému knihovny OLE na informace o žádostech na typ vazby, který se má vytvořit.|
-|[CAsyncMonikerFile::GetPriority](#getpriority)|Je voláno knihovny OLE systému získat prioritu vazby.|
-|[CAsyncMonikerFile::OnDataAvailable](#ondataavailable)|Volána k poskytnutí dat, protože je k dispozici do klienta během operací asynchronního vazby.|
-|[CAsyncMonikerFile::OnLowResource](#onlowresource)|Volá se, když mají nedostatek prostředků.|
-|[CAsyncMonikerFile::OnProgress](#onprogress)|Volá se, aby indikoval průběh procesu stahování dat.|
-|[CAsyncMonikerFile::OnStartBinding](#onstartbinding)|Volá se, když se zahajuje vazba.|
+|[CAsyncMonikerFile::CreateBindStatusCallback](#createbindstatuscallback)|Vytvoří objekt modelu COM, který `IBindStatusCallback`implementuje.|
+|[CAsyncMonikerFile::GetBindInfo](#getbindinfo)|Volá se systémovou knihovnou OLE k vyžádání informací o typu vazby, která se má vytvořit.|
+|[CAsyncMonikerFile::GetPriority](#getpriority)|Volá se systémovou knihovnou OLE, aby se získala priorita vazby.|
+|[CAsyncMonikerFile::OnDataAvailable](#ondataavailable)|Volá se, aby se poskytovala data, která jsou k dispozici klientovi během operací asynchronní vazby.|
+|[CAsyncMonikerFile::OnLowResource](#onlowresource)|Volá se, když jsou prostředky nízké.|
+|[CAsyncMonikerFile::OnProgress](#onprogress)|Volá se, aby se označoval průběh procesu stahování dat.|
+|[CAsyncMonikerFile::OnStartBinding](#onstartbinding)|Volá se při spuštění vazby.|
 |[CAsyncMonikerFile::OnStopBinding](#onstopbinding)|Volá se, když se zastaví asynchronní přenos.|
 
 ## <a name="remarks"></a>Poznámky
 
-Odvozený od [cmonikerfile –](../../mfc/reference/cmonikerfile-class.md), který je zase odvozen z [colestreamfile –](../../mfc/reference/colestreamfile-class.md), `CAsyncMonikerFile` používá [imoniker –](/windows/desktop/api/objidl/nn-objidl-imoniker) rozhraní pro přístup k jakékoli datový proud asynchronně včetně asynchronní načítání souborů z adresy URL. Soubory mohou být datapath vlastností ovládacích prvků ActiveX.
+Odvozeno od [CMonikerFile](../../mfc/reference/cmonikerfile-class.md), které je zase odvozeno od [COleStreamFile](../../mfc/reference/colestreamfile-class.md), `CAsyncMonikerFile` používá rozhraní [IMoniker –](/windows/win32/api/objidl/nn-objidl-imoniker) k asynchronnímu přístupu ke všem datovým proudům, včetně načítání souborů asynchronně z adresy URL. Soubory mohou být vlastnosti DataPath ovládacích prvků ActiveX.
 
-Asynchronní monikery se používají především v internetových aplikací a ovládací prvky ActiveX k zajištění responzivní uživatelské rozhraní během přenosu souborů. Typickým příkladem tohoto je použití [cdatapathproperty –](../../mfc/reference/cdatapathproperty-class.md) k poskytování asynchronní vlastností pro ovládací prvky ActiveX. `CDataPathProperty` Objektu se zobrazí opakovaně zpětného volání k označení dostupnost nových dat systému exchange během dlouhých vlastnost.
+Asynchronní monikery se používají primárně v aplikacích s podporou Internetu a ovládacích prvků ActiveX k tomu, aby během přenosů souborů poskytovala uživatelské rozhraní s rychlostí odezvy. Hlavní příklad tohoto je použití [CDataPathProperty](../../mfc/reference/cdatapathproperty-class.md) k poskytnutí asynchronních vlastností ovládacích prvků ActiveX. `CDataPathProperty` Objekt se opakovaně vrátí zpět k označení dostupnosti nových dat během procesu výměny vlastností s délkou.
 
-Další informace o tom, jak použít asynchronní monikery a ovládací prvky ActiveX v internetových aplikací najdete v následujících článcích:
+Další informace o použití asynchronních monikerů a ovládacích prvků ActiveX v internetových aplikacích naleznete v následujících článcích:
 
-- [První kroky Internetu: Asynchronní Monikery](../../mfc/asynchronous-monikers-on-the-internet.md)
+- [První kroky Internetu: Asynchronní monikery](../../mfc/asynchronous-monikers-on-the-internet.md)
 
 - [První kroky Internetu: Ovládací prvky ActiveX](../../mfc/activex-controls-on-the-internet.md)
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
-[Třídy CObject](../../mfc/reference/cobject-class.md)
+[CObject](../../mfc/reference/cobject-class.md)
 
-[CFile](../../mfc/reference/cfile-class.md)
+[CFile –](../../mfc/reference/cfile-class.md)
 
 [COleStreamFile](../../mfc/reference/colestreamfile-class.md)
 
@@ -105,11 +105,11 @@ Další informace o tom, jak použít asynchronní monikery a ovládací prvky A
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** afxole.h
+**Záhlaví:** AFXOLE. h
 
-##  <a name="casyncmonikerfile"></a>  CAsyncMonikerFile::CAsyncMonikerFile
+##  <a name="casyncmonikerfile"></a>CAsyncMonikerFile::CAsyncMonikerFile
 
-Vytvoří `CAsyncMonikerFile` objektu.
+`CAsyncMonikerFile` Vytvoří objekt.
 
 ```
 CAsyncMonikerFile();
@@ -117,13 +117,13 @@ CAsyncMonikerFile();
 
 ### <a name="remarks"></a>Poznámky
 
-Nevytvoří `IBindHost` rozhraní. `IBindHost` se používá jenom v případě, že ho zadáte `Open` členskou funkci.
+Nevytváří `IBindHost` rozhraní. `IBindHost`je použit pouze v případě, že jej zadáte do `Open` členské funkce.
 
-Popis `IBindHost` rozhraní, naleznete v sadě Windows SDK.
+Popis `IBindHost` rozhraní naleznete v Windows SDK.
 
-##  <a name="close"></a>  CAsyncMonikerFile::Close
+##  <a name="close"></a>CAsyncMonikerFile:: Close
 
-Voláním této funkce zavřete a uvolnit všechny prostředky.
+Voláním této funkce zavřete a vydáte všechny prostředky.
 
 ```
 virtual void Close();
@@ -131,11 +131,11 @@ virtual void Close();
 
 ### <a name="remarks"></a>Poznámky
 
-Můžete volat v neotevřených souborů již uzavřený.
+Lze ji volat v neotevřených nebo již uzavřených souborech.
 
 ##  <a name="createbindstatuscallback"></a>  CAsyncMonikerFile::CreateBindStatusCallback
 
-Vytvoří objekt modelu COM, který implementuje `IBindStatusCallback`.
+Vytvoří objekt modelu COM, který `IBindStatusCallback`implementuje.
 
 ```
 virtual IUnknown* CreateBindStatusCallback(IUnknown* pUnkControlling);
@@ -144,25 +144,25 @@ virtual IUnknown* CreateBindStatusCallback(IUnknown* pUnkControlling);
 ### <a name="parameters"></a>Parametry
 
 *pUnkControlling*<br/>
-Ukazatel na řídící neznámé (vnější `IUnknown`) nebo hodnota NULL, pokud se nepoužívá agregace.
+Ukazatel na řízení Neznámý (vnější `IUnknown`) nebo null, pokud není použita agregace.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Pokud *pUnkControlling* nemá hodnotu NULL, funkce vrátí ukazatel na vnitřní `IUnknown` na nový objekt modelu COM podporuje `IBindStatusCallback`. Pokud `pUnkControlling` má hodnotu NULL, funkce vrátí ukazatel `IUnknown` na nový objekt modelu COM podporuje `IBindStatusCallback`.
+Pokud *pUnkControlling* není null, funkce vrátí ukazatel na vnitřní `IUnknown` objekt na novém objektu com podporujícího. `IBindStatusCallback` Pokud `pUnkControlling` je null, funkce vrátí ukazatel `IUnknown` na nový objekt com podporující `IBindStatusCallback`.
 
 ### <a name="remarks"></a>Poznámky
 
-`CAsyncMonikerFile` vyžaduje objekt modelu COM, který implementuje `IBindStatusCallback`. Knihovna MFC implementuje takového objektu a je agregovatelné. Můžete přepsat `CreateBindStatusCallback` vrátit objekt modelu COM. Váš objekt modelu COM může agregovat implementace MFC voláním `CreateBindStatusCallback` s řídící neznámou váš objekt modelu COM. COM objekty implementované pomocí `CCmdTarget` podporu modelu COM může načíst řídící neznámé pomocí `CCmdTarget::GetControllingUnknown`.
+`CAsyncMonikerFile`vyžaduje objekt COM, který implementuje `IBindStatusCallback`. Knihovna MFC implementuje takový objekt a je agregovatelné. Můžete přepsat `CreateBindStatusCallback` pro vrácení vlastního objektu com. Objekt modelu COM může agregovat implementaci knihovny MFC voláním `CreateBindStatusCallback` s řízením neznámého objektu com. Objekty modelu COM implementované pomocí `CCmdTarget` podpory modelu COM mohou načíst neznámou `CCmdTarget::GetControllingUnknown`kontrolu pomocí.
 
-Alternativně můžete váš objekt modelu COM delegovat do implementace MFC voláním `CreateBindStatusCallback( NULL )`.
+Alternativně může váš objekt COM delegovat na implementaci knihovny MFC voláním `CreateBindStatusCallback( NULL )`.
 
-[CAsyncMonikerFile::Open](#open) volání `CreateBindStatusCallback`.
+[CAsyncMonikerFile:: Open](#open) Calls `CreateBindStatusCallback`.
 
-Další informace o asynchronní monikery a asynchronní vazby, najdete v článku [IBindStatusCallback](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/ms775060\(v=vs.85\)) rozhraní a [pracovní úložiště a jak asynchronní vazby](/windows/desktop/Stg/how-asynchronous-binding-and-storage-work). Informace o agregaci naleznete v tématu [agregace](/windows/desktop/com/aggregation). Všechny tři témata jsou v sadě Windows SDK.
+Další informace o asynchronních monikerech a asynchronních vazbách naleznete v rozhraní [IBindStatusCallback](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/ms775060\(v=vs.85\)) a na [způsobu fungování asynchronní vazby a úložiště](/windows/win32/Stg/how-asynchronous-binding-and-storage-work). Diskuzi o agregaci naleznete v tématu [agregace](/windows/win32/com/aggregation). Všechna tři témata jsou uvedená v Windows SDK.
 
-##  <a name="getbindinfo"></a>  CAsyncMonikerFile::GetBindInfo
+##  <a name="getbindinfo"></a>CAsyncMonikerFile:: GetBindInfo.
 
-Volá se z klienta asynchronní moniker asynchronní moniker zjistit, jak chce vytvořit vazbu.
+Volána od klienta asynchronního monikeru, aby označovala asynchronní moniker, jak chce vytvořit vazbu.
 
 ```
 virtual DWORD GetBindInfo() const;
@@ -170,17 +170,17 @@ virtual DWORD GetBindInfo() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Načte nastavení pro `IBindStatusCallBack`. Popis `IBindStatusCallback` rozhraní, naleznete v sadě Windows SDK.
+Načte nastavení pro `IBindStatusCallBack`. Popis `IBindStatusCallback` rozhraní naleznete v Windows SDK.
 
 ### <a name="remarks"></a>Poznámky
 
-Výchozí implementace nastaví vazbu byla asynchronní, použijte úložiště média (datový proud) a použít model data push. Tato funkce přepište, pokud chcete změnit chování vazby.
+Výchozí implementace nastavuje, aby vazba byla asynchronní, aby používala paměťové médium (datový proud) a používala model nabízených dat. Tuto funkci přepište, pokud chcete změnit chování vazby.
 
-Jedním z důvodů tím by se vytvořit vazbu pomocí modelu dat o přijetí změn místo model data push. V modelu data o přijetí změn klient jednotky operace připojení a monikeru pouze poskytuje data klientovi, když je pro čtení. V modelu datová oznámení zástupný název jednotky operace asynchronního připojení a průběžně upozorní klienta pokaždé, když jsou k dispozici nová data.
+Jedním z důvodů, proč by to bylo, bylo vytvoření vazby pomocí modelu vyžádání dat namísto modelu vkládání dat. V modelu pro vyžádání dat klient zařídí operaci vazby a moniker při čtení poskytuje pouze data klientovi. V modelu pro vložení dat zastupuje moniker operaci asynchronní vazby a nepřetržitě upozorní klienta, kdykoli jsou k dispozici nová data.
 
-##  <a name="getbinding"></a>  CAsyncMonikerFile::GetBinding
+##  <a name="getbinding"></a>CAsyncMonikerFile:: GetBinding
 
-Volání této funkce načtete ukazatel na asynchronní přenos vazby.
+Voláním této funkce načtete ukazatel na vazbu asynchronního přenosu.
 
 ```
 IBinding* GetBinding() const;
@@ -188,15 +188,15 @@ IBinding* GetBinding() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Ukazatel `IBinding` rozhraní při zahájení asynchronní přenos. Vrátí hodnotu NULL, pokud pro přenos z nějakého důvodu není možné provést asynchronně.
+Ukazatel na `IBinding` rozhraní poskytnuté při zahájení asynchronního přenosu. Vrátí hodnotu NULL, pokud z nějakého důvodu nelze přenos provést asynchronně.
 
 ### <a name="remarks"></a>Poznámky
 
-To umožňuje řídit proces pro přenos dat `IBinding` rozhraní, například s `IBinding::Abort`, `IBinding::Pause`, a `IBinding::Resume`.
+To vám umožňuje řídit proces přenosu dat `IBinding` prostřednictvím rozhraní, například pomocí `IBinding::Abort`, `IBinding::Pause`a `IBinding::Resume`.
 
-Popis `IBinding` rozhraní, naleznete v sadě Windows SDK.
+Popis `IBinding` rozhraní naleznete v Windows SDK.
 
-##  <a name="getformatetc"></a>  CAsyncMonikerFile::GetFormatEtc
+##  <a name="getformatetc"></a>CAsyncMonikerFile::GetFormatEtc
 
 Voláním této funkce načtete formát dat v datovém proudu.
 
@@ -206,11 +206,11 @@ FORMATETC* GetFormatEtc() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Ukazatel na strukturu Windows [FORMATETC](/windows/desktop/api/objidl/ns-objidl-tagformatetc) pro aktuálně otevřený datového proudu. Vrátí hodnotu NULL, pokud nebyla byla svázána monikeru, pokud není asynchronní, nebo pokud ještě nebylo spuštěno asynchronní operace.
+Ukazatel na strukturu Windows [FORMATETC](/windows/win32/api/objidl/ns-objidl-formatetc) pro aktuálně otevřený datový proud. Vrátí hodnotu NULL, pokud moniker nebyl svázán, pokud není asynchronní, nebo pokud nebyla zahájena asynchronní operace.
 
-##  <a name="getpriority"></a>  CAsyncMonikerFile::GetPriority
+##  <a name="getpriority"></a>CAsyncMonikerFile:: GetPriority
 
-Volané z klienta asynchronní moniker proces vytváření vazby začne přijímat přednostně vlákno pro operace vazby.
+Volá se od klienta asynchronního monikeru, protože proces vazby začíná přijmout prioritu určenou vláknu pro operaci vazby.
 
 ```
 virtual LONG GetPriority() const;
@@ -218,15 +218,15 @@ virtual LONG GetPriority() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Priorita, ve kterém se asynchronní přenos proběhnout. Jedním z příznaků priority standardní vlákna: THREAD_PRIORITY_ABOVE_NORMAL THREAD_PRIORITY_BELOW_NORMAL, THREAD_PRIORITY_HIGHEST, THREAD_PRIORITY_IDLE, THREAD_PRIORITY_LOWEST, THREAD_PRIORITY_NORMAL a THREAD_PRIORITY_TIME_CRITICAL. Podívat se na funkci Windows [SetThreadPriority](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-setthreadpriority) popis z těchto hodnot.
+Priorita, na které bude prováděn asynchronní přenos. Jeden ze standardních příznaků priority vlákna: THREAD_PRIORITY_ABOVE_NORMAL, THREAD_PRIORITY_BELOW_NORMAL, THREAD_PRIORITY_HIGHEST, THREAD_PRIORITY_IDLE, THREAD_PRIORITY_LOWEST, THREAD_PRIORITY_NORMAL a THREAD_PRIORITY_TIME_CRITICAL. Popis těchto hodnot najdete v [SetThreadPriority](/windows/win32/api/processthreadsapi/nf-processthreadsapi-setthreadpriority) funkce systému Windows.
 
 ### <a name="remarks"></a>Poznámky
 
-`GetPriority` nemůže se volat přímo. THREAD_PRIORITY_NORMAL vrátí výchozí implementaci.
+`GetPriority`nesmí být volána přímo. THREAD_PRIORITY_NORMAL je vrácen výchozí implementací.
 
 ##  <a name="ondataavailable"></a>  CAsyncMonikerFile::OnDataAvailable
 
-Volá asynchronní moniker `OnDataAvailable` předávat data do klienta, protože je k dispozici, vazby během asynchronní operace.
+Asynchronní moniker zavolá `OnDataAvailable` , aby poskytoval data klientovi, jak bude k dispozici během asynchronních operací vazby.
 
 ```
 virtual void OnDataAvailable(DWORD dwSize, DWORD bscfFlag);
@@ -234,21 +234,21 @@ virtual void OnDataAvailable(DWORD dwSize, DWORD bscfFlag);
 
 ### <a name="parameters"></a>Parametry
 
-*dwSize*<br/>
-Souhrnně za (v bajtech) k dispozici od začátku vazby data. Může být nula, označující, že objem dat se nevztahuje na operaci nebo že bez ohledu na konkrétní začal být k dispozici.
+*nenulového dwSize funkci*<br/>
+Kumulativní množství dat (v bajtech), která jsou k dispozici od začátku vazby. Může být nula, což znamená, že množství dat není relevantní pro operaci nebo že žádná konkrétní částka nebyla k dispozici.
 
 *bscfFlag*<br/>
-Hodnota výčtu BSCF. Může být jeden nebo více z následujících hodnot:
+Hodnota výčtu BSCF. Může to být jedna nebo víc z následujících hodnot:
 
-- První volání identifikuje BSCF_FIRSTDATANOTIFICATION `OnDataAvailable` pro operace dané připojení.
+- BSCF_FIRSTDATANOTIFICATION identifikuje první volání `OnDataAvailable` pro danou operaci vazby.
 
-- BSCF_INTERMEDIATEDATANOTIFICATION identifikuje zprostředkující volání `OnDataAvailable` pro operace připojení.
+- BSCF_INTERMEDIATEDATANOTIFICATION identifikuje zprostředkující volání `OnDataAvailable` pro operaci vazby.
 
-- BSCF_LASTDATANOTIFICATION identifikuje poslední volání `OnDataAvailable` pro operace připojení.
+- BSCF_LASTDATANOTIFICATION identifikuje poslední volání `OnDataAvailable` pro operaci vazby.
 
 ### <a name="remarks"></a>Poznámky
 
-Výchozí implementace této funkce nemá žádný účinek. Podívejte se na následující příklad ukázku implementace.
+Výchozí implementace této funkce neprovede žádnou akci. V následujícím příkladu se zobrazí ukázková implementace.
 
 ### <a name="example"></a>Příklad
 
@@ -256,7 +256,7 @@ Výchozí implementace této funkce nemá žádný účinek. Podívejte se na n�
 
 ##  <a name="onlowresource"></a>  CAsyncMonikerFile::OnLowResource
 
-Voláno rozhraním monikeru, když mají nedostatek prostředků.
+Volá se monikerem, když jsou prostředky nízké.
 
 ```
 virtual void OnLowResource();
@@ -264,11 +264,11 @@ virtual void OnLowResource();
 
 ### <a name="remarks"></a>Poznámky
 
-Výchozí implementace volá `GetBinding( )-> Abort( )`.
+Výchozí volání `GetBinding( )-> Abort( )`implementace.
 
 ##  <a name="onprogress"></a>  CAsyncMonikerFile::OnProgress
 
-Je voláno moniker opakovaně k označení aktuální průběh této operace připojení, obvykle v rozumné intervalech během operace s delším průběhem.
+Volána monikerem opakovaně k označení aktuálního průběhu této operace vazby, obvykle v přiměřených intervalech během operace s délkou.
 
 ```
 virtual void OnProgress(
@@ -281,16 +281,16 @@ virtual void OnProgress(
 ### <a name="parameters"></a>Parametry
 
 *ulProgress*<br/>
-Označuje aktuální průběh operace připojení vzhledem k očekávané maximální podle *ulProgressMax*.
+Označuje aktuální průběh operace vazby vzhledem k očekávanému maximu uvedenému v *ulProgressMax*.
 
 *ulProgressMax*<br/>
-Označuje očekávaný maximální hodnotu *ulProgress* po dobu trvání volání `OnProgress` pro tuto operaci.
+Označuje očekávanou maximální hodnotu *ulProgress* pro dobu trvání volání `OnProgress` pro tuto operaci.
 
 *ulStatusCode*<br/>
-Poskytuje další informace o průběhu operace připojení. Platné hodnoty jsou převzaty z `BINDSTATUS` výčtu. Možné hodnoty najdete v článku poznámky.
+Poskytuje další informace týkající se průběhu operace vazby. Platné hodnoty jsou pořízeny `BINDSTATUS` z výčtu. Možné hodnoty najdete v části poznámky.
 
 *szStatusText*<br/>
-Informace o aktuální průběh, závisí na hodnotě *ulStatusCode*. Možné hodnoty najdete v článku poznámky.
+Informace o aktuálním průběhu v závislosti na hodnotě *ulStatusCode* Možné hodnoty najdete v části poznámky.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -298,19 +298,19 @@ Možné hodnoty pro *ulStatusCode* (a *szStatusText* pro každou hodnotu) jsou:
 
 |||
 |-|-|
-|BINDSTATUS_FINDINGRESOURCE  |Operace připojení je hledání, který obsahuje objekt nebo úložiště je vázána na prostředek. *SzStatusText* obsahuje zobrazovaný název prostředku vyhledávaná (například "www.microsoft.com").  |
-|BINDSTATUS_CONNECTING  |Operace připojení se připojuje k prostředku, který obsahuje objekt nebo vázání na úložiště. *SzStatusText* obsahuje zobrazovaný název prostředku připojení k (například IP adresa).  |
-|BINDSTATUS_SENDINGREQUEST|Operace připojení požaduje objekt nebo vázání na úložiště. *SzStatusText* obsahuje zobrazovaný název objektu (například název souboru).|
-|BINDSTATUS_REDIRECTING  |Operace připojení byl přesměrován do různých datových umístění. *SzStatusText* obsahuje zobrazovaný název nové umístění data.  |
-|BINDSTATUS_USINGCACHEDCOPY  |Operace připojení je načítání požadovaný objekt nebo úložiště z kopie v mezipaměti. *SzStatusText* má hodnotu NULL.  |
-|BINDSTATUS_BEGINDOWNLOADDATA  |Operace připojení byl zahájen příjem objektu nebo úložiště svázaný s. *SzStatusText* obsahuje zobrazovaný název data umístění.|
-|BINDSTATUS_DOWNLOADINGDATA  |Operace připojení i nadále přijímat objektu nebo úložiště svázaný s. *SzStatusText* obsahuje zobrazovaný název data umístění.  |
-|BINDSTATUS_ENDDOWNLOADDATA  |Operace připojení bylo dokončeno přijetí objektu nebo úložiště svázaný s. *SzStatusText* obsahuje zobrazovaný název data umístění.  |
-|BINDSTATUS_CLASSIDAVAILABLE  |Instance objektu svázaný s je jen o který se má vytvořit. *SzStatusText* poskytuje CLSID nového objektu ve formátu řetězce, a umožnil tak klientovi příležitost ke zrušení operace vazby v případě potřeby.  |
+|BINDSTATUS_FINDINGRESOURCE  |Operace BIND hledá prostředek, na kterém je uložený objekt nebo úložiště, na kterém je vázáno. *SzStatusText* poskytuje zobrazované jméno hledaného prostředku (například "www.Microsoft.com").  |
+|BINDSTATUS_CONNECTING  |Operace BIND se připojuje k prostředku, který obsahuje objekt nebo úložiště, na které je vázáno. *SzStatusText* poskytuje zobrazované jméno prostředku, ke kterému se připojuje (například IP adresa).  |
+|BINDSTATUS_SENDINGREQUEST|Operace BIND požaduje objekt nebo úložiště, na které je vázáno. *SzStatusText* poskytuje zobrazované jméno objektu (například název souboru).|
+|BINDSTATUS_REDIRECTING  |Operace vazby byla přesměrována na jiné umístění dat. *SzStatusText* poskytuje zobrazované jméno nového umístění dat.  |
+|BINDSTATUS_USINGCACHEDCOPY  |Operace BIND načítá požadovaný objekt nebo úložiště z kopie v mezipaměti. *SzStatusText* má hodnotu null.  |
+|BINDSTATUS_BEGINDOWNLOADDATA  |Operace BIND zahájila příjem objektu nebo úložiště svázaného s. *SzStatusText* poskytuje zobrazovaný název umístění dat.|
+|BINDSTATUS_DOWNLOADINGDATA  |Operace vazby nadále přijímá objekt nebo úložiště, na které je vázáno. *SzStatusText* poskytuje zobrazovaný název umístění dat.  |
+|BINDSTATUS_ENDDOWNLOADDATA  |Operace BIND dokončila přijímání objektu nebo úložiště, na které je vázáno. *SzStatusText* poskytuje zobrazovaný název umístění dat.  |
+|BINDSTATUS_CLASSIDAVAILABLE  |Instance objektu, na který se váže, je právě vytvořena. *SzStatusText* poskytuje identifikátor CLSID nového objektu ve formátu řetězce a umožňuje klientovi možnost zrušit operaci vazby, pokud je to žádoucí.  |
 
 ##  <a name="onstartbinding"></a>  CAsyncMonikerFile::OnStartBinding
 
-Přepsání této funkce ve vaší odvozené třídy k provádění akcí, když se zahajuje vazba.
+Tuto funkci v odvozených třídách přepište, aby prováděla akce při spuštění vazby.
 
 ```
 virtual void OnStartBinding();
@@ -318,11 +318,11 @@ virtual void OnStartBinding();
 
 ### <a name="remarks"></a>Poznámky
 
-Tato funkce je volána zpět monikeru. Výchozí implementace nemá žádný účinek.
+Tato funkce je volána zpět monikerem. Výchozí implementace neprovádí žádnou akci.
 
-##  <a name="onstopbinding"></a>  CAsyncMonikerFile::OnStopBinding
+##  <a name="onstopbinding"></a>CAsyncMonikerFile::OnStopBinding
 
-Je voláno moniker na konci operace připojení.
+Volá se monikerem na konci operace vazby.
 
 ```
 virtual void OnStopBinding(HRESULT hresult, LPCTSTR szError);
@@ -330,21 +330,21 @@ virtual void OnStopBinding(HRESULT hresult, LPCTSTR szError);
 
 ### <a name="parameters"></a>Parametry
 
-*Hodnota HRESULT*<br/>
-HRESULT, který je chybu nebo upozornění hodnotu.
+*HRESULT*<br/>
+Hodnota HRESULT, která je chybou nebo upozorněním.
 
 *szErrort*<br/>
-Znakový řetězec popisující chybu.
+Řetězec znaků popisující chybu.
 
 ### <a name="remarks"></a>Poznámky
 
-Potlačí tuto funkci k provádění akcí, když se zastaví přenos. Ve výchozím nastavení, funkce uvolní `IBinding`.
+Přepište tuto funkci, aby se prováděly akce, když se přenos zastaví. Ve výchozím nastavení vydává `IBinding`funkce.
 
-Popis `IBinding` rozhraní, naleznete v sadě Windows SDK.
+Popis `IBinding` rozhraní naleznete v Windows SDK.
 
-##  <a name="open"></a>  CAsyncMonikerFile::Open
+##  <a name="open"></a>CAsyncMonikerFile:: Open
 
-Voláním této členské funkce a otevřete soubor asynchronně.
+Zavolejte tuto členskou funkci pro asynchronní otevření souboru.
 
 ```
 virtual BOOL Open(
@@ -389,32 +389,32 @@ virtual BOOL Open(
 ### <a name="parameters"></a>Parametry
 
 *lpszURL*<br/>
-Ukazatel na soubor otevřít asynchronně. Soubor může být platná adresa URL nebo název souboru.
+Ukazatel na soubor, který se má spustit asynchronně. Soubor může být libovolná platná adresa URL nebo název souboru.
 
 *pError*<br/>
-Ukazatel na soubor výjimky. V případě chyby bude nastavena na příčinu.
+Ukazatel na výjimky souboru. V případě chyby bude nastavena na příčinu.
 
 *pMoniker*<br/>
-Ukazatel na rozhraní asynchronní moniker `IMoniker`, přesné monikeru, který je kombinací identifikátoru dokumentu vlastní monikeru, který můžete získat pomocí `IOleClientSite::GetMoniker(OLEWHICHMK_CONTAINER)`a monikeru vytvořené z názvu cesty. Ovládací prvek můžete používat tento zástupný název pro vytvoření vazby, ale to není moniker by měl ovládací prvek uložit.
+Ukazatel na rozhraní `IMoniker`asynchronního monikeru, přesný moniker, který je kombinací vlastního monikeru dokumentu, který můžete načíst pomocí `IOleClientSite::GetMoniker(OLEWHICHMK_CONTAINER)`a moniker vytvořený z názvu cesty. Ovládací prvek může použít tento moniker k vytvoření vazby, ale toto není moniker, který by měl ovládací prvek Uložit.
 
 *pBindHost*<br/>
-Ukazatel `IBindHost` rozhraní, které se použije k vytvoření zástupný název z potenciálně relativní cestu. Je-li hostitele vazby je neplatný nebo neposkytuje monikeru, volání výchozí `Open(lpszFileName,pError)`. Popis `IBindHost` rozhraní, naleznete v sadě Windows SDK.
+Ukazatel na `IBindHost` rozhraní, které bude použito k vytvoření monikeru z potenciálně relativní cesty. Pokud je hostitel BIND neplatný nebo neposkytuje moniker, je výchozím `Open(lpszFileName,pError)`voláním. Popis `IBindHost` rozhraní naleznete v Windows SDK.
 
 *pServiceProvider*<br/>
-Ukazatel `IServiceProvider` rozhraní. Pokud poskytovatel služeb je neplatný, nebo nebude schopen poskytnout službu `IBindHost`, výchozí hodnota volání `Open(lpszFileName,pError)`.
+Ukazatel na `IServiceProvider` rozhraní. Pokud je poskytovatel služeb neplatný nebo neposkytne službu pro `IBindHost`, použije se `Open(lpszFileName,pError)`výchozí volání.
 
 *pUnknown*<br/>
-Ukazatel `IUnknown` rozhraní. Pokud `IServiceProvider` není nalezen, funkce dotazů pro `IBindHost`. Pokud poskytovatel služeb je neplatný, nebo nebude schopen poskytnout službu `IBindHost`, výchozí hodnota volání `Open(lpszFileName,pError)`.
+Ukazatel na `IUnknown` rozhraní. Pokud `IServiceProvider` je nalezen, funkce se dotazuje `IBindHost`pro. Pokud je poskytovatel služeb neplatný nebo neposkytne službu pro `IBindHost`, použije se `Open(lpszFileName,pError)`výchozí volání.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Nenulové, pokud je soubor otevřen úspěšně; jinak 0.
+Nenulové, pokud je soubor otevřen úspěšně; v opačném případě 0.
 
 ### <a name="remarks"></a>Poznámky
 
-Toto volání zahájí proces vytváření vazby.
+Toto volání inicializuje proces vazby.
 
-Můžete použít adresu URL nebo název souboru pro *lpszURL* parametru. Příklad:
+Pro parametr *lpszURL* můžete použít adresu URL nebo název souboru. Příklad:
 
 [!code-cpp[NVC_MFCWinInet#6](../../mfc/codesnippet/cpp/casyncmonikerfile-class_2.cpp)]
 

@@ -1,21 +1,21 @@
 ---
-title: Položka (atribut C++ COM)
+title: Entry (C++ atribut com)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.entry
 helpviewer_keywords:
 - entry attribute
 ms.assetid: ba4843e3-d7ad-4b86-9a15-0b4192f0f698
-ms.openlocfilehash: 703a55ee7c56b64a5b168016770508508bab09e0
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: 71abf4f183255fa137b43ac9cabd88d15c3fc85d
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64346132"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69490892"
 ---
 # <a name="entry"></a>entry
 
-Určuje exportované funkce nebo konstanta v modulu určením vstupní bod v knihovně DLL.
+Určuje exportovanou funkci nebo konstantu v modulu určením vstupního bodu v knihovně DLL.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -26,28 +26,28 @@ Určuje exportované funkce nebo konstanta v modulu určením vstupní bod v kni
 ### <a name="parameters"></a>Parametry
 
 *id*<br/>
-ID vstupní bod.
+ID vstupního bodu
 
 ## <a name="remarks"></a>Poznámky
 
-**Položka** C++ atribut má stejné funkce jako [položka](/windows/desktop/Midl/entry) atribut MIDL.
+Atribut **entry** C++ má stejné funkce jako atribut [entry](/windows/win32/Midl/entry) MIDL.
 
 ## <a name="example"></a>Příklad
 
-Podívejte se na příklad pro [možnost idl_module](idl-module.md) pro příklad použití **položka**.
+Příklad použití **položky**naleznete v příkladu pro [idl_module](idl-module.md) .
 
 ## <a name="requirements"></a>Požadavky
 
-### <a name="attribute-context"></a>Atribut kontextu
+### <a name="attribute-context"></a>Kontext atributu
 
 |||
 |-|-|
-|**Platí pro**|`idl_module` Atribut|
-|**Opakovatelné**|Ne|
-|**Vyžadované atributy**|Žádné|
+|**Platí pro**|`idl_module`přidělen|
+|**REPEATABLE**|Ne|
+|**Požadované atributy**|Žádné|
 |**Neplatné atributy**|Žádné|
 
-Další informace najdete v tématu [kontexty atributů](cpp-attributes-com-net.md#contexts).
+Další informace naleznete v tématu [kontexty atributů](cpp-attributes-com-net.md#contexts).
 
 ## <a name="see-also"></a>Viz také:
 

@@ -16,12 +16,12 @@ helpviewer_keywords:
 - ACL object global functions
 - security IDs [C++]
 ms.assetid: 6a584bfe-16b7-47f4-8439-9c789c41567a
-ms.openlocfilehash: 435ab4756808a530749e110302b73d16a31c38c6
-ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
+ms.openlocfilehash: 5f3c0464b239f4500d416b80ae4fdf06c2dc386f
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68915515"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69495178"
 ---
 # <a name="security-global-functions"></a>Globální funkce zabezpečení
 
@@ -66,7 +66,7 @@ inline bool AtlGetDacl(
 Zpracování objektu, pro který mají být načteny informace o zabezpečení.
 
 *ObjectType*<br/>
-Určuje hodnotu z výčtu [SE_OBJECT_TYPE](/windows/desktop/api/accctrl/ne-accctrl-se_object_type) , která označuje typ objektu identifikovaného parametrem *hObject* .
+Určuje hodnotu z výčtu [SE_OBJECT_TYPE](/windows/win32/api/accctrl/ne-accctrl-se_object_type) , která označuje typ objektu identifikovaného parametrem *hObject* .
 
 *pDacl*<br/>
 Ukazatel na objekt DACL, který bude obsahovat načtené informace o zabezpečení.
@@ -100,7 +100,7 @@ inline bool AtlSetDacl(
 Zpracování objektu, pro který chcete nastavit informace o zabezpečení.
 
 *ObjectType*<br/>
-Určuje hodnotu z výčtu [SE_OBJECT_TYPE](/windows/desktop/api/accctrl/ne-accctrl-se_object_type) , která označuje typ objektu identifikovaného parametrem *hObject* .
+Určuje hodnotu z výčtu [SE_OBJECT_TYPE](/windows/win32/api/accctrl/ne-accctrl-se_object_type) , která označuje typ objektu identifikovaného parametrem *hObject* .
 
 *rDacl*<br/>
 DACL obsahující nové informace o zabezpečení.
@@ -139,7 +139,7 @@ inline bool AtlGetGroupSid(
 Zpracování objektu, ze kterého mají být načteny informace o zabezpečení.
 
 *ObjectType*<br/>
-Určuje hodnotu z výčtu [SE_OBJECT_TYPE](/windows/desktop/api/accctrl/ne-accctrl-se_object_type) , která označuje typ objektu identifikovaného parametrem *hObject* .
+Určuje hodnotu z výčtu [SE_OBJECT_TYPE](/windows/win32/api/accctrl/ne-accctrl-se_object_type) , která označuje typ objektu identifikovaného parametrem *hObject* .
 
 *pSid*<br/>
 Ukazatel na `CSid` objekt, který bude obsahovat nové informace o zabezpečení.
@@ -172,7 +172,7 @@ inline bool AtlSetGroupSid(
 Zpracování objektu, pro který chcete nastavit informace o zabezpečení.
 
 *ObjectType*<br/>
-Určuje hodnotu z výčtu [SE_OBJECT_TYPE](/windows/desktop/api/accctrl/ne-accctrl-se_object_type) , která označuje typ objektu identifikovaného parametrem *hObject* .
+Určuje hodnotu z výčtu [SE_OBJECT_TYPE](/windows/win32/api/accctrl/ne-accctrl-se_object_type) , která označuje typ objektu identifikovaného parametrem *hObject* .
 
 *rSid*<br/>
 `CSid` Objekt obsahující nové informace o zabezpečení.
@@ -205,7 +205,7 @@ inline bool AtlGetOwnerSid(
 Zpracování objektu, ze kterého mají být načteny informace o zabezpečení.
 
 *ObjectType*<br/>
-Určuje hodnotu z výčtu [SE_OBJECT_TYPE](/windows/desktop/api/accctrl/ne-accctrl-se_object_type) , která označuje typ objektu identifikovaného parametrem *hObject* .
+Určuje hodnotu z výčtu [SE_OBJECT_TYPE](/windows/win32/api/accctrl/ne-accctrl-se_object_type) , která označuje typ objektu identifikovaného parametrem *hObject* .
 
 *pSid*<br/>
 Ukazatel na `CSid` objekt, který bude obsahovat nové informace o zabezpečení.
@@ -238,7 +238,7 @@ inline bool AtlSetOwnerSid(
 Zpracování objektu, pro který chcete nastavit informace o zabezpečení.
 
 *ObjectType*<br/>
-Určuje hodnotu z výčtu [SE_OBJECT_TYPE](/windows/desktop/api/accctrl/ne-accctrl-se_object_type) , která označuje typ objektu identifikovaného parametrem *hObject* .
+Určuje hodnotu z výčtu [SE_OBJECT_TYPE](/windows/win32/api/accctrl/ne-accctrl-se_object_type) , která označuje typ objektu identifikovaného parametrem *hObject* .
 
 *rSid*<br/>
 `CSid` Objekt obsahující nové informace o zabezpečení.
@@ -272,7 +272,7 @@ inline bool AtlGetSacl(
 Zpracování objektu, ze kterého mají být načteny informace o zabezpečení.
 
 *ObjectType*<br/>
-Určuje hodnotu z výčtu [SE_OBJECT_TYPE](/windows/desktop/api/accctrl/ne-accctrl-se_object_type) , která označuje typ objektu identifikovaného parametrem *hObject* .
+Určuje hodnotu z výčtu [SE_OBJECT_TYPE](/windows/win32/api/accctrl/ne-accctrl-se_object_type) , která označuje typ objektu identifikovaného parametrem *hObject* .
 
 *pSacl*<br/>
 Ukazatel na objekt SACL, který bude obsahovat načtené informace o zabezpečení.
@@ -314,7 +314,7 @@ inline bool AtlSetSacl(
 Zpracování objektu, pro který chcete nastavit informace o zabezpečení.
 
 *ObjectType*<br/>
-Určuje hodnotu z výčtu [SE_OBJECT_TYPE](/windows/desktop/api/accctrl/ne-accctrl-se_object_type) , která označuje typ objektu identifikovaného parametrem *hObject* .
+Určuje hodnotu z výčtu [SE_OBJECT_TYPE](/windows/win32/api/accctrl/ne-accctrl-se_object_type) , která označuje typ objektu identifikovaného parametrem *hObject* .
 
 *rSacl*<br/>
 Seznam SACL obsahující nové informace o zabezpečení.
@@ -363,13 +363,13 @@ bool bRequestNeededPrivileges = true) throw(...);
 Ukazatel na řetězec zakončený hodnotou null, který určuje název objektu, ze kterého mají být načteny informace o zabezpečení.
 
 *ObjectType*<br/>
-Určuje hodnotu z výčtu [SE_OBJECT_TYPE](/windows/desktop/api/accctrl/ne-accctrl-se_object_type) , která označuje typ objektu identifikovaného parametrem *pszObjectName* .
+Určuje hodnotu z výčtu [SE_OBJECT_TYPE](/windows/win32/api/accctrl/ne-accctrl-se_object_type) , která označuje typ objektu identifikovaného parametrem *pszObjectName* .
 
 *pSecurityDescriptor*<br/>
 Objekt, který přijímá požadovaný popisovač zabezpečení.
 
 *requestedInfo*<br/>
-Sada [SECURITY_INFORMATION](/windows/desktop/SecAuthZ/security-information) bitových příznaků, které označují typ informací o zabezpečení, které mají být načteny. Tento parametr může být kombinací následujících hodnot.
+Sada [SECURITY_INFORMATION](/windows/win32/SecAuthZ/security-information) bitových příznaků, které označují typ informací o zabezpečení, které mají být načteny. Tento parametr může být kombinací následujících hodnot.
 
 *bRequestNeededPrivileges*<br/>
 Pokud je hodnota true, funkce se pokusí povolit oprávnění SE_SECURITY_NAME a obnovit ji při dokončení.

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - image lists [MFC], drawing images from
 - images [MFC], drawing
 ms.assetid: 2f6063fb-1c28-45f8-a333-008c064db11c
-ms.openlocfilehash: e4e60f0e6e4ee22712e4bbce344fd6437cf3db7e
-ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
+ms.openlocfilehash: fb307d5557c0e136c1c44c29f08af6062bb1c19d
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68916414"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69508608"
 ---
 # <a name="drawing-images-from-an-image-list"></a>Vykreslování obrázků ze seznamu obrázků
 
@@ -28,7 +28,7 @@ Styly **ILD_BLEND25** a **ILD_BLEND50** rozkladou obrázek pomocí barvy zvýraz
 
 Nemaskovatelné obrázky se zkopírují do kontextu cílového zařízení pomocí `SRCCOPY` operace rastrového obrázku. Barvy v obrázku vypadají stejně bez ohledu na barvu pozadí kontextu zařízení. Styly kresby zadané v `Draw` také nemají žádný vliv na vzhled nemaskované image.
 
-Kromě funkce Draw member, další funkce, [DrawIndirect](../mfc/reference/cimagelist-class.md#drawindirect), rozšiřuje schopnost vykreslování obrázku. `DrawIndirect`přebírá jako parametr strukturu [IMAGELISTDRAWPARAMS](/windows/desktop/api/commctrl/ns-commctrl-imagelistdrawparams) . Tato struktura se dá použít k přizpůsobení vykreslování aktuálního obrázku, včetně použití rastrových kódů operace (pravém). Další informace o kódech pravém naleznete v tématu [rastrové kódy operací](/windows/desktop/gdi/raster-operation-codes) a [bitmapy jako štětce](/windows/desktop/gdi/bitmaps-as-brushes) v Windows SDK.
+Kromě funkce Draw member, další funkce, [DrawIndirect](../mfc/reference/cimagelist-class.md#drawindirect), rozšiřuje schopnost vykreslování obrázku. `DrawIndirect`přebírá jako parametr strukturu [IMAGELISTDRAWPARAMS](/windows/win32/api/commctrl/ns-commctrl-imagelistdrawparams) . Tato struktura se dá použít k přizpůsobení vykreslování aktuálního obrázku, včetně použití rastrových kódů operace (pravém). Další informace o kódech pravém naleznete v tématu [rastrové kódy operací](/windows/win32/gdi/raster-operation-codes) a [bitmapy jako štětce](/windows/win32/gdi/bitmaps-as-brushes) v Windows SDK.
 
 ## <a name="see-also"></a>Viz také:
 

@@ -1,5 +1,5 @@
 ---
-title: / Execution-Charset (nastavení znakové sady spuštění)
+title: /Execution-charset (nastavení znakové sady spuštění)
 ms.date: 02/06/2019
 f1_keywords:
 - execution-charset
@@ -8,16 +8,16 @@ helpviewer_keywords:
 - /execution-charset compiler option
 - -execution-charset compiler option
 ms.assetid: 0e02f487-2236-45bc-95f3-5760933a8f96
-ms.openlocfilehash: 0a140bf438a44df152b1578f4569a087a604061c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 44e83524867bc8a914706e1f5b45b61bc4a48087
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62271434"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69492919"
 ---
-# <a name="execution-charset-set-execution-character-set"></a>/ Execution-Charset (nastavení znakové sady spuštění)
+# <a name="execution-charset-set-execution-character-set"></a>/Execution-charset (nastavení znakové sady spuštění)
 
-Umožňuje určit spuštění znakové sady pro spustitelný soubor.
+Umožňuje zadat znakovou sadu spouštění pro spustitelný soubor.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -28,28 +28,28 @@ Umožňuje určit spuštění znakové sady pro spustitelný soubor.
 ## <a name="arguments"></a>Arguments
 
 *IANA_name*<br/>
-Název sady znaků definice IANA.
+Název znakové sady definovaný organizací IANA.
 
 *CPID*<br/>
-Identifikátor kódu stránky.
+Identifikátor kódové stránky
 
 ## <a name="remarks"></a>Poznámky
 
-Můžete použít **/Execution-Charset** můžete zadat znaková sada spuštění. Znaková sada spuštění je kódování použité pro text ovládacího prvku programu, který je vstup do fáze kompilace koneckonců předběžného zpracování kroky. Znaková sada se používá pro interní reprezentace libovolný řetězec nebo znak literály do kompilovaného kódu. Nastavte tuto možnost k určení znakové sady rozšířeného spuštění při vaší zdrojové soubory obsahují znaky, které nejsou reprezentovat základní znakové sadě spuštění. Můžete použít buď IANA nebo ISO znaková sada název nebo tečku (.), za nímž následuje identifikátor číslice 3 až 5 desítkový kód stránky zadat znakovou sadu. Seznam podporovaných identifikátory znakových stránek a znakové sady názvy, naleznete v tématu [identifikátory znakových stránek](/windows/desktop/Intl/code-page-identifiers).
+K určení znakové sady pro spuštění můžete použít možnost **/Execution-charset** . Znaková sada spuštění je kódování použité pro text programu, který je vstupem do fáze kompilace po všech krocích předběžného zpracování. Tato znaková sada se používá pro interní reprezentace libovolných řetězcových nebo znakových literálů v kompilovaném kódu. Tuto možnost nastavte, pokud chcete zadat znakovou sadu rozšířeného spuštění, která se má použít, když zdrojové soubory obsahují znaky, které nejsou reprezentovány v základní znakové sadě spuštění. Můžete použít název sady znaků IANA nebo ISO nebo tečku (.) následovaný znakem 3 až 5 číslice pro desítkový identifikátor znakové stránky a zadat znakovou sadu, která se má použít. Seznam podporovaných identifikátorů znakové stránky a názvů znakové sady naleznete v tématu [identifikátory znakové stránky](/windows/win32/Intl/code-page-identifiers).
 
-Ve výchozím nastavení sada Visual Studio zjistí značka pořadí bajtů k určení, zda zdrojový soubor je v zakódovaném formátu Unicode, například UTF-16 nebo UTF-8. Pokud se nenajde žádné značky pořadí bajtů, předpokládá zdrojový soubor je zakódován pomocí aktuální znakové stránce uživatele uvedeno znaková sada s použitím názvu nebo kódu stránky **/Source-Charset** možnost nebo **/UTF-8** možnost. Visual Studio umožňuje uložit zdrojovém kódu jazyka C++ pomocí některého z několika kódování znaků. Informace o spuštění a zdrojová znakových sadách najdete v tématu [znakové sady](../../cpp/character-sets.md) v dokumentaci jazyka.
+Ve výchozím nastavení Visual Studio detekuje značku pro určení, zda je zdrojový soubor v kódovaném formátu Unicode, například UTF-16 nebo UTF-8. Pokud není nalezen žádný znak pořadí bajtů, předpokládá se, že zdrojový soubor je kódován pomocí uživatelské znakové stránky, pokud jste nezadali název znakové sady nebo znakovou stránku pomocí možnosti **/source-charset** nebo možnosti **/UTF-8.** . Visual Studio umožňuje uložit C++ zdrojový kód pomocí některého z několika kódování znaků. Informace o zdrojových a spouštěcích znakových sadách naleznete v tématu [znakové sady](../../cpp/character-sets.md) v dokumentaci jazyka.
 
-Pokud chcete nastavit zdrojové znakové sady a znakové sady spuštění na UTF-8, můžete použít **/UTF-8** – možnost kompilátoru jako zástupce. Je ekvivalentní se zadáním **/source-charset:utf – 8 /execution-charset:utf – 8** na příkazovém řádku. Některé z těchto možností také umožňuje **/Validate-Charset** možnost ve výchozím nastavení.
+Pokud chcete nastavit jak zdrojové znakové sady, tak i znaková sada spuštění na UTF-8, můžete použít možnost kompilátoru **/UTF-8.** jako zástupce. Je ekvivalentní zadání **/source-charset: UTF-8/Execution-charset: UTF-8** na příkazovém řádku. Kterákoli z těchto možností také ve výchozím nastavení povolí možnost **/Validate-charset** .
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Nastavení tohoto parametru kompilátoru ve vývojovém prostředí Visual Studio
 
-1. Otevřete projekt **stránky vlastností** dialogové okno. Další informace najdete v tématu [vlastnosti kompilátoru a sestavení nastavte C++ v sadě Visual Studio](../working-with-project-properties.md).
+1. Otevřete dialogové okno **stránky vlastností** projektu. Další informace najdete v tématu [nastavení C++ vlastností kompilátoru a sestavení v sadě Visual Studio](../working-with-project-properties.md).
 
-1. Rozbalte **vlastnosti konfigurace**, **C/C++**, **příkazového řádku** složky.
+1. Rozbalte **Vlastnosti konfigurace**, složka s příkazovým **řádkem** **C/C++** .
 
-1. V **další možnosti**, přidejte **/Execution-Charset** možnosti a určete upřednostňované kódování.
+1. V části **Další možnosti**přidejte možnost **/Execution-charset** a zadejte preferované kódování.
 
-1. Zvolte **OK** uložte provedené změny.
+1. Kliknutím na **tlačítko OK** uložte změny.
 
 ## <a name="see-also"></a>Viz také:
 

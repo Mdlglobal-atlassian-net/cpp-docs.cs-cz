@@ -4,20 +4,20 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - manifests [C++]
 ms.assetid: a1f24221-5b09-4824-be48-92eae5644b53
-ms.openlocfilehash: ff8d9f214b4fe4d004691c54474dcdabf2c0af85
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 16d5efc5c5f7ce81b4b60269b0c666fd5d24266e
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62314738"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69492529"
 ---
 # <a name="understanding-manifest-generation-for-cc-programs"></a>Základní informace o generování manifestu pro programy C/C++
 
-A [manifest](/windows/desktop/sbscs/manifests) je dokument XML, který může být externí soubor XML nebo prostředek vložena do aplikace nebo sestavení. Manifest [izolované aplikace](/windows/desktop/SbsCs/isolated-applications) slouží ke správě názvů a verzí sdílená sestavení vedle sebe, pro které aplikace by měla vytvořit vazbu za běhu. Manifest sestavení vedle sebe určuje závislých na názvy, verze, prostředky a jiná sestavení.
+[Manifest](/windows/win32/sbscs/manifests) je dokument XML, který může být externí soubor XML nebo prostředek vložený do aplikace nebo sestavení. Manifest [izolované aplikace](/windows/win32/SbsCs/isolated-applications) se používá ke správě názvů a verzí sdílených souběžných sestavení, ke kterým by aplikace měla vytvořit vazby za běhu. Manifest souběžného sestavení určuje jeho závislosti na názvech, verzích, prostředcích a dalších sestaveních.
 
-Existují dva způsoby vytvoření manifestu izolované aplikace nebo sestavení vedle sebe. Nejprve Autor sestavení můžete ručně vytvořit soubor manifestu následující pravidla a požadavkům na názvy. Případně pokud program pouze závisí na sestavení Visual C++, jako je například CRT, MFC, ATL nebo jiné, pak manifestu mohou být generovány automaticky linkeru.
+Existují dva způsoby, jak vytvořit manifest pro izolovanou aplikaci nebo souběžné sestavení. Nejprve může autor sestavení ručně vytvořit soubor manifestu následující pravidla a požadavky na pojmenování. Alternativně, pokud je program závislý pouze na C++ vizuálních sestaveních, jako jsou CRT, MFC, ATL nebo jiné, lze manifest vygenerovat automaticky linkerem.
 
-Hlavičky knihoven Visual C++ obsahují informace o sestavení, a když tyto knihovny jsou zahrnuty v kódu aplikace, tyto informace sestavení používá propojovací program k vytvoření manifestu pro koncovém binárním souboru. Propojovací program nelze vložit soubor manifestu do binárního souboru a můžou jenom generovat manifest jako externího souboru. Ve všech případech nemusí fungovat s manifestu jako externího souboru. Například se doporučuje, aby soukromých sestavení mají vložených manifestů. V sestaveních příkazového řádku jako jsou ty, které používají nmake sestavovat kód lze jej vkládat manifestu pomocí nástroje manifestu; Další informace najdete v části [generování manifestu v příkazovém řádku](manifest-generation-at-the-command-line.md). Při sestavování v sadě Visual Studio, může být manifestu vložen nastavením vlastnosti pro nástroj manifest v **vlastnosti projektu** dialogové okno; viz [generování manifestu v sadě Visual Studio](manifest-generation-in-visual-studio.md).
+Hlavičky vizuálních C++ knihoven obsahují informace o sestavení a když jsou knihovny zahrnuty v kódu aplikace, je tato informace o sestavení používána linkerem k vytvoření manifestu finálního binárního souboru. Linker nevloží soubor manifestu do binárního souboru a může vytvořit pouze manifest jako externí soubor. Použití manifestu jako externího souboru nemusí fungovat pro všechny scénáře. Například se doporučuje, aby privátní sestavení měly vložené manifesty. V sestavách na příkazovém řádku, jako jsou ty, které používají NMAKE k sestavení kódu, manifest lze vložit pomocí nástroje manifest; Další informace naleznete v tématu [generování manifestu v příkazovém řádku](manifest-generation-at-the-command-line.md). Při sestavování v aplikaci Visual Studio může být manifest vložen nastavením vlastnosti pro nástroj manifest v dialogovém okně **Vlastnosti projektu** . viz [generování manifestu v aplikaci Visual Studio](manifest-generation-in-visual-studio.md).
 
 ## <a name="see-also"></a>Viz také:
 

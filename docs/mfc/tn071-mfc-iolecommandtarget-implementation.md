@@ -1,5 +1,5 @@
 ---
-title: 'TN071: MFC iolecommandtarget – implementace'
+title: 'TN071: Implementace MFC IOleCommandTarget –'
 ms.date: 06/28/2018
 f1_keywords:
 - IOleCommandTarget
@@ -7,85 +7,85 @@ helpviewer_keywords:
 - TN071 [MFC]
 - IOleCommandTarget interface [MFC]
 ms.assetid: 3eef571e-6357-444d-adbb-6f734a0c3161
-ms.openlocfilehash: dca1183a17fe8f3022f517d1ad0c3932ea272417
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7077211396c68750d47b91c7b2bb113370990f62
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62167995"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69511100"
 ---
-# <a name="tn071-mfc-iolecommandtarget-implementation"></a>TN071: MFC iolecommandtarget – implementace
+# <a name="tn071-mfc-iolecommandtarget-implementation"></a>TN071: Implementace MFC IOleCommandTarget –
 
 > [!NOTE]
-> Následující Technická poznámka nebyla aktualizována, protože byla poprvé zahrnuta v online dokumentaci. V důsledku toho některé postupy a témata mohou být nesprávné nebo zastaralé. Nejnovější informace se doporučuje vyhledat téma zájmu v dokumentaci online index.
+> Následující technická Poznámka nebyla od prvního zařazení do online dokumentace aktualizována. V důsledku toho mohou být některé postupy a témata neaktuální nebo nesprávné. Nejnovější informace najdete v tématu informace o tom, co je důležité v online katalogu dokumentace najít.
 
-`IOleCommandTarget` Rozhraní umožňuje objektů a jejich kontejnerů k odeslání příkazů k sobě navzájem. Například objektu panely nástrojů mohou obsahovat tlačítka pro příkazy, jako `Print`, `Print Preview`, `Save`, `New`, a `Zoom`. Pokud takový objekt byly vloženy do kontejneru, který podporuje `IOleCommandTarget`, objekt může povolit jeho tlačítka a předávání příkazy na kontejner zpracováním, když uživatel klikl na ně. Pokud kontejner vloženého objektu, aby se vytiskl, ho můžete provést tuto žádost o odeslání příkazu prostřednictvím `IOleCommandTarget` rozhraní vloženého objektu.
+`IOleCommandTarget` Rozhraní umožňuje objektům a jejich kontejnerům odesílat příkazy do sebe navzájem. Například panely nástrojů objektu mohou obsahovat tlačítka `Print`pro příkazy, jako, `Print Preview`, `Save` `New`, a `Zoom`. Pokud takový objekt byl vložen do kontejneru, který podporuje `IOleCommandTarget`, může objekt povolit jeho tlačítka a přeposlání příkazů do kontejneru ke zpracování, když na ně uživatel klikne. Pokud kontejner chtěl vloženému objektu vytisknout sám sebe, mohl by vytvořit tento požadavek odesláním příkazu prostřednictvím `IOleCommandTarget` rozhraní vloženého objektu.
 
-`IOleCommandTarget` Automatizace jako rozhraní je v tom, že se používá pro klienta k vyvolání metody na serveru. Avšak použití `IOleCommandTarget` šetří režii volání prostřednictvím rozhraní automatizace protože programátoři nemusíte používat obvykle nákladné `Invoke` metoda `IDispatch`.
+`IOleCommandTarget`je rozhraní podobné automatizaci v tom, že je používáno klientem k vyvolání metod na serveru. Nicméně použití `IOleCommandTarget` šetří režijní náklady na volání prostřednictvím rozhraní automatizace, protože programátory nemusí používat typicky nákladný `Invoke` způsob `IDispatch`.
 
-V knihovně MFC `IOleCommandTarget` rozhraní používá servery pro aktivní dokumenty umožňující kontejnery pro aktivní dokument k odeslání příkazů na server. Třída serveru aktivního dokumentu, `CDocObjectServerItem`, používá mapy rozhraní MFC (naleznete v tématu [TN038: Implementace třídy IUnknown MFC/OLE](../mfc/tn038-mfc-ole-iunknown-implementation.md)) k implementaci `IOleCommandTarget` rozhraní.
+V knihovně MFC je `IOleCommandTarget` rozhraní používáno servery pro aktivní dokumenty, aby mohly kontejnery aktivních dokumentů odesílat příkazy na server. Třída `CDocObjectServerItem`serveru aktivního dokumentu používá mapy rozhraní MFC (viz [TN038: Implementace](../mfc/tn038-mfc-ole-iunknown-implementation.md) `IOleCommandTarget` rozhraní MFC/OLE IUnknown) pro implementaci rozhraní.
 
-`IOleCommandTarget` také je implementována `COleFrameHook` třídy. `COleFrameHook` je nedokumentované třídy knihovny MFC, která implementuje funkce okna rámce kontejnerů úpravy na místě. `COleFrameHook` mapy rozhraní MFC používá také k implementaci `IOleCommandTarget` rozhraní. `COleFrameHook`pro implementaci `IOleCommandTarget` předává příkazy OLE, které `COleDocObjectItem`-odvozené kontejnery pro aktivní dokument. To umožňuje libovolné MFC aktivní kontejner dokumentu pro příjem zpráv z servery pro aktivní dokumenty obsažené.
+`IOleCommandTarget`je také implementován ve `COleFrameHook` třídě. `COleFrameHook`je nedokumentovaná třída knihovny MFC, která implementuje funkce okna rámce místních editačních kontejnerů. `COleFrameHook`používá také mapy rozhraní knihovny MFC k implementaci `IOleCommandTarget` rozhraní. `COleFrameHook`implementuje příkazy OLE pro `COleDocObjectItem` přeposílánípříkazůOLEnaodvozenékontejneryaktivníhodokumentu.`IOleCommandTarget` To umožňuje, aby kontejner aktivních dokumentů knihovny MFC přijímal zprávy z obsažených serverů aktivních dokumentů.
 
-## <a name="mfc-ole-command-maps"></a>Mapy příkazů MFC OLE
+## <a name="mfc-ole-command-maps"></a>Mapy příkazů technologie OLE v MFC
 
-MFC vývojáři můžou využít výhod `IOleCommandTarget` pomocí knihovny MFC OLE příkazu mapy. Mapy příkazů OLE jsou jako mapy zpráv, protože slouží k mapování příkazy OLE na členské funkce třídy, která obsahuje mapu příkazu. Chcete-li tuto práci, umístěte na mapě příkaz k určení příkazu skupiny OLE požadovaný příkaz, příkaz OLE a Identifikátor příkazu makra [wm_command –](/windows/desktop/menurc/wm-command) zprávu, která se pošle při přijetí příkazu technologie OLE. Knihovna MFC také poskytuje řadu předdefinovaných maker pro standardní příkazy OLE. Seznam standardní technologie OLE příkazy, které byly původně určena pro použití s aplikací Microsoft Office naleznete v tématu OLECMDID výčet, který je definován v docobj.h.
+Vývojáři knihovny MFC mohou využít výhod `IOleCommandTarget` pomocí map příkazů technologie OLE knihovny MFC. Mapy příkazů OLE jsou jako mapy zpráv, protože je lze použít pro mapování příkazů OLE na členské funkce třídy, která obsahuje mapu příkazů. Chcete-li tuto práci provést, umístěte makra do mapy příkazů a určete skupinu příkazů OLE příkazu, který chcete zpracovat, příkaz OLE a ID příkazu [WM_COMMAND](/windows/win32/menurc/wm-command) zprávy, která bude odeslána při přijetí příkazu OLE. MFC také poskytuje řadu předdefinovaných maker pro standardní příkazy OLE. Seznam standardních příkazů OLE, které byly původně určeny pro použití s aplikacemi systém Microsoft Office, najdete v tématu výčet OLECMDID, který je definován v docobj. h.
 
-Po přijetí příkazu technologie OLE aplikací MFC, která obsahuje mapu příkaz OLE MFC se pokusí najít ID příkazu a skupinu příkazů pro požadovaný příkaz v objektu map OLE příkazu aplikace. Pokud se najde shoda, je odeslána aplikace obsahující příkaz mapy s ID požadovaný příkaz wm_command – zprávy. (Viz popis `ON_OLECMD` níže.) Tímto způsobem jsou odeslána do aplikace příkazy OLE převedena na wm_command – zprávy v prostředí MFC. Wm_command – zprávy jsou pak směrován přes mapy zpráv aplikace pomocí knihovny MFC standardu [směrování příkazů](../mfc/command-routing.md) architektury.
+Když aplikace MFC obdrží příkaz OLE, který obsahuje mapu příkazů OLE, knihovna MFC se pokusí najít ID příkazu a skupinu příkazů pro požadovaný příkaz v mapě příkazů OLE aplikace. Pokud je nalezena shoda, zpráva WM_COMMAND je odeslána do aplikace obsahující mapu příkazů s ID požadovaného příkazu. (Viz popis `ON_OLECMD` níže.) Tímto způsobem jsou příkazy OLE odesílané do aplikace převedeny na zprávy WM_COMMAND pomocí knihovny MFC. Zprávy WM_COMMAND jsou poté směrovány prostřednictvím mapy zpráv aplikace pomocí architektury [směrování příkazů](../mfc/command-routing.md) Standard knihovny MFC.
 
-Na rozdíl od mapy zpráv mapy příkazů MFC OLE nejsou podporována nástrojem ClassWizard. MFC musí vývojáři přidat podporu mapování příkazů OLE a položek OLE příkaz mapování ručně. Příkaz OLE mapy mohou být přidány do knihovny MFC aktivní servery dokumentu do třídy, která je v řetězu wm_command – směrování zpráv v době aktivní dokument je na místě aktivní v kontejneru. Tyto třídy zahrnují aplikace třídy odvozené od [CWinApp](../mfc/reference/cwinapp-class.md), [CView](../mfc/reference/cview-class.md), [CDocument](../mfc/reference/cdocument-class.md), a [COleIPFrameWnd](../mfc/reference/coleipframewnd-class.md). V kontejnery pro aktivní dokument, mapy příkazů OLE lze přidat pouze k [coledocobjectitem –](../mfc/reference/coledocobjectitem-class.md)-odvozené třídy. Také v kontejnery pro aktivní dokument, wm_command – zprávy pouze odeslán do mapy zpráv v `COleDocObjectItem`-odvozené třídy.
+Na rozdíl od map zpráv nejsou službou ClassWizard podporovány mapy příkazů technologie OLE knihovny MFC. Vývojáři knihovny MFC musí přidat položku Podpora mapování příkazů OLE a položky mapování příkazů OLE ručně. Mapy příkazů OLE lze přidat do serverů knihovny MFC aktivního dokumentu v libovolné třídě, která je v řetězci směrování zpráv WM_COMMAND v okamžiku, kdy je aktivní dokument aktivní na místě v kontejneru. Tyto třídy zahrnují třídy aplikace odvozené od [CWinApp](../mfc/reference/cwinapp-class.md), [CView](../mfc/reference/cview-class.md), [objektu CDocument](../mfc/reference/cdocument-class.md)a [COleIPFrameWnd](../mfc/reference/coleipframewnd-class.md). V kontejnerech aktivních dokumentů lze mapy příkazů OLE přidat pouze do třídy odvozené od [COleDocObjectItem](../mfc/reference/coledocobjectitem-class.md). V kontejnerech aktivních dokumentů budou také zprávy WM_COMMAND odesílány pouze do mapy zpráv v `COleDocObjectItem`odvozené třídě.
 
-## <a name="ole-command-map-macros"></a>Makra Map příkaz OLE
+## <a name="ole-command-map-macros"></a>Makra mapování příkazů OLE
 
-Chcete-li přidat příkaz mapování funkce do vaší třídy, použijte následující makra:
+Použijte následující makra pro přidání funkce mapy příkazů do třídy:
 
 ```cpp
 DECLARE_OLECMD_MAP ()
 ```
 
-Toto makro přejde v deklaraci třídy (obvykle v souboru hlaviček) třídy, která obsahuje mapu příkazu.
+Toto makro přechází do deklarace třídy (obvykle v hlavičkovém souboru) třídy, která obsahuje mapu příkazů.
 
 ```cpp
 BEGIN_OLECMD_MAP(theClass, baseClass)
 ```
 
 *theClass*<br/>
-Název třídy, která obsahuje mapu příkazu.
+Název třídy, která obsahuje mapu příkazů.
 
 *baseClass*<br/>
-Název třídy základní třídy, která obsahuje mapu příkazu.
+Název základní třídy třídy, která obsahuje mapu příkazů
 
-Toto makro označuje začátek toho příkaz mapy. Použijte toto makro v souboru implementace pro třídu, která obsahuje mapu příkazu.
+Toto makro označuje začátek mapy příkazů. Použijte toto makro v implementačním souboru pro třídu, která obsahuje mapu příkazů.
 
 ```
 END_OLECMD_MAP()
 ```
 
-Toto makro označuje konec příkazu mapy. Použijte toto makro v souboru implementace pro třídu, která obsahuje mapu příkazu. Toto makro musí vždycky dodržovat BEGIN_OLECMD_MAP – makro.
+Toto makro označuje konec mapy příkazů. Použijte toto makro v implementačním souboru pro třídu, která obsahuje mapu příkazů. Toto makro musí vždy následovat po BEGIN_OLECMD_MAP makru.
 
 ```
 ON_OLECMD(pguid, olecmdid, id)
 ```
 
 *pguid*<br/>
-Ukazatel na identifikátor GUID skupiny příkazů příkaz OLE. Tento parametr je **NULL** pro skupiny standardních příkazů OLE.
+Ukazatel na identifikátor GUID skupiny příkazů příkazu OLE. Tento parametr má pro standardní skupinu příkazů OLE **hodnotu null** .
 
 *olecmdid*<br/>
-ID příkazu OLE příkazu má být volána.
+ID příkazu OLE příkazu, který má být vyvolán.
 
 *id*<br/>
-ID wm_command – zprávy k odeslání do aplikace obsahující mapování příkazu, když uživatel vyvolá příkaz OLE.
+ID zprávy WM_COMMAND, která se má odeslat do aplikace obsahující mapu příkazů při vyvolání tohoto příkazu OLE
 
-Použíjte ON_OLECMD – makro v mapě příkaz mohli přidat záznamy pro příkazy OLE, které chcete zpracovávat. Po přijetí jsou příkazy OLE, bude se převést na zadaný wm_command – zprávy a směrován přes mapu zpráv aplikace pomocí standardního směrování příkazů architektury MFC.
+Pomocí makra ON_OLECMD v mapě příkazů přidejte položky pro příkazy OLE, které chcete zpracovat. Po přijetí příkazů OLE budou převedeny na určenou zprávu WM_COMMAND a směrována přes mapu zpráv aplikace pomocí standardní architektury MFC příkazů pro směrování.
 
 ## <a name="example"></a>Příklad
 
-Následující příklad ukazuje, jak přidat schopnost OLE zpracování příkazu služby MFC Active document server ke zpracování [OLECMDID_PRINT](/windows/desktop/api/docobj/ne-docobj-olecmdid) příkaz OLE. Tento příklad předpokládá, že jste použili k vygenerování aplikace knihovny MFC, která je server aktivní dokument AppWizard.
+Následující příklad ukazuje, jak přidat schopnost zpracování příkazů OLE do serveru knihovny MFC aktivního dokumentu pro zpracování příkazu [OLECMDID_PRINT](/windows/win32/api/docobj/ne-docobj-olecmdid) OLE. V tomto příkladu se předpokládá, že jste použili AppWizard k vygenerování aplikace MFC, která je aktivní dokumentový server.
 
-1. Ve vaší `CView`– odvozené třídy záhlaví souboru, přidá dané makro DECLARE_OLECMD_MAP do deklarace třídy.
+1. `CView`V souboru hlaviček odvozené třídy přidejte makro DECLARE_OLECMD_MAP do deklarace třídy.
 
     > [!NOTE]
-    > Použití `CView`-odvozené třídy, protože je jednou ze tříd v aktivním dokumentu serveru, který je v řetězu wm_command – směrování zpráv.
+    > `CView`Použijte třídu odvozenou od třídy, protože se jedná o jednu ze tříd na aktivním Dokumentovém serveru, která je v řetězci směrování zpráv WM_COMMAND.
 
     ```cpp
     class CMyServerView : public CView
@@ -98,7 +98,7 @@ Následující příklad ukazuje, jak přidat schopnost OLE zpracování příka
     };
     ```
 
-2. V souboru implementace pro `CView`-odvozené třídy, přidejte BEGIN_OLECMD_MAP a END_OLECMD_MAP makra:
+2. Do implementačního souboru pro `CView`odvozenou třídu přidejte makra BEGIN_OLECMD_MAP a END_OLECMD_MAP:
 
     ```cpp
     BEGIN_OLECMD_MAP(CMyServerView, CView)
@@ -106,7 +106,7 @@ Následující příklad ukazuje, jak přidat schopnost OLE zpracování příka
     END_OLECMD_MAP()
     ```
 
-3. Chcete-li zpracovat standardní příkaz pro tisk OLE, přidejte [ON_OLECMD](reference/message-map-macros-mfc.md#on_olecmd) – makro mapování příkazu identifikátorem příkazu OLE pro standardní příkaz pro tisk a **ID_FILE_PRINT** ID. wm_command – **ID_FILE_PRINT** je standardně používané ID příkazu pro tiskové aplikace vygenerované průvodcem MFC:
+3. Pro zpracování standardního příkazu pro tisk OLE přidejte do mapy příkazů makro [ON_OLECMD](reference/message-map-macros-mfc.md#on_olecmd) určující ID příkazu OLE pro standardní tiskový příkaz a **ID_FILE_PRINT** pro ID WM_COMMAND. **ID_FILE_PRINT** je standardní ID příkazu tisku používané aplikacemi MFC generovanými AppWizard:
 
     ```
     BEGIN_OLECMD_MAP(CMyServerView, CView)
@@ -114,9 +114,9 @@ Následující příklad ukazuje, jak přidat schopnost OLE zpracování příka
     END_OLECMD_MAP()
     ```
 
-Všimněte si, že jeden standardní příkaz makra OLE definovaná v afxdocob.h, může být zastoupen ON_OLECMD – makro protože **OLECMDID_PRINT** je standardní OLE ID příkazu. ON_OLECMD_PRINT – makro se provedení stejné úlohy jako ON_OLECMD – makro uvedené výše.
+Všimněte si, že jedno ze standardních příkazů OLE, které jsou definovány v AfxDocOb. h, lze použít místo makra ON_OLECMD, protože **OLECMDID_PRINT** je standardní ID příkazu OLE. Makro ON_OLECMD_PRINT provede stejnou úlohu jako výše zobrazené makro ON_OLECMD.
 
-Když aplikace typu kontejner pro odešle tento server **OLECMDID_PRINT** příkaz prostřednictvím serveru `IOleCommandTarget` rozhraní MFC tisk obslužná rutina příkazu, který bude vyvolán na serveru, způsobuje server k vytištění aplikace. Kontejner pro aktivní dokument kódu k vyvolání příkazu print přidali v předchozích krocích by vypadat přibližně takto:
+Když aplikace typu kontejner odešle tento server příkazem **OLECMDID_PRINT** prostřednictvím `IOleCommandTarget` rozhraní serveru, obslužná rutina příkazu pro tisk v knihovně MFC bude vyvolána na serveru, což způsobí, že Server vytiskne aplikaci. Kód kontejneru aktivního dokumentu k vyvolání tiskového příkazu, který byl přidán do výše uvedeného postupu, by vypadal přibližně takto:
 
 ```cpp
 void CContainerCntrItem::DoOleCmd()

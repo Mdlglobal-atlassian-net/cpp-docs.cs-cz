@@ -1,5 +1,5 @@
 ---
-title: Platform, default a cli obory názvů (C++vyhodnocovací a C++/CX)
+title: Obory názvů Platform, default a CLIC++(/CLI C++a/CX)
 ms.date: 10/12/2018
 ms.topic: reference
 f1_keywords:
@@ -9,28 +9,28 @@ helpviewer_keywords:
 - lang namespace
 - cli namespace
 ms.assetid: 9d38bd1e-dc78-47d1-a84b-9b4683e52c9c
-ms.openlocfilehash: a7599e2987d27626e6f5c9d049d9a3bd4509c3ff
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: db6c73d6c52bf97aea5d0fbeeeebdeef87f692cc
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62374204"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69509764"
 ---
-# <a name="platform-default-and-cli-namespaces--ccli-and-ccx"></a>Platform, default a cli obory názvů (C++vyhodnocovací a C++/CX)
+# <a name="platform-default-and-cli-namespaces--ccli-and-ccx"></a>Obory názvů Platform, default a CLIC++(/CLI C++a/CX)
 
-Obor názvů kvalifikuje názvy prvků jazyka, aby názvy nebyly v konfliktu s jinak identickými názvy jinde ve zdrojovém kódu. Například kolize názvů může zabránit kompilátor rozpozná [Context-Sensitive Keywords](context-sensitive-keywords-cpp-component-extensions.md). Obory názvů používá kompilátor, ale ve zkompilovaném sestavení nejsou zachovány.
+Obor názvů kvalifikuje názvy prvků jazyka, aby názvy nebyly v konfliktu s jinak identickými názvy jinde ve zdrojovém kódu. Kolize názvů může například zabránit kompilátoru v rozpoznání [kontextově závislých klíčových slov](context-sensitive-keywords-cpp-component-extensions.md). Obory názvů používá kompilátor, ale ve zkompilovaném sestavení nejsou zachovány.
 
 ## <a name="all-runtimes"></a>Všechny moduly runtime
 
-Při vytváření projektu sady Visual Studio poskytuje výchozí obor názvů pro váš projekt. Obor názvů, můžete ručně přejmenovat, i když v C++/CX název souboru winmd musí odpovídat názvu kořenového oboru názvů.
+Visual Studio poskytuje výchozí obor názvů pro váš projekt při vytváření projektu. Obor názvů můžete přejmenovat ručně, i když v C++/CX název souboru. winmd se musí shodovat s názvem kořenového oboru názvů.
 
 ## <a name="windows-runtime"></a>prostředí Windows Runtime
 
-Další informace najdete v tématu [viditelnost typů a oborů názvů (C++/CX)](https://msdn.microsoft.com/library/windows/apps/hh969551.aspx).
+Další informace naleznete v tématu [obory názvů a viditelnostC++typů (/CX)](../cppcx/namespaces-and-type-visibility-c-cx.md).
 
 ### <a name="requirements"></a>Požadavky
 
-– Možnost kompilátoru: `/ZW`
+Možnost kompilátoru:`/ZW`
 
 ## <a name="common-language-runtime"></a>CLR (Common Language Runtime)
 
@@ -42,9 +42,9 @@ using namespace cli;
 
 ### <a name="remarks"></a>Poznámky
 
-C++/CLI podporuje **rozhraní příkazového řádku** oboru názvů. Při kompilaci s `/clr`, **pomocí** implikován příkaz v oddílu syntaxe.
+C++/CLI podporuje obor názvů **CLI** . Při kompilaci s `/clr`příkazem je odvozen příkaz **using** v oddílu syntax.
 
-Spadají následující funkce jazyka **rozhraní příkazového řádku** obor názvů:
+Následující jazykové funkce jsou v oboru názvů **CLI** :
 
 - [Pole](arrays-cpp-component-extensions.md)
 
@@ -56,11 +56,11 @@ Spadají následující funkce jazyka **rozhraní příkazového řádku** obor 
 
 ### <a name="requirements"></a>Požadavky
 
-– Možnost kompilátoru: `/clr`
+Možnost kompilátoru:`/clr`
 
 ### <a name="examples"></a>Příklady
 
-Následující příklad kódu ukazuje, že je možné použít symbol v **rozhraní příkazového řádku** oboru názvů jako uživatelsky definovaný symbol v kódu.  Nicméně, jakmile to uděláte, budete muset explicitně nebo implicitně kvalifikovat odkazy na **rozhraní příkazového řádku** prvek jazyka se stejným názvem.
+Následující příklad kódu ukazuje, že je možné použít symbol v oboru názvů **CLI** jako uživatelsky definovaný symbol ve vašem kódu.  Nicméně až to uděláte, budete muset explicitně nebo implicitně kvalifikovat odkazy na element jazyka **CLI** se stejným názvem.
 
 ```cpp
 // cli_namespace.cpp

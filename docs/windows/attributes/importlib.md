@@ -1,21 +1,21 @@
 ---
-title: importlib (atribut C++ COM)
+title: importlib (C++ atribut com)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.importlib
 helpviewer_keywords:
 - importlib attribute
 ms.assetid: f129e459-b8d3-4aca-a0bc-ee53e18b62ed
-ms.openlocfilehash: 29c7df8fbedbd107a9bb0b05466addc4672fc555
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 92cf335e5c4754595f2c7af2e1aef30d309d2f5f
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62409375"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69514608"
 ---
 # <a name="importlib"></a>importlib
 
-Díky typy, které již byly zkompilovány do jiné knihovny typů k dispozici pro vytváření knihovny typů.
+Vytvoří typy, které již byly zkompilovány do jiné knihovny typů, které jsou k dispozici pro vytvoření knihovny typů.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -26,15 +26,15 @@ Díky typy, které již byly zkompilovány do jiné knihovny typů k dispozici p
 ### <a name="parameters"></a>Parametry
 
 *tlb_file*<br/>
-Název souboru .tlb v uvozovkách, které chcete importovat do knihovny typů aktuálního projektu.
+Název souboru. tlb (v uvozovkách), který chcete importovat do knihovny typů aktuálního projektu.
 
 ## <a name="remarks"></a>Poznámky
 
-**Importlib** C++ atribut způsobí, že `importlib` příkaz umístit do bloku knihovny ze souboru generovaného IDL. **Importlib** atribut má stejné funkce jako [importlib](/windows/desktop/Midl/importlib) atribut MIDL.
+Atribut **importlib** C++ způsobí, že se příkazumístídoblokuknihovnyvygenerovanéhosouboru.idl.`importlib` Atribut **importlib** má stejné funkce jako atribut [importlib](/windows/win32/Midl/importlib) MIDL.
 
 ## <a name="example"></a>Příklad
 
-Následující kód ukazuje příklad, jak používat **importlib**:
+Následující kód ukazuje příklad použití **importlib**:
 
 ```cpp
 // cpp_attr_ref_importlib.cpp
@@ -45,16 +45,16 @@ Následující kód ukazuje příklad, jak používat **importlib**:
 
 ## <a name="requirements"></a>Požadavky
 
-### <a name="attribute-context"></a>Atribut kontextu
+### <a name="attribute-context"></a>Kontext atributu
 
 |||
 |-|-|
-|**Platí pro**|Kdekoli|
-|**Opakovatelné**|Ne|
-|**Vyžadované atributy**|Žádný|
+|**Platí pro**|Jakékoli|
+|**REPEATABLE**|Ne|
+|**Požadované atributy**|Žádné|
 |**Neplatné atributy**|Žádné|
 
-Další informace najdete v tématu [kontexty atributů](cpp-attributes-com-net.md#contexts).
+Další informace naleznete v tématu [kontexty atributů](cpp-attributes-com-net.md#contexts).
 
 ## <a name="see-also"></a>Viz také:
 

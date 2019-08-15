@@ -6,49 +6,49 @@ helpviewer_keywords:
 - troubleshooting isolated applications
 - troubleshooting Visual C++
 ms.assetid: 3257257a-1f0b-4ede-8564-9277a7113a35
-ms.openlocfilehash: 32896939ddc7fd0b841e1b6904124b06c9bc51c9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1bd0d7638a8e7f2e3c671229e1f8d118d681e6f4
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62314985"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69492579"
 ---
 # <a name="troubleshooting-cc-isolated-applications-and-side-by-side-assemblies"></a>Řešení potíží s izolovanými aplikacemi C/C++ a souběžnými sestaveními
 
-Načítají se aplikace v jazyce C/C++ může selhat, pokud nelze najít závislé knihovny. Tento článek popisuje některé běžné důvody, proč se aplikace v jazyce C/C++ nepodaří načíst, a navrhne kroky k vyřešení problémů.
+Načtení C/C++ aplikace může selhat, pokud nelze najít závislé knihovny. Tento článek popisuje některé běžné důvody, proč se nepodařiloC++ načíst aplikaci C/a navrhuje kroky k vyřešení těchto problémů.
 
-Pokud se aplikaci nepodaří načíst, protože obsahuje manifest, který určuje závislost na sestavení vedle sebe a sestavení není nainstalována jako soukromé sestavení do stejné složky jako spustitelný soubor ani v mezipaměti nativních sestavení ve složce %WINDIR%\WinSxS\ , jeden z následujících chybových zpráv může zobrazit, v závislosti na verzi Windows, na kterém pokusu o spuštění aplikace.
+Pokud se aplikace nenačte, protože má manifest, který určuje závislost na souběžném sestavení, a sestavení není nainstalováno jako soukromé sestavení ve stejné složce jako spustitelný soubor, ani v nativní mezipaměti sestavení ve složce%WINDIR%\WinSxS\ , může se zobrazit jedna z následujících chybových zpráv v závislosti na verzi systému Windows, na které se pokoušíte spustit aplikaci.
 
-- Aplikaci se nepodařilo správně inicializovat (0xc0000135).
+- Aplikaci se nepovedlo správně inicializovat (0xc0000135).
 
-- Tuto aplikaci se nepodařilo spustit, protože konfigurace aplikace není správná. Tento problém lze pravděpodobně vyřešit opakovanou instalací aplikace.
+- Tuto aplikaci se nepovedlo spustit, protože konfigurace aplikace není správná. Tento problém může vyřešit opětovná instalace aplikace.
 
 - Systém nemůže spustit určený program.
 
-Pokud vaše aplikace nemá žádný manifest a závisí na knihovnu DLL, která Windows nelze najít v typickém hledání umístění, může zobrazit chybová zpráva, která se podobá následujícímu:
+Pokud vaše aplikace nemá žádný manifest a závisí na knihovně DLL, kterou systém Windows nemůže najít v typických umístěních hledání, může se zobrazit chybová zpráva, která je podobná této:
 
-- Tuto aplikaci se nepodařilo spustit, protože *požadovanou knihovnu DLL* nebyl nalezen. Potíže pravděpodobně odstraníte opětovnou instalací aplikace.
+- Tuto aplikaci se nepovedlo spustit, protože se nenašla *požadovaná knihovna DLL* . Tento problém může vyřešit Opakovaná instalace aplikace.
 
-Pokud vaše aplikace bude nasazena na počítač, který nemá aplikaci Visual Studio a jeho dojde k chybě s chybovými zprávami, které se podobají předchozích balíčcích, zkontrolujte tyto věci:
+Pokud je vaše aplikace nasazená na počítači, který nemá aplikaci Visual Studio, a dojde k jejímu selhání s chybovými zprávami, které se podobají předchozím těm, podívejte se na tyto věci:
 
-1. Postupujte podle kroků, které jsou popsány v [Principy závislostí v aplikacích Visual C++](../windows/understanding-the-dependencies-of-a-visual-cpp-application.md). Prohlížeč závislostí můžete zobrazit většina závislosti pro aplikaci nebo knihovny DLL. Pokud zjistíte, že chybí některé knihovny DLL, instalaci na počítač, na které se pokoušíte spustit aplikaci.
+1. Postupujte podle kroků popsaných v tématu [Principy závislostí vizuální C++ aplikace](../windows/understanding-the-dependencies-of-a-visual-cpp-application.md). Prohlížeč závislostí může zobrazit většinu závislostí pro aplikaci nebo knihovnu DLL. Pokud zjistíte, že některé knihovny dll chybějí, nainstalujte je do počítače, na kterém se pokoušíte spustit aplikaci.
 
-1. Zavaděč operačního systému používá manifestu aplikace se načíst sestavení, na kterých aplikace závisí. Manifest můžete být vloženy do binárního souboru jako prostředek, nebo nainstalovat jako samostatný soubor ve složce aplikace. Pokud chcete zkontrolovat, zda je manifest vložený do binárního souboru, otevřete panel binárního souboru v sadě Visual Studio a hledejte RT_MANIFEST ve svém seznamu zdrojů. Pokud nelze nalézt vložený manifest, podívejte se ve složce aplikace soubor s názvem podobným < binary_name >. \<přípona > .manifest.
+1. Zavaděč operačního systému používá manifest aplikace k načtení sestavení, na kterých aplikace závisí. Manifest může být buď vložen do binárního souboru jako prostředek, nebo nainstalován jako samostatný soubor ve složce aplikace. Chcete-li zkontrolovat, zda je manifest vložen do binárního souboru, otevřete binární soubor v aplikaci Visual Studio a vyhledejte RT_MANIFEST v seznamu prostředků. Pokud vložený manifest nemůžete najít, vyhledejte ve složce aplikace soubor s názvem něco jako < binary_name >. \<přípona >. manifest.
 
-1. Pokud vaše aplikace závisí na sestavení vedle sebe a manifest není k dispozici, budete muset zajistit, aby linker generuje manifest pro váš projekt. Zaškrtnutím možnosti linkeru **generovat manifest** v **vlastnosti projektu** dialogové okno pro projekt.
+1. Pokud vaše aplikace závisí na souběžných sestaveních a manifest není k dispozici, je nutné zajistit, aby linker vygeneroval manifest pro váš projekt. Zaškrtněte možnost linkeru **Generovat Manifest** v dialogovém okně **Vlastnosti projektu** projektu.
 
-1. Pokud je manifest vložený do binárního souboru, ujistěte se, že je pro tento typ binárního souboru správné ID RT_MANIFEST. Další informace o jaký Identifikátor prostředku použít, najdete v části [sestavení vedle sebe jako prostředek (Windows)](/windows/desktop/SbsCs/using-side-by-side-assemblies-as-a-resource). Pokud manifest v samostatném souboru, otevřete ho v textovém editoru nebo editoru XML. Další informace o manifestů a pravidla pro nasazení najdete v tématu [manifesty](/windows/desktop/sbscs/manifests).
+1. Pokud je manifest vložen do binárního souboru, ujistěte se, že ID RT_MANIFEST je pro tento typ binárního souboru správné. Další informace o tom, jaké ID prostředku použít, naleznete v tématu [použití souběžných sestavení jako prostředku (Windows)](/windows/win32/SbsCs/using-side-by-side-assemblies-as-a-resource). Pokud je manifest v samostatném souboru, otevřete jej v editoru XML nebo textovém editoru. Další informace o manifestech a pravidlech pro nasazení naleznete v tématu [manifesty](/windows/win32/sbscs/manifests).
 
    > [!NOTE]
-   > Pokud je manifest vložený a samostatný soubor manifestu, zavaděč operačního systému používá vloženého manifestu a ignoruje samostatný soubor. Windows XP, je však opak true – samostatný soubor manifestu se používá a je ignorován vloženého manifestu.
+   > Pokud je přítomen vložený manifest i samostatný soubor manifestu, zavaděč operačního systému použije vložený manifest a ignoruje samostatný soubor. V systému Windows XP je však opak true – použije se samostatný soubor manifestu a vložený manifest se ignoruje.
 
-1. Doporučujeme Vložit manifest v každou knihovnu DLL, protože externí manifestů jsou ignorovány, pokud ale načtení knihovny DLL `LoadLibrary` volání. Další informace najdete v tématu [sestavení manifesty](/windows/desktop/SbsCs/assembly-manifests).
+1. Doporučujeme, abyste vložili manifest do každé knihovny DLL, protože externí manifesty jsou ignorovány, když je knihovna DLL `LoadLibrary` načtena v případě volání. Další informace naleznete v tématu [manifesty sestavení](/windows/win32/SbsCs/assembly-manifests).
 
-1. Zkontrolujte, že všechna sestavení, které jsou uvedené v manifestu jsou správně nainstalovány v počítači. Každé sestavení je určená v manifestu jeho název, číslo verze a architektura procesoru. Pokud vaše aplikace závisí na sestavení vedle sebe, zkontrolujte, že tato sestavení jsou správně nainstalovány v počítači tak, aby na zavaděči operačního systému najdete, jak je popsáno v [pořadí hledání sestavení](/windows/desktop/SbsCs/assembly-searching-sequence). Mějte na paměti, že 64bitových sestavení nelze načíst v 32bitové procesy a se nedá spustit na 32bitové operační systémy.
+1. Ověřte, zda jsou všechna sestavení výčtu v manifestu správně nainstalována v počítači. Každé sestavení je zadáno v manifestu podle jeho názvu, čísla verze a architektury procesoru. Pokud vaše aplikace závisí na souběžných sestaveních, ověřte, zda jsou tato sestavení správně nainstalována v počítači, aby je mohl zavaděč operačního systému najít, jak je popsáno v tématu [pořadí vyhledávání sestavení](/windows/win32/SbsCs/assembly-searching-sequence). Nezapomeňte, že 64 sestavení nelze načíst v 32ch procesech a nelze je spustit v operačních systémech s 32-bit.
 
 ## <a name="example"></a>Příklad
 
-Předpokládejme, že máme aplikaci appl.exe, která je vytvořená pomocí jazyka Visual C++. Manifest aplikace buď je vložený v appl.exe RT_MANIFEST, která má ID roven 1, nebo se ukládá jako samostatný soubor appl.exe.manifest binární prostředek. Obsah manifestu vypadá takto:
+Předpokládejme, že máme aplikaci, soubor. exe, která je sestavená pomocí vizuálu C++. Manifest aplikace buď je vložen do souboru Application. exe jako binární RT_MANIFEST prostředku, který má ID rovnající se 1 nebo je uložen jako samostatný soubor. exe. manifest. Obsah tohoto manifestu se podobá tomuto:
 
 ```
 <assembly xmlns="urn:schemas-microsoft-com:asm.v1" manifestVersion="1.0">
@@ -60,9 +60,9 @@ Předpokládejme, že máme aplikaci appl.exe, která je vytvořená pomocí jaz
 </assembly>
 ```
 
-Na zavaděči operačního systému, tento manifest říká, že appl.exe závisí na sestavení s názvem Fabrikam.SxS.Library 2.0.20121.0, verzi, která je vytvořená pro 32bitové x86 architekturu procesoru. Závislé sestavení vedle sebe lze nainstalovat jako sdílená sestavení nebo jako soukromé sestavení.
+Do zavaděče operačního systému tento manifest říká, že soubor doplňku. exe závisí na sestavení s názvem Fabrikam. SxS. Library verze 2.0.20121.0, který je sestaven pro architekturu 32 procesorů x86. Závislé souběžné sestavení lze nainstalovat buď jako sdílené sestavení, nebo jako soukromé sestavení.
 
-Manifest sestavení pro sdílené sestavení je nainstalován ve složce %WINDIR%\WinSxS\Manifests\. Určuje sestavení a uvádí jeho obsah – to znamená, knihovny DLL, které jsou součástí sestavení:
+Manifest sestavení pro sdílené sestavení je nainstalován ve složce%WINDIR%\WinSxS\Manifests\. Identifikuje sestavení a zobrazí jeho obsah, tedy knihovny DLL, které jsou součástí sestavení:
 
 ```
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
@@ -74,7 +74,7 @@ Manifest sestavení pro sdílené sestavení je nainstalován ve složce %WINDIR
 </assembly>
 ```
 
-Můžete také použít sestavení vedle sebe [konfiguračních souborů vydavatele](/windows/desktop/SbsCs/publisher-configuration-files)– označované také jako zásady souborů – globálně přesměrování aplikace a sestavení místo jiné verze stejného použít jednu verzi sestavení vedle sebe sestavení. Zásady můžete vyhledat ve složce %WINDIR%\WinSxS\Policies\ sdílené sestavení. Tady je příklad souboru zásad:
+Souběžná sestavení mohou také používat [konfigurační soubory vydavatele](/windows/win32/SbsCs/publisher-configuration-files)(označované také jako soubory zásad) k globálně přesměrovat aplikace a sestavení tak, aby používaly jednu verzi souběžného sestavení namísto jiné verze stejného sestavení. Zásady sdíleného sestavení můžete vyhledat ve složce%WINDIR%\WinSxS\Policies\. Tady je příklad souboru zásad:
 
 ```
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
@@ -90,15 +90,15 @@ Můžete také použít sestavení vedle sebe [konfiguračních souborů vydavat
 </assembly>
 ```
 
-Tento soubor zásad určuje, zda všechny aplikace nebo sestavení, které vyzve k zadání 2.0.10000.0 verzi tohoto sestavení by měl místo toho používat verze 2.0.20121.0, což je aktuální verze nainstalovaná v systému. Pokud v souboru zásad je zadaná verze sestavení, který je uvedený v manifestu aplikace, zavaděč hledá verzi sestavení, která je určená v manifestu ve složce %WINDIR%\WinSxS\, a pokud není nainstalovaná tato verze, se nezdaří načtení. A pokud není nainstalovaná verze sestavení 2.0.20121.0, u aplikace, které požádat o verzi sestavení 2.0.10000.0 selže zatížení.
+Tento soubor zásad určuje, že jakákoli aplikace nebo sestavení požadující 2.0.10000.0 verze tohoto sestavení by měly místo toho používat verzi 2.0.20121.0, což je aktuální verze, která je v systému nainstalovaná. Pokud je verze sestavení, která je uvedena v manifestu aplikace, uvedena v souboru zásad, zavaděč vyhledá verzi tohoto sestavení, která je zadána v manifestu ve složce%WINDIR%\WinSxS\, a pokud není tato verze nainstalovaná, načtení se nepovede. A pokud není nainstalovaná verze sestavení 2.0.20121.0, načítání se u aplikací, které žádají o sestavení verze 2.0.10000.0, nezdařil.
 
-Ale sestavení můžete také nainstalovat jako soukromé sestavení vedle sebe ve složce nainstalované aplikace. Pokud nenajde žádné sestavení jako sdílená sestavení operačního systému, bude vypadat, jako soukromé sestavení, v uvedeném pořadí:
+Nicméně sestavení lze také nainstalovat do složky nainstalované aplikace jako soukromé sestavení souběžného sestavení. Pokud operační systém nenajde sestavení jako sdílené sestavení, vyhledá ho jako soukromé sestavení v následujícím pořadí:
 
-1. Zkontrolujte, jestli složka aplikace, který má název souboru manifestu \<assemblyName > .manifest. V tomto příkladu se pokusí najít Fabrikam.SxS.Library.manifest ve složce, která obsahuje appl.exe zavaděč. Pokud najde manifest, zavaděč načte sestavení ze složky aplikace. Pokud sestavení není nalezen, zatížení se nezdaří.
+1. Ve složce aplikace vyhledejte soubor manifestu s názvem \<AssemblyName >. manifest. V tomto příkladu se zavaděč pokusí najít Fabrikam. SxS. Library. manifest ve složce, která obsahuje soubor. exe. Pokud najde manifest, zavaděč načte sestavení ze složky aplikace. Pokud sestavení není nalezeno, načtení se nepovede.
 
-1. Zkuste otevřít \\< assemblyName\>\ složky ve složce, která obsahuje appl.exe, a pokud \\< assemblyName\>\ existuje, pokusí načíst soubor manifestu, který má název \<assemblyName >. manifest z této složky. Pokud je manifest nalezen, zavaděč načte sestavení ze \\< assemblyName\>\ složky. Pokud sestavení není nalezen, zatížení se nezdaří.
+1. Zkuste \\otevřít složku < AssemblyName \\\>\ ve složce, která obsahuje soubor. exe, a pokud < AssemblyName\>\ existuje, zkuste načíst soubor manifestu s názvem \<AssemblyName >. manifest z této složky. Pokud je manifest nalezen, zavaděč načte sestavení ze \\složky < AssemblyName\>\. Pokud sestavení není nalezeno, načtení se nepovede.
 
-Další informace o jak zavaděč hledá závislá sestavení naleznete v tématu [pořadí hledání sestavení](/windows/desktop/SbsCs/assembly-searching-sequence). Pokud zavaděč nepodaří najít závislé sestavení jako soukromé sestavení, zatížení se nezdaří a zobrazí se zpráva "systém nemůže spustit určený program". Chcete-li vyřešit tuto chybu, ujistěte se, že závislé sestavení – a knihovny DLL, které jsou součástí je – jsou nainstalovány v počítači jako privátní nebo sdílené sestavení.
+Další informace o tom, jak zavaděč vyhledává závislá sestavení, naleznete v tématu [pořadí vyhledávání sestavení](/windows/win32/SbsCs/assembly-searching-sequence). Pokud zavaděč nenajde závislé sestavení jako soukromé sestavení, načtení se nepodaří a zobrazí se zpráva "systém nemůže spustit zadaný program". Chcete-li tuto chybu vyřešit, zajistěte, aby závislá sestavení – a knihovny DLL, které jsou součástí nich, byly nainstalovány v počítači jako soukromá nebo sdílená sestavení.
 
 ## <a name="see-also"></a>Viz také:
 

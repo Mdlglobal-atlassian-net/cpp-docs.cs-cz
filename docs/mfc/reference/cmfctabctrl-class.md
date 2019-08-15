@@ -104,12 +104,12 @@ helpviewer_keywords:
 - CMFCTabCtrl [MFC], SynchronizeScrollBar
 - CMFCTabCtrl [MFC], m_bEnableActivate
 ms.assetid: d441385d-2c72-4203-96fa-deae2273da35
-ms.openlocfilehash: db2dcf7c60d164f9d04eb98f8eaac79ae14e3e73
-ms.sourcegitcommit: c3bf94210bdb73be80527166264d49e33784152c
+ms.openlocfilehash: 442860b1751591c5763a768f9bd9b6ba59f33fa5
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68821262"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69504877"
 ---
 # <a name="cmfctabctrl-class"></a>CMFCTabCtrl – třída
 
@@ -177,7 +177,7 @@ class CMFCTabCtrl : public CMFCBaseTabCtrl
 |[CMFCTabCtrl::OnDragEnter](#ondragenter)|Volá se rozhraním, když se ukazatel nejdřív přetáhne do okna ovládacího prvku karta.|
 |[CMFCTabCtrl::OnDragOver](#ondragover)|Volá se rozhraním během operace přetažení, když se myš přesune přes cílové okno přetažení. (Overrides [CMFCBaseTabCtrl:: OnDragOver](../../mfc/reference/cmfcbasetabctrl-class.md#ondragover).)|
 |[CMFCTabCtrl::OnShowTabDocumentsMenu](#onshowtabdocumentsmenu)|Zobrazí místní nabídku oken s kartami, počká, dokud uživatel nevybere kartu, a nastaví vybranou kartu na aktivní kartu.|
-|`CMFCTabCtrl::PreTranslateMessage`|Přeloží zprávy oken před odesláním do funkcí Windows [TranslateMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage) a [DispatchMessage](/windows/desktop/api/winuser/nf-winuser-dispatchmessage) . (Overrides [CMFCBaseTabCtrl::P retranslatemessage](../../mfc/reference/cmfcbasetabctrl-class.md#pretranslatemessage).)|
+|`CMFCTabCtrl::PreTranslateMessage`|Přeloží zprávy oken před odesláním do funkcí Windows [TranslateMessage](/windows/win32/api/winuser/nf-winuser-translatemessage) a [DispatchMessage](/windows/win32/api/winuser/nf-winuser-dispatchmessage) . (Overrides [CMFCBaseTabCtrl::P retranslatemessage](../../mfc/reference/cmfcbasetabctrl-class.md#pretranslatemessage).)|
 |`CMFCTabCtrl::RecalcLayout`|Přepočítá interní rozložení ovládacího prvku karta. (Overrides [CMFCBaseTabCtrl:: RecalcLayout](../../mfc/reference/cmfcbasetabctrl-class.md#recalclayout).)|
 |[CMFCTabCtrl::SetActiveInMDITabGroup](#setactiveinmditabgroup)|Nastaví aktuální kartu ovládacího prvku karta jako aktivní kartu ve skupině karet rozhraní více dokumentů.|
 |[CMFCTabCtrl::SetActiveTab](#setactivetab)|Aktivuje kartu. (Overrides [CMFCBaseTabCtrl:: SetActiveTab](../../mfc/reference/cmfcbasetabctrl-class.md#setactivetab).)|
@@ -874,7 +874,7 @@ virtual DROPEFFECT OnDragEnter(
 pro Odkazuje na datový objekt, který obsahuje data přetažená uživatelem.
 
 *dwKeyState*<br/>
-pro Obsahuje stav modifikačních kláves. Tento parametr je bitovou kombinací (nebo) následujících hodnot: MK_CONTROL, MK_SHIFT, MK_ALT, MK_LBUTTON, MK_MBUTTON a MK_RBUTTON. Další informace najdete v části **parametry zprávy** [o vstupu myši](/windows/desktop/inputdev/about-mouse-input).
+pro Obsahuje stav modifikačních kláves. Tento parametr je bitovou kombinací (nebo) následujících hodnot: MK_CONTROL, MK_SHIFT, MK_ALT, MK_LBUTTON, MK_MBUTTON a MK_RBUTTON. Další informace najdete v části **parametry zprávy** [o vstupu myši](/windows/win32/inputdev/about-mouse-input).
 
 *Vyberte*<br/>
 pro Obsahuje aktuální umístění kurzoru v souřadnicích klienta.
@@ -906,7 +906,7 @@ virtual DROPEFFECT OnDragOver(
 pro Ukazatel na objekt [COleDataObject](../../mfc/reference/coledataobject-class.md) , který se přetahuje přes cíl přetažení.
 
 *dwKeyState*<br/>
-pro Stav modifikačních kláves, což je bitová kombinace (nebo) MK_CONTROL, MK_SHIFT, MK_ALT, MK_LBUTTON, MK_MBUTTON a MK_RBUTTON. Další informace naleznete v části "parametry zprávy" v tématu [o vstupu myši](/windows/desktop/inputdev/about-mouse-input).
+pro Stav modifikačních kláves, což je bitová kombinace (nebo) MK_CONTROL, MK_SHIFT, MK_ALT, MK_LBUTTON, MK_MBUTTON a MK_RBUTTON. Další informace naleznete v části "parametry zprávy" v tématu [o vstupu myši](/windows/win32/inputdev/about-mouse-input).
 
 *Vyberte*<br/>
 pro Aktuální pozice myši.

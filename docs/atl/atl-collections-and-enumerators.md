@@ -7,42 +7,42 @@ helpviewer_keywords:
 - enumerators, ATL classes
 - collection interfaces
 ms.assetid: b2d37119-3ab2-4e0a-b65b-f377f07e4098
-ms.openlocfilehash: ebf7be8b2c80a714a27567ce0334475519a69454
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 502bedb1773dc2a6edbd6679d50e9c5946228283
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62252363"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69491901"
 ---
 # <a name="atl-collections-and-enumerators"></a>ATL – kolekce a výčty
 
-A `collection` je objekt modelu COM, která poskytuje rozhraní, která umožňuje přístup ke skupině položek dat (nezpracovaná data nebo jiných objektů). Rozhraní, která dodržuje standardy pro poskytnutí přístupu k skupiny objektů se označuje jako *rozhraní kolekce*.
+`collection` Je objekt modelu COM, který poskytuje rozhraní, které umožňuje přístup ke skupině datových položek (nezpracovaná data nebo jiné objekty). Rozhraní, které následuje za standardy pro poskytnutí přístupu ke skupině objektů, se označuje jako *rozhraní kolekce*.
 
-Minimálně musíte zadat rozhraní kolekce `Count` vlastnost, která vrátí počet položek v kolekci, `Item` vlastnost, která vrátí položku z kolekce založené na index, a `_NewEnum` vlastnosti, která vrací enumerátor pro kolekci. Volitelně můžete zadat kolekci rozhraní `Add` a `Remove` metody, které umožňují položky, které chcete vložit do nebo z kolekce, odstraní a `Clear` metoda odebrat všechny položky.
+Přinejmenším musí rozhraní kolekce poskytovat `Count` vlastnost, která vrací počet položek v kolekci `Item` , vlastnost, která vrátí položku z kolekce na základě indexu, a `_NewEnum` vlastnost, která vrátí enumerátor pro kolekci Rozhraní kolekce mohou volitelně poskytovat `Add` a `Remove` metody, aby bylo možné vkládat položky do kolekce nebo z ní `Clear` odstraňovat, a metodu pro odebrání všech položek.
 
-`enumerator` Je objekt modelu COM, který poskytuje rozhraní pro procházení položek v kolekci. Poskytuje rozhraní pro výčty sériového přístupu k elementům kolekce pomocí čtyř požadované metody: `Next`, `Skip`, `Reset`, a `Clone`.
+`enumerator` Je objekt modelu COM, který poskytuje rozhraní pro iteraci přes položky v kolekci. Rozhraní enumerátorů poskytují sériový přístup k prvkům kolekce prostřednictvím čtyř požadovaných metod `Next`:, `Skip`, `Reset` `Clone`a.
 
-Přečtěte si další informace o rozhraní pro výčty v článku odkazovat na obsah, jako [IEnumString](/windows/desktop/api/objidl/nn-objidl-ienumstring) rozhraní.
+Další informace o rozhraních enumerátoru si můžete přečíst v tématu referenční obsah, jako je například [IEnumString](/windows/win32/api/objidl/nn-objidl-ienumstring) Interface.
 
 ## <a name="in-this-section"></a>V tomto oddílu
 
 [ATL – třídy kolekcí a výčtů](../atl/atl-collection-and-enumerator-classes.md)<br/>
-Stručně popisuje a obsahuje odkazy na ATL – třídy, které vám pomůže implementovat kolekce a výčty.
+Stručně popisuje a poskytuje odkazy na třídy ATL, které vám pomůžou implementovat kolekce a enumerátory.
 
 [Principy návrhu rozhraní kolekce a výčtů](../atl/design-principles-for-collection-and-enumerator-interfaces.md)<br/>
-Tento článek popisuje různé zásady za každý typ rozhraní.
+Popisuje různé principy návrhu za každým typem rozhraní.
 
 [Implementace kolekce založené na standardní knihovně C++](../atl/implementing-an-stl-based-collection.md)<br/>
-Rozšířený příklad, který vás provede implementace kolekce založené na standardní knihovny C++.
+Rozšířený příklad, který vás provede implementací C++ standardní kolekce založené na knihovně.
 
 ## <a name="related-sections"></a>Související oddíly
 
 [ATL](../atl/active-template-library-atl-concepts.md)<br/>
-Obsahuje odkazy na koncepční témata o tom, jak programovat pomocí knihovnu Active Template Library.
+Obsahuje odkazy na koncepční témata o tom, jak programovat pomocí knihovny Active Template Library.
 
 [Ukázka ATLCollections](../overview/visual-cpp-samples.md)<br/>
 Ukázka, která demonstruje použití `ICollectionOnSTLImpl` a `CComEnumOnSTL`a implementaci vlastních tříd zásad kopírování.
 
 ## <a name="see-also"></a>Viz také:
 
-[Koncepty](../atl/active-template-library-atl-concepts.md)
+[Charakteristiky](../atl/active-template-library-atl-concepts.md)

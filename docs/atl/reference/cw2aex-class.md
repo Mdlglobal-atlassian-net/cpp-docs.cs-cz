@@ -1,5 +1,5 @@
 ---
-title: Cw2aex – třída
+title: CW2AEX – třída
 ms.date: 11/04/2016
 f1_keywords:
 - CW2AEX
@@ -10,19 +10,19 @@ f1_keywords:
 helpviewer_keywords:
 - CW2AEX class
 ms.assetid: 44dc2cf5-dd30-440b-a9b9-b21b43f49843
-ms.openlocfilehash: 97b398dd80bb38b1579458ae0b8b65f082458e23
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4dda1cb9e54c44f7940475660bc629192b9ead61
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62277162"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69496270"
 ---
-# <a name="cw2aex-class"></a>Cw2aex – třída
+# <a name="cw2aex-class"></a>CW2AEX – třída
 
-Tato třída se používá makra převodu řetězců CT2AEX, CW2TEX, CW2CTEX a CT2CAEX a definice typedef CW2A.
+Tato třída se používá v makrech převodu řetězce CT2AEX, CW2TEX, CW2CTEX a CT2CAEX a v CW2A typedef.
 
 > [!IMPORTANT]
->  Tato třída a jejích členů nelze použít v aplikacích, které jsou spouštěny v modulu Windows Runtime.
+>  Tato třída a její členové nelze použít v aplikacích, které jsou spouštěny v prostředí Windows Runtime.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -34,41 +34,41 @@ class CW2AEX
 #### <a name="parameters"></a>Parametry
 
 *t_nBufferLength*<br/>
-Velikost vyrovnávací paměti používané při překladu. Výchozí délka je 128 bajtů.
+Velikost vyrovnávací paměti použité v procesu překladu. Výchozí délka je 128 bajtů.
 
 ## <a name="members"></a>Členové
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CW2AEX::CW2AEX](#cw2aex)|Konstruktor|
 |[CW2AEX::~CW2AEX](#dtor)|Destruktor.|
 
 ### <a name="public-operators"></a>Veřejné operátory
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
-|[CW2AEX::Operator LPSTR](#operator_lpstr)|Operátor převodu.|
+|[CW2AEX:: operator typem LPStr](#operator_lpstr)|Operátor převodu|
 
 ### <a name="public-data-members"></a>Veřejné datové členy
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CW2AEX::m_psz](#m_psz)|Datový člen, který ukládá zdrojový řetězec.|
-|[CW2AEX::m_szBuffer](#m_szbuffer)|Statické vyrovnávací paměť, používá k ukládání převedený řetězec.|
+|[CW2AEX::m_szBuffer](#m_szbuffer)|Statická vyrovnávací paměť, která se používá k uložení převedeného řetězce.|
 
 ## <a name="remarks"></a>Poznámky
 
-Pokud není vyžadována další funkce, použijte CT2AEX, CW2TEX, CW2CTEX, CT2CAEX nebo CW2A ve vašem kódu.
+Pokud nejsou potřeba žádné další funkce, použijte ve svém kódu CT2AEX, CW2TEX, CW2CTEX, CT2CAEX nebo CW2A.
 
-Tato třída obsahuje pevné velikosti vyrovnávací paměti statické, která slouží k uložení výsledku převodu. Pokud je výsledek příliš velký a nevejde do statické vyrovnávací paměti, třída přiděluje paměť pomocí **malloc**, uvolnění paměti, když objekt dostane mimo rozsah. To zajišťuje, že na rozdíl od text makra převodů, které jsou k dispozici v předchozích verzích knihovny ATL, tato třída je bezpečné používat ve smyčkách a že nebudou přetečení zásobníku.
+Tato třída obsahuje statickou vyrovnávací paměť pevné velikosti, která se používá k uložení výsledku převodu. Je-li výsledek příliš velký, aby se vešel do statické vyrovnávací paměti, třída přiděluje paměťpomocí třídy typu \ a uvolní paměť, když se objekt dostane mimo rozsah. Tím je zajištěno, že na rozdíl od maker převodu textu dostupných v předchozích verzích knihovny ATL je tato třída bezpečná pro použití ve smyčkách a její přetečení do zásobníku.
 
-Pokud třída pokusí o přidělení paměti v haldě a selže, bude volat `AtlThrow` s argumentem E_OUTOFMEMORY.
+Pokud se třída pokusí o přidělení paměti v haldě a selže, bude volat `AtlThrow` s argumentem E_OUTOFMEMORY.
 
-Ve výchozím nastavení používají převodu třídy ATL a makra znakovou stránku ANSI aktuální vlákno pro převod. Pokud chcete přepsat toto chování pro konkrétní převod, zadejte jako druhý parametr konstruktoru pro třídu znakovou stránku.
+Ve výchozím nastavení používají převodní třídy a makra knihovny ATL k převodu znakovou stránku ANSI aktuálního vlákna. Pokud chcete toto chování přepsat pro určitý převod, zadejte znakovou stránku jako druhý parametr do konstruktoru třídy.
 
-Následující makra jsou založené na této třídě:
+Následující makra jsou založena na této třídě:
 
 - CT2AEX
 
@@ -82,17 +82,17 @@ Následující definice typedef je založena na této třídě:
 
 - CW2A
 
-Informace o těchto makrech převodu textu, naleznete v tématu [knihovny ATL a MFC – makra převodu řetězců](string-conversion-macros.md).
+Diskuzi o těchto makrech převodu textu viz [makra ATL a MFC String Conversion](string-conversion-macros.md).
 
 ## <a name="example"></a>Příklad
 
-Zobrazit [knihovny ATL a MFC – makra převodu řetězců](string-conversion-macros.md) příklad použití převodních maker tyto řetězce.
+Příklad použití těchto maker převodů řetězců naleznete v tématech [ATL a makra převodu řetězců knihovny MFC](string-conversion-macros.md) .
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** atlconv.h
+**Záhlaví:** atlconv. h
 
-##  <a name="cw2aex"></a>  CW2AEX::CW2AEX
+##  <a name="cw2aex"></a>CW2AEX::CW2AEX
 
 Konstruktor
 
@@ -107,11 +107,11 @@ CW2AEX(LPCWSTR psz) throw(...);
 Textový řetězec, který má být převeden.
 
 *nCodePage*<br/>
-Znaková stránka používá k provedení převodu. Viz diskuze parametr stránky kód pro funkci Windows SDK [MultiByteToWideChar](/windows/desktop/api/stringapiset/nf-stringapiset-multibytetowidechar) další podrobnosti.
+Znaková stránka, která se používá k provedení převodu Další podrobnosti najdete v tématu diskuze parametru kódové stránky pro Windows SDK [MultiByteToWideChar](/windows/win32/api/stringapiset/nf-stringapiset-multibytetowidechar) funkce.
 
 ### <a name="remarks"></a>Poznámky
 
-Přidělí vyrovnávací paměti používané při překladu.
+Přidělí vyrovnávací paměť použitou v procesu překladu.
 
 ##  <a name="dtor"></a>  CW2AEX::~CW2AEX
 
@@ -123,7 +123,7 @@ Destruktor.
 
 ### <a name="remarks"></a>Poznámky
 
-Uvolní přidělené vyrovnávací paměti.
+Uvolní přidělenou vyrovnávací paměť.
 
 ##  <a name="m_psz"></a>  CW2AEX::m_psz
 
@@ -133,17 +133,17 @@ Datový člen, který ukládá zdrojový řetězec.
 LPSTR m_psz;
 ```
 
-##  <a name="m_szbuffer"></a>  CW2AEX::m_szBuffer
+##  <a name="m_szbuffer"></a>CW2AEX::m_szBuffer
 
-Statické vyrovnávací paměť, používá k ukládání převedený řetězec.
+Statická vyrovnávací paměť, která se používá k uložení převedeného řetězce.
 
 ```
 char m_szBuffer[t_nBufferLength];
 ```
 
-##  <a name="operator_lpstr"></a>  CW2AEX::Operator LPSTR
+##  <a name="operator_lpstr"></a>CW2AEX:: operator typem LPStr
 
-Operátor převodu.
+Operátor převodu
 
 ```
 operator LPSTR() const throw();
@@ -151,7 +151,7 @@ operator LPSTR() const throw();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vrátí textový řetězec jako typu LPSTR.
+Vrátí textový řetězec jako typ typem LPStr.
 
 ## <a name="see-also"></a>Viz také:
 
@@ -160,4 +160,4 @@ Vrátí textový řetězec jako typu LPSTR.
 [CA2WEX – třída](../../atl/reference/ca2wex-class.md)<br/>
 [CW2CWEX – třída](../../atl/reference/cw2cwex-class.md)<br/>
 [CW2WEX – třída](../../atl/reference/cw2wex-class.md)<br/>
-[Přehled tříd](../../atl/atl-class-overview.md)
+[Přehled třídy](../../atl/atl-class-overview.md)

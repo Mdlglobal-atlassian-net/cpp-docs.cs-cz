@@ -1,5 +1,5 @@
 ---
-title: CMFCPropertyGridCtrl Class
+title: CMFCPropertyGridCtrl – třída
 ms.date: 11/19/2018
 f1_keywords:
 - CMFCPropertyGridCtrl
@@ -150,18 +150,18 @@ helpviewer_keywords:
 - CMFCPropertyGridCtrl [MFC], OnSelectCombo
 - CMFCPropertyGridCtrl [MFC], ValidateItemData
 ms.assetid: 95877cae-2311-4a2a-9031-0c8c3cf0a5f9
-ms.openlocfilehash: 93ace0388981f429ac4a422947fbdaae8cdb8f24
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 20b3bafcdbaf02b0f7e40f0092d7f6661855114d
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62168122"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69505163"
 ---
-# <a name="cmfcpropertygridctrl-class"></a>CMFCPropertyGridCtrl Class
+# <a name="cmfcpropertygridctrl-class"></a>CMFCPropertyGridCtrl – třída
 
-Další podrobnosti najdete ve zdrojovém kódu v **VC\\atlmfc\\src\\mfc** složce instalace sady Visual Studio.
+Další podrobnosti najdete ve zdrojovém kódu ve složce **VC\\atlmfc\\src\\MFC** v instalaci sady Visual Studio.
 
-Podporuje ovládací prvek upravovat vlastnost mřížky, která můžete zobrazit vlastnosti v abecedním nebo hierarchickém pořadí.
+Podporuje upravitelný ovládací prvek mřížky vlastností, který může zobrazit vlastnosti v abecedním nebo hierarchickém pořadí.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -173,131 +173,131 @@ class CMFCPropertyGridCtrl : public CWnd
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
-|[CMFCPropertyGridCtrl::CMFCPropertyGridCtrl](#cmfcpropertygridctrl)|Vytvoří `CMFCPropertyGridCtrl` objektu.|
+|[CMFCPropertyGridCtrl::CMFCPropertyGridCtrl](#cmfcpropertygridctrl)|`CMFCPropertyGridCtrl` Vytvoří objekt.|
 |`CMFCPropertyGridCtrl::~CMFCPropertyGridCtrl`|Destruktor.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
-|`CMFCPropertyGridCtrl::accHitTest`|Volá se rozhraním, načtěte podřízený element nebo podřízený objekt v daném bodě na obrazovce. (Přepíše [CWnd::accHitTest](../../mfc/reference/cwnd-class.md#acchittest).)|
-|`CMFCPropertyGridCtrl::accLocation`|Volá se rozhraním, k načtení zadaného objektu aktuální umístění na obrazovce. (Přepíše [CWnd::accLocation](../../mfc/reference/cwnd-class.md#acclocation).)|
-|[CMFCPropertyGridCtrl::accSelect](#accselect)|Volá se rozhraním, aby změnil výběr nebo přesunul fokus klávesnice určeného objektu. (Přepíše [CWnd::accSelect](../../mfc/reference/cwnd-class.md#accselect).)|
-|[CMFCPropertyGridCtrl::AddProperty](#addproperty)|Přidá nové vlastnosti do ovládacího prvku mřížky vlastností.|
+|`CMFCPropertyGridCtrl::accHitTest`|Volá se rozhraním, aby se načetl podřízený element nebo podřízený objekt v daném bodě na obrazovce. (Potlačení [CWnd:: accHitTest](../../mfc/reference/cwnd-class.md#acchittest).)|
+|`CMFCPropertyGridCtrl::accLocation`|Volá se rozhraním, aby se načetlo aktuální umístění obrazovky zadaného objektu. (Potlačení [CWnd:: accLocation](../../mfc/reference/cwnd-class.md#acclocation).)|
+|[CMFCPropertyGridCtrl::accSelect](#accselect)|Volá se rozhraním, aby se změnil výběr nebo přesunul fokus klávesnice zadaného objektu. (Potlačení [CWnd:: accSelect](../../mfc/reference/cwnd-class.md#accselect).)|
+|[CMFCPropertyGridCtrl::AddProperty](#addproperty)|Přidá novou vlastnost k ovládacímu prvku mřížky vlastností.|
 |[CMFCPropertyGridCtrl::AlwaysShowUserToolTip](#alwaysshowusertooltip)||
 |[CMFCPropertyGridCtrl::CloseColorPopup](#closecolorpopup)|Zavře dialogové okno Výběr barvy.|
-|[CMFCPropertyGridCtrl::Create](#create)|Vytvoří ovládací prvek mřížky vlastností a připojí ho k objektu ovládací prvek mřížky vlastností.|
-|[CMFCPropertyGridCtrl::DeleteProperty](#deleteproperty)|Odstraní zadané vlastnosti z ovládacího prvku mřížky vlastností.|
+|[CMFCPropertyGridCtrl::Create](#create)|Vytvoří ovládací prvek mřížky vlastností a připojí ho k objektu ovládacího prvku mřížky vlastností.|
+|[CMFCPropertyGridCtrl::DeleteProperty](#deleteproperty)|Odstraní zadanou vlastnost z ovládacího prvku mřížky vlastností.|
 |[CMFCPropertyGridCtrl::DrawControlBarColors](#drawcontrolbarcolors)||
-|[CMFCPropertyGridCtrl::EnableDescriptionArea](#enabledescriptionarea)|Povoluje nebo zakazuje oblasti popis, který se zobrazí pod seznamem vlastností.|
-|[CMFCPropertyGridCtrl::EnableHeaderCtrl](#enableheaderctrl)|Povolí nebo zakáže ovládací prvek záhlaví v horní části ovládací prvek mřížky vlastností.|
-|[CMFCPropertyGridCtrl::EnsureVisible](#ensurevisible)|Posune ovládací prvek mřížky vlastností a rozbalí vlastnost položek, dokud zadaná vlastnost není viditelná.|
-|[CMFCPropertyGridCtrl::ExpandAll](#expandall)|Rozbalí nebo sbalí všechny uzly ovládací prvek mřížky vlastností.|
-|[CMFCPropertyGridCtrl::FindItemByData](#finditembydata)|Získá vlastnost, která souvisí s uživatelem definovanou hodnotu DWORD.|
-|`CMFCPropertyGridCtrl::get_accChild`|Volá se rozhraním, aby se načetla adresa `IDispatch` rozhraní pro zadanou podřízenou položku. (Přepíše [CWnd::get_accChild](../../mfc/reference/cwnd-class.md#get_accchild).)|
-|[CMFCPropertyGridCtrl::get_accChildCount](#get_accchildcount)|Volá se rozhraním, aby se získal počet podřízených patřící do tohoto objektu. (Přepíše [CWnd::get_accChildCount](../../mfc/reference/cwnd-class.md#get_accchildcount).)|
-|`CMFCPropertyGridCtrl::get_accDefaultAction`|Volá se rozhraním, aby se načetl řetězec, který popisuje výchozí akci objektu. (Přepíše [CWnd::get_accDefaultAction](../../mfc/reference/cwnd-class.md#get_accdefaultaction).)|
-|`CMFCPropertyGridCtrl::get_accDescription`|Volá se rozhraním, aby se načetl řetězec, který popisuje vzhled určeného objektu. (Přepíše [CWnd::get_accDescription](../../mfc/reference/cwnd-class.md#get_accdescription).)|
-|[CMFCPropertyGridCtrl::get_accFocus](#get_accfocus)|Volá se rozhraním, aby se načetl objekt, který má fokus klávesnice. (Přepíše [CWnd::get_accFocus](../../mfc/reference/cwnd-class.md#get_accfocus).)|
-|[CMFCPropertyGridCtrl::get_accHelp](#get_acchelp)|Volá se rozhraním, k načtení objektu `Help` vlastnost řetězce. (Přepíše [CWnd::get_accHelp](../../mfc/reference/cwnd-class.md#get_acchelp).)|
-|[CMFCPropertyGridCtrl::get_accHelpTopic](#get_acchelptopic)|Volá se rozhraním, aby získala úplná cestu z **WinHelp** souboru přidruženého k zadaným objektem a identifikátorem příslušného tématu v rámci tohoto souboru. (Přepíše [CWnd::get_accHelpTopic](../../mfc/reference/cwnd-class.md#get_acchelptopic).)|
-|[CMFCPropertyGridCtrl::get_accKeyboardShortcut](#get_acckeyboardshortcut)|Volá se rozhraním, aby načíst zadaný objekt klávesová zkratka nebo přístupová klávesa. (Přepíše [CWnd::get_accKeyboardShortcut](../../mfc/reference/cwnd-class.md#get_acckeyboardshortcut).)|
-|`CMFCPropertyGridCtrl::get_accName`|Volá se rozhraním, aby se načetl název zadaného objektu. (Přepíše [CWnd::get_accName](../../mfc/reference/cwnd-class.md#get_accname).)|
-|`CMFCPropertyGridCtrl::get_accRole`|Volá se rozhraním, chcete-li získat informace, které popisují roli určeného objektu. (Přepíše [CWnd::get_accRole](../../mfc/reference/cwnd-class.md#get_accrole).)|
-|[CMFCPropertyGridCtrl::get_accSelection](#get_accselection)|Volá se rozhraním pro načtení vybrané podřízené objekty tohoto objektu. (Přepíše [CWnd::get_accSelection](../../mfc/reference/cwnd-class.md#get_accselection).)|
-|`CMFCPropertyGridCtrl::get_accState`|Volá se rozhraním, aby se načetl aktuální stav zadaného objektu. (Přepíše [CWnd::get_accState](../../mfc/reference/cwnd-class.md#get_accstate).)|
-|`CMFCPropertyGridCtrl::get_accValue`|Volá se rozhraním, k načtení hodnoty vlastností zadaného objektu. (Přepíše [CWnd::get_accValue](../../mfc/reference/cwnd-class.md#get_accvalue).)|
-|[CMFCPropertyGridCtrl::GetBkColor](#getbkcolor)|Zjišťuje barvu pozadí aktuální ovládací prvek mřížky vlastností.|
-|[CMFCPropertyGridCtrl::GetBoldFont](#getboldfont)|Načte Windows písma, která textu v mřížce aktuální vlastnost ovládacího prvku tučný styl.|
+|[CMFCPropertyGridCtrl::EnableDescriptionArea](#enabledescriptionarea)|Povolí nebo zakáže oblast popisu zobrazená pod seznamem vlastností.|
+|[CMFCPropertyGridCtrl::EnableHeaderCtrl](#enableheaderctrl)|Povolí nebo zakáže ovládací prvek záhlaví v horní části ovládacího prvku mřížky vlastností.|
+|[CMFCPropertyGridCtrl::EnsureVisible](#ensurevisible)|Posune ovládací prvek mřížky vlastností a rozbalí položky vlastností, dokud není zadaná vlastnost viditelná.|
+|[CMFCPropertyGridCtrl::ExpandAll](#expandall)|Rozbalí nebo sbalí všechny uzly ovládacích prvků mřížky vlastností.|
+|[CMFCPropertyGridCtrl::FindItemByData](#finditembydata)|Načte vlastnost, která je přidružená k hodnotě DWORD definované uživatelem.|
+|`CMFCPropertyGridCtrl::get_accChild`|Volá se rozhraním, aby se načetla `IDispatch` adresa rozhraní pro zadanou podřízenou položku. (Potlačení [CWnd:: get_accChild](../../mfc/reference/cwnd-class.md#get_accchild).)|
+|[CMFCPropertyGridCtrl::get_accChildCount](#get_accchildcount)|Volá se rozhraním, aby se získal počet podřízených prvků, které patří k tomuto objektu. (Potlačení [CWnd:: get_accChildCount](../../mfc/reference/cwnd-class.md#get_accchildcount).)|
+|`CMFCPropertyGridCtrl::get_accDefaultAction`|Volá se rozhraním, aby se načetl řetězec, který popisuje výchozí akci objektu. (Potlačení [CWnd:: get_accDefaultAction](../../mfc/reference/cwnd-class.md#get_accdefaultaction).)|
+|`CMFCPropertyGridCtrl::get_accDescription`|Volá se rozhraním, aby se načetl řetězec, který popisuje vizuální vzhled zadaného objektu. (Potlačení [CWnd:: get_accDescription](../../mfc/reference/cwnd-class.md#get_accdescription).)|
+|[CMFCPropertyGridCtrl::get_accFocus](#get_accfocus)|Volá se rozhraním, aby se načetl objekt, který má fokus klávesnice. (Potlačení [CWnd:: get_accFocus](../../mfc/reference/cwnd-class.md#get_accfocus).)|
+|[CMFCPropertyGridCtrl::get_accHelp](#get_acchelp)|Volá se rozhraním, aby se načetl `Help` řetězec vlastnosti objektu. (Potlačení [CWnd:: get_accHelp](../../mfc/reference/cwnd-class.md#get_acchelp).)|
+|[CMFCPropertyGridCtrl::get_accHelpTopic](#get_acchelptopic)|Volá se rozhraním, aby se načetla úplná cesta k souboru **WinHelp** přidruženému k zadanému objektu, a identifikátor příslušného tématu v rámci tohoto souboru. (Potlačení [CWnd:: get_accHelpTopic](../../mfc/reference/cwnd-class.md#get_acchelptopic).)|
+|[CMFCPropertyGridCtrl::get_accKeyboardShortcut](#get_acckeyboardshortcut)|Volá se rozhraním, aby se načetla klávesová zkratka nebo přístupový klíč zadaného objektu. (Potlačení [CWnd:: get_accKeyboardShortcut](../../mfc/reference/cwnd-class.md#get_acckeyboardshortcut).)|
+|`CMFCPropertyGridCtrl::get_accName`|Volá se rozhraním, aby se načetl název zadaného objektu. (Potlačení [CWnd:: get_accName](../../mfc/reference/cwnd-class.md#get_accname).)|
+|`CMFCPropertyGridCtrl::get_accRole`|Volá se rozhraním, aby se načetly informace, které popisují roli zadaného objektu. (Potlačení [CWnd:: get_accRole](../../mfc/reference/cwnd-class.md#get_accrole).)|
+|[CMFCPropertyGridCtrl::get_accSelection](#get_accselection)|Volá se rozhraním, aby se načetly vybrané podřízené objekty tohoto objektu. (Potlačení [CWnd:: get_accSelection](../../mfc/reference/cwnd-class.md#get_accselection).)|
+|`CMFCPropertyGridCtrl::get_accState`|Volá se rozhraním, aby se načetl aktuální stav zadaného objektu. (Potlačení [CWnd:: get_accState](../../mfc/reference/cwnd-class.md#get_accstate).)|
+|`CMFCPropertyGridCtrl::get_accValue`|Volá se rozhraním, aby se načetla hodnota zadaného objektu. (Potlačení [CWnd:: get_accValue](../../mfc/reference/cwnd-class.md#get_accvalue).)|
+|[CMFCPropertyGridCtrl::GetBkColor](#getbkcolor)|Načte barvu pozadí aktuálního ovládacího prvku mřížky vlastností.|
+|[CMFCPropertyGridCtrl::GetBoldFont](#getboldfont)|Načte písmo Windows textu v aktuálním ovládacím prvku mřížky vlastnosti tučným stylem.|
 |[CMFCPropertyGridCtrl::GetCurSel](#getcursel)|Načte aktuálně vybranou vlastnost.|
-|[CMFCPropertyGridCtrl::GetCustomColors](#getcustomcolors)|Načte vlastní barvy, které jsou definované pro vlastnost grid ovládacích prvků.|
-|[CMFCPropertyGridCtrl::GetDescriptionHeight](#getdescriptionheight)|Získá výšku oblasti popisu dole ovládací prvek mřížky vlastností.|
-|[CMFCPropertyGridCtrl::GetDescriptionRows](#getdescriptionrows)|Získá počet řádků v oblasti popisu aktuální ovládací prvek mřížky vlastností.|
-|[CMFCPropertyGridCtrl::GetHeaderCtrl](#getheaderctrl)|Získá vnitřní [cmfcheaderctrl –](../../mfc/reference/cmfcheaderctrl-class.md) , že rozhraní používá k zobrazení aktuální ovládací prvek mřížky vlastností objektu.|
-|[CMFCPropertyGridCtrl::GetHeaderHeight](#getheaderheight)|Získá výšku záhlaví ovládacího prvku mřížky vlastností.|
-|[CMFCPropertyGridCtrl::GetLeftColumnWidth](#getleftcolumnwidth)|Načte šířka levého sloupce aktuální vlastnost mřížky ovládacího prvku, který obsahuje název každé vlastnosti.|
-|[CMFCPropertyGridCtrl::GetListRect](#getlistrect)|Načte ohraničující obdélník ovládací prvek mřížky vlastností.|
-|[CMFCPropertyGridCtrl::GetProperty](#getproperty)|Načte ukazatel na vlastnosti objektu, který odpovídá zadanému indexu položky ovládací prvek mřížky vlastností.|
-|[CMFCPropertyGridCtrl::GetPropertyColumnWidth](#getpropertycolumnwidth)|Načte aktuální šířka sloupce, který obsahuje hodnoty vlastností.|
-|[CMFCPropertyGridCtrl::GetPropertyCount](#getpropertycount)|Získá počet vlastností v ovládacím prvku mřížky vlastností.|
-|[CMFCPropertyGridCtrl::GetRowHeight](#getrowheight)|Získá výšku řádku v ovládacím prvku mřížky vlastností.|
-|[CMFCPropertyGridCtrl::GetScrollBarCtrl](#getscrollbarctrl)|Načte ukazatel ovládací prvek posuvníku v ovládacím prvku mřížky vlastností. (Přepíše [CWnd::GetScrollBarCtrl](../../mfc/reference/cwnd-class.md#getscrollbarctrl).)|
-|[CMFCPropertyGridCtrl::GetTextColor](#gettextcolor)|Načte barva textu položky vlastností v aktuální ovládací prvek mřížky vlastností.|
-|`CMFCPropertyGridCtrl::GetThisClass`|Používá k získání ukazatele na rámec [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) objekt, který je přidružený k typu třídy.|
-|[CMFCPropertyGridCtrl::HitTest](#hittest)|Načte ukazatel na vlastnosti objektu, který odpovídá vlastnosti položky ovládacího prvku, pokud zadaný bod nachází v položce. Tato metoda také určuje oblast v ovládací prvek mřížky vlastností, která obsahuje bod.|
-|[CMFCPropertyGridCtrl::InitHeader](#initheader)|Inicializuje interní [cmfcheaderctrl –](../../mfc/reference/cmfcheaderctrl-class.md) , že rozhraní používá k zobrazení aktuální ovládací prvek mřížky vlastností objektu.|
-|[CMFCPropertyGridCtrl::IsAlphabeticMode](#isalphabeticmode)|Označuje, zda ovládací prvek mřížky vlastnosti v abecedním režimu.|
+|[CMFCPropertyGridCtrl::GetCustomColors](#getcustomcolors)|Načte vlastní barvy, které jsou aktuálně definovány pro ovládací prvky mřížky vlastností.|
+|[CMFCPropertyGridCtrl::GetDescriptionHeight](#getdescriptionheight)|Načte výšku oblasti popisu nacházející se v dolní části ovládacího prvku mřížky vlastností.|
+|[CMFCPropertyGridCtrl::GetDescriptionRows](#getdescriptionrows)|Načte počet řádků v oblasti Popis aktuálního ovládacího prvku mřížky vlastností.|
+|[CMFCPropertyGridCtrl::GetHeaderCtrl](#getheaderctrl)|Načte interní objekt [CMFCHeaderCtrl](../../mfc/reference/cmfcheaderctrl-class.md) , který rozhraní používá k zobrazení aktuálního ovládacího prvku mřížky vlastností.|
+|[CMFCPropertyGridCtrl::GetHeaderHeight](#getheaderheight)|Načte výšku záhlaví ovládacího prvku mřížky vlastností.|
+|[CMFCPropertyGridCtrl::GetLeftColumnWidth](#getleftcolumnwidth)|Načte šířku levého sloupce ovládacího prvku mřížky vlastností, který obsahuje název každé vlastnosti.|
+|[CMFCPropertyGridCtrl::GetListRect](#getlistrect)|Načte ohraničující obdélník ovládacího prvku mřížky vlastností.|
+|[CMFCPropertyGridCtrl::GetProperty](#getproperty)|Načte ukazatel na objekt vlastnosti, který odpovídá zadanému indexu položky ovládacího prvku mřížky vlastností.|
+|[CMFCPropertyGridCtrl::GetPropertyColumnWidth](#getpropertycolumnwidth)|Načte aktuální šířku sloupce, který obsahuje hodnoty vlastností.|
+|[CMFCPropertyGridCtrl::GetPropertyCount](#getpropertycount)|Načte počet vlastností v ovládacím prvku mřížky vlastností.|
+|[CMFCPropertyGridCtrl::GetRowHeight](#getrowheight)|Načte výšku řádku v ovládacím prvku mřížky vlastností.|
+|[CMFCPropertyGridCtrl::GetScrollBarCtrl](#getscrollbarctrl)|Načte ukazatel na ovládací prvek posuvníku v ovládacím prvku mřížky vlastností. (Potlačení [CWnd:: GetScrollBarCtrl](../../mfc/reference/cwnd-class.md#getscrollbarctrl).)|
+|[CMFCPropertyGridCtrl::GetTextColor](#gettextcolor)|Načte barvu textu položek vlastností v aktuálním ovládacím prvku mřížky vlastností.|
+|`CMFCPropertyGridCtrl::GetThisClass`|Používá se rozhraním, aby se získal ukazatel na objekt [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) , který je přidružený k tomuto typu třídy.|
+|[CMFCPropertyGridCtrl::HitTest](#hittest)|Načte ukazatel na objekt vlastnosti, který odpovídá položce ovládacího prvku mřížky vlastností, pokud je zadaný bod v položce. Tato metoda také označuje oblast v ovládacím prvku mřížky vlastností, která obsahuje bod.|
+|[CMFCPropertyGridCtrl::InitHeader](#initheader)|Inicializuje vnitřní objekt [CMFCHeaderCtrl](../../mfc/reference/cmfcheaderctrl-class.md) , který rozhraní používá k zobrazení aktuálního ovládacího prvku mřížky vlastností.|
+|[CMFCPropertyGridCtrl::IsAlphabeticMode](#isalphabeticmode)|Označuje, zda je ovládací prvek mřížky vlastnosti v abecedním režimu.|
 |[CMFCPropertyGridCtrl::IsAlwaysShowUserToolTip](#isalwaysshowusertooltip)||
-|[CMFCPropertyGridCtrl::IsDescriptionArea](#isdescriptionarea)|Označuje, zda se zobrazí oblast popis ovládacího prvku mřížky vlastností.|
-|[CMFCPropertyGridCtrl::IsGroupNameFullWidth](#isgroupnamefullwidth)|Označuje, zda název skupiny pro každou vlastnost se zobrazí po celé šířce aktuální ovládací prvek mřížky vlastností.|
-|[CMFCPropertyGridCtrl::IsHeaderCtrl](#isheaderctrl)|Určuje, zda je zobrazen ovládací prvek hlavičky.|
-|[CMFCPropertyGridCtrl::IsMarkModifiedProperties](#ismarkmodifiedproperties)|Určuje, jak ovládací prvek mřížky vlastností zobrazuje upravené vlastnosti.|
-|[CMFCPropertyGridCtrl::IsShowDragContext](#isshowdragcontext)|Určuje, zda rozhraní překreslí název a hodnota sloupce aktuální ovládací prvek mřížky vlastností, když uživatel změní velikost sloupců.|
-|[CMFCPropertyGridCtrl::IsVSDotNetLook](#isvsdotnetlook)|Označuje, zda je vzhled ovládacího prvku mřížky vlastností ve stylu, které používá VS .NET.|
-|[CMFCPropertyGridCtrl::MarkModifiedProperties](#markmodifiedproperties)|Určuje způsob zobrazení upravené vlastnosti.|
-|`CMFCPropertyGridCtrl::PreTranslateMessage`|Používá třída [CWinApp](../../mfc/reference/cwinapp-class.md) přeložit okno zprávy před odesláním do [TranslateMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage) a [DispatchMessage](/windows/desktop/api/winuser/nf-winuser-dispatchmessage) funkce Windows. (Přepíše [CWnd::PreTranslateMessage](../../mfc/reference/cwnd-class.md#pretranslatemessage).)|
-|[CMFCPropertyGridCtrl::RemoveAll](#removeall)|Odebere všechny objekty vlastnosti z ovládacího prvku mřížky vlastností.|
-|[CMFCPropertyGridCtrl::ResetOriginalValues](#resetoriginalvalues)|Obnoví původní hodnoty všech vlastností.|
-|[CMFCPropertyGridCtrl::SetAlphabeticMode](#setalphabeticmode)|Nastaví nebo obnoví abecedním režim.|
-|[CMFCPropertyGridCtrl::SetBoolLabels](#setboollabels)|Určuje text logická popisky.|
-|[CMFCPropertyGridCtrl::SetCurSel](#setcursel)|Vlastnost vybere v ovládacím prvku mřížky vlastností.|
-|[CMFCPropertyGridCtrl::SetCustomColors](#setcustomcolors)|Určuje vlastní barvy pro různé prvky ovládací prvek mřížky vlastností.|
-|[CMFCPropertyGridCtrl::SetDescriptionRows](#setdescriptionrows)|Určuje počet řádků v zobrazení v části Popis aktuální ovládací prvek mřížky vlastností.|
-|[CMFCPropertyGridCtrl::SetGroupNameFullWidth](#setgroupnamefullwidth)|Určuje, jestli se má zobrazit na celou šířku název kategorie pro skupinu vlastností v aktuální ovládací prvek mřížky vlastností.|
+|[CMFCPropertyGridCtrl::IsDescriptionArea](#isdescriptionarea)|Označuje, zda je zobrazena oblast Popis ovládacího prvku mřížky vlastností.|
+|[CMFCPropertyGridCtrl::IsGroupNameFullWidth](#isgroupnamefullwidth)|Označuje, zda se má každý název skupiny vlastností zobrazovat napříč šířkou aktuálního ovládacího prvku mřížky vlastností.|
+|[CMFCPropertyGridCtrl::IsHeaderCtrl](#isheaderctrl)|Určuje, zda je zobrazen ovládací prvek záhlaví.|
+|[CMFCPropertyGridCtrl::IsMarkModifiedProperties](#ismarkmodifiedproperties)|Určuje, jak ovládací prvek mřížky vlastností zobrazuje změněné vlastnosti.|
+|[CMFCPropertyGridCtrl::IsShowDragContext](#isshowdragcontext)|Označuje, zda rozhraní překreslí sloupce název a hodnota aktuálního ovládacího prvku mřížky vlastností, když uživatel změní velikost sloupců.|
+|[CMFCPropertyGridCtrl::IsVSDotNetLook](#isvsdotnetlook)|Určuje, zda je vzhled ovládacího prvku mřížky vlastností ve stylu, který je používán v sadě VS .NET.|
+|[CMFCPropertyGridCtrl::MarkModifiedProperties](#markmodifiedproperties)|Určuje, jak se mají zobrazovat změněné vlastnosti.|
+|`CMFCPropertyGridCtrl::PreTranslateMessage`|Používá se třídou [CWinApp](../../mfc/reference/cwinapp-class.md) k překladu zpráv oken před odesláním do funkcí Windows [TranslateMessage](/windows/win32/api/winuser/nf-winuser-translatemessage) a [DispatchMessage](/windows/win32/api/winuser/nf-winuser-dispatchmessage) . (Potlačení [CWnd::P retranslatemessage](../../mfc/reference/cwnd-class.md#pretranslatemessage).)|
+|[CMFCPropertyGridCtrl::RemoveAll](#removeall)|Odebere všechny objekty vlastností z ovládacího prvku mřížky vlastností.|
+|[CMFCPropertyGridCtrl::ResetOriginalValues](#resetoriginalvalues)|Obnoví původní hodnotu všech vlastností.|
+|[CMFCPropertyGridCtrl::SetAlphabeticMode](#setalphabeticmode)|Nastaví nebo obnoví abecední režim.|
+|[CMFCPropertyGridCtrl::SetBoolLabels](#setboollabels)|Určuje text logických popisků.|
+|[CMFCPropertyGridCtrl::SetCurSel](#setcursel)|Vybere vlastnost v ovládacím prvku mřížky vlastností.|
+|[CMFCPropertyGridCtrl::SetCustomColors](#setcustomcolors)|Určuje vlastní barvy pro různé ovládací prvky mřížky vlastností.|
+|[CMFCPropertyGridCtrl::SetDescriptionRows](#setdescriptionrows)|Určuje počet řádků, které se mají zobrazit v části Description ovládacího prvku mřížky aktuální vlastnosti.|
+|[CMFCPropertyGridCtrl::SetGroupNameFullWidth](#setgroupnamefullwidth)|Určuje, zda se má pro skupinu vlastností v aktuálním ovládacím prvku mřížky vlastnosti zobrazit celá šířka názvu kategorie.|
 |[CMFCPropertyGridCtrl::SetListDelimiter](#setlistdelimiter)|Definuje znak, který se použije jako oddělovač v seznamu hodnot vlastností.|
-|[CMFCPropertyGridCtrl::SetShowDragContext](#setshowdragcontext)|Určuje, zda rozhraní překreslí název a hodnota sloupce aktuální ovládací prvek mřížky vlastností, když uživatel změní velikost sloupců.|
-|[CMFCPropertyGridCtrl::SetVSDotNetLook](#setvsdotnetlook)|Vzhled ovládacího prvku grid vlastnost nastaví na styl, který se používá v VS .NET.|
-|[CMFCPropertyGridCtrl::UpdateColor](#updatecolor)|Nastaví hodnotu barvy vlastnosti aktuálně vybraná barva.|
+|[CMFCPropertyGridCtrl::SetShowDragContext](#setshowdragcontext)|Určuje, zda rozhraní překreslí sloupce název a hodnota aktuálního ovládacího prvku mřížky vlastností, když uživatel změní velikost sloupců.|
+|[CMFCPropertyGridCtrl::SetVSDotNetLook](#setvsdotnetlook)|Nastaví vzhled ovládacího prvku mřížky vlastností na styl, který se používá v sadě VS .NET.|
+|[CMFCPropertyGridCtrl::UpdateColor](#updatecolor)|Nastaví hodnotu barvy aktuálně vybrané vlastnosti Color.|
 
 ### <a name="protected-methods"></a>Chráněné metody
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
-|[CMFCPropertyGridCtrl::AdjustLayout](#adjustlayout)|Překreslí ovládací prvek mřížky vlastností a její vlastnosti.|
-|[CMFCPropertyGridCtrl::CompareProps](#compareprops)|Je voláno ovládací prvek mřížky vlastností seřadit vlastnosti.|
-|[CMFCPropertyGridCtrl::EditItem](#edititem)|Volá se rozhraním, když uživatel začne upravovat vlastnosti.|
+|[CMFCPropertyGridCtrl::AdjustLayout](#adjustlayout)|Překreslí ovládací prvek mřížky vlastností a jeho vlastnosti.|
+|[CMFCPropertyGridCtrl::CompareProps](#compareprops)|Volá se ovládacím prvkem Grida vlastnosti k řazení vlastností.|
+|[CMFCPropertyGridCtrl::EditItem](#edititem)|Volá se rozhraním, když uživatel začne upravovat vlastnost.|
 |[CMFCPropertyGridCtrl::EndEditItem](#endedititem)|Volá se rozhraním, když uživatel zastaví úpravu vlastnosti.|
-|[CMFCPropertyGridCtrl::Init](#init)|Volá se rozhraním inicializovat ovládací prvek mřížky vlastností.|
+|[CMFCPropertyGridCtrl::Init](#init)|Volá se rozhraním, aby se inicializoval ovládací prvek mřížky vlastností.|
 |[CMFCPropertyGridCtrl::OnChangeSelection](#onchangeselection)|Volá se rozhraním, když se změní aktuální výběr.|
-|[CMFCPropertyGridCtrl::OnClickButton](#onclickbutton)|Volá se rozhraním, když dojde ke kliknutí na tlačítko Vlastnosti.|
-|[CMFCPropertyGridCtrl::OnDrawBorder](#ondrawborder)|Volá se rozhraním, aby vykreslit ohraničení kolem ovládacího prvku mřížky vlastností.|
+|[CMFCPropertyGridCtrl::OnClickButton](#onclickbutton)|Volá se rozhraním, když se klikne na tlačítko Vlastnosti.|
+|[CMFCPropertyGridCtrl::OnDrawBorder](#ondrawborder)|Volá se rozhraním, aby se vykreslilo ohraničení kolem ovládacího prvku mřížky vlastností.|
 |[CMFCPropertyGridCtrl::OnDrawDescription](#ondrawdescription)|Volá se rozhraním, aby se nakreslila oblast popisu a zobrazil se text popisu.|
-|[CMFCPropertyGridCtrl::OnDrawList](#ondrawlist)|Volá se rozhraním, chcete-li zobrazit seznam vlastností, které v ovládacím prvku mřížky vlastností.|
+|[CMFCPropertyGridCtrl::OnDrawList](#ondrawlist)|Volá se rozhraním, aby se zobrazil seznam vlastností v ovládacím prvku mřížky vlastností.|
 |[CMFCPropertyGridCtrl::OnDrawProperty](#ondrawproperty)|Volá se rozhraním, aby se zobrazila vlastnost.|
-|[CMFCPropertyGridCtrl::OnPropertyChanged](#onpropertychanged)|Volá se rozhraním, když je změněna hodnota vlastnosti.|
-|[CMFCPropertyGridCtrl::OnSelectCombo](#onselectcombo)|Volá se rozhraním, když je vybrána vlastnost, která obsahuje ovládací prvek pole se seznamem.|
-|[CMFCPropertyGridCtrl::ValidateItemData](#validateitemdata)|Volá se rozhraním, aby ověřila data vlastnosti.|
+|[CMFCPropertyGridCtrl::OnPropertyChanged](#onpropertychanged)|Volá se rozhraním, když se změní hodnota vlastnosti.|
+|[CMFCPropertyGridCtrl::OnSelectCombo](#onselectcombo)|Volá se rozhraním, když je vybraná vlastnost, která obsahuje ovládací prvek pole se seznamem.|
+|[CMFCPropertyGridCtrl::ValidateItemData](#validateitemdata)|Volá se rozhraním, aby se ověřila data vlastnosti.|
 
 ## <a name="remarks"></a>Poznámky
 
-`CMFCPropertyGridCtrl` Zobrazí ovládací prvek mřížky vlastnosti, která obsahuje upravovat vlastnosti odvozené z třídy [cmfcpropertygridproperty –](../../mfc/reference/cmfcpropertygridproperty-class.md) třídy. Každá vlastnost může představovat typ a může obsahovat podřízené položky. Ovládací prvek mřížky vlastností podporuje umožňující změnu velikosti oblast v dolní části, který může zobrazit popis vybrané vlastnosti.
+Třída zobrazí ovládací prvek mřížky vlastností, který obsahuje upravitelné vlastnosti odvozené od třídy [CMFCPropertyGridProperty.](../../mfc/reference/cmfcpropertygridproperty-class.md) `CMFCPropertyGridCtrl` Každá vlastnost může představovat typ a může obsahovat podpoložky. Ovládací prvek mřížky vlastností podporuje oblast s možností změny velikosti v dolní části, která může zobrazit popis vybrané vlastnosti.
 
-Pokud chcete použít ovládací prvek mřížky vlastností, vytvořit `CMFCPropertyGridCtrl` objekt a poté zavolejte [CMFCPropertyGridCtrl::Create](#create) – metoda. Použití [CMFCPropertyGridCtrl::AddProperty](#addproperty) metodu pro přidání vlastnosti do seznamu.
+Chcete-li použít ovládací prvek mřížky vlastností, `CMFCPropertyGridCtrl` vytvořte objekt a poté zavolejte metodu [CMFCPropertyGridCtrl:: Create](#create) . K přidání vlastností do seznamu použijte metodu [CMFCPropertyGridCtrl:: AddProperty](#addproperty) .
 
-## <a name="selection-properties"></a>Výběr vlastnosti
+## <a name="selection-properties"></a>Vlastnosti výběru
 
-Místo představující hodnotu, můžete začít položka vlastnosti dialogové okno, které umožňuje uživateli vybrat barvu, soubor nebo písmo.
+Místo reprezentace hodnoty může položka vlastnosti spustit dialogové okno, které uživateli umožňuje vybrat barvu, soubor nebo písmo.
 
-V následující tabulce jsou uvedeny čtyři typy vlastností výběr:
+V následující tabulce jsou uvedeny čtyři typy vlastností výběru:
 
 |Třída|Popis|
 |-----------|-----------------|
-|[CMFCPropertyGridProperty – třída](../../mfc/reference/cmfcpropertygridproperty-class.md)|Vlastnost obecné účely, která se používá k určení hodnotu řetězce, logické hodnoty, kalendářní data a tak dále.|
-|[CMFCPropertyGridColorProperty – třída](../../mfc/reference/cmfcpropertygridcolorproperty-class.md)|Vlastnost, která slouží k výběru hodnotu barvy.|
-|[CMFCPropertyGridFileProperty – třída](../../mfc/reference/cmfcpropertygridfileproperty-class.md)|Vlastnost, která slouží k výběru souboru.|
-|[CMFCPropertyGridFontProperty – třída](../../mfc/reference/cmfcpropertygridfontproperty-class.md)|Vlastnost, která slouží k výběru písma.|
+|[CMFCPropertyGridProperty – třída](../../mfc/reference/cmfcpropertygridproperty-class.md)|Vlastnost pro obecné účely, která se používá k určení hodnoty řetězců, logických hodnot, kalendářních dat a tak dále.|
+|[CMFCPropertyGridColorProperty – třída](../../mfc/reference/cmfcpropertygridcolorproperty-class.md)|Vlastnost, která se používá k výběru hodnoty barvy.|
+|[CMFCPropertyGridFileProperty – třída](../../mfc/reference/cmfcpropertygridfileproperty-class.md)|Vlastnost, která se používá k výběru souboru.|
+|[CMFCPropertyGridFontProperty – třída](../../mfc/reference/cmfcpropertygridfontproperty-class.md)|Vlastnost, která se používá k výběru písma.|
 
 ## <a name="illustrations"></a>Obrázky
 
-Následující ilustrace znázornění ovládací prvek mřížky vlastnosti, které zobrazuje vlastnosti dvěma způsoby. První obrázek zobrazuje vlastnosti hierarchicky a druhá zase vlastnosti podle abecedy.
+Následující ilustrace znázorňuje ovládací prvek mřížky vlastností, který zobrazuje vlastnosti dvěma způsoby. První ilustrace zobrazuje vlastnosti hierarchicky a druhá zobrazí vlastnosti podle abecedy.
 
-![Seznam vlastností seznamu vlastností](../../mfc/reference/media/proplist.png "seznam vlastností seznamu vlastností")
+![Seznam vlastností seznam vlastností](../../mfc/reference/media/proplist.png "Seznam vlastností seznam vlastností")
 
 ## <a name="example"></a>Příklad
 
-Následující příklad ukazuje, jak nakonfigurovat pomocí různých metod v objekt ovládacího prvku mřížky vlastností `CMFCPropertyGridCtrl` třídy. Tento příklad ukazuje, jak povolte stažení ovládacího prvku záhlaví, povolte oblast popisu a nastavte vzhled ovládacího prvku mřížky vlastností. Příklad také ukazuje, jak nastavit abecední režimu pro ovládací prvek, kterým ovládacího prvku seřadí všechny vlastnosti, které obsahuje podle názvu jejich vlastnosti a jak nastavit vlastní barvy pro různé prvky ovládací prvek mřížky vlastností. V tomto příkladu je součástí [nové ovládací prvky ukázka](../../overview/visual-cpp-samples.md).
+Následující příklad ukazuje, jak nakonfigurovat objekt ovládacího prvku mřížky vlastností pomocí různých metod ve `CMFCPropertyGridCtrl` třídě. Příklad ukazuje, jak povolit ovládací prvek záhlaví, povolit oblast popisu a nastavit vzhled ovládacího prvku mřížky vlastností. Příklad také ukazuje, jak nastavit abecední režim pro ovládací prvek, který určuje, že ovládací prvek seřadí všechny vlastnosti, které obsahuje, podle názvu vlastnosti a jak nastavit vlastní barvy pro různé prvky ovládacího prvku mřížky vlastností. Tento příklad je součástí [ukázky nové ovládací prvky](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_NewControls#14](../../mfc/reference/codesnippet/cpp/cmfcpropertygridctrl-class_1.h)]
 [!code-cpp[NVC_MFC_NewControls#16](../../mfc/reference/codesnippet/cpp/cmfcpropertygridctrl-class_2.cpp)]
@@ -307,7 +307,7 @@ Následující příklad ukazuje, jak nakonfigurovat pomocí různých metod v o
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
-[Třídy CObject](../../mfc/reference/cobject-class.md)
+[CObject](../../mfc/reference/cobject-class.md)
 
 [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)
 
@@ -317,9 +317,9 @@ Následující příklad ukazuje, jak nakonfigurovat pomocí různých metod v o
 
 ## <a name="requirements"></a>Požadavky
 
-**Header:** afxpropertygridctrl.h
+**Záhlaví:** afxpropertygridctrl. h
 
-##  <a name="accselect"></a>  CMFCPropertyGridCtrl::accSelect
+##  <a name="accselect"></a>CMFCPropertyGridCtrl::accSelect
 
 ```
 virtual HRESULT accSelect(
@@ -329,8 +329,8 @@ virtual HRESULT accSelect(
 
 ### <a name="parameters"></a>Parametry
 
-[in] *flagsSelect*<br/>
-[in] *varChild*<br/>
+pro *flagsSelect*<br/>
+pro *varChild*<br/>
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -338,7 +338,7 @@ virtual HRESULT accSelect(
 
 ##  <a name="addproperty"></a>  CMFCPropertyGridCtrl::AddProperty
 
-Přidá nové vlastnosti do ovládacího prvku mřížky vlastností.
+Přidá novou vlastnost k ovládacímu prvku mřížky vlastností.
 
 ```
 int AddProperty(
@@ -350,25 +350,25 @@ int AddProperty(
 ### <a name="parameters"></a>Parametry
 
 *pProp*<br/>
-[in] Ukazatel na vlastnost.
+pro Ukazatel na vlastnost.
 
 *bRedraw*<br/>
-[in] TRUE, pokud chcete okamžitě; ho překreslit vlastnost v opačném případě hodnota FALSE. Výchozí hodnota je TRUE.
+pro TRUE pro okamžité překreslování vlastnosti; v opačném případě FALSE. Výchozí hodnota je TRUE (pravda).
 
 *bAdjustLayout*<br/>
-[in] TRUE pro přepočítat jak nakreslit text a hodnoty vlastnosti a následně nakreslete vlastnost; FALSE pro existující výpočty, použijte, chcete-li nakreslit vlastnost. Výchozí hodnota je TRUE.
+pro TRUE pro přepočítání, jak vykreslit text a hodnotu vlastnosti, a potom nakreslit vlastnost; FALSE pro vykreslení vlastnosti pomocí stávajících výpočtů. Výchozí hodnota je TRUE (pravda).
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Pokud tato metoda bude úspěšná, z nuly vycházející index pozice v ovládací prvek mřížky vlastností, kde je vlastnost přidána; jinak -1.
+Pokud je tato metoda úspěšná, index založený na nule pozice v ovládacím prvku mřížky vlastností, kde je přidána vlastnost; v opačném případě-1.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato metoda přidá ukazatel na určenou vlastnost na konec seznamu vlastností v ovládací prvek mřížky vlastností. Zničit vlastnosti nebo zajistí, aby dostanou mimo rozsah zničen ovládací prvek mřížky. Jakmile budete hotovi s ovládací prvek mřížky vlastností, zavolejte [CMFCPropertyGridCtrl::RemoveAll](#removeall) odstranit všechny přidané vlastnosti. AddProperty – metoda selže, pokud je zadaná vlastnost již byla přidána do seznamu.
+Tato metoda přidá ukazatel na zadanou vlastnost na konec seznamu vlastností v ovládacím prvku mřížky vlastností. Před zničením ovládacího prvku mřížky neodstraňujte vlastnosti nebo jim umožněte přejít mimo rozsah. Až budete s ovládacím prvkem mřížky vlastností hotovi, zavolejte [CMFCPropertyGridCtrl:: RemoveAll](#removeall) a odstraňte všechny přidané vlastnosti. Metoda AddProperty se nezdařila, pokud je zadaná vlastnost již přidána do seznamu.
 
 ##  <a name="adjustlayout"></a>  CMFCPropertyGridCtrl::AdjustLayout
 
-Překreslí ovládací prvek mřížky vlastností a její vlastnosti.
+Překreslí ovládací prvek mřížky vlastností a jeho vlastnosti.
 
 ```
 virtual void AdjustLayout();
@@ -376,7 +376,7 @@ virtual void AdjustLayout();
 
 ### <a name="remarks"></a>Poznámky
 
-Tato metoda přepočítá jak nakreslete ovládací prvek mřížky celou vlastnost a její vlastnosti, včetně obrázků, písma a ovládací prvky.
+Tato metoda přepočítá, jak vykreslit celý ovládací prvek mřížky vlastností a jeho vlastnosti, včetně obrázků, písem a ovládacích prvků.
 
 ##  <a name="alwaysshowusertooltip"></a>  CMFCPropertyGridCtrl::AlwaysShowUserToolTip
 
@@ -386,7 +386,7 @@ void AlwaysShowUserToolTip(BOOL bShow = TRUE);
 
 ### <a name="parameters"></a>Parametry
 
-[in] *bShow*<br/>
+pro *bShow*<br/>
 
 ### <a name="remarks"></a>Poznámky
 
@@ -400,11 +400,11 @@ virtual void CloseColorPopup();
 
 ### <a name="remarks"></a>Poznámky
 
-Další informace o dialogové okno Výběr barvy, naleznete v tématu [cmfcpropertygridcolorproperty – třída](../../mfc/reference/cmfcpropertygridcolorproperty-class.md).
+Další informace o dialogovém okně Výběr barvy naleznete v tématu [Třída CMFCPropertyGridColorProperty](../../mfc/reference/cmfcpropertygridcolorproperty-class.md).
 
 ##  <a name="cmfcpropertygridctrl"></a>  CMFCPropertyGridCtrl::CMFCPropertyGridCtrl
 
-Vytvoří `CMFCPropertyGridCtrl` objektu.
+`CMFCPropertyGridCtrl` Vytvoří objekt.
 
 ```
 CMFCPropertyGridCtrl();
@@ -416,7 +416,7 @@ CMFCPropertyGridCtrl();
 
 ##  <a name="compareprops"></a>  CMFCPropertyGridCtrl::CompareProps
 
-Je voláno ovládací prvek mřížky vlastností seřadit vlastnosti.
+Volá se ovládacím prvkem Grida vlastnosti k řazení vlastností.
 
 ```
 virtual int CompareProps(
@@ -436,17 +436,17 @@ Ukazatel na vlastnost.
 
 |Návratová hodnota|Popis|
 |------------------|-----------------|
-|< 0|Název *pProp1* parametru je menší než název *pProp2* parametru.|
-|0|Název *pProp1* parametru je stejný jako název aplikace *pProp2* parametru.|
-|> 0|Název *pProp1* objekt je větší než název *pProp2* parametru.|
+|< 0|Název parametru *pProp1* je menší než název parametru *pProp2* .|
+|0|Název parametru *pProp1* se rovná názvu parametru *pProp2* .|
+|> 0|Název objektu *pProp1* je větší než název parametru *pProp2* .|
 
 ### <a name="remarks"></a>Poznámky
 
-Ve výchozím nastavení, tato metoda používá [CString::Compare](../../atl-mfc-shared/reference/cstringt-class.md#compare) metodu porovnání `CMFCPropertyGridProperty::m_strName` členy ze zadaných parametrů.
+Ve výchozím nastavení tato metoda používá metodu [CString:: Compare](../../atl-mfc-shared/reference/cstringt-class.md#compare) pro porovnání `CMFCPropertyGridProperty::m_strName` členů zadaných parametrů.
 
 ##  <a name="create"></a>  CMFCPropertyGridCtrl::Create
 
-Vytvoří ovládací prvek mřížky vlastností a připojí ho k objektu ovládací prvek mřížky vlastností.
+Vytvoří ovládací prvek mřížky vlastností a připojí ho k objektu ovládacího prvku mřížky vlastností.
 
 ```
 virtual BOOL Create(
@@ -459,34 +459,34 @@ virtual BOOL Create(
 ### <a name="parameters"></a>Parametry
 
 *dwStyle*<br/>
-[in] Bitová kombinace (nebo) [styly oken](../../mfc/reference/styles-used-by-mfc.md#window-styles).
+pro Bitová kombinace (nebo) [stylů oken](../../mfc/reference/styles-used-by-mfc.md#window-styles).
 
-*Rect*<br/>
-[in] Souřadnice ohraničující obdélník, který určuje velikost a umístění okna v klientovi *pParentWnd*.
+*OBD*<br/>
+pro Ohraničující obdélník, který určuje velikost a polohu okna, v souřadnicích klienta *pParentWnd*.
 
 *pParentWnd*<br/>
-[in] Ukazatel do nadřazeného okna. Nesmí mít hodnotu NULL.
+pro Ukazatel na nadřazené okno. Nesmí mít hodnotu NULL.
 
 *nID*<br/>
-[in] ID podřízeného okna.
+pro ID podřízeného okna
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Hodnota TRUE, pokud okno byl vytvořen úspěšně; v opačném případě hodnota FALSE.
+Hodnota TRUE, pokud bylo okno úspěšně vytvořeno; v opačném případě FALSE.
 
 ### <a name="remarks"></a>Poznámky
 
-Chcete-li vytvořit ovládací prvek mřížky vlastností, první volání [CMFCPropertyGridCtrl::CMFCPropertyGridCtrl](#cmfcpropertygridctrl) k vytvoření objektu mřížky vlastností. Poté zavolejte `CMFCPropertyGridCtrl::Create`.
+Chcete-li vytvořit ovládací prvek mřížky vlastností, nejprve zavolejte [CMFCPropertyGridCtrl:: CMFCPropertyGridCtrl](#cmfcpropertygridctrl) a vytvořte objekt Grid vlastnosti. Pak zavolejte `CMFCPropertyGridCtrl::Create`.
 
 ### <a name="example"></a>Příklad
 
-Následující příklad ukazuje způsob použití `Create` metoda ve `CMFCPropertyGridCtrl` třídy. V tomto příkladu je součástí [nové ovládací prvky ukázka](../../overview/visual-cpp-samples.md).
+Následující příklad ukazuje, jak použít `Create` metodu ve `CMFCPropertyGridCtrl` třídě. Tento příklad je součástí [ukázky nové ovládací prvky](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_NewControls#15](../../mfc/reference/codesnippet/cpp/cmfcpropertygridctrl-class_6.cpp)]
 
 ##  <a name="deleteproperty"></a>  CMFCPropertyGridCtrl::DeleteProperty
 
-Odstraní zadané vlastnosti z ovládacího prvku mřížky vlastností.
+Odstraní zadanou vlastnost z ovládacího prvku mřížky vlastností.
 
 ```
 BOOL DeleteProperty(
@@ -498,21 +498,21 @@ BOOL DeleteProperty(
 ### <a name="parameters"></a>Parametry
 
 *pProp*<br/>
-[in] Ukazatel na vlastnost.
+pro Ukazatel na vlastnost.
 
 *bRedraw*<br/>
-[in] TRUE, pokud chcete ho překreslit ovládací prvek mřížky vlastnosti; v opačném případě hodnota FALSE. Výchozí hodnota je TRUE.
+pro TRUE pro překreslení ovládacího prvku mřížky vlastností; v opačném případě FALSE. Výchozí hodnota je TRUE (pravda).
 
 *bAdjustLayout*<br/>
-[in] TRUE pro přepočítat jak nakreslit text, obrázky a položky v ovládacím prvku mřížky vlastností a pak nakreslete ovládací prvek; v opačném případě hodnota FALSE. Výchozí hodnota je TRUE.
+pro TRUE pro přepočítání, jak nakreslit celý text, obrázky a položky v ovládacím prvku mřížky vlastností a jak ovládací prvek nakreslit; v opačném případě FALSE. Výchozí hodnota je TRUE (pravda).
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Hodnota TRUE, pokud tato metoda je úspěšná. v opačném případě hodnota FALSE.
+TRUE, pokud je tato metoda úspěšná; v opačném případě FALSE.
 
 ### <a name="remarks"></a>Poznámky
 
-Pomocí této metody můžete odstranit vlastnost a všechny podřízené položky z ovládací prvek mřížky vlastností.
+Tuto metodu použijte, chcete-li odstranit vlastnost a všechny dílčí položky z ovládacího prvku mřížky vlastností.
 
 ##  <a name="drawcontrolbarcolors"></a>  CMFCPropertyGridCtrl::DrawControlBarColors
 
@@ -526,7 +526,7 @@ BOOL DrawControlBarColors() const;
 
 ##  <a name="edititem"></a>  CMFCPropertyGridCtrl::EditItem
 
-Volá se rozhraním, když uživatel začne upravovat vlastnosti.
+Volá se rozhraním, když uživatel začne upravovat vlastnost.
 
 ```
 virtual BOOL EditItem(
@@ -537,20 +537,20 @@ virtual BOOL EditItem(
 ### <a name="parameters"></a>Parametry
 
 *pProp*<br/>
-[in] Ukazatel na vlastnost.
+pro Ukazatel na vlastnost.
 
 *lptClick*<br/>
-[in] Bod na ovládací prvek mřížky vlastností uživatel kliknout, aby se zahájit operaci úprav. Bod je v souřadnicích klienta ovládacího prvku. Výchozí hodnota je NULL.
+pro Bod na ovládacím prvku mřížky vlastností, na který uživatel kliknul, aby zahájil operaci Edit. Bod je v souřadnicích klienta ovládacího prvku. Výchozí hodnota je NULL.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Hodnota TRUE, pokud je metoda úspěšná. v opačném případě hodnota FALSE.
+TRUE, pokud je metoda úspěšná; v opačném případě FALSE.
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="enabledescriptionarea"></a>  CMFCPropertyGridCtrl::EnableDescriptionArea
+##  <a name="enabledescriptionarea"></a>CMFCPropertyGridCtrl::EnableDescriptionArea
 
-Povoluje nebo zakazuje oblasti popis, který se zobrazí pod seznamem vlastností v ovládací prvek mřížky vlastností.
+Povolí nebo zakáže oblast popisu zobrazená pod seznamem vlastností v ovládacím prvku mřížky vlastností.
 
 ```
 void EnableDescriptionArea(BOOL bEnable=TRUE);
@@ -559,15 +559,15 @@ void EnableDescriptionArea(BOOL bEnable=TRUE);
 ### <a name="parameters"></a>Parametry
 
 *bEnable*<br/>
-[in] TRUE, pokud chcete povolit oblasti popisu; FALSE, pokud chcete zakázat oblast popisu. Výchozí hodnota je TRUE.
+pro TRUE pro povolení oblasti Popis; Hodnota FALSE pro zakázání oblasti Description Výchozí hodnota je TRUE (pravda).
 
 ### <a name="remarks"></a>Poznámky
 
-Oblasti Popis se zobrazí v dolní části ovládacího prvku mřížky vlastností. Ve výchozím nastavení oblast popisu je zakázané a že nejsou viditelné.
+Oblast Description (popis) se zobrazí v dolní části ovládacího prvku mřížky vlastností. Ve výchozím nastavení je oblast popis zakázaná a není viditelná.
 
 ##  <a name="enableheaderctrl"></a>  CMFCPropertyGridCtrl::EnableHeaderCtrl
 
-Povolí nebo zakáže ovládací prvek záhlaví v horní části ovládací prvek mřížky vlastností.
+Povolí nebo zakáže ovládací prvek záhlaví v horní části ovládacího prvku mřížky vlastností.
 
 ```
 void EnableHeaderCtrl(
@@ -579,17 +579,17 @@ void EnableHeaderCtrl(
 ### <a name="parameters"></a>Parametry
 
 *bEnable*<br/>
-[in] TRUE, pokud chcete povolit ovládacího prvku záhlaví; FALSE, pokud chcete zakázat ovládacího prvku záhlaví. Výchozí hodnota je TRUE.
+pro TRUE pro povolení ovládacího prvku záhlaví; FALSE pro zakázání ovládacího prvku záhlaví Výchozí hodnota je TRUE (pravda).
 
 *lpszLeftColumn*<br/>
-[in] Název levý sloupec ovládacího prvku záhlaví. Výchozí hodnota je **vlastnost**.
+pro Název levého sloupce ovládacího prvku záhlaví Výchozí hodnota je **Property**.
 
 *lpszRightColumn*<br/>
-[in] Název pravý sloupec ovládacího prvku záhlaví. Výchozí hodnota je **hodnota**.
+pro Název pravého sloupce ovládacího prvku záhlaví Výchozí hodnota je **Value**.
 
 ##  <a name="endedititem"></a>  CMFCPropertyGridCtrl::EndEditItem
 
-Volá se rozhraním, když uživatel dokončí úpravy vlastnosti.
+Volá se rozhraním, když uživatel dokončí úpravu vlastnosti.
 
 ```
 virtual BOOL EndEditItem(BOOL bUpdateData=TRUE);
@@ -598,17 +598,17 @@ virtual BOOL EndEditItem(BOOL bUpdateData=TRUE);
 ### <a name="parameters"></a>Parametry
 
 *bUpdateData*<br/>
-[in] TRUE, pokud chcete určit, že po dokončení operace úprav; musí být ověřené data změněné vlastnosti v opačném případě hodnota FALSE. Výchozí hodnota je TRUE.
+pro Hodnota TRUE určuje, že po dokončení operace Edit musí být upravená data vlastnosti ověřena; v opačném případě FALSE. Výchozí hodnota je TRUE (pravda).
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Hodnota TRUE, pokud operace úprav skončí úspěšně; FALSE, pokud data upravené vlastnosti není platný nebo pokud úpravy operace měla pokračovat.
+TRUE, pokud operace Edit skončí úspěšně; FALSE, pokud data upravené vlastnosti nejsou platná nebo pokud by měla operace úprav pokračovat.
 
 ### <a name="remarks"></a>Poznámky
 
 ##  <a name="ensurevisible"></a>  CMFCPropertyGridCtrl::EnsureVisible
 
-Posune ovládací prvek mřížky vlastností a rozbalí vlastnost položek, dokud zadaná vlastnost není viditelná.
+Posune ovládací prvek mřížky vlastností a rozbalí položky vlastností, dokud není zadaná vlastnost viditelná.
 
 ```
 void EnsureVisible(
@@ -619,16 +619,16 @@ void EnsureVisible(
 ### <a name="parameters"></a>Parametry
 
 *pProp*<br/>
-[in] Ukazatel na vlastnost.
+pro Ukazatel na vlastnost.
 
 *bExpandParents*<br/>
-[in] TRUE, pokud chcete rozbalit nadřazené položky a aktivujte zadané vlastnosti; v opačném případě hodnota FALSE. Výchozí hodnota je FALSE.
+pro TRUE pro rozbalení nadřazených položek, aby byla zadaná vlastnost viditelná; v opačném případě FALSE. Výchozí hodnota je FALSE.
 
 ### <a name="remarks"></a>Poznámky
 
 ##  <a name="expandall"></a>  CMFCPropertyGridCtrl::ExpandAll
 
-Rozbalí nebo sbalí všechny uzly ovládací prvek mřížky vlastností.
+Rozbalí nebo sbalí všechny uzly ovládacích prvků mřížky vlastností.
 
 ```
 void ExpandAll(BOOL bExpand=TRUE);
@@ -637,13 +637,13 @@ void ExpandAll(BOOL bExpand=TRUE);
 ### <a name="parameters"></a>Parametry
 
 *bExpand*<br/>
-[in] TRUE, pokud chcete-li rozbalit všechny uzly; FALSE, pokud chcete sbalit všechny uzly. Výchozí hodnota je TRUE.
+pro TRUE pro rozbalení všech uzlů; Hodnota FALSE pro sbalení všech uzlů. Výchozí hodnota je TRUE (pravda).
 
 ### <a name="remarks"></a>Poznámky
 
 ##  <a name="finditembydata"></a>  CMFCPropertyGridCtrl::FindItemByData
 
-Získá vlastnost, která souvisí s uživatelem definovanou hodnotu DWORD.
+Načte vlastnost, která je přidružená k hodnotě DWORD definované uživatelem.
 
 ```
 CMFCPropertyGridProperty* FindItemByData(
@@ -654,18 +654,18 @@ CMFCPropertyGridProperty* FindItemByData(
 ### <a name="parameters"></a>Parametry
 
 *dwData*<br/>
-[in] Hodnota DWORD.
+pro Hodnota DWORD.
 
 *bSearchSubItems*<br/>
-[in] TRUE, pokud chcete hledat vlastnost dílčích položek; v opačném případě hodnota FALSE. Výchozí hodnota je TRUE.
+pro TRUE pro dílčí položky vlastnosti hledání; v opačném případě FALSE. Výchozí hodnota je TRUE (pravda).
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Ukazatel na objekt přidružené vlastnosti, pokud tato metoda bude úspěšná; v opačném případě hodnota NULL.
+Ukazatel na objekt přidružené vlastnosti, pokud je tato metoda úspěšná; v opačném případě hodnota NULL.
 
 ### <a name="remarks"></a>Poznámky
 
-Použití [CMFCPropertyGridCtrl::CMFCPropertyGridCtrl](#cmfcpropertygridctrl) konstruktor nebo [CMFCPropertyGridProperty::SetData](../../mfc/reference/cmfcpropertygridproperty-class.md#setdata) metody pro přidružení typu DWORD s vlastností.
+K přidružení typu DWORD s vlastností použijte konstruktor [CMFCPropertyGridCtrl:: CMFCPropertyGridCtrl](#cmfcpropertygridctrl) nebo [CMFCPropertyGridProperty:: SetData](../../mfc/reference/cmfcpropertygridproperty-class.md#setdata) .
 
 ##  <a name="get_accchildcount"></a>  CMFCPropertyGridCtrl::get_accChildCount
 
@@ -675,7 +675,7 @@ virtual HRESULT get_accChildCount(long* pcountChildren);
 
 ### <a name="parameters"></a>Parametry
 
-[in] *pcountChildren*<br/>
+pro *pcountChildren*<br/>
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -689,7 +689,7 @@ virtual HRESULT get_accFocus(VARIANT* pvarChild);
 
 ### <a name="parameters"></a>Parametry
 
-[in] *pvarChild*<br/>
+pro *pvarChild*<br/>
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -705,8 +705,8 @@ virtual HRESULT get_accHelp(
 
 ### <a name="parameters"></a>Parametry
 
-[in] *varChild*<br/>
-[in] *pszHelp*<br/>
+pro *varChild*<br/>
+pro *pszHelp*<br/>
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -723,8 +723,8 @@ virtual HRESULT get_accHelpTopic(
 
 ### <a name="parameters"></a>Parametry
 
-[in] *pszHelpFile*<br/>
-[in] *varChild*<br/>
+pro *pszHelpFile*<br/>
+pro *varChild*<br/>
 [in] *pidTopic*<br/>
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -741,8 +741,8 @@ virtual HRESULT get_accKeyboardShortcut(
 
 ### <a name="parameters"></a>Parametry
 
-[in] *varChild*<br/>
-[in] *pszKeyboardShortcut*<br/>
+pro *varChild*<br/>
+pro *pszKeyboardShortcut*<br/>
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -756,7 +756,7 @@ virtual HRESULT get_accSelection(VARIANT* pvarChildren);
 
 ### <a name="parameters"></a>Parametry
 
-[in] *pvarChildren*<br/>
+pro *pvarChildren*<br/>
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -764,7 +764,7 @@ virtual HRESULT get_accSelection(VARIANT* pvarChildren);
 
 ##  <a name="getbkcolor"></a>  CMFCPropertyGridCtrl::GetBkColor
 
-Zjišťuje barvu pozadí aktuální ovládací prvek mřížky vlastností.
+Načte barvu pozadí aktuálního ovládacího prvku mřížky vlastností.
 
 ```
 COLORREF GetBkColor() const;
@@ -776,11 +776,11 @@ Hodnota barvy RGB.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato metoda zjišťuje barvu, která rozhraní používá k vykreslení na pozadí aktuální ovládací prvek mřížky vlastností. [CMFCPropertyGridCtrl::GetTextColor](#gettextcolor) metoda zjišťuje barvu popředí.
+Tato metoda načte barvu, kterou používá rozhraní k vykreslení pozadí aktuálního ovládacího prvku mřížky vlastností. Metoda [CMFCPropertyGridCtrl:: GetTextColor](#gettextcolor) načítá barvu popředí.
 
 ##  <a name="getboldfont"></a>  CMFCPropertyGridCtrl::GetBoldFont
 
-Načte, který slouží k vykreslení textu v aktuální ovládací prvek mřížky vlastností v tučný styl písma Windows.
+Načte písmo systému Windows, které se používá k vykreslování textu v aktuálním ovládacím prvku mřížky vlastnosti tučným stylem.
 
 ```
 CFont& GetBoldFont();
@@ -788,7 +788,7 @@ CFont& GetBoldFont();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Odkaz na [cfont –](../../mfc/reference/cfont-class.md) objekt, který popisuje vlastnosti tučným písmem.
+Odkaz na objekt [CFont –](../../mfc/reference/cfont-class.md) , který popisuje charakteristiky tučného písma.
 
 ##  <a name="getcursel"></a>  CMFCPropertyGridCtrl::GetCurSel
 
@@ -800,13 +800,13 @@ CMFCPropertyGridProperty* GetCurSel() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Ukazatel na objekt vlastnost, která odpovídá vybrané položky v ovládacím prvku mřížky vlastností.
+Ukazatel na objekt vlastnosti, který odpovídá vybrané položce v ovládacím prvku mřížky vlastností.
 
 ### <a name="remarks"></a>Poznámky
 
 ##  <a name="getcustomcolors"></a>  CMFCPropertyGridCtrl::GetCustomColors
 
-Načte vlastní barvy, které jsou definované pro vlastnost grid ovládacích prvků.
+Načte vlastní barvy, které jsou aktuálně definovány pro ovládací prvky mřížky vlastností.
 
 ```
 void GetCustomColors(
@@ -822,33 +822,33 @@ void GetCustomColors(
 ### <a name="parameters"></a>Parametry
 
 *clrBackground*<br/>
-[out] Barva pozadí hodnot vlastností.
+mimo Barva pozadí hodnot vlastností.
 
 *clrText*<br/>
-[out] Barva názvy vlastností a text hodnotu vlastnosti.
+mimo Barva názvů vlastností a textu hodnoty vlastnosti
 
 *clrGroupBackground*<br/>
-[out] Barva pozadí skupina vlastností.
+mimo Barva pozadí skupiny vlastností.
 
 *clrGroupText*<br/>
-[out] Barva textu ve skupině vlastností.
+mimo Barva textu ve skupině vlastností
 
 *clrDescriptionBackground*<br/>
-[out] Barva pozadí oblasti popisu.
+mimo Barva pozadí oblasti popisu
 
 *clrDescriptionText*<br/>
-[out] Barva textu v oblasti popisu.
+mimo Barva textu v oblasti Popis.
 
 *clrLine*<br/>
-[out] Barva čar, které jsou zpracovány mezi vlastnostmi.
+mimo Barva čar vykreslených mezi vlastnostmi
 
 ### <a name="remarks"></a>Poznámky
 
-Použití [CMFCPropertyGridCtrl::SetCustomColors](#setcustomcolors) metody nastavte vlastní barvy.
+K nastavení vlastních barev použijte metodu [CMFCPropertyGridCtrl:: SetCustomColors](#setcustomcolors) .
 
 ##  <a name="getdescriptionheight"></a>  CMFCPropertyGridCtrl::GetDescriptionHeight
 
-Získá výšku oblasti popis, který je umístěn v dolní části ovládacího prvku mřížky vlastností.
+Načte výšku oblasti popisu, která je umístěna v dolní části ovládacího prvku mřížky vlastností.
 
 ```
 int GetDescriptionHeight() const;
@@ -856,17 +856,17 @@ int GetDescriptionHeight() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Výška v pixelech na oblast popisu.
+Výška oblasti popisu v pixelech
 
 ### <a name="remarks"></a>Poznámky
 
-Výšku oblasti popisu je vypočtena automaticky a je nastavená na 1/4 výška ovládací prvek mřížky vlastností.
+Výška oblasti popisu je vypočítána automaticky a je nastavena na 1/4 výšku ovládacího prvku mřížky vlastností.
 
-Použití [CMFCPropertyGridCtrl::EnableDescriptionArea](#enabledescriptionarea) metodu můžete zobrazit nebo skrýt oblast popisu. Použití [CMFCPropertyGridCtrl::IsDescriptionArea](#isdescriptionarea) metodou ke zjištění, zda je oblast popisu zobrazení nebo skrytí.
+K zobrazení nebo skrytí oblasti popisu použijte metodu [CMFCPropertyGridCtrl:: EnableDescriptionArea](#enabledescriptionarea) . Pomocí metody [CMFCPropertyGridCtrl:: IsDescriptionArea](#isdescriptionarea) určete, zda je oblast popis zobrazená nebo skrytá.
 
 ##  <a name="getdescriptionrows"></a>  CMFCPropertyGridCtrl::GetDescriptionRows
 
-Získá počet řádků v oblasti popisu aktuální ovládací prvek mřížky vlastností.
+Načte počet řádků v oblasti Popis aktuálního ovládacího prvku mřížky vlastností.
 
 ```
 int GetDescriptionRows() const;
@@ -874,15 +874,15 @@ int GetDescriptionRows() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Počet řádků v oblasti popisu aktuální ovládací prvek mřížky vlastností.
+Počet řádků v oblasti Popis aktuálního ovládacího prvku mřížky vlastností.
 
 ### <a name="remarks"></a>Poznámky
 
-[CMFCPropertyGridCtrl::CMFCPropertyGridCtrl](#cmfcpropertygridctrl) konstruktor inicializuje popis oblasti na 3 řádky.
+Konstruktor [CMFCPropertyGridCtrl:: CMFCPropertyGridCtrl](#cmfcpropertygridctrl) inicializuje oblast Description na 3 řádky.
 
 ##  <a name="getheaderctrl"></a>  CMFCPropertyGridCtrl::GetHeaderCtrl
 
-Získá vnitřní [cmfcheaderctrl –](../../mfc/reference/cmfcheaderctrl-class.md) , že rozhraní používá k zobrazení aktuální ovládací prvek mřížky vlastností objektu.
+Načte interní objekt [CMFCHeaderCtrl](../../mfc/reference/cmfcheaderctrl-class.md) , který rozhraní používá k zobrazení aktuálního ovládacího prvku mřížky vlastností.
 
 ```
 virtual CMFCHeaderCtrl& GetHeaderCtrl();
@@ -890,11 +890,11 @@ virtual CMFCHeaderCtrl& GetHeaderCtrl();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Odkaz na `CMFCHeaderCtrl` objektu.
+Odkaz na `CMFCHeaderCtrl` objekt.
 
-##  <a name="getheaderheight"></a>  CMFCPropertyGridCtrl::GetHeaderHeight
+##  <a name="getheaderheight"></a>CMFCPropertyGridCtrl::GetHeaderHeight
 
-Získá výšku záhlaví ovládacího prvku grid vlastnost.
+Načte výšku záhlaví ovládacího prvku mřížky vlastností.
 
 ```
 int GetHeaderHeight() const;
@@ -902,13 +902,13 @@ int GetHeaderHeight() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Výška záhlaví v pixelech.
+Výška hlavičky v pixelech
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="getleftcolumnwidth"></a>  CMFCPropertyGridCtrl::GetLeftColumnWidth
+##  <a name="getleftcolumnwidth"></a>CMFCPropertyGridCtrl::GetLeftColumnWidth
 
-Načte šířky levém sloupci aktuální vlastnost ovládací prvek mřížky, který obsahuje název každé vlastnosti.
+Načítá šířku levého sloupce ovládacího prvku mřížky vlastností, který obsahuje název každé vlastnosti.
 
 ```
 int GetLeftColumnWidth() const;
@@ -916,15 +916,15 @@ int GetLeftColumnWidth() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Šířka sloupce název.
+Šířka sloupce názvu
 
 ### <a name="remarks"></a>Poznámky
 
-Pravý sloupec ovládacího prvku grid vlastnost obsahuje hodnotu každé vlastnosti.
+Pravý sloupec ovládacího prvku mřížky vlastností obsahuje hodnotu každé vlastnosti.
 
 ##  <a name="getlistrect"></a>  CMFCPropertyGridCtrl::GetListRect
 
-Načte ohraničující obdélník ovládací prvek mřížky vlastností.
+Načte ohraničující obdélník ovládacího prvku mřížky vlastností.
 
 ```
 CRect GetListRect() const;
@@ -932,13 +932,13 @@ CRect GetListRect() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Ohraničující obdélník ovládací prvek mřížky vlastností. Tato rectange nezahrnuje oblast popisu a záhlaví.
+Ohraničující obdélník ovládacího prvku mřížky vlastností. Tento rectange neobsahuje oblast a hlavičku popisu.
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="getproperty"></a>  CMFCPropertyGridCtrl::GetProperty
+##  <a name="getproperty"></a>CMFCPropertyGridCtrl:: GetProperty
 
-Načte ukazatel na vlastnosti objektu, který odpovídá zadanému indexu položky v ovládacím prvku mřížky vlastností.
+Načte ukazatel na objekt vlastnosti, který odpovídá zadanému indexu položky v ovládacím prvku mřížky vlastností.
 
 ```
 CMFCPropertyGridProperty* GetProperty(int nIndex) const;
@@ -947,19 +947,19 @@ CMFCPropertyGridProperty* GetProperty(int nIndex) const;
 ### <a name="parameters"></a>Parametry
 
 *nIndex*<br/>
-[in] Index založený na nule vlastnost položky ovládacího prvku.
+pro Index založený na nule položky ovládacího prvku mřížky vlastností.
 
-Tato metoda vyhodnotí, pokud *nIndex* parametru je menší než nula nebo větší než nebo rovna hodnotě Počet vlastností.
+Tato metoda vyhodnotí, zda je parametr *nIndex* menší než nula nebo větší nebo roven počtu vlastností.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Ukazatel na vlastnosti objektu, který odpovídá zadanému indexu, pokud tato metoda je úspěšná. v opačném případě `NULL`.
+Ukazatel na objekt vlastnosti, který odpovídá zadanému indexu, pokud je tato metoda úspěšná; v opačném případě. `NULL`
 
 ### <a name="remarks"></a>Poznámky
 
 ##  <a name="getpropertycolumnwidth"></a>  CMFCPropertyGridCtrl::GetPropertyColumnWidth
 
-Načte aktuální šířka sloupce, který obsahuje hodnoty vlastností.
+Načte aktuální šířku sloupce, který obsahuje hodnoty vlastností.
 
 ```
 int GetPropertyColumnWidth() const;
@@ -967,15 +967,15 @@ int GetPropertyColumnWidth() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Aktuální šířka sloupce, který obsahuje hodnoty vlastností.
+Aktuální šířka sloupce obsahujícího hodnoty vlastností
 
 ### <a name="remarks"></a>Poznámky
 
-Sloupec na pravé straně v ovládacím prvku mřížky vlastnosti obsahuje hodnoty vlastností. Zákazník můžete změnit šířku sloupce hodnoty pole rozdělení ovládací prvek mřížky vlastností.
+Sloupec na pravé straně ovládacího prvku mřížky vlastností obsahuje hodnoty vlastností. Zákazník může použít pole rozdělení ovládacího prvku mřížky vlastností ke změně šířky sloupce hodnot.
 
 ##  <a name="getpropertycount"></a>  CMFCPropertyGridCtrl::GetPropertyCount
 
-Získá počet vlastností v ovládacím prvku mřížky vlastností.
+Načte počet vlastností v ovládacím prvku mřížky vlastností.
 
 ```
 int GetPropertyCount() const;
@@ -983,13 +983,13 @@ int GetPropertyCount() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Počet vlastností.
+Počet vlastností
 
 ### <a name="remarks"></a>Poznámky
 
 ##  <a name="getrowheight"></a>  CMFCPropertyGridCtrl::GetRowHeight
 
-Získá výšku řádku v ovládacím prvku mřížky vlastností.
+Načte výšku řádku v ovládacím prvku mřížky vlastností.
 
 ```
 int GetRowHeight() const;
@@ -997,15 +997,15 @@ int GetRowHeight() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Výška řádku.
+Výška řádku
 
 ### <a name="remarks"></a>Poznámky
 
-Výška řádku rovná aktuální písmo výšku plus 4 pixelů.
+Výška řádku se rovná aktuální výšce písma a 4 pixely.
 
 ##  <a name="getscrollbarctrl"></a>  CMFCPropertyGridCtrl::GetScrollBarCtrl
 
-Načte ukazatel ovládací prvek posuvníku v ovládacím prvku mřížky vlastností.
+Načte ukazatel na ovládací prvek posuvníku v ovládacím prvku mřížky vlastností.
 
 ```
 virtual CScrollBar* GetScrollBarCtrl(int nBar) const;
@@ -1014,19 +1014,19 @@ virtual CScrollBar* GetScrollBarCtrl(int nBar) const;
 ### <a name="parameters"></a>Parametry
 
 *nBar*<br/>
-[in] Orientaci ovládacího prvku posuvník, který musí být SB_VERT.
+pro Orientace posuvníku, která musí být SB_VERT.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Ukazatel na objekt nebo hodnota NULL, pokud neexistuje žádný posuvník nebo orientaci posuvníku panelu posuvník je SB_HORZ.
+Ukazatel na objekt posuvníku nebo hodnotu NULL, pokud není k dispozici posuvník nebo orientace posuvníku je SB_HORZ.
 
 ### <a name="remarks"></a>Poznámky
 
-Pomocí této metody můžete získat přímý přístup k svislý posuvník.
+Tuto metodu použijte, chcete-li získat přímý přístup k ovládacímu prvku svislé posuvníky.
 
 ##  <a name="gettextcolor"></a>  CMFCPropertyGridCtrl::GetTextColor
 
-Načte barvu, která se používá k nakreslení textu položky vlastností v aktuální ovládací prvek mřížky vlastností.
+Načte barvu použitou k vykreslení textu vlastností položek v aktuálním ovládacím prvku mřížky vlastností.
 
 ```
 COLORREF GetTextColor() const;
@@ -1038,11 +1038,11 @@ Hodnota barvy RGB.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato metoda zjišťuje barvu, která rozhraní používá k vykreslení popředí aktuální ovládací prvek mřížky vlastností. [CMFCPropertyGridCtrl::GetBkColor](#getbkcolor) metoda zjišťuje barvu pozadí.
+Tato metoda načte barvu, kterou rozhraní používá pro vykreslení popředí aktuálního ovládacího prvku mřížky vlastností. Metoda [CMFCPropertyGridCtrl:: GetBkColor](#getbkcolor) načte barvu pozadí.
 
 ##  <a name="hittest"></a>  CMFCPropertyGridCtrl::HitTest
 
-Načte ukazatel na vlastnosti objektu, který odpovídá vlastnosti položky ovládacího prvku, pokud zadaný bod nachází v položce. Tato metoda také určuje oblast v ovládací prvek mřížky vlastností, která obsahuje bod.
+Načte ukazatel na objekt vlastnosti, který odpovídá položce ovládacího prvku mřížky vlastností, pokud je zadaný bod v položce. Tato metoda také označuje oblast v ovládacím prvku mřížky vlastností, která obsahuje bod.
 
 ```
 CMFCPropertyGridProperty* HitTest(
@@ -1053,37 +1053,37 @@ CMFCPropertyGridProperty* HitTest(
 
 ### <a name="parameters"></a>Parametry
 
-*pt*<br/>
-[in] Bod, v souřadnicích klienta.
+*bodů*<br/>
+pro Bod, v souřadnicích klienta.
 
 *pnArea*<br/>
-[out v] Ukazatel `ClickArea` proměnné. Při návratu tato metoda Určuje proměnnou *oblast vlastnosti* , která obsahuje zadaný bod. Další informace o vlastnosti oblasti naleznete v oddílu Poznámky.
+[in, out] Ukazatel na `ClickArea` proměnnou. Když tato metoda vrátí hodnotu, proměnná označuje *oblast vlastností* , která obsahuje zadaný bod. Další informace o oblasti vlastností naleznete v tématu poznámky.
 
 *bPropsOnly*<br/>
-[in] TRUE, pokud chcete otestovat jenom oblast vlastnosti; FALSE, pokud chcete otestovat *oblasti popisu* Pokud se zadaný bod není v oblasti vlastnosti. Výchozí hodnota je FALSE. Další informace o oblasti Popis najdete v části poznámky.
+pro TRUE pro otestování jenom oblasti vlastností; FALSE pro otestování *oblasti popisu* , pokud zadaný bod není v oblasti vlastností. Výchozí hodnota je FALSE (NEPRAVDA). Další informace o oblasti popis najdete v tématu poznámky.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Pokud *bPropsOnly* parametr má hodnotu TRUE a zadaný bod nachází v oblasti vlastnosti, vrácená hodnota je ukazatel na odpovídající vlastnosti objektu. Kromě toho *pnArea* parametr je nastaven na konkrétní oblasti, která obsahuje zadaný bod. Jinak, vrácená hodnota je NULL a *pnArea* parametr se nezmění.
+Pokud má parametr *bPropsOnly* hodnotu true a zadaný bod je v oblasti vlastností, návratová hodnota je ukazatel na odpovídající objekt vlastnosti. Kromě toho je parametr *pnArea* nastaven na konkrétní oblast, která obsahuje zadaný bod. V opačném případě je návratová hodnota NULL a parametr *pnArea* se neupraví.
 
-Pokud *bPropsOnly* má hodnotu FALSE, vrácená hodnota je vždy hodnotu NULL. Nicméně, pokud se zadaný bod nachází v oblasti popisu *pnArea* parametr je nastaven na `CMFCPropertyGridProperty::ClickDescription`.
+Pokud má parametr *bPropsOnly* hodnotu false, návratová hodnota je vždycky null. Pokud je však zadaný bod v oblasti Popis, je parametr *pnArea* nastaven na `CMFCPropertyGridProperty::ClickDescription`hodnotu.
 
 ### <a name="remarks"></a>Poznámky
 
-Termín *oblast vlastnosti* odkazuje na libovolný název, hodnotu, nebo rozbalte pole oblasti ovládacího prvku položky mřížky vlastností. *Oblasti popisu* je zóna v dolní části ovládacího prvku grid vlastnost. Po kliknutí na položku Ovládací prvek mřížky vlastností oblasti Popis se zobrazí popis odpovídající vlastnosti.
+Pojem *oblasti vlastností* odkazuje na libovolnou z oblastí pole název, hodnota nebo rozbalit v položce ovládacího prvku mřížky vlastností. *Oblast popis* je zóna v dolní části ovládacího prvku mřížky vlastností. Když kliknete na položku ovládacího prvku mřížky vlastností, v oblasti Popis se zobrazí popis odpovídající vlastnosti.
 
-Tato metoda nastaví hodnotu proměnné, která *pnArea* parametr odkazuje na. V následující tabulce jsou uvedeny možné hodnoty a odpovídající oblasti.
+Tato metoda nastavuje hodnotu proměnné, na kterou parametr *pnArea* odkazuje. V následující tabulce jsou uvedeny možné hodnoty a odpovídající oblasti.
 
-|Hodnota|Oblast|
+|Value|Oblast|
 |-----------|----------|
-|`ClickArea::ClickExpandBox`|Vlastnost rozbalit ovládací prvek pole.|
-|`ClickArea::ClickName`|Název vlastnosti.|
+|`ClickArea::ClickExpandBox`|Ovládací prvek pole pro rozšíření vlastnosti|
+|`ClickArea::ClickName`|Název vlastnosti|
 |`ClickArea::ClickValue`|Hodnota vlastnosti|
-|`CMFCPropertyGridProperty::ClickDescription`|Vlastnost ovládacího prvku popisu v oblasti mřížky.|
+|`CMFCPropertyGridProperty::ClickDescription`|Oblast popisu ovládacího prvku mřížky vlastností|
 
 ##  <a name="init"></a>  CMFCPropertyGridCtrl::Init
 
-Volá se rozhraním inicializovat ovládací prvek mřížky vlastností.
+Volá se rozhraním, aby se inicializoval ovládací prvek mřížky vlastností.
 
 ```
 virtual void Init();
@@ -1091,9 +1091,9 @@ virtual void Init();
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="initheader"></a>  CMFCPropertyGridCtrl::InitHeader
+##  <a name="initheader"></a>CMFCPropertyGridCtrl::InitHeader
 
-Inicializuje interní [cmfcheaderctrl –](../../mfc/reference/cmfcheaderctrl-class.md) , že rozhraní používá k zobrazení aktuální ovládací prvek mřížky vlastností objektu.
+Inicializuje vnitřní objekt [CMFCHeaderCtrl](../../mfc/reference/cmfcheaderctrl-class.md) , který rozhraní používá k zobrazení aktuálního ovládacího prvku mřížky vlastností.
 
 ```
 virtual void InitHeader();
@@ -1101,7 +1101,7 @@ virtual void InitHeader();
 
 ##  <a name="isalphabeticmode"></a>  CMFCPropertyGridCtrl::IsAlphabeticMode
 
-Označuje, zda ovládací prvek mřížky vlastnosti v abecedním režimu.
+Označuje, zda je ovládací prvek mřížky vlastnosti v abecedním režimu.
 
 ```
 BOOL IsAlphabeticMode() const;
@@ -1109,13 +1109,13 @@ BOOL IsAlphabeticMode() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Hodnota TRUE, pokud je ovládací prvek mřížky vlastností v abecedním režimu. v opačném případě FALSE.
+TRUE, pokud je ovládací prvek mřížky vlastnosti v abecedním režimu; v opačném případě FALSE.
 
 ### <a name="remarks"></a>Poznámky
 
-Když ovládací prvek mřížky vlastnosti v abecedním režimu, všechny vlastnosti jsou seřazená podle abecedy podle názvů. V opačném případě vlastnosti jsou seskupeny podle jejich nadřazených uzlů.
+Když je ovládací prvek mřížky vlastnosti v abecedním režimu, všechny vlastnosti jsou seřazené abecedně podle jejich názvů. V opačném případě jsou vlastnosti seskupeny do jejich nadřazených uzlů.
 
-Použití [CMFCPropertyGridCtrl::SetAlphabeticMode](#setalphabeticmode) metoda k povolení nebo zakázání režimu abecedy.
+Pro povolení nebo zakázání abecedního režimu použijte metodu [CMFCPropertyGridCtrl:: SetAlphabeticMode](#setalphabeticmode) .
 
 ##  <a name="isalwaysshowusertooltip"></a>  CMFCPropertyGridCtrl::IsAlwaysShowUserToolTip
 
@@ -1129,7 +1129,7 @@ BOOL IsAlwaysShowUserToolTip() const;
 
 ##  <a name="isdescriptionarea"></a>  CMFCPropertyGridCtrl::IsDescriptionArea
 
-Označuje, zda se zobrazí oblast popis ovládacího prvku mřížky vlastností.
+Označuje, zda je zobrazena oblast Popis ovládacího prvku mřížky vlastností.
 
 ```
 BOOL IsDescriptionArea() const;
@@ -1137,15 +1137,15 @@ BOOL IsDescriptionArea() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Hodnota TRUE, pokud se zobrazí oblast popisu. v opačném případě hodnota FALSE.
+TRUE, pokud se zobrazí oblast popis; v opačném případě FALSE.
 
 ### <a name="remarks"></a>Poznámky
 
-Použití [CMFCPropertyGridCtrl::EnableDescriptionArea](#enabledescriptionarea) metodu pro skrytí nebo zobrazení oblasti popisu.
+K skrytí nebo zobrazení oblasti Description použijte metodu [CMFCPropertyGridCtrl:: EnableDescriptionArea](#enabledescriptionarea) .
 
 ##  <a name="isgroupnamefullwidth"></a>  CMFCPropertyGridCtrl::IsGroupNameFullWidth
 
-Označuje, zda název skupiny pro každou vlastnost se zobrazí po celé šířce aktuální ovládací prvek mřížky vlastností.
+Označuje, zda se má každý název skupiny vlastností zobrazovat napříč šířkou aktuálního ovládacího prvku mřížky vlastností.
 
 ```
 BOOL IsGroupNameFullWidth() const;
@@ -1153,15 +1153,15 @@ BOOL IsGroupNameFullWidth() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Hodnota TRUE, pokud se zobrazí názvy skupin napříč šířku ovládacího prvku mřížky vlastnosti; FALSE, pokud názvy skupin jsou rozdělená do ve sloupci vpravo (hodnota) ovládacího prvku.
+TRUE, pokud jsou názvy skupin zobrazeny napříč šířkou ovládacího prvku mřížky vlastností; FALSE, pokud jsou názvy skupin zkráceny na základě pravého sloupce (hodnoty) ovládacího prvku.
 
 ### <a name="remarks"></a>Poznámky
 
-A *skupiny* je kolekce souvisejících vlastností v ovládacím prvku mřížky vlastností. Pokud je ovládací prvek hierarchicky, zobrazí *název skupiny* se zobrazí jako název kategorie v řádku nad skupinou.
+*Skupina* je kolekcí souvisejících vlastností v ovládacím prvku mřížky vlastností. Pokud se ovládací prvek zobrazuje hierarchicky, zobrazí se *název skupiny* na řádku nad skupinou jako název kategorie.
 
 ##  <a name="isheaderctrl"></a>  CMFCPropertyGridCtrl::IsHeaderCtrl
 
-Určuje, zda je zobrazen ovládací prvek hlavičky.
+Určuje, zda je zobrazen ovládací prvek záhlaví.
 
 ```
 BOOL IsHeaderCtrl() const;
@@ -1169,15 +1169,15 @@ BOOL IsHeaderCtrl() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Hodnota TRUE, pokud se zobrazí ovládací prvek hlavičky. v opačném případě FALSE.
+TRUE, pokud se zobrazí ovládací prvek záhlaví; v opačném případě FALSE.
 
 ### <a name="remarks"></a>Poznámky
 
-Použití [CMFCPropertyGridCtrl::EnableHeaderCtrl](#enableheaderctrl) metodu pro skrytí nebo zobrazení ovládacího prvku záhlaví.
+Pro skrytí nebo zobrazení ovládacího prvku záhlaví použijte metodu [CMFCPropertyGridCtrl:: EnableHeaderCtrl](#enableheaderctrl) .
 
 ##  <a name="ismarkmodifiedproperties"></a>  CMFCPropertyGridCtrl::IsMarkModifiedProperties
 
-Určuje, jak ovládací prvek mřížky vlastností zobrazuje upravené vlastnosti.
+Určuje, jak ovládací prvek mřížky vlastností zobrazuje změněné vlastnosti.
 
 ```
 BOOL IsMarkModifiedProperties() const;
@@ -1185,13 +1185,13 @@ BOOL IsMarkModifiedProperties() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Hodnota TRUE, pokud tučný styl slouží k zobrazení změnil vlastnosti; FALSE, pokud regulární styl slouží k zobrazení změnil vlastnosti.
+TRUE, pokud se pro zobrazení změněných vlastností používá tučný styl; FALSE, pokud se pro zobrazení upravených vlastností používá běžný styl.
 
 ### <a name="remarks"></a>Poznámky
 
 ##  <a name="isshowdragcontext"></a>  CMFCPropertyGridCtrl::IsShowDragContext
 
-Určuje, zda rozhraní překreslí název a hodnota sloupce aktuální ovládací prvek mřížky vlastností, když uživatel změní velikost sloupců.
+Označuje, zda rozhraní překreslí sloupce název a hodnota aktuálního ovládacího prvku mřížky vlastností, když uživatel změní velikost sloupců.
 
 ```
 BOOL IsShowDragContext() const;
@@ -1199,15 +1199,15 @@ BOOL IsShowDragContext() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Hodnota TRUE, pokud rozhraní překreslí sloupce název a hodnotu během operace změny velikosti; FALSE, pokud rozhraní překreslí sloupce po dokončení operace přetažení.
+TRUE, pokud rozhraní překreslí sloupce název a hodnota během operace změny velikosti; FALSE, pokud rozhraní překreslí sloupce po dokončení operace přetažení.
 
 ### <a name="remarks"></a>Poznámky
 
-Uživatel můžete změnit velikost sloupce název a hodnotu ovládacího prvku grid vlastnost tažením příčky, který je mezi sloupci. Pokud se zobrazí místní přetažení, název a hodnota sloupce se mění velikost tak dlouho, dokud uživatel přetáhne příčky. V opačném případě se přesune příčku ale sloupce, které nejsou překreslení až do dokončení operace přetažení.
+Uživatel může změnit velikost sloupce název a hodnota ovládacího prvku mřížky vlastností přetažením rozděleného pruhu, který je mezi sloupci. Pokud se zobrazí kontext přetažení, sloupce název a hodnota se změní, pokud uživatel přetáhne příčku. V opačném případě se dělicí panel přesune, ale sloupce se překreslí, dokud se operace přetažení nedokončí.
 
 ##  <a name="isvsdotnetlook"></a>  CMFCPropertyGridCtrl::IsVSDotNetLook
 
-Označuje, zda je vzhled ovládacího prvku mřížky vlastností ve stylu sady Visual Studio .NET.
+Určuje, zda je vzhled ovládacího prvku mřížky vlastností ve stylu sady Visual Studio .NET.
 
 ```
 BOOL IsVSDotNetLook() const;
@@ -1215,15 +1215,15 @@ BOOL IsVSDotNetLook() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Hodnota TRUE, pokud je ovládací prvek mřížky vlastností ve stylu sady Visual Studio .NET; v opačném případě hodnota FALSE.
+TRUE, pokud je ovládací prvek mřížky vlastností ve stylu sady Visual Studio .NET; v opačném případě FALSE.
 
 ### <a name="remarks"></a>Poznámky
 
-Použití [CMFCPropertyGridCtrl::SetVSDotNetLook](#setvsdotnetlook) metody nastavte ovládací prvek mřížky vlastnosti stylu sady Visual Studio .NET.
+Pomocí metody [CMFCPropertyGridCtrl:: SetVSDotNetLook](#setvsdotnetlook) nastavte ovládací prvek mřížky vlastností na styl sady Visual Studio .NET.
 
 ##  <a name="markmodifiedproperties"></a>  CMFCPropertyGridCtrl::MarkModifiedProperties
 
-Určuje způsob zobrazení upravené vlastnosti.
+Určuje, jak se mají zobrazovat změněné vlastnosti.
 
 ```
 void MarkModifiedProperties(
@@ -1234,10 +1234,10 @@ void MarkModifiedProperties(
 ### <a name="parameters"></a>Parametry
 
 *bMark*<br/>
-[in] True pro zobrazení změnil vlastnosti v tučný styl; FALSE pro zobrazení upravené vlastnosti v pravidelných stylu. Výchozí hodnota je TRUE.
+pro TRUE pro zobrazení změněných vlastností tučným stylem; Hodnota FALSE pro zobrazení změněných vlastností v normálním stylu Výchozí hodnota je TRUE (pravda).
 
 *bRedraw*<br/>
-[in] True pro překreslení prvku mřížky vlastností okamžitě; v opačném případě hodnota FALSE. Výchozí hodnota je TRUE.
+pro TRUE pro okamžité překreslování ovládacího prvku mřížky vlastností; v opačném případě FALSE. Výchozí hodnota je TRUE (pravda).
 
 ### <a name="remarks"></a>Poznámky
 
@@ -1255,16 +1255,16 @@ virtual void OnChangeSelection(
 
 |Parametr|Popis|
 |---------------|-----------------|
-|*pNewSel*|[in] Ukazatel na nově vybranou vlastnost.|
-|*pOldSel*|[in] Ukazatel na dříve vybrané vlastnosti.|
+|*pNewSel*|pro Ukazatel na nově vybranou vlastnost.|
+|*pOldSel*|pro Ukazatel na dříve vybranou vlastnost.|
 
 ### <a name="remarks"></a>Poznámky
 
-Výchozí implementace této metody nemá žádný účinek.
+Výchozí implementace této metody neprovádí žádnou akci.
 
 ##  <a name="onclickbutton"></a>  CMFCPropertyGridCtrl::OnClickButton
 
-Volá se rozhraním, když dojde ke kliknutí na tlačítko Vlastnosti.
+Volá se rozhraním, když se klikne na tlačítko Vlastnosti.
 
 ```
 virtual void OnClickButton(CPoint point);
@@ -1272,16 +1272,16 @@ virtual void OnClickButton(CPoint point);
 
 ### <a name="parameters"></a>Parametry
 
-*point*<br/>
-[in] Bod, v souřadnicích klienta.
+*Vyberte*<br/>
+pro Bod, v souřadnicích klienta.
 
 ### <a name="remarks"></a>Poznámky
 
-Ve výchozím nastavení tato metoda aktualizuje aktuální hodnota vlastnosti.
+Ve výchozím nastavení tato metoda aktualizuje aktuální hodnotu vlastnosti.
 
 ##  <a name="ondrawborder"></a>  CMFCPropertyGridCtrl::OnDrawBorder
 
-Volá se rozhraním, aby vykreslit ohraničení kolem ovládacího prvku mřížky vlastností.
+Volá se rozhraním, aby se vykreslilo ohraničení kolem ovládacího prvku mřížky vlastností.
 
 ```
 virtual void OnDrawBorder(CDC* pDC);
@@ -1290,11 +1290,11 @@ virtual void OnDrawBorder(CDC* pDC);
 ### <a name="parameters"></a>Parametry
 
 *pDC*<br/>
-[in] Ukazatel na kontext zařízení.
+pro Ukazatel na kontext zařízení.
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="ondrawdescription"></a>  CMFCPropertyGridCtrl::OnDrawDescription
+##  <a name="ondrawdescription"></a>CMFCPropertyGridCtrl::OnDrawDescription
 
 Volá se rozhraním, aby se nakreslila oblast popisu a zobrazil se text popisu.
 
@@ -1307,18 +1307,18 @@ virtual void OnDrawDescription(
 ### <a name="parameters"></a>Parametry
 
 *pDC*<br/>
-[in] Ukazatel na kontext zařízení.
+pro Ukazatel na kontext zařízení.
 
-*Rect*<br/>
-[in] Obdélník, který určuje, kam se nakreslila oblast popisu.
+*OBD*<br/>
+pro Obdélník, který určuje, kde se má oblast popisu nakreslit.
 
 ### <a name="remarks"></a>Poznámky
 
-Použití [CMFCPropertyGridCtrl::EnableDescriptionArea](#enabledescriptionarea) metodu pro zobrazení oblasti popisu.
+K zobrazení oblasti Description použijte metodu [CMFCPropertyGridCtrl:: EnableDescriptionArea](#enabledescriptionarea) .
 
 ##  <a name="ondrawlist"></a>  CMFCPropertyGridCtrl::OnDrawList
 
-Volá se rozhraním, chcete-li zobrazit seznam vlastností, které v ovládacím prvku mřížky vlastností.
+Volá se rozhraním, aby se zobrazil seznam vlastností v ovládacím prvku mřížky vlastností.
 
 ```
 virtual void OnDrawList(CDC* pDC);
@@ -1327,7 +1327,7 @@ virtual void OnDrawList(CDC* pDC);
 ### <a name="parameters"></a>Parametry
 
 *pDC*<br/>
-[in] Ukazatel na kontext zařízení.
+pro Ukazatel na kontext zařízení.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -1344,20 +1344,20 @@ virtual int OnDrawProperty(
 ### <a name="parameters"></a>Parametry
 
 *pDC*<br/>
-[in] Ukazatel na kontext zařízení.
+pro Ukazatel na kontext zařízení.
 
 *pProp*<br/>
-[in] Ukazatel na objekt vlastnosti.
+pro Ukazatel na objekt vlastnosti.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Hodnota TRUE, pokud tato metoda je úspěšná. v opačném případě hodnota FALSE.
+TRUE, pokud je tato metoda úspěšná; v opačném případě FALSE.
 
 ### <a name="remarks"></a>Poznámky
 
 ##  <a name="onpropertychanged"></a>  CMFCPropertyGridCtrl::OnPropertyChanged
 
-Volá se rozhraním, když je změněna hodnota vlastnosti.
+Volá se rozhraním, když se změní hodnota vlastnosti.
 
 ```
 virtual void OnPropertyChanged(CMFCPropertyGridProperty* pProp) const;
@@ -1366,15 +1366,15 @@ virtual void OnPropertyChanged(CMFCPropertyGridProperty* pProp) const;
 ### <a name="parameters"></a>Parametry
 
 *pProp*<br/>
-[in] Ukazatel na objekt vlastnost, jejíž hodnota se změnila.
+pro Ukazatel na objekt vlastnosti, jehož hodnota se změnila.
 
 ### <a name="remarks"></a>Poznámky
 
-Ve výchozím nastavení, tato metoda odesílá [AFX_WM_PROPERTY_CHANGED](../../mfc/reference/afx-messages.md) zpráva, která má vlastník ovládací prvek mřížky vlastností.
+Ve výchozím nastavení tato metoda odesílá zprávu [AFX_WM_PROPERTY_CHANGED](../../mfc/reference/afx-messages.md) vlastníkovi ovládacího prvku mřížky vlastností.
 
 ##  <a name="onselectcombo"></a>  CMFCPropertyGridCtrl::OnSelectCombo
 
-Volá se rozhraním, když je vybrána vlastnost, která obsahuje ovládací prvek pole se seznamem.
+Volá se rozhraním, když je vybraná vlastnost, která obsahuje ovládací prvek pole se seznamem.
 
 ```
 void OnSelectCombo();
@@ -1382,9 +1382,9 @@ void OnSelectCombo();
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="removeall"></a>  CMFCPropertyGridCtrl::RemoveAll
+##  <a name="removeall"></a>CMFCPropertyGridCtrl::RemoveAll
 
-Odebere všechny objekty vlastnosti z ovládacího prvku mřížky vlastností.
+Odebere všechny objekty vlastností z ovládacího prvku mřížky vlastností.
 
 ```
 void RemoveAll();
@@ -1392,7 +1392,7 @@ void RemoveAll();
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="resetoriginalvalues"></a>  CMFCPropertyGridCtrl::ResetOriginalValues
+##  <a name="resetoriginalvalues"></a>CMFCPropertyGridCtrl::ResetOriginalValues
 
 Obnoví původní hodnoty všech vlastností.
 
@@ -1403,11 +1403,11 @@ void ResetOriginalValues(BOOL bRedraw=TRUE);
 ### <a name="parameters"></a>Parametry
 
 *bRedraw*<br/>
-[in] TRUE, pokud chcete ho překreslit seznam vlastností; v opačném případě hodnota FALSE. Výchozí hodnota je TRUE.
+pro TRUE pro překreslení seznamu vlastností; v opačném případě FALSE. Výchozí hodnota je TRUE (pravda).
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="setalphabeticmode"></a>  CMFCPropertyGridCtrl::SetAlphabeticMode
+##  <a name="setalphabeticmode"></a>CMFCPropertyGridCtrl::SetAlphabeticMode
 
 Nastaví nebo obnoví abecední režim.
 
@@ -1418,15 +1418,15 @@ void SetAlphabeticMode(BOOL bSet=TRUE);
 ### <a name="parameters"></a>Parametry
 
 *bSet*<br/>
-[in] TRUE, pokud chcete nastavit abecední režimu FALSE resetování abecední režimu. Výchozí hodnota je TRUE.
+pro TRUE pro nastavení abecedního režimu; FALSE obnovit abecední režim. Výchozí hodnota je TRUE (pravda).
 
 ### <a name="remarks"></a>Poznámky
 
-Když ovládací prvek mřížky vlastnosti v abecedním režimu, ovládací prvek seřadí všechny vlastnosti, které obsahuje podle názvu vlastnosti.
+Když je ovládací prvek mřížky vlastnosti v abecedním režimu, ovládací prvek seřadí všechny vlastnosti, které obsahuje, podle názvu vlastnosti.
 
 ##  <a name="setboollabels"></a>  CMFCPropertyGridCtrl::SetBoolLabels
 
-Určuje text logická popisky.
+Určuje text logických popisků.
 
 ```
 void SetBoolLabels(
@@ -1437,16 +1437,16 @@ void SetBoolLabels(
 ### <a name="parameters"></a>Parametry
 
 *lpszTrue*<br/>
-[in] Textový řetězec, který má být zobrazen pro logickou hodnotu true.
+pro Textový řetězec, který má být zobrazen pro logickou hodnotu true.
 
 *lpszFalse*<br/>
-[in] Textový řetězec, který má být zobrazen pro logickou hodnotu false.
+pro Textový řetězec, který má být zobrazen pro logickou hodnotu false.
 
 ### <a name="remarks"></a>Poznámky
 
 ##  <a name="setcursel"></a>  CMFCPropertyGridCtrl::SetCurSel
 
-Vlastnost vybere v ovládacím prvku mřížky vlastností.
+Vybere vlastnost v ovládacím prvku mřížky vlastností.
 
 ```
 void SetCurSel(
@@ -1457,18 +1457,18 @@ void SetCurSel(
 ### <a name="parameters"></a>Parametry
 
 *pProp*<br/>
-[in] Ukazatel na objekt vlastnosti.
+pro Ukazatel na objekt vlastnosti.
 
 *bRedraw*<br/>
-[in] True pro překreslení prvku mřížky vlastností okamžitě; v opačném případě hodnota FALSE. Výchozí hodnota je TRUE.
+pro TRUE pro okamžité překreslování ovládacího prvku mřížky vlastností; v opačném případě FALSE. Výchozí hodnota je TRUE (pravda).
 
 ### <a name="remarks"></a>Poznámky
 
-Pomocí této metody můžete zrušit výběr aktuální položky v ovládacím prvku grid vlastnost a poté vyberte položku, která odpovídá zadané vlastnosti.
+Tuto metodu použijte, chcete-li zrušit výběr aktuální položky v ovládacím prvku mřížky vlastností a pak vybrat položku, která odpovídá zadané vlastnosti.
 
-##  <a name="setcustomcolors"></a>  CMFCPropertyGridCtrl::SetCustomColors
+##  <a name="setcustomcolors"></a>CMFCPropertyGridCtrl::SetCustomColors
 
-Určuje vlastní barvy pro různé prvky ovládací prvek mřížky vlastností.
+Určuje vlastní barvy pro různé prvky ovládacího prvku mřížky vlastností.
 
 ```
 void SetCustomColors(
@@ -1484,35 +1484,35 @@ void SetCustomColors(
 ### <a name="parameters"></a>Parametry
 
 *clrBackground*<br/>
-[in] Barva pozadí hodnot vlastností.
+pro Barva pozadí hodnot vlastností.
 
 *clrText*<br/>
-[in] Barva názvy vlastností a text hodnotu vlastnosti.
+pro Barva názvů vlastností a textu hodnoty vlastnosti
 
 *clrGroupBackground*<br/>
-[in] Barva pozadí skupina vlastností.
+pro Barva pozadí skupiny vlastností.
 
 *clrGroupText*<br/>
-[in] Barva textu vlastnosti skupiny.
+pro Nová barva textu skupiny vlastností.
 
 *clrDescriptionBackground*<br/>
-[in] Barva pozadí oblasti popisu.
+pro Barva pozadí oblasti popisu
 
 *clrDescriptionText*<br/>
-[in] Barva textu v oblasti popisu.
+pro Barva textu v oblasti Popis.
 
 *clrLine*<br/>
-[in] Barva čar, které jsou zpracovány mezi vlastnostmi.
+pro Barva čar vykreslených mezi vlastnostmi
 
 ### <a name="remarks"></a>Poznámky
 
-Žádné parametry, zadejte `((COLORREF)-1)` hodnoty používat výchozí barvy pro daný element ovládací prvek mřížky vlastností barev.
+Pro libovolný parametr zadejte `((COLORREF)-1)` hodnotu barvy pro použití výchozí barvy pro element ovládacího prvku mřížky vlastností.
 
-Přizpůsobení vzhledu určité vlastnosti, odvoďte třídu z [cmfcpropertygridproperty –](../../mfc/reference/cmfcpropertygridproperty-class.md) třídy a pak přepsat [CMFCPropertyGridProperty::OnDrawName](../../mfc/reference/cmfcpropertygridproperty-class.md#ondrawname), [ CMFCPropertyGridProperty::OnDrawValue](../../mfc/reference/cmfcpropertygridproperty-class.md#ondrawvalue), [CMFCPropertyGridProperty::OnDrawExpandBox](../../mfc/reference/cmfcpropertygridproperty-class.md#ondrawexpandbox), a [CMFCPropertyGridProperty::OnDrawButton](../../mfc/reference/cmfcpropertygridproperty-class.md#ondrawbutton) metody.
+Chcete-li přizpůsobit vzhled konkrétní vlastnosti, odvodit třídu z třídy [CMFCPropertyGridProperty](../../mfc/reference/cmfcpropertygridproperty-class.md) a potom přepsat [CMFCPropertyGridProperty:: prodraw](../../mfc/reference/cmfcpropertygridproperty-class.md#ondrawname), [CMFCPropertyGridProperty:: OnDrawValue](../../mfc/reference/cmfcpropertygridproperty-class.md#ondrawvalue), [ CMFCPropertyGridProperty:: OnDrawExpandBox](../../mfc/reference/cmfcpropertygridproperty-class.md#ondrawexpandbox)a [CMFCPropertyGridProperty:: OnDrawButton](../../mfc/reference/cmfcpropertygridproperty-class.md#ondrawbutton) metody.
 
-##  <a name="setdescriptionrows"></a>  CMFCPropertyGridCtrl::SetDescriptionRows
+##  <a name="setdescriptionrows"></a>CMFCPropertyGridCtrl::SetDescriptionRows
 
-Určuje počet řádků v zobrazení v části Popis aktuální ovládací prvek mřížky vlastností.
+Určuje počet řádků, které se mají zobrazit v části Description ovládacího prvku mřížky aktuální vlastnosti.
 
 ```
 void SetDescriptionRows(int nDescRows);
@@ -1521,11 +1521,11 @@ void SetDescriptionRows(int nDescRows);
 ### <a name="parameters"></a>Parametry
 
 *nDescRows*<br/>
-[in] Počet řádků zobrazených v popisu vlastnosti.
+pro Počet řádků, které se mají zobrazit v popisu vlastnosti.
 
 ##  <a name="setgroupnamefullwidth"></a>  CMFCPropertyGridCtrl::SetGroupNameFullWidth
 
-Určuje, jestli se má zobrazit na celou šířku název kategorie pro skupinu vlastností v aktuální ovládací prvek mřížky vlastností.
+Určuje, zda se má pro skupinu vlastností v aktuálním ovládacím prvku mřížky vlastnosti zobrazit celá šířka názvu kategorie.
 
 ```
 void SetGroupNameFullWidth(
@@ -1536,16 +1536,16 @@ void SetGroupNameFullWidth(
 ### <a name="parameters"></a>Parametry
 
 *bGroupNameFullWidth*<br/>
-[in] TRUE, pokud chcete zobrazit úplný šířku název kategorie bez ohledu na šířku sloupce název vlastnosti. FALSE, pokud chcete omezit šířku název kategorie šířky sloupce název vlastnosti. Výchozí hodnota je TRUE.
+pro TRUE pro zobrazení celé šířky názvu kategorie bez ohledu na šířku sloupce názvu vlastnosti. Hodnota FALSE pro omezení šířky názvu kategorie na šířku sloupce názvu vlastnosti. Výchozí hodnota je TRUE (pravda).
 
 *bRedraw*<br/>
-[in] True pro aktualizaci prvku mřížky vlastností okamžitě; Nastane, FALSE pro aktualizaci ovládacího prvku při překreslení další události. Výchozí hodnota je TRUE.
+pro TRUE pro okamžité aktualizace ovládacího prvku mřížky vlastností; FALSE pro aktualizaci ovládacího prvku při výskytu události Next Draw Výchozí hodnota je TRUE (pravda).
 
 ### <a name="remarks"></a>Poznámky
 
-Ovládací prvek mřížky vlastností se skládá z možností změny velikosti *název vlastnosti* sloupce a *hodnota vlastnosti* sloupec. Koncový sloupec název je také počáteční hodnota sloupce. Změna velikosti sloupců, přetažením ohraničení mezi sloupci.
+Ovládací prvek mřížky vlastností se skládá ze sloupce *názvu vlastnosti* s možností změny velikosti a sloupce *hodnoty vlastnosti* . Konec sloupce název je také začátek sloupce Value. Chcete-li změnit velikost sloupců, přetáhněte ohraničení mezi sloupci.
 
-Podmínky *název skupiny* a *název kategorie* zaměňují v této metodě. Název kategorie se zobrazí na řádku, který heads sadu souvisejících vlastností a hodnot. Tato metoda určuje, zda šířku sloupce název vlastnosti také určuje šířku na název zobrazeného kategorie.
+Název *skupiny* podmínek a název *kategorie* jsou v této metodě zaměnitelné. Název kategorie se zobrazí na řádku, který vytváří sadu souvisejících vlastností a hodnot. Tato metoda určuje, zda šířka sloupce název vlastnosti také určuje šířku zobrazeného názvu kategorie.
 
 ##  <a name="setlistdelimiter"></a>  CMFCPropertyGridCtrl::SetListDelimiter
 
@@ -1558,17 +1558,17 @@ void SetListDelimiter(TCHAR c);
 ### <a name="parameters"></a>Parametry
 
 *c*<br/>
-[in] Znak, který bude sloužit jako oddělovač.
+pro Znak, který má sloužit jako oddělovač.
 
 ### <a name="remarks"></a>Poznámky
 
-Tuto metodu použijte k definování oddělovací znak v seznamu hodnot vlastností, které se používají v [CMFCPropertyGridProperty::CMFCPropertyGridProperty](../../mfc/reference/cmfcpropertygridproperty-class.md#cmfcpropertygridproperty) konstruktoru. V konstruktoru, nastavte *bIsValueList* parametr na hodnotu TRUE.
+Tuto metodu použijte k definování znaku oddělovače v seznamu hodnot vlastností, které jsou použity v konstruktoru [CMFCPropertyGridProperty:: CMFCPropertyGridProperty](../../mfc/reference/cmfcpropertygridproperty-class.md#cmfcpropertygridproperty) . V tomto konstruktoru nastavte parametr *bIsValueList* na hodnotu true.
 
-Ve výchozím nastavení [CMFCPropertyGridCtrl::CMFCPropertyGridCtrl](#cmfcpropertygridctrl) konstruktor nastaví oddělovací znak čárky (,).
+Ve výchozím nastavení konstruktor [CMFCPropertyGridCtrl:: CMFCPropertyGridCtrl](#cmfcpropertygridctrl) nastaví znak oddělovače na čárku (', ').
 
 ##  <a name="setshowdragcontext"></a>  CMFCPropertyGridCtrl::SetShowDragContext
 
-Určuje, zda rozhraní překreslí název a hodnota sloupce aktuální ovládací prvek mřížky vlastností, když uživatel změní velikost sloupců.
+Určuje, zda rozhraní překreslí sloupce název a hodnota aktuálního ovládacího prvku mřížky vlastností, když uživatel změní velikost sloupců.
 
 ```
 void SetShowDragContext(BOOL bShowDragContext = TRUE);
@@ -1577,15 +1577,15 @@ void SetShowDragContext(BOOL bShowDragContext = TRUE);
 ### <a name="parameters"></a>Parametry
 
 *bShowDragContext*<br/>
-[in] Hodnota TRUE pro překreslení sloupce název a hodnotu během operace změny velikosti; FALSE ho překreslit sloupce po dokončení operace přetažení. Výchozí hodnota je TRUE.
+pro TRUE pro překreslení sloupců názvů a hodnot během operace změny velikosti; Hodnota FALSE pro překreslení sloupců po dokončení operace přetažení Výchozí hodnota je TRUE (pravda).
 
 ### <a name="remarks"></a>Poznámky
 
-Uživatel můžete změnit velikost sloupce název a hodnotu ovládacího prvku grid vlastnost tažením příčky, který je mezi sloupci. Pokud se zobrazí místní přetažení, název a hodnota sloupce se mění velikost tak dlouho, dokud uživatel přetáhne příčky. V opačném případě se přesune příčku ale sloupce, které nejsou překreslení až do dokončení operace přetažení.
+Uživatel může změnit velikost sloupce název a hodnota ovládacího prvku mřížky vlastností přetažením rozděleného pruhu, který je mezi sloupci. Pokud se zobrazí kontext přetažení, sloupce název a hodnota se změní, pokud uživatel přetáhne příčku. V opačném případě se dělicí panel přesune, ale sloupce se překreslí, dokud se operace přetažení nedokončí.
 
 ##  <a name="setvsdotnetlook"></a>  CMFCPropertyGridCtrl::SetVSDotNetLook
 
-Vzhled ovládacího prvku grid vlastnost nastaví na styl, který se používá v sadě Visual Studio .NET.
+Nastaví vzhled ovládacího prvku mřížky vlastností na styl, který se používá v sadě Visual Studio .NET.
 
 ```
 void SetVSDotNetLook(BOOL bSet=TRUE);
@@ -1594,13 +1594,13 @@ void SetVSDotNetLook(BOOL bSet=TRUE);
 ### <a name="parameters"></a>Parametry
 
 *bSet*<br/>
-[in] True pro nastavení mřížky vlastností řídit styl, který se používá v sadě Visual Studio .NET; v opačném případě hodnota FALSE. Výchozí hodnota je TRUE.
+pro TRUE pro nastavení ovládacího prvku mřížky vlastností na styl používaný v sadě Visual Studio .NET; v opačném případě FALSE. Výchozí hodnota je TRUE (pravda).
 
 ### <a name="remarks"></a>Poznámky
 
 ##  <a name="updatecolor"></a>  CMFCPropertyGridCtrl::UpdateColor
 
-Nastaví hodnotu barvy vlastnosti aktuálně vybraná barva.
+Nastaví hodnotu barvy aktuálně vybrané vlastnosti Color.
 
 ```
 virtual void UpdateColor(COLORREF color);
@@ -1608,16 +1608,16 @@ virtual void UpdateColor(COLORREF color);
 
 ### <a name="parameters"></a>Parametry
 
-*color*<br/>
-[in] Hodnota barvy RGB.
+*barevných*<br/>
+pro Hodnota barvy RGB.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato metoda nepodmíněné výrazy v režimu ladění, pokud aktuálně vybranou vlastnost ovládací prvek mřížky vlastností není vlastnost color.
+Tato metoda provádí výrazy v režimu ladění, pokud aktuálně vybraná vlastnost ovládacího prvku mřížky vlastností není vlastností Color.
 
 ##  <a name="validateitemdata"></a>  CMFCPropertyGridCtrl::ValidateItemData
 
-Volá se rozhraním, aby ověřila data vlastnosti.
+Volá se rozhraním, aby se ověřila data vlastnosti.
 
 ```
 virtual BOOL ValidateItemData(CMFCPropertyGridProperty* pProp);
@@ -1627,17 +1627,17 @@ virtual BOOL ValidateItemData(CMFCPropertyGridProperty* pProp);
 
 |Parametr|Popis|
 |---------------|-----------------|
-|*pProp*|[in] Ukazatel na vlastnost. Tento parametr není používán.|
+|*pProp*|pro Ukazatel na vlastnost. Tento parametr není používán.|
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vždy TRUE.
+Vždycky TRUE.
 
 ### <a name="remarks"></a>Poznámky
 
-[CMFCPropertyGridCtrl::EndEditItem](#endedititem) metoda volá tuto metodu za účelem ověření dat. Ve výchozím nastavení, tato metoda nepoužívá jeho *pProp* parametr a vrácená hodnota je vždycky TRUE.
+Metoda [CMFCPropertyGridCtrl:: EndEditItem](#endedititem) volá tuto metodu pro ověření dat. Ve výchozím nastavení tato metoda nepoužívá svůj parametr *pProp* a vrácená hodnota je vždycky true.
 
-Pokud tuto metodu přepíšete, vrací TRUE, pokud data zadaná vlastnost je platný. V opačném případě vrátí hodnotu FALSE, v takovém případě aktualizujte rozhraní není vlastnost.
+Pokud přepíšete tuto metodu, vrátí hodnotu TRUE, pokud jsou zadaná data vlastnosti platná. V opačném případě vrátí hodnotu FALSE. v takovém případě rozhraní vlastnost neaktualizuje.
 
 ## <a name="see-also"></a>Viz také:
 

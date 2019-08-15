@@ -1,5 +1,5 @@
 ---
-title: Cipaddressctrl – třída
+title: CIPAddressCtrl – třída
 ms.date: 11/04/2016
 f1_keywords:
 - CIPAddressCtrl
@@ -24,16 +24,16 @@ helpviewer_keywords:
 - CIPAddressCtrl [MFC], SetFieldFocus
 - CIPAddressCtrl [MFC], SetFieldRange
 ms.assetid: 9764d2f4-cb14-4ba8-b799-7f57a55a47c6
-ms.openlocfilehash: 5abcf838308d8965f3c55dc7d85dbac974825394
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: fe8e3109b110c27ab32dc1a4f9a132f1e1c18638
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62392593"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69505819"
 ---
-# <a name="cipaddressctrl-class"></a>Cipaddressctrl – třída
+# <a name="cipaddressctrl-class"></a>CIPAddressCtrl – třída
 
-Poskytuje funkce pro Windows běžný ovládací prvek adresy IP.
+Poskytuje funkce pro běžný ovládací prvek IP adres Windows.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -45,34 +45,34 @@ class CIPAddressCtrl : public CWnd
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
-|[CIPAddressCtrl::CIPAddressCtrl](#cipaddressctrl)|Vytvoří `CIPAddressCtrl` objektu.|
+|[CIPAddressCtrl::CIPAddressCtrl](#cipaddressctrl)|`CIPAddressCtrl` Vytvoří objekt.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
-|[CIPAddressCtrl::ClearAddress](#clearaddress)|Vymaže obsah ovládací prvek adresy IP.|
-|[CIPAddressCtrl::Create](#create)|Vytvoří ovládací prvek adresy IP a připojí ho k `CIPAddressCtrl` objektu.|
-|[CIPAddressCtrl::CreateEx](#createex)|Vytvoří ovládací prvek adresy IP se zadaným rozšířené styly Windows a připojí ho k `CIPAddressCtrl` objektu.|
-|[CIPAddressCtrl::GetAddress](#getaddress)|Načte hodnoty adres pro všechny čtyři pole ve správě IP adres.|
-|[CIPAddressCtrl::IsBlank](#isblank)|Určuje, zda všechna pole v ovládacím prvku IP adresa prázdná.|
-|[CIPAddressCtrl::SetAddress](#setaddress)|Nastaví hodnoty adres pro všechny čtyři pole ve správě IP adres.|
-|[CIPAddressCtrl::SetFieldFocus](#setfieldfocus)|Nastaví fokus klávesnice pro ovládací prvek adresy IP v zadaném poli.|
-|[CIPAddressCtrl::SetFieldRange](#setfieldrange)|Nastaví rozsah v zadaném poli ve správě IP adres.|
+|[CIPAddressCtrl::ClearAddress](#clearaddress)|Vymaže obsah ovládacího prvku IP adresa.|
+|[CIPAddressCtrl::Create](#create)|Vytvoří ovládací prvek IP adresa a připojí ho k `CIPAddressCtrl` objektu.|
+|[CIPAddressCtrl::CreateEx](#createex)|Vytvoří ovládací prvek IP adresa se zadanými rozšířenými styly Windows a připojí ho k `CIPAddressCtrl` objektu.|
+|[CIPAddressCtrl::GetAddress](#getaddress)|Načte hodnoty adres pro všechna čtyři pole v ovládacím prvku IP adresa.|
+|[CIPAddressCtrl::IsBlank](#isblank)|Určuje, zda jsou všechna pole v ovládacím prvku IP adresa prázdná.|
+|[CIPAddressCtrl::SetAddress](#setaddress)|Nastaví hodnoty adres pro všechna čtyři pole v ovládacím prvku IP adresa.|
+|[CIPAddressCtrl::SetFieldFocus](#setfieldfocus)|Nastaví fokus klávesnice na zadané pole v ovládacím prvku IP adresa.|
+|[CIPAddressCtrl::SetFieldRange](#setfieldrange)|Nastaví rozsah v určeném poli v ovládacím prvku IP adresa.|
 
 ## <a name="remarks"></a>Poznámky
 
-Ovládací prvek adresy IP, ovládací prvek pro úpravy, podobně jako můžete zadat a manipulaci s číselnou adresu ve formátu Internet Protocol (IP).
+Ovládací prvek IP adresa, ovládací prvek podobný ovládacímu prvku pro úpravy, umožňuje zadat a manipulovat s numerickou adresou ve formátu Internet Protocol (IP).
 
-Tento ovládací prvek (a tedy `CIPAddressCtrl` třídy) je dostupná jenom pro programy spuštěné v rámci aplikace Microsoft Internet Explorer 4.0 nebo novější. Také budou k dispozici v budoucích verzích Windows a Windows NT.
+Tento ovládací prvek (a `CIPAddressCtrl` třída) je k dispozici pouze pro programy, které jsou spuštěny v aplikaci Microsoft Internet Explorer 4,0 a novější. Budou taky dostupné v budoucích verzích Windows a Windows NT.
 
-Další obecné informace o ovládací prvek adresy IP, naleznete v tématu [IP adresu řídí](/windows/desktop/Controls/ip-address-controls) v sadě Windows SDK.
+Obecnější informace o ovládacím prvku IP adresa najdete v tématu [ovládací prvky IP adresy](/windows/win32/Controls/ip-address-controls) v Windows SDK.
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
-[Třídy CObject](../../mfc/reference/cobject-class.md)
+[CObject](../../mfc/reference/cobject-class.md)
 
 [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)
 
@@ -82,11 +82,11 @@ Další obecné informace o ovládací prvek adresy IP, naleznete v tématu [IP 
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** afxcmn.h
+**Záhlaví:** afxcmn. h
 
-##  <a name="cipaddressctrl"></a>  CIPAddressCtrl::CIPAddressCtrl
+##  <a name="cipaddressctrl"></a>CIPAddressCtrl::CIPAddressCtrl
 
-Vytvoří `CIPAddressCtrl` objektu.
+`CIPAddressCtrl` Vytvoří objekt.
 
 ```
 CIPAddressCtrl();
@@ -94,7 +94,7 @@ CIPAddressCtrl();
 
 ##  <a name="clearaddress"></a>  CIPAddressCtrl::ClearAddress
 
-Vymaže obsah ovládací prvek adresy IP.
+Vymaže obsah ovládacího prvku IP adresa.
 
 ```
 void ClearAddress();
@@ -102,11 +102,11 @@ void ClearAddress();
 
 ### <a name="remarks"></a>Poznámky
 
-Tato členská funkce implementuje chování zprávy Win32 [IPM_CLEARADDRESS](/windows/desktop/Controls/ipm-clearaddress), jak je popsáno v sadě Windows SDK.
+Tato členská funkce implementuje chování zprávy Win32 [IPM_CLEARADDRESS](/windows/win32/Controls/ipm-clearaddress), jak je popsáno v Windows SDK.
 
 ##  <a name="create"></a>  CIPAddressCtrl::Create
 
-Vytvoří ovládací prvek adresy IP a připojí ho k `CIPAddressCtrl` objektu.
+Vytvoří ovládací prvek IP adresa a připojí ho k `CIPAddressCtrl` objektu.
 
 ```
 virtual BOOL Create(
@@ -119,34 +119,34 @@ virtual BOOL Create(
 ### <a name="parameters"></a>Parametry
 
 *dwStyle*<br/>
-Styl ovládací prvek adresy IP. Použijte kombinaci styly oken. WS_CHILD styl musí obsahovat, protože ovládací prvek musí být podřízené okno. Zobrazit [CreateWindow](/windows/desktop/api/winuser/nf-winuser-createwindowa) v sadě Windows SDK pro seznam windows styly.
+Styl ovládacího prvku IP adresa. Použijte kombinaci stylů oken. Musíte zahrnout styl WS_CHILD, protože ovládací prvek musí být podřízené okno. Seznam stylů Windows najdete v části [CreateWindow](/windows/win32/api/winuser/nf-winuser-createwindoww) v Windows SDK.
 
-*Rect*<br/>
-Odkaz na ovládací prvek adresy IP velikost a umístění. Může být buď [crect –](../../atl-mfc-shared/reference/crect-class.md) objektu nebo [RECT](/previous-versions/dd162897\(v=vs.85\)) struktury.
+*OBD*<br/>
+Odkaz na velikost a pozici ovládacího prvku IP adresa. Může to být buď objekt [CRect](../../atl-mfc-shared/reference/crect-class.md) , nebo struktura [Rect](/previous-versions/dd162897\(v=vs.85\)) .
 
 *pParentWnd*<br/>
-Ukazatel IP adresu nadřazené okno ovládacího prvku. Nesmí být NULL.
+Ukazatel na nadřazené okno ovládacího prvku IP adresa. Nesmí mít hodnotu NULL.
 
 *nID*<br/>
-ID ovládací prvek adresy IP.
+ID ovládacího prvku IP adresa.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Nenulové, pokud se inicializace byla úspěšná. jinak 0.
+Nenulová, pokud byla inicializace úspěšná; v opačném případě 0.
 
 ### <a name="remarks"></a>Poznámky
 
-Můžete vytvořit `CIPAddressCtrl` objektu ve dvou krocích.
+`CIPAddressCtrl` Vytvoříte objekt ve dvou krocích.
 
-1. Volání konstruktoru, který vytvoří `CIPAddressCtrl` objektu.
+1. Zavolejte konstruktor, který vytvoří `CIPAddressCtrl` objekt.
 
-1. Volání `Create`, což vytvoří ovládací prvek adresy IP.
+1. Zavolejte `Create`, čímž se vytvoří ovládací prvek IP adresa.
 
-Pokud chcete použít rozšířené windows styly ovládacího prvku, zavolejte [CreateEx](#createex) místo `Create`.
+Chcete-li použít rozšířené styly systému Windows s ovládacím prvkem, zavolejte [CreateEx](#createex) místo `Create`.
 
 ##  <a name="createex"></a>  CIPAddressCtrl::CreateEx
 
-Voláním této funkce vytvoření ovládacího prvku (podřízené okno) a přidružte jej k `CIPAddressCtrl` objektu.
+Voláním této funkce vytvořte ovládací prvek (podřízené okno) a přidružte jej `CIPAddressCtrl` k objektu.
 
 ```
 virtual BOOL CreateEx(
@@ -160,31 +160,31 @@ virtual BOOL CreateEx(
 ### <a name="parameters"></a>Parametry
 
 *dwExStyle*<br/>
-Určuje rozšířený styl ovládacího prvku vytváří. Seznam rozšířené styly Windows najdete v tématu *dwExStyle* parametr pro [CreateWindowEx](/windows/desktop/api/winuser/nf-winuser-createwindowexa) v sadě Windows SDK.
+Určuje rozšířený styl ovládacího prvku, který se vytváří. Seznam rozšířených stylů Windows naleznete v parametru *dwExStyle* pro [CreateWindowEx](/windows/win32/api/winuser/nf-winuser-createwindowexw) v Windows SDK.
 
 *dwStyle*<br/>
-Styl ovládací prvek adresy IP. Použijte kombinaci styly oken. WS_CHILD styl musí obsahovat, protože ovládací prvek musí být podřízené okno. Zobrazit [CreateWindow](/windows/desktop/api/winuser/nf-winuser-createwindowa) v sadě Windows SDK pro seznam windows styly.
+Styl ovládacího prvku IP adresa. Použijte kombinaci stylů oken. Musíte zahrnout styl WS_CHILD, protože ovládací prvek musí být podřízené okno. Seznam stylů Windows najdete v části [CreateWindow](/windows/win32/api/winuser/nf-winuser-createwindoww) v Windows SDK.
 
-*Rect*<br/>
-Odkaz na [RECT](/previous-versions/dd162897\(v=vs.85\)) struktura popisující, velikost a umístění okna, které nelze v souřadnice klienta *pParentWnd*.
+*OBD*<br/>
+Odkaz na strukturu [Rect](/previous-versions/dd162897\(v=vs.85\)) popisující velikost a umístění okna, které má být vytvořeno, v souřadnicích klienta *pParentWnd*.
 
 *pParentWnd*<br/>
-Ukazatel na okno, který je nadřazeného ovládacího prvku.
+Ukazatel na okno, které je nadřazený ovládacímu prvku.
 
 *nID*<br/>
-ID ovládacího prvku podřízené okno.
+ID podřízeného okna ovládacího prvku
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Nenulové, pokud je úspěšná. jinak 0.
+Nenulové, pokud bylo úspěšné; v opačném případě 0.
 
 ### <a name="remarks"></a>Poznámky
 
-Použití `CreateEx` místo [vytvořit](#create) použít rozšířené styly Windows určené předponu rozšířeného stylu Windows **WS_EX_**.
+Použijte `CreateEx` místo příkaz [vytvořit](#create) pro použití rozšířených stylů Windows, které jsou určené **WS_EX_** rozšířeným stylem Windows.
 
 ##  <a name="getaddress"></a>  CIPAddressCtrl::GetAddress
 
-Načte hodnoty adres pro všechny čtyři pole ve správě IP adres.
+Načte hodnoty adres pro všechna čtyři pole v ovládacím prvku IP adresa.
 
 ```
 int GetAddress(
@@ -199,38 +199,38 @@ int GetAddress(DWORD& dwAddress);
 ### <a name="parameters"></a>Parametry
 
 *nField0*<br/>
-Odkaz na hodnotu pole 0 z komprimovat komprimovaný objekt IP adresy.
+Odkaz na hodnotu pole 0 ze zkomprimované IP adresy.
 
 *nField1*<br/>
-Odkaz na hodnotu pole 1 z komprimovat komprimovaný objekt IP adresy.
+Odkaz na hodnotu pole 1 z komprimované IP adresy.
 
 *nField2*<br/>
-Odkaz na hodnotu pole 2 z komprimovat komprimovaný objekt IP adresy.
+Odkaz na hodnotu pole 2 z komprimované IP adresy.
 
 *nField3*<br/>
-Odkaz na hodnotu pole 3 z komprimovat komprimovaný objekt IP adresy.
+Odkaz na hodnotu pole 3 z komprimované IP adresy.
 
 *dwAddress*<br/>
-Odkaz na adresu hodnotu DWORD, která obdrží IP adresu. Zobrazit **poznámky** pro tabulku, která ukazuje, jak *dwAddress* zaplněný.
+Odkaz na adresu hodnoty DWORD, která obdrží IP adresu. Viz **poznámky** pro tabulku, která ukazuje, jak je vyplněný *dwAddress* .
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Počet neprázdných polí ve správě IP adres.
+Počet neprázdných polí v ovládacím prvku IP adresa.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato členská funkce implementuje chování zprávy Win32 [IPM_GETADDRESS](/windows/desktop/Controls/ipm-getaddress), jak je popsáno v sadě Windows SDK. V první prototypu výše uvedených čísel v polích 0 až 3 z ovládacího prvku, přečtěte si zleva doprava v uvedeném pořadí, naplnění čtyři parametry. V druhém prototypu výše *dwAddress* se vyplní následujícím způsobem.
+Tato členská funkce implementuje chování zprávy Win32 [IPM_GETADDRESS](/windows/win32/Controls/ipm-getaddress), jak je popsáno v Windows SDK. V prvním prototypu výše se čísla v polích 0 až 3 v ovládacím prvku přečtou zleva doprava a naplní čtyři parametry. Ve druhém prototypu výše se *dwAddress* vyplní následujícím způsobem.
 
-|Pole|Služba BITS obsahující hodnotu pole|
+|Pole|Bity obsahující hodnotu pole|
 |-----------|-------------------------------------|
-|0|24 do 31.|
+|0|24 až 31|
 |1|16 až 23|
 |2|8 až 15|
 |3|0 až 7|
 
 ##  <a name="isblank"></a>  CIPAddressCtrl::IsBlank
 
-Určuje, zda všechna pole v ovládacím prvku IP adresa prázdná.
+Určuje, zda jsou všechna pole v ovládacím prvku IP adresa prázdná.
 
 ```
 BOOL IsBlank() const;
@@ -238,15 +238,15 @@ BOOL IsBlank() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Nenulové, pokud všechna pole ovládací prvek adresy IP jsou prázdná. jinak 0.
+Nenulové, pokud jsou všechna pole řízení IP adres prázdná; v opačném případě 0.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato členská funkce implementuje chování zprávy Win32 [IPM_ISBLANK](/windows/desktop/Controls/ipm-isblank), jak je popsáno v sadě Windows SDK.
+Tato členská funkce implementuje chování zprávy Win32 [IPM_ISBLANK](/windows/win32/Controls/ipm-isblank), jak je popsáno v Windows SDK.
 
 ##  <a name="setaddress"></a>  CIPAddressCtrl::SetAddress
 
-Nastaví hodnoty adres pro všechny čtyři pole ve správě IP adres.
+Nastaví hodnoty adres pro všechna čtyři pole v ovládacím prvku IP adresa.
 
 ```
 void SetAddress(
@@ -261,34 +261,34 @@ void SetAddress(DWORD dwAddress);
 ### <a name="parameters"></a>Parametry
 
 *nField0*<br/>
-Hodnota pole 0 z komprimovat komprimovaný objekt IP adresy.
+Hodnota pole 0 z komprimované IP adresy.
 
 *nField1*<br/>
-Hodnota pole 1 z komprimovat komprimovaný objekt IP adresy.
+Hodnota pole 1 z komprimované IP adresy.
 
 *nField2*<br/>
-Hodnota pole 2 z komprimovat komprimovaný objekt IP adresy.
+Hodnota pole 2 z komprimované IP adresy.
 
 *nField3*<br/>
-Hodnota pole 3 z komprimovat komprimovaný objekt IP adresy.
+Hodnota pole 3 z komprimované IP adresy.
 
 *dwAddress*<br/>
-Hodnota DWORD, který obsahuje novou IP adresu. Zobrazit **poznámky** pro tabulku, která ukazuje, jak je vyplněné hodnoty DWORD.
+Hodnota DWORD, která obsahuje novou IP adresu. Viz **poznámky** pro tabulku, která ukazuje, jak je hodnota DWORD vyplněna.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato členská funkce implementuje chování zprávy Win32 [IPM_SETADDRESS](/windows/desktop/Controls/ipm-setaddress), jak je popsáno v sadě Windows SDK. V první prototypu výše uvedených čísel v polích 0 až 3 z ovládacího prvku, přečtěte si zleva doprava v uvedeném pořadí, naplnění čtyři parametry. V druhém prototypu výše *dwAddress* se vyplní následujícím způsobem.
+Tato členská funkce implementuje chování zprávy Win32 [IPM_SETADDRESS](/windows/win32/Controls/ipm-setaddress), jak je popsáno v Windows SDK. V prvním prototypu výše se čísla v polích 0 až 3 v ovládacím prvku přečtou zleva doprava a naplní čtyři parametry. Ve druhém prototypu výše se *dwAddress* vyplní následujícím způsobem.
 
-|Pole|Služba BITS obsahující hodnotu pole|
+|Pole|Bity obsahující hodnotu pole|
 |-----------|-------------------------------------|
-|0|24 do 31.|
+|0|24 až 31|
 |1|16 až 23|
 |2|8 až 15|
 |3|0 až 7|
 
-##  <a name="setfieldfocus"></a>  CIPAddressCtrl::SetFieldFocus
+##  <a name="setfieldfocus"></a>CIPAddressCtrl::SetFieldFocus
 
-Nastaví fokus klávesnice pro ovládací prvek adresy IP v zadaném poli.
+Nastaví fokus klávesnice na zadané pole v ovládacím prvku IP adresa.
 
 ```
 void SetFieldFocus(WORD nField);
@@ -296,16 +296,16 @@ void SetFieldFocus(WORD nField);
 
 ### <a name="parameters"></a>Parametry
 
-*nPole*<br/>
-Index založený na nule pole, na kterou by měl nastavit fokus. Pokud je tato hodnota větší než počet polí, je nastaven fokus na první prázdné pole. Pokud všechna pole jsou prázdná, je nastaven fokus na první pole.
+*nField*<br/>
+Index pole založený na nule, na který má být nastaven fokus. Pokud je tato hodnota větší než počet polí, je fokus nastaven na první prázdné pole. Pokud jsou všechna pole neprázdná, je fokus nastaven na první pole.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato členská funkce implementuje chování zprávy Win32 [IPM_SETFOCUS](/windows/desktop/Controls/ipm-setfocus), jak je popsáno v sadě Windows SDK.
+Tato členská funkce implementuje chování zprávy Win32 [IPM_SETFOCUS](/windows/win32/Controls/ipm-setfocus), jak je popsáno v Windows SDK.
 
-##  <a name="setfieldrange"></a>  CIPAddressCtrl::SetFieldRange
+##  <a name="setfieldrange"></a>CIPAddressCtrl::SetFieldRange
 
-Nastaví rozsah v zadaném poli ve správě IP adres.
+Nastaví rozsah v určeném poli v ovládacím prvku IP adresa.
 
 ```
 void SetFieldRange(
@@ -316,18 +316,18 @@ void SetFieldRange(
 
 ### <a name="parameters"></a>Parametry
 
-*nPole*<br/>
-Index založený na nule pole ke které se použijí rozsahu.
+*nField*<br/>
+Index pole založený na nule, pro který bude rozsah použit
 
 *nLower*<br/>
-Odkaz na celé číslo, které přijímají dolní mez pole zadané v tomto ovládacím prvku IP adresu.
+Odkaz na celé číslo, které přijímá dolní limit zadaného pole v tomto ovládacím prvku IP adresa.
 
 *nUpper*<br/>
-Odkaz na celé číslo, které přijímají horní limit počtu určené pole v tomto ovládacím prvku IP adresu.
+Odkaz na celé číslo, které přijímá horní limit zadaného pole v tomto ovládacím prvku IP adresa.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato členská funkce implementuje chování zprávy Win32 [IPM_SETRANGE](/windows/desktop/Controls/ipm-setrange), jak je popsáno v sadě Windows SDK. Použít dva parametry *nLower* a *nUpper*, pro indikaci horní a dolní mez pole, nikoli *wRange* parametr používaný s touto zprávou Win32.
+Tato členská funkce implementuje chování zprávy Win32 [IPM_SETRANGE](/windows/win32/Controls/ipm-setrange), jak je popsáno v Windows SDK. Použijte dva parametry, *nLower* a *nUpper*, k označení dolní a horní meze pole namísto parametru *wRange* , který se používá ve zprávě Win32.
 
 ## <a name="see-also"></a>Viz také:
 
