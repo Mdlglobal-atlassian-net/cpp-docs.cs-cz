@@ -1,5 +1,5 @@
 ---
-title: Crebar – třída
+title: CReBar – – třída
 ms.date: 11/19/2018
 f1_keywords:
 - CReBar
@@ -12,16 +12,16 @@ helpviewer_keywords:
 - CReBar [MFC], Create
 - CReBar [MFC], GetReBarCtrl
 ms.assetid: c1ad2720-1d33-4106-8e4e-80aa84f93559
-ms.openlocfilehash: 5a87f70816e9342c7aa203a53d13699659cebb28
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 434232e8f99bf914b00379db53d4b4a37d24fe36
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62372358"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69502784"
 ---
-# <a name="crebar-class"></a>Crebar – třída
+# <a name="crebar-class"></a>CReBar – – třída
 
-Ovládací panel, který poskytuje rozvržení, přetrvávání a informace o stavu pro prvky matrice.
+Ovládací panel, který poskytuje informace o rozložení, persistenci a stavu pro ovládací prvky matrice.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -33,30 +33,30 @@ class CReBar : public CControlBar
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
-|[CReBar::AddBar](#addbar)|Přidá pásmo matrici.|
-|[CReBar::Create](#create)|Vytvoří ovládací prvek matrice a připojí ho k `CReBar` objektu.|
-|[CReBar::GetReBarCtrl](#getrebarctrl)|Umožňuje přímý přístup k podkladové běžný ovládací prvek.|
+|[CReBar –:: AddBar](#addbar)|Přidá do matrice pásmo.|
+|[CReBar –:: Create](#create)|Vytvoří ovládací prvek matrice a připojí ho k `CReBar` objektu.|
+|[CReBar::GetReBarCtrl](#getrebarctrl)|Umožňuje přímý přístup k základnímu běžnému ovládacímu prvku.|
 
 ## <a name="remarks"></a>Poznámky
 
-Matrice objekt může obsahovat řadu podřízených oken, obvykle další ovládací prvky, včetně textových polí, panely nástrojů a pole se seznamem. Objekt matrice můžete zobrazit jeho podřízených oken přes zadané rastrový obrázek. Vaše aplikace automaticky změnit velikost matrice nebo uživatele můžete ručně změnit velikost matrice můžete také kliknout nebo přetažením jeho úchytu panelu.
+Objekt matrice může obsahovat různé podřízené systémy Windows, obvykle jiné ovládací prvky, včetně textových polí, panelů nástrojů a seznamů. Objekt matrice může zobrazit jeho podřízená okna přes určenou rastrový obrázek. Vaše aplikace může automaticky měnit velikost matrice nebo uživatel může ručně změnit velikost matrice kliknutím nebo přetažením jeho panelu.
 
-![Příklad RebarMenu](../../mfc/reference/media/vc4sc61.gif "příklad RebarMenu")
+![Příklad RebarMenu](../../mfc/reference/media/vc4sc61.gif "Příklad RebarMenu")
 
-## <a name="rebar-control"></a>Matrice – ovládací prvek
+## <a name="rebar-control"></a>Ovládací prvek matrice
 
-Objekt matrice chová podobně jako objekt panelu nástrojů. Matrici používá kliknutím a přetažením mechanismus pro změnu velikosti jeho pruhy. Ovládacím prvkem matrice může obsahovat jeden nebo více pruhy s každou obsluhy vzdálené správy s libovolnou kombinací úchytu panelu, bitmapy, textový popisek a podřízené okno. Pruhy však nemůže obsahovat více než jeden podřízené okno.
+Objekt matrice se chová podobně jako objekt Toolbar. Matrice používá k změně velikosti pásma mechanismus kliknutí a přetažením. Ovládací prvek matrice může obsahovat jeden nebo více pásem, přičemž každý z nich má libovolnou kombinaci panelu úchytů, rastrového obrázku, textového popisku a podřízeného okna. Pásma ale nemůžou obsahovat více než jedno podřízené okno.
 
-`CReBar` používá [atributu CReBarCtrl](../../mfc/reference/crebarctrl-class.md) třídy a zadejte jeho implementaci. Přistupujete prostřednictvím ovládacího prvku rebar [getrebarctrl –](#getrebarctrl) využít možnosti vlastního nastavení ovládacího prvku. Další informace o ovládacích prvcích matrice, naleznete v tématu `CReBarCtrl`. Další informace o používání prvky matrice, naleznete v tématu [používání atributu CReBarCtrl](../../mfc/using-crebarctrl.md).
+`CReBar`k poskytnutí své implementace používá třídu [atributu CReBarCtrl](../../mfc/reference/crebarctrl-class.md) . Přístup k ovládacímu prvku matrice prostřednictvím [GetReBarCtrl](#getrebarctrl) můžete využít k využití možností přizpůsobení ovládacího prvku. Další informace o ovládacích prvcích matrice naleznete v `CReBarCtrl`tématu. Další informace o použití ovládacích prvků matrice naleznete v tématu [using atributu CReBarCtrl](../../mfc/using-crebarctrl.md).
 
 > [!CAUTION]
->  Matrice a objekty ovládacího prvku matrice nepodporují ovládací prvek MFC panelu ukotvení. Pokud `CRebar::EnableDocking` je volána, aplikace bude uplatnit.
+>  Objekty ovládacích prvků matrice a matrice nepodporují ukotvení ovládacích panelů MFC. Pokud `CRebar::EnableDocking` je volána, vaše aplikace bude vyhodnotit.
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
-[Třídy CObject](../../mfc/reference/cobject-class.md)
+[CObject](../../mfc/reference/cobject-class.md)
 
 [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)
 
@@ -68,11 +68,11 @@ Objekt matrice chová podobně jako objekt panelu nástrojů. Matrici používá
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** afxext.h
+**Záhlaví:** afxext. h
 
-##  <a name="addbar"></a>  CReBar::AddBar
+##  <a name="addbar"></a>CReBar –:: AddBar
 
-Voláním této členské funkce přidání svazku matrice.
+Zavolejte tuto členskou funkci pro přidání pásma do matrice.
 
 ```
 BOOL AddBar(
@@ -92,34 +92,34 @@ BOOL AddBar(
 ### <a name="parameters"></a>Parametry
 
 *pBar*<br/>
-Ukazatel `CWnd` objekt, který je podřízené okno, které má být vložen do matrice. Odkazovaný objekt musí mít WS_CHILD.
+Ukazatel na `CWnd` objekt, který je podřízeným oknem, který má být vložen do matrice. Odkazovaný objekt musí mít WS_CHILD.
 
 *lpszText*<br/>
-Ukazatel na řetězec obsahující text, který se zobrazí na matrice. Ve výchozím nastavení s hodnotou NULL. Text součástí *lpszText* není součástí podřízené okno; se nachází na matrice, samotného.
+Ukazatel na řetězec obsahující text, který se má zobrazit na matrice. Ve výchozím nastavení je NULL. Text obsažený v *lpszText* není součástí podřízeného okna; je na matrice.
 
 *pbmp*<br/>
-Ukazatel `CBitmap` objekt, který se má zobrazit na pozadí matrice. Ve výchozím nastavení s hodnotou NULL.
+Ukazatel na `CBitmap` objekt, který se má zobrazit na pozadí matrice. Ve výchozím nastavení je NULL.
 
 *dwStyle*<br/>
-DWORD obsahující stylu použít matrice. Najdete v článku `fStyle` funkce Popis ve struktuře Win32 [REBARBANDINFO](/windows/desktop/api/commctrl/ns-commctrl-tagrebarbandinfoa) pro úplný seznam styly obsluhy vzdálené správy.
+Hodnota DWORD obsahující styl, který má být použit pro matrice. Úplný seznam stylů pásma najdete v popisu [](/windows/win32/api/commctrl/ns-commctrl-rebarbandinfow) funkcevREBARBANDINFOstruktuře`fStyle` Win32.
 
 *clrFore*<br/>
-COLORREF hodnotu, která představuje barvu popředí matrice.
+Hodnota COLORREF, která představuje barvu popředí matrice.
 
 *clrBack*<br/>
-COLORREF hodnotu, která představuje barvu pozadí matrice.
+Hodnota COLORREF, která představuje barvu pozadí matrice.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Nenulové, pokud je úspěšná. jinak 0.
+Nenulové, pokud bylo úspěšné; v opačném případě 0.
 
 ### <a name="example"></a>Příklad
 
 [!code-cpp[NVC_MFC_CReBarCtrl#1](../../mfc/reference/codesnippet/cpp/crebar-class_1.cpp)]
 
-##  <a name="create"></a>  CReBar::Create
+##  <a name="create"></a>CReBar –:: Create
 
-Voláním této členské funkce vytvořit matrici.
+Zavolejte tuto členskou funkci pro vytvoření matrice.
 
 ```
 virtual BOOL Create(
@@ -132,28 +132,28 @@ virtual BOOL Create(
 ### <a name="parameters"></a>Parametry
 
 *pParentWnd*<br/>
-Ukazatel `CWnd` objekt, jehož okno Windows je nadřazeného člena stavový řádek. Obvykle rámce okna.
+Ukazatel na `CWnd` objekt, jehož okno systému Windows je nadřazeným prvkem stavového řádku. Normálně okno rámce.
 
 *dwCtrlStyle*<br/>
-Stylu ovládacího prvku rebar. Ve výchozím nastavení RBS_BANDBORDERS, která zobrazuje úzký řádky k oddělení sousední pruhy v ovládacím prvku matrice. Zobrazit [– styly ovládacího prvku Rebar](/windows/desktop/Controls/rebar-control-styles) v sadě Windows SDK pro seznam styly.
+Styl ovládacího prvku matrice Ve výchozím nastavení RBS_BANDBORDERS, který zobrazuje úzké řádky pro oddělit sousední pásma v rámci ovládacího prvku matrice. Seznam stylů naleznete v tématu [styly ovládacího prvku matrice](/windows/win32/Controls/rebar-control-styles) v Windows SDK.
 
 *dwStyle*<br/>
-Styly oken matrice.
+Styly okna matrice
 
 *nID*<br/>
-ID prvku matrice podřízené okno.
+ID podřízeného okna matrice
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Nenulové, pokud je úspěšná. jinak 0.
+Nenulové, pokud bylo úspěšné; v opačném případě 0.
 
 ### <a name="example"></a>Příklad
 
-  Podívejte se na příklad pro [CReBar::AddBar](#addbar).
+  Podívejte se na příklad pro [CReBar –:: AddBar](#addbar).
 
-##  <a name="getrebarctrl"></a>  CReBar::GetReBarCtrl
+##  <a name="getrebarctrl"></a>CReBar –:: GetReBarCtrl
 
-Tato členská funkce umožňuje přímý přístup k podkladové běžný ovládací prvek.
+Tato členská funkce umožňuje přímý přístup k základnímu běžnému ovládacímu prvku.
 
 ```
 CReBarCtrl& GetReBarCtrl() const;
@@ -161,13 +161,13 @@ CReBarCtrl& GetReBarCtrl() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Odkaz na [atributu CReBarCtrl](../../mfc/reference/crebarctrl-class.md) objektu.
+Odkaz na objekt [atributu CReBarCtrl](../../mfc/reference/crebarctrl-class.md) .
 
 ### <a name="remarks"></a>Poznámky
 
-Voláním této členské funkce, abyste mohli využívat funkce Windows běžné ovládacího prvku rebar. v přizpůsobení vašich matrice. Při volání `GetReBarCtrl`, vrátí objekt a odkaz `CReBarCtrl` objektu, můžete použít buď sadu členské funkce.
+Tuto členskou funkci volejte pro využití funkcí společného ovládacího prvku Windows matrice v části Přizpůsobení vašich matrice. Při volání `GetReBarCtrl`vrátí objekt reference `CReBarCtrl` k objektu, aby bylo možné použít kteroukoli z těchto členských funkcí.
 
-Další informace o používání `CReBarCtrl` přizpůsobit vaší matrice, přečtěte si článek [používání atributu CReBarCtrl](../../mfc/using-crebarctrl.md).
+Další informace o použití nástroje `CReBarCtrl` k přizpůsobení matrice najdete v tématu [použití atributu CReBarCtrl](../../mfc/using-crebarctrl.md).
 
 ### <a name="example"></a>Příklad
 
@@ -175,6 +175,6 @@ Další informace o používání `CReBarCtrl` přizpůsobit vaší matrice, př
 
 ## <a name="see-also"></a>Viz také:
 
-[Ukázky knihovny MFC MFCIE](../../overview/visual-cpp-samples.md)<br/>
+[MFCIE Sample MFC](../../overview/visual-cpp-samples.md)<br/>
 [CControlBar – třída](../../mfc/reference/ccontrolbar-class.md)<br/>
 [Graf hierarchie](../../mfc/hierarchy-chart.md)

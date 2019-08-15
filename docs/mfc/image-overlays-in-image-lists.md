@@ -6,20 +6,20 @@ helpviewer_keywords:
 - image lists [MFC], image overlays in
 - CImageList class [MFC], image overlays in
 ms.assetid: aaf4e1c4-cd12-42c8-9af4-1bb458889b4e
-ms.openlocfilehash: 8dd0b30ef29a48ebc763564e6fe23632cd300831
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ec795193a28a68d8aee61e9932481a89c4b3e8e0
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62407962"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69508388"
 ---
 # <a name="image-overlays-in-image-lists"></a>Překryvy obrázků v seznamech obrázků
 
-Každý seznamu obrázků ([atributu CImageList](../mfc/reference/cimagelist-class.md)) obsahuje seznam imagí, které chcete použít jako překrytí masky. "Překrytí maska" je obrázek transparentně zaškrtnutí nakreslit přes jiný obrázek. Žádné image může sloužit jako masku překrytí. Můžete zadat až čtyři masky překrytí na seznamu obrázků.
+Každý seznam obrázků ([atributu CImageList](../mfc/reference/cimagelist-class.md)) obsahuje seznam obrázků, které se použijí jako překrytí masek. "Překryvná maska" je obrázek vykreslený transparentně přes jiný obrázek. Libovolný obrázek lze použít jako překryvnou masku. Na seznam obrázků můžete zadat až čtyři překryté masky.
 
-Index obrázku, který přidáte do seznamu překrytí masky pomocí [SetOverlayImage](../mfc/reference/cimagelist-class.md#setoverlayimage) členskou funkci, index bitové kopie a index masku překrytí. Všimněte si, že indexy masky překrytí jsou založen na jedničce, spíše než založený na nule.
+Index obrázku můžete přidat do seznamu překrytých masek pomocí členské funkce [SetOverlayImage](../mfc/reference/cimagelist-class.md#setoverlayimage) , indexu obrázku a indexu překryté masky. Všimněte si, že indexy pro překrytí jsou založeny na jednom, nikoli na základě nuly.
 
-Nakreslit masku překrytí přes pomocí jednoho volání image `Draw`. Parametry zahrnují index obrázku pro kreslení a index masku překrytí. Je nutné použít [INDEXTOOVERLAYMASK](/windows/desktop/api/commctrl/nf-commctrl-indextooverlaymask) – makro k určení indexu maska překrytí. Můžete také určit bitovou kopii překrytí při volání [DrawIndirect](../mfc/reference/cimagelist-class.md#drawindirect) členskou funkci.
+Překreslíte překrytou masku na obrázek pomocí jednoho volání `Draw`. Parametry zahrnují index obrázku, který se má vykreslit, a index překryté masky. Je nutné použít makro [INDEXTOOVERLAYMASK](/windows/win32/api/commctrl/nf-commctrl-indextooverlaymask) k určení indexu překryté masky. Můžete také zadat překrývající obrázek při volání členské funkce [DrawIndirect](../mfc/reference/cimagelist-class.md#drawindirect) .
 
 ## <a name="see-also"></a>Viz také:
 

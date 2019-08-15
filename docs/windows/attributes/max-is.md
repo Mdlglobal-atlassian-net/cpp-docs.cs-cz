@@ -1,21 +1,21 @@
 ---
-title: max_is – (C++ atributů COM)
+title: max_is (C++ atribut com)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.max_is
 helpviewer_keywords:
 - max_is attribute
 ms.assetid: 7c851f5c-6649-4d77-a792-247c37d8f560
-ms.openlocfilehash: dca2a3dc18aa3c3e75bbb682ed0b1b90adcd9236
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f2e6db997891817620c1b2c1f70cb310818dd346
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62409275"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69514424"
 ---
-# <a name="maxis"></a>max_is
+# <a name="max_is"></a>max_is
 
-Určuje maximální hodnotu pro pole platný index.
+Určuje maximální hodnotu pro platný index pole.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -25,29 +25,29 @@ Určuje maximální hodnotu pro pole platný index.
 
 ### <a name="parameters"></a>Parametry
 
-*Výraz*<br/>
-Jeden nebo více výrazů jazyka C. Prázdný argument sloty jsou povoleny.
+*vyjádření*<br/>
+Jeden nebo více výrazů jazyka C. Prázdné sloty argumentů jsou povoleny.
 
 ## <a name="remarks"></a>Poznámky
 
-**Max_is –** C++ atribut má stejné funkce jako [max_is –](/windows/desktop/Midl/max-is) atribut MIDL.
+Atribut **max_is** C++ má stejné funkce jako atribut [max_is](/windows/win32/Midl/max-is) MIDL.
 
 ## <a name="requirements"></a>Požadavky
 
-### <a name="attribute-context"></a>Atribut kontextu
+### <a name="attribute-context"></a>Kontext atributu
 
 |||
 |-|-|
-|**Platí pro**|Pole v **struktura** nebo **sjednocení**, rozhraní parametr, rozhraní – metoda|
-|**Opakovatelné**|Ne|
-|**Vyžadované atributy**|Žádný|
+|**Platí pro**|Pole v **struktuře** nebo **sjednocení**, parametr rozhraní, metoda rozhraní|
+|**REPEATABLE**|Ne|
+|**Požadované atributy**|Žádné|
 |**Neplatné atributy**|**size_is**|
 
-Další informace najdete v tématu [kontexty atributů](cpp-attributes-com-net.md#contexts).
+Další informace naleznete v tématu [kontexty atributů](cpp-attributes-com-net.md#contexts).
 
 ## <a name="example"></a>Příklad
 
-Zobrazit [first_is –](first-is.md) příklad toho, jak zadat část pole.
+Příklad určení oddílu pole naleznete v tématu [first_is](first-is.md) .
 
 ## <a name="see-also"></a>Viz také:
 

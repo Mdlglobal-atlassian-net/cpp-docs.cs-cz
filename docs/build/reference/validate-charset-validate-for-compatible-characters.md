@@ -1,5 +1,5 @@
 ---
-title: / Validate-Charset (ověření kompatibilních znaků)
+title: /validate-charset (ověření kompatibilních znaků)
 ms.date: 02/06/2019
 f1_keywords:
 - /validate-charset
@@ -7,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - /validate-charset compiler option
 ms.assetid: 50360fd0-4d32-4a4f-95d0-53d38c12ad4c
-ms.openlocfilehash: 30c818bcb64c2f2ee57c05a4870e7d30afe98cfe
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2390aa98b9416eb538f529c8c370c888cccf4734
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62317078"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69498161"
 ---
-# <a name="validate-charset-validate-for-compatible-characters"></a>/ Validate-Charset (ověření kompatibilních znaků)
+# <a name="validate-charset-validate-for-compatible-characters"></a>/validate-charset (ověření kompatibilních znaků)
 
-Ověřuje, zda text souboru zdroje obsahuje pouze znaky reprezentovat jako UTF-8.
+Ověří, zda text zdrojového souboru obsahuje pouze znaky, které lze reprezentovat jako UTF-8.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -26,26 +26,26 @@ Ověřuje, zda text souboru zdroje obsahuje pouze znaky reprezentovat jako UTF-8
 
 ## <a name="remarks"></a>Poznámky
 
-Můžete použít **/Validate-Charset** možnost ověřit, že zdrojový kód obsahuje jen znaky, které je možné znázornit na zdrojové znakové sady a provedení znakové sady. Tato kontrola se povolí automaticky při zadávání **/Source-Charset**, **/Execution-Charset**, nebo **/UTF-8** – možnosti kompilátoru. Můžete explicitně zakázat tuto kontrolu tak, že zadáte **/ validate-charset –** možnost.
+Pomocí možnosti **/Validate-charset** můžete ověřit, zda zdrojový kód obsahuje pouze znaky, které lze reprezentovat v zdrojové znakové sadě i ve znakové sadě spuštění. Tato kontrolu je povolena automaticky při zadání možností kompilátoru **/source-charset**, **/Execution-charset**nebo **/UTF-8.** . Tuto kontrolu můžete explicitně zakázat zadáním možnosti **/Validate-charset-** .
 
-Ve výchozím nastavení sada Visual Studio zjistí značka pořadí bajtů k určení, zda zdrojový soubor je v zakódovaném formátu Unicode, například UTF-16 nebo UTF-8. Pokud se nenajde žádné značky pořadí bajtů, předpokládá zdrojový soubor je zakódován pomocí aktuální znakové stránce uživatele, pokud zadáte znakovou stránku pomocí **/UTF-8** nebo **/Source-Charset** možnost. Visual Studio umožňuje uložit zdrojovém kódu jazyka C++ pomocí některého z několika kódování znaků. Informace o spuštění a zdrojová znakových sadách najdete v tématu [znakové sady](../../cpp/character-sets.md) v dokumentaci jazyka. Seznam podporovaných identifikátory znakových stránek a znakové sady názvy, naleznete v tématu [identifikátory znakových stránek](/windows/desktop/Intl/code-page-identifiers).
+Ve výchozím nastavení Visual Studio detekuje značku pro určení, zda je zdrojový soubor v kódovaném formátu Unicode, například UTF-16 nebo UTF-8. Pokud není nalezen žádný znak pořadí bajtů, předpokládá se, že zdrojový soubor je kódován pomocí uživatelské znakové stránky, pokud jste nezadali znakovou stránku pomocí **/UTF-8.** nebo možnosti **/source-charset** . Visual Studio umožňuje uložit C++ zdrojový kód pomocí některého z několika kódování znaků. Informace o zdrojových a spouštěcích znakových sadách naleznete v tématu [znakové sady](../../cpp/character-sets.md) v dokumentaci jazyka. Seznam podporovaných identifikátorů znakové stránky a názvů znakové sady naleznete v tématu [identifikátory znakové stránky](/windows/win32/Intl/code-page-identifiers).
 
-Visual Studio používá jako interní kódování znaků, které během převodu mezi zdrojovou znakovou sadou a spouštěcí znaková sada UTF-8. Pokud ve znakové sadě spuštění nelze reprezentovat znaku ve zdrojovém souboru, nahradí převodu znakové sady UTF-8 otazník '?' znaků. **/Validate-Charset** možnost způsobí, že kompilace hlásit upozornění, pokud k tomu dojde.
+Sada Visual Studio používá UTF-8 jako kódování interního znaku během konverze mezi zdrojovou znakovou sadou a znakovou sadou spuštění. Pokud znak ve zdrojovém souboru nemůže být reprezentován ve znakové sadě spuštění, konverze UTF-8 nahradí otazník znakem?. Možnost **/Validate-charset** způsobí, že kompilace ohlásí upozornění, pokud k tomu dojde.
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Nastavení tohoto parametru kompilátoru ve vývojovém prostředí Visual Studio
 
-1. Otevřete projekt **stránky vlastností** dialogové okno. Další informace najdete v tématu [vlastnosti kompilátoru a sestavení nastavte C++ v sadě Visual Studio](../working-with-project-properties.md).
+1. Otevřete dialogové okno **stránky vlastností** projektu. Další informace najdete v tématu [nastavení C++ vlastností kompilátoru a sestavení v sadě Visual Studio](../working-with-project-properties.md).
 
-1. Rozbalte **vlastnosti konfigurace**, **C/C++**, **příkazového řádku** složky.
+1. Rozbalte **Vlastnosti konfigurace**, složka s příkazovým **řádkem** **C/C++** .
 
-1. V **další možnosti**, přidejte **/Validate-Charset** možnosti a určete upřednostňované kódování.
+1. V části **Další možnosti**přidejte možnost **/Validate-charset** a zadejte preferované kódování.
 
-1. Zvolte **OK** uložte provedené změny.
+1. Kliknutím na **tlačítko OK** uložte změny.
 
 ## <a name="see-also"></a>Viz také:
 
 [Parametry kompilátoru MSVC](compiler-options.md)<br/>
 [Syntaxe příkazového řádku kompilátoru MSVC](compiler-command-line-syntax.md)<br/>
-[/ Execution-Charset (nastavení znakové sady spuštění)](execution-charset-set-execution-character-set.md)<br/>
+[/Execution-charset (nastavení znakové sady spuštění)](execution-charset-set-execution-character-set.md)<br/>
 [/source-charset (nastavení zdrojové znakové sady)](source-charset-set-source-character-set.md)<br/>
 [/utf-8 (nastavení zdrojové znakové sady a spustitelné znakové sady na UTF-8)](utf-8-set-source-and-executable-character-sets-to-utf-8.md)

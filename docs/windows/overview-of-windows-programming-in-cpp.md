@@ -2,12 +2,12 @@
 title: Přehled programování v C++ v systému Windows
 ms.date: 07/28/2019
 ms.assetid: efc691d7-21f3-47ae-ae56-cab999ccf59d
-ms.openlocfilehash: f72e6320493027728a85741ba6d87025454c3b9e
-ms.sourcegitcommit: 720b74dddb1cdf4e570d55103158304ee1df81f8
+ms.openlocfilehash: 10ef9698e27099d5856c1ed5f8ed2f21cea72c24
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/29/2019
-ms.locfileid: "68607517"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69514804"
 ---
 # <a name="overview-of-windows-programming-in-c"></a>Přehled programování v C++ v systému Windows
 
@@ -21,9 +21,9 @@ C++konzolové aplikace jsou spouštěny z příkazového řádku v okně konzoly
 
 ## <a name="native-desktop-client-applications"></a>Nativní klientské aplikace pro stolní počítače
 
-*Nativní klientská aplikace pro stolní počítače* je aplikace C++ v jazyce C nebo okna, která pro přístup k operačnímu systému používá původní nativní rozhraní API pro [Windows c nebo com (Component Object Model)](/windows/desktop/apiindex/windows-api-list) . Tato rozhraní API se sami píší převážně v C. Je k dispozici více než jeden způsob, jak vytvořit nativní desktopovou aplikaci: Můžete programovat přímo pomocí rozhraní Win32 API a použít smyčku zpráv ve stylu jazyka C, která zpracovává události operačního systému. Nebo můžete programovat pomocí knihovny *Microsoft Foundation Classes* (MFC), lehce orientované C++ objektové knihovny, která obaluje Win32. V porovnání s Univerzální platforma Windowsem (UWP) se nepovažuje žádný přístup, ale obě jsou pořád plně podporované a můžou mít miliony řádků kódu běžící na světě ještě dnes. Aplikace Win32, která běží v okně, vyžaduje, aby vývojář pracoval explicitně se zprávami systému Windows v rámci funkce procedury systému Windows. Bez ohledu na název může být aplikace Win32 kompilována jako 32 (x86) nebo 64-bit (x64) binární. V integrovaném vývojovém prostředí sady Visual Studio jsou výrazy x86 a Win32 synonymně.
+*Nativní klientská aplikace pro stolní počítače* je aplikace C++ v jazyce C nebo okna, která pro přístup k operačnímu systému používá původní nativní rozhraní API pro [Windows c nebo com (Component Object Model)](/windows/win32/apiindex/windows-api-list) . Tato rozhraní API se sami píší převážně v C. Je k dispozici více než jeden způsob, jak vytvořit nativní desktopovou aplikaci: Můžete programovat přímo pomocí rozhraní Win32 API a použít smyčku zpráv ve stylu jazyka C, která zpracovává události operačního systému. Nebo můžete programovat pomocí knihovny *Microsoft Foundation Classes* (MFC), lehce orientované C++ objektové knihovny, která obaluje Win32. V porovnání s Univerzální platforma Windowsem (UWP) se nepovažuje žádný přístup, ale obě jsou pořád plně podporované a můžou mít miliony řádků kódu běžící na světě ještě dnes. Aplikace Win32, která běží v okně, vyžaduje, aby vývojář pracoval explicitně se zprávami systému Windows v rámci funkce procedury systému Windows. Bez ohledu na název může být aplikace Win32 kompilována jako 32 (x86) nebo 64-bit (x64) binární. V integrovaném vývojovém prostředí sady Visual Studio jsou výrazy x86 a Win32 synonymně.
 
-Chcete-li začít s tradičním programováním v systému Windows C++ , přečtěte si téma Začínáme [s Win32 a C++ ](/windows/desktop/LearnWin32/learn-to-program-for-windows). Až pochopíte prostředí Win32, bude snazší získat informace o [desktopových aplikacích MFC](../mfc/mfc-desktop-applications.md). Příklad tradiční C++ desktopové aplikace, která používá sofistikovanou grafiku, najdete v [tématu Hilo: Vývoj C++ aplikací pro systém](https://msdn.microsoft.com/library/windows/desktop/ff708696.aspx)Windows.
+Chcete-li začít s tradičním programováním v systému Windows C++ , přečtěte si téma Začínáme [s Win32 a C++ ](/windows/win32/LearnWin32/learn-to-program-for-windows). Až pochopíte prostředí Win32, bude snazší získat informace o [desktopových aplikacích MFC](../mfc/mfc-desktop-applications.md). Příklad tradiční C++ desktopové aplikace, která používá sofistikovanou grafiku, najdete v [tématu Hilo: Vývoj C++ aplikací pro systém](https://msdn.microsoft.com/library/windows/desktop/ff708696.aspx)Windows.
 
 ### <a name="c-or-net"></a>C++nebo .NET?
 
@@ -39,7 +39,7 @@ Je také možné kombinovat výkon a efektivitu C++ pomocí programování .NET.
 
 ## <a name="com-components"></a>Komponenty modelu COM
 
-[Component Object Model (com)](/windows/desktop/com/the-component-object-model) je specifikace, která umožňuje programům napsaným v různých jazycích komunikovat mezi sebou. Mnohé součásti systému Windows jsou implementovány jako objekty modelu COM a následují standardní pravidla modelu COM pro vytváření objektů, zjišťování rozhraní a zničení objektů.  Použití objektů COM z C++ desktopových aplikací je relativně jasné, ale psaní vlastního objektu com je pokročilejší. [Knihovna ATL (Active Template Library)](../atl/atl-com-desktop-components.md) poskytuje makra a pomocné funkce, které zjednodušují vývoj v modelu COM. Další informace naleznete v tématu [komponenty ATL com Desktop](../atl/atl-com-desktop-components.md).
+[Component Object Model (com)](/windows/win32/com/the-component-object-model) je specifikace, která umožňuje programům napsaným v různých jazycích komunikovat mezi sebou. Mnohé součásti systému Windows jsou implementovány jako objekty modelu COM a následují standardní pravidla modelu COM pro vytváření objektů, zjišťování rozhraní a zničení objektů.  Použití objektů COM z C++ desktopových aplikací je relativně jasné, ale psaní vlastního objektu com je pokročilejší. [Knihovna ATL (Active Template Library)](../atl/atl-com-desktop-components.md) poskytuje makra a pomocné funkce, které zjednodušují vývoj v modelu COM. Další informace naleznete v tématu [komponenty ATL com Desktop](../atl/atl-com-desktop-components.md).
 
 ## <a name="universal-windows-platform-apps"></a>Universal Windows Platform apps
 
@@ -55,7 +55,7 @@ Sada Visual Studio 2017 verze 15,4 a novější umožňuje vytvořit projekt bal
 
 ## <a name="games"></a>Videohr
 
-Hry DirectX můžete spustit na počítači nebo Xbox. Další informace najdete v tématu [grafiky a hry DirectX](/windows/desktop/directx).
+Hry DirectX můžete spustit na počítači nebo Xbox. Další informace najdete v tématu [grafiky a hry DirectX](/windows/win32/directx).
 
 ## <a name="sql-server-database-clients"></a>Klienti databáze SQL Server
 
@@ -67,7 +67,7 @@ Ovladače jsou komponenty nízké úrovně, které vytvářejí data z hardwarov
 
 ## <a name="windows-services"></a>služby systému Windows
 
-*Služba* systému Windows je program, který může běžet na pozadí s malým nebo žádným zásahem uživatele. Tyto programy se nazývají *démoni* v systémech UNIX. Další informace najdete v tématu [služby](/windows/desktop/services/services).
+*Služba* systému Windows je program, který může běžet na pozadí s malým nebo žádným zásahem uživatele. Tyto programy se nazývají *démoni* v systémech UNIX. Další informace najdete v tématu [služby](/windows/win32/services/services).
 
 ## <a name="sdks-libraries-and-header-files"></a>Sady SDK, knihovny a hlavičkové soubory
 

@@ -1,5 +1,5 @@
 ---
-title: Idispeventsimpleimpl – třída
+title: IDispEventSimpleImpl – třída
 ms.date: 11/04/2016
 f1_keywords:
 - IDispEventSimpleImpl
@@ -15,19 +15,19 @@ f1_keywords:
 helpviewer_keywords:
 - IDispEventSimpleImpl class
 ms.assetid: 971d82b7-a921-47fa-a4d8-909bed377ab0
-ms.openlocfilehash: 1578518b8918f59b1da54f474e82cf899f3c76f6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3ceb436e4f20a17ecd086fb68f9c1cfdcbe0be3e
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62275370"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69495900"
 ---
-# <a name="idispeventsimpleimpl-class"></a>Idispeventsimpleimpl – třída
+# <a name="idispeventsimpleimpl-class"></a>IDispEventSimpleImpl – třída
 
-Tato třída obsahuje implementaci `IDispatch` metody bez získání informací o typu z knihovny typů.
+Tato třída poskytuje implementace `IDispatch` metod bez získání informací o typu z knihovny typů.
 
 > [!IMPORTANT]
->  Tato třída a jejích členů nelze použít v aplikacích, které jsou spouštěny v modulu Windows Runtime.
+>  Tato třída a její členové nelze použít v aplikacích, které jsou spouštěny v prostředí Windows Runtime.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -39,53 +39,53 @@ class ATL_NO_VTABLE IDispEventSimpleImpl : public _IDispEventLocator<nID, pdiid>
 #### <a name="parameters"></a>Parametry
 
 *nID*<br/>
-Jedinečný identifikátor pro zdrojový objekt. Když `IDispEventSimpleImpl` je základní třídou pro složeného ovládacího prvku, použijte ID prostředku požadované obsažený ovládací prvek pro tento parametr. V ostatních případech použijte libovolné kladné celé číslo.
+Jedinečný identifikátor zdrojového objektu. Když `IDispEventSimpleImpl` je základní třídou pro složený ovládací prvek, použijte ID prostředku požadovaného ovládacího prvku pro tento parametr. V jiných případech použijte libovolné kladné celé číslo.
 
 *T*<br/>
-Třída uživatele, která je odvozena od `IDispEventSimpleImpl`.
+Třída uživatele, která je odvozena z `IDispEventSimpleImpl`.
 
 *pdiid*<br/>
-Ukazatel na IID dispinterface události touto třídou implementována.
+Ukazatel na IID odesílajícího rozhraní události implementované touto třídou.
 
 ## <a name="members"></a>Členové
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
-|[IDispEventSimpleImpl::Advise](#advise)|Naváže připojení se výchozí zdroj události.|
-|[IDispEventSimpleImpl::DispEventAdvise](#dispeventadvise)|Naváže připojení se zdroji události.|
-|[IDispEventSimpleImpl::DispEventUnadvise](#dispeventunadvise)|Zruší připojení ke zdroji události.|
-|[IDispEventSimpleImpl::GetIDsOfNames](#getidsofnames)|Vrátí E_NOTIMPL.|
+|[IDispEventSimpleImpl:: Advise](#advise)|Naváže připojení k výchozímu zdroji událostí.|
+|[IDispEventSimpleImpl::DispEventAdvise](#dispeventadvise)|Naváže spojení se zdrojem událostí.|
+|[IDispEventSimpleImpl::DispEventUnadvise](#dispeventunadvise)|Ukončí připojení ke zdroji událostí.|
+|[IDispEventSimpleImpl:: GetIDsOfNames](#getidsofnames)|Vrátí E_NOTIMPL.|
 |[IDispEventSimpleImpl::GetTypeInfo](#gettypeinfo)|Vrátí E_NOTIMPL.|
 |[IDispEventSimpleImpl::GetTypeInfoCount](#gettypeinfocount)|Vrátí E_NOTIMPL.|
-|[IDispEventSimpleImpl::Invoke](#invoke)|Volání obslužných rutin událostí uvedené události mapy jímky.|
-|[IDispEventSimpleImpl::Unadvise](#unadvise)|Zruší připojení ke zdroji události výchozí.|
+|[IDispEventSimpleImpl:: Invoke](#invoke)|Volá obslužné rutiny události uvedené v mapě jímky událostí.|
+|[IDispEventSimpleImpl::Unadvise](#unadvise)|Ukončí připojení k výchozímu zdroji událostí.|
 
 ## <a name="remarks"></a>Poznámky
 
-`IDispEventSimpleImpl` poskytuje způsob implementace dispinterface události bez nutnosti poskytnout implementaci kód pro každé metody/události tohoto rozhraní. `IDispEventSimpleImpl` poskytuje implementaci `IDispatch` metody. Stačí zadat implementace, že máte zájem o zpracování událostí.
+`IDispEventSimpleImpl`poskytuje způsob implementace odesílajícího protokolu událostí bez nutnosti zadávat implementační kód pro každou metodu nebo událost na daném rozhraní. `IDispEventSimpleImpl`poskytuje implementace `IDispatch` metod. Stačí pouze dodat implementace pro události, které zajímáte o zpracování.
 
-`IDispEventSimpleImpl` funguje ve spojení s mapou jímky událostí ve své třídě pro směrování událostí na odpovídající obslužné rutiny. Chcete-li použít tuto třídu:
+`IDispEventSimpleImpl`pracuje ve spojení s mapou jímky událostí ve vaší třídě pro směrování událostí do příslušné funkce obslužné rutiny. Chcete-li použít tuto třídu:
 
-- Přidat [SINK_ENTRY_INFO](composite-control-macros.md#sink_entry_info) makra mapy událostí jímky pro každou jednotlivou událost pro každý objekt, který chcete zpracovat.
+- Přidejte makro [SINK_ENTRY_INFO](composite-control-macros.md#sink_entry_info) do mapy jímky událostí pro každou událost u každého objektu, který chcete zpracovat.
 
-- Zadejte informace o typu pro každou jednotlivou událost předáním ukazatel [_atl_func_info –](../../atl/reference/atl-func-info-structure.md) strukturu jako parametr pro každou položku. Na x86 platformy, `_ATL_FUNC_INFO.cc` hodnota musí být CC_CDECL pomocí funkce zpětného volání při volání metody __stdcall.
+- Poskytněte informace o typu každé události předáním ukazatele do struktury [_ATL_FUNC_INFO](../../atl/reference/atl-func-info-structure.md) jako parametru pro každou položku. Na platformě `_ATL_FUNC_INFO.cc` x86 musí být hodnota CC_CDECL pomocí funkce zpětného volání metody __stdcall.
 
-- Volání [DispEventAdvise](#dispeventadvise) k navázání připojení mezi zdrojovým objektem a základní třídy.
+- Zavolejte [DispEventAdvise](#dispeventadvise) k navázání spojení mezi zdrojovým objektem a základní třídou.
 
-- Volání [DispEventUnadvise](#dispeventunadvise) přerušit připojení.
+- Zavolejte [DispEventUnadvise](#dispeventunadvise) k přerušení připojení.
 
-Musí být odvozen od `IDispEventSimpleImpl` (pomocí jedinečnou hodnotu pro *nID*) pro každý objekt, pro kterou je potřeba zpracovat události. Základní třídy lze znovu použít, unadvising proti jeden zdrojový objekt pak informacemi pro objekt jiného zdroje, ale maximální počet zdrojové objekty, které mohou být zpracovány jeden objekt v jednom okamžiku je omezený počet `IDispEventSimpleImpl` základních tříd.
+Musíte odvozovat od `IDispEventSimpleImpl` (pomocí jedinečné hodnoty pro *NID*) pro každý objekt, pro který potřebujete zpracovávat události. Základní třídu lze znovu použít tím, že využijete proti jednomu zdrojovému objektu a potom pro něj budete doporučit jiný zdrojový objekt, ale maximální počet zdrojových objektů, které mohou být zpracovány jediným objektem v jednom okamžiku, je omezen počtem `IDispEventSimpleImpl` základních tříd.
 
-`IDispEventSimplImpl` nabízí stejné funkce jako [IDispEventImpl](../../atl/reference/idispeventimpl-class.md), s výjimkou nezíská typ informace o rozhraní z knihovny typů. Průvodci k vygenerování kódu založeném na pouze `IDispEventImpl`, ale můžete použít `IDispEventSimpleImpl` přidáním kódu ručně. Použití `IDispEventSimpleImpl` když nemáte knihovnu typů popisující rozhraní událostí nebo chcete vyhnout režii spojenou s použitím knihovny typů.
+`IDispEventSimplImpl`poskytuje stejné funkce jako [IDispEventImpl](../../atl/reference/idispeventimpl-class.md), s výjimkou, že nezískává informace o typu rozhraní z knihovny typů. Průvodci generují pouze kód, který je `IDispEventImpl`založen pouze na, ale `IDispEventSimpleImpl` můžete použít přidáním kódu ručně. Použijte `IDispEventSimpleImpl` , pokud nemáte knihovnu typů popisující rozhraní události nebo chcete zabránit režii spojené s používáním knihovny typů.
 
 > [!NOTE]
-> `IDispEventImpl` a `IDispEventSimpleImpl` poskytnout vlastní implementaci `IUnknown::QueryInterface` povolení jednotlivých `IDispEventImpl` nebo `IDispEventSimpleImpl` základní třídy tak, aby fungoval jako samostatné modelu COM identitu zároveň umožní přímý přístup ke členům třídy v váš hlavní objekt modelu COM.
+> `IDispEventImpl`a `IDispEventSimpleImpl` poskytněte svou vlastní `IUnknown::QueryInterface` implementaci pro povolení každé `IDispEventImpl` nebo `IDispEventSimpleImpl` základní třídy, aby sloužila jako samostatná identita modelu COM, a současně umožňuje přímý přístup ke členům třídy v hlavním objektu com.
 
-Provádění CE ATL ActiveX událostí jímky pouze podporuje návratové hodnoty typu HRESULT nebo void z vaší obslužné rutiny události; jakákoli jiná návratová hodnota není podporována a její chování není definováno.
+Implementace CE ATL jímka událostí ActiveX podporuje pouze návratové hodnoty typu HRESULT nebo void z metod obslužné rutiny události; jakákoli jiná návratová hodnota není podporována a chování není definováno.
 
-Další informace najdete v tématu [podpora IDispEventImpl](../../atl/supporting-idispeventimpl.md).
+Další informace najdete v tématu [Podpora IDispEventImpl](../../atl/supporting-idispeventimpl.md).
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
@@ -97,11 +97,11 @@ Další informace najdete v tématu [podpora IDispEventImpl](../../atl/supportin
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** atlcom
+**Záhlaví:** atlcom. h
 
-##  <a name="advise"></a>  IDispEventSimpleImpl::Advise
+##  <a name="advise"></a>IDispEventSimpleImpl:: Advise
 
-Voláním této metody lze navázat připojení ke zdroji události, která je reprezentována *pUnk*.
+Zavolejte tuto metodu pro navázání spojení se zdrojem události reprezentovaným *punk*.
 
 ```
 HRESULT Advise(IUnknown* pUnk);
@@ -110,24 +110,24 @@ HRESULT Advise(IUnknown* pUnk);
 ### <a name="parameters"></a>Parametry
 
 *pUnk*<br/>
-[in] Ukazatel `IUnknown` rozhraní objektu zdroje událostí.
+pro Ukazatel na `IUnknown` rozhraní objektu zdroje událostí.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Jakékoli neúspěchy hodnotu HRESULT nebo S_OK.
+Hodnota S_OK nebo jakákoli neúspěšná hodnota HRESULT.
 
 ### <a name="remarks"></a>Poznámky
 
-Jakmile se naváže připojení, události vyvolané z *pUnk* budou směrovány do obslužné rutiny ve své třídě, mimo jiné na mapě událostí jímky.
+Po navázání spojení budou události vyvolané z *punk* směrovány do obslužných rutin ve vaší třídě pomocí mapy jímky událostí.
 
 > [!NOTE]
->  Pokud vaše třída odvozena z více `IDispEventSimpleImpl` třídy, musíte pro odstranění dvojznačnosti při volání této metody pomocí oborů volání s určité základní třídy se zajímáte.
+>  Pokud je vaše třída odvozena z `IDispEventSimpleImpl` více tříd, bude nutné nejednoznačnost volání této metody pomocí oboru volání konkrétní základní třídy, kterou vás zajímá.
 
-`Advise` naváže připojení ke zdroji události výchozí získá identifikátor IID výchozí zdroj události objektu podle [AtlGetObjectSourceInterface](composite-control-global-functions.md#atlgetobjectsourceinterface).
+`Advise`naváže spojení s výchozím zdrojem událostí, získá IID výchozího zdroje události objektu, který určuje [AtlGetObjectSourceInterface](composite-control-global-functions.md#atlgetobjectsourceinterface).
 
-##  <a name="dispeventadvise"></a>  IDispEventSimpleImpl::DispEventAdvise
+##  <a name="dispeventadvise"></a>IDispEventSimpleImpl::D ispEventAdvise
 
-Voláním této metody lze navázat připojení ke zdroji události, která je reprezentována *pUnk*.
+Zavolejte tuto metodu pro navázání spojení se zdrojem události reprezentovaným *punk*.
 
 ```
 HRESULT DispEventAdvise(IUnknown* pUnk  const IID* piid);
@@ -136,27 +136,27 @@ HRESULT DispEventAdvise(IUnknown* pUnk  const IID* piid);
 ### <a name="parameters"></a>Parametry
 
 *pUnk*<br/>
-[in] Ukazatel `IUnknown` rozhraní objektu zdroje událostí.
+pro Ukazatel na `IUnknown` rozhraní objektu zdroje událostí.
 
 *piid*<br/>
-Ukazatel na IID objektu zdroje událostí.
+Ukazatel na IID zdrojového objektu události.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Jakékoli neúspěchy hodnotu HRESULT nebo S_OK.
+Hodnota S_OK nebo jakákoli neúspěšná hodnota HRESULT.
 
 ### <a name="remarks"></a>Poznámky
 
-Později, vyvolání událostí z *pUnk* budou směrovány do obslužné rutiny ve své třídě, mimo jiné na mapě událostí jímky.
+Následně se události vyvolané z *punk* budou směrovat do obslužných rutin ve vaší třídě pomocí mapy jímky událostí.
 
 > [!NOTE]
->  Pokud vaše třída odvozena z více `IDispEventSimpleImpl` třídy, musíte pro odstranění dvojznačnosti při volání této metody pomocí oborů volání s určité základní třídy se zajímáte.
+>  Pokud je vaše třída odvozena z `IDispEventSimpleImpl` více tříd, bude nutné nejednoznačnost volání této metody pomocí oboru volání konkrétní základní třídy, kterou vás zajímá.
 
-`DispEventAdvise` naváže připojení ke zdroji události podle `pdiid`.
+`DispEventAdvise`naváže spojení se zdrojem události zadaným v `pdiid`.
 
-##  <a name="dispeventunadvise"></a>  IDispEventSimpleImpl::DispEventUnadvise
+##  <a name="dispeventunadvise"></a>IDispEventSimpleImpl::D ispEventUnadvise
 
-Zruší připojení ke zdroji události, která je reprezentována *pUnk*.
+Ukončí připojení ke zdroji události reprezentovanému pomocí *punk*.
 
 ```
 HRESULT DispEventUnadvise(IUnknown* pUnk  const IID* piid);
@@ -165,27 +165,27 @@ HRESULT DispEventUnadvise(IUnknown* pUnk  const IID* piid);
 ### <a name="parameters"></a>Parametry
 
 *pUnk*<br/>
-[in] Ukazatel `IUnknown` rozhraní objektu zdroje událostí.
+pro Ukazatel na `IUnknown` rozhraní objektu zdroje událostí.
 
 *piid*<br/>
-Ukazatel na IID objektu zdroje událostí.
+Ukazatel na IID zdrojového objektu události.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Jakékoli neúspěchy hodnotu HRESULT nebo S_OK.
+Hodnota S_OK nebo jakákoli neúspěšná hodnota HRESULT.
 
 ### <a name="remarks"></a>Poznámky
 
-Po připojení bylo přerušeno, události již nebudou směrovány k funkcím obslužných rutin uvedených v mapě událostí jímky.
+Po přerušení připojení již události nebudou směrovány do funkcí obslužných rutin uvedených v mapě jímky událostí.
 
 > [!NOTE]
->  Pokud vaše třída odvozena z více `IDispEventSimpleImpl` třídy, musíte pro odstranění dvojznačnosti při volání této metody pomocí oborů volání s určité základní třídy se zajímáte.
+>  Pokud je vaše třída odvozena z `IDispEventSimpleImpl` více tříd, bude nutné nejednoznačnost volání této metody pomocí oboru volání konkrétní základní třídy, kterou vás zajímá.
 
-`DispEventAdvise` přestane fungovat připojení, které bylo vytvořeno podle zdroje události `pdiid`.
+`DispEventAdvise`zruší připojení, které bylo vytvořeno se zdrojem události zadaným v `pdiid`.
 
-##  <a name="getidsofnames"></a>  IDispEventSimpleImpl::GetIDsOfNames
+##  <a name="getidsofnames"></a>IDispEventSimpleImpl:: GetIDsOfNames
 
-Tato implementace `IDispatch::GetIDsOfNames` vrátí E_NOTIMPL.
+Tato implementace `IDispatch::GetIDsOfNames` Vrátí E_NOTIMPL.
 
 ```
 STDMETHOD(GetIDsOfNames)(
@@ -198,11 +198,11 @@ STDMETHOD(GetIDsOfNames)(
 
 ### <a name="remarks"></a>Poznámky
 
-Zobrazit [IDispatch::GetIDsOfNames](/windows/desktop/api/oaidl/nf-oaidl-idispatch-getidsofnames) ve Windows SDK.
+Viz [IDispatch:: GetIDsOfNames](/windows/win32/api/oaidl/nf-oaidl-idispatch-getidsofnames) ve Windows SDK.
 
 ##  <a name="gettypeinfo"></a>  IDispEventSimpleImpl::GetTypeInfo
 
-Tato implementace `IDispatch::GetTypeInfo` vrátí E_NOTIMPL.
+Tato implementace `IDispatch::GetTypeInfo` Vrátí E_NOTIMPL.
 
 ```
 STDMETHOD(GetTypeInfo)(
@@ -213,11 +213,11 @@ STDMETHOD(GetTypeInfo)(
 
 ### <a name="remarks"></a>Poznámky
 
-Zobrazit [IDispatch::GetTypeInfo](/windows/desktop/api/oaidl/nf-oaidl-idispatch-gettypeinfo) ve Windows SDK.
+Viz [IDispatch:: GetTypeInfo](/windows/win32/api/oaidl/nf-oaidl-idispatch-gettypeinfo) ve Windows SDK.
 
 ##  <a name="gettypeinfocount"></a>  IDispEventSimpleImpl::GetTypeInfoCount
 
-Tato implementace `IDispatch::GetTypeInfoCount` vrátí E_NOTIMPL.
+Tato implementace `IDispatch::GetTypeInfoCount` Vrátí E_NOTIMPL.
 
 ```
 STDMETHOD(GetTypeInfoCount)(UINT* /* pctinfo */);
@@ -225,11 +225,11 @@ STDMETHOD(GetTypeInfoCount)(UINT* /* pctinfo */);
 
 ### <a name="remarks"></a>Poznámky
 
-Zobrazit [IDispatch::GetTypeInfoCount](/windows/desktop/api/oaidl/nf-oaidl-idispatch-gettypeinfocount) ve Windows SDK.
+Viz [IDispatch:: GetTypeInfoCount](/windows/win32/api/oaidl/nf-oaidl-idispatch-gettypeinfocount) ve Windows SDK.
 
-##  <a name="invoke"></a>  IDispEventSimpleImpl::Invoke
+##  <a name="invoke"></a>IDispEventSimpleImpl:: Invoke
 
-Tato implementace `IDispatch::Invoke` volání obslužné rutiny událostí uvedený v případě mapy jímky.
+Tato implementace `IDispatch::Invoke` volá obslužné rutiny události uvedené v mapě jímky událostí.
 
 ```
 STDMETHOD(Invoke)(
@@ -245,11 +245,11 @@ STDMETHOD(Invoke)(
 
 ### <a name="remarks"></a>Poznámky
 
-Zobrazit [IDispatch::Invoke](/windows/desktop/api/oaidl/nf-oaidl-idispatch-invoke).
+Viz [IDispatch:: Invoke](/windows/win32/api/oaidl/nf-oaidl-idispatch-invoke).
 
-##  <a name="unadvise"></a>  IDispEventSimpleImpl::Unadvise
+##  <a name="unadvise"></a>IDispEventSimpleImpl:: Unadvise
 
-Zruší připojení ke zdroji události, která je reprezentována *pUnk*.
+Ukončí připojení ke zdroji události reprezentovanému pomocí *punk*.
 
 ```
 HRESULT Unadvise(IUnknown* pUnk);
@@ -258,22 +258,22 @@ HRESULT Unadvise(IUnknown* pUnk);
 ### <a name="parameters"></a>Parametry
 
 *pUnk*<br/>
-[in] Ukazatel `IUnknown` rozhraní objektu zdroje událostí.
+pro Ukazatel na `IUnknown` rozhraní objektu zdroje událostí.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Jakékoli neúspěchy hodnotu HRESULT nebo S_OK.
+Hodnota S_OK nebo jakákoli neúspěšná hodnota HRESULT.
 
 ### <a name="remarks"></a>Poznámky
 
-Po připojení bylo přerušeno, události již nebudou směrovány k funkcím obslužných rutin uvedených v mapě událostí jímky.
+Po přerušení připojení již události nebudou směrovány do funkcí obslužných rutin uvedených v mapě jímky událostí.
 
 > [!NOTE]
->  Pokud vaše třída odvozena z více `IDispEventSimpleImpl` třídy, musíte pro odstranění dvojznačnosti při volání této metody pomocí oborů volání s určité základní třídy se zajímáte.
+>  Pokud je vaše třída odvozena z `IDispEventSimpleImpl` více tříd, bude nutné nejednoznačnost volání této metody pomocí oboru volání konkrétní základní třídy, kterou vás zajímá.
 
-`Unadvise` zruší připojení, které bylo vytvořeno výchozí zdroj událostí podle `pdiid`.
+`Unadvise`zruší připojení, které bylo vytvořeno s výchozím zdrojem události zadaným v `pdiid`.
 
-`Unavise` zalomení a připojení ke zdroji události výchozí získá identifikátor IID výchozí zdroj události objektu podle [AtlGetObjectSourceInterface](composite-control-global-functions.md#atlgetobjectsourceinterface).
+`Unavise`zruší připojení s výchozím zdrojem událostí, získá IID výchozího zdroje události objektu, který určuje [AtlGetObjectSourceInterface](composite-control-global-functions.md#atlgetobjectsourceinterface).
 
 ## <a name="see-also"></a>Viz také:
 
@@ -281,4 +281,4 @@ Po připojení bylo přerušeno, události již nebudou směrovány k funkcím o
 [IDispatchImpl – třída](../../atl/reference/idispatchimpl-class.md)<br/>
 [IDispEventImpl – třída](../../atl/reference/idispeventimpl-class.md)<br/>
 [SINK_ENTRY_INFO](composite-control-macros.md#sink_entry_info)<br/>
-[Přehled tříd](../../atl/atl-class-overview.md)
+[Přehled třídy](../../atl/atl-class-overview.md)

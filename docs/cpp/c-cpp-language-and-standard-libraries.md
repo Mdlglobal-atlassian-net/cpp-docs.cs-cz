@@ -1,28 +1,78 @@
 ---
-title: Jazyk C/C++ a standardní knihovny
-ms.date: 11/04/2016
+title: Referenční dokumentaceC++ jazyka C/jazyk a standardní knihovny
+ms.date: 08/13/2019
 ms.assetid: c26a6682-961a-43ef-ad33-2adc612f69ac
-ms.openlocfilehash: d425d142b52b7d7a86e84a1dbbd648673223165a
-ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
+ms.openlocfilehash: c8a954702f8624537b110aa7e303fcb610387f57
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65708009"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69498775"
 ---
-# <a name="cc-language-and-standard-libraries"></a>Jazyk C/C++ a standardní knihovny
+# <a name="cc-language-and-standard-libraries-reference"></a>Referenční dokumentaceC++ jazyka C/jazyk a standardní knihovny
 
-Tato část dokumentace obsahuje pokyny a referenční obsah pro implementaci Microsoft normy ISO pro jazyky C a C++.
+Tato část dokumentace obsahuje referenční obsah pro Microsoft Implementation Standard C a a C++ jazyka ISO. Referenční dokumentace jazyka obsahuje dokumentaci pro preprocesor, vnitřní objekty kompilátoru a podporované jazyky sestavení.
+
+Také najdete dokumentaci ke knihovně modulu runtime jazyka C, C++ standardní knihovně a k několika dalším knihovnám, které jsou k dispozici vC++ jazyce Microsoft C/Compiler (MSVC).
+
+## <a name="language-reference"></a>Referenční dokumentace jazyka
+
+[Jazyk C](../c-language/c-language-reference.md)\
+Referenční obsah pro implementaci jazyka C od společnosti Microsoft.
+
+[C++Language](../cpp/cpp-language-reference.md)\
+Referenční obsah pro implementaci C++ jazyka od společnosti Microsoft.
+
+[C/C++ preprocesor](../preprocessor/c-cpp-preprocessor-reference.md)\
+Referenční obsah pro preprocesor používaný v jazyce C a C++.
+
+[Vnitřní objekty kompilátoru](../intrinsics/compiler-intrinsics.md)\
+Popisuje vnitřní funkce, které jsou k dispozici v C++ Microsoft C a pro architektury x86, ARM, ARM64 a x64.
+
+[Vložený Assembler](../assembler/inline/inline-assembler.md)\
+Popisuje způsob použití inline assembleru Visual C/C++ u procesorů x86.
+
+[Referenční dokumentace assembleru ARM](../assembler/arm/arm-assembler-reference.md)\
+Poskytuje referenční materiál pro Microsoft ARM Assembler (ARMASM) a související nástroje.
+
+[Microsoft Macro Assembler – referenční dokumentace](../assembler/masm/microsoft-macro-assembler-reference.md)\
+Poskytuje referenční materiál pro Microsoft Macro Assembler (MASM).
+
+## <a name="libraries-reference"></a>Referenční dokumentace knihoven
+
+### <a name="standard-libraries"></a>Standardní knihovny
+
+[Běhová knihovna jazyka C](../c-runtime-library/c-run-time-library-reference.md)\
+Odkaz na implementaci knihovny prostředí runtime jazyka C (CRT) od společnosti Microsoft, někdy označované jako Universal CRT.
+
+[C++Standardní knihovna](../standard-library/cpp-standard-library-reference.md)\
+Odkaz na implementaci C++ standardní knihovny od společnosti Microsoft.
+
+### <a name="libraries-for-windows-applications"></a>Knihovny pro aplikace systému Windows
+
+[MFC/ATL](../mfc/mfc-and-atl.md)\
+Dokumentace pro knihovny tříd knihovny MFC (Microsoft Foundation Classes) a knihovny ATL (Active Template Library).
+
+### <a name="additional-libraries"></a>Další knihovny
+
+[C++AMP (C++ urychlení obrovských paralelismu)](../parallel/amp/cpp-amp-cpp-accelerated-massive-parallelism.md)\
+Třídy, které umožňují použití moderních grafických procesorů pro účely programování pro obecné účely.
+
+[Concurrency Runtime](../parallel/concrt/concurrency-runtime.md)\
+Třídy, které zjednodušují psaní programů, které používají datové paralelismuy nebo paralelismus Task.
+
+[OpenMP](../parallel/openmp/openmp-in-visual-cpp.md)\
+Referenční informace k implementaci rozhraní OpenMP API od Microsoftu
+
+[SafeInt – knihovna](../safeint/safeint-library.md)\
+Přenosná knihovna, která se dá použít s MSVC, RSZ nebo Clang, aby se předešlo přetečení celých čísel.
+
+[Knihovny pro přístup k datům](../data/data-access-in-cpp.md) Knihovny pro podporu přístupu k datům pomocí knihovny ATL nebo MFC a starších služeb, jako jsou OLE DB a ODBC.
 
 ## <a name="related-articles"></a>Související články
 
-|Název|Popis|
-|-----------|-----------------|
-|[C++ vás vítá zpět](../cpp/welcome-back-to-cpp-modern-cpp.md)|Popisuje moderní programovací idiomy v jazyce C++ a osvědčené postupy.|
-|[Referenční dokumentace jazyka C++](../cpp/cpp-language-reference.md)|Referenční obsah pro jazyky C++.|
-|[Standardní knihovna C++](../standard-library/cpp-standard-library-reference.md)|Referenční obsah pro implementaci standardní knihovny C++ společnosti Microsoft.|
-|[Referenční dokumentace jazyka C](../c-language/c-language-reference.md)|Referenční obsah pro implementaci jazyka C společnosti Microsoft.|
-|[Referenční dokumentace knihovny CRT](../c-runtime-library/c-run-time-library-reference.md)|Referenční obsah pro implementaci Microsoft C Runtime (CRT).|
-|[SafeInt – knihovna](../safeint/safeint-library.md)|Referenční obsah pro přenosnou knihovnu funkcí, které zpracovávají celá čísla bez rizika přetečení.|
-|[C++ v sadě Visual Studio](../overview/visual-cpp-in-visual-studio.md)|Popisuje klíčové funkce C++ v sadě Visual Studio a odkazy na ostatní sady Visual Studio C++ dokumentaci.|
-|[Přehled o vývoji v jazyce C++ v sadě Visual Studio](../overview/overview-of-cpp-development.md)|Odkazy na další články, které obsahují informace o tom, jak pomocí sady Visual Studio a jeho souvisejících nástrojů k vytvoření, sestavení a nasazení aplikací v jazyce C++.|
-|[Co je nového v aplikaci Visual C++](../overview/what-s-new-for-visual-cpp-in-visual-studio.md)|Popisuje nové funkce a vylepšení v této verzi.|
+[Prostředí Windows Runtime (WinRT) sC++](/windows/uwp/cpp-and-winrt-apis/index)\
+C++/WinRT je zcela standardní moderní projekce jazyka C++ 17 pro rozhraní API pro prostředí Windows Runtime (WinRT), která je implementovaná jako knihovna založená na hlavičkovém souboru.
+
+[Knihovna C++ šablon prostředí Windows Runtime (WRL)](../cppcx/wrl/windows-runtime-cpp-template-library-wrl.md)\
+Starší šablona knihovny pro prostředí Windows Runtime, kterou nahrazuje C++/WinRT.

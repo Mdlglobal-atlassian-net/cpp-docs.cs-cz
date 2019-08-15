@@ -1,5 +1,5 @@
 ---
-title: Catlmodule – třída
+title: CAtlModule – třída
 ms.date: 11/04/2016
 f1_keywords:
 - CAtlModule
@@ -20,16 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - CAtlModule class
 ms.assetid: 63fe02f1-4c4b-4e7c-ae97-7ad7b4252415
-ms.openlocfilehash: f01734d4ec9de323325dc793756f421388542ef2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 798e94aed3bbd98108866ce0a1810485bd68699b
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62247000"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69497751"
 ---
-# <a name="catlmodule-class"></a>Catlmodule – třída
+# <a name="catlmodule-class"></a>CAtlModule – třída
 
-Tato třída poskytuje metody používané v několika ATL – třídy modulů.
+Tato třída poskytuje metody používané několika třídami modulů ATL.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -41,40 +41,40 @@ class ATL_NO_VTABLE CAtlModule : public _ATL_MODULE
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CAtlModule::CAtlModule](#catlmodule)|Konstruktor|
 |[CAtlModule::~CAtlModule](#dtor)|Destruktor.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
-|[CAtlModule::AddCommonRGSReplacements](#addcommonrgsreplacements)|Potlačí tuto metodu za účelem přidání parametrů do mapy nahrazení komponenta knihovny ATL registru (Registrar).|
-|[CAtlModule::AddTermFunc](#addtermfunc)|Přidá novou funkci, která se má volat při ukončení modulu.|
-|[CAtlModule::GetGITPtr](#getgitptr)|Vrátí ukazatel rozhraní globální.|
-|[CAtlModule::GetLockCount](#getlockcount)|Vrací počet zámků.|
-|[CAtlModule::Lock](#lock)|Zvýší počet zámků.|
-|[CAtlModule::Term](#term)|Uvolní všechny datové členy.|
-|[CAtlModule::Unlock](#unlock)|Dekrementuje počet zámků.|
-|[CAtlModule::UpdateRegistryFromResourceD](#updateregistryfromresourced)|Spustí skript, které jsou obsaženy v určený prostředek k registraci nebo zrušení registrace objektu.|
-|[CAtlModule::UpdateRegistryFromResourceDHelper](#updateregistryfromresourcedhelper)|Tato metoda je volána metodou `UpdateRegistryFromResourceD` a proveďte aktualizaci registru.|
-|[CAtlModule::UpdateRegistryFromResourceS](#updateregistryfromresources)|Spustí skript, které jsou obsaženy v určený prostředek k registraci nebo zrušení registrace objektu. Tato metoda staticky odkazuje na komponentu ATL registru.|
+|[CAtlModule::AddCommonRGSReplacements](#addcommonrgsreplacements)|Tuto metodu přepište, pokud chcete přidat parametry do náhradní mapy komponenty registru ATL (registrátor).|
+|[CAtlModule::AddTermFunc](#addtermfunc)|Přidá novou funkci, která bude volána, když se modul ukončí.|
+|[CAtlModule::GetGITPtr](#getgitptr)|Vrátí ukazatel globálního rozhraní.|
+|[CAtlModule::GetLockCount](#getlockcount)|Vrátí počet zámků.|
+|[CAtlModule:: Lock](#lock)|Zvýší počet zámků.|
+|[CAtlModule:: Term](#term)|Uvolní všechny datové členy.|
+|[CAtlModule:: Unlock](#unlock)|Sníží počet zámků.|
+|[CAtlModule::UpdateRegistryFromResourceD](#updateregistryfromresourced)|Spustí skript obsažený v zadaném prostředku k registraci nebo zrušení registrace objektu.|
+|[CAtlModule::UpdateRegistryFromResourceDHelper](#updateregistryfromresourcedhelper)|Tato metoda je volána nástrojem `UpdateRegistryFromResourceD` k provedení aktualizace registru.|
+|[CAtlModule::UpdateRegistryFromResourceS](#updateregistryfromresources)|Spustí skript obsažený v zadaném prostředku k registraci nebo zrušení registrace objektu. Tato metoda staticky odkazuje na komponentu registru ATL.|
 
 ### <a name="public-data-members"></a>Veřejné datové členy
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CAtlModule::m_libid](#m_libid)|Obsahuje identifikátor GUID aktuálního modulu.|
-|[CAtlModule::m_pGIT](#m_pgit)|Ukazatel na tabulky globálního rozhraní.|
+|[CAtlModule::m_pGIT](#m_pgit)|Ukazatel na tabulku globálních rozhraní.|
 
 ## <a name="remarks"></a>Poznámky
 
-Tato třída používá [catldllmodulet – třída](../../atl/reference/catldllmodulet-class.md), [catlexemodulet – třída](../../atl/reference/catlexemodulet-class.md), a [catlservicemodulet – třída](../../atl/reference/catlservicemodulet-class.md) a poskytuje podporu pro aplikace, knihovny DLL, EXE aplikace, a Windows services, v uvedeném pořadí.
+Tato třída je používána třídou [CAtlDllModuleT](../../atl/reference/catldllmodulet-class.md)třídy, třídy [CAtlExeModuleT](../../atl/reference/catlexemodulet-class.md)a [CAtlServiceModuleT](../../atl/reference/catlservicemodulet-class.md) pro poskytování podpory pro aplikace knihoven DLL, aplikace exe a služby systému Windows v uvedeném pořadí.
 
-Další informace o modulech v ATL naleznete v tématu [ATL – třídy modulů](../../atl/atl-module-classes.md).
+Další informace o modulech v knihovně ATL naleznete v tématu [třídy modulů ATL](../../atl/atl-module-classes.md).
 
-Nahradí tato třída zastaralá [ccommodule – třída](../../atl/reference/ccommodule-class.md) použité v dřívějších verzích ATL.
+Tato třída nahrazuje zastaralou [třídu CComModule](../../atl/reference/ccommodule-class.md) , která se používá v dřívějších verzích knihovny ATL.
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
@@ -84,11 +84,11 @@ Nahradí tato třída zastaralá [ccommodule – třída](../../atl/reference/cc
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** atlbase.h
+**Záhlaví:** atlbase. h
 
-##  <a name="addcommonrgsreplacements"></a>  CAtlModule::AddCommonRGSReplacements
+##  <a name="addcommonrgsreplacements"></a>CAtlModule::AddCommonRGSReplacements
 
-Potlačí tuto metodu za účelem přidání parametrů do mapy nahrazení komponenta knihovny ATL registru (Registrar).
+Tuto metodu přepište, pokud chcete přidat parametry do náhradní mapy komponenty registru ATL (registrátor).
 
 ```
 virtual HRESULT AddCommonRGSReplacements(IRegistrarBase* /* pRegistrar*/) throw() = 0;
@@ -97,7 +97,7 @@ virtual HRESULT AddCommonRGSReplacements(IRegistrarBase* /* pRegistrar*/) throw(
 ### <a name="parameters"></a>Parametry
 
 *pRegistrar*<br/>
-Vyhrazená.
+Rezervovaný.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -105,13 +105,13 @@ Vrátí hodnotu S_OK při úspěchu nebo chybu HRESULT při selhání.
 
 ### <a name="remarks"></a>Poznámky
 
-Nahraditelné parametry umožňují klienta vašeho registrátora zadání dat za běhu. K tomuto účelu udržuje doménový Registrátor nahrazení mapování, do kterého se zadá hodnoty přidružené k nahraditelné parametry ve skriptu. Doménový Registrátor provede tyto položky v době běhu.
+Nahraditelný parametr umožňuje klientovi registrátora zadat data za běhu. V tomto případě registrátor udržuje náhradní mapu, do které vstoupí do hodnot přidružených k nahraditelným parametrům ve vašem skriptu. Registrátor provede tyto položky v době běhu.
 
-Naleznete v tématu [použití nahraditelných parametrů (preprocesor The registrátoru)](../../atl/using-replaceable-parameters-the-registrar-s-preprocessor.md) další podrobnosti.
+Další podrobnosti najdete v tématu [Použití nahraditelných parametrů (preprocesor registrátora)](../../atl/using-replaceable-parameters-the-registrar-s-preprocessor.md) .
 
-##  <a name="addtermfunc"></a>  CAtlModule::AddTermFunc
+##  <a name="addtermfunc"></a>CAtlModule::AddTermFunc
 
-Přidá novou funkci, která se má volat při ukončení modulu.
+Přidá novou funkci, která bude volána, když se modul ukončí.
 
 ```
 HRESULT AddTermFunc(_ATL_TERMFUNC* pFunc, DWORD_PTR dw) throw();
@@ -120,16 +120,16 @@ HRESULT AddTermFunc(_ATL_TERMFUNC* pFunc, DWORD_PTR dw) throw();
 ### <a name="parameters"></a>Parametry
 
 *pFunc*<br/>
-Ukazatel na funkci přidat.
+Ukazatel na funkci, kterou chcete přidat.
 
 *dw*<br/>
-Uživatelem definované datové předána funkci.
+Data definovaná uživatelem, která jsou předána do funkce.
 
 ### <a name="return-value"></a>Návratová hodnota
 
 Vrátí hodnotu S_OK při úspěchu nebo chybu HRESULT při selhání.
 
-##  <a name="catlmodule"></a>  CAtlModule::CAtlModule
+##  <a name="catlmodule"></a>CAtlModule::CAtlModule
 
 Konstruktor
 
@@ -139,9 +139,9 @@ CAtlModule() throw();
 
 ### <a name="remarks"></a>Poznámky
 
-Inicializuje datové členy a zahájí kritický oddíl kolem vlákna modulu.
+Inicializuje datové členy a inicializuje kritickou část kolem vlákna modulu.
 
-##  <a name="dtor"></a>  Catlmodule –:: ~ catlmodule –
+##  <a name="dtor"></a>CAtlModule:: ~ CAtlModule
 
 Destruktor.
 
@@ -153,9 +153,9 @@ Destruktor.
 
 Uvolní všechny datové členy.
 
-##  <a name="getgitptr"></a>  CAtlModule::GetGITPtr
+##  <a name="getgitptr"></a>CAtlModule::GetGITPtr
 
-Načte ukazatel na Global Interface Table.
+Načte ukazatel na globální tabulku rozhraní.
 
 ```
 virtual HRESULT GetGITPtr(IGlobalInterfaceTable** ppGIT) throw();
@@ -164,23 +164,23 @@ virtual HRESULT GetGITPtr(IGlobalInterfaceTable** ppGIT) throw();
 ### <a name="parameters"></a>Parametry
 
 *ppGIT*<br/>
-Ukazatel na proměnnou, která se zobrazí ukazatel na Global Interface Table.
+Ukazatel na proměnnou, která získá ukazatel na globální tabulku rozhraní.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vrátí hodnotu S_OK při úspěchu nebo při selhání kód chyby. E_POINTER je vrácena, jestliže *ppGIT* je rovna hodnotě NULL.
+Vrátí hodnotu S_OK při úspěchu nebo chybový kód při selhání. E_POINTER se vrátí, pokud je *ppGIT* rovno null.
 
 ### <a name="remarks"></a>Poznámky
 
-Pokud objekt Global Interface Table neexistuje, je vytvořen a její adresa je uložen v proměnné člena [CAtlModule::m_pGIT](#m_pgit).
+Pokud objekt tabulky globálního rozhraní neexistuje, je vytvořen a jeho adresa je uložena v členské proměnné [CAtlModule:: m_pGIT](#m_pgit).
 
-V sestavení ladění, dojde k chybě kontrolního výrazu Pokud *ppGIT* je rovna hodnotě NULL, nebo pokud ukazatel Global Interface Table nelze získat.
+V ladicích sestaveních dojde k chybě kontrolního výrazu, pokud je *ppGIT* ROVNO hodnotě null nebo pokud nelze získat ukazatel globální tabulky rozhraní.
 
-Zobrazit [IGlobalInterfaceTable](/windows/desktop/api/objidl/nn-objidl-iglobalinterfacetable) informace o globální tabulku rozhraní.
+Informace o globální tabulce rozhraní naleznete v tématu [IGlobalInterfaceTable](/windows/win32/api/objidl/nn-objidl-iglobalinterfacetable) .
 
-##  <a name="getlockcount"></a>  CAtlModule::GetLockCount
+##  <a name="getlockcount"></a>CAtlModule::GetLockCount
 
-Vrací počet zámků.
+Vrátí počet zámků.
 
 ```
 virtual LONG GetLockCount() throw();
@@ -188,9 +188,9 @@ virtual LONG GetLockCount() throw();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vrací počet zámků. Tato hodnota může být užitečné pro diagnostiku a ladění.
+Vrátí počet zámků. Tato hodnota může být užitečná pro diagnostiku a ladění.
 
-##  <a name="lock"></a>  CAtlModule::Lock
+##  <a name="lock"></a>CAtlModule:: Lock
 
 Zvýší počet zámků.
 
@@ -200,9 +200,9 @@ virtual LONG Lock() throw();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Zvýší počet zámků a vrátí aktualizovanou hodnotu. Tato hodnota může být užitečné pro diagnostiku a ladění.
+Zvýší počet zámků a vrátí aktualizovanou hodnotu. Tato hodnota může být užitečná pro diagnostiku a ladění.
 
-##  <a name="m_libid"></a>  CAtlModule::m_libid
+##  <a name="m_libid"></a>CAtlModule::m_libid
 
 Obsahuje identifikátor GUID aktuálního modulu.
 
@@ -210,15 +210,15 @@ Obsahuje identifikátor GUID aktuálního modulu.
 static GUID m_libid;
 ```
 
-##  <a name="m_pgit"></a>  CAtlModule::m_pGIT
+##  <a name="m_pgit"></a>CAtlModule::m_pGIT
 
-Ukazatel na tabulky globálního rozhraní.
+Ukazatel na tabulku globálních rozhraní.
 
 ```
 IGlobalInterfaceTable* m_pGIT;
 ```
 
-##  <a name="term"></a>  CAtlModule::Term
+##  <a name="term"></a>CAtlModule:: Term
 
 Uvolní všechny datové členy.
 
@@ -228,11 +228,11 @@ void Term() throw();
 
 ### <a name="remarks"></a>Poznámky
 
-Uvolní všechny datové členy. Tato metoda je volán destruktor.
+Uvolní všechny datové členy. Tato metoda je volána destruktorem.
 
-##  <a name="unlock"></a>  CAtlModule::Unlock
+##  <a name="unlock"></a>CAtlModule:: Unlock
 
-Dekrementuje počet zámků.
+Sníží počet zámků.
 
 ```
 virtual LONG Unlock() throw();
@@ -240,11 +240,11 @@ virtual LONG Unlock() throw();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Dekrementuje počet zámků a vrátí aktualizovanou hodnotu. Tato hodnota může být užitečné pro diagnostiku a ladění.
+Sníží počet zámků a vrátí aktualizovanou hodnotu. Tato hodnota může být užitečná pro diagnostiku a ladění.
 
-##  <a name="updateregistryfromresourced"></a>  CAtlModule::UpdateRegistryFromResourceD
+##  <a name="updateregistryfromresourced"></a>CAtlModule::UpdateRegistryFromResourceD
 
-Spustí skript, které jsou obsaženy v určený prostředek k registraci nebo zrušení registrace objektu.
+Spustí skript obsažený v zadaném prostředku k registraci nebo zrušení registrace objektu.
 
 ```
 HRESULT WINAPI UpdateRegistryFromResourceD(
@@ -267,10 +267,10 @@ Název prostředku.
 ID prostředku.
 
 *bRegister*<br/>
-Hodnota TRUE, pokud by měl být zaregistrován objekt; FALSE v opačném případě.
+TRUE, pokud by měl být objekt zaregistrován; V opačném případě NEPRAVDA.
 
 *pMapEntries*<br/>
-Ukazatel na náhradní mapy ukládání hodnot, které jsou přidružené k nahraditelné parametry skriptu. ATL – automaticky používá modul %. Použití dalších nahraditelných parametrů naleznete v části [CAtlModule::AddCommonRGSReplacements](#addcommonrgsreplacements). Jinak použijte výchozí hodnotu NULL.
+Ukazatel na náhradní mapu ukládá hodnoty přidružené k nahraditelným parametrům skriptu. ATL automaticky používá% MODULE%. Chcete-li použít další nahraditelný parametr, přečtěte si téma [CAtlModule:: AddCommonRGSReplacements](#addcommonrgsreplacements). V opačném případě použijte výchozí hodnotu NULL.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -278,15 +278,15 @@ Vrátí hodnotu S_OK při úspěchu nebo chybu HRESULT při selhání.
 
 ### <a name="remarks"></a>Poznámky
 
-Spustí skript obsažené v prostředku zadaného parametrem *lpszRes nebo nResID*. Pokud *bRegister* má hodnotu TRUE, tato metoda registruje v systémovém registru objektu; v opačném případě se odebere objekt z registru.
+Spustí skript obsažený v prostředku určeném parametrem *lpszRes nebo nResID*. Pokud má *bRegister* hodnotu true, tato metoda registruje objekt v registru systému. v opačném případě Odebere objekt z registru.
 
-Staticky propojit komponenta knihovny ATL registru (Registrar), najdete v článku [CAtlModule::UpdateRegistryFromResourceS](#updateregistryfromresources).
+Chcete-li staticky propojit komponentu registru knihovny ATL (registrátor), přečtěte si téma [CAtlModule:: UpdateRegistryFromResourceS](#updateregistryfromresources).
 
-Tato metoda volá [CAtlModule::UpdateRegistryFromResourceDHelper](#updateregistryfromresourcedhelper) a [IRegistrar::ResourceUnregister](iregistrar-class.md#resourceunregister).
+Tato metoda volá [CAtlModule:: UpdateRegistryFromResourceDHelper](#updateregistryfromresourcedhelper) a [IRegistrar:: ResourceUnregister](iregistrar-class.md#resourceunregister).
 
-##  <a name="updateregistryfromresourcedhelper"></a>  CAtlModule::UpdateRegistryFromResourceDHelper
+##  <a name="updateregistryfromresourcedhelper"></a>CAtlModule::UpdateRegistryFromResourceDHelper
 
-Tato metoda je volána metodou `UpdateRegistryFromResourceD` a proveďte aktualizaci registru.
+Tato metoda je volána nástrojem `UpdateRegistryFromResourceD` k provedení aktualizace registru.
 
 ```
 inline HRESULT WINAPI UpdateRegistryFromResourceDHelper(
@@ -301,10 +301,10 @@ inline HRESULT WINAPI UpdateRegistryFromResourceDHelper(
 Název prostředku.
 
 *bRegister*<br/>
-Určuje, zda by měly být zaregistrovány objektu.
+Určuje, zda má být objekt zaregistrován.
 
 *pMapEntries*<br/>
-Ukazatel na náhradní mapy ukládání hodnot, které jsou přidružené k nahraditelné parametry skriptu. ATL – automaticky používá modul %. Použití dalších nahraditelných parametrů naleznete v části [CAtlModule::AddCommonRGSReplacements](#addcommonrgsreplacements). Jinak použijte výchozí hodnotu NULL.
+Ukazatel na náhradní mapu ukládá hodnoty přidružené k nahraditelným parametrům skriptu. ATL automaticky používá% MODULE%. Chcete-li použít další nahraditelný parametr, přečtěte si téma [CAtlModule:: AddCommonRGSReplacements](#addcommonrgsreplacements). V opačném případě použijte výchozí hodnotu NULL.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -312,11 +312,11 @@ Vrátí hodnotu S_OK při úspěchu nebo chybu HRESULT při selhání.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato metoda poskytuje implementaci [CAtlModule::UpdateRegistryFromResourceD](#updateregistryfromresourced).
+Tato metoda poskytuje implementaci [CAtlModule:: UpdateRegistryFromResourceD](#updateregistryfromresourced).
 
-##  <a name="updateregistryfromresources"></a>  CAtlModule::UpdateRegistryFromResourceS
+##  <a name="updateregistryfromresources"></a>CAtlModule::UpdateRegistryFromResourceS
 
-Spustí skript, které jsou obsaženy v určený prostředek k registraci nebo zrušení registrace objektu. Tato metoda staticky odkazuje na komponentu ATL registru.
+Spustí skript obsažený v zadaném prostředku k registraci nebo zrušení registrace objektu. Tato metoda staticky odkazuje na komponentu registru ATL.
 
 ```
 HRESULT WINAPI UpdateRegistryFromResourceS(
@@ -339,10 +339,10 @@ ID prostředku.
 Název prostředku.
 
 *bRegister*<br/>
-Určuje, zda by měly být zaregistrovány skript prostředků.
+Určuje, zda má být zaregistrován skript prostředků.
 
 *pMapEntries*<br/>
-Ukazatel na náhradní mapy ukládání hodnot, které jsou přidružené k nahraditelné parametry skriptu. ATL – automaticky používá modul %. Použití dalších nahraditelných parametrů naleznete v části [CAtlModule::AddCommonRGSReplacements](#addcommonrgsreplacements). Jinak použijte výchozí hodnotu NULL.
+Ukazatel na náhradní mapu ukládá hodnoty přidružené k nahraditelným parametrům skriptu. ATL automaticky používá% MODULE%. Chcete-li použít další nahraditelný parametr, přečtěte si téma [CAtlModule:: AddCommonRGSReplacements](#addcommonrgsreplacements). V opačném případě použijte výchozí hodnotu NULL.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -350,11 +350,11 @@ Vrátí hodnotu S_OK při úspěchu nebo chybu HRESULT při selhání.
 
 ### <a name="remarks"></a>Poznámky
 
-Podobně jako [CAtlModule::UpdateRegistryFromResourceD](#updateregistryfromresourced) s výjimkou `CAtlModule::UpdateRegistryFromResourceS` vytvoří statický odkaz na komponentu ATL registru (Registrar).
+Podobně jako [CAtlModule:: UpdateRegistryFromResourceD](#updateregistryfromresourced) s `CAtlModule::UpdateRegistryFromResourceS` tím rozdílem, že vytvoří statický odkaz na komponentu registru ATL (registrátor).
 
 ## <a name="see-also"></a>Viz také:
 
 [_ATL_MODULE](atl-typedefs.md#_atl_module)<br/>
-[Přehled tříd](../../atl/atl-class-overview.md)<br/>
+[Přehled třídy](../../atl/atl-class-overview.md)<br/>
 [Třídy modulů](../../atl/atl-module-classes.md)<br/>
-[Komponenta registru (Registrar)](../../atl/atl-registry-component-registrar.md)
+[Součást registru (registrátor)](../../atl/atl-registry-component-registrar.md)

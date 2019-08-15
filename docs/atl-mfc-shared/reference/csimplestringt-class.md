@@ -1,5 +1,5 @@
 ---
-title: Csimplestringt – třída
+title: CSimpleStringT – třída
 ms.date: 10/18/2018
 f1_keywords:
 - CSimpleStringT
@@ -36,16 +36,16 @@ helpviewer_keywords:
 - strings [C++], ATL class
 - CSimpleStringT class
 ms.assetid: 15814fcb-5b8f-4425-a97e-3b61fc9b48d8
-ms.openlocfilehash: 1ec28ed5b2f5428cabcf7570c7ac53904e9a64f0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c033346b7a687a1c6778ad23e30ee0e73c787ad8
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62252631"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69491449"
 ---
-# <a name="csimplestringt-class"></a>Csimplestringt – třída
+# <a name="csimplestringt-class"></a>CSimpleStringT – třída
 
-Tato třída reprezentuje `CSimpleStringT` objektu.
+Tato třída reprezentuje `CSimpleStringT` objekt.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -57,9 +57,9 @@ class CSimpleStringT
 ### <a name="parameters"></a>Parametry
 
 *BaseType*<br/>
-Znakový typ třída string. Může být jedna z následujících akcí:
+Typ znaku řetězcové třídy. Může být jedna z následujících akcí:
 
-- **Char** (pro řetězce znaků ANSI).
+- **znak** (pro řetězce znaků ANSI).
 
 - **wchar_t** (pro řetězce znaků Unicode).
 
@@ -67,69 +67,69 @@ Znakový typ třída string. Může být jedna z následujících akcí:
 
 ## <a name="members"></a>Členové
 
-### <a name="public-typedefs"></a>Veřejné definice TypeDef
+### <a name="public-typedefs"></a>Veřejné definice typedef
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
-|[CSimpleStringT::PCXSTR](#pcxstr)|Ukazatel na konstanty typu řetězec.|
-|[CSimpleStringT::PXSTR](#pxstr)|Ukazatel na řetězec.|
+|[CSimpleStringT::P CXSTR](#pcxstr)|Ukazatel na konstantní řetězec.|
+|[CSimpleStringT::P XSTR](#pxstr)|Ukazatel na řetězec.|
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
-|[CSimpleStringT::CSimpleStringT](#ctor)|Vytvoří `CSimpleStringT` objekty různými způsoby.|
+|[CSimpleStringT::CSimpleStringT](#ctor)|Sestaví `CSimpleStringT` objekty různými způsoby.|
 |[CSimpleStringT::~CSimpleStringT](#dtor)|Destruktor.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
-|[CSimpleStringT::Append](#append)|Připojí `CSimpleStringT` objektu do existujícího `CSimpleStringT` objektu.|
-|[CSimpleStringT::AppendChar](#appendchar)|Přidá znak do existujícího `CSimpleStringT` objektu.|
+|[CSimpleStringT:: Append](#append)|Připojí objekt k existujícímu `CSimpleStringT`objektu. `CSimpleStringT`|
+|[CSimpleStringT::AppendChar](#appendchar)|Připojí znak k existujícímu `CSimpleStringT` objektu.|
 |[CSimpleStringT::CopyChars](#copychars)|Zkopíruje znak nebo znaky do jiného řetězce.|
-|[CSimpleStringT::CopyCharsOverlapped](#copycharsoverlapped)|Zkopíruje znak nebo znaky do jiného řetězce, ve které se překrývají vyrovnávací paměti.|
-|[CSimpleStringT::Empty](#empty)|Způsobí, že řetězec má nulovou délku.|
-|[CSimpleStringT::FreeExtra](#freeextra)|Uvolní všechny další paměť přidělenou dříve metodou na objekt řetězce.|
-|[CSimpleStringT::GetAllocLength](#getalloclength)|Načte přidělené délku `CSimpleStringT` objektu.|
+|[CSimpleStringT::CopyCharsOverlapped](#copycharsoverlapped)|Zkopíruje znak nebo znaky do jiného řetězce, ve kterém se překrývají vyrovnávací paměti.|
+|[CSimpleStringT:: Empty](#empty)|Vynutí, aby měl řetězec nulovou délku.|
+|[CSimpleStringT::FreeExtra](#freeextra)|Uvolní všechny nadbytečné paměti dříve přidělené objektem řetězce.|
+|[CSimpleStringT::GetAllocLength](#getalloclength)|Načte přidělenou délku `CSimpleStringT` objektu.|
 |[CSimpleStringT::GetAt](#getat)|Vrátí znak na dané pozici.|
-|[CSimpleStringT::GetBuffer](#getbuffer)|Vrací ukazatel na znaky v `CSimpleStringT`.|
-|[CSimpleStringT::GetBufferSetLength](#getbuffersetlength)|Vrací ukazatel na znaky v `CSimpleStringT`, zkrátí se na zadanou délku.|
-|[CSimpleStringT::GetLength](#getlength)|Vrátí počet znaků `CSimpleStringT` objektu.|
-|[CSimpleStringT::GetManager](#getmanager)|Získá správce paměti `CSimpleStringT` objektu.|
-|[CSimpleStringT::GetString](#getstring)|Načte řetězec znaků|
-|[CSimpleStringT::IsEmpty](#isempty)|Testy, jestli `CSimpleStringT` objekt neobsahuje žádné znaky.|
-|[CSimpleStringT::LockBuffer](#lockbuffer)|Zakáže počítání odkazů a chrání data řetězec ve vyrovnávací paměti.|
-|[CSimpleStringT::Preallocate](#preallocate)|Určitou velikostí paměti přidělí vyrovnávací paměti pro znaky.|
-|[CSimpleStringT::ReleaseBuffer](#releasebuffer)|Verze ovládacího prvku vyrovnávací paměti pro vrácený `GetBuffer`.|
-|[CSimpleStringT::ReleaseBufferSetLength](#releasebuffersetlength)|Verze ovládacího prvku vyrovnávací paměti pro vrácený `GetBuffer`.|
+|[CSimpleStringT::GetBuffer](#getbuffer)|Vrátí ukazatel na znaky v `CSimpleStringT`.|
+|[CSimpleStringT::GetBufferSetLength](#getbuffersetlength)|Vrátí ukazatel na znaky v a `CSimpleStringT`zkrácení na zadanou délku.|
+|[CSimpleStringT:: GetLength](#getlength)|Vrátí počet znaků v `CSimpleStringT` objektu.|
+|[CSimpleStringT::GetManager](#getmanager)|Načte správce `CSimpleStringT` paměti objektu.|
+|[CSimpleStringT:: GetString](#getstring)|Načte řetězec znaků.|
+|[CSimpleStringT::IsEmpty](#isempty)|Testuje, zda `CSimpleStringT` objekt neobsahuje žádné znaky.|
+|[CSimpleStringT::LockBuffer](#lockbuffer)|Zakáže počítání odkazů a chrání řetězec ve vyrovnávací paměti.|
+|[CSimpleStringT::P znovu přidělit](#preallocate)|Přidělí konkrétní velikost paměti pro vyrovnávací paměť znaků.|
+|[CSimpleStringT::ReleaseBuffer](#releasebuffer)|Uvolňuje kontrolu nad vyrovnávací pamětí `GetBuffer`vrácenou.|
+|[CSimpleStringT::ReleaseBufferSetLength](#releasebuffersetlength)|Uvolňuje kontrolu nad vyrovnávací pamětí `GetBuffer`vrácenou.|
 |[CSimpleStringT::SetAt](#setat)|Nastaví znak na dané pozici.|
-|[CSimpleStringT::SetManager](#setmanager)|Nastaví správce paměti `CSimpleStringT` objektu.|
-|[CSimpleStringT::SetString](#setstring)|Nastaví řetězec `CSimpleStringT` objektu.|
+|[CSimpleStringT::SetManager](#setmanager)|Nastaví správce `CSimpleStringT` paměti objektu.|
+|[CSimpleStringT:: SetString](#setstring)|Nastaví řetězec `CSimpleStringT` objektu.|
 |[CSimpleStringT::StringLength](#stringlength)|Vrátí počet znaků v zadaném řetězci.|
-|[CSimpleStringT::Truncate](#truncate)|Zkrátí řetězec, který má zadané délky.|
-|[CSimpleStringT::UnlockBuffer](#unlockbuffer)|Umožňuje počítání odkazů a uvolní řetězec ve vyrovnávací paměti.|
+|[CSimpleStringT:: zkrátit](#truncate)|Zkrátí řetězec na zadanou délku.|
+|[CSimpleStringT::UnlockBuffer](#unlockbuffer)|Povoluje počítání odkazů a uvolňuje řetězec ve vyrovnávací paměti.|
 
 ### <a name="public-operators"></a>Veřejné operátory
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
-|[CSimpleStringT::operator PCXSTR](#operator_pcxstr)|Přímý přístup k znaků uložených v `CSimpleStringT` objektu jako řetězec stylu C.|
-|[CSimpleStringT::operator\[\]](#operator_at)|Vrátí znak na dané pozici – operátor nahrazení pro `GetAt`.|
-|[CSimpleStringT::operator +=](#operator_add_eq)|Zřetězí nový řetězec na konci existujícího řetězce.|
-|[CSimpleStringT::operator =](#operator_eq)|Přiřadí novou hodnotu `CSimpleStringT` objektu.|
+|[CSimpleStringT:: operator PCXSTR](#operator_pcxstr)|Přímo přistupuje ke znakům uloženým `CSimpleStringT` v objektu jako řetězec ve stylu jazyka C.|
+|[CSimpleStringT:: operator\[\]](#operator_at)|Vrátí znak na dané pozici – nahrazení operátoru pro `GetAt`.|
+|[CSimpleStringT:: operator + =](#operator_add_eq)|Zřetězí nový řetězec na konec existujícího řetězce.|
+|[CSimpleStringT:: operator =](#operator_eq)|Přiřadí novou hodnotu `CSimpleStringT` objektu.|
 
 ### <a name="remarks"></a>Poznámky
 
-`CSimpleStringT` je základní třídou pro různé třídy řetězec podporované jazykem Visual C++. Poskytuje minimální podporu pro správu paměti objektu řetězce a manipulaci s základní vyrovnávací paměti. Pokročilejší řetězcových objektů, naleznete v tématu [cstringt – třída](../../atl-mfc-shared/reference/cstringt-class.md).
+`CSimpleStringT`je základní třídou pro různé třídy řetězců podporované jazykem Visual C++. Poskytuje minimální podporu pro správu paměti objektu String a základní manipulaci s vyrovnávací pamětí. Další informace o rozšířených objektech řetězců naleznete v tématu [Třída CStringT](../../atl-mfc-shared/reference/cstringt-class.md).
 
 ### <a name="requirements"></a>Požadavky
 
-**Záhlaví:** atlsimpstr.h
+**Záhlaví:** atlsimpstr. h
 
-## <a name="append"></a> CSimpleStringT::Append
+## <a name="append"></a>CSimpleStringT:: Append
 
-Připojí `CSimpleStringT` objektu do existujícího `CSimpleStringT` objektu.
+Připojí objekt k existujícímu `CSimpleStringT`objektu. `CSimpleStringT`
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -142,17 +142,17 @@ void Append(PCXSTR pszSrc);
 #### <a name="parameters"></a>Parametry
 
 *strSrc*<br/>
-`CSimpleStringT` Objektů, které se mají připojit.
+`CSimpleStringT` Objekt, který má být přidán.
 
 *pszSrc*<br/>
-Ukazatel na řetězec obsahující znaky, které se mají připojit.
+Ukazatel na řetězec obsahující znaky, které mají být připojeny.
 
 *nLength*<br/>
-Počet znaků k připojení.
+Počet znaků, které se mají připojit.
 
 ### <a name="remarks"></a>Poznámky
 
-Voláním této metody lze připojit existující `CSimpleStringT` objektu na jiný `CSimpleStringT` objektu.
+Voláním této metody připojíte existující `CSimpleStringT` objekt k jinému `CSimpleStringT` objektu.
 
 ### <a name="example"></a>Příklad
 
@@ -166,9 +166,9 @@ str1.Append(str2);
 ASSERT(_tcscmp(str1, _T("Soccer is an elegant game")) == 0);
 ```
 
-##  <a name="appendchar"></a> CSimpleStringT::AppendChar
+##  <a name="appendchar"></a>CSimpleStringT::AppendChar
 
-Přidá znak do existujícího `CSimpleStringT` objektu.
+Připojí znak k existujícímu `CSimpleStringT` objektu.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -179,15 +179,15 @@ void AppendChar(XCHAR ch);
 #### <a name="parameters"></a>Parametry
 
 *ch*<br/>
-Znak, který má být připojen
+Znak, který se má připojit
 
 ### <a name="remarks"></a>Poznámky
 
-Voláním této funkce připojení zadaný znak na konci existujícího `CSimpleStringT` objektu.
+Voláním této funkce připojíte zadaný znak ke konci existujícího `CSimpleStringT` objektu.
 
-##  <a name="copychars"></a> CSimpleStringT::CopyChars
+##  <a name="copychars"></a>CSimpleStringT::CopyChars
 
-Zkopíruje znak nebo znaky `CSimpleStringT` objektu.
+Zkopíruje znak nebo znaky do `CSimpleStringT` objektu.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -204,14 +204,14 @@ static void CopyChars(
 Ukazatel na řetězec znaků.
 
 *pchSrc*<br/>
-Ukazatel na řetězec obsahující znaky, které se mají zkopírovat.
+Ukazatel na řetězec obsahující znaky, které mají být zkopírovány.
 
-*nChars*<br/>
-Počet *pchSrc* znaků, které mají být zkopírovány.
+*nChar*<br/>
+Počet *pchSrc* znaků, které se mají zkopírovat
 
 ### <a name="remarks"></a>Poznámky
 
-Volejte tuto metodu za účelem kopírování znaků z *pchSrc* k *pchDest* řetězec.
+Voláním této metody zkopírujte znaky z *pchSrc* do řetězce *pchDest* .
 
 ### <a name="example"></a>Příklad
 
@@ -225,9 +225,9 @@ str.CopyChars(str.GetBuffer(), pszSrc, 12);
 _tprintf_s(_T("%s\n"), str);
 ```
 
-##  <a name="copycharsoverlapped"></a>  CSimpleStringT::CopyCharsOverlapped
+##  <a name="copycharsoverlapped"></a>CSimpleStringT::CopyCharsOverlapped
 
-Zkopíruje znak nebo znaky `CSimpleStringT` objektu.
+Zkopíruje znak nebo znaky do `CSimpleStringT` objektu.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -244,22 +244,22 @@ static void CopyCharsOverlapped(
 Ukazatel na řetězec znaků.
 
 *pchSrc*<br/>
-Ukazatel na řetězec obsahující znaky, které se mají zkopírovat.
+Ukazatel na řetězec obsahující znaky, které mají být zkopírovány.
 
-*nChars*<br/>
-Počet *pchSrc* znaků, které mají být zkopírovány.
+*nChar*<br/>
+Počet *pchSrc* znaků, které se mají zkopírovat
 
 ### <a name="remarks"></a>Poznámky
 
-Volejte tuto metodu za účelem kopírování znaků z *pchSrc* k *pchDest* řetězec. Na rozdíl od `CopyChars`, `CopyCharsOverlapped` způsobem bezpečné kopírování z vyrovnávací paměti znaků, které může být překrývajících se.
+Voláním této metody zkopírujte znaky z *pchSrc* do řetězce *pchDest* . Na rozdíl `CopyChars`od `CopyCharsOverlapped` , poskytuje bezpečnou metodu kopírování ze znakových vyrovnávacích pamětí, které mohou být překryty.
 
 ### <a name="example"></a>Příklad
 
-Podívejte se na příklad pro [CSimpleStringT::CopyChars](#copychars), nebo zdrojový kód pro `CSimpleStringT::SetString` (nachází se ve atlsimpstr.h).
+Podívejte se na příklad pro [CSimpleStringT:: CopyChars](#copychars)nebo zdrojový kód pro `CSimpleStringT::SetString` (umístěný v atlsimpstr. h).
 
-##  <a name="ctor"></a>  CSimpleStringT::CSimpleStringT
+##  <a name="ctor"></a>CSimpleStringT::CSimpleStringT
 
-Vytvoří `CSimpleStringT` objektu.
+`CSimpleStringT` Vytvoří objekt.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -273,27 +273,27 @@ explicit CSimpleStringT(IAtlStringMgr* pStringMgr) throw();
 #### <a name="parameters"></a>Parametry
 
 *strSrc*<br/>
-Existující `CSimpleStringT` objektu, které se mají zkopírovat do tohoto `CSimpleStringT` objektu.
+Existující `CSimpleStringT` objekt, který má být zkopírován do `CSimpleStringT` tohoto objektu.
 
 *pchSrc*<br/>
-Ukazatel na pole znaků o délce *nLength*, není null byl ukončen.
+Ukazatel na pole znaků délky *nLength*, bez hodnoty null.
 
 *pszSrc*<br/>
-Řetězec zakončený hodnotou null ke zkopírování do tohoto `CSimpleStringT` objektu.
+Řetězec zakončený hodnotou null, který má být zkopírován `CSimpleStringT` do tohoto objektu.
 
 *nLength*<br/>
 Počet znaků v `pch`.
 
 *pStringMgr*<br/>
-Ukazatel na správce paměti `CSimpleStringT` objektu. Další informace o `IAtlStringMgr` a správa paměti pro `CSimpleStringT`, naleznete v tématu [Správa paměti a CStringT](../memory-management-with-cstringt.md).
+Ukazatel na správce `CSimpleStringT` paměti objektu. Další informace o `IAtlStringMgr` správě paměti pro `CSimpleStringT`najdete v tématu [Správa paměti a CString](../memory-management-with-cstringt.md).
 
 ### <a name="remarks"></a>Poznámky
 
-Vytvořit nový `CSimpleStringT` objektu. Protože se konstruktory kopírují do nového úložiště přidělené vstupních dat, může způsobit výjimky paměti.
+Vytvořte nový `CSimpleStringT` objekt. Vzhledem k tomu, že konstruktory kopírují vstupní data do nového přiděleného úložiště, může to mít za následek výjimky paměti.
 
 ### <a name="example"></a>Příklad
 
-Následující příklad ukazuje použití `CSimpleStringT::CSimpleStringT` s použitím knihovny ATL **typedef** `CSimpleString`. `CSimpleString` je běžně používaný specializace šablony třídy `CSimpleStringT`.
+Následující příklad ukazuje použití `CSimpleStringT::CSimpleStringT` pomocí **definice typedef** `CSimpleString`ATL. `CSimpleString`je běžně používaná specializace šablony `CSimpleStringT`třídy.
 
 ```cpp
 CSimpleString s1(pMgr);
@@ -310,9 +310,9 @@ CSimpleString s5(_T("xxxxxx"), 6, pMgr);
 // s5 = "xxxxxx"
 ```
 
-##  <a name="empty"></a>  CSimpleStringT::Empty
+##  <a name="empty"></a>CSimpleStringT:: Empty
 
-To kvůli tomu `CSimpleStringT` objekt prázdný řetězec a uvolní paměť podle potřeby.
+Nastaví tento `CSimpleStringT` objekt prázdný řetězec a uvolní paměť v případě potřeby.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -322,7 +322,7 @@ void Empty() throw();
 
 ### <a name="remarks"></a>Poznámky
 
-Další informace najdete v tématu [řetězce: CString – čištění výjimek](../cstring-exception-cleanup.md).
+Další informace najdete v tématu [řetězce: Vymazání](../cstring-exception-cleanup.md)výjimky CString
 
 ### <a name="example"></a>Příklad
 
@@ -333,9 +333,9 @@ CSimpleString s(pMgr);
 ASSERT(s.IsEmpty());
 ```
 
-##  <a name="freeextra"></a>  CSimpleStringT::FreeExtra
+##  <a name="freeextra"></a>CSimpleStringT::FreeExtra
 
-Uvolní všechny další paměť přidělenou dříve metodou řetězce, ale už je nepotřebujete.
+Uvolní všechny nadbytečné paměti dříve přidělené řetězcem, ale už se nepotřebují.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -345,7 +345,7 @@ void FreeExtra();
 
 ### <a name="remarks"></a>Poznámky
 
-To by měla snížit režii paměti používané na objekt řetězce. Metoda znovu alokuje vyrovnávací paměť pro přesnou délku vrácený [GetLength](#getlength).
+To by mělo snížit nároky na paměť spotřebující objektem řetězce. Metoda znovu přidělí vyrovnávací paměť na přesnou délku vrácenou funkcí [GetLength](#getlength).
 
 ### <a name="example"></a>Příklad
 
@@ -376,7 +376,7 @@ _tprintf_s(_T("Alloc length is %d, String length is %d\n"),
 
 ### <a name="remarks"></a>Poznámky
 
-Výstup z tohoto příkladu vypadá takto:
+Výstup z tohoto příkladu je následující:
 
 ```Output
 Alloc length is 1031, String length is 1024
@@ -384,9 +384,9 @@ Alloc length is 1031, String length is 15
 Alloc length is 15, String length is 15
 ```
 
-##  <a name="getalloclength"></a>  CSimpleStringT::GetAllocLength
+##  <a name="getalloclength"></a>CSimpleStringT::GetAllocLength
 
-Načte přidělené délku `CSimpleStringT` objektu.
+Načte přidělenou délku `CSimpleStringT` objektu.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -400,11 +400,11 @@ Počet znaků přidělených pro tento objekt.
 
 ### <a name="remarks"></a>Poznámky
 
-Volejte tuto metodu za účelem určení počtu znaků přidělené to `CSimpleStringT` objektu. Zobrazit [FreeExtra](#freeextra) příklad volání této funkce.
+Voláním této metody určíte počet znaků přidělených pro tento `CSimpleStringT` objekt. Příklad volání této funkce naleznete v tématu [FreeExtra](#freeextra) .
 
-##  <a name="getat"></a>  CSimpleStringT::GetAt
+##  <a name="getat"></a>CSimpleStringT::GetAt
 
-Vrátí jeden znak od `CSimpleStringT` objektu.
+Vrátí jeden znak z `CSimpleStringT` objektu.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -415,28 +415,28 @@ XCHAR GetAt(int iChar) const;
 #### <a name="parameters"></a>Parametry
 
 *iChar*<br/>
-Z nuly vycházející index znaku v `CSimpleStringT` objektu. *IChar* parametr musí být větší než nebo rovna 0 a menší než hodnota vrácená [GetLength](#getlength). V opačném případě `GetAt` vygeneruje výjimku.
+Index založený na nule znaku v `CSimpleStringT` objektu. Parametr *ICHAR* musí být větší nebo roven 0 a menší než hodnota vrácená funkcí [GetLength](#getlength). V opačném případě bude vygenerována výjimka. `GetAt`
 
 ### <a name="return-value"></a>Návratová hodnota
 
-`XCHAR` , Která obsahuje znak na zadané pozici v řetězci.
+Objekt `XCHAR` , který obsahuje znak na zadané pozici v řetězci.
 
 ### <a name="remarks"></a>Poznámky
 
-Voláním této metody vrátí jeden znak určený *iChar*. Přetížená dolního indexu (**[]**) operátor je vhodné alias pro `GetAt`. Ukončovací znak null je adresovatelné bez generování událostí výjimky pomocí `GetAt`. Však není spočítaných podle `GetLength`, a vrácená hodnota je 0.
+Voláním této metody vrátíte jeden znak určený parametrem *ICHAR*. Přetížený operátor dolního indexu ( **[]** ) je vhodným aliasem pro `GetAt`. Ukončovací znak null je adresovatelný bez generování výjimky pomocí `GetAt`. Nepočítá se ale podle `GetLength`a vrácená hodnota je 0.
 
 ### <a name="example"></a>Příklad
 
-Následující příklad ukazuje, jak používat `CSimpleStringT::GetAt`.
+Následující příklad ukazuje, jak použít `CSimpleStringT::GetAt`.
 
 ```cpp
 CSimpleString s(_T("abcdef"), pMgr);
 ASSERT(s.GetAt(2) == _T('c'));
 ```
 
-##  <a name="getbuffer"></a>  CSimpleStringT::GetBuffer
+##  <a name="getbuffer"></a>CSimpleStringT:: GetBuffer
 
-Vrací ukazatel na znak vnitřní vyrovnávací paměti pro `CSimpleStringT` objektu.
+Vrátí ukazatel na vnitřní vyrovnávací paměť znaků pro `CSimpleStringT` objekt.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -448,27 +448,27 @@ PXSTR GetBuffer();
 #### <a name="parameters"></a>Parametry
 
 *nMinBufferLength*<br/>
-Minimální počet znaků, které mohou obsahovat vyrovnávací paměti pro znaky. Tato hodnota nezahrnuje místo pro ukončovacího znaku null.
+Minimální počet znaků, které může uložit znaková vyrovnávací paměť. Tato hodnota nezahrnuje místo pro ukončovací znak null.
 
-Pokud *nMinBufferLength* je větší než délka aktuální vyrovnávací paměti, `GetBuffer` odstraní aktuální vyrovnávací paměti, nahradí jej do vyrovnávací paměti požadované velikosti a resetuje počet odkazů objektu na hodnotu nula. Pokud jste dříve označované jako [LockBuffer](#lockbuffer) na této vyrovnávací paměti, ztratíte uzamčení vyrovnávací paměti.
+Pokud je *nMinBufferLength* větší než délka aktuální vyrovnávací paměti, `GetBuffer` zničí aktuální vyrovnávací paměť, nahradí ji vyrovnávací pamětí požadované velikosti a obnoví počet odkazů na objekt nula. Pokud jste v této vyrovnávací paměti dříve volali [LockBuffer](#lockbuffer) , ztratíte zámek vyrovnávací paměti.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-`PXSTR` Ukazatel do vyrovnávací paměti objektu znak (zakončený hodnotou null).
+`PXSTR` Ukazatel na vyrovnávací paměť znaků objektu (se zakončením hodnoty null).
 
 ### <a name="remarks"></a>Poznámky
 
-Voláním této metody vrátí obsah vyrovnávací paměti `CSimpleStringT` objektu. Vrácený `PXSTR` není konstantní a proto povoluje přímých úprav `CSimpleStringT` obsah.
+Voláním této metody vrátíte obsah `CSimpleStringT` vyrovnávací paměti objektu. Vrácený `PXSTR` není konstanta, takže umožňuje přímou `CSimpleStringT` úpravu obsahu.
 
-Pokud použijete ukazatele vrácené `GetBuffer` Změna obsahu řetězce, musí volat [ReleaseBuffer](#releasebuffer) před použitím kteréhokoli jiného `CSimpleStringT` člen metody.
+Použijete `GetBuffer` -li ukazatel vrácený pro změnu obsahu řetězce, je nutné volat [ReleaseBuffer](#releasebuffer) před použitím jakýchkoli jiných `CSimpleStringT` metod členů.
 
-Adresu vrácenou funkcí `GetBuffer` nemusí být platný po volání `ReleaseBuffer` protože další `CSimpleStringT` operace může způsobit, že `CSimpleStringT` znovu přidělit vyrovnávací paměť. Vyrovnávací paměť není nevyčerpané, pokud nezměníte délka `CSimpleStringT`.
+Adresa vrácená funkcí `GetBuffer` pravděpodobně není platná po volání metody, `ReleaseBuffer` protože `CSimpleStringT` další `CSimpleStringT` operace mohou způsobit opětovné přidělení vyrovnávací paměti. Pokud neměníte délku `CSimpleStringT`, vyrovnávací paměť se znovu nepřiřazuje.
 
-Vyrovnávací paměti je automaticky uvolněn, kdy `CSimpleStringT` objekt zničen.
+Paměť vyrovnávací paměti je automaticky uvolněna při `CSimpleStringT` zničení objektu.
 
-Pokud budete udržovat přehled o délce řetězce sami, by neměla připojí ukončující znak null. Ale musíte zadat délku posledním řetězci uvedené při uvolnění vyrovnávací paměť hodnotou `ReleaseBuffer`. Pokud připojíte ukončujícího znaku null, je třeba předat hodnotu -1 (výchozí) pro délku. `ReleaseBuffer` poté určí velikost vyrovnávací paměti.
+Pokud sledujete délku řetězce sami, neměli byste připojit ukončovací znak null. Je však nutné zadat konečnou délku řetězce při uvolnění vyrovnávací paměti pomocí `ReleaseBuffer`. Pokud připojíte ukončující znak null, měli byste pro tuto délku předat-1 (výchozí). `ReleaseBuffer`pak určuje délku vyrovnávací paměti.
 
-Pokud není dostatek paměti k uspokojení `GetBuffer` žádosti, tato metoda vyvolá cmemoryexception – *.
+Pokud není dostatek paměti pro splnění `GetBuffer` požadavku, tato metoda vyvolá CMemoryException *.
 
 ### <a name="example"></a>Příklad
 
@@ -483,9 +483,9 @@ ASSERT(_tcscmp(s, _T("Hello")) == 0);
 s.ReleaseBuffer();
 ```
 
-##  <a name="getbuffersetlength"></a>  CSimpleStringT::GetBufferSetLength
+##  <a name="getbuffersetlength"></a>CSimpleStringT::GetBufferSetLength
 
-Vrací ukazatel na znak vnitřní vyrovnávací paměti pro `CSimpleStringT` objektu, zkracování nebo jeho délka se v případě potřeby tak, aby přesně odpovídaly délka zadaná v rozšiřující *nLength*.
+Vrací ukazatel na vnitřní vyrovnávací paměť znaků pro `CSimpleStringT` objekt, zkrácení nebo zvětšování délky, pokud je to nutné, aby přesně odpovídala délce zadané v *nLength*.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -496,31 +496,31 @@ PXSTR GetBufferSetLength(int nLength);
 #### <a name="parameters"></a>Parametry
 
 *nLength*<br/>
-Přesnou velikost `CSimpleStringT` vyrovnávací paměti pro znaky ve znacích.
+Přesná velikost `CSimpleStringT` vyrovnávací paměti znaků v znacích.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-A `PXSTR` ukazatel do vyrovnávací paměti objektu znak (zakončený hodnotou null).
+`PXSTR` Ukazatel na vyrovnávací paměť znaků objektu (se zakončením hodnoty null).
 
 ### <a name="remarks"></a>Poznámky
 
-Voláním této metody lze načíst zadané délky vnitřní vyrovnávací paměť `CSimpleStringT` objektu. Vrácený `PXSTR` ukazatel není **const** a tím umožňuje přímých úprav `CSimpleStringT` obsah.
+Voláním této metody načtete zadanou délku vnitřní vyrovnávací paměti `CSimpleStringT` objektu. Vrácený `PXSTR` ukazatel není const , takže `CSimpleStringT` umožňuje přímou úpravu obsahu.
 
-Pokud použijete ukazatele vrácené [GetBufferSetLength](#getbuffersetlength) Změna obsahu řetězce, volání `ReleaseBuffer` aktualizovat vnitřní stav `CsimpleStringT` před použitím kteréhokoli jiného `CSimpleStringT` metody.
+Použijete-li ukazatel vrácený funkcí [GetBufferSetLength](#getbuffersetlength) ke změně obsahu řetězce, zavolejte `ReleaseBuffer` na aktualizovat vnitřní stav `CsimpleStringT` předtím, než použijete jiné `CSimpleStringT` metody.
 
-Adresu vrácenou funkcí `GetBufferSetLength` nemusí být platný po volání `ReleaseBuffer` protože další `CSimpleStringT` operace může způsobit, že `CSimpleStringT` znovu přidělit vyrovnávací paměť. Vyrovnávací paměť není přiřazen, pokud nezměníte délka `CSimpleStringT`.
+Adresa vrácená funkcí `GetBufferSetLength` pravděpodobně není platná po volání metody, `ReleaseBuffer` protože `CSimpleStringT` další `CSimpleStringT` operace mohou způsobit opětovné přidělení vyrovnávací paměti. Pokud neměníte délku `CSimpleStringT`, vyrovnávací paměť se znovu nepřiřazuje.
 
-Vyrovnávací paměti je automaticky uvolněn, kdy `CSimpleStringT` objekt zničen.
+Paměť vyrovnávací paměti je automaticky uvolněna při `CSimpleStringT` zničení objektu.
 
-Pokud budete udržovat přehled o délce řetězce sami, nepřipojujte ukončujícího znaku null. Po uvolnění vyrovnávací paměti s použitím je nutné zadat délku řetězce konečné `ReleaseBuffer`. Pokud připojíte ukončujícího znaku null při volání `ReleaseBuffer`, předejte hodnotu -1 (výchozí) pro délku `ReleaseBuffer`, a `ReleaseBuffer` provede `strlen` pro vyrovnávací paměť k určení jeho délka.
+Pokud sledujete délku řetězce sami, nepřipojujte ukončující znak null. Konečnou délku řetězce je nutné zadat při uvolnění vyrovnávací paměti pomocí `ReleaseBuffer`. Pokud připojíte ukončující `ReleaseBuffer`znak null při volání, Pass-1 (výchozí) pro délku do `ReleaseBuffer`a `ReleaseBuffer` `strlen` provede ve vyrovnávací paměti pro určení jeho délky.
 
 Další informace o počítání odkazů najdete v následujících článcích:
 
-- [Správa životnosti objektu prostřednictvím počítání odkazů](/windows/desktop/com/managing-object-lifetimes-through-reference-counting) ve Windows SDK.
+- [Správa životnosti objektů prostřednictvím počítání odkazů](/windows/win32/com/managing-object-lifetimes-through-reference-counting) v Windows SDK.
 
-- [Implementace počítání odkazů](/windows/desktop/com/implementing-reference-counting) ve Windows SDK.
+- [Implementace počítání odkazů](/windows/win32/com/implementing-reference-counting) v Windows SDK.
 
-- [Pravidla pro správu počty odkazů](/windows/desktop/com/rules-for-managing-reference-counts) ve Windows SDK.
+- [Pravidla pro správu počtů odkazů](/windows/win32/com/rules-for-managing-reference-counts) v Windows SDK.
 
 ### <a name="example"></a>Příklad
 
@@ -540,9 +540,9 @@ str += _T(" soccer is best!");
 ASSERT(_tcscmp(str, _T("Cup soccer is best!")) == 0);
 ```
 
-##  <a name="getlength"></a>  CSimpleStringT::GetLength
+##  <a name="getlength"></a>CSimpleStringT:: GetLength
 
-Vrátí počet znaků `CSimpleStringT` objektu.
+Vrátí počet znaků v `CSimpleStringT` objektu.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -556,13 +556,13 @@ Počet znaků v řetězci.
 
 ### <a name="remarks"></a>Poznámky
 
-Voláním této metody vrátí počet znaků v objektu. Počet nezahrnuje ukončovací znak null.
+Voláním této metody vrátíte počet znaků v objektu. Počet nezahrnuje ukončovací znak null.
 
-Pro vícebajtové znakové sady (MBCS) `GetLength` počty jednotlivých 8bitové znak; to znamená vedoucí a bajt v jeden vícebajtový znak se počítají jako dva bajty. Zobrazit [FreeExtra](#freeextra) příklad volání této funkce.
+U vícebajtových znakových sad (MBCS `GetLength` ) počítá každý 8bitový znak; to znamená, že vedoucí a koncový bajt v jednom vícebajtovém znaku se počítají jako dva bajty. Příklad volání této funkce naleznete v tématu [FreeExtra](#freeextra) .
 
-##  <a name="getmanager"></a>  CSimpleStringT::GetManager
+##  <a name="getmanager"></a>CSimpleStringT:: GetManager
 
-Získá správce paměti `CSimpleStringT` objektu.
+Načte správce `CSimpleStringT` paměti objektu.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -572,13 +572,13 @@ IAtlStringMgr* GetManager() const throw();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Ukazatel na správce paměti pro `CSimpleStringT` objektu.
+Ukazatel na správce paměti pro `CSimpleStringT` objekt.
 
 ### <a name="remarks"></a>Poznámky
 
-Voláním této metody lze načíst paměti správce používá `CSimpleStringT` objektu. Další informace o nástroje pro správu paměti a řetězcových objektů najdete v tématu [Správa paměti a CStringT](../memory-management-with-cstringt.md).
+Voláním této metody načtete správce paměti používaný `CSimpleStringT` objektem. Další informace o správcích paměti a objektech řetězců najdete v tématu [Správa paměti a CString](../memory-management-with-cstringt.md).
 
-##  <a name="getstring"></a>  CSimpleStringT::GetString
+##  <a name="getstring"></a>CSimpleStringT:: GetString
 
 Načte řetězec znaků.
 
@@ -590,14 +590,14 @@ PCXSTR GetString() const throw();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Ukazatel na řetězec znaků zakončené znakem null.
+Ukazatel na řetězec znaků zakončený hodnotou null.
 
 ### <a name="remarks"></a>Poznámky
 
-Voláním této metody lze načíst řetězec znaků, které jsou přidružené k `CSimpleStringT` objektu.
+Voláním této metody načtete řetězec znaků přidružený `CSimpleStringT` k objektu.
 
 > [!NOTE]
->  Vrácený `PCXSTR` ukazatel **const** a neumožňuje přímou úpravu `CSimpleStringT` obsah.
+>  Vrácený `PCXSTR` ukazatel je **const** a `CSimpleStringT` nepovoluje přímou úpravu obsahu.
 
 ### <a name="example"></a>Příklad
 
@@ -609,9 +609,9 @@ str += _T("Cup soccer is best!");
 _tprintf_s(_T("%s"), str.GetString());
 ```
 
-##  <a name="isempty"></a>  CSimpleStringT::IsEmpty
+##  <a name="isempty"></a>CSimpleStringT::-Empty
 
-Testy `CSimpleStringT` objekt pro prázdný stav.
+`CSimpleStringT` Testuje objekt pro prázdnou podmínku.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -621,11 +621,11 @@ bool IsEmpty() const throw();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vrátí TRUE, pokud `CSimpleStringT` objekt má 0 délky; jinak hodnota FALSE.
+Vrátí hodnotu true, `CSimpleStringT` Pokud má objekt nulovou délku; v opačném případě false.
 
 ### <a name="remarks"></a>Poznámky
 
-Voláním této metody lze zjistit, zda objekt obsahuje prázdný řetězec.
+Voláním této metody určíte, zda objekt obsahuje prázdný řetězec.
 
 ### <a name="example"></a>Příklad
 
@@ -636,9 +636,9 @@ CSimpleString s(pMgr);
 ASSERT(s.IsEmpty());
 ```
 
-##  <a name="lockbuffer"></a>  CSimpleStringT::LockBuffer
+##  <a name="lockbuffer"></a>CSimpleStringT::LockBuffer
 
-Zakáže počítání odkazů a chrání data řetězec ve vyrovnávací paměti.
+Zakáže počítání odkazů a chrání řetězec ve vyrovnávací paměti.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -648,30 +648,30 @@ PXSTR LockBuffer();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Ukazatel `CSimpleStringT` objektu nebo řetězec zakončený hodnotou null.
+Ukazatel na `CSimpleStringT` objekt nebo řetězec zakončený hodnotou null.
 
 ### <a name="remarks"></a>Poznámky
 
-Voláním této metody k uzamčení vyrovnávací paměti s `CSimpleStringT` objektu. Voláním `LockBuffer`, vytvořte kopii řetězec a hodnotou -1 pro počet odkazů. Pokud hodnotu počtu odkazů je -1, řetězec ve vyrovnávací paměti se považuje za "" zamknuté. Řetězec je v uzamčeném stavu, chráněn dvěma způsoby:
+Voláním této metody zamknete vyrovnávací paměť `CSimpleStringT` objektu. Voláním `LockBuffer`vytvoříte kopii řetězce s-1 pro počet odkazů. Pokud je hodnota počtu odkazů-1, řetězec ve vyrovnávací paměti je považován za uzamčený stav. V uzamčeném stavu je řetězec chráněn dvěma způsoby:
 
-- Žádný řetězec lze získat odkaz na data v uzamčeném řetězec i v případě, že tento řetězec je přiřazená uzamčené řetězec.
+- Žádný jiný řetězec nemůže získat odkaz na data v uzamčeném řetězci, a to i v případě, že je tento řetězec přiřazen k uzamknutému řetězci.
 
-- Uzamčené řetězec nikdy odkazuje jiný řetězec, i v případě, že tento řetězec je zkopírován do uzamčené řetězec.
+- Uzamčený řetězec nikdy neodkazuje na jiný řetězec, a to i v případě, že je tento jiný řetězec zkopírován do uzamčeného řetězce.
 
-Podle řetězce ve vyrovnávací paměti, je zajistit výhradní blokování vyrovnávací paměti řetězce zůstane zachován beze změny.
+Uzamčením řetězce ve vyrovnávací paměti zajistíte, že exkluzivní blokování řetězce ve vyrovnávací paměti zůstane beze změny.
 
-Po dokončení se `LockBuffer`, volání [UnlockBuffer](#unlockbuffer) resetovat počet odkazů na hodnotu 1.
+Po dokončení s `LockBuffer`voláním volejte [UnlockBuffer](#unlockbuffer) pro resetování počtu odkazů na 1.
 
 > [!NOTE]
->  Při volání [getbuffer –](#getbuffer) na uzamčeném vyrovnávací paměti a můžete nastavit `GetBuffer` parametr `nMinBufferLength` na hodnotu větší než délka vyrovnávací paměti pro aktuální, dojde ke ztrátě uzamčení vyrovnávací paměti. Volání do `GetBuffer` odstraní aktuální vyrovnávací paměti, nahradí jej do vyrovnávací paměti požadované velikosti a resetuje počet odkazů na nulu.
+>  Pokud voláte GetBuffer na uzamčené vyrovnávací paměti a nastavíte [](#getbuffer) `GetBuffer` parametr `nMinBufferLength` tak, aby byl větší než délka aktuální vyrovnávací paměti, dojde ke ztrátě zámku vyrovnávací paměti. Takové volání `GetBuffer` zničí aktuální vyrovnávací paměť, nahradí je vyrovnávací pamětí požadované velikosti a obnoví počet odkazů na nulu.
 
 Další informace o počítání odkazů najdete v následujících článcích:
 
-- [Správa životnosti objektu prostřednictvím počítání odkazů](/windows/desktop/com/managing-object-lifetimes-through-reference-counting) ve Windows SDK
+- [Správa životnosti objektů prostřednictvím počítání odkazů](/windows/win32/com/managing-object-lifetimes-through-reference-counting) v Windows SDK
 
-- [Implementace počítání odkazů](/windows/desktop/com/implementing-reference-counting) ve Windows SDK
+- [Implementace počítání odkazů](/windows/win32/com/implementing-reference-counting) v Windows SDK
 
-- [Pravidla pro správu počty odkazů](/windows/desktop/com/rules-for-managing-reference-counts) ve Windows SDK
+- [Pravidla pro správu počtů odkazů](/windows/win32/com/rules-for-managing-reference-counts) v Windows SDK
 
 ### <a name="example"></a>Příklad
 
@@ -687,9 +687,9 @@ _tprintf_s(_T("%c"), ch);
 str.UnlockBuffer();
 ```
 
-##  <a name="operator_at"></a>  CSimpleStringT::operator\[\]
+##  <a name="operator_at"></a>CSimpleStringT:: operator\[\]
 
-Voláním této funkce pro přístup k jeden znak pole znaků.
+Voláním této funkce získáte přístup k jednomu znaku pole znaků.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -700,14 +700,14 @@ XCHAR operator[](int iChar) const;
 #### <a name="parameters"></a>Parametry
 
 *iChar*<br/>
-Z nuly vycházející index znaku v řetězci.
+Index založený na nule znaku v řetězci.
 
 ### <a name="remarks"></a>Poznámky
 
-Přetížená dolního indexu (**[]**) operátor vrátí znak určený index založený na nule v *iChar*. Tento operátor je vhodné náhradou za [GetAt](#getat) členskou funkci.
+Operátor přetíženého dolního indexu ( **[]** ) vrací jeden znak určený indexem založeným na nule v *ICHAR*. Tento operátor je pohodlný náhrada za členskou funkci [GetAt](#getat) .
 
 > [!NOTE]
->  Můžete použít dolního indexu (**[]**) operátor má být získána hodnota znaku v `CSimpleStringT`, ale nelze jej použít ke změně hodnoty znaku v `CSimpleStringT`.
+>  Operátor dolního indexu ( **[]** ) můžete použít k získání hodnoty znaku v `CSimpleStringT`, ale nelze jej použít ke změně hodnoty znaku v. `CSimpleStringT`
 
 ### <a name="example"></a>Příklad
 
@@ -718,9 +718,9 @@ CSimpleString s(_T("abc"), pMgr);
 ASSERT(s[1] == _T('b'));
 ```
 
-## <a name="operator_at"></a>  CSimpleStringT::operator \[\]
+## <a name="operator_at"></a>CSimpleStringT:: operator\[\]
 
-Voláním této funkce pro přístup k jeden znak pole znaků.
+Voláním této funkce získáte přístup k jednomu znaku pole znaků.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -731,18 +731,18 @@ XCHAR operator[](int iChar) const;
 ### <a name="parameters"></a>Parametry
 
 *iChar*<br/>
-Z nuly vycházející index znaku v řetězci.
+Index založený na nule znaku v řetězci.
 
 ### <a name="remarks"></a>Poznámky
 
-Přetížená dolního indexu (**[]**) operátor vrátí znak určený index založený na nule v *iChar*. Tento operátor je vhodné náhradou za [GetAt](#getat) členskou funkci.
+Operátor přetíženého dolního indexu ( **[]** ) vrací jeden znak určený indexem založeným na nule v *ICHAR*. Tento operátor je pohodlný náhrada za členskou funkci [GetAt](#getat) .
 
 > [!NOTE]
->  Můžete použít dolního indexu (**[]**) operátor má být získána hodnota znaku v `CSimpleStringT`, ale nelze jej použít ke změně hodnoty znaku v `CSimpleStringT`.
+>  Operátor dolního indexu ( **[]** ) můžete použít k získání hodnoty znaku v `CSimpleStringT`, ale nelze jej použít ke změně hodnoty znaku v. `CSimpleStringT`
 
-##  <a name="operator_add_eq"></a>  CSimpleStringT::operator +=
+##  <a name="operator_add_eq"></a>CSimpleStringT:: operator + =
 
-Připojí nový řetězec nebo znak na konci existujícího řetězce.
+Spojí nový řetězec nebo znak na konec stávajícího řetězce.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -762,14 +762,14 @@ CSimpleStringT& operator +=(wchar_t ch);
 Ukazatel na řetězec zakončený hodnotou null.
 
 *strSrc*<br/>
-Ukazatel na existující `CSimpleStringT` objektu.
+Ukazatel na existující `CSimpleStringT` objekt.
 
 *ch*<br/>
-Znak, který má být připojen.
+Znak, který má být přidán.
 
 ### <a name="remarks"></a>Poznámky
 
-Operátor, který přijímá Další `CSimpleStringT` objektu nebo znak. Všimněte si, že paměť výjimky může dojít při každém použití tohoto operátoru pro zřetězení, protože může být přiděleno nové úložiště pro znaky, které jsou přidány do tohoto `CSimpleStringT` objektu.
+Operátor přijímá jiný `CSimpleStringT` objekt nebo znak. Všimněte si, že výjimky paměti mohou nastat vždy, když použijete tento operátor zřetězení, protože pro znaky přidané do tohoto `CSimpleStringT` objektu může být přiděleno nové úložiště.
 
 ### <a name="example"></a>Příklad
 
@@ -780,7 +780,7 @@ CSimpleString str(_T("abc"), pMgr);
 ASSERT(_tcscmp((str += _T("def")), _T("abcdef")) == 0);
 ```
 
-##  <a name="operator_eq"></a>  CSimpleStringT::operator =
+##  <a name="operator_eq"></a>CSimpleStringT:: operator =
 
 Přiřadí novou hodnotu `CSimpleStringT` objektu.
 
@@ -797,11 +797,11 @@ CSimpleStringT& operator =(const CSimpleStringT& strSrc);
 Ukazatel na řetězec zakončený hodnotou null.
 
 *strSrc*<br/>
-Ukazatel na existující `CSimpleStringT` objektu.
+Ukazatel na existující `CSimpleStringT` objekt.
 
 ### <a name="remarks"></a>Poznámky
 
-Pokud cílový řetězec (levá strana) je již dostatečně velký pro uložení nových dat, se neprovádí žádné nové přidělení paměti. Všimněte si, že paměť výjimky může dojít při každém použití operátoru přiřazení, protože často přiděleno nové úložiště pro uložení výsledný `CSimpleStringT` objektu.
+Pokud je cílový řetězec (levá strana) již dostatečně velký pro ukládání nových dat, není provedeno žádné nové přidělení paměti. Všimněte si, že výjimky paměti mohou nastat vždy, když použijete operátor přiřazení, protože nové úložiště je často přiděleno pro uložení výsledného `CSimpleStringT` objektu.
 
 ### <a name="example"></a>Příklad
 
@@ -827,9 +827,9 @@ s1 = _T("x");
 ASSERT(_tcscmp(s1, _T("x")) == 0);
 ```
 
-##  <a name="operator_pcxstr"></a>  CSimpleStringT::operator PCXSTR
+##  <a name="operator_pcxstr"></a>CSimpleStringT:: operator PCXSTR
 
-Přímý přístup k znaků uložených v `CSimpleStringT` objektu jako řetězec stylu C.
+Přímo přistupuje ke znakům uloženým `CSimpleStringT` v objektu jako řetězec ve stylu jazyka C.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -839,11 +839,11 @@ operator PCXSTR() const throw();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Ukazatel znaku řetězec data.
+Znakový ukazatel na data řetězce.
 
 ### <a name="remarks"></a>Poznámky
 
-Žádné znaky jsou zkopírovány; je vrácen pouze ukazatel. Pozor na tento operátor. Pokud změníte `CString` objektu po získání ukazatel znaku, může způsobit realokace paměti, která zruší platnost ukazatel.
+Nejsou kopírovány žádné znaky; Vrátí se jenom ukazatel. Buďte opatrní s tímto operátorem. Změníte- `CString` li objekt poté, co jste získali ukazatel na znak, můžete způsobit přerozdělení paměti, která neověřuje ukazatel.
 
 ### <a name="example"></a>Příklad
 
@@ -879,9 +879,9 @@ wcout << strSports;
 wcout << (PCWSTR)strSports;
 ```
 
-##  <a name="pcxstr"></a>  CSimpleStringT::PCXSTR
+##  <a name="pcxstr"></a>CSimpleStringT::P CXSTR
 
-Ukazatel na konstanty typu řetězec.
+Ukazatel na konstantní řetězec.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -889,9 +889,9 @@ Ukazatel na konstanty typu řetězec.
 typedef ChTraitsBase< BaseType >::PCXSTR PCXSTR;
 ```
 
-##  <a name="preallocate"></a>  CSimpleStringT::Preallocate
+##  <a name="preallocate"></a>CSimpleStringT::P znovu přidělit
 
-Přidělí konkrétní velikost pro bajtů `CSimpleStringT` objektu.
+Přidělí určité množství bajtů `CSimpleStringT` objektu.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -902,13 +902,13 @@ void Preallocate( int nLength);
 #### <a name="parameters"></a>Parametry
 
 *nLength*<br/>
-Přesnou velikost `CSimpleStringT` vyrovnávací paměti pro znaky ve znacích.
+Přesná velikost `CSimpleStringT` vyrovnávací paměti znaků v znacích.
 
 ### <a name="remarks"></a>Poznámky
 
-Volejte tuto metodu za účelem přidělení velikosti vyrovnávací paměti specifické pro `CSimpleStringT` objektu.
+Zavolejte tuto metodu pro přidělení konkrétní velikosti `CSimpleStringT` vyrovnávací paměti objektu.
 
-`CSimpleStringT` generuje STATUS_NO_MEMORY výjimku, pokud se nepovedlo se přidělit prostor pro vyrovnávací paměti pro znaky. Ve výchozím nastavení, přidělení paměti se provádí pomocí funkce rozhraní WIN32 API `HeapAlloc` nebo `HeapReAlloc`.
+`CSimpleStringT`generuje výjimku STATUS_NO_MEMORY, pokud není schopna přidělit prostor pro vyrovnávací paměť znaků. Ve výchozím nastavení se přidělování paměti provádí funkcemi `HeapAlloc` rozhraní Win32 API nebo. `HeapReAlloc`
 
 ### <a name="example"></a>Příklad
 
@@ -921,7 +921,7 @@ str.Preallocate(100);
 _tprintf_s(_T("Allocated length: %d\n"), str.GetAllocLength());
 ```
 
-##  <a name="pxstr"></a>  CSimpleStringT::PXSTR
+##  <a name="pxstr"></a>CSimpleStringT::P XSTR
 
 Ukazatel na řetězec.
 
@@ -931,9 +931,9 @@ Ukazatel na řetězec.
 typedef ChTraitsBase< BaseType >::PXSTR PXSTR;
 ```
 
-##  <a name="releasebuffer"></a>  CSimpleStringT::ReleaseBuffer
+##  <a name="releasebuffer"></a>CSimpleStringT::ReleaseBuffer
 
-Uvolní kontrolu nad vyrovnávací paměť přidělaná [getbuffer –](#getbuffer).
+Uvolní kontrolu vyrovnávací paměti přidělené getbufferem. [](#getbuffer)
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -944,11 +944,11 @@ void ReleaseBuffer(int nNewLength = -1);
 #### <a name="parameters"></a>Parametry
 
 *nNewLength*<br/>
-Nové délku řetězce ve znacích, výčtu nebudou započteny ukončovacího znaku null. Pokud řetězec má hodnotu null, byla ukončena,-1, výchozí hodnota nastaví `CSimpleStringT` velikost aktuální délka řetězce.
+Nová délka řetězce ve znacích, která nepočítá ukončovací znak null. Pokud je řetězec ukončen hodnotou null, výchozí hodnota-1 nastaví `CSimpleStringT` velikost na aktuální délku řetězce.
 
 ### <a name="remarks"></a>Poznámky
 
-Volejte tuto metodu za účelem přerozdělit nebo uvolnit vyrovnávací paměť na objekt řetězce. Pokud víte, že řetězec ve vyrovnávací paměti je null byl ukončen, můžete vynechat *nNewLength* argument. Pokud váš řetězec nemá hodnotu null, byla ukončena, použijte *nNewLength* k určení jeho délky. Adresu vrácenou funkcí [getbuffer –](#getbuffer) neplatí po volání `ReleaseBuffer` nebo jakékoli jiné `CSimpleStringT` operace.
+Zavolejte tuto metodu pro opětovné přidělení nebo uvolnění vyrovnávací paměti objektu String. Pokud víte, že řetězec ve vyrovnávací paměti má ukončenou hodnotu null, můžete vynechat argument *nNewLength* . Pokud váš řetězec není ukončený hodnotou null, zadejte jeho délku pomocí *nNewLength* . Adresa vrácená funkcí GetBuffer je neplatná po volání [](#getbuffer) `ReleaseBuffer` nebo jakékoli jiné `CSimpleStringT` operaci.
 
 ### <a name="example"></a>Příklad
 
@@ -972,9 +972,9 @@ ASSERT(s.GetLength() == 3);
 // Length still 3
 ```
 
-##  <a name="releasebuffersetlength"></a>  CSimpleStringT::ReleaseBufferSetLength
+##  <a name="releasebuffersetlength"></a>CSimpleStringT::ReleaseBufferSetLength
 
-Uvolní kontrolu nad vyrovnávací paměť přidělaná [getbuffer –](#getbuffer).
+Uvolní kontrolu vyrovnávací paměti přidělené getbufferem. [](#getbuffer)
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -985,15 +985,15 @@ void ReleaseBufferSetLength(int nNewLength);
 #### <a name="parameters"></a>Parametry
 
 *nNewLength*<br/>
-Délka řetězce se vydávají
+Délka vydávaného řetězce
 
 ### <a name="remarks"></a>Poznámky
 
-Tato funkce je funkčně podobný [ReleaseBuffer](#releasebuffer) s tím rozdílem, že musí být předán platnou délku pro objekt řetězce.
+Tato funkce je funkčně podobná [ReleaseBuffer](#releasebuffer) s tím rozdílem, že musí být předána platná délka řetězcového objektu.
 
-##  <a name="setat"></a>  CSimpleStringT::SetAt
+##  <a name="setat"></a>CSimpleStringT::SetAt
 
-Nastaví jeden znak od `CSimpleStringT` objektu.
+Nastaví jeden znak z `CSimpleStringT` objektu.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -1004,14 +1004,14 @@ void SetAt(int iChar, XCHAR ch);
 #### <a name="parameters"></a>Parametry
 
 *iChar*<br/>
-Z nuly vycházející index znaku v `CSimpleStringT` objektu. *IChar* parametr musí být větší než nebo rovna 0 a menší než hodnota vrácená [GetLength](#getlength).
+Index založený na nule znaku v `CSimpleStringT` objektu. Parametr *ICHAR* musí být větší nebo roven 0 a menší než hodnota vrácená funkcí [GetLength](#getlength).
 
 *ch*<br/>
 Nový znak.
 
 ### <a name="remarks"></a>Poznámky
 
-Volejte tuto metodu přepsat znaku na *iChar*. Tato metoda nebude zvětšit řetězec, pokud *iChar* přesahuje hranice existujícího řetězce.
+Voláním této metody můžete přepsat znak umístěný v *ICHAR*. Tato metoda nezvětšuje řetězec, pokud *ICHAR* překročí hranice stávajícího řetězce.
 
 ### <a name="example"></a>Příklad
 
@@ -1023,9 +1023,9 @@ s.SetAt(1, _T('a'));
 ASSERT(_tcscmp(s, _T("aacdef")) == 0);
 ```
 
-##  <a name="setmanager"></a>  CSimpleStringT::SetManager
+##  <a name="setmanager"></a>CSimpleStringT::SetManager
 
-Určuje správce paměti `CSimpleStringT` objektu.
+Určuje správce `CSimpleStringT` paměti objektu.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -1040,7 +1040,7 @@ Ukazatel na nového správce paměti.
 
 ### <a name="remarks"></a>Poznámky
 
-Voláním této metody lze zadat nové paměti správce používá `CSimpleStringT` objektu. Další informace o nástroje pro správu paměti a řetězcových objektů najdete v tématu [Správa paměti a CStringT](../memory-management-with-cstringt.md).
+Zavolejte tuto metodu pro určení nového správce paměti používaného `CSimpleStringT` objektem. Další informace o správcích paměti a objektech řetězců najdete v tématu [Správa paměti a CString](../memory-management-with-cstringt.md).
 
 ### <a name="example"></a>Příklad
 
@@ -1051,7 +1051,7 @@ CSimpleString s(pMgr);
 s.SetManager(pCustomMgr);
 ```
 
-##  <a name="setstring"></a>  CSimpleStringT::SetString
+##  <a name="setstring"></a>CSimpleStringT:: SetString
 
 Nastaví řetězec `CSimpleStringT` objektu.
 
@@ -1072,15 +1072,15 @@ Počet znaků v *pszSrc*.
 
 ### <a name="remarks"></a>Poznámky
 
-Zkopírujte řetězec do `CSimpleStringT` objektu. `SetString` přepíše starší řetězce data ve vyrovnávací paměti.
+Zkopírujte řetězec do `CSimpleStringT` objektu. `SetString`přepíše data staršího řetězce ve vyrovnávací paměti.
 
-Obě verze `SetString` zkontrolujte, zda *pszSrc* je ukazatel s hodnotou null a pokud se jedná, vyvolá chybu E_INVALIDARG.
+Obě verze `SetString` kontrolují, zda je *pszSrc* ukazatel s hodnotou null, a pokud je, vyvolejte chybu E_INVALIDARG.
 
-Jeden parametr verzi `SetString` očekává, že *pszSrc* tak, aby odkazoval na řetězec zakončený hodnotou null.
+Verze `SetString` s jedním parametrem očekává, že *pszSrc* odkazuje na řetězec zakončený hodnotou null.
 
-Parametr dvě verze `SetString` také očekává, že *pszSrc* na řetězec zakončený hodnotou null. Používá *nLength* jako délku řetězce Pokud nejprve nalezne ukončovacího znaku null.
+Verze `SetString` dvou parametrů také očekává, že *pszSrc* je řetězec zakončený hodnotou null. Používá *nLength* jako délku řetězce, pokud nenalezne ukončovací znak null jako první.
 
-Parametr dvě verze `SetString` také zkontroluje, jestli *pszSrc* odkazuje na umístění v aktuální vyrovnávací paměti v `CSimpleStringT`. V tomto případě speciální `SetString` používá funkci kopírování paměti, která nepřepisuje data řetězce podle zkopíruje řetězcová data zpět do vyrovnávací paměti.
+Verze `SetString` dvou parametrů také kontroluje, zda *pszSrc* odkazuje na umístění v aktuální vyrovnávací paměti v `CSimpleStringT`. V tomto speciálním případě `SetString` používá funkce kopírování paměti, která nepřepisuje řetězcová data při kopírování řetězcových dat zpět do její vyrovnávací paměti.
 
 ### <a name="example"></a>Příklad
 
@@ -1093,7 +1093,7 @@ s.SetString(_T("Soccer"), 6);
 ASSERT(_tcscmp(s, _T("Soccer")) == 0);
 ```
 
-##  <a name="stringlength"></a>  CSimpleStringT::StringLength
+##  <a name="stringlength"></a>CSimpleStringT::StringLength
 
 Vrátí počet znaků v zadaném řetězci.
 
@@ -1110,11 +1110,11 @@ Ukazatel na řetězec zakončený hodnotou null.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Počet znaků v *psz*; výčtu nebudou započteny ukončovacího znaku null.
+Počet znaků v *PSZ*; nepočítá ukončovací znak null.
 
 ### <a name="remarks"></a>Poznámky
 
-Voláním této metody lze načíst počet znaků v řetězci, na které odkazuje *psz*.
+Voláním této metody načtete počet znaků v řetězci, na které ukazuje *PSZ*.
 
 ### <a name="example"></a>Příklad
 
@@ -1124,9 +1124,9 @@ Následující příklad ukazuje použití `CSimpleStringT::StringLength`.
 ASSERT(CSimpleString::StringLength(_T("soccer")) == 6);
 ```
 
-##  <a name="truncate"></a>  CSimpleStringT::Truncate
+##  <a name="truncate"></a>CSimpleStringT:: zkrátit
 
-Ořízne na novou délku řetězce.
+Zkrátí řetězec na novou délku.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -1137,14 +1137,14 @@ void Truncate(int nNewLength);
 #### <a name="parameters"></a>Parametry
 
 *nNewLength*<br/>
-Nové délku řetězce.
+Nová délka řetězce.
 
 ### <a name="remarks"></a>Poznámky
 
-Voláním této metody lze zkrátit obsah řetězce na novou délku.
+Zavolejte tuto metodu, chcete-li zkrátit obsah řetězce na novou délku.
 
 > [!NOTE]
->  Toto neovlivňuje přidělené délka vyrovnávací paměti. Snížit nebo zvýšit aktuální vyrovnávací paměti, naleznete v tématu [FreeExtra](#freeextra) a [Preallocate](#preallocate).
+>  Tato akce nemá vliv na přidělenou délku vyrovnávací paměti. Chcete-li snížit nebo zvýšit aktuální vyrovnávací paměť, přečtěte si téma [FreeExtra](#freeextra) a předalokace. [](#preallocate)
 
 ### <a name="example"></a>Příklad
 
@@ -1159,9 +1159,9 @@ _tprintf_s(_T("Allocated length: %d\n"), str.GetLength());
 _tprintf_s(_T("Contents: %s\n"), str);
 ```
 
-##  <a name="unlockbuffer"></a>  CSimpleStringT::UnlockBuffer
+##  <a name="unlockbuffer"></a>CSimpleStringT::UnlockBuffer
 
-Odemkne vyrovnávací paměti s `CSimpleStringT` objektu.
+Odemkne vyrovnávací paměť `CSimpleStringT` objektu.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -1171,13 +1171,13 @@ void UnlockBuffer() throw();
 
 ### <a name="remarks"></a>Poznámky
 
-Volejte tuto metodu za účelem resetování počet odkazů řetězce na hodnotu 1.
+Voláním této metody resetujete počet odkazů řetězce na 1.
 
-`CSimpleStringT` Destruktor automaticky volá `UnlockBuffer` zajistit, že vyrovnávací paměť není uzamčen při volání destruktoru. Příklad této metody, naleznete v tématu [LockBuffer](#lockbuffer).
+Destruktor automaticky volá `UnlockBuffer` , aby se zajistilo, že vyrovnávací paměť není uzamčena při volání destruktoru. `CSimpleStringT` Příklad této metody naleznete v tématu [LockBuffer](#lockbuffer).
 
-##  <a name="dtor"></a>  CSimpleStringT::~CSimpleStringT
+##  <a name="dtor"></a>CSimpleStringT:: ~ CSimpleStringT
 
-Odstraní `CSimpleStringT` objektu.
+`CSimpleStringT` Odstraní objekt.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -1187,7 +1187,7 @@ Odstraní `CSimpleStringT` objektu.
 
 ### <a name="remarks"></a>Poznámky
 
-Voláním této metody lze zničit `CSimpleStringT` objektu.
+Zavolejte tuto metodu pro zničení `CSimpleStringT` objektu.
 
 ## <a name="see-also"></a>Viz také:
 

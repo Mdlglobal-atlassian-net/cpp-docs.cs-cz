@@ -1,5 +1,5 @@
 ---
-title: Cautorevertimpersonation – třída
+title: CAutoRevertImpersonation – třída
 ms.date: 11/04/2016
 f1_keywords:
 - CAutoRevertImpersonation
@@ -11,16 +11,16 @@ f1_keywords:
 helpviewer_keywords:
 - CAutoRevertImpersonation class
 ms.assetid: 43732849-1940-4bd4-9d52-7a5698bb8838
-ms.openlocfilehash: 78488fba080e397b06eb67ebe8039fb3e8d5e035
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f1941bfcd7689ab9d22f5094af0eb833a84dab6b
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62259934"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69497687"
 ---
-# <a name="cautorevertimpersonation-class"></a>Cautorevertimpersonation – třída
+# <a name="cautorevertimpersonation-class"></a>CAutoRevertImpersonation – třída
 
-Tato třída se vrátí [caccesstoken –](../../atl/reference/caccesstoken-class.md) objekty do nonimpersonating stavu, když dostane mimo rozsah.
+Tato třída vrátí objekty [CAccessToken](../../atl/reference/caccesstoken-class.md) do nezosobněného stavu, pokud se překročí rozsahu.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -32,34 +32,34 @@ class CAutoRevertImpersonation
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
-|[CAutoRevertImpersonation::CAutoRevertImpersonation](#cautorevertimpersonation)|Vytvoří `CAutoRevertImpersonation` objektu|
-|[CAutoRevertImpersonation::~CAutoRevertImpersonation](#dtor)|Odstraní objekt a vrátí token zosobnění přístup.|
+|[CAutoRevertImpersonation::CAutoRevertImpersonation](#cautorevertimpersonation)|`CAutoRevertImpersonation` Vytvoří objekt.|
+|[CAutoRevertImpersonation::~CAutoRevertImpersonation](#dtor)|Odstraní objekt a vrátí zosobnění přístupového tokenu.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
-|[CAutoRevertImpersonation::Attach](#attach)|Automatizuje k zosobnění obnovení tokenu přístupu.|
-|[CAutoRevertImpersonation::Detach](#detach)|Zruší k obnovení automatické zosobnění.|
-|[CAutoRevertImpersonation::GetAccessToken](#getaccesstoken)|Načte aktuální token přístupu asociovaném s tímto objektem.|
+|[CAutoRevertImpersonation:: Attach](#attach)|Automatizuje znovu naverzi přístupového tokenu.|
+|[CAutoRevertImpersonation::Detach](#detach)|Zruší automatickou reverzi zosobnění.|
+|[CAutoRevertImpersonation::GetAccessToken](#getaccesstoken)|Načte přístupový token, který je aktuální přidružený k tomuto objektu.|
 
 ## <a name="remarks"></a>Poznámky
 
-[Přístupový token](/windows/desktop/SecAuthZ/access-tokens) je objekt, který popisuje proces nebo vlákno kontextu zabezpečení a přidělené každému uživateli přihlášení systému Windows NT nebo Windows 2000. Tyto tokeny přístupu lze znázornit pomocí `CAccessToken` třídy.
+[Přístupový token](/windows/win32/SecAuthZ/access-tokens) je objekt, který popisuje kontext zabezpečení procesu nebo vlákna a je přidělen každému uživateli přihlášenému do systému Windows NT nebo Windows 2000. Tyto přístupové tokeny mohou být reprezentovány `CAccessToken` třídou.
 
-Někdy je nezbytné k zosobnění přístupové tokeny. Tato třída je k dispozici pro zjednodušení, ale neprovádí zosobnění přístupové tokeny; provádí pouze k automatické obnovení do nonimpersonated stavu. Je to proto, že přístup pomocí tokenu zosobnění lze provést několika různými způsoby.
+Někdy je potřeba zosobnit přístupové tokeny. Tato třída je poskytována jako pohodlí, ale neprovádí zosobnění přístupových tokenů; provádí pouze automatickou novou verzi do nezosobněného stavu. Důvodem je to, že k zosobnění přístupu tokenu se dá použít několik různých způsobů.
 
-Úvod do modelu řízení přístupu ve Windows najdete v tématu [řízení přístupu](/windows/desktop/SecAuthZ/access-control) v sadě Windows SDK.
+Úvod do modelu řízení přístupu v systému Windows naleznete v tématu [Access Control](/windows/win32/SecAuthZ/access-control) v Windows SDK.
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** atlsecurity.h
+**Záhlaví:** atlsecurity. h
 
-##  <a name="attach"></a>  CAutoRevertImpersonation::Attach
+##  <a name="attach"></a>CAutoRevertImpersonation:: Attach
 
-Automatizuje k zosobnění obnovení tokenu přístupu.
+Automatizuje znovu naverzi přístupového tokenu.
 
 ```
 void Attach(const CAccessToken* pAT) throw();
@@ -68,15 +68,15 @@ void Attach(const CAccessToken* pAT) throw();
 ### <a name="parameters"></a>Parametry
 
 *pAT*<br/>
-Adresa [caccesstoken –](../../atl/reference/caccesstoken-class.md) objektu se mají zrušit změny automaticky
+Adresa objektu [CAccessToken](../../atl/reference/caccesstoken-class.md) , který má být vrácen automaticky
 
 ### <a name="remarks"></a>Poznámky
 
-Tato metoda by měla použít pouze v případě [cautorevertimpersonation –](../../atl/reference/cautorevertimpersonation-class.md) s hodnotou NULL byl vytvořen objekt `CAccessToken` ukazatele, nebo pokud [odpojit](#detach) dříve byla volána. Pro jednoduché případy není nutné použít tuto metodu.
+Tato metoda by měla být použita pouze v případě, že byl objekt [CAutoRevertImpersonation](../../atl/reference/cautorevertimpersonation-class.md) vytvořen `CAccessToken` s ukazatelem s hodnotou null, nebo pokud byl dříve volán příkaz [detach](#detach) . Pro jednoduché případy není nutné používat tuto metodu.
 
-##  <a name="cautorevertimpersonation"></a>  CAutoRevertImpersonation::CAutoRevertImpersonation
+##  <a name="cautorevertimpersonation"></a>CAutoRevertImpersonation::CAutoRevertImpersonation
 
-Vytvoří `CAutoRevertImpersonation` objektu.
+`CAutoRevertImpersonation` Vytvoří objekt.
 
 ```
 CAutoRevertImpersonation(const CAccessToken* pAT) throw();
@@ -85,15 +85,15 @@ CAutoRevertImpersonation(const CAccessToken* pAT) throw();
 ### <a name="parameters"></a>Parametry
 
 *pAT*<br/>
-Adresa [caccesstoken –](../../atl/reference/caccesstoken-class.md) objektu se automaticky vrátí zpátky.
+Adresa objektu [CAccessToken](../../atl/reference/caccesstoken-class.md) , který má být vrácen automaticky
 
 ### <a name="remarks"></a>Poznámky
 
-Skutečné zosobnění přístupového tokenu by měl provést samostatně z a pokud možno před vytvořením `CAutoRevertImpersonation` objektu. Tato zosobnění se vrátí zpět automaticky při `CAutoRevertImpersonation` objekt dostane mimo rozsah.
+Vlastní zosobnění přístupového tokenu by mělo být prováděno odděleně od a přednost před vytvořením `CAutoRevertImpersonation` objektu. Tato zosobnění se automaticky vrátí, když se `CAutoRevertImpersonation` objekt stane mimo rozsah.
 
-##  <a name="dtor"></a>  Cautorevertimpersonation –:: ~ cautorevertimpersonation –
+##  <a name="dtor"></a>CAutoRevertImpersonation:: ~ CAutoRevertImpersonation
 
-Odstraní objekt a vrátí token zosobnění přístup.
+Odstraní objekt a vrátí zosobnění přístupového tokenu.
 
 ```
 ~CAutoRevertImpersonation() throw();
@@ -101,11 +101,11 @@ Odstraní objekt a vrátí token zosobnění přístup.
 
 ### <a name="remarks"></a>Poznámky
 
-Vrátí všechny zosobnění aktuálně v platnosti [caccesstoken –](../../atl/reference/caccesstoken-class.md) objekt Poskytnutý při konstrukci nebo prostřednictvím [připojit](#attach) metoda. Pokud ne `CAccessToken` je spojené, destruktor nemá žádný vliv.
+Vrátí jakékoli zosobnění v současné době pro objekt [CAccessToken](../../atl/reference/caccesstoken-class.md) , který je k dispozici v rámci konstrukce nebo prostřednictvím metody [Attach](#attach) . Pokud není `CAccessToken` k dispozici žádný, destruktor nemá žádný vliv.
 
-##  <a name="detach"></a>  CAutoRevertImpersonation::Detach
+##  <a name="detach"></a>CAutoRevertImpersonation::D etach
 
-Zruší k obnovení automatické zosobnění.
+Zruší automatickou reverzi zosobnění.
 
 ```
 const CAccessToken* Detach() throw();
@@ -113,15 +113,15 @@ const CAccessToken* Detach() throw();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Adresa dříve přidružené [caccesstoken –](../../atl/reference/caccesstoken-class.md), nebo hodnota NULL, pokud žádné přidružení.
+Adresa dříve přidruženého CAccessTokenu [](../../atl/reference/caccesstoken-class.md)nebo hodnota null, pokud žádné přidružení neexistuje.
 
 ### <a name="remarks"></a>Poznámky
 
-Volání **odpojit** brání `CAutoRevertImpersonation` objekt z jakékoli zosobnění aktuálně používána pro návrat [caccesstoken –](../../atl/reference/caccesstoken-class.md) objekt přidružený k tomuto objektu. `CAutoRevertImpersonation` Můžete pak zničit pomocí žádný účinek nebo naimportován do stejného nebo jiného `CAccessToken` pomocí [připojit](#attach).
+Volání **detach** zabraňuje `CAutoRevertImpersonation` objektu v současné době vracet jakékoli zosobnění, které je aktuálně platné pro objekt [CAccessToken](../../atl/reference/caccesstoken-class.md) přidružený k tomuto objektu. `CAutoRevertImpersonation`může být zničena bez účinku nebo znovu přidružena ke stejnému nebo `CAccessToken` jinému objektu pomocí [připojení](#attach).
 
-##  <a name="getaccesstoken"></a>  CAutoRevertImpersonation::GetAccessToken
+##  <a name="getaccesstoken"></a>CAutoRevertImpersonation::GetAccessToken
 
-Načte aktuální token přístupu asociovaném s tímto objektem.
+Načte přístupový token, který je aktuální přidružený k tomuto objektu.
 
 ```
 const CAccessToken* GetAccessToken() throw();
@@ -129,14 +129,14 @@ const CAccessToken* GetAccessToken() throw();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Adresa dříve přidružené [caccesstoken –](../../atl/reference/caccesstoken-class.md), nebo hodnota NULL, pokud žádné přidružení.
+Adresa dříve přidruženého CAccessTokenu [](../../atl/reference/caccesstoken-class.md)nebo hodnota null, pokud žádné přidružení neexistuje.
 
 ### <a name="remarks"></a>Poznámky
 
-Pokud tato metoda je volána pro účely, které patří k obnovení zosobnění `CAccessToken` objektu, [odpojit](#detach) metoda by místo toho používá.
+Pokud je tato metoda volána pro účely, které zahrnují reverzi zosobnění `CAccessToken` objektu, je třeba použít metodu [detach](#detach) .
 
 ## <a name="see-also"></a>Viz také:
 
 [Ukázka ATLSecurity](../../overview/visual-cpp-samples.md)<br/>
-[Přístupové tokeny](/windows/desktop/SecAuthZ/access-tokens)<br/>
-[Přehled tříd](../../atl/atl-class-overview.md)
+[Přístupové tokeny](/windows/win32/SecAuthZ/access-tokens)<br/>
+[Přehled třídy](../../atl/atl-class-overview.md)

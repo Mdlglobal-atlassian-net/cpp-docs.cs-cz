@@ -1,21 +1,21 @@
 ---
-title: ms_union – (C++ atributů COM)
+title: ms_union (C++ atribut com)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.ms_union
 helpviewer_keywords:
 - ms_union attribute
 ms.assetid: bb548689-6962-457e-af56-8ffdf68987eb
-ms.openlocfilehash: 3f83eeff4fd9b2177b862b101b7a2d4faeaaab87
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 26207c3c2c20fb039eb39e26f4d24e141c4dff07
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62409106"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69514378"
 ---
-# <a name="msunion"></a>ms_union
+# <a name="ms_union"></a>ms_union
 
-Určuje zarovnání reprezentace dat sítě nonencapsulated sjednocení.
+Řídí zarovnání reprezentace dat v síti pro nezapouzdřené sjednocení.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -25,11 +25,11 @@ Určuje zarovnání reprezentace dat sítě nonencapsulated sjednocení.
 
 ## <a name="remarks"></a>Poznámky
 
-**Ms_union –** C++ atribut má stejné funkce jako [ms_union –](/windows/desktop/Midl/ms-union-attrib) atribut MIDL.
+Atribut **ms_union** C++ má stejné funkce jako atribut [ms_union](/windows/win32/Midl/ms-union-attrib) MIDL.
 
 ## <a name="example"></a>Příklad
 
-Následující kód ukazuje umístění **ms_union –**:
+Následující kód ukazuje umístění **ms_union**:
 
 ```cpp
 // cpp_attr_ref_ms_union.cpp
@@ -56,16 +56,16 @@ __interface IFireTabCtrl {
 
 ## <a name="requirements"></a>Požadavky
 
-### <a name="attribute-context"></a>Atribut kontextu
+### <a name="attribute-context"></a>Kontext atributu
 
 |||
 |-|-|
-|**Platí pro**|Nonencapsulated sjednocení|
-|**Opakovatelné**|Ne|
-|**Vyžadované atributy**|Žádný|
+|**Platí pro**|Nezapouzdřené sjednocení|
+|**REPEATABLE**|Ne|
+|**Požadované atributy**|Žádné|
 |**Neplatné atributy**|`dispinterface`|
 
-Další informace najdete v tématu [kontexty atributů](cpp-attributes-com-net.md#contexts).
+Další informace naleznete v tématu [kontexty atributů](cpp-attributes-com-net.md#contexts).
 
 ## <a name="see-also"></a>Viz také:
 

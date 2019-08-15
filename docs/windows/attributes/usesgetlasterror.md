@@ -1,21 +1,21 @@
 ---
-title: usesgetlasterror – (atribut C++ COM)
+title: usesgetlasterror (C++ atribut com)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.usesgetlasterror
 helpviewer_keywords:
 - usesgetlasterror attribute
 ms.assetid: d149e33d-35a7-46cb-9137-ae6883d86122
-ms.openlocfilehash: 9f050bbf69edf1ab8327a283299cb5e687ce5380
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b14316bd929f4b41b13a76c41e94b31b7534e9d8
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62407065"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69513894"
 ---
 # <a name="usesgetlasterror"></a>usesgetlasterror
 
-Říká volajícímu, že pokud dojde k chybě při volání této funkce, potom volající provést zavoláním `GetLastError` načíst kód chyby.
+Říká volajícímu, že pokud při volání této funkce dojde k chybě, volající pak může zavolat `GetLastError` , aby získal kód chyby.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -25,24 +25,24 @@ ms.locfileid: "62407065"
 
 ## <a name="remarks"></a>Poznámky
 
-**Usesgetlasterror –** C++ atribut má stejné funkce jako [usesgetlasterror –](/windows/desktop/Midl/usesgetlasterror) atribut MIDL.
+Atribut **usesgetlasterror** C++ má stejné funkce jako atribut [usesgetlasterror](/windows/win32/Midl/usesgetlasterror) MIDL.
 
 ## <a name="example"></a>Příklad
 
-Zobrazit [možnost idl_module](idl-module.md) příklad ukázku toho, jak používat **usesgetlasterror –**.
+Ukázku použití **usesgetlasterror**najdete v příkladu [idl_module](idl-module.md) .
 
 ## <a name="requirements"></a>Požadavky
 
-### <a name="attribute-context"></a>Atribut kontextu
+### <a name="attribute-context"></a>Kontext atributu
 
 |||
 |-|-|
-|**Platí pro**|**modul** atribut|
-|**Opakovatelné**|Ne|
-|**Vyžadované atributy**|Žádné|
+|**Platí pro**|atribut **Module**|
+|**REPEATABLE**|Ne|
+|**Požadované atributy**|Žádné|
 |**Neplatné atributy**|Žádné|
 
-Další informace o kontexty atributů najdete v tématu [kontexty atributů](cpp-attributes-com-net.md#contexts).
+Další informace o kontextech atributů naleznete v tématu kontexty [atributů](cpp-attributes-com-net.md#contexts).
 
 ## <a name="see-also"></a>Viz také:
 

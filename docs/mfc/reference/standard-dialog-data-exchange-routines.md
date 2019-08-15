@@ -4,44 +4,44 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - standard dialog, data exchange routines
 ms.assetid: c6adb7f3-f9af-4cc5-a9ea-315c5b60ad1a
-ms.openlocfilehash: 05eaa86133bb55cfbf62ec68f81e7ca7d9ab169b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 47586f9cff0fcbe2cd7bad31f3d93fed08190830
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62310003"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69511579"
 ---
 # <a name="standard-dialog-data-exchange-routines"></a>Rutiny výměny dat standardního dialogového okna
 
-Toto téma uvádí rutiny exchange (DDX) dat standardního dialogového okna pro běžné ovládací prvky dialogového okna knihovny MFC.
+Toto téma obsahuje seznam standardních rutin pro výměnu dat dialogových oken, které se používají pro běžné ovládací prvky dialogového okna MFC.
 
 > [!NOTE]
->  Rutiny výměny dat standardního dialogového okna jsou definovány v souboru afxdd_.h záhlaví. Ale aplikace by měla obsahovat afxwin.h.
+>  Standardní rutiny výměny dat dialogových oken se definují v hlavičkovém souboru afxdd_. h. Aplikace by však měly zahrnovat afxwin. h.
 
 ### <a name="ddx-functions"></a>DDX Functions
 
 |||
 |-|-|
 |[DDX_CBIndex](#ddx_cbindex)|Inicializuje nebo načte index aktuálního výběru ovládacího prvku pole se seznamem.|
-|[DDX_CBString](#ddx_cbstring)|Inicializuje nebo načte aktuální obsah upravit pole ovládacího prvku pole se seznamem.|
-|[DDX_CBStringExact](#ddx_cbstringexact)|Inicializuje nebo načte aktuální obsah upravit pole ovládacího prvku pole se seznamem.|
-|[DDX_Check](#ddx_check)|Inicializuje nebo načte aktuální stav ovládací prvek zaškrtávací políčko.|
-|[DDX_Control](#ddx_control)|Podtřídy daný ovládací prvek v rámci dialogového okna.|
-|[DDX_DateTimeCtrl](#ddx_datetimectrl)|Inicializuje nebo načte datum a čas data ovládací prvek pro výběr data a času.|
-|[DDX_IPAddress](#ddx_ipaddress)|Inicializuje nebo načte aktuální hodnota ovládacího prvku IP adresu.|
-|[DDX_LBIndex](#ddx_lbindex)|Inicializuje nebo načte index aktuálního výběru ovládacího prvku seznamu.|
-|[DDX_LBString](#ddx_lbstring)|Inicializuje nebo načte aktuální výběr v rámci ovládacího prvku seznamu pole.|
-|[DDX_LBStringExact](#ddx_lbstringexact)|Inicializuje nebo načte aktuální výběr v rámci ovládacího prvku seznamu pole.|
-|[DDX_ManagedControl](#ddx_managedcontrol)|Vytvoří ovládací prvek .NET odpovídající ID ovládacího prvku prostředku.|
-|[DDX_MonthCalCtrl](#ddx_monthcalctrl)|Inicializuje nebo načte aktuální hodnotu ovládací prvek měsíční kalendář.|
-|[DDX_Radio](#ddx_radio)|Inicializuje nebo načte index založený na 0 v ovládacím prvku přepínač, který je aktuálně zaškrtnutých v rámci skupiny ovládacích prvků přepínačů.|
-|[DDX_Scroll](#ddx_scroll)|Inicializuje nebo načte aktuální pozice posuvníku ovládacího prvku thumb.|
-|[DDX_Slider](#ddx_slider)|Inicializuje nebo načte aktuální pozice posuvníku ovládacího prvku thumb.|
-|[DDX_Text](#ddx_text)|Inicializuje nebo načte aktuální hodnota ovládacího prvku pro úpravy.|
+|[DDX_CBString](#ddx_cbstring)|Inicializuje nebo načte aktuální obsah pole pro úpravy ovládacího prvku pole se seznamem.|
+|[DDX_CBStringExact](#ddx_cbstringexact)|Inicializuje nebo načte aktuální obsah pole pro úpravy ovládacího prvku pole se seznamem.|
+|[DDX_Check](#ddx_check)|Inicializuje nebo načte aktuální stav ovládacího prvku zaškrtávací políčko.|
+|[DDX_Control](#ddx_control)|Roztřídí daný ovládací prvek v rámci dialogového okna.|
+|[DDX_DateTimeCtrl](#ddx_datetimectrl)|Inicializuje nebo načte data nebo čas ovládacího prvku pro výběr data a času.|
+|[DDX_IPAddress](#ddx_ipaddress)|Inicializuje nebo načte aktuální hodnotu ovládacího prvku IP adresa.|
+|[DDX_LBIndex](#ddx_lbindex)|Inicializuje nebo načte index aktuálního výběru ovládacího prvku seznam.|
+|[DDX_LBString](#ddx_lbstring)|Inicializuje nebo načte aktuální výběr v rámci ovládacího prvku seznamu.|
+|[DDX_LBStringExact](#ddx_lbstringexact)|Inicializuje nebo načte aktuální výběr v rámci ovládacího prvku seznamu.|
+|[DDX_ManagedControl](#ddx_managedcontrol)|Vytvoří ovládací prvek .NET, který odpovídá ID prostředku ovládacího prvku.|
+|[DDX_MonthCalCtrl](#ddx_monthcalctrl)|Inicializuje nebo načte aktuální hodnotu ovládacího prvku měsíční kalendář.|
+|[DDX_Radio](#ddx_radio)|Inicializuje nebo načte index ovládacího prvku přepínače založený na nule, který je aktuálně kontrolován v rámci skupiny ovládacích prvků Radio.|
+|[DDX_Scroll](#ddx_scroll)|Inicializuje nebo načte aktuální pozici jezdce posunutí ovládacího prvku.|
+|[DDX_Slider](#ddx_slider)|Inicializuje nebo načte aktuální pozici táhla ovládacího prvku posuvníku.|
+|[DDX_Text](#ddx_text)|Inicializuje nebo načte aktuální hodnotu ovládacího prvku pro úpravy.|
 
 ##  <a name="ddx_cbindex"></a>  DDX_CBIndex
 
-`DDX_CBIndex` Funkce spravuje přenos **int** data mezi ovládací prvek pole se seznamem v dialogovém okně formuláře, zobrazení, nebo objekt zobrazení ovládacího prvku a **int** datový člen dialogové okno, zobrazení formuláře nebo ovládacího prvku objekt zobrazení.
+Funkce spravuje přenos dat typu int mezi ovládacím prvkem pole se seznamem v dialogovém okně, formulářovém zobrazení nebo objektu zobrazení ovládacího prvku a datový člen **int** v dialogovém okně, formulářovém zobrazení nebo objektu zobrazení ovládacího prvku. `DDX_CBIndex`
 
 ```
 void AFXAPI DDX_CBIndex(
@@ -53,27 +53,27 @@ void AFXAPI DDX_CBIndex(
 ### <a name="parameters"></a>Parametry
 
 *pDX*<br/>
-Ukazatel `CDataExchange` objektu. Architektura dodává tento objekt k vytvoření kontextu výměny dat, včetně jeho směr.
+Ukazatel na `CDataExchange` objekt. Rozhraní poskytuje tento objekt pro vytvoření kontextu výměny dat, včetně jeho směru.
 
 *nIDC*<br/>
-ID prostředku prvek pole se seznamem, který je přidružený k vlastnosti ovládacího prvku.
+ID prostředku ovládacího prvku pole se seznamem přidruženého k vlastnosti ovládacího prvku
 
 *index*<br/>
-Odkaz na proměnnou člena dialogové okno, zobrazení formuláře nebo objekt zobrazení ovládacího prvku, pomocí kterého se vyměňují data.
+Odkaz na členskou proměnnou dialogového okna, formulářové zobrazení nebo objekt zobrazení ovládacího prvku, se kterým se data vyměňují.
 
 ### <a name="remarks"></a>Poznámky
 
-Když `DDX_CBIndex` se nazývá *index* je nastavena na index aktuálního výběru pole se seznamem. Pokud není vybrána žádná položka *index* je nastavena na hodnotu 0.
+Když `DDX_CBIndex` je volána, *index* je nastaven na index aktuálního výběru pole se seznamem. Pokud není vybrána žádná položka, *index* je nastaven na hodnotu 0.
 
-Další informace o rozhraní DDX najdete v tématu [výměna dat dialogových oken a ověření](../../mfc/dialog-data-exchange-and-validation.md).
+Další informace o DDX naleznete v tématu [Výměna a ověřování dat dialogových oken](../../mfc/dialog-data-exchange-and-validation.md).
 
 ### <a name="requirements"></a>Požadavky
 
-  **Header** afxdd_.h
+  **Header** afxdd_. h
 
 ##  <a name="ddx_cbstring"></a>  DDX_CBString
 
-`DDX_CBString` Funkce spravuje přenos `CString` zobrazení, nebo objekt zobrazení ovládacího prvku formulář dat mezi ovládacího prvku pro úpravy prvku pole se seznamem v dialogovém okně a `CString` datový člen dialogové okno, zobrazení formuláře nebo ovládací prvek zobrazení objektu.
+Funkce spravuje přenos dat mezi ovládacím prvkem pro úpravy ovládacího prvku pole se seznamem v dialogovém okně, formulářovém zobrazení nebo objektu zobrazení `CString` ovládacího prvku a datového členu v dialogovém okně, formulářovém zobrazení nebo objektu zobrazení ovládacího prvku. `CString` `DDX_CBString`
 
 ```
 void AFXAPI DDX_CBString(
@@ -85,30 +85,30 @@ void AFXAPI DDX_CBString(
 ### <a name="parameters"></a>Parametry
 
 *pDX*<br/>
-Ukazatel `CDataExchange` objektu. Architektura dodává tento objekt k vytvoření kontextu výměny dat, včetně jeho směr.
+Ukazatel na `CDataExchange` objekt. Rozhraní poskytuje tento objekt pro vytvoření kontextu výměny dat, včetně jeho směru.
 
 *nIDC*<br/>
-ID prostředku prvek pole se seznamem, který je přidružený k vlastnosti ovládacího prvku.
+ID prostředku ovládacího prvku pole se seznamem přidruženého k vlastnosti ovládacího prvku
 
 *value*<br/>
-Odkaz na proměnnou člena dialogové okno, zobrazení formuláře nebo objekt zobrazení ovládacího prvku, pomocí kterého se vyměňují data.
+Odkaz na členskou proměnnou dialogového okna, formulářové zobrazení nebo objekt zobrazení ovládacího prvku, se kterým se data vyměňují.
 
 ### <a name="remarks"></a>Poznámky
 
-Když `DDX_CBString` se nazývá *hodnotu* je nastavena na aktuální výběr pole se seznamem. Pokud není vybrána žádná položka *hodnotu* nastavený na řetězec o nulové délce.
+Při `DDX_CBString` volání hodnoty je *hodnota* nastavena na aktuální výběr pole se seznamem. Pokud není vybrána žádná položka, *hodnota* je nastavena na řetězec s nulovou délkou.
 
 > [!NOTE]
->  Pokud rozevírací seznam pole se seznamem se hodnota vyměňují je omezena na 255 znaků.
+>  Pokud je pole se seznamem rozevírací seznam, vyměňované vydaná hodnota je omezena na 255 znaků.
 
-Další informace o rozhraní DDX najdete v tématu [výměna dat dialogových oken a ověření](../../mfc/dialog-data-exchange-and-validation.md).
+Další informace o DDX naleznete v tématu [Výměna a ověřování dat dialogových oken](../../mfc/dialog-data-exchange-and-validation.md).
 
 ### <a name="requirements"></a>Požadavky
 
-  **Header** afxdd_.h
+  **Header** afxdd_. h
 
 ##  <a name="ddx_cbstringexact"></a>  DDX_CBStringExact
 
-`DDX_CBStringExact` Funkce spravuje přenos `CString` zobrazení, nebo objekt zobrazení ovládacího prvku formulář dat mezi ovládacího prvku pro úpravy prvku pole se seznamem v dialogovém okně a `CString` datový člen dialogové okno, zobrazení formuláře nebo ovládací prvek zobrazení objektu.
+Funkce spravuje přenos dat mezi ovládacím prvkem pro úpravy ovládacího prvku pole se seznamem v dialogovém okně, formulářovém zobrazení nebo objektu zobrazení `CString` ovládacího prvku a datového členu v dialogovém okně, formulářovém zobrazení nebo objektu zobrazení ovládacího prvku. `CString` `DDX_CBStringExact`
 
 ```
 void AFXAPI DDX_CBStringExact(
@@ -120,30 +120,30 @@ void AFXAPI DDX_CBStringExact(
 ### <a name="parameters"></a>Parametry
 
 *pDX*<br/>
-Ukazatel `CDataExchange` objektu. Architektura dodává tento objekt k vytvoření kontextu výměny dat, včetně jeho směr.
+Ukazatel na `CDataExchange` objekt. Rozhraní poskytuje tento objekt pro vytvoření kontextu výměny dat, včetně jeho směru.
 
 *nIDC*<br/>
-ID prostředku prvek pole se seznamem, který je přidružený k vlastnosti ovládacího prvku.
+ID prostředku ovládacího prvku pole se seznamem přidruženého k vlastnosti ovládacího prvku
 
 *value*<br/>
-Odkaz na proměnnou člena dialogové okno, zobrazení formuláře nebo objekt zobrazení ovládacího prvku, pomocí kterého se vyměňují data.
+Odkaz na členskou proměnnou dialogového okna, formulářové zobrazení nebo objekt zobrazení ovládacího prvku, se kterým se data vyměňují.
 
 ### <a name="remarks"></a>Poznámky
 
-Když `DDX_CBStringExact` se nazývá *hodnotu* je nastavena na aktuální výběr pole se seznamem. Pokud není vybrána žádná položka *hodnotu* nastavený na řetězec o nulové délce.
+Při `DDX_CBStringExact` volání hodnoty je *hodnota* nastavena na aktuální výběr pole se seznamem. Pokud není vybrána žádná položka, *hodnota* je nastavena na řetězec s nulovou délkou.
 
 > [!NOTE]
->  Pokud rozevírací seznam pole se seznamem se hodnota vyměňují je omezena na 255 znaků.
+>  Pokud je pole se seznamem rozevírací seznam, vyměňované vydaná hodnota je omezena na 255 znaků.
 
-Další informace o rozhraní DDX najdete v tématu [výměna dat dialogových oken a ověření](../../mfc/dialog-data-exchange-and-validation.md).
+Další informace o DDX naleznete v tématu [Výměna a ověřování dat dialogových oken](../../mfc/dialog-data-exchange-and-validation.md).
 
 ### <a name="requirements"></a>Požadavky
 
-  **Header** afxdd_.h
+  **Header** afxdd_. h
 
 ##  <a name="ddx_check"></a>  DDX_Check
 
-`DDX_Check` Funkce spravuje přenos **int** data mezi ovládací prvek zaškrtávací políčko v dialogovém okně, formuláře, zobrazení, nebo objekt zobrazení ovládacího prvku a **int** datový člen dialogové okno, zobrazení formuláře nebo ovládacího prvku objekt zobrazení.
+Funkce spravuje přenos dat typu **int** mezi ovládacím prvkem zaškrtávací políčko v dialogovém okně, formulářovém zobrazení nebo objektu zobrazení ovládacího prvku a datový člen int v dialogovém okně, formulářovém zobrazení nebo objektu zobrazení ovládacího prvku. `DDX_Check`
 
 ```
 void AFXAPI DDX_Check(
@@ -155,27 +155,27 @@ void AFXAPI DDX_Check(
 ### <a name="parameters"></a>Parametry
 
 *pDX*<br/>
-Ukazatel `CDataExchange` objektu. Architektura dodává tento objekt k vytvoření kontextu výměny dat, včetně jeho směr.
+Ukazatel na `CDataExchange` objekt. Rozhraní poskytuje tento objekt pro vytvoření kontextu výměny dat, včetně jeho směru.
 
 *nIDC*<br/>
-ID prostředku ovládací prvek zaškrtávací políčko, které jsou přidružené k vlastnosti ovládacího prvku.
+ID prostředku ovládacího prvku zaškrtávací políčko přidruženého k vlastnosti ovládacího prvku
 
 *value*<br/>
-Odkaz na proměnnou člena dialogové okno, zobrazení formuláře nebo objekt zobrazení ovládacího prvku, pomocí kterého se vyměňují data.
+Odkaz na členskou proměnnou dialogového okna, formulářové zobrazení nebo objekt zobrazení ovládacího prvku, se kterým se data vyměňují.
 
 ### <a name="remarks"></a>Poznámky
 
-Když `DDX_Check` se nazývá *hodnotu* je nastavena na aktuální stav ovládací prvek zaškrtávací políčko. Seznam stav možné hodnoty najdete v tématu [BM_GETCHECK](/windows/desktop/Controls/bm-getcheck) v sadě Windows SDK.
+Při `DDX_Check` volání hodnoty je *hodnota* nastavena na aktuální stav ovládacího prvku zaškrtávací políčko. Seznam možných hodnot stavu naleznete v tématu [BM_GETCHECK](/windows/win32/Controls/bm-getcheck) v Windows SDK.
 
-Další informace o rozhraní DDX najdete v tématu [výměna dat dialogových oken a ověření](../../mfc/dialog-data-exchange-and-validation.md).
+Další informace o DDX naleznete v tématu [Výměna a ověřování dat dialogových oken](../../mfc/dialog-data-exchange-and-validation.md).
 
 ### <a name="requirements"></a>Požadavky
 
-  **Header** afxdd_.h
+  **Header** afxdd_. h
 
 ##  <a name="ddx_control"></a>  DDX_Control
 
-`DDX_Control` Funkce podtřídy ovládacího prvku určené *nIDC*, dialogové okno, zobrazení formuláře nebo ovládací prvek zobrazení objektu.
+Funkce podtřídí ovládací prvek určený parametrem nIDC pro dialogové okno, formulářové zobrazení nebo objekt zobrazení ovládacího prvku. `DDX_Control`
 
 ```
 void AFXAPI DDX_Control(
@@ -190,24 +190,24 @@ void AFXAPI DDX_Control(
 Ukazatel [CDataExchange](../../mfc/reference/cdataexchange-class.md) objektu.
 
 *nIDC*<br/>
-ID prostředku ovládacího prvku na má rozčlenit do podtříd.
+ID prostředku ovládacího prvku, který se má roztřídit
 
 *rControl*<br/>
-Odkaz na proměnnou člena dialogové okno, zobrazení formuláře nebo ovládací prvek objekt zobrazení související s zadaný ovládací prvek.
+Odkaz na členskou proměnnou v dialogovém okně, formulářovém zobrazení nebo objekt zobrazení ovládacího prvku, který se vztahuje k zadanému ovládacímu prvku.
 
 ### <a name="remarks"></a>Poznámky
 
-*PDX* objektu je poskytnut pomocí rozhraní framework při `DoDataExchange` funkce je volána. Proto `DDX_Control` by měla být volána pouze v rámci přepsání metody `DoDataExchange`.
+Objekt *PDX* je dodán rozhraním, když `DoDataExchange` je funkce volána. Proto by měla být volána pouze v rámci vašeho `DoDataExchange`přepsání. `DDX_Control`
 
-Další informace o rozhraní DDX najdete v tématu [výměna dat dialogových oken a ověření](../../mfc/dialog-data-exchange-and-validation.md).
+Další informace o DDX naleznete v tématu [Výměna a ověřování dat dialogových oken](../../mfc/dialog-data-exchange-and-validation.md).
 
 ### <a name="requirements"></a>Požadavky
 
-  **Header** afxdd_.h
+  **Header** afxdd_. h
 
 ##  <a name="ddx_datetimectrl"></a>  DDX_DateTimeCtrl
 
-`DDX_DateTimeCtrl` Funkce spravuje přenos dat Datum a čas mezi ovládací prvek pro výběr data a času ( [atributu CDateTimeCtrl](../../mfc/reference/cdatetimectrl-class.md)) v objektu pole nebo formuláře dialogového okna zobrazení a buď [CTime](../../atl-mfc-shared/reference/ctime-class.md) nebo [COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md) datový člen objektu zobrazení nebo formuláře dialogového okna.
+Funkce spravuje přenos dat data a času mezi ovládacím prvkem pro výběr data a času ( [atributu CDateTimeCtrl](../../mfc/reference/cdatetimectrl-class.md)) v dialogovém okně nebo v objektu zobrazení formuláře a buď [CTime –](../../atl-mfc-shared/reference/ctime-class.md) nebo COleDateTime datový člen dialogového okna nebo formuláře. [](../../atl-mfc-shared/reference/coledatetime-class.md) `DDX_DateTimeCtrl` Zobrazit objekt
 
 ```
 void AFXAPI DDX_DateTimeCtrl(
@@ -229,29 +229,29 @@ void AFXAPI DDX_DateTimeCtrl(
 ### <a name="parameters"></a>Parametry
 
 *pDX*<br/>
-Ukazatel [CDataExchange](../../mfc/reference/cdataexchange-class.md) objektu. Architektura dodává tento objekt k vytvoření kontextu výměny dat, včetně jeho směr. Není nutné odstranit tento objekt.
+Ukazatel [CDataExchange](../../mfc/reference/cdataexchange-class.md) objektu. Rozhraní poskytuje tento objekt pro vytvoření kontextu výměny dat, včetně jeho směru. Tento objekt nemusíte odstranit.
 
 *nIDC*<br/>
-ID prostředku datum a čas pro výběr ovládacího prvku přidruženého k členské proměnné.
+ID prostředku ovládacího prvku pro výběr data a času přidruženého k členské proměnné.
 
 *value*<br/>
-V prvních dvou verzí, odkaz na `CTime` nebo `COleDateTime` členské proměnné, dialogové okno, zobrazení formuláře nebo objekt zobrazení ovládacího prvku, pomocí kterého se vyměňují data. Ve třetí verzi odkaz na `CString` datový člen ovládací prvek zobrazení objekt.
+V prvních dvou verzích odkaz na `CTime` nebo `COleDateTime` členskou proměnnou, dialogové okno, formulářové zobrazení nebo objekt zobrazení ovládacího prvku, se kterým se data vyměňují. Třetí verze, odkaz na `CString` objekt zobrazení ovládacího prvku data member.
 
 ### <a name="remarks"></a>Poznámky
 
-Když `DDX_DateTimeCtrl` je volána, *hodnotu* je nastavena na aktuální stav datu a ovládacího prvku pro výběr času nebo ovládací prvek je nastaven na *hodnota*, v závislosti na směru exchange.
+Když `DDX_DateTimeCtrl` je volána, *hodnota* je nastavena na aktuální stav ovládacího prvku pro výběr data a času nebo je ovládací prvek nastaven na *hodnotu*v závislosti na směru výměny.
 
-Ve třetí verzi výše uvedeného `DDX_DateTimeCtrl` spravuje přenos `CString` data mezi datum čas ovládacího prvku a [CString](../../atl-mfc-shared/reference/cstringt-class.md) datový člen objektu ovládacího prvku zobrazení. Řetězec je formátovaný pomocí pravidel pro aktuální národní prostředí pro formátování data a času.
+Ve třetí verzi výše `DDX_DateTimeCtrl` spravuje `CString` přenos dat mezi ovládacím prvkem data a času a datovým členem [CString](../../atl-mfc-shared/reference/cstringt-class.md) objektu zobrazení ovládacího prvku. Řetězec je formátován pomocí pravidel aktuálního národního prostředí pro formátování data a času.
 
-Další informace o rozhraní DDX najdete v tématu [výměna dat dialogových oken a ověření](../../mfc/dialog-data-exchange-and-validation.md).
+Další informace o DDX naleznete v tématu [Výměna a ověřování dat dialogových oken](../../mfc/dialog-data-exchange-and-validation.md).
 
 ### <a name="requirements"></a>Požadavky
 
-  **Header** afxdd_.h
+  **Header** afxdd_. h
 
 ## <a name="ddx_managedcontrol"></a>  DDX_ManagedControl
 
-Vytvoří ovládací prvek .NET odpovídající ID ovládacího prvku prostředku.
+Vytvoří ovládací prvek .NET, který odpovídá ID prostředku ovládacího prvku.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -266,27 +266,27 @@ void DDX_ManagedControl(
 ### <a name="parameters"></a>Parametry
 
 *pDX*<br/>
-Ukazatel [cdataexchange – třída](cdataexchange-class.md) objektu. Architektura dodává tento objekt k vytvoření kontextu výměny dat, včetně jeho směr.
+Ukazatel [cdataexchange – třída](cdataexchange-class.md) objektu. Rozhraní poskytuje tento objekt pro vytvoření kontextu výměny dat, včetně jeho směru.
 
 *nIDC*<br/>
-ID prostředku ovládacího prvku přidruženého k vlastnosti ovládacího prvku.
+ID prostředku ovládacího prvku přidruženého k vlastnosti ovládacího prvku
 
 *control*<br/>
-Odkaz na [CWinFormsControl – třída](cwinformscontrol-class.md) objektu.
+Odkaz na objekt [třídy CWinFormsControl](cwinformscontrol-class.md) .
 
 ### <a name="remarks"></a>Poznámky
 
-`DDX_ManagedControl` volání [CWinFormsControl::CreateManagedControl](cwinformscontrol-class.md#createmanagedcontrol) vytvořit ovládací prvek s odpovídajícím ID prostředku ovládacího prvku. Použití `DDX_ManagedControl` k vytvoření ovládacích prvků z ID prostředku v [CDialog::OnInitDialog](cdialog-class.md#oninitdialog). Pro data systému exchange není potřeba používat funkce DDX/DDV s ovládacími prvky Windows Forms.
+`DDX_ManagedControl`volá [CWinFormsControl:: CreateManagedControl](cwinformscontrol-class.md#createmanagedcontrol) , aby se vytvořil ovládací prvek, který odpovídá ID ovládacího prvku prostředku. Použijte `DDX_ManagedControl` k vytvoření ovládacích prvků z ID prostředků v [CDialog:: OnInitDialog](cdialog-class.md#oninitdialog). Pro výměnu dat nemusíte používat funkce DDX/DDV s ovládacími prvky model Windows Forms.
 
-Další informace najdete v tématu [jak: DDX/DDV datové vazby pomocí Windows Forms](../../dotnet/how-to-do-ddx-ddv-data-binding-with-windows-forms.md).
+Další informace najdete v tématu [jak: Vytvoření datové vazby DDX/DDV pomocí model Windows Forms](../../dotnet/how-to-do-ddx-ddv-data-binding-with-windows-forms.md).
 
 ### <a name="requirements"></a>Požadavky
 
-**Záhlaví:** afxwinforms.h
+**Záhlaví:** afxwinforms. h
 
 ##  <a name="ddx_ipaddress"></a>  DDX_IPAddress
 
-`DDX_IPAddress` Funkce spravuje přenos dat mezi ovládací prvek adresy IP a datový člen objektu ovládacího prvku zobrazení.
+`DDX_IPAddress` Funkce spravuje přenos dat mezi ovládacím prvkem IP adresa a datovým členem objektu zobrazení ovládacího prvku.
 
 ```
 void AFXAPI DDX_IPAddress(
@@ -298,36 +298,36 @@ void AFXAPI DDX_IPAddress(
 ### <a name="parameters"></a>Parametry
 
 *pDX*<br/>
-Ukazatel `CDataExchange` objektu. Architektura dodává tento objekt k vytvoření kontextu výměny dat, včetně jeho směr.
+Ukazatel na `CDataExchange` objekt. Rozhraní poskytuje tento objekt pro vytvoření kontextu výměny dat, včetně jeho směru.
 
 *nIDC*<br/>
-ID prostředku ovládací prvek adresy IP, které jsou přidružené k vlastnosti ovládacího prvku.
+ID prostředku pro řízení IP adres přidruženého k vlastnosti ovládacího prvku.
 
 *value*<br/>
-Odkaz na DWORD obsahující pole čtyř hodnotu ovládací prvek adresy IP. Pole jsou vyplněna nebo trochu odlišná.
+Odkaz na hodnotu DWORD obsahující čtyři pole s hodnotou ovládacího prvku IP adresa. Tato pole jsou vyplněna nebo čtena následujícím způsobem.
 
-|Pole|Služba BITS obsahující hodnotu pole|
+|Pole|Bity obsahující hodnotu pole|
 |-----------|-------------------------------------|
 |3|0 až 7|
 |2|8 až 15|
 |1|16 až 23|
-|0|24 do 31.|
+|0|24 až 31|
 
-Použití rozhraní Win32 [IPM_GETADDRESS](/windows/desktop/Controls/ipm-getaddress) načíst hodnotu nebo použijte [IPM_SETADDRESS](/windows/desktop/Controls/ipm-setaddress) tak, aby vyplnil hodnotu. Tyto zprávy jsou popsány v sadě Windows SDK.
+Použijte Win32 [IPM_GETADDRESS](/windows/win32/Controls/ipm-getaddress) ke čtení hodnoty, nebo použijte [IPM_SETADDRESS](/windows/win32/Controls/ipm-setaddress) k vyplnění hodnoty. Tyto zprávy jsou popsány v Windows SDK.
 
 ### <a name="remarks"></a>Poznámky
 
-Když `DDX_IPAddress` je volána, *hodnotu* je buď čtení ze správy IP adres nebo *hodnotu* se zapisují do ovládacího prvku, v závislosti na směru exchange.
+Při `DDX_IPAddress` volání hodnoty je *hodnota* načtena buď z řízení IP adresy, nebo je zapsána do ovládacího prvku v závislosti na směru výměny.
 
-Další informace o rozhraní DDX najdete v tématu [výměna dat dialogových oken a ověření](../../mfc/dialog-data-exchange-and-validation.md).
+Další informace o DDX naleznete v tématu [Výměna a ověřování dat dialogových oken](../../mfc/dialog-data-exchange-and-validation.md).
 
 ### <a name="requirements"></a>Požadavky
 
-  **Header** afxdd_.h
+  **Header** afxdd_. h
 
 ##  <a name="ddx_lbindex"></a>  DDX_LBIndex
 
-`DDX_LBIndex` Funkce spravuje přenos **int** data mezi ovládací prvek seznam v dialogovém okně formuláře, zobrazení, nebo objekt zobrazení ovládacího prvku a **int** datový člen dialogové okno, zobrazení formuláře nebo ovládacího prvku objekt zobrazení.
+Funkce spravuje přenos dat typu **int** mezi ovládacím prvkem seznamu v dialogovém okně, formulářovém zobrazení nebo objektu zobrazení ovládacího prvku a datový člen int v dialogovém okně, formulářovém zobrazení nebo objektu zobrazení ovládacího prvku. `DDX_LBIndex`
 
 ```
 void AFXAPI DDX_LBIndex(
@@ -339,27 +339,27 @@ void AFXAPI DDX_LBIndex(
 ### <a name="parameters"></a>Parametry
 
 *pDX*<br/>
-Ukazatel `CDataExchange` objektu. Architektura dodává tento objekt k vytvoření kontextu výměny dat, včetně jeho směr.
+Ukazatel na `CDataExchange` objekt. Rozhraní poskytuje tento objekt pro vytvoření kontextu výměny dat, včetně jeho směru.
 
 *nIDC*<br/>
-ID prostředku ovládací prvek seznam přidružené vlastnosti ovládacího prvku.
+ID prostředku ovládacího prvku seznamu přidruženého k vlastnosti ovládacího prvku
 
 *index*<br/>
-Odkaz na proměnnou člena dialogové okno, zobrazení formuláře nebo objekt zobrazení ovládacího prvku, pomocí kterého se vyměňují data.
+Odkaz na členskou proměnnou dialogového okna, formulářové zobrazení nebo objekt zobrazení ovládacího prvku, se kterým se data vyměňují.
 
 ### <a name="remarks"></a>Poznámky
 
-Když `DDX_LBIndex` se nazývá *index* je nastavena na index aktuální výběr v seznamu. Pokud není vybrána žádná položka *index* je nastavena na hodnotu -1.
+Když `DDX_LBIndex` je volána, *index* je nastaven na index aktuálního výběru pole seznamu. Pokud není vybrána žádná položka, *index* je nastaven na hodnotu-1.
 
-Další informace o rozhraní DDX najdete v tématu [výměna dat dialogových oken a ověření](../../mfc/dialog-data-exchange-and-validation.md).
+Další informace o DDX naleznete v tématu [Výměna a ověřování dat dialogových oken](../../mfc/dialog-data-exchange-and-validation.md).
 
 ### <a name="requirements"></a>Požadavky
 
-  **Header** afxdd_.h
+  **Header** afxdd_. h
 
 ##  <a name="ddx_lbstring"></a>  DDX_LBString
 
-`DDX_LBString` Funkce spravuje přenos `CString` data mezi ovládací prvek seznam v dialogovém okně formuláře, zobrazení, nebo objekt zobrazení ovládacího prvku a `CString` datový člen dialogové okno, zobrazení formuláře nebo ovládací prvek zobrazení objektu.
+Funkce spravuje přenos dat mezi ovládacím prvkem seznamu v dialogovém okně, formulářovém zobrazení nebo objektu zobrazení `CString` ovládacího prvku a datovým členem v dialogovém okně, formulářovém zobrazení nebo objektu zobrazení ovládacího prvku. `CString` `DDX_LBString`
 
 ```
 void AFXAPI DDX_LBString(
@@ -371,32 +371,32 @@ void AFXAPI DDX_LBString(
 ### <a name="parameters"></a>Parametry
 
 *pDX*<br/>
-Ukazatel `CDataExchange` objektu. Architektura dodává tento objekt k vytvoření kontextu výměny dat, včetně jeho směr.
+Ukazatel na `CDataExchange` objekt. Rozhraní poskytuje tento objekt pro vytvoření kontextu výměny dat, včetně jeho směru.
 
 *nIDC*<br/>
-ID prostředku ovládací prvek seznam přidružené vlastnosti ovládacího prvku.
+ID prostředku ovládacího prvku seznamu přidruženého k vlastnosti ovládacího prvku
 
 *value*<br/>
-Odkaz na proměnnou člena dialogové okno, zobrazení formuláře nebo objekt zobrazení ovládacího prvku, pomocí kterého se vyměňují data.
+Odkaz na členskou proměnnou dialogového okna, formulářové zobrazení nebo objekt zobrazení ovládacího prvku, se kterým se data vyměňují.
 
 ### <a name="remarks"></a>Poznámky
 
-Když `DDX_LBString` je volána k přenosu dat do seznamu ovládacího prvku pole, první položky v ovládacím prvku, jehož začátku odpovídá *hodnotu* zaškrtnuto. (Tak, aby odpovídaly celé položky, ne jenom předpony, použijte [DDX_LBStringExact](#ddx_lbstringexact).) Pokud neexistují žádné odpovídající položky, nejsou vybrané žádné položky. Porovnání se velká a malá písmena.
+Když `DDX_LBString` je volána pro přenos dat do ovládacího prvku seznamu, je vybrána první položka v ovládacím prvku, jehož začátek odpovídá *hodnotě* . (Tak, aby odpovídaly celé položky, ne jenom předpony, použijte [DDX_LBStringExact](#ddx_lbstringexact).) Pokud neexistují žádné shody, nejsou vybrány žádné položky. U porovnávání se nerozlišují malá a velká písmena.
 
-Když `DDX_LBString` je volána k přenosu dat z ovládacího prvku seznamu pole *hodnotu* je nastavena na aktuální výběr v seznamu. Pokud není vybrána žádná položka *hodnotu* nastavený na řetězec o nulové délce.
+Když `DDX_LBString` je volána pro přenos dat z ovládacího prvku seznamu, je *hodnota* nastavena na aktuální výběr seznamu. Pokud není vybrána žádná položka, *hodnota* je nastavena na řetězec s nulovou délkou.
 
 > [!NOTE]
->  Pokud rozevírací seznam pole se seznamem se hodnota vyměňují je omezena na 255 znaků.
+>  Pokud je seznamem rozevírací seznam, vyměňované hodnoty se omezí na 255 znaků.
 
-Další informace o rozhraní DDX najdete v tématu [výměna dat dialogových oken a ověření](../../mfc/dialog-data-exchange-and-validation.md).
+Další informace o DDX naleznete v tématu [Výměna a ověřování dat dialogových oken](../../mfc/dialog-data-exchange-and-validation.md).
 
 ### <a name="requirements"></a>Požadavky
 
-  **Header** afxdd_.h
+  **Header** afxdd_. h
 
 ##  <a name="ddx_lbstringexact"></a>  DDX_LBStringExact
 
-`DDX_CBStringExact` Funkce spravuje přenos `CString` zobrazení, nebo objekt zobrazení ovládacího prvku formulář dat mezi úprav ovládací prvek seznam v dialogovém okně a `CString` datový člen dialogové okno, zobrazení formuláře nebo ovládací prvek zobrazení objektu.
+Funkce spravuje přenos dat mezi ovládacím prvkem pro úpravy ovládacího prvku seznam v dialogovém okně, formulářovém zobrazení nebo objektu zobrazení `CString` ovládacího prvku a datový člen v dialogovém okně, formulářovém zobrazení nebo objektu zobrazení ovládacího prvku. `CString` `DDX_CBStringExact`
 
 ```
 void AFXAPI DDX_LBStringExact(
@@ -408,32 +408,32 @@ void AFXAPI DDX_LBStringExact(
 ### <a name="parameters"></a>Parametry
 
 *pDX*<br/>
-Ukazatel `CDataExchange` objektu. Architektura dodává tento objekt k vytvoření kontextu výměny dat, včetně jeho směr.
+Ukazatel na `CDataExchange` objekt. Rozhraní poskytuje tento objekt pro vytvoření kontextu výměny dat, včetně jeho směru.
 
 *nIDC*<br/>
-ID prostředku ovládací prvek seznam přidružené vlastnosti ovládacího prvku.
+ID prostředku ovládacího prvku seznamu přidruženého k vlastnosti ovládacího prvku
 
 *value*<br/>
-Odkaz na proměnnou člena dialogové okno, zobrazení formuláře nebo objekt zobrazení ovládacího prvku, pomocí kterého se vyměňují data.
+Odkaz na členskou proměnnou dialogového okna, formulářové zobrazení nebo objekt zobrazení ovládacího prvku, se kterým se data vyměňují.
 
 ### <a name="remarks"></a>Poznámky
 
-Když `DDX_LBStringExact` je volána k přenosu dat do seznamu ovládacího prvku pole, první položky v ovládacím prvku, který odpovídá *hodnotu* zaškrtnuto. (Vyhledání pouze předponu místo celé položky [DDX_LBString](#ddx_lbstring) Pokud neexistují žádné odpovídající položky, nejsou vybrané žádné položky. Porovnání se velká a malá písmena.
+Když `DDX_LBStringExact` je volána pro přenos dat do ovládacího prvku seznamu, je vybrána první položka v ovládacím prvku, který odpovídá *hodnotě* . (Vyhledání pouze předponu místo celé položky [DDX_LBString](#ddx_lbstring) Pokud neexistují žádné shody, nejsou vybrány žádné položky. U porovnávání se nerozlišují malá a velká písmena.
 
-Když `DDX_CBStringExact` je volána k přenosu dat z ovládacího prvku seznamu pole *hodnotu* je nastavena na aktuální výběr v seznamu. Pokud není vybrána žádná položka *hodnotu* nastavený na řetězec o nulové délce.
+Když `DDX_CBStringExact` je volána pro přenos dat z ovládacího prvku seznamu, je *hodnota* nastavena na aktuální výběr seznamu. Pokud není vybrána žádná položka, *hodnota* je nastavena na řetězec s nulovou délkou.
 
 > [!NOTE]
->  Pokud rozevírací seznam pole se seznamem se hodnota vyměňují je omezena na 255 znaků.
+>  Pokud je seznamem rozevírací seznam, vyměňované hodnoty se omezí na 255 znaků.
 
-Další informace o rozhraní DDX najdete v tématu [výměna dat dialogových oken a ověření](../../mfc/dialog-data-exchange-and-validation.md).
+Další informace o DDX naleznete v tématu [Výměna a ověřování dat dialogových oken](../../mfc/dialog-data-exchange-and-validation.md).
 
 ### <a name="requirements"></a>Požadavky
 
-  **Header** afxdd_.h
+  **Header** afxdd_. h
 
 ##  <a name="ddx_monthcalctrl"></a>  DDX_MonthCalCtrl
 
-`DDX_MonthCalCtrl` Funkce spravuje přenos dat mezi ovládací prvek měsíční kalendář ( [atributu CMonthCalCtrl](../../mfc/reference/cmonthcalctrl-class.md)) dialogové okno, formulářové zobrazení, nebo objekt zobrazení ovládacího prvku a buď [CTime](../../atl-mfc-shared/reference/ctime-class.md) nebo [COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md) datový člen dialogové okno, zobrazení formuláře nebo ovládací prvek zobrazení objektu.
+Funkce spravuje přenos dat data mezi ovládacím prvkem měsíční kalendář ( [atributu CMonthCalCtrl](../../mfc/reference/cmonthcalctrl-class.md)) v dialogovém okně, formulářovém zobrazení nebo objektu zobrazení ovládacího prvku a buď [CTime –](../../atl-mfc-shared/reference/ctime-class.md) , nebo datový člen COleDateTime dialogového okna, formulář [](../../atl-mfc-shared/reference/coledatetime-class.md) `DDX_MonthCalCtrl` zobrazení nebo řízení objektu zobrazení.
 
 ```
 void AFXAPI DDX_MonthCalCtrl(
@@ -450,30 +450,30 @@ void AFXAPI DDX_MonthCalCtrl(
 ### <a name="parameters"></a>Parametry
 
 *pDX*<br/>
-Ukazatel [CDataExchange](../../mfc/reference/cdataexchange-class.md) objektu. Architektura dodává tento objekt k vytvoření kontextu výměny dat, včetně jeho směr. Není nutné odstranit tento objekt.
+Ukazatel [CDataExchange](../../mfc/reference/cdataexchange-class.md) objektu. Rozhraní poskytuje tento objekt pro vytvoření kontextu výměny dat, včetně jeho směru. Tento objekt nemusíte odstranit.
 
 *nIDC*<br/>
-ID prostředku v ovládacím prvku měsíční kalendář přidružený k proměnné členů.
+ID prostředku ovládacího prvku měsíční kalendář přidruženého k členské proměnné.
 
 *value*<br/>
-Odkaz na `CTime` nebo `COleDateTime` členskou proměnnou dialogové okno, zobrazení formuláře nebo objekt zobrazení ovládacího prvku, pomocí kterého se vyměňují data.
+Odkaz na `CTime` členskou proměnnou nebo `COleDateTime` v dialogovém okně, zobrazení formuláře nebo objekt zobrazení ovládacího prvku, se kterým se data vyměňují.
 
 ### <a name="remarks"></a>Poznámky
 
 > [!NOTE]
->  Ovládací prvek slouží ke správě hodnotu data. Čas pole v objektu čas jsou sady tak, aby odrážely čas vytvoření okna ovládacího prvku nebo jakýkoli čas byla nastavena v ovládacím prvku pomocí volání `CMonthCalCtrl::SetCurSel`.
+>  Ovládací prvek spravuje pouze hodnotu data. Časová pole v objektu Time jsou nastavena tak, aby odrážela čas vytvoření okna ovládacího prvku nebo jakýkoli čas byl nastaven v ovládacím prvku pomocí volání `CMonthCalCtrl::SetCurSel`.
 
-Když `DDX_MonthCalCtrl` se nazývá *hodnotu* je nastavena na aktuální stav ovládací prvek měsíční kalendář.
+Při `DDX_MonthCalCtrl` volání hodnoty je *hodnota* nastavena na aktuální stav ovládacího prvku měsíční kalendář.
 
-Další informace o rozhraní DDX najdete v tématu [výměna dat dialogových oken a ověření](../../mfc/dialog-data-exchange-and-validation.md).
+Další informace o DDX naleznete v tématu [Výměna a ověřování dat dialogových oken](../../mfc/dialog-data-exchange-and-validation.md).
 
 ### <a name="requirements"></a>Požadavky
 
-  **Header** afxdd_.h
+  **Header** afxdd_. h
 
 ##  <a name="ddx_radio"></a>  DDX_Radio
 
-`DDX_Radio` Funkce spravuje přenos **int** zobrazení, nebo objekt zobrazení ovládacího prvku formulář dat mezi skupinu přepínačů ovládacího prvku v dialogovém okně a **int** datový člen dialogové okno, zobrazení formuláře nebo ovládacího prvku objekt zobrazení. Hodnota **int** datový člen se určuje podle přepínačů, které se vybere tlačítko v rámci skupiny.
+Funkce spravuje přenos dat typu **int** mezi skupinou ovládacích prvků v dialogovém okně, formulářovém zobrazení nebo objektu zobrazení ovládacího prvku a datový člen int v dialogovém okně, formulářovém zobrazení nebo objektu zobrazení ovládacího prvku. `DDX_Radio` Hodnota datového členu **int** je určena podle toho, který přepínač v rámci skupiny je vybrán.
 
 ```
 void AFXAPI DDX_Radio(
@@ -485,29 +485,29 @@ void AFXAPI DDX_Radio(
 ### <a name="parameters"></a>Parametry
 
 *pDX*<br/>
-Ukazatel `CDataExchange` objektu. Architektura dodává tento objekt k vytvoření kontextu výměny dat, včetně jeho směr.
+Ukazatel na `CDataExchange` objekt. Rozhraní poskytuje tento objekt pro vytvoření kontextu výměny dat, včetně jeho směru.
 
 *nIDC*<br/>
-ID prostředku první ovládací prvek přepínač v skupině.
+ID prostředku prvního ovládacího prvku přepínače ve skupině.
 
 *value*<br/>
-Odkaz na proměnnou člena dialogové okno, zobrazení formuláře nebo objekt zobrazení ovládacího prvku, pomocí kterého se vyměňují data.
+Odkaz na členskou proměnnou dialogového okna, formulářové zobrazení nebo objekt zobrazení ovládacího prvku, se kterým se data vyměňují.
 
 ### <a name="remarks"></a>Poznámky
 
-Když `DDX_Radio` se nazývá *hodnotu* je nastavena na aktuální stav skupiny ovládacích prvků přepínačů. Tato hodnota nastavená jako ovládacím prvku přepínač, který je nyní ověřen index založený na 0 nebo -1, pokud žádné ovládací prvky přepínače nebyly zvoleny.
+Při `DDX_Radio` volání hodnoty je *hodnota* nastavena na aktuální stav skupiny ovládacích prvků přepínač. Hodnota je nastavena jako index s hodnotou 0 ovládacího prvku přepínač, který je aktuálně zaškrtnuto, nebo-1, pokud nejsou zaškrtnuty žádné ovládací prvky přepínačů.
 
-Například v případě, že je první přepínací tlačítko ve skupině checked (tlačítka se stylem WS_GROUP) hodnotu **int** člen je 0 a tak dále.
+Například pro případ, že je zaškrtnuto první přepínač ve skupině (tlačítko se stylem WS_GROUP), hodnota člena **int** je 0 a tak dále.
 
-Další informace o rozhraní DDX najdete v tématu [výměna dat dialogových oken a ověření](../../mfc/dialog-data-exchange-and-validation.md).
+Další informace o DDX naleznete v tématu [Výměna a ověřování dat dialogových oken](../../mfc/dialog-data-exchange-and-validation.md).
 
 ### <a name="requirements"></a>Požadavky
 
-  **Header** afxdd_.h
+  **Header** afxdd_. h
 
 ##  <a name="ddx_scroll"></a>  DDX_Scroll
 
-`DDX_Scroll` Funkce spravuje přenos **int** zobrazení, nebo objekt zobrazení ovládacího prvku formulář dat mezi posuvníku ovládacího prvku v dialogovém okně a **int** datový člen dialogové okno, zobrazení formuláře nebo ovládacího prvku objekt zobrazení.
+Funkce spravuje přenos dat typu **int** mezi ovládacími prvky posuvníku v dialogovém okně, formulářovém zobrazení nebo objektu zobrazení ovládacího prvku a datový člen int v dialogovém okně, formulářovém zobrazení nebo objektu zobrazení ovládacího prvku. `DDX_Scroll`
 
 ```
 void AFXAPI DDX_Scroll(
@@ -519,27 +519,27 @@ void AFXAPI DDX_Scroll(
 ### <a name="parameters"></a>Parametry
 
 *pDX*<br/>
-Ukazatel `CDataExchange` objektu. Architektura dodává tento objekt k vytvoření kontextu výměny dat, včetně jeho směr.
+Ukazatel na `CDataExchange` objekt. Rozhraní poskytuje tento objekt pro vytvoření kontextu výměny dat, včetně jeho směru.
 
 *nIDC*<br/>
-ID prostředku posuvníku ovládacího prvku přidruženého k vlastnosti ovládacího prvku.
+ID prostředku ovládacího prvku posuvníku přidruženého k vlastnosti ovládacího prvku
 
 *value*<br/>
-Odkaz na proměnnou člena dialogové okno, zobrazení formuláře nebo ovládacího prvku zobrazení objektu, pomocí kterého se vyměňují data.
+Odkaz na členskou proměnnou dialogového okna, zobrazení formuláře nebo objekt zobrazení ovládacího prvku, se kterým se data vyměňují.
 
 ### <a name="remarks"></a>Poznámky
 
-Když `DDX_Scroll` se nazývá *hodnotu* je nastavena na aktuální pozici ovládacího prvku thumb. Další informace o hodnoty přidružené k aktuální pozici ovládacího prvku thumb, naleznete v tématu [GetScrollPos](/windows/desktop/api/winuser/nf-winuser-getscrollpos) v sadě Windows SDK.
+Když `DDX_Scroll` je volána, *hodnota* je nastavena na aktuální pozici ovládacího prvku táhla ovládacího prvku. Další informace o hodnotách přidružených k aktuální pozici jezdce ovládacího prvku naleznete v tématu [GetScrollPos](/windows/win32/api/winuser/nf-winuser-getscrollpos) v Windows SDK.
 
-Další informace o rozhraní DDX najdete v tématu [výměna dat dialogových oken a ověření](../../mfc/dialog-data-exchange-and-validation.md).
+Další informace o DDX naleznete v tématu [Výměna a ověřování dat dialogových oken](../../mfc/dialog-data-exchange-and-validation.md).
 
 ### <a name="requirements"></a>Požadavky
 
-  **Header** afxdd_.h
+  **Header** afxdd_. h
 
 ##  <a name="ddx_slider"></a>  DDX_Slider
 
-`DDX_Slider` Funkce spravuje přenos **int** data mezi ovládací prvek posuvník v zobrazení dialogového okna nebo formuláře a **int** datový člen objektu zobrazení nebo formuláře dialogového okna.
+Funkce spravuje přenos dat typu int mezi ovládacím prvkem posuvník v dialogovém okně nebo zobrazením formuláře a datovým členem **int** ovládacího prvku v dialogovém okně nebo v objektu zobrazení formuláře. `DDX_Slider`
 
 ```
 void AFXAPI DDX_Slider(
@@ -551,27 +551,27 @@ void AFXAPI DDX_Slider(
 ### <a name="parameters"></a>Parametry
 
 *pDX*<br/>
-Ukazatel [CDataExchange](../../mfc/reference/cdataexchange-class.md) objektu. Architektura dodává tento objekt k vytvoření kontextu výměny dat, včetně jeho směr.
+Ukazatel [CDataExchange](../../mfc/reference/cdataexchange-class.md) objektu. Rozhraní poskytuje tento objekt pro vytvoření kontextu výměny dat, včetně jeho směru.
 
 *nIDC*<br/>
-ID prostředku v ovládacím prvku posuvník.
+ID prostředku ovládacího prvku posuvník
 
 *value*<br/>
-Odkaz na hodnotu, která bude vyměněn. Tento parametr obsahuje nebo nastaví aktuální pozici v ovládacím prvku posuvník.
+Odkaz na hodnotu, která má být vyměněna. Tento parametr uchovává nebo nastavuje aktuální pozici ovládacího prvku posuvníku.
 
 ### <a name="remarks"></a>Poznámky
 
-Když `DDX_Slider` je volána, *hodnotu* je nastavena na aktuální pozici ovládacího prvku thumb, nebo hodnota přijímá pozice, v závislosti na směru exchange.
+Když `DDX_Slider` je volána, *hodnota* je nastavena na aktuální pozici ovládacího prvku Táhlo nebo hodnota dostane pozici v závislosti na směru výměny.
 
-Další informace o rozhraní DDX najdete v tématu [výměna dat dialogových oken a ověření](../../mfc/dialog-data-exchange-and-validation.md). Informace o ovládacích prvcích posuvníku, naleznete v tématu [používání atributu CSliderCtrl](../../mfc/using-csliderctrl.md).
+Další informace o DDX naleznete v tématu [Výměna a ověřování dat dialogových oken](../../mfc/dialog-data-exchange-and-validation.md). Informace o ovládacích prvcích posuvníku naleznete v tématu [using atributu CSliderCtrl](../../mfc/using-csliderctrl.md).
 
 ### <a name="requirements"></a>Požadavky
 
-  **Header** afxdd_.h
+  **Header** afxdd_. h
 
 ##  <a name="ddx_text"></a>  DDX_Text
 
-`DDX_Text` Funkce spravuje přenos **int**, **UINT**, **dlouhé**, DWORD, `CString`, **float**, nebo **double** data mezi ovládacího prvku pro úpravy v dialogovém okně zobrazení formuláře nebo ovládací prvek zobrazení a [CString](../../atl-mfc-shared/reference/cstringt-class.md) datový člen dialogové okno, zobrazení formuláře nebo ovládací prvek zobrazení objektu.
+`CString` [](../../atl-mfc-shared/reference/cstringt-class.md)Funkce spravuje přenos int, uint, Long, DWORD,, float nebo Double data mezi ovládacím prvkem pro úpravy v dialogovém okně, formulářovém zobrazení nebo zobrazením ovládacího prvku a daty CString. `DDX_Text` člen dialogového okna, formulářového zobrazení nebo objektu zobrazení ovládacího prvku.
 
 ```
 void AFXAPI DDX_Text(
@@ -633,21 +633,21 @@ void AFXAPI DDX_Text(
 ### <a name="parameters"></a>Parametry
 
 *pDX*<br/>
-Ukazatel [CDataExchange](../../mfc/reference/cdataexchange-class.md) objektu. Architektura dodává tento objekt k vytvoření kontextu výměny dat, včetně jeho směr.
+Ukazatel [CDataExchange](../../mfc/reference/cdataexchange-class.md) objektu. Rozhraní poskytuje tento objekt pro vytvoření kontextu výměny dat, včetně jeho směru.
 
 *nIDC*<br/>
-ID ovládacího prvku v dialogovém okně, formulářové zobrazení nebo objekt ovládacího prvku zobrazení pro úpravy.
+ID ovládacího prvku pro úpravy v dialogovém okně, formulářovém zobrazení nebo objektu zobrazení ovládacího prvku.
 
 *value*<br/>
-Odkaz na datový člen v dialogovém okně, formulářové zobrazení nebo objekt ovládacího prvku zobrazení. Datový typ *hodnotu* závisí na kterém přetížené verze `DDX_Text` použijete.
+Odkaz na datový člen v dialogovém okně, formulářovém zobrazení nebo objektu zobrazení ovládacího prvku. Datový typ *hodnota* závisí na tom, které z přetížených verzí `DDX_Text` použijete.
 
 ### <a name="remarks"></a>Poznámky
 
-Další informace o rozhraní DDX najdete v tématu [výměna dat dialogových oken a ověření](../../mfc/dialog-data-exchange-and-validation.md).
+Další informace o DDX naleznete v tématu [Výměna a ověřování dat dialogových oken](../../mfc/dialog-data-exchange-and-validation.md).
 
 ### <a name="requirements"></a>Požadavky
 
-  **Header** afxdd_.h
+  **Header** afxdd_. h
 
 ## <a name="see-also"></a>Viz také:
 

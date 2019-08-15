@@ -8,27 +8,27 @@ helpviewer_keywords:
 - threading [ATL], free threaded marshaler
 - FTM in ATL
 ms.assetid: 2db88a13-2217-4ebc-aa7e-432d5da902eb
-ms.openlocfilehash: ddea5a74dbd40d097398d04c0b2bc274df5ec972
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 94e4961c69e9441d160d72d9b72afcee3677e25f
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62252504"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69491916"
 ---
 # <a name="atl-and-the-free-threaded-marshaler"></a>ATL a volné zařazování vláken
 
-Stránka ATL Průvodce jednoduchým objektem na atributy poskytuje možnost, která umožňuje vaší třídy k agregaci volné zařazování vláken (FTM).
+Stránka atributů Průvodce jednoduchým objektem ATL poskytuje možnost, která umožňuje třídě agregovat volné zařazování vláken (FTM).
 
-Průvodce vygeneruje kód, který vytvoří instanci volné zařazování vláken v `FinalConstruct` a vydání této instance v `FinalRelease`. Makro COM_INTERFACE_ENTRY_AGGREGATE se automaticky přidá do mapy modelu COM a zkontrolujte, že `QueryInterface` žádosti o [rozhraní IMarshal](/windows/desktop/api/objidlbase/nn-objidlbase-imarshal) jsou zpracovávány volné zařazování vláken.
+Průvodce generuje kód pro vytvoření instance bezplatného zařazování s vlákny v `FinalConstruct` nástroji a vydání této instance v. `FinalRelease` Makro COM_INTERFACE_ENTRY_AGGREGATE je automaticky přidáno do mapy modelu COM, aby bylo zajištěno, že `QueryInterface` žádosti pro [IMarshal](/windows/win32/api/objidlbase/nn-objidlbase-imarshal) jsou zpracovávány volným zařazováním vláken.
 
-Volné zařazování vláken, umožňuje přímý přístup k rozhraní na objekt z libovolného vlákna ve stejném procesu, urychluje volání mezi objektu apartment. Tato možnost je určená pro třídy, které používají obě modelu vláken.
+Volné zařazování vláken umožňuje přímý přístup k rozhraním v objektu z libovolného vlákna ve stejném procesu, zrychluje volání mezi objekty Apartment. Tato možnost je určena pro třídy, které používají model dělení na vlákna.
 
-Při použití této možnosti třídy musí nést odpovědnost za zabezpečení vlákna svá data. Kromě toho objekty, které potřebují použít ukazatele rozhraní získané od jiných objektů a agregovat volné zařazování vláken musejí udělat dodatečné kroky k zajištění, že jsou správně zařadit rozhraní. Obvykle to zahrnuje ukládání ukazatele rozhraní do tabulky globálního rozhraní (GIT) a získávání ukazatele z GITU pokaždé, když se používá. Knihovna ATL poskytuje třídu [ccomgitptr –](../atl/reference/ccomgitptr-class.md) můžete použít ukazatele rozhraní, které jsou uložené v GITU.
+Při použití této možnosti musí třídy převzít zodpovědnost za bezpečnost vlákna jejich dat. Kromě toho objekty, které agreguje zařazovací modul s volnými vlákny a potřebují používat ukazatele rozhraní získané z jiných objektů, musí provést další kroky, aby bylo zajištěno správné zařazování rozhraní. To obvykle zahrnuje ukládání ukazatelů rozhraní v globální tabulce rozhraní (GIT) a získání ukazatele z GITU pokaždé, když se použije. ATL poskytuje třídu [CComGITPtr](../atl/reference/ccomgitptr-class.md) , která vám může pomáhat při použití ukazatelů rozhraní uložených v Gitu.
 
 ## <a name="see-also"></a>Viz také:
 
-[Koncepty](../atl/active-template-library-atl-concepts.md)<br/>
-[CoCreateFreeThreadedMarshaler](/windows/desktop/api/combaseapi/nf-combaseapi-cocreatefreethreadedmarshaler)<br/>
-[IMarshal](/windows/desktop/api/objidlbase/nn-objidlbase-imarshal)<br/>
-[Kdy použít tabulky globálního rozhraní](/windows/desktop/com/when-to-use-the-global-interface-table)<br/>
-[Proces serveru potíže s vlákny](/windows/desktop/com/in-process-server-threading-issues)
+[Charakteristiky](../atl/active-template-library-atl-concepts.md)<br/>
+[CoCreateFreeThreadedMarshaler](/windows/win32/api/combaseapi/nf-combaseapi-cocreatefreethreadedmarshaler)<br/>
+[IMarshal](/windows/win32/api/objidlbase/nn-objidlbase-imarshal)<br/>
+[Kdy použít globální tabulku rozhraní](/windows/win32/com/when-to-use-the-global-interface-table)<br/>
+[Problémy s vlákny v procesových procesech serveru](/windows/win32/com/in-process-server-threading-issues)

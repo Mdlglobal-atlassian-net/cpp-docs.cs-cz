@@ -1,5 +1,5 @@
 ---
-title: CPen Class
+title: CPen – – třída
 ms.date: 11/04/2016
 f1_keywords:
 - CPen
@@ -18,16 +18,16 @@ helpviewer_keywords:
 - CPen [MFC], GetExtLogPen
 - CPen [MFC], GetLogPen
 ms.assetid: 93175a3a-d46c-4768-be8d-863254f97a5f
-ms.openlocfilehash: 8510c29571e6a370c7948ebe49e53b2c22dbfb9c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 952d270acd47b5834a06b731f7875ea2efdd4695
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62372917"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69502941"
 ---
-# <a name="cpen-class"></a>CPen Class
+# <a name="cpen-class"></a>CPen – – třída
 
-Zapouzdřuje pero rozhraní GDI systému Windows grafiky zařízení.
+Zapouzdřuje pero rozhraní grafického zařízení (GDI) systému Windows.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -39,33 +39,33 @@ class CPen : public CGdiObject
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
-|[CPen::CPen](#cpen)|Vytvoří `CPen` objektu.|
+|[CPen –:: CPen –](#cpen)|`CPen` Vytvoří objekt.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
-|[CPen::CreatePen](#createpen)|Vytvoří logický kosmetické nebo geometrické pera určený styl, šířku a atributy štětce a připojí ho k `CPen` objektu.|
-|[CPen::CreatePenIndirect](#createpenindirect)|Vytvoří pera s styl, šířku a barvu podle [logpen –](/windows/desktop/api/wingdi/ns-wingdi-taglogpen) struktury a připojí ho k `CPen` objektu.|
-|[CPen::FromHandle](#fromhandle)|Vrací ukazatel `CPen` objektu při Windows HPEN.|
-|[CPen::GetExtLogPen](#getextlogpen)|Získá [EXTLOGPEN](/windows/desktop/api/wingdi/ns-wingdi-tagextlogpen) základní struktury.|
-|[CPen::GetLogPen](#getlogpen)|Získá [logpen –](/windows/desktop/api/wingdi/ns-wingdi-taglogpen) základní struktury.|
+|[CPen::CreatePen](#createpen)|Vytvoří logický kosmetické nebo geometrické pero se zadaným stylem, šířkou a štětcem a připojí ho k `CPen` objektu.|
+|[CPen::CreatePenIndirect](#createpenindirect)|Vytvoří pero se stylem, šířkou a barvou zadanou ve struktuře [LOGPEN –](/windows/win32/api/wingdi/ns-wingdi-logpen) a připojí ho k `CPen` objektu.|
+|[CPen –:: FromHandle](#fromhandle)|Vrací ukazatel na `CPen` objekt v případě, že je zadán systém Windows HPEN.|
+|[CPen::GetExtLogPen](#getextlogpen)|Získá podkladovou strukturu [EXTLOGPEN](/windows/win32/api/wingdi/ns-wingdi-extlogpen) .|
+|[CPen::GetLogPen](#getlogpen)|Získá podkladovou strukturu [LOGPEN –](/windows/win32/api/wingdi/ns-wingdi-logpen) .|
 
 ### <a name="public-operators"></a>Veřejné operátory
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
-|[CPen::operator HPEN](#operator_hpen)|Vrátí popisovač Windows připojené k `CPen` objektu.|
+|[CPen –:: operator HPEN](#operator_hpen)|Vrátí popisovač systému Windows připojený k `CPen` objektu.|
 
 ## <a name="remarks"></a>Poznámky
 
-Další informace o používání `CPen`, naleznete v tématu [grafické objekty](../../mfc/graphic-objects.md).
+Další informace o použití `CPen`naleznete v tématu [Graphics Objects](../../mfc/graphic-objects.md).
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
-[Třídy CObject](../../mfc/reference/cobject-class.md)
+[CObject](../../mfc/reference/cobject-class.md)
 
 [CGdiObject](../../mfc/reference/cgdiobject-class.md)
 
@@ -73,11 +73,11 @@ Další informace o používání `CPen`, naleznete v tématu [grafické objekty
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** afxwin.h
+**Záhlaví:** afxwin. h
 
-##  <a name="cpen"></a>  CPen::CPen
+##  <a name="cpen"></a>CPen –:: CPen –
 
-Vytvoří `CPen` objektu.
+`CPen` Vytvoří objekt.
 
 ```
 CPen();
@@ -98,82 +98,82 @@ CPen(
 ### <a name="parameters"></a>Parametry
 
 *nPenStyle*<br/>
-Určuje styl psaní perem. Tento parametr v první verzi konstruktoru může být jeden z následujících hodnot:
+Určuje styl pera. Tento parametr v první verzi konstruktoru může být jedna z následujících hodnot:
 
-- PS_SOLID vytvoří solid pera.
+- PS_SOLID vytvoří plné pero.
 
-- PS_DASH vytváří čárkovanou pera. Platné pouze v případě, že šířka pera je 1 nebo žádnou skupinou, v zařízení jednotky.
+- PS_DASH vytvoří přerušované pero. Platí pouze v případě, že je šířka pera na 1 nebo méně, v jednotkách zařízení.
 
-- PS_DOT vytvoří tečkovaná pera. Platné pouze v případě, že šířka pera je 1 nebo žádnou skupinou, v zařízení jednotky.
+- PS_DOT vytvoří tečkované pero. Platí pouze v případě, že je šířka pera na 1 nebo méně, v jednotkách zařízení.
 
-- Vytvoří PS_DASHDOT pera s různými pomlčky a tečky. Platné pouze v případě, že šířka pera je 1 nebo žádnou skupinou, v zařízení jednotky.
+- PS_DASHDOT vytvoří pero se střídavými pomlčkami a tečkami. Platí pouze v případě, že je šířka pera na 1 nebo méně, v jednotkách zařízení.
 
-- PS_DASHDOTDOT vytvoří a psaní perem s různými pomlčky a tečky double. Platné pouze v případě, že šířka pera je 1 nebo žádnou skupinou, v zařízení jednotky.
+- PS_DASHDOTDOT vytvoří pero se střídavými pomlčkami a dvojitými tečkami. Platí pouze v případě, že je šířka pera na 1 nebo méně, v jednotkách zařízení.
 
-- PS_NULL vytvoří null pera.
+- PS_NULL vytvoří pero s hodnotou null.
 
-- Funkce, které určují ohraničující obdélník PS_INSIDEFRAME vytvoří pera nakreslí čáru uvnitř rámečku uzavřených obrazců vytvořený ve Windows GDI výstup (například `Ellipse`, `Rectangle`, `RoundRect`, `Pie`a `Chord`členské funkce). Při použití tohoto stylu s Windows GDI výstup funkce, které neurčují ohraničující obdélník (například `LineTo` členská funkce), oblasti pro kreslení pera není omezeno rámečkem.
+- PS_INSIDEFRAME vytvoří pero, které vykreslí čáru uvnitř uzavřených tvarů vytvořených výstupními funkcemi `Ellipse`GDI systému Windows, které určují ohraničující obdélník (například `Rectangle`,, `RoundRect` `Pie`, a `Chord`členské funkce). Pokud se tento styl používá u výstupních funkcí GDI systému Windows, které neurčují ohraničující obdélník (například `LineTo` členské funkce), oblast kreslení pera není omezena rámečkem.
 
-Druhá verze `CPen` konstruktor Určuje kombinaci typu, styl, zakončení a atributy spojení. Hodnoty z jednotlivých kategorií by měly být kombinované pomocí bitového operátoru OR (&#124;). Psaní perem typ může být jeden z následujících hodnot:
+Druhá verze `CPen` konstruktoru určuje kombinaci atributů typ, styl, zakončení a spojení. Hodnoty z každé kategorie by měly být kombinovány pomocí bitového operátoru OR&#124;(). Typ pera může být jedna z následujících hodnot:
 
-- PS_GEOMETRIC vytvoří geometrické pera.
+- PS_GEOMETRIC vytvoří geometrické pero.
 
-- PS_COSMETIC vytvoří kosmetické pera.
+- PS_COSMETIC vytvoří kosmetické pero.
 
-   Druhá verze `CPen` konstruktor přidá následující styly pero *nPenStyle*:
+   Druhá verze `CPen` konstruktoru přidává následující styly pera pro *nPenStyle*:
 
-- PS_ALTERNATE vytvoří pera, který nastaví každý pixel. (Tento styl je možné použít pouze kosmetické pera.)
+- PS_ALTERNATE vytvoří pero, které nastaví všechny ostatní pixely. (Tento styl se vztahuje pouze na kosmetické pero.)
 
-- Vytvoří PS_USERSTYLE pera, která používá pole stylu zadaných uživatelem.
+- PS_USERSTYLE vytvoří pero, které používá pole stylu poskytované uživatelem.
 
-   Zakončení může být jedna z následujících hodnot:
+   Koncová hodnota může být jedna z následujících hodnot:
 
-- Zakončení PS_ENDCAP_ROUND jsou kola.
+- PS_ENDCAP_ROUND konce jsou zaoblené.
 
-- Zakončení PS_ENDCAP_SQUARE jsou čtvereček.
+- Zakončení PS_ENDCAP_SQUARE jsou čtvercová.
 
-- Zakončení PS_ENDCAP_FLAT jsou bez stromové struktury.
+- Zakončení PS_ENDCAP_FLAT jsou plochá.
 
-   Připojení může být jedna z následujících hodnot:
+   Spojení může být jedna z následujících hodnot:
 
-- Jsou sený PS_JOIN_BEVEL připojí.
+- Spojení PS_JOIN_BEVEL se zkosí.
 
-- Připojí PS_JOIN_MITER jsou zkosené když jsou v rámci aktuální limit nastavil [SetMiterLimit](/windows/desktop/api/wingdi/nf-wingdi-setmiterlimit) funkce. Pokud připojení překročí tento limit, je sený.
+- Spojení PS_JOIN_MITER jsou ostrý, pokud jsou v rámci aktuálního limitu nastaveného funkcí [SetMiterLimit](/windows/win32/api/wingdi/nf-wingdi-setmiterlimit) . Pokud spojení tento limit překročí, bude zkosený.
 
-- Připojí PS_JOIN_ROUND jsou kola.
+- PS_JOIN_ROUND spojení jsou kulatá.
 
 *nWidth*<br/>
 Určuje šířku pera.
 
-- Pro první verzi konstruktoru Pokud je tato hodnota 0, je vždy 1 pixelu, bez ohledu na režim mapování šířku v jednotkách zařízení.
+- V první verzi konstruktoru, pokud je tato hodnota 0, Šířka v jednotkách zařízení je vždy 1 pixel bez ohledu na režim mapování.
 
-- Pro druhý verze konstruktoru Pokud *nPenStyle* je PS_GEOMETRIC, šířku je uveden v logických jednotkách. Pokud *nPenStyle* je PS_COSMETIC, šířka musí být nastavena na hodnotu 1.
+- V případě druhé verze konstruktoru, pokud je *NPENSTYLE* PS_GEOMETRIC, je šířka uvedena v logických jednotkách. Pokud je *NPENSTYLE* PS_COSMETIC, Šířka musí být nastavená na 1.
 
 *crColor*<br/>
-Obsahuje barva RGB pro pero.
+Obsahuje barvu RGB pro pero.
 
 *pLogBrush*<br/>
-Odkazuje `LOGBRUSH` struktury. Pokud *nPenStyle* PS_COSMETIC, je *lbColor* člena `LOGBRUSH` struktura Určuje barvu pera a *lbStyle* člena `LOGBRUSH` struktura musí být nastavena na BS_SOLID. Pokud *nPenStyle* PS_GEOMETRIC, je třeba zadat všechny členy pro zadání atributů štětce, pera.
+Odkazuje na `LOGBRUSH` strukturu. Pokud je *nPenStyle* PS_COSMETIC, `LOGBRUSH` člen *lbColor* struktury určuje barvu pera `LOGBRUSH` a člen *lbStyle* struktury musí být nastaven na BS_SOLID. Pokud je *NPENSTYLE* PS_GEOMETRIC, musí být pro zadání atributů štětce použity všichni členové.
 
 *nStyleCount*<br/>
-Určuje délku v jednotkách doubleword *lpStyle* pole. Tato hodnota musí být nula, pokud *nPenStyle* není PS_USERSTYLE.
+Určuje délku pole *lpStyle* v jednotkách doubleword. Tato hodnota musí být nula, pokud *nPenStyle* není PS_USERSTYLE.
 
 *lpStyle*<br/>
-Odkazuje na pole hodnot dvojitého slova. První hodnota určuje první dash ve stylu definovaný uživatelem, druhá hodnota udává délku první místo a tak dále. This – ukazatel musí mít hodnotu NULL, pokud *nPenStyle* není PS_USERSTYLE.
+Odkazuje na pole hodnot doubleword. První hodnota určuje délku první pomlčky v uživatelsky definovaném stylu, druhá hodnota určuje délku prvního prostoru a tak dále. Tento ukazatel musí mít hodnotu NULL, pokud *nPenStyle* není PS_USERSTYLE.
 
 ### <a name="remarks"></a>Poznámky
 
-Pokud použijete konstruktor bez argumentů, musí inicializovat výsledný `CPen` objektu `CreatePen`, `CreatePenIndirect`, nebo `CreateStockObject` členské funkce.
+Použijete-li konstruktor bez argumentů, je nutné inicializovat `CPen` výsledný objekt `CreatePen`pomocí funkcí, `CreatePenIndirect`nebo `CreateStockObject` .
 
-Pokud použijete konstruktor, který přebírá argumenty, žádné další inicializaci je nezbytné. Konstruktor s argumenty může vyvolat výjimku, pokud nedojde k chybám, když bude vždy úspěšné konstruktor bez argumentů.
+Použijete-li konstruktor, který přebírá argumenty, není nutné provádět žádnou další inicializaci. Konstruktor s argumenty může vyvolat výjimku, pokud dojde k chybám, ale konstruktor bez argumentů bude vždy úspěšný.
 
 ### <a name="example"></a>Příklad
 
 [!code-cpp[NVC_MFCDocView#99](../../mfc/codesnippet/cpp/cpen-class_1.cpp)]
 
-##  <a name="createpen"></a>  CPen::CreatePen
+##  <a name="createpen"></a>CPen –:: CreatePen
 
-Vytvoří logický kosmetické nebo geometrické pera určený styl, šířku a atributy štětce a připojí ho k `CPen` objektu.
+Vytvoří logický kosmetické nebo geometrické pero se zadaným stylem, šířkou a štětcem a připojí ho k `CPen` objektu.
 
 ```
 BOOL CreatePen(
@@ -192,56 +192,56 @@ BOOL CreatePen(
 ### <a name="parameters"></a>Parametry
 
 *nPenStyle*<br/>
-Určuje styl pera. Seznam možných hodnot, najdete v článku *nPenStyle* parametr [cpen –](#cpen) konstruktoru.
+Určuje styl pera. Seznam možných hodnot naleznete v parametru *nPenStyle* v konstruktoru [CPen –](#cpen) .
 
 *nWidth*<br/>
 Určuje šířku pera.
 
-- Pro první verzi `CreatePen`, pokud je tato hodnota 0, šířku v jednotkách zařízení je vždy 1 pixelu, bez ohledu na režim mapování.
+- U první verze `CreatePen`nástroje platí, že pokud je tato hodnota 0, Šířka v jednotkách zařízení je vždy 1 pixel bez ohledu na režim mapování.
 
-- Pro druhou verzi `CreatePen`, pokud *nPenStyle* je PS_GEOMETRIC, šířku je uveden v logických jednotkách. Pokud *nPenStyle* je PS_COSMETIC, šířka musí být nastavena na hodnotu 1.
+- V případě druhé verze `CreatePen`nástroje, pokud je *nPenStyle* PS_GEOMETRIC, je šířka uvedena v logických jednotkách. Pokud je *NPENSTYLE* PS_COSMETIC, Šířka musí být nastavená na 1.
 
 *crColor*<br/>
-Obsahuje barva RGB pro pero.
+Obsahuje barvu RGB pro pero.
 
 *pLogBrush*<br/>
-Odkazuje [logbrush –](/windows/desktop/api/wingdi/ns-wingdi-taglogbrush) struktury. Pokud *nPenStyle* PS_COSMETIC, je `lbColor` člena `LOGBRUSH` struktura Určuje barvu pera a *lbStyle* člena `LOGBRUSH` struktura musí být nastaveno na BS_ PLNÁ. Je-li nPenStyle PS_GEOMETRIC, všichni členové musí využívat pro zadání atributů štětce, pera.
+Odkazuje na strukturu [LOGBRUSH –](/windows/win32/api/wingdi/ns-wingdi-logbrush) . Pokud *je nPenStyle* PS_COSMETIC, `lbColor` člen `LOGBRUSH` struktury určuje barvu `LOGBRUSH` pera a člen *lbStyle* struktury musí být nastaven na BS_SOLID. Pokud je nPenStyle PS_GEOMETRIC, musí být pro zadání atributů štětce použity všichni členové.
 
 *nStyleCount*<br/>
-Určuje délku v jednotkách doubleword *lpStyle* pole. Tato hodnota musí být nula, pokud *nPenStyle* není PS_USERSTYLE.
+Určuje délku pole *lpStyle* v jednotkách doubleword. Tato hodnota musí být nula, pokud *nPenStyle* není PS_USERSTYLE.
 
 *lpStyle*<br/>
-Odkazuje na pole hodnot dvojitého slova. První hodnota určuje první dash ve stylu definovaný uživatelem, druhá hodnota udává délku první místo a tak dále. This – ukazatel musí mít hodnotu NULL, pokud *nPenStyle* není PS_USERSTYLE.
+Odkazuje na pole hodnot doubleword. První hodnota určuje délku první pomlčky v uživatelsky definovaném stylu, druhá hodnota určuje délku prvního prostoru a tak dále. Tento ukazatel musí mít hodnotu NULL, pokud *nPenStyle* není PS_USERSTYLE.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Nenulové, pokud je úspěšná, nebo nula, pokud metoda selže.
+Nenulové, pokud je to úspěšné, nebo nula, pokud se metoda nezdařila.
 
 ### <a name="remarks"></a>Poznámky
 
-První verze `CreatePen` inicializuje s určený styl, šířku a barvu pera. Pera je následně vybrat jako aktuální pero pro jakýkoli kontext zařízení.
+První verze `CreatePen` inicializuje pero se zadaným stylem, šířkou a barvou. Pero lze následně vybrat jako aktuální pero pro libovolný kontext zařízení.
 
-Pera, které mají větší než 1 pixelu šířku by měl mít vždy PS_NULL, PS_SOLID nebo PS_INSIDEFRAME style.
+Pro pera, které mají šířku větší než 1 pixel, by měla být vždy buď styl PS_NULL, PS_SOLID, nebo PS_INSIDEFRAME.
 
-Pokud pera PS_INSIDEFRAME styl a barvy, který neodpovídá barvu v tabulce barev logické, pera je vykreslen s tónovaná barva. Styl psaní perem PS_SOLID nelze použít k vytvoření pera dithered pro bitové barvou. Styl PS_INSIDEFRAME se shoduje s PS_SOLID, pokud je šířka pera menší než nebo rovno 1.
+Pokud má pero styl PS_INSIDEFRAME a barvu, která se neshoduje s barvou v tabulce logických barev, pero se vykreslí pomocí barevně barvené barvy. Styl pera PS_SOLID nelze použít k vytvoření pera se barevnou barvou. Styl PS_INSIDEFRAME je stejný jako PS_SOLID, pokud je šířka pera menší nebo rovna 1.
 
-Druhá verze `CreatePen` inicializuje logické kosmetické nebo geometrické pera, který má zadaný styl, šířku a štětce atributy. Šířka pera kosmetické je vždy 1; Šířka pera geometrické je vždy určena v celém světě jednotkách. Jakmile aplikace vytvoří logické pera, ho vyberte pera kontextu zařízení voláním [CDC::SelectObject](../../mfc/reference/cdc-class.md#selectobject) funkce. Po výběru pera kontextu zařízení, můžete použít k vykreslení čar a křivek.
+Druhá verze `CreatePen` inicializuje logický kosmetické nebo geometrické pero, který má zadaný atribut Style, Width a štětec. Šířka symbolického pera je vždy 1; Šířka geometrického pera je vždy určena v jednotkách světa. Poté, co aplikace vytvoří logické pero, může toto pero vybrat do kontextu zařízení voláním funkce [CDC:: VybratObjekt](../../mfc/reference/cdc-class.md#selectobject) . Po výběru pera do kontextu zařízení lze použít k vykreslení čar a křivek.
 
-- Pokud *nPenStyle* PS_COSMETIC a PS_USERSTYLE položky *lpStyle* pole zadejte délku pomlčky a mezery v jednotkách style. Styl jednotka je definována zařízení, ve kterém se pera používá k nakreslení čáry.
+- Pokud je *NPENSTYLE* PS_COSMETIC a PS_USERSTYLE, položky v poli *lpStyle* určují délky pomlček a mezer v jednotkách stylu. Jednotka stylu je definována zařízením, ve kterém se pero používá k nakreslení čáry.
 
-- Pokud *nPenStyle* PS_GEOMETRIC a PS_USERSTYLE položky *lpStyle* pole zadejte délku pomlčky a mezery v logických jednotkách.
+- Pokud je *NPENSTYLE* PS_GEOMETRIC a PS_USERSTYLE, položky v poli *lpStyle* určují délky pomlček a mezer v logických jednotkách.
 
-- Pokud *nPenStyle* PS_ALTERNATE, ignorován styl jednotky a nastavit každý pixel.
+- Pokud je *NPENSTYLE* PS_ALTERNATE, jednotka stylu se ignoruje a nanastaví se všechny ostatní pixely.
 
-Když aplikace již nevyžaduje dané pera, měla by volat [CGdiObject::DeleteObject](../../mfc/reference/cgdiobject-class.md#deleteobject) členské funkce nebo zničit `CPen` objektu, prostředek se už používá. Aplikace by neměl odstranit pera, při výběru pera v kontextu zařízení.
+Pokud aplikace již nevyžaduje dané pero, měla by zavolat členskou funkci [CGdiObject::D eleteobject](../../mfc/reference/cgdiobject-class.md#deleteobject) nebo zničit `CPen` objekt, aby se prostředek již nepoužíval. Aplikace by neměla odstranit pero, pokud je pero vybráno v kontextu zařízení.
 
 ### <a name="example"></a>Příklad
 
 [!code-cpp[NVC_MFCDocView#100](../../mfc/codesnippet/cpp/cpen-class_2.cpp)]
 
-##  <a name="createpenindirect"></a>  CPen::CreatePenIndirect
+##  <a name="createpenindirect"></a>CPen –:: CreatePenIndirect
 
-Inicializuje pera, který má styl, šířku a barvu uvedené ve struktuře, na které odkazuje *lpLogPen*.
+Inicializuje pero, který má styl, šířku a barvu určenou ve struktuře, na kterou odkazuje *lpLogPen*.
 
 ```
 BOOL CreatePenIndirect(LPLOGPEN lpLogPen);
@@ -250,7 +250,7 @@ BOOL CreatePenIndirect(LPLOGPEN lpLogPen);
 ### <a name="parameters"></a>Parametry
 
 *lpLogPen*<br/>
-Odkazuje Windows [logpen –](/windows/desktop/api/Wingdi/ns-wingdi-taglogpen) strukturu, která obsahuje informace o pera.
+Odkazuje na strukturu [LOGPEN –](/windows/win32/api/Wingdi/ns-wingdi-logpen) systému Windows, která obsahuje informace o Peru.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -258,17 +258,17 @@ Nenulové, pokud je funkce úspěšná; jinak 0.
 
 ### <a name="remarks"></a>Poznámky
 
-Pera, které mají větší než 1 pixelu šířku by měl mít vždy PS_NULL, PS_SOLID nebo PS_INSIDEFRAME style.
+Pro pera, které mají šířku větší než 1 pixel, by měla být vždy buď styl PS_NULL, PS_SOLID, nebo PS_INSIDEFRAME.
 
-Pokud pera PS_INSIDEFRAME styl a barvy, který neodpovídá barvu v tabulce barev logické, pera je vykreslen s tónovaná barva. Pokud šířka pera je menší než nebo rovno 1 se shoduje s PS_SOLID PS_INSIDEFRAME style.
+Pokud má pero styl PS_INSIDEFRAME a barvu, která se neshoduje s barvou v tabulce logických barev, pero se vykreslí pomocí barevně barvené barvy. Styl PS_INSIDEFRAME je stejný jako PS_SOLID, pokud je šířka pera menší nebo rovna 1.
 
 ### <a name="example"></a>Příklad
 
 [!code-cpp[NVC_MFCDocView#101](../../mfc/codesnippet/cpp/cpen-class_3.cpp)]
 
-##  <a name="fromhandle"></a>  CPen::FromHandle
+##  <a name="fromhandle"></a>CPen –:: FromHandle
 
-Vrací ukazatel `CPen` objekt daný popisovač pro objekt pen Windows GDI.
+Vrátí ukazatel na `CPen` objekt s daným popisovačem na objekt pera Windows GDI.
 
 ```
 static CPen* PASCAL FromHandle(HPEN hPen);
@@ -277,23 +277,23 @@ static CPen* PASCAL FromHandle(HPEN hPen);
 ### <a name="parameters"></a>Parametry
 
 *hPen*<br/>
-`HPEN` Popisovač Windows GDI pera.
+`HPEN`pořídí pero Windows GDI.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Ukazatel `CPen` objekt Pokud úspěšné; jinak hodnota NULL.
+Ukazatel na `CPen` objekt v případě úspěchu; jinak null.
 
 ### <a name="remarks"></a>Poznámky
 
-Pokud `CPen` objekt není připojen ke zpracování, dočasný `CPen` objekt se vytvoří a připojí. Tento dočasný `CPen` objektu je platná pouze v až při příštím má aplikace čas nečinnosti v jeho smyčkou událostí, na které čas všechny dočasné obrázek objekty budou odstraněny. Jinými slovy dočasný objekt je platná pouze při zpracování zprávy jedno okno.
+Pokud objekt není připojen k popisovači, je vytvořen a připojen `CPen` dočasný objekt. `CPen` Tento dočasný `CPen` objekt je platný pouze do příštího okamžiku, kdy aplikace nebude mít čas nečinnosti ve smyčce události, kdy jsou odstraněny všechny dočasné grafické objekty. Jinými slovy, dočasný objekt je platný pouze během zpracování jedné zprávy okna.
 
 ### <a name="example"></a>Příklad
 
 [!code-cpp[NVC_MFCDocView#105](../../mfc/codesnippet/cpp/cpen-class_4.cpp)]
 
-##  <a name="getextlogpen"></a>  CPen::GetExtLogPen
+##  <a name="getextlogpen"></a>CPen –:: GetExtLogPen
 
-Získá `EXTLOGPEN` základní struktury.
+`EXTLOGPEN` Načte podkladovou strukturu.
 
 ```
 int GetExtLogPen(EXTLOGPEN* pLogPen);
@@ -302,35 +302,35 @@ int GetExtLogPen(EXTLOGPEN* pLogPen);
 ### <a name="parameters"></a>Parametry
 
 *pLogPen*<br/>
-Odkazuje na [EXTLOGPEN](/windows/desktop/api/wingdi/ns-wingdi-tagextlogpen) strukturu, která obsahuje informace o pera.
+Odkazuje na strukturu [EXTLOGPEN](/windows/win32/api/wingdi/ns-wingdi-extlogpen) , která obsahuje informace o Peru.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Nenulové, pokud je úspěšná. jinak 0.
+Nenulové, pokud bylo úspěšné; v opačném případě 0.
 
 ### <a name="remarks"></a>Poznámky
 
-`EXTLOGPEN` Struktury definuje styl, šířku a atributy štětce, pera. Například volání `GetExtLogPen` tak, aby odpovídaly konkrétního stylu pera.
+`EXTLOGPEN` Struktura definuje styl, šířku a atributy štětce pro pero. Například volejte `GetExtLogPen` , aby odpovídalo konkrétnímu stylu pera.
 
-Naleznete v následujících tématech v sadě Windows SDK informace o psaní perem atributy:
+Další informace o atributech pera najdete v následujících tématech Windows SDK.
 
-- [GetObject](/windows/desktop/api/wingdi/nf-wingdi-getobject)
+- [GetObject](/windows/win32/api/wingdi/nf-wingdi-getobject)
 
-- [EXTLOGPEN](/windows/desktop/api/wingdi/ns-wingdi-tagextlogpen)
+- [EXTLOGPEN](/windows/win32/api/wingdi/ns-wingdi-extlogpen)
 
-- [LOGPEN –](/windows/desktop/api/wingdi/ns-wingdi-taglogpen)
+- [LOGPEN –](/windows/win32/api/wingdi/ns-wingdi-logpen)
 
-- [ExtCreatePen](/windows/desktop/api/wingdi/nf-wingdi-extcreatepen)
+- [ExtCreatePen](/windows/win32/api/wingdi/nf-wingdi-extcreatepen)
 
 ### <a name="example"></a>Příklad
 
-Následující příklad kódu ukazuje volání `GetExtLogPen` načtení atributů na pero a potom vytvořit nové, kosmetické pera stejné barvy.
+Následující příklad kódu ukazuje, jak `GetExtLogPen` zavolat k načtení atributů pera a pak vytvořit nové kosmetické pero se stejnou barvou.
 
 [!code-cpp[NVC_MFCDocView#102](../../mfc/codesnippet/cpp/cpen-class_5.cpp)]
 
-##  <a name="getlogpen"></a>  CPen::GetLogPen
+##  <a name="getlogpen"></a>CPen –:: GetLogPen
 
-Získá `LOGPEN` základní struktury.
+`LOGPEN` Získá podkladovou strukturu.
 
 ```
 int GetLogPen(LOGPEN* pLogPen);
@@ -339,33 +339,33 @@ int GetLogPen(LOGPEN* pLogPen);
 ### <a name="parameters"></a>Parametry
 
 *pLogPen*<br/>
-Odkazuje [logpen –](/windows/desktop/api/wingdi/ns-wingdi-taglogpen) struktura bude obsahovat informace o pera.
+Odkazuje na strukturu [LOGPEN –](/windows/win32/api/wingdi/ns-wingdi-logpen) , aby obsahovala informace o Peru.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Nenulové, pokud je úspěšná. jinak 0.
+Nenulové, pokud bylo úspěšné; v opačném případě 0.
 
 ### <a name="remarks"></a>Poznámky
 
-`LOGPEN` Struktury definuje styl, barvu a vzor pera.
+`LOGPEN` Struktura definuje styl, barvu a vzor pera.
 
-Například volání `GetLogPen` tak, aby odpovídaly konkrétní styl psaní perem.
+Například volejte `GetLogPen` , aby odpovídalo konkrétnímu stylu pera.
 
-Naleznete v následujících tématech v sadě Windows SDK informace o psaní perem atributy:
+Další informace o atributech pera najdete v následujících tématech Windows SDK.
 
-- [GetObject](/windows/desktop/api/wingdi/nf-wingdi-getobject)
+- [GetObject](/windows/win32/api/wingdi/nf-wingdi-getobject)
 
-- [LOGPEN –](/windows/desktop/api/wingdi/ns-wingdi-taglogpen)
+- [LOGPEN –](/windows/win32/api/wingdi/ns-wingdi-logpen)
 
 ### <a name="example"></a>Příklad
 
-Následující příklad kódu ukazuje volání `GetLogPen` načtení pera znak, a pak vytvoříte novou, solid pera se stejnou barvu.
+Následující příklad kódu ukazuje, jak `GetLogPen` zavolat k načtení znaku pera a pak vytvořit nové, plné pero se stejnou barvou.
 
 [!code-cpp[NVC_MFCDocView#103](../../mfc/codesnippet/cpp/cpen-class_6.cpp)]
 
-##  <a name="operator_hpen"></a>  CPen::operator HPEN
+##  <a name="operator_hpen"></a>CPen –:: operator HPEN
 
-Získá popisovač Windows GDI připojené `CPen` objektu.
+Získá připojenou obslužnou rutinu `CPen` rozhraní Windows GDI objektu.
 
 ```
 operator HPEN() const;
@@ -373,13 +373,13 @@ operator HPEN() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Pokud úspěchu popisovač objektů Windows GDI reprezentována `CPen` objektu; v opačném případě hodnota NULL.
+Je-li to úspěšné, popisovač objektu GDI systému Windows reprezentovaný `CPen` objektem; v opačném případě hodnota null.
 
 ### <a name="remarks"></a>Poznámky
 
-Tento operátor je operátor přetypování, která podporuje přímému použití objektu HPEN.
+Tento operátor je operátor přetypování, který podporuje přímé použití objektu HPEN.
 
-Další informace o použití grafických objektů najdete v článku [objektů grafiky](/windows/desktop/gdi/graphic-objects) v sadě Windows SDK.
+Další informace o použití grafických objektů naleznete v článku [grafické objekty](/windows/win32/gdi/graphic-objects) v Windows SDK.
 
 ### <a name="example"></a>Příklad
 

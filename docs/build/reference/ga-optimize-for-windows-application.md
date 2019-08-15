@@ -10,16 +10,16 @@ helpviewer_keywords:
 - -GA compiler option [C++]
 - Optimize for Windows compiler options
 ms.assetid: be97323e-15a0-4836-862c-95980b51926a
-ms.openlocfilehash: a5eb6a10f3c4833ecc3e9d9c8451894788ebd938
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 85efa03a3f3d267580cbb0442839afb18ac6c313
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62292312"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69492855"
 ---
 # <a name="ga-optimize-for-windows-application"></a>/GA (optimalizace pro aplikaci systému Windows)
 
-Výsledkem efektivnější kód pro soubor s příponou .exe pro přístup k proměnné úložiště thread local (TLS).
+Výsledkem je efektivnější kód pro soubor. exe pro přístup k proměnným úložiště místních vláken (TLS).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -29,19 +29,19 @@ Výsledkem efektivnější kód pro soubor s příponou .exe pro přístup k pro
 
 ## <a name="remarks"></a>Poznámky
 
-**/GA** rychlosti přístupu k datům deklarována s [__declspec(thread)](../../cpp/declspec.md) v systému Windows. Když nastavíte tuto možnost, [__tls_index](/windows/desktop/ProcThread/thread-local-storage) makra je považován za 0.
+**/GA** zrychluje přístup k datům deklarovaným pomocí [__declspec (thread)](../../cpp/declspec.md) v programu určeném pro systém Windows. Pokud je tato možnost nastavena, předpokládá se, že je makro [__tls_index](/windows/win32/ProcThread/thread-local-storage) rovno 0.
 
-Pomocí **/GA** pro knihovnu DLL může vést k generování chybného kódu.
+Použití **/GA** pro knihovnu DLL může mít za následek špatné generování kódu.
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Nastavení tohoto parametru kompilátoru ve vývojovém prostředí Visual Studio
 
-1. Otevřete v projektu **stránky vlastností** dialogové okno. Podrobnosti najdete v tématu [vlastnosti kompilátoru a sestavení nastavte C++ v sadě Visual Studio](../working-with-project-properties.md).
+1. Otevřete dialogové okno **stránky vlastností** projektu. Podrobnosti najdete v tématu [nastavení C++ vlastností kompilátoru a sestavení v sadě Visual Studio](../working-with-project-properties.md).
 
-1. Klikněte na tlačítko **C/C++** složky.
+1. Klikněte na složku **CC++ /a** .
 
-1. Klikněte na tlačítko **příkazového řádku** stránku vlastností.
+1. Klikněte na stránku vlastností **příkazový řádek** .
 
-1. Zadejte možnost do kompilátoru **další možnosti** pole.
+1. Zadejte možnost kompilátoru do pole **Další možnosti** .
 
 ### <a name="to-set-this-compiler-option-programmatically"></a>Programové nastavení tohoto parametru kompilátoru
 

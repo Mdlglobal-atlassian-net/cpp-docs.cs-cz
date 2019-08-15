@@ -1,21 +1,21 @@
 ---
-title: LCID (atribut C++ COM)
+title: LCID (C++ atribut com)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.lcid
 helpviewer_keywords:
 - LCID attribute
 ms.assetid: 7f248c69-ee1c-42c3-9411-39cf27c9f43d
-ms.openlocfilehash: d97ad86e143102c96e87ae0a32245b0c01042501
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7c737661bb8429e416b515e4e7fcaf54956385d0
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62409262"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69514523"
 ---
 # <a name="lcid"></a>lcid
 
-Umožňuje předat funkci identifikátor národního prostředí.
+Umožňuje předat identifikátor národního prostředí do funkce.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -25,7 +25,7 @@ Umožňuje předat funkci identifikátor národního prostředí.
 
 ## <a name="remarks"></a>Poznámky
 
-**Lcid** C++ atribut implementuje funkce [lcid](/windows/desktop/Midl/lcid) atribut MIDL. Pokud chcete implementovat národní prostředí pro bloku knihovny, použijte **lcid =** `lcid` parametr [modulu](module-cpp.md) atribut.
+Atribut **LCID** C++ implementuje funkci atributu [LCID](/windows/win32/Midl/lcid) MIDL. Pokud chcete implementovat národní prostředí pro blok knihovny, použijte parametr **LCID =** `lcid` pro atribut [Module](module-cpp.md) .
 
 ## <a name="example"></a>Příklad
 
@@ -44,16 +44,16 @@ __interface IStatic {
 
 ## <a name="requirements"></a>Požadavky
 
-### <a name="attribute-context"></a>Atribut kontextu
+### <a name="attribute-context"></a>Kontext atributu
 
 |||
 |-|-|
 |**Platí pro**|Parametr rozhraní|
-|**Opakovatelné**|Ne|
-|**Vyžadované atributy**|Žádný|
+|**REPEATABLE**|Ne|
+|**Požadované atributy**|Žádné|
 |**Neplatné atributy**|Žádné|
 
-Další informace najdete v tématu [kontexty atributů](cpp-attributes-com-net.md#contexts).
+Další informace naleznete v tématu [kontexty atributů](cpp-attributes-com-net.md#contexts).
 
 ## <a name="see-also"></a>Viz také:
 

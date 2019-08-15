@@ -8,16 +8,16 @@ helpviewer_keywords:
 - /bigobj compiler option [C++]
 - bigobj compiler option [C++]
 ms.assetid: ba94d602-4015-4a8d-86ec-49241ab74c12
-ms.openlocfilehash: 46399dc0c1ff552b4fc963b686ac6aa6df8b6f71
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 30c02c72496e3bb91da3b39e1870f1dc5a2c040a
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62272972"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69493104"
 ---
 # <a name="bigobj-increase-number-of-sections-in-obj-file"></a>/bigobj (Zvýšit počet oddílů v souboru .Obj)
 
-**/ bigobj** zvyšuje počet oddílů, které mohou obsahovat soubor objektu.
+**/bigobj** zvyšuje počet oddílů, které může soubor objektu obsahovat.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -25,19 +25,19 @@ ms.locfileid: "62272972"
 
 ## <a name="remarks"></a>Poznámky
 
-Ve výchozím objektový soubor může obsahovat až 65 279 (téměř 2 ^ 16) adresovatelných sekcí. Toto omezení platí bez ohledu na to, které se zaměřují platforma je zvolena. **/ bigobj** zvyšuje kapacitu této adresy na 4 294 967 296 (2 ^ 32).
+Ve výchozím nastavení může soubor objektu obsahovat až 65 279 (téměř 2 ^ 16) adresované oddíly. Toto omezení platí bez ohledu na to, která cílová platforma je určena. **/bigobj** zvyšuje kapacitu této kapacity na 4 294 967 296 (2 ^ 32).
 
-Většina modulů nikdy nevygeneruje soubor .obj, který obsahuje více než 65,279 oddíly. Nicméně počítačem generovaný kód nebo kód, který značně používá knihovny šablon, může vyžadovat soubory .obj, které mohou obsahovat další oddíly. **/ bigobj** je povolené ve výchozím nastavení v projektech univerzální platformy Windows (UPW), protože počítačem generovaný kód XAML obsahuje velký počet záhlaví. Pokud zakážete tuto možnost na projekt aplikace UPW, váš kód může generovat chybě kompilátoru C1128.
+Většina modulů nikdy negeneruje soubor. obj, který obsahuje více než 65 279 oddílů. Nicméně strojově generovaný kód nebo kód, který vytváří těžké použití knihoven šablon, může vyžadovat soubory. obj, které mohou obsahovat další oddíly. **/bigobj** je ve výchozím nastavení povolená v projektech Univerzální platforma Windows (UWP), protože strojově GENEROVANÝ kód XAML obsahuje velký počet hlaviček. Pokud tuto možnost zakážete v projektu aplikace pro UWP, váš kód může generovat chybu kompilátoru C1128.
 
-Informace o formátu souboru objektu PE COFF najdete v tématu [formátu PE](/windows/desktop/debug/pe-format) v dokumentaci k Windows.
+Informace o formátu souboru objektu PE-COFF naleznete v dokumentaci k systému Windows ve [formátu PE](/windows/win32/debug/pe-format) .
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Nastavení tohoto parametru kompilátoru ve vývojovém prostředí Visual Studio
 
-1. Otevřete v projektu **stránky vlastností** dialogové okno. Podrobnosti najdete v tématu [vlastnosti kompilátoru a sestavení nastavte C++ v sadě Visual Studio](../working-with-project-properties.md).
+1. Otevřete dialogové okno **stránky vlastností** projektu. Podrobnosti najdete v tématu [nastavení C++ vlastností kompilátoru a sestavení v sadě Visual Studio](../working-with-project-properties.md).
 
-1. Vyberte **vlastnosti konfigurace** > **C/C++** > **příkazového řádku** stránku vlastností.
+1. Vyberte stránku vlastností **Konfigurace** > **C/C++**  > **příkazový řádek** .
 
-1. Zadejte **/bigobj** – možnost kompilátoru v **další možnosti** pole.
+1. Do pole **Další možnosti** zadejte možnost kompilátoru **/bigobj** .
 
 ### <a name="to-set-this-compiler-option-programmatically"></a>Programové nastavení tohoto parametru kompilátoru
 

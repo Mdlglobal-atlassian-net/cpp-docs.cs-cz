@@ -6,20 +6,20 @@ helpviewer_keywords:
 - access keys [MFC], hot keys
 - CHotKeyCtrl class [MFC], setting hot key
 ms.assetid: 6f3bc141-e346-4dce-9ca7-3e6b2c453f3f
-ms.openlocfilehash: a77aad4881acd04c6dabb6dce90acc01be2cfbc8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7b49f24039b130f74693e7567f5287476126f225
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62307780"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69511216"
 ---
 # <a name="setting-a-hot-key"></a>Nastavení klávesové zkratky
 
-Aplikace můžete použít klávesovou zkratku na základě informací poskytnutých ([CHotKeyCtrl](../mfc/reference/chotkeyctrl-class.md)) ovládacího prvku v jednom ze dvou způsobů:
+Vaše aplikace může používat informace poskytované ovládacím prvkem Hot Key ([CHotKeyCtrl](../mfc/reference/chotkeyctrl-class.md)) jedním ze dvou způsobů:
 
-- Nastavení globální klávesové zkratky pro aktivaci okno nonchild odesláním [WM_SETHOTKEY](/windows/desktop/inputdev/wm-sethotkey) zprávu do okna aktivaci.
+- Nastavte globální klávesovou zkratku pro aktivaci nepodřízeného okna odesláním zprávy [WM_SETHOTKEY](/windows/win32/inputdev/wm-sethotkey) do okna, které se má aktivovat.
 
-- Nastavení klávesové zkratky specifické pro vlákno voláním funkce Windows [RegisterHotKey](/windows/desktop/api/winuser/nf-winuser-registerhotkey).
+- Nastavte klávesovou zkratku specifickou pro vlákno voláním funkce Windows [RegisterHotKey](/windows/win32/api/winuser/nf-winuser-registerhotkey).
 
 ## <a name="see-also"></a>Viz také:
 

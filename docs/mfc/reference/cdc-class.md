@@ -402,12 +402,12 @@ helpviewer_keywords:
 - CDC [MFC], m_hAttribDC
 - CDC [MFC], m_hDC
 ms.assetid: 715b3334-cb2b-4c9c-8067-02eb7c66c8b2
-ms.openlocfilehash: 4f9f08ae751ba2482967c1eee4268c6d5f6d4a76
-ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
+ms.openlocfilehash: bae2f9a5a4f39c4eeffe68cc33e744e44c6800c8
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68916248"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69507003"
 ---
 # <a name="cdc-class"></a>CDC – třída
 
@@ -810,7 +810,7 @@ Určuje šířku zdrojového obdélníku v logických jednotkách.
 Určuje výšku zdrojového obdélníku v logických jednotkách.
 
 *chmel*<br/>
-Určuje strukturu [BLENDFUNCTION](/windows/desktop/api/wingdi/ns-wingdi-blendfunction) .
+Určuje strukturu [BLENDFUNCTION](/windows/win32/api/wingdi/ns-wingdi-blendfunction) .
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -818,7 +818,7 @@ TRUE v případě úspěchu; v opačném případě FALSE.
 
 ### <a name="remarks"></a>Poznámky
 
-Další informace najdete v tématu [AlphaBlend](/windows/desktop/api/wingdi/nf-wingdi-alphablend) v Windows SDK.
+Další informace najdete v tématu [AlphaBlend](/windows/win32/api/wingdi/nf-wingdi-alphablend) v Windows SDK.
 
 ##  <a name="anglearc"></a>CDC:: AngleArc
 
@@ -913,7 +913,7 @@ Určuje souřadnici y bodu, který definuje koncový bod oblouku (v logických j
 Určuje ohraničující obdélník (v logických jednotkách). Pro tento parametr můžete předat buď LPRECT, nebo objekt [CRect](../../atl-mfc-shared/reference/crect-class.md) .
 
 *ptStart*<br/>
-Určuje souřadnice x a y bodu, který definuje počáteční bod oblouku (v logických jednotkách). Tento bod není nutné přesně nacházet na oblouku. Pro tento parametr můžete předat strukturu [bodu](/windows/desktop/api/windef/ns-windef-tagpoint) nebo objekt [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) .
+Určuje souřadnice x a y bodu, který definuje počáteční bod oblouku (v logických jednotkách). Tento bod není nutné přesně nacházet na oblouku. Pro tento parametr můžete předat strukturu [bodu](/windows/win32/api/windef/ns-windef-point) nebo objekt [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) .
 
 *ptEnd*<br/>
 Určuje souřadnice x a y bodu, který definuje koncový bod oblouku (v logických jednotkách). Tento bod není nutné přesně nacházet na oblouku. Pro tento parametr můžete předat `POINT` buď strukturu, `CPoint` nebo objekt.
@@ -980,10 +980,10 @@ Určuje souřadnici x bodu, který definuje koncový bod oblouku (v logických j
 Určuje souřadnici y bodu, který definuje koncový bod oblouku (v logických jednotkách). Tento bod není nutné přesně nacházet na oblouku.
 
 *lpRect*<br/>
-Určuje ohraničující obdélník (v logických jednotkách). Pro tento parametr můžete předat buď ukazatel na strukturu dat [Rect](/windows/desktop/api/windef/ns-windef-tagrect) , nebo objekt [CRect](../../atl-mfc-shared/reference/crect-class.md) .
+Určuje ohraničující obdélník (v logických jednotkách). Pro tento parametr můžete předat buď ukazatel na strukturu dat [Rect](/windows/win32/api/windef/ns-windef-rect) , nebo objekt [CRect](../../atl-mfc-shared/reference/crect-class.md) .
 
 *ptStart*<br/>
-Určuje souřadnice x a y bodu, který definuje počáteční bod oblouku (v logických jednotkách). Tento bod není nutné přesně nacházet na oblouku. Pro tento parametr můžete předat datovou strukturu [bodu](/windows/desktop/api/windef/ns-windef-tagpoint) nebo objekt [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) .
+Určuje souřadnice x a y bodu, který definuje počáteční bod oblouku (v logických jednotkách). Tento bod není nutné přesně nacházet na oblouku. Pro tento parametr můžete předat datovou strukturu [bodu](/windows/win32/api/windef/ns-windef-point) nebo objekt [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) .
 
 *ptEnd*<br/>
 Určuje souřadnice x a y bodu, který definuje koncový bod oblouku (v logických jednotkách). Tento bod není nutné přesně nacházet na oblouku. Pro tento parametr můžete předat `POINT` datovou strukturu `CPoint` nebo objekt.
@@ -1035,7 +1035,7 @@ Nenulové, pokud je funkce úspěšná; jinak 0.
 
 Po otevření cesty pro aplikaci může aplikace začít volat funkce kreslení GDI, aby definovala body, které se nacházejí v cestě. Aplikace může uzavřít levou cestu pomocí volání `EndPath` členské funkce. Při volání `BeginPath`aplikace jsou všechny předchozí cesty zahozeny.
 
-Seznam funkcí kreslení, které definují body v cestě, najdete v tématu [BeginPath](/windows/desktop/api/wingdi/nf-wingdi-beginpath) v Windows SDK.
+Seznam funkcí kreslení, které definují body v cestě, najdete v tématu [BeginPath](/windows/win32/api/wingdi/nf-wingdi-beginpath) v Windows SDK.
 
 ### <a name="example"></a>Příklad
 
@@ -1081,9 +1081,9 @@ Určuje logickou souřadnici x levého horního rohu zdrojové bitmapy.
 Určuje logickou souřadnici y v levém horním rohu zdrojové bitmapy.
 
 *dwRop*<br/>
-Určuje rastrovou operaci, která má být provedena. Kódy rastrových operací definují, jak GDI kombinuje barvy ve výstupních operacích, které zahrnují aktuální štětec, možnou zdrojovou bitmapu a cílový rastrový obrázek. Seznam kódů rastrových operací pro *dwRop* a jejich popis najdete v tématu [BitBlt](/windows/desktop/api/wingdi/nf-wingdi-bitblt) v Windows SDK.
+Určuje rastrovou operaci, která má být provedena. Kódy rastrových operací definují, jak GDI kombinuje barvy ve výstupních operacích, které zahrnují aktuální štětec, možnou zdrojovou bitmapu a cílový rastrový obrázek. Seznam kódů rastrových operací pro *dwRop* a jejich popis najdete v tématu [BitBlt](/windows/win32/api/wingdi/nf-wingdi-bitblt) v Windows SDK.
 
-Úplný seznam kódů s rastrovou operací naleznete v tématu [o kódech rastrových operací](/windows/desktop/gdi/raster-operation-codes) v Windows SDK.
+Úplný seznam kódů s rastrovou operací naleznete v tématu [o kódech rastrových operací](/windows/win32/gdi/raster-operation-codes) v Windows SDK.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -1169,7 +1169,7 @@ Určuje ohraničující obdélník (v logických jednotkách). Pro tento paramet
 Určuje souřadnice x a y bodu, který definuje počáteční bod CTR (v logických jednotkách). Tento bod nemusí být přesně na CTR. Pro tento parametr můžete předat `POINT` buď strukturu, `CPoint` nebo objekt.
 
 *ptEnd*<br/>
-Určuje souřadnice x a y bodu, který definuje koncový bod CTR (v logických jednotkách). Tento bod nemusí být přesně na CTR. Pro tento parametr můžete předat strukturu [bodu](/windows/desktop/api/windef/ns-windef-tagpoint) nebo objekt [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) .
+Určuje souřadnice x a y bodu, který definuje koncový bod CTR (v logických jednotkách). Tento bod nemusí být přesně na CTR. Pro tento parametr můžete předat strukturu [bodu](/windows/win32/api/windef/ns-windef-point) nebo objekt [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) .
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -1361,7 +1361,7 @@ void DPtoHIMETRIC(LPSIZE lpSize) const;
 ### <a name="parameters"></a>Parametry
 
 *lpSize*<br/>
-Odkazuje na strukturu [velikosti](/windows/desktop/api/windef/ns-windef-tagsize) nebo objekt [CSize](../../atl-mfc-shared/reference/csize-class.md) .
+Odkazuje na strukturu [velikosti](/windows/win32/api/windef/ns-windef-size) nebo objekt [CSize](../../atl-mfc-shared/reference/csize-class.md) .
 
 ### <a name="remarks"></a>Poznámky
 
@@ -1383,16 +1383,16 @@ void DPtoLP(LPSIZE lpSize) const;
 ### <a name="parameters"></a>Parametry
 
 *lpPoints*<br/>
-Odkazuje na pole struktur [bodů](/windows/desktop/api/windef/ns-windef-tagpoint) nebo [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) objektů.
+Odkazuje na pole struktur [bodů](/windows/win32/api/windef/ns-windef-point) nebo [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) objektů.
 
 *nCount*<br/>
 Počet bodů v poli.
 
 *lpRect*<br/>
-Odkazuje na strukturu [Rect](/windows/desktop/api/windef/ns-windef-tagrect) nebo objekt [CRect](../../atl-mfc-shared/reference/crect-class.md) . Tento parametr se používá pro jednoduchý případ převodu jednoho obdélníku z bodů zařízení na logické body.
+Odkazuje na strukturu [Rect](/windows/win32/api/windef/ns-windef-rect) nebo objekt [CRect](../../atl-mfc-shared/reference/crect-class.md) . Tento parametr se používá pro jednoduchý případ převodu jednoho obdélníku z bodů zařízení na logické body.
 
 *lpSize*<br/>
-Odkazuje na strukturu [velikosti](/windows/desktop/api/windef/ns-windef-tagsize) nebo objekt [CSize](../../atl-mfc-shared/reference/csize-class.md) .
+Odkazuje na strukturu [velikosti](/windows/win32/api/windef/ns-windef-size) nebo objekt [CSize](../../atl-mfc-shared/reference/csize-class.md) .
 
 ### <a name="remarks"></a>Poznámky
 
@@ -1420,7 +1420,7 @@ void Draw3dRect(
 ### <a name="parameters"></a>Parametry
 
 *lpRect*<br/>
-Určuje ohraničující obdélník (v logických jednotkách). Pro tento parametr můžete předat buď ukazatel na strukturu [Rect](/windows/desktop/api/windef/ns-windef-tagrect) , nebo objekt [CRect](../../atl-mfc-shared/reference/crect-class.md) .
+Určuje ohraničující obdélník (v logických jednotkách). Pro tento parametr můžete předat buď ukazatel na strukturu [Rect](/windows/win32/api/windef/ns-windef-rect) , nebo objekt [CRect](../../atl-mfc-shared/reference/crect-class.md) .
 
 *clrTopLeft*<br/>
 Určuje barvu horních a levých stran trojrozměrného obdélníku.
@@ -1465,13 +1465,13 @@ void DrawDragRect(
 ### <a name="parameters"></a>Parametry
 
 *lpRect*<br/>
-Odkazuje na strukturu [Rect](/windows/desktop/api/windef/ns-windef-tagrect) nebo objekt [CRect](../../atl-mfc-shared/reference/crect-class.md) , který určuje logické souřadnice obdélníku – v tomto případě se jedná o koncovou pozici obdélníku, který se má překreslit.
+Odkazuje na strukturu [Rect](/windows/win32/api/windef/ns-windef-rect) nebo objekt [CRect](../../atl-mfc-shared/reference/crect-class.md) , který určuje logické souřadnice obdélníku – v tomto případě se jedná o koncovou pozici obdélníku, který se má překreslit.
 
 *hodnota*<br/>
 Určuje posun z levého horního rohu vnějšího ohraničení do levého horního rohu vnitřního ohraničení (tj. Tloušťka ohraničení) obdélníku.
 
 *lpRectLast*<br/>
-Odkazuje na strukturu [Rect](/windows/desktop/api/windef/ns-windef-tagrect) nebo objekt [CRect](../../atl-mfc-shared/reference/crect-class.md) , který určuje logické souřadnice pozice obdélníku – v tomto případě se jedná o původní pozici překresleného obdélníku.
+Odkazuje na strukturu [Rect](/windows/win32/api/windef/ns-windef-rect) nebo objekt [CRect](../../atl-mfc-shared/reference/crect-class.md) , který určuje logické souřadnice pozice obdélníku – v tomto případě se jedná o původní pozici překresleného obdélníku.
 
 *sizeLast*<br/>
 Určuje posun z levého horního rohu vnějšího ohraničení do levého horního rohu vnitřního ohraničení (tj. Tloušťka ohraničení) původního obdélníku, který se překreslí.
@@ -1505,7 +1505,7 @@ BOOL DrawEdge(
 Ukazatel na `RECT` strukturu, která obsahuje logické souřadnice obdélníku.
 
 *nEdge*<br/>
-Určuje typ vnitřního a vnějšího okraje, který se má vykreslit. Tento parametr musí být kombinací jednoho příznaku vnitřní ohraničení a jednoho příznaku vnějšího ohraničení. Tabulku typů parametrů naleznete v tématu [DrawEdge](/windows/desktop/api/winuser/nf-winuser-drawedge) v Windows SDK.
+Určuje typ vnitřního a vnějšího okraje, který se má vykreslit. Tento parametr musí být kombinací jednoho příznaku vnitřní ohraničení a jednoho příznaku vnějšího ohraničení. Tabulku typů parametrů naleznete v tématu [DrawEdge](/windows/win32/api/winuser/nf-winuser-drawedge) v Windows SDK.
 
 *nFlags*<br/>
 Příznaky určující typ ohraničení, který má být vykreslen. Tabulku `DrawEdge` hodnot parametrů naleznete v části Windows SDK. Pro diagonální čáry příznaky BF_RECT určují koncový bod vektoru ohraničeného parametrem Rectangle.
@@ -1555,7 +1555,7 @@ void DrawFocusRect(LPCRECT lpRect);
 ### <a name="parameters"></a>Parametry
 
 *lpRect*<br/>
-Odkazuje na strukturu [Rect](/windows/desktop/api/windef/ns-windef-tagrect) nebo objekt [CRect](../../atl-mfc-shared/reference/crect-class.md) , který určuje logické souřadnice obdélníku, který se má vykreslit.
+Odkazuje na strukturu [Rect](/windows/win32/api/windef/ns-windef-rect) nebo objekt [CRect](../../atl-mfc-shared/reference/crect-class.md) , který určuje logické souřadnice obdélníku, který se má vykreslit.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -1581,7 +1581,7 @@ BOOL DrawFrameControl(
 Ukazatel na `RECT` strukturu, která obsahuje logické souřadnice obdélníku.
 
 *nType*<br/>
-Určuje typ ovládacího prvku Frame, který se má vykreslit. Seznam možných hodnot tohoto parametru naleznete v parametru *uType* v [DrawFrameControl](/windows/desktop/api/winuser/nf-winuser-drawframecontrol) v Windows SDK.
+Určuje typ ovládacího prvku Frame, který se má vykreslit. Seznam možných hodnot tohoto parametru naleznete v parametru *uType* v [DrawFrameControl](/windows/win32/api/winuser/nf-winuser-drawframecontrol) v Windows SDK.
 
 *nInformace*<br/>
 Určuje počáteční stav ovládacího prvku rámce. Může se jednat o jednu nebo více hodnot, které jsou popsány `DrawFrameControl` pro parametr uState v v Windows SDK. K úpravě ohraničujícího obdélníku použijte *nInformace* Value DFCS_ADJUSTRECT, aby se vyloučil okolní okraj tlačítka.
@@ -1675,7 +1675,7 @@ Určuje logickou souřadnici y levého horního rohu ikony.
 Určuje popisovač ikony, která se má vykreslit.
 
 *Vyberte*<br/>
-Určuje logické souřadnice x a y v levém horním rohu ikony. Pro tento parametr můžete předat strukturu [bodu](/windows/desktop/api/windef/ns-windef-tagpoint) nebo objekt [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) .
+Určuje logické souřadnice x a y v levém horním rohu ikony. Pro tento parametr můžete předat strukturu [bodu](/windows/win32/api/windef/ns-windef-point) nebo objekt [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) .
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -1774,7 +1774,7 @@ Určuje velikost obrázku.
 Popisovač rastrového obrázku.
 
 *nFlags*<br/>
-Příznaky, které určují typ a stav obrázku. Dostupné typy a stavy *nFlags* najdete v tématu [DrawState](/windows/desktop/api/winuser/nf-winuser-drawstatea) v Windows SDK.
+Příznaky, které určují typ a stav obrázku. Dostupné typy a stavy *nFlags* najdete v tématu [DrawState](/windows/win32/api/winuser/nf-winuser-drawstatew) v Windows SDK.
 
 *hBrush*<br/>
 Popisovač štětce.
@@ -1798,7 +1798,7 @@ Text, který může obsahovat klávesové zkratky. Parametr *lData* Určuje adre
 Délka textového řetězce, na který odkazuje *lpszText* Pokud je *nTextLen* 0, předpokládá se, že řetězec je zakončený hodnotou null.
 
 *lpDrawProc*<br/>
-Ukazatel na funkci zpětného volání použitý k vykreslení obrázku. Tento parametr je požadován, pokud je typ obrázku v *NFLAGS* DST_COMPLEX. Je volitelná a může mít hodnotu NULL, pokud je typ obrázku DST_TEXT. U všech ostatních typů obrázků se tento parametr ignoruje. Další informace o funkci zpětného volání naleznete ve funkci [DrawStateProc](/windows/desktop/api/winuser/nc-winuser-drawstateproc) v Windows SDK.
+Ukazatel na funkci zpětného volání použitý k vykreslení obrázku. Tento parametr je požadován, pokud je typ obrázku v *NFLAGS* DST_COMPLEX. Je volitelná a může mít hodnotu NULL, pokud je typ obrázku DST_TEXT. U všech ostatních typů obrázků se tento parametr ignoruje. Další informace o funkci zpětného volání naleznete ve funkci [DrawStateProc](/windows/win32/api/winuser/nc-winuser-drawstateproc) v Windows SDK.
 
 *lData*<br/>
 Určuje informace o imagi. Význam tohoto parametru závisí na typu obrázku.
@@ -1833,13 +1833,13 @@ Odkazuje na řetězec, který má být vykreslen. Pokud je *nCount* -1, řetěze
 Určuje počet znaků v řetězci. Pokud je *nCount* -1, předpokládá se, že *lpszString* je dlouhý ukazatel na řetězec zakončený hodnotou null a `DrawText` automaticky vypočítá počet znaků.
 
 *lpRect*<br/>
-Odkazuje na strukturu [Rect](/windows/desktop/api/windef/ns-windef-tagrect) nebo objekt [CRect](../../atl-mfc-shared/reference/crect-class.md) , který obsahuje obdélník (v logických souřadnicích), ve kterém má být text formátován.
+Odkazuje na strukturu [Rect](/windows/win32/api/windef/ns-windef-rect) nebo objekt [CRect](../../atl-mfc-shared/reference/crect-class.md) , který obsahuje obdélník (v logických souřadnicích), ve kterém má být text formátován.
 
 *str*<br/>
 Objekt [CString](../../atl-mfc-shared/reference/cstringt-class.md) obsahující zadané znaky, které mají být vykresleny.
 
 *nFormat*<br/>
-Určuje metodu formátování textu. Může to být libovolná kombinace hodnot popsaných pro parametr *uFormat* v [DrawText](/windows/desktop/api/winuser/nf-winuser-drawtext) v Windows SDK. (kombinovat pomocí bitového operátoru OR):
+Určuje metodu formátování textu. Může to být libovolná kombinace hodnot popsaných pro parametr *uFormat* v [DrawText](/windows/win32/api/winuser/nf-winuser-drawtext) v Windows SDK. (kombinovat pomocí bitového operátoru OR):
 
 > [!NOTE]
 >  Některé kombinace příznaků *uFormat* můžou způsobit změnu předávaného řetězce. Použití DT_MODIFYSTRING s DT_END_ELLIPSIS nebo DT_PATH_ELLIPSIS může způsobit změnu řetězce, což způsobuje kontrolní výraz v `CString` přepsání. Hodnoty DT_CALCRECT, DT_EXTERNALLEADING, DT_INTERNAL, DT_NOCLIP a DT_NOPREFIX nelze použít s hodnotou DT_TABSTOP.
@@ -1890,23 +1890,23 @@ Odkazuje na řetězec, který má být vykreslen. Pokud je *nCount* -1, řetěze
 Určuje počet znaků v řetězci. Pokud je *nCount* -1, předpokládá se, že *lpszString* je dlouhý ukazatel na řetězec zakončený hodnotou null a `DrawText` automaticky vypočítá počet znaků.
 
 *lpRect*<br/>
-Odkazuje na strukturu [Rect](/windows/desktop/api/windef/ns-windef-tagrect) nebo objekt [CRect](../../atl-mfc-shared/reference/crect-class.md) , který obsahuje obdélník (v logických souřadnicích), ve kterém má být text formátován.
+Odkazuje na strukturu [Rect](/windows/win32/api/windef/ns-windef-rect) nebo objekt [CRect](../../atl-mfc-shared/reference/crect-class.md) , který obsahuje obdélník (v logických souřadnicích), ve kterém má být text formátován.
 
 *str*<br/>
 Objekt [CString](../../atl-mfc-shared/reference/cstringt-class.md) obsahující zadané znaky, které mají být vykresleny.
 
 *nFormat*<br/>
-Určuje metodu formátování textu. Může to být libovolná kombinace hodnot popsaných pro parametr *uFormat* v [DrawText](/windows/desktop/api/winuser/nf-winuser-drawtext) v Windows SDK. (Kombinovat pomocí bitového operátoru **or** ):
+Určuje metodu formátování textu. Může to být libovolná kombinace hodnot popsaných pro parametr *uFormat* v [DrawText](/windows/win32/api/winuser/nf-winuser-drawtext) v Windows SDK. (Kombinovat pomocí bitového operátoru **or** ):
 
 > [!NOTE]
 >  Některé kombinace příznaků *uFormat* můžou způsobit změnu předávaného řetězce. Použití DT_MODIFYSTRING s DT_END_ELLIPSIS nebo DT_PATH_ELLIPSIS může způsobit změnu řetězce, což způsobuje kontrolní výraz v `CString` přepsání. Hodnoty DT_CALCRECT, DT_EXTERNALLEADING, DT_INTERNAL, DT_NOCLIP a DT_NOPREFIX nelze použít s hodnotou DT_TABSTOP.
 
 *lpDTParams*<br/>
-Ukazatel na strukturu [DRAWTEXTPARAMS](/windows/desktop/api/winuser/ns-winuser-tagdrawtextparams) , která určuje další možnosti formátování. Tento parametr může mít hodnotu NULL.
+Ukazatel na strukturu [DRAWTEXTPARAMS](/windows/win32/api/winuser/ns-winuser-drawtextparams) , která určuje další možnosti formátování. Tento parametr může mít hodnotu NULL.
 
 ### <a name="remarks"></a>Poznámky
 
-Formátuje text rozbalením karet na vhodné mezery, zarovnání textu doleva, doprava nebo středu daného obdélníku a rozdělení textu na čáry, které se vejdou do daného obdélníku. Typ formátování je určen *nFormat* a *lpDTParams*. Další informace naleznete v tématu [CDC::D rawtext](#drawtext) a [DrawTextEx](/windows/desktop/api/winuser/nf-winuser-drawtextexa) v Windows SDK.
+Formátuje text rozbalením karet na vhodné mezery, zarovnání textu doleva, doprava nebo středu daného obdélníku a rozdělení textu na čáry, které se vejdou do daného obdélníku. Typ formátování je určen *nFormat* a *lpDTParams*. Další informace naleznete v tématu [CDC::D rawtext](#drawtext) a [DrawTextEx](/windows/win32/api/winuser/nf-winuser-drawtextexw) v Windows SDK.
 
 Barvu textu lze nastavit pomocí funkce [CDC:: SetTextColor](#settextcolor).
 
@@ -2087,7 +2087,7 @@ int Escape(
 *nEscape*<br/>
 Určuje řídicí funkci, která má být provedena.
 
-Úplný seznam řídicích funkcí naleznete v části [Escape](/windows/desktop/api/wingdi/nf-wingdi-escape) v Windows SDK.
+Úplný seznam řídicích funkcí naleznete v části [Escape](/windows/win32/api/wingdi/nf-wingdi-escape) v Windows SDK.
 
 *nCount*<br/>
 Určuje počet bajtů dat, na které odkazuje *lpszInData*.
@@ -2140,11 +2140,11 @@ Pro programování v `CDC` systému Win32 teď nabízí šest členských funkc�
 
 - [CDC:: StartPage](#startpage)
 
-Kromě toho funkce [CDC:: GetDeviceCaps](#getdevicecaps) podporuje indexy Win32, které nahrazují jiné řídicí znaky tiskárny. Další informace najdete v tématu [GetDeviceCaps](/windows/desktop/api/wingdi/nf-wingdi-getdevicecaps) v Windows SDK.
+Kromě toho funkce [CDC:: GetDeviceCaps](#getdevicecaps) podporuje indexy Win32, které nahrazují jiné řídicí znaky tiskárny. Další informace najdete v tématu [GetDeviceCaps](/windows/win32/api/wingdi/nf-wingdi-getdevicecaps) v Windows SDK.
 
 Tato členská funkce umožňuje aplikacím přístup k zařízením určitého zařízení, která nejsou přímo dostupná přes GDI.
 
-Pokud vaše aplikace používá předdefinované řídicí hodnoty, použijte první verzi. Druhou verzi použijte v případě, že vaše aplikace definuje privátní řídicí hodnoty. Další informace o druhé verzi najdete v tématu [ExtEscape](/windows/desktop/api/wingdi/nf-wingdi-extescape) v Windows SDK.
+Pokud vaše aplikace používá předdefinované řídicí hodnoty, použijte první verzi. Druhou verzi použijte v případě, že vaše aplikace definuje privátní řídicí hodnoty. Další informace o druhé verzi najdete v tématu [ExtEscape](/windows/win32/api/wingdi/nf-wingdi-extescape) v Windows SDK.
 
 ##  <a name="excludecliprect"></a>CDC:: ExcludeClipRect
 
@@ -2301,7 +2301,7 @@ Určuje typ obdélníku. Tento parametr může být jedna nebo žádná z násle
 - ETO_OPAQUE určuje, že aktuální barva pozadí vyplní obdélník. (Můžete nastavit a zadat dotaz na aktuální barvu pozadí pomocí členských funkcí [SetBkColor](#setbkcolor) a [GetBkColor](#getbkcolor) .)
 
 *lpRect*<br/>
-Odkazuje na strukturu [Rect](/windows/desktop/api/windef/ns-windef-tagrect) , která určuje rozměry obdélníku. Tento parametr může mít hodnotu NULL. Pro tento parametr můžete také předat objekt [CRect](../../atl-mfc-shared/reference/crect-class.md) .
+Odkazuje na strukturu [Rect](/windows/win32/api/windef/ns-windef-rect) , která určuje rozměry obdélníku. Tento parametr může mít hodnotu NULL. Pro tento parametr můžete také předat objekt [CRect](../../atl-mfc-shared/reference/crect-class.md) .
 
 *lpszString*<br/>
 Odkazuje na zadaný řetězec znaků, který se má vykreslit. Pro tento parametr můžete také předat objekt [CString](../../atl-mfc-shared/reference/cstringt-class.md) .
@@ -2354,7 +2354,7 @@ void FillRect(
 ### <a name="parameters"></a>Parametry
 
 *lpRect*<br/>
-Odkazuje na strukturu [Rect](/windows/desktop/api/windef/ns-windef-tagrect) obsahující logické souřadnice obdélníku, který má být vyplněn. Pro tento parametr můžete také předat objekt [CRect](../../atl-mfc-shared/reference/crect-class.md) .
+Odkazuje na strukturu [Rect](/windows/win32/api/windef/ns-windef-rect) obsahující logické souřadnice obdélníku, který má být vyplněn. Pro tento parametr můžete také předat objekt [CRect](../../atl-mfc-shared/reference/crect-class.md) .
 
 *pBrush*<br/>
 Určuje štětec, který se použije k vyplnění obdélníku.
@@ -2419,7 +2419,7 @@ void FillSolidRect(
 ### <a name="parameters"></a>Parametry
 
 *lpRect*<br/>
-Určuje ohraničující obdélník (v logických jednotkách). Můžete předat ukazatel na strukturu dat [Rect](/windows/desktop/api/windef/ns-windef-tagrect) nebo `CRect` objekt pro tento parametr.
+Určuje ohraničující obdélník (v logických jednotkách). Můžete předat ukazatel na strukturu dat [Rect](/windows/win32/api/windef/ns-windef-rect) nebo `CRect` objekt pro tento parametr.
 
 *modul CLR* Určuje barvu, která má být použita k vyplnění obdélníku.
 
@@ -2501,7 +2501,7 @@ void FrameRect(
 ### <a name="parameters"></a>Parametry
 
 *lpRect*<br/>
-Odkazuje na strukturu [Rect](/windows/desktop/api/windef/ns-windef-tagrect) nebo objekt [CRect](../../atl-mfc-shared/reference/crect-class.md) , který obsahuje logické souřadnice levého horního a pravého dolního rohu obdélníku. Můžete také předat `CRect` objekt pro tento parametr.
+Odkazuje na strukturu [Rect](/windows/win32/api/windef/ns-windef-rect) nebo objekt [CRect](../../atl-mfc-shared/reference/crect-class.md) , který obsahuje logické souřadnice levého horního a pravého dolního rohu obdélníku. Můžete také předat `CRect` objekt pro tento parametr.
 
 *pBrush*<br/>
 Určuje štětec, který se má použít k orámování obdélníku.
@@ -2718,16 +2718,16 @@ DWORD GetCharacterPlacement(
 Ukazatel na řetězec znaků, který má být zpracován.
 
 *nCount*<br/>
-Určuje délku řetězce. V případě verze ANSI se jedná o počet bajtů a funkce Unicode je počet slov. Další informace najdete v tématu [GetCharacterPlacement](/windows/desktop/api/wingdi/nf-wingdi-getcharacterplacementa).
+Určuje délku řetězce. V případě verze ANSI se jedná o počet bajtů a funkce Unicode je počet slov. Další informace najdete v tématu [GetCharacterPlacement](/windows/win32/api/wingdi/nf-wingdi-getcharacterplacementw).
 
 *nMaxExtent*<br/>
 Určuje maximální rozsah (v logických jednotkách), do kterého se řetězec zpracovává. Znaky, které jsou při zpracování, by překročily tento rozsah, se ignorují. Výpočty pro všechna požadovaná pole řazení nebo glyfů se vztahují pouze na zahrnuté znaky. Tento parametr se používá pouze v případě, že je hodnota GCP_MAXEXTENT zadána v parametru *dwFlags* . Jak funkce zpracovává vstupní řetězec, každý znak a jeho rozsah je přidán do výstupu, rozsahu a dalších polí pouze v případě, že celková velikost ještě nepřekročila maximální hodnotu. Po dosažení limitu se zpracování zastaví.
 
 *lpResults*<br/>
-Ukazatel na strukturu [GCP_Results](/windows/desktop/api/wingdi/ns-wingdi-taggcp_resultsa) , která přijímá výsledky funkce.
+Ukazatel na strukturu [GCP_Results](/windows/win32/api/wingdi/ns-wingdi-gcp_resultsw) , která přijímá výsledky funkce.
 
 *dwFlags*<br/>
-Určuje způsob zpracování řetězce do požadovaných polí. Tento parametr může být jednou nebo více hodnotami, které jsou uvedeny v části *dwFlags* tématu [GetCharacterPlacement](/windows/desktop/api/wingdi/nf-wingdi-getcharacterplacementa) .
+Určuje způsob zpracování řetězce do požadovaných polí. Tento parametr může být jednou nebo více hodnotami, které jsou uvedeny v části *dwFlags* tématu [GetCharacterPlacement](/windows/win32/api/wingdi/nf-wingdi-getcharacterplacementw) .
 
 *str*<br/>
 Ukazatel na objekt [CString](../../atl-mfc-shared/reference/cstringt-class.md) , který se má zpracovat.
@@ -2740,7 +2740,7 @@ Pokud dojde k chybě funkce, vrácená hodnota je nula.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato členská funkce emuluje funkčnost funkce [GetCharacterPlacement](/windows/desktop/api/wingdi/nf-wingdi-getcharacterplacementa), jak je popsáno v Windows SDK.
+Tato členská funkce emuluje funkčnost funkce [GetCharacterPlacement](/windows/win32/api/wingdi/nf-wingdi-getcharacterplacementw), jak je popsáno v Windows SDK.
 
 ##  <a name="getcharabcwidths"></a>CDC:: GetCharABCWidths
 
@@ -2767,10 +2767,10 @@ Určuje první znak v rozsahu znaků od aktuálního písma, pro který jsou vra
 Určuje poslední znak v rozsahu znaků od aktuálního písma, pro který jsou vraceny znaky šířky.
 
 *lpabc*<br/>
-Odkazuje na pole struktury [ABC](/windows/desktop/api/wingdi/ns-wingdi-abc) , které obdrží tloušťku znaků při návratu funkce. Toto pole musí obsahovat alespoň `ABC` tolik struktur, protože v rozsahu zadaném parametry *nFirstChar* a *nLastChar* jsou znaky.
+Odkazuje na pole struktury [ABC](/windows/win32/api/wingdi/ns-wingdi-abc) , které obdrží tloušťku znaků při návratu funkce. Toto pole musí obsahovat alespoň `ABC` tolik struktur, protože v rozsahu zadaném parametry *nFirstChar* a *nLastChar* jsou znaky.
 
 *lpABCF*<br/>
-Odkazuje na vyrovnávací paměť poskytnutou aplikací s polem struktur [abcfloat –](/windows/desktop/api/wingdi/ns-wingdi-abcfloat) , aby bylo možné získat šířky znaků při návratu funkce. Šířka vrácená touto funkcí jsou ve formátu s plovoucí desetinnou čárkou standardu IEEE.
+Odkazuje na vyrovnávací paměť poskytnutou aplikací s polem struktur [abcfloat –](/windows/win32/api/wingdi/ns-wingdi-abcfloat) , aby bylo možné získat šířky znaků při návratu funkce. Šířka vrácená touto funkcí jsou ve formátu s plovoucí desetinnou čárkou standardu IEEE.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -2784,11 +2784,11 @@ Rastrové písmo TrueType poskytuje mezery mezi znaky "ABC" po výběru velikost
 
 `GetCharABCWidths` Když členská funkce načte pro znak negativní šířky "A" nebo "C", tento znak zahrnuje podtržítka nebo přeblokování.
 
-Chcete-li převést šířku ABC na jednotky návrhu písem, aplikace by měla vytvořit písmo, jehož výška ( `lfHeight` uvedená v členu struktury [LOGFONT](/windows/desktop/api/wingdi/ns-wingdi-taglogfonta) ) je rovna `ntmSizeEM` hodnotě uložené v členu [NEWTEXTMETRIC](/windows/desktop/api/wingdi/ns-wingdi-tagnewtextmetrica) strukturované. (Hodnotu `ntmSizeEM` člena lze načíst voláním funkce [EnumFontFamilies](/windows/desktop/api/wingdi/nf-wingdi-enumfontfamiliesa) systému Windows.)
+Chcete-li převést šířku ABC na jednotky návrhu písem, aplikace by měla vytvořit písmo, jehož výška ( `lfHeight` uvedená v členu struktury [LOGFONT](/windows/win32/api/wingdi/ns-wingdi-logfontw) ) je rovna `ntmSizeEM` hodnotě uložené v členu [NEWTEXTMETRIC](/windows/win32/api/wingdi/ns-wingdi-newtextmetricw) strukturované. (Hodnotu `ntmSizeEM` člena lze načíst voláním funkce [EnumFontFamilies](/windows/win32/api/wingdi/nf-wingdi-enumfontfamiliesw) systému Windows.)
 
 Šířky ABC výchozího znaku se používají pro znaky, které jsou mimo rozsah aktuálně vybraného písma.
 
-Aby bylo možné načíst šířky znaků v písmech jiných než TrueType, aplikace by měly používat funkci [GetCharWidth](/windows/desktop/api/wingdi/nf-wingdi-getcharwidtha) Windows.
+Aby bylo možné načíst šířky znaků v písmech jiných než TrueType, aplikace by měly používat funkci [GetCharWidth](/windows/win32/api/wingdi/nf-wingdi-getcharwidthw) Windows.
 
 ##  <a name="getcharabcwidthsi"></a>CDC:: GetCharABCWidthsI
 
@@ -2814,7 +2814,7 @@ Určuje počet indexů glyfů.
 Ukazatel na pole obsahující indexy glyfů. Pokud je hodnota NULL, použije se místo toho parametr *giFirst* . Parametr *CGI* určuje počet indexů glyfů v tomto poli.
 
 *lpabc*<br/>
-Ukazatel na pole struktury [ABC](/windows/desktop/api/wingdi/ns-wingdi-abc) přijímající šířky znaků. Toto pole musí obsahovat alespoň `ABC` tolik struktur, protože jsou indexy glyfů určené parametrem *CGI* .
+Ukazatel na pole struktury [ABC](/windows/win32/api/wingdi/ns-wingdi-abc) přijímající šířky znaků. Toto pole musí obsahovat alespoň `ABC` tolik struktur, protože jsou indexy glyfů určené parametrem *CGI* .
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -2822,7 +2822,7 @@ Nenulové, pokud je funkce úspěšná; jinak 0.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato členská funkce emuluje funkčnost funkce [GetCharABCWidthsI](/windows/desktop/api/wingdi/nf-wingdi-getcharabcwidthsi), jak je popsáno v Windows SDK.
+Tato členská funkce emuluje funkčnost funkce [GetCharABCWidthsI](/windows/win32/api/wingdi/nf-wingdi-getcharabcwidthsi), jak je popsáno v Windows SDK.
 
 ##  <a name="getcharwidth"></a>CDC:: GetCharWidth
 
@@ -2898,7 +2898,7 @@ Nenulové, pokud je funkce úspěšná; jinak 0.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato členská funkce emuluje funkčnost funkce [GetCharWidthI](/windows/desktop/api/wingdi/nf-wingdi-getcharwidthi), jak je popsáno v Windows SDK.
+Tato členská funkce emuluje funkčnost funkce [GetCharWidthI](/windows/win32/api/wingdi/nf-wingdi-getcharwidthi), jak je popsáno v Windows SDK.
 
 ##  <a name="getclipbox"></a>CDC:: GetClipBox
 
@@ -2911,7 +2911,7 @@ virtual int GetClipBox(LPRECT lpRect) const;
 ### <a name="parameters"></a>Parametry
 
 *lpRect*<br/>
-Odkazuje na strukturu [Rect](/windows/desktop/api/windef/ns-windef-tagrect) nebo objekt [CRect](../../atl-mfc-shared/reference/crect-class.md) , který má přijmout rozměry obdélníku.
+Odkazuje na strukturu [Rect](/windows/win32/api/windef/ns-windef-rect) nebo objekt [CRect](../../atl-mfc-shared/reference/crect-class.md) , který má přijmout rozměry obdélníku.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -2940,7 +2940,7 @@ BOOL GetColorAdjustment(LPCOLORADJUSTMENT lpColorAdjust) const;
 ### <a name="parameters"></a>Parametry
 
 *lpColorAdjust*<br/>
-Odkazuje na strukturu dat [coloradjustment –](/windows/desktop/api/wingdi/ns-wingdi-tagcoloradjustment) , aby přijímala hodnoty pro úpravu barev.
+Odkazuje na strukturu dat [coloradjustment –](/windows/win32/api/wingdi/ns-wingdi-coloradjustment) , aby přijímala hodnoty pro úpravu barev.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -3052,13 +3052,13 @@ COLORREF GetDCBrushColor() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Pokud je funkce úspěšná, návratová hodnota je hodnota [COLORREF](/windows/desktop/gdi/colorref) pro aktuální barvu štětce.
+Pokud je funkce úspěšná, návratová hodnota je hodnota [COLORREF](/windows/win32/gdi/colorref) pro aktuální barvu štětce.
 
 Pokud dojde k chybě funkce, vrácená hodnota je CLR_INVALID.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato členská funkce emuluje funkčnost funkce [GetDCBrushColor](/windows/desktop/api/wingdi/nf-wingdi-getdcbrushcolor), jak je popsáno v Windows SDK.
+Tato členská funkce emuluje funkčnost funkce [GetDCBrushColor](/windows/win32/api/wingdi/nf-wingdi-getdcbrushcolor), jak je popsáno v Windows SDK.
 
 ##  <a name="getdcpencolor"></a>CDC:: GetDCPenColor
 
@@ -3070,13 +3070,13 @@ COLORREF GetDCPenColor() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Pokud je funkce úspěšná, návratová hodnota je [COLORREF](/windows/desktop/gdi/colorref) hodnotou aktuální barvy pera.
+Pokud je funkce úspěšná, návratová hodnota je [COLORREF](/windows/win32/gdi/colorref) hodnotou aktuální barvy pera.
 
 Pokud dojde k chybě funkce, vrácená hodnota je CLR_INVALID.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato členská funkce využívá [GetDCPenColor](/windows/desktop/api/wingdi/nf-wingdi-getdcpencolor)funkce Win32, jak je popsáno v Windows SDK.
+Tato členská funkce využívá [GetDCPenColor](/windows/win32/api/wingdi/nf-wingdi-getdcpencolor)funkce Win32, jak je popsáno v Windows SDK.
 
 ##  <a name="getdevicecaps"></a>CDC:: GetDeviceCaps
 
@@ -3089,7 +3089,7 @@ int GetDeviceCaps(int nIndex) const;
 ### <a name="parameters"></a>Parametry
 
 *nIndex*<br/>
-Určuje typ informací, které mají být vráceny. Seznam hodnot naleznete v tématu [GetDeviceCaps](/windows/desktop/api/wingdi/nf-wingdi-getdevicecaps) v Windows SDK.
+Určuje typ informací, které mají být vráceny. Seznam hodnot naleznete v tématu [GetDeviceCaps](/windows/win32/api/wingdi/nf-wingdi-getdevicecaps) v Windows SDK.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -3135,7 +3135,7 @@ Informace, které se mají načíst, se identifikují zadáním posunu do soubor
 
 Aplikace může někdy použít `GetFontData` členskou funkci k uložení písma TrueType s dokumentem. K tomu aplikace určuje, zda může být písmo vloženo, a poté načte celý soubor písma, zadáním 0 pro parametry *dwTable*, *dwOffset*a *cbData* .
 
-Aplikace mohou určit, zda může být písmo vloženo pomocí kontroly `otmfsType` člena struktury [OUTLINETEXTMETRIC](/windows/desktop/api/wingdi/ns-wingdi-outlinetextmetrica) . Pokud `otmfsType` je nastaven bit 1, vkládání není pro písmo povoleno. Pokud je bit 1 jasný, může být písmo vloženo. Pokud je nastaven bit 2, vkládání je jen pro čtení.
+Aplikace mohou určit, zda může být písmo vloženo pomocí kontroly `otmfsType` člena struktury [OUTLINETEXTMETRIC](/windows/win32/api/wingdi/ns-wingdi-outlinetextmetricw) . Pokud `otmfsType` je nastaven bit 1, vkládání není pro písmo povoleno. Pokud je bit 1 jasný, může být písmo vloženo. Pokud je nastaven bit 2, vkládání je jen pro čtení.
 
 Pokud se aplikace pokusí použít tuto funkci, aby načetla informace pro písmo jiného typu než TrueType `GetFontData` , vrátí členské funkce hodnotu-1.
 
@@ -3149,11 +3149,11 @@ DWORD GetFontLanguageInfo() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vrácená hodnota identifikuje vlastnosti aktuálně vybraného písma. Úplný seznam možných hodnot naleznete v tématu [GetFontLanguageInfo](/windows/desktop/api/wingdi/nf-wingdi-getfontlanguageinfo).
+Vrácená hodnota identifikuje vlastnosti aktuálně vybraného písma. Úplný seznam možných hodnot naleznete v tématu [GetFontLanguageInfo](/windows/win32/api/wingdi/nf-wingdi-getfontlanguageinfo).
 
 ### <a name="remarks"></a>Poznámky
 
-Tato členská funkce emuluje funkčnost funkce [GetFontLanguageInfo](/windows/desktop/api/wingdi/nf-wingdi-getfontlanguageinfo), jak je popsáno v Windows SDK.
+Tato členská funkce emuluje funkčnost funkce [GetFontLanguageInfo](/windows/win32/api/wingdi/nf-wingdi-getfontlanguageinfo), jak je popsáno v Windows SDK.
 
 ##  <a name="getglyphoutline"></a>CDC:: GetGlyphOutline
 
@@ -3182,7 +3182,7 @@ Určuje formát, ve kterém má funkce vracet informace. Může to být jedna z 
 |GGO_BITMAP|Vrátí rastrový obrázek glyfu. Když se funkce vrátí, vyrovnávací paměť, na kterou odkazuje *lpBuffer* , obsahuje obrázek o velikosti 1 bitové čárky, jehož řádky začínají na hranicích doubleword.|
 |GGO_NATIVE|Vrátí body dat křivky v nativním formátu rastrového pomocí jednotek zařízení. Pokud je tato hodnota zadaná, všechny transformace zadané v *lpmat2* se ignorují.|
 
-Pokud je hodnota *nFormat* 0, funkce vyplní strukturu [GLYPHMETRICS](/windows/desktop/api/wingdi/ns-wingdi-glyphmetrics) , ale nevrátí data obrysu glyfů.
+Pokud je hodnota *nFormat* 0, funkce vyplní strukturu [GLYPHMETRICS](/windows/win32/api/wingdi/ns-wingdi-glyphmetrics) , ale nevrátí data obrysu glyfů.
 
 *lpgm*<br/>
 Odkazuje na strukturu GLYPHMETRICS, která popisuje umístění glyfu v buňce znaků.
@@ -3194,7 +3194,7 @@ Určuje velikost vyrovnávací paměti, do které funkce kopíruje informace o z
 Odkazuje na vyrovnávací paměť, do které funkce kopíruje informace o znaku obrysu. Pokud *nFormat* Určuje hodnotu GGO_NATIVE, zkopírují se informace ve formě struktury TTPOLYGONHEADER a TTPOLYCURVE. Pokud je tato hodnota NULL a *nFormat* je buď hodnota GGO_BITMAP nebo GGO_NATIVE, funkce vrátí požadovanou velikost vyrovnávací paměti.
 
 *lpmat2*<br/>
-Odkazuje na strukturu [MAT2](/windows/desktop/api/wingdi/ns-wingdi-mat2) , která obsahuje transformační matici pro daný znak. Tento parametr nemůže mít hodnotu NULL ani v případě, že je pro *nFormat*zadána hodnota GGO_NATIVE.
+Odkazuje na strukturu [MAT2](/windows/win32/api/wingdi/ns-wingdi-mat2) , která obsahuje transformační matici pro daný znak. Tento parametr nemůže mít hodnotu NULL ani v případě, že je pro *nFormat*zadána hodnota GGO_NATIVE.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -3204,7 +3204,7 @@ Velikost vyrovnávací paměti (v bajtech) požadovaná pro načtené informace,
 
 Aplikace může otáčet znaky načtené ve formátu rastrového obrázku zadáním transformační matice 2 – 2 ve struktuře, na kterou odkazuje *lpmat2*.
 
-Obrys glyfu se vrátí jako série kokolací. Každý rozvrh je definován strukturou [TTPOLYGONHEADER](/windows/desktop/api/wingdi/ns-wingdi-tagttpolygonheader) , po níž následuje tolik `TTPOLYCURVE` struktur, kolik jich je potřeba k jeho popisu. Všechny body jsou vráceny jako [POINTFX](/windows/desktop/api/wingdi/ns-wingdi-tagpointfx) struktury a představují absolutní umístění, nikoli relativní přesuny. Počátečním bodem daným `pfxStart` členem struktury [TTPOLYGONHEADER](/windows/desktop/api/wingdi/ns-wingdi-tagttpolygonheader) je bod, ve kterém je začátek obrysu obrysu. [TTPOLYCURVE](/windows/desktop/api/wingdi/ns-wingdi-tagttpolycurve) struktury, které následují, mohou být buď záznamy lomené čáry, nebo záznamy křivky. Záznamy lomené čáry jsou série bodů. čáry vykreslené mezi body popisují obrys znaku. Záznamy křivky reprezentují kvadratické křivky používané TrueType (tj. kvadratické b-křivky).
+Obrys glyfu se vrátí jako série kokolací. Každý rozvrh je definován strukturou [TTPOLYGONHEADER](/windows/win32/api/wingdi/ns-wingdi-ttpolygonheader) , po níž následuje tolik `TTPOLYCURVE` struktur, kolik jich je potřeba k jeho popisu. Všechny body jsou vráceny jako [POINTFX](/windows/win32/api/wingdi/ns-wingdi-pointfx) struktury a představují absolutní umístění, nikoli relativní přesuny. Počátečním bodem daným `pfxStart` členem struktury [TTPOLYGONHEADER](/windows/win32/api/wingdi/ns-wingdi-ttpolygonheader) je bod, ve kterém je začátek obrysu obrysu. [TTPOLYCURVE](/windows/win32/api/wingdi/ns-wingdi-ttpolycurve) struktury, které následují, mohou být buď záznamy lomené čáry, nebo záznamy křivky. Záznamy lomené čáry jsou série bodů. čáry vykreslené mezi body popisují obrys znaku. Záznamy křivky reprezentují kvadratické křivky používané TrueType (tj. kvadratické b-křivky).
 
 ##  <a name="getgraphicsmode"></a>CDC:: GetGraphicsMode
 
@@ -3216,15 +3216,15 @@ int GetGraphicsMode() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vrátí aktuální režim grafiky při úspěchu. Seznam hodnot, které může tato metoda vracet, naleznete v tématu [GetGraphicsMode](/windows/desktop/api/wingdi/nf-wingdi-getgraphicsmode).
+Vrátí aktuální režim grafiky při úspěchu. Seznam hodnot, které může tato metoda vracet, naleznete v tématu [GetGraphicsMode](/windows/win32/api/wingdi/nf-wingdi-getgraphicsmode).
 
 Vrátí 0 při selhání.
 
-Chcete-li získat rozšířené informace o chybě, volejte příkaz [GetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror).
+Chcete-li získat rozšířené informace o chybě, volejte příkaz [GetLastError](/windows/win32/api/errhandlingapi/nf-errhandlingapi-getlasterror).
 
 ### <a name="remarks"></a>Poznámky
 
-Tato metoda zabalí funkci GDI systému Windows [GetGraphicsMode](/windows/desktop/api/wingdi/nf-wingdi-getgraphicsmode).
+Tato metoda zabalí funkci GDI systému Windows [GetGraphicsMode](/windows/win32/api/wingdi/nf-wingdi-getgraphicsmode).
 
 ##  <a name="gethalftonebrush"></a>CDC:: GetHalftoneBrush
 
@@ -3257,7 +3257,7 @@ int GetKerningPairs(
 ### <a name="parameters"></a>Parametry
 
 *nPairs*<br/>
-Určuje počet [KERNINGPAIR](/windows/desktop/api/wingdi/ns-wingdi-tagkerningpair) struktur, na které odkazuje *lpkrnpair*. Funkce nebude kopírovat více párů párů, než je určeno *nPairs*.
+Určuje počet [KERNINGPAIR](/windows/win32/api/wingdi/ns-wingdi-kerningpair) struktur, na které odkazuje *lpkrnpair*. Funkce nebude kopírovat více párů párů, než je určeno *nPairs*.
 
 *lpkrnpair*<br/>
 Odkazuje na pole `KERNINGPAIR` struktur, které přijímají páry párů při návratu funkce. Toto pole musí obsahovat alespoň tolik struktur, jak Určuje *nPairs*. Pokud má tento parametr hodnotu NULL, funkce vrátí celkový počet párů párů pro dané písmo.
@@ -3276,7 +3276,7 @@ DWORD GetLayout() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-V případě úspěchu se pro aktuální kontext zařízení přihlásily příznaky rozložení. V opačném případě GDI_ERROR. Pro rozšířené informace o chybě volejte [GetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror). Seznam příznaků rozložení naleznete v tématu [CDC:: SetLayout](#setlayout).
+V případě úspěchu se pro aktuální kontext zařízení přihlásily příznaky rozložení. V opačném případě GDI_ERROR. Pro rozšířené informace o chybě volejte [GetLastError](/windows/win32/api/errhandlingapi/nf-errhandlingapi-getlasterror). Seznam příznaků rozložení naleznete v tématu [CDC:: SetLayout](#setlayout).
 
 ### <a name="remarks"></a>Poznámky
 
@@ -3351,7 +3351,7 @@ UINT GetOutlineTextMetrics(
 ### <a name="parameters"></a>Parametry
 
 *lpotm*<br/>
-Odkazuje na pole [OUTLINETEXTMETRIC](/windows/desktop/api/wingdi/ns-wingdi-outlinetextmetrica) struktury. Pokud má tento parametr hodnotu NULL, funkce vrátí velikost vyrovnávací paměti požadované pro načtená data metriky.
+Odkazuje na pole [OUTLINETEXTMETRIC](/windows/win32/api/wingdi/ns-wingdi-outlinetextmetricw) struktury. Pokud má tento parametr hodnotu NULL, funkce vrátí velikost vyrovnávací paměti požadované pro načtená data metriky.
 
 *cbData*<br/>
 Určuje velikost vyrovnávací paměti (v bajtech), na kterou se vracejí informace.
@@ -3365,7 +3365,7 @@ Nenulové, pokud je funkce úspěšná; jinak 0.
 
 ### <a name="remarks"></a>Poznámky
 
-Struktura [OUTLINETEXTMETRIC](/windows/desktop/api/wingdi/ns-wingdi-outlinetextmetrica) obsahuje většinu informací o metrikách písem, které jsou k dispozici ve formátu TrueType, včetně struktury [TEXTMETRIC](/windows/desktop/api/wingdi/ns-wingdi-tagtextmetrica) . Poslední čtyři členy `OUTLINETEXTMETRIC` struktury jsou ukazatele na řetězce. Aplikace by měly přidělit prostor pro tyto řetězce kromě prostoru požadovaného pro ostatní členy. Vzhledem k tomu, že velikost řetězce není omezena systémem, nejjednodušší způsob přidělování paměti je načíst požadovanou velikost zadáním hodnoty null pro *lpotm* v prvním volání `GetOutlineTextMetrics` funkce.
+Struktura [OUTLINETEXTMETRIC](/windows/win32/api/wingdi/ns-wingdi-outlinetextmetricw) obsahuje většinu informací o metrikách písem, které jsou k dispozici ve formátu TrueType, včetně struktury [TEXTMETRIC](/windows/win32/api/wingdi/ns-wingdi-textmetricw) . Poslední čtyři členy `OUTLINETEXTMETRIC` struktury jsou ukazatele na řetězce. Aplikace by měly přidělit prostor pro tyto řetězce kromě prostoru požadovaného pro ostatní členy. Vzhledem k tomu, že velikost řetězce není omezena systémem, nejjednodušší způsob přidělování paměti je načíst požadovanou velikost zadáním hodnoty null pro *lpotm* v prvním volání `GetOutlineTextMetrics` funkce.
 
 ##  <a name="getoutputcharwidth"></a>CDC:: GetOutputCharWidth
 
@@ -3424,7 +3424,7 @@ CSize GetOutputTabbedTextExtent(
 Odkazuje na řetězec znaků, který se má měřit. Pro tento parametr můžete také předat objekt [CString](../../atl-mfc-shared/reference/cstringt-class.md) .
 
 *nCount*<br/>
-Určuje [délku řetězce,](/windows/desktop/gdi/specifying-length-of-text-output-string) na který odkazuje *lpszString*.
+Určuje [délku řetězce,](/windows/win32/gdi/specifying-length-of-text-output-string) na který odkazuje *lpszString*.
 
 *nTabPositions*<br/>
 Určuje počet pozic zarážek tabulátorů v poli, na které odkazuje *lpnTabStopPositions*.
@@ -3467,7 +3467,7 @@ CSize GetOutputTextExtent(const CString& str) const;
 Odkazuje na řetězec znaků. Pro tento parametr můžete také předat objekt [CString](../../atl-mfc-shared/reference/cstringt-class.md) .
 
 *nCount*<br/>
-Určuje [délku řetězce,](/windows/desktop/gdi/specifying-length-of-text-output-string) na který odkazuje *lpszString*.
+Určuje [délku řetězce,](/windows/win32/gdi/specifying-length-of-text-output-string) na který odkazuje *lpszString*.
 
 *str*<br/>
 `CString` Objekt obsahující zadané znaky, které mají být měřeny.
@@ -3493,7 +3493,7 @@ BOOL GetOutputTextMetrics(LPTEXTMETRIC lpMetrics) const;
 ### <a name="parameters"></a>Parametry
 
 *lpMetrics*<br/>
-Odkazuje na strukturu [TEXTMETRIC](/windows/desktop/api/wingdi/ns-wingdi-tagtextmetrica) , která přijímá metriky.
+Odkazuje na strukturu [TEXTMETRIC](/windows/win32/api/wingdi/ns-wingdi-textmetricw) , která přijímá metriky.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -3513,7 +3513,7 @@ int GetPath(
 ### <a name="parameters"></a>Parametry
 
 *lpPoints*<br/>
-Odkazuje na pole datových struktur [bodů](/windows/desktop/api/windef/ns-windef-tagpoint) nebo `CPoint` objektů, kde jsou umístěny koncové body řádku a řídicí body křivky.
+Odkazuje na pole datových struktur [bodů](/windows/win32/api/windef/ns-windef-point) nebo `CPoint` objektů, kde jsou umístěny koncové body řádku a řídicí body křivky.
 
 *lpTypes*<br/>
 Odkazuje na pole bajtů, kde jsou umístěny typy vrcholu. Hodnoty jsou jedna z následujících hodnot:
@@ -3531,7 +3531,7 @@ PT_BEZIERTO typy se vždy vyskytují v sadách tři. Bod v cestě bezprostředn�
 - PT_CLOSEFIGURE určuje, že se obrázek automaticky zavře po vykreslení odpovídající čáry nebo křivky. Obrázek je uzavřený kreslením čáry z řádku nebo koncového bodu křivky do bodu, který odpovídá poslednímu PT_MOVETO.
 
 *nCount*<br/>
-Určuje celkový počet datových struktur [bodů](/windows/desktop/api/windef/ns-windef-tagpoint) , které mohou být umístěny v poli *lpPoints* . Tato hodnota musí být stejná jako počet bajtů, které mohou být umístěny v poli *lpTypes* .
+Určuje celkový počet datových struktur [bodů](/windows/win32/api/windef/ns-windef-point) , které mohou být umístěny v poli *lpPoints* . Tato hodnota musí být stejná jako počet bajtů, které mohou být umístěny v poli *lpTypes* .
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -3578,7 +3578,7 @@ Bod musí být v oblasti oříznutí. Pokud bod není v oblasti oříznutí, fun
 
 Ne všechna zařízení podporují tuto `GetPixel` funkci. Další informace najdete v tématu funkce rastrového RC_BITBLT pod členskou funkcí [GetDeviceCaps](#getdevicecaps) .
 
-`GetPixel` Členská funkce má dva formuláře. První přebírá dvě hodnoty souřadnic. druhý má buď strukturu [bodu](/windows/desktop/api/windef/ns-windef-tagpoint) , nebo objekt [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) .
+`GetPixel` Členská funkce má dva formuláře. První přebírá dvě hodnoty souřadnic. druhý má buď strukturu [bodu](/windows/win32/api/windef/ns-windef-point) , nebo objekt [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) .
 
 ##  <a name="getpolyfillmode"></a>CDC:: GetPolyFillMode
 
@@ -3669,7 +3669,7 @@ CSize GetTabbedTextExtent(
 Odkazuje na řetězec znaků. Pro tento parametr můžete také předat objekt [CString](../../atl-mfc-shared/reference/cstringt-class.md) .
 
 *nCount*<br/>
-Určuje [délku řetězce,](/windows/desktop/gdi/specifying-length-of-text-output-string) na který odkazuje *lpszString*.
+Určuje [délku řetězce,](/windows/win32/gdi/specifying-length-of-text-output-string) na který odkazuje *lpszString*.
 
 *nTabPositions*<br/>
 Určuje počet pozic zarážek tabulátorů v poli, na které odkazuje *lpnTabStopPositions*.
@@ -3841,7 +3841,7 @@ Ukazatel na celé číslo, který přijímá počet maximálních znaků, které
 Ukazatel na pole celých čísel, která obdrží částečné rozsahy glyfů. Každý prvek v poli poskytuje vzdálenost, v logických jednotkách, mezi začátkem pole indexů glyfů a jedním z glyfů, které se vejdou do prostoru určeného parametrem *nMaxExtent*. I když by toto pole mělo mít alespoň tolik prvků jako glyfy, které jsou určeny *rozhraním CGI*, funkce vyplní pole rozsahy pouze pro tolik indexů glyfů, jak jsou určeny funkcí *lpnFit*. Pokud má *lpnDx* hodnotu null, funkce nevypočítá částečné řetězcové šířky.
 
 *lpSize*<br/>
-Ukazatel na [Velikost](/windows/desktop/api/windef/ns-windef-tagsize) struktury, která přijímá rozměry pole indexů glyfů v logických jednotkách. Tato hodnota nemůže být NULL.
+Ukazatel na [Velikost](/windows/win32/api/windef/ns-windef-size) struktury, která přijímá rozměry pole indexů glyfů v logických jednotkách. Tato hodnota nemůže být NULL.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -3849,7 +3849,7 @@ Nenulové, pokud je funkce úspěšná; jinak 0.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato členská funkce emuluje funkčnost funkce [GetTextExtentExPointI](/windows/desktop/api/wingdi/nf-wingdi-gettextextentexpointi), jak je popsáno v Windows SDK.
+Tato členská funkce emuluje funkčnost funkce [GetTextExtentExPointI](/windows/win32/api/wingdi/nf-wingdi-gettextextentexpointi), jak je popsáno v Windows SDK.
 
 ##  <a name="gettextextentpointi"></a>  CDC::GetTextExtentPointI
 
@@ -3871,7 +3871,7 @@ Ukazatel na pole indexů glyfů, pro které mají být načteny rozsahy.
 Určuje počet glyfů v poli, na které ukazuje *pgiIn*.
 
 *lpSize*<br/>
-Ukazatel na [Velikost](/windows/desktop/api/windef/ns-windef-tagsize) struktury, která přijímá rozměry pole indexů glyfů v logických jednotkách. Tato hodnota nemůže být NULL.
+Ukazatel na [Velikost](/windows/win32/api/windef/ns-windef-size) struktury, která přijímá rozměry pole indexů glyfů v logických jednotkách. Tato hodnota nemůže být NULL.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -3879,7 +3879,7 @@ Nenulové, pokud je funkce úspěšná; jinak 0.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato členská funkce emuluje funkčnost funkce [GetTextExtentPointI](/windows/desktop/api/wingdi/nf-wingdi-gettextextentpointi), jak je popsáno v Windows SDK.
+Tato členská funkce emuluje funkčnost funkce [GetTextExtentPointI](/windows/win32/api/wingdi/nf-wingdi-gettextextentpointi), jak je popsáno v Windows SDK.
 
 ##  <a name="gettextface"></a>CDC:: GetTextFace
 
@@ -3923,7 +3923,7 @@ BOOL GetTextMetrics(LPTEXTMETRIC lpMetrics) const;
 ### <a name="parameters"></a>Parametry
 
 *lpMetrics*<br/>
-Odkazuje na strukturu [TEXTMETRIC](/windows/desktop/api/wingdi/ns-wingdi-tagtextmetrica) , která přijímá metriky.
+Odkazuje na strukturu [TEXTMETRIC](/windows/win32/api/wingdi/ns-wingdi-textmetricw) , která přijímá metriky.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -4004,7 +4004,7 @@ BOOL GetWorldTransform(XFORM& rXform) const;
 ### <a name="parameters"></a>Parametry
 
 *rXform*<br/>
-Odkaz na strukturu [Xform –](/windows/desktop/api/wingdi/ns-wingdi-tagxform) , která přijímá aktuální světový prostor pro transformaci místa na stránce.
+Odkaz na strukturu [Xform –](/windows/win32/api/wingdi/ns-wingdi-xform) , která přijímá aktuální světový prostor pro transformaci místa na stránce.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -4012,11 +4012,11 @@ Vrátí nenulovou hodnotu při úspěchu.
 
 Vrátí 0 při selhání.
 
-Chcete-li získat rozšířené informace o chybě, volejte příkaz [GetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror).
+Chcete-li získat rozšířené informace o chybě, volejte příkaz [GetLastError](/windows/win32/api/errhandlingapi/nf-errhandlingapi-getlasterror).
 
 ### <a name="remarks"></a>Poznámky
 
-Tato metoda zabalí funkci GDI systému Windows [GetWorldTransform](/windows/desktop/api/wingdi/nf-wingdi-getworldtransform).
+Tato metoda zabalí funkci GDI systému Windows [GetWorldTransform](/windows/win32/api/wingdi/nf-wingdi-getworldtransform).
 
 ##  <a name="gradientfill"></a>CDC:: GradientFill
 
@@ -4034,19 +4034,19 @@ BOOL GradientFill(
 ### <a name="parameters"></a>Parametry
 
 *pVertices*<br/>
-Ukazatel na pole [TRIVERTEX](/windows/desktop/api/wingdi/ns-wingdi-trivertex) struktury, které každá definuje vrchol trojúhelníku.
+Ukazatel na pole [TRIVERTEX](/windows/win32/api/wingdi/ns-wingdi-trivertex) struktury, které každá definuje vrchol trojúhelníku.
 
 *nVertices*<br/>
 Počet vrcholů.
 
 *pMesh*<br/>
-Pole struktur [GRADIENT_TRIANGLE](/windows/desktop/api/wingdi/ns-wingdi-gradient_triangle) v režimu trojúhelníku nebo pole struktur [GRADIENT_RECT](/windows/desktop/api/wingdi/ns-wingdi-gradient_rect) v režimu Rectangle.
+Pole struktur [GRADIENT_TRIANGLE](/windows/win32/api/wingdi/ns-wingdi-gradient_triangle) v režimu trojúhelníku nebo pole struktur [GRADIENT_RECT](/windows/win32/api/wingdi/ns-wingdi-gradient_rect) v režimu Rectangle.
 
 *nMeshElements*<br/>
 Počet elementů (trojúhelníky nebo obdélníky) v *pMesh*.
 
 *dwMode*<br/>
-Určuje režim přechodu výplně. Seznam možných hodnot naleznete v tématu [GradientFill](/windows/desktop/api/wingdi/nf-wingdi-gradientfill) v Windows SDK.
+Určuje režim přechodu výplně. Seznam možných hodnot naleznete v tématu [GradientFill](/windows/win32/api/wingdi/nf-wingdi-gradientfill) v Windows SDK.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -4111,7 +4111,7 @@ Funkce ztlumí text bez ohledu na vybraný štětec a pozadí. `GrayString` Čle
 
 Aplikace může kreslit DIMM (šedě) řetězce na zařízeních, která podporují plnou šedou barvu bez volání `GrayString` členské funkce. Systémová barva COLOR_GRAYTEXT je jednobarevné šedá systémová barva použitá k vykreslování neaktivního textu. Aplikace může zavolat `GetSysColor` funkci systému Windows, aby načetla hodnotu barvy COLOR_GRAYTEXT. Pokud je barva jiná než 0 (černá), aplikace může zavolat `SetTextColor` členskou funkci pro nastavení barvy textu na hodnotu barvy a následně přímo nakreslit řetězec. Pokud je načtená barva černá, aplikace musí zavolat `GrayString` na Dim (šedý) text.
 
-Pokud má *lpfnOutput* hodnotu null, GDI používá funkci [text](/windows/desktop/api/wingdi/nf-wingdi-textouta) systému Windows a předpokládá se, že *lpData* je zcela ukazatel na znak, který má být výstup. Pokud znaky, které mají být výstupem, nemohou být `TextOut` zpracovány členskou funkcí (například řetězec je uložen jako rastrový obrázek), aplikace musí dodat svou vlastní výstupní funkci.
+Pokud má *lpfnOutput* hodnotu null, GDI používá funkci [text](/windows/win32/api/wingdi/nf-wingdi-textoutw) systému Windows a předpokládá se, že *lpData* je zcela ukazatel na znak, který má být výstup. Pokud znaky, které mají být výstupem, nemohou být `TextOut` zpracovány členskou funkcí (například řetězec je uložen jako rastrový obrázek), aplikace musí dodat svou vlastní výstupní funkci.
 
 Všimněte si také, že všechny funkce zpětného volání musí před návratem do systému Windows zachytit výjimky Microsoft Foundation, protože výjimky nelze vyvolat přes hranice zpětného volání. Další informace o výjimkách najdete v článku [výjimky](../../mfc/exception-handling-in-mfc.md).
 
@@ -4130,7 +4130,7 @@ void HIMETRICtoDP(LPSIZE lpSize) const;
 ### <a name="parameters"></a>Parametry
 
 *lpSize*<br/>
-Odkazuje na strukturu [velikosti](/windows/desktop/api/windef/ns-windef-tagsize) nebo objekt [CSize](../../atl-mfc-shared/reference/csize-class.md) .
+Odkazuje na strukturu [velikosti](/windows/win32/api/windef/ns-windef-size) nebo objekt [CSize](../../atl-mfc-shared/reference/csize-class.md) .
 
 ### <a name="remarks"></a>Poznámky
 
@@ -4147,7 +4147,7 @@ void HIMETRICtoLP(LPSIZE lpSize) const;
 ### <a name="parameters"></a>Parametry
 
 *lpSize*<br/>
-Odkazuje na strukturu [velikosti](/windows/desktop/api/windef/ns-windef-tagsize) nebo objekt [CSize](../../atl-mfc-shared/reference/csize-class.md) .
+Odkazuje na strukturu [velikosti](/windows/win32/api/windef/ns-windef-size) nebo objekt [CSize](../../atl-mfc-shared/reference/csize-class.md) .
 
 ### <a name="remarks"></a>Poznámky
 
@@ -4309,16 +4309,16 @@ void LPtoDP(LPSIZE lpSize) const;
 ### <a name="parameters"></a>Parametry
 
 *lpPoints*<br/>
-Odkazuje na pole bodů. Každý bod v poli je struktura [bodu](/windows/desktop/api/windef/ns-windef-tagpoint) nebo objekt [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) .
+Odkazuje na pole bodů. Každý bod v poli je struktura [bodu](/windows/win32/api/windef/ns-windef-point) nebo objekt [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) .
 
 *nCount*<br/>
 Počet bodů v poli.
 
 *lpRect*<br/>
-Odkazuje na strukturu [Rect](/windows/desktop/api/windef/ns-windef-tagrect) nebo objekt [CRect](../../atl-mfc-shared/reference/crect-class.md) . Tento parametr se používá pro běžný případ mapování obdélníku z logických jednotek na jednotky zařízení.
+Odkazuje na strukturu [Rect](/windows/win32/api/windef/ns-windef-rect) nebo objekt [CRect](../../atl-mfc-shared/reference/crect-class.md) . Tento parametr se používá pro běžný případ mapování obdélníku z logických jednotek na jednotky zařízení.
 
 *lpSize*<br/>
-Odkazuje na strukturu [velikosti](/windows/desktop/api/windef/ns-windef-tagsize) nebo na objekt [CSize](../../atl-mfc-shared/reference/csize-class.md) .
+Odkazuje na strukturu [velikosti](/windows/win32/api/windef/ns-windef-size) nebo na objekt [CSize](../../atl-mfc-shared/reference/csize-class.md) .
 
 ### <a name="remarks"></a>Poznámky
 
@@ -4448,10 +4448,10 @@ BOOL ModifyWorldTransform(
 ### <a name="parameters"></a>Parametry
 
 *rXform*<br/>
-Odkaz na strukturu [Xform –](/windows/desktop/api/wingdi/ns-wingdi-tagxform) , která slouží k úpravě Světové transformace daného kontextu zařízení.
+Odkaz na strukturu [Xform –](/windows/win32/api/wingdi/ns-wingdi-xform) , která slouží k úpravě Světové transformace daného kontextu zařízení.
 
 *iMode*<br/>
-Určuje, jak transformovaná data mění aktuální světový převod. Seznam hodnot, které tento parametr může mít, najdete v tématu [ModifyWorldTransform](/windows/desktop/api/wingdi/nf-wingdi-modifyworldtransform).
+Určuje, jak transformovaná data mění aktuální světový převod. Seznam hodnot, které tento parametr může mít, najdete v tématu [ModifyWorldTransform](/windows/win32/api/wingdi/nf-wingdi-modifyworldtransform).
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -4459,11 +4459,11 @@ Vrátí nenulovou hodnotu při úspěchu.
 
 Vrátí 0 při selhání.
 
-Chcete-li získat rozšířené informace o chybě, volejte příkaz [GetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror).
+Chcete-li získat rozšířené informace o chybě, volejte příkaz [GetLastError](/windows/win32/api/errhandlingapi/nf-errhandlingapi-getlasterror).
 
 ### <a name="remarks"></a>Poznámky
 
-Tato metoda zabalí funkci GDI systému Windows [ModifyWorldTransform](/windows/desktop/api/wingdi/nf-wingdi-modifyworldtransform).
+Tato metoda zabalí funkci GDI systému Windows [ModifyWorldTransform](/windows/win32/api/wingdi/nf-wingdi-modifyworldtransform).
 
 ##  <a name="moveto"></a>CDC:: MoveTo
 
@@ -4713,7 +4713,7 @@ Určuje souřadnici y koncového bodu oblouku (v logických jednotkách). Tento 
 Určuje ohraničující obdélník. Můžete předat buď `CRect` objekt, nebo ukazatel `RECT` na strukturu pro tento parametr.
 
 *ptStart*<br/>
-Určuje počáteční bod oblouku. Tento bod není nutné přesně nacházet na oblouku. Pro tento parametr můžete předat strukturu [bodu](/windows/desktop/api/windef/ns-windef-tagpoint) nebo objekt [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) .
+Určuje počáteční bod oblouku. Tento bod není nutné přesně nacházet na oblouku. Pro tento parametr můžete předat strukturu [bodu](/windows/win32/api/windef/ns-windef-point) nebo objekt [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) .
 
 *ptEnd*<br/>
 Určuje koncový bod oblouku. Tento bod není nutné přesně nacházet na oblouku. Pro tento parametr můžete předat `POINT` buď strukturu, `CPoint` nebo objekt.
@@ -4850,7 +4850,7 @@ BOOL PolyBezier(
 ### <a name="parameters"></a>Parametry
 
 *lpPoints*<br/>
-Odkazuje na pole datových struktur [bodů](/windows/desktop/api/windef/ns-windef-tagpoint) , které obsahují koncové body a řídicí body křivky (y).
+Odkazuje na pole datových struktur [bodů](/windows/win32/api/windef/ns-windef-point) , které obsahují koncové body a řídicí body křivky (y).
 
 *nCount*<br/>
 Určuje počet bodů v poli *lpPoints* . Tato hodnota musí být více než třikrát počet křivek, které mají být vykresleny, protože každá Bzierá křivka vyžaduje dva řídicí body a koncový bod a počáteční křivka vyžaduje další počáteční bod.
@@ -4878,7 +4878,7 @@ BOOL PolyBezierTo(
 ### <a name="parameters"></a>Parametry
 
 *lpPoints*<br/>
-Odkazuje na pole datových struktur [bodů](/windows/desktop/api/windef/ns-windef-tagpoint) , které obsahují koncové body a řídicí body.
+Odkazuje na pole datových struktur [bodů](/windows/win32/api/windef/ns-windef-point) , které obsahují koncové body a řídicí body.
 
 *nCount*<br/>
 Určuje počet bodů v poli *lpPoints* . Tato hodnota musí být třikrát počet křivek, které mají být vykresleny, protože každá Bzierá křivka vyžaduje dva řídicí body a koncový bod.
@@ -4909,7 +4909,7 @@ BOOL PolyDraw(
 ### <a name="parameters"></a>Parametry
 
 *lpPoints*<br/>
-Odkazuje na pole datových struktur [bodů](/windows/desktop/api/windef/ns-windef-tagpoint) , které obsahují koncové body pro každý segment čáry a koncové body a řídicí body pro každou Bzier křivku.
+Odkazuje na pole datových struktur [bodů](/windows/win32/api/windef/ns-windef-point) , které obsahují koncové body pro každý segment čáry a koncové body a řídicí body pro každou Bzier křivku.
 
 *lpTypes*<br/>
 Odkazuje na pole, které určuje, jak se používá každý bod v poli *lpPoints* . Hodnoty mohou být jedna z následujících:
@@ -5001,7 +5001,7 @@ Nenulové, pokud je funkce úspěšná; jinak 0.
 
 Řádky se vykreslují z prvního bodu prostřednictvím dalších bodů pomocí aktuálního pera. `LineTo` Na`Polyline` rozdíl od členské funkce funkce ani nepoužívá ani neaktualizuje aktuální pozici.
 
-Další informace naleznete v části [lomené čáry](/windows/desktop/api/wingdi/nf-wingdi-polyline) v Windows SDK.
+Další informace naleznete v části [lomené čáry](/windows/win32/api/wingdi/nf-wingdi-polyline) v Windows SDK.
 
 ##  <a name="polylineto"></a>CDC::P olylineTo
 
@@ -5016,7 +5016,7 @@ BOOL PolylineTo(
 ### <a name="parameters"></a>Parametry
 
 *lpPoints*<br/>
-Odkazuje na pole datových struktur [bodů](/windows/desktop/api/windef/ns-windef-tagpoint) , které obsahují vrcholy čáry.
+Odkazuje na pole datových struktur [bodů](/windows/win32/api/windef/ns-windef-point) , které obsahují vrcholy čáry.
 
 *nCount*<br/>
 Určuje počet bodů v poli.
@@ -5932,7 +5932,7 @@ BOOL SetColorAdjustment(const COLORADJUSTMENT* lpColorAdjust);
 ### <a name="parameters"></a>Parametry
 
 *lpColorAdjust*<br/>
-Odkazuje na strukturu dat [coloradjustment –](/windows/desktop/api/wingdi/ns-wingdi-tagcoloradjustment) obsahující hodnoty pro úpravu barev.
+Odkazuje na strukturu dat [coloradjustment –](/windows/win32/api/wingdi/ns-wingdi-coloradjustment) obsahující hodnoty pro úpravu barev.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -5963,7 +5963,7 @@ Pokud dojde k chybě funkce, vrácená hodnota je CLR_INVALID.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato metoda emuluje funkčnost funkce [SetDCBrushColor](/windows/desktop/api/wingdi/nf-wingdi-setdcbrushcolor), jak je popsáno v Windows SDK.
+Tato metoda emuluje funkčnost funkce [SetDCBrushColor](/windows/win32/api/wingdi/nf-wingdi-setdcbrushcolor), jak je popsáno v Windows SDK.
 
 ##  <a name="setdcpencolor"></a>CDC:: SetDCPenColor
 
@@ -5984,7 +5984,7 @@ Nenulové, pokud je funkce úspěšná; jinak 0.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato členská funkce využívá [SetDCPenColor](/windows/desktop/api/wingdi/nf-wingdi-setdcpencolor)funkce Win32, jak je popsáno v Windows SDK.
+Tato členská funkce využívá [SetDCPenColor](/windows/win32/api/wingdi/nf-wingdi-setdcpencolor)funkce Win32, jak je popsáno v Windows SDK.
 
 ##  <a name="setgraphicsmode"></a>CDC:: SetGraphicsMode
 
@@ -5997,17 +5997,17 @@ int SetGraphicsMode(int iMode);
 ### <a name="parameters"></a>Parametry
 
 *iMode*<br/>
-Určuje režim grafiky. Seznam hodnot, které tento parametr může mít, najdete v tématu [SetGraphicsMode](/windows/desktop/api/wingdi/nf-wingdi-setgraphicsmode).
+Určuje režim grafiky. Seznam hodnot, které tento parametr může mít, najdete v tématu [SetGraphicsMode](/windows/win32/api/wingdi/nf-wingdi-setgraphicsmode).
 
 ### <a name="return-value"></a>Návratová hodnota
 
 Vrátí režim staré grafiky při úspěchu.
 
-Vrátí 0 při selhání. Chcete-li získat rozšířené informace o chybě, volejte příkaz [GetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror).
+Vrátí 0 při selhání. Chcete-li získat rozšířené informace o chybě, volejte příkaz [GetLastError](/windows/win32/api/errhandlingapi/nf-errhandlingapi-getlasterror).
 
 ### <a name="remarks"></a>Poznámky
 
-Tato metoda zabalí funkci GDI systému Windows [SetGraphicsMode](/windows/desktop/api/wingdi/nf-wingdi-setgraphicsmode).
+Tato metoda zabalí funkci GDI systému Windows [SetGraphicsMode](/windows/win32/api/wingdi/nf-wingdi-setgraphicsmode).
 
 ##  <a name="setlayout"></a>CDC:: SetLayout
 
@@ -6032,7 +6032,7 @@ Rozložení kontextu zařízení a řídicí příznaky rastrového obrázku. M�
 
 V případě úspěchu bude předchozí rozložení kontextu zařízení.
 
-Pokud to neproběhne úspěšně, GDI_ERROR. Chcete-li získat rozšířené informace o chybě, volejte příkaz [GetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror).
+Pokud to neproběhne úspěšně, GDI_ERROR. Chcete-li získat rozšířené informace o chybě, volejte příkaz [GetLastError](/windows/win32/api/errhandlingapi/nf-errhandlingapi-getlasterror).
 
 ### <a name="remarks"></a>Poznámky
 
@@ -6042,7 +6042,7 @@ Pokud voláte **SetLayout (LAYOUT_RTL** ), `SetLayout` automaticky změní reži
 
 V některých případech, například u mnoha rastrových obrázků, můžete chtít zachovat rozložení zleva doprava. V těchto případech vykreslíte obrázek voláním `BitBlt` nebo `StretchBlt`a pak nastavíte příznak ovládacího prvku rastrový obrázek pro *dwLayout* na LAYOUT_BITMAPORIENTATIONPRESERVED.
 
-Jakmile změníte rozložení pomocí příznaku LAYOUT_RTL, příznaky obvykle určující pravou nebo levou stranu budou obráceny. Chcete-li předejít nejasnostem, je vhodné definovat alternativní názvy standardních příznaků. Seznam navrhovaných alternativních názvů příznaků najdete v tématu [SetLayout](/windows/desktop/api/wingdi/nf-wingdi-setlayout) v Windows SDK.
+Jakmile změníte rozložení pomocí příznaku LAYOUT_RTL, příznaky obvykle určující pravou nebo levou stranu budou obráceny. Chcete-li předejít nejasnostem, je vhodné definovat alternativní názvy standardních příznaků. Seznam navrhovaných alternativních názvů příznaků najdete v tématu [SetLayout](/windows/win32/api/wingdi/nf-wingdi-setlayout) v Windows SDK.
 
 ##  <a name="setmapmode"></a>CDC:: SetMapMode
 
@@ -6177,7 +6177,7 @@ Určuje logickou souřadnici x bodu, který má být nastaven.
 Určuje logickou souřadnici y bodu, který má být nastaven.
 
 *crColor*<br/>
-Hodnota COLORREF RGB, která určuje barvu použitou k vykreslení bodu. Popis této hodnoty naleznete v tématu [COLORREF](/windows/desktop/gdi/colorref) v Windows SDK.
+Hodnota COLORREF RGB, která určuje barvu použitou k vykreslení bodu. Popis této hodnoty naleznete v tématu [COLORREF](/windows/win32/gdi/colorref) v Windows SDK.
 
 *Vyberte*<br/>
 Určuje logické souřadnice x a y bodu, který má být nastaven. Pro tento parametr můžete předat `POINT` buď strukturu, `CPoint` nebo objekt.
@@ -6219,7 +6219,7 @@ Určuje souřadnici y (v logických jednotkách) bodu, který má být nastaven.
 Určuje barvu, která má být použita k vykreslení bodu.
 
 *Vyberte*<br/>
-Určuje logické souřadnice x a y bodu, který má být nastaven. Pro tento parametr můžete předat datovou strukturu [bodu](/windows/desktop/api/windef/ns-windef-tagpoint) nebo objekt [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) .
+Určuje logické souřadnice x a y bodu, který má být nastaven. Pro tento parametr můžete předat datovou strukturu [bodu](/windows/win32/api/windef/ns-windef-point) nebo objekt [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) .
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -6327,7 +6327,7 @@ Určuje režim roztažení. Může to být kterákoli z následujících hodnot:
 |BLACKONWHITE|Provede logickou hodnotu a operaci s použitím hodnot barvy pro eliminováné a existující pixely. Pokud je rastrový obrázek monochromatický, tento režim zachovává černé pixely na úkor bílých pixelů.|
 |COLORONCOLOR|Odstraní pixely. Tento režim odstraní všechny vyloučené řádky v pixelech, aniž by se musely zachovat jejich informace.|
 |BARVÁCH|Mapuje pixely ze zdrojového obdélníku do bloků pixelů v cílovém obdélníku. Průměrná barva nad cílovým blokem pixelů se blíží barvě zdrojových pixelů.|
-||Po nastavení režimu roztažení do POLOTÓNů musí aplikace zavolat funkci Win32 [SetBrushOrgEx](/windows/desktop/api/wingdi/nf-wingdi-setbrushorgex) , aby nastavila počátek štětce. Pokud to uděláte, dojde k chybnému zarovnání štětce.|
+||Po nastavení režimu roztažení do POLOTÓNů musí aplikace zavolat funkci Win32 [SetBrushOrgEx](/windows/win32/api/wingdi/nf-wingdi-setbrushorgex) , aby nastavila počátek štětce. Pokud to uděláte, dojde k chybnému zarovnání štětce.|
 |STRETCH_ANDSCANS|**Windows 95/98**: Stejné jako BLACKONWHITE|
 |STRETCH_DELETESCANS|**Windows 95/98**: Stejné jako COLORONCOLOR|
 |STRETCH_HALFTONE|**Windows 95/98**: Stejné jako POLOTÓNování.|
@@ -6649,7 +6649,7 @@ BOOL SetWorldTransform(const XFORM& rXform);
 ### <a name="parameters"></a>Parametry
 
 *rXform*<br/>
-Odkaz na strukturu [Xform –](/windows/desktop/api/wingdi/ns-wingdi-tagxform) , která obsahuje data transformace.
+Odkaz na strukturu [Xform –](/windows/win32/api/wingdi/ns-wingdi-xform) , která obsahuje data transformace.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -6657,11 +6657,11 @@ Vrátí nenulovou hodnotu při úspěchu.
 
 Vrátí 0 při selhání.
 
-Chcete-li získat rozšířené informace o chybě, volejte příkaz [GetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror).
+Chcete-li získat rozšířené informace o chybě, volejte příkaz [GetLastError](/windows/win32/api/errhandlingapi/nf-errhandlingapi-getlasterror).
 
 ### <a name="remarks"></a>Poznámky
 
-Tato metoda zabalí funkci GDI systému Windows [SetWorldTransform](/windows/desktop/api/wingdi/nf-wingdi-setworldtransform).
+Tato metoda zabalí funkci GDI systému Windows [SetWorldTransform](/windows/win32/api/wingdi/nf-wingdi-setworldtransform).
 
 ##  <a name="startdoc"></a>CDC:: StartDoc
 
@@ -6675,7 +6675,7 @@ int StartDoc(LPCTSTR lpszDocName);
 ### <a name="parameters"></a>Parametry
 
 *lpDocInfo*<br/>
-Odkazuje na strukturu [DOCINFO](/windows/desktop/api/wingdi/ns-wingdi-docinfoa) obsahující název souboru dokumentu a název výstupního souboru.
+Odkazuje na strukturu [DOCINFO](/windows/win32/api/wingdi/ns-wingdi-docinfow) obsahující název souboru dokumentu a název výstupního souboru.
 
 *lpszDocName*<br/>
 Ukazatel na řetězec obsahující název souboru dokumentu.
@@ -6891,7 +6891,7 @@ Určuje logickou souřadnici y počátečního bodu řetězce.
 Odkazuje na řetězec znaků, který má být nakreslen. Pro tento parametr můžete předat buď ukazatel na pole znaků, nebo objekt [CString](../../atl-mfc-shared/reference/cstringt-class.md) .
 
 *nCount*<br/>
-Určuje [délku řetězce,](/windows/desktop/gdi/specifying-length-of-text-output-string) na který odkazuje *lpszString*.
+Určuje [délku řetězce,](/windows/win32/gdi/specifying-length-of-text-output-string) na který odkazuje *lpszString*.
 
 *nTabPositions*<br/>
 Určuje počet hodnot v poli pozic zarážky tabulátoru.
@@ -7023,7 +7023,7 @@ TRUE v případě úspěchu; v opačném případě FALSE.
 
 `TransparentBlt`umožňuje průhlednost; To znamená, že barva RGB označená *clrTransparent* je pro přenos vykreslena jako průhledná.
 
-Další informace najdete v tématu [TransparentBlt](/windows/desktop/api/wingdi/nf-wingdi-transparentblt) v Windows SDK.
+Další informace najdete v tématu [TransparentBlt](/windows/win32/api/wingdi/nf-wingdi-transparentblt) v Windows SDK.
 
 ##  <a name="updatecolors"></a>CDC:: UpdateColors
 
@@ -7037,7 +7037,7 @@ void UpdateColors();
 
 Neaktivní okno s realizovanými logickými paletami se `UpdateColors` může volat jako alternativa pro překreslení jeho klientské oblasti, když se změní paleta systému.
 
-Další informace o použití barevných palet naleznete v tématu [UpdateColors](/windows/desktop/api/wingdi/nf-wingdi-updatecolors) v Windows SDK.
+Další informace o použití barevných palet naleznete v tématu [UpdateColors](/windows/win32/api/wingdi/nf-wingdi-updatecolors) v Windows SDK.
 
 `UpdateColors` Členská funkce obvykle aktualizuje oblast klienta rychleji než při vykreslování oblasti. Vzhledem k tomu, že funkce provádí převod barev na základě barvy jednotlivých pixelů před změnou systémové palety, každé volání této funkce způsobí ztrátu určité přesnosti barvy.
 

@@ -1,70 +1,70 @@
 ---
-title: Možnosti Průvodce jednoduchým objektem ATL
+title: Možnosti, Průvodce jednoduchým objektem ATL
 ms.date: 11/04/2016
 f1_keywords:
 - vc.codewiz.class.atl.simple.options
 helpviewer_keywords:
 - ATL Simple Object Wizard, options
 ms.assetid: 125fe179-942d-4181-8b82-33e92e1fd779
-ms.openlocfilehash: 327c78b00cbe69fcce4f055b0ae63c4dc2e5a7d9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e92f4909907645fc317590fbcc3601887346c642
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62197297"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69495160"
 ---
-# <a name="options-atl-simple-object-wizard"></a>Možnosti Průvodce jednoduchým objektem ATL
+# <a name="options-atl-simple-object-wizard"></a>Možnosti, Průvodce jednoduchým objektem ATL
 
-Na této stránce Průvodce jednoduchým objektem ATL navrhnout poskytují zvýšenou efektivitu a chyba podpory pro objekt.
+Pomocí této stránky Průvodce jednoduchým objektem ATL lze navrhnout zvýšení efektivity a podpory chyb pro objekt.
 
-Další informace o projekty knihovny ATL a třídy knihovny ATL modelu COM, naleznete v tématu [desktopové komponenty ATL COM](../../atl/atl-com-desktop-components.md).
+Další informace o projektech ATL a třídách ATL COM naleznete v tématu [komponenty ATL com Desktop](../../atl/atl-com-desktop-components.md).
 
 - **Model vláken**
 
-   Označuje metodu pro správu vlákna. Ve výchozím nastavení, že projekt používá **objektu Apartment** dělení na vlákna.
+   Určuje metodu pro správu vláken. Ve výchozím nastavení používá projekt vlákno **Apartment** .
 
-   Zobrazit [určení modelu vláken projektu](../../atl/specifying-the-threading-model-for-a-project-atl.md) Další informace.
+   Další informace najdete v tématu [Určení modelu vláken v projektu](../../atl/specifying-the-threading-model-for-a-project-atl.md) .
 
    |Možnost|Popis|
    |------------|-----------------|
-   |**Jeden**|Určuje, že objekt vždy běží v primárním vláknu COM. Zobrazit [jedno vláknové objekty apartment](/windows/desktop/com/single-threaded-apartments) a [InprocServer32](/windows/desktop/com/inprocserver32) Další informace.|
-   |**Apartment**|Určuje, že objekt používá podprocesový model apartment. Odpovídá jediné vlákně. Každý objekt jako součást podprocesový model apartment je přiřazena objektu apartment pro jeho vlákna po celou dobu životnosti objektu. více vláken však můžete použít pro více objektů. Každý apartment se váže na konkrétní vlákno a má pumpu zpráv Windows (výchozí).<br /><br /> Zobrazit [jedno vláknové objekty apartment](/windows/desktop/com/single-threaded-apartments) Další informace.|
-   |**Obojí**|Určuje, zda objekt můžete používat objektu apartment nebo volných vláken, ze které druh vlákno je vytvořen v závislosti.|
-   |**Free**|Určuje, že objekt používá volných vláken. Volných vláken je ekvivalentní s více vlákny typu apartment modelu. Zobrazit [s více vlákny objekty apartment](/windows/desktop/com/multithreaded-apartments) Další informace.|
-   |**Neutrální**|Určuje, že objekt pokyny pro vícevláknové izolované prostory se však můžete spustit na jakékoliv vlákno.|
+   |**Konkrétní**|Určuje, že se objekt vždy spouští v primárním vlákně COM. Další informace najdete v tématu [s jedním vláknem](/windows/win32/com/single-threaded-apartments) a [InprocServer32](/windows/win32/com/inprocserver32) .|
+   |**Apartment**|Určuje, že objekt používá vlákning Apartment. Ekvivalent jediného izolovaného vlákna. Každý objekt komponenty s vlákny typu Apartment je přiřazen k vláknu pro své vlákno, a to po dobu života objektu; Nicméně více vláken lze použít pro více objektů. Každý objekt Apartment je vázaný na konkrétní vlákno a má čerpadlo zpráv Windows (výchozí).<br /><br /> Další informace najdete v tématu [s jedním vláknem Apartment](/windows/win32/com/single-threaded-apartments) .|
+   |**Protokoly**|Určuje, že objekt může použít buď Apartment, nebo volné vlákno, v závislosti na tom, jaký druh vlákna je vytvořen.|
+   |**Free**|Určuje, že objekt používá volná vlákna. Bezplatné dělení na vlákna je ekvivalentní modelu apartment s více vlákny. Další informace najdete v tématu vícevláknové objekty [Apartment](/windows/win32/com/multithreaded-apartments) .|
+   |**Jazyk**|Určuje, že objekt dodržuje pokyny pro vícevláknové objekty Apartment, ale lze ji provést na jakémkoli typu vlákna.|
 
 - **Agregace**
 
-   Označuje, zda objekt používá [agregace](/windows/desktop/com/aggregation). Agregovaný objekt zvolí, které rozhraní k tomu, aby klienti a jsou rozhraní vystavena jako by implementoval agregovaný objekt. Klienti agregovaný objekt komunikovat jen s agregovaný objekt.
+   Určuje, zda objekt používá [agregaci](/windows/win32/com/aggregation). Agregovaný objekt slouží k výběru rozhraní, která se mají zpřístupnit klientům, a rozhraní jsou vystavena, jako by to agregovaný objekt implementoval. Klienti agregovaného objektu komunikují pouze s agregovaným objektem.
 
    |Možnost|Popis|
    |------------|-----------------|
-   |**Ano**|Určuje, že objekt se dají agregovat. Výchozí nastavení|
-   |**Ne**|Určuje, že není agregovaný objekt.|
-   |**Pouze**|Určuje, jestli objekt musí být agregován.|
+   |**Ano**|Určuje, že objekt může být agregovaný. Výchozí nastavení|
+   |**Ne**|Určuje, že objekt není agregovaný.|
+   |**Pouze**|Určuje, že objekt musí být agregovaný.|
 
 - **Rozhraní**
 
-   Určuje typ rozhraní, které podporuje objektu. Ve výchozím nastavení podporuje duální rozhraní objektu.
+   Určuje typ rozhraní, které objekt podporuje. Ve výchozím nastavení objekt podporuje duální rozhraní.
 
    |Možnost|Popis|
    |------------|-----------------|
-   |**Duální**|Určuje, že objekt podporuje duální rozhraní (jeho vtable má funkce vlastního rozhraní a pozdní vazby `IDispatch` metody). Umožňuje oba klienti modelu COM a [spustila samostatná instance](../../mfc/automation-clients.md) pro přístup k objektu. Výchozí nastavení|
-   |**Vlastní**|Určuje, že objekt podporuje vlastní rozhraní (jeho vtable má vlastní funkce rozhraní). Vlastní rozhraní může být rychlejší než duální rozhraní, zejména přes hranice procesu.<br /><br /> - **Automatizace kompatibilní** kontrolery automatizace umožňuje přístup k objektu, který podporuje vlastní rozhraní.|
+   |**Možnost**|Určuje, že objekt podporuje duální rozhraní (jeho vtable má funkce vlastního rozhraní a metody pozdní vazby `IDispatch` ). Umožňuje klientům modelu COM a [Automatizačním řadičům](../../mfc/automation-clients.md) přístup k objektu. Výchozí nastavení|
+   |**Vlastní**|Určuje, že objekt podporuje vlastní rozhraní (jeho vtable má funkce vlastního rozhraní). Vlastní rozhraní může být rychlejší než duální rozhraní, zejména napříč hranicemi procesů.<br /><br /> - **Kompatibilní** s automatizací Umožňuje řadičům automatizace přístup k objektu, který má vlastní podporu rozhraní.|
 
 - **Podpora**
 
-   Určuje další podporu pro objekt.
+   Označuje další podporu objektu.
 
    |Možnost|Popis|
    |------------|-----------------|
-   |**ISupportErrorInfo**|Vytvoří podpora [ISupportErrorInfo](../../atl/reference/isupporterrorinfoimpl-class.md) rozhraní objektu lze klientovi vrátit informace o chybě.|
-   |**Body připojení**|Umožňuje spojovací body pro svůj objekt tím, že jsou odvozeny z třídy objektu [IConnectionPointContainerImpl](../../atl/reference/iconnectionpointcontainerimpl-class.md).|
-   |**Volné zařazování vláken**|Vytvoří objekt volným zařazováním vláken a zařazování ukazatele rozhraní efektivně mezi vlákny v rámci stejného procesu. K dispozici se zadáním objektu **obě** jako model vláken.|
-   |**IObjectWithSite** (podpora objektu aplikace Internet Explorer)|Implementuje [IObjectWithSiteImpl](../../atl/reference/iobjectwithsiteimpl-class.md), která poskytuje jednoduchý způsob, aby mohly podporovat komunikaci mezi objekt a jeho web v kontejneru.|
+   |**ISupportErrorInfo**|Vytvoří podporu pro rozhraní [ISupportErrorInfo](../../atl/reference/isupporterrorinfoimpl-class.md) , aby mohl objekt vracet informace o chybách klientovi.|
+   |**Body připojení**|Umožňuje spojovací body pro váš objekt tím, že třída objektu je odvozena od [IConnectionPointContainerImpl](../../atl/reference/iconnectionpointcontainerimpl-class.md).|
+   |**Zařazovací modul s volnými vlákny**|Vytvoří objekt zařazovacího modulu s volnými vlákny pro efektivní zařazování ukazatelů rozhraní mezi vlákny ve stejném procesu. K dispozici pro objekt, který určuje jak model vláken.|
+   |**IObjectWithSite** (Podpora objektů IE)|Implementuje [IObjectWithSiteImpl](../../atl/reference/iobjectwithsiteimpl-class.md), která poskytuje jednoduchý způsob, jak podporovat komunikaci mezi objektem a jeho lokalitou v kontejneru.|
 
 ## <a name="see-also"></a>Viz také:
 
 [Průvodce jednoduchým objektem ATL](../../atl/reference/atl-simple-object-wizard.md)<br/>
-[Jednoduchý objekt knihovny ATL](../../atl/reference/adding-an-atl-simple-object.md)<br/>
-[Proces serveru potíže s vlákny](/windows/desktop/com/in-process-server-threading-issues)
+[Jednoduchý objekt ATL](../../atl/reference/adding-an-atl-simple-object.md)<br/>
+[Problémy s vlákny v procesových procesech serveru](/windows/win32/com/in-process-server-threading-issues)

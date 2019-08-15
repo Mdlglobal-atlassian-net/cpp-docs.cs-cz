@@ -8,12 +8,12 @@ helpviewer_keywords:
 - -ALLOWISOLATION linker option
 - /ALLOWISOLATION linker option
 ms.assetid: 6d41851e-b3c1-4bdf-beaa-031773089d6f
-ms.openlocfilehash: fe76e0d40a2a19a002136a7e095875ad2903d434
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: 7c799f3d44428643bccc2869255ffa4e9d194d70
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64341069"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69493140"
 ---
 # <a name="allowisolation-manifest-lookup"></a>/ALLOWISOLATION (vyhledání manifestu)
 
@@ -27,23 +27,23 @@ Určuje chování při vyhledávání manifestu.
 
 ## <a name="remarks"></a>Poznámky
 
-**/ALLOWISOLATION:No** označuje knihovny DLL se načítají, jako kdyby byl žádný manifest a způsobí, že nastaví linker `IMAGE_DLLCHARACTERISTICS_NO_ISOLATION` bit ve volitelné hlavičce `DllCharacteristics` pole.
+**/ALLOWISOLATION: No** označuje, že knihovny DLL jsou načteny, jako kdyby nebyl žádný manifest, a způsobí `IMAGE_DLLCHARACTERISTICS_NO_ISOLATION` , že linker nastaví bit v `DllCharacteristics` poli volitelné hlavičky.
 
-**/ ALLOWISOLATION** způsobí, že operační systém k vyhledání a načtení manifestu.
+**/ALLOWISOLATION** způsobí, že operační systém provede vyhledání a načtení manifestu.
 
-**/ ALLOWISOLATION** je výchozí nastavení.
+Výchozí hodnota je **/ALLOWISOLATION** .
 
-Izolace zakázán pro spustitelný soubor, zavaděč Windows nebude pokoušet najít manifest aplikace pro nově vytvořený procesu. Nový proces nebude mít výchozí aktivační kontext, i v případě manifestu do spustitelného souboru nebo umístěný ve stejném adresáři jako spustitelný soubor s názvem <em>název spustitelného souboru</em>**. exe.manifest**.
+Pokud je izolace pro spustitelný soubor zakázaná, zavaděč Windows se nebude pokoušet najít manifest aplikace pro nově vytvořený proces. Nový proces nebude mít výchozí aktivační kontext, a to ani v případě, že ve spustitelném souboru existuje manifest, který je umístěn ve stejném adresáři jako spustitelný soubor s názvem <em>executable-Name</em> **. exe. manifest**.
 
-Další informace najdete v tématu [referenční příručka souborů manifestu](/windows/desktop/SbsCs/manifest-files-reference).
+Další informace najdete v referenčních informacích k [souborům manifestu](/windows/win32/SbsCs/manifest-files-reference).
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Nastavení tohoto parametru linkeru ve vývojovém prostředí sady Visual Studio
 
-1. Otevřete v projektu **stránky vlastností** dialogové okno. Podrobnosti najdete v tématu [vlastnosti kompilátoru a sestavení nastavte C++ v sadě Visual Studio](../working-with-project-properties.md).
+1. Otevřete dialogové okno **stránky vlastností** projektu. Podrobnosti najdete v tématu [nastavení C++ vlastností kompilátoru a sestavení v sadě Visual Studio](../working-with-project-properties.md).
 
-1. Vyberte **vlastnosti konfigurace** > **Linkeru** > **soubor manifestu** stránku vlastností.
+1. Vyberte stránku vlastností**souboru manifestu** **linkeru** >  **vlastnosti** > konfigurace.
 
-1. Upravit **Povolit izolaci** vlastnost.
+1. Upravte vlastnost **Allow izolace** .
 
 ## <a name="see-also"></a>Viz také:
 

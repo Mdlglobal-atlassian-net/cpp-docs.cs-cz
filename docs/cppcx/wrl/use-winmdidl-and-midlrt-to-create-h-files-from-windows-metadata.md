@@ -1,78 +1,78 @@
 ---
-title: 'Postupy: Vytváření souborů .h z metadat windows pomocí winmdidl.exe a midlrt.exe'
+title: 'Postupy: Vytváření souborů .h z metadat Windows pomocí nástrojů winmdidl.exe a midlrt.exe'
 ms.date: 11/04/2016
 ms.topic: reference
 ms.assetid: 4be8ba11-c223-44ad-9256-7e1edae9a7bc
-ms.openlocfilehash: b9016f05b82e3eb04474d370bd069e8008de5278
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8288fc11fd53fdef423a57d0faefbaa7c06326aa
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62398105"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69500433"
 ---
-# <a name="how-to-use-winmdidlexe-and-midlrtexe-to-create-h-files-from-windows-metadata"></a>Postupy: Vytváření souborů .h z metadat windows pomocí winmdidl.exe a midlrt.exe
+# <a name="how-to-use-winmdidlexe-and-midlrtexe-to-create-h-files-from-windows-metadata"></a>Postupy: Vytváření souborů .h z metadat Windows pomocí nástrojů winmdidl.exe a midlrt.exe
 
-Winmdidl.exe a midlrt.exe umožňují úrovni modelu COM interakci mezi nativním kódu C++ a součásti prostředí Windows Runtime. Winmdidl.exe přijímá jako vstup soubor winmd, který obsahuje metadata pro součást prostředí Windows Runtime a vypíše souboru IDL. Midlrt.exe převede tento soubor IDL hlavičkové soubory, které využívají kódu jazyka C++. Oba nástroje spusťte na příkazovém řádku.
+Nástrojů winmdidl. exe a midlrt. exe povolují interakci na úrovni COM mezi nativním C++ kódem a prostředí Windows Runtime komponentami. Nástrojů winmdidl. exe přebírá jako vstup soubor. winmd obsahující metadata pro komponentu prostředí Windows Runtime a výstup souboru IDL. Midlrt. exe převede tento soubor IDL na hlavičkové soubory, C++ které může kód spotřebovat. Oba nástroje jsou spouštěny v příkazovém řádku.
 
-Pomocí těchto nástrojů v dva základní scénáře:
+Tyto nástroje můžete používat ve dvou hlavních scénářích:
 
-- Vytváření vlastních IDL a soubory hlaviček, tak, aby aplikace v jazyce C++ zapsány pomocí Windows Runtime šablony knihovny (WRL) můžou využívat vlastní součásti prostředí Windows Runtime.
+- Vytváření vlastních souborů IDL a hlavičkových souborů tak C++ , aby aplikace zapsaná pomocí knihovny šablon prostředí Windows Runtime (WRL) mohla spotřebovat vlastní komponentu prostředí Windows Runtime.
 
-- Generování proxy a zástupných procedur souborů pro typy definované uživatelem událostí v komponentě Windows Runtime. Další informace najdete v tématu [vlastní události a přístupových objektů událostí v součástech Runtime Windows](/windows/uwp/winrt-components/custom-events-and-event-accessors-in-windows-runtime-components).
+- Generování proxy a zástupných souborů pro uživatelsky definované typy událostí v součásti prostředí Windows Runtime. Další informace najdete v tématu [vlastní události a přístupové objekty událostí v prostředí Windows runtimech součástech](/windows/uwp/winrt-components/custom-events-and-event-accessors-in-windows-runtime-components).
 
-Tyto nástroje se vyžadují pouze pro analýzu soubory vlastní .winmd. Soubory .idl a .h pro součásti operačního systému Windows jsou již vygenerován za vás. Ve výchozím nastavení ve Windows 8.1, se nacházejí v \Program soubory (x86) \Windows Kits\8.1\Include\winrt\\.
+Tyto nástroje se vyžadují jenom k analýze vlastních souborů. winmd. Soubory. idl a. h pro součásti operačního systému Windows jsou pro vás již vygenerovány. Ve výchozím nastavení jsou v Windows 8.1 umístěny v adresáři \Program Files (x86) \Windows Kits\8.1\Include\winrt\\.
 
-## <a name="location-of-the-tools"></a>Umístění nástroje
+## <a name="location-of-the-tools"></a>Umístění nástrojů
 
-Ve výchozím nastavení [Windows 8.1, winmdidl.exe a midlrt.exe se nacházejí v C:\Program Files (x86) \Windows Kits\8.1\\. Verze nástroje jsou k dispozici také v \bin\x86\ a \bin\x64\ složky.
+Ve výchozím nastavení se v [Windows 8.1, nástrojů winmdidl. exe a midlrt. exe nachází v adresáři C:\Program Files (x86)\\\Windows Kits\8.1. Verze nástrojů jsou také k dispozici ve složkách \bin\x86\ a \bin\x64\.
 
-## <a name="winmdidl-command-line-arguments"></a>Argumenty příkazového řádku Winmdidl
+## <a name="winmdidl-command-line-arguments"></a>Argumenty příkazového řádku nástrojů winmdidl
 
 ```
 Winmdidl.exe [/nologo] [/suppressversioncheck] [/time] [/outdir:dir] [/banner:file] [/utf8] Winmdfile
 ```
 
 **/nologo**<br/>
-Zakazuje zobrazení konzoly winmdidl zprávu o autorských právech a čísla verze.
+Zabrání konzole zobrazovat zprávy copyrightu nástrojů winmdidl a číslo verze.
 
 **/suppressversioncheck**<br/>
 Nepoužívá se.
 
-**/ čas**<br/>
-Celková doba spuštění se zobrazí ve výstupu konzoly.
+**/time**<br/>
+Zobrazí celkovou dobu provádění ve výstupu konzoly.
 
-**/OutDir:**<em>dir</em><br/>
-Určuje výstupní adresář. Pokud cesta obsahuje mezery, použijte uvozovky. Výchozí výstupní adresář je  *\<jednotku >*: \Users\\*\<uživatelské jméno >* \AppData\Local\VirtualStore\Program soubory (x86) \Microsoft Visual Studio 12.0\\.
+**/OutDir:** <em>adresář</em><br/>
+Určuje výstupní adresář. Pokud cesta obsahuje mezery, použijte uvozovky. Výchozí výstupní adresář je  *\<jednotka >* : \Users\\ *\<username >* \AppData\Local\VirtualStore\Program Files (x86) \Microsoft Visual Studio 12,0\\.
 
-**/ banner:**<em>souboru</em><br/>
-Určuje soubor, který obsahuje vlastní text předřaďte na výchozí zprávu o autorských právech a čísla verze winmdidl v horní části souboru generovaného IDL. Pokud cesta obsahuje mezery, použijte uvozovky.
+**/banner:** <em>soubor</em><br/>
+Určuje soubor, který obsahuje vlastní text, který se má předřadit do výchozí zprávy o autorských právech a číslo verze nástrojů winmdidl v horní části generovaného souboru. idl. Pokud cesta obsahuje mezery, použijte uvozovky.
 
 **/utf8**<br/>
-Způsobí, že soubor, který má být ve formátu UTF-8.
+Způsobí, že se soubor zformátuje jako UTF-8.
 
 *Winmdfile*<br/>
-Název souboru .winmd analyzovat. Pokud cesta obsahuje mezery, použijte uvozovky.
+Název souboru. winmd k analýze. Pokud cesta obsahuje mezery, použijte uvozovky.
 
-## <a name="midlrt-command-line-arguments"></a>Argumenty příkazového řádku Midlrt
+## <a name="midlrt-command-line-arguments"></a>Argumenty příkazového řádku midlrt
 
-Zobrazit [MIDLRT a prostředí Windows Runtime komponenty](/windows/desktop/Midl/midlrt-and-windows-runtime-components).
+Viz [komponenty midlrt a prostředí Windows Runtime](/windows/win32/Midl/midlrt-and-windows-runtime-components).
 
 ## <a name="examples"></a>Příklady
 
-Následující příklad ukazuje winmdidl příkazu na příkazovém řádku aplikace Visual Studio x86. Určuje výstupní adresář a soubor, který obsahuje speciální nápis pro přidání do generovaného souboru.
+Následující příklad ukazuje příkaz nástrojů winmdidl na příkazovém řádku sady Visual Studio x86. Určuje výstupní adresář a soubor, který obsahuje speciální text banneru, který se má přidat do vygenerovaného souboru IDL.
 
 `C:\Program Files (x86)\Microsoft Visual Studio 12.0>winmdidl /nologo /outdir:c:\users\giraffe\documents\ /banner:c:\users\giraffe\documents\banner.txt "C:\Users\giraffe\Documents\Visual Studio 2013\Projects\Test_for_winmdidl\Debug\Test_for_winmdidl\test_for_winmdidl.winmd"`
 
-Další příklad ukazuje zobrazení konzoly z winmdidl, která označuje, že operace byla úspěšná.
+Následující příklad ukazuje zobrazení konzoly z nástrojů winmdidl, které indikuje, že operace byla úspěšná.
 
-**Generating c:\users\giraffe\documents\\\Test_for_winmdidl.idl**
+**Generování c:\users\giraffe\documents\\\Test_for_winmdidl.idl**
 
-V dalším kroku midlrt spouštět generovaného souboru IDL. Všimněte si, **metadata_dir** je zadán argument za názvem souboru IDL. Vyžaduje se cesta \WinMetadata\ – jedná se o umístění pro windows.winmd.
+V dalším kroku se midlrt spustí na vygenerovaném souboru IDL. Všimněte si, že argument **metadata_dir** je zadán za názvem souboru. idl. Cesta k \WinMetadata\ je povinná – jedná se o umístění pro Windows. winmd.
 
 `C:\Program Files (x86)\Microsoft Visual Studio 12.0> midlrt "c:\users\mblome\documents\test_for_winmdidl.idl" /metadata_dir "C:\Windows\System32\WinMetadata"`
 
 ## <a name="remarks"></a>Poznámky
 
-Výstupní soubor z operace winmdidl má stejný název jako vstupní soubor, ale má příponu názvu souboru IDL.
+Výstupní soubor z operace nástrojů winmdidl má stejný název jako vstupní soubor, ale má příponu názvu souboru. idl.
 
-Pokud vyvíjíte komponenty prostředí Windows Runtime, která budou mít přístup z WRL, můžete zadat winmdidl.exe a midlrt.exe ke spuštění jako kroky po sestavení tak, aby IDL a .h souborů se generují u každého sestavení. Příklad najdete v tématu [Raising Events v součástech Runtime Windows](/windows/uwp/winrt-components/raising-events-in-windows-runtime-components).
+Pokud vyvíjíte prostředí Windows Runtime komponentu, ke které bude přicházet z WRL, můžete zadat nástrojů winmdidl. exe a midlrt. exe, které se spustí jako kroky po sestavení, aby se soubory. idl a. h vygenerovaly v každém sestavení. Příklad naleznete v tématu [Vyvolávání událostí v prostředí Windows runtimech součástech](/windows/uwp/winrt-components/raising-events-in-windows-runtime-components).

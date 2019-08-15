@@ -26,16 +26,16 @@ helpviewer_keywords:
 - _mbtowc_l function
 - mbtowc_l function
 ms.assetid: dfd1c8a7-e73a-4307-9353-53b70b45d4d1
-ms.openlocfilehash: c02d1a636db75b4a26891a93fa20327b7430443d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 13ac8ad139cc12310663fbd23a21a461cd207236
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62156613"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69499732"
 ---
-# <a name="mbtowc-mbtowcl"></a>mbtowc, _mbtowc_l
+# <a name="mbtowc-_mbtowc_l"></a>mbtowc, _mbtowc_l
 
-Převeďte vícebajtový znak na odpovídající širokého znaku.
+Převede vícebajtový znak na odpovídající velký znak.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -56,24 +56,24 @@ int _mbtowc_l(
 ### <a name="parameters"></a>Parametry
 
 *wchar*<br/>
-Adresa širokého znaku (typ **wchar_t**).
+Adresa pro velký znak (typ **wchar_t**).
 
 *mbchar*<br/>
-Adresa sekvence bajtů (vícebajtového znaku).
+Adresa posloupnosti bajtů (vícebajtový znak).
 
-*Počet*<br/>
-Počet bajtů ke kontrole.
+*výpočtu*<br/>
+Počet bajtů, které mají být zkontrolovány.
 
-*Národní prostředí*<br/>
+*jazyka*<br/>
 Národní prostředí, které se má použít
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Pokud **mbchar** není **NULL** a, pokud objekt, který *mbchar* odkazuje na formulářích je platný vícebajtový znak **mbtowc** vrátí délku v bajtech vícebajtového znaku. Pokud *mbchar* je **NULL** nebo objekt, který odkazuje na prázdný znak širokého znaku (L '\0'), funkce vrátí 0. Pokud objekt, který *mbchar* odkazuje na netvoří platné vícebajtové znaky v prvních *počet* znaků, vrátí hodnotu -1.
+Pokud **mbchar** není **null** a pokud objekt, který *mbchar* odkazuje na formu platného vícebajtového znaku, **mbtowc** vrátí délku v bajtech vícebajtového znaku. Pokud má Mbchar **hodnotu null** nebo objekt, na který odkazuje, je znak null s velkým znakem (L ' \ 0 '), vrátí funkce hodnotu 0. Pokud objekt, na který *mbchar* odkazuje, netvoří platný vícebajtový znak v rámci prvních znaků *Count* , vrátí-1.
 
 ## <a name="remarks"></a>Poznámky
 
-**Mbtowc** funkce převede *počet* nebo menší počet bajtů, na které odkazuje *mbchar*, pokud *mbchar* není **NULL**, odpovídající široký znak. **mbtowc** uloží výsledný širokého znaku v *wchar,* Pokud *wchar* není **NULL**. **mbtowc** nezkoumá více než **MB_CUR_MAX** bajtů. **mbtowc** používá aktuální národní prostředí pro chování závislé na národním prostředí **_mbtowc_l –** je stejná s tím rozdílem, že používá národní prostředí předané. Další informace najdete v tématu [národní prostředí](../../c-runtime-library/locale.md).
+Funkce **mbtowc** převede *počet* nebo méně bajtů, na které odkazuje *Mbchar*, pokud *mbchar* není **null**, na odpovídající velký znak. **mbtowc** ukládá výsledný ý velký znak na *WCHAR,* Pokud *WCHAR* není **null**. **mbtowc** neověřuje více než **MB_CUR_MAX** bajtů. **mbtowc** používá aktuální národní prostředí pro chování závislé na národním prostředí; **_mbtowc_l** je totožný s tím rozdílem, že místo toho používá národní prostředí. Další informace najdete v tématu [národní prostředí](../../c-runtime-library/locale.md).
 
 ## <a name="requirements"></a>Požadavky
 
@@ -82,11 +82,11 @@ Pokud **mbchar** není **NULL** a, pokud objekt, který *mbchar* odkazuje na for
 |**mbtowc**|\<stdlib.h>|
 |**_mbtowc_l**|\<stdlib.h>|
 
-Další informace o kompatibilitě, naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
 
 ## <a name="libraries"></a>Knihovny
 
-Všechny verze [běhových knihoven C](../../c-runtime-library/crt-library-features.md).
+Všechny verze [knihoven run-time jazyka C](../../c-runtime-library/crt-library-features.md).
 
 ## <a name="example"></a>Příklad
 
@@ -147,7 +147,7 @@ Attempt to convert a NULL pointer to a wide character:
 ## <a name="see-also"></a>Viz také:
 
 [Převod dat](../../c-runtime-library/data-conversion.md)<br/>
-[MultiByteToWideChar](/windows/desktop/api/stringapiset/nf-stringapiset-multibytetowidechar)<br/>
+[MultiByteToWideChar](/windows/win32/api/stringapiset/nf-stringapiset-multibytetowidechar)<br/>
 [Národní prostředí](../../c-runtime-library/locale.md)<br/>
 [Výklad sekvencí vícebajtových znaků](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
 [_mbclen, mblen, _mblen_l](mbclen-mblen-mblen-l.md)<br/>

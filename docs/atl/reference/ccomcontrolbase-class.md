@@ -80,19 +80,19 @@ f1_keywords:
 helpviewer_keywords:
 - CComControlBase class
 ms.assetid: 3d1bf022-acf2-4092-8283-ff8cee6332f3
-ms.openlocfilehash: 698912100244189bdec99fa3726a063eb2e907a7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 36afd716009848ccd2e2f0ab966f66f573acdfd8
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62260107"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69497381"
 ---
 # <a name="ccomcontrolbase-class"></a>CComControlBase – třída
 
-Tato třída poskytuje metody pro vytváření a správu ATL – ovládací prvky.
+Tato třída poskytuje metody pro vytváření a správu ovládacích prvků ATL.
 
 > [!IMPORTANT]
->  Tato třída a jejích členů nelze použít v aplikacích, které jsou spouštěny v modulu Windows Runtime.
+>  Tato třída a její členové nelze použít v aplikacích, které jsou spouštěny v prostředí Windows Runtime.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -102,113 +102,113 @@ class ATL_NO_VTABLE CComControlBase
 
 ## <a name="members"></a>Členové
 
-### <a name="public-typedefs"></a>Veřejné definice TypeDef
+### <a name="public-typedefs"></a>Veřejné definice typedef
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
-|[CComControlBase::AppearanceType](#appearancetype)|Přepsat, pokud vaše `m_nAppearance` uloženou vlastnost není typu **krátký**.|
+|[CComControlBase::AppearanceType](#appearancetype)|Přepsat, pokud `m_nAppearance` vaše skladová vlastnost není typu **short**.|
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CComControlBase::CComControlBase](#ccomcontrolbase)|Konstruktor|
 |[CComControlBase::~CComControlBase](#dtor)|Destruktor.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CComControlBase::ControlQueryInterface](#controlqueryinterface)|Načte ukazatel na požadované rozhraní.|
-|[CComControlBase::DoesVerbActivate](#doesverbactivate)|Kontroluje, zda *iVerb* parametr používané `IOleObjectImpl::DoVerb` buď aktivuje ovládacího prvku uživatelského rozhraní (*iVerb* OLEIVERB_UIACTIVATE rovná se), definuje akce provedená v případě, že uživatel dvakrát klikne ovládací prvek (*iVerb* OLEIVERB_PRIMARY rovná se), zobrazí ovládací prvek (*iVerb* OLEIVERB_SHOW rovná se), nebo aktivuje ovládací prvek (*iVerb* rovná OLEIVERB _INPLACEACTIVATE).|
-|[CComControlBase::DoesVerbUIActivate](#doesverbuiactivate)|Kontroluje, zda *iVerb* parametr používané `IOleObjectImpl::DoVerb` způsobí, že ovládacího prvku uživatelského rozhraní k aktivaci a vrátí hodnotu TRUE.|
+|[CComControlBase::DoesVerbActivate](#doesverbactivate)|Kontroluje, zda parametr *iVerb* `IOleObjectImpl::DoVerb` používaný buď aktivuje uživatelské rozhraní ovládacího prvku (*iVerb* Equals OLEIVERB_UIACTIVATE), definuje akci provedenou v případě, že uživatel dvakrát klikne na ovládací prvek (*iVerb* Equals OLEIVERB_ PRIMARY), zobrazí ovládací prvek (*iVerb* Equals OLEIVERB_SHOW) nebo aktivuje ovládací prvek (*IVERB* se rovná OLEIVERB_INPLACEACTIVATE).|
+|[CComControlBase::DoesVerbUIActivate](#doesverbuiactivate)|Kontroluje, zda je použit `IOleObjectImpl::DoVerb` parametr iVerb, který způsobí, že uživatelské rozhraní ovládacího prvku bude aktivováno a vrátí hodnotu true.|
 |[CComControlBase::DoVerbProperties](#doverbproperties)|Zobrazí stránky vlastností ovládacího prvku.|
-|[CComControlBase::FireViewChange](#fireviewchange)|Volání této metody pro překreslení ovládacího prvku kontejneru, nebo upozornit jímky registrované doporučení, které došlo ke změně zobrazení ovládacího prvku.|
-|[CComControlBase::GetAmbientAppearance](#getambientappearance)|Načte DISPID_AMBIENT_APPEARANCE vzhled aktuální nastavení pro ovládací prvek: 0 pro paušální a 1 pro 3D.|
-|[CComControlBase::GetAmbientAutoClip](#getambientautoclip)|Načte DISPID_AMBIENT_AUTOCLIP příznak označující, zda kontejner podporuje automatické výstřižek oblasti ovládacího prvku zobrazení.|
-|[CComControlBase::GetAmbientBackColor](#getambientbackcolor)|Načte DISPID_AMBIENT_BACKCOLOR, barva okolí pozadí pro všechny ovládací prvky určené kontejneru.|
-|[CComControlBase::GetAmbientCharSet](#getambientcharset)|Načte DISPID_AMBIENT_CHARSET okolí znakovou sadu pro všechny ovládací prvky určené kontejneru.|
-|[CComControlBase::GetAmbientCodePage](#getambientcodepage)|Načte DISPID_AMBIENT_CODEPAGE okolí znakovou sadu pro všechny ovládací prvky určené kontejneru.|
-|[CComControlBase::GetAmbientDisplayAsDefault](#getambientdisplayasdefault)|Načte DISPID_AMBIENT_DISPLAYASDEFAULT příznak, který je TRUE, pokud označil kontejneru ovládacího prvku na tento web bude výchozí tlačítko, a proto ovládací prvek tlačítko vykreslovat samotného objektu silnější Frame.|
-|[CComControlBase::GetAmbientDisplayName](#getambientdisplayname)|Načte DISPID_AMBIENT_DISPLAYNAME, název, který má zadaný kontejner do ovládacího prvku.|
-|[CComControlBase::GetAmbientFont](#getambientfont)|Načte ukazatel na kontejneru v okolí `IFont` rozhraní.|
-|[CComControlBase::GetAmbientFontDisp](#getambientfontdisp)|Načte ukazatel na kontejneru v okolí `IFontDisp` rozhraní odbavení.|
-|[CComControlBase::GetAmbientForeColor](#getambientforecolor)|Načte DISPID_AMBIENT_FORECOLOR barvu popředí okolí pro všechny ovládací prvky určené kontejneru.|
-|[CComControlBase::GetAmbientLocaleID](#getambientlocaleid)|Načte DISPID_AMBIENT_LOCALEID identifikátor jazyk používaný kontejnerem.|
-|[CComControlBase::GetAmbientMessageReflect](#getambientmessagereflect)|Načte DISPID_AMBIENT_MESSAGEREFLECT příznak označující, jestli konkrétní kontejner potřebuje pro příjem zpráv oken (například WM_DRAWITEM) jako události.|
-|[CComControlBase::GetAmbientPalette](#getambientpalette)|Načte DISPID_AMBIENT_PALETTE, používá pro přístup k HPALETTE kontejneru.|
-|[CComControlBase::GetAmbientProperty](#getambientproperty)|Získá kontejner vlastnost určenou *id*.|
-|[CComControlBase::GetAmbientRightToLeft](#getambientrighttoleft)|Načte DISPID_AMBIENT_RIGHTTOLEFT, směr, ve kterém se zobrazí obsah kontejnerem.|
-|[CComControlBase::GetAmbientScaleUnits](#getambientscaleunits)|Načte DISPID_AMBIENT_SCALEUNITS kontejneru okolí jednotky (například palce nebo cm) pro popisování zobrazí.|
-|[CComControlBase::GetAmbientShowGrabHandles](#getambientshowgrabhandles)|Načte DISPID_AMBIENT_SHOWGRABHANDLES příznak označující, zda kontejner umožňuje ovládací prvek pro zobrazení zobrazily úchyty sama za sebe, pokud je aktivní.|
-|[CComControlBase::GetAmbientShowHatching](#getambientshowhatching)|Načte DISPID_AMBIENT_SHOWHATCHING příznak označující, zda kontejner umožňuje ovládacího prvku zobrazení samotného šrafované vzorem při aktivním uživatelského rozhraní.|
-|[CComControlBase::GetAmbientSupportsMnemonics](#getambientsupportsmnemonics)|Načte DISPID_AMBIENT_SUPPORTSMNEMONICS příznak označující, zda kontejner podporuje klávesové zkratky klávesnice.|
-|[CComControlBase::GetAmbientTextAlign](#getambienttextalign)|Načte DISPID_AMBIENT_TEXTALIGN, preferují kontejneru zarovnání textu: 0 pro obecné zarovnání (vlevo textu zprava, čísla), 1 pro zarovnání doleva, pro zarovnání na střed 2 a 3 pro zarovnání doprava.|
-|[CComControlBase::GetAmbientTopToBottom](#getambienttoptobottom)|Načte DISPID_AMBIENT_TOPTOBOTTOM, směr, ve kterém se zobrazí obsah kontejnerem.|
-|[CComControlBase::GetAmbientUIDead](#getambientuidead)|Načte DISPID_AMBIENT_UIDEAD příznak označující, jestli konkrétní kontejner potřebuje ovládací prvek reagovat na akce uživatelského rozhraní.|
-|[CComControlBase::GetAmbientUserMode](#getambientusermode)|Načte DISPID_AMBIENT_USERMODE příznak označující, jestli je kontejner v režimu běhu (pravda) nebo v režimu návrhu (FALSE).|
-|[CComControlBase::GetDirty](#getdirty)|Vrací hodnotu datového členu `m_bRequiresSave`.|
-|[CComControlBase::GetZoomInfo](#getzoominfo)|Načte x a y hodnoty čitatelem a jmenovatelem na faktor zvětšování pro ovládací prvek aktivuje pro místní úpravy.|
-|[CComControlBase::InPlaceActivate](#inplaceactivate)|Způsobí, že ovládací prvek na přechod ze stavu aktivní na cokoli, co stav operací v *iVerb* označuje.|
-|[CComControlBase::InternalGetSite](#internalgetsite)|Volejte tuto metodu za účelem zjištění serveru ovládací prvek pro ukazatel rozhraní identifikovaný.|
-|[CComControlBase::OnDraw](#ondraw)|Potlačí tuto metodu za účelem vykreslení ovládacího prvku.|
-|[CComControlBase::OnDrawAdvanced](#ondrawadvanced)|Výchozí hodnota `OnDrawAdvanced` připraví normalizovaný kontext zařízení pro kreslení a pak volá třídy vašeho ovládacího prvku `OnDraw` metody.|
-|[CComControlBase::OnKillFocus](#onkillfocus)|Ověří, že ovládací prvek je aktivní místní a má platný ovládací prvek a potom kontejneru informuje, že ovládací prvek ztratil fokus.|
-|[CComControlBase::OnMouseActivate](#onmouseactivate)|Kontroluje, zda je v uživatelském režimu uživatelského rozhraní, a aktivuje ovládací prvek.|
-|[CComControlBase::OnPaint](#onpaint)|Připraví kontejner pro kreslení, získá klientské oblasti ovládacího prvku a pak volá třídy ovládacího prvku `OnDraw` metody.|
-|[CComControlBase::OnSetFocus](#onsetfocus)|Kontroluje, že ovládací prvek je aktivní místní a má platný ovládací prvek a potom informuje kontejneru ovládacího prvku získal fokus.|
-|[CComControlBase::PreTranslateAccelerator](#pretranslateaccelerator)|Přepsáním této metody můžete zadat vlastní klávesnice obslužné rutiny akcelerátoru.|
-|[CComControlBase::SendOnClose](#sendonclose)|Oznámí všechny advisory jímky zaregistrovaného doporučení držitele, že ovládací prvek byla uzavřena.|
-|[CComControlBase::SendOnDataChange](#sendondatachange)|Oznámí všechny advisory zaregistrovaného držitel doporučení, které se změnily ovládací prvek dat jímky.|
-|[CComControlBase::SendOnRename](#sendonrename)|Oznámí všechny advisory jímky zaregistrovaného doporučení držitele, že je ovládací prvek monikeru nové.|
-|[CComControlBase::SendOnSave](#sendonsave)|Oznámí všechny advisory jímky zaregistrovaného držitel doporučení, která byla uložena ovládacího prvku.|
-|[CComControlBase::SendOnViewChange](#sendonviewchange)|Upozorní, že všechny registrované advisory jímky, které došlo ke změně zobrazení ovládacího prvku.|
-|[CComControlBase::SetControlFocus](#setcontrolfocus)|Nastaví nebo odebere fokusu klávesnice do nebo z ovládacího prvku.|
-|[CComControlBase::SetDirty](#setdirty)|Nastaví datový člen `m_bRequiresSave` s hodnotou v *bDirty*.|
+|[CComControlBase::FireViewChange](#fireviewchange)|Zavolejte tuto metodu pro sdělení kontejneru pro překreslení ovládacího prvku nebo upozornění na zaregistrované jímky oznámení, že se změnilo zobrazení ovládacího prvku.|
+|[CComControlBase::GetAmbientAppearance](#getambientappearance)|Načte DISPID_AMBIENT_APPEARANCE, aktuální nastavení vzhledu ovládacího prvku: 0 pro ploché a 1 pro 3D.|
+|[CComControlBase::GetAmbientAutoClip](#getambientautoclip)|Načte DISPID_AMBIENT_AUTOCLIP, příznak označující, zda kontejner podporuje automatické oříznutí oblasti zobrazení ovládacího prvku.|
+|[CComControlBase::GetAmbientBackColor](#getambientbackcolor)|Načte DISPID_AMBIENT_BACKCOLOR, okolní barvu pozadí pro všechny ovládací prvky definované kontejnerem.|
+|[CComControlBase::GetAmbientCharSet](#getambientcharset)|Načte DISPID_AMBIENT_CHARSET, okolí znakové sady pro všechny ovládací prvky, které jsou definovány kontejnerem.|
+|[CComControlBase::GetAmbientCodePage](#getambientcodepage)|Načte DISPID_AMBIENT_CODEPAGE, okolí znakové sady pro všechny ovládací prvky, které jsou definovány kontejnerem.|
+|[CComControlBase::GetAmbientDisplayAsDefault](#getambientdisplayasdefault)|Načte DISPID_AMBIENT_DISPLAYASDEFAULT, příznak, který má hodnotu TRUE, pokud kontejner označil ovládací prvek v tomto webu jako výchozí tlačítko, a proto by se měl ovládací prvek tlačítko vykreslovat pomocí silného rámce.|
+|[CComControlBase::GetAmbientDisplayName](#getambientdisplayname)|Načte DISPID_AMBIENT_DISPLAYNAME název kontejneru dodaný do ovládacího prvku.|
+|[CComControlBase::GetAmbientFont](#getambientfont)|Načte ukazatel na okolí `IFont` rozhraní kontejneru.|
+|[CComControlBase::GetAmbientFontDisp](#getambientfontdisp)|Načte ukazatel na rozhraní okolí `IFontDisp` pro expedici kontejneru.|
+|[CComControlBase::GetAmbientForeColor](#getambientforecolor)|Načte DISPID_AMBIENT_FORECOLOR, okolní barvu popředí pro všechny ovládací prvky definované kontejnerem.|
+|[CComControlBase::GetAmbientLocaleID](#getambientlocaleid)|Načte DISPID_AMBIENT_LOCALEID, identifikátor jazyka používaného kontejnerem.|
+|[CComControlBase::GetAmbientMessageReflect](#getambientmessagereflect)|Načte DISPID_AMBIENT_MESSAGEREFLECT, příznak označující, zda má kontejner přijímat zprávy okna (například WM_DRAWITEM) jako události.|
+|[CComControlBase::GetAmbientPalette](#getambientpalette)|Načte DISPID_AMBIENT_PALETTE, který se používá pro přístup k HPALETTE kontejneru.|
+|[CComControlBase::GetAmbientProperty](#getambientproperty)|Načte vlastnost kontejneru určenou identifikátorem.|
+|[CComControlBase::GetAmbientRightToLeft](#getambientrighttoleft)|Načte DISPID_AMBIENT_RIGHTTOLEFT, směr, ve kterém se obsah zobrazuje v kontejneru.|
+|[CComControlBase::GetAmbientScaleUnits](#getambientscaleunits)|Načte DISPID_AMBIENT_SCALEUNITS, okolní jednotky kontejneru (například palce nebo centimetry) pro zobrazení popisků.|
+|[CComControlBase::GetAmbientShowGrabHandles](#getambientshowgrabhandles)|Načte DISPID_AMBIENT_SHOWGRABHANDLES, příznak označující, zda kontejner umožňuje ovládacímu prvku zobrazit obslužné rutiny pro sebe sama, když je aktivní.|
+|[CComControlBase::GetAmbientShowHatching](#getambientshowhatching)|Načte DISPID_AMBIENT_SHOWHATCHING, příznak označující, zda kontejner umožňuje ovládacímu prvku, aby se zobrazil s šrafovaného vzoru, pokud je uživatelské rozhraní aktivní.|
+|[CComControlBase::GetAmbientSupportsMnemonics](#getambientsupportsmnemonics)|Načte DISPID_AMBIENT_SUPPORTSMNEMONICS, příznak označující, zda kontejner podporuje klávesové zkratky.|
+|[CComControlBase::GetAmbientTextAlign](#getambienttextalign)|Načte DISPID_AMBIENT_TEXTALIGN, zarovnání textu preferované kontejnerem: 0 pro Obecné zarovnání (číslice doprava, text vlevo), 1 pro zarovnání vlevo, 2 pro zarovnání na střed a 3 pro zarovnání vpravo.|
+|[CComControlBase::GetAmbientTopToBottom](#getambienttoptobottom)|Načte DISPID_AMBIENT_TOPTOBOTTOM, směr, ve kterém se obsah zobrazuje v kontejneru.|
+|[CComControlBase::GetAmbientUIDead](#getambientuidead)|Načte DISPID_AMBIENT_UIDEAD, příznak označující, zda kontejner chce ovládací prvek reagovat na akce uživatelského rozhraní.|
+|[CComControlBase::GetAmbientUserMode](#getambientusermode)|Načte DISPID_AMBIENT_USERMODE, příznak označující, zda je kontejner v režimu běhu (TRUE) nebo v režimu návrhu (FALSE).|
+|[CComControlBase:: getdirty](#getdirty)|Vrátí hodnotu datového členu `m_bRequiresSave`.|
+|[CComControlBase::GetZoomInfo](#getzoominfo)|Načte hodnoty x a y čitateli a jmenovatele faktoru přiblížení pro ovládací prvek aktivovaný pro místní úpravy.|
+|[CComControlBase::InPlaceActivate](#inplaceactivate)|Způsobí přechod ovládacího prvku z neaktivního stavu do libovolného stavu, který příkaz v *iVerb* označuje.|
+|[CComControlBase::InternalGetSite](#internalgetsite)|Zavolejte tuto metodu pro dotazování webu ovládacího prvku pro ukazatel na identifikované rozhraní.|
+|[CComControlBase:: Draw](#ondraw)|Tuto metodu přepište, pokud chcete ovládací prvek nakreslit.|
+|[CComControlBase::OnDrawAdvanced](#ondrawadvanced)|Výchozí `OnDrawAdvanced` připraví normalizovaný kontext zařízení pro kreslení a pak volá `OnDraw` metodu vaší třídy ovládacího prvku.|
+|[CComControlBase::OnKillFocus](#onkillfocus)|Kontroluje, zda je ovládací prvek na místě aktivní a má platnou řídicí lokalitu, a poté informuje o kontejneru, že ovládací prvek ztratil fokus.|
+|[CComControlBase::OnMouseActivate](#onmouseactivate)|Kontroluje, zda je uživatelské rozhraní v uživatelském režimu, a poté aktivuje ovládací prvek.|
+|[CComControlBase:: propaintt](#onpaint)|Připraví kontejner pro vymalování, získá klientské oblasti ovládacího prvku a pak zavolá `OnDraw` metodu třídy ovládacího prvku.|
+|[CComControlBase::OnSetFocus](#onsetfocus)|Kontroluje, zda je ovládací prvek na místě aktivní a má platnou řídicí lokalitu, a poté informuje o kontejneru, který ovládací prvek získal fokus.|
+|[CComControlBase::PreTranslateAccelerator](#pretranslateaccelerator)|Tuto metodu přepište, pokud chcete poskytnout vlastní obslužné rutiny pro klávesové zkratky.|
+|[CComControlBase::SendOnClose](#sendonclose)|Upozorní všechny informační jímky zaregistrované u držitele poradenství, že byl ovládací prvek uzavřen.|
+|[CComControlBase::SendOnDataChange](#sendondatachange)|Upozorní všechny informační jímky zaregistrované u držitele poradenství, že se data ovládacího prvku změnila.|
+|[CComControlBase::SendOnRename](#sendonrename)|Upozorní všechny informační jímky zaregistrované u držitele poradenství, že má ovládací prvek nový moniker.|
+|[CComControlBase::SendOnSave](#sendonsave)|Upozorní všechny informační jímky zaregistrované u držitele poradenství, že byl ovládací prvek uložen.|
+|[CComControlBase::SendOnViewChange](#sendonviewchange)|Upozorní všechny zaregistrované poradenské jímky, že se změnilo zobrazení ovládacího prvku.|
+|[CComControlBase::SetControlFocus](#setcontrolfocus)|Nastaví nebo odebere fokus klávesnice na nebo z ovládacího prvku.|
+|[CComControlBase::SetDirty](#setdirty)|Nastaví datový člen `m_bRequiresSave` na hodnotu v *bDirty*.|
 
 ### <a name="public-data-members"></a>Veřejné datové členy
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
-|[CComControlBase::m_bAutoSize](#m_bautosize)|Příznak označující, že ovládací prvek nemůže být libovolné velikosti.|
-|[CComControlBase::m_bDrawFromNatural](#m_bdrawfromnatural)|Příznak označující, že `IDataObjectImpl::GetData` a `CComControlBase::GetZoomInfo` by měl nastavit velikost ovládacího prvku z `m_sizeNatural` spíše než z `m_sizeExtent`.|
-|[CComControlBase::m_bDrawGetDataInHimetric](#m_bdrawgetdatainhimetric)|Příznak označující, že `IDataObjectImpl::GetData` by měl používat v jednotkách HIMETRIC a ne pixelů při kreslení.|
-|[CComControlBase::m_bInPlaceActive](#m_binplaceactive)|Příznak označující, že ovládací prvek je na místě aktivní.|
-|[CComControlBase::m_bInPlaceSiteEx](#m_binplacesiteex)|Příznak označující, které podporuje kontejneru `IOleInPlaceSiteEx` rozhraní a OCX96 řídí funkce, jako je například ovládací prvky bez oken a blikání.|
-|[CComControlBase::m_bNegotiatedWnd](#m_bnegotiatedwnd)|Příznak označující, zda má ovládací prvek vyjedná s kontejnerem týkající se podpory funkce řízení OCX96 (jako je například ovládací prvky bez blikání a bez oken) a určuje, zda je ovládací prvek oddílové nebo bez oken.|
-|[CComControlBase::m_bRecomposeOnResize](#m_brecomposeonresize)|Příznak označující, že chce, aby se ovládací prvek Chcete-li jeho prezentaci při změně velikosti zobrazení ovládacího prvku kontejneru.|
-|[CComControlBase::m_bRequiresSave](#m_brequiressave)|Příznak označující, že ovládací prvek změnila od posledního uložení.|
-|[CComControlBase::m_bResizeNatural](#m_bresizenatural)|Příznak označující, ke změně velikosti jeho fyzické rozsah (jeho bez měřítka fyzická velikost) chce, aby ovládací prvek při změně velikosti zobrazení ovládacího prvku kontejneru.|
-|[CComControlBase::m_bUIActive](#m_buiactive)|Příznak označující, ovládacího prvku uživatelského rozhraní, jako je například nabídek a panelů nástrojů, je aktivní.|
-|[CComControlBase::m_bUsingWindowRgn](#m_busingwindowrgn)|Příznak označující, že ovládací prvek používá oblast okna zadaný kontejner.|
-|[CComControlBase::m_bWasOnceWindowless](#m_bwasoncewindowless)|Příznak označující, ovládací prvek bez oken, se ale může nebo nemusí být nyní bez oken.|
-|[CComControlBase::m_bWindowOnly](#m_bwindowonly)|Příznak označující, že ovládací prvek by měl být oddílové, i v případě, že kontejner podporuje ovládací prvky bez oken.|
-|[CComControlBase::m_bWndLess](#m_bwndless)|Příznak označující, že je ovládací prvek bez oken.|
+|[CComControlBase::m_bAutoSize](#m_bautosize)|Příznak označující, že ovládací prvek nemůže být jinou velikostí|
+|[CComControlBase::m_bDrawFromNatural](#m_bdrawfromnatural)|Příznak označující, `IDataObjectImpl::GetData` že `CComControlBase::GetZoomInfo` a má `m_sizeNatural` nastavit velikost ovládacího prvku místo z `m_sizeExtent`.|
+|[CComControlBase::m_bDrawGetDataInHimetric](#m_bdrawgetdatainhimetric)|Příznak označující, `IDataObjectImpl::GetData` že při vykreslování mají být použity jednotky HIMETRIC a ne pixely|
+|[CComControlBase::m_bInPlaceActive](#m_binplaceactive)|Příznak označující, že ovládací prvek je na místě aktivní|
+|[CComControlBase::m_bInPlaceSiteEx](#m_binplacesiteex)|Příznak označující, že kontejner podporuje `IOleInPlaceSiteEx` funkce ovládacího prvku rozhraní a OCX96, například ovládací prvky bez oken a blikání.|
+|[CComControlBase::m_bNegotiatedWnd](#m_bnegotiatedwnd)|Příznak označující, zda se ovládací prvek vyjednal s kontejnerem o podpoře funkcí ovládacího prvku OCX96 (například ovládací prvky bez blikání a ovládacích prvků bez oken) a zda je ovládací prvek v okně nebo bez okna.|
+|[CComControlBase::m_bRecomposeOnResize](#m_brecomposeonresize)|Příznak označující, že ovládací prvek chce znovu vytvořit svou prezentaci, když kontejner změní velikost zobrazení ovládacího prvku|
+|[CComControlBase::m_bRequiresSave](#m_brequiressave)|Příznak označující, že se ovládací prvek od posledního uložení změnil|
+|[CComControlBase::m_bResizeNatural](#m_bresizenatural)|Příznak označující, že ovládací prvek chce změnit velikost přirozeného rozsahu (jeho neškálovaná fyzická velikost), když kontejner změní velikost zobrazení ovládacího prvku|
+|[CComControlBase::m_bUIActive](#m_buiactive)|Příznak označující, že uživatelské rozhraní ovládacího prvku, například nabídky a panely nástrojů, je aktivní.|
+|[CComControlBase::m_bUsingWindowRgn](#m_busingwindowrgn)|Příznak označující, že ovládací prvek používá oblast okna poskytnutou kontejnerem.|
+|[CComControlBase::m_bWasOnceWindowless](#m_bwasoncewindowless)|Příznak označující, že ovládací prvek byl bez okna, ale může nebo nemusí být nyní bez okna.|
+|[CComControlBase::m_bWindowOnly](#m_bwindowonly)|Příznak označující, že má být ovládací prvek nastaven na okno, i v případě, že kontejner podporuje ovládací prvky bez oken.|
+|[CComControlBase::m_bWndLess](#m_bwndless)|Příznak označující, že ovládací prvek je bez okna.|
 |[CComControlBase::m_hWndCD](#m_hwndcd)|Obsahuje odkaz na popisovač okna přidružený k ovládacímu prvku.|
-|[CComControlBase::m_nFreezeEvents](#m_nfreezeevents)|Počet, kolikrát kontejneru je zmrazen události (odmítl akceptovat události) bez použité odblokovat událostí (přijetí události).|
-|[CComControlBase::m_rcPos](#m_rcpos)|Pozice ovládacího prvku, vyjádřená v souřadnicích kontejneru v pixelech.|
-|[CComControlBase::m_sizeExtent](#m_sizeextent)|Rozsah ovládacího prvku v jednotkách HIMETRIC (každá jednotka je 0,01 milimetrech) pro konkrétní zobrazení.|
-|[CComControlBase::m_sizeNatural](#m_sizenatural)|Fyzická velikost ovládacího prvku v jednotkách HIMETRIC (každá jednotka je 0,01 milimetrech).|
-|[CComControlBase::m_spAdviseSink](#m_spadvisesink)|Přímý ukazatel na poradce připojení ke kontejneru (kontejneru [IAdviseSink](/windows/desktop/api/objidl/nn-objidl-iadvisesink)).|
-|[CComControlBase::m_spAmbientDispatch](#m_spambientdispatch)|A `CComDispatchDriver` objekt, který umožňuje načtení a nastavení vlastností kontejneru prostřednictvím `IDispatch` ukazatele.|
-|[CComControlBase::m_spClientSite](#m_spclientsite)|Ukazatel na lokality klienta ovládacího prvku v rámci kontejneru.|
-|[CComControlBase::m_spDataAdviseHolder](#m_spdataadviseholder)|Poskytuje že standardní znamená, že pro uložení advisory připojení mezi datovými objekty dokáží jímky.|
-|[CComControlBase::m_spInPlaceSite](#m_spinplacesite)|Ukazatel na kontejneru [IOleInPlaceSite](/windows/desktop/api/oleidl/nn-oleidl-ioleinplacesite), [IOleInPlaceSiteEx](/windows/desktop/api/ocidl/nn-ocidl-ioleinplacesiteex), nebo [IOleInPlaceSiteWindowless](/windows/desktop/api/ocidl/nn-ocidl-ioleinplacesitewindowless) ukazatel rozhraní.|
-|[CComControlBase::m_spOleAdviseHolder](#m_spoleadviseholder)|Poskytuje standardní implementace způsob uložení advisory připojení.|
+|[CComControlBase::m_nFreezeEvents](#m_nfreezeevents)|Počet, kolikrát kontejner obsahuje zmrazené události (odmítl přijímat události) bez ovlivnění odmrazení událostí (přijetí událostí).|
+|[CComControlBase::m_rcPos](#m_rcpos)|Pozice v pixelech ovládacího prvku vyjádřená v souřadnicích kontejneru.|
+|[CComControlBase::m_sizeExtent](#m_sizeextent)|Rozsah ovládacího prvku v jednotkách HIMETRIC (každá jednotka je 0,01 milimetrů) pro konkrétní displej.|
+|[CComControlBase::m_sizeNatural](#m_sizenatural)|Fyzická velikost ovládacího prvku v jednotkách HIMETRIC (každá jednotka je 0,01 milimetrů).|
+|[CComControlBase::m_spAdviseSink](#m_spadvisesink)|Přímý ukazatel na poradní připojení na kontejneru ( [IAdviseSink](/windows/win32/api/objidl/nn-objidl-iadvisesink)kontejneru).|
+|[CComControlBase::m_spAmbientDispatch](#m_spambientdispatch)|Objekt, který umožňuje načíst a nastavit vlastnosti kontejneru `IDispatch` pomocí ukazatele. `CComDispatchDriver`|
+|[CComControlBase::m_spClientSite](#m_spclientsite)|Ukazatel na klientský web ovládacího prvku v rámci kontejneru.|
+|[CComControlBase::m_spDataAdviseHolder](#m_spdataadviseholder)|Poskytuje standardní způsob, jak uchovávat poradenská připojení mezi datovými objekty a příjímkami pro poradenství.|
+|[CComControlBase::m_spInPlaceSite](#m_spinplacesite)|Ukazatel na ukazatel rozhraní [IOleInPlaceSite](/windows/win32/api/oleidl/nn-oleidl-ioleinplacesite), [IOleInPlaceSiteEx](/windows/win32/api/ocidl/nn-ocidl-ioleinplacesiteex)nebo [IOleInPlaceSiteWindowless](/windows/win32/api/ocidl/nn-ocidl-ioleinplacesitewindowless) kontejneru.|
+|[CComControlBase::m_spOleAdviseHolder](#m_spoleadviseholder)|Poskytuje standardní implementaci způsobu uchovávání poradenských připojení.|
 
 ## <a name="remarks"></a>Poznámky
 
-Tato třída poskytuje metody pro vytváření a správu ATL – ovládací prvky. [Ccomcontrol – třída](../../atl/reference/ccomcontrol-class.md) je odvozena z `CComControlBase`. Když vytvoříte standardního ovládacího prvku nebo DHTML ovládacího prvku pomocí Průvodce ovládacími prvky ATL, průvodce automaticky odvodit třídu z `CComControlBase`.
+Tato třída poskytuje metody pro vytváření a správu ovládacích prvků ATL. [Třída CComControl](../../atl/reference/ccomcontrol-class.md) je odvozena `CComControlBase`z. Při vytváření standardního ovládacího prvku nebo ovládacího prvku DHTML pomocí Průvodce ovládacími prvky ATL bude průvodce automaticky odvozovat třídu z `CComControlBase`.
 
-Další informace o vytvoření ovládacího prvku, naleznete v tématu [ATL – tutoriál](../../atl/active-template-library-atl-tutorial.md). Další informace o Průvodce projektem ATL naleznete v článku [vytvoření projektu ATL](../../atl/reference/creating-an-atl-project.md).
+Další informace o vytvoření ovládacího prvku naleznete v [kurzu ATL](../../atl/active-template-library-atl-tutorial.md). Další informace o Průvodci projektem ATL naleznete v článku [Vytvoření projektu ATL](../../atl/reference/creating-an-atl-project.md).
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** atlctl.h
+**Záhlaví:** atlctl. h
 
-##  <a name="appearancetype"></a>  CComControlBase::AppearanceType
+##  <a name="appearancetype"></a>CComControlBase::AppearanceType
 
-Přepsat, pokud vaše `m_nAppearance` uloženou vlastnost není typu **krátký**.
+Přepsat, pokud `m_nAppearance` vaše skladová vlastnost není typu **short**.
 
 ```
 typedef short AppearanceType;
@@ -216,9 +216,9 @@ typedef short AppearanceType;
 
 ### <a name="remarks"></a>Poznámky
 
-Průvodce ovládacími prvky ATL přidá `m_nAppearance` vlastnost typu short zásobníku. Přepsat `AppearanceType` Pokud použijete jiný datový typ.
+Průvodce ovládacím prvkem ATL přidá `m_nAppearance` uloženou vlastnost typu short. Přepsat `AppearanceType` , pokud použijete jiný datový typ.
 
-##  <a name="ccomcontrolbase"></a>  CComControlBase::CComControlBase
+##  <a name="ccomcontrolbase"></a>CComControlBase::CComControlBase
 
 Konstruktor
 
@@ -229,13 +229,13 @@ CComControlBase(HWND& h);
 ### <a name="parameters"></a>Parametry
 
 *h*<br/>
-Popisovač okna přidružený k ovládacímu prvku.
+Popisovač okna přidruženého k ovládacímu prvku
 
 ### <a name="remarks"></a>Poznámky
 
-Inicializuje velikost ovládacího prvku na 5080 X 5080 jednotkách HIMETRIC (2 "X 2") a inicializuje `CComControlBase` hodnoty datových členů na hodnotu NULL nebo FALSE.
+Inicializuje velikost ovládacího prvku na 5080X5080 jednotky HIMETRIC (2 "X2") a inicializuje `CComControlBase` hodnoty datových členů na hodnotu null nebo false.
 
-##  <a name="dtor"></a>  CComControlBase::~CComControlBase
+##  <a name="dtor"></a>CComControlBase:: ~ CComControlBase
 
 Destruktor.
 
@@ -245,9 +245,9 @@ Destruktor.
 
 ### <a name="remarks"></a>Poznámky
 
-Pokud je ovládací prvek oddílové, `~CComControlBase` zničí voláním [destroywindow –](/windows/desktop/api/winuser/nf-winuser-destroywindow).
+Pokud je ovládací prvek v okně, `~CComControlBase` zničí ho voláním [DestroyWindow](/windows/win32/api/winuser/nf-winuser-destroywindow).
 
-##  <a name="controlqueryinterface"></a>  CComControlBase::ControlQueryInterface
+##  <a name="controlqueryinterface"></a>CComControlBase::ControlQueryInterface
 
 Načte ukazatel na požadované rozhraní.
 
@@ -259,22 +259,22 @@ virtual HRESULT ControlQueryInterface(const IID& iid,
 ### <a name="parameters"></a>Parametry
 
 *iid*<br/>
-Identifikátor GUID se požadované rozhraní.
+Identifikátor GUID požadovaného rozhraní
 
 *ppv*<br/>
-Ukazatel na ukazatel rozhraní, který je identifikován *iid*, nebo hodnota NULL, pokud se nenajde rozhraní.
+Ukazatel na ukazatel rozhraní identifikovaný *identifikátorem IID*nebo hodnotu null, pokud rozhraní nebylo nalezeno.
 
 ### <a name="remarks"></a>Poznámky
 
-zpracovává pouze v tabulce mapy modelu COM rozhraní.
+Zpracovává pouze rozhraní v tabulce map modelu COM.
 
 ### <a name="example"></a>Příklad
 
 [!code-cpp[NVC_ATL_COM#15](../../atl/codesnippet/cpp/ccomcontrolbase-class_1.cpp)]
 
-##  <a name="doesverbactivate"></a>  CComControlBase::DoesVerbActivate
+##  <a name="doesverbactivate"></a>CComControlBase::D oesVerbActivate
 
-Kontroluje, zda *iVerb* parametr používané `IOleObjectImpl::DoVerb` buď aktivuje ovládacího prvku uživatelského rozhraní (*iVerb* OLEIVERB_UIACTIVATE rovná se), definuje akce provedená v případě, že uživatel dvakrát klikne ovládací prvek (*iVerb* OLEIVERB_PRIMARY rovná se), zobrazí ovládací prvek (*iVerb* OLEIVERB_SHOW rovná se), nebo aktivuje ovládací prvek (*iVerb* rovná OLEIVERB _INPLACEACTIVATE).
+Kontroluje, zda parametr *iVerb* `IOleObjectImpl::DoVerb` používaný buď aktivuje uživatelské rozhraní ovládacího prvku (*iVerb* Equals OLEIVERB_UIACTIVATE), definuje akci provedenou v případě, že uživatel dvakrát klikne na ovládací prvek (*iVerb* Equals OLEIVERB_ PRIMARY), zobrazí ovládací prvek (*iVerb* Equals OLEIVERB_SHOW) nebo aktivuje ovládací prvek (*IVERB* se rovná OLEIVERB_INPLACEACTIVATE).
 
 ```
 BOOL DoesVerbActivate(LONG iVerb);
@@ -283,19 +283,19 @@ BOOL DoesVerbActivate(LONG iVerb);
 ### <a name="parameters"></a>Parametry
 
 *iVerb*<br/>
-Hodnota udává akci prováděnou `DoVerb`.
+Hodnota, která určuje akci, kterou má `DoVerb`provést.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vrátí TRUE, pokud *iVerb* rovná OLEIVERB_UIACTIVATE, OLEIVERB_PRIMARY, OLEIVERB_SHOW nebo OLEIVERB_INPLACEACTIVATE; v opačném případě vrátí hodnotu FALSE.
+Vrátí hodnotu TRUE, pokud se *iVerb* rovná OLEIVERB_UIACTIVATE, OLEIVERB_PRIMARY, OLEIVERB_SHOW nebo OLEIVERB_INPLACEACTIVATE; v opačném případě vrátí hodnotu FALSE.
 
 ### <a name="remarks"></a>Poznámky
 
-Můžete přepsat tuto metodu za účelem definování vlastní příkaz aktivace.
+Tuto metodu můžete přepsat pro definování vlastní aktivační operace.
 
-##  <a name="doesverbuiactivate"></a>  CComControlBase::DoesVerbUIActivate
+##  <a name="doesverbuiactivate"></a>CComControlBase::D oesVerbUIActivate
 
-Kontroluje, zda *iVerb* parametr používané `IOleObjectImpl::DoVerb` způsobí, že ovládacího prvku uživatelského rozhraní k aktivaci a vrátí hodnotu TRUE.
+Kontroluje, zda je použit `IOleObjectImpl::DoVerb` parametr iVerb, který způsobí, že uživatelské rozhraní ovládacího prvku bude aktivováno a vrátí hodnotu true.
 
 ```
 BOOL DoesVerbUIActivate(LONG iVerb);
@@ -304,11 +304,11 @@ BOOL DoesVerbUIActivate(LONG iVerb);
 ### <a name="parameters"></a>Parametry
 
 *iVerb*<br/>
-Hodnota udává akci prováděnou `DoVerb`.
+Hodnota, která určuje akci, kterou má `DoVerb`provést.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vrátí TRUE, pokud *iVerb* rovná OLEIVERB_UIACTIVATE, OLEIVERB_PRIMARY, OLEIVERB_SHOW nebo OLEIVERB_INPLACEACTIVATE. Jinak metoda vrátí hodnotu FALSE.
+Vrátí hodnotu TRUE, pokud se *iVerb* rovná OLEIVERB_UIACTIVATE, OLEIVERB_PRIMARY, OLEIVERB_SHOW nebo OLEIVERB_INPLACEACTIVATE. V opačném případě metoda vrátí hodnotu FALSE.
 
 ##  <a name="doverbproperties"></a>  CComControlBase::DoVerbProperties
 
@@ -321,14 +321,14 @@ HRESULT DoVerbProperties(LPCRECT /* prcPosRect */, HWND hwndParent);
 ### <a name="parameters"></a>Parametry
 
 *prcPosRec*<br/>
-Vyhrazená.
+Rezervovaný.
 
 *hwndParent*<br/>
-Popisovač okna obsahující ovládací prvek.
+Popisovač okna obsahujícího ovládací prvek
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Jeden standardní hodnoty HRESULT.
+Jedna ze standardních hodnot HRESULT.
 
 ### <a name="example"></a>Příklad
 
@@ -336,9 +336,9 @@ Jeden standardní hodnoty HRESULT.
 
 [!code-cpp[NVC_ATL_COM#20](../../atl/codesnippet/cpp/ccomcontrolbase-class_3.h)]
 
-##  <a name="fireviewchange"></a>  CComControlBase::FireViewChange
+##  <a name="fireviewchange"></a>CComControlBase::FireViewChange
 
-Volání této metody pro překreslení ovládacího prvku kontejneru, nebo upozornit jímky registrované doporučení, které došlo ke změně zobrazení ovládacího prvku.
+Zavolejte tuto metodu pro sdělení kontejneru pro překreslení ovládacího prvku nebo upozornění na zaregistrované jímky oznámení, že se změnilo zobrazení ovládacího prvku.
 
 ```
 HRESULT FireViewChange();
@@ -346,19 +346,19 @@ HRESULT FireViewChange();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Jeden standardní hodnoty HRESULT.
+Jedna ze standardních hodnot HRESULT.
 
 ### <a name="remarks"></a>Poznámky
 
-Pokud je aktivní ovládací prvek (datový člen třídy ovládacího prvku [CComControlBase::m_bInPlaceActive](#m_binplaceactive) je TRUE), upozorní kontejneru, že chcete ho překreslit celý ovládací prvek. Pokud ovládací prvek je neaktivní, upozorní ovládací prvek zaregistrované dokáží jímky (prostřednictvím datový člen třídy ovládacího prvku [CComControlBase::m_spAdviseSink](#m_spadvisesink)), ke které došlo ke změně zobrazení ovládacího prvku.
+Pokud je ovládací prvek aktivní (datový člen třídy ovládacího prvku [CComControlBase:: m_bInPlaceActive](#m_binplaceactive) je true), upozorní kontejner, který chcete překreslit do celého ovládacího prvku. Pokud je ovládací prvek neaktivní, upozorní na zaregistrované jímky kontrolních umyvadel (prostřednictvím datového členu třídy ovládacího prvku [CComControlBase:: m_spAdviseSink](#m_spadvisesink)), že zobrazení ovládacího prvku bylo změněno.
 
 ### <a name="example"></a>Příklad
 
 [!code-cpp[NVC_ATL_COM#21](../../atl/codesnippet/cpp/ccomcontrolbase-class_4.cpp)]
 
-##  <a name="getambientappearance"></a>  CComControlBase::GetAmbientAppearance
+##  <a name="getambientappearance"></a>CComControlBase::GetAmbientAppearance
 
-Načte DISPID_AMBIENT_APPEARANCE vzhled aktuální nastavení pro ovládací prvek: 0 pro paušální a 1 pro 3D.
+Načte DISPID_AMBIENT_APPEARANCE, aktuální nastavení vzhledu ovládacího prvku: 0 pro ploché a 1 pro 3D.
 
 ```
 HRESULT GetAmbientAppearance(short& nAppearance);
@@ -371,15 +371,15 @@ Vlastnost DISPID_AMBIENT_APPEARANCE.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Jeden standardní hodnoty HRESULT.
+Jedna ze standardních hodnot HRESULT.
 
 ### <a name="example"></a>Příklad
 
 [!code-cpp[NVC_ATL_COM#22](../../atl/codesnippet/cpp/ccomcontrolbase-class_5.h)]
 
-##  <a name="getambientautoclip"></a>  CComControlBase::GetAmbientAutoClip
+##  <a name="getambientautoclip"></a>CComControlBase::GetAmbientAutoClip
 
-Načte DISPID_AMBIENT_AUTOCLIP příznak označující, zda kontejner podporuje automatické výstřižek oblasti ovládacího prvku zobrazení.
+Načte DISPID_AMBIENT_AUTOCLIP, příznak označující, zda kontejner podporuje automatické oříznutí oblasti zobrazení ovládacího prvku.
 
 ```
 HRESULT GetAmbientAutoClip(BOOL& bAutoClip);
@@ -392,11 +392,11 @@ Vlastnost DISPID_AMBIENT_AUTOCLIP.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Jeden standardní hodnoty HRESULT.
+Jedna ze standardních hodnot HRESULT.
 
-##  <a name="getambientbackcolor"></a>  CComControlBase::GetAmbientBackColor
+##  <a name="getambientbackcolor"></a>CComControlBase::GetAmbientBackColor
 
-Načte DISPID_AMBIENT_BACKCOLOR, barva okolí pozadí pro všechny ovládací prvky určené kontejneru.
+Načte DISPID_AMBIENT_BACKCOLOR, okolní barvu pozadí pro všechny ovládací prvky definované kontejnerem.
 
 ```
 HRESULT GetAmbientBackColor(OLE_COLOR& BackColor);
@@ -409,11 +409,11 @@ Vlastnost DISPID_AMBIENT_BACKCOLOR.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Jeden standardní hodnoty HRESULT.
+Jedna ze standardních hodnot HRESULT.
 
-##  <a name="getambientcharset"></a>  CComControlBase::GetAmbientCharSet
+##  <a name="getambientcharset"></a>CComControlBase::GetAmbientCharSet
 
-Načte DISPID_AMBIENT_CHARSET okolí znakovou sadu pro všechny ovládací prvky určené kontejneru.
+Načte DISPID_AMBIENT_CHARSET, okolí znakové sady pro všechny ovládací prvky, které jsou definovány kontejnerem.
 
 ```
 HRESULT GetAmbientCharSet(BSTR& bstrCharSet);
@@ -428,9 +428,9 @@ Vlastnost DISPID_AMBIENT_CHARSET.
 
 Vrátí hodnotu S_OK při úspěchu nebo chybu HRESULT při selhání.
 
-##  <a name="getambientcodepage"></a>  CComControlBase::GetAmbientCodePage
+##  <a name="getambientcodepage"></a>CComControlBase::GetAmbientCodePage
 
-Načte DISPID_AMBIENT_CODEPAGE okolí znakovou stránku pro všechny ovládací prvky určené kontejneru.
+Načte DISPID_AMBIENT_CODEPAGE (ambientní znakovou stránku) pro všechny ovládací prvky definované kontejnerem.
 
 ```
 HRESULT GetAmbientCodePage(ULONG& ulCodePage);
@@ -445,9 +445,9 @@ Vlastnost DISPID_AMBIENT_CODEPAGE.
 
 Vrátí hodnotu S_OK při úspěchu nebo chybu HRESULT při selhání.
 
-##  <a name="getambientdisplayasdefault"></a>  CComControlBase::GetAmbientDisplayAsDefault
+##  <a name="getambientdisplayasdefault"></a>CComControlBase::GetAmbientDisplayAsDefault
 
-Načte DISPID_AMBIENT_DISPLAYASDEFAULT příznak, který je TRUE, pokud označil kontejneru ovládacího prvku na tento web bude výchozí tlačítko, a proto ovládací prvek tlačítko vykreslovat samotného objektu silnější Frame.
+Načte DISPID_AMBIENT_DISPLAYASDEFAULT, příznak, který má hodnotu TRUE, pokud kontejner označil ovládací prvek v tomto webu jako výchozí tlačítko, a proto by se měl ovládací prvek tlačítko vykreslovat pomocí silného rámce.
 
 ```
 HRESULT GetAmbientDisplayAsDefault(BOOL& bDisplayAsDefault);
@@ -460,11 +460,11 @@ Vlastnost DISPID_AMBIENT_DISPLAYASDEFAULT.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Jeden standardní hodnoty HRESULT.
+Jedna ze standardních hodnot HRESULT.
 
-##  <a name="getambientdisplayname"></a>  CComControlBase::GetAmbientDisplayName
+##  <a name="getambientdisplayname"></a>CComControlBase::GetAmbientDisplayName
 
-Načte DISPID_AMBIENT_DISPLAYNAME, název, který má zadaný kontejner do ovládacího prvku.
+Načte DISPID_AMBIENT_DISPLAYNAME název kontejneru dodaný do ovládacího prvku.
 
 ```
 HRESULT GetAmbientDisplayName(BSTR& bstrDisplayName);
@@ -477,11 +477,11 @@ Vlastnost DISPID_AMBIENT_DISPLAYNAME.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Jeden standardní hodnoty HRESULT.
+Jedna ze standardních hodnot HRESULT.
 
-##  <a name="getambientfont"></a>  CComControlBase::GetAmbientFont
+##  <a name="getambientfont"></a>CComControlBase::GetAmbientFont
 
-Načte ukazatel na kontejneru v okolí `IFont` rozhraní.
+Načte ukazatel na okolí `IFont` rozhraní kontejneru.
 
 ```
 HRESULT GetAmbientFont(IFont** ppFont);
@@ -490,19 +490,19 @@ HRESULT GetAmbientFont(IFont** ppFont);
 ### <a name="parameters"></a>Parametry
 
 *ppFont*<br/>
-Ukazatele do kontejneru v okolí [IFont](/windows/desktop/api/ocidl/nn-ocidl-ifont) rozhraní.
+Ukazatel na rozhraní ambientního [IFont](/windows/win32/api/ocidl/nn-ocidl-ifont) kontejneru.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Jeden standardní hodnoty HRESULT.
+Jedna ze standardních hodnot HRESULT.
 
 ### <a name="remarks"></a>Poznámky
 
-Pokud je vlastnost nastavena na hodnotu NULL, je ukazatel NULL. Pokud ukazatel není NULL, volající musí uvolnit ukazatel.
+Pokud má vlastnost hodnotu NULL, ukazatel má hodnotu NULL. Pokud ukazatel není NULL, volající musí vydávat ukazatel.
 
-##  <a name="getambientfontdisp"></a>  CComControlBase::GetAmbientFontDisp
+##  <a name="getambientfontdisp"></a>CComControlBase::GetAmbientFontDisp
 
-Načte ukazatel na kontejneru v okolí `IFontDisp` rozhraní odbavení.
+Načte ukazatel na rozhraní okolí `IFontDisp` pro expedici kontejneru.
 
 ```
 HRESULT GetAmbientFontDisp(IFontDisp** ppFont);
@@ -511,7 +511,7 @@ HRESULT GetAmbientFontDisp(IFontDisp** ppFont);
 ### <a name="parameters"></a>Parametry
 
 *ppFont*<br/>
-Ukazatele do kontejneru v okolí [IFontDisp](/windows/desktop/api/ocidl/nn-ocidl-ifontdisp) rozhraní odbavení.
+Ukazatel na rozhraní [IFontDisp](/windows/win32/api/ocidl/nn-ocidl-ifontdisp) pro expedici kontejneru.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -519,11 +519,11 @@ Vrátí hodnotu S_OK při úspěchu nebo chybu HRESULT při selhání.
 
 ### <a name="remarks"></a>Poznámky
 
-Pokud je vlastnost nastavena na hodnotu NULL, je ukazatel NULL. Pokud ukazatel není NULL, volající musí uvolnit ukazatel.
+Pokud má vlastnost hodnotu NULL, ukazatel má hodnotu NULL. Pokud ukazatel není NULL, volající musí vydávat ukazatel.
 
-##  <a name="getambientforecolor"></a>  CComControlBase::GetAmbientForeColor
+##  <a name="getambientforecolor"></a>CComControlBase::GetAmbientForeColor
 
-Načte DISPID_AMBIENT_FORECOLOR barvu popředí okolí pro všechny ovládací prvky určené kontejneru.
+Načte DISPID_AMBIENT_FORECOLOR, okolní barvu popředí pro všechny ovládací prvky definované kontejnerem.
 
 ```
 HRESULT GetAmbientForeColor(OLE_COLOR& ForeColor);
@@ -536,11 +536,11 @@ Vlastnost DISPID_AMBIENT_FORECOLOR.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Jeden standardní hodnoty HRESULT.
+Jedna ze standardních hodnot HRESULT.
 
-##  <a name="getambientlocaleid"></a>  CComControlBase::GetAmbientLocaleID
+##  <a name="getambientlocaleid"></a>CComControlBase::GetAmbientLocaleID
 
-Načte DISPID_AMBIENT_LOCALEID identifikátor jazyk používaný kontejnerem.
+Načte DISPID_AMBIENT_LOCALEID, identifikátor jazyka používaného kontejnerem.
 
 ```
 HRESULT GetAmbientLocaleID(LCID& lcid);
@@ -553,15 +553,15 @@ Vlastnost DISPID_AMBIENT_LOCALEID.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Jeden standardní hodnoty HRESULT.
+Jedna ze standardních hodnot HRESULT.
 
 ### <a name="remarks"></a>Poznámky
 
-Ovládací prvek můžete používat tento identifikátor pro přizpůsobení uživatelského rozhraní pro různé jazyky.
+Ovládací prvek může použít tento identifikátor k přizpůsobení uživatelského rozhraní k různým jazykům.
 
-##  <a name="getambientmessagereflect"></a>  CComControlBase::GetAmbientMessageReflect
+##  <a name="getambientmessagereflect"></a>CComControlBase::GetAmbientMessageReflect
 
-Načte DISPID_AMBIENT_MESSAGEREFLECT příznak označující, jestli konkrétní kontejner potřebuje pro příjem zpráv oken (například `WM_DRAWITEM`) jako události.
+Načte DISPID_AMBIENT_MESSAGEREFLECT, příznak označující, zda má kontejner přijímat zprávy okna (například `WM_DRAWITEM`) jako události.
 
 ```
 HRESULT GetAmbientMessageReflect(BOOL& bMessageReflect);
@@ -574,11 +574,11 @@ Vlastnost DISPID_AMBIENT_MESSAGEREFLECT.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Jeden standardní hodnoty HRESULT.
+Jedna ze standardních hodnot HRESULT.
 
-##  <a name="getambientpalette"></a>  CComControlBase::GetAmbientPalette
+##  <a name="getambientpalette"></a>CComControlBase::GetAmbientPalette
 
-Načte DISPID_AMBIENT_PALETTE, používá pro přístup k HPALETTE kontejneru.
+Načte DISPID_AMBIENT_PALETTE, který se používá pro přístup k HPALETTE kontejneru.
 
 ```
 HRESULT GetAmbientPalette(HPALETTE& hPalette);
@@ -591,11 +591,11 @@ Vlastnost DISPID_AMBIENT_PALETTE.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Jeden standardní hodnoty HRESULT.
+Jedna ze standardních hodnot HRESULT.
 
-##  <a name="getambientproperty"></a>  CComControlBase::GetAmbientProperty
+##  <a name="getambientproperty"></a>CComControlBase::GetAmbientProperty
 
-Získá kontejner vlastnost určenou *dispid*.
+Načte vlastnost kontejneru určenou identifikátorem *DISPID*.
 
 ```
 HRESULT GetAmbientProperty(DISPID dispid, VARIANT& var);
@@ -604,22 +604,22 @@ HRESULT GetAmbientProperty(DISPID dispid, VARIANT& var);
 ### <a name="parameters"></a>Parametry
 
 *dispid*<br/>
-Identifikátor vlastnosti kontejneru se má načíst.
+Identifikátor vlastnosti kontejneru, který se má načíst
 
 *var*<br/>
-Proměnné k získání vlastnosti.
+Proměnná pro přijetí vlastnosti.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Jeden standardní hodnoty HRESULT.
+Jedna ze standardních hodnot HRESULT.
 
 ### <a name="remarks"></a>Poznámky
 
-Knihovna ATL poskytuje sadu pomocných funkcí pro načtení určité vlastnosti, například [CComControlBase::GetAmbientBackColor](#getambientbackcolor). Pokud není k dispozici žádná vhodná metoda, pomocí `GetAmbientProperty`.
+Knihovna ATL poskytuje sadu pomocných funkcí pro načtení specifických vlastností, například [CComControlBase:: GetAmbientBackColor](#getambientbackcolor). Pokud není k dispozici žádná vhodná metoda, `GetAmbientProperty`použijte.
 
-##  <a name="getambientrighttoleft"></a>  CComControlBase::GetAmbientRightToLeft
+##  <a name="getambientrighttoleft"></a>CComControlBase::GetAmbientRightToLeft
 
-Načte DISPID_AMBIENT_RIGHTTOLEFT, směr, ve kterém se zobrazí obsah kontejnerem.
+Načte DISPID_AMBIENT_RIGHTTOLEFT, směr, ve kterém se obsah zobrazuje v kontejneru.
 
 ```
 HRESULT GetAmbientRightToLeft(BOOL& bRightToLeft);
@@ -628,15 +628,15 @@ HRESULT GetAmbientRightToLeft(BOOL& bRightToLeft);
 ### <a name="parameters"></a>Parametry
 
 *bRightToLeft*<br/>
-Vlastnost DISPID_AMBIENT_RIGHTTOLEFT. Nastavte na hodnotu TRUE, pokud obsah se zobrazí zprava doleva, FALSE, pokud se zobrazí zleva doprava.
+Vlastnost DISPID_AMBIENT_RIGHTTOLEFT. Nastavte na TRUE, pokud je obsah zobrazený zprava doleva, FALSE, pokud je zobrazená zleva doprava.
 
 ### <a name="return-value"></a>Návratová hodnota
 
 Vrátí hodnotu S_OK při úspěchu nebo chybu HRESULT při selhání.
 
-##  <a name="getambientscaleunits"></a>  CComControlBase::GetAmbientScaleUnits
+##  <a name="getambientscaleunits"></a>CComControlBase::GetAmbientScaleUnits
 
-Načte DISPID_AMBIENT_SCALEUNITS kontejneru okolí jednotky (například palce nebo cm) pro popisování zobrazí.
+Načte DISPID_AMBIENT_SCALEUNITS, okolní jednotky kontejneru (například palce nebo centimetry) pro zobrazení popisků.
 
 ```
 HRESULT GetAmbientScaleUnits(BSTR& bstrScaleUnits);
@@ -649,11 +649,11 @@ Vlastnost DISPID_AMBIENT_SCALEUNITS.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Jeden standardní hodnoty HRESULT.
+Jedna ze standardních hodnot HRESULT.
 
-##  <a name="getambientshowgrabhandles"></a>  CComControlBase::GetAmbientShowGrabHandles
+##  <a name="getambientshowgrabhandles"></a>CComControlBase::GetAmbientShowGrabHandles
 
-Načte DISPID_AMBIENT_SHOWGRABHANDLES příznak označující, zda kontejner umožňuje ovládací prvek pro zobrazení zobrazily úchyty sama za sebe, pokud je aktivní.
+Načte DISPID_AMBIENT_SHOWGRABHANDLES, příznak označující, zda kontejner umožňuje ovládacímu prvku zobrazit obslužné rutiny pro sebe sama, když je aktivní.
 
 ```
 HRESULT GetAmbientShowGrabHandles(BOOL& bShowGrabHandles);
@@ -666,11 +666,11 @@ Vlastnost DISPID_AMBIENT_SHOWGRABHANDLES.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Jeden standardní hodnoty HRESULT.
+Jedna ze standardních hodnot HRESULT.
 
-##  <a name="getambientshowhatching"></a>  CComControlBase::GetAmbientShowHatching
+##  <a name="getambientshowhatching"></a>CComControlBase::GetAmbientShowHatching
 
-Načte DISPID_AMBIENT_SHOWHATCHING příznak označující, zda kontejner umožňuje ovládacího prvku zobrazení samotného šrafované vzorem při aktivním ovládacího prvku uživatelského rozhraní.
+Načte DISPID_AMBIENT_SHOWHATCHING, příznak označující, zda kontejner umožňuje ovládacímu prvku, aby se zobrazil s šrafovaném vzorem, když je uživatelské rozhraní ovládacího prvku aktivní.
 
 ```
 HRESULT GetAmbientShowHatching(BOOL& bShowHatching);
@@ -683,11 +683,11 @@ Vlastnost DISPID_AMBIENT_SHOWHATCHING.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Jeden standardní hodnoty HRESULT.
+Jedna ze standardních hodnot HRESULT.
 
-##  <a name="getambientsupportsmnemonics"></a>  CComControlBase::GetAmbientSupportsMnemonics
+##  <a name="getambientsupportsmnemonics"></a>CComControlBase::GetAmbientSupportsMnemonics
 
-Načte DISPID_AMBIENT_SUPPORTSMNEMONICS příznak označující, zda kontejner podporuje klávesové zkratky klávesnice.
+Načte DISPID_AMBIENT_SUPPORTSMNEMONICS, příznak označující, zda kontejner podporuje klávesové zkratky.
 
 ```
 HRESULT GetAmbientSupportsMnemonics(BOOL& bSupportsMnemonics);
@@ -700,11 +700,11 @@ Vlastnost DISPID_AMBIENT_SUPPORTSMNEMONICS.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Jeden standardní hodnoty HRESULT.
+Jedna ze standardních hodnot HRESULT.
 
-##  <a name="getambienttextalign"></a>  CComControlBase::GetAmbientTextAlign
+##  <a name="getambienttextalign"></a>CComControlBase::GetAmbientTextAlign
 
-Načte DISPID_AMBIENT_TEXTALIGN, preferují kontejneru zarovnání textu: 0 pro obecné zarovnání (vlevo textu zprava, čísla), 1 pro zarovnání doleva, pro zarovnání na střed 2 a 3 pro zarovnání doprava.
+Načte DISPID_AMBIENT_TEXTALIGN, zarovnání textu preferované kontejnerem: 0 pro Obecné zarovnání (číslice doprava, text vlevo), 1 pro zarovnání vlevo, 2 pro zarovnání na střed a 3 pro zarovnání vpravo.
 
 ```
 HRESULT GetAmbientTextAlign(short& nTextAlign);
@@ -717,11 +717,11 @@ Vlastnost DISPID_AMBIENT_TEXTALIGN.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Jeden standardní hodnoty HRESULT.
+Jedna ze standardních hodnot HRESULT.
 
-##  <a name="getambienttoptobottom"></a>  CComControlBase::GetAmbientTopToBottom
+##  <a name="getambienttoptobottom"></a>CComControlBase::GetAmbientTopToBottom
 
-Načte DISPID_AMBIENT_TOPTOBOTTOM, směr, ve kterém se zobrazí obsah kontejnerem.
+Načte DISPID_AMBIENT_TOPTOBOTTOM, směr, ve kterém se obsah zobrazuje v kontejneru.
 
 ```
 HRESULT GetAmbientTopToBottom(BOOL& bTopToBottom);
@@ -730,15 +730,15 @@ HRESULT GetAmbientTopToBottom(BOOL& bTopToBottom);
 ### <a name="parameters"></a>Parametry
 
 *bTopToBottom*<br/>
-Vlastnost DISPID_AMBIENT_TOPTOBOTTOM. Nastavte na hodnotu TRUE, pokud se zobrazí text shora dolů, dolní FALSE, pokud se zobrazí nahoru.
+Vlastnost DISPID_AMBIENT_TOPTOBOTTOM. Nastavte na hodnotu TRUE, pokud se zobrazí text shora dolů, hodnota FALSE, pokud je zobrazená zdola nahoru.
 
 ### <a name="return-value"></a>Návratová hodnota
 
 Vrátí hodnotu S_OK při úspěchu nebo chybu HRESULT při selhání.
 
-##  <a name="getambientuidead"></a>  CComControlBase::GetAmbientUIDead
+##  <a name="getambientuidead"></a>CComControlBase::GetAmbientUIDead
 
-Načte DISPID_AMBIENT_UIDEAD příznak označující, jestli konkrétní kontejner potřebuje ovládací prvek reagovat na akce uživatelského rozhraní.
+Načte DISPID_AMBIENT_UIDEAD, příznak označující, zda kontejner chce ovládací prvek reagovat na akce uživatelského rozhraní.
 
 ```
 HRESULT GetAmbientUIDead(BOOL& bUIDead);
@@ -751,15 +751,15 @@ Vlastnost DISPID_AMBIENT_UIDEAD.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Jeden standardní hodnoty HRESULT.
+Jedna ze standardních hodnot HRESULT.
 
 ### <a name="remarks"></a>Poznámky
 
-Při hodnotě TRUE by neměl odpovědět ovládacího prvku. Tento příznak platí bez ohledu na to DISPID_AMBIENT_USERMODE příznak. Zobrazit [CComControlBase::GetAmbientUserMode](#getambientusermode).
+Je-li nastavena hodnota TRUE, ovládací prvek by neměl reagovat. Tento příznak platí bez ohledu na příznak DISPID_AMBIENT_USERMODE. Viz [CComControlBase:: GetAmbientUserMode](#getambientusermode).
 
-##  <a name="getambientusermode"></a>  CComControlBase::GetAmbientUserMode
+##  <a name="getambientusermode"></a>CComControlBase::GetAmbientUserMode
 
-Načte DISPID_AMBIENT_USERMODE příznak označující, jestli je kontejner v režimu běhu (pravda) nebo v režimu návrhu (FALSE).
+Načte DISPID_AMBIENT_USERMODE, příznak označující, zda je kontejner v režimu běhu (TRUE) nebo v režimu návrhu (FALSE).
 
 ```
 HRESULT GetAmbientUserMode(BOOL& bUserMode);
@@ -772,11 +772,11 @@ Vlastnost DISPID_AMBIENT_USERMODE.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Jeden standardní hodnoty HRESULT.
+Jedna ze standardních hodnot HRESULT.
 
-##  <a name="getdirty"></a>  CComControlBase::GetDirty
+##  <a name="getdirty"></a>CComControlBase:: getdirty
 
-Vrací hodnotu datového členu `m_bRequiresSave`.
+Vrátí hodnotu datového členu `m_bRequiresSave`.
 
 ```
 BOOL GetDirty();
@@ -784,15 +784,15 @@ BOOL GetDirty();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vrací hodnotu datového členu [m_bRequiresSave](#m_brequiressave).
+Vrátí hodnotu datového členu [m_bRequiresSave](#m_brequiressave).
 
 ### <a name="remarks"></a>Poznámky
 
-Tato hodnota se nastavuje pomocí [CComControlBase::SetDirty](#setdirty).
+Tato hodnota je nastavena pomocí [CComControlBase:: SetDirty](#setdirty).
 
-##  <a name="getzoominfo"></a>  CComControlBase::GetZoomInfo
+##  <a name="getzoominfo"></a>CComControlBase::GetZoomInfo
 
-Načte x a y hodnoty čitatelem a jmenovatelem na faktor zvětšování pro ovládací prvek aktivuje pro místní úpravy.
+Načte hodnoty x a y čitateli a jmenovatele faktoru přiblížení pro ovládací prvek aktivovaný pro místní úpravy.
 
 ```
 void GetZoomInfo(ATL_DRAWINFO& di);
@@ -801,15 +801,15 @@ void GetZoomInfo(ATL_DRAWINFO& di);
 ### <a name="parameters"></a>Parametry
 
 *di*<br/>
-Struktura, která bude obsahovat čitatelem a jmenovatelem na faktor zvětšování. Další informace najdete v tématu [atl_drawinfo –](../../atl/reference/atl-drawinfo-structure.md).
+Struktura, která bude obsahovat čitatel a jmenovatel faktoru přiblížení. Další informace najdete v tématu [ATL_DRAWINFO](../../atl/reference/atl-drawinfo-structure.md).
 
 ### <a name="remarks"></a>Poznámky
 
-Na faktor zvětšování je část ovládacího prvku fyzická velikost jeho aktuálního rozsahu.
+Faktor přiblížení je poměr přirozené velikosti ovládacího prvku k jeho aktuálnímu rozsahu.
 
-##  <a name="inplaceactivate"></a>  CComControlBase::InPlaceActivate
+##  <a name="inplaceactivate"></a>CComControlBase::InPlaceActivate
 
-Způsobí, že ovládací prvek na přechod ze stavu aktivní na cokoli, co stav operací v *iVerb* označuje.
+Způsobí přechod ovládacího prvku z neaktivního stavu do libovolného stavu, který příkaz v *iVerb* označuje.
 
 ```
 HRESULT InPlaceActivate(LONG iVerb, const RECT* prcPosRect = NULL);
@@ -818,24 +818,24 @@ HRESULT InPlaceActivate(LONG iVerb, const RECT* prcPosRect = NULL);
 ### <a name="parameters"></a>Parametry
 
 *iVerb*<br/>
-Hodnotu, která akce, která má být provedena [IOleObjectImpl::DoVerb](../../atl/reference/ioleobjectimpl-class.md#doverb).
+Hodnota určující akci, kterou má provést [IOleObjectImpl::D overb](../../atl/reference/ioleobjectimpl-class.md#doverb).
 
 *prcPosRect*<br/>
-Ukazatel pozice ovládacího prvku na místě.
+Ukazatel na pozici místního ovládacího prvku.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Jeden standardní hodnoty HRESULT.
+Jedna ze standardních hodnot HRESULT.
 
 ### <a name="remarks"></a>Poznámky
 
-Před aktivací tato metoda zkontroluje, že ovládací prvek má lokality klienta, kontroluje, jak velká část ovládacího prvku viditelný a získá umístění ovládacího prvku v nadřazené okno. Po aktivaci ovládacího prvku, tato metoda aktivuje ovládacího prvku uživatelského rozhraní a říká Zviditelněte ovládací prvek kontejneru.
+Před aktivací Tato metoda zkontroluje, zda má ovládací prvek klientský server, zkontroluje, jak velká část ovládacího prvku je viditelná a získá umístění ovládacího prvku v nadřazeném okně. Po aktivaci ovládacího prvku Tato metoda aktivuje uživatelské rozhraní ovládacího prvku a oznámí kontejneru, aby byl ovládací prvek viditelný.
 
-Tato metoda také obnoví `IOleInPlaceSite`, `IOleInPlaceSiteEx`, nebo `IOleInPlaceSiteWindowless` ukazatel rozhraní pro ovládací prvek a uloží jej v třídě ovládacího prvku datový člen [CComControlBase::m_spInPlaceSite](#m_spinplacesite). Datové členy třídy ovládacího prvku [CComControlBase::m_bInPlaceSiteEx](#m_binplacesiteex), [CComControlBase::m_bWndLess](#m_bwndless), [CComControlBase::m_bWasOnceWindowless](#m_bwasoncewindowless)a [ CComControlBase::m_bNegotiatedWnd](#m_bnegotiatedwnd) jsou nastaveny na hodnotu true, podle potřeby.
+`IOleInPlaceSite`Tato metoda také načte ukazatel rozhraní, `IOleInPlaceSiteEx`nebo `IOleInPlaceSiteWindowless` pro ovládací prvek a uloží jej do datového členu třídy ovládacího prvku [CComControlBase:: m_spInPlaceSite](#m_spinplacesite). Datové členy třídy ovládacího prvku [CComControlBase:: m_bInPlaceSiteEx](#m_binplacesiteex), [CComControlBase:: m_bWndLess](#m_bwndless), [CComControlBase:: M_bWasOnceWindowless](#m_bwasoncewindowless)a [CComControlBase:: m_bNegotiatedWnd](#m_bnegotiatedwnd) jsou nastaveny na hodnotu true podle potřeby.
 
-##  <a name="internalgetsite"></a>  CComControlBase::InternalGetSite
+##  <a name="internalgetsite"></a>CComControlBase::InternalGetSite
 
-Volejte tuto metodu za účelem zjištění serveru ovládací prvek pro ukazatel rozhraní identifikovaný.
+Zavolejte tuto metodu pro dotazování webu ovládacího prvku pro ukazatel na identifikované rozhraní.
 
 ```
 HRESULT InternalGetSite(REFIID riid, void** ppUnkSite);
@@ -844,10 +844,10 @@ HRESULT InternalGetSite(REFIID riid, void** ppUnkSite);
 ### <a name="parameters"></a>Parametry
 
 *riid*<br/>
-Identifikátor IID rozhraní ukazatel, který má být vrácen v *ppUnkSite*.
+Identifikátor IID ukazatele rozhraní, který by měl být vrácen v *ppUnkSite*.
 
 *ppUnkSite*<br/>
-Adresa proměnné ukazatele, která přijímá ukazatel rozhraní požadované *riid*.
+Adresa proměnné ukazatele, která obdrží ukazatel rozhraní požadovaný v *riid*.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -855,11 +855,11 @@ Vrátí hodnotu S_OK při úspěchu nebo chybu HRESULT při selhání.
 
 ### <a name="remarks"></a>Poznámky
 
-Pokud lokalita podporuje požadované v rozhraní *riid*, ukazatel je vrácený pomocí zprávy *ppUnkSite*. V opačném případě *ppUnkSite* nastaven na hodnotu NULL.
+Pokud lokalita podporuje rozhraní požadované v *riid*, ukazatel se vrátí prostřednictvím *ppUnkSite*. V opačném případě je *ppUnkSite* nastaveno na hodnotu null.
 
-##  <a name="m_bautosize"></a>  CComControlBase::m_bAutoSize
+##  <a name="m_bautosize"></a>CComControlBase::m_bAutoSize
 
-Příznak označující, že ovládací prvek nemůže být libovolné velikosti.
+Příznak označující, že ovládací prvek nemůže být jinou velikostí
 
 ```
 unsigned m_bAutoSize:1;
@@ -867,16 +867,16 @@ unsigned m_bAutoSize:1;
 
 ### <a name="remarks"></a>Poznámky
 
-Tento příznak je vráceno uživatelem `IOleObjectImpl::SetExtent` a pokud je hodnota TRUE, způsobí, že funkce vrátit E_FAIL.
+Tento příznak je zkontrolován pomocí `IOleObjectImpl::SetExtent` a, pokud má hodnotu true, způsobí, že funkce vrátí E_FAIL.
 
 > [!NOTE]
->  Pokud chcete použít tento datový člen v rámci třídy vašeho ovládacího prvku, je třeba deklarovat jako datový člen ve třídě ovládacího prvku. Třídy vašeho ovládacího prvku nebude dědit tomuto datovému členu ze základní třídy, protože je deklarována v rámci sjednocení v základní třídě.
+>  Chcete-li použít tohoto datového člena v rámci třídy ovládacího prvku, je nutné jej deklarovat jako datový člen ve třídě ovládacího prvku. Vaše třída ovládacího prvku nedědí tohoto datového člena ze základní třídy, protože je deklarována v rámci sjednocení v základní třídě.
 
-Pokud chcete přidat **Automatická velikost** možnost [uložené vlastnosti](../../atl/reference/stock-properties-atl-control-wizard.md) kartu Průvodce ovládacími prvky ATL, průvodce automaticky vytvoří tomuto datovému členu ve své třídě ovládacího prvku, vytvoří put a metody pro vlastnost get a podporuje [ipropertynotifysink –](/windows/desktop/api/ocidl/nn-ocidl-ipropertynotifysink) automatické zaslání oznámení kontejneru při změně vlastnosti.
+Pokud přidáte možnost **automatické velikosti** na kartě [akcie](../../atl/reference/stock-properties-atl-control-wizard.md) Průvodce ovládacím prvkem ATL, průvodce automaticky vytvoří tohoto datového člena ve třídě ovládacího prvku, vytvoří metody PUT a Get pro vlastnost a podporuje [IPropertyNotifySink. ](/windows/win32/api/ocidl/nn-ocidl-ipropertynotifysink)pro automatické oznamování kontejneru při změně vlastnosti.
 
-##  <a name="m_bdrawfromnatural"></a>  CComControlBase::m_bDrawFromNatural
+##  <a name="m_bdrawfromnatural"></a>CComControlBase::m_bDrawFromNatural
 
-Příznak označující, že `IDataObjectImpl::GetData` a `CComControlBase::GetZoomInfo` by měl nastavit velikost ovládacího prvku z `m_sizeNatural` spíše než z `m_sizeExtent`.
+Příznak označující, `IDataObjectImpl::GetData` že `CComControlBase::GetZoomInfo` a má `m_sizeNatural` nastavit velikost ovládacího prvku místo z `m_sizeExtent`.
 
 ```
 unsigned m_bDrawFromNatural:1;
@@ -885,11 +885,11 @@ unsigned m_bDrawFromNatural:1;
 ### <a name="remarks"></a>Poznámky
 
 > [!NOTE]
->  Pokud chcete použít tento datový člen v rámci třídy vašeho ovládacího prvku, je třeba deklarovat jako datový člen ve třídě ovládacího prvku. Třídy vašeho ovládacího prvku nebude dědit tomuto datovému členu ze základní třídy, protože je deklarována v rámci sjednocení v základní třídě.
+>  Chcete-li použít tohoto datového člena v rámci třídy ovládacího prvku, je nutné jej deklarovat jako datový člen ve třídě ovládacího prvku. Vaše třída ovládacího prvku nedědí tohoto datového člena ze základní třídy, protože je deklarována v rámci sjednocení v základní třídě.
 
-##  <a name="m_bdrawgetdatainhimetric"></a>  CComControlBase::m_bDrawGetDataInHimetric
+##  <a name="m_bdrawgetdatainhimetric"></a>CComControlBase::m_bDrawGetDataInHimetric
 
-Příznak označující, že `IDataObjectImpl::GetData` by měl používat v jednotkách HIMETRIC a ne pixelů při kreslení.
+Příznak označující, `IDataObjectImpl::GetData` že při vykreslování mají být použity jednotky HIMETRIC a ne pixely
 
 ```
 unsigned m_bDrawGetDataInHimetric:1;
@@ -897,14 +897,14 @@ unsigned m_bDrawGetDataInHimetric:1;
 
 ### <a name="remarks"></a>Poznámky
 
-Jednotlivých logických jednotek HIMETRIC je 0,01 milimetru.
+Každá logická jednotka HIMETRIC je 0,01 mm.
 
 > [!NOTE]
->  Pokud chcete použít tento datový člen v rámci třídy vašeho ovládacího prvku, je třeba deklarovat jako datový člen ve třídě ovládacího prvku. Třídy vašeho ovládacího prvku nebude dědit tomuto datovému členu ze základní třídy, protože je deklarována v rámci sjednocení v základní třídě.
+>  Chcete-li použít tohoto datového člena v rámci třídy ovládacího prvku, je nutné jej deklarovat jako datový člen ve třídě ovládacího prvku. Vaše třída ovládacího prvku nedědí tohoto datového člena ze základní třídy, protože je deklarována v rámci sjednocení v základní třídě.
 
-##  <a name="m_binplaceactive"></a>  CComControlBase::m_bInPlaceActive
+##  <a name="m_binplaceactive"></a>CComControlBase::m_bInPlaceActive
 
-Příznak označující, že ovládací prvek je na místě aktivní.
+Příznak označující, že ovládací prvek je na místě aktivní
 
 ```
 unsigned m_bInPlaceActive:1;
@@ -912,14 +912,14 @@ unsigned m_bInPlaceActive:1;
 
 ### <a name="remarks"></a>Poznámky
 
-To znamená, že je ovládací prvek viditelný a jeho, pokud existuje, je okno viditelné, ale jeho nabídek a panelů nástrojů, nemusí být aktivní. `m_bUIActive` Příznak značí ovládacího prvku uživatelského rozhraní, jako jsou nabídky, je také aktivní.
+To znamená, že ovládací prvek je viditelný a jeho okno, pokud je viditelné, ale jeho nabídky a panely nástrojů nemusí být aktivní. `m_bUIActive` Příznak indikuje, že uživatelské rozhraní ovládacího prvku, například nabídky, je také aktivní.
 
 > [!NOTE]
->  Pokud chcete použít tento datový člen v rámci třídy vašeho ovládacího prvku, je třeba deklarovat jako datový člen ve třídě ovládacího prvku. Třídy vašeho ovládacího prvku nebude dědit tomuto datovému členu ze základní třídy, protože je deklarována v rámci sjednocení v základní třídě.
+>  Chcete-li použít tohoto datového člena v rámci třídy ovládacího prvku, je nutné jej deklarovat jako datový člen ve třídě ovládacího prvku. Vaše třída ovládacího prvku nedědí tohoto datového člena ze základní třídy, protože je deklarována v rámci sjednocení v základní třídě.
 
-##  <a name="m_binplacesiteex"></a>  CComControlBase::m_bInPlaceSiteEx
+##  <a name="m_binplacesiteex"></a>CComControlBase::m_bInPlaceSiteEx
 
-Příznak označující, které podporuje kontejneru `IOleInPlaceSiteEx` rozhraní a OCX96 řídí funkce, jako je například ovládací prvky bez oken a blikání.
+Příznak označující, že kontejner podporuje `IOleInPlaceSiteEx` funkce ovládacího prvku rozhraní a OCX96, například ovládací prvky bez oken a blikání.
 
 ```
 unsigned m_bInPlaceSiteEx:1;
@@ -928,15 +928,15 @@ unsigned m_bInPlaceSiteEx:1;
 ### <a name="remarks"></a>Poznámky
 
 > [!NOTE]
->  Pokud chcete použít tento datový člen v rámci třídy vašeho ovládacího prvku, je třeba deklarovat jako datový člen ve třídě ovládacího prvku. Třídy vašeho ovládacího prvku nebude dědit tomuto datovému členu ze základní třídy, protože je deklarována v rámci sjednocení v základní třídě.
+>  Chcete-li použít tohoto datového člena v rámci třídy ovládacího prvku, je nutné jej deklarovat jako datový člen ve třídě ovládacího prvku. Vaše třída ovládacího prvku nedědí tohoto datového člena ze základní třídy, protože je deklarována v rámci sjednocení v základní třídě.
 
-Datový člen `m_spInPlaceSite` odkazuje na [IOleInPlaceSite](/windows/desktop/api/oleidl/nn-oleidl-ioleinplacesite), [IOleInPlaceSiteEx](/windows/desktop/api/ocidl/nn-ocidl-ioleinplacesiteex), nebo [IOleInPlaceSiteWindowless](/windows/desktop/api/ocidl/nn-ocidl-ioleinplacesitewindowless) rozhraní závisí na hodnotě `m_bWndLess` a `m_bInPlaceSiteEx` příznaky. (Datový člen `m_bNegotiatedWnd` musí být nastavena na PRAVDA pro `m_spInPlaceSite` ukazatel na platný.)
+Datový člen `m_spInPlaceSite` odkazuje na rozhraní [IOleInPlaceSite](/windows/win32/api/oleidl/nn-oleidl-ioleinplacesite), [IOleInPlaceSiteEx](/windows/win32/api/ocidl/nn-ocidl-ioleinplacesiteex)nebo [IOleInPlaceSiteWindowless](/windows/win32/api/ocidl/nn-ocidl-ioleinplacesitewindowless) v závislosti na hodnotě `m_bWndLess` příznaků a. `m_bInPlaceSiteEx` (Datový člen `m_bNegotiatedWnd` musí mít hodnotu true, aby `m_spInPlaceSite` byl ukazatel platný.)
 
-Pokud `m_bWndLess` hodnotu FALSE a `m_bInPlaceSiteEx` má hodnotu TRUE, `m_spInPlaceSite` je `IOleInPlaceSiteEx` ukazatel rozhraní. Zobrazit [m_spInPlaceSite](#m_spinplacesite) tabulka znázorňující vztah mezi tyto tři datové členy.
+Pokud `m_bWndLess` je hodnota false `m_bInPlaceSiteEx` `m_spInPlaceSite` a`IOleInPlaceSiteEx` je true, je ukazatel rozhraní. Tabulku zobrazující vztah mezi těmito třemi datovými členy najdete v tématu [m_spInPlaceSite](#m_spinplacesite) .
 
-##  <a name="m_bnegotiatedwnd"></a>  CComControlBase::m_bNegotiatedWnd
+##  <a name="m_bnegotiatedwnd"></a>CComControlBase::m_bNegotiatedWnd
 
-Příznak označující, zda má ovládací prvek vyjedná s kontejnerem týkající se podpory funkce řízení OCX96 (jako je například ovládací prvky bez blikání a bez oken) a určuje, zda je ovládací prvek oddílové nebo bez oken.
+Příznak označující, zda se ovládací prvek vyjednal s kontejnerem o podpoře funkcí ovládacího prvku OCX96 (například ovládací prvky bez blikání a ovládacích prvků bez oken) a zda je ovládací prvek v okně nebo bez okna.
 
 ```
 unsigned m_bNegotiatedWnd:1;
@@ -945,13 +945,13 @@ unsigned m_bNegotiatedWnd:1;
 ### <a name="remarks"></a>Poznámky
 
 > [!NOTE]
->  Pokud chcete použít tento datový člen v rámci třídy vašeho ovládacího prvku, je třeba deklarovat jako datový člen ve třídě ovládacího prvku. Třídy vašeho ovládacího prvku nebude dědit tomuto datovému členu ze základní třídy, protože je deklarována v rámci sjednocení v základní třídě.
+>  Chcete-li použít tohoto datového člena v rámci třídy ovládacího prvku, je nutné jej deklarovat jako datový člen ve třídě ovládacího prvku. Vaše třída ovládacího prvku nedědí tohoto datového člena ze základní třídy, protože je deklarována v rámci sjednocení v základní třídě.
 
-`m_bNegotiatedWnd` Příznak musí být nastavena na PRAVDA pro `m_spInPlaceSite` ukazatel na platný.
+Aby byl `m_spInPlaceSite` ukazatel platný, musí mít příznakhodnotutrue.`m_bNegotiatedWnd`
 
-##  <a name="m_brecomposeonresize"></a>  CComControlBase::m_bRecomposeOnResize
+##  <a name="m_brecomposeonresize"></a>CComControlBase::m_bRecomposeOnResize
 
-Příznak označující, že chce, aby se ovládací prvek Chcete-li jeho prezentaci při změně velikosti zobrazení ovládacího prvku kontejneru.
+Příznak označující, že ovládací prvek chce znovu vytvořit svou prezentaci, když kontejner změní velikost zobrazení ovládacího prvku
 
 ```
 unsigned m_bRecomposeOnResize:1;
@@ -960,13 +960,13 @@ unsigned m_bRecomposeOnResize:1;
 ### <a name="remarks"></a>Poznámky
 
 > [!NOTE]
->  Pokud chcete použít tento datový člen v rámci třídy vašeho ovládacího prvku, je třeba deklarovat jako datový člen ve třídě ovládacího prvku. Třídy vašeho ovládacího prvku nebude dědit tomuto datovému členu ze základní třídy, protože je deklarována v rámci sjednocení v základní třídě.
+>  Chcete-li použít tohoto datového člena v rámci třídy ovládacího prvku, je nutné jej deklarovat jako datový člen ve třídě ovládacího prvku. Vaše třída ovládacího prvku nedědí tohoto datového člena ze základní třídy, protože je deklarována v rámci sjednocení v základní třídě.
 
-Tento příznak je vráceno uživatelem [IOleObjectImpl::SetExtent](../../atl/reference/ioleobjectimpl-class.md#setextent) a pokud je hodnota TRUE, `SetExtent` upozorní kontejner zobrazení změn. Pokud je tento příznak nastaven, OLEMISC_RECOMPOSEONRESIZE bit ve [OLEMISC](/windows/desktop/api/oleidl/ne-oleidl-tagolemisc) výčtu by měla být také nastavena.
+Tento příznak kontroluje [IOleObjectImpl:: SetExtent](../../atl/reference/ioleobjectimpl-class.md#setextent) a pokud má hodnotu true, `SetExtent` upozorní kontejner zobrazení změn. Pokud je tento příznak nastaven, musí být také nastaven bit OLEMISC_RECOMPOSEONRESIZE ve výčtu [OLEMISC](/windows/win32/api/oleidl/ne-oleidl-olemisc) .
 
-##  <a name="m_brequiressave"></a>  CComControlBase::m_bRequiresSave
+##  <a name="m_brequiressave"></a>CComControlBase::m_bRequiresSave
 
-Příznak označující, že ovládací prvek změnila od posledního uložení.
+Příznak označující, že se ovládací prvek od posledního uložení změnil
 
 ```
 unsigned m_bRequiresSave:1;
@@ -974,14 +974,14 @@ unsigned m_bRequiresSave:1;
 
 ### <a name="remarks"></a>Poznámky
 
-Hodnota `m_bRequiresSave` lze nastavit pomocí [CComControlBase::SetDirty](#setdirty) a načtena pomocí [CComControlBase::GetDirty](#getdirty).
+Hodnotu `m_bRequiresSave` lze nastavit pomocí [CComControlBase:: SetDirty](#setdirty) a načíst pomocí [CComControlBase::](#getdirty)getdirty.
 
 > [!NOTE]
->  Pokud chcete použít tento datový člen v rámci třídy vašeho ovládacího prvku, je třeba deklarovat jako datový člen ve třídě ovládacího prvku. Třídy vašeho ovládacího prvku nebude dědit tomuto datovému členu ze základní třídy, protože je deklarována v rámci sjednocení v základní třídě.
+>  Chcete-li použít tohoto datového člena v rámci třídy ovládacího prvku, je nutné jej deklarovat jako datový člen ve třídě ovládacího prvku. Vaše třída ovládacího prvku nedědí tohoto datového člena ze základní třídy, protože je deklarována v rámci sjednocení v základní třídě.
 
-##  <a name="m_bresizenatural"></a>  CComControlBase::m_bResizeNatural
+##  <a name="m_bresizenatural"></a>CComControlBase::m_bResizeNatural
 
-Příznak označující, ke změně velikosti jeho fyzické rozsah (jeho bez měřítka fyzická velikost) chce, aby ovládací prvek při změně velikosti zobrazení ovládacího prvku kontejneru.
+Příznak označující, že ovládací prvek chce změnit velikost přirozeného rozsahu (jeho neškálovaná fyzická velikost), když kontejner změní velikost zobrazení ovládacího prvku
 
 ```
 unsigned m_bResizeNatural:1;
@@ -989,16 +989,16 @@ unsigned m_bResizeNatural:1;
 
 ### <a name="remarks"></a>Poznámky
 
-Tento příznak je vráceno uživatelem `IOleObjectImpl::SetExtent` a pokud je hodnota TRUE, velikost předány do `SetExtent` přiřazen `m_sizeNatural`.
+Tento příznak je zkontrolován pomocí `IOleObjectImpl::SetExtent` a, pokud má hodnotu true, je velikost `SetExtent` předaná do `m_sizeNatural`aplikace přiřazena.
 
-Velikost předána do `SetExtent` se vždycky přiřazuje `m_sizeExtent`bez ohledu hodnotu `m_bResizeNatural`.
+Velikost předaná do `SetExtent` je vždy `m_sizeExtent`přiřazena, bez ohledu na hodnotu `m_bResizeNatural`.
 
 > [!NOTE]
->  Pokud chcete použít tento datový člen v rámci třídy vašeho ovládacího prvku, je třeba deklarovat jako datový člen ve třídě ovládacího prvku. Třídy vašeho ovládacího prvku nebude dědit tomuto datovému členu ze základní třídy, protože je deklarována v rámci sjednocení v základní třídě.
+>  Chcete-li použít tohoto datového člena v rámci třídy ovládacího prvku, je nutné jej deklarovat jako datový člen ve třídě ovládacího prvku. Vaše třída ovládacího prvku nedědí tohoto datového člena ze základní třídy, protože je deklarována v rámci sjednocení v základní třídě.
 
-##  <a name="m_buiactive"></a>  CComControlBase::m_bUIActive
+##  <a name="m_buiactive"></a>CComControlBase::m_bUIActive
 
-Příznak označující, ovládacího prvku uživatelského rozhraní, jako je například nabídek a panelů nástrojů, je aktivní.
+Příznak označující, že uživatelské rozhraní ovládacího prvku, například nabídky a panely nástrojů, je aktivní.
 
 ```
 unsigned m_bUIActive:1;
@@ -1006,14 +1006,14 @@ unsigned m_bUIActive:1;
 
 ### <a name="remarks"></a>Poznámky
 
-`m_bInPlaceActive` Příznak určuje, že je aktivní, ale není to jeho uživatelské rozhraní je aktivní.
+`m_bInPlaceActive` Příznak indikuje, že je ovládací prvek aktivní, ale není aktivní jeho uživatelské rozhraní.
 
 > [!NOTE]
->  Pokud chcete použít tento datový člen v rámci třídy vašeho ovládacího prvku, je třeba deklarovat jako datový člen ve třídě ovládacího prvku. Třídy vašeho ovládacího prvku nebude dědit tomuto datovému členu ze základní třídy, protože je deklarována v rámci sjednocení v základní třídě.
+>  Chcete-li použít tohoto datového člena v rámci třídy ovládacího prvku, je nutné jej deklarovat jako datový člen ve třídě ovládacího prvku. Vaše třída ovládacího prvku nedědí tohoto datového člena ze základní třídy, protože je deklarována v rámci sjednocení v základní třídě.
 
-##  <a name="m_busingwindowrgn"></a>  CComControlBase::m_bUsingWindowRgn
+##  <a name="m_busingwindowrgn"></a>CComControlBase::m_bUsingWindowRgn
 
-Příznak označující, že ovládací prvek používá oblast okna zadaný kontejner.
+Příznak označující, že ovládací prvek používá oblast okna poskytnutou kontejnerem.
 
 ```
 unsigned m_bUsingWindowRgn:1;
@@ -1022,11 +1022,11 @@ unsigned m_bUsingWindowRgn:1;
 ### <a name="remarks"></a>Poznámky
 
 > [!NOTE]
->  Pokud chcete použít tento datový člen v rámci třídy vašeho ovládacího prvku, je třeba deklarovat jako datový člen ve třídě ovládacího prvku. Třídy vašeho ovládacího prvku nebude dědit tomuto datovému členu ze základní třídy, protože je deklarována v rámci sjednocení v základní třídě.
+>  Chcete-li použít tohoto datového člena v rámci třídy ovládacího prvku, je nutné jej deklarovat jako datový člen ve třídě ovládacího prvku. Vaše třída ovládacího prvku nedědí tohoto datového člena ze základní třídy, protože je deklarována v rámci sjednocení v základní třídě.
 
-##  <a name="m_bwasoncewindowless"></a>  CComControlBase::m_bWasOnceWindowless
+##  <a name="m_bwasoncewindowless"></a>CComControlBase::m_bWasOnceWindowless
 
-Příznak označující, ovládací prvek bez oken, se ale může nebo nemusí být nyní bez oken.
+Příznak označující, že ovládací prvek byl bez okna, ale může nebo nemusí být nyní bez okna.
 
 ```
 unsigned m_bWasOnceWindowless:1;
@@ -1035,11 +1035,11 @@ unsigned m_bWasOnceWindowless:1;
 ### <a name="remarks"></a>Poznámky
 
 > [!NOTE]
->  Pokud chcete použít tento datový člen v rámci třídy vašeho ovládacího prvku, je třeba deklarovat jako datový člen ve třídě ovládacího prvku. Třídy vašeho ovládacího prvku nebude dědit tomuto datovému členu ze základní třídy, protože je deklarována v rámci sjednocení v základní třídě.
+>  Chcete-li použít tohoto datového člena v rámci třídy ovládacího prvku, je nutné jej deklarovat jako datový člen ve třídě ovládacího prvku. Vaše třída ovládacího prvku nedědí tohoto datového člena ze základní třídy, protože je deklarována v rámci sjednocení v základní třídě.
 
-##  <a name="m_bwindowonly"></a>  CComControlBase::m_bWindowOnly
+##  <a name="m_bwindowonly"></a>CComControlBase::m_bWindowOnly
 
-Příznak označující, že ovládací prvek by měl být oddílové, i v případě, že kontejner podporuje ovládací prvky bez oken.
+Příznak označující, že má být ovládací prvek nastaven na okno, i v případě, že kontejner podporuje ovládací prvky bez oken.
 
 ```
 unsigned m_bWindowOnly:1;
@@ -1048,11 +1048,11 @@ unsigned m_bWindowOnly:1;
 ### <a name="remarks"></a>Poznámky
 
 > [!NOTE]
->  Pokud chcete použít tento datový člen v rámci třídy vašeho ovládacího prvku, je třeba deklarovat jako datový člen ve třídě ovládacího prvku. Třídy vašeho ovládacího prvku nebude dědit tomuto datovému členu ze základní třídy, protože je deklarována v rámci sjednocení v základní třídě.
+>  Chcete-li použít tohoto datového člena v rámci třídy ovládacího prvku, je nutné jej deklarovat jako datový člen ve třídě ovládacího prvku. Vaše třída ovládacího prvku nedědí tohoto datového člena ze základní třídy, protože je deklarována v rámci sjednocení v základní třídě.
 
-##  <a name="m_bwndless"></a>  CComControlBase::m_bWndLess
+##  <a name="m_bwndless"></a>CComControlBase::m_bWndLess
 
-Příznak označující, že je ovládací prvek bez oken.
+Příznak označující, že ovládací prvek je bez okna.
 
 ```
 unsigned m_bWndLess:1;
@@ -1061,13 +1061,13 @@ unsigned m_bWndLess:1;
 ### <a name="remarks"></a>Poznámky
 
 > [!NOTE]
->  Pokud chcete použít tento datový člen v rámci třídy vašeho ovládacího prvku, je třeba deklarovat jako datový člen ve třídě ovládacího prvku. Třídy vašeho ovládacího prvku nebude dědit tomuto datovému členu ze základní třídy, protože je deklarována v rámci sjednocení v základní třídě.
+>  Chcete-li použít tohoto datového člena v rámci třídy ovládacího prvku, je nutné jej deklarovat jako datový člen ve třídě ovládacího prvku. Vaše třída ovládacího prvku nedědí tohoto datového člena ze základní třídy, protože je deklarována v rámci sjednocení v základní třídě.
 
-Datový člen `m_spInPlaceSite` odkazuje na [IOleInPlaceSite](/windows/desktop/api/oleidl/nn-oleidl-ioleinplacesite), [IOleInPlaceSiteEx](/windows/desktop/api/ocidl/nn-ocidl-ioleinplacesiteex), nebo [IOleInPlaceSiteWindowless](/windows/desktop/api/ocidl/nn-ocidl-ioleinplacesitewindowless) rozhraní závisí na hodnotě `m_bWndLess` a [CComControlBase::m_bInPlaceSiteEx](#m_binplacesiteex) příznaky. (Datový člen [CComControlBase::m_bNegotiatedWnd](#m_bnegotiatedwnd) musí být nastavena na PRAVDA pro [CComControlBase::m_spInPlaceSite](#m_spinplacesite) ukazatel na platný.)
+Datový `m_spInPlaceSite` člen odkazuje na rozhraní [IOleInPlaceSite](/windows/win32/api/oleidl/nn-oleidl-ioleinplacesite), [IOleInPlaceSiteEx](/windows/win32/api/ocidl/nn-ocidl-ioleinplacesiteex)nebo [IOleInPlaceSiteWindowless](/windows/win32/api/ocidl/nn-ocidl-ioleinplacesitewindowless) v závislosti na hodnotě `m_bWndLess` příznaků a [CComControlBase:: m_bInPlaceSiteEx](#m_binplacesiteex) . (Datový člen [CComControlBase:: m_bNegotiatedWnd](#m_bnegotiatedwnd) musí mít hodnotu true, aby ukazatel [CComControlBase:: m_spInPlaceSite](#m_spinplacesite) byl platný.)
 
-Pokud `m_bWndLess` má hodnotu TRUE, `m_spInPlaceSite` je `IOleInPlaceSiteWindowless` ukazatel rozhraní. Zobrazit [CComControlBase::m_spInPlaceSite](#m_spinplacesite) tabulka znázorňující dokončení vztah mezi tyto datové členy.
+Pokud `m_bWndLess` je true, `m_spInPlaceSite` je `IOleInPlaceSiteWindowless` ukazatel rozhraní. V tabulce [CComControlBase:: m_spInPlaceSite](#m_spinplacesite) najdete tabulku znázorňující úplný vztah mezi těmito datovými členy.
 
-##  <a name="m_hwndcd"></a>  CComControlBase::m_hWndCD
+##  <a name="m_hwndcd"></a>CComControlBase::m_hWndCD
 
 Obsahuje odkaz na popisovač okna přidružený k ovládacímu prvku.
 
@@ -1078,11 +1078,11 @@ HWND& m_hWndCD;
 ### <a name="remarks"></a>Poznámky
 
 > [!NOTE]
->  Pokud chcete použít tento datový člen v rámci třídy vašeho ovládacího prvku, je třeba deklarovat jako datový člen ve třídě ovládacího prvku. Třídy vašeho ovládacího prvku nebude dědit tomuto datovému členu ze základní třídy, protože je deklarována v rámci sjednocení v základní třídě.
+>  Chcete-li použít tohoto datového člena v rámci třídy ovládacího prvku, je nutné jej deklarovat jako datový člen ve třídě ovládacího prvku. Vaše třída ovládacího prvku nedědí tohoto datového člena ze základní třídy, protože je deklarována v rámci sjednocení v základní třídě.
 
-##  <a name="m_nfreezeevents"></a>  CComControlBase::m_nFreezeEvents
+##  <a name="m_nfreezeevents"></a>CComControlBase::m_nFreezeEvents
 
-Počet, kolikrát kontejneru je zmrazen události (odmítl akceptovat události) bez použité odblokovat událostí (přijetí události).
+Počet, kolikrát kontejner obsahuje zmrazené události (odmítl přijímat události) bez ovlivnění odmrazení událostí (přijetí událostí).
 
 ```
 short m_nFreezeEvents;
@@ -1091,11 +1091,11 @@ short m_nFreezeEvents;
 ### <a name="remarks"></a>Poznámky
 
 > [!NOTE]
->  Pokud chcete použít tento datový člen v rámci třídy vašeho ovládacího prvku, je třeba deklarovat jako datový člen ve třídě ovládacího prvku. Třídy vašeho ovládacího prvku nebude dědit tomuto datovému členu ze základní třídy, protože je deklarována v rámci sjednocení v základní třídě.
+>  Chcete-li použít tohoto datového člena v rámci třídy ovládacího prvku, je nutné jej deklarovat jako datový člen ve třídě ovládacího prvku. Vaše třída ovládacího prvku nedědí tohoto datového člena ze základní třídy, protože je deklarována v rámci sjednocení v základní třídě.
 
-##  <a name="m_rcpos"></a>  CComControlBase::m_rcPos
+##  <a name="m_rcpos"></a>CComControlBase::m_rcPos
 
-Pozice ovládacího prvku, vyjádřená v souřadnicích kontejneru v pixelech.
+Pozice v pixelech ovládacího prvku vyjádřená v souřadnicích kontejneru.
 
 ```
 RECT m_rcPos;
@@ -1104,11 +1104,11 @@ RECT m_rcPos;
 ### <a name="remarks"></a>Poznámky
 
 > [!NOTE]
->  Pokud chcete použít tento datový člen v rámci třídy vašeho ovládacího prvku, je třeba deklarovat jako datový člen ve třídě ovládacího prvku. Třídy vašeho ovládacího prvku nebude dědit tomuto datovému členu ze základní třídy, protože je deklarována v rámci sjednocení v základní třídě.
+>  Chcete-li použít tohoto datového člena v rámci třídy ovládacího prvku, je nutné jej deklarovat jako datový člen ve třídě ovládacího prvku. Vaše třída ovládacího prvku nedědí tohoto datového člena ze základní třídy, protože je deklarována v rámci sjednocení v základní třídě.
 
-##  <a name="m_sizeextent"></a>  CComControlBase::m_sizeExtent
+##  <a name="m_sizeextent"></a>CComControlBase::m_sizeExtent
 
-Rozsah ovládacího prvku v jednotkách HIMETRIC (každá jednotka je 0,01 milimetrech) pro konkrétní zobrazení.
+Rozsah ovládacího prvku v jednotkách HIMETRIC (každá jednotka je 0,01 milimetrů) pro konkrétní displej.
 
 ```
 SIZE m_sizeExtent;
@@ -1117,15 +1117,15 @@ SIZE m_sizeExtent;
 ### <a name="remarks"></a>Poznámky
 
 > [!NOTE]
->  Pokud chcete použít tento datový člen v rámci třídy vašeho ovládacího prvku, je třeba deklarovat jako datový člen ve třídě ovládacího prvku. Třídy vašeho ovládacího prvku nebude dědit tomuto datovému členu ze základní třídy, protože je deklarována v rámci sjednocení v základní třídě.
+>  Chcete-li použít tohoto datového člena v rámci třídy ovládacího prvku, je nutné jej deklarovat jako datový člen ve třídě ovládacího prvku. Vaše třída ovládacího prvku nedědí tohoto datového člena ze základní třídy, protože je deklarována v rámci sjednocení v základní třídě.
 
-Tato velikost se škálovat podle zobrazení. Fyzická velikost ovládacího prvku je zadán v `m_sizeNatural` datový člen a je pevná.
+Tato velikost se škáluje zobrazením. V `m_sizeNatural` datovém členu je zadaná fyzická velikost ovládacího prvku a je pevně daná.
 
-Velikost můžete převést na pixelech se globální funkce [AtlHiMetricToPixel](pixel-himetric-conversion-global-functions.md#atlhimetrictopixel).
+Velikost můžete převést na pixely s globální funkcí [AtlHiMetricToPixel](pixel-himetric-conversion-global-functions.md#atlhimetrictopixel).
 
-##  <a name="m_sizenatural"></a>  CComControlBase::m_sizeNatural
+##  <a name="m_sizenatural"></a>CComControlBase::m_sizeNatural
 
-Fyzická velikost ovládacího prvku v jednotkách HIMETRIC (každá jednotka je 0,01 milimetrech).
+Fyzická velikost ovládacího prvku v jednotkách HIMETRIC (každá jednotka je 0,01 milimetrů).
 
 ```
 SIZE m_sizeNatural;
@@ -1134,15 +1134,15 @@ SIZE m_sizeNatural;
 ### <a name="remarks"></a>Poznámky
 
 > [!NOTE]
->  Pokud chcete použít tento datový člen v rámci třídy vašeho ovládacího prvku, je třeba deklarovat jako datový člen ve třídě ovládacího prvku. Třídy vašeho ovládacího prvku nebude dědit tomuto datovému členu ze základní třídy, protože je deklarována v rámci sjednocení v základní třídě.
+>  Chcete-li použít tohoto datového člena v rámci třídy ovládacího prvku, je nutné jej deklarovat jako datový člen ve třídě ovládacího prvku. Vaše třída ovládacího prvku nedědí tohoto datového člena ze základní třídy, protože je deklarována v rámci sjednocení v základní třídě.
 
-Tato velikost je pevně daná, při velikosti v `m_sizeExtent` měřítko zobrazení.
+Tato velikost je pevná, zatímco velikost v `m_sizeExtent` je zvětšena zobrazením.
 
-Velikost můžete převést na pixelech se globální funkce [AtlHiMetricToPixel](pixel-himetric-conversion-global-functions.md#atlhimetrictopixel).
+Velikost můžete převést na pixely s globální funkcí [AtlHiMetricToPixel](pixel-himetric-conversion-global-functions.md#atlhimetrictopixel).
 
 ##  <a name="m_spadvisesink"></a>  CComControlBase::m_spAdviseSink
 
-Přímý ukazatel na poradce připojení ke kontejneru (kontejneru [IAdviseSink](/windows/desktop/api/objidl/nn-objidl-iadvisesink)).
+Přímý ukazatel na poradní připojení na kontejneru ( [IAdviseSink](/windows/win32/api/objidl/nn-objidl-iadvisesink)kontejneru).
 
 ```
 CComPtr<IAdviseSink>
@@ -1152,11 +1152,11 @@ CComPtr<IAdviseSink>
 ### <a name="remarks"></a>Poznámky
 
 > [!NOTE]
->  Pokud chcete použít tento datový člen v rámci třídy vašeho ovládacího prvku, je třeba deklarovat jako datový člen ve třídě ovládacího prvku. Třídy vašeho ovládacího prvku nebude dědit tomuto datovému členu ze základní třídy, protože je deklarována v rámci sjednocení v základní třídě.
+>  Chcete-li použít tohoto datového člena v rámci třídy ovládacího prvku, je nutné jej deklarovat jako datový člen ve třídě ovládacího prvku. Vaše třída ovládacího prvku nedědí tohoto datového člena ze základní třídy, protože je deklarována v rámci sjednocení v základní třídě.
 
-##  <a name="m_spambientdispatch"></a>  CComControlBase::m_spAmbientDispatch
+##  <a name="m_spambientdispatch"></a>CComControlBase::m_spAmbientDispatch
 
-A `CComDispatchDriver` objekt, který umožňuje načtení a nastavení vlastností objektu prostřednictvím `IDispatch` ukazatele.
+Objekt, který umožňuje načíst a nastavit vlastnosti objektu `IDispatch` prostřednictvím ukazatele. `CComDispatchDriver`
 
 ```
 CComDispatchDriver m_spAmbientDispatch;
@@ -1165,11 +1165,11 @@ CComDispatchDriver m_spAmbientDispatch;
 ### <a name="remarks"></a>Poznámky
 
 > [!NOTE]
->  Pokud chcete použít tento datový člen v rámci třídy vašeho ovládacího prvku, je třeba deklarovat jako datový člen ve třídě ovládacího prvku. Třídy vašeho ovládacího prvku nebude dědit tomuto datovému členu ze základní třídy, protože je deklarována v rámci sjednocení v základní třídě.
+>  Chcete-li použít tohoto datového člena v rámci třídy ovládacího prvku, je nutné jej deklarovat jako datový člen ve třídě ovládacího prvku. Vaše třída ovládacího prvku nedědí tohoto datového člena ze základní třídy, protože je deklarována v rámci sjednocení v základní třídě.
 
-##  <a name="m_spclientsite"></a>  CComControlBase::m_spClientSite
+##  <a name="m_spclientsite"></a>CComControlBase::m_spClientSite
 
-Ukazatel na lokality klienta ovládacího prvku v rámci kontejneru.
+Ukazatel na klientský web ovládacího prvku v rámci kontejneru.
 
 ```
 CComPtr<IOleClientSite>
@@ -1179,11 +1179,11 @@ CComPtr<IOleClientSite>
 ### <a name="remarks"></a>Poznámky
 
 > [!NOTE]
->  Pokud chcete použít tento datový člen v rámci třídy vašeho ovládacího prvku, je třeba deklarovat jako datový člen ve třídě ovládacího prvku. Třídy vašeho ovládacího prvku nebude dědit tomuto datovému členu ze základní třídy, protože je deklarována v rámci sjednocení v základní třídě.
+>  Chcete-li použít tohoto datového člena v rámci třídy ovládacího prvku, je nutné jej deklarovat jako datový člen ve třídě ovládacího prvku. Vaše třída ovládacího prvku nedědí tohoto datového člena ze základní třídy, protože je deklarována v rámci sjednocení v základní třídě.
 
 ##  <a name="m_spdataadviseholder"></a>  CComControlBase::m_spDataAdviseHolder
 
-Poskytuje že standardní znamená, že pro uložení advisory připojení mezi datovými objekty dokáží jímky.
+Poskytuje standardní způsob, jak uchovávat poradenská připojení mezi datovými objekty a příjímkami pro poradenství.
 
 ```
 CComPtr<IDataAdviseHolder>
@@ -1193,15 +1193,15 @@ CComPtr<IDataAdviseHolder>
 ### <a name="remarks"></a>Poznámky
 
 > [!NOTE]
->  Pokud chcete použít tento datový člen v rámci třídy vašeho ovládacího prvku, je třeba deklarovat jako datový člen ve třídě ovládacího prvku. Třídy vašeho ovládacího prvku nebude dědit tomuto datovému členu ze základní třídy, protože je deklarována v rámci sjednocení v základní třídě.
+>  Chcete-li použít tohoto datového člena v rámci třídy ovládacího prvku, je nutné jej deklarovat jako datový člen ve třídě ovládacího prvku. Vaše třída ovládacího prvku nedědí tohoto datového člena ze základní třídy, protože je deklarována v rámci sjednocení v základní třídě.
 
-Datový objekt je ovládací prvek, který se můžou přenášet data a, který implementuje [IDataObject](/windows/desktop/api/objidl/nn-objidl-idataobject), jejíž metody zadejte střední formátu a přenos dat.
+Datový objekt je ovládací prvek, který může přenášet data a implementuje [IDataObject](/windows/win32/api/objidl/nn-objidl-idataobject), jejichž metody určují formát a přenos středníku dat.
 
-Rozhraní `m_spDataAdviseHolder` implementuje [IDataObject::DAdvise](/windows/desktop/api/objidl/nf-objidl-idataobject-dadvise) a [IDataObject::DUnadvise](/windows/desktop/api/objidl/nf-objidl-idataobject-dunadvise) metody pro vytvoření a odstranění advisory připojení ke kontejneru. Kontejneru ovládacího prvku musí implementovat jímky doporučení díky podpoře [IAdviseSink](/windows/desktop/api/objidl/nn-objidl-iadvisesink) rozhraní.
+Rozhraní `m_spDataAdviseHolder` implementuje [IDataObject::D Advise](/windows/win32/api/objidl/nf-objidl-idataobject-dadvise) a [IDataObject::D Unadvise](/windows/win32/api/objidl/nf-objidl-idataobject-dunadvise) metody pro vytvoření a odstranění poradenských připojení ke kontejneru. Kontejner ovládacího prvku musí implementovat jímku služby Advise tím, že podporuje rozhraní [IAdviseSink](/windows/win32/api/objidl/nn-objidl-iadvisesink) .
 
 ##  <a name="m_spinplacesite"></a>  CComControlBase::m_spInPlaceSite
 
-Ukazatel na kontejneru [IOleInPlaceSite](/windows/desktop/api/oleidl/nn-oleidl-ioleinplacesite), [IOleInPlaceSiteEx](/windows/desktop/api/ocidl/nn-ocidl-ioleinplacesiteex), nebo [IOleInPlaceSiteWindowless](/windows/desktop/api/ocidl/nn-ocidl-ioleinplacesitewindowless) ukazatel rozhraní.
+Ukazatel na ukazatel rozhraní [IOleInPlaceSite](/windows/win32/api/oleidl/nn-oleidl-ioleinplacesite), [IOleInPlaceSiteEx](/windows/win32/api/ocidl/nn-ocidl-ioleinplacesiteex)nebo [IOleInPlaceSiteWindowless](/windows/win32/api/ocidl/nn-ocidl-ioleinplacesitewindowless) kontejneru.
 
 ```
 CComPtr<IOleInPlaceSiteWindowless>
@@ -1211,21 +1211,21 @@ CComPtr<IOleInPlaceSiteWindowless>
 ### <a name="remarks"></a>Poznámky
 
 > [!NOTE]
->  Pokud chcete použít tento datový člen v rámci třídy vašeho ovládacího prvku, je třeba deklarovat jako datový člen ve třídě ovládacího prvku. Třídy vašeho ovládacího prvku nebude dědit tomuto datovému členu ze základní třídy, protože je deklarována v rámci sjednocení v základní třídě.
+>  Chcete-li použít tohoto datového člena v rámci třídy ovládacího prvku, je nutné jej deklarovat jako datový člen ve třídě ovládacího prvku. Vaše třída ovládacího prvku nedědí tohoto datového člena ze základní třídy, protože je deklarována v rámci sjednocení v základní třídě.
 
-`m_spInPlaceSite` Ukazatel je platný pouze tehdy, pokud [m_bNegotiatedWnd](#m_bnegotiatedwnd) příznak je TRUE.
+Ukazatel je platný pouze v případě, že příznak m_bNegotiatedWnd má hodnotu true. [](#m_bnegotiatedwnd) `m_spInPlaceSite`
 
-Následující tabulka ukazuje jak `m_spInPlaceSite` typ ukazatele závisí [m_bWndLess](#m_bwndless) a [m_bInPlaceSiteEx](#m_binplacesiteex) datový člen příznaky:
+Následující tabulka ukazuje, jak `m_spInPlaceSite` typ ukazatele závisí na příznaků datových členů [m_bWndLess](#m_bwndless) a [m_bInPlaceSiteEx](#m_binplacesiteex) :
 
-|m_spInPlaceSite typu|m_bWndLess hodnotu|m_bInPlaceSiteEx hodnotu|
+|Typ m_spInPlaceSite|Hodnota m_bWndLess|Hodnota m_bInPlaceSiteEx|
 |---------------------------|-----------------------|-----------------------------|
-|`IOleInPlaceSiteWindowless`|HODNOTA TRUE|TRUE nebo FALSE|
-|`IOleInPlaceSiteEx`|FALSE|HODNOTA TRUE|
-|`IOleInPlaceSite`|FALSE|FALSE|
+|`IOleInPlaceSiteWindowless`|PODMÍNKA|TRUE nebo FALSE|
+|`IOleInPlaceSiteEx`|CHYBNÉ|PODMÍNKA|
+|`IOleInPlaceSite`|CHYBNÉ|CHYBNÉ|
 
-##  <a name="m_spoleadviseholder"></a>  CComControlBase::m_spOleAdviseHolder
+##  <a name="m_spoleadviseholder"></a>CComControlBase::m_spOleAdviseHolder
 
-Poskytuje standardní implementace způsob uložení advisory připojení.
+Poskytuje standardní implementaci způsobu uchovávání poradenských připojení.
 
 ```
 CComPtr<IOleAdviseHolder>
@@ -1235,13 +1235,13 @@ CComPtr<IOleAdviseHolder>
 ### <a name="remarks"></a>Poznámky
 
 > [!NOTE]
->  Pokud chcete použít tento datový člen v rámci třídy vašeho ovládacího prvku, je třeba deklarovat jako datový člen ve třídě ovládacího prvku. Třídy vašeho ovládacího prvku nebude dědit tomuto datovému členu ze základní třídy, protože je deklarována v rámci sjednocení v základní třídě.
+>  Chcete-li použít tohoto datového člena v rámci třídy ovládacího prvku, je nutné jej deklarovat jako datový člen ve třídě ovládacího prvku. Vaše třída ovládacího prvku nedědí tohoto datového člena ze základní třídy, protože je deklarována v rámci sjednocení v základní třídě.
 
-Rozhraní `m_spOleAdviseHolder` implementuje [IOleObject::Advise](/windows/desktop/api/oleidl/nf-oleidl-ioleobject-advise) a [IOleObject::Unadvise](/windows/desktop/api/oleidl/nf-oleidl-ioleobject-unadvise) metody pro vytvoření a odstranění advisory připojení ke kontejneru. Kontejneru ovládacího prvku musí implementovat jímky doporučení díky podpoře [IAdviseSink](/windows/desktop/api/objidl/nn-objidl-iadvisesink) rozhraní.
+Rozhraní `m_spOleAdviseHolder` implementuje metody [IOleObject:: Advise](/windows/win32/api/oleidl/nf-oleidl-ioleobject-advise) a [IOleObject:: Unadvise](/windows/win32/api/oleidl/nf-oleidl-ioleobject-unadvise) pro vytváření a odstraňování poradenských připojení ke kontejneru. Kontejner ovládacího prvku musí implementovat jímku služby Advise tím, že podporuje rozhraní [IAdviseSink](/windows/win32/api/objidl/nn-objidl-iadvisesink) .
 
-##  <a name="ondraw"></a>  CComControlBase::OnDraw
+##  <a name="ondraw"></a>CComControlBase:: Draw
 
-Potlačí tuto metodu za účelem vykreslení ovládacího prvku.
+Tuto metodu přepište, pokud chcete ovládací prvek nakreslit.
 
 ```
 virtual HRESULT OnDraw(ATL_DRAWINFO& di);
@@ -1250,25 +1250,25 @@ virtual HRESULT OnDraw(ATL_DRAWINFO& di);
 ### <a name="parameters"></a>Parametry
 
 *di*<br/>
-Odkaz na [atl_drawinfo –](../../atl/reference/atl-drawinfo-structure.md) strukturu, která obsahuje výkresu informace, jako je aspekt kreslení, hranice ovládacího prvku a určuje, zda je výkresu optimalizovaná nebo ne.
+Odkaz na strukturu [ATL_DRAWINFO](../../atl/reference/atl-drawinfo-structure.md) , která obsahuje informace o kreslení, jako je například aspekt vykreslování, ovládací prvky svázané a zda je výkres optimalizován.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Standardní hodnoty HRESULT.
+Standardní hodnota HRESULT.
 
 ### <a name="remarks"></a>Poznámky
 
-Výchozí hodnota `OnDraw` odstraní nebo obnoví kontextu zařízení nebo nemá žádný účinek, v závislosti na nastavení příznaků v [CComControlBase::OnDrawAdvanced](#ondrawadvanced).
+Výchozí `OnDraw` odstraní nebo obnoví kontext zařízení nebo neprovede žádné akce v závislosti na příznacích nastavených v [CComControlBase:: OnDrawAdvanced](#ondrawadvanced).
 
-`OnDraw` Metoda je automaticky přidán do třídy vašeho ovládacího prvku při vytváření ovládacího prvku pomocí Průvodce ovládacími prvky ATL. Průvodce výchozí `OnDraw` kreslení obdélníku s popiskem "ATL 8.0".
+`OnDraw` Metoda je automaticky přidána do vaší třídy ovládacího prvku při vytvoření ovládacího prvku pomocí Průvodce ovládacím prvkem ATL. Výchozí hodnota `OnDraw` Průvodce nakreslí obdélník s popiskem ATL 8,0.
 
 ### <a name="example"></a>Příklad
 
-Podívejte se na příklad pro [CComControlBase::GetAmbientAppearance](#getambientappearance).
+Podívejte se na příklad pro [CComControlBase:: GetAmbientAppearance](#getambientappearance).
 
-##  <a name="ondrawadvanced"></a>  CComControlBase::OnDrawAdvanced
+##  <a name="ondrawadvanced"></a>CComControlBase::OnDrawAdvanced
 
-Výchozí hodnota `OnDrawAdvanced` připraví normalizovaný kontext zařízení pro kreslení a pak volá třídy vašeho ovládacího prvku `OnDraw` metody.
+Výchozí `OnDrawAdvanced` připraví normalizovaný kontext zařízení pro kreslení a pak volá `OnDraw` metodu vaší třídy ovládacího prvku.
 
 ```
 virtual HRESULT OnDrawAdvanced(ATL_DRAWINFO& di);
@@ -1277,21 +1277,21 @@ virtual HRESULT OnDrawAdvanced(ATL_DRAWINFO& di);
 ### <a name="parameters"></a>Parametry
 
 *di*<br/>
-Odkaz na [atl_drawinfo –](../../atl/reference/atl-drawinfo-structure.md) strukturu, která obsahuje výkresu informace, jako je aspekt kreslení, hranice ovládacího prvku a určuje, zda je výkresu optimalizovaná nebo ne.
+Odkaz na strukturu [ATL_DRAWINFO](../../atl/reference/atl-drawinfo-structure.md) , která obsahuje informace o kreslení, jako je například aspekt vykreslování, ovládací prvky svázané a zda je výkres optimalizován.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Standardní hodnoty HRESULT.
+Standardní hodnota HRESULT.
 
 ### <a name="remarks"></a>Poznámky
 
-Potlačí tuto metodu, pokud chcete přijmout kontext zařízení předaný kontejnerem, aniž byste ho normalizovali.
+Tuto metodu přepište, pokud chcete přijmout kontext zařízení předaný kontejnerem bez jeho normalizace.
 
-Zobrazit [CComControlBase::OnDraw](#ondraw) další podrobnosti.
+Další podrobnosti najdete v tématu [CComControlBase::-Draw](#ondraw) .
 
-##  <a name="onkillfocus"></a>  CComControlBase::OnKillFocus
+##  <a name="onkillfocus"></a>CComControlBase::OnKillFocus
 
-Ověří, že ovládací prvek je aktivní místní a má platný ovládací prvek a potom kontejneru informuje, že ovládací prvek ztratil fokus.
+Kontroluje, zda je ovládací prvek na místě aktivní a má platnou řídicí lokalitu, a poté informuje o kontejneru, že ovládací prvek ztratil fokus.
 
 ```
 LRESULT OnKillFocus(UINT /* nMsg */,
@@ -1303,24 +1303,24 @@ LRESULT OnKillFocus(UINT /* nMsg */,
 ### <a name="parameters"></a>Parametry
 
 *nMsg*<br/>
-Vyhrazená.
+Rezervovaný.
 
 *wParam*<br/>
-Vyhrazená.
+Rezervovaný.
 
 *lParam*<br/>
-Vyhrazená.
+Rezervovaný.
 
 *bHandled*<br/>
-Příznak, který označuje, zda byla úspěšně zpracována zprávy okna. Výchozí hodnota je FALSE.
+Příznak, který označuje, zda byla zpráva okna úspěšně zpracována. Výchozí hodnota je FALSE.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vždy vrátí hodnotu 1.
+Vždycky vrátí hodnotu 1.
 
-##  <a name="onmouseactivate"></a>  CComControlBase::OnMouseActivate
+##  <a name="onmouseactivate"></a>CComControlBase::OnMouseActivate
 
-Kontroluje, zda je v uživatelském režimu uživatelského rozhraní, a aktivuje ovládací prvek.
+Kontroluje, zda je uživatelské rozhraní v uživatelském režimu, a poté aktivuje ovládací prvek.
 
 ```
 LRESULT OnMouseActivate(UINT /* nMsg */,
@@ -1332,24 +1332,24 @@ LRESULT OnMouseActivate(UINT /* nMsg */,
 ### <a name="parameters"></a>Parametry
 
 *nMsg*<br/>
-Vyhrazená.
+Rezervovaný.
 
 *wParam*<br/>
-Vyhrazená.
+Rezervovaný.
 
 *lParam*<br/>
-Vyhrazená.
+Rezervovaný.
 
 *bHandled*<br/>
-Příznak, který označuje, zda byla úspěšně zpracována zprávy okna. Výchozí hodnota je FALSE.
+Příznak, který označuje, zda byla zpráva okna úspěšně zpracována. Výchozí hodnota je FALSE.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vždy vrátí hodnotu 1.
+Vždycky vrátí hodnotu 1.
 
-##  <a name="onpaint"></a>  CComControlBase::OnPaint
+##  <a name="onpaint"></a>CComControlBase:: propaintt
 
-Připraví kontejner pro kreslení, získá klientské oblasti ovládacího prvku a pak volá třídy ovládacího prvku `OnDrawAdvanced` metody.
+Připraví kontejner pro vymalování, získá klientské oblasti ovládacího prvku a pak zavolá `OnDrawAdvanced` metodu třídy ovládacího prvku.
 
 ```
 LRESULT OnPaint(UINT /* nMsg */,
@@ -1361,28 +1361,28 @@ LRESULT OnPaint(UINT /* nMsg */,
 ### <a name="parameters"></a>Parametry
 
 *nMsg*<br/>
-Vyhrazená.
+Rezervovaný.
 
 *wParam*<br/>
 Existující HDC.
 
 *lParam*<br/>
-Vyhrazená.
+Rezervovaný.
 
-*lResult*<br/>
-Vyhrazená.
+*Získání výsledku LRESULT*<br/>
+Rezervovaný.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vždy vrátí hodnotu 0.
+Vždycky vrátí nulu.
 
 ### <a name="remarks"></a>Poznámky
 
-Pokud *wParam* nemá hodnotu NULL, `OnPaint` předpokládá obsahuje platné HDC a používá místo něj [CComControlBase::m_hWndCD](#m_hwndcd).
+Pokud *wParam* není null, předpokládá `OnPaint` , že obsahuje platný HDC a použije ji místo [CComControlBase:: m_hWndCD](#m_hwndcd).
 
-##  <a name="onsetfocus"></a>  CComControlBase::OnSetFocus
+##  <a name="onsetfocus"></a>CComControlBase:: OnSetFocus
 
-Kontroluje, že ovládací prvek je aktivní místní a má platný ovládací prvek a potom informuje kontejneru ovládacího prvku získal fokus.
+Kontroluje, zda je ovládací prvek na místě aktivní a má platnou řídicí lokalitu, a poté informuje o kontejneru, který ovládací prvek získal fokus.
 
 ```
 LRESULT OnSetFocus(UINT /* nMsg */,
@@ -1394,28 +1394,28 @@ LRESULT OnSetFocus(UINT /* nMsg */,
 ### <a name="parameters"></a>Parametry
 
 *nMsg*<br/>
-Vyhrazená.
+Rezervovaný.
 
 *wParam*<br/>
-Vyhrazená.
+Rezervovaný.
 
 *lParam*<br/>
-Vyhrazená.
+Rezervovaný.
 
 *bHandled*<br/>
-Příznak, který označuje, zda byla úspěšně zpracována zprávy okna. Výchozí hodnota je FALSE.
+Příznak, který označuje, zda byla zpráva okna úspěšně zpracována. Výchozí hodnota je FALSE.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vždy vrátí hodnotu 1.
+Vždycky vrátí hodnotu 1.
 
 ### <a name="remarks"></a>Poznámky
 
-Odešle oznámení do kontejneru, že ovládací prvek přijal fokus.
+Pošle oznámení do kontejneru, který ovládací prvek obdržel fokus.
 
-##  <a name="pretranslateaccelerator"></a>  CComControlBase::PreTranslateAccelerator
+##  <a name="pretranslateaccelerator"></a>CComControlBase::P reTranslateAccelerator
 
-Přepsáním této metody můžete zadat vlastní klávesnice obslužné rutiny akcelerátoru.
+Tuto metodu přepište, pokud chcete poskytnout vlastní obslužné rutiny pro klávesové zkratky.
 
 ```
 BOOL PreTranslateAccelerator(LPMSG /* pMsg */,
@@ -1425,18 +1425,18 @@ BOOL PreTranslateAccelerator(LPMSG /* pMsg */,
 ### <a name="parameters"></a>Parametry
 
 *pMsg*<br/>
-Vyhrazená.
+Rezervovaný.
 
 *hRet*<br/>
-Vyhrazená.
+Rezervovaný.
 
 ### <a name="return-value"></a>Návratová hodnota
 
 Ve výchozím nastavení vrátí hodnotu FALSE.
 
-##  <a name="sendonclose"></a>  CComControlBase::SendOnClose
+##  <a name="sendonclose"></a>CComControlBase::SendOnClose
 
-Oznámí všechny advisory jímky zaregistrovaného doporučení držitele, že ovládací prvek byla uzavřena.
+Upozorní všechny informační jímky zaregistrované u držitele poradenství, že byl ovládací prvek uzavřen.
 
 ```
 HRESULT SendOnClose();
@@ -1448,11 +1448,11 @@ Vrátí hodnotu S_OK při úspěchu nebo chybu HRESULT při selhání.
 
 ### <a name="remarks"></a>Poznámky
 
-Odešle oznámení, že ovládací prvek byl uzavřen jeho advisory jímky.
+Pošle oznámení, že ovládací prvek uzavřel své poradenské jímky.
 
-##  <a name="sendondatachange"></a>  CComControlBase::SendOnDataChange
+##  <a name="sendondatachange"></a>CComControlBase::SendOnDataChange
 
-Oznámí všechny advisory zaregistrovaného držitel doporučení, které se změnily ovládací prvek dat jímky.
+Upozorní všechny informační jímky zaregistrované u držitele poradenství, že se data ovládacího prvku změnila.
 
 ```
 HRESULT SendOnDataChange(DWORD advf = 0);
@@ -1461,15 +1461,15 @@ HRESULT SendOnDataChange(DWORD advf = 0);
 ### <a name="parameters"></a>Parametry
 
 *advf*<br/>
-Pomocné příznaky, které určují, jak volání [IAdviseSink::OnDataChange](/windows/desktop/api/objidl/nf-objidl-iadvisesink-ondatachange) tvoří. Hodnoty jsou od [ADVF](/windows/desktop/api/objidl/ne-objidl-tagadvf) výčtu.
+Příznaky pro upozornění, které určují, jak se provádí volání metody [IAdviseSink:: OnDataChange](/windows/win32/api/objidl/nf-objidl-iadvisesink-ondatachange) . Hodnoty jsou z výčtu [ADVF](/windows/win32/api/objidl/ne-objidl-advf) .
 
 ### <a name="return-value"></a>Návratová hodnota
 
 Vrátí hodnotu S_OK při úspěchu nebo chybu HRESULT při selhání.
 
-##  <a name="sendonrename"></a>  CComControlBase::SendOnRename
+##  <a name="sendonrename"></a>CComControlBase::SendOnRename
 
-Oznámí všechny advisory jímky zaregistrovaného doporučení držitele, že je ovládací prvek monikeru nové.
+Upozorní všechny informační jímky zaregistrované u držitele poradenství, že má ovládací prvek nový moniker.
 
 ```
 HRESULT SendOnRename(IMoniker* pmk);
@@ -1478,7 +1478,7 @@ HRESULT SendOnRename(IMoniker* pmk);
 ### <a name="parameters"></a>Parametry
 
 *pmk*<br/>
-Ukazatel na novou zástupný název ovládacího prvku.
+Ukazatel na nový moniker ovládacího prvku.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -1486,11 +1486,11 @@ Vrátí hodnotu S_OK při úspěchu nebo chybu HRESULT při selhání.
 
 ### <a name="remarks"></a>Poznámky
 
-Odešle oznámení, že došlo ke změně zástupný pro ovládací prvek.
+Pošle oznámení, že se změnil moniker ovládacího prvku.
 
-##  <a name="sendonsave"></a>  CComControlBase::SendOnSave
+##  <a name="sendonsave"></a>CComControlBase::SendOnSave
 
-Oznámí všechny advisory jímky zaregistrovaného držitel doporučení, která byla uložena ovládacího prvku.
+Upozorní všechny informační jímky zaregistrované u držitele poradenství, že byl ovládací prvek uložen.
 
 ```
 HRESULT SendOnSave();
@@ -1502,11 +1502,11 @@ Vrátí hodnotu S_OK při úspěchu nebo chybu HRESULT při selhání.
 
 ### <a name="remarks"></a>Poznámky
 
-Odešle oznámení, že ovládací prvek právě uchránila svá data.
+Pošle oznámení, že ovládací prvek právě uložil svá data.
 
-##  <a name="sendonviewchange"></a>  CComControlBase::SendOnViewChange
+##  <a name="sendonviewchange"></a>CComControlBase::SendOnViewChange
 
-Upozorní, že všechny registrované advisory jímky, které došlo ke změně zobrazení ovládacího prvku.
+Upozorní všechny zaregistrované poradenské jímky, že se změnilo zobrazení ovládacího prvku.
 
 ```
 HRESULT SendOnViewChange(DWORD dwAspect, LONG lindex = -1);
@@ -1518,7 +1518,7 @@ HRESULT SendOnViewChange(DWORD dwAspect, LONG lindex = -1);
 Aspekt nebo zobrazení ovládacího prvku.
 
 *lindex*<br/>
-Část zobrazení, které se změnily. Je platný pouze hodnotu -1.
+Část zobrazení, která se změnila. Platný je pouze-1.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -1526,11 +1526,11 @@ Vrátí hodnotu S_OK při úspěchu nebo chybu HRESULT při selhání.
 
 ### <a name="remarks"></a>Poznámky
 
-`SendOnViewChange` volání [IAdviseSink::OnViewChange](/windows/desktop/api/objidl/nf-objidl-iadvisesink-onviewchange). Pouze hodnota *index* aktuálně podporovány se -1, což znamená, že celé zobrazení je relevantní.
+`SendOnViewChange`volá [IAdviseSink:: OnViewChange](/windows/win32/api/objidl/nf-objidl-iadvisesink-onviewchange). Jediná aktuálně podporovaná hodnota *Lindex* je-1, což znamená, že celé zobrazení je zajímavé.
 
-##  <a name="setcontrolfocus"></a>  CComControlBase::SetControlFocus
+##  <a name="setcontrolfocus"></a>CComControlBase::SetControlFocus
 
-Nastaví nebo odebere fokusu klávesnice do nebo z ovládacího prvku.
+Nastaví nebo odebere fokus klávesnice na nebo z ovládacího prvku.
 
 ```
 BOOL SetControlFocus(BOOL bGrab);
@@ -1539,19 +1539,19 @@ BOOL SetControlFocus(BOOL bGrab);
 ### <a name="parameters"></a>Parametry
 
 *bGrab*<br/>
-Při hodnotě TRUE se nastaví fokus klávesnice na ovládacím prvku volání. Pokud má hodnotu FALSE, zruší fokus klávesnice volání ovládacího prvku, pokud má fokus.
+Je-li nastavena hodnota TRUE, nastaví fokus klávesnice na volající ovládací prvek. Pokud je hodnota FALSE, odebere fokus klávesnice z ovládacího prvku volání, pokud má fokus.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vrátí hodnotu TRUE, pokud ovládací prvek úspěšně získá fokus; v opačném případě hodnota FALSE.
+Vrátí hodnotu TRUE, pokud ovládací prvek úspěšně obdrží fokus. v opačném případě FALSE.
 
 ### <a name="remarks"></a>Poznámky
 
-U ovládacího prvku v okně, funkce rozhraní Windows API [SetFocus](/windows/desktop/api/winuser/nf-winuser-setfocus) je volána. Pro ovládací prvek bez oken [IOleInPlaceSiteWindowless::SetFocus](/windows/desktop/api/ocidl/nf-ocidl-ioleinplacesitewindowless-setfocus) je volána. Prostřednictvím tohoto volání bez oken ovládací prvek získá fokus klávesnice a můžou reagovat na zprávy okna.
+Pro ovládací prvek v okně se zavolá funkce Windows API [SetFocus](/windows/win32/api/winuser/nf-winuser-setfocus) . Pro řízení bez oken se volá [IOleInPlaceSiteWindowless:: SetFocus](/windows/win32/api/ocidl/nf-ocidl-ioleinplacesitewindowless-setfocus) . Prostřednictvím tohoto volání ovládací prvek bez oken získá fokus klávesnice a může reagovat na zprávy okna.
 
-##  <a name="setdirty"></a>  CComControlBase::SetDirty
+##  <a name="setdirty"></a>CComControlBase::SetDirty
 
-Nastaví datový člen `m_bRequiresSave` s hodnotou v *bDirty*.
+Nastaví datový člen `m_bRequiresSave` na hodnotu v *bDirty*.
 
 ```
 void SetDirty(BOOL bDirty);
@@ -1560,13 +1560,13 @@ void SetDirty(BOOL bDirty);
 ### <a name="parameters"></a>Parametry
 
 *bDirty*<br/>
-Hodnota datový člen [CComControlBase::m_bRequiresSave](#m_brequiressave).
+Hodnota datového členu [CComControlBase:: m_bRequiresSave](#m_brequiressave).
 
 ### <a name="remarks"></a>Poznámky
 
-`SetDirty(TRUE)` by měla být volána k nastavení příznaku, ovládací prvek se změnila od posledního uložení. Hodnota `m_bRequiresSave` získáte pomocí [CComControlBase::GetDirty](#getdirty).
+`SetDirty(TRUE)`by měla být volána k označení toho, že se ovládací prvek od posledního uložení změnil. Hodnota `m_bRequiresSave` je načtena pomocí [CComControlBase::](#getdirty)getdirty.
 
 ## <a name="see-also"></a>Viz také:
 
 [CComControl – třída](../../atl/reference/ccomcontrol-class.md)<br/>
-[Přehled tříd](../../atl/atl-class-overview.md)
+[Přehled třídy](../../atl/atl-class-overview.md)

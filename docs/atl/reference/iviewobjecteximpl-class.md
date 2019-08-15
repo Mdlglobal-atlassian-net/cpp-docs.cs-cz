@@ -1,5 +1,5 @@
 ---
-title: Iviewobjecteximpl – třída
+title: IViewObjectExImpl – třída
 ms.date: 11/04/2016
 f1_keywords:
 - IViewObjectExImpl
@@ -22,19 +22,19 @@ helpviewer_keywords:
 - advise sinks
 - IViewObjectExImpl class
 ms.assetid: ad6de760-1ee5-4883-b033-ae57beffc369
-ms.openlocfilehash: 4ed7a7e4a6070ba52c54c4dace687111cf7d33d8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3aead41f317d175eac9dcb094aa2070d82dc6185
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62198210"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69495493"
 ---
-# <a name="iviewobjecteximpl-class"></a>Iviewobjecteximpl – třída
+# <a name="iviewobjecteximpl-class"></a>IViewObjectExImpl – třída
 
-Tato třída implementuje `IUnknown` a poskytuje výchozí implementaci [IViewObject](/windows/desktop/api/oleidl/nn-oleidl-iviewobject), [IViewObject2](/windows/desktop/api/oleidl/nn-oleidl-iviewobject2), a [IViewObjectEx](/windows/desktop/api/ocidl/nn-ocidl-iviewobjectex) rozhraní.
+Tato třída implementuje `IUnknown` a poskytuje výchozí implementace rozhraní [IViewObject](/windows/win32/api/oleidl/nn-oleidl-iviewobject), [IViewObject2](/windows/win32/api/oleidl/nn-oleidl-iviewobject2)a [IViewObjectEx](/windows/win32/api/ocidl/nn-ocidl-iviewobjectex) .
 
 > [!IMPORTANT]
->  Tato třída a jejích členů nelze použít v aplikacích, které jsou spouštěny v modulu Windows Runtime.
+>  Tato třída a její členové nelze použít v aplikacích, které jsou spouštěny v prostředí Windows Runtime.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -47,30 +47,30 @@ class ATL_NO_VTABLE IViewObjectExImpl
 #### <a name="parameters"></a>Parametry
 
 *T*<br/>
-Vaše třída odvozena od `IViewObjectExImpl`.
+Vaše třída, která je `IViewObjectExImpl`odvozena z.
 
 ## <a name="members"></a>Členové
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
-|[IViewObjectExImpl::Draw](#draw)|Nakreslí znázornění ovládacího prvku do kontextu zařízení.|
-|[IViewObjectExImpl::Freeze](#freeze)|Zablokuje vykresleného reprezentace ovládacího prvku, nezmění se do `Unfreeze`. Implementace knihovny ATL vrátí E_NOTIMPL.|
-|[IViewObjectExImpl::GetAdvise](#getadvise)|Načte existující připojení advisory jímky na ovládacím prvku, pokud existuje.|
-|[IViewObjectExImpl::GetColorSet](#getcolorset)|Vrátí logickou paletu použit v ovládacím prvku pro kreslení. Implementace knihovny ATL vrátí E_NOTIMPL.|
-|[IViewObjectExImpl::GetExtent](#getextent)|Získá velikost zobrazení ovládacího prvku v jednotkách HIMETRIC (za jednotku 0,01 milimetru) z datový člen třídy ovládacího prvku [CComControlBase::m_sizeExtent](../../atl/reference/ccomcontrolbase-class.md#m_sizeextent).|
-|[IViewObjectExImpl::GetNaturalExtent](#getnaturalextent)|Poskytuje tipy pro změnu velikosti z kontejneru pro objekt, který chcete použít, protože ji uživatel změní.|
-|[IViewObjectExImpl::GetRect](#getrect)|Vrací obdélník popisující požadovaný aspekt kreslení. Implementace knihovny ATL vrátí E_NOTIMPL.|
-|[IViewObjectExImpl::GetViewStatus](#getviewstatus)|Vrátí informace o neprůhlednost objektu a jaké aspekty kresby jsou podporované.|
-|[IViewObjectExImpl::QueryHitPoint](#queryhitpoint)|Zkontroluje, jestli se zadaný bod je v zadané obdélníku a vrátí [HITRESULT](/windows/desktop/api/ocidl/ne-ocidl-taghitresult) hodnota v `pHitResult`.|
-|[IViewObjectExImpl::QueryHitRect](#queryhitrect)|Ověří, zda ovládacího prvku zobrazovací obdélník překrývá libovolný bod v obdélníku zadaného umístění a vrátí hodnotu HITRESULT v `pHitResult`.|
-|[IViewObjectExImpl::SetAdvise](#setadvise)|Nastaví spojení mezi ovládacím prvkem a jímky doporučení tak jímka můžete být upozorněni o změnách v zobrazení ovládacího prvku.|
-|[IViewObjectExImpl::Unfreeze](#unfreeze)|Zruší ukotvení vykresleného reprezentace ovládacího prvku. Implementace knihovny ATL vrátí E_NOTIMPL.|
+|[IViewObjectExImpl: nezpracované:D](#draw)|Nakreslí reprezentace ovládacího prvku do kontextu zařízení.|
+|[IViewObjectExImpl:: zmrazit](#freeze)|Zablokuje vykreslenou reprezentaci ovládacího prvku tak, aby se nezměnila do `Unfreeze`. Implementace ATL Vrátí E_NOTIMPL.|
+|[IViewObjectExImpl::GetAdvise](#getadvise)|Načte existující připojení informační jímky na ovládacím prvku, pokud existuje.|
+|[IViewObjectExImpl::GetColorSet](#getcolorset)|Vrátí logickou paletu používanou ovládacím prvkem pro kreslení. Implementace ATL Vrátí E_NOTIMPL.|
+|[IViewObjectExImpl:: getrozsah](#getextent)|Načte velikost zobrazení ovládacího prvku v jednotkách HIMETRIC (0,01 milimetr na jednotku) z datového členu třídy ovládacího prvku [CComControlBase:: m_sizeExtent](../../atl/reference/ccomcontrolbase-class.md#m_sizeextent).|
+|[IViewObjectExImpl::GetNaturalExtent](#getnaturalextent)|Poskytuje tipy pro změnu velikosti z kontejneru pro objekt, který se má použít, když uživatel změní jeho velikost.|
+|[IViewObjectExImpl::GetRect](#getrect)|Vrátí obdélník popisující požadovaný aspekt kreslení. Implementace ATL Vrátí E_NOTIMPL.|
+|[IViewObjectExImpl::GetViewStatus](#getviewstatus)|Vrátí informace o neprůhlednosti objektu a o tom, jaké aspekty vykreslování jsou podporovány.|
+|[IViewObjectExImpl::QueryHitPoint](#queryhitpoint)|Zkontroluje, zda je zadaný bod v zadaném obdélníku a vrátí hodnotu [HITRESULT](/windows/win32/api/ocidl/ne-ocidl-hitresult) v `pHitResult`.|
+|[IViewObjectExImpl::QueryHitRect](#queryhitrect)|Kontroluje, zda se obdélník zobrazení ovládacího prvku překrývá s jakýmkoli bodem v zadaném obdélníku umístění a vrátí hodnotu HITRESULT `pHitResult`v.|
+|[IViewObjectExImpl::SetAdvise](#setadvise)|Nastaví připojení mezi ovládacím prvkem a jímkou příplatku, aby mohla být jímka upozorněna na změny v zobrazení ovládacího prvku.|
+|[IViewObjectExImpl:: unzmrazit](#unfreeze)|Uvolní vykreslenou reprezentaci ovládacího prvku. Implementace ATL Vrátí E_NOTIMPL.|
 
 ## <a name="remarks"></a>Poznámky
 
-[IViewObject](/windows/desktop/api/oleidl/nn-oleidl-iviewobject), [IViewObject2](/windows/desktop/api/oleidl/nn-oleidl-iviewobject2), a [IViewObjectEx](/windows/desktop/api/ocidl/nn-ocidl-iviewobjectex) rozhraní umožňují ovládací prvek zobrazení samotného přímo nebo můžete vytvářet a spravovat jímky doporučení upozornit kontejner změny v zobrazení ovládacího prvku. `IViewObjectEx` Rozhraní poskytuje podporu pro rozšířené ovládací prvek funkcí jako jsou blikání kreslení, průhledných a neobdélníkových ovládací prvky a spuštění testu (například jak blízko kliknutí myší musí být považovat na ovládacím prvku). Třída `IViewObjectExImpl` poskytuje výchozí implementaci těchto rozhraní a implementuje `IUnknown` posíláním informací o k výpisu paměti zařízení v ladění sestavení.
+Rozhraní [IViewObject](/windows/win32/api/oleidl/nn-oleidl-iviewobject), [IViewObject2](/windows/win32/api/oleidl/nn-oleidl-iviewobject2)a [IViewObjectEx](/windows/win32/api/ocidl/nn-ocidl-iviewobjectex) umožňují ovládacím prvkům, aby se zobrazily přímo, a vytvořila a spravovala jímka Advise, která upozorní kontejner na změny v zobrazení ovládacího prvku. `IViewObjectEx` Rozhraní poskytuje podporu pro rozšířené funkce ovládacího prvku, jako je například kreslení bez blikání, nepravoúhlé a transparentní ovládací prvky, a testování volání (například způsob, jakým je nutné, aby se na ovládacím prvku mohl považovat kliknutí myší zavřít). Třída `IViewObjectExImpl` poskytuje výchozí implementaci těchto rozhraní a implementuje `IUnknown` odesláním informací do zařízení výpisu paměti v sestaveních pro ladění.
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
@@ -80,11 +80,11 @@ Vaše třída odvozena od `IViewObjectExImpl`.
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** atlctl.h
+**Záhlaví:** atlctl. h
 
-##  <a name="draw"></a>  IViewObjectExImpl::Draw
+##  <a name="draw"></a>IViewObjectExImpl: nezpracované:D
 
-Nakreslí znázornění ovládacího prvku do kontextu zařízení.
+Nakreslí reprezentace ovládacího prvku do kontextu zařízení.
 
 ```
 STDMETHOD(Draw)(
@@ -101,13 +101,13 @@ STDMETHOD(Draw)(
 
 ### <a name="remarks"></a>Poznámky
 
-Tato metoda volá `CComControl::OnDrawAdvanced` která pak volá třídy vašeho ovládacího prvku `OnDraw` metody. `OnDraw` Metoda je automaticky přidán do třídy vašeho ovládacího prvku při vytváření ovládacího prvku pomocí Průvodce ovládacími prvky ATL. Průvodce výchozí `OnDraw` kreslení obdélníku s popiskem "ATL 3.0".
+Tato metoda volá `CComControl::OnDrawAdvanced` , která zase volá `OnDraw` metodu vaší třídy ovládacího prvku. `OnDraw` Metoda je automaticky přidána do vaší třídy ovládacího prvku při vytvoření ovládacího prvku pomocí Průvodce ovládacím prvkem ATL. Výchozí hodnota `OnDraw` Průvodce nakreslí obdélník s popiskem ATL 3,0.
 
-Zobrazit [IViewObject::Draw](/windows/desktop/api/oleidl/nf-oleidl-iviewobject-draw) ve Windows SDK.
+Viz [IViewObject::D RAW](/windows/win32/api/oleidl/nf-oleidl-iviewobject-draw) v Windows SDK.
 
-##  <a name="freeze"></a>  IViewObjectExImpl::Freeze
+##  <a name="freeze"></a>IViewObjectExImpl:: zmrazit
 
-Zablokuje vykresleného reprezentace ovládacího prvku, nezmění se do `Unfreeze`. Implementace knihovny ATL vrátí E_NOTIMPL.
+Zablokuje vykreslenou reprezentaci ovládacího prvku tak, aby se nezměnila do `Unfreeze`. Implementace ATL Vrátí E_NOTIMPL.
 
 ```
 STDMETHOD(Freeze)(
@@ -119,11 +119,11 @@ STDMETHOD(Freeze)(
 
 ### <a name="remarks"></a>Poznámky
 
-Zobrazit [IViewObject::Freeze](/windows/desktop/api/oleidl/nf-oleidl-iviewobject-freeze) ve Windows SDK.
+Viz [IViewObject:: zmrazit](/windows/win32/api/oleidl/nf-oleidl-iviewobject-freeze) ve Windows SDK.
 
-##  <a name="getadvise"></a>  IViewObjectExImpl::GetAdvise
+##  <a name="getadvise"></a>IViewObjectExImpl:: GetAdvise
 
-Načte existující připojení advisory jímky na ovládacím prvku, pokud existuje.
+Načte existující připojení informační jímky na ovládacím prvku, pokud existuje.
 
 ```
 STDMETHOD(GetAdvise)(
@@ -134,13 +134,13 @@ STDMETHOD(GetAdvise)(
 
 ### <a name="remarks"></a>Poznámky
 
-Poradní jímka jsou uložena v datový člen třídy ovládacího prvku [CComControlBase::m_spAdviseSink](../../atl/reference/ccomcontrolbase-class.md#m_spadvisesink).
+Informační jímka je uložena v datovém členu třídy ovládacího prvku [CComControlBase:: m_spAdviseSink](../../atl/reference/ccomcontrolbase-class.md#m_spadvisesink).
 
-Zobrazit [IViewObject::GetAdvise](/windows/desktop/api/oleidl/nf-oleidl-iviewobject-getadvise) ve Windows SDK.
+Viz [IViewObject:: GetAdvise](/windows/win32/api/oleidl/nf-oleidl-iviewobject-getadvise) v Windows SDK.
 
-##  <a name="getcolorset"></a>  IViewObjectExImpl::GetColorSet
+##  <a name="getcolorset"></a>IViewObjectExImpl::GetColorSet
 
-Vrátí logickou paletu použit v ovládacím prvku pro kreslení. Implementace knihovny ATL vrátí E_NOTIMPL.
+Vrátí logickou paletu používanou ovládacím prvkem pro kreslení. Implementace ATL Vrátí E_NOTIMPL.
 
 ```
 STDMETHOD(GetColorSet)(
@@ -154,11 +154,11 @@ STDMETHOD(GetColorSet)(
 
 ### <a name="remarks"></a>Poznámky
 
-Zobrazit [IViewObject::GetColorSet](/windows/desktop/api/oleidl/nf-oleidl-iviewobject-getcolorset) ve Windows SDK.
+Viz [IViewObject:: GetColorSet](/windows/win32/api/oleidl/nf-oleidl-iviewobject-getcolorset) v Windows SDK.
 
-##  <a name="getextent"></a>  IViewObjectExImpl::GetExtent
+##  <a name="getextent"></a>IViewObjectExImpl:: getrozsah
 
-Získá velikost zobrazení ovládacího prvku v jednotkách HIMETRIC (za jednotku 0,01 milimetru) z datový člen třídy ovládacího prvku [CComControlBase::m_sizeExtent](../../atl/reference/ccomcontrolbase-class.md#m_sizeextent).
+Načte velikost zobrazení ovládacího prvku v jednotkách HIMETRIC (0,01 milimetr na jednotku) z datového členu třídy ovládacího prvku [CComControlBase:: m_sizeExtent](../../atl/reference/ccomcontrolbase-class.md#m_sizeextent).
 
 ```
 STDMETHOD(GetExtent)(
@@ -170,11 +170,11 @@ STDMETHOD(GetExtent)(
 
 ### <a name="remarks"></a>Poznámky
 
-Zobrazit [IViewObject2::GetExtent](/windows/desktop/api/oleidl/nf-oleidl-iviewobject2-getextent) ve Windows SDK.
+Viz [IViewObject2:: getrozsah](/windows/win32/api/oleidl/nf-oleidl-iviewobject2-getextent) v Windows SDK.
 
-##  <a name="getnaturalextent"></a>  IViewObjectExImpl::GetNaturalExtent
+##  <a name="getnaturalextent"></a>IViewObjectExImpl::GetNaturalExtent
 
-Poskytuje tipy pro změnu velikosti z kontejneru pro objekt, který chcete použít, protože ji uživatel změní.
+Poskytuje tipy pro změnu velikosti z kontejneru pro objekt, který se má použít, když uživatel změní jeho velikost.
 
 ```
 STDMETHOD(GetNaturalExtent)(
@@ -188,13 +188,13 @@ STDMETHOD(GetNaturalExtent)(
 
 ### <a name="remarks"></a>Poznámky
 
-Pokud `dwAspect` je DVASPECT_CONTENT a *pExtentInfo -> dwExtentMode* DVEXTENT_CONTENT se nastaví * `psizel` na datový člen třídy ovládacího prvku [CComControlBase::m_sizeNatural](../../atl/reference/ccomcontrolbase-class.md#m_sizenatural). V opačném případě vrátí chybu HRESULT.
+Pokud `dwAspect` je DVASPECT_CONTENT a *pExtentInfo-> dwExtentMode* je DVEXTENT_CONTENT, nastaví * `psizel` na datový člen třídy ovládacího prvku [CComControlBase:: m_sizeNatural](../../atl/reference/ccomcontrolbase-class.md#m_sizenatural). V opačném případě vrátí chybu HRESULT.
 
-Zobrazit [IViewObjectEx::GetNaturalExtent](/windows/desktop/api/ocidl/nf-ocidl-iviewobjectex-getnaturalextent) ve Windows SDK.
+Viz [IViewObjectEx:: GetNaturalExtent](/windows/win32/api/ocidl/nf-ocidl-iviewobjectex-getnaturalextent) v Windows SDK.
 
-##  <a name="getrect"></a>  IViewObjectExImpl::GetRect
+##  <a name="getrect"></a>IViewObjectExImpl:: GetRect
 
-Vrací obdélník popisující požadovaný aspekt kreslení. Implementace knihovny ATL vrátí E_NOTIMPL.
+Vrátí obdélník popisující požadovaný aspekt kreslení. Implementace ATL Vrátí E_NOTIMPL.
 
 ```
 STDMETHOD(GetRect)(DWORD /* dwAspect */, LPRECTL /* pRect */);
@@ -202,11 +202,11 @@ STDMETHOD(GetRect)(DWORD /* dwAspect */, LPRECTL /* pRect */);
 
 ### <a name="remarks"></a>Poznámky
 
-Zobrazit [IViewObjectEx::GetRect](/windows/desktop/api/ocidl/nf-ocidl-iviewobjectex-getrect) ve Windows SDK.
+Viz [IViewObjectEx:: GetRect](/windows/win32/api/ocidl/nf-ocidl-iviewobjectex-getrect) v Windows SDK.
 
-##  <a name="getviewstatus"></a>  IViewObjectExImpl::GetViewStatus
+##  <a name="getviewstatus"></a>IViewObjectExImpl::GetViewStatus
 
-Vrátí informace o neprůhlednost objektu a jaké aspekty kresby jsou podporované.
+Vrátí informace o neprůhlednosti objektu a o tom, jaké aspekty vykreslování jsou podporovány.
 
 ```
 STDMETHOD(GetViewStatus)(DWORD* pdwStatus);
@@ -214,13 +214,13 @@ STDMETHOD(GetViewStatus)(DWORD* pdwStatus);
 
 ### <a name="remarks"></a>Poznámky
 
-Ve výchozím nastavení, nastaví ATL `pdwStatus` do značí, že ovládací prvek podporuje VIEWSTATUS_OPAQUE (možné hodnoty jsou v [které](/windows/desktop/api/ocidl/ne-ocidl-tagviewstatus) výčet).
+Ve výchozím nastavení sada ATL `pdwStatus` nastaví, aby označovala, že ovládací prvek podporuje VIEWSTATUS_OPAQUE (možné hodnoty jsou ve výčtu [VIEWSTATUS](/windows/win32/api/ocidl/ne-ocidl-viewstatus) ).
 
-Zobrazit [IViewObjectEx::GetViewStatus](/windows/desktop/api/ocidl/nf-ocidl-iviewobjectex-getviewstatus) ve Windows SDK.
+Viz [IViewObjectEx:: GetViewStatus](/windows/win32/api/ocidl/nf-ocidl-iviewobjectex-getviewstatus) v Windows SDK.
 
 ##  <a name="queryhitpoint"></a>  IViewObjectExImpl::QueryHitPoint
 
-Zkontroluje, jestli se zadaný bod je v zadané obdélníku a vrátí [HITRESULT](/windows/desktop/api/ocidl/ne-ocidl-taghitresult) hodnota v `pHitResult`.
+Zkontroluje, zda je zadaný bod v zadaném obdélníku a vrátí hodnotu [HITRESULT](/windows/win32/api/ocidl/ne-ocidl-hitresult) v `pHitResult`.
 
 ```
 STDMETHOD(QueryHitPoint)(
@@ -233,15 +233,15 @@ STDMETHOD(QueryHitPoint)(
 
 ### <a name="remarks"></a>Poznámky
 
-Hodnota může být HITRESULT_HIT nebo HITRESULT_OUTSIDE.
+Hodnota může být buď HITRESULT_HIT, nebo HITRESULT_OUTSIDE.
 
-Pokud `dwAspect` rovná [DVASPECT_CONTENT](/windows/desktop/api/wtypes/ne-wtypes-tagdvaspect), metoda vrátí hodnotu S_OK. V opačném případě vrátí metoda E_FAIL.
+Pokud `dwAspect` se rovná [DVASPECT_CONTENT](/windows/win32/api/wtypes/ne-wtypes-dvaspect), metoda vrátí hodnotu S_OK. V opačném případě vrátí metoda E_FAIL.
 
-Zobrazit [IViewObjectEx::QueryHitPoint](/windows/desktop/api/ocidl/nf-ocidl-iviewobjectex-queryhitpoint) ve Windows SDK.
+Viz [IViewObjectEx:: QueryHitPoint](/windows/win32/api/ocidl/nf-ocidl-iviewobjectex-queryhitpoint) v Windows SDK.
 
 ##  <a name="queryhitrect"></a>  IViewObjectExImpl::QueryHitRect
 
-Ověří, zda ovládací prvek zobrazovací obdélník překrývá libovolný bod v obdélníku zadaného umístění a vrátí [HITRESULT](/windows/desktop/api/ocidl/ne-ocidl-taghitresult) hodnota v `pHitResult`.
+Kontroluje, zda se obdélník zobrazení ovládacího prvku překrývá s jakýmkoli bodem v zadaném obdélníku umístění a [](/windows/win32/api/ocidl/ne-ocidl-hitresult) vrátí hodnotu HITRESULT `pHitResult`v.
 
 ```
 STDMETHOD(QueryHitRect)(
@@ -254,15 +254,15 @@ STDMETHOD(QueryHitRect)(
 
 ### <a name="remarks"></a>Poznámky
 
-Hodnota může být HITRESULT_HIT nebo HITRESULT_OUTSIDE.
+Hodnota může být buď HITRESULT_HIT, nebo HITRESULT_OUTSIDE.
 
-Pokud `dwAspect` rovná [DVASPECT_CONTENT](/windows/desktop/api/wtypes/ne-wtypes-tagdvaspect), metoda vrátí hodnotu S_OK. V opačném případě vrátí metoda E_FAIL.
+Pokud `dwAspect` se rovná [DVASPECT_CONTENT](/windows/win32/api/wtypes/ne-wtypes-dvaspect), metoda vrátí hodnotu S_OK. V opačném případě vrátí metoda E_FAIL.
 
-Zobrazit [IViewObjectEx::QueryHitRect](/windows/desktop/api/ocidl/nf-ocidl-iviewobjectex-queryhitrect) ve Windows SDK.
+Viz [IViewObjectEx:: QueryHitRect](/windows/win32/api/ocidl/nf-ocidl-iviewobjectex-queryhitrect) v Windows SDK.
 
-##  <a name="setadvise"></a>  IViewObjectExImpl::SetAdvise
+##  <a name="setadvise"></a>IViewObjectExImpl::SetAdvise
 
-Nastaví spojení mezi ovládacím prvkem a jímky doporučení tak jímka můžete být upozorněni o změnách v zobrazení ovládacího prvku.
+Nastaví připojení mezi ovládacím prvkem a jímkou příplatku, aby mohla být jímka upozorněna na změny v zobrazení ovládacího prvku.
 
 ```
 STDMETHOD(SetAdvise)(
@@ -273,13 +273,13 @@ STDMETHOD(SetAdvise)(
 
 ### <a name="remarks"></a>Poznámky
 
-Ukazatel [IAdviseSink](/windows/desktop/api/objidl/nn-objidl-iadvisesink) rozhraní jímce doporučení je uložena v datovém členovi třídy ovládacího prvku [CComControlBase::m_spAdviseSink](ccomcontrolbase-class.md#m_spadvisesink).
+Ukazatel na rozhraní [IAdviseSink](/windows/win32/api/objidl/nn-objidl-iadvisesink) v jímky příjímka je uložen v datovém členu třídy ovládacího prvku [CComControlBase:: m_spAdviseSink](ccomcontrolbase-class.md#m_spadvisesink).
 
-Zobrazit [IViewObject::SetAdvise](/windows/desktop/api/oleidl/nf-oleidl-iviewobject-setadvise) ve Windows SDK.
+Viz [IViewObject:: SetAdvise](/windows/win32/api/oleidl/nf-oleidl-iviewobject-setadvise) v Windows SDK.
 
-##  <a name="unfreeze"></a>  IViewObjectExImpl::Unfreeze
+##  <a name="unfreeze"></a>IViewObjectExImpl:: unzmrazit
 
-Zruší ukotvení vykresleného reprezentace ovládacího prvku. Implementace knihovny ATL vrátí E_NOTIMPL.
+Uvolní vykreslenou reprezentaci ovládacího prvku. Implementace ATL Vrátí E_NOTIMPL.
 
 ```
 STDMETHOD(Unfreeze)(DWORD /* dwFreeze */);
@@ -287,11 +287,11 @@ STDMETHOD(Unfreeze)(DWORD /* dwFreeze */);
 
 ### <a name="remarks"></a>Poznámky
 
-Zobrazit [IViewObject::Unfreeze](/windows/desktop/api/oleidl/nf-oleidl-iviewobject-unfreeze) ve Windows SDK.
+Viz [IViewObject::](/windows/win32/api/oleidl/nf-oleidl-iviewobject-unfreeze) dismraze v Windows SDK.
 
-##  <a name="closehandle"></a>  IWorkerThreadClient::CloseHandle
+##  <a name="closehandle"></a>IWorkerThreadClient:: CloseHandle
 
-Implementujte tuto metodu za účelem zavřít popisovač asociovaném s tímto objektem.
+Implementací této metody uzavřete popisovač přidružený k tomuto objektu.
 
 ```
 HRESULT CloseHandle(HANDLE hHandle);
@@ -300,25 +300,25 @@ HRESULT CloseHandle(HANDLE hHandle);
 ### <a name="parameters"></a>Parametry
 
 *hHandle*<br/>
-Obslužná rutina bude uzavřen.
+Popisovač, který má být zavřen.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vrátí hodnotu S_OK na úspěch nebo chybu HRESULT při selhání.
+Vrátí hodnotu S_OK při úspěchu nebo chybu HRESULT při selhání.
 
 ### <a name="remarks"></a>Poznámky
 
-Popisovač předaný této metodě byla dříve přidružená k tomuto objektu voláním [CWorkerThread::AddHandle](../../atl/reference/cworkerthread-class.md#addhandle).
+Popisovač předaný této metodě byl dříve přidružen k tomuto objektu voláním metody [CWorkerThread:: AddHandle](../../atl/reference/cworkerthread-class.md#addhandle).
 
 ### <a name="example"></a>Příklad
 
-Následující kód ukazuje jednoduchý provádění `IWorkerThreadClient::CloseHandle`.
+Následující kód ukazuje jednoduchou implementaci `IWorkerThreadClient::CloseHandle`nástroje.
 
 [!code-cpp[NVC_ATL_Utilities#135](../../atl/codesnippet/cpp/iviewobjecteximpl-class_1.cpp)]
 
-##  <a name="execute"></a>  IWorkerThreadClient::Execute
+##  <a name="execute"></a>IWorkerThreadClient:: Execute
 
-Implementujte tuto metodu za účelem spouštění kódu, když se stane signalizován popisovač asociovaném s tímto objektem.
+Implementujte tuto metodu pro spuštění kódu, když se popisovač přidružený k tomuto objektu zasignalizuje.
 
 ```
 HRESULT Execute(DWORD_PTR dwParam, HANDLE hObject);
@@ -327,29 +327,29 @@ HRESULT Execute(DWORD_PTR dwParam, HANDLE hObject);
 ### <a name="parameters"></a>Parametry
 
 *dwParam*<br/>
-Tento parametr.
+Parametr uživatele
 
 *hObject*<br/>
-Obslužná rutina, která má být signalizovány.
+Popisovač, u kterého se stala signál.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vrátí hodnotu S_OK na úspěch nebo chybu HRESULT při selhání.
+Vrátí hodnotu S_OK při úspěchu nebo chybu HRESULT při selhání.
 
 ### <a name="remarks"></a>Poznámky
 
-Popisovač a DWORD/ukazatel předaný této metodě byly dříve přidružená k tomuto objektu voláním [CWorkerThread::AddHandle](../../atl/reference/cworkerthread-class.md#addhandle).
+Popisovač a DWORD/ukazatel předaný této metodě byly dříve přidruženy k tomuto objektu voláním metody [CWorkerThread:: AddHandle](../../atl/reference/cworkerthread-class.md#addhandle).
 
 ### <a name="example"></a>Příklad
 
-Následující kód ukazuje jednoduchý provádění `IWorkerThreadClient::Execute`.
+Následující kód ukazuje jednoduchou implementaci `IWorkerThreadClient::Execute`nástroje.
 
 [!code-cpp[NVC_ATL_Utilities#136](../../atl/codesnippet/cpp/iviewobjecteximpl-class_2.cpp)]
 
 ## <a name="see-also"></a>Viz také:
 
 [CComControl – třída](../../atl/reference/ccomcontrol-class.md)<br/>
-[Rozhraní – ovládací prvky ActiveX](/windows/desktop/com/activex-controls-interfaces)<br/>
+[Rozhraní ovládacích prvků ActiveX](/windows/win32/com/activex-controls-interfaces)<br/>
 [Kurz](../../atl/active-template-library-atl-tutorial.md)<br/>
 [Vytvoření projektu ATL](../../atl/reference/creating-an-atl-project.md)<br/>
-[Přehled tříd](../../atl/atl-class-overview.md)
+[Přehled třídy](../../atl/atl-class-overview.md)

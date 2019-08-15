@@ -41,19 +41,19 @@ helpviewer_keywords:
 - _vcwprintf_p_l function
 - _vtcprintf_p function
 ms.assetid: 611024cc-90e7-41db-8e85-145ca95012b1
-ms.openlocfilehash: 59e601d5cd03d58fe2d1725ba509a9fa3b2f3422
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4d2346237181299b3497fade37827a3abc5e7749
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62364880"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69499370"
 ---
-# <a name="vcprintfp-vcprintfpl-vcwprintfp-vcwprintfpl"></a>_vcprintf_p, _vcprintf_p_l, _vcwprintf_p, _vcwprintf_p_l
+# <a name="_vcprintf_p-_vcprintf_p_l-_vcwprintf_p-_vcwprintf_p_l"></a>_vcprintf_p, _vcprintf_p_l, _vcwprintf_p, _vcwprintf_p_l
 
-Zapíše formátovaný výstup do konzoly pomocí ukazatele na seznam argumentů a podporuje parametry pozice ve formátovacím řetězci.
+Zapíše formátovaný výstup do konzoly pomocí ukazatele na seznam argumentů a ve formátovacím řetězci podporuje poziční parametry.
 
 > [!IMPORTANT]
-> Toto rozhraní API nelze použít v aplikacích, které jsou spouštěny v modulu Windows Runtime. Další informace najdete v tématu [CRT funkce nejsou podporovány v aplikacích pro univerzální platformu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> Toto rozhraní API nelze použít v aplikacích, které jsou spouštěny v prostředí Windows Runtime. Další informace najdete v tématu [funkce CRT nejsou v aplikacích Univerzální platforma Windows podporovány](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -80,35 +80,35 @@ int _vcwprintf_p_l(
 
 ### <a name="parameters"></a>Parametry
 
-*Formát*<br/>
+*format*<br/>
 Specifikace formátu.
 
 *argptr*<br/>
 Ukazatel na seznam argumentů.
 
-*Národní prostředí*<br/>
+*jazyka*<br/>
 Národní prostředí, které se má použít
 
-Další informace najdete v tématu [syntaxe specifikace formátu: funkce printf a wprintf](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md).
+Další informace najdete v tématu [syntaxe specifikace formátu: printf a wprintf Functions](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md).
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Počet znaků, které byly napsány, nebo zápornou hodnotu, pokud dojde k chybě výstupu. Pokud *formátu* je ukazatel s hodnotou null, je vyvolána obslužná rutina neplatného parametru, jak je popsáno v [Parameter Validation](../../c-runtime-library/parameter-validation.md). Pokud smí provádění pokračovat, **errno** je nastavena na **EINVAL** a vrátí se -1.
+Počet znaků, které jsou zapsány, nebo záporná hodnota, pokud dojde k chybě výstupu. Pokud je *Format* ukazatel s hodnotou null, je vyvolána obslužná rutina neplatného parametru, jak je popsáno v tématu [ověřování parametru](../../c-runtime-library/parameter-validation.md). Pokud provádění může pokračovat, **errno** je nastaven na **EINVAL** a vrátí-1.
 
 ## <a name="remarks"></a>Poznámky
 
-Každá z těchto funkcí bere ukazatel na seznam argumentů a potom použije **_putch** funkce pro formátování a napsat poskytnutá data do konzoly. (**_vcwprintf_p –** používá **_putwch** místo **_putch**. **_vcwprintf_p –** je verze širokého znaku **_vcprintf_p –**. Trvá širokoznaký řetězec jako argument.)
+Každá z těchto funkcí bere ukazatel na seznam argumentů a potom pomocí funkce **_putch** formátuje a zapisuje daná data do konzoly. ( **_vcwprintf_p** používá **_putwch** místo **_putch**. **_vcwprintf_p** je verze **_vcprintf_p**pro nejrůznější znaky. Jako argument přijímá řetězec s velkým počtem znaků.)
 
-Verze těchto funkcí, které mají **_l** přípona jsou stejné s tím rozdílem, že používají Předaný parametr národního prostředí namísto aktuálního národního prostředí.
+Verze těchto funkcí, které mají příponu **_l** , jsou stejné s tím rozdílem, že používají předaný parametr národního prostředí namísto aktuálního národního prostředí.
 
-Každý *argument* (pokud existuje) je převedena a podle odpovídající specifikace formátu v *formátu*. Specifikace formátu podporuje poziční parametry, takže můžete určit pořadí, ve kterém jsou argumenty použity ve formátovacím řetězci. Další informace najdete v tématu [printf_p – poziční parametry](../../c-runtime-library/printf-p-positional-parameters.md).
+Každý *argument* (pokud existuje) je převeden a je výstupem podle odpovídající specifikace formátu ve *formátu*. Specifikace formátu podporuje poziční parametry, takže můžete určit pořadí, ve kterém jsou argumenty použity ve formátovacím řetězci. Další informace najdete v tématu [Printf_p pozičních parametrů](../../c-runtime-library/printf-p-positional-parameters.md).
 
-Tyto funkce nepřekládat LF znaků do kombinace návrat na začátek řádku return-line kanál (CR-LF), když se nachází výstup.
+Tyto funkce nepřevádí znaky datového kanálu do kombinací návratového kanálu návratového řádku (CR-LF), když jsou ve výstupu.
 
 > [!IMPORTANT]
-> Ujistěte se, že *formátu* není uživatelem definovaný řetězec. Další informace najdete v tématu [předcházení přetečení vyrovnávací paměti](/windows/desktop/SecBP/avoiding-buffer-overruns).
+> Ujistěte se, že *Formát* není uživatelem definovaný řetězec. Další informace najdete v tématu [předcházení přetečení vyrovnávací paměti](/windows/win32/SecBP/avoiding-buffer-overruns).
 
-Tyto funkce ověřují vstupní ukazatel a formátovací řetězec. Pokud *formátu* nebo *argument* je **NULL**, nebo pokud řetězec formátu obsahuje neplatné formátovací znaky, tyto funkce vyvolají obslužnou rutinu neplatného parametru, jak je popsáno v [Parameter Validation](../../c-runtime-library/parameter-validation.md). Pokud smí provádění pokračovat, vrátí funkce hodnotu -1 a nastaví **errno** k **EINVAL**.
+Tyto funkce ověřují vstupní ukazatel a formátovací řetězec. Pokud má parametr *Format* nebo *argument* **hodnotu null**nebo pokud řetězec formátu obsahuje neplatné formátovací znaky, tyto funkce vyvolají obslužnou rutinu neplatného parametru, jak je popsáno v tématu [ověřování parametru](../../c-runtime-library/parameter-validation.md). Pokud provádění může pokračovat, vrátí tyto funkce hodnotu-1 a nastaví **errno** na **EINVAL**.
 
 ### <a name="generic-text-routine-mappings"></a>Mapování rutin obecného textu
 
@@ -121,10 +121,10 @@ Tyto funkce ověřují vstupní ukazatel a formátovací řetězec. Pokud *form�
 
 |Rutina|Požadovaný hlavičkový soubor|
 |-------------|---------------------|
-|**_vcprintf_p**, **_vcprintf_p_l**|\<conio.h > a \<stdarg.h >|
-|**_vcwprintf_p**, **_vcwprintf_p_l**|\<conio.h > a \<stdarg.h >|
+|**_vcprintf_p**, **_vcprintf_p_l**|\<CONIO. h > a \<STDARG. h >|
+|**_vcwprintf_p**, **_vcwprintf_p_l**|\<CONIO. h > a \<STDARG. h >|
 
-Další informace o kompatibilitě naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Příklad
 

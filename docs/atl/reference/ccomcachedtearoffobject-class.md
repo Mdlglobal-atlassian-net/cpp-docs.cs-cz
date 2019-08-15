@@ -1,5 +1,5 @@
 ---
-title: CComCachedTearOffObject Class
+title: CComCachedTearOffObject – třída
 ms.date: 11/04/2016
 f1_keywords:
 - CComCachedTearOffObject
@@ -15,16 +15,16 @@ helpviewer_keywords:
 - cache, ATL cached tear-off objects
 - CComCachedTearOffObject class
 ms.assetid: ae19507d-a1de-4dbc-a988-da9f75a50c95
-ms.openlocfilehash: fb7821da03e1ca69c850fa1a295851faf4af4c5b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d993a349d38342bda30a83dfdbe25577953799b3
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62259674"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69497539"
 ---
-# <a name="ccomcachedtearoffobject-class"></a>CComCachedTearOffObject Class
+# <a name="ccomcachedtearoffobject-class"></a>CComCachedTearOffObject – třída
 
-Tato třída implementuje [IUnknown](/windows/desktop/api/unknwn/nn-unknwn-iunknown) pro rozhraní s odnímatelnými nabídkami.
+Tato třída implementuje [IUnknown](/windows/win32/api/unknwn/nn-unknwn-iunknown) pro odkládací rozhraní.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -39,41 +39,41 @@ public CComObjectRootEx<contained
 
 #### <a name="parameters"></a>Parametry
 
-*obsažené*<br/>
-Vaše odtržených třída odvozena od `CComTearOffObjectBase` a rozhraní chcete, aby váš objekt odtržených pro podporu.
+*uložen*<br/>
+Odtrhnout třídu odvozenou z `CComTearOffObjectBase` a rozhraní, které chcete pro odložení objektu podporovat.
 
 ## <a name="members"></a>Členové
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CComCachedTearOffObject::CComCachedTearOffObject](#ccomcachedtearoffobject)|Konstruktor|
 |[CComCachedTearOffObject::~CComCachedTearOffObject](#dtor)|Destruktor.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
-|[CComCachedTearOffObject::AddRef](#addref)|Zvýší počet odkazů `CComCachedTearOffObject` objektu.|
-|[CComCachedTearOffObject::FinalConstruct](#finalconstruct)|Volání `m_contained::FinalConstruct` (metoda odtržených třídu).|
-|[CComCachedTearOffObject::FinalRelease](#finalrelease)|Volání `m_contained::FinalRelease` (metoda odtržených třídu).|
-|[CComCachedTearOffObject::QueryInterface](#queryinterface)|Vrací ukazatel na `IUnknown` z `CComCachedTearOffObject` objektu, nebo na požadované rozhraní na třídě odtržených (třída `contained`).|
-|[CComCachedTearOffObject::Release](#release)|Sníží počet odkaz pro `CComCachedTearOffObject` objektu a odstraní ji, pokud počet odkazů je 0.|
+|[CComCachedTearOffObject:: AddRef](#addref)|Zvýší počet odkazů pro `CComCachedTearOffObject` objekt.|
+|[CComCachedTearOffObject::FinalConstruct](#finalconstruct)|Volá metodu `m_contained::FinalConstruct` (metoda trhlin-off).|
+|[CComCachedTearOffObject::FinalRelease](#finalrelease)|Volá metodu `m_contained::FinalRelease` (metoda trhlin-off).|
+|[CComCachedTearOffObject::QueryInterface](#queryinterface)|Vrátí ukazatel na `IUnknown` `CComCachedTearOffObject` objekt, nebo na požadované rozhraní třídy trhliny (třída `contained`).|
+|[CComCachedTearOffObject:: Release](#release)|Sníží počet odkazů u `CComCachedTearOffObject` objektu a odstraní jej, pokud je počet odkazů 0.|
 
 ### <a name="public-data-members"></a>Veřejné datové členy
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
-|[CComCachedTearOffObject::m_contained](#m_contained)|A `CComContainedObject` objekt odvozený od vaší třídy odtržených (třída `contained`).|
+|[CComCachedTearOffObject::m_contained](#m_contained)|Objekt odvozený z vaší třídy s podtrhnout (třída `contained`). `CComContainedObject`|
 
 ## <a name="remarks"></a>Poznámky
 
-`CComCachedTearOffObject` implementuje [IUnknown](/windows/desktop/api/unknwn/nn-unknwn-iunknown) pro rozhraní s odnímatelnými nabídkami. Tato třída se liší od `CComTearOffObject` v tom, že `CComCachedTearOffObject` má vlastní `IUnknown`, nezávisle na objekt vlastníka `IUnknown` (vlastníkem je objekt, pro kterou odtrhnout se vytváří). `CComCachedTearOffObject` udržuje svůj vlastní odkaz na počet jeho `IUnknown` a odstraní sama po jeho počet odkazů je nula. Ale pokud dotaz pro některý z jeho odtržených rozhraní, počet odkazů vlastníka objektu `IUnknown` se zvýší.
+`CComCachedTearOffObject`implementuje [IUnknown](/windows/win32/api/unknwn/nn-unknwn-iunknown) pro odkládací rozhraní. Tato třída se liší od `CComTearOffObject` v, `CComCachedTearOffObject` která má svou `IUnknown`vlastní, oddělenou od objektu `IUnknown` vlastníka (vlastníkem je objekt, pro který se vytváří trhlina). `CComCachedTearOffObject`udržuje svůj vlastní počet odkazů na své `IUnknown` a odstraní sám sebe, jakmile je počet odkazů nula. Nicméně pokud se dotazuje na kterékoli z jeho nevypnutých rozhraní, zvýší se počet odkazů objektu `IUnknown` vlastníka.
 
-Pokud `CComCachedTearOffObject` implementace odtrhnout je již vytvořena instance a odtržených rozhraní se dotazují pro znovu stejný objektů `CComCachedTearOffObject` objekt již byl použit. Naopak, pokud je implementováno rozhraní s odnímatelnými nabídkami `CComTearOffObject` je znovu dotazován na prostřednictvím objektu vlastníka jiného `CComTearOffObject` bude vytvořena instance.
+Pokud objekt implementující trhlinu je již vytvořen a je znovu dotazováno na rozhraní, je stejný `CComCachedTearOffObject` objekt znovu použit. `CComCachedTearOffObject` Na rozdíl od toho, pokud je přerušené rozhraní implementované a `CComTearOffObject` znovu dotazováno pro objekt vlastníka, vytvoří se další `CComTearOffObject` instance.
 
-Třída vlastníka, musí implementovat `FinalRelease` a volání `Release` v mezipaměti `IUnknown` pro `CComCachedTearOffObject`, který bude snížení jeho počet odkazů. To způsobí, že `CComCachedTearOffObject`společnosti `FinalRelease` volat a odstraňovat odtrhnout.
+Třída `FinalRelease` Owner musí implementovat a volat `Release` `IUnknown` v mezipaměti pro, čímž se sníží počet odkazů. `CComCachedTearOffObject` To způsobí `CComCachedTearOffObject` `FinalRelease` , že se bude volat a odstraní trhlinu.
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
@@ -87,11 +87,11 @@ Třída vlastníka, musí implementovat `FinalRelease` a volání `Release` v me
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** atlcom
+**Záhlaví:** atlcom. h
 
-##  <a name="addref"></a>  CComCachedTearOffObject::AddRef
+##  <a name="addref"></a>CComCachedTearOffObject:: AddRef
 
-Zvýší počet odkazů `CComCachedTearOffObject` objektu 1.
+Zvýší počet `CComCachedTearOffObject` odkazů objektu o 1.
 
 ```
 STDMETHOD_(ULONG, AddRef)();
@@ -99,9 +99,9 @@ STDMETHOD_(ULONG, AddRef)();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Hodnota, která může být užitečné pro diagnostiku a testování.
+Hodnota, která může být užitečná pro diagnostiku a testování.
 
-##  <a name="ccomcachedtearoffobject"></a>  CComCachedTearOffObject::CComCachedTearOffObject
+##  <a name="ccomcachedtearoffobject"></a>CComCachedTearOffObject::CComCachedTearOffObject
 
 Konstruktor
 
@@ -112,13 +112,13 @@ CComCachedTearOffObject(void* pv);
 ### <a name="parameters"></a>Parametry
 
 *pv*<br/>
-[in] Ukazatel `IUnknown` z `CComCachedTearOffObject`.
+pro Ukazatel na `IUnknown`. `CComCachedTearOffObject`
 
 ### <a name="remarks"></a>Poznámky
 
-Inicializuje `CComContainedObject` člen [m_contained](#m_contained).
+Inicializuje člen m_contained. [](#m_contained) `CComContainedObject`
 
-##  <a name="dtor"></a>  CComCachedTearOffObject::~CComCachedTearOffObject
+##  <a name="dtor"></a>CComCachedTearOffObject:: ~ CComCachedTearOffObject
 
 Destruktor.
 
@@ -128,11 +128,11 @@ Destruktor.
 
 ### <a name="remarks"></a>Poznámky
 
-Uvolní všechny přidělené prostředky a volání [FinalRelease](#finalrelease).
+Uvolní všechny přidělené prostředky a volá [FinalRelease](#finalrelease).
 
-##  <a name="finalconstruct"></a>  CComCachedTearOffObject::FinalConstruct
+##  <a name="finalconstruct"></a>CComCachedTearOffObject::FinalConstruct
 
-Volání `m_contained::FinalConstruct` vytvořit `m_contained`, `CComContainedObject` <  `contained`> objektu se používá pro přístup k rozhraní implementované vaší třídy odtržených.
+Volání `m_contained::FinalConstruct` pro vytvoření `m_contained`, objekt `CComContainedObject` >`contained`, < který slouží k přístupu k rozhraní implementovanému podtřídy.
 
 ```
 HRESULT FinalConstruct();
@@ -140,19 +140,19 @@ HRESULT FinalConstruct();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Standardní hodnoty HRESULT.
+Standardní hodnota HRESULT.
 
-##  <a name="finalrelease"></a>  CComCachedTearOffObject::FinalRelease
+##  <a name="finalrelease"></a>CComCachedTearOffObject::FinalRelease
 
-Volání `m_contained::FinalRelease` uvolnit `m_contained`, `CComContainedObject` <  `contained`> objektu.
+Volání `m_contained::FinalRelease` Free `m_contained`, `CComContainedObject` objekt>.`contained` < 
 
 ```
 void FinalRelease();
 ```
 
-##  <a name="m_contained"></a>  CComCachedTearOffObject::m_contained
+##  <a name="m_contained"></a>CComCachedTearOffObject::m_contained
 
-A [ccomcontainedobject –](../../atl/reference/ccomcontainedobject-class.md) objekt odvozený od vaší třídy odtržených.
+Objekt [CComContainedObject](../../atl/reference/ccomcontainedobject-class.md) odvozený z vaší odkládací třídy.
 
 ```
 CcomContainedObject <contained> m_contained;
@@ -160,12 +160,12 @@ CcomContainedObject <contained> m_contained;
 
 ### <a name="parameters"></a>Parametry
 
-*obsažené*<br/>
-[in] Vaše odtržených třída odvozena od `CComTearOffObjectBase` a rozhraní chcete, aby váš objekt odtržených pro podporu.
+*uložen*<br/>
+pro Odtrhnout třídu odvozenou z `CComTearOffObjectBase` a rozhraní, které chcete pro odložení objektu podporovat.
 
 ### <a name="remarks"></a>Poznámky
 
-Metody `m_contained` dědí používané pro přístup k rozhraní odtržených ve své třídě odtržených prostřednictvím uložené v mezipaměti odtržených objektu `QueryInterface`, `FinalConstruct`, a `FinalRelease`.
+Metody `m_contained` dědění se používají pro přístup k nevypnutému rozhraní ve vaší podtřídě pomocí nepřipojeného `QueryInterface`objektu v mezipaměti, `FinalConstruct`a `FinalRelease`.
 
 ##  <a name="queryinterface"></a>  CComCachedTearOffObject::QueryInterface
 
@@ -178,22 +178,22 @@ STDMETHOD(QueryInterface)(REFIID iid, void** ppvObject);
 ### <a name="parameters"></a>Parametry
 
 *iid*<br/>
-[in] Identifikátor GUID se požadované rozhraní.
+pro Identifikátor GUID požadovaného rozhraní
 
 *ppvObject*<br/>
-[out] Ukazatel na ukazatel rozhraní, který je identifikován *iid*, nebo hodnota NULL, pokud se nenajde rozhraní.
+mimo Ukazatel na ukazatel rozhraní identifikovaný *identifikátorem IID*nebo hodnotu null, pokud rozhraní nebylo nalezeno.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Standardní hodnoty HRESULT.
+Standardní hodnota HRESULT.
 
 ### <a name="remarks"></a>Poznámky
 
-Pokud je požadovaná rozhraní `IUnknown`, vrací ukazatel na `CComCachedTearOffObject`vaší vlastní `IUnknown` a zvýší počet odkazů. V opačném případě dotazuje na vaše používání třídy odtržených rozhraní [InternalQueryInterface](ccomobjectrootex-class.md#internalqueryinterface) metody zděděné z `CComObjectRootEx`.
+Pokud je `IUnknown`požadované rozhraní, vrátí ukazatel `CComCachedTearOffObject`na vlastní `IUnknown` a zvýší počet odkazů. V opačném případě se dotazy na rozhraní třídy odtrhnout pomocí metody [InternalQueryInterface](ccomobjectrootex-class.md#internalqueryinterface) zděděné z `CComObjectRootEx`.
 
-##  <a name="release"></a>  CComCachedTearOffObject::Release
+##  <a name="release"></a>CComCachedTearOffObject:: Release
 
-Sníží počet reference o 1 a, pokud počet odkazů na hodnotu 0, odstraní `CComCachedTearOffObject` objektu.
+Sníží počet odkazů o 1 a, pokud je počet odkazů 0, `CComCachedTearOffObject` objekt odstraní.
 
 ```
 STDMETHOD_(ULONG, Release)();
@@ -201,10 +201,10 @@ STDMETHOD_(ULONG, Release)();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-V sestaveních bez ladění vždy vrátí hodnotu 0. V sestavení ladění vrátí hodnotu, která může být užitečné pro diagnostiku a testování.
+V sestaveních bez ladění vždy vrátí hodnotu 0. V sestavení ladění vrátí hodnotu, která může být užitečná pro diagnostiku nebo testování.
 
 ## <a name="see-also"></a>Viz také:
 
 [CComTearOffObject – třída](../../atl/reference/ccomtearoffobject-class.md)<br/>
 [CComObjectRootEx – třída](../../atl/reference/ccomobjectrootex-class.md)<br/>
-[Přehled tříd](../../atl/atl-class-overview.md)
+[Přehled třídy](../../atl/atl-class-overview.md)

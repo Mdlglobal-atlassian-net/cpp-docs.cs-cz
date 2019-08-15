@@ -1,5 +1,5 @@
 ---
-title: Funkce cest ATL
+title: Funkce cesty ATL
 ms.date: 11/04/2016
 helpviewer_keywords:
 - ATL, path
@@ -41,16 +41,16 @@ f1_keywords:
 - ATLPATH/ATL::ATLPath::StripToRoot
 - ATLPATH/ATL::ATLPath::UnquoteSpaces
 ms.assetid: d1ec2b8d-7ec7-43ea-90dd-0a740d2a742b
-ms.openlocfilehash: 683fd9c6464187e416ea032840507b2062de1fa3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 76efbb0bd43b800f186eac1afa168fc2a0c939f6
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62248187"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69497984"
 ---
-# <a name="atl-path-functions"></a>Funkce cest ATL
+# <a name="atl-path-functions"></a>Funkce cesty ATL
 
-Knihovna ATL poskytuje třídu ATLPath pro manipulaci s cesty ve formě [cpatht –](cpatht-class.md). Tento kód lze nalézt v atlpath.h.
+ATL poskytuje třídu ATLPath pro manipulaci s cestami ve formě [CPathT](cpatht-class.md). Tento kód najdete v atlpath. h.
 
 ### <a name="related-classes"></a>Související třídy
 
@@ -58,62 +58,62 @@ Knihovna ATL poskytuje třídu ATLPath pro manipulaci s cesty ve formě [cpatht 
 |-|-|
 |[CPathT – třída](cpatht-class.md)|Tato třída reprezentuje cestu.|
 
-### <a name="related-typedefs"></a>Související – definice TypeDef
+### <a name="related-typedefs"></a>Související definice typedef
 
 |||
 |-|-|
-|`CPath`|Specializace [cpatht –](cpatht-class.md) pomocí `CString`.|
-|`CPathA`|Specializace [cpatht –](cpatht-class.md) pomocí `CStringA`.|
-|`CPathW`|Specializace [cpatht –](cpatht-class.md) pomocí `CStringW`.|
+|`CPath`|Specializace [CPathT](cpatht-class.md) s využitím `CString`.|
+|`CPathA`|Specializace [CPathT](cpatht-class.md) s využitím `CStringA`.|
+|`CPathW`|Specializace [CPathT](cpatht-class.md) s využitím `CStringW`.|
 
 ### <a name="functions"></a>Funkce
 
 |||
 |-|-|
-|[ATLPath::AddBackslash](#addbackslash)|Tato funkce je přetížená obálka pro [PathAddBackslash](/windows/desktop/api/shlwapi/nf-shlwapi-pathaddbackslasha).|
-|[ATLPath::AddExtension](#addextension)|Tato funkce je přetížená obálka pro [PathAddExtension](/windows/desktop/api/shlwapi/nf-shlwapi-pathaddextensiona).|
-|[ATLPath::Append](#append)|Tato funkce je přetížená obálka pro [PathAppend](/windows/desktop/api/shlwapi/nf-shlwapi-pathappenda).|
-|[ATLPath::BuildRoot](#buildroot)|Tato funkce je přetížená obálka pro [PathBuildRoot](/windows/desktop/api/shlwapi/nf-shlwapi-pathbuildroota).|
-|[ATLPath::Canonicalize](#canonicalize)|Tato funkce je přetížená obálka pro [PathCanonicalize](/windows/desktop/api/shlwapi/nf-shlwapi-pathcanonicalizea).|
-|[ATLPath::Combine](#combine)|Tato funkce je přetížená obálka pro [PathCombine](/windows/desktop/api/shlwapi/nf-shlwapi-pathcombinea).|
-|[ATLPath::CommonPrefix](#commonprefix)|Tato funkce je přetížená obálka pro [PathCommonPrefix](/windows/desktop/api/shlwapi/nf-shlwapi-pathcommonprefixa).|
-|[ATLPath::CompactPath](#compactpath)|Tato funkce je přetížená obálka pro [PathCompactPath](/windows/desktop/api/shlwapi/nf-shlwapi-pathcompactpatha).|
-|[ATLPath::CompactPathEx](#compactpathex)|Tato funkce je přetížená obálka pro [PathCompactPathEx](/windows/desktop/api/shlwapi/nf-shlwapi-pathcompactpathexa).|
-|[ATLPath::FileExists](#fileexists)|Tato funkce je přetížená obálka pro [PathFileExists](/windows/desktop/api/shlwapi/nf-shlwapi-pathfileexistsa).|
-|[ATLPath::FindExtension](#findextension)|Tato funkce je přetížená obálka pro [PathFindExtension](/windows/desktop/api/shlwapi/nf-shlwapi-pathfindextensiona).|
-|[ATLPath::FindFileName](#findfilename)|Tato funkce je přetížená obálka pro [PathFindFileName](/windows/desktop/api/shlwapi/nf-shlwapi-pathfindfilenamea).|
-|[ATLPath::GetDriveNumber](#getdrivenumber)|Tato funkce je přetížená obálka pro [PathGetDriveNumber](/windows/desktop/api/shlwapi/nf-shlwapi-pathgetdrivenumbera).|
-|[ATLPath::IsDirectory](#isdirectory)|Tato funkce je přetížená obálka pro [PathIsDirectory](/windows/desktop/api/shlwapi/nf-shlwapi-pathisdirectorya).|
-|[ATLPath::IsFileSpec](#isfilespec)|Tato funkce je přetížená obálka pro [PathIsFileSpec](/windows/desktop/api/shlwapi/nf-shlwapi-pathisfilespeca).|
-|[ATLPath::IsPrefix](#isprefix)|Tato funkce je přetížená obálka pro [PathIsPrefix](/windows/desktop/api/shlwapi/nf-shlwapi-pathisprefixa).|
-|[ATLPath::IsRelative](#isrelative)|Tato funkce je přetížená obálka pro [PathIsRelative](/windows/desktop/api/shlwapi/nf-shlwapi-pathisrelativea).|
-|[ATLPath::IsRoot](#isroot)|Tato funkce je přetížená obálka pro [PathIsRoot](/windows/desktop/api/shlwapi/nf-shlwapi-pathisroota).|
-|[ATLPath::IsSameRoot](#issameroot)|Tato funkce je přetížená obálka pro [PathIsSameRoot](/windows/desktop/api/shlwapi/nf-shlwapi-pathissameroota).|
-|[ATLPath::IsUNC](#isunc)|Tato funkce je přetížená obálka pro [PathIsUNC](/windows/desktop/api/shlwapi/nf-shlwapi-pathisunca).|
-|[ATLPath::IsUNCServer](#isuncserver)|Tato funkce je přetížená obálka pro [PathIsUNCServer](/windows/desktop/api/shlwapi/nf-shlwapi-pathisuncservera).|
-|[ATLPath::IsUNCServerShare](#isuncservershare)|Tato funkce je přetížená obálka pro [PathIsUNCServerShare](/windows/desktop/api/shlwapi/nf-shlwapi-pathisuncserversharea).|
-|[ATLPath::MakePretty](#makepretty)|Tato funkce je přetížená obálka pro [PathMakePretty](/windows/desktop/api/shlwapi/nf-shlwapi-pathmakeprettya).|
-|[ATLPath::MatchSpec](#matchspec)|Tato funkce je přetížená obálka pro [PathMatchSpec](/windows/desktop/api/shlwapi/nf-shlwapi-pathmatchspeca).|
-|[ATLPath::QuoteSpaces](#quotespaces)|Tato funkce je přetížená obálka pro [PathQuoteSpaces](/windows/desktop/api/shlwapi/nf-shlwapi-pathquotespacesa).|
-|[ATLPath::RelativePathTo](#relativepathto)|Tato funkce je přetížená obálka pro [PathRelativePathTo](/windows/desktop/api/shlwapi/nf-shlwapi-pathrelativepathtoa).|
-|[ATLPath::RemoveArgs](#removeargs)|Tato funkce je přetížená obálka pro [PathRemoveArgs](/windows/desktop/api/shlwapi/nf-shlwapi-pathremoveargsa).|
-|[ATLPath::RemoveBackslash](#removebackslash)|Tato funkce je přetížená obálka pro [PathRemoveBackslash](/windows/desktop/api/shlwapi/nf-shlwapi-pathremovebackslasha).|
-|[ATLPath::RemoveBlanks](#removeblanks)|Tato funkce je přetížená obálka pro [PathRemoveBlanks](/windows/desktop/api/shlwapi/nf-shlwapi-pathremoveblanksa).|
-|[ATLPath::RemoveExtension](#removeextension)|Tato funkce je přetížená obálka pro [PathRemoveExtension](/windows/desktop/api/shlwapi/nf-shlwapi-pathremoveextensiona).|
-|[ATLPath::RemoveFileSpec](#removefilespec)|Tato funkce je přetížená obálka pro [PathRemoveFileSpec](/windows/desktop/api/shlwapi/nf-shlwapi-pathremovefilespeca).|
-|[ATLPath::RenameExtension](#renameextension)|Tato funkce je přetížená obálka pro [PathRenameExtension](/windows/desktop/api/shlwapi/nf-shlwapi-pathrenameextensiona).|
-|[ATLPath::SkipRoot](#skiproot)|Tato funkce je přetížená obálka pro [PathSkipRoot](/windows/desktop/api/shlwapi/nf-shlwapi-pathskiproota).|
-|[ATLPath::StripPath](#strippath)|Tato funkce je přetížená obálka pro [PathStripPath](/windows/desktop/api/shlwapi/nf-shlwapi-pathstrippatha).|
-|[ATLPath::StripToRoot](#striptoroot)|Tato funkce je přetížená obálka pro [PathStripToRoot](/windows/desktop/api/shlwapi/nf-shlwapi-pathstriptoroota).|
-|[ATLPath::UnquoteSpaces](#unquotespaces)|Tato funkce je přetížená obálka pro [PathUnquoteSpaces](/windows/desktop/api/shlwapi/nf-shlwapi-pathunquotespacesa).|
+|[ATLPath::AddBackslash](#addbackslash)|Tato funkce je přetížená obálka pro [PathAddBackslash](/windows/win32/api/shlwapi/nf-shlwapi-pathaddbackslashw).|
+|[ATLPath::AddExtension](#addextension)|Tato funkce je přetížená obálka pro [PathAddExtension](/windows/win32/api/shlwapi/nf-shlwapi-pathaddextensionw).|
+|[ATLPath:: Append](#append)|Tato funkce je přetížená obálka pro [PathAppend](/windows/win32/api/shlwapi/nf-shlwapi-pathappendw).|
+|[ATLPath:: BuildRoot](#buildroot)|Tato funkce je přetížená obálka pro [PathBuildRoot](/windows/win32/api/shlwapi/nf-shlwapi-pathbuildrootw).|
+|[ATLPath:: kanonického tvaru](#canonicalize)|Tato funkce je přetížená obálka pro [PathCanonicalize](/windows/win32/api/shlwapi/nf-shlwapi-pathcanonicalizew).|
+|[ATLPath:: kombinovat](#combine)|Tato funkce je přetížená obálka pro [PathCombine](/windows/win32/api/shlwapi/nf-shlwapi-pathcombinew).|
+|[ATLPath::CommonPrefix](#commonprefix)|Tato funkce je přetížená obálka pro [PathCommonPrefix](/windows/win32/api/shlwapi/nf-shlwapi-pathcommonprefixw).|
+|[ATLPath::CompactPath](#compactpath)|Tato funkce je přetížená obálka pro [PathCompactPath](/windows/win32/api/shlwapi/nf-shlwapi-pathcompactpathw).|
+|[ATLPath::CompactPathEx](#compactpathex)|Tato funkce je přetížená obálka pro [PathCompactPathEx](/windows/win32/api/shlwapi/nf-shlwapi-pathcompactpathexw).|
+|[ATLPath:: existuje](#fileexists)|Tato funkce je přetížená obálka pro [PathFileExists](/windows/win32/api/shlwapi/nf-shlwapi-pathfileexistsw).|
+|[ATLPath::FindExtension](#findextension)|Tato funkce je přetížená obálka pro [PathFindExtension](/windows/win32/api/shlwapi/nf-shlwapi-pathfindextensionw).|
+|[ATLPath::FindFileName](#findfilename)|Tato funkce je přetížená obálka pro [PathFindFileName](/windows/win32/api/shlwapi/nf-shlwapi-pathfindfilenamew).|
+|[ATLPath::GetDriveNumber](#getdrivenumber)|Tato funkce je přetížená obálka pro [PathGetDriveNumber](/windows/win32/api/shlwapi/nf-shlwapi-pathgetdrivenumberw).|
+|[ATLPath::IsDirectory](#isdirectory)|Tato funkce je přetížená obálka pro [PathIsDirectory](/windows/win32/api/shlwapi/nf-shlwapi-pathisdirectoryw).|
+|[ATLPath::IsFileSpec](#isfilespec)|Tato funkce je přetížená obálka pro [PathIsFileSpec](/windows/win32/api/shlwapi/nf-shlwapi-pathisfilespecw).|
+|[ATLPath::IsPrefix](#isprefix)|Tato funkce je přetížená obálka pro [PathIsPrefix](/windows/win32/api/shlwapi/nf-shlwapi-pathisprefixw).|
+|[ATLPath::IsRelative](#isrelative)|Tato funkce je přetížená obálka pro [PathIsRelative](/windows/win32/api/shlwapi/nf-shlwapi-pathisrelativew).|
+|[ATLPath::IsRoot](#isroot)|Tato funkce je přetížená obálka pro [PathIsRoot](/windows/win32/api/shlwapi/nf-shlwapi-pathisrootw).|
+|[ATLPath::IsSameRoot](#issameroot)|Tato funkce je přetížená obálka pro [PathIsSameRoot](/windows/win32/api/shlwapi/nf-shlwapi-pathissamerootw).|
+|[ATLPath::IsUNC](#isunc)|Tato funkce je přetížená obálka pro [PathIsUNC](/windows/win32/api/shlwapi/nf-shlwapi-pathisuncw).|
+|[ATLPath::IsUNCServer](#isuncserver)|Tato funkce je přetížená obálka pro [PathIsUNCServer](/windows/win32/api/shlwapi/nf-shlwapi-pathisuncserverw).|
+|[ATLPath::IsUNCServerShare](#isuncservershare)|Tato funkce je přetížená obálka pro [PathIsUNCServerShare](/windows/win32/api/shlwapi/nf-shlwapi-pathisuncserversharew).|
+|[ATLPath::MakePretty](#makepretty)|Tato funkce je přetížená obálka pro [PathMakePretty](/windows/win32/api/shlwapi/nf-shlwapi-pathmakeprettyw).|
+|[ATLPath::MatchSpec](#matchspec)|Tato funkce je přetížená obálka pro [PathMatchSpec](/windows/win32/api/shlwapi/nf-shlwapi-pathmatchspecw).|
+|[ATLPath::QuoteSpaces](#quotespaces)|Tato funkce je přetížená obálka pro [PathQuoteSpaces](/windows/win32/api/shlwapi/nf-shlwapi-pathquotespacesw).|
+|[ATLPath::RelativePathTo](#relativepathto)|Tato funkce je přetížená obálka pro [PathRelativePathTo](/windows/win32/api/shlwapi/nf-shlwapi-pathrelativepathtow).|
+|[ATLPath::RemoveArgs](#removeargs)|Tato funkce je přetížená obálka pro [PathRemoveArgs](/windows/win32/api/shlwapi/nf-shlwapi-pathremoveargsw).|
+|[ATLPath::RemoveBackslash](#removebackslash)|Tato funkce je přetížená obálka pro [PathRemoveBackslash](/windows/win32/api/shlwapi/nf-shlwapi-pathremovebackslashw).|
+|[ATLPath::RemoveBlanks](#removeblanks)|Tato funkce je přetížená obálka pro [PathRemoveBlanks](/windows/win32/api/shlwapi/nf-shlwapi-pathremoveblanksw).|
+|[ATLPath::RemoveExtension](#removeextension)|Tato funkce je přetížená obálka pro [PathRemoveExtension](/windows/win32/api/shlwapi/nf-shlwapi-pathremoveextensionw).|
+|[ATLPath::RemoveFileSpec](#removefilespec)|Tato funkce je přetížená obálka pro [PathRemoveFileSpec](/windows/win32/api/shlwapi/nf-shlwapi-pathremovefilespecw).|
+|[ATLPath::RenameExtension](#renameextension)|Tato funkce je přetížená obálka pro [PathRenameExtension](/windows/win32/api/shlwapi/nf-shlwapi-pathrenameextensionw).|
+|[ATLPath::SkipRoot](#skiproot)|Tato funkce je přetížená obálka pro [PathSkipRoot](/windows/win32/api/shlwapi/nf-shlwapi-pathskiprootw).|
+|[ATLPath::StripPath](#strippath)|Tato funkce je přetížená obálka pro [PathStripPath](/windows/win32/api/shlwapi/nf-shlwapi-pathstrippathw).|
+|[ATLPath::StripToRoot](#striptoroot)|Tato funkce je přetížená obálka pro [PathStripToRoot](/windows/win32/api/shlwapi/nf-shlwapi-pathstriptorootw).|
+|[ATLPath::UnquoteSpaces](#unquotespaces)|Tato funkce je přetížená obálka pro [PathUnquoteSpaces](/windows/win32/api/shlwapi/nf-shlwapi-pathunquotespacesw).|
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** atlpath.h
+**Záhlaví:** atlpath. h
 
-## <a name="addbackslash"></a> ATLPath::AddBackSlash
+## <a name="addbackslash"></a>ATLPath::AddBackSlash
 
-Tato funkce je přetížená obálka pro [PathAddBackslash](/windows/desktop/api/shlwapi/nf-shlwapi-pathaddbackslasha).
+Tato funkce je přetížená obálka pro [PathAddBackslash](/windows/win32/api/shlwapi/nf-shlwapi-pathaddbackslashw).
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -124,11 +124,11 @@ inline wchar_t* AddBackslash(wchar_t* pszPath);
 
 ### <a name="remarks"></a>Poznámky
 
-Zobrazit [PathAddBackslash](/windows/desktop/api/shlwapi/nf-shlwapi-pathaddbackslasha) podrobnosti.
+Podrobnosti najdete v tématu [PathAddBackslash](/windows/win32/api/shlwapi/nf-shlwapi-pathaddbackslashw) .
 
-## <a name="addextension"></a> ATLPath::AddExtension
+## <a name="addextension"></a>ATLPath::AddExtension
 
-Tato funkce je přetížená obálka pro [PathAddExtension](/windows/desktop/api/shlwapi/nf-shlwapi-pathaddextensiona).
+Tato funkce je přetížená obálka pro [PathAddExtension](/windows/win32/api/shlwapi/nf-shlwapi-pathaddextensionw).
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -139,11 +139,11 @@ inline BOOL AddExtension(wchar_t* pszPath, const wchar_t* pszExtension);
 
 ### <a name="remarks"></a>Poznámky
 
-Zobrazit [PathAddExtension](/windows/desktop/api/shlwapi/nf-shlwapi-pathaddextensiona) podrobnosti.
+Podrobnosti najdete v tématu [PathAddExtension](/windows/win32/api/shlwapi/nf-shlwapi-pathaddextensionw) .
 
-## <a name="append"></a> ATLPath::Append
+## <a name="append"></a>ATLPath:: Append
 
-Tato funkce je přetížená obálka pro [PathAppend](/windows/desktop/api/shlwapi/nf-shlwapi-pathappenda).
+Tato funkce je přetížená obálka pro [PathAppend](/windows/win32/api/shlwapi/nf-shlwapi-pathappendw).
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -154,11 +154,11 @@ inline BOOL Append(wchar_t* pszPath, const wchar_t* pszMore);
 
 ### <a name="remarks"></a>Poznámky
 
-Zobrazit [PathAppend](/windows/desktop/api/shlwapi/nf-shlwapi-pathappenda) podrobnosti.
+Podrobnosti najdete v tématu [PathAppend](/windows/win32/api/shlwapi/nf-shlwapi-pathappendw) .
 
-## <a name="buildroot"></a> ATLPath::BuildRoot
+## <a name="buildroot"></a>ATLPath:: BuildRoot
 
-Tato funkce je přetížená obálka pro [PathBuildRoot](/windows/desktop/api/shlwapi/nf-shlwapi-pathbuildroota).
+Tato funkce je přetížená obálka pro [PathBuildRoot](/windows/win32/api/shlwapi/nf-shlwapi-pathbuildrootw).
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -169,11 +169,11 @@ inline wchar_t* BuildRoot(wchar_t* pszPath, int iDrive);
 
 ### <a name="remarks"></a>Poznámky
 
-Zobrazit [PathBuildRoot](/windows/desktop/api/shlwapi/nf-shlwapi-pathbuildroota) podrobnosti.
+Podrobnosti najdete v tématu [PathBuildRoot](/windows/win32/api/shlwapi/nf-shlwapi-pathbuildrootw) .
 
-## <a name="canonicalize"></a> ATLPath::Canonicalize
+## <a name="canonicalize"></a>ATLPath:: kanonického tvaru
 
-Tato funkce je přetížená obálka pro [PathCanonicalize](/windows/desktop/api/shlwapi/nf-shlwapi-pathcanonicalizea).
+Tato funkce je přetížená obálka pro [PathCanonicalize](/windows/win32/api/shlwapi/nf-shlwapi-pathcanonicalizew).
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -184,11 +184,11 @@ inline BOOL Canonicalize(wchar_t* pszDest, const wchar_t* pszSrc);
 
 ### <a name="remarks"></a>Poznámky
 
-Zobrazit [PathCanonicalize](/windows/desktop/api/shlwapi/nf-shlwapi-pathcanonicalizea) podrobnosti.
+Podrobnosti najdete v tématu [PathCanonicalize](/windows/win32/api/shlwapi/nf-shlwapi-pathcanonicalizew) .
 
-## <a name="combine"></a> ATLPath::Combine
+## <a name="combine"></a>ATLPath:: kombinovat
 
-Tato funkce je přetížená obálka pro [PathCombine](/windows/desktop/api/shlwapi/nf-shlwapi-pathcombinea).
+Tato funkce je přetížená obálka pro [PathCombine](/windows/win32/api/shlwapi/nf-shlwapi-pathcombinew).
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -207,11 +207,11 @@ inline wchar_t* Combine(
 
 ### <a name="remarks"></a>Poznámky
 
-Podrobnosti najdete v části PathCombine.
+Podrobnosti najdete v tématu PathCombine.
 
 ## <a name="commonprefix"></a> ATLPath::CommonPrefix
 
-Tato funkce je přetížená obálka pro [PathCommonPrefix](/windows/desktop/api/shlwapi/nf-shlwapi-pathcommonprefixa).
+Tato funkce je přetížená obálka pro [PathCommonPrefix](/windows/win32/api/shlwapi/nf-shlwapi-pathcommonprefixw).
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -229,11 +229,11 @@ inline int CommonPrefix(
 
 ### <a name="remarks"></a>Poznámky
 
-Zobrazit [PathCommonPrefix](/windows/desktop/api/shlwapi/nf-shlwapi-pathcommonprefixa) podrobnosti.
+Podrobnosti najdete v tématu [PathCommonPrefix](/windows/win32/api/shlwapi/nf-shlwapi-pathcommonprefixw) .
 
-## <a name="compactpath"></a> ATLPath::CompactPath
+## <a name="compactpath"></a>ATLPath::CompactPath
 
-Tato funkce je přetížená obálka pro [PathCompactPath](/windows/desktop/api/shlwapi/nf-shlwapi-pathcompactpatha).
+Tato funkce je přetížená obálka pro [PathCompactPath](/windows/win32/api/shlwapi/nf-shlwapi-pathcompactpathw).
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -251,11 +251,11 @@ inline BOOL CompactPath(
 
 ### <a name="remarks"></a>Poznámky
 
-Zobrazit [PathCompactPath](/windows/desktop/api/shlwapi/nf-shlwapi-pathcompactpatha) podrobnosti.
+Podrobnosti najdete v tématu [PathCompactPath](/windows/win32/api/shlwapi/nf-shlwapi-pathcompactpathw) .
 
-## <a name="compactpathex"></a> ATLPath::CompactPathEx
+## <a name="compactpathex"></a>ATLPath::CompactPathEx
 
-Tato funkce je přetížená obálka pro [PathCompactPathEx](/windows/desktop/api/shlwapi/nf-shlwapi-pathcompactpathexa).
+Tato funkce je přetížená obálka pro [PathCompactPathEx](/windows/win32/api/shlwapi/nf-shlwapi-pathcompactpathexw).
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -275,11 +275,11 @@ inline BOOL CompactPathEx(
 
 ### <a name="remarks"></a>Poznámky
 
-Zobrazit [PathCompactPathEx](/windows/desktop/api/shlwapi/nf-shlwapi-pathcompactpathexa) podrobnosti.
+Podrobnosti najdete v tématu [PathCompactPathEx](/windows/win32/api/shlwapi/nf-shlwapi-pathcompactpathexw) .
 
-## <a name="fileexists"></a> ATLPath::FileExists
+## <a name="fileexists"></a>ATLPath:: existuje
 
-Tato funkce je přetížená obálka pro [PathFileExists](/windows/desktop/api/shlwapi/nf-shlwapi-pathfileexistsa).
+Tato funkce je přetížená obálka pro [PathFileExists](/windows/win32/api/shlwapi/nf-shlwapi-pathfileexistsw).
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -290,11 +290,11 @@ inline BOOL FileExists(const wchar_t* pszPath);
 
 ### <a name="remarks"></a>Poznámky
 
-Zobrazit [PathFileExists](/windows/desktop/api/shlwapi/nf-shlwapi-pathfileexistsa) podrobnosti.
+Podrobnosti najdete v tématu [PathFileExists](/windows/win32/api/shlwapi/nf-shlwapi-pathfileexistsw) .
 
-## <a name="findextension"></a> ATLPath::FindExtension
+## <a name="findextension"></a>ATLPath::FindExtension
 
-Tato funkce je přetížená obálka pro [PathFindExtension](/windows/desktop/api/shlwapi/nf-shlwapi-pathfindextensiona).
+Tato funkce je přetížená obálka pro [PathFindExtension](/windows/win32/api/shlwapi/nf-shlwapi-pathfindextensionw).
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -305,11 +305,11 @@ inline wchar_t* FindExtension(const wchar_t* pszPath);
 
 ### <a name="remarks"></a>Poznámky
 
-Zobrazit [PathFindExtension](/windows/desktop/api/shlwapi/nf-shlwapi-pathfindextensiona) podrobnosti.
+Podrobnosti najdete v tématu [PathFindExtension](/windows/win32/api/shlwapi/nf-shlwapi-pathfindextensionw) .
 
 ## <a name="findfilename"></a> ATLPath::FindFileName
 
-Tato funkce je přetížená obálka pro [PathFindFileName](/windows/desktop/api/shlwapi/nf-shlwapi-pathfindfilenamea).
+Tato funkce je přetížená obálka pro [PathFindFileName](/windows/win32/api/shlwapi/nf-shlwapi-pathfindfilenamew).
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -320,11 +320,11 @@ inline wchar_t* FindFileName(const wchar_t* pszPath);
 
 ### <a name="remarks"></a>Poznámky
 
-Zobrazit [PathFindFileName](/windows/desktop/api/shlwapi/nf-shlwapi-pathfindfilenamea) podrobnosti.
+Podrobnosti najdete v tématu [PathFindFileName](/windows/win32/api/shlwapi/nf-shlwapi-pathfindfilenamew) .
 
-## <a name="getdrivenumber"></a> ATLPath::GetDriveNumber
+## <a name="getdrivenumber"></a>ATLPath::GetDriveNumber
 
-Tato funkce je přetížená obálka pro [PathGetDriveNumber](/windows/desktop/api/shlwapi/nf-shlwapi-pathgetdrivenumbera).
+Tato funkce je přetížená obálka pro [PathGetDriveNumber](/windows/win32/api/shlwapi/nf-shlwapi-pathgetdrivenumberw).
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -335,11 +335,11 @@ inline int GetDriveNumber(const wchar_t* pszPath);
 
 ### <a name="remarks"></a>Poznámky
 
-Zobrazit [PathGetDriveNumber](/windows/desktop/api/shlwapi/nf-shlwapi-pathgetdrivenumbera) podrobnosti.
+Podrobnosti najdete v tématu [PathGetDriveNumber](/windows/win32/api/shlwapi/nf-shlwapi-pathgetdrivenumberw) .
 
-## <a name="isdirectory"></a>  ATLPath::IsDirectory
+## <a name="isdirectory"></a>ATLPath::-adresář
 
-Tato funkce je přetížená obálka pro [PathIsDirectory](/windows/desktop/api/shlwapi/nf-shlwapi-pathisdirectorya).
+Tato funkce je přetížená obálka pro [PathIsDirectory](/windows/win32/api/shlwapi/nf-shlwapi-pathisdirectoryw).
 
 ```
 inline BOOL IsDirectory(const char* pszPath);
@@ -348,11 +348,11 @@ inline BOOL IsDirectory(const wchar_t* pszPath);
 
 ### <a name="remarks"></a>Poznámky
 
-Podrobnosti najdete v části PathIsDirectory.
+Podrobnosti najdete v tématu PathIsDirectory.
 
 ## <a name="isfilespec"></a> ATLPath::IsFileSpec
 
-Tato funkce je přetížená obálka pro [PathIsFileSpec](/windows/desktop/api/shlwapi/nf-shlwapi-pathisfilespeca).
+Tato funkce je přetížená obálka pro [PathIsFileSpec](/windows/win32/api/shlwapi/nf-shlwapi-pathisfilespecw).
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -363,11 +363,11 @@ inline BOOL IsFileSpec(const wchar_t* pszPath);
 
 ### <a name="remarks"></a>Poznámky
 
-Zobrazit [PathIsFileSpec](/windows/desktop/api/shlwapi/nf-shlwapi-pathisfilespeca) podrobnosti.
+Podrobnosti najdete v tématu [PathIsFileSpec](/windows/win32/api/shlwapi/nf-shlwapi-pathisfilespecw) .
 
-## <a name="isprefix"></a> ATLPath::IsPrefix
+## <a name="isprefix"></a>ATLPath::-prefix
 
-Tato funkce je přetížená obálka pro [PathIsPrefix](/windows/desktop/api/shlwapi/nf-shlwapi-pathisprefixa).
+Tato funkce je přetížená obálka pro [PathIsPrefix](/windows/win32/api/shlwapi/nf-shlwapi-pathisprefixw).
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -378,11 +378,11 @@ inline BOOL IsPrefix(const wchar_t* pszPrefix, const wchar_t* pszPath);
 
 ### <a name="remarks"></a>Poznámky
 
-Zobrazit [PathIsPrefix](/windows/desktop/api/shlwapi/nf-shlwapi-pathisprefixa) podrobnosti.
+Podrobnosti najdete v tématu [PathIsPrefix](/windows/win32/api/shlwapi/nf-shlwapi-pathisprefixw) .
 
-## <a name="isrelative"></a> ATLPath::IsRelative
+## <a name="isrelative"></a>ATLPath::-relativní
 
-Tato funkce je přetížená obálka pro [PathIsRelative](/windows/desktop/api/shlwapi/nf-shlwapi-pathisrelativea).
+Tato funkce je přetížená obálka pro [PathIsRelative](/windows/win32/api/shlwapi/nf-shlwapi-pathisrelativew).
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -393,11 +393,11 @@ inline BOOL IsRelative(const wchar_t* pszPath);
 
 ### <a name="remarks"></a>Poznámky
 
-Zobrazit [PathIsRelative](/windows/desktop/api/shlwapi/nf-shlwapi-pathisrelativea) podrobnosti.
+Podrobnosti najdete v tématu [PathIsRelative](/windows/win32/api/shlwapi/nf-shlwapi-pathisrelativew) .
 
-## <a name="isroot"></a> ATLPath::IsRoot
+## <a name="isroot"></a>ATLPath::-root
 
-Tato funkce je přetížená obálka pro [PathIsRoot](/windows/desktop/api/shlwapi/nf-shlwapi-pathisroota).
+Tato funkce je přetížená obálka pro [PathIsRoot](/windows/win32/api/shlwapi/nf-shlwapi-pathisrootw).
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -408,11 +408,11 @@ inline BOOL IsRoot(const wchar_t* pszPath);
 
 ### <a name="remarks"></a>Poznámky
 
-Zobrazit [PathIsRoot](/windows/desktop/api/shlwapi/nf-shlwapi-pathisroota) podrobnosti.
+Podrobnosti najdete v tématu [PathIsRoot](/windows/win32/api/shlwapi/nf-shlwapi-pathisrootw) .
 
-## <a name="issameroot"></a> ATLPath::IsSameRoot
+## <a name="issameroot"></a>ATLPath::IsSameRoot
 
-Tato funkce je přetížená obálka pro [PathIsSameRoot](/windows/desktop/api/shlwapi/nf-shlwapi-pathissameroota).
+Tato funkce je přetížená obálka pro [PathIsSameRoot](/windows/win32/api/shlwapi/nf-shlwapi-pathissamerootw).
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -423,11 +423,11 @@ inline BOOL IsSameRoot(const wchar_t* pszPath1, const wchar_t* pszPath2);
 
 ### <a name="remarks"></a>Poznámky
 
-Zobrazit [PathIsSameRoot](/windows/desktop/api/shlwapi/nf-shlwapi-pathissameroota) podrobnosti.
+Podrobnosti najdete v tématu [PathIsSameRoot](/windows/win32/api/shlwapi/nf-shlwapi-pathissamerootw) .
 
-## <a name="isunc"></a> ATLPath::IsUNC
+## <a name="isunc"></a>ATLPath::IsUNC
 
-Tato funkce je přetížená obálka pro [PathIsUNC](/windows/desktop/api/shlwapi/nf-shlwapi-pathisunca).
+Tato funkce je přetížená obálka pro [PathIsUNC](/windows/win32/api/shlwapi/nf-shlwapi-pathisuncw).
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -438,11 +438,11 @@ inline BOOL IsUNC(const wchar_t* pszPath);
 
 ### <a name="remarks"></a>Poznámky
 
-Zobrazit [PathIsUNC](/windows/desktop/api/shlwapi/nf-shlwapi-pathisunca) podrobnosti.
+Podrobnosti najdete v tématu [PathIsUNC](/windows/win32/api/shlwapi/nf-shlwapi-pathisuncw) .
 
 ## <a name="isuncserver"></a> ATLPath::IsUNCServer
 
-Tato funkce je přetížená obálka pro [PathIsUNCServer](/windows/desktop/api/shlwapi/nf-shlwapi-pathisuncservera).
+Tato funkce je přetížená obálka pro [PathIsUNCServer](/windows/win32/api/shlwapi/nf-shlwapi-pathisuncserverw).
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -453,11 +453,11 @@ inline BOOL IsUNCServer(const wchar_t* pszPath);
 
 ### <a name="remarks"></a>Poznámky
 
-Zobrazit [PathIsUNCServer](/windows/desktop/api/shlwapi/nf-shlwapi-pathisuncservera) podrobnosti.
+Podrobnosti najdete v tématu [PathIsUNCServer](/windows/win32/api/shlwapi/nf-shlwapi-pathisuncserverw) .
 
 ## <a name="isuncservershare"></a> ATLPath::IsUNCServerShare
 
-Tato funkce je přetížená obálka pro [PathIsUNCServerShare](/windows/desktop/api/shlwapi/nf-shlwapi-pathisuncserversharea).
+Tato funkce je přetížená obálka pro [PathIsUNCServerShare](/windows/win32/api/shlwapi/nf-shlwapi-pathisuncserversharew).
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -468,11 +468,11 @@ inline BOOL IsUNCServerShare(const wchar_t* pszPath);
 
 ### <a name="remarks"></a>Poznámky
 
-Zobrazit [PathIsUNCServerShare](/windows/desktop/api/shlwapi/nf-shlwapi-pathisuncserversharea) podrobnosti.
+Podrobnosti najdete v tématu [PathIsUNCServerShare](/windows/win32/api/shlwapi/nf-shlwapi-pathisuncserversharew) .
 
-## <a name="makepretty"></a> ATLPath::MakePretty
+## <a name="makepretty"></a>ATLPath::MakePretty
 
-Tato funkce je přetížená obálka pro [PathMakePretty](/windows/desktop/api/shlwapi/nf-shlwapi-pathmakeprettya).
+Tato funkce je přetížená obálka pro [PathMakePretty](/windows/win32/api/shlwapi/nf-shlwapi-pathmakeprettyw).
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -483,11 +483,11 @@ inline BOOL MakePretty(wchar_t* pszPath);
 
 ### <a name="remarks"></a>Poznámky
 
-Zobrazit [PathMakePretty](/windows/desktop/api/shlwapi/nf-shlwapi-pathmakeprettya) podrobnosti.
+Podrobnosti najdete v tématu [PathMakePretty](/windows/win32/api/shlwapi/nf-shlwapi-pathmakeprettyw) .
 
-## <a name="matchspec"></a> ATLPath::MatchSpec
+## <a name="matchspec"></a>ATLPath::MatchSpec
 
-Tato funkce je přetížená obálka pro [PathMatchSpec](/windows/desktop/api/shlwapi/nf-shlwapi-pathmatchspeca).
+Tato funkce je přetížená obálka pro [PathMatchSpec](/windows/win32/api/shlwapi/nf-shlwapi-pathmatchspecw).
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -498,11 +498,11 @@ inline BOOL MatchSpec(const wchar_t* pszPath, const wchar_t* pszSpec);
 
 ### <a name="remarks"></a>Poznámky
 
-Zobrazit [PathMatchSpec](/windows/desktop/api/shlwapi/nf-shlwapi-pathmatchspeca) podrobnosti.
+Podrobnosti najdete v tématu [PathMatchSpec](/windows/win32/api/shlwapi/nf-shlwapi-pathmatchspecw) .
 
 ## <a name="quotespaces"></a> ATLPath::QuoteSpaces
 
-Tato funkce je přetížená obálka pro [PathQuoteSpaces](/windows/desktop/api/shlwapi/nf-shlwapi-pathquotespacesa).
+Tato funkce je přetížená obálka pro [PathQuoteSpaces](/windows/win32/api/shlwapi/nf-shlwapi-pathquotespacesw).
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -513,11 +513,11 @@ inline void QuoteSpaces(wchar_t* pszPath);
 
 ### <a name="remarks"></a>Poznámky
 
-Zobrazit [PathQuoteSpaces](/windows/desktop/api/shlwapi/nf-shlwapi-pathquotespacesa) podrobnosti.
+Podrobnosti najdete v tématu [PathQuoteSpaces](/windows/win32/api/shlwapi/nf-shlwapi-pathquotespacesw) .
 
-## <a name="relativepathto"></a> ATLPath::RelativePathTo
+## <a name="relativepathto"></a>ATLPath::RelativePathTo
 
-Tato funkce je přetížená obálka pro [PathRelativePathTo](/windows/desktop/api/shlwapi/nf-shlwapi-pathrelativepathtoa).
+Tato funkce je přetížená obálka pro [PathRelativePathTo](/windows/win32/api/shlwapi/nf-shlwapi-pathrelativepathtow).
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -539,11 +539,11 @@ inline BOOL RelativePathTo(
 
 ### <a name="remarks"></a>Poznámky
 
-Zobrazit [PathRelativePathTo](/windows/desktop/api/shlwapi/nf-shlwapi-pathrelativepathtoa) podrobnosti.
+Podrobnosti najdete v tématu [PathRelativePathTo](/windows/win32/api/shlwapi/nf-shlwapi-pathrelativepathtow) .
 
-## <a name="removeargs"></a> ATLPath::RemoveArgs
+## <a name="removeargs"></a>ATLPath::RemoveArgs
 
-Tato funkce je přetížená obálka pro [PathRemoveArgs](/windows/desktop/api/shlwapi/nf-shlwapi-pathremoveargsa).
+Tato funkce je přetížená obálka pro [PathRemoveArgs](/windows/win32/api/shlwapi/nf-shlwapi-pathremoveargsw).
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -554,11 +554,11 @@ inline void RemoveArgs(wchar_t* pszPath);
 
 ### <a name="remarks"></a>Poznámky
 
-Zobrazit [PathRemoveArgs](/windows/desktop/api/shlwapi/nf-shlwapi-pathremoveargsa) podrobnosti.
+Podrobnosti najdete v tématu [PathRemoveArgs](/windows/win32/api/shlwapi/nf-shlwapi-pathremoveargsw) .
 
-## <a name="removebackslash"></a> ATLPath::RemoveBackslash
+## <a name="removebackslash"></a>ATLPath::RemoveBackslash
 
-Tato funkce je přetížená obálka pro [PathRemoveBackslash](/windows/desktop/api/shlwapi/nf-shlwapi-pathremovebackslasha).
+Tato funkce je přetížená obálka pro [PathRemoveBackslash](/windows/win32/api/shlwapi/nf-shlwapi-pathremovebackslashw).
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -569,11 +569,11 @@ inline wchar_t* RemoveBackslash(wchar_t* pszPath);
 
 ### <a name="remarks"></a>Poznámky
 
-Zobrazit [PathRemoveBackslash](/windows/desktop/api/shlwapi/nf-shlwapi-pathremovebackslasha) podrobnosti.
+Podrobnosti najdete v tématu [PathRemoveBackslash](/windows/win32/api/shlwapi/nf-shlwapi-pathremovebackslashw) .
 
-## <a name="removeblanks"></a> ATLPath::RemoveBlanks
+## <a name="removeblanks"></a>ATLPath::RemoveBlanks
 
-Tato funkce je přetížená obálka pro [PathRemoveBlanks](/windows/desktop/api/shlwapi/nf-shlwapi-pathremoveblanksa).
+Tato funkce je přetížená obálka pro [PathRemoveBlanks](/windows/win32/api/shlwapi/nf-shlwapi-pathremoveblanksw).
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -584,11 +584,11 @@ inline void RemoveBlanks(wchar_t* pszPath);
 
 ### <a name="remarks"></a>Poznámky
 
-Zobrazit [PathRemoveBlanks](/windows/desktop/api/shlwapi/nf-shlwapi-pathremoveblanksa) podrobnosti.
+Podrobnosti najdete v tématu [PathRemoveBlanks](/windows/win32/api/shlwapi/nf-shlwapi-pathremoveblanksw) .
 
-## <a name="removeextension"></a> ATLPath::RemoveExtension
+## <a name="removeextension"></a>ATLPath::RemoveExtension
 
-Tato funkce je přetížená obálka pro [PathRemoveExtension](/windows/desktop/api/shlwapi/nf-shlwapi-pathremoveextensiona).
+Tato funkce je přetížená obálka pro [PathRemoveExtension](/windows/win32/api/shlwapi/nf-shlwapi-pathremoveextensionw).
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -599,11 +599,11 @@ inline void RemoveExtension(wchar_t* pszPath);
 
 ### <a name="remarks"></a>Poznámky
 
-Zobrazit [PathRemoveExtension](/windows/desktop/api/shlwapi/nf-shlwapi-pathremoveextensiona) podrobnosti.
+Podrobnosti najdete v tématu [PathRemoveExtension](/windows/win32/api/shlwapi/nf-shlwapi-pathremoveextensionw) .
 
-## <a name="removefilespec"></a> ATLPath::RemoveFileSpec
+## <a name="removefilespec"></a>ATLPath::RemoveFileSpec
 
-Tato funkce je přetížená obálka pro [PathRemoveFileSpec](/windows/desktop/api/shlwapi/nf-shlwapi-pathremovefilespeca).
+Tato funkce je přetížená obálka pro [PathRemoveFileSpec](/windows/win32/api/shlwapi/nf-shlwapi-pathremovefilespecw).
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -614,11 +614,11 @@ inline BOOL RemoveFileSpec(wchar_t* pszPath);
 
 ### <a name="remarks"></a>Poznámky
 
-Zobrazit [PathRemoveFileSpec](/windows/desktop/api/shlwapi/nf-shlwapi-pathremovefilespeca) podrobnosti.
+Podrobnosti najdete v tématu [PathRemoveFileSpec](/windows/win32/api/shlwapi/nf-shlwapi-pathremovefilespecw) .
 
-## <a name="renameextension"></a> ATLPath::RenameExtension
+## <a name="renameextension"></a>ATLPath::RenameExtension
 
-Tato funkce je přetížená obálka pro [PathRenameExtension](/windows/desktop/api/shlwapi/nf-shlwapi-pathrenameextensiona).
+Tato funkce je přetížená obálka pro [PathRenameExtension](/windows/win32/api/shlwapi/nf-shlwapi-pathrenameextensionw).
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -629,11 +629,11 @@ inline BOOL RenameExtension(wchar_t* pszPath, const wchar_t* pszExt);
 
 ### <a name="remarks"></a>Poznámky
 
-Zobrazit [PathRenameExtension](/windows/desktop/api/shlwapi/nf-shlwapi-pathrenameextensiona) podrobnosti.
+Podrobnosti najdete v tématu [PathRenameExtension](/windows/win32/api/shlwapi/nf-shlwapi-pathrenameextensionw) .
 
-## <a name="skiproot"></a> ATLPath::SkipRoot
+## <a name="skiproot"></a>ATLPath::SkipRoot
 
-Tato funkce je přetížená obálka pro [PathSkipRoot](/windows/desktop/api/shlwapi/nf-shlwapi-pathskiproota).
+Tato funkce je přetížená obálka pro [PathSkipRoot](/windows/win32/api/shlwapi/nf-shlwapi-pathskiprootw).
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -644,11 +644,11 @@ inline wchar_t* SkipRoot(const wchar_t* pszPath);
 
 ### <a name="remarks"></a>Poznámky
 
-Zobrazit [PathSkipRoot](/windows/desktop/api/shlwapi/nf-shlwapi-pathskiproota) podrobnosti.
+Podrobnosti najdete v tématu [PathSkipRoot](/windows/win32/api/shlwapi/nf-shlwapi-pathskiprootw) .
 
-## <a name="strippath"></a> ATLPath::StripPath
+## <a name="strippath"></a>ATLPath::StripPath
 
-Tato funkce je přetížená obálka pro [PathStripPath](/windows/desktop/api/shlwapi/nf-shlwapi-pathstrippatha).
+Tato funkce je přetížená obálka pro [PathStripPath](/windows/win32/api/shlwapi/nf-shlwapi-pathstrippathw).
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -659,11 +659,11 @@ inline void StripPath(wchar_t* pszPath);
 
 ### <a name="remarks"></a>Poznámky
 
-Zobrazit [PathStripPath](/windows/desktop/api/shlwapi/nf-shlwapi-pathstrippatha) podrobnosti.
+Podrobnosti najdete v tématu [PathStripPath](/windows/win32/api/shlwapi/nf-shlwapi-pathstrippathw) .
 
 ## <a name="striptoroot"></a> ATLPath::StripToRoot
 
-Tato funkce je přetížená obálka pro [PathStripToRoot](/windows/desktop/api/shlwapi/nf-shlwapi-pathstriptoroota).
+Tato funkce je přetížená obálka pro [PathStripToRoot](/windows/win32/api/shlwapi/nf-shlwapi-pathstriptorootw).
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -674,11 +674,11 @@ inline BOOL StripToRoot(wchar_t* pszPath);
 
 ### <a name="remarks"></a>Poznámky
 
-Zobrazit [PathStripToRoot](/windows/desktop/api/shlwapi/nf-shlwapi-pathstriptoroota) podrobnosti.
+Podrobnosti najdete v tématu [PathStripToRoot](/windows/win32/api/shlwapi/nf-shlwapi-pathstriptorootw) .
 
-## <a name="unquotespaces"></a> ATLPath::UnquoteSpaces
+## <a name="unquotespaces"></a>ATLPath::UnquoteSpaces
 
-Tato funkce je přetížená obálka pro [PathUnquoteSpaces](/windows/desktop/api/shlwapi/nf-shlwapi-pathunquotespacesa).
+Tato funkce je přetížená obálka pro [PathUnquoteSpaces](/windows/win32/api/shlwapi/nf-shlwapi-pathunquotespacesw).
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -689,4 +689,4 @@ inline void UnquoteSpaces(wchar_t* pszPath);
 
 ### <a name="remarks"></a>Poznámky
 
-Zobrazit [PathUnquoteSpaces](/windows/desktop/api/shlwapi/nf-shlwapi-pathunquotespacesa) podrobnosti.
+Podrobnosti najdete v tématu [PathUnquoteSpaces](/windows/win32/api/shlwapi/nf-shlwapi-pathunquotespacesw) .

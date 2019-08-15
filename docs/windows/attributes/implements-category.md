@@ -1,21 +1,21 @@
 ---
-title: implements_category – (C++ atributů COM)
+title: implements_category (C++ atribut com)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.implements_category
 helpviewer_keywords:
 - implements_category attribute
 ms.assetid: fb162df3-1ebe-43dc-a084-668d7ef8c03f
-ms.openlocfilehash: bbd859018210d3c972ae9d4b0e9f659d96d95aab
-ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
+ms.openlocfilehash: 6e0036b7008b67a1e21bcbe64977f4703bbdf3be
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66504222"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69514630"
 ---
-# <a name="implementscategory"></a>implements_category
+# <a name="implements_category"></a>implements_category
 
-Určuje součást kategorie implementované cílové třídy.
+Určuje kategorie komponent implementované cílovou třídou.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -26,17 +26,17 @@ Určuje součást kategorie implementované cílové třídy.
 ### <a name="parameters"></a>Parametry
 
 *implements_category*<br/>
-ID kategorie implementovaná.
+ID implementované kategorie
 
 ## <a name="remarks"></a>Poznámky
 
-**Implements_category –** C++ atribut určuje kategorie komponenty implementované cílové třídy. Je to vytváření map kategorie a přidáním samostatných položek, které jsou určené **implements_category –** atribut. Další informace najdete v tématu [součást kategorie a jak jejich práce](/windows/desktop/com/component-categories-and-how-they-work).
+Atribut **implements_category** C++ určuje kategorie komponent implementované cílovou třídou. K tomu je potřeba vytvořit mapu kategorií a přidat samostatné položky určené atributem **implements_category** . Další informace najdete v tématech [kategorie komponent a jak fungují](/windows/win32/com/component-categories-and-how-they-work).
 
-Tento atribut vyžaduje, aby [coclass](coclass.md), [progid](progid.md), nebo [vi_progid –](vi-progid.md) atribut (nebo jiný atribut, který zahrnuje jednu z těchto) také použít u stejného elementu. Pokud se používá jakékoli jeden atribut, další dvě automaticky použity. Například pokud `progid` se použije, `vi_progid` a `coclass` jsou použita také.
+Tento atribut vyžaduje, aby atribut [Coclass](coclass.md), [ProgID](progid.md)nebo [vi_progid](vi-progid.md) (nebo jiný atribut, který implikuje jeden z nich) byl také použit pro stejný prvek. Je-li použit libovolný atribut, budou automaticky použity ostatní dva. Například pokud `progid` se `vi_progid` používá a `coclass` jsou také aplikovány.
 
 ## <a name="example"></a>Příklad
 
-Následující kód určuje, že následující objekt implementuje `Control` kategorie.
+Následující kód určuje, že následující objekt implementuje `Control` kategorii.
 
 ```cpp
 // cpp_attr_ref_implements_category.cpp
@@ -53,16 +53,16 @@ class CMyClass {};
 
 ## <a name="requirements"></a>Požadavky
 
-### <a name="attribute-context"></a>Atribut kontextu
+### <a name="attribute-context"></a>Kontext atributu
 
 |||
 |-|-|
-|**Platí pro**|**Třída**, **– struktura**|
-|**Opakovatelné**|Ano|
-|**Vyžadované atributy**|Jeden z následujících: `coclass`, `progid`, nebo `vi_progid`|
+|**Platí pro**|**Třída**, **Struktura**|
+|**REPEATABLE**|Ano|
+|**Požadované atributy**|Jedna z následujících možností: `coclass`, `progid`, nebo`vi_progid`|
 |**Neplatné atributy**|Žádné|
 
-Další informace najdete v tématu [kontexty atributů](cpp-attributes-com-net.md#contexts).
+Další informace naleznete v tématu [kontexty atributů](cpp-attributes-com-net.md#contexts).
 
 ## <a name="see-also"></a>Viz také:
 

@@ -6,17 +6,17 @@ f1_keywords:
 helpviewer_keywords:
 - C1093
 ms.assetid: 61b120e2-44cc-4824-981a-7eb72aa57745
-ms.openlocfilehash: d84810a156b847ed90aecb128fe38ddbeafab5e9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2ac5729fa74430aa8254f9e2889d24de05c0f54a
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62215710"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69501065"
 ---
 # <a name="fatal-error-c1093"></a>Závažná chyba C1093
 
-> Volání rozhraní API "*název funkce*'se nezdařil'*umístění volání*": "*text z běhu*.
+> Volání rozhraní API "*název funkce*" se nezdařilo "*umístění volání*": "*text z doby běhu*"
 
-Volání funkce .NET se nezdařilo. *Text z běhu* řetězec může nebo nemusí být poskytnuty tímto modulem COM.
+Volání funkce .NET se nezdařilo. *Text z řetězce run-time* může nebo nemusí být poskytnut modulem runtime com.
 
-Další informace o systému chybové zprávy naleznete v souboru systému winerror.h a [FormatMessage](/windows/desktop/api/winbase/nf-winbase-formatmessage).
+Další informace o systémových chybových zprávách najdete v systému souborů Winerror. h a v [FormatMessage](/windows/win32/api/winbase/nf-winbase-formatmessage).

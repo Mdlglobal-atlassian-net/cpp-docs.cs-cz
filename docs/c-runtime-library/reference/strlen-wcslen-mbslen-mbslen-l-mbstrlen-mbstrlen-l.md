@@ -1,5 +1,5 @@
 ---
-title: strlen, wcslen –, _mbslen –, _mbslen_l –, _mbstrlen –, _mbstrlen_l –
+title: strlen, wcslen, _mbslen, _mbslen_l, _mbstrlen, _mbstrlen_l
 ms.date: 11/04/2016
 apiname:
 - _mbslen
@@ -49,19 +49,19 @@ helpviewer_keywords:
 - strlen function
 - _mbslen function
 ms.assetid: 16462f2a-1e0f-4eb3-be55-bf1c83f374c2
-ms.openlocfilehash: 4a12c87f1cff14582e21fbb7d617100fc2853dab
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7736e1e7889642c41a5e3853ac13221ab22f6d03
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62362280"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69500928"
 ---
-# <a name="strlen-wcslen-mbslen-mbslenl-mbstrlen-mbstrlenl"></a>strlen, wcslen –, _mbslen –, _mbslen_l –, _mbstrlen –, _mbstrlen_l –
+# <a name="strlen-wcslen-_mbslen-_mbslen_l-_mbstrlen-_mbstrlen_l"></a>strlen, wcslen, _mbslen, _mbslen_l, _mbstrlen, _mbstrlen_l
 
-Získá délku řetězce, pomocí aktuálního národního prostředí nebo zadaného národního prostředí. Bezpečnější verze těchto funkcí jsou k dispozici. Zobrazit [strnlen – strnlen_s –, wcsnlen –, wcsnlen_s –, _mbsnlen –, _mbsnlen_l –, _mbstrnlen –, _mbstrnlen_l –](strnlen-strnlen-s.md)
+Získá délku řetězce pomocí aktuálního národního prostředí nebo zadaného národního prostředí. K dispozici jsou bezpečnější verze těchto funkcí; viz [strnlen, strnlen_s, wcsnlen, wcsnlen_s, _mbsnlen, _mbsnlen_l, _mbstrnlen, _mbstrnlen_l](strnlen-strnlen-s.md)
 
 > [!IMPORTANT]
-> **_mbslen –**, **_mbslen_l –**, **_mbstrlen –**, a **_mbstrlen_l –** nelze použít v aplikacích, které jsou spouštěny v modulu Windows Runtime. Další informace najdete v tématu [CRT funkce nejsou podporovány v aplikacích pro univerzální platformu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> **_mbslen**, **_mbslen_l**, **_mbstrlen**a **_mbstrlen_l** nelze použít v aplikacích, které jsou spouštěny v prostředí Windows Runtime. Další informace najdete v tématu [funkce CRT nejsou v aplikacích Univerzální platforma Windows podporovány](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -91,43 +91,43 @@ size_t _mbstrlen_l(
 ### <a name="parameters"></a>Parametry
 
 *str*<br/>
-Řetězec zakončený hodnotou Null.
+Řetězec zakončený hodnotou null.
 
-*Národní prostředí*<br/>
-Národní prostředí.
+*jazyka*<br/>
+Národní prostředí, které se má použít.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Každá z těchto funkcí vrátí počet znaků v *str*, s výjimkou terminálu hodnotu null. Není vyhrazena žádná návratová hodnota udávající chybu, s výjimkou **_mbstrlen –** a **_mbstrlen_l –**, které vrátit `((size_t)(-1))` Pokud řetězec obsahuje neplatné vícebajtového znaku.
+Každá z těchto funkcí vrátí počet znaků v *str*s výjimkou hodnoty Terminal null. Žádná návratová hodnota není vyhrazena pro indikaci chyby, s výjimkou **_mbstrlen** a **_mbstrlen_l**, `((size_t)(-1))` která vrací, pokud řetězec obsahuje neplatný vícebajtový znak.
 
 ## <a name="remarks"></a>Poznámky
 
-**strlen –** interpretuje řetězec jako řetězec jednobajtového znaku, vrácená hodnota je rovna počtu bajtů, vždycky i v případě, že řetězec obsahuje vícebajtových znaků. **wcslen –** je verze širokého znaku **strlen**; argument **wcslen –** je řetězec širokého znaku a počet znaků v široké (dvoubajtové) znaky. **wcslen –** a **strlen** se jinak chovají stejně.
+**strlen** interpretuje řetězec jako jednobajtové znakové řetězce, takže jeho návratová hodnota je vždy rovna počtu bajtů, a to i v případě, že řetězec obsahuje vícebajtové znaky. **wcslen** je **strlen**verze s velkým znakem; Argument **wcslen** je řetězec s velkým znakem a počet znaků je v rámci velkých (dvoubajtových) znaků. **wcslen** a **strlen** se chovají stejně jinak.
 
-**Poznámka k zabezpečení** tyto funkce se vám účtovat potenciální ohrožení způsobené problémem přetečení vyrovnávací paměti. Problémů přetečení vyrovnávací paměti jsou častou metodou útoku na systém. Výsledkem je negarantované zvýšení úrovně oprávnění. Další informace najdete v tématu [předcházení přetečení vyrovnávací paměti](/windows/desktop/SecBP/avoiding-buffer-overruns).
+**Poznámka k zabezpečení** Tyto funkce se dotýkají potenciální hrozby týkající se problému s přetečením vyrovnávací paměti. Problémy s přetečením vyrovnávací paměti představují častější způsob útoku na systém, což vede k neoprávněnému zvýšení oprávnění. Další informace najdete v tématu [předcházení přetečení vyrovnávací paměti](/windows/win32/SecBP/avoiding-buffer-overruns).
 
 ### <a name="generic-text-routine-mappings"></a>Mapování rutin obecného textu
 
-|Rutina TCHAR.H|_UNICODE a _MBCS nejsou definovány|_MBCS definováno|_UNICODE definováno|
+|Rutina TCHAR.H|_UNICODE & _MBCS nejsou definovány.|_MBCS definováno|_UNICODE definováno|
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_tcslen**|**strlen**|**strlen**|**wcslen**|
 |**_tcsclen**|**strlen**|**_mbslen**|**wcslen**|
 |**_tcsclen_l**|**strlen**|**_mbslen_l**|**wcslen**|
 
-**_mbslen –** a **_mbslen_l –** vrátí počet vícebajtových znaků v řetězci vícebajtových znaků, ale nikoliv testovací platnost vícebajtového znaku. **_mbstrlen –** a **_mbstrlen_l –** testování platnost vícebajtového znaku zakončeného a rozpozná vícebajtové znakové sekvence. Pokud řetězec předaný **_mbstrlen –** nebo **_mbstrlen_l –** obsahuje platný vícebajtový znak pro znakovou stránku, vrátí funkce hodnotu -1 a nastaví **errno** k **EILSEQ**.
+**_mbslen** a **_mbslen_l** vrátí počet vícebajtových znaků v řetězci vícebajtových znaků, ale netestují platnost vícebajtových znaků. **_mbstrlen** a **_mbstrlen_l** test pro vyvícebajtové znaky platnosti a rozpoznávají sekvence vícebajtových znaků. Pokud řetězec předaný do **_mbstrlen** nebo **_mbstrlen_l** obsahuje neplatný vícebajtový znak pro znakovou stránku, vrátí funkce hodnotu-1 a nastaví **errno** na **EILSEQ**.
 
-Výstupní hodnota je ovlivněna nastavením **LC_CTYPE** nastavením kategorie národního prostředí; viz [setlocale](setlocale-wsetlocale.md) Další informace. Verze těchto funkcí bez **_l** používají aktuální národní prostředí pro toto chování závislé na národním prostředí; verze s **_l** přípona jsou stejné s tím rozdílem, že používají parametr národního prostředí místo něho předán v. Další informace najdete v tématu [národní prostředí](../../c-runtime-library/locale.md).
+Výstupní hodnota je ovlivněna nastavením kategorie **LC_CTYPE** národního prostředí; Další [](setlocale-wsetlocale.md) informace naleznete v tématu setlocale. Verze těchto funkcí bez přípony **_l** používají aktuální národní prostředí pro toto chování závislé na národním prostředí; verze s příponou **_l** jsou stejné s tím rozdílem, že místo toho používají předaný parametr národního prostředí. Další informace najdete v tématu [národní prostředí](../../c-runtime-library/locale.md).
 
 ## <a name="requirements"></a>Požadavky
 
 |Rutina|Požadovaný hlavičkový soubor|
 |-------------|---------------------|
-|**strlen**|\<string.h>|
-|**wcslen**|\<String.h > nebo \<wchar.h >|
-|**_mbslen**, **_mbslen_l**|\<Mbstring.h >|
-|**_mbstrlen –**, **_mbstrlen_l –**|\<stdlib.h>|
+|**strlen**|\<String. h >|
+|**wcslen**|\<String. h > nebo \<WCHAR. h >|
+|**_mbslen**, **_mbslen_l**|\<Mbstring. h >|
+|**_mbstrlen**, **_mbstrlen_l**|\<stdlib.h>|
 
-Další informace o kompatibilitě, naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Příklad
 
@@ -194,7 +194,7 @@ Bytes in 'ABCァD' : 6
 
 ## <a name="see-also"></a>Viz také:
 
-[Zacházení s řetězci](../../c-runtime-library/string-manipulation-crt.md)<br/>
+[Manipulace s řetězci](../../c-runtime-library/string-manipulation-crt.md)<br/>
 [Výklad sekvencí vícebajtových znaků](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
 [Národní prostředí](../../c-runtime-library/locale.md)<br/>
 [setlocale, _wsetlocale](setlocale-wsetlocale.md)<br/>

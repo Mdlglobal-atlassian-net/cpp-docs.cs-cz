@@ -1,17 +1,17 @@
 ---
-title: out (atribut C++ COM)
+title: out (C++ atribut com)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.out
 helpviewer_keywords:
 - out attribute
 ms.assetid: 5051b1bf-4949-4bf1-b82f-35e14f0f244b
-ms.openlocfilehash: 7020bd6cfcf8bcdbfb773908e693c6364a29e343
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 11c8e4473f0b849fab7846a825b90da3ed9f036f
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62407598"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69514283"
 ---
 # <a name="out-c"></a>out (C++)
 
@@ -25,24 +25,24 @@ Identifikuje parametry ukazatele, které se vracejí z volané procedury do vola
 
 ## <a name="remarks"></a>Poznámky
 
-**Si** C++ atribut má stejné funkce jako [si](/windows/desktop/Midl/out-idl) atribut MIDL.
+Atribut **out** C++ má stejné funkce jako atribut [out](/windows/win32/Midl/out-idl) MIDL.
 
 ## <a name="example"></a>Příklad
 
-Podívejte se na příklad pro [umožňujících vazbu](bindable.md) ukázkový používání **si**.
+Podívejte se na příklad pro [vázání](bindable.md) pro použití ukázkového použití.
 
 ## <a name="requirements"></a>Požadavky
 
-### <a name="attribute-context"></a>Atribut kontextu
+### <a name="attribute-context"></a>Kontext atributu
 
 |||
 |-|-|
 |**Platí pro**|Parametr rozhraní|
-|**Opakovatelné**|Ne|
-|**Vyžadované atributy**|Žádný|
+|**REPEATABLE**|Ne|
+|**Požadované atributy**|Žádné|
 |**Neplatné atributy**|Žádné|
 
-Další informace o kontexty atributů najdete v tématu [kontexty atributů](cpp-attributes-com-net.md#contexts).
+Další informace o kontextech atributů naleznete v tématu kontexty [atributů](cpp-attributes-com-net.md#contexts).
 
 ## <a name="see-also"></a>Viz také:
 

@@ -1,5 +1,5 @@
 ---
-title: Idispatchimpl – třída
+title: IDispatchImpl – třída
 ms.date: 11/04/2016
 f1_keywords:
 - IDispatchImpl
@@ -14,19 +14,19 @@ helpviewer_keywords:
 - IDispatchImpl class
 - IDispatch class support in ATL
 ms.assetid: 8108eb36-1228-4127-a203-3ab5ba488892
-ms.openlocfilehash: bf6b416337c58f5e9b8a62dda841615412573666
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7e9cb903742cdc31c1d9bba2c4aabbb0472407c1
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62275344"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69495948"
 ---
-# <a name="idispatchimpl-class"></a>Idispatchimpl – třída
+# <a name="idispatchimpl-class"></a>IDispatchImpl – třída
 
-Poskytuje výchozí implementaci pro `IDispatch` součástí duální rozhraní.
+Poskytuje výchozí implementaci pro `IDispatch` část duálního rozhraní.
 
 > [!IMPORTANT]
->  Tato třída a jejích členů nelze použít v aplikacích, které jsou spouštěny v modulu Windows Runtime.
+>  Tato třída a její členové nelze použít v aplikacích, které jsou spouštěny v prostředí Windows Runtime.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -43,51 +43,51 @@ class ATL_NO_VTABLE IDispatchImpl : public T
 #### <a name="parameters"></a>Parametry
 
 *T*<br/>
-[in] Duální rozhraní.
+pro Duální rozhraní.
 
 *piid*<br/>
-[in] Ukazatel na IID *T*.
+pro Ukazatel na identifikátor IID *T*.
 
 *plibid*<br/>
-[in] Ukazatel na LIBID knihovnu typů, který obsahuje informace o rozhraní. Ve výchozím nastavení je předán typ na úrovni serveru knihovny.
+pro Ukazatel na LIBID knihovny typů, která obsahuje informace o rozhraní. Ve výchozím nastavení je předána knihovna typů na úrovni serveru.
 
 *wMajor*<br/>
-[in] Hlavní verze knihovny typů. Výchozí hodnota je 1.
+pro Hlavní verze knihovny typů. Ve výchozím nastavení je hodnota 1.
 
 *wMinor*<br/>
-[in] Dílčí verze knihovny typů. Výchozí hodnota je 0.
+pro Vedlejší verze knihovny typů. Ve výchozím nastavení je hodnota 0.
 
 *tihclass*<br/>
-[in] Třída, která slouží ke správě informace o typu *T*. Výchozí hodnota je `CComTypeInfoHolder`.
+pro Třída, která slouží ke správě informací o typu pro *T*. Ve výchozím nastavení je `CComTypeInfoHolder`tato hodnota.
 
 ## <a name="members"></a>Členové
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
-|[IDispatchImpl::IDispatchImpl](#idispatchimpl)|Konstruktor Volání `AddRef` proměnné chráněný člen, který spravuje informace o typu pro duální rozhraní. Volání destruktoru `Release`.|
+|[IDispatchImpl::IDispatchImpl](#idispatchimpl)|Konstruktor Volá `AddRef` chráněnou členskou proměnnou, která spravuje informace o typu pro duální rozhraní. Destruktor volá `Release`.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
-|[IDispatchImpl::GetIDsOfNames](#getidsofnames)|Mapuje sadu názvů na odpovídající sadu identifikátorů pro rozesílání.|
+|[IDispatchImpl:: GetIDsOfNames](#getidsofnames)|Mapuje sadu názvů na odpovídající sadu identifikátorů pro rozesílání.|
 |[IDispatchImpl::GetTypeInfo](#gettypeinfo)|Načte informace o typu pro duální rozhraní.|
-|[IDispatchImpl::GetTypeInfoCount](#gettypeinfocount)|Určuje, zda je k dispozici pro duální rozhraní informací o typu.|
-|[IDispatchImpl::Invoke](#invoke)|Poskytuje přístup k metodám a vlastnostem vystavené duální rozhraní.|
+|[IDispatchImpl::GetTypeInfoCount](#gettypeinfocount)|Určuje, zda jsou pro duální rozhraní k dispozici informace o typu.|
+|[IDispatchImpl::Invoke](#invoke)|Poskytuje přístup k metodám a vlastnostem zveřejněným pomocí duálního rozhraní.|
 
 ## <a name="remarks"></a>Poznámky
 
-`IDispatchImpl` poskytuje výchozí implementaci pro `IDispatch` součástí žádné duální rozhraní pro objekt. Duální rozhraní je odvozena z `IDispatch` a používá jenom typy kompatibilní služby Automation. Podobně jako dispinterface duální rozhraní podporuje časná vazba a pozdní vazby; duální rozhraní však podporuje také vtable vazby.
+`IDispatchImpl`poskytuje výchozí implementaci pro `IDispatch` část libovolného duálního rozhraní objektu. Duální rozhraní je odvozeno z `IDispatch` a používá pouze typy kompatibilní s automatizací. Podobně jako odesílající rozhraní podporuje duální rozhraní počáteční vazby a pozdní vazby; Nicméně duální rozhraní podporuje také vazbu vtable.
 
-Následující příklad ukazuje obvyklá implementace metody `IDispatchImpl`.
+Následující příklad ukazuje typickou implementaci `IDispatchImpl`nástroje.
 
 [!code-cpp[NVC_ATL_COM#47](../../atl/codesnippet/cpp/idispatchimpl-class_1.h)]
 
-Ve výchozím nastavení `IDispatchImpl` třídy vyhledá informace o typu *T* v registru. K implementaci rozhraní zrušit, můžete použít `IDispatchImpl` třídy bez přístupu k registru pomocí předdefinovaných číslo_verze. Pokud vytvoříte `IDispatchImpl` objekt, který má hodnotu 0xFFFF *wMajor* a 0xFFFF hodnotu *wMinor*, `IDispatchImpl` třídy načte knihovnu typů ze souboru .dll namísto registru.
+Ve výchozím nastavení `IDispatchImpl` třída vyhledává informace o typu *T* v registru. K implementaci neregistrovaného rozhraní můžete použít `IDispatchImpl` třídu bez přístupu k registru pomocí předdefinovaného čísla verze. Pokud vytvoříte `IDispatchImpl` objekt, který má hodnotu 0xFFFF jako hodnotu pro *wMajor* a 0xFFFF jako hodnotu `IDispatchImpl` pro *wMinor*, třída načte knihovnu typů ze souboru. dll namísto registru.
 
-`IDispatchImpl` obsahuje statický člen typu `CComTypeInfoHolder` , který spravuje informace o typu pro duální rozhraní. Pokud máte více objektů, které implementují stejné duální rozhraní, pouze jedna instance `CComTypeInfoHolder` se používá.
+`IDispatchImpl`obsahuje statického člena typu `CComTypeInfoHolder` , který spravuje informace o typu pro duální rozhraní. Máte-li více objektů, které implementují stejné duální rozhraní, `CComTypeInfoHolder` je použita pouze jedna instance.
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
@@ -97,9 +97,9 @@ Ve výchozím nastavení `IDispatchImpl` třídy vyhledá informace o typu *T* v
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** atlcom
+**Záhlaví:** atlcom. h
 
-##  <a name="getidsofnames"></a>  IDispatchImpl::GetIDsOfNames
+##  <a name="getidsofnames"></a>IDispatchImpl:: GetIDsOfNames
 
 Mapuje sadu názvů na odpovídající sadu identifikátorů pro rozesílání.
 
@@ -114,7 +114,7 @@ STDMETHOD(GetIDsOfNames)(
 
 ### <a name="remarks"></a>Poznámky
 
-Zobrazit [IDispatch::GetIDsOfNames](/windows/desktop/api/oaidl/nf-oaidl-idispatch-getidsofnames) ve Windows SDK.
+Viz [IDispatch:: GetIDsOfNames](/windows/win32/api/oaidl/nf-oaidl-idispatch-getidsofnames) ve Windows SDK.
 
 ##  <a name="gettypeinfo"></a>  IDispatchImpl::GetTypeInfo
 
@@ -129,11 +129,11 @@ STDMETHOD(GetTypeInfo)(
 
 ### <a name="remarks"></a>Poznámky
 
-Zobrazit [IDispatch::GetTypeInfo](/windows/desktop/api/oaidl/nf-oaidl-idispatch-gettypeinfo) ve Windows SDK.
+Viz [IDispatch:: GetTypeInfo](/windows/win32/api/oaidl/nf-oaidl-idispatch-gettypeinfo) ve Windows SDK.
 
 ##  <a name="gettypeinfocount"></a>  IDispatchImpl::GetTypeInfoCount
 
-Určuje, zda je k dispozici pro duální rozhraní informací o typu.
+Určuje, zda jsou pro duální rozhraní k dispozici informace o typu.
 
 ```
 STDMETHOD(GetTypeInfoCount)(UINT* pctinfo);
@@ -141,19 +141,19 @@ STDMETHOD(GetTypeInfoCount)(UINT* pctinfo);
 
 ### <a name="remarks"></a>Poznámky
 
-Zobrazit `IDispatch::GetTypeInfoCount` ve Windows SDK.
+Viz `IDispatch::GetTypeInfoCount` v Windows SDK.
 
-##  <a name="idispatchimpl"></a>  IDispatchImpl::IDispatchImpl
+##  <a name="idispatchimpl"></a>IDispatchImpl::IDispatchImpl
 
-Konstruktor Volání `AddRef` proměnné chráněný člen, který spravuje informace o typu pro duální rozhraní. Volání destruktoru `Release`.
+Konstruktor Volá `AddRef` chráněnou členskou proměnnou, která spravuje informace o typu pro duální rozhraní. Destruktor volá `Release`.
 
 ```
 IDispatchImpl();
 ```
 
-##  <a name="invoke"></a>  IDispatchImpl::Invoke
+##  <a name="invoke"></a>IDispatchImpl:: Invoke
 
-Poskytuje přístup k metodám a vlastnostem vystavené duální rozhraní.
+Poskytuje přístup k metodám a vlastnostem zveřejněným pomocí duálního rozhraní.
 
 ```
 STDMETHOD(Invoke)(
@@ -169,8 +169,8 @@ STDMETHOD(Invoke)(
 
 ### <a name="remarks"></a>Poznámky
 
-Zobrazit [IDispatch::Invoke](/windows/desktop/api/oaidl/nf-oaidl-idispatch-invoke) ve Windows SDK.
+Viz [IDispatch:: Invoke](/windows/win32/api/oaidl/nf-oaidl-idispatch-invoke) ve Windows SDK.
 
 ## <a name="see-also"></a>Viz také:
 
-[Přehled tříd](../../atl/atl-class-overview.md)
+[Přehled třídy](../../atl/atl-class-overview.md)

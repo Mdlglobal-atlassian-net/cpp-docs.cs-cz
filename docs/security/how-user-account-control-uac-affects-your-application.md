@@ -7,34 +7,34 @@ helpviewer_keywords:
 - user accounts [C++]
 - User Account Control [C++]
 ms.assetid: 0d001870-253e-4989-b689-f78035953799
-ms.openlocfilehash: 3818b0ff7d4e4c551c41726dd44935beb5d32842
-ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.openlocfilehash: 8c283e86a71092bb510892b6361f3d0fddc2abb6
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65448472"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69510139"
 ---
 # <a name="how-user-account-control-uac-affects-your-application"></a>Jak ovlivňuje nástroj Řízení uživatelských účtů (UAC) vaši aplikaci
 
-Řízení uživatelských účtů (UAC) je funkce systému Windows Vista, ve které uživatelské účty mají omezená oprávnění. Můžete najít podrobné informace o nástroji Řízení uživatelských účtů na těchto místech:
+Řízení uživatelských účtů (UAC) je funkce systému Windows Vista, ve které mají uživatelské účty omezená oprávnění. Podrobné informace o nástroji Řízení uživatelských účtů najdete v těchto lokalitách:
 
-- [Doporučené postupy pro vývojáře a pokyny pro aplikace v prostředí s nejnižšími oprávněními](/windows/desktop/uxguide/winenv-uac)
+- [Osvědčené postupy a pokyny pro vývojáře pro aplikace s nejnižším privilegovaným prostředím](/windows/win32/uxguide/winenv-uac)
 
-## <a name="building-projects-after-enabling-uac"></a>Vytváření projektů po povolení nástroje Řízení uživatelských účtů
+## <a name="building-projects-after-enabling-uac"></a>Vytváření projektů po povolení nástroje řízení uživatelských účtů
 
-Při sestavování v sadě Visual Studio C++ projektu v systému Windows Vista s nástroji Řízení uživatelských účtů je zakázané a později povolit nástroj Řízení uživatelských účtů, je nutné vyčistit a znovu sestavte projekt, aby mohly fungovat správně.
+Pokud vytvoříte projekt sady Visual Studio C++ v systému Windows Vista s nástrojem Řízení uživatelských účtů zakázán a později povolíte nástroj řízení uživatelských účtů, je nutné projekt vyčistit a znovu sestavit, aby správně fungoval.
 
 ## <a name="applications-that-require-administrative-privileges"></a>Aplikace, které vyžadují oprávnění správce
 
-Ve výchozím nastavení, vloží linker Visual C++ fragment nástroje Řízení uživatelských účtů do manifestu aplikace s úrovní provádění `asInvoker`. Pokud vaše aplikace vyžaduje oprávnění správce pro správnou funkci (například v případě, že upraví HKLM uzlu registru nebo pokud se zapíše do chráněných oblastech disku, jako je například adresář Windows), je třeba upravit vaší aplikace.
+Ve výchozím nastavení Visual C++ linker vloží fragment řízení uživatelských účtů do manifestu aplikace s úrovní `asInvoker`spuštění. Pokud vaše aplikace vyžaduje oprávnění správce ke správnému spuštění (například pokud změní uzel HKLM registru nebo pokud zapisuje do chráněných oblastí disku, jako je například adresář Windows), musíte aplikaci upravit.
 
-Prvním způsobem je upravit fragment nástroje Řízení uživatelských účtů v manifestu pro změnu úrovně spuštění na *requireAdministrator*. Aplikace pak vyzve uživatele pro přihlašovací údaje pro správu před jejím spuštěním. Informace o tom, jak to provést, najdete v tématu [/MANIFESTUAC (vložené informace UAC v manifestu)](../build/reference/manifestuac-embeds-uac-information-in-manifest.md).
+První možností je změnit fragment nástroje řízení uživatelských účtů manifestu, aby se změnila úroveň spuštění na *vyžadovat správce*. Aplikace pak uživatele vyzve k zadání přihlašovacích údajů správce před jeho spuštěním. Další informace o tom, jak to provést, naleznete [v tématu/MANIFESTUAC (vložení informací o nástroji Řízení uživatelských účtů v manifestu)](../build/reference/manifestuac-embeds-uac-information-in-manifest.md).
 
-Druhou možností je nevkládat fragment nástroje Řízení uživatelských účtů do manifestu tak, že zadáte `/MANIFESTUAC:NO` – možnost linkeru. Vaše aplikace poběží v tomto případě virtualizované. Všechny změny, které provedete v registru nebo systému souborů nebude zachována po ukončení vaší aplikace.
+Druhou možností je nevkládat do manifestu fragment řízení uživatelských účtů zadáním `/MANIFESTUAC:NO` Možnosti linkeru. V takovém případě se aplikace spustí virtualizované. Všechny změny, které provedete v registru nebo v systému souborů, nebudou po ukončení vaší aplikace zachovány.
 
-Následující diagram popisuje, jak vaše aplikace poběží v závislosti na tom, zda je povoleno nástroje Řízení uživatelských účtů a určuje, zda má aplikace manifestu nástroje Řízení uživatelských účtů:
+Následující vývojový diagram popisuje, jak se vaše aplikace spustí v závislosti na tom, jestli je povolený nástroj řízení uživatelských účtů a jestli má aplikace manifest nástroje řízení uživatelských účtů:
 
-![Chování Windows zavaděče](media/uacflowchart.png "chování Windows zavaděče")
+![Chování zavaděče Windows](media/uacflowchart.png "Chování zavaděče Windows")
 
 ## <a name="see-also"></a>Viz také:
 

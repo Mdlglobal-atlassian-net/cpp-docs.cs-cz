@@ -6,92 +6,92 @@ f1_keywords:
 helpviewer_keywords:
 - language strings
 ms.assetid: bbee63b1-af0b-4e44-9eaf-dd3e265c05fd
-ms.openlocfilehash: 143f06a0cf22265734d6d77f8fca4efd5ac3031b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a9e6eaa65516b5b49022526f24e220dec83b2c26
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62343144"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69500075"
 ---
 # <a name="language-strings"></a>Řetězce jazyků
 
-[Setlocale](../c-runtime-library/reference/setlocale-wsetlocale.md) a [_create_locale](../c-runtime-library/reference/create-locale-wcreate-locale.md) funkce můžete použít rozhraní API Windows NLS podporované jazyky operačních systémů, které nepoužívají znakovou stránku kódování Unicode. Seznam podporovaných jazyků podle verze operačního systému najdete v tématu [dodatku A: Chování produktu](https://msdn.microsoft.com/library/cc233982.aspx) v [MS-LCID]: Odkaz na identifikátor (LCID) kód jazyka Windows. Řetězec jazyka může nabývat hodnoty v **jazyk** a **značku jazyka** sloupce seznam podporovaných jazyků. Příklad kódu, který vytvoří výčet dostupných názvů národního prostředí a souvisejících hodnot najdete v tématu [NLS: Ukázka rozhraní API na základě názvu](/windows/desktop/intl/nls--name-based-apis-sample).
+Funkce [setlocale](../c-runtime-library/reference/setlocale-wsetlocale.md) a [_create_locale](../c-runtime-library/reference/create-locale-wcreate-locale.md) mohou používat jazyky podporované rozhraním Windows NLS API v operačních systémech, které nepoužívají znakovou stránku Unicode. Seznam podporovaných jazyků podle verze operačního systému najdete v [příloze a: Chování](https://msdn.microsoft.com/library/cc233982.aspx) produktu v [MS-LCID]: Odkaz na identifikátor kódu jazyka systému Windows (LCID). Řetězec jazyka může být libovolná hodnota ve sloupci **jazyk** a **jazykové značky** v seznamu podporovaných jazyků. Příklad kódu, který vytváří výčet dostupných názvů národních prostředí a souvisejících hodnot, najdete v [tématu NLS: Ukázka](/windows/win32/intl/nls--name-based-apis-sample)rozhraní API založených na názvech.
 
-## <a name="additional-supported-language-strings"></a>Další podporovaných řetězců jazyka
+## <a name="additional-supported-language-strings"></a>Další podporované řetězce jazyka
 
-Implementace knihovny runtime jazyka Microsoft C podporuje také tyto řetězce jazyka:
+Implementace knihovny run-time jazyka C společnosti Microsoft podporuje i tyto řetězce jazyka:
 
-|Řetězec jazyka|Odpovídající místní název|
+|Řetězec jazyka|Ekvivalentní název národního prostředí|
 |---------------------|----------------------------|
-|American|en-US|
-|americkou angličtinu|en-US|
-|americkou angličtinu|en-US|
-|Australský|cs AU|
-|Belgie|nl-BE|
-|Kanadský|cs CA|
-|CHH|zh-HK|
-|chi|zh-SG|
-|Čínština|zh|
+|anglického|en-US|
+|americká angličtina|en-US|
+|americká – angličtina|en-US|
+|časopisu|cs AU|
+|Lucemburské|nl-BE|
+|Kanadské|cs CA|
+|chh|zh-HK|
+|γ2|zh-SG|
+|Čínština|ZH|
 |chinese-hongkong|zh-HK|
 |čínština (zjednodušená)|zh-CN|
-|Čínština – Singapur|zh-SG|
+|čínština – Singapur|zh-SG|
 |čínština (tradiční)|zh-TW|
-|Holandština – Belgie|nl-BE|
-|americká angličtina|en-US|
-|Angličtina – Austrálie|cs AU|
-|Angličtina – belize|en-BZ|
-|angličtina, může|cs CA|
-|Angličtina – Karibská oblast|en-029|
-|vyžadovat angličtina|cs IE|
-|Angličtina – Jamajka|cs JM|
+|Holandština – belgické|nl-BE|
+|Angličtina – americká|en-US|
+|Angličtina (Austrálie)|cs AU|
+|Angličtina – Belize|en-BZ|
+|Angličtina – může|cs CA|
+|Angličtina (Karibská oblast)|en-029|
+|Angličtina – vyžadovat|cs IE|
+|Angličtina – Jamajka|EN-JM|
 |english-nz|cs NZ|
-|Angličtina – Jihoafrická republika|en-ZA|
-|Angličtina – trinidad a tobago|en-TT|
-|angličtina – Velká Británie|en-GB|
-|Angličtina-USA|en-US|
-|Angličtina usa|en-US|
-|Francouzština – Belgie|fr-BE|
-|French-Canadian|fr-CA|
-|Francouzština – Lucembursko|fr-LU|
-|Francouzština – Švýcarsko|FR-CH|
+|Angličtina (Jihoafrická Korea)|EN-ZA|
+|Angličtina – Trinidad a Tobago|en-TT|
+|Angličtina (Velká Británie)|en-GB|
+|Angličtina (USA)|en-US|
+|Angličtina (USA)|en-US|
+|francouzština – Belgie|fr – bude|
+|francouzština (Kanada)|fr-CA|
+|francouzština – Lucembursko|fr-LU|
+|francouzština (Švýcarsko)|FR-CH|
 |Němčina – Rakousko|de-AT|
-|german-lichtenstein|de-LI|
+|Němčina – Lichtenstein|de-LI|
 |Němčina – Lucembursko|de-LU|
 |german-swiss|de-CH|
 |Irština – angličtina|cs IE|
-|italian-swiss|it-CH|
+|Italština – Švýcarsko|IT – CH|
 |Norština|Ne|
-|Norština – bokmal|nb-NO|
-|norwegian-nynorsk|nn – ne|
-|Brazilská portugalština|pt-BR|
-|Španělština – argentina|es-AR|
-|Španělština – Bolívie|es-BO|
-|Španělština – chile|es-CL|
+|Norština – Bokmal|nb-NO|
+|Norština – Nynorsk|NN – ne|
+|portugalština – Brazílie|pt-BR|
+|Španělština – Argentina|ES-AR|
+|španělština a Bolívie|es-BO|
+|Španělština – Chile|es-CL|
 |Španělština – Kolumbie|es-CO|
 |Španělština – Kostarika|es-CR|
 |Španělština – Dominikánská republika|es-DO|
 |Španělština – Ekvádor|es-EC|
-|Španělština – el salvador|es-SV|
-|Španělština – guatemala|es-GT|
+|Španělština (Salvador)|es-SV|
+|Španělština – Guatemala|es-GT|
 |spanish-honduras|es-HN|
 |Španělština – Mexiko|es-MX|
-|španělština – moderní|es-ES|
+|Španělština – moderní|es-ES|
 |Španělština – Nikaragua|es-NI|
-|Španělština – panama|es-PA|
-|Španělština – paraguay|es-PY|
-|Španělština – peru|es-PE|
+|Španělština – Panama|es-PA|
+|Španělština – Paraguay|ES – PY|
+|Španělština – Peru|es-PE|
 |Španělština – Portoriko|es-PR|
-|Španělština – uruguay|es-UY|
-|Španělština – venezuela|es-VE|
-|swedish-finland|sv-FI|
-|Švýcarsko|de-CH|
-|Spojené království|en-GB|
-|USA|en-US|
+|Španělština – Uruguay|es-UY|
+|Španělština – Venezuela|es-VE|
+|Švédština – Finsko|sv-FI|
+|Švýcarské|de-CH|
+|Velká Británie|en-GB|
+|vylepšení|en-US|
 |usa|en-US|
 
 ## <a name="see-also"></a>Viz také:
 
-[Názvy národních prostředí, jazyků a Country/Region Strings](../c-runtime-library/locale-names-languages-and-country-region-strings.md)<br/>
-[Řetězce zemí/oblastí](../c-runtime-library/country-region-strings.md)<br/>
+[Názvy národních prostředí, jazyky a řetězce země/oblasti](../c-runtime-library/locale-names-languages-and-country-region-strings.md)<br/>
+[Řetězce země/oblasti](../c-runtime-library/country-region-strings.md)<br/>
 [setlocale, _wsetlocale](../c-runtime-library/reference/setlocale-wsetlocale.md)<br/>
 [_create_locale, _wcreate_locale](../c-runtime-library/reference/create-locale-wcreate-locale.md)

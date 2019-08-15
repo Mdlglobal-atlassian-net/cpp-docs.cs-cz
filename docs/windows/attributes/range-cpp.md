@@ -1,21 +1,21 @@
 ---
-title: rozsah (C++ COM atribut)
+title: Range (C++ atribut com)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.range
 helpviewer_keywords:
 - range attribute
 ms.assetid: f352f79e-ecb3-4cdd-9cdd-8406ef473594
-ms.openlocfilehash: 9ce941fe95f2bbef3895c039984db1e1d2985ae1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d1221192eb1813d759f293fe5555d7aaa5b367ab
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62407481"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69514138"
 ---
 # <a name="range-c"></a>range (C++)
 
-Určuje rozsah povolených hodnot pro argumenty nebo pole, jejichž hodnoty jsou nastavené v době běhu.
+Určuje rozsah přípustných hodnot pro argumenty nebo pole, jejichž hodnoty jsou nastaveny v době běhu.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -25,15 +25,15 @@ Určuje rozsah povolených hodnot pro argumenty nebo pole, jejichž hodnoty jsou
 
 ### <a name="parameters"></a>Parametry
 
-*Nízká*<br/>
-Hodnota nízkého rozsahu.
+*slab*<br/>
+Nízká hodnota rozsahu.
 
-*Vysoká*<br/>
-Hodnota vysokého rozsahu.
+*maximální*<br/>
+Vysoká hodnota rozsahu.
 
 ## <a name="remarks"></a>Poznámky
 
-**Rozsah** C++ atribut má stejné funkce jako [rozsah](/windows/desktop/Midl/range) atribut MIDL.
+Atribut **Range** C++ má stejné funkce jako atribut [Range](/windows/win32/Midl/range) MIDL.
 
 ## <a name="example"></a>Příklad
 
@@ -53,16 +53,16 @@ __interface ICustom {
 
 ## <a name="requirements"></a>Požadavky
 
-### <a name="attribute-context"></a>Atribut kontextu
+### <a name="attribute-context"></a>Kontext atributu
 
 |||
 |-|-|
-|**Platí pro**|Metoda rozhraní parametr rozhraní|
-|**Opakovatelné**|Ne|
-|**Vyžadované atributy**|Žádný|
+|**Platí pro**|Interface – metoda, parametr rozhraní|
+|**REPEATABLE**|Ne|
+|**Požadované atributy**|Žádné|
 |**Neplatné atributy**|Žádné|
 
-Další informace o kontexty atributů najdete v tématu [kontexty atributů](cpp-attributes-com-net.md#contexts).
+Další informace o kontextech atributů naleznete v tématu kontexty [atributů](cpp-attributes-com-net.md#contexts).
 
 ## <a name="see-also"></a>Viz také:
 

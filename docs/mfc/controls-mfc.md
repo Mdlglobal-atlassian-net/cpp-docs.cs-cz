@@ -6,36 +6,36 @@ helpviewer_keywords:
 - common controls [MFC]
 - controls [MFC]
 ms.assetid: b2842884-6435-4b8f-933b-21671bf8af95
-ms.openlocfilehash: c0738128d20839046e0885e7489b494d84349e4d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3155889f2fd4002286340ccec7f4a35d1a6a9c20
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62297265"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69508793"
 ---
 # <a name="controls-mfc"></a>Ovládací prvky (MFC)
 
-Ovládací prvky jsou objekty, které mohou uživatelé komunikovat s a zadejte skript nebo manipulaci s daty. Běžně zobrazují v dialogových oknech nebo na panely nástrojů. Toto téma řady zahrnuje tři hlavní typy ovládacích prvků:
+Ovládací prvky jsou objekty, se kterými můžou uživatelé interaktivně zadávat data a manipulovat s nimi. Obvykle se zobrazují v dialogových oknech nebo na panelech nástrojů. Tato rodina obsahuje tři hlavní druhy ovládacích prvků:
 
-- Windows běžných ovládacích prvků, včetně ovládací prvky vykreslované uživatelem
+- Běžné ovládací prvky pro Windows, včetně ovládacích prvků vykreslených vlastníkem
 
 - ActiveX – ovládací prvky
 
-- Další ovládací prvek třídy zadané ve třídy knihovny MFC (Microsoft Foundation)
+- Další třídy ovládacích prvků poskytované knihovna Microsoft Foundation Class (MFC)
 
 ## <a name="windows-common-controls"></a>Běžné ovládací prvky Windows
 
-Operační systém Windows má vždy k dispozici řadu běžných ovládacích prvků Windows. Tyto objekty ovládacího prvku jsou programovatelné a dialogové okno editor jazyka Visual C++ podporuje přidání do dialogových oknech. Třídy knihovny MFC (Microsoft Foundation) poskytuje třídy, které zapouzdřit každý z těchto ovládacích prvků, jak je znázorněno v tabulce [třídy knihovny MFC a běžných ovládacích prvků Windows](#_core_windows_common_controls_and_mfc_classes). (Některé položky v tabulce mají související témata, která je dále popisují. Pro ovládací prvky, které nemají témata najdete v dokumentaci pro třídy knihovny MFC.)
+Operační systém Windows má vždycky k dispozici několik běžných ovládacích prvků pro Windows. Tyto řídicí objekty jsou programovatelné a editor C++ dialogových oken podporuje jejich přidání do dialogových oken. Knihovna Microsoft Foundation Class (MFC) poskytuje třídy, které zapouzdřují každý z těchto ovládacích prvků, jak je znázorněno v tabulce [běžné ovládací prvky Windows a MFC třídy](#_core_windows_common_controls_and_mfc_classes). (Některé položky v tabulce mají Příbuzná témata, která je popisují. Ovládací prvky, které nemají témata, naleznete v dokumentaci ke třídě MFC.)
 
-Třída [CWnd](../mfc/reference/cwnd-class.md) je základní třída všech tříd oken, včetně všech objektů třídy ovládacích prvků.
+Třída [CWnd](../mfc/reference/cwnd-class.md) je základní třídou všech tříd okna, včetně všech tříd ovládacích prvků.
 
 ## <a name="activex-controls"></a>ActiveX – ovládací prvky
 
-Ovládací prvky ActiveX, dřív označované jako ovládací prvky OLE, je možné v dialogových oknech v aplikacích pro Windows nebo na stránkách HTML na webu. Další informace najdete v tématu [ovládací prvky MFC ActiveX](../mfc/mfc-activex-controls.md).
+Ovládací prvky ActiveX, dříve označované jako ovládací prvky OLE, lze použít v dialogových oknech aplikací pro systém Windows nebo na stránkách HTML na webu. Další informace naleznete v tématu [ovládací prvky MFC ActiveX](../mfc/mfc-activex-controls.md).
 
 ## <a name="other-mfc-control-classes"></a>Jiné třídy ovládacích prvků MFC
 
-Kromě tříd, které provádí zapouzdření všechny běžné ovládací prvky Windows a tuto podporu programování vlastních ovládacích prvků ActiveX (nebo pomocí poskytnutých ostatní ovládací prvky ActiveX) MFC poskytuje následující třídy ovládacího prvku vlastní:
+Kromě tříd, které zapouzdřují všechny běžné ovládací prvky systému Windows a podporují programování pro vlastní ovládací prvky ActiveX (nebo použití ovládacích prvků ActiveX dodaných ostatními), knihovna MFC poskytuje následující třídy ovládacích prvků:
 
 - [CBitmapButton](../mfc/reference/cbitmapbutton-class.md)
 
@@ -43,66 +43,66 @@ Kromě tříd, které provádí zapouzdření všechny běžné ovládací prvky
 
 - [CDragListBox](../mfc/reference/cdraglistbox-class.md)
 
-##  <a name="_core_finding_information_about_windows_common_controls"></a> Hledání informací o běžných ovládacích prvků Windows
+##  <a name="_core_finding_information_about_windows_common_controls"></a>Hledání informací o běžných ovládacích prvcích Windows
 
-Následující tabulka stručně popisuje každý Windows běžných ovládacích prvků, včetně ovládacích prvků MFC obálkovou třídu.
+Následující tabulka stručně popisuje všechny běžné ovládací prvky systému Windows, včetně obálkové třídy MFC ovládacího prvku.
 
-### <a name="_core_windows_common_controls_and_mfc_classes"></a>  Třídy knihovny MFC a běžné ovládací prvky Windows
+### <a name="_core_windows_common_controls_and_mfc_classes"></a>Běžné ovládací prvky Windows a třídy MFC
 
-|Control|MFC class|Popis|Nové ve Windows 95|
+|Control|MFC – třída|Popis|Novinka ve Windows 95|
 |-------------|---------------|-----------------|------------------------|
-|[Animace](../mfc/using-canimatectrl.md)|[CAnimateCtrl](../mfc/reference/canimatectrl-class.md)|Zobrazí po sobě jdoucích snímků AVI videoklipu|Ano|
-|Tlačítko|[CButton](../mfc/reference/cbutton-class.md)|Tlačítek, které způsobují akci; také používá pro zaškrtávací políčka, přepínače a skupinové rámečky|Ne|
-|pole se seznamem|[CComboBox](../mfc/reference/ccombobox-class.md)|Do textového pole a pole se seznamem|Ne|
-|[Výběr data a času](../mfc/using-cdatetimectrl.md)|[CDateTimeCtrl](../mfc/reference/cdatetimectrl-class.md)|Umožňuje uživateli zvolit konkrétní datum nebo čas|Ano|
-|Textové pole|[CEdit](../mfc/reference/cedit-class.md)|Pole pro zadávání textu|Ne|
-|[Rozšířené pole se seznamem](../mfc/using-ccomboboxex.md)|[CComboBoxEx](../mfc/reference/ccomboboxex-class.md)|Ovládací prvek pole se seznamem se schopnost zobrazit obrázky|Ano|
-|[header](../mfc/using-cheaderctrl.md)|[CHeaderCtrl](../mfc/reference/cheaderctrl-class.md)|Tlačítko, které se zobrazí nad sloupcem textu. Šířka ovládacích prvků textu zobrazeného|Ano|
-|[hotkey](../mfc/using-chotkeyctrl.md)|[CHotKeyCtrl](../mfc/reference/chotkeyctrl-class.md)|Okno, které umožňuje uživateli vytvořit "klávesové zkratky" k rychlému provádění akce|Ano|
-|[seznam obrázků](../mfc/using-cimagelist.md)|[CImageList](../mfc/reference/cimagelist-class.md)|Kolekce obrazů používá ke správě velkých sad ikony nebo rastrové obrázky (seznam obrázků není ve skutečnosti ovládací prvek; podporuje seznamy, které používají ovládací prvky)|Ano|
-|[list](../mfc/using-clistctrl.md)|[CListCtrl](../mfc/reference/clistctrl-class.md)|Okno, které se zobrazí seznam text s ikonami|Ano|
-|Pole se seznamem|[CListBox](../mfc/reference/clistbox-class.md)|Pole, které obsahuje seznam řetězců|Ne|
-|[Měsíční kalendář](../mfc/using-cmonthcalctrl.md)|[CMonthCalCtrl](../mfc/reference/cmonthcalctrl-class.md)|Ovládací prvek, který se zobrazí informace o datu|Ano|
-|[progress](../mfc/using-cprogressctrl.md)|[CProgressCtrl](../mfc/reference/cprogressctrl-class.md)|Okno, které označuje průběh dlouhá operace|Ano|
-|[rebar](../mfc/using-crebarctrl.md)|[CRebarCtrl](../mfc/reference/crebarctrl-class.md)|Panel nástrojů, který může obsahovat další podřízená okna do formuláře ovládací prvky|Ano|
-|[Pro úpravy s formátováním](../mfc/using-cricheditctrl.md)|[CRichEditCtrl](../mfc/reference/cricheditctrl-class.md)|Okno, v které uživatel může upravovat pomocí formátování znaků a odstavců (viz [třídy související s formátováním upravit ovládací prvky](../mfc/classes-related-to-rich-edit-controls.md))|Ano|
-|posuvník|[CScrollBar](../mfc/reference/cscrollbar-class.md)|Posuvník použít jako ovládací prvek uvnitř dialogové okno (nikoli na okno)|Ne|
-|[slider](../mfc/using-csliderctrl.md)|[CSliderCtrl](../mfc/reference/csliderctrl-class.md)|Okno obsahující ovládací prvek posuvník s volitelným osové značky|Ano|
-|[číselníku](../mfc/using-cspinbuttonctrl.md)|[CSpinButtonCtrl](../mfc/reference/cspinbuttonctrl-class.md)|Pár uživatel tlačítek šipku můžete kliknutím přírůstek nebo snížení hodnoty|Ano|
-|static-text|[Cstatic –](../mfc/reference/cstatic-class.md)|Text pro označování popisky další ovládací prvky|Ne|
-|[status bar](../mfc/using-cstatusbarctrl.md)|[CStatusBarCtrl](../mfc/reference/cstatusbarctrl-class.md)|Okno pro zobrazení informací o stavu, podobně jako třída knihovny MFC `CStatusBar`|Ano|
-|[tab](../mfc/using-ctabctrl.md)|[CTabCtrl](../mfc/reference/ctabctrl-class.md)|Obdobná oddělovačů v poznámkovém bloku; použít "dialogová okna Karta", nebo seznam vlastností|Ano|
-|[toolbar](../mfc/using-ctoolbarctrl.md)|[CToolBarCtrl](../mfc/reference/ctoolbarctrl-class.md)|Okno s generováním příkazového tlačítka, podobně jako třída knihovny MFC `CToolBar`|Ano|
-|[Popis tlačítka](../mfc/using-ctooltipctrl.md)|[CToolTipCtrl](../mfc/reference/ctooltipctrl-class.md)|Malého vyskakovacího okna, který popisuje účel tlačítka panelu nástrojů nebo jiný nástroj|Ano|
-|[strom](../mfc/using-ctreectrl.md)|[CTreeCtrl](../mfc/reference/ctreectrl-class.md)|Okno, které zobrazí hierarchické seznam položek|Ano|
+|[animaci](../mfc/using-canimatectrl.md)|[CAnimateCtrl](../mfc/reference/canimatectrl-class.md)|Zobrazí po sobě jdoucí snímky videoklipu AVI.|Ano|
+|tlačítko|[CButton](../mfc/reference/cbutton-class.md)|Pushbuttons, které způsobují akci. používá se také pro zaškrtávací políčka, přepínače a skupinová pole.|Ne|
+|pole se seznamem|[CComboBox](../mfc/reference/ccombobox-class.md)|Kombinace pole pro úpravy a pole se seznamem|Ne|
+|[Výběr data a času](../mfc/using-cdatetimectrl.md)|[CDateTimeCtrl](../mfc/reference/cdatetimectrl-class.md)|Umožňuje uživateli zvolit určitou hodnotu data a času.|Ano|
+|textové pole|[CEdit](../mfc/reference/cedit-class.md)|Pole pro zadání textu|Ne|
+|[Rozšířené pole se seznamem](../mfc/using-ccomboboxex.md)|[CComboBoxEx](../mfc/reference/ccomboboxex-class.md)|Ovládací prvek pole se seznamem s možností zobrazení obrázků|Ano|
+|[header](../mfc/using-cheaderctrl.md)|[CHeaderCtrl](../mfc/reference/cheaderctrl-class.md)|Tlačítko, které se zobrazí nad sloupcem textu; Určuje šířku zobrazeného textu.|Ano|
+|[hotkey](../mfc/using-chotkeyctrl.md)|[CHotKeyCtrl](../mfc/reference/chotkeyctrl-class.md)|Okno, které umožňuje uživateli vytvořit rychlý klíč k provedení akce|Ano|
+|[seznam obrázků](../mfc/using-cimagelist.md)|[Atributu CImageList](../mfc/reference/cimagelist-class.md)|Kolekce imagí sloužících ke správě rozsáhlých sad ikon nebo rastrových obrázků (seznam obrázků není ve skutečnosti ovládací prvek, který podporuje seznamy používané jinými ovládacími prvky)|Ano|
+|[list](../mfc/using-clistctrl.md)|[CListCtrl](../mfc/reference/clistctrl-class.md)|Okno, které zobrazuje seznam textu s ikonami|Ano|
+|seznam|[CListBox –](../mfc/reference/clistbox-class.md)|Box, který obsahuje seznam řetězců|Ne|
+|[měsíční kalendář](../mfc/using-cmonthcalctrl.md)|[CMonthCalCtrl](../mfc/reference/cmonthcalctrl-class.md)|Ovládací prvek, který zobrazuje informace o datu|Ano|
+|[přejde](../mfc/using-cprogressctrl.md)|[CProgressCtrl](../mfc/reference/cprogressctrl-class.md)|Okno, které indikuje průběh dlouhé operace|Ano|
+|[matrice](../mfc/using-crebarctrl.md)|[CRebarCtrl](../mfc/reference/crebarctrl-class.md)|Panel nástrojů, který může obsahovat další podřízená okna ve formě ovládacích prvků|Ano|
+|[úpravy s bohatým obsahem](../mfc/using-cricheditctrl.md)|[CRichEditCtrl](../mfc/reference/cricheditctrl-class.md)|Okno, ve kterém může uživatel upravit pomocí formátování znaků a odstavců (viz [třídy související s ovládacími prvky pro úpravy](../mfc/classes-related-to-rich-edit-controls.md)s formátováním)|Ano|
+|posuvník|[CScrollBar](../mfc/reference/cscrollbar-class.md)|Posuvník použitý jako ovládací prvek v dialogovém okně (ne v okně)|Ne|
+|[slider](../mfc/using-csliderctrl.md)|[CSliderCtrl](../mfc/reference/csliderctrl-class.md)|Okno obsahující ovládací prvek posuvník s volitelnými značkami|Ano|
+|[tlačítko číselníku](../mfc/using-cspinbuttonctrl.md)|[CSpinButtonCtrl](../mfc/reference/cspinbuttonctrl-class.md)|Dvojice tlačítek s šipkou může uživatel kliknout na zvýšení nebo snížení hodnoty.|Ano|
+|statický text|[CStatic](../mfc/reference/cstatic-class.md)|Text pro označování jiných ovládacích prvků|Ne|
+|[stavový řádek](../mfc/using-cstatusbarctrl.md)|[CStatusBarCtrl](../mfc/reference/cstatusbarctrl-class.md)|Okno pro zobrazení informací o stavu, podobně jako třída MFC`CStatusBar`|Ano|
+|[tab](../mfc/using-ctabctrl.md)|[CTabCtrl](../mfc/reference/ctabctrl-class.md)|Podobá se oddělovači v poznámkovém bloku; používá se v dialogovém okně s kartami nebo na seznam vlastností.|Ano|
+|[toolbar](../mfc/using-ctoolbarctrl.md)|[CToolBarCtrl](../mfc/reference/ctoolbarctrl-class.md)|Okno s tlačítky pro generování příkazů, podobně jako třída MFC`CToolBar`|Ano|
+|[Popis nástroje](../mfc/using-ctooltipctrl.md)|[CToolTipCtrl](../mfc/reference/ctooltipctrl-class.md)|Malé automaticky otevírané okno, které popisuje účel tlačítka panelu nástrojů nebo jiného nástroje.|Ano|
+|[strukturu](../mfc/using-ctreectrl.md)|[CTreeCtrl](../mfc/reference/ctreectrl-class.md)|Okno, které zobrazuje hierarchický seznam položek|Ano|
 
-### <a name="what-do-you-want-to-know-more-about"></a>Co chcete zjistit více informací
+### <a name="what-do-you-want-to-know-more-about"></a>K čemu chcete získat další informace
 
-- Jednotlivé ovládací prvky: viz tabulka [třídy knihovny MFC a běžných ovládacích prvků Windows](#_core_windows_common_controls_and_mfc_classes) v tomto tématu pro odkazy na všechny ovládací prvky
+- Individuální ovládací prvek: viz tabulka [běžné ovládací prvky Windows a MFC třídy](#_core_windows_common_controls_and_mfc_classes) v tomto tématu pro odkazy na všechny ovládací prvky
 
-- [Příprava a použití ovládacích prvků](../mfc/making-and-using-controls.md)
+- [Vytváření a používání ovládacích prvků](../mfc/making-and-using-controls.md)
 
 - [Použití editoru dialogových oken k přidávání ovládacích prvků](../mfc/using-the-dialog-editor-to-add-controls.md)
 
 - [Ruční přidání ovládacích prvků do dialogového okna](../mfc/adding-controls-by-hand.md)
 
-- [Odvození třídy ovládacích prvků z třídy ovládacích prvků MFC](../mfc/deriving-controls-from-a-standard-control.md)
+- [Odvození řídicích tříd z tříd ovládacích prvků MFC](../mfc/deriving-controls-from-a-standard-control.md)
 
 - [Použití běžných ovládacích prvků jako podřízených oken](../mfc/using-a-common-control-as-a-child-window.md)
 
 - [Oznámení z běžných ovládacích prvků](../mfc/receiving-notification-from-common-controls.md)
 
-- [Do dialogového okna Přidat běžné ovládací prvky](../mfc/using-common-controls-in-a-dialog-box.md).
+- [Přidejte do dialogového okna běžné ovládací prvky](../mfc/using-common-controls-in-a-dialog-box.md).
 
-- [Ovládací prvek odvozen ze standardního ovládacího prvku Windows](../mfc/deriving-controls-from-a-standard-control.md)
+- [Odvodit ovládací prvek ze standardního ovládacího prvku Windows](../mfc/deriving-controls-from-a-standard-control.md)
 
-- [Ovládací prvky dialogového okna přístup s bezpečností typů](../mfc/type-safe-access-to-controls-in-a-dialog-box.md)
+- [Přístup k ovládacím prvkům dialogových oken pomocí typu zabezpečení](../mfc/type-safe-access-to-controls-in-a-dialog-box.md)
 
-- [Příjem oznámení z běžných ovládacích prvků](../mfc/receiving-notification-from-common-controls.md)
+- [Příjem zpráv s oznámením z běžných ovládacích prvků](../mfc/receiving-notification-from-common-controls.md)
 
 - [Ukázky](../mfc/common-control-sample-list.md)
 
-Informace o běžných ovládacích prvků Windows v sadě Windows SDK najdete v tématu [běžné ovládací prvky](/windows/desktop/Controls/common-controls-intro).
+Informace o běžných ovládacích prvcích Windows v Windows SDK najdete v tématu [běžné ovládací prvky](/windows/win32/Controls/common-controls-intro).
 
 ## <a name="see-also"></a>Viz také:
 

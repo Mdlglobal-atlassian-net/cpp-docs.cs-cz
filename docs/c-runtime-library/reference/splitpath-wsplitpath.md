@@ -33,16 +33,16 @@ helpviewer_keywords:
 - path names
 - _tsplitpath function
 ms.assetid: 32bd76b5-1385-4ee8-a64c-abcb541cd2e4
-ms.openlocfilehash: d079bd17912c0711a4e1fbadadf12430520f2c96
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d5aab68524c0833bff0e09927587c0362c5194f9
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62355000"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69500981"
 ---
-# <a name="splitpath-wsplitpath"></a>_splitpath, _wsplitpath
+# <a name="_splitpath-_wsplitpath"></a>_splitpath, _wsplitpath
 
-Název cesty rozdělte do komponenty. Bezpečnější verze těchto funkcí jsou k dispozici, najdete v článku [_splitpath_s – _wsplitpath_s –](splitpath-s-wsplitpath-s.md).
+Rozdělte název cesty k součástem. Bezpečnější verze těchto funkcí jsou k dispozici, viz [_splitpath_s, _wsplitpath_s](splitpath-s-wsplitpath-s.md).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -66,63 +66,63 @@ void _wsplitpath(
 ### <a name="parameters"></a>Parametry
 
 *Cesta*<br/>
-Úplná cesta.
+Úplná cesta
 
 *drive*<br/>
-Písmeno, za nímž následuje dvojtečka (**:**). Můžete předat **NULL** pro tento parametr, pokud není nutné písmeno jednotky.
+Písmeno jednotky následovaný dvojtečkou ( **:** ). Pokud nepotřebujete písmeno jednotky, můžete pro tento parametr předat **hodnotu null** .
 
 *dir*<br/>
-Cesta k adresáři, včetně koncového lomítka. Lomítka ( **/** ), zpětná lomítka ( **\\** ), nebo obě mohou být použity. Můžete předat **NULL** pro tento parametr, pokud není nutné cesta k adresáři.
+Cesta k adresáři, včetně koncového lomítka. Lze použít lomítka **/** (), zpětná lomítka ( **\\** ) nebo obojí. Pokud nepotřebujete cestu k adresáři, můžete pro tento parametr předat **hodnotu null** .
 
-*%{fname/*<br/>
-Základní název souboru (bez přípony). Můžete předat **NULL** pro tento parametr, pokud není nutné název souboru.
+*fname*<br/>
+Základní název souboru (bez přípony) Pokud název souboru nepotřebujete, můžete pro tento parametr předat **hodnotu null** .
 
 *ext*<br/>
-Příponu názvu souboru, včetně počáteční období (**.**). Můžete předat **NULL** pro tento parametr, pokud není nutné příponu názvu souboru.
+Přípona názvu souboru včetně úvodní tečky ( **.** ) Pokud nepotřebujete příponu filename, můžete pro tento parametr předat **hodnotu null** .
 
 ## <a name="remarks"></a>Poznámky
 
-**_Splitpath –** funkce rozdělí cestu do jeho čtyři součásti. **_splitpath –** automaticky zpracovává argumenty vícebajtových řetězců znaků podle potřeby, rozpozná vícebajtové znakové sekvence podle vícebajtové znakové stránky, která aktuálně používán. **_wsplitpath –** je verze širokého znaku **_splitpath –**; argumenty, které mají **_wsplitpath –** jsou širokoznaké řetězce. Tyto funkce chovají identicky jinak.
+Funkce **_splitpath** přerušuje cestu na čtyři součásti. **_splitpath** automaticky zpracovává argumenty vícebajtového řetězce znaků podle potřeby a rozpozná vícebajtové znakové sekvence podle vícebajtové znakové stránky, která se právě používá. **_wsplitpath** je **_splitpath**verze s velkým znakem; argumenty **_wsplitpath** jsou řetězce s libovolným znakem. Tyto funkce se chovají identicky jinak.
 
-**Poznámka k zabezpečení** tyto funkce se vám účtovat potenciální ohrožení způsobené problémem přetečení vyrovnávací paměti. Problémů přetečení vyrovnávací paměti jsou častou metodou útoku na systém. Výsledkem je negarantované zvýšení úrovně oprávnění. Další informace najdete v tématu [předcházení přetečení vyrovnávací paměti](/windows/desktop/SecBP/avoiding-buffer-overruns). Bezpečnější verze těchto funkcí jsou k dispozici. Zobrazit [_splitpath_s – _wsplitpath_s –](splitpath-s-wsplitpath-s.md).
+**Poznámka k zabezpečení** Tyto funkce se dotýkají potenciální hrozby týkající se problému s přetečením vyrovnávací paměti. Problémy s přetečením vyrovnávací paměti představují častější způsob útoku na systém, což vede k neoprávněnému zvýšení oprávnění. Další informace najdete v tématu [předcházení přetečení vyrovnávací paměti](/windows/win32/SecBP/avoiding-buffer-overruns). K dispozici jsou bezpečnější verze těchto funkcí; viz [_splitpath_s, _wsplitpath_s](splitpath-s-wsplitpath-s.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapování rutin obecného textu
 
-|Rutina TCHAR.H|_UNICODE a _MBCS nejsou definovány|_MBCS definováno|_UNICODE definováno|
+|Rutina TCHAR.H|_UNICODE & _MBCS nejsou definovány.|_MBCS definováno|_UNICODE definováno|
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_tsplitpath**|**_splitpath**|**_splitpath**|**_wsplitpath**|
 
-Jednotlivé komponenty úplná cesta je uložena v samostatných vyrovnávací paměti; konstanty manifestu **_MAX_DRIVE**, **_MAX_DIR**, **_MAX_FNAME**, a **_MAX_EXT** (definované v STDLIB. H) zadejte maximální velikost pro každou komponentu souboru. Soubor součásti, které jsou větší než odpovídající konstant manifestu dojít k poškození haldy.
+Každá součást úplné cesty je uložena v samostatné vyrovnávací paměti; v manifestu jsou konstanty **_MAX_DRIVE**, **_MAX_DIR**, **_MAX_FNAME**a **_MAX_EXT** (definované v Stdlib. H) zadejte maximální velikost pro každou součást souboru. Součásti souboru, které jsou větší než odpovídající konstanty manifestu, způsobují poškození haldy.
 
-Každé vyrovnávací paměti musí být větší než jeho odpovídající manifestu konstanta, aby se zabránilo potenciální přetečení vyrovnávací paměti.
+Každá vyrovnávací paměť musí být stejně velká jako odpovídající konstanta manifestu, aby se předešlo možnému přetečení vyrovnávací paměti.
 
 V následující tabulce jsou uvedeny hodnoty konstant manifestu.
 
-|Název|Hodnota|
+|Name|Value|
 |----------|-----------|
 |**_MAX_DRIVE**|3|
 |**_MAX_DIR**|256|
 |**_MAX_FNAME**|256|
 |**_MAX_EXT**|256|
 
-Pokud je úplná cesta neobsahuje součásti (například název_souboru), **_splitpath –** přiřadí prázdné řetězce na odpovídající vyrovnávací paměti.
+Pokud úplná cesta neobsahuje komponentu (například filename), **_splitpath** přiřadí prázdné řetězce do odpovídajících vyrovnávacích pamětí.
 
-Můžete předat **NULL** k **_splitpath –** pro libovolný parametr jiných než *cesta* , která není nutné.
+Pro libovolný parametr kromě *cesty* , kterou nepotřebujete, můžete předat **hodnotu null** pro **_splitpath** .
 
-Pokud *cesta* je **NULL**, je vyvolána obslužná rutina neplatného parametru, jak je popsáno v [Parameter Validation](../../c-runtime-library/parameter-validation.md). Pokud smí provádění pokračovat, **errno** je nastavena na **EINVAL** a funkce vrátí **EINVAL**.
+Pokud má cesta **hodnotu null**, je vyvolána obslužná rutina neplatného parametru, jak je popsáno v tématu [ověřování parametru](../../c-runtime-library/parameter-validation.md). Pokud provádění může pokračovat, **errno** je nastaven na **EINVAL** a funkce vrátí **EINVAL**.
 
 ## <a name="requirements"></a>Požadavky
 
 |Rutina|Požadovaný hlavičkový soubor|
 |-------------|---------------------|
 |**_splitpath**|\<stdlib.h>|
-|**_wsplitpath**|\<stdlib.h > nebo \<wchar.h >|
+|**_wsplitpath**|\<Stdlib. h > nebo \<WCHAR. h >|
 
-Další informace o kompatibilitě, naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Příklad
 
-Podívejte se na příklad pro [_makepath –](makepath-wmakepath.md).
+Podívejte se na příklad pro [_makepath](makepath-wmakepath.md).
 
 ## <a name="see-also"></a>Viz také:
 

@@ -1,5 +1,5 @@
 ---
-title: 'TN065: Podpora duálního rozhraní u automatizačních serverů OLE'
+title: 'TN065: Podpora duálního rozhraní pro automatizační servery OLE'
 ms.date: 06/28/2018
 f1_keywords:
 - vc.ole
@@ -9,41 +9,41 @@ helpviewer_keywords:
 - ACDUAL sample [MFC]
 - Automation servers [MFC], dual-interface support
 ms.assetid: b5c8ed09-2f7f-483c-80fc-2a47ad896063
-ms.openlocfilehash: 33828f3979fb938ae6e88fa3cb0d6ee24daa958c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: afcbfd643d8b931e61b0f011b66482be5b2bcc82
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62351797"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69510996"
 ---
-# <a name="tn065-dual-interface-support-for-ole-automation-servers"></a>TN065: Podpora duálního rozhraní u automatizačních serverů OLE
+# <a name="tn065-dual-interface-support-for-ole-automation-servers"></a>TN065: Podpora duálního rozhraní pro automatizační servery OLE
 
 > [!NOTE]
-> Následující Technická poznámka nebyla aktualizována, protože byla poprvé zahrnuta v online dokumentaci. V důsledku toho některé postupy a témata mohou být nesprávné nebo zastaralé. Nejnovější informace se doporučuje vyhledat téma zájmu v dokumentaci online index.
+> Následující technická Poznámka nebyla od prvního zařazení do online dokumentace aktualizována. V důsledku toho mohou být některé postupy a témata neaktuální nebo nesprávné. Nejnovější informace najdete v tématu informace o tom, co je důležité v online katalogu dokumentace najít.
 
-Tato poznámka popisuje, jak přidat podpora duálního rozhraní založené na knihovně MFC OLE aplikaci automatizačního serveru. [Acdual –](../overview/visual-cpp-samples.md) ukázka ilustruje podpora duálního rozhraní a vzorový kód v této poznámky je převzat z acdual –. Makra popsané v této poznámky, jako je například DECLARE_DUAL_ERRORINFO DUAL_ERRORINFO_PART a IMPLEMENT_DUAL_ERRORINFO, jsou součástí vzorku acdual – a lze nalézt v MFCDUAL. H.
+Tato poznámka popisuje, jak přidat podporu duálního rozhraní do aplikace automatizačního serveru OLE založené na knihovně MFC. Ukázka [ACDUAL](../overview/visual-cpp-samples.md) znázorňuje podporu duálního rozhraní a ukázkový kód v této poznámce je pořízen z ACDUAL. Makra popsaná v této poznámce, například DECLARE_DUAL_ERRORINFO, DUAL_ERRORINFO_PART a IMPLEMENT_DUAL_ERRORINFO, jsou součástí ukázky ACDUAL a lze je najít v MFCDUAL. Y.
 
 ## <a name="dual-interfaces"></a>Duální rozhraní
 
-I když OLE Automation umožňuje implementovat `IDispatch` rozhraní, VTBL rozhraní nebo duální rozhraní (která zahrnuje i) společnost Microsoft důrazně doporučuje implementovat duální rozhraní pro všechny vystavené objekty automatizace OLE. Duální rozhraní mají významné výhody `IDispatch`– pouze nebo jen VTBL rozhraní:
+I když automatizace technologie OLE umožňuje implementovat `IDispatch` rozhraní, rozhraní VTBL nebo duální rozhraní (které zahrnuje obojí), společnost Microsoft důrazně doporučuje, abyste implementovali duální rozhraní pro všechny exponované objekty automatizace OLE. Duální rozhraní mají významné výhody pouze `IDispatch`v rozhraních pouze nebo VTBL:
 
-- Vazby může proběhnout v době kompilace VTBL rozhraní nebo v době běhu pomocí `IDispatch`.
+- Vazba může probíhat v době kompilace prostřednictvím rozhraní VTBL nebo v době běhu do `IDispatch`.
 
-- Řadiče automatizace OLE, které můžete použít rozhraní VTBL můžou mít užitek z vylepšení výkonu.
+- Ovladače automatizace OLE, které můžou používat rozhraní VTBL, můžou mít lepší výkon.
 
-- Existující řadiče automatizace OLE, které používají `IDispatch` rozhraní budou nadále fungovat.
+- Existující řadiče automatizace OLE, které používají `IDispatch` rozhraní, budou i nadále fungovat.
 
-- Rozhraní VTBL je snazší volat z jazyka C++.
+- Rozhraní VTBL je snazší volat z C++.
 
-- Duální rozhraní jsou nutná pro kompatibilitu s funkcí podporu objektů Visual Basic.
+- Pro kompatibilitu s funkcemi podpory Visual Basic objektů jsou vyžadovány duální rozhraní.
 
-## <a name="adding-dual-interface-support-to-a-ccmdtarget-based-class"></a>Přidání podpory duálního rozhraní na základě CCmdTarget – třída
+## <a name="adding-dual-interface-support-to-a-ccmdtarget-based-class"></a>Přidání podpory duálního rozhraní pro třídu založenou na CCmdTarget
 
-Duální rozhraní je odvozena z vlastně jenom vlastní rozhraní `IDispatch`. Nejjednodušší způsob implementace podpora duálního rozhraní v `CCmdTarget`– první implementovat rozhraní na třídě pomocí knihovny MFC a ClassWizard normální odesílání a potom později přidat vlastní rozhraní je založené na třídě. Ve většině případů bude vaše implementace vlastního rozhraní jednoduše delegovat zpět do knihovny MFC `IDispatch` implementace.
+Duální rozhraní je opravdu pouze vlastní rozhraní odvozené z `IDispatch`. Nejjednodušší způsob, jak implementovat podporu duálního rozhraní ve `CCmdTarget`třídě založené na platformě, je nejprve implementovat normální rozhraní dispatching ve vaší třídě pomocí knihovny MFC a ClassWizard a pak přidat vlastní rozhraní později. Ve většině případů vaše implementace vlastního rozhraní bude jednoduše delegována zpět na implementaci MFC `IDispatch` .
 
-Nejprve upravte soubor ODL pro váš server k definování duální rozhraní pro objekty. Chcete-li definovat duální rozhraní, musíte použít příkaz rozhraní místo `DISPINTERFACE` příkaz, který generovat průvodců aplikace Visual C++. Místo odstranění existující `DISPINTERFACE` příkaz, přidejte nový příkaz rozhraní. Tak, že zachová `DISPINTERFACE` formuláře, můžete nadále používat ClassWizard přidávat vlastnosti a metody do objektu, ale musíte přidat odpovídající vlastnosti a metody pro váš výpis z rozhraní.
+Nejdřív upravte soubor ODL pro váš server, abyste definovali duální rozhraní pro vaše objekty. Chcete-li definovat duální rozhraní, je nutné použít příkaz rozhraní namísto `DISPINTERFACE` příkazu, který generují vizuální C++ průvodce. Místo odebrání existujícího `DISPINTERFACE` příkazu přidejte nové prohlášení o rozhraní. Uchováním `DISPINTERFACE` formuláře můžete nadále používat ClassWizard k přidání vlastností a metod do objektu, ale je nutné přidat ekvivalentní vlastnosti a metody do příkazu rozhraní.
 
-Interface – příkaz pro duální rozhraní musí mít *OLEAUTOMATION* a *DUÁLNÍ* atributy a rozhraní musí být odvozen od `IDispatch`. Můžete použít [Guidgen –](../overview/visual-cpp-samples.md) vzorek k vytvoření **IID** pro duální rozhraní:
+Příkaz rozhraní pro duální rozhraní musí mít atributy *oleautomation* a *Dual* a rozhraní musí být odvozeno z `IDispatch`. Pomocí ukázky [Guidgen](../overview/visual-cpp-samples.md) můžete vytvořit **IID** pro duální rozhraní:
 
 ```IDL
 [ uuid(0BDD0E81-0DD7-11cf-BBA8-444553540000), // IID_IDualAClick
@@ -55,14 +55,14 @@ interface IDualAClick : IDispatch
     };
 ```
 
-Jakmile budete mít interface – příkaz na místě, začněte přidávat položky pro metody a vlastnosti. Duální rozhraní, budete muset změnit uspořádání seznamu parametrů tak, aby metody a vlastnosti přístupového objektu funkce duální rozhraní vrátit **HRESULT** a předat jejich návratové hodnoty jako parametry s atributy `[retval,out]`. Mějte na paměti, že pro vlastnosti, budete muset přidat čtení (`propget`) a zápis (`propput`) přístup k funkci se stejným id. Příklad:
+Jakmile budete mít příkaz rozhraní, začněte přidávat položky pro metody a vlastnosti. Pro duální rozhraní je potřeba změnit uspořádání seznamů parametrů tak, aby vaše metody a přístup k vlastnostem v duálním rozhraní vracely **HRESULT** a předaly návratové hodnoty jako parametry s atributy `[retval,out]`. Nezapomeňte, že pro vlastnosti budete muset přidat funkci přístupu Read (`propget`) i Write (`propput`) se stejným ID. Příklad:
 
 ```IDL
 [propput, id(1)] HRESULT text([in] BSTR newText);
 [propget, id(1)] HRESULT text([out, retval] BSTR* retval);
 ```
 
-Poté, co jsou definovány metody a vlastnosti, budete muset přidat odkaz na rozhraní příkaz v příkazu coclass. Příklad:
+Po definování metod a vlastností je třeba přidat odkaz na příkaz rozhraní v rámci vašeho příkazu coclass. Příklad:
 
 ```IDL
 [ uuid(4B115281-32F0-11cf-AC85-444553540000) ]
@@ -73,9 +73,9 @@ coclass Document
 };
 ```
 
-Jakmile se aktualizoval váš soubor ODL pomocí mechanismu mapování rozhraní knihovny MFC k definování třídy implementace pro duální rozhraní ve třídě objektu a provést odpovídající položky v knihovně MFC `QueryInterface` mechanismus. Je třeba jedna položka v `INTERFACE_PART` blok pro každou položku v příkazu rozhraní ODL. navíc položky pro rozhraní odbavení. Každá položka ODL s *propput* atribut vyžaduje funkci s názvem `put_propertyname`. Každá položka se *propget* atribut vyžaduje funkci s názvem `get_propertyname`.
+Po aktualizaci souboru ODL použijte mechanismus mapování rozhraní knihovny MFC k definování třídy implementace pro duální rozhraní ve třídě objektu a proveďte odpovídající položky v `QueryInterface` mechanismu knihovny MFC. Budete potřebovat jeden záznam v `INTERFACE_PART` bloku pro každou položku v příkazu rozhraní jazyka ODL a položky pro rozhraní dispatch. Každá položka jazyka ODL s atributem *propput* vyžaduje funkci s `put_propertyname`názvem. Každá položka s atributem *propget* vyžaduje funkci s názvem `get_propertyname`.
 
-Chcete-li definovat třídu implementace pro duální rozhraní, přidejte `DUAL_INTERFACE_PART` bloku do definice třídy objektu. Příklad:
+Chcete-li definovat implementační třídu pro vaše duální rozhraní, přidejte `DUAL_INTERFACE_PART` blok do definice třídy objektu. Příklad:
 
 ```cpp
 BEGIN_DUAL_INTERFACE_PART(DualAClick, IDualAClick)
@@ -93,7 +93,7 @@ BEGIN_DUAL_INTERFACE_PART(DualAClick, IDualAClick)
 END_DUAL_INTERFACE_PART(DualAClick)
 ```
 
-Pro připojení duální rozhraní MFC [QueryInterface](/windows/desktop/com/queryinterface--navigating-in-an-object) mechanismus, přidejte `INTERFACE_PART` položku do mapy rozhraní:
+Chcete-li připojit duální rozhraní k mechanismu [QueryInterface](/windows/win32/com/queryinterface--navigating-in-an-object) v knihovně MFC, `INTERFACE_PART` přidejte položku do mapy rozhraní:
 
 ```cpp
 BEGIN_INTERFACE_MAP(CAutoClickDoc, CDocument)
@@ -102,7 +102,7 @@ BEGIN_INTERFACE_MAP(CAutoClickDoc, CDocument)
 END_INTERFACE_MAP()
 ```
 
-Dále je třeba vyplnit implementaci rozhraní. Ve většině případů bude možné delegovat do existujícího MFC `IDispatch` implementace. Příklad:
+Dál je potřeba vyplnit implementaci rozhraní. Ve většině případů bude možné delegovat na stávající implementaci knihovny MFC `IDispatch` . Příklad:
 
 ```cpp
 STDMETHODIMP_(ULONG) CAutoClickDoc::XDualAClick::AddRef()
@@ -179,7 +179,7 @@ STDMETHODIMP CAutoClickDoc::XDualAClick::Invoke(
 }
 ```
 
-Pro váš objekt metody a vlastnosti přístupového objektu funkce je nutné vyplnit v implementaci. Funkce metod a vlastností můžete delegovat obecně zpět do metody vygenerované pomocí ClassWizard. Ale pokud nastavíte vlastnosti pro přístup k proměnným, musíte napsat kód pro get/put hodnotu do proměnné. Příklad:
+Pro funkce objektu a přístup k vlastnostem přistupujícího objektu musíte vyplnit implementaci. Vaše funkce metody a vlastností mohou obecně delegovat zpět na metody generované pomocí ClassWizard. Nicméně pokud nastavíte vlastnosti pro přímý přístup k proměnným, je nutné napsat kód pro získání nebo vložení hodnoty do proměnné. Příklad:
 
 ```cpp
 STDMETHODIMP CAutoClickDoc::XDualAClick::put_text(BSTR newText)
@@ -201,9 +201,9 @@ STDMETHODIMP CAutoClickDoc::XDualAClick::get_text(BSTR* retval)
 }
 ```
 
-## <a name="passing-dual-interface-pointers"></a>Předávání ukazatelů duálního rozhraní
+## <a name="passing-dual-interface-pointers"></a>Předávání ukazatelů s dvojitým rozhraním
 
-Předání ukazatele duálního rozhraní není jasné, zejména v případě, že je potřeba volat `CCmdTarget::FromIDispatch`. `FromIDispatch` funguje pouze na knihovně MFC `IDispatch` ukazatele. Jeden ze způsobů, jak tento problém obejít je k dotazování pro původní `IDispatch` sada ukazatel myši nahoru v prostředí MFC a předat tento ukazatel do funkce, které potřebujete. Příklad:
+Předání ukazatele na duální rozhraní není jednoduché, zejména v případě, že je třeba `CCmdTarget::FromIDispatch`volat. `FromIDispatch`funguje pouze na `IDispatch` ukazatelích knihovny MFC. Jedním ze způsobů, jak tento problém obejít, je zadat `IDispatch` dotaz na původní ukazatel nastavený pomocí knihovny MFC a předat ukazatel na funkce, které ho potřebují. Příklad:
 
 ```
 STDMETHODIMP CAutoClickDoc::XDualAClick::put_Position(
@@ -218,7 +218,7 @@ STDMETHODIMP CAutoClickDoc::XDualAClick::put_Position(
 }
 ```
 
-Před předáním ukazatel zpět prostřednictvím metody duálního rozhraní, možná budete muset převést z knihovny MFC `IDispatch` ukazatel na ukazatel duálního rozhraní. Příklad:
+Před předáním ukazatele zpět metodou dvojího rozhraní může být nutné jej převést z ukazatele knihovny MFC `IDispatch` na ukazatel na duální rozhraní. Příklad:
 
 ```
 STDMETHODIMP CAutoClickDoc::XDualAClick::get_Position(
@@ -234,13 +234,13 @@ STDMETHODIMP CAutoClickDoc::XDualAClick::get_Position(
 
 ## <a name="registering-the-applications-type-library"></a>Registrace knihovny typů aplikace
 
-AppWizard negeneruje kód pro registraci knihovny typů aplikace serveru OLE Automation v systému. I když existují další možnosti, jak zaregistrovat knihovnu typů, je vhodné mít aplikaci zaregistrovat knihovnu typů, během aktualizace informace o typu OLE, to znamená, že při každém spuštění samostatné aplikace.
+AppWizard negeneruje kód pro registraci knihovny typů aplikace automatizačního serveru OLE se systémem. I když existují i jiné způsoby, jak knihovnu typů zaregistrovat, je vhodné mít aplikaci možnost Registrovat knihovnu typů při aktualizaci informací o typu OLE, to znamená, když je aplikace spuštěna samostatně.
 
-Registrace knihovny typů aplikace při každém spuštění aplikace samostatně:
+Chcete-li zaregistrovat knihovnu typů aplikace vždy, když je aplikace samostatná, proveďte následující:
 
-- Zahrnout AFXCTL. H do standardního obsahuje soubor hlaviček, STDAFX. H, pro přístup k definici `AfxOleRegisterTypeLib` funkce.
+- Zahrnout AFXCTL H ve vašem standardu obsahuje hlavičkový soubor STDAFX. H pro přístup k definici `AfxOleRegisterTypeLib` funkce.
 
-- Ve vaší aplikaci `InitInstance` funkční, vyhledejte volání `COleObjectFactory::UpdateRegistryAll`. Za toto volání, přidejte volání `AfxOleRegisterTypeLib`, zadání **LIBID** odpovídající knihovna typů, spolu s názvem vaší knihovny typů:
+- Ve `InitInstance` funkci aplikace vyhledejte `COleObjectFactory::UpdateRegistryAll`volání. Po tomto volání přidejte volání do `AfxOleRegisterTypeLib`a určete **LIBID** odpovídající vaší knihovně typů spolu s názvem knihovny typů:
 
     ```cpp
     // When a server application is launched stand-alone, it is a good idea
@@ -257,19 +257,19 @@ Registrace knihovny typů aplikace při každém spuštění aplikace samostatn�
     // DUAL_SUPPORT_END
     ```
 
-## <a name="modifying-project-build-settings-to-accommodate-type-library-changes"></a>Úprava nastavení projektu sestavení tak, aby vyhovovaly změny knihovny typů
+## <a name="modifying-project-build-settings-to-accommodate-type-library-changes"></a>Úprava nastavení sestavení projektu pro přizpůsobení změn knihovny typů
 
-Chcete-li změnit nastavení projektu sestavení tak, aby soubor záhlaví obsahující **UUID** definice pokaždé, když se znovu sestaví knihovny typů generuje s MkTypLib:
+Chcete-li upravit nastavení sestavení projektu tak, aby soubor hlaviček obsahující definice **UUID** byl vygenerován MkTypLib vždy, když je znovu sestavena knihovna typů:
 
-1. Na **sestavení** nabídky, klikněte na tlačítko **nastavení**a potom vyberte soubor ODL ze seznamu souborů pro každou konfiguraci.
+1. V nabídce **sestavení** klikněte na **Nastavení**a potom vyberte soubor ODL ze seznamu souborů pro každou konfiguraci.
 
-2. Klikněte na tlačítko **typy OLE** kartě a zadejte název souboru v **výstupní hlavičky** pole název souboru. Použijte název souboru, který se již nepoužívá ve vašem projektu, protože s MkTypLib přepíše existující soubor. Klikněte na tlačítko **OK** zavřete **nastavení sestavení** dialogové okno.
+2. Klikněte na kartu **typy OLE** a zadejte název souboru do pole název výstupního souboru s **hlavičkou** . Použijte název souboru, který se už v projektu nepoužívá, protože MkTypLib přepíše existující soubor. Kliknutím na tlačítko **OK** zavřete dialogové okno **nastavení sestavení** .
 
-Chcete-li přidat **UUID** definice z generovaných s MkTypLib hlavičkový soubor do projektu:
+Chcete-li přidat definice **identifikátorů UUID** ze souboru hlaviček generovaného MkTypLib do projektu:
 
-1. Zahrnout s MkTypLib generovaný soubor hlaviček v standardního obsahuje soubor hlaviček, STDAFX. H.
+1. Do standardu zahrne hlavičkový soubor generovaný MkTypLib, STDAFX. Y.
 
-2. Vytvořte nový soubor, INITIIDS. CPP a přidejte ho do projektu. V tomto souboru zahrňte soubor hlavičky generované s MkTypLib po zahrnutí OLE2. H a INITGUID. V:
+2. Vytvořte nový soubor INITIIDS. CPP a přidejte ho do projektu. V tomto souboru zahrňte soubor hlaviček generovaný MkTypLib po zahrnutí OLE2. H a INITGUID. Y
 
     ```cpp
     // initIIDs.c: defines IIDs for dual interfaces
@@ -279,21 +279,21 @@ Chcete-li přidat **UUID** definice z generovaných s MkTypLib hlavičkový soub
     #include "acdual.h"
     ```
 
-3. Na **sestavení** nabídky, klikněte na tlačítko **nastavení**a pak vyberte INITIIDS. CPP ze seznamu souborů pro každou konfiguraci.
+3. V nabídce **sestavení** klikněte na **Nastavení**a pak vyberte INITIIDS. CPP ze seznamu souborů pro každou konfiguraci.
 
-4. Klikněte na tlačítko **C++** klikněte na tlačítko kategorie **předkompilované hlavičky**a vyberte **bez použití předkompilovaných hlaviček** přepínač. Kliknutím na OK zavřete **nastavení sestavení** dialogové okno.
+4. Klikněte na **C++** kartu, klikněte na **Předkompilovaná záhlaví**kategorie a vyberte přepínač **Nepoužívat předkompilované hlavičky** . Kliknutím na tlačítko OK zavřete dialogové okno **nastavení sestavení** .
 
-## <a name="specifying-the-correct-object-class-name-in-the-type-library"></a>Zadání názvu třídy správný objekt v knihovně typů
+## <a name="specifying-the-correct-object-class-name-in-the-type-library"></a>Určení správného názvu třídy objektu v knihovně typů
 
-Průvodce nesprávně součástí Visual C++ používá název třídy implementace k určení v souboru ODL serveru pro OLE vytvořitelné třídy coclass. Když to bude fungovat, název třídy implementace není pravděpodobně mají uživatelé objektu použijte název třídy. Zadejte správný název, otevřete soubor ODL, vyhledejte každý coclass příkaz a nahraďte správný název externí název třídy implementace.
+Průvodce dodaný s vizuálu C++ nesprávně používá název třídy implementace k určení coclass třídy v souboru jazyka ODL serveru pro třídy využívající technologii OLE. I když to bude fungovat, název třídy implementace pravděpodobně není název třídy, kterou mají uživatelé vašeho objektu používat. Chcete-li zadat správný název, otevřete soubor ODL, vyhledejte každý příkaz coclass a nahraďte název třídy implementace správným externím názvem.
 
-Všimněte si, že pokud změníte příkaz coclass, názvy proměnných z **CLSID**s v souboru hlaviček generovaných s MkTypLib bude odpovídajícím způsobem měnit. Je potřeba aktualizovat kód Refaktorovat pro použití nové názvy proměnných.
+Všimněte si, že při změně třídy coclass se odpovídajícím způsobem změní názvy proměnných **CLSID**s v souboru hlaviček generovaného MkTypLib. Budete muset aktualizovat svůj kód, aby používal nové názvy proměnných.
 
-## <a name="handling-exceptions-and-the-automation-error-interfaces"></a>Zpracování výjimek a chyb rozhraní automatizace
+## <a name="handling-exceptions-and-the-automation-error-interfaces"></a>Zpracování výjimek a chybových rozhraní automatizace
 
-Automatizační objekt metody a vlastnosti přístupového objektu funkce může vyvolat výjimky. Pokud tedy by měl zpracovávat vaše implementace duálního rozhraní a předávání informací o výjimce zpět do kontroleru rozhraní automatizace OLE zpracování chyb, `IErrorInfo`. Toto rozhraní poskytuje informace o chybě podrobné, kontextové prostřednictvím obě `IDispatch` a VTBL rozhraní. K označení, že obslužná rutina chyby je k dispozici, měli byste implementovat `ISupportErrorInfo` rozhraní.
+Metody objektu automatizace a funkce přistupující k vlastnostem mohou vyvolat výjimky. Pokud ano, měli byste je zpracovat ve své implementaci s duálním rozhraním a předávat informace o výjimce zpátky do kontroleru prostřednictvím rozhraní `IErrorInfo`OLE Automation pro zpracování chyb. Toto rozhraní poskytuje podrobné kontextové informace o chybách prostřednictvím `IDispatch` rozhraní a VTBL. Pro indikaci, že je k dispozici obslužná rutina chyby `ISupportErrorInfo` , byste měli implementovat rozhraní.
 
-Pro ilustraci mechanismus zpracování chyb, se předpokládá, že funkce generované ClassWizard používaný k implementaci podpory standard odeslání vyvolávat výjimky. Implementace MFC atributu `IDispatch::Invoke` obvykle zachycuje tyto výjimky a převede je na strukturu EXCEPTINFO, která je vrácena prostřednictvím `Invoke` volání. Ale při použití rozhraní VTBL zodpovídáte za zachytávání výjimek sami. Jako příklad duálního rozhraní metody ochrany:
+Pro ilustraci mechanismu zpracování chyb Předpokládejme, že funkce generované ClassWizard, které slouží k implementaci standardního odeslání, podporují výjimky. Implementace `IDispatch::Invoke` knihovny MFC obvykle zachycuje tyto výjimky a převede je do struktury EXCEPTINFO, která je vrácena `Invoke` prostřednictvím volání. Pokud se však používá rozhraní VTBL, zodpovídáte za zachycení výjimek sami. Jako příklad ochrany metod dvojího rozhraní:
 
 ```cpp
 STDMETHODIMP CAutoClickDoc::XDualAClick::put_text(BSTR newText)
@@ -310,31 +310,31 @@ STDMETHODIMP CAutoClickDoc::XDualAClick::put_text(BSTR newText)
 }
 ```
 
-`CATCH_ALL_DUAL` postará o vrácení kódu chyby opravte, když dojde k výjimce. `CATCH_ALL_DUAL` převádí výjimku MFC OLE Automation zpracování chyb informací pomocí `ICreateErrorInfo` rozhraní. (Příklad `CATCH_ALL_DUAL` – makro je v souboru MFCDUAL. H [acdual –](../overview/visual-cpp-samples.md) vzorku. Funkce, které volá pro zpracování výjimek, `DualHandleException`, je umístěný v souboru MFCDUAL. CPP.) `CATCH_ALL_DUAL` Určuje kód chyby se vraťte na základě typu výjimky, ke které došlo:
+`CATCH_ALL_DUAL`Při výskytu výjimky se postará o vrácení správného kódu chyby. `CATCH_ALL_DUAL`Převede výjimku knihovny MFC na informace o zpracování chyb automatizace OLE pomocí `ICreateErrorInfo` rozhraní. (Příklad `CATCH_ALL_DUAL` makra je v souboru MFCDUAL. H v ukázce [ACDUAL](../overview/visual-cpp-samples.md) . Funkce, která volá pro zpracování výjimek, `DualHandleException`, je v souboru MFCDUAL. CPP.) `CATCH_ALL_DUAL` Určuje kód chyby, který se má vrátit na základě typu výjimky, ke které došlo:
 
-- [Coledispatchexception –](../mfc/reference/coledispatchexception-class.md) – v takovém případě `HRESULT` je vytvořená pomocí následujícího kódu:
+- [COleDispatchException](../mfc/reference/coledispatchexception-class.md) – v tomto případě `HRESULT` je vytvořen pomocí následujícího kódu:
 
     ```cpp
     hr = MAKE_HRESULT(SEVERITY_ERROR, FACILITY_ITF, (e->m_wCode + 0x200));
     ```
 
-   Tím se vytvoří `HRESULT` specifické pro rozhraní, který způsobil výjimku. Kód chyby je posunut 0x200, aby se zabránilo konfliktům s definovaných systémem `HRESULT`s pro standardní rozhraní OLE.
+   Tím se vytvoří `HRESULT` konkrétní rozhraní, které způsobilo výjimku. Kód chyby je posunut pomocí 0x200, aby nedocházelo ke konfliktům se systémem `HRESULT`definovaným s pro standardní rozhraní OLE.
 
-- [Cmemoryexception –](../mfc/reference/cmemoryexception-class.md) – v takovém případě `E_OUTOFMEMORY` je vrácena.
+- [CMemoryException](../mfc/reference/cmemoryexception-class.md) – v tomto případě `E_OUTOFMEMORY` se vrátí.
 
-- Jakoukoli jinou výjimku – v takovém případě `E_UNEXPECTED` je vrácena.
+- Všechny ostatní výjimky – v tomto případě `E_UNEXPECTED` se vrátí.
 
-K označení, že se používá obslužnou rutinu chyb automatizace OLE, byste měli také implementovat `ISupportErrorInfo` rozhraní.
+Pro indikaci, že se používá obslužná rutina chyby automatizace OLE, byste měli `ISupportErrorInfo` také implementovat rozhraní.
 
-Nejprve přidejte kód do definice třídy automatizace zobrazíte podporuje `ISupportErrorInfo`.
+Nejdřív přidejte kód do definice třídy automatizace, aby se zobrazila podpora `ISupportErrorInfo`.
 
-Za druhé, přidání kódu do mapy rozhraní klientská automatizační třída přidružení `ISupportErrorInfo` implementace třídy pomocí knihovny MFC `QueryInterface` mechanismus. `INTERFACE_PART` Příkaz shoduje se třída definovaná pro `ISupportErrorInfo`.
+Za druhé přidejte kód do mapy rozhraní vaší třídy automatizace a přidružte `ISupportErrorInfo` k ní implementační třídu s `QueryInterface` mechanismem knihovny MFC. Příkaz odpovídá třídě definované pro `ISupportErrorInfo`. `INTERFACE_PART`
 
-Nakonec implementace třídy definované pro podporu `ISupportErrorInfo`.
+Nakonec implementujte třídu definovanou pro podporu `ISupportErrorInfo`.
 
-( [Acdual –](../overview/visual-cpp-samples.md) ukázka obsahuje tři makra umožňující provádět tyto tři kroky `DECLARE_DUAL_ERRORINFO`, `DUAL_ERRORINFO_PART`, a `IMPLEMENT_DUAL_ERRORINFO`, všechny obsažené v MFCDUAL. H.)
+(Ukázka [ACDUAL](../overview/visual-cpp-samples.md) obsahuje tři makra, která vám pomůžou provést tyto tři `DECLARE_DUAL_ERRORINFO`kroky `DUAL_ERRORINFO_PART`,, `IMPLEMENT_DUAL_ERRORINFO`a, které jsou obsaženy v MFCDUAL. H.)
 
-Následující příklad implementuje třída definována pro podporu `ISupportErrorInfo`. `CAutoClickDoc` je název třídy automatizace a `IID_IDualAClick` je **IID** rozhraní, které je zdrojem chyby ohlášení chyby objekt automatizace OLE:
+Následující příklad implementuje třídu definovanou pro podporu `ISupportErrorInfo`. `CAutoClickDoc`je název vaší třídy automatizace a `IID_IDualAClick` je **IID** pro rozhraní, které je zdrojem chyb hlášených prostřednictvím objektu chyby automatizace OLE:
 
 ```cpp
 STDMETHODIMP_(ULONG) CAutoClickDoc::XSupportErrorInfo::AddRef()

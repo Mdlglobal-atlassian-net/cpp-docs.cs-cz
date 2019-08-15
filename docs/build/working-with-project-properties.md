@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Visual C++ projects, properties
 - projects [C++], properties
 ms.assetid: 9b0d6f8b-7d4e-4e61-aa75-7d14944816cd
-ms.openlocfilehash: 436c9c47d7e08176860144ce62cc874919351029
-ms.sourcegitcommit: 610751254a01cba6ad15fb1e1764ecb2e71f66bf
+ms.openlocfilehash: 57414bd56c72b951d3f1948e658243e9036f0179
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/18/2019
-ms.locfileid: "68313450"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69498129"
 ---
 # <a name="set-compiler-and-build-properties"></a>Nastavení vlastností kompilátoru a sestavení
 
@@ -39,7 +39,7 @@ Následující ilustrace znázorňuje stejnou stránku vlastností projektu, ale
 
 ## <a name="target-platforms"></a>Cílové platformy
 
-*Cílová platforma* odkazuje na druh zařízení nebo operačního systému, na kterém se spustitelný soubor spustí. Projekt můžete sestavit pro více než jednu platformu. Dostupné cílové platformy pro C++ projekty závisí na typu projektu. zahrnují, ale nejsou omezené na Win32, x64, ARM, Android a iOS.     Cílová platforma **x86** , která se může zobrazit v **Configuration Manager** , je v  nativních C++ projektech shodná s Win32. Win32 znamená 32 Windows a **x64** znamená 64 bitových oken. Další informace o těchto dvou platformách najdete v tématu [spouštění 32CH aplikací](/windows/desktop/WinProg64/running-32-bit-applications).
+*Cílová platforma* odkazuje na druh zařízení nebo operačního systému, na kterém se spustitelný soubor spustí. Projekt můžete sestavit pro více než jednu platformu. Dostupné cílové platformy pro C++ projekty závisí na typu projektu. zahrnují, ale nejsou omezené na Win32, x64, ARM, Android a iOS.     Cílová platforma **x86** , která se může zobrazit v **Configuration Manager** , je v nativních C++ projektech shodná s Win32. Win32 znamená 32 Windows a **x64** znamená 64 bitových oken. Další informace o těchto dvou platformách najdete v tématu [spouštění 32CH aplikací](/windows/win32/WinProg64/running-32-bit-applications).
 
 Hodnota **libovolné** cílové platformy procesoru, která se může zobrazit v **Configuration Manager** nemá žádný vliv na nativní C++ projekty; je relevantní pro C++/CLI a jiné typy projektů .NET. Další informace najdete v tématu [/CLRIMAGETYPE (určení typu image CLR)](reference/clrimagetype-specify-type-of-clr-image.md).
 

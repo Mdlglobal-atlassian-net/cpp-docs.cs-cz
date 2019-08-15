@@ -20,16 +20,16 @@ helpviewer_keywords:
 - CNetAddressCtrl [MFC], GetAllowType
 - CNetAddressCtrl [MFC], SetAllowType
 ms.assetid: cb4c6aca-3f49-4b52-b76c-65f57096155b
-ms.openlocfilehash: 23160c51466ce1a2857d3648dd5f4970dfe172f7
-ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
+ms.openlocfilehash: 5e485c22bcc4bf35f61226d84345102052689f89
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66504234"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69504537"
 ---
 # <a name="cnetaddressctrl-class"></a>CNetAddressCtrl – třída
 
-`CNetAddressCtrl` Třída reprezentuje ovládacího prvku síťové adresy, které můžete použít k zadání a ověření formátu protokolu IPv4, IPv6 a pojmenovaných adres DNS.
+`CNetAddressCtrl` Třída představuje ovládací prvek síťové adresy, který můžete použít k zadání a ověření formátu adres IPv4, IPv6 a názvů DNS.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -43,44 +43,44 @@ class CNetAddressCtrl : public CEdit
 
 |Name|Popis|
 |----------|-----------------|
-|[CNetAddressCtrl::CNetAddressCtrl](#cnetaddressctrl)|Vytvoří `CNetAddressCtrl` objektu.|
+|[CNetAddressCtrl::CNetAddressCtrl](#cnetaddressctrl)|`CNetAddressCtrl` Vytvoří objekt.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
 |Name|Popis|
 |----------|-----------------|
-|[CNetAddressCtrl::Create](#create)|Vytvoří ovládací prvek adresy sítě se zadaným styly a připojí ho k aktuální `CNetAddressCtrl` objektu.|
-|[CNetAddressCtrl::CreateEx](#createex)|Vytvoří ovládací prvek adresy sítě se zadaným rozšířené styly a připojí ho k aktuální `CNetAddressCtrl` objektu.|
-|[CNetAddressCtrl::DisplayErrorTip](#displayerrortip)|Zobrazení tipu v bublině chyba zobrazí, když uživatel zadá adresu nepodporovanou síť v aktuální ovládací prvek síťové adresy.|
-|[CNetAddressCtrl::GetAddress](#getaddress)|Získá ověřených a Analyzovaná reprezentace síťové adresy přidružené k aktuálnímu ovládacímu prvku síťové adresy.|
-|[CNetAddressCtrl::GetAllowType](#getallowtype)|Načte typ síťové adresy, který podporuje ovládací prvek adresy aktuální sítě.|
-|[CNetAddressCtrl::SetAllowType](#setallowtype)|Nastaví typ síťové adresy, který podporuje ovládací prvek adresy aktuální sítě.|
+|[CNetAddressCtrl::Create](#create)|Vytvoří ovládací prvek síťové adresy se zadanými styly a připojí ho k aktuálnímu `CNetAddressCtrl` objektu.|
+|[CNetAddressCtrl::CreateEx](#createex)|Vytvoří ovládací prvek síťové adresy se zadanými rozšířenými styly a připojí ho k aktuálnímu `CNetAddressCtrl` objektu.|
+|[CNetAddressCtrl::DisplayErrorTip](#displayerrortip)|Pokud uživatel zadá nepodporovanou síťovou adresu v aktuálním ovládacím prvku síťové adresy, zobrazí se tip s chybovou bublinou.|
+|[CNetAddressCtrl::GetAddress](#getaddress)|Načte ověřenou a analyzovanou reprezentaci síťové adresy přidružené k aktuálnímu ovládacímu prvku síťové adresy.|
+|[CNetAddressCtrl::GetAllowType](#getallowtype)|Načte typ síťové adresy, kterou může aktuální ovládací prvek síťové adresy podporovat.|
+|[CNetAddressCtrl::SetAllowType](#setallowtype)|Nastaví typ síťové adresy, který může podporovat aktuální ovládací prvek adresa sítě.|
 
 ## <a name="remarks"></a>Poznámky
 
-Ovládacího prvku síťové adresy ověří, zda je správný formát, který uživatel zadá adresu. Ovládací prvek nepřipojí ve skutečnosti k síťovou adresu. [CNetAddressCtrl::SetAllowType](#setallowtype) metody Určuje jeden nebo více typů adresy, která [CNetAddressCtrl::GetAddress](#getaddress) metoda můžete analyzovat a ověřit. Adresa může být ve formě IPv4, IPv6 nebo pojmenované adresy serveru, sítě, hostitele nebo cíl zprávy všesměrového vysílání. Pokud nemá správný formát adresy, můžete použít [CNetAddressCtrl::DisplayErrorTip](#displayerrortip) metodu pro zobrazení okno se zprávou informační tip, který graficky bodů do textového pole ovládacího prvku síťové adresy a zobrazí i předdefinovanou chybová zpráva.
+Ovládací prvek síťová adresa ověří, zda formát adresy, kterou uživatel zadal, je správný. Ovládací prvek se ve skutečnosti nepřipojí k síťové adrese. Metoda [CNetAddressCtrl –:: SetAllowType](#setallowtype) Určuje jeden nebo více typů adres, které může metoda [CNetAddressCtrl –:: GetAddress](#getaddress) analyzovat a ověřit. Adresa může být ve formátu IPv4, IPv6 nebo pojmenované adresy pro cíl serveru, sítě, hostitele nebo zprávy všesměrového vysílání. Pokud se jedná o nesprávný formát adresy, můžete pomocí metody [CNetAddressCtrl –::D isplayerrortip](#displayerrortip) zobrazit okno se zprávou s popisem, které graficky odkazuje na textové pole ovládacího prvku síťová adresa a zobrazí se předdefinovaná chybová zpráva.
 
-`CNetAddressCtrl` Je třída odvozena z [CEdit](../../mfc/reference/cedit-class.md) třídy. V důsledku toho ovládacího prvku síťové adresy poskytuje přístup k všechny zprávy upravit ovládací prvek Windows.
+Třída je odvozena od třídy [CEdit.](../../mfc/reference/cedit-class.md) `CNetAddressCtrl` V důsledku toho poskytuje řízení síťových adres přístup ke všem zprávám ovládacího prvku Windows Edit.
 
-Následující obrázek znázorňuje dialogového okna, která obsahuje ovládací prvek sítě. Textového pole (1) pro ovládacího prvku síťové adresy obsahuje neplatný síťovou adresu. Pokud síťová adresa není platná, zobrazí se zpráva informační Tip (2).
+Následující obrázek znázorňuje dialog, který obsahuje ovládací prvek síťové adresy. Textové pole (1) pro ovládací prvek síťová adresa obsahuje neplatnou síťovou adresu. Zpráva s popisem (2) se zobrazí, pokud není síťová adresa platná.
 
-![Dialogové okno s ovládacím prvkem síťové adresy a informační tip. ](../../mfc/reference/media/cnetaddctrl.png "Dialogové okno s ovládacím prvkem síťové adresy a informační tip.")
+![Dialogové okno s ovládacím prvkem síťových adres a informačním] popisem. (../../mfc/reference/media/cnetaddctrl.png "Dialogové okno s ovládacím prvkem síťových adres a informačním") popisem.
 
 ## <a name="example"></a>Příklad
 
-Následující příklad kódu je část dialogového okna, která ověřuje síťovou adresu. Obslužné rutiny událostí pro tři přepínačů určete síťová adresa může být jeden ze tří typů adresu. Uživatel zadá do textového pole ovládacího prvku síťové adresy a stiskne tlačítko Ověřit adresu. Pokud se jedná o platnou adresu, zobrazí se zpráva o úspěchu; v opačném případě se zobrazí chybová zpráva předdefinované informační tip.
+Následující příklad kódu je část dialogu, který ověřuje síťovou adresu. Obslužné rutiny událostí pro tři přepínače určují, že síťová adresa může být jedním ze tří typů adres. Uživatel zadá adresu do textového pole ovládacího prvku sítě a potom stisknutím tlačítka adresu ověří. Pokud je adresa platná, zobrazí se zpráva o úspěchu. v opačném případě se zobrazí předdefinovaná chybová zpráva s popisem.
 
 [!code-cpp[NVC_MFC_CNetAddressCtrl_s1#1](../../mfc/reference/codesnippet/cpp/cnetaddressctrl-class_1.cpp)]
 
 ## <a name="example"></a>Příklad
 
-Následující příklad kódu ze souboru záhlaví dialogového okna definuje [NC_ADDRESS](/windows/desktop/api/shellapi/ns-shellapi-tagnc_address) a [NET_ADDRESS_INFO](/windows/desktop/shell/hkey-type) proměnné, které jsou vyžadované [CNetAddressCtrl::GetAddress](#getaddress)metody.
+Následující příklad kódu ze souboru hlaviček dialogového okna definuje proměnné [NC_ADDRESS](/windows/win32/api/shellapi/ns-shellapi-nc_address) a [NET_ADDRESS_INFO](/windows/win32/shell/hkey-type) , které jsou vyžadovány metodou [CNetAddressCtrl –:: GetAddress](#getaddress) .
 
 [!code-cpp[NVC_MFC_CNetAddressCtrl_s1#2](../../mfc/reference/codesnippet/cpp/cnetaddressctrl-class_2.h)]
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
-[Třídy CObject](../../mfc/reference/cobject-class.md)
+[CObject](../../mfc/reference/cobject-class.md)
 
 [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)
 
@@ -92,15 +92,15 @@ Následující příklad kódu ze souboru záhlaví dialogového okna definuje [
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** afxcmn.h
+**Záhlaví:** afxcmn. h
 
-Tato třída je podporován v systému Windows Vista nebo novější.
+Tato třída je podporována v systému Windows Vista a novějších.
 
-Další požadavky pro tuto třídu jsou popsány v [vytvářet požadavky pro Windows Vista běžné ovládací prvky](../../mfc/build-requirements-for-windows-vista-common-controls.md).
+Další požadavky pro tuto třídu jsou popsány v tématu [požadavky na sestavení pro běžné ovládací prvky systému Windows Vista](../../mfc/build-requirements-for-windows-vista-common-controls.md).
 
 ##  <a name="cnetaddressctrl"></a>  CNetAddressCtrl::CNetAddressCtrl
 
-Vytvoří `CNetAddressCtrl` objektu.
+`CNetAddressCtrl` Vytvoří objekt.
 
 ```
 CNetAddressCtrl();
@@ -108,11 +108,11 @@ CNetAddressCtrl();
 
 ### <a name="remarks"></a>Poznámky
 
-Použití [CNetAddressCtrl::Create](#create) nebo [CNetAddressCtrl::CreateEx](#createex) metodu pro vytvoření ovládacího prvku sítě a připojte ji k `CNetAddressCtrl` objektu.
+K vytvoření síťového ovládacího prvku a `CNetAddressCtrl` jeho připojení k objektu použijte metodu [CNetAddressCtrl –:: Create](#create) nebo [CNetAddressCtrl –:: CreateEx](#createex) .
 
 ##  <a name="create"></a>  CNetAddressCtrl::Create
 
-Vytvoří ovládací prvek adresy sítě se zadaným styly a připojí ho k aktuální `CNetAddressCtrl` objektu.
+Vytvoří ovládací prvek síťové adresy se zadanými styly a připojí ho k aktuálnímu `CNetAddressCtrl` objektu.
 
 ```
 virtual BOOL Create(
@@ -126,18 +126,18 @@ virtual BOOL Create(
 
 |Parametr|Popis|
 |---------------|-----------------|
-|*dwStyle*|[in] Bitová kombinace hodnot styly použité na ovládací prvek. Další informace najdete v tématu [upravit styly](../../mfc/reference/styles-used-by-mfc.md#edit-styles).|
-|*Rect*|[in] Odkaz na [RECT](/previous-versions/dd162897\(v=vs.85\)) strukturu, která obsahuje umístění a velikost ovládacího prvku.|
-|*pParentWnd*|[in] Nenulový ukazatel [CWnd](../../mfc/reference/cwnd-class.md) objekt, který je nadřazené okno ovládacího prvku.|
-|*nID*|[in] ID ovládacího prvku.|
+|*dwStyle*|pro Bitová kombinace stylů, která se má použít pro ovládací prvek Další informace najdete v tématu [Úprava stylů](../../mfc/reference/styles-used-by-mfc.md#edit-styles).|
+|*OBD*|pro Odkaz na strukturu [Rect](/previous-versions/dd162897\(v=vs.85\)) , která obsahuje pozici a velikost ovládacího prvku.|
+|*pParentWnd*|pro Ukazatel bez hodnoty null na objekt [CWnd](../../mfc/reference/cwnd-class.md) , který je nadřazeným oknem ovládacího prvku.|
+|*nID*|pro ID ovládacího prvku|
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Hodnota TRUE, pokud tato metoda je úspěšná. v opačném případě hodnota FALSE.
+TRUE, pokud je tato metoda úspěšná; v opačném případě FALSE.
 
 ##  <a name="createex"></a>  CNetAddressCtrl::CreateEx
 
-Vytvoří ovládací prvek adresy sítě se zadaným rozšířené styly a připojí ho k aktuální `CNetAddressCtrl` objektu.
+Vytvoří ovládací prvek síťové adresy se zadanými rozšířenými styly a připojí ho k aktuálnímu `CNetAddressCtrl` objektu.
 
 ```
 virtual BOOL CreateEx(
@@ -152,19 +152,19 @@ virtual BOOL CreateEx(
 
 |Parametr|Popis|
 |---------------|-----------------|
-|*dwExStyle*|[in] Bitová kombinace (nebo) rozšířené stylů pro ovládací prvek. Další informace najdete v tématu *dwExStyle* parametr [CreateWindowEx](/windows/desktop/api/winuser/nf-winuser-createwindowexa) funkce.|
-|*dwStyle*|[in] Bitová kombinace (nebo) stylů pro ovládací prvek. Další informace najdete v tématu [upravit styly](../../mfc/reference/styles-used-by-mfc.md#edit-styles).|
-|*Rect*|[in] Odkaz na [RECT](/previous-versions/dd162897\(v=vs.85\)) strukturu, která obsahuje umístění a velikost ovládacího prvku.|
-|*pParentWnd*|[in] Nenulový ukazatel [CWnd](../../mfc/reference/cwnd-class.md) objekt, který je nadřazené okno ovládacího prvku.|
-|*nID*|[in] ID ovládacího prvku.|
+|*dwExStyle*|pro Bitová kombinace (nebo) rozšířených stylů, které mají být použity pro ovládací prvek. Další informace najdete v parametru *dwExStyle* funkce [CreateWindowEx](/windows/win32/api/winuser/nf-winuser-createwindowexw) .|
+|*dwStyle*|pro Bitových kombinací (nebo) stylů, které mají být použity pro ovládací prvek. Další informace najdete v tématu [Úprava stylů](../../mfc/reference/styles-used-by-mfc.md#edit-styles).|
+|*OBD*|pro Odkaz na strukturu [Rect](/previous-versions/dd162897\(v=vs.85\)) , která obsahuje pozici a velikost ovládacího prvku.|
+|*pParentWnd*|pro Ukazatel bez hodnoty null na objekt [CWnd](../../mfc/reference/cwnd-class.md) , který je nadřazeným oknem ovládacího prvku.|
+|*nID*|pro ID ovládacího prvku|
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Hodnota TRUE, pokud tato metoda je úspěšná. v opačném případě hodnota FALSE.
+TRUE, pokud je tato metoda úspěšná; v opačném případě FALSE.
 
 ##  <a name="displayerrortip"></a>  CNetAddressCtrl::DisplayErrorTip
 
-V bublině tipu, který je přidružený aktuální ovládací prvek síťové adresy zobrazí chybovou zprávu.
+Zobrazí chybovou zprávu v tipu bubliny, která je přidružená k aktuálnímu ovládacímu prvku síťové adresy.
 
 ```
 HRESULT DisplayErrorTip();
@@ -172,17 +172,17 @@ HRESULT DisplayErrorTip();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Hodnota `S_OK` Pokud tato metoda je úspěšná, jinak kód chyby.
+Hodnota `S_OK` , pokud je tato metoda úspěšná. v opačném případě kód chyby.
 
 ### <a name="remarks"></a>Poznámky
 
-Použití [CNetAddressCtrl::SetAllowType](#setallowtype) metodu pro určení typů adresy, které může podporovat ovládacího prvku aktuální síťové adresy. Použití [CNetAddressCtrl::GetAddress](#getaddress) metodu k ověření a analyzovat síťovou adresu, která uživatel zadá. Použití [CNetAddressCtrl::DisplayErrorTip](#displayerrortip) metoda se zobrazí chybová zpráva tip, pokud [CNetAddressCtrl::GetAddress](#getaddress) metoda neproběhne úspěšně.
+Pomocí metody [CNetAddressCtrl –:: SetAllowType](#setallowtype) určete typy adres, které může podporovat aktuální ovládací prvek adresa sítě. Pomocí metody [CNetAddressCtrl –:: GetAddress](#getaddress) můžete ověřit a analyzovat síťovou adresu, kterou uživatel zadá. Použijte metodu [CNetAddressCtrl –::D isplayerrortip](#displayerrortip) pro zobrazení informační zprávy o chybě, pokud metoda [CNetAddressCtrl –:: GetAddress](#getaddress) není úspěšná.
 
-Vyvolá tuto zprávu [NetAddr_DisplayErrorTip](/windows/desktop/api/shellapi/nf-shellapi-netaddr_displayerrortip) makra, která je popsána v sadě Windows SDK. Toto makro odešle `NCM_DISPLAYERRORTIP` zprávy.
+Tato zpráva vyvolá makro [NetAddr_DisplayErrorTip](/windows/win32/api/shellapi/nf-shellapi-netaddr_displayerrortip) , které je popsáno v Windows SDK. Toto makro odešle `NCM_DISPLAYERRORTIP` zprávu.
 
 ##  <a name="getaddress"></a>  CNetAddressCtrl::GetAddress
 
-Získá ověřených a Analyzovaná reprezentace síťové adresy, který je přidružený aktuální ovládací prvek síťové adresy.
+Načte ověřenou a analyzovanou reprezentaci síťové adresy, která je přidružena k aktuálnímu ovládacímu prvku síťové adresy.
 
 ```
 HRESULT GetAddress(PNC_ADDRESS pAddress) const;
@@ -191,23 +191,23 @@ HRESULT GetAddress(PNC_ADDRESS pAddress) const;
 ### <a name="parameters"></a>Parametry
 
 *pAddress*<br/>
-[out v] Ukazatel [NC_ADDRESS](/windows/desktop/api/shellapi/ns-shellapi-tagnc_address) struktury.  Nastavte *pAddrInfo* člena této struktury na adresu [NET_ADDRESS_INFO](/windows/desktop/shell/hkey-type) strukturu před voláním metody GetAddress.
+[in, out] Ukazatel na strukturu [NC_ADDRESS](/windows/win32/api/shellapi/ns-shellapi-nc_address) .  Nastavte člena *pAddrInfo* této struktury na adresu struktury [NET_ADDRESS_INFO](/windows/win32/shell/hkey-type) před voláním metody GetAddress.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Hodnota S_OK, pokud tato metoda je úspěšná. jinak kód chyby modelu COM. Další informace o kódech chyb najdete v části vrátit hodnotu z [NetAddr_GetAddress](/windows/desktop/api/shellapi/nf-shellapi-netaddr_getaddress) – makro.
+Hodnota S_OK, pokud je tato metoda úspěšná; v opačném případě kód chyby modelu COM. Další informace o možných kódech chyb naleznete v části vrácená hodnota v makru [NetAddr_GetAddress](/windows/win32/api/shellapi/nf-shellapi-netaddr_getaddress) .
 
 ### <a name="remarks"></a>Poznámky
 
-Pokud tato metoda je úspěšná, [NET_ADDRESS_INFO](/windows/desktop/shell/hkey-type) struktura obsahuje další informace o síťové adrese.
+Pokud je tato metoda úspěšná, struktura [NET_ADDRESS_INFO](/windows/win32/shell/hkey-type) obsahuje další informace o síťové adrese.
 
-Použití [CNetAddressCtrl::SetAllowType](#setallowtype) metodu pro určení typů ovládacího prvku aktuální síťové adresy může podporovat adresy. Použití [CNetAddressCtrl::GetAddress](#getaddress) metodu k ověření a analyzovat síťovou adresu, která uživatel zadá. Použití [CNetAddressCtrl::DisplayErrorTip](#displayerrortip) metoda se zobrazí chybová zpráva tip, pokud [CNetAddressCtrl::GetAddress](#getaddress) metoda neproběhne úspěšně.
+Pomocí metody [CNetAddressCtrl –:: SetAllowType](#setallowtype) určete typy adres, které může podporovat aktuální ovládací prvek síťové adresy. Pomocí metody [CNetAddressCtrl –:: GetAddress](#getaddress) můžete ověřit a analyzovat síťovou adresu, kterou uživatel zadá. Použijte metodu [CNetAddressCtrl –::D isplayerrortip](#displayerrortip) pro zobrazení informační zprávy o chybě, pokud metoda [CNetAddressCtrl –:: GetAddress](#getaddress) není úspěšná.
 
-Tato metoda vyvolá [NetAddr_GetAddress](/windows/desktop/api/shellapi/nf-shellapi-netaddr_getaddress) makra, která je popsána v sadě Windows SDK. Toto makro odešle zprávu NCM_GETADDRESS.
+Tato metoda vyvolá makro [NetAddr_GetAddress](/windows/win32/api/shellapi/nf-shellapi-netaddr_getaddress) , které je popsáno v Windows SDK. Toto makro odešle zprávu NCM_GETADDRESS.
 
 ##  <a name="getallowtype"></a>  CNetAddressCtrl::GetAllowType
 
-Načte typ síťové adresy, který podporuje ovládací prvek adresy aktuální sítě.
+Načte typ síťové adresy, kterou může aktuální ovládací prvek síťové adresy podporovat.
 
 ```
 DWORD GetAllowType() const;
@@ -215,15 +215,15 @@ DWORD GetAllowType() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Bitová kombinace (nebo) příznaky určující typy adres může podporovat ovládacího prvku síťové adresy. Další informace najdete v tématu [NET_STRING](/windows/desktop/shell/net-string).
+Bitových kombinací (nebo) příznaků, které určují typy adres, které může podporovat ovládací prvek síťové adresy. Další informace najdete v tématu [NET_STRING](/windows/win32/shell/net-string).
 
 ### <a name="remarks"></a>Poznámky
 
-Vyvolá tuto zprávu [NetAddr_GetAllowType](/windows/desktop/api/shellapi/nf-shellapi-netaddr_getallowtype) makra, která je popsána v sadě Windows SDK. Toto makro odešle zprávu NCM_GETALLOWTYPE.
+Tato zpráva vyvolá makro [NetAddr_GetAllowType](/windows/win32/api/shellapi/nf-shellapi-netaddr_getallowtype) , které je popsáno v Windows SDK. Toto makro odešle zprávu NCM_GETALLOWTYPE.
 
 ##  <a name="setallowtype"></a>  CNetAddressCtrl::SetAllowType
 
-Nastaví typ síťové adresy, který podporuje ovládací prvek adresy aktuální sítě.
+Nastaví typ síťové adresy, který může podporovat aktuální ovládací prvek adresa sítě.
 
 ```
 HRESULT SetAllowType(DWORD dwAddrMask);
@@ -233,17 +233,17 @@ HRESULT SetAllowType(DWORD dwAddrMask);
 
 |Parametr|Popis|
 |---------------|-----------------|
-|*dwAddrMask*|[in] Bitová kombinace (nebo) příznaky určující typy adres může podporovat ovládacího prvku síťové adresy. Další informace najdete v tématu [NET_STRING](/windows/desktop/shell/net-string).|
+|*dwAddrMask*|pro Bitových kombinací (nebo) příznaků, které určují typy adres, které může podporovat ovládací prvek síťové adresy. Další informace najdete v tématu [NET_STRING](/windows/win32/shell/net-string).|
 
 ### <a name="return-value"></a>Návratová hodnota
 
-S_OK, pokud tato metoda je úspěšná. jinak kód chyby modelu COM.
+S_OK, pokud je tato metoda úspěšná; v opačném případě kód chyby modelu COM.
 
 ### <a name="remarks"></a>Poznámky
 
-Použití [CNetAddressCtrl::SetAllowType](#setallowtype) metodu pro určení typů adresy, které může podporovat ovládacího prvku aktuální síťové adresy. Použití [CNetAddressCtrl::GetAddress](#getaddress) metodu k ověření a analyzovat síťovou adresu, která uživatel zadá. Použití [CNetAddressCtrl::DisplayErrorTip](#displayerrortip) metoda se zobrazí chybová zpráva tip, pokud [CNetAddressCtrl::GetAddress](#getaddress) metoda neproběhne úspěšně.
+Pomocí metody [CNetAddressCtrl –:: SetAllowType](#setallowtype) určete typy adres, které může podporovat aktuální ovládací prvek adresa sítě. Pomocí metody [CNetAddressCtrl –:: GetAddress](#getaddress) můžete ověřit a analyzovat síťovou adresu, kterou uživatel zadá. Použijte metodu [CNetAddressCtrl –::D isplayerrortip](#displayerrortip) pro zobrazení informační zprávy o chybě, pokud metoda [CNetAddressCtrl –:: GetAddress](#getaddress) není úspěšná.
 
-Vyvolá tuto zprávu [NetAddr_SetAllowType](/windows/desktop/api/shellapi/nf-shellapi-netaddr_setallowtype) makra, která je popsána v sadě Windows SDK. Toto makro odešle zprávu NCM_SETALLOWTYPE.
+Tato zpráva vyvolá makro [NetAddr_SetAllowType](/windows/win32/api/shellapi/nf-shellapi-netaddr_setallowtype) , které je popsáno v Windows SDK. Toto makro odešle zprávu NCM_SETALLOWTYPE.
 
 ## <a name="see-also"></a>Viz také:
 

@@ -6,25 +6,25 @@ f1_keywords:
 helpviewer_keywords:
 - CListCtrl class [MFC], using
 ms.assetid: 20d6a5d6-8f07-4ddf-975f-ea2dfebcc835
-ms.openlocfilehash: 2e8998000187b65b62886660116c4758c1f03962
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8641b7aec3aacf4de6aabfdcc9ffcbc64c278b41
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62386236"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69512912"
 ---
 # <a name="using-clistctrl"></a>Používání atributu CListCtrl
 
-Použití ovládacího prvku seznamu zobrazíte všechny uspořádání ikon s popisky, stejně jako v Průzkumníku souborů nebo úložiště se sloupcovou strukturou seznamy textu, s nebo bez ikony. Popis čtyř možné "zobrazení" (ne by se zaměňovat s MFC zobrazení) může mít v ovládacím prvku seznamu – zobrazení ikon, malé ikony zobrazení, zobrazení seznamu a zobrazení sestav – zobrazit v zobrazení [CListCtrl](../mfc/reference/clistctrl-class.md) přehledu třídy.
+Pomocí ovládacího prvku seznam můžete zobrazit jakákoli uspořádání ikon s popisky, jako v Průzkumníkovi souborů nebo sloupcové seznamy textu s ikonami nebo bez nich. Popis čtyř možných "zobrazení" (nezaměňovat s zobrazeními MFC) můžete mít v ovládacím prvku seznam – zobrazení ikon, zobrazení malých ikon, zobrazení seznamu a zobrazení sestav – viz zobrazení v přehledu třídy [CListCtrl](../mfc/reference/clistctrl-class.md) .
 
-V některých zobrazeních uživatelé přetažením ikony na jinou pozici nebo popisky ikona upravit. Příklad najdete v pravém podokně v Průzkumníkovi souborů, které používá ovládací prvek seznamu v okně nondialog. Můžete experimentovat s zobrazení k dispozici v nabídce Zobrazení Průzkumníka.
+V některých zobrazeních můžou uživatelé přetahovat ikony na jiné pozice nebo upravit popisky ikon. Například viz podokno na pravé straně v Průzkumníkovi souborů, které používá ovládací prvek seznamu v nedialogovém okně. Můžete experimentovat s dostupnými zobrazeními v nabídce zobrazení v Průzkumníkovi.
 
-Související informace naleznete v tématu [o ovládací prvky zobrazení seznamu](/windows/desktop/Controls/list-view-controls-overview) v sadě Windows SDK.
+Související informace naleznete v tématu [o ovládacích prvcích seznam-zobrazení](/windows/win32/Controls/list-view-controls-overview) v Windows SDK.
 
 > [!NOTE]
->  Sada Windows SDK odkazuje na ovládacích prvcích seznam jako "zobrazení ovládacích prvcích seznam." Toto použití "Zobrazit" neodkazuje zobrazení tříd knihovny MFC, zejména `CListView`. Další informace najdete v tématu [ovládací prvek seznamu a zobrazení seznamu](../mfc/list-control-and-list-view.md).
+>  Windows SDK odkazuje na ovládací prvky seznamu jako "ovládací prvky zobrazení seznamu". Toto použití "View" neodkazuje na třídy zobrazení knihovny MFC, zejména `CListView`. Další informace najdete v tématu [ovládací prvek seznamu a zobrazení seznamu](../mfc/list-control-and-list-view.md).
 
-## <a name="what-do-you-want-to-know-more-about"></a>Co chcete zjistit více informací
+## <a name="what-do-you-want-to-know-more-about"></a>K čemu chcete získat další informace
 
 - [Ovládací prvek seznamu a zobrazení seznamu](../mfc/list-control-and-list-view.md)
 

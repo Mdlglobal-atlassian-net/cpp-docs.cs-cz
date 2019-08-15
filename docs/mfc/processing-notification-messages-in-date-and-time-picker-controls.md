@@ -14,34 +14,34 @@ helpviewer_keywords:
 - DTN_FORMAT notification [MFC]
 - DateTimePicker control [MFC]
 ms.assetid: ffbe29ab-ff80-4609-89f7-260b404439c4
-ms.openlocfilehash: ce84863744629d30248f94b94448d776177f9841
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: fead5643299aee4beace55abde0b6a6c801a324f
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64339557"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69507881"
 ---
 # <a name="processing-notification-messages-in-date-and-time-picker-controls"></a>Zpracování oznamovacích zpráv v ovládacích prvcích pro výběr data a času
 
-Jak uživatelé komunikovat s datem a ovládací prvek pro výběr času, ovládací prvek (`CDateTimeCtrl`) odesílá zprávy s oznámením nezašle nadřazenému oknu, obvykle objekt zobrazení nebo dialogového okna. Tyto zprávy zpracovávají, pokud budete chtít udělat něco v odpovědi. Například když uživatel otevře výběr data a času, chcete-li zobrazit ovládací prvek vložený měsíční kalendář, dtn_dropdown – oznámení se posílá.
+Když uživatelé komunikují s ovládacím prvkem pro výběr data a času, ovládací`CDateTimeCtrl`prvek () posílá oznamovací zprávy do svého nadřazeného okna, obvykle do zobrazení nebo z objektu dialogového okna. Pokud chcete něco udělat v reakci, Zpracujte tyto zprávy. Například když uživatel otevře ovládací prvek pro výběr data a času pro zobrazení vloženého ovládacího prvku měsíční kalendář, pošle se oznámení DTN_DROPDOWN.
 
-Použijte okno Vlastnosti pro přidání obslužné rutiny oznamovacích do nadřazené třídu pro ty zprávy, které chcete implementovat.
+Pomocí okno Vlastnosti přidejte do nadřazené třídy obslužné rutiny oznámení pro ty zprávy, které chcete implementovat.
 
-Následující seznam popisuje různé oznámení zaslaná z prvku Výběr data a času.
+Následující seznam popisuje různá oznámení odesílaná ovládacím prvkem pro výběr data a času.
 
-- Dtn_dropdown – upozorní nadřazený objekt, který ovládací prvek vložený měsíc kalendář se má zobrazit. Toto oznámení se odesílají jenom při styl DTS_UPDOWN nebyla nastavena. Další informace o tomto oznámení najdete v tématu [přístup k vloženému ovládacímu prvku kalendářní měsíc](../mfc/accessing-the-embedded-month-calendar-control.md).
+- DTN_DROPDOWN upozorní nadřazeného objektu na zobrazení vloženého ovládacího prvku měsíční kalendář. Toto oznámení se posílá pouze v případě, že není nastaven styl DTS_UPDOWN. Další informace o tomto oznámení najdete v tématu [přístup k vloženému ovládacímu prvku měsíční kalendář](../mfc/accessing-the-embedded-month-calendar-control.md).
 
-- Dtn_closeup – upozorní nadřazený objekt, který ovládací prvek vložený měsíc kalendář je bude uzavřen. Toto oznámení se odesílají jenom při styl DTS_UPDOWN nebyla nastavena.
+- DTN_CLOSEUP upozorní nadřazenou položku, že se chystá zavřít vložený ovládací prvek měsíčního kalendáře. Toto oznámení se posílá pouze v případě, že není nastaven styl DTS_UPDOWN.
 
-- Dtn_datetimechange – upozorňují nadřazeného objektu, který má došlo ke změně v ovládacím prvku.
+- DTN_DATETIMECHANGE upozorní nadřazenou položku, že v ovládacím prvku došlo ke změně.
 
-- Dtn_format – upozorní nadřazené položky, která je text potřeby zobrazit v poli zpětného volání. Další informace o tomto oznámení a polí zpětného volání, naleznete v tématu [použití polí zpětného volání v datu a ovládacího prvku pro výběr času](../mfc/using-callback-fields-in-a-date-and-time-picker-control.md).
+- DTN_FORMAT oznámí nadřazenému objektu, že text je potřeba zobrazit v poli zpětného volání. Další informace o tomto poli oznámení a zpětná volání naleznete v tématu [použití polí zpětného volání v ovládacím prvku pro výběr data a času](../mfc/using-callback-fields-in-a-date-and-time-picker-control.md).
 
-- Dtn_formatquery – požadavky nadřazené zadat maximální povolenou velikost řetězce, který se zobrazí v poli zpětného volání. Zpracování tohoto oznámení umožňuje ovládacímu prvku správně zobrazení výstupu vůbec časy omezení blikání v rámci ovládacího prvku zobrazení. Další informace o tomto oznámení najdete v tématu [použití polí zpětného volání v datu a ovládacího prvku pro výběr času](../mfc/using-callback-fields-in-a-date-and-time-picker-control.md).
+- DTN_FORMATQUERY vyžádá nadřazenou položku, aby poskytovala maximální povolenou velikost řetězce, který se zobrazí v poli zpětného volání. Manipulace s tímto oznámením umožňuje ovládacímu prvku správně zobrazit výstup a snížit tak blikání v zobrazení ovládacího prvku. Další informace o tomto oznámení najdete v tématu [použití polí zpětného volání v ovládacím prvku pro výběr data a času](../mfc/using-callback-fields-in-a-date-and-time-picker-control.md).
 
-- Upozorňují DTN_USERSTRING nadřazené, že uživatel dokončil úpravy obsahu prvku Výběr data a času. Toto oznámení je odeslán, pouze pokud byl nastaven styl DTS_APPCANPARSE.
+- DTN_USERSTRING upozorní nadřazenou položku, že uživatel dokončil úpravu obsahu ovládacího prvku pro výběr data a času. Toto oznámení se posílá pouze v případě, že je nastaven styl DTS_APPCANPARSE.
 
-- DTN_WMKEYDOWN upozorní nadřazený, když uživatel zadá v poli zpětného volání. Zpracuje toto oznámení k emulaci stejnou odpověď klávesnice podporována pro pole bez zpětného volání v ovládacím prvku Výběr data a času. Další informace o tomto oznámení najdete v tématu [podporuje pole zpětného volání v ovládacím prvku DTP](/windows/desktop/Controls/date-and-time-picker-controls) v sadě Windows SDK.
+- DTN_WMKEYDOWN upozorní nadřazenou položku, pokud uživatel zadá pole v poli zpětného volání. Zpracujte toto oznámení, aby emuluje stejnou odezvu klávesnice podporovanou pro pole bez zpětného volání v ovládacím prvku pro výběr data a času. Další informace o tomto oznámení naleznete v tématu [Podpora polí zpětného volání v ovládacím prvku DTP](/windows/win32/Controls/date-and-time-picker-controls) v Windows SDK.
 
 ## <a name="see-also"></a>Viz také:
 

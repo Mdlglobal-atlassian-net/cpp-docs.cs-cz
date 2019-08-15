@@ -30,16 +30,16 @@ helpviewer_keywords:
 - _endthreadex function
 - threading [C++], terminating threads
 ms.assetid: 18a91f2f-659e-40b4-b266-ec12dcf2abf5
-ms.openlocfilehash: 2f54ca9c4cd5e863ca960f1d9c3634b85e7896dd
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5afbc907356d4c5b14b749de5de0c8d36280891e
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62288820"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69499965"
 ---
-# <a name="endthread-endthreadex"></a>_endthread, _endthreadex
+# <a name="_endthread-_endthreadex"></a>_endthread, _endthreadex
 
-Ukončení podprocesu. **_endthread** ukončí podproces, který je vytvořen pomocí **_beginthread** a **_endthreadex** ukončí podproces, který je vytvořen pomocí **_beginthreadex**.
+Ukončí vlákno. **_endthread** ukončí vlákno vytvořené pomocí **_beginthread** a **_endthreadex** ukončí vlákno vytvořené pomocí **_beginthreadex**.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -53,34 +53,34 @@ void _endthreadex(
 ### <a name="parameters"></a>Parametry
 
 *retval*<br/>
-Ukončovací kód vlákna.
+Ukončovací kód vlákna
 
 ## <a name="remarks"></a>Poznámky
 
-Můžete volat **_endthread** nebo **_endthreadex** explicitně k ukončení podprocesu; nicméně **_endthread** nebo **_endthreadex** nazývá Pokud se podproces vrací z rutiny automaticky předat jako parametr **_beginthread** nebo **_beginthreadex**. Ukončení vlákna s voláním **endthread –** nebo **_endthreadex** pomáhá zajistit správné obnovení prostředků k vláknu přiděleny.
+Můžete volat **_endthread** nebo **_endthreadex** explicitně pro ukončení vlákna; **_endthread** nebo **_endthreadex** se ale zavolá automaticky, když se vlákno vrátí z rutiny předané jako parametr do **_beginthread** nebo **_beginthreadex**. Ukončení vlákna s voláním **endthread** nebo **_endthreadex** pomáhá zajistit správné obnovení prostředků přidělených pro vlákno.
 
 > [!NOTE]
-> Pro spustitelný soubor propojeného s Libcmt.lib Nevolejte rozhraní Win32 [ExitThread](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-exitthread) API; to zabrání systému za běhu recyklovat přidělené prostředky. **_endthread** a **_endthreadex** uvolní prostředky přidělené vláknu a následně zavolat **ExitThread**.
+> Pro spustitelný soubor propojený s Libcmt. lib Nevolejte rozhraní Win32 [ExitThread –](/windows/win32/api/processthreadsapi/nf-processthreadsapi-exitthread) API; Tím se zabrání tomu, aby systém za běhu znovu vydělil přidělené prostředky. **_endthread** a **_endthreadex** uvolní prostředky přiděleného vlákna a pak zavolají **ExitThread –** .
 
-**_endthread** automaticky uzavře popisovač vlákna. (Toto chování se liší od rozhraní Win32 **ExitThread** rozhraní API.) Proto při použití **_beginthread** a **_endthread**, explicitně nezavře popisovač vlákna voláním rozhraní Win32 [CloseHandle](/windows/desktop/api/handleapi/nf-handleapi-closehandle) rozhraní API.
+**_endthread** automaticky zavře popisovač vlákna. (Toto chování se liší od rozhraní Win32 **ExitThread –** API.) Proto při použití **_beginthread** a **_endthread**explicitně uzavřete popisovač vlákna voláním rozhraní Win32 [CloseHandle](/windows/win32/api/handleapi/nf-handleapi-closehandle) API.
 
-Win32, jako jsou **ExitThread** rozhraní API, **_endthreadex** nezavře popisovač vlákna. Proto při použití **_beginthreadex** a **_endthreadex**, je nutné zavřít popisovač vlákna voláním rozhraní Win32 **CloseHandle** rozhraní API.
+Podobně jako rozhraní Win32 **ExitThread –** API **_endthreadex** neuzavře popisovač vlákna. Proto při použití **_beginthreadex** a **_endthreadex**je nutné ukončit popisovač vlákna voláním rozhraní Win32 API pro **CloseHandle** .
 
 > [!NOTE]
-> **_endthread** a **_endthreadex** způsobit C++ destruktory čekající ve vláknu není, která se má volat.
+> **_endthread** a **_endthreadex** způsobí C++ , že destruktory čekají ve vlákně, které nechcete volat.
 
 ## <a name="requirements"></a>Požadavky
 
 |Funkce|Požadovaný hlavičkový soubor|
 |--------------|---------------------|
-|**_endthread**|\<process.h>|
-|**_endthreadex**|\<process.h>|
+|**_endthread**|\<Process. h >|
+|**_endthreadex**|\<Process. h >|
 
-Další informace o kompatibilitě naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
 
 ## <a name="libraries"></a>Knihovny
 
-Verze s více vlákny [běhových knihoven C](../../c-runtime-library/crt-library-features.md) pouze.
+Pouze vícevláknové verze [knihoven run-time jazyka C](../../c-runtime-library/crt-library-features.md) .
 
 ## <a name="example"></a>Příklad
 

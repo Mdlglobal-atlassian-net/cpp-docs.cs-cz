@@ -6,24 +6,24 @@ helpviewer_keywords:
 - drag and drop [MFC], CTreeCtrl
 - tree controls [MFC], drag and drop operations
 ms.assetid: 3cf78b4c-4579-4fe1-9bc9-c5ab876e4af1
-ms.openlocfilehash: c7febeec513d8004df2bd1cc42e4e97e027e9f17
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5d2c5aa511844a3d7cbe64d9a15f8ffb46046b29
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62167696"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69510903"
 ---
 # <a name="tree-control-drag-and-drop-operations"></a>Operace přetažení u ovládacího prvku strom
 
-Ovládací prvek stromu ([CTreeCtrl](../mfc/reference/ctreectrl-class.md)) odešle oznámení, když uživatel spustí přetáhněte položku. Ovládací prvek odešle [TVN_BEGINDRAG](/windows/desktop/Controls/tvn-begindrag) zprávy oznámení, když uživatel zahájí přetahování položky s levým tlačítkem myši a [TVN_BEGINRDRAG](/windows/desktop/Controls/tvn-beginrdrag) zprávy oznámení, když uživatel zahájí přetahování s pravým tlačítkem. Ovládací prvek stromu můžete zabránit zadáním do ovládacího prvku stromu styl TVS_DISABLEDRAGDROP posílání těchto oznámení.
+Ovládací prvek stromu ([CTreeCtrl](../mfc/reference/ctreectrl-class.md)) odesílá oznámení, když uživatel začne přetahovat položku. Ovládací prvek pošle zprávu s oznámením [TVN_BEGINDRAG](/windows/win32/Controls/tvn-begindrag) , když uživatel začne přetahovat položku levým tlačítkem myši a zprávou [TVN_BEGINRDRAG](/windows/win32/Controls/tvn-beginrdrag) oznámení, když uživatel začne přetahovat pomocí pravého tlačítka. Ovládacímu prvku stromu můžete zabránit v odesílání těchto oznámení tím, že ovládacímu prvku stromu umožníte TVS_DISABLEDRAGDROP styl.
 
-Získat obrázek, který se zobrazí během operace přetažení voláním [CreateDragImage](../mfc/reference/ctreectrl-class.md#createdragimage) členskou funkci. Do ovládacího prvku stromu vytvoří přetahování rastrového obrázku na základě štítku položky právě přetáhli. Pak do ovládacího prvku stromu vytvoří seznam obrázků, přidá rastrového obrázku nastaven na ni a vrací ukazatel na [atributu CImageList](../mfc/reference/cimagelist-class.md) objektu.
+Získáte obrázek, který se zobrazí během operace přetažení voláním členské funkce [CreateDragImage](../mfc/reference/ctreectrl-class.md#createdragimage) . Stromová struktura vytvoří přetahování rastrového obrázku na základě popisku položky, která je přetažena. Stromová struktura potom vytvoří seznam obrázků, přidá k němu rastrový obrázek a vrátí ukazatel na objekt [atributu CImageList](../mfc/reference/cimagelist-class.md) .
 
-Je nutné zadat kód, který ve skutečnosti přetáhne položku. To obvykle zahrnuje pomocí přetahování možností funkce seznam obrázků a zpracování [wm_mousemove a](/windows/desktop/inputdev/wm-mousemove) a [WM_LBUTTONUP](/windows/desktop/inputdev/wm-lbuttonup) (nebo [WM_RBUTTONUP](/windows/desktop/inputdev/wm-rbuttonup)) zprávy odeslané po zahájení operace přetažení. Další informace o funkcích seznamu image, najdete v části [atributu CImageList](../mfc/reference/cimagelist-class.md) v *odkaz knihovny MFC* a [seznamy obrázků](/windows/desktop/controls/image-lists) v sadě Windows SDK. Další informace o přetahování položky ovládacího prvku stromu, naleznete v tématu [přetažením položka stromového zobrazení](/windows/desktop/Controls/tree-view-controls), také v sadě Windows SDK.
+Je nutné zadat kód, který položku skutečně přetáhne. To obvykle zahrnuje použití možností přetahování funkcí seznamu obrázků a zpracování zpráv [WM_MOUSEMOVE](/windows/win32/inputdev/wm-mousemove) a [WM_LBUTTONUP](/windows/win32/inputdev/wm-lbuttonup) (nebo [WM_RBUTTONUP](/windows/win32/inputdev/wm-rbuttonup)) odesílaných po zahájení operace přetažení. Další informace o funkcích seznamu obrázků naleznete v tématu [atributu CImageList](../mfc/reference/cimagelist-class.md) in *MFC Reference* and [image](/windows/win32/controls/image-lists) lists in the Windows SDK. Další informace o přetažení položky ovládacího prvku stromu naleznete v tématu [přetahování položky stromového zobrazení](/windows/win32/Controls/tree-view-controls), a také v Windows SDK.
 
-Pokud jsou položky v ovládacím prvku strom cíli operace přetažení myší, musíte vědět, kdy je ukazatel myši na cílovou položku. Můžete zjistit pomocí volání [hitTest –](../mfc/reference/ctreectrl-class.md#hittest) členskou funkci. Zadejte bod a celé číslo nebo adresu [TVHITTESTINFO](/windows/desktop/api/commctrl/ns-commctrl-tagtvhittestinfo) strukturu, která obsahuje aktuální souřadnic ukazatele myši. Po návratu funkce celé číslo nebo struktura obsahuje příznak označující umístění ukazatele myši relativně vzhledem k stromové struktury. Pokud je kurzor na položku v ovládacím prvku stromu, struktura obsahuje popisovač předmětu také.
+Pokud jsou položky ve stromovém řízení cílem operace přetažení, musíte znát, kdy se ukazatel myši nachází na cílové položce. Můžete zjistit voláním členské funkce [HitTest](../mfc/reference/ctreectrl-class.md#hittest) . Zadejte buď bod a celé číslo, nebo adresu struktury [TVHITTESTINFO](/windows/win32/api/commctrl/ns-commctrl-tvhittestinfo) , která obsahuje aktuální souřadnice kurzoru myši. Vrátí-li funkce hodnotu, celé číslo nebo struktura obsahuje příznak označující umístění ukazatele myši vzhledem k ovládacímu prvku stromu. Pokud se ukazatel myši nachází na položce v ovládacím prvku strom, struktura obsahuje také popisovač položky.
 
-Můžete určit, že položka je cíl operace přetažení myší pomocí volání [SetItem](../mfc/reference/ctreectrl-class.md#setitem) členskou funkci pro nastavení stavu `TVIS_DROPHILITED` hodnotu. Položka, která má být tento stav je vykreslena ve stylu slouží k určení cíle přetažení myší.
+Můžete určit, že položka je cílem operace přetažení, voláním členské funkce [SetItem](../mfc/reference/ctreectrl-class.md#setitem) pro nastavení stavu na `TVIS_DROPHILITED` hodnotu. Položka, která má tento stav, je vykreslena ve stylu používaném k označení cíle přetažení myší.
 
 ## <a name="see-also"></a>Viz také:
 

@@ -4,18 +4,18 @@ ms.date: 05/06/2019
 helpviewer_keywords:
 - isolated applications [C++]
 ms.assetid: 8a2fe4fa-0489-433e-bfc6-495844d8d73a
-ms.openlocfilehash: 42192ad9388a8e69b70947c20c6fa7ee428a2bb9
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.openlocfilehash: fbb553e3514ac3c32ee1e1f276dcb3e43d3a192e
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65220969"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69493346"
 ---
 # <a name="building-cc-isolated-applications"></a>Sestavení izolovaných aplikací C/C++
 
-Izolované aplikace závisí jenom na sestavení vedle sebe a sváže s jeho závislosti pomocí manifestu. Není nutné pro vaši aplikaci, která bude plně oddělené, aby bylo možné správně spustit na Windows; ale Investujete do vytváření aplikace plně izolované, může ušetřit čas potřebujete služby vaší aplikace v budoucnu. Další informace o výhodách vytváření plně izolované aplikace najdete v tématu [izolované aplikace](/windows/desktop/SbsCs/isolated-applications).
+Izolovaná aplikace závisí pouze na souběžných sestaveních a váže se k jejím závislostem pomocí manifestu. Není nutné, aby vaše aplikace byla plně izolovaná, aby fungovala správně v systému Windows. díky investicím do plné izolace vaší aplikace ale můžete ušetřit čas, pokud budete v budoucnu potřebovat svou aplikaci obsluhovat. Další informace o výhodách plné izolace vaší aplikace najdete v tématu [izolované aplikace](/windows/win32/SbsCs/isolated-applications).
 
-Při vytváření nativní C /C++ aplikace pomocí sady Visual Studio, ve výchozím nastavení systém projektu sady Visual Studio generuje soubor manifestu, který popisuje závislosti vašich aplikací v knihovnách sady Visual Studio. Pokud se jedná jenom závislosti aplikace obsahuje, se pak stane izolované aplikace poté, co je znovu sestavit pomocí sady Visual Studio. Pokud vaše aplikace používá jiné knihovny za běhu, pak je nutné znovu sestavit těchto knihoven jako sestavení vedle sebe kroků popsaných v [vytváření sestavení C/C++-souběžně](building-c-cpp-side-by-side-assemblies.md).
+Při sestavování nativní C/C++ aplikace pomocí sady Visual Studio ve výchozím nastavení vygeneruje projektový systém sady Visual Studio soubor manifestu, který popisuje závislosti vaší aplikace v knihovnách sady Visual Studio. Pokud se jedná o jediné závislosti, které vaše aplikace má, pak se tato aplikace stal izolovanou aplikací, jakmile bude znovu sestavena se sadou Visual Studio. Pokud vaše aplikace používá jiné knihovny za běhu, pak možná budete muset tyto knihovny znovu sestavit jako souběžná sestavení podle kroků popsaných v tématu sestavení [CC++ /souběžného sestavení](building-c-cpp-side-by-side-assemblies.md).
 
 ## <a name="see-also"></a>Viz také:
 

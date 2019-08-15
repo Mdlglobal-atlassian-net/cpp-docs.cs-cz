@@ -5,40 +5,40 @@ helpviewer_keywords:
 - extended combo boxes [MFC], images
 - images [MFC], combo box items
 ms.assetid: bde83db8-23a7-4e35-837a-c86447d2c0af
-ms.openlocfilehash: 39aa4761dbc753c42f1aedbb18f1832eab471e50
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 177c06acfe665a43921b19407d9d357d4545e748
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62307728"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69511285"
 ---
 # <a name="setting-the-images-for-an-individual-item"></a>Nastavení obrázků pro jednotlivé položky
 
-Různé druhy obrázky používané v rozšířené pole se seznamem položky pole se určují podle hodnot v *iImage*, *iSelectedImage*, a *spojek není použit* členů [ COMBOBOXEXITEM](/windows/desktop/api/commctrl/ns-commctrl-tagcomboboxexitema) struktury. Každá hodnota je index obrázku v seznamu přidružené image z ovládacího prvku. Tyto členy jsou ve výchozím nastavení, nastavte na hodnotu 0, způsobí ovládací prvek pro zobrazení bez obrázku pro položku. Pokud chcete použít obrázky pro konkrétní položky, můžete to strukturu upravit odpovídajícím způsobem, při vkládání položky pole se seznamem nebo úpravou existující položky pole se seznamem.
+Různé typy obrázků, které používá rozšířená položka pole se seznamem, jsou určeny hodnotami v *iImage*, *iSelectedImage*a *IOverlay* členů struktury [COMBOBOXEXITEM](/windows/win32/api/commctrl/ns-commctrl-comboboxexitemw) . Každá hodnota je index obrázku v přidruženém seznamu obrázků ovládacího prvku. Ve výchozím nastavení jsou tito členové nastaveni na 0, což způsobí, že ovládací prvek zobrazí pro položku žádný obrázek. Pokud chcete použít obrázky pro konkrétní položku, můžete změnit strukturu odpovídajícím způsobem při vložení položky pole se seznamem nebo úpravou existující položky pole se seznamem.
 
-## <a name="setting-the-image-for-a-new-item"></a>Obrázek nastavení pro novou položku
+## <a name="setting-the-image-for-a-new-item"></a>Nastavení obrázku pro novou položku
 
-Pokud vkládáte nová položka, inicializovat *iImage*, *iSelectedImage*, a *spojek není použit* nahraďte odpovídajícími hodnotami členy struktury a poté je vkládat položky pomocí volání [CComboBoxEx::InsertItem](../mfc/reference/ccomboboxex-class.md#insertitem).
+Pokud vkládáte novou položku, inicializujte členy struktury *iImage*, *iSelectedImage*a *IOverlay* se správnými hodnotami a poté vložte položku s voláním [atributu CComboBoxEx:: InsertItem](../mfc/reference/ccomboboxex-class.md#insertitem).
 
-V následujícím příkladu vloží nové položky pole Rozšířené pole se seznamem (`cbi`) do pole ovládacího prvku rozšířené pole se seznamem (`m_comboEx`), poskytuje indexy pro všechny tři stavy bitové kopie:
+Následující příklad vloží novou rozšířenou položku pole se seznamem (`cbi`) do rozšířeného ovládacího prvku pole se seznamem`m_comboEx`() a poskytne indexy pro všechny tři stavy imagí:
 
 [!code-cpp[NVC_MFCControlLadenDialog#12](../mfc/codesnippet/cpp/setting-the-images-for-an-individual-item_1.cpp)]
 
-## <a name="setting-the-image-for-an-existing-item"></a>Obrázek nastavení pro existující položku
+## <a name="setting-the-image-for-an-existing-item"></a>Nastavení obrázku pro existující položku
 
-Pokud chcete upravit existující položka, budete muset pracovat *maska* členem **COMBOBOXEXITEM** struktury.
+Pokud upravujete existující položku, je nutné pracovat s členem *masky* struktury **COMBOBOXEXITEM** .
 
-#### <a name="to-modify-an-existing-item-to-use-images"></a>Chcete-li upravit existující položku, kterou chcete použít Image
+#### <a name="to-modify-an-existing-item-to-use-images"></a>Úprava existující položky pro použití imagí
 
-1. Deklarace **COMBOBOXEXITEM** struktury a nastavit *maska* datový člen hodnoty se zajímáte úpravy.
+1. Deklarujte strukturu **COMBOBOXEXITEM** a nastavte datový člen *masky* na hodnoty, které vás zajímají.
 
-1. Pomocí této struktury uskutečnit volání [CComboBoxEx::GetItem](../mfc/reference/ccomboboxex-class.md#getitem).
+1. Pomocí této struktury proveďte volání [atributu CComboBoxEx:: GetItem](../mfc/reference/ccomboboxex-class.md#getitem).
 
-1. Upravit *maska*, *iImage*, a *iSelectedImage* členové nově vrácené struktury pomocí příslušné hodnoty.
+1. Upravte pomocí příslušných hodnot *masku*, *iImage*a *iSelectedImage* členy nově vrácené struktury.
 
-1. Volání [CComboBoxEx::SetItem](../mfc/reference/ccomboboxex-class.md#setitem)a předejte změněné struktury.
+1. Zavolejte do [atributu CComboBoxEx:: SetItem](../mfc/reference/ccomboboxex-class.md#setitem)a předejte upravenou strukturu.
 
-Následující příklad ukazuje tento postup pomocí výměny vybrané a nevybrané obrázky třetí položka pole Rozšířené pole se seznamem:
+Následující příklad demonstruje tento postup záměnam vybraného a nevybraného obrázku třetí rozšířené položky pole se seznamem:
 
 [!code-cpp[NVC_MFCControlLadenDialog#13](../mfc/codesnippet/cpp/setting-the-images-for-an-individual-item_2.cpp)]
 

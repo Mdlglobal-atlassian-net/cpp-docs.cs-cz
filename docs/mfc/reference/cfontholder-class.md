@@ -1,5 +1,5 @@
 ---
-title: Cfontholder – třída
+title: CFontHolder – třída
 ms.date: 11/04/2016
 f1_keywords:
 - CFontHolder
@@ -26,16 +26,16 @@ helpviewer_keywords:
 - CFontHolder [MFC], SetFont
 - CFontHolder [MFC], m_pFont
 ms.assetid: 728ab472-0c97-440d-889f-1324c6e1b6b8
-ms.openlocfilehash: 623ce5da46716e3f9a562862fc0375fb8704bb21
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 04de8141469f82bdd1fbb6adc1bae94d6026324c
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62182209"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69506449"
 ---
-# <a name="cfontholder-class"></a>Cfontholder – třída
+# <a name="cfontholder-class"></a>CFontHolder – třída
 
-Implementuje vlastnost běžného písma a zapouzdřuje funkce objektu písma Windows a `IFont` rozhraní.
+Implementuje vlastnost burzovního písma a zapouzdřuje funkce objektu písma systému Windows a `IFont` rozhraní.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -47,34 +47,34 @@ class CFontHolder
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
-|[CFontHolder::CFontHolder](#cfontholder)|Vytvoří `CFontHolder` objektu.|
+|[CFontHolder::CFontHolder](#cfontholder)|`CFontHolder` Vytvoří objekt.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CFontHolder::GetDisplayString](#getdisplaystring)|Načte řetězec zobrazený v prohlížeči vlastností kontejneru.|
-|[CFontHolder::GetFontDispatch](#getfontdispatch)|Vrátí písma `IDispatch` rozhraní.|
-|[CFontHolder::GetFontHandle](#getfonthandle)|Vrátí popisovač do Windows písma.|
-|[CFontHolder::InitializeFont](#initializefont)|Inicializuje `CFontHolder` objektu.|
-|[CFontHolder::QueryTextMetrics](#querytextmetrics)|Načtení informací o související písma.|
-|[CFontHolder::ReleaseFont](#releasefont)|Odpojí `CFontHolder` objektu z `IFont` a `IFontNotification` rozhraní.|
-|[CFontHolder::Select](#select)|Vybere písmo zdroj do kontextu zařízení.|
-|[CFontHolder::SetFont](#setfont)|Připojuje `CFontHolder` objektu `IFont` rozhraní.|
+|[CFontHolder::GetFontDispatch](#getfontdispatch)|Vrátí `IDispatch` rozhraní písma.|
+|[CFontHolder::GetFontHandle](#getfonthandle)|Vrátí popisovač na písmo systému Windows.|
+|[CFontHolder::InitializeFont](#initializefont)|`CFontHolder` Inicializuje objekt.|
+|[CFontHolder::QueryTextMetrics](#querytextmetrics)|Načte informace o souvisejícím písmu.|
+|[CFontHolder::ReleaseFont](#releasefont)|Odpojí `CFontHolder` objekt `IFont` od rozhraní a `IFontNotification` .|
+|[CFontHolder:: SELECT](#select)|Vybere prostředek písma do kontextu zařízení.|
+|[CFontHolder::SetFont](#setfont)|`CFontHolder` Připojí objekt`IFont` k rozhraní.|
 
 ### <a name="public-data-members"></a>Veřejné datové členy
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
-|[CFontHolder::m_pFont](#m_pfont)|Ukazatel `CFontHolder` objektu `IFont` rozhraní.|
+|[CFontHolder::m_pFont](#m_pfont)|Ukazatel na `CFontHolder` `IFont` rozhraní objektu.|
 
 ## <a name="remarks"></a>Poznámky
 
-`CFontHolder` nemá základní třídu.
+`CFontHolder`nemá základní třídu.
 
-Tato třída slouží k implementaci vlastnosti vlastní písma pro ovládací prvek. Informace o vytvoření těchto vlastností najdete v článku [ovládací prvky ActiveX: Použití písem](../../mfc/mfc-activex-controls-using-fonts.md).
+Tato třída slouží k implementaci vlastních vlastností písma pro ovládací prvek. Informace o vytváření takových vlastností najdete v článku [ovládací prvky ActiveX: Používání písem](../../mfc/mfc-activex-controls-using-fonts.md).
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
@@ -82,11 +82,11 @@ Tato třída slouží k implementaci vlastnosti vlastní písma pro ovládací p
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** afxctl.h
+**Záhlaví:** AFXCTL. h
 
-##  <a name="cfontholder"></a>  CFontHolder::CFontHolder
+##  <a name="cfontholder"></a>CFontHolder::CFontHolder
 
-Vytvoří `CFontHolder` objektu.
+`CFontHolder` Vytvoří objekt.
 
 ```
 explicit CFontHolder(LPPROPERTYNOTIFYSINK pNotify);
@@ -95,13 +95,13 @@ explicit CFontHolder(LPPROPERTYNOTIFYSINK pNotify);
 ### <a name="parameters"></a>Parametry
 
 *pNotify*<br/>
-Ukazatel na písmo `IPropertyNotifySink` rozhraní.
+Ukazatel na `IPropertyNotifySink` rozhraní písma.
 
 ### <a name="remarks"></a>Poznámky
 
-Je nutné volat `InitializeFont` inicializovat výsledný objekt před jeho použitím.
+Před použitím je `InitializeFont` nutné zavolat k inicializaci výsledného objektu.
 
-##  <a name="getdisplaystring"></a>  CFontHolder::GetDisplayString
+##  <a name="getdisplaystring"></a>CFontHolder::GetDisplayString
 
 Načte řetězec, který lze zobrazit v prohlížeči vlastností kontejneru.
 
@@ -112,15 +112,15 @@ BOOL GetDisplayString(CString& strValue);
 ### <a name="parameters"></a>Parametry
 
 *strValue*<br/>
-Odkaz [CString](../../atl-mfc-shared/reference/cstringt-class.md) , který je pro uložení řetězce zobrazení.
+Odkaz na [CString](../../atl-mfc-shared/reference/cstringt-class.md) , který je držitelem zobrazovaného řetězce.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Nenulové, pokud řetězec je úspěšně načíst. jinak 0.
+Nenulové, pokud je řetězec úspěšně načten; v opačném případě 0.
 
-##  <a name="getfontdispatch"></a>  CFontHolder::GetFontDispatch
+##  <a name="getfontdispatch"></a>CFontHolder::GetFontDispatch
 
-Volání této funkce načtete ukazatel na rozhraní odbavení písma.
+Voláním této funkce načtete ukazatel na rozhraní pro expedici písma.
 
 ```
 LPFONTDISP GetFontDispatch();
@@ -128,15 +128,15 @@ LPFONTDISP GetFontDispatch();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Ukazatel `CFontHolder` objektu `IFontDisp` rozhraní. Všimněte si, že funkce, která volá `GetFontDispatch` musí volat `IUnknown::Release` na tento ukazatel rozhraní, až budete hotovi s ním.
+Ukazatel na `CFontHolder` `IFontDisp` rozhraní objektu. Všimněte si, že funkce, `GetFontDispatch` kterou volání `IUnknown::Release` musí volat na tento ukazatel rozhraní, když s ním skončí.
 
 ### <a name="remarks"></a>Poznámky
 
-Volání `InitializeFont` před voláním `GetFontDispatch`.
+Zavolejte `InitializeFont` před voláním `GetFontDispatch`.
 
-##  <a name="getfonthandle"></a>  CFontHolder::GetFontHandle
+##  <a name="getfonthandle"></a>CFontHolder::GetFontHandle
 
-Voláním této funkce se získat popisovač Windows písma.
+Voláním této funkce získáte popisovač pro písmo Windows.
 
 ```
 HFONT GetFontHandle();
@@ -149,26 +149,26 @@ HFONT GetFontHandle(
 ### <a name="parameters"></a>Parametry
 
 *cyLogical*<br/>
-Výška v logických jednotkách, ve kterém ovládací prvek vykreslen obdélníku.
+Height (v logických jednotkách) obdélníku, ve kterém je ovládací prvek vykreslen.
 
 *cyHimetric*<br/>
-Výška v jednotkách MM_HIMETRIC ovládacího prvku.
+Výška v MM_HIMETRIC jednotkách ovládacího prvku.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Popisovač pro objekt písma. v opačném případě hodnota NULL.
+Popisovač objektu písma; jinak NULL.
 
 ### <a name="remarks"></a>Poznámky
 
-Poměr *cyLogical* a *cyHimetric* se používá k výpočtu správného zobrazovanou velikostí, logické jednotky pro velikost písma vyjádřena v jednotkách MM_HIMETRIC:
+Poměr hodnot *cyLogical* a *cyHimetric* se používá k výpočtu správné velikosti zobrazení v logických jednotkách pro velikost bodu písma vyjádřenou v jednotkách MM_HIMETRIC:
 
 Velikost zobrazení = ( *cyLogical* / *cyHimetric*) X velikost písma
 
-Verze bez parametrů vrátí popisovač do písmo správnou velikost obrazovky.
+Verze bez parametrů vrátí popisovač pro správnou velikost písma pro obrazovku.
 
-##  <a name="initializefont"></a>  CFontHolder::InitializeFont
+##  <a name="initializefont"></a>CFontHolder::InitializeFont
 
-Inicializuje `CFontHolder` objektu.
+`CFontHolder` Inicializuje objekt.
 
 ```
 void InitializeFont(
@@ -179,30 +179,30 @@ void InitializeFont(
 ### <a name="parameters"></a>Parametry
 
 *pFontDesc*<br/>
-Ukazatel na strukturu popis písma ( [FONTDESC](/windows/desktop/api/olectl/ns-olectl-tagfontdesc)), která určuje charakteristiky písma.
+Ukazatel na strukturu písma Description ( [FONTDESC](/windows/win32/api/olectl/ns-olectl-fontdesc)), která určuje charakteristiky písma.
 
 *pFontDispAmbient*<br/>
-Ukazatel na kontejneru okolí Font – vlastnost
+Ukazatel na vlastnost okolního písma kontejneru
 
 ### <a name="remarks"></a>Poznámky
 
-Pokud *pFontDispAmbient* nemá hodnotu NULL, `CFontHolder` klon je připojený objekt `IFont` rozhraní kontejneru okolí Font – vlastnost.
+Pokud *pFontDispAmbient* není null, `CFontHolder` je objekt připojen k klonu `IFont` rozhraní používaného vlastností okolního písma kontejneru.
 
-Pokud *pFontDispAmbient* je NULL, nové písmo objekt je vytvořen buď z popisu písma, na které odkazuje *pFontDesc* nebo pokud *pFontDesc* má hodnotu NULL, z výchozí Popis.
+Pokud má *pFontDispAmbient* hodnotu null, vytvoří se nový objekt Font buď z popisu písma, na který odkazuje *pFontDesc* , nebo, pokud *pFontDesc* má hodnotu null, od výchozího popisu.
 
-Voláním této funkce za vytváření `CFontHolder` objektu.
+Po vytvoření `CFontHolder` objektu volejte tuto funkci.
 
-##  <a name="m_pfont"></a>  CFontHolder::m_pFont
+##  <a name="m_pfont"></a>CFontHolder::m_pFont
 
-Ukazatel `CFontHolder` objektu `IFont` rozhraní.
+Ukazatel na `CFontHolder` `IFont` rozhraní objektu.
 
 ```
 LPFONT m_pFont;
 ```
 
-##  <a name="querytextmetrics"></a>  CFontHolder::QueryTextMetrics
+##  <a name="querytextmetrics"></a>CFontHolder::QueryTextMetrics
 
-Načte informace o fyzických písma reprezentována `CFontHolder` objektu.
+Načte informace o fyzickém písmu reprezentovaném `CFontHolder` objektem.
 
 ```
 void QueryTextMetrics(LPTEXTMETRIC lptm);
@@ -211,19 +211,19 @@ void QueryTextMetrics(LPTEXTMETRIC lptm);
 ### <a name="parameters"></a>Parametry
 
 *lptm*<br/>
-Ukazatel [TEXTMETRIC](/windows/desktop/api/wingdi/ns-wingdi-tagtextmetrica) struktura, která bude dostávat informace.
+Ukazatel na strukturu [TEXTMETRIC](/windows/win32/api/wingdi/ns-wingdi-textmetricw) , která bude tyto informace přijímat.
 
-##  <a name="releasefont"></a>  CFontHolder::ReleaseFont
+##  <a name="releasefont"></a>CFontHolder::ReleaseFont
 
-Tato funkce odpojí `CFontHolder` objekt z jeho `IFont` rozhraní.
+Tato funkce odpojí `CFontHolder` objekt od jeho `IFont` rozhraní.
 
 ```
 void ReleaseFont();
 ```
 
-##  <a name="select"></a>  CFontHolder::Select
+##  <a name="select"></a>CFontHolder:: SELECT
 
-Voláním této funkce vyberte písmo ovládacího prvku do kontextu zařízení.
+Voláním této funkce vyberete písmo ovládacího prvku do určeného kontextu zařízení.
 
 ```
 CFont* Select(
@@ -235,25 +235,25 @@ CFont* Select(
 ### <a name="parameters"></a>Parametry
 
 *pDC*<br/>
-Kontext zařízení, do které je vybrané písmo.
+Kontext zařízení, do kterého se vybere písmo
 
 *cyLogical*<br/>
-Výška v logických jednotkách, ve kterém ovládací prvek vykreslen obdélníku.
+Height (v logických jednotkách) obdélníku, ve kterém je ovládací prvek vykreslen.
 
 *cyHimetric*<br/>
-Výška v jednotkách MM_HIMETRIC ovládacího prvku.
+Výška v MM_HIMETRIC jednotkách ovládacího prvku.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Ukazatel, který se nahrazuje písmo.
+Ukazatel na písmo, které se nahrazuje.
 
 ### <a name="remarks"></a>Poznámky
 
-Zobrazit [GetFontHandle](#getfonthandle) diskuzi o *cyLogical* a *cyHimetric* parametry.
+Diskuzi o parametrech *cyLogical* a *cyHimetric* najdete v tématu [GetFontHandle](#getfonthandle) .
 
-##  <a name="setfont"></a>  CFontHolder::SetFont
+##  <a name="setfont"></a>CFontHolder::SetFont
 
-Uvolní všechny existující písma a připojí `CFontHolder` objektu `IFont` rozhraní.
+Uvolní jakékoli existující písmo a připojí `CFontHolder` objekt `IFont` k rozhraní.
 
 ```
 void SetFont(LPFONT pNewFont);
@@ -262,7 +262,7 @@ void SetFont(LPFONT pNewFont);
 ### <a name="parameters"></a>Parametry
 
 *pNewFont*<br/>
-Ukazatel na novou `IFont` rozhraní.
+Ukazatel na nové `IFont` rozhraní.
 
 ## <a name="see-also"></a>Viz také:
 

@@ -1,21 +1,21 @@
 ---
-title: ODL (atribut C++ COM)
+title: ODL (C++ atribut com)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.odl
 helpviewer_keywords:
 - odl attribute
 ms.assetid: 75dcb314-b50f-4a63-9180-507ac1bc78f3
-ms.openlocfilehash: 90f9f1df23542138b2fac0dcfe0e122f1993d805
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a4ae1aa7f27348e37c565b35e3dc0b2b1011c9cb
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62407637"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69514314"
 ---
 # <a name="odl"></a>odl
 
-Označí rozhraní jako objekt popis jazyka (ODL) rozhraní. V kompilátoru MIDL nevyžaduje, aby **odl** atribut; je rozpoznáno pouze pro kompatibilitu s starší soubory .odl.
+Identifikuje rozhraní jako rozhraní jazyka Description Language (ODL). Kompilátor MIDL nevyžaduje atribut **ODL** ; je rozpoznaná jenom pro kompatibilitu se staršími soubory. odl.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -25,7 +25,7 @@ Označí rozhraní jako objekt popis jazyka (ODL) rozhraní. V kompilátoru MIDL
 
 ## <a name="remarks"></a>Poznámky
 
-**Odl** C++ atribut má stejné funkce jako [odl](/windows/desktop/Midl/odl) atribut MIDL.
+Atribut **ODL** C++ má stejné funkce jako atribut [ODL](/windows/win32/Midl/odl) MIDL.
 
 ## <a name="example"></a>Příklad
 
@@ -51,16 +51,16 @@ public:
 
 ## <a name="requirements"></a>Požadavky
 
-### <a name="attribute-context"></a>Atribut kontextu
+### <a name="attribute-context"></a>Kontext atributu
 
 |||
 |-|-|
 |**Platí pro**|**interface**|
-|**Opakovatelné**|Ne|
-|**Vyžadované atributy**|Žádné|
+|**REPEATABLE**|Ne|
+|**Požadované atributy**|Žádné|
 |**Neplatné atributy**|Žádné|
 
-Další informace o kontexty atributů najdete v tématu [kontexty atributů](cpp-attributes-com-net.md#contexts).
+Další informace o kontextech atributů naleznete v tématu kontexty [atributů](cpp-attributes-com-net.md#contexts).
 
 ## <a name="see-also"></a>Viz také:
 

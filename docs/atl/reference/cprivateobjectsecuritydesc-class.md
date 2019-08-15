@@ -12,12 +12,12 @@ f1_keywords:
 helpviewer_keywords:
 - CPrivateObjectSecurityDesc class
 ms.assetid: 2c4bbb13-bf99-4833-912a-197f6815bb5d
-ms.openlocfilehash: c1ac15d4d8254107a66e577321edb3c40578f240
-ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
+ms.openlocfilehash: 97ea2b8411b404caf9f833ad85f226d18aea1e73
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68915796"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69496572"
 ---
 # <a name="cprivateobjectsecuritydesc-class"></a>CPrivateObjectSecurityDesc Class
 
@@ -57,7 +57,7 @@ class CPrivateObjectSecurityDesc : public CSecurityDesc
 
 Tato třída odvozená z [CSecurityDesc](../../atl/reference/csecuritydesc-class.md)poskytuje metody pro vytváření a správu popisovačů zabezpečení soukromého objektu.
 
-Úvod do modelu řízení přístupu v systému Windows naleznete v tématu [Access Control](/windows/desktop/SecAuthZ/access-control) v Windows SDK.
+Úvod do modelu řízení přístupu v systému Windows naleznete v tématu [Access Control](/windows/win32/SecAuthZ/access-control) v Windows SDK.
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
@@ -93,7 +93,7 @@ Ukazatel na `GUID` strukturu, která identifikuje typ objektu přidruženého k 
 Určuje, zda nový objekt může obsahovat jiné objekty. Hodnota true značí, že nový objekt je kontejner. Hodnota false znamená, že nový objekt není kontejner.
 
 *GenericMapping*<br/>
-Ukazatel na strukturu [GENERIC_MAPPING](/windows/desktop/api/winnt/ns-winnt-generic_mapping) , která určuje mapování z každého obecného práva na specifická práva pro daný objekt.
+Ukazatel na strukturu [GENERIC_MAPPING](/windows/win32/api/winnt/ns-winnt-generic_mapping) , která určuje mapování z každého obecného práva na specifická práva pro daný objekt.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -101,7 +101,7 @@ Při úspěchu vrátí hodnotu true, při neúspěchu hodnotu false.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato metoda se pokusí zjistit, jestli jsou položky ACE v seznamu řízení přístupu (DACL) a seznam řízení přístupu (SACL) aktuálního popisovače zabezpečení zděděné z nadřazeného popisovače zabezpečení. Volá funkci [ConvertToAutoInheritPrivateObjectSecurity](/windows/desktop/api/securitybaseapi/nf-securitybaseapi-converttoautoinheritprivateobjectsecurity) .
+Tato metoda se pokusí zjistit, jestli jsou položky ACE v seznamu řízení přístupu (DACL) a seznam řízení přístupu (SACL) aktuálního popisovače zabezpečení zděděné z nadřazeného popisovače zabezpečení. Volá funkci [ConvertToAutoInheritPrivateObjectSecurity](/windows/win32/api/securitybaseapi/nf-securitybaseapi-converttoautoinheritprivateobjectsecurity) .
 
 ##  <a name="cprivateobjectsecuritydesc"></a>CPrivateObjectSecurityDesc::CPrivateObjectSecurityDesc
 
@@ -164,7 +164,7 @@ Určuje, zda nový objekt může obsahovat jiné objekty. Hodnota true značí, 
 Odkaz na objekt [CAccessToken](../../atl/reference/caccesstoken-class.md) pro klientský proces, jehož jménem se objekt vytváří.
 
 *GenericMapping*<br/>
-Ukazatel na strukturu [GENERIC_MAPPING](/windows/desktop/api/winnt/ns-winnt-generic_mapping) , která určuje mapování z každého obecného práva na specifická práva pro daný objekt.
+Ukazatel na strukturu [GENERIC_MAPPING](/windows/win32/api/winnt/ns-winnt-generic_mapping) , která určuje mapování z každého obecného práva na specifická práva pro daný objekt.
 
 *ObjectType*<br/>
 Ukazatel na `GUID` strukturu, která identifikuje typ objektu přidruženého k aktuálnímu objektu. Nastavte *ObjectType* na null, pokud objekt neobsahuje identifikátor GUID.
@@ -173,7 +173,7 @@ Ukazatel na `GUID` strukturu, která identifikuje typ objektu přidruženého k 
 Určuje, zda nový objekt může obsahovat jiné objekty. Hodnota true značí, že nový objekt je kontejner. Hodnota false znamená, že nový objekt není kontejner.
 
 *AutoInheritFlags*<br/>
-Sada bitových příznaků, které řídí způsob dědění položek řízení přístupu (ACE) z *pParent*. Další podrobnosti najdete v tématu [CreatePrivateObjectSecurityEx](/windows/desktop/api/securitybaseapi/nf-securitybaseapi-createprivateobjectsecurityex) .
+Sada bitových příznaků, které řídí způsob dědění položek řízení přístupu (ACE) z *pParent*. Další podrobnosti najdete v tématu [CreatePrivateObjectSecurityEx](/windows/win32/api/securitybaseapi/nf-securitybaseapi-createprivateobjectsecurityex) .
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -181,7 +181,7 @@ Při úspěchu vrátí hodnotu true, při neúspěchu hodnotu false.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato metoda volá [CreatePrivateObjectSercurity](/windows/desktop/api/securitybaseapi/nf-securitybaseapi-createprivateobjectsecurity) nebo [CreatePrivateObjectSecurityEx](/windows/desktop/api/securitybaseapi/nf-securitybaseapi-createprivateobjectsecurityex).
+Tato metoda volá [CreatePrivateObjectSercurity](/windows/win32/api/securitybaseapi/nf-securitybaseapi-createprivateobjectsecurity) nebo [CreatePrivateObjectSecurityEx](/windows/win32/api/securitybaseapi/nf-securitybaseapi-createprivateobjectsecurityex).
 
 Druhá metoda povoluje zadání identifikátoru GUID typu objektu nového objektu nebo řízení způsobu dědění položek ACE.
 
@@ -201,7 +201,7 @@ bool Get(
 ### <a name="parameters"></a>Parametry
 
 *si*<br/>
-Sada bitových příznaků, které označují části popisovače zabezpečení, které se mají načíst. Tato hodnota může být kombinací bitových příznaků [SECURITY_INFORMATION](/windows/desktop/SecAuthZ/security-information) .
+Sada bitových příznaků, které označují části popisovače zabezpečení, které se mají načíst. Tato hodnota může být kombinací bitových příznaků [SECURITY_INFORMATION](/windows/win32/SecAuthZ/security-information) .
 
 *pResult*<br/>
 Ukazatel na objekt [CSecurityDesc](../../atl/reference/csecuritydesc-class.md) , který obdrží kopii požadovaných informací ze zadaného popisovače zabezpečení.
@@ -253,19 +253,19 @@ bool Set(
 ### <a name="parameters"></a>Parametry
 
 *si*<br/>
-Sada bitových příznaků, které označují části popisovače zabezpečení, které mají být nastaveny. Tato hodnota může být kombinací bitových příznaků [SECURITY_INFORMATION](/windows/desktop/SecAuthZ/security-information) .
+Sada bitových příznaků, které označují části popisovače zabezpečení, které mají být nastaveny. Tato hodnota může být kombinací bitových příznaků [SECURITY_INFORMATION](/windows/win32/SecAuthZ/security-information) .
 
 *Měně*<br/>
 Ukazatel na objekt [CSecurityDesc](../../atl/reference/csecuritydesc-class.md) . Části tohoto popisovače zabezpečení označené parametrem *si* jsou aplikovány na popisovač zabezpečení objektu.
 
 *GenericMapping*<br/>
-Ukazatel na strukturu [GENERIC_MAPPING](/windows/desktop/api/winnt/ns-winnt-generic_mapping) , která určuje mapování z každého obecného práva na specifická práva pro daný objekt.
+Ukazatel na strukturu [GENERIC_MAPPING](/windows/win32/api/winnt/ns-winnt-generic_mapping) , která určuje mapování z každého obecného práva na specifická práva pro daný objekt.
 
 *Klíčové*<br/>
 Odkaz na objekt [CAccessToken](../../atl/reference/caccesstoken-class.md) pro klientský proces, jehož jménem se objekt vytváří.
 
 *AutoInheritFlags*<br/>
-Sada bitových příznaků, které řídí způsob dědění položek řízení přístupu (ACE) z *pParent*. Další podrobnosti najdete v tématu [CreatePrivateObjectSecurityEx](/windows/desktop/api/securitybaseapi/nf-securitybaseapi-createprivateobjectsecurityex) .
+Sada bitových příznaků, které řídí způsob dědění položek řízení přístupu (ACE) z *pParent*. Další podrobnosti najdete v tématu [CreatePrivateObjectSecurityEx](/windows/win32/api/securitybaseapi/nf-securitybaseapi-createprivateobjectsecurityex) .
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -277,7 +277,7 @@ Druhá metoda povoluje zadání identifikátoru GUID objektu nebo řízení způ
 
 ## <a name="see-also"></a>Viz také:
 
-[SECURITY_DESCRIPTOR](/windows/desktop/api/winnt/ns-winnt-security_descriptor)<br/>
+[SECURITY_DESCRIPTOR](/windows/win32/api/winnt/ns-winnt-security_descriptor)<br/>
 [Přehled třídy](../../atl/atl-class-overview.md)<br/>
 [Globální funkce zabezpečení](../../atl/reference/security-global-functions.md)<br/>
 [CSecurityDesc – třída](../../atl/reference/csecuritydesc-class.md)

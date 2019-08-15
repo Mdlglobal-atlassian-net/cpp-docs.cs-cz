@@ -100,12 +100,12 @@ helpviewer_keywords:
 - CRichEditView [MFC], m_nBulletIndent
 - CRichEditView [MFC], m_nWordWrap
 ms.assetid: bd576b10-4cc0-4050-8f76-e1a0548411e4
-ms.openlocfilehash: eacb41a7ae4c42a34a67f57dc0af0d966d134c14
-ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
+ms.openlocfilehash: c8eba16779b837b33912006a2ff3b7cdfa73f1e6
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68916754"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69502635"
 ---
 # <a name="cricheditview-class"></a>CRichEditView – – třída
 
@@ -357,11 +357,11 @@ CHARFORMAT2& GetCharFormatSelection();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Struktura [CHARFORMAT2](/windows/desktop/api/richedit/ns-richedit-charformat2a) , která obsahuje atributy formátování znaků aktuálního výběru.
+Struktura [CHARFORMAT2](/windows/win32/api/richedit/ns-richedit-charformat2w) , která obsahuje atributy formátování znaků aktuálního výběru.
 
 ### <a name="remarks"></a>Poznámky
 
-Další informace naleznete v části zpráva [EM_GETCHARFORMAT](/windows/desktop/Controls/em-getcharformat) a struktura [CHARFORMAT2](/windows/desktop/api/richedit/ns-richedit-charformat2a) v Windows SDK.
+Další informace naleznete v části zpráva [EM_GETCHARFORMAT](/windows/win32/Controls/em-getcharformat) a struktura [CHARFORMAT2](/windows/win32/api/richedit/ns-richedit-charformat2w) v Windows SDK.
 
 ### <a name="example"></a>Příklad
 
@@ -369,7 +369,7 @@ Další informace naleznete v části zpráva [EM_GETCHARFORMAT](/windows/deskto
 
 ##  <a name="getclipboarddata"></a>CRichEditView –:: GetClipboardData
 
-Rozhraní volá tuto funkci jako součást zpracování [IRichEditOleCallback:: GetClipboardData](/windows/desktop/api/richole/nf-richole-iricheditolecallback-getclipboarddata).
+Rozhraní volá tuto funkci jako součást zpracování [IRichEditOleCallback:: GetClipboardData](/windows/win32/api/richole/nf-richole-iricheditolecallback-getclipboarddata).
 
 ```
 virtual HRESULT GetClipboardData(
@@ -382,7 +382,7 @@ virtual HRESULT GetClipboardData(
 ### <a name="parameters"></a>Parametry
 
 *lpchrg*<br/>
-Ukazatel na strukturu [CHARRANGE](/windows/desktop/api/richedit/ns-richedit-charrange) , která určuje rozsah znaků (a položky OLE) pro zkopírování do datového objektu určeného parametrem *lplpdataobj*.
+Ukazatel na strukturu [CHARRANGE](/windows/win32/api/richedit/ns-richedit-charrange) , která určuje rozsah znaků (a položky OLE) pro zkopírování do datového objektu určeného parametrem *lplpdataobj*.
 
 *dwReco*<br/>
 Příznak operace schránky. Může to být jedna z těchto hodnot.
@@ -398,14 +398,14 @@ Příznak operace schránky. Může to být jedna z těchto hodnot.
 - RECO_PASTE vložit ze schránky.
 
 *lpRichDataObj*<br/>
-Ukazatel na objekt [IDataObject](/windows/desktop/api/objidl/nn-objidl-idataobject) obsahující data ze schránky z ovládacího prvku Rich Edit ( [IRichEditOle:: GetClipboardData](/windows/desktop/api/richole/nf-richole-iricheditole-getclipboarddata)).
+Ukazatel na objekt [IDataObject](/windows/win32/api/objidl/nn-objidl-idataobject) obsahující data ze schránky z ovládacího prvku Rich Edit ( [IRichEditOle:: GetClipboardData](/windows/win32/api/richole/nf-richole-iricheditole-getclipboarddata)).
 
 *lplpdataobj*<br/>
 Ukazatel na proměnnou ukazatele, která přijímá adresu `IDataObject` objektu reprezentujícího rozsah zadaný v parametru *lpchrg* . Hodnota *lplpdataobj* se ignoruje, pokud se vrátí chyba.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Hodnota HRESULT, která hlásí úspěch operace. Další informace o HRESULT naleznete v tématu [Struktura kódů chyb modelu COM](/windows/desktop/com/structure-of-com-error-codes) v Windows SDK.
+Hodnota HRESULT, která hlásí úspěch operace. Další informace o HRESULT naleznete v tématu [Struktura kódů chyb modelu COM](/windows/win32/com/structure-of-com-error-codes) v Windows SDK.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -413,11 +413,11 @@ Pokud vrácená `IRichEditOleCallback::GetClipboardData` hodnota označuje úsp�
 
 Toto je pokročilá přepsatelné.
 
-Další informace naleznete v tématu [IRichEditOle:: GetClipboardData](/windows/desktop/api/richole/nf-richole-iricheditole-getclipboarddata), [IRichEditOleCallback:: GetClipboardData](/windows/desktop/api/richole/nf-richole-iricheditolecallback-getclipboarddata)a [CHARRANGE](/windows/desktop/api/richedit/ns-richedit-charrange) v tématu Windows SDK a viz [IDataObject](/windows/desktop/api/objidl/nn-objidl-idataobject) v Windows SDK.
+Další informace naleznete v tématu [IRichEditOle:: GetClipboardData](/windows/win32/api/richole/nf-richole-iricheditole-getclipboarddata), [IRichEditOleCallback:: GetClipboardData](/windows/win32/api/richole/nf-richole-iricheditolecallback-getclipboarddata)a [CHARRANGE](/windows/win32/api/richedit/ns-richedit-charrange) v tématu Windows SDK a viz [IDataObject](/windows/win32/api/objidl/nn-objidl-idataobject) v Windows SDK.
 
 ##  <a name="getcontextmenu"></a>CRichEditView –::
 
-Rozhraní volá tuto funkci jako součást zpracování [IRichEditOleCallback::](/windows/desktop/api/richole/nf-richole-iricheditolecallback-getcontextmenu)getzaskladnění.
+Rozhraní volá tuto funkci jako součást zpracování [IRichEditOleCallback::](/windows/win32/api/richole/nf-richole-iricheditolecallback-getcontextmenu)getzaskladnění.
 
 ```
 virtual HMENU GetContextMenu(
@@ -435,7 +435,7 @@ Typ výběru. Hodnoty typu výběru jsou popsány v části poznámky.
 Ukazatel na `OLEOBJECT` strukturu určující první vybraný objekt OLE, pokud výběr obsahuje jednu nebo více položek OLE. Pokud výběr neobsahuje žádné položky, *lpoleobj* má hodnotu null. `OLEOBJECT` Struktura obsahuje ukazatel na objekt OLE v tabulce.
 
 *lpchrg*<br/>
-Ukazatel na strukturu [CHARRANGE](/windows/desktop/api/richedit/ns-richedit-charrange) obsahující aktuální výběr.
+Ukazatel na strukturu [CHARRANGE](/windows/win32/api/richedit/ns-richedit-charrange) obsahující aktuální výběr.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -459,7 +459,7 @@ Typ výběru může být libovolná kombinace následujících příznaků:
 
 Výchozí implementace vrací hodnotu NULL. Toto je pokročilá přepsatelné.
 
-Další informace naleznete v tématu [IRichEditOleCallback::](/windows/desktop/api/richole/nf-richole-iricheditolecallback-getcontextmenu) Get a [CHARRANGE](/windows/desktop/api/richedit/ns-richedit-charrange) v Windows SDK.
+Další informace naleznete v tématu [IRichEditOleCallback::](/windows/win32/api/richole/nf-richole-iricheditolecallback-getcontextmenu) Get a [CHARRANGE](/windows/win32/api/richedit/ns-richedit-charrange) v Windows SDK.
 
 ##  <a name="getdocument"></a>CRichEditView –:: GetDocument
 
@@ -539,11 +539,11 @@ PARAFORMAT2& GetParaFormatSelection();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Struktura [PARAFORMAT2](/windows/desktop/api/richedit/ns-richedit-paraformat2) , která obsahuje atributy formátování odstavce aktuálního výběru.
+Struktura [PARAFORMAT2](/windows/win32/api/richedit/ns-richedit-paraformat2) , která obsahuje atributy formátování odstavce aktuálního výběru.
 
 ### <a name="remarks"></a>Poznámky
 
-Další informace naleznete v tématu [EM_GETPARAFORMAT](/windows/desktop/Controls/em-getparaformat) Message and [PARAFORMAT2](/windows/desktop/api/richedit/ns-richedit-paraformat2) Structure in the Windows SDK.
+Další informace naleznete v tématu [EM_GETPARAFORMAT](/windows/win32/Controls/em-getparaformat) Message and [PARAFORMAT2](/windows/win32/api/richedit/ns-richedit-paraformat2) Structure in the Windows SDK.
 
 ##  <a name="getprintrect"></a>CRichEditView –:: GetPrintRect
 
@@ -626,7 +626,7 @@ long GetTextLengthEx(
 ### <a name="parameters"></a>Parametry
 
 *dwFlags*<br/>
-Hodnota určující metodu, která se má použít při určování délky textu Tento člen může být jednou nebo více hodnotami, které jsou uvedeny v části Flags Member of [GETTEXTLENGTHEX](/windows/desktop/api/richedit/ns-richedit-gettextlengthex) popsané v Windows SDK.
+Hodnota určující metodu, která se má použít při určování délky textu Tento člen může být jednou nebo více hodnotami, které jsou uvedeny v části Flags Member of [GETTEXTLENGTHEX](/windows/win32/api/richedit/ns-richedit-gettextlengthex) popsané v Windows SDK.
 
 *uCodePage*<br/>
 Znaková stránka pro překlad (CP_ACP pro znakovou stránku ANSI, 1200 pro Unicode).
@@ -637,7 +637,7 @@ Počet znaků nebo bajtů v ovládacím prvku pro úpravy. Pokud byly v *dwFlags
 
 ### <a name="remarks"></a>Poznámky
 
-`GetTextLengthEx`poskytuje další způsoby určení délky textu. Podporuje funkci s bohatou úpravou 2,0. Další informace najdete v tématu [o ovládacích prvcích pro úpravy s formátováním](/windows/desktop/Controls/about-rich-edit-controls) v Windows SDK.
+`GetTextLengthEx`poskytuje další způsoby určení délky textu. Podporuje funkci s bohatou úpravou 2,0. Další informace najdete v tématu [o ovládacích prvcích pro úpravy s formátováním](/windows/win32/Controls/about-rich-edit-controls) v Windows SDK.
 
 ##  <a name="insertfileasobject"></a>CRichEditView –:: InsertFileAsObject
 
@@ -671,7 +671,7 @@ Hodnota HRESULT označující úspěch vložení.
 
 ### <a name="remarks"></a>Poznámky
 
-Další informace o HRESULT naleznete v tématu [Struktura kódů chyb modelu COM](/windows/desktop/com/structure-of-com-error-codes) v Windows SDK.
+Další informace o HRESULT naleznete v tématu [Struktura kódů chyb modelu COM](/windows/win32/com/structure-of-com-error-codes) v Windows SDK.
 
 ##  <a name="isricheditformat"></a>CRichEditView –:: IsRichEditFormat
 
@@ -763,7 +763,7 @@ Požadovaný seznam efektů formátování znaků, které se mají přepnout
 
 Každé volání této funkce přepíná zadané efekty formátování pro aktuální výběr.
 
-Další informace o parametrech *dwMask* a *dwEffect* a jejich potenciálních hodnotách naleznete v tématu odpovídající datové členy [Charformat](/windows/desktop/api/richedit/ns-richedit-_charformat) v Windows SDK.
+Další informace o parametrech *dwMask* a *dwEffect* a jejich potenciálních hodnotách naleznete v tématu odpovídající datové členy [Charformat](/windows/win32/api/richedit/ns-richedit-_charformat) v Windows SDK.
 
 ### <a name="example"></a>Příklad
 
@@ -826,7 +826,7 @@ virtual BOOL OnPasteNativeObject(LPSTORAGE lpStg);
 ### <a name="parameters"></a>Parametry
 
 *lpStg*<br/>
-Ukazatel na objekt [IStorage](/windows/desktop/api/objidl/nn-objidl-istorage) .
+Ukazatel na objekt [IStorage](/windows/win32/api/objidl/nn-objidl-istorage) .
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -838,7 +838,7 @@ Obvykle to provedete tak, že vytvoříte [COleStreamFile](../../mfc/reference/c
 
 Toto je pokročilá přepsatelné.
 
-Další informace najdete v tématu [IStorage](/windows/desktop/api/objidl/nn-objidl-istorage) v Windows SDK.
+Další informace najdete v tématu [IStorage](/windows/win32/api/objidl/nn-objidl-istorage) v Windows SDK.
 
 ##  <a name="onparaalign"></a>CRichEditView –:: OnParaAlign
 
@@ -963,9 +963,9 @@ Text, který nebyl nalezen.
 
 ### <a name="remarks"></a>Poznámky
 
-Přepsáním této funkce změníte výstupní oznámení z [MessageBeep](/windows/desktop/api/winuser/nf-winuser-messagebeep).
+Přepsáním této funkce změníte výstupní oznámení z [MessageBeep](/windows/win32/api/winuser/nf-winuser-messagebeep).
 
-Další informace najdete v tématu [MessageBeep](/windows/desktop/api/winuser/nf-winuser-messagebeep) v Windows SDK.
+Další informace najdete v tématu [MessageBeep](/windows/win32/api/winuser/nf-winuser-messagebeep) v Windows SDK.
 
 ### <a name="example"></a>Příklad
 
@@ -997,7 +997,7 @@ Označuje efekt formátování znaků.
 
 Maska *dwMask* určuje, které atributy formátování znaků se mají kontrolovat. Příznaky *dwEffect* seznam atributů formátování znaků, které se mají nastavit nebo vymazat.
 
-Další informace o parametrech *dwMask* a *dwEffect* a jejich potenciálních hodnotách naleznete v tématu odpovídající datové členy [Charformat](/windows/desktop/api/richedit/ns-richedit-_charformat) v Windows SDK.
+Další informace o parametrech *dwMask* a *dwEffect* a jejich potenciálních hodnotách naleznete v tématu odpovídající datové členy [Charformat](/windows/win32/api/richedit/ns-richedit-_charformat) v Windows SDK.
 
 ### <a name="example"></a>Příklad
 
@@ -1050,7 +1050,7 @@ long PrintInsideRect(
 Ukazatel na kontext zařízení pro výstupní oblast.
 
 *rectLayout*<br/>
-[Rect](/windows/desktop/api/windef/ns-windef-tagrect) nebo [CRect](../../atl-mfc-shared/reference/crect-class.md) definující výstupní oblast.
+[Rect](/windows/win32/api/windef/ns-windef-rect) nebo [CRect](../../atl-mfc-shared/reference/crect-class.md) definující výstupní oblast.
 
 *nIndexStart*<br/>
 Nulový index prvního znaku, který má být formátován.
@@ -1121,7 +1121,7 @@ virtual HRESULT QueryAcceptData(
 ### <a name="parameters"></a>Parametry
 
 *lpdataobj*<br/>
-Ukazatel na [IDataObject](/windows/desktop/api/objidl/nn-objidl-idataobject) pro dotaz.
+Ukazatel na [IDataObject](/windows/win32/api/objidl/nn-objidl-idataobject) pro dotaz.
 
 *lpcfFormat*<br/>
 Ukazatel na přijatelný formát dat.
@@ -1143,7 +1143,7 @@ Hodnota HRESULT, která hlásí úspěch operace.
 
 Tuto funkci přepište, pokud chcete zpracovat různé organizace položek modelu COM v odvozené třídě dokumentu. Toto je pokročilá přepsatelné.
 
-Další informace o HRESULT a `IDataObject`naleznete v tématu [Struktura chybových kódů com](/windows/desktop/com/structure-of-com-error-codes) a [IDataObject](/windows/desktop/api/objidl/nn-objidl-idataobject)v uvedeném pořadí v Windows SDK.
+Další informace o HRESULT a `IDataObject`naleznete v tématu [Struktura chybových kódů com](/windows/win32/com/structure-of-com-error-codes) a [IDataObject](/windows/win32/api/objidl/nn-objidl-idataobject)v uvedeném pořadí v Windows SDK.
 
 ### <a name="example"></a>Příklad
 
@@ -1160,13 +1160,13 @@ void SetCharFormat(CHARFORMAT2 cf);
 ### <a name="parameters"></a>Parametry
 
 *cf*<br/>
-Struktura [CHARFORMAT2](/windows/desktop/api/richedit/ns-richedit-charformat2a) obsahující nové výchozí atributy formátování znaků.
+Struktura [CHARFORMAT2](/windows/win32/api/richedit/ns-richedit-charformat2w) obsahující nové výchozí atributy formátování znaků.
 
 ### <a name="remarks"></a>Poznámky
 
 Touto funkcí se změnily pouze `dwMask` atributy určené členem *CF* .
 
-Další informace naleznete v tématu [EM_SETCHARFORMAT](/windows/desktop/Controls/em-setcharformat) Message and [CHARFORMAT2](/windows/desktop/api/richedit/ns-richedit-charformat2a) Structure in the Windows SDK.
+Další informace naleznete v tématu [EM_SETCHARFORMAT](/windows/win32/Controls/em-setcharformat) Message and [CHARFORMAT2](/windows/win32/api/richedit/ns-richedit-charformat2w) Structure in the Windows SDK.
 
 ### <a name="example"></a>Příklad
 
@@ -1227,7 +1227,7 @@ BOOL SetParaFormat(PARAFORMAT2& pf);
 ### <a name="parameters"></a>Parametry
 
 *pf*<br/>
-[PARAFORMAT2](/windows/desktop/api/richedit/ns-richedit-paraformat2) struktura obsahující nové výchozí atributy formátování odstavce.
+[PARAFORMAT2](/windows/win32/api/richedit/ns-richedit-paraformat2) struktura obsahující nové výchozí atributy formátování odstavce.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -1237,7 +1237,7 @@ Nenulové, pokud bylo úspěšné; v opačném případě 0.
 
 Touto funkcí se změnily pouze `dwMask` atributy určené členem *BF* .
 
-Další informace naleznete v tématu [EM_SETPARAFORMAT](/windows/desktop/Controls/em-setparaformat) Message and [PARAFORMAT2](/windows/desktop/api/richedit/ns-richedit-paraformat2) Structure in the Windows SDK.
+Další informace naleznete v tématu [EM_SETPARAFORMAT](/windows/win32/Controls/em-setparaformat) Message and [PARAFORMAT2](/windows/win32/api/richedit/ns-richedit-paraformat2) Structure in the Windows SDK.
 
 ### <a name="example"></a>Příklad
 

@@ -11,12 +11,12 @@ helpviewer_keywords:
 - -TSAWARE linker option
 - TSAWARE linker option
 ms.assetid: fe1c1846-de5b-4839-b562-93fbfe36cd29
-ms.openlocfilehash: f6ed6184f8ae4b3a0f9db3c1f962a2918a185138
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 981158125cf978c2f685501117f95553df9c3c89
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62317429"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69498189"
 ---
 # <a name="tsaware-create-terminal-server-aware-application"></a>/TSAWARE (Vytvořit aplikace s detekcí terminálového serveru)
 
@@ -26,29 +26,29 @@ ms.locfileid: "62317429"
 
 ## <a name="remarks"></a>Poznámky
 
-Parametr/TSAWARE nastaví příznak v poli IMAGE_OPTIONAL_HEADER dllcharacteristics v nepovinné hlavičce bitové kopie programu. Pokud je tento příznak nastaven, neprovede Terminálový Server určité změny aplikace.
+Možnost/TSAWARE nastaví příznak v poli IMAGE_OPTIONAL_HEADER DllCharacteristics v volitelné hlavičce obrázku programu. Pokud je tento příznak nastaven, terminálový server neprovede určité změny aplikace.
 
-Pokud aplikace není terminálového serveru Terminal (označované také jako starší verze aplikace), provede Terminálový Server určité změny starší verze aplikace, aby byla správně pracovat v prostředí. Terminálový Server například vytvoří virtuální složka Windows tak, aby každý uživatel získá složku Windows místo získávání adresáře v systému Windows. To poskytuje uživatelům přístup k vlastní soubory INI. Kromě toho Terminálový Server provede některé změny v registru pro starší verze aplikace. Tyto úpravy pomalé načítání starší verze aplikace v terminálového serveru.
+Pokud aplikace nepoužívá terminálový server (označuje se také jako starší verze aplikace), Terminálový Server provede určité změny v rámci starší verze aplikace, aby fungovaly správně ve víceuživatelském prostředí. Například terminálový server vytvoří virtuální složku systému Windows, takže každý uživatel získá složku systému Windows namísto získání adresáře systému Windows. To uživatelům umožňuje přístup k vlastním souborům INI. Kromě toho Terminálový Server provede několik úprav v registru pro starší verzi aplikace. Tyto úpravy zpomalují načítání starší verze aplikace na terminálovém serveru.
 
-Pokud aplikaci terminál terminálového serveru, musí, ani využívají soubory INI ani zapisovat **HKEY_CURRENT_USER** registru během instalace.
+Pokud aplikace používá Terminálový Server, nesmí ani spoléhat na soubory INI ani zapisovat do registru **HKEY_CURRENT_USER** během instalace.
 
-Pokud používáte parametr/TSAWARE a vaše aplikace stále používá soubory INI, budou všichni uživatelé systému sdílet soubory. Pokud je to přijatelné, můžete stále propojit aplikaci se parametr/TSAWARE; jinak budete muset použít podporu.
+Pokud používáte/TSAWARE a vaše aplikace stále používá soubory INI, soubory budou sdíleny všemi uživateli systému. Pokud je to přijatelné, můžete i nadále propojit aplikaci s/TSAWARE; v opačném případě je nutné použít/TSAWARE: NO.
 
-Parametr/TSAWARE je povolené ve výchozím nastavení pro Windows a konzolových aplikací. Zobrazit [/Subsystem](subsystem-specify-subsystem.md) a [/Version](version-version-information.md) informace.
+Možnost/TSAWARE je ve výchozím nastavení povolená pro aplikace pro Windows a konzolové aplikace. Informace najdete v tématu [/Subsystem](subsystem-specify-subsystem.md) a [/Version](version-version-information.md) .
 
-/ TSAWARE není platný pro ovladače, ovladače VxD nebo knihovny DLL.
+/TSAWARE není platný pro ovladače, VxDs nebo knihovny DLL.
 
-Pokud byla aplikace propojené s parametr/TSAWARE, DUMPBIN [/HEADERS](headers.md) se zobrazí informace o tom.
+Pokud byla aplikace propojená s/TSAWARE, zobrazí se v tomto efektu DUMPBIN [/Headers](headers.md) .
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Nastavení tohoto parametru linkeru ve vývojovém prostředí sady Visual Studio
 
-1. Otevřete v projektu **stránky vlastností** dialogové okno. Podrobnosti najdete v tématu [vlastnosti kompilátoru a sestavení nastavte C++ v sadě Visual Studio](../working-with-project-properties.md).
+1. Otevřete dialogové okno **stránky vlastností** projektu. Podrobnosti najdete v tématu [nastavení C++ vlastností kompilátoru a sestavení v sadě Visual Studio](../working-with-project-properties.md).
 
-1. Klikněte na tlačítko **Linkeru** složky.
+1. Klikněte na složku **linker** .
 
-1. Klikněte na tlačítko **systému** stránku vlastností.
+1. Klikněte na stránku vlastnost **systému** .
 
-1. Upravit **terminálového serveru** vlastnost.
+1. Upravte vlastnost **terminálového serveru** .
 
 ### <a name="to-set-this-linker-option-programmatically"></a>Programové nastavení tohoto parametru linkeru
 
@@ -58,5 +58,5 @@ Pokud byla aplikace propojené s parametr/TSAWARE, DUMPBIN [/HEADERS](headers.md
 
 [Referenční zdroje k linkeru MSVC](linking.md)<br/>
 [Možnosti linkeru MSVC](linker-options.md)<br/>
-[Ukládání informací specifických pro uživatele](/windows/desktop/TermServ/storing-user-specific-information)<br/>
-[Starší verze aplikace v prostředí Terminálové služby](https://msdn.microsoft.com/library/aa382957.aspx)
+[Ukládání informací specifických pro uživatele](/windows/win32/TermServ/storing-user-specific-information)<br/>
+[Starší verze aplikací v prostředí Terminálové služby](https://msdn.microsoft.com/library/aa382957.aspx)

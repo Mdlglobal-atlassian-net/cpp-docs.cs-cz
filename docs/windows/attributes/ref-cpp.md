@@ -1,21 +1,21 @@
 ---
-title: REF (atribut C++ COM)
+title: ref (C++ atribut com)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.ref
 helpviewer_keywords:
 - ref attribute
 ms.assetid: 67e82d3e-07d9-4ef8-bf2b-0a4491d12557
-ms.openlocfilehash: f051fe577087d81515ddf0b44dfb15ad0fb2c616
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e7dd927f385b039f1909a4bdf1998ea5a0b39264
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62407416"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69514124"
 ---
 # <a name="ref-c"></a>ref (C++)
 
-Určuje referenční ukazatel.
+Identifikuje ukazatel odkazu.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -25,11 +25,11 @@ Určuje referenční ukazatel.
 
 ## <a name="remarks"></a>Poznámky
 
-**Ref** C++ atribut má stejné funkce jako [ref](/windows/desktop/Midl/ref) atribut MIDL.
+Atribut **ref** C++ má stejné funkce jako atribut [ref](/windows/win32/Midl/ref) MIDL.
 
 ## <a name="example"></a>Příklad
 
-Následující kód ukazuje způsob použití **ref** atribut:
+Následující kód ukazuje, jak použít atribut **ref** :
 
 ```cpp
 // cpp_attr_ref_ref.cpp
@@ -45,16 +45,16 @@ __interface IFireTabCtrl
 
 ## <a name="requirements"></a>Požadavky
 
-### <a name="attribute-context"></a>Atribut kontextu
+### <a name="attribute-context"></a>Kontext atributu
 
 |||
 |-|-|
-|**Platí pro**|**Definice TypeDef**, rozhraní parametr, rozhraní – metoda|
-|**Opakovatelné**|Ne|
-|**Vyžadované atributy**|Žádné|
+|**Platí pro**|**typedef**, parametr rozhraní, metoda rozhraní|
+|**REPEATABLE**|Ne|
+|**Požadované atributy**|Žádné|
 |**Neplatné atributy**|Žádné|
 
-Další informace o kontexty atributů najdete v tématu [kontexty atributů](cpp-attributes-com-net.md#contexts).
+Další informace o kontextech atributů naleznete v tématu kontexty [atributů](cpp-attributes-com-net.md#contexts).
 
 ## <a name="see-also"></a>Viz také:
 

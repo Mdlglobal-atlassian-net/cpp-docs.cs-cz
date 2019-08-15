@@ -5,16 +5,16 @@ ms.topic: reference
 helpviewer_keywords:
 - MessageHandler function
 ms.assetid: 8a0acf97-1b0d-4226-91b9-75446634a03c
-ms.openlocfilehash: 1acd56357f9ce234e3c479fd8fa88c1ed8407878
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: aa044ef88ba3c872c2652cd774ac50024e52c68c
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62261693"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69492309"
 ---
 # <a name="messagehandler"></a>MessageHandler
 
-`MessageHandler` je název funkce identifikovaný druhý parametr makra MESSAGE_HANDLER do mapy zpráv.
+`MessageHandler`je název funkce identifikovaný druhým parametrem makra MESSAGE_HANDLER ve vaší mapě zpráv.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -32,24 +32,24 @@ LRESULT MessageHandler(
 Určuje zprávu.
 
 *wParam*<br/>
-Další informace specifické pro zprávy.
+Další informace specifické pro zprávy
 
 *lParam*<br/>
-Další informace specifické pro zprávy.
+Další informace specifické pro zprávy
 
 *bHandled*<br/>
-Mapování sady zpráv *bHandled* na hodnotu TRUE před `MessageHandler` je volána. Pokud `MessageHandler` plně nezpracovává zprávy, měli nastavit *bHandled* na hodnotu FALSE pro označení je zprávu zapotřebí další zpracování.
+Mapa zpráv nastaví *bHandled* na hodnotu true, `MessageHandler` než se zavolá. Pokud `MessageHandler` Tato zpráva nebude plně zpracována, měla by nastavit *bHandled* na hodnotu false, aby bylo indikováno, že zpráva potřebuje další zpracování.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Výsledek zpracování zprávy. 0 v případě úspěchu.
+Výsledek zpracování zprávy 0, pokud bylo úspěšné.
 
 ## <a name="remarks"></a>Poznámky
 
-Příklad použití této obslužné rutiny zpráv v mapování zprávy, naleznete v tématu [MESSAGE_HANDLER](reference/message-map-macros-atl.md#message_handler).
+Příklad použití této obslužné rutiny zprávy v mapě zpráv naleznete v tématu [MESSAGE_HANDLER](reference/message-map-macros-atl.md#message_handler).
 
 ## <a name="see-also"></a>Viz také:
 
 [Implementace okna](../atl/implementing-a-window.md)<br/>
 [Mapy zpráv](../atl/message-maps-atl.md)<br/>
-[WM_NOTIFY](/windows/desktop/controls/wm-notify)
+[WM_NOTIFY](/windows/win32/controls/wm-notify)

@@ -1,5 +1,5 @@
 ---
-title: Cimage – třída
+title: Služby CImage ve – třída
 ms.date: 02/01/2018
 f1_keywords:
 - CImage
@@ -54,19 +54,19 @@ helpviewer_keywords:
 - CImage class
 - transparent color
 ms.assetid: 52861e3d-bf7e-481f-a240-90e88f76c490
-ms.openlocfilehash: 0b61d38d141392dc85a150ddd2caf50b28146ae7
-ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
+ms.openlocfilehash: 6c651f160fdab582b769cf1764add2cc482745bf
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66503176"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69491331"
 ---
-# <a name="cimage-class"></a>Cimage – třída
+# <a name="cimage-class"></a>Služby CImage ve – třída
 
-`CImage` poskytuje podporu rozšířenou rastrový obrázek, včetně možnosti k načtení a uložení Image ve formátu JPEG, GIF, BMP a Portable Network Graphics (PNG).
+`CImage`poskytuje rozšířenou podporu rastrového obrázku, včetně možnosti načítání a ukládání obrázků ve formátech JPEG, GIF, BMP a PNG (Portable Network Graphics).
 
 > [!IMPORTANT]
-> Tato třída a jejích členů nelze použít v aplikacích, které jsou spouštěny v modulu Windows Runtime.
+> Tato třída a její členové nelze použít v aplikacích, které jsou spouštěny v prostředí Windows Runtime.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -80,69 +80,69 @@ class CImage
 
 |Name|Popis|
 |----------|-----------------|
-|[CImage::CImage](#cimage)|Konstruktor|
+|[Služby CImage ve:: služby CImage ve](#cimage)|Konstruktor|
 
 ### <a name="public-methods"></a>Veřejné metody
 
 |Name|Popis|
 |----------|-----------------|
-|[CImage::AlphaBlend](#alphablend)|Zobrazí rastrové obrázky, být transparentní nebo poloprůhledných pixelů.|
-|[CImage::Attach](#attach)|Připojí HBITMAP k `CImage` objektu. Je možné s rastrových obrázků bez DIB části nebo části DIB rastrových obrázků.|
-|[CImage::BitBlt](#bitblt)|Zkopíruje bitmapu ze kontext zdrojového zařízení pro toto aktuální kontext zařízení.|
-|[CImage::Create](#create)|Rastrový obrázek části DIB vytvoří a připojí ho k dříve vytvořeného `CImage` objektu.|
-|[CImage::CreateEx](#createex)|Rastrový obrázek části DIB (s další parametry) vytvoří a připojí ho k dříve vytvořeného `CImage` objektu.|
-|[CImage::Destroy](#destroy)|Odpojí rastrový obrázek z `CImage` objektu a odstraní rastrového obrázku.|
-|[CImage::Detach](#detach)|Odpojí rastrový obrázek z `CImage` objektu.|
-|[CImage::Draw](#draw)|Zkopíruje bitmapu ze zdrojového obdélníku do cílového obdélníku. `Draw` Roztáhne nebo komprimuje rastrový obrázek, aby odpovídala rozměrům cílového obdélníku, v případě potřeby a zpracovává alfa míchání a průhledné barvy.|
-|[CImage::GetBits](#getbits)|Načte ukazatel na skutečné pixel hodnoty rastrového obrázku.|
-|[CImage::GetBPP](#getbpp)|Načte bitů na pixel.|
-|[CImage::GetColorTable](#getcolortable)|Načte červená, zelená, modrá barva hodnoty (RGB) z rozsahu položek v tabulce barev.|
-|[CImage::GetDC](#getdc)|Načte kontext zařízení, do kterého je vybrána aktuální rastrového obrázku.|
-|[CImage::GetExporterFilterString](#getexporterfilterstring)|Vyhledá dostupné image formátů a jejich popisy.|
-|[CImage::GetHeight](#getheight)|Získá výšku aktuální obrázku v pixelech.|
-|[CImage::GetImporterFilterString](#getimporterfilterstring)|Vyhledá dostupné image formátů a jejich popisy.|
-|[CImage::GetMaxColorTableEntries](#getmaxcolortableentries)|Získá maximální počet položek v tabulce barev.|
-|[CImage::GetPitch](#getpitch)|Načte od aktuální obrázek v bajtech.|
-|[CImage::GetPixel](#getpixel)|Zjišťuje barvu pixelu určené *x* a *y*.|
-|[CImage::GetPixelAddress](#getpixeladdress)|Načte adresu daného pixelů.|
-|[CImage::GetTransparentColor](#gettransparentcolor)|Načte pozici průhlednou barvu v tabulce barev.|
-|[CImage::GetWidth](#getwidth)|Zjišťuje šířku aktuálního obrázku v pixelech.|
-|[CImage::IsDIBSection](#isdibsection)|Určuje, jestli je připojené rastrový obrázek DIB části.|
-|[CImage::IsIndexed](#isindexed)|Označuje, že rastrový obrázek barvy se mapují na indexované palety.|
-|[CImage::IsNull](#isnull)|Označuje, pokud je aktuálně načtená zdrojovou bitmapu.|
-|[CImage::IsTransparencySupported](#istransparencysupported)|Určuje, jestli aplikace podporuje transparentní rastrových obrázků.|
-|[CImage::Load](#load)|Načte obrázek ze zadaného souboru.|
-|[CImage::LoadFromResource](#loadfromresource)|Načte obrázek ze zadaného prostředku.|
-|[CImage::MaskBlt](#maskblt)|Kombinuje data o barvách pro zdrojové a cílové bitmapy, pomocí zadané masce a rastrovou operaci.|
-|[CImage::PlgBlt](#plgblt)|Provede přenos bitového bloku z obdélníku v kontextu zdrojového zařízení do rovnoběžník v kontextu cílového zařízení.|
-|[CImage::ReleaseDC](#releasedc)|Uvolní kontextu zařízení, která byla načtena s [CImage::GetDC](#getdc).|
-|[CImage::ReleaseGDIPlus](#releasegdiplus)|Uvolní prostředky využívané třídou rozhraní GDI +. Musí být volána k uvolnění prostředků vytvořené globální `CImage` objektu.|
-|[CImage::Save](#save)|Uloží obrázek jako zadaného typu. `Save` Nelze zadat možnosti bitové kopie.|
-|[CImage::SetColorTable](#setcolortable)|Nastaví červená, zelená, modrá RGB) barevné hodnoty v rozsahu položek v tabulce barev DIB oddílu.|
-|[CImage::SetPixel](#setpixel)|Nastaví obrazového bodu na zadaných souřadnicích zadanou barvu.|
-|[CImage::SetPixelIndexed](#setpixelindexed)|Nastaví obrazového bodu na zadaných souřadnicích barvu na zadaném indexu na paletě.|
-|[CImage::SetPixelRGB](#setpixelrgb)|Nastaví obrazového bodu na zadaných souřadnicích hodnotě zadané červené, zelené, modré (RGB).|
-|[CImage::SetTransparentColor](#settransparentcolor)|Nastaví index založený na barvy pracovat jako průhledná. Pouze jednu barvu na paletě může být průhledná.|
-|[CImage::StretchBlt](#stretchblt)|Zkopíruje bitmapu ze zdrojového obdélníku do cílového obdélníku a roztáhne nebo ji zkomprimuje tak, aby odpovídala rozměrům cílového obdélníku a v případě potřeby.|
-|[CImage::TransparentBlt](#transparentblt)|Zkopíruje bitmapu s průhlednou barvu z kontextu zdrojového zařízení pro toto aktuální kontext zařízení.|
+|[Služby CImage ve:: AlphaBlend](#alphablend)|Zobrazí rastrové obrázky, které mají transparentní nebo poloprůhledný pixel.|
+|[Služby CImage ve:: Attach](#attach)|Připojí HBITMAP k `CImage` objektu. Dá se použít s rastrovým obrázkem oddílu bez formátu DIB nebo bitmapami oddílu DIB.|
+|[Služby CImage ve:: BitBlt](#bitblt)|Zkopíruje rastrový obrázek z kontextu zdrojového zařízení do tohoto aktuálního kontextu zařízení.|
+|[Služby CImage ve:: Create](#create)|Vytvoří rastrový obrázek oddílu DIB a připojí ho k dříve vytvořenému `CImage` objektu.|
+|[CImage::CreateEx](#createex)|Vytvoří rastrový obrázek oddílu DIB (s dalšími parametry) a připojí ho k dříve vytvořenému `CImage` objektu.|
+|[Služby CImage ve::D estroy](#destroy)|Odpojí rastrový obrázek od `CImage` objektu a odstraní rastrový obrázek.|
+|[CImage::Detach](#detach)|Odpojí rastrový obrázek od `CImage` objektu.|
+|[Služby CImage ve: nezpracované:D](#draw)|Zkopíruje rastrový obrázek ze zdrojového obdélníku do cílového obdélníku. `Draw`roztáhne nebo komprimuje rastr, aby odpovídal rozměrům cílového obdélníku, je-li to nutné, a zpracovává alfa barvy a transparentní barvy.|
+|[Služby CImage ve:: getbitů](#getbits)|Načte ukazatel na skutečné hodnoty pixelů rastrového obrázku.|
+|[Služby CImage ve:: GetBPP](#getbpp)|Načte bity na pixel.|
+|[Služby CImage ve:: GetColor – k](#getcolortable)|Načte červené, zelené, modré (RGB) hodnoty barev z rozsahu záznamů v tabulce barev.|
+|[CImage::GetDC](#getdc)|Načte kontext zařízení, ve kterém je vybraný aktuální rastrový obrázek.|
+|[CImage::GetExporterFilterString](#getexporterfilterstring)|Najde dostupné formáty obrázků a jejich popisy.|
+|[Služby CImage ve:: GetHeight](#getheight)|Načte výšku aktuálního obrázku v pixelech.|
+|[CImage::GetImporterFilterString](#getimporterfilterstring)|Najde dostupné formáty obrázků a jejich popisy.|
+|[CImage::GetMaxColorTableEntries](#getmaxcolortableentries)|Načte maximální počet položek v tabulce barev.|
+|[Služby CImage ve:: getrozteč](#getpitch)|Načte rozteč aktuálního obrázku v bajtech.|
+|[CImage::GetPixel](#getpixel)|Načte barvu pixelu určenou *x* a *y*.|
+|[Služby CImage ve:: GetPixelAddress](#getpixeladdress)|Načte adresu daného pixelu.|
+|[Služby CImage ve:: GetTransparentColor](#gettransparentcolor)|Načte pozici průhledné barvy v tabulce barev.|
+|[Služby CImage ve:: getwidth](#getwidth)|Načte šířku aktuálního obrázku v pixelech.|
+|[CImage::IsDIBSection](#isdibsection)|Určuje, zda je připojen rastrový obrázek oddíl DIB.|
+|[Služby CImage ve::-Indexed](#isindexed)|Označuje, že barvy rastrového obrázku jsou namapovány na indexovanou paletu.|
+|[CImage::IsNull](#isnull)|Určuje, zda je zdrojová bitmapa momentálně načtena.|
+|[Služby CImage ve:: IsTransparencySupported](#istransparencysupported)|Určuje, zda aplikace podporuje transparentní rastrové obrázky.|
+|[Služby CImage ve:: Load](#load)|Načte obrázek ze zadaného souboru.|
+|[Služby CImage ve:: LoadFromResource](#loadfromresource)|Načte obrázek ze zadaného prostředku.|
+|[Služby CImage ve:: MaskBlt](#maskblt)|Kombinuje barevná data pro zdrojové a cílové bitmapy pomocí zadané masky a operace rastrového obrázku.|
+|[Služby CImage ve::P lgBlt](#plgblt)|Provede přenos bitového bloku z obdélníku v kontextu zdrojového zařízení do kosoúhelníke v kontextu cílového zařízení.|
+|[Služby CImage ve:: ReleaseDC](#releasedc)|Uvolní kontext zařízení, který byl načten pomocí [služby CImage ve:: GetDC](#getdc).|
+|[Služby CImage ve:: ReleaseGDIPlus](#releasegdiplus)|Uvolňuje prostředky používané rozhraním GDI+. Musí být volána pro uvolnění prostředků vytvořených globálním `CImage` objektem.|
+|[Služby CImage ve:: Save](#save)|Uloží obrázek jako zadaný typ. `Save`nelze zadat možnosti obrázku.|
+|[Služby CImage ve:: SetColorTable](#setcolortable)|Nastaví červené, zelené a modré RGB hodnoty barev v rozsahu záznamů v tabulce Color oddílu DIB.|
+|[Služby CImage ve:: funkce SetPixel](#setpixel)|Nastaví pixel na zadaných souřadnicích na určenou barvu.|
+|[CImage::SetPixelIndexed](#setpixelindexed)|Nastaví pixel na zadaných souřadnicích na barvu v zadaném indexu palety.|
+|[CImage::SetPixelRGB](#setpixelrgb)|Nastaví pixel na zadaných souřadnicích na zadanou červenou, zelenou, modrou (RGB) hodnotu.|
+|[Služby CImage ve:: SetTransparentColor](#settransparentcolor)|Nastaví index barvy, které mají být považovány za transparentní. Průhledná může být pouze jedna barva v paletě.|
+|[Služby CImage ve:: StretchBlt](#stretchblt)|Zkopíruje rastrový obrázek ze zdrojového obdélníku do cílového obdélníku a v případě potřeby roztáhne nebo zkomprimuje rastr, aby odpovídal rozměrům cílového obdélníku.|
+|[Služby CImage ve:: TransparentBlt](#transparentblt)|Zkopíruje rastrový obrázek s průhlednou barvou z kontextu zdrojového zařízení do tohoto aktuálního kontextu zařízení.|
 
 ### <a name="public-operators"></a>Veřejné operátory
 
 |Name|Popis|
 |----------|-----------------|
-|[CImage::operator HBITMAP](#operator_hbitmap)|Vrátí popisovač Windows připojené k `CImage` objektu.|
+|[Služby CImage ve:: operator HBITMAP](#operator_hbitmap)|Vrátí popisovač systému Windows připojený k `CImage` objektu.|
 
 ## <a name="remarks"></a>Poznámky
 
-`CImage` přijímá rastrové obrázky, které jsou buď oddíly bitmap nezávislých na zařízení (DIB) nebo ne; Můžete však použít [vytvořit](#create) nebo [CImage::Load](#load) s pouze DIB oddíly. Můžete připojit bez DIB rastrový obrázek části k `CImage` pomocí [připojit](#attach), ale nemůžete použít následující `CImage` metody, které podporují pouze rastrové obrázky části DIB:
+`CImage`používá bitmapy, které jsou buď oddíly rastrového obrázku nezávislé na zařízení (DIB), nebo ne. Můžete však použít příkaz [Create](#create) nebo [služby CImage ve:: Load](#load) s pouze oddíly DIB. Rastrový obrázek oddílu, který není ve formátu DIB, `CImage` můžete k objektu připojit pomocí [připojit](#attach), ale nemůžete `CImage` použít následující metody, které podporují pouze rastrové obrázky oddílu DIB:
 
-- [GetBits](#getbits)
+- [Getbity](#getbits)
 
-- [GetColorTable](#getcolortable)
+- [GetColor](#getcolortable)
 
 - [GetMaxColorTableEntries](#getmaxcolortableentries)
 
-- [GetPitch](#getpitch)
+- [Getrozteč](#getpitch)
 
 - [GetPixelAddress](#getpixeladdress)
 
@@ -150,15 +150,15 @@ class CImage
 
 - [SetColorTable](#setcolortable)
 
-Chcete-li zjistit, zda připojené rastrového obrázku je oddíl DIB, zavolejte [IsDibSection](#isdibsection).
+Chcete-li zjistit, zda je připojen rastrový obrázek oddíl DIB, zavolejte [IsDibSection](#isdibsection).
 
 > [!NOTE]
-> V aplikaci Visual Studio .NET 2003, tato třída sleduje počet počet `CImage` objekty vytvořené. Vždy, když počet přejde na hodnotu 0, funkce `GdiplusShutdown` je automaticky volána uvolnit prostředky využívané třídou rozhraní GDI +. To zajistí, že některé `CImage` objektů vytvořených přímo nebo nepřímo knihoven DLL jsou vždy správně zničeny a že `GdiplusShutdown` není volána z `DllMain`.
+> V aplikaci Visual Studio .NET 2003 tato třída udržuje počet `CImage` vytvořených objektů. Pokaždé, když je počet převede na `GdiplusShutdown` 0, funkce je automaticky volána k uvolnění prostředků používaných rozhraním GDI+. Tím zajistíte, `CImage` že všechny objekty vytvořené přímo nebo nepřímo pomocí knihoven DLL jsou vždy zničeny správně a které `DllMain` `GdiplusShutdown` nejsou volány z.
 
 > [!NOTE]
-> Pomocí globálního `CImage` objektů v knihovně DLL se nedoporučuje. Pokud je třeba použít globální `CImage` objektů v knihovně DLL, volání [CImage::ReleaseGDIPlus](#releasegdiplus) explicitně uvolnit prostředky využívané třídou rozhraní GDI +.
+> Použití globálních `CImage` objektů v knihovně DLL se nedoporučuje. Pokud potřebujete použít globální `CImage` objekt v knihovně DLL, zavolejte [služby CImage ve:: ReleaseGDIPlus](#releasegdiplus) , aby byly explicitně vydány prostředky využívané rozhraním GDI+.
 
-`CImage` Nelze vybrat, do nového [CDC](../../mfc/reference/cdc-class.md). `CImage` Vytvoří vlastní HDC bitové kopie. Protože HBITMAP lze vybrat pouze do jedné HDC najednou, HBITMAP přidružené `CImage` nelze vybrat, do jiného HDC. Pokud potřebujete CDC, načtení HDC z `CImage` a poskytnout tak [CDC::FromHandle](../../mfc/reference/cdc-class.md#fromhandle).
+`CImage`nelze vybrat do nového funkce [CDC](../../mfc/reference/cdc-class.md). `CImage`Vytvoří vlastní HDC pro obrázek. Vzhledem k tomu, že HBITMAP lze vybrat pouze do jednoho HDC v jednom okamžiku, HBITMAP přidružená `CImage` k objektu nemůže být vybrána do jiného HDC. Pokud potřebujete CDC, načtěte HDC z rozhraní `CImage` a přidělte ho k [CDC:: FromHandle](../../mfc/reference/cdc-class.md#fromhandle).
 
 ## <a name="example"></a>Příklad
 
@@ -171,7 +171,7 @@ pDC->Rectangle(0, 40, 100, 50);
 m_myImage.ReleaseDC();
 ```
 
-Při použití `CImage` v projektu knihovny MFC, mějte na paměti očekávat ukazatele na členské funkce, které ve vašem projektu [cbitmap –](../../mfc/reference/cbitmap-class.md) objektu. Pokud chcete použít `CImage` s funkcí, jako je [CMenu::AppendMenu](../../mfc/reference/cmenu-class.md#appendmenu), použijte [CBitmap::FromHandle](../../mfc/reference/cbitmap-class.md#fromhandle), předáváme vaše `CImage` HBITMAP a použití vráceného `CBitmap*`.
+Při použití `CImage` v projektu knihovny MFC si všimněte, které členské funkce v projektu očekávají ukazatel na objekt [CBitmap –](../../mfc/reference/cbitmap-class.md) . Pokud `CImage` chcete použít s takovou funkcí, jako je například [CMenu –:: AppendMenu](../../mfc/reference/cmenu-class.md#appendmenu), použijte [CBitmap –::](../../mfc/reference/cbitmap-class.md#fromhandle) `CImage` FromHandle, předejte ji HBITMAP a použijte vrácenou `CBitmap*`hodnotu.
 
 ## <a name="example"></a>Příklad
 
@@ -188,22 +188,22 @@ void CMyDlg::OnRButtonDown(UINT nFlags, CPoint point)
 }
 ```
 
-Prostřednictvím `CImage`, máte přístup k bitů DIB oddílu. Můžete použít `CImage` objektu kdekoli jste dříve používali Win32 HBITMAP nebo DIB oddílu.
+Prostřednictvím `CImage`nástroje máte přístup k skutečným bitům oddílu DIB. `CImage` Objekt můžete použít všude, kde jste dříve použili oddíl Win32 HBITMAP nebo DIB.
 
-Můžete použít `CImage` z knihovny MFC ani ATL.
+Můžete použít `CImage` buď z knihovny MFC nebo knihovny ATL.
 
 > [!NOTE]
-> Při vytváření projektu pomocí `CImage`, je nutné definovat `CString` teprve potom zahrňte `atlimage.h`. Pokud váš projekt používá ATL bez knihovny MFC, zahrňte `atlstr.h` teprve potom zahrňte `atlimage.h`. Pokud váš projekt používá MFC (nebo pokud je projekt knihovny ATL pomocí podpory knihovny MFC), zahrnují `afxstr.h` teprve potom zahrňte `atlimage.h`.<br/>
+> Při vytváření projektu pomocí `CImage`, je nutné definovat `CString` před zahrnutím `atlimage.h`. Pokud váš projekt používá ATL bez knihovny MFC, `atlstr.h` zahrňte před `atlimage.h`zahrnutím. Pokud váš projekt používá knihovnu MFC (nebo pokud se jedná o projekt ATL s podporou MFC), `afxstr.h` zahrňte před `atlimage.h`zahrnutím.<br/>
 > <br/>
-> Podobně, je nutné zahrnout `atlimage.h` teprve potom zahrňte `atlimpl.cpp`. K tomu snadno zahrnout `atlimage.h` ve vašich `stdafx.h`.
+> Podobně je nutné zahrnout `atlimage.h` před zahrnutím. `atlimpl.cpp` Pokud to chcete provést snadno, `atlimage.h` zahrňte `stdafx.h`do svého.
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** atlimage.h
+**Záhlaví:** atlimage. h
 
-##  <a name="alphablend"></a>  CImage::AlphaBlend
+##  <a name="alphablend"></a>Služby CImage ve:: AlphaBlend
 
-Zobrazí rastrové obrázky, být transparentní nebo poloprůhledných pixelů.
+Zobrazí rastrové obrázky, které mají transparentní nebo poloprůhledný pixel.
 
 ```
 BOOL AlphaBlend(
@@ -243,60 +243,60 @@ BOOL AlphaBlend(
 ### <a name="parameters"></a>Parametry
 
 *hDestDC*<br/>
-Popisovač kontextu cílového zařízení.
+Zpracování kontextu cílového zařízení.
 
 *xDest*<br/>
-Souřadnice x, v logických jednotkách, levého horního rohu cílového obdélníku.
+Souřadnice x (v logických jednotkách) levého horního rohu cílového obdélníku.
 
 *yDest*<br/>
-Souřadnice y, v logických jednotkách, levého horního rohu cílového obdélníku.
+Souřadnice y v levém horním rohu cílového obdélníku v logických jednotkách.
 
 *bSrcAlpha*<br/>
-Hodnotu alfa průhlednost na pro přechod na celý zdrojovou bitmapu. Výchozí 0xff (255) se předpokládá, že vaše image je neprůhledný, a chcete použít jednotlivých pixelů pouze alfanumerické hodnoty.
+Hodnota průhlednosti alfa, která se má použít na celé zdrojové bitmapě. Výchozí hodnota 0xFF (255) předpokládá, že je váš obrázek neprůhledný a že chcete použít pouze hodnoty pro alfa pixel.
 
 *bBlendOp*<br/>
-Funkce alfa blending pro zdroj a cílovým bitmapám, globální alfa hodnotu použít celý zdrojovou bitmapu a informace o formátu pro zdrojovou bitmapu. Funkce blendu zdrojových a cílových jsou aktuálně omezené na AC_SRC_OVER.
+Funkce rozkládání alfa pro zdrojové a cílové rastrové obrázky, globální hodnotu alfa, která se má použít pro celou zdrojovou bitmapu, a informace o formátu zdrojové bitmapy. Funkce Blendu zdroje a cíle jsou aktuálně omezené na AC_SRC_OVER.
 
 *pointDest*<br/>
-Odkaz na [bodu](/previous-versions/dd162805\(v=vs.85\)) strukturu, která identifikuje levém horním rohu cílového obdélníku v logických jednotkách.
+Odkaz na strukturu [bodu](/previous-versions/dd162805\(v=vs.85\)) , která identifikuje levý horní roh cílového obdélníku v logických jednotkách.
 
 *nDestWidth*<br/>
-Šířka v logické jednotky cílového obdélníku.
+Šířka cílového obdélníku v logických jednotkách.
 
 *nDestHeight*<br/>
-Výška v logických jednotkách cílového obdélníku.
+Výška cílového obdélníku v logických jednotkách.
 
 *xSrc*<br/>
-Logickou souřadnici x levého horního rohu zdrojového obdélníku.
+Logická souřadnice x levého horního rohu zdrojového obdélníku.
 
 *ySrc*<br/>
-Logickou souřadnici y levého horního rohu zdrojového obdélníku.
+Logická souřadnice y levého horního rohu zdrojového obdélníku.
 
 *nSrcWidth*<br/>
-Šířka v logických jednotkách, zdrojového obdélníku.
+Šířka zdrojového obdélníku v logických jednotkách.
 
 *nSrcHeight*<br/>
-Výška v logických jednotkách, zdrojového obdélníku.
+Výška zdrojového obdélníku v logických jednotkách
 
 *rectDest*<br/>
-Odkaz na [RECT](/previous-versions/dd162897\(v=vs.85\)) strukturu, identifikace cíle.
+Odkaz na strukturu [Rect](/previous-versions/dd162897\(v=vs.85\)) , která identifikuje cíl.
 
 *rectSrc*<br/>
-Odkaz na `RECT` strukturu, identifikace zdroji.
+Odkaz na `RECT` strukturu, která identifikuje zdroj.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Nenulové, pokud je úspěšná. jinak 0.
+Nenulové, pokud bylo úspěšné; v opačném případě 0.
 
 ### <a name="remarks"></a>Poznámky
 
-Prolnutí alfa bitmap podporují prolnutí barvu na základě jednotlivých pixelů.
+Rastrové obrázky s alfa směsí podporují prolnutí barev po jednotlivých pixelech.
 
-Když *bBlendOp* je nastavena na výchozí hodnotu AC_SRC_OVER zdrojovou bitmapu umístěno nad cílovou bitmapu podle hodnoty alfa zdroj pixelů.
+Když je *bBlendOp* nastavené na výchozí hodnotu AC_SRC_OVER, zdrojová bitmapa se umístí přes cílovou bitmapu na základě hodnot alfa zdrojových pixelů.
 
-##  <a name="attach"></a>  CImage::Attach
+##  <a name="attach"></a>Služby CImage ve:: Attach
 
-Připojí *hBitmap* k `CImage` objektu.
+Připojí *HBITMAP* k `CImage` objektu.
 
 ```
 void Attach(HBITMAP hBitmap, DIBOrientation eOrientation = DIBOR_DEFAULT) throw();
@@ -305,24 +305,24 @@ void Attach(HBITMAP hBitmap, DIBOrientation eOrientation = DIBOR_DEFAULT) throw(
 ### <a name="parameters"></a>Parametry
 
 *hBitmap*<br/>
-Popisovač HBITMAP.
+Popisovač pro HBITMAP.
 
 *eOrientation*<br/>
 Určuje orientaci rastrového obrázku. Může být jedna z následujících akcí:
 
-- DIBOR_DEFAULT orientace rastrového obrázku se určuje podle operačního systému.
+- DIBOR_DEFAULT orientace rastrového obrázku je určena operačním systémem.
 
-- DIBOR_BOTTOMUP řádky rastrového obrázku jsou v opačném pořadí. To způsobí, že [CImage::GetBits](#getbits) a vrátí ukazatel na konci rastrový obrázek vyrovnávací paměti a [CImage::GetPitch](#getpitch) se vraťte na záporné číslo.
+- DIBOR_BOTTOMUP čáry rastrového obrázku jsou v opačném pořadí. To způsobí, že [služby CImage ve:: getbitů](#getbits) vrátí ukazatel na konci vyrovnávací paměti rastrového obrázku a [služby CImage ve:: getrozteč](#getpitch) pro vrácení záporného čísla.
 
-- DIBOR_TOPDOWN řádky rastrového obrázku jsou v horní části pořadí. To způsobí, že [CImage::GetBits](#getbits) k vrácení ukazatele do prvního bajtu rastrový obrázek vyrovnávací paměti a [CImage::GetPitch](#getpitch) vrátit kladné číslo.
+- DIBOR_TOPDOWN čáry rastrového obrázku jsou v horní části do dolního pořadí. To způsobí, že [služby CImage ve:: getbitů](#getbits) vrátí ukazatel na první bajt vyrovnávací paměti rastrového obrázku a [služby CImage ve:: getrozteč](#getpitch) pro vrácení kladného čísla.
 
 ### <a name="remarks"></a>Poznámky
 
-Rastrový obrázek může být bez DIB části rastrový obrázek nebo obrázek části ve formátu DIB. Zobrazit [IsDIBSection](#isdibsection) seznam metod, které můžete použít pouze s DIB části rastrových obrázků.
+Rastr může být buď rastrový obrázek oddílu, který není ve formátu DIB, nebo rastrový obrázek oddílu DIB. Seznam metod, které lze použít pouze s rastrovými obrázky oddílu DIB, naleznete v tématu [IsDIBSection](#isdibsection) .
 
-##  <a name="bitblt"></a>  CImage::BitBlt
+##  <a name="bitblt"></a>Služby CImage ve:: BitBlt
 
-Zkopíruje bitmapu ze kontext zdrojového zařízení pro toto aktuální kontext zařízení.
+Zkopíruje rastrový obrázek z kontextu zdrojového zařízení do tohoto aktuálního kontextu zařízení.
 
 ```
 BOOL BitBlt(
@@ -356,49 +356,49 @@ BOOL BitBlt(
 ### <a name="parameters"></a>Parametry
 
 *hDestDC*<br/>
-Cíl HDC.
+Cílová HDC.
 
 *xDest*<br/>
-Logickou souřadnici x levého horního rohu cílového obdélníku.
+Logická souřadnice x levého horního rohu cílového obdélníku.
 
 *yDest*<br/>
-Logickou souřadnici y levého horního rohu cílového obdélníku.
+Logická souřadnice y levého horního rohu cílového obdélníku.
 
 *dwROP*<br/>
-Rastrová operace provést. Kódy rastrové operace definovat přesně jak kombinovat bity zdroje, cíle a vzor k cíli (podle aktuálně vybraného štětce). Zobrazit [přenos bitových bloků](/windows/desktop/api/wingdi/nf-wingdi-bitblt) v sadě Windows SDK pro seznam další kódy rastrové operace a jejich popisy.
+Operace rastru, která má být provedena. Kódy pro rastrové operace definují přesně způsob, jak kombinovat bity zdroje, cíle a vzor (jak definuje aktuálně vybraný štětec) k vytvoření cíle. Seznam dalších kódů s rastrovými operace a jejich popis naleznete v tématu [BitBlt](/windows/win32/api/wingdi/nf-wingdi-bitblt) v Windows SDK.
 
 *pointDest*<br/>
-A [bodu](/previous-versions/dd162805\(v=vs.85\)) struktura označující levém horním rohu cílového obdélníku.
+Struktura [bodu](/previous-versions/dd162805\(v=vs.85\)) označující levý horní roh cílového obdélníku.
 
 *nDestWidth*<br/>
-Šířka v logické jednotky cílového obdélníku.
+Šířka cílového obdélníku v logických jednotkách.
 
 *nDestHeight*<br/>
-Výška v logických jednotkách cílového obdélníku.
+Výška cílového obdélníku v logických jednotkách.
 
 *xSrc*<br/>
-Logickou souřadnici x levého horního rohu zdrojového obdélníku.
+Logická souřadnice x levého horního rohu zdrojového obdélníku.
 
 *ySrc*<br/>
-Logickou souřadnici y levého horního rohu zdrojového obdélníku.
+Logická souřadnice y levého horního rohu zdrojového obdélníku.
 
 *rectDest*<br/>
-A [RECT](/previous-versions/dd162897\(v=vs.85\)) struktura označující cílového obdélníku.
+Struktura [Rect](/previous-versions/dd162897\(v=vs.85\)) indikující cílový obdélník.
 
 *pointSrc*<br/>
-A `POINT` struktura označující levém horním rohu zdrojového obdélníku.
+`POINT` Struktura označující levý horní roh zdrojového obdélníku.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Nenulové, pokud je úspěšná. jinak nula.
+Nenulové, pokud bylo úspěšné; jinak nula.
 
 ### <a name="remarks"></a>Poznámky
 
-Další informace najdete v tématu [přenos bitových bloků](/windows/desktop/api/wingdi/nf-wingdi-bitblt) v sadě Windows SDK.
+Další informace najdete v tématu [BitBlt](/windows/win32/api/wingdi/nf-wingdi-bitblt) v Windows SDK.
 
-##  <a name="cimage"></a>  CImage::CImage
+##  <a name="cimage"></a>Služby CImage ve:: služby CImage ve
 
-Vytvoří `CImage` objektu.
+`CImage` Vytvoří objekt.
 
 ```
 CImage() throw();
@@ -406,15 +406,15 @@ CImage() throw();
 
 ### <a name="remarks"></a>Poznámky
 
-Jakmile máte vytvořený objekt, volání [vytvořit](#create), [zatížení](#load), [LoadFromResource](#loadfromresource), nebo [připojit](#attach) Chcete-li objekt připojit rastrový obrázek.
+Jakmile vytvoříte objekt, voláním metody [Create](#create), [Load](#load), [LoadFromResource](#loadfromresource)nebo [Attach](#attach) připojte k objektu rastrový obrázek.
 
-**Poznámka:** v sadě Visual Studio, tato třída sleduje počet počet `CImage` objekty vytvořené. Vždy, když počet přejde na hodnotu 0, funkce `GdiplusShutdown` je automaticky volána uvolnit prostředky využívané třídou rozhraní GDI +. To zajistí, že některé `CImage` objektů vytvořených přímo nebo nepřímo knihoven DLL jsou vždy správně zničeny a že `GdiplusShutdown` není volána z funkce DllMain.
+**Poznámka:** V aplikaci Visual Studio Tato třída udržuje počet `CImage` vytvořených objektů. Pokaždé, když je počet převede na `GdiplusShutdown` 0, funkce je automaticky volána k uvolnění prostředků používaných rozhraním GDI+. Tím zajistíte, `CImage` že všechny objekty vytvořené přímo nebo nepřímo pomocí knihoven DLL jsou vždy zničeny správně a které `GdiplusShutdown` nejsou volány z DllMain.
 
-Pomocí globálního `CImage` objektů v knihovně DLL se nedoporučuje. Pokud je třeba použít globální `CImage` objektů v knihovně DLL, volání [CImage::ReleaseGDIPlus](#releasegdiplus) explicitně uvolnit prostředky využívané třídou rozhraní GDI +.
+Použití globálních `CImage` objektů v knihovně DLL se nedoporučuje. Pokud potřebujete použít globální `CImage` objekt v knihovně DLL, zavolejte [služby CImage ve:: ReleaseGDIPlus](#releasegdiplus) , aby byly explicitně vydány prostředky využívané rozhraním GDI+.
 
-##  <a name="create"></a>  CImage::Create
+##  <a name="create"></a>Služby CImage ve:: Create
 
-Vytvoří `CImage` rastrového obrázku a jeho připojení k dříve vytvořeného `CImage` objektu.
+Vytvoří rastrový obrázek a připojí ho k dříve vytvořenému `CImage` objektu. `CImage`
 
 ```
 BOOL Create(
@@ -427,29 +427,29 @@ BOOL Create(
 ### <a name="parameters"></a>Parametry
 
 *nWidth*<br/>
-Šířka `CImage` rastrového obrázku v pixelech.
+Šířka `CImage` rastrového obrázku (v pixelech).
 
 *nHeight*<br/>
-Výška `CImage` rastrového obrázku v pixelech. Pokud *nHeight* kladné rastrového obrázku je DIB zdola nahoru a jeho původ levého dolního rohu. Pokud *nHeight* je záporný, je rastrového obrázku DIB shora dolů a jeho původ levého horního rohu.
+Výška `CImage` rastrového obrázku (v pixelech) Pokud je *nHeight* pozitivní, rastrový obrázek je v dolní části DIB a jeho počátek je spodní levý roh. Pokud je *nHeight* záporné, rastrový obrázek je v levém horním rohu DIB a jeho zdrojem je levý horní roh.
 
 *nBPP*<br/>
-Počet bitů na pixel rastrového obrázku nastaven. Obvykle 4, 8, 16, 24 nebo 32. Může být 1 pro monochromatický rastrové obrázky nebo masky.
+Počet bitů na pixel v rastrovém obrázku. Obvykle 4, 8, 16, 24 nebo 32. Může být 1 pro monochromatické rastrové obrázky nebo masky.
 
 *dwFlags*<br/>
-Určuje, zda má objekt bitmap alfa kanál. Může být kombinace nuly nebo více z následujících hodnot:
+Určuje, zda má objekt rastrového obrázku alfa kanál. Může být kombinací nuly nebo více z následujících hodnot:
 
-- *createAlphaChannel* lze použít pouze v případě *nBPP* je 32, a *eCompression* je BI_RGB. -Li zadána, vytvořené image má hodnotu alfa (průhlednost) pro každý pixel, uložené v 4 bajtů každý pixel (nepoužívané v imagi jiné než alfanumerické 32-bit). Tento kanál alfa je automaticky použitá při volání metody [CImage::AlphaBlend](#alphablend).
+- *createAlphaChannel* Lze ji použít pouze v případě, že je *nBPP* 32 a *eCompression* je BI_RGB. Je-li tento parametr zadán, má vytvořená bitová kopie hodnotu alfa (transparentnost) pro každý pixel uloženou v 4 bajtech každého pixelu (nepoužívá se v nealfa 32 bitové imagi). Tento alfa kanál se automaticky použije při volání metody [služby CImage ve:: AlphaBlend](#alphablend).
 
 > [!NOTE]
-> Ve volání do [CImage::Draw](#draw), bitové kopie s kanálem alfa jsou automaticky alfa prolnuty do cíle.
+> V volání [služby CImage ve::D RAW](#draw)se obrázky s alfa kanálem automaticky rozmísí do cíle.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Nenulové, pokud je úspěšná. jinak 0.
+Nenulové, pokud bylo úspěšné; v opačném případě 0.
 
-##  <a name="createex"></a>  CImage::CreateEx
+##  <a name="createex"></a>Služby CImage ve:: CreateEx
 
-Vytvoří `CImage` rastrového obrázku a jeho připojení k dříve vytvořeného `CImage` objektu.
+Vytvoří rastrový obrázek a připojí ho k dříve vytvořenému `CImage` objektu. `CImage`
 
 ```
 BOOL CreateEx(
@@ -464,56 +464,56 @@ BOOL CreateEx(
 ### <a name="parameters"></a>Parametry
 
 *nWidth*<br/>
-Šířka `CImage` rastrového obrázku v pixelech.
+Šířka `CImage` rastrového obrázku (v pixelech).
 
 *nHeight*<br/>
-Výška `CImage` rastrového obrázku v pixelech. Pokud *nHeight* kladné rastrového obrázku je DIB zdola nahoru a jeho původ levého dolního rohu. Pokud *nHeight* je záporný, je rastrového obrázku DIB shora dolů a jeho původ levého horního rohu.
+Výška `CImage` rastrového obrázku (v pixelech) Pokud je *nHeight* pozitivní, rastrový obrázek je v dolní části DIB a jeho počátek je spodní levý roh. Pokud je *nHeight* záporné, rastrový obrázek je v levém horním rohu DIB a jeho zdrojem je levý horní roh.
 
 *nBPP*<br/>
-Počet bitů na pixel rastrového obrázku nastaven. Obvykle 4, 8, 16, 24 nebo 32. Může být 1 pro monochromatický rastrové obrázky nebo masky.
+Počet bitů na pixel v rastrovém obrázku. Obvykle 4, 8, 16, 24 nebo 32. Může být 1 pro monochromatické rastrové obrázky nebo masky.
 
 *eCompression*<br/>
-Určuje typ komprese pro komprimované rastrový obrázek zdola nahoru (DIB shora dolů nejde zkomprimovat). Může být jedna z následujících hodnot:
+Určuje typ komprese komprimovaného dolního rastrového obrázku (DIB shora dolů nelze komprimovat). Může to být jedna z následujících hodnot:
 
-- BI_RGB formát nekomprimované. Zadání této hodnoty při volání metody `CImage::CreateEx` je ekvivalentní volání `CImage::Create`.
+- BI_RGB formát není komprimován. Zadání této hodnoty při volání `CImage::CreateEx` je ekvivalentní volání. `CImage::Create`
 
-- Tabulky barev se skládá ze tří masky barva DWORD, které v uvedeném pořadí, zadejte komponenty červené, zelené a modré každý pixel BI_BITFIELDS formát nekomprimované. Toto je platný při použití s 16 a 32 bpp rastrových obrázků.
+- BI_BITFIELDS formát není komprimovaný a tabulka barev se skládá ze tří barevných masek typu DWORD, které určují červené, zelené a modré komponenty v jednotlivých pixelech. To platí v případě, že se používá s 16 a 32 bpp rastrami.
 
 *pdwBitfields*<br/>
-Použít jenom v případě *eCompression* je nastavena na BI_BITFIELDS, jinak ho musí mít hodnotu NULL. Ukazatel na pole tři vyčíslení DWORD zadání bity každý pixel, které se používají pro komponenty červené, zelené a modré barvy. Informace o omezeních pro bitová pole najdete v tématu [BITMAPINFOHEADER](/previous-versions//dd183376\(v=vs.85\)) v sadě Windows SDK.
+Používá se jenom v případě, že je *eCompression* nastavené na BI_BITFIELDS, v opačném případě musí mít hodnotu null. Ukazatel na pole tří hodnot typu DWORD vyčíslení určující, které bity každého pixelu jsou použity pro červené, zelené a modré komponenty barvy, v uvedeném pořadí. Informace o omezeních pro bitová pole najdete v tématu [BITMAPINFOHEADER](/previous-versions//dd183376\(v=vs.85\)) v Windows SDK.
 
 *dwFlags*<br/>
-Určuje, zda má objekt bitmap alfa kanál. Může být kombinace nuly nebo více z následujících hodnot:
+Určuje, zda má objekt rastrového obrázku alfa kanál. Může být kombinací nuly nebo více z následujících hodnot:
 
-- *createAlphaChannel* lze použít pouze v případě *nBPP* je 32, a *eCompression* je BI_RGB. -Li zadána, vytvořené image má hodnotu alfa (průhlednost) pro každý pixel, uložené v 4 bajtů každý pixel (nepoužívané v imagi jiné než alfanumerické 32-bit). Tento kanál alfa je automaticky použitá při volání metody [CImage::AlphaBlend](#alphablend).
+- *createAlphaChannel* Lze ji použít pouze v případě, že je *nBPP* 32 a *eCompression* je BI_RGB. Je-li tento parametr zadán, má vytvořená bitová kopie hodnotu alfa (transparentnost) pro každý pixel uloženou v 4 bajtech každého pixelu (nepoužívá se v nealfa 32 bitové imagi). Tento alfa kanál se automaticky použije při volání metody [služby CImage ve:: AlphaBlend](#alphablend).
 
    > [!NOTE]
-   > Ve volání do [CImage::Draw](#draw), bitové kopie s kanálem alfa jsou automaticky alfa prolnuty do cíle.
+   > V volání [služby CImage ve::D RAW](#draw)se obrázky s alfa kanálem automaticky rozmísí do cíle.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Hodnota TRUE v případě úspěšného ověření. V opačném případě FALSE.
+TRUE, pokud bylo úspěšné. V opačném případě FALSE.
 
 ### <a name="example"></a>Příklad
 
-Následující příklad vytvoří pomocí 16 bitů určený ke kódování každý pixel rastrového obrázku 100 x 100 pixelů. V dané 16bitové pixel bits 0 – 3 kódování červené, bits 4 – 7 kódování zelené a bits 8-11 kódování modrá. Zbývající bity 4 se nepoužívají.
+Následující příklad vytvoří rastrový obrázek 100x100 pixelů s použitím 16 bitů ke kódování jednotlivých pixelů. V daném 16bitovém pixelu BITS 0-3 zakóduje červenou komponentu, BITS 4-7 encode zeleně a bity 8-11 modrou. Zbylých 4 bitů se nepoužívá.
 
 ```cpp
 DWORD adwBitmasks[3] = { 0x0000000f, 0x000000f0, 0x00000f00 };
 m_myImage.CreateEx(100, 100, 16, BI_BITFIELDS, adwBitmasks, 0);
 ```
 
-##  <a name="destroy"></a>  CImage::Destroy
+##  <a name="destroy"></a>Služby CImage ve::D estroy
 
-Odpojí rastrový obrázek z `CImage` objektu a odstraní rastrového obrázku.
+Odpojí rastrový obrázek od `CImage` objektu a odstraní rastrový obrázek.
 
 ```
 void Destroy() throw();
 ```
 
-##  <a name="detach"></a>  CImage::Detach
+##  <a name="detach"></a>Služby CImage ve::D etach
 
-Odpojí rastrový obrázek z `CImage` objektu.
+Odpojí rastrový obrázek od `CImage` objektu.
 
 ```
 HBITMAP Detach() throw();
@@ -521,11 +521,11 @@ HBITMAP Detach() throw();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Popisovač na rastrový obrázek odpojit, nebo hodnota NULL, pokud je připojena žádná rastrového obrázku.
+Popisovač rastrového obrázku byl odpojen, nebo má hodnotu NULL, pokud není připojena žádná bitmapa.
 
-##  <a name="draw"></a>  CImage::Draw
+##  <a name="draw"></a>Služby CImage ve: nezpracované:D
 
-Zkopíruje bitmapu ze kontext zdrojového zařízení k aktuálnímu kontextu zařízení.
+Zkopíruje rastrový obrázek z kontextu zdrojového zařízení do kontextu aktuálního zařízení.
 
 ```
 BOOL Draw(
@@ -571,51 +571,51 @@ BOOL Draw(
 Popisovač kontextu cílového zařízení.
 
 *xDest*<br/>
-Souřadnice x, v logických jednotkách, levého horního rohu cílového obdélníku.
+Souřadnice x (v logických jednotkách) levého horního rohu cílového obdélníku.
 
 *yDest*<br/>
-Souřadnice y, v logických jednotkách, levého horního rohu cílového obdélníku.
+Souřadnice y v levém horním rohu cílového obdélníku v logických jednotkách.
 
 *nDestWidth*<br/>
-Šířka v logické jednotky cílového obdélníku.
+Šířka cílového obdélníku v logických jednotkách.
 
 *nDestHeight*<br/>
-Výška v logických jednotkách cílového obdélníku.
+Výška cílového obdélníku v logických jednotkách.
 
 *xSrc*<br/>
-Souřadnice x, v logických jednotkách, levého horního rohu zdrojového obdélníku.
+Souřadnice x (v logických jednotkách) levého horního rohu zdrojového obdélníku.
 
 *ySrc*<br/>
-Souřadnice y, v logických jednotkách, levého horního rohu zdrojového obdélníku.
+Souřadnice y v levém horním rohu zdrojového obdélníku v logických jednotkách.
 
 *nSrcWidth*<br/>
-Šířka v logických jednotkách, zdrojového obdélníku.
+Šířka zdrojového obdélníku v logických jednotkách.
 
 *nSrcHeight*<br/>
-Výška v logických jednotkách, zdrojového obdélníku.
+Výška zdrojového obdélníku v logických jednotkách
 
 *rectDest*<br/>
-Odkaz na [RECT](/previous-versions/dd162897\(v=vs.85\)) strukturu, identifikace cíle.
+Odkaz na strukturu [Rect](/previous-versions/dd162897\(v=vs.85\)) , která identifikuje cíl.
 
 *rectSrc*<br/>
-Odkaz na `RECT` strukturu, identifikace zdroji.
+Odkaz na `RECT` strukturu, která identifikuje zdroj.
 
 *pointDest*<br/>
-Odkaz na [bodu](/previous-versions/dd162805\(v=vs.85\)) strukturu, která identifikuje levém horním rohu cílového obdélníku v logických jednotkách.
+Odkaz na strukturu [bodu](/previous-versions/dd162805\(v=vs.85\)) , která identifikuje levý horní roh cílového obdélníku v logických jednotkách.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Nenulové, pokud je úspěšná. jinak 0.
+Nenulové, pokud bylo úspěšné; v opačném případě 0.
 
 ### <a name="remarks"></a>Poznámky
 
-`Draw` provede stejné operace jako [StretchBlt](#stretchblt), pokud image obsahuje průhlednou barvu nebo alfa kanálu. V takovém případě `Draw` provede stejné operace jako [TransparentBlt](#transparentblt) nebo [AlphaBlend](#alphablend) podle potřeby.
+`Draw`provede stejnou operaci jako [StretchBlt](#stretchblt), pokud Image neobsahuje průhlednou barvu nebo alfa kanál. V takovém případě `Draw` provede stejnou operaci jako [TransparentBlt](#transparentblt) nebo [AlphaBlend](#alphablend) , jak je to nutné.
 
-Verze `Draw` zdrojového obdélníku, který není zadán, celého zdrojového obrázku je výchozí nastavení. Pro verzi `Draw` , která neurčuje velikost cílového obdélníku, velikost zdrojového obrázku je výchozí a žádné roztažení nebo zmenšení vyvolá.
+U verzí `Draw` , které nespecifikují zdrojový obdélník, je celý zdrojový obraz výchozí. Pro verzi `Draw` , která neurčuje velikost pro cílový obdélník, je velikost zdrojového obrázku výchozí a nedochází k žádnému roztažení ani zmenšení.
 
-##  <a name="getbits"></a>  CImage::GetBits
+##  <a name="getbits"></a>Služby CImage ve:: getbitů
 
-Načte ukazatel na skutečné bitové hodnoty daného pixel v rastrový obrázek.
+Načte ukazatel na skutečné bitové hodnoty daného pixelu v rastrovém obrázku.
 
 ```
 void* GetBits() throw();
@@ -623,16 +623,16 @@ void* GetBits() throw();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Ukazatel do vyrovnávací paměti rastrového obrázku. Pokud bitmapy DIB zdola nahoru, ukazatel ukazuje téměř na konci vyrovnávací paměti. Pokud bitmapy DIB shora dolů, ukazatel odkazuje na první bajt vyrovnávací paměti.
+Ukazatel na vyrovnávací paměť rastrového obrázku. Pokud je rastrový obrázek ve formátu DIB, ukazatel ukazuje na konci vyrovnávací paměti. Pokud je rastrový obrázek v horní části DIB, ukazatel ukazuje na první bajt vyrovnávací paměti.
 
 ### <a name="remarks"></a>Poznámky
 
-Pomocí tohoto ukazatele, včetně jejich hodnoty vrácené [GetPitch](#getpitch), můžete najít a změnit jednotlivých pixelech ve bitovou kopii.
+Pomocí tohoto ukazatele spolu s hodnotou vrácenou funkcí [getrozteč](#getpitch)můžete vyhledat a změnit jednotlivé pixely v obrázku.
 
 > [!NOTE]
-> Tato metoda podporuje pouze DIB části rastrové obrázky; v důsledku toho přístup pixelech `CImage` stejně jako byste to udělali pixelů DIB části objektu. Vrácený ukazatel odkazuje na pixel v umístění (0, 0).
+> Tato metoda podporuje pouze rastrové obrázky oddílů DIB; v důsledku toho získáte přístup k pixelům `CImage` objektu stejným způsobem jako pixely oddílu DIB. Vrácený ukazatel ukazuje na pixel v umístění (0, 0).
 
-##  <a name="getbpp"></a>  CImage::GetBPP
+##  <a name="getbpp"></a>Služby CImage ve:: GetBPP
 
 Načte hodnotu bitů na pixel.
 
@@ -646,13 +646,13 @@ Počet bitů na pixel.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato hodnota určuje počet bitů, které definují každý pixel a maximální počet barev v rastrového obrázku.
+Tato hodnota určuje počet bitů, které definují jednotlivé pixely, a maximální počet barev v rastrovém obrázku.
 
-Bitů na pixel, je obvykle 1, 4, 8, 16, 24 nebo 32. Zobrazit `biBitCount` členem [BITMAPINFOHEADER](/previous-versions//dd183376\(v=vs.85\)) v sadě Windows SDK pro další informace o této hodnotě.
+Bity na pixel jsou obvykle 1, 4, 8, 16, 24 nebo 32. Další informace o této [](/previous-versions//dd183376\(v=vs.85\)) hodnotě najdete v tématu věnovaném členuBITMAPINFOHEADERv`biBitCount` Windows SDK.
 
-##  <a name="getcolortable"></a>  CImage::GetColorTable
+##  <a name="getcolortable"></a>Služby CImage ve:: GetColor – k
 
-Načte červená, zelená, modrá barva hodnoty (RGB) z rozsahu položek na paletě DIB oddílu.
+Načte červené, zelené, modré (RGB) hodnoty barev z rozsahu položek v paletě oddílu DIB.
 
 ```
 void GetColorTable(
@@ -664,17 +664,17 @@ void GetColorTable(
 ### <a name="parameters"></a>Parametry
 
 *iFirstColor*<br/>
-Index tabulky barev první položky určené k načtení.
+Index tabulky barev prvního záznamu, který se má načíst
 
 *nColors*<br/>
-Počet zápisy v tabulce barev pro načtení.
+Počet položek tabulky barev, které mají být načteny.
 
 *prgbColors*<br/>
-Ukazatel na pole [RGBQUAD](/windows/desktop/api/wingdi/ns-wingdi-tagrgbquad) struktury načíst barvu tabulky položky.
+Ukazatel na pole struktur [RGBQUAD](/windows/win32/api/wingdi/ns-wingdi-rgbquad) , aby se načetly položky tabulky barev.
 
-##  <a name="getdc"></a>  CImage::GetDC
+##  <a name="getdc"></a>Služby CImage ve:: GetDC
 
-Načte kontext zařízení, který nemá aktuálně vybrán do něj obrázek.
+Načte kontext zařízení, ve kterém je aktuálně vybraná image.
 
 ```
 HDC GetDC() const throw();
@@ -686,11 +686,11 @@ Popisovač kontextu zařízení.
 
 ### <a name="remarks"></a>Poznámky
 
-Pro každé volání `GetDC`, musíte mít následující volání [ReleaseDC](#releasedc).
+Pro každé volání do `GetDC`musíte mít následné volání [ReleaseDC](#releasedc).
 
-##  <a name="getexporterfilterstring"></a>  CImage::GetExporterFilterString
+##  <a name="getexporterfilterstring"></a>Služby CImage ve:: GetExporterFilterString
 
-Vyhledá dostupné image formáty pro ukládání imagí.
+Najde formáty obrázků, které jsou k dispozici pro ukládání obrázků.
 
 ```
 static HRESULT GetExporterFilterString(
@@ -704,16 +704,16 @@ static HRESULT GetExporterFilterString(
 ### <a name="parameters"></a>Parametry
 
 *strExporters*<br/>
-Odkaz na `CSimpleString` objektu. Zobrazit **poznámky** Další informace.
+Odkaz na `CSimpleString` objekt. Další informace najdete v části **poznámky** .
 
 *aguidFileTypes*<br/>
-Pole identifikátory GUID, s každý prvek odpovídající typy souborů v řetězci. V příkladu v *pszAllFilesDescription* níže, *aguidFileTypes*[0] je GUID_NULL a zbývající hodnoty pole jsou formátu souborů obrázků, podporuje aktuální operační systém.
+Pole identifikátorů GUID s každým prvkem odpovídajícím jednomu z typů souborů v řetězci. V příkladu v *pszAllFilesDescription* níže je *aguidFileTypes*[0] GUID_NULL a zbývající hodnoty pole jsou formáty souborů obrázků podporované aktuálním operačním systémem.
 
 > [!NOTE]
-> Úplný seznam konstant, naleznete v tématu **konstanty formát souboru obrázku** v sadě Windows SDK.
+> Úplný seznam konstant najdete v tématu konstanty **formátu souboru obrázku** v Windows SDK.
 
 *pszAllFilesDescription*<br/>
-Pokud tento parametr není NULL, řetězec filtru bude mít jeden další filtr na začátku seznamu. Tento filtr bude mít aktuální hodnotu *pszAllFilesDescription* jeho popis a přijímá soubory všechna rozšíření, která podporuje další Exportér v seznamu.
+Pokud tento parametr není NULL, bude mít řetězec filtru na začátku seznamu jeden další filtr. Tento filtr bude mít aktuální hodnotu *pszAllFilesDescription* pro svůj popis a přijímá soubory všech přípon podporovaných jakýmkoli jiným vývozcem v seznamu.
 
 Příklad:
 
@@ -726,54 +726,54 @@ _T("All Image Files"));
 ```
 
 *dwExclude*<br/>
-Sada bitové příznaky určující, které typy souborů k vyloučení ze seznamu. Jsou povolená příznaky:
+Sada bitových příznaků určujících typy souborů, které mají být vyloučeny ze seznamu. Povolené příznaky:
 
-- `excludeGIF` = soubory GIF vyloučí 0x01.
+- `excludeGIF`= 0x01 vylučuje soubory GIF.
 
-- `excludeBMP` = 0x02 soubory vyloučí BMP (rastrového obrázku Windows).
+- `excludeBMP`= 0x02 vyloučí soubory BMP (Windows BMP).
 
-- `excludeEMF` = 0x04 soubory vyloučí EMF (Enhanced Metafile).
+- `excludeEMF`= 0x04 vyloučí soubory EMF (Enhanced Metafile).
 
-- `excludeWMF` = 0x08 soubory vyloučí WMF (Windows Metafile).
+- `excludeWMF`= 0x08 vyloučí soubory WMF (Windows Metafile).
 
-- `excludeJPEG` soubory JPEG vyloučí 0x10 =.
+- `excludeJPEG`= 0x10 vyloučí soubory JPEG.
 
-- `excludePNG` = 0x20 soubory vyloučí PNG.
+- `excludePNG`= 0x20 vyloučí soubory PNG.
 
-- `excludeTIFF` soubory TIFF vyloučí 0x40 =.
+- `excludeTIFF`= 0x40 vyloučí soubory TIFF.
 
-- `excludeIcon` = 0x80 soubory vyloučí ICO (ikona Windows).
+- `excludeIcon`= 0x80 vyloučí soubory ICO (Windows Icon).
 
-- `excludeOther` = 0x80000000 vyloučí jakýkoli jiný typ souboru není uvedené výš.
+- `excludeOther`= 0x80000000 vyloučí všechny ostatní typy souborů, které nejsou uvedené výše.
 
-- `excludeDefaultLoad` = 0 pro načtení všech souborů, typy jsou zahrnuté ve výchozím nastavení
+- `excludeDefaultLoad`= 0 pro načtení jsou ve výchozím nastavení zahrnuty všechny typy souborů.
 
-- `excludeDefaultSave` = `excludeIcon &#124; excludeEMF &#124; excludeWMF` Pro ukládání, jsou tyto soubory vyloučeny ve výchozím nastavení, protože mají obvykle zvláštní požadavky.
+- `excludeDefaultSave` = `excludeIcon &#124; excludeEMF &#124; excludeWMF`Pro uložení jsou tyto soubory ve výchozím nastavení vyloučené, protože obvykle mají zvláštní požadavky.
 
 *chSeparator*<br/>
-Oddělovač použitý mezi formátů obrázku. Zobrazit **poznámky** Další informace.
+Oddělovač použitý mezi formáty obrázků. Další informace najdete v části **poznámky** .
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Standardní HRESULT.
+Standardní hodnota HRESULT.
 
 ### <a name="remarks"></a>Poznámky
 
-Výsledný řetězec formátu můžete předat do vaší knihovny MFC [CFileDialog](../../mfc/reference/cfiledialog-class.md) formátuje objekt vystavit přípony souborů k dispozici bitové kopie v dialogovém okně Uložit jako.
+Výsledný řetězec formátu můžete předat objektu [CFileDialog](../../mfc/reference/cfiledialog-class.md) knihovny MFC a zpřístupnit tak přípony souborů dostupných formátů obrázků v dialogovém okně soubor uložit jako.
 
 Parametr *strExporter* má formát:
 
-soubor description0&#124;\*.ext0&#124;filedescription1&#124;\*.ext1&#124;.. .file popis *n*&#124;\*.ext *n*&#124;&#124;
+soubor description0&#124;\*. EXT0&#124;&#124;filedescription1\*. EXT1&#124;... Popis souboru *n*&#124;\*. ext *n*&#124;&#124;
 
-kde "&#124;" je znak oddělovače zadána `chSeparator`. Příklad:
+kde '&#124;' je znak oddělovače určený parametrem `chSeparator`. Příklad:
 
 `"Bitmap format|*.bmp|JPEG format|*.jpg|GIF format|*.gif|PNG format|*.png||"`
 
-Použít výchozí oddělovač '&#124;"Pokud předáte tento řetězec do knihovny MFC `CFileDialog` objektu. Pokud jste tento řetězec předat běžným dialogovým oknem uložit soubor, použijte hodnotu null oddělovač '\0'.
+Použijte výchozí oddělovač '&#124;', Pokud předáte tento řetězec do objektu knihovny `CFileDialog` MFC. Použijte oddělovač null \ 0, pokud tento řetězec předáte do dialogového okna společné uložení souboru.
 
-##  <a name="getheight"></a>  CImage::GetHeight
+##  <a name="getheight"></a>Služby CImage ve:: GetHeight
 
-Získá výšku v pixelech, bitové kopie.
+Načte výšku obrázku v pixelech.
 
 ```
 int GetHeight() const throw();
@@ -781,11 +781,11 @@ int GetHeight() const throw();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Výška v pixelech, bitové kopie.
+Výška obrázku v pixelech.
 
-##  <a name="getimporterfilterstring"></a>  CImage::GetImporterFilterString
+##  <a name="getimporterfilterstring"></a>Služby CImage ve:: GetImporterFilterString
 
-Vyhledá formátů obrázku je k dispozici pro načítání obrázků.
+Najde formáty obrázků, které jsou k dispozici pro načítání obrázků.
 
 ```
 static HRESULT GetImporterFilterString(
@@ -799,16 +799,16 @@ static HRESULT GetImporterFilterString(
 ### <a name="parameters"></a>Parametry
 
 *strImporters*<br/>
-Odkaz na `CSimpleString` objektu. Zobrazit **poznámky** Další informace.
+Odkaz na `CSimpleString` objekt. Další informace najdete v části **poznámky** .
 
 *aguidFileTypes*<br/>
-Pole identifikátory GUID, s každý prvek odpovídající typy souborů v řetězci. V příkladu v *pszAllFilesDescription* níže, *aguidFileTypes*[0] je GUID_NULL zbývající hodnotami pole jsou formátu souborů obrázků, podporuje aktuální operační systém.
+Pole identifikátorů GUID s každým prvkem odpovídajícím jednomu z typů souborů v řetězci. V příkladu v *pszAllFilesDescription* níže je *aguidFileTypes*[0] GUID_NULL s hodnotami zbývajících polí jsou formáty souborů obrázků podporované aktuálním operačním systémem.
 
 > [!NOTE]
-> Úplný seznam konstant, naleznete v tématu **konstanty formát souboru obrázku** v sadě Windows SDK.
+> Úplný seznam konstant najdete v tématu konstanty **formátu souboru obrázku** v Windows SDK.
 
 *pszAllFilesDescription*<br/>
-Pokud tento parametr není NULL, řetězec filtru bude mít jeden další filtr na začátku seznamu. Tento filtr bude mít aktuální hodnotu *pszAllFilesDescription* jeho popis a přijímá soubory všechna rozšíření, která podporuje další Exportér v seznamu.
+Pokud tento parametr není NULL, bude mít řetězec filtru na začátku seznamu jeden další filtr. Tento filtr bude mít aktuální hodnotu *pszAllFilesDescription* pro svůj popis a přijímá soubory všech přípon podporovaných jakýmkoli jiným vývozcem v seznamu.
 
 Příklad:
 
@@ -821,50 +821,50 @@ _T("All Image Files"));
 ```
 
 *dwExclude*<br/>
-Sada bitové příznaky určující, které typy souborů k vyloučení ze seznamu. Jsou povolená příznaky:
+Sada bitových příznaků určujících typy souborů, které mají být vyloučeny ze seznamu. Povolené příznaky:
 
-- `excludeGIF` = soubory GIF vyloučí 0x01.
+- `excludeGIF`= 0x01 vylučuje soubory GIF.
 
-- `excludeBMP` = 0x02 soubory vyloučí BMP (rastrového obrázku Windows).
+- `excludeBMP`= 0x02 vyloučí soubory BMP (Windows BMP).
 
-- `excludeEMF` = 0x04 soubory vyloučí EMF (Enhanced Metafile).
+- `excludeEMF`= 0x04 vyloučí soubory EMF (Enhanced Metafile).
 
-- `excludeWMF` = 0x08 soubory vyloučí WMF (Windows Metafile).
+- `excludeWMF`= 0x08 vyloučí soubory WMF (Windows Metafile).
 
-- `excludeJPEG` soubory JPEG vyloučí 0x10 =.
+- `excludeJPEG`= 0x10 vyloučí soubory JPEG.
 
-- `excludePNG` = 0x20 soubory vyloučí PNG.
+- `excludePNG`= 0x20 vyloučí soubory PNG.
 
-- `excludeTIFF` soubory TIFF vyloučí 0x40 =.
+- `excludeTIFF`= 0x40 vyloučí soubory TIFF.
 
-- `excludeIcon` = 0x80 soubory vyloučí ICO (ikona Windows).
+- `excludeIcon`= 0x80 vyloučí soubory ICO (Windows Icon).
 
-- `excludeOther` = 0x80000000 vyloučí jakýkoli jiný typ souboru není uvedené výš.
+- `excludeOther`= 0x80000000 vyloučí všechny ostatní typy souborů, které nejsou uvedené výše.
 
-- `excludeDefaultLoad` = 0 pro načtení všech souborů, typy jsou zahrnuté ve výchozím nastavení
+- `excludeDefaultLoad`= 0 pro načtení jsou ve výchozím nastavení zahrnuty všechny typy souborů.
 
-- `excludeDefaultSave` = `excludeIcon &#124; excludeEMF &#124; excludeWMF` Pro ukládání, jsou tyto soubory vyloučeny ve výchozím nastavení, protože mají obvykle zvláštní požadavky.
+- `excludeDefaultSave` = `excludeIcon &#124; excludeEMF &#124; excludeWMF`Pro uložení jsou tyto soubory ve výchozím nastavení vyloučené, protože obvykle mají zvláštní požadavky.
 
 *chSeparator*<br/>
-Oddělovač použitý mezi formátů obrázku. Zobrazit **poznámky** Další informace.
+Oddělovač použitý mezi formáty obrázků. Další informace najdete v části **poznámky** .
 
 ### <a name="remarks"></a>Poznámky
 
-Výsledný řetězec formátu můžete předat do vaší knihovny MFC [CFileDialog](../../mfc/reference/cfiledialog-class.md) formátuje objekt vystavit přípony souborů k dispozici bitové kopie v **otevřít soubor** dialogové okno.
+Výsledný řetězec formátu můžete předat objektu [CFileDialog](../../mfc/reference/cfiledialog-class.md) knihovny MFC a zpřístupnit tak přípony souborů dostupných formátů obrázků v dialogovém okně **otevřít soubor** .
 
 Parametr *strImporter* má formát:
 
-soubor description0&#124;\*.ext0&#124;filedescription1&#124;\*.ext1&#124;.. .file popis *n*&#124;\*.ext *n*&#124;&#124;
+soubor description0&#124;\*. EXT0&#124;&#124;filedescription1\*. EXT1&#124;... Popis souboru *n*&#124;\*. ext *n*&#124;&#124;
 
-kde "&#124;" je znak oddělovače určené *chSeparator*. Příklad:
+kde '&#124;' je znak oddělovače určený parametrem *chSeparator*. Příklad:
 
 `"Bitmap format|*.bmp|JPEG format|*.jpg|GIF format|*.gif|PNG format|*.png||"`
 
-Použít výchozí oddělovač '&#124;"Pokud předáte tento řetězec do knihovny MFC `CFileDialog` objektu. Použít null oddělovač '\0', pokud předáte tento řetězec do společného **otevřít soubor** dialogové okno.
+Použijte výchozí oddělovač '&#124;', Pokud předáte tento řetězec do objektu knihovny `CFileDialog` MFC. Použijte oddělovač null \ 0, pokud tento řetězec předáte do dialogového okna společné **otevření souboru** .
 
-##  <a name="getmaxcolortableentries"></a>  CImage::GetMaxColorTableEntries
+##  <a name="getmaxcolortableentries"></a>Služby CImage ve:: GetMaxColorTableEntries
 
-Získá maximální počet položek v tabulce barev.
+Načte maximální počet položek v tabulce barev.
 
 ```
 int GetMaxColorTableEntries() const throw();
@@ -876,11 +876,11 @@ Počet položek v tabulce barev.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato metoda podporuje pouze část bitmap DIB.
+Tato metoda podporuje pouze rastrové obrázky oddílů DIB.
 
-##  <a name="getpitch"></a>  CImage::GetPitch
+##  <a name="getpitch"></a>Služby CImage ve:: getrozteč
 
-Získá výšku obrázku.
+Načte sklon obrázku.
 
 ```
 int GetPitch() const throw();
@@ -888,20 +888,20 @@ int GetPitch() const throw();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Výška obrázku. Pokud je návratová hodnota záporná, rastrového obrázku je DIB zdola nahoru a jeho původ levého dolního rohu. Pokud vrácená hodnota je pozitivní, rastrového obrázku je DIB shora dolů a jeho původ levého horního rohu.
+Rozteč obrázku Pokud je vrácená hodnota záporná, rastrový obrázek je v dolní části DIB a jeho počátek je spodní levý roh. Pokud je vrácená hodnota kladná, je rastrový obrázek v levém horním rohu a jeho počátek je levý horní roh.
 
 ### <a name="remarks"></a>Poznámky
 
-Prvotního je vzdálenost v bajtech, mezi dvě adresy paměti, které představují začátek jeden řádek rastrového obrázku a na začátek dalšího řádku rastrového obrázku. Protože rozteč se měří v bajtech, výšku obrázku vám umožňuje určit formát pixelu. Prvotního může taky obsahovat další paměti vyhrazená pro rastrový obrázek.
+Rozteč je vzdálenost (v bajtech) mezi dvěma adresami paměti, které reprezentují začátek jedné rastrové čáry a začátek další rastrové čáry. Vzhledem k tomu, že se v bajtech měří rozteč, výška obrázku vám pomůže určit formát pixelu. Rozteč může také zahrnovat další paměť vyhrazenou pro rastrový obrázek.
 
-Použití `GetPitch` s [GetBits](#getbits) najít jednotlivých pixelech bitovou kopii.
+Použijte `GetPitch` s [getbity](#getbits) k nalezení jednotlivých pixelů obrázku.
 
 > [!NOTE]
-> Tato metoda podporuje pouze část bitmap DIB.
+> Tato metoda podporuje pouze rastrové obrázky oddílů DIB.
 
-##  <a name="getpixel"></a>  CImage::GetPixel
+##  <a name="getpixel"></a>Služby CImage ve:: GetPixel
 
-Zjišťuje barvu pixelu na umístění, které určuje *x* a *y*.
+Načte barvu pixelu v umístění určeném *x* a *y*.
 
 ```
 COLORREF GetPixel(int x, int y) const throw();
@@ -910,18 +910,18 @@ COLORREF GetPixel(int x, int y) const throw();
 ### <a name="parameters"></a>Parametry
 
 *x*<br/>
-Souřadnice x pixelu.
+Souřadnice x v pixelech
 
 *y*<br/>
-Souřadnice y pixelu.
+Souřadnice y v pixelech
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Červená, zelená, modré (RGB) hodnota pixelu. Pokud je pixel je mimo aktuální oblast ořezu, vrácená hodnota je CLR_INVALID.
+Červená, zelená, modrá (RGB) hodnota pixelu. Pokud je pixel mimo aktuální oblast oříznutí, návratová hodnota je CLR_INVALID.
 
-##  <a name="getpixeladdress"></a>  CImage::GetPixelAddress
+##  <a name="getpixeladdress"></a>Služby CImage ve:: GetPixelAddress
 
-Načte adresu přesný pixel.
+Načte přesnou adresu pixelu.
 
 ```
 void* GetPixelAddress(int x, int y) throw();
@@ -930,23 +930,23 @@ void* GetPixelAddress(int x, int y) throw();
 ### <a name="parameters"></a>Parametry
 
 *x*<br/>
-Souřadnice x pixelu.
+Souřadnice x v pixelech
 
 *y*<br/>
-Souřadnice y pixelu.
+Souřadnice y v pixelech
 
 ### <a name="remarks"></a>Poznámky
 
-Adresa se určuje podle souřadnic pixel, výška bitmapy a bitů na pixel.
+Adresa se určuje podle souřadnic pixelu, sklonu rastrového obrázku a bitů na pixel.
 
-Pro formáty, které mají méně než 8 bitů na pixel vrátí tato metoda adresu bajtů obsahující je pixel. Pokud vaše formát obrázku má 4 bitů na pixel, například `GetPixelAddress` vrátí adresu první pixel v bajtu a musí vypočítat pro počet bajtů 2 pixelů.
+Pro formáty, které mají méně než 8 bitů na pixel, vrátí tato metoda adresu bajtu obsahujícího pixel. Pokud má například formát obrázku 4 bity na pixel, `GetPixelAddress` vrátí adresu prvního pixelu v bajtu a je třeba vypočítat 2 pixely na bajt.
 
 > [!NOTE]
-> Tato metoda podporuje pouze část bitmap DIB.
+> Tato metoda podporuje pouze rastrové obrázky oddílů DIB.
 
-##  <a name="gettransparentcolor"></a>  CImage::GetTransparentColor
+##  <a name="gettransparentcolor"></a>Služby CImage ve:: GetTransparentColor
 
-Načte indexované umístění průhledné barvy palety barev.
+Načte indexované umístění transparentní barvy v paletě barev.
 
 ```
 LONG GetTransparentColor() const throw();
@@ -954,11 +954,11 @@ LONG GetTransparentColor() const throw();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Index průhlednou barvu.
+Index průhledné barvy
 
-##  <a name="getwidth"></a>  CImage::GetWidth
+##  <a name="getwidth"></a>Služby CImage ve:: getwidth
 
-Načte šířka v pixelech, bitové kopie.
+Načte šířku obrázku v pixelech.
 
 ```
 int GetWidth() const throw();
@@ -966,11 +966,11 @@ int GetWidth() const throw();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Šířka rastrového obrázku v pixelech.
+Šířka rastrového obrázku (v pixelech).
 
-##  <a name="isdibsection"></a>  CImage::IsDIBSection
+##  <a name="isdibsection"></a>Služby CImage ve:: IsDIBSection
 
-Určuje, jestli je připojené rastrový obrázek DIB části.
+Určuje, zda je připojen rastrový obrázek oddíl DIB.
 
 ```
 bool IsDIBSection() const throw();
@@ -978,19 +978,19 @@ bool IsDIBSection() const throw();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-TRUE, pokud připojené rastrový obrázek hodnotu DIB oddílu. V opačném případě FALSE.
+TRUE, pokud je připojen rastrový obrázek oddíl DIB. V opačném případě FALSE.
 
 ### <a name="remarks"></a>Poznámky
 
-Pokud rastrového obrázku není oddíl DIB, nemůžete použít následující `CImage` metody, které podporují pouze rastrové obrázky DIB části:
+Pokud rastr není oddíl DIB, nemůžete použít následující `CImage` metody, které podporují pouze rastrové obrázky oddílů DIB:
 
-- [GetBits](#getbits)
+- [Getbity](#getbits)
 
-- [GetColorTable](#getcolortable)
+- [GetColor](#getcolortable)
 
 - [GetMaxColorTableEntries](#getmaxcolortableentries)
 
-- [GetPitch](#getpitch)
+- [Getrozteč](#getpitch)
 
 - [GetPixelAddress](#getpixeladdress)
 
@@ -998,9 +998,9 @@ Pokud rastrového obrázku není oddíl DIB, nemůžete použít následující 
 
 - [SetColorTable](#setcolortable)
 
-##  <a name="isindexed"></a>  CImage::IsIndexed
+##  <a name="isindexed"></a>Služby CImage ve::-Indexed
 
-Určuje, zda pixelů rastrový obrázek se mapují na paletu barev.
+Určuje, zda jsou pixely rastrového obrázku mapovány na paletu barev.
 
 ```
 bool IsIndexed() const throw();
@@ -1008,18 +1008,18 @@ bool IsIndexed() const throw();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Hodnota TRUE v případě indexované; v opačném případě FALSE.
+TRUE, pokud je indexovaná; v opačném případě FALSE.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato metoda vrátí hodnotu TRUE pouze v případě, že je 8 bitů rastrového obrázku (256 barev) nebo méně.
+Tato metoda vrátí hodnotu TRUE pouze v případě, že je rastrový obrázek 8 bitů (256 barev) nebo méně.
 
 > [!NOTE]
-> Tato metoda podporuje pouze část bitmap DIB.
+> Tato metoda podporuje pouze rastrové obrázky oddílů DIB.
 
-##  <a name="isnull"></a>  CImage::IsNull
+##  <a name="isnull"></a>Služby CImage ve:: IsNull
 
-Určuje, pokud je aktuálně načtená rastrový obrázek.
+Určuje, zda je rastrový obrázek aktuálně načten.
 
 ```
 bool IsNull() const throw();
@@ -1027,11 +1027,11 @@ bool IsNull() const throw();
 
 ### <a name="remarks"></a>Poznámky
 
-Tato metoda vrátí hodnotu TRUE, pokud aktuálně není načten rastrový obrázek. v opačném případě FALSE.
+Tato metoda vrátí hodnotu TRUE, pokud není bitmapa momentálně načtena; v opačném případě FALSE.
 
-##  <a name="istransparencysupported"></a>  CImage::IsTransparencySupported
+##  <a name="istransparencysupported"></a>Služby CImage ve:: IsTransparencySupported
 
-Určuje, jestli aplikace podporuje transparentní rastrových obrázků.
+Určuje, zda aplikace podporuje transparentní rastrové obrázky.
 
 ```
 static BOOL IsTransparencySupported() throw();
@@ -1039,15 +1039,15 @@ static BOOL IsTransparencySupported() throw();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Nenulové, pokud aktuální platforma podporuje průhlednost. Jinak 0.
+Nenulové, pokud aktuální platforma podporuje průhlednost. V opačném případě 0.
 
 ### <a name="remarks"></a>Poznámky
 
-Pokud vrácená hodnota je nenulový a transparentnost je podporováno, volání [AlphaBlend](#alphablend), [TransparentBlt](#transparentblt), nebo [nakreslit](#draw) zpracuje průhledné barvy.
+Pokud je návratová hodnota nenulová a je podporována průhlednost, volání [AlphaBlend](#alphablend), [TransparentBlt](#transparentblt)nebo [Draw](#draw) zpracuje průhledné barvy.
 
-##  <a name="load"></a>  CImage::Load
+##  <a name="load"></a>Služby CImage ve:: Load
 
-Načte bitovou kopii.
+Načte obrázek.
 
 ```
 HRESULT Load(LPCTSTR pszFileName) throw();
@@ -1057,24 +1057,24 @@ HRESULT Load(IStream* pStream) throw();
 ### <a name="parameters"></a>Parametry
 
 *pszFileName*<br/>
-Ukazatel na řetězec obsahující název souboru obrázku se načíst.
+Ukazatel na řetězec obsahující název souboru obrázku, který se má načíst.
 
 *pStream*<br/>
-Ukazatel na datový proud obsahující název souboru obrázku se načíst.
+Ukazatel na datový proud obsahující název souboru obrázku, který se má načíst.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Standardní HRESULT.
+Standardní hodnota HRESULT.
 
 ### <a name="remarks"></a>Poznámky
 
-Načte obrázek určené *pszFileName* nebo *pStream*.
+Načte obrázek určený parametrem *pszFileName* nebo *pStream*.
 
-Platná bitová kopie typy jsou BMP, GIF, JPEG, PNG a TIFF.
+Platné typy obrázků jsou BMP, GIF, JPEG, PNG a TIFF.
 
-##  <a name="loadfromresource"></a>  CImage::LoadFromResource
+##  <a name="loadfromresource"></a>Služby CImage ve:: LoadFromResource
 
-Načte obrázek z prostředku rastrového OBRÁZKU.
+Načte obrázek z RASTRového prostředku.
 
 ```
 void LoadFromResource(
@@ -1089,21 +1089,21 @@ void LoadFromResource(
 ### <a name="parameters"></a>Parametry
 
 *hInstance*<br/>
-Popisovač instance modulu, který obsahuje bitovou kopii, který se má načíst.
+Pořídí instanci modulu, který obsahuje obrázek, který má být načten.
 
 *pszResourceName*<br/>
-Ukazatel na řetězec obsahující název prostředku obsahující bitovou kopii k načtení.
+Ukazatel na řetězec obsahující název prostředku, který obsahuje obrázek, který se má načíst.
 
 *nIDResource*<br/>
-ID prostředku pro načtení.
+ID prostředku, který se má načíst
 
 ### <a name="remarks"></a>Poznámky
 
-Prostředek musí být typu rastrového OBRÁZKU.
+Prostředek musí být typu RASTRový.
 
-##  <a name="maskblt"></a>  CImage::MaskBlt
+##  <a name="maskblt"></a>Služby CImage ve:: MaskBlt
 
-Kombinuje data o barvách pro zdrojové a cílové bitmapy, pomocí zadané masce a rastrovou operaci.
+Kombinuje barevná data pro zdrojové a cílové bitmapy pomocí zadané masky a operace rastrového obrázku.
 
 ```
 BOOL MaskBlt(
@@ -1144,65 +1144,65 @@ BOOL MaskBlt(
 ### <a name="parameters"></a>Parametry
 
 *hDestDC*<br/>
-Obslužná rutina modulu, jehož spustitelný soubor obsahuje prostředek.
+Popisovač modulu, jehož spustitelný soubor obsahuje prostředek.
 
 *xDest*<br/>
-Souřadnice x, v logických jednotkách, levého horního rohu cílového obdélníku.
+Souřadnice x (v logických jednotkách) levého horního rohu cílového obdélníku.
 
 *yDest*<br/>
-Souřadnice y, v logických jednotkách, levého horního rohu cílového obdélníku.
+Souřadnice y v levém horním rohu cílového obdélníku v logických jednotkách.
 
 *nDestWidth*<br/>
-Šířka v logické jednotky cílového obdélníku a zdrojové bitmapy.
+Šířka cílového obdélníku a zdrojové bitmapy v logických jednotkách.
 
 *nDestHeight*<br/>
-Výška v logických jednotkách cílového obdélníku a zdrojové bitmapy.
+Výška cílového obdélníku a zdrojové bitmapy v logických jednotkách.
 
 *xSrc*<br/>
-Logickou souřadnici x levého horního rohu zdrojovou bitmapu.
+Logická souřadnice x levého horního rohu zdrojové bitmapy.
 
 *ySrc*<br/>
-Logickou souřadnici y levého horního rohu zdrojovou bitmapu.
+Logická souřadnice y levého horního rohu zdrojové bitmapy.
 
 *hbmMask*<br/>
-Popisovač maska monochromatický rastrový obrázek v kombinaci s barvy rastrového obrázku v kontextu zdrojového zařízení.
+Zpracování rastrového obrázku s monochromatickou maskou v kombinaci s barevným rastrovým obrázkem v kontextu zdrojového zařízení.
 
 *xMask*<br/>
-Posun vodorovné pixel rastrového obrázku maska určené *hbmMask* parametru.
+Vodorovný posun pixelu pro rastrový obrázek masky určený parametrem *hbmMask*
 
 *yMask*<br/>
-Posun svislé pixel rastrového obrázku maska určené *hbmMask* parametru.
+Posun svislého pixelu pro rastrový obrázek masky určený parametrem *hbmMask*
 
 *dwROP*<br/>
-Určuje kódy Ternární rastrové operace popředí a pozadí, která metoda se používá k řízení kombinací datový zdroj a cíl. Kód na pozadí rastrové operace je uložen v nejvyšším bajt vyšší řád slova tuto hodnotu; popředí rastrovou operaci kód je uložen v nejnižší bajt vyšší řád slova tuto hodnotu; nižší řád slova z této hodnoty je ignorována a musí být nula. Diskuzi o popředí a pozadí v rámci této metody, naleznete v tématu `MaskBlt` v sadě Windows SDK. Seznam běžných kódy rastrové operace najdete v tématu `BitBlt` v sadě Windows SDK.
+Určuje kódy operací rastrového typu popředí a pozadí, které metoda používá k řízení kombinace zdrojových a cílových dat. Kód operace rastrového obrazu na pozadí je uložen v horním bajtu slova s vyšším pořadím této hodnoty; kód operace rastru na popředí je uložen v bajtu s nižším pořadím slova této hodnoty v dolním pořadí. slovo s nižším pořadím této hodnoty je ignorováno a mělo by být nula. Diskuzi o popředí a pozadí v souvislosti s touto metodou naleznete v části `MaskBlt` v Windows SDK. Seznam běžných kódů rastrových operací najdete v části `BitBlt` v Windows SDK.
 
 *rectDest*<br/>
-Odkaz na `RECT` strukturu, identifikace cíle.
+Odkaz na `RECT` strukturu, která identifikuje cíl.
 
 *pointSrc*<br/>
-A `POINT` struktura označující levém horním rohu zdrojového obdélníku.
+`POINT` Struktura označující levý horní roh zdrojového obdélníku.
 
 *pointMask*<br/>
-A `POINT` struktura označující levý horní roh maska rastrového obrázku.
+`POINT` Struktura označující levý horní roh rastrového obrázku masky.
 
 *pointDest*<br/>
-Odkaz na `POINT` strukturu, která identifikuje levém horním rohu cílového obdélníku v logických jednotkách.
+Odkaz na `POINT` strukturu, která identifikuje levý horní roh cílového obdélníku v logických jednotkách.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Nenulové, pokud je úspěšná, jinak 0.
+Nenulové, pokud bylo úspěšné, jinak 0.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato metoda se vztahuje na Windows NT verze 4.0 nebo vyšší.
+Tato metoda se vztahuje jenom na Windows NT verze 4,0 a novější.
 
-##  <a name="operator_hbitmap"></a>  CImage::operator HBITMAP
+##  <a name="operator_hbitmap"></a>Služby CImage ve:: operator HBITMAP
 
-Tento operátor se získat popisovač Windows GDI připojené `CImage` objektu. Tento operátor je operátor přetypování, která podporuje přímému použití objektu HBITMAP.
+Tento operátor použijte k získání připojené obslužné rutiny `CImage` Windows GDI objektu. Tento operátor je operátor přetypování, který podporuje přímé použití objektu HBITMAP.
 
-##  <a name="plgblt"></a>  CImage::PlgBlt
+##  <a name="plgblt"></a>Služby CImage ve::P lgBlt
 
-Provede přenos bitového bloku z obdélníku v kontextu zdrojového zařízení do rovnoběžník v kontextu cílového zařízení.
+Provede přenos bitového bloku z obdélníku v kontextu zdrojového zařízení do kosoúhelníke v kontextu cílového zařízení.
 
 ```
 BOOL PlgBlt(
@@ -1235,48 +1235,48 @@ BOOL PlgBlt(
 Popisovač kontextu cílového zařízení.
 
 *pPoints*<br/>
-Ukazatel na tři body v logické místo, které identifikují tři rohů rovnoběžník cílového pole. Levém horním rohu zdrojového obdélníku je namapována na prvním bodem toto pole, pravém horním rohu na druhý bod v tomto poli a levého dolního rohu třetí bod. Pravém dolním rohu zdrojového obdélníku je namapována na implicitní čtvrtý časovému rovnoběžník.
+Ukazatel na pole tří bodů v logickém prostoru, který identifikuje tři rohy cílové kosoúhelníke. Levý horní roh zdrojového obdélníku je namapován na první bod v tomto poli, v pravém horním rohu druhého bodu v tomto poli a v levém dolním rohu na třetí bod. Pravý dolní roh zdrojového obdélníku je namapován na implicitní čtvrtý bod v kosoúhelníki.
 
 *hbmMask*<br/>
-Popisovač volitelné monochromatický rastrový obrázek, který slouží k maskování barvy zdrojového obdélníku.
+Popisovač volitelné monochromatické bitmapy, který se používá k maskování barev zdrojového obdélníku.
 
 *xSrc*<br/>
-Souřadnice x, v logických jednotkách, levého horního rohu zdrojového obdélníku.
+Souřadnice x (v logických jednotkách) levého horního rohu zdrojového obdélníku.
 
 *ySrc*<br/>
-Souřadnice y, v logických jednotkách, levého horního rohu zdrojového obdélníku.
+Souřadnice y v levém horním rohu zdrojového obdélníku v logických jednotkách.
 
 *nSrcWidth*<br/>
-Šířka v logických jednotkách, zdrojového obdélníku.
+Šířka zdrojového obdélníku v logických jednotkách.
 
 *nSrcHeight*<br/>
-Výška v logických jednotkách, zdrojového obdélníku.
+Výška zdrojového obdélníku v logických jednotkách
 
 *xMask*<br/>
-Souřadnice x levého horního rohu monochromatický rastrový obrázek.
+Souřadnice x levého horního rohu monochromatického rastrového obrázku.
 
 *yMask*<br/>
-Souřadnice y levého horního rohu monochromatický rastrový obrázek.
+Souřadnice y levého horního rohu monochromatického rastrového obrázku.
 
 *rectSrc*<br/>
-Odkaz na [RECT](/previous-versions/dd162897\(v=vs.85\)) struktura zadání souřadnic zdrojového obdélníku.
+Odkaz na strukturu [Rect](/previous-versions/dd162897\(v=vs.85\)) , která určuje souřadnice zdrojového obdélníku.
 
 *pointMask*<br/>
-A [bodu](/previous-versions/dd162805\(v=vs.85\)) struktura označující levý horní roh maska rastrového obrázku.
+Struktura [bodu](/previous-versions/dd162805\(v=vs.85\)) označující levý horní roh rastrového obrázku masky.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Nenulové, pokud je úspěšná, jinak 0.
+Nenulové, pokud bylo úspěšné, jinak 0.
 
 ### <a name="remarks"></a>Poznámky
 
-Pokud *hbmMask* identifikuje platný monochromatický rastrový obrázek, `PlgBit` používá tento rastrový obrázek k maskování bitů barev dat ze zdrojového obdélníku.
+Pokud *hbmMask* identifikuje platný monochromatický rastrový `PlgBit` obrázek, používá tento rastrový obrázek k maskování bitů dat barev ze zdrojového obdélníku.
 
-Tato metoda se vztahuje na Windows NT verze 4.0 nebo vyšší. Zobrazit [PlgBlt](/windows/desktop/api/wingdi/nf-wingdi-plgblt) v sadě Windows SDK pro podrobnější informace.
+Tato metoda se vztahuje jenom na Windows NT verze 4,0 a novější. Podrobnější informace najdete v tématu [PlgBlt](/windows/win32/api/wingdi/nf-wingdi-plgblt) v Windows SDK.
 
-##  <a name="releasedc"></a>  CImage::ReleaseDC
+##  <a name="releasedc"></a>Služby CImage ve:: ReleaseDC
 
-Uvolní kontextu zařízení.
+Uvolní kontext zařízení.
 
 ```
 void ReleaseDC() const throw();
@@ -1284,11 +1284,11 @@ void ReleaseDC() const throw();
 
 ### <a name="remarks"></a>Poznámky
 
-Protože pouze jeden rastrového obrázku se dají do kontextu zařízení najednou, je nutné volat `ReleaseDC` pro každé volání [GetDC](#getdc).
+Vzhledem k tomu, že pouze jedna Bitmapa může být vybrána v kontextu zařízení v jednom okamžiku `ReleaseDC` , je nutné zavolat pro každé volání [GetDC](#getdc).
 
-##  <a name="releasegdiplus"></a>  CImage::ReleaseGDIPlus
+##  <a name="releasegdiplus"></a>Služby CImage ve:: ReleaseGDIPlus
 
-Uvolní prostředky využívané třídou rozhraní GDI +.
+Uvolňuje prostředky používané rozhraním GDI+.
 
 ```
 void ReleaseGDIPlus() throw();
@@ -1296,11 +1296,11 @@ void ReleaseGDIPlus() throw();
 
 ### <a name="remarks"></a>Poznámky
 
-Tato metoda musí být volána k uvolnění prostředků přidělaná globální `CImage` objektu. Zobrazit [CImage::CImage](#cimage).
+Tato metoda musí být volána, aby uvolnila prostředky, které `CImage` jsou přiděleny globálním objektem. Viz [služby CImage ve:: služby CImage ve](#cimage).
 
-##  <a name="save"></a>  CImage::Save
+##  <a name="save"></a>Služby CImage ve:: Save
 
-Obrázek uloží do zadaného datového proudu nebo souboru na disku.
+Uloží obrázek do zadaného datového proudu nebo souboru na disku.
 
 ```
 HRESULT Save(
@@ -1315,36 +1315,36 @@ HRESULT Save(
 ### <a name="parameters"></a>Parametry
 
 *pStream*<br/>
-Ukazatel na objekt modelu COM IStream obsahující data bitové kopie souboru.
+Ukazatel na objekt COM IStream obsahující data bitové kopie souboru.
 
 *pszFileName*<br/>
-Ukazatel na název souboru obrázku.
+Ukazatel na název souboru pro obrázek.
 
 *guidFileType*<br/>
-Typ souboru, který chcete uložit obrázek jako. Může být jedna z následujících akcí:
+Typ souboru, ve kterém má být obrázek uložen. Může být jedna z následujících akcí:
 
-- `ImageFormatBMP` Nekomprimovaný rastrový obrázek.
+- `ImageFormatBMP`Nekomprimovaný rastrový obrázek.
 
-- `ImageFormatPNG` Komprimovanou bitovou kopii grafické PNG (Portable Network).
+- `ImageFormatPNG`Komprimovaný obrázek PNG (Portable Network Graphics).
 
-- `ImageFormatJPEG` Komprimovanou bitovou kopii ve formátu JPEG.
+- `ImageFormatJPEG`Komprimovaný obrázek JPEG.
 
-- `ImageFormatGIF` Komprimovanou bitovou kopii ve formátu GIF.
+- `ImageFormatGIF`Komprimovaný obrázek GIF.
 
 > [!NOTE]
-> Úplný seznam konstant, naleznete v tématu **konstanty formát souboru obrázku** v sadě Windows SDK.
+> Úplný seznam konstant najdete v tématu konstanty **formátu souboru obrázku** v Windows SDK.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Standardní HRESULT.
+Standardní hodnota HRESULT.
 
 ### <a name="remarks"></a>Poznámky
 
-Voláním této funkce, které chcete uložit obrázek pomocí zadaného názvu a typu. Pokud *guidFileType* není zahrnutý parametr, název souboru příponu souboru se použije k určení formátu image. Pokud je k dispozici žádné rozšíření, na obrázku se uloží ve formátu BMP.
+Voláním této funkce uložíte image s použitím zadaného názvu a typu. Pokud parametr *guidFileType* není zahrnutý, použije se k určení formátu obrázku Přípona souboru názvu souboru. Pokud není k dispozici žádné rozšíření, bude obrázek uložen ve formátu BMP.
 
-##  <a name="setcolortable"></a>  CImage::SetColorTable
+##  <a name="setcolortable"></a>Služby CImage ve:: SetColorTable
 
-Nastaví hodnoty barvy červená, zelená, modrá (RGB) pro celou řadu položek na paletě části DIB.
+Nastaví hodnoty barvy červené, zelené, modré (RGB) pro rozsah položek v paletě oddílu DIB.
 
 ```
 void SetColorTable(
@@ -1356,21 +1356,21 @@ void SetColorTable(
 ### <a name="parameters"></a>Parametry
 
 *iFirstColor*<br/>
-Index tabulky barev první položky nastavení.
+Index tabulky barev prvního záznamu, který se má nastavit
 
 *nColors*<br/>
-Počet zápisy v tabulce barev k nastavení.
+Počet položek tabulky barev, které mají být nastaveny.
 
 *prgbColors*<br/>
-Ukazatel na pole [RGBQUAD](/windows/desktop/api/wingdi/ns-wingdi-tagrgbquad) struktury barvu tabulky položky.
+Ukazatel na pole struktur [RGBQUAD](/windows/win32/api/wingdi/ns-wingdi-rgbquad) pro nastavení položek v tabulce barev.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato metoda podporuje pouze část bitmap DIB.
+Tato metoda podporuje pouze rastrové obrázky oddílů DIB.
 
-##  <a name="setpixel"></a>  CImage::SetPixel
+##  <a name="setpixel"></a>Služby CImage ve:: funkce SetPixel
 
-Nastavuje barvu pixel v daném místě rastrového obrázku nastaven.
+Nastaví barvu pixelu v daném umístění rastrového obrázku.
 
 ```
 void SetPixel(int x, int y, COLORREF color) throw();
@@ -1379,21 +1379,21 @@ void SetPixel(int x, int y, COLORREF color) throw();
 ### <a name="parameters"></a>Parametry
 
 *x*<br/>
-Vodorovné umístění obrazového bodu nastavit.
+Vodorovné umístění pixelu, které se má nastavit
 
 *y*<br/>
-Svislé umístění obrazového bodu nastavit.
+Svislé umístění pixelu, které se má nastavit
 
-*color*<br/>
-Barva, do které jste nastavili je pixel.
+*barevných*<br/>
+Barva, na kterou nastavíte pixel.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato metoda selže, pokud je pixel koordinuje leží mimo oblast ořezu vybrané.
+Tato metoda se nezdařila, pokud souřadnice pixelu leží mimo vybranou oblast oříznutí.
 
-##  <a name="setpixelindexed"></a>  CImage::SetPixelIndexed
+##  <a name="setpixelindexed"></a>Služby CImage ve:: SetPixelIndexed
 
-Nastavuje barvu pixelu na barvu na *iIndex* palety barev.
+Nastaví barvu v pixelech na barvu umístěnou na *iIndex* v paletě barev.
 
 ```
 void SetPixelIndexed(int x, int y, int iIndex) throw();
@@ -1402,17 +1402,17 @@ void SetPixelIndexed(int x, int y, int iIndex) throw();
 ### <a name="parameters"></a>Parametry
 
 *x*<br/>
-Vodorovné umístění obrazového bodu nastavit.
+Vodorovné umístění pixelu, které se má nastavit
 
 *y*<br/>
-Svislé umístění obrazového bodu nastavit.
+Svislé umístění pixelu, které se má nastavit
 
 *iIndex*<br/>
-Index barev palety barev.
+Index barvy v paletě barev
 
-##  <a name="setpixelrgb"></a>  CImage::SetPixelRGB
+##  <a name="setpixelrgb"></a>Služby CImage ve:: SetPixelRGB
 
-Nastaví je pixel v umístění určeném *x* a *y* barvy indikován *r*, *g*, a *b*, v červené, zelené a modré (RGB) image.
+Nastaví pixel v umístěních určených *x* a *y* na barvy označené *r*, *g*a *b*v červené, zelené a modré imagi (RGB).
 
 ```
 void SetPixelRGB(
@@ -1426,13 +1426,13 @@ void SetPixelRGB(
 ### <a name="parameters"></a>Parametry
 
 *x*<br/>
-Vodorovné umístění obrazového bodu nastavit.
+Vodorovné umístění pixelu, které se má nastavit
 
 *y*<br/>
-Svislé umístění obrazového bodu nastavit.
+Svislé umístění pixelu, které se má nastavit
 
 *r*<br/>
-Intenzita červenou barvou.
+Intenzita červené barvy.
 
 *g*<br/>
 Intenzita zelené barvy.
@@ -1442,11 +1442,11 @@ Intenzita modré barvy.
 
 ### <a name="remarks"></a>Poznámky
 
-Každý červené, zelené a modré parametry jsou reprezentované pomocí číslo mezi 0 a 255. Pokud nastavíte všechny tři parametry na hodnotu nula, kombinované výsledné barvy je černá. Pokud nastavíte všechny tři parametry na 255, je bílé kombinované výsledné barvy.
+Červené, zelené a modré parametry jsou reprezentované číslem mezi 0 a 255. Pokud nastavíte všechny tři parametry na hodnotu nula, kombinovaná Výsledná barva je černá. Pokud nastavíte všechny tři parametry na 255, kombinovaná Výsledná barva je bílá.
 
-##  <a name="settransparentcolor"></a>  CImage::SetTransparentColor
+##  <a name="settransparentcolor"></a>Služby CImage ve:: SetTransparentColor
 
-Nastaví barvu, která v daném místě indexované jako průhledná.
+Nastaví barvu v daném indexovaném umístění jako transparentní.
 
 ```
 LONG SetTransparentColor(LONG iTransparentColor) throw();
@@ -1455,15 +1455,15 @@ LONG SetTransparentColor(LONG iTransparentColor) throw();
 ### <a name="parameters"></a>Parametry
 
 *iTransparentColor*<br/>
-Index v barevné palety barev k nastavení na transparentní. Pokud hodnotu-1, žádné barva je nastavena na transparentní.
+Index v paletě barev barvy, který má být nastaven na hodnotu Transparent. Pokud-1, není žádná barva nastavena na transparentní.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Index barva předtím nastavili jako průhledná.
+Index barvy, která byla dříve nastavena jako průhledná.
 
-##  <a name="stretchblt"></a>  CImage::StretchBlt
+##  <a name="stretchblt"></a>Služby CImage ve:: StretchBlt
 
-Zkopíruje bitmapu ze kontext zdrojového zařízení pro toto aktuální kontext zařízení.
+Zkopíruje rastrový obrázek z kontextu zdrojového zařízení do tohoto aktuálního kontextu zařízení.
 
 ```
 BOOL StretchBlt(
@@ -1504,49 +1504,49 @@ BOOL StretchBlt(
 Popisovač kontextu cílového zařízení.
 
 *xDest*<br/>
-Souřadnice x, v logických jednotkách, levého horního rohu cílového obdélníku.
+Souřadnice x (v logických jednotkách) levého horního rohu cílového obdélníku.
 
 *yDest*<br/>
-Souřadnice y, v logických jednotkách, levého horního rohu cílového obdélníku.
+Souřadnice y v levém horním rohu cílového obdélníku v logických jednotkách.
 
 *nDestWidth*<br/>
-Šířka v logické jednotky cílového obdélníku.
+Šířka cílového obdélníku v logických jednotkách.
 
 *nDestHeight*<br/>
-Výška v logických jednotkách cílového obdélníku.
+Výška cílového obdélníku v logických jednotkách.
 
 *dwROP*<br/>
-Rastrová operace provést. Kódy rastrové operace definovat přesně jak kombinovat bity zdroje, cíle a vzor k cíli (podle aktuálně vybraného štětce). Zobrazit [přenos bitových bloků](/windows/desktop/api/wingdi/nf-wingdi-bitblt) v sadě Windows SDK pro seznam další kódy rastrové operace a jejich popisy.
+Operace rastru, která má být provedena. Kódy pro rastrové operace definují přesně způsob, jak kombinovat bity zdroje, cíle a vzor (jak definuje aktuálně vybraný štětec) k vytvoření cíle. Seznam dalších kódů s rastrovými operace a jejich popis naleznete v tématu [BitBlt](/windows/win32/api/wingdi/nf-wingdi-bitblt) v Windows SDK.
 
 *rectDest*<br/>
-Odkaz na [RECT](/previous-versions/dd162897\(v=vs.85\)) strukturu, identifikace cíle.
+Odkaz na strukturu [Rect](/previous-versions/dd162897\(v=vs.85\)) , která identifikuje cíl.
 
 *xSrc*<br/>
-Souřadnice x, v logických jednotkách, levého horního rohu zdrojového obdélníku.
+Souřadnice x (v logických jednotkách) levého horního rohu zdrojového obdélníku.
 
 *ySrc*<br/>
-Souřadnice y, v logických jednotkách, levého horního rohu zdrojového obdélníku.
+Souřadnice y v levém horním rohu zdrojového obdélníku v logických jednotkách.
 
 *nSrcWidth*<br/>
-Šířka v logických jednotkách, zdrojového obdélníku.
+Šířka zdrojového obdélníku v logických jednotkách.
 
 *nSrcHeight*<br/>
-Výška v logických jednotkách, zdrojového obdélníku.
+Výška zdrojového obdélníku v logických jednotkách
 
 *rectSrc*<br/>
-Odkaz na `RECT` strukturu, identifikace zdroji.
+Odkaz na `RECT` strukturu, která identifikuje zdroj.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Nenulové, pokud je úspěšná, jinak 0.
+Nenulové, pokud bylo úspěšné, jinak 0.
 
 ### <a name="remarks"></a>Poznámky
 
-Další informace najdete v tématu [StretchBlt](/windows/desktop/api/wingdi/nf-wingdi-stretchblt) v sadě Windows SDK.
+Další informace najdete v tématu [StretchBlt](/windows/win32/api/wingdi/nf-wingdi-stretchblt) v Windows SDK.
 
-##  <a name="transparentblt"></a>  CImage::TransparentBlt
+##  <a name="transparentblt"></a>Služby CImage ve:: TransparentBlt
 
-Zkopíruje bitmapu ze kontext zdrojového zařízení pro toto aktuální kontext zařízení.
+Zkopíruje rastrový obrázek z kontextu zdrojového zařízení do tohoto aktuálního kontextu zařízení.
 
 ```
 BOOL TransparentBlt(
@@ -1587,45 +1587,45 @@ BOOL TransparentBlt(
 Popisovač kontextu cílového zařízení.
 
 *xDest*<br/>
-Souřadnice x, v logických jednotkách, levého horního rohu cílového obdélníku.
+Souřadnice x (v logických jednotkách) levého horního rohu cílového obdélníku.
 
 *yDest*<br/>
-Souřadnice y, v logických jednotkách, levého horního rohu cílového obdélníku.
+Souřadnice y v levém horním rohu cílového obdélníku v logických jednotkách.
 
 *nDestWidth*<br/>
-Šířka v logické jednotky cílového obdélníku.
+Šířka cílového obdélníku v logických jednotkách.
 
 *nDestHeight*<br/>
-Výška v logických jednotkách cílového obdélníku.
+Výška cílového obdélníku v logických jednotkách.
 
 *crTransparent*<br/>
-Barva v zdrojovou bitmapu do považována za průhlednou. Ve výchozím nastavení CLR_INVALID, by měl být použit označující, že barva aktuálně nastavený jako průhledná barva obrázku.
+Barva ve zdrojové bitmapě, která má být považována za průhlednou. Ve výchozím nastavení je CLR_INVALID, což znamená, že by měla být použita barva aktuálně nastavená jako průhledná barva obrázku.
 
 *rectDest*<br/>
-Odkaz na [RECT](/previous-versions/dd162897\(v=vs.85\)) strukturu, identifikace cíle.
+Odkaz na strukturu [Rect](/previous-versions/dd162897\(v=vs.85\)) , která identifikuje cíl.
 
 *xSrc*<br/>
-Souřadnice x, v logických jednotkách, levého horního rohu zdrojového obdélníku.
+Souřadnice x (v logických jednotkách) levého horního rohu zdrojového obdélníku.
 
 *ySrc*<br/>
-Souřadnice y, v logických jednotkách, levého horního rohu zdrojového obdélníku.
+Souřadnice y v levém horním rohu zdrojového obdélníku v logických jednotkách.
 
 *nSrcWidth*<br/>
-Šířka v logických jednotkách, zdrojového obdélníku.
+Šířka zdrojového obdélníku v logických jednotkách.
 
 *nSrcHeight*<br/>
-Výška v logických jednotkách, zdrojového obdélníku.
+Výška zdrojového obdélníku v logických jednotkách
 
 *rectSrc*<br/>
-Odkaz na `RECT` strukturu, identifikace zdroji.
+Odkaz na `RECT` strukturu, která identifikuje zdroj.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-TRUE, pokud je úspěšná, jinak hodnota FALSE.
+TRUE, pokud je to úspěšné, jinak FALSE.
 
 ### <a name="remarks"></a>Poznámky
 
-`TransparentBlt` platí pro zdrojové bitmapy 4 bitů na pixel a 8 bitů na pixel. Použití [CImage::AlphaBlend](#alphablend) určit rastrové obrázky 32 bitů na pixel se transparentnost.
+`TransparentBlt`je podporováno pro zdrojové bitmapy o velikosti 4 bitů na pixel a 8 bitů na pixel. Použijte [služby CImage ve:: AlphaBlend](#alphablend) k určení 32 rastrových obrázků bitů na pixel s průhledností.
 
 ### <a name="example"></a>Příklad
 
@@ -1658,10 +1658,10 @@ BOOL TransparentBlt(CImage* pSrcImage, CImage* pDstImage,
 
 ## <a name="see-also"></a>Viz také:
 
-[MMXSwarm Sample](../../overview/visual-cpp-samples.md)<br/>
+[Ukázka MMXSwarm](../../overview/visual-cpp-samples.md)<br/>
 [Ukázka SimpleImage](../../overview/visual-cpp-samples.md)<br/>
-[Bitmap nezávislých na zařízení](/windows/desktop/gdi/device-independent-bitmaps)<br/>
-[CreateDIBSection](/windows/desktop/api/wingdi/nf-wingdi-createdibsection)<br/>
+[Rastrové obrázky nezávislé na zařízení](/windows/win32/gdi/device-independent-bitmaps)<br/>
+[CreateDIBSection](/windows/win32/api/wingdi/nf-wingdi-createdibsection)<br/>
 [Desktopové komponenty ATL objektů COM](../../atl/atl-com-desktop-components.md)<br/>
-[Bitmap nezávislých na zařízení](/windows/desktop/gdi/device-independent-bitmaps)<br/>
-[CreateDIBSection](/windows/desktop/api/wingdi/nf-wingdi-createdibsection)
+[Rastrové obrázky nezávislé na zařízení](/windows/win32/gdi/device-independent-bitmaps)<br/>
+[CreateDIBSection](/windows/win32/api/wingdi/nf-wingdi-createdibsection)

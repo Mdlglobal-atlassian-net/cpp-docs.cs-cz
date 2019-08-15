@@ -16,12 +16,12 @@ f1_keywords:
 helpviewer_keywords:
 - CTokenGroups class
 ms.assetid: 2ab08076-4b08-4487-bc70-ec6dee304190
-ms.openlocfilehash: 4e5d06ca01201bf415afedbe6f6e5bca096f68fa
-ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
+ms.openlocfilehash: 88096747f45d4a81c873837cdd4975da9d8c24e2
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68915582"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69496297"
 ---
 # <a name="ctokengroups-class"></a>CTokenGroups – třída
 
@@ -67,11 +67,11 @@ class CTokenGroups
 
 ## <a name="remarks"></a>Poznámky
 
-[Přístupový token](/windows/desktop/SecAuthZ/access-tokens) je objekt, který popisuje kontext zabezpečení procesu nebo vlákna a je přidělen každému uživateli přihlášenému do systému Windows.
+[Přístupový token](/windows/win32/SecAuthZ/access-tokens) je objekt, který popisuje kontext zabezpečení procesu nebo vlákna a je přidělen každému uživateli přihlášenému do systému Windows.
 
-Třída je obálkou pro strukturu TOKEN_GROUPS, která obsahuje informace o identifikátorech zabezpečení skupiny (SID) v přístupovém tokenu. [](/windows/desktop/api/winnt/ns-winnt-token_groups) `CTokenGroups`
+Třída je obálkou pro strukturu TOKEN_GROUPS, která obsahuje informace o identifikátorech zabezpečení skupiny (SID) v přístupovém tokenu. [](/windows/win32/api/winnt/ns-winnt-token_groups) `CTokenGroups`
 
-Úvod do modelu řízení přístupu v systému Windows naleznete v tématu [Access Control](/windows/desktop/SecAuthZ/access-control) v Windows SDK.
+Úvod do modelu řízení přístupu v systému Windows naleznete v tématu [Access Control](/windows/win32/SecAuthZ/access-control) v Windows SDK.
 
 ## <a name="requirements"></a>Požadavky
 
@@ -95,7 +95,7 @@ Objekt [CSID](../../atl/reference/csid-class.md) .
 Atributy, které mají být spojeny s `CSid` objektem.
 
 *rTokenGroups*<br/>
-Struktura [TOKEN_GROUPS](/windows/desktop/api/winnt/ns-winnt-token_groups)
+Struktura [TOKEN_GROUPS](/windows/win32/api/winnt/ns-winnt-token_groups)
 
 ### <a name="remarks"></a>Poznámky
 
@@ -114,7 +114,7 @@ CTokenGroups(const TOKEN_GROUPS& rhs) throw(...);
 ### <a name="parameters"></a>Parametry
 
 *zarovnání indirekce RHS*<br/>
-Objekt nebo struktura [TOKEN_GROUPS](/windows/desktop/api/winnt/ns-winnt-token_groups) , pomocí `CTokenGroups` které se vytvoří objekt. `CTokenGroups`
+Objekt nebo struktura [TOKEN_GROUPS](/windows/win32/api/winnt/ns-winnt-token_groups) , pomocí `CTokenGroups` které se vytvoří objekt. `CTokenGroups`
 
 ### <a name="remarks"></a>Poznámky
 
@@ -191,7 +191,7 @@ const TOKEN_GROUPS* GetPTOKEN_GROUPS() const throw(...);
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Načte ukazatel na strukturu [TOKEN_GROUPS](/windows/desktop/api/winnt/ns-winnt-token_groups) patřící `CTokenGroups` objektu přístupového tokenu.
+Načte ukazatel na strukturu [TOKEN_GROUPS](/windows/win32/api/winnt/ns-winnt-token_groups) patřící `CTokenGroups` objektu přístupového tokenu.
 
 ##  <a name="getsidsandattributes"></a>CTokenGroups::GetSidsAndAttributes
 
@@ -253,7 +253,7 @@ CTokenGroups& operator= (const CTokenGroups& rhs) throw(...);
 ### <a name="parameters"></a>Parametry
 
 *zarovnání indirekce RHS*<br/>
-Objekt nebo struktura [TOKEN_GROUPS](/windows/desktop/api/winnt/ns-winnt-token_groups) `CTokenGroups` , která se má přiřadit k objektu. `CTokenGroups`
+Objekt nebo struktura [TOKEN_GROUPS](/windows/win32/api/winnt/ns-winnt-token_groups) `CTokenGroups` , která se má přiřadit k objektu. `CTokenGroups`
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -269,7 +269,7 @@ operator const TOKEN_GROUPS *() const throw(...);
 
 ### <a name="remarks"></a>Poznámky
 
-Přetypování hodnoty na ukazatel na strukturu [TOKEN_GROUPS](/windows/desktop/api/winnt/ns-winnt-token_groups) .
+Přetypování hodnoty na ukazatel na strukturu [TOKEN_GROUPS](/windows/win32/api/winnt/ns-winnt-token_groups) .
 
 ## <a name="see-also"></a>Viz také:
 

@@ -14,12 +14,12 @@ helpviewer_keywords:
 - literal strings [C++]
 - string literals [C++]
 ms.assetid: 61de8f6f-2714-4e7b-86b6-a3f885d3b9df
-ms.openlocfilehash: df690bea81b9799b30ae91313ce7157400ef8413
-ms.sourcegitcommit: bd7ddc044f9083246614b602ef6a758775313214
+ms.openlocfilehash: e7f0d4291aeb2e3d8dc1eac4dd08ef3e961468ff
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68866096"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69498534"
 ---
 # <a name="string-and-character-literals-c"></a>Řetězcové a znakové literályC++()
 
@@ -216,7 +216,7 @@ char u5 = '\U00000041'; // \U UCN 'A'
 
 Univerzální názvy znaků nemůžou kódovat hodnoty v rozsahu bodu nahrazení D800-DFFF. Pro náhradní páry Unicode zadejte univerzální název znaku pomocí `\UNNNNNNNN`, kde nnnnnnnn je osmimístný bod kódu pro daný znak. Kompilátor vygeneruje v případě potřeby náhradní dvojici.
 
-V jazyce C++ 03 jazyk povoluje pouze podmnožinu znaků, které mají být reprezentovány svými názvy univerzálních znaků, a povoluje některé univerzální názvy znaků, které ve skutečnosti nepředstavovaly platné znaky kódování Unicode. Tato chyba byla opravena ve standardu C++ 11. V jazyce C++ 11 mohou znakové a řetězcové literály a identifikátory používat univerzální názvy znaků.  Další informace o univerzálních názvech znaků naleznete v tématu [znakové sady](../cpp/character-sets.md). Další informace o kódování Unicode naleznete v tématu [Unicode](https://msdn.microsoft.com/library/dd374081). Další informace o náhradních dvojicích naleznete v tématu [náhradní páry a doplňující znaky](/windows/desktop/Intl/surrogates-and-supplementary-characters).
+V jazyce C++ 03 jazyk povoluje pouze podmnožinu znaků, které mají být reprezentovány svými názvy univerzálních znaků, a povoluje některé univerzální názvy znaků, které ve skutečnosti nepředstavovaly platné znaky kódování Unicode. Tato chyba byla opravena ve standardu C++ 11. V jazyce C++ 11 mohou znakové a řetězcové literály a identifikátory používat univerzální názvy znaků.  Další informace o univerzálních názvech znaků naleznete v tématu [znakové sady](../cpp/character-sets.md). Další informace o kódování Unicode naleznete v tématu [Unicode](/windows/win32/intl/unicode). Další informace o náhradních dvojicích naleznete v tématu [náhradní páry a doplňující znaky](/windows/win32/Intl/surrogates-and-supplementary-characters).
 
 ## <a name="string-literals"></a>Řetězcové literály
 

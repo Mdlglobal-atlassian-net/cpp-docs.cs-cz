@@ -7,16 +7,16 @@ helpviewer_keywords:
 - CTabCtrl class [MFC], owner-drawn tabs
 - drawing [MFC], tabs
 ms.assetid: 11af2926-41d7-47e3-9eec-c595283f6371
-ms.openlocfilehash: 8c52bb325764f0edfff315edf21128f117c1a67b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ade5cd6b7d9bcb3dc398993c1758c7849fdc1f20
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62391397"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69508287"
 ---
 # <a name="making-owner-drawn-tabs"></a>Vytváření karet vykreslovaných vlastníkem
 
-Můžete definovat jednotlivé položky ovládacího prvku karta ([atributu CTabCtrl](../mfc/reference/ctabctrl-class.md)) bude vlastníkem vykreslované položky. Další informace najdete v tématu [Owner-Drawn karty](/windows/desktop/Controls/tab-controls) v sadě Windows SDK.
+Můžete definovat jednotlivé položky ovládacího prvku karta ([atributu CTabCtrl](../mfc/reference/ctabctrl-class.md)) tak, aby byly položky vykreslené vlastníkem. Další informace najdete v části [vlastní-vytažené karty](/windows/win32/Controls/tab-controls) v Windows SDK.
 
 ## <a name="see-also"></a>Viz také:
 

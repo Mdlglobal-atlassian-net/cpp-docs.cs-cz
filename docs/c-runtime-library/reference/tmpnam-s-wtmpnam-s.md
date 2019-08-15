@@ -30,16 +30,16 @@ helpviewer_keywords:
 - file names [C++], temporary
 - wtmpnam_s function
 ms.assetid: e70d76dc-49f5-4aee-bfa2-f1baa2bcd29f
-ms.openlocfilehash: 9bf994d16362ef461d8d25d72466721ba9a5890f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8cdd3feb177ef44c5dad32563d09a0bb8c820b22
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62155534"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69500753"
 ---
-# <a name="tmpnams-wtmpnams"></a>tmpnam_s, _wtmpnam_s
+# <a name="tmpnam_s-_wtmpnam_s"></a>tmpnam_s, _wtmpnam_s
 
-Generovat názvy, které lze použít k vytvoření dočasné soubory. Jde o verzích [tmpnam – a _wtmpnam –](tempnam-wtempnam-tmpnam-wtmpnam.md) s rozšířeními zabezpečení, jak je popsáno v [funkce zabezpečení v CRT](../../c-runtime-library/security-features-in-the-crt.md).
+Vygenerujte názvy, které můžete použít k vytvoření dočasných souborů. Jedná se o verze [tmpnam a _wtmpnam](tempnam-wtempnam-tmpnam-wtmpnam.md) s vylepšeními zabezpečení, jak [je popsáno v části funkce zabezpečení v CRT](../../c-runtime-library/security-features-in-the-crt.md).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -65,38 +65,38 @@ errno_t _wtmpnam_s(
 ### <a name="parameters"></a>Parametry
 
 *str*<br/>
-Ukazatel, který se uloží vygenerovaný název.
+Ukazatel, který bude obsahovat vygenerovaný název.
 
 *sizeInChars*<br/>
 Velikost vyrovnávací paměti ve znacích.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Obě tyto funkce vrátí 0 v případě úspěchu nebo číslo chyby při selhání.
+Obě tyto funkce vrátí 0, pokud bylo úspěšné, nebo číslo chyby při selhání.
 
-### <a name="error-conditions"></a>Chybové podmínky
+### <a name="error-conditions"></a>Chybové stavy
 
 |||||
 |-|-|-|-|
-|*str*|*sizeInChars*|**Návratová hodnota**|**Obsah**  *str* |
-|**NULL**|Všechny|**EINVAL**|Nezměněno|
-|Není **NULL** (odkazuje na platný paměti)|příliš krátký|**ERANGE**|Nezměněno|
+|*str*|*sizeInChars*|**Návratová hodnota**|**Obsah**  *str*|
+|**NULL**|jakýmikoli|**EINVAL**|Neupraveno|
+|není **null** (ukazuje na platnou paměť)|moc krátký|**ERANGE**|Neupraveno|
 
-Pokud *str* je **NULL**, je vyvolána obslužná rutina neplatného parametru, jak je popsáno v [Parameter Validation](../../c-runtime-library/parameter-validation.md). Pokud smí provádění pokračovat, tyto funkce nastaví **errno** k **EINVAL** a vrátit **EINVAL**.
+Pokud je parametr *str* **null**, je vyvolána obslužná rutina neplatného parametru, jak je popsáno v tématu [ověřování parametru](../../c-runtime-library/parameter-validation.md). Pokud provádění může pokračovat, tyto funkce nastaví **errno** na **EINVAL** a vrátí **EINVAL**.
 
 ## <a name="remarks"></a>Poznámky
 
-Každá z těchto funkcí vrací název souboru, který ještě neexistuje. **tmpnam_s –** vrátí název jedinečný v určené dočasný adresář Windows vrácený [GetTempPathW](/windows/desktop/api/fileapi/nf-fileapi-gettemppathw). Všimněte si, než když název souboru je pre čekajícího zpětným lomítkem a informace o cestě, jako je například \fname21, to znamená, že název je platný pro aktuální pracovní adresář.
+Každá z těchto funkcí vrací název souboru, který aktuálně neexistuje. **tmpnam_s** vrátí název jedinečný v určeném dočasném adresáři Windows vráceném funkcí [GetTempPathW](/windows/win32/api/fileapi/nf-fileapi-gettemppathw). Všimněte si, že pokud je název souboru před označené jako nedokončené zpětným lomítkem a žádné informace o cestě, jako je například \fname21, znamená to, že název je platný pro aktuální pracovní adresář.
 
-Pro **tmpnam_s –**, můžete uložit tento název generovaného souboru v *str*. Maximální délka řetězce vráceného **tmpnam_s –** je **L_tmpnam_s**definované v STDIO. H. Pokud *str* je **NULL**, pak **tmpnam_s –** ponechá výsledek v interní statické vyrovnávací paměti. Proto následných volání zničit tuto hodnotu. Název generované **tmpnam_s –** se skládá z názvu souboru generovaného programu a po prvním volání **tmpnam_s –**, příponu souboru pořadová čísla v základní 32 (.1 .1vvvvvu, když **TMP _MAX_S** v STDIO. H je **INT_MAX**).
+V případě **tmpnam_s**můžete tento vygenerovaný název souboru Uložit do *str*. Maximální délka řetězce vráceného funkcí **tmpnam_s** je **L_TMPNAM_S**definovaná v stdio. Y. Pokud má str **hodnotu null**, výsledek **tmpnam_s** ponechá interní statickou vyrovnávací paměť. Proto jakákoli následná volání zničí tuto hodnotu. Název generovaný pomocí **tmpnam_s** se skládá z programu generovaného programem a po prvním volání **tmpnam_s**, přípony souboru pořadových čísel v základní 32 (. 1-. 1vvvvvu, když **TMP_MAX_S** v stdio. H je **INT_MAX**).
 
-**tmpnam_s –** automaticky zpracovává vícebajtového znaku zakončeného argumenty řetězce podle potřeby, rozpozná vícebajtové znakové sekvence podle znakovou stránku OEM získané z operačního systému. **_wtmpnam_s –** je verze širokého znaku **tmpnam_s –**; argument a návratová hodnota funkce **_wtmpnam_s –** jsou širokoznaké řetězce. **_wtmpnam_s –** a **tmpnam_s –** chovají stejně, s výjimkou, že **_wtmpnam_s –** nezpracovává vícebajtové znakové řetězce.
+**tmpnam_s** automaticky zpracovává argumenty vícebajtového řetězce znaků podle potřeby a rozpozná vícebajtové znakové sekvence podle znakové stránky OEM získané z operačního systému. **_wtmpnam_s** je **tmpnam_s**verze s velkým znakem; argument a návratová hodnota **_wtmpnam_s** jsou řetězce s velkým počtem znaků. **_wtmpnam_s** a **tmpnam_s** se chovají stejně, s výjimkou toho, že **_wtmpnam_s** zpracovává řetězce vícebajtových znaků.
 
-V jazyce C++ je použití těchto funkcí zjednodušeno díky přetížení šablon; přetížení mohou odvodit délku vyrovnávací paměti automaticky, takže odpadá nutnost určit velikost argumentu. Další informace najdete v tématu [přetížení zabezpečení šablony](../../c-runtime-library/secure-template-overloads.md).
+V C++systému je použití těchto funkcí zjednodušeno díky přetížení šablon; přetížení mohou odvodit délku vyrovnávací paměti automaticky a eliminují nutnost zadat argument Size. Další informace najdete v tématu [přetížení zabezpečení šablon](../../c-runtime-library/secure-template-overloads.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapování rutin obecného textu
 
-|Rutina TCHAR.H|_UNICODE a _MBCS nejsou definovány|_MBCS definováno|_UNICODE definováno|
+|Rutina TCHAR.H|_UNICODE & _MBCS nejsou definovány.|_MBCS definováno|_UNICODE definováno|
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_ttmpnam_s**|**tmpnam_s**|**tmpnam_s**|**_wtmpnam_s**|
 
@@ -105,9 +105,9 @@ V jazyce C++ je použití těchto funkcí zjednodušeno díky přetížení šab
 |Rutina|Požadovaný hlavičkový soubor|
 |-------------|---------------------|
 |**tmpnam_s**|\<stdio.h>|
-|**_wtmpnam_s**|\<stdio.h > nebo \<wchar.h >|
+|**_wtmpnam_s**|\<stdio. h > nebo \<WCHAR. h >|
 
-Další informace o kompatibilitě, naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Příklad
 
@@ -162,7 +162,7 @@ C:\Users\LocalUser\AppData\Local\Temp\u19q8.e is safe to use as a temporary file
 
 ## <a name="see-also"></a>Viz také:
 
-[Stream vstupně-výstupních operací](../../c-runtime-library/stream-i-o.md)<br/>
+[Vstup/výstup datového proudu](../../c-runtime-library/stream-i-o.md)<br/>
 [_getmbcp](getmbcp.md)<br/>
 [malloc](malloc.md)<br/>
 [_setmbcp](setmbcp.md)<br/>

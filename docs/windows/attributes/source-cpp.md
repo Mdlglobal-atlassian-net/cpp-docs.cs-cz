@@ -1,21 +1,21 @@
 ---
-title: zdroj (atribut C++ COM)
+title: Source (C++ atribut com)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.source
 helpviewer_keywords:
 - source attribute
 ms.assetid: 1878d05d-7709-4e97-b114-c62f38f5140e
-ms.openlocfilehash: 699ea64de49a4383bc8fb62b2f3b2133d7c496c9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 79614a345e6c07b03df351da93a847fe12e4b110
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62407182"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69514022"
 ---
 # <a name="source-c"></a>source (C++)
 
-Třídy určuje rozhraní zdrojového objektu modelu COM pro spojovací body. Na vlastnost nebo metoda označuje, že členu vrátí objekt nebo VARIANTU, která je zdrojem událostí.
+U třídy určuje zdrojové rozhraní objektu COM pro body připojení. U vlastnosti nebo metody označuje, že člen vrací objekt nebo VARIANTu, který je zdrojem událostí.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -25,14 +25,14 @@ Třídy určuje rozhraní zdrojového objektu modelu COM pro spojovací body. Na
 
 ### <a name="parameters"></a>Parametry
 
-*interfaces*<br/>
-Jedno nebo více rozhraní, zadejte, pokud použijete zdrojové atribut třídy. Tento parametr se nepoužívá při použití u zdroj vlastnosti nebo metody.
+*Interfaces*<br/>
+Jedno nebo více rozhraní, které zadáte při použití atributu source na třídu. Tento parametr se nepoužívá, pokud je zdroj aplikován na vlastnost nebo metodu.
 
 ## <a name="remarks"></a>Poznámky
 
-**Zdroj** C++ atribut má stejné funkce jako [zdroj](/windows/desktop/Midl/source) atribut MIDL.
+**Zdrojový** C++ atribut má stejné funkce jako [zdrojový](/windows/win32/Midl/source) atribut MIDL.
 
-Můžete použít [výchozí](default-cpp.md) atributy výchozím zdrojovém rozhraní objektu.
+[Výchozí](default-cpp.md) atribut můžete použít k určení výchozího zdrojového rozhraní objektu.
 
 ## <a name="example"></a>Příklad
 
@@ -70,16 +70,16 @@ class NN : public b
 
 ## <a name="requirements"></a>Požadavky
 
-### <a name="attribute-context"></a>Atribut kontextu
+### <a name="attribute-context"></a>Kontext atributu
 
 |||
 |-|-|
-|**Platí pro**|**Třída**, **struktura**, **rozhraní**|
-|**Opakovatelné**|Ne|
-|**Vyžadované atributy**|`coclass` (při použití u třídy nebo struktury)|
-|**Neplatné atributy**|Žádný|
+|**Platí pro**|**Třída**, **Struktura**, **rozhraní**|
+|**REPEATABLE**|Ne|
+|**Požadované atributy**|`coclass`(při použití u třídy nebo struktury)|
+|**Neplatné atributy**|Žádné|
 
-Další informace o kontexty atributů najdete v tématu [kontexty atributů](cpp-attributes-com-net.md#contexts).
+Další informace o kontextech atributů naleznete v tématu kontexty [atributů](cpp-attributes-com-net.md#contexts).
 
 ## <a name="see-also"></a>Viz také:
 

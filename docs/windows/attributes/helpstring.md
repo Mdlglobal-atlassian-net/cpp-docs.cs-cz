@@ -1,21 +1,21 @@
 ---
-title: helpstring (atribut C++ COM)
+title: HelpString (C++ atribut com)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.helpstring
 helpviewer_keywords:
 - helpstring attribute [C++]
 ms.assetid: 0401e905-a63e-4fad-98d0-d1efea111966
-ms.openlocfilehash: 623b2c7fb4ce7c3e5de87d21f012d008720fdee2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 47a07ee94ad774bde46dce00ea46612fae3a4eca
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62409587"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69490878"
 ---
 # <a name="helpstring"></a>helpstring
 
-Určuje řetězec znaků, který se používá k popisu elementu, ke kterému se vztahuje.
+Určuje řetězec znaků, který se používá k popisu prvku, na který se vztahuje.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -26,28 +26,28 @@ Určuje řetězec znaků, který se používá k popisu elementu, ke kterému se
 ### <a name="parameters"></a>Parametry
 
 *string*<br/>
-Textový řetězec nápovědy.
+Text řetězce v nápovědě
 
 ## <a name="remarks"></a>Poznámky
 
-**Helpstring** C++ atribut má stejné funkce jako [helpstring](/windows/desktop/Midl/helpstring) atribut MIDL.
+Atribut **HelpString** C++ má stejné funkce jako atribut [HelpString](/windows/win32/Midl/helpstring) MIDL.
 
 ## <a name="example"></a>Příklad
 
-Podívejte se na příklad pro [defaultvalue](defaultvalue.md) příklad, jak používat **helpstring**.
+Příklad použití **HelpString**najdete v příkladu pro [DefaultValue](defaultvalue.md) .
 
 ## <a name="requirements"></a>Požadavky
 
-### <a name="attribute-context"></a>Atribut kontextu
+### <a name="attribute-context"></a>Kontext atributu
 
 |||
 |-|-|
-|**Platí pro**|**rozhraní**, **typedef**, **třída**, metoda, vlastnost|
-|**Opakovatelné**|Ne|
-|**Vyžadované atributy**|Žádné|
-|**Neplatné atributy**|Žádný|
+|**Platí pro**|**rozhraní**, **typedef**, **Třída**, metoda, vlastnost|
+|**REPEATABLE**|Ne|
+|**Požadované atributy**|Žádné|
+|**Neplatné atributy**|Žádné|
 
-Další informace najdete v tématu [kontexty atributů](cpp-attributes-com-net.md#contexts).
+Další informace naleznete v tématu [kontexty atributů](cpp-attributes-com-net.md#contexts).
 
 ## <a name="see-also"></a>Viz také:
 

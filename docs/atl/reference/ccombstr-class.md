@@ -29,16 +29,16 @@ helpviewer_keywords:
 - CComBSTR class
 - CComBSTR
 ms.assetid: 8fea1879-a05e-47a5-a803-8dec60eaa534
-ms.openlocfilehash: 48447b9e6a211927d8e729dd761d2e14ecd89615
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: dd45c2ff9b43148e0fe27ebd410a2390a4d12ce2
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62246557"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69497558"
 ---
 # <a name="ccombstr-class"></a>CComBSTR – třída
 
-Tato třída představuje obálku pro [BSTR](/previous-versions/windows/desktop/automat/bstr)s.
+Tato třída je obálkou pro [BSTR](/previous-versions/windows/desktop/automat/bstr)s.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -50,75 +50,75 @@ class CComBSTR
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
-|[CComBSTR::CComBSTR](#ccombstr)|Konstruktor|
-|[CComBSTR::~CComBSTR](#dtor)|Destruktor.|
+|[CComBSTR:: CComBSTR](#ccombstr)|Konstruktor|
+|[CComBSTR:: ~ CComBSTR](#dtor)|Destruktor.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
-|[CComBSTR::Append](#append)|Přidá řetězec do `m_str`.|
-|[CComBSTR::AppendBSTR](#appendbstr)|Připojí k BSTR `m_str`.|
-|[CComBSTR::AppendBytes](#appendbytes)|Přidá zadaný počet bajtů, které mají `m_str`.|
-|[CComBSTR::ArrayToBSTR](#arraytobstr)|Vytvoří BSTR z první znak každého prvku v safearray a připojí ho k `CComBSTR` objektu.|
-|[CComBSTR::AssignBSTR](#assignbstr)|Přiřadí BSTR k `m_str`.|
-|[CComBSTR::Attach](#attach)|Připojí k BSTR `CComBSTR` objektu.|
-|[CComBSTR::BSTRToArray](#bstrtoarray)|Vytvoří jednorozměrný safearray založený na nule, kde každý prvek pole je znak z `CComBSTR` objektu.|
-|[CComBSTR::ByteLength](#bytelength)|Vrátí délku objektu `m_str` v bajtech.|
-|[CComBSTR::Copy](#copy)|Vrátí kopii objektu `m_str`.|
-|[CComBSTR::CopyTo](#copyto)|Vrátí kopii objektu `m_str` prostřednictvím **[out]** parametr|
-|[CComBSTR::Detach](#detach)|Odpojí `m_str` z `CComBSTR` objektu.|
-|[CComBSTR::Empty](#empty)|Uvolní `m_str`.|
-|[CComBSTR::Length](#length)|Vrátí délku objektu `m_str`.|
-|[CComBSTR::LoadString](#loadstring)|Načte prostředek řetězce.|
+|[CComBSTR:: Append](#append)|Připojí řetězec k `m_str`.|
+|[CComBSTR:: AppendBSTR](#appendbstr)|Připojí BSTR do `m_str`.|
+|[CComBSTR:: AppendBytes](#appendbytes)|Připojí zadaný počet bajtů `m_str`.|
+|[CComBSTR:: ArrayToBSTR](#arraytobstr)|Vytvoří BSTR z prvního znaku každého prvku v SAFEARRAY a připojí ho k `CComBSTR` objektu.|
+|[CComBSTR:: AssignBSTR](#assignbstr)|Přiřadí objekt BSTR `m_str`k.|
+|[CComBSTR:: Attach](#attach)|Připojí `CComBSTR` objekt BSTR k objektu.|
+|[CComBSTR:: BSTRToArray](#bstrtoarray)|Vytvoří jednorozměrné jednorozměrné pole SAFEARRAY, kde každý prvek pole je znak z `CComBSTR` objektu.|
+|[CComBSTR::ByteLength](#bytelength)|Vrátí délku `m_str` v bajtech.|
+|[CComBSTR:: Copy](#copy)|Vrátí kopii `m_str`.|
+|[CComBSTR:: CopyTo](#copyto)|Vrátí kopii `m_str` přes parametr **[out]** .|
+|[CComBSTR::D etach](#detach)|Odpojí `CComBSTR` objekt odobjektu.`m_str`|
+|[CComBSTR:: Empty](#empty)|`m_str`Zdarma.|
+|[CComBSTR:: Length](#length)|Vrátí délku `m_str`.|
+|[CComBSTR:: LoadString](#loadstring)|Načte prostředek řetězce.|
 |[CComBSTR::ReadFromStream](#readfromstream)|Načte objekt BSTR z datového proudu.|
-|[CComBSTR::ToLower](#tolower)|Převede řetězec na malá písmena.|
-|[CComBSTR::ToUpper](#toupper)|Převede řetězec na velká písmena.|
-|[CComBSTR::WriteToStream](#writetostream)|Uloží `m_str` do datového proudu.|
+|[CComBSTR:: ToLower](#tolower)|Převede řetězec na malá písmena.|
+|[CComBSTR:: ToUpper](#toupper)|Převede řetězec na velká písmena.|
+|[CComBSTR:: WriteToStream](#writetostream)|Uloží `m_str` se do datového proudu.|
 
 ### <a name="public-operators"></a>Veřejné operátory
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
-|[CComBSTR::operator BSTR](#operator_bstr)|Přetypování `CComBSTR` objekt BSTR.|
-|[CComBSTR::operator!](#operator_not)|Vrátí hodnotu PRAVDA nebo NEPRAVDA v závislosti na tom, zda `m_str`má hodnotu NULL.|
-|[CComBSTR::operator! =](#operator_neq)|Porovná `CComBSTR` s řetězcem.|
-|[CComBSTR::operator &](#operator_amp)|Vrátí adresu `m_str`.|
-|[CComBSTR::operator +=](#operator_add_eq)|Připojí `CComBSTR` objektu.|
-|[CComBSTR::operator <](#operator_lt)|Porovná `CComBSTR` s řetězcem.|
-|[CComBSTR::operator =](#operator_eq)|Přiřadí hodnotu k `m_str`.|
-|[CComBSTR::operator ==](#operator_eq_eq)|Porovná `CComBSTR` s řetězcem.|
-|[CComBSTR::operator >](#operator_gt)|Porovná `CComBSTR` s řetězcem.|
+|[CComBSTR:: operator BSTR](#operator_bstr)|Přetypování `CComBSTR` objektu na BSTR.|
+|[CComBSTR:: operator!](#operator_not)|Vrátí hodnotu true nebo false v závislosti na tom `m_str`, zda je hodnota null.|
+|[CComBSTR:: operator! =](#operator_neq)|Porovná `CComBSTR` s řetězcem.|
+|[CComBSTR:: operator &](#operator_amp)|Vrátí adresu `m_str`.|
+|[CComBSTR:: operator + =](#operator_add_eq)|Připojí objekt k objektu. `CComBSTR`|
+|[CComBSTR:: operator <](#operator_lt)|Porovná `CComBSTR` s řetězcem.|
+|[CComBSTR:: operator =](#operator_eq)|Přiřadí hodnotu k `m_str`.|
+|[CComBSTR:: operator = = – operátor](#operator_eq_eq)|Porovná `CComBSTR` s řetězcem.|
+|[CComBSTR:: operator >](#operator_gt)|Porovná `CComBSTR` s řetězcem.|
 
 ### <a name="public-data-members"></a>Veřejné datové členy
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
-|[CComBSTR::m_str](#m_str)|Obsahuje BSTR přidružené `CComBSTR` objektu.|
+|[CComBSTR::m_str](#m_str)|Obsahuje `CComBSTR` objekt BSTR přidružený k objektu.|
 
 ## <a name="remarks"></a>Poznámky
 
-`CComBSTR` Třídy tvoří obálku pro datových typů BSTR, které jsou s předponou délku řetězce. Délka se ukládá jako celé číslo v umístění v paměti před data v řetězci.
+`CComBSTR` Třída je obálkou pro BSTR, což jsou řetězce předpony s délkou. Délka je uložena jako celé číslo v umístění paměti před daty v řetězci.
 
-A [BSTR](/previous-versions/windows/desktop/automat/bstr) je zakončený hodnotou null po poslední znak počítá ale může také obsahovat vložený do řetězce znaky s hodnotou null. Délka řetězce se určuje podle počtu znaků, nikoli první znak null.
-
-> [!NOTE]
->  `CComBSTR` Třídy nabízí celou řadu členů (konstruktorů, operátory přiřazení a porovnání operátory), které přijímají řetězce ANSI nebo Unicode jako argumenty. ANSI verze těchto funkcí jsou míň efektivní než jejich protějšky v kódování Unicode, protože dočasných řetězců v kódu Unicode jsou často vytvořili interně. Z důvodu efektivity použijte Unicode verze, kde je to možné.
+Hodnota [BSTR](/previous-versions/windows/desktop/automat/bstr) má za poslední zjištěný znak zakončenou hodnotou null, ale může také obsahovat znaky null vložené do řetězce. Délka řetězce je určena počtem znaků, nikoli prvním znakem null.
 
 > [!NOTE]
->  Kvůli implementovány v aplikaci Visual Studio .NET vyhledávací Vylepšená chování kódu, jako `bstr = L"String2" + bstr;`, které mohou mít zkompilovat v předchozích verzích by měla být implementována místo jako `bstr = CStringW(L"String2") + bstr`.
+>  `CComBSTR` Třída poskytuje mnoho členů (konstruktory, operátory přiřazení a operátory porovnání), které jako argumenty přebírají řetězce ANSI nebo Unicode. Verze ANSI těchto funkcí jsou méně efektivní než jejich protějšky Unicode, protože dočasné řetězce Unicode jsou často vytvářeny interně. V případě efektivity používejte verze Unicode, pokud je to možné.
 
-Seznam upozornění při použití `CComBSTR`, naleznete v tématu [programování pomocí třídy CComBSTR](../../atl/programming-with-ccombstr-atl.md).
+> [!NOTE]
+>  Z důvodu vylepšeného chování vyhledávání implementovaného v aplikaci Visual Studio .NET by měl `bstr = L"String2" + bstr;`být kód jako, který mohl být zkompilován v předchozích verzích, implementován jako `bstr = CStringW(L"String2") + bstr`.
+
+Seznam upozornění při použití nástroje `CComBSTR`najdete v tématu [programování pomocí CComBSTR](../../atl/programming-with-ccombstr-atl.md).
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** atlbase.h
+**Záhlaví:** atlbase. h
 
-##  <a name="append"></a>  CComBSTR::Append
+##  <a name="append"></a>CComBSTR:: Append
 
-Buď připojí *lpsz* nebo člen BSTR *bstrSrc* k [m_str](#m_str).
+Připojí buď *lpsz* nebo člen BSTR typu *bstrSrc* do [m_str](#m_str).
 
 ```
 HRESULT Append(const CComBSTR& bstrSrc) throw();
@@ -132,32 +132,32 @@ HRESULT Append(LPCOLESTR lpsz, int nLen) throw();
 ### <a name="parameters"></a>Parametry
 
 *bstrSrc*<br/>
-[in] A `CComBSTR` objektu, který chcete připojit.
+pro `CComBSTR` Objekt, který se má připojit.
 
 *ch*<br/>
-[in] Znak pro připojení.
+pro Znak, který se má připojit.
 
 *lpsz*<br/>
-[in] Ukončit nulou znak řetězec pro připojení. Řetězec s kódováním Unicode lze předat prostřednictvím přetížení LPCOLESTR nebo řetězec ANSI prostřednictvím LPCSTR verze.
+pro Řetězec znaků zakončený nulou pro připojení. Řetězec Unicode můžete předat prostřednictvím přetížení LPCOLESTR nebo pomocí řetězce ANSI prostřednictvím verze LPCSTR.
 
 *nLen*<br/>
-[in] Počet znaků od *lpsz* připojit.
+pro Počet znaků, které se mají připojit od *lpsz*
 
 ### <a name="return-value"></a>Návratová hodnota
 
-S_OK na úspěch, nebo všechny standardní hodnota HRESULT chyby.
+S_OK při úspěchu nebo jakákoli standardní chybová hodnota HRESULT
 
 ### <a name="remarks"></a>Poznámky
 
-Řetězec ANSI se převést do kódování Unicode, než se připojí.
+Před připojením bude řetězec ANSI převeden do kódování Unicode.
 
 ### <a name="example"></a>Příklad
 
 [!code-cpp[NVC_ATL_Utilities#32](../../atl/codesnippet/cpp/ccombstr-class_1.cpp)]
 
-##  <a name="appendbstr"></a>  CComBSTR::AppendBSTR
+##  <a name="appendbstr"></a>CComBSTR:: AppendBSTR
 
-Připojí zadaný BSTR k [m_str](#m_str).
+Připojí zadaný parametr BSTR k [m_str](#m_str).
 
 ```
 HRESULT AppendBSTR(BSTR p) throw();
@@ -166,23 +166,23 @@ HRESULT AppendBSTR(BSTR p) throw();
 ### <a name="parameters"></a>Parametry
 
 *p*<br/>
-[in] BSTR má připojit.
+pro Parametr BSTR, který se má připojit.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-S_OK na úspěch, nebo všechny standardní hodnota HRESULT chyby.
+S_OK při úspěchu nebo jakákoli standardní chybová hodnota HRESULT
 
 ### <a name="remarks"></a>Poznámky
 
-V této metodě nepředávejte běžné širokoznaký řetězec. Kompilátor nemůže zachytávat chyby a spustit, když dojde k chybám.
+Nepředávejte do této metody běžný řetězec s velkým znakem. Kompilátor nemůže zachytit chybu a dojde k chybám při spuštění.
 
 ### <a name="example"></a>Příklad
 
 [!code-cpp[NVC_ATL_Utilities#33](../../atl/codesnippet/cpp/ccombstr-class_2.cpp)]
 
-##  <a name="appendbytes"></a>  CComBSTR::AppendBytes
+##  <a name="appendbytes"></a>CComBSTR:: AppendBytes
 
-Přidá zadaný počet bajtů, které mají [m_str](#m_str) bez převodu.
+Připojí zadaný počet bajtů k [m_str](#m_str) bez převodu.
 
 ```
 HRESULT AppendBytes(const char* lpsz, int nLen) throw();
@@ -191,22 +191,22 @@ HRESULT AppendBytes(const char* lpsz, int nLen) throw();
 ### <a name="parameters"></a>Parametry
 
 *lpsz*<br/>
-[in] Ukazatel na pole bajtů pro připojení.
+pro Ukazatel na pole bajtů, které se má připojit.
 
 *p*<br/>
-[in] Počet bajtů, které mají připojit.
+pro Počet bajtů, které se mají připojit.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-S_OK na úspěch, nebo všechny standardní hodnota HRESULT chyby.
+S_OK při úspěchu nebo jakákoli standardní chybová hodnota HRESULT
 
 ### <a name="example"></a>Příklad
 
 [!code-cpp[NVC_ATL_Utilities#34](../../atl/codesnippet/cpp/ccombstr-class_3.cpp)]
 
-##  <a name="arraytobstr"></a>  CComBSTR::ArrayToBSTR
+##  <a name="arraytobstr"></a>CComBSTR:: ArrayToBSTR
 
-Uvolní všechny existující řetězce uchovávat v datovém typu `CComBSTR` objekt, vytvoří BSTR z první znak každého prvku v safearray a připojí ho k `CComBSTR` objektu.
+Uvolní všechny existující řetězce uložené v `CComBSTR` objektu a následně vytvoří BSTR z prvního znaku každého prvku v SAFEARRAY a připojí ho `CComBSTR` k objektu.
 
 ```
 HRESULT ArrayToBSTR(const SAFEARRAY* pSrc) throw();
@@ -215,15 +215,15 @@ HRESULT ArrayToBSTR(const SAFEARRAY* pSrc) throw();
 ### <a name="parameters"></a>Parametry
 
 *pSrc*<br/>
-[in] Safearray obsahující prvků, které slouží k vytvoření řetězce.
+pro Pole SAFEARRAY obsahující prvky použité k vytvoření řetězce.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-S_OK na úspěch, nebo všechny standardní hodnota HRESULT chyby.
+S_OK při úspěchu nebo jakákoli standardní chybová hodnota HRESULT
 
-##  <a name="assignbstr"></a>  CComBSTR::AssignBSTR
+##  <a name="assignbstr"></a>CComBSTR:: AssignBSTR
 
-Přiřadí BSTR k [m_str](#m_str).
+Přiřadí objekt BSTR k [m_str](#m_str).
 
 ```
 HRESULT AssignBSTR(const BSTR bstrSrc) throw();
@@ -232,15 +232,15 @@ HRESULT AssignBSTR(const BSTR bstrSrc) throw();
 ### <a name="parameters"></a>Parametry
 
 *bstrSrc*<br/>
-[in] BSTR přiřadit aktuální `CComBSTR` objektu.
+pro Objekt BSTR, který má být přiřazen `CComBSTR` k aktuálnímu objektu.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-S_OK na úspěch, nebo všechny standardní hodnota HRESULT chyby.
+S_OK při úspěchu nebo jakákoli standardní chybová hodnota HRESULT
 
-##  <a name="attach"></a>  CComBSTR::Attach
+##  <a name="attach"></a>CComBSTR:: Attach
 
-Připojí k BSTR `CComBSTR` objektu tak, že nastavíte [m_str](#m_str) člen *src*.
+Připojí BSTR k `CComBSTR` objektu nastavením člena [m_str](#m_str) na *Src*.
 
 ```
 void Attach(BSTR src) throw();
@@ -249,22 +249,22 @@ void Attach(BSTR src) throw();
 ### <a name="parameters"></a>Parametry
 
 *src*<br/>
-[in] BSTR pro připojení k objektu.
+pro BSTR pro připojení k objektu.
 
 ### <a name="remarks"></a>Poznámky
 
-V této metodě nepředávejte běžné širokoznaký řetězec. Kompilátor nemůže zachytávat chyby a spustit, když dojde k chybám.
+Nepředávejte do této metody běžný řetězec s velkým znakem. Kompilátor nemůže zachytit chybu a dojde k chybám při spuštění.
 
 > [!NOTE]
->  Tato metoda se uplatnit, pokud `m_str` je jiná než NULL.
+>  Tato metoda bude vyhodnotit, pokud `m_str` je hodnota jiná než null.
 
 ### <a name="example"></a>Příklad
 
 [!code-cpp[NVC_ATL_Utilities#35](../../atl/codesnippet/cpp/ccombstr-class_4.cpp)]
 
-##  <a name="bstrtoarray"></a>  CComBSTR::BSTRToArray
+##  <a name="bstrtoarray"></a>CComBSTR:: BSTRToArray
 
-Vytvoří jednorozměrný safearray založený na nule, kde každý prvek pole je znak z `CComBSTR` objektu.
+Vytvoří jednorozměrné jednorozměrné pole SAFEARRAY, kde každý prvek pole je znak z `CComBSTR` objektu.
 
 ```
 HRESULT BSTRToArray(LPSAFEARRAY* ppArray) throw();
@@ -273,13 +273,13 @@ HRESULT BSTRToArray(LPSAFEARRAY* ppArray) throw();
 ### <a name="parameters"></a>Parametry
 
 *ppArray*<br/>
-[out] Ukazatel na pole safearray používají k uložení výsledků této funkce.
+mimo Ukazatel na SAFEARRAY použitý pro uchování výsledků funkce.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-S_OK na úspěch, nebo všechny standardní hodnota HRESULT chyby.
+S_OK při úspěchu nebo jakákoli standardní chybová hodnota HRESULT
 
-##  <a name="bytelength"></a>  CComBSTR::ByteLength
+##  <a name="bytelength"></a>CComBSTR:: ByteLength –
 
 Vrátí počet bajtů v `m_str`, s výjimkou ukončujícího znaku null.
 
@@ -293,15 +293,15 @@ Délka [m_str](#m_str) člena v bajtech.
 
 ### <a name="remarks"></a>Poznámky
 
-Vrátí hodnotu 0, pokud `m_str` má hodnotu NULL.
+Vrátí hodnotu 0 `m_str` , pokud je null.
 
 ### <a name="example"></a>Příklad
 
 [!code-cpp[NVC_ATL_Utilities#36](../../atl/codesnippet/cpp/ccombstr-class_5.cpp)]
 
-##  <a name="ccombstr"></a>  CComBSTR::CComBSTR
+##  <a name="ccombstr"></a>CComBSTR:: CComBSTR
 
-Konstruktor Výchozí konstruktor sady [m_str](#m_str) člena na hodnotu NULL.
+Konstruktor Výchozí konstruktor nastaví člena [m_str](#m_str) na hodnotu null.
 
 ```
 CComBSTR() throw();
@@ -318,35 +318,35 @@ CComBSTR(CComBSTR&& src) throw(); // (Visual Studio 2017)
 ### <a name="parameters"></a>Parametry
 
 *nSize*<br/>
-[in] Počet znaků pro kopírování z *sz* nebo počáteční velikost ve znacích `CComBSTR`.
+pro Počet znaků, které mají být zkopírovány z formátu *SZ* nebo počáteční velikost znaků pro `CComBSTR`.
 
 *sz*<br/>
-[in] Řetězec zkopírujte. Verze Unicode určuje LPCOLESTR; verze ANSI určuje LPCSTR.
+pro Řetězec, který má být zkopírován. Verze Unicode určuje LPCOLESTR; verze ANSI určuje LPCSTR.
 
 *pSrc*<br/>
-[in] Řetězec zkopírujte. Verze Unicode určuje LPCOLESTR; verze ANSI určuje LPCSTR.
+pro Řetězec, který má být zkopírován. Verze Unicode určuje LPCOLESTR; verze ANSI určuje LPCSTR.
 
 *src*<br/>
-[in] A `CComBSTR` objektu.
+pro `CComBSTR` Objekt.
 
-*identifikátor GUID*<br/>
-[in] Odkaz na `GUID` struktury.
+*guid*<br/>
+pro Odkaz na `GUID` strukturu.
 
 ### <a name="remarks"></a>Poznámky
 
-Nastaví konstruktor kopie `m_str` kopii BSTR členem *src*. `REFGUID` Konstruktor převede na řetězec pomocí identifikátoru GUID `StringFromGUID2` a výsledek je uložen.
+Konstruktor kopie je nastaven `m_str` na kopii člena BSTR třídy *Src*. Konstruktor převede identifikátor GUID na řetězec pomocí `StringFromGUID2` a uloží výsledek. `REFGUID`
 
-Druhá sada konstruktorů `m_str` na kopii zadaného řetězce. Pokud předáte hodnotu *nSize*, pak pouze *nSize* znaky budou zkopírovány, za nímž následuje ukončujícího znaku null.
+Ostatní konstruktory nastaveny `m_str` na kopii zadaného řetězce. Pokud předáte hodnotu pro *nSize*, zkopírují se pouze *nSize* znaky a za ním následuje ukončující znak null.
 
-`CComBSTR` podporuje přesunutí sémantiky. Můžete použít konstruktor přesunu (konstruktor, který bere odkaz rvalue (`&&`) Chcete-li vytvořit nový objekt, který používá stejné podkladová data, protože původní objekt můžete předat jako argument, bez režie kopírování objektu.
+`CComBSTR`podporuje sémantiku přesunutí. Můžete použít konstruktor Move (konstruktor, který převezme odkaz rvalue (`&&`) pro vytvoření nového objektu, který používá stejná základní data jako původní objekt, který předáte jako argument, bez režie kopírování objektu.
 
-Destruktor uvolní řetězce odkazované `m_str`.
+Destruktor uvolní řetězec, na `m_str`který odkazuje.
 
 ### <a name="example"></a>Příklad
 
 [!code-cpp[NVC_ATL_Utilities#37](../../atl/codesnippet/cpp/ccombstr-class_6.cpp)]
 
-##  <a name="dtor"></a>  CComBSTR:: ~ CComBSTR
+##  <a name="dtor"></a>CComBSTR:: ~ CComBSTR
 
 Destruktor.
 
@@ -356,11 +356,11 @@ Destruktor.
 
 ### <a name="remarks"></a>Poznámky
 
-Destruktor uvolní řetězce odkazované `m_str`.
+Destruktor uvolní řetězec, na `m_str`který odkazuje.
 
-##  <a name="copy"></a>  CComBSTR::Copy
+##  <a name="copy"></a>CComBSTR:: Copy
 
-Přiděluje a vrátí kopii objektu `m_str`.
+Přidělí a vrátí kopii `m_str`.
 
 ```
 BSTR Copy() const throw();
@@ -368,15 +368,15 @@ BSTR Copy() const throw();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Kopie [m_str](#m_str) člena. Pokud `m_str` má hodnotu NULL, vrátí hodnotu NULL.
+Kopie člena [m_str](#m_str) Pokud `m_str` je null, vrátí hodnotu null.
 
 ### <a name="example"></a>Příklad
 
 [!code-cpp[NVC_ATL_Utilities#38](../../atl/codesnippet/cpp/ccombstr-class_7.cpp)]
 
-##  <a name="copyto"></a>  CComBSTR::CopyTo
+##  <a name="copyto"></a>CComBSTR:: CopyTo
 
-Přiděluje a vrátí kopii objektu [m_str](#m_str) prostřednictvím parametru.
+Přidělí a vrátí kopii [m_str](#m_str) prostřednictvím parametru.
 
 ```
 HRESULT CopyTo(BSTR* pbstr) throw();
@@ -387,26 +387,26 @@ HRESULT CopyTo(VARIANT* pvarDest) throw();
 ### <a name="parameters"></a>Parametry
 
 *pbstr*<br/>
-[out] Adresa BSTR, ve kterých se mají vrátit řetězec přidělených touto metodou.
+mimo Adresa řetězce BSTR, ve kterém se má vrátit řetězec přidělený touto metodou
 
 *pvarDest*<br/>
-[out] Adresa hodnotu typu VARIANT, ve kterých se mají vrátit řetězec přidělených touto metodou.
+mimo Adresa varianty, ve které se má vrátit řetězec přidělený touto metodou
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Standardní hodnotu HRESULT označující úspěch nebo neúspěch kopie.
+Standardní hodnota HRESULT, která indikuje úspěch nebo neúspěch kopie.
 
 ### <a name="remarks"></a>Poznámky
 
-Po volání této metody, varianty odkazované *pvarDest* typu VT_BSTR.
+Po volání této metody bude hodnota VARIANT, na kterou odkazuje *pvarDest* , typu VT_BSTR.
 
 ### <a name="example"></a>Příklad
 
 [!code-cpp[NVC_ATL_Utilities#39](../../atl/codesnippet/cpp/ccombstr-class_8.cpp)]
 
-##  <a name="detach"></a>  CComBSTR::Detach
+##  <a name="detach"></a>CComBSTR::D etach
 
-Odpojí [m_str](#m_str) z `CComBSTR` objekt a nastaví `m_str` na hodnotu NULL.
+Odpojí [m_str](#m_str) od `CComBSTR` objektu a nastaví `m_str` na hodnotu null.
 
 ```
 BSTR Detach() throw();
@@ -414,15 +414,15 @@ BSTR Detach() throw();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Přidružené BSTR `CComBSTR` objektu.
+`CComBSTR` Objekt BSTR přidružený k objektu
 
 ### <a name="example"></a>Příklad
 
 [!code-cpp[NVC_ATL_Utilities#40](../../atl/codesnippet/cpp/ccombstr-class_9.cpp)]
 
-##  <a name="empty"></a>  CComBSTR::Empty
+##  <a name="empty"></a>CComBSTR:: Empty
 
-Uvolňuje [m_str](#m_str) člena.
+Uvolňuje člena [m_str](#m_str) .
 
 ```
 void Empty() throw();
@@ -432,9 +432,9 @@ void Empty() throw();
 
 [!code-cpp[NVC_ATL_Utilities#41](../../atl/codesnippet/cpp/ccombstr-class_10.cpp)]
 
-##  <a name="length"></a>  CComBSTR::Length
+##  <a name="length"></a>CComBSTR:: Length
 
-Vrátí počet znaků v `m_str`, s výjimkou ukončujícího znaku null.
+Vrátí počet znaků v `m_str`s výjimkou ukončujícího znaku null.
 
 ```
 unsigned int Length() const throw();
@@ -448,9 +448,9 @@ Délka [m_str](#m_str) člena.
 
 [!code-cpp[NVC_ATL_Utilities#42](../../atl/codesnippet/cpp/ccombstr-class_11.cpp)]
 
-##  <a name="loadstring"></a>  CComBSTR::LoadString
+##  <a name="loadstring"></a>CComBSTR:: LoadString
 
-Načte řetězec prostředku zadaného parametrem *nID* a ukládá ho do tohoto objektu.
+Načte prostředek řetězce určený parametrem *NID* a uloží jej do tohoto objektu.
 
 ```
 bool LoadString(HINSTANCE hInst, UINT nID) throw();
@@ -459,23 +459,23 @@ bool LoadString(UINT nID) throw();
 
 ### <a name="parameters"></a>Parametry
 
-Zobrazit [LoadString](/windows/desktop/api/winuser/nf-winuser-loadstringa) ve Windows SDK.
+Viz [LoadString](/windows/win32/api/winuser/nf-winuser-loadstringw) v Windows SDK.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vrátí hodnotu TRUE, pokud je řetězec úspěšně načten. v opačném případě vrátí hodnotu FALSE.
+Vrátí hodnotu TRUE, pokud je řetězec úspěšně načten; v opačném případě vrátí hodnotu FALSE.
 
 ### <a name="remarks"></a>Poznámky
 
-První funkce načte prostředek z modulu identifikovaný prostřednictvím *hInst* parametru. Druhá funkce načte z modulu prostředků přidružené k prostředku [ccommodule –](../../atl/reference/ccommodule-class.md)-odvozené objekt použitý v tomto projektu.
+První funkce načte prostředek z modulu identifikovaného pomocí parametru *hInst* . Druhá funkce načte prostředek z modulu prostředků přidruženého k objektu odvozenému od [CComModule](../../atl/reference/ccommodule-class.md), který se používá v tomto projektu.
 
 ### <a name="example"></a>Příklad
 
 [!code-cpp[NVC_ATL_Utilities#43](../../atl/codesnippet/cpp/ccombstr-class_12.cpp)]
 
-##  <a name="m_str"></a>  CComBSTR::m_str
+##  <a name="m_str"></a>CComBSTR:: m_str
 
-Obsahuje BSTR přidružené `CComBSTR` objektu.
+Obsahuje `CComBSTR` objekt BSTR přidružený k objektu.
 
 ```
 BSTR m_str;
@@ -485,9 +485,9 @@ BSTR m_str;
 
 [!code-cpp[NVC_ATL_Utilities#49](../../atl/codesnippet/cpp/ccombstr-class_13.cpp)]
 
-##  <a name="operator_bstr"></a>  CComBSTR::operator BSTR
+##  <a name="operator_bstr"></a>CComBSTR:: operator BSTR
 
-Přetypování `CComBSTR` objekt BSTR.
+Přetypování `CComBSTR` objektu na BSTR.
 
 ```
 operator BSTR() const throw();
@@ -495,15 +495,15 @@ operator BSTR() const throw();
 
 ### <a name="remarks"></a>Poznámky
 
-Umožňuje předat `CComBSTR` objektů funkcí, které mají **[in] BSTR** parametry.
+Umožňuje předat `CComBSTR` objekty do funkcí, které mají **[in] parametry BSTR** .
 
 ### <a name="example"></a>Příklad
 
-Podívejte se na příklad pro [CComBSTR::m_str](#m_str).
+Podívejte se na příklad pro [CComBSTR:: m_str](#m_str).
 
-##  <a name="operator_not"></a>  CComBSTR::operator!
+##  <a name="operator_not"></a>CComBSTR:: operator!
 
-Kontroluje, zda řetězec BSTR má hodnotu NULL.
+Kontroluje, zda je řetězec BSTR NULL.
 
 ```
 bool operator!() const throw();
@@ -511,19 +511,19 @@ bool operator!() const throw();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vrátí TRUE, pokud [m_str](#m_str) člena je NULL; v opačném případě hodnota FALSE.
+Vrátí hodnotu TRUE, pokud má člen [m_str](#m_str) hodnotu null. v opačném případě FALSE.
 
 ### <a name="remarks"></a>Poznámky
 
-Tento operátor zkontroluje pouze pro hodnotu NULL, ne pro prázdný řetězec.
+Tento operátor kontroluje pouze hodnotu NULL, nikoli prázdný řetězec.
 
 ### <a name="example"></a>Příklad
 
 [!code-cpp[NVC_ATL_Utilities#35](../../atl/codesnippet/cpp/ccombstr-class_4.cpp)]
 
-##  <a name="operator_neq"></a>  CComBSTR::operator! =
+##  <a name="operator_neq"></a>CComBSTR:: operator! =
 
-Vrátí logickou opakem [operátor ==](#operator_eq_eq).
+Vrátí logický opak operátoru [= =](#operator_eq_eq).
 
 ```
 bool operator!= (const CComBSTR& bstrSrc) const throw();
@@ -535,25 +535,25 @@ bool operator!= (int nNull) const throw();
 ### <a name="parameters"></a>Parametry
 
 *bstrSrc*<br/>
-[in] A `CComBSTR` objektu.
+pro `CComBSTR` Objekt.
 
 *pszSrc*<br/>
-[in] Řetězec zakončený nula.
+pro Řetězec zakončený nulou.
 
 *nNull*<br/>
-[in] Musí mít hodnotu NULL.
+pro Musí mít hodnotu NULL.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vrátí TRUE, pokud položka, který se porovnává se nerovná `CComBSTR` objektu; jinak vrátí FALSE.
+Vrátí hodnotu true, pokud je položka, která je porovnána `CComBSTR` , nerovná objektu; v opačném případě vrátí hodnotu false.
 
 ### <a name="remarks"></a>Poznámky
 
-`CComBSTR`s jsou porovnány pomocí textu v kontextu uživatele výchozí národní prostředí. Poslední relační operátor pouze porovnává obsažený řetězec s hodnotou NULL.
+`CComBSTR`s jsou porovnány textu v kontextu výchozího národního prostředí uživatele. Koncový operátor porovnání pouze porovná obsažený řetězec s hodnotou NULL.
 
-##  <a name="operator_amp"></a>  CComBSTR::operator &amp;
+##  <a name="operator_amp"></a>CComBSTR:: operator&amp;
 
-Vrátí adresu BSTR uložené v [m_str](#m_str) člena.
+Vrátí adresu BSTR uloženou v členu [m_str](#m_str) .
 
 ```
 BSTR* operator&() throw();
@@ -561,9 +561,9 @@ BSTR* operator&() throw();
 
 ### <a name="remarks"></a>Poznámky
 
-`CComBstr operator &` speciální kontrolního výrazu k němu má přidružené k identifikaci nevracení paměti. Program bude assert, kdy `m_str` člen je inicializovaný. Byl vytvořen tohoto kontrolního výrazu k identifikaci situací, kdy používá programátor `& operator` přiřadí novou hodnotu do `m_str` člen, aniž by bylo uvolněno první přidělení `m_str`. Pokud `m_str` rovná NULL, program se předpokládá, že m_str nepřidělil se ještě. V takovém případě nebude uplatňovat program.
+`CComBstr operator &`je spojen speciální kontrolní výraz, který umožňuje identifikovat nevracení paměti. Program bude při `m_str` inicializaci člena vyhodnotit. Tento kontrolní výraz byl vytvořen k identifikaci situací, kde programátor používá `& operator` pro přiřazení nové `m_str` hodnoty členu, aniž by bylo nutné nejprve uvolnit první `m_str`přidělení. Pokud `m_str` je hodnota null, program předpokládá, že m_str nebyl dosud přidělen. V takovém případě program neprovede vyhodnocení.
 
-Tento kontrolní výraz není standardně povolená. Definujte ATL_CCOMBSTR_ADDRESS_OF_ASSERT povolit tento kontrolní výraz.
+Tento kontrolní výraz není ve výchozím nastavení povolen. Definujte ATL_CCOMBSTR_ADDRESS_OF_ASSERT pro povolení tohoto kontrolního výrazu.
 
 ### <a name="example"></a>Příklad
 
@@ -571,9 +571,9 @@ Tento kontrolní výraz není standardně povolená. Definujte ATL_CCOMBSTR_ADDR
 
 [!code-cpp[NVC_ATL_Utilities#47](../../atl/codesnippet/cpp/ccombstr-class_15.cpp)]
 
-##  <a name="operator_add_eq"></a>  CComBSTR::operator +=
+##  <a name="operator_add_eq"></a>CComBSTR:: operator + =
 
-Přidá řetězec do `CComBSTR` objektu.
+Připojí řetězec k `CComBSTR` objektu.
 
 ```
 CComBSTR& operator+= (const CComBSTR& bstrSrc);
@@ -583,20 +583,20 @@ CComBSTR& operator+= (const LPCOLESTR pszSrc);
 ### <a name="parameters"></a>Parametry
 
 *bstrSrc*<br/>
-[in] A `CComBSTR` objektu, který chcete připojit.
+pro `CComBSTR` Objekt, který se má připojit.
 
 *pszSrc*<br/>
-[in] Ukončit nulou řetězec pro připojení.
+pro Řetězec zakončený nulou pro připojení.
 
 ### <a name="remarks"></a>Poznámky
 
-`CComBSTR`s jsou porovnány pomocí textu v kontextu uživatele výchozí národní prostředí. Provádí se porovnání LPCOLESTR pomocí `memcmp` na nezpracovaných dat v každém řetězci. Porovnání LPCSTR provádí stejně jako po dočasné Unicode kopie *pszSrc* se vytvořil. Poslední relační operátor pouze porovnává obsažený řetězec s hodnotou NULL.
+`CComBSTR`s jsou porovnány textu v kontextu výchozího národního prostředí uživatele. Porovnání LPCOLESTR se provádí pomocí `memcmp` nezpracovaných dat v jednotlivých řetězcích. Porovnání LPCSTR je provedeno stejným způsobem, jakmile je vytvořena dočasná kopie sady Unicode *pszSrc* . Koncový operátor porovnání pouze porovná obsažený řetězec s hodnotou NULL.
 
 ### <a name="example"></a>Příklad
 
 [!code-cpp[NVC_ATL_Utilities#48](../../atl/codesnippet/cpp/ccombstr-class_16.cpp)]
 
-##  <a name="operator_lt"></a>  CComBSTR::operator &lt;
+##  <a name="operator_lt"></a>CComBSTR:: operator&lt;
 
 Porovná `CComBSTR` s řetězcem.
 
@@ -608,15 +608,15 @@ bool operator<(LPCSTR pszSrc) const throw();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vrátí hodnotu PRAVDA, pokud je položka, který se porovnává menší než `CComBSTR` objektu; jinak vrátí FALSE.
+Vrátí hodnotu true, pokud položka, která je porovnána `CComBSTR` , je menší než objekt; v opačném případě vrátí hodnotu false.
 
 ### <a name="remarks"></a>Poznámky
 
-Porovnání se provádí pomocí výchozí národní prostředí uživatele.
+Porovnání je provedeno pomocí výchozího národního prostředí uživatele.
 
-##  <a name="operator_eq"></a>  CComBSTR::operator =
+##  <a name="operator_eq"></a>CComBSTR:: operator =
 
-Nastaví [m_str](#m_str) člena na kopii *pSrc* nebo kopii BSTR členem *src*. Operátor přiřazení přesunu přesune `src` bez kopírování.
+Nastaví člena [m_str](#m_str) na kopii *pSrc* nebo na kopii člena BSTR typu *Src*. Operátor přiřazení přesunu se `src` přesune bez jeho zkopírování.
 
 ```
 CComBSTR& operator= (const CComBSTR& src);
@@ -627,15 +627,15 @@ CComBSTR& operator= (CComBSTR&& src) throw(); // (Visual Studio 2017)
 
 ### <a name="remarks"></a>Poznámky
 
-*PSrc* parametr určuje buď LPCOLESTR pro verze Unicode nebo LPCSTR ANSI verze.
+Parametr *pSrc* Určuje buď LPCOLESTR pro verze Unicode, nebo LPCSTR pro verze ANSI.
 
 ### <a name="example"></a>Příklad
 
-Podívejte se na příklad pro [CComBSTR::Copy](#copy).
+Podívejte se na příklad pro [CComBSTR:: Copy](#copy).
 
-##  <a name="operator_eq_eq"></a>  CComBSTR::operator ==
+##  <a name="operator_eq_eq"></a>CComBSTR:: operator = = – operátor
 
-Porovná `CComBSTR` s řetězcem. `CComBSTR`s jsou porovnány pomocí textu v kontextu uživatele výchozí národní prostředí.
+Porovná `CComBSTR` s řetězcem. `CComBSTR`s jsou porovnány textu v kontextu výchozího národního prostředí uživatele.
 
 ```
 bool operator== (const CComBSTR& bstrSrc) const throw();
@@ -647,23 +647,23 @@ bool operator== (int nNull) const throw();
 ### <a name="parameters"></a>Parametry
 
 *bstrSrc*<br/>
-[in] A `CComBSTR` objektu.
+pro `CComBSTR` Objekt.
 
 *pszSrc*<br/>
-[in] Řetězec zakončený nula.
+pro Řetězec zakončený nulou.
 
 *nNull*<br/>
-[in] Musí mít hodnotu NULL.
+pro Musí mít hodnotu NULL.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vrátí TRUE, pokud položka, který se porovnává se rovná `CComBSTR` objektu; jinak vrátí FALSE.
+Vrátí hodnotu true, pokud je položka, která je porovnána, rovna `CComBSTR` objektu. v opačném případě vrátí hodnotu false.
 
 ### <a name="remarks"></a>Poznámky
 
-Poslední relační operátor pouze porovnává obsažený řetězec s hodnotou NULL.
+Koncový operátor porovnání pouze porovná obsažený řetězec s hodnotou NULL.
 
-##  <a name="operator_gt"></a>  CComBSTR::operator &gt;
+##  <a name="operator_gt"></a>CComBSTR:: operator&gt;
 
 Porovná `CComBSTR` s řetězcem.
 
@@ -673,15 +673,15 @@ bool operator>(const CComBSTR& bstrSrc) const throw();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vrátí hodnotu PRAVDA, pokud je větší než položky, který se porovnává `CComBSTR` objektu; jinak vrátí FALSE.
+Vrátí hodnotu true, pokud je položka, která je porovnána, větší než `CComBSTR` objekt; v opačném případě vrátí hodnotu false.
 
 ### <a name="remarks"></a>Poznámky
 
-Porovnání se provádí pomocí výchozí národní prostředí uživatele.
+Porovnání je provedeno pomocí výchozího národního prostředí uživatele.
 
-##  <a name="readfromstream"></a>  CComBSTR::ReadFromStream
+##  <a name="readfromstream"></a>CComBSTR:: ReadFromStream
 
-Nastaví [m_str](#m_str) člen BSTR obsaženy v určený datový proud.
+Nastaví člena [m_str](#m_str) na parametr BSTR obsažený v zadaném datovém proudu.
 
 ```
 HRESULT ReadFromStream(IStream* pStream) throw();
@@ -690,23 +690,23 @@ HRESULT ReadFromStream(IStream* pStream) throw();
 ### <a name="parameters"></a>Parametry
 
 *pStream*<br/>
-[in] Ukazatel [IStream](/windows/desktop/api/objidl/nn-objidl-istream) rozhraní v datovém proudu, který obsahuje data.
+pro Ukazatel na rozhraní [IStream](/windows/win32/api/objidl/nn-objidl-istream) na datovém proudu, který obsahuje data.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Standardní hodnoty HRESULT.
+Standardní hodnota HRESULT.
 
 ### <a name="remarks"></a>Poznámky
 
-`ReadToStream` vyžaduje obsah datového proudu na aktuální pozici, aby byly kompatibilní s formátem data zapsaná voláním [WriteToStream](#writetostream).
+`ReadToStream`vyžaduje, aby obsah datového proudu na aktuální pozici byl kompatibilní s formátem dat zapsaným voláním [WriteToStream](#writetostream).
 
 ### <a name="example"></a>Příklad
 
 [!code-cpp[NVC_ATL_Utilities#44](../../atl/codesnippet/cpp/ccombstr-class_17.cpp)]
 
-##  <a name="tolower"></a>  CComBSTR::ToLower
+##  <a name="tolower"></a>CComBSTR:: ToLower
 
-Převede obsažený řetězec na malá písmena.
+Převede řetězec obsahující malá písmena.
 
 ```
 HRESULT ToLower() throw();
@@ -714,15 +714,15 @@ HRESULT ToLower() throw();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Standardní hodnoty HRESULT.
+Standardní hodnota HRESULT.
 
 ### <a name="remarks"></a>Poznámky
 
-Zobrazit `CharLowerBuff` Další informace o tom, jak se provádí převod.
+Další `CharLowerBuff` informace o tom, jak se provádí převod, najdete v tématu.
 
-##  <a name="toupper"></a>  CComBSTR::ToUpper
+##  <a name="toupper"></a>CComBSTR:: ToUpper
 
-Převede obsažený řetězec na velká písmena.
+Převede řetězec s omezením na velká písmena.
 
 ```
 HRESULT ToUpper() throw();
@@ -730,15 +730,15 @@ HRESULT ToUpper() throw();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Standardní hodnoty HRESULT.
+Standardní hodnota HRESULT.
 
 ### <a name="remarks"></a>Poznámky
 
-Zobrazit `CharUpperBuff` Další informace o tom, jak se provádí převod.
+Další `CharUpperBuff` informace o tom, jak se provádí převod, najdete v tématu.
 
-##  <a name="writetostream"></a>  CComBSTR::WriteToStream
+##  <a name="writetostream"></a>CComBSTR:: WriteToStream
 
-Uloží [m_str](#m_str) člen do datového proudu.
+Uloží člena [m_str](#m_str) do datového proudu.
 
 ```
 HRESULT WriteToStream(IStream* pStream) throw();
@@ -747,15 +747,15 @@ HRESULT WriteToStream(IStream* pStream) throw();
 ### <a name="parameters"></a>Parametry
 
 *pStream*<br/>
-[in] Ukazatel [IStream](/windows/desktop/api/objidl/nn-objidl-istream) rozhraní na datovém proudu.
+pro Ukazatel na rozhraní [IStream](/windows/win32/api/objidl/nn-objidl-istream) v datovém proudu.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Standardní hodnoty HRESULT.
+Standardní hodnota HRESULT.
 
 ### <a name="remarks"></a>Poznámky
 
-Můžete znovu vytvořit BSTR z obsahu pomocí datového proudu [ReadFromStream](#readfromstream) funkce.
+Pomocí funkce [ReadFromStream](#readfromstream) můžete znovu vytvořit BSTR z obsahu streamu.
 
 ### <a name="example"></a>Příklad
 
@@ -763,5 +763,5 @@ Můžete znovu vytvořit BSTR z obsahu pomocí datového proudu [ReadFromStream]
 
 ## <a name="see-also"></a>Viz také:
 
-[Přehled tříd](../../atl/atl-class-overview.md)<br/>
-[ATL a MFC – makra převodu řetězců](string-conversion-macros.md)
+[Přehled třídy](../../atl/atl-class-overview.md)<br/>
+[Makra pro převod řetězců ATL a MFC](string-conversion-macros.md)

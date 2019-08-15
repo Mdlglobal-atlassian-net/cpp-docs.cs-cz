@@ -7,18 +7,18 @@ helpviewer_keywords:
 - controls [MFC], animation
 - animation controls [MFC], notifications
 ms.assetid: 584f5824-446b-4a1a-85f7-ef61842c8186
-ms.openlocfilehash: 2a736e4315091b1b26daceb4fe0ce9672ab33ff6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 68ede3bc55669a29eef192d38b29b8c1ab433e4b
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62238306"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69508016"
 ---
 # <a name="notifications-sent-by-animation-controls"></a>Oznámení zaslaná z ovládacích prvků animace
 
-Ovládacího prvku animace ([atributu CAnimateCtrl](../mfc/reference/canimatectrl-class.md)) odešle dva různé typy zpráv s oznámením. Oznámení se odesílají v podobě [wm_command –](/windows/desktop/menurc/wm-command) zprávy.
+Ovládací prvek animace ([atributu CAnimateCtrl](../mfc/reference/canimatectrl-class.md)) odesílá dva různé typy oznamovacích zpráv. Oznámení se odesílají ve formě zpráv [WM_COMMAND](/windows/win32/menurc/wm-command) .
 
-[ACN_START](/windows/desktop/Controls/acn-start) zpráva se odešle, když ovládací prvek animace začala přehrávat klip. [ACN_STOP](/windows/desktop/Controls/acn-stop) zpráva se odešle, když ovládací prvek animace přestal přehrávání klipu nebo bylo dokončeno.
+Zpráva [ACN_START](/windows/win32/Controls/acn-start) se pošle, když ovládací prvek animace začal přehrávat klip. Zpráva [ACN_STOP](/windows/win32/Controls/acn-stop) se pošle, když se ovládací prvek animace dokončí nebo zastaví přehrávání klipu.
 
 ## <a name="see-also"></a>Viz také:
 

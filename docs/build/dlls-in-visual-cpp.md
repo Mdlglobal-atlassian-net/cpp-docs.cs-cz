@@ -8,12 +8,12 @@ helpviewer_keywords:
 - DLLs [C++]
 - DLLs [C++], about DLLs
 ms.assetid: 5216bca4-51e2-466b-b221-0e3e776056f0
-ms.openlocfilehash: 9f5b34fda8a429f8e55631e1e0125ed6f79d5bae
-ms.sourcegitcommit: 0867d648e0955ebad7260b5fbebfd6cd4d58f3c7
+ms.openlocfilehash: 33f002143e306c99b4d17b7a01ddd4a9738e38e7
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68341072"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69493277"
 ---
 # <a name="create-cc-dlls-in-visual-studio"></a>Vytváření C/C++ knihoven DLL v aplikaci Visual Studio
 
@@ -80,7 +80,7 @@ Popisuje inicializační kód knihovny DLL, který musí být spuštěn při na�
 Popisuje, jakým způsobem provádí knihovna runtime spouštěcí sekvenci knihovny DLL.
 
 [LoadLibrary a AfxLoadLibrary](loadlibrary-and-afxloadlibrary.md)<br/>
-Popisuje použití  funkce LoadLibrary `AfxLoadLibrary` a k explicitnímu propojení s knihovnou DLL za běhu.
+Popisuje použití funkce LoadLibrary `AfxLoadLibrary` a k explicitnímu propojení s knihovnou DLL za běhu.
 
 [GetProcAddress](getprocaddress.md)<br/>
 Popisuje použití funkce **GetProcAddress** pro získání adresy exportované funkce v knihovně DLL.
@@ -88,7 +88,7 @@ Popisuje použití funkce **GetProcAddress** pro získání adresy exportované 
 [FreeLibrary a AfxFreeLibrary](freelibrary-and-afxfreelibrary.md)<br/>
 Popisuje použití **FreeLibrary** a `AfxFreeLibrary` v případě, že už modul knihovny DLL nepotřebujete.
 
-[Pořadí hledání dynamických propojených knihoven](/windows/desktop/Dlls/dynamic-link-library-search-order)<br/>
+[Pořadí hledání dynamických propojených knihoven](/windows/win32/Dlls/dynamic-link-library-search-order)<br/>
 Popisuje cestu pro hledání, kterou operační systém Windows používá k nalezení knihovny DLL v systému.
 
 [Stavy modulů běžné knihovny MFC DLL dynamicky propojené do MFC](module-states-of-a-regular-dll-dynamically-linked-to-mfc.md)<br/>

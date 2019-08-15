@@ -24,26 +24,26 @@ helpviewer_keywords:
 - LPARAM data type [MFC]
 - LPCSTR [MFC]
 ms.assetid: 8954848b-2c01-4a4f-abf5-ee55f6a05eeb
-ms.openlocfilehash: dfafe7c3c7c7cd43dd2ac194f5ed96fa8ea265ba
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 37dd9b9d3f3905a923cd9c51856c1c39819cb162
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62323200"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69502133"
 ---
 # <a name="data-types-mfc"></a>Datové typy (MFC)
 
-V tomto tématu jsou uvedeny typy dat, běžně používané knihovny Microsoft Foundation Class. Většina datových typů jsou stejné jako v platformě Software Development Kit (SDK), zatímco jiné jsou jedinečné pro knihovny MFC.
+V tomto tématu jsou uvedeny typy dat nejčastěji používané v knihovna Microsoft Foundation Class. Většina datových typů je stejná jako v sadě SDK (Platform Software Development Kit), zatímco jiné jsou jedinečné pro knihovnu MFC.
 
-Informace o datové typy používané v sadě Windows SDK a knihovny MFC naleznete v tématu [datové typy Windows](/windows/desktop/WinProg/windows-data-types).
+Informace o datových typech použitých v Windows SDK i v knihovně MFC naleznete v tématu [Windows Data Types](/windows/win32/WinProg/windows-data-types).
 
-Datové typy, které jsou jedinečné pro knihovny Microsoft Foundation Class, patří:
+Mezi datové typy, které jsou jedinečné pro knihovna Microsoft Foundation Class, patří následující:
 
-- Hodnota pozice A používá k označení pozice elementu v kolekci. třídy kolekcí MFC používá.
+- POZICE hodnoty používané k označení pozice prvku v kolekci; používá se třídami kolekcí MFC.
 
-- Lpcrect – A 32bitový ukazatel na konstantu (neupravitelnými) `RECT` struktury.
+- 32 LPCRECT ukazatel na konstantní (neupravitelný) `RECT` strukturu.
 
 ## <a name="see-also"></a>Viz také:
 
-[Přehled tříd](../../mfc/class-library-overview.md)<br/>
+[Přehled třídy](../../mfc/class-library-overview.md)<br/>
 [Makra a globální prvky](../../mfc/reference/mfc-macros-and-globals.md)

@@ -1,5 +1,5 @@
 ---
-title: CTaskDialog – třída
+title: Objektu CTaskDialog – třída
 ms.date: 11/19/2018
 f1_keywords:
 - CTaskDialog
@@ -116,16 +116,16 @@ helpviewer_keywords:
 - CTaskDialog [MFC], ShowDialog
 - CTaskDialog [MFC], TaskDialogCallback
 ms.assetid: 1991ec98-ae56-4483-958b-233809c8c559
-ms.openlocfilehash: 04c8a60f546700be8eeb2ec8a948e0ea321d12f8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e2f77a2eda4397ed368e477165e876f9b8fbf936
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62324305"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69502348"
 ---
-# <a name="ctaskdialog-class"></a>CTaskDialog – třída
+# <a name="ctaskdialog-class"></a>Objektu CTaskDialog – třída
 
-Místní dialogové okno, které funguje jako okno se zprávou, ale můžete zobrazit další informace pro uživatele. `CTaskDialog` Také zahrnuje funkce pro shromažďování informací od uživatele.
+Automaticky otevírané okno, které funguje jako okno se zprávou, ale může uživateli zobrazit další informace. Zahrnuje `CTaskDialog` také funkce pro shromažďování informací od uživatele.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -139,121 +139,121 @@ class CTaskDialog : public CObject
 
 |||
 |-|-|
-|[CTaskDialog::CTaskDialog](#ctaskdialog)|Vytvoří `CTaskDialog` objektu.|
+|[CTaskDialog::CTaskDialog](#ctaskdialog)|`CTaskDialog` Vytvoří objekt.|
 
 ### <a name="methods"></a>Metody
 
 |||
 |-|-|
-|[CTaskDialog::AddCommandControl](#addcommandcontrol)|Přidá na příkazové tlačítko `CTaskDialog`.|
-|[CTaskDialog::AddRadioButton](#addradiobutton)|Přidá tlačítko přepínače a `CTaskDialog`.|
-|[CTaskDialog::ClickCommandControl](#clickcommandcontrol)|Příkazové tlačítko nebo běžné tlačítko klikne prostřednictvím kódu programu.|
-|[CTaskDialog::ClickRadioButton](#clickradiobutton)|Přepínací tlačítko klikne prostřednictvím kódu programu.|
-|[CTaskDialog::DoModal](#domodal)|Zobrazí `CTaskDialog`.|
-|[CTaskDialog::GetCommonButtonCount](#getcommonbuttoncount)|Získá počet běžné tlačítka, které jsou k dispozici.|
-|[CTaskDialog::GetCommonButtonFlag](#getcommonbuttonflag)|Převede standardní tlačítko Windows společný typ. tlačítko přidružené `CTaskDialog` třídy.|
-|[CTaskDialog::GetCommonButtonId](#getcommonbuttonid)|Jeden z běžných typů tlačítko přidružené k převede `CTaskDialog` třída pro standardní tlačítko Windows.|
-|[CTaskDialog::GetOptions](#getoptions)|Vrátí možnost příznaky pro tuto `CTaskDialog`.|
-|[CTaskDialog::GetSelectedCommandControlID](#getselectedcommandcontrolid)|Vrátí ovládací prvek tlačítko vybraný příkaz.|
-|[CTaskDialog::GetSelectedRadioButtonID](#getselectedradiobuttonid)|Vrátí vybraného přepínače.|
-|[CTaskDialog::GetVerificationCheckboxState](#getverificationcheckboxstate)|Načte stav zaškrtávacího políčka pro ověření.|
-|[CTaskDialog::IsCommandControlEnabled](#iscommandcontrolenabled)|Určuje, zda je povoleno na příkazové tlačítko nebo běžné tlačítko.|
-|[CTaskDialog::IsRadioButtonEnabled](#isradiobuttonenabled)|Určuje, zda je povoleno přepínač.|
-|[CTaskDialog::IsSupported](#issupported)|Určuje, zda počítač, na kterém běží aplikace podporuje `CTaskDialog`.|
-|[CTaskDialog::LoadCommandControls](#loadcommandcontrols)|Přidá příkaz Ovládací prvky tlačítka pomocí dat z tabulky řetězců.|
-|[CTaskDialog::LoadRadioButtons](#loadradiobuttons)|Přidá přepínačů s použitím dat z tabulky řetězců.|
-|[CTaskDialog::NavigateTo](#navigateto)|Přenese fokus do jiného `CTaskDialog`.|
-|[CTaskDialog::OnCommandControlClick](#oncommandcontrolclick)|Rozhraní volá tuto metodu, když uživatel klikne příkazové tlačítko.|
-|[CTaskDialog::OnCreate](#oncreate)|Rozhraní volá tuto metodu po vytvoření `CTaskDialog`.|
-|[CTaskDialog::OnDestroy](#ondestroy)|Rozhraní volá tuto metodu, bezprostředně před zničí `CTaskDialog`.|
-|[CTaskDialog::OnExpandButtonClick](#onexpandbuttonclick)|Rozhraní volá tuto metodu, když uživatel klikne na tlačítko rozšíření.|
-|[CTaskDialog::OnHelp](#onhelp)|Rozhraní volá tuto metodu, když si uživatel vyžádá nápovědu.|
+|[CTaskDialog::AddCommandControl](#addcommandcontrol)|Přidá ovládací prvek příkazové tlačítko do `CTaskDialog`.|
+|[CTaskDialog::AddRadioButton](#addradiobutton)|Přidá přepínač na `CTaskDialog`.|
+|[CTaskDialog::ClickCommandControl](#clickcommandcontrol)|Klikne na ovládací prvek příkazové tlačítko nebo na společné tlačítko programově.|
+|[CTaskDialog::ClickRadioButton](#clickradiobutton)|Klikne na přepínací tlačítko programově.|
+|[CTaskDialog::DoModal](#domodal)|`CTaskDialog`Zobrazí.|
+|[CTaskDialog::GetCommonButtonCount](#getcommonbuttoncount)|Načte počet společných tlačítek k dispozici.|
+|[CTaskDialog::GetCommonButtonFlag](#getcommonbuttonflag)|Převede standardní tlačítko Windows na společný typ tlačítka přidružený `CTaskDialog` ke třídě.|
+|[Objektu CTaskDialog:: GetCommonButtonId](#getcommonbuttonid)|Převede jeden z obecných typů tlačítek přidružených `CTaskDialog` ke třídě na standardní tlačítko Windows.|
+|[Objektu CTaskDialog:: GetOptions](#getoptions)|Vrátí příznaky možností pro tento `CTaskDialog`parametr.|
+|[Objektu CTaskDialog:: GetSelectedCommandControlID](#getselectedcommandcontrolid)|Vrátí vybraný ovládací prvek příkazového tlačítka.|
+|[CTaskDialog::GetSelectedRadioButtonID](#getselectedradiobuttonid)|Vrátí vybraný přepínač.|
+|[CTaskDialog::GetVerificationCheckboxState](#getverificationcheckboxstate)|Načte stav zaškrtávacího políčka ověřování.|
+|[CTaskDialog::IsCommandControlEnabled](#iscommandcontrolenabled)|Určuje, zda je povoleno ovládací prvek příkazové tlačítko nebo společné tlačítko.|
+|[CTaskDialog::IsRadioButtonEnabled](#isradiobuttonenabled)|Určuje, zda je přepínač povolen.|
+|[Objektu CTaskDialog:: podporuje se](#issupported)|Určuje, zda počítač, ve kterém je spuštěna aplikace, `CTaskDialog`podporuje.|
+|[CTaskDialog::LoadCommandControls](#loadcommandcontrols)|Přidá ovládací prvky příkazového tlačítka pomocí dat z tabulky řetězců.|
+|[CTaskDialog::LoadRadioButtons](#loadradiobuttons)|Přidá přepínače pomocí dat z tabulky řetězců.|
+|[CTaskDialog::NavigateTo](#navigateto)|Přenese fokus na jiný `CTaskDialog`.|
+|[CTaskDialog::OnCommandControlClick](#oncommandcontrolclick)|Rozhraní volá tuto metodu, když uživatel klikne na ovládací prvek příkazové tlačítko.|
+|[CTaskDialog::OnCreate](#oncreate)|Rozhraní volá tuto metodu poté, co vytvoří `CTaskDialog`.|
+|[CTaskDialog::OnDestroy](#ondestroy)|Rozhraní volá tuto metodu těsně před zničením `CTaskDialog`.|
+|[Objektu CTaskDialog:: OnExpandButtonClick](#onexpandbuttonclick)|Rozhraní volá tuto metodu, když uživatel klikne na tlačítko rozšíření.|
+|[Objektu CTaskDialog:: help](#onhelp)|Rozhraní volá tuto metodu, když si uživatel požádá o technickou podporu.|
 |[CTaskDialog::OnHyperlinkClick](#onhyperlinkclick)|Rozhraní volá tuto metodu, když uživatel klikne na hypertextový odkaz.|
-|[CTaskDialog::OnInit](#oninit)|Rozhraní volá tuto metodu, když `CTaskDialog` je inicializován.|
-|[CTaskDialog::OnNavigatePage](#onnavigatepage)|Rozhraní volá tuto metodu, když uživatel přesune fokus s ohledem na ovládací prvky `CTaskDialog`.|
+|[CTaskDialog::OnInit](#oninit)|Rozhraní volá tuto metodu, když `CTaskDialog` je inicializována.|
+|[CTaskDialog::OnNavigatePage](#onnavigatepage)|Rozhraní volá tuto metodu, když uživatel přesune fokus s ohledem na ovládací prvky v `CTaskDialog`.|
 |[CTaskDialog::OnRadioButtonClick](#onradiobuttonclick)|Rozhraní volá tuto metodu, když uživatel vybere ovládací prvek přepínač.|
-|[CTaskDialog::OnTimer](#ontimer)|Rozhraní volá tuto metodu, když čas vyprší.|
-|[CTaskDialog::OnVerificationCheckboxClick](#onverificationcheckboxclick)|Rozhraní volá tuto metodu, když uživatel klikne na tlačítko zaškrtnutí políčka pro ověření.|
-|[CTaskDialog::RemoveAllCommandControls](#removeallcommandcontrols)|Odebere všechny ovládací prvky pro příkaz z `CTaskDialog`.|
-|[CTaskDialog::RemoveAllRadioButtons](#removeallradiobuttons)|Odebere všechny přepínače z `CTaskDialog`.|
-|[CTaskDialog::SetCommandControlOptions](#setcommandcontroloptions)|Aktualizace na příkazové tlačítko `CTaskDialog`.|
-|[CTaskDialog::SetCommonButtonOptions](#setcommonbuttonoptions)|Aktualizuje podmnožiny běžných tlačítka povolena a vyžaduje nástroje Řízení uživatelských účtů ke zvýšení úrovně oprávnění.|
-|[CTaskDialog::SetCommonButtons](#setcommonbuttons)|Přidá společné tlačítka `CTaskDialog`.|
-|[CTaskDialog::SetContent](#setcontent)|Aktualizuje obsah `CTaskDialog`.|
-|[CTaskDialog::SetDefaultCommandControl](#setdefaultcommandcontrol)|Určuje výchozí příkazové tlačítko.|
+|[CTaskDialog::OnTimer](#ontimer)|Rozhraní volá tuto metodu, když vyprší platnost časovače.|
+|[CTaskDialog::OnVerificationCheckboxClick](#onverificationcheckboxclick)|Rozhraní volá tuto metodu, když uživatel klikne na zaškrtávací políčko ověřování.|
+|[Objektu CTaskDialog:: RemoveAllCommandControls](#removeallcommandcontrols)|Odebere všechny ovládací prvky příkazu z `CTaskDialog`.|
+|[CTaskDialog::RemoveAllRadioButtons](#removeallradiobuttons)|Odebere všechna přepínací tlačítka z `CTaskDialog`.|
+|[Objektu CTaskDialog:: SetCommandControlOptions](#setcommandcontroloptions)|Aktualizuje ovládací prvek příkazové tlačítko na `CTaskDialog`.|
+|[Objektu CTaskDialog:: SetCommonButtonOptions](#setcommonbuttonoptions)|Aktualizuje podmnožinu společných tlačítek, která se mají povolit, a vyžaduje zvýšení oprávnění nástroje řízení uživatelských účtů.|
+|[Objektu CTaskDialog:: SetCommonButtons](#setcommonbuttons)|Přidá do `CTaskDialog`. společná tlačítka.|
+|[Objektu CTaskDialog:: SetContent](#setcontent)|Aktualizuje obsah `CTaskDialog`.|
+|[Objektu CTaskDialog:: SetDefaultCommandControl](#setdefaultcommandcontrol)|Určuje výchozí ovládací prvek příkazového tlačítka.|
 |[CTaskDialog::SetDefaultRadioButton](#setdefaultradiobutton)|Určuje výchozí přepínač.|
-|[CTaskDialog::SetDialogWidth](#setdialogwidth)|Nastavuje šířku `CTaskDialog`.|
-|[CTaskDialog::SetExpansionArea](#setexpansionarea)|Aktualizace rozšíření oblasti `CTaskDialog`.|
-|[CTaskDialog::SetFooterIcon](#setfootericon)|Aktualizace na ikonu zápatí `CTaskDialog`.|
+|[Objektu CTaskDialog:: SetDialogWidth](#setdialogwidth)|Upraví šířku `CTaskDialog`.|
+|[CTaskDialog::SetExpansionArea](#setexpansionarea)|Aktualizuje oblast rozšíření v `CTaskDialog`.|
+|[Objektu CTaskDialog:: SetFooterIcon](#setfootericon)|Aktualizuje ikonu zápatí pro `CTaskDialog`.|
 |[CTaskDialog::SetFooterText](#setfootertext)|Aktualizuje text v zápatí `CTaskDialog`.|
-|[CTaskDialog::SetMainIcon](#setmainicon)|Aktualizuje hlavní ikonu `CTaskDialog`.|
-|[CTaskDialog::SetMainInstruction](#setmaininstruction)|Aktualizuje hlavní instrukce `CTaskDialog`.|
-|[CTaskDialog::SetOptions](#setoptions)|Konfiguruje možnosti pro `CTaskDialog`.|
-|[CTaskDialog::SetProgressBarMarquee](#setprogressbarmarquee)|Nakonfiguruje rámeček panelu pro `CTaskDialog` a přidá jej do dialogového okna.|
-|[CTaskDialog::SetProgressBarPosition](#setprogressbarposition)|Nastaví pozici indikátor průběhu.|
-|[CTaskDialog::SetProgressBarRange](#setprogressbarrange)|Nastaví rozsah indikátor průběhu.|
-|[CTaskDialog::SetProgressBarState](#setprogressbarstate)|Nastaví stav indikátoru průběhu a zobrazí ho na `CTaskDialog`.|
+|[Objektu CTaskDialog:: SetMainIcon](#setmainicon)|Aktualizuje hlavní ikonu `CTaskDialog`.|
+|[Objektu CTaskDialog:: SetMainInstruction](#setmaininstruction)|Aktualizuje hlavní instrukci `CTaskDialog`.|
+|[Objektu CTaskDialog:: SetOptions](#setoptions)|Konfiguruje možnosti pro `CTaskDialog`.|
+|[CTaskDialog::SetProgressBarMarquee](#setprogressbarmarquee)|Nakonfiguruje pruh výběru pro `CTaskDialog` a přidá ho do dialogového okna.|
+|[Objektu CTaskDialog:: SetProgressBarPosition](#setprogressbarposition)|Upraví umístění indikátoru průběhu.|
+|[Objektu CTaskDialog:: SetProgressBarRange](#setprogressbarrange)|Upraví rozsah indikátoru průběhu.|
+|[Objektu CTaskDialog:: SetProgressBarState](#setprogressbarstate)|Nastaví stav indikátoru průběhu a zobrazí jej v `CTaskDialog`.|
 |[CTaskDialog::SetRadioButtonOptions](#setradiobuttonoptions)|Povolí nebo zakáže přepínač.|
-|[CTaskDialog::SetVerificationCheckbox](#setverificationcheckbox)|Nastaví zaškrtnutý stav zaškrtávacího políčka pro ověření.|
-|[CTaskDialog::SetVerificationCheckboxText](#setverificationcheckboxtext)|Nastaví text na pravé straně zaškrtněte políčko ověřování.|
-|[CTaskDialog::SetWindowTitle](#setwindowtitle)|Nastaví název `CTaskDialog`.|
-|[CTaskDialog::ShowDialog](#showdialog)|Vytvoří a zobrazí `CTaskDialog`.|
-|[CTaskDialog::TaskDialogCallback](#taskdialogcallback)|Rozhraní volá to v reakci na různé zprávy Windows.|
+|[CTaskDialog::SetVerificationCheckbox](#setverificationcheckbox)|Nastaví zaškrtnuté políčko ověřování.|
+|[CTaskDialog::SetVerificationCheckboxText](#setverificationcheckboxtext)|Nastaví text na pravé straně ověřování.|
+|[Objektu CTaskDialog:: SetWindowTitle](#setwindowtitle)|Nastaví název `CTaskDialog`.|
+|[Objektu CTaskDialog:: ShowDialog](#showdialog)|Vytvoří a zobrazí `CTaskDialog`.|
+|[Objektu CTaskDialog:: TaskDialogCallback](#taskdialogcallback)|Rozhraní volá toto v reakci na různé zprávy systému Windows.|
 
 ### <a name="data-members"></a>Datové členy
 
 |||
 |-|-|
-|`m_aButtons`|Pole ovládací prvky tlačítka příkazu pro `CTaskDialog`.|
+|`m_aButtons`|Pole ovládacích prvků příkazového tlačítka pro `CTaskDialog`.|
 |`m_aRadioButtons`|Pole ovládacích prvků přepínačů pro `CTaskDialog`.|
-|`m_bVerified`|`TRUE` indikuje, že je zaškrtnuté políčko ověřování; `FALSE` označuje není.|
+|`m_bVerified`|`TRUE`indikuje, že je zaškrtnuté políčko ověřování. `FALSE` označuje, že není.|
 |`m_footerIcon`|Ikona v zápatí `CTaskDialog`.|
 |`m_hWnd`|Popisovač okna pro `CTaskDialog`.|
 |`m_mainIcon`|Hlavní ikona `CTaskDialog`.|
-|`m_nButtonDisabled`|Masku, která označuje, které common tlačítek jsou zakázané.|
-|`m_nButtonElevation`|Masku, která označuje, které common tlačítek vyžadují nástroje Řízení uživatelských účtů ke zvýšení úrovně oprávnění.|
-|`m_nButtonId`|ID ovládacího prvku tlačítko vybraný příkaz.|
-|`m_nCommonButton`|Masku, která označuje, která běžné tlačítka jsou zobrazeny v `CTaskDialog`.|
-|`m_nDefaultCommandControl`|ID příkazového tlačítka, ovládací prvek, který je vybrán při `CTaskDialog` se zobrazí.|
-|`m_nDefaultRadioButton`|ID přepínač ovládací prvek, který je vybrán při `CTaskDialog` se zobrazí.|
-|`m_nFlags`|Maska, který určuje možnosti pro `CTaskDialog`.|
-|`m_nProgressPos`|Aktuální pozice pro indikátor průběhu.  Tato hodnota musí být mezi `m_nProgressRangeMin` a `m_nProgressRangeMax`.|
+|`m_nButtonDisabled`|Maska, která označuje, které z běžných tlačítek jsou zakázané.|
+|`m_nButtonElevation`|Maska, která určuje, který z běžných tlačítek vyžaduje zvýšení oprávnění nástroje řízení uživatelských účtů.|
+|`m_nButtonId`|ID vybraného ovládacího prvku příkazového tlačítka|
+|`m_nCommonButton`|Maska, která určuje, která společná tlačítka se zobrazí v `CTaskDialog`.|
+|`m_nDefaultCommandControl`|ID ovládacího prvku příkazového tlačítka, který je vybrán při `CTaskDialog` zobrazení.|
+|`m_nDefaultRadioButton`|Identifikátor ovládacího prvku přepínač, který je vybrán při `CTaskDialog` zobrazení.|
+|`m_nFlags`|Maska, která určuje možnosti pro `CTaskDialog`.|
+|`m_nProgressPos`|Aktuální pozice indikátoru průběhu.  Tato hodnota musí být mezi `m_nProgressRangeMin` a `m_nProgressRangeMax`.|
 |`m_nProgressRangeMax`|Maximální hodnota indikátoru průběhu.|
 |`m_nProgressRangeMin`|Minimální hodnota indikátoru průběhu.|
-|`m_nProgressState`|Stav indikátor průběhu. Další informace najdete v tématu [CTaskDialog::SetProgressBarState](#setprogressbarstate).|
-|`m_nRadioId`|ID ovládacího prvku tlačítko vybraného přepínače.|
+|`m_nProgressState`|Stav indikátoru průběhu. Další informace najdete v tématu [objektu CTaskDialog:: SetProgressBarState](#setprogressbarstate).|
+|`m_nRadioId`|ID vybraného ovládacího prvku přepínače|
 |`m_nWidth`|Šířka `CTaskDialog` v pixelech.|
-|`m_strCollapse`|Řetězec `CTaskDialog` zobrazí napravo od pole rozšíření, když je skrytý rozšířené informace.|
-|`m_strContent`|Řetězec obsahu objektu `CTaskDialog`.|
-|`m_strExpand`|Řetězec `CTaskDialog` zobrazí napravo od pole rozšíření, když se zobrazí dodatečné informace.|
-|`m_strFooter`|V zápatí je uvedené `CTaskDialog`.|
-|`m_strInformation`|Rozšířené informace o `CTaskDialog`.|
-|`m_strMainInstruction`|Hlavní instrukce `CTaskDialog`.|
+|`m_strCollapse`|Řetězec, který `CTaskDialog` se zobrazí napravo od pole rozšíření, když jsou rozšířené informace skryté.|
+|`m_strContent`|Řetězec obsahu pro `CTaskDialog`.|
+|`m_strExpand`|Řetězec, který `CTaskDialog` se zobrazí napravo od pole rozšíření při zobrazení rozbalených informací.|
+|`m_strFooter`|Zápatí `CTaskDialog`.|
+|`m_strInformation`|Rozšířené informace pro `CTaskDialog`.|
+|`m_strMainInstruction`|Hlavní instrukce pro `CTaskDialog`.|
 |`m_strTitle`|Název `CTaskDialog`.|
-|`m_strVerification`|Řetězec, který `CTaskDialog` zobrazí napravo od zaškrtávacího políčka pro ověření.|
+|`m_strVerification`|Řetězec, který se `CTaskDialog` zobrazí napravo od zaškrtávacího políčka ověření.|
 
 ## <a name="remarks"></a>Poznámky
 
-`CTaskDialog` Třídy nahradí pole standardní zprávy Windows a obsahuje další funkce, jako jsou nové ovládací prvky k získání informací od uživatele. Tato třída je v knihovně MFC v sadě Visual Studio 2010 a novější. `CTaskDialog` Je k dispozici od verze Windows Vista. Nelze zobrazit dřívější verze Windows `CTaskDialog` objektu. Použití `CTaskDialog::IsSupported` určit za běhu, zda aktuální uživatel mohl zobrazit dialogové okno úlohy. Pole pro standardní zprávy Windows je nadále podporován.
+`CTaskDialog` Třída nahradí standardní okno se zprávou Windows a má další funkce, jako jsou nové ovládací prvky pro shromáždění informací od uživatele. Tato třída je v knihovně MFC v aplikaci Visual Studio 2010 nebo novější. `CTaskDialog` Je k dispozici od systému Windows Vista. Starší verze systému Windows nemohou `CTaskDialog` objekt zobrazit. Použijte `CTaskDialog::IsSupported` k určení za běhu, zda může aktuální uživatel zobrazit dialogové okno úlohy. Standardní okno se zprávou Windows se pořád podporuje.
 
-`CTaskDialog` Je k dispozici pouze při sestavení aplikace s použitím knihovny kódování Unicode.
+`CTaskDialog` Je k dispozici pouze v případě, že sestavíte aplikaci pomocí knihovny Unicode.
 
-`CTaskDialog` Má dva různé konstruktory. Jeden konstruktor umožňuje zadat dvě příkazová tlačítka a až šest ovládací prvky pro běžné tlačítko. Po vytvoření můžete přidat další příkazová tlačítka `CTaskDialog`. Druhý konstruktor nepodporuje žádné příkazová tlačítka, ale můžete přidat neomezený počet ovládací prvky pro běžné tlačítko. Další informace o konstruktorech naleznete v tématu [CTaskDialog::CTaskDialog](#ctaskdialog).
+`CTaskDialog` Má dva různé konstruktory. Jeden konstruktor umožňuje zadat dvě příkazová tlačítka a maximálně šest běžných ovládacích prvků tlačítek. Po vytvoření `CTaskDialog`můžete přidat další příkazové tlačítko. Druhý konstruktor nepodporuje žádné příkazové tlačítko, ale lze přidat neomezený počet běžných ovládacích prvků tlačítek. Další informace o konstruktorech naleznete v tématu [objektu CTaskDialog:: objektu CTaskDialog](#ctaskdialog).
 
-Následující obrázek znázorňuje ukázku `CTaskDialog` pro ilustraci umístění některých prvků.
+Následující obrázek ukazuje ukázku `CTaskDialog` pro ilustraci umístění některých ovládacích prvků.
 
-![Příkladem objektu CTaskDialog](../../mfc/reference/media/ctaskdialogsample.png "příklad CTaskDialog") <br/>
-CTaskDialog vzorku
+![Příklad objektu CTaskDialog](../../mfc/reference/media/ctaskdialogsample.png "Příklad objektu CTaskDialog") <br/>
+Ukázka objektu CTaskDialog
 
 ## <a name="requirements"></a>Požadavky
 
 **Minimální požadovaný operační systém:** Windows Vista
 
-**Záhlaví:** afxtaskdialog.h
+**Záhlaví:** afxtaskdialog. h
 
-##  <a name="addcommandcontrol"></a>  CTaskDialog::AddCommandControl
+##  <a name="addcommandcontrol"></a>Objektu CTaskDialog:: AddCommandControl
 
-Přidá nový ovládací prvek tlačítko příkazu k `CTaskDialog`.
+Přidá k `CTaskDialog`ovládacímu prvku nové příkazové tlačítko.
 
 ```
 void AddCommandControl(
@@ -266,30 +266,30 @@ void AddCommandControl(
 ### <a name="parameters"></a>Parametry
 
 *nCommandControlID*<br/>
-[in] Příkaz Ovládací prvek identifikační číslo.
+pro Identifikační číslo ovládacího prvku příkazu
 
 *strCaption*<br/>
-[in] Řetězec, který `CTaskDialog` zobrazí uživateli. Použijte tento řetězec vysvětlující účel příkazu.
+pro Řetězec, který se `CTaskDialog` zobrazí uživateli. Pomocí tohoto řetězce můžete vysvětlit účel příkazu.
 
 *bEnabled*<br/>
-[in] Parametr logické hodnoty označující, pokud je tlačítko Povolit nebo zakázat.
+pro Logický parametr, který označuje, zda je tlačítko Nový povoleno nebo zakázáno.
 
 *bRequiresElevation*<br/>
-[in] Parametr logické hodnoty, která určuje, zda příkaz vyžaduje zvýšení oprávnění.
+pro Logický parametr, který označuje, zda příkaz vyžaduje zvýšení oprávnění.
 
 ### <a name="remarks"></a>Poznámky
 
-`CTaskDialog Class` Neomezený počet ovládací prvky tlačítka příkazu můžete zobrazit. Nicméně pokud `CTaskDialog` zobrazí libovolný příkaz tlačítko – ovládací prvky, může zobrazit maximálně 6 tlačítka. Pokud `CTaskDialog` nemá žádné ovládací prvky tlačítka příkaz, může zobrazit neomezený počet tlačítek.
+`CTaskDialog Class` Může zobrazit neomezený počet ovládacích prvků příkazového tlačítka. Pokud `CTaskDialog` však zobrazí jakékoli ovládací prvky příkazového tlačítka, může zobrazit maximálně šest tlačítek. `CTaskDialog` Pokud neobsahuje žádné ovládací prvky příkazového tlačítka, může zobrazit neomezený počet tlačítek.
 
-Když uživatel vybere ovládací prvek tlačítko příkazu `CTaskDialog` zavře. Pokud vaše aplikace zobrazí dialogové okno s použitím [CTaskDialog::DoModal](#domodal), `DoModal` vrátí *nCommandControlID* vybraný příkaz ovládacího prvku tlačítka.
+Když uživatel vybere ovládací prvek příkazové tlačítko, zavře se `CTaskDialog` . Pokud vaše aplikace zobrazí dialogové okno pomocí [objektu CTaskDialog::D omodal](#domodal), `DoModal` vrátí *nCommandControlID* vybraného ovládacího prvku příkazového tlačítka.
 
 ### <a name="example"></a>Příklad
 
 [!code-cpp[NVC_MFC_CTaskDialog#2](../../mfc/reference/codesnippet/cpp/ctaskdialog-class_1.cpp)]
 
-##  <a name="addradiobutton"></a>  CTaskDialog::AddRadioButton
+##  <a name="addradiobutton"></a>Objektu CTaskDialog:: AddRadioButton
 
-Přidá tlačítko přepínače a `CTaskDialog`.
+Přidá přepínač na `CTaskDialog`.
 
 ```
 void CTaskDialog::AddRadioButton(
@@ -301,27 +301,27 @@ void CTaskDialog::AddRadioButton(
 ### <a name="parameters"></a>Parametry
 
 *nRadioButtonID*<br/>
-[in] Identifikační číslo přepínač.
+pro Identifikační číslo přepínače
 
 *strCaption*<br/>
-[in] Řetězec, který `CTaskDialog` zobrazí vedle přepínač.
+pro Řetězec, který se `CTaskDialog` zobrazí vedle přepínače.
 
 *bEnabled*<br/>
-[in] Parametr logické hodnoty označující, zda je povoleno přepínač.
+pro Logický parametr, který označuje, zda je přepínač povolen.
 
 ### <a name="remarks"></a>Poznámky
 
-Přepínačů pro [třídy CTaskDialog](../../mfc/reference/ctaskdialog-class.md) vám ke shromažďování informací od uživatele. Použijte funkci [CTaskDialog::GetSelectedRadioButtonID](#getselectedradiobuttonid) k určení, které přepínače.
+Přepínače pro [třídu objektu CTaskDialog](../../mfc/reference/ctaskdialog-class.md) umožňují shromažďovat informace od uživatele. Pomocí funkce [objektu CTaskDialog:: GetSelectedRadioButtonID](#getselectedradiobuttonid) určete, který přepínač je vybrán.
 
-`CTaskDialog` Nevyžaduje *nRadioButtonID* parametry jsou jedinečné pro každý přepínač. Pokud nepoužijete odlišné identifikátor u obou přepínačů, však může dojít neočekávané chování.
+Nepožaduje, aby byly parametry nRadioButtonID pro každý přepínač jedinečné. `CTaskDialog` Pokud však pro každý přepínač nepoužíváte odlišný identifikátor, může docházet k neočekávanému chování.
 
 ### <a name="example"></a>Příklad
 
 [!code-cpp[NVC_MFC_CTaskDialog#3](../../mfc/reference/codesnippet/cpp/ctaskdialog-class_2.cpp)]
 
-##  <a name="clickcommandcontrol"></a>  CTaskDialog::ClickCommandControl
+##  <a name="clickcommandcontrol"></a>Objektu CTaskDialog:: ClickCommandControl
 
-Příkazové tlačítko nebo běžné tlačítko klikne prostřednictvím kódu programu.
+Klikne na ovládací prvek příkazové tlačítko nebo na společné tlačítko programově.
 
 ```
 protected:
@@ -331,15 +331,15 @@ void ClickCommandControl(int nCommandControlID) const;
 ### <a name="parameters"></a>Parametry
 
 *nCommandControlID*<br/>
-[in] ID příkazu ovládacího prvku klikněte na tlačítko.
+pro ID příkazu ovládacího prvku, který se má kliknout
 
 ### <a name="remarks"></a>Poznámky
 
-Tato metoda generuje TDM_CLICK_BUTTON zprávy systému windows.
+Tato metoda generuje zprávu Windows TDM_CLICK_BUTTON.
 
-##  <a name="clickradiobutton"></a>  CTaskDialog::ClickRadioButton
+##  <a name="clickradiobutton"></a>Objektu CTaskDialog:: ClickRadioButton
 
-Přepínací tlačítko klikne prostřednictvím kódu programu.
+Klikne na přepínací tlačítko programově.
 
 ```
 protected:
@@ -349,15 +349,15 @@ void ClickRadioButton(int nRadioButtonID) const;
 ### <a name="parameters"></a>Parametry
 
 *nRadioButtonID*<br/>
-[in] ID klikněte na přepínač.
+pro ID přepínacího tlačítka, na které se má kliknout
 
 ### <a name="remarks"></a>Poznámky
 
-Tato metoda generuje TDM_CLICK_RADIO_BUTTON zprávy systému windows.
+Tato metoda generuje zprávu Windows TDM_CLICK_RADIO_BUTTON.
 
-##  <a name="ctaskdialog"></a>  CTaskDialog::CTaskDialog
+##  <a name="ctaskdialog"></a>Objektu CTaskDialog:: objektu CTaskDialog
 
-Vytvoří instanci [třídy CTaskDialog](../../mfc/reference/ctaskdialog-class.md).
+Vytvoří instanci [třídy objektu CTaskDialog](../../mfc/reference/ctaskdialog-class.md).
 
 ```
 CTaskDialog(
@@ -382,44 +382,44 @@ CTaskDialog(
 ### <a name="parameters"></a>Parametry
 
 *strContent*<br/>
-[in] Řetězec, který má použít pro obsah `CTaskDialog`.
+pro Řetězec, který má být použit pro obsah `CTaskDialog`.
 
 *strMainInstruction*<br/>
-[in] Hlavní instrukce `CTaskDialog`.
+pro Hlavní instrukce pro `CTaskDialog`.
 
 *strTitle*<br/>
-[in] Název `CTaskDialog`.
+pro Název `CTaskDialog`.
 
 *nCommonButtons*<br/>
-[in] Maska běžné tlačítka pro přidání do `CTaskDialog`.
+pro Maska společných tlačítek, která se mají přidat do `CTaskDialog`.
 
 *nTaskDialogOptions*<br/>
-[in] Sadu možností pro `CTaskDialog`.
+pro Sada možností, které se mají použít pro `CTaskDialog`.
 
 *strFooter*<br/>
-[in] Řetězec, který chcete použít jako zápatí.
+pro Řetězec, který má být použit jako zápatí.
 
 *nIDCommandControlsFirst*<br/>
-[in] Řetězec ID prvního příkazu.
+pro ID řetězce prvního příkazu
 
 *nIDCommandControlsLast*<br/>
-[in] Řetězec ID poslední příkaz.
+pro ID řetězce posledního příkazu
 
 ### <a name="remarks"></a>Poznámky
 
-Existují dva způsoby, které můžete přidat `CTaskDialog` do vaší aplikace. Prvním způsobem je použití jednoho z konstruktorů k vytvoření `CTaskDialog` a zobrazit ji pomocí [CTaskDialog::DoModal](#domodal). Druhý způsob je použití statické funkce [CTaskDialog::ShowDialog](#showdialog), což vám umožní zobrazit `CTaskDialog` bez explicitního vytváření `CTaskDialog` objektu.
+Existují dva způsoby, jak můžete přidat `CTaskDialog` do aplikace. Prvním způsobem je použít jeden z konstruktorů k vytvoření `CTaskDialog` a zobrazení pomocí [objektu CTaskDialog::D omodal](#domodal). Druhým způsobem je použít statickou funkci [objektu CTaskDialog:: ShowDialog](#showdialog), která umožňuje zobrazit `CTaskDialog` `CTaskDialog` objekt bez explicitního vytvoření objektu.
 
-Druhý konstruktor vytvoří příkazového tlačítka s použitím dat ze souboru prostředků vaší aplikace. Tabulka řetězců v souboru prostředků má několik řetězců s přidruženými řetězcovými ID. Tato metoda přidá příkazové tlačítko pro každou platnou položku v tabulce řetězců mezi *nIDCommandControlsFirst* a *nCommandControlsLast*včetně. Pro tyto ovládací prvky tlačítka příkazu řetězec do tabulky řetězců je popisek ovládacího prvku a řetězec ID je ID ovládacího prvku.
+Druhý konstruktor vytvoří ovládací prvky příkazového tlačítka pomocí dat ze souboru prostředků vaší aplikace. Tabulka řetězců v souboru prostředků má několik řetězců s přidruženými identifikátory řetězců. Tato metoda přidá ovládací prvek příkazové tlačítko pro každou platnou položku v tabulce řetězců mezi *nIDCommandControlsFirst* a *nCommandControlsLast*(včetně). Pro toto příkazové tlačítko ovládací prvky je řetězec v tabulce String titulkem ovládacího prvku a ID řetězce je ID ovládacího prvku.
 
-Zobrazit [CTaskDialog::SetOptions](#setoptions) seznam platné možnosti.
+Seznam platných možností naleznete v tématu [objektu CTaskDialog:: SetOptions](#setoptions) .
 
 ### <a name="example"></a>Příklad
 
 [!code-cpp[NVC_MFC_CTaskDialog#7](../../mfc/reference/codesnippet/cpp/ctaskdialog-class_3.cpp)]
 
-##  <a name="domodal"></a>  CTaskDialog::DoModal
+##  <a name="domodal"></a>Objektu CTaskDialog::D oModal
 
-Ukazuje, `CTaskDialog` a díky tomu modální.
+Zobrazí a `CTaskDialog` nastaví ho jako modální.
 
 ```
 INT_PTR DoModal (HWND hParent = ::GetActiveWindow());
@@ -428,25 +428,25 @@ INT_PTR DoModal (HWND hParent = ::GetActiveWindow());
 ### <a name="parameters"></a>Parametry
 
 *hParent*<br/>
-[in] Nadřazené okno pro `CTaskDialog`.
+pro Nadřazené okno pro `CTaskDialog`.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Celé číslo, které odpovídá výběru uživatelem.
+Celé číslo, které odpovídá výběru provedenému uživatelem.
 
 ### <a name="remarks"></a>Poznámky
 
-Zobrazí tuto instanci [CTaskDialog](../../mfc/reference/ctaskdialog-class.md). Aplikace pak čeká uživateli dialogové okno zavřete.
+Zobrazí tuto instanci [objektu CTaskDialog](../../mfc/reference/ctaskdialog-class.md). Aplikace potom počká, až uživatel dialogové okno zavřete.
 
-`CTaskDialog` Zavře, když uživatel vybere common tlačítka, ovládací prvek odkazu příkazu nebo zavře `CTaskDialog`. Vrácená hodnota je identifikátor, který určuje, jak uživatel zavření dialogových oken.
+Zavře, když uživatel vybere společné tlačítko, ovládací prvek odkaz na příkazy nebo `CTaskDialog`zavře. `CTaskDialog` Vrácená hodnota je identifikátor, který označuje, jak uživatel zavřel dialogové okno.
 
 ### <a name="example"></a>Příklad
 
 [!code-cpp[NVC_MFC_CTaskDialog#7](../../mfc/reference/codesnippet/cpp/ctaskdialog-class_3.cpp)]
 
-##  <a name="getcommonbuttoncount"></a>  CTaskDialog::GetCommonButtonCount
+##  <a name="getcommonbuttoncount"></a>Objektu CTaskDialog:: GetCommonButtonCount
 
-Získá počet běžné tlačítka.
+Načte počet běžných tlačítek.
 
 ```
 int GetCommonButtonCount() const;
@@ -454,17 +454,17 @@ int GetCommonButtonCount() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Počet běžné tlačítka, které jsou k dispozici.
+Počet běžných tlačítek, která jsou k dispozici.
 
 ### <a name="remarks"></a>Poznámky
 
-Běžné tlačítka jsou výchozí tlačítka, které zadáte [CTaskDialog::CTaskDialog](#ctaskdialog). [Třídy CTaskDialog](../../mfc/reference/ctaskdialog-class.md) zobrazí tlačítek v dolní části dialogového okna.
+Společná tlačítka jsou výchozími tlačítky, které zadáte do [objektu CTaskDialog:: objektu CTaskDialog](#ctaskdialog). [Třída objektu CTaskDialog](../../mfc/reference/ctaskdialog-class.md) zobrazí tlačítka podél dolního okraje dialogového okna.
 
-Výčtový seznam tlačítek je součástí CommCtrl.h.
+Výčtový seznam tlačítek je k dispozici v CommCtrl. h.
 
-##  <a name="getcommonbuttonflag"></a>  CTaskDialog::GetCommonButtonFlag
+##  <a name="getcommonbuttonflag"></a>Objektu CTaskDialog:: GetCommonButtonFlag
 
-Převede standardní tlačítko Windows společný typ. tlačítko přidružené [třídy CTaskDialog](../../mfc/reference/ctaskdialog-class.md).
+Převede standardní tlačítko Windows na společný typ tlačítka přidružený ke [třídě objektu CTaskDialog](../../mfc/reference/ctaskdialog-class.md).
 
 ```
 int GetCommonButtonFlag(int nButtonId) const;
@@ -473,15 +473,15 @@ int GetCommonButtonFlag(int nButtonId) const;
 ### <a name="parameters"></a>Parametry
 
 *nButtonId*<br/>
-[in] Standardní tlačítko hodnotu Windows.
+pro Standardní hodnota tlačítka Windows
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Hodnota odpovídající `CTaskDialog` běžné tlačítko. Pokud neexistuje žádný odpovídající běžné tlačítko, tato metoda vrátí hodnotu 0.
+Hodnota odpovídajícího `CTaskDialog` obecného tlačítka Pokud není k dispozici odpovídající tlačítko Common, vrátí tato metoda hodnotu 0.
 
-##  <a name="getcommonbuttonid"></a>  CTaskDialog::GetCommonButtonId
+##  <a name="getcommonbuttonid"></a>Objektu CTaskDialog:: GetCommonButtonId
 
-Převede jednu z běžné typy tlačítek, které jsou přidružené k [třídy CTaskDialog](../../mfc/reference/ctaskdialog-class.md) standardní tlačítko Windows.
+Převede jeden z obecných typů tlačítek přidružených k [třídě objektu CTaskDialog](../../mfc/reference/ctaskdialog-class.md) na standardní tlačítko Windows.
 
 ```
 int GetCommonButtonId(int nFlag);
@@ -489,16 +489,16 @@ int GetCommonButtonId(int nFlag);
 
 ### <a name="parameters"></a>Parametry
 
-*nFlag*<br/>
-[in] Společný typ tlačítko přidružené `CTaskDialog` třídy.
+*načit*<br/>
+pro Společný typ tlačítka přidružený `CTaskDialog` ke třídě.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Hodnota odpovídající standardní tlačítko Windows. Pokud neexistuje žádný odpovídající tlačítka Windows, metoda vrátí hodnotu 0.
+Hodnota odpovídajícího tlačítka pro standardní Windows Pokud není k dispozici odpovídající tlačítko Windows, vrátí metoda 0.
 
-##  <a name="getoptions"></a>  CTaskDialog::GetOptions
+##  <a name="getoptions"></a>Objektu CTaskDialog:: GetOptions
 
-Vrátí možnost příznaky pro tuto `CTaskDialog`.
+Vrátí příznaky možností pro tento `CTaskDialog`parametr.
 
 ```
 int GetOptions() const;
@@ -510,15 +510,15 @@ Příznaky pro `CTaskDialog`.
 
 ### <a name="remarks"></a>Poznámky
 
-Další informace o dostupných možnostech [třídy CTaskDialog](../../mfc/reference/ctaskdialog-class.md), naleznete v tématu [CTaskDialog::SetOptions](#setoptions).
+Další informace o možnostech dostupných pro [třídu objektu CTaskDialog](../../mfc/reference/ctaskdialog-class.md)naleznete v tématu [objektu CTaskDialog:: SetOptions](#setoptions).
 
 ### <a name="example"></a>Příklad
 
 [!code-cpp[NVC_MFC_CTaskDialog#7](../../mfc/reference/codesnippet/cpp/ctaskdialog-class_3.cpp)]
 
-##  <a name="getselectedcommandcontrolid"></a>  CTaskDialog::GetSelectedCommandControlID
+##  <a name="getselectedcommandcontrolid"></a>Objektu CTaskDialog:: GetSelectedCommandControlID
 
-Vrátí ovládací prvek tlačítko vybraný příkaz.
+Vrátí vybraný ovládací prvek příkazového tlačítka.
 
 ```
 int GetSelectedCommandControlID() const;
@@ -526,19 +526,19 @@ int GetSelectedCommandControlID() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-ID ovládacího prvku tlačítko aktuálně vybraný příkaz.
+ID aktuálně vybraného ovládacího prvku příkazové tlačítko
 
 ### <a name="remarks"></a>Poznámky
 
-Není nutné tuto metodu použijte k načtení ID příkazového tlačítka, který uživatel vybral. Toto ID je vrácený buď [CTaskDialog::DoModal](#domodal) nebo [CTaskDialog::ShowDialog](#showdialog).
+Tuto metodu není nutné používat k načtení ID příkazového tlačítka, které uživatel vybral. IDENTIFIKÁTOR je vrácen buď pomocí [objektu CTaskDialog::D omodal](#domodal) , nebo [objektu CTaskDialog:: ShowDialog](#showdialog).
 
 ### <a name="example"></a>Příklad
 
 [!code-cpp[NVC_MFC_CTaskDialog#2](../../mfc/reference/codesnippet/cpp/ctaskdialog-class_1.cpp)]
 
-##  <a name="getselectedradiobuttonid"></a>  CTaskDialog::GetSelectedRadioButtonID
+##  <a name="getselectedradiobuttonid"></a>Objektu CTaskDialog:: GetSelectedRadioButtonID
 
-Vrátí vybraného přepínače.
+Vrátí vybraný přepínač.
 
 ```
 int GetSelectedRadioButtonID() const;
@@ -546,19 +546,19 @@ int GetSelectedRadioButtonID() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-ID vybraného přepínače.
+ID vybraného přepínacího tlačítka
 
 ### <a name="remarks"></a>Poznámky
 
-Tuto metodu můžete použít, až uživatel zavře dialogové okno Načíst vybraný přepínač.
+Tuto metodu můžete použít poté, co uživatel zavře dialogové okno, aby načetl vybraný přepínač.
 
 ### <a name="example"></a>Příklad
 
 [!code-cpp[NVC_MFC_CTaskDialog#3](../../mfc/reference/codesnippet/cpp/ctaskdialog-class_2.cpp)]
 
-##  <a name="getverificationcheckboxstate"></a>  CTaskDialog::GetVerificationCheckboxState
+##  <a name="getverificationcheckboxstate"></a>Objektu CTaskDialog:: GetVerificationCheckboxState
 
-Načte stav zaškrtávacího políčka pro ověření.
+Načte stav zaškrtávacího políčka ověřování.
 
 ```
 BOOL GetVerificationCheckboxState() const;
@@ -566,15 +566,15 @@ BOOL GetVerificationCheckboxState() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-TRUE, pokud se zaškrtávací políčko je zaškrtnuto, FALSE. Pokud není.
+TRUE, pokud je zaškrtávací políčko zaškrtnuto, FALSE, pokud není.
 
 ### <a name="example"></a>Příklad
 
 [!code-cpp[NVC_MFC_CTaskDialog#5](../../mfc/reference/codesnippet/cpp/ctaskdialog-class_4.cpp)]
 
-##  <a name="iscommandcontrolenabled"></a>  CTaskDialog::IsCommandControlEnabled
+##  <a name="iscommandcontrolenabled"></a>Objektu CTaskDialog:: IsCommandControlEnabled
 
-Určuje, zda je povoleno na příkazové tlačítko nebo tlačítko.
+Určuje, zda je povoleno ovládací prvek nebo tlačítko příkazového tlačítka.
 
 ```
 BOOL IsCommandControlEnabled(int nCommandControlID) const;
@@ -583,25 +583,25 @@ BOOL IsCommandControlEnabled(int nCommandControlID) const;
 ### <a name="parameters"></a>Parametry
 
 *nCommandControlID*<br/>
-[in] ID příkazové tlačítko nebo tlačítko test.
+pro ID ovládacího prvku příkazového tlačítka nebo tlačítka k otestování
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Hodnota TRUE, pokud ovládací prvek je povoleno, FALSE. Pokud není.
+TRUE, pokud je ovládací prvek povolený, FALSE, pokud není.
 
 ### <a name="remarks"></a>Poznámky
 
-Tuto metodu můžete použít k určení dostupnosti i příkaz Ovládací prvky tlačítka a běžné tlačítek `CTaskDialog` třídy *.
+Tuto metodu lze použít k určení dostupnosti obou ovládacích prvků příkazového tlačítka a společných tlačítek `CTaskDialog` třídy *.
 
-Pokud *nCommandControlID* je neplatný identifikátor pro buď běžný `CTaskDialog` tlačítko nebo příkazové tlačítko, tato metoda vyvolá výjimku.
+Pokud *nCommandControlID* není platným identifikátorem pro společné `CTaskDialog` tlačítko nebo ovládací prvek příkazové tlačítko, tato metoda vyvolá výjimku.
 
 ### <a name="example"></a>Příklad
 
 [!code-cpp[NVC_MFC_CTaskDialog#2](../../mfc/reference/codesnippet/cpp/ctaskdialog-class_1.cpp)]
 
-##  <a name="isradiobuttonenabled"></a>  CTaskDialog::IsRadioButtonEnabled
+##  <a name="isradiobuttonenabled"></a>Objektu CTaskDialog:: IsRadioButtonEnabled
 
-Určuje, zda je povoleno přepínač.
+Určuje, zda je přepínač povolen.
 
 ```
 BOOL IsRadioButtonEnabled(int nRadioButtonID) const;
@@ -610,23 +610,23 @@ BOOL IsRadioButtonEnabled(int nRadioButtonID) const;
 ### <a name="parameters"></a>Parametry
 
 *nRadioButtonID*<br/>
-[in] ID přepínač k testování.
+pro ID přepínacího přepínače, které chcete otestovat.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Hodnota TRUE, pokud přepínací tlačítko je povolené FALSE. Pokud není.
+TRUE, pokud je přepínač povolený, FALSE, pokud není.
 
 ### <a name="remarks"></a>Poznámky
 
-Pokud *nRadioButtonID* není platný identifikátor pro přepínací tlačítko, tato metoda vyvolá výjimku.
+Pokud *nRadioButtonID* není platný identifikátor pro přepínač, tato metoda vyvolá výjimku.
 
 ### <a name="example"></a>Příklad
 
 [!code-cpp[NVC_MFC_CTaskDialog#3](../../mfc/reference/codesnippet/cpp/ctaskdialog-class_2.cpp)]
 
-##  <a name="issupported"></a>  CTaskDialog::IsSupported
+##  <a name="issupported"></a>Objektu CTaskDialog:: podporuje se
 
-Určuje, zda počítač, na kterém běží aplikace podporuje `CTaskDialog`.
+Určuje, zda počítač, ve kterém je spuštěna aplikace, `CTaskDialog`podporuje.
 
 ```
 static BOOL IsSupported();
@@ -634,19 +634,19 @@ static BOOL IsSupported();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Hodnota TRUE, pokud počítač podporuje `CTaskDialog`; FALSE v opačném případě.
+TRUE, pokud počítač podporuje `CTaskDialog`; V opačném případě NEPRAVDA.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato funkce slouží k určení za běhu, pokud počítač, na kterém běží vaše aplikace podporuje `CTaskDialog` třídy. Pokud počítač není podporován `CTaskDialog`, měli byste zadat jinou metodu sdělování informací uživateli. Vaše aplikace se chybově ukončit, pokud se pokusí použít `CTaskDialog` na počítači, který nepodporuje `CTaskDialog` třídy.
+Tato funkce slouží k určení za běhu, pokud počítač, na kterém je spuštěna vaše aplikace `CTaskDialog` , podporuje třídu. Pokud počítač nepodporuje `CTaskDialog`, měli byste zadat jinou metodu sdělování informací uživateli. Dojde k chybě aplikace, pokud se pokusí použít `CTaskDialog` na počítači, který `CTaskDialog` třídu nepodporuje.
 
 ### <a name="example"></a>Příklad
 
 [!code-cpp[NVC_MFC_CTaskDialog#1](../../mfc/reference/codesnippet/cpp/ctaskdialog-class_5.cpp)]
 
-##  <a name="loadcommandcontrols"></a>  CTaskDialog::LoadCommandControls
+##  <a name="loadcommandcontrols"></a>Objektu CTaskDialog:: LoadCommandControls
 
-Přidá příkaz Ovládací prvky tlačítka pomocí dat z tabulky řetězců.
+Přidá ovládací prvky příkazového tlačítka pomocí dat z tabulky řetězců.
 
 ```
 void LoadCommandControls(
@@ -657,24 +657,24 @@ void LoadCommandControls(
 ### <a name="parameters"></a>Parametry
 
 *nIDCommandControlsFirst*<br/>
-[in] Řetězec ID prvního příkazu.
+pro ID řetězce prvního příkazu
 
 *nIDCommandControlsLast*<br/>
-[in] Řetězec ID poslední příkaz.
+pro ID řetězce posledního příkazu
 
 ### <a name="remarks"></a>Poznámky
 
-Tato metoda vytvoří ovládací prvky příkazového tlačítka s použitím dat ze souboru prostředků vaší aplikace. Tabulka řetězců v souboru prostředků má několik řetězců s přidruženými řetězcovými ID. Nové ovládací prvky tlačítka příkazu přidat pomocí této metody použijte řetězec pro záhlaví ovládacího prvku a řetězec ID pro ID ovládacího prvku. Poskytuje řadu řetězce vybrané *nIDCommandControlsFirst* a *nCommandControlsLast*včetně. Pokud je v rozsahu prázdná položka, metoda nepřidá příkazové tlačítko pro tuto položku.
+Tato metoda vytvoří ovládací prvky příkazového tlačítka pomocí dat ze souboru prostředků vaší aplikace. Tabulka řetězců v souboru prostředků má několik řetězců s přidruženými identifikátory řetězců. Nové ovládací prvky příkazového tlačítka přidané pomocí této metody používají řetězec pro titulek ovládacího prvku a ID řetězce pro ID ovládacího prvku. Rozsah vybraných řetězců je poskytován *nIDCommandControlsFirst* a *nCommandControlsLast*(včetně). Pokud je v rozsahu prázdná položka, metoda nepřidá ovládací prvek příkazové tlačítko pro tuto položku.
 
-Ve výchozím nastavení nové ovládací prvky tlačítka příkazu jsou povolené a nevyžadují, aby zvýšení oprávnění.
+Ve výchozím nastavení jsou k dispozici nové ovládací prvky příkazového tlačítka a nevyžadují zvýšení úrovně oprávnění.
 
 ### <a name="example"></a>Příklad
 
 [!code-cpp[NVC_MFC_CTaskDialog#2](../../mfc/reference/codesnippet/cpp/ctaskdialog-class_1.cpp)]
 
-##  <a name="loadradiobuttons"></a>  CTaskDialog::LoadRadioButtons
+##  <a name="loadradiobuttons"></a>Objektu CTaskDialog:: LoadRadioButtons
 
-Přidá ovládací prvky tlačítek přepínače s použitím dat z tabulky řetězců.
+Přidá ovládací prvky přepínačů pomocí dat z tabulky řetězců.
 
 ```
 void LoadRadioButtons(
@@ -685,24 +685,24 @@ void LoadRadioButtons(
 ### <a name="parameters"></a>Parametry
 
 *nIDRadioButtonsFirst*<br/>
-[in] Řetězec ID první přepínač.
+pro ID řetězce prvního přepínacího tlačítka.
 
 *nIDRadioButtonsLast*<br/>
-[in] Řetězec ID poslední přepínač.
+pro ID řetězce posledního přepínacího tlačítka
 
 ### <a name="remarks"></a>Poznámky
 
-Tato metoda vytvoří přepínačů s použitím dat ze souboru prostředků vaší aplikace. Tabulka řetězců v souboru prostředků má několik řetězců s přidruženými řetězcovými ID. Přidat tímto způsobem nové přepínače použijte řetězec pro titulek přepínací tlačítko a řetězec ID pro ID přepínací tlačítko. Poskytuje řadu řetězce vybrané *nIDRadioButtonsFirst* a *nRadioButtonsLast*včetně. Pokud je v rozsahu prázdná položka, metoda nepřidá přepínač pro tuto položku.
+Tato metoda vytváří přepínací tlačítka pomocí dat ze souboru prostředků vaší aplikace. Tabulka řetězců v souboru prostředků má několik řetězců s přidruženými identifikátory řetězců. Nová přepínací tlačítka přidaná pomocí této metody používají řetězec pro titulek přepínače a ID řetězce pro ID přepínacího tlačítka. Rozsah vybraných řetězců je poskytován *nIDRadioButtonsFirst* a *nRadioButtonsLast*(včetně). Pokud je v rozsahu prázdná položka, metoda nepřidá přepínač pro tuto položku.
 
-Ve výchozím nastavení jsou povolené přepínačů nové.
+Ve výchozím nastavení jsou povolená nová přepínačová tlačítka.
 
 ### <a name="example"></a>Příklad
 
 [!code-cpp[NVC_MFC_CTaskDialog#3](../../mfc/reference/codesnippet/cpp/ctaskdialog-class_2.cpp)]
 
-##  <a name="navigateto"></a>  CTaskDialog::NavigateTo
+##  <a name="navigateto"></a>Objektu CTaskDialog:: NavigateTo
 
-Přenese fokus do jiného `CTaskDialog`.
+Přenese fokus na jiný `CTaskDialog`.
 
 ```
 protected:
@@ -712,15 +712,15 @@ void NavigateTo(CTaskDialog& oTaskDialog) const;
 ### <a name="parameters"></a>Parametry
 
 *oTaskDialog*<br/>
-[in] `CTaskDialog` , Který získá fokus.
+pro `CTaskDialog` , Který dostane fokus.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato metoda skrývá aktuální `CTaskDialog` když se zobrazí *oTaskDialog*. *OTaskDialog* se zobrazí ve stejném umístění jako aktuální `CTaskDialog`.
+Tato metoda skryje aktuální `CTaskDialog` , když se zobrazí *oTaskDialog*. *OTaskDialog* se zobrazí ve stejném umístění jako aktuální `CTaskDialog`.
 
-##  <a name="oncommandcontrolclick"></a>  CTaskDialog::OnCommandControlClick
+##  <a name="oncommandcontrolclick"></a>Objektu CTaskDialog:: OnCommandControlClick
 
-Rozhraní volá tuto metodu, když uživatel klikne příkazové tlačítko.
+Rozhraní volá tuto metodu, když uživatel klikne na ovládací prvek příkazové tlačítko.
 
 ```
 virtual HRESULT OnCommandControlClick(int nCommandControlID);
@@ -729,19 +729,19 @@ virtual HRESULT OnCommandControlClick(int nCommandControlID);
 ### <a name="parameters"></a>Parametry
 
 *nCommandControlID*<br/>
-[in] ID ovládacího prvku tlačítko příkazu, který uživatel vybral.
+pro ID ovládacího prvku příkazového tlačítka, který uživatel vybral
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Výchozí implementace vrátí hodnotu S_OK.
+Výchozí implementace vrací S_OK.
 
 ### <a name="remarks"></a>Poznámky
 
-Potlačí tuto metodu v odvozené třídě implementovat vlastní chování.
+Přepsat tuto metodu v odvozené třídě pro implementaci vlastního chování.
 
-##  <a name="oncreate"></a>  CTaskDialog::OnCreate
+##  <a name="oncreate"></a>Objektu CTaskDialog:: Create
 
-Rozhraní volá tuto metodu po vytvoření `CTaskDialog`.
+Rozhraní volá tuto metodu poté, co vytvoří `CTaskDialog`.
 
 ```
 virtual HRESULT OnCreate();
@@ -749,15 +749,15 @@ virtual HRESULT OnCreate();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Výchozí implementace vrátí hodnotu S_OK.
+Výchozí implementace vrací S_OK.
 
 ### <a name="remarks"></a>Poznámky
 
-Potlačí tuto metodu v odvozené třídě implementovat vlastní chování.
+Přepsat tuto metodu v odvozené třídě pro implementaci vlastního chování.
 
-##  <a name="ondestroy"></a>  CTaskDialog::OnDestroy
+##  <a name="ondestroy"></a>Objektu CTaskDialog:: Destroy – zničení
 
-Rozhraní volá tuto metodu, bezprostředně před zničí `CTaskDialog`.
+Rozhraní volá tuto metodu těsně před zničením `CTaskDialog`.
 
 ```
 virtual HRESULT OnDestroy();
@@ -765,13 +765,13 @@ virtual HRESULT OnDestroy();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Výchozí implementace vrátí hodnotu S_OK.
+Výchozí implementace vrací S_OK.
 
 ### <a name="remarks"></a>Poznámky
 
-Potlačí tuto metodu v odvozené třídě implementovat vlastní chování.
+Přepsat tuto metodu v odvozené třídě pro implementaci vlastního chování.
 
-##  <a name="onexpandbuttonclick"></a>  CTaskDialog::OnExpandButtonClick
+##  <a name="onexpandbuttonclick"></a>Objektu CTaskDialog:: OnExpandButtonClick
 
 Rozhraní volá tuto metodu, když uživatel klikne na tlačítko rozšíření.
 
@@ -782,19 +782,19 @@ virtual HRESULT OnExpandButtonClicked(BOOL bExpanded);
 ### <a name="parameters"></a>Parametry
 
 *bExpanded*<br/>
-[in] Nenulová hodnota označuje, že se zobrazí další informace. Hodnota 0 znamená, že je skrytý dodatečné informace.
+pro Nenulová hodnota znamená, že se zobrazí další informace; 0 značí, že jsou další informace skryté.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Výchozí implementace vrátí hodnotu S_OK.
+Výchozí implementace vrací S_OK.
 
 ### <a name="remarks"></a>Poznámky
 
-Potlačí tuto metodu v odvozené třídě implementovat vlastní chování.
+Přepsat tuto metodu v odvozené třídě pro implementaci vlastního chování.
 
-##  <a name="onhelp"></a>  CTaskDialog::OnHelp
+##  <a name="onhelp"></a>Objektu CTaskDialog:: help
 
-Rozhraní volá tuto metodu, když si uživatel vyžádá nápovědu.
+Rozhraní volá tuto metodu, když si uživatel požádá o technickou podporu.
 
 ```
 virtual HRESULT OnHelp();
@@ -802,13 +802,13 @@ virtual HRESULT OnHelp();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Výchozí implementace vrátí hodnotu S_OK.
+Výchozí implementace vrací S_OK.
 
 ### <a name="remarks"></a>Poznámky
 
-Potlačí tuto metodu v odvozené třídě implementovat vlastní chování.
+Přepsat tuto metodu v odvozené třídě pro implementaci vlastního chování.
 
-##  <a name="onhyperlinkclick"></a>  CTaskDialog::OnHyperlinkClick
+##  <a name="onhyperlinkclick"></a>Objektu CTaskDialog:: OnHyperlinkClick
 
 Rozhraní volá tuto metodu, když uživatel klikne na hypertextový odkaz.
 
@@ -819,21 +819,21 @@ virtual HRESULT OnHyperlinkClick(const CString& strHref);
 ### <a name="parameters"></a>Parametry
 
 *strHref*<br/>
-[in] Řetězec, který reprezentuje hypertextový odkaz.
+pro Řetězec, který představuje hypertextový odkaz.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Výchozí implementace vrátí hodnotu S_OK.
+Výchozí implementace vrací S_OK.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato metoda volá [ShellExecute](/windows/desktop/api/shellapi/nf-shellapi-shellexecutea) dříve, než vrátí hodnotu S_OK.
+Tato metoda volá [ShellExecute](/windows/win32/api/shellapi/nf-shellapi-shellexecutew) před tím, než vrátí S_OK.
 
-Potlačí tuto metodu v odvozené třídě implementovat vlastní chování.
+Přepsat tuto metodu v odvozené třídě pro implementaci vlastního chování.
 
-##  <a name="oninit"></a>  CTaskDialog::OnInit
+##  <a name="oninit"></a>Objektu CTaskDialog:: OnInit
 
-Rozhraní volá tuto metodu, když `CTaskDialog` je inicializován.
+Rozhraní volá tuto metodu, když `CTaskDialog` je inicializována.
 
 ```
 virtual HRESULT OnInit();
@@ -841,15 +841,15 @@ virtual HRESULT OnInit();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Výchozí implementace vrátí hodnotu S_OK.
+Výchozí implementace vrací S_OK.
 
 ### <a name="remarks"></a>Poznámky
 
-Potlačí tuto metodu v odvozené třídě implementovat vlastní chování.
+Přepsat tuto metodu v odvozené třídě pro implementaci vlastního chování.
 
-##  <a name="onnavigatepage"></a>  CTaskDialog::OnNavigatePage
+##  <a name="onnavigatepage"></a>Objektu CTaskDialog:: OnNavigatePage
 
-Rozhraní volá tuto metodu v reakci [CTaskDialog::NavigateTo](#navigateto) metody.
+Rozhraní volá tuto metodu v reakci na metodu [objektu CTaskDialog:: NavigateTo](#navigateto) .
 
 ```
 virtual HRESULT OnNavigatePage();
@@ -857,13 +857,13 @@ virtual HRESULT OnNavigatePage();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Výchozí implementace vrátí hodnotu S_OK.
+Výchozí implementace vrací S_OK.
 
 ### <a name="remarks"></a>Poznámky
 
-Potlačí tuto metodu v odvozené třídě implementovat vlastní chování.
+Přepsat tuto metodu v odvozené třídě pro implementaci vlastního chování.
 
-##  <a name="onradiobuttonclick"></a>  CTaskDialog::OnRadioButtonClick
+##  <a name="onradiobuttonclick"></a>Objektu CTaskDialog:: OnRadioButtonClick
 
 Rozhraní volá tuto metodu, když uživatel vybere ovládací prvek přepínač.
 
@@ -874,19 +874,19 @@ virtual HRESULT OnRadioButtonClick(int nRadioButtonID);
 ### <a name="parameters"></a>Parametry
 
 *nRadioButtonID*<br/>
-[in] ID ovládacího prvku tlačítko přepínače, který uživatel klikl na.
+pro ID ovládacího prvku přepínacího tlačítka, na kterého uživatel kliknul
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Výchozí implementace vrátí hodnotu S_OK.
+Výchozí implementace vrací S_OK.
 
 ### <a name="remarks"></a>Poznámky
 
-Potlačí tuto metodu v odvozené třídě implementovat vlastní chování.
+Přepsat tuto metodu v odvozené třídě pro implementaci vlastního chování.
 
-##  <a name="ontimer"></a>  CTaskDialog::OnTimer
+##  <a name="ontimer"></a>Objektu CTaskDialog::-Timeer
 
-Rozhraní volá tuto metodu, když čas vyprší.
+Rozhraní volá tuto metodu, když vyprší platnost časovače.
 
 ```
 virtual HRESULT OnTimer(long lTime);
@@ -895,19 +895,19 @@ virtual HRESULT OnTimer(long lTime);
 ### <a name="parameters"></a>Parametry
 
 *lTime*<br/>
-[in] Doba v milisekundách, protože `CTaskDialog` byl vytvořen nebo byl resetován časovač.
+pro Doba v milisekundách od `CTaskDialog` jejího vytvoření nebo resetování časovače.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Výchozí implementace vrátí hodnotu S_OK.
+Výchozí implementace vrací S_OK.
 
 ### <a name="remarks"></a>Poznámky
 
-Potlačí tuto metodu v odvozené třídě implementovat vlastní chování.
+Přepsat tuto metodu v odvozené třídě pro implementaci vlastního chování.
 
-##  <a name="onverificationcheckboxclick"></a>  CTaskDialog::OnVerificationCheckboxClick
+##  <a name="onverificationcheckboxclick"></a>Objektu CTaskDialog:: OnVerificationCheckboxClick
 
-Rozhraní volá tuto metodu, když uživatel klikne na tlačítko zaškrtnutí políčka pro ověření.
+Rozhraní volá tuto metodu, když uživatel klikne na zaškrtávací políčko ověřování.
 
 ```
 virtual HRESULT OnVerificationCheckboxClick(BOOL bChecked);
@@ -916,19 +916,19 @@ virtual HRESULT OnVerificationCheckboxClick(BOOL bChecked);
 ### <a name="parameters"></a>Parametry
 
 *bChecked*<br/>
-[in] Hodnota TRUE označuje, že je zaškrtnuto políčko ověřování. Hodnota FALSE označuje, že není.
+pro Hodnota TRUE označuje, že je zaškrtnuto zaškrtávací políčko ověřování. Hodnota FALSE znamená, že není.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Výchozí implementace vrátí hodnotu S_OK.
+Výchozí implementace vrací S_OK.
 
 ### <a name="remarks"></a>Poznámky
 
-Potlačí tuto metodu v odvozené třídě implementovat vlastní chování.
+Přepsat tuto metodu v odvozené třídě pro implementaci vlastního chování.
 
-##  <a name="removeallcommandcontrols"></a>  CTaskDialog::RemoveAllCommandControls
+##  <a name="removeallcommandcontrols"></a>Objektu CTaskDialog:: RemoveAllCommandControls
 
-Odebere všechny prvky tlačítko příkazu z `CTaskDialog`.
+Odebere všechny ovládací prvky příkazového tlačítka z `CTaskDialog`.
 
 ```
 void RemoveAllCommandControls();
@@ -938,9 +938,9 @@ void RemoveAllCommandControls();
 
 [!code-cpp[NVC_MFC_CTaskDialog#2](../../mfc/reference/codesnippet/cpp/ctaskdialog-class_1.cpp)]
 
-##  <a name="removeallradiobuttons"></a>  CTaskDialog::RemoveAllRadioButtons
+##  <a name="removeallradiobuttons"></a>Objektu CTaskDialog:: RemoveAllRadioButtons
 
-Odebere všechny přepínače z `CTaskDialog`.
+Odebere všechna přepínací tlačítka z `CTaskDialog`.
 
 ```
 void RemoveAllRadioButtons();
@@ -950,9 +950,9 @@ void RemoveAllRadioButtons();
 
 [!code-cpp[NVC_MFC_CTaskDialog#3](../../mfc/reference/codesnippet/cpp/ctaskdialog-class_2.cpp)]
 
-##  <a name="setcommandcontroloptions"></a>  CTaskDialog::SetCommandControlOptions
+##  <a name="setcommandcontroloptions"></a>Objektu CTaskDialog:: SetCommandControlOptions
 
-Aktualizace na příkazové tlačítko `CTaskDialog`.
+Aktualizuje ovládací prvek příkazové tlačítko na `CTaskDialog`.
 
 ```
 void SetCommandControlOptions(
@@ -964,25 +964,25 @@ void SetCommandControlOptions(
 ### <a name="parameters"></a>Parametry
 
 *nCommandControlID*<br/>
-[in] ID ovládacího prvku příkaz k aktualizaci.
+pro ID ovládacího prvku příkazu, který se má aktualizovat
 
 *bEnabled*<br/>
-[in] Parametr logické hodnoty, která určuje povolený nebo zakázaný ovládací prvek tlačítko zadaný příkaz.
+pro Logický parametr, který označuje, zda je zadané nebo zakázané ovládací prvek příkazového tlačítka.
 
 *bRequiresElevation*<br/>
-[in] Parametr logické hodnoty označující, pokud ovládací prvek tlačítko zadaný příkaz požaduje zvýšení oprávnění.
+pro Logický parametr, který určuje, zda určené ovládací prvky příkazového tlačítka vyžadují zvýšení úrovně oprávnění.
 
 ### <a name="remarks"></a>Poznámky
 
-Pomocí této metody můžete určit, zda je povoleno příkazové tlačítko nebo vyžaduje zvýšená oprávnění po přidání do `CTaskDialog` třídy.
+Tuto metodu použijte, chcete-li změnit, zda je ovládací prvek příkazové tlačítko povolen nebo vyžaduje zvýšení oprávnění poté, co `CTaskDialog` bylo přidáno do třídy.
 
 ### <a name="example"></a>Příklad
 
 [!code-cpp[NVC_MFC_CTaskDialog#2](../../mfc/reference/codesnippet/cpp/ctaskdialog-class_1.cpp)]
 
-##  <a name="setcommonbuttonoptions"></a>  CTaskDialog::SetCommonButtonOptions
+##  <a name="setcommonbuttonoptions"></a>Objektu CTaskDialog:: SetCommonButtonOptions
 
-Aktualizuje podmnožinu běžné tlačítka, aby byla povolená a tak, aby vyžadovala nástroj Řízení uživatelských účtů ke zvýšení úrovně oprávnění.
+Aktualizuje podmnožinu společných tlačítek, která se mají povolit, a vyžaduje zvýšení oprávnění nástroje řízení uživatelských účtů.
 
 ```
 void SetCommonButtonOptions(
@@ -993,26 +993,26 @@ void SetCommonButtonOptions(
 ### <a name="parameters"></a>Parametry
 
 *nDisabledButtonMask*<br/>
-[in] Maska pro běžné tlačítka zakázat.
+pro Maska pro společná tlačítka, která se mají zakázat.
 
 *nElevationButtonMask*<br/>
-[in] Maska pro běžné tlačítka, které vyžadují ke zvýšení úrovně oprávnění.
+pro Maska pro společná tlačítka, která vyžadují zvýšení úrovně oprávnění.
 
 ### <a name="remarks"></a>Poznámky
 
-Dostupné běžné tlačítka lze nastavit na instanci [třídy CTaskDialog](../../mfc/reference/ctaskdialog-class.md) pomocí konstruktoru [CTaskDialog::CTaskDialog](#ctaskdialog) a metodu [CTaskDialog::SetCommonButtons ](#setcommonbuttons). `CTaskDialog::SetCommonButtonOptions` nepodporuje přidávání nové společné tlačítka.
+Můžete nastavit společná tlačítka dostupná pro instanci [třídy objektu CTaskDialog](../../mfc/reference/ctaskdialog-class.md) pomocí konstruktoru [objektu CTaskDialog:: objektu CTaskDialog](#ctaskdialog) a metody [objektu CTaskDialog:: SetCommonButtons](#setcommonbuttons). `CTaskDialog::SetCommonButtonOptions`nepodporuje přidávání nových společných tlačítek.
 
-Pokud použijete tuto metodu můžete zakázat nebo zvýšení běžné tlačítko, které není k dispozici pro tento `CTaskDialog`, tato metoda vyvolá výjimku pomocí [Ujistěte se, že](diagnostic-services.md#ensure) – makro.
+Použijete-li tuto metodu k zakázání nebo zvýšení úrovně společného tlačítka, které není k dispozici `CTaskDialog`, tato metoda vyvolá výjimku pomocí makra pro [zajištění](diagnostic-services.md#ensure) .
 
-Tato metoda umožňuje využívat jakékoli tlačítko, které je k dispozici na `CTaskDialog` , ale není součástí *nDisabledButtonMask*i v případě, že byla zakázaná. Tato metoda zpracovává zvýšení podobným způsobem: zaznamenává běžné tlačítek nevyžaduje ke zvýšení úrovně oprávnění, pokud běžné tlačítko je k dispozici, ale není zahrnutý v *nElevationButtonMask*.
+Tato metoda povoluje jakékoli tlačítko, které je k dispozici pro `CTaskDialog` , ale není v *nDisabledButtonMask*, i když bylo dříve zakázáno. Tato metoda zpracovává zvýšení oprávnění podobným způsobem: zaznamenává společná tlačítka jako nevyžadující zvýšení oprávnění, pokud je toto společné tlačítko k dispozici, ale není součástí *nElevationButtonMask*.
 
 ### <a name="example"></a>Příklad
 
 [!code-cpp[NVC_MFC_CTaskDialog#6](../../mfc/reference/codesnippet/cpp/ctaskdialog-class_6.cpp)]
 
-##  <a name="setcommonbuttons"></a>  CTaskDialog::SetCommonButtons
+##  <a name="setcommonbuttons"></a>Objektu CTaskDialog:: SetCommonButtons
 
-Přidá společné tlačítka `CTaskDialog`.
+Přidá do `CTaskDialog`. společná tlačítka.
 
 ```
 void SetCommonButtons(
@@ -1024,29 +1024,29 @@ void SetCommonButtons(
 ### <a name="parameters"></a>Parametry
 
 *nButtonMask*<br/>
-[in] Maska tlačítka pro přidání do `CTaskDialog`.
+pro Maska tlačítek, která se mají přidat do `CTaskDialog`.
 
 *nDisabledButtonMask*<br/>
-[in] Maska tlačítka zakázat.
+pro Maska tlačítek, která se mají zakázat
 
 *nElevationButtonMask*<br/>
-[in] Maska tlačítka, které vyžadují ke zvýšení úrovně oprávnění.
+pro Maska tlačítek, která vyžadují zvýšení oprávnění.
 
 ### <a name="remarks"></a>Poznámky
 
-Tuto metodu nelze volat po zobrazit okno pro tuto instanci `CTaskDialog` je vytvořená třída. Pokud ano, tato metoda vyvolá výjimku.
+Tuto metodu nelze volat po vytvoření okna zobrazení této instance `CTaskDialog` třídy. V případě, tato metoda vyvolá výjimku.
 
-Tlačítka indikován *nButtonMask* přepsat všechny běžné tlačítka předtím přidaly do `CTaskDialog`. Pouze tlačítka podle *nButtonMask* jsou k dispozici.
+Tlačítka označená *nButtonMask* přepíšou všechna společná tlačítka, která jste přidali do `CTaskDialog`. K dispozici jsou pouze tlačítka označená v *nButtonMask* .
 
-Pokud *nDisabledButtonMask* nebo *nElevationButtonMask* obsahuje tlačítko, který není součástí *nButtonMask*, tato metoda vyvolá výjimku pomocí [Ujistěte se, že](diagnostic-services.md#ensure) – makro.
+Pokud buď *nDisabledButtonMask* nebo *nElevationButtonMask* obsahuje tlačítko, které není v *nButtonMask*, vyvolá tato metoda výjimku pomocí makra pro [zajištění](diagnostic-services.md#ensure) .
 
-Ve výchozím nastavení všechny běžné tlačítka jsou povolené a nevyžadují, aby zvýšení oprávnění.
+Ve výchozím nastavení jsou všechna společná tlačítka povolena a nevyžadují zvýšení úrovně oprávnění.
 
 ### <a name="example"></a>Příklad
 
 [!code-cpp[NVC_MFC_CTaskDialog#6](../../mfc/reference/codesnippet/cpp/ctaskdialog-class_6.cpp)]
 
-##  <a name="setcontent"></a>  CTaskDialog::SetContent
+##  <a name="setcontent"></a>Objektu CTaskDialog:: SetContent
 
 Aktualizuje obsah `CTaskDialog`.
 
@@ -1057,19 +1057,19 @@ void SetContent(const CString& strContent);
 ### <a name="parameters"></a>Parametry
 
 *strContent*<br/>
-[in] Řetězec, který se má zobrazit uživateli.
+pro Řetězec, který se má zobrazit uživateli
 
 ### <a name="remarks"></a>Poznámky
 
-Obsah `CTaskDialog` třída je text, který se zobrazí uživateli v hlavní části dialogového okna.
+Obsah `CTaskDialog` třídy je text, který se zobrazí uživateli v hlavní části dialogového okna.
 
 ### <a name="example"></a>Příklad
 
 [!code-cpp[NVC_MFC_CTaskDialog#7](../../mfc/reference/codesnippet/cpp/ctaskdialog-class_3.cpp)]
 
-##  <a name="setdefaultcommandcontrol"></a>  CTaskDialog::SetDefaultCommandControl
+##  <a name="setdefaultcommandcontrol"></a>Objektu CTaskDialog:: SetDefaultCommandControl
 
-Určuje výchozí příkazové tlačítko.
+Určuje výchozí ovládací prvek příkazového tlačítka.
 
 ```
 void SetDefaultCommandControl(int nCommandControlID);
@@ -1078,19 +1078,19 @@ void SetDefaultCommandControl(int nCommandControlID);
 ### <a name="parameters"></a>Parametry
 
 *nCommandControlID*<br/>
-[in] ID ovládacího prvku tlačítko příkazu na výchozí.
+pro ID ovládacího prvku příkazové tlačítko, které se má nastavit jako výchozí
 
 ### <a name="remarks"></a>Poznámky
 
-Výchozí příkazové tlačítko je ovládací prvek, který je zaškrtnuto, pokud `CTaskDialog` se nejprve zobrazí uživateli.
+Výchozí ovládací prvek příkazové tlačítko je ovládací prvek, který je vybrán při `CTaskDialog` prvním zobrazení uživatele.
 
-Tato metoda vyvolá výjimku, pokud nemůže najít ovládací prvek tlačítko příkaz určený *nCommandControlID*.
+Tato metoda vyvolá výjimku, pokud nemůže najít ovládací prvek příkazové tlačítko určený parametrem *nCommandControlID*.
 
 ### <a name="example"></a>Příklad
 
 [!code-cpp[NVC_MFC_CTaskDialog#2](../../mfc/reference/codesnippet/cpp/ctaskdialog-class_1.cpp)]
 
-##  <a name="setdefaultradiobutton"></a>  CTaskDialog::SetDefaultRadioButton
+##  <a name="setdefaultradiobutton"></a>Objektu CTaskDialog:: SetDefaultRadioButton
 
 Určuje výchozí přepínač.
 
@@ -1101,21 +1101,21 @@ void SetDefaultRadioButton(int nRadioButtonID);
 ### <a name="parameters"></a>Parametry
 
 *nRadioButtonID*<br/>
-[in] ID přepínač na výchozí.
+pro ID přepínacího tlačítka, které bude výchozím nastavením.
 
 ### <a name="remarks"></a>Poznámky
 
-Výchozí přepínací tlačítko je tlačítko, které je zaškrtnuto, pokud `CTaskDialog` se nejprve zobrazí uživateli.
+Výchozí přepínač je tlačítko, které je vybráno při `CTaskDialog` prvním zobrazení uživatele.
 
-Tato metoda vyvolá výjimku, pokud nemůže najít přepínač určené *nRadioButtonID*.
+Tato metoda vyvolá výjimku, nemůže-li najít přepínač určený parametrem *nRadioButtonID*.
 
 ### <a name="example"></a>Příklad
 
 [!code-cpp[NVC_MFC_CTaskDialog#3](../../mfc/reference/codesnippet/cpp/ctaskdialog-class_2.cpp)]
 
-##  <a name="setdialogwidth"></a>  CTaskDialog::SetDialogWidth
+##  <a name="setdialogwidth"></a>Objektu CTaskDialog:: SetDialogWidth
 
-Nastavuje šířku `CTaskDialog`.
+Upraví šířku `CTaskDialog`.
 
 ```
 void SetDialogWidth(int nWidth = 0);
@@ -1124,21 +1124,21 @@ void SetDialogWidth(int nWidth = 0);
 ### <a name="parameters"></a>Parametry
 
 *nWidth*<br/>
-[in] Šířka pole dialogového okna v pixelech.
+pro Šířka dialogového okna v pixelech
 
 ### <a name="remarks"></a>Poznámky
 
-Parametr *nWidth* musí být větší než nebo rovna 0. Jinak tato metoda vyvolá výjimku.
+Parametr *nWidth* musí být větší nebo roven 0. V opačném případě tato metoda vyvolá výjimku.
 
-Pokud *nWidth* je nastavena na hodnotu 0, tato metoda sady dialogovém na výchozí velikost.
+Pokud je *nWidth* nastaveno na hodnotu 0, tato metoda nastaví výchozí velikost dialogového okna.
 
 ### <a name="example"></a>Příklad
 
 [!code-cpp[NVC_MFC_CTaskDialog#7](../../mfc/reference/codesnippet/cpp/ctaskdialog-class_3.cpp)]
 
-##  <a name="setexpansionarea"></a>  CTaskDialog::SetExpansionArea
+##  <a name="setexpansionarea"></a>Objektu CTaskDialog:: SetExpansionArea
 
-Aktualizace rozšíření oblasti `CTaskDialog`.
+Aktualizuje oblast rozšíření v `CTaskDialog`.
 
 ```
 void SetExpansionArea(
@@ -1150,27 +1150,27 @@ void SetExpansionArea(
 ### <a name="parameters"></a>Parametry
 
 *strExpandedInformation*<br/>
-[in] Řetězec, který `CTaskDialog` zobrazí v hlavní části dialogového okna, když uživatel klikne na tlačítko rozšíření.
+pro Řetězec, který se `CTaskDialog` zobrazí v hlavním těle dialogového okna, když uživatel klikne na tlačítko rozšíření.
 
 *strCollapsedLabel*<br/>
-[in] Řetězec, který `CTaskDialog` při sbalení rozšířené oblasti se zobrazí vedle tlačítka, rozšíření.
+pro Řetězec, který se `CTaskDialog` zobrazí vedle tlačítka pro rozšíření při sbalení rozbalené oblasti.
 
 *strExpandedLabel*<br/>
-[in] Řetězec, který `CTaskDialog` zobrazí vedle tlačítka, rozšíření, když se zobrazí rozšířené oblast.
+pro Řetězec, který se `CTaskDialog` zobrazí vedle tlačítka pro rozšíření při zobrazení rozbalené oblasti.
 
 ### <a name="remarks"></a>Poznámky
 
-V oblasti rozšíření `CTaskDialog` třída umožňuje zadat další informace o uživateli. Rozšíření oblasti je v hlavní části `CTaskDialog`, který je umístěn bezprostředně pod název a obsah řetězce.
+Oblast `CTaskDialog` rozšíření třídy vám umožní poskytnout uživateli další informace. Oblast rozšíření je v hlavní části `CTaskDialog`, která je umístěna hned pod nadpisem a řetězcem obsahu.
 
-Když `CTaskDialog` je první zobrazuje, nezobrazuje rozšířené informace a vloží `strCollapsedLabel` vedle tlačítka, rozšíření. Když uživatel klikne na tlačítko rozšíření `CTaskDialog` zobrazí *strExpandedInformation* a změní popisek *strExpandedLabel*.
+Při prvním zobrazení se nezobrazují rozšířené informace a vloží `strCollapsedLabel` se vedle tlačítka rozšíření. `CTaskDialog` Když uživatel klikne na tlačítko rozšíření, `CTaskDialog` zobrazí *strExpandedInformation* a změní popisek na *strExpandedLabel*.
 
 ### <a name="example"></a>Příklad
 
 [!code-cpp[NVC_MFC_CTaskDialog#7](../../mfc/reference/codesnippet/cpp/ctaskdialog-class_3.cpp)]
 
-##  <a name="setfootericon"></a>  CTaskDialog::SetFooterIcon
+##  <a name="setfootericon"></a>Objektu CTaskDialog:: SetFooterIcon
 
-Aktualizuje ikonu zápatí `CTaskDialog`.
+Aktualizuje ikonu `CTaskDialog`zápatí.
 
 ```
 void SetFooterIcon(HICON hFooterIcon);
@@ -1180,24 +1180,24 @@ void SetFooterIcon(LPCWSTR lpszFooterIcon);
 ### <a name="parameters"></a>Parametry
 
 *hFooterIcon*<br/>
-[in] Na novou ikonu `CTaskDialog`.
+pro Nová ikona pro `CTaskDialog`.
 
 *lpszFooterIcon*<br/>
-[in] Na novou ikonu `CTaskDialog`.
+pro Nová ikona pro `CTaskDialog`.
 
 ### <a name="remarks"></a>Poznámky
 
-Ikona zápatí se zobrazí v dolní části [třídy CTaskDialog](../../mfc/reference/ctaskdialog-class.md). Mohou být přidruženy text zápatí. Můžete změnit text zápatí s [CTaskDialog::SetFooterText](#setfootertext).
+Ikona zápatí se zobrazí v dolní části [třídy objektu CTaskDialog](../../mfc/reference/ctaskdialog-class.md). Může mít přidružený text zápatí. Můžete změnit text zápatí pomocí [objektu CTaskDialog:: SetFooterText](#setfootertext).
 
-Tato metoda vyvolá výjimku [Ujistěte se, že](diagnostic-services.md#ensure) – makro Pokud `CTaskDialog` se zobrazí nebo vstupní parametr má hodnotu NULL.
+Tato metoda vyvolá výjimku s makrem [](diagnostic-services.md#ensure) zajistěte, `CTaskDialog` Pokud je zobrazeno, nebo vstupní parametr má hodnotu null.
 
-A `CTaskDialog` přijmout jenom `HICON` nebo `LPCWSTR` jako ikona zápatí. Ta se nakonfiguruje tak, že nastavíte možnost TDF_USE_HICON_FOOTER v konstruktoru nebo [CTaskDialog::SetOptions](#setoptions). Ve výchozím nastavení `CTaskDialog` je nakonfigurován na použití `LPCWSTR` jako vstupní typ pro ikonu zápatí. Tato metoda generuje výjimku, pokud se pokusíte nastavit ikonu pomocí nevhodný typu.
+Může přijmout pouze ikonu `LPCWSTR` zápatí nebo.`HICON` `CTaskDialog` To je nakonfigurováno nastavením možnosti TDF_USE_HICON_FOOTER v konstruktoru nebo [objektu CTaskDialog:: SetOptions](#setoptions). Ve výchozím nastavení je `CTaskDialog` Tato ikona nakonfigurovaná `LPCWSTR` tak, aby se použila jako typ vstupu pro ikonu zápatí. Tato metoda generuje výjimku, pokud se pokusíte nastavit ikonu pomocí nevhodného typu.
 
 ### <a name="example"></a>Příklad
 
 [!code-cpp[NVC_MFC_CTaskDialog#7](../../mfc/reference/codesnippet/cpp/ctaskdialog-class_3.cpp)]
 
-##  <a name="setfootertext"></a>  CTaskDialog::SetFooterText
+##  <a name="setfootertext"></a>Objektu CTaskDialog:: SetFooterText
 
 Aktualizuje text v zápatí `CTaskDialog`.
 
@@ -1208,17 +1208,17 @@ void SetFooterText(const CString& strFooterText);
 ### <a name="parameters"></a>Parametry
 
 *strFooterText*<br/>
-[in] Nový text zápatí.
+pro Nový text pro zápatí
 
 ### <a name="remarks"></a>Poznámky
 
-Ikona zápatí se zobrazí vedle textu zápatí v dolní části `CTaskDialog`. Můžete změnit ikonu zápatí [CTaskDialog::SetFooterIcon](#setfootericon).
+Ikona zápatí se zobrazí vedle textu zápatí v dolní části okna `CTaskDialog`. Můžete změnit ikonu zápatí pomocí [objektu CTaskDialog:: SetFooterIcon](#setfootericon).
 
 ### <a name="example"></a>Příklad
 
 [!code-cpp[NVC_MFC_CTaskDialog#7](../../mfc/reference/codesnippet/cpp/ctaskdialog-class_3.cpp)]
 
-##  <a name="setmainicon"></a>  CTaskDialog::SetMainIcon
+##  <a name="setmainicon"></a>Objektu CTaskDialog:: SetMainIcon
 
 Aktualizuje hlavní ikonu `CTaskDialog`.
 
@@ -1230,24 +1230,24 @@ void SetMainIcon(LPCWSTR lpszMainIcon);
 ### <a name="parameters"></a>Parametry
 
 *hMainIcon*<br/>
-[in] Na ikonu nový.
+pro Nová ikona
 
 *lpszMainIcon*<br/>
-[in] Na ikonu nový.
+pro Nová ikona
 
 ### <a name="remarks"></a>Poznámky
 
-Tato metoda vyvolá výjimku [Ujistěte se, že](diagnostic-services.md#ensure) – makro Pokud `CTaskDialog` se zobrazí nebo vstupní parametr má hodnotu NULL.
+Tato metoda vyvolá výjimku s makrem [](diagnostic-services.md#ensure) zajistěte, `CTaskDialog` Pokud je zobrazeno, nebo vstupní parametr má hodnotu null.
 
-A `CTaskDialog` přijmout jenom `HICON` nebo `LPCWSTR` jako hlavní ikonu. To můžete nakonfigurovat nastavení možnosti TDF_USE_HICON_MAIN v konstruktoru nebo v [CTaskDialog::SetOptions](#setoptions) metody. Ve výchozím nastavení `CTaskDialog` je nakonfigurován na použití `LPCWSTR` jako vstupní typ pro hlavní ikonu. Tato metoda generuje výjimku, pokud se pokusíte nastavit ikonu pomocí nevhodný typu.
+Může přijmout pouze hlavní `LPCWSTR` ikonu nebo.`HICON` `CTaskDialog` To můžete nakonfigurovat nastavením možnosti TDF_USE_HICON_MAIN v konstruktoru nebo v metodě [objektu CTaskDialog:: SetOptions](#setoptions) . Ve výchozím nastavení `CTaskDialog` je nakonfigurována pro použití `LPCWSTR` jako typ vstupu hlavní ikony. Tato metoda generuje výjimku, pokud se pokusíte nastavit ikonu pomocí nevhodného typu.
 
 ### <a name="example"></a>Příklad
 
 [!code-cpp[NVC_MFC_CTaskDialog#7](../../mfc/reference/codesnippet/cpp/ctaskdialog-class_3.cpp)]
 
-##  <a name="setmaininstruction"></a>  CTaskDialog::SetMainInstruction
+##  <a name="setmaininstruction"></a>Objektu CTaskDialog:: SetMainInstruction
 
-Aktualizuje hlavní instrukce `CTaskDialog`.
+Aktualizuje hlavní instrukci `CTaskDialog`.
 
 ```
 void SetMainInstruction(const CString& strInstructions);
@@ -1256,17 +1256,17 @@ void SetMainInstruction(const CString& strInstructions);
 ### <a name="parameters"></a>Parametry
 
 *strInstructions*<br/>
-[in] Nový hlavní instrukce.
+pro Nová hlavní instrukce.
 
 ### <a name="remarks"></a>Poznámky
 
-Hlavní instrukce `CTaskDialog` třída je text, zobrazený uživateli velké tučným písmem. Nachází se v dialogovém okně pod záhlavím.
+Hlavní pokyn `CTaskDialog` třídy je text zobrazený uživateli velkými tučným písmem. Nachází se v dialogovém okně pod záhlavím.
 
 ### <a name="example"></a>Příklad
 
 [!code-cpp[NVC_MFC_CTaskDialog#7](../../mfc/reference/codesnippet/cpp/ctaskdialog-class_3.cpp)]
 
-##  <a name="setoptions"></a>  CTaskDialog::SetOptions
+##  <a name="setoptions"></a>Objektu CTaskDialog:: SetOptions
 
 Konfiguruje možnosti pro `CTaskDialog`.
 
@@ -1277,32 +1277,32 @@ void SetOptions(int nOptionFlag);
 ### <a name="parameters"></a>Parametry
 
 *nOptionFlag*<br/>
-[in] Sada příznaků pro `CTaskDialog`.
+pro Sada příznaků, které mají být použity pro `CTaskDialog`.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato metoda odstraní všechny aktuální možnosti pro `CTaskDialog`. Pokud chcete zachovat aktuální možnosti, musíte je nejdřív načíst s [CTaskDialog::GetOptions](#getoptions) a zkombinujte je s možnostmi, které chcete nastavit.
+Tato metoda vymaže všechny aktuální možnosti pro `CTaskDialog`. Chcete-li zachovat aktuální možnosti, je nutné je nejprve načíst pomocí [objektu CTaskDialog:: GetOptions](#getoptions) a kombinovat je s možnostmi, které chcete nastavit.
 
-V následující tabulce jsou uvedeny platné možnosti.
+V následující tabulce jsou uvedeny všechny platné možnosti.
 
 |||
 |-|-|
-|TDF_ENABLE_HYPERLINKS|Umožňuje hypertextové odkazy `CTaskDialog`.|
-|TDF_USE_HICON_MAIN|Konfiguruje `CTaskDialog` používat `HICON` pro hlavní ikona. Alternativou je použití `LPCWSTR`.|
-|TDF_USE_HICON_FOOTER|Konfiguruje `CTaskDialog` používat `HICON` pro ikonu zápatí. Alternativou je použití `LPCWSTR`.|
-|TDF_ALLOW_DIALOG_CANCELLATION|Umožňuje uživateli zavřete `CTaskDialog` pomocí klávesnice nebo pomocí ikony v pravém horním rohu dialogového okna, i v případě, **zrušit** není dostupné tlačítko. Pokud tento příznak není nastavený a **zrušit** není dostupné tlačítko, uživatel nelze dialogové okno zavřete stisknutím kombinace kláves Alt + F4, klávesou ESC nebo záhlaví okna tlačítko Zavřít.|
-|TDF_USE_COMMAND_LINKS|Konfiguruje `CTaskDialog` používat ovládací prvky tlačítka příkazu.|
-|TDF_USE_COMMAND_LINKS_NO_ICON|Konfiguruje `CTaskDialog` používat ovládací prvky příkazového tlačítka bez zobrazení ikonu vedle ovládacího prvku. TDF_USE_COMMAND_LINKS přepíše TDF_USE_COMMAND_LINKS_NO_ICON.|
-|TDF_EXPAND_FOOTER_AREA|Označuje, že je v současné době rozšířeno oblasti rozšíření.|
-|TDF_EXPANDED_BY_DEFAULT|Určuje, zda je ve výchozím nastavení rozbalený oblasti rozšíření.|
-|TDF_VERIFICATION_FLAG_CHECKED|Označuje, že je zaškrtávací políčko ověření aktuálně vybraný.|
-|TDF_SHOW_PROGRESS_BAR|Konfiguruje `CTaskDialog` zobrazíte indikátor průběhu.|
-|TDF_SHOW_MARQUEE_PROGRESS_BAR|Nakonfiguruje indikátor průběhu bude marquee indikátor průběhu. Pokud tuto možnost povolíte, je nutné nastavit TDF_SHOW_PROGRESS_BAR mít očekávané chování.|
-|TDF_CALLBACK_TIMER|Označuje, že `CTaskDialog` zpětného volání interval je nastavená na přibližně 200 MS.|
-|TDF_POSITION_RELATIVE_TO_WINDOW|Konfiguruje `CTaskDialog` být zarovnaný na střed vzhledem k nadřazeného okna. Pokud tento příznak není povolen, `CTaskDialog` je zarovnaný na střed vzhledem k monitorování.|
-|TDF_RTL_LAYOUT|Konfiguruje `CTaskDialog` rozložení čtení zprava doleva.|
-|TDF_NO_DEFAULT_RADIO_BUTTON|Označuje, že je vybrána žádná přepínač při `CTaskDialog` se zobrazí.|
-|TDF_CAN_BE_MINIMIZED|Umožňuje uživateli minimalizovat `CTaskDialog`. Podporu této možnosti `CTaskDialog` nemůže být modální okno. MFC nepodporuje tuto možnost, protože nepodporuje MFC nemodální `CTaskDialog`.|
+|TDF_ENABLE_HYPERLINKS|Povolí hypertextové odkazy `CTaskDialog`v.|
+|TDF_USE_HICON_MAIN|Nakonfiguruje `HICON` pro použití pro hlavní ikonu. `CTaskDialog` Alternativou je použití `LPCWSTR`.|
+|TDF_USE_HICON_FOOTER|Nakonfiguruje `CTaskDialog` , aby se `HICON` pro ikonu zápatí používala. Alternativou je použití `LPCWSTR`.|
+|TDF_ALLOW_DIALOG_CANCELLATION|Umožňuje uživateli zavřít `CTaskDialog` pomocí klávesnice nebo pomocí ikony v pravém horním rohu dialogového okna, a to i v případě, že tlačítko **Storno** není povolené. Pokud tento příznak není nastavený a tlačítko **Storno** není povolené, uživatel nemůže dialogové okno zavřít pomocí ALT + F4, řídicí klávesy nebo tlačítka Zavřít záhlaví.|
+|TDF_USE_COMMAND_LINKS|Nakonfiguruje ovládací prvky pro použití příkazového tlačítka. `CTaskDialog`|
+|TDF_USE_COMMAND_LINKS_NO_ICON|Nakonfiguruje ovládací prvky pro použití příkazového tlačítka bez zobrazení ikony vedle ovládacího prvku. `CTaskDialog` TDF_USE_COMMAND_LINKS Přepisuje TDF_USE_COMMAND_LINKS_NO_ICON.|
+|TDF_EXPAND_FOOTER_AREA|Označuje, že oblast rozšíření je aktuálně rozbalená.|
+|TDF_EXPANDED_BY_DEFAULT|Určuje, zda je oblast rozšíření ve výchozím nastavení rozbalená.|
+|TDF_VERIFICATION_FLAG_CHECKED|Určuje, zda je zaškrtnuto políčko ověřování.|
+|TDF_SHOW_PROGRESS_BAR|Nakonfiguruje `CTaskDialog` pro zobrazení indikátoru průběhu.|
+|TDF_SHOW_MARQUEE_PROGRESS_BAR|Nakonfiguruje indikátor průběhu na indikátor průběhu rámečku. Pokud tuto možnost povolíte, musíte nastavit TDF_SHOW_PROGRESS_BAR na očekávané chování.|
+|TDF_CALLBACK_TIMER|Označuje, že `CTaskDialog` interval zpětného volání je nastaven na přibližně 200 milisekund.|
+|TDF_POSITION_RELATIVE_TO_WINDOW|Nakonfiguruje na zarovnání do středu vzhledem k nadřazenému oknu. `CTaskDialog` Pokud tento příznak není povolený, `CTaskDialog` je zarovnán na střed vzhledem k monitoru.|
+|TDF_RTL_LAYOUT|Nakonfiguruje `CTaskDialog` pro čtení rozložení zprava doleva.|
+|TDF_NO_DEFAULT_RADIO_BUTTON|Označuje, že po `CTaskDialog` zobrazení není vybrán přepínač bez přepínače.|
+|TDF_CAN_BE_MINIMIZED|Umožňuje uživateli minimalizovat `CTaskDialog`. Pro podporu této možnosti `CTaskDialog` nemůže být modální. Knihovna MFC tuto možnost nepodporuje, protože knihovna MFC nepodporuje nemodální `CTaskDialog`.|
 
 ### <a name="example"></a>Příklad
 
@@ -1310,7 +1310,7 @@ V následující tabulce jsou uvedeny platné možnosti.
 
 ##  <a name="setprogressbarmarquee"></a>  CTaskDialog::SetProgressBarMarquee
 
-Nakonfiguruje rámeček panelu pro `CTaskDialog` a přidá jej do dialogového okna.
+Nakonfiguruje pruh výběru pro `CTaskDialog` a přidá ho do dialogového okna.
 
 ```
 void SetProgressBarMarquee(
@@ -1321,26 +1321,26 @@ void SetProgressBarMarquee(
 ### <a name="parameters"></a>Parametry
 
 *bEnabled*<br/>
-[in] TRUE, pokud chcete povolit výběr řádku; FALSE, pokud chcete zakázat výběr řádku a odebere ho z `CTaskDialog`.
+pro TRUE, pokud chcete povolit pruh výběru; FALSE, pokud chcete vypnout pruhový text a odebrat ho z `CTaskDialog`.
 
 *nMarqueeSpeed*<br/>
-[in] Celé číslo udávající rychlost výběr řádku.
+pro Celé číslo, které označuje rychlost pruhu běžícího rámečku.
 
 ### <a name="remarks"></a>Poznámky
 
-Na výběr panelu se zobrazí pod do hlavního textu `CTaskDialog` třídy.
+Pod hlavním textem `CTaskDialog` třídy se zobrazí pruh rámečku.
 
-Použití *nMarqueeSpeed* rychlost výběr řádku; nastavit vyšší hodnoty znamenat nižší přenosovou rychlost. Hodnota 0 pro *nMarqueeSpeed* panel marquee přesunout rychlostí výchozí pro Windows.
+Pomocí *nMarqueeSpeed* nastavte rychlost pruhu výběru. větší hodnoty znamenají pomalejší rychlost. Hodnota 0 pro *nMarqueeSpeed* způsobí, že se pruh rámečku přesune na výchozí rychlost pro Windows.
 
-Tato metoda vyvolá výjimku [Ujistěte se, že](diagnostic-services.md#ensure) – makro Pokud *nMarqueeSpeed* je menší než 0.
+Tato metoda vyvolá výjimku s makrem [](diagnostic-services.md#ensure) zajistěte, pokud *nMarqueeSpeed* je menší než 0.
 
 ### <a name="example"></a>Příklad
 
 [!code-cpp[NVC_MFC_CTaskDialog#4](../../mfc/reference/codesnippet/cpp/ctaskdialog-class_7.cpp)]
 
-##  <a name="setprogressbarposition"></a>  CTaskDialog::SetProgressBarPosition
+##  <a name="setprogressbarposition"></a>Objektu CTaskDialog:: SetProgressBarPosition
 
-Nastaví pozici indikátor průběhu.
+Upraví umístění indikátoru průběhu.
 
 ```
 void SetProgressBarPosition(int nProgressPos);
@@ -1349,19 +1349,19 @@ void SetProgressBarPosition(int nProgressPos);
 ### <a name="parameters"></a>Parametry
 
 *nProgressPos*<br/>
-[in] Pozice pro indikátor průběhu.
+pro Pozice indikátoru průběhu.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato metoda vyvolá výjimku [Ujistěte se, že](diagnostic-services.md#ensure) – makro Pokud *nProgressPos* není v rozsahu panelu průběh. Můžete změnit rozsah panelu průběh v [CTaskDialog::SetProgressBarRange](#setprogressbarrange).
+Tato metoda vyvolá výjimku s makrem [](diagnostic-services.md#ensure) zajistěte, pokud *nProgressPos* není v rozsahu indikátoru průběhu. Rozsah indikátoru průběhu můžete změnit pomocí [objektu CTaskDialog:: SetProgressBarRange](#setprogressbarrange).
 
 ### <a name="example"></a>Příklad
 
 [!code-cpp[NVC_MFC_CTaskDialog#4](../../mfc/reference/codesnippet/cpp/ctaskdialog-class_7.cpp)]
 
-##  <a name="setprogressbarrange"></a>  CTaskDialog::SetProgressBarRange
+##  <a name="setprogressbarrange"></a>Objektu CTaskDialog:: SetProgressBarRange
 
-Nastaví rozsah indikátor průběhu.
+Upraví rozsah indikátoru průběhu.
 
 ```
 void SetProgressBarRange(
@@ -1372,26 +1372,26 @@ void SetProgressBarRange(
 ### <a name="parameters"></a>Parametry
 
 *nRangeMin*<br/>
-[in] Dolní mez indikátor průběhu.
+pro Dolní mez indikátoru průběhu.
 
 *nRangeMax*<br/>
-[in] Horní mez indikátor průběhu.
+pro Horní mez indikátoru průběhu.
 
 ### <a name="remarks"></a>Poznámky
 
-Pozice panelu průběh je vzhledem k *nRangeMin* a *nRangeMax*. Například pokud *nRangeMin* je 50 a *nRangeMax* 100, pozice 75 je uprostřed mezi indikátor průběhu. Použití [CTaskDialog::SetProgressBarPosition](#setprogressbarposition) nastavení pozice indikátor průběhu.
+Pozice indikátoru průběhu je relativní vzhledem k *nRangeMin* a *nRangeMax*. Například pokud je *nRangeMin* 50 a *nRangeMax* je 100, pozice 75 je uprostřed v průběhu indikátoru průběhu. K nastavení pozice indikátoru průběhu použijte [objektu CTaskDialog:: SetProgressBarPosition](#setprogressbarposition) .
 
-Pokud chcete zobrazit indikátor průběhu, nesmí být povolena možnost TDF_SHOW_PROGRESS_BAR musí být povolená a TDF_SHOW_MARQUEE_PROGRESS_BAR. Tato metoda automaticky nastaví TDF_SHOW_PROGRESS_BAR a vymaže TDF_SHOW_MARQUEE_PROGRESS_BAR. Použití [CTaskDialog::SetOptions](#setoptions) ručně změnit možnosti pro tuto instanci [třídy CTaskDialog](../../mfc/reference/ctaskdialog-class.md).
+Chcete-li zobrazit indikátor průběhu, je nutné povolit možnost TDF_SHOW_PROGRESS_BAR a TDF_SHOW_MARQUEE_PROGRESS_BAR nesmí být povoleny. Tato metoda automaticky nastaví TDF_SHOW_PROGRESS_BAR a vymaže TDF_SHOW_MARQUEE_PROGRESS_BAR. Pomocí [objektu CTaskDialog:: SetOptions](#setoptions) ručně změňte možnosti této instance [třídy objektu CTaskDialog](../../mfc/reference/ctaskdialog-class.md).
 
-Tato metoda vyvolá výjimku [Ujistěte se, že](diagnostic-services.md#ensure) – makro Pokud *nRangeMin* je nejméně *nRangeMax*. Tato metoda také vyvolá výjimku, pokud `CTaskDialog` již zobrazena a má marquee indikátor průběhu.
+Tato metoda vyvolá výjimku s makrem [](diagnostic-services.md#ensure) zajistěte, pokud *nRangeMin* není menší než *nRangeMax*. Tato metoda také vyvolá výjimku, pokud `CTaskDialog` je již zobrazena a má indikátor průběhu běžícího textu.
 
 ### <a name="example"></a>Příklad
 
 [!code-cpp[NVC_MFC_CTaskDialog#4](../../mfc/reference/codesnippet/cpp/ctaskdialog-class_7.cpp)]
 
-##  <a name="setprogressbarstate"></a>  CTaskDialog::SetProgressBarState
+##  <a name="setprogressbarstate"></a>Objektu CTaskDialog:: SetProgressBarState
 
-Nastaví stav indikátoru průběhu a zobrazí ho na `CTaskDialog`.
+Nastaví stav indikátoru průběhu a zobrazí jej v `CTaskDialog`.
 
 ```
 void SetProgressBarState(int nState = PBST_NORMAL);
@@ -1399,28 +1399,28 @@ void SetProgressBarState(int nState = PBST_NORMAL);
 
 ### <a name="parameters"></a>Parametry
 
-*nState*<br/>
-[in] Stav indikátor průběhu. Možné hodnoty v části poznámky.
+*nInformace*<br/>
+pro Stav indikátoru průběhu. Možné hodnoty najdete v části s poznámkami.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato metoda vyvolá výjimku [Ujistěte se, že](diagnostic-services.md#ensure) – makro Pokud `CTaskDialog` již zobrazena a má marquee indikátor průběhu.
+Tato metoda vyvolá výjimku s makrem [](diagnostic-services.md#ensure) zajistěte, `CTaskDialog` Pokud je již zobrazeno a má indikátor průběhu běžícího textu.
 
-V následující tabulce jsou uvedeny možné hodnoty pro *nInformace*. Ve všech těchto případech se vyplní indikátor průběhu barvou regulární, dokud nedosáhne určené stop pozice. V tomto okamžiku změní barvu na základě stavu.
+V následující tabulce jsou uvedeny možné hodnoty pro *nInformace*. Ve všech těchto případech indikátor průběhu bude plnit běžnou barvou, dokud nedosáhne určené pozice zastavení. V tomto okamžiku změní barvu na základě stavu.
 
 |||
 |-|-|
-|PBST_NORMAL|Po průběh nevyplní, `CTaskDialog` nezmění barev panelu. Ve výchozím nastavení je zelenou barvu regulárních.|
-|PBST_ERROR|Po průběh nevyplní, `CTaskDialog` změní barvu řádku barva chyby. Ve výchozím nastavení toto je červený.|
-|PBST_PAUSED|Po průběh nevyplní, `CTaskDialog` změní barvu na panelu pozastaveného barvu. Ve výchozím nastavení toto je žlutý.|
+|PBST_NORMAL|Po vyplňování indikátoru průběhu se `CTaskDialog` nezmění barva pruhu. Ve výchozím nastavení je obvyklá barva zelená.|
+|PBST_ERROR|Po vyplňování indikátoru průběhu se `CTaskDialog` změní barva pruhu na barvu chyby. Ve výchozím nastavení je to červené.|
+|PBST_PAUSED|Po vyplňování indikátoru průběhu se `CTaskDialog` změní barva pruhu na pozastavenou barvu. Ve výchozím nastavení je to žlutá.|
 
-Můžete nastavit, kdy přestane indikátor průběhu s [CTaskDialog::SetProgressBarPosition](#setprogressbarposition).
+Můžete nastavit, kde se indikátor průběhu zastaví pomocí [objektu CTaskDialog:: SetProgressBarPosition](#setprogressbarposition).
 
 ### <a name="example"></a>Příklad
 
 [!code-cpp[NVC_MFC_CTaskDialog#4](../../mfc/reference/codesnippet/cpp/ctaskdialog-class_7.cpp)]
 
-##  <a name="setradiobuttonoptions"></a>  CTaskDialog::SetRadioButtonOptions
+##  <a name="setradiobuttonoptions"></a>Objektu CTaskDialog:: SetRadioButtonOptions
 
 Povolí nebo zakáže přepínač.
 
@@ -1433,22 +1433,22 @@ void SetRadioButtonOptions(
 ### <a name="parameters"></a>Parametry
 
 *nRadioButtonID*<br/>
-[in] ID ovládacího prvku tlačítko přepínače.
+pro ID ovládacího prvku přepínač
 
 *bEnabled*<br/>
-[in] TRUE, pokud chcete povolit přepínač; FALSE, pokud chcete zakázat přepínač.
+pro TRUE pro povolení přepínače; FALSE, pokud chcete zakázat přepínač.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato metoda vyvolá výjimku [Ujistěte se, že](diagnostic-services.md#ensure) – makro Pokud *nRadioButtonID* není platné ID pro přepínač.
+Tato metoda vyvolá výjimku s makrem [](diagnostic-services.md#ensure) zajistěte, pokud *nRadioButtonID* není platným identifikátorem pro přepínač.
 
 ### <a name="example"></a>Příklad
 
 [!code-cpp[NVC_MFC_CTaskDialog#3](../../mfc/reference/codesnippet/cpp/ctaskdialog-class_2.cpp)]
 
-##  <a name="setverificationcheckbox"></a>  CTaskDialog::SetVerificationCheckbox
+##  <a name="setverificationcheckbox"></a>Objektu CTaskDialog:: SetVerificationCheckbox
 
-Nastaví zaškrtnutý stav zaškrtávacího políčka pro ověření.
+Nastaví zaškrtnuté políčko ověřování.
 
 ```
 void SetVerificationCheckbox(BOOL bChecked);
@@ -1457,15 +1457,15 @@ void SetVerificationCheckbox(BOOL bChecked);
 ### <a name="parameters"></a>Parametry
 
 *bChecked*<br/>
-[in] Hodnota true pro mají ověření zaškrtávací políčko zaškrtnuto, pokud `CTaskDialog` , se zobrazí. Zrušení výběru hodnotu FALSE má zaškrtávací políčko ověřování, kdy `CTaskDialog` se zobrazí.
+pro TRUE, pokud má být zaškrtnuto políčko ověřování při `CTaskDialog` zobrazení; FALSE, pokud má být políčko ověření při `CTaskDialog` zobrazení nevybrané.
 
 ### <a name="example"></a>Příklad
 
 [!code-cpp[NVC_MFC_CTaskDialog#5](../../mfc/reference/codesnippet/cpp/ctaskdialog-class_4.cpp)]
 
-##  <a name="setverificationcheckboxtext"></a>  CTaskDialog::SetVerificationCheckboxText
+##  <a name="setverificationcheckboxtext"></a>Objektu CTaskDialog:: SetVerificationCheckboxText
 
-Nastaví text, který se zobrazí napravo od zaškrtávacího políčka pro ověření.
+Nastaví text, který se zobrazí napravo od zaškrtávacího políčka ověření.
 
 ```
 void SetVerificationCheckboxText(CString& strVerificationText);
@@ -1474,17 +1474,17 @@ void SetVerificationCheckboxText(CString& strVerificationText);
 ### <a name="parameters"></a>Parametry
 
 *strVerificationText*<br/>
-[in] Text, který tato metoda se zobrazí vedle zaškrtnutí políčka pro ověření.
+pro Text, který tato metoda zobrazuje vedle zaškrtávacího políčka pro ověření.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato metoda vyvolá výjimku [Ujistěte se, že](diagnostic-services.md#ensure) – makro, pokud tato instance `CTaskDialog` třída je již zobrazen.
+Tato metoda vyvolá výjimku s makrem [](diagnostic-services.md#ensure) zajistěit, pokud je tato `CTaskDialog` instance třídy již zobrazena.
 
 ### <a name="example"></a>Příklad
 
 [!code-cpp[NVC_MFC_CTaskDialog#5](../../mfc/reference/codesnippet/cpp/ctaskdialog-class_4.cpp)]
 
-##  <a name="setwindowtitle"></a>  CTaskDialog::SetWindowTitle
+##  <a name="setwindowtitle"></a>Objektu CTaskDialog:: SetWindowTitle
 
 Nastaví název `CTaskDialog`.
 
@@ -1495,7 +1495,7 @@ void SetWindowTitle(CString& strWindowTitle);
 ### <a name="parameters"></a>Parametry
 
 *strWindowTitle*<br/>
-[in] Nový název `CTaskDialog`.
+pro Nový název pro `CTaskDialog`.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -1503,7 +1503,7 @@ void SetWindowTitle(CString& strWindowTitle);
 
 [!code-cpp[NVC_MFC_CTaskDialog#7](../../mfc/reference/codesnippet/cpp/ctaskdialog-class_3.cpp)]
 
-##  <a name="showdialog"></a>  CTaskDialog::ShowDialog
+##  <a name="showdialog"></a>Objektu CTaskDialog:: ShowDialog
 
 Vytvoří a zobrazí `CTaskDialog`.
 
@@ -1522,50 +1522,50 @@ static INT_PTR ShowDialog(
 ### <a name="parameters"></a>Parametry
 
 *strContent*<br/>
-[in] Řetězec, který má použít pro obsah `CTaskDialog`.
+pro Řetězec, který má být použit pro obsah `CTaskDialog`.
 
 *strMainInstruction*<br/>
-[in] Hlavní instrukce `CTaskDialog`.
+pro Hlavní instrukce pro `CTaskDialog`.
 
 *strTitle*<br/>
-[in] Název `CTaskDialog`.
+pro Název `CTaskDialog`.
 
 *nIDCommandControlsFirst*<br/>
-[in] Řetězec ID prvního příkazu.
+pro ID řetězce prvního příkazu
 
 *nIDCommandControlsLast*<br/>
-[in] Řetězec ID poslední příkaz.
+pro ID řetězce posledního příkazu
 
 *nCommonButtons*<br/>
-[in] Maska tlačítka pro přidání do `CTaskDialog`.
+pro Maska tlačítek, která se mají přidat do `CTaskDialog`.
 
 *nTaskDialogOptions*<br/>
-[in] Sadu možností pro `CTaskDialog`.
+pro Sada možností, které se mají použít pro `CTaskDialog`.
 
 *strFooter*<br/>
-[in] Řetězec, který chcete použít jako zápatí.
+pro Řetězec, který má být použit jako zápatí.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Celé číslo, které odpovídá výběru uživatelem.
+Celé číslo, které odpovídá výběru provedenému uživatelem.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato statická metoda vám umožňuje vytvořit instanci `CTaskDialog` třídy bez explicitního vytváření `CTaskDialog` objekt v kódu. Protože neexistuje žádný `CTaskDialog` objektu nelze volat jiným způsobem `CTaskDialog` Pokud pomocí této metody můžete zobrazit `CTaskDialog` uživateli.
+Tato statická metoda umožňuje vytvořit instanci `CTaskDialog` třídy bez explicitního `CTaskDialog` vytvoření objektu ve vašem kódu. Vzhledem k tomu, `CTaskDialog` že není k dispozici žádný objekt, nelze volat `CTaskDialog` žádné jiné metody, pokud použijete `CTaskDialog` tuto metodu k zobrazení uživatele.
 
-Tato metoda vytvoří ovládací prvky příkazového tlačítka s použitím dat ze souboru prostředků vaší aplikace. Tabulka řetězců v souboru prostředků má několik řetězců s přidruženými řetězcovými ID. Tato metoda přidá příkazové tlačítko pro každou platnou položku v tabulce řetězců mezi *nIDCommandControlsFirst* a *nCommandControlsLast*včetně. Pro tyto ovládací prvky tlačítka příkazu řetězec do tabulky řetězců je popisek ovládacího prvku a řetězec ID je ID ovládacího prvku.
+Tato metoda vytvoří ovládací prvky příkazového tlačítka pomocí dat ze souboru prostředků vaší aplikace. Tabulka řetězců v souboru prostředků má několik řetězců s přidruženými identifikátory řetězců. Tato metoda přidá ovládací prvek příkazové tlačítko pro každou platnou položku v tabulce řetězců mezi *nIDCommandControlsFirst* a *nCommandControlsLast*(včetně). Pro toto příkazové tlačítko ovládací prvky je řetězec v tabulce String titulkem ovládacího prvku a ID řetězce je ID ovládacího prvku.
 
-Zobrazit [CTaskDialog::SetOptions](#setoptions) seznam platné možnosti.
+Seznam platných možností naleznete v tématu [objektu CTaskDialog:: SetOptions](#setoptions) .
 
-`CTaskDialog` Zavře, když uživatel vybere common tlačítka, ovládací prvek odkazu příkazu nebo zavře `CTaskDialog`. Vrácená hodnota je identifikátor, který určuje, jak uživatel zavření dialogových oken.
+Zavře, když uživatel vybere společné tlačítko, ovládací prvek odkaz na příkazy nebo `CTaskDialog`zavře. `CTaskDialog` Vrácená hodnota je identifikátor, který označuje, jak uživatel zavřel dialogové okno.
 
 ### <a name="example"></a>Příklad
 
 [!code-cpp[NVC_MFC_CTaskDialog#1](../../mfc/reference/codesnippet/cpp/ctaskdialog-class_5.cpp)]
 
-##  <a name="taskdialogcallback"></a>  CTaskDialog::TaskDialogCallback
+##  <a name="taskdialogcallback"></a>Objektu CTaskDialog:: TaskDialogCallback
 
-Rozhraní volá tuto metodu v reakci na různé zprávy Windows.
+Rozhraní volá tuto metodu v reakci na různé zprávy systému Windows.
 
 ```
 friend:
@@ -1579,44 +1579,44 @@ HRESULT TaskDialogCallback(
 
 ### <a name="parameters"></a>Parametry
 
-*hWnd*<br/>
-[in] Popisovač `m_hWnd` strukturu pro `CTaskDialog`.
+*HWND*<br/>
+pro Popisovač `m_hWnd` struktury`CTaskDialog`pro.
 
 *uNotification*<br/>
-[in] Určuje zprávu, která vygenerovaný kód oznámení.
+pro Kód oznámení, který určuje vygenerovanou zprávu.
 
 *wParam*<br/>
-[in] Další informace o zprávě.
+pro Další informace o této zprávě
 
 *lParam*<br/>
-[in] Další informace o zprávě.
+pro Další informace o této zprávě
 
 *dwRefData*<br/>
-[in] Ukazatel `CTaskDialog` objekt, který zpětného volání zpráv se vztahuje na.
+pro Ukazatel na `CTaskDialog` objekt, na který se vztahuje zpráva zpětného volání.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Závisí na kódu konkrétní upozornění. Další informace naleznete v části Poznámky.
+Závisí na konkrétním kódu oznámení. Další informace naleznete v části Poznámky.
 
 ### <a name="remarks"></a>Poznámky
 
-Výchozí implementace `TaskDialogCallback` zpracovává konkrétní zprávu a pak zavolá metody odpovídající [třídy CTaskDialog](../../mfc/reference/ctaskdialog-class.md). Například v reakci na zprávu TDN_BUTTON_CLICKED `TaskDialogCallback` volání [CTaskDialog::OnCommandControlClick](#oncommandcontrolclick).
+Výchozí implementace `TaskDialogCallback` zpracuje konkrétní zprávu a pak zavolá příslušnou metodu [třídy objektu CTaskDialog](../../mfc/reference/ctaskdialog-class.md). Například v reakci na zprávu `TaskDialogCallback` TDN_BUTTON_CLICKED volá [objektu CTaskDialog:: OnCommandControlClick](#oncommandcontrolclick).
 
-Hodnoty pro *wParam* a *lParam* závisí na konkrétní generovanou zprávu. Je možné u jednoho nebo obou těchto hodnot být prázdná. V následující tabulce jsou uvedeny výchozí oznámení, které jsou podporovány a jaké hodnoty *wParam* a *lParam* představují. Pokud je přepsat tuto metodu v odvozené třídě, měli byste implementovat kód zpětného volání pro každou zprávu v následující tabulce.
+Hodnoty pro *wParam* a *lParam* závisí na konkrétní generované zprávě. Je možné, že některé z těchto hodnot jsou prázdné. V následující tabulce jsou uvedena výchozí oznámení, která jsou podporována a jaké hodnoty *wParam* a *lParam* představují. Pokud přepíšete tuto metodu v odvozené třídě, měli byste implementovat kód zpětného volání pro každou zprávu v následující tabulce.
 
-|Oznámení|*wParam* hodnota|*lParam* hodnota|
+|Zpráva oznámení|*wParam* Osa|*lParam* Osa|
 |--------------------------|--------------------|--------------------|
 |TDN_CREATED|Nepoužívá se.|Nepoužívá se.|
 |TDN_NAVIGATED|Nepoužívá se.|Nepoužívá se.|
-|TDN_BUTTON_CLICKED|Příkazové tlačítko ovládací prvek ID.|Nepoužívá se.|
-|TDN_HYPERLINK_CLICKED|Nepoužívá se.|A [LPCWSTR](/windows/desktop/WinProg/windows-data-types) strukturu, která obsahuje odkaz.|
-|TDN_TIMER|Doba v milisekundách, protože `CTaskDialog` byl vytvořen nebo byl resetován časovač.|Nepoužívá se.|
+|TDN_BUTTON_CLICKED|ID ovládacího prvku příkazového tlačítka|Nepoužívá se.|
+|TDN_HYPERLINK_CLICKED|Nepoužívá se.|Struktura [LPCWSTR](/windows/win32/WinProg/windows-data-types) , která obsahuje odkaz.|
+|TDN_TIMER|Doba v milisekundách od `CTaskDialog` jejího vytvoření nebo resetování časovače.|Nepoužívá se.|
 |TDN_DESTROYED|Nepoužívá se.|Nepoužívá se.|
-|TDN_RADIO_BUTTON_CLICKED|ID přepínač tlačítko.|Nepoužívá se.|
+|TDN_RADIO_BUTTON_CLICKED|ID přepínacího tlačítka|Nepoužívá se.|
 |TDN_DIALOG_CONSTRUCTED|Nepoužívá se.|Nepoužívá se.|
-|TDN_VERIFICATION_CLICKED|1, pokud je zaškrtnuto zaškrtávací políčko, 0, pokud není.|Nepoužívá se.|
+|TDN_VERIFICATION_CLICKED|1, pokud je zaškrtávací políčko zaškrtnuto, 0, pokud není.|Nepoužívá se.|
 |TDN_HELP|Nepoužívá se.|Nepoužívá se.|
-|TDN_EXPANDO_BUTTON_CLICKED|0, pokud je sbalené oblast rozšíření; nenulové, pokud se zobrazí text rozšíření.|Nepoužívá se.|
+|TDN_EXPANDO_BUTTON_CLICKED|0, pokud je rozbalená oblast rozšíření; nenulová, pokud je zobrazený text rozšíření.|Nepoužívá se.|
 
 ## <a name="see-also"></a>Viz také:
 

@@ -1,37 +1,37 @@
 ---
-title: Přizpůsobení položky záhlaví&#39;vzhled
+title: Přizpůsobení vzhledu položky&#39;záhlaví
 ms.date: 11/04/2016
 helpviewer_keywords:
 - header controls [MFC], customization of items
 - CHeaderCtrl class [MFC], customizing the items
 - HDS_ styles
 ms.assetid: b1e1e326-ec7d-4dbd-a46f-96a3e2055618
-ms.openlocfilehash: 081260bd5c1cf6335d398a4fd773c9590dbc8030
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6ce676695d717fcc5d418fe4ed5df91b4f9bca95
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62241576"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69508715"
 ---
-# <a name="customizing-the-header-item39s-appearance"></a>Přizpůsobení položky záhlaví&#39;vzhled
+# <a name="customizing-the-header-item39s-appearance"></a>Přizpůsobení vzhledu položky&#39;záhlaví
 
-Tím, že nastavíte *dwStyle* parametr při prvním vytvoření ovládacího prvku záhlaví ([CHeaderCtrl::Create](../mfc/reference/cheaderctrl-class.md#create)), můžete definovat vzhled a chování, hlavičce položky nebo hlavičky samotného ovládacího prvku.
+Nastavením parametru *dwStyle* při prvním vytvoření ovládacího prvku záhlaví ([CHeaderCtrl:: Create](../mfc/reference/cheaderctrl-class.md#create)) můžete definovat vzhled a chování položek záhlaví nebo samotného ovládacího prvku záhlaví.
 
-Tady je vzorkování styly, které můžete nastavit a jejich účel:
+Tady je vzorkování stylů, které můžete nastavit, a jejich účel:
 
-- Chcete-li položka záhlaví vypadat jako pushbutton, použijte **HDS_BUTTONS** style.
+- Aby položka hlavičky vypadala jako (pushbutton), použijte styl **HDS_BUTTONS** .
 
-   Tento styl použijte, pokud chcete provádět akce v reakci na kliknutí myší na záhlaví položek, jako je například řazení dat podle konkrétního sloupce, jak je tomu v aplikaci Microsoft Outlook.
+   Tento styl použijte v případě, že chcete provést akce v reakci na kliknutí myší na položku záhlaví, jako je například řazení dat podle konkrétního sloupce, jak je provedeno v aplikaci Microsoft Outlook.
 
-- Položky hlavičky vzhled "hot sledování" Pokud je přes ně přesunut ukazatel myši, použijte **HDS_HOTTRACK** style.
+- Chcete-li, aby záhlaví položky byly zobrazeny jako aktivní sledování, když na ně ukazatel myši projde, použijte styl **HDS_HOTTRACK** .
 
-   Zvýraznění zobrazí 3D osnovy jak předává ukazatel myši na položku. v opačném případě plochý panelu.
+   Při sledování aktivního zobrazení se zobrazí 3D obrys jako ukazatel na položku v jiném nestrukturovaném pruhu.
 
-- Chcete-li označit, že by měl být skrytý ovládací prvek hlavičky, použijte **HDS_HIDDEN** style.
+- Pro indikaci, že by měl být ovládací prvek záhlaví skrytý, použijte styl **HDS_HIDDEN** .
 
-   **HDS_HIDDEN** styl označuje, že ovládacího prvku záhlaví je určena pro použití jako datový zásobník a není vizuální ovládací prvek. Tento styl automaticky neskrývá ovládacího prvku, ale místo toho má vliv na chování `CHeaderCtrl::Layout`. Hodnota vrácená v *cy* člena `WINDOWPOS` struktura bude nula označující, že ovládací prvek by neměly být viditelné pro uživatele.
+   Styl **HDS_HIDDEN** označuje, že ovládací prvek záhlaví je určen pro použití jako datový kontejner, nikoli pro vizuální ovládací prvek. Tento styl automaticky neskrývá ovládací prvek, ale místo toho ovlivňuje chování `CHeaderCtrl::Layout`. Hodnota vrácená v `WINDOWPOS` členu *CY* struktury bude nulová, což znamená, že ovládací prvek by neměl být viditelný pro uživatele.
 
-Další informace o těchto vlastnostech najdete v tématu [položky](/windows/desktop/Controls/header-controls) v sadě Windows SDK. Informace o přidávání položek do ovládacího prvku záhlaví najdete v tématu [přidávání položek do ovládacího prvku záhlaví](../mfc/adding-items-to-the-header-control.md).
+Další informace o těchto vlastnostech naleznete v tématu [položky](/windows/win32/Controls/header-controls) v Windows SDK. Informace o přidávání položek do ovládacího prvku záhlaví naleznete v tématu [Přidání položek do ovládacího prvku záhlaví](../mfc/adding-items-to-the-header-control.md).
 
 ## <a name="see-also"></a>Viz také:
 

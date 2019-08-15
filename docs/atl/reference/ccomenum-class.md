@@ -1,5 +1,5 @@
 ---
-title: Ccomenum – třída
+title: CComEnum – třída
 ms.date: 11/04/2016
 f1_keywords:
 - CComEnum
@@ -7,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - CComEnum class
 ms.assetid: bff7dd7b-eb6e-4d6e-96ed-2706e66c8b3b
-ms.openlocfilehash: 4d83b06f37c132c0d2325304e2cc155ccb490690
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7252eb2fa5d34618a1c38484a2506bae27a1106a
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62246392"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69497212"
 ---
-# <a name="ccomenum-class"></a>Ccomenum – třída
+# <a name="ccomenum-class"></a>CComEnum – třída
 
-Tato třída definuje objekt enumerátoru modelu COM na základě pole.
+Tato třída definuje objekt enumerátoru COM založený na poli.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -31,36 +31,36 @@ public CComObjectRootEx<ThreadModel>
 
 #### <a name="parameters"></a>Parametry
 
-*základ*<br/>
-Enumerátor rozhraní modelu COM. Zobrazit [IEnumString](/windows/desktop/api/objidl/nn-objidl-ienumstring) příklad.
+*Základ*<br/>
+Rozhraní enumerátoru COM. Příklad najdete v tématu [IEnumString](/windows/win32/api/objidl/nn-objidl-ienumstring) .
 
 *piid*<br/>
-Ukazatel na Identifikátor rozhraní rozhraní enumerátor.
+Ukazatel na ID rozhraní rozhraní enumerátoru.
 
 *T*<br/>
-Typ položky, které jsou vystavené rozhraní enumerátor.
+Typ položky vystavený rozhraním enumerátoru.
 
 *kopírování*<br/>
-Homogenní [třídy zásady kopírování](../../atl/atl-copy-policy-classes.md).
+[Třída zásad](../../atl/atl-copy-policy-classes.md)pro homogenní kopírování.
 
 *ThreadModel*<br/>
-Model vláken třídy. Tento parametr výchozí hodnota je globální objektový model vláken použitých v projektu.
+Model vláken třídy. Tento parametr má výchozí hodnotu pro model vláken globálního objektu použitý v projektu.
 
 ## <a name="remarks"></a>Poznámky
 
-`CComEnum` definuje objekt enumerátoru modelu COM na základě pole. Tato třída je obdobou [CComEnumOnSTL](../../atl/reference/ccomenumonstl-class.md) který implementuje enumerátor podle kontejneru standardní knihovny C++. Typické postupy použití této třídy jsou popsány níže. Další informace najdete v tématu [ATL – kolekce a enumerátory](../../atl/atl-collections-and-enumerators.md).
+`CComEnum`definuje objekt enumerátoru COM založený na poli. Tato třída je analogická k [CComEnumOnSTL](../../atl/reference/ccomenumonstl-class.md) , která implementuje enumerátor na základě C++ standardního kontejneru knihovny. Typický postup použití této třídy je popsaný níže. Další informace naleznete v tématu [kolekce a čítače ATL](../../atl/atl-collections-and-enumerators.md).
 
 ## <a name="to-use-this-class"></a>Chcete-li použít tuto třídu:
 
-- **Definice TypeDef** specializace této třídy.
+- **definice typedef** a specializace této třídy.
 
-- Použití **typedef** jako argument šablony ve specializaci `CComObject`.
+- Použijte **typedef** jako argument šablony v specializaci `CComObject`.
 
-- Vytvoření instance `CComObject` specializace.
+- Vytvořte instanci `CComObject` specializace.
 
-- Inicializovat objekt enumerator voláním [CComEnumImpl::Init](../../atl/reference/ccomenumimpl-class.md#init).
+- Inicializujte objekt enumerátoru voláním [CComEnumImpl:: init](../../atl/reference/ccomenumimpl-class.md#init).
 
-- Vrátí enumerátor rozhraní do klienta.
+- Vrátí rozhraní enumerátoru klientovi.
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
@@ -76,23 +76,23 @@ Model vláken třídy. Tento parametr výchozí hodnota je globální objektový
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** atlcom
+**Záhlaví:** atlcom. h
 
 ## <a name="example"></a>Příklad
 
-Kód níže obsahuje opakovaně použitelné funkce pro vytváření a inicializaci objekt enumerátoru.
+Níže uvedený kód poskytuje opakovaně použitelnou funkci pro vytvoření a inicializaci objektu enumerátoru.
 
 [!code-cpp[NVC_ATL_COM#32](../../atl/codesnippet/cpp/ccomenum-class_1.h)]
 
-Tuto funkci je možné implementovat `_NewEnum` vlastnost kolekce rozhraní, jak je znázorněno níže:
+Tato funkce šablony se dá použít k implementaci `_NewEnum` vlastnosti rozhraní kolekce, jak je znázorněno níže:
 
 [!code-cpp[NVC_ATL_COM#33](../../atl/codesnippet/cpp/ccomenum-class_2.h)]
 
-Tento kód vytvoří **typedef** pro `CComEnum` , která zveřejní vektor varianty prostřednictvím `IEnumVariant` rozhraní. `CVariantArrayCollection` Třídy jednoduše specializuje `CreateEnumerator` pro práci s enumerátor objekty tohoto typu a předá nezbytné argumenty.
+Tento kód vytvoří **typedef** pro `CComEnum` , který zpřístupňuje vektor variant prostřednictvím `IEnumVariant` rozhraní. Třída se jednoduše `CreateEnumerator` specializuje pro práci s objekty enumerátoru tohoto typu a předá potřebné argumenty. `CVariantArrayCollection`
 
 ## <a name="see-also"></a>Viz také:
 
-[Přehled tříd](../../atl/atl-class-overview.md)<br/>
+[Přehled třídy](../../atl/atl-class-overview.md)<br/>
 [CComObjectThreadModel](atl-typedefs.md#ccomobjectthreadmodel)<br/>
 [CComEnumImpl – třída](../../atl/reference/ccomenumimpl-class.md)<br/>
 [CComObjectRootEx – třída](../../atl/reference/ccomobjectrootex-class.md)

@@ -51,12 +51,12 @@ helpviewer_keywords:
 - Microsoft::WRL::ComPtr::Swap method
 - Microsoft::WRL::ComPtr::~ComPtr, destructor
 ms.assetid: a6551902-6819-478a-8df7-b6f312ab1fb0
-ms.openlocfilehash: 889b722c91fd56613c5902eb4ce6439763a49bd9
-ms.sourcegitcommit: 720b74dddb1cdf4e570d55103158304ee1df81f8
+ms.openlocfilehash: 1e20a991c8f32027aeea6a17df0534aa6e1c2c43
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/29/2019
-ms.locfileid: "68606484"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69498417"
 ---
 # <a name="comptr-class"></a>ComPtr – třída
 
@@ -84,7 +84,7 @@ Třída, na kterou je aktuální `ComPtr` přítel. (Šablona, která používá
 
 `ComPtr<>`Deklaruje typ, který reprezentuje ukazatel základního rozhraní. Slouží `ComPtr<>` k deklaraci proměnné a následnému použití operátoru přístupu členů (`->`) k přístupu k členské funkci rozhraní.
 
-Další informace o inteligentních ukazatelích naleznete v pododdílu inteligentních ukazatelů COM v tématu [postupy psaní kódu modelu COM](/windows/desktop/LearnWin32/com-coding-practices) v knihovně MSDN.
+Další informace o inteligentních ukazatelích naleznete v pododdílu inteligentních ukazatelů COM v tématu [postupy psaní kódu modelu COM](/windows/win32/LearnWin32/com-coding-practices) v knihovně MSDN.
 
 ## <a name="members"></a>Členové
 

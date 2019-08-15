@@ -22,16 +22,16 @@ helpviewer_keywords:
 - _memccpy function
 - memccpy function
 ms.assetid: 9a2337df-6e85-4eba-b247-dd0532f45ddb
-ms.openlocfilehash: 5cd037974d8580b6ee90b1af736e8f2c6897fe8b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 704aab84ea3e39c91def1d4ac8b6d2d9d3650759
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62156600"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69499692"
 ---
-# <a name="memccpy"></a>_memccpy
+# <a name="_memccpy"></a>_memccpy
 
-Kopie znaků z vyrovnávací paměti.
+Kopíruje znaky z vyrovnávací paměti.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -46,39 +46,39 @@ void *_memccpy(
 
 ### <a name="parameters"></a>Parametry
 
-*dest*<br/>
+*propojovací*<br/>
 Ukazatel na cíl.
 
 *src*<br/>
 Ukazatel na zdroj.
 
 *c*<br/>
-Poslední znak pro kopírování.
+Poslední znak ke zkopírování.
 
-*Počet*<br/>
+*výpočtu*<br/>
 Počet znaků.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Pokud znak *c* zkopírován, **_memccpy –** vrací ukazatel na typ char v *dest* , který následuje znak. Pokud *c* není zkopírován, vrátí **NULL**.
+Pokud je znak *c* zkopírován, vrátí **_memccpy** ukazatel na znak v příkazu *cíl* , který následuje bezprostředně za znakem. Pokud není *c* zkopírován, vrátí **hodnotu null**.
 
 ## <a name="remarks"></a>Poznámky
 
-**_Memccpy –** funkce zkopíruje 0 nebo více znaků z *src* k *dest*, při zastavení znak *c* byl zkopírován nebo když *počet* znaků byly zkopírovány, podle toho, co nastane dřív.
+Funkce **_memccpy** kopíruje 0 nebo více znaků *Src* na *cíl*, zastaví se, když byl znak *c* zkopírován nebo když byly zkopírovány znaky *Count* , podle toho, co nastane dřív.
 
-**Poznámka k zabezpečení** Ujistěte se, že cílová vyrovnávací paměť je stejný velké nebo větší než zdrojové vyrovnávací paměti. Další informace najdete v tématu [předcházení přetečení vyrovnávací paměti](/windows/desktop/SecBP/avoiding-buffer-overruns).
+**Poznámka k zabezpečení** Ujistěte se, že cílová vyrovnávací paměť má stejnou velikost nebo je větší než zdrojová vyrovnávací paměť. Další informace najdete v tématu [předcházení přetečení vyrovnávací paměti](/windows/win32/SecBP/avoiding-buffer-overruns).
 
 ## <a name="requirements"></a>Požadavky
 
 |Rutina|Požadovaný hlavičkový soubor|
 |-------------|---------------------|
-|**_memccpy**|\<Memory.h > nebo \<string.h >|
+|**_memccpy**|\<Memory. h > nebo \<String. h >|
 
-Další informace o kompatibilitě naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
 
 ## <a name="libraries"></a>Knihovny
 
-Všechny verze [běhových knihoven C](../../c-runtime-library/crt-library-features.md).
+Všechny verze [knihoven run-time jazyka C](../../c-runtime-library/crt-library-features.md).
 
 ## <a name="example"></a>Příklad
 

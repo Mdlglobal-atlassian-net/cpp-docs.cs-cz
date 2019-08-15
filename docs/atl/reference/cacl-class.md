@@ -22,12 +22,12 @@ f1_keywords:
 helpviewer_keywords:
 - CAcl class
 ms.assetid: 20bcb9af-dc1c-4737-b923-3864776680d6
-ms.openlocfilehash: ba791ddc46fd59a470943bb30f415da01966dc61
-ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
+ms.openlocfilehash: 5d03154597f800042846e82d0a0cf5e7c46b613f
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68915894"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69497891"
 ---
 # <a name="cacl-class"></a>CAcl – třída
 
@@ -84,7 +84,7 @@ class CAcl
 
 ## <a name="remarks"></a>Poznámky
 
-`ACL` Struktura je hlavičkou seznamu řízení přístupu (ACL). Seznam ACL zahrnuje sekvenční seznam nula nebo více položek [ACE](/windows/desktop/SecAuthZ/access-control-entries) (položky řízení přístupu). Jednotlivé položky ACE v seznamu ACL jsou číslovány od 0 do *n-1*, kde *n* je počet položek ACE v seznamu ACL. Když upravujete seznam řízení přístupu (ACL), aplikace odkazuje na položku řízení přístupu (ACE) v seznamu ACL podle jejího indexu.
+`ACL` Struktura je hlavičkou seznamu řízení přístupu (ACL). Seznam ACL zahrnuje sekvenční seznam nula nebo více položek [ACE](/windows/win32/SecAuthZ/access-control-entries) (položky řízení přístupu). Jednotlivé položky ACE v seznamu ACL jsou číslovány od 0 do *n-1*, kde *n* je počet položek ACE v seznamu ACL. Když upravujete seznam řízení přístupu (ACL), aplikace odkazuje na položku řízení přístupu (ACE) v seznamu ACL podle jejího indexu.
 
 Existují dva typy seznamů ACL:
 
@@ -96,9 +96,9 @@ Volitelný seznam řízení přístupu (ACL) je řízen vlastníkem objektu nebo
 
 Objekt může mít také související informace o zabezpečení na úrovni systému, ve formě seznamu ACL systému, který je řízen správcem systému. Seznam řízení přístupu k systému může správcům systému umožnit auditovat jakékoli pokusy o získání přístupu k objektu.
 
-Další podrobnosti najdete v diskuzi [ACL](/windows/desktop/SecAuthZ/access-control-lists) v Windows SDK.
+Další podrobnosti najdete v diskuzi [ACL](/windows/win32/SecAuthZ/access-control-lists) v Windows SDK.
 
-Úvod do modelu řízení přístupu v systému Windows naleznete v tématu [Access Control](/windows/desktop/SecAuthZ/access-control) v Windows SDK.
+Úvod do modelu řízení přístupu v systému Windows naleznete v tématu [Access Control](/windows/win32/SecAuthZ/access-control) v Windows SDK.
 
 ## <a name="requirements"></a>Požadavky
 
@@ -126,7 +126,7 @@ typedef CAtlArray<BYTE> CAceFlagArray;
 
 ### <a name="remarks"></a>Poznámky
 
-Tato definice typedef určuje typ pole, který slouží k definování příznaků ovládacího prvku specifického pro položku řízení přístupu (ACE). Úplný seznam možných příznaků najdete v definici [ACE_HEADER](/windows/desktop/api/winnt/ns-winnt-ace_header) .
+Tato definice typedef určuje typ pole, který slouží k definování příznaků ovládacího prvku specifického pro položku řízení přístupu (ACE). Úplný seznam možných příznaků najdete v definici [ACE_HEADER](/windows/win32/api/winnt/ns-winnt-ace_header) .
 
 ##  <a name="cacetypearray"></a>CAcl::CAceTypeArray
 
@@ -138,7 +138,7 @@ typedef CAtlArray<BYTE> CAceTypeArray;
 
 ### <a name="remarks"></a>Poznámky
 
-Tato definice typedef určuje typ pole, který slouží k definování povahy objektů řízení přístupu (ACE), jako je například ACCESS_ALLOWED_ACE_TYPE nebo ACCESS_DENIED_ACE_TYPE. Úplný seznam možných typů najdete v definici [ACE_HEADER](/windows/desktop/api/winnt/ns-winnt-ace_header) .
+Tato definice typedef určuje typ pole, který slouží k definování povahy objektů řízení přístupu (ACE), jako je například ACCESS_ALLOWED_ACE_TYPE nebo ACCESS_DENIED_ACE_TYPE. Úplný seznam možných typů najdete v definici [ACE_HEADER](/windows/win32/api/winnt/ns-winnt-ace_header) .
 
 ##  <a name="cacl"></a>CAcl::CAcl
 
@@ -214,7 +214,7 @@ Tato metoda vyplní parametry pole podrobnostmi všech objektů ACE obsažených
 
 Obsah každého pole odpovídá sobě navzájem, tedy první prvek `CAccessMaskArray` pole odpovídá prvnímu prvku `CSidArray` v poli a tak dále.
 
-Další podrobnosti o typech a příznacích ACE najdete v tématu [ACE_HEADER](/windows/desktop/api/winnt/ns-winnt-ace_header) .
+Další podrobnosti o typech a příznacích ACE najdete v tématu [ACE_HEADER](/windows/win32/api/winnt/ns-winnt-ace_header) .
 
 ##  <a name="getaclentry"></a>CAcl::GetAclEntry
 
@@ -258,7 +258,7 @@ Typ zděděného objektu. Tato položka se nastaví na GUID_NULL, pokud typ zdě
 
 Tato metoda načte všechny informace o individuální položce ACE a poskytne více informací, než [CACL:: GetAclEntries](#getaclentries) zpřístupňuje sám.
 
-Další podrobnosti o typech a příznacích ACE najdete v tématu [ACE_HEADER](/windows/desktop/api/winnt/ns-winnt-ace_header) .
+Další podrobnosti o typech a příznacích ACE najdete v tématu [ACE_HEADER](/windows/win32/api/winnt/ns-winnt-ace_header) .
 
 ##  <a name="getlength"></a>CAcl:: GetLength
 

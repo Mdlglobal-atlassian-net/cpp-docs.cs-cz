@@ -1,6 +1,6 @@
 ---
 title: Lokální úložiště vláken (TLS)
-ms.date: 11/04/2016
+ms.date: 08/09/2019
 helpviewer_keywords:
 - multithreading [C++], Thread Local Storage
 - TLS [C++]
@@ -9,68 +9,68 @@ helpviewer_keywords:
 - thread attribute
 - Thread Local Storage [C++]
 ms.assetid: 80801907-d792-45ca-b776-df0cf2e9f197
-ms.openlocfilehash: 5c7bf2ae7cb5bfe71be9a1d72147e97c894064b3
-ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.openlocfilehash: 7e308f7ba23503879f8ebbcacde481cf72055229
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65448907"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69510388"
 ---
 # <a name="thread-local-storage-tls"></a>Lokální úložiště vláken (TLS)
 
-Místní úložiště vláken (TLS) je metoda, podle kterého všechna vlákna daného procesu můžete přidělit umístění, ve kterých se mají ukládat data určitého vlákna. Dynamicky datové vazby (za běhu) specifické pro vlákno je podporováno prostřednictvím rozhraní API pro protokol TLS ([TlsAlloc](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-tlsalloc).  Win32 a Microsoft C++ kompilátor nyní podpora staticky vázaných dat (během načítání) vlákno kromě stávající implementaci rozhraní API.
+Místní úložiště vláken (TLS) je metoda, pomocí které každé vlákno v daném vícevláknovém procesu může přidělit umístění, do kterých mají být ukládána data specifická pro vlákno. Dynamicky vázaná data pro vlákna závislá na vláknech jsou podporována způsobem rozhraní TLS API ([TlsAlloc](/windows/win32/api/processthreadsapi/nf-processthreadsapi-tlsalloc). Win32 a kompilátor Microsoftu C++ teď podporují společně s existující implementací rozhraní API staticky vázaná data (zatížení) na vlákno.
 
-##  <a name="_core_compiler_implementation_for_tls"></a> Implementace kompilátoru TLS
+## <a name="_core_compiler_implementation_for_tls"></a>Implementace kompilátoru pro TLS
 
-**C++11:**  `thread_local` Specifikátor třídy úložiště je doporučeným způsobem, jak určit úložiště thread-local se pro objekty a členy třídy. Další informace najdete v tématu [třídy úložiště (C++)](../cpp/storage-classes-cpp.md).
+**C++ 11:**  Specifikátor `thread_local` třídy úložiště je doporučeným způsobem, jak zadat místní úložiště vlákna pro objekty a členy třídy. Další informace naleznete v tématu [třídy úložiště (C++)](../cpp/storage-classes-cpp.md).
 
-Atribut specifické pro společnost Microsoft poskytuje jazyk Visual C++ [vlákno](../cpp/thread.md), jako modifikátor třídy rozšířené úložiště. Použití **__declspec** – klíčové slovo k deklaraci **vlákno** proměnné. Například následující kód deklaruje místní proměnnou vlákna integer a inicializuje ji hodnotou:
+MSVC také poskytuje atribut specifický pro společnost Microsoft, [vlákno](../cpp/thread.md)jako rozšířený modifikátor třídy úložiště. K deklaraci proměnné **vlákna** použijte klíčové slovo **__declspec** . Například následující kód deklaruje celočíselnou thread local proměnnou a inicializuje ji hodnotou:
 
-```
+```C
 __declspec( thread ) int tls_i = 1;
 ```
 
 ## <a name="rules-and-limitations"></a>Pravidla a omezení
 
-Při deklarování staticky vázaného místními objekty vlákna a proměnné, musí být dodrženy následující pokyny. Tyto pokyny platí i pro [vlákno](../cpp/thread.md)a ve většině případů také do [thread_local](../cpp/storage-classes-cpp.md):
+Při deklarování staticky vázaných thread local objektů a proměnných musí být pozorovány následující pokyny. Tyto pokyny platí jak pro [vlákno](../cpp/thread.md) , tak pro [thread_local](../cpp/storage-classes-cpp.md):
 
-- **Vlákno** atribut lze použít pouze pro třídy a data deklarací a definic. Nelze použít v deklaracích nebo definicích funkce. Například následující kód vygeneruje chybu kompilátoru:
+- Atribut **thread** lze použít pouze pro deklarace tříd a dat a definice. Nedá se použít pro deklarace a definice funkcí. Například následující kód vygeneruje chybu kompilátoru:
 
-    ```
+    ```C
     __declspec( thread )void func();     // This will generate an error.
     ```
 
-- **Vlákno** modifikátor může být určen pouze na položky dat se **statické** rozsahu. To zahrnuje globální datové objekty (obojí **statické** a **extern**), místní statické objekty a statické datové členy třídy jazyka C++. Automatické datové objekty nelze deklarovat s **vlákno** atribut. Následující kód vygeneruje chyby kompilátoru:
+- Modifikátor **vlákna** lze zadat pouze pro položky dat se statickým rozsahem. Který zahrnuje globální datové objekty ( **static** i **extern**), místní statické objekty a statické datové členy C++ tříd. Automatické datové objekty nelze deklarovat s atributem **thread** . Následující kód vygeneruje chyby kompilátoru:
 
-    ```
+    ```C
     void func1()
     {
         __declspec( thread )int tls_i;            // This will generate an error.
     }
 
-    int func2(__declspec( thread )int tls_i )    // This will generate an error.
+    int func2(__declspec( thread )int tls_i )     // This will generate an error.
     {
         return tls_i;
     }
     ```
 
-- Deklarace a definice místního objektu musí být specifikovány vlákno **vlákno** atribut. Například následující kód vygeneruje chybu:
+- Deklarace a definice objektu thread local musí všechny určovat atribut **vlákna** . Například následující kód vygeneruje chybu:
 
-    ```
+    ```C
     #define Thread  __declspec( thread )
     extern int tls_i;        // This will generate an error, since the
     int __declspec( thread )tls_i;        // declaration and definition differ.
     ```
 
-- **Vlákno** atributu nelze použít jako modifikátor typu. Například následující kód vygeneruje chybu kompilátoru:
+- Atribut **thread** nelze použít jako modifikátor typu. Například následující kód vygeneruje chybu kompilátoru:
 
-    ```
+    ```C
     char __declspec( thread ) *ch;        // Error
     ```
 
-- Vzhledem k tomu, že deklarace jazyka C++ objekty, které používají **vlákno** atribut je povolen, následující dva příklady jsou sémanticky ekvivalentní:
+- Vzhledem k tomu, C++ že je povolena deklarace objektů, které používají atribut **thread** , jsou následující dva příklady sémanticky ekvivalentní:
 
-    ```
+    ```cpp
     __declspec( thread ) class B
     {
     // Code
@@ -83,28 +83,28 @@ Při deklarování staticky vázaného místními objekty vlákna a proměnné, 
     __declspec( thread ) B BObject;  // OK--BObject is declared thread local.
     ```
 
-- Adresa místního objektu vlákna není považována za konstantu a libovolný výraz zahrnující takové adresy se nepovažuje za konstantní výraz. Ve standardním C je důsledkem tohoto zakázat použití adresu místní proměnné vlákna jako inicializátor objektu nebo ukazatele. Například následující kód je označen jako chyba v kompilátoru jazyka C:
+- Adresa thread localho objektu není považována za konstantu a jakýkoliv výraz, který tuto adresu zahrnuje, není považován za konstantní výraz. V jazyce Standard C je efekt zakázat použití adresy thread local proměnné jako inicializátoru objektu nebo ukazatele. Například následující kód je označen jako chyba kompilátoru jazyka C:
 
-    ```
-    __declspec( thread )int tls_i;
+    ```C
+    __declspec( thread ) int tls_i;
     int *p = &tls_i;       //This will generate an error in C.
     ```
 
-   Toto omezení neplatí v jazyce C++. Protože jazyk C++ umožňuje pro dynamická inicializace všech objektů, je objekt inicializovat pomocí výrazu, který používá adresu místní proměnné vlákna. To lze provést stejně jako konstrukce místními objekty vlákna. Příklad kódu uvedeného výše nevygeneruje chybu při kompilaci jako zdrojový soubor jazyka C++. Všimněte si, že adresu místní proměnné vlákna je platný pouze dokud vlákno, ve kterém byla získána adresu stále existuje.
+   Toto omezení se nevztahuje na C++. Vzhledem C++ k tomu, že umožňuje dynamickou inicializaci všech objektů, lze inicializovat objekt pomocí výrazu, který používá adresu Thread Local proměnné. To se provádí stejně jako konstrukce thread local objektů. Například kód uvedený výše negeneruje chybu, když je kompilován jako C++ zdrojový soubor. Adresa thread local proměnné je platná pouze tak dlouho, dokud vlákno, ve kterém se adresa převzala, stále existuje.
 
-- Standard jazyka C umožňuje inicializaci objektu nebo proměnné s výrazem zahrnujícím odkaz sám na sebe, ale pouze pro nestatické objekty. Přestože jazyk C++ obvykle umožňuje takovou dynamickou inicializaci objektu s výrazem zahrnujícím odkaz sám na sebe, tento typ inicializace není povolen s místními objekty vlákna. Příklad:
+- Standard jazyka C umožňuje inicializaci objektu nebo proměnné s výrazem, který zahrnuje odkaz sám na sebe, ale pouze pro objekty nestatického rozsahu. I C++ když obecně umožňuje takovou dynamickou inicializaci objektů s výrazem, který zahrnuje odkaz sám na sebe, tento druh inicializace není u Thread localch objektů povolen. Příklad:
 
-    ```
+    ```C
     __declspec( thread )int tls_i = tls_i;                // Error in C and C++
     int j = j;                               // OK in C++, error in C
     __declspec( thread )int tls_i = sizeof( tls_i )       // Legal in C and C++
     ```
 
-   Všimněte si, že `sizeof` výraz, který obsahuje inicializovaný objekt, nepředstavuje odkaz sám na sebe a je povolen v jazyce C a C++.
+   Výraz, který obsahuje inicializovaný objekt, nepředstavuje odkaz sám na sebe a je povolen v C i C++ `sizeof`
 
-   Jazyk C++ neumožňuje takovou dynamickou inicializaci vlákna dat z důvodu možných budoucí vylepšení zařízení místní úložiště vláken.
+   C++neumožňuje takovou dynamickou inicializaci dat vlákna z důvodu možného budoucího vylepšení thread local úložného zařízení.
 
-- V operačních systémech Windows než Windows Vista `__declspec`(vlákno) má určitá omezení. Pokud knihovna DLL deklaruje data ani jako objekt `__declspec`(vlákno), může to způsobit selhání ochrany Pokud dynamicky načíst. Po načtení knihovny DLL s [LoadLibrary](/windows/desktop/api/libloaderapi/nf-libloaderapi-loadlibrarya), dojde k selhání systému pokaždé, když se kód odkazuje `__declspec`data (vlákno). Vzhledem k tomu, že v době běhu je přiděleno globální proměnné místo pro vlákno, velikost toto místo je založená na výpočtu požadavkům aplikace a všechny knihovny DLL staticky propojené požadavky. Při použití `LoadLibrary`, nelze rozšířit tento prostor pro místní proměnné vlákna deklarované pomocí `__declspec`(vlákno). Použít rozhraní API pro protokol TLS, například [TlsAlloc](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-tlsalloc), v knihovně DLL přidělit TLS, pokud knihovna DLL může být načten s `LoadLibrary`.
+- V operačních systémech Windows před systémem Windows Vista `__declspec( thread )` má některá omezení. Pokud knihovna DLL deklaruje jakákoli data nebo objekt jako `__declspec( thread )`, může dojít k chybě ochrany, pokud je dynamicky načten. Po načtení knihovny DLL pomocí funkce [LoadLibrary](/windows/win32/api/libloaderapi/nf-libloaderapi-loadlibraryw)dojde k selhání systému vždy, když kód odkazuje `__declspec( thread )` na data. Vzhledem k tomu, že globální proměnná prostor pro vlákno je přidělena v době běhu, je velikost tohoto místa založena na výpočtu požadavků aplikace a požadavků všech knihoven DLL, které jsou staticky propojeny. Když použijete `LoadLibrary`, nemůžete tento prostor zvětšit, aby bylo možné použít proměnné Thread Local `__declspec( thread )`deklarované s. Pomocí rozhraní API TLS, jako je například [TlsAlloc](/windows/win32/api/processthreadsapi/nf-processthreadsapi-tlsalloc), můžete v knihovně DLL přidělit protokol TLS, pokud může být knihovna `LoadLibrary`DLL načtena s.
 
 ## <a name="see-also"></a>Viz také:
 

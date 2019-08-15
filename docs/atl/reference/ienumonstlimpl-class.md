@@ -1,5 +1,5 @@
 ---
-title: Ienumonstlimpl – třída
+title: IEnumOnSTLImpl – třída
 ms.date: 11/04/2016
 f1_keywords:
 - IEnumOnSTLImpl
@@ -15,16 +15,16 @@ f1_keywords:
 helpviewer_keywords:
 - IEnumOnSTLImpl class
 ms.assetid: 1789e77b-88b8-447d-a490-806b918912ce
-ms.openlocfilehash: 8ff29522351b542d0b674bc173040d4468d00f1c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7cf777f3ff0d298f224157735a06bf57a2c10cf5
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62275266"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69495863"
 ---
-# <a name="ienumonstlimpl-class"></a>Ienumonstlimpl – třída
+# <a name="ienumonstlimpl-class"></a>IEnumOnSTLImpl – třída
 
-Tato třída definuje výčet rozhraní na základě kolekce standardní knihovny C++.
+Tato třída definuje rozhraní enumerátoru na základě C++ standardní kolekce knihoven.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -36,51 +36,51 @@ class ATL_NO_VTABLE IEnumOnSTLImpl : public Base
 
 #### <a name="parameters"></a>Parametry
 
-*základ*<br/>
-COM enumerátor. Zobrazit [IEnumString](/windows/desktop/api/objidl/nn-objidl-ienumstring) příklad.
+*Základ*<br/>
+Enumerátor COM. Příklad najdete v tématu [IEnumString](/windows/win32/api/objidl/nn-objidl-ienumstring) .
 
 *piid*<br/>
-Ukazatel na Identifikátor rozhraní rozhraní enumerátor.
+Ukazatel na ID rozhraní rozhraní enumerátoru.
 
 *T*<br/>
-Typ položky, které jsou vystavené rozhraní enumerátor.
+Typ položky vystavený rozhraním enumerátoru.
 
 *kopírování*<br/>
-A [třídy zásady kopírování](../../atl/atl-copy-policy-classes.md).
+[Třída zásad kopírování](../../atl/atl-copy-policy-classes.md).
 
 *CollType*<br/>
-Třída kontejneru standardní knihovny C++.
+Třída C++ kontejneru standardní knihovny.
 
 ## <a name="members"></a>Členové
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
-|[IEnumOnSTLImpl::Clone](#clone)|Provádění **klonování**.|
-|[IEnumOnSTLImpl::Init](#init)|Inicializuje čítače výčtu.|
-|[IEnumOnSTLImpl::Next](#next)|Provádění **Další**.|
-|[IEnumOnSTLImpl::Reset](#reset)|Provádění **resetování**.|
-|[IEnumOnSTLImpl::Skip](#skip)|Provádění **přeskočit**.|
+|[IEnumOnSTLImpl::Clone](#clone)|Implementace klonu.|
+|[IEnumOnSTLImpl::Init](#init)|Inicializuje enumerátor.|
+|[IEnumOnSTLImpl::Next](#next)|Implementace **Next**.|
+|[IEnumOnSTLImpl:: Reset](#reset)|Implementace resetu.|
+|[IEnumOnSTLImpl:: Skip](#skip)|Implementace **Skip**.|
 
 ### <a name="public-data-members"></a>Veřejné datové členy
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
-|[IEnumOnSTLImpl::m_iter](#m_iter)|Iterátor, který představuje aktuální pozice čítače výčtu v rámci kolekce.|
-|[IEnumOnSTLImpl::m_pcollection](#m_pcollection)|Ukazatel na kontejneru standardní knihovny C++ obsahující položky, které chcete vytvořit výčet.|
+|[IEnumOnSTLImpl::m_iter](#m_iter)|Iterátor, který představuje aktuální pozici čítače výčtu v rámci kolekce.|
+|[IEnumOnSTLImpl::m_pcollection](#m_pcollection)|Ukazatel na C++ standardní kontejner knihovny, který uchovává položky, které mají být vyčísleny.|
 |[IEnumOnSTLImpl::m_spUnk](#m_spunk)|`IUnknown` Ukazatel objektu, který poskytuje kolekci.|
 
 ## <a name="remarks"></a>Poznámky
 
-`IEnumOnSTLImpl` poskytuje implementaci pro uložení položky výčtu v kontejneru kompatibilní knihovny C++ Standard rozhraní modelu COM enumerátor. Tato třída je obdobou [ccomenumimpl –](../../atl/reference/ccomenumimpl-class.md) třídu, která poskytuje implementaci pro enumerátor rozhraní založené na pole.
+`IEnumOnSTLImpl`poskytuje implementaci rozhraní enumerátoru modelu COM, kde jsou položky výčtové, uloženy ve C++ standardním kontejneru kompatibilním s knihovnou. Tato třída je podobná třídě [CComEnumImpl](../../atl/reference/ccomenumimpl-class.md) , která poskytuje implementaci rozhraní enumerátoru založeného na poli.
 
 > [!NOTE]
->  Zobrazit [CComEnumImpl::Init](../../atl/reference/ccomenumimpl-class.md#init) podrobnosti o další rozdíly mezi `CComEnumImpl` a `IEnumOnSTLImpl`.
+>  Podrobnosti o dalších rozdílech mezi `CComEnumImpl` a `IEnumOnSTLImpl`získáte v tématu [CComEnumImpl:: init](../../atl/reference/ccomenumimpl-class.md#init) .
 
-Obvykle bude *není* muset vytvořit vlastní čítač třídy odvozené z implementace tohoto rozhraní. Pokud chcete použít enumerátor poskytované ATL podle kontejneru standardní knihovny C++, je běžné vytvořit instanci [CComEnumOnSTL](../../atl/reference/ccomenumonstl-class.md), nebo chcete-li vytvořit třídu kolekce, která vrací enumerátor odvozením z [ICollectionOnSTLImpl](../../atl/reference/icollectiononstlimpl-class.md).
+Obvykle nebudete muset vytvářet vlastní třídu enumerátoru odvozením z této implementace rozhraní. Pokud chcete použít enumerátor dodaný ATL na základě C++ standardního kontejneru knihovny, je obvyklejší vytvořit instanci [CComEnumOnSTL](../../atl/reference/ccomenumonstl-class.md)nebo vytvořit třídu kolekce, která vrací enumerátor odvozením z [ICollectionOnSTLImpl ](../../atl/reference/icollectiononstlimpl-class.md).
 
-Ale pokud potřebujete poskytovat vlastní čítače výčtu (například jeden, který zpřístupňuje rozhraní kromě rozhraní enumerátor), můžete odvozovat z této třídy. V takovém případě je pravděpodobné, že bude nutné přepsat [klonování](#clone) metodu a zadejte vlastní implementaci.
+Pokud však potřebujete zadat vlastní enumerátor (například jeden, který zveřejňuje rozhraní kromě rozhraní enumerátor), můžete z této třídy odvodit. V této situaci je pravděpodobně nutné přepsat metodu klonování, aby byla [](#clone) zajištěna vaše vlastní implementace.
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
@@ -90,11 +90,11 @@ Ale pokud potřebujete poskytovat vlastní čítače výčtu (například jeden,
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** atlcom
+**Záhlaví:** atlcom. h
 
-##  <a name="init"></a>  IEnumOnSTLImpl::Init
+##  <a name="init"></a>IEnumOnSTLImpl:: init
 
-Inicializuje čítače výčtu.
+Inicializuje enumerátor.
 
 ```
 HRESULT Init(
@@ -105,24 +105,24 @@ HRESULT Init(
 ### <a name="parameters"></a>Parametry
 
 *pUnkForRelease*<br/>
-[in] `IUnknown` Ukazatel objektu, který musí být zachováno po celou dobu životnosti enumerátor. Předejte hodnotu NULL, pokud žádný takový objekt neexistuje.
+pro `IUnknown` Ukazatel objektu, který musí být během životnosti čítače udržován v aktivním stavu. Pokud žádný takový objekt neexistuje, předejte hodnotu NULL.
 
-*Kolekce*<br/>
-Odkaz na kontejner standardní knihovny C++, který obsahuje položky, které chcete vytvořit výčet.
+*kolekce*<br/>
+Odkaz na C++ standardní kontejner knihovny, který obsahuje položky, které mají být vyčísleny.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Standardní hodnoty HRESULT.
+Standardní hodnota HRESULT.
 
 ### <a name="remarks"></a>Poznámky
 
-Pokud předáte `Init` odkaz na kolekci uchovávat v jiném objektu, můžete použít *pUnkForRelease* parametr k zajištění, že objektu a kolekce obsahuje, je k dispozici pro tak dlouho, dokud jej potřebuje enumerátor.
+Pokud předáte `Init` odkaz na kolekci uloženou v jiném objektu, můžete použít parametr *pUnkForRelease* a zajistit tak, že objekt a kolekce, které jsou v něm uloženy, jsou k dispozici, dokud je enumerátor vyžaduje.
 
-Tato metoda musí volat před předáním ukazatel rozhraní enumerátor zpět na všechny klienty.
+Tato metoda musí být volána před předáním ukazatele na rozhraní enumerátoru zpátky na všechny klienty.
 
-##  <a name="clone"></a>  IEnumOnSTLImpl::Clone
+##  <a name="clone"></a>IEnumOnSTLImpl:: Clone
 
-Tato metoda poskytuje implementaci **klonování** metodu tak, že vytvoříte objekt typu `CComEnumOnSTL`, inicializuje se stejnými kolekce a používá aktuální objekt iterátoru a vrací rozhraní na nově vytvořený objekt.
+Tato metoda poskytuje implementaci metody klonování vytvořením objektu typu `CComEnumOnSTL`, inicializací se stejnou kolekcí a iterátorem použitým aktuálním objektem a vrácením rozhraní u nově vytvořeného objektu.
 
 ```
 STDMETHOD(Clone)(Base** ppEnum);
@@ -131,11 +131,11 @@ STDMETHOD(Clone)(Base** ppEnum);
 ### <a name="parameters"></a>Parametry
 
 *ppEnum*<br/>
-[out] Enumerátor rozhraní na nově vytvořený objekt naklonovali z aktuální enumerátor.
+mimo Rozhraní enumerátoru u nově vytvořeného objektu naklonované z aktuálního enumerátoru.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Standardní hodnoty HRESULT.
+Standardní hodnota HRESULT.
 
 ##  <a name="m_spunk"></a>  IEnumOnSTLImpl::m_spUnk
 
@@ -147,11 +147,11 @@ CComPtr<IUnknown> m_spUnk;
 
 ### <a name="remarks"></a>Poznámky
 
-Inteligentní ukazatele this udržuje odkaz na objekt předaný [IEnumOnSTLImpl::Init](#init), zajištění, že zůstane aktivní po dobu životnosti enumerátor.
+Tento inteligentní ukazatel udržuje odkaz na objekt předaný do [IEnumOnSTLImpl:: init](#init)a zajišťuje tak, že zůstane aktivní během životnosti enumerátoru.
 
 ##  <a name="m_pcollection"></a>  IEnumOnSTLImpl::m_pcollection
 
-Tento člen odkazuje na kolekci, která poskytuje data řízení implementací rozhraní enumerátor.
+Tento člen odkazuje na kolekci, která poskytuje data, která řídí implementaci rozhraní enumerátoru.
 
 ```
 CollType* m_pcollection;
@@ -159,17 +159,17 @@ CollType* m_pcollection;
 
 ### <a name="remarks"></a>Poznámky
 
-Tento člen je inicializován pomocí volání [IEnumOnSTLImpl::Init](#init).
+Tento člen je inicializován voláním metody [IEnumOnSTLImpl:: init](#init).
 
 ##  <a name="m_iter"></a>  IEnumOnSTLImpl::m_iter
 
-Tento člen uchovává iterátor používá k označení aktuální pozici v rámci kolekce a přejděte na další prvky.
+Tento člen obsahuje iterátor, který slouží k označení aktuální pozice v rámci kolekce a přechodu na následné prvky.
 
 ```
 CollType::iterator m_iter;
 ```
 
-##  <a name="next"></a>  IEnumOnSTLImpl::Next
+##  <a name="next"></a>IEnumOnSTLImpl:: Next
 
 Tato metoda poskytuje implementaci **Další** metody.
 
@@ -183,21 +183,21 @@ STDMETHOD(Next)(
 ### <a name="parameters"></a>Parametry
 
 *celt*<br/>
-[in] Počet prvků požadavku.
+pro Počet požadovaných prvků.
 
 *rgelt*<br/>
-[out] Pole pro vyplnění pomocí elementů.
+mimo Pole, které se má vyplnit prvky.
 
 *pceltFetched*<br/>
-[out] Počet prvků ve skutečnosti vrátí v *rgelt*. To může být kratší než *celt* Pokud méně než *celt* prvky zůstanou v seznamu.
+mimo Počet prvků skutečně vrácených v *rgelt*. To může být menší než *celt* , pokud v seznamu zůstane méně než *celt* prvky.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Standardní hodnoty HRESULT.
+Standardní hodnota HRESULT.
 
-##  <a name="reset"></a>  IEnumOnSTLImpl::Reset
+##  <a name="reset"></a>IEnumOnSTLImpl:: Reset
 
-Tato metoda poskytuje implementaci **resetování** metody.
+Tato metoda poskytuje implementaci metody resetování .
 
 ```
 STDMETHOD(Reset)(void);
@@ -205,11 +205,11 @@ STDMETHOD(Reset)(void);
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Standardní hodnoty HRESULT.
+Standardní hodnota HRESULT.
 
-##  <a name="skip"></a>  IEnumOnSTLImpl::Skip
+##  <a name="skip"></a>IEnumOnSTLImpl:: Skip
 
-Tato metoda poskytuje implementaci **přeskočit** metody.
+Tato metoda poskytuje implementaci metody **Skip** .
 
 ```
 STDMETHOD(Skip)(ULONG celt);
@@ -218,12 +218,12 @@ STDMETHOD(Skip)(ULONG celt);
 ### <a name="parameters"></a>Parametry
 
 *celt*<br/>
-[in] Počet prvků, které mají přeskočit.
+pro Počet prvků, které se mají přeskočit
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Standardní hodnoty HRESULT.
+Standardní hodnota HRESULT.
 
 ## <a name="see-also"></a>Viz také:
 
-[Přehled tříd](../../atl/atl-class-overview.md)
+[Přehled třídy](../../atl/atl-class-overview.md)

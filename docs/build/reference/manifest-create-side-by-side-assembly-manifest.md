@@ -8,12 +8,12 @@ helpviewer_keywords:
 - /MANIFEST linker option
 - MANIFEST linker option
 ms.assetid: 98c52e1e-712c-4f49-b149-4d0a3501b600
-ms.openlocfilehash: 9a3ca3980a9cdff4e67885b2ad47ffa2385b0774
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ea58b43accdd854665fad3b70d7aecbc9eaa0f9e
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62321641"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69492782"
 ---
 # <a name="manifest-create-side-by-side-assembly-manifest"></a>/MANIFEST (vytvoření manifestu souběžného sestavení)
 
@@ -23,13 +23,13 @@ ms.locfileid: "62321641"
 
 ## <a name="remarks"></a>Poznámky
 
-Volba /MANIFEST určuje, že má linker vytvořit souběžný soubor manifestu. Další informace o souborech manifestu naleznete v tématu [referenční příručka souborů manifestu](/windows/desktop/SbsCs/manifest-files-reference).
+Volba /MANIFEST určuje, že má linker vytvořit souběžný soubor manifestu. Další informace o souborech manifestu naleznete v tématu [Reference k souborům manifestu](/windows/win32/SbsCs/manifest-files-reference).
 
 Výchozí hodnota je /MANIFEST.
 
 Volba /MANIFEST:EMBED určuje, že má linker vložit soubor manifestu do bitové kopie jako prostředek typu RT_MANIFEST. Volitelný parametr `ID` je ID prostředku, které se použije pro manifest. Pro spustitelný soubor použijte hodnotu 1. Pro knihovnu DLL použijte hodnotu 2, aby bylo možné určit soukromé závislosti. Pokud parametr `ID` není zadán, výchozí hodnota je 2, pokud je nastavena volba /DLL. Jinak je výchozí hodnota 1.
 
-Od verze Visual Studio 2008, soubory manifestu spustitelných souborů obsahují oddíl, který určuje informace o řízení uživatelských účtů (UAC). Pokud zadáte volbu/manifest, ale nezadáte [/MANIFESTUAC](manifestuac-embeds-uac-information-in-manifest.md) ani [/dll](dll-build-a-dll.md), výchozí fragment nástroje Řízení uživatelských účtů, které má nastavený úroveň nástroje Řízení uživatelských účtů na *asInvoker* se vloží do manifestu. Další informace o úrovních nástroje Řízení uživatelských účtů najdete v tématu [/MANIFESTUAC (vložené informace UAC v manifestu)](manifestuac-embeds-uac-information-in-manifest.md).
+Počínaje sadou Visual Studio 2008 soubory manifestu pro spustitelné soubory obsahují oddíl, který určuje informace o nástroji Řízení uživatelských účtů (UAC). Pokud zadáte/MANIFEST, ale nezadáte ani [/MANIFESTUAC](manifestuac-embeds-uac-information-in-manifest.md) ani [/DLL](dll-build-a-dll.md), do manifestu se vloží výchozí fragment nástroje řízení uživatelských účtů, který má na úrovni nástroje řízení uživatelských účtů nastavenou hodnotu *podle volajícího* . Další informace o úrovních nástroje řízení uživatelských účtů najdete [v tématu/MANIFESTUAC (vkládání informací o nástroji Řízení uživatelských účtů v manifestu)](manifestuac-embeds-uac-information-in-manifest.md).
 
 Chcete-li změnit výchozí chování nástroje Řízení uživatelských účtů, proveďte jeden z následujících kroků:
 
@@ -37,21 +37,21 @@ Chcete-li změnit výchozí chování nástroje Řízení uživatelských účt�
 
 - Nebo určete možnost /MANIFESTUAC:NO, pokud nechcete v manifestu generovat fragment nástroje Řízení uživatelských účtů.
 
-Pokud nezadáte volbu/manifest, ale zadat [/MANIFESTDEPENDENCY](manifestdependency-specify-manifest-dependencies.md) komentáře, se vytvoří soubor manifestu. Soubor manifestu nebude vytvořen, pokud určíte volbu /MANIFEST:NO.
+Pokud nezadáte/MANIFEST, ale zadáte komentáře [/MANIFESTDEPENDENCY](manifestdependency-specify-manifest-dependencies.md) , vytvoří se soubor manifestu. Soubor manifestu nebude vytvořen, pokud určíte volbu /MANIFEST:NO.
 
-Pokud určíte volbu /MANIFEST, název souboru manifestu bude stejný jako název výstupního souboru, ale s příponou .manifest připojenou k názvu souboru. Například pokud bude název výstupního souboru MyFile.exe, název souboru manifestu bude MyFile.exe.manifest.  Pokud zadáte manifestfile:*název*, název manifestu je zadat v *název*.
+Pokud určíte volbu /MANIFEST, název souboru manifestu bude stejný jako název výstupního souboru, ale s příponou .manifest připojenou k názvu souboru. Například pokud bude název výstupního souboru MyFile.exe, název souboru manifestu bude MyFile.exe.manifest.  Pokud zadáte/MANIFESTFILE:*Name*, název manifestu je to, co zadáte v *názvu*.
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Nastavení tohoto parametru linkeru ve vývojovém prostředí sady Visual Studio
 
-1. Otevřete v projektu **stránky vlastností** dialogové okno. Podrobnosti najdete v tématu [vlastnosti kompilátoru a sestavení nastavte C++ v sadě Visual Studio](../working-with-project-properties.md).
+1. Otevřete dialogové okno **stránky vlastností** projektu. Podrobnosti najdete v tématu [nastavení C++ vlastností kompilátoru a sestavení v sadě Visual Studio](../working-with-project-properties.md).
 
-1. Rozbalte **vlastnosti konfigurace** uzlu.
+1. Rozbalte uzel **Vlastnosti konfigurace** .
 
-1. Rozbalte **Linkeru** uzlu.
+1. Rozbalte uzel **linker** .
 
-1. Vyberte **soubor manifestu** stránku vlastností.
+1. Vyberte stránku vlastností **souboru manifestu** .
 
-1. Upravit **generovat Manifest** vlastnost.
+1. Upravte vlastnost **Generovat Manifest** .
 
 ### <a name="to-set-this-linker-option-programmatically"></a>Programové nastavení tohoto parametru linkeru
 
