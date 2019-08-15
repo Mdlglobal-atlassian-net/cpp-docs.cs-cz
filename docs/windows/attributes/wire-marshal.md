@@ -1,21 +1,21 @@
 ---
-title: wire_marshal – (C++ atributů COM)
+title: wire_marshal (C++ atribut com)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.wire_marshal
 helpviewer_keywords:
 - wire_marshal attribute
 ms.assetid: 244f9d72-776d-4ebd-b60a-cee600a126b5
-ms.openlocfilehash: d1d18336a20644338a50ab66c7fcb06959e5760a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e1067b74191dcde98dd9c85a246db2acd26eff9c
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62407013"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69514846"
 ---
-# <a name="wiremarshal"></a>wire_marshal
+# <a name="wire_marshal"></a>wire_marshal
 
-Určuje datový typ, který se použije pro přenos místo typu dat pro konkrétní aplikace.
+Určuje datový typ, který se použije pro přenos místo datového typu specifického pro aplikaci.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -25,11 +25,11 @@ Určuje datový typ, který se použije pro přenos místo typu dat pro konkrét
 
 ## <a name="remarks"></a>Poznámky
 
-**Wire_marshal –** C++ atribut má stejné funkce jako [wire_marshal –](/windows/desktop/Midl/wire-marshal) atribut MIDL.
+Atribut **wire_marshal** C++ má stejné funkce jako atribut [wire_marshal](/windows/win32/Midl/wire-marshal) MIDL.
 
 ## <a name="example"></a>Příklad
 
-Následující kód ukazuje použití **wire_marshal –**:
+Následující kód ukazuje použití **wire_marshal**:
 
 ```cpp
 // cpp_attr_ref_wire_marshal.cpp
@@ -49,16 +49,16 @@ Následující kód ukazuje použití **wire_marshal –**:
 
 ## <a name="requirements"></a>Požadavky
 
-### <a name="attribute-context"></a>Atribut kontextu
+### <a name="attribute-context"></a>Kontext atributu
 
 |||
 |-|-|
-|**Platí pro**|**Definice TypeDef**|
-|**Opakovatelné**|Ne|
-|**Vyžadované atributy**|Žádné|
+|**Platí pro**|**definic**|
+|**REPEATABLE**|Ne|
+|**Požadované atributy**|Žádné|
 |**Neplatné atributy**|Žádné|
 
-Další informace o kontexty atributů najdete v tématu [kontexty atributů](cpp-attributes-com-net.md#contexts).
+Další informace o kontextech atributů naleznete v tématu kontexty [atributů](cpp-attributes-com-net.md#contexts).
 
 ## <a name="see-also"></a>Viz také:
 

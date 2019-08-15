@@ -10,19 +10,19 @@ helpviewer_keywords:
 - IPropertyPage2 ATL implementation
 - IPropertyPage2Impl class
 ms.assetid: e89fbe90-203a-47f0-a5de-23616697e1ce
-ms.openlocfilehash: bf76182242f7b76e3a2c18f85b72674e88afa737
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5ec6cb2f4fc6931a1bec429068b558bf7ac1906e
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62274773"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69495598"
 ---
 # <a name="ipropertypage2impl-class"></a>IPropertyPage2Impl Class
 
-Tato třída implementuje `IUnknown` a zdědí výchozí implementace [ipropertypageimpl –](../../atl/reference/ipropertypageimpl-class.md).
+Tato třída implementuje `IUnknown` a dědí výchozí implementaci [IPropertyPageImpl](../../atl/reference/ipropertypageimpl-class.md).
 
 > [!IMPORTANT]
->  Tato třída a jejích členů nelze použít v aplikacích, které jsou spouštěny v modulu Windows Runtime.
+>  Tato třída a její členové nelze použít v aplikacích, které jsou spouštěny v prostředí Windows Runtime.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -34,25 +34,25 @@ class IPropertyPage2Impl : public IPropertyPageImpl<T>
 #### <a name="parameters"></a>Parametry
 
 *T*<br/>
-Vaše třída odvozena od `IPropertyPage2Impl`.
+Vaše třída, která je `IPropertyPage2Impl`odvozena z.
 
 ## <a name="members"></a>Členové
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
-|[IPropertyPage2Impl::EditProperty](#editproperty)|Určuje, který vlastnost ovládací prvek získá fokus, když je aktivován na stránce vlastností. Implementace knihovny ATL vrátí E_NOTIMPL.|
+|[IPropertyPage2Impl::EditProperty](#editproperty)|Určuje, který ovládací prvek vlastnosti dostane fokus, když je aktivována stránka vlastností. Implementace ATL Vrátí E_NOTIMPL.|
 
 ## <a name="remarks"></a>Poznámky
 
-[IPropertyPage2](/windows/desktop/api/ocidl/nn-ocidl-ipropertypage2) rozhraní rozšiřuje [IPropertyPage](/windows/desktop/api/ocidl/nn-ocidl-ipropertypage) tak, že přidáte `EditProperty` metody. Tato metoda umožňuje vybrat konkrétní vlastnost v objektu vlastností stránky klientovi.
+Rozhraní [IPropertyPage2](/windows/win32/api/ocidl/nn-ocidl-ipropertypage2) rozšiřuje [IPropertyPage](/windows/win32/api/ocidl/nn-ocidl-ipropertypage) přidáním `EditProperty` metody. Tato metoda umožňuje klientovi vybrat konkrétní vlastnost v objektu stránky vlastností.
 
-Třída `IPropertyPage2Impl` jednoduše vrací E_NOTIMPL pro `IPropertyPage2::EditProperty`. Ale dědí výchozí implementace [ipropertypageimpl –](../../atl/reference/ipropertypageimpl-class.md) a implementuje `IUnknown` posíláním informací o k výpisu paměti zařízení v ladění sestavení.
+Třída `IPropertyPage2Impl` jednoduše vrátí E_NOTIMPL pro `IPropertyPage2::EditProperty`. Ale dědí výchozí implementaci [IPropertyPageImpl](../../atl/reference/ipropertypageimpl-class.md) a implementuje `IUnknown` odesláním informací do zařízení výpisu paměti v sestavení ladění.
 
-Při vytváření stránky vlastností vaší třídy je obvykle odvozen z `IPropertyPageImpl`. Kvůli další podpoře `IPropertyPage2`, úpravě vaší definice třídy a přepsat `EditProperty` metody.
+Při vytváření stránky vlastností je vaše třída obvykle odvozena z `IPropertyPageImpl`. Chcete-li poskytnout dodatečnou `IPropertyPage2`podporu, upravte definici třídy a `EditProperty` přepište metodu.
 
-**Související články** [ATL – tutoriál](../../atl/active-template-library-atl-tutorial.md), [vytvoření projektu ATL](../../atl/reference/creating-an-atl-project.md)
+**Související články** [Kurz ATL](../../atl/active-template-library-atl-tutorial.md), [Vytvoření projektu ATL](../../atl/reference/creating-an-atl-project.md)
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
@@ -64,11 +64,11 @@ Při vytváření stránky vlastností vaší třídy je obvykle odvozen z `IPro
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** atlctl.h
+**Záhlaví:** atlctl. h
 
 ##  <a name="editproperty"></a>  IPropertyPage2Impl::EditProperty
 
-Určuje, který vlastnost ovládací prvek získá fokus, když je aktivován na stránce vlastností.
+Určuje, který ovládací prvek vlastnosti dostane fokus, když je aktivována stránka vlastností.
 
 ```
 HRESULT EditProperty(DISPID dispID);
@@ -80,10 +80,10 @@ Vrátí E_NOTIMPL.
 
 ### <a name="remarks"></a>Poznámky
 
-Zobrazit [IPropertyPage2::EditProperty](/windows/desktop/api/ocidl/nf-ocidl-ipropertypage2-editproperty) ve Windows SDK.
+Viz [IPropertyPage2:: EditProperty](/windows/win32/api/ocidl/nf-ocidl-ipropertypage2-editproperty) v Windows SDK.
 
 ## <a name="see-also"></a>Viz také:
 
 [IPerPropertyBrowsingImpl – třída](../../atl/reference/iperpropertybrowsingimpl-class.md)<br/>
 [ISpecifyPropertyPagesImpl – třída](../../atl/reference/ispecifypropertypagesimpl-class.md)<br/>
-[Přehled tříd](../../atl/atl-class-overview.md)
+[Přehled třídy](../../atl/atl-class-overview.md)

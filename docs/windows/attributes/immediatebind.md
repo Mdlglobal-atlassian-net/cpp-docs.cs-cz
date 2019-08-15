@@ -1,21 +1,21 @@
 ---
-title: immediatebind (atribut C++ COM)
+title: immediatebind (C++ atribut com)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.immediatebind
 helpviewer_keywords:
 - immediatebind attribute
 ms.assetid: 186d40e6-9166-4d0c-9853-4e7e4d25226f
-ms.openlocfilehash: 1844e72ecd1fe7c0f4255426eb48f5c70471e5f5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8c659f23d6828616c4a48522b61330336e994cbb
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62409470"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69514649"
 ---
 # <a name="immediatebind"></a>immediatebind
 
-Označuje, že databázi budou okamžitě oznamovat všechny změny vlastnosti objektu vázané na data.
+Označuje, že se bude databáze okamžitě informovat o všech změnách vlastnosti objektu vázaného na data.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -25,24 +25,24 @@ Označuje, že databázi budou okamžitě oznamovat všechny změny vlastnosti o
 
 ## <a name="remarks"></a>Poznámky
 
-**Immediatebind** C++ atribut má stejné funkce jako [immediatebind](/windows/desktop/Midl/immediatebind) atribut MIDL.
+Atribut **immediatebind** C++ má stejné funkce jako atribut [immediatebind](/windows/win32/Midl/immediatebind) MIDL.
 
 ## <a name="example"></a>Příklad
 
-Zobrazit [umožňujících vazbu](bindable.md) příklad, jak používat **immediatebind**.
+Příklad použití **immediatebind**najdete v tématu s možností [vazby](bindable.md) .
 
 ## <a name="requirements"></a>Požadavky
 
-### <a name="attribute-context"></a>Atribut kontextu
+### <a name="attribute-context"></a>Kontext atributu
 
 |||
 |-|-|
 |**Platí pro**|Metoda rozhraní|
-|**Opakovatelné**|Ne|
-|**Vyžadované atributy**|Žádný|
+|**REPEATABLE**|Ne|
+|**Požadované atributy**|Žádné|
 |**Neplatné atributy**|Žádné|
 
-Další informace najdete v tématu [kontexty atributů](cpp-attributes-com-net.md#contexts).
+Další informace naleznete v tématu [kontexty atributů](cpp-attributes-com-net.md#contexts).
 
 ## <a name="see-also"></a>Viz také:
 

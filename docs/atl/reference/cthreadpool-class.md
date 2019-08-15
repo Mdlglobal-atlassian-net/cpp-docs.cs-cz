@@ -20,12 +20,12 @@ f1_keywords:
 helpviewer_keywords:
 - CThreadPool class
 ms.assetid: 06683718-01b9-413c-9481-2dc1734ec70f
-ms.openlocfilehash: 07fd470a6aeab0575f2733d72650bd695b8e2752
-ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
+ms.openlocfilehash: f0b732efdce5cf04349f468363b8d86621d90204
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68915691"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69496310"
 ---
 # <a name="cthreadpool-class"></a>CThreadPool – třída
 
@@ -78,7 +78,7 @@ Vlákna ve fondu jsou vytvořena a zničena při inicializaci fondu, změně vel
 
 Ihned po vytvoření vlákna *pracovní*proces::`Initialize` bude volána u objektu přidruženého k danému vláknu. Bezprostředně před zničením vlákna, *Worker*::`Terminate` bude volána. Obě metody musí přijmout argument **void** <strong>\*</strong> . Hodnota tohoto argumentu je předána fondu vláken prostřednictvím parametru *PvWorkerParam* [CThreadPool:: Initialize](#initialize).
 
-Pokud jsou ve frontě dostupné pracovní položky a pracovní vlákna jsou k dispozici pro práci, pracovní podproces vyžádá položku mimo frontu a zavolá `Execute` metodu objektu *Worker* daného vlákna. Tři položky `pvWorkerParam` jsou následně předány do metody: položka z fronty, která byla předána `Initialize` pracovnímu procesu:: a *Worker*: `Terminate`:, a ukazatel na překrývající se strukturu použitou pro frontu portů při dokončování v/v. [](/windows/desktop/api/minwinbase/ns-minwinbase-overlapped) .
+Pokud jsou ve frontě dostupné pracovní položky a pracovní vlákna jsou k dispozici pro práci, pracovní podproces vyžádá položku mimo frontu a zavolá `Execute` metodu objektu *Worker* daného vlákna. Tři položky `pvWorkerParam` jsou následně předány do metody: položka z fronty, která byla předána `Initialize` pracovnímu procesu:: a *Worker*: `Terminate`:, a ukazatel na překrývající se strukturu použitou pro frontu portů při dokončování v/v. [](/windows/win32/api/minwinbase/ns-minwinbase-overlapped) .
 
 Třída *Worker* deklaruje typ položek, které budou zařazeny do fronty ve fondu vláken poskytnutím typedef, Worker:: `RequestType`. Tento typ musí být schopný přetypování do a z ULONG_PTR.
 
@@ -344,7 +344,7 @@ Požadovaný maximální čas v milisekundách, po který bude fond vláken ček
 
 ### <a name="remarks"></a>Poznámky
 
-Tato metoda účtuje požadavek na vypnutí do všech vláken ve fondu. Pokud časový limit vyprší, tato metoda bude volat [TerminateThread](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-terminatethread) na jakémkoli vlákně, které nebylo ukončeno. Tato metoda je volána automaticky z destruktoru třídy.
+Tato metoda účtuje požadavek na vypnutí do všech vláken ve fondu. Pokud časový limit vyprší, tato metoda bude volat [TerminateThread](/windows/win32/api/processthreadsapi/nf-processthreadsapi-terminatethread) na jakémkoli vlákně, které nebylo ukončeno. Tato metoda je volána automaticky z destruktoru třídy.
 
 ## <a name="see-also"></a>Viz také:
 

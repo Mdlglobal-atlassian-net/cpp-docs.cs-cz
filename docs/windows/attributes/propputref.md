@@ -1,21 +1,21 @@
 ---
-title: propputref (atribut C++ COM)
+title: propputref (C++ atribut com)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.propputref
 helpviewer_keywords:
 - propputref attribute
 ms.assetid: 9b0aed74-fdc7-4e59-9117-949bea4f86dd
-ms.openlocfilehash: e471e467c55e0b8a17be96fd1bcb3cd24cfafe06
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9dc21494886f80890bcfde7f29bb3d6c86b4a51b
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62407468"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69514179"
 ---
 # <a name="propputref"></a>propputref
 
-Určuje vlastnost nastavení funkci, která používá odkaz namísto hodnotu.
+Určuje funkci nastavení vlastnosti, která používá odkaz namísto hodnoty.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -25,24 +25,24 @@ Určuje vlastnost nastavení funkci, která používá odkaz namísto hodnotu.
 
 ## <a name="remarks"></a>Poznámky
 
-**Propputref** C++ atribut má stejné funkce jako [propputref](/windows/desktop/Midl/propputref) atribut MIDL.
+Atribut **propputref** C++ má stejné funkce jako atribut [propputref](/windows/win32/Midl/propputref) MIDL.
 
 ## <a name="example"></a>Příklad
 
-Podívejte se na příklad pro [umožňujících vazbu](bindable.md) ukázkový používání **propputref**.
+Podívejte se na příklad pro [vytvoření vazby](bindable.md) pro ukázkové použití **propputref**.
 
 ## <a name="requirements"></a>Požadavky
 
-### <a name="attribute-context"></a>Atribut kontextu
+### <a name="attribute-context"></a>Kontext atributu
 
 |||
 |-|-|
 |**Platí pro**|Metoda|
-|**Opakovatelné**|Ne|
-|**Vyžadované atributy**|Žádný|
+|**REPEATABLE**|Ne|
+|**Požadované atributy**|Žádné|
 |**Neplatné atributy**|`propget`, `propput`|
 
-Další informace o kontexty atributů najdete v tématu [kontexty atributů](cpp-attributes-com-net.md#contexts).
+Další informace o kontextech atributů naleznete v tématu kontexty [atributů](cpp-attributes-com-net.md#contexts).
 
 ## <a name="see-also"></a>Viz také:
 

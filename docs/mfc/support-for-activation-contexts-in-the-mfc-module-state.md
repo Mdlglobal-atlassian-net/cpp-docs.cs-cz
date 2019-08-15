@@ -5,46 +5,46 @@ helpviewer_keywords:
 - activation contexts [MFC]
 - activation contexts [MFC], MFC support
 ms.assetid: 1e49eea9-3620-46dd-bc5f-d664749567c7
-ms.openlocfilehash: a2e5f56eeb323f1bd5f20c5920bbdbe4a658554d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 296df3d2ecec74c5c9a7deef1617298d40243724
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62306662"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69511431"
 ---
 # <a name="support-for-activation-contexts-in-the-mfc-module-state"></a>Podpora kontextů aktivace ve stavu modulu MFC
 
-Knihovna MFC vytvoří aktivační kontext pomocí prostředku manifestu modulu pro uživatele k dispozici. Další informace o způsobu vytvoření kontextů aktivace naleznete v následujících tématech:
+Knihovna MFC vytvoří aktivační kontext pomocí prostředku manifestu poskytnutého modulem uživatele. Další informace o tom, jak jsou kontexty aktivace vytvořeny, najdete v následujících tématech:
 
-- [Kontexty aktivace](/windows/desktop/SbsCs/activation-contexts)
+- [Kontexty aktivace](/windows/win32/SbsCs/activation-contexts)
 
-- [Manifesty aplikací](/windows/desktop/SbsCs/application-manifests)
+- [Manifesty aplikace](/windows/win32/SbsCs/application-manifests)
 
-- [Manifest sestavení](/windows/desktop/SbsCs/assembly-manifests)
+- [Manifesty sestavení](/windows/win32/SbsCs/assembly-manifests)
 
 ## <a name="remarks"></a>Poznámky
 
-Po přečtení těchto témat Windows SDK, mějte na paměti, že mechanismus MFC aktivační kontext se podobá aktivační kontext sady Windows SDK s tím rozdílem, že knihovny MFC nepoužívá rozhraní API Windows SDK aktivační kontext.
+Při čtení těchto Windows SDKch témat si všimněte, že mechanismus aktivačního kontextu technologie MFC připomíná kontext aktivace Windows SDK s tím rozdílem, že knihovna MFC nepoužívá rozhraní API kontextu aktivace Windows SDK.
 
-Aktivační kontext funguje v aplikacích MFC, knihovny DLL uživatele a rozšiřující knihovny DLL MFC následujícími způsoby:
+Aktivační kontext funguje v aplikacích knihovny MFC, uživatelských knihoven DLL a knihovnách DLL rozšíření MFC následujícími způsoby:
 
-- Aplikace MFC pomocí resource ID 1 pro jejich prostředku manifestu. V takovém případě MFC nevytváří své vlastní aktivační kontext, ale používá výchozí kontext aplikace.
+- Aplikace MFC používají pro svůj prostředek manifestu ID prostředku 1. V tomto případě knihovna MFC nevytvoří svůj vlastní kontext aktivace, ale používá výchozí kontext aplikace.
 
-- Uživatel MFC knihovny DLL pomocí resource ID 2 pro jejich prostředku manifestu. Knihovny MFC, vytvoří pro každou knihovnu DLL uživatelské aktivační kontext, takže jiný uživatel knihovny DLL můžete použít různé verze stejné knihovny (například knihovny běžných ovládacích prvků).
+- Knihovny DLL uživatelů knihovny MFC používají pro svůj prostředek manifestu ID prostředku 2. V tomto případě knihovna MFC vytvoří kontext aktivace pro každou uživatelskou knihovnu DLL, takže různé knihovny DLL uživatelů mohou používat různé verze stejných knihoven (například knihovny běžných ovládacích prvků).
 
-- Rozšiřující knihovny DLL MFC závisí na jejich hostitelské aplikace nebo uživatele knihovny DLL k navázání jejich aktivační kontext.
+- Knihovny DLL rozšíření MFC využívají své hostující aplikace nebo uživatelské knihovny DLL k vytvoření svého aktivačního kontextu.
 
-I když se stav aktivace kontextu může být upraveno pomocí postupů popsaných v části [pomocí rozhraní API místní aktivace](/windows/desktop/SbsCs/using-the-activation-context-api), použití mechanismu MFC aktivační kontext může být užitečné při vývoji na základě knihovnu DLL modulu plug-in architektury Pokud není jednoduché (nebo zcela znemožnit) Chcete-li ručně přepnout stav aktivace před a po jednotlivých volání externích modulů plug-in.
+I když lze stav kontextu aktivace upravit pomocí procesů popsaných v části [použití rozhraní API kontextu aktivace](/windows/win32/SbsCs/using-the-activation-context-api), může být použití mechanismu aktivačního kontextu knihovny MFC užitečné při vývoji architektury modulu plug-in založeného na knihovně DLL, kde není jednoduché (nebo není možné) Ruční přepnutí stavu aktivace před a po jednotlivých voláních externích modulů plug-in.
 
-Aktivační kontext je vytvořen v [afxwininit –](../mfc/reference/application-information-and-management.md#afxwininit). Je zničen při `AFX_MODULE_STATE` destruktor. Popisovač kontextu k aktivaci se ukládají `AFX_MODULE_STATE`. (`AFX_MODULE_STATE` je popsána v [afxgetstaticmodulestate –](reference/extension-dll-macros.md#afxgetstaticmodulestate).)
+Aktivační kontext je vytvořen v [AfxWinInit](../mfc/reference/application-information-and-management.md#afxwininit). Je zničen v `AFX_MODULE_STATE` destruktoru. Popisovač aktivačního kontextu je uložen v `AFX_MODULE_STATE`. (`AFX_MODULE_STATE` je popsáno v [AfxGetStaticModuleState](reference/extension-dll-macros.md#afxgetstaticmodulestate).)
 
-[AFX_MANAGE_STATE](reference/extension-dll-macros.md#afx_manage_state) – makro aktivuje a deaktivuje aktivační kontext. `AFX_MANAGE_STATE` je povolený pro statické knihovny MFC, knihovny DLL MFC, umožňující kódu knihovny MFC pro spuštění ve správné aktivační kontext zvolila DLL uživatele.
+Makro [volají](reference/extension-dll-macros.md#afx_manage_state) aktivuje a deaktivuje aktivační kontext. `AFX_MANAGE_STATE`je povolen pro statické knihovny MFC a také knihovny MFC DLL, aby bylo možné spustit kód knihovny MFC ve správném aktivačním kontextu vybraném pomocí knihovny DLL uživatele.
 
 ## <a name="see-also"></a>Viz také:
 
-[Kontexty aktivace](/windows/desktop/SbsCs/activation-contexts)<br/>
-[Manifesty aplikací](/windows/desktop/SbsCs/application-manifests)<br/>
-[Manifest sestavení](/windows/desktop/SbsCs/assembly-manifests)<br/>
+[Kontexty aktivace](/windows/win32/SbsCs/activation-contexts)<br/>
+[Manifesty aplikace](/windows/win32/SbsCs/application-manifests)<br/>
+[Manifesty sestavení](/windows/win32/SbsCs/assembly-manifests)<br/>
 [AfxWinInit](../mfc/reference/application-information-and-management.md#afxwininit)<br/>
 [AfxGetStaticModuleState](reference/extension-dll-macros.md#afxgetstaticmodulestate)<br/>
 [AFX_MANAGE_STATE](reference/extension-dll-macros.md#afx_manage_state)

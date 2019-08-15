@@ -13,12 +13,12 @@ f1_keywords:
 helpviewer_keywords:
 - CDacl class
 ms.assetid: 2dc76616-6362-4967-b6cf-e2d39ca37ddd
-ms.openlocfilehash: 2bc962407bac947f475368b43f5039bca3c1da1e
-ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
+ms.openlocfilehash: a37ef47a4ea89d9ec24fac417e5b715bd2602fd7
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68915817"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69496932"
 ---
 # <a name="cdacl-class"></a>CDacl – třída
 
@@ -66,7 +66,7 @@ Chcete-li načíst seznam DACL objektu, musíte být vlastníkem objektu nebo m�
 
 Použijte metody třídy poskytované k vytváření, přidávání, odebírání a odstraňování položek řízení přístupu (ACE `CDacl` ) z objektu. Viz také [AtlGetDacl](security-global-functions.md#atlgetdacl) a [AtlSetDacl](security-global-functions.md#atlsetdacl).
 
-Úvod do modelu řízení přístupu v systému Windows naleznete v tématu [Access Control](/windows/desktop/SecAuthZ/access-control) v Windows SDK.
+Úvod do modelu řízení přístupu v systému Windows naleznete v tématu [Access Control](/windows/win32/SecAuthZ/access-control) v Windows SDK.
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
@@ -121,7 +121,7 @@ Vrátí hodnotu true, pokud je položka ACE přidána `CDacl` do objektu, hodnot
 
 `CDacl` Objekt obsahuje nula nebo více položek řízení přístupu (ACE), které identifikují uživatele a skupiny, kteří mají přístup k objektu. Tato metoda přidá položku ACE, která umožňuje přístup k `CDacl` objektu.
 
-Popis [](/windows/desktop/api/winnt/ns-winnt-ace_header) různých příznaků, které lze nastavit v `AceFlags` parametru, naleznete v tématu ACE_HEADER.
+Popis [](/windows/win32/api/winnt/ns-winnt-ace_header) různých příznaků, které lze nastavit v `AceFlags` parametru, naleznete v tématu ACE_HEADER.
 
 ##  <a name="adddeniedace"></a>CDacl::AddDeniedAce
 
@@ -166,7 +166,7 @@ Vrátí hodnotu true, pokud je položka ACE přidána `CDacl` do objektu, hodnot
 
 `CDacl` Objekt obsahuje nula nebo více položek řízení přístupu (ACE), které identifikují uživatele a skupiny, kteří mají přístup k objektu. Tato metoda přidá ACE, které odepře přístup k `CDacl` objektu.
 
-Popis [](/windows/desktop/api/winnt/ns-winnt-ace_header) různých příznaků, které lze nastavit v `AceFlags` parametru, naleznete v tématu ACE_HEADER.
+Popis [](/windows/win32/api/winnt/ns-winnt-ace_header) různých příznaků, které lze nastavit v `AceFlags` parametru, naleznete v tématu ACE_HEADER.
 
 ##  <a name="cdacl"></a>CDacl::CDacl
 
@@ -264,7 +264,7 @@ Odebere všechny `ACE` (pokud existují) strukturu (pokud existuje) `CDacl` v ob
 
 [Ukázka zabezpečení](../../overview/visual-cpp-samples.md)<br/>
 [CAcl – třída](../../atl/reference/cacl-class.md)<br/>
-[Seznamy ACL](/windows/desktop/SecAuthZ/access-control-lists)<br/>
-[ACE](/windows/desktop/SecAuthZ/access-control-entries)<br/>
+[Seznamy ACL](/windows/win32/SecAuthZ/access-control-lists)<br/>
+[ACE](/windows/win32/SecAuthZ/access-control-entries)<br/>
 [Přehled třídy](../../atl/atl-class-overview.md)<br/>
 [Globální funkce zabezpečení](../../atl/reference/security-global-functions.md)

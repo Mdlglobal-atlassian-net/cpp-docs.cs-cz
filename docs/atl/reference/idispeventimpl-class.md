@@ -1,5 +1,5 @@
 ---
-title: Idispeventimpl – třída
+title: IDispEventImpl – třída
 ms.date: 11/04/2016
 f1_keywords:
 - IDispEventImpl
@@ -13,19 +13,19 @@ f1_keywords:
 helpviewer_keywords:
 - IDispEventImpl class
 ms.assetid: a64b5288-35cb-4638-aad6-2d15b1c7cf7b
-ms.openlocfilehash: 8de620cd6e2433375284f6493b5117c40a356603
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e82a397b6d2abb66f773908c72a287c979e5ae1d
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62275318"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69495922"
 ---
-# <a name="idispeventimpl-class"></a>Idispeventimpl – třída
+# <a name="idispeventimpl-class"></a>IDispEventImpl – třída
 
-Tato třída obsahuje implementaci `IDispatch` metody.
+Tato třída poskytuje implementace `IDispatch` metod.
 
 > [!IMPORTANT]
->  Tato třída a jejích členů nelze použít v aplikacích, které jsou spouštěny v modulu Windows Runtime.
+>  Tato třída a její členové nelze použít v aplikacích, které jsou spouštěny v prostředí Windows Runtime.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -42,68 +42,68 @@ class ATL_NO_VTABLE IDispEventImpl : public IDispEventSimpleImpl<nID, T, pdiid>
 #### <a name="parameters"></a>Parametry
 
 *nID*<br/>
-Jedinečný identifikátor pro zdrojový objekt. Když `IDispEventImpl` je základní třídou pro složeného ovládacího prvku, použijte ID prostředku požadované obsažený ovládací prvek pro tento parametr. V ostatních případech použijte libovolné kladné celé číslo.
+Jedinečný identifikátor zdrojového objektu. Když `IDispEventImpl` je základní třídou pro složený ovládací prvek, použijte ID prostředku požadovaného ovládacího prvku pro tento parametr. V jiných případech použijte libovolné kladné celé číslo.
 
 *T*<br/>
-Třída uživatele, která je odvozena od `IDispEventImpl`.
+Třída uživatele, která je odvozena z `IDispEventImpl`.
 
 *pdiid*<br/>
-Ukazatel na IID dispinterface události touto třídou implementována. Toto rozhraní musí být definován v knihovně typů, které jsou označeny *plibid*, *wMajor*, a *wMinor*.
+Ukazatel na IID odesílajícího rozhraní události implementované touto třídou. Toto rozhraní musí být definováno v knihovně typů, kterou označuje *plibid*, *wMajor*a *wMinor*.
 
 *plibid*<br/>
-Ukazatel na knihovnu typů, který definuje rozhraní odbavení odkazované *pdiid*. Pokud **& GUID_NULL**, knihovnu typů se načtou z objektu sourcing události.
+Ukazatel na knihovnu typů, který definuje rozhraní Dispatch, na které odkazuje *pdiid*. Pokud **&AMP; GUID_NULL**, knihovna typů bude načtena z objektu, který generuje události.
 
 *wMajor*<br/>
 Hlavní verze knihovny typů. Výchozí hodnota je 0.
 
 *wMinor*<br/>
-Dílčí verze knihovny typů. Výchozí hodnota je 0.
+Vedlejší verze knihovny typů. Výchozí hodnota je 0.
 
 *tihclass*<br/>
-Třída, která slouží ke správě informace o typu *T*. Výchozí hodnota je typu třídy `CComTypeInfoHolder`; nicméně, tento parametr šablony můžete přepsat zadáním třídy typu jiného než `CComTypeInfoHolder`.
+Třída, která slouží ke správě informací o typu pro *T*. Výchozí hodnota je třída typu `CComTypeInfoHolder`. Tento parametr šablony však lze přepsat poskytnutím třídy jiného typu než. `CComTypeInfoHolder`
 
 ## <a name="members"></a>Členové
 
-### <a name="public-typedefs"></a>Veřejné definice TypeDef
+### <a name="public-typedefs"></a>Veřejné definice typedef
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
-|[IDispEventImpl::_tihclass](../../atl/reference/idispeventimpl-class.md)|Třída používá ke správě informací o typu. Ve výchozím nastavení `CComTypeInfoHolder`.|
+|[IDispEventImpl::_tihclass](../../atl/reference/idispeventimpl-class.md)|Třída, která slouží ke správě informací o typu. Ve výchozím nastavení `CComTypeInfoHolder`je to.|
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
-|[IDispEventImpl::IDispEventImpl](#idispeventimpl)|Konstruktor|
+|[IDispEventImpl:: IDispEventImpl](#idispeventimpl)|Konstruktor|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
-|[IDispEventImpl::GetFuncInfoFromId](#getfuncinfofromid)|Vyhledá index funkce pro odeslání zadaný identifikátor.|
-|[IDispEventImpl::GetIDsOfNames](#getidsofnames)|Mapuje na odpovídající sadu celočíselné hodnoty dispID jednoho člena a volitelná sada názvy argumentů.|
-|[IDispEventImpl::GetTypeInfo](#gettypeinfo)|Načte informace o typu objektu.|
-|[IDispEventImpl::GetTypeInfoCount](#gettypeinfocount)|Získá počet rozhraní typu informací.|
-|[IDispEventImpl::GetUserDefinedType](#getuserdefinedtype)|Získá základní typ uživatelem definovaného typu.|
+|[IDispEventImpl::GetFuncInfoFromId](#getfuncinfofromid)|Vyhledá index funkce pro zadaný identifikátor odeslání.|
+|[IDispEventImpl:: GetIDsOfNames](#getidsofnames)|Mapuje jednoho člena a volitelnou sadu názvů argumentů na odpovídající sadu celých čísel identifikátorů DISPID.|
+|[IDispEventImpl::GetTypeInfo](#gettypeinfo)|Načte informace o typu pro objekt.|
+|[IDispEventImpl::GetTypeInfoCount](#gettypeinfocount)|Načte počet rozhraní s informacemi o typu.|
+|[IDispEventImpl::GetUserDefinedType](#getuserdefinedtype)|Načte základní typ uživatelsky definovaného typu.|
 
 ## <a name="remarks"></a>Poznámky
 
-`IDispEventImpl` poskytuje způsob implementace dispinterface události bez nutnosti poskytnout implementaci kód pro každé metody/události tohoto rozhraní. `IDispEventImpl` poskytuje implementaci `IDispatch` metody. Stačí zadat implementace, že máte zájem o zpracování událostí.
+`IDispEventImpl`poskytuje způsob implementace odesílajícího protokolu událostí bez nutnosti zadávat implementační kód pro každou metodu nebo událost na daném rozhraní. `IDispEventImpl`poskytuje implementace `IDispatch` metod. Stačí pouze dodat implementace pro události, které zajímáte o zpracování.
 
-`IDispEventImpl` funguje ve spojení s mapou jímky událostí ve své třídě pro směrování událostí na odpovídající obslužné rutiny. Chcete-li použít tuto třídu:
+`IDispEventImpl`pracuje ve spojení s mapou jímky událostí ve vaší třídě pro směrování událostí do příslušné funkce obslužné rutiny. Chcete-li použít tuto třídu:
 
-Přidat [SINK_ENTRY](composite-control-macros.md#sink_entry) nebo [SINK_ENTRY_EX](composite-control-macros.md#sink_entry_ex) makra mapy událostí jímky pro každou jednotlivou událost pro každý objekt, který chcete zpracovat. Při použití `IDispEventImpl` jako základní třída složeného ovládacího prvku, lze volat [AtlAdviseSinkMap](connection-point-global-functions.md#atladvisesinkmap) při navázání připojení se zdroji událostí pro všechny položky v případě jímky mapy. V ostatních případech, nebo pro větší kontrolu, volání [DispEventAdvise](idispeventsimpleimpl-class.md#dispeventadvise) k navázání připojení mezi zdrojovým objektem a základní třídy. Volání [DispEventUnadvise](idispeventsimpleimpl-class.md#dispeventunadvise) přerušit připojení.
+Přidejte makro [SINK_ENTRY](composite-control-macros.md#sink_entry) nebo [SINK_ENTRY_EX](composite-control-macros.md#sink_entry_ex) do mapy jímky událostí pro každou událost u každého objektu, který chcete zpracovat. Při použití `IDispEventImpl` jako základní třídy složeného ovládacího prvku můžete volat [AtlAdviseSinkMap](connection-point-global-functions.md#atladvisesinkmap) k navázání a přerušení připojení ke zdrojům událostí pro všechny položky v mapě jímky událostí. V jiných případech nebo pro větší kontrolu volejte [DispEventAdvise](idispeventsimpleimpl-class.md#dispeventadvise) k navázání spojení mezi zdrojovým objektem a základní třídou. Zavolejte [DispEventUnadvise](idispeventsimpleimpl-class.md#dispeventunadvise) k přerušení připojení.
 
-Musí být odvozen od `IDispEventImpl` (pomocí jedinečnou hodnotu pro *nID*) pro každý objekt, pro kterou je potřeba zpracovat události. Základní třídy lze znovu použít, unadvising proti jeden zdrojový objekt pak informacemi pro objekt jiného zdroje, ale maximální počet zdrojové objekty, které mohou být zpracovány jeden objekt v jednom okamžiku je omezený počet `IDispEventImpl` základních tříd.
+Musíte odvozovat od `IDispEventImpl` (pomocí jedinečné hodnoty pro *NID*) pro každý objekt, pro který potřebujete zpracovávat události. Základní třídu lze znovu použít tím, že využijete proti jednomu zdrojovému objektu a potom pro něj budete doporučit jiný zdrojový objekt, ale maximální počet zdrojových objektů, které mohou být zpracovány jediným objektem v jednom okamžiku, je omezen počtem `IDispEventImpl` základních tříd.
 
-`IDispEventImpl` nabízí stejné funkce jako [idispeventsimpleimpl –](../../atl/reference/idispeventsimpleimpl-class.md)s výjimkou případů, obdrží z knihovny typů namísto nutnosti uvedené jako ukazatel na typ informace o rozhraní [_atl_func_info –](../../atl/reference/atl-func-info-structure.md) Struktura. Použití `IDispEventSimpleImpl` při můžete nemají knihovnu typů popisující rozhraní událostí nebo chcete vyhnout režii spojenou s použitím knihovny typů.
+`IDispEventImpl`poskytuje stejné funkce jako [IDispEventSimpleImpl](../../atl/reference/idispeventsimpleimpl-class.md), s výjimkou, že z knihovny typů získává informace o typu rozhraní, a neposkytuje je jako ukazatel na strukturu [_ATL_FUNC_INFO](../../atl/reference/atl-func-info-structure.md) . Použijte `IDispEventSimpleImpl` , pokud nemáte knihovnu typů popisující rozhraní události nebo chcete zabránit režii spojené s používáním knihovny typů.
 
 > [!NOTE]
-> `IDispEventImpl` a `IDispEventSimpleImpl` poskytnout vlastní implementaci `IUnknown::QueryInterface` povolení jednotlivých `IDispEventImpl` a `IDispEventSimpleImpl` základní třídy tak, aby fungoval jako samostatné modelu COM identitu zároveň umožní přímý přístup ke členům třídy v váš hlavní objekt modelu COM.
+> `IDispEventImpl`a `IDispEventSimpleImpl` poskytněte svou vlastní `IUnknown::QueryInterface` implementaci pro povolení každé `IDispEventImpl` a `IDispEventSimpleImpl` základní třídy, aby sloužila jako samostatná identita modelu COM, a současně umožňuje přímý přístup ke členům třídy v hlavním objektu com.
 
-Provádění CE ATL ActiveX událostí jímky pouze podporuje návratové hodnoty typu HRESULT nebo void z vaší obslužné rutiny události; jakákoli jiná návratová hodnota není podporována a její chování není definováno.
+Implementace CE ATL jímka událostí ActiveX podporuje pouze návratové hodnoty typu HRESULT nebo void z metod obslužné rutiny události; jakákoli jiná návratová hodnota není podporována a chování není definováno.
 
-Další informace najdete v tématu [podpora IDispEventImpl](../../atl/supporting-idispeventimpl.md).
+Další informace najdete v tématu [Podpora IDispEventImpl](../../atl/supporting-idispeventimpl.md).
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
@@ -117,11 +117,11 @@ Další informace najdete v tématu [podpora IDispEventImpl](../../atl/supportin
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** atlcom
+**Záhlaví:** atlcom. h
 
 ##  <a name="getfuncinfofromid"></a>  IDispEventImpl::GetFuncInfoFromId
 
-Vyhledá index funkce pro odeslání zadaný identifikátor.
+Vyhledá index funkce pro zadaný identifikátor odeslání.
 
 ```
 HRESULT GetFuncInfoFromId(
@@ -134,24 +134,24 @@ HRESULT GetFuncInfoFromId(
 ### <a name="parameters"></a>Parametry
 
 *iid*<br/>
-[in] Odkaz na ID funkce.
+pro Odkaz na ID funkce
 
 *dispidMember*<br/>
-[in] ID odbavení funkce.
+pro ID odeslání funkce
 
 *lcid*<br/>
-[in] Kontext národního prostředí ID funkce.
+pro Kontext národního prostředí ID funkce.
 
 *info*<br/>
-[in] Struktura označující, jak je funkce volána.
+pro Struktura označující, jak je funkce volána.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Standardní hodnoty HRESULT.
+Standardní hodnota HRESULT.
 
-##  <a name="getidsofnames"></a>  IDispEventImpl::GetIDsOfNames
+##  <a name="getidsofnames"></a>IDispEventImpl:: GetIDsOfNames
 
-Namapuje na odpovídající sadu celočíselné hodnoty dispID, které je možné použít v následných voláních na jednoho člena a volitelná sada názvy argumentů [IDispatch::Invoke](/windows/desktop/api/oaidl/nf-oaidl-idispatch-invoke).
+Provede mapování jednoho člena a volitelné sady názvů argumentů na odpovídající sadu celých čísel identifikátorů DISPID, které lze použít při následných voláních rozhraní [IDispatch:: Invoke](/windows/win32/api/oaidl/nf-oaidl-idispatch-invoke).
 
 ```
 STDMETHOD(GetIDsOfNames)(
@@ -164,7 +164,7 @@ STDMETHOD(GetIDsOfNames)(
 
 ### <a name="remarks"></a>Poznámky
 
-Zobrazit [IDispatch::GetIDsOfNames](/windows/desktop/api/oaidl/nf-oaidl-idispatch-getidsofnames) ve Windows SDK.
+Viz [IDispatch:: GetIDsOfNames](/windows/win32/api/oaidl/nf-oaidl-idispatch-getidsofnames) ve Windows SDK.
 
 ##  <a name="gettypeinfo"></a>  IDispEventImpl::GetTypeInfo
 
@@ -189,11 +189,11 @@ STDMETHOD(GetTypeInfoCount)(UINT* pctinfo);
 
 ### <a name="remarks"></a>Poznámky
 
-Zobrazit [IDispatch::GetTypeInfoCount](/windows/desktop/api/oaidl/nf-oaidl-idispatch-gettypeinfocount) ve Windows SDK.
+Viz [IDispatch:: GetTypeInfoCount](/windows/win32/api/oaidl/nf-oaidl-idispatch-gettypeinfocount) ve Windows SDK.
 
 ##  <a name="getuserdefinedtype"></a>  IDispEventImpl::GetUserDefinedType
 
-Získá základní typ uživatelem definovaného typu.
+Načte základní typ uživatelsky definovaného typu.
 
 ```
 VARTYPE GetUserDefinedType(
@@ -204,10 +204,10 @@ VARTYPE GetUserDefinedType(
 ### <a name="parameters"></a>Parametry
 
 *pTI*<br/>
-[in] Ukazatel [ITypeInfo](/windows/desktop/api/oaidl/nn-oaidl-itypeinfo) rozhraní obsahující uživatelem definovaného typu.
+pro Ukazatel na rozhraní [volání ITypeInfo](/windows/win32/api/oaidl/nn-oaidl-itypeinfo) obsahující uživatelsky definovaný typ.
 
 *hrt*<br/>
-[in] Popisovač pro popis typu, který se má načíst.
+pro Popisovač pro popis typu, který se má načíst.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -215,19 +215,19 @@ Typ variant.
 
 ### <a name="remarks"></a>Poznámky
 
-Zobrazit [volání ITypeInfo::GetRefTypeInfo](/windows/desktop/api/oaidl/nf-oaidl-itypeinfo-getreftypeinfo).
+Viz [volání ITypeInfo:: GetRefTypeInfo](/windows/win32/api/oaidl/nf-oaidl-itypeinfo-getreftypeinfo).
 
-##  <a name="idispeventimpl"></a>  IDispEventImpl::IDispEventImpl
+##  <a name="idispeventimpl"></a>IDispEventImpl:: IDispEventImpl
 
-Konstruktor Ukládají hodnoty parametrů šablony třídy *plibid*, *pdiid*, *wMajor*, a *wMinor*.
+Konstruktor Ukládá hodnoty parametrů šablony třídy *plibid*, *pdiid*, *wMajor*a *wMinor*.
 
 ```
 IDispEventImpl();
 ```
 
-##  <a name="tihclass"></a>  IDispEventImpl::tihclass
+##  <a name="tihclass"></a>IDispEventImpl:: tihclass
 
-Tato definice typedef je instance parametru šablony třídy *tihclass*.
+Tato definice typedef je instancí parametru šablony třídy *tihclass*.
 
 ```
 typedef tihclass _tihclass;
@@ -235,7 +235,7 @@ typedef tihclass _tihclass;
 
 ### <a name="remarks"></a>Poznámky
 
-Ve výchozím nastavení, je třída `CComTypeInfoHolder`. `CComTypeInfoHolder` spravuje informace o typu pro třídu.
+Ve výchozím nastavení je `CComTypeInfoHolder`třída. `CComTypeInfoHolder`spravuje informace o typu pro třídu.
 
 ## <a name="see-also"></a>Viz také:
 
@@ -245,4 +245,4 @@ Ve výchozím nastavení, je třída `CComTypeInfoHolder`. `CComTypeInfoHolder` 
 [SINK_ENTRY](composite-control-macros.md#sink_entry)<br/>
 [SINK_ENTRY_EX](composite-control-macros.md#sink_entry_ex)<br/>
 [SINK_ENTRY_INFO](composite-control-macros.md#sink_entry_info)<br/>
-[Přehled tříd](../../atl/atl-class-overview.md)
+[Přehled třídy](../../atl/atl-class-overview.md)

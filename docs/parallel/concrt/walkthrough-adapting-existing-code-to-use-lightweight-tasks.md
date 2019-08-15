@@ -1,32 +1,32 @@
 ---
-title: 'Návod: Přizpůsobení stávajícího kódu pro použití prostých úloh'
+title: 'Návod: Přizpůsobení stávajícího kódu pro použití zjednodušených úloh'
 ms.date: 04/25/2019
 helpviewer_keywords:
 - using lightweight tasks [Concurrency Runtime]
 - lightweight tasks, using [Concurrency Runtime]
 ms.assetid: 1edfe818-d274-46de-bdd3-e92967c9bbe0
-ms.openlocfilehash: 658cc82442bf362b7f50e787169ce75373275d9c
-ms.sourcegitcommit: 283cb64fd7958a6b7fbf0cd8534de99ac8d408eb
+ms.openlocfilehash: 406d4d24d0042c7bded4f94dcef1e7731ab3947f
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64857032"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69512147"
 ---
-# <a name="walkthrough-adapting-existing-code-to-use-lightweight-tasks"></a>Návod: Přizpůsobení stávajícího kódu pro použití prostých úloh
+# <a name="walkthrough-adapting-existing-code-to-use-lightweight-tasks"></a>Návod: Přizpůsobení stávajícího kódu pro použití zjednodušených úloh
 
-Toto téma ukazuje, jak přizpůsobit existující kód, který používá rozhraní Windows API k vytvoření a spuštění vlákna používal prostou úlohu.
+V tomto tématu se dozvíte, jak upravit existující kód, který používá rozhraní Windows API k vytvoření a spuštění vlákna pro použití zjednodušené úlohy.
 
-A *lehký úkol* je úloha, kterou naplánujete přímo z [concurrency::Scheduler](../../parallel/concrt/reference/scheduler-class.md) nebo [concurrency::ScheduleGroup](../../parallel/concrt/reference/schedulegroup-class.md) objektu. Prosté úlohy jsou užitečné při přizpůsobení stávajícího kódu pro použití funkce plánování modulu Runtime souběžnosti.
+*Odlehčený úkol* je úkol, který naplánujete přímo z objektu [Concurrency:: Scheduler](../../parallel/concrt/reference/scheduler-class.md) nebo [Concurrency:: Schedule](../../parallel/concrt/reference/schedulegroup-class.md) . Jednoduché úlohy jsou užitečné, když upravujete existující kód pro použití funkce plánování Concurrency Runtime.
 
 ## <a name="prerequisites"></a>Požadavky
 
-Před zahájením tohoto návodu, přečtěte si téma [Plánovač úloh](../../parallel/concrt/task-scheduler-concurrency-runtime.md).
+Než začnete tento návod, přečtěte si téma [Plánovač úloh](../../parallel/concrt/task-scheduler-concurrency-runtime.md).
 
 ## <a name="example"></a>Příklad
 
 ### <a name="description"></a>Popis
 
-Následující příklad ukazuje typické použití rozhraní API Windows k vytváření a spouštění vlákna. V tomto příkladu [CreateThread](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-createthread) funkce má být volána `MyThreadFunction` na samostatném vlákně.
+Následující příklad ilustruje typické použití rozhraní API systému Windows k vytvoření a spuštění vlákna. Tento příklad používá funkci [CreateThread](/windows/win32/api/processthreadsapi/nf-processthreadsapi-createthread) k volání `MyThreadFunction` v samostatném vlákně.
 
 ### <a name="code"></a>Kód
 
@@ -40,51 +40,51 @@ Tento příklad vytvoří následující výstup.
 Parameters = 50, 100
 ```
 
-Následující kroky ukazují, jak přizpůsobit v příkladu kódu na využití modulu Runtime souběžnosti provést stejnou úlohu.
+Následující kroky ukazují, jak upravit příklad kódu pro použití Concurrency Runtime k provedení stejné úlohy.
 
 ### <a name="to-adapt-the-example-to-use-a-lightweight-task"></a>Úprava příkladu tak, aby používal prostou úlohu
 
-1. Přidat `#include` směrnice pro concrt.h souboru záhlaví.
+1. `#include` Přidejte direktivu pro hlavičkový soubor ConcRT. h.
 
 [!code-cpp[concrt-migration-lwt#2](../../parallel/concrt/codesnippet/cpp/walkthrough-adapting-existing-code-to-use-lightweight-tasks_2.cpp)]
 
-1. Přidat `using` směrnice pro `concurrency` oboru názvů.
+1. Přidejte direktivu `concurrency` pro obor názvů. `using`
 
 [!code-cpp[concrt-migration-lwt#3](../../parallel/concrt/codesnippet/cpp/walkthrough-adapting-existing-code-to-use-lightweight-tasks_3.cpp)]
 
-1. Změňte deklaraci `MyThreadFunction` používat `__cdecl` konvence volání a vrácení `void`.
+1. Změňte deklaraci `MyThreadFunction` na `__cdecl` použití konvence volání a vraťte `void`se.
 
 [!code-cpp[concrt-migration-lwt#4](../../parallel/concrt/codesnippet/cpp/walkthrough-adapting-existing-code-to-use-lightweight-tasks_4.cpp)]
 
-1. Upravit `MyData` struktury mají zahrnout [concurrency::event](../../parallel/concrt/reference/event-class.md) objekt, který signalizuje k hlavní aplikaci, že dokončení úlohy.
+1. Upravte strukturu tak, aby zahrnovala objekt [Concurrency:: Event](../../parallel/concrt/reference/event-class.md) , který signalizuje hlavní aplikaci, kterou byl úkol dokončen. `MyData`
 
 [!code-cpp[concrt-migration-lwt#5](../../parallel/concrt/codesnippet/cpp/walkthrough-adapting-existing-code-to-use-lightweight-tasks_5.cpp)]
 
-1. Nahraďte volání `CreateThread` voláním [concurrency::CurrentScheduler::ScheduleTask](reference/currentscheduler-class.md#scheduletask) metody.
+1. Nahraďte volání `CreateThread` voláním metody [Concurrency:: CurrentScheduler:: ScheduleTask –](reference/currentscheduler-class.md#scheduletask) .
 
 [!code-cpp[concrt-migration-lwt#6](../../parallel/concrt/codesnippet/cpp/walkthrough-adapting-existing-code-to-use-lightweight-tasks_6.cpp)]
 
-1. Nahraďte volání `WaitForSingleObject` voláním [concurrency::event::wait](reference/event-class.md#wait) metoda čekat na dokončení úlohy.
+1. Nahraďte volání `WaitForSingleObject` voláním metody [Concurrency:: Event:: wait](reference/event-class.md#wait) , která čeká na dokončení úlohy.
 
 [!code-cpp[concrt-migration-lwt#7](../../parallel/concrt/codesnippet/cpp/walkthrough-adapting-existing-code-to-use-lightweight-tasks_7.cpp)]
 
 1. Odeberte volání `CloseHandle`.
 
-1. Změnit signaturu definici `MyThreadFunction` tak, aby odpovídaly kroku 3.
+1. Změňte signaturu definice `MyThreadFunction` , aby odpovídala kroku 3.
 
 [!code-cpp[concrt-migration-lwt#8](../../parallel/concrt/codesnippet/cpp/walkthrough-adapting-existing-code-to-use-lightweight-tasks_8.cpp)]
 
-9. Na konci `MyThreadFunction` fungovat, zavolejte [concurrency::event::set](reference/event-class.md#set) metoda na signál pro hlavní aplikaci, že dokončení úlohy.
+9. Na konci `MyThreadFunction` funkce volejte metodu [Concurrency:: Event:: set](reference/event-class.md#set) k signalizaci hlavní aplikaci, kterou byl úkol dokončen.
 
 [!code-cpp[concrt-migration-lwt#9](../../parallel/concrt/codesnippet/cpp/walkthrough-adapting-existing-code-to-use-lightweight-tasks_9.cpp)]
 
-10. Odeberte `return` příkaz z `MyThreadFunction`.
+10. Odeberte příkaz z `MyThreadFunction`. `return`
 
 ## <a name="example"></a>Příklad
 
 ### <a name="description"></a>Popis
 
-Dokončené následující příklad zobrazuje kód, který používá lehký úkol k volání `MyThreadFunction` funkce.
+Následující dokončený příklad ukazuje kód, který používá odlehčený úkol pro volání `MyThreadFunction` funkce.
 
 ### <a name="code"></a>Kód
 

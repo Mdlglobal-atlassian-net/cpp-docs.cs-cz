@@ -1,5 +1,5 @@
 ---
-title: Ccomautocriticalsection – třída
+title: CComCriticalSection – třída
 ms.date: 11/04/2016
 f1_keywords:
 - CComCriticalSection
@@ -13,16 +13,16 @@ f1_keywords:
 helpviewer_keywords:
 - CComCriticalSection class
 ms.assetid: 44e1edd2-90be-4bfe-9739-58e8b419e7d1
-ms.openlocfilehash: f3a4b50f8dd9bc460a209c47497e720529c40e58
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ee4ce32ed4ae04bc3b390af5cf104b8a0af599f8
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62246641"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69497284"
 ---
-# <a name="ccomcriticalsection-class"></a>Ccomautocriticalsection – třída
+# <a name="ccomcriticalsection-class"></a>CComCriticalSection – třída
 
-Tato třída poskytuje metody pro získání a uvolnění vlastnictví objektu kritický oddíl.
+Tato třída poskytuje metody pro získání a uvolnění vlastnictví objektu kritického oddílu.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -34,38 +34,38 @@ class CComCriticalSection
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CComCriticalSection::CComCriticalSection](#ccomcriticalsection)|Konstruktor|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
-|[CComCriticalSection::Init](#init)|Vytvoří a inicializuje objekt kritický oddíl.|
-|[CComCriticalSection::Lock](#lock)|Získá vlastnictví objektu kritický oddíl.|
-|[CComCriticalSection::Term](#term)|Uvolní prostředky systému použité objektem kritický oddíl.|
-|[CComCriticalSection::Unlock](#unlock)|Uvolní vlastnictví objektu kritický oddíl.|
+|[CComCriticalSection:: init](#init)|Vytvoří a inicializuje objekt kritického oddílu.|
+|[CComCriticalSection::Lock](#lock)|Získá vlastnictví objektu kritické části.|
+|[CComCriticalSection:: Term](#term)|Uvolní systémové prostředky používané objektem kritické části.|
+|[CComCriticalSection:: Unlock](#unlock)|Uvolňuje vlastnictví objektu kritické části.|
 
 ### <a name="public-data-members"></a>Veřejné datové členy
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
-|[CComCriticalSection::m_sec](#m_sec)|Critical_section – objekt.|
+|[CComCriticalSection::m_sec](#m_sec)|Objekt CRITICAL_SECTION.|
 
 ## <a name="remarks"></a>Poznámky
 
-`CComCriticalSection` je podobný třídě [ccomautocriticalsection –](../../atl/reference/ccomautocriticalsection-class.md), s tím rozdílem, že je nutné explicitně inicializovat a release kritický oddíl.
+`CComCriticalSection`je podobná třídě [CComAutoCriticalSection](../../atl/reference/ccomautocriticalsection-class.md), s tím rozdílem, že je nutné explicitně inicializovat a uvolnit kritickou část.
 
-Obvykle použijete `CComCriticalSection` prostřednictvím **typedef** název [criticalsection –](ccommultithreadmodel-class.md#criticalsection). Tento název se odkazuje `CComCriticalSection` při [CComMultiThreadModel](../../atl/reference/ccommultithreadmodel-class.md) je používán.
+Obvykle se používá `CComCriticalSection` přes název **typedef** [CriticalSection](ccommultithreadmodel-class.md#criticalsection). Tento název odkazuje `CComCriticalSection` na použití [CComMultiThreadModel](../../atl/reference/ccommultithreadmodel-class.md) .
 
-Zobrazit [ccomcritseclock – třída](../../atl/reference/ccomcritseclock-class.md) pro bezpečnější způsob, jak použít tuto třídu než volání `Lock` a `Unlock` přímo.
+Pro bezpečnější způsob použití této třídy, než volání `Lock` a `Unlock` přímo, se podívejte na [třídu CComCritSecLock](../../atl/reference/ccomcritseclock-class.md) .
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** atlcore.h
+**Záhlaví:** atlcore. h
 
-##  <a name="ccomcriticalsection"></a>  CComCriticalSection::CComCriticalSection
+##  <a name="ccomcriticalsection"></a>CComCriticalSection::CComCriticalSection
 
 Konstruktor
 
@@ -75,11 +75,11 @@ CComCriticalSection() throw();
 
 ### <a name="remarks"></a>Poznámky
 
-Nastaví [m_sec](#m_sec) datový člen na hodnotu NULL.
+Nastaví datový člen [m_sec](#m_sec) na hodnotu null.
 
-##  <a name="init"></a>  CComCriticalSection::Init
+##  <a name="init"></a>CComCriticalSection:: init
 
-Volá funkci Win32 [InitializeCriticalSection](/windows/desktop/api/synchapi/nf-synchapi-initializecriticalsection), který inicializuje objekt kritický oddíl součástí [m_sec](#m_sec) datový člen.
+Zavolá funkci Win32 [InitializeCriticalSection](/windows/win32/api/synchapi/nf-synchapi-initializecriticalsection), která inicializuje objekt kritické části obsažený v datovém členu [m_sec](#m_sec) .
 
 ```
 HRESULT Init() throw();
@@ -89,9 +89,9 @@ HRESULT Init() throw();
 
 Vrátí hodnotu S_OK při úspěchu, E_OUTOFMEMORY nebo E_FAIL při selhání.
 
-##  <a name="lock"></a>  CComCriticalSection::Lock
+##  <a name="lock"></a>CComCriticalSection:: Lock
 
-Volá funkci Win32 [EnterCriticalSection](/windows/desktop/api/synchapi/nf-synchapi-entercriticalsection), které počká, dokud vlákno může převzít vlastnictví kritický oddíl objektů obsažených v [m_sec](#m_sec) datový člen.
+Zavolá funkci Win32 [EnterCriticalSection](/windows/win32/api/synchapi/nf-synchapi-entercriticalsection), která počká, dokud vlákno nemůže převzít vlastnictví objektu kritického oddílu obsaženého v datovém členu [m_sec](#m_sec) .
 
 ```
 HRESULT Lock() throw();
@@ -103,19 +103,19 @@ Vrátí hodnotu S_OK při úspěchu, E_OUTOFMEMORY nebo E_FAIL při selhání.
 
 ### <a name="remarks"></a>Poznámky
 
-Objekt kritický oddíl musí nejprve inicializovat pomocí volání [Init](#init) metody. Po dokončení provádění chráněné kódu vlákna musí volat [odemknout](#unlock) uvolnit vlastnictví kritický oddíl.
+Objekt kritického oddílu musí být nejdříve inicializován voláním metody [init](#init) . Po dokončení provádění chráněného kódu vlákno musí volat metodu [Unlock](#unlock) , aby bylo možné uvolnit vlastnictví kritické části.
 
-##  <a name="m_sec"></a>  CComCriticalSection::m_sec
+##  <a name="m_sec"></a>CComCriticalSection::m_sec
 
-Obsahuje objekt kritický oddíl, který se používá ve všech `CComCriticalSection` metody.
+Obsahuje objekt kritického oddílu, který je používán všemi `CComCriticalSection` metodami.
 
 ```
 CRITICAL_SECTION m_sec;
 ```
 
-##  <a name="term"></a>  CComCriticalSection::Term
+##  <a name="term"></a>CComCriticalSection:: Term
 
-Volá funkci Win32 [DeleteCriticalSection](/windows/desktop/api/synchapi/nf-synchapi-deletecriticalsection), což uvolní všechny prostředky používané objektem kritický oddíl součástí [m_sec](#m_sec) datový člen.
+Zavolá funkci Win32 [DeleteCriticalSection](/windows/win32/api/synchapi/nf-synchapi-deletecriticalsection), která uvolní všechny prostředky používané objektem důležité části obsaženým v datovém členu [m_sec](#m_sec) .
 
 ```
 HRESULT Term() throw();
@@ -123,15 +123,15 @@ HRESULT Term() throw();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vrátí hodnotu S_OK.
+Vrací hodnotu S_OK.
 
 ### <a name="remarks"></a>Poznámky
 
-Jednou `Term` byla volána, důležité části může již nebude používán k synchronizaci.
+Po `Term` zavolání již není možné použít pro synchronizaci oddíl Critical.
 
-##  <a name="unlock"></a>  CComCriticalSection::Unlock
+##  <a name="unlock"></a>CComCriticalSection:: Unlock
 
-Volá funkci Win32 [LeaveCriticalSection](/windows/desktop/api/synchapi/nf-synchapi-leavecriticalsection), která uvolní vlastnictví objektu kritický oddíl součástí [m_sec](#m_sec) datový člen.
+Volá funkci Win32 [LeaveCriticalSection](/windows/win32/api/synchapi/nf-synchapi-leavecriticalsection), která uvolňuje vlastnictví objektu kritického oddílu obsaženého v datovém členu [m_sec](#m_sec) .
 
 ```
 HRESULT Unlock() throw();
@@ -139,14 +139,14 @@ HRESULT Unlock() throw();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vrátí hodnotu S_OK.
+Vrací hodnotu S_OK.
 
 ### <a name="remarks"></a>Poznámky
 
-Nejdřív získat vlastnictví, musí volat vlákno [Zámek](#lock) metody. Každé volání `Lock` vyžaduje odpovídající volání `Unlock` uvolnit vlastnictví kritický oddíl.
+Pro první získání vlastnictví vlákno musí volat metodu [Lock](#lock) . Každé volání `Lock` vyžaduje odpovídající `Unlock` volání k uvolnění vlastnictví kritické části.
 
 ## <a name="see-also"></a>Viz také:
 
 [CComFakeCriticalSection – třída](../../atl/reference/ccomfakecriticalsection-class.md)<br/>
-[Přehled tříd](../../atl/atl-class-overview.md)<br/>
+[Přehled třídy](../../atl/atl-class-overview.md)<br/>
 [CComCritSecLock – třída](../../atl/reference/ccomcritseclock-class.md)

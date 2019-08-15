@@ -32,12 +32,12 @@ helpviewer_keywords:
 - CSpinButtonCtrl [MFC], SetPos
 - CSpinButtonCtrl [MFC], SetRange
 ms.assetid: 509bfd76-1c5a-4af6-973f-e133c0b87734
-ms.openlocfilehash: da247524dae77627bbf041b83bc1534a75c3b073
-ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
+ms.openlocfilehash: c167745eed45b7081e62a2c3be225a33e7ee0520
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68916693"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69502445"
 ---
 # <a name="cspinbuttonctrl-class"></a>Atributu CSpinButtonCtrl – třída
 
@@ -117,7 +117,7 @@ virtual BOOL Create(
 ### <a name="parameters"></a>Parametry
 
 *dwStyle*<br/>
-Určuje styl ovládacího prvku číselníku. Použijte libovolnou kombinaci stylů ovládacího prvku číselník pro ovládací prvek. Tyto styly jsou popsány v následujících [stylech ovládacích prvků](/windows/desktop/Controls/up-down-control-styles) v Windows SDK.
+Určuje styl ovládacího prvku číselníku. Použijte libovolnou kombinaci stylů ovládacího prvku číselník pro ovládací prvek. Tyto styly jsou popsány v následujících [stylech ovládacích prvků](/windows/win32/Controls/up-down-control-styles) v Windows SDK.
 
 *OBD*<br/>
 Určuje velikost a polohu ovládacího prvku číselníku. Může to být buď objekt [CRect](../../atl-mfc-shared/reference/crect-class.md) , nebo struktura [Rect](/previous-versions/dd162897\(v=vs.85\))
@@ -154,10 +154,10 @@ virtual BOOL CreateEx(
 ### <a name="parameters"></a>Parametry
 
 *dwExStyle*<br/>
-Určuje rozšířený styl ovládacího prvku, který se vytváří. Seznam rozšířených stylů Windows naleznete v parametru *dwExStyle* pro [CreateWindowEx](/windows/desktop/api/winuser/nf-winuser-createwindowexa) v Windows SDK.
+Určuje rozšířený styl ovládacího prvku, který se vytváří. Seznam rozšířených stylů Windows naleznete v parametru *dwExStyle* pro [CreateWindowEx](/windows/win32/api/winuser/nf-winuser-createwindowexw) v Windows SDK.
 
 *dwStyle*<br/>
-Určuje styl ovládacího prvku číselníku. Použijte libovolnou kombinaci stylů ovládacího prvku číselník pro ovládací prvek. Tyto styly jsou popsány v následujících [stylech ovládacích prvků](/windows/desktop/Controls/up-down-control-styles) v Windows SDK.
+Určuje styl ovládacího prvku číselníku. Použijte libovolnou kombinaci stylů ovládacího prvku číselník pro ovládací prvek. Tyto styly jsou popsány v následujících [stylech ovládacích prvků](/windows/win32/Controls/up-down-control-styles) v Windows SDK.
 
 *OBD*<br/>
 Odkaz na strukturu [Rect](/previous-versions/dd162897\(v=vs.85\)) popisující velikost a umístění okna, které má být vytvořeno, v souřadnicích klienta *pParentWnd*.
@@ -200,7 +200,7 @@ UINT GetAccel(
 Počet elementů v poli určeném parametrem *pAccel*.
 
 *pAccel*<br/>
-Ukazatel na pole [UDACCEL](/windows/desktop/api/commctrl/ns-commctrl-udaccel) struktury, které obdrží informace o akceleraci.
+Ukazatel na pole [UDACCEL](/windows/win32/api/commctrl/ns-commctrl-udaccel) struktury, které obdrží informace o akceleraci.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -298,7 +298,7 @@ BOOL SetAccel(
 ### <a name="parameters"></a>Parametry
 
 *nAccel*<br/>
-Počet [UDACCEL](/windows/desktop/api/commctrl/ns-commctrl-udaccel) struktur určených *pAccel*.
+Počet [UDACCEL](/windows/win32/api/commctrl/ns-commctrl-udaccel) struktur určených *pAccel*.
 
 *pAccel*<br/>
 Ukazatel na pole UDACCEL struktury, které obsahují informace o akceleraci. Prvky by měly být seřazeny vzestupně podle `nSec` členů.

@@ -11,21 +11,21 @@ f1_keywords:
 helpviewer_keywords:
 - Resources property pages
 ms.assetid: dade2f6b-c51f-4c33-9023-41956ae4b5f6
-ms.openlocfilehash: 40852170d7b73016659af28a4667811ba8ef0a83
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 29d34faa83947dd5456a86df37794d115e9f0037
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62318781"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69498204"
 ---
 # <a name="resources-property-pages"></a>Stránky vlastností prostředků
 
-Další informace o používání nástroje resource compiler, naleznete v tématu [pomocí RC (The RC příkazového řádku)](/windows/desktop/menurc/using-rc-the-rc-command-line-).
+Další informace o použití kompilátoru prostředků naleznete v tématu [Using RC (příkazový řádek RC)](/windows/win32/menurc/using-rc-the-rc-command-line-).
 
-Informace o tom, jak získat přístup **prostředky** stránky vlastností naleznete v tématu [vlastnosti kompilátoru a sestavení nastavte C++ v sadě Visual Studio](../working-with-project-properties.md).
+Informace o tom, jak získat přístup ke stránkám vlastností **prostředků** , naleznete v tématu [Nastavení vlastností kompilátoru a sestavení v sadě C++ Visual Studio](../working-with-project-properties.md).
 
-Chcete-li programově přístup k těmto vlastnostem, přečtěte si téma <xref:Microsoft.VisualStudio.VCProjectEngine.VCResourceCompilerTool>.
+Chcete-li programově přistupovat k těmto <xref:Microsoft.VisualStudio.VCProjectEngine.VCResourceCompilerTool>vlastnostem, přečtěte si téma.
 
 ## <a name="see-also"></a>Viz také:
 
-[Odkaz na stránku vlastností projektu jazyka C++](property-pages-visual-cpp.md)
+[C++odkaz na stránku vlastností projektu](property-pages-visual-cpp.md)

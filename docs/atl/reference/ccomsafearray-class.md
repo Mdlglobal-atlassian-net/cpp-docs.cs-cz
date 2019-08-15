@@ -1,5 +1,5 @@
 ---
-title: Ccomsafearray – třída
+title: CComSafeArray – třída
 ms.date: 05/06/2019
 f1_keywords:
 - CComSafeArray
@@ -28,16 +28,16 @@ f1_keywords:
 helpviewer_keywords:
 - CComSafeArray class
 ms.assetid: ee349aef-33db-4c85-bd08-5d86a3c9d53a
-ms.openlocfilehash: dec6bbad0aa4a8409b9f3d24476dcc94b8eaefe3
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.openlocfilehash: 36750990dc62d5b24cf1107ac8a2724df787a47d
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65221155"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69496998"
 ---
-# <a name="ccomsafearray-class"></a>Ccomsafearray – třída
+# <a name="ccomsafearray-class"></a>CComSafeArray – třída
 
-Tato třída představuje obálku pro `SAFEARRAY` struktury.
+Tato třída je obálkou pro `SAFEARRAY` strukturu.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -49,7 +49,7 @@ class CComSafeArray
 #### <a name="parameters"></a>Parametry
 
 *T*<br/>
-Typ dat uložených v poli.
+Typ dat, který bude uložen v poli.
 
 ## <a name="members"></a>Členové
 
@@ -64,51 +64,51 @@ Typ dat uložených v poli.
 
 |Name|Popis|
 |----------|-----------------|
-|[CComSafeArray::Add](#add)|Přidá jeden nebo více prvků, nebo `SAFEARRAY` do struktury `CComSafeArray`.|
-|[CComSafeArray::Attach](#attach)|Připojí `SAFEARRAY` struktury k `CComSafeArray` objektu.|
-|[CComSafeArray::CopyFrom](#copyfrom)|Zkopíruje obsah objektu `SAFEARRAY` struktury do `CComSafeArray` objektu.|
-|[CComSafeArray::CopyTo](#copyto)|Vytvoří kopii `CComSafeArray` objektu.|
-|[CComSafeArray::Create](#create)|Vytvoří `CComSafeArray` objektu.|
-|[CComSafeArray::Destroy](#destroy)|Odstraní `CComSafeArray` objektu.|
-|[CComSafeArray::Detach](#detach)|Odpojí `SAFEARRAY` z `CComSafeArray` objektu.|
-|[CComSafeArray::GetAt](#getat)|Načte jeden element z jednorozměrné pole.|
-|[CComSafeArray::GetCount](#getcount)|Vrátí počet prvků v poli.|
-|[CComSafeArray::GetDimensions](#getdimensions)|Vrátí počet dimenzí v poli.|
-|[CComSafeArray::GetLowerBound](#getlowerbound)|Vrátí dolní mez pro daný rozměru pole.|
-|[CComSafeArray::GetSafeArrayPtr](#getsafearrayptr)|Vrátí adresu `m_psa` datový člen.|
-|[CComSafeArray::GetType](#gettype)|Vrátí typ dat uložených v poli.|
-|[CComSafeArray::GetUpperBound](#getupperbound)|Vrátí horní mez pro všechny dimenze pole.|
-|[CComSafeArray::IsSizable](#issizable)|Testuje, zda `CComSafeArray` objektu můžete změnit velikost.|
-|[CComSafeArray::MultiDimGetAt](#multidimgetat)|Načte jeden element z multidimenzionálního pole.|
-|[CComSafeArray::MultiDimSetAt](#multidimsetat)|Nastaví hodnotu prvku v multidimenzionálního pole.|
-|[CComSafeArray::Resize](#resize)|Změní velikost `CComSafeArray` objektu.|
-|[CComSafeArray::SetAt](#setat)|Nastaví hodnotu prvku v jednorozměrné pole.|
+|[CComSafeArray:: Add](#add)|Přidá jeden nebo více prvků nebo `SAFEARRAY` struktury `CComSafeArray`do.|
+|[CComSafeArray:: Attach](#attach)|`SAFEARRAY` Připojí strukturu`CComSafeArray` k objektu.|
+|[CComSafeArray::CopyFrom](#copyfrom)|Zkopíruje obsah `SAFEARRAY` struktury `CComSafeArray` do objektu.|
+|[CComSafeArray:: CopyTo](#copyto)|Vytvoří kopii `CComSafeArray` objektu.|
+|[CComSafeArray:: Create](#create)|`CComSafeArray` Vytvoří objekt.|
+|[CComSafeArray::D estroy](#destroy)|`CComSafeArray` Odstraní objekt.|
+|[CComSafeArray::D etach](#detach)|Odpojí `CComSafeArray` objekt odobjektu.`SAFEARRAY`|
+|[CComSafeArray::GetAt](#getat)|Načte jeden prvek z jednorozměrného pole.|
+|[CComSafeArray:: GetCount](#getcount)|Vrátí počet prvků v poli.|
+|[CComSafeArray:: GetDimensions](#getdimensions)|Vrátí počet rozměrů v poli.|
+|[CComSafeArray::GetLowerBound](#getlowerbound)|Vrátí dolní mez pro danou dimenzi pole.|
+|[CComSafeArray::GetSafeArrayPtr](#getsafearrayptr)|Vrátí adresu `m_psa` datového členu.|
+|[CComSafeArray:: GetType](#gettype)|Vrátí typ dat uložených v poli.|
+|[CComSafeArray::GetUpperBound](#getupperbound)|Vrátí horní mez pro libovolnou dimenzi pole.|
+|[CComSafeArray::-proměnlivé](#issizable)|Testuje, zda `CComSafeArray` lze změnit velikost objektu.|
+|[CComSafeArray::MultiDimGetAt](#multidimgetat)|Načte jeden prvek z multidimenzionálního pole.|
+|[CComSafeArray::MultiDimSetAt](#multidimsetat)|Nastaví hodnotu prvku v multidimenzionálním poli.|
+|[CComSafeArray:: Resize](#resize)|Změní velikost `CComSafeArray` objektu.|
+|[CComSafeArray::SetAt](#setat)|Nastaví hodnotu prvku v jednorozměrném poli.|
 
 ### <a name="public-operators"></a>Veřejné operátory
 
 |Name|Popis|
 |----------|-----------------|
-|[CComSafeArray::operator LPSAFEARRAY](#operator_lpsafearray)|Přetypování hodnoty `SAFEARRAY` ukazatele.|
-|[CComSafeArray::operator\[\]](ccomsafearray-class.md#operator_at)|Načte prvek z pole.|
-|[CComSafeArray::operator =](#operator_eq)|Operátor přiřazení.|
+|[CComSafeArray:: operator LPSAFEARRAY](#operator_lpsafearray)|Přetypování hodnoty na `SAFEARRAY` ukazatel.|
+|[CComSafeArray:: operator\[\]](ccomsafearray-class.md#operator_at)|Načte prvek z pole.|
+|[CComSafeArray:: operator =](#operator_eq)|Operátor přiřazení|
 
 ### <a name="public-data-members"></a>Veřejné datové členy
 
 |Name|Popis|
 |----------|-----------------|
-|[CComSafeArray::m_psa](#m_psa)|Tento datový člen udržuje adresu `SAFEARRAY` struktury.|
+|[CComSafeArray::m_psa](#m_psa)|Tento datový člen uchovává adresu `SAFEARRAY` struktury.|
 
 ## <a name="remarks"></a>Poznámky
 
-`CComSafeArray` poskytuje obálku pro [datový typ SAFEARRAY](/windows/desktop/api/oaidl/ns-oaidl-tagsafearray) třídy, což představuje jednoduché vytvářet a spravovat jeden – a vícedimenzionální pole téměř jakýkoli z typů nepodporuje typ VARIANT.
+`CComSafeArray`poskytuje obálku pro třídu [datového typu SafeArray](/windows/win32/api/oaidl/ns-oaidl-tagsafearray) , což usnadňuje vytváření a správu jednoduchých a multidimenzionálních polí téměř kteréhokoli typu PODPOROVANÉho variantou.
 
-`CComSafeArray` předávání polí mezi procesy zjednodušuje a navíc nabízí další bezpečnostní kontrolou hodnoty indexu pole s horní a dolní meze.
+`CComSafeArray`zjednodušuje předávání polí mezi procesy a navíc poskytuje dodatečné zabezpečení kontrolou hodnot indexu pole v horních a dolních mezích.
 
-Dolní mez `CComSafeArray` můžete spustit na libovolné uživatelem definovanou hodnotu; pole, které jsou přístupné prostřednictvím C++ však používejte dolní mez 0. Další jazyky, jako je například Visual Basic mohou používat ostatní ohraničující hodnoty (například -10 do 10).
+Dolní mez prvku `CComSafeArray` může začínat jakoukoli uživatelsky definovanou hodnotou. pole, ke kterým se dá přistupovat, ale C++ musí používat spodní hranici 0. Jiné jazyky, například Visual Basic, mohou používat jiné meze (například-10 až 10).
 
-Použití [CComSafeArray::Create](#create) k vytvoření `CComSafeArray` objektu, a [CComSafeArray::Destroy](#destroy) ho odstranit.
+Pomocí [CComSafeArray:: Create](#create) vytvořte `CComSafeArray` objekt a [CComSafeArray::D estroy](#destroy) pro jeho odstranění.
 
-A `CComSafeArray` může obsahovat následující dílčí typ VARIANT datové typy:
+`CComSafeArray` Může obsahovat následující podmnožinu datových typů variant:
 
 |VARTYPE|Popis|
 |-------------|-----------------|
@@ -124,21 +124,21 @@ A `CComSafeArray` může obsahovat následující dílčí typ VARIANT datové t
 |VT_UI8|ulonglong|
 |VT_R4|float|
 |VT_R8|double|
-|VT_DECIMAL|desetinné ukazatele|
-|VT_VARIANT|varianty ukazatele|
+|VT_DECIMAL|desetinný ukazatel|
+|VT_VARIANT|variantní ukazatel|
 |VT_CY|Měna – datový typ|
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** atlsafe.h
+**Záhlaví:** atlsafe. h
 
 ## <a name="example"></a>Příklad
 
 [!code-cpp[NVC_ATL_Utilities#75](../../atl/codesnippet/cpp/ccomsafearray-class_1.cpp)]
 
-##  <a name="add"></a>  CComSafeArray::Add
+##  <a name="add"></a>CComSafeArray:: Add
 
-Přidá jeden nebo více prvků, nebo `SAFEARRAY` do struktury `CComSafeArray`.
+Přidá jeden nebo více prvků nebo `SAFEARRAY` struktury `CComSafeArray`do.
 
 ```
 HRESULT Add(const SAFEARRAY* psaSrc);
@@ -149,19 +149,19 @@ HRESULT Add(const T& t, BOOL bCopy = TRUE);
 ### <a name="parameters"></a>Parametry
 
 *psaSrc*<br/>
-Ukazatel `SAFEARRAY` objektu.
+Ukazatel na `SAFEARRAY` objekt.
 
 *ulCount*<br/>
-Počet objektů, které chcete přidat do pole.
+Počet objektů, které mají být přidány do pole.
 
 *pT*<br/>
 Ukazatel na jeden nebo více objektů, které mají být přidány do pole.
 
 *t*<br/>
-Odkaz na objekt, který chcete přidat do pole.
+Odkaz na objekt, který má být přidán do pole.
 
 *bCopy*<br/>
-Určuje, zda má být vytvořena kopie data. Výchozí hodnota je TRUE.
+Určuje, zda má být vytvořena kopie dat. Výchozí hodnota je TRUE (pravda).
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -169,13 +169,13 @@ Vrátí hodnotu S_OK při úspěchu nebo chybu HRESULT při selhání.
 
 ### <a name="remarks"></a>Poznámky
 
-Nové objekty, které se připojují na konci existujícího `SAFEARRAY` objektu. Přidání objektu do multidimenzionální `SAFEARRAY` objekt není podporován. Při přidávání existujícího pole objektů, obě pole musí obsahovat prvky stejného typu.
+Nové objekty jsou připojeny na konec existujícího `SAFEARRAY` objektu. Přidání objektu k multidimenzionálnímu `SAFEARRAY` objektu není podporováno. Při přidávání existujícího pole objektů musí obě pole obsahovat elementy stejného typu.
 
-*BCopy* příznak je vzít v úvahu při prvky typu BSTR nebo VARIANTU jsou přidány do pole. Výchozí hodnota true zajistí, že nová kopie je provedeno dat, když bude prvek přidán do pole.
+Příznak *bcopy* je při přidání prvků typu BSTR nebo variant do pole přihlédnuto. Výchozí hodnota TRUE zajišťuje, aby se při přidání prvku do pole vytvořila nová kopie dat.
 
-##  <a name="attach"></a>  CComSafeArray::Attach
+##  <a name="attach"></a>CComSafeArray:: Attach
 
-Připojí `SAFEARRAY` struktury k `CComSafeArray` objektu.
+`SAFEARRAY` Připojí strukturu`CComSafeArray` k objektu.
 
 ```
 HRESULT Attach(const SAFEARRAY* psaSrc);
@@ -184,7 +184,7 @@ HRESULT Attach(const SAFEARRAY* psaSrc);
 ### <a name="parameters"></a>Parametry
 
 *psaSrc*<br/>
-Ukazatel `SAFEARRAY` struktury.
+Ukazatel na `SAFEARRAY` strukturu.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -192,9 +192,9 @@ Vrátí hodnotu S_OK při úspěchu nebo chybu HRESULT při selhání.
 
 ### <a name="remarks"></a>Poznámky
 
-Připojí `SAFEARRAY` struktury k `CComSafeArray` objekt, což existující `CComSafeArray` dostupné metody.
+Připojí k objektu strukturu a zpřístupní stávající `CComSafeArray` metody. `SAFEARRAY` `CComSafeArray`
 
-##  <a name="ccomsafearray"></a>  CComSafeArray::CComSafeArray
+##  <a name="ccomsafearray"></a>CComSafeArray::CComSafeArray
 
 Konstruktor
 
@@ -211,31 +211,31 @@ CComSafeArray(const SAFEARRAY* psaSrc);
 ### <a name="parameters"></a>Parametry
 
 *vázaný*<br/>
-A `SAFEARRAYBOUND` struktury.
+`SAFEARRAYBOUND` Struktura.
 
 *ulCount*<br/>
 Počet prvků v poli.
 
 *lLBound*<br/>
-Hodnota dolní mez; To znamená, že index prvního prvku v poli.
+Hodnota dolní meze; To znamená index prvního prvku v poli.
 
 *pBound*<br/>
-Ukazatel `SAFEARRAYBOUND` struktury.
+Ukazatel na `SAFEARRAYBOUND` strukturu.
 
 *uDims*<br/>
-Počet dimenzí v poli.
+Počet rozměrů v poli.
 
 *saSrc*<br/>
-Odkaz na `SAFEARRAY` struktury nebo `CComSafeArray` objektu. V obou případech konstruktor používá tento odkaz k vytvoření kopie pole, takže po vytvoření se neodkazuje pole.
+Odkaz na `SAFEARRAY` strukturu nebo `CComSafeArray` objekt. V obou případech konstruktor používá tento odkaz k vytvoření kopie pole, takže pole není odkazováno po konstrukci.
 
 *psaSrc*<br/>
-Ukazatel `SAFEARRAY` struktury. Konstruktor používá tuto adresu k vytvoření kopie pole, takže po vytvoření se neodkazuje pole.
+Ukazatel na `SAFEARRAY` strukturu. Konstruktor používá tuto adresu k vytvoření kopie pole, takže pole není odkazováno po konstrukci.
 
 ### <a name="remarks"></a>Poznámky
 
-Vytvoří `CComSafeArray` objektu.
+`CComSafeArray` Vytvoří objekt.
 
-##  <a name="dtor"></a>  CComSafeArray::~CComSafeArray
+##  <a name="dtor"></a>CComSafeArray:: ~ CComSafeArray
 
 Destruktor.
 
@@ -247,9 +247,9 @@ Destruktor.
 
 Uvolní všechny přidělené prostředky.
 
-##  <a name="copyfrom"></a>  CComSafeArray::CopyFrom
+##  <a name="copyfrom"></a>CComSafeArray::CopyFrom
 
-Zkopíruje obsah objektu `SAFEARRAY` struktury do `CComSafeArray` objektu.
+Zkopíruje obsah `SAFEARRAY` struktury `CComSafeArray` do objektu.
 
 ```
 HRESULT CopyFrom(LPSAFEARRAY* ppArray);
@@ -258,7 +258,7 @@ HRESULT CopyFrom(LPSAFEARRAY* ppArray);
 ### <a name="parameters"></a>Parametry
 
 *ppArray*<br/>
-Ukazatel `SAFEARRAY` ke kopírování.
+`SAFEARRAY` Ukazatel na kopírování.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -266,9 +266,9 @@ Vrátí hodnotu S_OK při úspěchu nebo chybu HRESULT při selhání.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato metoda kopíruje obsah `SAFEARRAY` do aktuální `CComSafeArray` objektu. Nahrazují se existující obsah pole.
+Tato metoda zkopíruje obsah `SAFEARRAY` do aktuálního `CComSafeArray` objektu. Existující obsah pole je nahrazen.
 
-##  <a name="copyto"></a>  CComSafeArray::CopyTo
+##  <a name="copyto"></a>CComSafeArray:: CopyTo
 
 Vytvoří kopii `CComSafeArray` objektu.
 
@@ -287,11 +287,11 @@ Vrátí hodnotu S_OK při úspěchu nebo chybu HRESULT při selhání.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato metoda zkopíruje obsah objektu `CComSafeArray` objektů do `SAFEARRAY` struktura.
+Tato metoda zkopíruje obsah `CComSafeArray` objektu `SAFEARRAY` do struktury.
 
-##  <a name="create"></a>  CComSafeArray::Create
+##  <a name="create"></a>CComSafeArray:: Create
 
-Vytvoří `CComSafeArray`.
+`CComSafeArray`Vytvoří.
 
 ```
 HRESULT Create(const SAFEARRAYBOUND* pBound, UINT uDims = 1);
@@ -301,16 +301,16 @@ HRESULT Create(ULONG ulCount = 0, LONG lLBound = 0);
 ### <a name="parameters"></a>Parametry
 
 *pBound*<br/>
-Ukazatel `SAFEARRAYBOUND` objektu.
+Ukazatel na `SAFEARRAYBOUND` objekt.
 
 *uDims*<br/>
-Počet dimenzí v poli.
+Počet rozměrů v poli.
 
 *ulCount*<br/>
 Počet prvků v poli.
 
 *lLBound*<br/>
-Hodnota dolní mez; To znamená, že index prvního prvku v poli.
+Hodnota dolní meze; To znamená index prvního prvku v poli.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -318,11 +318,11 @@ Vrátí hodnotu S_OK při úspěchu nebo chybu HRESULT při selhání.
 
 ### <a name="remarks"></a>Poznámky
 
-A `CComSafeArray` objekt můžete vytvořit ze stávajícího `SAFEARRAYBOUND` strukturu a počet rozměrů, nebo tak, že určíte počet prvků v poli a dolní mez. Pokud je pole nelze přistupovat ze C++, musí být 0, dolní mez. Další jazyky vám umožní jiné hodnoty pro dolní mez (například Visual Basic podporuje pole s prvky s rozsahem například -10-10).
+Objekt lze vytvořit z existující `SAFEARRAYBOUND` struktury a počtu rozměrů nebo zadáním počtu prvků v poli a dolní meze. `CComSafeArray` Pokud má být k poli přistup z C++, dolní hranice by měla být 0. Jiné jazyky mohou pro dolní mez použít jiné hodnoty (například Visual Basic podporuje pole s prvky s rozsahem, například-10 až 10).
 
-##  <a name="destroy"></a>  CComSafeArray::Destroy
+##  <a name="destroy"></a>CComSafeArray::D estroy
 
-Odstraní `CComSafeArray` objektu.
+`CComSafeArray` Odstraní objekt.
 
 ```
 HRESULT Destroy();
@@ -334,11 +334,11 @@ Vrátí hodnotu S_OK při úspěchu nebo chybu HRESULT při selhání.
 
 ### <a name="remarks"></a>Poznámky
 
-Odstraní existující `CComSafeArray` objektu a všechna data obsahuje.
+Odstraní existující `CComSafeArray` objekt a všechna data, která obsahuje.
 
-##  <a name="detach"></a>  CComSafeArray::Detach
+##  <a name="detach"></a>CComSafeArray::D etach
 
-Odpojí `SAFEARRAY` z `CComSafeArray` objektu.
+Odpojí `CComSafeArray` objekt odobjektu.`SAFEARRAY`
 
 ```
 LPSAFEARRAY Detach();
@@ -346,15 +346,15 @@ LPSAFEARRAY Detach();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vrací ukazatel `SAFEARRAY` objektu.
+Vrátí ukazatel na `SAFEARRAY` objekt.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato metoda se odpojí `SAFEARRAY` objektu z `CComSafeArray` objektu.
+Tato metoda odpojí `SAFEARRAY` objekt `CComSafeArray` od objektu.
 
-##  <a name="getat"></a>  CComSafeArray::GetAt
+##  <a name="getat"></a>CComSafeArray::GetAt
 
-Načte jeden element z jednorozměrné pole.
+Načte jeden prvek z jednorozměrného pole.
 
 ```
 T& GetAt(LONG lIndex) const;
@@ -363,13 +363,13 @@ T& GetAt(LONG lIndex) const;
 ### <a name="parameters"></a>Parametry
 
 *lIndex*<br/>
-Indexové číslo hodnotu jako pole k vrácení.
+Číslo indexu hodnoty v poli, které se má vrátit.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vrátí odkaz na prvek povinné pole.
+Vrátí odkaz na požadovaný prvek pole.
 
-##  <a name="getcount"></a>  CComSafeArray::GetCount
+##  <a name="getcount"></a>CComSafeArray:: GetCount
 
 Vrátí počet prvků v poli.
 
@@ -380,7 +380,7 @@ ULONG GetCount(UINT uDim = 0) const;
 ### <a name="parameters"></a>Parametry
 
 *uDim*<br/>
-Rozměry pole.
+Dimenze pole.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -388,11 +388,11 @@ Vrátí počet prvků v poli.
 
 ### <a name="remarks"></a>Poznámky
 
-Při použití s multidimenzionálního pole, tato metoda vrátí počet prvků v konkrétní dimenzi.
+Při použití s multidimenzionálním polem Tato metoda vrátí počet prvků pouze v konkrétní dimenzi.
 
-##  <a name="getdimensions"></a>  CComSafeArray::GetDimensions
+##  <a name="getdimensions"></a>CComSafeArray:: GetDimensions
 
-Vrátí počet dimenzí v poli.
+Vrátí počet rozměrů v poli.
 
 ```
 UINT GetDimensions() const;
@@ -400,11 +400,11 @@ UINT GetDimensions() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vrátí počet dimenzí v poli.
+Vrátí počet rozměrů v poli.
 
-##  <a name="getlowerbound"></a>  CComSafeArray::GetLowerBound
+##  <a name="getlowerbound"></a>CComSafeArray::GetLowerBound
 
-Vrátí dolní mez pro daný rozměru pole.
+Vrátí dolní mez pro danou dimenzi pole.
 
 ```
 LONG GetLowerBound(UINT uDim = 0) const;
@@ -413,7 +413,7 @@ LONG GetLowerBound(UINT uDim = 0) const;
 ### <a name="parameters"></a>Parametry
 
 *uDim*<br/>
-Rozměry pole, pro který má být získána dolní mez. Pokud tento parametr vynechán, výchozí hodnota je 0.
+Dimenze pole, pro kterou chcete získat dolní mez. Je-li tento parametr vynechán, je výchozí hodnota 0.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -421,11 +421,11 @@ Vrátí dolní mez.
 
 ### <a name="remarks"></a>Poznámky
 
-Pokud je dolní mez 0, znamená to C jako pole, jehož první prvek je prvek číslo 0. V případě chyby, například dimenze neplatný argument, tato metoda volá `AtlThrow` s chybou HRESULT popisující chybu.
+Pokud je dolní hranice 0, znamená to pole typu C, jehož prvním prvkem je prvek číslo 0. V případě chyby, například neplatný argument dimenze, tato metoda volá `AtlThrow` s hodnotou HRESULT popisující chybu.
 
-##  <a name="getsafearrayptr"></a>  CComSafeArray::GetSafeArrayPtr
+##  <a name="getsafearrayptr"></a>CComSafeArray::GetSafeArrayPtr
 
-Vrátí adresu `m_psa` datový člen.
+Vrátí adresu `m_psa` datového členu.
 
 ```
 LPSAFEARRAY* GetSafeArrayPtr() throw();
@@ -433,9 +433,9 @@ LPSAFEARRAY* GetSafeArrayPtr() throw();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vrací ukazatel [CComSafeArray::m_psa](#m_psa) datový člen.
+Vrací ukazatel na datový člen [CComSafeArray:: m_psa](#m_psa) .
 
-##  <a name="gettype"></a>  CComSafeArray::GetType
+##  <a name="gettype"></a>CComSafeArray:: GetType
 
 Vrátí typ dat uložených v poli.
 
@@ -445,7 +445,7 @@ VARTYPE GetType() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vrátí typ dat uložených v poli, které může být jedno z následujících typů:
+Vrátí typ dat uložených v poli, což může být kterýkoli z následujících typů:
 
 |VARTYPE|Popis|
 |-------------|-----------------|
@@ -461,13 +461,13 @@ Vrátí typ dat uložených v poli, které může být jedno z následujících 
 |VT_UI8|ulonglong|
 |VT_R4|float|
 |VT_R8|double|
-|VT_DECIMAL|desetinné ukazatele|
-|VT_VARIANT|varianty ukazatele|
+|VT_DECIMAL|desetinný ukazatel|
+|VT_VARIANT|variantní ukazatel|
 |VT_CY|Měna – datový typ|
 
-##  <a name="getupperbound"></a>  CComSafeArray::GetUpperBound
+##  <a name="getupperbound"></a>CComSafeArray::GetUpperBound
 
-Vrátí horní mez pro všechny dimenze pole.
+Vrátí horní mez pro libovolnou dimenzi pole.
 
 ```
 LONG GetUpperBound(UINT uDim = 0) const;
@@ -476,19 +476,19 @@ LONG GetUpperBound(UINT uDim = 0) const;
 ### <a name="parameters"></a>Parametry
 
 *uDim*<br/>
-Rozměry pole, pro který má být získána horní mez. Pokud tento parametr vynechán, výchozí hodnota je 0.
+Dimenze pole, pro kterou se má získat horní mez Je-li tento parametr vynechán, je výchozí hodnota 0.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vrátí horní mez. Tato hodnota je také zahrnuto, maximální platný index pro tuto dimenzi.
+Vrátí horní mez. Tato hodnota je včetně maximálního platného indexu pro tuto dimenzi.
 
 ### <a name="remarks"></a>Poznámky
 
-V případě chyby, například dimenze neplatný argument, tato metoda volá `AtlThrow` s chybou HRESULT popisující chybu.
+V případě chyby, například neplatný argument dimenze, tato metoda volá `AtlThrow` s hodnotou HRESULT popisující chybu.
 
-##  <a name="issizable"></a>  CComSafeArray::IsSizable
+##  <a name="issizable"></a>CComSafeArray::-proměnlivé
 
-Testuje, zda `CComSafeArray` objektu můžete změnit velikost.
+Testuje, zda `CComSafeArray` lze změnit velikost objektu.
 
 ```
 bool IsSizable() const;
@@ -496,19 +496,19 @@ bool IsSizable() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vrátí TRUE, pokud `CComSafeArray` můžete změnit velikost, FALSE v případě nedostupnosti.
+Vrátí hodnotu true, `CComSafeArray` Pokud může být změněna velikost, false, pokud nemůže.
 
-##  <a name="m_psa"></a>  CComSafeArray::m_psa
+##  <a name="m_psa"></a>CComSafeArray::m_psa
 
-Udržuje adresu `SAFEARRAY` struktura získat přístup.
+Obsahuje adresu `SAFEARRAY` přistupované struktury.
 
 ```
 LPSAFEARRAY m_psa;
 ```
 
-##  <a name="multidimgetat"></a>  CComSafeArray::MultiDimGetAt
+##  <a name="multidimgetat"></a>CComSafeArray::MultiDimGetAt
 
-Načte jeden element z multidimenzionálního pole.
+Načte jeden prvek z multidimenzionálního pole.
 
 ```
 HRESULT MultiDimGetAt(const LONG* alIndex, T& t);
@@ -517,18 +517,18 @@ HRESULT MultiDimGetAt(const LONG* alIndex, T& t);
 ### <a name="parameters"></a>Parametry
 
 *alIndex*<br/>
-Ukazatel na vektor indexů pro jednotlivé rozměry pole. Úplně vlevo (nejvýznamnější) dimenze je `alIndex[0]`.
+Ukazatel na vektor indexů pro každou dimenzi v poli. Nejvíce vlevo (nejvýznamnější) dimenze je `alIndex[0]`.
 
 *t*<br/>
-Vrátí odkaz na data.
+Odkaz na vrácená data.
 
 ### <a name="return-value"></a>Návratová hodnota
 
 Vrátí hodnotu S_OK při úspěchu nebo chybu HRESULT při selhání.
 
-##  <a name="multidimsetat"></a>  CComSafeArray::MultiDimSetAt
+##  <a name="multidimsetat"></a>CComSafeArray::MultiDimSetAt
 
-Nastaví hodnotu prvku v multidimenzionálního pole.
+Nastaví hodnotu prvku v multidimenzionálním poli.
 
 ```
 HRESULT MultiDimSetAt(const LONG* alIndex, const T& t);
@@ -537,10 +537,10 @@ HRESULT MultiDimSetAt(const LONG* alIndex, const T& t);
 ### <a name="parameters"></a>Parametry
 
 *alIndex*<br/>
-Ukazatel na vektor indexů pro jednotlivé rozměry pole. Rozměr nejvíce vpravo (nejméně významnou) je `alIndex`[0].
+Ukazatel na vektor indexů pro každou dimenzi v poli. Rozměr nejvíce vpravo (nejméně významné) je `alIndex`[0].
 
 *T*<br/>
-Určuje hodnotu nového elementu.
+Určuje hodnotu nového prvku.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -548,9 +548,9 @@ Vrátí hodnotu S_OK při úspěchu nebo chybu HRESULT při selhání.
 
 ### <a name="remarks"></a>Poznámky
 
-Toto je multidimenzionální verze [CComSafeArray::SetAt](#setat).
+Toto je multidimenzionální verze [CComSafeArray:: SetAt](#setat).
 
-##  <a name="operator_at"></a>  CComSafeArray::operator \[\]
+##  <a name="operator_at"></a>CComSafeArray:: operator\[\]
 
 Načte prvek z pole.
 
@@ -562,19 +562,19 @@ T& operator[]int nindex) const;
 ### <a name="parameters"></a>Parametry
 
 *lIndex, nIndex*<br/>
-Indexové číslo požadovaný element v poli.
+Číslo indexu požadovaného prvku v poli.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vrátí prvek odpovídající pole.
+Vrátí příslušný prvek pole.
 
 ### <a name="remarks"></a>Poznámky
 
-Podobně jako funkce, která se provede [CComSafeArray::GetAt](#getat), ale tento operátor funguje jenom jednorozměrná pole.
+Provede podobnou funkci [CComSafeArray:: GetAt](#getat), ale tento operátor funguje pouze s multidimenzionálními poli.
 
-##  <a name="operator_eq"></a>  CComSafeArray::operator =
+##  <a name="operator_eq"></a>CComSafeArray:: operator =
 
-Operátor přiřazení.
+Operátor přiřazení
 
 ```
 ATL::CComSafeArray<T>& operator=(const ATL::CComSafeArray& saSrc);
@@ -584,18 +584,18 @@ ATL::CComSafeArray<T>& operator=(const SAFEARRAY* psaSrc);
 ### <a name="parameters"></a>Parametry
 
 *saSrc*<br/>
-Odkaz na `CComSafeArray` objektu.
+Odkaz na `CComSafeArray` objekt.
 
 *psaSrc*<br/>
-Ukazatel `SAFEARRAY` objektu.
+Ukazatel na `SAFEARRAY` objekt.
 
 ### <a name="return-value"></a>Návratová hodnota
 
 Vrátí typ dat uložených v poli.
 
-##  <a name="operator_lpsafearray"></a>  CComSafeArray::operator LPSAFEARRAY
+##  <a name="operator_lpsafearray"></a>CComSafeArray:: operator LPSAFEARRAY
 
-Přetypování hodnoty `SAFEARRAY` ukazatele.
+Přetypování hodnoty na `SAFEARRAY` ukazatel.
 
 ```
 operator LPSAFEARRAY() const;
@@ -603,9 +603,9 @@ operator LPSAFEARRAY() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Přetypování hodnoty `SAFEARRAY` ukazatele.
+Přetypování hodnoty na `SAFEARRAY` ukazatel.
 
-##  <a name="resize"></a>  CComSafeArray::Resize
+##  <a name="resize"></a>CComSafeArray:: Resize
 
 Změní velikost `CComSafeArray` objektu.
 
@@ -617,7 +617,7 @@ HRESULT Resize(ULONG ulCount, LONG lLBound = 0);
 ### <a name="parameters"></a>Parametry
 
 *pBound*<br/>
-Ukazatel `SAFEARRAYBOUND` strukturu, která obsahuje informace o počtu prvků a dolní mez pole.
+Ukazatel na `SAFEARRAYBOUND` strukturu, která obsahuje informace o počtu elementů a dolní meze pole.
 
 *ulCount*<br/>
 Požadovaný počet objektů v poli se změněnou velikostí.
@@ -631,11 +631,11 @@ Vrátí hodnotu S_OK při úspěchu nebo chybu HRESULT při selhání.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato metoda změní pouze rozměr nejvíce vpravo. Jeho nebude velikost pole, které vracejí `IsResizable` jako FALSE.
+Tato metoda mění pouze velikost dimenze nejvíce vpravo. Nemění velikost polí, která vrací `IsResizable` hodnotu false.
 
-##  <a name="setat"></a>  CComSafeArray::SetAt
+##  <a name="setat"></a>CComSafeArray::SetAt
 
-Nastaví hodnotu prvku v jednorozměrné pole.
+Nastaví hodnotu prvku v jednorozměrném poli.
 
 ```
 HRESULT SetAt(LONG lIndex, const T& t, BOOL bCopy = TRUE);
@@ -644,13 +644,13 @@ HRESULT SetAt(LONG lIndex, const T& t, BOOL bCopy = TRUE);
 ### <a name="parameters"></a>Parametry
 
 *lIndex*<br/>
-Číslo indexu elementu pole pro nastavení.
+Indexové číslo prvku pole, které má být nastaveno.
 
 *t*<br/>
-Nová hodnota zadaného prvku.
+Nová hodnota zadaného elementu.
 
 *bCopy*<br/>
-Určuje, zda má být vytvořena kopie data. Výchozí hodnota je TRUE.
+Určuje, zda má být vytvořena kopie dat. Výchozí hodnota je TRUE (pravda).
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -658,11 +658,11 @@ Vrátí hodnotu S_OK při úspěchu nebo chybu HRESULT při selhání.
 
 ### <a name="remarks"></a>Poznámky
 
-*BCopy* příznak je vzít v úvahu při prvky typu BSTR nebo VARIANTU jsou přidány do pole. Výchozí hodnota true zajistí, že nová kopie je provedeno dat, když bude prvek přidán do pole.
+Příznak *bcopy* je při přidání prvků typu BSTR nebo variant do pole přihlédnuto. Výchozí hodnota TRUE zajišťuje, aby se při přidání prvku do pole vytvořila nová kopie dat.
 
 ## <a name="see-also"></a>Viz také:
 
-[Datový typ SAFEARRAY](/windows/desktop/api/oaidl/ns-oaidl-tagsafearray)<br/>
-[CComSafeArray::Create](#create)<br/>
-[CComSafeArray::Destroy](#destroy)<br/>
-[Přehled tříd](../../atl/atl-class-overview.md)
+[SAFEARRAY – datový typ](/windows/win32/api/oaidl/ns-oaidl-tagsafearray)<br/>
+[CComSafeArray:: Create](#create)<br/>
+[CComSafeArray::D estroy](#destroy)<br/>
+[Přehled třídy](../../atl/atl-class-overview.md)

@@ -6,27 +6,27 @@ helpviewer_keywords:
 - GDI objects [MFC], allocating during printing
 - printing [MFC], allocating GDI resources
 ms.assetid: cef7e94d-5a27-4aea-a9ee-8369fc895d3a
-ms.openlocfilehash: adfd8b19f683b82eec213890c8e1345e070ff3ec
-ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
+ms.openlocfilehash: 672a9a2ce103ae7f53f61ae955f77276eb1d2945
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66504634"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69509272"
 ---
 # <a name="allocating-gdi-resources"></a>Přidělování prostředků GDI
 
-Tento článek vysvětluje, jak přidělit a uvolnit objekty pro zařízení rozhraní GDI systému Windows grafiky potřebné pro tisk.
+Tento článek vysvětluje, jak přidělit a uvolnit objekty GDI (Windows Graphics Device Interface) potřebné pro tisk.
 
 > [!NOTE]
->  Další informace najdete v tématu [dokumentace k sadě SDK rozhraní GDI +](/windows/desktop/gdiplus/-gdiplus-gdi-start).
+>  Další informace najdete v [dokumentaci k rozhraní GDI+ SDK](/windows/win32/gdiplus/-gdiplus-gdi-start).
 
-Předpokládejme, že budete muset použít některá písma, pera nebo jiné objekty GDI pro tisk, ale ne pro zobrazení obrazovky. Z důvodu paměti, které potřebují je neefektivní přidělení paměti pro tyto objekty při spuštění aplikace. Když aplikace není tisk dokumentu, může být nutné, tato paměť pro jiné účely. Je lepší přidělovat po zahájení tisk a potom je odstraňte při tisku skončí.
+Předpokládejme, že pro tisk potřebujete použít určitá písma, pera nebo jiné objekty GDI, ale ne pro zobrazení obrazovky. Z důvodu paměti, kterou vyžadují, je při spuštění aplikace neefektivní přidělit tyto objekty. Když aplikace netiskne dokument, může být tato paměť nutná pro jiné účely. Při zahájení tisku je lepší je přidělit a při tisku skončí jejich odstranění.
 
-Přidělení paměti pro tyto objekty GDI, přepsat [OnBeginPrinting –](../mfc/reference/cview-class.md#onbeginprinting) členskou funkci. Tato funkce je vhodné pro tento účel dvou důvodů: rozhraní volá tuto funkci jednou na začátku tiskové úlohy a na rozdíl od [OnPreparePrinting –](../mfc/reference/cview-class.md#onprepareprinting), tato funkce má přístup k [CDC](../mfc/reference/cdc-class.md) objekt představující ovladač zařízení. Tyto objekty pro použití během tiskové úlohy můžete ukládat pomocí definování členských proměnných ve třídě zobrazení, které odkazují na objekty GDI (například `CFont *` členy a tak dále).
+Chcete-li tyto objekty GDI přidělit, přepište členskou funkci [OnBeginPrinting](../mfc/reference/cview-class.md#onbeginprinting) . Tato funkce je vhodná pro tento účel, a to ze dvou důvodů: rozhraní volá tuto funkci jednou na začátku každé tiskové úlohy a na rozdíl od [OnPreparePrinting](../mfc/reference/cview-class.md#onprepareprinting)Tato funkce má přístup k objektu [CDC](../mfc/reference/cdc-class.md) představujícímu zařízení tiskárny. faktorů. Tyto objekty lze uložit pro použití během tiskové úlohy definováním proměnných členů ve třídě zobrazení, které odkazují na objekty GDI (například `CFont *` členy atd.).
 
-Pokud chcete používat objekty GDI jste vytvořili, vyberte je do kontextu zařízení tiskárny v [OnPrint –](../mfc/reference/cview-class.md#onprint) členskou funkci. Pokud potřebujete různé objekty GDI pro různé stránky dokumentu, můžete zkontrolovat `m_nCurPage` člen [cprintinfo –](../mfc/reference/cprintinfo-structure.md) strukturu a vyberte objekt rozhraní GDI odpovídajícím způsobem. Pokud potřebujete GDI objektu pro několik po sobě jdoucích stránky, Windows vyžaduje, abyste vybrali ji do kontextu zařízení pokaždé, když `OnPrint` je volána.
+Chcete-li použít objekty GDI, které jste vytvořili, vyberte je do kontextu zařízení tiskárny ve funkci pro [Tisk](../mfc/reference/cview-class.md#onprint) členů. Pokud pro různé stránky dokumentu potřebujete jiné objekty GDI, můžete si prohlédnout `m_nCurPage` člena struktury [CPrintInfo –](../mfc/reference/cprintinfo-structure.md) a odpovídajícím způsobem vybrat objekt GDI. Pokud pro několik po sobě jdoucích stránek potřebujete objekt GDI, Windows `OnPrint` je vyžaduje, abyste ho při každém volání vybrali do kontextu zařízení.
 
-Chcete-li uvolnit tyto objekty GDI, přepište [OnEndPrinting –](../mfc/reference/cview-class.md#onendprinting) členskou funkci. Rozhraní volá tuto funkci na konci každého tiskové úlohy, získáte možnost uvolnit objekty GDI specifické pro tisk dříve, než aplikace vrátí jiných úloh.
+Chcete-li zrušit přidělení těchto objektů GDI, přepište členskou funkci [OnEndPrinting](../mfc/reference/cview-class.md#onendprinting) . Rozhraní volá tuto funkci na konci každé tiskové úlohy a dává vám možnost zrušit přidělení objektů GDI specifických pro tisk před tím, než se aplikace vrátí jiným úlohám.
 
 ## <a name="see-also"></a>Viz také:
 

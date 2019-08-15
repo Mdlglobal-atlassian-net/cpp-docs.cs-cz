@@ -1,5 +1,5 @@
 ---
-title: _U_menuorid – třída
+title: _U_MENUorID – třída
 ms.date: 11/04/2016
 f1_keywords:
 - ATL._U_MENUorID
@@ -9,19 +9,19 @@ helpviewer_keywords:
 - U_MENUorID class
 - _U_MENUorID class
 ms.assetid: cfc8032b-61b4-4a68-ba3a-92b82500ccae
-ms.openlocfilehash: d02d00e3c56fc253e8f89eec9815e01d60c6e2aa
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9388ca1751ee27fb25d6751c961d23e5243f2918
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62196981"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69495136"
 ---
-# <a name="umenuorid-class"></a>_U_menuorid – třída
+# <a name="_u_menuorid-class"></a>_U_MENUorID – třída
 
-Tato třída poskytuje obálky pro `CreateWindow` a `CreateWindowEx`.
+Tato třída poskytuje obálky pro `CreateWindow` a. `CreateWindowEx`
 
 > [!IMPORTANT]
->  Tato třída a jejích členů nelze použít v aplikacích, které jsou spouštěny v modulu Windows Runtime.
+>  Tato třída a její členové nelze použít v aplikacích, které jsou spouštěny v prostředí Windows Runtime.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -33,39 +33,39 @@ class _U_MENUorID
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[_U_MENUorID::_U_MENUorID](#_u_menuorid___u_menuorid)|Konstruktor|
 
 ### <a name="public-data-members"></a>Veřejné datové členy
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
-|[_U_MENUorID::m_hMenu](#_u_menuorid__m_hmenu)|Popisovač nabídky.|
+|[_U_MENUorID::m_hMenu](#_u_menuorid__m_hmenu)|Popisovač do nabídky|
 
 ## <a name="remarks"></a>Poznámky
 
-Tato třída argument adaptér umožňuje ID (uvedený) nebo nabídku popisovače (HMENUs), které se mají předat funkci bez nutnosti explicitního přetypování straně volajícího.
+Tato třída adaptéru argumentu umožňuje předání buď identifikátorů (UINT), nebo popisovačů nabídek (HMENUs) do funkce bez nutnosti explicitního přetypování na straně volajícího.
 
-Tato třída slouží k implementaci obálek rozhraní Windows API, zejména [CreateWindow](/windows/desktop/api/winuser/nf-winuser-createwindowa) a [CreateWindowEx](/windows/desktop/api/winuser/nf-winuser-createwindowexa) funkce, které přijímají argument HMENU, které mohou být podřízené okno identifikátor (UINT) spíše než popisovač nabídky. Například můžete zobrazit tato třída používá jako parametr [CWindowImpl::Create](cwindowimpl-class.md#create).
+Tato třída je určena pro implementaci obálek do rozhraní API systému Windows, zejména funkcí [CreateWindow](/windows/win32/api/winuser/nf-winuser-createwindoww) a [CreateWindowEx](/windows/win32/api/winuser/nf-winuser-createwindowexw) , z nichž obě přijímají argument HMENU, který může být podřízeným identifikátorem okna (uint), nikoli popisovačem nabídky. Tuto třídu můžete například zobrazit jako parametr, aby [CWindowImpl:: Create](cwindowimpl-class.md#create).
 
-Třída definuje dvě přetížení konstruktoru: přijímá jeden UINT argument a druhý HMENU argument. UINT argumentu je stačí přetypován na HMENU v konstruktoru a výsledek uložený v single – datový člen třídy, [m_hMenu](#_u_menuorid__m_hmenu). Argument pro konstruktor HMENU ukládána přímo bez převodu.
+Třída definuje dvě přetížení konstruktoru: jeden akceptuje argument UINT a druhý akceptuje argument HMENU. Argument UINT je pouze přetypování na HMENU v konstruktoru a výsledek uložený v jediném datovém členu třídy [m_hMenu](#_u_menuorid__m_hmenu). Argument konstruktoru HMENU je uložen přímo bez konverze.
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** atlwin.h
+**Záhlaví:** atlwin. h
 
-##  <a name="_u_menuorid__m_hmenu"></a>  _U_MENUorID::m_hMenu
+##  <a name="_u_menuorid__m_hmenu"></a>_U_MENUorID::m_hMenu
 
-Třída obsahuje hodnotu předanou jako veřejné datový člen HMENU některou z jejích konstruktorů.
+Třída obsahuje hodnotu předanou do některého z jeho konstruktorů jako veřejný datový člen HMENU.
 
 ```
 HMENU m_hMenu;
 ```
 
-##  <a name="_u_menuorid___u_menuorid"></a>  _U_MENUorID::_U_MENUorID
+##  <a name="_u_menuorid___u_menuorid"></a>_U_MENUorID::_U_MENUorID
 
-UINT argumentu je stačí přetypován na HMENU v konstruktoru a výsledek uložený v single – datový člen třídy, [m_hMenu](#_u_menuorid__m_hmenu).
+Argument UINT je pouze přetypování na HMENU v konstruktoru a výsledek uložený v jediném datovém členu třídy [m_hMenu](#_u_menuorid__m_hmenu).
 
 ```
 _U_MENUorID(UINT nID);
@@ -75,15 +75,15 @@ _U_MENUorID(HMENU hMenu);
 ### <a name="parameters"></a>Parametry
 
 *nID*<br/>
-Identifikátor podřízené okno.
+Identifikátor podřízeného okna.
 
 *hMenu*<br/>
-Popisovač nabídky.
+Obslužná rutina nabídky
 
 ### <a name="remarks"></a>Poznámky
 
-Argument pro konstruktor HMENU ukládána přímo bez převodu.
+Argument konstruktoru HMENU je uložen přímo bez konverze.
 
 ## <a name="see-also"></a>Viz také:
 
-[Přehled tříd](../../atl/atl-class-overview.md)
+[Přehled třídy](../../atl/atl-class-overview.md)

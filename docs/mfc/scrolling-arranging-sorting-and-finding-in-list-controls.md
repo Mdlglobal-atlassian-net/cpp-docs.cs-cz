@@ -11,18 +11,18 @@ helpviewer_keywords:
 - CListCtrl class [MFC], sorting
 - CListCtrl class [MFC], arranging the list
 ms.assetid: dcc51e4c-0ca8-4319-bec5-6994cc8ac9e5
-ms.openlocfilehash: 7826b7d08869f8df01f8dad2c4da3c24c468d1be
-ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
+ms.openlocfilehash: 76cff3e5b972c41d395ccec671f95c921005f1b9
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66504270"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69511264"
 ---
 # <a name="scrolling-arranging-sorting-and-finding-in-list-controls"></a>Posouvání, uspořádání, řazení a hledání v ovládacích prvcích seznam
 
-Seznam ovládacích prvků ([CListCtrl](../mfc/reference/clistctrl-class.md)) jsou posuvný ve výchozím nastavení. Další informace najdete v tématu [pozici posunutí](/windows/desktop/Controls/using-list-view-controls) v sadě Windows SDK a [posuvníku](../mfc/reference/clistctrl-class.md#scroll) členskou funkci.
+Seznam ovládacích prvků ([CListCtrl](../mfc/reference/clistctrl-class.md)) je ve výchozím nastavení rolovací. Další informace naleznete v tématu [poloha posunutí](/windows/win32/Controls/using-list-view-controls) v Windows SDK a v členské funkci [Scroll](../mfc/reference/clistctrl-class.md#scroll) .
 
-Můžete volat `CListCtrl` členské funkce pro uspořádání položek seznamu v ovládacím prvku položky řadit a vyhledat konkrétní položky. Další informace najdete v tématu [pomocí ovládacích prvků ListView](/windows/desktop/Controls/using-list-view-controls) v sadě Windows SDK a [CListCtrl](../mfc/reference/clistctrl-class.md) členy [uspořádat](../mfc/reference/clistctrl-class.md#arrange), [SortItems](../mfc/reference/clistctrl-class.md#sortitems), a [FindItem](../mfc/reference/clistctrl-class.md#finditem).
+Můžete volat `CListCtrl` členské funkce pro uspořádání položek seznamu v ovládacím prvku, seřadit položky a najít konkrétní položky. Další informace naleznete v části [using ListView Controls](/windows/win32/Controls/using-list-view-controls) in the Windows SDK a [CListCtrl](../mfc/reference/clistctrl-class.md) Members [SortItems](../mfc/reference/clistctrl-class.md#sortitems)and [FindItem](../mfc/reference/clistctrl-class.md#finditem). [](../mfc/reference/clistctrl-class.md#arrange)
 
 ## <a name="see-also"></a>Viz také:
 
