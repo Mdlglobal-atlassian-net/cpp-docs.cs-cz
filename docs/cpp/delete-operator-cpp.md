@@ -8,12 +8,12 @@ helpviewer_keywords:
 - delete keyword [C++], deallocating objects
 - delete keyword [C++]
 ms.assetid: de39c900-3f57-489c-9598-dcb73c4b3930
-ms.openlocfilehash: d6e1be0b06beed8cf68a1ec90571281b592af21d
-ms.sourcegitcommit: db1ed91fa7451ade91c3fb76bc7a2b857f8a5eef
+ms.openlocfilehash: 3b00bf78d286ba530dee85240236a2a9ea171113
+ms.sourcegitcommit: a146b169664c001406a0cccc7fbda1b8d7be5078
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "68980467"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69024647"
 ---
 # <a name="delete-operator-c"></a>delete – operátor (C++)
 
@@ -21,7 +21,8 @@ Zruší přidělení bloku paměti.
 
 ## <a name="syntax"></a>Syntaxe
 
-> [`::``::`] `delete` *cast-expression* [] `delete []` *cast-expression*
+> [`::`] `delete` *cast-expression*\
+> [`::`] `delete []` *cast-expression*
 
 ## <a name="remarks"></a>Poznámky
 
@@ -35,7 +36,7 @@ delete MyDialog;
 
 Použití **Delete** u ukazatele na objekt, který není přidělen s **novými** , poskytuje nepředvídatelné výsledky. Můžete však použít příkaz **Odstranit** na ukazatel s hodnotou 0. Toto zřízení znamená, že když **Nový** vrátí hodnotu 0 při selhání, odstraní se výsledek neúspěšné **nové** operace, která je neškodná. Další informace najdete v tématu [operátory New a DELETE](../cpp/new-and-delete-operators.md).
 
-Operátory **New** a **Delete** lze použít také pro předdefinované typy, včetně polí. Pokud `pointer` odkazuje na pole, je třeba před `pointer` umístit prázdné závorky:
+Operátory **New** a **Delete** lze použít také pro předdefinované typy, včetně polí. Pokud `pointer` odkazuje na pole, umístěte prázdné hranaté závorky ( `pointer``[]`) před:
 
 ```cpp
 int* set = new int[100];
@@ -89,10 +90,10 @@ Příklady použití **Delete**naleznete v tématu [New operator](../cpp/new-ope
 
 Operátor delete vyvolá **operátor funkce Delete**.
 
-Pro objekty, které nejsou typu třídy ([Třída](../cpp/class-cpp.md), [Struktura](../cpp/struct-cpp.md)nebo [sjednocení](../cpp/unions.md)), je vyvolán globální operátor delete. Začne-li výraz delete jednočlenným operátorem rozlišení rozsahu (::), název funkce navracení je pro objekty typu třídy řešen v globálním oboru. V opačném případě operátor delete vyvolá destruktor objektu před zrušením přidělení paměti (pokud není ukazatel null). Operátor delete lze definovat na základě každé třídy. Neexistuje-li pro zadanou třídu žádná taková definice, je vyvolán globální operátor delete. Je-li výraz delete používán k zrušení přidělení objektu třídy, jehož statický typ má virtuální destruktor, je funkce zrušení přidělení řešena prostřednictvím virtuálního konstruktoru dynamického typu objektu.
+Pro objekty, které nejsou typu třídy ([Třída](../cpp/class-cpp.md), [Struktura](../cpp/struct-cpp.md)nebo [sjednocení](../cpp/unions.md)), je vyvolán globální operátor delete. V případě objektů typu třídy je název funkce zrušení přidělení vyřešen v globálním oboru, pokud výraz DELETE začíná na unárním operátoru rozlišení oboru (`::`). V opačném případě operátor delete vyvolá destruktor objektu před zrušením přidělení paměti (pokud není ukazatel null). Operátor delete lze definovat na základě každé třídy. Neexistuje-li pro zadanou třídu žádná taková definice, je vyvolán globální operátor delete. Je-li výraz delete používán k zrušení přidělení objektu třídy, jehož statický typ má virtuální destruktor, je funkce zrušení přidělení řešena prostřednictvím virtuálního konstruktoru dynamického typu objektu.
 
 ## <a name="see-also"></a>Viz také:
 
-[Výrazy s unárními operátory](../cpp/expressions-with-unary-operators.md)<br/>
-[Klíčová slova](../cpp/keywords-cpp.md)<br/>
+[Výrazy s unárními operátory](../cpp/expressions-with-unary-operators.md)\
+[Klíčov](../cpp/keywords-cpp.md)\
 [Operátory new a delete](../cpp/new-and-delete-operators.md)
