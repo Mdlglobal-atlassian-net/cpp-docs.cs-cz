@@ -1,5 +1,5 @@
 ---
-title: Cdiscretetransition – třída
+title: CDiscreteTransition – třída
 ms.date: 11/04/2016
 f1_keywords:
 - CDiscreteTransition
@@ -16,14 +16,14 @@ helpviewer_keywords:
 - CDiscreteTransition [MFC], m_delay
 - CDiscreteTransition [MFC], m_hold
 ms.assetid: b4d84fb3-ccaa-451c-a69b-6b50dcb9b9c8
-ms.openlocfilehash: dc2311f7dae71f7c3848b7825b297ec5c9747859
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7087dfa13972737f0a1244d2cc9a7088b23dc184
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62168008"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69506855"
 ---
-# <a name="cdiscretetransition-class"></a>Cdiscretetransition – třída
+# <a name="cdiscretetransition-class"></a>CDiscreteTransition – třída
 
 Zapouzdřuje diskrétní přechod.
 
@@ -37,43 +37,43 @@ class CDiscreteTransition : public CBaseTransition;
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
-|[CDiscreteTransition::CDiscreteTransition](#cdiscretetransition)|Vytvoří objekt diskrétní přechod a inicializuje parametry.|
+|[CDiscreteTransition::CDiscreteTransition](#cdiscretetransition)|Vytvoří diskrétní objekt přechodu a inicializuje jeho parametry.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
-|[CDiscreteTransition::Create](#create)|Knihovna přechod k vytvoření objektu přechod zapouzdřený objekt modelu COM zavolá. (Přepíše [CBaseTransition::Create](../../mfc/reference/cbasetransition-class.md#create).)|
+|[CDiscreteTransition:: Create](#create)|Volá knihovnu přechodu k vytvoření zapouzdřeného přechodu objektu COM. (Overrides [CBaseTransition:: Create](../../mfc/reference/cbasetransition-class.md#create).)|
 
 ### <a name="public-data-members"></a>Veřejné datové členy
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CDiscreteTransition::m_dblFinalValue](#m_dblfinalvalue)|Hodnota proměnné animace na konci přechodu.|
-|[CDiscreteTransition::m_delay](#m_delay)|Množství času, podle kterého chcete zpoždění okamžité přepínač tak, aby konečná hodnota.|
-|[CDiscreteTransition::m_hold](#m_hold)|Množství času, podle kterého chcete uchovávají jeho konečnou hodnotu proměnné.|
+|[CDiscreteTransition::m_delay](#m_delay)|Doba, po kterou se má zpozdit okamžitý přepínač na konečnou hodnotu.|
+|[CDiscreteTransition::m_hold](#m_hold)|Doba, po kterou se má proměnná uchovávat v konečné hodnotě.|
 
 ## <a name="remarks"></a>Poznámky
 
-Během diskrétní přechod proměnné animace zůstává na počáteční hodnotu pro zadaný zpoždění a pak přepne okamžitě na zadané konečnou hodnotu a zůstává na hodnotě dané blokování dobu. Protože všechny přechody jsou automaticky vymazány, doporučuje se je přidělena pomocí operátoru nové. Zapouzdřený objekt IUIAnimationTransition COM je vytvořené CAnimationController::AnimateGroup, dokud je NULL. Změna členské proměnné po vytvoření tohoto objektu COM nemá žádný vliv.
+Během diskrétního přechodu zůstane proměnná animace na počáteční hodnotě pro zadanou dobu zpoždění a pak se okamžitě přepne na zadanou konečnou hodnotu a zůstane v této hodnotě pro danou dobu uchování. Vzhledem k tomu, že jsou všechny přechody vymazány automaticky, doporučujeme je přidělit pomocí operátoru new. Zapouzdřený objekt COM IUIAnimationTransition je vytvořen pomocí CAnimationController:: Animate, dokud nebude NULL. Změna členských proměnných po vytvoření tohoto objektu COM nemá žádný vliv.
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
-[Třídy CObject](../../mfc/reference/cobject-class.md)
+[CObject](../../mfc/reference/cobject-class.md)
 
 [CBaseTransition](../../mfc/reference/cbasetransition-class.md)
 
-[Cdiscretetransition –](../../mfc/reference/cdiscretetransition-class.md)
+[CDiscreteTransition](../../mfc/reference/cdiscretetransition-class.md)
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** afxanimationcontroller.h
+**Záhlaví:** afxanimationcontroller. h
 
-##  <a name="cdiscretetransition"></a>  CDiscreteTransition::CDiscreteTransition
+##  <a name="cdiscretetransition"></a>CDiscreteTransition::CDiscreteTransition
 
-Vytvoří objekt diskrétní přechod a inicializuje parametry.
+Vytvoří diskrétní objekt přechodu a inicializuje jeho parametry.
 
 ```
 CDiscreteTransition(
@@ -85,17 +85,17 @@ CDiscreteTransition(
 ### <a name="parameters"></a>Parametry
 
 *delay*<br/>
-Množství času, podle kterého chcete zpoždění okamžité přepínač tak, aby konečná hodnota.
+Doba, po kterou se má zpozdit okamžitý přepínač na konečnou hodnotu.
 
 *dblFinalValue*<br/>
 Hodnota proměnné animace na konci přechodu.
 
-*blokování*<br/>
-Množství času, podle kterého chcete uchovávají jeho konečnou hodnotu proměnné.
+*čekání*<br/>
+Doba, po kterou se má proměnná uchovávat v konečné hodnotě.
 
-##  <a name="create"></a>  CDiscreteTransition::Create
+##  <a name="create"></a>CDiscreteTransition:: Create
 
-Knihovna přechod k vytvoření objektu přechod zapouzdřený objekt modelu COM zavolá.
+Volá knihovnu přechodu k vytvoření zapouzdřeného přechodu objektu COM.
 
 ```
 virtual BOOL Create(
@@ -104,13 +104,13 @@ virtual BOOL Create(
 ```
 
 *pLibrary*<br/>
-Ukazatel na [IUIAnimationTransitionLibrary rozhraní](/windows/desktop/api/uianimation/nn-uianimation-iuianimationtransitionlibrary), která definuje knihovnu standardní přechodů.
+Ukazatel na [rozhraní IUIAnimationTransitionLibrary](/windows/win32/api/uianimation/nn-uianimation-iuianimationtransitionlibrary), které definuje knihovnu standardních přechodů.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Hodnota TRUE, pokud úspěšně; vytvoření přechodu v opačném případě FALSE.
+TRUE, pokud je převod úspěšně vytvořen; v opačném případě FALSE.
 
-##  <a name="m_dblfinalvalue"></a>  CDiscreteTransition::m_dblFinalValue
+##  <a name="m_dblfinalvalue"></a>CDiscreteTransition::m_dblFinalValue
 
 Hodnota proměnné animace na konci přechodu.
 
@@ -118,17 +118,17 @@ Hodnota proměnné animace na konci přechodu.
 DOUBLE m_dblFinalValue;
 ```
 
-##  <a name="m_delay"></a>  CDiscreteTransition::m_delay
+##  <a name="m_delay"></a>CDiscreteTransition::m_delay
 
-Množství času, podle kterého chcete zpoždění okamžité přepínač tak, aby konečná hodnota.
+Doba, po kterou se má zpozdit okamžitý přepínač na konečnou hodnotu.
 
 ```
 UI_ANIMATION_SECONDS m_delay;
 ```
 
-##  <a name="m_hold"></a>  CDiscreteTransition::m_hold
+##  <a name="m_hold"></a>CDiscreteTransition::m_hold
 
-Množství času, podle kterého chcete uchovávají jeho konečnou hodnotu proměnné.
+Doba, po kterou se má proměnná uchovávat v konečné hodnotě.
 
 ```
 UI_ANIMATION_SECONDS m_hold;

@@ -22,12 +22,12 @@ helpviewer_keywords:
 - COlePropertiesDialog [MFC], m_psh
 - COlePropertiesDialog [MFC], m_vp
 ms.assetid: a54dbc89-1447-4329-bd01-00e98ec9e935
-ms.openlocfilehash: bdae64ff4a7bcfef761eaf3dd70a85a54efc28b7
-ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
+ms.openlocfilehash: b819bc430868717a2df01a086b482dfe6d56cc0f
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68916963"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69504168"
 ---
 # <a name="colepropertiesdialog-class"></a>COlePropertiesDialog – třída
 
@@ -152,11 +152,11 @@ virtual INT_PTR DoModal();
 
 IDOK nebo IDCANCEL v případě úspěchu; v opačném případě 0. IDOK a IDCANCEL jsou konstanty, které označují, zda uživatel vybral tlačítko OK nebo Storno.
 
-Pokud se vrátí IDCANCEL, můžete zavolat funkci Windows [CommDlgExtendedError](/windows/desktop/api/commdlg/nf-commdlg-commdlgextendederror) a zjistit, jestli došlo k chybě.
+Pokud se vrátí IDCANCEL, můžete zavolat funkci Windows [CommDlgExtendedError](/windows/win32/api/commdlg/nf-commdlg-commdlgextendederror) a zjistit, jestli došlo k chybě.
 
 ##  <a name="m_gp"></a>  COlePropertiesDialog::m_gp
 
-Struktura typu [OLEUIGNRLPROPS](/windows/desktop/api/oledlg/ns-oledlg-tagoleuignrlpropsa)používaná k inicializaci stránky Obecné dialogového okna vlastnosti objektu OLE.
+Struktura typu [OLEUIGNRLPROPS](/windows/win32/api/oledlg/ns-oledlg-oleuignrlpropsw)používaná k inicializaci stránky Obecné dialogového okna vlastnosti objektu OLE.
 
 ```
 OLEUIGNRLPROPS m_gp;
@@ -170,7 +170,7 @@ Další informace o `OLEUIGNRLPROPS` struktuře najdete v Windows SDK.
 
 ##  <a name="m_lp"></a>  COlePropertiesDialog::m_lp
 
-Struktura typu [OLEUILINKPROPS](/windows/desktop/api/oledlg/ns-oledlg-tagoleuilinkpropsa), která se používá k inicializaci stránky odkazu v dialogovém okně Vlastnosti objektu OLE.
+Struktura typu [OLEUILINKPROPS](/windows/win32/api/oledlg/ns-oledlg-oleuilinkpropsw), která se používá k inicializaci stránky odkazu v dialogovém okně Vlastnosti objektu OLE.
 
 ```
 OLEUILINKPROPS m_lp;
@@ -184,7 +184,7 @@ Další informace o `OLEUILINKPROPS` struktuře najdete v Windows SDK.
 
 ##  <a name="m_op"></a>  COlePropertiesDialog::m_op
 
-Struktura typu [OLEUIOBJECTPROPS](/windows/desktop/api/oledlg/ns-oledlg-tagoleuiobjectpropsa)používaná k inicializaci běžných dialogových oken vlastností objektu OLE.
+Struktura typu [OLEUIOBJECTPROPS](/windows/win32/api/oledlg/ns-oledlg-oleuiobjectpropsw)používaná k inicializaci běžných dialogových oken vlastností objektu OLE.
 
 ```
 OLEUIOBJECTPROPS m_op;
@@ -194,11 +194,11 @@ OLEUIOBJECTPROPS m_op;
 
 Tato struktura obsahuje členy používané k inicializaci stránek Obecné, propojení a zobrazení.
 
-Další informace naleznete v tématu struktury OLEUIOBJECTPROPS a [OLEUILINKPROPS](/windows/desktop/api/oledlg/ns-oledlg-tagoleuilinkpropsa) v Windows SDK.
+Další informace naleznete v tématu struktury OLEUIOBJECTPROPS a [OLEUILINKPROPS](/windows/win32/api/oledlg/ns-oledlg-oleuilinkpropsw) v Windows SDK.
 
 ##  <a name="m_psh"></a>  COlePropertiesDialog::m_psh
 
-Struktura typu [PROPSHEETHEADER](/windows/desktop/api/prsht/ns-prsht-propsheetheadera_v2), jejíž členové ukládají charakteristiky objektu dialogového okna.
+Struktura typu [PROPSHEETHEADER](/windows/win32/api/prsht/ns-prsht-propsheetheadera_v2), jejíž členové ukládají charakteristiky objektu dialogového okna.
 
 ```
 PROPSHEETHEADER m_psh;
@@ -214,7 +214,7 @@ Další informace o `PROPSHEETHEADER` struktuře najdete v Windows SDK.
 
 ##  <a name="m_vp"></a>  COlePropertiesDialog::m_vp
 
-Struktura typu [OLEUIVIEWPROPS](/windows/desktop/api/oledlg/ns-oledlg-tagoleuiviewpropsa), která slouží k inicializaci stránky zobrazení dialogového okna vlastnosti objektu OLE.
+Struktura typu [OLEUIVIEWPROPS](/windows/win32/api/oledlg/ns-oledlg-oleuiviewpropsw), která slouží k inicializaci stránky zobrazení dialogového okna vlastnosti objektu OLE.
 
 ```
 OLEUIVIEWPROPS m_vp;

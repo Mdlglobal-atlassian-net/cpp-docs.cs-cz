@@ -1,5 +1,5 @@
 ---
-title: Používání knihovny a komponenty v projektech C++
+title: Využívání knihoven a komponent v C++ projektech
 ms.date: 12/10/2018
 f1_keywords:
 - VC.Project.References
@@ -7,130 +7,130 @@ helpviewer_keywords:
 - Add References Dialog Box (C++)
 - .NET Framework (C++), Add References Dialog Box
 ms.assetid: 12b8f571-0f21-40b3-9404-5318a57e9cb5
-ms.openlocfilehash: dff057977e6b6ff0c36d3a888bc4d5c3aa778576
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a65ad69914b14e7b8b37c321fa7d06740af57e3a
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62274786"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69493375"
 ---
-# <a name="consuming-libraries-and-components"></a>Používání knihovny a součásti
+# <a name="consuming-libraries-and-components"></a>Využívání knihoven a komponent
 
-Často projektu C++ musí volat funkce nebo přístup k datům v binárním souboru, například statické knihovny (soubory .lib), knihovny DLL, součást prostředí Windows Runtime, komponenty modelu COM nebo sestavení .NET. V těchto případech budete muset nakonfigurovat projekt tak, aby bylo možné najít tento binární soubor v okamžiku sestavení. Konkrétní kroky závisí na typu projektu, typ binárního souboru, a zda má být sestaven binární soubor ve stejném řešení jako váš projekt. 
+C++ Projekt často potřebuje volat funkce nebo získat přístup k datům v binárním souboru, jako je statická knihovna (soubory. lib), knihovna DLL, prostředí Windows Runtime komponenty, komponenta modelu COM nebo sestavení .NET. V těchto případech je nutné nakonfigurovat projekt tak, aby mohl najít tento binární soubor v čase sestavení. Konkrétní postup závisí na typu vašeho projektu, typu binárního souboru a na tom, zda je binární soubor sestaven ve stejném řešení jako váš projekt. 
 
-## <a name="consuming-libraries-downloaded-via-vcpkg"></a>Použití knihovny stáhli prostřednictvím vcpkg
+## <a name="consuming-libraries-downloaded-via-vcpkg"></a>Využívání knihoven stažených prostřednictvím vcpkg
 
-Používat knihovnu, kterou jste si stáhli s použitím **vcpkg** Správce balíčků, můžete ignorovat podle následujících pokynů. See [vcpkg: Správce balíčků jazyka C++ pro Windows, Linux a MacOS](vcpkg.md#integrate-with-visual-studio-windows) pro další informace.
+Pokud chcete využít knihovnu, kterou jste stáhli pomocí Správce balíčků **vcpkg** , můžete následující pokyny ignorovat. Viz [vcpkg: Správce C++ balíčků pro Windows, Linux a MacOS](vcpkg.md#integrate-with-visual-studio-windows) , kde najdete další informace.
 
-## <a name="consuming-static-libraries"></a>Použití statické knihovny
+## <a name="consuming-static-libraries"></a>Spotřebovávání statických knihoven
 
-Pokud váš projekt statické knihovny se vytváří ve stejném řešení:
+Pokud je váš projekt statické knihovny sestaven ve stejném řešení:
 
-1. #<a name="include-the-header-files-for-the-static-library-using-quotation-marks-in-a-typical-solution-the-path-will-start-with-library-project-name-intellisense-will-help-you-find-it"></a>Zahrnout soubory hlaviček pro statické knihovny pomocí uvozovek. V typické řešení bude cesta začínat `../<library project name>`. Technologie IntelliSense vám pomůže ho najít.
-2. Přidejte odkaz na projekt statické knihovny. Klikněte pravým tlačítkem na **odkazy** pod uzlem projektu aplikace v **Průzkumníka řešení** a zvolte **přidat odkaz**. 
+1. #<a name="include-the-header-files-for-the-static-library-using-quotation-marks-in-a-typical-solution-the-path-will-start-with-library-project-name-intellisense-will-help-you-find-it"></a>Zahrňte hlavičkové soubory pro statickou knihovnu pomocí uvozovek. V typickém řešení bude cesta začínat `../<library project name>`. IntelliSense vám pomůže ho najít.
+2. Přidejte odkaz na projekt statické knihovny. Klikněte pravým tlačítkem na **odkazy** v uzlu projekt aplikace v **Průzkumník řešení** a vyberte možnost **Přidat odkaz**. 
 
-Pokud se statickou knihovnou není součástí řešení:
+Pokud Statická knihovna není součástí řešení:
 
-1. Klikněte pravým tlačítkem na uzel projektu aplikace v **Průzkumníka řešení** a klikněte na tlačítko **vlastnosti**. 
-2. V **adresáře VC ++** vlastnosti stránky, přidejte cestu k adresáři, kde je umístěn soubor .lib v **cesty knihoven** a přidejte cestu pro soubory hlaviček knihovny v **adresáře souborů k zahrnutí** .  
-3. V **Linker > vstup** vlastnost stránce, přidejte název .lib soubor **Další závislosti**.
+1. Klikněte pravým tlačítkem myši na uzel projekt aplikace v **Průzkumník řešení** a pak zvolte **vlastnosti**. 
+2. Na stránce vlastností **adresářů VC + +** přidejte cestu k adresáři, kde se nachází soubor. lib v **cestě knihovny** a přidejte cestu k hlavičkovým souborům knihovny v **adresáři include**.  
+3. Na stránce vlastnosti **linkeru > Input** přidejte název souboru. lib do **dalších závislostí**.
 
-## <a name="dynamic-link-libraries"></a>Dynamické knihovny
+## <a name="dynamic-link-libraries"></a>Knihovny dynamického propojení
 
-Pokud knihovna DLL se vytváří v rámci stejného řešení jako aplikace, postupujte podle stejných kroků jako u statické knihovny.
+Pokud je knihovna DLL sestavena jako součást stejného řešení jako aplikace, použijte stejný postup jako u statické knihovny.
 
-Pokud knihovna DLL není součástí řešení aplikací, musíte soubor knihovny DLL, záhlaví s prototypy exportovaných funkcí a tříd a .lib soubor, který obsahuje nezbytné informace o propojení.
+Pokud knihovna DLL není součástí řešení aplikace, budete potřebovat soubor DLL, hlavičky s prototypy pro exportované funkce a třídy a soubor. lib, který poskytuje nezbytné informace pro propojení.
 
-1. Kopírovat knihovnu DLL do výstupní složky vašeho projektu nebo do jiné složky v cestě pro vyhledávání standardní Windows pro knihovny DLL. Zobrazit [pořadí hledání knihoven DLL](/windows/desktop/dlls/dynamic-link-library-search-order).
-2. Postupujte podle kroků 1-3 pro statické knihovny k poskytování cesty k záhlaví a .lib soubor.
+1. Zkopírujte knihovnu DLL do výstupní složky vašeho projektu nebo do jiné složky ve standardní cestě hledání Windows pro knihovny DLL. Viz [pořadí hledání dynamické knihovny](/windows/win32/dlls/dynamic-link-library-search-order).
+2. Použijte kroky 1-3 pro statické knihovny k poskytnutí cest k souborům Headers a. lib.
 
 ## <a name="com-objects"></a>COM – objekty
 
-Pokud vaše nativní aplikace C++ potřebuje používat objekt modelu COM a je *zaregistrovaný*, pak vše, co musíte udělat je volání funkce CoCreateInstance a předejte mu identifikátor CLSID objektu. Systém se ji najít v registru Windows a načtěte jej. A C++/CLI projektu může spotřebovat objekt modelu COM, stejným způsobem, nebo tak, že přidáte odkaz na z **Add References > COM** seznamu a pracovat s nimi prostřednictvím jeho [obálka volatelná za běhu](/dotnet/framework/interop/runtime-callable-wrapper). 
+Pokud vaše nativní C++ aplikace potřebuje spotřebovat objekt com a tento objekt je *zaregistrován*, pak vše, co musíte udělat, je zavolat funkci CoCreateInstance a předat identifikátor CLSID objektu. Systém ho najde v registru Windows a načte ho. Projekt C++/CLI může spotřebovat objekt modelu COM stejným způsobem, nebo přidáním odkazu na odkaz > v seznamu **Přidat odkazy com** a jeho využitím obálkou s možností volání [za běhu](/dotnet/framework/interop/runtime-callable-wrapper). 
 
-## <a name="net-assemblies-and-windows-runtime-components"></a>Sestavení .NET a součásti Windows Runtime
+## <a name="net-assemblies-and-windows-runtime-components"></a>.NET – sestavení a součásti prostředí Windows Runtime
 
-V UPW nebo C++vyhodnocovací projekty, využívají sestavení .NET nebo součástí prostředí Windows Runtime tak, že přidáte *odkaz* k sestavením nebo komponentou. V části **odkazy** uzel v UPW nebo C++vyhodnocovací projektu se zobrazí odkazy na běžně používané komponenty. Klikněte pravým tlačítkem na **odkazy** uzel v **Průzkumníka řešení** zobrazíte **správce odkazů** a projděte si další součásti, které jsou známé systému. Klikněte na tlačítko **Procházet** tlačítko Přejít na libovolnou složku, kde se nachází vlastní komponentu. Protože sestavení .NET a součásti prostředí Windows Runtime obsahují informace o předdefinovaných typech, můžete zobrazit jejich metod a tříd kliknutím pravým tlačítkem a vyberete **zobrazit v prohlížeči objektů**. 
+V projektech UWP C++nebo/CLI můžete využívat sestavení .net nebo prostředí Windows Runtime komponenty přidáním *odkazu* na sestavení nebo komponentu. Pod uzlem **odkazy** v projektu UWP nebo C++/CLI vidíte odkazy na běžně používané komponenty. Kliknutím pravým tlačítkem na uzel **odkazy** v **Průzkumník řešení** otevřete **Správce odkazů** a procházejte dalšími komponentami, které systém zná. Kliknutím na tlačítko **Procházet** přejděte do složky, ve které je umístěna vlastní komponenta. Vzhledem k tomu, že komponenty sestavení a prostředí Windows Runtime .NET obsahují vestavěné informace o typu, můžete zobrazit své metody a třídy kliknutím pravým tlačítkem a výběrem možnosti **Zobrazit v prohlížeč objektů**. 
 
 ## <a name="reference-properties"></a>Vlastnosti odkazu
 
-Každý druh odkazu má vlastnosti. Vlastnosti můžete zobrazit výběrem odkazu v Průzkumníku řešení a stisknutím klávesy **Alt + Enter**, nebo pravým tlačítkem myši a zvolíte možnost **vlastnosti**. Některé vlastnosti jsou jen pro čtení a některé je možné upravit. Však obvykle není nutné ručně upravit tyto vlastnosti.
+Každý druh odkazu má vlastnosti. Vlastnosti můžete zobrazit tak, že vyberete odkaz v Průzkumník řešení a stisknete **ALT + ENTER**nebo jinak kliknete pravým tlačítkem a kliknete na **vlastnosti**. Některé vlastnosti jsou jen pro čtení a některé můžou být upravené. Tyto vlastnosti však obvykle není nutné měnit.
 
 ### <a name="activex-reference-properties"></a>Vlastnosti odkazu ActiveX
 
-Vlastnosti odkazu ActiveX jsou dostupné pouze pro odkazy na komponenty modelu COM. Tyto vlastnosti se zobrazí, jenom když vyberete komponenty modelu COM v **odkazy** podokně. Vlastnosti nelze změnit.
+Vlastnosti odkazu ActiveX jsou k dispozici pouze pro odkazy na komponenty modelu COM. Tyto vlastnosti jsou zobrazeny pouze v případě, že je v podokně **odkazy** VYBRÁNA komponenta com. Vlastnosti nelze upravovat.
 
 - **Úplná cesta ovládacího prvku**
 
    Zobrazuje cestu k adresáři odkazovaného ovládacího prvku.
 
-- **GUID ovládacího prvku**
+- **Identifikátor GUID ovládacího prvku**
 
    Zobrazuje identifikátor GUID pro ovládací prvek ActiveX.
 
 - **Verze ovládacího prvku**
 
-   Zobrazuje verze odkazovaného ovládacího prvku ActiveX.
+   Zobrazuje verzi odkazovaného ovládacího prvku ActiveX.
 
 - **Název knihovny typů**
 
-   Zobrazí název odkazované knihovny typů.
+   Zobrazuje název odkazované knihovny typů.
 
-- **Nástroj obálky**
+- **Nástroj Obálka**
 
-   Zobrazí nástroj, který se používá k vytvoření sestavení interop z odkazované knihovny COM nebo ovládacího prvku ActiveX.
+   Zobrazuje nástroj, který se používá k sestavení definičního sestavení z odkazované knihovny COM nebo ovládacího prvku ActiveX.
 
-### <a name="assembly-reference-properties-ccli"></a>Vlastnosti odkazu na sestavení (C++vyhodnocovací)
+### <a name="assembly-reference-properties-ccli"></a>Vlastnosti odkazu na sestaveníC++(/CLI)
 
-Vlastnosti odkazu na sestavení jsou k dispozici pouze pro odkazy na sestavení rozhraní .NET Framework v C++vyhodnocovací projekty. Tyto vlastnosti se zobrazí jenom v případě, že je vybraná sestavení rozhraní .NET Framework v **odkazy** podokně. Vlastnosti nelze změnit.
+Vlastnosti odkazu na sestavení jsou k dispozici pouze pro odkazy na C++.NET Framework sestavení v projektech/CLI. Tyto vlastnosti jsou zobrazeny pouze v případě, že je vybráno sestavení .NET Framework v podokně **odkazy** . Vlastnosti nelze upravovat.
 
 - **Relativní cesta**
 
-   Zobrazuje relativní cesta z adresáře projektu k odkazovanému sestavení.
+   Zobrazuje relativní cestu z adresáře projektu k odkazovanému sestavení.
 
 ### <a name="build-properties"></a>Vlastnosti sestavení
 
-Následující vlastnosti jsou k dispozici na různé typy odkazů. Umožňují určit, jak sestavení s odkazy.
+Následující vlastnosti jsou k dispozici na různých druzích odkazů. Umožňují určit, jak se mají vytvářet odkazy.
 
 - **Kopírovat místní**
 
-   Určuje, jestli se mají automaticky kopírovat odkazované sestavení do cílového umístění během sestavení.
+   Určuje, zda se má odkazované sestavení během sestavení automaticky kopírovat do cílového umístění.
 
-- **Zkopírovat místní satelitní sestavení (C++vyhodnocovací)**
+- **Kopírovat místní satelitní sestavení (C++/CLI)**
 
-   Určuje, jestli se mají automaticky kopírovat satelitní sestavení odkazovaného sestavení do cílového umístění během sestavení. Použít jenom v případě **Kopírovat místně** je **true**.
+   Určuje, zda se mají při sestavení automaticky kopírovat satelitní sestavení odkazovaného sestavení do cílového umístění. Používá se jenom v případě, že je **místní kopie** **true**.
 
 - **Výstup referenčního sestavení**
 
-   Určuje, že toto sestavení se používá v procesu sestavení. Pokud **true**, sestavení se používá na příkazový řádek kompilátoru během sestavení.
+   Určuje, že toto sestavení se používá v procesu sestavení. Při **hodnotě true**se sestavení používá v příkazovém řádku kompilátoru během sestavení.
 
-### <a name="project-to-project-reference-properties"></a>Vlastnosti odkazu typu projekt projekt
+### <a name="project-to-project-reference-properties"></a>Vlastnosti odkazu z projektu na projekt
 
-Definujte následující vlastnosti *odkaz typu projekt projekt* z projektu, který je vybraný v **odkazy** podokno do jiného projektu ve stejném řešení. Další informace najdete v tématu [Správa odkazů v projektu](/visualstudio/ide/managing-references-in-a-project).
+Následující vlastnosti definují odkaz typu *projekt-projekt* z projektu, který je vybrán v podokně **odkazy** , na jiný projekt ve stejném řešení. Další informace najdete v tématu [Správa odkazů v projektu](/visualstudio/ide/managing-references-in-a-project).
 
-- **Propojit závislé položky knihoven**
+- **Propojit závislosti knihoven**
 
-   Pokud je tato vlastnost **True**, systém projektu propojeny do závislý projekt lib souborů, které jsou vytvářeny nezávislé projektem. Obvykle můžete zadat **True**.
+   Je-li tato vlastnost **pravdivá**, projektový systém odkazuje do závislého projektu na soubory. lib, které jsou vytvářeny nezávislým projektem. Obvykle zadáte **hodnotu true**.
 
-- **Project Identifier**
+- **Identifikátor projektu**
 
-   Jednoznačně identifikuje nezávislé projektu. Hodnota vlastnosti je interní systém identifikátor GUID, který nemůže být upraven.
+   Jednoznačně identifikuje nezávislý projekt. Hodnota vlastnosti je interní GUID systému, který nelze změnit.
 
-- **Použít vstupy závislých položek knihoven**
+- **Použít vstupy závislosti knihoven**
 
-   Pokud je tato vlastnost **False**, systém projektu nebude propojení do závislého projektu soubory .obj pro knihovnu vytvářených nezávislé projektu. V důsledku toho tato hodnota zakáže přírůstkové propojení. Obvykle můžete zadat **False** protože vytváření aplikace může trvat dlouhou dobu, pokud existují mnoho nezávislé projektů.
+   Pokud je tato vlastnost **false**, projektový systém nebude propojen se soubory. obj knihovny, které jsou vytvářeny nezávislým projektem, do závislého projektu. V důsledku toho tato hodnota zakáže přírůstkové propojování. Obvykle zadáte **hodnotu false** , protože sestavování aplikace může trvat dlouhou dobu, pokud existuje mnoho nezávislých projektů.
 
-### <a name="read-only-reference-properties-com--net"></a>Vlastnosti jen pro čtení odkazu (COM a .NET)
+### <a name="read-only-reference-properties-com--net"></a>Vlastnosti odkazu jen pro čtení (COM & .NET)
 
-Následující vlastnosti se nacházejí na odkazy na sestavení modelu COM a .NET a nejde změnit.
+Následující vlastnosti jsou nalezeny v odkazech na sestavení COM a .NET a nelze je upravit.
 
 - **Název sestavení**
 
    Zobrazí název sestavení pro odkazované sestavení.
 
-- **Jazyková verze**
+- **Jazykových**
 
-   Zobrazí jazyková verze vybraného odkazu.
+   Zobrazí jazykovou verzi vybraného odkazu.
 
 - **Popis**
 
@@ -138,11 +138,11 @@ Následující vlastnosti se nacházejí na odkazy na sestavení modelu COM a .N
 
 - **Úplná cesta**
 
-   Zobrazuje cestu k adresáři odkazovaných sestavení.
+   Zobrazuje cestu k adresáři odkazovaného sestavení.
 
 - **Identita**
 
-   .NET Frameworkassemblies zobrazí úplnou cestu. Pro komponenty modelu COM zobrazuje identifikátor GUID.
+   V případě rozhraní .NET Frameworkassemblies zobrazí úplnou cestu. V případě komponent modelu COM zobrazuje identifikátor GUID.
 
 - **Popisek**
 
@@ -156,15 +156,15 @@ Následující vlastnosti se nacházejí na odkazy na sestavení modelu COM a .N
 
    Zobrazí token veřejného klíče, který se používá k identifikaci odkazovaného sestavení.
 
-- **Silným názvem**
+- **Silný název**
 
-   `true` Pokud má odkazované sestavení silný název. Silně pojmenované sestavení mají je jedinečné verze.
+   `true`, pokud má odkazované sestavení silný název. Silné pojmenované sestavení má jedinečnou verzi.
 
 - **Verze**
 
-   Verze odkazovaného sestavení zobrazí.
+   Zobrazuje verzi odkazovaného sestavení.
 
 ## <a name="see-also"></a>Viz také:
 
-[Odkaz na stránku vlastností projektu jazyka C++](reference/property-pages-visual-cpp.md)<br>
+[C++odkaz na stránku vlastností projektu](reference/property-pages-visual-cpp.md)<br>
 [Nastavení vlastností kompilátoru a sestavení C++ v sadě Visual Studio](working-with-project-properties.md)

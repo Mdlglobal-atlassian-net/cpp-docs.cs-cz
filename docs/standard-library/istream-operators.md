@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 f1_keywords:
 - istream/std::operator&gt;&gt;
 ms.assetid: 7174da41-f301-4a34-b631-0ab918b188d2
-ms.openlocfilehash: c10692194c80051b10ecbe776c7d23a03860d508
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: f5da7c6805d10e919255ce301dae5618ef58e76d
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68447788"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69501916"
 ---
 # <a name="ltistreamgt-operators"></a>&lt;IStream&gt; operátory
 
@@ -86,7 +86,7 @@ basic_istream<Elem, Tr>& operator>>(
 
 extrahuje do *N* -1 prvků a ukládá je v poli začínajícím na _ *str*. If `Istr`. [Šířka](../standard-library/ios-base-class.md#width) je větší než nula, *N* je `Istr`. **Šířka**; v opačném případě je to velikost největšího pole `Elem` , které lze deklarovat. Funkce vždy ukládá hodnotu `Elem()` po všech extrahovaných prvcích, které ukládá. Extrakce se zastaví na konci souboru na znaku s hodnotou **elem**(0) (která není extrahována) nebo na jakémkoli elementu (který není extrahován), který by byl zahozen pomocí [WS](../standard-library/istream-functions.md#ws). Pokud funkce neextrahuje žádné elementy, volá `Istr`. [setstate](../standard-library/basic-ios-class.md#setstate) (**failbit**). V každém případě volá `Istr`. **Šířka** (0) a vrátí *ISTR*.
 
-**Poznámka k zabezpečení** Řetězec zakončený hodnotou null ze vstupního datového proudu nesmí překročit velikost cílového *str*vyrovnávací paměti. Další informace najdete v tématu [předcházení přetečení vyrovnávací paměti](/windows/desktop/SecBP/avoiding-buffer-overruns).
+**Poznámka k zabezpečení** Řetězec zakončený hodnotou null ze vstupního datového proudu nesmí překročit velikost cílového *str*vyrovnávací paměti. Další informace najdete v tématu [předcházení přetečení vyrovnávací paměti](/windows/win32/SecBP/avoiding-buffer-overruns).
 
 Funkce šablony:
 
@@ -96,7 +96,7 @@ basic_istream<Elem, Tr>& operator>>(
     basic_istream<Elem, Tr>& Istr, Elem& Ch);
 ```
 
-extrahuje element, pokud je to možné, a uloží ho do *ch*. V opačném případě **volá.** [setstate](../standard-library/basic-ios-class.md#setstate) ( **failbit**). V každém případě vrátí *ISTR*.
+extrahuje element, pokud je to možné, a uloží ho do *ch*. V opačném případěvolá. [setstate](../standard-library/basic-ios-class.md#setstate) ( **failbit**). V každém případě vrátí *ISTR*.
 
 Funkce šablony:
 

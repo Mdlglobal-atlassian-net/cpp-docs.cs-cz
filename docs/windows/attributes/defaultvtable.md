@@ -1,21 +1,21 @@
 ---
-title: defaultvtable (atribut C++ COM)
+title: defaultvtable (C++ atribut com)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.defaultvtable
 helpviewer_keywords:
 - defaultvtable attribute
 ms.assetid: 5b3ed483-f69e-44dd-80fc-952028eb9d73
-ms.openlocfilehash: 813fb9dd4edf2f6e522e7310ba1e8bfcd55ed2b9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8ab37af4deab516dc01f55f986811668737cf18c
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62147948"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69501650"
 ---
 # <a name="defaultvtable"></a>defaultvtable
 
-Definuje rozhraní jako výchozího rozhraní vtable pro objekt modelu COM.
+Definuje rozhraní jako výchozí rozhraní vtable pro objekt COM.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -26,15 +26,15 @@ Definuje rozhraní jako výchozího rozhraní vtable pro objekt modelu COM.
 ### <a name="parameters"></a>Parametry
 
 *interface*<br/>
-Určené rozhraní, které mají mít výchozí vtable pro objekt modelu COM.
+Určené rozhraní, které má výchozí vtable pro objekt COM.
 
 ## <a name="remarks"></a>Poznámky
 
-**Defaultvtable** C++ atribut má stejné funkce jako [defaultvtable](/windows/desktop/Midl/defaultvtable) atribut MIDL.
+Atribut **defaultvtable** C++ má stejné funkce jako atribut [defaultvtable](/windows/win32/Midl/defaultvtable) MIDL.
 
 ## <a name="example"></a>Příklad
 
-Následující kód ukazuje na třídu, která použít atributy **defaultvtable** k určení výchozího rozhraní:
+Následující kód ukazuje atributy třídy, které používají **defaultvtable** k určení výchozího rozhraní:
 
 ```cpp
 // cpp_attr_ref_defaultvtable.cpp
@@ -64,16 +64,16 @@ class CMyC3 : public IMyI3 {};
 
 ## <a name="requirements"></a>Požadavky
 
-### <a name="attribute-context"></a>Atribut kontextu
+### <a name="attribute-context"></a>Kontext atributu
 
 |||
 |-|-|
-|**Platí pro**|**Třída**, **– struktura**|
-|**Opakovatelné**|Ne|
-|**Vyžadované atributy**|**coclass**|
+|**Platí pro**|**Třída**, **Struktura**|
+|**REPEATABLE**|Ne|
+|**Požadované atributy**|**coclass**|
 |**Neplatné atributy**|Žádné|
 
-Další informace najdete v tématu [kontexty atributů](cpp-attributes-com-net.md#contexts).
+Další informace naleznete v tématu [kontexty atributů](cpp-attributes-com-net.md#contexts).
 
 ## <a name="see-also"></a>Viz také:
 

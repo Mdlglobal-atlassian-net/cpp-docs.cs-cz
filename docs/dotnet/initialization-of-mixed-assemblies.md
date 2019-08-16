@@ -10,62 +10,62 @@ helpviewer_keywords:
 - custom locales [C++]
 - mixed assemblies [C++], initilizing
 ms.assetid: bfab7d9e-f323-4404-bcb8-712b15f831eb
-ms.openlocfilehash: 05ffa5ba838b28764afb4ab7f30411ad786227f8
-ms.sourcegitcommit: 6cf0c67acce633b07ff31b56cebd5de3218fd733
+ms.openlocfilehash: 35dd47bd87c278d60fc616dca854bf843acc7c57
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/24/2019
-ms.locfileid: "67344176"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69501231"
 ---
 # <a name="initialization-of-mixed-assemblies"></a>Inicializace smíšených sestavení
 
-Vývojáři Windows musí být opatrně zámek zavaděče při spuštění kódu během `DllMain`. Existují však některé další problémy, které je třeba zvážit při práci s C++sestavení ve smíšeném režimu/CLR.
+Vývojáři systému Windows musí být při spuštění kódu v průběhu `DllMain`přistupují opatrně vždy uzamčen zavaděč. Existují však některé další problémy, které je potřeba vzít v úvahu při C++práci s/CLR sestaveními smíšeného režimu.
 
-Kód v rámci [DllMain](/windows/desktop/Dlls/dllmain) nesmí přístup .NET CLR Common Language Runtime (). To znamená, že `DllMain` by měla volat žádné spravované funkce, přímo nebo nepřímo; žádný spravovaný kód by měl být deklarován nebo implementované v `DllMain`; a žádná uvolnění paměti nebo automatické načítání knihovna má být provedena v rámci `DllMain` .
+Kód v [DllMain](/windows/win32/Dlls/dllmain) nesmí přistupovat k modulu CLR (Common Language Runtime) .NET. To znamená `DllMain` , že by nemělo dělat žádná volání spravovaných funkcí přímo ani nepřímo; žádný spravovaný kód by neměl být deklarován nebo `DllMain`implementován v; a žádné uvolňování paměti nebo automatické načítání knihoven by `DllMain` nemělo probíhat v rámci .
 
-## <a name="causes-of-loader-lock"></a>Příčiny zámek zavaděče
+## <a name="causes-of-loader-lock"></a>Příčiny zámku zavaděče
 
-Se zavedením na platformě .NET, existují dva odlišné mechanismy pro načítání modul spuštění (EXE nebo DLL): jeden pro Windows, který se používá pro nespravované moduly, a jeden pro modul CLR, která načte sestavení .NET. Smíšené problém načtení knihovny DLL se soustředí kolem zavaděč operačního systému Microsoft Windows.
+Při zavádění platformy .NET existují dva odlišné mechanismy pro načtení modulu spuštění (EXE nebo DLL): jeden pro systém Windows, který se používá pro nespravované moduly a jeden pro modul CLR, který načte sestavení .NET. Kombinovaná knihovna DLL načítající problém se pohybuje na střed zavaděče operačního systému Microsoft Windows.
 
-Pokud je načten do procesu sestavení obsahující pouze .NET konstrukce, zavaděč modulu CLR, provést všechny potřebné úkoly inicializace a načítání samotný. Ale pro smíšená sestavení, protože mohou obsahovat nativní kód a data, zavaděč Windows musí také možné používat.
+Když je sestavení obsahující pouze konstrukce .NET načteno do procesu, zavaděč CLR může provést všechny nezbytné úlohy načítání a inicializace. Nicméně pro smíšená sestavení, protože mohou obsahovat nativní kód a data, musí být použit zavaděč systému Windows.
 
-Zavaděč Windows zaručuje, že žádný kód můžete přístupový kód nebo data v této knihovně DLL předtím, než byl inicializován a že žádný kód můžete redundantně načíst knihovnu DLL při částečně je inicializován. K tomu, zavaděč Windows používá globální procesu kritický oddíl (často označované jako "zámek zavaděče"), který zabrání unsafe přístupu při inicializaci modulu. V důsledku toho je citlivé na řadu scénářů classic zablokování procesu načítání. Následující dva scénáře pro smíšená sestavení, zvyšte riziku zablokování:
+Zavaděč systému Windows zaručuje, že žádný kód nemůže získat přístup ke kódu nebo datům v této knihovně DLL předtím, než byl inicializován, a že žádný kód nemůže redundantní knihovnu DLL načítat při částečně inicializaci. K tomu zavaděč Windows používá oddíl kritický pro procesy (často se označuje jako "zámek zavaděče"), který zabraňuje nezabezpečenému přístupu během inicializace modulu. V důsledku toho je proces načítání zranitelný z řady klasických scénářů vzájemného zablokování. U smíšených sestavení zvyšuje riziko zablokování následující dva scénáře:
 
-- První, pokud se uživatelé pokusí spustit funkce zkompilované do jazyk Microsoft intermediate language (MSIL), pokud je držen zámek zavaděče (z `DllMain` nebo statické inicializátory, například), může to způsobit zablokování. Vezměte si situaci, ve kterém funkce jazyka MSIL odkazuje na typ v sestavení, který není načtený. Modul CLR se pokusí automaticky načíst toto sestavení, které mohou vyžadovat Windows zavaděče blokovat zámek zavaděče. K zablokování dochází tehdy, protože zámek zavaděče se již nachází v kódu výše v pořadí volání. Nicméně spuštění jazyka MSIL nastavený zámek zavaděče nezaručuje, že dojde k zablokování, které tento scénář je obtížné diagnostikovat a opravit. V některých případech, jako když obsahuje knihovnu DLL odkazovaného typu žádné nativní konstrukce a všechny jeho závislosti neobsahují žádné nativní konstrukce Windows zavaděče není nutné, aby se načíst sestavení .NET odkazovaného typu. Kromě toho požadované sestavení nebo jeho závislosti smíšená nativní/.NET může již byly načteny jiným kódem. V důsledku toho vzájemné zablokování může být obtížné odhadnout a může lišit v závislosti na konfiguraci cílového počítače.
+- Nejprve, pokud se uživatel pokusí spustit funkce zkompilované do jazyka MSIL (Microsoft Intermediate Language), když je držen zámek zavaděče `DllMain` (například z nebo ve statických inicializátorech), může způsobit zablokování. Vezměte v úvahu případ, ve kterém funkce jazyka MSIL odkazuje na typ v sestavení, které nebylo načteno. Modul CLR se pokusí toto sestavení automaticky načíst, což může vyžadovat, aby zavaděč systému Windows blokoval zámek zavaděče. Dojde k zablokování, protože zámek zavaděče již je držen kódem dříve v sekvenci volání. Spuštění jazyka MSIL v rámci zámku zavaděče však nezaručuje, že dojde k zablokování, což usnadňuje diagnostikování a opravu tohoto scénáře. V některých případech, například pokud knihovna DLL odkazovaného typu neobsahuje žádné nativní konstrukce a všechny její závislosti neobsahují žádné nativní konstrukce, zavaděč Windows není vyžadován pro načtení sestavení .NET odkazovaného typu. Kromě toho je možné, že požadované sestavení nebo jeho smíšené nativní/. .NET závislosti již byly načteny jiným kódem. V důsledku toho může být zablokování obtížné odhadnout a může se lišit v závislosti na konfiguraci cílového počítače.
 
-- Za druhé při načítání knihovny DLL ve verzích 1.0 a 1.1 rozhraní .NET Framework, modul CLR předpokládá, že nebyl držen zámek zavaděče a provést několik akcí, které jsou neplatné nastavený zámek zavaděče. Za předpokladu, že není držen zámek zavaděče je platný předpokladů pro čistě knihovny DLL .NET, ale protože smíšených knihoven DLL spustit nativní inicializační rutiny, vyžadují nativní zavaděč Windows a proto zámek zavaděče. V důsledku toho i v případě, že vývojář nebyl pokusu o provedení žádné funkce jazyka MSIL během inicializace knihovny DLL, se stále malá možnost nedeterministická zablokování pomocí verze 1.0 a 1.1 rozhraní .NET Framework.
+- Za druhé, při načítání knihoven DLL ve verzích 1,0 a 1,1 .NET Framework modul CLR předpokládá, že zámek zavaděče nebyl držen a provede několik akcí, které jsou v uzamknutí zavaděče neplatné. Za předpokladu, že zámek zavaděče není držen, je platný předpoklad pro čistě knihovny DLL rozhraní .NET, ale vzhledem k tomu, že smíšené knihovny DLL spouštějí nativní inicializační rutiny, vyžadují nativní zavaděč systému Windows, a proto je zámek zavaděče. V důsledku toho i v případě, že se vývojář při inicializaci knihovny DLL nepokouší spustit žádné funkce jazyka MSIL, byla stále malá možnost nedeterministického zablokování s verzemi 1,0 a 1,1 .NET Framework.
 
-Všechny seznam byl odebrán z procesu načítání smíšených knihoven DLL. Bylo dosaženo pomocí těchto změn:
+Všechny jiné než determinismem byly odebrány z smíšeného procesu načítání knihovny DLL. Tyto změny byly provedeny:
 
-- Při načítání smíšených knihoven DLL, CLR už díky false předpoklady.
+- Modul CLR již nevytváří nepravdivé předpoklady při načítání smíšených knihoven DLL.
 
-- Nespravovaná a spravovaná inicializace probíhá ve dvou fázích samostatné a odlišné. Nespravované inicializace probíhá nejprve (prostřednictvím funkce DllMain) a spravovaný inicializace probíhá později, až. Podporované NET `.cctor` vytvořit. Druhá možnost je pro uživatele zcela transparentní. není-li **/Zl** nebo **: / NODEFAULTLIB** se používají. Zobrazit[: / NODEFAULTLIB (ignorování knihoven)](../build/reference/nodefaultlib-ignore-libraries.md) a [/Zl (vynechat název výchozí knihovny)](../build/reference/zl-omit-default-library-name.md) Další informace.
+- Nespravovaná a spravovaná inicializace se provádí ve dvou samostatných a samostatných fázích. K nespravované inicializaci dochází nejprve (přes DllMain) a spravovaná inicializace probíhá poté prostřednictvím. Konstrukce podporovaná `.cctor` .NET. Ta je zcela transparentní pro uživatele, pokud se nepoužívají **/zl** nebo **/NODEFAULTLIB** . Další informace najdete v tématu[/NODEFAULTLIB (ignoruje knihovny)](../build/reference/nodefaultlib-ignore-libraries.md) a [/zl (vynechání názvu výchozí knihovny)](../build/reference/zl-omit-default-library-name.md) .
 
-Zámek zavaděče může stále dojít, ale nyní reprodukovatelná dochází a je zjištěn. Pokud `DllMain` obsahuje instrukce jazyka MSIL, kompilátor vygeneruje upozornění [upozornění kompilátoru (úroveň 1) C4747](../error-messages/compiler-warnings/compiler-warning-level-1-c4747.md). Kromě toho CRT nebo modulu CLR se pokusí rozpoznat a ohlásit pokusí spustit jazyk MSIL nastavený zámek zavaděče. Detekce CRT výsledků v modulu runtime R6033 diagnostických C Run-Time chyba jazyka.
+Zámek zavaděče může stále nastat, ale nyní k němu dochází reproducibly a byl zjištěn. Pokud `DllMain` obsahuje instrukce jazyka MSIL, kompilátor generuje upozornění [kompilátoru upozornění (úroveň 1) C4747](../error-messages/compiler-warnings/compiler-warning-level-1-c4747.md). Kromě toho se buď CRT, nebo modul CLR pokusí rozpoznat a ohlásit pokusy o spuštění MSIL v rámci zámku zavaděče. Při detekci CRT dojde k chybě běhové diagnostiky C R6033.
 
-Zbývající část tohoto dokumentu popisuje scénáře zbývající, pro které můžete spustit jazyk MSIL zámek zavaděče řešení problému v každém z těchto scénářů a techniky ladění.
+Zbývající část tohoto dokumentu popisuje zbývající scénáře, pro které lze jazyk MSIL spustit pod zámkem zavaděče, řešení problému v každém z těchto scénářů a techniky ladění.
 
-## <a name="scenarios-and-workarounds"></a>Scénáře a řešení
+## <a name="scenarios-and-workarounds"></a>Scénáře a alternativní řešení
 
-Existuje několik různých situacích, kdy může uživatel provést kód jazyka MSIL nastavený zámek zavaděče. Vývojář musí zajistit, že implementace kódu uživatele nebude pokoušet pro spouštění instrukcí jazyka MSIL pod každým z těchto okolností. Následující témata popisují všechny možnosti s diskusi o tom, jak vyřešit problémy v nejběžnějších případech.
+Existuje několik různých situací, kdy uživatelský kód může spustit MSIL v uzamknutí zavaděče. Vývojář musí zajistit, aby implementace kódu uživatele neprováděla při každém z těchto okolností instrukce jazyka MSIL. Následující pododdíly popisují všechny možnosti a diskuzi o tom, jak řešit problémy v nejběžnějších případech.
 
 ### <a name="dllmain"></a>DllMain
 
-`DllMain` Funkce je uživatelem definovaný vstupní bod pro knihovnu DLL. Pokud uživatel neurčí jinak, `DllMain` je vyvolána pokaždé, když proces nebo vlákno připojí nebo odpojí od obsahující knihovnu DLL. Protože toto volání může dojít, dokud je držen zámek zavaděče, ne uživatelem zadané `DllMain` funkce by měla být zkompilována do jazyka MSIL. Kromě toho se žádná funkce ve stromu volání kořenovým adresářem v `DllMain` mohou být zkompilována do jazyka MSIL. Chcete-li vyřešit problémy většinou neřeší, blok kódu, který definuje `DllMain` by měl být upraven pomocí #pragma `unmanaged`. Stejné by měla provést pro každou funkci, která `DllMain` volání.
+`DllMain` Funkce je uživatelem definovaný vstupní bod pro knihovnu DLL. Pokud uživatel neurčí jinak, `DllMain` je vyvolána pokaždé, když se proces nebo vlákno připojí nebo odpojí z obsahující knihovny DLL. Vzhledem k tomu, že k tomuto vyvolání může dojít, když je držen zámek zavaděče `DllMain` , žádná uživatelem zadaná funkce by neměla být zkompilována do jazyka MSIL. Kromě toho není k dispozici žádná funkce ve stromové `DllMain` struktuře volání v kořenovém adresáři v jazyce MSIL. Chcete-li vyřešit problémy, je třeba změnit blok `DllMain` kódu, který definuje, `unmanaged`pomocí #pragma. Stejné by měly být provedeny pro všechny funkce, `DllMain` které volají.
 
-V případech, kde tyto funkce musí volat funkci, která vyžaduje implementaci jazyka MSIL pro jiné kontexty volání duplikace strategie je možné kde jsou vytvářeny .NET a nativní verzi stejnou funkci.
+V případech, kdy tyto funkce musí volat funkci, která vyžaduje implementaci MSIL pro jiné volající kontexty, lze použít strategii duplikace, kde jsou vytvořeny rozhraní .NET i nativní verze stejné funkce.
 
-Případně pokud `DllMain` nevyžaduje nebo pokud není nutné provádět v rámci zavaděč uzamčení, pokud uživatel `DllMain` implementace může být odebrána, které dojde k odstranění problému.
+Případně, pokud `DllMain` není vyžadován nebo pokud není nutné provádět v rámci uzamknutí zavaděče, lze odebrat uživatelem zadanou `DllMain` implementaci, čímž dojde k odstranění problému.
 
-Pokud se pokusí spustit jazyk MSIL přímo, zpracování funkce DllMain [upozornění kompilátoru (úroveň 1) C4747](../error-messages/compiler-warnings/compiler-warning-level-1-c4747.md) dojde. Kompilátor však nemůže rozpoznat případy, kdy zpracování funkce DllMain volá funkci v další modul, který se pak pokusí spustit jazyk MSIL.
+Pokud se DllMain pokusí spustit jazyk MSIL přímo, bude výsledkem [Upozornění kompilátoru (úroveň 1) C4747](../error-messages/compiler-warnings/compiler-warning-level-1-c4747.md) . Kompilátor ale nemůže detekovat případy, kdy DllMain volá funkci v jiném modulu, který se zase pokusí spustit jazyk MSIL.
 
-Další informace o tomto scénáři najdete v tématu [překážky pro diagnostiku](#impediments-to-diagnosis).
+Další informace o tomto scénáři naleznete v tématu [překážky pro diagnostiku](#impediments-to-diagnosis).
 
 ### <a name="initializing-static-objects"></a>Inicializace statických objektů
 
-Inicializace statických objektů může způsobit zablokování, pokud je potřeba dynamických inicializátorů. Jednoduché v případech, například když je statická proměnná přiřadit hodnotu v době kompilace znám žádný dynamická inicializace je požadovaná, proto neexistuje žádný riziku zablokování. Však statické proměnné inicializován pomocí volání funkce, vyvolání konstruktoru nebo výrazy, které nelze vyhodnotit za kompilace všechny vyžadují kód ke spuštění během inicializace modulu.
+Inicializace statických objektů může vést k zablokování, pokud je požadován dynamický inicializátor. Pro jednoduché případy, například pokud je statická proměnná přiřazena k hodnotě známé v době kompilace, není nutná žádná dynamická inicializace, takže nedochází k zablokování. Statické proměnné inicializované voláním funkce, vyvolání konstruktoru nebo výrazy, které nelze vyhodnotit v době kompilace, však vyžadují, aby při inicializaci modulu běžel kód.
 
-Následující kód ukazuje příklady statické inicializátory, které vyžadují dynamická inicializace: volání funkce, vytváření objektu a inicializace ukazatele. (Tyto příklady nejsou statické, ale předpokládá, že jsou definované v globálním rozsahu, který má stejný účinek.)
+Následující kód ukazuje příklady statických inicializátorů, které vyžadují dynamickou inicializaci: volání funkce, konstrukce objektu a inicializace ukazatele. (Tyto příklady nejsou statické, ale jsou považovány za definované v globálním oboru, který má stejný efekt.)
 
 ```cpp
 // dynamic initializer function generated
@@ -74,51 +74,51 @@ CObject o(arg1, arg2);
 CObject* op = new CObject(arg1, arg2);
 ```
 
-Toto riziko zablokování závisí na tom, zda je kompilován obsahující modul **/CLR** a určuje, zda bude proveden jazyka MSIL. Konkrétně Pokud statická proměnná je kompilován bez **/CLR** (nebo se nachází v #pragma `unmanaged` bloku), a dynamického inicializátoru potřebné k inicializaci je výsledkem spuštění instrukce jazyka MSIL, může dojít k zablokování. Je proto, že pro moduly zkompilované bez **/CLR**, inicializace statických proměnných se provádí pomocí funkce DllMain. Naproti tomu statické proměnné zkompilovaná **/CLR** jsou inicializovány `.cctor`, po dokončení fáze inicializace nespravované a byla vydána zavaděči.
+Toto riziko zablokování závisí na tom, zda obsažený modul je zkompilován s možností **/CLR** a zda bude zpracováno MSIL. Konkrétně, pokud je statická proměnná zkompilována bez **/CLR** (nebo se nachází v bloku #pragma `unmanaged` ), a dynamický inicializátor vyžadovaný k jeho inicializaci má za následek spuštění instrukcí jazyka MSIL, může dojít k zablokování. Je to proto, že pro moduly zkompilované bez **/CLR**je inicializace statických proměnných prováděna v DllMain. Naproti tomu statické proměnné zkompilované s **/CLR** jsou inicializovány pomocí `.cctor`, po dokončení nespravované fáze inicializace a uvolnění zámku zavaděče.
 
-Existuje mnoho řešení k vzájemnému zablokování způsobené dynamická inicializace statických proměnných (přibližně uspořádány v pořadí podle čas potřebný k vyřešení problému):
+Existuje mnoho řešení pro zablokování způsobené dynamickou inicializací statických proměnných (uspořádané přibližně v čase potřebném k vyřešení problému):
 
-- Zdrojový soubor obsahující statickou proměnnou, může být zkompilován s **/CLR**.
+- Zdrojový soubor obsahující statickou proměnnou lze zkompilovat pomocí **/CLR**.
 
-- Všechny funkce volána statická proměnná nemůže být zkompilována pro nativní kód pomocí #pragma `unmanaged` směrnice.
+- Všechny funkce, které jsou volány statickou proměnnou, mohou být zkompilovány do nativního kódu pomocí direktivy #pragma `unmanaged` .
 
-- Ručně zkopírujte kód, který statická proměnná závisí, poskytování .NET a nativní verzi s různými názvy. Vývojářům můžete volat nativní verzi z nativní statické inicializátory a volání rozhraní .NET verze jinde.
+- Ručně naklonujte kód, na kterém závisí statická proměnná, a poskytněte rozhraní .NET i nativní verzi s různými názvy. Vývojáři pak mohou zavolat nativní verzi z nativních statických inicializátorů a zavolat verzi rozhraní .NET jinam.
 
-### <a name="user-supplied-functions-affecting-startup"></a>Uživatelem zadané funkce by to ovlivnilo po spuštění
+### <a name="user-supplied-functions-affecting-startup"></a>Uživatelem zadané funkce ovlivňující spuštění
 
-Existuje několik uživatelem zadané funkce, na kterých závisí knihovny pro inicializaci během spouštění. Například když globálně přetížení operátorů v jazyce C++, jako `new` a `delete` operátory, verze zadané uživatele jsou použít kdekoli, včetně inicializace standardní knihovny C++ a zničení. V důsledku toho standardní knihovny C++ a uživatelem zadané statické inicializátory vyvolá uživatelem zadaný verze těchto operátorů.
+K dispozici je několik uživatelem zadaných funkcí, ve kterých jsou knihovny závislé na inicializaci během spuštění. Například při globálně C++ Přetěžování operátorů v `new` , jako jsou operátory a `delete` , jsou uživatelem zadané verze použity všude, včetně inicializace a zničení C++ standardní knihovny. V důsledku toho C++ budou standardní knihovny a uživatelem zadané statické inicializátory volat všechny uživatelem zadané verze těchto operátorů.
 
-Pokud verze zadané uživatele jsou zkompilovány do jazyka MSIL, pak tyto inicializátory zkusíte pro spouštění instrukcí jazyka MSIL, dokud je držen zámek zavaděče. Uživatelem zadané `malloc` má stejné důsledky. Chcete-li vyřešit tento problém, některý z těchto přetížení nebo uživatelem zadané definice musí implementovány v nativním kódu s využitím #pragma `unmanaged` směrnice.
+Pokud jsou uživatelem zadané verze zkompilovány do jazyka MSIL, pak se tyto inicializátory pokusí spustit instrukce jazyka MSIL v době, kdy je držen zámek zavaděče. Zadaný `malloc` uživatel má stejné důsledky. Chcete-li vyřešit tento problém, jakékoli z těchto přetížení nebo uživatelsky dodaných definic musí být implementovány jako nativní kód `unmanaged` pomocí direktivy #pragma.
 
-Další informace o tomto scénáři najdete v tématu [překážky pro diagnostiku](#impediments-to-diagnosis).
+Další informace o tomto scénáři naleznete v tématu [překážky pro diagnostiku](#impediments-to-diagnosis).
 
 ### <a name="custom-locales"></a>Vlastní národní prostředí
 
-Pokud uživatel zadá vlastní globální národní prostředí, toto národní prostředí se použije pro všechny budoucí vstupně-výstupních operací datové proudy, včetně datových proudů, které jsou staticky inicializovat inicializace. Pokud je tento objekt globální národní prostředí zkompilována do jazyka MSIL, může objekt národního prostředí členské funkce zkompilované na MSIL vyvolat, dokud je držen zámek zavaděče.
+Pokud uživatel zadá vlastní globální národní prostředí, bude toto národní prostředí použito pro inicializaci všech budoucích vstupně-výstupních proudů, včetně datových proudů, které jsou staticky inicializovány. Pokud je tento globální objekt národního prostředí zkompilován do jazyka MSIL, pak mohou být členské funkce národního objektu kompilovány do jazyka MSIL vyvolány v době, kdy je držen zámek zavaděče.
 
 Existují tři možnosti pro řešení tohoto problému:
 
-Zdrojové soubory obsahující všechny globální definice datového proudu vstupně-výstupní operace může být kompilováno s použitím **/CLR** možnost. Ta brání jejich statické inicializátory být prováděn nastavený zámek zavaděče.
+Zdrojové soubory obsahující všechny globální vstupně-výstupní proudové definice mohou být kompilovány pomocí možnosti **/CLR** . Zabraňuje jejich statickému inicializátoru v provádění uzamknutí zavaděče.
 
-Definice funkcí vlastní národní prostředí můžete zkompilované do nativního kódu s použitím #pragma `unmanaged` směrnice.
+Definice funkce vlastního národního prostředí lze zkompilovat do nativního kódu pomocí direktivy #pragma `unmanaged` .
 
-Zdrží nastavení vlastní národní prostředí jako globální národní prostředí až po vydání zámek zavaděče. Potom nakonfigurujte explicitně vstupně-výstupních operací datové proudy vytvořené během inicializace s vlastní národní prostředí.
+Nepoužívejte možnost nastavit vlastní národní prostředí jako globální národní prostředí, dokud se neuvolní zámek zavaděče. Potom explicitně nakonfigurujte vstupně-výstupní proudy vytvořené během inicializace pomocí vlastního národního prostředí.
 
 ## <a name="impediments-to-diagnosis"></a>Překážky pro diagnostiku
 
-V některých případech je obtížné rozpoznat příčiny zablokování. Následující témata popisují tyto scénáře a způsoby, jak tyto problémy obejít.
+V některých případech je obtížné zjistit zdroj zablokování. Následující pododdíly projednávají tyto scénáře a způsoby, jak tyto problémy obejít.
 
-### <a name="implementation-in-headers"></a>Implementace v záhlaví
+### <a name="implementation-in-headers"></a>Implementace v hlavičkách
 
-V případech, select může zkomplikovat implementace funkce uvnitř hlavičkové soubory diagnostiky. Vložené funkce a kód šablony vyžadují, aby byl specifikován funkce v hlavičkovém souboru.  Jazyk C++ určuje jednoho definičního pravidla, která vynutí všechny implementace funkcí se stejným názvem jako sémanticky ekvivalentní. V důsledku toho linkeru C++ nemusí provést žádná zvláštní opatření, při slučování souborů objektů, které mají duplicitní implementace dané funkce.
+V rámci výběrových případů mohou implementace funkcí uvnitř hlavičkových souborů zkomplikovat diagnostiky. Vložené funkce a kód šablony vyžadují, aby byly v hlavičkovém souboru zadány funkce.  C++ Jazyk určuje jedno pravidlo definice, které vynutí sémantickou shodu všech implementací funkcí se stejným názvem. V C++ důsledku toho linker nemusí při slučování souborů objektů, které mají duplicitní implementace dané funkce, dělat žádné zvláštní požadavky.
 
-Před Visual Studio 2005 linker jednoduše zvolí největší tyto sémantické ekvivalenty definic, tak, aby vyhovovaly deklarace dopředu a scénáře, pokud možnosti různých optimalizace se používá pro jiné zdrojové soubory. Vytvoří problém pro smíšená nativní/.NET knihovny DLL.
+Před verzí sady Visual Studio 2005 linker jednoduše zvolí největší z těchto sémantickě ekvivalentních definic, aby vyhověly dopředné deklarace a scénáře, kdy se pro různé zdrojové soubory používají různé možnosti optimalizace. Vytvoří problém pro smíšené nativní/. NET knihovny DLL.
 
-Vzhledem k tomu může být stejná hlavička vložena jak C++ soubory s **/CLR** povolené a zakázané, nebo #include dá zabalit uvnitř `#pragma unmanaged` blok, je možné mít jazyk MSIL i nativní verze funkcí, které poskytují implementace v záhlaví. Jazyk MSIL a nativní implementace mají různou sémantiku s ohledem na inicializaci zámek zavaděče, což účinně porušuje pravidlo jednu definici. V důsledku toho když linker vybere největší implementace, je rozhodnout MSIL verzi funkce, i v případě, že explicitně byl kompilován do nativního kódu jinde pomocí směrnice #pragma unmanaged. Aby bylo zajištěno, že je nastavený zámek zavaděče nikdy volána MSIL verzi šablony nebo vloženou funkci, musí být každý definice každé funkce volána nastavený zámek zavaděče upravena pomocí `#pragma unmanaged` směrnice. Pokud soubor hlaviček je od třetí strany, nejjednodušší způsob, jak provést tuto změnu je se službami push a vyvolat přes pop `#pragma unmanaged` direktiv kolem #include – direktiva problematický souboru hlaviček. (Viz [spravované, nespravované](../preprocessor/managed-unmanaged.md) příklad.) Tato strategie však nebude fungovat pro hlavičky, které obsahují jiný kód, který se musí volat přímo rozhraní API pro .NET.
+Vzhledem k tomu, že stejná hlavička může být C++ zahrnuta jak pomocí souborů s možností **/CLR** Enabled a disabled, nebo může být `#pragma unmanaged` #include zabalena uvnitř bloku, je možné mít jazyk MSIL i nativní verze funkcí, které poskytují implementace v záhlaví. Jazyk MSIL a nativní implementace mají odlišnou sémantiku s ohledem na inicializaci pod zámkem zavaděče, což efektivně porušuje pravidlo jednoho definice. Proto když linker zvolí největší implementaci, může zvolit verzi jazyka MSIL funkce, i když byla explicitně zkompilována do nativního kódu jinde pomocí #pragma nespravované direktivy. Aby se zajistilo, že verze jazyka MSIL šablony nebo vložené funkce se nikdy nevolá v rámci zámku zavaděče, musí se každá definice každé takové funkce, která je volána `#pragma unmanaged` v uzamknutí zavaděče, upravovat pomocí direktivy. Pokud je hlavičkový soubor od třetí strany, nejjednodušší způsob, jak tuto změnu provést, je nasdílení a `#pragma unmanaged` vložení direktivy do této direktivy #include pro problematický soubor hlaviček. (Příklad najdete v tématu [spravované, nespravované](../preprocessor/managed-unmanaged.md) .) Tato strategie ale nebude fungovat pro hlavičky, které obsahují jiný kód, který musí přímo volat rozhraní API .NET.
 
-V zájmu usnadnění práce pro uživatele pracující s zámek zavaděče linker zvolí nativní implementaci přes spravované převedou s oběma. Toto výchozí nastavení zabraňuje výše uvedené problémy. Nicméně existují dvě výjimky z tohoto pravidla v této verzi z důvodu dvou nevyřešené problémy s kompilátor:
+Pro uživatele, kteří se zabývat zámky zavaděče, linker zvolí nativní implementaci prostřednictvím spravovaného kódu, pokud je k dispozici v obou. Toto výchozí nastavení zabrání výše uvedeným problémům. Existují však dvě výjimky z tohoto pravidla v této verzi z důvodu dvou nevyřešených problémů s kompilátorem:
 
-- Je volání vložené funkce prostřednictvím ukazatele globální statické funkce. Tento scénář je důležité, protože virtuální funkce jsou volány prostřednictvím ukazatele na globální funkce. Například
+- Volání vložené funkce je prostřednictvím globálního ukazatele na statických funkcích. Tento scénář je významný, protože virtuální funkce jsou volány prostřednictvím ukazatelů globálních funkcí. Například
 
 ```cpp
 #include "definesmyObject.h"
@@ -138,49 +138,49 @@ void DuringLoaderlock(C & c)
 }
 ```
 
-### <a name="diagnosing-in-debug-mode"></a>Diagnostika v režimu ladění
+### <a name="diagnosing-in-debug-mode"></a>Diagnostikování v režimu ladění
 
-Všechny Diagnostika zámek zavaděče, které by mělo být provedeno problémy s ladicí sestavení. Sestavení pro vydání nemusí poskytovat diagnostiky a optimalizace provedené v režimu vydání může maskovat některý jazyk MSIL podle scénáře zámek zavaděče.
+Všechny diagnostiky problémů uzamknutí zavaděče by měly být provedeny pomocí sestavení ladění. Sestavení vydaných verzí nemusí způsobovat diagnostiku a optimalizace provedené v režimu vydání mohou maskovat některé z MSIL v rámci scénářů uzamknutí zavaděče.
 
-## <a name="how-to-debug-loader-lock-issues"></a>Jak ladit problémy zámek zavaděče
+## <a name="how-to-debug-loader-lock-issues"></a>Jak ladit problémy s zámkem zavaděče
 
-Diagnostiky, které generuje modul CLR při vyvolání funkce jazyka MSIL způsobí, že modul CLR k pozastavení provádění. Naopak, který způsobí, že vizuál C++ pracující v kombinovaném režimu ladění i při spuštění laděného procesu v rámci procesu. Ale při připojování k procesu, není možné získat spravované zásobník volání pro laděný proces pomocí smíšené ladicího programu.
+Diagnostika, kterou modul CLR generuje, když je vyvolána funkce jazyka MSIL, způsobí, že modul CLR pozastaví provádění. To zase způsobí, že se ladicí C++ program v kombinaci se smíšeným režimem pozastaví i při spuštění laděného procesu v procesu. Když se ale připojíte k procesu, není možné získat spravované zásobník volání pro laděného procesu pomocí kombinovaného ladicího programu.
 
-Vývojáři by k identifikaci konkrétní funkce jazyka MSIL, která byla volána nastavený zámek zavaděče, proveďte následující kroky:
+Chcete-li identifikovat konkrétní funkci jazyka MSIL, která byla volána v rámci zámku zavaděče, vývojáři by měli provést následující kroky:
 
-1. Ujistěte se, že jsou k dispozici symboly pro knihovny mscoree.dll a knihovny mscorwks.dll.
+1. Zajistěte, aby byly k dispozici symboly pro mscoree. dll a knihovny Mscorwks. dll.
 
-   Symboly můžete zpřístupnit dvěma způsoby. Soubory PDB pro knihovny mscoree.dll a knihovny mscorwks.dll nejprve, lze přidat do cesty pro hledání symbolů. Pokud chcete přidat, je, otevřete dialogové okno Možnosti cesty hledání symbolů. (Z **nástroje** nabídce zvolte **možnosti**. V levém podokně **možnosti** dialogovém okně Otevřít **ladění** uzlu a zvolte **symboly**.) Přidáte cestu do knihovny mscoree.dll a knihovny mscorwks.dll soubory PDB do seznamu hledání. Na % VSINSTALLDIR%\SDK\v2.0\symbols se nainstalují tyto soubory PDB. Zvolte **OK**.
+   Symboly můžete nastavit dvěma způsoby. Nejprve lze do cesty pro hledání symbolů přidat soubory PDB pro mscoree. dll a knihovny Mscorwks. dll. Pokud je chcete přidat, otevřete dialogové okno Možnosti cesty hledání symbolů. (V nabídce **nástroje** klikněte na příkaz **Možnosti**. V levém podokně dialogového okna **Možnosti** otevřete uzel **ladění** a vyberte možnost **symboly**.) Přidejte cestu do souborů Mscoree. dll a knihovny Mscorwks. dll do seznamu hledání. Tyto soubory PDB jsou nainstalovány do%VSINSTALLDIR%\SDK\v2.0\symbols. Zvolte **OK**.
 
-   Za druhé soubory PDB pro knihovny mscoree.dll a knihovny mscorwks.dll můžete stáhnout ze serveru symbolů Microsoft. Pokud chcete nakonfigurovat Server symbolů, otevřete dialogové okno Možnosti cesty hledání symbolů. (Z **nástroje** nabídce zvolte **možnosti**. V levém podokně **možnosti** dialogovém okně Otevřít **ladění** uzlu a zvolte **symboly**.) Přidat tuto cestu hledání do seznamu hledání: `https://msdl.microsoft.com/download/symbols`. Přidejte adresář mezipaměti symbolů do textového pole symbol server mezipaměti. Zvolte **OK**.
+   Za druhé se soubory PDB pro mscoree. dll a knihovny Mscorwks. dll dají stáhnout ze serveru symbolů Microsoftu. Chcete-li nakonfigurovat server symbolů, otevřete dialogové okno Možnosti cesty hledání symbolů. (V nabídce **nástroje** klikněte na příkaz **Možnosti**. V levém podokně dialogového okna **Možnosti** otevřete uzel **ladění** a vyberte možnost **symboly**.) Přidejte tuto cestu hledání do seznamu hledání: `https://msdl.microsoft.com/download/symbols`. Přidejte adresář mezipaměti symbolů do textového pole mezipaměť serveru symbolů. Zvolte **OK**.
 
-1. Nastavte režim ladění na nativní režim.
+1. Nastavte režim ladicího programu na režim pouze nativní.
 
-   Otevřít **vlastnosti** mřížky pro spouštěný projekt v řešení. Vyberte **vlastnosti konfigurace** > **ladění**. Nastavte **typ ladicího programu** k **jenom nativní**.
+   Otevřete mřížku **vlastností** pro spouštěný projekt v řešení. Vyberte možnosti **Konfigurace** > **ladění**. Nastavte **Typ ladicího programu** na **pouze nativní**.
 
-1. Spuštění ladicího programu (F5).
+1. Spusťte ladicí program (F5).
 
-1. Když **/CLR** diagnostiky se vygeneruje, zvolte **opakujte** a klikněte na tlačítko **přerušit**.
+1. Když je vygenerována Diagnostika **/CLR** , zvolte možnost **Opakovat** a pak zvolte možnost přerušit.
 
-1. Otevřete okno zásobníku volání. (Na řádku nabídek zvolte **ladění** > **Windows** > **zásobník volání**.) Je problematický `DllMain` nebo statický inicializátor se určuje podle zelenou šipku. Pokud problematický funkce není určena, následující kroky třeba ji najít.
+1. Otevřete okno zásobník volání. (Na panelu nabídek vyberte možnost **ladit** > **zásobník volání** **systému Windows** > .) Problematický `DllMain` nebo statický inicializátor je identifikován zelenou šipkou. Pokud není zjištěna problematická funkce, je nutné provést následující kroky, aby je bylo možné najít.
 
-1. Otevřít **okamžité** okna (v řádku nabídek zvolte **ladění** > **Windows** > **okamžité**.)
+1. Otevřete okno **Immediate** (na panelu nabídek vyberte možnost**okamžitě** **ladit** > **Windows** > ).
 
-1. Zadejte `.load sos.dll` do **okamžité** okna pro načtení ladění služby SOS.
+1. Zadejte `.load sos.dll` do příkazového **podokna** pro načtení služby SOS Debugging Service.
 
-1. Zadejte `!dumpstack` do **okamžité** okno získat úplný seznam všech vnitřní **/CLR** zásobníku.
+1. Zadejte `!dumpstack` do příkazového **podokna** , abyste získali úplný seznam interní sady **/CLR** .
 
-1. Vyhledejte první instance (co nejblíž koncovým dolního okraje zásobníku) buď _cordllmain – (Pokud `DllMain` způsobí, že problém) nebo _VTableBootstrapThunkInitHelperStub nebo GetTargetForVTableEntry (Pokud je statický inicializátor způsobí, že problém). Položka zásobníku přímo pod toto volání není že implementovaná funkce, která se pokusila provést nastavený zámek zavaděče volání MSIL.
+1. Vyhledá první instanci (nejbližší k dolnímu okraji zásobníku) buď _CorDllMain (Pokud `DllMain` způsobuje problém), nebo _VTableBootstrapThunkInitHelperStub nebo GetTargetForVTableEntry (Pokud se problém vyřeší pomocí statického inicializátoru). Položka zásobníku, která je bezprostředně pod tímto voláním, je vyvolání implementované funkce jazyka MSIL, která se pokusila provést v uzamknutí zavaděče.
 
-1. Přejít do zdrojového souboru a číslo identifikován v předchozím kroku a správné řádku potíže s použitím scénáře a řešení popsaných v části scénáře.
+1. V předchozím kroku přejdete na zdrojový soubor a číslo řádku a opravte problém pomocí scénářů a řešení popsaných v části scénáře.
 
 ## <a name="example"></a>Příklad
 
 ### <a name="description"></a>Popis
 
-Následující příklad ukazuje, jak se vyhnout zámek zavaděče přesunutím kód z `DllMain` do konstruktoru objektu globálního objektu.
+Následující příklad ukazuje, jak se vyhnout uzamknutí zavaděče přesunutím `DllMain` kódu z do konstruktoru globálního objektu.
 
-V této ukázce je globální spravovaný objekt, jehož konstruktor obsahuje spravovaný objekt, který byl původně v `DllMain`. Druhá část této ukázce odkazuje na sestavení, vytvoření instance spravovaných objektů, která se má vyvolat konstruktor modul, který provede inicializaci.
+V této ukázce je globální spravovaný objekt, jehož konstruktor obsahuje spravovaný objekt, který byl původně v `DllMain`. Druhá část této ukázky odkazuje na sestavení, vytvoření instance spravovaného objektu pro vyvolání konstruktoru modulu, který provede inicializaci.
 
 ### <a name="code"></a>Kód
 
@@ -211,7 +211,7 @@ BOOL WINAPI DllMain(HINSTANCE hInstance, DWORD dwReason, LPVOID lpReserved) {
 }
 ```
 
-Tento příklad ukazuje problémy v inicializace smíšených sestavení:
+Tento příklad ukazuje problémy při inicializaci smíšených sestavení:
 
 ```cpp
 // initializing_mixed_assemblies_2.cpp
@@ -230,7 +230,7 @@ int main() {
 }
 ```
 
-Tento kód vytvoří následující výstup:
+Tento kód generuje následující výstup:
 
 ```Output
 Module ctor initializing based on global instance of class.

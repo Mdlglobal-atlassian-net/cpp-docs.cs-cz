@@ -13,18 +13,18 @@ helpviewer_keywords:
 - explicit linking [C++]
 - DLLs [C++], unloading
 ms.assetid: 4a48d290-3971-43e9-8e97-ba656cd0c8f8
-ms.openlocfilehash: 59deb75ad77b0a80efc69d9991e093ecef95c51e
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.openlocfilehash: 9c657bb0d583270f81658afa53f36b1be6a4fd4a
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65221423"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69493269"
 ---
 # <a name="freelibrary-and-afxfreelibrary"></a>FreeLibrary a AfxFreeLibrary
 
-Procesy, které explicitní propojení s voláním knihovny DLL [FreeLibrary](/windows/desktop/api/libloaderapi/nf-libloaderapi-freelibrary) fungovat, když už modul knihovny DLL nepotřebujete. Tato funkce sníží počet odkazů modul a pokud počet odkazů je nula, zruší jeho mapování z adresního prostoru procesu.
+Procesy, které explicitně odkazují na knihovnu DLL, volají funkci [FreeLibrary](/windows/win32/api/libloaderapi/nf-libloaderapi-freelibrary) , pokud již modul knihovny DLL nepotřebujete. Tato funkce sníží počet odkazů modulu a, pokud je počet odkazů nula, nemapuje ho z adresního prostoru procesu.
 
-V aplikaci MFC pomocí [AfxFreeLibrary](../mfc/reference/application-information-and-management.md#afxfreelibrary) místo `FreeLibrary` uvolnění rozšiřující knihovny DLL MFC. Rozhraní (prototyp funkce) pro `AfxFreeLibrary` je stejný jako `FreeLibrary`.
+V aplikaci knihovny MFC použijte [AfxFreeLibrary](../mfc/reference/application-information-and-management.md#afxfreelibrary) namísto `FreeLibrary` uvolnění rozšiřující knihovny MFC DLL. Rozhraní (prototyp funkce) pro `AfxFreeLibrary` je stejné jako. `FreeLibrary`
 
 ## <a name="what-do-you-want-to-do"></a>Co chcete udělat?
 
@@ -32,7 +32,7 @@ V aplikaci MFC pomocí [AfxFreeLibrary](../mfc/reference/application-information
 
 - [Propojení spustitelného souboru s knihovnou DLL](linking-an-executable-to-a-dll.md#determining-which-linking-method-to-use)
 
-## <a name="what-do-you-want-to-know-more-about"></a>Co chcete zjistit více informací?
+## <a name="what-do-you-want-to-know-more-about"></a>K čemu chcete získat další informace?
 
 - [LoadLibrary a AfxLoadLibrary](loadlibrary-and-afxloadlibrary.md)
 
@@ -40,6 +40,6 @@ V aplikaci MFC pomocí [AfxFreeLibrary](../mfc/reference/application-information
 
 ## <a name="see-also"></a>Viz také:
 
-[Vytvoření knihovny DLL jazyka C/C++ v sadě Visual Studio](dlls-in-visual-cpp.md)<br/>
-[FreeLibrary](/windows/desktop/api/libloaderapi/nf-libloaderapi-freelibrary)
+[Vytváření C/C++ knihoven DLL v aplikaci Visual Studio](dlls-in-visual-cpp.md)<br/>
+[FreeLibrary](/windows/win32/api/libloaderapi/nf-libloaderapi-freelibrary)
 [AfxFreeLibrary](../mfc/reference/application-information-and-management.md#afxfreelibrary)

@@ -1,21 +1,21 @@
 ---
-title: řetězec (atribut C++ COM)
+title: String (C++ atribut com)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.string
 helpviewer_keywords:
 - string attribute
 ms.assetid: ddde900a-2e99-4fcd-86e8-57e1bdba7c93
-ms.openlocfilehash: e1b528fb922a15655de403c6099ee1d36e2fb3de
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 978f1f546c0df8de4ff167ddf5ddf724feb31b6e
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62407273"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69514016"
 ---
 # <a name="string-c"></a>string (C++)
 
-Označuje, že jednorozměrné pole **char**, **wchar_t**, `byte` (nebo obdobných) pole nebo ukazatel na takové pole musí být považované za řetězec.
+Označuje, že jednorozměrné pole **char**, **wchar_t**, `byte` (nebo ekvivalentní) nebo ukazatel na takové pole musí být považováno za řetězec.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -25,11 +25,11 @@ Označuje, že jednorozměrné pole **char**, **wchar_t**, `byte` (nebo obdobný
 
 ## <a name="remarks"></a>Poznámky
 
-**Řetězec** C++ atribut má stejné funkce jako [řetězec](/windows/desktop/Midl/string) atribut MIDL.
+**Řetězcový** C++ atribut má stejné funkce jako atribut [String](/windows/win32/Midl/string) MIDL.
 
 ## <a name="example"></a>Příklad
 
-Následující kód ukazuje, jak používat **řetězec** na rozhraní a definice typu:
+Následující kód ukazuje, jak použít **řetězec** v rozhraní a na typedef:
 
 ```cpp
 // cpp_attr_ref_string.cpp
@@ -46,16 +46,16 @@ __interface IFireTabCtrl
 
 ## <a name="requirements"></a>Požadavky
 
-### <a name="attribute-context"></a>Atribut kontextu
+### <a name="attribute-context"></a>Kontext atributu
 
 |||
 |-|-|
-|**Platí pro**|Pole nebo ukazatel pole, rozhraní parametrů, metody rozhraní|
-|**Opakovatelné**|Ne|
-|**Vyžadované atributy**|Žádný|
+|**Platí pro**|Pole nebo ukazatel na pole, parametr rozhraní, metoda rozhraní|
+|**REPEATABLE**|Ne|
+|**Požadované atributy**|Žádné|
 |**Neplatné atributy**|Žádné|
 
-Další informace o kontexty atributů najdete v tématu [kontexty atributů](cpp-attributes-com-net.md#contexts).
+Další informace o kontextech atributů naleznete v tématu kontexty [atributů](cpp-attributes-com-net.md#contexts).
 
 ## <a name="see-also"></a>Viz také:
 

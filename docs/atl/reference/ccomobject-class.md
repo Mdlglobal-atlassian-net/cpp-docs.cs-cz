@@ -12,16 +12,16 @@ f1_keywords:
 helpviewer_keywords:
 - CComObject class
 ms.assetid: e2b6433b-6349-4749-b4bc-acbd7a22c8b0
-ms.openlocfilehash: 045292e4d06b1e86e991a755b267660b72a178da
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a2051932413d8658eb7cedb67ed0eab2077b599d
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62246336"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69497138"
 ---
 # <a name="ccomobject-class"></a>CComObject – třída
 
-Tato třída implementuje `IUnknown` pro neagregovaná objekt.
+Tato třída implementuje `IUnknown` neagregovaný objekt.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -32,32 +32,32 @@ class CComObject : public Base
 
 #### <a name="parameters"></a>Parametry
 
-*základ*<br/>
-Vaše třída odvozena od [ccomobjectroot –](../../atl/reference/ccomobjectroot-class.md) nebo [CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md), jak dobře jako z jiných rozhraní, které chcete podporovat na objekt.
+*Základ*<br/>
+Vaše třída odvozená z [třídy CComObjectRoot](../../atl/reference/ccomobjectroot-class.md) nebo [CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md)a také z jiných rozhraní, která chcete pro objekt podporovat.
 
 ## <a name="members"></a>Členové
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
-|[CComObject::CComObject](#ccomobject)|Konstruktor|
+|[CComObject:: CComObject](#ccomobject)|Konstruktor|
 |[CComObject::~CComObject](#dtor)|Destruktor.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
-|[CComObject::AddRef](#addref)|Zvýší počet odkazů na objekt.|
-|[CComObject::CreateInstance](#createinstance)|(Statické) Vytvoří novou `CComObject` objektu.|
+|[CComObject:: AddRef](#addref)|Zvýší počet odkazů na objekt.|
+|[CComObject:: CreateInstance](#createinstance)|Tras Vytvoří nový `CComObject` objekt.|
 |[CComObject::QueryInterface](#queryinterface)|Načte ukazatel na požadované rozhraní.|
-|[CComObject::Release](#release)|Sníží počet odkaz na objekt.|
+|[CComObject:: Release](#release)|Sníží počet odkazů na objekt.|
 
 ## <a name="remarks"></a>Poznámky
 
-`CComObject` implementuje [IUnknown](/windows/desktop/api/unknwn/nn-unknwn-iunknown) pro neagregovaná objekt. Nicméně volání `QueryInterface`, `AddRef`, a `Release` se deleguje na `CComObjectRootEx`.
+`CComObject`implementuje [IUnknown](/windows/win32/api/unknwn/nn-unknwn-iunknown) pro neagregovaný objekt. Nicméně volání `QueryInterface` `CComObjectRootEx`, `AddRef` a`Release` jsou delegována na.
 
-Další informace o používání `CComObject`, najdete v článku [základy ATL COM objekty](../../atl/fundamentals-of-atl-com-objects.md).
+Další informace o použití `CComObject`naleznete v článku [Základy objektů ATL modelu COM](../../atl/fundamentals-of-atl-com-objects.md).
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
@@ -67,9 +67,9 @@ Další informace o používání `CComObject`, najdete v článku [základy ATL
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** atlcom
+**Záhlaví:** atlcom. h
 
-##  <a name="addref"></a>  CComObject::AddRef
+##  <a name="addref"></a>CComObject:: AddRef
 
 Zvýší počet odkazů na objekt.
 
@@ -79,11 +79,11 @@ STDMETHOD_(ULONG, AddRef)();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Tato funkce vrací nový počet odkazů zvýšena na objekt. Tato hodnota může být užitečné pro diagnostiku a testování.
+Tato funkce vrací nový přírůstek počtu odkazů na objekt. Tato hodnota může být užitečná pro diagnostiku nebo testování.
 
-##  <a name="ccomobject"></a>  CComObject::CComObject
+##  <a name="ccomobject"></a>CComObject:: CComObject
 
-Konstruktor inkrementuje počet zámků modulů.
+Konstruktor zvýší počet zámků modulu.
 
 ```
 CComObject(void* = NULL);
@@ -91,16 +91,16 @@ CComObject(void* = NULL);
 
 ### <a name="parameters"></a>Parametry
 
-<em>Typ void\*</em><br/>
-[in] Tento nepojmenovaný parametr se nepoužívá. Existuje symetrie s jinými `CComXXXObjectXXX` konstruktory.
+<em>šekem\*</em><br/>
+pro Tento nepojmenovaný parametr se nepoužívá. Existuje pro symetrie s jinými `CComXXXObjectXXX` konstruktory.
 
 ### <a name="remarks"></a>Poznámky
 
-Sníží destruktor ho.
+Destruktor ho snižuje.
 
-Pokud `CComObject`-odvozeného objektu je úspěšně vytvořený **nové** operátor, počet počáteční odkazů je 0. Pokud chcete nastavit počet odkazů na správnou hodnotu (1), ujistěte se, volání [AddRef](#addref) funkce.
+Pokud je `CComObject`objekt odvozený od úspěšného vytvoření pomocí operátoru **New** , počáteční počet odkazů je 0. Chcete-li nastavit počet odkazů na správnou hodnotu (1), proveďte volání funkce [AddRef](#addref) .
 
-##  <a name="dtor"></a>  CComObject::~CComObject
+##  <a name="dtor"></a>CComObject:: ~ CComObject
 
 Destruktor.
 
@@ -110,11 +110,11 @@ CComObject();
 
 ### <a name="remarks"></a>Poznámky
 
-Uvolní všechny přidělené prostředky, volání [FinalRelease](ccomobjectrootex-class.md#finalrelease), a sníží počet modul zámku.
+Uvolní všechny přidělené prostředky, zavolá [FinalRelease](ccomobjectrootex-class.md#finalrelease)a sníží počet zámků modulu.
 
-##  <a name="createinstance"></a>  CComObject::CreateInstance
+##  <a name="createinstance"></a>CComObject:: CreateInstance
 
-Tato statická funkce vám umožní vytvořit nový **CComObject <** `Base` **>** objekt, bez režie [CoCreateInstance](/windows/desktop/api/combaseapi/nf-combaseapi-cocreateinstance).
+Tato statická funkce umožňuje vytvořit nový objekt **<** `Base` **>** CComObject bez režie funkce [CoCreateInstance](/windows/win32/api/combaseapi/nf-combaseapi-cocreateinstance).
 
 ```
 static HRESULT WINAPI CreateInstance(CComObject<Base>** pp);
@@ -123,17 +123,17 @@ static HRESULT WINAPI CreateInstance(CComObject<Base>** pp);
 ### <a name="parameters"></a>Parametry
 
 *pp*<br/>
-[out] Ukazatel **CComObject <** `Base` **>** ukazatele. Pokud `CreateInstance` neproběhne úspěšně, *pp* nastaven na hodnotu NULL.
+mimo Ukazatel na **CComObject <** `Base` **>** ukazatel. Pokud `CreateInstance` je neúspěšné, je *PP* nastaven na hodnotu null.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Standardní hodnoty HRESULT.
+Standardní hodnota HRESULT.
 
 ### <a name="remarks"></a>Poznámky
 
-Objekt vrácený má nulový počet odkaz, takže volání `AddRef` okamžitě, pak použijte `Release` uvolnit odkaz na ukazatel objektu, až budete hotovi.
+Vrácený objekt má nulový počet odkazů, takže zavolejte `AddRef` hned a pak použijte `Release` k uvolnění odkazu na ukazatel objektu, až budete hotovi.
 
-Pokud není nutné přímý přístup k objektu, ale přesto chcete vytvořit nový objekt bez režie `CoCreateInstance`, použijte [CComCoClass::CreateInstance](../../atl/reference/ccomcoclass-class.md#createinstance) místo.
+Pokud nepotřebujete přímý přístup k objektu, ale přesto chcete vytvořit nový objekt bez režie `CoCreateInstance`, použijte raději [CComCoClass:: CreateInstance](../../atl/reference/ccomcoclass-class.md#createinstance) .
 
 ### <a name="example"></a>Příklad
 
@@ -141,7 +141,7 @@ Pokud není nutné přímý přístup k objektu, ale přesto chcete vytvořit no
 
 [!code-cpp[NVC_ATL_COM#39](../../atl/codesnippet/cpp/ccomobject-class_2.cpp)]
 
-##  <a name="queryinterface"></a>  CComObject::QueryInterface
+##  <a name="queryinterface"></a>CComObject:: QueryInterface
 
 Načte ukazatel na požadované rozhraní.
 
@@ -154,21 +154,21 @@ HRESULT STDMETHODCALLTYPE QueryInterface(Q** pp);
 ### <a name="parameters"></a>Parametry
 
 *iid*<br/>
-[in] Identifikátor se požadované rozhraní.
+pro Identifikátor požadovaného rozhraní.
 
 *ppvObject*<br/>
-[out] Ukazatel na ukazatel rozhraní, který je identifikován *iid*. Pokud objekt nepodporuje toto rozhraní *ppvObject* nastaven na hodnotu NULL.
+mimo Ukazatel na ukazatel rozhraní identifikovaný *identifikátorem IID*. Pokud objekt nepodporuje toto rozhraní, je *ppvObject* nastaveno na hodnotu null.
 
 *pp*<br/>
-[out] Ukazatel na ukazatel rozhraní, které jsou určeny podle typu `Q`. Pokud objekt nepodporuje toto rozhraní *pp* nastaven na hodnotu NULL.
+mimo Ukazatel na ukazatel rozhraní identifikovaný typem `Q`. Pokud objekt nepodporuje toto rozhraní, je *PP* nastaven na hodnotu null.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Standardní hodnoty HRESULT.
+Standardní hodnota HRESULT.
 
-##  <a name="release"></a>  CComObject::Release
+##  <a name="release"></a>CComObject:: Release
 
-Sníží počet odkaz na objekt.
+Sníží počet odkazů na objekt.
 
 ```
 STDMETHOD_(ULONG, Release)();
@@ -176,7 +176,7 @@ STDMETHOD_(ULONG, Release)();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Tato funkce vrací nový počet odkazů sníží na objekt. V sestavení pro ladění může být vrácenou hodnotu užitečné pro diagnostiku a testování. V sestaveních bez ladění `Release` vždy vrátí hodnotu 0.
+Tato funkce vrací nový snížený počet odkazů na objekt. V sestavení ladění může být návratová hodnota užitečná pro diagnostiku nebo testování. V sestaveních `Release` bez ladění vždy vrátí hodnotu 0.
 
 ## <a name="see-also"></a>Viz také:
 
@@ -184,4 +184,4 @@ Tato funkce vrací nový počet odkazů sníží na objekt. V sestavení pro lad
 [CComPolyObject – třída](../../atl/reference/ccompolyobject-class.md)<br/>
 [DECLARE_AGGREGATABLE](aggregation-and-class-factory-macros.md#declare_aggregatable)<br/>
 [DECLARE_NOT_AGGREGATABLE](aggregation-and-class-factory-macros.md#declare_not_aggregatable)<br/>
-[Přehled tříd](../../atl/atl-class-overview.md)
+[Přehled třídy](../../atl/atl-class-overview.md)

@@ -7,24 +7,24 @@ helpviewer_keywords:
 - CTreeCtrl class [MFC], parent and child items
 - tree controls [MFC], parent and child items
 ms.assetid: abcea1e4-fe9b-40d9-86dc-1db235f8f103
-ms.openlocfilehash: 2961009e3f1b21c3caacec001c53f5e52740dd67
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5a02194ccef8eca81971bb4e8ae24d859e578bcc
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62181666"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69513970"
 ---
 # <a name="tree-control-parent-and-child-items"></a>Nadřízené a podřízené položky ovládacího prvku strom
 
-Všechny položky v ovládacím prvku strom ([CTreeCtrl](../mfc/reference/ctreectrl-class.md)) může mít seznam podřízených položek, které se volají, podřízené položky, které s ním spojená. Položka, která má jeden nebo více podřízených položek se nazývá nadřazenou položku. Podřízené položky se zobrazí pod její nadřazenou položku a odsazena označující, že je podřízená nadřazené. Položka, která nemá žádný nadřazený objekt je na nejvyšší úrovni hierarchie a je volána kořenovou položku.
+Každá položka v ovládacím prvku stromu ([CTreeCtrl](../mfc/reference/ctreectrl-class.md)) může mít seznam podpoložek, které se nazývají podřízené položky, které jsou k ní přidruženy. Položka, která má jednu nebo více podřízených položek, se nazývá nadřazená položka. Podřízená položka je zobrazena pod svou nadřazenou položkou a je odsazena tak, aby označovala podřízenou položku nadřazené. Položka, která nemá nadřazenou položku, je na vrcholu hierarchie a nazývá se kořenová položka.
 
-V daném okamžiku stavu nadřazená položka seznamu podřízených položek můžete buď rozbalit nebo sbalit. Po rozbalení stav podřízených položek se zobrazí pod nadřazené položky. Když je sbalený, podřízené položky se nezobrazují. V seznamu automaticky přepíná mezi stavy rozšíření a sbalené při poklepání nadřazené položky, nebo pokud má nadřazená **TVS_HASBUTTONS** styl, když uživatel klikne na tlačítko přidružené k nadřazené položky. Můžete rozbalit nebo sbalit podřízených položek pomocí aplikace [Rozbalit](../mfc/reference/ctreectrl-class.md#expand) členskou funkci.
+V jednom okamžiku může být stav seznamu podřízených položek nadřazeného objektu rozbalen nebo sbalen. Když je stav rozbalený, podřízené položky se zobrazí pod nadřazenou položkou. Když je sbalený, podřízené položky nejsou zobrazeny. Seznam se automaticky přepíná mezi rozbaleným a sbaleným stavem, když uživatel dvakrát klikne na nadřazenou položku, nebo pokud má nadřazený styl **TVS_HASBUTTONS** , když uživatel klikne na tlačítko přidružené k nadřazené položce. Aplikace může rozbalit nebo sbalit podřízené položky pomocí funkce [Rozbalit](../mfc/reference/ctreectrl-class.md#expand) členskou funkci.
 
-Přidání položky do ovládacího prvku stromu voláním [metody InsertItem](../mfc/reference/ctreectrl-class.md#insertitem) členskou funkci. Tato funkce vrací popisovač **HTREEITEM** typ, který jednoznačně identifikuje položku. Při přidávání položky, je nutné zadat popisovač nová položka nadřazená položka. Pokud zadáte **NULL** nebo **TVI_ROOT** nemusejí popisovač nadřazené položky v [TVINSERTSTRUCT](/windows/desktop/api/commctrl/ns-commctrl-tagtvinsertstructa) struktury nebo *hParent* parametr je položka přidána jako kořenovou položku.
+Přidáte položku do ovládacího prvku strom voláním členské funkce [InsertItem](../mfc/reference/ctreectrl-class.md#insertitem) . Tato funkce vrací popisovač typu **hTreeItem** , který jednoznačně identifikuje položku. Při přidávání položky je nutné zadat popisovač nadřazené položky nové položky. Pokud zadáte hodnotu **null** nebo hodnotu **TVI_ROOT** namísto popisovače nadřazené položky ve struktuře [TVINSERTSTRUCT](/windows/win32/api/commctrl/ns-commctrl-tvinsertstructw) nebo parametru *hParent* , položka se přidá jako kořenová položka.
 
-Odesílá se ovládacím prvkem strom [TVN_ITEMEXPANDING](/windows/desktop/Controls/tvn-itemexpanding) zprávy oznámení, když nadřazená položka seznamu podřízených položek se chystá rozbalená nebo sbalená. Oznámení vám dává příležitost, aby se zabránilo změně nebo nastavit atributy nadřazené položky, které závisí na stavu seznamu podřízených položek. Po změně stavu v seznamu, odešle do ovládacího prvku stromu [TVN_ITEMEXPANDED](/windows/desktop/Controls/tvn-itemexpanded) zprávy oznámení.
+Ovládací prvek stromu pošle zprávu oznámení [TVN_ITEMEXPANDING](/windows/win32/Controls/tvn-itemexpanding) , když se chystá rozšíření nebo sbalení seznamu podřízených položek nadřazené položky. Oznámení vám poskytne možnost zabránit změně nebo nastavení atributů nadřazené položky, která závisí na stavu seznamu podřízených položek. Po změně stavu seznamu pošle ovládací prvek strom zprávu s oznámením [TVN_ITEMEXPANDED](/windows/win32/Controls/tvn-itemexpanded) .
 
-Po rozbalení seznamu podřízených položek odsadí relativně k nadřazené položky. Můžete nastavit velikost odsazení pomocí [SetIndent](../mfc/reference/ctreectrl-class.md#setindent) členská funkce nebo načíst aktuální velikost pomocí [GetIndent](../mfc/reference/ctreectrl-class.md#getindent) členskou funkci.
+Když se rozbalí seznam podřízených položek, odsadí se vzhledem k nadřazené položce. Můžete nastavit velikost odsazení pomocí členské funkce [SetIndent](../mfc/reference/ctreectrl-class.md#setindent) nebo načíst aktuální množství pomocí členské funkce getodsazení. [](../mfc/reference/ctreectrl-class.md#getindent)
 
 ## <a name="see-also"></a>Viz také:
 

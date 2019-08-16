@@ -28,16 +28,16 @@ helpviewer_keywords:
 - CrtDbgReportW function
 - _CrtDbgReportW function
 ms.assetid: 6e581fb6-f7fb-4716-9432-f0145d639ecc
-ms.openlocfilehash: f12dafc62e302d90e5cffa04ee93e662b78295be
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b5579a8996950c5f3e923f67ed2a5e667bb566fa
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62339478"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69500004"
 ---
-# <a name="crtdbgreport-crtdbgreportw"></a>_CrtDbgReport, _CrtDbgReportW
+# <a name="_crtdbgreport-_crtdbgreportw"></a>_CrtDbgReport, _CrtDbgReportW
 
-Vygeneruje sestavu se zprávou ladicího programu a odešle zprávu do tří možných cílů (pouze ladicí verze).
+Vygeneruje sestavu se zprávou ladění a odešle ji do tří možných cílů (pouze ladicí verze).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -63,50 +63,50 @@ int _CrtDbgReportW(
 ### <a name="parameters"></a>Parametry
 
 *reportType*<br/>
-Typ sestavy: **_CRT_WARN**, **_CRT_ERROR**, a **_CRT_ASSERT**.
+Typ sestavy: **_CRT_WARN**, **_CRT_ERROR**a **_CRT_ASSERT**.
 
-*Název souboru*<br/>
-Ukazatel na název zdrojového souboru, kde došlo k vyhodnocení/sestavě nebo **NULL**.
+*Bitmap*<br/>
+Ukazatel na název zdrojového souboru, kde došlo k vyhodnocení/sestavě nebo je **null**.
 
-*linenumber*<br/>
-Číslo řádku ve zdrojovém souboru, kde došlo k vyhodnocení/sestavě nebo **NULL**.
+*číslo řádku*<br/>
+Číslo řádku ve zdrojovém souboru, kde došlo k vyhodnocení nebo sestavě nebo je **null**.
 
 *moduleName*<br/>
-Ukazatel na název modulu (.exe nebo .dll) Pokud kontrolní výraz nebo došlo k sestavě.
+Ukazatel na název modulu (. exe nebo. dll), kde došlo k vyhodnocení nebo sestavě.
 
-*Formát*<br/>
-Ukazatel na řetězec řízení formátu použitý k vytvoření zprávy pro uživatele.
+*format*<br/>
+Ukazatel na řetězec řízení formátu použitý k vytvoření zprávy uživatele.
 
 *argument*<br/>
-Volitelné argumenty nahrazení použité ve *formátu*.
+Volitelné substituční argumenty používané *formátem*.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Pro všechna místa určení sestavy **_CrtDbgReport** a **_crtdbgreportw –** vrátí -1, pokud dojde k chybě a 0, pokud nedojde k žádným chybám. Nicméně, pokud je cílem sestavy okno zprávy ladění a uživatel klikne **opakujte** tlačítko, vrátí tyto funkce 1. Pokud uživatel klikne **přerušit** tlačítka v okně zprávy ladění, tyto funkce okamžitě zrušit a nesmí vracet hodnotu.
+U všech cílů sestav **_CrtDbgReport** a **_CrtDbgReportW** vrátí-1, pokud dojde k chybě, a 0, pokud nebyly zjištěny žádné chyby. Pokud je však cílem sestavy okno zprávy ladění a uživatel klikne na tlačítko **Opakovat** , tyto funkce vrátí hodnotu 1. Pokud uživatel klikne na tlačítko přerušit v okně zprávy ladění, tyto funkce okamžitě přeruší a nevrátí hodnotu.
 
-[_RPT, _RPTF](rpt-rptf-rptw-rptfw-macros.md) ladění volání makra **_CrtDbgReport** ladění generování sestav. Verze širokými znaky těchto maker a také [_ASSERT, _asserte –](assert-asserte-assert-expr-macros.md), [_RPTW](rpt-rptf-rptw-rptfw-macros.md) a [_rptfw –](rpt-rptf-rptw-rptfw-macros.md), použijte **_crtdbgreportw –** do generování svých sestav ladění. Když **_CrtDbgReport** nebo **_crtdbgreportw –** vrátí 1, tato makra spustí ladicí program, za předpokladu, že je povoleno ladění just-in-time (JIT).
+Makra [_RPT, _RPTF](rpt-rptf-rptw-rptfw-macros.md) ladění volají **_CrtDbgReport** pro generování jejich sestav ladění. Verze těchto maker pro nejrůznější znaky a také [_ASSERT, _ASSERTE](assert-asserte-assert-expr-macros.md), [_RPTW](rpt-rptf-rptw-rptfw-macros.md) a [_RPTFW](rpt-rptf-rptw-rptfw-macros.md)použijte **_CrtDbgReportW** pro generování jejich sestav ladění. Když **_CrtDbgReport** nebo **_CrtDbgReportW** vrátí 1, tato makra spustí ladicí program za předpokladu, že je povoleno ladění JIT (just-in-time).
 
 ## <a name="remarks"></a>Poznámky
 
-**_CrtDbgReport** a **_crtdbgreportw –** mohou zaslat sestavu ladění na tři různé cíle: soubor sestavy ladění, sledování ladění (ladicí program sady Visual Studio) nebo okno zprávy ladění. Dvě konfigurační funkce [_CrtSetReportMode](crtsetreportmode.md) a [_CrtSetReportFile](crtsetreportfile.md), se používají k určení cíle nebo cílů pro každý typ sestavy. Tyto funkce umožňují vytváření sestav cíle nebo cílů pro každý typ sestavy chcete ovládat samostatně. Například je možné určit, že *reportType* z **_CRT_WARN** pouze se odesílá do sledování ladění, zatímco *reportType* z **_CRT_ASSERT** odešlou do okna zpráv ladění a soubor sestavy definovaný uživatelem.
+**_CrtDbgReport** a **_CrtDbgReportW** mohou odeslat sestavu ladění do tří různých umístění: soubor sestavy ladění, monitor ladění (ladicí program sady Visual Studio) nebo okno zprávy ladění. Dvě konfigurační funkce, [_CrtSetReportMode](crtsetreportmode.md) a [_CrtSetReportFile](crtsetreportfile.md), se používají k určení cíle nebo cílových umístění pro každý typ sestavy. Tyto funkce umožňují, aby byly cíle a umístění sestav pro jednotlivé typy sestav samostatně ovládány. Například je možné určit, že se *ReportType* **_CRT_WARN** pouze pošle do monitorování ladění, zatímco *ReportType* **_CRT_ASSERT** se pošle oknu zprávy ladění a uživatelem definovaným souborem sestavy.
 
-**_Crtdbgreportw –** je verze širokého znaku **_CrtDbgReport**. Jsou všechny jeho parametry výstupu a řetězce v řetězce širokého znaku; jinak je stejná jako verze jednobajtových znaků.
+**_CrtDbgReportW** je verze **_CrtDbgReport**pro nejrůznější znaky. Všechny parametry výstupu a řetězce jsou v řetězcích s velkým znakem; v opačném případě je stejný jako znaková verze s jedním bajtem.
 
-**_CrtDbgReport** a **_crtdbgreportw –** vytvoří uživatelskou zprávu pro sestavu ladění nahrazením *argument*[**n**] argumenty do *formátu* řetězce, pomocí stejných pravidel definovaných funkcemi **printf** nebo **wprintf** funkce. Tyto funkce potom vygenerují sestavu ladění a určí cíl nebo cíle založené na aktuálních režimech sestavy a souboru definovaném pro *reportType*. Při odesílání sestavy oknu zprávy ladění, *filename*, **lineNumber**, a *moduleName* jsou zahrnuty v informacích zobrazených v okně.
+**_CrtDbgReport** a **_CrtDbgReportW** vytvoří uživatelskou zprávu pro sestavu ladění nahrazením argumentů [**n**] v řetězci *formátu* pomocí stejných pravidel definovaných v **printf** nebo  **funkce wprintf** Tyto funkce pak vygenerují sestavu ladění a určí cíl nebo cíle na základě aktuálního režimu sestavy a souboru definovaného pro *ReportType*. Když se sestava pošle do okna zprávy ladění, *názvy souborů*, **číslo řádku**a *Module* jsou zahrnuté do informací zobrazených v okně.
 
-Následující tabulka uvádí dostupné možnosti pro sestavu režimu nebo režimů a souborovou službu a výsledné chování **_CrtDbgReport** a **_crtdbgreportw –**. Tyto možnosti jsou definovány jako bitové příznaky v \<crtdbg.h >.
+Následující tabulka uvádí dostupné možnosti pro režim sestavy nebo režimy a soubor a výsledné chování **_CrtDbgReport** a **_CrtDbgReportW**. Tyto možnosti jsou definovány jako bitové příznaky v \<souboru Crtdbg. h >.
 
-|Režim sestavy|Soubor sestavy|**_CrtDbgReport**, **_crtdbgreportw –** chování|
+|Režim sestavy|Soubor sestavy|**_CrtDbgReport**, chování **_CrtDbgReportW**|
 |-----------------|-----------------|------------------------------------------------|
-|**_CRTDBG_MODE_DEBUG**|Nelze použít|Zapíše zprávu s použitím Windows [OutputDebugString](https://msdn.microsoft.com/library/windows/desktop/aa363362.aspx) rozhraní API.|
-|**_CRTDBG_MODE_WNDW**|Nelze použít|Volání Windows [MessageBox](/windows/desktop/api/winuser/nf-winuser-messagebox) rozhraní API k vytvoření okna zprávy pro zobrazení zprávy spolu s **přerušit**, **opakujte**, a **Ignorovat** tlačítka. Pokud uživatel klikne **přerušit**, **_CrtDbgReport** nebo **_CrtDbgReport** ihned přeruší. Pokud uživatel klikne **opakujte**, vrátí hodnotu 1. Pokud uživatel klikne **Ignorovat**, provádění pokračuje a **_CrtDbgReport** a **_crtdbgreportw –** vrátí 0. Všimněte si, že kliknete na **Ignorovat** při existenci chybového stavu má často za následek "nedefinované chování".|
-|**_CRTDBG_MODE_FILE**|**__HFILE**|Zapíše zprávu do uživatelem zadané **zpracování**, pomocí Windows [WriteFile](/windows/desktop/api/fileapi/nf-fileapi-writefile) rozhraní API a neověřuje platnost popisovače souboru; aplikace je zodpovědná za otevření souboru sestavy a předání platný soubor Obslužná rutina.|
+|**_CRTDBG_MODE_DEBUG**|Nelze použít|Zapisuje zprávu pomocí rozhraní Windows [OutputDebugString](/windows/win32/api/debugapi/nf-debugapi-outputdebugstringw) API.|
+|**_CRTDBG_MODE_WNDW**|Nelze použít|Volá rozhraní Windows [MessageBox](/windows/win32/api/winuser/nf-winuser-messagebox) API k vytvoření okna se zprávou pro zobrazení zprávy s tlačítky **přerušení**, **Opakovat**a **Ignorovat** . Pokud uživatel klikne na **přerušení**, **_CrtDbgReport** nebo **_CrtDbgReport** se okamžitě přeruší. Pokud uživatel klikne na tlačítko **Opakovat**, vrátí hodnotu 1. Pokud uživatel klikne na **Ignorovat**, provádění pokračuje a **_CrtDbgReport** a **_CrtDbgReportW** vrátí hodnotu 0. Všimněte si, že kliknutí na **Ignorovat** , pokud existuje chybový stav, často vede k nedefinovanému chování.|
+|**_CRTDBG_MODE_FILE**|**__HFILE**|Zapíše zprávu do uživatelsky zadaného **popisovače**pomocí rozhraní Windows [WriteFile](/windows/win32/api/fileapi/nf-fileapi-writefile) API a neověřuje platnost popisovače souboru; aplikace zodpovídá za otevření souboru sestavy a předání platného popisovače souboru.|
 |**_CRTDBG_MODE_FILE**|**_CRTDBG_FILE_STDERR**|Zapíše zprávu do **stderr**.|
 |**_CRTDBG_MODE_FILE**|**_CRTDBG_FILE_STDOUT**|Zapíše zprávu do **stdout**.|
 
-Sestavu lze odesílat na jeden, dva nebo tři cíle nebo žádný cíl vůbec. Další informace o zadávání sestava režimu nebo režimů a soubor sestavy naleznete v tématu [_CrtSetReportMode](crtsetreportmode.md) a [_CrtSetReportFile](crtsetreportfile.md) funkce. Další informace o použití maker ladění a funkcí vykazování viz [makra pro vytváření sestav](/visualstudio/debugger/macros-for-reporting).
+Tato sestava se dá poslat na jednu, dvě nebo tři cíle nebo do žádného cíle. Další informace o tom, jak zadat režim sestavy nebo režimy a soubor sestavy, najdete v tématu funkce [_CrtSetReportMode](crtsetreportmode.md) a [_CrtSetReportFile](crtsetreportfile.md) . Další informace o použití maker ladění a funkcí vytváření sestav naleznete v tématu [makra pro vytváření sestav](/visualstudio/debugger/macros-for-reporting).
 
-Pokud vaše aplikace potřebuje více flexibility než poskytuje **_CrtDbgReport** a **_crtdbgreportw –**, můžete napsat vlastní funkci vykazování a zapojit ji do vykazování běhové knihovny jazyka C mechanismus pomocí [_CrtSetReportHook](crtsetreporthook.md) funkce.
+Pokud vaše aplikace potřebuje větší flexibilitu než ta, kterou poskytuje **_CrtDbgReport** a **_CrtDbgReportW**, můžete napsat vlastní funkci vytváření sestav a zapojit ji do mechanismu generování sestav běhové knihovny jazyka C pomocí [_CrtSetReportHook](crtsetreporthook.md) slouží.
 
 ## <a name="requirements"></a>Požadavky
 
@@ -115,11 +115,11 @@ Pokud vaše aplikace potřebuje více flexibility než poskytuje **_CrtDbgReport
 |**_CrtDbgReport**|\<crtdbg.h>|
 |**_CrtDbgReportW**|\<crtdbg.h>|
 
-**_CrtDbgReport** a **_crtdbgreportw –** jsou rozšíření společnosti Microsoft. Další informace najdete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
+**_CrtDbgReport** a **_CrtDbgReportW** jsou rozšíření společnosti Microsoft. Další informace najdete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
 
 ## <a name="libraries"></a>Knihovny
 
-Ladicí verze [běhových knihoven C](../../c-runtime-library/crt-library-features.md) pouze.
+Ladit verze pouze [knihoven run-time jazyka C](../../c-runtime-library/crt-library-features.md) .
 
 ## <a name="example"></a>Příklad
 
@@ -134,7 +134,7 @@ int main(int argc, char *argv[]) {
 }
 ```
 
-Zobrazit [crt_dbg2](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/crt/crt_dbg2) příklad toho, jak změnit funkci sestavy.
+Příklad, jak změnit funkci sestavy, naleznete v tématu [crt_dbg2](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/crt/crt_dbg2) .
 
 ## <a name="see-also"></a>Viz také:
 

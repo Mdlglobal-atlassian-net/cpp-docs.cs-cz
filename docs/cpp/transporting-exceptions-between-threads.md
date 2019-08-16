@@ -14,12 +14,12 @@ helpviewer_keywords:
 - rethrow_exception
 - move exceptions between threads
 ms.assetid: 5c95d57b-acf5-491f-8122-57c5df0edd98
-ms.openlocfilehash: ca6ad9f9b923843d74a3b671691438af6ea5d82b
-ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
+ms.openlocfilehash: db9546bb02fcd5b253fec29777fd71172e50739e
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68917018"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69500591"
 ---
 # <a name="transporting-exceptions-between-threads"></a>Převod výjimek mezi vlákny
 
@@ -96,7 +96,7 @@ Následující části `exception_ptr` popisují, jak přenášet výjimky pomoc
 
 ## <a name="exception_ptr-type"></a>Typ exception_ptr
 
-`exception_ptr` Použijte objekt pro odkazování na aktuální výjimku nebo instanci uživatelsky definované výjimky. V implementaci společnosti Microsoft je výjimka představována strukturou [EXCEPTION_RECORD](/windows/desktop/api/winnt/ns-winnt-exception_record) . Každý `exception_ptr` objekt obsahuje referenční pole výjimky, které odkazuje na kopii `EXCEPTION_RECORD` struktury, která představuje výjimku.
+`exception_ptr` Použijte objekt pro odkazování na aktuální výjimku nebo instanci uživatelsky definované výjimky. V implementaci společnosti Microsoft je výjimka představována strukturou [EXCEPTION_RECORD](/windows/win32/api/winnt/ns-winnt-exception_record) . Každý `exception_ptr` objekt obsahuje referenční pole výjimky, které odkazuje na kopii `EXCEPTION_RECORD` struktury, která představuje výjimku.
 
 Pokud deklarujete `exception_ptr` proměnnou, proměnná není přidružena k žádné výjimce. Tedy referenční pole výjimky je NULL. Takový objekt se nazývá exception_ptr s *hodnotou null.* `exception_ptr`
 

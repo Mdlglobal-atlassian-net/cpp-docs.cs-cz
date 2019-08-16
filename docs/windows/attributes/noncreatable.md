@@ -1,21 +1,21 @@
 ---
-title: noncreatable (atribut C++ COM)
+title: nevytvořitelné (C++ atribut com)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.noncreatable
 helpviewer_keywords:
 - noncreatable attribute
 ms.assetid: 4d17937b-0bff-41af-ba57-53e18b7ab5a9
-ms.openlocfilehash: a10d93650c0ae564019a09b34c3a604d12327998
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e855497cb6f619ecdaa6aedf16a04f045a60faa7
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62305317"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69514565"
 ---
 # <a name="noncreatable"></a>noncreatable
 
-Definuje objekt, který se nedá vytvořit instance samostatně.
+Definuje objekt, který nemůže být vytvořen sám sebou.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -25,9 +25,9 @@ Definuje objekt, který se nedá vytvořit instance samostatně.
 
 ## <a name="remarks"></a>Poznámky
 
-**Noncreatable** C++ atribut má stejné funkce jako [noncreatable –](/windows/desktop/Midl/noncreatable) atribut MIDL a automaticky předána do vytvořeného. Soubor IDL kompilátorem.
+Netvářený C++ atribut má stejné funkce jako nevytvořitelné [](/windows/win32/Midl/noncreatable) MIDL atribut a automaticky se předává do generovaného. Soubor IDL kompilátorem.
 
-Pokud tento atribut se používá v rámci projektu, který používá knihovny ATL, se změní chování atributu. Kromě výše uvedených chování atribut také vloží [OBJECT_ENTRY_NON_CREATEABLE_EX_AUTO](../../atl/reference/object-map-macros.md#object_entry_non_createable_ex_auto) – makro. Toto makro označuje s knihovnou ATL objekt nelze vytvořit externě.
+Při použití tohoto atributu v projektu, který používá ATL, se chování atributu změní. Kromě výše uvedeného chování atribut také vloží [OBJECT_ENTRY_NON_CREATEABLE_EX_AUTO](../../atl/reference/object-map-macros.md#object_entry_non_createable_ex_auto) makro. Toto makro indikuje knihovně ATL, že objekt nelze vytvořit externě.
 
 ## <a name="example"></a>Příklad
 
@@ -51,16 +51,16 @@ class CMyClass : public A
 
 ## <a name="requirements"></a>Požadavky
 
-### <a name="attribute-context"></a>Atribut kontextu
+### <a name="attribute-context"></a>Kontext atributu
 
 |||
 |-|-|
-|**Platí pro**|**Třída**, **– struktura**|
-|**Opakovatelné**|Ne|
-|**Vyžadované atributy**|**coclass**|
+|**Platí pro**|**Třída**, **Struktura**|
+|**REPEATABLE**|Ne|
+|**Požadované atributy**|**coclass**|
 |**Neplatné atributy**|Žádné|
 
-Další informace o kontexty atributů najdete v tématu [kontexty atributů](cpp-attributes-com-net.md#contexts).
+Další informace o kontextech atributů naleznete v tématu kontexty [atributů](cpp-attributes-com-net.md#contexts).
 
 ## <a name="see-also"></a>Viz také:
 

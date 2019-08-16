@@ -1,21 +1,21 @@
 ---
-title: ID (atribut C++ COM)
+title: ID (C++ atribut com)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.id
 helpviewer_keywords:
 - id attribute
 ms.assetid: a48d2c99-c5d2-4f46-bf96-5ac88dcb5d0c
-ms.openlocfilehash: 5faf08418771deda3086a434cff6b1900a37e36e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6f1d1d2b9d147e8b33b3b5fae629e0805971bb71
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62409496"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69501407"
 ---
 # <a name="id"></a>id
 
-Určuje *dispid* parametr pro členské funkce (vlastnost nebo metoda v rozhraní nebo dispinterface).
+Určuje parametr *DISPID* pro členskou funkci (buď vlastnost nebo metodu, v rozhraní nebo odesílajícím rozhraní).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -26,28 +26,28 @@ Určuje *dispid* parametr pro členské funkce (vlastnost nebo metoda v rozhran�
 ### <a name="parameters"></a>Parametry
 
 *dispid*<br/>
-Identifikátor odeslání pro metody rozhraní.
+ID odeslání pro metodu rozhraní.
 
 ## <a name="remarks"></a>Poznámky
 
-**Id** C++ atribut má stejné funkce jako [id](/windows/desktop/Midl/id) atribut MIDL.
+Atribut **ID** C++ má stejné funkce jako atribut [ID](/windows/win32/Midl/id) MIDL.
 
 ## <a name="example"></a>Příklad
 
-Podívejte se na příklad pro [umožňujících vazbu](bindable.md) příklad, jak používat **id**.
+Podívejte se na příklad, jak [vytvořit vazby](bindable.md) pro příklad použití **ID**.
 
 ## <a name="requirements"></a>Požadavky
 
-### <a name="attribute-context"></a>Atribut kontextu
+### <a name="attribute-context"></a>Kontext atributu
 
 |||
 |-|-|
 |**Platí pro**|Metoda rozhraní|
-|**Opakovatelné**|Ne|
-|**Vyžadované atributy**|Žádné|
-|**Neplatné atributy**|Žádný|
+|**REPEATABLE**|Ne|
+|**Požadované atributy**|Žádné|
+|**Neplatné atributy**|Žádné|
 
-Další informace najdete v tématu [kontexty atributů](cpp-attributes-com-net.md#contexts).
+Další informace naleznete v tématu [kontexty atributů](cpp-attributes-com-net.md#contexts).
 
 ## <a name="see-also"></a>Viz také:
 

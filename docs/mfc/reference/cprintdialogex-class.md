@@ -38,12 +38,12 @@ helpviewer_keywords:
 - CPrintDialogEx [MFC], PrintSelection
 - CPrintDialogEx [MFC], m_pdex
 ms.assetid: 1d506703-ee1c-44cc-b4ce-4e778fec26b8
-ms.openlocfilehash: ebef892e174525c0b907818c02b7d34b1b41f850
-ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
+ms.openlocfilehash: 2334fb0a420e14aa4fa8b8b570671fb9a611de32
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68916899"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69502883"
 ---
 # <a name="cprintdialogex-class"></a>CPrintDialogEx – třída
 
@@ -94,7 +94,7 @@ Můžete spoléhat na rozhraní a zpracovávat mnoho aspektů procesu tisku pro 
 
 Pokud chcete, aby aplikace zpracovávala tisk bez zapojení rozhraní, můžete použít `CPrintDialogEx` třídu "tak, jak je" se zadaným konstruktorem, nebo můžete odvodit vlastní třídu dialogového okna z `CPrintDialogEx` a napsat konstruktor, který bude vyhovovat vašim potřebám. V obou případech se tato dialogová okna budou chovat jako standardní dialogová okna knihovny MFC, protože jsou odvozena z třídy `CCommonDialog`.
 
-Chcete-li `CPrintDialogEx` použít objekt, nejprve vytvořte objekt `CPrintDialogEx` pomocí konstruktoru. Po vytvoření dialogového okna můžete nastavit nebo změnit libovolné hodnoty ve struktuře [m_pdex](#m_pdex) a inicializovat tak hodnoty ovládacích prvků dialogového okna. Struktura je typu PrintDlgEx. [](/windows/desktop/api/commdlg/ns-commdlg-tagpdexa) `m_pdex` Další informace o této struktuře naleznete v Windows SDK.
+Chcete-li `CPrintDialogEx` použít objekt, nejprve vytvořte objekt `CPrintDialogEx` pomocí konstruktoru. Po vytvoření dialogového okna můžete nastavit nebo změnit libovolné hodnoty ve struktuře [m_pdex](#m_pdex) a inicializovat tak hodnoty ovládacích prvků dialogového okna. Struktura je typu PrintDlgEx. [](/windows/win32/api/commdlg/ns-commdlg-pdexw) `m_pdex` Další informace o této struktuře naleznete v Windows SDK.
 
 `m_pdex` Pokud nezadáte vlastní popisovače v nástroji `hDevMode` pro členy a `hDevNames` , nezapomeňte po dokončení dialogového okna zavolat funkci `GlobalFree` systému Windows pro tyto popisovače.
 
@@ -143,7 +143,7 @@ CPrintDialogEx(
 ### <a name="parameters"></a>Parametry
 
 *dwFlags*<br/>
-Jeden nebo více příznaků, které lze použít k přizpůsobení nastavení dialogového okna v kombinaci s použitím bitového operátoru OR. Například příznak PD_ALLPAGES nastaví výchozí rozsah tisku na všechny stránky dokumentu. Další informace o těchto příznacích najdete v [PrintDlgEx](/windows/desktop/api/commdlg/ns-commdlg-tagpdexa) struktuře v Windows SDK.
+Jeden nebo více příznaků, které lze použít k přizpůsobení nastavení dialogového okna v kombinaci s použitím bitového operátoru OR. Například příznak PD_ALLPAGES nastaví výchozí rozsah tisku na všechny stránky dokumentu. Další informace o těchto příznacích najdete v [PrintDlgEx](/windows/win32/api/commdlg/ns-commdlg-pdexw) struktuře v Windows SDK.
 
 *pParentWnd*<br/>
 Ukazatel na nadřazené nebo vlastní okno dialogového okna.
@@ -154,7 +154,7 @@ Tato členská funkce vytvoří pouze objekt. K zobrazení dialogového okna pou
 
 ##  <a name="createprinterdc"></a>  CPrintDialogEx::CreatePrinterDC
 
-Vytvoří kontext zařízení tiskárny ze struktur [DEVMODE](/windows/win32/api/wingdi/ns-wingdi-devmodea) a [DEVNAMES –](/windows/desktop/api/commdlg/ns-commdlg-tagdevnames) .
+Vytvoří kontext zařízení tiskárny ze struktur [DEVMODE](/windows/win32/api/wingdi/ns-wingdi-devmodea) a [DEVNAMES –](/windows/win32/api/commdlg/ns-commdlg-devnames) .
 
 ```
 HDC CreatePrinterDC();
@@ -188,7 +188,7 @@ Pokud chcete inicializovat různé možnosti dialogového okna pro tisk nastaven
 
 Po volání `DoModal`můžete zavolat jiné členské funkce a načíst nastavení nebo zadání informací uživatelem do dialogového okna.
 
-Pokud se při volání `DoModal`použije příznak PD_RETURNDC, bude `hDC` v členu [m_pdex](#m_pdex)vrácen řadič domény tiskárny. Tento řadič domény musí být uvolněn voláním [DeleteDC](/windows/desktop/api/wingdi/nf-wingdi-deletedc) volajícím `CPrintDialogEx`.
+Pokud se při volání `DoModal`použije příznak PD_RETURNDC, bude `hDC` v členu [m_pdex](#m_pdex)vrácen řadič domény tiskárny. Tento řadič domény musí být uvolněn voláním [DeleteDC](/windows/win32/api/wingdi/nf-wingdi-deletedc) volajícím `CPrintDialogEx`.
 
 ##  <a name="getcopies"></a>CPrintDialogEx:: rekopie
 
@@ -216,11 +216,11 @@ TRUE, pokud je to úspěšné, jinak FALSE.
 
 ### <a name="remarks"></a>Poznámky
 
-Vytvoří kontext zařízení tiskárny ze struktur [DEVMODE](/windows/win32/api/wingdi/ns-wingdi-devmodea) a [DEVNAMES –](/windows/desktop/api/commdlg/ns-commdlg-tagdevnames) .
+Vytvoří kontext zařízení tiskárny ze struktur [DEVMODE](/windows/win32/api/wingdi/ns-wingdi-devmodea) a [DEVNAMES –](/windows/win32/api/commdlg/ns-commdlg-devnames) .
 
-`GetDefaults`nezobrazuje seznam vlastností tisk. Místo toho nastaví `hDevNames` a `hDevMode` členové [m_pdex](#m_pdex) pro zpracování do struktur [DEVMODE](/windows/win32/api/wingdi/ns-wingdi-devmodea) a [DEVNAMES –](/windows/desktop/api/commdlg/ns-commdlg-tagdevnames) , které jsou inicializovány pro výchozí tiskárnu systému. A musí mít hodnotu null nebo `GetDefaults` se nezdařila. `hDevMode` `hDevNames`
+`GetDefaults`nezobrazuje seznam vlastností tisk. Místo toho nastaví `hDevNames` a `hDevMode` členové [m_pdex](#m_pdex) pro zpracování do struktur [DEVMODE](/windows/win32/api/wingdi/ns-wingdi-devmodea) a [DEVNAMES –](/windows/win32/api/commdlg/ns-commdlg-devnames) , které jsou inicializovány pro výchozí tiskárnu systému. A musí mít hodnotu null nebo `GetDefaults` se nezdařila. `hDevMode` `hDevNames`
 
-Pokud je nastaven příznak PD_RETURNDC, `hDevNames` nebude tato funkce vracet pouze a `hDevMode` (umístěn v `m_pdex.hDevNames` a `m_pdex.hDevMode`) volajícímu, ale také vrátí řadič domény tiskárny v `m_pdex.hDC`. Je odpovědností volajícího odstranit řadič domény tiskárny a volat funkci Windows [GlobalFree](/windows/desktop/api/winbase/nf-winbase-globalfree) v popisovačích po dokončení `CPrintDialogEx` objektu.
+Pokud je nastaven příznak PD_RETURNDC, `hDevNames` nebude tato funkce vracet pouze a `hDevMode` (umístěn v `m_pdex.hDevNames` a `m_pdex.hDevMode`) volajícímu, ale také vrátí řadič domény tiskárny v `m_pdex.hDC`. Je odpovědností volajícího odstranit řadič domény tiskárny a volat funkci Windows [GlobalFree](/windows/win32/api/winbase/nf-winbase-globalfree) v popisovačích po dokončení `CPrintDialogEx` objektu.
 
 ##  <a name="getdevicename"></a>CPrintDialogEx:: getnázev_zařízení
 
@@ -248,7 +248,7 @@ LPDEVMODE GetDevMode() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Struktura dat [DEVMODE](/windows/win32/api/wingdi/ns-wingdi-devmodea) , která obsahuje informace o inicializaci zařízení a prostředí ovladače tiskárny. Paměť, kterou tato struktura provedla, je nutné odemknout pomocí funkce Windows [GlobalUnlock](/windows/desktop/api/winbase/nf-winbase-globalunlock) , která je popsána v Windows SDK.
+Struktura dat [DEVMODE](/windows/win32/api/wingdi/ns-wingdi-devmodea) , která obsahuje informace o inicializaci zařízení a prostředí ovladače tiskárny. Paměť, kterou tato struktura provedla, je nutné odemknout pomocí funkce Windows [GlobalUnlock](/windows/win32/api/winbase/nf-winbase-globalunlock) , která je popsána v Windows SDK.
 
 ##  <a name="getdrivername"></a>CPrintDialogEx:: getnázev_ovladače
 
@@ -292,7 +292,7 @@ Popisovač kontextu zařízení tiskárny.
 
 ### <a name="remarks"></a>Poznámky
 
-Chcete-li odstranit kontext zařízení po jeho použití, je třeba zavolat funkci Windows [DeleteDC](/windows/desktop/api/wingdi/nf-wingdi-deletedc) .
+Chcete-li odstranit kontext zařízení po jeho použití, je třeba zavolat funkci Windows [DeleteDC](/windows/win32/api/wingdi/nf-wingdi-deletedc) .
 
 ##  <a name="m_pdex"></a>  CPrintDialogEx::m_pdex
 
@@ -304,7 +304,7 @@ PRINTDLGEX m_pdex;
 
 ### <a name="remarks"></a>Poznámky
 
-Po sestavení `CPrintDialogEx` objektu lze použít `m_pdex` k nastavení různých aspektů dialogového okna před voláním členské funkce [DoModal](#domodal) . Další informace o `m_pdex` struktuře naleznete v tématu [PrintDlgEx](/windows/desktop/api/commdlg/ns-commdlg-tagpdexa) v Windows SDK.
+Po sestavení `CPrintDialogEx` objektu lze použít `m_pdex` k nastavení různých aspektů dialogového okna před voláním členské funkce [DoModal](#domodal) . Další informace o `m_pdex` struktuře naleznete v tématu [PrintDlgEx](/windows/win32/api/commdlg/ns-commdlg-pdexw) v Windows SDK.
 
 Změníte-li datový člen přímo, přepíšete všechny výchozí chování. `m_pdex`
 
@@ -358,7 +358,7 @@ TRUE, je-li vytištěn pouze rozsah stránek v dokumentu; v opačném případě
 
 ### <a name="remarks"></a>Poznámky
 
-Zadané rozsahy stránek lze určit z [m_pdex](#m_pdex) ( `nPageRanges`viz, `nMaxPageRanges`a `lpPageRanges` ve struktuře [PrintDlgEx](/windows/desktop/api/commdlg/ns-commdlg-tagpdexa) v Windows SDK).
+Zadané rozsahy stránek lze určit z [m_pdex](#m_pdex) ( `nPageRanges`viz, `nMaxPageRanges`a `lpPageRanges` ve struktuře [PrintDlgEx](/windows/win32/api/commdlg/ns-commdlg-pdexw) v Windows SDK).
 
 ##  <a name="printselection"></a>CPrintDialogEx::P rintSelection
 

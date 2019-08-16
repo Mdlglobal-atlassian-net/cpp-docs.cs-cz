@@ -1,5 +1,5 @@
 ---
-title: IPropertyPageImpl Class
+title: IPropertyPageImpl – třída
 ms.date: 11/04/2016
 f1_keywords:
 - IPropertyPageImpl
@@ -31,19 +31,19 @@ helpviewer_keywords:
 - IPropertyPage ATL implementation
 - IPropertyPageImpl class
 ms.assetid: f9b7c8b1-7a04-4eab-aa63-63efddb740fa
-ms.openlocfilehash: a3b92e3d2f72ca48238eb22404947d2eafde0378
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 69842e77aecaa94be66432e5fbba437a6fa3c5a4
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62197874"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69495583"
 ---
-# <a name="ipropertypageimpl-class"></a>IPropertyPageImpl Class
+# <a name="ipropertypageimpl-class"></a>IPropertyPageImpl – třída
 
-Tato třída implementuje `IUnknown` a poskytuje výchozí implementaci třídy [IPropertyPage](/windows/desktop/api/ocidl/nn-ocidl-ipropertypage) rozhraní.
+Tato třída implementuje `IUnknown` a poskytuje výchozí implementaci rozhraní [IPropertyPage](/windows/win32/api/ocidl/nn-ocidl-ipropertypage) .
 
 > [!IMPORTANT]
->  Tato třída a jejích členů nelze použít v aplikacích, které jsou spouštěny v modulu Windows Runtime.
+>  Tato třída a její členové nelze použít v aplikacích, které jsou spouštěny v prostředí Windows Runtime.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -55,52 +55,52 @@ class IPropertyPageImpl
 #### <a name="parameters"></a>Parametry
 
 *T*<br/>
-Vaše třída odvozena od `IPropertyPageImpl`.
+Vaše třída, která je `IPropertyPageImpl`odvozena z.
 
 ## <a name="members"></a>Členové
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[IPropertyPageImpl::IPropertyPageImpl](#ipropertypageimpl)|Konstruktor|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
-|[IPropertyPageImpl::Activate](#activate)|Vytvoří okno dialogové okno stránky vlastností.|
-|[IPropertyPageImpl::Apply](#apply)|Platí pro základní objekty zadané pomocí aktuální hodnoty vlastností stránky `SetObjects`. Implementace knihovny ATL vrátí hodnotu S_OK.|
-|[IPropertyPageImpl::Deactivate](#deactivate)|Odstraní okno vytvořené s `Activate`.|
+|[IPropertyPageImpl::Activate](#activate)|Vytvoří okno dialogového okna pro stránku vlastností.|
+|[IPropertyPageImpl::Apply](#apply)|Použije aktuální hodnoty stránky vlastností na podkladové objekty zadané `SetObjects`pomocí. Implementace ATL vrací S_OK.|
+|[IPropertyPageImpl::Deactivate](#deactivate)|Odstraní okno vytvořené pomocí `Activate`.|
 |[IPropertyPageImpl::GetPageInfo](#getpageinfo)|Načte informace o stránce vlastností.|
-|[IPropertyPageImpl::Help](#help)|Vyvolá nápovědu Windows pro stránku vlastností.|
-|[IPropertyPageImpl::IsPageDirty](#ispagedirty)|Označuje, zda stránka vlastností změnila se aktivoval.|
-|[IPropertyPageImpl::Move](#move)|Umístění a změní velikost dialogové okno stránky vlastností.|
-|[IPropertyPageImpl::SetDirty](#setdirty)|Označí stav na stránce vlastností jako změněné nebo beze změny.|
-|[IPropertyPageImpl::SetObjects](#setobjects)|Poskytuje celou řadu `IUnknown` ukazatelů pro objekty přidružené k stránky vlastností. Tyto objekty dostávat aktuální hodnoty vlastností stránky pomocí volání `Apply`.|
-|[IPropertyPageImpl::SetPageSite](#setpagesite)|Na stránce vlastností s poskytuje `IPropertyPageSite` ukazatel, pomocí kterého se na stránce vlastností komunikuje s rámec vlastnosti.|
-|[IPropertyPageImpl::Show](#show)|Dialogové okno stránky vlastností je viditelná nebo neviditelné.|
-|[IPropertyPageImpl::TranslateAccelerator](#translateaccelerator)|Zpracuje zadané stisk klávesy.|
+|[IPropertyPageImpl::Help](#help)|Vyvolá nápovědu systému Windows pro stránku vlastností.|
+|[IPropertyPageImpl::IsPageDirty](#ispagedirty)|Označuje, zda se stránka vlastností od aktivace změnila.|
+|[IPropertyPageImpl::Move](#move)|Umístí a změní velikost dialogového okna stránky vlastností.|
+|[IPropertyPageImpl::SetDirty](#setdirty)|Označí stav stránky vlastností jako změněný nebo beze změny.|
+|[IPropertyPageImpl::SetObjects](#setobjects)|Poskytuje pole `IUnknown` ukazatelů pro objekty přidružené k stránce vlastností. Tyto objekty dostanou aktuální hodnoty stránky vlastností prostřednictvím volání `Apply`.|
+|[IPropertyPageImpl::SetPageSite](#setpagesite)|Poskytuje stránku vlastností s `IPropertyPageSite` ukazatelem, pomocí kterého stránka vlastností komunikuje s rámcem vlastností.|
+|[IPropertyPageImpl::Show](#show)|Nastaví okno stránky vlastností jako viditelné nebo neviditelné.|
+|[IPropertyPageImpl::TranslateAccelerator](#translateaccelerator)|Zpracuje zadaný klávesovou zkratku.|
 
 ### <a name="public-data-members"></a>Veřejné datové členy
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
-|[IPropertyPageImpl::m_bDirty](#m_bdirty)|Určuje, zda se změnil stav na stránce vlastností.|
-|[IPropertyPageImpl::m_dwDocString](#m_dwdocstring)|Ukládá identifikátor přidružený k textový řetězec s popisem stránky vlastností.|
-|[IPropertyPageImpl::m_dwHelpContext](#m_dwhelpcontext)|Ukládá identifikátor kontextu pro téma nápovědy přidružené k stránky vlastností.|
-|[IPropertyPageImpl::m_dwHelpFile](#m_dwhelpfile)|Ukládá identifikátor prostředku přidružené k názvu souboru nápovědy popisující, na stránce vlastností.|
-|[IPropertyPageImpl::m_dwTitle](#m_dwtitle)|Ukládá identifikátor přidružený k textový řetězec, který se zobrazí na kartě stránky vlastností.|
-|[IPropertyPageImpl::m_nObjects](#m_nobjects)|Ukládá číslo objekty přidružené k stránky vlastností.|
-|[IPropertyPageImpl::m_pPageSite](#m_ppagesite)|Odkazuje `IPropertyPageSite` rozhraní, pomocí kterého se na stránce vlastností komunikuje s rámec vlastnosti.|
-|[IPropertyPageImpl::m_ppUnk](#m_ppunk)|Odkazuje na pole `IUnknown` ukazatelů na objekty přidružené k stránky vlastností.|
-|[IPropertyPageImpl::m_size](#m_size)|Ukládá výšku a šířku dialogového okna stránky vlastností, v pixelech.|
+|[IPropertyPageImpl::m_bDirty](#m_bdirty)|Určuje, zda došlo ke změně stavu stránky vlastností.|
+|[IPropertyPageImpl::m_dwDocString](#m_dwdocstring)|Ukládá identifikátor prostředku přidružený k textovému řetězci, který popisuje stránku vlastností.|
+|[IPropertyPageImpl::m_dwHelpContext](#m_dwhelpcontext)|Ukládá identifikátor kontextu pro téma nápovědy přidružené k stránce vlastností.|
+|[IPropertyPageImpl::m_dwHelpFile](#m_dwhelpfile)|Ukládá identifikátor prostředku přidružený k názvu souboru s podaným v nápovědě, který popisuje stránku vlastností.|
+|[IPropertyPageImpl::m_dwTitle](#m_dwtitle)|Ukládá identifikátor prostředku přidružený k textovému řetězci, který se zobrazí na kartě stránky vlastností.|
+|[IPropertyPageImpl::m_nObjects](#m_nobjects)|Ukládá počet objektů přidružených k stránce vlastností.|
+|[IPropertyPageImpl::m_pPageSite](#m_ppagesite)|Odkazuje na `IPropertyPageSite` rozhraní, pomocí kterého stránka vlastností komunikuje s rámcem vlastnosti.|
+|[IPropertyPageImpl::m_ppUnk](#m_ppunk)|Odkazuje na pole `IUnknown` ukazatelů na objekty přidružené k stránce vlastností.|
+|[IPropertyPageImpl::m_size](#m_size)|Ukládá výšku a šířku dialogového okna stránky vlastností (v pixelech).|
 
 ## <a name="remarks"></a>Poznámky
 
-[IPropertyPage](/windows/desktop/api/ocidl/nn-ocidl-ipropertypage) rozhraní umožňuje spravovat konkrétní stránka vlastností v rámci seznamu vlastností. Třída `IPropertyPageImpl` poskytuje výchozí implementaci tohoto rozhraní a implementuje `IUnknown` posíláním informací o k výpisu paměti zařízení v ladění sestavení.
+Rozhraní [IPropertyPage](/windows/win32/api/ocidl/nn-ocidl-ipropertypage) umožňuje objektu spravovat určitou stránku vlastností v rámci seznamu vlastností. Třída `IPropertyPageImpl` poskytuje výchozí implementaci tohoto rozhraní a implementuje `IUnknown` odesláním informací do zařízení výpisu paměti v sestaveních pro ladění.
 
-**Související články** [ATL – tutoriál](../../atl/active-template-library-atl-tutorial.md), [vytvoření projektu ATL](../../atl/reference/creating-an-atl-project.md)
+**Související články** [Kurz ATL](../../atl/active-template-library-atl-tutorial.md), [Vytvoření projektu ATL](../../atl/reference/creating-an-atl-project.md)
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
@@ -110,11 +110,11 @@ Vaše třída odvozena od `IPropertyPageImpl`.
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** atlctl.h
+**Záhlaví:** atlctl. h
 
 ##  <a name="activate"></a>  IPropertyPageImpl::Activate
 
-Vytvoří okno dialogové okno stránky vlastností.
+Vytvoří okno dialogového okna pro stránku vlastností.
 
 ```
 HRESULT Activate(
@@ -125,13 +125,13 @@ HRESULT Activate(
 
 ### <a name="remarks"></a>Poznámky
 
-Ve výchozím nastavení, dialogové okno je vždy nemodální, bez ohledu na hodnotu *bModal* parametru.
+Ve výchozím nastavení je dialogové okno vždy nemodální, bez ohledu na hodnotu parametru *bModal* .
 
-Zobrazit [IPropertyPage::Activate](/windows/desktop/api/ocidl/nf-ocidl-ipropertypage-activate) ve Windows SDK.
+Viz [IPropertyPage:: Activate](/windows/win32/api/ocidl/nf-ocidl-ipropertypage-activate) v Windows SDK.
 
 ##  <a name="apply"></a>  IPropertyPageImpl::Apply
 
-Platí pro základní objekty zadané pomocí aktuální hodnoty vlastností stránky `SetObjects`.
+Použije aktuální hodnoty stránky vlastností na podkladové objekty zadané `SetObjects`pomocí.
 
 ```
 HRESULT Apply();
@@ -139,15 +139,15 @@ HRESULT Apply();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vrátí hodnotu S_OK.
+Vrací hodnotu S_OK.
 
 ### <a name="remarks"></a>Poznámky
 
-Zobrazit [IPropertyPage::Apply](/windows/desktop/api/ocidl/nf-ocidl-ipropertypage-apply) ve Windows SDK.
+Viz [IPropertyPage:: Apply](/windows/win32/api/ocidl/nf-ocidl-ipropertypage-apply) in Windows SDK.
 
 ##  <a name="deactivate"></a>  IPropertyPageImpl::Deactivate
 
-Zničí dialogového okna pole vytvořené pomocí [aktivovat](#activate).
+Odstraní okno dialogového okna vytvořené pomocí [aktivovat](#activate).
 
 ```
 HRESULT Deactivate();
@@ -155,11 +155,11 @@ HRESULT Deactivate();
 
 ### <a name="remarks"></a>Poznámky
 
-Zobrazit [IPropertyPage::Deactivate](/windows/desktop/api/ocidl/nf-ocidl-ipropertypage-deactivate) ve Windows SDK.
+Viz [IPropertyPage::D eactivate](/windows/win32/api/ocidl/nf-ocidl-ipropertypage-deactivate) v Windows SDK.
 
 ##  <a name="getpageinfo"></a>  IPropertyPageImpl::GetPageInfo
 
-Vyplní *pPageInfo* strukturu pomocí informací obsažených v datové členy.
+Vyplní strukturu *pPageInfo* informacemi obsaženými v datových členech.
 
 ```
 HRESULT GetPageInfo(PROPPAGEINFO* pPageInfo);
@@ -167,13 +167,13 @@ HRESULT GetPageInfo(PROPPAGEINFO* pPageInfo);
 
 ### <a name="remarks"></a>Poznámky
 
-`GetPageInfo` načte řetězec prostředky spojené s [m_dwDocString](#m_dwdocstring), [m_dwHelpFile](#m_dwhelpfile), a [m_dwTitle](#m_dwtitle).
+`GetPageInfo`Načte řetězcové prostředky přidružené k [m_dwDocString](#m_dwdocstring), [m_dwHelpFile](#m_dwhelpfile)a [m_dwTitle](#m_dwtitle).
 
-Zobrazit [IPropertyPage::GetPageInfo](/windows/desktop/api/ocidl/nf-ocidl-ipropertypage-getpageinfo) ve Windows SDK.
+Viz [IPropertyPage:: GetPageInfo](/windows/win32/api/ocidl/nf-ocidl-ipropertypage-getpageinfo) v Windows SDK.
 
 ##  <a name="help"></a>  IPropertyPageImpl::Help
 
-Vyvolá nápovědu Windows pro stránku vlastností.
+Vyvolá nápovědu systému Windows pro stránku vlastností.
 
 ```
 HRESULT Help(PROPPAGEINFO* pPageInfo);
@@ -181,7 +181,7 @@ HRESULT Help(PROPPAGEINFO* pPageInfo);
 
 ### <a name="remarks"></a>Poznámky
 
-Zobrazit [IPropertyPage::Help](/windows/desktop/api/ocidl/nf-ocidl-ipropertypage-help) ve Windows SDK.
+Viz [IPropertyPage:: help](/windows/win32/api/ocidl/nf-ocidl-ipropertypage-help) v Windows SDK.
 
 ##  <a name="ipropertypageimpl"></a>  IPropertyPageImpl::IPropertyPageImpl
 
@@ -197,7 +197,7 @@ Inicializuje všechny datové členy.
 
 ##  <a name="ispagedirty"></a>  IPropertyPageImpl::IsPageDirty
 
-Označuje, zda stránka vlastností změnila se aktivoval.
+Označuje, zda se stránka vlastností od aktivace změnila.
 
 ```
 HRESULT IsPageDirty(void);
@@ -205,11 +205,11 @@ HRESULT IsPageDirty(void);
 
 ### <a name="remarks"></a>Poznámky
 
-`IsPageDirty` Vrátí hodnotu S_OK, pokud stránce změnila se aktivoval.
+`IsPageDirty`Vrátí S_OK, pokud se stránka od aktivace změnila.
 
 ##  <a name="m_bdirty"></a>  IPropertyPageImpl::m_bDirty
 
-Určuje, zda se změnil stav na stránce vlastností.
+Určuje, zda došlo ke změně stavu stránky vlastností.
 
 ```
 BOOL m_bDirty;
@@ -217,7 +217,7 @@ BOOL m_bDirty;
 
 ##  <a name="m_nobjects"></a>  IPropertyPageImpl::m_nObjects
 
-Ukládá číslo objekty přidružené k stránky vlastností.
+Ukládá počet objektů přidružených k stránce vlastností.
 
 ```
 ULONG m_nObjects;
@@ -225,7 +225,7 @@ ULONG m_nObjects;
 
 ##  <a name="m_dwhelpcontext"></a>  IPropertyPageImpl::m_dwHelpContext
 
-Ukládá identifikátor kontextu pro téma nápovědy přidružené k stránky vlastností.
+Ukládá identifikátor kontextu pro téma nápovědy přidružené k stránce vlastností.
 
 ```
 DWORD m_dwHelpContext;
@@ -233,7 +233,7 @@ DWORD m_dwHelpContext;
 
 ##  <a name="m_dwdocstring"></a>  IPropertyPageImpl::m_dwDocString
 
-Ukládá identifikátor přidružený k textový řetězec s popisem stránky vlastností.
+Ukládá identifikátor prostředku přidružený k textovému řetězci, který popisuje stránku vlastností.
 
 ```
 UINT m_dwDocString;
@@ -241,7 +241,7 @@ UINT m_dwDocString;
 
 ##  <a name="m_dwhelpfile"></a>  IPropertyPageImpl::m_dwHelpFile
 
-Ukládá identifikátor prostředku přidružené k názvu souboru nápovědy popisující, na stránce vlastností.
+Ukládá identifikátor prostředku přidružený k názvu souboru s podaným v nápovědě, který popisuje stránku vlastností.
 
 ```
 UINT m_dwHelpFile;
@@ -249,7 +249,7 @@ UINT m_dwHelpFile;
 
 ##  <a name="m_dwtitle"></a>  IPropertyPageImpl::m_dwTitle
 
-Ukládá identifikátor přidružený k textový řetězec, který se zobrazí na kartě stránky vlastností.
+Ukládá identifikátor prostředku přidružený k textovému řetězci, který se zobrazí na kartě stránky vlastností.
 
 ```
 UINT m_dwTitle;
@@ -257,7 +257,7 @@ UINT m_dwTitle;
 
 ##  <a name="m_ppagesite"></a>  IPropertyPageImpl::m_pPageSite
 
-Odkazuje [IPropertyPageSite](/windows/desktop/api/ocidl/nn-ocidl-ipropertypagesite) rozhraní, pomocí kterého se na stránce vlastností komunikuje s rámec vlastnosti.
+Odkazuje na rozhraní [IPropertyPageSite](/windows/win32/api/ocidl/nn-ocidl-ipropertypagesite) , pomocí kterého stránka vlastností komunikuje s rámcem vlastností.
 
 ```
 IPropertyPageSite* m_pPageSite;
@@ -265,7 +265,7 @@ IPropertyPageSite* m_pPageSite;
 
 ##  <a name="m_ppunk"></a>  IPropertyPageImpl::m_ppUnk
 
-Odkazuje na pole `IUnknown` ukazatelů na objekty přidružené k stránky vlastností.
+Odkazuje na pole `IUnknown` ukazatelů na objekty přidružené k stránce vlastností.
 
 ```
 IUnknown** m_ppUnk;
@@ -273,7 +273,7 @@ IUnknown** m_ppUnk;
 
 ##  <a name="m_size"></a>  IPropertyPageImpl::m_size
 
-Ukládá výšku a šířku dialogového okna stránky vlastností, v pixelech.
+Ukládá výšku a šířku dialogového okna stránky vlastností (v pixelech).
 
 ```
 SIZE m_size;
@@ -281,7 +281,7 @@ SIZE m_size;
 
 ##  <a name="move"></a>  IPropertyPageImpl::Move
 
-Umístění a změní velikost dialogové okno stránky vlastností.
+Umístí a změní velikost dialogového okna stránky vlastností.
 
 ```
 HRESULT Move(LPCRECT pRect);
@@ -289,11 +289,11 @@ HRESULT Move(LPCRECT pRect);
 
 ### <a name="remarks"></a>Poznámky
 
-Zobrazit [IPropertyPage::Move](/windows/desktop/api/ocidl/nf-ocidl-ipropertypage-move) ve Windows SDK.
+Viz [IPropertyPage:: Move](/windows/win32/api/ocidl/nf-ocidl-ipropertypage-move) in Windows SDK.
 
 ##  <a name="setdirty"></a>  IPropertyPageImpl::SetDirty
 
-Označí stav na stránce vlastností jako změněné nebo beze změny, závisí na hodnotě *bDirty*.
+Označí stav stránky vlastností jako změněný nebo nezměněný v závislosti na hodnotě *bDirty*.
 
 ```
 void SetDirty(BOOL bDirty);
@@ -302,15 +302,15 @@ void SetDirty(BOOL bDirty);
 ### <a name="parameters"></a>Parametry
 
 *bDirty*<br/>
-[in] Při hodnotě TRUE se stav na stránce vlastností je označen jako změnit. V opačném případě je označen jako beze změny.
+pro V případě hodnoty TRUE je stav stránky vlastností označen jako změněný. V opačném případě je označena jako beze změny.
 
 ### <a name="remarks"></a>Poznámky
 
-V případě potřeby `SetDirty` informuje rámce, který se změnil na stránce vlastností.
+V případě potřeby `SetDirty` informuje rámec, že se změnila stránka vlastností.
 
 ##  <a name="setobjects"></a>  IPropertyPageImpl::SetObjects
 
-Poskytuje celou řadu `IUnknown` ukazatelů pro objekty přidružené k stránky vlastností.
+Poskytuje pole `IUnknown` ukazatelů pro objekty přidružené k stránce vlastností.
 
 ```
 HRESULT SetObjects(ULONG nObjects, IUnknown** ppUnk);
@@ -318,11 +318,11 @@ HRESULT SetObjects(ULONG nObjects, IUnknown** ppUnk);
 
 ### <a name="remarks"></a>Poznámky
 
-Zobrazit [IPropertyPage::SetObjects](/windows/desktop/api/ocidl/nf-ocidl-ipropertypage-setobjects) ve Windows SDK.
+Viz [IPropertyPage:: SetObjects](/windows/win32/api/ocidl/nf-ocidl-ipropertypage-setobjects) v Windows SDK.
 
 ##  <a name="setpagesite"></a>  IPropertyPageImpl::SetPageSite
 
-Na stránce vlastností s poskytuje [IPropertyPageSite](/windows/desktop/api/ocidl/nn-ocidl-ipropertypagesite) ukazatel, pomocí kterého se na stránce vlastností komunikuje s rámec vlastnosti.
+Poskytuje stránku vlastností s ukazatelem [IPropertyPageSite](/windows/win32/api/ocidl/nn-ocidl-ipropertypagesite) , pomocí kterého stránka vlastností komunikuje s rámcem vlastností.
 
 ```
 HRESULT SetPageSite(IPropertyPageSite* pPageSite);
@@ -330,11 +330,11 @@ HRESULT SetPageSite(IPropertyPageSite* pPageSite);
 
 ### <a name="remarks"></a>Poznámky
 
-Zobrazit [IPropertyPage::SetPageSite](/windows/desktop/api/ocidl/nf-ocidl-ipropertypage-setpagesite) ve Windows SDK.
+Viz [IPropertyPage:: SetPageSite](/windows/win32/api/ocidl/nf-ocidl-ipropertypage-setpagesite) v Windows SDK.
 
 ##  <a name="show"></a>  IPropertyPageImpl::Show
 
-Dialogové okno stránky vlastností je viditelná nebo neviditelné.
+Nastaví okno stránky vlastností jako viditelné nebo neviditelné.
 
 ```
 HRESULT Show(UINT nCmdShow);
@@ -342,11 +342,11 @@ HRESULT Show(UINT nCmdShow);
 
 ### <a name="remarks"></a>Poznámky
 
-Zobrazit [IPropertyPage::Show](/windows/desktop/api/ocidl/nf-ocidl-ipropertypage-show) ve Windows SDK.
+Viz [IPropertyPage:: show](/windows/win32/api/ocidl/nf-ocidl-ipropertypage-show) v Windows SDK.
 
 ##  <a name="translateaccelerator"></a>  IPropertyPageImpl::TranslateAccelerator
 
-Zpracuje stisk klávesy podle `pMsg`.
+Zpracuje klávesovou zkratku `pMsg`určenou v.
 
 ```
 HRESULT TranslateAccelerator(MSG* pMsg);
@@ -354,11 +354,11 @@ HRESULT TranslateAccelerator(MSG* pMsg);
 
 ### <a name="remarks"></a>Poznámky
 
-Zobrazit [IPropertyPage::TranslateAccelerator](/windows/desktop/api/ocidl/nf-ocidl-ipropertypage-translateaccelerator) ve Windows SDK.
+Viz [IPropertyPage:: TranslateAccelerator](/windows/win32/api/ocidl/nf-ocidl-ipropertypage-translateaccelerator) v Windows SDK.
 
 ## <a name="see-also"></a>Viz také:
 
 [IPropertyPage2Impl – třída](../../atl/reference/ipropertypage2impl-class.md)<br/>
 [IPerPropertyBrowsingImpl – třída](../../atl/reference/iperpropertybrowsingimpl-class.md)<br/>
 [ISpecifyPropertyPagesImpl – třída](../../atl/reference/ispecifypropertypagesimpl-class.md)<br/>
-[Přehled tříd](../../atl/atl-class-overview.md)
+[Přehled třídy](../../atl/atl-class-overview.md)

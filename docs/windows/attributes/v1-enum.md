@@ -1,21 +1,21 @@
 ---
-title: v1_enum – (C++ atributů COM)
+title: v1_enum (C++ atribut com)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.v1_enum
 helpviewer_keywords:
 - v1_enum attribute
 ms.assetid: 2fe92d92-81b9-4a1c-b6ce-437d0eb770ca
-ms.openlocfilehash: 08654eed7ad467dc22d2cbbf811c9169e5292f16
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c67f6303e73da42db5efd006bd6cdf3ded5bb8cf
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62407143"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69513867"
 ---
-# <a name="v1enum"></a>v1_enum
+# <a name="v1_enum"></a>v1_enum
 
-Určí, že zadaný výčtového typu předávají jako 32-bit entity spíše než výchozí 16 bitů.
+Směruje, že zadaný typ výčtu se přenáší jako 32ová entita, nikoli jako 16bitové výchozí hodnoty.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -25,11 +25,11 @@ Určí, že zadaný výčtového typu předávají jako 32-bit entity spíše ne
 
 ## <a name="remarks"></a>Poznámky
 
-**V1_enum –** C++ atribut má stejné funkce jako [v1_enum –](/windows/desktop/Midl/v1-enum) atribut MIDL.
+Atribut **v1_enum** C++ má stejné funkce jako atribut [v1_enum](/windows/win32/Midl/v1-enum) MIDL.
 
 ## <a name="example"></a>Příklad
 
-Následující kód ukazuje použití **v1_enum –**:
+Následující kód ukazuje použití **v1_enum**:
 
 ```cpp
 // cpp_attr_ref_v1_enum.cpp
@@ -44,16 +44,16 @@ enum eList {
 
 ## <a name="requirements"></a>Požadavky
 
-### <a name="attribute-context"></a>Atribut kontextu
+### <a name="attribute-context"></a>Kontext atributu
 
 |||
 |-|-|
 |**Platí pro**|Výčtový typ|
-|**Opakovatelné**|Ne|
-|**Vyžadované atributy**|Žádné|
+|**REPEATABLE**|Ne|
+|**Požadované atributy**|Žádné|
 |**Neplatné atributy**|Žádné|
 
-Další informace o kontexty atributů najdete v tématu [kontexty atributů](cpp-attributes-com-net.md#contexts).
+Další informace o kontextech atributů naleznete v tématu kontexty [atributů](cpp-attributes-com-net.md#contexts).
 
 ## <a name="see-also"></a>Viz také:
 

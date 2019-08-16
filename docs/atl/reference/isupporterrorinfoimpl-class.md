@@ -1,5 +1,5 @@
 ---
-title: Isupporterrorinfoimpl – třída
+title: ISupportErrorInfoImpl – třída
 ms.date: 06/13/2019
 f1_keywords:
 - ISupportErrorInfoImpl
@@ -10,19 +10,19 @@ helpviewer_keywords:
 - ISupportErrorInfoImpl class
 - error information, ATL
 ms.assetid: e33a4b11-a123-41cf-bcea-7b19743902af
-ms.openlocfilehash: 650d90c9ec98754e11586f63e0871b70ebbe34f3
-ms.sourcegitcommit: e79188287189b76b34eb7e8fb1bfe646bdb586bc
+ms.openlocfilehash: d5e7f087f6646940777ae8b2d2a4ea888fdd3593
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/14/2019
-ms.locfileid: "67141707"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69495363"
 ---
-# <a name="isupporterrorinfoimpl-class"></a>Isupporterrorinfoimpl – třída
+# <a name="isupporterrorinfoimpl-class"></a>ISupportErrorInfoImpl – třída
 
-Tato třída poskytuje výchozí implementaci třídy [ISupportErrorInfo rozhraní](/windows/desktop/api/oaidl/nn-oaidl-isupporterrorinfo) a můžou používat, když pouze jedno rozhraní vygeneruje chyby na objekt.
+Tato třída poskytuje výchozí implementaci [rozhraní ISupportErrorInfo](/windows/win32/api/oaidl/nn-oaidl-isupporterrorinfo) a lze jej použít, pokud pouze jedno rozhraní generuje chyby v objektu.
 
 > [!IMPORTANT]
-> Tato třída a jejích členů nelze použít v aplikacích, které jsou spouštěny v modulu Windows Runtime.
+> Tato třída a její členové nelze použít v aplikacích, které jsou spouštěny v prostředí Windows Runtime.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -35,7 +35,7 @@ class ATL_NO_VTABLE ISupportErrorInfoImpl
 ### <a name="parameters"></a>Parametry
 
 *piid*<br/>
-Ukazatel na IID rozhraní, které podporuje [IErrorInfo](/windows/desktop/api/oaidl/nn-oaidl-ierrorinfo).
+Ukazatel na IID rozhraní, které podporuje [IErrorInfo](/windows/win32/api/oaidl/nn-oaidl-ierrorinfo).
 
 ## <a name="members"></a>Členové
 
@@ -43,13 +43,13 @@ Ukazatel na IID rozhraní, které podporuje [IErrorInfo](/windows/desktop/api/oa
 
 |Name|Popis|
 |----------|-----------------|
-|[ISupportErrorInfoImpl::InterfaceSupportsErrorInfo](#interfacesupportserrorinfo)|Určuje, zda rozhraní identifikovaný `riid` podporuje [IErrorInfo](/windows/desktop/api/oaidl/nn-oaidl-ierrorinfo) rozhraní.|
+|[ISupportErrorInfoImpl::InterfaceSupportsErrorInfo](#interfacesupportserrorinfo)|Označuje, zda rozhraní identifikované `riid` rozhraním podporuje rozhraní [IErrorInfo](/windows/win32/api/oaidl/nn-oaidl-ierrorinfo) .|
 
 ## <a name="remarks"></a>Poznámky
 
-[ISupportErrorInfo rozhraní](/windows/desktop/api/oaidl/nn-oaidl-isupporterrorinfo) zajistí, že informace o chybě můžou být vrácen do klienta. Objekty, které používají `IErrorInfo` musí implementovat `ISupportErrorInfo`.
+[Rozhraní ISupportErrorInfo](/windows/win32/api/oaidl/nn-oaidl-isupporterrorinfo) zajišťuje, aby bylo možné vrátit informace o chybě klientovi. Objekty, které `IErrorInfo` používají, `ISupportErrorInfo`musí implementovat.
 
-Třída `ISupportErrorInfoImpl` poskytuje výchozí implementaci třídy `ISupportErrorInfo` a můžou používat, když pouze jedno rozhraní vygeneruje chyby na objekt. Příklad:
+Třída `ISupportErrorInfoImpl` poskytuje výchozí `ISupportErrorInfo` implementaci a lze použít, pokud pouze jedno rozhraní generuje chyby v objektu. Příklad:
 
 [!code-cpp[NVC_ATL_COM#48](../../atl/codesnippet/cpp/isupporterrorinfoimpl-class_1.h)]
 
@@ -61,11 +61,11 @@ Třída `ISupportErrorInfoImpl` poskytuje výchozí implementaci třídy `ISuppo
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** atlcom
+**Záhlaví:** atlcom. h
 
 ##  <a name="interfacesupportserrorinfo"></a>  ISupportErrorInfoImpl::InterfaceSupportsErrorInfo
 
-Určuje, zda rozhraní identifikovaný `riid` podporuje [IErrorInfo](/windows/desktop/api/oaidl/nn-oaidl-ierrorinfo) rozhraní.
+Označuje, zda rozhraní identifikované `riid` rozhraním podporuje rozhraní [IErrorInfo](/windows/win32/api/oaidl/nn-oaidl-ierrorinfo) .
 
 ```cpp
 STDMETHOD(InterfaceSupportsErrorInfo)(REFIID riid);
@@ -73,8 +73,8 @@ STDMETHOD(InterfaceSupportsErrorInfo)(REFIID riid);
 
 ### <a name="remarks"></a>Poznámky
 
-Zobrazit [ISupportErrorInfo::InterfaceSupportsErrorInfo](/windows/desktop/api/oaidl/nf-oaidl-isupporterrorinfo-interfacesupportserrorinfo) ve Windows SDK.
+Viz [ISupportErrorInfo:: InterfaceSupportsErrorInfo](/windows/win32/api/oaidl/nf-oaidl-isupporterrorinfo-interfacesupportserrorinfo) v Windows SDK.
 
 ## <a name="see-also"></a>Viz také:
 
-[Přehled tříd](../../atl/atl-class-overview.md)
+[Přehled třídy](../../atl/atl-class-overview.md)

@@ -24,19 +24,19 @@ helpviewer_keywords:
 - _chdrive function
 - chdrive function
 ms.assetid: 212a1a4b-4fa8-444e-9677-7fca4c8c47e3
-ms.openlocfilehash: 963b7b7b40b632981abfc1529beb9c48a5b991ba
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7e36867bb8237c549fd250be88a99244766920ba
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62335474"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69500266"
 ---
-# <a name="chdrive"></a>_chdrive
+# <a name="_chdrive"></a>_chdrive
 
 Změní aktuální pracovní jednotku.
 
 > [!IMPORTANT]
-> Toto rozhraní API nelze použít v aplikacích, které jsou spouštěny v modulu Windows Runtime. Další informace najdete v tématu [CRT funkce nejsou podporovány v aplikacích pro univerzální platformu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> Toto rozhraní API nelze použít v aplikacích, které jsou spouštěny v prostředí Windows Runtime. Další informace najdete v tématu [funkce CRT nejsou v aplikacích Univerzální platforma Windows podporovány](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -49,31 +49,31 @@ int _chdrive(
 ### <a name="parameters"></a>Parametry
 
 *drive*<br/>
-Celé číslo od 1 až 26, který určuje aktuální pracovní jednotku (1 = A, 2 = B a tak dále).
+Celé číslo od 1 do 26, které určuje aktuální pracovní jednotku (1 = A, 2 = B a tak dále).
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Nula (0), pokud aktuální pracovní jednotka byla změněna úspěšně; jinak -1.
+Nula (0), pokud se aktuální pracovní jednotka úspěšně změnila; v opačném případě-1.
 
 ## <a name="remarks"></a>Poznámky
 
-Pokud *jednotky* není v rozsahu 1 až 26, je vyvolána obslužná rutina neplatného parametru, jak je popsáno v [Parameter Validation](../../c-runtime-library/parameter-validation.md). Pokud smí provádění pokračovat, **_chdrive –** funkce vrátí hodnotu -1, **errno** je nastavena na **EACCES**, a **_doserrno** je nastavena na  **ERROR_INVALID_DRIVE**.
+Pokud *jednotka* není v rozsahu od 1 do 26, je vyvolána obslužná rutina neplatného parametru, jak je popsáno v tématu [ověřování parametru](../../c-runtime-library/parameter-validation.md). Pokud provádění může pokračovat, funkce **_chdrive** vrátí hodnotu-1, **errno** je nastavená na **EACCES**a **_doserrno** je nastavená na **ERROR_INVALID_DRIVE**.
 
-**_Chdrive –** funkce není bezpečná pro vlákno protože závisí **SetCurrentDirectory** funkce, která sama o sobě není bezpečná pro vlákno. Chcete-li použít **_chdrive –** bezpečně ve vícevláknové aplikaci, je nutné zadat vlastní synchronizaci vláken. Další informace najdete v tématu [SetCurrentDirectory](/windows/desktop/api/winbase/nf-winbase-setcurrentdirectory).
+Funkce **_chdrive** není bezpečná pro přístup z více vláken, protože závisí na funkci **SetCurrentDirectory** , která sama o sobě není bezpečná pro přístup z více vláken. Chcete-li v aplikaci s více vlákny používat **_chdrive** bezpečně, je nutné poskytnout vlastní synchronizaci vláken. Další informace najdete v tématu [SetCurrentDirectory](/windows/win32/api/winbase/nf-winbase-setcurrentdirectory).
 
-**_Chdrive –** funkce se změní pouze aktuální pracovní jednotku;  **_chdir –** změní aktuální pracovní adresář.
+Funkce **_chdrive** mění pouze aktuální pracovní jednotku;  **_chdir** změní aktuální pracovní adresář.
 
 ## <a name="requirements"></a>Požadavky
 
 |Rutina|Požadovaný hlavičkový soubor|
 |-------------|---------------------|
-|**_chdrive**|\<direct.h>|
+|**_chdrive**|\<Direct. h >|
 
-Další informace najdete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace najdete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Příklad
 
-Podívejte se na příklad pro [_getdrive –](getdrive.md).
+Podívejte se na příklad pro [_getdrive](getdrive.md).
 
 ## <a name="see-also"></a>Viz také:
 

@@ -1,5 +1,5 @@
 ---
-title: Chyba informace clase (ATL)
+title: Informace o chybě Classe (ATL)
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
@@ -7,19 +7,19 @@ helpviewer_keywords:
 - error handling, classes
 - error information, classes
 ms.assetid: ba40c8fb-81fd-4f61-8f47-fa2cb540e274
-ms.openlocfilehash: 19771a182de8863e1bfb63499cd46633f6a837c3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 80757990d28bfe618f400632369b0864e46d071a
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62250768"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69492407"
 ---
 # <a name="error-information-classes"></a>Třídy informací o chybě
 
-Následující třídy označuje, jak se zpracovává informace o chybě:
+Následující třída indikuje, jak se zpracovávají informace o chybě:
 
-- [Isupporterrorinfoimpl –](../atl/reference/isupporterrorinfoimpl-class.md) Určuje, zda objekt podporuje [IErrorInfo](/windows/desktop/api/oaidl/nn-oaidl-ierrorinfo) rozhraní. `IErrorInfo` Umožňuje informace o chybě šířeny zpět do klienta.
+- [ISupportErrorInfoImpl](../atl/reference/isupporterrorinfoimpl-class.md) Určuje, zda objekt podporuje rozhraní [IErrorInfo](/windows/win32/api/oaidl/nn-oaidl-ierrorinfo) . `IErrorInfo`umožňuje šíření informací o chybách zpět do klienta.
 
 ## <a name="see-also"></a>Viz také:
 
-[Přehled tříd](../atl/atl-class-overview.md)
+[Přehled třídy](../atl/atl-class-overview.md)

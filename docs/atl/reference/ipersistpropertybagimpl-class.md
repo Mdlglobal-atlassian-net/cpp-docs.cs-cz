@@ -1,5 +1,5 @@
 ---
-title: Ipersistpropertybagimpl – třída
+title: IPersistPropertyBagImpl – třída
 ms.date: 11/04/2016
 f1_keywords:
 - IPersistPropertyBagImpl
@@ -11,19 +11,19 @@ f1_keywords:
 helpviewer_keywords:
 - IPersistPropertyBagImpl class
 ms.assetid: 712af24d-99f8-40f2-9811-53b3ff6e5b19
-ms.openlocfilehash: 569a24fd08801de952e998f772afbc3478096628
-ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
+ms.openlocfilehash: 15b9c9738d921c4c6f7837f9280c6dd6b09392d6
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66503148"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69495767"
 ---
-# <a name="ipersistpropertybagimpl-class"></a>Ipersistpropertybagimpl – třída
+# <a name="ipersistpropertybagimpl-class"></a>IPersistPropertyBagImpl – třída
 
-Tato třída implementuje `IUnknown` a umožňuje uložit do kontejneru objektů klientem poskytnutý její vlastnosti.
+Tato třída implementuje `IUnknown` a umožňuje objektu ukládat jeho vlastnosti do kontejneru vlastností dodaných klientem.
 
 > [!IMPORTANT]
->  Tato třída a jejích členů nelze použít v aplikacích, které jsou spouštěny v modulu Windows Runtime.
+>  Tato třída a její členové nelze použít v aplikacích, které jsou spouštěny v prostředí Windows Runtime.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -35,7 +35,7 @@ class ATL_NO_VTABLE IPersistPropertyBagImpl : public IPersistPropertyBag
 #### <a name="parameters"></a>Parametry
 
 *T*<br/>
-Vaše třída odvozena od `IPersistPropertyBagImpl`.
+Vaše třída, která je `IPersistPropertyBagImpl`odvozena z.
 
 ## <a name="members"></a>Členové
 
@@ -43,18 +43,18 @@ Vaše třída odvozena od `IPersistPropertyBagImpl`.
 
 |Name|Popis|
 |----------|-----------------|
-|[IPersistPropertyBagImpl::GetClassID](#getclassid)|Načte identifikátor CLSID objektu.|
-|[IPersistPropertyBagImpl::InitNew](#initnew)|Inicializuje nově vytvořený objekt. Implementace knihovny ATL vrátí hodnotu S_OK.|
-|[IPersistPropertyBagImpl::Load](#load)|Načte vlastnosti objektu z kontejneru objektů dodaná klientem.|
-|[IPersistPropertyBagImpl::Save](#save)|Uloží vlastností objektu do kontejneru objektů dodaná klientem.|
+|[IPersistPropertyBagImpl::GetClassID](#getclassid)|Načte CLSID objektu.|
+|[IPersistPropertyBagImpl::InitNew](#initnew)|Inicializuje nově vytvořený objekt. Implementace ATL vrací S_OK.|
+|[IPersistPropertyBagImpl::Load](#load)|Načte vlastnosti objektu z kontejneru vlastností dodaných klientem.|
+|[IPersistPropertyBagImpl::Save](#save)|Uloží vlastnosti objektu do kontejneru vlastností dodaných klientem.|
 
 ## <a name="remarks"></a>Poznámky
 
-[IPersistPropertyBag](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa768205\(v=vs.85\)) rozhraní umožňuje uložit do kontejneru objektů klientem poskytnutý její vlastnosti. Třída `IPersistPropertyBagImpl` poskytuje výchozí implementaci tohoto rozhraní a implementuje `IUnknown` posíláním informací o k výpisu paměti zařízení v ladění sestavení.
+Rozhraní [IPersistPropertyBag](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa768205\(v=vs.85\)) umožňuje objektu ukládat jeho vlastnosti do kontejneru vlastností dodaných klientem. Třída `IPersistPropertyBagImpl` poskytuje výchozí implementaci tohoto rozhraní a implementuje `IUnknown` odesláním informací do zařízení výpisu paměti v sestaveních pro ladění.
 
-`IPersistPropertyBag` funguje ve spojení s [IPropertyBag](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa768196\(v=vs.85\)) a [IErrorLog](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa768231\(v=vs.85\)). Tato druhá možnost dvě rozhraní musí být implementované klientem. Prostřednictvím `IPropertyBag`, klient ukládá a načítá jednotlivých vlastností objektu. Prostřednictvím `IErrorLog`, objektu a klienta můžete podávat zprávy o chybách byla zjištěna.
+`IPersistPropertyBag`funguje ve spojení s [IPropertyBag](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa768196\(v=vs.85\)) a [IErrorLog](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa768231\(v=vs.85\)). Tato dvě rozhraní musí být implementována klientem nástroje. Prostřednictvím `IPropertyBag`klienta aplikace ukládá a načítá jednotlivé vlastnosti objektu. V `IErrorLog`rámci může objekt i klient hlásit jakékoli zjištěné chyby.
 
-**Související články** [ATL – tutoriál](../../atl/active-template-library-atl-tutorial.md), [vytvoření projektu ATL](../../atl/reference/creating-an-atl-project.md)
+**Související články** [Kurz ATL](../../atl/active-template-library-atl-tutorial.md), [Vytvoření projektu ATL](../../atl/reference/creating-an-atl-project.md)
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
@@ -64,11 +64,11 @@ Vaše třída odvozena od `IPersistPropertyBagImpl`.
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** atlcom
+**Záhlaví:** atlcom. h
 
-##  <a name="getclassid"></a>  IPersistPropertyBagImpl::GetClassID
+##  <a name="getclassid"></a>IPersistPropertyBagImpl:: GetClassID
 
-Načte identifikátor CLSID objektu.
+Načte CLSID objektu.
 
 ```
 STDMETHOD(GetClassID)(CLSID* pClassID);
@@ -76,7 +76,7 @@ STDMETHOD(GetClassID)(CLSID* pClassID);
 
 ### <a name="remarks"></a>Poznámky
 
-Zobrazit [IPersist::GetClassID](/windows/desktop/api/objidl/nf-objidl-ipersist-getclassid) ve Windows SDK.
+Viz [IPersist:: GetClassID](/windows/win32/api/objidl/nf-objidl-ipersist-getclassid) v Windows SDK.
 
 ##  <a name="initnew"></a>  IPersistPropertyBagImpl::InitNew
 
@@ -88,15 +88,15 @@ STDMETHOD(InitNew)();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vrátí hodnotu S_OK.
+Vrací hodnotu S_OK.
 
 ### <a name="remarks"></a>Poznámky
 
-Zobrazit [IPersistPropertyBag::InitNew](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa768204\(v=vs.85\)) ve Windows SDK.
+Viz [IPersistPropertyBag:: InitNew](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa768204\(v=vs.85\)) v Windows SDK.
 
-##  <a name="load"></a>  IPersistPropertyBagImpl::Load
+##  <a name="load"></a>IPersistPropertyBagImpl:: Load
 
-Načte vlastnosti objektu z kontejneru objektů dodaná klientem.
+Načte vlastnosti objektu z kontejneru vlastností dodaných klientem.
 
 ```
 STDMETHOD(Load)(LPPROPERTYBAG pPropBag, LPERRORLOG pErrorLog);
@@ -104,13 +104,13 @@ STDMETHOD(Load)(LPPROPERTYBAG pPropBag, LPERRORLOG pErrorLog);
 
 ### <a name="remarks"></a>Poznámky
 
-Mapy vlastností objektu ATL používá pro načtení těchto informací.
+Knihovna ATL používá k načtení těchto informací mapu vlastností objektu.
 
-Zobrazit [IPersistPropertyBag::Load](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa768206\(v=vs.85\)) ve Windows SDK.
+Viz [IPersistPropertyBag:: Load](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa768206\(v=vs.85\)) in Windows SDK.
 
-##  <a name="save"></a>  IPersistPropertyBagImpl::Save
+##  <a name="save"></a>IPersistPropertyBagImpl:: Save
 
-Uloží vlastností objektu do kontejneru objektů dodaná klientem.
+Uloží vlastnosti objektu do kontejneru vlastností dodaných klientem.
 
 ```
 STDMETHOD(Save)(
@@ -121,11 +121,11 @@ STDMETHOD(Save)(
 
 ### <a name="remarks"></a>Poznámky
 
-Mapy vlastností objektu ATL používá k ukládání příslušných informací. Ve výchozím nastavení, tato metoda šetří všechny vlastnosti, bez ohledu na hodnotu *fSaveAllProperties*.
+ATL používá mapu vlastností objektu k uložení těchto informací. Ve výchozím nastavení tato metoda uloží všechny vlastnosti bez ohledu na hodnotu *fSaveAllProperties*.
 
-Zobrazit [IPersistPropertyBag::Save](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa768207\(v=vs.85\)) ve Windows SDK.
+Viz [IPersistPropertyBag:: Save](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa768207\(v=vs.85\)) in Windows SDK.
 
 ## <a name="see-also"></a>Viz také:
 
 [BEGIN_PROP_MAP](property-map-macros.md#begin_prop_map)<br/>
-[Přehled tříd](../../atl/atl-class-overview.md)
+[Přehled třídy](../../atl/atl-class-overview.md)

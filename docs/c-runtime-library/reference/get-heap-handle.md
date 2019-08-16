@@ -25,16 +25,16 @@ helpviewer_keywords:
 - _get_heap_handle function
 - get_heap_handle function
 ms.assetid: a4d05049-8528-494a-8281-a470d1e1115c
-ms.openlocfilehash: 82ea108a41bec1d0276e2c952b3f509f36bab8ab
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7e82686c4b33dc11f02f387a97966d3ff5a47085
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62332114"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69499931"
 ---
-# <a name="getheaphandle"></a>_get_heap_handle
+# <a name="_get_heap_handle"></a>_get_heap_handle
 
-Vrátí popisovač haldy používaný systémem runtime c.
+Vrátí popisovač haldy, který je používán systémem runtime C.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -44,19 +44,19 @@ intptr_t _get_heap_handle( void );
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Vrátí popisovač haldy Win32 používaný systémem runtime c.
+Vrátí popisovač haldy Win32 používané systémem runtime C.
 
 ## <a name="remarks"></a>Poznámky
 
-Tuto funkci použít, pokud chcete volat [HeapSetInformation](/windows/desktop/api/heapapi/nf-heapapi-heapsetinformation) a povolit haldu s nízkou fragmentací haldu CRT.
+Tuto funkci použijte, pokud chcete volat [HeapSetInformation](/windows/win32/api/heapapi/nf-heapapi-heapsetinformation) a povolit haldu s nízkou fragmentaci v haldě CRT.
 
 ## <a name="requirements"></a>Požadavky
 
 |Rutina|Požadovaný hlavičkový soubor|
 |-------------|---------------------|
-|**_get_heap_handle**|\<malloc.h>|
+|**_get_heap_handle**|\<. h >|
 
-Další informace o kompatibilitě naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
 
 ## <a name="sample"></a>Ukázka
 

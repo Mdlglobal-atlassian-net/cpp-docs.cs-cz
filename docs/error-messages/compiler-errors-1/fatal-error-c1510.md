@@ -6,19 +6,19 @@ f1_keywords:
 helpviewer_keywords:
 - C1510
 ms.assetid: 150c827f-9514-41a9-8d7e-82f820749bcb
-ms.openlocfilehash: f05f79ea78958a7d7a64f24bdce2d1151b93cdfb
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 33c17a3099f4aed99cc26579d0e65c4a350b4268
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62208502"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69501096"
 ---
 # <a name="fatal-error-c1510"></a>Závažná chyba C1510
 
-Nejde otevřít jazykový prostředek clui.dll.
+Nejde otevřít jazykový prostředek clui. dll.
 
-Kompilátor nemůže načíst knihovna DLL prostředků jazyka.
+Kompilátor nemůže načíst knihovnu prostředků jazyka DLL.
 
-Existují dvě běžné příčiny tohoto problému. Při použití 32bitové verze kompilátoru a nástrojů, může se zobrazit tato chyba pro velké projekty, které používají více než 2GB paměti během odkaz. Možné řešení v 64bitových systémech Windows, je použít 64bitové nativní a křížový kompilátor a nástroje pro generování kódu. Toto využívá větší paměť k dispozici pro 64bitové aplikace. Pokud je nutné použít 32bitový kompilátor, protože běží v 32bitové verzi systému, v některých případech můžete zvýšit množství paměti k dispozici v linkeru na 3GB. Další informace najdete v tématu [optimalizace 4 GB: Nástroje BCDEdit a Boot.ini](https://msdn.microsoft.com/library/vs/alm/bb613473) a [nástroje BCDEdit/sadě increaseuserva](https://msdn.microsoft.com/library/ff542202.aspx) příkazu.
+Existují dva běžné příčiny tohoto problému. Při použití 32 kompilátorů a nástrojů se tato chyba může zobrazit u velkých projektů, které během propojení používají více než 2 GB paměti. Možné řešení na 64 systémů Windows je 64 použití nativního nativního nebo křížového kompilátoru a nástrojů k vygenerování kódu. To využívá větší místo v paměti dostupné pro 64 aplikace. Pokud je nutné použít 32 kompilátor, protože používáte systém 32, v některých případech můžete zvýšit množství paměti dostupné pro linker do povolenou. Další informace najdete v tématu [optimalizace na 4 gigabajty: Nástroj BCDEdit a Boot.](/windows/win32/memory/4-gigabyte-tuning) ini a příkaz [bcdedit/set increaseuserva](/windows-hardware/drivers/devtest/bcdedit--set)
 
-Obvyklou příčinou je poškozený nebo neúplná instalace sady Visual Studio. V takovém případě opětovným spuštěním instalačního programu opravte nebo přeinstalujte Visual Studio.
+Další běžnou příčinou je poškozená nebo neúplná instalace sady Visual Studio. V takovém případě znovu spusťte instalační program a opravte nebo přeinstalujte sadu Visual Studio.

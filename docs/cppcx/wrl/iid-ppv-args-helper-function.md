@@ -7,19 +7,19 @@ f1_keywords:
 helpviewer_keywords:
 - IID_PPV_ARGS_Helper function
 ms.assetid: afee9b23-8df1-4575-903f-e9ba748418f0
-ms.openlocfilehash: 5ef4dd6c9db2d19e0c8a4143c5b4ed3f0ac75f6a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e7733ae6084b64c20dff5a2c35d7a31c614d6e44
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62398261"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69500509"
 ---
-# <a name="iidppvargshelper-function"></a>IID_PPV_ARGS_Helper – funkce
+# <a name="iid_ppv_args_helper-function"></a>IID_PPV_ARGS_Helper – funkce
 
-Ověřuje, že typ zadaného argumentu je odvozen od `IUnknown` rozhraní.
+Ověřuje, že typ zadaného argumentu je odvozen z `IUnknown` rozhraní.
 
 > [!IMPORTANT]
-> Tato specializace šablony podporuje infrastrukturu rozhraní knihovny WRL a není určena pro použití přímo v kódu. Použití [IID_PPV_ARGS](/windows/desktop/api/combaseapi/nf-combaseapi-iid_ppv_args) místo.
+> Tato specializace šablony podporuje infrastrukturu WRL a není určena pro použití přímo v kódu. Místo toho použijte [IID_PPV_ARGS](/windows/win32/api/combaseapi/nf-combaseapi-iid_ppv_args) .
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -33,20 +33,20 @@ void** IID_PPV_ARGS_Helper(
 ### <a name="parameters"></a>Parametry
 
 *T*<br/>
-Typ argumentu *pp*.
+Typ argumentu *PP*.
 
 *pp*<br/>
-Dvakrát nepřímé ukazatel.
+Dvakrát nepřímý ukazatel.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Argument *pp* přetypovat na ukazatel na ukazatel na **void**.
+Argument *PP* se přetypování na ukazatel na ukazatel na **typ void**.
 
 ## <a name="remarks"></a>Poznámky
 
-Pokud je vygenerována chyba kompilace parametr šablony *T* není odvozen od `IUnknown`.
+Pokud parametr šablony *T* neodvozuje z `IUnknown`, vygeneruje se chyba při kompilaci.
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** client.h
+**Záhlaví:** Client. h
 

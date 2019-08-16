@@ -1,5 +1,5 @@
 ---
-title: 'TN003: Mapování Windows zpracovává na objekty'
+title: 'TN003: Mapování popisovačů Windows na objekty'
 ms.date: 11/04/2016
 f1_keywords:
 - vc.mapping
@@ -9,28 +9,28 @@ helpviewer_keywords:
 - Windows handles to objects [MFC]
 - mappings [MFC], Windows handles to objects
 ms.assetid: fbea9f38-992c-4091-8dbc-f29e288617d6
-ms.openlocfilehash: e7844398ebaf5a8fdf8c56ab18b33d8c7717d1ad
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 45492963e1b686e03eb59c320fdc3d52d1534f7d
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62306367"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69513535"
 ---
-# <a name="tn003-mapping-of-windows-handles-to-objects"></a>TN003: Mapování Windows zpracovává na objekty
+# <a name="tn003-mapping-of-windows-handles-to-objects"></a>TN003: Mapování popisovačů Windows na objekty
 
-Tato poznámka popisuje MFC rutin, které podporují mapování Windows objekt popisovače objektů jazyka C++.
+Tato poznámka popisuje rutiny knihovny MFC, které podporují mapování popisovačů objektů C++ systému Windows na objekty.
 
 ## <a name="the-problem"></a>Problém
 
-Objekty Windows obvykle představují různé [zpracování](/windows/desktop/WinProg/windows-data-types) zabalení objektů tříd MFC Windows manipulačních bodů objektu s objekty jazyka C++. Popisovač funkce třídy knihovny MFC pro zabalení umožňují najít objekt jazyka C++, který zahrnuje Windows objekt, který obsahuje konkrétní popisovač. Ale někdy objekt nemá objekt obálky C++ a systém za těchto okolností vytvoří dočasný objekt, který slouží jako obálky C++.
+Objekty systému Windows jsou obvykle reprezentovány různými objekty [obslužné rutiny](/windows/win32/WinProg/windows-data-types) třídy MFC, které C++ zabalí obslužné rutiny objektů systému Windows s objekty. Funkce zalamování obslužných rutin knihovny knihovny MFC vám umožní najít C++ objekt, který zabalí objekt Windows, který má určitý popisovač. V některých případech však objekt neobsahuje C++ Obálkový objekt a v tomto okamžiku systém vytvoří dočasný objekt, který bude fungovat jako C++ obálka.
 
-Windows objekty, které používají mapování zpracování jsou následující:
+Objekty Windows, které používají mapy popisovačů, jsou následující:
 
 - HWND ([CWnd](../mfc/reference/cwnd-class.md) a `CWnd`-odvozené třídy)
 
-- HDC ([CDC](../mfc/reference/cdc-class.md) a `CDC`-odvozené třídy)
+- HDC ([CDC](../mfc/reference/cdc-class.md) a `CDC`odvozené třídy)
 
-- HMENU ([cmenu –](../mfc/reference/cmenu-class.md))
+- HMENU ([CMenu –](../mfc/reference/cmenu-class.md))
 
 - HPEN ([CGdiObject](../mfc/reference/cgdiobject-class.md))
 
@@ -46,42 +46,42 @@ Windows objekty, které používají mapování zpracování jsou následující
 
 - HIMAGELIST ([atributu CImageList](../mfc/reference/cimagelist-class.md))
 
-- SOKETU ([csocket –](../mfc/reference/csocket-class.md))
+- SOKET ([CSocket –](../mfc/reference/csocket-class.md))
 
-Zadaný popisovač na některý z těchto objektů, můžete najít objekt knihovny MFC, která obaluje popisovač zavoláním statické metody `FromHandle`. Mějme například popisovačem HWND volá *hWnd*, vrátí ukazatel na následující řádek `CWnd` tím končí naše *hWnd*:
+S ohledem na popisovač kteréhokoli z těchto objektů, lze najít objekt knihovny MFC, který zabalí popisovač voláním statické metody `FromHandle`. Například s ohledem na HWND s názvem *HWND*, následující řádek vrátí ukazatel na `CWnd` , který zabalí *HWND*:
 
 ```
 CWnd::FromHandle(hWnd)
 ```
 
-Pokud *hWnd* nemá objekt konkrétní obálky dočasný `CWnd` se vytvoří při zabalení *hWnd*. Díky tomu je možné získat platný objekt jazyka C++ z jakékoli popisovače.
+Pokud *HWND* nemá konkrétní objekt obálky, vytvoří se dočasná `CWnd` pro zabalení *HWND*. Díky tomu je možné získat platný C++ objekt z libovolného popisovače.
 
-Jakmile budete mít objekt obálky, můžete načíst jeho popisovač z veřejné členské proměnné této obálkové třídy. V případě třídy `CWnd`, *m_hWnd* HWND pro tento objekt obsahuje.
+Po získání objektu obálky můžete načíst jeho popisovač z veřejné členské proměnné třídy obálky. V případě a `CWnd` *m_hWnd* obsahuje HWND pro daný objekt.
 
-## <a name="attaching-handles-to-mfc-objects"></a>Zpracovává se připojuje k objektům MFC
+## <a name="attaching-handles-to-mfc-objects"></a>Připojení popisovačů k objektům MFC
 
-Zadaný objekt nově vytvořený popisovač obálky a popisovač na objekt Windows, můžete přidružit dvě voláním `Attach` fungovat jako v následujícím příkladu:
+Vzhledem k nově vytvořenému objektu s popisovačem a popisovači objektu systému Windows můžete přiřadit dvě voláním `Attach` funkce jako v tomto příkladu:
 
 ```
 CWnd myWnd;
 myWnd.Attach(hWnd);
 ```
 
-Díky tomu položky v mapování trvalé přiřazení *myWnd* a *hWnd*. Volání `CWnd::FromHandle(hWnd)` nyní vrátí ukazatel na *myWnd*. Když *myWnd* je odstraněn, destruktor automaticky zničí *hWnd* voláním Windows [destroywindow –](/windows/desktop/api/winuser/nf-winuser-destroywindow) funkce. Pokud to není žádoucí, *hWnd* musí být odpojen od *myWnd* před *myWnd* zničen (obvykle při ukončení oboru, ve kterém *myWnd*byl definován). `Detach` Metoda to dělá.
+Tím se vytvoří záznam na trvalé mapě, která přidružuje *myWnd* a *HWND*. Volání `CWnd::FromHandle(hWnd)` nyní vrátí ukazatel na *myWnd*. Při odstranění *myWnd* destruktor automaticky odstraní *HWND* voláním funkce Windows [DestroyWindow](/windows/win32/api/winuser/nf-winuser-destroywindow) . Pokud to není žádoucí, musí být *HWND* odpojen od *myWnd* před zničením *myWnd* (obvykle při ponechání oboru, ve kterém byl definován *myWnd* ). `Detach` Metoda to dělá.
 
 ```
 myWnd.Detach();
 ```
 
-## <a name="more-about-temporary-objects"></a>Další informace o dočasné objekty
+## <a name="more-about-temporary-objects"></a>Další informace o dočasných objektech
 
-Dočasné objekty jsou vytvořeny vždy, když `FromHandle` je uveden popisovač, který již nemá Obálkový objekt. Tyto dočasné objekty jsou odpojena od své popisovač a odstranit `DeleteTempMap` funkce. Ve výchozím nastavení [CWinThread::OnIdle](../mfc/reference/cwinthread-class.md#onidle) automaticky volá `DeleteTempMap` pro každou třídu, která podporuje mapování dočasné zpracování. To znamená, že nelze předpokládat, že ukazatel na dočasný objekt bude platit za bod výstupu z funkce, kde byl získán ukazatel.
+Dočasné objekty jsou vytvořeny pokaždé, když `FromHandle` je předána obslužná rutina, která ještě nemá objekt obálky. Tyto dočasné objekty jsou odpojeny od svého popisovače a odstraněny pomocí `DeleteTempMap` funkcí. Ve výchozím nastavení je hodnota [CWinThread:: OnIdle](../mfc/reference/cwinthread-class.md#onidle) automaticky volána `DeleteTempMap` pro každou třídu, která podporuje dočasné mapy popisovačů. To znamená, že nemůžete předpokládat ukazatel na dočasný objekt, bude platný za bodem ukončení od funkce, kde byl ukazatel získán.
 
-## <a name="wrapper-objects-and-multiple-threads"></a>Obálka objekty a více vláken
+## <a name="wrapper-objects-and-multiple-threads"></a>Objekty obálky a více vláken
 
-Dočasné a trvalé objekty se udržuje na základě vlákna. To znamená jedno vlákno nemůže přistupovat k objektům obálky C++ jiného vlákna, bez ohledu na to, zda jde o dočasné nebo trvalé.
+Dočasné i trvalé objekty jsou uchovávány na základě jednotlivých vláken. To znamená, že jedno vlákno nemůže získat přístup k C++ objektům obálky jiného vlákna bez ohledu na to, zda je dočasné nebo trvalé.
 
-Předat tyto objekty z jednoho vlákna do druhého, vždy je odeslat jako jejich nativním `HANDLE` typu. Předání objektu obálky C++ z jednoho vlákna do druhého se často vést k neočekávaným výsledkům.
+Chcete-li tyto objekty předat z jednoho vlákna do druhého, vždy je odešlete `HANDLE` jako nativní typ. Předání objektu C++ obálky z jednoho vlákna do druhého bude často způsobovat neočekávané výsledky.
 
 ## <a name="see-also"></a>Viz také:
 

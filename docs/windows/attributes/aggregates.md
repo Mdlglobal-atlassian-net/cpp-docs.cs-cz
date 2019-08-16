@@ -1,5 +1,5 @@
 ---
-title: agregace (C++ COM atribut)
+title: agregace (C++ atribut com)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.aggregates
@@ -9,16 +9,16 @@ helpviewer_keywords:
 - aggregate objects [C++], aggregates attribute
 - aggregates [C++]
 ms.assetid: 67a084c9-941f-474b-a029-9c93b38ebe9a
-ms.openlocfilehash: 12e6af31c2714095cf2ecf51e4f067081789a9e0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c9e3f84fbc781bd5187ae0c3461a6c8d68a29aa0
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62262174"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69501874"
 ---
 # <a name="aggregates"></a>aggregates
 
-Označuje, že objekt agreguje objektu určeného parametrem identifikátor CLSID.
+Označuje, že objekt agreguje objekt určený identifikátorem CLSID.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -28,27 +28,27 @@ Označuje, že objekt agreguje objektu určeného parametrem identifikátor CLSI
 
 ### <a name="parameters"></a>Parametry
 
-*clsid*<br/>
+*CLSID*<br/>
 Určuje identifikátor CLSID agregovatelné objektu.
 
 *variable_name*<br/>
-Název proměnné, která má být vložen. Tato proměnná obsahuje `IUnknown` objektu agregaci.
+Název proměnné, která má být vložena. Tato proměnná obsahuje `IUnknown` objekt, který je agregován.
 
 ## <a name="remarks"></a>Poznámky
 
-Při použití s objektem, **agregace** C++ atribut implementuje vnější obálky pro objekt agregaci (určená `clsid`).
+Při použití na objekt, **agreguje** C++ atribut implementuje vnější obálku pro objekt, který je agregován (určený parametrem `clsid`).
 
-Tento atribut vyžaduje, aby [coclass](coclass.md), [progid](progid.md), nebo [vi_progid –](vi-progid.md) atribut (nebo jiný atribut, který zahrnuje jednu z těchto) také použít u stejného elementu. Pokud se používá jakékoli jeden atribut, další dvě automaticky použity. Například pokud `progid` se použije, `vi_progid` a `coclass` jsou použita také.
+Tento atribut vyžaduje, aby atribut [Coclass](coclass.md), [ProgID](progid.md)nebo [vi_progid](vi-progid.md) (nebo jiný atribut, který implikuje jeden z nich) byl také použit pro stejný prvek. Je-li použit libovolný atribut, budou automaticky použity ostatní dva. Například pokud `progid` se `vi_progid` používá a `coclass` jsou také aplikovány.
 
-### <a name="atl-projects"></a>Projekty knihovny ATL
+### <a name="atl-projects"></a>Projekty ATL
 
-Pokud tento atribut se používá v rámci projektu, který používá knihovny ATL, chování změny atributů. Nejprve se přidá následující položku do mapy modelu COM cílového objektu:
+Pokud se tento atribut používá v rámci projektu, který používá ATL, chování atributu se změní. Nejprve se do mapy modelu COM cílového objektu přidá následující položka:
 
 ```
 COM_INTERFACE_ENTRY_AUTOAGGREGATE_BLIND(_m_spAttrXXX, clsid)
 ```
 
-Druhý, [DECLARE_GET_CONTROLLING_UNKNOWN](../../atl/reference/aggregation-and-class-factory-macros.md#declare_get_controlling_unknown) – makro je taky přidaný.
+Za druhé je také přidáno makro [DECLARE_GET_CONTROLLING_UNKNOWN](../../atl/reference/aggregation-and-class-factory-macros.md#declare_get_controlling_unknown) .
 
 ## <a name="example"></a>Příklad
 
@@ -79,22 +79,22 @@ struct CObject : IObject
 
 ## <a name="requirements"></a>Požadavky
 
-### <a name="attribute-context"></a>Atribut kontextu
+### <a name="attribute-context"></a>Kontext atributu
 
 |||
 |-|-|
-|**Platí pro**|**Třída**, **– struktura**|
-|**Opakovatelné**|Ano|
-|**Vyžadované atributy**|Jeden nebo více z následujících akcí: `coclass`, `progid`, nebo `vi_progid`.|
-|**Neplatné atributy**|Žádný|
+|**Platí pro**|**Třída**, **Struktura**|
+|**REPEATABLE**|Ano|
+|**Požadované atributy**|Jednu nebo více z následujících možností: `coclass`, `progid`, nebo `vi_progid`.|
+|**Neplatné atributy**|Žádné|
 
-Další informace o kontexty atributů najdete v tématu [kontexty atributů](cpp-attributes-com-net.md#contexts).
+Další informace o kontextech atributů naleznete v tématu kontexty [atributů](cpp-attributes-com-net.md#contexts).
 
 ## <a name="see-also"></a>Viz také:
 
 [COM – atributy](com-attributes.md)<br/>
 [Atributy třídy](class-attributes.md)<br/>
 [Atributy klíčových slov typedef, enum, union a struct](typedef-enum-union-and-struct-attributes.md)<br/>
-[Agregace](/windows/desktop/com/aggregation)<br/>
-[Aggregatable](/windows/desktop/Midl/aggregatable)<br/>
+[Agregace](/windows/win32/com/aggregation)<br/>
+[Agregovatelné](/windows/win32/Midl/aggregatable)<br/>
 [COM_INTERFACE_ENTRY_AUTOAGGREGATE_BLIND](../../atl/reference/com-interface-entry-macros.md#com_interface_entry_autoaggregate_blind)

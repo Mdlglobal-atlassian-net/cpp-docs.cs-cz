@@ -6,30 +6,30 @@ helpviewer_keywords:
 - message handling [MFC]
 - message maps [MFC]
 ms.assetid: 62fe2a1b-944c-449d-a0f0-63c11ee0a3cb
-ms.openlocfilehash: 41f3432b3741019a787ee24b0f508fe8e65e0470
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0321d98d8b92af0b80259bc49e84e69b987577a4
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62383968"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69508245"
 ---
 # <a name="message-handling-and-mapping"></a>Zpracování a mapování zpráv
 
-Řada Tento článek popisuje způsob zpracování zprávy a příkazy v rámci rozhraní knihovny MFC a způsob jejich připojení k příslušným obslužným funkcím.
+Tento článek popisuje, jak jsou zprávy a příkazy zpracovávány rozhraním MFC a jak je připojit ke svým obslužným funkcím.
 
-Tradiční aplikace pro Windows Windows zprávy jsou zpracovány v příkazu switch velké v proceduru okna. Knihovna MFC používá místo toho [zprávy maps](../mfc/message-categories.md) k mapování přímé zprávy na členské funkce různých tříd. Mapy zpráv jsou účinnější než virtuální funkce pro tento účel a umožňují zprávy zpracovávat nejvhodnější objekt jazyka C++ – aplikace, dokumentu, zobrazení a tak dále. Můžete mapovat do jedné zprávy nebo zprávy, ID příkazů rozsah nebo ovládací prvek ID.
+V tradičních programech pro systém Windows se zprávy systému Windows zpracovávají v rámci velkého příkazu switch v proceduře okna. Knihovna MFC místo toho používá [mapy zpráv](../mfc/message-categories.md) k mapování přímých zpráv na samostatné členské funkce třídy. Mapy zpráv jsou pro tento účel efektivnější než virtuální funkce a umožňují zpracování zpráv nejvhodnějším C++ objektem – aplikací, dokumentem, zobrazením a tak dále. Můžete namapovat jednu zprávu nebo rozsah zpráv, ID příkazů nebo ID ovládacích prvků.
 
-Wm_command – zprávy – obvykle generovaných nabídek, tlačítek panelu nástrojů nebo akcelerátory – také použití mechanismu mapování zprávy. MFC definuje standardní [směrování](../mfc/command-routing.md) příkaz zpráv mezi aplikace, rámec okna, zobrazení a aktivní dokumenty v programu. Můžete přepsat, toto směrování, pokud je potřeba.
+WM_COMMAND zprávy (obvykle generované nabídkami, tlačítky na panelu nástrojů nebo akcelerátory) používají také mechanismus mapování zpráv. Knihovna MFC definuje standardní [Směrování](../mfc/command-routing.md) zpráv příkazů mezi aplikací, oknem rámců, zobrazením a aktivními dokumenty v programu. V případě potřeby můžete toto směrování přepsat.
 
-Mapy zpráv také zadat způsob aktualizace objektů uživatelského rozhraní (jako jsou nabídky a tlačítka panelu nástrojů), povolení nebo zakázání je tak, aby odpovídaly aktuálním kontextu.
+Mapy zpráv také poskytují způsob, jak aktualizovat objekty uživatelského rozhraní (například nabídky a tlačítka panelu nástrojů), povolit nebo zakázat, aby vyhovovaly aktuálnímu kontextu.
 
-Obecné informace o zprávy a fronty zpráv ve Windows najdete v tématu [zprávy a fronty zpráv](/windows/desktop/winmsg/messages-and-message-queues) v sadě Windows SDK.
+Obecné informace o zprávách a frontách zpráv v systému Windows najdete v tématu [zprávy a fronty zpráv](/windows/win32/winmsg/messages-and-message-queues) v Windows SDK.
 
-## <a name="what-do-you-want-to-know-more-about"></a>Co chcete zjistit více informací
+## <a name="what-do-you-want-to-know-more-about"></a>K čemu chcete získat další informace
 
 - [Zprávy a příkazy v prostředí .NET Framework](../mfc/messages-and-commands-in-the-framework.md)
 
-- [Jakým způsobem volá framework obslužné rutiny zpráv](../mfc/how-the-framework-calls-a-handler.md)
+- [Způsob, jakým rozhraní volá obslužnou rutinu zprávy](../mfc/how-the-framework-calls-a-handler.md)
 
 - [Jak framework prohledává mapy zpráv](../mfc/how-the-framework-searches-message-maps.md)
 
@@ -45,7 +45,7 @@ Obecné informace o zprávy a fronty zpráv ve Windows najdete v tématu [zpráv
 
 ## <a name="see-also"></a>Viz také:
 
-[Koncepty](../mfc/mfc-concepts.md)<br/>
+[Charakteristiky](../mfc/mfc-concepts.md)<br/>
 [Obecná témata MFC](../mfc/general-mfc-topics.md)<br/>
 [CWnd – třída](../mfc/reference/cwnd-class.md)<br/>
 [CCmdTarget – třída](../mfc/reference/ccmdtarget-class.md)

@@ -7,29 +7,29 @@ helpviewer_keywords:
 - CListCtrl class [MFC], image lists
 - list items [MFC], image lists
 ms.assetid: 317d095f-f978-47da-acb6-7bfe7dd3bc69
-ms.openlocfilehash: 1679b5c59c6dd55ca47c70ea7c880493304ebf4e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 77dd2f6a056ca74ff3334878a9cf1ef51c773335
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62365270"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69508364"
 ---
 # <a name="list-items-and-image-lists"></a>Položky seznamu a seznamy obrázků
 
-"Položka" v ovládacím prvku seznam ([CListCtrl](../mfc/reference/clistctrl-class.md)) se skládá z ikonu, popisek a případně jiné informace (v "podřízené položky").
+"Item" v ovládacím prvku seznamu ([CListCtrl](../mfc/reference/clistctrl-class.md)) se skládá z ikony, popisku a případně dalších informací (v "podpoložkách").
 
-U ikon pro ovládací prvek položky seznamu jsou obsaženy v seznamech obrázků. Jeden seznam image obsahuje plnou velikostí ikony používané v zobrazení ikon. Seznam druhý, optional, image obsahuje menší verze stejné ikony pro použití v jiných zobrazení ovládacího prvku. Třetí volitelný seznam obsahuje "stavu" image, jako jsou zaškrtávací políčka pro zobrazení před malé ikony v některých zobrazeních. Čtvrtý volitelný seznam obsahuje bitové kopie, které se zobrazí v záhlaví jednotlivých položek ovládacího prvku seznamu.
+Ikony pro položky ovládacího prvku seznam jsou obsaženy v seznamech obrázků. Jeden seznam obrázků obsahuje ikony plné velikosti použité v zobrazení ikon. Druhý, volitelný seznam obrázků obsahuje menší verze stejných ikon pro použití v jiných zobrazeních ovládacího prvku. Třetí volitelný seznam obsahuje "State" image, jako jsou zaškrtávací políčka, aby se zobrazovaly před malými ikonami v některých zobrazeních. Čtvrtý volitelný seznam obsahuje obrázky, které se zobrazují v jednotlivých položkách záhlaví ovládacího prvku seznam.
 
 > [!NOTE]
->  Pokud ovládací prvek zobrazení seznamu se vytvoří s LVS_SHAREIMAGELISTS styl, budete muset pro zničení seznamů obrázků, když se už používají. Zadejte seznamy tento styl, pokud přiřadíte stejnou bitovou kopii do více ovládací prvky zobrazení seznamu; v opačném případě více než jeden ovládací prvek může pokusit o zničit stejného seznamu obrázků.
+>  Pokud se ovládací prvek zobrazení seznamu vytvoří se stylem LVS_SHAREIMAGELISTS, zodpovídáte za zničení seznamů obrázků, když už se nepoužívají. Tento styl zadejte, pokud přiřazujete stejné seznamy obrázků k více ovládacím prvkům zobrazení seznamu. v opačném případě se více než jeden ovládací prvek může pokusit zničit stejný seznam obrázků.
 
-Další informace o položkách seznamu najdete v tématu [seznamy obrázků zobrazení seznamu](/windows/desktop/Controls/using-list-view-controls) a [položek a podpoložek](/windows/desktop/Controls/using-list-view-controls) v sadě Windows SDK. Viz také třída [cimagelist –](../mfc/reference/cimagelist-class.md) v *odkaz knihovny MFC* a [používání atributu CImageList](../mfc/using-cimagelist.md) v této řadě článků.
+Další informace o položkách seznamu naleznete v tématu [zobrazení seznamů obrázků](/windows/win32/Controls/using-list-view-controls) a [položky a podpoložky](/windows/win32/Controls/using-list-view-controls) v Windows SDK. Viz také třída [atributu CImageList](../mfc/reference/cimagelist-class.md) v *Referenci knihovny MFC* a [použití atributu CImageList](../mfc/using-cimagelist.md) v této rodině článků.
 
-Chcete-li vytvořit ovládací prvek seznamu, budete muset zadat seznamy obrázků, která se použije při vložení nových položek do seznamu. Následující příklad ukazuje tento postup, kde *m_pImagelist* je ukazatel typu `CImageList` a *m_listctrl* je `CListCtrl` datový člen.
+Chcete-li vytvořit ovládací prvek seznamu, je nutné zadat seznamy obrázků, které budou použity při vložení nových položek do seznamu. Následující příklad ukazuje tento postup, kde *m_pImagelist* je ukazatel typu `CImageList` `CListCtrl` a *m_listctrl* je datový člen.
 
 [!code-cpp[NVC_MFCControlLadenDialog#19](../mfc/codesnippet/cpp/list-items-and-image-lists_1.cpp)]
 
-Ale pokud nemáte v úmyslu zobrazení ikon v zobrazení seznamu nebo ovládací prvek seznamu, není nutné seznamy obrázků.
+Pokud ale neplánujete zobrazit ikony v zobrazení seznamu nebo v ovládacím prvku seznamu, nepotřebujete seznamy obrázků.
 
 ## <a name="see-also"></a>Viz také:
 

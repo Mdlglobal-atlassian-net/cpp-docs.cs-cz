@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - EXPORTS .def file statement
 ms.assetid: dbcd7579-b855-44c4-bd27-931e157657f7
-ms.openlocfilehash: 33b70c680bfc3db24f5326a2027fa9ec4740e3f2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8338f27d35d3779a55b83b70c7a3eef285a91f46
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62271343"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69492887"
 ---
 # <a name="exports"></a>EXPORTY
 
-Představuje oddíl jednu nebo víc definic exportu určujících exportovaným názvům nebo řadové číslovky funkce nebo data. Každá definice musí být na samostatném řádku.
+Zavádí část jedné nebo více definicí exportu, které určují exportované názvy nebo pořadí funkcí nebo dat. Každá definice musí být na samostatném řádku.
 
 ```DEF
 EXPORTS
@@ -24,70 +24,70 @@ EXPORTS
 
 ## <a name="remarks"></a>Poznámky
 
-První *definice* může být na stejném řádku jako `EXPORTS` – klíčové slovo nebo na následujícím řádku. Na. Soubor DEF mohou obsahovat jednu nebo více `EXPORTS` příkazy.
+První *definice* může být na stejném řádku jako `EXPORTS` klíčové slovo nebo na dalším řádku. Okně. DEF soubor může obsahovat jeden nebo více `EXPORTS` příkazů.
 
-Syntaxe pro export *definice* je:
+Syntaxe pro *definici* exportu je:
 
-> *entryname*\[__=__*internal_name*|*other_module.exported_name*] \[**\@**_ordinal_ \[**NONAME**] ] \[ \[**PRIVATE**] | \[**DATA**] ]
+> *entryname*\[ __=__ *internal_name*|*other_module.exported_name*] \[ **\@** _ordinal_ \[**NONAME**] ] \[ \[**PRIVATE**] | \[**DATA**] ]
 
-*název_položky* je název funkce nebo proměnná, která chcete exportovat. Toto je povinné. Pokud se název, který exportujete liší od názvu v knihovně DLL, zadejte název pro export v knihovně DLL pomocí *internal_name*. Například, pokud vaše knihovna DLL exportuje funkce `func1` a chcete, aby volající použít ho jako `func2`, zadali byste:
+*Název_položky* je funkce nebo název proměnné, který chcete exportovat. To je povinné. Pokud se název, který exportujete, liší od názvu v knihovně DLL, zadejte název exportu v knihovně DLL pomocí *internal_name*. Například pokud vaše knihovna DLL exportuje funkci `func1` a chcete, aby ji volající používali jako `func2`, zadali byste:
 
 ```DEF
 EXPORTS
    func2=func1
 ```
 
-Pokud se název, který můžete exportovat z některých modulu, zadejte název pro export v knihovně DLL pomocí *other_module.exported_name*. Například, pokud vaše knihovna DLL exportuje funkce `other_module.func1` a chcete, aby volající použít ho jako `func2`, zadali byste:
+Pokud je název, který exportujete z nějakého jiného modulu, zadejte název exportu v knihovně DLL pomocí *other_module. exported_name*. Například pokud vaše knihovna DLL exportuje funkci `other_module.func1` a chcete, aby ji volající používali jako `func2`, zadali byste:
 
 ```DEF
 EXPORTS
    func2=other_module.func1
 ```
 
-Pokud se název, který můžete exportovat z jiného modulu, který exportuje podle pořadových čísel, určení export uživatele pořadovém místě v knihovně DLL pomocí *other_module*.__#__ *ordinální*. Například, pokud vaše knihovna DLL exportuje funkce z modulu, a to je 42 pořadovém místě, kde chcete, aby volající použít ho jako `func2`, zadali byste:
+Pokud název, který exportujete, pochází z jiného modulu, který exportuje podle pořadového čísla, zadejte pořadí exportu v knihovně DLL pomocí *other_module*. __#__ *ordinální číslo* Například pokud vaše knihovna DLL exportuje funkci z jiného modulu, kde je pořadovým číslem 42 a chcete, aby ji volající používali jako `func2`, zadali byste:
 
 ```DEF
 EXPORTS
    func2=other_module.#42
 ```
 
-Protože kompilátor MSVC používá dekorování názvů pro C++ funkce, je nutné použít upravený název *internal_name* nebo definovat exportovaných funkcí s použitím `extern "C"` ve zdrojovém kódu. Kompilátor také upraví funkcí jazyka C, které používají [__stdcall](../../cpp/stdcall.md) podtržítkem konvence volání (\_) předponu a příponu tvořený zavináč (\@) následovaný počtem bajtů (v desítkové soustavě) v Seznam argumentů.
+Vzhledem k tomu, že kompilátor MSVC používá C++ pro funkce dekorace názvů, musíte buď použít dekorované jméno *internal_name* , nebo definovat exportované funkce `extern "C"` pomocí ve zdrojovém kódu. Kompilátor také upraví funkce jazyka C, které používají konvenci volání [__stdcall](../../cpp/stdcall.md) s podtržítkem (\_) a příponu složenou z znaku ' Sign (\@) následovaný počtem bajtů (v desítkové soustavě) v seznamu argumentů.
 
-Pokud chcete zjistit dekorované názvy produkované kompilátorem, použijte [DUMPBIN](dumpbin-reference.md) nástroje nebo linker [/MAP](map-generate-mapfile.md) možnost. Dekorované názvy jsou specifické pro kompilátor. Pokud exportujete dekorované názvy ve. Soubor DEF spustitelné soubory, které na knihovnu DLL musí být sestaveny také pomocí stejné verze kompilátoru. Tím se zajistí, že dekorované názvy volajícího odpovídaly exportovaným názvům v. Soubor DEF.
+Chcete-li najít dekorované názvy vytvářené kompilátorem, použijte nástroj [DUMPBIN](dumpbin-reference.md) nebo parametr linker [/map](map-generate-mapfile.md) . Dekorované názvy jsou specifické pro kompilátor. Pokud exportujete dekorované názvy do. DEF soubor, spustitelné soubory, které odkazují na knihovnu DLL, musí být také sestaveny pomocí stejné verze kompilátoru. Tím se zajistí, že dekorované názvy v volajícím odpovídají exportovaným názvům v. Soubor DEF.
 
-Můžete použít \@ *ordinální* k určení, že číslo a ne název funkce, přejde do tabulky exportu knihovny DLL. Mnoho knihoven DLL Windows exportovat řadové číslovky důvodu podpory původního kódu. Bylo běžné použití řadové číslovky v 16bitového kódu Windows, protože může pomoct minimalizovat velikost knihovny DLL. Nedoporučujeme export funkcí podle pořadových čísel, pokud ho vaše knihovna DLL klienti potřebovat pro stále podporuje starší verze. Vzhledem k tomu,. LIB soubor bude obsahovat mapování mezi řadová číslovka a funkci, můžete použít název funkce, jako byste normálně v projektech, které používají knihovnu DLL.
+Můžete použít \@ *pořadové* číslo, které určuje, že číslo, a nikoli název funkce, přejde do tabulky exportu knihovny DLL. Mnoho souborů DLL systému Windows má za účelem podpory staršího kódu exportovat ordinální čísla. Bylo běžné použít anglické řadové číslovky v 16bitovém kódu Windows, protože může přispět k minimalizaci velikosti knihovny DLL. Nedoporučujeme exportovat funkce podle pořadových čísel, pokud je klienti knihovny DLL nepotřebují pro podporu starší verze. Protože. Soubor LIB bude obsahovat mapování mezi pořadovým číslem a funkcí, můžete použít název funkce stejně jako obvykle v projektech, které používají knihovnu DLL.
 
-Pomocí volitelného **NONAME** – klíčové slovo, můžete exportovat na základě pořadí pouze a snížit velikost tabulky exportu v výslednou knihovnu DLL. Nicméně pokud chcete použít [GetProcAddress](/windows/desktop/api/libloaderapi/nf-libloaderapi-getprocaddress) na knihovnu DLL, musíte znát řadová číslovka, protože nebude platný název.
+Pomocí volitelného klíčového slova **NONAME** můžete exportovat jenom podle pořadového čísla a zmenšit velikost tabulky exportu ve výsledné knihovně DLL. Pokud však chcete použít [GetProcAddress](/windows/win32/api/libloaderapi/nf-libloaderapi-getprocaddress) na knihovně DLL, je nutné znát pořadové číslo, protože název nebude platný.
 
-Optional – klíčové slovo **PRIVÁTNÍ** brání *Název_položky* nebudou zahrnuty do knihovna importů generovaná odkaz. Export obrázku také generovány podle propojení nemá vliv.
+Volitelné klíčové slovo **Private** brání *vstupu* v knihovně import generovaný odkazem. Nemá vliv na export v imagi, který je vygenerovaný ODKAZem.
 
-Optional – klíčové slovo **DATA** Určuje, že export dat, není kód. Tento příklad ukazuje, jak jste mohli exportovat data proměnnou s názvem `exported_global`:
+Volitelná **data** klíčová slova určují, že export je data, nikoli kód. Tento příklad ukazuje, jak můžete exportovat datovou proměnnou s `exported_global`názvem:
 
 ```DEF
 EXPORTS
    exported_global DATA
 ```
 
-Existují čtyři způsoby, jak exportovat definici uvedené v doporučené pořadí:
+Existují čtyři způsoby, jak definici exportovat, v seznamu Doporučené pořadí:
 
-1. [__Declspec(dllexport)](../../cpp/dllexport-dllimport.md) – klíčové slovo ve zdrojovém kódu
+1. Klíčové slovo [__declspec (dllexport)](../../cpp/dllexport-dllimport.md) ve zdrojovém kódu
 
-1. `EXPORTS` Výroky. Soubor DEF
+1. `EXPORTS` Příkaz v. DEF soubor
 
-1. [/EXPORT](export-exports-a-function.md) specifikace v příkazu LINK
+1. Specifikace [/Export](export-exports-a-function.md) v příkazu Link
 
-1. A [komentář](../../preprocessor/comment-c-cpp.md) směrnice ve zdrojovém kódu formuláře `#pragma comment(linker, "/export: definition ")`. Následující příklad ukazuje Direktiva #pragma komentář před deklarací funkce, kde `PlainFuncName` je nedekorovaný název a `_PlainFuncName@4` je upravený název funkce:
+1. Direktiva [Komentáře](../../preprocessor/comment-c-cpp.md) ve zdrojovém kódu formuláře `#pragma comment(linker, "/export: definition ")`. Následující příklad ukazuje direktivu #pragma komentáře před deklarací funkce, kde `PlainFuncName` je nedekorovaný název a `_PlainFuncName@4` je dekorovaným názvem funkce:
 
     ```cpp
     #pragma comment(linker, "/export:PlainFuncName=_PlainFuncName@4")
     BOOL CALLBACK PlainFuncName( Things * lpParams)
     ```
 
-Direktiva #pragma je užitečné, pokud je potřeba exportovat názvu nedekorovaných funkce a mají různé exporty v závislosti na konfiguraci sestavení (například v 32bitové nebo 64bitové sestavení).
+Direktiva #pragma je užitečná v případě, že potřebujete exportovat nedekorovaný název funkce a mít různé exporty v závislosti na konfiguraci sestavení (například v 32ch nebo 64 sestaveních).
 
-Všechny čtyři metody je možné ve stejném programu. Při propojení buildů program, který obsahuje exporty, také vytvoří knihovnu importu, není-li. EXP soubor se používá v sestavení.
+Všechny čtyři metody lze použít ve stejném programu. Když propojení vytvoří program, který obsahuje export, vytvoří také knihovnu importu, pokud není. Soubor EXP se používá v sestavení.
 
-Tady je příklad oddílu EXPORTŮ:
+Tady je příklad oddílu EXPORTs:
 
 ```DEF
 EXPORTS
@@ -98,7 +98,7 @@ EXPORTS
    DllUnregisterServer
 ```
 
-Při exportu proměnné z knihovny DLL pomocí. Soubor DEF, není nutné zadat `__declspec(dllexport)` na proměnnou. Ale v žádném souboru, který používá knihovnu DLL, musí stále používáte `__declspec(dllimport)` u deklarace data.
+Při exportu proměnné z knihovny DLL pomocí. DEF soubor, není nutné zadávat `__declspec(dllexport)` proměnnou. V jakémkoli souboru, který používá knihovnu DLL, je však stále nutné použít `__declspec(dllimport)` na deklaraci dat.
 
 ## <a name="see-also"></a>Viz také:
 

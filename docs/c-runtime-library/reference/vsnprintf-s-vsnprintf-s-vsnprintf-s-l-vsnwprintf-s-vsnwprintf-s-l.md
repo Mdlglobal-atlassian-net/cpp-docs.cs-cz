@@ -40,16 +40,16 @@ helpviewer_keywords:
 - _vsnwprintf_s function
 - formatted text [C++]
 ms.assetid: 147ccfce-58c7-4681-a726-ef54ac1c604e
-ms.openlocfilehash: 255c3b760dec1495a4f9a82915878a5504844f24
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 50e38e3177462f17436727cf26d1e7dade9cb882
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62188723"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69499088"
 ---
-# <a name="vsnprintfs-vsnprintfs-vsnprintfsl-vsnwprintfs-vsnwprintfsl"></a>vsnprintf_s, _vsnprintf_s, _vsnprintf_s_l, _vsnwprintf_s, _vsnwprintf_s_l
+# <a name="vsnprintf_s-_vsnprintf_s-_vsnprintf_s_l-_vsnwprintf_s-_vsnwprintf_s_l"></a>vsnprintf_s, _vsnprintf_s, _vsnprintf_s_l, _vsnwprintf_s, _vsnwprintf_s_l
 
-Zapíše formátovaný výstup pomocí ukazatele na seznam argumentů. Jde o verzích [vsnprintf – _vsnprintf –, _vsnprintf_l –, _vsnwprintf –, _vsnwprintf_l –](vsnprintf-vsnprintf-vsnprintf-l-vsnwprintf-vsnwprintf-l.md) s rozšířeními zabezpečení, jak je popsáno v [funkce zabezpečení v CRT](../../c-runtime-library/security-features-in-the-crt.md).
+Zapíše formátovaný výstup pomocí ukazatele na seznam argumentů. Jedná se o verze [vsnprintf, _vsnprintf, _vsnprintf_l, _vsnwprintf, _vsnwprintf_l](vsnprintf-vsnprintf-vsnprintf-l-vsnwprintf-vsnwprintf-l.md) s vylepšeními zabezpečení, jak [je popsáno v části funkce zabezpečení v CRT](../../c-runtime-library/security-features-in-the-crt.md).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -109,77 +109,77 @@ int _vsnwprintf_s(
 
 ### <a name="parameters"></a>Parametry
 
-*Vyrovnávací paměti*<br/>
+*vyrovnávací paměti*<br/>
 Umístění úložiště pro výstup.
 
 *sizeOfBuffer*<br/>
-Velikost *vyrovnávací paměti* výstupu jako počet znaků.
+Velikost *vyrovnávací paměti* pro výstup, jako počet znaků.
 
-*Počet*<br/>
-Maximální počet znaků pro zápis (nezahrnuje ukončující znak null), nebo [_TRUNCATE](../../c-runtime-library/truncate.md).
+*výpočtu*<br/>
+Maximální počet znaků, které mají být zapsány (nezahrnují ukončující hodnotu null) nebo [_TRUNCATE](../../c-runtime-library/truncate.md).
 
-*Formát*<br/>
+*format*<br/>
 Specifikace formátu.
 
 *argptr*<br/>
 Ukazatel na seznam argumentů.
 
-*Národní prostředí*<br/>
+*jazyka*<br/>
 Národní prostředí, které se má použít
 
 Další informace najdete v tématu [specifikace formátu](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md).
 
 ## <a name="return-value"></a>Návratová hodnota
 
-**vsnprintf_s –**, **_vsnprintf_s –** a **_vsnwprintf_s –** vrátí počet napsaných znaků, nikoli včetně ukončujícího znaku null, nebo zápornou hodnotu, pokud dojde k chybě výstupu. **vsnprintf_s –** je stejný jako **_vsnprintf_s –**. **vsnprintf_s –** je součástí shody se standardem ANSI. **_vnsprintf** se zachovává kvůli zpětné kompatibilitě.
+**vsnprintf_s**, **_vsnprintf_s** a **_vsnwprintf_s** vrátí počet zapsaných znaků, včetně ukončující hodnoty null, nebo zápornou hodnotu, pokud dojde k chybě výstupu. **vsnprintf_s** je shodná s **_vsnprintf_s**. **vsnprintf_s** je součástí dodržování předpisů standardu ANSI. **_vnsprintf** se zachovává kvůli zpětné kompatibilitě.
 
-Pokud úložiště potřebné pro ukládání dat a ukončujícího znaku null překročí *sizeOfBuffer*, je vyvolána obslužná rutina neplatného parametru, jak je popsáno v [Parameter Validation](../../c-runtime-library/parameter-validation.md), není-li *počet*  je [_TRUNCATE](../../c-runtime-library/truncate.md), v takovém případě největší část řetězce jako se vejde *vyrovnávací paměti* je zapsána a je vrácena hodnota -1. Pokud po obslužnou rutinu neplatného parametru pokračuje v provádění, tyto funkce nastaví *vyrovnávací paměti* na prázdný řetězec, nastavit **errno** k **ERANGE**a vrátí hodnotu -1.
+Pokud úložiště potřebné pro uložení dat a ukončující hodnotu null překračuje *sizeOfBuffer*, je vyvolána obslužná rutina neplatného parametru, jak je popsáno v tématu [ověřování parametru](../../c-runtime-library/parameter-validation.md), pokud *Count* není [_TRUNCATE](../../c-runtime-library/truncate.md), v takovém případě jako velká část řetězec, který se vejde do *vyrovnávací paměti* , se zapíše a vrátí-1. Pokud provádění pokračuje po obslužné rutině neplatného parametru, nastaví tyto funkce *vyrovnávací paměť* na prázdný řetězec, nastaví **errno** na **ERANGE**a vrátí-1.
 
-Pokud *vyrovnávací paměti* nebo *formátu* je **NULL** ukazatele, nebo pokud *počet* je menší než nebo rovna nule, je vyvolána obslužná rutina neplatného parametru. Pokud smí provádění pokračovat, tyto funkce nastaví **errno** k **EINVAL** a vrátí hodnotu -1.
+Pokud je *vyrovnávací paměť* nebo *Formát* ukazatel s **hodnotou null** , nebo pokud je *počet* menší nebo roven nule, je vyvolána obslužná rutina neplatného parametru. Pokud provádění může pokračovat, tyto funkce nastaví **errno** na **EINVAL** a vrátí-1.
 
-### <a name="error-conditions"></a>Chybové podmínky
+### <a name="error-conditions"></a>Chybové stavy
 
-|**Podmínka**|Vrátí|**errno**|
+|**Pomocné**|Vrátit|**errno**|
 |-----------------|------------|-------------|
-|*vyrovnávací paměť* je **NULL**|-1|**EINVAL**|
-|*Formát* je **NULL**|-1|**EINVAL**|
+|*vyrovnávací paměť* má **hodnotu null** .|-1|**EINVAL**|
+|*Formát* je **null** .|-1|**EINVAL**|
 |*počet* < = 0|-1|**EINVAL**|
-|*sizeOfBuffer* příliš malý (a *počet* ! = **_TRUNCATE**)|-1 (a *vyrovnávací paměti* nastavenou na prázdný řetězec)|**ERANGE**|
+|*sizeOfBuffer* je příliš malý (a *Count* ! = **_TRUNCATE**).|-1 (a *vyrovnávací paměť* je nastavená na prázdný řetězec)|**ERANGE**|
 
 ## <a name="remarks"></a>Poznámky
 
-Každá z těchto funkcí bere ukazatel na seznam argumentů a potom formátuje a zapíše *počet* znaků určených parametrem do paměti na které odkazuje *vyrovnávací paměti* a připojí ukončující znak null.
+Každá z těchto funkcí bere ukazatel na seznam argumentů a potom formátuje a zapisuje do *počtu* znaků daných dat do paměti, na kterou ukazuje *vyrovnávací paměť* , a připojuje ukončující hodnotu null.
 
-Pokud *počet* je [_TRUNCATE](../../c-runtime-library/truncate.md), tyto funkce zapíší co největší část řetězce, jak se vejde *vyrovnávací paměti* a ponechají prostor pro ukončující znak null. Pokud se vejde celý řetězec (s ukončujícím znakem null) *vyrovnávací paměti*, pak tyto funkce vrátí počet znaků zapsaných (nezahrnuje ukončující znak null); v opačném případě tyto funkce vrátí -1 pro označení této zkrácení došlo k chybě.
+Pokud je počet [_TRUNCATE](../../c-runtime-library/truncate.md), pak tyto funkce zapisují tolik řetězce, jako by se vešly do *vyrovnávací paměti* , a ponechají prostor pro ukončující hodnotu null. Pokud se celý řetězec (s ukončujícím znakem null) vejde do *vyrovnávací paměti*, pak tyto funkce vrátí počet zapsaných znaků (bez ukončující hodnoty null); v opačném případě tyto funkce vrátí hodnotu-1, která označuje, že došlo ke zkrácení.
 
-Verze těchto funkcí s **_l** přípona jsou stejné s tím rozdílem, že používají parametr národního prostředí předaného namísto aktuálního národní prostředí pro vlákno.
+Verze těchto funkcí s příponou **_l** jsou stejné s tím rozdílem, že používají předaný parametr národního prostředí namísto aktuálního národního prostředí vlákna.
 
 > [!IMPORTANT]
-> Ujistěte se, že *formátu* není uživatelem definovaný řetězec. Další informace najdete v tématu [předcházení přetečení vyrovnávací paměti](/windows/desktop/SecBP/avoiding-buffer-overruns).
+> Ujistěte se, že *Formát* není uživatelem definovaný řetězec. Další informace najdete v tématu [předcházení přetečení vyrovnávací paměti](/windows/win32/SecBP/avoiding-buffer-overruns).
 
 > [!NOTE]
-> Aby se zajistilo, že existuje místo pro ukončující znak null, ujistěte se, že *počet* je striktně menší než délka vyrovnávací paměti, nebo použijte **_TRUNCATE**.
+> Aby bylo zajištěno, že pro ukončující hodnotu null existuje prostor, ujistěte se, že je *počet* striktně menší než délka vyrovnávací paměti, nebo použijte **_TRUNCATE**.
 
-V jazyce C++ je použití těchto funkcí zjednodušeno díky přetížení šablon; přetížení mohou odvodit délku vyrovnávací paměti automaticky (tím eliminuje nutnost zadat argument velikosti) a dokážou automaticky nahradit starší, nezabezpečené funkce jejími novějšími, zabezpečené protějšky. Další informace najdete v tématu [přetížení zabezpečení šablony](../../c-runtime-library/secure-template-overloads.md).
+V C++systému je použití těchto funkcí zjednodušeno díky přetížení šablon; přetížení můžou odvodit délku vyrovnávací paměti automaticky (eliminují nutnost zadat argument velikosti) a můžou automaticky nahradit starší nezabezpečené funkce jejich novějšími, zabezpečenými protějšky. Další informace najdete v tématu [přetížení zabezpečení šablon](../../c-runtime-library/secure-template-overloads.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapování rutin obecného textu
 
-|Rutina TCHAR.H|_UNICODE a _MBCS nejsou definovány|_MBCS definováno|_UNICODE definováno|
+|Rutina TCHAR.H|_UNICODE & _MBCS nejsou definovány.|_MBCS definováno|_UNICODE definováno|
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_vsntprintf_s**|**_vsnprintf_s**|**_vsnprintf_s**|**_vsnwprintf_s**|
 |**_vsntprintf_s_l**|**_vsnprintf_s_l**|**_vsnprintf_s_l**|**_vsnwprintf_s_l**|
 
 ## <a name="requirements"></a>Požadavky
 
-|Rutina|Požadovaný hlavičkový soubor|Volitelná záhlaví|
+|Rutina|Požadovaný hlavičkový soubor|Volitelné hlavičky|
 |-------------|---------------------|----------------------|
-|**vsnprintf_s**|\<stdio.h > a \<stdarg.h >|\<varargs.h>*|
-|**_vsnprintf_s**, **_vsnprintf_s_l**|\<stdio.h > a \<stdarg.h >|\<varargs.h>*|
-|**_vsnwprintf_s**, **_vsnwprintf_s_l**|\<stdio.h > nebo \<wchar.h >, a \<stdarg.h >|\<varargs.h>*|
+|**vsnprintf_s**|\<stdio. h > a \<STDARG. h >|\<varargs.h>*|
+|**_vsnprintf_s**, **_vsnprintf_s_l**|\<stdio. h > a \<STDARG. h >|\<varargs.h>*|
+|**_vsnwprintf_s**, **_vsnwprintf_s_l**|\<stdio. h > nebo \<WCHAR. h > a \<STDARG. h >|\<varargs.h>*|
 
-\* Vyžaduje se pro kompatibility systému UNIX V.
+\*Vyžaduje se pro kompatibilitu se systémem UNIX V.
 
-Další informace o kompatibilitě, naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Příklad
 
@@ -215,7 +215,7 @@ nSize: -1, buff: Hi there!
 
 ## <a name="see-also"></a>Viz také:
 
-[Stream vstupně-výstupních operací](../../c-runtime-library/stream-i-o.md)<br/>
+[Vstup/výstup datového proudu](../../c-runtime-library/stream-i-o.md)<br/>
 [vprintf – funkce](../../c-runtime-library/vprintf-functions.md)<br/>
 [fprintf, _fprintf_l, fwprintf, _fwprintf_l](fprintf-fprintf-l-fwprintf-fwprintf-l.md)<br/>
 [printf, _printf_l, wprintf, _wprintf_l](printf-printf-l-wprintf-wprintf-l.md)<br/>

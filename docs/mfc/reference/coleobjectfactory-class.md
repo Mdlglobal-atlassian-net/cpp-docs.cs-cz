@@ -36,16 +36,16 @@ helpviewer_keywords:
 - COleObjectFactory [MFC], VerifyLicenseKey
 - COleObjectFactory [MFC], VerifyUserLicense
 ms.assetid: ab179c1e-4af2-44aa-a576-37c48149b427
-ms.openlocfilehash: 25dce92f49ba9de08fcf33d54db8e97d520f5ea4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 22805550d13ecb400b151495363e5eda2dfb3b76
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62224382"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69503740"
 ---
 # <a name="coleobjectfactory-class"></a>COleObjectFactory – třída
 
-Implementuje OLE třídy factory, která vytváří objekty OLE, jako jsou servery, automatizační objekty a dokumenty.
+Implementuje objekt pro vytváření tříd OLE, který vytváří objekty OLE, jako jsou servery, automatizační objekty a dokumenty.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -57,51 +57,51 @@ class COleObjectFactory : public CCmdTarget
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
-|[COleObjectFactory::COleObjectFactory](#coleobjectfactory)|Vytvoří `COleObjectFactory` objektu.|
+|[COleObjectFactory:: COleObjectFactory](#coleobjectfactory)|`COleObjectFactory` Vytvoří objekt.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
-|[COleObjectFactory::GetClassID](#getclassid)|ID objektů, které vytvoří tento objekt pro vytváření třídy vrátí OLE.|
-|[COleObjectFactory::IsLicenseValid](#islicensevalid)|Určuje, zda je platná licence ovládacího prvku.|
-|[COleObjectFactory::IsRegistered](#isregistered)|Určuje, zda je objekt factory zaregistrované v OLE systémové knihovny DLL.|
-|[COleObjectFactory::Register](#register)|Zaregistruje tento objekt pro vytváření objektů OLE systémové knihovny DLL.|
-|[COleObjectFactory::RegisterAll](#registerall)|Zaregistruje všechny objekty pro vytváření objektů aplikaci OLE systémové knihovny DLL.|
-|[COleObjectFactory::Revoke](#revoke)|Odvolá registrace tento objekt factory OLE systémové knihovny DLL.|
-|[COleObjectFactory::RevokeAll](#revokeall)|Odvolá registrace továrny objekt aplikace s OLE systémové knihovny DLL.|
-|[COleObjectFactory::UnregisterAll](#unregisterall)|Zruší registraci všech objektů pro vytváření objektu aplikace.|
-|[COleObjectFactory::UpdateRegistry](#updateregistry)|Zaregistruje tento objekt pro vytváření objektů OLE systémového registru.|
-|[COleObjectFactory::UpdateRegistryAll](#updateregistryall)|Zaregistruje všechny objekty pro vytváření objektů aplikaci OLE systémového registru.|
+|[COleObjectFactory:: GetClassID](#getclassid)|Vrátí ID třídy OLE objektů, které vytvoří tento objekt pro vytváření.|
+|[COleObjectFactory::IsLicenseValid](#islicensevalid)|Určuje, zda je licence ovládacího prvku platná.|
+|[COleObjectFactory::IsRegistered](#isregistered)|Označuje, zda je objekt pro vytváření objektů zaregistrován pomocí knihoven DLL systému OLE.|
+|[COleObjectFactory::Register](#register)|Registruje objekt pro vytváření objektů pomocí knihoven DLL systému OLE.|
+|[COleObjectFactory:: RegisterAll](#registerall)|Registruje všechny továrny objektů aplikace pomocí knihoven DLL systému OLE.|
+|[COleObjectFactory:: REVOKE](#revoke)|Odvolá registraci této továrny objektů pomocí knihoven DLL systému OLE.|
+|[COleObjectFactory::RevokeAll](#revokeall)|Odvolá registrace továrn objektů aplikace pomocí knihoven DLL systému OLE.|
+|[COleObjectFactory::UnregisterAll](#unregisterall)|Zruší registraci všech objektů objektu Application Factory.|
+|[COleObjectFactory::UpdateRegistry](#updateregistry)|Registruje tento objekt pro vytváření objektů pomocí systémového registru OLE.|
+|[COleObjectFactory::UpdateRegistryAll](#updateregistryall)|Registruje všechny továrny objektů aplikace pomocí systémového registru OLE.|
 
 ### <a name="protected-methods"></a>Chráněné metody
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
-|[COleObjectFactory::GetLicenseKey](#getlicensekey)|Vyžaduje jedinečný klíč z ovládacího prvku knihovny DLL.|
-|[COleObjectFactory::OnCreateObject](#oncreateobject)|Volá se rozhraním, chcete-li vytvořit nový objekt factory pro typ.|
-|[COleObjectFactory::VerifyLicenseKey](#verifylicensekey)|Ověřuje, že vložené v ovládacím prvku klíč odpovídá klíči vložené do kontejneru.|
-|[COleObjectFactory::VerifyUserLicense](#verifyuserlicense)|Ověřuje, že ovládací prvek je licencován pro použití v době návrhu.|
+|[COleObjectFactory::GetLicenseKey](#getlicensekey)|Požaduje jedinečný klíč z knihovny DLL ovládacího prvku.|
+|[COleObjectFactory::OnCreateObject](#oncreateobject)|Volá se rozhraním, aby se vytvořil nový objekt pro tento typ objektu pro vytváření.|
+|[COleObjectFactory::VerifyLicenseKey](#verifylicensekey)|Ověřuje, že klíč vložený v ovládacím prvku odpovídá klíči vloženému do kontejneru.|
+|[COleObjectFactory::VerifyUserLicense](#verifyuserlicense)|Ověřuje, zda je ovládací prvek licencován pro použití v době návrhu.|
 
 ## <a name="remarks"></a>Poznámky
 
-`COleObjectFactory` Třída má členské funkce pro provádění následující funkce:
+`COleObjectFactory` Třída má členské funkce pro provádění následujících funkcí:
 
 - Správa registrace objektů.
 
-- Aktualizuje se registr systému OLE, jakož i registraci za běhu, která informuje OLE, objekty jsou spuštěné a jste připravení začít přijímat zprávy.
+- Aktualizace systémového registru OLE a také registrace za běhu, který informuje OLE o tom, že objekty běží a jsou připravené přijímat zprávy.
 
-- Vynucení licencování tím, že omezíte řízení licencovaný vývojáři v době návrhu a licencované aplikace v době běhu.
+- Vynucování licencí tím, že omezuje použití ovládacího prvku na licencované vývojáře v době návrhu a na licencované aplikace v době běhu.
 
-- Registrace továrny objekt ovládacího prvku OLE systémového registru.
+- Registrace továrn objektů řízení pomocí systémového registru OLE.
 
-Další informace o vytváření objektů najdete v článcích [datové objekty a zdroje dat (OLE)](../../mfc/data-objects-and-data-sources-ole.md) a [datové objekty a zdroje dat: Vytváření a ničení](../../mfc/data-objects-and-data-sources-creation-and-destruction.md). Další informace o registraci, najdete v článku [registrace](../../mfc/registration.md).
+Další informace o vytváření objektů najdete v článcích [datové objekty a zdroje dat (OLE)](../../mfc/data-objects-and-data-sources-ole.md) a [datové objekty a zdroje dat: Vytváření a zničení](../../mfc/data-objects-and-data-sources-creation-and-destruction.md). Další informace o registraci najdete v článku [registrace](../../mfc/registration.md).
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
-[Třídy CObject](../../mfc/reference/cobject-class.md)
+[CObject](../../mfc/reference/cobject-class.md)
 
 [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)
 
@@ -109,11 +109,11 @@ Další informace o vytváření objektů najdete v článcích [datové objekty
 
 ## <a name="requirements"></a>Požadavky
 
-**Header:** afxdisp.h
+**Záhlaví:** afxdisp. h
 
-##  <a name="coleobjectfactory"></a>  COleObjectFactory::COleObjectFactory
+##  <a name="coleobjectfactory"></a>COleObjectFactory:: COleObjectFactory
 
-Vytvoří `COleObjectFactory` objektu, inicializuje jako zrušit objekt pro vytváření a přidá ji do seznamu objektů pro vytváření.
+`COleObjectFactory` Vytvoří objekt, inicializuje ho jako neregistrovaný objekt pro vytváření objektů a přidá ho do seznamu továrn.
 
 ```
 COleObjectFactory(
@@ -132,40 +132,40 @@ COleObjectFactory(
 
 ### <a name="parameters"></a>Parametry
 
-*clsid*<br/>
-Odkaz na ID třídy OLE, představuje tento objekt pro vytváření objektů.
+*CLSID*<br/>
+Odkaz na ID třídy OLE, kterou objekt pro vytváření objektů představuje.
 
 *pRuntimeClass*<br/>
-Ukazatel na třídu za běhu, které můžete vytvořit tento objekt pro vytváření objektů jazyka C++.
+Ukazatel na běhovou třídu objektů, C++ které může tento objekt factory vytvořit.
 
 *bMultiInstance*<br/>
-Určuje, zda jednu instanci aplikace může podporovat víc instancí. Při hodnotě TRUE se více instancí aplikace jsou spouštěny pro každý požadavek na vytvoření objektu.
+Označuje, zda jedna instance aplikace může podporovat více instancí. Při hodnotě TRUE se pro každý požadavek na vytvoření objektu spustí více instancí aplikace.
 
 *nFlags*<br/>
-Obsahuje jeden nebo více z následujících příznaků:
+Obsahuje jeden nebo více následujících příznaků:
 
-- `afxRegDefault` Nastaví model vláken ThreadingModel = objektu Apartment.
+- `afxRegDefault`Nastaví model vláken na ThreadingModel = Apartment.
 
-- `afxRegInsertable` Umožňuje ovládacímu prvku se zobrazí v **vložit objekt** dialogové okno pro objekty OLE.
+- `afxRegInsertable`Umožňuje ovládacímu prvku zobrazit v dialogovém okně **Vložit objekt** pro objekty OLE.
 
-- `afxRegApartmentThreading` Nastaví model vláken v registru ThreadingModel = objektu Apartment.
+- `afxRegApartmentThreading`Nastaví model vláken v registru na ThreadingModel = Apartment.
 
-- `afxRegFreeThreading` Nastaví model vláken v registru ThreadingModel = Free.
+- `afxRegFreeThreading`Nastaví model vláken v registru na ThreadingModel = Free.
 
-   Můžete kombinovat dvěma příznaky `afxRegApartmentThreading` a `afxRegFreeThreading` nastavit ThreadingModel = obojí. Zobrazit [InprocServer32](/windows/desktop/com/inprocserver32) v sadě Windows SDK pro další informace o dělení na vlákna registrace modelu.
+   Můžete zkombinovat dva příznaky `afxRegApartmentThreading` a `afxRegFreeThreading` nastavit ThreadingModel = both. Další informace o registraci modelu vláken naleznete v tématu [InprocServer32](/windows/win32/com/inprocserver32) v Windows SDK.
 
 *lpszProgID*<br/>
-Ukazatel na řetězec obsahující identifikátor slovní programu, jako je například "Microsoft Excelu."
+Ukazatel na řetězec obsahující slovní identifikátor programu, jako je například Microsoft Excel.
 
 ### <a name="remarks"></a>Poznámky
 
-Tento objekt použít, ale zaregistrujte ji.
+Chcete-li však objekt použít, je nutné jej zaregistrovat.
 
-Další informace najdete v tématu [klíč CLSID](/windows/desktop/com/clsid-key-hklm) v sadě Windows SDK.
+Další informace najdete v tématu [klíč CLSID](/windows/win32/com/clsid-key-hklm) v Windows SDK.
 
-##  <a name="getclassid"></a>  COleObjectFactory::GetClassID
+##  <a name="getclassid"></a>COleObjectFactory:: GetClassID
 
-Vrátí odkaz na ID třídy OLE, představuje tento objekt pro vytváření.
+Vrátí odkaz na ID třídy OLE, který Tato továrna představuje.
 
 ```
 REFCLSID GetClassID() const;
@@ -173,15 +173,15 @@ REFCLSID GetClassID() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Představuje odkaz na ID třídy OLE tento objekt pro vytváření.
+Odkaz na ID třídy OLE, kterou Tato továrna představuje.
 
 ### <a name="remarks"></a>Poznámky
 
-Další informace najdete v tématu [klíč CLSID](/windows/desktop/com/clsid-key-hklm) v sadě Windows SDK.
+Další informace najdete v tématu [klíč CLSID](/windows/win32/com/clsid-key-hklm) v Windows SDK.
 
-##  <a name="getlicensekey"></a>  COleObjectFactory::GetLicenseKey
+##  <a name="getlicensekey"></a>COleObjectFactory:: GetLicenseKey
 
-Požaduje jedinečný licenční klíč z ovládacího prvku knihovny DLL a ukládá ho do BSTR, na které odkazuje *pbstrKey*.
+Požádá o jedinečný licenční klíč z knihovny DLL ovládacího prvku a uloží jej do objektu BSTR, na který odkazuje *pbstrKey*.
 
 ```
 virtual BOOL GetLicenseKey(
@@ -195,19 +195,19 @@ virtual BOOL GetLicenseKey(
 Vyhrazeno pro budoucí použití.
 
 *pbstrKey*<br/>
-Ukazatel na BSTR, ve kterém bude uložený klíč licence.
+Ukazatel na objekt BSTR, který bude obsahovat licenční klíč.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Nenulové, pokud řetězec licenční klíč není NULL. jinak 0.
+Nenulová, pokud řetězec licenčního klíče není NULL; v opačném případě 0.
 
 ### <a name="remarks"></a>Poznámky
 
-Výchozí implementace této funkce vrátí hodnotu 0 a uloží nic BSTR. Pokud používáte ActiveX ControlWizard knihovny MFC k vytvoření projektu, poskytuje ControlWizard přepsání, která načte ovládacího prvku licenční klíč.
+Výchozí implementace této funkce vrací hodnotu 0 a neukládá nic do BSTR. Použijete-li k vytvoření projektu ControlWizard ActiveX knihovny MFC, ControlWizard poskytuje přepsání, které načte licenční klíč ovládacího prvku.
 
-##  <a name="islicensevalid"></a>  COleObjectFactory::IsLicenseValid
+##  <a name="islicensevalid"></a>COleObjectFactory:: IsLicenseValid
 
-Určuje, zda je platná licence ovládacího prvku.
+Určuje, zda je licence ovládacího prvku platná.
 
 ```
 BOOL IsLicenseValid();
@@ -215,11 +215,11 @@ BOOL IsLicenseValid();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Hodnota TRUE, pokud úspěšně; naopak hodnota false.
+TRUE, pokud successul; v opačném případě false.
 
-##  <a name="isregistered"></a>  COleObjectFactory::IsRegistered
+##  <a name="isregistered"></a>COleObjectFactory::-registered
 
-Vrací nenulovou hodnotu, pokud objekt factory zaregistruje OLE systémové knihovny DLL.
+Vrací nenulovou hodnotu, pokud je objekt pro vytváření zaregistrován pomocí knihoven DLL systému OLE.
 
 ```
 virtual BOOL IsRegistered() const;
@@ -227,11 +227,11 @@ virtual BOOL IsRegistered() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Nenulové, pokud je registrovaný objekt factory; jinak 0.
+Nenulové, pokud je továrna registrována; v opačném případě 0.
 
-##  <a name="oncreateobject"></a>  COleObjectFactory::OnCreateObject
+##  <a name="oncreateobject"></a>COleObjectFactory::-CreateObject
 
-Volá se rozhraním, chcete-li vytvořit nový objekt.
+Volá se rozhraním, aby se vytvořil nový objekt.
 
 ```
 virtual CCmdTarget* OnCreateObject();
@@ -239,15 +239,15 @@ virtual CCmdTarget* OnCreateObject();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Ukazatel na vytvořený objekt. Pokud selže může vrátit výjimku paměti.
+Ukazatel na vytvořený objekt. Může vyvolat výjimku paměti, pokud se nezdařila.
 
 ### <a name="remarks"></a>Poznámky
 
-Přepsání této funkce můžete vytvořit objekt z něco jiného než [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) předaný konstruktoru.
+Přepište tuto funkci, pokud chcete vytvořit objekt z jiné než [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) předané do konstruktoru.
 
-##  <a name="register"></a>  COleObjectFactory::Register
+##  <a name="register"></a>COleObjectFactory:: Register
 
-Zaregistruje tento objekt pro vytváření objektů OLE systémové knihovny DLL.
+Registruje objekt pro vytváření objektů pomocí knihoven DLL systému OLE.
 
 ```
 virtual BOOL Register();
@@ -255,15 +255,15 @@ virtual BOOL Register();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Nenulové, pokud objekt factory je úspěšně zaregistrovaný; jinak 0.
+Nenulové, pokud je továrna úspěšně registrována; v opačném případě 0.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato funkce je obvykle volána [CWinApp::InitInstance](../../mfc/reference/cwinapp-class.md#initinstance) při spuštění aplikace.
+Tato funkce je obvykle volána funkcí [CWinApp:: InitInstance](../../mfc/reference/cwinapp-class.md#initinstance) při spuštění aplikace.
 
-##  <a name="registerall"></a>  COleObjectFactory::RegisterAll
+##  <a name="registerall"></a>COleObjectFactory:: RegisterAll
 
-Zaregistruje všechny objekty pro vytváření objektů aplikaci OLE systémové knihovny DLL.
+Registruje všechny továrny objektů aplikace pomocí knihoven DLL systému OLE.
 
 ```
 static BOOL PASCAL RegisterAll();
@@ -271,15 +271,15 @@ static BOOL PASCAL RegisterAll();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Nenulové, pokud továren jsou úspěšně registrována. jinak 0.
+Nenulové, pokud jsou továrny úspěšně registrovány; v opačném případě 0.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato funkce je obvykle volána [CWinApp::InitInstance](../../mfc/reference/cwinapp-class.md#initinstance) při spuštění aplikace.
+Tato funkce je obvykle volána funkcí [CWinApp:: InitInstance](../../mfc/reference/cwinapp-class.md#initinstance) při spuštění aplikace.
 
-##  <a name="revoke"></a>  COleObjectFactory::Revoke
+##  <a name="revoke"></a>COleObjectFactory:: REVOKE
 
-Odvolá registrace tento objekt factory OLE systémové knihovny DLL.
+Odvolá registraci této továrny objektů pomocí knihoven DLL systému OLE.
 
 ```
 void Revoke();
@@ -287,11 +287,11 @@ void Revoke();
 
 ### <a name="remarks"></a>Poznámky
 
-Rozhraní volá tuto funkci automaticky předtím, než se aplikace ukončí. V případě potřeby ji volat z přepsání [CWinApp::ExitInstance](../../mfc/reference/cwinapp-class.md#exitinstance).
+Rozhraní volá tuto funkci automaticky před ukončením aplikace. V případě potřeby ji zavolejte z přepsání [CWinApp:: ExitInstance](../../mfc/reference/cwinapp-class.md#exitinstance).
 
-##  <a name="revokeall"></a>  COleObjectFactory::RevokeAll
+##  <a name="revokeall"></a>COleObjectFactory:: RevokeAll
 
-Odvolá všechny registrace továrny objekt aplikace s OLE systémové knihovny DLL.
+Odvolá všechny registrace objektu factory aplikace pomocí knihoven DLL systému OLE.
 
 ```
 static void PASCAL RevokeAll();
@@ -299,11 +299,11 @@ static void PASCAL RevokeAll();
 
 ### <a name="remarks"></a>Poznámky
 
-Rozhraní volá tuto funkci automaticky předtím, než se aplikace ukončí. V případě potřeby ji volat z přepsání [CWinApp::ExitInstance](../../mfc/reference/cwinapp-class.md#exitinstance).
+Rozhraní volá tuto funkci automaticky před ukončením aplikace. V případě potřeby ji zavolejte z přepsání [CWinApp:: ExitInstance](../../mfc/reference/cwinapp-class.md#exitinstance).
 
-##  <a name="unregisterall"></a>  COleObjectFactory::UnregisterAll
+##  <a name="unregisterall"></a>COleObjectFactory:: UnregisterAll
 
-Zruší registraci všech objektů pro vytváření objektu aplikace.
+Zruší registraci všech objektů objektu Application Factory.
 
 ```
 static BOOL PASCAL UnregisterAll();
@@ -311,11 +311,11 @@ static BOOL PASCAL UnregisterAll();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Hodnota TRUE v případě úspěchu; v opačném případě FALSE.
+TRUE v případě úspěchu; v opačném případě FALSE.
 
 ##  <a name="updateregistry"></a>  COleObjectFactory::UpdateRegistry
 
-Zaregistruje všechny objekty pro vytváření objektů aplikaci OLE systémového registru.
+Registruje všechny továrny objektů aplikace pomocí systémového registru OLE.
 
 ```
 void UpdateRegistry(LPCTSTR lpszProgID = NULL);
@@ -325,24 +325,24 @@ virtual BOOL UpdateRegistry(BOOL bRegister);
 ### <a name="parameters"></a>Parametry
 
 *lpszProgID*<br/>
-Ukazatel na řetězec obsahující identifikátor čitelné programu, jako je například "Excel.Document.5."
+Ukazatel na řetězec obsahující identifikátor uživatelsky čitelného programu, jako je například Excel. Document. 5.
 
 *bRegister*<br/>
-Určuje, zda je objekt factory třídy ovládacího prvku k registraci.
+Určuje, zda má být registrován objekt Factory objektu třídy ovládacího prvku.
 
 ### <a name="remarks"></a>Poznámky
 
-Postupujte podle stručný diskuse o dvě různými formami pro tuto funkci:
+Následují krátké diskuze dvou forem této funkce:
 
-- **UpdateRegistry (** `lpszProgID` **)** zaregistruje tento objekt pro vytváření objektů s registrem systému OLE. Tato funkce je obvykle volána [CWinApp::InitInstance](../../mfc/reference/cwinapp-class.md#initinstance) při spuštění aplikace.
+- **UpdateRegistry (** `lpszProgID` **)** registruje tento objekt pro vytváření objektů pomocí systémového registru OLE. Tato funkce je obvykle volána funkcí [CWinApp:: InitInstance](../../mfc/reference/cwinapp-class.md#initinstance) při spuštění aplikace.
 
-- **UpdateRegistry (** `bRegister` **)** tento formulář funkce je přepsatelný. Pokud *bRegister* má hodnotu TRUE, tato funkce registrů třídy ovládacího prvku s registrem systému. V opačném případě ji zruší registraci třídy.
+- **UpdateRegistry (** `bRegister` **)** Tato forma funkce je přepsatelné. Pokud má *bRegister* hodnotu true, tato funkce registruje třídu ovládacího prvku se systémovým registrem. V opačném případě zruší registraci třídy.
 
-   Pokud používáte ActiveX ControlWizard knihovny MFC k vytvoření projektu, poskytuje ControlWizard přepsání této čistě virtuální funkce.
+   Použijete-li k vytvoření projektu ControlWizard ActiveX knihovny MFC, ControlWizard poskytuje přepsání této čistě virtuální funkce.
 
 ##  <a name="updateregistryall"></a>  COleObjectFactory::UpdateRegistryAll
 
-Zaregistruje všechny objekty pro vytváření objektů aplikaci OLE systémového registru.
+Registruje všechny továrny objektů aplikace pomocí systémového registru OLE.
 
 ```
 static BOOL PASCAL UpdateRegistryAll(BOOL bRegister = TRUE);
@@ -351,19 +351,19 @@ static BOOL PASCAL UpdateRegistryAll(BOOL bRegister = TRUE);
 ### <a name="parameters"></a>Parametry
 
 *bRegister*<br/>
-Určuje, zda je objekt factory třídy ovládacího prvku k registraci.
+Určuje, zda má být registrován objekt Factory objektu třídy ovládacího prvku.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Nenulové, pokud jsou úspěšně aktualizovány továren; jinak 0.
+Nenulové, pokud jsou továrny úspěšně aktualizovány; v opačném případě 0.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato funkce je obvykle volána [CWinApp::InitInstance](../../mfc/reference/cwinapp-class.md#initinstance) při spuštění aplikace.
+Tato funkce je obvykle volána funkcí [CWinApp:: InitInstance](../../mfc/reference/cwinapp-class.md#initinstance) při spuštění aplikace.
 
 ##  <a name="verifylicensekey"></a>  COleObjectFactory::VerifyLicenseKey
 
-Ověřuje, že je kontejner licenci k používání ovládacího prvku OLE.
+Ověřuje, že je kontejneru licencovaný pro použití ovládacího prvku OLE.
 
 ```
 virtual BOOL VerifyLicenseKey(BSTR bstrKey);
@@ -372,23 +372,23 @@ virtual BOOL VerifyLicenseKey(BSTR bstrKey);
 ### <a name="parameters"></a>Parametry
 
 *bstrKey*<br/>
-Uložení kontejneru verzi licence řetězce BSTR.
+Objekt BSTR, který ukládá verzi licenčního řetězce kontejneru.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Nenulové, pokud je platná licence za běhu jinak 0.
+Nenulové, pokud je licence za běhu platná; v opačném případě 0.
 
 ### <a name="remarks"></a>Poznámky
 
-Volá výchozí verze [getlicensekey –](#getlicensekey) získat kopii tohoto ovládacího prvku v řetězci licence a porovná ho s řetězcem v *bstrKey*. Pokud se shodují se dva řetězce, funkce vrátí nenulovou hodnotu; v opačném případě vrátí hodnotu 0.
+Výchozí verze volá [GetLicenseKey](#getlicensekey) k získání kopie licenčního řetězce ovládacího prvku a porovná ho s řetězcem v *bstrKey*. Pokud se dva řetězce shodují, funkce vrátí nenulovou hodnotu; v opačném případě vrátí 0.
 
-Můžete přepsat tuto funkci k poskytování přizpůsobených ověření licence.
+Tuto funkci můžete přepsat tak, aby poskytovala vlastní ověření licence.
 
-Funkce [verifyuserlicense –](#verifyuserlicense) ověří vývojářskou licenci.
+Funkce [VerifyUserLicense](#verifyuserlicense) ověří licenci pro dobu návrhu.
 
 ##  <a name="verifyuserlicense"></a>  COleObjectFactory::VerifyUserLicense
 
-Ověří vývojářskou licenci pro ovládací prvek OLE.
+Ověří licenci na dobu návrhu pro ovládací prvek OLE.
 
 ```
 virtual BOOL VerifyUserLicense();
@@ -396,7 +396,7 @@ virtual BOOL VerifyUserLicense();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Nenulové, pokud je platná; vývojářskou licenci jinak 0.
+Nenulové, pokud je licence v době návrhu platná; v opačném případě 0.
 
 ## <a name="see-also"></a>Viz také:
 

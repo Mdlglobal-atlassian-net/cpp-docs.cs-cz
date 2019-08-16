@@ -5,20 +5,20 @@ helpviewer_keywords:
 - processing notifications [MFC]
 - CListCtrl class [MFC], processing notifications
 ms.assetid: 1f0e296e-d2a3-48fc-ae38-51d7fb096f51
-ms.openlocfilehash: 2a7899c74bfcddcdc8d54f7d9eb894553115ad66
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e93e91a3219f81bf4027549fc84f1c85c8defb5b
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62160182"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69507874"
 ---
 # <a name="processing-notification-messages-in-list-controls"></a>Zpracování zpráv s oznámením v ovládacích prvcích seznamů
 
-Jak uživatelé kliknou na záhlaví sloupců, přetáhněte ikony, Upravit popisky a tak dále, ovládacího prvku seznam ([CListCtrl](../mfc/reference/clistctrl-class.md)) odesílá zprávy s oznámením nezašle nadřazenému oknu. Tyto zprávy zpracovávají, pokud budete chtít udělat něco v odpovědi. Když uživatel klikne na záhlaví sloupce, můžete chtít řadit položky podle obsahu kliknutí na sloupec, stejně jako v aplikaci Microsoft Outlook.
+Když uživatel klikne na záhlaví sloupců, přetáhnout ikony, upravit popisky a tak dále, ovládací prvek seznam ([CListCtrl](../mfc/reference/clistctrl-class.md)) odesílá zprávy s oznámením do svého nadřazeného okna. Pokud chcete něco udělat v reakci, Zpracujte tyto zprávy. Například když uživatel klikne na záhlaví sloupce, možná budete chtít seřadit položky na základě obsahu sloupce po kliknutí, jako v aplikaci Microsoft Outlook.
 
-Zpracovat wm_notify – zprávy z ovládacího prvku seznam ve třídě zobrazení nebo dialogového okna. Okno Vlastnosti použít k vytvoření [OnChildNotify](../mfc/reference/cwnd-class.md#onchildnotify) funkci obslužné rutiny pomocí příkazu switch podle zpráv oznámení, které se právě zpracovává.
+Zpracujte zprávy WM_NOTIFY z ovládacího prvku seznamu ve vaší třídě zobrazení nebo dialogového okna. Použijte okno Vlastnosti k vytvoření funkce obslužné rutiny [OnChildNotify](../mfc/reference/cwnd-class.md#onchildnotify) s příkazem Switch na základě toho, kterou zprávu oznámení zpracovává.
 
-Seznam oznámení ovládacího prvku seznamu můžete poslat nezašle nadřazenému oknu, naleznete v tématu [odkaz na ovládací prvek zobrazení seznamu](/windows/desktop/Controls/list-view-control-reference) v sadě Windows SDK.
+Seznam oznámení, která může ovládací prvek seznamu odeslat do svého nadřazeného okna, najdete v tématu [odkazy na ovládací prvky zobrazení seznamu](/windows/win32/Controls/list-view-control-reference) v Windows SDK.
 
 ## <a name="see-also"></a>Viz také:
 

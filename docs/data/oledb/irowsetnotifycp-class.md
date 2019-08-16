@@ -24,16 +24,16 @@ helpviewer_keywords:
 - Fire_OnRowChange method
 - Fire_OnRowsetChange method
 ms.assetid: ccef402b-94a0-4c2e-9a13-7e854ef82390
-ms.openlocfilehash: a3ab63206ce7ac53ff996ecf1bb64bdaa0b79fcb
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 481c2c0ec28972e9cef8d1103e49afa2037c2393
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62390734"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69501382"
 ---
 # <a name="irowsetnotifycp-class"></a>IRowsetNotifyCP – třída
 
-Implementuje poskytovatele lokality pro bod připojení rozhraní [IRowsetNotify](/previous-versions/windows/desktop/ms712959(v=vs.85)).
+Implementuje web poskytovatele pro rozhraní připojovacího bodu rozhraní [IRowsetNotify](/previous-versions/windows/desktop/ms712959(v=vs.85)).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -53,17 +53,17 @@ class IRowsetNotifyCP :
 Třída odvozená z `IRowsetNotifyCP`.
 
 *ReentrantEventSync*<br/>
-Mutex – třída, která podporuje vícenásobného přístupu (výchozí hodnota je `CComSharedMutex`). Objekt mutex je synchronizační objekt umožňující jeden vlákno vzájemně exkluzivní přístup k prostředku.
+Třída mutex, která podporuje vícenásobný přístup (výchozí hodnota je `CComSharedMutex`). Mutex je synchronizační objekt, který umožňuje jednomu vláknu vzájemně exkluzivní přístup k prostředku.
 
 *piid*<br/>
-Ukazatel rozhraní s ID (`IID*`) pro `IRowsetNotify` rozhraní bodu připojení. Výchozí hodnota je `&__uuidof(IRowsetNotify)`.
+Ukazatel ID rozhraní (`IID*`) `IRowsetNotify` pro rozhraní spojovacího bodu. Výchozí hodnota je `&__uuidof(IRowsetNotify)`.
 
 *DynamicUnkArray*<br/>
-Pole typu [ccomdynamicunkarray –](../../atl/reference/ccomdynamicunkarray-class.md), která je dynamicky přiřazeného pole `IUnknown` ukazatele na klienta jímka rozhraní.
+Pole typu [CComDynamicUnkArray](../../atl/reference/ccomdynamicunkarray-class.md), což je dynamicky přidělené pole `IUnknown` ukazatelů na rozhraní jímky klienta.
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** atldb.h
+**Záhlaví:** Atldb. h
 
 ## <a name="members"></a>Členové
 
@@ -71,21 +71,21 @@ Pole typu [ccomdynamicunkarray –](../../atl/reference/ccomdynamicunkarray-clas
 
 |||
 |-|-|
-|[Fire_OnFieldChange](#onfieldchange)|Upozorní příjemce ke změně hodnoty sloupce.|
-|[Fire_OnRowChange](#onrowchange)|Upozornění uživatelů na změnu by to ovlivnilo řádky.|
-|[Fire_OnRowsetChange](#onrowsetchange)|Upozorní příjemce změny, které mají vliv celá sada řádků.|
+|[Fire_OnFieldChange](#onfieldchange)|Upozorní spotřebitele na změnu hodnoty sloupce.|
+|[Fire_OnRowChange](#onrowchange)|Upozorňuje spotřebitele na změnu ovlivňující řádky.|
+|[Fire_OnRowsetChange](#onrowsetchange)|Upozorňuje spotřebitele na změnu ovlivňující celou sadu řádků.|
 
 ## <a name="remarks"></a>Poznámky
 
-`IRowsetNotifyCP` implementuje vysílání funkce radit naslouchacích procesů najdete v bodě připojení `IID_IRowsetNotify` změny obsahu v sadě řádků.
+`IRowsetNotifyCP`implementuje všesměrové funkce pro poradenství naslouchací procesy v `IID_IRowsetNotify` bodu připojení změny obsahu sady řádků.
 
-Všimněte si, že musí také implementovat a zaregistrovat `IRowsetNotify` na spotřebitele (označované také jako "jímka") pomocí [IRowsetNotifyImpl](../../data/oledb/irowsetnotifyimpl-class.md) tak, aby příjemce může zpracovat oznámení. Zobrazit [příjem oznámení](../../data/oledb/receiving-notifications.md) o implementaci rozhraní bod připojení pro příjemce.
+Všimněte si, že musíte také implementovat a `IRowsetNotify` registrovat na příjemce (také označovaný jako "jímka") pomocí [IRowsetNotifyImpl –](../../data/oledb/irowsetnotifyimpl-class.md) , aby příjemce mohl zpracovávat oznámení. Viz [přijímání oznámení](../../data/oledb/receiving-notifications.md) o implementaci rozhraní bodu připojení na příjemce.
 
-Podrobné informace o implementaci oznámení, naleznete v části "Podpora oznámení" v [vytvoření aktualizovatelného zprostředkovatele](../../data/oledb/creating-an-updatable-provider.md).
+Podrobné informace o implementaci oznámení najdete v části "podpora oznámení" v tématu [Vytvoření aktualizovatelného zprostředkovatele](../../data/oledb/creating-an-updatable-provider.md).
 
 ## <a name="onfieldchange"></a> IRowsetNotifyCP::Fire_OnFieldChange
 
-Vysílá [onfieldchange –](/previous-versions/windows/desktop/ms715961(v=vs.85)) událost oznámení příjemci změnu hodnoty sloupce.
+Vysílá událost [OnFieldChange](/previous-versions/windows/desktop/ms715961(v=vs.85)) , která upozorní uživatele na změnu hodnoty sloupce.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -101,11 +101,11 @@ HRESULT Fire_OnFieldChange(IRowset* pRowset,
 
 #### <a name="parameters"></a>Parametry
 
-Zobrazit [IRowsetNotify::OnFieldChange](/previous-versions/windows/desktop/ms715961(v=vs.85)) v *referenční informace pro OLE DB programátory*.
+Viz rozhraní [IRowsetNotify:: OnFieldChange](/previous-versions/windows/desktop/ms715961(v=vs.85)) v *referenci programátora OLE DB*.
 
 ## <a name="onrowchange"></a> IRowsetNotifyCP::Fire_OnRowChange
 
-Vysílá [onrowchange –](/previous-versions/windows/desktop/ms722694(v=vs.85)) události pro všechny posluchače v bodě připojení `IID_IRowsetNotify` oznámit příjemci změny ovlivňující řádky.
+Vysílá událost [OnRowChange](/previous-versions/windows/desktop/ms722694(v=vs.85)) do všech posluchačů v bodu `IID_IRowsetNotify` připojení, aby upozornila uživatele na změnu ovlivňující řádky.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -120,11 +120,11 @@ HRESULT Fire_OnRowChange(IRowset* pRowset,
 
 #### <a name="parameters"></a>Parametry
 
-Zobrazit [IRowsetNotify::OnRowChange](/previous-versions/windows/desktop/ms722694(v=vs.85)) v *referenční informace pro OLE DB programátory*.
+Viz rozhraní [IRowsetNotify:: OnRowChange](/previous-versions/windows/desktop/ms722694(v=vs.85)) v *referenci programátora OLE DB*.
 
 ## <a name="onrowsetchange"></a> IRowsetNotifyCP::Fire_OnRowsetChange
 
-Vysílá [onrowsetchange –](/previous-versions/windows/desktop/ms722669(v=vs.85)) události pro všechny posluchače v bodě připojení `IID_IRowsetNotify` oznámit příjemci změny, které mají vliv celá sada řádků.
+Vysílá událost [OnRowsetChange](/previous-versions/windows/desktop/ms722669(v=vs.85)) do všech posluchačů v bodu `IID_IRowsetNotify` připojení, aby upozornila uživatele na změnu ovlivňující celou sadu řádků.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -137,13 +137,13 @@ HRESULT Fire_OnRowsetChange(IRowset* pRowset,
 
 #### <a name="parameters"></a>Parametry
 
-Zobrazit [IRowsetNotify::OnRowsetChange](/previous-versions/windows/desktop/ms722669(v=vs.85)) v *referenční informace pro OLE DB programátory*.
+Viz rozhraní [IRowsetNotify:: OnRowsetChange](/previous-versions/windows/desktop/ms722669(v=vs.85)) v *referenci programátora OLE DB*.
 
 ## <a name="see-also"></a>Viz také:
 
-[Šablony zprostředkovatele OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
+[Šablony poskytovatele OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
 [Architektura šablon zprostředkovatele OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)<br/>
-[Oznámení (COM)](/windows/desktop/com/notifications)<br/>
+[Oznámení (COM)](/windows/win32/com/notifications)<br/>
 [BEGIN_CONNECTION_POINT_MAP](../../atl/reference/connection-point-macros.md#begin_connection_point_map)<br/>
 [END_CONNECTION_POINT_MAP](../../atl/reference/connection-point-macros.md#end_connection_point_map)<br/>
 [CONNECTION_POINT_ENTRY](../../atl/reference/connection-point-macros.md#connection_point_entry)<br/>

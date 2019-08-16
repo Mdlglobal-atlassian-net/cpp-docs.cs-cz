@@ -60,12 +60,12 @@ helpviewer_keywords:
 - CFile [MFC], m_hFile
 - CFile [MFC], m_pTM
 ms.assetid: b2eb5757-d499-4e67-b044-dd7d1abaa0f8
-ms.openlocfilehash: a258773633f503dc0638d76509953b3410dafbd8
-ms.sourcegitcommit: 878a164fe6d550ca81ab87d8425c8d3cd52fe384
+ms.openlocfilehash: a9161764f6c8646766a73add01c25cce5619ad19
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/22/2019
-ms.locfileid: "68375761"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69506585"
 ---
 # <a name="cfile-class"></a>CFile – – Třída
 
@@ -166,7 +166,7 @@ virtual void Abort();
 
 Pokud jste soubor nezavřeli před zničením objektu, destruktor ho uzavře za vás.
 
-Při zpracování výjimek `CFile::Abort` se liší od `CFile::Close` dvou důležitých způsobů. Nejprve funkce při selhání nevyvolá výjimku, protože chyby jsou `Abort`ignorovány. `Abort` Za `Abort` druhé nevyhodnotí **, jestli se** soubor neotevřel, nebo se dřív zavřel.
+Při zpracování výjimek `CFile::Abort` se liší od `CFile::Close` dvou důležitých způsobů. Nejprve funkce při selhání nevyvolá výjimku, protože chyby jsou `Abort`ignorovány. `Abort` Za `Abort` druhé nevyhodnotí, jestli se soubor neotevřel, nebo se dřív zavřel.
 
 Pokud jste použili **New** pro přidělení `CFile` objektu na haldě, je nutné jej po zavření souboru odstranit. `Abort`nastaví `m_hFile` na `CFile::hFileNull`.
 
@@ -221,7 +221,7 @@ Vyberte jenom jednu z následujících možností režimu přístupu k souborům
 
 Vyberte jednu z následujících možností režimu znaků.
 
-|Hodnota|Popis|
+|Value|Popis|
 |-----------|-----------------|
 |`CFile::typeBinary`|Nastaví binární režim (používá se pouze v odvozených třídách).|
 |`CFile::typeText`|Nastaví režim textu se speciálním zpracováním pro páry kanálů návratového řádku (používá se pouze v odvozených třídách).|
@@ -245,7 +245,7 @@ Vyberte první nebo obojí z následujících možností režimu vytváření so
 
 Vyberte následující možnosti ukládání do mezipaměti, jak je popsáno níže. Ve výchozím nastavení systém používá schéma ukládání do mezipaměti pro obecné účely, které není dostupné jako možnost.
 
-|Hodnota|Popis|
+|Value|Popis|
 |-----------|-----------------|
 |`CFile::osNoBuffer`|Systém pro tento soubor nepoužívá zprostředkující mezipaměť. Tato možnost zruší následující dvě možnosti.|
 |`CFile::osRandomAccess`|Mezipaměť souborů je optimalizována pro náhodný přístup. Nepoužívejte tuto možnost a možnost sekvenčního prohledávání.|
@@ -382,7 +382,7 @@ Název podkladového souboru.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato metoda volá [GetFileTitle](/windows/desktop/api/commdlg/nf-commdlg-getfiletitlea) , aby načetla název souboru. V případě úspěchu metoda vrátí řetězec, který by systém použil k zobrazení názvu souboru uživateli. V opačném případě metoda volá [PathFindFileName](/windows/desktop/api/shlwapi/nf-shlwapi-pathfindfilenamea) , aby získala název souboru (včetně přípony souboru) podkladového souboru. To znamená, že Přípona souboru není vždy obsažena v řetězci vráceného názvu souboru. Další informace najdete v tématu [GetFileTitle](/windows/desktop/api/commdlg/nf-commdlg-getfiletitlea) a [PathFindFileName](/windows/desktop/api/shlwapi/nf-shlwapi-pathfindfilenamea) v Windows SDK.
+Tato metoda volá [GetFileTitle](/windows/win32/api/commdlg/nf-commdlg-getfiletitlew) , aby načetla název souboru. V případě úspěchu metoda vrátí řetězec, který by systém použil k zobrazení názvu souboru uživateli. V opačném případě metoda volá [PathFindFileName](/windows/win32/api/shlwapi/nf-shlwapi-pathfindfilenamew) , aby získala název souboru (včetně přípony souboru) podkladového souboru. To znamená, že Přípona souboru není vždy obsažena v řetězci vráceného názvu souboru. Další informace najdete v tématu [GetFileTitle](/windows/win32/api/commdlg/nf-commdlg-getfiletitlew) a [PathFindFileName](/windows/win32/api/shlwapi/nf-shlwapi-pathfindfilenamew) v Windows SDK.
 
 Chcete-li vrátit celou cestu k souboru, včetně názvu, volejte metodu [GetFilePath](#getfilepath). Chcete-li vrátit pouze název souboru, zavolejte metodu [getsouboru](#getfilename).
 
@@ -466,7 +466,7 @@ TRUE, pokud se informace o stavu zadaného souboru úspěšně získávají; v o
 
 Nestatická verze `GetStatus` načte informace o stavu otevřeného souboru přidruženého k danému `CFile` objektu.  Statická verze `GetStatus` Získá stav souboru z dané cesty k souboru, aniž by soubor skutečně otevřel. Tato verze je užitečná pro testování existence a přístupových práv k souboru.
 
-`m_attribute` Člen`CFileStatus` struktury odkazuje na sadu atributů souboru. Třída poskytuje typ výčtu atributu, takže atributy souboru lze zadat symbolické:  `CFile`
+`m_attribute` Člen`CFileStatus` struktury odkazuje na sadu atributů souboru. Třída poskytuje typ výčtu atributu, takže atributy souboru lze zadat symbolické: `CFile`
 
 ```
 enum Attribute {
@@ -613,7 +613,7 @@ V následující tabulce jsou popsány možné `Open`výsledky.
 
 ##  <a name="operator_handle"></a>CFile –:: operator – popisovač
 
-Pomocí tohoto `CFile` operátoru můžete předat popisovač objektu funkcím, jako jsou například [ReadFileEx](/windows/desktop/api/fileapi/nf-fileapi-readfileex) a [funkce GetFileTime](/windows/desktop/api/fileapi/nf-fileapi-getfiletime) , které očekávají `HANDLE`.
+Pomocí tohoto `CFile` operátoru můžete předat popisovač objektu funkcím, jako jsou například [ReadFileEx](/windows/win32/api/fileapi/nf-fileapi-readfileex) a [funkce GetFileTime](/windows/win32/api/fileapi/nf-fileapi-getfiletime) , které očekávají `HANDLE`.
 
 ```
 operator HANDLE() const;

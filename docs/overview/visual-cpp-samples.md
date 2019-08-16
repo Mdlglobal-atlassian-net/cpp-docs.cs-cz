@@ -5,35 +5,35 @@ ms.technology: cpp-language
 ms.assetid: 76798022-5886-48e7-a7f2-f99352b15cbf
 author: mikeblome
 ms.author: mblome
-ms.openlocfilehash: d91fa77c9a76fb7c1f9f8281a9fdbbc463cc0fea
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 10e5ca4648f88cc41e0f928272224a21d9c66a0f
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62351865"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69512979"
 ---
 # <a name="visual-c-samples"></a>Visual C++ – ukázky
 
 Ukázky kódu jazyka Visual C++ uvedené níže ukazují různé funkce napříč různými technologiemi.
 
-[Visual C++ – ukázky](https://github.com/Microsoft/vcsamples)
+[Ukázky C++ vizuálů](https://github.com/Microsoft/vcsamples)
 
 [Ukázky sady Visual Studio](https://code.msdn.microsoft.com/vstudio/site/search?f%5B0%5D.Type=ProgrammingLanguage&f%5B0%5D.Value=C%2B%2B)
 
-[Windows na Githubu](https://microsoft.github.io/windows/)
+[Windows na GitHubu](https://microsoft.github.io/windows/)
 
 [Ukázky univerzálních aplikací pro Windows](https://code.msdn.microsoft.com/windowsapps/Universal-Windows-app-cb3248c3)
 
-[All-in-One code framework](https://1code.codeplex.com/)
+[Rozhraní kódu All-in-One](https://1code.codeplex.com/)
 
-[Ukázky kódu pro Windows Desktop](https://code.msdn.microsoft.com/windowsdesktop/site/search?f%5B0%5D.Type=ProgrammingLanguage&f%5B0%5D.Value=C%2B%2B&f%5B0%5D.Text=C%2B%2B)
+[Ukázky kódu pro stolní počítače Windows](https://code.msdn.microsoft.com/windowsdesktop/site/search?f%5B0%5D.Type=ProgrammingLanguage&f%5B0%5D.Value=C%2B%2B&f%5B0%5D.Text=C%2B%2B)
 
 [Ukázky knihovny MFC](https://code.msdn.microsoft.com/site/search?query=mfc&f%5B0%5D.Value=mfc&f%5B0%5D.Type=SearchText&ac=4)
 
-[Ukázky na webu CodePlex](https://archive.codeplex.com/)
+[Ukázky CodePlex](https://archive.codeplex.com/)
 
-[Ukázky kódu ADO](https://msdn.microsoft.com/library/jj249212.aspx)
+[Ukázky kódu ADO](/office/client-developer/access/desktop-database-reference/ado-code-examples-in-microsoft-visual-c)
 
-[Ukázky vývoje pro Windows Hardware](https://code.msdn.microsoft.com/windowshardware/)
+[Ukázky vývoje hardwaru systému Windows](https://code.msdn.microsoft.com/windowshardware/)
 
 [!INCLUDE[note_security_samplecode](includes/note_security_samplecode_md.md)]

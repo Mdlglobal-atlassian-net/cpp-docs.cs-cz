@@ -1,21 +1,21 @@
 ---
-title: jen pro čtení (atribut C++ COM)
+title: ReadOnly (C++ atribut com)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.readonly
 helpviewer_keywords:
 - readonly attribute
 ms.assetid: 1246cadd-5304-43a9-beea-51153d12704d
-ms.openlocfilehash: 7eea071b62130c65fbb46ebc8827fc2b428c4c0c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 93f7393f76596766e841dfc25f6d12e20e3db618
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62407338"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69514131"
 ---
 # <a name="readonly-c"></a>readonly (C++)
 
-Zakáže přiřazení na datový člen.
+Zakáže přiřazení datovému členu.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -25,13 +25,13 @@ Zakáže přiřazení na datový člen.
 
 ## <a name="remarks"></a>Poznámky
 
-**Jen pro čtení** C++ atribut má stejné funkce jako [jen pro čtení](/windows/desktop/Midl/readonly) atribut MIDL.
+Atribut **jen pro čtení** C++ má stejné funkce jako atribut [ReadOnly](/windows/win32/Midl/readonly) MIDL.
 
-Pokud chcete zakázat úpravy parametru metody, použijte [v](in-cpp.md) atribut.
+Pokud chcete zakázat úpravu parametru metody, použijte atribut [in](in-cpp.md) .
 
 ## <a name="example"></a>Příklad
 
-Následující kód ukazuje použití **jen pro čtení** atribut:
+Následující kód ukazuje použití atributu **ReadOnly** :
 
 ```cpp
 // cpp_attr_ref_readonly.cpp
@@ -49,16 +49,16 @@ __interface IFireTabCtrl
 
 ## <a name="requirements"></a>Požadavky
 
-### <a name="attribute-context"></a>Atribut kontextu
+### <a name="attribute-context"></a>Kontext atributu
 
 |||
 |-|-|
 |**Platí pro**|Metoda rozhraní|
-|**Opakovatelné**|Ne|
-|**Vyžadované atributy**|Žádné|
-|**Neplatné atributy**|Žádný|
+|**REPEATABLE**|Ne|
+|**Požadované atributy**|Žádné|
+|**Neplatné atributy**|Žádné|
 
-Další informace o kontexty atributů najdete v tématu [kontexty atributů](cpp-attributes-com-net.md#contexts).
+Další informace o kontextech atributů naleznete v tématu kontexty [atributů](cpp-attributes-com-net.md#contexts).
 
 ## <a name="see-also"></a>Viz také:
 

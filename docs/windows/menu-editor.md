@@ -39,136 +39,136 @@ helpviewer_keywords:
 - commands [C++], deleting from menus
 - menus [C++], deleting
 ms.assetid: 421fb215-6e12-4ec9-a3af-82d77f87bfa6
-ms.openlocfilehash: 09d385404edbc33883d2d2add2328b33876d23ae
-ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
+ms.openlocfilehash: f2a5f1ac63007bf44dc331e2104c6e9e5cac23da
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66504645"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69514826"
 ---
 # <a name="menu-editor-c"></a>Editor nabídek (C++)
 
-Nabídky umožňuje uspořádat příkazy v podobě logické a snadno najít. S **Editor nabídek**, můžete vytvořit a upravit nabídky při práci přímo s panel nabídek, který úzce podobá jedné dokončené aplikace.
+Nabídky umožňují uspořádat příkazy v logickém a snadno čitelném způsobem. Pomocí **editoru nabídek**můžete vytvářet a upravovat nabídky přímo s panelem nabídek, který se těsně podobá ve vaší dokončené aplikaci.
 
 > [!TIP]
-> Při použití **Editor nabídek**, v mnoha případech je můžete kliknout pravým tlačítkem na Zobrazit místní nabídku s často používanými příkazy. Dostupné příkazy závisí na ukazatel odkazuje na.
+> Při použití **editoru nabídek**můžete v mnoha případech kliknout pravým tlačítkem myši a zobrazit místní nabídku často používaných příkazů. Dostupné příkazy závisí na tom, na čemu ukazatel odkazuje.
 
 ## <a name="how-to"></a>Postupy
 
 **Editor nabídek** vám umožní:
 
-### <a name="to-create-a-standard-menu"></a>Chcete-li vytvořit standardní nabídky
+### <a name="to-create-a-standard-menu"></a>Vytvoření standardní nabídky
 
-1. Přejděte do nabídky **zobrazení** > **zobrazení prostředků** a klikněte pravým tlačítkem na **nabídky** záhlaví. Zvolte **přidat prostředek**, pak **nabídky**.
+1. Přejděte na **zobrazení** > nabídky**prostředky** a klikněte pravým tlačítkem myši na záhlaví **nabídky** . Zvolte **Přidat prostředek**a pak **Nabídka**.
 
-1. Vyberte **nová položka** pole (obdélníku, který obsahuje *typu tady*) na panelu nabídek.
+1. V řádku nabídek vyberte pole **Nová položka** (v tomto poli obsahuje *text*).
 
-   ![Nové pole položky v nabídce editoru](../windows/media/vcmenueditornewitembox.gif "vcMenuEditorNewItemBox")<br/>
-   **Nová položka** pole
+   ![Pole Nová položka v editoru nabídek](../windows/media/vcmenueditornewitembox.gif "vcMenuEditorNewItemBox")<br/>
+   Pole **Nová položka**
 
-1. Například zadejte název vaší nové nabídce *souboru*.
+1. Zadejte název nové nabídky, například *File*.
 
-   Text, který zadáte, se zobrazí v **Editor nabídek** a **titulek** pole [okno vlastností](/visualstudio/ide/reference/properties-window). Upravit vlastnosti pro vaše nové nabídce v některém umístění.
+   Text, který zadáte, se zobrazí v **editoru nabídek** i v poli **Titulek** v [okně Vlastnosti](/visualstudio/ide/reference/properties-window). Vlastnosti nové nabídky můžete upravit v libovolném umístění.
 
-   Po názvu jste udělili novou nabídku v panelu nabídek, nová položka pole posune doprava (umožňují přidat jiné nabídky) a jiného pole novou položku se otevře pod první nabídky, příkazy nabídky můžete přidat k němu.
+   Po tom, co máte novou nabídku s názvem na řádku nabídek, se pole Nová položka posune doprava (aby bylo možné přidat další nabídku) a další pole Nová položka se zobrazí pod první nabídkou, abyste do ní mohli přidat příkazy nabídky.
 
-   ![Rozbalené pole novou položku](../windows/media/vcmenueditornewitemboxexpanded.gif "vcMenuEditorNewItemBoxExpanded")<br/>
-   **Nová položka** pole s fokusem posune po zadejte název nabídky
+   ![Rozbalené pole nové položky](../windows/media/vcmenueditornewitemboxexpanded.gif "vcMenuEditorNewItemBoxExpanded")<br/>
+   Pole **nové položky** s fokusem se po zadání názvu nabídky přesune nahoru
 
    > [!NOTE]
-   > Chcete-li vytvořit jedné položky nabídky na řádku nabídek, nastavte **automaticky otevírané okno** vlastnost **False**.
+   > Chcete-li vytvořit nabídku s jednou položkou na panelu nabídek, nastavte vlastnost **automaticky otevíraná okna** na **hodnotu NEPRAVDA**.
 
 ### <a name="to-create-a-submenu"></a>Vytvoření podnabídky
 
-1. Vyberte příkaz nabídky, u kterého chcete vytvořit podnabídky.
+1. Vyberte příkaz nabídky, pro který chcete vytvořit podnabídku.
 
-1. V **nová položka** pole, které se zobrazí napravo, zadejte název nového příkazu nabídky. Tento nový příkaz zobrazí první v nabídce podnabídka.
+1. V poli **Nová položka** , která se zobrazí vpravo zadejte název nového příkazu nabídky. Tento nový příkaz se zobrazí jako první v nabídce podnabídky.
 
-1. Přidejte další příkazy nabídky podnabídka.
+1. Přidejte další příkazy nabídky do nabídky podnabídky.
 
-### <a name="to-insert-a-new-menu-between-existing-menus"></a>Chcete-li vložit nové nabídky mezi stávající nabídky
+### <a name="to-insert-a-new-menu-between-existing-menus"></a>Vložení nové nabídky mezi existující nabídky
 
-Vyberte existující název nabídky a stiskněte klávesu **vložit** klíče, nebo klikněte pravým tlačítkem na řádku nabídek a zvolte **vložit nový**.
+Vyberte název existující nabídky, stiskněte klávesu **INSERT** nebo klikněte pravým tlačítkem myši na panel nabídek a zvolte možnost **Vložit nový**.
 
-   **Nová položka** pole se vloží před vybranou položku.
+   Je vloženo pole **Nová položka** před vybranou položkou.
 
-### <a name="to-add-commands-to-a-menu"></a>Chcete-li přidat do nabídky příkazů
+### <a name="to-add-commands-to-a-menu"></a>Přidání příkazů do nabídky
 
-1. Vytvoření nabídky. Vyberte název nabídky, například **souboru**.
+1. Vytvořte nabídku. Pak vyberte název nabídky, například **soubor**.
 
-   Každá nabídka bude rozbalte a vystavovat nové položky pole pro příkazy. Například můžete přidat příkazy **nový**, **otevřít**, a **Zavřít** k **souboru** nabídky.
+   Jednotlivé nabídky rozbalí a zpřístupní nové pole položek pro příkazy. Můžete například přidat příkazy **nové**, **otevřít**a **Zavřít** v nabídce **soubor** .
 
-1. Do pole nové položky zadejte název pro nový příkaz nabídky.
+1. Do pole Nová položka zadejte název nového příkazu nabídky.
 
    > [!NOTE]
-   > Text, který zadáte, se zobrazí v **Editor nabídek** a **titulek** pole [okno vlastností](/visualstudio/ide/reference/properties-window). Upravit vlastnosti pro vaše nové nabídce v některém umístění.
+   > Text, který zadáte, se zobrazí v **editoru nabídek** i v poli **Titulek** v [okně Vlastnosti](/visualstudio/ide/reference/properties-window). Vlastnosti nové nabídky můžete upravit v libovolném umístění.
 
    > [!TIP]
-   > Můžete definovat přístupové klávesy (Klávesová zkratka), který umožňuje uživateli vybrat příkaz nabídky. Zadejte znak ampersand (`&`) před písmenem určit jako symbol. Uživatel může vybrat příkaz nabídky tak, že zadáte písmeno.
+   > Můžete definovat symbolický klíč (klávesovou zkratku), který uživateli umožňuje vybrat příkaz nabídky. Zadejte ampersand (`&`) před písmenem a určete tak jako symbol. Uživatel může vybrat příkaz nabídky zadáním tohoto písmene.
 
-1. V **vlastnosti** okna, vyberte příkaz Vlastnosti, které se vztahují na nabídku. Podrobnosti najdete v tématu [vlastnosti příkazu nabídky](../windows/menu-command-properties.md).
+1. V okně **vlastnosti** vyberte vlastnosti příkazu nabídky, které se použijí. Podrobnosti najdete v tématu [vlastnosti příkazu nabídky](../windows/menu-command-properties.md).
 
-1. V **řádku** pole **vlastnosti** okno, zadejte řetězec výzvy, které se mají zobrazit ve stavovém řádku vaší aplikace.
+1. Do pole **výzvy** v okně **vlastnosti** zadejte řetězec výzvy, který chcete zobrazit ve stavovém řádku vaší aplikace.
 
-   Tento krok vytvoří záznam v tabulce řetězců se stejným identifikátorem prostředku jako příkaz, který jste vytvořili.
+   Tento krok vytvoří položku v tabulce řetězců se stejným identifikátorem prostředku jako příkaz nabídky, který jste vytvořili.
 
    > [!NOTE]
-   > Výzvy lze použít pouze pro položky nabídky **automaticky otevírané okno** vlastnost **True**. Například položky nabídek nejvyšší úrovně může mít výzvy, pokud mají položky dílčí nabídky. Účel **výzvy** je určit, co se stane, pokud uživatel zvolí položka nabídky.
+   > Výzvy lze použít pouze pro položky nabídky s **místní** vlastností **true**. Například položky nabídky nejvyšší úrovně mohou mít výzvy, pokud mají položky podnabídky. Účelem **výzvy** je určit, co se stane, když uživatel vybere položku nabídky.
 
-1. Stisknutím klávesy **Enter** na dokončení příkazu nabídky.
+1. Stisknutím klávesy **ENTER** dokončete příkaz nabídky.
 
-   Nové položky políčko je zaškrtnuto, takže si můžete vytvořit další příkazy.
+   Je vybráno pole Nová položka, abyste mohli vytvořit další příkazy nabídky.
 
-### <a name="to-select-multiple-menu-commands-to-run-bulk-operations-such-as-deleting-or-changing-properties"></a>Chcete-li vybrat více příkazů nabídky ke spuštění hromadné operace, jako je například odstranění nebo změna vlastností
+### <a name="to-select-multiple-menu-commands-to-run-bulk-operations-such-as-deleting-or-changing-properties"></a>Chcete-li vybrat více příkazů nabídky ke spuštění hromadných operací, jako je například odstranění nebo změna vlastností
 
-Když podržíte **Ctrl** klíče, vyberte možnost nabídky a podnabídky příkazy, které chcete.
+Podržte stisknutou klávesu **CTRL** a vyberte nabídky nebo příkazy podnabídky, které chcete.
 
-### <a name="to-move-and-copy-menus-and-menu-commands"></a>Pro přesun a kopírování nabídek a příkazů nabídky
+### <a name="to-move-and-copy-menus-and-menu-commands"></a>Přesunutí a zkopírování nabídek a příkazů nabídky
 
-- Použijte metodu drag drop:
+- Použijte metodu přetažení:
 
-   1. Přetáhněte nebo zkopírujte položku, kterou chcete přejít na:
+   1. Přetáhněte nebo zkopírujte položku, na kterou chcete přejít:
 
-      - Nové umístění v nabídce aktuální.
+      - Nové umístění v aktuální nabídce.
 
-      - Jiné nabídky. Můžete přejít na jiné nabídky přetažením ukazatele myši nad nimi.
+      - Jinou nabídku. Můžete přejít na jiné nabídky přetažením ukazatele myši na ně.
 
-   1. Příkaz nabídky vyřaďte, když se vykreslilo vodítko ukazatele zobrazuje umístění, které chcete.
+   1. Pokud vodítko pro vložení zobrazuje požadovanou pozici, přetáhněte příkaz nabídky.
 
 - Použijte příkazy místní nabídky:
 
-   1. Klikněte pravým tlačítkem na jeden nebo více nabídek nebo příkazů nabídky a pak zvolte **Vyjmout** (k přesunutí) nebo **kopírování**.
+   1. Klikněte pravým tlačítkem myši na jednu nebo více nabídek nebo příkazů nabídky a pak zvolte **Vyjmout** (pro přesunutí) nebo **Kopírovat**.
 
-   1. Pokud přesouváte položky na jiné nabídky prostředků nebo souboru skriptu prostředků [otevřete ho v jiném okně](/visualstudio/ide/customizing-window-layouts-in-visual-studio).
+   1. Pokud přesouváte položky do jiného prostředku nebo souboru skriptu prostředků nabídky, [otevřete ho v jiném okně](/visualstudio/ide/customizing-window-layouts-in-visual-studio).
 
-   1. Vyberte nabídky nebo příkaz nabídky, že kterou chcete přesunout nebo kopírovat do umístění.
+   1. Vyberte umístění nabídky nebo příkazu nabídky, do které chcete přesunout nebo kopírovat.
 
-   1. V místní nabídce zvolte **vložit**. Položka přesunutý nebo zkopírovaný je umístěn před položku, kterou jste vybrali.
-
-> [!NOTE]
-> Můžete také přetáhnout, zkopírujte a vložte jiným nabídkám v jiných oknech nabídky.
-
-### <a name="to-delete-a-menu-or-menu-command"></a>Odstranění nabídky nebo příkazu nabídky
-
-Název nabídky nebo příkazu klikněte pravým tlačítkem a zvolte **odstranit**.
+   1. V místní nabídce vyberte možnost **Vložit**. Přesunutá nebo zkopírovaná položka je umístěna před vybranou položkou.
 
 > [!NOTE]
-> Podobně můžete použít nabídku provádět další akce, jako je kopírování, vyjmutí, vložení, vložit nový, vložit oddělovač úprav ID zobrazení jako automaticky otevírané okno, zkontrolujte klávesových zkratek apod.
+> Můžete také přetahovat, kopírovat a vkládat do jiných nabídek v jiných oknech nabídek.
+
+### <a name="to-delete-a-menu-or-menu-command"></a>Odstranění příkazu nabídky nebo nabídky
+
+Klikněte pravým tlačítkem myši na název nabídky nebo příkaz a vyberte **Odstranit**.
+
+> [!NOTE]
+> Podobně můžete použít místní nabídku k provádění dalších akcí, jako je kopírování, vyjmutí, vložení, vložení nového, oddělovač vložení, úprava ID, zobrazení jako automaticky otevíraná okna, zaškrtávací políčka a další.
 
 ## <a name="pop-up-menus"></a>Místní nabídky
 
-[Místní nabídky](../mfc/menus-mfc.md) zobrazení často používané příkazy. Můžou být závislá na kontextu do umístění ukazatele. Pomocí místní nabídky v aplikaci vyžaduje vytváření samotné nabídky a následným připojením ke kódu aplikace.
+[Místní nabídky](../mfc/menus-mfc.md) zobrazují často používané příkazy. Můžou být kontextově závislé na umístění ukazatele. Použití místních nabídek ve vaší aplikaci vyžaduje sestavování samotné nabídky a následné připojení k kódu aplikace.
 
-Po vytvoření prostředku nabídky, kód vaší aplikace potřebuje k načtení prostředku nabídky a použít [TrackPopupMenu](/windows/desktop/api/winuser/nf-winuser-trackpopupmenu) způsobit v nabídce Zobrazit. Jakmile uživatel má vynechat v rozbalovací nabídce vyberete mimo něj, nebo má vybraný příkaz, který funkce vrátí. Pokud uživatel vybere příkaz, tento příkaz se pošle zpráva v okně, jehož popisovač byl předán.
+Po vytvoření prostředku nabídky musí kód aplikace načíst prostředek nabídky a použít [TrackPopupMenu](/windows/win32/api/winuser/nf-winuser-trackpopupmenu) k zobrazení nabídky. Jakmile uživatel v místní nabídce zavře, vybere mimo ni nebo vybere příkaz, vrátí tato funkce. Pokud uživatel zvolí příkaz, tato zpráva se odešle do okna, jehož popisovač byl předán.
 
 > [!NOTE]
-> Pro programy knihovna tříd MFC (Microsoft Foundation) a knihovny ATL, použijte **průvodců kódem** připojit příkazů nabídky ke kódu. Další informace najdete v tématu [přidání události](../ide/adding-an-event-visual-cpp.md) a [mapování zpráv na funkce](../mfc/reference/mapping-messages-to-functions.md).
+> Pro programy knihovny MFC (Microsoft Foundation Class) a programy ATL použijte **Průvodce kódem** k zavěšení příkazů nabídky do kódu. Další informace najdete v tématu [Přidání události](../ide/adding-an-event-visual-cpp.md) a [mapování zpráv na funkce](../mfc/reference/mapping-messages-to-functions.md).
 
-- Místní nabídka, vytvořte nabídky s prázdný název a neposkytují *titulek*. Potom přidání příkazu nabídky do nové nabídky, přesunout na první příkaz nabídky pod názvem prázdné nabídky s titulkem dočasné *typu tady* a zadejte *titulek* a další informace.
+- Chcete-li vytvořit místní nabídku, vytvořte nabídku s prázdným nadpisem a nezadávejte *Titulek*. Pak přidejte příkaz nabídky do nové nabídky, přejděte do prvního příkazu nabídky pod názvem prázdné nabídky, pod kterým je uveden dočasný *typ* titulku, a zadejte *Titulek* a další informace.
 
-   Tento postup opakujte pro další příkazy nabídky v rozbalovací nabídce a je potřeba uložit nabídce prostředků.
+   Tento postup opakujte pro všechny další příkazy nabídek v místní nabídce a nezapomeňte uložit prostředek nabídky.
 
-- Připojení místní nabídky do vaší aplikace, například přidání obslužné rutiny zpráv pro WM_CONTEXTMENU a potom přidejte následující kód do obslužné rutiny zpráv:
+- Chcete-li připojit místní nabídku k aplikaci, například přidat obslužnou rutinu zprávy pro WM_CONTEXTMENU, přidejte následující kód do obslužné rutiny zprávy:
 
     ```cpp
     CMenu menu;
@@ -179,16 +179,16 @@ Po vytvoření prostředku nabídky, kód vaší aplikace potřebuje k načtení
     ```
 
    > [!NOTE]
-   > [CPoint](../atl-mfc-shared/reference/cpoint-class.md) předané ve zprávě je obslužná rutina v souřadnicovém systému obrazovky.
+   > [CPoint](../atl-mfc-shared/reference/cpoint-class.md) předaný obslužnou rutinou zprávy je v souřadnicích obrazovky.
 
-Obvykle, když pracujete v **Editor nabídek**, prostředku nabídky se zobrazí jako panel nabídek. Může však mít prostředky nabídky, které jsou přidány do řádku nabídek aplikace, zatímco program běží.
+Když pracujete v **editoru nabídek**normálně, zobrazí se jako panel nabídek prostředek nabídky. Je však možné, že máte prostředky nabídky, které jsou přidány do řádku nabídek aplikace v době, kdy je program spuštěn.
 
-- Chcete-li zobrazit prostředku nabídky jako místní nabídky, klikněte pravým tlačítkem myši na nabídku a zvolte **zobrazit jako místní nabídku**.
+- Chcete-li zobrazit prostředek nabídky jako místní nabídku, klikněte pravým tlačítkem myši na nabídku a vyberte možnost **Zobrazit jako automaticky otevírané okno**.
 
-   Tato možnost je pouze zobrazení prioritní a nezmění vaši nabídku.
+   Tato možnost je pouze preference zobrazení a neupravuje nabídku.
 
 > [!TIP]
-> Chcete-li změnit zpět na zobrazení řádku nabídek vyberte **zobrazit jako místní nabídku** znovu. Tato akce odebere zaškrtávací políčko a vrátí zobrazení řádku nabídek.
+> Chcete-li přejít zpět na zobrazení panelu nabídek, vyberte znovu **Zobrazit jako místní** nabídku. Tato akce odebere značku zaškrtnutí a vrátí zobrazení panelu nabídek.
 
 ## <a name="requirements"></a>Požadavky
 
@@ -200,4 +200,4 @@ Win32
 [Příkazy nabídky](../windows/menu-command-properties.md)<br/>
 [Identifikátory objektů uživatelského rozhraní a příkazů](../mfc/user-interface-objects-and-command-ids.md)<br/>
 [Nabídky](../mfc/menus-mfc.md)<br/>
-[Nabídky](/windows/desktop/menurc/menus)
+[Nabídky](/windows/win32/menurc/menus)

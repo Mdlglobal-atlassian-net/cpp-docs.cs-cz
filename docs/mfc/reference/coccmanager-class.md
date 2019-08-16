@@ -1,5 +1,5 @@
 ---
-title: COccManager Class
+title: COccManager – třída
 ms.date: 11/04/2016
 f1_keywords:
 - COccManager
@@ -30,16 +30,16 @@ helpviewer_keywords:
 - COccManager [MFC], SetDefaultButton
 - COccManager [MFC], SplitDialogTemplate
 ms.assetid: 7d47aeed-d1ab-48e3-b4cf-d429718e370a
-ms.openlocfilehash: a83f58b8de2411577d9fc025f7a8f8dc535ea8b3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c2a49e3396879e5f1e0864ab5342b57541c6b36c
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62388264"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69504490"
 ---
-# <a name="coccmanager-class"></a>COccManager Class
+# <a name="coccmanager-class"></a>COccManager – třída
 
-Spravuje různé vlastní ovládací prvky stránky; implementované `COleControlContainer` a `COleControlSite` objekty.
+Spravuje různé weby vlastních ovládacích prvků. implementováno objekty `COleControlSite`a. `COleControlContainer`
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -51,24 +51,24 @@ class COccManager : public CNoTrackObject
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
-|[COccManager::CreateContainer](#createcontainer)|Vytvoří `COleContainer` objektu.|
-|[COccManager::CreateDlgControls](#createdlgcontrols)|Vytvoří ovládací prvky ActiveX, hostitelem přidružené `COleContainer` objektu.|
-|[COccManager::CreateSite](#createsite)|Vytvoří `COleClientSite` objektu.|
-|[COccManager::GetDefBtnCode](#getdefbtncode)|Získá kód výchozí tlačítko.|
-|[COccManager::IsDialogMessage](#isdialogmessage)|Určuje cíl zprávy dialogu.|
-|[COccManager::IsLabelControl](#islabelcontrol)|Určuje, zda zadaný ovládací prvek je ovládací prvek popisku.|
-|[COccManager::IsMatchingMnemonic](#ismatchingmnemonic)|Určuje, pokud aktuální symbol odpovídá symbolické zadaný ovládací prvek.|
-|[COccManager::OnEvent](#onevent)|Pokusí se zpracovat zadané události.|
-|[COccManager::PostCreateDialog](#postcreatedialog)|Uvolní prostředky přidělené během vytváření dialogového okna.|
-|[COccManager::PreCreateDialog](#precreatedialog)|Zpracuje šablony dialogového okna pro ovládací prvky ActiveX.|
-|[COccManager::SetDefaultButton](#setdefaultbutton)|Přepíná výchozí stav zadaný ovládací prvek.|
-|[COccManager::SplitDialogTemplate](#splitdialogtemplate)|Všechny existující ovládací prvky ActiveX odděluje z běžných ovládacích prvků v šabloně zadané dialogového okna.|
+|[COccManager::CreateContainer](#createcontainer)|`COleContainer` Vytvoří objekt.|
+|[COccManager::CreateDlgControls](#createdlgcontrols)|Vytvoří ovládací prvky ActiveX hostované přidruženým `COleContainer` objektem.|
+|[COccManager::CreateSite](#createsite)|`COleClientSite` Vytvoří objekt.|
+|[COccManager::GetDefBtnCode](#getdefbtncode)|Načte kód výchozího tlačítka.|
+|[COccManager::IsDialogMessage](#isdialogmessage)|Určuje cíl zprávy dialogového okna.|
+|[COccManager::IsLabelControl](#islabelcontrol)|Určuje, zda je určený ovládací prvek ovládací prvek popisek.|
+|[COccManager::IsMatchingMnemonic](#ismatchingmnemonic)|Určuje, zda aktuální ovládací prvek odpovídá symbolickému znaku zadaného ovládacího prvku.|
+|[COccManager::OnEvent](#onevent)|Pokusí se zpracovat zadanou událost.|
+|[COccManager::PostCreateDialog](#postcreatedialog)|Uvolní prostředky přidělené při vytváření dialogu.|
+|[COccManager::PreCreateDialog](#precreatedialog)|Zpracuje šablonu dialogového okna pro ovládací prvky ActiveX.|
+|[COccManager::SetDefaultButton](#setdefaultbutton)|Přepíná výchozí stav zadaného ovládacího prvku.|
+|[COccManager::SplitDialogTemplate](#splitdialogtemplate)|Odděluje všechny existující ovládací prvky ActiveX od běžných ovládacích prvků v zadané šabloně dialogového okna.|
 
 ## <a name="remarks"></a>Poznámky
 
-Základní třída `CNoTrackObject`, je nedokumentované základní třídy (nachází se ve AFXTLS. H). Je určená pro použití v rámci knihovny MFC rozhraní a třídy odvozené z `CNoTrackObject` třídy jsou vyloučené z detekce nevrácení paměti. Není doporučeno, jsou odvozeny přímo z `CNoTrackObject`.
+Základní třída `CNoTrackObject`je nedokumentovaná základní třída (která se nachází v AFXTLS. H). Určené pro použití v rozhraní knihovny MFC, třídy odvozené od `CNoTrackObject` třídy jsou vyloučeny z detekce nevrácení paměti. Nedoporučujeme odvozovat přímo z `CNoTrackObject`.
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
@@ -78,11 +78,11 @@ Základní třída `CNoTrackObject`, je nedokumentované základní třídy (nac
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** afxocc.h
+**Záhlaví:** afxocc. h
 
-##  <a name="createcontainer"></a>  COccManager::CreateContainer
+##  <a name="createcontainer"></a>COccManager:: CreateContainer
 
-Volá se rozhraním, vytvoření kontejneru ovládacího prvku.
+Volá se rozhraním, aby se vytvořil kontejner ovládacího prvku.
 
 ```
 virtual COleControlContainer* CreateContainer(CWnd* pWnd);
@@ -91,19 +91,19 @@ virtual COleControlContainer* CreateContainer(CWnd* pWnd);
 ### <a name="parameters"></a>Parametry
 
 *pWnd*<br/>
-Ukazatel na objekt okna spojenými s daným kontejnerem vlastní stránky.
+Ukazatel na objekt okna přidružený k vlastnímu kontejneru webu.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Ukazatel na nově vytvořený kontejner; v opačném případě hodnota NULL.
+Ukazatel na nově vytvořený kontejner; jinak NULL.
 
 ### <a name="remarks"></a>Poznámky
 
-Další informace o vytváření vlastních webů, najdete v části [COleControlContainer::AttachControlSite](../../mfc/reference/colecontrolcontainer-class.md#attachcontrolsite).
+Další informace o vytváření vlastních lokalit naleznete v tématu [COleControlContainer:: AttachControlSite](../../mfc/reference/colecontrolcontainer-class.md#attachcontrolsite).
 
 ##  <a name="createdlgcontrols"></a>  COccManager::CreateDlgControls
 
-Volání této funkce můžete vytvořit ovládací prvky ActiveX, které jsou určené *pOccDialogInfo* parametru.
+Voláním této funkce vytvoříte ovládací prvky ActiveX určené parametrem *pOccDialogInfo* .
 
 ```
 virtual BOOL CreateDlgControls(
@@ -120,24 +120,24 @@ virtual BOOL CreateDlgControls(
 ### <a name="parameters"></a>Parametry
 
 *pWndParent*<br/>
-Ukazatel na nadřazený prvek z objektu dialogového okna.
+Ukazatel na nadřazený objekt dialogového okna.
 
 *lpszResourceName*<br/>
-Název prostředku vytvořeného.
+Název vytvářeného prostředku.
 
 *pOccDialogInfo*<br/>
-Ukazatel na dialogové okno šablony použité k vytvoření objektu dialogového okna.
+Ukazatel na šablonu dialogového okna sloužící k vytvoření objektu dialogového okna.
 
 *lpResource*<br/>
 Ukazatel na prostředek.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Nenulové, pokud ovládací prvek byl vytvořen úspěšně; jinak nula.
+Nenulové, pokud byl ovládací prvek úspěšně vytvořen; jinak nula.
 
-##  <a name="createsite"></a>  COccManager::CreateSite
+##  <a name="createsite"></a>COccManager::CreateSite
 
-Volá se rozhraním pro vytvoření ovládacího prvku webu hostitelem kontejneru, na které odkazuje *pCtrlCont*.
+Volá se rozhraním, aby se vytvořila lokalita ovládacího prvku, která je hostovaná kontejnerem, na který odkazuje *pCtrlCont*.
 
 ```
 virtual COleControlSite* CreateSite(COleControlContainer* pCtrlCont);
@@ -146,21 +146,21 @@ virtual COleControlSite* CreateSite(COleControlContainer* pCtrlCont);
 ### <a name="parameters"></a>Parametry
 
 *pCtrlCont*<br/>
-Ukazatel na kontejneru ovládacího prvku, který je hostitelem nové lokality ovládacího prvku.
+Ukazatel na kontejner ovládacího prvku hostujícího novou lokalitu ovládacího prvku.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Ukazatel na nově vytvořený ovládací prvek webu.
+Ukazatel na nově vytvořený web ovládacího prvku.
 
 ### <a name="remarks"></a>Poznámky
 
-Přepsání této funkce můžete vytvořit vlastní ovládací prvek webu, pomocí vaší [colecontrolsite –](../../mfc/reference/colecontrolsite-class.md)-odvozené třídy.
+Přepsáním této funkce vytvoříte vlastní web ovládacího prvku pomocí třídy odvozené od [COleControlSite](../../mfc/reference/colecontrolsite-class.md).
 
-Každý kontejner ovládacího prvku může hostovat více webů. Vytvoření dalších lokalit s více volání `CreateSite`.
+Každý kontejner ovládacích prvků může hostovat několik lokalit. Vytvořte další weby s více voláními `CreateSite`.
 
-##  <a name="getdefbtncode"></a>  COccManager::GetDefBtnCode
+##  <a name="getdefbtncode"></a>COccManager::GetDefBtnCode
 
-Voláním této funkce k určení, zda je ovládací prvek výchozí příkazové tlačítko.
+Voláním této funkce určíte, zda je ovládací prvek výchozí tlačítko pro vložení.
 
 ```
 static DWORD AFX_CDECL GetDefBtnCode(CWnd* pWnd);
@@ -173,17 +173,17 @@ Objekt okna obsahující ovládací prvek tlačítko.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Jeden z následujících hodnot:
+Jedna z následujících hodnot:
 
 - Ovládací prvek DLGC_DEFPUSHBUTTON je výchozí tlačítko v dialogovém okně.
 
-- Ovládací prvek DLGC_UNDEFPUSHBUTTON není výchozí tlačítko v dialogovém okně.
+- Ovládací prvek DLGC_UNDEFPUSHBUTTON není výchozím tlačítkem v dialogovém okně.
 
 - **0** ovládací prvek není tlačítko.
 
-##  <a name="isdialogmessage"></a>  COccManager::IsDialogMessage
+##  <a name="isdialogmessage"></a>COccManager::IsDialogMessage
 
-Volá se rozhraním, chcete-li zjistit, jestli zpráva je určená pro zadaný dialogových oken a pokud se jedná, zpracuje zprávu.
+Volá se rozhraním, aby se zjistilo, jestli je zpráva určená pro zadané dialogové okno, a pokud je, zpracovává zprávu.
 
 ```
 virtual BOOL IsDialogMessage(
@@ -194,24 +194,24 @@ virtual BOOL IsDialogMessage(
 ### <a name="parameters"></a>Parametry
 
 *pWndDlg*<br/>
-Ukazatel na dialogovém okně požadovaný cíl zprávy.
+Ukazatel na zamýšlený cílový dialog zprávy.
 
 *lpMsg*<br/>
-Ukazatel `MSG` strukturu, která obsahuje zprávy, která se má zkontrolovat.
+Ukazatel na `MSG` strukturu, která obsahuje zprávu, kterou chcete zkontrolovat.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Nenulové, pokud zpráva se zpracuje; jinak nula.
+Nenulové, pokud je zpráva zpracována; jinak nula.
 
 ### <a name="remarks"></a>Poznámky
 
-Výchozí chování `IsDialogMessage` je chcete zkontrolovat zprávy týkající se klávesnice a převést je na vybrané možnosti pro příslušné dialogové okno. Například klávesu TAB, při stisknutí, vybere další ovládací prvek nebo skupinu ovládacích prvků.
+Výchozím chováním `IsDialogMessage` je kontrolovat zprávy klávesnice a převést je na výběr pro příslušné dialogové okno. Například Klávesa TAB při stisknutí vybere další ovládací prvek nebo skupinu ovládacích prvků.
 
-Přepsání této funkce zajišťují vlastní chování pro zprávy odeslané do zadaného dialogového okna.
+Tuto funkci můžete přepsat tak, aby poskytovala vlastní chování pro zprávy odeslané do určeného dialogového okna.
 
 ##  <a name="islabelcontrol"></a>  COccManager::IsLabelControl
 
-Voláním této funkce k určení, zda zadaný ovládací prvek je ovládací prvek popisku.
+Voláním této funkce určíte, zda je určený ovládací prvek ovládací prvek popisek.
 
 ```
 static BOOL AFX_CDECL IsLabelControl(CWnd* pWnd);
@@ -221,7 +221,7 @@ static BOOL AFX_CDECL IsLabelControl(COleControlSiteOrWnd* pWnd);
 ### <a name="parameters"></a>Parametry
 
 *pWnd*<br/>
-Ukazatel do okna obsahující ovládací prvek.
+Ukazatel na okno obsahující ovládací prvek.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -229,11 +229,11 @@ Nenulové, pokud je ovládací prvek popisek; jinak nula
 
 ### <a name="remarks"></a>Poznámky
 
-Ovládací prvek popisku je ten, který funguje jako popisek pro jakýkoli ovládací prvek se chystá v řazení.
+Ovládací prvek popisek je ten, který funguje jako popisek pro jakýkoli ovládací prvek, který je v řazení další.
 
-##  <a name="ismatchingmnemonic"></a>  COccManager::IsMatchingMnemonic
+##  <a name="ismatchingmnemonic"></a>COccManager::IsMatchingMnemonic
 
-Voláním této funkce k určení, pokud aktuální symbol se shoduje s reprezentovaný ovládacím prvkem.
+Voláním této funkce určíte, zda aktuální symbolické symbol odpovídá, který je reprezentován ovládacím prvkem.
 
 ```
 static BOOL AFX_CDECL IsMatchingMnemonic(
@@ -248,20 +248,20 @@ static BOOL AFX_CDECL IsMatchingMnemonic(
 ### <a name="parameters"></a>Parametry
 
 *pWnd*<br/>
-Ukazatel do okna obsahující ovládací prvek.
+Ukazatel na okno obsahující ovládací prvek.
 
 *lpMsg*<br/>
-Ukazatel na zprávu obsahující jim tak, aby odpovídaly.
+Ukazatel na zprávu obsahující klávesové zkratky, který se má shodovat.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Nenulové, pokud mnemotechnika odpovídá ovládacího prvku; jinak nula
+Nenulové, pokud se ovládací prvky shodují s ovládacím prvkem; jinak nula
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="onevent"></a>  COccManager::OnEvent
+##  <a name="onevent"></a>COccManager::-sudý
 
-Volá se rozhraním pro zpracování zadané události.
+Volá se rozhraním, aby se zpracovala zadaná událost.
 
 ```
 virtual BOOL OnEvent(
@@ -274,28 +274,28 @@ virtual BOOL OnEvent(
 ### <a name="parameters"></a>Parametry
 
 *pCmdTarget*<br/>
-Ukazatel `CCmdTarget` objekt pokus o zpracování událostí
+Ukazatel na `CCmdTarget` objekt, který se pokouší zpracovat událost
 
 *idCtrl*<br/>
-ID prostředku ovládacího prvku.
+ID prostředku ovládacího prvku
 
 *pEvent*<br/>
-Zpracovává událost.
+Událost, která se zpracovává.
 
 *pHandlerInfo*<br/>
-Pokud není NULL, `OnEvent` vyplní `pTarget` a `pmf` členy `AFX_CMDHANDLERINFO` struktura namísto odesílání příkazu. Tento parametr by měl obvykle mít hodnotu NULL.
+Pokud hodnota není null `OnEvent` , vyplní `pTarget` místo `pmf` odeslání příkazu členy `AFX_CMDHANDLERINFO` a strukturu. Tento parametr obvykle by měl mít hodnotu NULL.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Nenulové, pokud událost byla zpracována, jinak nula.
+Nenulové, pokud byla událost zpracována, jinak nula.
 
 ### <a name="remarks"></a>Poznámky
 
-Přepsání této funkce můžete přizpůsobit výchozí proces zpracování událostí.
+Přepište tuto funkci pro přizpůsobení výchozího procesu zpracování událostí.
 
 ##  <a name="precreatedialog"></a>  COccManager::PreCreateDialog
 
-Volá se rozhraním před vytvořením skutečných dialogových oken zpracování šablony dialogového okna pro ovládací prvky ActiveX.
+Volá se rozhraním před vytvořením vlastního dialogového okna pro zpracování šablony dialogového okna pro ovládací prvky ActiveX.
 
 ```
 virtual const DLGTEMPLATE* PreCreateDialog(
@@ -306,24 +306,24 @@ virtual const DLGTEMPLATE* PreCreateDialog(
 ### <a name="parameters"></a>Parametry
 
 *pOccDialogInfo*<br/>
-`_AFX_OCC_DIALOG_INFO` Struktura obsahující informace o šabloně dialogu a všechny ovládací prvky ActiveX, který je hostitelem dialogového okna.
+`_AFX_OCC_DIALOG_INFO` Struktura obsahující informace o šabloně dialogového okna a všech ovládacích prvcích ActiveX hostovaných dialogem.
 
 *pOrigTemplate*<br/>
-Ukazatel na šablony dialogového okna, který se má použít při vytváření dialogových oken.
+Ukazatel na šablonu dialogového okna, který se má použít při vytváření dialogového okna.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Ukazatel na strukturu šablony dialogového okna umožňuje vytvořit dialogové okno.
+Ukazatel na strukturu šablon dialogového okna použitou k vytvoření dialogového okna.
 
 ### <a name="remarks"></a>Poznámky
 
-Výchozí chování zavolá `SplitDialogTemplate`, určující, pokud jsou všechny ActiveX ovládací prvky k dispozici a vrátí šablony výsledná dialogového okna.
+Výchozí chování provede volání `SplitDialogTemplate`, určení, zda existují nějaké ovládací prvky ActiveX a potom vrátí výslednou šablonu dialogového okna.
 
-Přepsání této funkce můžete přizpůsobit proces vytvoření dialogového okna hostování ovládacích prvků ActiveX.
+Přepište tuto funkci pro přizpůsobení procesu vytvoření dialogového okna hostujícího ovládací prvky ActiveX.
 
-##  <a name="postcreatedialog"></a>  COccManager::PostCreateDialog
+##  <a name="postcreatedialog"></a>COccManager::P ostCreateDialog
 
-Volá se rozhraním, které k uvolnění paměti přidělené pro šablony dialogového okna.
+Volá se rozhraním, aby se uvolnila paměť přidělená pro šablonu dialogového okna.
 
 ```
 virtual void PostCreateDialog(_AFX_OCC_DIALOG_INFO* pOccDialogInfo);
@@ -332,17 +332,17 @@ virtual void PostCreateDialog(_AFX_OCC_DIALOG_INFO* pOccDialogInfo);
 ### <a name="parameters"></a>Parametry
 
 *pOccDialogInfo*<br/>
-`_AFX_OCC_DIALOG_INFO` Struktura obsahující informace o šabloně dialogu a všechny ovládací prvky ActiveX, který je hostitelem dialogového okna.
+`_AFX_OCC_DIALOG_INFO` Struktura obsahující informace o šabloně dialogového okna a všech ovládacích prvcích ActiveX hostovaných dialogem.
 
 ### <a name="remarks"></a>Poznámky
 
-Tuto paměť byla přidělena voláním `SplitDialogTemplate`a byla použita pro všechny hostované ovládací prvky ActiveX v dialogovém okně.
+Tato paměť byla přidělena voláním `SplitDialogTemplate`a byla použita pro všechny hostované ovládací prvky ActiveX v dialogovém okně.
 
-Přepsání této funkce můžete přizpůsobit proces čištění jakýchkoli prostředků používá pole objektu dialogového okna.
+Tuto funkci můžete přepsat, chcete-li upravit proces čištění všech prostředků používaných objektem dialogového okna.
 
-##  <a name="setdefaultbutton"></a>  COccManager::SetDefaultButton
+##  <a name="setdefaultbutton"></a>COccManager::SetDefaultButton
 
-Voláním této funkce ovládací prvek nastavit jako výchozího tlačítka.
+Voláním této funkce nastavíte ovládací prvek jako výchozí tlačítko.
 
 ```
 static void AFX_CDECL SetDefaultButton(
@@ -353,23 +353,23 @@ static void AFX_CDECL SetDefaultButton(
 ### <a name="parameters"></a>Parametry
 
 *pWnd*<br/>
-Ukazatel do okna obsahující ovládací prvek.
+Ukazatel na okno obsahující ovládací prvek.
 
 *bDefault*<br/>
-Nenulové, pokud ovládací prvek by měl být výchozí tlačítko; jinak nula.
+Nenulové, pokud by se měl ovládací prvek stát výchozím tlačítkem; jinak nula.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Nenulové, pokud je úspěšná. jinak nula.
+Nenulové, pokud bylo úspěšné; jinak nula.
 
 ### <a name="remarks"></a>Poznámky
 
 > [!NOTE]
->  Ovládací prvek musí mít OLEMISC_ACTSLIKEBUTTON stav bit sady. Další informace o OLEMISC příznaky, najdete v článku [OLEMISC](/windows/desktop/api/oleidl/ne-oleidl-tagolemisc) téma v sadě Windows SDK.
+>  Ovládací prvek musí mít nastaven bit stavu OLEMISC_ACTSLIKEBUTTON. Další informace o příznacích OLEMISC naleznete v tématu [OLEMISC](/windows/win32/api/oleidl/ne-oleidl-olemisc) v Windows SDK.
 
-##  <a name="splitdialogtemplate"></a>  COccManager::SplitDialogTemplate
+##  <a name="splitdialogtemplate"></a>COccManager::SplitDialogTemplate
 
-Volá se rozhraním, aby rozdělit tyto ovládací prvky ActiveX z běžných ovládacích prvků dialogového okna.
+Volá se rozhraním, aby se mohla rozdělit ovládací prvky ActiveX z běžných ovládacích prvků dialogu.
 
 ```
 virtual DLGTEMPLATE* SplitDialogTemplate(
@@ -380,25 +380,25 @@ virtual DLGTEMPLATE* SplitDialogTemplate(
 ### <a name="parameters"></a>Parametry
 
 *pTemplate*<br/>
-Ukazatel na šabloně dialogu prověřit.
+Ukazatel na šablonu dialogového okna, který se má prozkoumat.
 
 *ppOleDlgItems*<br/>
-Seznam ukazatelů na prvky dialogového okna, které jsou ovládací prvky ActiveX.
+Seznam ukazatelů na položky dialogového okna, které jsou ovládacími prvky ActiveX.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Ukazatel na strukturu šablony dialogového okna obsahující pouze ovládací prvky bez ActiveX. Pokud neexistují žádné ovládací prvky ActiveX, je vrácena hodnota NULL.
+Ukazatel na strukturu šablony dialogového okna obsahující pouze ovládací prvky, které nejsou ovládacími prvky ActiveX. Pokud nejsou k dispozici žádné ovládací prvky ActiveX, je vrácena hodnota NULL.
 
 ### <a name="remarks"></a>Poznámky
 
-Pokud se nenajdou žádné ovládací prvky ActiveX, šablony se analyzují a novou šablonu, který obsahuje pouze bez – ovládací prvky ActiveX, je vytvořen. Všechny ovládací prvky ActiveX nalezena během tohoto procesu se přidají do *ppOleDlgItems*.
+Pokud se najde nějaké ovládací prvky ActiveX, vytvoří se šablona a vytvoří se nová šablona obsahující jenom ovládací prvky, které nepatří do ActiveX. Do *ppOleDlgItems*byly přidány všechny ovládací prvky ActiveX, které byly nalezeny během tohoto procesu.
 
 Pokud v šabloně nejsou žádné ovládací prvky ActiveX, je vrácena hodnota NULL *.*
 
 > [!NOTE]
->  Paměť přidělená pro novou šablonu je uvolněn v `PostCreateDialog` funkce.
+>  Paměť přidělená nové šabloně je uvolněna ve `PostCreateDialog` funkci.
 
-Potlačí tuto funkci k přizpůsobení tohoto procesu.
+Potlačením této funkce přizpůsobíte tento proces.
 
 ## <a name="see-also"></a>Viz také:
 

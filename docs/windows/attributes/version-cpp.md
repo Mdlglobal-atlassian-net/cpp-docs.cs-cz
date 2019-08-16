@@ -1,5 +1,5 @@
 ---
-title: verze (atribut C++ COM)
+title: verze (C++ atribut com)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.version
@@ -7,16 +7,16 @@ helpviewer_keywords:
 - version attribute
 - version information, version attribute
 ms.assetid: db6ce5d8-82c2-4329-b1a8-8ca2f67342cb
-ms.openlocfilehash: fe1df9e12b9adbf9ce55978fd3479f7e740ddc96
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9a432267632b1f2a716a833a485b182cd93a27e2
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62407156"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69514873"
 ---
 # <a name="version-c"></a>version (C++)
 
-Určuje konkrétní verzi napříč několika verzemi třídu.
+Identifikuje konkrétní verzi z více verzí třídy.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -27,28 +27,28 @@ Určuje konkrétní verzi napříč několika verzemi třídu.
 ### <a name="parameters"></a>Parametry
 
 *version*<br/>
-Číslo verze `coclass`. Pokud není zadán, umístí 1.0 v souboru IDL.
+Číslo `coclass`verze. Pokud není zadán, 1,0 bude umístěn v souboru. idl.
 
 ## <a name="remarks"></a>Poznámky
 
-**Verze** C++ atribut má stejné funkce jako [verze](/windows/desktop/Midl/version) atribut MIDL a předána do generovaného souboru.
+Atribut **Version** C++ má stejné funkce jako atribut MIDL [verze](/windows/win32/Midl/version) a je předán do generovaného souboru. idl.
 
 ## <a name="example"></a>Příklad
 
-Najdete v článku [umožňujících vazbu](bindable.md) příklad ukázkový používání **verze**.
+Ukázku použití **verze**najdete v příkladu s možností [vazby](bindable.md) .
 
 ## <a name="requirements"></a>Požadavky
 
-### <a name="attribute-context"></a>Atribut kontextu
+### <a name="attribute-context"></a>Kontext atributu
 
 |||
 |-|-|
-|**Platí pro**|**Třída**, **– struktura**|
-|**Opakovatelné**|Ne|
-|**Vyžadované atributy**|**coclass**|
+|**Platí pro**|**Třída**, **Struktura**|
+|**REPEATABLE**|Ne|
+|**Požadované atributy**|**coclass**|
 |**Neplatné atributy**|Žádné|
 
-Další informace o kontexty atributů najdete v tématu [kontexty atributů](cpp-attributes-com-net.md#contexts).
+Další informace o kontextech atributů naleznete v tématu kontexty [atributů](cpp-attributes-com-net.md#contexts).
 
 ## <a name="see-also"></a>Viz také:
 

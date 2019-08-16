@@ -53,14 +53,14 @@ helpviewer_keywords:
 - _exec function
 - _texecvpe function
 ms.assetid: a261df93-206a-4fdc-b8ac-66aa7db83bc6
-ms.openlocfilehash: 72300f754015e54daf14863ca2ae677bde8f7d1a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d31192a25cce86dad6f8e1e8b0258a457d0a5436
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62289686"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69500138"
 ---
-# <a name="exec-wexec-functions"></a>_exec, _wexec – funkce
+# <a name="_exec-_wexec-functions"></a>_exec, _wexec – funkce
 
 Každá funkce této rodiny načte a spustí nový proces:
 
@@ -75,14 +75,14 @@ Písmeno na konci názvu funkce určuje variantu.
 
 |přípona funkce _exec|Popis|
 |----------------------------|-----------------|
-|`e`|`envp`, pole ukazatelů do nastavení prostředí, je předán novému procesu.|
+|`e`|`envp`, pole ukazatelů na nastavení prostředí je předáno novému procesu.|
 |`l`|Argumenty příkazového řádku jsou funkci `_exec` předány jednotlivě. Obvykle se používají, pokud je počet parametrů nového procesu předem známý.|
 |`p`|Proměnná prostředí `PATH` slouží k vyhledání souboru, který chcete spustit.|
-|`v`|`argv`, pole ukazatelů do argumentů příkazového řádku je předán `_exec`. Obvykle se používá, pokud je počet parametrů nového procesu proměnný.|
+|`v`|`argv`, pole ukazatelů na argumenty příkazového řádku, je předáno do `_exec`. Obvykle se používá, pokud je počet parametrů nového procesu proměnný.|
 
 ## <a name="remarks"></a>Poznámky
 
-Každá funkce `_exec` načte a spustí nový proces. Všechny `_exec` funkce používají stejnou funkci operačního systému ([CreateProcess](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-createprocessa)). Funkce `_exec` automaticky zpracují argumenty vícebajtových řetězců znaků podle potřeby a rozpoznají vícebajtové sekvence znaků podle aktuálně použité vícebajtové znakové stránky. Funkce `_wexec` jsou širokoznaké verze funkcí `_exec`. Funkce `_wexec` se chovají stejně jako jejich protějšky rodiny `_exec` s tím rozdílem, že nezpracovávají vícebajtové řetězce znaků.
+Každá funkce `_exec` načte a spustí nový proces. Všechny `_exec` funkce používají stejnou funkci operačního systému ([CreateProcess](/windows/win32/api/processthreadsapi/nf-processthreadsapi-createprocessw)). Funkce `_exec` automaticky zpracují argumenty vícebajtových řetězců znaků podle potřeby a rozpoznají vícebajtové sekvence znaků podle aktuálně použité vícebajtové znakové stránky. Funkce `_wexec` jsou širokoznaké verze funkcí `_exec`. Funkce `_wexec` se chovají stejně jako jejich protějšky rodiny `_exec` s tím rozdílem, že nezpracovávají vícebajtové řetězce znaků.
 
 ### <a name="generic-text-routine-mappings"></a>Mapování rutin obecného textu
 
@@ -105,21 +105,21 @@ Parametry jsou novému procesu předány jedním nebo více ukazateli na řetěz
 >  Mezery vložené do řetězců mohou způsobit neočekávané chování, například výsledkem předání řetězce `_exec` funkci `"hi there"` bude nový proces, který získá dva argumenty `"hi"` a `"there"`. Proces selže, pokud bylo záměrem, aby nový proces otevřel soubor s názvem "hi there". Tomu lze zabránit citováním řetězce: `"\"hi there\""`.
 
 > [!IMPORTANT]
->  Nepředávejte funkci `_exec` vstup uživatele bez explicitní kontroly jeho obsahu. `_exec` Výsledkem bude volání [CreateProcess](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-createprocessa) myslete že neúplné názvy cest mohou vést k potenciálním zranitelnostem zabezpečení.
+>  Nepředávejte funkci `_exec` vstup uživatele bez explicitní kontroly jeho obsahu. `_exec`Výsledkem bude volání funkce [CreateProcess](/windows/win32/api/processthreadsapi/nf-processthreadsapi-createprocessw) , takže Pamatujte, že nekvalifikované názvy cest by mohly vést k potenciálním ohrožením zabezpečení.
 
-`_exec` Funkce ověřují své parametry. Pokud jsou očekávanými parametry nulové ukazatele, prázdné řetězce, nebo tento parametr vynechán, `_exec` funkce vyvolají obslužnou rutinu neplatného parametru, jak je popsáno v [Parameter Validation](../c-runtime-library/parameter-validation.md). Pokud smí provádění pokračovat, tyto funkce nastaví `errno` k `EINVAL` a vrátí hodnotu -1. Je proveden žádný nový proces.
+`_exec` Funkce ověří jejich parametry. Pokud jsou očekávané parametry ukazatele s hodnotou null, prázdné řetězce nebo vynechány, `_exec` funkce vyvolají obslužnou rutinu neplatného parametru, jak je popsáno v tématu [ověřování parametru](../c-runtime-library/parameter-validation.md). Pokud provádění může pokračovat, tyto funkce nastaví `errno` na `EINVAL` a vrátí-1. Není spuštěn žádný nový proces.
 
 Ukazatelé na argumenty mohou být předány jako oddělené parametry (ve funkcích `_execl`, `_execle`, `_execlp` a `_execlpe`) nebo jako pole ukazatelů (ve funkcích `_execv`, `_execve`, `_execvp` a `_execvpe`). Nejméně jeden parametr, `arg0`, musí být předán novému procesu. Tento parametr je `argv`[0] nového procesu. Tento parametr je obvykle kopií parametru `cmdname`. (Jiná hodnota nevyvolá chybu.)
 
 Volání funkcí `_execl`, `_execle`, `_execlp` a `_execlpe` se obvykle používají, pokud je počet parametrů předem známý. Parametr `arg0` je obvykle ukazatel na parametr `cmdname`. Parametry `arg1` až `argn` odkazují na řetězce znaků, které tvoří nový seznam parametrů. Nulový ukazatel musí následovat parametr `argn`, což označuje konec seznamu parametrů.
 
-Volání funkcí `_execv`, `_execve`, `_execvp` a `_execvpe` jsou užitečná, když je počet parametrů nového procesu proměnný. Odkazy na parametry jsou předány jako pole `argv`. Parametr `argv`[0] je obvykle ukazatel na parametr `cmdname`. Parametry `argv`[1] až `argv`[`n`] odkazují na řetězce znaků, které tvoří nový seznam parametrů. Parametr `argv`[`n`+ 1] musí být **NULL** ukazatel na konec seznamu parametrů.
+Volání funkcí `_execv`, `_execve`, `_execvp` a `_execvpe` jsou užitečná, když je počet parametrů nového procesu proměnný. Odkazy na parametry jsou předány jako pole `argv`. Parametr `argv`[0] je obvykle ukazatel na parametr `cmdname`. Parametry `argv`[1] až `argv`[`n`] odkazují na řetězce znaků, které tvoří nový seznam parametrů. Parametr `argv`[`n`+ 1] musí být ukazatel s **hodnotou null** , aby bylo možné označit konec seznamu parametrů.
 
-Soubory, které jsou při volání funkce `_exec` otevřeny, zůstanou v novém procesu otevřeny. Při volání funkcí `_execl`, `_execlp`, `_execv` a `_execvp` nový proces zdědí prostředí volajícího procesu. Volání funkcí `_execle`, `_execlpe`, `_execve` a `_execvpe` změní prostředí nového procesu tím, že předají seznam nastavení prostředí pomocí parametru `envp`. Parametr `envp` je pole ukazatelů na znaky, kde každý prvek (s výjimkou posledního prvku) odkazuje na hodnotu null ukončující řetězec definující proměnnou prostředí. Takový řetězec má obvykle tvar `NAME` = `value` kde `NAME` je název proměnné prostředí a `value` je hodnota řetězce, do které tato proměnná nastavena. (Hodnota `value` není uzavřena v dvojitých uvozovkách.) Poslední prvek `envp` pole by měla být **NULL**. Když `envp` sám o sobě **NULL**, nový proces zdědí nastavení prostředí volajícího procesu.
+Soubory, které jsou při volání funkce `_exec` otevřeny, zůstanou v novém procesu otevřeny. Při volání funkcí `_execl`, `_execlp`, `_execv` a `_execvp` nový proces zdědí prostředí volajícího procesu. Volání funkcí `_execle`, `_execlpe`, `_execve` a `_execvpe` změní prostředí nového procesu tím, že předají seznam nastavení prostředí pomocí parametru `envp`. Parametr `envp` je pole ukazatelů na znaky, kde každý prvek (s výjimkou posledního prvku) odkazuje na hodnotu null ukončující řetězec definující proměnnou prostředí. Takový řetězec má obvykle `NAME` formu = `value` , kde `NAME` je název proměnné prostředí a `value` je hodnota řetězce, na kterou je tato proměnná nastavena. (Hodnota `value` není uzavřena v dvojitých uvozovkách.) Poslední prvek `envp` pole by měl mít **hodnotu null**. Pokud `envp` je tato **hodnota null**, nový proces zdědí nastavení prostředí volajícího procesu.
 
 Program spuštěný pomocí jedné z funkcí `_exec` je vždy načten do paměti, jako by bylo pole maximálního přidělení v záhlaví souboru programu .exe nastaveno na výchozí hodnotu 0xFFFFH.
 
-Volání funkce `_exec` nezachovávají režimy překladu otevřených souborů. Pokud nový proces musí použít soubory zděděno z volajícího procesu, použijte [_setmode](../c-runtime-library/reference/setmode.md) pro nastavení režimu převodu těchto souborů do požadovaného režimu. Je nutné provést explicitní vyprázdnění (pomocí funkce `fflush` nebo `_flushall`) nebo všechny proudy zavřít před voláním funkce `_exec`. Nastavení signálu není zachováno v nových procesech, které byly vytvořeny voláním rutin `_exec`. Nastavení signálu je v novém procesu obnoveno na výchozí hodnotu.
+Volání funkce `_exec` nezachovávají režimy překladu otevřených souborů. Pokud nový proces musí použít soubory zděděné z volajícího procesu, použijte rutinu [_setmode](../c-runtime-library/reference/setmode.md) k nastavení režimu překladu těchto souborů do požadovaného režimu. Je nutné provést explicitní vyprázdnění (pomocí funkce `fflush` nebo `_flushall`) nebo všechny proudy zavřít před voláním funkce `_exec`. Nastavení signálu není zachováno v nových procesech, které byly vytvořeny voláním rutin `_exec`. Nastavení signálu je v novém procesu obnoveno na výchozí hodnotu.
 
 ## <a name="example"></a>Příklad
 
@@ -231,7 +231,7 @@ int main( int ac, char* av[] )
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** process.h
+**Záhlaví:** Process. h
 
 ## <a name="see-also"></a>Viz také:
 

@@ -6,84 +6,84 @@ f1_keywords:
 helpviewer_keywords:
 - ATL Control Wizard, options
 ms.assetid: 4607c51a-992d-433e-9281-919c6f519a3d
-ms.openlocfilehash: 1dd136739162c72d8064deb9b1498794f1985e1b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 25db3995687011de5e9cc0a98506cd26f2f1af0b
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62197351"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69495444"
 ---
 # <a name="options-atl-control-wizard"></a>Možnosti, Průvodce ovládacím prvkem ATL
 
-Pomocí této stránky v průvodci můžete definovat typ ovládacího prvku, který vytváříte a úroveň podpory rozhraní, které obsahuje.
+Pomocí této stránky průvodce můžete definovat typ ovládacího prvku, který vytváříte, a úroveň podpory rozhraní, kterou obsahuje.
 
 ## <a name="uielement-list"></a>Seznam prvků uživatelského rozhraní
 
 ### <a name="control-type"></a>Typ ovládacího prvku
 
-Druh ovládacího prvku, který chcete vytvořit.
+Typ ovládacího prvku, který chcete vytvořit.
 
 - **Standardní ovládací prvek**: Ovládací prvek ActiveX.
 
-- **Složený ovládací prvek**: Ovládací prvek ActiveX, který může obsahovat (podobně jako do dialogového okna) jiné ovládací prvky ActiveX nebo ovládací prvky Windows. Složený ovládací prvek obsahuje následující:
+- **Složený ovládací prvek**: Ovládací prvek ActiveX, který může obsahovat (podobně jako dialogové okno) jiné ovládací prvky ActiveX nebo ovládací prvky systému Windows. Složený ovládací prvek zahrnuje následující:
 
-  - Šablona pro dialogové okno, které implementuje složeného ovládacího prvku.
+  - Šablona pro dialogové okno, které implementuje složený ovládací prvek.
 
-  - Vlastní prostředek REGISTRU, který automaticky registruje složeného ovládacího prvku při vyvolání.
+  - Vlastní prostředek, registr, který při vyvolání automaticky zaregistruje složený ovládací prvek.
 
-  - Třída C++, který implementuje složeného ovládacího prvku.
+  - C++ Třída, která implementuje složený ovládací prvek.
 
-  - Rozhraní modelu COM, vystavené složeného ovládacího prvku.
+  - Rozhraní modelu COM vystavené složeným ovládacím prvkem.
 
-  - Zkušební stránku HTML obsahující složeného ovládacího prvku.
+  - Zkušební stránka HTML obsahující složený ovládací prvek.
 
-    Ve výchozím nastavení, nastaví tento ovládací prvek [CComControlBase::m_bWindowOnly](../../atl/reference/ccomcontrolbase-class.md#m_bwindowonly) na hodnotu true označuje, že se jedná o ovládacího prvku v okně. Implementuje mapu jímky. Další informace najdete v tématu [podporu pro ovládací prvek DHTML](../../atl/atl-support-for-dhtml-controls.md).
+    Ve výchozím nastavení tento ovládací prvek nastaví [CComControlBase:: m_bWindowOnly](../../atl/reference/ccomcontrolbase-class.md#m_bwindowonly) na hodnotu true, aby označoval, že se jedná o ovládací prvek v okně. Implementuje mapu jímky. Další informace najdete v tématu [Podpora ovládacího prvku DHTML](../../atl/atl-support-for-dhtml-controls.md).
 
-- **Ovládací prvek DHTML**: Ovládacího prvku ATL DHTML určuje uživatelského rozhraní pomocí jazyka HTML. Třída DHTML uživatelského rozhraní obsahuje mapu COM. Ve výchozím nastavení, nastaví tento ovládací prvek [CComControlBase::m_bWindowOnly](../../atl/reference/ccomcontrolbase-class.md#m_bwindowonly) na hodnotu true označuje, že se jedná o ovládacího prvku v okně.
+- **Ovládací prvek DHTML**: Ovládací prvek ATL DHTML Určuje uživatelské rozhraní pomocí jazyka HTML. Třída uživatelského rozhraní DHTML obsahuje mapu modelu COM. Ve výchozím nastavení tento ovládací prvek nastaví [CComControlBase:: m_bWindowOnly](../../atl/reference/ccomcontrolbase-class.md#m_bwindowonly) na hodnotu true, aby označoval, že se jedná o ovládací prvek v okně.
 
-   Další informace najdete v tématu [identifikace prvků projektu ovládací prvek DHTML](../../atl/identifying-the-elements-of-the-dhtml-control-project.md).
+   Další informace naleznete v tématu [určení prvků projektu ovládacího prvku DHTML](../../atl/identifying-the-elements-of-the-dhtml-control-project.md).
 
 ### <a name="minimal-control"></a>Minimální ovládací prvek
 
-Podporuje pouze rozhraní, která je to nezbytně nutné většina kontejneru. Můžete nastavit **minimální ovládací prvek** pro všechny typy ovládacích prvků: můžete vytvořit minimální standardního ovládacího prvku, minimální složeného ovládacího prvku nebo minimální ovládací prvek DHTML.
+Podporuje pouze rozhraní, která jsou naprosto potřebná pro většinu kontejnerů. Můžete nastavit **minimální kontrolu** pro libovolný typ ovládacího prvku: můžete vytvořit minimální standardní ovládací prvek, minimální složený ovládací prvek nebo minimální ovládací prvek DHTML.
 
-### <a name="aggregation"></a>Aggregation
+### <a name="aggregation"></a>Agregace
 
-Přidá podporu agregace pro ovládací prvek, který vytváříte. Další informace najdete v tématu [agregace](../../atl/aggregation.md).
+Přidá podporu agregace pro ovládací prvek, který vytváříte. Další informace naleznete v tématu [agregace](../../atl/aggregation.md).
 
-- **Ano**: Vytvoření ovládacího prvku, který se dají agregovat.
+- **Ano**: Vytvoří ovládací prvek, který lze agregovat.
 
-- **Ne**: Vytvoření ovládacího prvku, který nemůže být agregován.
+- **Ne**: Vytvoří ovládací prvek, který nelze agregovat.
 
-- **Pouze**: Vytvoření ovládacího prvku, který může být vytvořena pouze prostřednictvím agregace.
+- **Jenom**: Vytvoří ovládací prvek, který lze vytvořit pouze pomocí agregace.
 
 ### <a name="threading-model"></a>Model vláken
 
-Určuje, že model vláken použit v ovládacím prvku.
+Určuje, že model vláken používaný ovládacím prvkem.
 
-- **Jeden**: Ovládací prvek se spustí pouze v primárním vláknu COM.
+- **Jedna**: Ovládací prvek bude spuštěn pouze v primárním vlákně COM.
 
-- **Apartment**: Ovládací prvek lze vytvořit v libovolné objektu apartment pro jedno vlákno. Výchozí nastavení
+- **Byt**: Ovládací prvek lze vytvořit v jakémkoli vlákně typu apartment. Výchozí nastavení
 
 ### <a name="interface"></a>Rozhraní
 
-Typ rozhraní, které zpřístupní tento ovládací prvek do kontejneru.
+Typ rozhraní, které tento ovládací prvek zpřístupňuje kontejneru.
 
-- **Duální**: Vytvoří rozhraní, které zveřejňuje vlastnosti a metody prostřednictvím `IDispatch` a přímo přes VTBL.
+- **Duální**: Vytvoří rozhraní, které zpřístupňuje vlastnosti a metody `IDispatch` prostřednictvím a přímo přes VTBL.
 
-- **Vlastní**: Vytvoří rozhraní, které zveřejňuje metody přímo prostřednictvím VTBL.
+- **Vlastní**: Vytvoří rozhraní, které zveřejňuje metody přímo přes VTBL.
 
-   Pokud vyberete **vlastní**, můžete zadat, že je ovládací prvek **automatizace kompatibilní**. Pokud vyberete **automatizace kompatibilní**, přidá průvodce [oleautomation](../../windows/oleautomation.md) atribut rozhraní IDL, a rozhraní může být zařazována univerzální zařazováním v oleaut32.dll. Zobrazit [Podrobnosti zařazování](/windows/desktop/com/marshaling-details) v sadě Windows SDK pro další informace.
+   Pokud vyberete možnost **vlastní**, můžete určit, že je ovládací prvek **kompatibilní**s automatizací. Pokud vyberete možnost **kompatibilní**s automatizací, Průvodce přidá atribut [oleautomation](../../windows/oleautomation.md) do rozhraní v IDL a rozhraní může být zařazeno do univerzálního zařazovacího modulu v Oleaut32. dll. Další informace najdete v tématu informace [o zařazování](/windows/win32/com/marshaling-details) v Windows SDK.
 
-   Kromě toho pokud vyberete **automatizace kompatibilní**, pak všechny parametry pro všechny metody v ovládacím prvku musí být typu VARIANT kompatibilní.
+   Pokud navíc vyberete možnost **Automatizace kompatibilní**, pak všechny parametry pro všechny metody v ovládacím prvku musí být kompatibilní s variantou.
 
 ### <a name="support"></a>Podpora
 
-Nastaví další různé podporu pro ovládací prvek.
+Nastaví další různé podpory pro ovládací prvek.
 
-- **Body připojení**: Umožňuje spojovací body pro svůj objekt tím, že jsou odvozeny z třídy objektu [IConnectionPointContainerImpl](../../atl/reference/iconnectionpointcontainerimpl-class.md) a díky kterému jej k vystavení zdrojové rozhraní.
+- **Body připojení**: Umožňuje spojovací body pro váš objekt tím, že třídu objektu je odvozen z [IConnectionPointContainerImpl](../../atl/reference/iconnectionpointcontainerimpl-class.md) a umožňuje vystavit zdrojové rozhraní.
 
-- **Licenci**: Přidá do ovládacího prvku pro podporu [licencování](/windows/desktop/com/licensing). Licencované ovládací prvky je možné hostovat, pouze pokud klientský počítač nemá správnou licenci.
+- **Licencovaná**: Přidá podporu k ovládacímu prvku [](/windows/win32/com/licensing)pro licencování. Licencované ovládací prvky lze hostovat pouze v případě, že má klientský počítač správnou licenci.
 
 ## <a name="see-also"></a>Viz také:
 

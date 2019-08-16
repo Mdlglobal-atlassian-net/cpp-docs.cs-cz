@@ -1,5 +1,5 @@
 ---
-title: Přidat metodu
+title: Přidání metody
 ms.date: 11/09/2018
 f1_keywords:
 - vc.codewiz.method.overview
@@ -10,33 +10,33 @@ helpviewer_keywords:
 - methods [C++], adding using wizards
 - IDL attributes, add method wizard
 ms.assetid: 4ba4e45f-fa38-4d5e-af44-cbec0a7ab558
-ms.openlocfilehash: 23fb05e633713016b1f6289f73a916502736af10
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: b0c8ddabc4ed08fd217545bad269f0b2e48dd49e
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64346004"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69509538"
 ---
-# <a name="add-a-method"></a>Přidat metodu
+# <a name="add-a-method"></a>Přidání metody
 
-Můžete použít [Průvodce přidáním metody](#add-method-wizard) přidání metody do rozhraní ve vašem projektu. Pokud projekt obsahuje třídy související s rozhraním, Průvodce příliš upraví třídy.
+[Průvodce přidáním metody](#add-method-wizard) lze použít k přidání metody do rozhraní v projektu. Pokud projekt obsahuje třídu přidruženou k rozhraní, průvodce změní také třídu.
 
 **Přidání metody do objektu:**
 
-1. V **zobrazení tříd**, rozbalte uzel projektu pro zobrazení rozhraní, ke kterému chcete přidat metodu.
+1. V **zobrazení tříd**rozbalte uzel projektu pro zobrazení rozhraní, ke kterému chcete přidat metodu.
 
    > [!NOTE]
-   > Můžete také přidat metody do odesílacích rozhraních, která pokud je projekt s atributy, jsou umístěné pod uzlem knihovny.
+   > Můžete také přidat metody do odesílajícího rozhraní, které, pokud není projekt atributem, jsou umístěny pod uzlem knihovna.
 
-1. Klikněte pravým tlačítkem na název rozhraní.
+1. Klikněte pravým tlačítkem myši na název rozhraní.
 
-1. V místní nabídce zvolte **přidat**a klikněte na tlačítko **přidat metodu**.
+1. V místní nabídce klikněte na položku **Přidat**a poté zvolte možnost **Přidat metodu**.
 
-1. V průvodci Přidat metody poskytují informace potřebné k vytvoření metody.
+1. V Průvodci přidáním metody zadejte informace k vytvoření metody.
 
-1. Zadejte nastavení jakékoli interface definition language pro tuto metodu v [IDL – atributy](#idl-attributes-add-method-wizard) stránky průvodce.
+1. Určete nastavení jazyka definice rozhraní pro tuto metodu na stránce [atributy IDL](#idl-attributes-add-method-wizard) průvodce.
 
-1. Vyberte **Dokončit** přidat metodu.
+1. Kliknutím na tlačítko **Dokončit** přidejte metodu.
 
 ## <a name="in-this-section"></a>V tomto oddílu
 
@@ -45,21 +45,21 @@ Můžete použít [Průvodce přidáním metody](#add-method-wizard) přidání 
 
 ## <a name="add-method-wizard"></a>Průvodce přidáním metody
 
-Tohoto průvodce použijte k přidání metody rozhraní. V závislosti na typu projektu nebo do kterého přidáváte metodu typu rozhraní Průvodce zobrazí různé možnosti.
+Tento průvodce použijte k přidání metody do rozhraní. V závislosti na typu projektu nebo typu rozhraní, ke kterému přidáváte metodu, Průvodce zobrazí různé možnosti.
 
 ### <a name="names"></a>Názvy
 
 - **Návratový typ**
 
-  Datový typ vrácený metodou. `HRESULT` doporučuje se pro všechny typy rozhraní, protože poskytuje standardní způsob, jak vrátit chyby.
+  Datový typ vrácený metodou `HRESULT`je doporučen pro všechny typy rozhraní, protože poskytuje standardní způsob, jak vracet chyby.
 
   |Typ rozhraní|Popis|
   |--------------------|-----------------|
-  |Duální rozhraní|`HRESULT`. Jakákoliv.|
-  |Vlastní rozhraní|`HRESULT`. Jakákoliv.|
-  |Vlastní místní rozhraní|Zadejte vlastní návratový typ nebo vyberte ze seznamu.|
-  |Dispinterface|Zadejte vlastní návratový typ nebo vyberte ze seznamu.|
-  |Dispinterface ovládací prvek ActiveX knihovny MFC|Pokud implementujete základní metodu, je nastavena na hodnotu odpovídající návratový typ a nejde změnit. Pokud vyberete metodu z **název metody** seznam a vyberte **vlastní** pod **vyberte typ metody**, vyberte typ vrácené hodnoty ze seznamu.|
+  |Duální rozhraní|`HRESULT`. Nedá měnit.|
+  |Vlastní rozhraní|`HRESULT`. Nedá měnit.|
+  |Místní vlastní rozhraní|Zadejte vlastní návratový typ nebo vyberte ze seznamu.|
+  |Rozhraní|Zadejte vlastní návratový typ nebo vyberte ze seznamu.|
+  |Odesílající rozhraní ovládacího prvku ActiveX knihovny MFC|Pokud implementujete uloženou metodu, návratový typ je nastaven na odpovídající hodnotu a nelze jej měnit. Pokud vyberete metodu ze seznamu **název metody** a v části **Vybrat typ metody**vyberte možnost **vlastní** , vyberte návratový typ ze seznamu.|
 
 - **Název metody**
 
@@ -67,40 +67,40 @@ Tohoto průvodce použijte k přidání metody rozhraní. V závislosti na typu 
 
   |Typ rozhraní|Popis|
   |--------------------|-----------------|
-  |Duální rozhraní ATL, vlastní rozhraní a vlastní místní rozhraní|Zadejte vlastní název metody.|
-  |Dispinterface knihovny MFC|Zadejte název vlastní metody nebo vyberte název navrhované metody ze seznamu. Pokud název vyberete ze seznamu, zobrazí se v odpovídající hodnotu **návratový typ** pole a neměnný.|
-  |Dispinterface ovládací prvek ActiveX knihovny MFC|Zadejte vlastní nebo vyberte některý z uložených metod [DoClick](../mfc/reference/colecontrol-class.md#doclick) a [aktualizovat](../mfc/reference/colecontrol-class.md#refresh). Další informace najdete v tématu [– ovládací prvky ActiveX knihovny MFC: Přidání uložených metod](../mfc/mfc-activex-controls-adding-stock-methods.md).|
+  |Duální rozhraní ATL, vlastní rozhraní a místní vlastní rozhraní|Zadejte vlastní název metody.|
+  |Rozhraní MFC – odesílající|Zadejte vlastní název metody nebo v seznamu vyberte navrhovaný název metody. Pokud vyberete název ze seznamu, zobrazí se příslušná hodnota v poli **návratový typ** a nelze ji změnit.|
+  |Odesílající rozhraní ovládacího prvku ActiveX knihovny MFC|Poskytněte vlastní nebo vyberte jednu z uložených metod [DoClick](../mfc/reference/colecontrol-class.md#doclick) a aktualizujte [](../mfc/reference/colecontrol-class.md#refresh). Další informace naleznete v tématu [ovládací prvky ActiveX knihovny MFC: Přidání uložených metod](../mfc/mfc-activex-controls-adding-stock-methods.md).|
 
 - **Typ metody**
 
-  K dispozici pouze pro ovládací prvky ActiveX knihovny MFC. Pokud zadáte název metody ve **název metody** pole, namísto výběru metody ze seznamu, je toto políčko není k dispozici.
+  K dispozici pouze pro ovládací prvky MFC ActiveX. Pokud zadáte název metody do pole **název metody** , místo výběru metody ze seznamu není toto pole k dispozici.
 
-  Pokud vyberete jednu z metod v **název metody** seznamu, zvolte základní nebo vlastní implementaci.
+  Pokud vyberete jednu z metod v seznamu **název metody** , vyberte buď skladovou implementaci, nebo vlastní implementaci.
 
   |Typ metody|Popis|
   |-----------------|-----------------|
-  |**Stock**|Výchozí nastavení Vloží základní implementaci metody, vyberte v **název metody** seznamu. **Návratový typ** nejde změnit, pokud vyberete **akcie**.|
-  |**Vlastní**|Vloží zástupné procedury implementace metody ve vybrané **název metody** seznamu. Pro typy vlastní metodu, můžete zadat vlastní návratový typ, nebo můžete vybrat jednu z **návratový typ** seznamu.|
+  |**Kolejovými**|Výchozí nastavení Vloží uloženou implementaci metody, kterou jste vybrali v seznamu **název metody** . **Návratový typ** je nezměněný, pokud vyberete možnost **Sklad**.|
+  |**Vlastní**|Vloží zástupnou implementaci metody vybrané v seznamu **název metody** . Pro vlastní typy metod můžete zadat svůj vlastní návratový typ nebo ho můžete vybrat ze seznamu **návratového typu** .|
 
 - **Interní název**
 
-  K dispozici pouze pro vlastní metody přidat odesílajícího rozhraní knihovny MFC. Nastaví název použitý v mapa odeslání, soubor hlaviček (.h) a soubor implementace (.cpp). Ve výchozím nastavení, tento název je stejný jako **název metody**. Můžete změnit název metody, pokud pracujete s odesílajícího rozhraní knihovny MFC nebo pokud přidáváte vlastní metodu odesílajícího rozhraní ovládací prvek ActiveX knihovny MFC.
+  K dispozici pouze pro vlastní metody přidané do odesílajícího rozhraní knihovny MFC. Nastaví název použitý v mapě odeslání, v souboru hlaviček (. h) a v souboru implementace (. cpp). Ve výchozím nastavení je tento název stejný jako **název metody**. Pokud pracujete s odesílajícím rozhraním MFC nebo pokud přidáváte vlastní metodu pro odesílající rozhraní ovládacího prvku ActiveX knihovny MFC, můžete změnit název metody.
 
   |Typ rozhraní|Popis|
   |--------------------|-----------------|
-  |Duální rozhraní ATL, vlastní rozhraní a vlastní místní rozhraní|Není k dispozici.|
-  |Dispinterface knihovny MFC|Ve výchozím nastavení má název metody. Můžete upravit interní název.|
-  |Dispinterface ovládací prvek ActiveX knihovny MFC|Můžete nastavit jenom interní název vlastních metod. Uložených metod nepoužívejte interní název.|
+  |Duální rozhraní ATL, vlastní rozhraní a místní vlastní rozhraní|Není k dispozici.|
+  |Rozhraní MFC – odesílající|Ve výchozím nastavení se nastaví na název metody. Interní název můžete upravit.|
+  |Odesílající rozhraní ovládacího prvku ActiveX knihovny MFC|Interní název lze nastavit pouze pro vlastní metody. Skladové metody nepoužívají interní název.|
 
 - **Atributy parametru**
 
-  Nastaví další atributy pro zadaný parametr v **název parametru**.
+  Nastaví všechny další atributy pro parametr zadaný v **názvu parametru**.
 
   |Atribut parametru|Popis|Povolené kombinace|
   |-------------------------|-----------------|--------------------------|
-  |**V**|Označuje, že parametr je předán z volající procedury do volané procedury.|`in` Pouze<br /><br /> `in` a `out`|
-  |**navýšení kapacity**|Označuje, že parametr ukazatel se vrátí z volané procedury do volající procedury (ze serveru do klienta).|`out` Pouze<br /><br /> `in` a `out`<br /><br /> `out` a `retval`|
-  |**retval**|Označuje, že parametr přijímá návratovou hodnotu člena.|`retval` a `out`|
+  |**Pro**|Označuje, že parametr je předán z volající procedury do volané procedury.|`in`pouze<br /><br /> `in` a `out`|
+  |**Mimo**|Označuje, že parametr ukazatele je vrácen z volané procedury do volající procedury (ze serveru do klienta).|`out`pouze<br /><br /> `in` a `out`<br /><br /> `out` a `retval`|
+  |**Retval**|Označuje, že parametr přijímá návratovou hodnotu člena.|`retval` a `out`|
 
 - **Typ parametru**
 
@@ -108,50 +108,50 @@ Tohoto průvodce použijte k přidání metody rozhraní. V závislosti na typu 
 
 - **Název parametru**
 
-  Nastaví název parametru předávání metodu. Když zadáte název, vyberte **přidat** ho přidat do seznamu parametrů, které budou předány metodě. Pokud nezadáte název parametru, Průvodce přeskočí všechny atributy parametru (pouze ATL) nebo **typ parametru** výběry.
+  Nastaví název parametru, který bude předávat vaše metoda. Po zadání názvu vyberte **Přidat** a přidejte ho do seznamu parametrů, které budou předávat vaše metoda. Pokud nezadáte název parametru, průvodce ignoruje všechny atributy parametrů (pouze ATL) nebo výběry **typu parametru** .
 
-  Jakmile vyberete **přidat**, zobrazí se název parametru v **seznam parametrů**.
+  Jakmile vyberete možnost **Přidat**, název parametru se zobrazí v **seznamu parametrů**.
 
   > [!NOTE]
-  > Pokud zadáte název parametru a pak vyberete **Dokončit** dřív, než vyberete **přidat**, není parametr metody přidán. Musíte najít metodu a ručně vložit parametr.
+  > Pokud zadáte název parametru a pak před výběrem **Přidat**, vyberte možnost **Dokončit** , parametr není přidán do metody. Je nutné najít metodu a vložit parametr ručně.
 
 - **Add**
 
-  Přidá parametr, který jste zadali v **název parametru**a její typ a atributy parametru do **seznam parametrů**. Vyberte **přidat** přidání parametru do seznamu.
+  Přidá parametr, který zadáte v **názvu parametru**, a jeho typ a atributy parametru na **seznam parametrů**. Vyberte **Přidat** a přidejte do seznamu parametr.
 
 - **odebrat**
 
-  Odstraní parametr vyberete v **seznam parametrů** ze seznamu.
+  Odstraní parametr, který jste vybrali v **seznamu parametrů** ze seznamu.
 
 - **Seznam parametrů**
 
-  Zobrazí všechny parametry a jejich typy, které jsou právě přidané do metody a modifikátory. Jak budete přidávat parametry, průvodce aktualizuje **seznam parametrů** zobrazíte každý parametr s jeho modifikátor a typem.
+  Zobrazí všechny parametry a jejich modifikátory a typy aktuálně přidané pro metodu. Při přidávání parametrů průvodce aktualizuje **seznam parametrů** tak, aby zobrazoval každý parametr s jeho modifikátorem a typem.
 
 ## <a name="idl-attributes-add-method-wizard"></a>IDL – atributy, Průvodce přidáním metody
 
-Na této stránce Průvodce přidáním metody k určení nastavení jakékoli interface definition language (IDL) pro metodu.
+Tato stránka Průvodce přidáním metody slouží k určení libovolného nastavení jazyka IDL (Interface Definition Language) pro metodu.
 
 - `id`
 
-  Nastaví číselný Identifikátor, který identifikuje metodu. Další informace najdete v tématu [id](/windows/desktop/Midl/id) v *MIDL odkazu*.
+  Nastaví číselné ID, které identifikuje metodu. Další informace naleznete v tématu [ID](/windows/win32/Midl/id) v *odkazu MIDL*.
 
   Toto pole není k dispozici pro vlastní rozhraní a není k dispozici pro odesílající rozhraní knihovny MFC.
 
 - `call_as`
 
-  Určuje název vzdálené metody, do které je možné mapovat tato metoda místní. Další informace najdete v tématu [call_as](/windows/desktop/Midl/call-as) v *MIDL odkazu*.
+  Určuje název vzdálené metody, na kterou lze mapovat tuto místní metodu. Další informace naleznete v tématu [call_as](/windows/win32/Midl/call-as) v *odkazu MIDL*.
 
   Není k dispozici pro odesílající rozhraní knihovny MFC.
 
 - `helpcontext`
 
-  Určuje ID kontextu, který umožňuje uživateli zobrazit informace o této metodě v souboru nápovědy. Další informace najdete v tématu [helpcontext](/windows/desktop/Midl/helpcontext) v *MIDL odkazu*.
+  Určuje ID kontextu, které uživateli umožňuje zobrazit informace o této metodě v souboru Help. Další informace naleznete v tématu [atribut HelpContext](/windows/win32/Midl/helpcontext) v *odkazu MIDL*.
 
   Není k dispozici pro odesílající rozhraní knihovny MFC.
 
 - `helpstring`
 
-  Určuje řetězec znaků, který se používá k popisu elementu, ke kterému se vztahuje. To je standardně nastaven na "metoda *název metody*." Další informace najdete v tématu [helpstring](/windows/desktop/Midl/helpstring) v *MIDL odkazu*.
+  Určuje řetězec znaků, který se používá k popisu prvku, na který se vztahuje. Ve výchozím nastavení se jedná o " *název metody*metody." Další informace naleznete v tématu [HelpString](/windows/win32/Midl/helpstring) v *odkazu MIDL*.
 
   Není k dispozici pro odesílající rozhraní knihovny MFC.
 
@@ -161,8 +161,8 @@ Na této stránce Průvodce přidáním metody k určení nastavení jakékoli i
 
   |Atribut|Popis|
   |---------------|-----------------|
-  |`hidden`|Označuje, jestli metoda existuje, ale nebude se zobrazovat v prohlížeči uživatele. Další informace najdete v tématu [skryté](/windows/desktop/Midl/hidden) v *MIDL odkazu*.|
-  |`source`|Označuje, že člen metoda je zdrojem událostí. Další informace najdete v tématu [zdroj](/windows/desktop/Midl/source) v *MIDL odkazu*.|
-  |`local`|Určuje kompilátor MIDL o tom, že metoda není vzdálený. Další informace najdete v tématu [místní](/windows/desktop/Midl/local) v *MIDL odkazu*.|
-  |`restricted`|Určuje metodu nejde volat libovolně. Další informace najdete v tématu [s omezeným přístupem](/windows/desktop/Midl/restricted) v *MIDL odkazu*.|
-  |`vararg`|Určuje, že tato metoda přebírá proměnný počet argumentů. Jak toho dosáhnout, musí být posledním argumentem bezpečné pole `VARIANT` typ, který obsahuje zbývající argumenty. Další informace najdete v tématu [vararg](/windows/desktop/Midl/vararg) v *MIDL odkazu*.|
+  |`hidden`|Označuje, že metoda existuje, ale neměla by se zobrazovat v prohlížeči orientovaném na uživatele. Další informace naleznete v tématu [Hidden](/windows/win32/Midl/hidden) v *odkazu MIDL*.|
+  |`source`|Označuje, že člen metody je zdrojem událostí. Další informace naleznete v tématu [zdroj](/windows/win32/Midl/source) v *odkazu MIDL*.|
+  |`local`|Určuje kompilátoru MIDL, že metoda není vzdálená. Další informace naleznete v tématu [místní](/windows/win32/Midl/local) v *odkazu MIDL*.|
+  |`restricted`|Určuje, že metodu nelze volat libovolně. Další informace naleznete v tématu [omezeno](/windows/win32/Midl/restricted) v *odkazu MIDL*.|
+  |`vararg`|Určuje, že metoda přijímá proměnný počet argumentů. Chcete-li to provést, musí být posledním argumentem bezpečné pole `VARIANT` typu, které obsahuje zbytek argumentů. Další informace naleznete v tématu [vararg](/windows/win32/Midl/vararg) v *odkazu MIDL*.|

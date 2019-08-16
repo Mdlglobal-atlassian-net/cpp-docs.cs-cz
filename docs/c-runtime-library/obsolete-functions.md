@@ -50,47 +50,47 @@ helpviewer_keywords:
 - _sleep function
 - _seterrormode function
 ms.assetid: 8e14c2d4-1481-4240-8586-47eb43db02b0
-ms.openlocfilehash: edac8fde530752c911058acdaccccea6d0318b8c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ff0e4376c021fcfd46d4631d1598a3826e9f2851
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62342247"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69500037"
 ---
 # <a name="obsolete-functions"></a>Zastaralé funkce
 
-Některé funkce knihovny jsou zastaralé a novější ekvivalenty. Doporučujeme že vám tyto hodnoty změnit na aktualizované verze. Jiné zastaralé funkce byly odebrány z CRT. Toto téma uvádí zastaralé jako zastaralé funkce a funkce odebrat konkrétní verze sady Visual Studio.
+Některé funkce knihovny jsou zastaralé a mají novější ekvivalenty. Doporučujeme, abyste je změnili na aktualizované verze. Jiné zastaralé funkce byly odebrány z CRT. Toto téma obsahuje seznam funkcí, které jsou zastaralé jako zastaralé, a funkce odebrané v konkrétní verzi sady Visual Studio.
 
-## <a name="deprecated-as-obsolete-in-visual-studio-2015"></a>Zastaralé jako zastaralé ve Visual Studiu 2015
+## <a name="deprecated-as-obsolete-in-visual-studio-2015"></a>Zastaralé jako zastaralé v aplikaci Visual Studio 2015
 
-|Zastaralé funkce|Alternativní|
+|Zastaralá funkce|Jiné|
 |-----------------------|-----------------|
 |`is_wctype`|[iswctype](../c-runtime-library/reference/isctype-iswctype-isctype-l-iswctype-l.md)|
-|`_loaddll`|[LoadLibrary](/windows/desktop/api/libloaderapi/nf-libloaderapi-loadlibrarya), [LoadLibraryEx](/windows/desktop/api/libloaderapi/nf-libloaderapi-loadlibraryexa), nebo [LoadPackagedLibrary](/windows/desktop/api/winbase/nf-winbase-loadpackagedlibrary)|
-|`_unloaddll`|[FreeLibrary](/windows/desktop/api/libloaderapi/nf-libloaderapi-freelibrary)|
+|`_loaddll`|[LoadLibrary](/windows/win32/api/libloaderapi/nf-libloaderapi-loadlibraryw), [LoadLibraryEx](/windows/win32/api/libloaderapi/nf-libloaderapi-loadlibraryexw)nebo [LoadPackagedLibrary](/windows/win32/api/winbase/nf-winbase-loadpackagedlibrary)|
+|`_unloaddll`|[FreeLibrary](/windows/win32/api/libloaderapi/nf-libloaderapi-freelibrary)|
 |`_getdllprocaddr`|[GetProcAddress](../build/getprocaddress.md)|
-|`_seterrormode`|[SetErrorMode](https://msdn.microsoft.com/library/windows/desktop/ms680621)|
-|`_beep`|[Zvukový signál](/windows/desktop/api/utilapiset/nf-utilapiset-beep)|
-|`_sleep`|[Přejít do režimu spánku](/windows/desktop/api/synchapi/nf-synchapi-sleep)|
-|`_getsystime`|[GetLocalTime](/windows/desktop/api/sysinfoapi/nf-sysinfoapi-getlocaltime)|
-|`_setsystime`|[SetLocalTime](/windows/desktop/api/sysinfoapi/nf-sysinfoapi-setlocaltime)|
+|`_seterrormode`|[SetErrorMode](/windows/win32/api/errhandlingapi/nf-errhandlingapi-seterrormode)|
+|`_beep`|[Signálu](/windows/win32/api/utilapiset/nf-utilapiset-beep)|
+|`_sleep`|[Spat](/windows/win32/api/synchapi/nf-synchapi-sleep)|
+|`_getsystime`|[GetLocalTime](/windows/win32/api/sysinfoapi/nf-sysinfoapi-getlocaltime)|
+|`_setsystime`|[SetLocalTime](/windows/win32/api/sysinfoapi/nf-sysinfoapi-setlocaltime)|
 
-## <a name="removed-from-the-crt-in-visual-studio-2015"></a>Odebrat z CRT v sadě Visual Studio 2015
+## <a name="removed-from-the-crt-in-visual-studio-2015"></a>Odebráno z CRT v aplikaci Visual Studio 2015
 
-|Zastaralé funkce|Alternativní|
+|Zastaralá funkce|Jiné|
 |-----------------------|-----------------|
 |[_cgets, _cgetws](../c-runtime-library/cgets-cgetws.md)|[_cgets_s, _cgetws_s](../c-runtime-library/reference/cgets-s-cgetws-s.md)|
 |[gets, _getws](../c-runtime-library/gets-getws.md)|[gets_s, _getws_s](../c-runtime-library/reference/gets-s-getws-s.md)|
 |[_get_output_format](../c-runtime-library/get-output-format.md)|Žádné|
 |[_heapadd](../c-runtime-library/heapadd.md)|Žádné|
-|[_heapset](../c-runtime-library/heapset.md)|Žádný|
+|[_heapset](../c-runtime-library/heapset.md)|Žádné|
 |[inp, inpw](../c-runtime-library/inp-inpw.md)|Žádné|
-|[_inp, _inpw, _inpd](../c-runtime-library/inp-inpw-inpd.md)|Žádný|
+|[_inp, _inpw, _inpd](../c-runtime-library/inp-inpw-inpd.md)|Žádné|
 |[outp, outpw](../c-runtime-library/outp-outpw.md)|Žádné|
-|[_outp, _outpw, _outpd](../c-runtime-library/outp-outpw-outpd.md)|Žádný|
+|[_outp, _outpw, _outpd](../c-runtime-library/outp-outpw-outpd.md)|Žádné|
 |[_set_output_format](../c-runtime-library/set-output-format.md)|Žádné|
 
-## <a name="removed-from-the-crt-in-earlier-versions-of-visual-studio"></a>Odebrat z CRT v dřívějších verzích sady Visual Studio
+## <a name="removed-from-the-crt-in-earlier-versions-of-visual-studio"></a>Odebráno z CRT v dřívějších verzích sady Visual Studio
 
 [_lock](../c-runtime-library/lock.md)
 

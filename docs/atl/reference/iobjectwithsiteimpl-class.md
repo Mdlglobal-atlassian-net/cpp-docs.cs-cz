@@ -1,5 +1,5 @@
 ---
-title: IObjectWithSiteImpl Class
+title: IObjectWithSiteImpl – třída
 ms.date: 11/04/2016
 f1_keywords:
 - IObjectWithSiteImpl
@@ -11,16 +11,16 @@ f1_keywords:
 helpviewer_keywords:
 - IObjectWithSiteImpl class
 ms.assetid: 4e1f774f-bc3d-45ee-9a1c-c3533a511588
-ms.openlocfilehash: ad27c4288d7e16949fe38ea6b8a686e3d6916ee6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e857f739e3ff7235c473e99abbef6aab0d3f4205
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62275227"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69495838"
 ---
-# <a name="iobjectwithsiteimpl-class"></a>IObjectWithSiteImpl Class
+# <a name="iobjectwithsiteimpl-class"></a>IObjectWithSiteImpl – třída
 
-Tato třída poskytuje metody umožňující objekt ke komunikaci se svou lokalitou.
+Tato třída poskytuje metody, které umožňují objektu komunikovat s jeho lokalitou.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -33,31 +33,31 @@ template <class T>
 #### <a name="parameters"></a>Parametry
 
 *T*<br/>
-Vaše třída odvozena od `IObjectWithSiteImpl`.
+Vaše třída, která je `IObjectWithSiteImpl`odvozena z.
 
 ## <a name="members"></a>Členové
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
-|[IObjectWithSiteImpl::GetSite](#getsite)|Dotazy webu pro ukazatel rozhraní.|
-|[IObjectWithSiteImpl::SetChildSite](#setchildsite)|Poskytuje objekt lokality `IUnknown` ukazatele.|
-|[IObjectWithSiteImpl::SetSite](#setsite)|Poskytuje objekt lokality `IUnknown` ukazatele.|
+|[IObjectWithSiteImpl::GetSite](#getsite)|Zadá dotaz na web pro ukazatel rozhraní.|
+|[IObjectWithSiteImpl::SetChildSite](#setchildsite)|Poskytuje objekt s `IUnknown` ukazatelem na webu.|
+|[IObjectWithSiteImpl::SetSite](#setsite)|Poskytuje objekt s `IUnknown` ukazatelem na webu.|
 
 ### <a name="public-data-members"></a>Veřejné datové členy
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
-|[IObjectWithSiteImpl::m_spUnkSite](#m_spunksite)|Spravuje lokality `IUnknown` ukazatele.|
+|[IObjectWithSiteImpl::m_spUnkSite](#m_spunksite)|Spravuje `IUnknown` ukazatel na webu.|
 
 ## <a name="remarks"></a>Poznámky
 
-[IObjectWithSite](/windows/desktop/api/ocidl/nn-ocidl-iobjectwithsite) rozhraní umožňuje komunikaci se svou lokalitou. Třída `IObjectWithSiteImpl` poskytuje výchozí implementaci tohoto rozhraní a implementuje `IUnknown` posíláním informací o k výpisu paměti zařízení v ladění sestavení.
+Rozhraní [IObjectWithSite](/windows/win32/api/ocidl/nn-ocidl-iobjectwithsite) umožňuje objektu komunikovat s jeho lokalitou. Třída `IObjectWithSiteImpl` poskytuje výchozí implementaci tohoto rozhraní a implementuje `IUnknown` odesláním informací do zařízení výpisu paměti v sestaveních pro ladění.
 
-`IObjectWithSiteImpl` Určuje dvěma způsoby. První volání klienta `SetSite`, předávání lokality `IUnknown` ukazatele. Tento ukazatel je uložen v rámci objektu a později se dají získat pomocí volání `GetSite`.
+`IObjectWithSiteImpl`Určuje dvě metody. Klient nejprve volá `SetSite`a předává `IUnknown` ukazatel na webu. Tento ukazatel je uložen v rámci objektu a lze jej později načíst prostřednictvím volání `GetSite`.
 
-Obvykle jsou odvozeny z vaší třídy `IObjectWithSiteImpl` při vytváření objektu, který není ovládací prvek. Pro ovládací prvky, odvodit třídu z [ioleobjectimpl –](../../atl/reference/ioleobjectimpl-class.md), která navíc poskytuje ukazatel webu. Vaše třída není odvozena od obou `IObjectWithSiteImpl` a `IOleObjectImpl`.
+Obvykle je třída odvozena z `IObjectWithSiteImpl` při vytváření objektu, který není ovládací prvek. Pro ovládací prvky odvodíte třídu z [IOleObjectImpl](../../atl/reference/ioleobjectimpl-class.md), která také poskytuje ukazatel na webu. Třídu neodvozujte z obou `IObjectWithSiteImpl` i. `IOleObjectImpl`
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
@@ -67,11 +67,11 @@ Obvykle jsou odvozeny z vaší třídy `IObjectWithSiteImpl` při vytváření o
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** atlcom
+**Záhlaví:** atlcom. h
 
-##  <a name="getsite"></a>  IObjectWithSiteImpl::GetSite
+##  <a name="getsite"></a>IObjectWithSiteImpl:: GetWeb
 
-Dotazy webu pro ukazatel rozhraní identifikovaný `riid`.
+Zadá dotaz na web pro ukazatel na rozhraní identifikované `riid`.
 
 ```
 STDMETHOD(GetSite)(
@@ -81,13 +81,13 @@ STDMETHOD(GetSite)(
 
 ### <a name="remarks"></a>Poznámky
 
-Pokud lokalita podporuje toto rozhraní, je vrácený ukazatel přes `ppvSite`. V opačném případě `ppvSite` nastaven na hodnotu NULL.
+Pokud lokalita podporuje toto rozhraní, ukazatel je vrácen prostřednictvím `ppvSite`. V opačném případě je nastavena na hodnotu null. `ppvSite`
 
-Zobrazit [IObjectWithSite::GetSite](/windows/desktop/api/ocidl/nf-ocidl-iobjectwithsite-getsite) ve Windows SDK.
+Viz [IObjectWithSite:: GetSite](/windows/win32/api/ocidl/nf-ocidl-iobjectwithsite-getsite) v Windows SDK.
 
 ##  <a name="m_spunksite"></a>  IObjectWithSiteImpl::m_spUnkSite
 
-Spravuje lokality `IUnknown` ukazatele.
+Spravuje `IUnknown` ukazatel na webu.
 
 ```
 CComPtr<IUnknown> m_spUnkSite;
@@ -95,11 +95,11 @@ CComPtr<IUnknown> m_spUnkSite;
 
 ### <a name="remarks"></a>Poznámky
 
-`m_spUnkSite` nejprve obdrží tento ukazatel přímo pomocí volání [setsite –](#setsite).
+`m_spUnkSite`Zpočátku obdrží tento ukazatel prostřednictvím volání [SetSite](#setsite).
 
-##  <a name="setchildsite"></a>  IObjectWithSiteImpl::SetChildSite
+##  <a name="setchildsite"></a>IObjectWithSiteImpl::SetChildSite
 
-Poskytuje objekt lokality `IUnknown` ukazatele.
+Poskytuje objekt s `IUnknown` ukazatelem na webu.
 
 ```
 HRESULT SetChildSite(IUnknown* pUnkSite);
@@ -108,15 +108,15 @@ HRESULT SetChildSite(IUnknown* pUnkSite);
 ### <a name="parameters"></a>Parametry
 
 *pUnkSite*<br/>
-[in] Ukazatel `IUnknown` ukazatel rozhraní webu správy tohoto objektu. Pokud má hodnotu NULL, objekt by měly volat `IUnknown::Release` na žádné existující lokality v tomto okamžiku objekt už zná jeho lokality.
+pro Ukazatel na `IUnknown` ukazatel rozhraní lokality, která spravuje tento objekt. Pokud má hodnotu null, objekt by `IUnknown::Release` měl zavolat na libovolnou existující lokalitu, ve které je objekt již neví o lokalitě.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vrátí hodnotu S_OK.
+Vrací hodnotu S_OK.
 
-##  <a name="setsite"></a>  IObjectWithSiteImpl::SetSite
+##  <a name="setsite"></a>IObjectWithSiteImpl:: SetSite
 
-Poskytuje objekt lokality `IUnknown` ukazatele.
+Poskytuje objekt s `IUnknown` ukazatelem na webu.
 
 ```
 STDMETHOD(SetSite)(IUnknown* pUnkSite);
@@ -124,8 +124,8 @@ STDMETHOD(SetSite)(IUnknown* pUnkSite);
 
 ### <a name="remarks"></a>Poznámky
 
-Zobrazit [IObjectWithSite::SetSite](/windows/desktop/api/ocidl/nf-ocidl-iobjectwithsite-setsite) ve Windows SDK.
+Viz [IObjectWithSite:: SetSite](/windows/win32/api/ocidl/nf-ocidl-iobjectwithsite-setsite) v Windows SDK.
 
 ## <a name="see-also"></a>Viz také:
 
-[Přehled tříd](../../atl/atl-class-overview.md)
+[Přehled třídy](../../atl/atl-class-overview.md)

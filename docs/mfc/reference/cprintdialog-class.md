@@ -40,12 +40,12 @@ helpviewer_keywords:
 - CPrintDialog [MFC], PrintSelection
 - CPrintDialog [MFC], m_pd
 ms.assetid: 5bdb2424-adf8-433d-a97c-df11a83bc4e4
-ms.openlocfilehash: ab194b1c289f8347243b36354f4f314b7450a7aa
-ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
+ms.openlocfilehash: 1f4a4dbec9a1c79ac1e0cec925156ae7db4c293e
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68916901"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69502905"
 ---
 # <a name="cprintdialog-class"></a>CPrintDialog – třída
 
@@ -104,7 +104,7 @@ Můžete spoléhat na rozhraní a zpracovávat mnoho aspektů procesu tisku pro 
 
 Pokud chcete, aby aplikace zpracovávala tisk bez zapojení rozhraní, můžete použít `CPrintDialog` třídu "tak, jak je" se zadaným konstruktorem, nebo můžete odvodit vlastní třídu dialogového okna z `CPrintDialog` a napsat konstruktor, který bude vyhovovat vašim potřebám. V obou případech se tato dialogová okna budou chovat jako standardní dialogová okna knihovny MFC, protože jsou odvozena z třídy `CCommonDialog`.
 
-Chcete-li `CPrintDialog` použít objekt, nejprve vytvořte objekt `CPrintDialog` pomocí konstruktoru. Po vytvoření dialogového okna můžete nastavit nebo změnit libovolné hodnoty ve struktuře [m_pd](#m_pd) a inicializovat tak hodnoty ovládacích prvků dialogového okna. Struktura je typu PRINTDLG. [](/windows/desktop/api/commdlg/ns-commdlg-tagpda) `m_pd` Další informace o této struktuře naleznete v Windows SDK.
+Chcete-li `CPrintDialog` použít objekt, nejprve vytvořte objekt `CPrintDialog` pomocí konstruktoru. Po vytvoření dialogového okna můžete nastavit nebo změnit libovolné hodnoty ve struktuře [m_pd](#m_pd) a inicializovat tak hodnoty ovládacích prvků dialogového okna. Struktura je typu PRINTDLG. [](/windows/win32/api/commdlg/ns-commdlg-pdw) `m_pd` Další informace o této struktuře naleznete v Windows SDK.
 
 `m_pd` Pokud nezadáte vlastní popisovače v nástroji `hDevMode` pro členy a `hDevNames` , nezapomeňte po dokončení dialogového okna zavolat funkci `GlobalFree` systému Windows pro tyto popisovače. Při použití implementace nastavení tisku v rozhraní `CWinApp::OnFilePrintSetup`, které poskytuje, není nutné tyto popisovače uvolnit. Popisovače jsou uchovávány pomocí `CWinApp` a jsou uvolněny v `CWinApp`destruktoru. Tyto popisovače je nutné uvolnit pouze při použití `CPrintDialog` samostatného.
 
@@ -159,7 +159,7 @@ CPrintDialog(
 Určuje, zda se zobrazí dialogové okno standardní tisk systému Windows nebo nastavení tisku. Nastavením tohoto parametru na hodnotu TRUE zobrazíte standardní dialogové okno nastavení tisku systému Windows. Nastavte na hodnotu FALSE, chcete-li zobrazit dialogové okno Tisk systému Windows. Pokud má *bPrintSetupOnly* hodnotu false, v dialogovém okně Tisk se stále zobrazuje tlačítko možností nastavení tisku.
 
 *dwFlags*<br/>
-Jeden nebo více příznaků, které lze použít k přizpůsobení nastavení dialogového okna v kombinaci s použitím bitového operátoru OR. Například příznak PD_ALLPAGES nastaví výchozí rozsah tisku na všechny stránky dokumentu. Další informace o těchto příznacích najdete v [PRINTDLG](/windows/desktop/api/commdlg/ns-commdlg-tagpda) struktuře v Windows SDK.
+Jeden nebo více příznaků, které lze použít k přizpůsobení nastavení dialogového okna v kombinaci s použitím bitového operátoru OR. Například příznak PD_ALLPAGES nastaví výchozí rozsah tisku na všechny stránky dokumentu. Další informace o těchto příznacích najdete v [PRINTDLG](/windows/win32/api/commdlg/ns-commdlg-pdw) struktuře v Windows SDK.
 
 *pParentWnd*<br/>
 Ukazatel na nadřazené nebo vlastní okno dialogového okna.
@@ -168,7 +168,7 @@ Ukazatel na nadřazené nebo vlastní okno dialogového okna.
 
 Tato členská funkce vytvoří pouze objekt. K zobrazení dialogového okna použijte členskoufunkci.`DoModal`
 
-Všimněte si, že při volání konstruktoru s *bPrintSetupOnly* nastavenou na hodnotu false je automaticky použit příznak PD_RETURNDC. Po volání `DoModal`, `GetDefaults`nebo `GetPrinterDC`se vrátí řadič domény tiskárny v `m_pd.hDC`. Tento řadič domény musí být uvolněn voláním [DeleteDC](/windows/desktop/api/wingdi/nf-wingdi-deletedc) volajícím `CPrintDialog`.
+Všimněte si, že při volání konstruktoru s *bPrintSetupOnly* nastavenou na hodnotu false je automaticky použit příznak PD_RETURNDC. Po volání `DoModal`, `GetDefaults`nebo `GetPrinterDC`se vrátí řadič domény tiskárny v `m_pd.hDC`. Tento řadič domény musí být uvolněn voláním [DeleteDC](/windows/win32/api/wingdi/nf-wingdi-deletedc) volajícím `CPrintDialog`.
 
 ### <a name="example"></a>Příklad
 
@@ -176,7 +176,7 @@ Všimněte si, že při volání konstruktoru s *bPrintSetupOnly* nastavenou na 
 
 ##  <a name="createprinterdc"></a>  CPrintDialog::CreatePrinterDC
 
-Vytvoří kontext zařízení tiskárny ze struktur [DEVMODE](/windows/win32/api/wingdi/ns-wingdi-devmodea) a [DEVNAMES –](/windows/desktop/api/commdlg/ns-commdlg-tagdevnames) .
+Vytvoří kontext zařízení tiskárny ze struktur [DEVMODE](/windows/win32/api/wingdi/ns-wingdi-devmodea) a [DEVNAMES –](/windows/win32/api/commdlg/ns-commdlg-devnames) .
 
 ```
 HDC CreatePrinterDC();
@@ -204,7 +204,7 @@ virtual INT_PTR DoModal();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-IDOK nebo IDCANCEL. Pokud se vrátí IDCANCEL, zavolejte funkci Windows [CommDlgExtendedError](/windows/desktop/api/commdlg/nf-commdlg-commdlgextendederror) a určete, jestli došlo k chybě.
+IDOK nebo IDCANCEL. Pokud se vrátí IDCANCEL, zavolejte funkci Windows [CommDlgExtendedError](/windows/win32/api/commdlg/nf-commdlg-commdlgextendederror) a určete, jestli došlo k chybě.
 
 IDOK a IDCANCEL jsou konstanty, které označují, zda uživatel vybral tlačítko OK nebo Storno.
 
@@ -214,7 +214,7 @@ Pokud chcete inicializovat různé možnosti dialogového okna pro tisk nastaven
 
 Po volání `DoModal`můžete zavolat jiné členské funkce a načíst nastavení nebo zadání informací uživatelem do dialogového okna.
 
-Všimněte si, že při volání konstruktoru s *bPrintSetupOnly* nastavenou na hodnotu false je automaticky použit příznak PD_RETURNDC. Po volání `DoModal`, `GetDefaults`nebo `GetPrinterDC`se vrátí řadič domény tiskárny v `m_pd.hDC`. Tento řadič domény musí být uvolněn voláním [DeleteDC](/windows/desktop/api/wingdi/nf-wingdi-deletedc) volajícím `CPrintDialog`.
+Všimněte si, že při volání konstruktoru s *bPrintSetupOnly* nastavenou na hodnotu false je automaticky použit příznak PD_RETURNDC. Po volání `DoModal`, `GetDefaults`nebo `GetPrinterDC`se vrátí řadič domény tiskárny v `m_pd.hDC`. Tento řadič domény musí být uvolněn voláním [DeleteDC](/windows/win32/api/wingdi/nf-wingdi-deletedc) volajícím `CPrintDialog`.
 
 ### <a name="example"></a>Příklad
 
@@ -258,7 +258,7 @@ Načtené hodnoty se umístí do `m_pd` struktury.
 
 V některých případech volání této funkce vyvolá [konstruktor](#cprintdialog) pro `CPrintDialog` s *bPrintSetupOnly* nastavenou na hodnotu false. V těchto případech jsou automaticky přiděleny tiskárny `hDevNames` DC `hDevMode` a ( `m_pd` dva popisovače umístěné v datovém členu).
 
-Pokud byl konstruktor pro `CPrintDialog` zavolán s *bPrintSetupOnly* nastaven na hodnotu false, tato funkce nevrátí `hDevNames` do volajícího a `m_pd.hDevNames` `hDevMode` jeho `m_pd.hDevMode`umístění pouze v a), ale také vrátí řadič domény tiskárny v umístění `m_pd.hDC`. Je odpovědností volajícího odstranit řadič domény tiskárny a volat funkci Windows [GlobalFree](/windows/desktop/api/winbase/nf-winbase-globalfree) v popisovačích po dokončení `CPrintDialog` objektu.
+Pokud byl konstruktor pro `CPrintDialog` zavolán s *bPrintSetupOnly* nastaven na hodnotu false, tato funkce nevrátí `hDevNames` do volajícího a `m_pd.hDevNames` `hDevMode` jeho `m_pd.hDevMode`umístění pouze v a), ale také vrátí řadič domény tiskárny v umístění `m_pd.hDC`. Je odpovědností volajícího odstranit řadič domény tiskárny a volat funkci Windows [GlobalFree](/windows/win32/api/winbase/nf-winbase-globalfree) v popisovačích po dokončení `CPrintDialog` objektu.
 
 ### <a name="example"></a>Příklad
 
@@ -298,7 +298,7 @@ LPDEVMODE GetDevMode() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Struktura dat [DEVMODE](/windows/win32/api/wingdi/ns-wingdi-devmodea) , která obsahuje informace o inicializaci zařízení a prostředí ovladače tiskárny. Paměť, kterou tato struktura provedla, je nutné odemknout pomocí funkce Windows [GlobalUnlock](/windows/desktop/api/winbase/nf-winbase-globalunlock) , která je popsána v Windows SDK.
+Struktura dat [DEVMODE](/windows/win32/api/wingdi/ns-wingdi-devmodea) , která obsahuje informace o inicializaci zařízení a prostředí ovladače tiskárny. Paměť, kterou tato struktura provedla, je nutné odemknout pomocí funkce Windows [GlobalUnlock](/windows/win32/api/winbase/nf-winbase-globalunlock) , která je popsána v Windows SDK.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -382,7 +382,7 @@ Popisovač do kontextu zařízení tiskárny, pokud je úspěšný; jinak NULL.
 
 ### <a name="remarks"></a>Poznámky
 
-Pokud `CPrintDialog` parametr *bPrintSetupOnly* konstruktoru měl hodnotu false (což značí, že se zobrazí dialogové okno Tisk), pak `GetPrinterDC` vrátí popisovač do kontextu zařízení tiskárny. Chcete-li odstranit kontext zařízení po jeho použití, je třeba zavolat funkci Windows [DeleteDC](/windows/desktop/api/wingdi/nf-wingdi-deletedc) .
+Pokud `CPrintDialog` parametr *bPrintSetupOnly* konstruktoru měl hodnotu false (což značí, že se zobrazí dialogové okno Tisk), pak `GetPrinterDC` vrátí popisovač do kontextu zařízení tiskárny. Chcete-li odstranit kontext zařízení po jeho použití, je třeba zavolat funkci Windows [DeleteDC](/windows/win32/api/wingdi/nf-wingdi-deletedc) .
 
 ### <a name="example"></a>Příklad
 
@@ -418,7 +418,7 @@ PRINTDLG& m_pd;
 
 ### <a name="remarks"></a>Poznámky
 
-Po sestavení `CPrintDialog` objektu lze použít `m_pd` k nastavení různých aspektů dialogového okna před voláním členské funkce [DoModal](#domodal) . Další informace o `m_pd` struktuře naleznete v tématu [PRINTDLG](/windows/desktop/api/commdlg/ns-commdlg-tagpda) v Windows SDK.
+Po sestavení `CPrintDialog` objektu lze použít `m_pd` k nastavení různých aspektů dialogového okna před voláním členské funkce [DoModal](#domodal) . Další informace o `m_pd` struktuře naleznete v tématu [PRINTDLG](/windows/win32/api/commdlg/ns-commdlg-pdw) v Windows SDK.
 
 Změníte-li datový člen přímo, přepíšete všechny výchozí chování. `m_pd`
 

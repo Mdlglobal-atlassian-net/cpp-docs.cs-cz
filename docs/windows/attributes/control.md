@@ -1,21 +1,21 @@
 ---
-title: ovládací prvek (atribut C++ COM)
+title: Control –C++ ovládací prvek (atribut com)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.control
 helpviewer_keywords:
 - Control attribute
 ms.assetid: 3d046bb2-4afe-4cb8-a762-233b296e1975
-ms.openlocfilehash: 223acf774d1cc90d84aed2d0d0c8cb59fc778fa1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 12cf98b49b43b7a67834ea5401994ecdc749aa3b
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62148273"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69501777"
 ---
-# <a name="control"></a> – ovládací prvek
+# <a name="control"></a>– ovládací prvek
 
-Určuje, jestli je typ uživatelského ovládacího prvku.
+Určuje, že uživatelsky definovaný typ je ovládací prvek.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -25,7 +25,7 @@ Určuje, jestli je typ uživatelského ovládacího prvku.
 
 ## <a name="remarks"></a>Poznámky
 
-**Ovládací prvek** zahrnuje atribut [coclass](coclass.md) atribut. **Ovládací prvek** C++ atribut má stejné funkce jako [ovládací prvek](/windows/desktop/Midl/control) atribut MIDL.
+Atribut **Control** implikuje atribut [Coclass](coclass.md) . Atribut **Control** C++ má stejné funkce jako atribut [Control](/windows/win32/Midl/control) MIDL.
 
 ## <a name="example"></a>Příklad
 
@@ -46,16 +46,16 @@ class CTest : public ICustom {};
 
 ## <a name="requirements"></a>Požadavky
 
-### <a name="attribute-context"></a>Atribut kontextu
+### <a name="attribute-context"></a>Kontext atributu
 
 |||
 |-|-|
-|**Platí pro**|**Třída**, **– struktura**|
-|**Opakovatelné**|Ne|
-|**Vyžadované atributy**|Žádné|
-|**Neplatné atributy**|Žádný|
+|**Platí pro**|**Třída**, **Struktura**|
+|**REPEATABLE**|Ne|
+|**Požadované atributy**|Žádné|
+|**Neplatné atributy**|Žádné|
 
-Další informace o kontexty atributů najdete v tématu [kontexty atributů](cpp-attributes-com-net.md#contexts).
+Další informace o kontextech atributů naleznete v tématu kontexty [atributů](cpp-attributes-com-net.md#contexts).
 
 ## <a name="see-also"></a>Viz také:
 

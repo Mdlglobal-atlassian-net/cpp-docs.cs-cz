@@ -7,18 +7,18 @@ helpviewer_keywords:
 - CTreeCtrl class [MFC], item selection
 - item selection in tree controls
 ms.assetid: 7bcb3b16-b9c8-4c06-9350-7bc3c1c5009b
-ms.openlocfilehash: a88a2c8ea5b935bbcb1f40b705337ff676d8b8a5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 07c7b673e0f9029f8ece928b0ab17760b3863cc7
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62363548"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69513342"
 ---
 # <a name="tree-control-item-selection"></a>Výběr položek ovládacího prvku strom
 
-Při změně výběru z jedné položky na jiný, ovládací prvek stromu ([CTreeCtrl](../mfc/reference/ctreectrl-class.md)) odešle [TVN_SELCHANGING](/windows/desktop/Controls/tvn-selchanging) a [TVN_SELCHANGED](/windows/desktop/Controls/tvn-selchanged) zpráv s oznámením. Obě oznámení zahrnují hodnotu, která určuje, zda změna je výsledkem kliknutí myší nebo stisknutí klávesy. Oznámení také zahrnovat informace o položce, která získává na výběr a položku, která je ztráta výběr. Tyto informace slouží k nastavení atributů položky, které závisí na stavu výběru položky. Vrací **TRUE** v reakci na `TVN_SELCHANGING` brání výběr změny; vrácení **FALSE** umožňuje změnu.
+Když se výběr změní z jedné položky na jinou, stromová struktura ([CTreeCtrl](../mfc/reference/ctreectrl-class.md)) odesílá zprávy s oznámeními [TVN_SELCHANGING](/windows/win32/Controls/tvn-selchanging) a [TVN_SELCHANGED](/windows/win32/Controls/tvn-selchanged) . Obě oznámení obsahují hodnotu, která určuje, jestli je změna výsledkem kliknutí myší nebo stisknutí klávesy. Oznámení také obsahují informace o položce, která získá výběr, a položku, která je na výběr ztratila. Tyto informace můžete použít k nastavení atributů položky, které závisí na stavu výběru položky. Vrácení **hodnoty true** v reakci `TVN_SELCHANGING` na zabrání změnu výběru. vrácení **false** umožňuje změnu.
 
-Aplikace můžete změnit výběr voláním [selectitem –](../mfc/reference/ctreectrl-class.md#selectitem) členskou funkci.
+Aplikace může změnit výběr voláním členské funkce [SelectItem](../mfc/reference/ctreectrl-class.md#selectitem) .
 
 ## <a name="see-also"></a>Viz také:
 

@@ -52,12 +52,12 @@ f1_keywords:
 helpviewer_keywords:
 - CAccessToken class
 ms.assetid: bb5c5945-56a5-4083-b442-76573cee83ab
-ms.openlocfilehash: fa50282f3aa1f4db3ebf6306fa9dc3dab1311d1b
-ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
+ms.openlocfilehash: 33fbaae5dafaccdf7f7e6880eaa42dd68352e840
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68915903"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69497921"
 ---
 # <a name="caccesstoken-class"></a>CAccessToken – třída
 
@@ -132,9 +132,9 @@ class CAccessToken
 
 ## <a name="remarks"></a>Poznámky
 
-[Přístupový token](/windows/desktop/SecAuthZ/access-tokens) je objekt, který popisuje kontext zabezpečení procesu nebo vlákna a je přidělen každému uživateli přihlášenému do systému Windows.
+[Přístupový token](/windows/win32/SecAuthZ/access-tokens) je objekt, který popisuje kontext zabezpečení procesu nebo vlákna a je přidělen každému uživateli přihlášenému do systému Windows.
 
-Úvod do modelu řízení přístupu v systému Windows naleznete v tématu [Access Control](/windows/desktop/SecAuthZ/access-control) v Windows SDK.
+Úvod do modelu řízení přístupu v systému Windows naleznete v tématu [Access Control](/windows/win32/SecAuthZ/access-control) v Windows SDK.
 
 ## <a name="requirements"></a>Požadavky
 
@@ -216,7 +216,7 @@ bool CreateImpersonationToken(
 Ukazatel na nový `CAccessToken` objekt.
 
 *sil*<br/>
-Určuje [SECURITY_IMPERSONATION_LEVEL](/windows/desktop/api/winnt/ne-winnt-security_impersonation_level) Výčtový typ, který poskytuje úroveň zosobnění nového tokenu.
+Určuje [SECURITY_IMPERSONATION_LEVEL](/windows/win32/api/winnt/ne-winnt-security_impersonation_level) Výčtový typ, který poskytuje úroveň zosobnění nového tokenu.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -224,7 +224,7 @@ Vrátí hodnotu TRUE při úspěchu, FALSE při selhání.
 
 ### <a name="remarks"></a>Poznámky
 
-`CreateImpersonationToken`volá [volání metody duplicatetoken](/windows/desktop/api/securitybaseapi/nf-securitybaseapi-duplicatetoken) k vytvoření nového tokenu zosobnění.
+`CreateImpersonationToken`volá [volání metody duplicatetoken](/windows/win32/api/securitybaseapi/nf-securitybaseapi-duplicatetoken) k vytvoření nového tokenu zosobnění.
 
 ##  <a name="createprimarytoken"></a>CAccessToken::CreatePrimaryToken
 
@@ -243,7 +243,7 @@ bool CreatePrimaryToken(
 Ukazatel na nový `CAccessToken` objekt.
 
 *dwDesiredAccess*<br/>
-Určuje požadovaná přístupová práva k novému tokenu. Výchozí MAXIMUM_ALLOWED vyžaduje všechna přístupová práva platná pro daného volajícího. Další informace o přístupových právech najdete v tématu [přístupová práva a masky přístupu](/windows/desktop/SecAuthZ/access-rights-and-access-masks) .
+Určuje požadovaná přístupová práva k novému tokenu. Výchozí MAXIMUM_ALLOWED vyžaduje všechna přístupová práva platná pro daného volajícího. Další informace o přístupových právech najdete v tématu [přístupová práva a masky přístupu](/windows/win32/SecAuthZ/access-rights-and-access-masks) .
 
 *pTokenAttributes*<br/>
 Ukazatel na strukturu [SECURITY_ATTRIBUTES](/previous-versions/windows/desktop/legacy/aa379560\(v=vs.85\)) , která určuje popisovač zabezpečení pro nový token a určuje, zda mohou podřízené procesy zdědit token. Pokud má *pTokenAttributes* hodnotu null, token Získá výchozí popisovač zabezpečení a popisovač nelze dědit.
@@ -254,7 +254,7 @@ Vrátí hodnotu TRUE při úspěchu, FALSE při selhání.
 
 ### <a name="remarks"></a>Poznámky
 
-`CreatePrimaryToken`volá [DuplicateTokenEx](/windows/desktop/api/securitybaseapi/nf-securitybaseapi-duplicatetokenex) k vytvoření nového primárního tokenu.
+`CreatePrimaryToken`volá [DuplicateTokenEx](/windows/win32/api/securitybaseapi/nf-securitybaseapi-duplicatetokenex) k vytvoření nového primárního tokenu.
 
 ##  <a name="createprocessasuser"></a>CAccessToken:: CreateProcessAsUser
 
@@ -286,13 +286,13 @@ Ukazatel na řetězec zakončený hodnotou null, který určuje příkazový ř�
 Ukazatel na [strukturu PROCESS_INFORMATION](/windows/win32/api/processthreadsapi/ns-processthreadsapi-process_information) , která přijímá identifikační informace o novém procesu.
 
 *pStartupInfo*<br/>
-Ukazatel na strukturu [startupinfo](/windows/desktop/api/processthreadsapi/ns-processthreadsapi-startupinfoa) , která určuje, jak se má hlavní okno pro nový proces zobrazit.
+Ukazatel na strukturu [startupinfo](/windows/win32/api/processthreadsapi/ns-processthreadsapi-startupinfow) , která určuje, jak se má hlavní okno pro nový proces zobrazit.
 
 *dwCreationFlags*<br/>
-Určuje další příznaky, které řídí třídu priorit a vytváření procesu. Seznam příznaků najdete v [CreateProcessAsUser](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-createprocessasusera) funkce Win32.
+Určuje další příznaky, které řídí třídu priorit a vytváření procesu. Seznam příznaků najdete v [CreateProcessAsUser](/windows/win32/api/processthreadsapi/nf-processthreadsapi-createprocessasuserw) funkce Win32.
 
 *bLoadProfile*<br/>
-Při hodnotě TRUE se profil uživatele načte pomocí [LoadUserProfile nastavenými](/windows/desktop/api/userenv/nf-userenv-loaduserprofilea).
+Při hodnotě TRUE se profil uživatele načte pomocí [LoadUserProfile nastavenými](/windows/win32/api/userenv/nf-userenv-loaduserprofilew).
 
 *pProcessAttributes*<br/>
 Ukazatel na strukturu [SECURITY_ATTRIBUTES](/previous-versions/windows/desktop/legacy/aa379560\(v=vs.85\)) , která určuje popisovač zabezpečení pro nový proces a určuje, zda podřízené procesy mohou zdědit vrácený popisovač. Pokud má *pProcessAttributes* hodnotu null, proces Získá výchozí popisovač zabezpečení a popisovač nelze dědit.
@@ -312,7 +312,7 @@ Vrátí hodnotu TRUE při úspěchu, FALSE při selhání.
 
 ### <a name="remarks"></a>Poznámky
 
-`CreateProcessAsUser`pomocí funkce `CAccessToken` Win32 vytvoří nový proces, který běží v kontextu zabezpečení uživatele reprezentovaného objektem. `CreateProcessAsUser` Úplnou diskuzi o požadovaných parametrech najdete v popisu funkce [CreateProcessAsUser](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-createprocessasusera) .
+`CreateProcessAsUser`pomocí funkce `CAccessToken` Win32 vytvoří nový proces, který běží v kontextu zabezpečení uživatele reprezentovaného objektem. `CreateProcessAsUser` Úplnou diskuzi o požadovaných parametrech najdete v popisu funkce [CreateProcessAsUser](/windows/win32/api/processthreadsapi/nf-processthreadsapi-createprocessasuserw) .
 
 Aby tato metoda byla úspěšná, `CAccessToken` objekt musí obsahovat AssignPrimaryToken (Pokud se nejedná o omezený token) a oprávnění IncreaseQuota.
 
@@ -348,7 +348,7 @@ Vrátí hodnotu TRUE při úspěchu, FALSE při selhání.
 
 ### <a name="remarks"></a>Poznámky
 
-`CreateRestrictedToken`pomocí funkce [CreateRestrictedToken](/windows/desktop/api/securitybaseapi/nf-securitybaseapi-createrestrictedtoken) Win32 vytvoří nový `CAccessToken` objekt s omezeními.
+`CreateRestrictedToken`pomocí funkce [CreateRestrictedToken](/windows/win32/api/securitybaseapi/nf-securitybaseapi-createrestrictedtoken) Win32 vytvoří nový `CAccessToken` objekt s omezeními.
 
 > [!IMPORTANT]
 >  Při použití `CreateRestrictedToken`nástroje zajistěte následující: existující token je platný (a nezadáte ho uživatelem) a *SidsToDisable* a *PrivilegesToDelete* jsou platné (a nezadal uživatel). Pokud metoda vrátí hodnotu FALSE, funkce odepřít.
@@ -532,7 +532,7 @@ bool GetImpersonationLevel(
 ### <a name="parameters"></a>Parametry
 
 *pImpersonationLevel*<br/>
-Ukazatel na typ výčtu [SECURITY_IMPERSONATION_LEVEL](/windows/desktop/api/winnt/ne-winnt-security_impersonation_level) , který získá informace o úrovni zosobnění.
+Ukazatel na typ výčtu [SECURITY_IMPERSONATION_LEVEL](/windows/win32/api/winnt/ne-winnt-security_impersonation_level) , který získá informace o úrovni zosobnění.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -549,7 +549,7 @@ bool GetLogonSessionId(LUID* pluid) const throw(...);
 ### <a name="parameters"></a>Parametry
 
 *pluid*<br/>
-Ukazatel na identifikátor [LUID](/windows/desktop/api/winnt/ns-winnt-luid) , který získá ID přihlašovací relace.
+Ukazatel na identifikátor [LUID](/windows/win32/api/winnt/ns-winnt-luid) , který získá ID přihlašovací relace.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -661,7 +661,7 @@ Vrátí hodnotu TRUE při úspěchu, FALSE při selhání.
 
 ### <a name="remarks"></a>Poznámky
 
-Zavolá funkci [OpenProcessToken](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-openprocesstoken) Win32.
+Zavolá funkci [OpenProcessToken](/windows/win32/api/processthreadsapi/nf-processthreadsapi-openprocesstoken) Win32.
 
 ##  <a name="getprofile"></a>CAccessToken:: GetProfile
 
@@ -686,7 +686,7 @@ bool GetSource(TOKEN_SOURCE* pSource) const throw(...);
 ### <a name="parameters"></a>Parametry
 
 *pSource*<br/>
-Ukazatel na strukturu [TOKEN_SOURCE](/windows/desktop/api/winnt/ns-winnt-token_source) .
+Ukazatel na strukturu [TOKEN_SOURCE](/windows/win32/api/winnt/ns-winnt-token_source) .
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -703,7 +703,7 @@ bool GetStatistics(TOKEN_STATISTICS* pStatistics) const throw(...);
 ### <a name="parameters"></a>Parametry
 
 *pStatistics*<br/>
-Ukazatel na strukturu [TOKEN_STATISTICS](/windows/desktop/api/winnt/ns-winnt-token_statistics) .
+Ukazatel na strukturu [TOKEN_STATISTICS](/windows/win32/api/winnt/ns-winnt-token_statistics) .
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -765,7 +765,7 @@ bool GetTokenId(LUID* pluid) const throw(...);
 ### <a name="parameters"></a>Parametry
 
 *pluid*<br/>
-Ukazatel na identifikátor [LUID](/windows/desktop/api/winnt/ns-winnt-luid) , který získá ID tokenu.
+Ukazatel na identifikátor [LUID](/windows/win32/api/winnt/ns-winnt-luid) , který získá ID tokenu.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -782,7 +782,7 @@ bool GetType(TOKEN_TYPE* pType) const throw(...);
 ### <a name="parameters"></a>Parametry
 
 *pType*<br/>
-Adresa proměnné [TOKEN_TYPE](/windows/desktop/api/winnt/ne-winnt-token_type) , která po úspěchu obdrží typ tokenu.
+Adresa proměnné [TOKEN_TYPE](/windows/win32/api/winnt/ne-winnt-token_type) , která po úspěchu obdrží typ tokenu.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -914,10 +914,10 @@ Ukazatel na řetězec zakončený hodnotou null, který určuje název domény n
 Ukazatel na řetězec zakončený hodnotou null, který určuje heslo k nešifrovaným textům uživatelského účtu zadaného parametrem *pszUserName*.
 
 *dwLogonType*<br/>
-Určuje typ operace přihlášení, která se má provést. Další podrobnosti naleznete v tématu [LogonUser](/windows/desktop/api/winbase/nf-winbase-logonusera) .
+Určuje typ operace přihlášení, která se má provést. Další podrobnosti naleznete v tématu [LogonUser](/windows/win32/api/winbase/nf-winbase-logonuserw) .
 
 *dwLogonProvider*<br/>
-Určuje poskytovatele přihlášení. Další podrobnosti naleznete v tématu [LogonUser](/windows/desktop/api/winbase/nf-winbase-logonusera) .
+Určuje poskytovatele přihlášení. Další podrobnosti naleznete v tématu [LogonUser](/windows/win32/api/winbase/nf-winbase-logonuserw) .
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -925,7 +925,7 @@ Vrátí hodnotu TRUE při úspěchu, FALSE při selhání.
 
 ### <a name="remarks"></a>Poznámky
 
-Přístupový token, který je výsledkem přihlášení, bude přidružen `CAccessToken`k. Aby tato metoda byla `CAccessToken` úspěšná, musí objekt obsahovat oprávnění SE_TCB_NAME a identifikovat držitele jako součást základu důvěryhodného počítače. Další informace o požadovaných oprávněních naleznete v tématu [LogonUser](/windows/desktop/api/winbase/nf-winbase-logonusera) .
+Přístupový token, který je výsledkem přihlášení, bude přidružen `CAccessToken`k. Aby tato metoda byla `CAccessToken` úspěšná, musí objekt obsahovat oprávnění SE_TCB_NAME a identifikovat držitele jako součást základu důvěryhodného počítače. Další informace o požadovaných oprávněních naleznete v tématu [LogonUser](/windows/win32/api/winbase/nf-winbase-logonuserw) .
 
 ##  <a name="opencomclienttoken"></a>CAccessToken::OpenCOMClientToken
 
@@ -947,7 +947,7 @@ Určuje masku přístupu, která určuje požadované typy přístupu k přístu
 Pokud má hodnotu TRUE, aktuální vlákno zosobní volajícího klienta modelu COM, pokud se toto volání úspěšně dokončí. Pokud má hodnotu FALSE, bude přístupový token otevřený, ale po dokončení tohoto volání nebude vlákno mít token zosobnění.
 
 *bOpenAsSelf*<br/>
-Označuje, zda má být provedena kontroly přístupu proti kontextu zabezpečení vlákna, které volá metodu [GetThreadToken](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-getcurrentthread) , nebo proti kontextu zabezpečení procesu volajícího vlákna.
+Označuje, zda má být provedena kontroly přístupu proti kontextu zabezpečení vlákna, které volá metodu [GetThreadToken](/windows/win32/api/processthreadsapi/nf-processthreadsapi-getcurrentthread) , nebo proti kontextu zabezpečení procesu volajícího vlákna.
 
 Pokud má tento parametr hodnotu FALSE, kontroly přístupu se provádí pomocí kontextu zabezpečení volajícího vlákna. Pokud vlákno zosobňuje klienta, může to být tento kontext zabezpečení klientským procesem. Je-li tento parametr TRUE, je provedena kontroly přístupu pomocí kontextu zabezpečení procesu pro volající vlákno.
 
@@ -983,7 +983,7 @@ Určuje masku přístupu, která určuje požadované typy přístupu k přístu
 Pokud má hodnotu TRUE, aktuální vlákno zosobní klienta volajícího kanálu, pokud se toto volání úspěšně dokončí. Pokud má hodnotu FALSE, bude přístupový token otevřený, ale po dokončení tohoto volání nebude vlákno mít token zosobnění.
 
 *bOpenAsSelf*<br/>
-Označuje, zda má být provedena kontroly přístupu proti kontextu zabezpečení vlákna, které volá metodu [GetThreadToken](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-getcurrentthread) , nebo proti kontextu zabezpečení procesu volajícího vlákna.
+Označuje, zda má být provedena kontroly přístupu proti kontextu zabezpečení vlákna, které volá metodu [GetThreadToken](/windows/win32/api/processthreadsapi/nf-processthreadsapi-getcurrentthread) , nebo proti kontextu zabezpečení procesu volajícího vlákna.
 
 Pokud má tento parametr hodnotu FALSE, kontroly přístupu se provádí pomocí kontextu zabezpečení volajícího vlákna. Pokud vlákno zosobňuje klienta, může to být tento kontext zabezpečení klientským procesem. Je-li tento parametr TRUE, je provedena kontroly přístupu pomocí kontextu zabezpečení procesu pro volající vlákno.
 
@@ -1019,7 +1019,7 @@ Určuje masku přístupu, která určuje požadované typy přístupu k přístu
 Pokud má hodnotu TRUE, aktuální vlákno zosobní volajícího klienta RPC, pokud se toto volání úspěšně dokončí. Pokud má hodnotu FALSE, bude přístupový token otevřený, ale po dokončení tohoto volání nebude vlákno mít token zosobnění.
 
 *bOpenAsSelf*<br/>
-Označuje, zda má být provedena kontroly přístupu proti kontextu zabezpečení vlákna, které volá metodu [GetThreadToken](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-getcurrentthread) , nebo proti kontextu zabezpečení procesu volajícího vlákna.
+Označuje, zda má být provedena kontroly přístupu proti kontextu zabezpečení vlákna, které volá metodu [GetThreadToken](/windows/win32/api/processthreadsapi/nf-processthreadsapi-getcurrentthread) , nebo proti kontextu zabezpečení procesu volajícího vlákna.
 
 Pokud má tento parametr hodnotu FALSE, kontroly přístupu se provádí pomocí kontextu zabezpečení volajícího vlákna. Pokud vlákno zosobňuje klienta, může to být tento kontext zabezpečení klientským procesem. Je-li tento parametr TRUE, je provedena kontroly přístupu pomocí kontextu zabezpečení procesu pro volající vlákno.
 
@@ -1052,12 +1052,12 @@ Určuje masku přístupu, která určuje požadované typy přístupu k přístu
 Je-li nastavena hodnota TRUE, vlákno bude po dokončení této metody ponecháno na požadované úrovni zosobnění. V případě hodnoty FALSE se vlákno vrátí na původní úroveň zosobnění.
 
 *bOpenAsSelf*<br/>
-Označuje, zda má být provedena kontroly přístupu proti kontextu zabezpečení vlákna, které volá metodu [GetThreadToken](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-getcurrentthread) , nebo proti kontextu zabezpečení procesu volajícího vlákna.
+Označuje, zda má být provedena kontroly přístupu proti kontextu zabezpečení vlákna, které volá metodu [GetThreadToken](/windows/win32/api/processthreadsapi/nf-processthreadsapi-getcurrentthread) , nebo proti kontextu zabezpečení procesu volajícího vlákna.
 
 Pokud má tento parametr hodnotu FALSE, kontroly přístupu se provádí pomocí kontextu zabezpečení volajícího vlákna. Pokud vlákno zosobňuje klienta, může to být tento kontext zabezpečení klientským procesem. Je-li tento parametr TRUE, je provedena kontroly přístupu pomocí kontextu zabezpečení procesu pro volající vlákno.
 
 *sil*<br/>
-Určuje [SECURITY_IMPERSONATION_LEVEL](/windows/desktop/api/winnt/ne-winnt-security_impersonation_level) Výčtový typ, který poskytuje úroveň zosobnění tokenu.
+Určuje [SECURITY_IMPERSONATION_LEVEL](/windows/win32/api/winnt/ne-winnt-security_impersonation_level) Výčtový typ, který poskytuje úroveň zosobnění tokenu.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -1082,7 +1082,7 @@ bool PrivilegeCheck(
 ### <a name="parameters"></a>Parametry
 
 *RequiredPrivileges*<br/>
-Ukazatel na strukturu [PRIVILEGE_SET](/windows/desktop/api/winnt/ns-winnt-privilege_set) .
+Ukazatel na strukturu [PRIVILEGE_SET](/windows/win32/api/winnt/ns-winnt-privilege_set) .
 
 *pbResult*<br/>
 Ukazatel na hodnotu, kterou metody nastaví, aby označoval, zda jsou v `CAccessToken` objektu povoleny některá nebo všechna zadaná oprávnění.
@@ -1093,7 +1093,7 @@ Vrátí hodnotu TRUE při úspěchu, FALSE při selhání.
 
 ### <a name="remarks"></a>Poznámky
 
-Když `PrivilegeCheck` se vrátí `Attributes` , člen každé struktury [LUID_AND_ATTRIBUTES](/windows/desktop/api/winnt/ns-winnt-luid_and_attributes) se nastaví na SE_PRIVILEGE_USED_FOR_ACCESS, pokud je povolené příslušné oprávnění. Tato metoda volá funkci [PrivilegeCheck](/windows/desktop/api/securitybaseapi/nf-securitybaseapi-privilegecheck) Win32.
+Když `PrivilegeCheck` se vrátí `Attributes` , člen každé struktury [LUID_AND_ATTRIBUTES](/windows/win32/api/winnt/ns-winnt-luid_and_attributes) se nastaví na SE_PRIVILEGE_USED_FOR_ACCESS, pokud je povolené příslušné oprávnění. Tato metoda volá funkci [PrivilegeCheck](/windows/win32/api/securitybaseapi/nf-securitybaseapi-privilegecheck) Win32.
 
 ##  <a name="revert"></a>CAccessToken:: Revert
 
@@ -1182,5 +1182,5 @@ Primární skupina je výchozí skupina pro nové objekty vytvořené v době, k
 ## <a name="see-also"></a>Viz také:
 
 [Ukázka ATLSecurity](../../overview/visual-cpp-samples.md)<br/>
-[Přístupové tokeny](/windows/desktop/SecAuthZ/access-tokens)<br/>
+[Přístupové tokeny](/windows/win32/SecAuthZ/access-tokens)<br/>
 [Přehled třídy](../../atl/atl-class-overview.md)

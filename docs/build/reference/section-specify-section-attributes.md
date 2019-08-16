@@ -8,30 +8,30 @@ helpviewer_keywords:
 - -SECTION linker option
 - section attributes
 - /SECTION linker option
-ms.openlocfilehash: 8fb73043c9c185adee0859bb81098eab022430c2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0a52e9c9dcd53b01f17dc36825732b34771c75bb
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62318560"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69492632"
 ---
 # <a name="section-specify-section-attributes"></a>/SECTION (Určit atributy oddílu)
 
-> **/ SECTION:**_název_, [[**!**] {**DEKPRSW**}] [**, ZAROVNAT =**_číslo_]
+> **/Section:** _název_[[ **!** ] {**DEKPRSW**}] [ **, Align =** _Number_]
 
 ## <a name="remarks"></a>Poznámky
 
-**/SECTION** možnost změní atributy oddílu a přepíše přitom atributy nastavené při kompilaci souboru obj části.
+Možnost **/Section** změní atributy oddílu a přepíše přitom atributy nastavené při kompilaci souboru. obj pro oddíl.
 
-A *části* v přenosného spustitelného (PE) soubor je pojmenovaný blok souvislé paměti, která obsahuje kód nebo data. Některé části obsahují kód nebo data, která váš program deklarovaný a používá přímo, zatímco ostatní datové části se za vás vytvoří služba linkeru a knihovny správce (lib.exe) a obsahují informace, které jsou důležité pro operační systém. Další informace najdete v tématu [formátu PE](/windows/desktop/Debug/pe-format).
+*Oddíl* v přenositelném spustitelném souboru (PE) je pojmenovaný souvislý blok paměti, který obsahuje buď kód, nebo data. Některé oddíly obsahují kód nebo data, která program deklaruje a používá přímo, zatímco jiné oddíly dat jsou vytvořeny pro vás linkerem a správcem knihovny (lib. exe) a obsahují informace, které jsou pro operační systém zásadní. Další informace najdete v tématu [Formát PE](/windows/win32/Debug/pe-format).
 
-Zadejte dvojtečku (:) a oddíl *název*. *Název* je velká a malá písmena.
+Zadejte dvojtečku (:) a *název*oddílu. V *názvu* se rozlišují velká a malá písmena.
 
-Nepoužívejte následující názvy, protože jsou v konfliktu s názvy standardní. .Sdata. je třeba použít na RISC platformách:
+Nepoužívejte následující názvy, protože jsou v konfliktu se standardními názvy. Například. sdata se používá na platformách RISC:
 
-- .arch
+- . arch
 
-- .bss
+- . bss
 
 - .data
 
@@ -45,9 +45,9 @@ Nepoužívejte následující názvy, protože jsou v konfliktu s názvy standar
 
 - .reloc
 
-- .rsrc
+- . rsrc
 
-- .sbss
+- . sbss
 
 - .sdata
 
@@ -57,33 +57,33 @@ Nepoužívejte následující názvy, protože jsou v konfliktu s názvy standar
 
 - .xdata
 
-Zadejte jeden nebo více atributů pro oddíl. Atribut znaků, tady, se nerozlišují malá a velká písmena. Je nutné zadat všechny atributy, které chcete, aby oddílu, který má k dispozici. znak není uveden atribut způsobí, že tento atribut bit jej nejprve vypnout. Pokud nezadáte R, W nebo E, existující pro čtení, zápis, nebo spustitelný soubor stavu zůstává beze změny.
+Zadejte jeden nebo více atributů pro oddíl. V níže uvedených znacích atributů se nerozlišují malá a velká písmena. Je nutné zadat všechny atributy, které má oddíl mít. znak vynechaného atributu způsobuje, že je bit atributu vypnutý. Pokud nezadáte R, W nebo E, stávající stav čtení, zápisu nebo spustitelného souboru zůstane beze změny.
 
-Chcete-li negate – atribut, před jeho znak s vykřičníkem (!). Význam atribut znaky jsou uvedené v této tabulce:
+Pro negaci atributu, před jeho znak vykřičníkem (!). Význam znaků atributů je zobrazen v této tabulce:
 
 |Znak|Atribut|Význam|
 |---------------|---------------|-------------|
-|E|Spuštění|V části je spustitelný|
-|R|Číst|Umožňuje čtení operací s daty|
-|W|Write|Umožňuje operací zápisu na data|
-|S|Shared|Sdílené složky v části mezi všechny procesy, které načtení obrázku|
-|D|Discardable|Označí jako discardable části|
-|K|Možné ukládat do mezipaměti|Označí oddílu jako není možné ukládat do mezipaměti|
-|P|Stránkované|Označí oddíl jako nejsou stránkované|
+|E|Spustit|Oddíl je spustitelný soubor|
+|R|Číst|Povoluje operace čtení pro data|
+|W|Write|Povoluje operace zápisu pro data|
+|S|Shared|Sdílí oddíl mezi všemi procesy, které načítají obrázek.|
+|D|Vypuštění|Označí oddíl jako zahozený.|
+|K|Uložitelný|Označí oddíl jako neukládatelné do mezipaměti.|
+|P|Stránkované|Označí oddíl jako nestránkový.|
 
-K a P neobvyklá v tom, že část příznaky, které odpovídají na ně se používají v tom smyslu, záporná. Pokud zadáte jednu položku na části .text pomocí **/SECTION:.text, K** možnost, není žádný rozdíl v příznacích části při spuštění [DUMPBIN](dumpbin-options.md) s [/HEADERS](headers.md)možnost; v části již implicitně ukládá do mezipaměti. Chcete-li odebrat výchozí nastavení, zadejte **/SECTION:.text,! K** místo. DUMPBIN – zobrazí vlastnosti oddílu, včetně "Není v mezipaměti."
+K a P jsou neobvyklé v tom, že příznaky oddílu, které odpovídají, jsou používány v negativním smyslu. Pokud zadáte jednu z těchto možností v oddílu. text pomocí možnosti **/section:. text, k** , není v příznacích oddílu při spuštění [DUMPBIN](dumpbin-options.md) s možností [/Headers](headers.md) žádný rozdíl. oddíl byl již implicitně uložen do mezipaměti. Chcete-li odebrat výchozí hodnotu, zadejte **/section:. text,! K** místo toho. DUMPBIN odhalí charakteristiky oddílu, včetně "neuložený v mezipaměti".
 
-Oddíl v souboru PE, která nemá E, R nebo W, nastavte je pravděpodobně neplatná.
+Oddíl v souboru PE, který nemá sadu E, R nebo W, je pravděpodobně neplatný.
 
-**ZAROVNAT =**_číslo_ argument umožňuje zadat hodnotu zarovnání pro konkrétní části. _Číslo_ argument je vyjádřen v bajtech a musí být mocninou čísla 2. Zobrazit [/ALIGN](align-section-alignment.md) Další informace.
+Argument **align =** _Number_ umožňuje zadat hodnotu zarovnání pro konkrétní oddíl. Argument _Number_ je v bajtech a musí být mocninou dvou. Další informace najdete v tématu [/align](align-section-alignment.md) .
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Nastavení tohoto parametru linkeru ve vývojovém prostředí sady Visual Studio
 
-1. Otevřete v projektu **stránky vlastností** dialogové okno. Podrobnosti najdete v tématu [vlastnosti kompilátoru a sestavení nastavte C++ v sadě Visual Studio](../working-with-project-properties.md).
+1. Otevřete dialogové okno **stránky vlastností** projektu. Podrobnosti najdete v tématu [nastavení C++ vlastností kompilátoru a sestavení v sadě Visual Studio](../working-with-project-properties.md).
 
-1. Zvolte **vlastnosti konfigurace** > **Linkeru** > **příkazového řádku** stránku vlastností.
+1. Vyberte stránku vlastností**příkazový řádek** **linkeru** >  **vlastností** > konfigurace.
 
-1. Zadejte parametr do **další možnosti** pole. Zvolte **OK** nebo **použít** na použití změny.
+1. Zadejte možnost do pole **Další možnosti** . Kliknutím na **tlačítko OK** nebo **použít** provedete změnu.
 
 ### <a name="to-set-this-linker-option-programmatically"></a>Programové nastavení tohoto parametru linkeru
 

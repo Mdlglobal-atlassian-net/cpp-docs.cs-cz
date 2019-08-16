@@ -9,30 +9,30 @@ helpviewer_keywords:
 - controls [MFC], tool tips
 - handler functions [MFC], tool tips
 ms.assetid: cad5ef0f-02e3-4151-ad0d-3d42e6932b0e
-ms.openlocfilehash: 3d44f2c503b689360f040e6804d319c331d5c0ca
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1f68fb62335219ea498163e6124c8e91e49f2938
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62168021"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69511034"
 ---
 # <a name="tool-tips-in-windows-not-derived-from-cframewnd"></a>Popisy tlačítek v oknech neodvozených ze třídy CFrameWnd
 
-Řada Tento článek popisuje povolení popisů tlačítek pro ovládací prvky obsažené v okně, který není odvozen od [CFrameWnd](../mfc/reference/cframewnd-class.md). Tento článek [popisů tlačítek panelů nástrojů](../mfc/toolbar-tool-tips.md) poskytuje informace o popisy pro ovládací prvky v `CFrameWnd`.
+Tato rodina článků popisuje povolení tipů nástrojů pro ovládací prvky obsažené v okně, které není odvozeno od [CFrameWnd](../mfc/reference/cframewnd-class.md). Tipy nástrojů pro [panely nástrojů](../mfc/toolbar-tool-tips.md) najdete informace o tipech nástrojů pro ovládací prvky v `CFrameWnd`.
 
-Tento článek řady probíraná témata zahrnují:
+Témata, která jsou popsaná v tomto článku, zahrnují:
 
 - [Povolení popisů tlačítek](../mfc/enabling-tool-tips.md)
 
 - [Zpracování oznámení TTN_NEEDTEXT u popisů tlačítek](../mfc/handling-ttn-needtext-notification-for-tool-tips.md)
 
-- [ToolTipText – struktura](../mfc/tooltiptext-structure.md)
+- [Struktura TOOLTIPTEXT](../mfc/tooltiptext-structure.md)
 
-Popisy tlačítek se automaticky zobrazí pro tlačítka a další ovládací prvky obsažené v nadřazené okno odvozené od `CFrameWnd`. Důvodem je, že `CFrameWnd` má výchozí obslužnou rutinu pro [TTN_GETDISPINFO](/windows/desktop/Controls/ttn-getdispinfo) oznámení, která zpracovává **TTN_NEEDTEXT** oznámení z nástroje pro tip ovládací prvky přidružené ovládací prvky.
+Popisy tlačítek jsou automaticky zobrazeny pro tlačítka a další ovládací prvky obsažené v nadřazeném okně odvozeném z `CFrameWnd`. Důvodem je `CFrameWnd` , že má výchozí obslužnou rutinu pro oznámení [TTN_GETDISPINFO](/windows/win32/Controls/ttn-getdispinfo) , která zpracovává oznámení **TTN_NEEDTEXT** z ovládacích prvků popisů tlačítek přidružených k ovládacím prvkům.
 
-Nicméně, tato výchozí obslužná rutina není voláno, když **TTN_NEEDTEXT** oznámení se odesílá z ovládacího prvku tip nástroj, který je přidružený k ovládacímu prvku v okně, které nejsou `CFrameWnd`, jako je například ovládací prvek na dialogové okno nebo zobrazení formuláře. Proto je nezbytná k poskytnutí funkci obslužné rutiny pro **TTN_NEEDTEXT** zprávy oznámení, aby bylo možné zobrazit popisy tlačítek pro podřízené prvky.
+Nicméně tato výchozí obslužná rutina není volána, když je oznámení **TTN_NEEDTEXT** odesláno z ovládacího prvku popis tlačítka přidruženého k ovládacímu prvku v okně, který `CFrameWnd`není, jako je například ovládací prvek v dialogovém okně nebo ve formulářovém zobrazení. Proto je nutné zadat funkci obslužné rutiny pro zprávu oznámení **TTN_NEEDTEXT** , aby zobrazovala popisy tlačítek pro podřízené ovládací prvky.
 
-Popisy tlačítek výchozí k dispozici pro windows pomocí [CWnd::EnableToolTips](../mfc/reference/cwnd-class.md#enabletooltips) nemají text související s nimi. Načíst text tlačítka, který se zobrazí, **TTN_NEEDTEXT** oznámení se posílá ovládacím prvkem popis tlačítka nástroj nadřazenému oknu, těsně před plánovaným se zobrazí okno tipů nástrojů. Pokud neexistuje žádná obslužná rutina pro přiřazení nějakou hodnotu pro tuto zprávu *pszText* členem **TOOLTIPTEXT** struktury, nebude žádný text pro popis tlačítka zobrazen.
+Výchozí tipy k nástrojům, které jsou k dispozici pro Windows podle [CWnd:: EnableToolTips](../mfc/reference/cwnd-class.md#enabletooltips) , nemají přidružený text. Chcete-li načíst text pro popis tlačítka, který se má zobrazit, pošle se oznámení **TTN_NEEDTEXT** do nadřazeného okna ovládacího prvku Tip nástroje těsně před zobrazením okna s popisem tlačítka. Není-li pro tuto zprávu k dispozici žádná obslužná rutina pro přiřazení nějaké hodnoty *pszText* členu struktury **ToolTipText** , nezobrazí se žádný text pro popis tlačítka.
 
 ## <a name="see-also"></a>Viz také:
 

@@ -1,5 +1,5 @@
 ---
-title: Ccommultithreadmodelnocs – třída
+title: CComMultiThreadModelNoCS – třída
 ms.date: 11/04/2016
 f1_keywords:
 - CComMultiThreadModelNoCS
@@ -14,16 +14,16 @@ helpviewer_keywords:
 - CComMultiThreadModelNoCS class
 - threading [ATL]
 ms.assetid: 2b3f7a45-fd72-452c-aaf3-ccdaa621c821
-ms.openlocfilehash: ef2038a203b6cbfb2564bbe11d508ee43df0fd1b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 01c7f953b6b8916394ee4c2b5b27cf84af52b920
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62259219"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69497085"
 ---
-# <a name="ccommultithreadmodelnocs-class"></a>Ccommultithreadmodelnocs – třída
+# <a name="ccommultithreadmodelnocs-class"></a>CComMultiThreadModelNoCS – třída
 
-`CComMultiThreadModelNoCS` poskytuje metody bezpečným pro vlákno pro zvyšování a dekrementace hodnotu proměnné, bez kritický oddíl zamykání a odemykání funkce.
+`CComMultiThreadModelNoCS`poskytuje metody bezpečné pro přístup z více vláken pro zvýšení a snížení hodnoty proměnné bez důležitého zamykání oddílů nebo odemknutí funkčnosti.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -33,39 +33,39 @@ class CComMultiThreadModelNoCS
 
 ## <a name="members"></a>Členové
 
-### <a name="public-typedefs"></a>Veřejné definice TypeDef
+### <a name="public-typedefs"></a>Veřejné definice typedef
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
-|[CComMultiThreadModelNoCS::AutoCriticalSection](#autocriticalsection)|Odkazuje na třídu [ccomfakecriticalsection –](../../atl/reference/ccomfakecriticalsection-class.md).|
-|[CComMultiThreadModelNoCS::CriticalSection](#criticalsection)|Odkazuje na třídu `CComFakeCriticalSection`.|
-|[CComMultiThreadModelNoCS::ThreadModelNoCS](#threadmodelnocs)|Odkazuje na třídu `CComMultiThreadModelNoCS`.|
+|[CComMultiThreadModelNoCS::AutoCriticalSection](#autocriticalsection)|Odkazuje na třídu [CComFakeCriticalSection](../../atl/reference/ccomfakecriticalsection-class.md).|
+|[CComMultiThreadModelNoCS::CriticalSection](#criticalsection)|Odkazuje na `CComFakeCriticalSection`třídu.|
+|[CComMultiThreadModelNoCS::ThreadModelNoCS](#threadmodelnocs)|Odkazuje na `CComMultiThreadModelNoCS`třídu.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
-|[CComMultiThreadModelNoCS::Decrement](#decrement)|(Statické) Sníží hodnotu zadanou proměnnou způsobem bezpečným pro vlákno.|
-|[CComMultiThreadModelNoCS::Increment](#increment)|(Statické) Zvýší hodnotu zadanou proměnnou způsobem bezpečným pro vlákno.|
+|[CComMultiThreadModelNoCS::Decrement](#decrement)|Tras Sníží hodnotu zadané proměnné způsobem zabezpečeným pro přístup z více vláken.|
+|[CComMultiThreadModelNoCS::Increment](#increment)|Tras Zvýší hodnotu zadané proměnné způsobem bezpečným pro přístup z více vláken.|
 
 ## <a name="remarks"></a>Poznámky
 
-`CComMultiThreadModelNoCS` je podobný [CComMultiThreadModel](../../atl/reference/ccommultithreadmodel-class.md) v tom, že poskytuje bezpečným pro vlákno metody pro zvyšování a dekrementace proměnné. Ale při odkazu na třídu kritický oddíl prostřednictvím `CComMultiThreadModelNoCS`, metody, jako `Lock` a `Unlock` Neprovádět žádnou akci.
+`CComMultiThreadModelNoCS`je podobný jako [CComMultiThreadModel](../../atl/reference/ccommultithreadmodel-class.md) v tom, že poskytuje metody bezpečné pro přístup z více vláken pro zvýšení a snížení proměnné. Nicméně při odkazování na třídu kritického oddílu pomocí `CComMultiThreadModelNoCS`metody `Lock` , jako například a `Unlock` , neprovede nic.
 
-Obvykle použijete `CComMultiThreadModelNoCS` prostřednictvím `ThreadModelNoCS` **typedef** název. To **typedef** je definována v `CComMultiThreadModelNoCS`, `CComMultiThreadModel`, a [CComSingleThreadModel](../../atl/reference/ccomsinglethreadmodel-class.md).
+Obvykle se používá `CComMultiThreadModelNoCS` `ThreadModelNoCS` pomocí názvu **typedef** . Tato **definice typedef** je definována `CComMultiThreadModelNoCS`v `CComMultiThreadModel`, a [CComSingleThreadModel](../../atl/reference/ccomsinglethreadmodel-class.md).
 
 > [!NOTE]
->  Globální **typedef** názvy [CComObjectThreadModel](atl-typedefs.md#ccomobjectthreadmodel) a [CComGlobalsThreadModel](atl-typedefs.md#ccomglobalsthreadmodel) Neodkazovat `CComMultiThreadModelNoCS`.
+>  Globální názvy **typedef** [CComObjectThreadModel](atl-typedefs.md#ccomobjectthreadmodel) a [CComGlobalsThreadModel](atl-typedefs.md#ccomglobalsthreadmodel) neodkazují `CComMultiThreadModelNoCS`.
 
-Kromě `ThreadModelNoCS`, `CComMultiThreadModelNoCS` definuje `AutoCriticalSection` a `CriticalSection`. Těchto dvou **– typedef** referenční názvy [ccomfakecriticalsection –](../../atl/reference/ccomfakecriticalsection-class.md), která poskytuje prázdný metody, které jsou přidružené k získání a uvolnění kritický oddíl.
+Kromě `ThreadModelNoCS`, `CComMultiThreadModelNoCS` definují a`AutoCriticalSection` . `CriticalSection` Tyto dva názvy **typedef** odkazují na [CComFakeCriticalSection](../../atl/reference/ccomfakecriticalsection-class.md), které poskytují prázdné metody přidružené k získání a uvolnění kritické části.
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** atlbase.h
+**Záhlaví:** atlbase. h
 
 ##  <a name="autocriticalsection"></a>  CComMultiThreadModelNoCS::AutoCriticalSection
 
-Při použití `CComMultiThreadModelNoCS`, **typedef** název `AutoCriticalSection` odkazuje na třídu [ccomfakecriticalsection –](../../atl/reference/ccomfakecriticalsection-class.md).
+Při použití `CComMultiThreadModelNoCS`se `AutoCriticalSection` název **typedef** odkazuje na třídu [CComFakeCriticalSection](../../atl/reference/ccomfakecriticalsection-class.md).
 
 ```
 typedef CComFakeCriticalSection AutoCriticalSection;
@@ -73,25 +73,25 @@ typedef CComFakeCriticalSection AutoCriticalSection;
 
 ### <a name="remarks"></a>Poznámky
 
-Protože `CComFakeCriticalSection` neposkytuje kritický oddíl, její metody Neprovádět žádnou akci.
+Protože `CComFakeCriticalSection` neposkytuje kritickou část, její metody nedělají nic.
 
-[CComMultiThreadModel –](../../atl/reference/ccommultithreadmodel-class.md) a [CComSingleThreadModel](../../atl/reference/ccomsinglethreadmodel-class.md) také obsahovat definice pro `AutoCriticalSection`. Následující tabulka ukazuje vztah mezi vláken třídy modelu a kritický oddíl odkazuje `AutoCriticalSection`:
+[CComMultiThreadModel](../../atl/reference/ccommultithreadmodel-class.md) a [CComSingleThreadModel](../../atl/reference/ccomsinglethreadmodel-class.md) také obsahují definice pro `AutoCriticalSection`. Následující tabulka ukazuje vztah mezi třídou modelu vláken a kritickou sekcí oddílu, na kterou odkazuje `AutoCriticalSection`:
 
-|Třída definovaná v|Třída odkazovaná|
+|Třída definovaná v|Odkazovaná třída|
 |----------------------|----------------------|
 |`CComMultiThreadModelNoCS`|`CComFakeCriticalSection`|
 |`CComMultiThreadModel`|`CComAutoCriticalSection`|
 |`CComSingleThreadModel`|`CComFakeCriticalSection`|
 
-Kromě `AutoCriticalSection`, můžete použít **typedef** název [criticalsection –](#criticalsection). Neměli byste zadávat `AutoCriticalSection` v globálních objektů nebo statické členy třídy Pokud budete chtít vyloučit při spuštění kódu CRT.
+Kromě `AutoCriticalSection`toho můžete použít název **typedef** [CriticalSection](#criticalsection). Pokud chcete odstranit spouštěcí `AutoCriticalSection` kód CRT, neměli byste určovat globální objekty ani statické členy třídy.
 
 ### <a name="example"></a>Příklad
 
-Zobrazit [CComMultiThreadModel::AutoCriticalSection](../../atl/reference/ccommultithreadmodel-class.md#autocriticalsection).
+Viz [CComMultiThreadModel:: AutoCriticalSection](../../atl/reference/ccommultithreadmodel-class.md#autocriticalsection).
 
-##  <a name="criticalsection"></a>  CComMultiThreadModelNoCS::CriticalSection
+##  <a name="criticalsection"></a>CComMultiThreadModelNoCS:: CriticalSection
 
-Při použití `CComMultiThreadModelNoCS`, **typedef** název `CriticalSection` odkazuje na třídu [ccomfakecriticalsection –](../../atl/reference/ccomfakecriticalsection-class.md).
+Při použití `CComMultiThreadModelNoCS`se `CriticalSection` název **typedef** odkazuje na třídu [CComFakeCriticalSection](../../atl/reference/ccomfakecriticalsection-class.md).
 
 ```
 typedef CComFakeCriticalSection CriticalSection;
@@ -99,25 +99,25 @@ typedef CComFakeCriticalSection CriticalSection;
 
 ### <a name="remarks"></a>Poznámky
 
-Protože `CComFakeCriticalSection` neposkytuje kritický oddíl, její metody Neprovádět žádnou akci.
+Protože `CComFakeCriticalSection` neposkytuje kritickou část, její metody nedělají nic.
 
-[CComMultiThreadModel –](../../atl/reference/ccommultithreadmodel-class.md) a [CComSingleThreadModel](../../atl/reference/ccomsinglethreadmodel-class.md) také obsahovat definice pro `CriticalSection`. Následující tabulka ukazuje vztah mezi vláken třídy modelu a kritický oddíl odkazuje `CriticalSection`:
+[CComMultiThreadModel](../../atl/reference/ccommultithreadmodel-class.md) a [CComSingleThreadModel](../../atl/reference/ccomsinglethreadmodel-class.md) také obsahují definice pro `CriticalSection`. Následující tabulka ukazuje vztah mezi třídou modelu vláken a kritickou sekcí oddílu, na kterou odkazuje `CriticalSection`:
 
-|Třída definovaná v|Třída odkazovaná|
+|Třída definovaná v|Odkazovaná třída|
 |----------------------|----------------------|
 |`CComMultiThreadModelNoCS`|`CComFakeCriticalSection`|
 |`CComMultiThreadModel`|`CComCriticalSection`|
 |`CComSingleThreadModel`|`CComFakeCriticalSection`|
 
-Kromě `CriticalSection`, můžete použít **typedef** název `AutoCriticalSection`. Neměli byste zadávat `AutoCriticalSection` v globálních objektů nebo statické členy třídy Pokud budete chtít vyloučit při spuštění kódu CRT.
+Kromě `CriticalSection`toho můžete použít název `AutoCriticalSection` **typedef** . Pokud chcete odstranit spouštěcí `AutoCriticalSection` kód CRT, neměli byste určovat globální objekty ani statické členy třídy.
 
 ### <a name="example"></a>Příklad
 
-Zobrazit [CComMultiThreadModel::AutoCriticalSection](../../atl/reference/ccommultithreadmodel-class.md#autocriticalsection).
+Viz [CComMultiThreadModel:: AutoCriticalSection](../../atl/reference/ccommultithreadmodel-class.md#autocriticalsection).
 
-##  <a name="decrement"></a>  CComMultiThreadModelNoCS::Decrement
+##  <a name="decrement"></a>CComMultiThreadModelNoCS::D ecrement
 
-Tato statická funkce volá funkci Win32 [InterlockedDecrement](/windows/desktop/api/winnt/nf-winnt-interlockeddecrement), které sníží hodnotu proměnné, na které odkazuje *p*.
+Tato statická funkce volá funkci Win32 [InterlockedDecrement](/windows/win32/api/winnt/nf-winnt-interlockeddecrement), která snižuje hodnotu proměnné, na kterou odkazuje hodnota *p*.
 
 ```
 static ULONG WINAPI Decrement(LPLONG p) throw();
@@ -126,19 +126,19 @@ static ULONG WINAPI Decrement(LPLONG p) throw();
 ### <a name="parameters"></a>Parametry
 
 *p*<br/>
-[in] Ukazatel na proměnnou chcete snížit.
+pro Ukazatel na proměnnou, která má být snížena.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Pokud výsledek snížení je 0, `Decrement` vrátí hodnotu 0. Pokud je výsledkem snížení nenulovou hodnotu, návratová hodnota je také nenulovou hodnotu, ale nemusí být roven výsledku snížení.
+Pokud je výsledek snížení 0, `Decrement` vrátí hodnotu 0. Pokud je výsledek snížení nenulový, vrácená hodnota je také nenulová, ale nemusí být rovna výsledku snížení.
 
 ### <a name="remarks"></a>Poznámky
 
-**InterlockedDecrement** zabrání současně pomocí této proměnné více než jedno vlákno.
+**InterlockedDecrement** zabraňuje současnému více než jednomu vláknu pomocí této proměnné.
 
-##  <a name="increment"></a>  CComMultiThreadModelNoCS::Increment
+##  <a name="increment"></a>CComMultiThreadModelNoCS:: Increment
 
-Tato statická funkce volá funkci Win32 [InterlockedIncrement](/windows/desktop/api/winnt/nf-winnt-interlockedincrement), který zvýší hodnotu proměnné, na které odkazuje *p*.
+Tato statická funkce volá funkci Win32 [InterlockedIncrement](/windows/win32/api/winnt/nf-winnt-interlockedincrement), která zvyšuje hodnotu proměnné, na kterou odkazuje hodnota *p*.
 
 ```
 static ULONG WINAPI Increment(LPLONG p) throw();
@@ -147,19 +147,19 @@ static ULONG WINAPI Increment(LPLONG p) throw();
 ### <a name="parameters"></a>Parametry
 
 *p*<br/>
-[in] Ukazatel na proměnnou se zvýší.
+pro Ukazatel na proměnnou, která se má zvýšit.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Pokud výsledek přírůstek je 0, **přírůstek** vrátí hodnotu 0. Pokud je výsledkem přírůstku nenulovou hodnotu, návratová hodnota je také nenulovou hodnotu, ale nesmí být roven výsledku přírůstku.
+Pokud je výsledek přírůstku 0, pak **přírůstek** vrátí hodnotu 0. Pokud je výsledek přírůstku nenulový, vrácená hodnota je také nenulová, ale nemusí být rovna výsledku zvýšení.
 
 ### <a name="remarks"></a>Poznámky
 
-**InterlockedIncrement** zabrání současně pomocí této proměnné více než jedno vlákno.
+**InterlockedIncrement** zabraňuje současnému více než jednomu vláknu pomocí této proměnné.
 
-##  <a name="threadmodelnocs"></a>  CComMultiThreadModelNoCS::ThreadModelNoCS
+##  <a name="threadmodelnocs"></a>CComMultiThreadModelNoCS::ThreadModelNoCS
 
-Při použití `CComMultiThreadModelNoCS`, **typedef** název `ThreadModelNoCS` jednoduše odkazuje `CComMultiThreadModelNoCS`.
+Při použití `CComMultiThreadModelNoCS`se v názvu `ThreadModelNoCS` typedef jednoduše odkazují `CComMultiThreadModelNoCS`.
 
 ```
 typedef CComMultiThreadModelNoCS ThreadModelNoCS;
@@ -167,24 +167,24 @@ typedef CComMultiThreadModelNoCS ThreadModelNoCS;
 
 ### <a name="remarks"></a>Poznámky
 
-[CComMultiThreadModel –](../../atl/reference/ccommultithreadmodel-class.md) a [CComSingleThreadModel](../../atl/reference/ccomsinglethreadmodel-class.md) také obsahovat definice pro `ThreadModelNoCS`. Následující tabulka ukazuje vztah mezi vláken třídy modelu a odkazuje `ThreadModelNoCS`:
+[CComMultiThreadModel](../../atl/reference/ccommultithreadmodel-class.md) a [CComSingleThreadModel](../../atl/reference/ccomsinglethreadmodel-class.md) také obsahují definice pro `ThreadModelNoCS`. Následující tabulka ukazuje vztah mezi třídou modelu vláken a třídou, na kterou odkazuje `ThreadModelNoCS`:
 
-|Třída definovaná v|Třída odkazovaná|
+|Třída definovaná v|Odkazovaná třída|
 |----------------------|----------------------|
 |`CComMultiThreadModelNoCS`|`CComMultiThreadModelNoCS`|
 |`CComMultiThreadModel`|`CComMultiThreadModelNoCS`|
 |`CComSingleThreadModel`|`CComSingleThreadModel`|
 
-Všimněte si, že definice `ThreadModelNoCS` v `CComMultiThreadModelNoCS` zajišťuje symetrii s `CComMultiThreadModel` a `CComSingleThreadModel`. Předpokládejme například, ukázkový kód v `CComMultiThreadModel::AutoCriticalSection` deklarovány následující **typedef**:
+Všimněte si, že definice `ThreadModelNoCS` v `CComMultiThreadModelNoCS` nástroji poskytuje symetrie `CComSingleThreadModel`s `CComMultiThreadModel` a. Předpokládejme například, že vzorový kód v `CComMultiThreadModel::AutoCriticalSection` deklaraci následující **typedef**:
 
 [!code-cpp[NVC_ATL_COM#37](../../atl/codesnippet/cpp/ccommultithreadmodelnocs-class_1.h)]
 
-Bez ohledu na to třída zadaná pro `ThreadModel` (například `CComMultiThreadModelNoCS`), `_ThreadModel` řeší odpovídajícím způsobem.
+Bez ohledu na třídu zadanou pro `ThreadModel` ( `CComMultiThreadModelNoCS`například) se `_ThreadModel` odpovídajícím způsobem vyřeší.
 
 ### <a name="example"></a>Příklad
 
-Zobrazit [CComMultiThreadModel::AutoCriticalSection](../../atl/reference/ccommultithreadmodel-class.md#autocriticalsection).
+Viz [CComMultiThreadModel:: AutoCriticalSection](../../atl/reference/ccommultithreadmodel-class.md#autocriticalsection).
 
 ## <a name="see-also"></a>Viz také:
 
-[Přehled tříd](../../atl/atl-class-overview.md)
+[Přehled třídy](../../atl/atl-class-overview.md)

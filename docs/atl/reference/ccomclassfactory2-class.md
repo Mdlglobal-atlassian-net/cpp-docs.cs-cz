@@ -12,16 +12,16 @@ f1_keywords:
 helpviewer_keywords:
 - CComClassFactory2 class
 ms.assetid: 19b66fd6-b9ed-47a0-822c-8132184f5a3e
-ms.openlocfilehash: b3b14fa59765aa72a1142e0eef41aa84abea35de
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e34ebffc937c3e4ef1272fdf13ddcde7513d28e4
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62259687"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69497463"
 ---
 # <a name="ccomclassfactory2-class"></a>CComClassFactory2 Class
 
-Tato třída implementuje [IClassFactory2](/windows/desktop/api/ocidl/nn-ocidl-iclassfactory2) rozhraní.
+Tato třída implementuje rozhraní [IClassFactory2](/windows/win32/api/ocidl/nn-ocidl-iclassfactory2) .
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -34,7 +34,7 @@ class CComClassFactory2 : public IClassFactory2,
 
 #### <a name="parameters"></a>Parametry
 
-*Licence*<br/>
+*průkaz*<br/>
 Třída, která implementuje následující statické funkce:
 
 - `static BOOL VerifyLicenseKey( BSTR bstr );`
@@ -47,27 +47,27 @@ Třída, která implementuje následující statické funkce:
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
-|[CComClassFactory2::CreateInstance](#createinstance)|Vytvoří objekt zadaným identifikátorem CLSID.|
-|[CComClassFactory2::CreateInstanceLic](#createinstancelic)|Zadaný licenčního kódu vytvoří objekt zadaným identifikátorem CLSID.|
-|[CComClassFactory2::GetLicInfo](#getlicinfo)|Načte informace, které popisují licenční možnosti objektu pro vytváření tříd.|
+|[CComClassFactory2::CreateInstance](#createinstance)|Vytvoří objekt zadaného objektu CLSID.|
+|[CComClassFactory2::CreateInstanceLic](#createinstancelic)|V případě, že je zadán licenční klíč, vytvoří objekt zadaného objektu CLSID.|
+|[CComClassFactory2::GetLicInfo](#getlicinfo)|Načte informace popisující možnosti licencování objektu pro vytváření tříd.|
 |[CComClassFactory2::LockServer](#lockserver)|Zamkne objekt pro vytváření tříd v paměti.|
 |[CComClassFactory2::RequestLicKey](#requestlickey)|Vytvoří a vrátí licenční klíč.|
 
 ## <a name="remarks"></a>Poznámky
 
-`CComClassFactory2` implementuje [IClassFactory2](/windows/desktop/api/ocidl/nn-ocidl-iclassfactory2) rozhraní, která je rozšířením z [IClassFactory](/windows/desktop/api/unknwnbase/nn-unknwnbase-iclassfactory). `IClassFactory2` vytvoření ovládacích prvků objektu prostřednictvím licenci. Třída objekt pro vytváření, provádění na licencovanou počítači může poskytnout za běhu licenční klíč. Tento licenční klíč umožňuje aplikaci k vytvoření instance objektů při úplné počítač licence neexistuje.
+`CComClassFactory2`implementuje rozhraní [IClassFactory2](/windows/win32/api/ocidl/nn-ocidl-iclassfactory2) , což je rozšíření [IClassFactory](/windows/win32/api/unknwnbase/nn-unknwnbase-iclassfactory). `IClassFactory2`řídí vytváření objektů pomocí licence. Objekt pro vytváření tříd, který je spuštěn na licencovaném počítači, může poskytnout licenční klíč za běhu. Tento licenční klíč umožňuje aplikaci vytvářet instance objektů, pokud není k dispozici úplná licence na počítač.
 
-Objekty knihovny ATL obvykle získat objekt pro vytváření tříd odvozením z [CComCoClass](../../atl/reference/ccomcoclass-class.md). Tato třída obsahuje makra [DECLARE_CLASSFACTORY](aggregation-and-class-factory-macros.md#declare_classfactory), který deklaruje [ccomclassfactory –](../../atl/reference/ccomclassfactory-class.md) jako výchozí objekt pro vytváření tříd. Chcete-li použít `CComClassFactory2`, zadejte [DECLARE_CLASSFACTORY2](aggregation-and-class-factory-macros.md#declare_classfactory2) makra v definici třídy objektu. Příklad:
+Objekty ATL normálně získávají objekt pro vytváření tříd odvozením z [CComCoClass](../../atl/reference/ccomcoclass-class.md). Tato třída obsahuje makro [DECLARE_CLASSFACTORY](aggregation-and-class-factory-macros.md#declare_classfactory), které deklaruje [CComClassFactory](../../atl/reference/ccomclassfactory-class.md) jako výchozí objekt pro vytváření tříd. Chcete- `CComClassFactory2`li použít, zadejte makro [DECLARE_CLASSFACTORY2](aggregation-and-class-factory-macros.md#declare_classfactory2) v definici třídy vašeho objektu. Příklad:
 
 [!code-cpp[NVC_ATL_COM#2](../../atl/codesnippet/cpp/ccomclassfactory2-class_1.h)]
 
-`CMyLicense`, parametr šablony `CComClassFactory2`, musí implementovat statické funkce `VerifyLicenseKey`, `GetLicenseKey`, a `IsLicenseValid`. Následuje příklad licenci jednoduše třídy:
+`CMyLicense`, `CComClassFactory2`parametr šablony do, musí implementovat statické funkce `VerifyLicenseKey`, `GetLicenseKey`a `IsLicenseValid`. Následuje příklad jednoduché třídy licence:
 
 [!code-cpp[NVC_ATL_COM#3](../../atl/codesnippet/cpp/ccomclassfactory2-class_2.h)]
 
-`CComClassFactory2` je odvozen z obou `CComClassFactory2Base` a *licence*. `CComClassFactory2Base`, pak je odvozena z `IClassFactory2` a `CComObjectRootEx< CComGlobalsThreadModel >`.
+`CComClassFactory2`je odvozen z obou `CComClassFactory2Base` i *licencí*. `CComClassFactory2Base`, zase, je odvozen z `IClassFactory2` a. `CComObjectRootEx< CComGlobalsThreadModel >`
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
@@ -83,11 +83,11 @@ Objekty knihovny ATL obvykle získat objekt pro vytváření tříd odvozením z
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** atlcom
+**Záhlaví:** atlcom. h
 
-##  <a name="createinstance"></a>  CComClassFactory2::CreateInstance
+##  <a name="createinstance"></a>CComClassFactory2:: CreateInstance
 
-Vytvoří objekt zadaným identifikátorem CLSID a načte ukazatel rozhraní k tomuto objektu.
+Vytvoří objekt zadaného identifikátoru CLSID a načte ukazatel rozhraní na tento objekt.
 
 ```
 STDMETHOD(CreateInstance)(LPUNKNOWN pUnkOuter, REFIID riid, void** ppvObj);
@@ -96,25 +96,25 @@ STDMETHOD(CreateInstance)(LPUNKNOWN pUnkOuter, REFIID riid, void** ppvObj);
 ### <a name="parameters"></a>Parametry
 
 *pUnkOuter*<br/>
-[in] Pokud se objekt vytváří jako součást agregace, pak *pUnkOuter* musí být vnější neznámá. V opačném případě *pUnkOuter* musí mít hodnotu NULL.
+pro Pokud se objekt vytváří jako součást agregace, pak musí být *pUnkOuter* vnějším neznámý. V opačném případě *pUnkOuter* musí mít hodnotu null.
 
 *riid*<br/>
-[in] Identifikátor IID požadované rozhraní. Pokud *pUnkOuter* je jiná než NULL, *riid* musí být `IID_IUnknown`.
+pro IID požadovaného rozhraní. Pokud *pUnkOuter* je jiný než null, musí být `IID_IUnknown`riid.
 
 *ppvObj*<br/>
-[out] Ukazatel na ukazatel rozhraní, který je identifikován *riid*. Pokud objekt nepodporuje toto rozhraní *ppvObj* nastaven na hodnotu NULL.
+mimo Ukazatel na ukazatel rozhraní identifikovaný *riid*. Pokud objekt nepodporuje toto rozhraní, je *ppvObj* nastaveno na hodnotu null.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Standardní hodnoty HRESULT.
+Standardní hodnota HRESULT.
 
 ### <a name="remarks"></a>Poznámky
 
-Vyžaduje, aby počítač k plně licencované. Úplné počítač licence neexistuje, kontaktujte [CreateInstanceLic](#createinstancelic).
+Vyžaduje, aby byl počítač plně licencován. Pokud úplná licence na počítač neexistuje, zavolejte [CreateInstanceLic](#createinstancelic).
 
-##  <a name="createinstancelic"></a>  CComClassFactory2::CreateInstanceLic
+##  <a name="createinstancelic"></a>CComClassFactory2::CreateInstanceLic
 
-Podobně jako [CreateInstance](#createinstance), s tím rozdílem, že `CreateInstanceLic` vyžaduje licenční klíč.
+Podobný funkci [CreateInstance](#createinstance), s výjimkou, že `CreateInstanceLic` vyžaduje licenční klíč.
 
 ```
 STDMETHOD(CreateInstanceLic)(
@@ -129,31 +129,31 @@ STDMETHOD(CreateInstanceLic)(
 ### <a name="parameters"></a>Parametry
 
 *pUnkOuter*<br/>
-[in] Pokud se objekt vytváří jako součást agregace, pak *pUnkOuter* musí být vnější neznámá. V opačném případě *pUnkOuter* musí mít hodnotu NULL.
+pro Pokud se objekt vytváří jako součást agregace, pak musí být *pUnkOuter* vnějším neznámý. V opačném případě *pUnkOuter* musí mít hodnotu null.
 
 *pUnkReserved*<br/>
-[in] Nepoužívá se. Musí mít hodnotu NULL.
+pro Nepoužívá se. Musí mít hodnotu NULL.
 
 *riid*<br/>
-[in] Identifikátor IID požadované rozhraní. Pokud *pUnkOuter* je jiná než NULL, *riid* musí být `IID_IUnknown`.
+pro IID požadovaného rozhraní. Pokud *pUnkOuter* je jiný než null, musí být `IID_IUnknown`riid.
 
 *bstrKey*<br/>
-[in] Za běhu licenční klíč dříve získány z volání `RequestLicKey`. Tento klíč se vyžaduje k vytvoření objektu.
+pro Licenční klíč za běhu dříve získaný z volání `RequestLicKey`. Tento klíč je nutný k vytvoření objektu.
 
 *ppvObject*<br/>
-[out] Ukazatel na ukazatel rozhraní určené *riid*. Pokud objekt nepodporuje toto rozhraní *ppvObject* nastaven na hodnotu NULL.
+mimo Ukazatel na ukazatel rozhraní určený parametrem *riid*. Pokud objekt nepodporuje toto rozhraní, je *ppvObject* nastaveno na hodnotu null.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Standardní hodnoty HRESULT.
+Standardní hodnota HRESULT.
 
 ### <a name="remarks"></a>Poznámky
 
-Můžete získat licenční klíč pomocí [RequestLicKey](#requestlickey). Chcete-li vytvořit objekt nelicencovaného počítači, je nutné volat `CreateInstanceLic`.
+Licenční klíč můžete získat pomocí [RequestLicKey](#requestlickey). Aby bylo možné vytvořit objekt na počítači, který není držitelem licence, je nutné `CreateInstanceLic`zavolat.
 
-##  <a name="getlicinfo"></a>  CComClassFactory2::GetLicInfo
+##  <a name="getlicinfo"></a>CComClassFactory2::GetLicInfo
 
-Vyplní [LICINFO](/windows/desktop/api/ocidl/ns-ocidl-taglicinfo) struktura s informacemi, které popisují objekt pro vytváření tříd v možnosti licencování.
+Vyplní strukturu [LICINFO](/windows/win32/api/ocidl/ns-ocidl-licinfo) informacemi, které popisují možnosti licencování továrny tříd.
 
 ```
 STDMETHOD(GetLicInfo)(LICINFO* pLicInfo);
@@ -162,19 +162,19 @@ STDMETHOD(GetLicInfo)(LICINFO* pLicInfo);
 ### <a name="parameters"></a>Parametry
 
 *pLicInfo*<br/>
-[out] Ukazatel `LICINFO` struktury.
+mimo Ukazatel na `LICINFO` strukturu.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Standardní hodnoty HRESULT.
+Standardní hodnota HRESULT.
 
 ### <a name="remarks"></a>Poznámky
 
-`fRuntimeKeyAvail` Člena této struktury určuje, zda, zadány licenční klíč, objekt pro vytváření tříd umožňuje objektů nelicencovaného počítači. *FLicVerified* člen označuje, zda licenci úplné počítače existuje.
+`fRuntimeKeyAvail` Člen této struktury označuje, zda je pro objekt pro vytváření tříd uděleno vytváření objektů na nelicencovaných počítačích. Člen *fLicVerified* označuje, zda existuje úplná licence počítače.
 
 ##  <a name="lockserver"></a>  CComClassFactory2::LockServer
 
-Inkrementuje a dekrementuje počet zámků modulů voláním `_Module::Lock` a `_Module::Unlock`v uvedeném pořadí.
+Zvýší a sníží počet zámků modulu voláním `_Module::Lock` a `_Module::Unlock`v uvedeném pořadí.
 
 ```
 STDMETHOD(LockServer)(BOOL fLock);
@@ -182,22 +182,22 @@ STDMETHOD(LockServer)(BOOL fLock);
 
 ### <a name="parameters"></a>Parametry
 
-*fLock*<br/>
-[in] Při hodnotě TRUE se zvýší počet zámků; v opačném případě je snížen počet zámků.
+*stád*<br/>
+pro Při hodnotě TRUE se zvýší počet zámků; v opačném případě se počet zámků sníží.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Standardní hodnoty HRESULT.
+Standardní hodnota HRESULT.
 
 ### <a name="remarks"></a>Poznámky
 
-`_Module` odkazuje na globální instanci [ccommodule –](../../atl/reference/ccommodule-class.md) nebo z něj odvozenou třídu.
+`_Module`odkazuje na globální instanci [CComModule](../../atl/reference/ccommodule-class.md) nebo z ní odvozené třídy.
 
-Volání `LockServer` umožňuje klientovi opřete se o objekt pro vytváření tříd tak, aby více objektů lze rychle vytvořit.
+Volání `LockServer` umožňuje klientovi umístit se do objektu pro vytváření tříd, aby bylo možné rychle vytvořit více objektů.
 
-##  <a name="requestlickey"></a>  CComClassFactory2::RequestLicKey
+##  <a name="requestlickey"></a>CComClassFactory2::RequestLicKey
 
-Vytvoří a vrátí licenční klíč, za předpokladu, že `fRuntimeKeyAvail` člena [LICINFO](/windows/desktop/api/ocidl/ns-ocidl-taglicinfo) struktura je TRUE.
+Vytvoří a vrátí licenční klíč za předpokladu, že `fRuntimeKeyAvail` člen struktury [LICINFO](/windows/win32/api/ocidl/ns-ocidl-licinfo) má hodnotu true.
 
 ```
 STDMETHOD(RequestLicKey)(DWORD dwReserved, BSTR* pbstrKey);
@@ -206,20 +206,20 @@ STDMETHOD(RequestLicKey)(DWORD dwReserved, BSTR* pbstrKey);
 ### <a name="parameters"></a>Parametry
 
 *dwReserved*<br/>
-[in] Nepoužívá se. Musí být nula.
+pro Nepoužívá se. Musí mít hodnotu nula.
 
 *pbstrKey*<br/>
-[out] Ukazatel na licenční klíč.
+mimo Ukazatel na licenční klíč.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Standardní hodnoty HRESULT.
+Standardní hodnota HRESULT.
 
 ### <a name="remarks"></a>Poznámky
 
-Licenční klíč se požaduje pro volání [CreateInstanceLic](#createinstancelic) pro vytvoření objektu nelicencovaného počítači. Pokud `fRuntimeKeyAvail` má hodnotu FALSE, pak objekty lze vytvořit pouze na plně licencovanou počítači.
+Pro volání [CreateInstanceLic](#createinstancelic) k vytvoření objektu na nelicencovaný počítač se vyžaduje licenční klíč. Pokud `fRuntimeKeyAvail` je hodnota false, pak lze objekty vytvořit pouze v plně licencovaném počítači.
 
-Volání [GetLicInfo](#getlicinfo) k načtení hodnoty z `fRuntimeKeyAvail`.
+Zavolejte [GetLicInfo](#getlicinfo) , aby se načetla hodnota `fRuntimeKeyAvail`.
 
 ## <a name="see-also"></a>Viz také:
 
@@ -227,4 +227,4 @@ Volání [GetLicInfo](#getlicinfo) k načtení hodnoty z `fRuntimeKeyAvail`.
 [CComClassFactorySingleton – třída](../../atl/reference/ccomclassfactorysingleton-class.md)<br/>
 [CComObjectRootEx – třída](../../atl/reference/ccomobjectrootex-class.md)<br/>
 [CComGlobalsThreadModel](atl-typedefs.md#ccomglobalsthreadmodel)<br/>
-[Přehled tříd](../../atl/atl-class-overview.md)
+[Přehled třídy](../../atl/atl-class-overview.md)

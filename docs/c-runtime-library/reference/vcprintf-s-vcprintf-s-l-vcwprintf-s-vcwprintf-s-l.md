@@ -43,19 +43,19 @@ helpviewer_keywords:
 - vtcprintf_s function
 - formatted text [C++]
 ms.assetid: 5a46d45a-30db-45df-9850-455cbdac5636
-ms.openlocfilehash: e27018d02c8fb77b0e2a1c02164d3b6d112448ab
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ccd346141db9f4974ee5f9300792260bf2a8ec72
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62365344"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69499318"
 ---
-# <a name="vcprintfs-vcprintfsl-vcwprintfs-vcwprintfsl"></a>_vcprintf_s, _vcprintf_s_l, _vcwprintf_s, _vcwprintf_s_l
+# <a name="_vcprintf_s-_vcprintf_s_l-_vcwprintf_s-_vcwprintf_s_l"></a>_vcprintf_s, _vcprintf_s_l, _vcwprintf_s, _vcwprintf_s_l
 
-Zapíše formátovaný výstup na konzoli pomocí ukazatele na seznam argumentů. Tyto verze [_vcprintf – _vcprintf_l –, _vcwprintf – _vcwprintf_l –](vcprintf-vcprintf-l-vcwprintf-vcwprintf-l.md) mají rozšíření zabezpečení popsaná v [funkce zabezpečení v CRT](../../c-runtime-library/security-features-in-the-crt.md).
+Zapíše formátovaný výstup do konzoly pomocí ukazatele na seznam argumentů. Tyto verze [_vcprintf, _vcprintf_l, _vcwprintf, _vcwprintf_l](vcprintf-vcprintf-l-vcwprintf-vcwprintf-l.md) mají vylepšení zabezpečení, jak je popsáno v [části funkce zabezpečení v CRT](../../c-runtime-library/security-features-in-the-crt.md).
 
 > [!IMPORTANT]
-> Toto rozhraní API nelze použít v aplikacích, které jsou spouštěny v modulu Windows Runtime. Další informace najdete v tématu [CRT funkce nejsou podporovány v aplikacích pro univerzální platformu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> Toto rozhraní API nelze použít v aplikacích, které jsou spouštěny v prostředí Windows Runtime. Další informace najdete v tématu [funkce CRT nejsou v aplikacích Univerzální platforma Windows podporovány](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -82,49 +82,49 @@ int _vcwprintf_s_l(
 
 ### <a name="parameters"></a>Parametry
 
-*Formát*<br/>
+*format*<br/>
 Specifikace formátu.
 
 *argptr*<br/>
 Ukazatel na seznam argumentů.
 
-*Národní prostředí*<br/>
+*jazyka*<br/>
 Národní prostředí, které se má použít
 
-Další informace najdete v tématu [syntaxe specifikace formátu: funkce printf a wprintf](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md).
+Další informace najdete v tématu [syntaxe specifikace formátu: printf a wprintf Functions](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md).
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Počet napsaných znaků, nebo zápornou hodnotu, pokud dojde k chybě výstupu.
+Počet zapsaných znaků nebo záporná hodnota, pokud dojde k chybě výstupu.
 
-Méně bezpečné verze těchto funkcí, například pokud *formátu* je ukazatel s hodnotou null, je vyvolána obslužná rutina neplatného parametru, jak je popsáno v [Parameter Validation](../../c-runtime-library/parameter-validation.md). Navíc na rozdíl od méně bezpečné verze těchto funkcí Pokud *formátu* neurčuje platný formát je generována výjimka neplatného parametru. Pokud smí provádění pokračovat, tyto funkce vrátí chybový kód a nastaví **errno** na tento chybový kód. Výchozí chybový kód je **EINVAL** Pokud konkrétní hodnotu nevztahuje.
+Podobně jako méně bezpečné verze těchto funkcí, pokud je *Format* ukazatel s hodnotou null, je vyvolána obslužná rutina neplatného parametru, jak je popsáno v tématu [ověřování parametru](../../c-runtime-library/parameter-validation.md). Kromě toho na rozdíl od méně zabezpečených verzí těchto funkcí, pokud *Format* neurčuje platný formát, je vygenerována neplatná výjimka parametru. Pokud provádění může pokračovat, vrátí tyto funkce kód chyby a nastaví **errno** na tento kód chyby. Výchozí kód chyby je **EINVAL** , pokud neplatí konkrétnější hodnota.
 
 ## <a name="remarks"></a>Poznámky
 
-Každá z těchto funkcí bere ukazatel na seznam argumentů a potom formátuje a zapisuje poskytnutá data do konzoly. **_vcwprintf_s –** je verze širokého znaku **_vcprintf_s –**. Bere jako argument řetězec širokého znaku.
+Každá z těchto funkcí bere ukazatel na seznam argumentů a potom formátuje a zapisuje daná data do konzoly. **_vcwprintf_s** je verze **_vcprintf_s**pro nejrůznější znaky. Jako argument přijímá řetězec s velkým počtem znaků.
 
-Verze těchto funkcí, které mají **_l** přípona jsou stejné s tím rozdílem, že používají Předaný parametr národního prostředí namísto aktuálního národního prostředí.
+Verze těchto funkcí, které mají příponu **_l** , jsou stejné s tím rozdílem, že používají předaný parametr národního prostředí namísto aktuálního národního prostředí.
 
 > [!IMPORTANT]
-> Ujistěte se, že *formátu* není uživatelem definovaný řetězec. Další informace najdete v tématu [předcházení přetečení vyrovnávací paměti](/windows/desktop/SecBP/avoiding-buffer-overruns).
+> Ujistěte se, že *Formát* není uživatelem definovaný řetězec. Další informace najdete v tématu [předcházení přetečení vyrovnávací paměti](/windows/win32/SecBP/avoiding-buffer-overruns).
 
 ### <a name="generic-text-routine-mappings"></a>Mapování rutin obecného textu
 
-|Rutina TCHAR.H|_UNICODE a _MBCS nejsou definovány|_MBCS definováno|_UNICODE definováno|
+|Rutina TCHAR.H|_UNICODE & _MBCS nejsou definovány.|_MBCS definováno|_UNICODE definováno|
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_vtcprintf_s**|**_vcprintf_s**|**_vcprintf_s**|**_vcwprintf_s**|
 |**_vtcprintf_s_l**|**_vcprintf_s_l**|**_vcprintf_s_l**|**_vcwprintf_s_l**|
 
 ## <a name="requirements"></a>Požadavky
 
-|Rutina|Požadovaný hlavičkový soubor|Volitelná záhlaví|
+|Rutina|Požadovaný hlavičkový soubor|Volitelné hlavičky|
 |-------------|---------------------|----------------------|
-|**_vcprintf_s**, **_vcprintf_s_l**|\<conio.h > a \<stdarg.h >|\<varargs.h>*|
-|**_vcwprintf_s**, **_vcwprintf_s_l**|\<conio.h > nebo \<wchar.h >, a \<stdarg.h >|\<varargs.h>*|
+|**_vcprintf_s**, **_vcprintf_s_l**|\<CONIO. h > a \<STDARG. h >|\<varargs.h>*|
+|**_vcwprintf_s**, **_vcwprintf_s_l**|\<CONIO. h > nebo \<WCHAR. h > a \<STDARG. h >|\<varargs.h>*|
 
-\* Vyžaduje se pro kompatibility systému UNIX V.
+\*Vyžaduje se pro kompatibilitu se systémem UNIX V.
 
-Další informace o kompatibilitě, naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Příklad
 
@@ -159,7 +159,7 @@ int main()
 
 ## <a name="see-also"></a>Viz také:
 
-[Stream vstupně-výstupních operací](../../c-runtime-library/stream-i-o.md)<br/>
+[Vstup/výstup datového proudu](../../c-runtime-library/stream-i-o.md)<br/>
 [vprintf – funkce](../../c-runtime-library/vprintf-functions.md)<br/>
 [_cprintf, _cprintf_l, _cwprintf, _cwprintf_l](cprintf-cprintf-l-cwprintf-cwprintf-l.md)<br/>
 [fprintf, _fprintf_l, fwprintf, _fwprintf_l](fprintf-fprintf-l-fwprintf-fwprintf-l.md)<br/>

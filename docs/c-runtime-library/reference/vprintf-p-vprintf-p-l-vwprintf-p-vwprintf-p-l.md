@@ -44,16 +44,16 @@ helpviewer_keywords:
 - vwprintf_p_l function
 - formatted text [C++]
 ms.assetid: 3f99bde3-c891-493d-908f-30559c421058
-ms.openlocfilehash: 266df8c033fc9d1c8459aff9f2b95771947d88d1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8b41c7307ccdbbec4cd16c662d1d123642c339f8
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62364698"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69499188"
 ---
-# <a name="vprintfp-vprintfpl-vwprintfp-vwprintfpl"></a>_vprintf_p, _vprintf_p_l, _vwprintf_p, _vwprintf_p_l
+# <a name="_vprintf_p-_vprintf_p_l-_vwprintf_p-_vwprintf_p_l"></a>_vprintf_p, _vprintf_p_l, _vwprintf_p, _vwprintf_p_l
 
-Zapíše formátovaný výstup pomocí ukazatele na seznam argumentů a povolí určení pořadí, ve kterém jsou argumenty použity.
+Zapisuje formátovaný výstup pomocí ukazatele na seznam argumentů a umožňuje zadání pořadí, ve kterém jsou argumenty použity.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -80,55 +80,55 @@ int _vwprintf_p_l(
 
 ### <a name="parameters"></a>Parametry
 
-*Formát*<br/>
+*format*<br/>
 Specifikace formátu.
 
 *argptr*<br/>
 Ukazatel na seznam argumentů.
 
-*Národní prostředí*<br/>
+*jazyka*<br/>
 Národní prostředí, které se má použít
 
 Další informace najdete v tématu [specifikace formátu](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md).
 
 ## <a name="return-value"></a>Návratová hodnota
 
-**_vprintf_p –** a **_vwprintf_p –** vrátí počet napsaných znaků, nikoli včetně ukončujícího znaku null, nebo zápornou hodnotu, pokud dojde k chybě výstupu.
+**_vprintf_p** a **_vwprintf_p** vrátí počet zapsaných znaků, včetně ukončujícího znaku null, nebo zápornou hodnotu, pokud dojde k chybě výstupu.
 
 ## <a name="remarks"></a>Poznámky
 
-Každá z těchto funkcí bere ukazatel na seznam argumentů a potom formátuje a zapisuje poskytnutá data do **stdout**. Tyto funkce se liší od **vprintf_s –** a **vwprintf_s –** pouze v tom, že podporují možnost určit pořadí, ve kterém jsou argumenty použity. Další informace najdete v tématu [printf_p – poziční parametry](../../c-runtime-library/printf-p-positional-parameters.md).
+Každá z těchto funkcí bere ukazatel na seznam argumentů a potom formátuje a zapisuje daná data do **stdout**. Tyto funkce se liší od **vprintf_s** a **vwprintf_s** pouze v tom, že podporují možnost zadat pořadí, ve kterém jsou argumenty použity. Další informace najdete v tématu [Printf_p pozičních parametrů](../../c-runtime-library/printf-p-positional-parameters.md).
 
-**_vwprintf_p –** je verze širokého znaku **_vprintf_p –**; tyto dvě funkce se chovají stejně jako v případě, že datový proud je otevřen v režimu ANSI. **_vprintf_p –** aktuálně nepodporuje výstup do datového proudu UNICODE.
+**_vwprintf_p** je **_vprintf_p**verze s velkým znakem; Tyto dvě funkce se chovají stejně, pokud je datový proud otevřen v režimu ANSI. **_vprintf_p** v současné době nepodporuje výstup do datového proudu Unicode.
 
-Verze těchto funkcí s **_l** přípona jsou stejné s tím rozdílem, že používají parametr národního prostředí předaného namísto aktuálního národní prostředí pro vlákno.
+Verze těchto funkcí s příponou **_l** jsou stejné s tím rozdílem, že používají předaný parametr národního prostředí namísto aktuálního národního prostředí vlákna.
 
 > [!IMPORTANT]
-> Ujistěte se, že *formátu* není uživatelem definovaný řetězec. Další informace najdete v tématu [předcházení přetečení vyrovnávací paměti](/windows/desktop/SecBP/avoiding-buffer-overruns).
+> Ujistěte se, že *Formát* není uživatelem definovaný řetězec. Další informace najdete v tématu [předcházení přetečení vyrovnávací paměti](/windows/win32/SecBP/avoiding-buffer-overruns).
 
-Pokud *formátu* je ukazatel s hodnotou null, nebo pokud řetězec formátu obsahuje neplatné formátovací znaky, vyvolán obslužnou rutinu neplatného parametru, jak je popsáno v [Parameter Validation](../../c-runtime-library/parameter-validation.md). Pokud smí provádění pokračovat, vrátí funkce hodnotu -1 a nastaví **errno** k **EINVAL**.
+Pokud je *Formát* ukazatel s hodnotou null, nebo pokud řetězec formátu obsahuje neplatné formátovací znaky, je vyvolána obslužná rutina neplatného parametru, jak je popsáno v tématu [ověřování parametru](../../c-runtime-library/parameter-validation.md). Pokud provádění může pokračovat, vrátí funkce hodnotu-1 a nastaví **errno** na **EINVAL**.
 
 ### <a name="generic-text-routine-mappings"></a>Mapování rutin obecného textu
 
-|Rutina TCHAR.H|_UNICODE a _MBCS nejsou definovány|_MBCS definováno|_UNICODE definováno|
+|Rutina TCHAR.H|_UNICODE & _MBCS nejsou definovány.|_MBCS definováno|_UNICODE definováno|
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_vtprintf_p**|**_vprintf_p**|**_vprintf_p**|**_vwprintf_p**|
 |**_vtprintf_p_l**|**_vprintf_p_l**|**_vprintf_p_l**|**_vwprintf_p_l**|
 
 ## <a name="requirements"></a>Požadavky
 
-|Rutina|Požadovaný hlavičkový soubor|Volitelná záhlaví|
+|Rutina|Požadovaný hlavičkový soubor|Volitelné hlavičky|
 |-------------|---------------------|----------------------|
-|**_vprintf_p**, **_vprintf_p_l**|\<stdio.h > a \<stdarg.h >|\<varargs.h>*|
-|**_vwprintf_p**, **_vwprintf_p_l**|\<stdio.h > nebo \<wchar.h >, a \<stdarg.h >|\<varargs.h>*|
+|**_vprintf_p**, **_vprintf_p_l**|\<stdio. h > a \<STDARG. h >|\<varargs.h>*|
+|**_vwprintf_p**, **_vwprintf_p_l**|\<stdio. h > nebo \<WCHAR. h > a \<STDARG. h >|\<varargs.h>*|
 
-\* Vyžaduje se pro kompatibility systému UNIX V.
+\*Vyžaduje se pro kompatibilitu se systémem UNIX V.
 
-Konzole není podporována v aplikacích pro univerzální platformu Windows (UPW). Standardní datový proud popisovačů, které jsou spojeny s konzolou, **stdin**, **stdout**, a **stderr**, musí být přesměrován před funkcí jazyka C za běhu můžete použít v aplikacích pro UWP . Další informace o kompatibilitě, naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
+Konzola není v aplikacích Univerzální platforma Windows (UWP) podporována. Standardní popisovače streamů, které jsou spojeny s konzolou, **stdin**, **stdout**a **stderr**, musí být přesměrované před tím, než je funkce modulu runtime jazyka C můžou použít v aplikacích pro UWP. Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Viz také:
 
-[Stream vstupně-výstupních operací](../../c-runtime-library/stream-i-o.md)<br/>
+[Vstup/výstup datového proudu](../../c-runtime-library/stream-i-o.md)<br/>
 [vprintf – funkce](../../c-runtime-library/vprintf-functions.md)<br/>
 [_fprintf_p, _fprintf_p_l, _fwprintf_p, _fwprintf_p_l](fprintf-p-fprintf-p-l-fwprintf-p-fwprintf-p-l.md)<br/>
 [_printf_p, _printf_p_l, _wprintf_p, _wprintf_p_l](printf-p-printf-p-l-wprintf-p-wprintf-p-l.md)<br/>

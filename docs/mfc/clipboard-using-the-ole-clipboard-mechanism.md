@@ -8,40 +8,40 @@ helpviewer_keywords:
 - OLE Clipboard, formats
 - formats [MFC], Clipboard for OLE
 ms.assetid: 229cc610-5bb1-435e-bd20-2c8b9964d1af
-ms.openlocfilehash: d8ef93b306c0968adf2c23c841c792d2f7af5de3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0f2c10f4a88b723d1ab9f4bb0ca903987359c9fd
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62327038"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69508905"
 ---
 # <a name="clipboard-using-the-ole-clipboard-mechanism"></a>Schránka: Použití mechanismu schránky OLE
 
-OLE používá standardní formáty a některé specifické pro OLE – formáty pro přenos dat do schránky.
+Technologie OLE používá pro přenos dat prostřednictvím schránky standardní formáty a některé formáty specifické pro OLE.
 
-Při vyjmutí a kopírování dat z aplikace, jsou data uložena do schránky, který se má použít později v operacích vložit. Tato data jsou v různých formátech. Když uživatel vybere vložení dat ze schránky, aplikace můžete zvolit, které z těchto formátů používat. Aplikace by měly být zapsány vybrat formát, který obsahuje informace o většině, pokud uživatel konkrétně požádá o určitém formátu, pomocí Vložit jinak. Než budete pokračovat, budete chtít přečíst [datové objekty a zdroje dat (OLE)](../mfc/data-objects-and-data-sources-ole.md) témata. Popisují základní informace o jak datové přenosy práce a jak implementovat ve svých aplikacích.
+Při vyjmutí nebo zkopírování dat z aplikace jsou data uložena ve schránce pro pozdější použití v rámci operací vložení. Tato data jsou v nejrůznějších formátech. Když se uživatel rozhodne vkládat data ze schránky, aplikace může zvolit, který z těchto formátů se má použít. Aplikace by měla být zapsána pro výběr formátu, který poskytuje nejvíc informací, pokud se uživatel výslovně nezeptá na určitý formát, a to pomocí příkazu Vložit jinak. Než budete pokračovat, možná budete chtít přečíst témata [datové objekty a zdroje dat (OLE)](../mfc/data-objects-and-data-sources-ole.md) . Popisují základy přenosu dat a způsob jejich implementace ve vašich aplikacích.
 
-Windows definuje počet standardní formáty, které lze použít pro přenos dat do schránky. Patří mezi ně metasoubory, text, rastrových obrázků a dalších. OLE definuje počet OLE konkrétní formáty, také. Pro aplikace, které potřebujete podrobnější informace než určené pomocí těchto standardní formáty je vhodné zaregistrovat svoje vlastní vlastní formáty schránky. Použití funkce rozhraní Win32 API [RegisterClipboardFormat](/windows/desktop/api/winuser/nf-winuser-registerclipboardformata) provedete to tak.
+Systém Windows definuje počet standardních formátů, které lze použít k přenosu dat ze schránky. Mezi ně patří metasoubory, text, bitmapy a další. OLE definuje také více formátů specifických pro OLE. Pro aplikace, které vyžadují více podrobností než tyto standardní formáty, je vhodné registrovat vlastní formáty schránky. K tomu použijte funkci Win32 API [RegisterClipboardFormat](/windows/win32/api/winuser/nf-winuser-registerclipboardformatw) .
 
-Například aplikace Microsoft Excel zaregistruje vlastního formátu pro tabulky. Tento formát přenáší mnohem víc informací, než je třeba, nemá rastrový obrázek. Když tato data budou vložena do aplikace, který podporuje formát tabulky, vzorců a hodnoty z tabulky se zachovají a je možné aktualizovat v případě potřeby. Aplikace Microsoft Excel také vloží data do schránky ve formátech, tak, že je můžete vložit jako položky OLE. Libovolném kontejneru OLE dokumentu můžete vložit tyto informace jako vloženou položku. Tato vložená položka lze změnit pomocí aplikace Microsoft Excel. Schránka také obsahuje jednoduché rastrový obrázek vybranou oblast na listu. To může také ho šlo vložit do dokumentu kontejnery OLE nebo do editorů rastrový obrázek, jako je Malování. V případě rastrový obrázek ale neexistuje žádný způsob, jak pracovat s daty jako tabulku.
+Například Microsoft Excel registruje vlastní formát pro tabulky. Tento formát přináší mnohem více informací, než například rastrový obrázek. Když se tato data vloží do aplikace podporující formát tabulky, všechny vzorce a hodnoty z tabulky se zachovají a v případě potřeby je můžete aktualizovat. Aplikace Microsoft Excel také vloží data ze schránky do formátu tak, aby mohla být vložena jako položka OLE. Libovolný kontejner dokumentů OLE může vložit tyto informace jako vloženou položku. Tuto vloženou položku lze změnit pomocí aplikace Microsoft Excel. Schránka obsahuje také jednoduchý rastrový obrázek obrázku vybraného rozsahu v tabulce. To lze také vložit do kontejnerů dokumentů OLE nebo do editorů rastrových obrázků, jako je například Malování. V případě rastrového obrázku však neexistuje způsob, jak manipulovat s daty jako s tabulkou.
 
-K načtení maximální množství informací ze schránky, by měla aplikace zkontrolujte tyto vlastní formáty před vložením dat ze schránky.
+Chcete-li načíst maximální množství informací ze schránky, aplikace by měly před vložením dat ze schránky vyhledat tyto vlastní formáty.
 
-Například pokud chcete povolit příkaz Vyjmout, můžete například napsat obslužnou rutinu přibližně takto:
+Chcete-li například povolit příkaz Vyjmout, můžete napsat obslužnou rutinu podobný následujícímu:
 
 [!code-cpp[NVC_MFCListView#3](../atl/reference/codesnippet/cpp/clipboard-using-the-ole-clipboard-mechanism_1.cpp)]
 
-## <a name="what-do-you-want-to-know-more-about"></a>Co chcete zjistit více informací
+## <a name="what-do-you-want-to-know-more-about"></a>K čemu chcete získat další informace
 
 - [Kopírování a vkládání dat](../mfc/clipboard-copying-and-pasting-data.md)
 
-- [Přidání dalších formátů](../mfc/clipboard-adding-other-formats.md)
+- [Přidávání dalších formátů](../mfc/clipboard-adding-other-formats.md)
 
-- [Použití schránky Windows](../mfc/clipboard-using-the-windows-clipboard.md)
+- [Použití schránky systému Windows](../mfc/clipboard-using-the-windows-clipboard.md)
 
-- [OLE](../mfc/ole-background.md)
+- [OBJEKTŮ](../mfc/ole-background.md)
 
-- [Objekty a data zdroje dat OLE a jednotné přenosu dat](../mfc/data-objects-and-data-sources-ole.md)
+- [Datové objekty OLE a zdroje dat a jednotný přenos dat](../mfc/data-objects-and-data-sources-ole.md)
 
 ## <a name="see-also"></a>Viz také:
 

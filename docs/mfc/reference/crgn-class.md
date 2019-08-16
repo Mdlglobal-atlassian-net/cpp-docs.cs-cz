@@ -46,12 +46,12 @@ helpviewer_keywords:
 - CRgn [MFC], RectInRegion
 - CRgn [MFC], SetRectRgn
 ms.assetid: d904da84-76aa-481e-8780-b09485f49e64
-ms.openlocfilehash: 66721f34a8ac2b6dac6addcfa04a88b46a37ee60
-ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
+ms.openlocfilehash: 34dcc618f603302c5598e42588ffad78d61ee222
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68916833"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69502716"
 ---
 # <a name="crgn-class"></a>CRgn – třída
 
@@ -78,13 +78,13 @@ class CRgn : public CGdiObject
 |[CRgn::CombineRgn](#combinergn)|Nastaví objekt tak, aby byl ekvivalentní sjednocení dvou zadaných `CRgn` objektů. `CRgn`|
 |[CRgn::CopyRgn](#copyrgn)|Nastaví objekt tak, aby byl kopií zadaného `CRgn` objektu. `CRgn`|
 |[CRgn::CreateEllipticRgn](#createellipticrgn)|`CRgn` Inicializuje objekt s eliptickou oblastí.|
-|[CRgn::CreateEllipticRgnIndirect](#createellipticrgnindirect)|Inicializuje objekt s eliptickou oblastí definovanou strukturou [Rect.](/windows/desktop/api/windef/ns-windef-tagrect) `CRgn`|
+|[CRgn::CreateEllipticRgnIndirect](#createellipticrgnindirect)|Inicializuje objekt s eliptickou oblastí definovanou strukturou [Rect.](/windows/win32/api/windef/ns-windef-tagrect) `CRgn`|
 |[CRgn::CreateFromData](#createfromdata)|Vytvoří oblast z dané oblasti a dat transformace.|
 |[CRgn::CreateFromPath](#createfrompath)|Vytvoří oblast z cesty, která je vybrána v daném kontextu zařízení.|
 |[CRgn::CreatePolygonRgn](#createpolygonrgn)|`CRgn` Inicializuje objekt pomocí mnohoúhelníkové oblasti. Systém automaticky uzavře mnohoúhelník, pokud je to nutné, kreslením čáry z posledního vrcholu vrcholu do prvního.|
 |[CRgn::CreatePolyPolygonRgn](#createpolypolygonrgn)|`CRgn` Inicializuje objekt s oblastí skládající se z řady uzavřených mnohoúhelníků. Mnohoúhelníky mohou být nesouvislé nebo se mohou překrývat.|
 |[CRgn::CreateRectRgn](#createrectrgn)|`CRgn` Inicializuje objekt s obdélníkovou oblastí.|
-|[CRgn::CreateRectRgnIndirect](#createrectrgnindirect)|Inicializuje objekt s obdélníkovou oblastí definovanou strukturou [Rect.](/windows/desktop/api/windef/ns-windef-tagrect) `CRgn`|
+|[CRgn::CreateRectRgnIndirect](#createrectrgnindirect)|Inicializuje objekt s obdélníkovou oblastí definovanou pomocí zobrazi [Rect.](/windows/win32/api/windef/ns-windef-rect) `CRgn`|
 |[CRgn::CreateRoundRectRgn](#createroundrectrgn)|`CRgn` Inicializuje objekt s obdélníkovou oblastí pomocí zaoblených rohů.|
 |[CRgn::EqualRgn](#equalrgn)|Zkontroluje dva `CRgn` objekty a určí, zda jsou ekvivalentní.|
 |[CRgn::FromHandle](#fromhandle)|Vrací ukazatel na `CRgn` objekt, pokud je předána obslužná rutina oblasti systému Windows.|
@@ -297,13 +297,13 @@ BOOL CreateFromData(
 ### <a name="parameters"></a>Parametry
 
 *lpXForm*<br/>
-Odkazuje na strukturu dat [Xform –](/windows/desktop/api/wingdi/ns-wingdi-tagxform) , která definuje transformaci, která má být provedena v oblasti. Pokud je tento ukazatel NULL, použije se transformace identity.
+Odkazuje na strukturu ATA [Xform –](/windows/win32/api/wingdi/ns-wingdi-xform), která definuje transformaci, která má být provedena v oblasti. Pokud je tento ukazatel NULL, použije se transformace identity.
 
 *nCount*<br/>
 Určuje počet bajtů, na které odkazuje *pRgnData*.
 
 *pRgnData*<br/>
-Odkazuje na strukturu dat [rgnData –](/windows/desktop/api/wingdi/ns-wingdi-rgndata) , která obsahuje data oblasti.
+Odkazuje na strukturu dat [rgnData –](/windows/win32/api/wingdi/ns-wingdi-rgndata) , která obsahuje data oblasti.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -631,7 +631,7 @@ int GetRegionData(
 ### <a name="parameters"></a>Parametry
 
 *lpRgnData*<br/>
-Odkazuje na strukturu dat [rgnData –](/windows/desktop/api/wingdi/ns-wingdi-rgndata) , která obdrží informace. Pokud má tento parametr hodnotu NULL, vrácená hodnota obsahuje počet bajtů potřebných pro data oblasti.
+Odkazuje na strukturu dat [rgnData –](/windows/win32/api/wingdi/ns-wingdi-rgndata) , která obdrží informace. Pokud má tento parametr hodnotu NULL, vrácená hodnota obsahuje počet bajtů potřebných pro data oblasti.
 
 *nCount*<br/>
 Určuje velikost *lpRgnData* vyrovnávací paměti (v bajtech).
@@ -746,7 +746,7 @@ Je-li to úspěšné, popisovač objektu GDI systému Windows reprezentovaný `C
 
 Tento operátor je operátor přetypování, který podporuje přímé použití objektu HRGN.
 
-Další informace o použití grafických objektů naleznete v článku [grafické objekty](/windows/desktop/gdi/graphic-objects) v Windows SDK.
+Další informace o použití grafických objektů naleznete v článku [grafické objekty](/windows/win32/gdi/graphic-objects) v Windows SDK.
 
 ##  <a name="ptinregion"></a>CRgn::P tInRegion
 

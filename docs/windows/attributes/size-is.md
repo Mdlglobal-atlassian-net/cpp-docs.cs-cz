@@ -1,21 +1,21 @@
 ---
-title: size_is (C++ atributů COM)
+title: size_is (C++ atribut com)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.size_is
 helpviewer_keywords:
 - size_is attribute
 ms.assetid: 70192d09-f6c5-4d52-b3fe-303f8cb10aa5
-ms.openlocfilehash: a7b990a708bafba78c9dc4153315f8b7b20351ba
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 504f1bf72b8ffa15e8df50bb00c86ef909688f1e
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62407325"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69514040"
 ---
-# <a name="sizeis"></a>size_is
+# <a name="size_is"></a>size_is
 
-Zadejte velikost paměti přidělené pro velikosti ukazatele, velikosti ukazatele na velikosti ukazatele a single - nebo vícedimenzionální pole.
+Určete velikost paměti přidělené pro velikosti ukazatelů, nastavte velikosti ukazatelů na velikost ukazatelů a jedno nebo multidimenzionální pole.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -25,29 +25,29 @@ Zadejte velikost paměti přidělené pro velikosti ukazatele, velikosti ukazate
 
 ### <a name="parameters"></a>Parametry
 
-*Výraz*<br/>
-Velikost paměti přidělené pro velikosti ukazatele.
+*vyjádření*<br/>
+Velikost paměti přidělené pro velikosti ukazatelů.
 
 ## <a name="remarks"></a>Poznámky
 
-**Size_is** C++ atribut má stejné funkce jako [size_is](/windows/desktop/Midl/size-is) atribut MIDL.
+Atribut **size_is** C++ má stejné funkce jako atribut [size_is](/windows/win32/Midl/size-is) MIDL.
 
 ## <a name="example"></a>Příklad
 
-Podívejte se na příklad pro [first_is –](first-is.md) ukázku toho, jak zadat část pole.
+Ukázku, jak určit oddíl pole, najdete v příkladu pro [first_is](first-is.md) .
 
 ## <a name="requirements"></a>Požadavky
 
-### <a name="attribute-context"></a>Atribut kontextu
+### <a name="attribute-context"></a>Kontext atributu
 
 |||
 |-|-|
-|**Platí pro**|Pole v **struktura** nebo **sjednocení**, rozhraní parametr, rozhraní – metoda|
-|**Opakovatelné**|Ne|
-|**Vyžadované atributy**|Žádný|
+|**Platí pro**|Pole v **struktuře** nebo **sjednocení**, parametr rozhraní, metoda rozhraní|
+|**REPEATABLE**|Ne|
+|**Požadované atributy**|Žádné|
 |**Neplatné atributy**|`max_is`|
 
-Další informace o kontexty atributů najdete v tématu [kontexty atributů](cpp-attributes-com-net.md#contexts).
+Další informace o kontextech atributů naleznete v tématu kontexty [atributů](cpp-attributes-com-net.md#contexts).
 
 ## <a name="see-also"></a>Viz také:
 

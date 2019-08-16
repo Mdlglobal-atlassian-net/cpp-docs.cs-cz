@@ -1,5 +1,5 @@
 ---
-title: ATL – třídy bodu připojení
+title: Třídy přípojných bodů knihovny ATL
 ms.date: 11/04/2016
 helpviewer_keywords:
 - CFirePropNotifyEvent class, connection point classes
@@ -9,33 +9,33 @@ helpviewer_keywords:
 - CFirePropNotifyEvent class
 - CComUnkArray class, connection point classes
 ms.assetid: 9582ba71-7ace-4df4-9c9b-1b0636953efc
-ms.openlocfilehash: f3794b5c9e4f6297cca6611929c75d0b0133557e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8644fc087d7f0a651724c40d2868e96c9b6ec96a
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62252227"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69491826"
 ---
-# <a name="atl-connection-point-classes"></a>ATL – třídy bodu připojení
+# <a name="atl-connection-point-classes"></a>Třídy přípojných bodů knihovny ATL
 
-ATL – používá následující třídy pro podporu spojovací body:
+ATL používá následující třídy pro podporu přípojných bodů:
 
-- [IConnectionPointImpl](../atl/reference/iconnectionpointimpl-class.md) implementuje bod připojení. Identifikátor IID rozhraní odchozí, kterou představuje se předá jako parametr šablony.
+- [IConnectionPointImpl](../atl/reference/iconnectionpointimpl-class.md) implementuje bod připojení. IID odchozího rozhraní, které představuje, je předán jako parametr šablony.
 
-- [IConnectionPointContainerImpl](../atl/reference/iconnectionpointcontainerimpl-class.md) implementuje kontejner bodu připojení a spravují seznam `IConnectionPointImpl` objekty.
+- [IConnectionPointContainerImpl](../atl/reference/iconnectionpointcontainerimpl-class.md) implementuje kontejner spojovacího bodu a spravuje seznam `IConnectionPointImpl` objektů.
 
-- [Ipropertynotifysinkcp –](../atl/reference/ipropertynotifysinkcp-class.md) implementuje představující bod připojení [ipropertynotifysink –](/windows/desktop/api/ocidl/nn-ocidl-ipropertynotifysink) rozhraní.
+- [IPropertyNotifySinkCP](../atl/reference/ipropertynotifysinkcp-class.md) implementuje bod připojení představující rozhraní [IPropertyNotifySink](/windows/win32/api/ocidl/nn-ocidl-ipropertynotifysink) .
 
-- [Ccomdynamicunkarray –](../atl/reference/ccomdynamicunkarray-class.md) spravuje libovolný počet připojení mezi bodem připojení a jeho jímky.
+- [CComDynamicUnkArray](../atl/reference/ccomdynamicunkarray-class.md) spravuje libovolný počet připojení mezi spojovacím bodem a jeho jímkami.
 
-- [Ccomunkarray –](../atl/reference/ccomunkarray-class.md) spravuje předdefinovaném počtu připojení uvedená v parametru šablony.
+- [CComUnkArray](../atl/reference/ccomunkarray-class.md) spravuje předdefinovaný počet připojení, která jsou určena parametrem šablony.
 
-- [Cfirepropnotifyevent –](../atl/reference/cfirepropnotifyevent-class.md) upozorní jímkou klienta, který na vlastnost objektu došlo ke změně nebo je změnit.
+- [CFirePropNotifyEvent](../atl/reference/cfirepropnotifyevent-class.md) upozorní obslužnou jímku klienta, že vlastnost objektu se změnila nebo se má změnit.
 
-- [Idispeventimpl –](../atl/reference/idispeventimpl-class.md) poskytuje podporu pro spojovací body pro objekt knihovny ATL modelu COM. S mapou jímky událostí, který je poskytován váš objekt modelu COM jsou mapovány tyto body připojení.
+- [IDispEventImpl](../atl/reference/idispeventimpl-class.md) poskytuje podporu pro body připojení pro objekt ATL modelu COM. Tyto spojovací body jsou namapovány pomocí mapy jímky událostí, která je k dispozici v objektu COM.
 
-- [Idispeventsimpleimpl –](../atl/reference/idispeventsimpleimpl-class.md) funguje ve spojení s mapou jímky událostí ve své třídě pro směrování událostí na odpovídající obslužné rutiny.
+- [IDispEventSimpleImpl](../atl/reference/idispeventsimpleimpl-class.md) pracuje ve spojení s mapou jímky událostí ve vaší třídě a směruje události do příslušné funkce obslužné rutiny.
 
 ## <a name="see-also"></a>Viz také:
 
-[Spojovací bod](../atl/atl-connection-points.md)
+[Bod připojení](../atl/atl-connection-points.md)

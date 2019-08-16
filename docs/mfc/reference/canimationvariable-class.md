@@ -1,5 +1,5 @@
 ---
-title: Canimationvariable – třída
+title: CAnimationVariable – třída
 ms.date: 03/27/2019
 f1_keywords:
 - CAnimationVariable
@@ -44,14 +44,14 @@ helpviewer_keywords:
 - CAnimationVariable [MFC], m_pParentObject
 - CAnimationVariable [MFC], m_variable
 ms.assetid: 506e697e-31a8-4033-a27e-292f4d7b42d9
-ms.openlocfilehash: 42fd3ddc504e85ba3f69588bee54c6540b628129
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b6767ed42d66aff467ef36bd2a7b5234ad181ced
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62338269"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69507542"
 ---
-# <a name="canimationvariable-class"></a>Canimationvariable – třída
+# <a name="canimationvariable-class"></a>CAnimationVariable – třída
 
 Představuje proměnnou animace.
 
@@ -65,52 +65,52 @@ class CAnimationVariable;
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CAnimationVariable::CAnimationVariable](#canimationvariable)|Vytvoří objekt proměnné animace.|
-|[CAnimationVariable::~CAnimationVariable](#_dtorcanimationvariable)|Destruktor. Volá se, když se likviduje canimationvariable – objektu.|
+|[CAnimationVariable:: ~ CAnimationVariable](#_dtorcanimationvariable)|Destruktor. Volána, když je zničen objekt CAnimationVariable.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CAnimationVariable::AddTransition](#addtransition)|Přidá přechod.|
-|[CAnimationVariable::ApplyTransitions](#applytransitions)|Přidá přechody ze seznamu interní do scénáře.|
-|[CAnimationVariable::ClearTransitions](#cleartransitions)|Vymaže přechodů.|
-|[CAnimationVariable::Create](#create)|Vytvoří základní objekt modelu COM proměnné animace.|
-|[CAnimationVariable::CreateTransitions](#createtransitions)|Vytvoří všechny přechody u této proměnné animace.|
-|[CAnimationVariable::EnableIntegerValueChangedEvent](#enableintegervaluechangedevent)|Povolí nebo zakáže IntegerValueChanged událostí.|
-|[CAnimationVariable::EnableValueChangedEvent](#enablevaluechangedevent)|Povolí nebo zakáže ValueChanged události.|
-|[CAnimationVariable::GetDefaultValue](#getdefaultvalue)|Vrátí výchozí hodnotu.|
+|[CAnimationVariable::ApplyTransitions](#applytransitions)|Přidá přechody z interního seznamu do scénáře.|
+|[CAnimationVariable::ClearTransitions](#cleartransitions)|Vymaže přechody.|
+|[CAnimationVariable:: Create](#create)|Vytvoří základní objekt proměnné animace objektu COM.|
+|[CAnimationVariable::CreateTransitions](#createtransitions)|Vytvoří všechny přechody, které mají být aplikovány na tuto proměnnou animace.|
+|[CAnimationVariable::EnableIntegerValueChangedEvent](#enableintegervaluechangedevent)|Povolí nebo zakáže událost IntegerValueChanged.|
+|[CAnimationVariable::EnableValueChangedEvent](#enablevaluechangedevent)|Povolí nebo zakáže událost ValueChanged.|
+|[CAnimationVariable:: getdefaultvalue](#getdefaultvalue)|Vrátí výchozí hodnotu.|
 |[CAnimationVariable::GetParentAnimationObject](#getparentanimationobject)|Vrátí nadřazený objekt animace.|
-|[CAnimationVariable::GetValue](#getvalue)|Přetíženo. Vrátí aktuální hodnotu proměnné animace.|
-|[CAnimationVariable::GetVariable](#getvariable)|Vrací ukazatel na objekt modelu COM IUIAnimationVariable.|
-|[CAnimationVariable::SetDefaultValue](#setdefaultvalue)|Nastaví výchozí hodnoty a uvolní objekt modelu COM IUIAnimationVariable.|
+|[CAnimationVariable:: GetValue](#getvalue)|Přetíženo. Vrátí aktuální hodnotu proměnné animace.|
+|[CAnimationVariable:: getvariable](#getvariable)|Vrátí ukazatel na objekt COM IUIAnimationVariable.|
+|[CAnimationVariable::SetDefaultValue](#setdefaultvalue)|Nastaví výchozí hodnotu a uvolní objekt COM IUIAnimationVariable.|
 
 ### <a name="protected-methods"></a>Chráněné metody
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
-|[CAnimationVariable::SetParentAnimationObject](#setparentanimationobject)|Nastaví vztah mezi proměnnou animace a objekt animace.|
+|[CAnimationVariable::SetParentAnimationObject](#setparentanimationobject)|Nastaví vztah mezi proměnnou animace a objektem animace.|
 
 ### <a name="public-data-members"></a>Veřejné datové členy
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
-|[CAnimationVariable::m_bAutodestroyTransitions](#m_bautodestroytransitions)|Určuje, zda mají být odstraněny přechod související objekty.|
+|[CAnimationVariable::m_bAutodestroyTransitions](#m_bautodestroytransitions)|Určuje, zda se mají odstranit související objekty přechodu.|
 
 ### <a name="protected-data-members"></a>Chránění členové dat
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
-|[CAnimationVariable::m_dblDefaultValue](#m_dbldefaultvalue)|Určuje výchozí hodnotu, která se šíří do IUIAnimationVariable.|
-|[CAnimationVariable::m_lstTransitions](#m_lsttransitions)|Obsahuje seznam přechody, která animovat tuto proměnnou animace.|
-|[CAnimationVariable::m_pParentObject](#m_pparentobject)|Ukazatel na objekt animace, který zapouzdřuje této proměnné animace.|
-|[CAnimationVariable::m_variable](#m_variable)|Uchovává ukazatel na objekt modelu COM IUIAnimationVariable. Pokud ještě nebyl vytvořen objekt modelu COM, nebo pokud se nepovedlo s hodnotou NULL.|
+|[CAnimationVariable::m_dblDefaultValue](#m_dbldefaultvalue)|Určuje výchozí hodnotu, která je šířena do IUIAnimationVariable.|
+|[CAnimationVariable::m_lstTransitions](#m_lsttransitions)|Obsahuje seznam přechodů, které tuto proměnnou animace animuje.|
+|[CAnimationVariable::m_pParentObject](#m_pparentobject)|Ukazatel na objekt animace, který zapouzdřuje tuto proměnnou animace.|
+|[CAnimationVariable::m_variable](#m_variable)|Ukládá ukazatel na objekt COM IUIAnimationVariable. Hodnota NULL, pokud objekt COM ještě nebyl vytvořen, nebo pokud vytvoření se nezdařilo.|
 
 ## <a name="remarks"></a>Poznámky
 
-Canimationvariable – třída zapouzdří objekt modelu COM IUIAnimationVariable. Obsahuje také seznam přechody má použít u proměnné animace ve scénáři. Canimationvariable – objekty jsou vloženy do animace objekty, které mohou reprezentovat v aplikaci hodnotou animované, bod, velikost, barvu a obdélník.
+Třída CAnimationVariable zapouzdřuje objekt IUIAnimationVariable COM. Obsahuje také seznam přechodů, které mají být aplikovány na proměnnou animace ve scénáři. Objekty CAnimationVariable jsou vloženy do objektů animace, které mohou představovat v aplikaci animovanou hodnotu, bod, velikost, barvu a obdélník.
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
@@ -118,17 +118,17 @@ Canimationvariable – třída zapouzdří objekt modelu COM IUIAnimationVariabl
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** afxanimationcontroller.h
+**Záhlaví:** afxanimationcontroller. h
 
-##  <a name="_dtorcanimationvariable"></a>  Canimationvariable –:: ~ canimationvariable –
+##  <a name="_dtorcanimationvariable"></a>CAnimationVariable:: ~ CAnimationVariable
 
-Destruktor. Volá se, když se likviduje canimationvariable – objektu.
+Destruktor. Volána, když je zničen objekt CAnimationVariable.
 
 ```
 virtual ~CAnimationVariable();
 ```
 
-##  <a name="addtransition"></a>  CAnimationVariable::AddTransition
+##  <a name="addtransition"></a>CAnimationVariable::AddTransition
 
 Přidá přechod.
 
@@ -139,15 +139,15 @@ void AddTransition(CBaseTransition* pTransition);
 ### <a name="parameters"></a>Parametry
 
 *pTransition*<br/>
-Ukazatel na přechod na Přidat.
+Ukazatel na přechod, který má být přidán.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato metoda je volána přidáte přechod na vnitřní seznam přechody má použít u proměnné animace. Tento seznam by měla zůstat nezaškrtnutá, když je naplánovaná animace.
+Tato metoda je volána pro přidání přechodu do interního seznamu přechodů, které mají být aplikovány na proměnnou animace. Tento seznam by měl být po naplánování animace vymazán.
 
-##  <a name="applytransitions"></a>  CAnimationVariable::ApplyTransitions
+##  <a name="applytransitions"></a>CAnimationVariable::ApplyTransitions
 
-Přidá přechody ze seznamu interní do scénáře.
+Přidá přechody z interního seznamu do scénáře.
 
 ```
 void ApplyTransitions(
@@ -159,19 +159,19 @@ void ApplyTransitions(
 ### <a name="parameters"></a>Parametry
 
 *pController*<br/>
-Ukazatel na rodičovský ovladač animace.
+Ukazatel na nadřazený kontroler animací.
 
 *pStoryboard*<br/>
-Ukazatel na scénáře.
+Ukazatel na scénář.
 
 *bDependOnKeyframes*<br/>
-Hodnota TRUE, pokud tato metoda by měla přidat přechody, které jsou závislé na klíčové snímky.
+TRUE, pokud by tato metoda měla přidat přechody závislé na klíčových snímcích.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato metoda přidá přechody ze seznamu interní do scénáře. Je volána z kódu nejvyšší úrovně několikrát přidat přechodů, které nemají závisí na klíčové snímky a přidání přechodů, které jsou závislé na klíčové snímky. Pokud nebyla vytvořena základní proměnné animace objektu COM, tato metoda se vytvoří v této fázi.
+Tato metoda přidá přechody z interního seznamu do scénáře. Je volána z kódu nejvyšší úrovně několikrát k přidání přechodů, které nejsou závislé na klíčových snímcích, a přidání přechodů, které jsou závislé na klíčových snímcích. Pokud se objekt COM proměnné animace nevytvořil, vytvoří tato metoda v této fázi.
 
-##  <a name="canimationvariable"></a>  CAnimationVariable::CAnimationVariable
+##  <a name="canimationvariable"></a>CAnimationVariable::CAnimationVariable
 
 Vytvoří objekt proměnné animace.
 
@@ -186,11 +186,11 @@ Určuje výchozí hodnotu.
 
 ### <a name="remarks"></a>Poznámky
 
-Vytvoří objekt proměnné animace a nastaví výchozí hodnotu. Pokud proměnná není animovat, nebo nelze animovat, použije se výchozí hodnota.
+Vytvoří objekt proměnné animace a nastaví jeho výchozí hodnotu. Výchozí hodnota se použije, když proměnná není animovaná, nebo ji nejde animovat.
 
-##  <a name="cleartransitions"></a>  CAnimationVariable::ClearTransitions
+##  <a name="cleartransitions"></a>CAnimationVariable::ClearTransitions
 
-Vymaže přechodů.
+Vymaže přechody.
 
 ```
 void ClearTransitions(BOOL bAutodestroy);
@@ -199,15 +199,15 @@ void ClearTransitions(BOOL bAutodestroy);
 ### <a name="parameters"></a>Parametry
 
 *bAutodestroy*<br/>
-Určuje, zda tato metoda by měla odstranit objekty přechodu.
+Určuje, zda tato metoda má odstranit objekty přechodu.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato metoda odebere všechny přechody ze seznamu vnitřních přechodů. Pokud bAutodestroy má hodnotu TRUE nebo m_bAutodestroyTransitions má hodnotu TRUE, jsou odstraněny přechodů. V opačném případě volající by měl uvolnit objekty přechodu.
+Tato metoda odebere všechny přechody z interního seznamu přechodů. Pokud má bAutodestroy hodnotu TRUE nebo má m_bAutodestroyTransitions hodnotu TRUE, přechody se odstraní. V opačném případě by volající měl zrušit přidělení objektů přechodu.
 
-##  <a name="create"></a>  CAnimationVariable::Create
+##  <a name="create"></a>CAnimationVariable:: Create
 
-Vytvoří základní objekt modelu COM proměnné animace.
+Vytvoří základní objekt proměnné animace objektu COM.
 
 ```
 virtual BOOL Create(IUIAnimationManager* pManager);
@@ -216,19 +216,19 @@ virtual BOOL Create(IUIAnimationManager* pManager);
 ### <a name="parameters"></a>Parametry
 
 *pManager*<br/>
-Ukazatel na správce animace.
+Ukazatel na správce animací.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Hodnota TRUE, pokud byl úspěšně vytvořen proměnné animace; v opačném případě FALSE.
+TRUE, pokud byla proměnná animace úspěšně vytvořena; v opačném případě FALSE.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato metoda vytvoří základní proměnnou animace objekt modelu COM a nastaví výchozí hodnotu.
+Tato metoda vytvoří podkladovou proměnnou animace objektu COM a nastaví její výchozí hodnotu.
 
-##  <a name="createtransitions"></a>  CAnimationVariable::CreateTransitions
+##  <a name="createtransitions"></a>CAnimationVariable::CreateTransitions
 
-Vytvoří všechny přechody u této proměnné animace.
+Vytvoří všechny přechody, které mají být aplikovány na tuto proměnnou animace.
 
 ```
 BOOL CreateTransitions(
@@ -239,19 +239,19 @@ BOOL CreateTransitions(
 ### <a name="parameters"></a>Parametry
 
 *pLibrary*<br/>
-Ukazatel na [IUIAnimationTransitionLibrary rozhraní](/windows/desktop/api/uianimation/nn-uianimation-iuianimationtransitionlibrary), která definuje knihovnu standardní přechodů.
+Ukazatel na [rozhraní IUIAnimationTransitionLibrary](/windows/win32/api/uianimation/nn-uianimation-iuianimationtransitionlibrary), které definuje knihovnu standardních přechodů.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Hodnota TRUE, pokud úspěšně; vytvořily přechody v opačném případě FALSE.
+TRUE, pokud byly přechody úspěšně vytvořeny; v opačném případě FALSE.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato metoda je volána rozhraním, když je nutné vytvořit přechody, které byly přidány do seznamu interní proměnné přechodů.
+Tato metoda je volána rozhraním, když je potřeba vytvořit přechody, které byly přidány do interního seznamu přechodů proměnné.
 
-##  <a name="enableintegervaluechangedevent"></a>  CAnimationVariable::EnableIntegerValueChangedEvent
+##  <a name="enableintegervaluechangedevent"></a>CAnimationVariable::EnableIntegerValueChangedEvent
 
-Povolí nebo zakáže IntegerValueChanged událostí.
+Povolí nebo zakáže událost IntegerValueChanged.
 
 ```
 void EnableIntegerValueChangedEvent (
@@ -262,18 +262,18 @@ void EnableIntegerValueChangedEvent (
 ### <a name="parameters"></a>Parametry
 
 *pController*<br/>
-Ukazatel na rodičovský ovladač.
+Ukazatel na nadřazený kontroler.
 
 *bEnable*<br/>
-TRUE – povolit událostí, FALSE, zakažte události.
+TRUE – povolit událost, FALSE – zakázat událost.
 
 ### <a name="remarks"></a>Poznámky
 
-Když je povolené ValueChanged události, volá framework virtuální metoda CAnimationController::OnAnimationIntegerValueChanged. Je nutné přepsat ve třídě odvozené z canimationcontroller – aby bylo možné zpracování této události. Tato metoda je volána pokaždé, když se změní celočíselnou hodnotu proměnné animace.
+Když je povolená událost ValueChanged, rozhraní volá virtuální metodu CAnimationController:: OnAnimationIntegerValueChanged. Je nutné jej přepsat ve třídě odvozené z CAnimationController, aby bylo možné tuto událost zpracovat. Tato metoda je volána pokaždé, když se změní celočíselná hodnota proměnné animace.
 
-##  <a name="enablevaluechangedevent"></a>  CAnimationVariable::EnableValueChangedEvent
+##  <a name="enablevaluechangedevent"></a>CAnimationVariable::EnableValueChangedEvent
 
-Povolí nebo zakáže ValueChanged události.
+Povolí nebo zakáže událost ValueChanged.
 
 ```
 void EnableValueChangedEvent (
@@ -284,16 +284,16 @@ void EnableValueChangedEvent (
 ### <a name="parameters"></a>Parametry
 
 *pController*<br/>
-Ukazatel na rodičovský ovladač.
+Ukazatel na nadřazený kontroler.
 
 *bEnable*<br/>
-TRUE – povolit událostí, FALSE, zakažte události.
+TRUE – povolit událost, FALSE – zakázat událost.
 
 ### <a name="remarks"></a>Poznámky
 
-Když je povolené ValueChanged události, volá framework virtuální metoda CAnimationController::OnAnimationValueChanged. Je nutné přepsat ve třídě odvozené z canimationcontroller – aby bylo možné zpracování této události. Tato metoda je volána pokaždé, když se změní hodnota proměnné animace.
+Když je povolená událost ValueChanged, rozhraní volá virtuální metodu CAnimationController:: OnAnimationValueChanged. Je nutné jej přepsat ve třídě odvozené z CAnimationController, aby bylo možné tuto událost zpracovat. Tato metoda je volána pokaždé, když se změní hodnota proměnné animace.
 
-##  <a name="getdefaultvalue"></a>  CAnimationVariable::GetDefaultValue
+##  <a name="getdefaultvalue"></a>CAnimationVariable:: getdefaultvalue
 
 Vrátí výchozí hodnotu.
 
@@ -307,9 +307,9 @@ Výchozí hodnota.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato funkce slouží k získání výchozí hodnotu proměnné animace. V konstruktoru nebo metodou SetDefaultValue můžete nastavit výchozí hodnotu.
+Pomocí této funkce lze získat výchozí hodnotu proměnné animace. Výchozí hodnotu lze nastavit v konstruktoru nebo metodou SetDefaultValue.
 
-##  <a name="getparentanimationobject"></a>  CAnimationVariable::GetParentAnimationObject
+##  <a name="getparentanimationobject"></a>CAnimationVariable::GetParentAnimationObject
 
 Vrátí nadřazený objekt animace.
 
@@ -319,13 +319,13 @@ CAnimationBaseObject* GetParentAnimationObject();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Ukazatel na nadřazený objekt animace, pokud se vytvořila relace, jinak hodnota NULL.
+Ukazatel na nadřazený objekt animace, pokud byl vytvořen vztah, jinak NULL.
 
 ### <a name="remarks"></a>Poznámky
 
-Tuto metodu lze volat pro načtení ukazatel na nadřazený objekt animace (kontejner).
+Tuto metodu lze volat, aby načetla ukazatel na nadřazený objekt animace (kontejner).
 
-##  <a name="getvalue"></a>  CAnimationVariable::GetValue
+##  <a name="getvalue"></a>CAnimationVariable:: GetValue
 
 Vrátí aktuální hodnotu proměnné animace.
 
@@ -339,20 +339,20 @@ HRESULT GetValue(INT32& nValue);
 *dblValue*<br/>
 Aktuální hodnota proměnné animace.
 
-*nValue*<br/>
+*nHodnota*<br/>
 Aktuální hodnota proměnné animace.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-S_OK, pokud byl úspěšně získán hodnotu nebo nebyla vytvořena základní proměnné animace. Jinak kód chyby HRESULT.
+S_OK, pokud byla hodnota získána úspěšně, nebo nebyla vytvořena základní proměnná animace. Jinak kód chyby HRESULT.
 
 ### <a name="remarks"></a>Poznámky
 
-Tuto metodu lze volat pro načtení aktuální hodnota proměnné animace. Pokud nebyl vytvořen na základní objekt modelu COM, dblValue bude obsahovat výchozí hodnotu, pokud funkce vrátí.
+Tuto metodu lze volat pro načtení aktuální hodnoty proměnné animace. Pokud se podkladový objekt modelu COM nevytvořil, dblValue bude při návratu funkce obsahovat výchozí hodnotu.
 
-##  <a name="getvariable"></a>  CAnimationVariable::GetVariable
+##  <a name="getvariable"></a>CAnimationVariable:: getvariable
 
-Vrací ukazatel na objekt modelu COM IUIAnimationVariable.
+Vrátí ukazatel na objekt COM IUIAnimationVariable.
 
 ```
 IUIAnimationVariable* GetVariable();
@@ -360,15 +360,15 @@ IUIAnimationVariable* GetVariable();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Platný ukazatel na objekt modelu COM IUIAnimationVariable nebo hodnota NULL, pokud nebyl vytvořen proměnné animace, nebo nelze vytvořit.
+Platný ukazatel na objekt COM IUIAnimationVariable nebo hodnotu NULL, pokud nebyla vytvořena proměnná animace nebo nemůže být vytvořena.
 
 ### <a name="remarks"></a>Poznámky
 
-Tuto funkci použijte pro přístup k základní objekt modelu COM IUIAnimationVariable a volat jeho metody přímo v případě potřeby.
+Tuto funkci použijte pro přístup k základnímu objektu IUIAnimationVariable COM a volejte jeho metody přímo v případě potřeby.
 
-##  <a name="m_bautodestroytransitions"></a>  CAnimationVariable::m_bAutodestroyTransitions
+##  <a name="m_bautodestroytransitions"></a>CAnimationVariable::m_bAutodestroyTransitions
 
-Určuje, zda mají být odstraněny přechod související objekty.
+Určuje, zda se mají odstranit související objekty přechodu.
 
 ```
 BOOL m_bAutodestroyTransitions;
@@ -376,19 +376,19 @@ BOOL m_bAutodestroyTransitions;
 
 ### <a name="remarks"></a>Poznámky
 
-Když budou odebrány z interní seznam přechody, nastavte tuto hodnotu na true Vynutit odstranění objektů přechodu. Pokud je tato hodnota FALSE, neodstraní se pomocí volání aplikace přechodů. Seznam přechody je vždy vymazána po animaci je naplánovaná. Výchozí hodnota je FALSE.
+Nastavte tuto hodnotu na TRUE, pokud chcete vynutit odstranění přesouvaných objektů při jejich odebírání z interního seznamu přechodů. Pokud je tato hodnota FALSE, přechody by měly být odstraněny voláním aplikace. Seznam přechodů je po naplánování animace vždy vymazán. Výchozí hodnota je FALSE (NEPRAVDA).
 
-##  <a name="m_dbldefaultvalue"></a>  CAnimationVariable::m_dblDefaultValue
+##  <a name="m_dbldefaultvalue"></a>CAnimationVariable::m_dblDefaultValue
 
-Určuje výchozí hodnotu, která se šíří do IUIAnimationVariable.
+Určuje výchozí hodnotu, která je šířena do IUIAnimationVariable.
 
 ```
 DOUBLE m_dblDefaultValue;
 ```
 
-##  <a name="m_lsttransitions"></a>  CAnimationVariable::m_lstTransitions
+##  <a name="m_lsttransitions"></a>CAnimationVariable::m_lstTransitions
 
-Obsahuje seznam přechody, která animovat tuto proměnnou animace.
+Obsahuje seznam přechodů, které tuto proměnnou animace animuje.
 
 ```
 CObList m_lstTransitions;
@@ -396,23 +396,23 @@ CObList m_lstTransitions;
 
 ##  <a name="m_pparentobject"></a>  CAnimationVariable::m_pParentObject
 
-Ukazatel na objekt animace, který zapouzdřuje této proměnné animace.
+Ukazatel na objekt animace, který zapouzdřuje tuto proměnnou animace.
 
 ```
 CAnimationBaseObject* m_pParentObject;
 ```
 
-##  <a name="m_variable"></a>  CAnimationVariable::m_variable
+##  <a name="m_variable"></a>CAnimationVariable::m_variable
 
-Uchovává ukazatel na objekt modelu COM IUIAnimationVariable. Pokud ještě nebyl vytvořen objekt modelu COM, nebo pokud se nepovedlo s hodnotou NULL.
+Ukládá ukazatel na objekt COM IUIAnimationVariable. Hodnota NULL, pokud objekt COM ještě nebyl vytvořen, nebo pokud vytvoření se nezdařilo.
 
 ```
 ATL::CComPtr<IUIAnimationVariable> m_variable;
 ```
 
-##  <a name="setdefaultvalue"></a>  CAnimationVariable::SetDefaultValue
+##  <a name="setdefaultvalue"></a>CAnimationVariable::SetDefaultValue
 
-Nastaví výchozí hodnoty a uvolní objekt modelu COM IUIAnimationVariable.
+Nastaví výchozí hodnotu a uvolní objekt COM IUIAnimationVariable.
 
 ```
 void SetDefaultValue(DOUBLE dblDefaultValue);
@@ -421,15 +421,15 @@ void SetDefaultValue(DOUBLE dblDefaultValue);
 ### <a name="parameters"></a>Parametry
 
 *dblDefaultValue*<br/>
-Určuje nová výchozí hodnota.
+Určuje novou výchozí hodnotu.
 
 ### <a name="remarks"></a>Poznámky
 
-Tuto metodu použijte, chcete-li obnovit výchozí hodnotu. Tato metoda uvolní vnitřní objekt IUIAnimationVariable COM, proto když se znovu vytvoří proměnné animace, základní objekt modelu COM získá nový výchozí hodnotu. Výchozí hodnota je vrácený GetValue, pokud nevytvoříte objekt COM, který představuje proměnnou animace, nebo pokud proměnnou nebyl animovat.
+Tuto metodu použijte, chcete-li obnovit výchozí hodnotu. Tato metoda uvolní interní objekt modelu COM IUIAnimationVariable, proto když je znovu vytvořena proměnná animace, získá příslušný objekt COM novou výchozí hodnotu. Výchozí hodnota je vrácena pomocí GetValue, pokud objekt COM představující proměnnou animace není vytvořen, nebo pokud proměnná nebyla animována.
 
-##  <a name="setparentanimationobject"></a>  CAnimationVariable::SetParentAnimationObject
+##  <a name="setparentanimationobject"></a>CAnimationVariable::SetParentAnimationObject
 
-Nastaví vztah mezi proměnnou animace a objekt animace.
+Nastaví vztah mezi proměnnou animace a objektem animace.
 
 ```
 void SetParentAnimationObject(CAnimationBaseObject* pParentObject);
@@ -438,11 +438,11 @@ void SetParentAnimationObject(CAnimationBaseObject* pParentObject);
 ### <a name="parameters"></a>Parametry
 
 *pParentObject*<br/>
-Ukazatel na objekt animace, která obsahuje tuto proměnnou.
+Ukazatel na objekt animace, který obsahuje tuto proměnnou.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato metoda je volána interně k navázání relace 1: 1 mezi proměnnou animace a animace objektu, který zapouzdřuje ho.
+Tato metoda je volána interně pro vytvoření vztahu 1:1 mezi proměnnou animace a objektem animace, který ho zapouzdřuje.
 
 ## <a name="see-also"></a>Viz také:
 

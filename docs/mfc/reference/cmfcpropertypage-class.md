@@ -1,5 +1,5 @@
 ---
-title: CMFCPropertyPage Class
+title: CMFCPropertyPage – třída
 ms.date: 11/04/2016
 f1_keywords:
 - CMFCPropertyPage
@@ -8,16 +8,16 @@ f1_keywords:
 helpviewer_keywords:
 - CMFCPropertyPage [MFC], CMFCPropertyPage
 ms.assetid: d279d7f2-2d81-418d-9f23-6147d6e8df09
-ms.openlocfilehash: 62e33da998f1e5332436d887c38d3fd65526561b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4be584135ef789d7fbe3b1743ac0ad6ce66ac5b1
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62310484"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69505042"
 ---
-# <a name="cmfcpropertypage-class"></a>CMFCPropertyPage Class
+# <a name="cmfcpropertypage-class"></a>CMFCPropertyPage – třída
 
-`CMFCPropertyPage` Třídy podporuje zobrazení místních nabídek na stránce vlastností.
+`CMFCPropertyPage` Třída podporuje zobrazení překryvných nabídek na stránce vlastností.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -29,29 +29,29 @@ class CMFCPropertyPage : public CPropertyPage
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
-|[CMFCPropertyPage::CMFCPropertyPage](#cmfcpropertypage)|Vytvoří `CMFCPropertyPage` objektu.|
+|[CMFCPropertyPage::CMFCPropertyPage](#cmfcpropertypage)|`CMFCPropertyPage` Vytvoří objekt.|
 |`CMFCPropertyPage::~CMFCPropertyPage`|Destruktor.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
-|`CMFCPropertyPage::CreateObject`|Rozhraní používá k vytvoření dynamické instance tohoto typu třídy.|
-|`CMFCPropertyPage::GetThisClass`|Používá k získání ukazatele na rámec [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) objekt, který je přidružený k typu třídy.|
-|`CMFCPropertyPage::OnSetActive`|Tato členská funkce je voláno rozhraním při stránky je vybrán uživatelem a stane aktivní stránkou. (Přepíše [CPropertyPage::OnSetActive](../../mfc/reference/cpropertypage-class.md#onsetactive).)|
-|`CMFCPropertyPage::PreTranslateMessage`|Přeloží okno zprávy před odesláním do [TranslateMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage) a [DispatchMessage](/windows/desktop/api/winuser/nf-winuser-dispatchmessage) funkce Windows. Další informace a syntaxe využívající metody, naleznete v tématu [CWnd::PreTranslateMessage](../../mfc/reference/cwnd-class.md#pretranslatemessage). (Přepíše `CPropertyPage::PreTranslateMessage`.)|
+|`CMFCPropertyPage::CreateObject`|Používá se rozhraním k vytvoření dynamické instance tohoto typu třídy.|
+|`CMFCPropertyPage::GetThisClass`|Používá se rozhraním, aby se získal ukazatel na objekt [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) , který je přidružený k tomuto typu třídy.|
+|`CMFCPropertyPage::OnSetActive`|Tato členská funkce je volána rozhraním, když uživatel vybere stránku a bude se jednat o aktivní stránku. (Overrides [CPropertyPage –:: OnSetActive](../../mfc/reference/cpropertypage-class.md#onsetactive).)|
+|`CMFCPropertyPage::PreTranslateMessage`|Přeloží zprávy oken před odesláním do funkcí Windows [TranslateMessage](/windows/win32/api/winuser/nf-winuser-translatemessage) a [DispatchMessage](/windows/win32/api/winuser/nf-winuser-dispatchmessage) . Další informace a syntaxi metod naleznete v tématu [CWnd::P retranslatemessage](../../mfc/reference/cwnd-class.md#pretranslatemessage). (Overrides `CPropertyPage::PreTranslateMessage`.)|
 
 ## <a name="remarks"></a>Poznámky
 
-`CMFCPropertyPage` Třída představuje jednotlivé stránky seznamu vlastností, jinak známé jako dialogové okno Karta.
+`CMFCPropertyPage` Třída představuje jednotlivé stránky seznamu vlastností, jinak označované jako dialogové okno Karta.
 
-Použití `CMFCPropertyPage` třídy společně s [CMFCPropertySheet](../../mfc/reference/cmfcpropertysheet-class.md) třídy. Abyste mohli použít nabídek na stránce vlastností, nahraďte všechny výskyty `CPropertyPage` třídy s `CMFCPropertyPage` třídy.
+Použijte třídu společně s třídou [CMFCPropertySheet.](../../mfc/reference/cmfcpropertysheet-class.md) `CMFCPropertyPage` Chcete-li použít nabídky na stránce vlastností, nahraďte všechny výskyty `CPropertyPage` třídy `CMFCPropertyPage` třídou.
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
-[Třídy CObject](../../mfc/reference/cobject-class.md)
+[CObject](../../mfc/reference/cobject-class.md)
 
 [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)
 
@@ -65,11 +65,11 @@ Použití `CMFCPropertyPage` třídy společně s [CMFCPropertySheet](../../mfc/
 
 ## <a name="requirements"></a>Požadavky
 
-**Header:** afxpropertypage.h
+**Záhlaví:** afxpropertypage. h
 
-##  <a name="cmfcpropertypage"></a>  CMFCPropertyPage::CMFCPropertyPage
+##  <a name="cmfcpropertypage"></a>CMFCPropertyPage::CMFCPropertyPage
 
-Vytvoří `CMFCPropertyPage` objektu.
+`CMFCPropertyPage` Vytvoří objekt.
 
 ```
 CMFCPropertyPage(
@@ -84,19 +84,19 @@ CMFCPropertyPage(
 ### <a name="parameters"></a>Parametry
 
 *nIDTemplate*<br/>
-ID prostředku šablony pro tuto stránku.
+ID prostředku šablony pro tuto stránku
 
 *nIDCaption*<br/>
-ID prostředku popisku se umístí na kartě pro tuto stránku. Pokud je 0, název se získávají z šablony dialogového okna pro tuto stránku. Výchozí hodnota je 0.
+ID prostředku popisku, který má být vložen na kartu pro tuto stránku. Pokud je hodnota 0, název se získá ze šablony dialogového okna pro tuto stránku. Výchozí hodnota je 0.
 
 *lpszTemplateName*<br/>
-Odkazuje na název šablony pro tuto stránku. Nemůže mít hodnotu NULL.
+Odkazuje na název šablony této stránky. Nemůže mít hodnotu NULL.
 
 ### <a name="return-value"></a>Návratová hodnota
 
 ### <a name="remarks"></a>Poznámky
 
-Další informace o parametrech konstruktoru, naleznete v tématu [CPropertyPage::CPropertyPage](../../mfc/reference/cpropertypage-class.md#cpropertypage).
+Další informace o parametrech konstruktoru naleznete v tématu [CPropertyPage –:: CPropertyPage –](../../mfc/reference/cpropertypage-class.md#cpropertypage).
 
 ## <a name="see-also"></a>Viz také:
 

@@ -8,15 +8,15 @@ helpviewer_keywords:
 - pragmas, pack
 - pack pragma
 ms.assetid: e4209cbb-5437-4b53-b3fe-ac264501d404
-ms.openlocfilehash: bf1ae81184d53dd271f63c26e8f9a52a6410b232
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: da4484ec86d39c8fa55a741eadd53a1d614b20dc
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62180027"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69510172"
 ---
 # <a name="pack"></a>pack
-Určuje zarovnání zabalení pro struktury, sjednocení a členy třídy.
+Určuje zarovnání balení pro členy struktury, sjednocení a třídy.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -26,30 +26,30 @@ Určuje zarovnání zabalení pro struktury, sjednocení a členy třídy.
 
 ### <a name="parameters"></a>Parametry
 
-**show**<br/>
-(Volitelné) Zobrazí aktuální hodnotu bajtu pro balení zarovnání. Hodnota se zobrazí zpráva upozornění.
+**uvádí**<br/>
+Volitelné Zobrazí aktuální bajtovou hodnotu zarovnání balení. Hodnota se zobrazí ve zprávě upozornění.
 
 **push**<br/>
-(Volitelné) Nabízená oznámení aktuální zarovnání zabalení hodnoty na vnitřního zásobníku kompilátoru a nastaví hodnotu aktuální zarovnání zabalení *n*. Pokud *n* není zadán, aktuální hodnota zarovnání zabalení je vloženo.
+Volitelné Posune aktuální hodnotu zarovnání balení do vnitřního zásobníku kompilátoru a nastaví aktuální hodnotu zarovnání balení na *n*. Pokud není zadán *n* , aktuální hodnota zarovnání pro sbalení je vložena.
 
-**pop**<br/>
-(Volitelné) Odstraní záznam z vrcholu vnitřního zásobníku kompilátoru. Pokud *n* není zadaný s **pop**, balení hodnotu přidruženou k výsledného záznamu vrcholu zásobníku je nová hodnota zarovnání zabalení. Pokud *n* není zadána, například `#pragma pack(pop, 16)`, *n* stane nová hodnota zarovnání zabalení. Pokud jste vyvolat přes pop s *identifikátor*, například `#pragma pack(pop, r1)`, pak všechny záznamy v zásobníku jsou otevřené až do záznam, který má *identifikátor* nenajde. Že záznam není vyjmut záznam a přidružený výsledného záznamu v horní hodnota balení je zásobník nové balení hodnota zarovnání. Pokud jste vyvolat přes pop s *identifikátor* , který se nenachází v libovolné záznamu v zásobníku, pak bude **pop** se ignoruje.
+**výstrah**<br/>
+Volitelné Odebere záznam z horní části interního zásobníku kompilátoru. Není-li parametr *n* zadán s příkazem **POP**, je hodnota balení přidružená k výslednému záznamu v horní části zásobníku novou hodnotou zarovnání balení. Pokud je zadána hodnota *n* , například `#pragma pack(pop, 16)`,, *n* se bude novou hodnotou zarovnání balení. Pokud jste přihlášeni jako *identifikátor*, například `#pragma pack(pop, r1)`, pak všechny záznamy v zásobníku budou odebrány, dokud nebude nalezen záznam s *identifikátorem* . Tento záznam se vyjímá a hodnota balení přidružená k výslednému záznamu v horní části je zásobníkem nové hodnoty zarovnání balení. Pokud jste přihlášeni s identifikátorem, který nebyl nalezen v žádném záznamu v zásobníku, pak se **POP** ignoruje.
 
-*identifier*<br/>
-(Volitelné) Při použití s *nabízených*, přiřadí název záznamu ve vnitřním zásobníku kompilátoru. Při použití s **pop**, vyjme všechny záznamy z vnitřního zásobníku až do *identifikátor* li *identifikátor* nebyl nalezen v interním zásobníku, nic nevezme.
+*RID*<br/>
+Volitelné Při použití s *nabízenou*sadou přiřadí název záznamu v interním zásobníku kompilátoru. Při použití s příkazem **POP**vyřadí záznamy z vnitřního zásobníku, dokud není *identifikátor* odebrán; Pokud *identifikátor* není v interním zásobníku nalezen, není nic prázdné.
 
 *n*<br/>
-(Volitelné) Určuje hodnotu, v bajtech, která má být použit pro balení. Pokud možnost kompilátoru [/zp](../build/reference/zp-struct-member-alignment.md) není nastaven pro modul, výchozí hodnota pro *n* je 8. Platné hodnoty jsou 1, 2, 4, 8 a 16. Zarovnání člena bude na hranici, která je buď jednat o násobek *n* nebo násobkem velikosti člena, podle toho, co je menší.
+Volitelné Určuje hodnotu v bajtech, která se má použít k balení. Pokud pro modul není nastavená možnost kompilátoru [/zp](../build/reference/zp-struct-member-alignment.md) , výchozí hodnota pro *n* je 8. Platné hodnoty jsou 1, 2, 4, 8 a 16. Zarovnání člena bude na hranici, která je násobkem *n* nebo násobku velikosti členu, podle toho, která hodnota je menší.
 
-`#pragma pack(pop, identifier, n)` není definován.
+`#pragma pack(pop, identifier, n)`není definováno.
 
 ## <a name="remarks"></a>Poznámky
 
-Aby zabalil třídy, je umístit jejích členů přímo po sobě navzájem v paměti, což může znamenat, že některé nebo všechny členy může být zarovnány na hranice menší než výchozí zarovnání Cílová architektura. **balíček** poskytuje řízení na úrovni deklarace dat. Tím se liší od – možnost kompilátoru [/zp](../build/reference/zp-struct-member-alignment.md), které jen poskytuje řízení na úrovni modulu. **Pack** se projeví při prvním **struktura**, **sjednocení**, nebo **třídy** deklarace po direktivy pragma je zobrazena. **balíček** nemá žádný vliv na definice. Volání **pack** sadami žádné argumenty *n* na hodnotu nastavenou v možnosti kompilátoru `/Zp`. Pokud není nastavena možnost kompilátoru, výchozí hodnota je 8.
+Pro zabalení třídy je umístit své členy přímo po sobě do paměti, což může znamenat, že některé nebo všechny členy lze zarovnat na hranici menší, než je výchozí zarovnání cílové architektury. **sada** poskytuje řízení na úrovni deklarace dat. To se liší od možnosti kompilátoru [/zp](../build/reference/zp-struct-member-alignment.md), která poskytuje pouze ovládací prvek na úrovni modulu. **sada** se projeví při první **struktuře**, **sjednocení**nebo deklaraci **třídy** po vyřazení direktivy pragma. **sada** nemá žádný vliv na definice. Volání **Pack** bez argumentů nastaví *n* na hodnotu nastavenou v možnosti `/Zp`kompilátoru. Pokud není možnost kompilátoru nastavena, je použita výchozí hodnota 8.
 
-Pokud změníte zarovnání struktury, se nesmí používat jako uvidí ke snížení výkonu nebo dokonce i získat generované hardwarové výjimky nezarovnaný přístup, kolik místa v paměti, ale.  Tato výjimka chování lze upravit pomocí [SetErrorMode](https://msdn.microsoft.com/library/windows/desktop/ms680621).
+Změníte-li zarovnání struktury, nemusí být využita tolik místa v paměti, ale může se stát, že dojde ke snížení výkonu, nebo dokonce získáte výjimku vygenerovanou hardwarem pro nezarovnaný přístup.  Toto chování výjimky můžete upravit pomocí [SetErrorMode](/windows/win32/api/errhandlingapi/nf-errhandlingapi-seterrormode).
 
-Další informace o úpravách zarovnání naleznete v následujících tématech:
+Další informace o tom, jak upravit zarovnání, najdete v těchto tématech:
 
 - [__alignof](../cpp/alignof-operator.md)
 
@@ -57,14 +57,14 @@ Další informace o úpravách zarovnání naleznete v následujících tématec
 
 - [__unaligned](../cpp/unaligned.md)
 
-- [Příklady zarovnání struktur](../build/x64-software-conventions.md#examples-of-structure-alignment) (x64 konkrétní)
+- [Příklady zarovnání struktury](../build/x64-software-conventions.md#examples-of-structure-alignment) (specifické pro procesory x64)
 
    > [!WARNING]
-   > Všimněte si, že v sadě Visual Studio 2015 a novější můžete použít operátory alignof a alignas standardní které, na rozdíl od `__alignof` a `declspec( align )` přenositelnosti napříč kompilátory. Standard jazyka C++ neřeší balení, takže je nutné použít **pack** (nebo odpovídající rozšíření na jiné kompilátory) k určení zarovnání menší než velikost cílové architektury aplikace word.
+   > Všimněte si, že v aplikaci Visual Studio 2015 a novějších můžete použít standardní operátory alignas a alignof, které `__alignof` na `declspec( align )` rozdíl od a jsou přenosné mezi kompilátory. C++ Standard neřeší balení, takže je stále nutné použít **Pack** (nebo odpovídající rozšíření na jiných kompilátorech) k určení zarovnání menšího, než je velikost slova cílové architektury.
 
 ## <a name="examples"></a>Příklady
 
-Následující příklad ukazuje způsob použití **pack** – Direktiva pragma, chcete-li změnit zarovnání struktury.
+Následující příklad ukazuje, jak použít direktivu pragma **balíčku** pro změnu zarovnání struktury.
 
 ```cpp
 // pragma_directives_pack.cpp
@@ -100,7 +100,7 @@ int main() {
 0 4 6
 ```
 
-Následující příklad ukazuje způsob použití *nabízených*, *pop*, a *zobrazit* syntaxe.
+Následující příklad ukazuje, jak použít syntaxi *push*, *POP*a *show* .
 
 ```cpp
 // pragma_directives_pack_2.cpp

@@ -8,37 +8,37 @@ helpviewer_keywords:
 - thread-local storage
 - storage, thread local storage
 ms.assetid: a0f1b109-c953-4079-aa10-e47f5483173d
-ms.openlocfilehash: 4b1aa32b384f3a5db5203883c1cc03bd61de7b19
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a1099228e072a772ee7d8e7e93253b674d0cd24b
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62344990"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69500269"
 ---
 # <a name="thread-local-storage"></a>Úložiště Thread Local
 
-**Microsoft Specific**
+**Specifické pro společnost Microsoft**
 
-Místní úložiště vláken (TLS) je mechanismus, podle kterého všechna vlákna daného procesu alokují prostor pro data určitého vlákna. U standardních aplikací s více vlákny jsou data sdílena mezi všemi vlákny daného procesu, kde místní úložiště vláken představuje mechanismus pro rozdělení dat pro vlákno. Úplný popis vláken naleznete v tématu [procesy a vlákna](/windows/desktop/ProcThread/processes-and-threads) v sadě Windows SDK.
+Místní úložiště vláken (TLS) je mechanismus, kterým každé vlákno v daném vícevláknovém procesu přiděluje úložiště pro data specifická pro vlákno. U standardních aplikací s více vlákny jsou data sdílena mezi všemi vlákny daného procesu, kde místní úložiště vláken představuje mechanismus pro rozdělení dat pro vlákno. Úplnou diskuzi o vláknech naleznete v tématu [procesy a vlákna](/windows/win32/ProcThread/processes-and-threads) v Windows SDK.
 
-Jazyk Microsoft C obsahuje atribut Rozšířené paměťové třídy, vlákna, která se používá s __declspec – klíčové slovo pro deklarování místní proměnné vlákna. Například následující kód deklaruje místní proměnnou vlákna integer a inicializuje ji hodnotou:
+Jazyk Microsoft C zahrnuje rozšířený atribut třídy úložiště, který se používá s klíčovým slovem __declspec k deklaraci thread local proměnné. Například následující kód deklaruje celočíselnou thread local proměnnou a inicializuje ji hodnotou:
 
 ```
 __declspec( thread ) int tls_i = 1;
 ```
 
-Když deklarujete staticky vázané vlákno lokálních proměnných, musí být dodržovány tyto pokyny:
+Při deklaraci staticky vázaných thread local proměnných je nutné dodržovat tyto pokyny:
 
-- Místní proměnné vlákna, které mají dynamická inicializace jsou inicializovány pouze na vlákně, které způsobí, že knihovna DLL pro načtení a vlákna, na kterých už běží v procesu. Další informace najdete v tématu [vlákno](../cpp/thread.md).
+- Proměnné místního vlákna, které mají dynamickou inicializaci, jsou inicializovány pouze ve vlákně, které způsobí načtení knihovny DLL, a vláken, která jsou již spuštěna v procesu. Další informace naleznete v tématu [thread](../cpp/thread.md).
 
-- Atribut thread můžou použít jenom u dat deklarace a definice. Nelze použít v deklaracích nebo definicích funkce. Například následující kód vygeneruje chybu kompilátoru:
+- Atribut thread lze použít pouze pro deklarace a definice dat. Nedá se použít pro deklarace a definice funkcí. Například následující kód vygeneruje chybu kompilátoru:
 
     ```C
     #define Thread   __declspec( thread )
     Thread void func();      /* Error */
     ```
 
-- Atribut thread můžete zadat pouze na položky dat s trváním statického úložiště. To zahrnuje globální data (static a extern) a místní statická data. Nelze deklarovat automatické data s atributem vlákna. Například následující kód vygeneruje chyby kompilátoru:
+- Atribut vlákna lze zadat pouze pro datové položky s trváním statického úložiště. To zahrnuje globální data (staticky i extern) a místní statická data. Nelze deklarovat Automatická data s atributem vlákna. Například následující kód generuje chyby kompilátoru:
 
     ```C
     #define Thread   __declspec( thread )
@@ -53,7 +53,7 @@ Když deklarujete staticky vázané vlákno lokálních proměnných, musí být
     }
     ```
 
-- Atribut thread je nutné použít pro deklarace a definice dat thread local, bez ohledu na to, zda deklarace a definice objeví ve stejném souboru nebo v samostatných souborech. Například následující kód vygeneruje chybu:
+- Je nutné použít atribut thread pro deklaraci a definici thread localch dat, bez ohledu na to, zda se deklarace a definice vyskytují ve stejném souboru nebo samostatných souborech. Například následující kód vygeneruje chybu:
 
     ```C
     #define Thread   __declspec( thread )
@@ -61,13 +61,13 @@ Když deklarujete staticky vázané vlákno lokálních proměnných, musí být
     int Thread tls_i;     /* declaration and the definition differ. */
     ```
 
-- Atribut vlákna nelze použít jako modifikátor typu. Například následující kód vygeneruje chybu kompilátoru:
+- Atribut thread nelze použít jako modifikátor typu. Například následující kód vygeneruje chybu kompilátoru:
 
     ```C
     char *ch __declspec( thread );      /* Error */
     ```
 
-- Adresu místní proměnné vlákna není považována za konstantu a libovolný výraz zahrnující takové adresy se nepovažuje za konstantní výraz. To znamená, že nelze použít adresu místní proměnné vlákna jako inicializátor pro ukazatel. Například kompilátor označí jako chyba následující kód:
+- Adresa thread local proměnné není považována za konstantu a jakýkoliv výraz, který tuto adresu zahrnuje, není považován za konstantní výraz. To znamená, že nelze použít adresu thread local proměnné jako inicializátor pro ukazatel. Například kompilátor označí následující kód jako chybu:
 
     ```C
     #define Thread   __declspec( thread )
@@ -75,7 +75,7 @@ Když deklarujete staticky vázané vlákno lokálních proměnných, musí být
     int *p = &tls_i;      /* Error */
     ```
 
-- C umožňuje inicializaci proměnné s výrazem zahrnujícím odkaz sám na sebe, ale pouze pro nestatické objekty. Příklad:
+- Jazyk C umožňuje inicializaci proměnné s výrazem, který zahrnuje odkaz sám na sebe, ale pouze pro objekty nestatického rozsahu. Příklad:
 
     ```C
     #define Thread   __declspec( thread )
@@ -84,13 +84,13 @@ Když deklarujete staticky vázané vlákno lokálních proměnných, musí být
     Thread int tls_i = sizeof( tls_i )    /* Okay  */
     ```
 
-   Mějte na paměti, že operátor sizeof: výraz, který obsahuje proměnné, který je inicializován nepředstavuje odkaz sám na sebe a je povolen.
+   Všimněte si, že výraz sizeof obsahující proměnnou, která je inicializována, nepředstavuje odkaz sám na sebe a je povolen.
 
-- Použití  **\_ \_declspec(thread)** může kolidovat s [zpoždění načítání](../build/reference/linker-support-for-delay-loaded-dlls.md) importů knihoven DLL.
+- Použití [](../build/reference/linker-support-for-delay-loaded-dlls.md)  **\_ declspec(thread)můžekolidovatsopožděnýmnačítáním\_** importů knihoven DLL.
 
-Další informace o používání atribut vlákna, naleznete v tématu [Témata multithreadingu](../parallel/multithreading-support-for-older-code-visual-cpp.md).
+Další informace o použití atributu thread naleznete v tématu [Multithreading – témata](../parallel/multithreading-support-for-older-code-visual-cpp.md).
 
-**Specifické pro END Microsoft**
+**Specifické pro konec Microsoftu**
 
 ## <a name="see-also"></a>Viz také:
 

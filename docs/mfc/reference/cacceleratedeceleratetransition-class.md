@@ -1,5 +1,5 @@
 ---
-title: Cacceleratedeceleratetransition – třída
+title: CAccelerateDecelerateTransition – třída
 ms.date: 11/04/2016
 f1_keywords:
 - CAccelerateDecelerateTransition
@@ -7,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - CAccelerateDecelerateTransition class [MFC]
 ms.assetid: b1f31ee8-bb11-4ccc-b124-365fb02b025c
-ms.openlocfilehash: dbebe794ba76ae4abd3d1e3ea6bc8ee31bc3007f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1e55e81b4d9b5c324f86bfd141b74d9faa362d94
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62151198"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69507744"
 ---
-# <a name="cacceleratedeceleratetransition-class"></a>Cacceleratedeceleratetransition – třída
+# <a name="cacceleratedeceleratetransition-class"></a>CAccelerateDecelerateTransition – třída
 
-Implementuje zrychlení-zpomalení přechodu.
+Implementuje přechod zrychlit zpomalení.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -28,32 +28,32 @@ class CAccelerateDecelerateTransition : public CBaseTransition;
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CAccelerateDecelerateTransition::CAccelerateDecelerateTransition](#cacceleratedeceleratetransition)|Vytvoří objekt přechodu.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
-|[CAccelerateDecelerateTransition::Create](#create)|Knihovna přechod k vytvoření objektu přechod zapouzdřený objekt modelu COM zavolá. (Přepíše [CBaseTransition::Create](../../mfc/reference/cbasetransition-class.md#create).)|
+|[CAccelerateDecelerateTransition:: Create](#create)|Volá knihovnu přechodu k vytvoření zapouzdřeného přechodu objektu COM. (Overrides [CBaseTransition:: Create](../../mfc/reference/cbasetransition-class.md#create).)|
 
 ### <a name="public-data-members"></a>Veřejné datové členy
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
-|[CAccelerateDecelerateTransition::m_accelerationRatio](#m_accelerationratio)|Poměr čas strávený zkracuje dobu trvání.|
-|[CAccelerateDecelerateTransition::m_decelerationRatio](#m_decelerationratio)|Poměr čas strávený zpomalení dobu trvání.|
+|[CAccelerateDecelerateTransition::m_accelerationRatio](#m_accelerationratio)|Poměr doby strávené zrychlením na dobu trvání.|
+|[CAccelerateDecelerateTransition::m_decelerationRatio](#m_decelerationratio)|Poměr času stráveného zpomalením doby trvání.|
 |[CAccelerateDecelerateTransition::m_duration](#m_duration)|Doba trvání přechodu.|
 |[CAccelerateDecelerateTransition::m_finalValue](#m_finalvalue)|Hodnota proměnné animace na konci přechodu.|
 
 ## <a name="remarks"></a>Poznámky
 
-Během zrychlení-zpomalení přechodu, proměnné animace zrychluje a potom může zpomalit na dobu trvání přechodu končící na zadanou hodnotu. Můžete řídit rychlost proměnnou zrychluje a zadáním různých zrychlení a zpomalení poměry zpomalí nezávisle na sobě. Při počáteční je nula, je poměr akcelerace zlomek dobu, po kterou proměnné se věnovat zrychluje; Stejně tak se zpomalení poměr. Pokud počáteční je nenulová, je zlomek času mezi rychlosti dosažení nuly a na konci přechodu. Poměr zrychlení a zpomalení poměr by měl sečtou s až 1.0. Protože všechny přechody jsou automaticky vymazány, doporučuje se je přidělena pomocí operátoru nové. Zapouzdřený objekt IUIAnimationTransition COM je vytvořené CAnimationController::AnimateGroup, dokud je NULL. Změna členské proměnné po vytvoření tohoto objektu COM nemá žádný vliv.
+Při přechodu zrychlit zpomalení se proměnná animace zrychlí a pak zpomaluje po celou dobu trvání přechodu a končí zadanou hodnotou. Můžete určit, jak rychle proměnná zrychlí a zpomaluje nezávisle, zadáním různých poměrů zrychlení a zpomalení. Když je počáteční rychlost nula, poměr zrychlení je zlomek doby trvání, po kterou bude mít tato proměnná útratu zrychlení. Podobně jako poměr zpomalení. Pokud je počáteční rychlost nenulová, je to zlomek času mezi rychlostí dosáhne nuly a koncem přechodu. Poměr zrychlení a poměr zpomalení by měl být platný maximálně 1,0. Vzhledem k tomu, že jsou všechny přechody vymazány automaticky, doporučujeme je přidělit pomocí operátoru new. Zapouzdřený objekt COM IUIAnimationTransition je vytvořen pomocí CAnimationController:: Animate, dokud nebude NULL. Změna členských proměnných po vytvoření tohoto objektu COM nemá žádný vliv.
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
-[Třídy CObject](../../mfc/reference/cobject-class.md)
+[CObject](../../mfc/reference/cobject-class.md)
 
 [CBaseTransition](../../mfc/reference/cbasetransition-class.md)
 
@@ -61,9 +61,9 @@ Během zrychlení-zpomalení přechodu, proměnné animace zrychluje a potom mů
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** afxanimationcontroller.h
+**Záhlaví:** afxanimationcontroller. h
 
-##  <a name="cacceleratedeceleratetransition"></a>  CAccelerateDecelerateTransition::CAccelerateDecelerateTransition
+##  <a name="cacceleratedeceleratetransition"></a>CAccelerateDecelerateTransition::CAccelerateDecelerateTransition
 
 Vytvoří objekt přechodu.
 
@@ -84,14 +84,14 @@ Doba trvání přechodu.
 Hodnota proměnné animace na konci přechodu.
 
 *accelerationRatio*<br/>
-Poměr čas strávený zkracuje dobu trvání.
+Poměr doby strávené zrychlením na dobu trvání.
 
 *decelerationRatio*<br/>
-Poměr čas strávený zpomalení dobu trvání.
+Poměr času stráveného zpomalením doby trvání.
 
-##  <a name="create"></a>  CAccelerateDecelerateTransition::Create
+##  <a name="create"></a>CAccelerateDecelerateTransition:: Create
 
-Knihovna přechod k vytvoření objektu přechod zapouzdřený objekt modelu COM zavolá.
+Volá knihovnu přechodu k vytvoření zapouzdřeného přechodu objektu COM.
 
 ```
 virtual BOOL Create(
@@ -102,29 +102,29 @@ virtual BOOL Create(
 ### <a name="parameters"></a>Parametry
 
 *pLibrary*<br/>
-Ukazatel na [IUIAnimationTransitionLibrary rozhraní](/windows/desktop/api/uianimation/nn-uianimation-iuianimationtransitionlibrary), která definuje knihovnu standardní přechodů.
+Ukazatel na [rozhraní IUIAnimationTransitionLibrary](/windows/win32/api/uianimation/nn-uianimation-iuianimationtransitionlibrary), které definuje knihovnu standardních přechodů.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Hodnota TRUE, pokud úspěšně; vytvoření přechodu v opačném případě FALSE.
+TRUE, pokud je převod úspěšně vytvořen; v opačném případě FALSE.
 
-##  <a name="m_accelerationratio"></a>  CAccelerateDecelerateTransition::m_accelerationRatio
+##  <a name="m_accelerationratio"></a>CAccelerateDecelerateTransition::m_accelerationRatio
 
-Poměr čas strávený zkracuje dobu trvání.
+Poměr doby strávené zrychlením na dobu trvání.
 
 ```
 DOUBLE m_accelerationRatio;
 ```
 
-##  <a name="m_decelerationratio"></a>  CAccelerateDecelerateTransition::m_decelerationRatio
+##  <a name="m_decelerationratio"></a>CAccelerateDecelerateTransition::m_decelerationRatio
 
-Poměr čas strávený zpomalení dobu trvání.
+Poměr času stráveného zpomalením doby trvání.
 
 ```
 DOUBLE m_decelerationRatio;
 ```
 
-##  <a name="m_duration"></a>  CAccelerateDecelerateTransition::m_duration
+##  <a name="m_duration"></a>CAccelerateDecelerateTransition::m_duration
 
 Doba trvání přechodu.
 
@@ -132,7 +132,7 @@ Doba trvání přechodu.
 UI_ANIMATION_SECONDS m_duration;
 ```
 
-##  <a name="m_finalvalue"></a>  CAccelerateDecelerateTransition::m_finalValue
+##  <a name="m_finalvalue"></a>CAccelerateDecelerateTransition::m_finalValue
 
 Hodnota proměnné animace na konci přechodu.
 

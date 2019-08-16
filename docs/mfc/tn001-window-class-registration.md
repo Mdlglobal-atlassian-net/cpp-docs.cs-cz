@@ -1,5 +1,5 @@
 ---
-title: 'TN001: Registrace tříd oken'
+title: 'TN001: Registrace třídy okna'
 ms.date: 11/04/2016
 f1_keywords:
 - vc.registration
@@ -8,74 +8,74 @@ helpviewer_keywords:
 - WNDCLASS [MFC]
 - AfxRegisterClass function
 ms.assetid: 1abf678e-f220-4606-85e0-03df32f64c54
-ms.openlocfilehash: 68c851ae6a6b1b8578df90e2618f257122797aa5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 95e35ddd6f55c955bc2adb7b4db2460ae84a6dc7
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62306263"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69513543"
 ---
-# <a name="tn001-window-class-registration"></a>TN001: Registrace tříd oken
+# <a name="tn001-window-class-registration"></a>TN001: Registrace třídy okna
 
-Tato poznámka popisuje rutiny knihovny MFC, které registrují zvláštní [WNDCLASS](/windows/desktop/api/winuser/ns-winuser-tagwndclassa)es vyžadované Microsoft Windows. Konkrétní `WNDCLASS` jsou uvedeny atributy použité v rámci MFC a Windows.
+Tato poznámka popisuje rutiny knihovny MFC, které registrují speciální [WNDCLASS](/windows/win32/api/winuser/ns-winuser-wndclassw)ES, který vyžaduje Microsoft Windows. Projednávají se konkrétní `WNDCLASS` atributy používané v prostředích MFC a oknech.
 
 ## <a name="the-problem"></a>Problém
 
-Atributy [CWnd](../mfc/reference/cwnd-class.md) objektů, jako je třeba `HWND` zpracování ve Windows, jsou uložená na dvou místech: objekt okna a `WNDCLASS`. Název `WNDCLASS` předána pro okno Obecné vytváření funkcí, jako [CWnd::Create](../mfc/reference/cwnd-class.md#create) a [CFrameWnd::Create](../mfc/reference/cframewnd-class.md#create) v *lpszClassName* parametru.
+Atributy objektu [CWnd](../mfc/reference/cwnd-class.md) , jako je `HWND` například obslužná rutina ve Windows, jsou uloženy na dvou místech: objekt `WNDCLASS`okna a. Název `WNDCLASS` se předává obecným funkcím pro vytváření oken, jako je například [CWnd:: Create](../mfc/reference/cwnd-class.md#create) a [CFrameWnd:: Create](../mfc/reference/cframewnd-class.md#create) v parametru *lpszClassName* .
 
-To `WNDCLASS` musí být registrovány prostřednictvím jednoho z 4 způsoby:
+Tato `WNDCLASS` akce musí být zaregistrovaná prostřednictvím jednoho ze čtyř způsobů:
 
-- Implicitně pomocí MFC poskytuje `WNDCLASS`.
+- Implicitně pomocí poskytnuté `WNDCLASS`knihovny MFC.
 
-- Implicitně pomocí vytvoření podtřídy ovládacího prvku Windows (nebo jiný ovládací prvek).
+- Implicitně podtřídou ovládacího prvku systému Windows (nebo jiného ovládacího prvku).
 
-- Explicitně voláním knihovny MFC [afxregisterwndclass –](../mfc/reference/application-information-and-management.md#afxregisterwndclass) nebo [afxregisterclass –](../mfc/reference/application-information-and-management.md#afxregisterclass).
+- Explicitně voláním knihovny MFC [AfxRegisterWndClass –](../mfc/reference/application-information-and-management.md#afxregisterwndclass) nebo [AfxRegisterClass](../mfc/reference/application-information-and-management.md#afxregisterclass).
 
-- Explicitně voláním rutiny Windows [RegisterClass](/windows/desktop/api/winuser/nf-winuser-registerclassa).
+- Explicitně voláním rutiny Windows rutiny [registerClass](/windows/win32/api/winuser/nf-winuser-registerclassw).
 
 ## <a name="wndclass-fields"></a>WNDCLASS pole
 
-`WNDCLASS` Struktura se skládá z různých polí, které popisují třídy okna. Následující tabulka zobrazuje pole a určuje, jak se používají v aplikacích MFC:
+`WNDCLASS` Struktura se skládá z různých polí popisujících třídu okna. V následující tabulce jsou uvedena pole a určují, jak se používají v aplikaci knihovny MFC:
 
 |Pole|Popis|
 |-----------|-----------------|
-|*lpfnWndProc*|proces okna musí být `AfxWndProc`|
-|*cbClsExtra*|nepoužívá se (musí být nula)|
-|*cbWndExtra*|nepoužívá se (musí být nula)|
-|*hInstance*|automaticky vyplněno [afxgetinstancehandle –](../mfc/reference/application-information-and-management.md#afxgetinstancehandle)|
-|*hIcon*|Níže jsou uvedeny ikonu oken s rámečkem|
-|*hCursor*|Níže jsou uvedeny kurzor když je okno, myš|
-|*hbrBackground*|Barva pozadí, najdete níže|
-|*lpszMenuName*|nepoužívá se (by měl mít hodnotu NULL)|
-|*lpszClassName*|Název třídy, viz níže|
+|*lpfnWndProc*|procedura okna musí být`AfxWndProc`|
+|*cbClsExtra*|Nepoužito (mělo by být nula)|
+|*cbWndExtra*|Nepoužito (mělo by být nula)|
+|*hInstance*|automaticky vyplněný pomocí [AfxGetInstanceHandle](../mfc/reference/application-information-and-management.md#afxgetinstancehandle)|
+|*hIcon*|Ikona pro okna s rámečkem, viz níže|
+|*hCursor*|kurzor pro, když se překročí okno myši, najdete níže.|
+|*hbrBackground*|Barva pozadí, viz níže|
+|*lpszMenuName*|Nepoužito (měl by mít hodnotu NULL)|
+|*lpszClassName*|název třídy, viz níže.|
 
-## <a name="provided-wndclasses"></a>K dispozici WNDCLASSes
+## <a name="provided-wndclasses"></a>Poskytnuté WNDCLASSes
 
-Dřívější verze knihovny MFC (před MFC 4.0), poskytují několik předdefinovaných tříd oken. Tyto třídy okna jsou už k dispozici ve výchozím nastavení. Aplikace by měly používat `AfxRegisterWndClass` s příslušnými parametry.
+Starší verze knihovny MFC (před verzí MFC 4,0), poskytují několik předdefinovaných tříd okna. Tyto třídy okna již nejsou ve výchozím nastavení poskytovány. Aplikace by se `AfxRegisterWndClass` měly používat s příslušnými parametry.
 
-Pokud aplikace poskytuje prostředek s ID zadaného prostředku (například AFX_IDI_STD_FRAME), použije MFC tohoto prostředku. Jinak se bude používat výchozí prostředek. Ikony je použita ikona standardní aplikace a pro kurzor, se používá standardní šipka kurzoru.
+Pokud aplikace poskytuje prostředek se zadaným ID prostředku (například AFX_IDI_STD_FRAME), knihovna MFC bude tento prostředek používat. V opačném případě bude používat výchozí prostředek. Pro ikonu se používá ikona standardní aplikace a pro kurzor se použije standardní kurzor šipky.
 
-Dvě ikony podporují aplikace MDI s typy jednotlivý dokument: jednu ikonu pro hlavní aplikaci, na ikonu pro ikonickým dokument/MDIChild windows. Pro více typů dokumentů s jinou ikonami, je nutné zaregistrovat Další `WNDCLASS`no nebo použití [CFrameWnd::LoadFrame](../mfc/reference/cframewnd-class.md#loadframe) funkce.
+Dvě ikony podporují aplikace MDI s jedním typem dokumentu: jedna ikona pro hlavní aplikaci, Druhá ikona pro Windows Documents/MDIChild ikonickým. Pro více typů dokumentů s různými ikonami je nutné zaregistrovat další `WNDCLASS`ES nebo použít funkci [CFrameWnd:: LoadFrame](../mfc/reference/cframewnd-class.md#loadframe) .
 
-`CFrameWnd::LoadFrame` k registraci `WNDCLASS` pomocí ID ikony je zadat jako první parametr a standardní následující atributy:
+`CFrameWnd::LoadFrame`provede registraci `WNDCLASS` pomocí ID ikony, kterou zadáte jako první parametr, a následujícími standardními atributy:
 
-- styl třídy: CS_DBLCLKS &AMP;#124; CS_HREDRAW &AMP;#124; CS_VREDRAW;
+- styl třídy: CS_DBLCLKS &#124; CS_HREDRAW &#124; CS_VREDRAW;
 
-- icon AFX_IDI_STD_FRAME
+- AFX_IDI_STD_FRAME ikony
 
-- šipka kurzoru
+- kurzor šipky
 
 - Barva pozadí COLOR_WINDOW
 
-Hodnoty pro barvu pozadí a kurzor [CMDIFrameWnd](../mfc/reference/cmdiframewnd-class.md) nepoužívají od klientské oblasti `CMDIFrameWnd` zcela se vztahuje **MDICLIENT** okno. Společnost Microsoft nedoporučuje vytváření podtříd **MDICLIENT** okno tedy použít standardní barvy a typy kurzorů, pokud je to možné.
+Hodnoty pro barvu pozadí a kurzor pro [CMDIFrameWnd –](../mfc/reference/cmdiframewnd-class.md) nejsou použity, protože klientská oblast `CMDIFrameWnd` nástroje je zcela zahrnuta v okně **MdiClient** . Společnost Microsoft nedoporučuje podtřídovat okno **MdiClient** , takže pokud je to možné, používejte standardní barvy a typy kurzorů.
 
-## <a name="subclassing-and-superclassing-controls"></a>Vytváření podtříd a Superclassing ovládacích prvků
+## <a name="subclassing-and-superclassing-controls"></a>Podtřídy a ovládací prvky nadřazení
 
-Pokud je podtřídou nebo nadřazené třídy Windows (například [CButton](../mfc/reference/cbutton-class.md)) pak automaticky získá vaše třída `WNDCLASS` atributů uvedený v implementaci Windows ovládacího prvku.
+Pokud jste podtřídou nebo supertřída ovládací prvek Windows (například [CButton](../mfc/reference/cbutton-class.md)), třída automaticky získá `WNDCLASS` atributy, které jsou k dispozici v implementaci Windows daného ovládacího prvku.
 
-## <a name="the-afxregisterwndclass-function"></a>Afxregisterwndclass – funkce
+## <a name="the-afxregisterwndclass-function"></a>Funkce AfxRegisterWndClass –
 
-Knihovna MFC poskytuje pomocné funkce pro registraci třídy okna. Vzhledem k sadě atributů (styl třídy okna, kurzor, štětec pozadí a ikonu), vygeneruje se syntetické název a výsledné třídy okna je zaregistrovaný. Například
+Knihovna MFC poskytuje pomocnou funkci pro registraci třídy okna. Vzhledem k sadě atributů (styl třídy okna, kurzor, Štětec pozadí a ikona) je vygenerován syntetický název a výsledná Třída okna je zaregistrována. Například
 
 ```
 const char* AfxRegisterWndClass(UINT nClassStyle,
@@ -84,9 +84,9 @@ const char* AfxRegisterWndClass(UINT nClassStyle,
     HICON hIcon);
 ```
 
-Tato funkce vrací řetězec dočasný název třídy generované registrované okna. Další informace o této funkci najdete v tématu [afxregisterwndclass –](../mfc/reference/application-information-and-management.md#afxregisterwndclass).
+Tato funkce vrací dočasný řetězec generovaného názvu třídy okna. Další informace o této funkci naleznete v tématu [AfxRegisterWndClass –](../mfc/reference/application-information-and-management.md#afxregisterwndclass).
 
-Vrácený řetězec je dočasný ukazatel do vyrovnávací paměti statický řetězec. To platí až do příštího volání metody `AfxRegisterWndClass`. Pokud chcete zachovat tento řetězec kolem, uložte ho v [CString](../atl-mfc-shared/using-cstring.md) proměnné, jako v následujícím příkladu:
+Vrácený řetězec je dočasný ukazatel na vyrovnávací paměť statického řetězce. Je platný až do dalšího volání `AfxRegisterWndClass`. Pokud chcete tento řetězec vymezit, uložte ho do proměnné [CString](../atl-mfc-shared/using-cstring.md) , jako v tomto příkladu:
 
 ```
 CString strWndClass = AfxRegisterWndClass(CS_DBLCLK, ...);
@@ -98,13 +98,13 @@ pWnd->Create(strWndClass, ...);
 ...
 ```
 
-`AfxRegisterWndClass` vyvolá výjimku [cresourceexception –](../mfc/reference/cresourceexception-class.md) Pokud třídu okna se nepodařilo zaregistrovat (z důvodu nesprávných parametrů, nebo nedostatek paměti Windows).
+`AfxRegisterWndClass`vyvolá výjimku [CResourceException](../mfc/reference/cresourceexception-class.md) , pokud se nepovedlo zaregistrovat třídu okna (buď z důvodu chybných parametrů, nebo z paměti Windows).
 
-## <a name="the-registerclass-and-afxregisterclass-functions"></a>RegisterClass a afxregisterclass – funkce
+## <a name="the-registerclass-and-afxregisterclass-functions"></a>Funkce RegisterClass a AfxRegisterClass
 
-Pokud chcete udělat nic víc propracovaných než co `AfxRegisterWndClass` poskytuje, můžete volat rozhraní API Windows `RegisterClass` nebo funkce MFC `AfxRegisterClass`. `CWnd`, [CFrameWnd](../mfc/reference/cframewnd-class.md) a [CMDIChildWnd](../mfc/reference/cmdichildwnd-class.md) `Create` funkce přijímají *lpszClassName* název řetězce pro třídu okna jako první parametr. Můžete použít jakýkoli název třídy okna registrované, bez ohledu na metodu, kterou jste použili k registraci ho.
+Pokud chcete dělat něco složitějšího, než `AfxRegisterWndClass` poskytuje, můžete zavolat rozhraní API `RegisterClass` systému Windows nebo funkci `AfxRegisterClass`MFC. [](../mfc/reference/cmdichildwnd-class.md) `Create` [](../mfc/reference/cframewnd-class.md) Funkce, CFrameWnd a CMDIChildWnd – přebírají jako první parametr název řetězce lpszClassName pro třídu Window. `CWnd` Můžete použít libovolný registrovaný název třídy okna bez ohledu na metodu, kterou jste použili k její registraci.
 
-Je důležité používat `AfxRegisterClass` (nebo `AfxRegisterWndClass`) v knihovně DLL v systému Win32. Win32 nelze zrušit registraci automaticky třídy registrovaných knihovny DLL, proto musí explicitně zrušit registraci třídy při ukončení knihovny DLL. S použitím `AfxRegisterClass` místo `RegisterClass` to se automaticky udělá za vás. `AfxRegisterClass` udržuje seznam jedinečných tříd registrovaných vaši knihovnu DLL a automaticky zruší registraci je při ukončení knihovny DLL. Při použití `RegisterClass` v knihovně DLL, ujistěte se, že jsou všechny třídy odregistrovat při ukončení knihovny DLL (ve vaší [DllMain](/windows/desktop/Dlls/dllmain) funkce). Pokud tak neučiníte, může způsobit `RegisterClass` k neočekávanému selhání při další klientská aplikace pokouší použít vaši knihovnu DLL.
+Je důležité použít `AfxRegisterClass` (nebo `AfxRegisterWndClass`) v knihovně DLL v systému Win32. Win32 neregistruje automaticky třídy registrované knihovnou DLL, takže při ukončení knihovny DLL je nutné explicitně zrušit registraci tříd. Pomocí `AfxRegisterClass` `RegisterClass` této služby se místo toho automaticky zpracuje. `AfxRegisterClass`udržuje seznam jedinečných tříd zaregistrovaných vaší knihovnou DLL a při ukončení knihovny DLL je automaticky zruší. Při použití `RegisterClass` v knihovně DLL je nutné zajistit, aby všechny třídy byly odregistrovány při ukončení knihovny DLL (ve funkci [DllMain](/windows/win32/Dlls/dllmain) ). Pokud se to nepovede, `RegisterClass` může dojít k neočekávané chybě, když se jiná klientská aplikace pokusí použít vaši knihovnu DLL.
 
 ## <a name="see-also"></a>Viz také:
 

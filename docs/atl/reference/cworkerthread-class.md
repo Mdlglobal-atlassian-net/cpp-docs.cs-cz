@@ -1,5 +1,5 @@
 ---
-title: Cworkerthread – třída
+title: CWorkerThread – třída
 ms.date: 11/04/2016
 f1_keywords:
 - CWorkerThread
@@ -15,19 +15,19 @@ f1_keywords:
 helpviewer_keywords:
 - CWorkerThread class
 ms.assetid: be79a832-1345-4a36-a13e-a406cc65286f
-ms.openlocfilehash: d4645f4a57ce70c3683972c22e0f99cbce87ca6b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f1aa76514b98bbf12f8e516d3d54f68e8ef4dd7d
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62276652"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69496104"
 ---
-# <a name="cworkerthread-class"></a>Cworkerthread – třída
+# <a name="cworkerthread-class"></a>CWorkerThread – třída
 
-Tato třída vytvoří pracovní vlákno nebo použije existující předplatné, čeká na jeden nebo více jádra manipulačních bodů objektu a provede funkci zadaného klienta v případě jednoho z úchytů signalizován.
+Tato třída vytvoří pracovní vlákno nebo použije existující, počká na jeden nebo více popisovačů objektů jádra a spustí zadanou klientskou funkci, pokud je jeden z popisovačů signalizována.
 
 > [!IMPORTANT]
-> Tato třída a jejích členů nelze použít v aplikacích, které jsou spouštěny v modulu Windows Runtime.
+> Tato třída a její členové nelze použít v aplikacích, které jsou spouštěny v prostředí Windows Runtime.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -39,62 +39,62 @@ class CWorkerThread
 ### <a name="parameters"></a>Parametry
 
 *ThreadTraits*<br/>
-Třída poskytující funkce vytvoření vláken, jako například [crtthreadtraits –](../../atl/reference/crtthreadtraits-class.md) nebo [win32threadtraits –](../../atl/reference/win32threadtraits-class.md).
+Třída, která poskytuje funkci vytváření vlákna, jako je například [CRTThreadTraits](../../atl/reference/crtthreadtraits-class.md) nebo [Win32ThreadTraits](../../atl/reference/win32threadtraits-class.md).
 
 ## <a name="members"></a>Členové
 
 ### <a name="protected-structures"></a>Chráněné struktury
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |`WorkerClientEntry`||
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CWorkerThread::CWorkerThread](#cworkerthread)|Konstruktor pro pracovní vlákno.|
-|[CWorkerThread::~CWorkerThread](#dtor)|Destruktor pro pracovní vlákno.|
+|[CWorkerThread:: ~ CWorkerThread](#dtor)|Destruktor pro pracovní vlákno.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
-|[CWorkerThread::AddHandle](#addhandle)|Voláním této metody lze přidat popisovač generický objekt do seznamu spravuje pomocí pracovní vlákno.|
-|[CWorkerThread::AddTimer](#addtimer)|Voláním této metody lze přidat do seznamu spravuje pomocí pracovní podproces pravidelné generický časovače.|
-|[CWorkerThread::GetThreadHandle](#getthreadhandle)|Volejte tuto metodu za účelem získání popisovač vlákna pracovního podprocesu.|
-|[CWorkerThread::GetThreadId](#getthreadid)|Voláním této metody k získání ID vlákna pracovního podprocesu.|
-|[CWorkerThread::Initialize](#initialize)|Volejte tuto metodu za účelem inicializace pracovního vlákna.|
-|[CWorkerThread::RemoveHandle](#removehandle)|Volejte tuto metodu za účelem odebrání popisovač seznamu generický objektů.|
-|[CWorkerThread::Shutdown](#shutdown)|Volejte tuto metodu pro ukončení pracovního vlákna.|
+|[CWorkerThread::AddHandle](#addhandle)|Voláním této metody přidáte popisovač čekajícího objektu do seznamu spravovaného pracovním vláknem.|
+|[CWorkerThread::AddTimer](#addtimer)|Voláním této metody přidáte pravidelný čekací časovač do seznamu spravovaného pracovním vláknem.|
+|[CWorkerThread::GetThreadHandle](#getthreadhandle)|Voláním této metody získáte popisovač vlákna pracovního vlákna.|
+|[CWorkerThread::GetThreadId](#getthreadid)|Voláním této metody získáte ID vlákna pracovního vlákna.|
+|[CWorkerThread:: Initialize](#initialize)|Voláním této metody inicializujete pracovní vlákno.|
+|[CWorkerThread::RemoveHandle](#removehandle)|Voláním této metody odeberete popisovač ze seznamu čekajících objektů.|
+|[CWorkerThread:: Shutdown](#shutdown)|Voláním této metody vypnete pracovní vlákno.|
 
 ## <a name="remarks"></a>Poznámky
 
-### <a name="to-use-cworkerthread"></a>Cworkerthread – použití
+### <a name="to-use-cworkerthread"></a>Použití CWorkerThread
 
-1. Vytvoření instance této třídy.
+1. Vytvořte instanci této třídy.
 
-1. Volání [CWorkerThread::Initialize](#initialize).
+1. Zavolejte [CWorkerThread:: Initialize](#initialize).
 
-1. Volání [CWorkerThread::AddHandle](#addhandle) s popisovačem objekt jádra a ukazatel na implementaci [iworkerthreadclient –](../../atl/reference/iworkerthreadclient-interface.md).
+1. Zavolejte [CWorkerThread:: AddHandle](#addhandle) s popisovačem objektu jádra a ukazatelem na implementaci [IWorkerThreadClient](../../atl/reference/iworkerthreadclient-interface.md).
 
    \- nebo –
 
-   Volání [CWorkerThread::AddTimer](#addtimer) s ukazatelem na implementaci [iworkerthreadclient –](../../atl/reference/iworkerthreadclient-interface.md).
+   Zavolejte [CWorkerThread:: addtimer](#addtimer) s ukazatelem na implementaci [IWorkerThreadClient](../../atl/reference/iworkerthreadclient-interface.md).
 
-1. Implementace [IWorkerThreadClient::Execute](../../atl/reference/iworkerthreadclient-interface.md#execute) k provedlo určitou akci, když je signál, popisovač nebo časovače.
+1. Implementujte [IWorkerThreadClient:: Execute](../../atl/reference/iworkerthreadclient-interface.md#execute) pro provedení určité akce při signalizaci popisovač nebo časovače.
 
-1. Chcete-li odebrat objekt ze seznamu generický objektů, zavolejte [CWorkerThread::RemoveHandle](#removehandle).
+1. Chcete-li odebrat objekt ze seznamu čekajících objektů, zavolejte [CWorkerThread:: RemoveHandle](#removehandle).
 
-1. Chcete-li ukončit vlákno, volejte [CWorkerThread::Shutdown](#shutdown).
+1. Chcete-li ukončit vlákno, zavolejte [CWorkerThread:: Shutdown](#shutdown).
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** atlutil.h
+**Záhlaví:** atlutil. h
 
-##  <a name="addhandle"></a>  CWorkerThread::AddHandle
+##  <a name="addhandle"></a>CWorkerThread::AddHandle
 
-Voláním této metody lze přidat popisovač generický objekt do seznamu spravuje pomocí pracovní vlákno.
+Voláním této metody přidáte popisovač čekajícího objektu do seznamu spravovaného pracovním vláknem.
 
 ```
 HRESULT AddHandle(
@@ -106,13 +106,13 @@ HRESULT AddHandle(
 ### <a name="parameters"></a>Parametry
 
 *hObject*<br/>
-Popisovač na generický objekt.
+Popisovač pro čekací objekt.
 
 *pClient*<br/>
-Ukazatel [iworkerthreadclient –](../../atl/reference/iworkerthreadclient-interface.md) rozhraní na objekt, který má volat, pokud je signalizována popisovač.
+Ukazatel na rozhraní [IWorkerThreadClient](../../atl/reference/iworkerthreadclient-interface.md) objektu, který má být volán při signalizaci popisovače.
 
 *dwParam*<br/>
-Parametr má být předán [IWorkerThreadClient::Execute](../../atl/reference/iworkerthreadclient-interface.md#execute) při signalizován popisovač.
+Parametr, který má být předán do [IWorkerThreadClient:: Execute](../../atl/reference/iworkerthreadclient-interface.md#execute) při signalizaci popisovače.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -120,11 +120,11 @@ Vrátí hodnotu S_OK při úspěchu nebo chybu HRESULT při selhání.
 
 ### <a name="remarks"></a>Poznámky
 
-[IWorkerThreadClient::Execute](../../atl/reference/iworkerthreadclient-interface.md#execute) zavolá prostřednictvím *pClient* při zpracování, *hObject*, signalizován.
+[IWorkerThreadClient:: Execute](../../atl/reference/iworkerthreadclient-interface.md#execute) se bude volat prostřednictvím *pClient* při signalizaci popisovače *hObject*.
 
-##  <a name="addtimer"></a>  CWorkerThread::AddTimer
+##  <a name="addtimer"></a>CWorkerThread::AddTimer
 
-Voláním této metody lze přidat do seznamu spravuje pomocí pracovní podproces pravidelné generický časovače.
+Voláním této metody přidáte pravidelný čekací časovač do seznamu spravovaného pracovním vláknem.
 
 ```
 HRESULT AddTimer(
@@ -137,16 +137,16 @@ HRESULT AddTimer(
 ### <a name="parameters"></a>Parametry
 
 *dwInterval*<br/>
-Určuje dobu, po časovače v milisekundách.
+Určuje periodu časovače v milisekundách.
 
 *pClient*<br/>
-Ukazatel [iworkerthreadclient –](../../atl/reference/iworkerthreadclient-interface.md) rozhraní na objekt, který má volat, pokud je signalizována popisovač.
+Ukazatel na rozhraní [IWorkerThreadClient](../../atl/reference/iworkerthreadclient-interface.md) objektu, který má být volán při signalizaci popisovače.
 
 *dwParam*<br/>
-Parametr má být předán [IWorkerThreadClient::Execute](../../atl/reference/iworkerthreadclient-interface.md#execute) při signalizován popisovač.
+Parametr, který má být předán do [IWorkerThreadClient:: Execute](../../atl/reference/iworkerthreadclient-interface.md#execute) při signalizaci popisovače.
 
 *phTimer*<br/>
-[out] Adresa proměnné POPISOVAČ, který v případě úspěchu, obdrží popisovač do nově vytvořeného časovače.
+mimo Adresa proměnné popisovače, která při úspěchu obdrží popisovač nově vytvořenému časovači.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -154,11 +154,11 @@ Vrátí hodnotu S_OK při úspěchu nebo chybu HRESULT při selhání.
 
 ### <a name="remarks"></a>Poznámky
 
-[IWorkerThreadClient::Execute](../../atl/reference/iworkerthreadclient-interface.md#execute) zavolá prostřednictvím *pClient* při signalizován časovač.
+[IWorkerThreadClient:: Execute](../../atl/reference/iworkerthreadclient-interface.md#execute) se bude volat prostřednictvím *pClient* při signalizaci časovače.
 
-Předejte časovače popisovač z *phTimer* k [CWorkerThread::RemoveHandle](#removehandle) zavřete časovač.
+Před ukončením časovače předejte popisovač časovače z *phTimer* do [CWorkerThread:: RemoveHandle](#removehandle) .
 
-##  <a name="cworkerthread"></a>  CWorkerThread::CWorkerThread
+##  <a name="cworkerthread"></a>CWorkerThread::CWorkerThread
 
 Konstruktor
 
@@ -166,7 +166,7 @@ Konstruktor
 CWorkerThread() throw();
 ```
 
-##  <a name="dtor"></a>  Cworkerthread –:: ~ cworkerthread –
+##  <a name="dtor"></a>CWorkerThread:: ~ CWorkerThread
 
 Destruktor.
 
@@ -176,11 +176,11 @@ Destruktor.
 
 ### <a name="remarks"></a>Poznámky
 
-Volání [CWorkerThread::Shutdown](#shutdown).
+Volá [CWorkerThread:: Shutdown](#shutdown).
 
-##  <a name="getthreadhandle"></a>  CWorkerThread::GetThreadHandle
+##  <a name="getthreadhandle"></a>CWorkerThread::GetThreadHandle
 
-Volejte tuto metodu za účelem získání popisovač vlákna pracovního podprocesu.
+Voláním této metody získáte popisovač vlákna pracovního vlákna.
 
 ```
 HANDLE GetThreadHandle() throw();
@@ -188,11 +188,11 @@ HANDLE GetThreadHandle() throw();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vrátí popisovač vlákna nebo hodnota NULL, pokud pracovní podproces nebyla inicializována.
+Vrátí popisovač vlákna nebo hodnotu NULL, pokud pracovní vlákno nebylo inicializováno.
 
-##  <a name="getthreadid"></a>  CWorkerThread::GetThreadId
+##  <a name="getthreadid"></a>CWorkerThread::GetThreadId
 
-Voláním této metody k získání ID vlákna pracovního podprocesu.
+Voláním této metody získáte ID vlákna pracovního vlákna.
 
 ```
 DWORD GetThreadId() throw();
@@ -200,11 +200,11 @@ DWORD GetThreadId() throw();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vrátí ID vlákna nebo hodnota NULL, pokud pracovní podproces nebyla inicializována.
+Vrátí ID vlákna nebo hodnotu NULL, pokud pracovní vlákno nebylo inicializováno.
 
-##  <a name="initialize"></a>  CWorkerThread::Initialize
+##  <a name="initialize"></a>CWorkerThread:: Initialize
 
-Volejte tuto metodu za účelem inicializace pracovního vlákna.
+Voláním této metody inicializujete pracovní vlákno.
 
 ```
 HRESULT Initialize() throw();
@@ -223,15 +223,15 @@ Vrátí hodnotu S_OK při úspěchu nebo chybu HRESULT při selhání.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato metoda by měla být volána k inicializaci objektu po vytvoření nebo po volání [CWorkerThread::Shutdown](#shutdown).
+Tato metoda by měla být volána pro inicializaci objektu po vytvoření nebo po volání metody [CWorkerThread:: Shutdown](#shutdown).
 
-Má dvě nebo více `CWorkerThread` objekty použít stejný pracovní vlákno, jeden z nich bez předávání argumentů poté předat ukazatel na tento objekt k inicializaci `Initialize` ostatních metod. Objekty inicializován pomocí ukazatele byste před objekt použitý k jejich inicializaci vypněte.
+Aby dva nebo více `CWorkerThread` objektů používalo stejné pracovní vlákno, inicializujte jeden z nich bez předání jakýchkoli argumentů a pak předejte ukazatel na tento objekt `Initialize` metodám ostatních. Objekty inicializované pomocí ukazatele by měly být ukončeny před tím, než je objekt použit k jeho inicializaci.
 
-Zobrazit [CWorkerThread::Shutdown](#shutdown) informace o tom, jak mění chování této metody při inicializaci pomocí ukazatele na existující objekt.
+Informace o tom, jak se chování této metody mění při inicializaci pomocí ukazatele na existující objekt, naleznete v tématu [CWorkerThread:: Shutdown](#shutdown) .
 
-##  <a name="removehandle"></a>  CWorkerThread::RemoveHandle
+##  <a name="removehandle"></a>CWorkerThread::RemoveHandle
 
-Volejte tuto metodu za účelem odebrání popisovač seznamu generický objektů.
+Voláním této metody odeberete popisovač ze seznamu čekajících objektů.
 
 ```
 HRESULT RemoveHandle(HANDLE hObject) throw();
@@ -240,7 +240,7 @@ HRESULT RemoveHandle(HANDLE hObject) throw();
 ### <a name="parameters"></a>Parametry
 
 *hObject*<br/>
-Obslužná rutina pro odebrání.
+Popisovač, který chcete odebrat.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -248,11 +248,11 @@ Vrátí hodnotu S_OK při úspěchu nebo chybu HRESULT při selhání.
 
 ### <a name="remarks"></a>Poznámky
 
-Když se odebere popisovač [IWorkerThreadClient::CloseHandle](../../atl/reference/iworkerthreadclient-interface.md#closehandle) bude volána při přidruženého objektu, který byl předán [AddHandle](#addhandle). Pokud se toto volání se nezdaří, `CWorkerThread` zavolá Windows [CloseHandle](/windows/desktop/api/handleapi/nf-handleapi-closehandle) funkce na popisovač.
+Po odebrání popisovače [IWorkerThreadClient:: CloseHandle](../../atl/reference/iworkerthreadclient-interface.md#closehandle) bude volána u přidruženého objektu, který byl předán do [AddHandle](#addhandle). Pokud se toto volání nezdaří `CWorkerThread` , zavolá funkci Windows [CloseHandle](/windows/win32/api/handleapi/nf-handleapi-closehandle) na popisovači.
 
-##  <a name="shutdown"></a>  CWorkerThread::Shutdown
+##  <a name="shutdown"></a>CWorkerThread:: Shutdown
 
-Volejte tuto metodu pro ukončení pracovního vlákna.
+Voláním této metody vypnete pracovní vlákno.
 
 ```
 HRESULT Shutdown(DWORD dwWait = ATL_WORKER_THREAD_WAIT) throw();
@@ -261,17 +261,17 @@ HRESULT Shutdown(DWORD dwWait = ATL_WORKER_THREAD_WAIT) throw();
 ### <a name="parameters"></a>Parametry
 
 *dwWait*<br/>
-Čas v milisekundách pro čekání pracovního vlákna, vypnout. ATL_WORKER_THREAD_WAIT výchozí hodnota je 10 sekund. V případě potřeby můžete definovat vlastní hodnotu pro tento symbol před zahrnutím atlutil.h.
+Čas v milisekundách, po který se má čekat na vypnutí pracovního vlákna ATL_WORKER_THREAD_WAIT je standardně 10 sekund. V případě potřeby můžete pro tento symbol definovat vlastní hodnotu před zahrnutím atlutil. h.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vrátí hodnotu S_OK na úspěch nebo chybu HRESULT při selhání, třeba když hodnota časového limitu *dwWait*, dojde k překročení.
+Vrátí hodnotu S_OK při úspěchu nebo chybu HRESULT při selhání, například pokud je překročena hodnota časového limitu *dwWait*.
 
 ### <a name="remarks"></a>Poznámky
 
-Chcete-li znovu použít objekt, zavolejte [CWorkerThread::Initialize](#initialize) po volání této metody.
+Chcete-li znovu použít objekt, zavolejte [CWorkerThread:: Initialize](#initialize) po volání této metody.
 
-Všimněte si, že volání `Shutdown` na objekt inicializován pomocí ukazatele na jiný `CWorkerThread` objekt nemá žádný vliv a vždy vrátí hodnotu S_OK.
+Všimněte si, `Shutdown` že volání na objekt inicializovaný s ukazatelem na `CWorkerThread` jiný objekt nemá žádný účinek a vždy vrátí hodnotu S_OK.
 
 ## <a name="see-also"></a>Viz také:
 

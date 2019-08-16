@@ -1,5 +1,5 @@
 ---
-title: Csize – třída
+title: CSize – třída
 ms.date: 10/18/2018
 f1_keywords:
 - CSize
@@ -11,16 +11,16 @@ helpviewer_keywords:
 - dimensions
 - CSize class
 ms.assetid: fb2cf85a-0bc1-46f8-892b-309c108b52ae
-ms.openlocfilehash: 5e19ab9b9339f3e6f61abf7731a40ed3832b50c9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 26bb43355f4dff3f77a905068bea83dd1ceaf79c
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62252685"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69491646"
 ---
-# <a name="csize-class"></a>Csize – třída
+# <a name="csize-class"></a>CSize – třída
 
-Podobně jako Windows [velikost](/windows/desktop/api/windef/ns-windef-tagsize) struktura, která implementuje relativní souřadnice nebo pozici.
+Podobně jako struktura [velikosti](/windows/win32/api/windef/ns-windef-size) systému Windows, která implementuje relativní souřadnici nebo polohu.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -32,29 +32,29 @@ class CSize : public tagSIZE
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
-|[CSize::CSize](#csize)|Vytvoří `CSize` objektu.|
+|[CSize::CSize](#csize)|`CSize` Vytvoří objekt.|
 
 ### <a name="public-operators"></a>Veřejné operátory
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
-|[CSize::operator-](#operator_-)|Odečte dvou velikostech.|
-|[CSize::operator! =](#operator_neq)|Zkontroluje nerovnost mezi `CSize` a velikost.|
-|[CSize::operator +](#operator_add)|Přidá dvě velikosti.|
-|[CSize::operator +=](#operator_add_eq)|Přidá velikost pro `CSize`.|
-|[CSize::operator-=](#operator_-_eq)|Odečte velikost z `CSize`.|
-|[CSize::operator ==](#operator_eq_eq)|Vyhledá rovnost mezi `CSize` a velikost.|
+|[CSize:: operator-](#operator_-)|Odečte dvě velikosti.|
+|[CSize:: operator! =](#operator_neq)|Kontroluje nerovnost mezi `CSize` a velikostí.|
+|[CSize:: operator + – operátor](#operator_add)|Přidá dvě velikosti.|
+|[CSize:: operator + =](#operator_add_eq)|Přidá velikost do `CSize`.|
+|[CSize:: operator-=](#operator_-_eq)|Odečte velikost od `CSize`.|
+|[CSize:: operator = = – operátor](#operator_eq_eq)|Kontroluje rovnost mezi `CSize` a velikostí.|
 
 ## <a name="remarks"></a>Poznámky
 
-Tato třída je odvozena z `SIZE` struktury. To znamená, že můžete předat `CSize` parametrem, který volá `SIZE` a datové členy `SIZE` struktury jsou dostupné datové členy `CSize`.
+Tato třída je odvozena z `SIZE` struktury. To znamená, že můžete předat `CSize` do parametr, který volá `SIZE` pro a, aby datové členy `SIZE` struktury byly přístupné datovým členům `CSize`.
 
-`cx` a `cy` členy `SIZE` (a `CSize`) jsou veřejné. Kromě toho `CSize` implementuje členské funkce pro manipulaci s `SIZE` struktury.
+A členové (a )`CSize`jsouveřejné. `SIZE` `cy` `cx` Kromě toho `CSize` implementuje členské funkce pro manipulaci s `SIZE` strukturou.
 
 > [!NOTE]
-> Další informace o sdílené třídy nástroje (jako je `CSize`), najdete v článku [sdílené třídy](../../atl-mfc-shared/atl-mfc-shared-classes.md).
+> Další informace o třídách sdílených nástrojů (například `CSize`) naleznete v tématu [Shared Classes](../../atl-mfc-shared/atl-mfc-shared-classes.md).
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
@@ -64,11 +64,11 @@ Tato třída je odvozena z `SIZE` struktury. To znamená, že můžete předat `
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** atltypes.h
+**Záhlaví:** atltypes. h
 
-##  <a name="csize"></a>  CSize::CSize
+##  <a name="csize"></a>CSize::CSize
 
-Vytvoří `CSize` objektu.
+`CSize` Vytvoří objekt.
 
 ```
 CSize() throw();
@@ -81,31 +81,31 @@ CSize( DWORD dwSize) throw();
 ### <a name="parameters"></a>Parametry
 
 *initCX*<br/>
-Nastaví `cx` člena `CSize`.
+`cx` Nastaví člena`CSize`pro.
 
 *initCY*<br/>
-Nastaví `cy` člena `CSize`.
+`cy` Nastaví člena`CSize`pro.
 
 *initSize*<br/>
-[VELIKOST](/windows/desktop/api/windef/ns-windef-tagsize) struktury nebo `CSize` objekt použitý k inicializaci `CSize`.
+[Velikost](/windows/win32/api/windef/ns-windef-size) struktury nebo `CSize` objektu používaného k `CSize`inicializaci.
 
 *initPt*<br/>
-[BOD](/windows/desktop/api/windef/ns-windef-tagpoint) struktury nebo `CPoint` objekt použitý k inicializaci `CSize`.
+Struktura [bodu](/windows/win32/api/windef/ns-windef-point) nebo `CPoint` objekt použitý k inicializaci `CSize`.
 
-*dwSize*<br/>
-DWORD použitý k inicializaci `CSize`. Je nižší řád slova `cx` člen a vyšší řád slova je `cy` člena.
+*nenulového dwSize funkci*<br/>
+Hodnota DWORD používaná k `CSize`inicializaci. Slovo s nižším pořadím je `cx` člen a v rámci něj `cy` je slovo s vyšším pořadím členem.
 
 ### <a name="remarks"></a>Poznámky
 
-Pokud nejsou zadány žádné argumenty, `cx` a `cy` jsou inicializovány na nulu.
+Pokud nejsou zadány `cx` žádné argumenty a `cy` jsou inicializovány na nulu.
 
 ### <a name="example"></a>Příklad
 
 [!code-cpp[NVC_ATLMFC_Utilities#97](../../atl-mfc-shared/codesnippet/cpp/csize-class_1.cpp)]
 
-##  <a name="operator_eq_eq"></a>  CSize::operator ==
+##  <a name="operator_eq_eq"></a>CSize:: operator = = – operátor
 
-Kontroly pro rovnost mezi dvěma formáty.
+Kontroluje rovnost mezi dvěma velikostmi.
 
 ```
 BOOL operator==(SIZE size) const throw();
@@ -113,15 +113,15 @@ BOOL operator==(SIZE size) const throw();
 
 ### <a name="remarks"></a>Poznámky
 
-Vrátí nenulovou hodnotu, pokud jsou stejné velikosti, otherwize 0.
+Vrátí nenulovou hodnotu, pokud jsou velikosti stejné, otherwize 0.
 
 ### <a name="example"></a>Příklad
 
 [!code-cpp[NVC_ATLMFC_Utilities#98](../../atl-mfc-shared/codesnippet/cpp/csize-class_2.cpp)]
 
-##  <a name="operator_neq"></a>  CSize::operator! =
+##  <a name="operator_neq"></a>CSize:: operator! =
 
-Kontroly pro nerovnost mezi dvěma formáty.
+Kontroluje nerovnost mezi dvěma velikostmi.
 
 ```
 BOOL operator!=(SIZE size) const throw();
@@ -129,15 +129,15 @@ BOOL operator!=(SIZE size) const throw();
 
 ### <a name="remarks"></a>Poznámky
 
-Vrátí nenulovou hodnotu, pokud velikosti nejsou stejné, jinak 0.
+Vrátí nenulovou hodnotu, pokud nejsou velikosti stejné, jinak 0.
 
 ### <a name="example"></a>Příklad
 
 [!code-cpp[NVC_ATLMFC_Utilities#99](../../atl-mfc-shared/codesnippet/cpp/csize-class_3.cpp)]
 
-##  <a name="operator_add_eq"></a>  CSize::operator +=
+##  <a name="operator_add_eq"></a>CSize:: operator + =
 
-Přidá k tomuto velikost `CSize`.
+Přidá k této `CSize`velikosti.
 
 ```
 void operator+=(SIZE size) throw();
@@ -147,9 +147,9 @@ void operator+=(SIZE size) throw();
 
 [!code-cpp[NVC_ATLMFC_Utilities#100](../../atl-mfc-shared/codesnippet/cpp/csize-class_4.cpp)]
 
-##  <a name="operator_-_eq"></a>  CSize::operator-=
+##  <a name="operator_-_eq"></a>CSize:: operator-=
 
-Odečte velikost z tohoto `CSize`.
+Odečte velikost od tohoto `CSize`.
 
 ```
 void operator-=(SIZE size) throw();
@@ -159,9 +159,9 @@ void operator-=(SIZE size) throw();
 
 [!code-cpp[NVC_ATLMFC_Utilities#101](../../atl-mfc-shared/codesnippet/cpp/csize-class_5.cpp)]
 
-##  <a name="operator_add"></a>  CSize::operator +
+##  <a name="operator_add"></a>CSize:: operator + – operátor
 
-Přidejte tyto operátory `CSize` hodnotu k hodnotě parametru.
+Tyto operátory přidávají `CSize` tuto hodnotu k hodnotě parametru.
 
 ```
 CSize operator+(SIZE size) const throw();
@@ -171,27 +171,27 @@ CRect operator+(const RECT* lpRect) const throw();
 
 ### <a name="remarks"></a>Poznámky
 
-V následujících popisech jednotlivé operátory:
+Podívejte se na následující popisy jednotlivých operátorů:
 
-- **operátor + (** *velikost* **)**
+- **operator + (** *Size* **)** – operátor
 
   Tato operace přidá dvě `CSize` hodnoty.
 
-- **operátor + (** *bodu* **)**
+- **operator + (** *Point* **)** – operátor
 
-  Tato operace posun (přesun) [bodu](/previous-versions/dd162805\(v=vs.85\)) (nebo [CPoint](../../atl-mfc-shared/reference/cpoint-class.md)) hodnotu situace `CSize` hodnotu. `cx` a `cy` členy tohoto `CSize` hodnoty se přidají do `x` a `y` datové členy `POINT` hodnotu. Je obdobou verzi [CPoint::operator +](../../atl-mfc-shared/reference/cpoint-class.md#operator_add) , která přijímá [velikost](/windows/desktop/api/windef/ns-windef-tagsize) parametru.
+  Tato operace posune (přesouvá) hodnotu [bodu](/previous-versions/dd162805\(v=vs.85\)) (nebo [CPoint](../../atl-mfc-shared/reference/cpoint-class.md)) na základě této `CSize` hodnoty. `x` `y` Členové `cx` a `cy` této hodnoty`CSize` jsou přidánidodatových`POINT` členů a hodnoty. Je obdobou verzi [CPoint:: operator +](../../atl-mfc-shared/reference/cpoint-class.md#operator_add) , která přijímá parametr [velikosti](/windows/win32/api/windef/ns-windef-size) .
 
-- **operátor + (** *lprect –* **)**
+- **+ – operátor (** *lpRect* **)**
 
-   Tato operace posun (přesun) [RECT](/previous-versions/dd162897\(v=vs.85\)) (nebo [crect –](../../atl-mfc-shared/reference/crect-class.md)) hodnotu situace `CSize` hodnotu. `cx` a `cy` členy tohoto `CSize` hodnoty se přidají do `left`, `top`, `right`, a `bottom` datové členy `RECT` hodnotu. Je obdobou verzi [CRect::operator +](../../atl-mfc-shared/reference/crect-class.md#operator_add) , která přijímá [velikost](/windows/desktop/api/windef/ns-windef-tagsize) parametru.
+   Tato operace posune (přesouvá) hodnotu [Rect](/previous-versions/dd162897\(v=vs.85\)) (nebo [CRect](../../atl-mfc-shared/reference/crect-class.md)) podle této `CSize` hodnoty. `left` `right` `top` `bottom` Členové `cx` a `cy` této`CSize` hodnoty jsou přidáni do datových členů,, a v`RECT` hodnotě. Je obdobou verzi [CRect:: operator +](../../atl-mfc-shared/reference/crect-class.md#operator_add) , která přijímá parametr [velikosti](/windows/win32/api/windef/ns-windef-size) .
 
 ### <a name="example"></a>Příklad
 
 [!code-cpp[NVC_ATLMFC_Utilities#102](../../atl-mfc-shared/codesnippet/cpp/csize-class_6.cpp)]
 
-##  <a name="operator_-"></a>  CSize::operator-
+##  <a name="operator_-"></a>CSize:: operator-
 
-První tři z těchto operátorů odečíst to `CSize` hodnotu k hodnotě parametru.
+První tři z těchto operátorů odečtou `CSize` tuto hodnotu na hodnotu parametru.
 
 ```
 CSize operator-(SIZE size) const throw();
@@ -202,23 +202,23 @@ CSize operator-() const throw();
 
 ### <a name="remarks"></a>Poznámky
 
-Čtvrtý operátor Unární minus, změní znaménko `CSize` hodnotu. V následujících popisech jednotlivé operátory:
+Čtvrtý operátor, Unární minus, změní znaménko `CSize` hodnoty. Podívejte se na následující popisy jednotlivých operátorů:
 
-- **operátor-(** *velikost* **)**
+- **-(** *Size* **)** – operátor
 
   Tato operace odečte dvě `CSize` hodnoty.
 
-- **operátor-(** *bodu* **)**
+- **-(** *Point* **)** – operátor
 
-  Tato operace posun (přesun) [bodu](/previous-versions/dd162805\(v=vs.85\)) nebo [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) hodnoty additive inverzní to `CSize` hodnotu. `cx` a `cy` tohoto `CSize` jsou hodnota odečtena od `x` a `y` datové členy `POINT` hodnotu. Je obdobou verzi [CPoint::operator -](../../atl-mfc-shared/reference/cpoint-class.md#operator_-) , která přijímá [velikost](/windows/desktop/api/windef/ns-windef-tagsize) parametr.
+  Tato operace posune (přesouvá) hodnotu [Point](/previous-versions/dd162805\(v=vs.85\)) nebo [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) doplňkovou hodnotou, která je doplňkovou `CSize` hodnotou. `y` `x` A z této hodnotyjsou`POINT` odečteny od datových členů a hodnoty. `CSize` `cy` `cx` Je obdobou verzi [CPoint:: operator-](../../atl-mfc-shared/reference/cpoint-class.md#operator_-) , která přijímá parametr [velikosti](/windows/win32/api/windef/ns-windef-size) .
 
-- **operátor-(** *lprect –* **)**
+- **– – operátor (** *lpRect* **)**
 
-  Tato operace posun (přesun) [RECT](/previous-versions/dd162897\(v=vs.85\)) nebo [crect –](../../atl-mfc-shared/reference/crect-class.md) hodnoty additive inverzní to `CSize` hodnotu. `cx` a `cy` členy tohoto `CSize` jsou hodnota odečtena od `left`, `top`, `right`, a `bottom` datové členy `RECT` hodnotu. Je obdobou verzi [CRect::operator -](../../atl-mfc-shared/reference/crect-class.md#operator_-) , která přijímá [velikost](/windows/desktop/api/windef/ns-windef-tagsize) parametr.
+  Tato operace posune (přesouvá) hodnotu [Rect](/previous-versions/dd162897\(v=vs.85\)) nebo [CRect](../../atl-mfc-shared/reference/crect-class.md) doplňkovou hodnotou, která je doplňkovou `CSize` hodnotou. `top` `right` `left` `bottom` A členové této hodnotyjsou`RECT` odečteni od datových členů hodnoty,, a. `CSize` `cy` `cx` Je obdobou verzi [CRect:: operator-](../../atl-mfc-shared/reference/crect-class.md#operator_-) , která přijímá parametr [velikosti](/windows/win32/api/windef/ns-windef-size) .
 
-- **operátor-)**
+- **– operátor ()**
 
-  Tato operace Vrátí inverzní additive tohoto `CSize` hodnotu.
+  Tato operace vrátí doplňkovou `CSize` hodnotu pro doplňkovou hodnotu.
 
 ### <a name="example"></a>Příklad
 
@@ -226,7 +226,7 @@ CSize operator-() const throw();
 
 ## <a name="see-also"></a>Viz také:
 
-[Ukázky knihovny MFC MDI](../../overview/visual-cpp-samples.md)<br/>
+[Ukázka MDI MFC](../../overview/visual-cpp-samples.md)<br/>
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>
 [CRect – třída](../../atl-mfc-shared/reference/crect-class.md)<br/>
 [CPoint – třída](../../atl-mfc-shared/reference/cpoint-class.md)

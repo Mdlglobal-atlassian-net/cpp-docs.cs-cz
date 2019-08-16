@@ -11,12 +11,12 @@ helpviewer_keywords:
 - MFC, exceptions
 - exceptions [MFC], MFC throwing functions
 ms.assetid: 26d4457c-8350-48f5-916e-78f919787c30
-ms.openlocfilehash: 337fe03ab09a6ed3da283f45dd4eb58aaaad5bc5
-ms.sourcegitcommit: 16c0392fc8d96e814c3a40b0c5346d7389aeb525
+ms.openlocfilehash: d33da7a9bc81f9733df840a87fbbbeca1e02cc04
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/12/2019
-ms.locfileid: "68957504"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69502550"
 ---
 # <a name="exception-processing"></a>Zpracování výjimek
 
@@ -380,7 +380,7 @@ void AfxThrowMemoryException();
 
 ### <a name="remarks"></a>Poznámky
 
-Tuto funkci volejte, pokud selže volání systémových přidělování paměti (například \ [GlobalAlloc](/windows/desktop/api/winbase/nf-winbase-globalalloc) a funkce systému Windows). Nemusíte ji volat pro funkci **New** , protože **Nová** dojde k automatickému vyvolání výjimky paměti, pokud se přidělení paměti nezdaří.
+Tuto funkci volejte, pokud selže volání systémových přidělování paměti (například \ [GlobalAlloc](/windows/win32/api/winbase/nf-winbase-globalalloc) a funkce systému Windows). Nemusíte ji volat pro funkci **New** , protože **Nová** dojde k automatickému vyvolání výjimky paměti, pokud se přidělení paměti nezdaří.
 
 ### <a name="requirements"></a>Požadavky
 
@@ -491,7 +491,7 @@ Zpracujte kód výsledku, který označuje důvod výjimky.
 
 ### <a name="remarks"></a>Poznámky
 
-Verze, která používá HRESULT jako argument, převede tento kód výsledku do odpovídající Code. Další informace o HRESULT a Code naleznete v tématu [Struktura kódů chyb modelu COM](/windows/desktop/com/structure-of-com-error-codes) v Windows SDK.
+Verze, která používá HRESULT jako argument, převede tento kód výsledku do odpovídající Code. Další informace o HRESULT a Code naleznete v tématu [Struktura kódů chyb modelu COM](/windows/win32/com/structure-of-com-error-codes) v Windows SDK.
 
 ### <a name="requirements"></a>Požadavky
 

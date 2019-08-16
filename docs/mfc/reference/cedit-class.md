@@ -94,12 +94,12 @@ helpviewer_keywords:
 - CEdit [MFC], ShowBalloonTip
 - CEdit [MFC], Undo
 ms.assetid: b1533c30-7f10-4663-88d3-8b7f2c9f7024
-ms.openlocfilehash: ccf7445100977e1205bbcffe230e1919ac33adea
-ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
+ms.openlocfilehash: 5ad8784f3bff999eec046aa91f52b1cd164764e5
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68916144"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69506793"
 ---
 # <a name="cedit-class"></a>CEdit – třída
 
@@ -213,7 +213,7 @@ Pokud vytvoříte `CEdit` objekt z dialogového okna prostředku pomocí editoru
 
 Pokud vytvoříte `CEdit` objekt v rámci okna, může být také nutné jej zničit. Vytvoříte-li `CEdit` objekt v zásobníku, bude automaticky zničen. Vytvoříte `CEdit` -li objekt na haldě pomocí **nové** funkce, je nutné volat metodu **Delete** u objektu, aby jej bylo možné zničit, když uživatel ukončí ovládací prvek Windows Edit. Pokud přidělíte paměť v `CEdit` objektu, `CEdit` přepište destruktor k Dispose přidělení.
 
-Chcete-li upravit určité styly v ovládacím prvku pro úpravy (například ES_READONLY), je nutné odeslat konkrétní zprávy ovládacímu prvku namísto použití [ModifyStyle](cwnd-class.md#modifystyle). Viz [Úpravy stylů ovládacích prvků](/windows/desktop/Controls/edit-control-styles) v Windows SDK.
+Chcete-li upravit určité styly v ovládacím prvku pro úpravy (například ES_READONLY), je nutné odeslat konkrétní zprávy ovládacímu prvku namísto použití [ModifyStyle](cwnd-class.md#modifystyle). Viz [Úpravy stylů ovládacích prvků](/windows/win32/Controls/edit-control-styles) v Windows SDK.
 
 Další informace o `CEdit`naleznete v tématu [Controls](../../mfc/controls-mfc.md).
 
@@ -245,7 +245,7 @@ Nenulové, pokud lze poslední operaci Edit vrátit zpět voláním `Undo` člen
 
 ### <a name="remarks"></a>Poznámky
 
-Další informace najdete v tématu [EM_CANUNDO](/windows/desktop/Controls/em-canundo) v Windows SDK.
+Další informace najdete v tématu [EM_CANUNDO](/windows/win32/Controls/em-canundo) v Windows SDK.
 
 ### <a name="example"></a>Příklad
 
@@ -289,7 +289,7 @@ Index znaku v SLOVech s nižším pořadím a index čáry v aplikaci s vysokým
 > [!NOTE]
 >  Tato členská funkce je k dispozici počínaje systémy Windows 95 a Windows NT 4,0.
 
-Další informace najdete v tématu [EM_CHARFROMPOS](/windows/desktop/Controls/em-charfrompos) v Windows SDK.
+Další informace najdete v tématu [EM_CHARFROMPOS](/windows/win32/Controls/em-charfrompos) v Windows SDK.
 
 ### <a name="example"></a>Příklad
 
@@ -309,7 +309,7 @@ Odstranění provedené pomocí `Clear` lze zrušit voláním členské funkce [
 
 Chcete-li odstranit aktuální výběr a umístit odstraněný obsah do schránky, zavolejte funkci [Vyjmout](#cut) člen.
 
-Další informace najdete v tématu [WM_CLEAR](/windows/desktop/dataxchg/wm-clear) v Windows SDK.
+Další informace najdete v tématu [WM_CLEAR](/windows/win32/dataxchg/wm-clear) v Windows SDK.
 
 ### <a name="example"></a>Příklad
 
@@ -325,7 +325,7 @@ void Copy();
 
 ### <a name="remarks"></a>Poznámky
 
-Další informace najdete v tématu [WM_COPY](/windows/desktop/dataxchg/wm-copy) v Windows SDK.
+Další informace najdete v tématu [WM_COPY](/windows/win32/dataxchg/wm-copy) v Windows SDK.
 
 ### <a name="example"></a>Příklad
 
@@ -365,7 +365,7 @@ Nenulová, pokud je inicializace úspěšná; v opačném případě 0.
 
 `CEdit` Vytvoříte objekt ve dvou krocích. Nejprve zavolejte `CEdit` konstruktor a potom zavolejte `Create`, čímž se vytvoří ovládací prvek Windows Edit a `CEdit` připojí se k objektu.
 
-Když `Create` se spustí, Windows pošle zprávy [WM_NCCREATE](/windows/desktop/winmsg/wm-nccreate), [WM_NCCALCSIZE](/windows/desktop/winmsg/wm-nccalcsize), [WM_CREATE](/windows/desktop/winmsg/wm-create)a [WM_GETMINMAXINFO](/windows/desktop/winmsg/wm-getminmaxinfo) ovládacímu prvku pro úpravy.
+Když `Create` se spustí, Windows pošle zprávy [WM_NCCREATE](/windows/win32/winmsg/wm-nccreate), [WM_NCCALCSIZE](/windows/win32/winmsg/wm-nccalcsize), [WM_CREATE](/windows/win32/winmsg/wm-create)a [WM_GETMINMAXINFO](/windows/win32/winmsg/wm-getminmaxinfo) ovládacímu prvku pro úpravy.
 
 Tyto zprávy jsou ve výchozím nastavení zpracovávány členskými funkcemi [OnNcCreate](cwnd-class.md#onnccreate), [OnNcCalcSize](cwnd-class.md#onnccalcsize), [Create](cwnd-class.md#oncreate)a [OnGetMinMaxInfo](cwnd-class.md#ongetminmaxinfo) v `CWnd` základní třídě. Chcete-li zvětšit výchozí zpracování zprávy, odvodit třídu `CEdit`z, přidat do nové třídy mapu zprávy a přepsat výše uvedené členské funkce obslužné rutiny zpráv. Přepsání `OnCreate`, například k provedení potřebné inicializace pro novou třídu.
 
@@ -399,7 +399,7 @@ Odstranění provedené pomocí `Cut` lze zrušit voláním členské funkce [zp
 
 Chcete-li odstranit aktuální výběr bez umístění odstraněného textu do schránky, zavolejte funkci [clear](#clear) member.
 
-Další informace najdete v tématu [WM_CUT](/windows/desktop/dataxchg/wm-cut) v Windows SDK.
+Další informace najdete v tématu [WM_CUT](/windows/win32/dataxchg/wm-cut) v Windows SDK.
 
 ### <a name="example"></a>Příklad
 
@@ -419,7 +419,7 @@ Textové pole nyní nebude moci vrátit poslední operaci zpět. Příznak vrác
 
 Příznak vrácení zpět je automaticky vymazán při volání členských funkcí [SetWindowText](../../mfc/reference/cwnd-class.md#setwindowtext) nebo [SetHandle](#sethandle) `CWnd` .
 
-Další informace najdete v tématu [EM_EMPTYUNDOBUFFER](/windows/desktop/Controls/em-emptyundobuffer) v Windows SDK.
+Další informace najdete v tématu [EM_EMPTYUNDOBUFFER](/windows/win32/Controls/em-emptyundobuffer) v Windows SDK.
 
 ### <a name="example"></a>Příklad
 
@@ -448,9 +448,9 @@ Měkké zalomení řádku se skládá ze dvou návratových znaků a LF vložen�
 
 Systém Windows odpoví pouze v případě `CEdit` , že je objekt ovládacím prvkem víceřádkové textové pole.
 
-`FmtLines`ovlivňuje pouze vyrovnávací paměť vrácenou [](#gethandle) funkcí GetHandle a text vrácený funkcí [WM_GETTEXT](/windows/desktop/winmsg/wm-gettext). Nemá žádný vliv na zobrazení textu v ovládacím prvku pro úpravy.
+`FmtLines`ovlivňuje pouze vyrovnávací paměť vrácenou [](#gethandle) funkcí GetHandle a text vrácený funkcí [WM_GETTEXT](/windows/win32/winmsg/wm-gettext). Nemá žádný vliv na zobrazení textu v ovládacím prvku pro úpravy.
 
-Další informace najdete v tématu [EM_FMTLINES](/windows/desktop/Controls/em-fmtlines) v Windows SDK.
+Další informace najdete v tématu [EM_FMTLINES](/windows/win32/Controls/em-fmtlines) v Windows SDK.
 
 ### <a name="example"></a>Příklad
 
@@ -484,7 +484,7 @@ Pro druhé přetížení je [CString](../../atl-mfc-shared/using-cstring.md) , k
 
 ### <a name="remarks"></a>Poznámky
 
-Tato metoda pošle zprávu [EM_GETCUEBANNER](/windows/desktop/Controls/em-getcuebanner) , která je popsána v Windows SDK. Další informace najdete v tématu makro [Edit_GetCueBannerText](/windows/desktop/api/commctrl/nf-commctrl-edit_getcuebannertext) .
+Tato metoda pošle zprávu [EM_GETCUEBANNER](/windows/win32/Controls/em-getcuebanner) , která je popsána v Windows SDK. Další informace najdete v tématu makro [Edit_GetCueBannerText](/windows/win32/api/commctrl/nf-commctrl-edit_getcuebannertext) .
 
 ##  <a name="getfirstvisibleline"></a>CEdit::GetFirstVisibleLine
 
@@ -500,7 +500,7 @@ Index založený na nule z horního viditelného řádku. Pro textové ovládac�
 
 ### <a name="remarks"></a>Poznámky
 
-Další informace najdete v tématu [EM_GETFIRSTVISIBLELINE](/windows/desktop/Controls/em-getfirstvisibleline) v Windows SDK.
+Další informace najdete v tématu [EM_GETFIRSTVISIBLELINE](/windows/win32/Controls/em-getfirstvisibleline) v Windows SDK.
 
 ### <a name="example"></a>Příklad
 
@@ -529,7 +529,7 @@ Volání `GetHandle` víceřádkového ovládacího prvku pro úpravy v dialogov
 > [!NOTE]
 > `GetHandle`nebude fungovat se systémem Windows 95/98. Pokud zavoláte `GetHandle` ve Windows 95/98, vrátí hodnotu null. `GetHandle`bude fungovat jak je uvedeno v části Windows NT, verze 3,51 a novější.
 
-Další informace najdete v tématu [EM_GETHANDLE](/windows/desktop/Controls/em-gethandle) v Windows SDK.
+Další informace najdete v tématu [EM_GETHANDLE](/windows/win32/Controls/em-gethandle) v Windows SDK.
 
 ### <a name="example"></a>Příklad
 
@@ -558,7 +558,7 @@ TRUE, pokud je tato metoda úspěšná; v opačném případě FALSE.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato metoda pošle zprávu [EM_GETHILITE](/windows/desktop/Controls/em-gethilite) , která je popsána v Windows SDK. `SetHighlight` A`GetHighlight` v současné době jsou povoleny pouze pro sestavení Unicode.
+Tato metoda pošle zprávu [EM_GETHILITE](/windows/win32/Controls/em-gethilite) , která je popsána v Windows SDK. `SetHighlight` A`GetHighlight` v současné době jsou povoleny pouze pro sestavení Unicode.
 
 ##  <a name="getlimittext"></a>CEdit::GetLimitText
 
@@ -579,7 +579,7 @@ Omezení textu je maximální množství textu v TCHARs, které může ovládac�
 > [!NOTE]
 >  Tato členská funkce je k dispozici počínaje systémy Windows 95 a Windows NT 4,0.
 
-Další informace najdete v tématu [EM_GETLIMITTEXT](/windows/desktop/Controls/em-getlimittext) v Windows SDK.
+Další informace najdete v tématu [EM_GETLIMITTEXT](/windows/win32/Controls/em-getlimittext) v Windows SDK.
 
 ### <a name="example"></a>Příklad
 
@@ -619,7 +619,7 @@ Počet skutečně zkopírovaných znaků. Návratová hodnota je 0, pokud čísl
 
 Zkopírovaný řádek neobsahuje znak ukončení hodnoty null.
 
-Další informace najdete v tématu [EM_GETLINE](/windows/desktop/Controls/em-getline) v Windows SDK.
+Další informace najdete v tématu [EM_GETLINE](/windows/win32/Controls/em-getline) v Windows SDK.
 
 ### <a name="example"></a>Příklad
 
@@ -641,7 +641,7 @@ Celé číslo obsahující počet řádků v ovládacím prvku víceřádkové �
 
 `GetLineCount`je zpracována pouze pomocí víceřádkových textových ovládacích prvků.
 
-Další informace najdete v tématu [EM_GETLINECOUNT](/windows/desktop/Controls/em-getlinecount) v Windows SDK.
+Další informace najdete v tématu [EM_GETLINECOUNT](/windows/win32/Controls/em-getlinecount) v Windows SDK.
 
 ### <a name="example"></a>Příklad
 
@@ -666,7 +666,7 @@ Okraje se měří v pixelech.
 > [!NOTE]
 >  Tato členská funkce je k dispozici počínaje systémy Windows 95 a Windows NT 4,0.
 
-Další informace najdete v tématu [EM_GETMARGINS](/windows/desktop/Controls/em-getmargins) v Windows SDK.
+Další informace najdete v tématu [EM_GETMARGINS](/windows/win32/Controls/em-getmargins) v Windows SDK.
 
 ### <a name="example"></a>Příklad
 
@@ -688,7 +688,7 @@ Nenulové, pokud došlo ke změně obsahu řízení úprav; 0, pokud by zůstaly
 
 Systém Windows udržuje vnitřní příznak označující, zda došlo ke změně obsahu textového ovládacího prvku. Tento příznak je vymazán při prvním vytvoření textového ovládacího prvku a lze jej také vymazat voláním členské funkce [SetModify](#setmodify) .
 
-Další informace najdete v tématu [EM_GETMODIFY](/windows/desktop/Controls/em-getmodify) v Windows SDK.
+Další informace najdete v tématu [EM_GETMODIFY](/windows/win32/Controls/em-getmodify) v Windows SDK.
 
 ### <a name="example"></a>Příklad
 
@@ -708,9 +708,9 @@ Určuje znak, který se má zobrazit místo znaku, který uživatel zadal. Návr
 
 ### <a name="remarks"></a>Poznámky
 
-Pokud vytvoříte ovládací prvek pro úpravy se stylem ES_PASSWORD, knihovna DLL, která podporuje ovládací prvek, určí výchozí znak hesla. Manifest nebo metoda [vyžaduje InitCommonControlsEx](/windows/desktop/api/commctrl/nf-commctrl-initcommoncontrolsex) určuje, která knihovna DLL podporuje ovládací prvek pro úpravy. Pokud User32. dll podporuje ovládací prvek pro úpravy, výchozí znak hesla je HVĚZDIČKa (*, U + 002A). Pokud Comctl32. dll verze 6 podporuje ovládací prvek pro úpravy, výchozí znak je černý kroužek (' ● ', U + 25CF). Další informace o tom, která knihovna DLL a verze podporuje běžné ovládací prvky, najdete v tématu [prostředí a běžné verze ovládacích prvků](/previous-versions/windows/desktop/legacy/bb776779\(v=vs.85\)).
+Pokud vytvoříte ovládací prvek pro úpravy se stylem ES_PASSWORD, knihovna DLL, která podporuje ovládací prvek, určí výchozí znak hesla. Manifest nebo metoda [vyžaduje InitCommonControlsEx](/windows/win32/api/commctrl/nf-commctrl-initcommoncontrolsex) určuje, která knihovna DLL podporuje ovládací prvek pro úpravy. Pokud User32. dll podporuje ovládací prvek pro úpravy, výchozí znak hesla je HVĚZDIČKa (*, U + 002A). Pokud Comctl32. dll verze 6 podporuje ovládací prvek pro úpravy, výchozí znak je černý kroužek (' ● ', U + 25CF). Další informace o tom, která knihovna DLL a verze podporuje běžné ovládací prvky, najdete v tématu [prostředí a běžné verze ovládacích prvků](/previous-versions/windows/desktop/legacy/bb776779\(v=vs.85\)).
 
-Tato metoda pošle zprávu [EM_GETPASSWORDCHAR](/windows/desktop/Controls/em-getpasswordchar) , která je popsána v Windows SDK.
+Tato metoda pošle zprávu [EM_GETPASSWORDCHAR](/windows/win32/Controls/em-getpasswordchar) , která je popsána v Windows SDK.
 
 ### <a name="example"></a>Příklad
 
@@ -735,7 +735,7 @@ Formátovací obdélník je omezující obdélník textu, který je nezávislý 
 
 Formátovací obdélník víceřádkového ovládacího prvku pro úpravy lze upravit pomocí členských funkcí [SetRect](#setrect) a [SetRectNP](#setrectnp) .
 
-Další informace najdete v tématu [EM_GETRECT](/windows/desktop/Controls/em-getrect) v Windows SDK.
+Další informace najdete v tématu [EM_GETRECT](/windows/win32/Controls/em-getrect) v Windows SDK.
 
 ### <a name="example"></a>Příklad
 
@@ -767,7 +767,7 @@ Verze, která vrací hodnotu DWORD, vrací hodnotu, která obsahuje počátečn�
 
 ### <a name="remarks"></a>Poznámky
 
-Další informace najdete v tématu [EM_GETSEL](/windows/desktop/Controls/em-getsel) v Windows SDK.
+Další informace najdete v tématu [EM_GETSEL](/windows/win32/Controls/em-getsel) v Windows SDK.
 
 ### <a name="example"></a>Příklad
 
@@ -787,7 +787,7 @@ TRUE, pokud je tato metoda úspěšná; v opačném případě FALSE.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato funkce pošle zprávu [EM_HIDEBALLOONTIP](/windows/desktop/Controls/em-hideballoontip) , která je popsána v Windows SDK.
+Tato funkce pošle zprávu [EM_HIDEBALLOONTIP](/windows/win32/Controls/em-hideballoontip) , která je popsána v Windows SDK.
 
 ##  <a name="limittext"></a>  CEdit::LimitText
 
@@ -809,7 +809,7 @@ Změna omezení textu omezí pouze text, který uživatel může zadat. Nemá ž
 > [!NOTE]
 >  V systému Win32 (Windows NT a Windows 95/98) nahrazuje tato funkce [SetLimitText](#setlimittext) .
 
-Další informace najdete v tématu [EM_LIMITTEXT](/windows/desktop/Controls/em-limittext) v Windows SDK.
+Další informace najdete v tématu [EM_LIMITTEXT](/windows/win32/Controls/em-limittext) v Windows SDK.
 
 ### <a name="example"></a>Příklad
 
@@ -838,7 +838,7 @@ Index znaků je počet znaků od začátku ovládacího prvku pro úpravy.
 
 Tato členská funkce je používána pouze víceřádkovými ovládacími prvky pro úpravy.
 
-Další informace najdete v tématu [EM_LINEFROMCHAR](/windows/desktop/Controls/em-linefromchar) v Windows SDK.
+Další informace najdete v tématu [EM_LINEFROMCHAR](/windows/win32/Controls/em-linefromchar) v Windows SDK.
 
 ### <a name="example"></a>Příklad
 
@@ -867,7 +867,7 @@ Index znaků je počet znaků od začátku ovládacího prvku pro úpravy na zad
 
 Tato členská funkce je zpracována pouze pomocí víceřádkových textových ovládacích prvků.
 
-Další informace najdete v tématu [EM_LINEINDEX](/windows/desktop/controls/em-lineindex) v Windows SDK.
+Další informace najdete v tématu [EM_LINEINDEX](/windows/win32/controls/em-lineindex) v Windows SDK.
 
 ### <a name="example"></a>Příklad
 
@@ -896,11 +896,11 @@ Pokud je parametr *nline* větší než počet znaků v ovládacím prvku, vrác
 
 Pokud je parametr *nline* -1, návratová hodnota je počet nevybraných znaků v řádcích, které obsahují vybrané znaky. Například pokud výběr sahá od čtvrtého znaku jednoho řádku až po osmý znak po konci dalšího řádku, návratová hodnota je 10. To znamená tři znaky na prvním řádku a sedm v dalším.
 
-Další informace o TCHAR typu naleznete v řádku TCHAR v tabulce v [datových typech systému Windows](/windows/desktop/WinProg/windows-data-types).
+Další informace o TCHAR typu naleznete v řádku TCHAR v tabulce v [datových typech systému Windows](/windows/win32/WinProg/windows-data-types).
 
 ### <a name="remarks"></a>Poznámky
 
-Tato metoda je podporována zprávou [EM_LINELENGTH](/windows/desktop/Controls/em-linelength) , která je popsána v Windows SDK.
+Tato metoda je podporována zprávou [EM_LINELENGTH](/windows/win32/Controls/em-linelength) , která je popsána v Windows SDK.
 
 ### <a name="example"></a>Příklad
 
@@ -932,7 +932,7 @@ Ovládací prvek pro úpravy se neposouvá svisle za poslední řádek textu v o
 
 `LineScroll`dá se použít k posunu vodorovně za poslední znak každého řádku.
 
-Další informace najdete v tématu [EM_LINESCROLL](/windows/desktop/Controls/em-linescroll) v Windows SDK.
+Další informace najdete v tématu [EM_LINESCROLL](/windows/win32/Controls/em-linescroll) v Windows SDK.
 
 ### <a name="example"></a>Příklad
 
@@ -950,7 +950,7 @@ void Paste();
 
 Data jsou vložena pouze v případě, že schránka obsahuje data ve formátu CF_TEXT.
 
-Další informace najdete v tématu [WM_PASTE](/windows/desktop/dataxchg/wm-paste) v Windows SDK.
+Další informace najdete v tématu [WM_PASTE](/windows/win32/dataxchg/wm-paste) v Windows SDK.
 
 ### <a name="example"></a>Příklad
 
@@ -980,7 +980,7 @@ Znak je určen tím, že poskytuje hodnotu indexu založenou na nule. Pokud je *
 > [!NOTE]
 >  Tato členská funkce je k dispozici počínaje systémy Windows 95 a Windows NT 4,0.
 
-Další informace najdete v tématu [EM_POSFROMCHAR](/windows/desktop/Controls/em-posfromchar) v Windows SDK.
+Další informace najdete v tématu [EM_POSFROMCHAR](/windows/win32/Controls/em-posfromchar) v Windows SDK.
 
 ### <a name="example"></a>Příklad
 
@@ -1008,7 +1008,7 @@ Nahradí pouze část textu v ovládacím prvku pro úpravy. Chcete-li nahradit 
 
 Pokud není k dispozici žádný výběr, bude nahrazený text vložen do aktuálního umístění kurzoru.
 
-Další informace najdete v tématu [EM_REPLACESEL](/windows/desktop/Controls/em-replacesel) v Windows SDK.
+Další informace najdete v tématu [EM_REPLACESEL](/windows/win32/Controls/em-replacesel) v Windows SDK.
 
 ### <a name="example"></a>Příklad
 
@@ -1044,7 +1044,7 @@ TRUE, pokud je metoda úspěšná; v opačném případě FALSE.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato metoda pošle zprávu [EM_SETCUEBANNER](/windows/desktop/Controls/em-setcuebanner) , která je popsána v Windows SDK. Další informace najdete v tématu makro [Edit_SetCueBannerTextFocused](/windows/desktop/api/commctrl/nf-commctrl-edit_setcuebannertextfocused) .
+Tato metoda pošle zprávu [EM_SETCUEBANNER](/windows/win32/Controls/em-setcuebanner) , která je popsána v Windows SDK. Další informace najdete v tématu makro [Edit_SetCueBannerTextFocused](/windows/win32/api/commctrl/nf-commctrl-edit_setcuebannertextfocused) .
 
 ### <a name="example"></a>Příklad
 
@@ -1063,7 +1063,7 @@ void SetHandle(HLOCAL hBuffer);
 ### <a name="parameters"></a>Parametry
 
 *hBuffer*<br/>
-Obsahuje popisovač do místní paměti. Tento popisovač musí být vytvořen předchozím voláním funkce [LocalAlloc](/windows/desktop/api/winbase/nf-winbase-localalloc) systému Windows pomocí příznaku LMEM_MOVEABLE. Předpokládá se, že paměť obsahuje řetězec zakončený hodnotou null. V takovém případě by měl být první bajt přidělené paměti nastaven na hodnotu 0.
+Obsahuje popisovač do místní paměti. Tento popisovač musí být vytvořen předchozím voláním funkce [LocalAlloc](/windows/win32/api/winbase/nf-winbase-localalloc) systému Windows pomocí příznaku LMEM_MOVEABLE. Předpokládá se, že paměť obsahuje řetězec zakončený hodnotou null. V takovém případě by měl být první bajt přidělené paměti nastaven na hodnotu 0.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -1080,7 +1080,7 @@ Tuto členskou funkci můžete v dialogovém okně víceřádkového textového 
 > [!NOTE]
 > `GetHandle`nebude fungovat se systémem Windows 95/98. Pokud zavoláte `GetHandle` ve Windows 95/98, vrátí hodnotu null. `GetHandle`bude fungovat jak je uvedeno v části Windows NT, verze 3,51 a novější.
 
-Další informace naleznete v tématu [EM_SETHANDLE](/windows/desktop/Controls/em-sethandle), [LocalAlloc](/windows/desktop/api/winbase/nf-winbase-localalloc)a [LocalFree](/windows/desktop/api/winbase/nf-winbase-localfree) v Windows SDK.
+Další informace naleznete v tématu [EM_SETHANDLE](/windows/win32/Controls/em-sethandle), [LocalAlloc](/windows/win32/api/winbase/nf-winbase-localalloc)a [LocalFree](/windows/win32/api/winbase/nf-winbase-localfree) v Windows SDK.
 
 ### <a name="example"></a>Příklad
 
@@ -1105,7 +1105,7 @@ void SetHighlight(
 
 ### <a name="remarks"></a>Poznámky
 
-Tato metoda pošle zprávu [EM_SETHILITE](/windows/desktop/Controls/em-sethilite) , která je popsána v Windows SDK.  Tato metoda pošle zprávu [EM_SETHILITE](/windows/desktop/Controls/em-sethilite) , která je popsána v Windows SDK. `SetHighlight` A`GetHighlight` jsou povoleny pouze pro sestavení Unicode.
+Tato metoda pošle zprávu [EM_SETHILITE](/windows/win32/Controls/em-sethilite) , která je popsána v Windows SDK.  Tato metoda pošle zprávu [EM_SETHILITE](/windows/win32/Controls/em-sethilite) , která je popsána v Windows SDK. `SetHighlight` A`GetHighlight` jsou povoleny pouze pro sestavení Unicode.
 
 ##  <a name="setlimittext"></a>  CEdit::SetLimitText
 
@@ -1128,7 +1128,7 @@ Změna omezení textu omezí pouze text, který uživatel může zadat. Nemá ž
 
 Tato funkce nahrazuje [LimitText](#limittext) v systému Win32.
 
-Další informace najdete v tématu [EM_SETLIMITTEXT](/windows/desktop/Controls/em-setlimittext) v Windows SDK.
+Další informace najdete v tématu [EM_SETLIMITTEXT](/windows/win32/Controls/em-setlimittext) v Windows SDK.
 
 ### <a name="example"></a>Příklad
 
@@ -1157,7 +1157,7 @@ void SetMargins(
 > [!NOTE]
 >  Tato členská funkce je k dispozici počínaje systémy Windows 95 a Windows NT 4,0.
 
-Další informace najdete v tématu [EM_SETMARGINS](/windows/desktop/Controls/em-setmargins) v Windows SDK.
+Další informace najdete v tématu [EM_SETMARGINS](/windows/win32/Controls/em-setmargins) v Windows SDK.
 
 ### <a name="example"></a>Příklad
 
@@ -1180,7 +1180,7 @@ Hodnota TRUE značí, že text byl změněn a hodnota FALSE označuje, že je ne
 
 Upravený příznak označuje, zda byl text v ovládacím prvku pro úpravy změněn. Automaticky se nastaví vždy, když uživatel změní text. Její hodnotu lze načíst pomocí členské funkce [GetModify](#getmodify) .
 
-Další informace najdete v tématu [EM_SETMODIFY](/windows/desktop/Controls/em-setmodify) v Windows SDK.
+Další informace najdete v tématu [EM_SETMODIFY](/windows/win32/Controls/em-setmodify) v Windows SDK.
 
 ### <a name="example"></a>Příklad
 
@@ -1209,7 +1209,7 @@ Tato členská funkce nemá žádný vliv na víceřádkový ovládací prvek pr
 
 Pokud je ovládací prvek pro úpravy vytvořen pomocí stylu [ES_PASSWORD](styles-used-by-mfc.md#edit-styles) , je výchozí znak hesla nastaven na hvězdičku ( <strong>\*</strong>). Tento styl se odebere, `SetPasswordChar` Pokud se volá s *ch* nastaveným na 0.
 
-Další informace najdete v tématu [EM_SETPASSWORDCHAR](/windows/desktop/Controls/em-setpasswordchar) v Windows SDK.
+Další informace najdete v tématu [EM_SETPASSWORDCHAR](/windows/win32/Controls/em-setpasswordchar) v Windows SDK.
 
 ### <a name="example"></a>Příklad
 
@@ -1236,7 +1236,7 @@ Nenulová, pokud je operace úspěšná, nebo 0, pokud dojde k chybě.
 
 Aktuální nastavení lze nalézt otestováním příznaku [ES_READONLY](styles-used-by-mfc.md#edit-styles) v návratové hodnotě [CWnd:: GetStyle](cwnd-class.md#getstyle).
 
-Další informace najdete v tématu [EM_SETREADONLY](/windows/desktop/Controls/em-setreadonly) v Windows SDK.
+Další informace najdete v tématu [EM_SETREADONLY](/windows/win32/Controls/em-setreadonly) v Windows SDK.
 
 ### <a name="example"></a>Příklad
 
@@ -1265,7 +1265,7 @@ Pokud ovládací prvek pro úpravy nemá žádný posuvník, text bude oříznut
 
 Když `SetRect` je volána, text textového ovládacího prvku je také přeformátován a znovu zobrazen.
 
-Další informace najdete v tématu [EM_SETRECT](/windows/desktop/Controls/em-setrect) v Windows SDK.
+Další informace najdete v tématu [EM_SETRECT](/windows/win32/Controls/em-setrect) v Windows SDK.
 
 ### <a name="example"></a>Příklad
 
@@ -1296,7 +1296,7 @@ Pokud ovládací prvek pro úpravy nemá žádný posuvník, text bude oříznut
 
 Tento člen je zpracován pouze pomocí víceřádkových textových ovládacích prvků.
 
-Další informace najdete v tématu [EM_SETRECTNP](/windows/desktop/Controls/em-setrectnp) v Windows SDK.
+Další informace najdete v tématu [EM_SETRECTNP](/windows/win32/Controls/em-setrectnp) v Windows SDK.
 
 ### <a name="example"></a>Příklad
 
@@ -1333,7 +1333,7 @@ Určuje koncovou pozici.
 
 ### <a name="remarks"></a>Poznámky
 
-Další informace najdete v tématu [EM_SETSEL](/windows/desktop/Controls/em-setsel) v Windows SDK.
+Další informace najdete v tématu [EM_SETSEL](/windows/win32/Controls/em-setsel) v Windows SDK.
 
 ### <a name="example"></a>Příklad
 
@@ -1377,7 +1377,7 @@ Tato členská funkce je zpracována pouze pomocí víceřádkových textových 
 
 `SetTabStops`automaticky nekreslí okno úprav. Pokud změníte zarážky pro text, který už je v ovládacím prvku pro úpravy, zavolejte v poli [CWnd:: InvalidateRect](cwnd-class.md#invalidaterect) , aby se změnilo okno úprav.
 
-Další informace najdete v tématu [EM_SETTABSTOPS](/windows/desktop/Controls/em-settabstops) a [GetDialogBaseUnits](/windows/desktop/api/winuser/nf-winuser-getdialogbaseunits) v Windows SDK.
+Další informace najdete v tématu [EM_SETTABSTOPS](/windows/win32/Controls/em-settabstops) a [GetDialogBaseUnits](/windows/win32/api/winuser/nf-winuser-getdialogbaseunits) v Windows SDK.
 
 ### <a name="example"></a>Příklad
 
@@ -1400,10 +1400,10 @@ BOOL ShowBalloonTip(
 
 |Parametr|Popis|
 |---------------|-----------------|
-|*pEditBalloonTip*|pro Ukazatel na strukturu [EDITBALLOONTIP](/windows/desktop/api/commctrl/ns-commctrl-editballoontip) , která popisuje Tip v bublině.|
+|*pEditBalloonTip*|pro Ukazatel na strukturu [EDITBALLOONTIP](/windows/win32/api/commctrl/ns-commctrl-editballoontip) , která popisuje Tip v bublině.|
 |*lpszTitle*|pro Ukazatel na řetězec v kódování Unicode, který obsahuje název tipu bubliny.|
 |*lpszText*|pro Ukazatel na řetězec v kódování Unicode, který obsahuje text tipu bubliny.|
-|*ttiIcon*|pro **Int** , která určuje typ ikony k přidružení s tipem v bublině. Výchozí hodnota je TTI_NONE. Další informace naleznete v tématu `ttiIcon` člen struktury [EDITBALLOONTIP](/windows/desktop/api/commctrl/ns-commctrl-editballoontip) .|
+|*ttiIcon*|pro **Int** , která určuje typ ikony k přidružení s tipem v bublině. Výchozí hodnota je TTI_NONE. Další informace naleznete v tématu `ttiIcon` člen struktury [EDITBALLOONTIP](/windows/win32/api/commctrl/ns-commctrl-editballoontip) .|
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -1411,7 +1411,7 @@ TRUE, pokud je tato metoda úspěšná; v opačném případě FALSE.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato funkce pošle zprávu [EM_SHOWBALLOONTIP](/windows/desktop/Controls/em-showballoontip) , která je popsána v Windows SDK. Další informace najdete v tématu makro [Edit_ShowBalloonTip](/windows/desktop/api/commctrl/nf-commctrl-edit_showballoontip) .
+Tato funkce pošle zprávu [EM_SHOWBALLOONTIP](/windows/win32/Controls/em-showballoontip) , která je popsána v Windows SDK. Další informace najdete v tématu makro [Edit_ShowBalloonTip](/windows/win32/api/commctrl/nf-commctrl-edit_showballoontip) .
 
 ### <a name="example"></a>Příklad
 
@@ -1441,7 +1441,7 @@ V případě víceřádkového ovládacího prvku pro úpravy je návratová hod
 
 Operaci vrácení zpět lze také vrátit zpět. Odstraněné texty můžete například obnovit pomocí prvního volání `Undo`. Pokud neexistuje žádná operace úpravy, můžete text znovu odebrat druhým voláním `Undo`.
 
-Další informace najdete v tématu [EM_UNDO](/windows/desktop/Controls/em-undo) v Windows SDK.
+Další informace najdete v tématu [EM_UNDO](/windows/win32/Controls/em-undo) v Windows SDK.
 
 ### <a name="example"></a>Příklad
 

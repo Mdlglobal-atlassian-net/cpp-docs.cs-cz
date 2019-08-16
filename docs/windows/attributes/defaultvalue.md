@@ -1,21 +1,21 @@
 ---
-title: Výchozí hodnota (atribut C++ COM)
+title: DefaultValue (C++ atribut com)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.defaultvalue
 helpviewer_keywords:
 - defaultvalue attribute
 ms.assetid: efa5d050-b2cc-4d9e-9b8e-79954f218d3a
-ms.openlocfilehash: ff6924db6f4805bb5f2dbab69076a86020b2a075
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b2057658b5881efd0c3ff095d51e5ee88c9c533e
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62147961"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69490922"
 ---
 # <a name="defaultvalue"></a>defaultvalue
 
-Umožňuje specifikace výchozí hodnotu pro zadaný nepovinný parametr.
+Umožňuje specifikaci výchozí hodnoty pro typový volitelný parametr.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -26,15 +26,15 @@ Umožňuje specifikace výchozí hodnotu pro zadaný nepovinný parametr.
 ### <a name="parameters"></a>Parametry
 
 *value*<br/>
-Výchozí hodnota pro parametr.
+Výchozí hodnota parametru
 
 ## <a name="remarks"></a>Poznámky
 
-**Defaultvalue** C++ atribut má stejné funkce jako [defaultvalue](/windows/desktop/Midl/defaultvalue) atribut MIDL.
+Atribut **DefaultValue** C++ má stejné funkce jako atribut [DefaultValue](/windows/win32/Midl/defaultvalue) MIDL.
 
 ## <a name="example"></a>Příklad
 
-Následující kód ukazuje metodu rozhraní pomocí **defaultvalue** atribut:
+Následující kód ukazuje metodu rozhraní pomocí atributu **DefaultValue** :
 
 ```cpp
 // cpp_attr_ref_defaultvalue.cpp
@@ -56,16 +56,16 @@ __interface IFireTabCtrl : IDispatch {
 
 ## <a name="requirements"></a>Požadavky
 
-### <a name="attribute-context"></a>Atribut kontextu
+### <a name="attribute-context"></a>Kontext atributu
 
 |||
 |-|-|
 |**Platí pro**|Parametr rozhraní|
-|**Opakovatelné**|Ne|
-|**Vyžadované atributy**|Žádný|
+|**REPEATABLE**|Ne|
+|**Požadované atributy**|Žádné|
 |**Neplatné atributy**|Žádné|
 
-Další informace najdete v tématu [kontexty atributů](cpp-attributes-com-net.md#contexts).
+Další informace naleznete v tématu [kontexty atributů](cpp-attributes-com-net.md#contexts).
 
 ## <a name="see-also"></a>Viz také:
 

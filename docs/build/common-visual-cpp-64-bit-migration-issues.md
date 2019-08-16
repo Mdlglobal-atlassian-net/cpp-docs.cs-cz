@@ -11,40 +11,40 @@ helpviewer_keywords:
 - 64-bit compiler [C++], porting 32-bit code
 - Win64 [C++]
 ms.assetid: d17fb838-7513-4e2d-8b27-a1666f17ad76
-ms.openlocfilehash: b03ccc76163d79688a98ec89df241292e3eef112
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.openlocfilehash: 004fe7ace6102feecbcb2f542b5b93268ae2f868
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65220869"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69493317"
 ---
 # <a name="common-visual-c-64-bit-migration-issues"></a>Obecné problémy migrace v 64bitovém prostředí Visual C++
 
-Při použití Microsoft C++ kompilátor (MSVC) k vytvoření aplikace, které poběží v operačním systému Windows 64-bit, je třeba si uvědomit následující problémy:
+Když použijete kompilátor Microsoft C++ (MSVC) k vytváření aplikací, které se mají spouštět na 64 operačním systému Windows, měli byste si uvědomit následující problémy:
 
-- `int` a `long` jsou 32bitové hodnoty v operačních systémech Windows 64-bit. Pro programy, které máte v plánu pro 64bitové platformy by měl být pozor, abyste jim ukazatele na 32bitové proměnné. Ukazatele jsou 64-bit na 64bitové platformy a zkrátit hodnota ukazatele, pokud přiřadíte 32bitové proměnné.
+- `int` Aajsou32hodnotyna`long` 64 operačních systémech Windows. Pro programy, které plánujete kompilovat pro 64 platformy, byste měli být opatrní, abyste nepřiřadili ukazatelům ke 32 bitovým proměnným. Ukazatele jsou 64-bit na 64 platformách a hodnota ukazatele se zkrátí, pokud ji přiřadíte proměnné 32-bit.
 
-- `size_t`, `time_t`, a `ptrdiff_t` jsou hodnoty 64bitových operačních systémech Windows 64-bit.
+- `size_t`, `time_t` a`ptrdiff_t` jsou 64 hodnoty na 64 operačních systémů Windows.
 
-- `time_t` je 32bitová hodnota 32-bit Windows operačních systémech v sadě Visual Studio 2005 a starší. `time_t` je teď 64bitovou celočíselnou hodnotu ve výchozím nastavení. Další informace najdete v tématu [Správa času](../c-runtime-library/time-management.md).
+- `time_t`je 32 hodnota v 32 operačních systémech Windows v aplikaci Visual Studio 2005 a starších verzích. `time_t`ve výchozím nastavení je teď 64 celé číslo. Další informace najdete v tématu [Správa času](../c-runtime-library/time-management.md).
 
-   Byste měli vědět, kde váš kód používá `int` hodnotu a zpracovává ji jako `size_t` nebo `time_t` hodnotu. Je možné, že číslo může být větší než 32bitová čísla a data bude zkrácen, pokud je předán zpět do `int` úložiště.
+   Měli byste vědět, kde kód přebírá `int` hodnotu a zpracovává ho `size_t` jako hodnotu nebo `time_t` . Je možné, že počet může být větší než 32-bit a data se při předání zpátky do `int` úložiště zkrátí.
 
-%X (hexadecimální `int` formátu) `printf` modifikátor nebude fungovat podle očekávání v operačním systému Windows 64-bit. Toto pravidlo bude pracovat pouze s prvních 32 bitů hodnotu, která je předána.
+Modifikátor% x (šestnáctkový `int` formát) `printf` nebude fungovat podle očekávání v operačním systému Windows 64. Bude fungovat pouze v prvních 32 bitech hodnoty, která je předána.
 
-- % I32x, chcete-slouží k zobrazení na integrálový typ 32-bit v šestnáctkovém formátu.
+- Pomocí% I32x můžete zobrazit 32 integrálový typ v šestnáctkovém formátu.
 
-- % I64x slouží k zobrazení 64bitového celočíselného typu v šestnáctkovém formátu.
+- Pomocí% I64x můžete zobrazit 64 integrálový typ v šestnáctkovém formátu.
 
-- %P (šestnáctkovém formátu pro ukazatel) bude fungovat podle očekávání v operačním systému Windows 64-bit.
+- % P (šestnáctkový formát pro ukazatel) bude v operačním systému Windows 64 fungovat podle očekávání.
 
 Další informace naleznete v tématu:
 
 - [Parametry kompilátoru MSVC](reference/compiler-options.md)
 
-- [Tipy pro migraci](/windows/desktop/WinProg64/migration-tips)
+- [Tipy k migraci](/windows/win32/WinProg64/migration-tips)
 
 ## <a name="see-also"></a>Viz také:
 
-[Konfigurace projektů C++ pro 64bitové, x64 cíle](configuring-programs-for-64-bit-visual-cpp.md)<br/>
+[Konfigurace C++ projektů pro 64 cíle platformy x64](configuring-programs-for-64-bit-visual-cpp.md)<br/>
 [Průvodce přenosem a upgradem Visual C++](../porting/visual-cpp-porting-and-upgrading-guide.md)

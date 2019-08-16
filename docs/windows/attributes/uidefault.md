@@ -1,21 +1,21 @@
 ---
-title: uidefault – (atribut C++ COM)
+title: uidefault (C++ atribut com)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.uidefault
 helpviewer_keywords:
 - uidefault attribute
 ms.assetid: 200de0e0-2e34-40a2-bae4-8d485a62264d
-ms.openlocfilehash: a5bb8d3ad869d9ee60b2ab04743f5a926a10dd2a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b4090011aade4ebab2f5c07a8e56e91253cc7c49
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62407091"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69513896"
 ---
 # <a name="uidefault"></a>uidefault
 
-Označuje, že informace o člen typu je výchozí člen pro zobrazení v uživatelském rozhraní.
+Označuje, že člen informací o typu je výchozím členem pro zobrazení v uživatelském rozhraní.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -25,11 +25,11 @@ Označuje, že informace o člen typu je výchozí člen pro zobrazení v uživa
 
 ## <a name="remarks"></a>Poznámky
 
-**Uidefault –** C++ atribut má stejné funkce jako [uidefault –](/windows/desktop/Midl/uidefault) atribut MIDL.
+Atribut **uidefault** C++ má stejné funkce jako atribut [uidefault](/windows/win32/Midl/uidefault) MIDL.
 
 ## <a name="example"></a>Příklad
 
-Následující kód ukazuje příklad **uidefault –**:
+Následující kód ukazuje ukázku **uidefault**:
 
 ```cpp
 // cpp_attr_ref_uidefault.cpp
@@ -50,16 +50,16 @@ __interface ICustom{
 
 ## <a name="requirements"></a>Požadavky
 
-### <a name="attribute-context"></a>Atribut kontextu
+### <a name="attribute-context"></a>Kontext atributu
 
 |||
 |-|-|
 |**Platí pro**|Metoda rozhraní|
-|**Opakovatelné**|Ne|
-|**Vyžadované atributy**|Žádné|
+|**REPEATABLE**|Ne|
+|**Požadované atributy**|Žádné|
 |**Neplatné atributy**|Žádné|
 
-Další informace o kontexty atributů najdete v tématu [kontexty atributů](cpp-attributes-com-net.md#contexts).
+Další informace o kontextech atributů naleznete v tématu kontexty [atributů](cpp-attributes-com-net.md#contexts).
 
 ## <a name="see-also"></a>Viz také:
 

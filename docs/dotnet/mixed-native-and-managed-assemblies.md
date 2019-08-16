@@ -12,53 +12,53 @@ helpviewer_keywords:
 - mixed assemblies [C++]
 - native code [C++], .NET interoperatibility
 ms.assetid: 4299dfce-392f-4933-8bf0-5da2f0d1c282
-ms.openlocfilehash: 043390a2ebefcadac300b7fb0b05ae7f5ed411f3
-ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.openlocfilehash: 11bdfc98c64b2612129e10c002c68ee243bec7da
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65447277"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69501140"
 ---
 # <a name="mixed-native-and-managed-assemblies"></a>Smíšená (nativní a spravovaná) sestavení
 
-Smíšená sestavení jsou schopné obsahující nespravované strojové instrukce a instrukce jazyka MSIL. Díky tomu je možné vyvolat v součásti .NET, při zachování kompatibility s nativních knihoven C++ a volání. Pomocí smíšená sestavení, mohou vývojáři vytvářet aplikace pomocí kombinaci .NET a nativního kódu C++.
+Smíšená sestavení mohou obsahovat i nespravované instrukce pro počítače a instrukce jazyka MSIL. To jim umožňuje volat a volat komponenty .NET a přitom zachovat kompatibilitu s nativními C++ knihovnami. Pomocí smíšených sestavení mohou vývojáři vytvářet aplikace pomocí kombinace .NET a nativního C++ kódu.
 
-Například již existující knihovny, které obsahuje jenom nativní kód C++, může být přenesena na platformě .NET opětovnou kompilací pouze jeden modul s **/CLR** přepínač kompilátoru. Tento modul je pak možné používat funkce rozhraní .NET, ale zůstane kompatibilní s zbytek aplikace. Dokonce můžete rozhodnout mezi spravovaný a nativní kompilace na základě funkce funkce ve stejném souboru (viz [spravované, nespravované](../preprocessor/managed-unmanaged.md)).
+Například existující knihovna skládající se výhradně z nativního C++ kódu může být přenesena na platformu .NET tím, že znovu zkompiluje pouze jeden modul s přepínačem **/CLR** . Tento modul pak může používat funkce .NET, ale zůstává kompatibilní se zbytkem aplikace. Je dokonce možné se rozhodnout mezi spravovanou a nativní kompilací na základě funkcí v rámci stejného souboru (viz [spravovaný, nespravovaný](../preprocessor/managed-unmanaged.md)).
 
-Generování smíšené spravované sestavení Visual C++ podporuje pouze s použitím **/CLR** – možnost kompilátoru. **/CLR: pure** a **/CLR: safe** – možnosti kompilátoru jsou zastaralé v sadě Visual Studio 2015 a není podporována v sadě Visual Studio 2017. Pokud budete potřebovat čisté a ověřitelné spravovaná sestavení, doporučujeme že vytvořit pomocí jazyka C#.
+Vizuál C++ podporuje pouze generování smíšených spravovaných sestavení pomocí možnosti kompilátoru **/CLR** . Možnosti **/clr: Pure** a **/clr: Safe** jsou zastaralé v aplikaci Visual Studio 2015 a nejsou podporovány v aplikaci Visual Studio 2017. Pokud potřebujete čistá nebo ověřitelná spravovaná sestavení, doporučujeme je vytvořit pomocí C#.
 
-Starší verze Microsoft C++ sada nástrojů kompilátoru nepodporuje generování tří různých typů spravovaných sestavení: smíšené, čisté a ověřitelné. Poslední dva jsou popsány v [prázdná a ověřitelný kód (C++vyhodnocovací)](../dotnet/pure-and-verifiable-code-cpp-cli.md).
+Starší verze sady nástrojů Microsoft C++ Compiler podporovaly generování tří různých typů spravovaných sestavení: smíšené, čisté a ověřitelné. Druhá druhá je popsaná v části [čistý a ověřitelný kód (C++/CLI)](../dotnet/pure-and-verifiable-code-cpp-cli.md).
 
 ## <a name="in-this-section"></a>V tomto oddílu
 
-[Postupy: Přechod na/CLR](../dotnet/how-to-migrate-to-clr.md)<br/>
-Popisuje doporučené kroky pro zavedení nebo upgradu funkce rozhraní .NET ve vaší aplikaci.
+[Postupy: Migrovat na/CLR](../dotnet/how-to-migrate-to-clr.md)<br/>
+Popisuje doporučený postup pro zavedení nebo upgrade funkcí .NET ve vaší aplikaci.
 
-[Postupy: Zkompilujte knihovnu MFC a ATL kód pomocí/CLR](../dotnet/how-to-compile-mfc-and-atl-code-by-using-clr.md)<br/>
-Popisuje, jak kompilovat existující programy MFC a ATL cílit na modul Common Language Runtime.
+[Postupy: Kompilování kódu MFC a ATL pomocí/CLR](../dotnet/how-to-compile-mfc-and-atl-code-by-using-clr.md)<br/>
+Popisuje, jak zkompilovat existující programy MFC a ATL pro cílení na modul CLR (Common Language Runtime).
 
 [Inicializace smíšených sestavení](../dotnet/initialization-of-mixed-assemblies.md)<br/>
-Popisuje "zámek zavaděče" problémy a řešení.
+Popisuje problém a řešení "zámek zavaděče".
 
 [Podpora knihovny pro smíšená sestavení](../dotnet/library-support-for-mixed-assemblies.md)<br/>
-Tento článek popisuje způsob použití nativních knihoven v **/CLR** kompilace.
+Popisuje, jak používat nativní knihovny v kompilacích **/CLR** .
 
 [Důležité informace o výkonu](../dotnet/performance-considerations-for-interop-cpp.md)<br/>
-Popisuje vliv na výkon smíšená sestavení a data zařazování.
+Popisuje dopad na výkon smíšených sestavení a zařazování dat.
 
 [Domény aplikace a jazyk Visual C++](../dotnet/application-domains-and-visual-cpp.md)<br/>
-Tento článek popisuje podporu Visual C++ pro aplikační domény.
+Popisuje podporu C++ vizuálů pro domény aplikací.
 
-[Dvojitému](../dotnet/double-thunking-cpp.md)<br/>
-Tento článek popisuje vliv na výkon, nativní vstupního bodu pro spravované funkce.
+[Dvojitá dvojitý](../dotnet/double-thunking-cpp.md)<br/>
+Popisuje dopad na výkon nativního vstupního bodu pro spravovanou funkci.
 
-[Obcházení výjimek na CLR vypnutí při spotřebě objektů COM sestavených s parametrem/CLR](../dotnet/avoiding-exceptions-on-clr-shutdown-when-consuming-com-objects-built-with-clr.md)<br/>
-Popisuje, jak k zajištění řádné vypnutí spravovanou aplikaci, která využívá objekt modelu COM zkompilovaná **/CLR**.
+[Předcházení výjimkám při vypínání modulu CLR při zpracování objektů COM sestavených s možností/CLR](../dotnet/avoiding-exceptions-on-clr-shutdown-when-consuming-com-objects-built-with-clr.md)<br/>
+Tento článek popisuje, jak zajistit správné vypnutí spravované aplikace, která využívá objekt modelu COM kompilovaný s možností **/CLR**.
 
 [Postupy: Vytvoření částečně důvěryhodné aplikace CRT odebráním závislosti na knihovně DLL](../dotnet/create-a-partially-trusted-application.md)<br/>
-Tento článek popisuje postup vytvoření částečně důvěryhodné aplikace Common Language Runtime pomocí jazyka Visual C++ odebráním závislosti na msvcm90.dll.
+Popisuje, jak vytvořit částečně důvěryhodný modul CLR (Common Language Runtime) C++ pomocí vizuálu odebráním závislosti na msvcm90. dll.
 
-Další informace o pokynech pro kódování pro smíšená sestavení, najdete v článku na webu MSDN [přehled ze spravovaného/nespravovaného kódu Interoperability](https://msdn.microsoft.com/library/ms973872.aspx).
+Další informace o pokynech pro kódování pro smíšená sestavení naleznete v článku na webu MSDN [Přehled interoperability spravovaného a nespravovaného kódu](/previous-versions/dotnet/articles/ms973872(v=msdn.10)).
 
 ## <a name="see-also"></a>Viz také:
 

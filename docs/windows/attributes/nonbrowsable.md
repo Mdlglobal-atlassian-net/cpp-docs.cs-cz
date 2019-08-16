@@ -1,21 +1,21 @@
 ---
-title: nonbrowsable (atribut C++ COM)
+title: neprocházetelné (C++ atribut com)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.nonbrowsable
 helpviewer_keywords:
 - nonbrowsable attribute
 ms.assetid: e71a98e7-4b65-454a-9829-342b9f2a84be
-ms.openlocfilehash: 0a5e01c0fde49c7debb7749f5a1d148acb9cca6f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8b1849aa75e61ea5e369a277cab0b1327f48a28a
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62409119"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69514382"
 ---
 # <a name="nonbrowsable"></a>nonbrowsable
 
-Označuje, že člen rozhraní, nebude se zobrazovat v prohlížeči vlastností.
+Indikuje, že by se člen rozhraní neměl zobrazovat v prohlížeči vlastností.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -25,7 +25,7 @@ Označuje, že člen rozhraní, nebude se zobrazovat v prohlížeči vlastností
 
 ## <a name="remarks"></a>Poznámky
 
-**Nonbrowsable** C++ atribut má stejné funkce jako [nonbrowsable](/windows/desktop/Midl/nonbrowsable) atribut MIDL.
+Atribut, který nelze **Procházet** , má stejné funkce jako atribut MIDL, který nelze [Procházet.](/windows/win32/Midl/nonbrowsable) C++
 
 ## <a name="example"></a>Příklad
 
@@ -45,16 +45,16 @@ __interface IMyI
 
 ## <a name="requirements"></a>Požadavky
 
-### <a name="attribute-context"></a>Atribut kontextu
+### <a name="attribute-context"></a>Kontext atributu
 
 |||
 |-|-|
 |**Platí pro**|Metoda rozhraní|
-|**Opakovatelné**|Ne|
-|**Vyžadované atributy**|Žádné|
+|**REPEATABLE**|Ne|
+|**Požadované atributy**|Žádné|
 |**Neplatné atributy**|Žádné|
 
-Další informace o kontexty atributů najdete v tématu [kontexty atributů](cpp-attributes-com-net.md#contexts).
+Další informace o kontextech atributů naleznete v tématu kontexty [atributů](cpp-attributes-com-net.md#contexts).
 
 ## <a name="see-also"></a>Viz také:
 

@@ -30,12 +30,12 @@ helpviewer_keywords:
 - CPageSetupDialog [MFC], PreDrawPage
 - CPageSetupDialog [MFC], m_psd
 ms.assetid: 049c0ac8-f254-4854-9414-7a8271d1447a
-ms.openlocfilehash: a9009c4ea08771949cea2c44e4f6265783ced35a
-ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
+ms.openlocfilehash: 18b17d0f40aaab6ba2a018a568950549eda23016
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68916937"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69503015"
 ---
 # <a name="cpagesetupdialog-class"></a>CPageSetupDialog Class
 
@@ -142,7 +142,7 @@ Jeden nebo více příznaků, které lze použít k přizpůsobení nastavení d
 
 - PSD_DISABLEORIENTATION zakáže ovládací prvek dialogu orientace stránky.
 
-- PSD_RETURNDEFAULT způsobí `CPageSetupDialog` vrácení struktury [DEVMODE](/windows/win32/api/wingdi/ns-wingdi-devmodea) a [DEVNAMES –](/windows/desktop/api/commdlg/ns-commdlg-tagdevnames) , které jsou inicializovány pro výchozí tiskárnu systému bez zobrazení dialogového okna. Předpokládá se, že obojí `hDevNames` a `hDevMode` má hodnotu null. v opačném případě vrátí funkce chybu. Pokud je výchozí systémová tiskárna podporovaná starším ovladačem tiskárny (starším než Windows verze 3,0), `hDevNames` vrátí se jenom hodnota. `hDevMode` má hodnotu null.
+- PSD_RETURNDEFAULT způsobí `CPageSetupDialog` vrácení struktury [DEVMODE](/windows/win32/api/wingdi/ns-wingdi-devmodea) a [DEVNAMES –](/windows/win32/api/commdlg/ns-commdlg-devnames) , které jsou inicializovány pro výchozí tiskárnu systému bez zobrazení dialogového okna. Předpokládá se, že obojí `hDevNames` a `hDevMode` má hodnotu null. v opačném případě vrátí funkce chybu. Pokud je výchozí systémová tiskárna podporovaná starším ovladačem tiskárny (starším než Windows verze 3,0), `hDevNames` vrátí se jenom hodnota. `hDevMode` má hodnotu null.
 
 - PSD_DISABLEPAPER zakáže ovládací prvek pro výběr papíru.
 
@@ -171,7 +171,7 @@ Použijte funkci [DoModal](../../mfc/reference/cdialog-class.md#domodal) k zobra
 
 ##  <a name="createprinterdc"></a>  CPageSetupDialog::CreatePrinterDC
 
-Vytvoří kontext zařízení tiskárny ze struktur [DEVMODE](/windows/win32/api/wingdi/ns-wingdi-devmodea) a [DEVNAMES –](/windows/desktop/api/commdlg/ns-commdlg-tagdevnames) .
+Vytvoří kontext zařízení tiskárny ze struktur [DEVMODE](/windows/win32/api/wingdi/ns-wingdi-devmodea) a [DEVNAMES –](/windows/win32/api/commdlg/ns-commdlg-devnames) .
 
 ```
 HDC CreatePrinterDC();
@@ -191,7 +191,7 @@ virtual INT_PTR DoModal();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-IDOK nebo IDCANCEL. Pokud se vrátí IDCANCEL, zavolejte funkci Windows [CommDlgExtendedError](/windows/desktop/api/commdlg/nf-commdlg-commdlgextendederror) a určete, jestli došlo k chybě.
+IDOK nebo IDCANCEL. Pokud se vrátí IDCANCEL, zavolejte funkci Windows [CommDlgExtendedError](/windows/win32/api/commdlg/nf-commdlg-commdlgextendederror) a určete, jestli došlo k chybě.
 
 IDOK a IDCANCEL jsou konstanty, které označují, zda uživatel vybral tlačítko OK nebo Storno.
 
@@ -231,7 +231,7 @@ LPDEVMODE GetDevMode() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Struktura dat [DEVMODE](/windows/win32/api/wingdi/ns-wingdi-devmodea) , která obsahuje informace o inicializaci zařízení a prostředí ovladače tiskárny. Paměť, kterou tato struktura provedla, je nutné odemknout pomocí funkce Windows [GlobalUnlock](/windows/desktop/api/winbase/nf-winbase-globalunlock) , která je popsána v Windows SDK.
+Struktura dat [DEVMODE](/windows/win32/api/wingdi/ns-wingdi-devmodea) , která obsahuje informace o inicializaci zařízení a prostředí ovladače tiskárny. Paměť, kterou tato struktura provedla, je nutné odemknout pomocí funkce Windows [GlobalUnlock](/windows/win32/api/winbase/nf-winbase-globalunlock) , která je popsána v Windows SDK.
 
 ##  <a name="getdrivername"></a>CPageSetupDialog:: getnázev_ovladače
 
@@ -262,7 +262,7 @@ void GetMargins(
 ### <a name="parameters"></a>Parametry
 
 *lpRectMargins*<br/>
-Ukazatel na strukturu [Rect](/windows/desktop/api/windef/ns-windef-tagrect) nebo objekt [CRect](../../atl-mfc-shared/reference/crect-class.md) , který popisuje (v 1/1000 palcích nebo 1/100 mm) okraje pro tisk aktuálně vybrané tiskárny. Pokud si nejste zajímat tento obdélník, předejte pro tento parametr hodnotu NULL.
+Ukazatel na strukturu [Rect](/windows/win32/api/windef/ns-windef-rect) nebo objekt [CRect](../../atl-mfc-shared/reference/crect-class.md) , který popisuje (v 1/1000 palcích nebo 1/100 mm) okraje pro tisk aktuálně vybrané tiskárny. Pokud si nejste zajímat tento obdélník, předejte pro tento parametr hodnotu NULL.
 
 *lpRectMinMargins*<br/>
 Ukazatel na `RECT` strukturu nebo `CRect` objekt, který popisuje (v 1/1000 palcích nebo 1/100 mm) minimální okraje pro tisk aktuálně vybrané tiskárny. Pokud si nejste zajímat tento obdélník, předejte pro tento parametr hodnotu NULL.
@@ -305,7 +305,7 @@ Po sestavení `CPageSetupDialog` objektu lze použít `m_psd` k nastavení různ
 
 Změníte-li datový člen přímo, přepíšete všechny výchozí chování. `m_psd`
 
-Další informace o struktuře [PAGESETUPDLG](/windows/desktop/api/commdlg/ns-commdlg-tagpsda) naleznete v Windows SDK.
+Další informace o struktuře [PAGESETUPDLG](/windows/win32/api/commdlg/ns-commdlg-psdw) naleznete v Windows SDK.
 
 Podívejte se na příklad pro [CPageSetupDialog:: CPageSetupDialog](#cpagesetupdialog).
 
@@ -341,7 +341,7 @@ Určuje zprávu, která označuje oblast aktuálně vykreslené stránky. Může
 - WM_PSD_YAFULLPAGERECT oblast pro reprezentaci návratových adres. Tato oblast se rozšíří na okraje oblasti vzorové stránky.
 
 *lpRect*<br/>
-Ukazatel na objekt [CRect](../../atl-mfc-shared/reference/crect-class.md) nebo [Rect](/windows/desktop/api/windef/ns-windef-tagrect) obsahující souřadnice oblasti kreslení.
+Ukazatel na objekt [CRect](../../atl-mfc-shared/reference/crect-class.md) nebo [Rect](/windows/win32/api/windef/ns-windef-rect) obsahující souřadnice oblasti kreslení.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -393,7 +393,7 @@ Určuje orientaci dokumentu nebo obálky a to, jestli je tiskárna zařízení s
 - Obálka 0x01f v režimu na výšku (Jehličková matice)
 
 *pPSD*<br/>
-Ukazatel na `PAGESETUPDLG` strukturu. Další informace o [PAGESETUPDLG](/windows/desktop/api/commdlg/ns-commdlg-tagpsda)najdete v Windows SDK.
+Ukazatel na `PAGESETUPDLG` strukturu. Další informace o [PAGESETUPDLG](/windows/win32/api/commdlg/ns-commdlg-psdw)najdete v Windows SDK.
 
 ### <a name="return-value"></a>Návratová hodnota
 

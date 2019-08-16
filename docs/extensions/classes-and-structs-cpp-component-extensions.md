@@ -1,5 +1,5 @@
 ---
-title: třídy ref class a struktura ref (C++vyhodnocovací a C++/CX)
+title: ref class a ref struct (C++/CLI a C++/CX)
 ms.date: 05/30/2019
 ms.topic: reference
 f1_keywords:
@@ -13,16 +13,16 @@ helpviewer_keywords:
 - value struct keyword [C++]
 - ref struct keyword [C++]
 ms.assetid: 5c360764-b229-49c6-9357-66213afbc372
-ms.openlocfilehash: 7db1683ee153c34b3476c51eb22fb99eae4c6891
-ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
+ms.openlocfilehash: dd58f32d031068785cd6020549f9eea4b2182786
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66450371"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69509813"
 ---
-# <a name="ref-class-and-ref-struct--ccli-and-ccx"></a>třídy ref class a struktura ref (C++vyhodnocovací a C++/CX)
+# <a name="ref-class-and-ref-struct--ccli-and-ccx"></a>ref class a ref struct (C++/CLI a C++/CX)
 
-**Třídy ref class** nebo **ref struct** rozšíření deklaraci třídy nebo struktury jehož *doba života objektu* je spravována automaticky. Když objekt již není dostupný nebo dostane mimo rozsah, se uvolní paměť.
+Rozšíření **třídy ref class** nebo **ref struct** deklaruje třídu nebo strukturu, jejíž *životnost objektu* je spravována automaticky. Pokud objekt již není přístupný nebo je mimo rozsah, je paměť uvolněna.
 
 ## <a name="all-runtimes"></a>Všechny moduly runtime
 
@@ -41,39 +41,39 @@ class_accessvalue structnamemodifier :  inherit_accessbase_type {};
 ### <a name="parameters"></a>Parametry
 
 *class_access*<br/>
-(Volitelné) Usnadnění přístupu z dané třídy nebo struktury mimo sestavení. Možné hodnoty jsou **veřejné** a **privátní** (**privátní** je výchozí nastavení). Nemůže obsahovat vnořené třídy nebo struktury *class_access* specifikátor.
+Volitelné Přístupnost třídy nebo struktury mimo sestavení. Možné hodnoty jsou **veřejné** a **privátní** (výchozí hodnota je**Private** ). Vnořené třídy nebo struktury nemůžou mít *class_access* specifikátor.
 
 *name*<br/>
 Název třídy nebo struktury.
 
-*modifier*<br/>
-(Volitelné) [abstraktní](abstract-cpp-component-extensions.md) a [zapečetěné](sealed-cpp-component-extensions.md) jsou platné modifikátory.
+*upravující*<br/>
+Volitelné [abstraktní](abstract-cpp-component-extensions.md) a [zapečetěné](sealed-cpp-component-extensions.md) jsou platné modifikátory.
 
 *inherit_access*<br/>
-(Volitelné) Přístupnost *base_type*. Pouze povolené přístupnost **veřejné** (**veřejné** je výchozí nastavení).
+Volitelné Přístupnost pro *base_type*. Jediná povolená přístupnost je **Veřejná** ( výchozí).
 
 *base_type*<br/>
-(Volitelné) Základní typ. Hodnotový typ však nemůže fungovat jako základního typu.
+Volitelné Základní typ. Typ hodnoty však nemůže fungovat jako základní typ.
 
-Další informace najdete v popisech specifické pro jazyk tohoto parametru v prostředí Windows Runtime a Common Language Runtime.
+Další informace naleznete v části jazykově specifické popisy tohoto parametru v částech prostředí Windows Runtime a modulu CLR (Common Language Runtime).
 
 ### <a name="remarks"></a>Poznámky
 
-Deklarovaná přístupnost člena výchozí objekt pomocí **třídy ref class** nebo **hodnotu třídy** je **privátní**. A je deklarovaná přístupnost člena výchozí objekt pomocí **ref struct** nebo **hodnotu struktury** je **veřejné**.
+Výchozí přístupnost člena objektu deklarovaného s parametrem **ref class** nebo **Value Class** je **soukromá**. A výchozí přístupnost člena objektu deklarovaného se strukturou **ref struct** nebo **value struct** je **Veřejná**.
 
-Pokud je odkazový typ dědí z jiného typu odkaz, musí explicitně přepsat virtuální funkce v základní třídě (s [přepsat](override-cpp-component-extensions.md)) nebo skrytý (s [new (nový slot v tabulce vtable)](new-new-slot-in-vtable-cpp-component-extensions.md)). Funkce odvozené třídy musí také být explicitně označeny jako **virtuální**.
+Pokud typ odkazu dědí z jiného typu odkazu, musí být virtuální funkce v základní třídě explicitně přepsány (s [přepsáním](override-cpp-component-extensions.md)) nebo skryté (s [New (New slot v tabulce vtable)](new-new-slot-in-vtable-cpp-component-extensions.md)). Funkce odvozené třídy musí být také explicitně označeny jako **virtuální**.
 
-K detekci v době kompilace, jestli je typ **třídy ref class** nebo **ref struct**, nebo **hodnotu třídy** nebo **hodnotu struktury**, použijte `__is_ref_class (type)`, `__is_value_class (type)`, nebo `__is_simple_value_class (type)`. Další informace najdete v tématu [podpora kompilátoru pro typové vlastnosti](compiler-support-for-type-traits-cpp-component-extensions.md).
+Pro detekci v době kompilace, zda je typ **ref class** nebo **ref struct**, nebo **Třída hodnoty** nebo **Struktura hodnot**, `__is_ref_class (type)`použijte, `__is_value_class (type)`nebo `__is_simple_value_class (type)`. Další informace naleznete v tématu [Podpora kompilátoru pro typové vlastnosti](compiler-support-for-type-traits-cpp-component-extensions.md).
 
-Další informace o třídách a strukturách naleznete v tématu
+Další informace o třídách a strukturách naleznete v tématu.
 
-- [Vytvoření instance třídy a struktury](../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md)
+- [Vytváření instancí tříd a struktur](../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md)
 
 - [Sémantika zásobníku C++ pro typy odkazů](../dotnet/cpp-stack-semantics-for-reference-types.md)
 
 - [Třídy, struktury a sjednocení](../cpp/classes-and-structs-cpp.md)
 
-- [Destruktory a finalizační metody v tom, jak: Definice a používání tříd a struktur (C++vyhodnocovací)](../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Destructors_and_finalizers)
+- [Destruktory a finalizační metody v tom, jak: Definování a využívání tříd a struktur (C++/CLI)](../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Destructors_and_finalizers)
 
 - [Uživatelem definované operátory (C++/CLI)](../dotnet/user-defined-operators-cpp-cli.md)
 
@@ -87,39 +87,39 @@ Další informace o třídách a strukturách naleznete v tématu
 
 ### <a name="remarks"></a>Poznámky
 
-Zobrazit [referenční třídy a struktury](../cppcx/ref-classes-and-structs-c-cx.md) a [hodnotové třídy a struktury](https://msdn.microsoft.com/library/windows/apps/hh699861.aspx).
+Viz [referenční třídy a struktury](../cppcx/ref-classes-and-structs-c-cx.md) a [třídy hodnot a struktury](../cppcx/value-classes-and-structs-c-cx.md).
 
 ### <a name="parameters"></a>Parametry
 
 *base_type*<br/>
-(Volitelné) Základní typ. A **třídy ref class** nebo **ref struct** může dědit z nuly nebo více rozhraní a nula nebo jedna **ref** typy. A **hodnotu třídy** nebo **hodnotu struktury** může dědit jedině z nuly nebo více rozhraní.
+Volitelné Základní typ. Struktura **ref class** nebo **ref** může dědit z nula nebo více rozhraní a typu nula nebo jeden typ **ref** . Struktura **hodnot** nebo **hodnot** může dědit pouze z rozhraní nula nebo více.
 
-Pokud deklarujete objekt s použitím **třídy ref class** nebo **ref struct** klíčových slov, objekt přistupuje popisovač pro objekt, což znamená, čítač odkaz na ukazatel na objekt. Pokud proměnnou deklarovanou dostane mimo rozsah, kompilátor automaticky odstraní základní objekt. Když objekt se používá jako parametr ve volání nebo je uložen v proměnné, popisovač pro objekt skutečně předány nebo uložené.
+Při deklaraci objektu pomocí klíčových slov **ref class** nebo **ref struct** je objekt k objektu přistupované popisovačem objektu; To znamená, že ukazatel na čítač odkazuje na objekt. Když deklarovaná proměnná přechází z oboru, kompilátor automaticky odstraní základní objekt. Když je objekt použit jako parametr ve volání nebo je uložen v proměnné, popisovač objektu je skutečně předán nebo uložen.
 
-Pokud deklarujete objekt s použitím **hodnotu třídy** nebo **hodnotu struktury** klíčová slova, dobu života objektu deklarovanému objektu není pod dohledem. Objekt je stejně jako všechny ostatní standardní C++ třídy nebo struktury.
+Při deklaraci objektu pomocí klíčových slov **třídy Value** nebo **value struct** není doba života deklarovaného objektu pod dohledem. Objekt je podobný jakékoli jiné standardní C++ třídě nebo struktuře.
 
 ### <a name="requirements"></a>Požadavky
 
-– Možnost kompilátoru: `/ZW`
+Možnost kompilátoru:`/ZW`
 
 ## <a name="common-language-runtime"></a>CLR (Common Language Runtime)
 
 ### <a name="remarks"></a>Poznámky
 
-V následující tabulce jsou uvedeny rozdíly v syntaxi uvedenou v **všechny moduly runtime** části, která jsou specifická pro C++vyhodnocovací.
+V následující tabulce jsou uvedeny rozdíly z syntaxe uvedené v části **všechny moduly runtime** , které jsou specifické pro C++/CLI.
 
 ### <a name="parameters"></a>Parametry
 
 *base_type*<br/>
-(Volitelné) Základní typ. A **třídy ref class** nebo **ref struct** může dědit od nuly nebo více spravovaných rozhraní a nula nebo jedna typech. A **hodnotu třídy** nebo **hodnotu struktury** může dědit jedině z nuly nebo více spravovaných rozhraních.
+Volitelné Základní typ. Struktura **ref class** nebo **ref** může dědit od nuly nebo více spravovaných rozhraní a nula nebo jeden typ ref. Struktura **hodnot** nebo **hodnot** může dědit pouze z nulových nebo více spravovaných rozhraní.
 
-**Třídy ref class** a **ref struct** klíčová slova oznámení kompilátoru, která je třídu nebo strukturu, která bude přidělena v haldě. Když objekt se používá jako parametr ve volání nebo je uložen v proměnné, odkaz na objekt skutečně předány nebo uložené.
+Klíčová slova **ref class** a **ref struct** říká kompilátoru, že třída nebo struktura má být přidělena v haldě. Když je objekt použit jako parametr ve volání nebo je uložen v proměnné, odkaz na objekt je skutečně předán nebo uložen.
 
-**Hodnotu třídy** a **hodnotu struktury** klíčová slova sděluje kompilátoru, že hodnota přidělené třídy nebo struktury je předán funkcím nebo uložené ve členech.
+Klíčová slova **Třída hodnoty** a **Struktura hodnoty** označují kompilátor, že hodnota přidělené třídy nebo struktury je předána funkcím nebo uloženým v členech.
 
 ### <a name="requirements"></a>Požadavky
 
-– Možnost kompilátoru: `/clr`
+Možnost kompilátoru:`/clr`
 
 ## <a name="see-also"></a>Viz také:
 

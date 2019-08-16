@@ -19,26 +19,26 @@ helpviewer_keywords:
 - TVS_HASBUTTONS [MFC]
 - tree controls [MFC], styles
 ms.assetid: f43faebd-a355-479e-888a-bf0673d5e1b4
-ms.openlocfilehash: d03961c1c905689af5894897a59262c8f00e73fa
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f5f28025d0349e9bcd95aba50d4110d304fed376
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62181520"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69510934"
 ---
 # <a name="tree-control-styles"></a>Styly ovládacího prvku strom
 
-Ovládací prvek stromu ([CTreeCtrl](../mfc/reference/ctreectrl-class.md)) Styly určují různé aspekty vzhledu ovládacího prvku stromu. Při vytváření ovládacího prvku stromu je nastavíte počáteční styly. Můžete načíst a měnit styly po vytvoření ovládacího prvku stromu pomocí [GetWindowLong](/windows/desktop/api/winuser/nf-winuser-getwindowlonga) a [SetWindowLong](/windows/desktop/api/winuser/nf-winuser-setwindowlonga) funkce Windows a určení **GWL_STYLE** pro *nIndex* parametru. Úplný seznam stylů, najdete v části [styly oken ovládací prvek zobrazení stromové struktury](/windows/desktop/Controls/tree-view-control-window-styles) v sadě Windows SDK.
+Styly ovládacího prvku stromu ([CTreeCtrl](../mfc/reference/ctreectrl-class.md)) určují aspekty vzhledu ovládacího prvku stromu. Počáteční styly nastavíte při vytváření ovládacího prvku strom. Styly můžete načíst a změnit po vytvoření ovládacího prvku stromu pomocí funkcí Windows [GetWindowLong](/windows/win32/api/winuser/nf-winuser-getwindowlongw) a [SetWindowLong](/windows/win32/api/winuser/nf-winuser-setwindowlongw) a zadáním **GWL_STYLE** pro parametr *nIndex* . Úplný seznam stylů naleznete v tématu [styly oken ovládacího prvku stromového zobrazení](/windows/win32/Controls/tree-view-control-window-styles) v Windows SDK.
 
-**TVS_HASLINES** styl vylepšuje grafické znázornění ovládací prvek stromu hierarchie a kreslení čar, které jsou propojeny podřízených položek na jejich odpovídající nadřazené položky. Tento styl neobsahuje odkazy na položky v kořenovém adresáři hierarchie. Uděláte to tak, budete muset zkombinovat **TVS_HASLINES** a **TVS_LINESATROOT** styly.
+Styl **TVS_HASLINES** vylepšuje grafické znázornění hierarchie ovládacího prvku stromu kreslením čar, které propojují podřízené položky s odpovídající nadřazenou položkou. Tento styl neodkazuje na položky v kořenu hierarchie. K tomu je třeba kombinovat styly **TVS_HASLINES** a **TVS_LINESATROOT** .
 
-Uživatel můžete rozbalit nebo sbalit nadřazená položka seznamu podřízených položek na něj poklikejte nadřazené položky. Ovládací prvek stromu, který má **TVS_SINGLEEXPAND** styl způsobí, že se položka výběru rozbalte a probíhá sbalit nevybrané položky. Pokud ukazatel myši se používá pro vybranou položku jedním kliknutím a zavření danou položku, bude rozšířena. Pokud vybrané položky je jedním kliknuto, když je otevřen, se sbalil.
+Uživatel může rozbalit nebo sbalit seznam podřízených položek nadřazené položky dvojitým kliknutím na nadřazenou položku. Ovládací prvek stromu, který má styl **TVS_SINGLEEXPAND** , způsobí, že položka je vybrána pro rozšíření, a položka, která je vybrána k sbalení. Pokud se myš používá k výběru vybrané položky jedním kliknutím a tato položka je zavřená, rozšíří se. Pokud je vybraná položka po otevření otevřená jen jednou, bude sbalená.
 
-Ovládací prvek stromu, který má **TVS_HASBUTTONS** styl přidá tlačítko na levé straně každé nadřazené položky. Kliknutí na tlačítko pro rozbalení a sbalení podřízené položky jako alternativu k poklepání nadřazené položky. **TVS_HASBUTTONS** nedojde k přidání tlačítek do položek v kořeni hierarchie. Uděláte to tak, je nutné zkombinovat **TVS_HASLINES**, **TVS_LINESATROOT**, a **TVS_HASBUTTONS**.
+Strom ovládacího prvku, který má styl **TVS_HASBUTTONS** , přidá tlačítko na levou stranu každé nadřazené položky. Uživatel může kliknout na tlačítko a rozbalit nebo sbalit podřízené položky jako alternativu pro poklikání na nadřazenou položku. **TVS_HASBUTTONS** nepřidává tlačítka do položek v kořenu hierarchie. K tomu je třeba kombinovat **TVS_HASLINES**, **TVS_LINESATROOT**a **TVS_HASBUTTONS**.
 
-**TVS_EDITLABELS** style umožňuje uživateli upravit popisky položek ovládacího prvku stromu. Další informace o úpravě popisků naleznete v tématu [úpravy štítků ovládací prvek stromu](../mfc/tree-control-label-editing.md) dále v tomto tématu.
+Styl **TVS_EDITLABELS** umožňuje uživateli upravit popisky položek ovládacího prvku stromové struktury. Další informace o úpravách popisků naleznete v tématu [úprava popisku ovládacího prvku strom](../mfc/tree-control-label-editing.md) dále v tomto tématu.
 
-**TVS_NOTOOLTIPS** styl zakáže funkci Automatické nástroj tip ovládací prvky zobrazení stromu. Tato funkce automaticky zobrazí popis obsahující název položky pod kurzorem myši, pokud není aktuálně viditelné celý název.
+Styl **TVS_NOTOOLTIPS** zakáže automatickou funkci tipu nástroje v ovládacích prvcích stromového zobrazení. Tato funkce automaticky zobrazí popis tlačítka, který obsahuje název položky pod kurzorem myši, pokud celý nadpis není aktuálně zobrazen.
 
 ## <a name="see-also"></a>Viz také:
 

@@ -1,5 +1,5 @@
 ---
-title: CScrollView Class
+title: CScrollView – třída
 ms.date: 11/04/2016
 f1_keywords:
 - CScrollView
@@ -28,16 +28,16 @@ helpviewer_keywords:
 - CScrollView [MFC], SetScaleToFitSize
 - CScrollView [MFC], SetScrollSizes
 ms.assetid: 4ba16dac-1acb-4be0-bb55-5fb695b6948d
-ms.openlocfilehash: d60082092bd42fbe220eee08953ad5fda0ff0a85
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: b89daaae4bb578d328e1468cc29470825e19c670
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64339563"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69502595"
 ---
-# <a name="cscrollview-class"></a>CScrollView Class
+# <a name="cscrollview-class"></a>CScrollView – třída
 
-A [CView](../../mfc/reference/cview-class.md) s možností posouvání.
+[CView](../../mfc/reference/cview-class.md) s možnostmi posouvání.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -49,64 +49,64 @@ class CScrollView : public CView
 
 ### <a name="protected-constructors"></a>Chráněné konstruktory
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
-|[CScrollView::CScrollView](#cscrollview)|Vytvoří `CScrollView` objektu.|
+|[CScrollView::CScrollView](#cscrollview)|`CScrollView` Vytvoří objekt.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
-|[CScrollView::CheckScrollBars](#checkscrollbars)|Označuje, jestli se posuvníky zobrazení vodorovného a svislého posuvníku.|
+|[CScrollView::CheckScrollBars](#checkscrollbars)|Označuje, zda má zobrazení posuvníku vodorovné a svislé posuvníky.|
 |[CScrollView::FillOutsideRect](#filloutsiderect)|Vyplní oblast zobrazení mimo oblast posouvání.|
 |[CScrollView::GetDeviceScrollPosition](#getdevicescrollposition)|Získá aktuální pozici posunutí v jednotkách zařízení.|
-|[CScrollView::GetDeviceScrollSizes](#getdevicescrollsizes)|Získá aktuální režim mapování, celková velikost a velikost řádku a stránky posuvný zobrazení. Velikosti nejsou v jednotkách zařízení.|
+|[CScrollView::GetDeviceScrollSizes](#getdevicescrollsizes)|Získá aktuální režim mapování, celkovou velikost a velikost řádku a stránky zobrazení s posuvníkem. Velikosti jsou v jednotkách zařízení.|
 |[CScrollView::GetScrollPosition](#getscrollposition)|Získá aktuální pozici posunutí v logických jednotkách.|
-|[CScrollView::GetTotalSize](#gettotalsize)|Získá celková velikost posouvání zobrazení v logických jednotkách.|
-|[CScrollView::ResizeParentToFit](#resizeparenttofit)|Způsobí, že velikost zobrazení tak, aby určovat velikost jeho rámce.|
-|[CScrollView::ScrollToPosition](#scrolltoposition)|Posune zobrazení k danému bodu, zadaný v logických jednotkách.|
-|[CScrollView::SetScaleToFitSize](#setscaletofitsize)|Posuvníky zobrazení přepne do režimu měřítka přizpůsobit.|
-|[CScrollView::SetScrollSizes](#setscrollsizes)|Nastaví režim mapování posuvníky zobrazení, celková velikost a množství vodorovné a svislé posouvání.|
+|[CScrollView:: GetTotalSize](#gettotalsize)|Získá celkovou velikost zobrazení posuvníku v logických jednotkách.|
+|[CScrollView::ResizeParentToFit](#resizeparenttofit)|Způsobí, že velikost zobrazení nadiktují velikost svého rámečku.|
+|[CScrollView::ScrollToPosition](#scrolltoposition)|Posune zobrazení na daný bod zadaný v logických jednotkách.|
+|[CScrollView::SetScaleToFitSize](#setscaletofitsize)|Přesune zobrazení posuvníku do režimu škálování na celou škálu.|
+|[CScrollView::SetScrollSizes](#setscrollsizes)|Nastaví režim mapování zobrazení posuvníku, celkovou velikost a vodorovné a svislé posunutí.|
 
 ## <a name="remarks"></a>Poznámky
 
-Dokáže zpracovat standardní sami posouvání v libovolné třídě odvozené z `CView` tak, že přepíšete mapované zpráva [OnHScroll](../../mfc/reference/cwnd-class.md#onhscroll) a [OnVScroll](../../mfc/reference/cwnd-class.md#onvscroll) členské funkce. Ale `CScrollView` přidá následující funkce, které její `CView` možnosti:
+Můžete zpracovat standardní posun sami sebe v jakékoli třídě odvozené od `CView` přepsáním členských funkcí [OnHScroll](../../mfc/reference/cwnd-class.md#onhscroll) a [OnVScroll](../../mfc/reference/cwnd-class.md#onvscroll) mapované zprávy. Ale `CScrollView` na jeho `CView` funkce přidá tyto funkce:
 
-- Spravuje mapování režimů a velikosti oken a zobrazení.
+- Spravuje velikosti oken a zobrazení a režimy mapování.
 
-- V reakci na posuvníku zprávy posouvá automaticky.
+- Automaticky se posouvá v reakci na popruhové zprávy.
 
-- V reakci na zprávy z klávesnice, myš neposouvaných nebo kolečkem posouvá automaticky.
+- Automaticky se posouvá v reakci na zprávy z klávesnice, nerolovací myš nebo kolečko myši.
 
-V reakci na zprávy z klávesnice, posouvání automaticky, přidejte je zpráva WM_KEYDOWN a test pro VK_DOWN, VK_PREV a volání [SetScrollPos](/windows/desktop/api/winuser/nf-winuser-setscrollpos).
+Chcete-li se automaticky posouvat v reakci na zprávy z klávesnice, přidejte zprávu WM_KEYDOWN a otestujte VK_DOWN, VK_PREV a zavolejte [SetScrollPos](/windows/win32/api/winuser/nf-winuser-setscrollpos).
 
-Dokáže zpracovat kolečko myši posouvání sami tak, že přepíšete mapované zpráva [OnMouseWheel](../../mfc/reference/cwnd-class.md#onmousewheel) a [OnRegisteredMouseWheel](../../mfc/reference/cwnd-class.md#onregisteredmousewheel) členské funkce. Protože jde o pro `CScrollView`, tyto členské funkce podporují doporučené chování pro [WM_MOUSEWHEEL](/windows/desktop/inputdev/wm-mousewheel), zpráva otočení kolečka.
+Můžete zpracovat pohyb kolečka myši sami tím, že potlačuje členské funkce [OnMouseWheel](../../mfc/reference/cwnd-class.md#onmousewheel) a [OnRegisteredMouseWheel](../../mfc/reference/cwnd-class.md#onregisteredmousewheel) mapované na zprávy. Vzhledem k `CScrollView`tomu, že tyto členské funkce podporují Doporučené chování pro [WM_MOUSEWHEEL](/windows/win32/inputdev/wm-mousewheel), zprávu o rotaci kolečka.
 
-Abyste mohli využívat automatické posouvání, odvodit třídu vaše zobrazení z `CScrollView` namísto z `CView`. Když je zobrazení nejprve vytvořit, pokud chcete vypočítat velikost zobrazení posuvný na základě velikosti dokumentu, volání `SetScrollSizes` členskou funkci ze přepsání buď [CView::OnInitialUpdate](../../mfc/reference/cview-class.md#oninitialupdate) nebo [ CView::OnUpdate](../../mfc/reference/cview-class.md#onupdate). (Musíte napsat vlastní kód pro dotazování velikost dokumentu. Příklad najdete v tématu [ukázky Scribble](../../overview/visual-cpp-samples.md).)
+Chcete-li využít výhod automatického posouvání, odvodit třídu zobrazení `CScrollView` z nástroje místo `CView`z. Při prvním vytvoření zobrazení, pokud chcete vypočítat velikost rolovacího zobrazení na základě velikosti dokumentu, zavolejte `SetScrollSizes` členskou funkci z vašeho přepsání buďto [CView:: OnInitialUpdate](../../mfc/reference/cview-class.md#oninitialupdate) nebo [CView:: inupdate](../../mfc/reference/cview-class.md#onupdate). (Pro dotaz na velikost dokumentu musíte napsat vlastní kód. Příklad najdete v [ukázce Klikyháky](../../overview/visual-cpp-samples.md).)
 
-Volání `SetScrollSizes` členská funkce nastaví režim mapování zobrazení, celkový počet rozměrů posuvníky zobrazení a množství posouvat vodorovně a svisle. Všechny velikosti jsou v logických jednotkách. Logická velikost zobrazení se obvykle počítá z dat uložených v dokumentu, ale v některých případech můžete chtít určit pevnou velikost. Příklady oba přístupy poskytují, naleznete v tématu [CScrollView::SetScrollSizes](#setscrollsizes).
+Volání `SetScrollSizes` členské funkce nastaví režim mapování zobrazení, celkové rozměry posunutého zobrazení a množství, které mají být posunuty vodorovně a svisle. Všechny velikosti jsou logické jednotky. Logická velikost zobrazení je obvykle počítána z dat uložených v dokumentu, ale v některých případech může být vhodné zadat pevnou velikost. Příklady obou přístupů naleznete v tématu [CScrollView:: SetScrollSizes](#setscrollsizes).
 
-Zadáte částky posouvat vodorovně a svisle v logických jednotkách. Ve výchozím nastavení, když uživatel klikne posuvníku panelu šachty mimo posuvníku `CScrollView` posune "stránky". Pokud uživatel klikne na jednom konci posuvník, posouvací šipky `CScrollView` posune "řádek". Ve výchozím nastavení je stránka 1/10 celkové velikosti zobrazení. řádek je 1/10 velikosti stránky. Tyto výchozí hodnoty přepsání předáním vlastní velikosti v `SetScrollSizes` členskou funkci. Vodorovná velikost může například nastavit na část šířky celková velikost a velikost svislé výšku řádku v aktuálním písmem.
+Určíte hodnoty pro posunutí vodorovně a svisle v logických jednotkách. Ve výchozím nastavení, pokud uživatel klikne na ovládací panel posuvníku mimo posuvné okno `CScrollView` , posuňte "stránku". Pokud uživatel klikne na šipku posuvníku na konci posuvníku, `CScrollView` posune se řádek. Ve výchozím nastavení je stránka 1/10 celkové velikosti zobrazení. čára je 1/10 velikosti stránky. Přepište tyto výchozí hodnoty předáním vlastních velikostí do `SetScrollSizes` členské funkce. Například můžete nastavit vodorovnou velikost na určitou část šířky celkové velikosti a výšku čáry v aktuálním písmu na výšku.
 
-Místo posouvání, `CScrollView` může automaticky škálovat zobrazení tak, aby velikost aktuálního okna. V tomto režimu zobrazení nemá žádné posuvníky a logické zobrazení je vyčerpávat nebo zmenšit přesně podle klientské oblasti okna. Chcete-li použít tuto funkci škálování přizpůsobit, zavolejte [CScrollView::SetScaleToFitSize](#setscaletofitsize). (Volání buď `SetScaleToFitSize` nebo `SetScrollSizes`, ale ne obojí.)
+Místo posouvání `CScrollView` můžete zobrazení automaticky škálovat na velikost aktuálního okna. V tomto režimu zobrazení nemá žádné posuvníky a logické zobrazení je roztaženo nebo zmenšeno, aby se přesně vešlo na klientskou oblast okna. Chcete-li použít tuto možnost škálování na stránku, zavolejte [CScrollView:: SetScaleToFitSize](#setscaletofitsize). (Zavolejte buď `SetScaleToFitSize` nebo `SetScrollSizes`, ale ne obojí.)
 
-Před `OnDraw` členské funkce třídy odvozené zobrazení je volána, `CScrollView` automaticky přizpůsobí zobrazení počátek `CPaintDC` objekt kontextu zařízení, který předá do `OnDraw`.
+Před voláním `CPaintDC` `OnDraw`členskéfunkcetřídy odvozeného zobrazení automatickyupravípočátekzobrazeníproobjektkontextuzařízení,kterýpředává.`CScrollView` `OnDraw`
 
-Chcete-li upravit zobrazení zdroje pro okno umožňující posouvání `CScrollView` přepíše [CView::OnPrepareDC](../../mfc/reference/cview-class.md#onpreparedc). Toto nastavení je automatické `CPaintDC` kontextu zařízení, která `CScrollView` předá `OnDraw`, ale musí volat `CScrollView::OnPrepareDC` sami pro jiné kontexty zařízení použijete, jako například `CClientDC`. Můžete přepsat `CScrollView::OnPrepareDC` nastavit pera, barvu pozadí a další atributy kreslení, ale volání základní třídy provést škálování.
+Chcete-li upravit počátek zobrazení pro posuvné okno `CScrollView` , potlačí hodnoty [CView:: OnPrepareDC](../../mfc/reference/cview-class.md#onpreparedc). Tato úprava je automaticky nastavena pro `CPaintDC` kontext zařízení, `CScrollView` který předává `OnDraw`, ale je nutné `CScrollView::OnPrepareDC` zavolat pro všechny `CClientDC`ostatní kontexty zařízení, které používáte, například. Můžete přepsat `CScrollView::OnPrepareDC` , chcete-li nastavit pero, barvu pozadí a další atributy kreslení, ale zavolejte základní třídu pro provedení škálování.
 
-Posuvníky se může zobrazit na třech místech vzhledem k zobrazení, jak je znázorněno v následujících případech:
+Posuvníky se mohou zobrazit na třech místech vzhledem k zobrazení, jak je znázorněno v následujících případech:
 
-- Posuvníky standardní styl okna můžete nastavit pro zobrazení pomocí WS_HSCROLL a WS_VSCROLL[styly Windows](../../mfc/reference/styles-used-by-mfc.md#window-styles).
+- Standardní okna – posuvníky stylu lze nastavit pro zobrazení pomocí[stylů Windows](../../mfc/reference/styles-used-by-mfc.md#window-styles)WS_HSCROLL a WS_VSCROLL.
 
-- Ovládací prvky posuvníku lze také přidat do rámce obsahující zobrazení, v takovém případě rozhraní předává WM_HSCROLL a WM_VSCROLL zprávy z okna rámce k aktuálně aktivnímu zobrazení.
+- Ovládací prvky posuvníku lze také přidat do rámce obsahujícího zobrazení. v takovém případě rozhraní přepošle zprávy WM_HSCROLL a WM_VSCROLL z okna rámce do aktuálně aktivního zobrazení.
 
-- Rozhraní také předá posuňte zprávy z `CSplitterWnd` rozdělovač – ovládací prvek do aktuálně aktivní rozdělovač podokna (zobrazení). Při umístění v [CSplitterWnd](../../mfc/reference/csplitterwnd-class.md) s sdílené posuvníky, `CScrollView` objektu bude používat sdílený ty namísto vytváření vlastní.
+- Rozhraní také přepošle zprávy s `CSplitterWnd` posuvníky od ovládacího prvku Rozdělovač do aktuálně aktivního podokna rozdělení (zobrazení). Když umístíte do [CSplitterWnd](../../mfc/reference/csplitterwnd-class.md) se sdílenými posuvníky, `CScrollView` objekt bude používat sdílené místo pro vytváření vlastních panelů.
 
-Další informace o používání `CScrollView`, naleznete v tématu [architekturu Document/View](../../mfc/document-view-architecture.md) a [odvozené zobrazení tříd k dispozici v knihovně MFC](../../mfc/derived-view-classes-available-in-mfc.md).
+Další informace o použití `CScrollView`naleznete v tématu [Architektura Document/View](../../mfc/document-view-architecture.md) a [odvozené třídy zobrazení dostupné v knihovně MFC](../../mfc/derived-view-classes-available-in-mfc.md).
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
-[Třídy CObject](../../mfc/reference/cobject-class.md)
+[CObject](../../mfc/reference/cobject-class.md)
 
 [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)
 
@@ -118,11 +118,11 @@ Další informace o používání `CScrollView`, naleznete v tématu [architektu
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** afxwin.h
+**Záhlaví:** afxwin. h
 
-##  <a name="checkscrollbars"></a>  CScrollView::CheckScrollBars
+##  <a name="checkscrollbars"></a>CScrollView::CheckScrollBars
 
-Voláním této členské funkce k určení, zda posuvníky zobrazení má vodorovné a svislé pruhy.
+Voláním této členské funkce určíte, zda má rolovací zobrazení vodorovné a svislé pruhy.
 
 ```
 void CheckScrollBars(
@@ -133,14 +133,14 @@ void CheckScrollBars(
 ### <a name="parameters"></a>Parametry
 
 *bHasHorzBar*<br/>
-Označuje, že aplikace má vodorovný posuvník.
+Určuje, že aplikace má vodorovný posuvník.
 
 *bHasVertBar*<br/>
-Označuje, že aplikace má svislý posuvník.
+Určuje, že aplikace má svislý posuvník.
 
-##  <a name="cscrollview"></a>  CScrollView::CScrollView
+##  <a name="cscrollview"></a>CScrollView::CScrollView
 
-Vytvoří `CScrollView` objektu.
+`CScrollView` Vytvoří objekt.
 
 ```
 CScrollView();
@@ -148,11 +148,11 @@ CScrollView();
 
 ### <a name="remarks"></a>Poznámky
 
-Je nutné volat buď `SetScrollSizes` nebo `SetScaleToFitSize` před posuvníku zobrazení je použitelný.
+Je nutné volat buď `SetScrollSizes` nebo `SetScaleToFitSize` před tím, než je rolovací zobrazení použitelné.
 
-##  <a name="filloutsiderect"></a>  CScrollView::FillOutsideRect
+##  <a name="filloutsiderect"></a>CScrollView::FillOutsideRect
 
-Volání `FillOutsideRect` k vyplnění oblasti zobrazení, které se objeví mimo posuvné oblasti.
+Zavolejte `FillOutsideRect` k vyplnění oblasti zobrazení, které se zobrazí mimo oblast posouvání.
 
 ```
 void FillOutsideRect(
@@ -163,22 +163,22 @@ void FillOutsideRect(
 ### <a name="parameters"></a>Parametry
 
 *pDC*<br/>
-Kontext zařízení, ve kterém má být provedeno naplnění.
+Kontext zařízení, ve kterém má být vyplňování provedeno.
 
 *pBrush*<br/>
-Štětec, se kterou má být vyplněny oblasti.
+Štětec, se kterým má být oblast vyplněna.
 
 ### <a name="remarks"></a>Poznámky
 
-Použití `FillOutsideRect` v posuvníky zobrazení `OnEraseBkgnd` funkci obslužné rutiny, aby se zabránilo nadměrnému pozadí překreslení.
+Použijte `FillOutsideRect` ve funkci `OnEraseBkgnd` obslužné rutiny posuvníku, abyste zabránili nadměrnému překreslení na pozadí.
 
 ### <a name="example"></a>Příklad
 
 [!code-cpp[NVC_MFCDocView#164](../../mfc/codesnippet/cpp/cscrollview-class_1.cpp)]
 
-##  <a name="getdevicescrollposition"></a>  CScrollView::GetDeviceScrollPosition
+##  <a name="getdevicescrollposition"></a>CScrollView::GetDeviceScrollPosition
 
-Volání `GetDeviceScrollPosition` když potřebujete aktuální vodorovné a svislé polohy posuvníku polí ve posuvníky.
+Volá `GetDeviceScrollPosition` se, když budete potřebovat aktuální vodorovnou a svislou polohu rolovacích polí v posuvníkech.
 
 ```
 CPoint GetDeviceScrollPosition() const;
@@ -186,17 +186,17 @@ CPoint GetDeviceScrollPosition() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vodorovné a svislé polohy (v jednotkách zařízení) posuvníku polí jako `CPoint` objektu.
+Vodorovná a svislá pozice (v jednotkách zařízení) rolovacích polí jako `CPoint` objekt.
 
 ### <a name="remarks"></a>Poznámky
 
-Tento pár souřadnic odpovídá místo v dokumentu, do které se levém horním rohu zobrazení posunul. To je užitečné pro vyrovnání pozice myši zařízení na zařízení místo zobrazení s posuvníkem.
+Tento dvojici souřadnic odpovídá umístění v dokumentu, na které bylo posunuto levý horní roh zobrazení. To je užitečné, když kompenzujete pozice zařízení myši, abyste se mohli posouvat a zobrazovat pozice zařízení.
 
-`GetDeviceScrollPosition` Vrátí hodnoty v jednotkách zařízení. Pokud chcete logické jednotky, použijte `GetScrollPosition` místo.
+`GetDeviceScrollPosition`Vrátí hodnoty v jednotkách zařízení. Pokud chcete použít logické jednotky, použijte `GetScrollPosition` místo toho.
 
-##  <a name="getdevicescrollsizes"></a>  CScrollView::GetDeviceScrollSizes
+##  <a name="getdevicescrollsizes"></a>CScrollView::GetDeviceScrollSizes
 
-`GetDeviceScrollSizes` Získá aktuální režim mapování, celková velikost a velikost řádku a stránky posuvný zobrazení.
+`GetDeviceScrollSizes`Získá aktuální režim mapování, celkovou velikost a velikost řádku a stránky zobrazení s posuvníkem.
 
 ```
 void GetDeviceScrollSizes(
@@ -209,24 +209,24 @@ void GetDeviceScrollSizes(
 ### <a name="parameters"></a>Parametry
 
 *nMapMode*<br/>
-Vrátí aktuální režim mapování pro toto zobrazení. Seznam možných hodnot najdete v tématu `SetScrollSizes`.
+Vrátí aktuální režim mapování pro toto zobrazení. Seznam možných hodnot naleznete v tématu `SetScrollSizes`.
 
 *sizeTotal*<br/>
-Vrátí aktuální celková velikost posouvání zobrazení v jednotkách zařízení.
+Vrátí aktuální celkovou velikost posunutého zobrazení v jednotkách zařízení.
 
 *sizePage*<br/>
-Vrátí aktuální částky vodorovného a svislého posouvání v každém směru v reakci na myš, klikněte na tlačítko v šachty posuvníku. `cx` Člena obsahuje vodorovný částku. `cy` Člena obsahuje vertikální částku.
+Vrátí aktuální vodorovnou a svislou částku pro posouvání v každém směru v reakci na kliknutí myší v hřídeli posuvníku. `cx` Člen obsahuje vodorovnou částku. `cy` Člen obsahuje svislou částku.
 
 *sizeLine*<br/>
-Vrátí aktuální částky vodorovného a svislého posouvání v každém směru v reakci na myš, klikněte na tlačítko v posouvací šipky. `cx` Člena obsahuje vodorovný částku. `cy` Člena obsahuje vertikální částku.
+Vrátí aktuální vodorovnou a svislou hodnotu pro posouvání v každém směru v reakci na kliknutí myší na šipku posuvníku. `cx` Člen obsahuje vodorovnou částku. `cy` Člen obsahuje svislou částku.
 
 ### <a name="remarks"></a>Poznámky
 
-Velikosti nejsou v jednotkách zařízení. Tato členská funkce je volána jen zřídka.
+Velikosti jsou v jednotkách zařízení. Tato členská funkce je volána zřídka.
 
-##  <a name="getscrollposition"></a>  CScrollView::GetScrollPosition
+##  <a name="getscrollposition"></a>CScrollView::GetScrollPosition
 
-Volání `GetScrollPosition` když potřebujete aktuální vodorovné a svislé polohy posuvníku polí ve posuvníky.
+Volá `GetScrollPosition` se, když budete potřebovat aktuální vodorovnou a svislou polohu rolovacích polí v posuvníkech.
 
 ```
 CPoint GetScrollPosition() const;
@@ -234,17 +234,17 @@ CPoint GetScrollPosition() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vodorovné a svislé polohy (v logických jednotkách) posuvníku polí jako `CPoint` objektu.
+Vodorovná a svislá pozice (v logických jednotkách) rolovacích polí jako `CPoint` objekt.
 
 ### <a name="remarks"></a>Poznámky
 
-Tento pár souřadnic odpovídá místo v dokumentu, do které se levém horním rohu zobrazení posunul.
+Tento dvojici souřadnic odpovídá umístění v dokumentu, na které bylo posunuto levý horní roh zobrazení.
 
-`GetScrollPosition` Vrátí hodnoty v logických jednotkách. Pokud chcete zařízení jednotky, použijte `GetDeviceScrollPosition` místo.
+`GetScrollPosition`Vrátí hodnoty v logických jednotkách. Pokud chcete použít jednotky zařízení, použijte `GetDeviceScrollPosition` místo toho.
 
-##  <a name="gettotalsize"></a>  CScrollView::GetTotalSize
+##  <a name="gettotalsize"></a>CScrollView:: GetTotalSize
 
-Volání `GetTotalSize` načíst aktuální velikosti vodorovného a svislého posouvání zobrazení.
+Zavolejte `GetTotalSize` k načtení aktuální vodorovné a svislé velikosti zobrazení s posuvníkem.
 
 ```
 CSize GetTotalSize() const;
@@ -252,11 +252,11 @@ CSize GetTotalSize() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Celková velikost posouvání zobrazení v logických jednotkách. Vodorovná velikost je v `cx` člena `CSize` návratovou hodnotu. Výška probíhá `cy` člena.
+Celková velikost zobrazení posuvníku v logických jednotkách. Vodorovná velikost je v `cx` členu `CSize` návratové hodnoty. Svislá velikost je v `cy` členu.
 
-##  <a name="resizeparenttofit"></a>  CScrollView::ResizeParentToFit
+##  <a name="resizeparenttofit"></a>CScrollView::ResizeParentToFit
 
-Volání `ResizeParentToFit` chcete, aby velikost zobrazení určovat velikost okna rámce.
+Zavolejte `ResizeParentToFit` , pokud chcete, aby velikost zobrazení nadiktuja velikost okna rámce.
 
 ```
 void ResizeParentToFit(BOOL bShrinkOnly = TRUE);
@@ -265,19 +265,19 @@ void ResizeParentToFit(BOOL bShrinkOnly = TRUE);
 ### <a name="parameters"></a>Parametry
 
 *bShrinkOnly*<br/>
-Druh provádět změny velikosti. Výchozí hodnota TRUE, zmenší okno rámce v případě potřeby. Pro zobrazení velké nebo malé okna s rámečkem bude stále zobrazovat posuvníky. Hodnota FALSE způsobí, že zobrazení vždy přesně velikost okna rámce. To může být trochu nebezpečné, protože okno rámce může získat nevejdou uvnitř okna rámce (MDI interface) více dokumentu nebo na obrazovce.
+Druh změny velikosti, která má být provedena. Výchozí hodnota TRUE, zmenšuje okno rámce, pokud je to vhodné. Posuvníky se budou pořád zobrazovat u velkých zobrazení nebo malých oken s rámečkem. Hodnota FALSE způsobí, že zobrazení vždy změní velikost okna rámce přesně. To může být poněkud nebezpečné, protože okno rámce může být příliš velké, aby se vešlo do okna rámce MDI (Multiple Document Interface) nebo na obrazovku.
 
 ### <a name="remarks"></a>Poznámky
 
-To se doporučuje jenom pro zobrazení v podřízených oken rámce MDI. Použití `ResizeParentToFit` v `OnInitialUpdate` funkci obslužné rutiny z vaší odvozené `CScrollView` třídy. Příklad tato členská funkce, najdete v části [CScrollView::SetScrollSizes](#setscrollsizes).
+Tato položka se doporučuje jenom pro zobrazení v podřízených oknech snímků MDI. Použijte `ResizeParentToFit` `CScrollView` ve funkci obslužné rutiny vaší odvozené třídy. `OnInitialUpdate` Příklad této členské funkce naleznete v tématu [CScrollView:: SetScrollSizes](#setscrollsizes).
 
-`ResizeParentToFit` předpokládá, že byla nastavena velikost okna zobrazení. Pokud velikost okna zobrazení nebyl nastaven při `ResizeParentToFit` se volá, zobrazí se kontrolní výraz. Aby bylo zajištěno, že to nestalo, použije následující volání před voláním `ResizeParentToFit`:
+`ResizeParentToFit`předpokládá, že byla nastavena velikost okna zobrazení. Pokud velikost okna zobrazení není nastavena při `ResizeParentToFit` volání, zobrazí se kontrolní výraz. Chcete-li zajistit, aby k tomu nedocházelo, proveďte následující volání `ResizeParentToFit`před voláním:
 
 [!code-cpp[NVC_MFCDocView#165](../../mfc/codesnippet/cpp/cscrollview-class_2.cpp)]
 
-##  <a name="scrolltoposition"></a>  CScrollView::ScrollToPosition
+##  <a name="scrolltoposition"></a>CScrollView::ScrollToPosition
 
-Volání `ScrollToPosition` přejděte k danému bodu v zobrazení.
+Voláním `ScrollToPosition` posuňte se k danému bodu v zobrazení.
 
 ```
 void ScrollToPosition(POINT pt);
@@ -285,16 +285,16 @@ void ScrollToPosition(POINT pt);
 
 ### <a name="parameters"></a>Parametry
 
-*pt*<br/>
-Bod tak, aby přejděte v logických jednotkách. `x` Člena musí být kladné číslo (větší než nebo rovna 0 až do celkové velikosti zobrazení). Totéž platí pro `y` člen MM_TEXT po režim mapování. `y` Člen je v režimech mapování než MM_TEXT záporné.
+*bodů*<br/>
+Bod, na který se má přejít, v logických jednotkách. `x` Člen musí být kladná hodnota (větší než nebo rovna 0, až do celkové velikosti zobrazení). Totéž platí pro `y` člena, pokud je režim mapování MM_TEXT. `y` Člen je záporný v jiných režimech mapování než MM_TEXT.
 
 ### <a name="remarks"></a>Poznámky
 
-Zobrazení se posouvat tak, aby tento bod v levém horním rohu okna. Tato členská funkce nesmí volat, pokud zobrazení se přizpůsobí.
+Zobrazení se posune tak, aby byl v levém horním rohu okna. Tato členská funkce nesmí být volána, je-li zobrazení upraveno podle měřítka.
 
-##  <a name="setscaletofitsize"></a>  CScrollView::SetScaleToFitSize
+##  <a name="setscaletofitsize"></a>CScrollView::SetScaleToFitSize
 
-Volání `SetScaleToFitSize` když chcete automaticky škálovat, velikosti zobrazovacího okna aktuální velikosti okna.
+Volá `SetScaleToFitSize` se, když chcete automaticky škálovat velikost zobrazení na aktuální velikost okna.
 
 ```
 void SetScaleToFitSize(SIZE sizeTotal);
@@ -303,23 +303,23 @@ void SetScaleToFitSize(SIZE sizeTotal);
 ### <a name="parameters"></a>Parametry
 
 *sizeTotal*<br/>
-Vodorovné a svislé velikosti, ke kterým je možné škálovat zobrazení. Velikost posouvání zobrazení se měří v logických jednotkách. Vodorovná velikost je součástí `cx` člena. Velikost svislé je součástí `cy` člena. Obě `cx` a `cy` musí být větší než nebo rovna 0.
+Vodorovné a svislé velikosti, na které se má zobrazení škálovat Velikost zobrazení posuvníku se měří v logických jednotkách. Vodorovná velikost je obsažena v `cx` členu. Svislá velikost je obsažena v `cy` členu. `cx` A`cy` musí být větší než nebo rovna 0.
 
 ### <a name="remarks"></a>Poznámky
 
-S posuvníky mohou být pouze část logické zobrazení viditelná v každém okamžiku. Ale s možností škálování přizpůsobit zobrazení nemá žádné posuvníky a logické zobrazení je vyčerpávat nebo zmenšit přesně podle klientské oblasti okna. Při změně velikosti okna zobrazení kreslení svá data na nový škálování na základě velikosti okna.
+Pomocí posuvníků může být kdykoli vidět pouze část logického zobrazení. Ale s možností škálování na místo, zobrazení nemá žádné posuvníky a logické zobrazení se roztáhne nebo zmenší tak, aby se přesně vešlo na klientskou oblast okna. Když se změní velikost okna, zobrazení nakreslí jeho data v novém měřítku na základě velikosti okna.
 
-Obvykle budete umístit volání `SetScaleToFitSize` v přepsání metody zobrazení `OnInitialUpdate` členskou funkci. Pokud nechcete, aby automatické škálování, zavolejte `SetScrollSizes` členské funkce místo.
+Obvykle zadáte volání do `SetScaleToFitSize` svého přepsání `OnInitialUpdate` členské funkce zobrazení. Pokud nechcete automatické škálování, zavolejte `SetScrollSizes` místo toho členskou funkci.
 
-`SetScaleToFitSize` slouží k implementaci operace "Přiblížení na vyhovující". Použití `SetScrollSizes` opětovnou inicializaci posouvání.
+`SetScaleToFitSize`dá se použít k implementaci operace přiblížení k přizpůsobení. Použijte `SetScrollSizes` k opětovné inicializaci posouvání.
 
-`SetScaleToFitSize` předpokládá, že byla nastavena velikost okna zobrazení. Pokud velikost okna zobrazení nebyl nastaven při `SetScaleToFitSize` se volá, zobrazí se kontrolní výraz. Aby bylo zajištěno, že to nestalo, použije následující volání před voláním `SetScaleToFitSize`:
+`SetScaleToFitSize`předpokládá, že byla nastavena velikost okna zobrazení. Pokud velikost okna zobrazení není nastavena při `SetScaleToFitSize` volání, zobrazí se kontrolní výraz. Chcete-li zajistit, aby k tomu nedocházelo, proveďte následující volání `SetScaleToFitSize`před voláním:
 
 [!code-cpp[NVC_MFCDocView#165](../../mfc/codesnippet/cpp/cscrollview-class_2.cpp)]
 
-##  <a name="setscrollsizes"></a>  CScrollView::SetScrollSizes
+##  <a name="setscrollsizes"></a>CScrollView::SetScrollSizes
 
-Volání `SetScrollSizes` při zobrazení se chystáte aktualizovat.
+Volá `SetScrollSizes` se, když se bude aktualizovat zobrazení.
 
 ```
 void SetScrollSizes(
@@ -332,41 +332,41 @@ void SetScrollSizes(
 ### <a name="parameters"></a>Parametry
 
 *nMapMode*<br/>
-Režim mapování nastavení pro toto zobrazení. Možné hodnoty:
+Režim mapování, který má být nastaven pro toto zobrazení. Možné hodnoty:
 
-|Režim mapování|Logické jednotky|Osa y pozitivní rozšiřuje...|
+|Režim mapování|Logická jednotka|Kladná osa y rozšiřuje...|
 |------------------|------------------|---------------------------------|
-|MM_TEXT|1 pixelu|Dolů|
-|MM_HIMETRIC|0,01 mm|Nahoru|
-|MM_TWIPS|1/1 440 v|Nahoru|
-|MM_HIENGLISH|0,001 Indie|Nahoru|
-|MM_LOMETRIC|0,1 mm|Nahoru|
-|MM_LOENGLISH|0,01 Indie|Nahoru|
+|MM_TEXT|1 pixel|Úhlopříčn|
+|MM_HIMETRIC|0,01 mm|Šikm|
+|MM_TWIPS|1/1440 v|Šikm|
+|MM_HIENGLISH|0,001 v|Šikm|
+|MM_LOMETRIC|0,1 mm|Šikm|
+|MM_LOENGLISH|0,01 v|Šikm|
 
-Všechny tyto režimy jsou definovány ve Windows. Dva režimy standardní mapování MM_ISOTROPIC a MM_ANISOTROPIC, nejsou použity pro `CScrollView`. Poskytuje knihovna tříd `SetScaleToFitSize` členskou funkci pro změnu velikosti zobrazení tak, aby velikost okna. Tři sloupce v tabulce výše popisuje souřadnic orientace.
+Všechny tyto režimy jsou definovány systémem Windows. Dva standardní režimy mapování, MM_ISOTROPIC a MM_ANISOTROPIC, se nepoužívají pro `CScrollView`. Knihovna tříd poskytuje `SetScaleToFitSize` členskou funkci pro škálování zobrazení na velikost okna. Sloupec 3 v tabulce výše popisuje orientaci souřadnic.
 
 *sizeTotal*<br/>
-Celková velikost zobrazení s posuvníkem. `cx` Člena obsahuje vodorovný rozsahu. `cy` Člena obsahuje vertikální rozsahu. Velikosti nejsou v logických jednotkách. Obě `cx` a `cy` musí být větší než nebo rovna 0.
+Celková velikost zobrazení posouvání `cx` Člen obsahuje vodorovný rozsah. `cy` Člen obsahuje vertikální rozsah. Velikosti jsou v logických jednotkách. `cx` A`cy` musí být větší než nebo rovna 0.
 
 *sizePage*<br/>
-Částky vodorovné a svislé posouvání v každém směru v reakci na myš, klikněte na tlačítko v šachty posuvníku. `cx` Člena obsahuje vodorovný částku. `cy` Člena obsahuje vertikální částku.
+Vodorovná a svislá vzdálenost pro posouvání v každém směru v reakci na kliknutí myší v hřídeli posuvníku. `cx` Člen obsahuje vodorovnou částku. `cy` Člen obsahuje svislou částku.
 
 *sizeLine*<br/>
-Částky vodorovné a svislé posouvání v každém směru v reakci na myš, klikněte na tlačítko v posouvací šipky. `cx` Člena obsahuje vodorovný částku. `cy` Člena obsahuje vertikální částku.
+Vodorovná a svislá vzdálenost pro posouvání v každém směru v reakci na kliknutí myší na šipku posuvníku. `cx` Člen obsahuje vodorovnou částku. `cy` Člen obsahuje svislou částku.
 
 ### <a name="remarks"></a>Poznámky
 
-Volání v přepsání metody `OnUpdate` členská funkce, chcete-li upravit vlastnosti umožňující posouvání při, například je primárně zobrazen dokumentu nebo při změně velikosti.
+Zavolejte ji v přepsání `OnUpdate` členské funkce pro úpravu vlastností posouvání, když je například dokument zpočátku zobrazen nebo když se změní velikost.
 
-Obvykle se získat informace o velikosti ze zobrazení přidružený dokument voláním členské funkce dokumentu, třeba volat `GetMyDocSize`, který zadáte s vaší třídy odvozené dokumentu. Tento přístup je znázorněný na následujícím kódem:
+Obvykle budete získávat informace o velikosti z přidruženého dokumentu zobrazení voláním členské funkce dokumentu, která je pravděpodobně volána `GetMyDocSize`, kterou zadáte do odvozené třídy dokumentu. Následující kód ukazuje tento přístup:
 
 [!code-cpp[NVC_MFCDocView#166](../../mfc/codesnippet/cpp/cscrollview-class_3.cpp)]
 
-Alternativně můžete někdy potřebovat k nastavení pevné velikosti, stejně jako v následujícím kódu:
+Případně může být někdy nutné nastavit pevnou velikost, jak je uvedeno v následujícím kódu:
 
 [!code-cpp[NVC_MFCDocView#167](../../mfc/codesnippet/cpp/cscrollview-class_4.cpp)]
 
-Režim mapování musí nastavit na některou z mapování režimy Windows s výjimkou MM_ISOTROPIC nebo MM_ANISOTROPIC. Pokud chcete použít režim neomezeným mapování, zavolejte `SetScaleToFitSize` členskou funkci místo `SetScrollSizes`.
+Režim mapování je nutné nastavit na libovolný režim mapování systému Windows s výjimkou MM_ISOTROPIC nebo MM_ANISOTROPIC. Pokud chcete použít neomezený režim mapování, zavolejte `SetScaleToFitSize` členskou funkci `SetScrollSizes`namísto.
 
 ### <a name="example"></a>Příklad
 
@@ -376,7 +376,7 @@ Režim mapování musí nastavit na některou z mapování režimy Windows s vý
 
 ## <a name="see-also"></a>Viz také:
 
-[Ukázky knihovny MFC DIBLOOK](../../overview/visual-cpp-samples.md)<br/>
+[DIBLOOK Sample MFC](../../overview/visual-cpp-samples.md)<br/>
 [CView – třída](../../mfc/reference/cview-class.md)<br/>
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>
 [CView – třída](../../mfc/reference/cview-class.md)<br/>

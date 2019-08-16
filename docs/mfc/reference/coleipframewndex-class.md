@@ -1,5 +1,5 @@
 ---
-title: Coleipframewndex – třída
+title: COleIPFrameWndEx – třída
 ms.date: 11/04/2016
 f1_keywords:
 - COleIPFrameWndEx
@@ -94,17 +94,17 @@ helpviewer_keywords:
 - COleIPFrameWndEx [MFC], WinHelpA
 - COleIPFrameWndEx [MFC], InitUserToobars
 ms.assetid: ebff1560-a1eb-4854-af00-95d4a192bd55
-ms.openlocfilehash: ce0e3a8ecf4774bc0d259c0304b1e88532336bd1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 71c0db8d059ede0016caf7ceb72c7f3ab7da2718
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62224502"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69504143"
 ---
-# <a name="coleipframewndex-class"></a>Coleipframewndex – třída
+# <a name="coleipframewndex-class"></a>COleIPFrameWndEx – třída
 
-`COleIPFrameWndEx` Třída implementuje kontejner OLE, který podporuje knihovnu MFC. Třídy oken s rámečkem na místě musí být odvozen z vaší aplikace `COleIPFrameWndEx` tříd, namísto ze [COleIPFrameWnd](../../mfc/reference/coleipframewnd-class.md)třídy.
-Další podrobnosti najdete ve zdrojovém kódu v **VC\\atlmfc\\src\\mfc** složce instalace sady Visual Studio.
+`COleIPFrameWndEx` Třída implementuje kontejner OLE, který podporuje MFC. Je nutné odvodit třídu okna rámce na místě pro vaši aplikaci od `COleIPFrameWndEx` třídy namísto jejího odvození od třídy [COleIPFrameWnd](../../mfc/reference/coleipframewnd-class.md).
+Další podrobnosti najdete ve zdrojovém kódu ve složce **VC\\atlmfc\\src\\MFC** v instalaci sady Visual Studio.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -116,67 +116,67 @@ class COleIPFrameWndEx : public COleIPFrameWnd
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[COleIPFrameWndEx::AddDockSite](#adddocksite)||
 |[COleIPFrameWndEx::AddPane](#addpane)||
 |[COleIPFrameWndEx::AdjustDockingLayout](#adjustdockinglayout)||
-|[COleIPFrameWndEx::DockPane](#dockpane)||
-|[COleIPFrameWndEx::DockPaneLeftOf](#dockpaneleftof)|Ukotví panel vlevo od jiného podokna.|
+|[COleIPFrameWndEx::D ockPane](#dockpane)||
+|[COleIPFrameWndEx::D ockPaneLeftOf](#dockpaneleftof)|Ukotví jedno podokno nalevo od jiného podokna.|
 |[COleIPFrameWndEx::EnableAutoHidePanes](#enableautohidepanes)||
 |[COleIPFrameWndEx::EnableDocking](#enabledocking)||
 |[COleIPFrameWndEx::EnablePaneMenu](#enablepanemenu)||
-|[COleIPFrameWndEx::GetActivePopup](#getactivepopup)|Vrací ukazatel na aktuálně zobrazené místní nabídky.|
+|[COleIPFrameWndEx::GetActivePopup](#getactivepopup)|Vrátí ukazatel na aktuálně zobrazenou místní nabídku.|
 |[COleIPFrameWndEx::GetContainerFrameWindow](#getcontainerframewindow)||
-|[COleIPFrameWndEx::GetDefaultResId](#getdefaultresid)|Vrátí ID prostředku okna rámce, které jste zadali při načtení okna.|
+|[COleIPFrameWndEx::GetDefaultResId](#getdefaultresid)|Vrátí ID prostředku okna rámce, které jste určili při načtení okna.|
 |[COleIPFrameWndEx::GetDockFrame](#getdockframe)||
 |[COleIPFrameWndEx::GetDockingManager](#getdockingmanager)||
-|[COleIPFrameWndEx::GetMainFrame](#getmainframe)||
-|[COleIPFrameWndEx::GetMenuBar](#getmenubar)|Vrací ukazatel na objekt nabídky panelu připojené do okna rámce.|
-|[COleIPFrameWndEx::GetPane](#getpane)||
-|[COleIPFrameWndEx::GetTearOffBars](#gettearoffbars)|Vrátí seznam hodnot podokno objekty, které jsou ve stavu odnímatelnými nabídkami.|
-|[COleIPFrameWndEx::GetToolbarButtonToolTipText](#gettoolbarbuttontooltiptext)|Volá se rozhraním, než se zobrazí popis tlačítka pro tlačítko.|
+|[COleIPFrameWndEx:: getsálový](#getmainframe)||
+|[COleIPFrameWndEx::GetMenuBar](#getmenubar)|Vrátí ukazatel na objekt panelu nabídek připojený k oknu rámce.|
+|[COleIPFrameWndEx:: getpodokno](#getpane)||
+|[COleIPFrameWndEx::GetTearOffBars](#gettearoffbars)|Vrátí seznam objektů podokna, které jsou ve stavu přerušení.|
+|[COleIPFrameWndEx::GetToolbarButtonToolTipText](#gettoolbarbuttontooltiptext)|Volá se rozhraním, než se zobrazí popis tlačítka.|
 |[COleIPFrameWndEx::InsertPane](#insertpane)||
-|[COleIPFrameWndEx::IsMenuBarAvailable](#ismenubaravailable)|Určuje, zda není ukazatel na objekt nabídky panelu `NULL`.|
+|[COleIPFrameWndEx::IsMenuBarAvailable](#ismenubaravailable)|Určuje, zda ukazatel na objekt `NULL`panelu nabídek není.|
 |[COleIPFrameWndEx::IsPointNearDockSite](#ispointneardocksite)||
-|[COleIPFrameWndEx::LoadFrame](#loadframe)|(Přepíše `COleIPFrameWnd::LoadFrame`.)|
+|[COleIPFrameWndEx::LoadFrame](#loadframe)|(Overrides `COleIPFrameWnd::LoadFrame`.)|
 |[COleIPFrameWndEx::OnCloseDockingPane](#onclosedockingpane)||
 |[COleIPFrameWndEx::OnCloseMiniFrame](#oncloseminiframe)||
-|[COleIPFrameWndEx::OnClosePopupMenu](#onclosepopupmenu)|Volá se rozhraním, když aktivní místní nabídka zpracovává zprávu WM_DESTROY.|
-|[COleIPFrameWndEx::OnCmdMsg](#oncmdmsg)|(Přepíše `CFrameWnd::OnCmdMsg`.)|
-|[COleIPFrameWndEx::OnDrawMenuImage](#ondrawmenuimage)|Volá se rozhraním při vykreslení obrázku přidružený k položce nabídky.|
-|[COleIPFrameWndEx::OnDrawMenuLogo](#ondrawmenulogo)|Volá se rozhraním, když [CMFCPopupMenu](../../mfc/reference/cmfcpopupmenu-class.md)objekt zpracovává zprávu WM_PAINT.|
-|[COleIPFrameWndEx::OnMenuButtonToolHitTest](#onmenubuttontoolhittest)|Volá se rozhraním, když [cmfctoolbarbutton –](../../mfc/reference/cmfctoolbarbutton-class.md)zprávu WM_NCHITTEST. objekt procesy.|
+|[COleIPFrameWndEx::OnClosePopupMenu](#onclosepopupmenu)|Volá se rozhraním, když aktivní místní nabídka zpracuje zprávu WM_DESTROY.|
+|[COleIPFrameWndEx::OnCmdMsg](#oncmdmsg)|(Overrides `CFrameWnd::OnCmdMsg`.)|
+|[COleIPFrameWndEx::OnDrawMenuImage](#ondrawmenuimage)|Volá se rozhraním, když se vykresluje image přidružená k položce nabídky.|
+|[COleIPFrameWndEx::OnDrawMenuLogo](#ondrawmenulogo)|Volá se rozhraním, když objekt [CMFCPopupMenu](../../mfc/reference/cmfcpopupmenu-class.md)zpracovává zprávu WM_PAINT.|
+|[COleIPFrameWndEx::OnMenuButtonToolHitTest](#onmenubuttontoolhittest)|Volá se rozhraním, když objekt [CMFCToolBarButton](../../mfc/reference/cmfctoolbarbutton-class.md)zpracovává zprávu WM_NCHITTEST.|
 |[COleIPFrameWndEx::OnMoveMiniFrame](#onmoveminiframe)||
-|[COleIPFrameWndEx::OnSetPreviewMode](#onsetpreviewmode)|Voláním této členské funkce pro nastavení aplikace hlavní okno rámce do a z režimu náhledu. (Přepíše [CFrameWnd::OnSetPreviewMode](../../mfc/reference/cframewnd-class.md#onsetpreviewmode).)|
+|[COleIPFrameWndEx::OnSetPreviewMode](#onsetpreviewmode)|Voláním této členské funkce nastavíte hlavní okno rámce aplikace na režim náhledu tisku a ven. (Overrides [CFrameWnd:: OnSetPreviewMode](../../mfc/reference/cframewnd-class.md#onsetpreviewmode).)|
 |[COleIPFrameWndEx::OnShowCustomizePane](#onshowcustomizepane)||
 |[COleIPFrameWndEx::OnShowPanes](#onshowpanes)||
 |[COleIPFrameWndEx::OnShowPopupMenu](#onshowpopupmenu)|Volá se rozhraním, když se aktivuje místní nabídka.|
-|[COleIPFrameWndEx::OnTearOffMenu](#ontearoffmenu)|Volá se rozhraním, když je aktivován, který má přemístitelný panel nabídky.|
+|[COleIPFrameWndEx::OnTearOffMenu](#ontearoffmenu)|Volá se rozhraním, když se aktivuje nabídka, která má odtrhnout pruh.|
 |[COleIPFrameWndEx::PaneFromPoint](#panefrompoint)||
-|[COleIPFrameWndEx::PreTranslateMessage](#pretranslatemessage)|(Přepíše `COleIPFrameWnd::PreTranslateMessage`.)|
-|[COleIPFrameWndEx::RecalcLayout](#recalclayout)|(Přepíše `COleIPFrameWnd::RecalcLayout`.)|
+|[COleIPFrameWndEx::PreTranslateMessage](#pretranslatemessage)|(Overrides `COleIPFrameWnd::PreTranslateMessage`.)|
+|[COleIPFrameWndEx::RecalcLayout](#recalclayout)|(Overrides `COleIPFrameWnd::RecalcLayout`.)|
 |[COleIPFrameWndEx::RemovePaneFromDockManager](#removepanefromdockmanager)||
-|[COleIPFrameWndEx::SetDockState](#setdockstate)|Použije zadaný ukotvení stav do podoken, které patří do okna rámce.|
-|[COleIPFrameWndEx::SetupToolbarMenu](#setuptoolbarmenu)|Upraví objekt panelu nástrojů tak, že hledání fiktivní položek a jejich náhradu za zadaných uživatelem definované položek.|
+|[COleIPFrameWndEx::SetDockState](#setdockstate)|Použije zadaný stav ukotvení v podoknech, které patří do okna rámce.|
+|[COleIPFrameWndEx::SetupToolbarMenu](#setuptoolbarmenu)|Upraví objekt Toolbar tak, že vyhledá fiktivní položky a nahradí je zadanými uživatelsky definovanými položkami.|
 |[COleIPFrameWndEx::ShowPane](#showpane)||
-|[COleIPFrameWndEx::WinHelpA](#winhelpa)|Volá se rozhraním k zahájení WinHelp aplikace nebo kontextové nápovědy.|
+|[COleIPFrameWndEx::WinHelpA](#winhelpa)|Volá se rozhraním, aby se iniciovala aplikace WinHelp nebo kontextové nápovědy.|
 
 ### <a name="protected-methods"></a>Chráněné metody
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
-|[COleIPFrameWndEx::InitUserToobars](#initusertoobars)|Říká rozhraní framework inicializovat rozsah ID, které jsou přiřazeny do uživatelem definované panely nástrojů ovládacích prvků.|
+|[COleIPFrameWndEx::InitUserToobars](#initusertoobars)|Instruuje rozhraní, aby inicializoval rozsah ID ovládacích prvků, které jsou přiřazeny uživatelsky definovaným panelům nástrojů.|
 
 ## <a name="example"></a>Příklad
 
-Následující příklad ukazuje, jak podtřídy instance `COleIPFrameWndEx` třídy a přes jízdní její metody. Tento příklad ukazuje, jak více než svézt `OnDestory` metody, `RepositionFrame` metody `RecalcLayout` metoda a `CalcWindowRect` – metoda. Tento fragment kódu je součástí [slovo panel vzorku](../../overview/visual-cpp-samples.md).
+Následující příklad ukazuje, jak podtřídit instanci `COleIPFrameWndEx` třídy a přes jízdní metody. Příklad ukazuje `OnDestory` `RecalcLayout` , jak pořídit metodu, `CalcWindowRect` metodu,metoduametodu.`RepositionFrame` Tento fragment kódu je součástí ukázky panelu [aplikace Word](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_WordPad#1](../../mfc/reference/codesnippet/cpp/coleipframewndex-class_1.cpp)]
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
-[Třídy CObject](../../mfc/reference/cobject-class.md)
+[CObject](../../mfc/reference/cobject-class.md)
 
 [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)
 
@@ -190,7 +190,7 @@ Následující příklad ukazuje, jak podtřídy instance `COleIPFrameWndEx` tř
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** afxoleipframewndex.h
+**Záhlaví:** afxoleipframewndex. h
 
 ##  <a name="adddocksite"></a>  COleIPFrameWndEx::AddDockSite
 
@@ -200,7 +200,7 @@ void AddDockSite();
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="addpane"></a>  COleIPFrameWndEx::AddPane
+##  <a name="addpane"></a>COleIPFrameWndEx::AddPane
 
 ```
 BOOL AddPane(
@@ -210,14 +210,14 @@ BOOL AddPane(
 
 ### <a name="parameters"></a>Parametry
 
-[in] *pControlBar*<br/>
-[in] *bTail*<br/>
+pro *pControlBar*<br/>
+pro *bTail*<br/>
 
 ### <a name="return-value"></a>Návratová hodnota
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="adjustdockinglayout"></a>  COleIPFrameWndEx::AdjustDockingLayout
+##  <a name="adjustdockinglayout"></a>COleIPFrameWndEx::AdjustDockingLayout
 
 ```
 virtual void AdjustDockingLayout(HDWP hdwp = NULL);
@@ -225,11 +225,11 @@ virtual void AdjustDockingLayout(HDWP hdwp = NULL);
 
 ### <a name="parameters"></a>Parametry
 
-[in] *hdwp*<br/>
+pro *hdwp*<br/>
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="dockpane"></a>  COleIPFrameWndEx::DockPane
+##  <a name="dockpane"></a>COleIPFrameWndEx::D ockPane
 
 ```
 void DockPane(
@@ -240,15 +240,15 @@ void DockPane(
 
 ### <a name="parameters"></a>Parametry
 
-[in] *pBar*<br/>
+pro *pBar*<br/>
 [in] *nDockBarID*<br/>
-[in] *lpRect*<br/>
+pro *lpRect*<br/>
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="dockpaneleftof"></a>  COleIPFrameWndEx::DockPaneLeftOf
+##  <a name="dockpaneleftof"></a>COleIPFrameWndEx::D ockPaneLeftOf
 
-Ukotví panel vlevo od jiného podokna.
+Ukotví jedno podokno nalevo od jiného podokna.
 
 ```
 BOOL DockPaneLeftOf(
@@ -259,20 +259,20 @@ BOOL DockPaneLeftOf(
 ### <a name="parameters"></a>Parametry
 
 *pBar*<br/>
-[in] Ukazatel na panelu ukotvení.
+pro Ukazatel na ukotvení podokna.
 
 *pLeftOf*<br/>
-[in] Ukazatel na podokno, které slouží jako zdroj.
+pro Ukazatel na podokno, které slouží jako zdroj.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vrátí hodnotu PRAVDA, pokud je operace úspěšná. V opačném případě vrátí hodnotu FALSE.
+Vrátí hodnotu TRUE, pokud je operace úspěšná. V opačném případě vrátí FALSE.
 
 ### <a name="remarks"></a>Poznámky
 
-Voláním této metody lze ukotvit několik podokno objekty v předdefinovaném pořadí. Tato metoda ukotvené podokno určené *pBar* nalevo od podokna určené *pLeftOf*.
+Voláním této metody můžete ukotvit několik objektů podokna v předdefinovaném pořadí. Tato metoda ukotví podokno určené PBarem nalevo od podokna určeného parametrem *pLeftOf*.
 
-##  <a name="enableautohidepanes"></a>  COleIPFrameWndEx::EnableAutoHidePanes
+##  <a name="enableautohidepanes"></a>COleIPFrameWndEx::EnableAutoHidePanes
 
 ```
 BOOL EnableAutoHidePanes(DWORD dwDockStyle);
@@ -286,7 +286,7 @@ BOOL EnableAutoHidePanes(DWORD dwDockStyle);
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="enabledocking"></a>  COleIPFrameWndEx::EnableDocking
+##  <a name="enabledocking"></a>COleIPFrameWndEx::EnableDocking
 
 ```
 BOOL EnableDocking(DWORD dwDockStyle);
@@ -300,7 +300,7 @@ BOOL EnableDocking(DWORD dwDockStyle);
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="enablepanemenu"></a>  COleIPFrameWndEx::EnablePaneMenu
+##  <a name="enablepanemenu"></a>COleIPFrameWndEx::EnablePaneMenu
 
 ```
 void EnablePaneMenu(
@@ -314,18 +314,18 @@ void EnablePaneMenu(
 
 ### <a name="parameters"></a>Parametry
 
-[in] *bEnable*<br/>
-[in] *uiCustomizeCmd*<br/>
-[in] *strCustomizeLabel*<br/>
-[in] *uiViewToolbarsMenuEntryID*<br/>
-[in] *bContextMenuShowsToolbarsOnly*<br/>
-[in] *bViewMenuShowsToolbarsOnly*<br/>
+pro *bEnable*<br/>
+pro *uiCustomizeCmd*<br/>
+pro *strCustomizeLabel*<br/>
+pro *uiViewToolbarsMenuEntryID*<br/>
+pro *bContextMenuShowsToolbarsOnly*<br/>
+pro *bViewMenuShowsToolbarsOnly*<br/>
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="getactivepopup"></a>  COleIPFrameWndEx::GetActivePopup
+##  <a name="getactivepopup"></a>COleIPFrameWndEx::GetActivePopup
 
-Vrací ukazatel na aktuálně zobrazené rozbalovací nabídky.
+Vrátí ukazatel na aktuálně zobrazenou místní nabídku.
 
 ```
 CMFCPopupMenu* GetActivePopup() const;
@@ -333,13 +333,13 @@ CMFCPopupMenu* GetActivePopup() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Ukazatel na aktivní v rozbalovací nabídce; v opačném případě hodnota NULL.
+Ukazatel na aktivní místní nabídku; jinak NULL.
 
 ### <a name="remarks"></a>Poznámky
 
-Tuto metodu použijte k získání ukazatele na [cmfcpopupmenu – třída](../../mfc/reference/cmfcpopupmenu-class.md) objekt, který je právě otevřeno.
+Tuto metodu použijte, chcete-li získat ukazatel na objekt [třídy CMFCPopupMenu](../../mfc/reference/cmfcpopupmenu-class.md) , který je aktuálně zobrazen.
 
-##  <a name="getcontainerframewindow"></a>  COleIPFrameWndEx::GetContainerFrameWindow
+##  <a name="getcontainerframewindow"></a>COleIPFrameWndEx::GetContainerFrameWindow
 
 ```
 COleCntrFrameWndEx* GetContainerFrameWindow();
@@ -349,9 +349,9 @@ COleCntrFrameWndEx* GetContainerFrameWindow();
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="getdefaultresid"></a>  COleIPFrameWndEx::GetDefaultResId
+##  <a name="getdefaultresid"></a>COleIPFrameWndEx::GetDefaultResId
 
-Vrátí ID prostředku nabídky, který byl zadán při načtení okna rámce v nabídce.
+Vrátí ID prostředku nabídky, které bylo zadáno při načtení okna rámce nabídky.
 
 ```
 UINT GetDefaultResId() const;
@@ -359,13 +359,13 @@ UINT GetDefaultResId() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vrátí ID prostředku nabídky, nebo 0, pokud nemá žádné nabídek okna rámce.
+Vrátí ID prostředku nabídky nebo 0, pokud okno rámce nemá žádný řádek nabídek.
 
 ### <a name="remarks"></a>Poznámky
 
-Volání této funkce načtete Identifikátor prostředku, který byl zadán při načtení okna rámce prostředku nabídky zavoláním `COleIPFrameWndEx::LoadFrame`.
+Voláním této funkce načtete ID prostředku, které bylo zadáno v případě, že okno rámce načetlo `COleIPFrameWndEx::LoadFrame`prostředek nabídky voláním.
 
-##  <a name="getdockframe"></a>  COleIPFrameWndEx::GetDockFrame
+##  <a name="getdockframe"></a>COleIPFrameWndEx::GetDockFrame
 
 ```
 CFrameWnd* GetDockFrame();
@@ -375,7 +375,7 @@ CFrameWnd* GetDockFrame();
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="getdockingmanager"></a>  COleIPFrameWndEx::GetDockingManager
+##  <a name="getdockingmanager"></a>COleIPFrameWndEx::GetDockingManager
 
 ```
 CDockingManager* GetDockingManager();
@@ -385,7 +385,7 @@ CDockingManager* GetDockingManager();
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="getmainframe"></a>  COleIPFrameWndEx::GetMainFrame
+##  <a name="getmainframe"></a>COleIPFrameWndEx:: getsálový
 
 ```
 CFrameWnd* GetMainFrame();
@@ -395,9 +395,9 @@ CFrameWnd* GetMainFrame();
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="getmenubar"></a>  COleIPFrameWndEx::GetMenuBar
+##  <a name="getmenubar"></a>COleIPFrameWndEx:: getmenubar
 
-Vrací ukazatel na objekt nabídky panelu připojené do okna rámce.
+Vrátí ukazatel na objekt panelu nabídek připojený k oknu rámce.
 
 ```
 const CMFCMenuBar* GetMenuBar() const;
@@ -405,13 +405,13 @@ const CMFCMenuBar* GetMenuBar() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Ukazatel na objekt panel nabídky.
+Ukazatel na objekt panelu nabídek.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato funkce slouží k načtení ukazatel na objekt nabídky panelu, který patří do `COleIPFrameWndEx` objektu.
+Pomocí této funkce lze načíst ukazatel na objekt panelu nabídek, který patří do `COleIPFrameWndEx` objektu.
 
-##  <a name="getpane"></a>  COleIPFrameWndEx::GetPane
+##  <a name="getpane"></a>COleIPFrameWndEx:: getpodokno
 
 ```
 CBasePane* GetPane(UINT nID);
@@ -419,15 +419,15 @@ CBasePane* GetPane(UINT nID);
 
 ### <a name="parameters"></a>Parametry
 
-[in] *nID*<br/>
+pro *NID*<br/>
 
 ### <a name="return-value"></a>Návratová hodnota
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="gettearoffbars"></a>  COleIPFrameWndEx::GetTearOffBars
+##  <a name="gettearoffbars"></a>COleIPFrameWndEx::GetTearOffBars
 
-Vrátí seznam hodnot podokno objekty, které jsou ve stavu odnímatelnými nabídkami.
+Vrátí seznam objektů podokna, které jsou ve stavu přerušení.
 
 ```
 const CObList& GetTearOffBars() const;
@@ -435,15 +435,15 @@ const CObList& GetTearOffBars() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Odkaz na `CObList` objekt, který obsahuje kolekci ukazatelů na [cbasepane – třída](../../mfc/reference/cbasepane-class.md)-odvozené objekty.
+Odkaz na `CObList` objekt, který obsahuje kolekci ukazatelů na objekty odvozené od [třídy CBasePane](../../mfc/reference/cbasepane-class.md).
 
 ### <a name="remarks"></a>Poznámky
 
-`COleIPFrameWndEx` Objektu udržuje kolekci odnímatelné nabídky jako seznam [cbasepane – třída](../../mfc/reference/cbasepane-class.md)-odvozené objekty. Tuto metodu použijte k načtení odkazu do tohoto seznamu.
+Objekt udržuje kolekci nevypnutých nabídek jako seznam objektů odvozených od [třídy CBasePane.](../../mfc/reference/cbasepane-class.md) `COleIPFrameWndEx` Tuto metodu použijte, chcete-li načíst odkaz na tento seznam.
 
-##  <a name="gettoolbarbuttontooltiptext"></a>  COleIPFrameWndEx::GetToolbarButtonToolTipText
+##  <a name="gettoolbarbuttontooltiptext"></a>COleIPFrameWndEx::GetToolbarButtonToolTipText
 
-Volá se rozhraním, než se zobrazí popis tlačítka pro tlačítko.
+Volá se rozhraním, než se zobrazí popis tlačítka.
 
 ```
 virtual BOOL GetToolbarButtonToolTipText(
@@ -454,22 +454,22 @@ virtual BOOL GetToolbarButtonToolTipText(
 ### <a name="parameters"></a>Parametry
 
 *pButton*<br/>
-[in] Ukazatel na tlačítku.
+pro Ukazatel na tlačítko.
 
 *strTTText*<br/>
-[in] Ukazatel na text popisku.
+pro Ukazatel na text popisku
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Výchozí implementace vrací 0.
+Výchozí implementace vrátí hodnotu 0.
 
 ### <a name="remarks"></a>Poznámky
 
-Potlačí tuto funkci pro přizpůsobení zobrazení popisů tlačítek panelu nástrojů.
+Tuto funkci můžete přepsat, chcete-li přizpůsobit zobrazení popisů tlačítek na panelu nástrojů.
 
 ##  <a name="initusertoobars"></a>  COleIPFrameWndEx::InitUserToobars
 
-Určuje rozsah ID, která se přiřadí rozhraní na panely nástrojů uživatelského ovládacího prvku.
+Určuje rozsah identifikátorů ovládacích prvků, které rozhraní přiřadí k uživatelem definovaným panelům nástrojů.
 
 ```
 void InitUserToolbars(
@@ -481,19 +481,19 @@ void InitUserToolbars(
 ### <a name="parameters"></a>Parametry
 
 *lpszRegEntry*<br/>
-[in] Položky registru, kde knihovny ukládá uživatelská nastavení panelu nástrojů.
+pro Položka registru, do které knihovna ukládá nastavení panelu nástrojů uživatele.
 
 *uiUserToolbarFirst*<br/>
-[in] ID ovládacího prvku přiřazená první panel nástrojů definovaný uživatelem.
+pro ID ovládacího prvku přiřazené k prvnímu uživatelsky definovanému panelu nástrojů.
 
 *uiUserToolbarLast*<br/>
-[in] ID ovládacího prvku přiřazená poslední panel nástrojů definovaný uživatelem.
+pro ID ovládacího prvku přiřazené k poslednímu uživatelsky definovanému panelu nástrojů.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato funkce slouží k inicializaci rozsah ID ovládacích prvků pro přiřazení na panely nástrojů, které uživatelé dynamicky definovat. Parametry *uiUserToolbarFirst* a *uiUserToolbarLast* definovat rozsah povolených toolbar – ovládací prvek ID. Chcete-li zakázat vytváření panelů nástrojů definovaný uživatelem, nastavte *uiUserToolbarFirst* nebo *uiUserToolbarLast* na hodnotu -1.
+Tato funkce slouží k inicializaci rozsahu ID ovládacího prvku pro přiřazení k panelům nástrojů, které uživatelé dynamicky definují. Parametry *uiUserToolbarFirst* a *uiUserToolbarLast* definují rozsah povolených ID ovládacích prvků panelu nástrojů. Chcete-li zakázat vytváření panelů nástrojů definovaných uživatelem, nastavte *uiUserToolbarFirst* nebo *uiUserToolbarLast* na hodnotu-1.
 
-##  <a name="insertpane"></a>  COleIPFrameWndEx::InsertPane
+##  <a name="insertpane"></a>COleIPFrameWndEx::InsertPane
 
 ```
 BOOL InsertPane(
@@ -504,17 +504,17 @@ BOOL InsertPane(
 
 ### <a name="parameters"></a>Parametry
 
-[in] *pControlBar*<br/>
-[in] *pTarget*<br/>
-[in] *bAfter*<br/>
+pro *pControlBar*<br/>
+pro *pTarget*<br/>
+pro *bAfter*<br/>
 
 ### <a name="return-value"></a>Návratová hodnota
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="ismenubaravailable"></a>  COleIPFrameWndEx::IsMenuBarAvailable
+##  <a name="ismenubaravailable"></a>COleIPFrameWndEx::IsMenuBarAvailable
 
-Určuje, zda ukazatel na objekt nabídky panelu není NULL
+Určuje, zda ukazatel na objekt panelu nabídek nemá hodnotu NULL.
 
 ```
 BOOL IsMenuBarAvailable() const;
@@ -522,11 +522,11 @@ BOOL IsMenuBarAvailable() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vrátí hodnotu nenulovou hodnotu, pokud má okno rámce řádku nabídek; v opačném případě vrátí hodnotu 0.
+Vrátí nenulovou hodnotu, pokud má okno rámce panel nabídek; v opačném případě vrátí 0.
 
 ### <a name="remarks"></a>Poznámky
 
-Volejte tuto metodu za účelem určení, zda okno rámce udržuje NENULOVÝ ukazatel na objekt jeho nabídky panelu.
+Voláním této metody určíte, zda okno rámce udržuje ukazatel bez hodnoty NULL na jeho objekt panelu nabídek.
 
 ##  <a name="ispointneardocksite"></a>  COleIPFrameWndEx::IsPointNearDockSite
 
@@ -539,15 +539,15 @@ BOOL IsPointNearDockSite(
 
 ### <a name="parameters"></a>Parametry
 
-[in] *bodu*<br/>
+pro *bod*<br/>
 [in] *dwBarAlignment*<br/>
-[in] *bOuterEdge*<br/>
+pro *bOuterEdge*<br/>
 
 ### <a name="return-value"></a>Návratová hodnota
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="loadframe"></a>  COleIPFrameWndEx::LoadFrame
+##  <a name="loadframe"></a>COleIPFrameWndEx::LoadFrame
 
 ```
 virtual BOOL LoadFrame(
@@ -559,10 +559,10 @@ virtual BOOL LoadFrame(
 
 ### <a name="parameters"></a>Parametry
 
-[in] *nIDResource*<br/>
-[in] *dwDefaultStyle*<br/>
-[in] *pParentWnd*<br/>
-[in] *pContext*<br/>
+pro *nIDResource*<br/>
+pro *dwDefaultStyle*<br/>
+pro *pParentWnd*<br/>
+pro *pContext*<br/>
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -576,7 +576,7 @@ virtual BOOL OnCloseDockingPane(CDockablePane*);
 
 ### <a name="parameters"></a>Parametry
 
-[in] *CDockablePane –&#42;*<br/>
+pro *CDockablePane&#42;*<br/>
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -590,15 +590,15 @@ virtual BOOL OnCloseMiniFrame(CPaneFrameWnd*);
 
 ### <a name="parameters"></a>Parametry
 
-[in] *Cpaneframewnd –&#42;*<br/>
+pro *CPaneFrameWnd&#42;*<br/>
 
 ### <a name="return-value"></a>Návratová hodnota
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="onclosepopupmenu"></a>  COleIPFrameWndEx::OnClosePopupMenu
+##  <a name="onclosepopupmenu"></a>COleIPFrameWndEx::OnClosePopupMenu
 
-Volá se rozhraním, když aktivní místní nabídka zpracovává zprávu WM_DESTROY.
+Volá se rozhraním, když aktivní místní nabídka zpracuje zprávu WM_DESTROY.
 
 ```
 virtual void OnClosePopupMenu(CMFCPopupMenu* pMenuPopup);
@@ -607,13 +607,13 @@ virtual void OnClosePopupMenu(CMFCPopupMenu* pMenuPopup);
 ### <a name="parameters"></a>Parametry
 
 *pMenuPopup*<br/>
-[in] Ukazatel na objekt místní nabídky.
+pro Ukazatel na objekt místní nabídky.
 
 ### <a name="remarks"></a>Poznámky
 
-Potlačí tuto metodu pro příjem oznámení z `CMFCPopupMenu` objekty při jejich zpracování WM_DESTROY zpráv.
+Přepište tuto metodu pro příjem oznámení `CMFCPopupMenu` z objektů při zpracování zpráv WM_DESTROY.
 
-##  <a name="oncmdmsg"></a>  COleIPFrameWndEx::OnCmdMsg
+##  <a name="oncmdmsg"></a>COleIPFrameWndEx:: OnCmdMsg –
 
 ```
 virtual BOOL OnCmdMsg(
@@ -625,18 +625,18 @@ virtual BOOL OnCmdMsg(
 
 ### <a name="parameters"></a>Parametry
 
-[in] *nID*<br/>
-[in] *nCode*<br/>
+pro *NID*<br/>
+pro *nCode*<br/>
 [in] *pExtra*<br/>
-[in] *pHandlerInfo*<br/>
+pro *pHandlerInfo*<br/>
 
 ### <a name="return-value"></a>Návratová hodnota
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="ondrawmenuimage"></a>  COleIPFrameWndEx::OnDrawMenuImage
+##  <a name="ondrawmenuimage"></a>COleIPFrameWndEx::OnDrawMenuImage
 
-Volá se rozhraním při vykreslení obrázku, který je přidružený k položce nabídky.
+Volá se rozhraním, když se vykreslí image, která je přidružená k položce nabídky.
 
 ```
 virtual BOOL OnDrawMenuImage(
@@ -648,13 +648,13 @@ virtual BOOL OnDrawMenuImage(
 ### <a name="parameters"></a>Parametry
 
 *pDC*<br/>
-[in] Ukazatel na kontext zařízení.
+pro Ukazatel na kontext zařízení.
 
 *pMenuButton*<br/>
-[in] Ukazatel na tlačítko nabídky.
+pro Ukazatel na tlačítko nabídky
 
 *rectImage*<br/>
-[in] Obrázek přidružený k položce nabídky.
+pro Obrázek přidružený k položce nabídky
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -662,11 +662,11 @@ Výchozí implementace neprovede žádnou akci a vrátí hodnotu 0.
 
 ### <a name="remarks"></a>Poznámky
 
-Potlačí tuto metodu, pokud chcete přizpůsobit kreslení pro položky nabídky, které patří do nabídek vlastní bitové kopie `COleIPFrameWndEx`-odvozenému objektu.
+Tuto metodu přepište, pokud chcete přizpůsobit vykreslování obrázků pro položky nabídky, které patří do řádku nabídek vlastněné `COleIPFrameWndEx`objektem odvozeným od objektu.
 
-##  <a name="ondrawmenulogo"></a>  COleIPFrameWndEx::OnDrawMenuLogo
+##  <a name="ondrawmenulogo"></a>COleIPFrameWndEx::OnDrawMenuLogo
 
-Volá se rozhraním, když [CMFCPopupMenu](../../mfc/reference/cmfcpopupmenu-class.md)objekt zpracovává zprávu WM_PAINT.
+Volá se rozhraním, když objekt [CMFCPopupMenu](../../mfc/reference/cmfcpopupmenu-class.md)zpracovává zprávu WM_PAINT.
 
 ```
 virtual void OnDrawMenuLogo(
@@ -678,21 +678,21 @@ virtual void OnDrawMenuLogo(
 ### <a name="parameters"></a>Parametry
 
 *pDC*<br/>
-[in] Ukazatel na kontext zařízení.
+pro Ukazatel na kontext zařízení.
 
 *pMenu*<br/>
-[in] Ukazatel na objekt místní nabídky.
+pro Ukazatel na objekt místní nabídky.
 
 *rectLogo*<br/>
-[in] Ukazatel na logo pro zobrazení.
+pro Ukazatel na logo, které chcete zobrazit.
 
 ### <a name="remarks"></a>Poznámky
 
-Přepsáním této metody můžete zobrazovat logo v rozbalovací nabídce přidružený k řádku nabídek vlastníkem `COleIPFrameWndEx`-odvozenému objektu. Výchozí implementace nemá žádný účinek.
+Tuto metodu přepište, pokud chcete zobrazit logo v místní nabídce přidružené k řádku nabídek, který patří `COleIPFrameWndEx`k objektu odvozenému objektem. Výchozí implementace neprovádí žádnou akci.
 
-##  <a name="onmenubuttontoolhittest"></a>  COleIPFrameWndEx::OnMenuButtonToolHitTest
+##  <a name="onmenubuttontoolhittest"></a>COleIPFrameWndEx::OnMenuButtonToolHitTest
 
-Volá se rozhraním, když [cmfctoolbarbutton –](../../mfc/reference/cmfctoolbarbutton-class.md)objekt zpracovává zprávu WM_NCHITTEST.
+Volá se rozhraním, když objekt [CMFCToolBarButton](../../mfc/reference/cmfctoolbarbutton-class.md)zpracovává zprávu WM_NCHITTEST.
 
 ```
 virtual BOOL OnMenuButtonToolHitTest(
@@ -704,15 +704,15 @@ virtual BOOL OnMenuButtonToolHitTest(
 
 [in] ukazatel pButton na tlačítko nabídky.
 
-[out] pTI ukazatel na `TOOLINFO` struktury.
+[out] PTI ukazatel na `TOOLINFO` strukturu.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Výchozí implementace neprovede žádnou akci a vrátí hodnotu 0. Implementace by mělo vrátit nenulovou hodnotu, pokud se vyplní *pTI* parametru.
+Výchozí implementace neprovede žádnou akci a vrátí hodnotu 0. Vaše implementace by měla vrátit nenulovou hodnotu, pokud vyplní parametr *PTI* .
 
 ### <a name="remarks"></a>Poznámky
 
-Potlačí tuto metodu lze zadat popis tlačítka informace o konkrétní položku.
+Tuto metodu přepište, pokud chcete poskytnout informace popisu konkrétní položky nabídky.
 
 ##  <a name="onmoveminiframe"></a>  COleIPFrameWndEx::OnMoveMiniFrame
 
@@ -722,13 +722,13 @@ virtual BOOL OnMoveMiniFrame(CWnd* pFrame);
 
 ### <a name="parameters"></a>Parametry
 
-[in] *pFrame*<br/>
+pro *pFrame*<br/>
 
 ### <a name="return-value"></a>Návratová hodnota
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="onsetpreviewmode"></a>  COleIPFrameWndEx::OnSetPreviewMode
+##  <a name="onsetpreviewmode"></a>COleIPFrameWndEx::OnSetPreviewMode
 
 ```
 virtual void OnSetPreviewMode(
@@ -738,12 +738,12 @@ virtual void OnSetPreviewMode(
 
 ### <a name="parameters"></a>Parametry
 
-[in] *bPreview*<br/>
-[in] *pState*<br/>
+pro *bPreview*<br/>
+pro *pState*<br/>
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="onshowcustomizepane"></a>  COleIPFrameWndEx::OnShowCustomizePane
+##  <a name="onshowcustomizepane"></a>COleIPFrameWndEx::OnShowCustomizePane
 
 ```
 virtual BOOL OnShowCustomizePane(
@@ -753,14 +753,14 @@ virtual BOOL OnShowCustomizePane(
 
 ### <a name="parameters"></a>Parametry
 
-[in] *pMenuPane*<br/>
+pro *pMenuPane*<br/>
 [in] *uiToolbarID*<br/>
 
 ### <a name="return-value"></a>Návratová hodnota
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="onshowpanes"></a>  COleIPFrameWndEx::OnShowPanes
+##  <a name="onshowpanes"></a>COleIPFrameWndEx::OnShowPanes
 
 ```
 virtual BOOL OnShowPanes(BOOL bShow);
@@ -768,7 +768,7 @@ virtual BOOL OnShowPanes(BOOL bShow);
 
 ### <a name="parameters"></a>Parametry
 
-[in] *bShow*<br/>
+pro *bShow*<br/>
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -785,19 +785,19 @@ virtual BOOL OnShowPopupMenu(CMFCPopupMenu* pMenuPopup);
 ### <a name="parameters"></a>Parametry
 
 *pMenuPopup*<br/>
-[in] Ukazatel na místní nabídky, který se má zobrazit.
+pro Ukazatel na místní nabídku, která se má zobrazit.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Výchozí implementace neprovede žádnou akci a vrátí nenulovou hodnotu. Implementace by mělo vrátit hodnotu FALSE, pokud nelze zobrazit v rozbalovací nabídce.
+Výchozí implementace neprovede žádnou akci a vrátí nenulovou hodnotu. Pokud se místní nabídka nedá zobrazit, měla by vaše implementace vracet hodnotu FALSE.
 
 ### <a name="remarks"></a>Poznámky
 
-Potlačí tuto metodu pro přizpůsobení zobrazení místní nabídky. Můžete například změnit barvu tlačítka nabídky tlačítka nabídky nebo inicializovat odtržených pruhy.
+Tuto metodu přepište, pokud chcete přizpůsobit zobrazení místní nabídky. Můžete například změnit tlačítka nabídky na tlačítka nabídky barvy nebo inicializovat rozzpůsobitelné pruhy.
 
-##  <a name="ontearoffmenu"></a>  COleIPFrameWndEx::OnTearOffMenu
+##  <a name="ontearoffmenu"></a>COleIPFrameWndEx::OnTearOffMenu
 
-Volá se rozhraním, když uživatel vybere, který má přemístitelný panel nabídky.
+Volá se rozhraním, když uživatel vybere nabídku, která má nepřerušený pruh.
 
 ```
 virtual BOOL OnTearOffMenu(
@@ -808,20 +808,20 @@ virtual BOOL OnTearOffMenu(
 ### <a name="parameters"></a>Parametry
 
 *pMenuPopup*<br/>
-[in] Ukazatel na místní nabídky, kterou uživatel vybral.
+pro Ukazatel na místní nabídku, kterou uživatel vybral.
 
 *pBar*<br/>
-[in] Ukazatel na panelu, který je hostitelem v nabídce.
+pro Ukazatel na podokno, které hostuje nabídku.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Hodnota TRUE, pokud chcete, aby rozhraní k aktivaci v rozbalovací nabídce; v opačném případě FALSE. Výchozí hodnota je TRUE.
+TRUE, pokud chcete, aby rozhraní aktivovalo místní nabídku; v opačném případě FALSE. Výchozí hodnota je TRUE (pravda).
 
 ### <a name="remarks"></a>Poznámky
 
-Tato funkce přepište, pokud budete chtít přizpůsobit instalaci přemístitelný panel.
+Tuto funkci přepište, pokud chcete přizpůsobit nastavení nenastavené čáry.
 
-##  <a name="panefrompoint"></a>  COleIPFrameWndEx::PaneFromPoint
+##  <a name="panefrompoint"></a>COleIPFrameWndEx::P aneFromPoint
 
 ```
 CBasePane* PaneFromPoint(
@@ -839,11 +839,11 @@ CBasePane* PaneFromPoint(
 
 ### <a name="parameters"></a>Parametry
 
-[in] *bodu*<br/>
-[in] *nSensitivity*<br/>
-[in] *bExactBar*<br/>
+pro *bod*<br/>
+pro *nSensitivity*<br/>
+pro *bExactBar*<br/>
 [in] *pRTCBarType*<br/>
-[in] *dwAlignment*<br/>
+pro *dwAlignment*<br/>
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -857,13 +857,13 @@ virtual BOOL PreTranslateMessage(MSG* pMsg);
 
 ### <a name="parameters"></a>Parametry
 
-[in] *pMsg*<br/>
+pro *pMsg*<br/>
 
 ### <a name="return-value"></a>Návratová hodnota
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="recalclayout"></a>  COleIPFrameWndEx::RecalcLayout
+##  <a name="recalclayout"></a>COleIPFrameWndEx::RecalcLayout
 
 ```
 virtual void RecalcLayout(BOOL bNotify = TRUE);
@@ -871,7 +871,7 @@ virtual void RecalcLayout(BOOL bNotify = TRUE);
 
 ### <a name="parameters"></a>Parametry
 
-[in] *bNotify*<br/>
+pro *bNotify*<br/>
 
 ### <a name="remarks"></a>Poznámky
 
@@ -888,17 +888,17 @@ void RemovePaneFromDockManager(
 
 ### <a name="parameters"></a>Parametry
 
-[in] *pControlBar*<br/>
-[in] *bDestroy*<br/>
-[in] *bAdjustLayout*<br/>
-[in] *bAutoHide*<br/>
-[in] *pBarReplacement*<br/>
+pro *pControlBar*<br/>
+pro *bDestroy*<br/>
+pro *bAdjustLayout*<br/>
+pro *bAutoHide*<br/>
+pro *pBarReplacement*<br/>
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="setdockstate"></a>  COleIPFrameWndEx::SetDockState
+##  <a name="setdockstate"></a>COleIPFrameWndEx::SetDockState
 
-Použije zadaný ukotvení stav do podoken, které patří do okna rámce.
+Použije zadaný stav ukotvení u podoken, která patří do okna rámce.
 
 ```
 void SetDockState(const CDockState& state);
@@ -906,16 +906,16 @@ void SetDockState(const CDockState& state);
 
 ### <a name="parameters"></a>Parametry
 
-*state*<br/>
-[in] Určuje stav ukotvení.
+*státech*<br/>
+pro Určuje stav ukotvení.
 
 ### <a name="remarks"></a>Poznámky
 
-Pomocí této funkce můžete určit stav nové dokování pro podokna, které patří do `COleIPFrameWndEx` objektu.
+Pomocí této funkce lze zadat nový stav Docker pro podokna, která patří do `COleIPFrameWndEx` objektu.
 
-##  <a name="setuptoolbarmenu"></a>  COleIPFrameWndEx::SetupToolbarMenu
+##  <a name="setuptoolbarmenu"></a>COleIPFrameWndEx::SetupToolbarMenu
 
-Upraví objekt panelu nástrojů tak, že hledání fiktivní položek a jejich náhradu za zadaných uživatelem definované položek.
+Upraví objekt Toolbar tak, že vyhledá fiktivní položky a nahradí je zadanými uživatelsky definovanými položkami.
 
 ```
 void SetupToolbarMenu(
@@ -926,18 +926,18 @@ void SetupToolbarMenu(
 
 ### <a name="parameters"></a>Parametry
 
-*Nabídky*<br/>
-[in] Odkaz na [cmenu –](../../mfc/reference/cmenu-class.md) objektu, který chcete upravit.
+*nabídce*<br/>
+pro Odkaz na objekt [CMenu –](../../mfc/reference/cmenu-class.md) , který má být změněn.
 
 *uiViewUserToolbarCmdFirst*<br/>
-[in] Určuje první příkaz definovaný uživatelem.
+pro Určuje první uživatelsky definovaný příkaz.
 
 *uiViewUserToolbarCmdLast*<br/>
-[in] Určuje poslední příkaz definovaný uživatelem.
+pro Určuje poslední uživatelsky definovaný příkaz.
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="showpane"></a>  COleIPFrameWndEx::ShowPane
+##  <a name="showpane"></a>COleIPFrameWndEx::ShowPane
 
 ```
 void ShowPane(
@@ -949,16 +949,16 @@ void ShowPane(
 
 ### <a name="parameters"></a>Parametry
 
-[in] *pBar*<br/>
-[in] *bShow*<br/>
-[in] *bDelay*<br/>
-[in] *bActivate*<br/>
+pro *pBar*<br/>
+pro *bShow*<br/>
+pro *bDelay*<br/>
+pro *bActivate*<br/>
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="winhelpa"></a>  COleIPFrameWndEx::WinHelpA
+##  <a name="winhelpa"></a>COleIPFrameWndEx::WinHelpA
 
-Volá se rozhraním k zahájení WinHelp aplikace nebo kontextové nápovědy.
+Volá se rozhraním, aby se iniciovala aplikace WinHelp nebo kontextové nápovědy.
 
 ```
 virtual void WinHelp(
@@ -968,10 +968,10 @@ virtual void WinHelp(
 
 ### <a name="parameters"></a>Parametry
 
-[in] Určuje data podle potřeby pro typ nápovědy určené dwData *nCmd*.
+[in] dwData určuje data požadovaná pro typ nápovědu určenou parametrem *nCmd*.
 
 *nCmd*<br/>
-[in] Určuje typ nápovědy požadavku. Seznam možných hodnot a jejich vliv *dwData* parametr, najdete v článku [funkci WinHelp](/windows/desktop/api/winuser/nf-winuser-winhelpa) v sadě Windows SDK.
+pro Určuje typ požadované aplikace Help. Seznam možných hodnot a jejich vliv na parametr *dwData* naleznete v tématu [funkce WinHelp](/windows/win32/api/winuser/nf-winuser-winhelpw) v Windows SDK.
 
 ### <a name="remarks"></a>Poznámky
 

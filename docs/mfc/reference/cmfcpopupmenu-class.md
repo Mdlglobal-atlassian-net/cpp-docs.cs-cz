@@ -1,5 +1,5 @@
 ---
-title: CMFCPopupMenu Class
+title: CMFCPopupMenu – třída
 ms.date: 10/18/2018
 f1_keywords:
 - CMFCPopupMenu
@@ -160,17 +160,17 @@ helpviewer_keywords:
 - CMFCPopupMenu [MFC], OnChangeHot
 - CMFCPopupMenu [MFC], OnChooseItem
 ms.assetid: 9555dca1-8c9c-44c9-af72-0659ddad128e
-ms.openlocfilehash: bd6629df4274af8a4f450024f0bad6da45ae3683
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2f61c5aea825d85043ad273c640c4aabd38ebbb5
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62388329"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69505134"
 ---
-# <a name="cmfcpopupmenu-class"></a>CMFCPopupMenu Class
+# <a name="cmfcpopupmenu-class"></a>CMFCPopupMenu – třída
 
-Implementuje funkce rozbalovací nabídky Windows a rozšiřuje jej přidáním funkce, jako je odtrhnout nabídky a popisy tlačítek.
-Další podrobnosti najdete ve zdrojovém kódu v **VC\\atlmfc\\src\\mfc** složce instalace sady Visual Studio.
+Implementuje funkce místní nabídky systému Windows a rozšiřuje je přidáním funkcí, jako jsou například odtrhnout nabídky a popisy tlačítek.
+Další podrobnosti najdete ve zdrojovém kódu ve složce **VC\\atlmfc\\src\\MFC** v instalaci sady Visual Studio.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -182,91 +182,91 @@ class CMFCPopupMenu : public CMiniFrameWnd
 
 ### <a name="protected-constructors"></a>Chráněné konstruktory
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
-|[CMFCPopupMenu::CMFCPopupMenu](#cmfcpopupmenu)|Vytvoří `CMFCPopupMenu` objektu.|
+|[CMFCPopupMenu::CMFCPopupMenu](#cmfcpopupmenu)|`CMFCPopupMenu` Vytvoří objekt.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CMFCPopupMenu::ActivatePopupMenu](#activatepopupmenu)||
-|[CMFCPopupMenu::AlwaysShowEmptyToolsEntry](#alwaysshowemptytoolsentry)|Nastaví, jestli má místní nabídka Zobrazit prázdné položky pro uživatelem definované nástroje.|
+|[CMFCPopupMenu::AlwaysShowEmptyToolsEntry](#alwaysshowemptytoolsentry)|Nastaví, zda je povolena místní nabídka pro zobrazení prázdných položek pro uživatelsky definované nástroje.|
 |[CMFCPopupMenu::AreAllCommandsShown](#areallcommandsshown)||
-|[CMFCPopupMenu::CheckArea](#checkarea)|Určuje umístění bod vzhledem k rozbalovací nabídky.|
+|[CMFCPopupMenu::CheckArea](#checkarea)|Určuje umístění bodu relativně k místní nabídce.|
 |[CMFCPopupMenu::CloseMenu](#closemenu)||
-|[CMFCPopupMenu::Create](#create)|Vytvoří vyskakovací nabídku a připojí ho k `CMFCPopupMenu` objektu.|
+|[CMFCPopupMenu::Create](#create)|Vytvoří místní nabídku a připojí ji k `CMFCPopupMenu` objektu.|
 |[CMFCPopupMenu::DefaultMouseClickOnClose](#defaultmouseclickonclose)||
-|[CMFCPopupMenu::EnableMenuLogo](#enablemenulogo)|Inicializuje logo pro rozbalovací nabídky.|
-|[CMFCPopupMenu::EnableMenuSound](#enablemenusound)|Umožňuje nabídky zvuk.|
+|[CMFCPopupMenu::EnableMenuLogo](#enablemenulogo)|Inicializuje logo pro místní nabídku.|
+|[CMFCPopupMenu::EnableMenuSound](#enablemenusound)|Povoluje zvuk nabídky.|
 |[CMFCPopupMenu::EnableResize](#enableresize)||
 |[CMFCPopupMenu::EnableScrolling](#enablescrolling)||
 |[CMFCPopupMenu::EnableVertResize](#enablevertresize)||
-|[CMFCPopupMenu::FindSubItemByCommand](#findsubitembycommand)||
-|[CMFCPopupMenu::GetActiveMenu](#getactivemenu)|Vrátí aktuálně aktivní nabídky.|
+|[CMFCPopupMenu:: FindSubItemByCommand](#findsubitembycommand)||
+|[CMFCPopupMenu::GetActiveMenu](#getactivemenu)|Vrátí aktuálně aktivní nabídku.|
 |[CMFCPopupMenu::GetAnimationSpeed](#getanimationspeed)|Vrátí rychlost animace pro místní nabídky.|
-|[CMFCPopupMenu::GetAnimationType](#getanimationtype)|Vrátí aktuální typ animace rozbalovací nabídky.|
+|[CMFCPopupMenu::GetAnimationType](#getanimationtype)|Vrátí aktuální typ animace místní nabídky.|
 |[CMFCPopupMenu::GetDropDirection](#getdropdirection)||
-|[CMFCPopupMenu::GetForceMenuFocus](#getforcemenufocus)|Určuje, zda se fokus vrátí do nabídek, když se zobrazí místní nabídka.|
+|[CMFCPopupMenu::GetForceMenuFocus](#getforcemenufocus)|Označuje, zda se fokus vrátí do řádku nabídek při zobrazení místní nabídky.|
 |[CMFCPopupMenu::GetForceShadow](#getforceshadow)||
-|[CMFCPopupMenu::GetHMenu](#gethmenu)|Vrátí popisovač do připojené nabídce prostředků.|
-|[CMFCPopupMenu::GetMenuBar](#getmenubar)|Vrátí [cmfcpopupmenubar –](../../mfc/reference/cmfcpopupmenubar-class.md) vložená do místní nabídky.|
-|[CMFCPopupMenu::GetMenuItem](#getmenuitem)|Vrací ukazatel na položku nabídky v zadaném indexu.|
+|[CMFCPopupMenu::GetHMenu](#gethmenu)|Vrátí popisovač pro prostředek připojené nabídky.|
+|[CMFCPopupMenu::GetMenuBar](#getmenubar)|Vrátí [CMFCPopupMenuBar](../../mfc/reference/cmfcpopupmenubar-class.md) vložený v místní nabídce.|
+|[CMFCPopupMenu::GetMenuItem](#getmenuitem)|Vrátí ukazatel na položku nabídky na zadaném indexu.|
 |[CMFCPopupMenu::GetMenuItemCount](#getmenuitemcount)|Vrátí počet položek v místní nabídce.|
-|[CMFCPopupMenu::GetMessageWnd](#getmessagewnd)|Vrací ukazatel na okno, kde rozhraní provádí směrování zpráv rozbalovací nabídky.|
+|[CMFCPopupMenu::GetMessageWnd](#getmessagewnd)|Vrátí ukazatel na okno, kde rozhraní směruje zprávy místní nabídky.|
 |[CMFCPopupMenu::GetParentArea](#getparentarea)||
-|[CMFCPopupMenu::GetParentButton](#getparentbutton)|Vrací ukazatel na nadřazenou tlačítka panelu nástrojů.|
-|[CMFCPopupMenu::GetParentPopupMenu](#getparentpopupmenu)|Vrací ukazatel na nadřazenou rozbalovací nabídky.|
+|[CMFCPopupMenu::GetParentButton](#getparentbutton)|Vrátí ukazatel na nadřazené tlačítko panelu nástrojů.|
+|[CMFCPopupMenu::GetParentPopupMenu](#getparentpopupmenu)|Vrátí ukazatel na nadřazenou místní nabídku.|
 |[CMFCPopupMenu::GetParentRibbonElement](#getparentribbonelement)||
-|[CMFCPopupMenu::GetParentToolBar](#getparenttoolbar)|Vrací ukazatel na nadřazeného panelu nástrojů.|
+|[CMFCPopupMenu::GetParentToolBar](#getparenttoolbar)|Vrátí ukazatel na nadřazený panel nástrojů.|
 |[CMFCPopupMenu::GetQuickCustomizeType](#getquickcustomizetype)||
-|[CMFCPopupMenu::GetSelItem](#getselitem)|Vrací ukazatel na aktuálně vybraný příkaz.|
-|[CMFCPopupMenu::HasBeenResized](#hasbeenresized)||
-|[CMFCPopupMenu::HideRarelyUsedCommands](#hiderarelyusedcommands)|Určuje, zda v místní nabídce můžete skrýt zřídka používané příkazy.|
-|[CMFCPopupMenu::InCommand](#incommand)||
+|[CMFCPopupMenu::GetSelItem](#getselitem)|Vrátí ukazatel na aktuálně vybraný příkaz nabídky.|
+|[CMFCPopupMenu:: HasBeenResized](#hasbeenresized)||
+|[CMFCPopupMenu:: HideRarelyUsedCommands](#hiderarelyusedcommands)|Určuje, zda místní nabídka může skrývat zřídka používané příkazy.|
+|[CMFCPopupMenu:: incommand](#incommand)||
 |[CMFCPopupMenu::InsertItem](#insertitem)|Vloží novou položku do místní nabídky v zadaném umístění.|
-|[CMFCPopupMenu::InsertSeparator](#insertseparator)|Oddělovač vloží do místní nabídky v zadaném umístění.|
-|[CMFCPopupMenu::IsAlwaysClose](#isalwaysclose)||
+|[CMFCPopupMenu:: InsertSeparator](#insertseparator)|Vloží oddělovač do místní nabídky v zadaném umístění.|
+|[CMFCPopupMenu:: IsAlwaysClose](#isalwaysclose)||
 |[CMFCPopupMenu::IsAlwaysShowEmptyToolsEntry](#isalwaysshowemptytoolsentry)||
-|[CMFCPopupMenu::IsCustomizePane](#iscustomizepane)|Určuje, zda v rozbalovací nabídce funguje jako **QuickCustomizePane**.|
+|[CMFCPopupMenu:: IsCustomizePane](#iscustomizepane)|Označuje, zda se místní nabídka pracuje jako **QuickCustomizePane**.|
 |[CMFCPopupMenu::IsEscClose](#isescclose)||
-|[CMFCPopupMenu::IsIdle](#isidle)|Označuje, zda je místní nabídky aktuálně nečinnosti.|
+|[CMFCPopupMenu::IsIdle](#isidle)|Označuje, zda je místní nabídka aktuálně nečinná.|
 |[CMFCPopupMenu::IsMenuSound](#ismenusound)||
-|[CMFCPopupMenu::IsQuickCustomize](#isquickcustomize)|Určuje, zda přidružený [cmfctoolbarmenubutton – třída](../../mfc/reference/cmfctoolbarmenubutton-class.md) je v režimu QuickCustomize.|
+|[CMFCPopupMenu::IsQuickCustomize](#isquickcustomize)|Určuje, zda je přidružená [Třída CMFCToolBarMenuButton](../../mfc/reference/cmfctoolbarmenubutton-class.md) v režimu QuickCustomize.|
 |[CMFCPopupMenu::IsResizeble](#isresizeble)||
-|[CMFCPopupMenu::IsRightAlign](#isrightalign)|Označuje, zda je v nabídce zarovnaný doprava nebo doleva.|
+|[CMFCPopupMenu::IsRightAlign](#isrightalign)|Označuje, zda je nabídka zarovnána vpravo nebo vlevo.|
 |[CMFCPopupMenu::IsScrollable](#isscrollable)||
-|[CMFCPopupMenu::IsSendMenuSelectMsg](#issendmenuselectmsg)|Určuje, zda rozhraní upozorní nadřazeného rámce, když uživatel vybere příkaz v místní nabídce.|
-|[CMFCPopupMenu::IsShown](#isshown)|Označuje, zda je aktuálně zobrazené rozbalovací nabídky.|
+|[CMFCPopupMenu::IsSendMenuSelectMsg](#issendmenuselectmsg)|Určuje, zda architektura upozorní nadřazený rámec, když uživatel vybere příkaz z místní nabídky.|
+|[CMFCPopupMenu::IsShown](#isshown)|Označuje, zda je místní nabídka aktuálně viditelná.|
 |[CMFCPopupMenu::MoveTo](#moveto)||
-|[CMFCPopupMenu::OnCmdMsg](#oncmdmsg)|(Přepíše `CFrameWnd::OnCmdMsg`.)|
-|[CMFCPopupMenu::PostCommand](#postcommand)||
-|[CMFCPopupMenu::PreTranslateMessage](#pretranslatemessage)|(Přepíše `CFrameWnd::PreTranslateMessage`.)|
-|[CMFCPopupMenu::RecalcLayout](#recalclayout)|Volá se rozhraním, když jsou standardní ovládací panely přepínat zapnutí nebo vypnutí nebo při změně velikosti okna rámce. (Přepíše [CFrameWnd::RecalcLayout](../../mfc/reference/cframewnd-class.md#recalclayout).)|
+|[CMFCPopupMenu::OnCmdMsg](#oncmdmsg)|(Overrides `CFrameWnd::OnCmdMsg`.)|
+|[CMFCPopupMenu::P ostCommand](#postcommand)||
+|[CMFCPopupMenu::PreTranslateMessage](#pretranslatemessage)|(Overrides `CFrameWnd::PreTranslateMessage`.)|
+|[CMFCPopupMenu:: RecalcLayout](#recalclayout)|Volá se rozhraním, když se změní nebo vypnou standardní ovládací panely nebo když se změní velikost okna rámce. (Overrides [CFrameWnd:: RecalcLayout](../../mfc/reference/cframewnd-class.md#recalclayout).)|
 |[CMFCPopupMenu::RemoveAllItems](#removeallitems)|Vymaže všechny položky z místní nabídky.|
-|[CMFCPopupMenu::RemoveItem](#removeitem)|Odebere určenou položku z místní nabídky.|
+|[CMFCPopupMenu:: RemoveItem](#removeitem)|Odebere zadanou položku z místní nabídky.|
 |[CMFCPopupMenu::SaveState](#savestate)||
-|[CMFCPopupMenu::SetAnimationSpeed](#setanimationspeed)|Nastaví rychlost animace pro místní nabídky.|
-|[CMFCPopupMenu::SetAnimationType](#setanimationtype)|Nastaví typ animace rozbalovací nabídky.|
+|[CMFCPopupMenu:: SetAnimationSpeed](#setanimationspeed)|Nastaví rychlost animace pro místní nabídky.|
+|[CMFCPopupMenu::SetAnimationType](#setanimationtype)|Nastaví typ animace pro místní nabídku.|
 |[CMFCPopupMenu::SetAutoDestroy](#setautodestroy)||
-|[CMFCPopupMenu::SetDefaultItem](#setdefaultitem)|Nastaví výchozí příkaz pro rozbalovací nabídky.|
-|[CMFCPopupMenu::SetForceMenuFocus](#setforcemenufocus)|Vynutí zaměření pro vstup se vraťte do nabídek, když se zobrazí místní nabídka.|
-|[CMFCPopupMenu::SetForceShadow](#setforceshadow)|Vynutí rozhraní pro kreslení nabídky stínů, jakmile se zobrazí místní nabídky mimo hlavního rámce.|
-|[CMFCPopupMenu::SetMaxWidth](#setmaxwidth)|Nastavte maximální šířku pro rozbalovací nabídky.|
-|[CMFCPopupMenu::SetMessageWnd](#setmessagewnd)||
-|[CMFCPopupMenu::SetParentRibbonElement](#setparentribbonelement)||
+|[CMFCPopupMenu::SetDefaultItem](#setdefaultitem)|Nastaví výchozí příkaz pro místní nabídku.|
+|[CMFCPopupMenu:: SetForceMenuFocus](#setforcemenufocus)|Vynutí, aby se fokus vstupu vrátil do řádku nabídek při zobrazení místní nabídky.|
+|[CMFCPopupMenu::SetForceShadow](#setforceshadow)|Vynutí rozhraní vykreslit stíny nabídky, když se místní nabídky objeví mimo hlavní rámec.|
+|[CMFCPopupMenu::SetMaxWidth](#setmaxwidth)|Nastavte maximální šířku místní nabídky.|
+|[CMFCPopupMenu:: SetMessageWnd](#setmessagewnd)||
+|[CMFCPopupMenu:: SetParentRibbonElement](#setparentribbonelement)||
 |[CMFCPopupMenu::SetQuickCustomizeType](#setquickcustomizetype)||
 |[CMFCPopupMenu::SetQuickMode](#setquickmode)||
 |[CMFCPopupMenu::SetRightAlign](#setrightalign)|Nastaví zarovnání nabídky pro místní nabídky.|
-|[CMFCPopupMenu::SetSendMenuSelectMsg](#setsendmenuselectmsg)|Nastaví příznak, který určuje, zda v rozbalovací nabídce upozorní jeho nadřazeného rámce, když uživatel vybere příkaz.|
-|[CMFCPopupMenu::ShowAllCommands](#showallcommands)|Vynutí zobrazení všech příkazů v rozbalovací nabídce.|
-|[CMFCPopupMenu::TriggerResize](#triggerresize)||
-|[CMFCPopupMenu::UpdateAllShadows](#updateallshadows)|Aktualizuje stíny pro všechny otevřené rozbalovací nabídky.|
-|[CMFCPopupMenu::UpdateShadow](#updateshadow)|Aktualizuje stínování rozbalovací nabídky.|
+|[CMFCPopupMenu::SetSendMenuSelectMsg](#setsendmenuselectmsg)|Nastaví příznak, který určuje, zda místní nabídka upozorní svůj nadřazený rámec, když uživatel vybere příkaz.|
+|[CMFCPopupMenu:: ShowAllCommands](#showallcommands)|Vynutí místní nabídku, aby zobrazila všechny příkazy.|
+|[CMFCPopupMenu:: TriggerResize](#triggerresize)||
+|[CMFCPopupMenu::UpdateAllShadows](#updateallshadows)|Aktualizuje stíny pro všechny otevřené místní nabídky.|
+|[CMFCPopupMenu::UpdateShadow](#updateshadow)|Aktualizuje stín místní nabídky.|
 
 ### <a name="protected-methods"></a>Chráněné metody
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CMFCPopupMenu::CreateTearOffBar](#createtearoffbar)||
 |[CMFCPopupMenu::OnChangeHot](#onchangehot)||
@@ -274,17 +274,17 @@ class CMFCPopupMenu : public CMiniFrameWnd
 
 ### <a name="remarks"></a>Poznámky
 
-Za normálních okolností MFC nabídek automaticky vytvoří. Pokud chcete vytvořit `CMFCPopupMenu` objektu ručně, přidělení na haldu a poté zavolejte [CMFCPopupMenu::Create](#create).
+Knihovna MFC běžně vytváří automaticky otevírané nabídky. Pokud chcete vytvořit `CMFCPopupMenu` objekt ručně, přidělte ho na haldě a potom zavolejte [CMFCPopupMenu:: Create](#create).
 
 ## <a name="example"></a>Příklad
 
-Následující příklad ukazuje, jak nakonfigurovat objekt místní nabídky. Tento příklad ukazuje, jak nastavit logo a zvuky v rozbalovací nabídce, nastavit rychlost animace a typ, kreslení nabídky stínů, když se objeví v rozbalovací nabídce mimo hlavního rámce, nastavte maximální šířku a nastavit zarovnání vpravo nabídky rozbalovací nabídky. Tento fragment kódu je součástí [ukázková vlastní stránky](../../overview/visual-cpp-samples.md).
+Následující příklad ukazuje, jak konfigurovat místní nabídku objektu. Příklad ukazuje, jak nastavit logo a zvuk místní nabídky, nastavit rychlost a typ animace, vykreslit stíny nabídky, když se místní nabídka objeví mimo hlavní rámec, nastavte maximální šířku a nastavte zarovnání pravé nabídky místní nabídky. Tento fragment kódu je součástí [ukázky vlastních stránek](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_CustomPages#2](../../mfc/reference/codesnippet/cpp/cmfcpopupmenu-class_1.cpp)]
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
-[Třídy CObject](../../mfc/reference/cobject-class.md)
+[CObject](../../mfc/reference/cobject-class.md)
 
 [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)
 
@@ -292,15 +292,15 @@ Následující příklad ukazuje, jak nakonfigurovat objekt místní nabídky. T
 
 [CFrameWnd](../../mfc/reference/cframewnd-class.md)
 
-[Cminiframewnd –](../../mfc/reference/cminiframewnd-class.md)
+[CMiniFrameWnd](../../mfc/reference/cminiframewnd-class.md)
 
 `CMFCPopupMenu`
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** afxpopupmenu.h
+**Záhlaví:** afxpopupmenu. h
 
-##  <a name="activatepopupmenu"></a>  CMFCPopupMenu::ActivatePopupMenu
+##  <a name="activatepopupmenu"></a>CMFCPopupMenu:: ActivatePopupMenu
 
 ```
 static BOOL __stdcall ActivatePopupMenu(
@@ -310,8 +310,8 @@ static BOOL __stdcall ActivatePopupMenu(
 
 ### <a name="parameters"></a>Parametry
 
-[in] *pTopFrame*<br/>
-[in] *pPopupMenu*<br/>
+pro *pTopFrame*<br/>
+pro *pPopupMenu*<br/>
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -319,7 +319,7 @@ static BOOL __stdcall ActivatePopupMenu(
 
 ##  <a name="alwaysshowemptytoolsentry"></a>  CMFCPopupMenu::AlwaysShowEmptyToolsEntry
 
-Nastaví, jestli má místní nabídka Zobrazit prázdné položky pro uživatelem definované nástroje.
+Nastaví, zda je povolena místní nabídka pro zobrazení prázdných položek pro uživatelsky definované nástroje.
 
 ```
 static void AlwaysShowEmptyToolsEntry(BOOL bShow = TRUE);
@@ -328,9 +328,9 @@ static void AlwaysShowEmptyToolsEntry(BOOL bShow = TRUE);
 ### <a name="parameters"></a>Parametry
 
 *bShow*<br/>
-[in] Hodnota TRUE, pokud je rozbalovací nabídky můžete zobrazit prázdný položek. FALSE v opačném případě.
+pro TRUE, pokud se v místní nabídce můžou zobrazovat prázdné položky; V opačném případě NEPRAVDA.
 
-##  <a name="areallcommandsshown"></a>  CMFCPopupMenu::AreAllCommandsShown
+##  <a name="areallcommandsshown"></a>CMFCPopupMenu:: AreAllCommandsShown
 
 ```
 BOOL AreAllCommandsShown() const;
@@ -340,9 +340,9 @@ BOOL AreAllCommandsShown() const;
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="checkarea"></a>  CMFCPopupMenu::CheckArea
+##  <a name="checkarea"></a>CMFCPopupMenu:: CheckArea
 
-Určuje umístění bod vzhledem k rozbalovací nabídky.
+Určuje umístění bodu relativně k místní nabídce.
 
 ```
 MENUAREA_TYPE CheckArea(const CPoint& ptScreen) const;
@@ -351,29 +351,29 @@ MENUAREA_TYPE CheckArea(const CPoint& ptScreen) const;
 ### <a name="parameters"></a>Parametry
 
 *ptScreen*<br/>
-[in] Bod, v souřadnicovém systému obrazovky.
+pro Bod, v souřadnicích obrazovky.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Parametr MENUAREA_TYPE, která určuje, kde je bod je relativní vzhledem k rozbalovací nabídky.
+Parametr MENUAREA_TYPE, který označuje, kde je bod relativní vzhledem k místní nabídce.
 
 ### <a name="remarks"></a>Poznámky
 
-Parametr MENUAREA_TYPE může mít některou z následujících hodnot.
+Parametr MENUAREA_TYPE může mít jednu z následujících hodnot.
 
-- VNĚJŠÍ - *ptScreen* nespadá do místní nabídky.
+- MIMO místní nabídku je mimo *ptScreen* .
 
-- LOGO – *ptScreen* je logo oblast.
+- LOGO – *ptScreen* je nad oblastí s logem.
 
-- TEAROFF_CAPTION - *ptScreen* nad titulek odnímatelnými nabídkami.
+- TEAROFF_CAPTION- *ptScreen* je nad přerušeným titulkem.
 
-- SHADOW_BOTTOM - *ptScreen* nad dolní stín rozbalovací nabídky.
+- SHADOW_BOTTOM- *ptScreen* je nad dolním stínem místní nabídky.
 
-- SHADOW_RIGHT - *ptScreen* nad pravý stín rozbalovací nabídky.
+- SHADOW_RIGHT- *ptScreen* je nad pravým stínem místní nabídky.
 
-- NABÍDKA - *ptScreen* prostřednictvím příkazu.
+- NABÍDKA – *ptScreen* je nad příkazem.
 
-##  <a name="closemenu"></a>  CMFCPopupMenu::CloseMenu
+##  <a name="closemenu"></a>CMFCPopupMenu:: CloseMenu
 
 ```
 void CloseMenu(BOOL bSetFocusToBar = FALSE);
@@ -385,9 +385,9 @@ void CloseMenu(BOOL bSetFocusToBar = FALSE);
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="cmfcpopupmenu"></a>  CMFCPopupMenu::CMFCPopupMenu
+##  <a name="cmfcpopupmenu"></a>CMFCPopupMenu:: CMFCPopupMenu
 
-Vytvoří [CMFCPopupMenu](../../mfc/reference/cmfcpopupmenu-class.md) objektu.
+Vytvoří objekt [CMFCPopupMenu](../../mfc/reference/cmfcpopupmenu-class.md) .
 
 ```
 CMFCPopupMenu(
@@ -398,18 +398,18 @@ CMFCPopupMenu(
 ### <a name="parameters"></a>Parametry
 
 *pCustPage*<br/>
-[in] Ukazatel na přizpůsobení stránky.
+pro Ukazatel na stránku vlastního nastavení.
 
 *lpszTitle*<br/>
-[in] Řetězec, který obsahuje popisek nabídky.
+pro Řetězec, který obsahuje titulek nabídky.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato metoda přidělí prostředky `CMFCPopupMenu`. Chcete-li vytvořit položku rozbalovací nabídky, zavolejte [CMFCPopupMenu::Create](#create).
+Tato metoda přiděluje prostředky pro `CMFCPopupMenu`. Chcete-li vytvořit položku místní nabídky, zavolejte [CMFCPopupMenu:: Create](#create).
 
-##  <a name="create"></a>  CMFCPopupMenu::Create
+##  <a name="create"></a>CMFCPopupMenu:: Create
 
-Vytvoří vyskakovací nabídku a připojí ho k [CMFCPopupMenu](../../mfc/reference/cmfcpopupmenu-class.md) objektu.
+Vytvoří místní nabídku a připojí ji k objektu [CMFCPopupMenu](../../mfc/reference/cmfcpopupmenu-class.md) .
 
 ```
 virtual BOOL Create(
@@ -424,34 +424,34 @@ virtual BOOL Create(
 ### <a name="parameters"></a>Parametry
 
 *pWndParent*<br/>
-[in] Nadřazené okno pro `CMFCPopupMenu`.
+pro Nadřazené okno pro `CMFCPopupMenu`.
 
 *x*<br/>
-[in] Souřadnice obrazovky vodorovné umístění v místní nabídce
+pro Souřadnice vodorovné obrazovky pro umístění místní nabídky
 
 *y*<br/>
-[in] Souřadnice obrazovky svislé umístění pop nabídky.
+pro Souřadnice svislé obrazovky pro umístění místní nabídky
 
 *hMenu*<br/>
-[in] Popisovač pro prostředek nabídky.
+pro Popisovač prostředku nabídky
 
-*bLocked*<br/>
-[in] Parametr logické hodnoty označující, zda je v nabídce přizpůsobitelné. Hodnota FALSE označuje, že je přizpůsobitelný rozbalovací nabídky.
+*Blokované*<br/>
+pro Logický parametr, který označuje, zda je nabídka přizpůsobitelná. Hodnota FALSE označuje, že místní nabídka bude přizpůsobitelná.
 
 *bOwnMessage*<br/>
-[in] Parametr logické hodnoty, která určuje, jak rozhraní provádí směrování zpráv nabídky. Další podrobnosti v části poznámky.
+pro Logický parametr, který určuje, jak rozhraní směruje zprávy nabídky. Další podrobnosti najdete v části s poznámkami.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Hodnota TRUE, pokud je metoda úspěšná. v opačném případě FALSE.
+TRUE, pokud je metoda úspěšná; v opačném případě FALSE.
 
 ### <a name="remarks"></a>Poznámky
 
-Pokud *bOwnMessage* má hodnotu TRUE, trasy framework nějaké zprávy nabídky *pWndParent*. *pWndParent* nesmí mít hodnotu NULL, pokud *bOwnMessage* má hodnotu TRUE. Pokud *bOwnMessage* má hodnotu FALSE, framework trasy zpráv nabídky do nadřazené místní nabídky.
+Pokud má *bOwnMessage* hodnotu true, rozhraní směruje všechny zprávy nabídky na *pWndParent*. *pWndParent* nesmí mít hodnotu null, pokud má *bOwnMessage* hodnotu true. Pokud je *BOWNMESSAGE* false, rozhraní směruje zprávy nabídky do nadřazené místní nabídky.
 
 ### <a name="example"></a>Příklad
 
-Následující příklad ukazuje způsob použití `Create` metodu `CMFCPopuMenu` třídy. Tento fragment kódu je součástí [ukázková vlastní stránky](../../overview/visual-cpp-samples.md).
+Následující příklad ukazuje, jak použít `Create` metodu `CMFCPopuMenu` třídy. Tento fragment kódu je součástí [ukázky vlastních stránek](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_CustomPages#1](../../mfc/reference/codesnippet/cpp/cmfcpopupmenu-class_2.cpp)]
 
@@ -466,15 +466,15 @@ virtual CPane* CreateTearOffBar(
 
 ### <a name="parameters"></a>Parametry
 
-[in] *pWndMain*<br/>
-[in] *uiID*<br/>
-[in] *lpszName*<br/>
+pro *pWndMain*<br/>
+pro *uiID*<br/>
+pro *lpszName*<br/>
 
 ### <a name="return-value"></a>Návratová hodnota
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="defaultmouseclickonclose"></a>  CMFCPopupMenu::DefaultMouseClickOnClose
+##  <a name="defaultmouseclickonclose"></a>CMFCPopupMenu::D efaultMouseClickOnClose
 
 ```
 virtual BOOL DefaultMouseClickOnClose() const;
@@ -484,9 +484,9 @@ virtual BOOL DefaultMouseClickOnClose() const;
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="enablemenulogo"></a>  CMFCPopupMenu::EnableMenuLogo
+##  <a name="enablemenulogo"></a>CMFCPopupMenu:: EnableMenuLogo
 
-Inicializuje logo pro rozbalovací nabídky.
+Inicializuje logo pro místní nabídku.
 
 ```
 void EnableMenuLogo(
@@ -497,20 +497,20 @@ void EnableMenuLogo(
 ### <a name="parameters"></a>Parametry
 
 *iLogoSize*<br/>
-[in] Velikost loga v pixelech.
+pro Velikost loga v pixelech
 
 *nLogoLocation*<br/>
-[in] Výčtový datový typ, který označuje umístění loga.
+pro Výčtový datový typ, který označuje umístění loga.
 
 ### <a name="remarks"></a>Poznámky
 
-Chcete-li zobrazit logo, implementovat metodu [CFrameWndEx::OnDrawMenuLogo](../../mfc/reference/cframewndex-class.md#ondrawmenulogo) v hlavní okno rámce.
+Chcete-li zobrazit logo, Implementujte metodu [CFrameWndEx:: OnDrawMenuLogo](../../mfc/reference/cframewndex-class.md#ondrawmenulogo) v hlavním okně rámce.
 
-Možné hodnoty parametru *nLogoLocation* jsou MENU_LOGO_LEFT, MENU_LOGO_RIGHT, MENU_LOGO_TOP a MENU_LOGO_BOTTOM.
+Možné hodnoty pro *nLogoLocation* jsou MENU_LOGO_LEFT, MENU_LOGO_RIGHT, MENU_LOGO_TOP a MENU_LOGO_BOTTOM.
 
-##  <a name="enablemenusound"></a>  CMFCPopupMenu::EnableMenuSound
+##  <a name="enablemenusound"></a>CMFCPopupMenu:: EnableMenuSound
 
-Umožňuje nabídky zvuk.
+Povoluje zvuk nabídky.
 
 ```
 static void EnableMenuSound(BOOL bEnable = TRUE);
@@ -519,13 +519,13 @@ static void EnableMenuSound(BOOL bEnable = TRUE);
 ### <a name="parameters"></a>Parametry
 
 *bEnable*<br/>
-[in] Povolte zvuky, FALSE v opačném případě TRUE.
+pro TRUE, pokud chcete zapnout zvuk, jinak FALSE.
 
 ### <a name="remarks"></a>Poznámky
 
-Pokud povolíte zvuk, zavolá rozhraní [PlaySound](/windows/desktop/api/shobjidl_core/nf-shobjidl_core-iusernotification-playsound) metodu, když uživatel otevře místní nabídky nebo vybere příkaz nabídky. Ve výchozím nastavení je tato funkce povolena.
+Pokud zapnete zvuk, rozhraní zavolá metodu [PlaySound](/windows/win32/api/shobjidl_core/nf-shobjidl_core-iusernotification-playsound) , když uživatel otevře místní nabídku nebo vybere příkaz nabídky. Tato funkce je ve výchozím nastavení povolená.
 
-##  <a name="enableresize"></a>  CMFCPopupMenu::EnableResize
+##  <a name="enableresize"></a>CMFCPopupMenu:: EnableResize
 
 ```
 void EnableResize(CSize sizeMinResize);
@@ -533,11 +533,11 @@ void EnableResize(CSize sizeMinResize);
 
 ### <a name="parameters"></a>Parametry
 
-[in] *sizeMinResize*<br/>
+pro *sizeMinResize*<br/>
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="enablescrolling"></a>  CMFCPopupMenu::EnableScrolling
+##  <a name="enablescrolling"></a>CMFCPopupMenu:: EnableScrolling
 
 ```
 void EnableScrolling(BOOL = TRUE);
@@ -545,11 +545,11 @@ void EnableScrolling(BOOL = TRUE);
 
 ### <a name="parameters"></a>Parametry
 
-[in] *BOOL*<br/>
+pro *Logická* hodnota<br/>
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="enablevertresize"></a>  CMFCPopupMenu::EnableVertResize
+##  <a name="enablevertresize"></a>CMFCPopupMenu:: EnableVertResize
 
 ```
 void EnableVertResize(int nMinResize);
@@ -557,11 +557,11 @@ void EnableVertResize(int nMinResize);
 
 ### <a name="parameters"></a>Parametry
 
-[in] *nMinResize*<br/>
+pro *nMinResize*<br/>
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="findsubitembycommand"></a>  CMFCPopupMenu::FindSubItemByCommand
+##  <a name="findsubitembycommand"></a>CMFCPopupMenu:: FindSubItemByCommand
 
 ```
 CMFCToolBarMenuButton* FindSubItemByCommand(UINT uiCmd) const;
@@ -569,15 +569,15 @@ CMFCToolBarMenuButton* FindSubItemByCommand(UINT uiCmd) const;
 
 ### <a name="parameters"></a>Parametry
 
-[in] *uiCmd*<br/>
+pro *uiCmd*<br/>
 
 ### <a name="return-value"></a>Návratová hodnota
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="getactivemenu"></a>  CMFCPopupMenu::GetActiveMenu
+##  <a name="getactivemenu"></a>CMFCPopupMenu:: GetActiveMenu
 
-Vrátí aktuálně aktivní nabídky.
+Vrátí aktuálně aktivní nabídku.
 
 ```
 static CMFCPopupMenu* GetActiveMenu();
@@ -585,13 +585,13 @@ static CMFCPopupMenu* GetActiveMenu();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Ukazatel na aktivní místní nabídka, nebo hodnota NULL, pokud žádné místní nabídky není aktuálně aktivní.
+Ukazatel na aktivní místní nabídku nebo NULL, pokud není aktuálně aktivní žádná místní nabídka.
 
 ### <a name="remarks"></a>Poznámky
 
-Každá aplikace může obsahovat maximálně jednu aktivní rozbalovací nabídky.
+Každá aplikace může mít maximálně jednu aktivní místní nabídku.
 
-##  <a name="getanimationspeed"></a>  CMFCPopupMenu::GetAnimationSpeed
+##  <a name="getanimationspeed"></a>CMFCPopupMenu:: GetAnimationSpeed
 
 Vrátí rychlost animace pro místní nabídky.
 
@@ -601,15 +601,15 @@ static UINT GetAnimationSpeed();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Celé číslo, které udává čas v milisekundách, která trvá dokončení animace rozbalovací nabídky.
+Celé číslo, které označuje čas v milisekundách, po který se má dokončit animace místní nabídky.
 
 ### <a name="remarks"></a>Poznámky
 
-Rychlost animace je globální hodnoty. Použití [CMFCPopupMenu::SetAnimationSpeed](#setanimationspeed) změnit rychlost animace pro místní nabídky.
+Rychlost animace je globální hodnota. Pomocí [CMFCPopupMenu:: SetAnimationSpeed](#setanimationspeed) můžete změnit rychlost animace pro místní nabídky.
 
-##  <a name="getanimationtype"></a>  CMFCPopupMenu::GetAnimationType
+##  <a name="getanimationtype"></a>CMFCPopupMenu:: GetAnimationType
 
-Vrátí aktuální typ místní animace.
+Vrátí aktuální typ automaticky otevírané animace.
 
 ```
 static CMFCPopupMenu::ANIMATION_TYPE GetAnimationType(BOOL bNoSystem = FALSE);
@@ -618,7 +618,7 @@ static CMFCPopupMenu::ANIMATION_TYPE GetAnimationType(BOOL bNoSystem = FALSE);
 ### <a name="parameters"></a>Parametry
 
 *bNoSystem*<br/>
-[in] Parametr logické hodnoty označující, zda tato metoda zkontroluje globální hodnoty. FALSE, pokud chcete tuto metodu za účelem vrácení animace styl pro tuto instanci [cmfcpopupmenu – třída](../../mfc/reference/cmfcpopupmenu-class.md).
+pro Logický parametr, který určuje, zda tato metoda kontroluje globální hodnotu. FALSE, pokud chcete, aby tato metoda vracela styl animace pro tuto instanci [třídy CMFCPopupMenu](../../mfc/reference/cmfcpopupmenu-class.md).
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -626,18 +626,18 @@ Výčtová hodnota, která popisuje typ animace.
 
 ### <a name="remarks"></a>Poznámky
 
-Styl animace pro místní nabídky je globální pro vaši aplikaci. Použití [CMFCPopupMenu::SetAnimationType](#setanimationtype) nastavit styl animace.
+Styl animace pro místní nabídky je pro vaši aplikaci globální. Pro nastavení stylu animace použijte [CMFCPopupMenu:: SetAnimationType](#setanimationtype) .
 
-Následující tabulka uvádí typy animaci je to možné.
+V následující tabulce jsou uvedeny možné typy animací.
 
 |||
 |-|-|
-|NO_ANIMATION|V rozbalovací nabídce není animovaný a okamžitě se zobrazí.  |
-|ROZBALIT|Rozhraní zobrazí rozbalovací nabídky z levého horního rohu do pravého dolního rohu.  |
-|SNÍMEK|V rozbalovací nabídce přesune shora dolů.  |
-|MÁ VYBLEDNOUT|V rozbalovací nabídce se zobrazí nejprve transparentní a postupně ztuhne.  |
+|NO_ANIMATION|Místní nabídka není animovaná a zobrazí se okamžitě.  |
+|UNFOLD|Rozhraní odhalí místní nabídku v levém horním rohu do pravého dolního rohu.  |
+|SNÍMEK|Místní nabídka se přesune shora dolů.  |
+|ZESÍLIT|V místní nabídce se nejprve zobrazí transparentní a postupně solidifies.  |
 
-##  <a name="getdropdirection"></a>  CMFCPopupMenu::GetDropDirection
+##  <a name="getdropdirection"></a>CMFCPopupMenu:: GetDropDirection
 
 ```
 DROP_DIRECTION GetDropDirection() const;
@@ -649,7 +649,7 @@ DROP_DIRECTION GetDropDirection() const;
 
 ##  <a name="getforcemenufocus"></a>  CMFCPopupMenu::GetForceMenuFocus
 
-Určuje, zda se fokus vrátí do nabídek, když se zobrazí místní nabídka.
+Označuje, zda se fokus vrátí do řádku nabídek při zobrazení místní nabídky.
 
 ```
 static BOOL GetForceMenuFocus();
@@ -657,11 +657,11 @@ static BOOL GetForceMenuFocus();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Hodnota TRUE, pokud zaměření pro vstup se vrátí do řádku nabídek, když se zobrazí místní nabídka. FALSE, pokud v rozbalovací nabídce uchovává fokus.
+TRUE, pokud se vstupní fokus vrátí do řádku nabídek při zobrazení místní nabídky; FALSE, pokud místní nabídka zachová fokus.
 
 ### <a name="remarks"></a>Poznámky
 
-Ve výchozím nastavení aplikace nevrátí fokus panelu nabídek. Chcete-li toto nastavení změnit, použijte [CMFCPopupMenu::SetForceMenuFocus](#setforcemenufocus).
+Ve výchozím nastavení vaše aplikace nevrátí fokus na panel nabídek. Chcete-li toto nastavení změnit, použijte [CMFCPopupMenu:: SetForceMenuFocus](#setforcemenufocus).
 
 ##  <a name="getforceshadow"></a>  CMFCPopupMenu::GetForceShadow
 
@@ -673,17 +673,17 @@ static BOOL __stdcall GetForceShadow();
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="gethmenu"></a>  CMFCPopupMenu::GetHMenu
+##  <a name="gethmenu"></a>CMFCPopupMenu:: GetHMenu
 
-Vrátí popisovač do připojené nabídce prostředků.
+Vrátí popisovač pro prostředek připojené nabídky.
 
 ```
 HMENU GetHMenu();
 ```
 
-##  <a name="getmenubar"></a>  CMFCPopupMenu::GetMenuBar
+##  <a name="getmenubar"></a>CMFCPopupMenu:: getmenubar
 
-Vrátí [cmfcpopupmenubar –](../../mfc/reference/cmfcpopupmenubar-class.md) vložená do místní nabídky.
+Vrátí [CMFCPopupMenuBar](../../mfc/reference/cmfcpopupmenubar-class.md) vložený v místní nabídce.
 
 ```
 virtual CMFCPopupMenuBar* GetMenuBar();
@@ -695,11 +695,11 @@ Ukazatel na vložený `CMFCPopupMenuBar`.
 
 ### <a name="remarks"></a>Poznámky
 
-V rozbalovací nabídce obsahuje vložený `CMFCPopupMenuBar` objektu. Pokud používáte jinou třídu vložené, je nutné přepsat tuto metodu v odvozené třídě.
+Místní nabídka obsahuje vložený `CMFCPopupMenuBar` objekt. Tuto metodu je nutné přepsat v odvozené třídě, pokud používáte jinou vloženou třídu.
 
-##  <a name="getmenuitem"></a>  CMFCPopupMenu::GetMenuItem
+##  <a name="getmenuitem"></a>CMFCPopupMenu:: getmenuitem
 
-Vrací ukazatel na položku nabídky v zadaném indexu.
+Vrátí ukazatel na položku nabídky na zadaném indexu.
 
 ```
 CMFCToolBarMenuButton* GetMenuItem(int iIndex) const;
@@ -708,17 +708,17 @@ CMFCToolBarMenuButton* GetMenuItem(int iIndex) const;
 ### <a name="parameters"></a>Parametry
 
 *iIndex*<br/>
-[in] Index založený na nule položku nabídky.
+pro Index založený na nule položky nabídky
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Ukazatel na položku nabídky. Hodnota NULL, pokud je index není platný.
+Ukazatel na položku nabídky. Hodnota NULL, pokud je index neplatný
 
 ### <a name="remarks"></a>Poznámky
 
-Položky nabídky jsou reprezentovány [cmfctoolbarmenubutton – třída](../../mfc/reference/cmfctoolbarmenubutton-class.md). Při volání této metody vrátí ukazatel na příslušné `CMFCToolBarMenuButton`.
+Položky nabídky jsou reprezentovány [třídou CMFCToolBarMenuButton](../../mfc/reference/cmfctoolbarmenubutton-class.md). Při volání této metody vrátí ukazatel na příslušný `CMFCToolBarMenuButton`objekt.
 
-##  <a name="getmenuitemcount"></a>  CMFCPopupMenu::GetMenuItemCount
+##  <a name="getmenuitemcount"></a>CMFCPopupMenu:: GetMenuItemCount
 
 Vrátí počet položek v místní nabídce.
 
@@ -728,11 +728,11 @@ int GetMenuItemCount() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Počet položek v nabídce.
+Počet položek v nabídce
 
-##  <a name="getmessagewnd"></a>  CMFCPopupMenu::GetMessageWnd
+##  <a name="getmessagewnd"></a>CMFCPopupMenu:: GetMessageWnd
 
-Vrací ukazatel na okno, kde rozhraní provádí směrování zpráv rozbalovací nabídky.
+Vrátí ukazatel na okno, kde rozhraní směruje zprávy místní nabídky.
 
 ```
 CWnd* GetMessageWnd() const;
@@ -740,13 +740,13 @@ CWnd* GetMessageWnd() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Ukazatel na okno, která bude přijímat zprávy rozbalovací nabídky. Hodnota NULL, pokud neexistuje žádný časový interval.
+Ukazatel na okno, které přijímá zprávy místní nabídky; NULL, pokud není k dispozici žádné okno.
 
 ### <a name="remarks"></a>Poznámky
 
-Při použití metody [CMFCPopupMenu::Create](#create) vytvořit místní nabídky, zadáte, v jakém intervalu přijímá zprávy nabídky.
+Když použijete metodu [CMFCPopupMenu:: Create](#create) k vytvoření místní nabídky, určíte, které okno obdrží zprávy nabídky.
 
-##  <a name="getparentarea"></a>  CMFCPopupMenu::GetParentArea
+##  <a name="getparentarea"></a>CMFCPopupMenu:: GetParentArea
 
 ```
 virtual CWnd* GetParentArea(CRect& rectParentBtn);
@@ -754,15 +754,15 @@ virtual CWnd* GetParentArea(CRect& rectParentBtn);
 
 ### <a name="parameters"></a>Parametry
 
-[in] *rectParentBtn*<br/>
+pro *rectParentBtn*<br/>
 
 ### <a name="return-value"></a>Návratová hodnota
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="getparentbutton"></a>  CMFCPopupMenu::GetParentButton
+##  <a name="getparentbutton"></a>CMFCPopupMenu:: GetParentButton
 
-Vrací ukazatel na nadřazenou tlačítka panelu nástrojů.
+Vrátí ukazatel na nadřazené tlačítko panelu nástrojů.
 
 ```
 CMFCToolBarMenuButton* GetParentButton() const;
@@ -770,17 +770,17 @@ CMFCToolBarMenuButton* GetParentButton() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Ukazatel na nadřazenou tlačítka panelu nástrojů. Hodnota NULL, pokud v rozbalovací nabídce nemá žádný nadřazený tlačítka panelu nástrojů.
+Ukazatel na nadřazené tlačítko panelu nástrojů. Hodnota NULL, pokud místní nabídka nemá žádné nadřazené tlačítko panelu nástrojů.
 
 ### <a name="remarks"></a>Poznámky
 
-A `CMFCPopupMenu` můžou být spojené s tlačítko v nabídce. V tomto scénáři v rozbalovací nabídce se zobrazí, když uživatel vybere tlačítko na panelu nástrojů nadřazené.
+`CMFCPopupMenu` Může být přidružen k tlačítku v nabídce. V tomto scénáři se místní nabídka zobrazí, když uživatel vybere tlačítko nadřazený panel nástrojů.
 
-Pokud v rozbalovací nabídce nabídku, bude mít žádné nadřazené tlačítka panelu nástrojů.
+Pokud se místní nabídka nachází v místní nabídce, nebude mít žádné nadřazené tlačítko panelu nástrojů.
 
-##  <a name="getparentpopupmenu"></a>  CMFCPopupMenu::GetParentPopupMenu
+##  <a name="getparentpopupmenu"></a>CMFCPopupMenu:: GetParentPopupMenu
 
-Vrací ukazatel na nadřazenou rozbalovací nabídky.
+Vrátí ukazatel na nadřazenou místní nabídku.
 
 ```
 CMFCPopupMenu* GetParentPopupMenu() const;
@@ -788,13 +788,13 @@ CMFCPopupMenu* GetParentPopupMenu() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Ukazatel na nadřazenou `CMFCPopupMenu` objektu Hodnota NULL, pokud neexistuje žádný nadřazený rozbalovací nabídky.
+Ukazatel na nadřazený `CMFCPopupMenu` objekt; Hodnota NULL, pokud není k dispozici žádná nadřazená místní nabídka.
 
 ### <a name="remarks"></a>Poznámky
 
-Místní nabídka má nadřazený objekt `CMFCPopupMenu` objektu, pouze pokud je podnabídky.
+Místní nabídka má nadřazený `CMFCPopupMenu` objekt pouze v případě, že se jedná o podnabídku.
 
-##  <a name="getparentribbonelement"></a>  CMFCPopupMenu::GetParentRibbonElement
+##  <a name="getparentribbonelement"></a>CMFCPopupMenu:: GetParentRibbonElement
 
 ```
 CMFCRibbonBaseElement* GetParentRibbonElement() const;
@@ -804,9 +804,9 @@ CMFCRibbonBaseElement* GetParentRibbonElement() const;
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="getparenttoolbar"></a>  CMFCPopupMenu::GetParentToolBar
+##  <a name="getparenttoolbar"></a>CMFCPopupMenu:: GetParentToolBar
 
-Vrací ukazatel na nadřazeného panelu nástrojů.
+Vrátí ukazatel na nadřazený panel nástrojů.
 
 ```
 CMFCToolBar* GetParentToolBar() const;
@@ -814,13 +814,13 @@ CMFCToolBar* GetParentToolBar() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Ukazatel na nadřazeného panelu nástrojů. Hodnota NULL, pokud v rozbalovací nabídce nemá žádné nadřazeného panelu nástrojů.
+Ukazatel na nadřazený panel nástrojů. Hodnota NULL, pokud místní nabídka nemá žádný nadřazený panel nástrojů.
 
 ### <a name="remarks"></a>Poznámky
 
-Pokud `CMFCPopupMenu` je místní nabídky, nemá žádné nadřazeného panelu nástrojů.
+`CMFCPopupMenu` Pokud je místní nabídka, pak nemá nadřazený panel nástrojů.
 
-##  <a name="getquickcustomizetype"></a>  CMFCPopupMenu::GetQuickCustomizeType
+##  <a name="getquickcustomizetype"></a>CMFCPopupMenu:: GetQuickCustomizeType
 
 ```
 QUICK_CUSTOMIZE_TYPE GetQuickCustomizeType() const;
@@ -830,9 +830,9 @@ QUICK_CUSTOMIZE_TYPE GetQuickCustomizeType() const;
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="getselitem"></a>  CMFCPopupMenu::GetSelItem
+##  <a name="getselitem"></a>CMFCPopupMenu:: GetSelItem
 
-Vrací ukazatel na aktuálně vybraný příkaz.
+Vrátí ukazatel na aktuálně vybraný příkaz nabídky.
 
 ```
 CMFCToolBarMenuButton* GetSelItem();
@@ -840,13 +840,13 @@ CMFCToolBarMenuButton* GetSelItem();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Ukazatel na aktuálně vybraný příkaz; Hodnota NULL, pokud není vybrána žádná položka.
+Ukazatel na aktuálně vybraný příkaz nabídky; Hodnota NULL, pokud není vybrána žádná položka.
 
 ### <a name="remarks"></a>Poznámky
 
-Příkazy nabídky v rozbalovací nabídce jsou reprezentovány [cmfctoolbarmenubutton – třída](../../mfc/reference/cmfctoolbarmenubutton-class.md), nebo třída odvozená z `CMFCToolBarMenuButton`.
+Příkazy nabídky v místní nabídce jsou reprezentovány [třídou CMFCToolBarMenuButton](../../mfc/reference/cmfctoolbarmenubutton-class.md)nebo třídou odvozenou z `CMFCToolBarMenuButton`.
 
-##  <a name="hasbeenresized"></a>  CMFCPopupMenu::HasBeenResized
+##  <a name="hasbeenresized"></a>CMFCPopupMenu:: HasBeenResized
 
 ```
 BOOL HasBeenResized() const;
@@ -856,9 +856,9 @@ BOOL HasBeenResized() const;
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="hiderarelyusedcommands"></a>  CMFCPopupMenu::HideRarelyUsedCommands
+##  <a name="hiderarelyusedcommands"></a>CMFCPopupMenu:: HideRarelyUsedCommands
 
-Určuje, zda v místní nabídce můžete skrýt zřídka používané příkazy.
+Určuje, zda místní nabídka může skrývat zřídka používané příkazy.
 
 ```
 BOOL HideRarelyUsedCommands() const;
@@ -866,13 +866,13 @@ BOOL HideRarelyUsedCommands() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Hodnota TRUE, pokud v místní nabídce můžete skrýt zřídka používané příkazy. v opačném případě FALSE.
+TRUE, pokud se v místní nabídce dá skrýt málo používané příkazy; v opačném případě FALSE.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato metoda určuje pouze, zda lze skrýt rozbalovací nabídky zřídka používané příkazy, ne v případě, že tato konfigurace je povolená. Místní nabídka můžete skrýt zřídka používané příkazy, pokud má nadřazený tlačítko a nadřazené okno je odvozen z [cmfcmenubar – třída](../../mfc/reference/cmfcmenubar-class.md). Použití [CMFCMenuBar::SetRecentlyUsedMenus](../../mfc/reference/cmfcmenubar-class.md#setrecentlyusedmenus) tuto funkci povolíte a [CMFCMenuBar::IsRecentlyUsedMenus](../../mfc/reference/cmfcmenubar-class.md#isrecentlyusedmenus) k určení, zda je tato funkce aktuálně povolený. Je třeba obě tyto metody volat pro nadřazené okno.
+Tato metoda určuje, zda lze v místní nabídce skrýt zřídka používané příkazy, nikoli v případě, že je tato konfigurace povolena. Místní nabídka může skrývat zřídka používané příkazy, pokud má nadřazené tlačítko a nadřazené okno je odvozeno od [třídy CMFCMenuBar](../../mfc/reference/cmfcmenubar-class.md). Pomocí [CMFCMenuBar:: SetRecentlyUsedMenus](../../mfc/reference/cmfcmenubar-class.md#setrecentlyusedmenus) Povolte tuto funkci a [CMFCMenuBar:: IsRecentlyUsedMenus](../../mfc/reference/cmfcmenubar-class.md#isrecentlyusedmenus) , abyste zjistili, jestli je tato funkce momentálně povolená. Obě tyto metody je nutné volat pro nadřazené okno.
 
-##  <a name="incommand"></a>  CMFCPopupMenu::InCommand
+##  <a name="incommand"></a>CMFCPopupMenu:: incommand
 
 ```
 virtual BOOL InCommand();
@@ -882,7 +882,7 @@ virtual BOOL InCommand();
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="insertitem"></a>  CMFCPopupMenu::InsertItem
+##  <a name="insertitem"></a>CMFCPopupMenu:: InsertItem
 
 Vloží novou položku do místní nabídky v zadaném umístění.
 
@@ -894,23 +894,23 @@ int InsertItem(
 
 ### <a name="parameters"></a>Parametry
 
-*Tlačítko*<br/>
-[in] Odkaz na položku nabídky přidat.
+*tlačítko*<br/>
+pro Odkaz na položku nabídky, která se má přidat
 
 *iInsertAt*<br/>
-[in] Index založený na nule pro novou položku. Pokud *iInsertAt* se -1, je položka přidána na konec objektu v nabídce.
+pro Index založený na nule pro novou položku. Pokud je *iInsertAt* -1, položka se přidá na konec nabídky.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Z nuly vycházející index pozice, kdy byla položka vložena. -1, jestliže metoda selže.
+Index založený na nule pozice, kde byla položka vložena. -1, pokud se metoda nezdařila.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato metoda se nezdaří, pokud zadáte neplatnou hodnotu pro *iInsertAt*, jako je například celé číslo větší než počet položek aktuálně v místní nabídce.
+Tato metoda selže, pokud zadáte neplatnou hodnotu pro *iInsertAt*, jako je například celé číslo větší než počet položek, které jsou aktuálně v místní nabídce.
 
-##  <a name="insertseparator"></a>  CMFCPopupMenu::InsertSeparator
+##  <a name="insertseparator"></a>CMFCPopupMenu:: InsertSeparator
 
-Oddělovač vloží do místní nabídky v zadaném umístění.
+Vloží oddělovač do místní nabídky v zadaném umístění.
 
 ```
 int InsertSeparator(int iInsertAt = -1);
@@ -919,19 +919,19 @@ int InsertSeparator(int iInsertAt = -1);
 ### <a name="parameters"></a>Parametry
 
 *iInsertAt*<br/>
-[in] Z nuly vycházející index pozice, kde bude tato metoda vložit oddělovač.
+pro Index založený na nule pozice, kam bude tato metoda vkládat oddělovač.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Z nuly vycházející index pozice, kdy byl vložen oddělovač. -1, pokud tato metoda se nezdaří.
+Index založený na nule pozice, kam byl oddělovač vložen. -1, pokud tato metoda není úspěšná.
 
 ### <a name="remarks"></a>Poznámky
 
-Hodnota -1 pro *iInsertAt* znamená, že tato metoda přidá oddělovač na konci rozbalovací nabídky.
+Hodnota-1 pro *iInsertAt* znamená, že tato metoda přidá oddělovač na konec místní nabídky.
 
-Tato metoda selže, pokud *iInsertAt* je neplatná hodnota.
+Tato metoda se nezdařila, pokud *iInsertAt* je neplatná hodnota.
 
-##  <a name="isalwaysclose"></a>  CMFCPopupMenu::IsAlwaysClose
+##  <a name="isalwaysclose"></a>CMFCPopupMenu:: IsAlwaysClose
 
 ```
 virtual BOOL IsAlwaysClose() const;
@@ -951,9 +951,9 @@ static BOOL __stdcall IsAlwaysShowEmptyToolsEntry();
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="iscustomizepane"></a>  CMFCPopupMenu::IsCustomizePane
+##  <a name="iscustomizepane"></a>CMFCPopupMenu:: IsCustomizePane
 
-Určuje, zda v rozbalovací nabídce funguje jako **QuickCustomizePane**.
+Označuje, zda se místní nabídka pracuje jako **QuickCustomizePane**.
 
 ```
 BOOL IsCustomizePane();
@@ -961,15 +961,15 @@ BOOL IsCustomizePane();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Hodnota TRUE, pokud je automaticky otevírané okno **QuckCustomizePane**; jinak hodnota FALSE.
+TRUE, pokud je automaticky otevírané okno **QuckCustomizePane**; v opačném případě FALSE.
 
 ### <a name="remarks"></a>Poznámky
 
-Použití **QuickCustomizePane** umožňující uživateli přímo upravit v místní nabídce. **QuickCustomizePane** je `CMFCPopupMenu` , který se zobrazí, když uživatel klikne na tlačítko panelu nástrojů přímo upravovat.
+Pomocí **QuickCustomizePane** můžete uživateli povolit přímou úpravu místní nabídky. **QuickCustomizePane** je objekt `CMFCPopupMenu` , který se zobrazí, když uživatel klikne na tlačítko na panelu nástrojů a přímo ho upraví.
 
-Vaše aplikace by měly volat tuto metodu při [CMDIFrameWndEx::OnShowCustomizePane](../../mfc/reference/cmdiframewndex-class.md#onshowcustomizepane).
+Vaše aplikace by měla zavolat tuto metodu během [CMDIFrameWndEx:: OnShowCustomizePane](../../mfc/reference/cmdiframewndex-class.md#onshowcustomizepane).
 
-##  <a name="isescclose"></a>  CMFCPopupMenu::IsEscClose
+##  <a name="isescclose"></a>CMFCPopupMenu:: IsEscClose
 
 ```
 BOOL IsEscClose();
@@ -979,9 +979,9 @@ BOOL IsEscClose();
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="isidle"></a>  CMFCPopupMenu::IsIdle
+##  <a name="isidle"></a>CMFCPopupMenu:: Idle
 
-Označuje, zda je místní nabídky aktuálně nečinnosti.
+Označuje, zda je místní nabídka aktuálně nečinná.
 
 ```
 virtual BOOL IsIdle() const;
@@ -989,13 +989,13 @@ virtual BOOL IsIdle() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Hodnota TRUE, pokud je rozbalovací nabídky v režimu nečinnosti; v opačném případě FALSE.
+TRUE, pokud je místní nabídka v režimu nečinnosti; v opačném případě FALSE.
 
 ### <a name="remarks"></a>Poznámky
 
-Ve výchozím nastavení je místní nabídky v režimu nečinnosti, pokud animace zobrazení je dokončený a uživatel není posouvání v rozbalovací nabídce.
+Ve výchozím nastavení je místní nabídka v režimu nečinnosti, pokud je animace zobrazení dokončená a uživatel neposune místní nabídku.
 
-##  <a name="ismenusound"></a>  CMFCPopupMenu::IsMenuSound
+##  <a name="ismenusound"></a>CMFCPopupMenu:: IsMenuSound
 
 ```
 static UINT __stdcall IsMenuSound();
@@ -1005,9 +1005,9 @@ static UINT __stdcall IsMenuSound();
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="isquickcustomize"></a>  CMFCPopupMenu::IsQuickCustomize
+##  <a name="isquickcustomize"></a>CMFCPopupMenu:: IsQuickCustomize
 
-Určuje, zda přidružený [cmfctoolbarmenubutton – třída](../../mfc/reference/cmfctoolbarmenubutton-class.md) je v režimu QuickCustomize.
+Určuje, zda je přidružená [Třída CMFCToolBarMenuButton](../../mfc/reference/cmfctoolbarmenubutton-class.md) v režimu QuickCustomize.
 
 ```
 BOOL IsQuickCustomize();
@@ -1015,13 +1015,13 @@ BOOL IsQuickCustomize();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Hodnota TRUE, pokud je tlačítko přidružené nabídky v režimu QuickCustomize; v opačném případě FALSE. Tato metoda také vrátí hodnotu FALSE, pokud v rozbalovací nabídce není přidružena `CMFCToolBarMenuButton`.
+TRUE, pokud je přidružené tlačítko nabídky v režimu QuickCustomize; v opačném případě FALSE. Tato metoda vrátí hodnotu FALSE také v případě, že místní nabídka není přidružena `CMFCToolBarMenuButton`k.
 
 ### <a name="remarks"></a>Poznámky
 
-V QuickCustomize režimu uživatel vybere tlačítko na panelu nástrojů na tlačítko Upravit přímo.
+V režimu QuickCustomize uživatel vybere tlačítko na panelu nástrojů, aby se tlačítko přizpůsobilo přímo.
 
-##  <a name="isresizeble"></a>  CMFCPopupMenu::IsResizeble
+##  <a name="isresizeble"></a>CMFCPopupMenu:: IsResizeble
 
 ```
 BOOL IsResizeble() const;
@@ -1031,9 +1031,9 @@ BOOL IsResizeble() const;
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="isrightalign"></a>  CMFCPopupMenu::IsRightAlign
+##  <a name="isrightalign"></a>CMFCPopupMenu:: IsRightAlign
 
-Označuje, zda je v nabídce zarovnaný doprava nebo doleva.
+Označuje, zda je nabídka zarovnána vpravo nebo vlevo.
 
 ```
 BOOL IsRightAlign() const;
@@ -1041,15 +1041,15 @@ BOOL IsRightAlign() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Hodnota TRUE, pokud je v nabídce vpravo zarovnaný; FALSE, pokud v nabídce vlevo zarovnaný.
+TRUE, pokud je nabídka zarovnána vpravo; FALSE, pokud je zarovnána v nabídce doleva.
 
 ### <a name="remarks"></a>Poznámky
 
-Můžete použít [CMFCPopupMenu::SetRightAlign](#setrightalign) nastavit zarovnání nabídky. Ve výchozím nastavení pomocí místní nabídky Zarovnání vlevo.
+K nastavení zarovnání nabídky lze použít [CMFCPopupMenu:: SetRightAlign](#setrightalign) . Ve výchozím nastavení používají místní nabídky zarovnání vlevo.
 
-Nabídka zarovnání není globální nastavení a mezi místní nabídky se může lišit.
+Zarovnání nabídky není globální nastavení a může se lišit mezi místními nabídkami.
 
-##  <a name="isscrollable"></a>  CMFCPopupMenu::IsScrollable
+##  <a name="isscrollable"></a>CMFCPopupMenu:: rolovací
 
 ```
 BOOL IsScrollable() const;
@@ -1059,9 +1059,9 @@ BOOL IsScrollable() const;
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="issendmenuselectmsg"></a>  CMFCPopupMenu::IsSendMenuSelectMsg
+##  <a name="issendmenuselectmsg"></a>CMFCPopupMenu:: IsSendMenuSelectMsg
 
-Určuje, zda rozhraní upozorní nadřazeného rámce, když uživatel vybere příkaz v místní nabídce.
+Určuje, zda architektura upozorní nadřazený rámec, když uživatel vybere příkaz z místní nabídky.
 
 ```
 static BOOL IsSendMenuSelectMsg();
@@ -1069,15 +1069,15 @@ static BOOL IsSendMenuSelectMsg();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Hodnota TRUE, pokud rozhraní upozorní nadřazený rámec; v opačném případě FALSE.
+TRUE, pokud rozhraní upozorní nadřazený rámec; v opačném případě FALSE.
 
 ### <a name="remarks"></a>Poznámky
 
-Rozhraní framework upozorní nadřazeného rámce a odeslat ho WM_MENUSELECT zprávy, který se používá výběrem příkazu nabídky.
+Rozhraní upozorní nadřazený rámec odesláním zprávy WM_MENUSELECT při výběru příkazu nabídky.
 
-##  <a name="isshown"></a>  CMFCPopupMenu::IsShown
+##  <a name="isshown"></a>CMFCPopupMenu::-zobrazeno
 
-Označuje, zda je aktuálně zobrazené rozbalovací nabídky.
+Označuje, zda je místní nabídka aktuálně viditelná.
 
 ```
 BOOL IsShown() const;
@@ -1085,9 +1085,9 @@ BOOL IsShown() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-TRUE, pokud je rozbalovací nabídce viditelný. v opačném případě FALSE.
+TRUE, pokud je zobrazena místní nabídka; v opačném případě FALSE.
 
-##  <a name="moveto"></a>  CMFCPopupMenu::MoveTo
+##  <a name="moveto"></a>CMFCPopupMenu:: MoveTo
 
 ```
 void MoveTo(const CPoint& pt);
@@ -1095,11 +1095,11 @@ void MoveTo(const CPoint& pt);
 
 ### <a name="parameters"></a>Parametry
 
-[in] *pt*<br/>
+pro *PT*<br/>
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="onchangehot"></a>  CMFCPopupMenu::OnChangeHot
+##  <a name="onchangehot"></a>CMFCPopupMenu:: OnChangeHot
 
 ```
 virtual void OnChangeHot(int nHot);
@@ -1107,11 +1107,11 @@ virtual void OnChangeHot(int nHot);
 
 ### <a name="parameters"></a>Parametry
 
-[in] *nHot*<br/>
+pro *nHot*<br/>
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="onchooseitem"></a>  CMFCPopupMenu::OnChooseItem
+##  <a name="onchooseitem"></a>CMFCPopupMenu:: OnChooseItem
 
 ```
 virtual void OnChooseItem(UINT uidCmdID);
@@ -1119,11 +1119,11 @@ virtual void OnChooseItem(UINT uidCmdID);
 
 ### <a name="parameters"></a>Parametry
 
-[in] *uidCmdID*<br/>
+pro *uidCmdID*<br/>
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="oncmdmsg"></a>  CMFCPopupMenu::OnCmdMsg
+##  <a name="oncmdmsg"></a>CMFCPopupMenu:: OnCmdMsg –
 
 ```
 virtual BOOL OnCmdMsg(
@@ -1135,16 +1135,16 @@ virtual BOOL OnCmdMsg(
 
 ### <a name="parameters"></a>Parametry
 
-[in] *nID*<br/>
-[in] *nCode*<br/>
+pro *NID*<br/>
+pro *nCode*<br/>
 [in] *pExtra*<br/>
-[in] *pHandlerInfo*<br/>
+pro *pHandlerInfo*<br/>
 
 ### <a name="return-value"></a>Návratová hodnota
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="postcommand"></a>  CMFCPopupMenu::PostCommand
+##  <a name="postcommand"></a>CMFCPopupMenu::P ostCommand
 
 ```
 BOOL PostCommand(UINT uiCommandID);
@@ -1152,13 +1152,13 @@ BOOL PostCommand(UINT uiCommandID);
 
 ### <a name="parameters"></a>Parametry
 
-[in] *uiCommandID*<br/>
+pro *uiCommandID*<br/>
 
 ### <a name="return-value"></a>Návratová hodnota
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="pretranslatemessage"></a>  CMFCPopupMenu::PreTranslateMessage
+##  <a name="pretranslatemessage"></a>CMFCPopupMenu::P reTranslateMessage
 
 ```
 virtual BOOL PreTranslateMessage(MSG* pMsg);
@@ -1166,13 +1166,13 @@ virtual BOOL PreTranslateMessage(MSG* pMsg);
 
 ### <a name="parameters"></a>Parametry
 
-[in] *pMsg*<br/>
+pro *pMsg*<br/>
 
 ### <a name="return-value"></a>Návratová hodnota
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="recalclayout"></a>  CMFCPopupMenu::RecalcLayout
+##  <a name="recalclayout"></a>CMFCPopupMenu:: RecalcLayout
 
 ```
 virtual void RecalcLayout(BOOL bNotify = TRUE);
@@ -1180,11 +1180,11 @@ virtual void RecalcLayout(BOOL bNotify = TRUE);
 
 ### <a name="parameters"></a>Parametry
 
-[in] *bNotify*<br/>
+pro *bNotify*<br/>
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="removeallitems"></a>  CMFCPopupMenu::RemoveAllItems
+##  <a name="removeallitems"></a>CMFCPopupMenu:: RemoveAllItems
 
 Vymaže všechny položky z místní nabídky.
 
@@ -1192,9 +1192,9 @@ Vymaže všechny položky z místní nabídky.
 void RemoveAllItems();
 ```
 
-##  <a name="removeitem"></a>  CMFCPopupMenu::RemoveItem
+##  <a name="removeitem"></a>CMFCPopupMenu:: RemoveItem
 
-Odebere určenou položku z místní nabídky.
+Odebere zadanou položku z místní nabídky.
 
 ```
 BOOL RemoveItem(int iIndex);
@@ -1203,17 +1203,17 @@ BOOL RemoveItem(int iIndex);
 ### <a name="parameters"></a>Parametry
 
 *iIndex*<br/>
-[in] Index založený na nule položku odstranit.
+pro Index položky vycházející z nuly, který má být odstraněn.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Hodnota TRUE, pokud je metoda úspěšná. v opačném případě FALSE.
+TRUE, pokud je metoda úspěšná; v opačném případě FALSE.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato metoda automaticky uspořádá oddělovačů, které jsou ovlivněny odebrání položky. Další informace o jak rozhraní uspořádá oddělovače, naleznete v tématu [CMFCToolBar::RemoveButton](../../mfc/reference/cmfctoolbar-class.md#removebutton).
+Tato metoda automaticky uspořádá všechny oddělovače, které jsou ovlivněny odebráním položky. Další informace o tom, jak rozhraní přeuspořádává oddělovače, naleznete v tématu [CMFCToolBar:: RemoveButton](../../mfc/reference/cmfctoolbar-class.md#removebutton).
 
-##  <a name="savestate"></a>  CMFCPopupMenu::SaveState
+##  <a name="savestate"></a>CMFCPopupMenu:: SaveState
 
 ```
 virtual void SaveState();
@@ -1221,7 +1221,7 @@ virtual void SaveState();
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="setanimationspeed"></a>  CMFCPopupMenu::SetAnimationSpeed
+##  <a name="setanimationspeed"></a>CMFCPopupMenu:: SetAnimationSpeed
 
 Nastaví rychlost animace pro místní nabídky.
 
@@ -1232,17 +1232,17 @@ static void SetAnimationSpeed(UINT nElapse);
 ### <a name="parameters"></a>Parametry
 
 *nElapse*<br/>
-[in] Nové rychlost animace, v milisekundách.
+pro Nová rychlost animace v milisekundách.
 
 ### <a name="remarks"></a>Poznámky
 
-Rychlost animace se globální hodnoty a ovlivňuje všechny místní nabídky v aplikaci. Tato hodnota určuje, jak dlouho trvá, animace rozbalovací nabídky na dokončení.
+Rychlost animace je globální hodnota a ovlivňuje všechny místní nabídky v aplikaci. Tato hodnota určuje, jak dlouho trvá animace pro dokončení místní nabídky.
 
-Ve výchozím nastavení je tento parametr nastaven na 30 milisekund. Rozsah platných hodnot pro *nElapse* je od 0 do 200.
+Ve výchozím nastavení je tento parametr nastavený na 30 milisekund. Rozsah platných hodnot pro *nElapse* je od 0 do 200.
 
-##  <a name="setanimationtype"></a>  CMFCPopupMenu::SetAnimationType
+##  <a name="setanimationtype"></a>CMFCPopupMenu:: SetAnimationType
 
-Nastaví typ animace pro tento místní nabídky.
+Nastaví typ animace pro tuto místní nabídku.
 
 ```
 static void SetAnimationType(CMFCPopupMenu::ANIMATION_TYPE type);
@@ -1251,13 +1251,13 @@ static void SetAnimationType(CMFCPopupMenu::ANIMATION_TYPE type);
 ### <a name="parameters"></a>Parametry
 
 *type*<br/>
-[in] Výčtový datový typ, který určuje typ animace.
+pro Výčtový datový typ, který určuje typ animace.
 
 ### <a name="remarks"></a>Poznámky
 
-Zobrazit [CMFCPopupMenu::GetAnimationType](#getanimationtype) seznam platných hodnot pro *typ*.
+Seznam platných hodnot pro *typ*naleznete v tématu [CMFCPopupMenu:: GetAnimationType](#getanimationtype) .
 
-##  <a name="setautodestroy"></a>  CMFCPopupMenu::SetAutoDestroy
+##  <a name="setautodestroy"></a>CMFCPopupMenu:: SetAutoDestroy
 
 ```
 void SetAutoDestroy(BOOL bAutoDestroy = TRUE);
@@ -1265,13 +1265,13 @@ void SetAutoDestroy(BOOL bAutoDestroy = TRUE);
 
 ### <a name="parameters"></a>Parametry
 
-[in] *bAutoDestroy*<br/>
+pro *bAutoDestroy*<br/>
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="setdefaultitem"></a>  CMFCPopupMenu::SetDefaultItem
+##  <a name="setdefaultitem"></a>CMFCPopupMenu:: SetDefaultItem
 
-Nastaví výchozí příkaz pro rozbalovací nabídky.
+Nastaví výchozí příkaz pro místní nabídku.
 
 ```
 void SetDefaultItem(UINT uiCmd);
@@ -1280,15 +1280,15 @@ void SetDefaultItem(UINT uiCmd);
 ### <a name="parameters"></a>Parametry
 
 *uiCmd*<br/>
-[in] ID nabídky příkazu nový výchozí příkaz.
+pro ID příkazu nabídky nového výchozího příkazu
 
 ### <a name="remarks"></a>Poznámky
 
-Výchozí příkaz v rozbalovací nabídce je příkaz, který je vybrána, když se objeví v rozbalovací nabídce.
+Výchozí příkaz v místní nabídce je příkaz, který je vybrán při zobrazení místní nabídky.
 
-##  <a name="setforcemenufocus"></a>  CMFCPopupMenu::SetForceMenuFocus
+##  <a name="setforcemenufocus"></a>CMFCPopupMenu:: SetForceMenuFocus
 
-Vynutí zaměření pro vstup se vraťte do nabídek, když se zobrazí místní nabídka.
+Vynutí, aby se fokus vstupu vrátil do řádku nabídek při zobrazení místní nabídky.
 
 ```
 static void SetForceMenuFocus(BOOL bValue);
@@ -1297,15 +1297,15 @@ static void SetForceMenuFocus(BOOL bValue);
 ### <a name="parameters"></a>Parametry
 
 *bValue*<br/>
-[in] Hodnota TRUE, pokud chcete přinutit zaměření pro vstup na panelu nabídek když se zobrazí místní nabídka rozhraní. FALSE, pokud chcete, aby v rozbalovací nabídce, pokud chcete zachovat fokus.
+pro TRUE, pokud chcete, aby architektura vynutila vstupní fokus na řádku nabídek při zobrazení místní nabídky. FALSE, pokud chcete, aby se v místní nabídce zachoval fokus.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato metoda nastaví příznak, který je globálním pro všechny místní nabídky v aplikaci. Tato funkce není ve výchozím nastavení povolena.
+Tato metoda nastaví příznak, který je globální pro všechny místní nabídky v aplikaci. Tato funkce není ve výchozím nastavení povolená.
 
-##  <a name="setforceshadow"></a>  CMFCPopupMenu::SetForceShadow
+##  <a name="setforceshadow"></a>CMFCPopupMenu:: SetForceShadow
 
-Vynutí rozhraní pro kreslení nabídky stínů, jakmile se zobrazí místní nabídky mimo hlavního rámce.
+Vynutí rozhraní vykreslit stíny nabídky, když se místní nabídky objeví mimo hlavní rámec.
 
 ```
 static void SetForceShadow(BOOL bValue);
@@ -1314,15 +1314,15 @@ static void SetForceShadow(BOOL bValue);
 ### <a name="parameters"></a>Parametry
 
 *bValue*<br/>
-[in] TRUE, pokud chcete, aby rozhraní pro kreslení nabídky odstínů; FALSE v opačném případě.
+pro TRUE, pokud chcete, aby rozhraní nakreslilo stíny nabídky, jinak FALSE.
 
 ### <a name="remarks"></a>Poznámky
 
-Při volání této metody nastaví globální příznak ve vaší aplikaci. Tento příznak má vliv na všechny místní nabídky v aplikaci.
+Při volání této metody nastaví globální příznak ve vaší aplikaci. Tento příznak ovlivňuje všechny místní nabídky ve vaší aplikaci.
 
-##  <a name="setmaxwidth"></a>  CMFCPopupMenu::SetMaxWidth
+##  <a name="setmaxwidth"></a>CMFCPopupMenu:: SetMaxWidth
 
-Nastavte maximální šířku pro rozbalovací nabídky.
+Nastavte maximální šířku místní nabídky.
 
 ```
 void SetMaxWidth(int iMaxWidth);
@@ -1331,13 +1331,13 @@ void SetMaxWidth(int iMaxWidth);
 ### <a name="parameters"></a>Parametry
 
 *iMaxWidth*<br/>
-[in] Maximální šířka rozbalovací nabídky v pixelech.
+pro Maximální šířka místní nabídky v pixelech
 
 ### <a name="remarks"></a>Poznámky
 
-Pokud text přidružený k příkazu nabídky se nevejde na maximální šířku, zkrátí se a části, který se nevejde se nahrazuje tři tečky.
+Pokud text přidružený k příkazu nabídky nebude odpovídat maximální šířce, je zkrácen a část, která se nevejde, je nahrazena třemi tečkami.
 
-##  <a name="setmessagewnd"></a>  CMFCPopupMenu::SetMessageWnd
+##  <a name="setmessagewnd"></a>CMFCPopupMenu:: SetMessageWnd
 
 ```
 void SetMessageWnd(CWnd* pMsgWnd);
@@ -1345,11 +1345,11 @@ void SetMessageWnd(CWnd* pMsgWnd);
 
 ### <a name="parameters"></a>Parametry
 
-[in] *pMsgWnd*<br/>
+pro *pMsgWnd*<br/>
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="setparentribbonelement"></a>  CMFCPopupMenu::SetParentRibbonElement
+##  <a name="setparentribbonelement"></a>CMFCPopupMenu:: SetParentRibbonElement
 
 ```
 void SetParentRibbonElement(CMFCRibbonBaseElement* pElem);
@@ -1357,11 +1357,11 @@ void SetParentRibbonElement(CMFCRibbonBaseElement* pElem);
 
 ### <a name="parameters"></a>Parametry
 
-[in] *pElem*<br/>
+pro *pElem*<br/>
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="setquickcustomizetype"></a>  CMFCPopupMenu::SetQuickCustomizeType
+##  <a name="setquickcustomizetype"></a>CMFCPopupMenu:: SetQuickCustomizeType
 
 ```
 void SetQuickCustomizeType(QUICK_CUSTOMIZE_TYPE Type);
@@ -1369,11 +1369,11 @@ void SetQuickCustomizeType(QUICK_CUSTOMIZE_TYPE Type);
 
 ### <a name="parameters"></a>Parametry
 
-[in] *Typu*<br/>
+pro *Typ*<br/>
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="setquickmode"></a>  CMFCPopupMenu::SetQuickMode
+##  <a name="setquickmode"></a>CMFCPopupMenu:: SetQuickMode
 
 ```
 void SetQuickMode();
@@ -1381,7 +1381,7 @@ void SetQuickMode();
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="setrightalign"></a>  CMFCPopupMenu::SetRightAlign
+##  <a name="setrightalign"></a>CMFCPopupMenu:: SetRightAlign
 
 Nastaví zarovnání nabídky pro místní nabídky.
 
@@ -1392,15 +1392,15 @@ void SetRightAlign(BOOL bRightAlign = TRUE);
 ### <a name="parameters"></a>Parametry
 
 *bRightAlign*<br/>
-[in] Logická hodnota, která určuje zarovnání nabídky. Hodnota TRUE označuje zarovnání doprava, hodnota FALSE označuje zarovnání doleva.
+pro Logická hodnota, která označuje zarovnání nabídky. Hodnota TRUE označuje zarovnání vpravo, hodnota FALSE znamená zarovnání doleva.
 
 ### <a name="remarks"></a>Poznámky
 
-Ve výchozím nastavení všechny místní nabídky jsou zarovnané vlevo.
+Ve výchozím nastavení jsou všechny místní nabídky zarovnané doleva.
 
-##  <a name="setsendmenuselectmsg"></a>  CMFCPopupMenu::SetSendMenuSelectMsg
+##  <a name="setsendmenuselectmsg"></a>CMFCPopupMenu:: SetSendMenuSelectMsg
 
-Nastaví příznak, který určuje, zda v rozbalovací nabídce upozorní jeho nadřazeného rámce, když uživatel vybere příkaz.
+Nastaví příznak, který určuje, zda místní nabídka upozorní svůj nadřazený rámec, když uživatel vybere příkaz.
 
 ```
 static void SetSendMenuSelectMsg(BOOL bSet = TRUE);
@@ -1409,15 +1409,15 @@ static void SetSendMenuSelectMsg(BOOL bSet = TRUE);
 ### <a name="parameters"></a>Parametry
 
 *bSet*<br/>
-[in] TRUE, pokud v rozbalovací nabídce upozorní jeho nadřazeného rámce FALSE v opačném případě.
+pro TRUE, pokud se v místní nabídce upozorní na svůj nadřazený rámec, jinak FALSE.
 
 ### <a name="remarks"></a>Poznámky
 
-Toto je globální možností pro všechny místní nabídky v aplikaci. Pokud je povoleno, odešle místní nabídky do nadřazeného rámce WM_MENUSELECT zprávu, když uživatel vybere příkaz.
+Toto je globální možnost pro všechny místní nabídky v aplikaci. Pokud je tato možnost povolena, místní nabídky odešlou zprávu WM_MENUSELECT nadřazenému snímku, když uživatel vybere příkaz.
 
-##  <a name="showallcommands"></a>  CMFCPopupMenu::ShowAllCommands
+##  <a name="showallcommands"></a>CMFCPopupMenu:: ShowAllCommands
 
-Vynutí zobrazení všech příkazů v rozbalovací nabídce.
+Vynutí místní nabídku, aby zobrazila všechny příkazy.
 
 ```
 void ShowAllCommands();
@@ -1425,9 +1425,9 @@ void ShowAllCommands();
 
 ### <a name="remarks"></a>Poznámky
 
-To není globální nastavení a ovlivní pouze aktuální místní nabídky.
+Toto není globální nastavení a ovlivňuje pouze aktuální místní nabídku.
 
-##  <a name="triggerresize"></a>  CMFCPopupMenu::TriggerResize
+##  <a name="triggerresize"></a>CMFCPopupMenu:: TriggerResize
 
 ```
 void TriggerResize();
@@ -1435,9 +1435,9 @@ void TriggerResize();
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="updateallshadows"></a>  CMFCPopupMenu::UpdateAllShadows
+##  <a name="updateallshadows"></a>CMFCPopupMenu:: UpdateAllShadows
 
-Aktualizuje stíny pro všechny otevřené rozbalovací nabídky.
+Aktualizuje stíny pro všechny otevřené místní nabídky.
 
 ```
 static void UpdateAllShadows(LPRECT lprectScreen = NULL);
@@ -1446,15 +1446,15 @@ static void UpdateAllShadows(LPRECT lprectScreen = NULL);
 ### <a name="parameters"></a>Parametry
 
 *lprectScreen*<br/>
-[in] Obdélník, který určuje oblasti, kterou chcete aktualizovat, v souřadnicovém systému obrazovky.
+pro Obdélník, který určuje oblast, která se má aktualizovat, v souřadnicích obrazovky
 
 ### <a name="remarks"></a>Poznámky
 
-Tato metoda je užitečná, když místní nabídky se zobrazí nad animovaný ovládacích prvků nebo jiných oknech, které mají dynamický obsah.
+Tato metoda je užitečná v případě, že jsou místní nabídky zobrazeny přes animované ovládací prvky nebo jiná okna s dynamickým obsahem.
 
-##  <a name="updateshadow"></a>  CMFCPopupMenu::UpdateShadow
+##  <a name="updateshadow"></a>CMFCPopupMenu:: UpdateShadow
 
-Aktualizuje stínování rozbalovací nabídky.
+Aktualizuje stín místní nabídky.
 
 ```
 void UpdateShadow(LPRECT lprectScreen = NULL);
@@ -1463,11 +1463,11 @@ void UpdateShadow(LPRECT lprectScreen = NULL);
 ### <a name="parameters"></a>Parametry
 
 *lprectScreen*<br/>
-[in] Obdélník, v souřadnicovém systému obrazovky, který určuje hranice oblasti, kterou chcete aktualizovat.
+pro Obdélník v souřadnicích obrazovky, který určuje hranice oblasti, která se má aktualizovat.
 
 ### <a name="remarks"></a>Poznámky
 
-Tuto metodu volejte, když místní nabídka, která má stín překrývá animovaný obrázek.
+Tuto metodu volejte, pokud se v místní nabídce, která má stín, překrývá animovaný obrázek.
 
 ## <a name="see-also"></a>Viz také:
 

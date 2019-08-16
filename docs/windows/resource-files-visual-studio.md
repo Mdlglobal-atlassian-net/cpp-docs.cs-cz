@@ -24,73 +24,73 @@ helpviewer_keywords:
 - files [C++], editable types
 - resource editing
 ms.assetid: 4d2b6fcc-07cf-4289-be87-83a60f69533c
-ms.openlocfilehash: 45db6d0139cfa3aa8a2eaa8fe6d18158cb6646ce
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b66a207766962856cc4d7181607868c2a48ebe84
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62387913"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69513656"
 ---
 # <a name="resource-files-c"></a>Zdrojové soubory (C++)
 
 > [!NOTE]
-> Protože projekty v programovacích jazycích rozhraní .NET nepoužívají soubory skriptu prostředků, je nutné otevřít prostředky z **Průzkumníka řešení**. Použití [editor obrázků](../windows/image-editor-for-icons.md) a [binární editor](binary-editor.md) pro práci se soubory prostředků ve spravovaných projektech.
+> Vzhledem k tomu, že projekty v programovacích jazycích .NET nepoužívají soubory skriptu prostředků, je nutné otevřít prostředky z **Průzkumník řešení**. Použijte [Editor obrázků](../windows/image-editor-for-icons.md) a [binární editor](binary-editor.md) pro práci se soubory prostředků ve spravovaných projektech.
 >
 > Všechny spravované prostředky, které chcete upravit, musí být propojené prostředky. Editory prostředků Visual Studio nepodporují úpravy vložených prostředků.
 
-Termín *soubor prostředků* může odkazovat několik typů souborů, jako je třeba:
+Termínový *soubor prostředků* může odkazovat na určitý počet typů souborů, například:
 
-- Soubor skriptu prostředků (.rc) programu.
+- Soubor skriptu prostředků (. RC) programu.
 
-- Soubor prostředků šablony (.rct).
+- Soubor šablony prostředků (. RCT).
 
-- Samostatný prostředek existující jako samostatný soubor. Tento typ zahrnuje bitmapy, ikony nebo kurzoru soubor, který je uvedené v souboru .rc.
+- Jednotlivý prostředek existuje jako samostatný soubor. Tento typ zahrnuje rastrový obrázek, ikonu nebo soubor kurzoru, který je odkazován ze souboru. rc.
 
-- Soubor hlaviček generovaných vývojové prostředí. Tento typ zahrnuje `Resource.h`, to je odkazováno ze souboru .rc.
+- Hlavičkový soubor generovaný vývojovým prostředím. Tento typ zahrnuje `Resource.h`, je odkazováno ze souboru. rc.
 
-Prostředky se nenašly v jiné typy souborů, jako jsou soubory .exe, .dll a .res označovány jako *prostředky*.
+Prostředky nalezené v jiných typech souborů, jako je například. exe,. dll nebo soubory. res, jsou označovány jako *prostředky*.
 
-Můžete pracovat s *soubory prostředků* a *prostředky* z v rámci svého projektu. Můžete také pracovat s, které nejsou součástí aktuálního projektu nebo byly vytvořeny mimo vývojové prostředí sady Visual Studio. Například můžete:
+Můžete pracovat se *soubory prostředků* a *prostředky* v rámci projektu. Můžete také pracovat s těmi, které nejsou součástí aktuálního projektu nebo byly vytvořeny mimo vývojové prostředí sady Visual Studio. Můžete například:
 
-- Práce se soubory prostředků vnořené a podmíněně zahrnuté.
+- Pracujte s vnořenými a podmíněně zahrnutými soubory prostředků.
 
-- Aktualizovat existující prostředky nebo jejich převodem na Visual C++.
+- Aktualizujte stávající prostředky nebo je převeďte C++na vizuál.
 
-- Import a export grafických prostředků do nebo z aktuálního zdrojového souboru.
+- Importujte nebo exportujte grafické prostředky do nebo z aktuálního souboru prostředků.
 
-- Zahrnutí sdílených nebo jen pro čtení identifikátorů (symbolů), které nelze upravit ve vývojovém prostředí.
+- Zahrňte sdílené nebo identifikátory (symboly) jen pro čtení, které nelze upravovat ve vývojovém prostředí.
 
-- Zahrnout zdroje v souboru spustitelný soubor (.exe), který není třeba úpravy (nebo by neměla být upravována), jako jsou například prostředky sdílené mezi několika projekty.
+- Zahrňte prostředky do spustitelného souboru (. exe), který nepotřebuje úpravy (nebo by se neměly upravovat), například sdílené prostředky mezi několika projekty.
 
-- Zahrnují typy prostředků nejsou podporovány ve vývojovém prostředí.
+- Zahrňte typy prostředků, které nejsou podporovány vývojovým prostředím.
 
-Další informace o prostředcích naleznete v tématu Jak [vytvořit prostředky](../windows/how-to-create-a-resource-script-file.md), [spravovat prostředky](../windows/how-to-copy-resources.md), a [zahrnout prostředky v době kompilace](../windows/how-to-include-resources-at-compile-time.md).
+Další informace o prostředcích najdete v tématech [vytváření prostředků](../windows/how-to-create-a-resource-script-file.md), [Správa prostředků](../windows/how-to-copy-resources.md)a [zahrnutí prostředků v době kompilace](../windows/how-to-include-resources-at-compile-time.md).
 
-## <a name="editable-resources"></a>Upravit prostředky
+## <a name="editable-resources"></a>Upravitelné prostředky
 
-Chcete-li upravit prostředky, které obsahují lze otevřít následující typy souborů:
+Pro úpravu prostředků, které obsahují, lze otevřít následující typy souborů:
 
 | Název souboru | Popis |
 |---|---|
 | .rc | Soubory skriptu prostředků |
-| .RCT | Soubory šablon prostředků |
-| .res | Soubory prostředků |
-| .resx | Spravovaných souborů prostředků |
-| .exe | Spustitelné soubory |
-| .dll | Soubory knihoven DLL |
-| .bmp, ICO, .dib, .cur | Rastrový obrázek, ikona, nástrojů a kurzoru soubory |
+| . RCT | Soubory šablon prostředků |
+| . res | Soubory prostředků |
+| .resx | Spravované soubory prostředků |
+| soubor. exe | Spustitelné soubory |
+| .dll | Soubory s dynamickou propojenou knihovnou |
+| . bmp,. ico,. DIB,. měna | Rastrové obrázky, ikony, panely nástrojů a soubory kurzoru |
 
-Při úpravě prostředků prostředí sady Visual Studio pracuje s a má vliv na následující soubory:
+Při úpravách prostředků funguje prostředí sady Visual Studio s a má vliv na následující soubory:
 
 | Název souboru | Popis |
 |---|---|
-| Resource.h | Soubor hlaviček generovaných vývojové prostředí, která obsahuje definice symbolů.<br/><br/>Zahrnout tento soubor ve správě zdrojového kódu. |
-| Filename.aps | Binární verze aktuálního souboru skriptu prostředků použít pro rychlé načítání.<br /><br /> Editory prostředků není přímo načíst soubory .rc nebo souboru resource.h. Nástroj resource compiler jejich kompiluje do soubory .aps, které se spotřebovávají editory prostředků. Tento soubor je kompilační krok a ukládá pouze datový symbolické.<br/><br/>Jako normální zkompilovat procesu, informace, které nejsou symbolické, jako je například přidávání poznámek, je ignorována během kompilace.<br/><br/>Pokaždé, když je soubor .aps synchronizováno s soubor .rc, opakovaném vygenerování souboru .rc. Například, když jste **Uložit**, přepíše editor prostředků není soubor .rc a souboru resource.h. Všechny změny samotné prostředky zůstanou zahrnuté v souboru .rc, ale komentáře vždy ztratí dojde k přepsání souboru .rc. Informace o tom, jak zachovat komentáře, naleznete v tématu [zahrnout prostředky v době kompilace](../windows/how-to-include-resources-at-compile-time.md).<br/><br/>Obvykle by neměla obsahovat .aps soubor ve správě zdrojového kódu. |
-| .rc | Soubor skriptu prostředků, který obsahuje skript pro prostředky v aktuálním projektu. Tento soubor se přepíše souborem .aps při každém uložení.<br/><br/>Zahrnout tento soubor ve správě zdrojového kódu. |
+| Resource.h | Hlavičkový soubor generovaný vývojovým prostředím, které obsahuje definice symbolů.<br/><br/>Zahrnout tento soubor do správy zdrojového kódu. |
+| Filename.aps | Binární verze aktuálního souboru skriptu prostředku, která se používá pro rychlé načítání.<br /><br /> Editory prostředků nečtou přímo soubory. RC nebo Resource. h. Kompilátor prostředků je zkompiluje do souborů. APS, které jsou spotřebovány editory prostředků. Tento soubor je krok kompilace a ukládá pouze symbolické údaje.<br/><br/>Stejně jako u normálního procesu kompilace jsou informace, které nejsou symbolické, jako je například komentování, během procesu kompilace zahozeny.<br/><br/>Pokaždé, když soubor. APS není synchronizován se souborem. RC, bude soubor. RC znovu vygenerován. Když například **uložíte**, editor prostředků přepíše soubor. RC a soubor Resource. h. Jakékoli změny samotných prostředků zůstanou začleněny do souboru. RC, ale komentáře budou vždy ztraceny, jakmile bude soubor. RC přepsán. Informace o tom, jak zachovat komentáře, najdete v tématu [zahrnutí prostředků v době kompilace](../windows/how-to-include-resources-at-compile-time.md).<br/><br/>Obvykle byste neměli do správy zdrojových kódů zahrnout soubor. APS. |
+| .rc | Soubor skriptu prostředků, který obsahuje skript pro prostředky v aktuálním projektu. Soubor. APS se při každém uložení přepíše souborem. AP.<br/><br/>Zahrnout tento soubor do správy zdrojového kódu. |
 
 ## <a name="manifest-resources"></a>Manifest prostředků
 
-Prostředky manifestu v desktopové projekty C++, jsou soubory XML, které popisují závislosti, které aplikace používá. Například v sadě Visual Studio tento MFC soubor manifestu generované v Průvodci definuje verze Windows běžný ovládací prvek knihoven DLL aplikace by měla používat:
+V C++ desktopových projektech jsou prostředky MANIFESTU soubory XML, které popisují závislosti, které aplikace používá. Například v aplikaci Visual Studio tento soubor manifestu generovaný průvodcem určuje, která verze knihoven DLL běžných ovládacích prvků systému Windows by měla aplikace používat:
 
 ```xml
 <description>Your app description here</description>
@@ -108,22 +108,22 @@ Prostředky manifestu v desktopové projekty C++, jsou soubory XML, které popis
 </dependency>
 ```
 
-Pro aplikace Windows XP nebo Windows Vista by měl prostředek manifestu zadejte nejaktuálnější verzi běžných ovládacích prvků Windows pro aplikace pro použití. Výše uvedený příklad používá verzi `6.0.0.0`, která podporuje [ovládací prvek Syslink](/windows/desktop/Controls/syslink-overview).
+V případě aplikace systému Windows XP nebo Windows Vista by měl prostředek manifestu určovat nejaktuálnější verzi běžných ovládacích prvků systému Windows, které má aplikace používat. Výše uvedený příklad používá verzi `6.0.0.0`, která podporuje [ovládací prvek Syslink](/windows/win32/Controls/syslink-overview).
 
 > [!NOTE]
-> Můžete mít jenom jeden prostředek manifestu na modul.
+> Pro každý modul můžete mít jenom jeden prostředek manifestu.
 
-Chcete-li zobrazit verze a typ informací obsažených v manifestu prostředek, otevřete soubor v prohlížeči XML nebo textovém editoru sady Visual Studio. Otevření prostředku manifestu z [zobrazení prostředků](../windows/resource-view-window.md), prostředek se otevře v binárním formátu.
+Chcete-li zobrazit verzi a informace o typu obsažené v prostředku manifestu, otevřete soubor v prohlížeči XML nebo v textovém editoru sady Visual Studio. Otevřete-li prostředek manifestu z [prostředky](../windows/resource-view-window.md), bude prostředek otevřen v binárním formátu.
 
-### <a name="to-open-a-manifest-resource"></a>K otevření prostředku manifestu
+### <a name="to-open-a-manifest-resource"></a>Otevření prostředku manifestu
 
-1. Otevřete projekt v sadě Visual Studio a přejděte do **Průzkumníka řešení**.
+1. Otevřete projekt v aplikaci Visual Studio a přejděte na **Průzkumník řešení**.
 
-1. Rozbalte **soubory prostředků** složku, pak:
+1. Rozbalte složku **soubory prostředků** a potom:
 
-   - Otevřít v textovém editoru, dvakrát klikněte *.manifest* souboru.
+   - Chcete-li otevřít v textovém editoru, poklikejte na soubor *. manifest* .
 
-   - Otevřít v jiném editoru, klikněte pravým tlačítkem myši *.manifest* a vyberte možnost **otevřít v programu**. Zadejte editor k použití a vyberte **otevřít**.
+   - Chcete-li otevřít v jiném editoru, klikněte pravým tlačítkem myši na soubor *. manifest* a vyberte možnost **otevřít v**. Zadejte editor, který se má použít, a vyberte **otevřít**.
 
 ## <a name="requirements"></a>Požadavky
 

@@ -6,25 +6,25 @@ helpviewer_keywords:
 - COM interfaces
 - interfaces, COM
 ms.assetid: de6c8b12-6230-4fdc-af66-a28b91d5ee55
-ms.openlocfilehash: 5416fb8a99420f0f6c84318753ee3399ccf5db2a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2373351330982623ffa602fd81bec61d0bc257b2
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62250307"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69492127"
 ---
 # <a name="interfaces-atl"></a>Rozhraní (ATL)
 
-Rozhraní je způsob, ve kterém objekt zpřístupňuje jeho funkce zvnějšku. V modelu COM rozhraní je tabulka ukazatelů (třeba C++ vtable) na funkce, které jsou implementovány v objektu. V tabulce představuje rozhraní a metody rozhraní jsou funkce, na které odkazuje. Objekt lze vystavit libovolný počet rozhraní jako zvolí.
+Rozhraní je způsob, jakým objekt zpřístupňuje svou funkci na vnějším světě. V modelu COM je rozhraní tabulkou ukazatelů (jako je C++ vtable) na funkce implementované objektem. Tabulka představuje rozhraní a funkce, na které odkazuje, jsou metody tohoto rozhraní. Objekt může vystavit tolik rozhraní, kolik jich zvolí.
 
-Každé rozhraní je založená na základní rozhraní modelu COM, [IUnknown](../atl/iunknown.md). Metody `IUnknown` povolit navigaci na další vystavených objektem.
+Každé rozhraní je založeno na základním rozhraní modelu COM, [IUnknown](../atl/iunknown.md). Metody pro `IUnknown` povolení navigace jiným rozhraním vystaveným objektem.
 
-Každé rozhraní je rovněž jedinečné ID rozhraní (IID). Tuto jedinečnost usnadňuje podporu rozhraní správy verzí. Jednoduše na nové rozhraní s novou IID je nová verze rozhraní.
+Každé rozhraní je také přiděleno jedinečné ID rozhraní (IID). Tato jedinečnost usnadňuje podporu verzí rozhraní. Nová verze rozhraní je jednoduše nové rozhraní s novým identifikátorem IID.
 
 > [!NOTE]
->  IID pro rozhraní COM a OLE standard jsou předdefinovány.
+>  IID pro standardní rozhraní COM a rozhraní OLE jsou předdefinovaná.
 
 ## <a name="see-also"></a>Viz také:
 
 [Úvod do modelu COM](../atl/introduction-to-com.md)<br/>
-[Objekty COM a rozhraní](/windows/desktop/com/com-objects-and-interfaces)
+[Objekty modelu COM a rozhraní](/windows/win32/com/com-objects-and-interfaces)

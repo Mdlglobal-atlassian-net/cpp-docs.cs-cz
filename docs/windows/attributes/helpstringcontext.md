@@ -1,21 +1,21 @@
 ---
-title: helpstringcontext – (atribut C++ COM)
+title: helpstringcontext (C++ atribut com)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.helpstringcontext
 helpviewer_keywords:
 - helpstringcontext attribute [C++]
 ms.assetid: d4cd135e-d91c-4aa3-9353-8aeb096f52cf
-ms.openlocfilehash: a6df5b63291fbc54d6c12a116fccd8372e8ced9a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ae48c6216b1f1d987b33eff50acf9d82dc551400
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62409574"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69501494"
 ---
 # <a name="helpstringcontext"></a>helpstringcontext
 
-Určuje ID tématu nápovědy HLP nebo CHM souboru.
+Určuje ID tématu nápovědy v souboru HLP nebo CHM.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -26,11 +26,11 @@ Určuje ID tématu nápovědy HLP nebo CHM souboru.
 ### <a name="parameters"></a>Parametry
 
 *contextID*<br/>
-Identifikátor kontextu 32-bit nápovědy v **pomáhají** souboru.
+Identifikátor kontextu 32-bit Help v souboru **help** .
 
 ## <a name="remarks"></a>Poznámky
 
-**Helpstringcontext –** C++ atribut má stejné funkce jako [helpstringcontext –](/windows/desktop/Midl/helpstringcontext) ODL – atribut.
+Atribut **helpstringcontext** C++ má stejné funkce jako atribut [helpstringcontext](/windows/win32/Midl/helpstringcontext) ODL.
 
 ## <a name="example"></a>Příklad
 
@@ -50,16 +50,16 @@ __interface IMyI
 
 ## <a name="requirements"></a>Požadavky
 
-### <a name="attribute-context"></a>Atribut kontextu
+### <a name="attribute-context"></a>Kontext atributu
 
 |||
 |-|-|
-|**Platí pro**|**Třída**, **rozhraní**, rozhraní – metoda|
-|**Opakovatelné**|Ne|
-|**Vyžadované atributy**|Žádný|
+|**Platí pro**|**Třída**, **rozhraní**, metoda rozhraní|
+|**REPEATABLE**|Ne|
+|**Požadované atributy**|Žádné|
 |**Neplatné atributy**|Žádné|
 
-Další informace najdete v tématu [kontexty atributů](cpp-attributes-com-net.md#contexts).
+Další informace naleznete v tématu [kontexty atributů](cpp-attributes-com-net.md#contexts).
 
 ## <a name="see-also"></a>Viz také:
 

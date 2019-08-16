@@ -1,5 +1,5 @@
 ---
-title: CMDIChildWnd – třída
+title: CMDIChildWnd – – třída
 ms.date: 11/04/2016
 f1_keywords:
 - CMDIChildWnd
@@ -22,16 +22,16 @@ helpviewer_keywords:
 - CMDIChildWnd [MFC], MDIRestore
 - CMDIChildWnd [MFC], SetHandles
 ms.assetid: 6d07f5d4-9a3e-4723-9fa5-e65bb669fdd5
-ms.openlocfilehash: 13f027e68184a4869e88883ff8b8d3b123b94e3e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 09a9846cc3d242ef7d812cb31b4dcdd515d5f6ef
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62403929"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69506083"
 ---
-# <a name="cmdichildwnd-class"></a>CMDIChildWnd – třída
+# <a name="cmdichildwnd-class"></a>CMDIChildWnd – – třída
 
-Poskytuje funkce pro Windows více dokumentů (MDI) interface podřízené okno, spolu se členy pro správu okna.
+Poskytuje funkce podřízeného okna rozhraní Windows MDI (Multiple Document Interface) spolu se členy pro správu okna.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -43,59 +43,59 @@ class CMDIChildWnd : public CFrameWnd
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
-|[CMDIChildWnd::CMDIChildWnd](#cmdichildwnd)|Vytvoří `CMDIChildWnd` objektu.|
+|[CMDIChildWnd –:: CMDIChildWnd –](#cmdichildwnd)|`CMDIChildWnd` Vytvoří objekt.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
-|[CMDIChildWnd::Create](#create)|Vytvoří podřízené okno Windows MDI spojené s `CMDIChildWnd` objektu.|
-|[CMDIChildWnd::GetMDIFrame](#getmdiframe)|Vrací nadřazeného rámce MDI klienta okna MDI.|
-|[CMDIChildWnd::MDIActivate](#mdiactivate)|Aktivuje toto podřízené okno MDI.|
-|[CMDIChildWnd::MDIDestroy](#mdidestroy)|Zničí této podřízené okno MDI.|
-|[CMDIChildWnd::MDIMaximize](#mdimaximize)|Maximalizuje této podřízené okno MDI.|
-|[CMDIChildWnd::MDIRestore](#mdirestore)|Obnoví ze minimalizované nebo maximalizované velikost této podřízené okno MDI.|
-|[CMDIChildWnd::SetHandles](#sethandles)|Nastaví obslužné rutiny pro prostředky nabídky a akcelerátoru.|
+|[CMDIChildWnd –:: Create](#create)|Vytvoří podřízené okno Windows MDI spojené s `CMDIChildWnd` objektem.|
+|[CMDIChildWnd –:: GetMDIFrame](#getmdiframe)|Vrátí nadřazený rámec MDI okna klienta MDI.|
+|[CMDIChildWnd –:: MDIActivate](#mdiactivate)|Aktivuje toto podřízené okno MDI.|
+|[CMDIChildWnd::MDIDestroy](#mdidestroy)|Odstraní toto podřízené okno MDI.|
+|[CMDIChildWnd –:: MDIMaximize](#mdimaximize)|Maximalizuje toto podřízené okno MDI.|
+|[CMDIChildWnd –:: MDIRestore](#mdirestore)|Obnoví toto podřízené okno MDI z maximalizace nebo minimalizované velikosti.|
+|[CMDIChildWnd –:: SetHandles](#sethandles)|Nastaví popisovače pro prostředky nabídky a akcelerátoru.|
 
 ## <a name="remarks"></a>Poznámky
 
-Podřízené okno MDI vypadá podobně jako typické okno rámce, s tím rozdílem, že podřízené okno MDI se zobrazí uvnitř okna rámce MDI namísto ploše. Podřízené okno MDI nemá vlastní panel nabídek, ale místo toho sdílené složky v nabídce okna rámce MDI. Rozhraní automaticky změní nabídky rámce MDI představující aktivní podřízené okno MDI.
+Podřízené okno MDI vypadá podobně jako typické okno rámce, s tím rozdílem, že se podřízené okno MDI zobrazuje v rámci okna rámce MDI, nikoli na ploše. Podřízené okno MDI nemá vlastní panel nabídek, ale místo toho sdílí nabídku okna rámce MDI. Rozhraní automaticky změní nabídku rámce MDI tak, aby představovala aktuálně aktivní podřízené okno MDI.
 
-K vytvoření užitečné podřízené okno MDI pro vaši aplikaci, odvoďte třídu z `CMDIChildWnd`. Přidání členské proměnné do odvozené třídy k ukládání dat, které jsou specifické pro vaši aplikaci. Implementujte popisovač zprávy členské funkce a napište zprávu, mapování v odvozené třídě k určení, co se stane, když zprávy jsou přesměrovány do okna.
+Pro vytvoření užitečného podřízeného okna MDI pro aplikaci odvodit třídu z `CMDIChildWnd`. Přidejte členské proměnné do odvozené třídy pro uložení dat specifických pro vaši aplikaci. Implementací členských funkcí obslužných rutin zpráv a mapy zpráv v odvozené třídě určíte, co se stane, když se zprávy přesměrují do okna.
 
 Existují tři způsoby, jak vytvořit podřízené okno MDI:
 
-- Vytvořit přímo pomocí `Create`.
+- Přímo jej Sestavte pomocí `Create`.
 
-- Vytvořit přímo pomocí `LoadFrame`.
+- Přímo jej Sestavte pomocí `LoadFrame`.
 
-- Nepřímo ji vytvořte pomocí šablony dokumentu.
+- Nepřímo ji vytvoří pomocí šablony dokumentu.
 
-Před voláním `Create` nebo `LoadFrame`, je nutné vytvořit objekt oken s rámečkem na haldě pomocí jazyka C++ **nové** operátor. Před voláním `Create` budete taky moct registrovat třídu okna s [afxregisterwndclass –](application-information-and-management.md#afxregisterwndclass) globální funkce nastavit ikonu a třída styly pro rámec.
+Před voláním `Create` nebo `LoadFrame`je nutné vytvořit objekt rámečku okna na haldě pomocí C++ operátoru **New** . Před voláním `Create` můžete také zaregistrovat třídu okna s globální funkcí [AfxRegisterWndClass –](application-information-and-management.md#afxregisterwndclass) k nastavení ikony a stylů třídy pro daný rámec.
 
-Použití `Create` členskou funkci pro předání parametrů vytváření rámce jako okamžité argumenty.
+`Create` Pomocí členské funkce předejte parametry vytváření rámce jako okamžité argumenty.
 
-`LoadFrame` vyžaduje méně argumentů než `Create`a místo toho načte většinu jeho výchozími hodnotami z prostředků, včetně titulek rámce, ikony, tabulky akcelerátorů a nabídky. Aby byl přístupný `LoadFrame`, tyto prostředky musí mít stejné ID prostředku (například IDR_MAINFRAME).
+`LoadFrame`vyžaduje méně argumentů než `Create`a místo toho načte většinu jeho výchozích hodnot z prostředků, včetně titulku rámce, ikony, tabulky akcelerátorů a nabídky. Aby k nim měli `LoadFrame`přístup všechny tyto prostředky, musí mít stejné ID prostředku (například IDR_MAINFRAME).
 
-Když `CMDIChildWnd` objekt obsahuje zobrazení a dokumenty, jsou vytvořena nepřímo rozhraním namísto přímo programátorem. `CDocTemplate` Objekt orchestruje vytváření rámce, vytvoření nadřazeného zobrazení a připojení zobrazení k příslušné dokumentu. Parametry `CDocTemplate` zadejte konstruktoru `CRuntimeClass` tři třídy zahrnuty (dokument, rámce a zobrazení). A `CRuntimeClass` objektu se používá v rámci rozhraní dynamicky se vytvářejí nové rámce, když uživatel zadá (třeba pomocí příkazu soubor nový nebo nového okna MDI).
+`CMDIChildWnd` Pokud objekt obsahuje zobrazení a dokumenty, jsou vytvořeny nepřímo rozhraním, nikoli přímo programátorem. `CDocTemplate` Objekt orchestruje vytvoření snímku, vytvoření obsahujícího zobrazení a připojení zobrazení k příslušnému dokumentu. Parametry `CDocTemplate` konstruktoru`CRuntimeClass` určují, jaké tři třídy jsou zahrnuty (dokument, rámeček a zobrazení). `CRuntimeClass` Objekt je používán rozhraním k dynamickému vytváření nových rámců, pokud jsou zadány uživatelem (například pomocí příkazu soubor nový nebo nový příkaz MDI v okně Nový).
 
-Z odvozené třídy oken s rámečkem `CMDIChildWnd` musí být deklarován s DECLARE_DYNCREATE v pořadí pro výše uvedené mechanismus RUNTIME_CLASS fungovat správně.
+Třída okna rámce odvozená z `CMDIChildWnd` musí být deklarovaná s DECLARE_DYNCREATE, aby výše uvedený mechanismus RUNTIME_CLASS správně fungoval.
 
-`CMDIChildWnd` Třída dědí velkou část jeho výchozí implementace ze `CFrameWnd`. Podrobný seznam těchto funkcí, najdete [CFrameWnd](../../mfc/reference/cframewnd-class.md) třídy popis. `CMDIChildWnd` Třída má Tyhle další funkce:
+Třída zdědí většinu výchozí implementace z `CFrameWnd`. `CMDIChildWnd` Podrobný seznam těchto funkcí najdete v popisu třídy [CFrameWnd](../../mfc/reference/cframewnd-class.md) . `CMDIChildWnd` Třída má následující další funkce:
 
-- Ve spojení s `CMultiDocTemplate` třídy, více `CMDIChildWnd` objekty ze stejné šablony dokumentu sdílejí stejnou nabídku ukládání systémových prostředků Windows.
+- Ve spojení s `CMultiDocTemplate` třídou více `CMDIChildWnd` objektů ze stejné šablony dokumentu sdílejí stejnou nabídku a ukládá systémové prostředky systému Windows.
 
-- Aktuálně aktivní podřízené okno MDI zcela nahrazují nabídka okna rámce MDI a titulek aktuálně aktivní podřízené okno MDI je přidán do titulek okna rámce MDI. Další příklady funkcí MDI podřízené okno, které jsou implementovány ve spojení s oknem rámce MDI, najdete v článku `CMDIFrameWnd` třídy popis.
+- V aktuálně aktivní nabídce podřízeného okna MDI se úplně nahradila nabídka okna rámce MDI a titulek aktuálně aktivního podřízeného okna MDI se přidá do titulku okna MDI. Další příklady funkcí podřízeného okna MDI, které jsou implementovány ve spojení s oknem rámce MDI, naleznete `CMDIFrameWnd` v popisu třídy.
 
-Nepoužívejte C++ **odstranit** operátor zničit okno rámce. Místo nich se používá `CWnd::DestroyWindow`. `CFrameWnd` Provádění `PostNcDestroy` odstraní při zničení okně objekt jazyka C++. Když uživatel zavře okno rámce, výchozí `OnClose` obslužná rutina zavolá `DestroyWindow`.
+Nepoužívejte C++ operátor **Delete** ke zničení okna rámce. Místo nich se používá `CWnd::DestroyWindow`. Implementace odstraní C++ objekt, když dojde ke zničení okna. `PostNcDestroy` `CFrameWnd` Když uživatel zavře okno rámce, výchozí `OnClose` obslužná rutina bude volat. `DestroyWindow`
 
-Další informace o `CMDIChildWnd`, naleznete v tématu [rámce Windows](../../mfc/frame-windows.md).
+Další informace o `CMDIChildWnd`naleznete v tématu [okna](../../mfc/frame-windows.md)s rámečkem.
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
-[Třídy CObject](../../mfc/reference/cobject-class.md)
+[CObject](../../mfc/reference/cobject-class.md)
 
 [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)
 
@@ -107,11 +107,11 @@ Další informace o `CMDIChildWnd`, naleznete v tématu [rámce Windows](../../m
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** afxwin.h
+**Záhlaví:** afxwin. h
 
-##  <a name="cmdichildwnd"></a>  CMDIChildWnd::CMDIChildWnd
+##  <a name="cmdichildwnd"></a>CMDIChildWnd –:: CMDIChildWnd –
 
-Volání k vytvoření `CMDIChildWnd` objektu.
+Volání konstruktoru `CMDIChildWnd` objektu.
 
 ```
 CMDIChildWnd();
@@ -119,15 +119,15 @@ CMDIChildWnd();
 
 ### <a name="remarks"></a>Poznámky
 
-Volání `Create` vytvořit okno viditelné.
+Voláním `Create` pro vytvoření viditelného okna.
 
 ### <a name="example"></a>Příklad
 
-  Podívejte se na příklad pro [CMDIChildWnd::Create](#create).
+  Podívejte se na příklad pro [CMDIChildWnd –:: Create](#create).
 
-##  <a name="create"></a>  CMDIChildWnd::Create
+##  <a name="create"></a>CMDIChildWnd –:: Create
 
-Voláním této členské funkce podřízeného okna Windows MDI a vytvořte tak, `CMDIChildWnd` objektu.
+Zavolejte tuto členskou funkci pro vytvoření podřízeného okna Windows MDI a připojte ho k `CMDIChildWnd` objektu.
 
 ```
 virtual BOOL Create(
@@ -142,32 +142,32 @@ virtual BOOL Create(
 ### <a name="parameters"></a>Parametry
 
 *lpszClassName*<br/>
-Odkazuje na řetězec znaků zakončené znakem null, který názvy třídy Windows ( [WNDCLASS](/windows/desktop/api/winuser/ns-winuser-tagwndclassa) struktura). Název třídy může být jakýkoli název zaregistrované [afxregisterwndclass –](application-information-and-management.md#afxregisterwndclass) globální funkce. By měl mít hodnotu NULL pro standardní `CMDIChildWnd`.
+Odkazuje na řetězec znaků zakončený hodnotou null, který má název třídy systému Windows ( [WNDCLASS](/windows/win32/api/winuser/ns-winuser-wndclassw) struktura). Název třídy může být jakýkoli název zaregistrovaný s globální funkcí [AfxRegisterWndClass –](application-information-and-management.md#afxregisterwndclass) . Pro standard `CMDIChildWnd`by měla být null.
 
 *lpszWindowName*<br/>
-Odkazuje na řetězec znaků zakončené znakem null představující název okna. Používá jako text záhlaví.
+Odkazuje na řetězec znaků zakončený hodnotou null, který představuje název okna. Slouží jako text záhlaví.
 
 *dwStyle*<br/>
-Určuje, okno [styl](../../mfc/reference/styles-used-by-mfc.md#window-styles) atributy. Styl WS_CHILD je povinný.
+Určuje atributy [stylu](../../mfc/reference/styles-used-by-mfc.md#window-styles) okna. Je vyžadován styl WS_CHILD.
 
-*Rect*<br/>
-Obsahuje velikost a umístění okna. `rectDefault` Hodnota umožňuje Windows zadejte velikost a umístění nového `CMDIChildWnd`.
+*OBD*<br/>
+Obsahuje velikost a polohu okna. Hodnota umožňuje systému Windows určit velikost a polohu nového `CMDIChildWnd`. `rectDefault`
 
 *pParentWnd*<br/>
-Určuje nadřazeného okna. Pokud má hodnotu NULL, použije se hlavního okna aplikace.
+Určuje nadřazený prvek okna. Pokud má hodnotu NULL, použije se hlavní okno aplikace.
 
 *pContext*<br/>
-Určuje [ccreatecontext –](../../mfc/reference/ccreatecontext-structure.md) struktury. Tento parametr může mít hodnotu NULL.
+Určuje strukturu [CCreateContext](../../mfc/reference/ccreatecontext-structure.md) . Tento parametr může mít hodnotu NULL.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Nenulové, pokud je úspěšná. jinak 0.
+Nenulové, pokud bylo úspěšné; v opačném případě 0.
 
 ### <a name="remarks"></a>Poznámky
 
-Aktuálně aktivní okna podřízeného rámce MDI určit titulek okna nadřazeného rámce. Tato funkce je zakázaná vypnutím FWS_ADDTOTITLE bit stylu okna podřízeného rámce.
+V aktuálně aktivním okně podřízeného rámce MDI lze určit titulek nadřazeného okna rámce. Tato funkce je zakázaná vypnutím FWS_ADDTOTITLE stylu podřízeného okna rámce.
 
-Rozhraní volá tuto funkci člena v reakci na příkaz uživatele vytvořit podřízené okno a rozhraní používá *pContext* parametr správně podřízeného okna připojit k aplikaci. Při volání `Create`, *pContext* může mít hodnotu NULL.
+Rozhraní volá tuto členskou funkci v reakci na uživatelský příkaz pro vytvoření podřízeného okna a rozhraní používá parametr *pContext* pro správné připojení podřízeného okna k aplikaci. Když zavoláte `Create`, může mít *pContext* hodnotu null.
 
 ### <a name="example"></a>Příklad
 
@@ -183,9 +183,9 @@ Příklad 2:
 
 [!code-cpp[NVC_MFCWindowing#9](../../mfc/reference/codesnippet/cpp/cmdichildwnd-class_3.cpp)]
 
-##  <a name="getmdiframe"></a>  CMDIChildWnd::GetMDIFrame
+##  <a name="getmdiframe"></a>CMDIChildWnd –:: GetMDIFrame
 
-Voláním této funkce vrátí nadřazeného rámce MDI.
+Voláním této funkce vrátíte nadřazený rámec MDI.
 
 ```
 CMDIFrameWnd* GetMDIFrame();
@@ -193,19 +193,19 @@ CMDIFrameWnd* GetMDIFrame();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Ukazatel na rámec nadřazeného okna MDI.
+Ukazatel na okno nadřazeného rámce MDI.
 
 ### <a name="remarks"></a>Poznámky
 
-Vrátí rámec je příkaz dva nadřazené položky odebrat ze `CMDIChildWnd` a je nadřazené okno MDICLIENT, který spravuje typu `CMDIChildWnd` objektu. Volání [getparent –](../../mfc/reference/cwnd-class.md#getparent) členská funkce se vraťte `CMDIChildWnd` nadřazeného objektu okamžité MDICLIENT jako dočasný `CWnd` ukazatele.
+Vrácený rámec má dva rodiče odebrané z `CMDIChildWnd` a je nadřazeným oknem okna typu MDICLIENT, které `CMDIChildWnd` spravuje objekt. Zavolejte funkci [GetParent](../../mfc/reference/cwnd-class.md#getparent) member, která vrátí `CMDIChildWnd` bezprostřední nadřazený objekt MdiClient objektu jako dočasný `CWnd` ukazatel.
 
 ### <a name="example"></a>Příklad
 
-  Podívejte se na příklad pro [CMDIFrameWnd::MDISetMenu](../../mfc/reference/cmdiframewnd-class.md#mdisetmenu).
+  Podívejte se na příklad pro [CMDIFrameWnd –:: MDISetMenu](../../mfc/reference/cmdiframewnd-class.md#mdisetmenu).
 
-##  <a name="mdiactivate"></a>  CMDIChildWnd::MDIActivate
+##  <a name="mdiactivate"></a>CMDIChildWnd –:: MDIActivate
 
-Voláním této členské funkce aktivovat podřízené okno MDI nezávisle na okno rámce MDI.
+Zavolejte tuto členskou funkci pro aktivaci podřízeného okna MDI nezávisle na okně rámce MDI.
 
 ```
 void MDIActivate();
@@ -213,15 +213,15 @@ void MDIActivate();
 
 ### <a name="remarks"></a>Poznámky
 
-Když se stane aktivní rámec, aktivuje se i podřízené okno, které poslední aktivace.
+Když se rámec změní na aktivní, aktivuje se i podřízené okno, které bylo naposledy aktivováno.
 
 ### <a name="example"></a>Příklad
 
-  Podívejte se na příklad pro [CMDIFrameWnd::GetWindowMenuPopup](../../mfc/reference/cmdiframewnd-class.md#getwindowmenupopup).
+  Podívejte se na příklad pro [CMDIFrameWnd –:: GetWindowMenuPopup](../../mfc/reference/cmdiframewnd-class.md#getwindowmenupopup).
 
-##  <a name="mdidestroy"></a>  CMDIChildWnd::MDIDestroy
+##  <a name="mdidestroy"></a>CMDIChildWnd –:: MDIDestroy
 
-Voláním této členské funkce pro zrušení podřízené okno MDI.
+Chcete-li zničit podřízené okno MDI, zavolejte tuto členskou funkci.
 
 ```
 void MDIDestroy();
@@ -229,15 +229,15 @@ void MDIDestroy();
 
 ### <a name="remarks"></a>Poznámky
 
-Členská funkce Odebere název podřízeného okna z okna rámce a deaktivuje podřízené okno.
+Členská funkce odstraní název podřízeného okna z okna rámce a deaktivuje podřízené okno.
 
 ### <a name="example"></a>Příklad
 
 [!code-cpp[NVC_MFCWindowing#10](../../mfc/reference/codesnippet/cpp/cmdichildwnd-class_4.cpp)]
 
-##  <a name="mdimaximize"></a>  CMDIChildWnd::MDIMaximize
+##  <a name="mdimaximize"></a>CMDIChildWnd –:: MDIMaximize
 
-Voláním této členské funkce pro maximalizaci podřízené okno MDI.
+Zavolejte tuto členskou funkci pro maximalizaci podřízeného okna MDI.
 
 ```
 void MDIMaximize();
@@ -245,15 +245,15 @@ void MDIMaximize();
 
 ### <a name="remarks"></a>Poznámky
 
-Když je podřízené okno maximalizované, ho tak, aby klientské oblasti vyplnění klientské oblasti okna rámce Windows změní. Windows umístí ovládací prvek nabídky podřízené okno rámce nabídek tak, aby uživatel mohl obnovit nebo podřízené okno zavřít a přidá název podřízené okno na titulek okna rámce.
+Když dojde k maximalizaci podřízeného okna, systém Windows změní jeho velikost tak, aby jeho oblast klienta naplnila klientské oblasti okna rámce. Systém Windows umístí řídicí nabídku podřízeného okna do řádku nabídek rámce, aby uživatel mohl obnovit nebo zavřít podřízené okno a přidat název podřízeného okna do nadpisu okna rámce.
 
 ### <a name="example"></a>Příklad
 
 [!code-cpp[NVC_MFCWindowing#11](../../mfc/reference/codesnippet/cpp/cmdichildwnd-class_5.cpp)]
 
-##  <a name="mdirestore"></a>  CMDIChildWnd::MDIRestore
+##  <a name="mdirestore"></a>CMDIChildWnd –:: MDIRestore
 
-Voláním této členské funkce obnovení ze minimalizované nebo maximalizované velikost podřízené okno MDI.
+Zavolejte tuto členskou funkci pro obnovení podřízeného okna MDI z maximalizace nebo minimalizované velikosti.
 
 ```
 void MDIRestore();
@@ -263,9 +263,9 @@ void MDIRestore();
 
 [!code-cpp[NVC_MFCWindowing#12](../../mfc/reference/codesnippet/cpp/cmdichildwnd-class_6.cpp)]
 
-##  <a name="sethandles"></a>  CMDIChildWnd::SetHandles
+##  <a name="sethandles"></a>CMDIChildWnd –:: SetHandles
 
-Nastaví obslužné rutiny pro prostředky nabídky a akcelerátoru.
+Nastaví popisovače pro prostředky nabídky a akcelerátoru.
 
 ```
 void SetHandles(
@@ -276,20 +276,20 @@ void SetHandles(
 ### <a name="parameters"></a>Parametry
 
 *hMenu*<br/>
-Popisovač nabídky prostředků.
+Popisovač prostředku nabídky
 
 *hAccel*<br/>
 Popisovač prostředku akcelerátoru.
 
 ### <a name="remarks"></a>Poznámky
 
-Voláním této funkce nastavíte nabídky a akcelerátor prostředky používané tímto objektem podřízené okno MDI.
+Voláním této funkce nastavíte prostředky nabídky a akcelerátoru používané objektem podřízeného okna MDI.
 
 ## <a name="see-also"></a>Viz také:
 
-[Ukázky knihovny MFC MDI](../../overview/visual-cpp-samples.md)<br/>
-[Ukázky knihovny MFC MDIDOCVW](../../overview/visual-cpp-samples.md)<br/>
-[Ukázky knihovny MFC SNAPVW](../../overview/visual-cpp-samples.md)<br/>
+[Ukázka MDI MFC](../../overview/visual-cpp-samples.md)<br/>
+[MDIDOCVW Sample MFC](../../overview/visual-cpp-samples.md)<br/>
+[SNAPVW Sample MFC](../../overview/visual-cpp-samples.md)<br/>
 [CFrameWnd – třída](../../mfc/reference/cframewnd-class.md)<br/>
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>
 [CWnd – třída](../../mfc/reference/cwnd-class.md)<br/>

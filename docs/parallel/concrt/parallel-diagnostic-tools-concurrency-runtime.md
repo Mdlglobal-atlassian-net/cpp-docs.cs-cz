@@ -4,46 +4,46 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - Parallel Diagnostic Tools [Concurrency Runtime]
 ms.assetid: b1a3f1d2-f5df-4f29-852e-906b3d8341fc
-ms.openlocfilehash: 182171bfcfbaf1476cc25fe3160114bc1d96ca7e
-ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
+ms.openlocfilehash: 34b2421dfc53deeb35dcc659a8d555983e583737
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66449244"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69510495"
 ---
 # <a name="parallel-diagnostic-tools-concurrency-runtime"></a>Paralelní diagnostické nástroje (Concurrency Runtime)
 
-Visual Studio poskytuje rozsáhlou podporu pro ladění a profilování vícevláknových aplikacích.
+Visual Studio poskytuje rozsáhlou podporu pro ladění a profilování aplikací s více vlákny.
 
 ## <a name="debugging"></a>Ladění
 
-Zahrnuje ladicího programu sady Visual Studio **paralelní zásobníky** okně **paralelní úlohy** okna, a **paralelního sledování** okno. Další informace najdete v tématu [názorný postup: Ladění paralelní aplikace](/visualstudio/debugger/walkthrough-debugging-a-parallel-application) a [jak: Použití okna paralelního sledování](/visualstudio/debugger/how-to-use-the-parallel-watch-window).
+Ladicí program sady Visual Studio obsahuje okno paralelní zásobníky, okno **Paralelní úlohy** a okno **paralelního sledování** . Další informace najdete v tématu [Návod: Ladění paralelní aplikace](/visualstudio/debugger/walkthrough-debugging-a-parallel-application) a [postup: Použijte okno](/visualstudio/debugger/how-to-use-the-parallel-watch-window)paralelní kukátko.
 
 ## <a name="profiling"></a>Profilace
 
-Nástroje pro profilaci poskytují tři zobrazení dat, které zobrazují grafické, tabulky a číselné informace o interakci vícevláknové aplikace se sebou samým a s jinými programy. Zobrazení vám umožní rychle identifikovat oblastí zájmu a přejít z bodů na grafické zobrazení volání zásobníků, volání lokality a zdrojového kódu. Další informace najdete v tématu [Vizualizátor souběžnosti](/visualstudio/profiling/concurrency-visualizer).
+Nástroje pro profilaci poskytují tři zobrazení dat, která zobrazují grafické, tabelární a číselné informace o tom, jak vícevláknová aplikace spolupracuje s sebou a s jinými programy. Zobrazení vám umožní rychle identifikovat oblasti, které se týkají, a přejít z bodů v grafickém zobrazení do zásobníků volání, volat weby a zdrojový kód. Další informace najdete v tématu [Vizualizátor souběžnosti](/visualstudio/profiling/concurrency-visualizer).
 
 ## <a name="event-tracing"></a>Trasování událostí
 
-Modul Concurrency Runtime používá [události trasování pro Windows](/windows/desktop/ETW/event-tracing-portal) (ETW) upozornění instrumentace nástrojů, jako je profilovací programy, pokud dojde k různým událostem. Tyto události patří když Plánovač se aktivuje nebo deaktivuje, pokud kontext začíná, skončí, blokuje, odblokuje nebo provede, a když paralelního algoritmu začíná nebo končí.
+Concurrency Runtime používá [trasování událostí pro Windows](/windows/win32/ETW/event-tracing-portal) (ETW) k upozorňování nástrojů instrumentace, jako jsou profilery, když dojde k různým událostem. Tyto události zahrnují při aktivaci nebo deaktivaci plánovače, když kontext začne, končí, blokuje, odblokuje nebo vrátí a když se spustí nebo ukončí paralelní algoritmus.
 
-Nástroje, jako [Vizualizátor souběžnosti](/visualstudio/profiling/concurrency-visualizer) využívat tuto funkci; proto obvykle nemusíte pracovat přímo s těmito událostmi. Tyto události jsou však užitečné, když vyvíjíte vlastní profileru nebo při použití nástroje Sledování událostí, jako [Xperf](https://go.microsoft.com/fwlink/p/?linkid=160628).
+Tato funkce využívá nástroje jako [Vizualizér souběžnosti](/visualstudio/profiling/concurrency-visualizer) . Proto není obvykle nutné pracovat s těmito událostmi přímo. Tyto události jsou však užitečné, pokud vyvíjíte vlastní Profiler nebo používáte nástroje pro trasování událostí, jako je [Xperf](https://go.microsoft.com/fwlink/p/?linkid=160628).
 
-Modul Concurrency Runtime vyvolává tyto události pouze v případě, že je povoleno trasování. Volání [concurrency::EnableTracing](reference/concurrency-namespace-functions.md#enabletracing) funkci umožňující trasování událostí a [concurrency::DisableTracing](reference/concurrency-namespace-functions.md#disabletracing) funkce pro vypnutí trasování.
+Concurrency Runtime tyto události vyvolává pouze v případě, že je povoleno trasování. Voláním funkce [Concurrency:: EnableTracing –](reference/concurrency-namespace-functions.md#enabletracing) Povolte trasování událostí a funkci [Concurrency::D isabletracing](reference/concurrency-namespace-functions.md#disabletracing) pro zakázání trasování.
 
-Následující tabulka popisuje události, které modul runtime vyvolá, když je povoleno trasování událostí:
+Následující tabulka popisuje události, které modul runtime vyvolává, když je povoleno trasování událostí:
 
 |Událost|Popis|Value|
 |-----------|-----------------|-----------|
-|[concurrency::ConcRT_ProviderGuid](reference/concurrency-namespace-constants1.md#concrt_providerguid)|Identifikátor poskytovatele trasování událostí pro Windows pro Concurrency Runtime.|`f7b697a3-4db5-4d3b-be71-c4d284e6592f`|
-|[concurrency::ContextEventGuid](reference/concurrency-namespace-constants1.md#contexteventguid)|Značky událostí, které souvisejí s kontexty.|`5727a00f-50be-4519-8256-f7699871fecb`|
-|[concurrency::PPLParallelForEventGuid](reference/concurrency-namespace-constants1.md#pplparallelforeventguid)|Označí vstupu a výstupu na volání [concurrency::parallel_for](reference/concurrency-namespace-functions.md#parallel_for) algoritmus.|`31c8da6b-6165-4042-8b92-949e315f4d84`|
-|[concurrency::PPLParallelForeachEventGuid](reference/concurrency-namespace-constants1.md#pplparallelforeacheventguid)|Označí vstupu a výstupu na volání [: concurrency::parallel_for_each](reference/concurrency-namespace-functions.md#parallel_for_each) algoritmus.|`5cb7d785-9d66-465d-bae1-4611061b5434`|
-|[concurrency::PPLParallelInvokeEventGuid](reference/concurrency-namespace-constants1.md#pplparallelinvokeeventguid)|Označí vstupu a výstupu na volání [concurrency::parallel_invoke](reference/concurrency-namespace-functions.md#parallel_invoke) algoritmus.|`d1b5b133-ec3d-49f4-98a3-464d1a9e4682`|
-|[concurrency::SchedulerEventGuid](reference/concurrency-namespace-constants1.md#schedulereventguid)|Označí události, které se vztahují k [Plánovač úloh](../../parallel/concrt/task-scheduler-concurrency-runtime.md).|`e2091f8a-1e0a-4731-84a2-0dd57c8a5261`|
-|[concurrency::VirtualProcessorEventGuid](reference/concurrency-namespace-constants1.md#virtualprocessoreventguid)|Značky událostí, které se týkají virtuálních procesorů.|`2f27805f-1676-4ecc-96fa-7eb09d44302f`|
+|[concurrency::ConcRT_ProviderGuid](reference/concurrency-namespace-constants1.md#concrt_providerguid)|Identifikátor zprostředkovatele ETW pro Concurrency Runtime.|`f7b697a3-4db5-4d3b-be71-c4d284e6592f`|
+|[concurrency::ContextEventGuid](reference/concurrency-namespace-constants1.md#contexteventguid)|Označí události, které jsou v souvislosti s kontexty.|`5727a00f-50be-4519-8256-f7699871fecb`|
+|[concurrency::PPLParallelForEventGuid](reference/concurrency-namespace-constants1.md#pplparallelforeventguid)|Označí úvodní a výstupní volání do arallel_for algoritmu [Concurrency::p](reference/concurrency-namespace-functions.md#parallel_for) .|`31c8da6b-6165-4042-8b92-949e315f4d84`|
+|[concurrency::PPLParallelForeachEventGuid](reference/concurrency-namespace-constants1.md#pplparallelforeacheventguid)|Označí úvodní a výstupní volání do arallel_for_each algoritmu [Concurrency::p](reference/concurrency-namespace-functions.md#parallel_for_each) .|`5cb7d785-9d66-465d-bae1-4611061b5434`|
+|[concurrency::PPLParallelInvokeEventGuid](reference/concurrency-namespace-constants1.md#pplparallelinvokeeventguid)|Označí úvodní a výstupní volání do arallel_invoke algoritmu [Concurrency::p](reference/concurrency-namespace-functions.md#parallel_invoke) .|`d1b5b133-ec3d-49f4-98a3-464d1a9e4682`|
+|[concurrency::SchedulerEventGuid](reference/concurrency-namespace-constants1.md#schedulereventguid)|Označí události, které souvisí s [Plánovač úloh](../../parallel/concrt/task-scheduler-concurrency-runtime.md).|`e2091f8a-1e0a-4731-84a2-0dd57c8a5261`|
+|[concurrency::VirtualProcessorEventGuid](reference/concurrency-namespace-constants1.md#virtualprocessoreventguid)|Označí události, které souvisí s virtuálními procesory.|`2f27805f-1676-4ecc-96fa-7eb09d44302f`|
 
-Definuje modulu Runtime souběžnosti, ale nevyvolá aktuálně, následující události. Modul runtime rezervuje pro budoucí použití těchto událostí:
+Concurrency Runtime definuje, ale v současné době nevyvolává následující události. Modul runtime rezervuje tyto události pro budoucí použití:
 
 - [concurrency::ConcRTEventGuid](reference/concurrency-namespace-constants1.md#concrteventguid)
 
@@ -55,13 +55,13 @@ Definuje modulu Runtime souběžnosti, ale nevyvolá aktuálně, následující 
 
 - [concurrency::ResourceManagerEventGuid](reference/concurrency-namespace-constants1.md#resourcemanagereventguid)
 
-[Concurrency::ConcRT_EventType](reference/concurrency-namespace-enums.md#concrt_eventtype) určuje výčet možných operacích, které sleduje události. Například na vstupu `parallel_for` algoritmus, modul runtime vyvolá `PPLParallelForEventGuid` událostí a poskytuje `CONCRT_EVENT_START` jako operaci. Před `parallel_for` vrátí algoritmus, modul runtime znovu vyvolá `PPLParallelForEventGuid` událostí a poskytuje `CONCRT_EVENT_END` jako operaci.
+Výčet [Concurrency:: ConcRT_EventType](reference/concurrency-namespace-enums.md#concrt_eventtype) určuje možné operace, které událost sleduje. Například na začátku `parallel_for` algoritmu modul runtime `PPLParallelForEventGuid` vyvolá událost a poskytne `CONCRT_EVENT_START` jako operaci. Předtím, `parallel_for` než se algoritmus vrátí, modul runtime znovu `PPLParallelForEventGuid` vyvolá událost a `CONCRT_EVENT_END` poskytne jako operaci.
 
-Následující příklad ukazuje, jak povolit trasování pro volání `parallel_for`. Modul runtime netrasuje první volání `parallel_for` protože to není povoleno trasování. Volání `EnableTracing` trasování druhé volání modulu runtime umožňuje `parallel_for`.
+Následující příklad ukazuje, jak povolit trasování pro volání `parallel_for`. Modul runtime nesleduje první volání do `parallel_for` , protože trasování není povoleno. Volání, které `EnableTracing` umožňuje modulu runtime sledovat druhé `parallel_for`volání.
 
 [!code-cpp[concrt-etw#1](../../parallel/concrt/codesnippet/cpp/parallel-diagnostic-tools-concurrency-runtime_1.cpp)]
 
-Modul runtime sleduje počet případů, kdy zavoláte `EnableTracing` a `DisableTracing`. Proto pokud zavoláte `EnableTracing` více než jednou, je nutné volat `DisableTracing` stejný počet, kolikrát aby bylo možné zakázat trasování.
+Modul runtime sleduje počet, kolikrát zavoláte `EnableTracing` a. `DisableTracing` Proto pokud voláte `EnableTracing` víckrát, je nutné volat `DisableTracing` stejný počet, aby bylo trasování zakázáno.
 
 ## <a name="see-also"></a>Viz také:
 

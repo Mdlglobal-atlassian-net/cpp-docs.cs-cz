@@ -8,24 +8,24 @@ helpviewer_keywords:
 - tabs [MFC], attributes
 - CTabCtrl class [MFC], tab control attributes
 ms.assetid: ecf190cb-f323-4751-bfdb-766dbe6bb553
-ms.openlocfilehash: ca9f89565770e60a59007d609d132fae15eacae6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 982ec40e330e2a7dda5c125d83e54751cd14416d
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62306447"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69511239"
 ---
 # <a name="tabs-and-tab-control-attributes"></a>Karty a atributy ovládacího prvku karta
 
-Máte značné ovládat vzhled a chování karet, které tvoří ovládacího prvku karta ([atributu CTabCtrl](../mfc/reference/ctabctrl-class.md)). Každá karta může mít popisek, ikony, stavu položky a s ním spojená hodnotu 32-bit definovaného aplikací. Pro každou kartu můžete zobrazit ikonu, popisek nebo obojí.
+Máte značnou kontrolu nad vzhledem a chováním karet, které tvoří ovládací prvek karta ([atributu CTabCtrl](../mfc/reference/ctabctrl-class.md)). Každá karta může mít popisek, ikonu, stav položky a přidruženou hodnotu 32 definovanou aplikací. Pro každou kartu můžete zobrazit ikonu, popisek nebo obojí.
 
-Kromě toho každá karta položka může mít tři možné stavy: stisknutí stavů a zvýrazněn. Tento stav lze nastavit pouze tak, že upravíte existující položka karty. Pokud chcete upravit existující položka karty, načíst pomocí volání [GetItem](../mfc/reference/ctabctrl-class.md#getitem), změnit `TCITEM` struktury (konkrétně *dwState* a *dwStateMask* datové členy ) a pak se vraťte upravené `TCITEM` struktura voláním [SetItem](../mfc/reference/ctabctrl-class.md#setitem). Pokud budete muset vymazat stavy položky karty položek v `CTabCtrl` objektu, volání [DeselectAll](../mfc/reference/ctabctrl-class.md#deselectall). Tato funkce Vynuluje stav všech položek kartu nebo všechny položky s výjimkou jednoho aktuálně vybrané.
+Kromě toho může mít každá položka karty tři možné stavy: stisknuté, nestisknuté nebo zvýrazněné. Tento stav lze nastavit pouze úpravou existující položky karty. Chcete-li upravit existující položku karty, načtěte ji voláním [GetItem](../mfc/reference/ctabctrl-class.md#getitem), upravte `TCITEM` strukturu (konkrétně datové členy *dwState* a *dwStateMask* ) a pak vraťte upravenou `TCITEM` strukturu voláním metody [SetItem](../mfc/reference/ctabctrl-class.md#setitem). Pokud potřebujete vymazat stavy položek všech položek karty v `CTabCtrl` objektu, zavolejte na [DeselectAll](../mfc/reference/ctabctrl-class.md#deselectall). Tato funkce obnoví stav všech položek karty nebo všech položek s výjimkou aktuálně vybraného.
 
-Následující kód vymaže stav všech položek kartu a pak změní stav třetí položka:
+Následující kód vymaže stav všech položek karty a následně upraví stav třetí položky:
 
 [!code-cpp[NVC_MFCControlLadenDialog#32](../mfc/codesnippet/cpp/tabs-and-tab-control-attributes_1.cpp)]
 
-Další informace o atributech kartu, najdete v části [karty a atributy karta](/windows/desktop/Controls/tab-controls) v sadě Windows SDK. Další informace o přidání karet do ovládacího prvku karta, naleznete v tématu [přidání karet do ovládacího prvku karta](../mfc/adding-tabs-to-a-tab-control.md) dále v tomto tématu.
+Další informace o atributech karet naleznete v tématu [karty a atributy tabulátoru](/windows/win32/Controls/tab-controls) v Windows SDK. Další informace o přidávání karet do ovládacího prvku karta najdete v části [Přidání karet k ovládacímu prvku karty](../mfc/adding-tabs-to-a-tab-control.md) dále v tomto tématu.
 
 ## <a name="see-also"></a>Viz také:
 

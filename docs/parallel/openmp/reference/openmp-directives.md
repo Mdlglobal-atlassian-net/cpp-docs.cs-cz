@@ -29,48 +29,48 @@ helpviewer_keywords:
 - single OpenMP directive
 - threadprivate OpenMP directive
 ms.assetid: 0562c263-344c-466d-843e-de830d918940
-ms.openlocfilehash: d644b612c0c326692786c94046d799163dfbce8d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 108e23a91b2bd0041d95a2262007ce4f684fc671
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62362683"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69512189"
 ---
 # <a name="openmp-directives"></a>Direktivy jazyka OpenMP
 
-Obsahuje odkazy na direktivy použité v rozhraní API OpenMP.
+Obsahuje odkazy na direktivy používané v rozhraní OpenMP API.
 
-Vizuální C++ podporuje následující direktivy OpenMP.
+Vizuál C++ podporuje následující direktivy OpenMP.
 
-Pro paralelní sdílení práce:
-
-|– Direktiva|Popis|
-|---------|-----------|
-|[parallel](#parallel)|Definuje paralelní oblasti, což je kód, který spustí paralelně několik vláken.|
-|[for](#for-openmp)|Způsobí, že práci `for` smyčky uvnitř paralelní oblasti rozdělit mezi vlákny.|
-|[Oddíly](#sections-openmp)|Identifikuje části kódu k rozdělení mezi všemi vlákny.|
-|[single](#single)|Umožňuje určit, že část kódu by měl být provedeny v jednom vlákně, ne tedy nutně hlavní vlákno.|
-
-Pro hlavní a synchronizační:
+Pro paralelní práci – sdílení:
 
 |– Direktiva|Popis|
 |---------|-----------|
-|[master](#master)|Určuje, že by se měl spustit pouze hlavní vlákno části programu.|
-|[critical](#critical)|Určuje, že kód je pouze spustit v jednom vlákně najednou.|
-|[barrier](#barrier)|Synchronizuje všechna vlákna v týmu; všechna vlákna pozastaví při bariéry, dokud všechna vlákna provést odbourejte překážky bránící.|
-|[atomic](#atomic)|Určuje, že umístění v paměti, která bude aktualizována atomicky.|
-|[Vyprázdnění](#flush-openmp)|Určuje, že všechna vlákna stejným zobrazení paměti pro všechny sdílené objekty.|
-|[Řazení](#ordered-openmp-directives)|Určuje, že kód v části paralelizované `for` smyčky by měl být spuštěn jako sekvenční smyčka.|
+|[parallel](#parallel)|Definuje paralelní oblast, což je kód, který bude spuštěn paralelně více vlákny.|
+|[for](#for-openmp)|Způsobí, že práce ve `for` smyčce uvnitř paralelní oblasti bude rozdělena mezi vlákna.|
+|[řezů](#sections-openmp)|Identifikuje oddíly kódu, které mají být rozděleny mezi všechna vlákna.|
+|[single](#single)|Umožňuje určit, že oddíl kódu by měl být spuštěn v jednom vlákně, nemusí nutně být hlavním vláknem.|
 
-Pro data prostředí:
+Pro hlavní a následující synchronizaci:
 
 |– Direktiva|Popis|
 |---------|-----------|
-|[threadprivate](#threadprivate)|Určuje, že proměnná je privátní pro vlákno.|
+|[master](#master)|Určuje, že by měl být spuštěn pouze hlavní podproces programu.|
+|[critical](#critical)|Určuje, že kód je spuštěn pouze v jednom vlákně.|
+|[barrier](#barrier)|Synchronizuje všechna vlákna v týmu; všechna vlákna se pozastaví na bariérě, dokud všechna vlákna nespustí bariéru.|
+|[atomic](#atomic)|Určuje, že umístění v paměti, které se bude aktualizovat atomicky.|
+|[zaznamenány](#flush-openmp)|Určuje, že všechna vlákna mají stejné zobrazení paměti pro všechny sdílené objekty.|
+|[objednávek](#ordered-openmp-directives)|Určuje, že kód v rámci paralelní `for` smyčky by měl být proveden jako sekvenční smyčka.|
+
+Pro datové prostředí:
+
+|– Direktiva|Popis|
+|---------|-----------|
+|[threadprivate](#threadprivate)|Určuje, že proměnná je soukromá pro vlákno.|
 
 ## <a name="atomic"></a>Atomic
 
-Určuje, že umístění v paměti, která bude aktualizována atomicky.
+Určuje, že umístění v paměti, které se bude aktualizovat atomicky.
 
 ```
 #pragma omp atomic
@@ -79,14 +79,14 @@ Určuje, že umístění v paměti, která bude aktualizována atomicky.
 
 ### <a name="parameters"></a>Parametry
 
-*Výraz*<br/>
-Příkaz, který má *l-hodnoty*, jehož umístění paměti, které chcete chránit proti více než jeden zápis.
+*vyjádření*<br/>
+Příkaz, který má *lvalue*, jejichž umístění paměti chcete chránit před více než jedním zápisem.
 
 ### <a name="remarks"></a>Poznámky
 
-`atomic` Podporuje bez klauzule.
+`atomic` Direktiva nepodporuje žádné klauzule.
 
-Další informace najdete v tématu [vytvořit 2.6.4 atomic](../../../parallel/openmp/2-6-4-atomic-construct.md).
+Další informace naleznete v tématu [2.6.4 Atomic konstrukce](../../../parallel/openmp/2-6-4-atomic-construct.md).
 
 ### <a name="example"></a>Příklad
 
@@ -113,9 +113,9 @@ int main() {
 Number of threads: 10
 ```
 
-## <a name="barrier"></a>Barrier
+## <a name="barrier"></a>bariéra
 
-Synchronizuje všechna vlákna v týmu; všechna vlákna pozastaví při bariéry, dokud všechna vlákna provést odbourejte překážky bránící.
+Synchronizuje všechna vlákna v týmu; všechna vlákna se pozastaví na bariérě, dokud všechna vlákna nespustí bariéru.
 
 ```
 #pragma omp barrier
@@ -123,17 +123,17 @@ Synchronizuje všechna vlákna v týmu; všechna vlákna pozastaví při bariér
 
 ### <a name="remarks"></a>Poznámky
 
-`barrier` Podporuje bez klauzule.
+`barrier` Direktiva nepodporuje žádné klauzule.
 
-Další informace najdete v tématu [2.6.3 barrier – direktiva](../../../parallel/openmp/2-6-3-barrier-directive.md).
+Další informace najdete v tématu [direktiva 2.6.3 bariéry](../../../parallel/openmp/2-6-3-barrier-directive.md).
 
 ### <a name="example"></a>Příklad
 
-Pro ukázku toho, jak používat `barrier`, naleznete v tématu [hlavní](#master).
+Ukázku použití `barrier`naleznete v tématu [Master](#master).
 
-## <a name="critical"></a>Kritická
+## <a name="critical"></a>kritické
 
-Určuje, že kód provádí pouze v jednom vlákně najednou.
+Určuje, že kód je spuštěn pouze v jednom vlákně.
 
 ```
 #pragma omp critical [(name)]
@@ -144,14 +144,14 @@ Určuje, že kód provádí pouze v jednom vlákně najednou.
 
 ### <a name="parameters"></a>Parametry
 
-*Jméno*<br/>
-(Volitelné) Název pro identifikaci kritický kód. Název musí být uzavřen v závorkách.
+*name*<br/>
+Volitelné Název pro identifikaci kritického kódu. Název musí být uzavřen v závorkách.
 
 ### <a name="remarks"></a>Poznámky
 
-`critical` Podporuje bez klauzule.
+`critical` Direktiva nepodporuje žádné klauzule.
 
-Další informace najdete v tématu [2.6.2 důležité vytvořit](../../../parallel/openmp/2-6-2-critical-construct.md).
+Další informace naleznete v tématu [2.6.2 Critical konstrukce](../../../parallel/openmp/2-6-2-critical-construct.md).
 
 ### <a name="example"></a>Příklad
 
@@ -211,9 +211,9 @@ int main()
 max = 29358
 ```
 
-## <a name="flush-openmp"></a>Vyprázdnění
+## <a name="flush-openmp"></a>zaznamenány
 
-Určuje, že všechna vlákna stejným zobrazení paměti pro všechny sdílené objekty.
+Určuje, že všechna vlákna mají stejné zobrazení paměti pro všechny sdílené objekty.
 
 ```
 #pragma omp flush [(var)]
@@ -222,13 +222,13 @@ Určuje, že všechna vlákna stejným zobrazení paměti pro všechny sdílené
 ### <a name="parameters"></a>Parametry
 
 *var*<br/>
-(Volitelné) Čárkou oddělený seznam proměnných, které představují objekty, které chcete synchronizovat. Pokud *var* není zadán, vyprázdní všechny paměti.
+Volitelné Seznam proměnných oddělených čárkami, které reprezentují objekty, které chcete synchronizovat. Pokud není zadán *var* , je vyprázdněna veškerá paměť.
 
 ### <a name="remarks"></a>Poznámky
 
-`flush` Podporuje bez klauzule.
+`flush` Direktiva nepodporuje žádné klauzule.
 
-Další informace najdete v tématu [2.6.5 flush – direktiva](../../../parallel/openmp/2-6-5-flush-directive.md).
+Další informace naleznete v tématu [direktiva aplikace 2.6.5 flush](../../../parallel/openmp/2-6-5-flush-directive.md).
 
 ### <a name="example"></a>Příklad
 
@@ -287,9 +287,9 @@ Thread 1: process data
 data = 2
 ```
 
-## <a name="for-openmp"></a>pro
+## <a name="for-openmp"></a>for
 
-Způsobí, že práci `for` smyčky uvnitř paralelní oblasti rozdělit mezi vlákny.
+Způsobí, že práce ve `for` smyčce uvnitř paralelní oblasti bude rozdělena mezi vlákna.
 
 ```
 #pragma omp [parallel] for [clauses]
@@ -298,27 +298,27 @@ Způsobí, že práci `for` smyčky uvnitř paralelní oblasti rozdělit mezi vl
 
 ### <a name="parameters"></a>Parametry
 
-*Klauzule*<br/>
-(Volitelné) Nula nebo více klauzulí, najdete v článku **poznámky** oddílu.
+*platný*<br/>
+Volitelné Nula nebo více klauzulích naleznete v části **poznámky** .
 
 *for_statement*<br/>
-A `for` smyčky. Způsobí nedefinované chování, pokud uživatel kód v `for` změní indexovaná proměnná smyčky.
+`for` Smyčka. Nedefinované chování bude mít za následek, že uživatelský `for` kód ve smyčce změní indexovou proměnnou.
 
 ### <a name="remarks"></a>Poznámky
 
-`for` Podporuje následující klauzule:
+`for` Direktiva podporuje následující klauzule:
 
 - [private](openmp-clauses.md#private-openmp)
 - [firstprivate](openmp-clauses.md#firstprivate)
 - [lastprivate](openmp-clauses.md#lastprivate)
 - [reduction](openmp-clauses.md#reduction)
-- [Řazení](openmp-clauses.md#ordered-openmp-clauses)
+- [objednávek](openmp-clauses.md#ordered-openmp-clauses)
 - [schedule](openmp-clauses.md#schedule)
 - [nowait](openmp-clauses.md#nowait)
 
-Pokud `parallel` je také zadána, `clauses` může být jakékoli klauzule přijal `parallel` nebo `for` direktivy, s výjimkou `nowait`.
+Pokud `parallel` je také zadáno, `clauses` může být `parallel` libovolná klauzule přijatá direktivami `for` nebo, s `nowait`výjimkou.
 
-Další informace najdete v tématu [2.4.1 for – konstrukce](../../../parallel/openmp/2-4-1-for-construct.md).
+Další informace naleznete v tématu [2.4.1 pro konstrukci](../../../parallel/openmp/2-4-1-for-construct.md).
 
 ### <a name="example"></a>Příklad
 
@@ -384,9 +384,9 @@ int main() {
 The sum of 1 through 10 is 55
 ```
 
-## <a name="master"></a>Hlavní
+## <a name="master"></a>hlavní
 
-Určuje, že by se měl spustit pouze hlavní vlákno části programu.
+Určuje, že by měl být spuštěn pouze hlavní podproces programu.
 
 ```
 #pragma omp master
@@ -397,11 +397,11 @@ Určuje, že by se měl spustit pouze hlavní vlákno části programu.
 
 ### <a name="remarks"></a>Poznámky
 
-`master` Podporuje bez klauzule.
+`master` Direktiva nepodporuje žádné klauzule.
 
-[Jeden](#single) umožňuje určit, že část kódu by měl být provedeny v jednom vlákně, ne tedy nutně hlavní vlákno.
+[Jediná](#single) Direktiva umožňuje určit, že část kódu by měla být spuštěna v jednom vlákně, nemusí nutně být hlavním vláknem.
 
-Další informace najdete v tématu [2.6.1 master konstrukce](../../../parallel/openmp/2-6-1-master-construct.md).
+Další informace najdete v tématu [2.6.1 Master konstrukce](../../../parallel/openmp/2-6-1-master-construct.md).
 
 ### <a name="example"></a>Příklad
 
@@ -446,9 +446,9 @@ a[3] = 9
 a[4] = 16
 ```
 
-## <a name="ordered-openmp-directives"></a>Řazení
+## <a name="ordered-openmp-directives"></a>objednávek
 
-Určuje, že kód v části paralelizované `for` smyčky by měl být spuštěn jako sekvenční smyčka.
+Určuje, že kód v rámci paralelní `for` smyčky by měl být proveden jako sekvenční smyčka.
 
 ```
 #pragma omp ordered
@@ -457,11 +457,11 @@ Určuje, že kód v části paralelizované `for` smyčky by měl být spuštěn
 
 ### <a name="remarks"></a>Poznámky
 
-`ordered` Direktiva musí být v rámci dynamický rozsah [pro](#for-openmp) nebo `parallel for` vytvořit pomocí `ordered` klauzuli.
+Direktiva musí být v dynamickém rozsahu `ordered` [pro](#for-openmp) nebo `parallel for` konstrukce s klauzulí. `ordered`
 
-`ordered` Podporuje bez klauzule.
+`ordered` Direktiva nepodporuje žádné klauzule.
 
-Další informace najdete v tématu [2.6.6 ordered – konstrukce](../../../parallel/openmp/2-6-6-ordered-construct.md).
+Další informace naleznete v tématu [2.6.6ED konstrukce](../../../parallel/openmp/2-6-6-ordered-construct.md).
 
 ### <a name="example"></a>Příklad
 
@@ -517,9 +517,9 @@ test2() iteration 3
 test2() iteration 4
 ```
 
-## <a name="parallel"></a>paralelní
+## <a name="parallel"></a>zpracování
 
-Definuje paralelní oblasti, což je kód, který spustí paralelně několik vláken.
+Definuje paralelní oblast, což je kód, který bude spuštěn paralelně více vlákny.
 
 ```
 #pragma omp parallel [clauses]
@@ -530,29 +530,29 @@ Definuje paralelní oblasti, což je kód, který spustí paralelně několik vl
 
 ### <a name="parameters"></a>Parametry
 
-*Klauzule*<br/>
-(Volitelné) Nula nebo více klauzulí, najdete v článku **poznámky** oddílu.
+*platný*<br/>
+Volitelné Nula nebo více klauzulích naleznete v části **poznámky** .
 
 ### <a name="remarks"></a>Poznámky
 
-`parallel` Podporuje následující klauzule:
+`parallel` Direktiva podporuje následující klauzule:
 
 - [if](openmp-clauses.md#if-openmp)
 - [private](openmp-clauses.md#private-openmp)
 - [firstprivate](openmp-clauses.md#firstprivate)
 - [default](openmp-clauses.md#default-openmp)
-- [Sdílet](openmp-clauses.md#shared-openmp)
+- [sdíleného](openmp-clauses.md#shared-openmp)
 - [copyin](openmp-clauses.md#copyin)
 - [reduction](openmp-clauses.md#reduction)
 - [num_threads](openmp-clauses.md#num-threads)
 
-`parallel` Můžete také použít s [pro](#for-openmp) a [oddíly](#sections-openmp) direktivy.
+`parallel`lze také použít spolu se směrnicemi [oddílů](#sections-openmp) a. [](#for-openmp)
 
-Další informace najdete v tématu [2.3 parallel – konstrukce](../../../parallel/openmp/2-3-parallel-construct.md).
+Další informace najdete v tématu [2,3 paralelní konstrukce](../../../parallel/openmp/2-3-parallel-construct.md).
 
 ### <a name="example"></a>Příklad
 
-Následující příklad ukazuje, jak nastavit počet vláken a definovat paralelní oblasti. Počet vláken je ve výchozím nastavení rovna počtu logických procesorů v počítači. Například pokud máte počítače s jednoho fyzického procesoru, s povoleným hyperthreadingem, bude mít dva logické procesory a dvěma vlákny. Pořadí výstup se může lišit na různých strojích.
+Následující příklad ukazuje, jak nastavit počet vláken a definovat paralelní oblast. Počet podprocesů je ve výchozím nastavení stejný jako počet logických procesorů v počítači. Například pokud máte počítač s jedním fyzickým procesorem s povoleným podprocesem, bude mít dva logické procesory a dvě vlákna. Pořadí výstupu se může v různých počítačích lišit.
 
 ```cpp
 // omp_parallel.cpp
@@ -576,9 +576,9 @@ Hello from thread 2
 Hello from thread 3
 ```
 
-## <a name="sections-openmp"></a>Oddíly
+## <a name="sections-openmp"></a>řezů
 
-Identifikuje části kódu k rozdělení mezi všemi vlákny.
+Identifikuje oddíly kódu, které mají být rozděleny mezi všechna vlákna.
 
 ```
 #pragma omp [parallel] sections [clauses]
@@ -592,14 +592,14 @@ Identifikuje části kódu k rozdělení mezi všemi vlákny.
 
 ### <a name="parameters"></a>Parametry
 
-*Klauzule*<br/>
-(Volitelné) Nula nebo více klauzulí, najdete v článku **poznámky** oddílu.
+*platný*<br/>
+Volitelné Nula nebo více klauzulích naleznete v části **poznámky** .
 
 ### <a name="remarks"></a>Poznámky
 
-`sections` Směrnice může obsahovat nula nebo více `section` direktivy.
+Direktiva může obsahovat nula nebo více `section` direktiv. `sections`
 
-`sections` Podporuje následující klauzule:
+`sections` Direktiva podporuje následující klauzule:
 
 - [private](openmp-clauses.md#private-openmp)
 - [firstprivate](openmp-clauses.md#firstprivate)
@@ -607,9 +607,9 @@ Identifikuje části kódu k rozdělení mezi všemi vlákny.
 - [reduction](openmp-clauses.md#reduction)
 - [nowait](openmp-clauses.md#nowait)
 
-Pokud `parallel` je také zadána, `clauses` může být jakékoli klauzule přijal `parallel` nebo `sections` direktivy, s výjimkou `nowait`.
+Pokud `parallel` je také zadáno, `clauses` může být `parallel` libovolná klauzule přijatá direktivami `sections` nebo, s `nowait`výjimkou.
 
-Další informace najdete v tématu [2.4.2 sections – konstrukce](../../../parallel/openmp/2-4-2-sections-construct.md).
+Další informace naleznete v části [2.4.2 konstrukce](../../../parallel/openmp/2-4-2-sections-construct.md).
 
 ### <a name="example"></a>Příklad
 
@@ -634,9 +634,9 @@ Hello from thread 0
 Hello from thread 0
 ```
 
-## <a name="single"></a>Jeden
+## <a name="single"></a>konkrétní
 
-Umožňuje určit, že část kódu by měl být provedeny v jednom vlákně, ne tedy nutně hlavní vlákno.
+Umožňuje určit, že oddíl kódu by měl být spuštěn v jednom vlákně, nemusí nutně být hlavním vláknem.
 
 ```
 #pragma omp single [clauses]
@@ -647,21 +647,21 @@ Umožňuje určit, že část kódu by měl být provedeny v jednom vlákně, ne
 
 ### <a name="parameters"></a>Parametry
 
-*Klauzule*<br/>
-(Volitelné) Nula nebo více klauzulí, najdete v článku **poznámky** oddílu.
+*platný*<br/>
+Volitelné Nula nebo více klauzulích naleznete v části **poznámky** .
 
 ### <a name="remarks"></a>Poznámky
 
-`single` Podporuje následující klauzule:
+`single` Direktiva podporuje následující klauzule:
 
 - [private](openmp-clauses.md#private-openmp)
 - [firstprivate](openmp-clauses.md#firstprivate)
 - [copyprivate](openmp-clauses.md#copyprivate)
 - [nowait](openmp-clauses.md#nowait)
 
-[Hlavní](#master) umožňuje určit, že část kódu by měl provést pouze v hlavní vlákno.
+[Hlavní](#master) Direktiva umožňuje určit, že oddíl kódu by měl být proveden pouze v hlavním vlákně.
 
-Další informace najdete v tématu [2.4.3 jeden vytvořit](../../../parallel/openmp/2-4-3-single-construct.md).
+Další informace naleznete v části [2.4.3 Single konstrukcí](../../../parallel/openmp/2-4-3-single-construct.md).
 
 ### <a name="example"></a>Příklad
 
@@ -697,7 +697,7 @@ write output
 
 ## <a name="threadprivate"></a>threadprivate
 
-Určuje, že proměnná je privátní pro vlákno.
+Určuje, že proměnná je soukromá pro vlákno.
 
 ```
 #pragma omp threadprivate(var)
@@ -706,17 +706,17 @@ Určuje, že proměnná je privátní pro vlákno.
 ### <a name="parameters"></a>Parametry
 
 *var*<br/>
-Čárkou oddělený seznam proměnných, které chcete označit jako soukromé ve vlákně. *var* musí být globální nebo obor názvů rozsahem proměnné nebo statické místní proměnné.
+Seznam proměnných oddělených čárkami, které chcete nastavit jako soukromé pro vlákno. *var* musí být buď proměnná s oborem názvů (Global), nebo místní statická proměnná.
 
 ### <a name="remarks"></a>Poznámky
 
-`threadprivate` Podporuje bez klauzule.
+`threadprivate` Direktiva nepodporuje žádné klauzule.
 
-`threadprivate` Podle směrnice [vlákno](../../../cpp/thread.md) atribut, pomocí [__declspec](../../../cpp/declspec.md) – klíčové slovo; omezení `__declspec(thread)` platí pro `threadprivate`. Například `threadprivate` proměnné budou existovat v jakékoli vlákno spuštění v procesu, nejen vlákna, které jsou součástí týmu vlákna vytvořený službou paralelní oblasti. Mějte na paměti tato implementace podrobností Můžete si všimnout, konstruktory pro `threadprivate` uživatelem definovaný typ, se nazývají další často, než očekáváte.
+[](../../../cpp/declspec.md) `__declspec(thread)` `threadprivate` [](../../../cpp/thread.md) Direktiva je založena na atributu vlákna pomocí klíčového slova __declspec; omezení pro použití na. `threadprivate` Například `threadprivate` proměnná bude existovat v jakémkoli vlákně spuštěném v procesu, nikoli pouze vlákna, která jsou součástí týmu vláken vytvořeného v paralelní oblasti. Uvědomte si tyto podrobnosti implementace; Můžete si všimnout, že konstruktory pro `threadprivate` uživatelsky definovaný typ jsou volány častěji.
 
-Můžete použít `threadprivate` v knihovně DLL, která je staticky načtená při spouštění procesu, ale nemůžete použít `threadprivate` v žádné knihovny DLL, která se načtou prostřednictvím [LoadLibrary](/windows/desktop/api/libloaderapi/nf-libloaderapi-loadlibrarya) například knihovny DLL, která jsou načtena s  [ /delayload (zpoždění načtení importu)](../../../build/reference/delayload-delay-load-import.md), který také používá `LoadLibrary`.
+Můžete použít `threadprivate` v knihovně DLL, která je staticky načtena při spuštění procesu, ale nemůžete `threadprivate` ji použít v žádné knihovně DLL, která bude načtena prostřednictvím funkce [LoadLibrary](/windows/win32/api/libloaderapi/nf-libloaderapi-loadlibraryw) , jako je například knihovna DLL, které jsou načteny pomocí [/DELAYLOAD (import zpožděného načtení)](../../../build/reference/delayload-delay-load-import.md), který také používá `LoadLibrary`.
 
-A `threadprivate` proměnnou *zničitelné* typ není zaručeno, že má jeho destruktor volá. Příklad:
+Proměnná typu zničitelné není zaručena, že by měla být volána jeho destruktor. `threadprivate` Příklad:
 
 ```
 struct MyType
@@ -733,10 +733,10 @@ int main()
 }
 ```
 
-Uživatelé nemají žádnou kontrolu, když se ukončí vlákna tvořící paralelní oblasti. Pokud tato vlákna při ukončení procesu, vlákna nebudete nijak upozorněni o ukončení procesu a destruktor se nebude volat pro `threaded_var` v libovolném vlákně kromě toho, který ukončí (tady, primární vlákno). Takže kód by neměl spolehnout na řádné zničení `threadprivate` proměnné.
+Uživatelé nemají žádnou kontrolu nad tím, kdy skončí vlákna tvořící paralelní oblast. Pokud tato vlákna existují po ukončení procesu, vlákna nebudou informována o ukončení procesu a destruktor nebude volán pro `threaded_var` v jakémkoli vlákně s výjimkou toho, který ukončuje (zde primární vlákno). Takže kód by neměl počítat pro správné zničení `threadprivate` proměnných.
 
-Další informace najdete v tématu [2.7.1 threadprivate – direktiva](../../../parallel/openmp/2-7-1-threadprivate-directive.md).
+Další informace najdete v tématu [direktiva 2.7.1 threadprivate](../../../parallel/openmp/2-7-1-threadprivate-directive.md).
 
 ### <a name="example"></a>Příklad
 
-Pro ukázkový používání `threadprivate`, naleznete v tématu [privátní](openmp-clauses.md#private-openmp).
+Ukázku použití `threadprivate`naleznete v tématu [Private](openmp-clauses.md#private-openmp).

@@ -44,18 +44,18 @@ helpviewer_keywords:
 - _InterlockedDecrement64_nf intrinsic
 - InterlockedDecrement_rel intrinsic
 ms.assetid: 5268fce3-86b5-4b2b-b96c-2e531a3fb9b5
-ms.openlocfilehash: 525c40f4260d59f370f0580d2cb7d9e8f184ee4c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 43bf7a9b788c176490ec3fe08e370708eaf000ce
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62396753"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69509402"
 ---
-# <a name="interlockeddecrement-intrinsic-functions"></a>Vnitřní funkce _InterlockedDecrement
+# <a name="_interlockeddecrement-intrinsic-functions"></a>Vnitřní funkce _InterlockedDecrement
 
-**Microsoft Specific**
+**Specifické pro společnost Microsoft**
 
-Poskytuje vnitřní podporu kompilátoru pro sadu SDK Windows Win32 [InterlockedDecrement](/windows/desktop/api/winnt/nf-winnt-interlockeddecrement) funkce.
+Poskytuje vnitřní podporu kompilátoru pro funkci Win32 Windows SDK [InterlockedDecrement](/windows/win32/api/winnt/nf-winnt-interlockeddecrement) .
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -101,32 +101,32 @@ __int64 _InterlockedDecrement64_nf(
 #### <a name="parameters"></a>Parametry
 
 *lpAddend*<br/>
-[out v] Ukazatel na proměnnou chcete snížit.
+[in, out] Ukazatel na proměnnou, která má být snížena.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Vrácená hodnota je výsledná hodnota odečítají.
+Návratová hodnota je výsledná snížená hodnota.
 
 ## <a name="requirements"></a>Požadavky
 
-|Vnitřní|Architektura|
+|Vnitřním|Architektura|
 |---------------|------------------|
 |`_InterlockedDecrement`, `_InterlockedDecrement16`, `_InterlockedDecrement64`|x86, ARM, x64|
 |`_InterlockedDecrement_acq`, `_InterlockedDecrement_rel`, `_InterlockedDecrement_nf`, `_InterlockedDecrement16_acq`, `_InterlockedDecrement16_rel`, `_InterlockedDecrement16_nf`, `_InterlockedDecrement64_acq`, `_InterlockedDecrement64_rel`, `_InterlockedDecrement64_nf`,|ARM|
 
-**Soubor hlaviček** \<intrin.h >
+**Hlavičkový soubor** \<intrin. h >
 
 ## <a name="remarks"></a>Poznámky
 
-Existuje několik variant na `_InterlockedDecrement` , která se liší v závislosti na datové typy, které zahrnují a zda specifické pro procesor získat nebo se používá sémantiku vydání.
+Existuje několik variant `_InterlockedDecrement` , které se liší v závislosti na datových typech, které zahrnují a na kterých se používají sémantiky získání nebo vydání specifické pro procesor.
 
-Zatímco `_InterlockedDecrement` funkce se používá na 32bitové celé číslo hodnoty `_InterlockedDecrement16` pracuje hodnoty 16bitové celé číslo a `_InterlockedDecrement64` pracuje na 64bitové celočíselné hodnoty.
+`_InterlockedDecrement16` `_InterlockedDecrement64` I když `_InterlockedDecrement` funkce funguje s 32 celočíselnými hodnotami, pracuje na 16bitových celočíselných hodnotách a pracuje na 64 celočíselných hodnotách.
 
-Na platformách ARM, pomocí vnitřní objekty s `_acq` a `_rel` přípony, pokud potřebujete získat a release sémantiky, jako například na začátku a konci kritický oddíl. Vnitřní objekty s `_nf` příponu ("žádná ohrazení") nefungují jako překážku paměti.
+Pokud potřebujete sémantiku získání a vydání, jako `_acq` na `_rel` začátku a na konci kritického oddílu, používejte na platformách ARM vnitřní funkce a přípony. Vnitřní objekty s `_nf` příponou (bez plotu) nefungují jako bariéra paměti.
 
-Proměnná odkazuje `lpAddend` parametr musí být zarovnány na hranici 32-bit; v opačném případě této funkce nezdaří se s více procesory x86 systémy a systémy x x86. Další informace najdete v tématu [zarovnat](../cpp/align-cpp.md).
+Proměnná, na `lpAddend` kterou se odkazuje parametr, musí být zarovnaná na hranici 32. v opačném případě tato funkce selže u víceprocesorových systémů s více procesory a systémy, které nejsou x86. Další informace najdete v tématu [Zarovnání](../cpp/align-cpp.md).
 
-Tyto rutiny jsou dostupné jenom jako vnitřní funkce.
+Tyto rutiny jsou k dispozici pouze jako vnitřní objekty.
 
 ## <a name="example"></a>Příklad
 

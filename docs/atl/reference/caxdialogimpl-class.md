@@ -17,19 +17,19 @@ helpviewer_keywords:
 - CAxDialogImpl class
 - ATL, dialog boxes
 ms.assetid: 817df483-3fa8-44e7-8487-72ba0881cd27
-ms.openlocfilehash: d6f08553a9eff421923ef348caee2022849674ac
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 548d2aed0644187b4b8dee1e472b581f1f92d6a1
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62259960"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69497670"
 ---
 # <a name="caxdialogimpl-class"></a>CAxDialogImpl – třída
 
-Tato třída implementuje dialog (modálním nebo nemodálním), který je hostitelem ovládacích prvků ActiveX.
+Tato třída implementuje dialogové okno (modální nebo nemodální), které hostuje ovládací prvky ActiveX.
 
 > [!IMPORTANT]
->  Tato třída a jejích členů nelze použít v aplikacích, které jsou spouštěny v modulu Windows Runtime.
+>  Tato třída a její členové nelze použít v aplikacích, které jsou spouštěny v prostředí Windows Runtime.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -41,49 +41,49 @@ class ATL_NO_VTABLE CAxDialogImpl : public CDialogImplBaseT<TBase>
 #### <a name="parameters"></a>Parametry
 
 *T*<br/>
-Vaše třída odvozena od `CAxDialogImpl`.
+Vaše třída, která je `CAxDialogImpl`odvozena z.
 
 *TBase*<br/>
-Okno základní třída pro `CDialogImplBaseT`.
+Základní třída okna pro `CDialogImplBaseT`.
 
 ## <a name="members"></a>Členové
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
-|[CAxDialogImpl::AdviseSinkMap](#advisesinkmap)|Volání této metody vytvoříte nebo zrušíte avízo o všech položek v mapě událostí jímky mapování objektu.|
-|[CAxDialogImpl::Create](#create)|Volejte tuto metodu za účelem vytvoření nemodálního dialogového okna.|
-|[CAxDialogImpl::DestroyWindow](#destroywindow)|Voláním této metody lze zničit nemodální dialogové okno.|
-|[CAxDialogImpl::DoModal](#domodal)|Volejte tuto metodu za účelem vytvoření modálního dialogového okna.|
-|[CAxDialogImpl::EndDialog](#enddialog)|Voláním této metody lze zničit modální dialogové okno.|
-|[CAxDialogImpl::GetDialogProc](#getdialogproc)|Volejte tuto metodu za účelem získání ukazatel `DialogProc` funkce zpětného volání.|
-|[CAxDialogImpl::GetIDD](#getidd)|Volání této metody k získání ID prostředku šablony dialogového okna|
-|[CAxDialogImpl::IsDialogMessage](#isdialogmessage)|Volat tuto metodu za účelem určení, zda zpráva je určený pro toto dialogové okno a pokud se jedná, zprávu zpracovat.|
+|[CAxDialogImpl::AdviseSinkMap](#advisesinkmap)|Voláním této metody můžete poradit nebo odradit všechny položky v mapě událostí mapy jímky objektu.|
+|[CAxDialogImpl::Create](#create)|Voláním této metody vytvoříte nemodální dialogové okno.|
+|[CAxDialogImpl::DestroyWindow](#destroywindow)|Voláním této metody zničíte nemodální dialogové okno.|
+|[CAxDialogImpl::DoModal](#domodal)|Zavolejte tuto metodu pro vytvoření modálního dialogového okna.|
+|[CAxDialogImpl:: EndDialog](#enddialog)|Zavolejte tuto metodu pro zničení modálního dialogového okna.|
+|[CAxDialogImpl::GetDialogProc](#getdialogproc)|Voláním této metody získáte ukazatel na `DialogProc` funkci zpětného volání.|
+|[CAxDialogImpl::GetIDD](#getidd)|Voláním této metody získáte ID prostředku šablony dialogového okna.|
+|[CAxDialogImpl::IsDialogMessage](#isdialogmessage)|Voláním této metody určíte, zda je zpráva určena pro toto dialogové okno a v případě, že je, zpracujte zprávu.|
 
 ### <a name="protected-data-members"></a>Chránění členové dat
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
-|[CAxDialogImpl::m_bModal](#m_bmodal)|Proměnná, která existuje pouze v ladění sestavení a je nastavená na hodnotu true, pokud je modální dialogové okno.|
+|[CAxDialogImpl::m_bModal](#m_bmodal)|Proměnná, která existuje pouze v sestavení ladění a je nastavena na hodnotu true, pokud je dialogové okno modální.|
 
 ## <a name="remarks"></a>Poznámky
 
-`CAxDialogImpl` Umožňuje vytvořit modální a nemodální dialogové okno. `CAxDialogImpl` poskytuje pole proceduru dialogového okna, který používá výchozí mapování zpráv ke směrování zpráv do příslušné obslužné rutiny.
+`CAxDialogImpl`umožňuje vytvořit modální nebo nemodální dialogové okno. `CAxDialogImpl`poskytuje proceduru dialogového okna, která používá výchozí mapu zpráv k přímému směrování zpráv na příslušné obslužné rutiny.
 
-`CAxDialogImpl` je odvozen od `CDialogImplBaseT`, která je dále odvozeno z *Tčíslice* (ve výchozím nastavení, `CWindow`) a `CMessageMap`.
+`CAxDialogImpl`je odvozen z `CDialogImplBaseT`, který je zase odvozen z *TBase* `CWindow`(ve výchozím nastavení) a `CMessageMap`.
 
-Vaše třída musí definovat člen typu IDD, který určuje ID prostředku šablony dialogového okna. Příkladem je přidání objektu pomocí dialogového okna ATL **přidat třídu** dialogové okno automaticky přidá do třídy následující řádek:
+Vaše třída musí definovat člen IDD, který určuje ID prostředku šablony dialogového okna. Například přidání objektu dialogového okna ATL pomocí dialogového okna **Přidat třídu** automaticky přidá následující řádek do třídy:
 
 [!code-cpp[NVC_ATL_Windowing#41](../../atl/codesnippet/cpp/caxdialogimpl-class_1.h)]
 
-kde `MyDialog` je **krátký název** zadaný v Průvodce dialogem ATL.
+kde `MyDialog` je **krátký název** zadaný v průvodci dialogem ATL.
 
-Zobrazit [implementace dialogového okna](../../atl/implementing-a-dialog-box.md) Další informace.
+Další informace najdete v tématu [Implementace dialogového okna](../../atl/implementing-a-dialog-box.md) .
 
-Všimněte si, že ovládací prvek ActiveX na modální dialogové okno vytvořené s `CAxDialogImpl` nebude podporovat přístupové klávesy. Pro podporu klávesové zkratky v dialogovém okně vytvořené pomocí `CAxDialogImpl`, nemodální dialogové okno vytvořit a smyčku zpráv, pomocí [CAxDialogImpl::IsDialogMessage](#isdialogmessage) po získání zprávu z fronty pro zpracování přístupová klávesa.
+Všimněte si, že ovládací prvek ActiveX v modálním dialogovém okně `CAxDialogImpl` vytvořeném pomocí nebude podporovat klávesové zkratky. Aby bylo možné podporovat přístupové klávesy v dialogovém okně vytvořeném pomocí `CAxDialogImpl`, vytvořte nemodální dialogové okno a pomocí vlastní smyčky zpráv použijte [CAxDialogImpl:: IsDialogMessage](#isdialogmessage) po získání zprávy z fronty za účelem zpracování klávesy akcelerátoru.
 
-Další informace o `CAxDialogImpl`, naleznete v tématu [ATL – ovládací prvek členství ve skupině nejčastější dotazy k](../../atl/atl-control-containment-faq.md).
+Další informace o `CAxDialogImpl`naleznete v tématu [Nejčastější dotazy k omezení ovládacího prvku ATL](../../atl/atl-control-containment-faq.md).
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
@@ -99,11 +99,11 @@ Další informace o `CAxDialogImpl`, naleznete v tématu [ATL – ovládací prv
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** atlwin.h
+**Záhlaví:** atlwin. h
 
 ##  <a name="advisesinkmap"></a>  CAxDialogImpl::AdviseSinkMap
 
-Volání této metody vytvoříte nebo zrušíte avízo o všech položek v mapě událostí jímky mapování objektu.
+Voláním této metody můžete poradit nebo odradit všechny položky v mapě událostí mapy jímky objektu.
 
 ```
 HRESULT AdviseSinkMap(bool bAdvise);
@@ -112,15 +112,15 @@ HRESULT AdviseSinkMap(bool bAdvise);
 ### <a name="parameters"></a>Parametry
 
 *bAdvise*<br/>
-Nastavte na hodnotu true, pokud mají všechny položky jímky doporučujeme; jímka hodnotu false, pokud všechny položky jsou unadvised.
+Nastavte na hodnotu true, pokud se mají vyhodnotit všechny záznamy jímky. false, pokud mají být všechny záznamy jímky nedoporučeníné.
 
 ### <a name="return-value"></a>Návratová hodnota
 
 Vrátí hodnotu S_OK při úspěchu nebo chybu HRESULT při selhání.
 
-##  <a name="create"></a>  CAxDialogImpl::Create
+##  <a name="create"></a>CAxDialogImpl:: Create
 
-Volejte tuto metodu za účelem vytvoření nemodálního dialogového okna.
+Voláním této metody vytvoříte nemodální dialogové okno.
 
 ```
 HWND Create(HWND hWndParent, LPARAM dwInitParam = NULL);
@@ -130,27 +130,27 @@ HWND Create(HWND hWndParent, RECT&, LPARAM dwInitParam = NULL);
 ### <a name="parameters"></a>Parametry
 
 *hWndParent*<br/>
-[in] Popisovač nadřazenému oknu.
+pro Popisovač okna vlastníka.
 
 *dwInitParam*<br/>
-[in] Určuje hodnotu pro předání do dialogového okna aplikace *lParam* parametr nezavěsíte zprávu.
+pro Určuje hodnotu, která má být předána do dialogového okna v parametru *lParam* zprávy WM_INITDIALOG.
 
-*RECT – &AMP;*<br/>
-Tento parametr není používán. Tento parametr je předán `CComControl`.
+*& RECT*<br/>
+Tento parametr není používán. Tento parametr je předán v `CComControl`.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Popisovač do nově vytvořeného dialogových oken.
+Popisovač nově vytvořeného dialogového okna.
 
 ### <a name="remarks"></a>Poznámky
 
-Toto dialogové okno je automaticky připojen k `CAxDialogImpl` objektu. Chcete-li vytvořit modální dialogové okno, zavolejte [DoModal](#domodal).
+Toto dialogové okno je automaticky připojeno k `CAxDialogImpl` objektu. Chcete-li vytvořit modální dialogové okno, zavolejte [DoModal](#domodal).
 
-Druhý přepsání je k dispozici pouze proto dialogová okna je možné s [ccomcontrol –](../../atl/reference/ccomcontrol-class.md).
+Druhé přepsání je k dispozici pouze pro dialogová okna, která lze použít s [CComControl](../../atl/reference/ccomcontrol-class.md).
 
-##  <a name="destroywindow"></a>  CAxDialogImpl::DestroyWindow
+##  <a name="destroywindow"></a>CAxDialogImpl::D estroyWindow
 
-Voláním této metody lze zničit nemodální dialogové okno.
+Voláním této metody zničíte nemodální dialogové okno.
 
 ```
 BOOL DestroyWindow();
@@ -158,15 +158,15 @@ BOOL DestroyWindow();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Hodnota TRUE, pokud v okně je úspěšně zničen; v opačném případě FALSE.
+TRUE, pokud je okno úspěšně zničeno; v opačném případě FALSE.
 
 ### <a name="remarks"></a>Poznámky
 
-Nevolejte `DestroyWindow` ke zničení modální dialogové okno. Volání [EndDialog](#enddialog) místo.
+Nevolejte `DestroyWindow` na zničení modálního dialogového okna. Místo toho zavolejte [EndDialog](#enddialog) .
 
-##  <a name="domodal"></a>  CAxDialogImpl::DoModal
+##  <a name="domodal"></a>CAxDialogImpl::D oModal
 
-Volejte tuto metodu za účelem vytvoření modálního dialogového okna.
+Zavolejte tuto metodu pro vytvoření modálního dialogového okna.
 
 ```
 INT_PTR DoModal(
@@ -177,24 +177,24 @@ INT_PTR DoModal(
 ### <a name="parameters"></a>Parametry
 
 *hWndParent*<br/>
-[in] Popisovač nadřazenému oknu. Výchozí hodnota je vrácená hodnota [GetActiveWindow](/windows/desktop/api/winuser/nf-winuser-getactivewindow) funkci Win32.
+pro Popisovač okna vlastníka. Výchozí hodnota je návratová hodnota funkce [GetActiveWindow](/windows/win32/api/winuser/nf-winuser-getactivewindow) Win32.
 
 *dwInitParam*<br/>
-[in] Určuje hodnotu pro předání do dialogového okna aplikace *lParam* parametr nezavěsíte zprávu.
+pro Určuje hodnotu, která má být předána do dialogového okna v parametru *lParam* zprávy WM_INITDIALOG.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-V případě úspěchu se hodnota *nRetCode* parametr zadaný ve volání [EndDialog](#enddialog); v opačném případě hodnota -1.
+V případě úspěchu hodnota parametru *nRetCode* zadaného ve volání [EndDialog](#enddialog); v opačném případě-1.
 
 ### <a name="remarks"></a>Poznámky
 
-Toto dialogové okno je automaticky připojen k `CAxDialogImpl` objektu.
+Toto dialogové okno je automaticky připojeno k `CAxDialogImpl` objektu.
 
-Vytvoří nemodální dialogové okno, voláním [vytvořit](#create).
+Chcete-li vytvořit nemodální dialogové okno, zavolejte příkaz [Create](#create).
 
-##  <a name="enddialog"></a>  CAxDialogImpl::EndDialog
+##  <a name="enddialog"></a>CAxDialogImpl:: EndDialog
 
-Voláním této metody lze zničit modální dialogové okno.
+Zavolejte tuto metodu pro zničení modálního dialogového okna.
 
 ```
 BOOL EndDialog(int nRetCode);
@@ -203,22 +203,22 @@ BOOL EndDialog(int nRetCode);
 ### <a name="parameters"></a>Parametry
 
 *nRetCode*<br/>
-[in] Hodnota, která má být vrácen [DoModal](#domodal).
+pro Hodnota, která má být vrácena funkcí [DoModal](#domodal).
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Hodnota TRUE, pokud jeho zničení dialogových oken; v opačném případě hodnota FALSE.
+TRUE, pokud je dialogové okno zničeno; v opačném případě FALSE.
 
 ### <a name="remarks"></a>Poznámky
 
-`EndDialog` je nutné volat pomocí pole proceduru dialogového okna. Po zničení dialogových oken Windows používá hodnotu *nRetCode* jako návratovou hodnotu pro `DoModal`, který vytvoří dialogové okno.
+`EndDialog`musí být volána prostřednictvím procedury dialogového okna. Po zničení dialogového okna používá systém Windows hodnotu *nRetCode* jako návratovou hodnotu pro `DoModal`, což vytvořilo dialogové okno.
 
 > [!NOTE]
->  Nevolejte `EndDialog` ke zničení nemodální dialogové okno. Volání [destroywindow –](#destroywindow) místo.
+>  Nevolejte `EndDialog` pro zničení nemodálního dialogového okna. Místo toho zavolejte [DestroyWindow](#destroywindow) .
 
-##  <a name="getdialogproc"></a>  CAxDialogImpl::GetDialogProc
+##  <a name="getdialogproc"></a>CAxDialogImpl::GetDialogProc
 
-Volejte tuto metodu za účelem získání ukazatel `DialogProc` funkce zpětného volání.
+Voláním této metody získáte ukazatel na `DialogProc` funkci zpětného volání.
 
 ```
 virtual DLGPROC GetDialogProc();
@@ -226,15 +226,15 @@ virtual DLGPROC GetDialogProc();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vrací ukazatel `DialogProc` funkce zpětného volání.
+Vrátí ukazatel na `DialogProc` funkci zpětného volání.
 
 ### <a name="remarks"></a>Poznámky
 
-`DialogProc` Funkce je funkce zpětného volání definované aplikací.
+`DialogProc` Funkce je funkce zpětného volání definovaná aplikací.
 
-##  <a name="getidd"></a>  CAxDialogImpl::GetIDD
+##  <a name="getidd"></a>CAxDialogImpl::GetIDD
 
-Volání této metody k získání ID prostředku šablony dialogového okna.
+Voláním této metody získáte ID prostředku šablony dialogového okna.
 
 ```
 int GetIDD();
@@ -244,9 +244,9 @@ int GetIDD();
 
 Vrátí ID prostředku šablony dialogového okna.
 
-##  <a name="isdialogmessage"></a>  CAxDialogImpl::IsDialogMessage
+##  <a name="isdialogmessage"></a>CAxDialogImpl::IsDialogMessage
 
-Volat tuto metodu za účelem určení, zda zpráva je určený pro toto dialogové okno a pokud se jedná, zprávu zpracovat.
+Voláním této metody určíte, zda je zpráva určena pro toto dialogové okno a v případě, že je, zpracujte zprávu.
 
 ```
 BOOL IsDialogMessage(LPMSG pMsg);
@@ -255,19 +255,19 @@ BOOL IsDialogMessage(LPMSG pMsg);
 ### <a name="parameters"></a>Parametry
 
 *pMsg*<br/>
-Ukazatel [MSG](/windows/desktop/api/winuser/ns-winuser-msg) strukturu, která obsahuje zprávy, která se má zkontrolovat.
+Ukazatel na strukturu [](/windows/win32/api/winuser/ns-winuser-msg) zprávy, která obsahuje zprávu, kterou chcete zkontrolovat.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vrátí hodnotu TRUE, pokud zpráva byla zpracovaných, FALSE, jinak.
+Vrátí hodnotu TRUE, pokud byla zpráva zpracována, jinak FALSE.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato metoda je určena k volání z v rámci smyčky zpráv.
+Tato metoda má být volána v rámci smyčky zpráv.
 
-##  <a name="m_bmodal"></a>  CAxDialogImpl::m_bModal
+##  <a name="m_bmodal"></a>CAxDialogImpl::m_bModal
 
-Proměnná, která existuje pouze v ladění sestavení a je nastavená na hodnotu true, pokud je modální dialogové okno.
+Proměnná, která existuje pouze v sestavení ladění a je nastavena na hodnotu true, pokud je dialogové okno modální.
 
 ```
 bool m_bModal;
@@ -276,4 +276,4 @@ bool m_bModal;
 ## <a name="see-also"></a>Viz také:
 
 [CDialogImpl – třída](../../atl/reference/cdialogimpl-class.md)<br/>
-[Přehled tříd](../../atl/atl-class-overview.md)
+[Přehled třídy](../../atl/atl-class-overview.md)

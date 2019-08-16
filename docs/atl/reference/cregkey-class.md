@@ -42,12 +42,12 @@ helpviewer_keywords:
 - registry, writing to
 - registry, deleting keys
 ms.assetid: 3afce82b-ba2c-4c1a-8404-dc969e1af74b
-ms.openlocfilehash: bce5a16dd8d6564b6a0d3fa0344fe5cb2303764f
-ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
+ms.openlocfilehash: 3faf446f74577034a3d0676b90ebe7027ef6da06
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68915793"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69496539"
 ---
 # <a name="cregkey-class"></a>CRegKey – třída
 
@@ -124,10 +124,10 @@ class CRegKey
 
 `CRegKey`poskytuje programovací rozhraní k systémovému registru pro daný počítač. Chcete-li například otevřít konkrétní klíč registru, zavolejte `CRegKey::Open`. Chcete-li načíst nebo upravit datovou hodnotu `CRegKey::QueryValue` , `CRegKey::SetValue`zavolejte nebo v uvedeném pořadí. Chcete-li zavřít klíč, `CRegKey::Close`zavolejte.
 
-Když klíč zavřete, data registru se zapisují (vyprázdní) na pevný disk. Tento proces může trvat několik sekund. Pokud vaše aplikace musí explicitně zapisovat data registru na pevný disk, můžete zavolat funkci [funkce RegFlushKey](/windows/desktop/api/winreg/nf-winreg-regflushkey) Win32. Nástroj ale `RegFlushKey` používá mnoho systémových prostředků a měl by se volat jenom v případě, že je nezbytný.
+Když klíč zavřete, data registru se zapisují (vyprázdní) na pevný disk. Tento proces může trvat několik sekund. Pokud vaše aplikace musí explicitně zapisovat data registru na pevný disk, můžete zavolat funkci [funkce RegFlushKey](/windows/win32/api/winreg/nf-winreg-regflushkey) Win32. Nástroj ale `RegFlushKey` používá mnoho systémových prostředků a měl by se volat jenom v případě, že je nezbytný.
 
 > [!IMPORTANT]
->  Jakékoli metody, které umožňují volajícímu určit umístění v registru, mohou číst data, která nelze důvěřovat. Metody, které používají [volání RegQueryValueEx](/windows/desktop/api/winreg/nf-winreg-regqueryvalueexa) , by měly vzít v úvahu, že tato funkce explicitně nezpracovává řetězce, které jsou ukončeny hodnotou null. Obě podmínky by měly být zkontrolovány volajícím kódem.
+>  Jakékoli metody, které umožňují volajícímu určit umístění v registru, mohou číst data, která nelze důvěřovat. Metody, které používají [volání RegQueryValueEx](/windows/win32/api/winreg/nf-winreg-regqueryvalueexw) , by měly vzít v úvahu, že tato funkce explicitně nezpracovává řetězce, které jsou ukončeny hodnotou null. Obě podmínky by měly být zkontrolovány volajícím kódem.
 
 ## <a name="requirements"></a>Požadavky
 
@@ -189,7 +189,7 @@ Určuje název klíče, který má být vytvořen nebo otevřen. Tento název mu
 Určuje třídu klíče, který má být vytvořen nebo otevřen. Výchozí hodnota je REG_NONE.
 
 *dwOptions*<br/>
-Možnosti pro klíč Výchozí hodnota je REG_OPTION_NON_VOLATILE. Seznam možných hodnot a popisů naleznete v tématu [RegCreateKeyEx](/windows/desktop/api/winreg/nf-winreg-regcreatekeyexa) v Windows SDK.
+Možnosti pro klíč Výchozí hodnota je REG_OPTION_NON_VOLATILE. Seznam možných hodnot a popisů naleznete v tématu [RegCreateKeyEx](/windows/win32/api/winreg/nf-winreg-regcreatekeyexw) v Windows SDK.
 
 *samDesired*<br/>
 Přístup k zabezpečení klíče Výchozí hodnota je KEY_READ &#124; KEY_WRITE. Seznam možných hodnot a popisů naleznete v tématu `RegCreateKeyEx`.
@@ -328,7 +328,7 @@ Pokud je metoda úspěšná, návratová hodnota je ERROR_SUCCESS. Pokud se meto
 
 ### <a name="remarks"></a>Poznámky
 
-Chcete-li vytvořit výčet podklíčů, zavolejte `CRegKey::EnumKey` s indexem nula. Zvyšte hodnotu indexu a opakujte akci, dokud metoda nevrátí ERROR_NO_MORE_ITEMS. Další informace najdete v tématu [RegEnumKeyEx](/windows/desktop/api/winreg/nf-winreg-regenumkeyexa) v Windows SDK.
+Chcete-li vytvořit výčet podklíčů, zavolejte `CRegKey::EnumKey` s indexem nula. Zvyšte hodnotu indexu a opakujte akci, dokud metoda nevrátí ERROR_NO_MORE_ITEMS. Další informace najdete v tématu [RegEnumKeyEx](/windows/win32/api/winreg/nf-winreg-regenumkeyexw) v Windows SDK.
 
 ##  <a name="flush"></a>CRegKey:: flush
 
@@ -344,7 +344,7 @@ Pokud je metoda úspěšná, návratová hodnota je ERROR_SUCCESS. Pokud se meto
 
 ### <a name="remarks"></a>Poznámky
 
-Další informace najdete v tématu [RegEnumFlush](/windows/desktop/api/winreg/nf-winreg-regflushkey) v Windows SDK.
+Další informace najdete v tématu [RegEnumFlush](/windows/win32/api/winreg/nf-winreg-regflushkey) v Windows SDK.
 
 ##  <a name="getkeysecurity"></a>CRegKey:: GetKeySecurity
 
@@ -360,7 +360,7 @@ LONG GetKeySecurity(
 ### <a name="parameters"></a>Parametry
 
 *si*<br/>
-Hodnota [SECURITY_INFORMATION](/windows/desktop/SecAuthZ/security-information) , která označuje požadované informace o zabezpečení.
+Hodnota [SECURITY_INFORMATION](/windows/win32/SecAuthZ/security-information) , která označuje požadované informace o zabezpečení.
 
 *psd*<br/>
 Ukazatel na vyrovnávací paměť, která obdrží kopii požadovaného popisovače zabezpečení.
@@ -374,7 +374,7 @@ Pokud je metoda úspěšná, návratová hodnota je ERROR_SUCCESS. Pokud se meto
 
 ### <a name="remarks"></a>Poznámky
 
-Další informace najdete v tématu [RegGetKeySecurity](/windows/desktop/api/winreg/nf-winreg-reggetkeysecurity).
+Další informace najdete v tématu [RegGetKeySecurity](/windows/win32/api/winreg/nf-winreg-reggetkeysecurity).
 
 ##  <a name="m_hkey"></a>  CRegKey::m_hKey
 
@@ -436,7 +436,7 @@ Pokud je metoda úspěšná, návratová hodnota je ERROR_SUCCESS. Pokud se meto
 > [!NOTE]
 >  Tato metoda neupozorní volajícího, pokud je zadaný klíč odstraněný.
 
-Další podrobnosti a ukázkový program najdete v tématu [RegNotifyChangeKeyValue](/windows/desktop/api/winreg/nf-winreg-regnotifychangekeyvalue).
+Další podrobnosti a ukázkový program najdete v tématu [RegNotifyChangeKeyValue](/windows/win32/api/winreg/nf-winreg-regnotifychangekeyvalue).
 
 ##  <a name="open"></a>CRegKey:: Open
 
@@ -458,7 +458,7 @@ Popisovač otevřeného klíče.
 Určuje název klíče, který má být vytvořen nebo otevřen. Tento název musí být podklíčem *hKeyParent*.
 
 *samDesired*<br/>
-Přístup k zabezpečení klíče Výchozí hodnota je KEY_ALL_ACCESS. Seznam možných hodnot a popisů naleznete v tématu [RegCreateKeyEx](/windows/desktop/api/winreg/nf-winreg-regcreatekeyexa) v Windows SDK.
+Přístup k zabezpečení klíče Výchozí hodnota je KEY_ALL_ACCESS. Seznam možných hodnot a popisů naleznete v tématu [RegCreateKeyEx](/windows/win32/api/winreg/nf-winreg-regcreatekeyexw) v Windows SDK.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -527,10 +527,10 @@ Pokud je metoda úspěšná, vrátí se ERROR_SUCCESS. Pokud metoda nedokáže n
 
 ### <a name="remarks"></a>Poznámky
 
-Tato metoda využívá `RegQueryValueEx` a potvrzuje, že je vrácen správný typ dat. Další podrobnosti najdete v tématu [volání RegQueryValueEx](/windows/desktop/api/winreg/nf-winreg-regqueryvalueexa) .
+Tato metoda využívá `RegQueryValueEx` a potvrzuje, že je vrácen správný typ dat. Další podrobnosti najdete v tématu [volání RegQueryValueEx](/windows/win32/api/winreg/nf-winreg-regqueryvalueexw) .
 
 > [!IMPORTANT]
->  Tato metoda umožňuje volajícímu určit libovolné umístění v registru a potenciálně číst data, která nelze důvěřovat. Také funkce [volání RegQueryValueEx](/windows/desktop/api/winreg/nf-winreg-regqueryvalueexa) používaná touto metodou explicitně nezpracovává řetězce, které jsou ukončeny hodnotou null. Obě podmínky by měly být zkontrolovány volajícím kódem.
+>  Tato metoda umožňuje volajícímu určit libovolné umístění v registru a potenciálně číst data, která nelze důvěřovat. Také funkce [volání RegQueryValueEx](/windows/win32/api/winreg/nf-winreg-regqueryvalueexw) používaná touto metodou explicitně nezpracovává řetězce, které jsou ukončeny hodnotou null. Obě podmínky by měly být zkontrolovány volajícím kódem.
 
 ##  <a name="querydwordvalue"></a>  CRegKey::QueryDWORDValue
 
@@ -556,10 +556,10 @@ Pokud je metoda úspěšná, vrátí se ERROR_SUCCESS. Pokud metoda nedokáže n
 
 ### <a name="remarks"></a>Poznámky
 
-Tato metoda využívá `RegQueryValueEx` a potvrzuje, že je vrácen správný typ dat. Další podrobnosti najdete v tématu [volání RegQueryValueEx](/windows/desktop/api/winreg/nf-winreg-regqueryvalueexa) .
+Tato metoda využívá `RegQueryValueEx` a potvrzuje, že je vrácen správný typ dat. Další podrobnosti najdete v tématu [volání RegQueryValueEx](/windows/win32/api/winreg/nf-winreg-regqueryvalueexw) .
 
 > [!IMPORTANT]
->  Tato metoda umožňuje volajícímu určit libovolné umístění v registru a potenciálně číst data, která nelze důvěřovat. Také funkce [volání RegQueryValueEx](/windows/desktop/api/winreg/nf-winreg-regqueryvalueexa) používaná touto metodou explicitně nezpracovává řetězce, které jsou ukončeny hodnotou null. Obě podmínky by měly být zkontrolovány volajícím kódem.
+>  Tato metoda umožňuje volajícímu určit libovolné umístění v registru a potenciálně číst data, která nelze důvěřovat. Také funkce [volání RegQueryValueEx](/windows/win32/api/winreg/nf-winreg-regqueryvalueexw) používaná touto metodou explicitně nezpracovává řetězce, které jsou ukončeny hodnotou null. Obě podmínky by měly být zkontrolovány volajícím kódem.
 
 ##  <a name="queryguidvalue"></a>  CRegKey::QueryGUIDValue
 
@@ -585,7 +585,7 @@ Pokud je metoda úspěšná, vrátí se ERROR_SUCCESS. Pokud metoda nedokáže n
 
 ### <a name="remarks"></a>Poznámky
 
-Tato metoda využívá `CRegKey::QueryStringValue` a převádí řetězec na identifikátor GUID pomocí [CLSIDFromString](/windows/desktop/api/combaseapi/nf-combaseapi-clsidfromstring).
+Tato metoda využívá `CRegKey::QueryStringValue` a převádí řetězec na identifikátor GUID pomocí [CLSIDFromString](/windows/win32/api/combaseapi/nf-combaseapi-clsidfromstring).
 
 > [!IMPORTANT]
 >  Tato metoda umožňuje volajícímu určit libovolné umístění v registru a potenciálně číst data, která nelze důvěřovat.
@@ -618,10 +618,10 @@ Pokud je metoda úspěšná, vrátí se ERROR_SUCCESS. Pokud metoda nedokáže n
 
 ### <a name="remarks"></a>Poznámky
 
-Tato metoda využívá `RegQueryValueEx` a potvrzuje, že je vrácen správný typ dat. Další podrobnosti najdete v tématu [volání RegQueryValueEx](/windows/desktop/api/winreg/nf-winreg-regqueryvalueexa) .
+Tato metoda využívá `RegQueryValueEx` a potvrzuje, že je vrácen správný typ dat. Další podrobnosti najdete v tématu [volání RegQueryValueEx](/windows/win32/api/winreg/nf-winreg-regqueryvalueexw) .
 
 > [!IMPORTANT]
->  Tato metoda umožňuje volajícímu určit libovolné umístění v registru a potenciálně číst data, která nelze důvěřovat. Také funkce [volání RegQueryValueEx](/windows/desktop/api/winreg/nf-winreg-regqueryvalueexa) používaná touto metodou explicitně nezpracovává řetězce, které jsou ukončeny hodnotou null. Obě podmínky by měly být zkontrolovány volajícím kódem.
+>  Tato metoda umožňuje volajícímu určit libovolné umístění v registru a potenciálně číst data, která nelze důvěřovat. Také funkce [volání RegQueryValueEx](/windows/win32/api/winreg/nf-winreg-regqueryvalueexw) používaná touto metodou explicitně nezpracovává řetězce, které jsou ukončeny hodnotou null. Obě podmínky by měly být zkontrolovány volajícím kódem.
 
 ##  <a name="queryqwordvalue"></a>  CRegKey::QueryQWORDValue
 
@@ -647,10 +647,10 @@ Pokud je metoda úspěšná, vrátí se ERROR_SUCCESS. Pokud metoda nedokáže n
 
 ### <a name="remarks"></a>Poznámky
 
-Tato metoda využívá `RegQueryValueEx` a potvrzuje, že je vrácen správný typ dat. Další podrobnosti najdete v tématu [volání RegQueryValueEx](/windows/desktop/api/winreg/nf-winreg-regqueryvalueexa) .
+Tato metoda využívá `RegQueryValueEx` a potvrzuje, že je vrácen správný typ dat. Další podrobnosti najdete v tématu [volání RegQueryValueEx](/windows/win32/api/winreg/nf-winreg-regqueryvalueexw) .
 
 > [!IMPORTANT]
->  Tato metoda umožňuje volajícímu určit libovolné umístění v registru a potenciálně číst data, která nelze důvěřovat. Také funkce [volání RegQueryValueEx](/windows/desktop/api/winreg/nf-winreg-regqueryvalueexa) používaná touto metodou explicitně nezpracovává řetězce, které jsou ukončeny hodnotou null. Obě podmínky by měly být zkontrolovány volajícím kódem.
+>  Tato metoda umožňuje volajícímu určit libovolné umístění v registru a potenciálně číst data, která nelze důvěřovat. Také funkce [volání RegQueryValueEx](/windows/win32/api/winreg/nf-winreg-regqueryvalueexw) používaná touto metodou explicitně nezpracovává řetězce, které jsou ukončeny hodnotou null. Obě podmínky by měly být zkontrolovány volajícím kódem.
 
 ##  <a name="querystringvalue"></a>  CRegKey::QueryStringValue
 
@@ -680,10 +680,10 @@ Pokud je metoda úspěšná, vrátí se ERROR_SUCCESS. Pokud metoda nedokáže n
 
 ### <a name="remarks"></a>Poznámky
 
-Tato metoda využívá `RegQueryValueEx` a potvrzuje, že je vrácen správný typ dat. Další podrobnosti najdete v tématu [volání RegQueryValueEx](/windows/desktop/api/winreg/nf-winreg-regqueryvalueexa) .
+Tato metoda využívá `RegQueryValueEx` a potvrzuje, že je vrácen správný typ dat. Další podrobnosti najdete v tématu [volání RegQueryValueEx](/windows/win32/api/winreg/nf-winreg-regqueryvalueexw) .
 
 > [!IMPORTANT]
->  Tato metoda umožňuje volajícímu určit libovolné umístění v registru a potenciálně číst data, která nelze důvěřovat. Také funkce [volání RegQueryValueEx](/windows/desktop/api/winreg/nf-winreg-regqueryvalueexa) používaná touto metodou explicitně nezpracovává řetězce, které jsou ukončeny hodnotou null. Obě podmínky by měly být zkontrolovány volajícím kódem.
+>  Tato metoda umožňuje volajícímu určit libovolné umístění v registru a potenciálně číst data, která nelze důvěřovat. Také funkce [volání RegQueryValueEx](/windows/win32/api/winreg/nf-winreg-regqueryvalueexw) používaná touto metodou explicitně nezpracovává řetězce, které jsou ukončeny hodnotou null. Obě podmínky by měly být zkontrolovány volajícím kódem.
 
 ##  <a name="queryvalue"></a>  CRegKey::QueryValue
 
@@ -794,7 +794,7 @@ Pokud je metoda úspěšná, návratová hodnota je ERROR_SUCCESS. Pokud se meto
 
 ### <a name="remarks"></a>Poznámky
 
-Tato metoda používá [RegSetValueEx](/windows/desktop/api/winreg/nf-winreg-regsetvalueexa) k zápisu hodnoty do registru.
+Tato metoda používá [RegSetValueEx](/windows/win32/api/winreg/nf-winreg-regsetvalueexw) k zápisu hodnoty do registru.
 
 ##  <a name="setdwordvalue"></a>CRegKey:: SetDWORDValue
 
@@ -818,7 +818,7 @@ Pokud je metoda úspěšná, návratová hodnota je ERROR_SUCCESS. Pokud se meto
 
 ### <a name="remarks"></a>Poznámky
 
-Tato metoda používá [RegSetValueEx](/windows/desktop/api/winreg/nf-winreg-regsetvalueexa) k zápisu hodnoty do registru.
+Tato metoda používá [RegSetValueEx](/windows/win32/api/winreg/nf-winreg-regsetvalueexw) k zápisu hodnoty do registru.
 
 ##  <a name="setguidvalue"></a>CRegKey:: SetGUIDValue
 
@@ -842,7 +842,7 @@ Pokud je metoda úspěšná, návratová hodnota je ERROR_SUCCESS. Pokud se meto
 
 ### <a name="remarks"></a>Poznámky
 
-Tato metoda využívá `CRegKey::SetStringValue` a převádí identifikátor GUID na řetězec pomocí [StringFromGUID2](/windows/desktop/api/combaseapi/nf-combaseapi-stringfromguid2).
+Tato metoda využívá `CRegKey::SetStringValue` a převádí identifikátor GUID na řetězec pomocí [StringFromGUID2](/windows/win32/api/combaseapi/nf-combaseapi-stringfromguid2).
 
 ##  <a name="setkeyvalue"></a>CRegKey:: SetKeyValue
 
@@ -892,10 +892,10 @@ Určuje součásti popisovače zabezpečení, které se mají nastavit. Hodnota 
 |DACL_SECURITY_INFORMATION|Nastaví volitelný seznam řízení přístupu (DACL) klíče. Klíč musí mít přístup WRITE_DAC nebo volající proces musí být vlastníkem objektu.|
 |GROUP_SECURITY_INFORMATION|Nastaví identifikátor zabezpečení primární skupiny (SID) klíče. Klíč musí mít přístup WRITE_OWNER nebo volající proces musí být vlastníkem objektu.|
 |OWNER_SECURITY_INFORMATION|Nastaví identifikátor SID vlastníka klíče. Klíč musí mít přístup WRITE_OWNER nebo volající proces musí být vlastníkem objektu nebo musí mít povolené oprávnění SE_TAKE_OWNERSHIP_NAME.|
-|SACL_SECURITY_INFORMATION|Nastaví seznam řízení přístupu (SACL) systému klíče. Klíč musí mít přístup ACCESS_SYSTEM_SECURITY. Správným způsobem, jak tento přístup získat, je povolit [oprávnění](/windows/desktop/secauthz/privileges) SE_SECURITY_NAME v aktuálním přístupovém tokenu volajícího, otevřít popisovač pro ACCESS_SYSTEM_SECURITY přístup a pak toto oprávnění zakázat.|
+|SACL_SECURITY_INFORMATION|Nastaví seznam řízení přístupu (SACL) systému klíče. Klíč musí mít přístup ACCESS_SYSTEM_SECURITY. Správným způsobem, jak tento přístup získat, je povolit [oprávnění](/windows/win32/secauthz/privileges) SE_SECURITY_NAME v aktuálním přístupovém tokenu volajícího, otevřít popisovač pro ACCESS_SYSTEM_SECURITY přístup a pak toto oprávnění zakázat.|
 
 *psd*<br/>
-Ukazatel na strukturu [SECURITY_DESCRIPTOR](/windows/desktop/api/winnt/ns-winnt-security_descriptor) , která určuje atributy zabezpečení, které se mají nastavit pro zadaný klíč.
+Ukazatel na strukturu [SECURITY_DESCRIPTOR](/windows/win32/api/winnt/ns-winnt-security_descriptor) , která určuje atributy zabezpečení, které se mají nastavit pro zadaný klíč.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -903,7 +903,7 @@ Pokud je metoda úspěšná, návratová hodnota je ERROR_SUCCESS. Pokud se meto
 
 ### <a name="remarks"></a>Poznámky
 
-Nastaví atributy zabezpečení klíče. Další podrobnosti najdete v tématu [RegSetKeySecurity](/windows/desktop/api/winreg/nf-winreg-regsetkeysecurity) .
+Nastaví atributy zabezpečení klíče. Další podrobnosti najdete v tématu [RegSetKeySecurity](/windows/win32/api/winreg/nf-winreg-regsetkeysecurity) .
 
 ##  <a name="setmultistringvalue"></a>CRegKey:: SetMultiStringValue
 
@@ -927,7 +927,7 @@ Pokud je metoda úspěšná, návratová hodnota je ERROR_SUCCESS. Pokud se meto
 
 ### <a name="remarks"></a>Poznámky
 
-Tato metoda používá [RegSetValueEx](/windows/desktop/api/winreg/nf-winreg-regsetvalueexa) k zápisu hodnoty do registru.
+Tato metoda používá [RegSetValueEx](/windows/win32/api/winreg/nf-winreg-regsetvalueexw) k zápisu hodnoty do registru.
 
 ##  <a name="setqwordvalue"></a>CRegKey:: SetQWORDValue
 
@@ -951,7 +951,7 @@ Pokud je metoda úspěšná, návratová hodnota je ERROR_SUCCESS. Pokud se meto
 
 ### <a name="remarks"></a>Poznámky
 
-Tato metoda používá [RegSetValueEx](/windows/desktop/api/winreg/nf-winreg-regsetvalueexa) k zápisu hodnoty do registru.
+Tato metoda používá [RegSetValueEx](/windows/win32/api/winreg/nf-winreg-regsetvalueexw) k zápisu hodnoty do registru.
 
 ##  <a name="setstringvalue"></a>CRegKey:: SetStringValue
 
@@ -981,7 +981,7 @@ Pokud je metoda úspěšná, návratová hodnota je ERROR_SUCCESS. Pokud se meto
 
 ### <a name="remarks"></a>Poznámky
 
-Tato metoda používá [RegSetValueEx](/windows/desktop/api/winreg/nf-winreg-regsetvalueexa) k zápisu hodnoty do registru.
+Tato metoda používá [RegSetValueEx](/windows/win32/api/winreg/nf-winreg-regsetvalueexw) k zápisu hodnoty do registru.
 
 ##  <a name="setvalue"></a>CRegKey:: SetValue
 
@@ -1054,7 +1054,7 @@ V případě úspěchu vrátí ERROR_SUCCESS; v opačném případě nenulový k
 
 Dvě původní verze `SetValue` nástroje jsou označeny jako ATL_DEPRECATED a neměly by se již používat. Kompilátor vydá upozornění, pokud jsou použity tyto formuláře.
 
-Třetí metoda volá [RegSetValueEx](/windows/desktop/api/winreg/nf-winreg-regsetvalueexa).
+Třetí metoda volá [RegSetValueEx](/windows/win32/api/winreg/nf-winreg-regsetvalueexw).
 
 ## <a name="see-also"></a>Viz také:
 

@@ -1,5 +1,5 @@
 ---
-title: 'Postupy: Přidání, úpravy, nebo odstranění ovládacích prvků (C++)'
+title: 'Postupy: Ovládací prvky přidat, upravit nebo odstranit (C++)'
 ms.date: 02/15/2019
 f1_keywords:
 - vc.editors.dialog.dialog
@@ -43,186 +43,186 @@ helpviewer_keywords:
 - RichEdit 1.0 control
 - rich edit controls [C++], RichEdit 1.0
 ms.assetid: 73cef03f-5c8c-456a-87d1-1458dff185cf
-ms.openlocfilehash: 3c311e44a7e618bf932b0f4abf865a523a7fbead
-ms.sourcegitcommit: 8bb2bea1384b290b7570b01608a86c7488ae7a02
+ms.openlocfilehash: b940e94faf710de8ae5bc604b47dc35a1bc290a7
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67400756"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69491172"
 ---
-# <a name="how-to-add-edit-or-delete-controls-c"></a>Postupy: Přidání, úpravy, nebo odstranění ovládacích prvků (C++)
+# <a name="how-to-add-edit-or-delete-controls-c"></a>Postupy: Ovládací prvky přidat, upravit nebo odstranit (C++)
 
-Použití **editoru dialogového okna**, můžete přidat, změnit velikost, upravit a odstranit ovládací prvky v dialogových oknech. Můžete také upravit vlastnosti ovládacího prvku, třeba jeho ID, nebo zda je zpočátku viditelné v době běhu.
+Pomocí **editoru dialogového okna**můžete přidat, změnit velikost, upravit a odstranit ovládací prvky v dialogových oknech. Můžete také upravit vlastnosti ovládacího prvku, jako je jeho ID nebo zda je zpočátku viditelné v době běhu.
 
-**Editoru dialogového okna** kartě se zobrazí v [okno nástrojů](/visualstudio/ide/reference/toolbox) když pracujete v **editoru dialogového okna**. Můžete také upravit **nástrojů** okno pro snadnější použití. Další informace najdete v tématu [používání sady nástrojů](/visualstudio/ide/using-the-toolbox) a [zobrazit nebo skrýt okno nástrojů](showing-or-hiding-the-dialog-editor-toolbar.md).
+Karta **editoru dialogového okna** se zobrazí v [okně panelu nástrojů](/visualstudio/ide/reference/toolbox) při práci v **editoru dialogového okna**. Můžete také přizpůsobit okno **panelu nástrojů** pro snazší použití. Další informace naleznete v tématu [použití panelu nástrojů](/visualstudio/ide/using-the-toolbox) a [zobrazení nebo skrytí okna panelu nástrojů](showing-or-hiding-the-dialog-editor-toolbar.md).
 
 > [!TIP]
-> Při použití **editoru dialogového okna**, v mnoha případech můžete vybrat pravé tlačítko myši zobrazit místní nabídku s často používanými příkazy.
+> Při použití **editoru dialogových oken**můžete v mnoha případech vybrat pravé tlačítko myši a zobrazit místní nabídku často používaných příkazů.
 
-## <a name="add-controls"></a>Přidání ovládacích prvků
+## <a name="add-controls"></a>Přidat ovládací prvky
 
 ### <a name="to-add-a-control"></a>Přidání ovládacího prvku
 
-1. Zajistěte, aby byl dialogového okna s kartami pole aktuálního dokumentu v rámci editoru. Pokud dialogové okno není aktuální dokument, nezobrazí **karta editoru dialogového okna** v **nástrojů**.
+1. Zajistěte, aby se dialogové okno okna s kartami zobrazovalo jako aktuální dokument v rámci editoru. Pokud dialogové okno není aktuální dokument, v **sadě nástrojů**se nezobrazí **Karta Editor dialogového okna** .
 
-1. Na **editoru dialogového okna** karty **nástrojů** okna, vyberte ovládací prvek má, pak buď:
+1. Na kartě **Editor dialogového** okna v okně **panelu nástrojů** vyberte požadovaný ovládací prvek a pak jednu z těchto akcí:
 
-   - Vyberte dialogových oken v umístění, kam chcete umístit ovládací prvek a ovládací prvek se zobrazí, pokud jste vybrali.
+   - Vyberte dialogové okno v umístění, kam chcete ovládací prvek umístit, a ovládací prvek se zobrazí tam, kde jste vybrali.
 
-   - Přetáhnout myší ovládacího prvku z **nástrojů** do umístění ve vašem dialogovém okně. Můžete přesunout ovládací prvek kolem nebo změnit jeho velikost a tvar.
+   - Přetáhněte ovládací prvek z okna **panelu nástrojů** do umístění v dialogovém okně. Pak můžete ovládací prvek přesunout kolem nebo změnit jeho velikost a tvar.
 
-   - Dvakrát klikněte na panel ovládacího prvku **nástrojů** okně a zobrazí se ve vašem dialogovém okně. Přemístění ovládacího prvku do umístění, kterému dáváte přednost.
+   - Dvakrát klikněte na ovládací prvek v okně **panelu nástrojů** a zobrazí se v dialogovém okně. Přesuňte ovládací prvek do umístění, které dáváte přednost.
 
-### <a name="to-add-multiple-controls"></a>Chcete-li přidat více ovládacích prvků
+### <a name="to-add-multiple-controls"></a>Přidání více ovládacích prvků
 
-1. Když podržíte **Ctrl** klíče, vyberte ovládací prvek v **nástrojů** okna.
+1. Podržte stisknutou klávesu **CTRL** a vyberte ovládací prvek v okně **panelu nástrojů** .
 
-1. Verze **Ctrl** klíče a dialogových oken vybrat tolikrát, kolikrát chcete přidat konkrétní ovládací prvek.
+1. Uvolněte klávesu **CTRL** a vyberte dialogové okno tolikrát, kolikrát chcete přidat konkrétní ovládací prvek.
 
-1. Stisknutím klávesy **Esc** zastavit umístit ovládací prvky.
+1. Stisknutím klávesy **ESC** zastavíte umístění ovládacích prvků.
 
-### <a name="to-size-a-control-while-you-add-it"></a>Pro nastavení velikosti ovládacího prvku během jeho přidávání
+### <a name="to-size-a-control-while-you-add-it"></a>Změna velikosti ovládacího prvku, když ho přidáte
 
-1. Vyberte ovládací prvek v **nástrojů** okna.
+1. Vyberte ovládací prvek v okně **panelu nástrojů** .
 
-1. Umístěte kurzor, který se zobrazí jako různé vlasy, kam chcete levého horního rohu nový ovládací prvek bude ve vašem dialogovém okně.
+1. Umístěte kurzor, který se zobrazí jako zaměřovací kříž, kde chcete, aby byl v dialogovém okně levý horní roh nového ovládacího prvku.
 
-1. Vyberte a podržte tlačítko myši do levého horního rohu ovládacího prvku v dialogovém okně ukotvení. Přesuňte kurzor doprava a dolů, dokud je ovládací prvek požadovanou velikost.
+1. Vyberte a podržte stisknuté tlačítko myši k ukotvení levého horního rohu ovládacího prvku v dialogovém okně. Pak přetáhněte kurzor doprava a dolů, dokud ovládací prvek nedosáhne požadované velikosti.
 
    > [!NOTE]
-   > Můžete ukotvit všechny čtyři rohy požadovaný kresbě ovládací prvek. Tento postup použít jako příklad levém horním rohu.
+   > Můžete ukotvit kterýkoli ze čtyř rohů ovládacího prvku, který budete kreslit. Tento postup používal příklad v levém horním rohu.
 
-1. Uvolněte tlačítko myši. Vyrovná ovládacího prvku do dialogového okna v zadanou velikost.
+1. Uvolněte tlačítko myši. Ovládací prvek se přirovná k dialogovému oknu v zadané velikosti.
 
 > [!TIP]
-> Můžete změnit velikost ovládacího prvku po přetažení do dialogových oken přesunutím úchyty pro změnu velikosti ohraničení ovládacího prvku. Další informace najdete v tématu [velikosti jednotlivých ovládacích prvků](../windows/sizing-individual-controls.md).
+> Můžete změnit velikost ovládacího prvku po jeho přesunutí do dialogového okna přesunutím úchytů pro změnu velikosti na okraji ovládacího prvku. Další informace najdete v tématu [Změna velikosti jednotlivých ovládacích prvků](../windows/sizing-individual-controls.md).
 
-### <a name="to-add-a-custom-control"></a>Chcete-li přidat vlastní ovládací prvek
+### <a name="to-add-a-custom-control"></a>Přidání vlastního ovládacího prvku
 
-Do dialogového okna můžete přidat vlastní ovládací prvky. Vyberte **vlastní ovládací prvek** ikonu **nástrojů** a přetáhněte ji do vašeho dialogového okna. Chcete-li přidat `Syslink` řídit, přidat vlastní ovládací prvek a potom změňte ovládacího prvku **třídy** vlastnost `Syslink`. Tato akce způsobí, že vlastnosti, které chcete aktualizovat a zobrazit `Syslink` vlastnosti ovládacího prvku. Informace o obálkové třídy knihovny MFC naleznete v tématu [clinkctrl –](../mfc/reference/clinkctrl-class.md).
+Do dialogového okna můžete přidat vlastní ovládací prvky. Vyberte ikonu **vlastního ovládacího prvku** v **sadě nástrojů** a přetáhněte ji do dialogového okna. Chcete-li `Syslink` přidat ovládací prvek, přidejte vlastní ovládací prvek a poté změňte vlastnost **třídy** ovládacího prvku `Syslink`na. Tato akce způsobí, že se vlastnosti aktualizují a zobrazí `Syslink` vlastnosti ovládacího prvku. Informace o třídě obálky knihovny MFC naleznete v tématu [CLinkCtrl](../mfc/reference/clinkctrl-class.md).
 
-## <a name="edit-controls"></a>Ovládací prvky úprav
+## <a name="edit-controls"></a>Upravit ovládací prvky
 
-### <a name="to-edit-the-properties-of-a-control-or-controls"></a>Chcete-li upravit vlastnosti ovládacího prvku nebo ovládacích prvků
+### <a name="to-edit-the-properties-of-a-control-or-controls"></a>Úprava vlastností ovládacího prvku nebo ovládacích prvků
 
 1. V dialogovém okně vyberte ovládací prvek, který chcete upravit.
 
    > [!NOTE]
    > Pokud vyberete více ovládacích prvků, lze upravit pouze vlastnosti společné pro vybrané ovládací prvky.
 
-1. V [okno vlastností](/visualstudio/ide/reference/properties-window), změna vlastností ovládacího prvku.
+1. V [okno Vlastnosti](/visualstudio/ide/reference/properties-window)změňte vlastnosti ovládacího prvku.
 
    > [!NOTE]
-   > Při nastavení **rastrový obrázek** vlastnost tlačítko, přepínač nebo rovna hodnotě ovládací prvek zaškrtávací políčko **True**, styl BS_BITMAP je implementována pro ovládací prvek. Další informace najdete v tématu [styly](../mfc/reference/styles-used-by-mfc.md#button-styles). Příklad přidružení rastrový obrázek ovládacího prvku, naleznete v tématu [CButton::SetBitmap](../mfc/reference/cbutton-class.md#setbitmap). Rastrové obrázky nezobrazí ovládacího prvku při práci v **editoru dialogového okna**.
+   > Když nastavíte vlastnost **rastr** pro tlačítko, přepínač nebo ovládací prvek zaškrtávací políčko je rovno hodnotě **true**, je pro váš ovládací prvek implementován BS_BITMAP stylu. Další informace naleznete v tématu [styly tlačítek](../mfc/reference/styles-used-by-mfc.md#button-styles). Příklad přidružení rastrového obrázku k ovládacímu prvku naleznete v tématu [CButton:: SetBitmap](../mfc/reference/cbutton-class.md#setbitmap). Rastrové obrázky se nezobrazí na ovládacím prvku, když jste v **editoru dialogového okna**.
 
-### <a name="to-undo-changes-to-the-properties-of-a-control"></a>Chcete-li vrátit zpět změny vlastností ovládacího prvku
+### <a name="to-undo-changes-to-the-properties-of-a-control"></a>Zrušení změn vlastností ovládacího prvku
 
-1. Ujistěte se, že ovládací prvek má fokus **editoru dialogového okna**.
+1. Ujistěte se, že ovládací prvek má fokus v **editoru dialogového okna**.
 
-1. Přejděte do nabídky **upravit** > **zpět**. Pokud fokus není v ovládacím prvku **zpět** příkaz nebude k dispozici.
+1. Přejděte na nabídku **Upravit** > **zpět**. Pokud fokus není na ovládacím prvku, příkaz pro **vrácení zpět** nebude k dispozici.
 
-### <a name="to-define-a-member-variable-for-a-non-button-dialog-box-control"></a>Chcete-li definovat členské proměnné pro ovládací prvek dialogového okna (jiné tlačítko)
+### <a name="to-define-a-member-variable-for-a-non-button-dialog-box-control"></a>Chcete-li definovat členskou proměnnou pro ovládací prvek dialogového okna (ne tlačítko)
 
 > [!NOTE]
-> Tento postup platí jenom pro ovládací prvky dialogového okna v rámci projektu knihovny MFC. Projekty knihovny ATL používejte **nové zprávy Windows a obslužné rutiny událostí** dialogové okno. Další informace najdete v tématu [zpráva typy přidružených k objektům uživatelského rozhraní](../mfc/reference/message-types-associated-with-user-interface-objects.md), [úpravy obslužné rutiny zpráv](../mfc/reference/editing-a-message-handler.md), a [definování obslužné rutiny zpráv pro zprávy projeví](../mfc/reference/defining-a-message-handler-for-a-reflected-message.md).
+> Tento proces se vztahuje pouze na ovládací prvky dialogového okna v rámci projektu MFC. Projekty ATL by měly používat **nové dialogové okno zprávy a obslužné rutiny událostí systému Windows** . Další informace naleznete v tématu [typy zpráv přidružené k objektům uživatelského rozhraní](../mfc/reference/message-types-associated-with-user-interface-objects.md), [Úpravy obslužné rutiny zpráv](../mfc/reference/editing-a-message-handler.md)a [Definování obslužné rutiny zpráv pro zrcadlenou zprávu](../mfc/reference/defining-a-message-handler-for-a-reflected-message.md).
 
-1. V [editoru dialogového okna](../windows/dialog-editor.md), zvolte ovládací prvek.
+1. V [editoru dialogového okna](../windows/dialog-editor.md)vyberte ovládací prvek.
 
-1. Při stisknutí **Ctrl** klíče, poklepejte na ovládací prvek pole dialogového okna.
+1. Když stisknete klávesu **CTRL** , dvakrát klikněte na ovládací prvek dialog box.
 
-   [Přidat členskou proměnnou průvodce](../ide/add-member-variable-wizard.md) se zobrazí.
+   Zobrazí se [Průvodce Přidat členskou proměnnou](../ide/add-member-variable-wizard.md) .
 
-1. Zadejte příslušné informace **přidat členskou proměnnou** průvodce. Další informace najdete v tématu [výměna dat dialogových oken](../mfc/dialog-data-exchange.md).
+1. Do průvodce **přidáním členské proměnné** zadejte příslušné informace. Další informace najdete v tématu [Výměna dat dialogových oken](../mfc/dialog-data-exchange.md).
 
-1. Vyberte **OK** se vrátíte **editoru dialogového okna**.
+1. Kliknutím na **tlačítko OK** se vraťte do **editoru dialogového okna**.
 
 > [!TIP]
-> Pokud chcete přejít ze libovolný ovládací prvek dialogového okna na jeho existující obslužné rutiny, poklepejte na ovládací prvek.
+> Chcete-li přejít z jakéhokoli ovládacího prvku dialogu na jeho stávající obslužnou rutinu, dvakrát klikněte na ovládací prvek.
 
-Můžete také použít **členské proměnné** kartu [Průvodce třídami MFC](../mfc/reference/mfc-class-wizard.md) přidáte nové proměnné členů pro zadanou třídu a zobrazíte již definována členské proměnné.
+Můžete také použít kartu **členské proměnné** v [Průvodci třídou MFC](../mfc/reference/mfc-class-wizard.md) k přidání nových proměnných členů pro určenou třídu a zobrazení již definovaných proměnných členů.
 
-## <a name="delete-controls"></a>Odstranění ovládacích prvků
+## <a name="delete-controls"></a>Odstranit ovládací prvky
 
-V dialogovém okně vyberte ovládací prvek, stiskněte **odstranit** klíče, nebo přejděte do nabídky **upravit** > **odstranit**.
+V dialogovém okně vyberte ovládací prvek a potom stiskněte klávesu **Delete** nebo přejděte na nabídku **Upravit** > **odstranění**.
 
 ## <a name="other-issues"></a>Další problémy
 
 ### <a name="troubleshooting"></a>Poradce při potížích
 
-Po přidání běžného ovládacího prvku nebo ovládací prvek RTF do dialogového okna, nebude se zobrazovat při testování dialogových oken. Nebo dialogového okna, samotné se nezobrazí. Příklad:
+Po přidání společného ovládacího prvku nebo ovládacího prvku Rich Edit do dialogového okna se nezobrazí při testování dialogového okna. Nebo se dialogové okno nezobrazí. Příklad:
 
-1. Vytvořte projekt Win32, změna nastavení aplikace, proto vytvořit aplikace Windows (ne konzolovou aplikaci).
+1. Vytvořte projekt Win32 a změňte nastavení aplikace tak, abyste vytvořili aplikaci pro Windows (ne konzolovou aplikaci).
 
-1. V [zobrazení prostředků](how-to-create-a-resource-script-file.md#create-resources), dvakrát klikněte na *.rc* souboru.
+1. V [prostředky](how-to-create-a-resource-script-file.md#create-resources)dvakrát klikněte na soubor *. RC* .
 
-1. V části Možnosti dialogového okna, dvakrát klikněte **o** pole.
+1. V dialogovém okně klikněte dvakrát na pole **o produktu** .
 
-1. Přidat **ovládací prvek adresy IP** do dialogového okna.
+1. Přidejte do dialogového okna **ovládací prvek IP adresa** .
 
-1. Uložit a **sestavit vše znovu**.
+1. Uložte a **znovu sestavte vše**.
 
-1. Spuštění programu.
+1. Spusťte program.
 
-1. V dialogových oken **pomáhají** nabídku, vyberte **o** příkaz a sledujte, zobrazí se dialogové okno bez.
+1. V nabídce pomocníka v dialogovém okně zaškrtněte políčko **o** příkazu a sledujte, že se nezobrazí žádné dialogové okno.
 
-V současné době **editoru dialogového okna** nepřidává automaticky kódu do projektu při přetažení následující běžné ovládací prvky nebo ovládací prvky na dialogové okno pro úpravy s formátováním. Ani sada Visual Studio poskytuje chybu nebo upozornění při výskytu tohoto problému. Pokud chcete vyřešit, přidejte kód pro ovládací prvek ručně.
+V současné době **Editor dialogového okna** automaticky do projektu nepřidá kód, když přetáhnete následující běžné ovládací prvky nebo ovládací prvky s formátováním do dialogového okna. Ani aplikace Visual Studio při výskytu tohoto problému neposkytne chybu nebo upozornění. Chcete-li opravit, přidejte kód ovládacího prvku ručně.
 
 ||||
 |-|-|-|
-|Ovládací prvek posuvníku|Ovládací prvek stromu|Výběr data a času|
-|Ovládací prvek typu číselník|Ovládací prvek karty|Měsíční kalendář|
-|Ovládací prvek průběh|Animace ovládacího prvku|Ovládací prvek adresy IP|
+|Ovládací prvek posuvníku|Ovládací prvek strom|Výběr data a času|
+|Otočný ovládací prvek|Ovládací prvek karta|Měsíční kalendář|
+|Průběh – ovládací prvek|Ovládací prvek animace|Řízení IP adres|
 |Klávesová zkratka|Ovládací prvek pro úpravy s formátováním|Rozšířené pole se seznamem|
-|Ovládací prvek seznamu|Ovládací prvek pro úpravy s formátováním 2.0|Vlastní ovládací prvek|
+|Ovládací prvek seznamu|Ovládací prvek s bohatou úpravou 2,0|Vlastní ovládací prvek|
 
-Použití běžných ovládacích prvků v dialogovém okně, je třeba volat [InitCommonControlsEx](/windows/desktop/api/commctrl/nf-commctrl-initcommoncontrolsex) nebo `AFXInitCommonControls` předtím, než vytvoříte dialogové okno.
+Chcete-li použít běžné ovládací prvky v dialogovém okně, je nutné před vytvořením dialogového okna volat [vyžaduje InitCommonControlsEx](/windows/win32/api/commctrl/nf-commctrl-initcommoncontrolsex) nebo `AFXInitCommonControls` .
 
-Chcete-li používat řízení RichEdit, musíte volat `LoadLibrary`. Další informace najdete v tématu [o bohaté upravit ovládací prvky](/windows/desktop/Controls/about-rich-edit-controls) v sadě Windows SDK a [– Přehled ovládacího prvku Rich upravit](../mfc/overview-of-the-rich-edit-control.md).
+Chcete-li použít ovládací prvky RichEdit, `LoadLibrary`je nutné zavolat. Další informace naleznete v tématu [informace o ovládacích prvcích pro úpravy](/windows/win32/Controls/about-rich-edit-controls) s formátováním v Windows SDK a [přehledu ovládacího prvku Rich Edit](../mfc/overview-of-the-rich-edit-control.md).
 
 > [!NOTE]
-> Použití ovládacího prvku RichEdit s knihovnou MFC, musíte nejprve volat [afxinitrichedit2 –](../mfc/reference/application-information-and-management.md#afxinitrichedit2) načíst ovládacího prvku RichEdit 2.0 (RICHED20. Knihovny DLL), nebo se telefonicky [afxinitrichedit –](../mfc/reference/application-information-and-management.md#afxinitrichedit) načíst starší ovládacího prvku RichEdit 1.0 (RICHED32. KNIHOVNY DLL).
+> Chcete-li použít ovládací prvek RichEdit s knihovnou MFC, je nutné nejprve volat [AfxInitRichEdit2](../mfc/reference/application-information-and-management.md#afxinitrichedit2) a načíst ovládací prvek RichEdit 2,0 (knihovny Riched20. DLL) nebo zavolejte [AfxInitRichEdit](../mfc/reference/application-information-and-management.md#afxinitrichedit) a načtěte starší ovládací prvek RichEdit 1,0 (Riched32. DLL).
 >
-> Můžete použít aktuální [CRichEditCtrl](../mfc/reference/cricheditctrl-class.md) třída s atributem starší ovládacího prvku RichEdit 1.0, ale `CRichEditCtrl` je určen pouze pro podporu ovládacího prvku RichEdit 2.0. Protože jsou podobné RichEdit 1.0 a RichEdit 2.0, většina metod bude fungovat. Existují však určité rozdíly mezi 1.0 nebo 2.0 ovládací prvky, takže mohou některé metody nebudou správně fungovat nebo nepracuje vůbec.
+> Aktuální třídu [CRichEditCtrl](../mfc/reference/cricheditctrl-class.md) můžete použít se starším ovládacím prvkem RichEdit 1,0, ale `CRichEditCtrl` je navržena pouze pro podporu ovládacího prvku RichEdit 2,0. Vzhledem k tomu, že RichEdit 1,0 a RichEdit 2,0 jsou podobné, většina metod bude fungovat. Existují však rozdíly mezi ovládacími prvky 1,0 a 2,0, takže některé metody mohou fungovat nesprávně nebo nefungují vůbec.
 
 ### <a name="activex-controls"></a>ActiveX – ovládací prvky
 
-Visual Studio umožňuje vložit ovládací prvky ActiveX na vašem dialogovém okně. Další informace najdete v tématu [ovládací prvky MFC ActiveX](../mfc/mfc-activex-controls.md) a [ActiveX – kontejnery ovládacích prvků](../mfc/activex-control-containers.md).
+Visual Studio umožňuje vkládat ovládací prvky ActiveX do dialogového okna. Další informace naleznete v tématu [ovládací prvky MFC ActiveX](../mfc/mfc-activex-controls.md) a [kontejnery ovládacích prvků ActiveX](../mfc/activex-control-containers.md).
 
-**Vložit ovládací prvek ActiveX** dialogové okno umožňuje vložit ovládací prvky ActiveX na vašem dialogovém okně přitom [editoru dialogového okna](../windows/dialog-editor.md). Toto dialogové okno obsahuje následující vlastnosti:
+Dialogové okno **Vložit ovládací prvek ActiveX** umožňuje vložit ovládací prvky ActiveX do dialogového okna při použití [editoru dialogového okna](../windows/dialog-editor.md). Toto dialogové okno obsahuje následující vlastnosti:
 
 |Vlastnost|Popis|
 |---|---|
-|**Ovládací prvek ActiveX**|Zobrazí seznam ovládacích prvků ActiveX.<br/><br/>Vložení ovládacího prvku z tohoto dialogového okna nebude generovat obálkovou třídu. Pokud potřebujete obálkovou třídu, použijte [zobrazení tříd](/visualstudio/ide/viewing-the-structure-of-code) Pokud chcete jeden vytvořit, přečtěte si téma [přidání třídy](../ide/adding-a-class-visual-cpp.md).<br/><br/>Ovládací prvek ActiveX v toto dialogové okno nezobrazí, zkuste nainstalovat ovládací prvek podle pokynů jeho dodavatele.|
-|**Cesta**|Zobrazí soubor, ve kterém se nachází v ovládacím prvku ActiveX.|
+|**Ovládací prvek ActiveX**|Zobrazí seznam ovládacích prvků ActiveX.<br/><br/>Vložení ovládacího prvku z tohoto dialogového okna negeneruje obálkovou třídu. Pokud potřebujete obálkovou třídu, použijte [zobrazení tříd](/visualstudio/ide/viewing-the-structure-of-code) k vytvoření jedné, viz [Přidání třídy](../ide/adding-a-class-visual-cpp.md).<br/><br/>Pokud se v tomto dialogovém okně nezobrazí ovládací prvek ActiveX, zkuste nainstalovat ovládací prvek podle pokynů dodavatele.|
+|**Cesta**|Zobrazí soubor, ve kterém se nachází ovládací prvek ActiveX.|
 
 > [!CAUTION]
-> Nemusí být možné distribuovat všechny ovládací prvky ActiveX v systému. Přečtěte si licenční smlouvy pro software, který je nainstalovaný ovládací prvky nebo se obraťte na softwarová společnost.
+> Je možné, že nebudete mít právo distribuovat všechny ovládací prvky ActiveX do systému. Přečtěte si licenční smlouvu k softwaru, který nainstaloval ovládací prvky, nebo se obraťte na softwarovou společnost.
 
-#### <a name="to-add-an-activex-control"></a>Chcete-li přidat ovládací prvek ActiveX
+#### <a name="to-add-an-activex-control"></a>Přidání ovládacího prvku ActiveX
 
-1. Otevřete dialogové okno pole **editoru dialogového okna**.
+1. Otevřete dialogové okno v **editoru dialogového okna**.
 
-1. Klikněte pravým tlačítkem kamkoli do těla dialogových oken a vyberte **vložit ovládací prvek ActiveX**.
+1. Klikněte pravým tlačítkem kamkoli do těla dialogového okna a vyberte **Vložit ovládací prvek ActiveX**.
 
-   **Vložit ovládací prvek ActiveX** dialogového okna zobrazuje všechny ovládací prvky ActiveX v systému. V dolní části dialogového okna se zobrazí cesta k souboru ovládacího prvku ActiveX.
+   Zobrazí se dialogové okno **Vložit ovládací prvek ActiveX** , ve kterém se zobrazí všechny ovládací prvky ActiveX v systému. V dolní části dialogového okna se zobrazí cesta k souboru ovládacího prvku ActiveX.
 
-1. Vyberte ovládací prvek, který chcete přidat do vaší dialogové okno a zvolte **OK**.
+1. Vyberte ovládací prvek, který chcete přidat do dialogového okna a zvolte **OK**.
 
-   Ovládací prvek se zobrazí v dialogovém okně, kde můžete upravit nebo vytvořit pro něj obslužné rutiny, stejně jako jakýkoli jiný ovládací prvek.
+   Ovládací prvek se zobrazí v dialogovém okně, kde ho můžete upravit nebo pro něj vytvořit obslužné rutiny stejně jako jakýkoli jiný ovládací prvek.
 
 > [!TIP]
-> Můžete použít nabídku **editoru dialogového okna** rychle přidávání registrované ovládacích prvků ActiveX do dialogového okna, nebo zkuste přidat ovládací prvky ActiveX **nástrojů** okno pro snadný přístup.
+> Místní nabídku v **editoru dialogového okna** můžete použít k rychlému přidání registrovaných ovládacích prvků ActiveX do dialogového okna nebo k přidání ovládacích prvků ActiveX do okna **panelu nástrojů** pro snadný přístup.
 
-#### <a name="to-edit-properties-for-an-activex-control"></a>Postup úpravy vlastností pro ovládací prvek ActiveX
+#### <a name="to-edit-properties-for-an-activex-control"></a>Úprava vlastností pro ovládací prvek ActiveX
 
-Poskytuje nezávislým výrobcům – ovládací prvky ActiveX mohou jsou vybavené své vlastní vlastnosti a vlastnosti. Tyto vlastnosti jsou zobrazeny v **vlastnosti** okna. Všechny vlastnosti stránky, které uživatelé vytvářející obsah ovládacího prvku ActiveX jsou zobrazeny v **stránky vlastností** dialogové okno. (Chcete-li zobrazit **stránku vlastností** pro konkrétní ovládací prvek ActiveX, vyberte **stránku vlastností** tlačítko [okno vlastností](/visualstudio/ide/reference/properties-window)).
+Ovládací prvky ActiveX dodávané nezávislými dodavateli mohou být vybaveny vlastními vlastnostmi a charakteristikami. Tyto vlastnosti jsou zobrazeny v okně **vlastnosti** . Všechny stránky vlastností vytvořené zapisovačem ovládacího prvku ActiveX se zobrazí v dialogovém okně **Vlastnosti stránky** . (Chcete-li zobrazit **stránku vlastností** pro konkrétní ovládací prvek ActiveX, vyberte tlačítko **stránky vlastností** v [okno Vlastnosti](/visualstudio/ide/reference/properties-window)).
 
-- Vyberte **ActiveX** řídit a přejděte do nabídky **zobrazení** > **stránku vlastností** a zobrazte vlastnosti. Proveďte změny podle potřeby na stránce vlastností.
+- Chcete-li zobrazit vlastnosti, vyberte ovládací prvek **ActiveX** a přejděte na**stránku vlastností** **zobrazení** > nabídky. Podle potřeby proveďte změny na stránce vlastností.
 
-   Různé karty se zobrazí na stránce vlastností pro ovládací prvek ActiveX, v závislosti na seznamy vlastností, které jsou součástí ovládacího prvku ActiveX.
+   Na stránce vlastností ovládacího prvku ActiveX se zobrazí různé karty, v závislosti na seznamech vlastností, které jsou součástí ovládacího prvku ActiveX.
 
 > [!NOTE]
-> Tento postup platí pro použitím stránky vlastnosti můžete upravit ovládací prvky ActiveX. Můžete také procházet a upravovat vlastnosti ActiveX na novém **vlastnosti** okna.
+> Tento postup se používá pro úpravu ovládacích prvků ActiveX pomocí stránky vlastností. V novém okně **vlastnosti** můžete také procházet a upravovat vlastnosti ActiveX.
 
 ## <a name="requirements"></a>Požadavky
 
@@ -230,7 +230,7 @@ Win32
 
 ## <a name="see-also"></a>Viz také:
 
-[Správa ovládací prvky dialogového okna](controls-in-dialog-boxes.md)<br/>
+[Spravovat ovládací prvky dialogového okna](controls-in-dialog-boxes.md)<br/>
 [Postupy: Ovládací prvky rozložení](arrangement-of-controls-on-dialog-boxes.md)<br/>
 [Postupy: Definování řízení přístupu a hodnot](defining-mnemonics-access-keys.md)
 

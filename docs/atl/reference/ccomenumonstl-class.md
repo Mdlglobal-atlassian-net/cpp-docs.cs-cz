@@ -1,5 +1,5 @@
 ---
-title: Ccomenumonstl – třída
+title: CComEnumOnSTL – třída
 ms.date: 11/04/2016
 f1_keywords:
 - CComEnumOnSTL
@@ -7,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - CComEnumOnSTL class
 ms.assetid: befe1a44-7a00-4f28-9a2e-cc0fa526643c
-ms.openlocfilehash: f9bf9c227984b2fdbf460f970357f395934b238c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ab11ea5e5347c9c8684e8710e9742fdbcad8a46b
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62246372"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69497157"
 ---
-# <a name="ccomenumonstl-class"></a>Ccomenumonstl – třída
+# <a name="ccomenumonstl-class"></a>CComEnumOnSTL – třída
 
-Tato třída definuje objekt enumerátoru modelu COM na základě kolekce standardní knihovny C++.
+Tato třída definuje objekt enumerátoru COM na základě C++ standardní kolekce knihoven.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -32,44 +32,44 @@ CollType>,
 
 #### <a name="parameters"></a>Parametry
 
-*základ*<br/>
-COM enumerátor. Zobrazit [IEnumString](/windows/desktop/api/objidl/nn-objidl-ienumstring) příklad.
+*Základ*<br/>
+Enumerátor COM. Příklad najdete v tématu [IEnumString](/windows/win32/api/objidl/nn-objidl-ienumstring) .
 
 *piid*<br/>
-Ukazatel na Identifikátor rozhraní rozhraní enumerátor.
+Ukazatel na ID rozhraní rozhraní enumerátoru.
 
 *T*<br/>
-Typ položky, které jsou vystavené rozhraní enumerátor.
+Typ položky vystavený rozhraním enumerátoru.
 
 *kopírování*<br/>
-A [kopírovat zásady](../../atl/atl-copy-policy-classes.md) třídy.
+Třída [zásad kopírování](../../atl/atl-copy-policy-classes.md) .
 
 *CollType*<br/>
-Třída kontejneru standardní knihovny C++.
+Třída C++ kontejneru standardní knihovny.
 
 ## <a name="remarks"></a>Poznámky
 
-`CComEnumOnSTL` definuje objekt enumerátoru modelu COM na základě kolekce standardní knihovny C++. Tato třída je možné samostatně nebo ve spojení s [ICollectionOnSTLImpl](../../atl/reference/icollectiononstlimpl-class.md). Typické postupy použití této třídy jsou popsány níže. Další informace najdete v tématu [ATL – kolekce a enumerátory](../../atl/atl-collections-and-enumerators.md).
+`CComEnumOnSTL`definuje objekt enumerátoru COM na základě C++ standardní kolekce knihoven. Tato třída se dá použít samostatně nebo ve spojení s [ICollectionOnSTLImpl](../../atl/reference/icollectiononstlimpl-class.md). Typický postup použití této třídy je popsaný níže. Další informace naleznete v tématu [kolekce a čítače ATL](../../atl/atl-collections-and-enumerators.md).
 
-## <a name="to-use-this-class-with-icollectiononstlimpl"></a>Použití této třídy s ICollectionOnSTLImpl:
+## <a name="to-use-this-class-with-icollectiononstlimpl"></a>Chcete-li použít tuto třídu s ICollectionOnSTLImpl:
 
-- **Definice TypeDef** specializace této třídy.
+- **definice typedef** a specializace této třídy.
 
-- Použití **typedef** jako konečným argumentem šablony ve specializaci `ICollectionOnSTLImpl`.
+- Použijte **typedef** jako finální argument šablony v specializaci `ICollectionOnSTLImpl`.
 
-Zobrazit [ATL – kolekce a enumerátory](../../atl/atl-collections-and-enumerators.md) příklad.
+Příklad naleznete v tématu [kolekce a výčty knihovny ATL](../../atl/atl-collections-and-enumerators.md) .
 
-## <a name="to-use-this-class-independently-of-icollectiononstlimpl"></a>Použití této třídy bez ohledu na jejich ICollectionOnSTLImpl:
+## <a name="to-use-this-class-independently-of-icollectiononstlimpl"></a>Chcete-li použít tuto třídu nezávisle na ICollectionOnSTLImpl:
 
-- **Definice TypeDef** specializace této třídy.
+- **definice typedef** a specializace této třídy.
 
-- Použití **typedef** jako argument šablony ve specializaci `CComObject`.
+- Použijte **typedef** jako argument šablony v specializaci `CComObject`.
 
-- Vytvoření instance `CComObject` specializace.
+- Vytvořte instanci `CComObject` specializace.
 
-- Inicializovat objekt enumerator voláním [IEnumOnSTLImpl::Init](../../atl/reference/ienumonstlimpl-class.md#init).
+- Inicializujte objekt enumerátoru voláním [IEnumOnSTLImpl:: init](../../atl/reference/ienumonstlimpl-class.md#init).
 
-- Vrátí enumerátor rozhraní do klienta.
+- Vrátí rozhraní enumerátoru klientovi.
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
@@ -85,25 +85,25 @@ Zobrazit [ATL – kolekce a enumerátory](../../atl/atl-collections-and-enumerat
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** atlcom
+**Záhlaví:** atlcom. h
 
 ## <a name="example"></a>Příklad
 
-Kód níže obsahuje obecnou funkci pro zpracování, vytváření a inicializace objekt enumerátoru:
+Následující kód poskytuje obecnou funkci pro zpracování vytváření a inicializace objektu Enumerator:
 
 [!code-cpp[NVC_ATL_COM#34](../../atl/codesnippet/cpp/ccomenumonstl-class_1.h)]
 
-Tuto funkci je možné implementovat `_NewEnum` vlastnost kolekce rozhraní, jak je znázorněno níže:
+Tato funkce šablony se dá použít k implementaci `_NewEnum` vlastnosti rozhraní kolekce, jak je znázorněno níže:
 
 [!code-cpp[NVC_ATL_COM#35](../../atl/codesnippet/cpp/ccomenumonstl-class_2.h)]
 
-Tento kód vytvoří **typedef** pro `CComEnumOnSTL` , která zveřejní vektor `CComVariant`s prostřednictvím `IEnumVariant` rozhraní. `CVariantCollection` Třídy jednoduše specializuje `CreateSTLEnumerator` pro práci s objekty tohoto typu výčtu.
+Tento kód vytvoří **typedef** `CComEnumOnSTL` pro, který `CComVariant`zpřístupňuje vektor s pomocí `IEnumVariant` rozhraní. Třída se jednoduše `CreateSTLEnumerator` specializuje pro práci s objekty enumerátoru tohoto typu. `CVariantCollection`
 
 ## <a name="see-also"></a>Viz také:
 
 [IEnumOnSTLImpl](../../atl/reference/ienumonstlimpl-class.md)<br/>
-[Ukázka ATLCollections: Ukazuje ICollectionOnSTLImpl a CComEnumOnSTL, vlastních tříd zásad kopírování](../../overview/visual-cpp-samples.md)<br/>
-[Přehled tříd](../../atl/atl-class-overview.md)<br/>
+[Ukázka ATLCollections: Ukazuje třídy zásad pro ICollectionOnSTLImpl, CComEnumOnSTL a vlastní kopírování.](../../overview/visual-cpp-samples.md)<br/>
+[Přehled třídy](../../atl/atl-class-overview.md)<br/>
 [CComObjectRootEx – třída](../../atl/reference/ccomobjectrootex-class.md)<br/>
 [CComObjectThreadModel](atl-typedefs.md#ccomobjectthreadmodel)<br/>
 [IEnumOnSTLImpl – třída](../../atl/reference/ienumonstlimpl-class.md)

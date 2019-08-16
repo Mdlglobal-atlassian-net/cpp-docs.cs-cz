@@ -14,12 +14,12 @@ helpviewer_keywords:
 - CSplitButton [MFC], SetDropDownMenu
 - CSplitButton [MFC], OnDropDown
 ms.assetid: 6844d0a9-6408-4e44-9b5f-57628ed8bad6
-ms.openlocfilehash: d493a2d4d1c531250abc1cd60d1d3d5b79dea1b7
-ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
+ms.openlocfilehash: a552334adb4963f45388a798eb0723e61c09ec85
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68916781"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69502839"
 ---
 # <a name="csplitbutton-class"></a>CSplitButton – třída
 
@@ -54,7 +54,7 @@ class CSplitButton : public CButton
 
 ## <a name="remarks"></a>Poznámky
 
-Třída je odvozena od třídy [CButton.](../../mfc/reference/cbutton-class.md) `CSplitButton` Tlačítko rozdělení je ovládací prvek tlačítko, jehož styl je BS_SPLITBUTTON. Pokud uživatel klikne na šipku rozevíracího seznamu, zobrazí se vlastní nabídka. Další informace naleznete v tématu styly BS_SPLITBUTTON a BS_DEFSPLITBUTTON v [stylech tlačítek](/windows/desktop/Controls/button-styles).
+Třída je odvozena od třídy [CButton.](../../mfc/reference/cbutton-class.md) `CSplitButton` Tlačítko rozdělení je ovládací prvek tlačítko, jehož styl je BS_SPLITBUTTON. Pokud uživatel klikne na šipku rozevíracího seznamu, zobrazí se vlastní nabídka. Další informace naleznete v tématu styly BS_SPLITBUTTON a BS_DEFSPLITBUTTON v [stylech tlačítek](/windows/win32/Controls/button-styles).
 
 Následující obrázek znázorňuje dialogové okno, které obsahuje ovládací prvek stránkování a ovládací prvek tlačítko rozdělení (1). Na šipku rozevíracího seznamu (2) již bylo kliknuto a zobrazí se podnabídka (3).
 
@@ -144,8 +144,8 @@ afx_msg void OnDropDown(
 
 |Parametr|Popis|
 |---------------|-----------------|
-|*pNMHDR*|pro Ukazatel na strukturu [NMHDR](/windows/desktop/api/richedit/ns-richedit-nmhdr) , která obsahuje informace o oznámení [BCN_DROPDOWN](/windows/desktop/Controls/bcn-dropdown) .|
-|*pResult*|mimo (Nepoužívá se, není vrácena žádná hodnota.) Návratová hodnota oznámení [BCN_DROPDOWN](/windows/desktop/Controls/bcn-dropdown)|
+|*pNMHDR*|pro Ukazatel na strukturu [NMHDR](/windows/win32/api/richedit/ns-richedit-nmhdr) , která obsahuje informace o oznámení [BCN_DROPDOWN](/windows/win32/Controls/bcn-dropdown) .|
+|*pResult*|mimo (Nepoužívá se, není vrácena žádná hodnota.) Návratová hodnota oznámení [BCN_DROPDOWN](/windows/win32/Controls/bcn-dropdown)|
 
 ### <a name="remarks"></a>Poznámky
 

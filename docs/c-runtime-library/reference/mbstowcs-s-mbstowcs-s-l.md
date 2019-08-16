@@ -26,16 +26,16 @@ helpviewer_keywords:
 - mbstowcs_s function
 - mbstowcs_s_l function
 ms.assetid: 2fbda953-6918-498f-b440-3e7b21ed65a4
-ms.openlocfilehash: 18af20b5722364ea306daebdcb77f5771d8ea2b5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7a1c29118c48bbbb5358e7d7ea57296f7ec908a8
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62331153"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69499760"
 ---
-# <a name="mbstowcss-mbstowcssl"></a>mbstowcs_s, _mbstowcs_s_l
+# <a name="mbstowcs_s-_mbstowcs_s_l"></a>mbstowcs_s, _mbstowcs_s_l
 
-Převede sekvence vícebajtových znaků na odpovídající pořadí širokých znaků. Verze [mbstowcs _mbstowcs_l –](mbstowcs-mbstowcs-l.md) s rozšířeními zabezpečení, jak je popsáno v [funkce zabezpečení v CRT](../../c-runtime-library/security-features-in-the-crt.md).
+Převede sekvenci vícebajtových znaků na odpovídající sekvenci velkých znaků. Verze [mbstowcs, _mbstowcs_l](mbstowcs-mbstowcs-l.md) s vylepšeními zabezpečení, jak je popsáno v [části funkce zabezpečení v CRT](../../c-runtime-library/security-features-in-the-crt.md).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -75,62 +75,62 @@ errno_t _mbstowcs_s_l(
 ### <a name="parameters"></a>Parametry
 
 *pReturnValue*<br/>
-Počet znaků, převodu.
+Počet převedených znaků.
 
 *wcstr*<br/>
-Adresa vyrovnávací paměti pro výsledný řetězec převedený širokého znaku.
+Adresa vyrovnávací paměti pro výsledný Konvertovaný řetězec s velkým počtem znaků.
 
 *sizeInWords*<br/>
-Velikost *wcstr* vyrovnávací paměti ve slovech.
+Velikost vyrovnávací paměti *wcstr* ve slovech.
 
 *mbstr*<br/>
-Adresa sekvence NULL byl ukončen vícebajtových znaků.
+Adresa posloupnosti null ukončených vícebajtových znaků.
 
-*Počet*<br/>
-Maximální počet širokých znaků k ukládání *wcstr* vyrovnávací paměti, bez ukončujícího znaku null, nebo [_TRUNCATE](../../c-runtime-library/truncate.md).
+*výpočtu*<br/>
+Maximální počet velkých znaků, které se mají Uložit do vyrovnávací paměti *wcstr* , včetně ukončující hodnoty null nebo [_TRUNCATE](../../c-runtime-library/truncate.md).
 
-*Národní prostředí*<br/>
+*jazyka*<br/>
 Národní prostředí, které se má použít
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Nula v případě úspěchu, při selhání kód chyby.
+Nula v případě úspěchu, chybový kód při selhání.
 
-|Chybový stav|Vrátí hodnotu a **errno**|
+|Chybový stav|Návratová hodnota a **errno**|
 |---------------------|------------------------------|
-|*wcstr* je **NULL** a *sizeInWords* > 0|**EINVAL**|
-|*mbstr* je **NULL**|**EINVAL**|
-|Cílová vyrovnávací paměť je příliš malá tak, aby obsahovala převedený řetězec (není-li *počet* je **_TRUNCATE**; viz poznámky níže)|**ERANGE**|
-|*wcstr* není **NULL** a *sizeInWords* == 0|**EINVAL**|
+|*wcstr* má **hodnotu NULL** a *sizeInWords* > 0|**EINVAL**|
+|*mbstr* má **hodnotu null** .|**EINVAL**|
+|Cílová vyrovnávací paměť je příliš malá, aby obsahovala převedený řetězec (Pokud není *počet* **_TRUNCATE**; viz poznámky níže)|**ERANGE**|
+|*wcstr* není **null** a *sizeInWords* = = 0.|**EINVAL**|
 
-Pokud některá z těchto podmínek dojde k je vyvolána výjimku neplatného parametru, jak je popsáno v [Parameter Validation](../../c-runtime-library/parameter-validation.md) . Pokud smí provádění pokračovat, funkce vrátí chybový kód a nastaví **errno** jak je uvedeno v tabulce.
+Pokud nastane kterákoli z těchto podmínek, je vyvolána výjimka neplatného parametru, jak je popsáno v tématu [ověřování parametru](../../c-runtime-library/parameter-validation.md) . Pokud provádění může pokračovat, vrátí funkce kód chyby a nastaví **errno** , jak je uvedeno v tabulce.
 
 ## <a name="remarks"></a>Poznámky
 
-**Mbstowcs_s** funkce převede řetězec vícebajtových znaků, na které odkazuje *mbstr* do široké znaky, které jsou uloženy ve vyrovnávací paměti, na které odkazuje *wcstr*. Převod bude pokračovat pro jednotlivé znaky, dokud nebude splněna jedna z těchto podmínek:
+Funkce **mbstowcs_s** převede řetězec vícebajtových znaků, na které odkazovalo *mbstr* na velké znaky uložené ve vyrovnávací paměti, na které ukazuje *wcstr*. Převod bude pro každý znak pokračovat, dokud nebude splněna jedna z těchto podmínek:
 
-- Zjistil se vícebajtový znak null
+- Byl zjištěn vícebajtový znak null.
 
-- Zjistil se neplatný vícebajtový znak
+- Zjistil se neplatný vícebajtový znak.
 
-- Počet širokých znaků, které jsou uložené v *wcstr* vyrovnávací paměti je rovno *počet*.
+- Počet velkých znaků uložených ve vyrovnávací paměti *wcstr* se rovná *počtu*.
 
-Cílový řetězec je vždy zakončený (i v případě chyby).
+Cílový řetězec je vždycky zakončený hodnotou null (i v případě chyby).
 
-Pokud *počet* je zvláštní hodnota [_TRUNCATE](../../c-runtime-library/truncate.md), pak **mbstowcs_s** převede největší část řetězce, jako se vejde do cílové vyrovnávací paměti a stále ponechají prostor s hodnotou Null ukončovací znak.
+Pokud *Count* je speciální hodnota [_TRUNCATE](../../c-runtime-library/truncate.md), **mbstowcs_s** se převede jako velká část řetězce, aby se vešla do cílové vyrovnávací paměti, zatímco pořád opouští místo ukončovacího znaku null.
 
-Pokud **mbstowcs_s** úspěšně převede zdrojový řetězec uloží velikost v široké znaky převedený řetězec, včetně ukončovacího znaku null, do  *&#42;pReturnValue* (k dispozici *pReturnValue* není **NULL**). K tomu dojde i v případě, *wcstr* argument je **NULL** a poskytuje způsob, jak určit velikost požadované vyrovnávací paměti. Všimněte si, že pokud *wcstr* je **NULL**, *počet* se ignoruje, a *sizeInWords* musí být 0.
+Pokud **mbstowcs_s** úspěšně převede zdrojový řetězec, umístí velikost převedených řetězců do velkých znaků, včetně ukončovacího znaku null, do  *&#42;pReturnValue* (poskytnutý *pReturnValue* není **null**). K tomu dojde i v případě, že argument *wcstr* má **hodnotu null** a poskytuje způsob, jak určit požadovanou velikost vyrovnávací paměti. Všimněte si, že pokud má *Wcstr* **hodnotu null**, je *počet* ignorován a *sizeInWords* musí být 0.
 
-Pokud **mbstowcs_s** zaznamená platný vícebajtový znak, uloží je 0  *&#42;pReturnValue*, nastaví cílové vyrovnávací paměti na prázdný řetězec, nastaví **errno** k  **EILSEQ**a vrátí **EILSEQ**.
+Pokud **mbstowcs_s** narazí na neplatný vícebajtový znak, umístí 0 v  *&#42;pReturnValue*, nastaví cílovou vyrovnávací paměť na prázdný řetězec, nastaví **errno** na **EILSEQ**a vrátí **EILSEQ**.
 
-Pokud sekvence odkazované *mbstr* a *wcstr* překrývají, chování **mbstowcs_s** není definován.
+Pokud se sekvence, na které ukazuje *mbstr* a *wcstr* , překrývají, chování **mbstowcs_s** není definováno.
 
 > [!IMPORTANT]
-> Ujistěte se, že *wcstr* a *mbstr* nepřekrývají a že *počet* správně odráží číslo k převodu vícebajtových znaků.
+> Zajistěte, aby se *wcstr* a *mbstr* nepřekrývaly, a tento *počet* správně odráží počet vícebajtových znaků, které se mají převést.
 
-**mbstowcs_s** používá aktuální národní prostředí pro všechna závislá chování; **_mbstowcs_s_l –** je stejná s tím rozdílem, že používá národní prostředí předané. Další informace najdete v tématu [národní prostředí](../../c-runtime-library/locale.md).
+**mbstowcs_s** používá aktuální národní prostředí pro jakékoli chování závislé na národním prostředí; **_mbstowcs_s_l** je totožný s tím rozdílem, že místo toho používá národní prostředí. Další informace najdete v tématu [národní prostředí](../../c-runtime-library/locale.md).
 
-V jazyce C++ je použití těchto funkcí zjednodušeno díky přetížení šablon; přetížení mohou odvodit délku vyrovnávací paměti automaticky (tím eliminuje nutnost zadat argument velikosti) a dokážou automaticky nahradit starší, nezabezpečené funkce jejími novějšími, zabezpečené protějšky. Další informace najdete v tématu [přetížení zabezpečení šablony](../../c-runtime-library/secure-template-overloads.md).
+V C++systému je použití těchto funkcí zjednodušeno díky přetížení šablon; přetížení můžou odvodit délku vyrovnávací paměti automaticky (eliminují nutnost zadat argument velikosti) a můžou automaticky nahradit starší nezabezpečené funkce jejich novějšími, zabezpečenými protějšky. Další informace najdete v tématu [přetížení zabezpečení šablon](../../c-runtime-library/secure-template-overloads.md).
 
 ## <a name="requirements"></a>Požadavky
 
@@ -139,13 +139,13 @@ V jazyce C++ je použití těchto funkcí zjednodušeno díky přetížení šab
 |**mbstowcs_s**|\<stdlib.h>|
 |**_mbstowcs_s_l**|\<stdlib.h>|
 
-Další informace o kompatibilitě, naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Viz také:
 
 [Převod dat](../../c-runtime-library/data-conversion.md)<br/>
 [Národní prostředí](../../c-runtime-library/locale.md)<br/>
-[MultiByteToWideChar](/windows/desktop/api/stringapiset/nf-stringapiset-multibytetowidechar)<br/>
+[MultiByteToWideChar](/windows/win32/api/stringapiset/nf-stringapiset-multibytetowidechar)<br/>
 [Výklad sekvencí vícebajtových znaků](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
 [_mbclen, mblen, _mblen_l](mbclen-mblen-mblen-l.md)<br/>
 [mbtowc, _mbtowc_l](mbtowc-mbtowc-l.md)<br/>

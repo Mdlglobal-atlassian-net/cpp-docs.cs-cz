@@ -1,21 +1,21 @@
 ---
-title: appobject – (atribut C++ COM)
+title: appobject (C++ atribut com)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.appobject
 helpviewer_keywords:
 - appobject attribute
 ms.assetid: 8ce30b73-e945-403e-a755-6bc78078a695
-ms.openlocfilehash: 8219c8fdd1b1df93f92fc6c1d0324a2475d3384b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e02cedff70ac32f7edfdb92b240269c34befee7e
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62409704"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69490937"
 ---
 # <a name="appobject"></a>appobject
 
-Identifikuje coclass jako objekt aplikace, který je přidružen k aplikaci úplné .exe a označuje, že jsou globálně k dispozici v této funkce a vlastnosti třídy typu coclass [knihovny typů](../../mfc/automation-clients-using-type-libraries.md).
+Identifikuje třídu typu coclass jako objekt aplikace, který je přidružen k úplné aplikaci. exe, a označuje, že funkce a vlastnosti třídy coclass jsou v této [knihovně typů](../../mfc/automation-clients-using-type-libraries.md)globálně k dispozici.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -25,11 +25,11 @@ Identifikuje coclass jako objekt aplikace, který je přidružen k aplikaci úpl
 
 ## <a name="remarks"></a>Poznámky
 
-**Appobject –** C++ atribut má stejné funkce jako [appobject –](/windows/desktop/Midl/appobject) atribut MIDL.
+Atribut **appobject** C++ má stejné funkce jako atribut [appobject](/windows/win32/Midl/appobject) MIDL.
 
 ## <a name="example"></a>Příklad
 
-Následující kód ukazuje předchází blok atribut, který obsahuje definici jednoduchou třídu **appobject –**:
+Následující kód ukazuje jednoduchou definici třídy předchází bloku atributů, který zahrnuje **appobject**:
 
 ```cpp
 // cpp_attr_ref_appobject.cpp
@@ -48,16 +48,16 @@ class A : public ICustom {
 
 ## <a name="requirements"></a>Požadavky
 
-### <a name="attribute-context"></a>Atribut kontextu
+### <a name="attribute-context"></a>Kontext atributu
 
 |||
 |-|-|
-|**Platí pro**|**Třída**, **– struktura**|
-|**Opakovatelné**|Ne|
-|**Vyžadované atributy**|`coclass`|
+|**Platí pro**|**Třída**, **Struktura**|
+|**REPEATABLE**|Ne|
+|**Požadované atributy**|`coclass`|
 |**Neplatné atributy**|Žádné|
 
-Další informace o kontexty atributů najdete v tématu [kontexty atributů](cpp-attributes-com-net.md#contexts).
+Další informace o kontextech atributů naleznete v tématu kontexty [atributů](cpp-attributes-com-net.md#contexts).
 
 ## <a name="see-also"></a>Viz také:
 

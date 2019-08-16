@@ -1,5 +1,5 @@
 ---
-title: 'Postupy: Volání nativních knihoven DLL ze spravovaného kódu pomocí služby PInvoke'
+title: 'Postupy: Volání nativních knihoven DLL ze spravovaného kódu pomocí PInvoke'
 ms.custom: get-started-article
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -8,24 +8,24 @@ helpviewer_keywords:
 - marshaling [C++], calling native DLLs
 - data marshaling [C++], calling native DLLs
 ms.assetid: 3273eb4b-38d1-4619-92a6-71bda542be72
-ms.openlocfilehash: e51e094cc013250fc254a09e279745f1f9c108ac
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b36496690c4d83837a6dff1752f3f0db514869eb
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62222808"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69501234"
 ---
-# <a name="how-to-call-native-dlls-from-managed-code-using-pinvoke"></a>Postupy: Volání nativních knihoven DLL ze spravovaného kódu pomocí služby PInvoke
+# <a name="how-to-call-native-dlls-from-managed-code-using-pinvoke"></a>Postupy: Volání nativních knihoven DLL ze spravovaného kódu pomocí PInvoke
 
-Funkce, které jsou implementovány v nespravovaných knihoven DLL lze volat ze spravovaného kódu pomocí vyvolání platformy (nespravovaného) funkce. Pokud není k dispozici zdrojový kód pro knihovnu DLL, P/Invoke je jedinou možností pro spolupráci. Ale na rozdíl od jiných jazyků .NET, Visual C++ poskytuje alternativu k P/Invoke. Další informace najdete v tématu [pomocí zprostředkovatele komunikace C++ (implicitní služba PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md).
+Funkce, které jsou implementované v nespravovaných knihovnách DLL, mohou být volány ze spravovaného kódu pomocí funkce vyvolání (volání nespravovaného kódu) platformy. Pokud zdrojový kód pro knihovnu DLL není k dispozici, je P/Invoke jedinou možností pro spolupráci. Na rozdíl od jiných jazyků .NET ale vizuál C++ nabízí alternativu ke volání nespravovaného volání. Další informace najdete v tématu [použití C++ zprostředkovatele komunikace (implicitní PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md).
 
 ## <a name="example"></a>Příklad
 
-Následující příklad kódu používá Win32 [GetSystemMetrics](/windows/desktop/api/winuser/nf-winuser-getsystemmetrics) funkce načtete aktuální rozlišení obrazovky v pixelech.
+Následující příklad kódu používá funkci Win32 [GetSystemMetrics](/windows/win32/api/winuser/nf-winuser-getsystemmetrics) k načtení aktuálního rozlišení obrazovky v pixelech.
 
-Pro funkce, které používají jenom vnitřní typy jako argumenty a návratové hodnoty žádná další práce je nutná. Jiné datové typy, jako je například ukazatele na funkce, polí a struktur, vyžadují další atributy, aby zařazování správná data.
+Pro funkce, které používají pouze vnitřní typy jako argumenty a návratové hodnoty, není vyžadována žádná další práce. Jiné datové typy, například ukazatele na funkce, pole a struktury, vyžadují další atributy, aby bylo zajištěno správné zařazování dat.
 
-I když to není potřeba, je vhodné nastavit P/Invoke deklarace statické členy třídy value class, takže neexistují v globálním oboru názvů, jak je ukázáno v tomto příkladu.
+I když není vyžadováno, je vhodné, aby deklarace volání neexistují statické členy třídy hodnot, aby neexistovaly v globálním oboru názvů, jak je znázorněno v tomto příkladu.
 
 ```
 // pinvoke_basic.cpp

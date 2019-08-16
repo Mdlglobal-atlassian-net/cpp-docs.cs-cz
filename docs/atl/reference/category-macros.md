@@ -1,5 +1,5 @@
 ---
-title: Makra kategorií
+title: Makra kategorie
 ms.date: 11/04/2016
 f1_keywords:
 - atlcom/ATL::BEGIN_CATEGORY_MAP
@@ -7,31 +7,31 @@ f1_keywords:
 - atlcom/ATL::IMPLEMENTED_CATEGORY
 - atlcom/ATL::REQUIRED_CATEGORY
 ms.assetid: 223578cb-6180-4787-a8d8-ba3787a5d3ee
-ms.openlocfilehash: 9c74b1e8e9fc101ed9b3acd842d38dcdb9eb48f3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 411e06cc795827eef356018ba427510fd9eb7c06
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62247394"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69497857"
 ---
-# <a name="category-macros"></a>Makra kategorií
+# <a name="category-macros"></a>Makra kategorie
 
-Tato makra definují kategorie mapy.
+Tato makra definují mapování kategorií.
 
 |||
 |-|-|
-|[BEGIN_CATEGORY_MAP](#begin_category_map)|Označuje začátek toho mapy kategorie.|
-|[END_CATEGORY_MAP](#end_category_map)|Označuje konec mapování kategorie.|
-|[IMPLEMENTED_CATEGORY](#implemented_category)|Určuje kategorie, které jsou implementovány pomocí objektu COM.|
-|[REQUIRED_CATEGORY](#required_category)|Označuje kategorií, které jsou požadovány kontejneru v modelu COM objektu.|
+|[BEGIN_CATEGORY_MAP](#begin_category_map)|Označí začátek mapy kategorie.|
+|[END_CATEGORY_MAP](#end_category_map)|Označí konec mapy kategorie.|
+|[IMPLEMENTED_CATEGORY](#implemented_category)|Označuje kategorie implementované objektem COM.|
+|[REQUIRED_CATEGORY](#required_category)|Označuje kategorie, které jsou požadovány pro kontejner objektem COM.|
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** atlcom
+**Záhlaví:** atlcom. h
 
-##  <a name="begin_category_map"></a>  BEGIN_CATEGORY_MAP
+##  <a name="begin_category_map"></a>BEGIN_CATEGORY_MAP
 
-Označuje začátek toho mapy kategorie.
+Označí začátek mapy kategorie.
 
 ```
 BEGIN_CATEGORY_MAP(theClass)
@@ -40,28 +40,28 @@ BEGIN_CATEGORY_MAP(theClass)
 ### <a name="parameters"></a>Parametry
 
 *theClass*<br/>
-[in] Název třídy obsahující mapování kategorie.
+pro Název třídy, která obsahuje mapu kategorie.
 
 ### <a name="remarks"></a>Poznámky
 
-Kategorie mapování slouží k určení komponenty kategorií, které implementuje třída modelu COM a kategorie, které vyžaduje ze svého kontejneru.
+Mapa kategorie se používá k určení, které kategorie komponent bude třída COM implementovat a které kategorie vyžaduje z kontejneru.
 
-Přidat [IMPLEMENTED_CATEGORY](#implemented_category) položku do mapy pro každou kategorii implementováno třídou COM. Přidat [REQUIRED_CATEGORY](#required_category) položku do mapy pro každou kategorii, která vyžaduje třídu klientů k implementaci. Konec mapování [END_CATEGORY_MAP](#end_category_map) – makro.
+Přidejte položku [IMPLEMENTED_CATEGORY](#implemented_category) na mapu pro každou kategorii implementovanou třídou com. Přidejte položku [REQUIRED_CATEGORY](#required_category) na mapu pro každou kategorii, kterou třída vyžaduje k implementaci svých klientů. Označte konec mapy pomocí makra [END_CATEGORY_MAP](#end_category_map) .
 
-Součást kategorie uvedené v objektu map se zaregistruje automaticky po registraci modulu, pokud třída má přiřazený [OBJECT_ENTRY_AUTO](../../atl/reference/object-map-macros.md#object_entry_auto) nebo [OBJECT_ENTRY_NON_CREATEABLE_EX_AUTO](../../atl/reference/object-map-macros.md#object_entry_non_createable_ex_auto) .
+Kategorie komponent uvedené v mapě budou registrovány automaticky, pokud je modul zaregistrován, pokud má třída přidružené [OBJECT_ENTRY_AUTO](../../atl/reference/object-map-macros.md#object_entry_auto) nebo [OBJECT_ENTRY_NON_CREATEABLE_EX_AUTO](../../atl/reference/object-map-macros.md#object_entry_non_createable_ex_auto).
 
 > [!NOTE]
->  ATL – používá správce kategorií standardní součástí k registraci komponenty kategorií. Pokud správce není k dispozici v systému, když je zaregistrovaný v modulu, registrace úspěšná, ale součást kategorie nebude registrována pro danou třídu.
+>  Knihovna ATL používá ke registraci kategorií komponent standardní správce kategorií součástí. Pokud v systému není správce k dispozici, je-li modul registrován, registrace je úspěšná, ale kategorie komponent nebudou pro tuto třídu registrovány.
 
-Další informace o kategoriích komponenty, naleznete v tématu [co jsou součástí kategorie a jak fungují](/windows/desktop/com/component-categories-and-how-they-work) v sadě Windows SDK.
+Další informace o kategoriích komponent naleznete v tématu [co jsou kategorie komponent a jak](/windows/win32/com/component-categories-and-how-they-work) fungují v Windows SDK.
 
 ### <a name="example"></a>Příklad
 
 [!code-cpp[NVC_ATL_Windowing#100](../../atl/codesnippet/cpp/category-macros_1.h)]
 
-##  <a name="end_category_map"></a>  END_CATEGORY_MAP
+##  <a name="end_category_map"></a>END_CATEGORY_MAP
 
-Označuje konec mapování kategorie.
+Označí konec mapy kategorie.
 
 ```
 END_CATEGORY_MAP()
@@ -71,9 +71,9 @@ END_CATEGORY_MAP()
 
 Podívejte se na příklad pro [BEGIN_CATEGORY_MAP](#begin_category_map).
 
-##  <a name="implemented_category"></a>  IMPLEMENTED_CATEGORY
+##  <a name="implemented_category"></a>IMPLEMENTED_CATEGORY
 
-Přidat makro aplikace IMPLEMENTED_CATEGORY vaší komponentě [kategorie mapování](#begin_category_map) k určení, že by měl být zaregistrován jako implementace kategorie identifikován *catID* parametru.
+Přidejte makro IMPLEMENTED_CATEGORY k [mapě kategorie](#begin_category_map) vaší komponenty a určete tak, že by měl být zaregistrován jako implementace kategorie identifikované parametrem *catID* .
 
 ```
 IMPLEMENTED_CATEGORY(catID)
@@ -82,35 +82,35 @@ IMPLEMENTED_CATEGORY(catID)
 ### <a name="parameters"></a>Parametry
 
 *catID*<br/>
-[in] Konstanta CATID nebo proměnná drží globálně jedinečný identifikátor (GUID) pro kategorii implementovaná. Adresa *catID* bude přijata a přidán do mapování. Najdete v následující tabulce pro výběr uložených kategorií.
+pro CATID konstanta nebo proměnná drží globálně jedinečný identifikátor (GUID) pro implementovanou kategorii. Adresa *catID* bude provedena a přidána na mapu. Výběr kategorií akcií najdete v následující tabulce.
 
 ### <a name="remarks"></a>Poznámky
 
-Součást kategorie uvedené v objektu map se zaregistruje automaticky po registraci modulu, pokud třída má přiřazený [OBJECT_ENTRY_AUTO](../../atl/reference/object-map-macros.md#object_entry_auto) nebo [OBJECT_ENTRY_NON_CREATEABLE_EX_AUTO](../../atl/reference/object-map-macros.md#object_entry_non_createable_ex_auto) makra.
+Kategorie komponent uvedené v mapě budou registrovány automaticky, pokud je modul zaregistrován, pokud má třída přidružené makro [OBJECT_ENTRY_AUTO](../../atl/reference/object-map-macros.md#object_entry_auto) nebo [OBJECT_ENTRY_NON_CREATEABLE_EX_AUTO](../../atl/reference/object-map-macros.md#object_entry_non_createable_ex_auto) .
 
-Klienty můžete použít informace o kategoriích, které jsou registrovány pro třídu k určení jeho možnosti a požadavky bez nutnosti vytvořit její instanci.
+Klienti mohou pomocí informací o kategorii registrovaných pro třídu určit její schopnosti a požadavky, aniž by museli vytvořit její instanci.
 
-Další informace o kategoriích komponenty, naleznete v tématu [co jsou součástí kategorie a jak fungují](/windows/desktop/com/component-categories-and-how-they-work) v sadě Windows SDK.
+Další informace o kategoriích komponent naleznete v tématu [co jsou kategorie komponent a jak](/windows/win32/com/component-categories-and-how-they-work) fungují v Windows SDK.
 
-### <a name="a-selection-of-stock-categories"></a>Výběr základní kategorie
+### <a name="a-selection-of-stock-categories"></a>Výběr kategorií akcií
 
-|Popis|Symbol|Registru GUID|
+|Popis|Písmeno|GUID registru|
 |-----------------|------------|-------------------|
 |Bezpečné pro skriptování|CATID_SafeForScripting|{7DD95801-9882-11CF-9FA9-00AA006C42C4}|
 |Bezpečné pro inicializaci|CATID_SafeForInitializing|{7DD95802-9882-11CF-9FA9-00AA006C42C4}|
-|Jednoduchý rámeček webu členství ve skupině|CATID_SimpleFrameControl|{157083E0-2368-11cf-87B9-00AA006C8166}|
-|Jednoduchá vazba dat|CATID_PropertyNotifyControl|{157083E1-2368-11cf-87B9-00AA006C8166}|
+|Zahrnutí jednoduchého snímku webu|CATID_SimpleFrameControl|{157083E0-2368-11cf-87B9-00AA006C8166}|
+|Jednoduchá datová vazba|CATID_PropertyNotifyControl|{157083E1-2368-11cf-87B9-00AA006C8166}|
 |Rozšířená datová vazba|CATID_VBDataBound|{157083E2-2368-11cf-87B9-00AA006C8166}|
 |Ovládací prvky bez oken|CATID_WindowlessObject|{1D06B600-3AE3-11cf-87B9-00AA006C8166}|
-|S ohledem na Internetu objekty|Zobrazit [vědět objekty Internet](/windows/desktop/com/internet-aware-objects) v sadě Windows SDK pro seznam ukázek.||
+|Internetové objekty|Seznam [](/windows/win32/com/internet-aware-objects) ukázek najdete v části věnované internetovým objektům v Windows SDK.||
 
 ### <a name="example"></a>Příklad
 
 [!code-cpp[NVC_ATL_Windowing#100](../../atl/codesnippet/cpp/category-macros_1.h)]
 
-##  <a name="required_category"></a>  REQUIRED_CATEGORY
+##  <a name="required_category"></a>REQUIRED_CATEGORY
 
-Přidat makro REQUIRED_CATEGORY vaší komponentě [kategorie mapování](#begin_category_map) k určení, že by měl být zaregistrován jako vyžadující kategorie identifikován *catID* parametru.
+Přidejte makro REQUIRED_CATEGORY do [mapy kategorie](#begin_category_map) vaší komponenty a určete tak, že by měl být zaregistrován jako požadavek na kategorii identifikovanou parametrem *catID* .
 
 ```
 REQUIRED_CATEGORY( catID )
@@ -119,27 +119,27 @@ REQUIRED_CATEGORY( catID )
 ### <a name="parameters"></a>Parametry
 
 *catID*<br/>
-[in] Konstanta CATID nebo proměnná drží globálně jedinečný identifikátor (GUID) pro požadovaná kategorie. Adresa *catID* bude přijata a přidán do mapování. Najdete v následující tabulce pro výběr uložených kategorií.
+pro CATID konstanta nebo proměnná drží globálně jedinečný identifikátor (GUID) pro požadovanou kategorii. Adresa *catID* bude provedena a přidána na mapu. Výběr kategorií akcií najdete v následující tabulce.
 
 ### <a name="remarks"></a>Poznámky
 
-Součást kategorie uvedené v objektu map se zaregistruje automaticky po registraci modulu, pokud třída má přiřazený [OBJECT_ENTRY_AUTO](../../atl/reference/object-map-macros.md#object_entry_auto) nebo [OBJECT_ENTRY_NON_CREATEABLE_EX_AUTO](../../atl/reference/object-map-macros.md#object_entry_non_createable_ex_auto) makra.
+Kategorie komponent uvedené v mapě budou registrovány automaticky, pokud je modul zaregistrován, pokud má třída přidružené makro [OBJECT_ENTRY_AUTO](../../atl/reference/object-map-macros.md#object_entry_auto) nebo [OBJECT_ENTRY_NON_CREATEABLE_EX_AUTO](../../atl/reference/object-map-macros.md#object_entry_non_createable_ex_auto) .
 
-Klienty můžete použít informace o kategoriích, které jsou registrovány pro třídu k určení jeho možnosti a požadavky bez nutnosti vytvořit její instanci. Ovládací prvek může například vyžadovat, že kontejner podporuje datovou vazbu. Kontejner můžete zjistit se jeho funkce, které jsou nezbytné pro hostování ovládacího prvku dotazem správce kategorií pro kategorie vyžaduje ovládací prvek. Pokud kontejner nepodporuje požadované funkce, může odmítnout k hostování objektu COM.
+Klienti mohou pomocí informací o kategorii registrovaných pro třídu určit její schopnosti a požadavky, aniž by museli vytvořit její instanci. Ovládací prvek může například vyžadovat, aby vazba dat podporovala kontejner. Kontejner může zjistit, jestli má funkce nezbytné pro hostování ovládacího prvku, a to tak, že se dotazuje správce kategorií na kategorie vyžadované tímto ovládacím prvkem. Pokud kontejner nepodporuje požadovanou funkci, může odmítnout hostování objektu COM.
 
-Další informace o kategoriích komponenty, včetně seznamu vzorku, naleznete v tématu [co jsou součástí kategorie a jak fungují](/windows/desktop/com/component-categories-and-how-they-work) v sadě Windows SDK.
+Další informace o kategoriích součástí, včetně ukázkového seznamu, najdete v tématu [co jsou kategorie komponent a jak](/windows/win32/com/component-categories-and-how-they-work) fungují v Windows SDK.
 
-### <a name="a-selection-of-stock-categories"></a>Výběr základní kategorie
+### <a name="a-selection-of-stock-categories"></a>Výběr kategorií akcií
 
-|Popis|Symbol|Registru GUID|
+|Popis|Písmeno|GUID registru|
 |-----------------|------------|-------------------|
 |Bezpečné pro skriptování|CATID_SafeForScripting|{7DD95801-9882-11CF-9FA9-00AA006C42C4}|
 |Bezpečné pro inicializaci|CATID_SafeForInitializing|{7DD95802-9882-11CF-9FA9-00AA006C42C4}|
-|Jednoduchý rámeček webu členství ve skupině|CATID_SimpleFrameControl|{157083E0-2368-11cf-87B9-00AA006C8166}|
-|Jednoduchá vazba dat|CATID_PropertyNotifyControl|{157083E1-2368-11cf-87B9-00AA006C8166}|
+|Zahrnutí jednoduchého snímku webu|CATID_SimpleFrameControl|{157083E0-2368-11cf-87B9-00AA006C8166}|
+|Jednoduchá datová vazba|CATID_PropertyNotifyControl|{157083E1-2368-11cf-87B9-00AA006C8166}|
 |Rozšířená datová vazba|CATID_VBDataBound|{157083E2-2368-11cf-87B9-00AA006C8166}|
 |Ovládací prvky bez oken|CATID_WindowlessObject|{1D06B600-3AE3-11cf-87B9-00AA006C8166}|
-|S ohledem na Internetu objekty|Zobrazit [vědět objekty Internet](/windows/desktop/com/internet-aware-objects) v sadě Windows SDK pro seznam ukázek.||
+|Internetové objekty|Seznam [](/windows/win32/com/internet-aware-objects) ukázek najdete v části věnované internetovým objektům v Windows SDK.||
 
 ### <a name="example"></a>Příklad
 
@@ -147,4 +147,4 @@ Další informace o kategoriích komponenty, včetně seznamu vzorku, naleznete 
 
 ## <a name="see-also"></a>Viz také:
 
-[Makra](../../atl/reference/atl-macros.md)
+[Makr](../../atl/reference/atl-macros.md)

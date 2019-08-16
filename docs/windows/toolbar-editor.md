@@ -1,5 +1,5 @@
 ---
-title: Editor panelu nástrojů (C++)
+title: Editor panelů nástrojůC++()
 ms.date: 02/14/2019
 f1_keywords:
 - vc.editors.toolbar.F1
@@ -50,159 +50,159 @@ helpviewer_keywords:
 - buttons [C++], tool tips
 - Toolbar editor [C++], creating tool tips
 ms.assetid: aa9f0adf-60f6-4f79-ab05-bc330f15ec43
-ms.openlocfilehash: f0faa93cd4ea1fdc2fad90a5d4d47f2feeef65e6
-ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
+ms.openlocfilehash: 72c42a06da8276d118c6c204f838ed4b31d142b9
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66504239"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69514689"
 ---
-# <a name="toolbar-editor-c"></a>Editor panelu nástrojů (C++)
+# <a name="toolbar-editor-c"></a>Editor panelů nástrojůC++()
 
-**Panelu nástrojů editoru** umožňuje vytvářet prostředky panelu nástrojů a rastrové obrázky převést prostředky panelu nástrojů. **Panelu nástrojů editoru** využívá grafické zobrazení k zobrazení panelu nástrojů a tlačítka, která se velmi podobají, jak bude vypadat dokončené aplikace.
+**Editor panelu nástrojů** umožňuje vytvořit prostředky panelu nástrojů a převést rastrové obrázky na prostředky panelu nástrojů. **Editor panelu nástrojů** používá grafický displej k zobrazení panelu nástrojů a tlačítek, která se přesně podobají tomu, jak budou vypadat v dokončené aplikaci.
 
-**Panelu nástrojů editoru** okno naleznete dvě zobrazení obrázku tlačítka, stejně jako **Editor obrázků** okna. Rozdělit pruh odděluje a můžete přetáhnout příčku ze strany na stranu, a změnit tak relativní velikosti podoken. Aktivní podokno zobrazuje hranici výběru a nad dvě zobrazení obrázku je panel nástrojů předmět.
+Okno **editoru panelu nástrojů** zobrazuje dvě zobrazení obrázku tlačítka, stejně jako okno **editoru obrázků** . Dělicí čára odděluje dvě podokna a přetažením rozděleného pruhu můžete změnit relativní velikosti podoken. Aktivní podokno zobrazuje ohraničení výběru a nad dvěma zobrazeními obrázku je panel nástrojů pro předmět.
 
 ![Toolbar Editor](../mfc/media/vctoolbareditor.gif "vcToolbarEditor")<br/>
 **Editor panelu nástrojů**
 
-**Panelu nástrojů editoru** je podobný **Editor obrázků** funkcí a položek nabídky, grafické nástroje a rastrový obrázek mřížky mezi nimi jsou stejné. Je v příkazu nabídky **Image** nabídky přepínat mezi **panelu nástrojů editoru** a **Editor obrázků**. Další informace o používání **grafiky** nástrojů **barvy** palety, nebo **Image** nabídky, naleznete v tématu [Editor obrázků](../windows/image-editor-for-icons.md).
+**Editor panelu nástrojů** je podobný **editoru obrázků** ve funkcích a položky nabídky, grafické nástroje a rastrové mřížky mezi těmito dvěma položkami jsou stejné. V nabídce **obrázku** je příkaz nabídky pro přepínání mezi **editorem nástrojů** a **editorem obrázků**. Další informace o použití panelu nástrojů **Grafika** , palety **barev** nebo nabídky **Obrázek** naleznete v tématu [Editor obrázků](../windows/image-editor-for-icons.md).
 
-Můžete vytvořit nový panel nástrojů v projektu jazyka C++ převedením rastrový obrázek. Obrázek z rastrového obrázku se převede na obrázky tlačítek pro panel nástrojů. Obvykle rastrový obrázek obsahuje několik imagí tlačítko v jediné bitmapě pomocí jedné image pro každé tlačítko. Image může mít libovolnou velikost, protože výchozí hodnota je 16 pixelů na šířku a výšku obrázku. Můžete zadat velikost obrázky tlačítek v **nový prostředek panelu nástrojů** dialogové okno při výběru **panelu nástrojů editoru** z **Image** při v nabídce  **Editor obrázků**.
+Můžete vytvořit nový panel nástrojů v C++ projektu převodem rastrového obrázku. Obrázek z rastrového obrázku se převede na obrázky tlačítek panelu nástrojů. Rastrový obrázek obsahuje několik obrázků tlačítek v jedné bitmapě s jedním obrázkem pro každé tlačítko. Obrázky mohou mít libovolnou velikost, protože výchozí hodnota je 16 pixelů a výška obrázku. Velikost obrázků tlačítek můžete zadat v dialogovém okně **nový prostředek panelu nástrojů** , když v **editoru obrázků**zvolíte **Editor panelu nástrojů** v nabídce **Obrázek** .
 
-**Nový prostředek panelu nástrojů** dialogové okno umožňuje zadat šířka a výška ohraničení tlačítka, které přidáváte do nástrojů prostředku v projektu jazyka C++. Výchozí hodnota je 16 × 15 pixelů.
+Dialogové okno **nový prostředek panelu nástrojů** umožňuje zadat šířku a výšku přidaných tlačítek do prostředku panelu nástrojů v C++ projektu. Výchozí hodnota je 16 × 15 pixelů.
 
-Rastrový obrázek, který se používá k vytvoření panelu nástrojů má maximální šířku 2048, tak pokud nastavíte **šířku tlačítka** k *512*, můžete mít jenom čtyři tlačítka. Pokud nastavíte šířku na *513*, můžete mít jenom tři tlačítka.
+Rastrový obrázek, který se používá k vytvoření panelu nástrojů, má maximální šířku 2048, takže pokud nastavíte **šířku tlačítka** na *512*, můžete mít jenom čtyři tlačítka. Pokud nastavíte možnost šířka na *513*, můžete mít pouze tři tlačítka.
 
-**Nový prostředek panelu nástrojů** dialogové okno má následující vlastnosti:
+Dialogové okno **nový prostředek panelu nástrojů** má následující vlastnosti:
 
 |Vlastnost|Popis|
 |---|---------------|
-|**Šířka tlačítka**|Poskytuje prostor pro zadání šířku pro tlačítka panelu nástrojů, které při převádění z prostředku rastrového obrázku na prostředek panelu nástrojů.|
-|**Výška tlačítka**|Poskytuje prostor pro zadání výšku pro tlačítka panelu nástrojů, které při převádění z prostředku rastrového obrázku na prostředek panelu nástrojů.|
+|**Šířka tlačítka**|Poskytuje prostor pro zadání šířky tlačítek panelu nástrojů, které převádíte z rastrového prostředku na prostředek panelu nástrojů.|
+|**Výška tlačítka**|Poskytuje místo, kde můžete zadat výšku tlačítek panelu nástrojů, která převádíte z rastrového prostředku na prostředek panelu nástrojů.|
 
 > [!NOTE]
-> Image se ořízne na šířku a výšku zadán a barvy jsou upraveny pro použití standardních barev panelu nástrojů (16 barev).
+> Obrázky jsou oříznuty na zadanou šířku a výšku a barvy jsou upraveny tak, aby používaly standardní barvy panelů nástrojů (16 barev).
 
-Ve výchozím nastavení je na pravém konci panelu nástrojů zobrazí tlačítko Nový nebo prázdný. Toto tlačítko můžete přesunout začnete upravovat. Při vytváření nového tlačítka další prázdné tlačítko vpravo se zobrazí upravená tlačítka. Při ukládání panelu nástrojů tlačítko prázdné se neuloží.
+Ve výchozím nastavení se na pravé straně panelu nástrojů zobrazí nové nebo prázdné tlačítko. Toto tlačítko můžete přesunout před úpravou. Když vytvoříte nové tlačítko, zobrazí se na pravé straně upravovaného tlačítka jiné prázdné tlačítko. Po uložení panelu nástrojů se prázdné tlačítko neuloží.
 
-Tlačítka panelu nástrojů má následující vlastnosti:
+Tlačítko panelu nástrojů má následující vlastnosti:
 
 |Vlastnost|Popis|
 |--------------|-----------------|
-|**ID**|Definuje ID pro tlačítko. Rozevírací seznam obsahuje běžné **ID** názvy.|
-|**Šířka**|Nastavuje šířku tlačítka. doporučuje se 16 pixelů.|
-|**Výška**|Nastaví výšku tlačítka. Výška tlačítka změní výšku všechna tlačítka na panelu nástrojů. doporučuje se 15 pixelů.|
-|**Zeptat se**|Definuje zprávy zobrazí ve stavovém řádku. Přidání *\n* a přidá název **popisek** na toto tlačítko panelu nástrojů. Další informace najdete v tématu [vytvoření popisu](../windows/creating-a-tool-tip-for-a-toolbar-button.md).|
+|**ID**|Definuje ID pro tlačítko. V rozevíracím seznamu jsou uvedeny běžné názvy **ID** .|
+|**Délk**|Nastaví šířku tlačítka. doporučuje se 16 pixelů.|
+|**Výška**|Nastaví výšku tlačítka. Výška jednoho tlačítka změní výšku všech tlačítek na panelu nástrojů. doporučuje se 15 pixelů.|
+|**Zeptat se**|Definuje zprávu zobrazenou na stavovém řádku. Přidáním *\n* a názvu přidáte k tomuto tlačítku na panelu nástrojů **Popis** . Další informace najdete v tématu [Vytvoření popisu tlačítka](../windows/creating-a-tool-tip-for-a-toolbar-button.md).|
 
-**Šířka** a **výška** platí pro všechna tlačítka. Rastrový obrázek, který se používá k vytvoření panelu nástrojů má maximální šířku 2048, tak pokud nastavíte šířku tlačítka na *512*, můžete mít jenom čtyři tlačítka a nastavte šířku na *513*, můžete mít jenom tři tlačítka.
+**Šířka** a **Výška** se aplikují na všechna tlačítka. Rastrový obrázek, který se používá k vytvoření panelu nástrojů, má maximální šířku 2048, takže pokud nastavíte šířku tlačítka na *512*, můžete mít jenom čtyři tlačítka a pokud nastavíte šířku na *513*, můžete mít jenom tři tlačítka.
 
 ## <a name="how-to"></a>Postupy
 
-**Panelu nástrojů editoru** vám umožní:
+**Editor panelu nástrojů** vám umožní:
 
-### <a name="to-create-new-toolbars"></a>K vytvoření nových panelů nástrojů
+### <a name="to-create-new-toolbars"></a>Vytvoření nových panelů nástrojů
 
-1. V **zobrazení prostředků**, klikněte pravým tlačítkem na váš *.rc* soubor a zvolte **přidat prostředek**. Pokud máte existující nástrojů ve vaší *.rc* souborů, které můžete kliknout pravým tlačítkem **nástrojů** a pak zvolte položku **vložit nástrojů**.
+1. V **prostředky**klikněte pravým tlačítkem na soubor *. RC* a vyberte **Přidat prostředek**. Máte-li v souboru *. RC* existující panel nástrojů, můžete kliknout pravým tlačítkem myši na složku **panelu nástrojů** a vybrat možnost **Vložit panel nástrojů**.
 
-1. V **přidat prostředek** dialogu **nástrojů** v **typ prostředku** seznamu a pak zvolte **nový**.
+1. V dialogovém okně **Přidat prostředek** vyberte v seznamu **typ prostředku** položku **panel nástrojů** a klikněte na tlačítko **Nový**.
 
-   Pokud symbol plus ( **+** ) se zobrazí vedle **nástrojů** typ prostředku, znamená to, že šablony nástrojů jsou k dispozici. Vyberte znaménko plus rozbalit seznam šablon, vyberte šablonu a zvolte **nový**.
+   Pokud se vedle typu prostředku **+** **panelu nástrojů** zobrazí znaménko plus (), znamená to, že jsou k dispozici šablony panelu nástrojů. Vyberte znaménko plus a rozbalte seznam šablon, vyberte šablonu a zvolte **Nový**.
 
-### <a name="to-convert-bitmaps-to-toolbar-resources"></a>Převod bitmap na prostředky panelu nástrojů
+### <a name="to-convert-bitmaps-to-toolbar-resources"></a>Převod rastrových obrázků na prostředky panelu nástrojů
 
-1. Otevřete existující prostředek rastrového obrázku v [Editor obrázků](../windows/image-editor-for-icons.md). Pokud ještě není v rastrový obrázek vaší *.rc* souboru, klikněte pravým tlačítkem na *.rc* soubor a zvolte **Import**, přejděte na rastrový obrázek, které chcete přidat do vaší *.rc*  a vyberte možnost **otevřít**.
+1. Otevřete existující rastrový prostředek v [editoru obrázků](../windows/image-editor-for-icons.md). Pokud bitmapa ještě není ve vašem souboru *. RC* , klikněte pravým tlačítkem myši na soubor *. RC* a zvolte **importovat**, potom přejděte k rastrovému obrázku, který chcete přidat do souboru *. RC* , a vyberte **otevřít**.
 
-1. Přejděte do nabídky **Image** > **panelu nástrojů editoru**.
+1. Přejít k**editoru panelu nástrojů** **Obrázek** > nabídky
 
-   **Nový prostředek panelu nástrojů** zobrazí se dialogové okno. Můžete změnit šířku a výšku obrázky ikon tak, aby odpovídaly rastrového obrázku. Obrázek panelu nástrojů se následně zobrazí **panelu nástrojů editoru**.
+   Zobrazí se dialogové okno **nový prostředek panelu nástrojů** . Šířku a výšku obrázků ikon můžete změnit tak, aby odpovídaly rastrovému obrázku. Obrázek panelu nástrojů se pak zobrazí v **editoru panelu nástrojů**.
 
-1. K dokončení převodu, změňte příkaz **ID** pomocí tlačítka [okno vlastností](/visualstudio/ide/reference/properties-window). Zadejte nový *ID* nebo vyberte **ID** z rozevíracího seznamu.
+1. Chcete-li dokončit převod, změňte **ID** příkazu tlačítka pomocí [okno Vlastnosti](/visualstudio/ide/reference/properties-window). Zadejte nové *ID* nebo v rozevíracím seznamu vyberte **ID** .
 
    > [!TIP]
-   > **Vlastnosti** okno obsahuje tlačítko připínáčku v záhlaví a tento výběr povolí nebo zakáže **automaticky skrýt** okna. K cyklování skrze všechny vlastnosti tlačítka panelu nástrojů, aniž byste museli znovu otevřít windows jednotlivých vlastností, zapněte **automaticky skrýt** vypnout proto **vlastnosti** okno zůstane bez pohybu.
+   > Okno **vlastnosti** obsahuje v záhlaví tlačítko připínáček a tato možnost povoluje nebo zakazuje **automatické skrývání** okna. Chcete-li procházet všechny vlastnosti tlačítka panelu nástrojů bez nutnosti znovu otevřít jednotlivá okna vlastností, vypněte **automatické skrývání** , aby okno **vlastnosti** zůstalo nefunkční.
 
-   Identifikátory příkazů tlačítka na nový panel nástrojů můžete také změnit pomocí [okno vlastností](/visualstudio/ide/reference/properties-window).
+   Identifikátory příkazů pro tlačítka na novém panelu nástrojů můžete změnit také pomocí [okno Vlastnosti](/visualstudio/ide/reference/properties-window).
 
-### <a name="to-manage-toolbar-buttons"></a>Ke správě tlačítka na panelu nástrojů
+### <a name="to-manage-toolbar-buttons"></a>Správa tlačítek panelu nástrojů
 
-#### <a name="to-create-a-new-toolbar-button"></a>K vytvoření nového tlačítka panelu nástrojů
+#### <a name="to-create-a-new-toolbar-button"></a>Vytvoření nového tlačítka panelu nástrojů
 
-1. V [zobrazení prostředků](how-to-create-a-resource-script-file.md#create-resources) rozbalte složku prostředků (například *Project1.rc*).
+1. V [prostředky](how-to-create-a-resource-script-file.md#create-resources) rozbalte složku prostředků (například *Project1. RC*).
 
-1. Rozbalte **nástrojů** a pak zvolte položku panelu nástrojů pro úpravy, udělejte jednu z následujících akcí:
+1. Rozbalte složku **panel nástrojů** a vyberte panel nástrojů, který chcete upravit, a proveďte jednu z následujících akcí:
 
-   - Přiřaďte ID prázdné tlačítko na pravém konci panelu nástrojů. Můžete tak učinit pomocí úpravy **ID** vlastnost [okno vlastností](/visualstudio/ide/reference/properties-window). Můžete například poskytnout stejný Identifikátor jako možnost nabídky tlačítka panelu nástrojů. V takovém případě použijte pole rozevíracího seznamu vyberte **ID** položky nabídky.
+   - Přiřaďte ID k prázdnému tlačítku na pravé straně panelu nástrojů. Můžete to provést úpravou vlastnosti **ID** v [okně Vlastnosti](/visualstudio/ide/reference/properties-window). Například můžete chtít, aby tlačítko panelu nástrojů mělo stejné ID jako možnost nabídky. V takovém případě můžete pomocí rozevíracího seznamu vybrat **ID** možnosti nabídky.
 
-   - Vyberte prázdnou tlačítko na panelu nástrojů v pravém konci **panel nástrojů zobrazení** podokně a začněte kreslení. Je přiřazen výchozí Identifikátor příkazu tlačítka (ID_BUTTON\<n >).
+   - V podokně **zobrazení panelu nástrojů** vyberte prázdné tlačítko na pravé straně panelu nástrojů a začněte kreslit. ID příkazu výchozího tlačítka je přiřazeno (ID_BUTTON\<n >).
 
-#### <a name="to-add-an-image-to-a-toolbar-as-a-button"></a>Chcete-li přidat bitovou kopii na panelu nástrojů jako tlačítko
+#### <a name="to-add-an-image-to-a-toolbar-as-a-button"></a>Přidání obrázku na panel nástrojů jako tlačítko
 
-1. V [zobrazení prostředků](how-to-create-a-resource-script-file.md#create-resources), otevřete poklepáním panelu nástrojů.
+1. V [prostředky](how-to-create-a-resource-script-file.md#create-resources)otevřete panel nástrojů tak, že na něj dvakrát kliknete.
 
-1. Dále otevřete image, kterou chcete přidat na panel nástrojů.
+1. Pak otevřete obrázek, který chcete přidat na panel nástrojů.
 
    > [!NOTE]
-   > Pokud obrázek otevřít v sadě Visual Studio, se otevře v **Editor obrázků**. Image můžete otevřít také v jiných aplikacích grafiky.
+   > Otevřete-li obrázek v aplikaci Visual Studio, otevře se v **editoru obrázků**. Můžete také otevřít obrázek v jiných grafických programech.
 
-1. Přejděte do nabídky **upravit** > **kopírování**.
+1. Přejděte do nabídky **Upravit** > **kopii**.
 
-1. Přepnout na panel nástrojů tak, že vyberete jeho karty v horní části okna zdroje.
+1. Přepněte na panel nástrojů výběrem jeho karty v horní části okna zdroje.
 
-1. Přejděte do nabídky **upravit** > **vložit**.
+1. Přejděte do nabídky **Upravit** > **vložení**.
 
-   Obrázek se zobrazí na panelu nástrojů jako nového tlačítka.
+   Obrázek se zobrazí na panelu nástrojů jako nové tlačítko.
 
 #### <a name="to-move-a-toolbar-button"></a>Přesunutí tlačítka panelu nástrojů
 
-V **panel nástrojů zobrazení** podokně přetáhněte tlačítko, které chcete přesunout do nového umístění na panelu nástrojů.
+V podokně **zobrazení panelu nástrojů** přetáhněte tlačítko, které chcete přesunout do nového umístění na panelu nástrojů.
 
-- Kopírování tlačítek z panelu nástrojů, podržte klávesu **Ctrl** klíč a **panel nástrojů zobrazení** podokně přetáhněte tlačítko buď nové místo na panelu nástrojů nebo do umístění na jiný panel nástrojů.
+- Chcete-li kopírovat tlačítka z panelu nástrojů, podržte stisknutou klávesu **CTRL** a v podokně **zobrazení panelu nástrojů** přetáhněte tlačítko na jeho nové umístění na panelu nástrojů nebo na jiné místo na jiném panelu nástrojů.
 
-- Odstranění tlačítka panelu nástrojů vyberte tlačítko panelu nástrojů a přetáhněte ho z panelu nástrojů.
+- Chcete-li odstranit tlačítko panelu nástrojů, vyberte tlačítko panelu nástrojů a přetáhněte jej mimo panel nástrojů.
 
-- Vložit nebo odebrání mezer mezi tlačítky na panelu nástrojů, buď přetáhněte je ze nebo vůči navzájem na panelu nástrojů.
+- Chcete-li vložit nebo odebrat mezeru mezi tlačítky na panelu nástrojů, přetáhněte je od sebe na panelu nástrojů nebo směrem ven.
 
 |Akce|Krok|
 |------|------|
-|Vložit mezeru před tlačítko, které není mezeru|Přetáhněte tlačítko na pravé straně nebo dolů, dokud se překrývá na tlačítko Další informace o uprostřed.|
-|Vložit mezeru před tlačítko, které následuje mezera a zajistit koncové mezery|Přetáhněte toto tlačítko, dokud pravé nebo dolní okraj je právě klepnou na tlačítko Další nebo právě překrývá.|
-|Vložit mezeru před tlačítko, které následuje mezera a zavřete tento následující místo|Přetáhněte tlačítko na pravé straně nebo dolů, dokud se překrývá na tlačítko Další informace o uprostřed.|
-|Chcete-li odebrat mezery mezi tlačítka na panelu nástrojů|Přetáhněte tlačítko na jedné straně místa směrem k tlačítku na druhé straně prostor se překrývá na tlačítko Další informace o urazili polovinu cesty.|
+|Vložení mezery před tlačítko, které není následováno mezerou|Přetáhněte tlačítko doprava nebo dolů, dokud se nepřekryje s tlačítkem Další v polovině.|
+|Vložení mezery před tlačítko, na které následuje mezera a kde má být zachováno koncové místo|Přetáhněte tlačítko, dokud není pravé nebo dolní hrana pouze dotekem tlačítka Další nebo pouze překrytí.|
+|Vložit mezeru před tlačítko, které následuje mezera, a zavřít následující místo|Přetáhněte tlačítko doprava nebo dolů, dokud se nepřekryje s tlačítkem Další v polovině.|
+|Odebrání mezery mezi tlačítky na panelu nástrojů|Přetáhněte tlačítko na jednu stranu prostoru směrem k tlačítku na druhé straně prostoru, aby se překrývalo tlačítko Další o polovině.|
 
 > [!NOTE]
-> Pokud není místa vedle tlačítka, které jste přetažením směrem od a více než polovinu životnosti minulé vedle tlačítka, přetáhněte tlačítko **panelu nástrojů editoru** vloží mezeru na opačnou stranu tlačítka, které jste přetažení.
+> Pokud není žádné místo na straně tlačítka, na které přetahujete, a přetáhnete tlačítko více než uprostřed po sousedním tlačítku, **Editor panelu nástrojů** vloží mezeru na opačné straně tlačítka, které přetahujete.
 
-#### <a name="to-change-the-properties-of-a-toolbar-button"></a>Chcete-li změnit vlastnosti tlačítka panelu nástrojů
+#### <a name="to-change-the-properties-of-a-toolbar-button"></a>Změna vlastností tlačítka panelu nástrojů
 
-1. V projektu jazyka C++ vyberte tlačítko panelu nástrojů.
+1. V C++ projektu vyberte tlačítko panelu nástrojů.
 
-1. Zadejte nové ID v **ID** vlastnost [okno vlastností](/visualstudio/ide/reference/properties-window), nebo pomocí rozevíracího seznamu vyberte novou **ID**.
+1. Zadejte nové ID do vlastnosti **ID** v [okně Vlastnosti](/visualstudio/ide/reference/properties-window)nebo použijte rozevírací seznam a vyberte nové **ID**.
 
-#### <a name="to-create-a-tool-tip-for-a-toolbar-button"></a>Vytvoření popisku tlačítka pro tlačítko toolbar
+#### <a name="to-create-a-tool-tip-for-a-toolbar-button"></a>Vytvoření tipu nástroje pro tlačítko panelu nástrojů
 
 1. Vyberte tlačítko panelu nástrojů.
 
-1. V [okno vlastností](/visualstudio/ide/reference/properties-window)v **výzvy** pole, přidejte popis tlačítka na stavový řádek a po něm, přidejte `\n` a název nástroje tip.
+1. V [okně Vlastnosti](/visualstudio/ide/reference/properties-window)zadejte do pole **příkazového řádku** popis tlačítka pro stavový řádek a za zprávu přidejte a zadejte `\n` název popisu nástroje.
 
-Například, chcete-li zobrazit popis tlačítka pro **tisk** tlačítko **WordPad**:
+Například, chcete-li zobrazit popis tlačítka pro tlačítko **Tisk** v **programu WordPad**:
 
-1. Otevřít **WordPad**.
+1. Otevřete **WordPad**.
 
-1. Najeďte myší **tisk** tlačítka panelu nástrojů a Všimněte si, že slovo `Print` je nyní plovoucí pod ukazatele myši.
+1. Najeďte ukazatelem myši na tlačítko tiskového panelu nástrojů a Všimněte `Print` si, že je nyní plovoucí v rámci ukazatele myši.
 
-1. Podívejte se na stavovém řádku v dolní části **WordPad** okno a Všimněte si, že nyní zobrazuje text `Prints the active document`.
+1. Podívejte se na stavový řádek v dolní části okna **programu WordPad** a Všimněte si, že nyní zobrazuje text `Prints the active document`.
 
-`Print` je název tip nástroje a `Prints the active document` je popis tlačítka na stavový řádek.
+`Print`je název tipu nástroje a `Prints the active document` je popisem tlačítka pro stavový řádek.
 
-Pokud chcete tento efekt použití **panelu nástrojů editoru**, nastavte **výzvy** vlastnost `Prints the active document\nPrint`.
+Chcete-li tento efekt použít v **editoru panelu nástrojů**, nastavte vlastnost **prompt** na `Prints the active document\nPrint`hodnotu.
 
 ## <a name="requirements"></a>Požadavky
 
-Knihovny MFC nebo ATL
+MFC nebo ATL
 
 ## <a name="see-also"></a>Viz také:
 
-[Editory prostředků](../windows/resource-editors.md)
-[nabídky a ostatní prostředky](/windows/desktop/menurc/resources)<br/>
+[](../windows/resource-editors.md)
+Nabídky editorů prostředků[a další prostředky](/windows/win32/menurc/resources)<br/>
 [Vlastnosti tlačítka panelu nástrojů](../windows/toolbar-button-properties.md)<br/>

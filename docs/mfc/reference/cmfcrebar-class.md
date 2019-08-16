@@ -28,12 +28,12 @@ helpviewer_keywords:
 - CMFCReBar [MFC], OnUpdateCmdUI
 - CMFCReBar [MFC], SetPaneAlignment
 ms.assetid: 02a60e29-6224-49c1-9e74-e0a7d9f8d023
-ms.openlocfilehash: ccd500547bdcf65e922f7b5e5ca8d30e0423933d
-ms.sourcegitcommit: bd7ddc044f9083246614b602ef6a758775313214
+ms.openlocfilehash: d348cf7aac57ce213e4d3f602501d12cee8e20d8
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68866170"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69505446"
 ---
 # <a name="cmfcrebar-class"></a>CMFCReBar – třída
 
@@ -120,7 +120,7 @@ pro Určuje text, který se má zobrazit na matrice. Text není součástí pod�
 [in, out] Určuje rastrový obrázek, který se má zobrazit na pozadí matrice.
 
 *dwStyle*<br/>
-pro Obsahuje styl, který se má použít pro pásmo. Úplný seznam stylů pásem naleznete v popisu `fStyle` ve struktuře [REBARBANDINFO](/windows/desktop/api/commctrl/ns-commctrl-tagrebarbandinfoa) v dokumentaci k Windows SDK.
+pro Obsahuje styl, který se má použít pro pásmo. Úplný seznam stylů pásem naleznete v popisu `fStyle` ve struktuře [REBARBANDINFO](/windows/win32/api/commctrl/ns-commctrl-rebarbandinfow) v dokumentaci k Windows SDK.
 
 *clrFore*<br/>
 pro Představuje barvu popředí matrice.
@@ -150,7 +150,7 @@ BOOL Create(
 [in, out] Ukazatel na nadřazené okno tohoto ovládacího prvku matrice.
 
 *dwCtrlStyle*<br/>
-pro Určuje styl ovládacího prvku matrice. Výchozí hodnota Style je **RBS_BANDBORDERS**, která zobrazuje úzké řádky pro oddělit sousední pásma na ovládacím prvku matrice. Seznam platných stylů naleznete v tématu [styly ovládacího prvku matrice](/windows/desktop/Controls/rebar-control-styles) v dokumentaci Windows SDK.
+pro Určuje styl ovládacího prvku matrice. Výchozí hodnota Style je **RBS_BANDBORDERS**, která zobrazuje úzké řádky pro oddělit sousední pásma na ovládacím prvku matrice. Seznam platných stylů naleznete v tématu [styly ovládacího prvku matrice](/windows/win32/Controls/rebar-control-styles) v dokumentaci Windows SDK.
 
 *dwStyle*<br/>
 pro Styl okna ovládacího prvku matrice Seznam platných stylů naleznete v tématu [styly oken](../../mfc/reference/styles-used-by-mfc.md#window-styles).

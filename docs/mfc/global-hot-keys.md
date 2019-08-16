@@ -7,20 +7,20 @@ helpviewer_keywords:
 - access keys [MFC], hot keys
 - global hot keys [MFC]
 ms.assetid: e0b95d14-c571-4c9a-9cd1-e7fc1f0e278d
-ms.openlocfilehash: eedeb0547320c8b421fa72647f51b02f834af300
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 59918648ea24fd1e2a86ca786de3081cd6cca2df
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62219603"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69508567"
 ---
 # <a name="global-hot-keys"></a>Globální klávesové zkratky
 
-Globální klávesové zkratky je přidružen konkrétní nonchild okna. Umožňuje, aby uživatel mohl aktivovat okno z jakékoliv části systému. Aplikace nastaví globální klávesové zkratky pro konkrétní okno odesláním [WM_SETHOTKEY](/windows/desktop/inputdev/wm-sethotkey) zprávy do tohoto okna. Například pokud `m_HotKeyCtrl` je [CHotKeyCtrl](../mfc/reference/chotkeyctrl-class.md) objektu a `pMainWnd` je ukazatel do okna a aktivovat, když se stiskne klávesovou zkratku, můžete použít následující kód k přidružení klávesovou zkratku zadaný v ovládacím prvku s v okně odkazované `pMainWnd`.
+Globální klávesová zkratka je přidružená k určitému nepodřízenému oknu. Umožňuje uživateli aktivovat okno z jakékoli části systému. Aplikace nastaví globální klávesovou zkratku pro konkrétní okno odesláním zprávy [WM_SETHOTKEY](/windows/win32/inputdev/wm-sethotkey) do tohoto okna. Například pokud `m_HotKeyCtrl` je objekt [CHotKeyCtrl](../mfc/reference/chotkeyctrl-class.md) a `pMainWnd` je ukazatelem na okno, které má být aktivováno při stisknutí klávesové zkratky, můžete použít následující kód k přidružení klávesové zkratky zadaného v ovládacím prvku s oknem, na které ukazuje. `pMainWnd`.
 
 [!code-cpp[NVC_MFCControlLadenDialog#18](../mfc/codesnippet/cpp/global-hot-keys_1.cpp)]
 
-Pokaždé, když uživatel stiskne Globální klávesové zkratky, zadané okno přijímá [WM_SYSCOMMAND](/windows/desktop/menurc/wm-syscommand) zprávu, která určuje **SC_HOTKEY** jako typ příkazu. Tato zpráva také aktivuje okně, které obdrží. Protože tuto zprávu neobsahuje žádné informace o přesnou klávesy, která byla stisknuta v okamžiku, pomocí této metody není povoleno rozlišování mezi různé klávesové zkratky, které mohou připojit pro stejné okno. Klávesové zkratky zůstane platný až do aplikace, která odeslala **WM_SETHOTKEY** ukončí.
+Pokaždé, když uživatel stiskne globální klávesovou zkratku, zadané okno obdrží zprávu [WM_SYSCOMMAND](/windows/win32/menurc/wm-syscommand) , která určuje **SC_HOTKEY** jako typ příkazu. Tato zpráva také aktivuje okno, které ho přijme. Vzhledem k tomu, že tato zpráva neobsahuje žádné informace o přesném stisknutí klávesy, použití této metody neumožňuje rozlišovat různé klávesové zkratky, které mohou být připojeny ke stejnému oknu. Klávesová zkratka zůstane platná, dokud nebude aplikace, která odesílá **WM_SETHOTKEY** , ukončena.
 
 ## <a name="see-also"></a>Viz také:
 

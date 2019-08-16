@@ -7,28 +7,28 @@ helpviewer_keywords:
 - image lists [MFC], dragging images from
 - images [MFC], dragging from image lists
 ms.assetid: af691db8-e4f0-4046-b7b9-9acc68d3713d
-ms.openlocfilehash: ba56a38cfc5ccf808c7d95f24666fff0313ecc43
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3035e6f21d38568b364fce02358c3baed4870bc3
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62262616"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69508648"
 ---
 # <a name="dragging-images-from-an-image-list"></a>Přetahování obrázků ze seznamu obrázků
 
-[Cimagelist –](../mfc/reference/cimagelist-class.md) obsahuje funkce pro přetažení myší bitovou kopii na obrazovce. Přetahování funkce přesunout bitovou kopii plynule, barva a bez jakékoli blikající kurzor. Maskované a odmaskovaná imagí můžete přetáhnout.
+[Atributu CImageList](../mfc/reference/cimagelist-class.md) zahrnuje funkce pro přetahování obrázku na obrazovce. Přetahování funkcí přesune obrázek hladce, barevně a bez nutnosti blikajícího kurzoru. Maskované a nemaskované obrázky lze přetáhnout.
 
-[Přetahovacích](../mfc/reference/cimagelist-class.md#begindrag) členskou funkci začne operace přetažení. Parametry zahrnují index bitové kopie přetáhněte a umístění aktivního bodu v obrázku. Aktivní bod je jeden pixel, který přetahování funkce rozpoznat jako přesné obrazovky umístění bitové kopie. Aplikace obvykle nastaví aktivního bodu tak, aby se shodovala s aktivního bodu kurzoru myši. [Metodu DragMove](../mfc/reference/cimagelist-class.md#dragmove) členská funkce do nového umístění přesune na obrázku.
+Členská funkce [přetahovacích funkcí](../mfc/reference/cimagelist-class.md#begindrag) zahájí operaci přetažení. Parametry zahrnují index obrázku, který má být přetažen, a umístění aktivního bodu v rámci obrázku. Aktivním bodem je jeden pixel, který funkce přetahování rozpoznává jako přesné umístění obrazovky obrázku. Aplikace obvykle nastavuje aktivní bod tak, aby se shodoval s aktivním bodem kurzoru myši. Členská funkce [DragMove](../mfc/reference/cimagelist-class.md#dragmove) přesune obrázek do nového umístění.
 
-[DragEnter](../mfc/reference/cimagelist-class.md#dragenter) členská funkce nastaví počáteční umístění přetáhnout obrázek v rámci časového období a nakreslí obrázek na pozici. Parametry zahrnují ukazatel na okna, ve kterém chcete-li nakreslit obrázek a bodem, který určuje souřadnice počáteční pozici v rámci okna. Souřadnice jsou relativní vzhledem k výšce levý horní roh není klientské oblasti. Totéž platí pro všechny sady funkcí přetahování bitové kopie, které přijímají souřadnice jako parametry. To znamená, že se že musí vyrovnat pro šířku okna prvky, jako je například ohraničení, záhlaví a řádek nabídek, při určování souřadnice. Pokud zadáte **NULL** popisovač okna při volání metody `DragEnter`přetahování funkce vykreslení obrázku v kontextu zařízení spojená s oknem klasické pracovní plochy a souřadnice jsou relativní vzhledem k levého horního rohu obrazovky.
+Členská funkce [DragEnter](../mfc/reference/cimagelist-class.md#dragenter) nastaví počáteční pozici obrázku přetažení v rámci okna a nakreslí obrázek na pozici. Parametry zahrnují ukazatel na okno, ve kterém se má obrázek nakreslit, a bod, který určuje souřadnice počáteční pozice v rámci okna. Souřadnice jsou relativní vzhledem k levému hornímu rohu okna, nikoli klientské oblasti. Totéž platí pro všechny funkce přetahování obrázků, které přijímají souřadnice jako parametry. To znamená, že při zadávání souřadnic musíte kompenzovat šířku prvků oken, jako je například ohraničení, záhlaví a panel nabídek. Pokud při volání `DragEnter`zadáte popisovač okna s **hodnotou null** , funkce přetahování nakreslí obrázek v kontextu zařízení přidruženého k oknu plocha a souřadnice jsou relativní vzhledem k levému hornímu rohu obrazovky.
 
-`DragEnter` všechny aktualizace v daném okně uzamkne během operace přetažení. Pokud je třeba provést jakékoli kreslení během operace přetažení, jako je například zvýraznění cíl operace přetažení myší, můžete dočasně skrýt Přetahované image pomocí [DragLeave](../mfc/reference/cimagelist-class.md#dragleave) členskou funkci. Můžete také použít [DragShowNoLock](../mfc/reference/cimagelist-class.md#dragshownolock) členskou funkci.
+`DragEnter`Uzamkne všechny ostatní aktualizace daného okna během operace přetažení. Pokud během operace přetažení potřebujete udělat všechny kresby, jako je například zvýraznění cíle operace přetažení, můžete přetažený obrázek dočasně skrýt pomocí členské funkce [DragLeave](../mfc/reference/cimagelist-class.md#dragleave) . Můžete také použít členskou funkci [DragShowNoLock](../mfc/reference/cimagelist-class.md#dragshownolock) .
 
-Volání [EndDrag](../mfc/reference/cimagelist-class.md#enddrag) až budete mít přetáhnete na obrázku.
+Po přetahování obrázku zavolejte [EndDrag](../mfc/reference/cimagelist-class.md#enddrag) .
 
-[SetDragCursorImage](../mfc/reference/cimagelist-class.md#setdragcursorimage) členská funkce vytvoří novou image přetáhněte kombinací danou image (obvykle bitové kopie kurzoru myši) aktuální přetáhnout obrázek. Vzhledem k tomu, aby nový image používala přetahování funkce během operace přetažení, byste měli použít Windows [ShowCursor](/windows/desktop/api/winuser/nf-winuser-showcursor) skrýt skutečné myší po volání funkce `SetDragCursorImage`. V opačném případě systém pravděpodobně mají dva ukazatele myši po dobu trvání operace přetažení.
+Členská funkce [SetDragCursorImage](../mfc/reference/cimagelist-class.md#setdragcursorimage) vytvoří nový obrázek přetažením pomocí kombinace daného obrázku (obvykle obrázku kurzoru myši) s aktuálním obrázkem přetažení. Vzhledem k tomu, že funkce přetahování používají nový obrázek během operace přetažení, měli byste pomocí funkce Windows [ShowCursor](/windows/win32/api/winuser/nf-winuser-showcursor) skrýt skutečný ukazatel myši po volání `SetDragCursorImage`. V opačném případě se může zdát, že systém bude mít po dobu trvání operace přetažení dva ukazatele myši.
 
-Pokud aplikace zavolá `BeginDrag`, systém vytvoří dočasné, interní obrázek seznamu a zkopíruje zadaný přetáhněte image do seznamu interní. Ukazatel na seznam obrázků dočasné přetáhněte můžete načíst pomocí [GetDragImage](../mfc/reference/cimagelist-class.md#getdragimage) členskou funkci. Funkce také načte aktuální pozici přetažení a posun přetáhnout obrázek umístění přetažení.
+Při volání `BeginDrag`aplikace systém vytvoří dočasný a interní seznam obrázků a zkopíruje zadaný obrázek přetáhnutí do interního seznamu. Můžete načíst ukazatel na dočasný seznam obrázků přetažením pomocí členské funkce [GetDragImage](../mfc/reference/cimagelist-class.md#getdragimage) . Funkce také načte aktuální polohu přetažení a posun obrázku přetažením vzhledem k poloze přetažení.
 
 ## <a name="see-also"></a>Viz také:
 

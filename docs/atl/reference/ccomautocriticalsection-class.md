@@ -1,5 +1,5 @@
 ---
-title: Ccomautocriticalsection – třída
+title: CComAutoCriticalSection – třída
 ms.date: 11/04/2016
 f1_keywords:
 - CComAutoCriticalSection
@@ -8,16 +8,16 @@ f1_keywords:
 helpviewer_keywords:
 - CComAutoCriticalSection class
 ms.assetid: 491a9d90-3398-4f90-88f5-fd2172a46b30
-ms.openlocfilehash: 613440eceb71f0277f4cc5de2af89fe263772797
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 116c550f45bf622e7620b3a6f552339b4bcc24a7
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62260186"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69497934"
 ---
-# <a name="ccomautocriticalsection-class"></a>Ccomautocriticalsection – třída
+# <a name="ccomautocriticalsection-class"></a>CComAutoCriticalSection – třída
 
-`CComAutoCriticalSection` poskytuje metody pro získání a uvolnění vlastnictví objektu kritický oddíl.
+`CComAutoCriticalSection`poskytuje metody pro získání a uvolnění vlastnictví objektu kritického oddílu.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -29,18 +29,18 @@ class CComAutoCriticalSection : public CComCriticalSection
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CComAutoCriticalSection::CComAutoCriticalSection](#ccomautocriticalsection)|Konstruktor|
 |[CComAutoCriticalSection::~CComAutoCriticalSection](#dtor)|Destruktor.|
 
 ## <a name="remarks"></a>Poznámky
 
-`CComAutoCriticalSection` je podobný třídě [ccomautocriticalsection –](../../atl/reference/ccomcriticalsection-class.md), s výjimkou `CComAutoCriticalSection` automaticky inicializuje objekt kritický oddíl v konstruktoru.
+`CComAutoCriticalSection`je podobná třídě [CComCriticalSection](../../atl/reference/ccomcriticalsection-class.md), s `CComAutoCriticalSection` výjimkou automaticky inicializuje objekt kritické části v konstruktoru.
 
-Obvykle použijete `CComAutoCriticalSection` prostřednictvím `typedef` název [AutoCriticalSection](ccommultithreadmodel-class.md#autocriticalsection). Tento název se odkazuje `CComAutoCriticalSection` při [CComMultiThreadModel](../../atl/reference/ccommultithreadmodel-class.md) je používán.
+Obvykle se používá `CComAutoCriticalSection` `typedef` přes název [AutoCriticalSection](ccommultithreadmodel-class.md#autocriticalsection). Tento název odkazuje `CComAutoCriticalSection` na použití [CComMultiThreadModel](../../atl/reference/ccommultithreadmodel-class.md) .
 
-`Init` a `Term` metody ze [ccomautocriticalsection –](../../atl/reference/ccomcriticalsection-class.md) nejsou k dispozici při použití této třídy.
+Metody `Init` a `Term` z [CComCriticalSection](../../atl/reference/ccomcriticalsection-class.md) nejsou při použití této třídy k dispozici.
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
@@ -50,9 +50,9 @@ Obvykle použijete `CComAutoCriticalSection` prostřednictvím `typedef` název 
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** atlcore.h
+**Záhlaví:** atlcore. h
 
-##  <a name="ccomautocriticalsection"></a>  CComAutoCriticalSection::CComAutoCriticalSection
+##  <a name="ccomautocriticalsection"></a>CComAutoCriticalSection::CComAutoCriticalSection
 
 Konstruktor
 
@@ -62,9 +62,9 @@ CComAutoCriticalSection();
 
 ### <a name="remarks"></a>Poznámky
 
-Volá funkci Win32 [InitializeCriticalSection](/windows/desktop/api/synchapi/nf-synchapi-initializecriticalsection), který inicializuje objekt kritický oddíl.
+Zavolá funkci Win32 [InitializeCriticalSection](/windows/win32/api/synchapi/nf-synchapi-initializecriticalsection), která inicializuje objekt kritické části.
 
-##  <a name="dtor"></a>  CComAutoCriticalSection::~CComAutoCriticalSection
+##  <a name="dtor"></a>CComAutoCriticalSection:: ~ CComAutoCriticalSection
 
 Destruktor.
 
@@ -74,10 +74,10 @@ Destruktor.
 
 ### <a name="remarks"></a>Poznámky
 
-Volání destruktoru [DeleteCriticalSection](/windows/desktop/api/synchapi/nf-synchapi-deletecriticalsection), což uvolní všechny systémové prostředky používané tímto objektem kritický oddíl.
+Destruktor volá [DeleteCriticalSection](/windows/win32/api/synchapi/nf-synchapi-deletecriticalsection), který uvolní všechny systémové prostředky používané objektem kritické části.
 
 ## <a name="see-also"></a>Viz také:
 
 [CComFakeCriticalSection – třída](../../atl/reference/ccomfakecriticalsection-class.md)<br/>
-[Přehled tříd](../../atl/atl-class-overview.md)<br/>
+[Přehled třídy](../../atl/atl-class-overview.md)<br/>
 [CComAutoCriticalSection – třída](../../atl/reference/ccomcriticalsection-class.md)

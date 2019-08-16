@@ -192,12 +192,12 @@ helpviewer_keywords:
 - CWinApp [MFC], m_nAutosaveInterval
 - CWinApp [MFC], m_pDataRecoveryHandler
 ms.assetid: e426a3cd-0d15-40d6-bd55-beaa5feb2343
-ms.openlocfilehash: 066494f4ba0119f4576e0c8e3c06d87ff736aea3
-ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
+ms.openlocfilehash: 732bdf980240b1f496c1aca56c8a89b6a7f52d27
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68916722"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69502183"
 ---
 # <a name="cwinapp-class"></a>CWinApp – třída
 
@@ -260,7 +260,7 @@ class CWinApp : public CWinThread
 |[CWinApp:: OnIdle](#onidle)|Přepište pro provádění zpracování specifického pro aplikaci.|
 |[CWinApp::OpenDocumentFile](#opendocumentfile)|Volá se rozhraním, aby se otevřel dokument ze souboru.|
 |[CWinApp::P arseCommandLine](#parsecommandline)|Analyzuje jednotlivé parametry a příznaky v příkazovém řádku.|
-|[CWinApp::PreTranslateMessage](#pretranslatemessage)|Filtruje zprávy předtím, než jsou odesílány do funkcí Windows Functions [TranslateMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage) a [DispatchMessage](/windows/desktop/api/winuser/nf-winuser-dispatchmessage).|
+|[CWinApp::PreTranslateMessage](#pretranslatemessage)|Filtruje zprávy předtím, než jsou odesílány do funkcí Windows Functions [TranslateMessage](/windows/win32/api/winuser/nf-winuser-translatemessage) a [DispatchMessage](/windows/win32/api/winuser/nf-winuser-dispatchmessage).|
 |[CWinApp::ProcessMessageFilter](#processmessagefilter)|Zachycuje určité zprávy dřív, než dosáhnou aplikace.|
 |[CWinApp::P rocessShellCommand](#processshellcommand)|Zpracovává argumenty a příznaky příkazového řádku.|
 |[CWinApp::ProcessWndProcException](#processwndprocexception)|Zachycuje všechny neošetřené výjimky vyvolané obslužnými rutinami zpráv a příkazů aplikace.|
@@ -850,7 +850,7 @@ BOOL GetPrinterDeviceDefaults(struct tagPDA* pPrintDlg);
 ### <a name="parameters"></a>Parametry
 
 *pPrintDlg*<br/>
-Ukazatel na strukturu [PRINTDLG](/windows/desktop/api/commdlg/ns-commdlg-tagpda) .
+Ukazatel na strukturu [PRINTDLG](/windows/win32/api/commdlg/ns-commdlg-pdw) .
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -902,7 +902,7 @@ Tato členská funkce nerozlišuje velká a malá písmena, takže řetězce v p
 > `GetProfileBinary`přidělí vyrovnávací paměť a vrátí její adresu v \* *ppData*. Volající je zodpovědný za uvolnění vyrovnávací paměti pomocí **DELETE []** .
 
 > [!IMPORTANT]
-> Data vrácená touto funkcí nemusí být nutně ukončena hodnotou null a volající musí provést ověření. Další informace najdete v tématu [předcházení přetečení vyrovnávací paměti](/windows/desktop/SecBP/avoiding-buffer-overruns).
+> Data vrácená touto funkcí nemusí být nutně ukončena hodnotou null a volající musí provést ověření. Další informace najdete v tématu [předcházení přetečení vyrovnávací paměti](/windows/win32/SecBP/avoiding-buffer-overruns).
 
 ### <a name="example"></a>Příklad
 
@@ -943,7 +943,7 @@ Tato členská funkce podporuje šestnáctkovou notaci hodnot v souboru .INI. Kd
 Tato členská funkce nerozlišuje velká a malá písmena, takže řetězce v parametrech *lpszSection* a *lpszEntry* se můžou v případě potřeby lišit.
 
 > [!IMPORTANT]
-> Data vrácená touto funkcí nemusí být nutně ukončena hodnotou null a volající musí provést ověření. Další informace najdete v tématu [předcházení přetečení vyrovnávací paměti](/windows/desktop/SecBP/avoiding-buffer-overruns).
+> Data vrácená touto funkcí nemusí být nutně ukončena hodnotou null a volající musí provést ověření. Další informace najdete v tématu [předcházení přetečení vyrovnávací paměti](/windows/win32/SecBP/avoiding-buffer-overruns).
 
 ### <a name="example"></a>Příklad
 
@@ -980,7 +980,7 @@ Vrácená hodnota je řetězec z aplikace. Soubor INI nebo *lpszDefault* , pokud
 ### <a name="remarks"></a>Poznámky
 
 > [!IMPORTANT]
-> Data vrácená touto funkcí nemusí být nutně ukončena hodnotou null a volající musí provést ověření. Další informace najdete v tématu [předcházení přetečení vyrovnávací paměti](/windows/desktop/SecBP/avoiding-buffer-overruns).
+> Data vrácená touto funkcí nemusí být nutně ukončena hodnotou null a volající musí provést ověření. Další informace najdete v tématu [předcházení přetečení vyrovnávací paměti](/windows/win32/SecBP/avoiding-buffer-overruns).
 
 ### <a name="example"></a>Příklad
 
@@ -1036,7 +1036,7 @@ virtual void HtmlHelp(
 Určuje další data. Použitá hodnota závisí na hodnotě parametru *nCmd* . Ve výchozím nastavení to znamená [HH_HELP_CONTEXT.](/previous-versions/windows/desktop/htmlhelp/hh-help-context-command) `0x000F`
 
 *nCmd*<br/>
-Určuje typ požadované aplikace Help. Seznam možných hodnot a jejich vliv na parametr *dwData* naleznete v parametru *uCommand* popsaném ve funkcích [HtmlHelpW](/windows/desktop/api/htmlhelp/nf-htmlhelp-htmlhelpw) nebo [HtmlHelpA](/windows/desktop/api/htmlhelp/nf-htmlhelp-htmlhelpa) rozhraní API v Windows SDK.  
+Určuje typ požadované aplikace Help. Seznam možných hodnot a jejich vliv na parametr *dwData* naleznete v parametru *uCommand* popsaném ve funkcích [HtmlHelpW](/windows/win32/api/htmlhelp/nf-htmlhelp-htmlhelpw) nebo [HtmlHelpA](/windows/win32/api/htmlhelp/nf-htmlhelp-htmlhelpa) rozhraní API v Windows SDK.  
 
 ### <a name="remarks"></a>Poznámky
 
@@ -1063,7 +1063,7 @@ Inicializace aplikace je koncepčně rozdělena do dvou částí: jednorázová 
 Přepište `InitInstance` pro inicializaci každé nové instance aplikace spuštěné v systému Windows. Obvykle můžete přepsat `InitInstance` sestavení objektu hlavního okna a `CWinThread::m_pMainWnd` nastavit datový člen tak, aby odkazoval na toto okno. Další informace o přepsání této členské funkce naleznete v tématu [CWinApp: Třída](../../mfc/cwinapp-the-application-class.md)aplikace
 
 > [!NOTE]
-> Aplikace MFC musí být inicializovány jako jednovláknový objekt apartment (STA). Pokud zavoláte [funkce CoInitializeEx](/windows/desktop/api/combaseapi/nf-combaseapi-coinitializeex) do `InitInstance` svého přepsání, zadejte COINIT_APARTMENTTHREADED (místo COINIT_MULTITHREADED).
+> Aplikace MFC musí být inicializovány jako jednovláknový objekt apartment (STA). Pokud zavoláte [funkce CoInitializeEx](/windows/win32/api/combaseapi/nf-combaseapi-coinitializeex) do `InitInstance` svého přepsání, zadejte COINIT_APARTMENTTHREADED (místo COINIT_MULTITHREADED).
 
 ### <a name="example"></a>Příklad
 
@@ -1099,7 +1099,7 @@ HCURSOR LoadCursor(LPCTSTR lpszResourceName) const;  HCURSOR LoadCursor(UINT nID
 Odkazuje na řetězec zakončený hodnotou null, který obsahuje název prostředku kurzoru. `CString` Pro tento argument můžete použít.
 
 *nIDResource*<br/>
-ID prostředku kurzoru Seznam prostředků najdete v tématu [LoadCursor](/windows/desktop/api/winuser/nf-winuser-loadcursora) v Windows SDK.
+ID prostředku kurzoru Seznam prostředků najdete v tématu [LoadCursor](/windows/win32/api/winuser/nf-winuser-loadcursorw) v Windows SDK.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -1142,7 +1142,7 @@ Popisovač na ikonu, pokud je úspěšná; jinak NULL.
 Pro přístup k předdefinovaným ikonám Windows můžete použít členskou funkci [LoadStandardIcon](#loadstandardicon) nebo [LoadOEMIcon](#loadoemicon) .
 
 > [!NOTE]
-> Tato členská funkce volá funkci Win32 API [LoadIcon](/windows/desktop/api/winuser/nf-winuser-loadicona), která může načíst jenom ikonu, jejíž velikost odpovídá hodnotám systémové metriky SM_CXICON a SM_CYICON.
+> Tato členská funkce volá funkci Win32 API [LoadIcon](/windows/win32/api/winuser/nf-winuser-loadiconw), která může načíst jenom ikonu, jejíž velikost odpovídá hodnotám systémové metriky SM_CXICON a SM_CYICON.
 
 ##  <a name="loadoemcursor"></a>CWinApp:: LoadOEMCursor
 
@@ -1252,7 +1252,7 @@ HICON LoadStandardIcon(LPCTSTR lpszIconName) const;
 ### <a name="parameters"></a>Parametry
 
 *lpszIconName*<br/>
-Identifikátor konstanty manifestu, který určuje předdefinovanou ikonu systému Windows. Tyto identifikátory jsou definované v systému WINDOWS. Y. Seznam možných předdefinovaných hodnot a jejich popisů naleznete v parametru *lpIconName* v [LoadIcon](/windows/desktop/api/winuser/nf-winuser-loadicona) v Windows SDK.
+Identifikátor konstanty manifestu, který určuje předdefinovanou ikonu systému Windows. Tyto identifikátory jsou definované v systému WINDOWS. Y. Seznam možných předdefinovaných hodnot a jejich popisů naleznete v parametru *lpIconName* v [LoadIcon](/windows/win32/api/winuser/nf-winuser-loadiconw) v Windows SDK.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -1784,7 +1784,7 @@ Popis příznaků příkazového řádku naleznete v tématu [CCommandLineInfo::
 
 ##  <a name="pretranslatemessage"></a>CWinApp::P reTranslateMessage
 
-Přepište tuto funkci pro filtrování zpráv oken před odesláním do funkce Windows Functions [TranslateMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage) a [DispatchMessage](/windows/desktop/api/winuser/nf-winuser-dispatchmessage) výchozí implementace provádí překlad akcelerátorového klíče, takže musíte zavolat `CWinApp::PreTranslateMessage`členská funkce v přepsané verzi
+Přepište tuto funkci pro filtrování zpráv oken před odesláním do funkce Windows Functions [TranslateMessage](/windows/win32/api/winuser/nf-winuser-translatemessage) a [DispatchMessage](/windows/win32/api/winuser/nf-winuser-dispatchmessage) výchozí implementace provádí překlad akcelerátorového klíče, takže musíte zavolat `CWinApp::PreTranslateMessage`členská funkce v přepsané verzi
 
 ```
 virtual BOOL PreTranslateMessage(MSG* pMsg);
@@ -1793,7 +1793,7 @@ virtual BOOL PreTranslateMessage(MSG* pMsg);
 ### <a name="parameters"></a>Parametry
 
 *pMsg*<br/>
-Ukazatel na strukturu [zprávy](/windows/desktop/api/winuser/ns-winuser-tagmsg) , která obsahuje zprávu ke zpracování.
+Ukazatel na strukturu [zprávy](/windows/win32/api/winuser/ns-winuser-tagmsg) , která obsahuje zprávu ke zpracování.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -1815,7 +1815,7 @@ virtual BOOL ProcessMessageFilter(
 Určuje kód vidlice. Tato členská funkce používá kód k určení způsobu zpracování *lpMsg.*
 
 *lpMsg*<br/>
-Ukazatel na strukturu [zprávy](/windows/desktop/api/winuser/ns-winuser-tagmsg) systému Windows.
+Ukazatel na Windows [MSG](/windows/win32/api/winuser/ns-winuser-msg)zobrazi.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -1886,7 +1886,7 @@ virtual LRESULT ProcessWndProcException(
 Ukazatel na nezachycenou výjimku.
 
 *pMsg*<br/>
-Struktura [](/windows/desktop/api/winuser/ns-winuser-tagmsg) zprávy, která obsahuje informace o zprávě systému Windows, která způsobila, že rozhraní vyvolalo výjimku.
+Zpráva [](/windows/win32/api/winuser/ns-winuser-msg)zobrazi, která obsahuje informace o zprávě systému Windows, která způsobila, že rozhraní vyvolalo výjimku.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -2118,7 +2118,7 @@ void SelectPrinter(
 ### <a name="parameters"></a>Parametry
 
 *hDevNames*<br/>
-Popisovač struktury [DEVNAMES –](/windows/desktop/api/commdlg/ns-commdlg-tagdevnames) , který identifikuje ovladač, zařízení a výstupní názvy portů konkrétní tiskárny.
+Popisovač pro [DEVNAMES –](/windows/win32/api/commdlg/ns-commdlg-devnames)zobrazi, který identifikuje název ovladače, zařízení a výstupních portů konkrétní tiskárny.
 
 *hDevMode*<br/>
 Popisovač struktury [DEVMODE](/windows/win32/api/wingdi/ns-wingdi-devmodea) , který určuje informace o inicializaci zařízení a prostředí tiskárny.
@@ -2260,7 +2260,7 @@ virtual void WinHelp(
 Určuje další data. Použitá hodnota závisí na hodnotě parametru *nCmd* .
 
 *nCmd*<br/>
-Určuje typ požadované aplikace Help. Seznam možných hodnot a jejich vliv na parametr *dwData* naleznete v tématu funkce [WinHelp](/windows/desktop/api/winuser/nf-winuser-winhelpa) Windows.
+Určuje typ požadované aplikace Help. Seznam možných hodnot a jejich vliv na parametr *dwData* naleznete v tématu funkce [WinHelp](/windows/win32/api/winuser/nf-winuser-winhelpw) Windows.
 
 ### <a name="remarks"></a>Poznámky
 

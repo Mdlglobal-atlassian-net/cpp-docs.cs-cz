@@ -25,19 +25,19 @@ helpviewer_keywords:
 - property pages, ATL
 - CSnapInPropertyPageImpl class
 ms.assetid: 75bdce5a-985e-4166-bd44-493132e023c4
-ms.openlocfilehash: dd60afc34b1a2de8f86037eb180aab86a9b8afde
-ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
+ms.openlocfilehash: abf4cf5804f6ef7335192feb298f1a4a06f841e4
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66503085"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69496396"
 ---
 # <a name="csnapinpropertypageimpl-class"></a>CSnapInPropertyPageImpl Class
 
-Tato třída poskytuje metody pro implementaci objektu page vlastnost modul snap-in.
+Tato třída poskytuje metody pro implementaci objektu stránky vlastností modulu snap-in.
 
 > [!IMPORTANT]
->  Tato třída a jejích členů nelze použít v aplikacích, které jsou spouštěny v modulu Windows Runtime.
+>  Tato třída a její členové nelze použít v aplikacích, které jsou spouštěny v prostředí Windows Runtime.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -57,29 +57,29 @@ CSnapInPropertyPageImpl : public CDialogImplBase
 
 |Name|Popis|
 |----------|-----------------|
-|[CSnapInPropertyPageImpl::CancelToClose](#canceltoclose)|Změní stav **OK** a **zrušit** tlačítka.|
-|[CSnapInPropertyPageImpl::Create](#create)|Inicializuje nově vytvořený `CSnapInPropertyPageImpl` objektu.|
-|[CSnapInPropertyPageImpl::OnApply](#onapply)|Volá se rozhraním, když uživatel klikne **použít** tlačítka při používání seznamu vlastností wizard-type.|
-|[CSnapInPropertyPageImpl::OnHelp](#onhelp)|Volá se rozhraním, když uživatel klikne **pomáhají** tlačítka při používání seznamu vlastností wizard-type.|
+|[CSnapInPropertyPageImpl::CancelToClose](#canceltoclose)|Změní stav tlačítek **OK** a **Storno** .|
+|[CSnapInPropertyPageImpl::Create](#create)|Inicializuje nově vytvořený `CSnapInPropertyPageImpl` objekt.|
+|[CSnapInPropertyPageImpl::OnApply](#onapply)|Volá se rozhraním, když uživatel klikne na tlačítko **použít nyní** při použití seznamu vlastností Průvodce-typ.|
+|[CSnapInPropertyPageImpl::OnHelp](#onhelp)|Volá se rozhraním, když uživatel klikne na tlačítko **pomoci** při použití seznamu vlastností Průvodce-typ.|
 |[CSnapInPropertyPageImpl::OnKillActive](#onkillactive)|Volá se rozhraním, když aktuální stránka už není aktivní.|
-|[CSnapInPropertyPageImpl::OnQueryCancel](#onquerycancel)|Volá se rozhraním, když uživatel klikne **zrušit** tlačítko a před místo zrušení.|
-|[CSnapInPropertyPageImpl::OnReset](#onreset)|Volá se rozhraním, když uživatel klikne **resetování** tlačítka při používání seznamu vlastností wizard-type.|
-|[CSnapInPropertyPageImpl::OnSetActive](#onsetactive)|Volá se rozhraním, když aktuální stránka stane aktivní.|
-|[CSnapInPropertyPageImpl::OnWizardBack](#onwizardback)|Volá se rozhraním, když uživatel klikne **zpět** tlačítka při používání seznamu vlastností wizard-type.|
-|[CSnapInPropertyPageImpl::OnWizardFinish](#onwizardfinish)|Volá se rozhraním, když uživatel klikne **Dokončit** tlačítka při používání seznamu vlastností wizard-type.|
-|[CSnapInPropertyPageImpl::OnWizardNext](#onwizardnext)|Volá se rozhraním, když uživatel klikne **Další** tlačítka při používání seznamu vlastností wizard-type.|
-|[CSnapInPropertyPageImpl::QuerySiblings](#querysiblings)|Předává aktuální zprávu pro všechny stránky vlastností.|
-|[CSnapInPropertyPageImpl::SetModified](#setmodified)|Volání aktivace nebo deaktivace **použít** tlačítko.|
+|[CSnapInPropertyPageImpl::OnQueryCancel](#onquerycancel)|Volá se rozhraním, když uživatel klikne na tlačítko **Storno** a před tím, než bylo zrušení provedeno.|
+|[CSnapInPropertyPageImpl::OnReset](#onreset)|Volá se rozhraním, když uživatel klikne na tlačítko **obnovit** při použití seznamu vlastností Průvodce-typ.|
+|[CSnapInPropertyPageImpl::OnSetActive](#onsetactive)|Volá se rozhraním, když se aktivuje aktuální stránka.|
+|[CSnapInPropertyPageImpl::OnWizardBack](#onwizardback)|Volá se rozhraním, když uživatel klikne na tlačítko **zpět** při použití seznamu vlastností Průvodce-typ.|
+|[CSnapInPropertyPageImpl::OnWizardFinish](#onwizardfinish)|Volá se rozhraním, když uživatel klikne na tlačítko **Dokončit** při použití seznamu vlastností Průvodce-typ.|
+|[CSnapInPropertyPageImpl::OnWizardNext](#onwizardnext)|Volá se rozhraním, když uživatel klikne na tlačítko **Další** při použití seznamu vlastností Průvodce-typ.|
+|[CSnapInPropertyPageImpl::QuerySiblings](#querysiblings)|Přepošle aktuální zprávu na všechny stránky seznamu vlastností.|
+|[CSnapInPropertyPageImpl::SetModified](#setmodified)|Zavolejte na aktivovat nebo deaktivovat tlačítko **použít nyní** .|
 
 ### <a name="public-data-members"></a>Veřejné datové členy
 
 |Name|Popis|
 |----------|-----------------|
-|[CSnapInPropertyPageImpl::m_psp](#m_psp)|Windows `PROPSHEETPAGE` struktura používá `CSnapInPropertyPageImpl` objektu.|
+|[CSnapInPropertyPageImpl::m_psp](#m_psp)|Struktura systému `PROPSHEETPAGE` Windows, kterou `CSnapInPropertyPageImpl` objekt používá.|
 
 ## <a name="remarks"></a>Poznámky
 
-`CSnapInPropertyPageImpl` poskytuje základní implementaci pro objekt stránky vlastností modul snap-in. Základní funkce stránky vlastností modul snap-in jsou implementovány pomocí několika různých rozhraní a namapujte typy.
+`CSnapInPropertyPageImpl`poskytuje základní implementaci objektu stránky vlastností modulu snap-in. Základní funkce stránky vlastností modulu snap-in jsou implementovány pomocí několika různých rozhraní a typů map.
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
@@ -89,11 +89,11 @@ CSnapInPropertyPageImpl : public CDialogImplBase
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** atlsnap.h
+**Záhlaví:** atlsnap. h
 
 ##  <a name="canceltoclose"></a>  CSnapInPropertyPageImpl::CancelToClose
 
-Voláním této funkce po provedení neopravitelné změny dat na stránce modální seznam vlastností.
+Volání této funkce poté, co byla provedena neopravitelná změna na data na stránce modálního seznamu vlastností.
 
 ```
 void CancelToClose();
@@ -101,13 +101,13 @@ void CancelToClose();
 
 ### <a name="remarks"></a>Poznámky
 
-Tato funkce se změní **OK** tlačítko **Zavřít** a zakažte **zrušit** tlačítko. Tato změna upozornění, která uživatele, že změna je trvalé a změny se nedá zrušit.
+Tato funkce změní tlačítko **OK** na **Zavřít** a zakáže tlačítko **Storno** . Tato změna upozorní uživatele, že změna je trvalá a změny nelze zrušit.
 
-`CancelToClose` Členská funkce neprovede v nemodálního seznamu vlastností, protože nemá nemodálního seznamu vlastností **zrušit** tlačítko ve výchozím nastavení.
+Členská funkce neprovede v nemodálním seznamu vlastností nic, protože nemodální seznam vlastností nemá ve výchozím nastavení tlačítko **Storno.** `CancelToClose`
 
 ##  <a name="csnapinpropertypageimpl"></a>  CSnapInPropertyPageImpl::CSnapInPropertyPageImpl
 
-Vytvoří `CSnapInPropertyPageImpl` objektu.
+`CSnapInPropertyPageImpl` Vytvoří objekt.
 
 ```
 CSnapInPropertyPageImpl(LPCTSTR lpszTitle = NULL);
@@ -116,15 +116,15 @@ CSnapInPropertyPageImpl(LPCTSTR lpszTitle = NULL);
 ### <a name="parameters"></a>Parametry
 
 *lpszTitle*<br/>
-[in] Nadpis na stránce vlastností.
+pro Název stránky vlastností
 
 ### <a name="remarks"></a>Poznámky
 
-Chcete-li inicializovat podkladová struktura, zavolejte [CSnapInPropertyPageImpl::Create](#create).
+Chcete-li inicializovat podkladovou strukturu, zavolejte [CSnapInPropertyPageImpl:: Create](#create).
 
 ##  <a name="create"></a>  CSnapInPropertyPageImpl::Create
 
-Volání této funkce lze inicializovat podkladová struktura stránky vlastností.
+Voláním této funkce inicializujete podkladovou strukturu stránky vlastností.
 
 ```
 HPROPSHEETPAGE Create();
@@ -132,15 +132,15 @@ HPROPSHEETPAGE Create();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Popisovač `PROPSHEETPAGE` struktury obsahující atributy nově vytvořený seznam vlastností.
+Popisovač `PROPSHEETPAGE` struktury obsahující atributy nově vytvořeného seznamu vlastností.
 
 ### <a name="remarks"></a>Poznámky
 
-Měli byste nejprve zavolat [CSnapInPropertyPageImpl::CSnapInPropertyPageImpl](#csnapinpropertypageimpl) před voláním této funkce.
+Před voláním této funkce byste nejdřív měli zavolat [CSnapInPropertyPageImpl:: CSnapInPropertyPageImpl](#csnapinpropertypageimpl) .
 
 ##  <a name="m_psp"></a>  CSnapInPropertyPageImpl::m_psp
 
-`m_psp` je struktura, jejíž členové uložení vlastnosti `PROPSHEETPAGE`.
+`m_psp`je struktura, jejíž členové ukládají charakteristiky `PROPSHEETPAGE`.
 
 ```
 PROPSHEETPAGE m_psp;
@@ -148,13 +148,13 @@ PROPSHEETPAGE m_psp;
 
 ### <a name="remarks"></a>Poznámky
 
-Tuto strukturu použijte pro inicializaci vzhled stránky vlastností po jejím vytváření.
+Tuto strukturu použijte k inicializaci vzhledu stránky vlastností poté, co je vytvořena.
 
-Další informace o této struktuře, včetně seznamu členů, naleznete v tématu [PROPSHEETPAGE](/windows/desktop/api/prsht/ns-prsht-propsheetpagea_v3) v sadě Windows SDK.
+Další informace o této struktuře, včetně výpisu jejích členů, najdete v tématu [PROPSHEETPAGE](/windows/win32/api/prsht/ns-prsht-propsheetpagea_v3) v Windows SDK.
 
 ##  <a name="onapply"></a>  CSnapInPropertyPageImpl::OnApply
 
-Tato členská funkce je volána, když uživatel klikne **OK** nebo **použít** tlačítko.
+Tato členská funkce se volá, když uživatel klikne na tlačítko **OK** nebo **použít nyní** .
 
 ```
 BOOL OnApply();
@@ -162,19 +162,19 @@ BOOL OnApply();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Nenulové, pokud jsou změny přijaty; jinak 0.
+Nenulové, pokud jsou změny přijaty; v opačném případě 0.
 
 ### <a name="remarks"></a>Poznámky
 
-Před `OnApply` může být volána rozhraním, musíte zavoláte `SetModified` a nastavte její parametr na hodnotu TRUE. Tím se aktivují **použít** tlačítko ihned poté, co uživatel provede změny na stránce vlastností.
+Před `OnApply` voláním rozhraní může být nutné volat `SetModified` a nastavit jeho parametr na hodnotu true. Tím se aktivuje tlačítko **použít nyní** , jakmile uživatel provede změnu na stránce vlastností.
 
-Přepsání této členské funkce lze určit, jakou akci program provede, když uživatel klikne **použít** tlačítko. Při přepsání, funkce by měla vrátit TRUE, pokud chcete přijmout změny a hodnotu FALSE a znemožnit změny tak vliv.
+Přepište tuto členskou funkci, pokud chcete určit akci, kterou program provede, když uživatel klikne na tlačítko **použít nyní** . Při přepsání by měla funkce vracet hodnotu TRUE, aby přijímala změny a nedocházelo k tomu, aby se změny projevily.
 
-Výchozí implementace `OnApply` vrátí hodnotu TRUE.
+Výchozí implementace `OnApply` funkce vrátí hodnotu true.
 
-##  <a name="onhelp"></a>  CSnapInPropertyPageImpl::OnHelp
+##  <a name="onhelp"></a>CSnapInPropertyPageImpl:: help
 
-Tato členská funkce je volána, když uživatel klikne **pomáhají** tlačítko pro stránku vlastností.
+Tato členská funkce se volá, když uživatel klikne na tlačítko pro **nápovědu** pro stránku vlastností.
 
 ```
 void OnHelp();
@@ -182,11 +182,11 @@ void OnHelp();
 
 ### <a name="remarks"></a>Poznámky
 
-Přepište tato členská funkce pro zobrazení nápovědy pro stránku vlastností.
+Tuto členskou funkci přepište, pokud chcete zobrazit nápovědu pro stránku vlastností.
 
 ##  <a name="onkillactive"></a>  CSnapInPropertyPageImpl::OnKillActive
 
-Tato členská funkce je volána, když na stránce už není aktivní stránkou.
+Tato členská funkce se volá, když stránka už není aktivní stránkou.
 
 ```
 BOOL OnKillActive();
@@ -194,15 +194,15 @@ BOOL OnKillActive();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Nenulové, pokud data byla úspěšně aktualizována; jinak 0.
+Nenulové, pokud byla data úspěšně aktualizována; v opačném případě 0.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato členská funkce k provádění úloh ověření speciální datové přepište.
+Přepište tuto členskou funkci pro provádění speciálních úloh ověření dat.
 
 ##  <a name="onquerycancel"></a>  CSnapInPropertyPageImpl::OnQueryCancel
 
-Tato členská funkce je volána, když uživatel klikne **zrušit** tlačítko a před zrušení akce proběhla.
+Tato členská funkce se volá, když uživatel klikne na tlačítko **Storno** a před tím, než dojde k akci zrušit.
 
 ```
 BOOL OnQueryCancel();
@@ -210,17 +210,17 @@ BOOL OnQueryCancel();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Povolit operace zrušení; nenulovou hodnotu jinak 0.
+Nenulové pro povolení operace zrušení; v opačném případě 0.
 
 ### <a name="remarks"></a>Poznámky
 
-Přepsání této členské funkce lze zadat akce program provede, když uživatel klikne **zrušit** tlačítko.
+Tuto členskou funkci přepište, pokud chcete určit akci, kterou program provede, když uživatel klikne na tlačítko **Storno** .
 
-Výchozí implementace `OnQueryCancel` vrátí hodnotu TRUE.
+Výchozí implementace `OnQueryCancel` funkce vrátí hodnotu true.
 
 ##  <a name="onreset"></a>  CSnapInPropertyPageImpl::OnReset
 
-Tato členská funkce je volána, když uživatel klikne **zrušit** tlačítko.
+Tato členská funkce se volá, když uživatel klikne na tlačítko **Storno** .
 
 ```
 void OnReset();
@@ -228,13 +228,13 @@ void OnReset();
 
 ### <a name="remarks"></a>Poznámky
 
-Při volání této funkce se změní na všechny stránky vlastností, které byly provedené uživatelem dříve kliknutím **použít** tlačítka se zahodí, a seznam vlastností uchovává fokus.
+Když je tato funkce volána, změny všech stránek vlastností, které byly provedeny uživatelem dříve, klikněte na tlačítko **použít nyní** , jsou zahozeny a seznam vlastností zůstane aktivní.
 
-Přepsání této členské funkce lze určit, jakou akci provede program, když uživatel klikne **zrušit** tlačítko.
+Tuto členskou funkci přepište, pokud chcete určit, jakou akci program provede, když uživatel klikne na tlačítko **Storno** .
 
 ##  <a name="onsetactive"></a>  CSnapInPropertyPageImpl::OnSetActive
 
-Tato členská funkce se volá při stránky je vybrán uživatelem a stane aktivní stránkou.
+Tato členská funkce se volá, když uživatel vybere stránku a bude se jednat o aktivní stránku.
 
 ```
 BOOL OnSetActive();
@@ -242,17 +242,17 @@ BOOL OnSetActive();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Nenulové, pokud na stránce se úspěšně nastavila aktivní; jinak 0.
+Nenulové, pokud byla stránka úspěšně nastavena jako aktivní; v opačném případě 0.
 
 ### <a name="remarks"></a>Poznámky
 
-Přepište tato členská funkce k provádění úloh, když je aktivován na stránce. Přepsání metody tato členská funkce by měly volat výchozí verze, před provedením libovolné jiné zpracování.
+Přepište tuto členskou funkci, aby se prováděly úlohy při aktivaci stránky. Vaše přepsání této členské funkce by mělo volat výchozí verzi před provedením jakéhokoli jiného zpracování.
 
-Výchozí implementace vrací hodnotu TRUE.
+Výchozí implementace vrátí hodnotu TRUE.
 
 ##  <a name="onwizardback"></a>  CSnapInPropertyPageImpl::OnWizardBack
 
-Tato členská funkce je volána, když uživatel klikne **zpět** tlačítko v průvodci.
+Tato členská funkce se volá, když uživatel klikne na tlačítko **zpět** v průvodci.
 
 ```
 BOOL OnWizardBack();
@@ -260,19 +260,19 @@ BOOL OnWizardBack();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-- 0 na automatický přechod na předchozí stránku.
+- 0 pro automatické přechodu na předchozí stránku.
 
-- na stránce zabránit ve změně hodnotu -1.
+- -1, pokud chcete zabránit změně stránky.
 
-Přejít na stránku, než na kterém další vrátíte identifikátor dialogových oken, který se má zobrazit.
+Chcete-li přejít na jinou stránku, než na další, vraťte identifikátor dialogového okna, které se má zobrazit.
 
 ### <a name="remarks"></a>Poznámky
 
-Přepsání této členské funkce lze zadat některé akce, kdy musí uživatel provést **zpět** po kliknutí na tlačítko.
+Přepište tuto členskou funkci, pokud chcete určit určitou akci, kterou musí uživatel provést po kliknutí na tlačítko **zpět** .
 
-##  <a name="onwizardfinish"></a>  CSnapInPropertyPageImpl::OnWizardFinish
+##  <a name="onwizardfinish"></a>CSnapInPropertyPageImpl::OnWizardFinish
 
-Tato členská funkce je volána, když uživatel klikne **Dokončit** tlačítko v průvodci.
+Tato členská funkce se volá, když uživatel klikne na tlačítko **Dokončit** v průvodci.
 
 ```
 BOOL OnWizardFinish();
@@ -280,15 +280,15 @@ BOOL OnWizardFinish();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Nenulové, pokud seznam vlastností je zničen při dokončení Průvodce; jinak nula.
+Nenulové, pokud je seznam vlastností zničen po dokončení Průvodce; jinak nula.
 
 ### <a name="remarks"></a>Poznámky
 
-Přepsání této členské funkce lze zadat některé akce, kdy musí uživatel provést **Dokončit** po kliknutí na tlačítko.
+Přepište tuto členskou funkci, pokud chcete určit určitou akci, kterou musí uživatel provést při kliknutí na tlačítko pro **dokončení** .
 
 ##  <a name="onwizardnext"></a>  CSnapInPropertyPageImpl::OnWizardNext
 
-Tato členská funkce je volána, když uživatel klikne **Další** tlačítko v průvodci.
+Tato členská funkce se volá, když uživatel klikne na tlačítko **Další** v průvodci.
 
 ```
 BOOL OnWizardNext();
@@ -296,19 +296,19 @@ BOOL OnWizardNext();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-- 0 na automatický přechod na další stránku.
+- 0 pro automatické přechodu na další stránku.
 
-- na stránce zabránit ve změně hodnotu -1.
+- -1, pokud chcete zabránit změně stránky.
 
-Přejít na stránku, než na kterém další vrátíte identifikátor dialogových oken, který se má zobrazit.
+Chcete-li přejít na jinou stránku, než na další, vraťte identifikátor dialogového okna, které se má zobrazit.
 
 ### <a name="remarks"></a>Poznámky
 
-Přepsání této členské funkce lze zadat některé akce, kdy musí uživatel provést **Další** po kliknutí na tlačítko.
+Přepište tuto členskou funkci, pokud chcete určit určitou akci, kterou musí uživatel provést při kliknutí na tlačítko přechodu na **Další krok** .
 
 ##  <a name="querysiblings"></a>  CSnapInPropertyPageImpl::QuerySiblings
 
-Voláním této členské funkce pro předávání zpráv na každou stránku v seznamu vlastností.
+Tuto členskou funkci volejte pro přeposlání zprávy na každou stránku v seznamu vlastností.
 
 ```
 LRESULT QuerySiblings(WPARAM wParam, LPARAM lParam);
@@ -317,22 +317,22 @@ LRESULT QuerySiblings(WPARAM wParam, LPARAM lParam);
 ### <a name="parameters"></a>Parametry
 
 *wParam*<br/>
-[in] Určuje další informace, závislé na zprávu.
+pro Určuje další informace závislé na zprávě.
 
 *lParam*<br/>
-[in] Určuje další informace, závislé na zprávu.
+pro Určuje další informace závislé na zprávě.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Nenulové, pokud zpráva by neměly předávat na další stránku vlastností. jinak nula.
+Nenulové, pokud by zpráva neměla být předána na další stránku vlastností; jinak nula.
 
 ### <a name="remarks"></a>Poznámky
 
-Pokud na stránce vrátí nenulovou hodnotu, seznam vlastností neodešle zprávy na následujících stránkách.
+Pokud stránka vrátí nenulovou hodnotu, seznam vlastností zprávu nepošle na další stránky.
 
 ##  <a name="setmodified"></a>  CSnapInPropertyPageImpl::SetModified
 
-Voláním této členské funkce k povolení nebo zakázání **použít** tlačítko závislosti na tom, zda bude použito nastavení na stránce vlastností pro příslušný objekt externí.
+Voláním této členské funkce povolíte nebo zakážete tlačítko **použít nyní** na základě toho, zda by mělo být nastavení na stránce vlastností použito na příslušný externí objekt.
 
 ```
 void SetModified(BOOL bChanged = TRUE);
@@ -341,12 +341,12 @@ void SetModified(BOOL bChanged = TRUE);
 ### <a name="parameters"></a>Parametry
 
 *bChanged*<br/>
-[in] Hodnota TRUE označuje, že nastavení stránky vlastností byl změněn od posledního se uplatňují; FALSE označuje, že nastavení stránky vlastností se použily, nebo třeba ji ignorovat.
+pro TRUE pro indikaci, že nastavení stránky vlastností bylo od posledního použití změněno; FALSE pro indikaci, že nastavení stránky vlastností bylo použito nebo by mělo být ignorováno.
 
 ### <a name="remarks"></a>Poznámky
 
-Seznam vlastností udržuje sledování, které stránky jsou "nečisté", to znamená, u kterých jste volali stránky vlastností `SetModified( TRUE )`. **Použít** tlačítko bude vždy povolen při volání `SetModified( TRUE )` pro jednu ze stránek. **Použít** tlačítka se deaktivuje při volání `SetModified( FALSE )` pro jednu ze stránek, ale pouze pokud žádná z ostatních stránek není "dirty."
+Seznam vlastností uchovává přehled o tom, které stránky jsou "dirty", což jsou stránky vlastností, pro které jste `SetModified( TRUE )`volali. Tlačítko **použít nyní** bude vždy povoleno, pokud zavoláte `SetModified( TRUE )` jednu ze stránek. Tlačítko **použít nyní** bude zakázáno při volání `SetModified( FALSE )` na jednu ze stránek, ale pouze v případě, že žádná z ostatních stránek není "dirty".
 
 ## <a name="see-also"></a>Viz také:
 
-[Přehled tříd](../../atl/atl-class-overview.md)
+[Přehled třídy](../../atl/atl-class-overview.md)

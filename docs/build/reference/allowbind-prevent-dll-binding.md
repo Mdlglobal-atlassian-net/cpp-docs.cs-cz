@@ -12,12 +12,12 @@ helpviewer_keywords:
 - -ALLOWBIND linker option
 - DLLs [C++], preventing binding
 ms.assetid: 30e37e24-12e4-407e-988a-39d357403598
-ms.openlocfilehash: bd9976e434441d2480386ee6fa3d0315fd8d2ef5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d963a7145ab2e8c8872dc21c485bdc8f877b0b76
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62295146"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69493145"
 ---
 # <a name="allowbind-prevent-dll-binding"></a>/ALLOWBIND (Zabránit vazbě knihoven DLL)
 
@@ -27,17 +27,17 @@ ms.locfileid: "62295146"
 
 ## <a name="remarks"></a>Poznámky
 
-/ALLOWBIND:No nastaví bit v hlavičce knihovny DLL, které označuje Bind.exe, že image se nemůže vázat. Možná nebudete chtít knihovnu DLL, pokud je digitálně podepsané (vazba zneplatní podpis).
+/ALLOWBIND: v záhlaví knihovny DLL nejsou nastaveny žádné bity, které označují, že se k souboru BIND. exe nepovoluje svázat. Je možné, že nebudete mít vazbu na knihovnu DLL, pokud byla digitálně podepsaná (vazba zruší platnost podpisu).
 
-Můžete upravit existující knihovny DLL pro funkce /ALLOWBIND s [/ALLOWBIND](allowbind.md) – možnost nástroje EDITBIN.
+Existující knihovnu DLL pro funkci/ALLOWBIND můžete upravit pomocí možnosti [/ALLOWBIND](allowbind.md) nástroje nástroje Editbin.
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Nastavení tohoto parametru linkeru ve vývojovém prostředí sady Visual Studio
 
-1. Otevřete v projektu **stránky vlastností** dialogové okno. Podrobnosti najdete v tématu [vlastnosti kompilátoru a sestavení nastavte C++ v sadě Visual Studio](../working-with-project-properties.md).
+1. Otevřete dialogové okno **stránky vlastností** projektu. Podrobnosti najdete v tématu [nastavení C++ vlastností kompilátoru a sestavení v sadě Visual Studio](../working-with-project-properties.md).
 
-1. Rozbalte **vlastnosti konfigurace**, **Linkeru**a vyberte **příkazového řádku**.
+1. Rozbalte položku **Vlastnosti konfigurace**, **linker**a vyberte **příkazový řádek**.
 
-1. Zadejte `/ALLOWBIND:NO` do **další možnosti**.
+1. Zadejte `/ALLOWBIND:NO` **Další možnosti**.
 
 ### <a name="to-set-this-linker-option-programmatically"></a>Programové nastavení tohoto parametru linkeru
 
@@ -47,5 +47,5 @@ Můžete upravit existující knihovny DLL pro funkce /ALLOWBIND s [/ALLOWBIND](
 
 [Referenční zdroje k linkeru MSVC](linking.md)<br/>
 [Možnosti linkeru MSVC](linker-options.md)<br/>
-[BindImage – funkce](/windows/desktop/api/imagehlp/nf-imagehlp-bindimage)<br/>
-[BindImageEx – funkce](/windows/desktop/api/imagehlp/nf-imagehlp-bindimageex)
+[BindImage – funkce](/windows/win32/api/imagehlp/nf-imagehlp-bindimage)<br/>
+[BindImageEx – funkce](/windows/win32/api/imagehlp/nf-imagehlp-bindimageex)

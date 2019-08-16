@@ -9,29 +9,29 @@ helpviewer_keywords:
 - browsing database file, .sdf
 - file types [C++], project files
 ms.assetid: 5823b954-36cf-42d3-8fd5-25bab3ef63d9
-ms.openlocfilehash: 37bfd1a6db2087e97ab76d3d06ed6f56e59b96e3
-ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
+ms.openlocfilehash: 73d1733afde9dd62081d071df025c76bba5729d1
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65707413"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69492658"
 ---
 # <a name="project-and-solution-files"></a>Soubory projektu a řešení
 
-Následující soubory jsou vytvořeny při vytvoření projektu v sadě Visual Studio. Používají se ke správě souborů projektu v řešení.
+Následující soubory jsou vytvořeny při vytváření projektu v aplikaci Visual Studio. Používají se ke správě souborů projektu v řešení.
 
-|Název souboru|Umístění adresáře|Umístění v Průzkumníku řešení|Popis|
+|Bitmap|Umístění adresáře|Umístění Průzkumník řešení|Popis|
 |--------------|------------------------|--------------------------------|-----------------|
-|*Solname*.sln|*Projname*|Nezobrazuje se v Průzkumníku řešení|*Řešení* souboru. Uspořádá všechny prvky projektu nebo více projektů do jednoho řešení.|
-|*Název_projektu*.suo|*Projname*|Nezobrazuje se v Průzkumníku řešení|*Možnosti řešení* souboru. Vlastní nastavení pro toto řešení ukládá tak, aby při každém otevření projektu nebo souboru v řešení, měl vzhled a chování, které chcete.|
-|*Název_projektu*.vcxproj|*Projname*|Nezobrazuje se v Průzkumníku řešení|*Projektu* souboru. Ukládají se informace specifické pro každý projekt. (V dřívějších verzích se tento soubor s názvem *název_projektu*.vcproj nebo *název_projektu*.dsp.) Příklad C++ souboru (.vcxproj) projektu naleznete v tématu [soubory projektu](project-files.md).|
-|*Projname*.vcxitems|*Projname*|Nezobrazuje se v Průzkumníku řešení|*Sdílené položky projektu* souboru. Tento projekt není sestaven.  Místo toho jiný projekt C++ mohou odkazovat projekt a jeho soubory se stanou součástí procesu sestavení odkazující projekt. To je možné sdílet společný kód s multiplatformní projekty C++.|
-|*Projname*.sdf|*Projname*|Nezobrazuje se v Průzkumníku řešení|*Databáze procházení* souboru. Podporuje vyhledávání a navigace funkce, jako **Goto definice**, **najít všechny odkazy**, a **zobrazení tříd**. Je generována pomocí analýzy soubory hlaviček.|
-|*Název_projektu*. vcxproj.filters|*Projname*|Nezobrazuje se v Průzkumníku řešení|*Filtry* souboru. Určuje umístění souboru, který je přidán do řešení. Například soubor hlaviček je umístěn **hlavičkové soubory** uzlu.|
-|*Název_projektu*. vcxproj.user|*Projname*|Nezobrazuje se v Průzkumníku řešení|*Uživatele migrace* souboru. Po migraci oznámení projekt ze sady Visual Studio 2008, tento soubor obsahuje informace, které se převedl ze všech souborů.|
-|*Název_projektu*IDL|*Projname*|Source|(Specifické pro projekt) Obsahuje popis jazyka IDL (Interface) zdrojový kód pro knihovnu typů ovládacího prvku. Tento soubor se používá ve Visual C++ generovat knihovnu typů. Vygenerovaný knihovna poskytuje rozhraní ovládacího prvku jiným klientům automatizace. Další informace najdete v tématu [soubor Interface Definition (IDL)](/windows/desktop/Rpc/the-interface-definition-language-idl-file) v sadě Windows SDK.|
-|Readme.txt|*Projname*|Project|*Čtěte* souboru. Je generována pomocí Průvodce aplikací a popisuje soubory v projektu.|
+|*Solname*. sln|*Projname*|Nezobrazuje se v Průzkumník řešení|Soubor *řešení* . Uspořádá všechny prvky projektu nebo více projektů do jednoho řešení.|
+|*ProjName*. suo|*Projname*|Nezobrazuje se v Průzkumník řešení|Soubor *možností řešení* . Ukládá vaše vlastní nastavení pro řešení, takže pokaždé, když otevřete projekt nebo soubor v řešení, má vzhled a chování, které chcete.|
+|*ProjName*. vcxproj|*Projname*|Nezobrazuje se v Průzkumník řešení|Soubor *projektu* . Ukládá informace specifické pro každý projekt. (V dřívějších verzích byl tento soubor nazván *ProjName*. vcproj nebo *ProjName*. DSP.) Příklad souboru C++ projektu (. vcxproj) naleznete v tématu [Project Files](project-files.md).|
+|*ProjName*. vcxitems|*Projname*|Nezobrazuje se v Průzkumník řešení|Soubor *projektu sdílených položek* . Tento projekt není sestaven.  Místo toho může být projekt odkazován jiným C++ projektem a jeho soubory se stanou součástí procesu sestavení referenčního projektu. To lze použít ke sdílení společného kódu s projekty pro různé platformy C++ .|
+|*Projname*.sdf|*Projname*|Nezobrazuje se v Průzkumník řešení|Soubor *databáze procházení* . Podporuje procházení a navigační funkce, jako je například **definice goto**, **vyhledání všech odkazů**a **zobrazení tříd**. Vygeneruje se pomocí analýzy hlavičkových souborů.|
+|*ProjName*. vcxproj. filters|*Projname*|Nezobrazuje se v Průzkumník řešení|Soubor *filtrů* . Určuje, kam umístit soubor, který je přidán do řešení. Například soubor. h je umístěn v uzlu **soubory hlaviček** .|
+|*ProjName*. vcxproj. User|*Projname*|Nezobrazuje se v Průzkumník řešení|Soubor *uživatele migrace* . Po migraci projektu ze sady Visual Studio 2008 tento soubor obsahuje informace, které byly převedeny z libovolného souboru. vsprops.|
+|*ProjName*. idl|*Projname*|Source|(Specifické pro projekt) Obsahuje zdrojový kód IDL (Interface Description Language) pro knihovnu typů ovládacího prvku. Tento soubor používá vizuál C++ k vygenerování knihovny typů. Vygenerovaná knihovna zpřístupňuje rozhraní ovládacího prvku jiným klientům automatizace. Další informace naleznete v tématu [soubor definice rozhraní (IDL)](/windows/win32/Rpc/the-interface-definition-language-idl-file) v Windows SDK.|
+|Readme.txt|*Projname*|Project|Soubor *Readme* . Vygeneruje ho Průvodce aplikací a popisuje soubory v projektu.|
 
 ## <a name="see-also"></a>Viz také:
 
-[Soubor typy vytvořené pro sadu Visual Studio C++ projekty](file-types-created-for-visual-cpp-projects.md)
+[Typy souborů vytvořených pro projekty sady C++ Visual Studio](file-types-created-for-visual-cpp-projects.md)

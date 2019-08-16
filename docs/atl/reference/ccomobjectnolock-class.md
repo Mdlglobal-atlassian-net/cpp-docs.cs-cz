@@ -1,5 +1,5 @@
 ---
-title: Ccomobjectnolock – třída
+title: CComObjectNoLock – třída
 ms.date: 11/04/2016
 f1_keywords:
 - CComObjectNoLock
@@ -11,16 +11,16 @@ f1_keywords:
 helpviewer_keywords:
 - CComObjectNoLock class
 ms.assetid: 288c6506-7da8-4127-8d58-7f4bd779539a
-ms.openlocfilehash: 50dc4505c1da8df9efc0c9d0028461ef49c0840e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9253c7495f4d13ed6ce609988251d8abd09592ad
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62246297"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69497037"
 ---
-# <a name="ccomobjectnolock-class"></a>Ccomobjectnolock – třída
+# <a name="ccomobjectnolock-class"></a>CComObjectNoLock – třída
 
-Tato třída implementuje `IUnknown` pro neagregovaná objektu, ale nemá není přírůstek počet zámků modulů v konstruktoru.
+Tato třída implementuje `IUnknown` neagregovaný objekt, ale nezvyšuje počet zámků modulu v konstruktoru.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -31,31 +31,31 @@ class CComObjectNoLock : public Base
 
 #### <a name="parameters"></a>Parametry
 
-*základ*<br/>
-Vaše třída odvozena od [ccomobjectroot –](../../atl/reference/ccomobjectroot-class.md) nebo [CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md), jak dobře jako z jiných rozhraní, které chcete podporovat na objekt.
+*Základ*<br/>
+Vaše třída odvozená z [třídy CComObjectRoot](../../atl/reference/ccomobjectroot-class.md) nebo [CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md)a také z jakéhokoliv jiného rozhraní, které chcete pro objekt podporovat.
 
 ## <a name="members"></a>Členové
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CComObjectNoLock::CComObjectNoLock](#ccomobjectnolock)|Konstruktor|
 |[CComObjectNoLock::~CComObjectNoLock](#dtor)|Destruktor.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
-|[CComObjectNoLock::AddRef](#addref)|Zvýší počet odkazů na objekt.|
-|[CComObjectNoLock::QueryInterface](#queryinterface)|Vrací ukazatel na požadované rozhraní.|
-|[CComObjectNoLock::Release](#release)|Sníží počet odkaz na objekt.|
+|[CComObjectNoLock:: AddRef](#addref)|Zvýší počet odkazů na objekt.|
+|[CComObjectNoLock::QueryInterface](#queryinterface)|Vrátí ukazatel na požadované rozhraní.|
+|[CComObjectNoLock:: Release](#release)|Sníží počet odkazů na objekt.|
 
 ## <a name="remarks"></a>Poznámky
 
-`CComObjectNoLock` je podobný [CComObject](../../atl/reference/ccomobject-class.md) v tom, že implementuje [IUnknown](/windows/desktop/api/unknwn/nn-unknwn-iunknown) pro neagregovaná objekt; však `CComObjectNoLock` nepodporuje počet přírůstek modul zámku v konstruktoru.
+`CComObjectNoLock`je podobný jako [CComObject](../../atl/reference/ccomobject-class.md) v tom, že implementuje [IUnknown](/windows/win32/api/unknwn/nn-unknwn-iunknown) pro neagregovaný objekt; `CComObjectNoLock` nicméně nezvyšuje počet zámků modulu v konstruktoru.
 
-ATL – používá `CComObjectNoLock` interně pro objekty pro vytváření tříd. Tato třída obecně nebude používat přímo.
+ATL používá `CComObjectNoLock` interně pro továrny tříd. Obecně platí, že tuto třídu nebudete používat přímo.
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
@@ -65,9 +65,9 @@ ATL – používá `CComObjectNoLock` interně pro objekty pro vytváření tř�
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** atlcom
+**Záhlaví:** atlcom. h
 
-##  <a name="addref"></a>  CComObjectNoLock::AddRef
+##  <a name="addref"></a>CComObjectNoLock:: AddRef
 
 Zvýší počet odkazů na objekt.
 
@@ -77,11 +77,11 @@ STDMETHOD_(ULONG, AddRef)();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Hodnota, která může být užitečné pro diagnostiku a testování.
+Hodnota, která může být užitečná pro diagnostiku nebo testování.
 
-##  <a name="ccomobjectnolock"></a>  CComObjectNoLock::CComObjectNoLock
+##  <a name="ccomobjectnolock"></a>CComObjectNoLock::CComObjectNoLock
 
-Konstruktor Na rozdíl od [CComObject](../../atl/reference/ccomobject-class.md), se nezvyšuje počet zámků modulů.
+Konstruktor Na rozdíl od [CComObject](../../atl/reference/ccomobject-class.md)nezvyšuje počet zámků modulu.
 
 ```
 CComObjectNoLock(void* = NULL);
@@ -89,10 +89,10 @@ CComObjectNoLock(void* = NULL);
 
 ### <a name="parameters"></a>Parametry
 
-<em>Typ void\*</em><br/>
-[in] Tento nepojmenovaný parametr se nepoužívá. Existuje symetrie s jinými `CComXXXObjectXXX` konstruktory.
+<em>šekem\*</em><br/>
+pro Tento nepojmenovaný parametr se nepoužívá. Existuje pro symetrie s jinými `CComXXXObjectXXX` konstruktory.
 
-##  <a name="dtor"></a>  CComObjectNoLock::~CComObjectNoLock
+##  <a name="dtor"></a>CComObjectNoLock:: ~ CComObjectNoLock
 
 Destruktor.
 
@@ -102,7 +102,7 @@ Destruktor.
 
 ### <a name="remarks"></a>Poznámky
 
-Uvolní všechny přidělené prostředky a volání [FinalRelease](ccomobjectrootex-class.md#finalrelease).
+Uvolní všechny přidělené prostředky a volá [FinalRelease](ccomobjectrootex-class.md#finalrelease).
 
 ##  <a name="queryinterface"></a>  CComObjectNoLock::QueryInterface
 
@@ -115,18 +115,18 @@ STDMETHOD(QueryInterface)(REFIID iid, void** ppvObject);
 ### <a name="parameters"></a>Parametry
 
 *iid*<br/>
-[in] Identifikátor se požadované rozhraní.
+pro Identifikátor požadovaného rozhraní.
 
 *ppvObject*<br/>
-[out] Ukazatel na ukazatel rozhraní, který je identifikován *iid*. Pokud objekt nepodporuje toto rozhraní *ppvObject* nastaven na hodnotu NULL.
+mimo Ukazatel na ukazatel rozhraní identifikovaný *identifikátorem IID*. Pokud objekt nepodporuje toto rozhraní, je *ppvObject* nastaveno na hodnotu null.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Standardní hodnoty HRESULT.
+Standardní hodnota HRESULT.
 
-##  <a name="release"></a>  CComObjectNoLock::Release
+##  <a name="release"></a>CComObjectNoLock:: Release
 
-Sníží počet odkaz na objekt.
+Sníží počet odkazů na objekt.
 
 ```
 STDMETHOD_(ULONG, Release)();
@@ -134,8 +134,8 @@ STDMETHOD_(ULONG, Release)();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-V ladicím buildu `Release` vrátí hodnotu, která může být užitečné pro diagnostiku a testování. V sestaveních bez ladění `Release` vždy vrátí hodnotu 0.
+V sestavení `Release` ladění vrátí hodnotu, která může být užitečná pro diagnostiku nebo testování. V sestaveních `Release` bez ladění vždy vrátí hodnotu 0.
 
 ## <a name="see-also"></a>Viz také:
 
-[Přehled tříd](../../atl/atl-class-overview.md)
+[Přehled třídy](../../atl/atl-class-overview.md)

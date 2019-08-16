@@ -1,35 +1,35 @@
 ---
-title: Implementace z vlastního správce řetězců (základní způsob)
+title: Implementace vlastního správce řetězců (základní metoda)
 ms.date: 11/04/2016
 helpviewer_keywords:
 - IAtlStringMgr class, using
 ms.assetid: eac5d13e-cbb4-4e82-b01e-f5f2dbcb962a
-ms.openlocfilehash: c30c08217a09f600f8801bec9f50c4341e983a6b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 92c1c46f5251980f9cefb55e052e9aff395e0e60
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62235898"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69491316"
 ---
-# <a name="implementation-of-a-custom-string-manager-basic-method"></a>Implementace z vlastního správce řetězců (základní způsob)
+# <a name="implementation-of-a-custom-string-manager-basic-method"></a>Implementace vlastního správce řetězců (základní metoda)
 
-Nejjednodušší způsob, jak přizpůsobit schéma přidělení paměti pro data řetězce se má používat zadaný ATL `CAtlStringMgr` třídy, ale poskytnout vlastní paměti rutiny přidělení. Konstruktor pro `CAtlStringMgr` přijímá jeden parametr: ukazatel `IAtlMemMgr` objektu. `IAtlMemMgr` je abstraktní základní třída, která poskytuje obecné rozhraní pro haldu. Použití `IAtlMemMgr` rozhraní, `CAtlStringMgr` přiděluje, znovu alokuje a uvolní paměť pro ukládání dat řetězců. Můžete buď implementovat `IAtlMemMgr` rozhraní sami, nebo použijte jednu z pěti třídy správce paměti poskytované ATL. Správce paměti poskytované ATL jednoduše zabalit existující zařízení přidělení paměti:
+Nejjednodušší způsob, jak přizpůsobit schéma přidělování paměti pro řetězcová data, je použití třídy poskytované `CAtlStringMgr` knihovnou ATL, ale poskytuje vlastní rutiny přidělování paměti. Konstruktor pro `CAtlStringMgr` přijímá jeden parametr: ukazatel `IAtlMemMgr` na objekt. `IAtlMemMgr`je abstraktní základní třída, která poskytuje obecné rozhraní pro haldu. `IAtlMemMgr` Pomocí rozhraní `CAtlStringMgr` , přidělí, znovu přidělí a uvolní paměť, která se používá k ukládání řetězcových dat. `IAtlMemMgr` Rozhraní můžete buď implementovat sami, nebo můžete použít jednu z pěti tříd správce paměti poskytovaných knihovnou ATL. Správci paměti poskytnutých knihovnou ATL jednoduše zabalí existující zařízení pro přidělování paměti:
 
-- [Ccrtheap –](../atl/reference/ccrtheap-class.md) zabalí standardních funkcí haldy CRT ([malloc](../c-runtime-library/reference/malloc.md), [bezplatné](../c-runtime-library/reference/free.md), a [realloc](../c-runtime-library/reference/realloc.md))
+- [CCRTHeap](../atl/reference/ccrtheap-class.md) Zabalí standardní funkce haldy CRT ([](../c-runtime-library/reference/malloc.md): pole, [Free](../c-runtime-library/reference/free.md)a [realokace](../c-runtime-library/reference/realloc.md)).
 
-- [CWin32Heap](../atl/reference/cwin32heap-class.md) zabalí zpracování haldy Win32, pomocí [HeapAlloc](/windows/desktop/api/heapapi/nf-heapapi-heapalloc), [HeapFree](/windows/desktop/api/heapapi/nf-heapapi-heapfree), a [HeapRealloc](/windows/desktop/api/heapapi/nf-heapapi-heaprealloc)
+- [CWin32Heap](../atl/reference/cwin32heap-class.md) Zabalí popisovač haldy Win32 s použitím [HeapAlloc](/windows/win32/api/heapapi/nf-heapapi-heapalloc), [HeapFree](/windows/win32/api/heapapi/nf-heapapi-heapfree)a [HeapRealloc](/windows/win32/api/heapapi/nf-heapapi-heaprealloc) .
 
-- [Clocalheap –](../atl/reference/clocalheap-class.md) zabaluje rozhraní API Win32: [LocalAlloc](/windows/desktop/api/winbase/nf-winbase-localalloc), [LocalFree](/windows/desktop/api/winbase/nf-winbase-localfree), a [LocalRealloc](/windows/desktop/api/winbase/nf-winbase-localrealloc)
+- [CLocalHeap](../atl/reference/clocalheap-class.md) Zabalí rozhraní API systému Win32: [LocalAlloc](/windows/win32/api/winbase/nf-winbase-localalloc), [LocalFree](/windows/win32/api/winbase/nf-winbase-localfree)a [LocalReAlloc](/windows/win32/api/winbase/nf-winbase-localrealloc)
 
-- [Cglobalheap –](../atl/reference/cglobalheap-class.md) zabaluje rozhraní API Win32: [GlobalAlloc](/windows/desktop/api/winbase/nf-winbase-globalalloc), [GlobalFree](/windows/desktop/api/winbase/nf-winbase-globalfree), a [GlobalRealloc](/windows/desktop/api/winbase/nf-winbase-globalrealloc).
+- [CGlobalHeap](../atl/reference/cglobalheap-class.md) Zabalí rozhraní API systému Win32: [GlobalAlloc](/windows/win32/api/winbase/nf-winbase-globalalloc), [GlobalFree](/windows/win32/api/winbase/nf-winbase-globalfree)a [GlobalRealloc](/windows/win32/api/winbase/nf-winbase-globalrealloc).
 
-- [Ccomheap –](../atl/reference/ccomheap-class.md) zabalí rozhraní API Allocator COM úloh: [CoTaskMemAlloc](/windows/desktop/api/combaseapi/nf-combaseapi-cotaskmemalloc), [CoTaskMemFree](/windows/desktop/api/combaseapi/nf-combaseapi-cotaskmemfree), a [CoTaskMemRealloc](/windows/desktop/api/combaseapi/nf-combaseapi-cotaskmemrealloc)
+- [CComHeap](../atl/reference/ccomheap-class.md) Zabalí rozhraní API pro přidělování úloh COM: [CoTaskMemAlloc](/windows/win32/api/combaseapi/nf-combaseapi-cotaskmemalloc), [CoTaskMemFree](/windows/win32/api/combaseapi/nf-combaseapi-cotaskmemfree)a [CoTaskMemRealloc](/windows/win32/api/combaseapi/nf-combaseapi-cotaskmemrealloc)
 
-Pro účely správy paměti řetězce, je nejužitečnější třídy `CWin32Heap` vzhledem k tomu, že umožňuje vytvořit více nezávislých haldy. Například Kdybyste chtěli použít samostatné haldy pouze pro řetězce, může provedete následující:
+Pro účely správy paměti řetězců je `CWin32Heap` nejužitečnější třída, protože umožňuje vytvořit více nezávislých hald. Například pokud jste chtěli použít samostatnou haldu pouze pro řetězce, můžete provést následující:
 
 [!code-cpp[NVC_ATLMFC_Utilities#180](../atl-mfc-shared/codesnippet/cpp/implementation-of-a-custom-string-manager-basic-method_1.cpp)]
 
-Používat ke správě paměti pro tohoto správce soukromého řetězce `CString` proměnnou, předejte ukazatel manager jako parametr `CString` konstruktor proměnné:
+Chcete-li použít tohoto správce privátních řetězců ke správě `CString` paměti pro proměnnou, předejte ukazatel na správce jako parametr `CString` do konstruktoru proměnné:
 
 [!code-cpp[NVC_ATLMFC_Utilities#181](../atl-mfc-shared/codesnippet/cpp/implementation-of-a-custom-string-manager-basic-method_2.cpp)]
 

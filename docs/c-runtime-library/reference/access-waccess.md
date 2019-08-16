@@ -31,16 +31,16 @@ helpviewer_keywords:
 - _waccess function
 - taccess function
 ms.assetid: ba34f745-85c3-49e5-a7d4-3590bd249dd3
-ms.openlocfilehash: 87ac912ab47483929b3afc2357331f8d97264b31
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 37c5760eb5231d17a8b17fe5d21f1459a865c067
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62341701"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69500021"
 ---
-# <a name="access-waccess"></a>_access, _waccess
+# <a name="_access-_waccess"></a>_access, _waccess
 
-Určuje, zda je soubor jen pro čtení, nebo ne. Bezpečnější verze jsou k dispozici. Zobrazit [_access_s – _waccess_s –](access-s-waccess-s.md).
+Určuje, zda je soubor určen jen pro čtení, nebo ne. K dispozici jsou bezpečnější verze; viz [_access_s, _waccess_s](access-s-waccess-s.md).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -58,39 +58,39 @@ int _waccess(
 ### <a name="parameters"></a>Parametry
 
 *Cesta*<br/>
-Cesta k souboru nebo adresáře.
+Cesta k souboru nebo adresáři.
 
-*Režim*<br/>
-Atribut pro čtení a zápisu.
+*Mode*<br/>
+Atribut pro čtení a zápis.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Každá funkce vrátí hodnotu 0, pokud má soubor dané režimu. Funkce vrátí hodnotu -1, pokud pojmenovaný soubor neexistuje nebo nemá daný režimu. v takovém případě `errno` je nastavit, jak je znázorněno v následující tabulce.
+Každá funkce vrátí hodnotu 0, pokud soubor má daný režim. Funkce vrátí hodnotu-1, pokud pojmenovaný soubor neexistuje nebo nemá daný režim; v tomto případě `errno` je nastaveno, jak je uvedeno v následující tabulce.
 
 |||
 |-|-|
-`EACCES`|Přístup byl odepřen: nastavení oprávnění k souboru neumožňuje zadaný přístup.
+`EACCES`|Přístup byl odepřen: nastavení oprávnění souboru nepovoluje zadaný přístup.
 `ENOENT`|Název souboru nebo cesta nebyla nalezena.
-`EINVAL`|Neplatný parametr.
+`EINVAL`|Neplatný parametr
 
 Další informace o těchto a dalších návratových kódech naleznete v tématu [_doserrno, errno, _sys_errlist a _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Poznámky
 
-Při použití s soubory, **_přístupový** funkce určuje, jestli určený soubor nebo adresář existuje a má atributy určené hodnotou *režimu*. Při použití s adresáři, **_přístupový** pouze určuje, zda existuje zadaný adresář, ve Windows 2000 a novějších operačních systémů, všechny adresáře čtení a zápisu přístup.
+Při použití se soubory funkce **_access** určuje, zda zadaný soubor nebo adresář existuje a má atributy určené hodnotou *Mode*. Při použití s adresáři Určuje **_access** jenom to, jestli existuje zadaný adresář. ve Windows 2000 a novějších operačních systémech mají všechny adresáře přístup pro čtení a zápis.
 
-|*režim* hodnota|Soubor kontroly|
+|hodnota *režimu*|Kontroluje soubor pro|
 |------------------|---------------------|
 |00|Pouze existence|
-|02|Pouze pro zápis|
-|04|jen pro čtení|
+|02|Jen pro zápis|
+|04|Jen pro čtení|
 |06|Čtení a zápis|
 
-Tato funkce pouze ověří, zda souborů a adresářů jsou jen pro čtení nebo Ne, nekontroluje nastavení zabezpečení systému souborů. K tomu budete potřebovat přístupový token. Další informace o zabezpečení systému souborů najdete v tématu [přístupové tokeny](/windows/desktop/SecAuthZ/access-tokens). Třídy knihovny ATL existuje tuto funkčnost; Zobrazit [caccesstoken – třída](../../atl/reference/caccesstoken-class.md).
+Tato funkce pouze kontroluje, zda je soubor a adresář jen pro čtení, nebo ne, nekontroluje nastavení zabezpečení systému souborů. Potřebujete přístupový token. Další informace o zabezpečení systému souborů najdete v tématu [přístupové tokeny](/windows/win32/SecAuthZ/access-tokens). Pro poskytnutí této funkce existuje třída ATL. viz [Třída CAccessToken](../../atl/reference/caccesstoken-class.md).
 
-**_waccess –** je verze širokého znaku **_přístupový**; *cesta* argument **_waccess –** je širokoznaký řetězec. **_waccess –** a **_přístupový** se jinak chovají stejně.
+**_waccess** je **_access**verze s velkým znakem; Argument *cesty* pro **_waccess** je řetězec s velkým znakem. **_waccess** a **_access** se chovají stejně jinak.
 
-Tato funkce ověřuje své parametry. Pokud *cesta* má hodnotu NULL nebo *režimu* neurčuje platný režim, je vyvolána obslužná rutina neplatného parametru, jak je popsáno v [Parameter Validation](../../c-runtime-library/parameter-validation.md). Pokud smí provádění pokračovat, funkce nastaví `errno` k `EINVAL` a vrátí hodnotu -1.
+Tato funkce ověří své parametry. Pokud je *cesta* null nebo *režim* neurčuje platný režim, je vyvolána obslužná rutina neplatného parametru, jak je popsáno v tématu [ověřování parametru](../../c-runtime-library/parameter-validation.md). Pokud provádění může pokračovat, funkce nastaví `errno` na `EINVAL` a vrátí-1.
 
 ### <a name="generic-text-routine-mappings"></a>Mapování rutin obecného textu
 
@@ -100,14 +100,14 @@ Tato funkce ověřuje své parametry. Pokud *cesta* má hodnotu NULL nebo *reži
 
 ## <a name="requirements"></a>Požadavky
 
-|Rutina|Požadovaný hlavičkový soubor|Volitelná záhlaví|
+|Rutina|Požadovaný hlavičkový soubor|Volitelné hlavičky|
 |-------------|---------------------|----------------------|
 |**_access**|\<io.h>|\<errno.h>|
-|**_waccess**|\<wchar.h > nebo \<io.h >|\<errno.h>|
+|**_waccess**|\<WCHAR. h > nebo \<IO. h >|\<errno.h>|
 
 ## <a name="example"></a>Příklad
 
-Následující příklad používá **_přístupový** zkontrolovat soubor s názvem crt_ACCESS. C, zda existuje a zda je povolen zápis.
+Následující příklad používá **_access** ke kontrole souboru s názvem crt_ACCESS. C pro zjištění, zda existuje a zda je zápis povolen.
 
 ```C
 // crt_access.c
@@ -145,4 +145,4 @@ File crt_ACCESS.C does not have write permission.
 [_chmod, _wchmod](chmod-wchmod.md)<br/>
 [_fstat, _fstat32, _fstat64, _fstati64, _fstat32i64, _fstat64i32](fstat-fstat32-fstat64-fstati64-fstat32i64-fstat64i32.md)<br/>
 [_open, _wopen](open-wopen.md)<br/>
-[_stat, _wstat – funkce](stat-functions.md)
+[_stat, funkce _wstat](stat-functions.md)

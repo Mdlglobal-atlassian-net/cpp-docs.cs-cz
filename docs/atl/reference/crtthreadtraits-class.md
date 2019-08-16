@@ -1,5 +1,5 @@
 ---
-title: Crtthreadtraits – třída
+title: CRTThreadTraits – třída
 ms.date: 11/04/2016
 f1_keywords:
 - CRTThreadTraits
@@ -10,19 +10,19 @@ helpviewer_keywords:
 - threading [ATL], creation functions
 - threading [ATL], CRT threads
 ms.assetid: eb6e20b0-c2aa-4170-8e34-aaeeacc86343
-ms.openlocfilehash: b5fa9273e3d24f5c912ebe30fab93baa6c9ff5c1
-ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
+ms.openlocfilehash: 9e12e64041e38b8fa014815870132a75885014bf
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66503155"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69496567"
 ---
-# <a name="crtthreadtraits-class"></a>Crtthreadtraits – třída
+# <a name="crtthreadtraits-class"></a>CRTThreadTraits – třída
 
-Tato třída poskytuje funkce vytvoření vlákna CRT. Pokud vlákno použije funkce CRT, použijte tuto třídu.
+Tato třída poskytuje funkci vytváření pro vlákno CRT. Tuto třídu použijte v případě, že vlákno bude používat funkce CRT.
 
 > [!IMPORTANT]
->  Tato třída a jejích členů nelze použít v aplikacích, které jsou spouštěny v modulu Windows Runtime.
+>  Tato třída a její členové nelze použít v aplikacích, které jsou spouštěny v prostředí Windows Runtime.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -36,27 +36,27 @@ class CRTThreadTraits
 
 |Name|Popis|
 |----------|-----------------|
-|[CRTThreadTraits::CreateThread](#createthread)|(Statické) Voláním této funkce k vytvoření vlákna, které můžete použít funkce CRT.|
+|[CRTThreadTraits:: CreateThread](#createthread)|Tras Voláním této funkce vytvoříte vlákno, které může používat funkce CRT.|
 
 ## <a name="remarks"></a>Poznámky
 
-Vlastnosti vlákna jsou třídy, které poskytují funkce vytváření pro určitý typ vlákna. Vytvoření funkce má stejný podpis a sémantiku jako Windows [CreateThread](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-createthread) funkce.
+Vlastnosti vlákna jsou třídy, které poskytují funkci vytvoření pro konkrétní typ vlákna. Funkce vytváření má stejný podpis a sémantiku jako funkce Windows [CreateThread](/windows/win32/api/processthreadsapi/nf-processthreadsapi-createthread) .
 
-Vlastnosti vlákna jsou používány následující třídy:
+Vlastnosti vlákna jsou používány následujícími třídami:
 
 - [CThreadPool](../../atl/reference/cthreadpool-class.md)
 
 - [CWorkerThread](../../atl/reference/cworkerthread-class.md)
 
-Pokud vlákno nebude používat funkce CRT, použijte [win32threadtraits –](../../atl/reference/win32threadtraits-class.md) místo.
+Pokud vlákno nebude používat funkce CRT, použijte místo toho [Win32ThreadTraits](../../atl/reference/win32threadtraits-class.md) .
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** atlbase.h
+**Záhlaví:** atlbase. h
 
-##  <a name="createthread"></a>  CRTThreadTraits::CreateThread
+##  <a name="createthread"></a>CRTThreadTraits:: CreateThread
 
-Voláním této funkce k vytvoření vlákna, které můžete použít funkce CRT.
+Voláním této funkce vytvoříte vlákno, které může používat funkce CRT.
 
 ```
 static HANDLE CreateThread(
@@ -77,27 +77,27 @@ Atributy zabezpečení pro nové vlákno.
 Velikost zásobníku pro nové vlákno.
 
 *pfnThreadProc*<br/>
-Procedura vlákna nové vlákno.
+Procedura vlákna nového vlákna.
 
 *pvParam*<br/>
-Parametr, který má být předán procedura vlákna.
+Parametr, který má být předán proceduře vlákna.
 
 *dwCreationFlags*<br/>
-Vytváření příznaky (0 nebo CREATE_SUSPENDED).
+Příznaky vytváření (0 nebo CREATE_SUSPENDED).
 
 *pdwThreadId*<br/>
-[out] Adresa proměnné DWORD, který v případě úspěchu, přijímá ID vlákna nově vytvořeného vlákna.
+mimo Adresa proměnné DWORD, která po úspěchu obdrží ID vlákna nově vytvořeného vlákna.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vrátí popisovač do nově vytvořeného vlákna nebo hodnota NULL při selhání. Volání [GetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror) a získat tak rozšířené informace o chybě.
+Vrátí popisovač nově vytvořeného vlákna nebo hodnotu NULL při selhání. Zavolejte [GetLastError](/windows/win32/api/errhandlingapi/nf-errhandlingapi-getlasterror) a získejte rozšířené informace o chybě.
 
 ### <a name="remarks"></a>Poznámky
 
-Zobrazit [CreateThread](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-createthread) Další informace o parametrech pro tuto funkci.
+Další informace o parametrech této funkce naleznete v tématu [CreateThread](/windows/win32/api/processthreadsapi/nf-processthreadsapi-createthread) .
 
 Tato funkce volá [_beginthreadex](../../c-runtime-library/reference/beginthread-beginthreadex.md) k vytvoření vlákna.
 
 ## <a name="see-also"></a>Viz také:
 
-[Přehled tříd](../../atl/atl-class-overview.md)
+[Přehled třídy](../../atl/atl-class-overview.md)

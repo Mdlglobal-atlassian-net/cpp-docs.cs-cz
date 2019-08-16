@@ -4,52 +4,52 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - scheduler policies
 ms.assetid: 58fb68bd-4a57-40a8-807b-6edb6f083cd9
-ms.openlocfilehash: e2acfc199e7ad9edf3965dc8ccb4103eb615a66b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5569ed9fb6229373ba59d687f21627ac9415050f
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62408001"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69510457"
 ---
 # <a name="scheduler-policies"></a>Zásady plánovače
 
-Tento dokument popisuje roli zásady plánovače v modulu Runtime souběžnosti. A *zásadu plánovače* řídí strategie, Plánovač používá při správě úloh. Představte si třeba aplikaci, která vyžaduje některé úlohy provádět na `THREAD_PRIORITY_NORMAL` a dalších úkolů ke zpracování na `THREAD_PRIORITY_HIGHEST`.  Můžete vytvořit dvě instance plánovače: ten, který určuje `ContextPriority` zásad `THREAD_PRIORITY_NORMAL` a další vlastnost, která určuje stejné zásady bude `THREAD_PRIORITY_HIGHEST`.
+Tento dokument popisuje roli zásad plánovače v Concurrency Runtime. *Zásady plánovače* řídí strategii, kterou Plánovač používá při správě úkolů. Představte si například aplikaci, která vyžaduje, aby některé úkoly `THREAD_PRIORITY_NORMAL` běžely v a jiné úkoly `THREAD_PRIORITY_HIGHEST`, které se mají spustit.  Můžete vytvořit dvě instance Scheduleru: jednu, která určuje `ContextPriority` zásadu `THREAD_PRIORITY_NORMAL` a druhá, která určuje stejné zásady `THREAD_PRIORITY_HIGHEST`.
 
-Pomocí zásady plánovače, můžete rozdělit prostředky procesoru a přiřadit pevná sada prostředků pro každý plánovač. Představte si třeba paralelního algoritmu, který není škálovat na více než čtyři procesory. Můžete vytvořit zásadu plánovače, která omezuje svých úkolů současně používat více než čtyři procesory.
+Pomocí zásad plánovače můžete rozdělit dostupné prostředky zpracování a přiřadit každému plánovači pevnou sadu prostředků. Představte si například paralelní algoritmus, který není škálování nad čtyřmi procesory. Můžete vytvořit zásadu plánovače, která omezí své úkoly na používání maximálně čtyř procesorů současně.
 
 > [!TIP]
->  Modul Concurrency Runtime poskytuje výchozí plánovače. Proto není nutné vytvořit ve vaší aplikaci. Vzhledem k tomu, že Plánovač úloh umožňuje optimalizovat výkon vašich aplikací, doporučujeme začít s [knihovna paralelních vzorů (PPL)](../../parallel/concrt/parallel-patterns-library-ppl.md) nebo [asynchronní knihovnou agentů](../../parallel/concrt/asynchronous-agents-library.md) máte nového modulu runtime souběžnosti.
+>  Concurrency Runtime poskytuje výchozí Plánovač. Proto ho nemusíte vytvářet v aplikaci. Vzhledem k tomu, že Plánovač úloh pomáhá doladit výkon aplikací, doporučujeme začít s knihovnou paralelních vzorů [(PPL)](../../parallel/concrt/parallel-patterns-library-ppl.md) nebo s [knihovnou asynchronních agentů](../../parallel/concrt/asynchronous-agents-library.md) , pokud s Concurrency Runtime začínáte.
 
-Při použití [concurrency::CurrentScheduler::Create](reference/currentscheduler-class.md#create), [concurrency::Scheduler::Create](reference/scheduler-class.md#create), nebo [concurrency::Scheduler::SetDefaultSchedulerPolicy](reference/scheduler-class.md#setdefaultschedulerpolicy) metodu pro vytvoření instance plánovače, zadáte [concurrency::SchedulerPolicy](../../parallel/concrt/reference/schedulerpolicy-class.md) objekt, který obsahuje kolekci párů klíč hodnota, které určují chování plánovače. `SchedulerPolicy` Konstruktor přebírá proměnný počet argumentů. První argument je počet elementů zásad, které se chystáte zadat. Zbývající argumenty jsou páry klíč hodnota pro každý prvek zásad. Následující příklad vytvoří `SchedulerPolicy` objekt, který určuje tři prvky zásad. Modul runtime používá výchozí hodnoty pro klíče zásad, které nejsou zadané.
+Při použití metody [Concurrency:: CurrentScheduler:: Create](reference/currentscheduler-class.md#create), [Concurrency:: Scheduler:: Create](reference/scheduler-class.md#create)nebo [Concurrency:: Scheduler:: SetDefaultSchedulerPolicy –](reference/scheduler-class.md#setdefaultschedulerpolicy) pro vytvoření instance Scheduleru zadáte [Concurrency:: Objekt SchedulerPolicy](../../parallel/concrt/reference/schedulerpolicy-class.md) , který obsahuje kolekci párů klíč-hodnota, které určují chování plánovače. `SchedulerPolicy` Konstruktor přebírá proměnný počet argumentů. První argument je počet prvků zásad, které se chystáte zadat. Zbývající argumenty jsou páry klíč-hodnota pro každý prvek zásad. Následující příklad vytvoří `SchedulerPolicy` objekt, který určuje tři prvky zásad. Modul runtime používá pro klíče zásad výchozí hodnoty, které nejsou zadány.
 
 [!code-cpp[concrt-scheduler-policy#2](../../parallel/concrt/codesnippet/cpp/scheduler-policies_1.cpp)]
 
-[Concurrency::PolicyElementKey](reference/concurrency-namespace-enums.md#policyelementkey) výčet definuje klíče zásad, které jsou spojeny pomocí plánovače úloh. Následující tabulka popisuje klíče zásad a výchozí hodnotu, která používá modul runtime pro každý z nich.
+Výčet [Concurrency::P olicyelementkey](reference/concurrency-namespace-enums.md#policyelementkey) definuje klíče zásad, které jsou přidruženy k Plánovač úloh. Následující tabulka popisuje klíče zásad a výchozí hodnotu, kterou modul runtime používá pro každý z nich.
 
 |Klíč zásad|Popis|Výchozí hodnota|
 |----------------|-----------------|-------------------|
-|`SchedulerKind`|A [concurrency::SchedulerType](reference/concurrency-namespace-enums.md#schedulertype) hodnotu, která určuje typ vlákna používat k plánování úloh.|`ThreadScheduler` (použijte normální vláken). Toto je jediná platná hodnota pro tento klíč.|
-|`MaxConcurrency`|`unsigned int` Hodnota, která určuje maximální počet prostředků souběžnosti Plánovač používá.|[concurrency::MaxExecutionResources](reference/concurrency-namespace-constants1.md#maxexecutionresources)|
-|`MinConcurrency`|`unsigned int` Hodnotu, která určuje minimální počet souběžnosti prostředky, které používá plánovače.|`1`|
-|`TargetOversubscriptionFactor`|`unsigned int` Hodnota, která určuje, kolik vlákna přidělit do jednotlivých prostředků zpracování.|`1`|
-|`LocalContextCacheSize`|`unsigned int` Hodnotu, která určuje maximální počet kontextů, které lze uložit do mezipaměti v místní fronty každý virtuální procesor.|`8`|
-|`ContextStackSize`|`unsigned int` Hodnota, která určuje velikost zásobníku, v kilobajtech, můžete vyhradit pro každý kontext.|`0` (použít výchozí velikost zásobníku)|
-|`ContextPriority`|`int` Hodnota, která určuje priorita vlákna každý kontext. Může to být libovolná hodnota, kterou můžete předat [SetThreadPriority](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-setthreadpriority) nebo `INHERIT_THREAD_PRIORITY`.|`THREAD_PRIORITY_NORMAL`|
+|`SchedulerKind`|Hodnota [Concurrency:: SchedulerType –](reference/concurrency-namespace-enums.md#schedulertype) , která určuje typ vláken, která se mají použít pro plánování úloh.|`ThreadScheduler`(použijte normální vlákna). Toto je jediná platná hodnota pro tento klíč.|
+|`MaxConcurrency`|`unsigned int` Hodnota, která určuje maximální počet prostředků souběžnosti, které Plánovač používá.|[concurrency::MaxExecutionResources](reference/concurrency-namespace-constants1.md#maxexecutionresources)|
+|`MinConcurrency`|`unsigned int` Hodnota, která určuje minimální počet prostředků souběžnosti, které Plánovač používá.|`1`|
+|`TargetOversubscriptionFactor`|`unsigned int` Hodnota, která určuje, kolik vláken má být přiděleno každému prostředku zpracování.|`1`|
+|`LocalContextCacheSize`|`unsigned int` Hodnota, která určuje maximální počet kontextů, které mohou být uloženy do mezipaměti v místní frontě každého virtuálního procesoru.|`8`|
+|`ContextStackSize`|`unsigned int` Hodnota, která určuje velikost zásobníku v kilobajtech, která se má vyhradit pro každý kontext.|`0`(použít výchozí velikost zásobníku)|
+|`ContextPriority`|`int` Hodnota, která určuje prioritu vlákna každého kontextu. Může to být libovolná hodnota, kterou můžete předat [](/windows/win32/api/processthreadsapi/nf-processthreadsapi-setthreadpriority) do SetThreadPriority `INHERIT_THREAD_PRIORITY`nebo.|`THREAD_PRIORITY_NORMAL`|
 
-|`SchedulingProtocol`| A [concurrency::SchedulingProtocolType](reference/concurrency-namespace-enums.md#schedulingprotocoltype) hodnotu, která určuje plánování použití algoritmu. | `EnhanceScheduleGroupLocality`| | `DynamicProgressFeedback`| A [concurrency::DynamicProgressFeedbackType](reference/concurrency-namespace-enums.md#dynamicprogressfeedbacktype) hodnota, která určuje, jestli se má obnovit rovnováhu prostředků podle informací o průběhu na základě statistiky.<br /><br /> **Poznámka:** nenastavujte tuto zásadu na `ProgressFeedbackDisabled` vzhledem k tomu, že je vyhrazený pro použití modulem runtime. |`ProgressFeedbackEnabled`|
+|`SchedulingProtocol`| Hodnota [Concurrency:: SchedulingProtocolType –](reference/concurrency-namespace-enums.md#schedulingprotocoltype) , která určuje používaný algoritmus plánování. | `EnhanceScheduleGroupLocality`| | `DynamicProgressFeedback`| Hodnota [Concurrency::D ynamicprogressfeedbacktype](reference/concurrency-namespace-enums.md#dynamicprogressfeedbacktype) , která určuje, jestli se mají prostředky v závislosti na informacích o průběhu založené na statistice vyrovnávat.<br /><br /> **Poznámka:** Nenastavte tuto zásadu na `ProgressFeedbackDisabled` , protože je vyhrazena pro použití modulem runtime. |`ProgressFeedbackEnabled`|
 
-Každý Plánovač používá své vlastní zásady při plánování úloh. Zásady, které jsou spojeny s jeden Plánovač nemají vliv na chování jiné plánovače. Kromě toho nelze změnit zásadu plánovače, po vytvoření `Scheduler` objektu.
+Každý Plánovač používá při plánování úloh vlastní zásady. Zásady, které jsou přidruženy k jednomu plánovači, neovlivní chování žádného jiného plánovače. Po vytvoření `Scheduler` objektu navíc nemůžete změnit zásady plánovače.
 
 > [!IMPORTANT]
->  Používejte pouze zásady plánovače pro řízení atributů pro vlákna, která modul runtime vytvoří. Neměňte spřažení vláken nebo priorita vlákna, které jsou vytvořeny pomocí modulu runtime, protože to může způsobit nedefinované chování.
+>  Pro řízení atributů vláken, která modul runtime vytvoří, použijte pouze zásady Scheduleru. Neměňte spřažení vlákna ani prioritu vláken, která jsou vytvořena modulem runtime, protože to může způsobit nedefinované chování.
 
-Modul runtime vytvoří výchozí plánovače za vás, pokud nevytvoříte explicitně jeden. Pokud chcete ve své aplikaci používají výchozí plánovač, ale chcete zadat zásady pro tento plánovač, aby používat, zavolejte [concurrency::Scheduler::SetDefaultSchedulerPolicy](reference/scheduler-class.md#setdefaultschedulerpolicy) metoda před plánování paralelní práce. Pokud není volána `Scheduler::SetDefaultSchedulerPolicy` metody, modul runtime používá výchozí zásady hodnoty z tabulky.
+Modul runtime vytvoří výchozí Plánovač, pokud jste ho nevytvořili explicitně. Chcete-li použít výchozí Plánovač v aplikaci, ale chcete zadat zásadu, kterou má Plánovač používat, zavolejte metodu [Concurrency:: Scheduler:: SetDefaultSchedulerPolicy –](reference/scheduler-class.md#setdefaultschedulerpolicy) před naplánováním paralelní práce. Pokud nevoláte `Scheduler::SetDefaultSchedulerPolicy` metodu, modul runtime použije výchozí hodnoty zásad z tabulky.
 
-Použití [concurrency::CurrentScheduler::GetPolicy](reference/currentscheduler-class.md#getpolicy) a [concurrency::Scheduler::GetPolicy](reference/scheduler-class.md#getpolicy) metody k načtení kopie zásadu plánovače. Zásada má tyto hodnoty, které jste dostali z těchto metod se může lišit od hodnoty zásad, které zadávají při vytváření plánovače.
+Pomocí metod [Concurrency:: CurrentScheduler::](reference/currentscheduler-class.md#getpolicy) GetPolicy a [Concurrency:: Scheduler::](reference/scheduler-class.md#getpolicy) GetPolicy načtěte kopii zásady plánovače. Hodnoty zásad, které z těchto metod obdržíte, se můžou lišit od hodnot zásad, které určíte při vytváření plánovače.
 
 ## <a name="example"></a>Příklad
 
-Prozkoumat příklady, které používají specifických zásad plánovače pro řízení chování plánovače, naleznete v tématu [jak: Určení specifických zásad plánovače](../../parallel/concrt/how-to-specify-specific-scheduler-policies.md) a [jak: Vytváření agentů využívajících specifické zásady plánovače](../../parallel/concrt/how-to-create-agents-that-use-specific-scheduler-policies.md).
+Informace o tom, jak pomocí konkrétních zásad plánovače řídit chování plánovače, najdete v [tématu How to: Zadejte konkrétní zásady](../../parallel/concrt/how-to-specify-specific-scheduler-policies.md) plánovače [a postupy: Vytváření agentů využívajících specifické zásady](../../parallel/concrt/how-to-create-agents-that-use-specific-scheduler-policies.md)plánovače.
 
 ## <a name="see-also"></a>Viz také:
 

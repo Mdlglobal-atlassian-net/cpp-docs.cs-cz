@@ -1,5 +1,5 @@
 ---
-title: vlastnosti (C++vyhodnocovací a C++/CX)
+title: vlastnost (C++/CLI a C++/CX)
 ms.date: 10/12/2018
 ms.topic: reference
 f1_keywords:
@@ -8,35 +8,35 @@ f1_keywords:
 helpviewer_keywords:
 - property keyword [C++]
 ms.assetid: cc79d2b2-f013-4d81-8252-eece97a18704
-ms.openlocfilehash: 8ec76db37cffb1b3d15447165300bedf1a8771c9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4a05f9cf8cbec9644254d14873a3259f12b33aed
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62374201"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69509713"
 ---
-# <a name="property--ccli-and-ccx"></a>vlastnosti (C++vyhodnocovací a C++/CX)
+# <a name="property--ccli-and-ccx"></a>vlastnost (C++/CLI a C++/CX)
 
-Deklaruje *vlastnost*, což je členská funkce, který se chová a je přístupná jako datový člen nebo element pole.
+Deklaruje *vlastnost*, která je členská funkce, která se chová a je k dispozici jako datový člen nebo prvek pole.
 
 ## <a name="all-runtimes"></a>Všechny moduly runtime
 
-Je možné deklarovat jedním z následujících typů vlastností.
+Můžete deklarovat jeden z následujících typů vlastností.
 
-*jednoduché vlastnosti*<br/>
-Ve výchozím nastavení vytvoří *nastavení přístupového objektu* , který přiřazuje hodnotu vlastnosti *načtení přístupového objektu* , která načte hodnotu vlastnosti a vygenerovaný kompilátorem privátní datový člen, který obsahuje hodnotu vlastnosti.
+*Jednoduchá vlastnost*<br/>
+Ve výchozím nastavení vytvoří *přistupující objekt set* , který přiřadí hodnotu vlastnosti, *přístupový objekt get* , který načte hodnotu vlastnosti, a soukromý datový člen generovaný kompilátorem, který obsahuje hodnotu vlastnosti.
 
-*Vlastnost bloku*<br/>
-Můžete tak vytvořit uživatelem definované get a/nebo přístupové objekty set. Vlastnost je čtení a zápisu, pokud mají oba get a přístupové objekty set jsou definované, pokud pouze přistupující objekt get je definována pouze pro čtení a jen pro zápis, pokud jen pro přistupující objekt set je definována.
+*blok vlastnosti*<br/>
+Toto použijte k vytvoření uživatelem definovaných přístupových objektů Get nebo set. Vlastnost je určena pro čtení a zápis, jsou-li přístupové objekty get a set definovány, jen pro čtení, pokud je definován pouze přistupující objekt get, a pouze pro zápis, pokud je definován pouze přístupový objekt set.
 
-Musíte explicitně deklarovat datový člen tak, aby obsahovala hodnotu vlastnosti.
+Datový člen musíte explicitně deklarovat tak, aby obsahoval hodnotu vlastnosti.
 
-*indexované vlastnosti*<br/>
-Vlastnost blok, který můžete použít k získání a nastavení hodnoty vlastnosti, které je zadána jedna nebo více indexů.
+*indexovaná vlastnost*<br/>
+Blok vlastnosti, který lze použít k získání a nastavení hodnoty vlastnosti, která je určena jedním nebo více indexy.
 
-Indexovaná vlastnost, která má buď můžete vytvořit uživatelem definované vlastnosti name nebo *výchozí* název vlastnosti. Název výchozí vlastnosti indexu je název třídy, ve kterém je definována vlastnost. Chcete-li deklarovat výchozí vlastnost, zadejte **výchozí** – klíčové slovo místo názvu vlastnosti.
+Můžete vytvořit indexovanou vlastnost, která má buď uživatelsky definovaný název vlastnosti, nebo název *výchozí* vlastnosti. Název výchozí vlastnosti index je název třídy, ve které je vlastnost definovaná. Chcete-li deklarovat výchozí vlastnost, zadejte **výchozí** klíčové slovo místo názvu vlastnosti.
 
-Musíte explicitně deklarovat datový člen tak, aby obsahovala hodnotu vlastnosti. Datový člen indexovanou vlastnost, je obvykle pole nebo kolekce.
+Datový člen musíte explicitně deklarovat tak, aby obsahoval hodnotu vlastnosti. U indexované vlastnosti je datový člen obvykle pole nebo kolekce.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -62,35 +62,35 @@ property type default[index_list] {
 ### <a name="parameters"></a>Parametry
 
 *type*<br/>
-Datový typ hodnoty vlastnosti a proto samotné vlastnosti.
+Datový typ hodnoty vlastnosti, a následně samotnou vlastnost.
 
 *property_name*<br/>
 Název vlastnosti
 
 *access-modifier*<br/>
-Kvalifikátor k přístupu. Jsou platné kvalifikátory **statické** a **virtuální**.
+Kvalifikátor přístupu. Platné kvalifikátory jsou **statické** a **virtuální**.
 
-Get nebo nemusí odsouhlasení přístupové objekty set **virtuální** kvalifikátor, ale musí shodnout na **statické** kvalifikátoru.
+Přistupující objekty get nebo set nesouhlasí s virtuálním kvalifikátorem, ale musí souhlasit s jeho statickým kvalifikátorem.
 
 *inheritance-modifier*<br/>
-Dědičnosti kvalifikátoru. Jsou platné kvalifikátory **abstraktní** a **zapečetěné**.
+Kvalifikátor dědičnosti. Platné kvalifikátory jsou **abstraktní** a **zapečetěné**.
 
 *index_list*<br/>
-Čárkami oddělený seznam jednoho nebo více indexů. Každý index se skládá z typ indexu a volitelný identifikátor, který lze použít v těle metody vlastností.
+Seznam jednoho nebo více indexů oddělených čárkami. Každý index se skládá z typu indexu a volitelného identifikátoru, který lze použít v těle metody vlastnosti.
 
 *value*<br/>
-Hodnota určená k přiřazení vlastnosti v operaci set nebo načíst v operaci get.
+Hodnota, která má být přiřazena vlastnosti v operaci set nebo načtena v operaci get.
 
 *property_body*<br/>
-Tělo metody vlastností přistupujícího objektu set nebo get. *Property_body* můžete použít *index_list* pro přístup k základní datový člen vlastnost, nebo jako parametry v uživatelem definované zpracování.
+Tělo metody vlastnosti objektu set nebo Get. *Property_body* může použít *index_list* pro přístup k základnímu datovému členu vlastnosti nebo jako parametry v uživatelsky definovaném zpracování.
 
 ## <a name="windows-runtime"></a>prostředí Windows Runtime
 
-Další informace najdete v tématu [vlastnosti (C++/CX)](https://msdn.microsoft.com/library/windows/apps/hh755807.aspx).
+Další informace najdete v tématu [vlastnosti (C++/CX)](../cppcx/properties-c-cx.md).
 
 ### <a name="requirements"></a>Požadavky
 
-– Možnost kompilátoru: `/ZW`
+Možnost kompilátoru:`/ZW`
 
 ## <a name="common-language-runtime"></a>CLR (Common Language Runtime)
 
@@ -113,63 +113,63 @@ modifier property type default[index];
 
 ### <a name="parameters"></a>Parametry
 
-*modifier*<br/>
-Modifikátor, který lze použít v deklaraci vlastnosti nebo metody přístupového objektu get/set. Možné hodnoty jsou **statické** a **virtuální**.
+*upravující*<br/>
+Modifikátor, který lze použít buď pro deklaraci vlastnosti, nebo pro metodu get/set přístupového objektu. Možné hodnoty jsou **statické** a **virtuální**.
 
 *type*<br/>
-Typ hodnoty, která je reprezentována vlastnost.
+Typ hodnoty, která je reprezentována vlastností.
 
 *property_name*<br/>
-Parametry pro metodu raise; signatura delegáta se musí shodovat.
+Parametr (y) pro metodu vyvolání; musí odpovídat signatuře delegáta.
 
 *index_list*<br/>
-Čárkami oddělený seznam jednoho nebo více indexů, zadaný v hranatých závorkách (operátor dolního indexu, ([])). Pro každý index zadejte typ a volitelně identifikátor, který lze použít v těle metody vlastností.
+Seznam jednoho nebo více indexů oddělených čárkami, který je určený v hranatých závorkách (operátor dolního indexu, ([])). Pro každý index zadejte typ a volitelně identifikátor, který lze použít v těle metody vlastnosti.
 
 ### <a name="remarks"></a>Poznámky
 
-První příklad ukazuje syntaxi *jednoduchou vlastnost*, který implicitně deklaruje název i `set` a `get` metoda. Kompilátor automaticky vytvoří soukromé pole pro uložení hodnoty vlastnosti.
+První příklad syntaxe ukazuje *jednoduchou vlastnost*, která implicitně deklaruje `set` metodu a. `get` Kompilátor automaticky vytvoří soukromé pole pro uložení hodnoty vlastnosti.
 
-Druhý příklad ukazuje syntaxi *vlastnost bloku*, které obě explicitně deklaruje `set` a `get` – metoda.
+Druhý příklad syntaxe ukazuje *blok vlastnosti*, který explicitně deklaruje `set` metodu a. `get`
 
-Třetí příklad syntaxe ukazuje definované zákazníkem *index – vlastnost*. Nepřetíží indexovanou vlastnost přijímá parametry než hodnota nastavit nebo načíst. Je nutné zadat název vlastnosti. Na rozdíl od jednoduché vlastnosti `set` a/nebo `get` metody nepřetíží indexovanou vlastnost musí být explicitně definovány a je nutné zadat název vlastnosti.
+Třetí příklad syntaxe znázorňuje uživatelsky definovanou *vlastnost indexu*. Vlastnost index má kromě hodnoty, která má být nastavena nebo načtena, i parametry. Je nutné zadat název vlastnosti. Na `set` rozdíl od jednoduchých vlastností musí být metody a/ `get` nebo vlastnosti index explicitně definovány a musíte zadat název vlastnosti.
 
-Čtvrtý ukazuje příklad syntaxe *výchozí* vlastnost, která poskytuje přístup jako pole instance typu. Klíčové slovo **výchozí**, slouží pouze k určení výchozí vlastnost. Název výchozí vlastnosti je název typu, ve kterém je definována vlastnost.
+Čtvrtý příklad syntaxe ukazuje *výchozí* vlastnost, která poskytuje přístup jako typ pole k instanci typu. Klíčové slovo **Default**, slouží pouze k určení výchozí vlastnosti. Název výchozí vlastnosti je název typu, ve kterém je vlastnost definována.
 
-**Vlastnost** – klíčové slovo se může zobrazit ve třídě, rozhraní nebo hodnotového typu. Vlastnost může mít funkci get (jen pro čtení), funkce set (jen pro zápis) nebo obě (čtení a zápis).
+Klíčové slovo **Property** se může objevit v typu třída, rozhraní nebo hodnoty. Vlastnost může mít funkci get (jen pro čtení), funkci set (pouze pro zápis) nebo obojí (pro čtení i zápis).
 
-Název vlastnosti nesmí shodovat s názvem spravované třídy, která ji obsahuje. Návratový typ metody getter funkce musí odpovídat typ posledního parametru odpovídající funkce setter.
+Název vlastnosti se nemůže shodovat s názvem spravované třídy, která ho obsahuje. Návratový typ funkce getter se musí shodovat s typem posledního parametru odpovídající funkce setter.
 
-Pro klientský kód vlastnost vzhledem běžný datový člen a může být zapsána do nebo číst z pomocí stejné syntaxe jako datový člen.
+Pro klientský kód má vlastnost vzhled běžného datového členu a lze jej zapsat nebo číst pomocí stejné syntaxe jako datový člen.
 
-Get a set metod nemusí shodnout na **virtuální** modifikátor.
+Metody Get a set nemusí souhlasit s modifikátorem **Virtual** .
 
-Usnadnění přístupu get a set – metoda se může lišit.
+Přístupnost metody Get a set se může lišit.
 
-Definice metody vlastnost může být použito mimo tělo třídy, stejně jako běžné metody.
+Definice metody vlastnosti se může objevit mimo tělo třídy, stejně jako běžnou metodou.
 
-Get a metodu set pro vlastnost dohodnou **statické** modifikátor.
+Metoda get a set pro vlastnost musí souhlasit s modifikátorem **static** .
 
-Je skalární vlastnost pokud jeho get a set metod podle následujícího popisu:
+Vlastnost je skalární, pokud metody Get a set vyhovují následujícímu popisu:
 
 - Metoda get nemá žádné parametry a má návratový typ `T`.
 
-- Set – metoda má parametr typu `T`a návratový typ **void**.
+- Metoda set má parametr typu `T`a návratový typ **void**.
 
-Musí existovat pouze jeden skalární vlastnost deklarovaná v oboru se stejným identifikátorem. Skalární vlastnosti nemohou být přetíženy.
+V oboru se stejným identifikátorem musí být deklarována pouze jedna skalární vlastnost. Skalární vlastnosti nelze přečítat.
 
-Při deklaraci datový člen vlastnost, kompilátor vkládá datový člen – někdy označovány jako "úložiště zálohování" – ve třídě. Název datového člena, je však formuláře tak, že nemůže odkazovat člena ve zdroji, jako by šlo skutečný datový člen obsahující třídy. Použijte ildasm.exe zobrazení metadat pro váš typ a zobrazí název generovaného kompilátorem pro vlastnosti záložního úložiště.
+Když je deklarován datový člen vlastnosti, kompilátor vloží datový člen (někdy označovaný jako "záložní úložiště") ve třídě. Název datového členu je však formulář, například, který nelze odkázat na člena ve zdroji, jako by šlo o skutečného datového člena obsahujícího třídu. Použijte Ildasm. exe k zobrazení metadat pro váš typ a podívejte se na název generovaný kompilátorem pro záložní úložiště vlastností.
 
-Pro přístupové metody v bloku vlastnost je povolen různou přístupností.  To znamená set – metoda může být veřejný a Metoda get může být privátní.  Nicméně jedná se o chybu pro přístupové metody pro mít méně omezující přístupnost než u deklarace samotná hodnota vlastnosti.
+Pro přístupové metody v bloku vlastností je povoleno jiné usnadnění.  To znamená, že metoda Set může být veřejná a metoda get může být soukromá.  Jedná se však o chybu, pokud metoda přístupového objektu má méně omezující přístupnost, než je v deklaraci samotné vlastnosti.
 
-**Vlastnost** je kontextové klíčové slovo.  Další informace najdete v tématu [Context-Sensitive Keywords](context-sensitive-keywords-cpp-component-extensions.md).
+**vlastnost** je kontextově závislé klíčové slovo.  Další informace najdete v tématu [Kontextově závislá klíčová slova](context-sensitive-keywords-cpp-component-extensions.md).
 
 ### <a name="requirements"></a>Požadavky
 
-– Možnost kompilátoru: `/clr`
+Možnost kompilátoru:`/clr`
 
 ### <a name="examples"></a>Příklady
 
-Následující příklad ukazuje deklaraci a použití vlastností datový člen a zároveň se zablokují vlastnost.  Také ukazuje, že přístupový objekt vlastnosti je možné definovat mimo třídu.
+Následující příklad ukazuje deklaraci a použití datového člena vlastnosti a bloku vlastnosti.  Také ukazuje, že přistupující objekt vlastnosti lze definovat mimo třídu.
 
 ```cpp
 // mcppv2_property.cpp
