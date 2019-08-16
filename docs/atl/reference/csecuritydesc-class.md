@@ -34,12 +34,12 @@ f1_keywords:
 helpviewer_keywords:
 - CSecurityDesc class
 ms.assetid: 3767a327-378f-4690-ba40-4d9f6a1f5ee4
-ms.openlocfilehash: a9e0eb01608edf29f99209dffc932630ad08807a
-ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
+ms.openlocfilehash: 90f8cfd66fbab88bfa29c39ff27189f02447a7c7
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68915715"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69496492"
 ---
 # <a name="csecuritydesc-class"></a>CSecurityDesc – třída
 
@@ -107,7 +107,7 @@ class CSecurityDesc
 
 Aplikace by neměly měnit `SECURITY_DESCRIPTOR` strukturu přímo a místo toho by měly používat poskytnuté metody třídy.
 
-Úvod do modelu řízení přístupu v systému Windows naleznete v tématu [Access Control](/windows/desktop/SecAuthZ/access-control) v Windows SDK.
+Úvod do modelu řízení přístupu v systému Windows naleznete v tématu [Access Control](/windows/win32/SecAuthZ/access-control) v Windows SDK.
 
 ## <a name="requirements"></a>Požadavky
 
@@ -155,7 +155,7 @@ bool FromString(LPCTSTR pstr) throw(...);
 ### <a name="parameters"></a>Parametry
 
 *pstr*<br/>
-Ukazatel na řetězec zakončený hodnotou null, který obsahuje [popisovač zabezpečení formátu řetězce](/windows/desktop/SecAuthZ/security-descriptor-string-format) , který má být převeden.
+Ukazatel na řetězec zakončený hodnotou null, který obsahuje [popisovač zabezpečení formátu řetězce](/windows/win32/SecAuthZ/security-descriptor-string-format) , který má být převeden.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -165,7 +165,7 @@ Vrátí hodnotu true při úspěchu. Vyvolá výjimku při selhání.
 
 Řetězec lze vytvořit pomocí [CSecurityDesc:: ToString](#tostring). Převod popisovače zabezpečení na řetězec usnadňuje ukládání a přenos.
 
-Tato metoda volá [funkce ConvertStringSecurityDescriptorToSecurityDescriptor](/windows/desktop/api/sddl/nf-sddl-convertstringsecuritydescriptortosecuritydescriptora).
+Tato metoda volá [funkce ConvertStringSecurityDescriptorToSecurityDescriptor](/windows/win32/api/sddl/nf-sddl-convertstringsecuritydescriptortosecuritydescriptorw).
 
 ##  <a name="getcontrol"></a>CSecurityDesc:: GetControl
 
@@ -186,7 +186,7 @@ Vrátí hodnotu true, pokud je metoda úspěšná, false, pokud selže.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato metoda volá [GetSecurityDescriptorControl](/windows/desktop/api/securitybaseapi/nf-securitybaseapi-getsecuritydescriptorcontrol).
+Tato metoda volá [GetSecurityDescriptorControl](/windows/win32/api/securitybaseapi/nf-securitybaseapi-getsecuritydescriptorcontrol).
 
 ##  <a name="getdacl"></a>CSecurityDesc:: getdacl
 
@@ -268,7 +268,7 @@ const SECURITY_DESCRIPTOR* GetPSECURITY_DESCRIPTOR() const throw();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vrátí ukazatel na strukturu [SECURITY_DESCRIPTOR](/windows/desktop/api/winnt/ns-winnt-security_descriptor) .
+Vrátí ukazatel na strukturu [SECURITY_DESCRIPTOR](/windows/win32/api/winnt/ns-winnt-security_descriptor) .
 
 ##  <a name="getsacl"></a>CSecurityDesc:: getsacl
 
@@ -480,7 +480,7 @@ bool IsSelfRelative() const throw();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vrátí hodnotu true, pokud je popisovač zabezpečení v samostatném formátu se všemi informacemi o zabezpečení v souvislém bloku paměti. Vrátí hodnotu false, pokud je popisovač zabezpečení v absolutním formátu. Další informace najdete v tématu [absolutní a relativní popisovače zabezpečení](/windows/desktop/SecAuthZ/absolute-and-self-relative-security-descriptors).
+Vrátí hodnotu true, pokud je popisovač zabezpečení v samostatném formátu se všemi informacemi o zabezpečení v souvislém bloku paměti. Vrátí hodnotu false, pokud je popisovač zabezpečení v absolutním formátu. Další informace najdete v tématu [absolutní a relativní popisovače zabezpečení](/windows/win32/SecAuthZ/absolute-and-self-relative-security-descriptors).
 
 ##  <a name="makeabsolute"></a>CSecurityDesc::MakeAbsolute
 
@@ -496,7 +496,7 @@ Vrátí hodnotu true, pokud je metoda úspěšná, jinak false.
 
 ### <a name="remarks"></a>Poznámky
 
-Popisovač zabezpečení v absolutním formátu obsahuje odkazy na informace, které obsahuje, nikoli informace samotné. Popisovač zabezpečení v samostatném formátu obsahuje informace v souvislém bloku paměti. V samostatném popisovači zabezpečení, `SECURITY_DESCRIPTOR` struktura vždy spouští tyto informace, ale ostatní komponenty popisovače zabezpečení mohou strukturu sledovat v libovolném pořadí. Místo používání adres paměti jsou součásti samostatného popisovače zabezpečení identifikovány posuny od začátku popisovače zabezpečení. Tento formát je užitečný, když popisovač zabezpečení musí být uložený na disku nebo předaný prostřednictvím komunikačního protokolu. Další informace najdete v tématu [absolutní a relativní popisovače zabezpečení](/windows/desktop/SecAuthZ/absolute-and-self-relative-security-descriptors).
+Popisovač zabezpečení v absolutním formátu obsahuje odkazy na informace, které obsahuje, nikoli informace samotné. Popisovač zabezpečení v samostatném formátu obsahuje informace v souvislém bloku paměti. V samostatném popisovači zabezpečení, `SECURITY_DESCRIPTOR` struktura vždy spouští tyto informace, ale ostatní komponenty popisovače zabezpečení mohou strukturu sledovat v libovolném pořadí. Místo používání adres paměti jsou součásti samostatného popisovače zabezpečení identifikovány posuny od začátku popisovače zabezpečení. Tento formát je užitečný, když popisovač zabezpečení musí být uložený na disku nebo předaný prostřednictvím komunikačního protokolu. Další informace najdete v tématu [absolutní a relativní popisovače zabezpečení](/windows/win32/SecAuthZ/absolute-and-self-relative-security-descriptors).
 
 ##  <a name="makeselfrelative"></a>CSecurityDesc::MakeSelfRelative
 
@@ -512,7 +512,7 @@ Vrátí hodnotu true, pokud je metoda úspěšná, jinak false.
 
 ### <a name="remarks"></a>Poznámky
 
-Popisovač zabezpečení v absolutním formátu obsahuje odkazy na informace, které obsahuje, místo toho, aby obsahovaly samotné informace. Popisovač zabezpečení v samostatném formátu obsahuje informace v souvislém bloku paměti. V samostatném popisovači zabezpečení, `SECURITY_DESCRIPTOR` struktura vždy spouští tyto informace, ale ostatní komponenty popisovače zabezpečení mohou strukturu sledovat v libovolném pořadí. Místo používání adres paměti jsou součásti popisovače zabezpečení identifikovány posuny od začátku popisovače zabezpečení. Tento formát je užitečný, když popisovač zabezpečení musí být uložený na disku nebo předaný prostřednictvím komunikačního protokolu. Další informace najdete v tématu [absolutní a relativní popisovače zabezpečení](/windows/desktop/SecAuthZ/absolute-and-self-relative-security-descriptors).
+Popisovač zabezpečení v absolutním formátu obsahuje odkazy na informace, které obsahuje, místo toho, aby obsahovaly samotné informace. Popisovač zabezpečení v samostatném formátu obsahuje informace v souvislém bloku paměti. V samostatném popisovači zabezpečení, `SECURITY_DESCRIPTOR` struktura vždy spouští tyto informace, ale ostatní komponenty popisovače zabezpečení mohou strukturu sledovat v libovolném pořadí. Místo používání adres paměti jsou součásti popisovače zabezpečení identifikovány posuny od začátku popisovače zabezpečení. Tento formát je užitečný, když popisovač zabezpečení musí být uložený na disku nebo předaný prostřednictvím komunikačního protokolu. Další informace najdete v tématu [absolutní a relativní popisovače zabezpečení](/windows/win32/SecAuthZ/absolute-and-self-relative-security-descriptors).
 
 ##  <a name="operator_eq"></a>CSecurityDesc:: operator =
 
@@ -553,7 +553,7 @@ bool SetControl(
 ### <a name="parameters"></a>Parametry
 
 *ControlBitsOfInterest*<br/>
-Maska SECURITY_DESCRIPTOR_CONTROL, která označuje bity ovládacího prvku, které se mají nastavit. Seznam příznaků, které lze nastavit, naleznete v tématu [SetSecurityDescriptorControl](/windows/desktop/api/securitybaseapi/nf-securitybaseapi-setsecuritydescriptorcontrol).
+Maska SECURITY_DESCRIPTOR_CONTROL, která označuje bity ovládacího prvku, které se mají nastavit. Seznam příznaků, které lze nastavit, naleznete v tématu [SetSecurityDescriptorControl](/windows/win32/api/securitybaseapi/nf-securitybaseapi-setsecuritydescriptorcontrol).
 
 *ControlBitsToSet*<br/>
 Maska SECURITY_DESCRIPTOR_CONTROL, která označuje nové hodnoty pro bity ovládacího prvku určené maskou *ControlBitsOfInterest* . Tento parametr může být kombinací příznaků uvedených pro parametr *ControlBitsOfInterest* .
@@ -564,7 +564,7 @@ Při úspěchu vrátí hodnotu true, při neúspěchu hodnotu false.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato metoda volá [SetSecurityDescriptorControl](/windows/desktop/api/securitybaseapi/nf-securitybaseapi-setsecuritydescriptorcontrol).
+Tato metoda volá [SetSecurityDescriptorControl](/windows/win32/api/securitybaseapi/nf-securitybaseapi-setsecuritydescriptorcontrol).
 
 ##  <a name="setdacl"></a>CSecurityDesc:: SetDacl –
 
@@ -673,7 +673,7 @@ bool ToString(
 ### <a name="parameters"></a>Parametry
 
 *pstr*<br/>
-Ukazatel na řetězec zakončený hodnotou null, který získá [popisovač zabezpečení formátu řetězce](/windows/desktop/SecAuthZ/security-descriptor-string-format).
+Ukazatel na řetězec zakončený hodnotou null, který získá [popisovač zabezpečení formátu řetězce](/windows/win32/SecAuthZ/security-descriptor-string-format).
 
 *si*<br/>
 Určuje kombinaci SECURITY_INFORMATION bitových příznaků, které označují součásti popisovače zabezpečení, které mají být zahrnuty do výstupního řetězce.
@@ -697,13 +697,13 @@ Parametr *si* může obsahovat následující příznaky SECURITY_INFORMATION:
 
 Pokud je DACL NULL a řídicí bit SE_DACL_PRESENT je nastaven ve vstupní popisovač zabezpečení, metoda se nezdařila.
 
-Pokud je DACL NULL a řídicí bit SE_DACL_PRESENT není nastaven ve vstupním popisovači zabezpečení, výsledný řetězec popisovače zabezpečení nemá komponentu D:. Další podrobnosti najdete v tématu [formát řetězce popisovače zabezpečení](/windows/desktop/SecAuthZ/security-descriptor-string-format) .
+Pokud je DACL NULL a řídicí bit SE_DACL_PRESENT není nastaven ve vstupním popisovači zabezpečení, výsledný řetězec popisovače zabezpečení nemá komponentu D:. Další podrobnosti najdete v tématu [formát řetězce popisovače zabezpečení](/windows/win32/SecAuthZ/security-descriptor-string-format) .
 
-Tato metoda volá [funkce ConvertStringSecurityDescriptorToSecurityDescriptor](/windows/desktop/api/sddl/nf-sddl-convertstringsecuritydescriptortosecuritydescriptora).
+Tato metoda volá [funkce ConvertStringSecurityDescriptorToSecurityDescriptor](/windows/win32/api/sddl/nf-sddl-convertstringsecuritydescriptortosecuritydescriptorw).
 
 ## <a name="see-also"></a>Viz také:
 
 [Ukázka zabezpečení](../../overview/visual-cpp-samples.md)<br/>
-[SECURITY_DESCRIPTOR](/windows/desktop/api/winnt/ns-winnt-security_descriptor)<br/>
+[SECURITY_DESCRIPTOR](/windows/win32/api/winnt/ns-winnt-security_descriptor)<br/>
 [Přehled třídy](../../atl/atl-class-overview.md)<br/>
 [Globální funkce zabezpečení](../../atl/reference/security-global-functions.md)

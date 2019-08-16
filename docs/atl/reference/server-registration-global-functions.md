@@ -1,5 +1,5 @@
 ---
-title: Globální funkce serverové registrace
+title: Globální funkce registrace serveru
 ms.date: 11/04/2016
 f1_keywords:
 - atlbase/ATL::AtlComModuleRegisterServer
@@ -8,31 +8,31 @@ f1_keywords:
 - atlbase/ATL::AtlComModuleRevokeClassObjects
 - atlbase/ATL::AtlComModuleGetClassObject
 ms.assetid: c2f0a35d-857c-4538-a44d-c4ea0db63b06
-ms.openlocfilehash: 2088bd938aeac70193165cdbd43bd10203ecc49e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f9c3697259e1cee2b1107ded785ca583d730b55e
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62197455"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69495466"
 ---
-# <a name="server-registration-global-functions"></a>Globální funkce serverové registrace
+# <a name="server-registration-global-functions"></a>Globální funkce registrace serveru
 
-Tyto funkce poskytují podporu registrace a zrušení registrace serveru objekty v mapě objektů.
+Tyto funkce poskytují podporu pro registraci a zrušení registrace objektů serveru v mapě objektů.
 
 > [!IMPORTANT]
->  Funkce uvedené v následující tabulce nelze použít v aplikacích, které jsou spouštěny v modulu Windows Runtime.
+>  Funkce uvedené v následující tabulce nelze použít v aplikacích, které jsou spouštěny v prostředí Windows Runtime.
 
 |||
 |-|-|
 |[AtlComModuleRegisterServer](#atlcommoduleregisterserver)|Voláním této funkce se zaregistrují všechny objekty v mapě objektů.|
 |[AtlComModuleUnregisterServer](#atlcommoduleunregisterserver)|Voláním této funkce se zruší registrace všech objektů v mapě objektů.|
 |[AtlComModuleRegisterClassObjects](#atlcommoduleregisterclassobjects)|Voláním této funkce se zaregistrují objekty třídy.|
-|[AtlComModuleRevokeClassObjects](#atlcommodulerevokeclassobjects)|Tato funkce je volána k odvolání objekty třídy z modulu COM.|
-|[AtlComModuleGetClassObject](#atlcommodulegetclassobject)|Tato funkce je volána k získání objektu třídy.|
+|[AtlComModuleRevokeClassObjects](#atlcommodulerevokeclassobjects)|Tato funkce je volána pro odvolání objektů třídy z modulu COM.|
+|[AtlComModuleGetClassObject](#atlcommodulegetclassobject)|Tato funkce je volána pro získání objektu třídy.|
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** atlbase.h
+**Záhlaví:** atlbase. h
 
 ##  <a name="atlcommoduleregisterserver"></a>  AtlComModuleRegisterServer
 
@@ -48,13 +48,13 @@ ATLINLINE ATLAPI AtlComModuleRegisterServer(
 ### <a name="parameters"></a>Parametry
 
 *pComModule*<br/>
-Ukazatel na modulu COM.
+Ukazatel na modul COM.
 
 *bRegTypeLib*<br/>
-TRUE, pokud knihovna typů je k registraci.
+TRUE, pokud má být zaregistrována knihovna typů.
 
 *pCLSID*<br/>
-Odkazuje na identifikátor CLSID objekt, který má být zaregistrován. Pokud má hodnotu NULL, se zaregistruje všechny objekty v mapě objektů.
+Odkazuje na CLSID objektu, který má být zaregistrován. Pokud má hodnotu NULL, všechny objekty v mapě objektů budou zaregistrovány.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -62,9 +62,9 @@ Vrátí hodnotu S_OK při úspěchu nebo chybu HRESULT při selhání.
 
 ### <a name="remarks"></a>Poznámky
 
-`AtlComModuleRegisterServer` provede mapování objektu automaticky generované knihovny ATL a zaregistruje každý objekt v objektu map. Pokud *pCLSID* není NULL, pak pouze objekt, na které odkazuje *pCLSID* zaregistrován; v opačném případě všechny objekty jsou registrované.
+`AtlComModuleRegisterServer`provede mapování automaticky generovaného objektu knihovny ATL a zaregistruje všechny objekty v mapě. Pokud *pCLSID* není null, pak je zaregistrován pouze objekt, na který odkazuje *pCLSID* . jinak jsou všechny objekty registrovány.
 
-Tato funkce je volána [CAtlComModule::RegisterServer](catlcommodule-class.md#registerserver).
+Tato funkce je volána funkcí [CAtlComModule:: RegisterServer](catlcommodule-class.md#registerserver).
 
 ##  <a name="atlcommoduleunregisterserver"></a>  AtlComModuleUnregisterServer
 
@@ -80,13 +80,13 @@ ATLINLINE ATLAPI AtlComModuleUnregisterServer(
 ### <a name="parameters"></a>Parametry
 
 *pComModule*<br/>
-Ukazatel na modulu COM.
+Ukazatel na modul COM.
 
 *bUnRegTypeLib*<br/>
-TRUE, pokud knihovna typů je k registraci.
+TRUE, pokud má být zaregistrována knihovna typů.
 
 *pCLSID*<br/>
-Odkazuje na identifikátor CLSID objekt, který má být zrušena registrace. Pokud má hodnotu NULL bude zrušena všechny objekty v mapě objektů.
+Odkazuje na CLSID objektu, který se má odregistrovat. Pokud je hodnota NULL všech objektů v mapě objektů zaregistrována.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -94,9 +94,9 @@ Vrátí hodnotu S_OK při úspěchu nebo chybu HRESULT při selhání.
 
 ### <a name="remarks"></a>Poznámky
 
-`AtlComModuleUnregisterServer` provede mapování objektu ATL a zruší registraci jednotlivých objektů v mapě. Pokud *pCLSID* není NULL, pak pouze objekt, na které odkazuje *pCLSID* jinak zrušit všechny objekty jsou odregistrovat.
+`AtlComModuleUnregisterServer`provede mapování objektů ATL a zruší registraci každého objektu v mapě. Pokud *pCLSID* není null, pak pouze objekt, na který odkazuje *pCLSID* , není zaregistrován; jinak se zruší registrace všech objektů.
 
-Tato funkce je volána [CAtlComModule::UnregisterServer](catlcommodule-class.md#unregisterserver).
+Tato funkce je volána funkcí [CAtlComModule:: UnregisterServer](catlcommodule-class.md#unregisterserver).
 
 ##  <a name="atlcommoduleregisterclassobjects"></a>  AtlComModuleRegisterClassObjects
 
@@ -112,13 +112,13 @@ ATLINLINE ATLAPI AtlComModuleRegisterClassObjects(
 ### <a name="parameters"></a>Parametry
 
 *pComModule*<br/>
-Ukazatel na modulu COM.
+Ukazatel na modul COM.
 
 *dwClsContext*<br/>
-Určuje kontext, ve kterém má být spuštěn objektu třídy. Možné hodnoty jsou CLSCTX_INPROC_SERVER, CLSCTX_INPROC_HANDLER nebo CLSCTX_LOCAL_SERVER. Zobrazit [CLSCTX](/windows/desktop/api/wtypesbase/ne-wtypesbase-tagclsctx) další podrobnosti.
+Určuje kontext, ve kterém má být objekt třídy spuštěn. Možné hodnoty jsou CLSCTX_INPROC_SERVER, CLSCTX_INPROC_HANDLER nebo CLSCTX_LOCAL_SERVER. Další podrobnosti najdete v tématu [CLSCTX](/windows/win32/api/wtypesbase/ne-wtypesbase-clsctx) .
 
 *dwFlags*<br/>
-Určuje typy připojení k objektu třídy. Možné hodnoty jsou REGCLS_SINGLEUSE, REGCLS_MULTIPLEUSE nebo REGCLS_MULTI_SEPARATE. Zobrazit [REGCLS](/windows/desktop/api/combaseapi/ne-combaseapi-tagregcls) další podrobnosti.
+Určuje typy připojení k objektu třídy. Možné hodnoty jsou REGCLS_SINGLEUSE, REGCLS_MULTIPLEUSE nebo REGCLS_MULTI_SEPARATE. Další podrobnosti najdete v tématu [REGCLS](/windows/win32/api/combaseapi/ne-combaseapi-regcls) .
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -126,7 +126,7 @@ Vrátí hodnotu S_OK při úspěchu nebo chybu HRESULT při selhání.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato pomocná funkce je využíváno [CComModule::RegisterClassObjects](ccommodule-class.md#registerclassobjects) (v ATL 7.0 zastaralé) a [CAtlExeModuleT::RegisterClassObjects](catlexemodulet-class.md#registerclassobjects).
+Tato pomocná funkce je využívána pomocí [CComModule:: RegisterClassObjects](ccommodule-class.md#registerclassobjects) (zastaralé v knihovně ATL 7,0) a [CAtlExeModuleT:: RegisterClassObjects](catlexemodulet-class.md#registerclassobjects).
 
 ##  <a name="atlcommodulerevokeclassobjects"></a>  AtlComModuleRevokeClassObjects
 
@@ -139,7 +139,7 @@ ATLINLINE ATLAPI AtlComModuleRevokeClassObjects(_ATL_COM_MODULE* pComModule);
 ### <a name="parameters"></a>Parametry
 
 *pComModule*<br/>
-Ukazatel na modulu COM.
+Ukazatel na modul COM.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -147,9 +147,9 @@ Vrátí hodnotu S_OK při úspěchu nebo chybu HRESULT při selhání.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato pomocná funkce je využíváno [CComModule::RevokeClassObjects](ccommodule-class.md#revokeclassobjects) (v ATL 7.0 zastaralé) a [CAtlExeModuleT::RevokeClassObjects](catlexemodulet-class.md#revokeclassobjects).
+Tato pomocná funkce je využívána pomocí [CComModule:: RevokeClassObjects](ccommodule-class.md#revokeclassobjects) (zastaralé v knihovně ATL 7,0) a [CAtlExeModuleT:: RevokeClassObjects](catlexemodulet-class.md#revokeclassobjects).
 
-##  <a name="atlcommodulegetclassobject"></a>  AtlComModuleGetClassObject
+##  <a name="atlcommodulegetclassobject"></a>AtlComModuleGetClassObject
 
 Voláním této funkce se vrátí objekt pro vytváření tříd.
 
@@ -164,16 +164,16 @@ ATLINLINE ATLAPI AtlComModuleGetClassObject(
 ### <a name="parameters"></a>Parametry
 
 *pComModule*<br/>
-Ukazatel na modulu COM.
+Ukazatel na modul COM.
 
 *rclsid*<br/>
 Identifikátor CLSID objektu, který má být vytvořen.
 
 *riid*<br/>
-Identifikátor IID požadované rozhraní.
+IID požadovaného rozhraní.
 
 *ppv*<br/>
-Ukazatel na ukazatel rozhraní, který je identifikován *riid*. Pokud objekt nepodporuje toto rozhraní *ppv* nastaven na hodnotu NULL.
+Ukazatel na ukazatel rozhraní identifikovaný *riid*. Pokud objekt nepodporuje toto rozhraní, je *PPV* nastaveno na hodnotu null.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -181,7 +181,7 @@ Vrátí hodnotu S_OK při úspěchu nebo chybu HRESULT při selhání.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato pomocná funkce je využíváno [CComModule::GetClassObject](ccommodule-class.md#getclassobject) (v ATL 7.0 zastaralé) a [CAtlDllModuleT::GetClassObject](catldllmodulet-class.md#getclassobject).
+Tato pomocná funkce je využívána pomocí [CComModule:: GetClassObject –](ccommodule-class.md#getclassobject) (zastaralé v knihovně ATL 7,0) a [CAtlDllModuleT:: GetClassObject –](catldllmodulet-class.md#getclassobject).
 
 ## <a name="see-also"></a>Viz také:
 

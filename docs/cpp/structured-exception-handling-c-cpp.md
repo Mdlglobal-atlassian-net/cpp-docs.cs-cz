@@ -9,54 +9,54 @@ helpviewer_keywords:
 - try-catch keyword [C++], termination handlers
 - C++ exception handling, exception handlers
 ms.assetid: dd3b647d-c269-43a8-aab9-ad1458712976
-ms.openlocfilehash: e948d941afa1459623619e385aa67b1c60490245
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.openlocfilehash: 4555690476bc149687c680fc2baae53b96658a4e
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65221957"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69498484"
 ---
 # <a name="structured-exception-handling-cc"></a>Strukturované zpracování výjimek (C/C++)
 
-Strukturované zpracování výjimek (SEH) je rozšířením společnosti Microsoft pro C elegantně zpracovat určité situace výjimečných kódu, například hardwarových chyb. I když Windows a Microsoft C++ podporují SEH, doporučujeme použít standardu ISO C++ zpracování výjimek, protože je váš kód větší přenositelnosti a flexibility. Nicméně chcete-li zachovat stávající kód nebo v určitých typech programů, stále může být nutné použít SEH.
+Strukturované zpracování výjimek (SEH) je rozšíření společnosti Microsoft pro jazyk C, které zpracovává určité výjimečné situace v kódu, například hardwarové chyby, řádným způsobem. I když Windows a C++ Microsoft podporují SEH, doporučujeme, abyste používali zpracování výjimek C++ standardu ISO, protože díky tomu je váš kód lépe přenosný a flexibilní. Chcete-li však zachovat stávající kód nebo konkrétní druhy programů, bude pravděpodobně nutné použít SEH.
 
-**Specifické pro Microsoft:**
+**Specifické pro společnost Microsoft:**
 
 ## <a name="grammar"></a>Gramatika
 
-*s výjimkou příkazu Try* :<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**__try** *compound-statement* **__except** **(** *výraz* **)** *compound-statement*
+*try-except – příkaz* :<br/>
+&nbsp;&nbsp;&nbsp;&nbsp; **__try** *složený* příkaz **__except** **(** *výraz* **)** *složený* příkaz
 
-*try-finally-statement* :<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**__try** *compound-statement* **__finally** *compound-statement*
+*try-finally-příkaz* :<br/>
+&nbsp;&nbsp;&nbsp;&nbsp; **__try** *složený* příkaz **__finally** *složený* příkaz
 
 ## <a name="remarks"></a>Poznámky
 
-Spolu se SEH můžete zajistit, že prostředky, jako jsou bloky paměti a soubory jsou správně uvolněny, pokud neočekávaně ukončí provádění. Můžete také zpracovávat specifické problémy – třeba nedostatek paměti – s použitím stručné strukturovaný kód, který nevyžaduje **goto** příkazy nebo propracované testování návratové kódy.
+Pomocí SEH můžete zajistit, aby prostředky, jako jsou paměťové bloky a soubory, byly vydány správně, pokud se provádění nečekaně ukončí. Můžete také zpracovat konkrétní problémy, například nedostatečné množství paměti – pomocí stručného strukturovaného kódu, který nespoléhá na příkazy **goto** nebo vést testování návratových kódů.
 
-Try-except a try-finally příkazy uvedené v tomto článku jsou rozšíření Microsoft pro jazyk C. Tím, že umožňuje aplikacím získat kontrolu nad programu po události, které by jinak ukončí provádění podporují SEH. Přestože SEH funguje s zdrojových souborů C++, není výslovně navrženo pro jazyk C++. Pokud používáte SEH v programu C++ pro kompilaci pomocí [/EHa nebo/EHsc](../build/reference/eh-exception-handling-model.md) možnost, destruktory pro místní objekty jsou volány, ale nemusí být jiné chování při spuštění, co očekáváte. Pro ilustraci podívejte se na příklad dále v tomto článku. Ve většině případů místo SEH vám doporučujeme použít standardu ISO [ C++ zpracování výjimek](../cpp/try-throw-and-catch-statements-cpp.md), které Microsoft C++ kompilátor podporuje také. S použitím zpracování výjimek jazyka C++, můžete zajistit, že váš kód je větší přenositelnost a dokáže zpracovat výjimky libovolného typu.
+Příkazy try-except a try-finally uvedené v tomto článku jsou rozšířeními společnosti Microsoft pro jazyk C. Podporují SEH tím, že umožňují aplikacím převzít řízení programu po událostech, které by jinak ukončily provádění. I když SEH funguje C++ se zdrojovými soubory, není speciálně navržen pro C++. Použijete- C++ li SEH v programu, který kompilujete pomocí možnosti [/EHa nebo/EHsc](../build/reference/eh-exception-handling-model.md) , destruktory pro lokální objekty se nazývají, ale jiné chování při provádění nemusí být to, co očekáváte. Ilustraci najdete v příkladu dále v tomto článku. Ve většině případů místo SEH doporučujeme používat standardní [ C++ zpracování výjimek](../cpp/try-throw-and-catch-statements-cpp.md)standardu ISO, které kompilátor Microsoftu C++ podporuje i. Pomocí C++ zpracování výjimek můžete zajistit, aby byl kód lépe přenosný, a můžete zpracovat výjimky libovolného typu.
 
-Pokud máte kód jazyka C, který používá SEH, je možné ji kombinovat s kódem jazyka C++, který používá zpracování výjimek jazyka C++. Informace najdete v tématu [zpracování strukturovaných výjimek v jazyce C++](../cpp/exception-handling-differences.md).
+Pokud máte kód jazyka C, který používá SEH, můžete jej kombinovat s C++ kódem, který C++ používá zpracování výjimek. Informace naleznete v tématu [zpracování strukturovaných výjimek C++v ](../cpp/exception-handling-differences.md).
 
 Existují dva mechanismy SEH:
 
-- [Obslužné rutiny výjimek](../cpp/writing-an-exception-handler.md), nebo **__except** bloků, které může reagovat na nebo zrušit výjimku.
+- [Obslužné rutiny výjimek](../cpp/writing-an-exception-handler.md)nebo bloky **__except** , které mohou reagovat na nebo zrušit výjimku.
 
-- [Obslužné rutiny ukončení](../cpp/writing-a-termination-handler.md), nebo **__finally** bloků, které jsou vždy volány, zda výjimku způsobí ukončení, nebo ne.
+- [Obslužné rutiny ukončení](../cpp/writing-a-termination-handler.md)nebo bloky **__finally** , které jsou vždy volány, bez ohledu na to, zda výjimka způsobuje ukončení nebo ne.
 
-Tyto dva typy obslužných rutin se liší, ale jsou úzce související s procesem, který se označuje jako "odvíjení zásobníku." Pokud se strukturovaná výjimka objeví, hledá Windows nedávno nainstalované obslužná rutina výjimky, která je aktuálně aktivní. Obslužná rutina můžete provést jednu z tři věci:
+Tyto dva druhy obslužných rutin jsou odlišné, ale úzce se vztahují k procesu, který se označuje jako "odvinutí zásobníku". Pokud dojde k strukturované výjimce, systém Windows vyhledá naposledy nainstalovanou obslužnou rutinu výjimky, která je aktuálně aktivní. Obslužná rutina může provést jednu ze tří věcí:
 
-- Nepovedlo se rozpoznat výjimku a předá řízení jiné obslužné rutině.
+- Nepodařilo se rozpoznat výjimku a předat řízení jiným obslužným rutinám.
 
-- Rozpoznat výjimku, ale zavřít.
+- Rozpoznat výjimku, ale zavřít ji.
 
-- Rozpoznat výjimku a zpracoval ji.
+- Rozpoznat výjimku a zpracovat ji.
 
-Obslužná rutina výjimky, která rozpozná výjimku nemusí být ve funkci, která byla spuštěna, kde došlo k výjimce. V některých případech může být ve funkci v zásobníku mnohem vyšší. Aktuálně spuštěné funkce a všechny funkce v zásobníku, budou ukončeny. Během tohoto procesu je zásobník "odvinut"; to znamená, místní proměnné nestatické ukončené funkce jsou vymazány ze zásobníku.
+Obslužná rutina výjimky, která rozpozná výjimku, nesmí být ve funkci, která byla spuštěna v okamžiku, kdy došlo k výjimce. V některých případech může být ve funkci mnohem vyšší v zásobníku. Aktuálně spuštěná funkce a všechny ostatní funkce v rámci rámce zásobníku jsou ukončeny. Během tohoto procesu je zásobník "Replaced;", což znamená, že místní nestatické proměnné ukončených funkcí jsou ze zásobníku vymazány.
 
-Jak ji unwinds zásobníku, operační systém zavolá libovolné obslužné rutiny ukončení, které jste zadali pro každou funkci. Když použijete obslužné rutiny ukončení, můžete vyčistit prostředky, které jinak by zůstaly otevřené z důvodu abnormální ukončení. Pokud jste zadali kritický oddíl, můžete ho ukončit v obslužné rutiny ukončení. Pokud chcete vypnout program, můžete provádět další úlohy údržby pořádku jako je například zavření a odebírání dočasných souborů.
+Při uvolňování zásobníku volá operační systém jakékoli obslužné rutiny ukončení, které jste napsali pro jednotlivé funkce. Pomocí obslužné rutiny ukončení můžete vyčistit prostředky, které by jinak zůstaly otevřené z důvodu neobvyklého ukončení. Pokud jste zadali kritickou část, můžete ji ukončit v obslužné rutině ukončení. Pokud bude program vypnutý, můžete provádět další údržbu úlohy, jako je zavření a odebrání dočasných souborů.
 
-## <a name="next-steps"></a>Další kroky
+## <a name="next-steps"></a>Další postup
 
 - [Zápis obslužné rutiny výjimek](../cpp/writing-an-exception-handler.md)
 
@@ -66,7 +66,7 @@ Jak ji unwinds zásobníku, operační systém zavolá libovolné obslužné rut
 
 ## <a name="example"></a>Příklad
 
-Jak je uvedeno výše, destruktory pro místní objekty se volají, pokud SEH lze použít v programu v jazyce C++ a jeho kompilace pomocí **/EHa** nebo **/EHsc** možnost. Chování za běhu však nemusí být co očekáváte, že pokud také používáte výjimky jazyka C++. Tento příklad znázorňuje tyto behaviorální rozdíly.
+Jak bylo uvedeno dříve, destruktory pro lokální objekty jsou volány, pokud použijete C++ SEH v programu a zkompilujete pomocí možnosti **/EHa** nebo **/EHsc** . Chování při spuštění ale nemusí být očekávaným způsobem, pokud používáte i C++ výjimky. Tento příklad ukazuje tyto rozdíly v chování.
 
 ```cpp
 #include <stdio.h>
@@ -115,14 +115,14 @@ int main()
 }
 ```
 
-Pokud používáte **/EHsc** ke kompilaci tohoto kódu, ale ovládací prvek makro místního testovacího `CPPEX` je nedefinovaný, neexistuje žádný provádění `TestClass` destruktor a výstup vypadá takto:
+Použijete-li **/EHsc** ke kompilaci tohoto kódu, ale makro `CPPEX` místního testovacího ovládacího prvku není definováno, neexistuje `TestClass` žádné spuštění destruktoru a výstup vypadá takto:
 
 ```Output
 Triggering SEH exception
 Executing SEH __except block
 ```
 
-Pokud používáte **/EHsc** pro kompilaci kódu a `CPPEX` se definuje pomocí `/DCPPEX` (tak, že je vyvolána výjimka jazyka C++), `TestClass` destruktor a výstup vypadá takto:
+Použijete-li **/EHsc** pro zkompilování kódu `CPPEX` a je definována pomocí `/DCPPEX` (tak, že C++ je vyvolána výjimka), destruktor `TestClass` se spustí a výstup vypadá takto:
 
 ```Output
 Throwing C++ exception
@@ -130,7 +130,7 @@ Destroying TestClass!
 Executing SEH __except block
 ```
 
-Pokud používáte **/EHa** ke kompilaci kódu, `TestClass` bez ohledu na to, zda byla výjimka vydána pomocí provádí – destruktor `std::throw` nebo s použitím SEH aktivuje výjimku, to znamená, zda `CPPEX` definované nebo není. Výstup vypadá takto:
+Použijete-li **/EHa** ke kompilaci kódu, vyvolá `TestClass` se destruktor bez ohledu na to, zda byla výjimka vyvolána pomocí `std::throw` nebo pomocí SEH k vyvolání výjimky, to znamená, zda `CPPEX` je definována nebo nikoli. Výstup bude vypadat nějak takto:
 
 ```Output
 Throwing C++ exception
@@ -138,14 +138,14 @@ Destroying TestClass!
 Executing SEH __except block
 ```
 
-Další informace najdete v tématu [/EH (Model zpracování výjimek)](../build/reference/eh-exception-handling-model.md).
+Další informace naleznete v tématu [/EH (model zpracování výjimek)](../build/reference/eh-exception-handling-model.md).
 
-**Specifické pro END Microsoft**
+**Specifické pro konec Microsoftu**
 
 ## <a name="see-also"></a>Viz také:
 
 [Zpracování výjimek](../cpp/exception-handling-in-visual-cpp.md)<br/>
 [Klíčová slova](../cpp/keywords-cpp.md)<br/>
 [\<exception>](../standard-library/exception.md)<br/>
-[Ošetření chyb a výjimek](../cpp/errors-and-exception-handling-modern-cpp.md)<br/>
-[(Windows) pro zpracování strukturovaných výjimek](https://msdn.microsoft.com/library/windows/desktop/ms680657.aspx)
+[Zpracování chyb a výjimek](../cpp/errors-and-exception-handling-modern-cpp.md)<br/>
+[Strukturované zpracování výjimek (Windows)](/windows/win32/debug/structured-exception-handling)

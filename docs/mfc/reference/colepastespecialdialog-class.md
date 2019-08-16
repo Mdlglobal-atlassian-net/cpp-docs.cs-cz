@@ -1,5 +1,5 @@
 ---
-title: Colepastespecialdialog – třída
+title: COlePasteSpecialDialog – třída
 ms.date: 11/04/2016
 f1_keywords:
 - COlePasteSpecialDialog
@@ -28,16 +28,16 @@ helpviewer_keywords:
 - COlePasteSpecialDialog [MFC], GetSelectionType
 - COlePasteSpecialDialog [MFC], m_ps
 ms.assetid: 0e82ef9a-9bbe-457e-8240-42c86a0534f7
-ms.openlocfilehash: 9c31ed6f82f4280206bf233999fac74981636db3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f4174369620f14f2d1ac410aa5d756c75097ad0f
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62224295"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69503768"
 ---
-# <a name="colepastespecialdialog-class"></a>Colepastespecialdialog – třída
+# <a name="colepastespecialdialog-class"></a>COlePasteSpecialDialog – třída
 
-Používá se pro dialogové okno zvláštní vložení OLE.
+Slouží k zadání speciálního dialogového okna pro vložení OLE.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -49,41 +49,41 @@ class COlePasteSpecialDialog : public COleDialog
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
-|[COlePasteSpecialDialog::COlePasteSpecialDialog](#colepastespecialdialog)|Vytvoří `COlePasteSpecialDialog` objektu.|
+|[COlePasteSpecialDialog::COlePasteSpecialDialog](#colepastespecialdialog)|`COlePasteSpecialDialog` Vytvoří objekt.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
-|[COlePasteSpecialDialog::AddFormat](#addformat)|Přidá do seznamu formátů, které vaše aplikace můžete vložit vlastní formáty.|
+|[COlePasteSpecialDialog::AddFormat](#addformat)|Přidá vlastní formáty do seznamu formátů, které může vaše aplikace vložit.|
 |[COlePasteSpecialDialog::AddLinkEntry](#addlinkentry)|Přidá novou položku do seznamu podporovaných formátů schránky.|
-|[COlePasteSpecialDialog::AddStandardFormats](#addstandardformats)|Přidá CF_BITMAP CF_DIB, CF_METAFILEPICT a volitelně můžete vložit vaše aplikace CF_LINKSOURCE do seznamu formátů.|
-|[COlePasteSpecialDialog::CreateItem](#createitem)|Vytvoří položku v kontejneru dokumentu pomocí určeného formátu.|
-|[COlePasteSpecialDialog::DoModal](#domodal)|Zobrazí dialogové okno zvláštní vložení OLE.|
-|[COlePasteSpecialDialog::GetDrawAspect](#getdrawaspect)|Určuje, jestli se má kreslit položky jako ikony nebo ne.|
-|[COlePasteSpecialDialog::GetIconicMetafile](#geticonicmetafile)|Získá popisovač pro tento metasoubor spojené s formuláři ikonickým této položky.|
-|[COlePasteSpecialDialog::GetPasteIndex](#getpasteindex)|Získá index možnosti dostupné vložení, který byl vybrán uživatelem.|
-|[COlePasteSpecialDialog::GetSelectionType](#getselectiontype)|Získá typ výběru zvolili.|
+|[COlePasteSpecialDialog::AddStandardFormats](#addstandardformats)|Přidá CF_BITMAP, CF_DIB, CF_METAFILEPICT a volitelně CF_LINKSOURCE na seznam formátů, které může vaše aplikace vložit.|
+|[COlePasteSpecialDialog::CreateItem](#createitem)|Vytvoří položku v dokumentu kontejneru pomocí zadaného formátu.|
+|[COlePasteSpecialDialog::DoModal](#domodal)|Zobrazí dialogové okno vložení speciálního objektu OLE.|
+|[COlePasteSpecialDialog::GetDrawAspect](#getdrawaspect)|Určuje, zda má být položka vykreslována jako ikona.|
+|[COlePasteSpecialDialog::GetIconicMetafile](#geticonicmetafile)|Získá popisovač metasouboru přidruženého k ikonickým formuláři této položky.|
+|[COlePasteSpecialDialog::GetPasteIndex](#getpasteindex)|Získá index dostupných možností vložení, které byly zvoleny uživatelem.|
+|[COlePasteSpecialDialog::GetSelectionType](#getselectiontype)|Získá zvolený typ výběru.|
 
 ### <a name="public-data-members"></a>Veřejné datové členy
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
-|[COlePasteSpecialDialog::m_ps](#m_ps)|Struktura typu OLEUIPASTESPECIAL, které řídí funkce dialogového okna.|
+|[COlePasteSpecialDialog::m_ps](#m_ps)|Struktura typu OLEUIPASTESPECIAL, která řídí funkci dialogového okna.|
 
 ## <a name="remarks"></a>Poznámky
 
-Vytvoření objektu třídy `COlePasteSpecialDialog` kdy chcete volat dialogovému oknu. Po `COlePasteSpecialDialog` objekt byl vytvořen, můžete použít [AddFormat](#addformat) a [AddStandardFormats](#addstandardformats) členské funkce přidejte formátů schránky do dialogového okna. Můžete také použít [m_ps](#m_ps) struktury k inicializaci hodnoty nebo stavy ovládacích prvků v dialogovém okně. `m_ps` Struktury je typu OLEUIPASTESPECIAL.
+Vytvořte objekt třídy `COlePasteSpecialDialog` , pokud chcete zavolat toto dialogové okno. Po vytvoření `COlePasteSpecialDialog` objektu lze pomocí členských funkcí [AddFormat](#addformat) a [AddStandardFormats](#addstandardformats) přidat do dialogového okna formáty schránky. Můžete také použít strukturu [m_ps](#m_ps) k inicializaci hodnot nebo stavů ovládacích prvků v dialogovém okně. `m_ps` Struktura je typu OleUIPasteSpecial.
 
-Další informace najdete v tématu [OLEUIPASTESPECIAL](/windows/desktop/api/oledlg/ns-oledlg-tagoleuipastespeciala) struktura v sadě Windows SDK.
+Další informace najdete v tématu struktura [OleUIPasteSpecial](/windows/win32/api/oledlg/ns-oledlg-oleuipastespecialw) v Windows SDK.
 
-Další informace o dialogových oken OLE konkrétní, najdete v článku [dialogová okna v prostředí OLE](../../mfc/dialog-boxes-in-ole.md).
+Další informace o dialogových oknech specifických pro OLE naleznete v dialogových oknech článku [v tématu OLE](../../mfc/dialog-boxes-in-ole.md).
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
-[Třídy CObject](../../mfc/reference/cobject-class.md)
+[CObject](../../mfc/reference/cobject-class.md)
 
 [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)
 
@@ -99,11 +99,11 @@ Další informace o dialogových oken OLE konkrétní, najdete v článku [dialo
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** afxodlgs.h
+**Záhlaví:** afxodlgs. h
 
-##  <a name="addformat"></a>  COlePasteSpecialDialog::AddFormat
+##  <a name="addformat"></a>COlePasteSpecialDialog::AddFormat
 
-Voláním této funkce pro přidání nové formáty do seznamu formátů, které vaše aplikace může podporovat v operaci Vložit jinak.
+Voláním této funkce přidáte nové formáty do seznamu formátů, které vaše aplikace může podporovat ve speciální operaci vložení.
 
 ```
 void AddFormat(
@@ -123,41 +123,41 @@ void AddFormat(
 ### <a name="parameters"></a>Parametry
 
 *fmt*<br/>
-Odkaz na datový typ, který chcete přidat.
+Odkaz na datový typ, který se má přidat
 
 *lpszFormat*<br/>
 Řetězec, který popisuje formát pro uživatele.
 
 *lpszResult*<br/>
-Řetězec, který popisuje výsledek, pokud tento formát je vybrána v dialogovém okně.
+Řetězec, který popisuje výsledek, pokud je v dialogovém okně zvolen tento formát.
 
-*příznaky*<br/>
-Různé propojování a vkládání možnosti dostupné pro tento formát. Tento příznak je bitová kombinace hodnot jednoho nebo více různých hodnot v OLEUIPASTEFLAG výčtového typu.
+*Flag*<br/>
+K dispozici jsou různé možnosti propojování a vkládání pro tento formát. Tento příznak je bitovou kombinací jedné nebo více různých hodnot v typu výčtu OLEUIPASTEFLAG.
 
 *cf*<br/>
-Formát schránky pro přidání.
+Formát schránky, který má být přidán.
 
-*objekt tymed*<br/>
-Typy médií, které jsou k dispozici v tomto formátu. Toto je bitová kombinace hodnot jednoho nebo více hodnot v objekt TYMED výčtového typu.
+*tymed*<br/>
+Typy médií, které jsou k dispozici v tomto formátu. Toto je bitová kombinace jedné nebo více hodnot v typu výčtu TYMED.
 
 *nFormatID*<br/>
-ID řetězce, který identifikuje tento formát. Formát tohoto řetězce je dvou samostatných řetězců oddělených znakem '\n'. První řetězec, který je stejný, který by se předal v *lpstrFormat* parametr a druhý je stejné jako *lpstrResult* parametru.
+ID řetězce, který identifikuje tento formát. Formát tohoto řetězce je dva samostatné řetězce oddělené znakem "\n". První řetězec je stejný, který by byl předán do parametru *lpstrFormat* a druhý je stejný jako parametr *lpstrResult* .
 
 *bEnableIcon*<br/>
-Příznak, který určuje, zda zaškrtávací políčko Zobrazit jako ikonu je povoleno, když tento formát je vybrán v seznamu.
+Příznak, který určuje, zda je zaškrtnuto políčko Zobrazit jako, pokud je v seznamu zvolen tento formát.
 
-*bLink*<br/>
-Příznak, který určuje, zda je povoleno přepínací tlačítko Vložit odkaz, když tento formát je vybrán v seznamu.
+*Blikají*<br/>
+Příznak, který určuje, zda je povoleno přepínač Vložit odkaz, pokud je v seznamu vybrán tento formát.
 
 ### <a name="remarks"></a>Poznámky
 
-Voláním této funkce můžete přidat buď standardní formáty, jako je například CF_TEXT nebo CF_TIFF nebo vlastní formáty, které vaše aplikace má registrovaný v systému. Další informace o vkládání dat objektů do vaší aplikace, najdete v článku [datové objekty a zdroje dat: Manipulace s](../../mfc/data-objects-and-data-sources-manipulation.md).
+Pomocí této funkce lze přidat standardní formáty jako CF_TEXT nebo CF_TIFF nebo vlastní formáty, které vaše aplikace zaregistrovala v systému. Další informace o vkládání datových objektů do aplikace naleznete v článku [datové objekty a zdroje dat: Manipulace](../../mfc/data-objects-and-data-sources-manipulation.md).
 
-Další informace najdete v tématu [objekt TYMED](/windows/desktop/api/objidl/ne-objidl-tagtymed) typ výčtu a [FORMATETC](/windows/desktop/api/objidl/ns-objidl-tagformatetc) struktura v sadě Windows SDK.
+Další informace naleznete v části typ výčtu [TYMED](/windows/win32/api/objidl/ne-objidl-tymed) a struktura [FORMATETC](/windows/win32/api/objidl/ns-objidl-formatetc) v Windows SDK.
 
-Další informace najdete v tématu [OLEUIPASTEFLAG](/windows/desktop/api/oledlg/ne-oledlg-tagoleuipasteflag) Výčtový typ v sadě Windows SDK.
+Další informace naleznete v části [OLEUIPASTEFLAG](/windows/win32/api/oledlg/ne-oledlg-oleuipasteflag) typ výčtu v Windows SDK.
 
-##  <a name="addlinkentry"></a>  COlePasteSpecialDialog::AddLinkEntry
+##  <a name="addlinkentry"></a>COlePasteSpecialDialog::AddLinkEntry
 
 Přidá novou položku do seznamu podporovaných formátů schránky.
 
@@ -168,15 +168,15 @@ OLEUIPASTEFLAG AddLinkEntry(UINT cf);
 ### <a name="parameters"></a>Parametry
 
 *cf*<br/>
-Formát schránky pro přidání.
+Formát schránky, který má být přidán.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-[OLEUIPASTEFLAG](/windows/desktop/api/oledlg/ne-oledlg-tagoleuipasteflag) struktura obsahující informace o nových odkazů.
+Struktura [OLEUIPASTEFLAG](/windows/win32/api/oledlg/ne-oledlg-oleuipasteflag) obsahující informace pro novou položku odkazu.
 
-##  <a name="addstandardformats"></a>  COlePasteSpecialDialog::AddStandardFormats
+##  <a name="addstandardformats"></a>COlePasteSpecialDialog::AddStandardFormats
 
-Voláním této funkce přidání následujících formátů schránky do seznamu formátů, které vaše aplikace může podporovat v rámci Vložit jinak operace:
+Voláním této funkce přidáte následující formáty schránky do seznamu formátů, které vaše aplikace může podporovat ve speciální operaci vložení:
 
 ```
 void AddStandardFormats(BOOL bEnableLink = TRUE);
@@ -185,7 +185,7 @@ void AddStandardFormats(BOOL bEnableLink = TRUE);
 ### <a name="parameters"></a>Parametry
 
 *bEnableLink*<br/>
-Příznak, který určuje, jestli se má přidat do seznamu formátů CF_LINKSOURCE vaší aplikace můžete vložit.
+Příznak, který určuje, jestli se má přidat CF_LINKSOURCE do seznamu formátů, které může vaše aplikace vložit.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -195,15 +195,15 @@ Příznak, který určuje, jestli se má přidat do seznamu formátů CF_LINKSOU
 
 - CF_METAFILEPICT
 
-- **"Vloženého objektu"**
+- **"Vložený objekt"**
 
-- (volitelně) **"Spojí zdrojová"**
+- Volitelně **"Zdroj propojení"**
 
-Tyto formáty slouží k podpoře vložení a propojení.
+Tyto formáty slouží k podpoře vkládání a propojení.
 
-##  <a name="colepastespecialdialog"></a>  COlePasteSpecialDialog::COlePasteSpecialDialog
+##  <a name="colepastespecialdialog"></a>COlePasteSpecialDialog::COlePasteSpecialDialog
 
-Vytvoří `COlePasteSpecialDialog` objektu.
+`COlePasteSpecialDialog` Vytvoří objekt.
 
 ```
 COlePasteSpecialDialog(
@@ -215,29 +215,29 @@ COlePasteSpecialDialog(
 ### <a name="parameters"></a>Parametry
 
 *dwFlags*<br/>
-Vytvoření příznak obsahuje libovolný počet následující příznaky kombinované pomocí bitového operátoru OR – operátor:
+Příznak vytvoření obsahuje libovolný počet následujících příznaků kombinovaných pomocí bitového operátoru OR:
 
-- PSF_SELECTPASTE Určuje, které se bude přepínač Vložit kontroluje zpočátku když je volána dialogových oken. Nelze použít v kombinaci s PSF_SELECTPASTELINK. Toto nastavení je výchozí.
+- PSF_SELECTPASTE určuje, že přepínač vložení bude při volání dialogového okna kontrolován. Nelze použít v kombinaci s PSF_SELECTPASTELINK. Toto nastavení je výchozí.
 
-- PSF_SELECTPASTELINK Určuje, že přepínač Vložit odkaz bude zaškrtnuté políčko zpočátku když je volána dialogových oken. Nelze použít v kombinaci s PSF_SELECTPASTE.
+- PSF_SELECTPASTELINK určuje, zda bude při volání dialogového okna zaškrtnuto políčko vložit přepínač odkazu. Nelze použít v kombinaci s PSF_SELECTPASTE.
 
-- PSF_CHECKDISPLAYASICON Určuje, které se bude zaškrtávací políčko Zobrazit jako ikonu zaškrtnutí zpočátku když je volána dialogových oken.
+- PSF_CHECKDISPLAYASICON určuje, že zaškrtávací políčko Zobrazit jako ikonu bude při prvním volání dialogového okna kontrolováno.
 
-- PSF_SHOWHELP Určuje, že na tlačítko Nápověda se zobrazí, když je volána dialogových oken.
+- PSF_SHOWHELP určuje, že se při volání dialogového okna zobrazí tlačítko Help.
 
 *pDataObject*<br/>
-Odkazuje [coledataobject –](../../mfc/reference/coledataobject-class.md) pro vložení. Pokud je tato hodnota NULL, načte `COleDataObject` ze schránky.
+Odkazuje na [COleDataObject](../../mfc/reference/coledataobject-class.md) pro vložení. Pokud je tato hodnota null, získá `COleDataObject` ze schránky.
 
 *pParentWnd*<br/>
-Odkazuje na objekt okna nadřazené nebo vlastník (typu `CWnd`), ke které patří objektu dialogového okna. Pokud je hodnota NULL, nadřazené okno dialogového okna je nastaveno na hlavního okna aplikace.
+Odkazuje na objekt okna nadřazeného objektu nebo vlastníka (typu `CWnd`), do kterého objekt dialogového okna patří. Pokud má hodnotu NULL, nadřazené okno dialogového okna je nastaveno na hlavní okno aplikace.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato funkce vytvoří pouze `COlePasteSpecialDialog` objektu. Chcete-li zobrazit dialogové okno, zavolejte [DoModal](#domodal) funkce.
+Tato funkce vytvoří `COlePasteSpecialDialog` pouze objekt. Chcete-li zobrazit dialogové okno, zavolejte funkci [DoModal](#domodal) .
 
-Další informace najdete v tématu [OLEUIPASTEFLAG](/windows/desktop/api/oledlg/ne-oledlg-tagoleuipasteflag) Výčtový typ v sadě Windows SDK.
+Další informace naleznete v části [OLEUIPASTEFLAG](/windows/win32/api/oledlg/ne-oledlg-oleuipasteflag) typ výčtu v Windows SDK.
 
-##  <a name="createitem"></a>  COlePasteSpecialDialog::CreateItem
+##  <a name="createitem"></a>COlePasteSpecialDialog:: CreateItem –
 
 Vytvoří novou položku, která byla vybrána v dialogovém okně Vložit jinak.
 
@@ -248,19 +248,19 @@ BOOL CreateItem(COleClientItem* pNewItem);
 ### <a name="parameters"></a>Parametry
 
 *pNewItem*<br/>
-Odkazuje `COleClientItem` instance. Nemůže mít hodnotu NULL.
+Odkazuje na `COleClientItem` instanci. Nemůže mít hodnotu NULL.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Nenulové, pokud byla tato položka vytvořena úspěšně; jinak 0.
+Nenulové, pokud se položka úspěšně vytvořila; v opačném případě 0.
 
 ### <a name="remarks"></a>Poznámky
 
 Tato funkce by měla být volána pouze po [DoModal](#domodal) vrátí IDOK.
 
-##  <a name="domodal"></a>  COlePasteSpecialDialog::DoModal
+##  <a name="domodal"></a>COlePasteSpecialDialog::D oModal
 
-Zobrazí dialogové okno zvláštní vložení OLE.
+Zobrazí dialogové okno vložení speciálního objektu OLE.
 
 ```
 virtual INT_PTR DoModal();
@@ -268,23 +268,23 @@ virtual INT_PTR DoModal();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Stav dokončení pro dialogové okno. Jeden z následujících hodnot:
+Stav dokončení dialogového okna Jedna z následujících hodnot:
 
-- IDOK, pokud úspěšně zobrazí dialogové okno.
+- IDOK, pokud se dialogové okno úspěšně zobrazilo.
 
 - IDCANCEL, pokud uživatel zrušil dialogové okno.
 
-- IDABORT, pokud došlo k chybě. Pokud je vrácena IDABORT, zavolejte `COleDialog::GetLastError` členská funkce, chcete-li získat další informace o typu chyby, ke které došlo. Seznam možných chyb, najdete v článku [OleUIPasteSpecial](/windows/desktop/api/oledlg/nf-oledlg-oleuipastespeciala) funkce v sadě Windows SDK.
+- IDABORT, pokud došlo k chybě. Je-li vrácen IDABORT, zavolejte `COleDialog::GetLastError` členskou funkci pro získání dalších informací o typu chyby, ke které došlo. Seznam možných chyb naleznete v Windows SDK funkci [OleUIPasteSpecial](/windows/win32/api/oledlg/nf-oledlg-oleuipastespecialw) .
 
 ### <a name="remarks"></a>Poznámky
 
-Pokud chcete inicializovat různé ovládací prvky dialogového okna pole tak, že nastavíte členy [m_ps](#m_ps) strukturu, je potřeba to udělat před voláním `DoModal`, ale po vytvoření objektu dialogového okna.
+Pokud chcete inicializovat různé ovládací prvky dialogového okna nastavením členů struktury [m_ps](#m_ps) , měli byste to provést před voláním `DoModal`, ale po sestavení objektu dialogového okna.
 
-Pokud `DoModal` vrátí IDOK, můžete volat ostatní členské funkce k načtení nastavení nebo informace o vstup uživatelem do dialogových oken.
+Pokud `DoModal` vrátí IDOK, můžete zavolat jiné členské funkce pro načtení nastavení nebo zadání informací uživatelem do dialogového okna.
 
-##  <a name="getdrawaspect"></a>  COlePasteSpecialDialog::GetDrawAspect
+##  <a name="getdrawaspect"></a>COlePasteSpecialDialog::GetDrawAspect
 
-Určuje, pokud se uživatel rozhodl zobrazení vybrané položky jako ikona.
+Určuje, zda se uživatel rozhodl Zobrazit vybranou položku jako ikonu.
 
 ```
 DVASPECT GetDrawAspect() const;
@@ -292,19 +292,19 @@ DVASPECT GetDrawAspect() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Metoda potřebné k vykreslení objektu.
+Metoda potřebná pro vykreslení objektu.
 
-- DVASPECT_CONTENT vrácena, pokud se zaškrtávací políčko Zobrazit jako ikonu zaškrtnutí, když se zavře dialogové okno.
+- DVASPECT_CONTENT vrátilo, pokud nebylo zaškrtnuto políčko Zobrazit jako ikonu, když bylo dialogové okno zavřeno.
 
-- DVASPECT_ICON vrácena, pokud došlo k zaškrtnutí zaškrtávacího políčka Zobrazit jako ikonu při dialogové okno se zavře.
+- DVASPECT_ICON vrátilo, pokud bylo zaškrtnuto políčko Zobrazit jako ikonu, když bylo dialogové okno zavřeno.
 
 ### <a name="remarks"></a>Poznámky
 
-Pouze voláním této funkce po [DoModal](#domodal) vrátí IDOK.
+Tuto funkci volejte jenom po [DoModal](#domodal) vrátí IDOK.
 
-Další informace o aspekt kreslení, najdete v článku [FORMATETC](/windows/desktop/api/objidl/ns-objidl-tagformatetc) struktura v sadě Windows SDK.
+Další informace o aspektech kreslení najdete v tématu struktura [FORMATETC](/windows/win32/api/objidl/ns-objidl-formatetc) v Windows SDK.
 
-##  <a name="geticonicmetafile"></a>  COlePasteSpecialDialog::GetIconicMetafile
+##  <a name="geticonicmetafile"></a>COlePasteSpecialDialog::GetIconicMetafile
 
 Získá metasoubor přidružený k položce vybrané uživatelem.
 
@@ -314,11 +314,11 @@ HGLOBAL GetIconicMetafile() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Popisovač na metasoubor obsahující ikonickým aspekt vybrané položky, je-li zaškrtnutí políčka Zobrazit jako ikonu byla vybrána, když dialogové okno se zavře výběrem **OK**; jinak hodnota NULL.
+Popisovač metasouboru obsahujícího aspekt ikonickým pro vybranou položku, pokud bylo zaškrtnuto políčko Zobrazit jako ikonu, když bylo dialogové okno zavřeno, kliknutím na **tlačítko OK**; jinak NULL.
 
-##  <a name="getpasteindex"></a>  COlePasteSpecialDialog::GetPasteIndex
+##  <a name="getpasteindex"></a>COlePasteSpecialDialog::GetPasteIndex
 
-Získá hodnotu indexu přidružený k položce uživatel vybral.
+Získá hodnotu indexu přidruženou k položce vybrané uživatelem.
 
 ```
 int GetPasteIndex() const;
@@ -326,15 +326,15 @@ int GetPasteIndex() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Index v poli `OLEUIPASTEENTRY` struktury vybrané uživatelem. Formát, který odpovídá vybraného indexu by měla sloužit při provádění operace vložení.
+Index do pole `OLEUIPASTEENTRY` struktury, které uživatel vybral. Při provádění operace vložení by měl být použit formát, který odpovídá vybranému indexu.
 
 ### <a name="remarks"></a>Poznámky
 
-Další informace najdete v tématu [OLEUIPASTEENTRY](/windows/desktop/api/oledlg/ns-oledlg-tagoleuipasteentrya) struktura v sadě Windows SDK.
+Další informace najdete v tématu struktura [OLEUIPASTEENTRY](/windows/win32/api/oledlg/ns-oledlg-oleuipasteentryw) v Windows SDK.
 
-##  <a name="getselectiontype"></a>  COlePasteSpecialDialog::GetSelectionType
+##  <a name="getselectiontype"></a>COlePasteSpecialDialog::GetSelectionType
 
-Určuje typ výběru uživatele.
+Určuje typ výběru, který uživatel provedl.
 
 ```
 UINT GetSelectionType() const;
@@ -342,11 +342,11 @@ UINT GetSelectionType() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vrátí typ výběru.
+Vrátí typ provedeného výběru.
 
 ### <a name="remarks"></a>Poznámky
 
-Typ vrácené hodnoty jsou určeny `Selection` typ výčtu deklarovaný v `COlePasteSpecialDialog` třídy.
+Hodnoty návratového typu jsou určeny `Selection` výčtovým typem deklarovaným `COlePasteSpecialDialog` ve třídě.
 
 ```
 enum Selection {
@@ -357,19 +357,19 @@ enum Selection {
     };
 ```
 
-Postupujte podle stručný desccriptions z těchto hodnot:
+Stručný desccriptions těchto hodnot je následující:
 
-- `COlePasteSpecialDialog::pasteLink` Došlo k zaškrtnutí přepínač Vložit odkaz a zvolený formát je standardní formát OLE.
+- `COlePasteSpecialDialog::pasteLink`Přepínač vložení odkazu byl zkontrolován a vybraný formát byl standardní formát OLE.
 
-- `COlePasteSpecialDialog::pasteNormal` Došlo k zaškrtnutí přepínač vložení a zvolený formát je standardní formát OLE.
+- `COlePasteSpecialDialog::pasteNormal`Přepínač vložení byl zkontrolován a vybraný formát byl standardní formát OLE.
 
-- `COlePasteSpecialDialog::pasteOther` Vybraný formát není standardní formát OLE.
+- `COlePasteSpecialDialog::pasteOther`Vybraný formát není standardní formát OLE.
 
-- `COlePasteSpecialDialog::pasteStatic` Zvolený formát je metasouboru.
+- `COlePasteSpecialDialog::pasteStatic`Zvolený formát byl metasoubor.
 
 ##  <a name="m_ps"></a>  COlePasteSpecialDialog::m_ps
 
-Struktura typu OLEUIPASTESPECIAL používat k ovládání chování dialogové okno zvláštní vložení.
+Struktura typu OLEUIPASTESPECIAL slouží k řízení chování dialogového okna Vložit speciální.
 
 ```
 OLEUIPASTESPECIAL m_ps;
@@ -377,13 +377,13 @@ OLEUIPASTESPECIAL m_ps;
 
 ### <a name="remarks"></a>Poznámky
 
-Přímo nebo prostřednictvím členské funkce, lze upravit členy této struktury.
+Členy této struktury lze upravovat přímo nebo prostřednictvím členských funkcí.
 
-Další informace najdete v tématu [OLEUIPASTESPECIAL](/windows/desktop/api/oledlg/ns-oledlg-tagoleuipastespeciala) struktura v sadě Windows SDK.
+Další informace najdete v tématu struktura [OleUIPasteSpecial](/windows/win32/api/oledlg/ns-oledlg-oleuipastespecialw) v Windows SDK.
 
 ## <a name="see-also"></a>Viz také:
 
-[Ukázky knihovny MFC OCLIENT](../../overview/visual-cpp-samples.md)<br/>
+[OCLIENT Sample MFC](../../overview/visual-cpp-samples.md)<br/>
 [COleDialog – třída](../../mfc/reference/coledialog-class.md)<br/>
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>
 [COleDialog – třída](../../mfc/reference/coledialog-class.md)

@@ -1,5 +1,5 @@
 ---
-title: Iquickactivateimpl – třída
+title: IQuickActivateImpl – třída
 ms.date: 11/04/2016
 f1_keywords:
 - IQuickActivateImpl
@@ -13,19 +13,19 @@ helpviewer_keywords:
 - IQuickActivateImpl class
 - IQuickActivate ATL implementation
 ms.assetid: aa80c056-1041-494e-b21d-2acca7dc27ea
-ms.openlocfilehash: 2a2b11746249b6ee4f6ddd578717aacc374d53bc
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2169686ebbf756c5caf9232f5031532c62ac8265
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62198145"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69495511"
 ---
-# <a name="iquickactivateimpl-class"></a>Iquickactivateimpl – třída
+# <a name="iquickactivateimpl-class"></a>IQuickActivateImpl – třída
 
-Tato třída kombinuje Inicializace řízení kontejnerů do jednoho volání.
+Tato třída kombinuje inicializaci ovládacího prvku Containers do jednoho volání.
 
 > [!IMPORTANT]
->  Tato třída a jejích členů nelze použít v aplikacích, které jsou spouštěny v modulu Windows Runtime.
+>  Tato třída a její členové nelze použít v aplikacích, které jsou spouštěny v prostředí Windows Runtime.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -37,23 +37,23 @@ class ATL_NO_VTABLE IQuickActivateImpl : public IQuickActivate
 #### <a name="parameters"></a>Parametry
 
 *T*<br/>
-Vaše třída odvozena od `IQuickActivateImpl`.
+Vaše třída, která je `IQuickActivateImpl`odvozena z.
 
 ## <a name="members"></a>Členové
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
-|[IQuickActivateImpl::GetContentExtent](#getcontentextent)|Načte aktuální velikost zobrazení pro ovládací prvek spuštěné.|
-|[IQuickActivateImpl::QuickActivate](#quickactivate)|Provádí rychlé inicializace načítání ovládacích prvků.|
-|[IQuickActivateImpl::SetContentExtent](#setcontentextent)|Informuje o kontrolu nad kolik prostor pro zobrazení je přiřazeno kontejneru.|
+|[IQuickActivateImpl::GetContentExtent](#getcontentextent)|Načte aktuální velikost zobrazení běžícího ovládacího prvku.|
+|[IQuickActivateImpl::QuickActivate](#quickactivate)|Provádí rychlou inicializaci ovládacích prvků, které jsou načítány.|
+|[IQuickActivateImpl::SetContentExtent](#setcontentextent)|Informuje ovládací prvek o velikosti zobrazovaného prostoru, ke kterému je kontejner přiřazen.|
 
 ## <a name="remarks"></a>Poznámky
 
-[IQuickActivate](/windows/desktop/api/ocidl/nn-ocidl-iquickactivate) rozhraní pomáhá kontejnery vyhnuli prodlevám při načítání ovládacích prvků kombinací inicializace v jednom volání. `QuickActivate` Metoda umožňuje předat ukazatel na kontejneru [QACONTAINER](/windows/desktop/api/ocidl/ns-ocidl-tagqacontainer) potřebuje struktura, která obsahuje odkazy na všechna rozhraní ovládacího prvku. Při návratu, ovládací prvek předává zpět ukazatel [QACONTROL](/windows/desktop/api/ocidl/ns-ocidl-tagqacontrol) struktura, která obsahuje odkazy na vlastní rozhraní, které jsou používány obalu. Třída `IQuickActivateImpl` poskytuje výchozí implementaci třídy `IQuickActivate` a implementuje `IUnknown` posíláním informací o k výpisu paměti zařízení v ladění sestavení.
+Rozhraní [IQuickActivate](/windows/win32/api/ocidl/nn-ocidl-iquickactivate) pomáhá kontejnerům zabránit prodlevám při načítání ovládacích prvků kombinací inicializace v jednom volání. Metoda umožňuje kontejneru předat ukazatel na strukturu QACONTAINER, která obsahuje ukazatele na všechna rozhraní, které ovládací prvek potřebuje. [](/windows/win32/api/ocidl/ns-ocidl-qacontainer) `QuickActivate` Při návratu ovládací prvek předává zpět ukazatel do struktury [QACONTROL](/windows/win32/api/ocidl/ns-ocidl-qacontrol) , která obsahuje ukazatele na vlastní rozhraní, která jsou používána kontejnerem. Třída `IQuickActivateImpl` poskytuje výchozí `IQuickActivate` implementaci a implementuje `IUnknown` odesláním informací do zařízení výpisu paměti v sestaveních pro ladění.
 
-**Související články** [ATL – tutoriál](../../atl/active-template-library-atl-tutorial.md), [vytvoření projektu ATL](../../atl/reference/creating-an-atl-project.md)
+**Související články** [Kurz ATL](../../atl/active-template-library-atl-tutorial.md), [Vytvoření projektu ATL](../../atl/reference/creating-an-atl-project.md)
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
@@ -63,11 +63,11 @@ Vaše třída odvozena od `IQuickActivateImpl`.
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** atlctl.h
+**Záhlaví:** atlctl. h
 
-##  <a name="getcontentextent"></a>  IQuickActivateImpl::GetContentExtent
+##  <a name="getcontentextent"></a>IQuickActivateImpl::GetContentExtent
 
-Načte aktuální velikost zobrazení pro ovládací prvek spuštěné.
+Načte aktuální velikost zobrazení běžícího ovládacího prvku.
 
 ```
 STDMETHOD(GetContentExtent)(LPSIZEL pSize);
@@ -75,13 +75,13 @@ STDMETHOD(GetContentExtent)(LPSIZEL pSize);
 
 ### <a name="remarks"></a>Poznámky
 
-Velikost je pro úplné vykreslování ovládacího prvku a je zadán v jednotkách HIMETRIC.
+Velikost je určena pro úplné vykreslování ovládacího prvku a je zadáno v HIMETRIC jednotkách.
 
-Zobrazit [IQuickActivate::GetContentExtent](/windows/desktop/api/ocidl/nf-ocidl-iquickactivate-getcontentextent) ve Windows SDK.
+Viz [IQuickActivate:: GetContentExtent](/windows/win32/api/ocidl/nf-ocidl-iquickactivate-getcontentextent) v Windows SDK.
 
-##  <a name="quickactivate"></a>  IQuickActivateImpl::QuickActivate
+##  <a name="quickactivate"></a>IQuickActivateImpl::QuickActivate
 
-Provádí rychlé inicializace načítání ovládacích prvků.
+Provádí rychlou inicializaci ovládacích prvků, které jsou načítány.
 
 ```
 STDMETHOD(QuickActivate)(
@@ -91,13 +91,13 @@ STDMETHOD(QuickActivate)(
 
 ### <a name="remarks"></a>Poznámky
 
-Struktura obsahuje odkazy na rozhraní, které jsou potřeba pro ovládací prvek a hodnoty vlastnosti některé prostředí. Po návratu, ovládací prvek předává ukazatel [QACONTROL](/windows/desktop/api/ocidl/ns-ocidl-tagqacontrol) strukturu, která obsahuje odkazy na vlastní rozhraní, které vyžaduje kontejneru a doplňkové informace o stavu.
+Struktura obsahuje ukazatele na rozhraní, které vyžaduje ovládací prvek a hodnoty některých vlastností okolí. Po návratu ovládací prvek předává ukazatel na strukturu [QACONTROL](/windows/win32/api/ocidl/ns-ocidl-qacontrol) , která obsahuje ukazatele na vlastní rozhraní, které kontejner vyžaduje, a další informace o stavu.
 
-Zobrazit [IQuickActivate::QuickActivate](/windows/desktop/api/ocidl/nf-ocidl-iquickactivate-quickactivate) ve Windows SDK.
+Viz [IQuickActivate:: QuickActivate](/windows/win32/api/ocidl/nf-ocidl-iquickactivate-quickactivate) v Windows SDK.
 
-##  <a name="setcontentextent"></a>  IQuickActivateImpl::SetContentExtent
+##  <a name="setcontentextent"></a>IQuickActivateImpl::SetContentExtent
 
-Informuje o kontrolu nad kolik prostor pro zobrazení je přiřazeno kontejneru.
+Informuje ovládací prvek o velikosti zobrazovaného prostoru, ke kterému je kontejner přiřazen.
 
 ```
 STDMETHOD(SetContentExtent)(LPSIZEL pSize);
@@ -105,11 +105,11 @@ STDMETHOD(SetContentExtent)(LPSIZEL pSize);
 
 ### <a name="remarks"></a>Poznámky
 
-Velikost se zadává v jednotkách HIMETRIC.
+Velikost je určena v jednotkách HIMETRIC.
 
-Zobrazit [IQuickActivate::SetContentExtent](/windows/desktop/api/ocidl/nf-ocidl-iquickactivate-setcontentextent) ve Windows SDK.
+Viz [IQuickActivate:: SetContentExtent](/windows/win32/api/ocidl/nf-ocidl-iquickactivate-setcontentextent) v Windows SDK.
 
 ## <a name="see-also"></a>Viz také:
 
 [CComControl – třída](../../atl/reference/ccomcontrol-class.md)<br/>
-[Přehled tříd](../../atl/atl-class-overview.md)
+[Přehled třídy](../../atl/atl-class-overview.md)

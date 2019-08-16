@@ -30,97 +30,97 @@ helpviewer_keywords:
 - cursors [C++], importing and exporting
 - images [C++], exporting
 ms.assetid: 65f523e8-017f-4fc6-82d1-083c56d9131f
-ms.openlocfilehash: 28678b560387fa6b111d60a7487ed44f9244a821
-ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.openlocfilehash: 56cff04d64f2f0a64fc216fbd418954b4c11b0f2
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65449058"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69514742"
 ---
 # <a name="how-to-manage-resources-c"></a>Postupy: Správa prostředků (C++)
 
-## <a name="copy-and-edit-resources"></a>Kopírovat a upravit prostředky
+## <a name="copy-and-edit-resources"></a>Kopírování a úpravy prostředků
 
-Prostředky můžete zkopírovat z jednoho souboru do druhého bez jejich změny nebo změna jazyka nebo podmínky prostředku během kopírování.
+Můžete kopírovat prostředky z jednoho souboru do druhého, aniž byste je změnili, nebo změnit jazyk nebo podmínku prostředku při jeho kopírování.
 
-Prostředky můžete snadno zkopírovat z existující prostředek nebo spustitelného souboru k aktuálnímu souboru prostředků. Se zkopírovat prostředky, které otevřete oba soubory, které obsahují prostředky ve stejnou dobu a přetáhněte položky z jednoho souboru do jiného nebo kopírování a vkládání mezi dva soubory. Tato metoda se dá použít pro soubory skriptů (.rc) prostředků a soubory prostředků šablon (.rct) a jako spustitelné soubory (.exe).
+Do aktuálního souboru prostředků můžete snadno kopírovat prostředky z existujícího prostředku nebo spustitelného souboru. Pokud chcete kopírovat prostředky, otevřete oba soubory, které obsahují prostředky, a přetáhněte položky z jednoho souboru na jiný nebo je zkopírujte a vložte mezi tyto dva soubory. Tato metoda se používá pro soubory skriptu prostředků (. RC) a soubory šablony prostředků (. RCT) a jako spustitelné soubory (. exe).
 
 > [!NOTE]
-> Visual C++ obsahuje ukázkové soubory prostředků, které můžete použít ve své aplikaci. Další informace najdete v tématu [Klipart: Běžným prostředkům](https://github.com/Microsoft/VCSamples).
+> Vizuál C++ obsahuje ukázkové soubory prostředků, které můžete použít ve své vlastní aplikaci. Další informace najdete v tématu [Klipart: Běžné prostředky](https://github.com/Microsoft/VCSamples).
 
-Nelze přetáhnout a vyřadit, kopírování, vyjmutí nebo vložte mezi soubory prostředků v projektu (**zobrazení prostředků**) a otevírání souborů .rc samostatné v dokumentu systému windows. Můžete to udělat v předchozích verzích produktu. Pouze pomocí metody a přetažení mezi soubory .rc, které jsou otevřeny mimo projekt.
+Nemůžete přetahovat, kopírovat, vyjmout ani vkládat soubory prostředků v projektu (**prostředky**) a samostatné soubory. RC otevřené v dokumentu okna. To můžete provést v předchozích verzích produktu. Použijte pouze metodu přetažení mezi soubory. RC, které jsou otevřeny mimo projekt.
 
-### <a name="to-copy-resources"></a>Chcete-li kopírovat zdroje
+### <a name="to-copy-resources"></a>Kopírování prostředků
 
-1. Otevřete oba samostatné soubory prostředků. (Viz [použijte soubory skriptu prostředků](how-to-create-a-resource-script-file.md#use-resource-script-files)). Například otevřete *Source1.rc* a *Source2.rc*.
+1. Otevřete oba soubory prostředků samostatně. (Viz [použití souborů skriptu prostředků](how-to-create-a-resource-script-file.md#use-resource-script-files)). Otevřete například *source1. RC* a *SOURCE2. RC*.
 
-1. V prvním .rc souboru, buď:
+1. Uvnitř prvního souboru. RC buď:
 
-   - Pomocí této metody přetažení myší
+   - Použití metody přetažení
 
-      1. Vyberte prostředek, který chcete kopírovat. Například v *Source1.rc*vyberte **IDD_DIALOG1**.
+      1. Vyberte prostředek, který chcete zkopírovat. Například v *source1. RC*vyberte **IDD_DIALOG1**.
 
-      1. Podržte stisknutou klávesu **Ctrl** klíče a přetáhněte prostředek do druhého souboru .rc. Například, přetáhněte **IDD_DIALOG1** z *Source1.rc* k *Source2.rc*.
+      1. Podržte stisknutou klávesu **CTRL** a přetáhněte prostředek k druhému souboru. rc. Přetáhněte například **IDD_DIALOG1** z *source1. RC* do *SOURCE2. RC*.
 
          > [!TIP]
-         > Přetažení prostředku bez podržení **Ctrl** klíč přesunu prostředku místo jeho kopírování.
+         > Při přetahování prostředku bez podržení klávesy **CTRL** se místo kopírování bude prostředek přesouvat.
 
-   - Použít zkopírování a vložení – metoda
+   - Použití metody kopírování a vložení
 
-      1. Klikněte pravým tlačítkem na zdroj vám ke kopírování (například *Source1.rc*) a zvolte **kopírování**.
+      1. Klikněte pravým tlačítkem na prostředek, který chcete zkopírovat (například *source1. RC*) a vyberte **Kopírovat**.
 
-      1. Klikněte pravým tlačítkem na soubor prostředků, do které chcete vložit prostředku (například *Source2.rc*) a zvolte **vložte**.
+      1. Klikněte pravým tlačítkem na soubor prostředků, do kterého chcete prostředek vložit (například *SOURCE2. RC*), a vyberte **Vložit**.
 
 > [!NOTE]
-> Aby nedocházelo ke konfliktům s názvy symbolů nebo hodnoty v existující soubor, Visual C++ změnit hodnotu symbolu přenesené prostředků nebo název symbolu a hodnota při kopírování do nového souboru.
+> Aby nedocházelo ke konfliktům s názvy symbolů nebo hodnotami v existujícím C++ souboru, může vizuál při kopírování do nového souboru změnit hodnotu symbolu převedeného prostředku nebo název a hodnotu symbolu.
 
-Při kopírování v prostředku, můžete změnit jeho vlastnost jazyka vlastnost podmínka nebo obojí.
+Při kopírování v prostředku můžete změnit jeho vlastnost jazyka nebo podmínky nebo obojí.
 
-- Jazyk prostředku, který určuje jazyk, který používá [FindResource](/windows/desktop/api/winbase/nf-winbase-findresourcea) vám pomůže identifikovat prostředek, pro který potřebujete. Prostředky mohou mít rozdíly pro jednotlivé jazyky, které se vztahují na text, například akcelerátory, které může fungovat jenom na použití japonské klávesnice nebo rastrový obrázek, který může být pouze vhodné pro čínštinu lokalizované sestavení.
+- Jazyk prostředku určuje jazyk používaný službou [FindResource](/windows/win32/api/winbase/nf-winbase-findresourcew) , který vám usnadní identifikaci prostředku, pro který hledáte. Prostředky můžou mít rozdíly pro každý jazyk, který nesouvisí s textem, například akcelerátory, které můžou fungovat jenom na japonské klávesnici nebo na rastrovém obrázku, který by měl být vhodný jenom pro Čínskě lokalizovaná sestavení.
 
-- Podmínky prostředku je definovaný symbol, který určuje podmínku, pod kterým se má použít tento konkrétní kopie prostředku.
+- Podmínka prostředku je definovaný symbol, který určuje podmínku, za kterou se má použít tato konkrétní kopie prostředku.
 
-Jazyk a podmínky prostředku jsou uvedeny v závorkách za názvem prostředku v **pracovní prostor** okna. V tomto poli s názvem prostředku `IDD_AboutBox` používá `Finnish` jako svůj jazyk a jeho stav je `XX33`:
+Jazyk a podmínka prostředku jsou uvedeny v závorkách za názvem prostředku v okně **pracovního prostoru** . Zde je prostředek s `IDD_AboutBox` názvem použit `Finnish` jako jeho jazyk a jeho stav je `XX33`:
 
 ```cpp
 IDD_AboutBox (Finnish - XX33)
 ```
 
-### <a name="to-copy-an-existing-resource-and-change-its-language-or-condition"></a>Kopírovat existující prostředek a změnit jeho jazyka nebo podmínky
+### <a name="to-copy-an-existing-resource-and-change-its-language-or-condition"></a>Zkopírování existujícího prostředku a změna jeho jazyka nebo podmínky
 
-V *.rc* souboru nebo [zobrazení prostředků](how-to-create-a-resource-script-file.md#create-resources) okna, klikněte pravým tlačítkem na požadovaný prostředek zkopírovat a zvolte **vložit kopii**. Potom nastavte následující:
+V souboru *. RC* nebo v okně [prostředky](how-to-create-a-resource-script-file.md#create-resources) klikněte pravým tlačítkem na prostředek, který chcete zkopírovat a vyberte možnost **Vložit kopii**. Pak nastavte následující:
 
-- Pro **jazyk** seznamu, vyberte jazyk.
+- V rozevíracím seznamu **jazyk** vyberte jazyk.
 
-- V **podmínku** zadejte podmínku.
+- Do pole **Podmínka** zadejte podmínku.
 
-### <a name="to-edit-resources"></a>Chcete-li upravit prostředky
+### <a name="to-edit-resources"></a>Úprava prostředků
 
-Spravované prostředky (RESX) soubory jsou soubory formátu XML. Když přidáte spravovaný soubor prostředků do projektu z **přidat novou položku** dialogovém okně **editoru spravovaných prostředků** otevře ve výchozím nastavení.
+Spravované soubory prostředků (. resx) jsou soubory XML. Když do projektu přidáte soubor spravovaného prostředku z dialogového okna **Přidat novou položku** , otevře se ve výchozím nastavení **Editor spravovaných prostředků** .
 
-## <a name="import-and-export-resources"></a>Import a Export prostředků
+## <a name="import-and-export-resources"></a>Import a export prostředků
 
-Můžete importovat grafických prostředků (rastrové obrázky, ikony, kurzory a panely nástrojů), soubory HTML a vlastní prostředky pro použití v jazyce Visual C++. Stejné typy souborů, můžete exportovat ze sady Visual Studio C++ projektu do samostatných souborů, které lze použít mimo vývojové prostředí.
-
-> [!NOTE]
-> Typy prostředků jako akcelerátory, dialogová okna a tabulky řetězců nelze importovat nebo exportovat, protože nejsou typy samostatný soubor.
-
-### <a name="to-import-a-resource-into-the-resource-script-file"></a>Pro import prostředku do souboru skriptu prostředků
-
-1. V [zobrazení prostředků](how-to-create-a-resource-script-file.md#create-resources) klikněte pravým tlačítkem na uzel skriptů (.rc) soubor prostředků, ke kterému chcete přidat prostředek a vyberte **Import**.
-
-1. Vyhledejte a vyberte název souboru rastrového obrázku (BMP), ikony (ICO), kurzoru (.cur), soubor ve formátu html (.htm) nebo jiný soubor k importu.
-
-1. Vyberte **OK** bude příslušný materiál přidán do souboru skriptu prostředků.
+Můžete importovat grafické prostředky (rastrové obrázky, ikony, kurzory a panely nástrojů), soubory HTML a vlastní prostředky pro použití v jazyce Visual C++. Můžete exportovat stejné typy souborů z projektu sady Visual Studio C++ a oddělit soubory, které lze použít mimo vývojové prostředí.
 
 > [!NOTE]
-> Proces importu funguje stejně bez ohledu na to, který prostředek zadejte, které jste vybrali. Importovaných zdrojů je automaticky přidán do správného uzlu daného typu prostředků.
+> Typy prostředků, jako jsou akcelerátory, dialogová okna a tabulky řetězců, se nedají importovat ani exportovat, protože nejsou samostatné typy souborů.
 
-### <a name="to-export-a-resource-for-use-outside-of-visual-c"></a>Chcete-li exportovat prostředek pro použití mimo aplikaci Visual C++
+### <a name="to-import-a-resource-into-the-resource-script-file"></a>Import prostředku do souboru skriptu prostředků
 
-1. V [zobrazení prostředků](how-to-create-a-resource-script-file.md#create-resources), klikněte pravým tlačítkem na požadovaný prostředek k exportu a vyberte **exportovat**. Můžete přijmout aktuální název souboru nebo zadejte nový.
+1. V [prostředky](how-to-create-a-resource-script-file.md#create-resources) klikněte pravým tlačítkem myši na uzel souboru skriptu prostředků (. RC), do kterého chcete přidat prostředek, a vyberte **importovat**.
 
-1. Přejděte do složky, kam chcete uložit soubor a vyberte **exportovat**.
+1. Vyhledejte a vyberte název souboru rastrového obrázku (. bmp), ikony (. ico), kurzor (. měna), soubor HTML (. htm) nebo jiný soubor k importu.
+
+1. Vyberte **OK** a přidejte prostředek do souboru skriptu prostředků.
+
+> [!NOTE]
+> Proces importu funguje stejně bez ohledu na to, který typ prostředku jste vybrali. Importovaný prostředek se automaticky přidá do správného uzlu daného typu prostředku.
+
+### <a name="to-export-a-resource-for-use-outside-of-visual-c"></a>Export prostředku pro použití mimo vizuálC++
+
+1. V [prostředky](how-to-create-a-resource-script-file.md#create-resources)klikněte pravým tlačítkem na prostředek, který chcete exportovat, a vyberte **exportovat**. Můžete přijmout aktuální název souboru nebo zadat nový.
+
+1. Přejděte do složky, kam chcete soubor uložit, a vyberte **exportovat**.
 
 ## <a name="requirements"></a>Požadavky
 

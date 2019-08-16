@@ -1,21 +1,21 @@
 ---
-title: length_is – (C++ atributů COM)
+title: length_is (C++ atribut com)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.length_is
 helpviewer_keywords:
 - length_is attribute
 ms.assetid: 1d99b883-84bb-4b1e-b098-eb780fc94f40
-ms.openlocfilehash: 1de168606b57c801bc3dc1fb9aee76eb6f3d54c8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4f4bfe233e3228c50aee734de4ad979c38a55fda
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62409301"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69514522"
 ---
-# <a name="lengthis"></a>length_is
+# <a name="length_is"></a>length_is
 
-Určuje počet elementů pole předávají.
+Určuje počet prvků pole, které mají být přeneseny.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -25,29 +25,29 @@ Určuje počet elementů pole předávají.
 
 ### <a name="parameters"></a>Parametry
 
-*Výraz*<br/>
-Jeden nebo více výrazů jazyka C. Prázdný argument sloty jsou povoleny.
+*vyjádření*<br/>
+Jeden nebo více výrazů jazyka C. Prázdné sloty argumentů jsou povoleny.
 
 ## <a name="remarks"></a>Poznámky
 
-**Length_is –** C++ atribut má stejné funkce jako [length_is –](/windows/desktop/Midl/length-is) atribut MIDL.
+Atribut **length_is** C++ má stejné funkce jako atribut [length_is](/windows/win32/Midl/length-is) MIDL.
 
 ## <a name="example"></a>Příklad
 
-Zobrazit [first_is –](first-is.md) příklad toho, jak zadat část pole.
+Příklad určení oddílu pole naleznete v tématu [first_is](first-is.md) .
 
 ## <a name="requirements"></a>Požadavky
 
-### <a name="attribute-context"></a>Atribut kontextu
+### <a name="attribute-context"></a>Kontext atributu
 
 |||
 |-|-|
-|**Platí pro**|Pole v **struktura** nebo **sjednocení**, rozhraní parametr, rozhraní – metoda|
-|**Opakovatelné**|Ne|
-|**Vyžadované atributy**|Žádné|
+|**Platí pro**|Pole v **struktuře** nebo **sjednocení**, parametr rozhraní, metoda rozhraní|
+|**REPEATABLE**|Ne|
+|**Požadované atributy**|Žádné|
 |**Neplatné atributy**|Žádné|
 
-Další informace najdete v tématu [kontexty atributů](cpp-attributes-com-net.md#contexts).
+Další informace naleznete v tématu [kontexty atributů](cpp-attributes-com-net.md#contexts).
 
 ## <a name="see-also"></a>Viz také:
 

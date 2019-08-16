@@ -1,17 +1,17 @@
 ---
-title: requestedit – (atribut C++ COM)
+title: requestedit (C++ atribut com)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.requestedit
 helpviewer_keywords:
 - requestedit attribute
 ms.assetid: b3c24790-3c4a-4646-8722-03d7b51172ee
-ms.openlocfilehash: 30b0c5ec807865280c8e538ea701c3d1a5c4ef9c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e90506619d4f13d4e5627f9c06b997d7034b5f49
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62407377"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69514089"
 ---
 # <a name="requestedit"></a>requestedit
 
@@ -25,24 +25,24 @@ Označuje, že vlastnost podporuje `OnRequestEdit` oznámení.
 
 ## <a name="remarks"></a>Poznámky
 
-**Requestedit –** C++ atribut má stejné funkce jako [requestedit –](/windows/desktop/Midl/requestedit) atribut MIDL.
+Atribut **requestedit** C++ má stejné funkce jako atribut [requestedit](/windows/win32/Midl/requestedit) MIDL.
 
 ## <a name="example"></a>Příklad
 
-Podívejte se na příklad pro [umožňujících vazbu](bindable.md) ukázkový používání **requestedit –**.
+Podívejte se na příklad pro [vytvoření vazby](bindable.md) pro ukázkové použití **requestedit**.
 
 ## <a name="requirements"></a>Požadavky
 
-### <a name="attribute-context"></a>Atribut kontextu
+### <a name="attribute-context"></a>Kontext atributu
 
 |||
 |-|-|
 |**Platí pro**|Metoda rozhraní|
-|**Opakovatelné**|Ne|
-|**Vyžadované atributy**|Žádný|
-|**Neplatné atributy**|Žádný|
+|**REPEATABLE**|Ne|
+|**Požadované atributy**|Žádné|
+|**Neplatné atributy**|Žádné|
 
-Další informace o kontexty atributů najdete v tématu [kontexty atributů](cpp-attributes-com-net.md#contexts).
+Další informace o kontextech atributů naleznete v tématu kontexty [atributů](cpp-attributes-com-net.md#contexts).
 
 ## <a name="see-also"></a>Viz také:
 

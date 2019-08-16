@@ -21,16 +21,16 @@ helpviewer_keywords:
 - Microsoft::WRL::Wrappers::SRWLock::TryLockExclusive method
 - Microsoft::WRL::Wrappers::SRWLock::TryLockShared method
 ms.assetid: 4fa250e3-5f29-4b06-ac24-61b6c04ade93
-ms.openlocfilehash: 6d4a504d9465c858af59a88cf0ef611bf88c3fde
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 079f1abe652d8c1610a084f5e1158cc5798d61c4
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62403078"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69498294"
 ---
 # <a name="srwlock-class"></a>Třída SRWLock
 
-Představuje zámek tenký čtení/zápis.
+Představuje zámek pro čtení/zápis na tenkém zařízení.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -40,38 +40,38 @@ class SRWLock;
 
 ## <a name="remarks"></a>Poznámky
 
-Zámek tenký čtení/zápis se používá k synchronizaci přístupu napříč vlákny na objekt nebo prostředků. Další informace najdete v tématu [funkce synchronizace](/windows/desktop/Sync/synchronization-functions).
+Zámek na tenké čtečce nebo zapisovači se používá k synchronizaci přístupu mezi vlákny k objektu nebo prostředku. Další informace najdete v tématu [synchronizační funkce](/windows/win32/Sync/synchronization-functions).
 
 ## <a name="members"></a>Členové
 
-### <a name="public-typedefs"></a>Veřejné definice TypeDef
+### <a name="public-typedefs"></a>Veřejné definice typedef
 
-Název                | Popis
+Name                | Popis
 ------------------- | -------------------------------------------------------------------
-`SyncLockExclusive` | Synonymum pro `SRWLock` objekt, který je požadován ve výhradním režimu.
-`SyncLockShared`    | Synonymum pro `SRWLock` objekt, který je požadován ve sdíleném režimu.
+`SyncLockExclusive` | Synonymum pro `SRWLock` objekt, který je získán ve výhradním režimu.
+`SyncLockShared`    | Synonymum pro `SRWLock` objekt, který je získán ve sdíleném režimu.
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-Název                                     | Popis
+Name                                     | Popis
 ---------------------------------------- | --------------------------------------------------
 [SRWLock::SRWLock](#srwlock-constructor) | Inicializuje novou instanci třídy `SRWLock` třídy.
-[SRWLock::~SRWLock](#tilde-srwlock)      | Uvolní instanci `SRWLock` třídy.
+[SRWLock::~SRWLock](#tilde-srwlock)      | Zruší inicializaci instance `SRWLock` třídy.
 
 ### <a name="public-methods"></a>Veřejné metody
 
-Název                                           | Popis
+Name                                           | Popis
 ---------------------------------------------- | -------------------------------------------------------------------------------------------------------
-[SRWLock::LockExclusive](#lockexclusive)       | Získá `SRWLock` objektu ve výhradním režimu.
-[SRWLock::LockShared](#lockshared)             | Získá `SRWLock` objektu ve sdíleném režimu.
-[SRWLock::TryLockExclusive](#trylockexclusive) | Pokusí se získat `SRWLock` objektu ve výhradním režimu pro aktuální nebo zadané `SRWLock` objektu.
-[SRWLock::TryLockShared](#trylockshared)       | Pokusí se získat `SRWLock` objektu ve sdíleném režimu pro aktuální nebo zadané `SRWLock` objektu.
+[SRWLock::LockExclusive](#lockexclusive)       | `SRWLock` Získá objekt ve výhradním režimu.
+[SRWLock::LockShared](#lockshared)             | `SRWLock` Získá objekt ve sdíleném režimu.
+[SRWLock:: Trylockexclusive –](#trylockexclusive) | Pokusí se získat `SRWLock` objekt ve výhradním režimu pro aktuální nebo zadaný `SRWLock` objekt.
+[SRWLock::TryLockShared](#trylockshared)       | Pokusí se získat `SRWLock` objekt ve sdíleném režimu pro aktuální nebo zadaný `SRWLock` objekt.
 
 ### <a name="protected-data-member"></a>Chráněný datový člen
 
-Název                                      | Popis
+Name                                      | Popis
 ----------------------------------------- | -----------------------------------------------------------------------
-[SRWLock::SRWLock_](#srwlock-data-member) | Obsahuje základní proměnnou zámek pro aktuální `SRWLock` objektu.
+[SRWLock::SRWLock_](#srwlock-data-member) | Obsahuje základní zamykací proměnnou pro aktuální `SRWLock` objekt.
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
@@ -79,13 +79,13 @@ Název                                      | Popis
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** corewrappers.h
+**Záhlaví:** corewrappers. h
 
-**Namespace:** Microsoft::WRL::Wrappers
+**Hosting** Microsoft::WRL::Wrappers
 
 ## <a name="tilde-srwlock"></a>SRWLock::~SRWLock
 
-Uvolní instanci `SRWLock` třídy.
+Zruší inicializaci instance `SRWLock` třídy.
 
 ```cpp
 ~SRWLock();
@@ -93,7 +93,7 @@ Uvolní instanci `SRWLock` třídy.
 
 ## <a name="lockexclusive"></a>SRWLock::LockExclusive
 
-Získá `SRWLock` objektu ve výhradním režimu.
+`SRWLock` Získá objekt ve výhradním režimu.
 
 ```cpp
 SyncLockExclusive LockExclusive();
@@ -106,15 +106,15 @@ static SyncLockExclusive LockExclusive(
 ### <a name="parameters"></a>Parametry
 
 *lock*<br/>
-Ukazatel `SRWLock` objektu.
+Ukazatel na `SRWLock` objekt.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-`SRWLock` Objektu ve výhradním režimu.
+`SRWLock` Objekt ve výhradním režimu.
 
 ## <a name="lockshared"></a>SRWLock::LockShared
 
-Získá `SRWLock` objektu ve sdíleném režimu.
+`SRWLock` Získá objekt ve sdíleném režimu.
 
 ```cpp
 SyncLockShared LockShared();
@@ -127,13 +127,13 @@ static SyncLockShared LockShared(
 ### <a name="parameters"></a>Parametry
 
 *lock*<br/>
-Ukazatel `SRWLock` objektu.
+Ukazatel na `SRWLock` objekt.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-`SRWLock` Objektu ve sdíleném režimu.
+`SRWLock` Objekt ve sdíleném režimu.
 
-## <a name="srwlock-constructor"></a>SRWLock::SRWLock
+## <a name="srwlock-constructor"></a>SRWLock:: SRWLock
 
 Inicializuje novou instanci třídy `SRWLock` třídy.
 
@@ -141,17 +141,17 @@ Inicializuje novou instanci třídy `SRWLock` třídy.
 SRWLock();
 ```
 
-## <a name="srwlock-data-member"></a>SRWLock::SRWLock_
+## <a name="srwlock-data-member"></a>SRWLock:: SRWLock_
 
-Obsahuje základní proměnnou zámek pro aktuální `SRWLock` objektu.
+Obsahuje základní zamykací proměnnou pro aktuální `SRWLock` objekt.
 
 ```cpp
 SRWLOCK SRWLock_;
 ```
 
-## <a name="trylockexclusive"></a>SRWLock::TryLockExclusive
+## <a name="trylockexclusive"></a>SRWLock:: Trylockexclusive –
 
-Pokusí se získat `SRWLock` objektu ve výhradním režimu pro aktuální nebo zadané `SRWLock` objektu. Pokud je volání úspěšné, volající vlákno převezme vlastnictví zámku.
+Pokusí se získat `SRWLock` objekt ve výhradním režimu pro aktuální nebo zadaný `SRWLock` objekt. Pokud je volání úspěšné, volající vlákno převezme vlastnictví zámku.
 
 ```cpp
 SyncLockExclusive TryLockExclusive();
@@ -164,15 +164,15 @@ static SyncLockExclusive TryLockExclusive(
 ### <a name="parameters"></a>Parametry
 
 *lock*<br/>
-Ukazatel `SRWLock` objektu.
+Ukazatel na `SRWLock` objekt.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-V případě úspěchu, `SRWLock` objektu ve výhradním režimu a volající vlákno převezme vlastnictví zámku. V opačném případě `SRWLock` objekt, jehož stav je neplatný.
+V případě úspěchu `SRWLock` objekt ve výhradním režimu a volající vlákno převezme vlastnictví zámku. V opačném `SRWLock` případě objekt, jehož stav je neplatný.
 
-## <a name="trylockshared"></a>SRWLock::TryLockShared
+## <a name="trylockshared"></a>SRWLock:: Trylockshared –
 
-Pokusí se získat `SRWLock` objektu ve sdíleném režimu pro aktuální nebo zadané `SRWLock` objektu.
+Pokusí se získat `SRWLock` objekt ve sdíleném režimu pro aktuální nebo zadaný `SRWLock` objekt.
 
 ```cpp
 WRL_NOTHROW SyncLockShared TryLockShared();
@@ -184,8 +184,8 @@ WRL_NOTHROW static SyncLockShared TryLockShared(
 ### <a name="parameters"></a>Parametry
 
 *lock*<br/>
-Ukazatel `SRWLock` objektu.
+Ukazatel na `SRWLock` objekt.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-V případě úspěchu, `SRWLock` objektu ve sdíleném režimu a volající vlákno převezme vlastnictví zámku. V opačném případě `SRWLock` objekt, jehož stav je neplatný.
+Je-li to `SRWLock` úspěšné, objekt ve sdíleném režimu a volající vlákno převezme vlastnictví zámku. V opačném `SRWLock` případě objekt, jehož stav je neplatný.

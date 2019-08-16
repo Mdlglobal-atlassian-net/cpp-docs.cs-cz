@@ -1,5 +1,5 @@
 ---
-title: Cmonikerfile – třída
+title: CMonikerFile – třída
 ms.date: 11/04/2016
 f1_keywords:
 - CMonikerFile
@@ -18,16 +18,16 @@ helpviewer_keywords:
 - CMonikerFile [MFC], Open
 - CMonikerFile [MFC], CreateBindContext
 ms.assetid: 87be5966-f4f7-4235-bce2-1fa39e9417de
-ms.openlocfilehash: 7fb0ad3eef781be1b5ca358e825c09a88c0109e3
-ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
+ms.openlocfilehash: 56283b56a1c0832d34ce23c7db47c47d9480aec8
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66503826"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69504571"
 ---
-# <a name="cmonikerfile-class"></a>Cmonikerfile – třída
+# <a name="cmonikerfile-class"></a>CMonikerFile – třída
 
-Představuje datový proud ( [IStream](/windows/desktop/api/objidl/nn-objidl-istream)) s názvem podle [imoniker –](/windows/desktop/api/objidl/nn-objidl-imoniker).
+Představuje datový proud dat ( [IStream](/windows/win32/api/objidl/nn-objidl-istream)) s názvem [IMoniker –](/windows/win32/api/objidl/nn-objidl-imoniker).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -41,38 +41,38 @@ class CMonikerFile : public COleStreamFile
 
 |Name|Popis|
 |----------|-----------------|
-|[CMonikerFile::CMonikerFile](#cmonikerfile)|Vytvoří `CMonikerFile` objektu.|
+|[CMonikerFile::CMonikerFile](#cmonikerfile)|`CMonikerFile` Vytvoří objekt.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
 |Name|Popis|
 |----------|-----------------|
-|[CMonikerFile::Close](#close)|Odpojí a uvolní datového proudu a monikeru.|
-|[CMonikerFile::Detach](#detach)|Odpojí `IMoniker` z tohoto `CMonikerFile` objektu.|
+|[CMonikerFile:: Close](#close)|Odpojí a uvolní datový proud a uvolní moniker.|
+|[CMonikerFile::Detach](#detach)|Odpojí `CMonikerFile` od tohoto objektu. `IMoniker`|
 |[CMonikerFile::GetMoniker](#getmoniker)|Vrátí aktuální moniker.|
-|[CMonikerFile::Open](#open)|Otevře se soubor určený k získání datového proudu.|
+|[CMonikerFile:: Open](#open)|Otevře zadaný soubor, který získá datový proud.|
 
 ### <a name="protected-methods"></a>Chráněné metody
 
 |Name|Popis|
 |----------|-----------------|
-|[CMonikerFile::CreateBindContext](#createbindcontext)|Získá kontext vazby nebo vytvoří kontext vazby inicializované ve výchozím nastavení.|
+|[CMonikerFile::CreateBindContext](#createbindcontext)|Získá kontext vazby nebo vytvoří výchozí inicializovaný kontext vazby.|
 
 ## <a name="remarks"></a>Poznámky
 
-Moniker informacemi, podobně jako cesta k souboru. Pokud máte ukazatel na objekt moniker `IMoniker` rozhraní, můžete získat přístup k zjištěného souboru bez nutnosti žádné konkrétní informace o tom, kde soubor nachází ve skutečnosti.
+Moniker obsahuje informace podobně jako cesta k souboru. Máte-li ukazatel na `IMoniker` rozhraní objektu monikeru, můžete získat přístup k identifikovanému souboru bez jakýchkoli jiných konkrétních informací o tom, kde je soubor skutečně umístěn.
 
-Odvozené od `COleStreamFile`, `CMonikerFile` monikeru nebo řetězcovou reprezentaci lze vytvořit jako monikeru a váže k datovému proudu, pro kterou je moniker je název. Potom může číst a zapisovat do tohoto datového proudu. Skutečnému účelu `CMonikerFile` je poskytnout jednoduchý přístup k `IStream`s názvem `IMoniker`s tak, že není nutné vytvořit vazbu na datový proud sami, ještě `CFile` funkce do datového proudu.
+Odvozen z `COleStreamFile`, `CMonikerFile` přebírá moniker nebo řetězcové vyjádření, může vytvořit do monikeru a vytvořit vazby ke streamu, pro který je moniker název. Pak můžete tento datový proud číst a zapisovat do něj. Skutečným účelem `CMonikerFile` je poskytnutí jednoduchého přístupu k `IStream`s názvem pomocí `IMoniker`s, takže nemusíte vytvářet vazby ke streamu sami, ale mají `CFile` k němu funkcionalitu.
 
-`CMonikerFile` nelze použít k vytvoření vazby na jinou hodnotu než datového proudu. Pokud chcete vytvořit vazbu na úložiště nebo objekt, je nutné použít `IMoniker` rozhraní přímo.
+`CMonikerFile`nejde použít k vytvoření vazby na cokoli jiného než datový proud. Pokud chcete vytvořit `IMoniker` připojení k úložišti nebo objektu, je nutné použít rozhraní přímo.
 
-Další informace o datových proudů a zástupných názvů najdete v tématu [colestreamfile –](../../mfc/reference/colestreamfile-class.md) v *odkaz knihovny MFC* a [IStream](/windows/desktop/api/objidl/nn-objidl-istream) a [imoniker –](/windows/desktop/api/objidl/nn-objidl-imoniker) v Windows SDK.
+Další informace o datových proudech a monikerech naleznete v tématu [COleStreamFile](../../mfc/reference/colestreamfile-class.md) in *MFC Reference* and [IStream](/windows/win32/api/objidl/nn-objidl-istream) and [IMoniker –](/windows/win32/api/objidl/nn-objidl-imoniker) in the Windows SDK.
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
-[Třídy CObject](../../mfc/reference/cobject-class.md)
+[CObject](../../mfc/reference/cobject-class.md)
 
-[CFile](../../mfc/reference/cfile-class.md)
+[CFile –](../../mfc/reference/cfile-class.md)
 
 [COleStreamFile](../../mfc/reference/colestreamfile-class.md)
 
@@ -80,11 +80,11 @@ Další informace o datových proudů a zástupných názvů najdete v tématu [
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** afxole.h
+**Záhlaví:** AFXOLE. h
 
-##  <a name="close"></a>  CMonikerFile::Close
+##  <a name="close"></a>CMonikerFile:: Close
 
-Voláním této funkce pro odpojení a uvolnění datového proudu a uvolnit monikeru.
+Voláním této funkce odpojíte a uvolníte datový proud a uvolníte moniker.
 
 ```
 virtual void Close();
@@ -92,19 +92,19 @@ virtual void Close();
 
 ### <a name="remarks"></a>Poznámky
 
-Můžete volat u neotevřených "nebo" již uzavřeno streamů.
+Lze ji volat v neotevřeném nebo již uzavřeném datovém proudu.
 
-##  <a name="cmonikerfile"></a>  CMonikerFile::CMonikerFile
+##  <a name="cmonikerfile"></a>CMonikerFile::CMonikerFile
 
-Vytvoří `CMonikerFile` objektu.
+`CMonikerFile` Vytvoří objekt.
 
 ```
 CMonikerFile();
 ```
 
-##  <a name="createbindcontext"></a>  CMonikerFile::CreateBindContext
+##  <a name="createbindcontext"></a>CMonikerFile::CreateBindContext
 
-Voláním této funkce k vytvoření kontextu vazby inicializované ve výchozím nastavení.
+Voláním této funkce vytvoříte výchozí inicializovaný kontext vazby.
 
 ```
 IBindCtx* CreateBindContext(CFileException* pError);
@@ -113,19 +113,19 @@ IBindCtx* CreateBindContext(CFileException* pError);
 ### <a name="parameters"></a>Parametry
 
 *pError*<br/>
-Ukazatel na soubor výjimku. V případě chyby bude nastavena na příčinu.
+Ukazatel na výjimku souboru. V případě chyby bude nastavena na příčinu.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Ukazatel do kontextu vazby [IBindCtx](/windows/desktop/api/objidl/nn-objidl-ibindctx) má být svázána s Pokud úspěšné; jinak hodnota NULL. Pokud instance byla otevřena s `IBindHost` rozhraní, kontextu vazby je načten z `IBindHost`. Pokud není žádný `IBindHost` rozhraní nebo rozhraní se nepodařilo vrátit kontext vazby, kontextu vazby je vytvořen. Popis [IBindHost](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/ms775076\(v=vs.85\)) rozhraní, naleznete v sadě Windows SDK.
+Ukazatel na kontext vazby [IBindCtx](/windows/win32/api/objidl/nn-objidl-ibindctx) , se kterým se v případě úspěchu připojí; jinak NULL. Pokud byla instance otevřena s `IBindHost` rozhraním, je kontext vazby načten `IBindHost`z. Pokud není žádné `IBindHost` rozhraní nebo rozhraní nevrátí kontext vazby, vytvoří se kontext vazby. Popis rozhraní [IBindHost](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/ms775076\(v=vs.85\)) naleznete v Windows SDK.
 
 ### <a name="remarks"></a>Poznámky
 
-Kontext vazby je objekt, který obsahuje informace o operaci konkrétní zástupný název vazby. Můžete přepsat tuto funkci pro poskytnutí kontextu vlastní vazby.
+Kontext vazby je objekt, který ukládá informace o konkrétní operaci vazby monikeru. Tuto funkci můžete přepsat tak, aby poskytovala vlastní kontext vazby.
 
-##  <a name="detach"></a>  CMonikerFile::Detach
+##  <a name="detach"></a>CMonikerFile::D etach
 
-Voláním této funkce ukončení datového proudu.
+Voláním této funkce uzavřete datový proud.
 
 ```
 BOOL Detach(CFileException* pError = NULL);
@@ -134,15 +134,15 @@ BOOL Detach(CFileException* pError = NULL);
 ### <a name="parameters"></a>Parametry
 
 *pError*<br/>
-Ukazatel na soubor výjimku. V případě chyby bude nastavena na příčinu.
+Ukazatel na výjimku souboru. V případě chyby bude nastavena na příčinu.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Nenulové, pokud je úspěšná. jinak 0.
+Nenulové, pokud bylo úspěšné; v opačném případě 0.
 
-##  <a name="getmoniker"></a>  CMonikerFile::GetMoniker
+##  <a name="getmoniker"></a>CMonikerFile:: GetMoniker
 
-Volání této funkce načtete ukazatel na aktuální moniker.
+Voláním této funkce načtete ukazatel na aktuální moniker.
 
 ```
 IMoniker* GetMoniker() const;
@@ -150,15 +150,15 @@ IMoniker* GetMoniker() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Ukazatel na aktuální moniker rozhraní ( [imoniker –](/windows/desktop/api/objidl/nn-objidl-imoniker)).
+Ukazatel na aktuální moniker rozhraní ( [IMoniker –](/windows/win32/api/objidl/nn-objidl-imoniker)).
 
 ### <a name="remarks"></a>Poznámky
 
-Protože `CMonikerFile` není rozhraní, vrácený ukazatel se nezvyšuje počet odkazů (prostřednictvím [AddRef](/windows/desktop/api/unknwn/nf-unknwn-iunknown-addref)), a monikeru je uvolněna při `CMonikerFile` uvolnění objektu. Pokud chcete opřete se o monikeru nebo uvolnění sami, je nutné `AddRef` ho.
+Vzhledem `CMonikerFile` k tomu, že není rozhraní, ukazatel, který vrátil, nezvyšuje počet odkazů (prostřednictvím [AddRef](/windows/win32/api/unknwn/nf-unknwn-iunknown-addref)) a moniker `CMonikerFile` je uvolněn při uvolnění objektu. Pokud chcete podržet zástupný název nebo ho vydávat sami, musíte `AddRef` mít.
 
-##  <a name="open"></a>  CMonikerFile::Open
+##  <a name="open"></a>CMonikerFile:: Open
 
-Voláním této členské funkce pro otevření objektu souboru nebo moniker.
+Zavolejte tuto členskou funkci pro otevření souboru nebo objektu monikeru.
 
 ```
 virtual BOOL Open(
@@ -173,23 +173,23 @@ virtual BOOL Open(
 ### <a name="parameters"></a>Parametry
 
 *lpszURL*<br/>
-Adresa URL nebo název souboru, který má být otevřen.
+Adresa URL nebo název souboru, který se má otevřít
 
 *pError*<br/>
-Ukazatel na soubor výjimku. V případě chyby bude nastavena na příčinu.
+Ukazatel na výjimku souboru. V případě chyby bude nastavena na příčinu.
 
 *pMoniker*<br/>
-Ukazatel na rozhraní moniker `IMoniker` se použije k získání datového proudu.
+Ukazatel na rozhraní `IMoniker` monikeru, který se má použít k získání datového proudu.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Nenulové, pokud je úspěšná. jinak 0.
+Nenulové, pokud bylo úspěšné; v opačném případě 0.
 
 ### <a name="remarks"></a>Poznámky
 
-*LpszURL* parametr nelze použít v počítačích Macintosh. Pouze *pMoniker* formu `Open` jde použít na počítačích Macintosh.
+Parametr *lpszURL* nelze použít v systému Macintosh. V systému Macintosh `Open` lze použít pouze pMoniker formu.
 
-Můžete použít adresu URL nebo název souboru pro *lpszURL* parametru. Příklad:
+Pro parametr *lpszURL* můžete použít adresu URL nebo název souboru. Příklad:
 
 [!code-cpp[NVC_MFCWinInet#6](../../mfc/codesnippet/cpp/cmonikerfile-class_1.cpp)]
 

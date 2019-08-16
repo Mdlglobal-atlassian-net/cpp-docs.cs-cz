@@ -1,21 +1,21 @@
 ---
-title: Zahrnout (atribut C++ COM)
+title: include (C++ atribut com)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.include
 helpviewer_keywords:
 - include attribute
 ms.assetid: d23f8b91-fe5b-48fa-9371-8bd73af7b8e3
-ms.openlocfilehash: d9c68601bea4cecd92b371dada5fb086aeb7657f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ece88ebd7b5d9d81beb871427b58a72b2cf02022
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62409444"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69514551"
 ---
 # <a name="include-c"></a>include (C++)
 
-Určuje jeden nebo více souborů záhlaví mají být zahrnuty v souboru generovaného IDL.
+Určuje jeden nebo více hlavičkových souborů, které mají být zahrnuty do vygenerovaného souboru IDL.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -26,17 +26,17 @@ Určuje jeden nebo více souborů záhlaví mají být zahrnuty v souboru genero
 ### <a name="parameters"></a>Parametry
 
 *header_file*<br/>
-Název souboru, který chcete, aby zahrnuté v souboru generovaného IDL.
+Název souboru, který chcete zahrnout do vygenerovaného souboru IDL.
 
 ## <a name="remarks"></a>Poznámky
 
-**Zahrnují** C++ atribut způsobí, že `#include` příkaz umístit pod `import "docobj.idl"` příkaz v souboru generovaného IDL.
+Atribut **include** C++ způsobí, že je `import "docobj.idl"` příkaz umístěn pod příkazem v generovaném souboru IDL. `#include`
 
-**Zahrnují** C++ atribut má stejné funkce jako [zahrnují](/windows/desktop/Midl/include) atribut MIDL.
+Atribut **include** C++ má stejné funkce jako atribut [include](/windows/win32/Midl/include) MIDL.
 
 ## <a name="example"></a>Příklad
 
-Následující kód ukazuje příklad, jak používat **zahrnují**. V tomto příkladu include.h souboru obsahuje pouze `#include` příkazu.
+Následující kód ukazuje příklad použití **include**. V tomto příkladu soubor include. h obsahuje pouze `#include` příkaz.
 
 ```cpp
 // cpp_attr_ref_include.cpp
@@ -47,16 +47,16 @@ Následující kód ukazuje příklad, jak používat **zahrnují**. V tomto př
 
 ## <a name="requirements"></a>Požadavky
 
-### <a name="attribute-context"></a>Atribut kontextu
+### <a name="attribute-context"></a>Kontext atributu
 
 |||
 |-|-|
-|**Platí pro**|Kdekoli|
-|**Opakovatelné**|Ne|
-|**Vyžadované atributy**|Žádné|
+|**Platí pro**|Jakékoli|
+|**REPEATABLE**|Ne|
+|**Požadované atributy**|Žádné|
 |**Neplatné atributy**|Žádné|
 
-Další informace najdete v tématu [kontexty atributů](cpp-attributes-com-net.md#contexts).
+Další informace naleznete v tématu [kontexty atributů](cpp-attributes-com-net.md#contexts).
 
 ## <a name="see-also"></a>Viz také:
 

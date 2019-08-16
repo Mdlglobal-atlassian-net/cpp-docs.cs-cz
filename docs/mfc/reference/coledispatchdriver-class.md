@@ -26,16 +26,16 @@ helpviewer_keywords:
 - COleDispatchDriver [MFC], m_bAutoRelease
 - COleDispatchDriver [MFC], m_lpDispatch
 ms.assetid: 3ed98daf-cdc7-4374-8a0c-cf695a8d3657
-ms.openlocfilehash: c0c1fd14105bae3b5413f92b547339ccabf3bb91
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: fa88147b57b0506f7f9ab96d4a5d2f43fdd75458
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64341614"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69504183"
 ---
 # <a name="coledispatchdriver-class"></a>COleDispatchDriver – třída
 
-implementuje na straně klienta automatizaci OLE.
+Implementuje stranu klienta automatizace OLE.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -47,45 +47,45 @@ class COleDispatchDriver
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
-|[COleDispatchDriver::COleDispatchDriver](#coledispatchdriver)|Vytvoří `COleDispatchDriver` objektu.|
+|[COleDispatchDriver:: COleDispatchDriver](#coledispatchdriver)|`COleDispatchDriver` Vytvoří objekt.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
-|[COleDispatchDriver::AttachDispatch](#attachdispatch)|Připojí `IDispatch` připojení `COleDispatchDriver` objektu.|
-|[COleDispatchDriver::CreateDispatch](#createdispatch)|Vytvoří `IDispatch` připojení a připojí ho k `COleDispatchDriver` objektu.|
-|[COleDispatchDriver::DetachDispatch](#detachdispatch)|Odpojí `IDispatch` připojení bez uvolnění ho.|
-|[COleDispatchDriver::GetProperty](#getproperty)|Získá vlastnost služby automation.|
-|[COleDispatchDriver::InvokeHelper](#invokehelper)|Pomocník pro volání metod služby automation.|
-|[COleDispatchDriver::ReleaseDispatch](#releasedispatch)|Verze `IDispatch` připojení.|
-|[COleDispatchDriver::SetProperty](#setproperty)|Nastaví vlastnost služby automation.|
+|[COleDispatchDriver::AttachDispatch](#attachdispatch)|`IDispatch` Připojí připojení`COleDispatchDriver` k objektu.|
+|[COleDispatchDriver:: CreateDispatch](#createdispatch)|Vytvoří připojení a připojí ho `COleDispatchDriver` k objektu. `IDispatch`|
+|[COleDispatchDriver::DetachDispatch](#detachdispatch)|Odpojí `IDispatch` připojení bez jeho uvolnění.|
+|[COleDispatchDriver:: GetProperty](#getproperty)|Získá vlastnost Automation.|
+|[COleDispatchDriver:: InvokeHelper](#invokehelper)|Pomocný objekt pro volání metod automatizace|
+|[COleDispatchDriver:: ReleaseDispatch](#releasedispatch)|`IDispatch` Uvolní připojení.|
+|[COleDispatchDriver:: SetProperty](#setproperty)|Nastaví vlastnost Automation.|
 
 ### <a name="public-operators"></a>Veřejné operátory
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
-|[COleDispatchDriver::operator =](#operator_eq)|Zkopíruje zdrojovou hodnotou do `COleDispatchDriver` objektu.|
-|[COleDispatchDriver::operator LPDISPATCH](#operator_lpdispatch)|Přistupuje k podkladovým `IDispatch` ukazatele.|
+|[COleDispatchDriver:: operator =](#operator_eq)|Zkopíruje zdrojovou hodnotu do `COleDispatchDriver` objektu.|
+|[COleDispatchDriver:: operator LPDISPATCH](#operator_lpdispatch)|Přistupuje k základnímu `IDispatch` ukazateli.|
 
 ### <a name="public-data-members"></a>Veřejné datové členy
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
-|[COleDispatchDriver::m_bAutoRelease](#m_bautorelease)|Určuje, jestli se má uvolnit `IDispatch` během `ReleaseDispatch` nebo zničení objektu.|
-|[COleDispatchDriver::m_lpDispatch](#m_lpdispatch)|Označuje ukazatel `IDispatch` rozhraní připojené k tomuto `COleDispatchDriver`.|
+|[COleDispatchDriver::m_bAutoRelease](#m_bautorelease)|Určuje, zda se má `IDispatch` uvolnit `ReleaseDispatch` během zničení objektu nebo.|
+|[COleDispatchDriver::m_lpDispatch](#m_lpdispatch)|Označuje ukazatel na `IDispatch` rozhraní připojené k tomuto `COleDispatchDriver`rozhraní.|
 
 ## <a name="remarks"></a>Poznámky
 
-`COleDispatchDriver` nemá základní třídu.
+`COleDispatchDriver`nemá základní třídu.
 
-Rozhraní odbavení OLE poskytují přístup k metodám a vlastnostem objektu. Členské funkce `COleDispatchDriver` připojení, odpojení, vytvořit a release odeslání připojení typu `IDispatch`. Další členské funkce používají seznamy argumentů proměnných pro zjednodušení volání `IDispatch::Invoke`.
+Odesílající rozhraní OLE poskytují přístup k metodám a vlastnostem objektu. Členské funkce `COleDispatchDriver` připojení, odpojení, vytvoření a uvolnění odesílajícího připojení typu `IDispatch`. Jiné členské funkce používají seznamy argumentů proměnných pro zjednodušení volání `IDispatch::Invoke`.
 
-Tato třída je možné přímo, ale obecně se používá pouze pomocí třídy vytvořené pomocí průvodce Přidat třídu. Když vytvoříte nové třídy jazyka C++ pomocí importu knihovny typů, nové třídy jsou odvozeny z `COleDispatchDriver`.
+Tuto třídu lze použít přímo, ale je obecně používána pouze třídami vytvořenými průvodcem přidáním třídy. Při vytváření nových C++ tříd importem knihovny typů jsou nové třídy odvozeny z `COleDispatchDriver`.
 
-Další informace o používání `COleDispatchDriver`, naleznete v následujících článcích:
+Další informace o použití nástroje `COleDispatchDriver`najdete v následujících článcích:
 
 - [Klienti automatizace](../../mfc/automation-clients.md)
 
@@ -97,11 +97,11 @@ Další informace o používání `COleDispatchDriver`, naleznete v následujíc
 
 ## <a name="requirements"></a>Požadavky
 
-**Header:** afxdisp.h
+**Záhlaví:** afxdisp. h
 
-##  <a name="attachdispatch"></a>  COleDispatchDriver::AttachDispatch
+##  <a name="attachdispatch"></a>COleDispatchDriver:: AttachDispatch
 
-Volání `AttachDispatch` členská funkce se připojit `IDispatch` ukazatel `COleDispatchDriver` objektu. Další informace najdete v tématu [implementace rozhraní IDispatch](/previous-versions/windows/desktop/automat/implementing-the-idispatch-interface).
+Chcete-li `IDispatch` připojit ukazatel k `COleDispatchDriver` objektu, zavolejte členskoufunkci.`AttachDispatch` Další informace naleznete v tématu [implementace rozhraní IDispatch](/previous-versions/windows/desktop/automat/implementing-the-idispatch-interface).
 
 ```
 void AttachDispatch(
@@ -112,22 +112,22 @@ void AttachDispatch(
 ### <a name="parameters"></a>Parametry
 
 *lpDispatch*<br/>
-Ukazatel na OLE `IDispatch` objektu, který chcete připojit k `COleDispatchDriver` objektu.
+Ukazatel na objekt OLE `IDispatch` , který má být připojen `COleDispatchDriver` k objektu.
 
 *bAutoRelease*<br/>
-Určuje, zda od odeslání uvolnit, když tento objekt dostane mimo rozsah.
+Určuje, zda má být odeslání uvolněno, když se tento objekt dostane mimo rozsah.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato funkce uvolní všechny `IDispatch` ukazatel, který je již připojen k `COleDispatchDriver` objektu.
+Tato funkce uvolní libovolný `IDispatch` ukazatel, který je již připojen `COleDispatchDriver` k objektu.
 
 ### <a name="example"></a>Příklad
 
 [!code-cpp[NVC_MFCOleContainer#3](../../mfc/codesnippet/cpp/coledispatchdriver-class_1.cpp)]
 
-##  <a name="coledispatchdriver"></a>  COleDispatchDriver::COleDispatchDriver
+##  <a name="coledispatchdriver"></a>COleDispatchDriver:: COleDispatchDriver
 
-Vytvoří `COleDispatchDriver` objektu.
+`COleDispatchDriver` Vytvoří objekt.
 
 ```
 COleDispatchDriver();
@@ -138,29 +138,29 @@ COleDispatchDriver(const COleDispatchDriver& dispatchSrc);
 ### <a name="parameters"></a>Parametry
 
 *lpDispatch*<br/>
-Ukazatel na OLE `IDispatch` objektu, který chcete připojit k `COleDispatchDriver` objektu.
+Ukazatel na objekt OLE `IDispatch` , který má být připojen `COleDispatchDriver` k objektu.
 
 *bAutoRelease*<br/>
-Určuje, zda od odeslání uvolnit, když tento objekt dostane mimo rozsah.
+Určuje, zda má být odeslání uvolněno, když se tento objekt dostane mimo rozsah.
 
 *dispatchSrc*<br/>
-Odkaz na existující `COleDispatchDriver` objektu.
+Odkaz na existující `COleDispatchDriver` objekt.
 
 ### <a name="remarks"></a>Poznámky
 
-Formulář `COleDispatchDriver`( `LPDISPATCH lpDispatch`, **BOOL**`bAutoRelease` = **TRUE**) se připojí [IDispatch](/previous-versions/windows/desktop/automat/implementing-the-idispatch-interface) rozhraní.
+Formulář `COleDispatchDriver`( `LPDISPATCH lpDispatch`, **bool** [](/previous-versions/windows/desktop/automat/implementing-the-idispatch-interface)true) spojuje rozhraní IDispatch.`bAutoRelease` = 
 
-Formulář `COleDispatchDriver`( **const**`COleDispatchDriver`& `dispatchSrc`) zkopíruje existující `COleDispatchDriver` objektu a zvýší počet odkazů.
+Formulář `COleDispatchDriver`( **const**`COleDispatchDriver`&  )zkopíruje`COleDispatchDriver` existující objekt a zvýší počet odkazů.`dispatchSrc`
 
-Formulář `COleDispatchDriver`() vytvoří `COleDispatchDriver` objektu, ale nepřipojí `IDispatch` rozhraní. Před použitím `COleDispatchDriver`() bez argumentů, je vhodné připojit se `IDispatch` buď pomocí [COleDispatchDriver::CreateDispatch](#createdispatch) nebo [COleDispatchDriver::AttachDispatch](#attachdispatch). Další informace najdete v tématu [implementace rozhraní IDispatch](/previous-versions/windows/desktop/automat/implementing-the-idispatch-interface).
+Formulář `COleDispatchDriver`() `COleDispatchDriver` vytvoří objekt, `IDispatch` ale nepřipojí rozhraní. Před použitím `COleDispatchDriver`() bez argumentů byste `IDispatch` se k němu měli připojit pomocí [COleDispatchDriver:: CreateDispatch](#createdispatch) nebo [COleDispatchDriver:: AttachDispatch](#attachdispatch). Další informace naleznete v tématu [implementace rozhraní IDispatch](/previous-versions/windows/desktop/automat/implementing-the-idispatch-interface).
 
 ### <a name="example"></a>Příklad
 
-  Podívejte se na příklad pro [COleDispatchDriver::CreateDispatch](#createdispatch).
+  Podívejte se na příklad pro [COleDispatchDriver:: CreateDispatch](#createdispatch).
 
-##  <a name="createdispatch"></a>  COleDispatchDriver::CreateDispatch
+##  <a name="createdispatch"></a>COleDispatchDriver:: CreateDispatch
 
-Vytvoří [IDispatch](/previous-versions/windows/desktop/automat/implementing-the-idispatch-interface) objektu rozhraní a připojí ho k `COleDispatchDriver` objektu.
+Vytvoří objekt rozhraní [IDispatch](/previous-versions/windows/desktop/automat/implementing-the-idispatch-interface) a připojí ho k `COleDispatchDriver` objektu.
 
 ```
 BOOL CreateDispatch(
@@ -174,26 +174,26 @@ BOOL CreateDispatch(
 
 ### <a name="parameters"></a>Parametry
 
-*clsid*<br/>
-ID třídy `IDispatch` objekt připojení, který se má vytvořit.
+*CLSID*<br/>
+ID třídy objektu `IDispatch` připojení, který se má vytvořit
 
 *pError*<br/>
-Ukazatel na objekt výjimky OLE, který bude obsahovat stavový kód, který je výsledkem vytvoření.
+Ukazatel na objekt výjimka OLE, který bude obsahovat stavový kód vyplývající z vytvoření.
 
 *lpszProgID*<br/>
-Ukazatel na programový identifikátor, jako je například "Excel.Document.5", automatizační objekt, pro který má být vytvořen objekt odeslání.
+Ukazatel na programový identifikátor, jako je například Excel. Document. 5, objektu automatizace, pro který má být vytvořen objekt dispatch.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-V případě úspěchu; nenulovou hodnotu. jinak 0.
+Nenulové při úspěchu; v opačném případě 0.
 
 ### <a name="example"></a>Příklad
 
 [!code-cpp[NVC_MFCOleContainer#4](../../mfc/codesnippet/cpp/coledispatchdriver-class_2.cpp)]
 
-##  <a name="detachdispatch"></a>  COleDispatchDriver::DetachDispatch
+##  <a name="detachdispatch"></a>COleDispatchDriver::D etachDispatch
 
-Odpojí aktuální `IDispatch` připojení z tohoto objektu.
+Odpojí aktuální `IDispatch` připojení od tohoto objektu.
 
 ```
 LPDISPATCH DetachDispatch();
@@ -201,21 +201,21 @@ LPDISPATCH DetachDispatch();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Ukazatel na dříve připojené OLE `IDispatch` objektu.
+Ukazatel na dříve připojený objekt OLE `IDispatch` .
 
 ### <a name="remarks"></a>Poznámky
 
-`IDispatch` Neuvolní.
+`IDispatch` Není uvolněn.
 
-Další informace o typu LPDISPATCH najdete v tématu [implementace rozhraní IDispatch](/previous-versions/windows/desktop/automat/implementing-the-idispatch-interface) v sadě Windows SDK.
+Další informace o typu LPDISPATCH naleznete v tématu [implementace rozhraní IDispatch](/previous-versions/windows/desktop/automat/implementing-the-idispatch-interface) v Windows SDK.
 
 ### <a name="example"></a>Příklad
 
 [!code-cpp[NVC_MFCOleContainer#5](../../mfc/codesnippet/cpp/coledispatchdriver-class_3.cpp)]
 
-##  <a name="getproperty"></a>  COleDispatchDriver::GetProperty
+##  <a name="getproperty"></a>COleDispatchDriver:: GetProperty
 
-Získá objekt vlastnost určenou *dwDispID*.
+Získá vlastnost objektu určenou parametrem *dwDispID*.
 
 ```
 void GetProperty(
@@ -227,21 +227,21 @@ void GetProperty(
 ### <a name="parameters"></a>Parametry
 
 *dwDispID*<br/>
-Určuje vlastnost, která se má načíst.
+Určuje vlastnost, která má být načtena.
 
 *vtProp*<br/>
-Určuje vlastnost, která se má načíst. Možné hodnoty najdete v části poznámky [COleDispatchDriver::InvokeHelper](#invokehelper).
+Určuje vlastnost, která má být načtena. Možné hodnoty naleznete v části poznámky pro [COleDispatchDriver:: InvokeHelper](#invokehelper).
 
 *pvProp*<br/>
-Adresa proměnné, která se zobrazí hodnotu vlastnosti. Musí odpovídat typu určeného *vtProp*.
+Adresa proměnné, která bude přijímat hodnotu vlastnosti. Musí odpovídat typu zadanému parametrem *vtProp*.
 
 ### <a name="example"></a>Příklad
 
 [!code-cpp[NVC_MFCOleContainer#6](../../mfc/codesnippet/cpp/coledispatchdriver-class_4.cpp)]
 
-##  <a name="invokehelper"></a>  COleDispatchDriver::InvokeHelper
+##  <a name="invokehelper"></a>COleDispatchDriver:: InvokeHelper
 
-Volání metody objektu nebo vlastnost určenou *dwDispID*, v rámci určeného *wFlags*.
+Volá metodu objektu nebo vlastnost určenou v *dwDispID*v kontextu určeném parametrem *wFlags*.
 
 ```
 void AFX_CDECL InvokeHelper(
@@ -255,30 +255,30 @@ void AFX_CDECL InvokeHelper(
 ### <a name="parameters"></a>Parametry
 
 *dwDispID*<br/>
-Určuje metodu nebo vlastnost má být volána.
+Určuje metodu nebo vlastnost, která má být vyvolána.
 
 *wFlags*<br/>
-Příznaky popisující kontext volání `IDispatch::Invoke`. . Seznam možných hodnot, najdete v článku *wFlags* parametr [IDispatch::Invoke](/windows/desktop/api/oaidl/nf-oaidl-idispatch-invoke) v sadě Windows SDK.
+Příznaky popisující kontext volání metody `IDispatch::Invoke`. . Seznam možných hodnot naleznete v parametru *wFlags* v [IDispatch:: Invoke](/windows/win32/api/oaidl/nf-oaidl-idispatch-invoke) v Windows SDK.
 
 *vtRet*<br/>
 Určuje typ vrácené hodnoty. Možné hodnoty najdete v části poznámky.
 
 *pvRet*<br/>
-Adresa proměnné, která bude přijímat hodnoty vlastnosti nebo návratovou hodnotu. Musí odpovídat typu určeného *vtRet*.
+Adresa proměnné, která bude přijímat hodnotu vlastnosti nebo návratovou hodnotu. Musí odpovídat typu zadanému parametrem *vtRet*.
 
 *pbParamInfo*<br/>
-Ukazatel na řetězec zakončený hodnotou null bajtů určující typy parametrů za *pbParamInfo*.
+Ukazatel na řetězec zakončený hodnotou NULL bajtů, který určuje typy parametrů následující po *pbParamInfo*.
 
 *...*<br/>
-Proměnné seznam parametrů typů uvedených v *pbParamInfo*.
+Seznam proměnných parametrů typu určených v *pbParamInfo*.
 
 ### <a name="remarks"></a>Poznámky
 
-*PbParamInfo* parametr určuje typy parametry předané do metody nebo vlastnosti. Proměnné seznam argumentů, které je reprezentována **...**  v syntaxi deklarace.
+Parametr *pbParamInfo* určuje typy parametrů předaných metodě nebo vlastnosti. Seznam proměnných argumentů je reprezentován **...** v deklaraci syntaxe.
 
-Možné hodnoty pro *vtRet* argument pocházejí ze výčet VARENUM. Možné hodnoty jsou následující:
+Možné hodnoty argumentu *vtRet* jsou pořízeny z výčtu VarEnum. Možné hodnoty jsou následující:
 
-|Symbol|Návratový typ|
+|Písmeno|Návratový typ|
 |------------|-----------------|
 |VT_EMPTY|**void**|
 |VT_I2|**short**|
@@ -291,22 +291,22 @@ Možné hodnoty pro *vtRet* argument pocházejí ze výčet VARENUM. Možné hod
 |VT_DISPATCH|LPDISPATCH|
 |VT_ERROR|SCODE|
 |VT_BOOL|**BOOL**|
-|VT_VARIANT|**VARIANT**|
+|VT_VARIANT|**VARIANTY**|
 |VT_UNKNOWN|LPUNKNOWN|
 
-*PbParamInfo* argument je místo oddělený seznam **VTS_** konstanty. Jeden nebo více z těchto hodnot oddělených mezerami (ne středníky), určuje seznam parametrů funkce. Možné hodnoty jsou seřazeny [EVENT_CUSTOM](event-maps.md#event_custom) – makro.
+Argument *pbParamInfo* je seznam oddělený mezerami v konstantách **VTS_** . Jedna nebo více těchto hodnot oddělených mezerami (nejedná se o čárky), určuje seznam parametrů funkce. Možné hodnoty jsou uvedeny pomocí makra [EVENT_CUSTOM](event-maps.md#event_custom) .
 
-Tato funkce převede parametry VARIANTARG hodnoty a potom vyvolá [IDispatch::Invoke](/windows/desktop/api/oaidl/nf-oaidl-idispatch-invoke) metody. Pokud volání `Invoke` selže, tato funkce vyvolá výjimku. Pokud SCODE (stavový kód) vrácené `IDispatch::Invoke` DISP_E_EXCEPTION, je tato funkce vyvolá [coleexception –](../../mfc/reference/coleexception-class.md) objektu; v opačném případě vyvolá [coledispatchexception –](../../mfc/reference/coledispatchexception-class.md).
+Tato funkce převede parametry na hodnoty VARIANTARG a poté vyvolá metodu [IDispatch:: Invoke](/windows/win32/api/oaidl/nf-oaidl-idispatch-invoke) . Pokud volání `Invoke` selže, tato funkce vyvolá výjimku. Pokud Code (Stavový kód) vrácený funkcí `IDispatch::Invoke` je DISP_E_EXCEPTION, tato funkce vyvolá objekt [COleException](../../mfc/reference/coleexception-class.md) ; v opačném případě vyvolá [COleDispatchException](../../mfc/reference/coledispatchexception-class.md).
 
-Další informace najdete v tématu [VARIANTARG](/windows/desktop/api/oaidl/ns-oaidl-tagvariant), [implementace rozhraní IDispatch](/previous-versions/windows/desktop/automat/implementing-the-idispatch-interface), [IDispatch::Invoke](/windows/desktop/api/oaidl/nf-oaidl-idispatch-invoke), a [struktury z modelu COM chybové kódy](/windows/desktop/com/structure-of-com-error-codes) ve Windows SDK.
+Další informace naleznete v tématu [VARIANTARG](/windows/win32/api/oaidl/ns-oaidl-variant), [implementace rozhraní IDispatch](/previous-versions/windows/desktop/automat/implementing-the-idispatch-interface), [IDispatch:: Invoke](/windows/win32/api/oaidl/nf-oaidl-idispatch-invoke)a [Struktura kódů chyb modelu COM](/windows/win32/com/structure-of-com-error-codes) v Windows SDK.
 
 ### <a name="example"></a>Příklad
 
-  Podívejte se na příklad pro [COleDispatchDriver::CreateDispatch](#createdispatch).
+  Podívejte se na příklad pro [COleDispatchDriver:: CreateDispatch](#createdispatch).
 
-##  <a name="m_bautorelease"></a>  COleDispatchDriver::m_bAutoRelease
+##  <a name="m_bautorelease"></a>COleDispatchDriver:: m_bAutoRelease
 
-Při hodnotě TRUE se objekt COM přistupuje [m_lpDispatch](#m_lpdispatch) se automaticky vydá při [ReleaseDispatch](#releasedispatch) se nazývá nebo kdy to `COleDispatchDriver` objekt zničen.
+Je-li nastavena hodnota true, objekt com, k němuž přistupovalo pomocí [m_lpDispatch](#m_lpdispatch) , bude automaticky `COleDispatchDriver` uvolněn při volání [ReleaseDispatch](#releasedispatch) nebo při zničení tohoto objektu.
 
 ```
 BOOL m_bAutoRelease;
@@ -314,17 +314,17 @@ BOOL m_bAutoRelease;
 
 ### <a name="remarks"></a>Poznámky
 
-Ve výchozím nastavení `m_bAutoRelease` nastavena na hodnotu TRUE v konstruktoru.
+Ve výchozím nastavení `m_bAutoRelease` je v konstruktoru nastaveno na hodnotu true.
 
-Další informace o uvolnění objektů modelu COM, naleznete v tématu [implementace počítání odkazů](/windows/desktop/com/implementing-reference-counting) a [IUnknown::Release](/windows/desktop/api/unknwn/nf-unknwn-iunknown-release) v sadě Windows SDK.
+Další informace o uvolňování objektů COM naleznete v tématu [implementace počítání odkazů](/windows/win32/com/implementing-reference-counting) a [IUnknown:: Release](/windows/win32/api/unknwn/nf-unknwn-iunknown-release) v Windows SDK.
 
 ### <a name="example"></a>Příklad
 
 [!code-cpp[NVC_MFCOleContainer#9](../../mfc/codesnippet/cpp/coledispatchdriver-class_5.cpp)]
 
-##  <a name="m_lpdispatch"></a>  COleDispatchDriver::m_lpDispatch
+##  <a name="m_lpdispatch"></a>COleDispatchDriver:: m_lpDispatch
 
-Ukazatel `IDispatch` rozhraní připojené k tomuto `COleDispatchDriver`.
+Ukazatel na `IDispatch` rozhraní připojené k tomuto `COleDispatchDriver`.
 
 ```
 LPDISPATCH m_lpDispatch;
@@ -334,15 +334,15 @@ LPDISPATCH m_lpDispatch;
 
 `m_lpDispatch` Datový člen je veřejná proměnná typu LPDISPATCH.
 
-Další informace najdete v tématu [IDispatch](/previous-versions/windows/desktop/automat/implementing-the-idispatch-interface) v sadě Windows SDK.
+Další informace najdete v tématu věnovaném rozhraní [IDispatch](/previous-versions/windows/desktop/automat/implementing-the-idispatch-interface) v Windows SDK.
 
 ### <a name="example"></a>Příklad
 
-  Podívejte se na příklad pro [COleDispatchDriver::AttachDispatch](#attachdispatch).
+  Podívejte se na příklad pro [COleDispatchDriver:: AttachDispatch](#attachdispatch).
 
-##  <a name="operator_eq"></a>  COleDispatchDriver::operator =
+##  <a name="operator_eq"></a>COleDispatchDriver:: operator =
 
-Zkopíruje zdrojovou hodnotou do `COleDispatchDriver` objektu.
+Zkopíruje zdrojovou hodnotu do `COleDispatchDriver` objektu.
 
 ```
 const COleDispatchDriver& operator=(const COleDispatchDriver& dispatchSrc);
@@ -351,11 +351,11 @@ const COleDispatchDriver& operator=(const COleDispatchDriver& dispatchSrc);
 ### <a name="parameters"></a>Parametry
 
 *dispatchSrc*<br/>
-Ukazatel na existující `COleDispatchDriver` objektu.
+Ukazatel na existující `COleDispatchDriver` objekt.
 
-##  <a name="operator_lpdispatch"></a>  COleDispatchDriver::operator LPDISPATCH
+##  <a name="operator_lpdispatch"></a>COleDispatchDriver:: operator LPDISPATCH
 
-Přistupuje k podkladovým `IDispatch` ukazatel `COleDispatchDriver` objektu.
+Přistupuje k základnímu `IDispatch` ukazateli `COleDispatchDriver` objektu.
 
 ```
 operator LPDISPATCH();
@@ -365,9 +365,9 @@ operator LPDISPATCH();
 
 [!code-cpp[NVC_MFCOleContainer#8](../../mfc/codesnippet/cpp/coledispatchdriver-class_6.cpp)]
 
-##  <a name="releasedispatch"></a>  COleDispatchDriver::ReleaseDispatch
+##  <a name="releasedispatch"></a>COleDispatchDriver:: ReleaseDispatch
 
-Verze `IDispatch` připojení. Další informace najdete v tématu [implementace rozhraní IDispatch](/previous-versions/windows/desktop/automat/implementing-the-idispatch-interface)
+`IDispatch` Uvolní připojení. Další informace najdete v tématu [implementace rozhraní IDispatch](/previous-versions/windows/desktop/automat/implementing-the-idispatch-interface) .
 
 ```
 void ReleaseDispatch();
@@ -375,15 +375,15 @@ void ReleaseDispatch();
 
 ### <a name="remarks"></a>Poznámky
 
-Pokud automatické vydání je nastavená pro toto připojení, tato funkce volá `IDispatch::Release` před uvolněním rozhraní.
+Pokud je pro toto připojení nastaveno automatické vydání, tato funkce volá `IDispatch::Release` před uvolněním rozhraní.
 
 ### <a name="example"></a>Příklad
 
-  Podívejte se na příklad pro [COleDispatchDriver::AttachDispatch](#attachdispatch).
+  Podívejte se na příklad pro [COleDispatchDriver:: AttachDispatch](#attachdispatch).
 
-##  <a name="setproperty"></a>  COleDispatchDriver::SetProperty
+##  <a name="setproperty"></a>COleDispatchDriver:: SetProperty
 
-Nastaví vlastnost objektu OLE určenou *dwDispID*.
+Nastaví vlastnost objektu OLE určenou parametrem *dwDispID*.
 
 ```
 void AFX_CDECL SetProperty(
@@ -397,10 +397,10 @@ void AFX_CDECL SetProperty(
 Určuje vlastnost, která má být nastavena.
 
 *vtProp*<br/>
-Určuje typ vlastnosti, která má být nastavena. Možné hodnoty najdete v části poznámky [COleDispatchDriver::InvokeHelper](#invokehelper).
+Určuje typ vlastnosti, která se má nastavit. Možné hodnoty naleznete v části poznámky pro [COleDispatchDriver:: InvokeHelper](#invokehelper).
 
 *...*<br/>
-Jeden parametr typu určeného *vtProp*.
+Jeden parametr typu určený parametrem *vtProp*.
 
 ### <a name="example"></a>Příklad
 
@@ -408,7 +408,7 @@ Jeden parametr typu určeného *vtProp*.
 
 ## <a name="see-also"></a>Viz také:
 
-[Ukázky knihovny MFC CALCDRIV](../../overview/visual-cpp-samples.md)<br/>
-[Ukázky knihovny MFC acdual –](../../overview/visual-cpp-samples.md)<br/>
+[CALCDRIV Sample MFC](../../overview/visual-cpp-samples.md)<br/>
+[ACDUAL Sample MFC](../../overview/visual-cpp-samples.md)<br/>
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>
 [CCmdTarget – třída](../../mfc/reference/ccmdtarget-class.md)

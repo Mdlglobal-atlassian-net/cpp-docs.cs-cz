@@ -1,21 +1,21 @@
 ---
-title: soubor nápovědy (atribut C++ COM)
+title: soubor nápovědyC++ (atribut com)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.helpfile
 helpviewer_keywords:
 - helpfile attribute
 ms.assetid: d75161c1-1363-4019-ae09-e7e3b8a3971e
-ms.openlocfilehash: 7aff6addffb13d2d45953d190eeaac518fe48d6d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 538cdbb38ac525cfee03a641f3e62e22a69f8e2b
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62409561"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69501541"
 ---
 # <a name="helpfile"></a>helpfile
 
-Nastaví název souboru nápovědy pro knihovnu typů.
+Nastaví název souboru s nápovědu pro knihovnu typů.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -25,29 +25,29 @@ Nastaví název souboru nápovědy pro knihovnu typů.
 
 ### <a name="parameters"></a>Parametry
 
-*Název souboru*<br/>
+*Bitmap*<br/>
 Název souboru, který obsahuje témata nápovědy.
 
 ## <a name="remarks"></a>Poznámky
 
-**HelpFile –** C++ atribut má stejné funkce jako [HelpFile –](/windows/desktop/Midl/helpfile) atribut MIDL.
+Atribut C++ s nápovědou má stejné funkce jako atribut [](/windows/win32/Midl/helpfile) s nápovědou.
 
 ## <a name="example"></a>Příklad
 
-Podívejte se na příklad pro [modulu](module-cpp.md) příklad, jak používat **HelpFile –**.
+Příklad použití funkce soubor **nápovědy**naleznete v příkladu pro [modul](module-cpp.md) .
 
 ## <a name="requirements"></a>Požadavky
 
-### <a name="attribute-context"></a>Atribut kontextu
+### <a name="attribute-context"></a>Kontext atributu
 
 |||
 |-|-|
-|**Platí pro**|**rozhraní**, **typedef**, **třídy**, metoda, **vlastnost**|
-|**Opakovatelné**|Ne|
-|**Vyžadované atributy**|Žádný|
+|**Platí pro**|**rozhraní**, **typedef**, **Třída**, metoda, **vlastnost**|
+|**REPEATABLE**|Ne|
+|**Požadované atributy**|Žádné|
 |**Neplatné atributy**|Žádné|
 
-Další informace najdete v tématu [kontexty atributů](cpp-attributes-com-net.md#contexts).
+Další informace naleznete v tématu [kontexty atributů](cpp-attributes-com-net.md#contexts).
 
 ## <a name="see-also"></a>Viz také:
 

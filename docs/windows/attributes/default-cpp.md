@@ -1,5 +1,5 @@
 ---
-title: Výchozí (atribut C++ COM)
+title: výchozí (C++ atribut com)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.default
@@ -8,16 +8,16 @@ helpviewer_keywords:
 - attributes [C#], default attribute
 - defaults, default attribute
 ms.assetid: 0cdca716-1ba8-46d7-9399-167e55492870
-ms.openlocfilehash: c6448b00fef50a7654816a2c39af2943db12d314
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 291e16ad0967acd1869874fcc9fa6eb5529e4b44
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62148078"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69501685"
 ---
 # <a name="default-c"></a>default (C++)
 
-Označuje, že vlastní nebo dispinterface definované v rámci coclass představuje výchozí programovatelnosti rozhraní.
+Indikuje, že vlastní nebo odesílající pole definované v rámci třídy typu coclass představuje výchozí rozhraní programovatelnosti.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -28,22 +28,22 @@ Označuje, že vlastní nebo dispinterface definované v rámci coclass předsta
 ### <a name="parameters"></a>Parametry
 
 *interface1*<br/>
-Výchozí rozhraní, která bude k dispozici pro vytvoření objektu skriptovací prostředí na základě třídy definované **výchozí** atribut.
+Výchozí rozhraní, které bude zpřístupněno pro skriptovací prostředí, která vytvoří objekt na základě třídy definované s **výchozím** atributem.
 
-Pokud není zadána žádná výchozí rozhraní, první výskyt nonsource rozhraní se používá jako výchozí.
+Pokud není zadáno žádné výchozí rozhraní, jako výchozí se použije první výskyt nezdrojového rozhraní.
 
 *interface2*<br/>
-(Volitelné) Výchozím zdrojovém rozhraní. Toto rozhraní se musíte zadat také [zdroj](source-cpp.md) atribut.
+Volitelné Výchozí zdrojové rozhraní. Musíte také zadat toto rozhraní se zdrojovým [](source-cpp.md) atributem.
 
-Pokud není zadána žádná výchozí zdrojové rozhraní, první zdrojové rozhraní se používá jako výchozí.
+Pokud není zadané žádné výchozí zdrojové rozhraní, použije se jako výchozí první zdrojové rozhraní.
 
 ## <a name="remarks"></a>Poznámky
 
-**Výchozí** C++ atribut má stejné funkce jako [výchozí](/windows/desktop/Midl/default) atribut MIDL. **Výchozí** atribut je použit také s [případ](case-cpp.md) atribut.
+**Výchozí** C++ atribut má stejné funkce jako [výchozí](/windows/win32/Midl/default) atribut MIDL. **Výchozí** atribut se používá také s atributem [case](case-cpp.md) .
 
 ## <a name="example"></a>Příklad
 
-Následující kód ukazuje, jak **výchozí** na definici třídy coclass slouží k určení `ICustomDispatch` jako výchozí programovatelnosti rozhraní:
+Následující kód ukazuje, jak se používá **výchozí** pro definici třídy typu coclass k určení `ICustomDispatch` jako výchozího rozhraní programovatelnosti:
 
 ```cpp
 // cpp_attr_ref_default.cpp
@@ -91,20 +91,20 @@ int main() {
 }
 ```
 
-[Zdroj](source-cpp.md) atribut obsahuje také příklad, jak používat **výchozí**.
+[Zdrojový](source-cpp.md) atribut má také příklad, jak použít **výchozí**.
 
 ## <a name="requirements"></a>Požadavky
 
-### <a name="attribute-context"></a>Atribut kontextu
+### <a name="attribute-context"></a>Kontext atributu
 
 |||
 |-|-|
-|**Platí pro**|**Třída**, **struktura**, datový člen|
-|**Opakovatelné**|Ne|
-|**Vyžadované atributy**|**coclass** (při použití u **třídy** nebo **struktura**)|
+|**Platí pro**|**Třída**, **Struktura**, datový člen|
+|**REPEATABLE**|Ne|
+|**Požadované atributy**|**Coclass – třída** (při použití u **třídy** nebo **struktury**)|
 |**Neplatné atributy**|Žádné|
 
-Další informace najdete v tématu [kontexty atributů](cpp-attributes-com-net.md#contexts).
+Další informace naleznete v tématu [kontexty atributů](cpp-attributes-com-net.md#contexts).
 
 ## <a name="see-also"></a>Viz také:
 

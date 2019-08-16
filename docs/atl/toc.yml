@@ -240,7 +240,7 @@
             - name: Vytváření skriptů registrátoru
               href: creating-registrar-scripts.md
             - name: Principy syntaxe Backus-Naurovy formy (BNF)
-              href: understanding-backus-nauer-form-bnf-syntax.md
+              href: understanding-backus-naur-form-bnf-syntax.md
             - name: Principy stromů analýzy
               href: understanding-parse-trees.md
             - name: Příklady skriptování registru

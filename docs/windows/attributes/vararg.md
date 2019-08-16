@@ -1,21 +1,21 @@
 ---
-title: vararg (C++ COM atribut)
+title: vararg (C++ atribut com)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.vararg
 helpviewer_keywords:
 - vararg attribute
 ms.assetid: 20fc3244-18e9-411c-990e-d5b4fa29a570
-ms.openlocfilehash: a433522b78424c48c4afe754f7b8337e3952dc8e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d1c6b1a4e049bccfcf3e16bae4b5f9b285d11192
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62407208"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69514895"
 ---
 # <a name="vararg"></a>vararg
 
-Určuje, že funkce má proměnný počet argumentů.
+Určuje, že funkce přebírá proměnný počet argumentů.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -25,7 +25,7 @@ Určuje, že funkce má proměnný počet argumentů.
 
 ## <a name="remarks"></a>Poznámky
 
-**Vararg** C++ atribut má stejné funkce jako [vararg](/windows/desktop/Midl/vararg) atribut MIDL.
+Atribut **vararg** C++ má stejné funkce jako atribut [vararg](/windows/win32/Midl/vararg) MIDL.
 
 ## <a name="example"></a>Příklad
 
@@ -47,16 +47,16 @@ __interface X : public IUnknown
 
 ## <a name="requirements"></a>Požadavky
 
-### <a name="attribute-context"></a>Atribut kontextu
+### <a name="attribute-context"></a>Kontext atributu
 
 |||
 |-|-|
 |**Platí pro**|Metoda rozhraní|
-|**Opakovatelné**|Ne|
-|**Vyžadované atributy**|Žádné|
+|**REPEATABLE**|Ne|
+|**Požadované atributy**|Žádné|
 |**Neplatné atributy**|Žádné|
 
-Další informace o kontexty atributů najdete v tématu [kontexty atributů](cpp-attributes-com-net.md#contexts).
+Další informace o kontextech atributů naleznete v tématu kontexty [atributů](cpp-attributes-com-net.md#contexts).
 
 ## <a name="see-also"></a>Viz také:
 

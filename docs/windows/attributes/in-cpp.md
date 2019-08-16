@@ -1,21 +1,21 @@
 ---
-title: atributem (C++ COM)
+title: in (C++ atribut com)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.in
 helpviewer_keywords:
 - in attribute
 ms.assetid: 7b450cc4-4d2e-4910-a195-7487c6b7c373
-ms.openlocfilehash: 06d78552ef2ebb878ed630eb377e6249ba60cad4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e97008d0399764beeca73dbbc5914e4b891df748
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62409340"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69514601"
 ---
 # <a name="in-c"></a>in (C++)
 
-Označuje, že je parametr předat z volající procedury do volané procedury.
+Označuje, že parametr má být předán z volající procedury do volané procedury.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -25,24 +25,24 @@ Označuje, že je parametr předat z volající procedury do volané procedury.
 
 ## <a name="remarks"></a>Poznámky
 
-**v** C++ atribut má stejné funkce jako [v](/windows/desktop/Midl/in) atribut MIDL.
+Atribut **in** C++ má stejné funkce jako [v](/windows/win32/Midl/in) atributu MIDL.
 
 ## <a name="example"></a>Příklad
 
-Zobrazit [umožňujících vazbu](bindable.md) příklad, jak používat **v**.
+Příklad použití v nástroji naleznete **v**tématu [BIND](bindable.md) .
 
 ## <a name="requirements"></a>Požadavky
 
-### <a name="attribute-context"></a>Atribut kontextu
+### <a name="attribute-context"></a>Kontext atributu
 
 |||
 |-|-|
-|**Platí pro**|Rozhraní parametrů, metody rozhraní|
-|**Opakovatelné**|Ne|
-|**Vyžadované atributy**|Žádné|
+|**Platí pro**|Parametr rozhraní, metoda rozhraní|
+|**REPEATABLE**|Ne|
+|**Požadované atributy**|Žádné|
 |**Neplatné atributy**|**retval**|
 
-Další informace o kontexty atributů najdete v tématu [kontexty atributů](cpp-attributes-com-net.md#contexts).
+Další informace o kontextech atributů naleznete v tématu kontexty [atributů](cpp-attributes-com-net.md#contexts).
 
 ## <a name="see-also"></a>Viz také:
 

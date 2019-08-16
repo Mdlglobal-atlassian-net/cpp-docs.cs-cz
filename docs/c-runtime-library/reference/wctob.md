@@ -23,16 +23,16 @@ helpviewer_keywords:
 - wctob function
 - characters, converting
 ms.assetid: 46aec98b-c2f2-4e9d-9d89-7db99ba8a9a6
-ms.openlocfilehash: 1d9dca16ca905afbc94d912a8083017ba9cc84e6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9c977bc204f4c9428a4aae09300269b1ed82d53e
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62188529"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69498957"
 ---
 # <a name="wctob"></a>wctob
 
-Určuje, zda široký znak odpovídající vícebajtového znaku a vrátí její znázornění vícebajtového znaku.
+Určuje, zda velký znak odpovídá vícebajtovým znakům a vrací jeho vícebajtovou reprezentaci znaků.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -45,17 +45,17 @@ int wctob(
 ### <a name="parameters"></a>Parametry
 
 *wchar*<br/>
-Hodnota pro převod.
+Hodnota, která se má přeložit
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Pokud **wctob –** úspěšně převede široký znak, vrátí její znázornění vícebajtového znaku pouze v případě, že je přesně jeden bajt vícebajtového znaku. Pokud **wctob –** zjistí široký znak, který nejde převést na vícebajtového znaku nebo vícebajtového znaku je přesně jeden dlouhý, vrátí -1 bajtů.
+Pokud **wctob** úspěšně převede velký znak, vrátí jeho revícebajtovou reprezentaci pouze v případě, že vícebajtový znak je přesně jeden bajt dlouhý. Pokud **wctob** narazí na velký znak, nelze převést na vícebajtový znak nebo vícebajtový znak není přesně 1 bajtem a vrátí hodnotu-1.
 
 ## <a name="remarks"></a>Poznámky
 
-**Wctob –** funkce převede široký znak, který je součástí *wchar* odpovídající vícebajtový znak předávány vrácení **int** hodnotu, pokud vícebajtovou znak je přesně jeden bajt.
+Funkce **wctob** převede velký znak obsažený v *WCHAR* na odpovídající vícebajtový znak předaný návratovou hodnotou **int** , pokud je vícebajtový znak v jednom bajtu dlouhý.
 
-Pokud **wctob –** nebylo úspěšné, ale se nenašla žádná odpovídající vícebajtový znak, funkce nastaví **errno** k **EILSEQ** a vrátí hodnotu -1.
+Pokud **wctob** nebylo úspěšné a nebyl nalezen žádný odpovídající vícebajtový znak, funkce nastaví **errno** na **EILSEQ** a vrátí-1.
 
 ## <a name="requirements"></a>Požadavky
 
@@ -63,11 +63,11 @@ Pokud **wctob –** nebylo úspěšné, ale se nenašla žádná odpovídající
 |-------------|---------------------|
 |**wctob**|\<wchar.h>|
 
-Další informace o kompatibilitě, naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Příklad
 
-Tento program ukazuje chování **wcstombs –** funkce.
+Tento program ilustruje chování funkce **wcstombs** .
 
 ```C
 // crt_wctob.c
@@ -107,4 +107,4 @@ Determined the corresponding multibyte character to be "A".
 [mbstowcs, _mbstowcs_l](mbstowcs-mbstowcs-l.md)<br/>
 [mbtowc, _mbtowc_l](mbtowc-mbtowc-l.md)<br/>
 [wctomb, _wctomb_l](wctomb-wctomb-l.md)<br/>
-[WideCharToMultiByte](/windows/desktop/api/stringapiset/nf-stringapiset-widechartomultibyte)<br/>
+[WideCharToMultiByte](/windows/win32/api/stringapiset/nf-stringapiset-widechartomultibyte)<br/>

@@ -1,5 +1,5 @@
 ---
-title: Principy (ATL) pro zpracování událostí
+title: Zásady zpracování událostí (ATL)
 ms.date: 11/04/2016
 helpviewer_keywords:
 - event handling, implementing
@@ -8,39 +8,39 @@ helpviewer_keywords:
 - dual interfaces, event interfaces
 - event handling, dual event interfaces
 ms.assetid: d17ca7cb-54f2-4658-ab8b-b721ac56801d
-ms.openlocfilehash: b882a1d356a431f75be1feb6e7bd997abed41c33
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 066c8db60afed31ceba1c9ef6f4a10d5f842e608
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62234768"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69492146"
 ---
 # <a name="event-handling-principles"></a>Principy zpracování událostí
 
-Společné pro všechny zpracování událostí jsou tři kroky. Budete muset:
+Existují tři kroky společné pro všechny zpracování událostí. Budete potřebovat:
 
-- Implementace rozhraní události na váš objekt.
+- Implementujte rozhraní události v objektu.
 
-- Doporučte zdroj události, chce přijímat události objektu.
+- Poraďte se se zdrojem událostí, který váš objekt chce přijmout události.
 
-- Když váš objekt už nebude potřeba příjem událostí, zrušíte avízo o zdroji události.
+- Pokud objekt již nepotřebuje přijímat události, odradit zdroj události.
 
-Tak, že budete implementovat rozhraní události závisí na jeho typu. Události rozhraní může být vtable, dvou nebo dispinterface. Záleží jen na návrháře k definování rozhraní zdroje událostí To je pro vás k implementaci rozhraní.
+Způsob implementace rozhraní události bude záviset na typu. Rozhraní události může být vtable, Dual nebo IDispatch. Je až do návrháře zdroje událostí pro definování rozhraní; je to až do implementace tohoto rozhraní.
 
 > [!NOTE]
->  I když neexistují žádné z technických důvodů, které nelze duální rozhraní události, existuje mnoho důvodů dobrý návrh vyhnout se použití duals. To je však rozhodnutí provedených Návrhář/implementátora události *zdroj*. Vzhledem k tomu, že pracujete z hlediska události `sink`, je nutné povolit možnost, že nemusí mít kdykoli vybíráte, ale implementace rozhraní duální události. Další informace o duální rozhraní najdete v tématu [duální rozhraní a ATL](../atl/dual-interfaces-and-atl.md).
+>  I když neexistují žádné technické důvody, že rozhraní události nemůže být duální, je k dispozici řada dobrých důvodů návrhu, abyste se vyhnuli použití duálních. Jedná se však o rozhodnutí provedené návrhářem nebo implementací *zdroje*události. Vzhledem k tomu, že pracujete z perspektivy události `sink`, je třeba umožnit možnost, že nebudete mít žádnou volbu, ale implementovat rozhraní se dvěma událostmi. Další informace o duálních rozhraních naleznete v tématu [duální rozhraní a ATL](../atl/dual-interfaces-and-atl.md).
 
-Nutnost zdroj události je možné rozdělit do tří kroků:
+Doporučuje se, abyste zdroj událostí mohli rozdělit do tří kroků:
 
-- Zadat dotaz na objekt zdroje pro [IConnectionPointContainer](/windows/desktop/api/ocidl/nn-ocidl-iconnectionpointcontainer).
+- Dotaz na zdrojový objekt pro [IConnectionPointContainer](/windows/win32/api/ocidl/nn-ocidl-iconnectionpointcontainer).
 
-- Volání [IConnectionPointContainer::FindConnectionPoint](/windows/desktop/api/ocidl/nf-ocidl-iconnectionpointcontainer-findconnectionpoint) předávání identifikátor IID rozhraní události, která vás zajímá. Pokud úspěšná, vrátí [IConnectionPoint](/windows/desktop/api/ocidl/nn-ocidl-iconnectionpoint) rozhraní na objekt bodu připojení.
+- Zavolejte [IConnectionPointContainer:: FindConnectionPoint](/windows/win32/api/ocidl/nf-ocidl-iconnectionpointcontainer-findconnectionpoint) a předejte IID rozhraní události, které vás zajímá. V případě úspěchu se vrátí rozhraní [IConnectionPoint](/windows/win32/api/ocidl/nn-ocidl-iconnectionpoint) objektu Connection Point.
 
-- Volání [IConnectionPoint::Advise](/windows/desktop/api/ocidl/nf-ocidl-iconnectionpoint-advise) předání `IUnknown` z jímky událostí. Pokud úspěšná, vrátí `DWORD` představující připojení souboru cookie.
+- Zavolejte [IConnectionPoint:: Advise](/windows/win32/api/ocidl/nf-ocidl-iconnectionpoint-advise) `IUnknown` , který předává událost jímky. Pokud se to nezdaří, vrátí `DWORD` soubor cookie, který představuje připojení.
 
-Jakmile úspěšně jste se zaregistrovali váš zájem o přijímání událostí, zavolá se podle události vyvolané zdrojový objekt metody rozhraní objektu události. Pokud už nepotřebujete příjem událostí, soubor cookie můžete předat zpět do spojovacího bodu prostřednictvím [IConnectionPoint::Unadvise](/windows/desktop/api/ocidl/nf-ocidl-iconnectionpoint-unadvise). Tím dojde k přerušení připojení mezi zdroje a jímky.
+Po úspěšném zaregistrování vašeho zájmu při přijímání událostí budou metody v rozhraní události vašeho objektu volány v závislosti na událostech vyvolaných zdrojovým objektem. Když už nepotřebujete přijímat události, můžete soubor cookie předat zpátky do spojovacího bodu pomocí [IConnectionPoint:: Unadvise](/windows/win32/api/ocidl/nf-ocidl-iconnectionpoint-unadvise). Tím dojde k přerušení připojení mezi zdrojem a jímkou.
 
-Dejte pozor, abyste se vyhnuli odkaz cykly, při zpracování událostí.
+Buďte opatrní, abyste se vyhnuli referenčním cyklům při zpracování událostí.
 
 ## <a name="see-also"></a>Viz také:
 

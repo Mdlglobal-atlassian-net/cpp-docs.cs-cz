@@ -1,21 +1,21 @@
 ---
-title: Práce s vlákny (C++ COM atribut)
+title: Threading (C++ atribut com)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.threading
 helpviewer_keywords:
 - threading attribute
 ms.assetid: 9b558cd6-fbf0-4602-aed5-31c068550ce3
-ms.openlocfilehash: cdebf06a62ebbd1d8648b9777fe200bc7a373261
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: db2940ec3536ae8ea29ba40db84ea869ecb3d0ac
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62407234"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69513927"
 ---
 # <a name="threading-c"></a>threading (C++)
 
-Určuje model vláken pro objekt modelu COM.
+Určuje model dělení na vlákna pro objekt modelu COM.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -26,44 +26,44 @@ Určuje model vláken pro objekt modelu COM.
 ### <a name="parameters"></a>Parametry
 
 *model*<br/>
-(Volitelné) Jeden z následujících modely dělení na vlákna:
+Volitelné Jeden z následujících modelů vláken:
 
-- `apartment` (podprocesový model apartment)
+- `apartment`(dělení na vlákna)
 
-- `neutral` (Součásti rozhraní .NET framework bez uživatelského rozhraní)
+- `neutral`(.NET Framework komponenty bez uživatelského rozhraní)
 
-- `single` (jednoduché dělení na vlákna)
+- `single`(jednoduché zřetězení)
 
-- `free` (bez vláken)
+- `free`(bezplatné dělení na vlákna)
 
-- `both` (objektu apartment a volných vláken)
+- `both`(vícevláknové a bezplatné podprocesy)
 
 Výchozí hodnota je `apartment`.
 
 ## <a name="remarks"></a>Poznámky
 
-**Dělení na vlákna** C++ atribut se nezobrazují v souboru IDL vygenerovaný, ale budou použity v implementaci váš objekt modelu COM.
+Atribut Threading se nezobrazí v generovaném souboru IDL, ale bude použit v implementaci objektu com. C++
 
-V projektech ATL Pokud [coclass](coclass.md) atribut je také k dispozici, model vláken určené *modelu* je předán jako parametr šablony [CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md) třídy , Vložit `coclass` atribut.
+V projektech ATL, pokud je současně atribut [Coclass](coclass.md) , je model vláken určený modelem předán jako parametr šablony `coclass` třídě [CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md) , vloženou atributem.
 
-**Dělení na vlákna** atribut také chrání přístup k [event_source](event-source.md).
+Atribut **vlákna** také chrání přístup k [event_source](event-source.md).
 
 ## <a name="example"></a>Příklad
 
-Najdete v článku [licenci](licensed.md) příklad ukázkový používání **dělení na vlákna**.
+Podívejte se [](licensed.md) na Vzorový příklad použití **vlákna**.
 
 ## <a name="requirements"></a>Požadavky
 
-### <a name="attribute-context"></a>Atribut kontextu
+### <a name="attribute-context"></a>Kontext atributu
 
 |||
 |-|-|
-|**Platí pro**|**Třída**, **– struktura**|
-|**Opakovatelné**|Ne|
-|**Vyžadované atributy**|**coclass**|
+|**Platí pro**|**Třída**, **Struktura**|
+|**REPEATABLE**|Ne|
+|**Požadované atributy**|**coclass**|
 |**Neplatné atributy**|Žádné|
 
-Další informace o kontexty atributů najdete v tématu [kontexty atributů](cpp-attributes-com-net.md#contexts).
+Další informace o kontextech atributů naleznete v tématu kontexty [atributů](cpp-attributes-com-net.md#contexts).
 
 ## <a name="see-also"></a>Viz také:
 
@@ -71,4 +71,4 @@ Další informace o kontexty atributů najdete v tématu [kontexty atributů](cp
 [Atributy klíčových slov typedef, enum, union a struct](typedef-enum-union-and-struct-attributes.md)<br/>
 [Atributy třídy](class-attributes.md)<br/>
 [Podpora multithreadingu ve starším kódu (Visual C++)](../../parallel/multithreading-support-for-older-code-visual-cpp.md)<br/>
-[Neutrální bytů](/windows/desktop/cossdk/neutral-apartments)
+[Neutrální objekty Apartment](/windows/win32/cossdk/neutral-apartments)

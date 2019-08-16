@@ -11,16 +11,16 @@ helpviewer_keywords:
 - connection points [C++], container
 - IConnectionPointContainerImpl class
 ms.assetid: 10db5a8d-8be9-4d9d-8a82-8ab9ffe3e9d6
-ms.openlocfilehash: 06baa4dac3248d783648b8ce37e51250e0de2498
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 278ca6b1b9aac9539680d90b6fa0b18df22fc2f0
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62275513"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69496015"
 ---
 # <a name="iconnectionpointcontainerimpl-class"></a>IConnectionPointContainerImpl Class
 
-Tato třída implementuje kontejner bod připojení pro správu kolekce [IConnectionPointImpl](../../atl/reference/iconnectionpointimpl-class.md) objekty.
+Tato třída implementuje kontejner spojovacího bodu pro správu kolekce objektů [IConnectionPointImpl](../../atl/reference/iconnectionpointimpl-class.md) .
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -33,26 +33,26 @@ class ATL_NO_VTABLE IConnectionPointContainerImpl
 #### <a name="parameters"></a>Parametry
 
 *T*<br/>
-Vaše třída odvozena od `IConnectionPointContainerImpl`.
+Vaše třída, která je `IConnectionPointContainerImpl`odvozena z.
 
 ## <a name="members"></a>Členové
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
-|[IConnectionPointContainerImpl::EnumConnectionPoints](#enumconnectionpoints)|Vytvoří čítač k iteraci v rámci spojovací body v umožňující připojení k objektu podporována.|
-|[IConnectionPointContainerImpl::FindConnectionPoint](#findconnectionpoint)|Načte ukazatel do bodu připojení, která podporuje zadaný identifikátor IID rozhraní.|
+|[IConnectionPointContainerImpl::EnumConnectionPoints](#enumconnectionpoints)|Vytvoří enumerátor pro iteraci přes spojovací body podporované objektem, který lze připojit.|
+|[IConnectionPointContainerImpl::FindConnectionPoint](#findconnectionpoint)|Načte ukazatel rozhraní na spojovací bod, který podporuje zadaný identifikátor IID.|
 
 ## <a name="remarks"></a>Poznámky
 
-`IConnectionPointContainerImpl` implementuje kontejner bod připojení pro správu kolekce [IConnectionPointImpl](../../atl/reference/iconnectionpointimpl-class.md) objekty. `IConnectionPointContainerImpl` nabízí dvě metody, které klient volat, když Chci získat další informace o umožňující připojení k objektu:
+`IConnectionPointContainerImpl`implementuje kontejner spojovacího bodu pro správu kolekce objektů [IConnectionPointImpl](../../atl/reference/iconnectionpointimpl-class.md) . `IConnectionPointContainerImpl`poskytuje dvě metody, které může klient volat a získat další informace o připojeném objektu:
 
-- `EnumConnectionPoints` umožňuje klientovi k určení, které odchozí rozhraní podporuje objektu.
+- `EnumConnectionPoints`umožňuje klientovi určit, která odchozí rozhraní objekt podporuje.
 
-- `FindConnectionPoint` umožňuje klientovi k určení, zda objekt podporuje určité odchozí rozhraní.
+- `FindConnectionPoint`umožňuje klientovi určit, zda objekt podporuje konkrétní odchozí rozhraní.
 
-Informace o použití spojovacích bodů v ATL, najdete v článku [spojovací body](../../atl/atl-connection-points.md).
+Informace o použití bodů připojení v knihovně ATL najdete v článku [body připojení](../../atl/atl-connection-points.md).
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
@@ -62,11 +62,11 @@ Informace o použití spojovacích bodů v ATL, najdete v článku [spojovací b
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** atlcom
+**Záhlaví:** atlcom. h
 
-##  <a name="enumconnectionpoints"></a>  IConnectionPointContainerImpl::EnumConnectionPoints
+##  <a name="enumconnectionpoints"></a>IConnectionPointContainerImpl::EnumConnectionPoints
 
-Vytvoří čítač k iteraci v rámci spojovací body v umožňující připojení k objektu podporována.
+Vytvoří enumerátor pro iteraci přes spojovací body podporované objektem, který lze připojit.
 
 ```
 STDMETHOD(EnumConnectionPoints)(IEnumConnectionPoints** ppEnum);
@@ -74,11 +74,11 @@ STDMETHOD(EnumConnectionPoints)(IEnumConnectionPoints** ppEnum);
 
 ### <a name="remarks"></a>Poznámky
 
-Zobrazit [IConnectionPointContainer::EnumConnectionPoints](/windows/desktop/api/ocidl/nf-ocidl-iconnectionpointcontainer-enumconnectionpoints) ve Windows SDK.
+Viz [IConnectionPointContainer:: EnumConnectionPoints](/windows/win32/api/ocidl/nf-ocidl-iconnectionpointcontainer-enumconnectionpoints) v Windows SDK.
 
-##  <a name="findconnectionpoint"></a>  IConnectionPointContainerImpl::FindConnectionPoint
+##  <a name="findconnectionpoint"></a>IConnectionPointContainerImpl::FindConnectionPoint
 
-Načte ukazatel do bodu připojení, která podporuje zadaný identifikátor IID rozhraní.
+Načte ukazatel rozhraní na spojovací bod, který podporuje zadaný identifikátor IID.
 
 ```
 STDMETHOD(FindConnectionPoint)(REFIID riid, IConnectionPoint** ppCP);
@@ -86,9 +86,9 @@ STDMETHOD(FindConnectionPoint)(REFIID riid, IConnectionPoint** ppCP);
 
 ### <a name="remarks"></a>Poznámky
 
-Zobrazit [IConnectionPointContainer::FindConnectionPoint](/windows/desktop/api/ocidl/nf-ocidl-iconnectionpointcontainer-findconnectionpoint) ve Windows SDK.
+Viz [IConnectionPointContainer:: FindConnectionPoint](/windows/win32/api/ocidl/nf-ocidl-iconnectionpointcontainer-findconnectionpoint) v Windows SDK.
 
 ## <a name="see-also"></a>Viz také:
 
-[IConnectionPointContainer](/windows/desktop/api/ocidl/nn-ocidl-iconnectionpointcontainer)<br/>
-[Přehled tříd](../../atl/atl-class-overview.md)
+[IConnectionPointContainer](/windows/win32/api/ocidl/nn-ocidl-iconnectionpointcontainer)<br/>
+[Přehled třídy](../../atl/atl-class-overview.md)

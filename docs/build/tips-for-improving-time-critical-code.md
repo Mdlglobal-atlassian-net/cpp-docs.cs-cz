@@ -30,36 +30,36 @@ helpviewer_keywords:
 - _lfind function
 - heap allocation, time-critical code performance
 ms.assetid: 3e95a8cc-6239-48d1-9d6d-feb701eccb54
-ms.openlocfilehash: 97a9a54be1b322edfe8cfeca84e03f9a6766b8fe
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 828a0c49440b4fd2e1f3ae10514ffb86b2315ebd
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62314712"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69498113"
 ---
 # <a name="tips-for-improving-time-critical-code"></a>Tipy pro zlepšení časově kritického kódu
 
-Zápis rychlý kód vyžaduje pochopení všechny aspekty vaší aplikace a jak komunikuje se službou systému. Toto téma navrhuje alternativy k některým jasnější technikám kódování vám pomohou zajistit uspokojivě provádět náročné části kódu.
+Psaní rychlého kódu vyžaduje porozumění všem aspektům vaší aplikace a způsobu, jakým komunikuje se systémem. Toto téma navrhuje alternativy k některým z jasnějších technik kódování, které vám pomůžou zajistit uspokojivý chod částí kódu v kritickém čase.
 
-Souhrnně řečeno, zlepšení časově kritického kódu vyžaduje, aby vás:
+Pro shrnutí, vylepšení časově kritického kódu, je třeba provést následující:
 
-- Vědět, které části programu musí být rychlé.
+- Zjistěte, které části programu musí být rychlé.
 
-- Vědět, velikost a rychlost kódu.
+- Zjistěte velikost a rychlost kódu.
 
-- Vědět, náklady na nové funkce.
+- Poznejte náklady na nové funkce.
 
-- Zjistěte minimální úsilí nutné k provedení úlohy.
+- Zjistěte minimální práci potřebnou k provedení úlohy.
 
-Pro shromažďování informací o výkon kódu, můžete použít nástroje Sledování výkonu (perfmon.exe).
+Chcete-li shromáždit informace o výkonu kódu, můžete použít nástroj sledování výkonu (Perfmon. exe).
 
-## <a name="sections-in-this-article"></a>Části v tomto článku
+## <a name="sections-in-this-article"></a>Části tohoto článku
 
-- [Neúspěšné přístupy do mezipaměti a stránkování](#_core_cache_hits_and_page_faults)
+- [Neúspěšné přístupy do mezipaměti a chyby stránek](#_core_cache_hits_and_page_faults)
 
-- [Řazení a vyhledávání](#_core_sorting_and_searching)
+- [Řazení a hledání](#_core_sorting_and_searching)
 
-- [Knihovny MFC a knihovny tříd](#_core_mfc_and_class_libraries)
+- [MFC a knihovny tříd](#_core_mfc_and_class_libraries)
 
 - [Sdílené knihovny](#vcovrsharedlibraries)
 
@@ -67,95 +67,95 @@ Pro shromažďování informací o výkon kódu, můžete použít nástroje Sle
 
 - [Vlákna](#_core_threads)
 
-- [Malé pracovní sady](#_core_small_working_set)
+- [Malá pracovní sada](#_core_small_working_set)
 
-##  <a name="_core_cache_hits_and_page_faults"></a> Neúspěšné přístupy do mezipaměti a stránkování
+##  <a name="_core_cache_hits_and_page_faults"></a>Neúspěšné přístupy do mezipaměti a chyby stránek
 
-Vynechalo přístupů do mezipaměti na obou interních a externích mezipaměti, i stránkování (že přejdete do sekundárního úložiště pokyny programu a data) způsobit snížení výkonu aplikace.
+Neúspěšné přístupy do mezipaměti v interní i externí mezipaměti i chyby stránek (v případě pokynů k sekundárnímu úložišti pro instrukce a data programu) zpomalují výkon programu.
 
-Počet vstupů do mezipaměti využití procesoru může stát program 10-20 hodinových cyklů. Počet vstupů do mezipaměti externího vakcíny stojí 20 – 40 hodinových cyklů. Stránkování vakcíny stojí jednoho milionu hodinových cyklů (za předpokladu, že procesor, který zpracovává 500 milionů pokyny za sekundu a době 2 milisekund pro stránkování). Proto je v nejlepším zájmu provádění programu napsat kód, který se sníží počet přístupů k mezipaměti zmeškaných a stránkování.
+Dosažení mezipaměti CPU může mít za cenu program 10-20 hodinových cyklů. Dosažení externích mezipamětí může mít náklady na 20-40 hodinových cyklů. Selhání stránky může nákladové cykly 1 000 000 hodin (za předpokladu, že procesor zpracovává pokyny 500 000 000/s a čas 2 milisekund pro chybu stránky). Proto je v nejlepším zájmu při provádění programu napsat kód, který sníží počet chyb zmeškaných přístupů do mezipaměti a chyby stránek.
 
-Jedním z důvodů pomalého programy je, že trvat další chyby stránky nebo častěji, než je nutné si ujít mezipaměti. Abyste tomu předešli, je důležité použít datových struktur s dobrou místo odkazu, což znamená, že zachování souvisejících věcí najednou. Někdy datová struktura, která vypadá skvělé se ukázalo horrible kvůli špatnému obec odkazu a někdy naopak má hodnotu true. Tady jsou dva příklady:
+Jedním z důvodů pomalých programů je to, že nastanou větší počet chyb stránek nebo nezpůsobí ukládání mezipaměti častěji, než je nutné. Aby k tomu nedocházelo, je důležité používat datové struktury se správnou místní referencí, což znamená udržení souvisejících věcí dohromady. Někdy se může stát, že datová struktura, která vypadá dobře, je Horrible z důvodu špatného lokálního odkazu a někdy je opak true. Tady jsou dva příklady:
 
-- Dynamicky přidělené propojené seznamy může snížit výkon aplikace, protože při hledání položky nebo při procházení seznamu na konci každé přeskočené propojení může přijít o mezipaměti nebo způsobit stránkování. Seznam provádění podle jednoduchých polí může být ve skutečnosti mnohem rychlejší z důvodu lepší ukládání do mezipaměti a méně chyb stránek i – umožňuje skutečnost, že pole může být obtížnější růst, stále může být rychlejší.
+- Dynamicky přidělené propojené seznamy můžou snížit výkon programu, protože když hledáte položku nebo předáte seznam na konec, může každý vynechaný odkaz přijít o mezipaměť nebo způsobit chybu stránky. Implementace seznamu založená na jednoduchých polích může být mnohem rychlejší kvůli lepšímu ukládání do mezipaměti a menšímu počtu chyb stránek, a to i v případě, že by bylo těžké růst pole, stále může být rychlejší.
 
-- Zatřiďovacích tabulek, které používají dynamicky přidělené propojené seznamy může snížit výkon. Při rozšíření i pro, můžou provádět zatřiďovacích tabulek, které používají dynamicky přidělené propojené seznamy pro uložení jejich obsah podstatně horší. Ve skutečnosti v konečné fázi jednoduché lineární hledání prostřednictvím pole může být ve skutečnosti rychlejší (v závislosti na okolnostech). Na základě poli zatřiďovacích tabulek (takzvané "uzavřené hashování") je implementace často přehlédnuta často jehož špičkový výkon.
+- Tabulky hash využívající dynamicky přidělené propojené seznamy můžou snížit výkon. Tabulky hash, které používají dynamicky přidělené propojené seznamy pro ukládání obsahu, mohou být prováděny podstatně horší. Ve skutečnosti může být při konečné analýze jednoduché lineární hledání prostřednictvím pole rychlejší (v závislosti na okolnostech). Tabulky hash založené na poli (tzv. "uzavřené hashing") jsou často převedená implementace, která má často výkon.
 
-##  <a name="_core_sorting_and_searching"></a> Řazení a vyhledávání
+##  <a name="_core_sorting_and_searching"></a>Řazení a hledání
 
-Řazení je ze své podstaty časově ve srovnání s mnoho typických operací. Nejlepší způsob, jak se vyhnout zbytečným zpomalení je vyhnout řazení v kritické časech. Možná budete moci:
+Řazení je ze své podstaty časově náročná v porovnání s mnoha typickými operacemi. Nejlepším způsobem, jak se vyhnout zbytečnému zpomalení, je vyhnout se řazení v kritických časech. Možná budete mít tyto možnosti:
 
-- Odložte, třídění méně důležité pro výkon dobu.
+- Odložit řazení do doby nekritického výkonu.
 
-- Řazení dat během starší, méně důležité pro výkon.
+- Seřaďte data k dřívějšímu nekritickému času, který nebudete mít na výkon.
 
-- Seřadit pouze část dat, které skutečně potřebuje řazení.
+- Seřadit pouze část dat, která skutečně potřebují řazení.
 
-V některých případech můžete vytvořit seznam v seřazeném pořadí. Buďte opatrní, protože pokud potřebujete k vložení dat v seřazeném pořadí, můžete vyžadovat složitější struktury dat s špatnému obec odkazu, což vede k Neúspěšné přístupy do mezipaměti a stránkování. Neexistuje žádný přístup, který funguje ve všech případech. Zkuste několik přístupů a měření rozdílů.
+V některých případech můžete seznam sestavit v setříděném pořadí. Buďte opatrní. vzhledem k tomu, že pokud potřebujete vkládat data do seřazeného pořadí, možná budete potřebovat složitější datovou strukturu s slabými místními odkazy, což vede k neúspěšným chybám a chybám stránky. Neexistuje žádný přístup, který funguje ve všech případech. Vyzkoušejte několik přístupů a změřte rozdíly.
 
-Zde jsou některé obecné tipy pro řazení:
+Tady jsou některé obecné tipy pro řazení:
 
-- Chcete-li minimalizovat chyby pomocí uložených řazení.
+- K minimalizaci chyb použijte řazení na skladě.
 
-- Jakékoli práce, které vám pomůžou předem snižuje složitost řazení se vyplatí. Pokud jednorázové heslo nad vašimi daty zjednodušuje porovnání a řazení do O(n) snižuje O (protokolu n n), můžete se téměř jistě přijdete dopředu.
+- Veškerá práce, kterou můžete provést předem, abyste snížili složitost řazení, je smyslem. Pokud se při jednorázovém průchodu vaše data zjednodušují porovnání a snižuje se řazení z (n protokolu n) na O (n), bude to skoro určitě.
 
-- Představte si místo odkazu algoritmus řazení a očekáváte, že jeho spuštění v datech.
+- Zamyslete se nad ohledem na použití algoritmu řazení a dat, na kterých očekáváte, aby běžela.
 
-Neexistují nějaké alternativy méně pro vyhledávání než řazení. Pokud je kritický pro čas hledání, binární vyhledávací tabulky vyhledávání nebo hodnoty hash je téměř vždy nejvhodnější, ale stejně jako u řazení, musí mít na paměti umístění. Lineární hledání prostřednictvím malé pole může být rychlejší než binární vyhledávání prostřednictvím datová struktura s velkým množstvím ukazatele, který způsobí, že chyby stránky nebo Neúspěšné přístupy do mezipaměti.
+Pro vyhledávání je k dispozici méně alternativních možností než řazení. Pokud je hledání kritické pro čas, binární hledání nebo vyhledávání v tabulce hash je téměř vždy nejlepší, ale stejně jako při řazení, je nutné mít na paměti místní význam. Lineární hledání v malém poli může být rychlejší než binární hledání prostřednictvím datové struktury s velkým počtem ukazatelů, které způsobují chyby stránky nebo Neúspěšné přístupy do mezipaměti.
 
-##  <a name="_core_mfc_and_class_libraries"></a> Knihovny MFC a knihovny tříd
+##  <a name="_core_mfc_and_class_libraries"></a>MFC a knihovny tříd
 
-Microsoft Foundation Classes (MFC) může výrazně zjednodušit psaní kódu. Při zápisu časově kritického kódu, byste měli vědět systému vyplývajících z některé třídy režijní náklady. Zkontrolujte kód knihovny MFC, která časově kritického kódu používá a zjistěte, jestli splňuje vaše požadavky na výkon. Následující seznam uvádí MFC – třídy a funkce, které byste měli vědět:
+Microsoft Foundation Classes (MFC) může značně zjednodušit psaní kódu. Při psaní kódu kritického pro čas byste měli být vědomi režie vyplývající z některých tříd. Prohlédněte si kód knihovny MFC, který váš kód kritický pro čas používá k zobrazení, jestli splňuje vaše požadavky na výkon. Následující seznam identifikuje třídy a funkce knihovny MFC, o kterých byste měli vědět:
 
-- `CString` Volání knihovny run-time jazyka C se přidělit paměť pro knihovny MFC [CString](../atl-mfc-shared/reference/cstringt-class.md) dynamicky. Obecně řečeno `CString` je tak efektivní jako jakýkoli jiný řetězec přidělí dynamicky. Stejně jako u jakékoli dynamicky přidělené řetězec má režii dynamické přidělování a uvolňování. Často jednoduchý `char` pole v zásobníku může sloužit ke stejnému účelu a je rychlejší. Nepoužívejte `CString` pro uložení konstantní řetězec. Místo nich se používá `const char *`. Všechny operace můžete provádět pomocí `CString` objekt má režijní náklady. Použití knihovny run-time [řetězec funkce](../c-runtime-library/string-manipulation-crt.md) může být rychlejší.
+- `CString`Knihovna MFC volá knihovnu run-time jazyka C k dynamickému přidělování paměti pro [CString](../atl-mfc-shared/reference/cstringt-class.md) . Obecně řečeno, `CString` je stejně efektivní jako jakýkoliv jiný dynamicky přidělovaných řetězec. Stejně jako u jakéhokoli dynamicky přiděleného řetězce má režijní náklady na dynamické přidělování a vydanou verzi. Jednoduché `char` pole v zásobníku může často sloužit ke stejnému účelu a je rychlejší. Nepoužívejte `CString` k uložení konstantního řetězce. Místo nich se používá `const char *`. Jakákoli operace, kterou u `CString` objektu provedete, má nějakou režii. Použití [řetězcových funkcí](../c-runtime-library/string-manipulation-crt.md) knihovny run-time může být rychlejší.
 
-- `CArray` A [carray –](../mfc/reference/carray-class.md) poskytuje flexibilitu, že regulární pole nemá, ale váš program, který nemusí. Pokud znáte konkrétní omezení pro pole, můžete použít globální pole dlouhodobého místo. Pokud používáte `CArray`, použijte `CArray::SetSize` vytvoření jeho velikost a počet prvků, které roste při přerozdělení je nutné zadat. V opačném případě přidání prvků může způsobit vaše pole často nevyčerpané a zkopírovat, což je neefektivní a může fragmentovat paměti. Vzít v úvahu taky, pokud vložení položky do pole, `CArray` přesune dalších položek v paměti a může potřebnou k růstu pole. Tato akce může způsobit Neúspěšné přístupy do mezipaměti a stránkování. Pokud si projít kód, který používá knihovnu MFC, může se zobrazit, že vám něco konkrétnější zápisu pro váš scénář pro zvýšení výkonu. Protože `CArray` je šablona, například můžete zadat `CArray` specializace pro konkrétní typy.
+- `CArray`[CArray –](../mfc/reference/carray-class.md) poskytuje flexibilitu, že se nejedná o běžné pole, ale program to nemusí potřebovat. Pokud znáte konkrétní omezení pro pole, můžete místo toho použít globální pevné pole. Použijete-li `CArray::SetSize` ,použijtekurčeníjehovelikostiaurčenípočtuprvků,podlekterýchserozrůstá,kdyžjenutnépřerozdělení.`CArray` V opačném případě přidávání prvků může způsobit, že vaše pole bude často znovu přiděleno a zkopírováno, což je neefektivní a může fragmentovat paměť. Všimněte si také, že pokud vložíte položku do pole, `CArray` přesune následné položky v paměti a může být nutné ji zvětšit. Tyto akce můžou způsobit Neúspěšné přístupy do mezipaměti a chyby stránek. Pokud se podíváte na kód, který knihovna MFC používá, můžete si všimnout, že pro zlepšení výkonu můžete napsat něco konkrétnějšího pro váš scénář. Vzhledem `CArray` k tomu, že je šablona, například můžete poskytnout `CArray` specializace pro konkrétní typy.
 
-- `CList` [CList –](../mfc/reference/clist-class.md) je dvakrát propojený seznam, tedy vložení elementu rychle v čele, konec a na známé pozici (`POSITION`) v seznamu. Hledání elementu podle hodnoty nebo indexu vyžaduje sekvenčního vyhledávání, ale může být pomalé, pokud je dlouhý seznam. Pokud váš kód nevyžaduje dvakrát propojený seznam můžete chtít zvážit použití `CList`. Pomocí jednotlivě propojený seznam šetří režii aktualizace další ukazatele pro všechny operace a paměť pro tento ukazatel. Další paměť není skvělé, ale je další možnost pro Neúspěšné přístupy do mezipaměti nebo chyby stránek.
+- `CList`[CList –](../mfc/reference/clist-class.md) je dvakrát propojený seznam, takže vkládání elementů je rychlé na pozici Head, Tail a na známé pozici (`POSITION`) v seznamu. Vyhledávání elementu podle hodnoty nebo indexu vyžaduje sekvenční hledání, což může být pomalé v případě, že je seznam dlouhý. Pokud váš kód nevyžaduje dvakrát propojený seznam, budete možná chtít znovu zvážit použití `CList`. Když použijete jednotlivě propojený seznam, ušetří se tím režie aktualizace dalšího ukazatele pro všechny operace a také paměti pro tento ukazatel. Další paměť není Skvělé, ale je to další příležitost pro Neúspěšné přístupy do mezipaměti nebo chyby stránek.
 
-- `IsKindOf` Tato funkce může generovat mnoho volání a přístup k velké množství paměti v různých datových oblastí, což vede k chybné lokalitě odkazu. Je užitečné pro sestavení pro ladění (v volání metody ASSERT, například), ale snažte se vyhnout použití v sestavení pro vydání.
+- `IsKindOf`Tato funkce může vygenerovat mnoho volání a získat přístup k velkému množství paměti v různých oblastech dat, což vede k špatnému národnímu vztahu. Je užitečné pro sestavení ladění (například ve volání kontrolního výrazu), ale pokusit se ho vyhnout v sestavení pro vydání.
 
-- `PreTranslateMessage` Použití `PreTranslateMessage` při strom windows potřebuje různé klávesové zkratky nebo při zpracování zpráv je třeba vložit na pumpu zpráv. `PreTranslateMessage` mění odesílání zpráv knihovny MFC. Pokud přepíšete `PreTranslateMessage`, takže pouze na úrovni potřebné. Není například nutné přepsat `CMainFrame::PreTranslateMessage` Pokud vás zajímá pouze zprávy, že přejdete na podřízené položky v konkrétním zobrazení. Přepsat `PreTranslateMessage` zobrazení tříd – místo toho.
+- `PreTranslateMessage`Použijte `PreTranslateMessage` v případě, že konkrétní stromová struktura systému Windows potřebuje jiné klávesové zkratky nebo když je nutné do tohoto čerpadla zpráv vložit zpracování zpráv. `PreTranslateMessage`změní odesílací zprávy knihovny MFC. Pokud přepíšete `PreTranslateMessage`, udělejte to pouze na úrovni, kterou potřebujete. Například není nutné potlačit `CMainFrame::PreTranslateMessage` , pokud vás zajímá pouze zprávy, které se budou napojovat do podřízených objektů konkrétního zobrazení. Místo `PreTranslateMessage` toho přepište pro třídu zobrazení.
 
-   Cesta normální odeslání není obejít pomocí `PreTranslateMessage` chcete zpracovávat všechny zprávy odeslané do libovolného okna. Použití [procedury okna](../mfc/registering-window-classes.md) a mapy zpráv knihovny MFC pro tento účel.
+   Nepoužívejte normální cestu pro odeslání pomocí `PreTranslateMessage` rutiny k zpracování jakékoli zprávy odeslané do jakéhokoli okna. Pro tento účel použijte [procedury okna](../mfc/registering-window-classes.md) a mapy zpráv knihovny MFC.
 
-- `OnIdle` Nečinnosti může dojít k událostem v některých případech nepočítáte, například mezi `WM_KEYDOWN` a `WM_KEYUP` události. Časovače může být efektivnější způsob, jak aktivovat váš kód. Nesnažte se vynutit `OnIdle` opakovaně volat vygenerováním false zprávy nebo tak, že vždy vrací `TRUE` z přepsání `OnIdle`, které by nikdy umožňují vaše vlákno do režimu spánku. Znovu časovač nebo samostatném vlákně může být vhodnější.
+- `OnIdle`Nečinné události mohou nastat v časech, které neočekáváte, například `WM_KEYDOWN` mezi `WM_KEYUP` událostmi a. Časovače můžou být efektivnějším způsobem, jak váš kód aktivovat. Nevynuťte `OnIdle` opakované volání vygenerováním falešných zpráv nebo vrácením `TRUE` z přepsání `OnIdle`, které nikdy nedovolí vašemu vláknu přejít do režimu spánku. Znovu, časovač nebo samostatné vlákno může být vhodnější.
 
-##  <a name="vcovrsharedlibraries"></a> Sdílené knihovny
+##  <a name="vcovrsharedlibraries"></a>Sdílené knihovny
 
-Opakované využívání kódu je žádoucí. Ale pokud se chystáte použít kód někoho jiného, je by měl Ujistěte se, že víte přesně co to dělá v těchto případech, kde je nejdůležitější pro vás výkon. Nejlepší způsob, jak pochopit je krokování zdrojový kód nebo na základě měření pomocí nástrojů, jako je PView nebo sledování výkonu.
+Opětovné použití kódu je žádoucí. Pokud však použijete kód někoho jiného, měli byste se ujistit, že přesně víte, co v nich dělá v případě, kdy je pro vás důležitý výkon. Nejlepším způsobem, jak to pochopit, je prokrokování zdrojového kódu nebo měření pomocí nástrojů, jako je PView nebo sledování výkonu.
 
-##  <a name="_core_heaps"></a> Haldy
+##  <a name="_core_heaps"></a>Haldy
 
-Použití více haldy se podle vlastního uvážení. Další haldy vytvořené pomocí `HeapCreate` a `HeapAlloc` vám umožňují spravovat a pak vyřadit související sadu přidělení. Není potvrzení příliš mnoho paměti. Pokud používáte více haldy, věnujte zvláštní pozornost množství paměti, které je zpočátku potvrzeny.
+Použijte více hald s uvážením. Další haldy vytvořené pomocí `HeapCreate` a `HeapAlloc` umožňují spravovat a následně disponovat související sadou přidělení. Nepotvrzujte příliš mnoho paměti. Pokud používáte více hald, věnujte zvláštní pozornost množství paměti, která je původně potvrzena.
 
-Místo více haldy můžete v pomocných funkcí rozhraní mezi kódu a výchozí haldy. Pomocné funkce usnadnění vlastní přidělení strategie může zlepšit výkon vaší aplikace. Například pokud je často provést přidělení malých, můžete lokalizovat tyto přidělení na jednu část výchozí haldy. Můžete přidělit velké blok paměti a potom pomocí funkce pomocné rutiny suballocate z tohoto bloku. Pokud to uděláte, nebudete mít další haldy se nevyužitý paměťový protože přidělení pochází z výchozí haldy.
+Místo více hald lze použít funkce pomocníka k rozhraní mezi kódem a výchozí haldou. Pomocné funkce usnadňují vlastní strategie přidělování, které mohou zlepšit výkon aplikace. Například pokud často provádíte menší přidělení, je vhodné lokalizovat tato přidělení do jedné části výchozí haldy. Můžete přidělit velký blok paměti a potom použít pomocnou funkci k rozdělení z tohoto bloku. Pokud to uděláte, nebudete mít k dispozici další haldy s nepoužitou pamětí, protože přidělení vychází z výchozí haldy.
 
-V některých případech však pomocí výchozí haldy můžete snížit místo odkazu. K měření účinky přesouvání objektů na haldě haldy použijte prohlížeč procesu, nástroje Spy ++ nebo sledování výkonu.
+V některých případech však může použití výchozí haldy snížit národní prostředí. Pro měření efektů přesunutí objektů z haldy do haldy použijte program Prohlížeč procesů, Spy + + nebo sledování výkonu.
 
-Měření vaší haldy, můžete účet pro každou přidělení na haldě. Použití za běhu C [rutiny haldy ladění](/visualstudio/debugger/crt-debug-heap-details) kontrolního bodu a vypsat vaší haldy. Může číst výstup do tabulky programu, jako je Microsoft Excel a zobrazíte výsledky pomocí kontingenční tabulky. Poznámka: Celkový počet, velikost a rozmístění přidělení. Porovnání těchto prvků s velikost pracovní sady. Podívejte se také na Clustering s velikostí související objekty.
+Změřte své haldy, abyste se mohli přihlédnout ke každému přidělení haldy. Použijte [rutiny ladění](/visualstudio/debugger/crt-debug-heap-details) běhového prostředí C k vytvoření kontrolního bodu a výpisu paměti haldy. Výstup můžete načíst do tabulkového programu, jako je Microsoft Excel, a použít k zobrazení výsledků kontingenční tabulky. Všimněte si celkového počtu, velikosti a distribuce přidělení. Porovnejte je s velikostí pracovních sad. Podívejte se také na clustering objektů s příbuznou velikostí.
 
-Čítače výkonu můžete použít také k monitorování využití paměti.
+K monitorování využití paměti můžete také použít čítače výkonu.
 
-##  <a name="_core_threads"></a> Vlákna
+##  <a name="_core_threads"></a>Vláken
 
-Pro úlohy na pozadí může být rychlejší než používání vláken efektivní nečinnosti zpracování událostí. Je snazší porozumět místo odkazu v aplikaci s jedním vláknem.
+Pro úlohy na pozadí může být efektivní nečinné zpracování událostí rychlejší než použití vláken. V programu s jedním vláknem je snazší pochopit informace o lokálních odkazech.
 
-Základním pravidlem je použít vlákno pouze v případě, je oznámení o operační systém, který můžete zablokovat v kořenovém adresáři práce na pozadí. Vlákna jsou nejlepším řešením v takovém případě, protože je nepraktické blokování hlavního vlákna pro událost.
+Dobrým pravidlem je použití vlákna pouze v případě, že je oznámení operačního systému, které jste zablokovali, v kořenu práce na pozadí. Vlákna představují nejlepší řešení v takovém případě, protože je nepraktické zablokovat hlavní vlákno v události.
 
-Vlákna jsou k dispozici také komunikační problémy. Spravujte komunikační propojení mezi vlákny, seznam zpráv nebo přidělení a využití sdílené paměti. Správa propojení komunikace obvykle vyžaduje synchronizaci nedošlo ke konfliktům časování a zablokování problémy. Tato složitost můžete snadno změnit na chyby a problémy s výkonem.
+Vlákna také představují problémy s komunikací. Je nutné spravovat komunikační propojení mezi vlákny, seznamem zpráv nebo přidělením a použitím sdílené paměti. Správa komunikačního propojení obvykle vyžaduje synchronizaci, aby nedocházelo k problémům s konflikty časování a zablokování. Tato složitost může snadno zapínat chyby a problémy s výkonem.
 
-Další informace najdete v tématu [zpracování smyčky nečinnosti](../mfc/idle-loop-processing.md) a [Multithreading](../parallel/multithreading-support-for-older-code-visual-cpp.md).
+Další informace naleznete v tématu [zpracování smyčky nečinnosti](../mfc/idle-loop-processing.md) a [Multithreading](../parallel/multithreading-support-for-older-code-visual-cpp.md).
 
-##  <a name="_core_small_working_set"></a> Malé pracovní sady
+##  <a name="_core_small_working_set"></a>Malá pracovní sada
 
-Menší pracovní sady znamená lepší místo odkazu na méně chyb stránky a více přístupů k mezipaměti. Pracovní sada procesu je nejbližší metriku, kterou operační systém poskytuje přímo pro měření místo odkazu.
+Menší pracovní sady znamenají lepší lokální informace, méně chyb stránek a další přístupy do mezipaměti. Pracovní sada procesu je nejbližší metrika, kterou operační systém přímo poskytuje k měření národní části Reference.
 
-- Pokud chcete nastavit horní a dolní limity pracovního sadě, použijte [SetProcessWorkingSetSize](/windows/desktop/api/winbase/nf-winbase-getprocessworkingsetsize).
+- K nastavení horních a dolních omezení pracovní sady použijte [SetProcessWorkingSetSize](/windows/win32/api/winbase/nf-winbase-getprocessworkingsetsize).
 
-- Horní a dolní limity pracovního sadě, použijte [GetProcessWorkingSetSize](/windows/desktop/api/winbase/nf-winbase-setprocessworkingsetsize).
+- K získání horních a dolních omezení pracovní sady použijte [GetProcessWorkingSetSize](/windows/win32/api/winbase/nf-winbase-setprocessworkingsetsize).
 
-- Pokud chcete zobrazit velikost pracovní sady, použijte nástroje Spy ++.
+- Chcete-li zobrazit velikost pracovní sady, použijte příkaz Spy + +.
 
 ## <a name="see-also"></a>Viz také:
 

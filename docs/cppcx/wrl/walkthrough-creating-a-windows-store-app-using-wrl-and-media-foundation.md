@@ -1,85 +1,85 @@
 ---
-title: 'Návod: Vytvoření aplikace UPW s použitím knihovny WRL a platformy Media Foundation'
+title: 'Návod: Vytvoření aplikace pro UPW s použitím knihovny WRL a platformy Media Foundation'
 ms.date: 04/23/2019
 ms.topic: reference
 ms.assetid: 0336c550-fbeb-4dc4-aa9b-660f9fc45382
-ms.openlocfilehash: 1eee353bb13a3fa03fda42c3d0f7a4103dc5ad13
-ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
+ms.openlocfilehash: ac2c16fb94646af7445d41010253967be126636a
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66450154"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69498308"
 ---
-# <a name="walkthrough-creating-a-uwp-app-using-wrl-and-media-foundation"></a>Návod: Vytvoření aplikace UPW s použitím knihovny WRL a platformy Media Foundation
+# <a name="walkthrough-creating-a-uwp-app-using-wrl-and-media-foundation"></a>Návod: Vytvoření aplikace pro UPW s použitím knihovny WRL a platformy Media Foundation
 
 > [!NOTE]
-> Pro nové aplikace pro UPW a komponenty, doporučujeme použít [ C++/WinRT](/windows/uwp/cpp-and-winrt-apis/), nový standard C ++ 17 jazyk projekci pro rozhraní API Windows Runtime. C++/ WinRT je k dispozici v sadě SDK Windows 10 verze 1803 dále. C++/ WinRT je implementovaný zcela v souborech hlaviček a je navržené pro poskytování je prvotřídní přístup k moderní rozhraní Windows API.
+> Pro nové aplikace a komponenty UWP doporučujeme používat [ C++/WinRT](/windows/uwp/cpp-and-winrt-apis/), novou standardní projekci jazyka c++ 17 pro prostředí Windows Runtime API. C++/WinRT je k dispozici v sadě Windows 10 SDK od verze 1803 další. C++/WinRT je implementováno zcela v hlavičkových souborech a je navrženo tak, aby vám poskytovala prvotřídní přístup k modernímu rozhraní Windows API.
 
-V tomto kurzu se dozvíte, jak pomocí prostředí Windows Runtime C++ šablony knihovny (WRL) k vytvoření aplikace pro univerzální platformu Windows (UPW), který používá [Microsoft Media Foundation](/windows/desktop/medfound/microsoft-media-foundation-sdk).
+V tomto kurzu se naučíte, jak pomocí knihovny šablon prostředí Windows Runtime C++ (WRL) vytvořit aplikaci Univerzální platforma Windows (UWP), která používá [Microsoft Media Foundation](/windows/win32/medfound/microsoft-media-foundation-sdk).
 
-Tento příklad vytvoří vlastní transformace Media Foundation, která se použije ve stupních šedi mohou mít vliv na obrázky, které jsou zachyceny z webová kamera. Aplikace C++ používá k definování vlastní transformace a C# použít komponenty pro transformaci zaznamenané Image.
-
-> [!NOTE]
-> Místo C# také vám pomůže jazyka JavaScript, Visual Basic nebo C++ využívat komponentu vlastní transformace.
-
-Ve většině případů můžete použít C++/CX k vytvoření prostředí Windows Runtime. Ale někdy je nutné použít WRL. Například při vytváření média rozšíření pro Microsoft Media Foundation, musíte vytvořit komponentu, která implementuje rozhraní COM a Windows Runtime. Protože C++/CX lze vytvořit pouze objekty modulu Windows Runtime, chcete-li vytvořit médium rozšíření je nutné použít WRL vzhledem k tomu, že umožňuje, aby implementace rozhraní COM a Windows Runtime.
+Tento příklad vytvoří vlastní transformaci Media Foundation, která aplikuje efekt ve stupních šedi na obrázky zachycené z webové kamery. Aplikace používá C++ k definování vlastní transformace a C# k použití komponenty k transformaci zachycených imagí.
 
 > [!NOTE]
-> Sice dlouhý tento příklad kódu ukazuje minimální potřebná k vytvoření užitečné transformace Media Foundation. Můžete ho použít jako výchozí bod pro vlastní vlastní transformace. V tomto příkladu jsou upraveny z [ukázkové rozšíření Media](https://code.msdn.microsoft.com/windowsapps/Media-extensions-sample-7b466096), které používá media rozšíření použít dopad na video, dekódování video a vytváření obslužných rutin schéma, které vytvářejí datové proudy médií.
+> Místo C#, můžete také použít JavaScript, Visual Basic nebo C++ pro využití vlastní transformační komponenty.
+
+Ve většině případů můžete k vytváření prostředí Windows Runtime C++použít/CX. Někdy však musíte použít WRL. Pokud například vytvoříte rozšíření médií pro Microsoft Media Foundation, je nutné vytvořit komponentu, která implementuje rozhraní COM i prostředí Windows Runtime. Vzhledem C++k tomu, že objekt/CX může vytvořit pouze objekty prostředí Windows Runtime, aby bylo možné vytvořit rozšíření médií, je nutné použít WRL, protože umožňuje implementaci rozhraní COM i prostředí Windows Runtime.
+
+> [!NOTE]
+> I když je tento příklad kódu dlouhý, ukazuje minimum, které je nutné k vytvoření užitečné transformace Media Foundation. Můžete ho použít jako výchozí bod pro vlastní transformaci. Tento příklad je upravený z [ukázky rozšíření médií](https://code.msdn.microsoft.com/windowsapps/Media-extensions-sample-7b466096), která používá rozšíření médií k aplikování efektů na video, dekódování videa a vytváření obslužných rutin, které vytvářejí datové proudy médií.
 
 ## <a name="prerequisites"></a>Požadavky
 
-- V sadě Visual Studio 2017 nebo novější je podpora UWP volitelnou komponentou. Ho Pokud chcete nainstalovat, otevřete instalační program sady Visual Studio v nabídce Windows Start a vyhledejte vaši verzi sady Visual Studio. Zvolte **změnit** a zkontrolujte, že **vývoj pro univerzální platformu Windows** je zaškrtnuté políčko vedle sebe. V části **volitelné součásti** zkontrolujte  **C++ nástrojů pro UPW (v141)** pro Visual Studio 2017 nebo  **C++ nástrojů pro UPW (v142)** pro Visual Studio 2019. Zkontrolujte verzi sady Windows SDK, kterou chcete použít. 
+- V aplikaci Visual Studio 2017 nebo novější je podpora UWP volitelnou komponentou. Chcete-li ji nainstalovat, otevřete Instalační program pro Visual Studio v nabídce Start systému Windows a vyhledejte svou verzi sady Visual Studio. Zvolte **Upravit** a ujistěte se, že je zaškrtnutá dlaždice **Univerzální platforma Windows vývojové** . V části **volitelné komponenty** kontrolujte  **C++ nástroje pro UWP (v141)** pro Visual Studio 2017 nebo  **C++ nástroje pro UWP (V142)** pro Visual Studio 2019. Pak zkontrolujte verzi Windows SDK, kterou chcete použít. 
 
-- Vyzkoušejte si [modulu Windows Runtime](https://msdn.microsoft.com/library/windows/apps/br211377.aspx).
+- Vyzkoušejte si [prostředí Windows Runtime](/uwp/api/).
 
-- Zkušenosti s modelu COM.
+- Prostředí COM.
 
 - Webová kamera.
 
 ## <a name="key-points"></a>Klíčové body
 
-- Pokud chcete vytvořit vlastní součást Media Foundation, pomocí souboru definice Microsoft Interface Definition Language (MIDL) definujte rozhraní implementují rozhraní a a pak si všechno aktivovatelné od jiných komponent.
+- Chcete-li vytvořit vlastní komponentu Media Foundation, použijte definiční soubor rozhraní Microsoft Interface Definition Language (MIDL) k definování rozhraní, implementaci tohoto rozhraní a pak aktivovatelné z jiných komponent.
 
-- `namespace` a `runtimeclass` atributy a `NTDDI_WIN8` [verze](/windows/desktop/Midl/version) hodnota atributu jsou důležité části definice MIDL pro součást Media Foundation, který používá ke knihovně WRL.
+- Atributy `namespace` a `runtimeclass` a`NTDDI_WIN8`hodnoty atributu [verze](/windows/win32/Midl/version) jsou důležité části definice MIDL pro komponentu Media Foundation, která používá WRL.
 
-- [Microsoft::WRL::RuntimeClass](runtimeclass-class.md) je základní třídou pro vlastní součást Media Foundation. [Microsoft::WRL::RuntimeClassType::WinRtClassicComMix](runtimeclasstype-enumeration.md) hodnotu výčtu, která se poskytuje jako argument šablony, označí třídy pro použití jako třída Windows Runtime i klasické třídy COM modulu runtime.
+- [Microsoft:: WRL:: RuntimeClass](runtimeclass-class.md) je základní třída pro vlastní komponentu Media Foundation. Hodnota výčtu [Microsoft:: WRL:: RuntimeClassType –:: WinRtClassicComMix](runtimeclasstype-enumeration.md) , která je k dispozici jako argument šablony, označí třídu pro použití jako třídu prostředí Windows Runtime a jako klasickou třídu COM runtime.
 
-- [InspectableClass](inspectableclass-macro.md) – makro implementuje základní funkce modelu COM, jako je například počítání odkazů a `QueryInterface` metoda a nastaví název třídy modulu runtime a úroveň důvěryhodnosti.
+- Makro [InspectableClass –](inspectableclass-macro.md) implementuje základní funkce modelu COM, jako je počítání odkazů a `QueryInterface` metoda, a nastaví název třídy modulu runtime a úroveň důvěryhodnosti.
 
-- Použít Microsoft::WRL::[třídy modulu](module-class.md) provádět funkce vstupního bodu DLL [DllGetActivationFactory](https://msdn.microsoft.com/library/br205771.aspx), [DllCanUnloadNow](/windows/desktop/api/combaseapi/nf-combaseapi-dllcanunloadnow), a [ DllGetClassObject](/windows/desktop/api/combaseapi/nf-combaseapi-dllgetclassobject).
+- Použijte třídu Microsoft:: WRL::[Module](module-class.md) pro implementaci funkcí vstupního bodu knihovny DLL, jako je například [DllGetActivationFactory](/windows/win32/winrt/functions), [DllCanUnloadNow](/windows/win32/api/combaseapi/nf-combaseapi-dllcanunloadnow)a [DllGetClassObject](/windows/win32/api/combaseapi/nf-combaseapi-dllgetclassobject).
 
-- Propojte runtimeobject.lib vaše knihovna DLL komponenty. Také zadejte [winmd](../../cppcx/compiler-and-linker-options-c-cx.md) na řádku linkeru pro generování metadat Windows.
+- Připojte knihovnu DLL komponenty k runtimeobject. lib. Pro generování metadat Windows zadejte také [/winmd](../../cppcx/compiler-and-linker-options-c-cx.md) na řádku linkeru.
 
-- Použití odkazů projektu zpřístupňovaly komponent knihovny WRL aplikací pro UWP.
+- Pomocí odkazů na projekt zpřístupníte součásti WRL pro aplikace pro UWP.
 
-### <a name="to-use-the-wrl-to-create-the-media-foundation-grayscale-transform-component"></a>Použití knihovny WRL vytvoření Media Foundation ve stupních šedi transformace komponenty
+### <a name="to-use-the-wrl-to-create-the-media-foundation-grayscale-transform-component"></a>Použití nástroje WRL k vytvoření Media Foundation transformační komponenty ve stupních šedi
 
-1. V sadě Visual Studio, vytvořit **prázdné řešení** projektu. Název projektu, například *MediaCapture*.
+1. V aplikaci Visual Studio vytvořte projekt **prázdného řešení** . Pojmenujte projekt, například *MediaCapture*.
 
-1. Přidat **knihovny DLL (Universal Windows)** projektu do řešení. Název projektu, například *GrayscaleTransform*.
+1. Přidejte projekt **DLL (univerzální pro Windows)** do řešení. Pojmenujte projekt, například *GrayscaleTransform*.
 
-1. Přidat **soubor Midl (.idl)** soubor do projektu. Název souboru, například *GrayscaleTransform.idl*.
+1. Přidejte soubor **MIDL (. idl)** do projektu. Název souboru, například *GrayscaleTransform. idl*.
 
-1. Tento kód vložte do GrayscaleTransform.idl:
+1. Přidejte tento kód do GrayscaleTransform. idl:
 
    [!code-cpp[wrl-media-capture#1](../codesnippet/CPP/walkthrough-creating-a-windows-store-app-using-wrl-and-media-foundation_1.idl)]
 
-1. Pomocí následujícího kódu nahraďte obsah `pch.h`:
+1. K nahrazení obsahu `pch.h`použijte následující kód:
 
    [!code-cpp[wrl-media-capture#2](../codesnippet/CPP/walkthrough-creating-a-windows-store-app-using-wrl-and-media-foundation_2.h)]
 
-1. Přidejte do projektu nový soubor hlaviček, pojmenujte ho `BufferLock.h`a poté nahraďte obsah s tímto kódem:
+1. Přidejte do projektu nový hlavičkový soubor, pojmenujte `BufferLock.h`ho a pak obsah nahraďte tímto kódem:
 
    [!code-cpp[wrl-media-capture#3](../codesnippet/CPP/walkthrough-creating-a-windows-store-app-using-wrl-and-media-foundation_3.h)]
 
-1. `GrayscaleTransform.h` v tomto příkladu nepoužívá. Můžete ho odebrat z projektu Pokud budete chtít.
+1. `GrayscaleTransform.h`není v tomto příkladu použit. Pokud chcete, můžete ho z projektu odebrat.
 
-1. Pomocí následujícího kódu nahraďte obsah `GrayscaleTransform.cpp`:
+1. K nahrazení obsahu `GrayscaleTransform.cpp`použijte následující kód:
 
    [!code-cpp[wrl-media-capture#4](../codesnippet/CPP/walkthrough-creating-a-windows-store-app-using-wrl-and-media-foundation_4.cpp)]
 
-1. Přidejte do projektu nový soubor definice modulu, pojmenujte ho `GrayscaleTransform.def`a následně přidejte následující kód:
+1. Přidejte do projektu nový soubor definice modulu, pojmenujte ho `GrayscaleTransform.def`a pak přidejte tento kód:
 
    ```
    EXPORTS
@@ -88,44 +88,44 @@ Ve většině případů můžete použít C++/CX k vytvoření prostředí Wind
        DllGetClassObject                   PRIVATE
    ```
 
-1. Pomocí následujícího kódu nahraďte obsah `dllmain.cpp`:
+1. K nahrazení obsahu `dllmain.cpp`použijte následující kód:
 
    [!code-cpp[wrl-media-capture#6](../codesnippet/CPP/walkthrough-creating-a-windows-store-app-using-wrl-and-media-foundation_6.cpp)]
 
-1. V projektu **stránky vlastností** dialogovém okně nastavte následující **Linkeru** vlastnosti.
+1. V dialogovém okně **stránky vlastností** projektu nastavte následující vlastnosti linkeru.
 
-   1. V části **vstup**, pro **soubor definice modulu**, zadejte `GrayScaleTransform.def`.
+   1. V části **vstup**zadejte `GrayScaleTransform.def`pro **soubor definice modulu**.
 
-   1. Také v části **vstup**, přidejte `runtimeobject.lib`, `mfuuid.lib`, a `mfplat.lib` k **Další závislosti** vlastnost.
+   1. Také v části **vstup**, `runtimeobject.lib`přidat `mfuuid.lib`, a `mfplat.lib` do vlastnosti **Další závislosti** .
 
-   1. V části **metadat Windows**, nastavte **generování metadat Windows** k **Ano (/ WINMD)** .
+   1. V části **metadata Windows**nastavte **generovat metadata Windows** na **Ano (/WinMD)** .
 
-### <a name="to-use-the-wrl-the-custom-media-foundation-component-from-a-c-app"></a>Použití knihovny WRL vlastní součást Media Foundation z aplikace C#
+### <a name="to-use-the-wrl-the-custom-media-foundation-component-from-a-c-app"></a>Použití WRL vlastní součásti Media Foundation z C# aplikace
 
-1. Přidat nový **jazyka C# prázdná aplikace (Universal Windows)** projektu `MediaCapture` řešení. Název projektu, například *MediaCapture*.
+1. Přidejte do `MediaCapture` řešení nový  **C# projekt aplikace s prázdným systémem (Universal Windows)** . Pojmenujte projekt, například *MediaCapture*.
 
-1. V **MediaCapture** projektu, přidejte odkaz na `GrayscaleTransform` projektu. Další informace o postupu [jak: Přidání nebo odebrání odkazů pomocí Správce odkazů](/visualstudio/ide/how-to-add-or-remove-references-by-using-the-reference-manager).
+1. V projektu **MediaCapture** přidejte odkaz na `GrayscaleTransform` projekt. Informace o postupu najdete v [tématu Postup: Přidejte nebo odeberte odkazy pomocí správce](/visualstudio/ide/how-to-add-or-remove-references-by-using-the-reference-manager)odkazů.
 
-1. V `Package.appxmanifest`na **možnosti** kartu, vyberte možnost **mikrofon** a **webovou kameru**. Obě možnosti jsou nutné k zachycení fotky z webové kamery.
+1. V `Package.appxmanifest`nástroji na kartě **Možnosti** vyberte **mikrofon** a **Webová kamera**. Pro zachycení fotografií z webové kamery je potřeba obě možnosti.
 
-1. V `MainPage.xaml`, přidejte tento kód do kořenového adresáře [mřížky](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.grid.aspx) element:
+1. V `MainPage.xaml`přidejte tento kód do kořenového elementu [mřížky](/uwp/api/Windows.UI.Xaml.Controls.Grid) :
 
    [!code-xml[wrl-media-capture#7](../codesnippet/Xaml/walkthrough-creating-a-windows-store-app-using-wrl-and-media-foundation_7.xaml)]
 
-1. Pomocí následujícího kódu nahraďte obsah `MainPage.xaml.cs`:
+1. K nahrazení obsahu `MainPage.xaml.cs`použijte následující kód:
 
    [!code-cs[wrl-media-capture#8](../codesnippet/CSharp/walkthrough-creating-a-windows-store-app-using-wrl-and-media-foundation_8.cs)]
 
-Je vidět na následujícím obrázku `MediaCapture app`.
+Následující ilustrace znázorňuje `MediaCapture app`.
 
-![Aplikace MediaCapture zachytávání fotografii](../media/wrl_media_capture.png "WRL_Media_Capture")
+![Aplikace MediaCapture, která zachytává fotografii](../media/wrl_media_capture.png "WRL_Media_Capture")
 
 ## <a name="next-steps"></a>Další kroky
 
-Tento příklad ukazuje, jak zachytit fotky z výchozí webovou kameru, jeden po druhém. [Ukázkové rozšíření Media](https://code.msdn.microsoft.com/windowsapps/Media-extensions-sample-7b466096) více. Ukazuje, jak vytvořit výčet webová kamera zařízení a pracovat s obslužnými rutinami místní schéma a ukazuje účinky dalšího média, pracující na jednotlivé fotografie a datových proudů videa.
+V tomto příkladu se dozvíte, jak zachytit fotky z výchozí webové kamery v jednom okamžiku. [Ukázka rozšíření médií](https://code.msdn.microsoft.com/windowsapps/Media-extensions-sample-7b466096) je další. Ukazuje, jak vytvořit výčet zařízení webové kamery a pracovat s obslužnými rutinami místních schémat a ukazuje další efekty multimédií, které fungují jak na jednotlivých fotografiích, tak v datových proudech videa.
 
 ## <a name="see-also"></a>Viz také:
 
 [Knihovna šablon C++ prostředí Windows Runtime (WRL)](windows-runtime-cpp-template-library-wrl.md)<br/>
-[Microsoft Media Foundation](/windows/desktop/medfound/microsoft-media-foundation-sdk)<br/>
-[Ukázka rozšíření média](https://code.msdn.microsoft.com/windowsapps/Media-extensions-sample-7b466096)
+[Microsoft Media Foundation](/windows/win32/medfound/microsoft-media-foundation-sdk)<br/>
+[Ukázka rozšíření multimédií](https://code.msdn.microsoft.com/windowsapps/Media-extensions-sample-7b466096)

@@ -32,14 +32,14 @@ helpviewer_keywords:
 - files [C++], opening
 - fopen function
 ms.assetid: e868993f-738c-4920-b5e4-d8f2f41f933d
-ms.openlocfilehash: 0b1dbc72124188d06da48f47e47c11ae6d06e771
-ms.sourcegitcommit: 878a164fe6d550ca81ab87d8425c8d3cd52fe384
+ms.openlocfilehash: b57ed2b26428c48efbe544c2b4802e347b915c29
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/22/2019
-ms.locfileid: "68376190"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69499943"
 ---
-# <a name="fopen-wfopen"></a>fopen, _wfopen
+# <a name="fopen-_wfopen"></a>fopen, _wfopen
 
 Otevře soubor. Bezpečnější verze těchto funkcí, které provádějí dodatečné ověřování parametrů a návratové kódy chyb, jsou k dispozici. viz [fopen_s, _wfopen_s](fopen-s-wfopen-s.md).
 
@@ -72,7 +72,7 @@ Další informace najdete v tématech [errno, _doserrno, _sys_errlist a _sys_ner
 
 ## <a name="remarks"></a>Poznámky
 
-Funkce **fopen** otevře soubor určený parametrem *filename*. Ve výchozím nastavení je řetězec zužujícího *názvu souboru* interpretován pomocí znakové stránky ANSI (CP_ACP). V aplikacích pro stolní počítače s Windows se dá změnit na znakovou stránku OEM (CP_OEMCP) pomocí funkce [SetFileApisToOEM](/windows/desktop/api/fileapi/nf-fileapi-setfileapistooem) . Pomocí funkce [AreFileApisANSI](/windows/desktop/api/fileapi/nf-fileapi-arefileapisansi) můžete zjistit, jestli je *název souboru* INTERPRETOVÁN pomocí standardu ANSI nebo výchozí znakové stránky OEM systému. **_wfopen** je **fopen**verze s velkým znakem; argumenty **_wfopen** jsou řetězce s libovolným znakem. V opačném případě se **_wfopen** a **fopen** chovají stejně. Pouze použití **_wfopen** nemá vliv na kódované znakové sady, která se používá v datovém proudu souboru.
+Funkce **fopen** otevře soubor určený parametrem *filename*. Ve výchozím nastavení je řetězec zužujícího *názvu souboru* interpretován pomocí znakové stránky ANSI (CP_ACP). V aplikacích pro stolní počítače s Windows se dá změnit na znakovou stránku OEM (CP_OEMCP) pomocí funkce [SetFileApisToOEM](/windows/win32/api/fileapi/nf-fileapi-setfileapistooem) . Pomocí funkce [AreFileApisANSI](/windows/win32/api/fileapi/nf-fileapi-arefileapisansi) můžete zjistit, jestli je *název souboru* INTERPRETOVÁN pomocí standardu ANSI nebo výchozí znakové stránky OEM systému. **_wfopen** je **fopen**verze s velkým znakem; argumenty **_wfopen** jsou řetězce s libovolným znakem. V opačném případě se **_wfopen** a **fopen** chovají stejně. Pouze použití **_wfopen** nemá vliv na kódované znakové sady, která se používá v datovém proudu souboru.
 
 **fopen** akceptuje cesty, které jsou platné v systému souborů v okamžiku provedení; **fopen** přijímá cesty a cesty UNC, které zahrnují mapované síťové jednotky, pokud systém, který spouští kód, má přístup ke sdílené složce nebo mapované jednotce v době spuštění. Když vytváříte cesty pro **fopen**, ujistěte se, že jednotky, cesty nebo sdílené síťové složky budou k dispozici v prostředí pro spuštění. Jako oddělovače adresářů v cestě můžete použít buď lomítka (/),\\nebo zpětná lomítka ().
 
@@ -105,7 +105,7 @@ Následující tabulka shrnuje režimy, které se používají pro různé pří
 
 Soubory otevřené pro zápis do režimu Unicode mají automaticky zapsaného kusovníku.
 
-Pokud  je režim **"a, CCS =** _Encoding_ **"** , **fopen** se nejprve pokusí otevřít soubor pomocí přístupu pro čtení i zápis. Pokud je to úspěšné, funkce přečte BOM a určí kódování souboru; Pokud se to nepovede, funkce použije výchozí kódování souboru. V obou případech bude **fopen** znovu otevřít soubor pomocí přístupu jen pro zápis. (Tato možnost se vztahuje pouze na režim **"a** +", nikoli na režim **"a +"** .)
+Pokud je režim **"a, CCS =** _Encoding_ **"** , **fopen** se nejprve pokusí otevřít soubor pomocí přístupu pro čtení i zápis. Pokud je to úspěšné, funkce přečte BOM a určí kódování souboru; Pokud se to nepovede, funkce použije výchozí kódování souboru. V obou případech bude **fopen** znovu otevřít soubor pomocí přístupu jen pro zápis. (Tato možnost se vztahuje pouze na režim **"a** +", nikoli na režim **"a +"** .)
 
 ### <a name="generic-text-routine-mappings"></a>Mapování rutin obecného textu
 

@@ -1,5 +1,5 @@
 ---
-title: Platform::writeonlyarray – třída
+title: 'Platform:: WriteOnlyArray – třída'
 ms.date: 12/30/2016
 ms.topic: reference
 f1_keywords:
@@ -12,18 +12,18 @@ f1_keywords:
 helpviewer_keywords:
 - Platform::WriteOnlyArray Class
 ms.assetid: 92d7dd56-ec58-4b8c-88ba-9c903668b687
-ms.openlocfilehash: fb582106fe2f18e939f11180048a125c683ca2f6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5652123d4866262515f804dba790af51610eb426
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62182935"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69500525"
 ---
-# <a name="platformwriteonlyarray-class"></a>Platform::writeonlyarray – třída
+# <a name="platformwriteonlyarray-class"></a>Platform:: WriteOnlyArray – třída
 
-Představuje jednorozměrné pole, která slouží jako vstupní parametr, pokud volající předá pole pro metodu tak, aby vyplnil.
+Představuje jednorozměrné pole, které se používá jako vstupní parametr, když volající předává pole pro metodu, která má být vyplněna.
 
-Tato třída ref je deklarován jako soukromý v vccorlib.h; proto není aktivováno v metadatech a je použitelné z jazyka C++. Tato třída je určena pouze pro použití jako vstupní parametr, který přijímá pole, které má přidělené volajícímu. Není constructible z uživatelského kódu. Povolí metodu C++ psát přímo do tohoto pole – vzor, který se označuje jako *FillArray* vzor. Další informace najdete v tématu [pole a WriteOnlyArray](../cppcx/array-and-writeonlyarray-c-cx.md).
+Tato referenční třída je deklarována jako soukromá v vccorlib. h; Proto nejsou vygenerovány v metadatech a jsou použitelné pouze z C++. Tato třída je určena pouze pro použití jako vstupní parametr, který přijímá pole, které volající přidělil. Není constructible z uživatelského kódu. Umožňuje C++ metodě zapisovat přímo do tohoto pole – vzor, který je známý jako *metodě FillArray* vzor. Další informace najdete v tématu [Array a WriteOnlyArray](../cppcx/array-and-writeonlyarray-c-cx.md).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -37,14 +37,14 @@ private ref class WriteOnlyArray<T, 1>
 
 Tyto metody mají interní přístupnost – to znamená, že jsou přístupné pouze v rámci C++ aplikace nebo komponenty.
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
-|[WriteOnlyArray::begin](#begin)|Iterátor odkazující na první prvek pole.|
-|[WriteOnlyArray::Data](#data)|Ukazatel do vyrovnávací paměti dat.|
-|[WriteOnlyArray::end](#end)|Iterátor, který odkazuje na jedno místo za posledním prvkem v poli.|
-|[WriteOnlyArray::FastPass](#fastpass)|Označuje, zda pole můžete použít FastPass mechanismus, který představuje optimalizaci transparentně provádí systému. Nepoužívejte to ve vašem kódu|
-|[WriteOnlyArray::Length](#length)|Vrátí počet prvků v poli.|
-|[WriteOnlyArray::set](#set)|Nastaví zadaný element se zadanou hodnotou.|
+|[WriteOnlyArray:: begin](#begin)|Iterátor, který odkazuje na první prvek pole.|
+|[WriteOnlyArray::D ATA](#data)|Ukazatel na vyrovnávací paměť dat.|
+|[WriteOnlyArray:: end](#end)|Iterátor, který odkazuje na jeden za poslední prvek v poli.|
+|[WriteOnlyArray:: FastPass](#fastpass)|Označuje, zda může pole používat mechanismus FastPass, což je optimalizace, kterou systém provádí transparentně. Nepoužívejte ho ve svém kódu.|
+|[WriteOnlyArray:: Length](#length)|Vrátí počet prvků v poli.|
+|[WriteOnlyArray:: set](#set)|Nastaví zadaný element na zadanou hodnotu.|
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
@@ -52,15 +52,15 @@ Tyto metody mají interní přístupnost – to znamená, že jsou přístupné 
 
 ### <a name="requirements"></a>Požadavky
 
-– Možnost kompilátoru: **/ZW**
+Možnost kompilátoru: **/ZW**
 
 **Metadata:** Platform.winmd
 
-**Namespace:** Platforma
+**Hosting** Platforma
 
-## <a name="begin"></a>  WriteOnlyArray::begin – metoda
+## <a name="begin"></a>WriteOnlyArray:: begin – metoda
 
-Vrací ukazatel na první prvek v poli.
+Vrátí ukazatel na první prvek v poli.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -74,11 +74,11 @@ Ukazatel na první prvek v poli.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato iterátoru lze použít s algoritmy STL, jako `std::sort` ovládajících prvků v poli.
+Tento iterátor lze použít s algoritmy STL, jako je `std::sort` například pro práci na prvcích v poli.
 
-## <a name="data"></a>  Vlastnost WriteOnlyArray::Data
+## <a name="data"></a>WriteOnlyArray::D vlastnost ATA
 
-Ukazatel do vyrovnávací paměti data.
+Ukazatel na vyrovnávací paměť dat.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -90,11 +90,11 @@ property T* Data{
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Ukazatel na nezpracovaná pole bajtů.
+Ukazatel na bajty nezpracovaného pole.
 
-## <a name="end"></a>  WriteOnlyArray::end – metoda
+## <a name="end"></a>WriteOnlyArray:: end – metoda
 
-Vrací ukazatel na jedno místo za posledním prvkem v poli.
+Vrátí ukazatel na jeden za poslední prvek v poli.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -104,15 +104,15 @@ T* end() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Iterátor ukazatel na jedno místo za posledním prvkem v poli.
+Ukazatel iterátoru na jeden za poslední prvek v poli.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato iterátoru lze použít s algoritmy STL můžete provádět operace, jako `std::sort` prvků pole.
+Tento iterátor lze použít s algoritmy STL k provádění operací, jako jsou `std::sort` například prvky pole.
 
-## <a name="fastpass"></a>  Vlastnost WriteOnlyArray::FastPass
+## <a name="fastpass"></a>WriteOnlyArray:: FastPass – vlastnost
 
-Určuje, zda lze provést interní FastPass optimalizace. Není určena pro použití v uživatelském kódu.
+Určuje, zda lze provést optimalizaci interního FastPass. Neurčeno pro použití uživatelským kódem.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -124,11 +124,11 @@ property bool FastPass{
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Logická hodnota určující, zda je pole FastPass.
+Logická hodnota, která označuje, zda je pole FastPass.
 
-## <a name="get"></a>  WriteOnlyArray::get – metoda
+## <a name="get"></a>WriteOnlyArray:: get – metoda
 
-Vrátí hodnotu prvku na zadaném indexu.
+Vrátí prvek na zadaném indexu.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -139,13 +139,13 @@ T& get(unsigned int indexArg) const;
 ### <a name="parameters"></a>Parametry
 
 *indexArg*<br/>
-Index použít.
+Index, který se má použít.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-## <a name="length"></a>  Vlastnost WriteOnlyArray::Length
+## <a name="length"></a>WriteOnlyArray:: Length – vlastnost
 
-Vrátí počet prvků v pole přidělené volajícímu.
+Vrátí počet prvků v poli přiděleném volajícímu.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -159,9 +159,9 @@ property unsigned int Length{
 
 Počet prvků v poli.
 
-## <a name="set"></a>  WriteOnlyArray::set – funkce
+## <a name="set"></a>WriteOnlyArray:: set – funkce
 
-Nastaví zadanou hodnotu na zadaný index v poli.
+Nastaví zadanou hodnotu v zadaném indexu v poli.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -174,20 +174,20 @@ T& set(
 ### <a name="parameters"></a>Parametry
 
 *indexArg*<br/>
-Index prvku, který chcete nastavit.
+Index elementu, který se má nastavit
 
 *valueArg*<br/>
-Hodnota k nastavení na `indexArg`.
+Hodnota, která má být `indexArg`nastavena na hodnotu.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Odkaz na prvek, který byl právě nastavili.
+Odkaz na prvek, který byl právě nastaven.
 
 ### <a name="remarks"></a>Poznámky
 
-Další informace o tom, jak interpretovat hodnota HRESULT, naleznete v tématu [struktura kódy chyb COM](/windows/desktop/com/structure-of-com-error-codes).
+Další informace o tom, jak interpretovat hodnotu HRESULT, najdete v tématu [Struktura chybových kódů modelu COM](/windows/win32/com/structure-of-com-error-codes).
 
 ## <a name="see-also"></a>Viz také:
 
-[Platforma Namespace](platform-namespace-c-cx.md)<br/>
-[Vytváření komponent Windows Runtime v jazyce C++](/windows/uwp/winrt-components/creating-windows-runtime-components-in-cpp)
+[Obor názvů platformy](platform-namespace-c-cx.md)<br/>
+[Vytváření komponent prostředí Windows Runtime v nástrojiC++](/windows/uwp/winrt-components/creating-windows-runtime-components-in-cpp)

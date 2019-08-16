@@ -29,14 +29,14 @@ helpviewer_keywords:
 - _beginthreadex function
 - beginthread function
 ms.assetid: 0df64740-a978-4358-a88f-fb0702720091
-ms.openlocfilehash: f64fd7b945fc8ea2e5c111d300266e07faade0e7
-ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
+ms.openlocfilehash: 27bc850281f7591b4fa23a03e9adc3bc02bda87b
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66504543"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69500307"
 ---
-# <a name="beginthread-beginthreadex"></a>_beginthread, _beginthreadex
+# <a name="_beginthread-_beginthreadex"></a>_beginthread, _beginthreadex
 
 Vytvoří vlákno.
 
@@ -74,80 +74,80 @@ uintptr_t _beginthreadex( // MANAGED CODE
 ### <a name="parameters"></a>Parametry
 
 *start_address*<br/>
-Počáteční adresa rutiny, která začíná spuštění nového vlákna. Pro **_beginthread**, je konvence volání buď [__cdecl](../../cpp/cdecl.md) (pro nativní kód) nebo [__clrcall](../../cpp/clrcall.md) (pro spravovaný kód); pro **_beginthreadex**, je buď [__stdcall](../../cpp/stdcall.md) (pro nativní kód) nebo [__clrcall](../../cpp/clrcall.md) (pro spravovaný kód).
+Počáteční adresa rutiny, která zahájí provádění nového vlákna. Pro **_beginthread**je konvence volání buď [__cdecl](../../cpp/cdecl.md) (pro nativní kód), nebo [__clrcall](../../cpp/clrcall.md) (pro spravovaný kód); pro **_beginthreadex**je buď [__stdcall](../../cpp/stdcall.md) (pro nativní kód) nebo [__clrcall](../../cpp/clrcall.md) (pro spravovaný kód).
 
 *stack_size*<br/>
-Velikost zásobníku pro nové vlákno, nebo 0.
+Velikost zásobníku pro nové vlákno nebo 0.
 
 *arglist*<br/>
-Seznam argumentů, které se mají předat nové vlákno, nebo **NULL**.
+Seznam argumentů, které mají být předány novému vláknu, nebo **hodnota null**.
 
 *Zabezpečení*<br/>
-Ukazatel [SECURITY_ATTRIBUTES](/previous-versions/windows/desktop/legacy/aa379560\(v=vs.85\)) struktura, která určuje, zda lze Vrácený popisovač Zdědit podřízenými procesy. Pokud *zabezpečení* je **NULL**, popisovač nelze dědit. Musí být **NULL** pro aplikace Windows 95.
+Ukazatel na strukturu [SECURITY_ATTRIBUTES](/previous-versions/windows/desktop/legacy/aa379560\(v=vs.85\)) , která určuje, zda vrácený popisovač mohou být děděny podřízenými procesy. Pokud je zabezpečení **null**, nelze popisovač dědit. Pro aplikace systému Windows 95 musí být **hodnota null** .
 
 *initflag*<br/>
-Příznaky, které řídí počáteční stav nového vlákna. Nastavte *initflag* 0 spustit okamžitě, nebo k **CREATE_SUSPENDED** k vytvoření vlákna v pozastaveném stavu; použijte [ResumeThread](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-resumethread) ke spuštění vlákna. Nastavte *initflag* k **STACK_SIZE_PARAM_IS_A_RESERVATION** příznak pro použití *stack_size* jako počáteční rezervovat velikost zásobníku v bajtech; Pokud je tento příznak není zadán, *stack_size* Určuje velikost potvrzení změn.
+Příznaky, které řídí počáteční stav nového vlákna. Nastavte *initflag* na hodnotu 0 pro okamžité spuštění, nebo **CREATE_SUSPENDED** pro vytvoření vlákna v pozastaveném stavu. použijte [ResumeThread](/windows/win32/api/processthreadsapi/nf-processthreadsapi-resumethread) pro spuštění vlákna. Nastavte příznak *initflag* na **STACK_SIZE_PARAM_IS_A_RESERVATION** , aby se použil *STACK_SIZE* jako počáteční rezervní velikost zásobníku v bajtech. Pokud tento příznak není zadán, *stack_size* určuje velikost potvrzení.
 
 *thrdaddr*<br/>
-Odkazuje na 32bitové proměnné, který přijímají identifikátor vlákna. Pokud je **NULL**, se nepoužívá.
+Odkazuje na 32 proměnnou, která přijímá identifikátor vlákna. Pokud je **hodnota null**, není použita.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Pokud je úspěšná, každá z těchto funkcí vrací popisovač do nově vytvořeného vlákna; Nicméně, pokud nově vytvořený podproces skončí příliš rychle **_beginthread** nemusí vrátit platný popisovač. (Viz diskuze v části poznámky.) V případě chyby **_beginthread** vrátí hodnotu-1 L a **errno** je nastavena na **EAGAIN** pokud existuje příliš mnoho vláken na **EINVAL** Pokud je argumentem Neplatný nebo velikost zásobníku je správné, nebo **EACCES** Pokud není dostatek prostředků (např. paměti). V případě chyby **_beginthreadex** vrátí hodnotu 0, a **errno** a **_doserrno** jsou nastavené.
+Pokud je úspěšná, každá z těchto funkcí vrátí popisovač nově vytvořenému vláknu; Pokud se ale nově vytvořené vlákno ukončí příliš rychle, **_beginthread** nemusí vracet platný popisovač. (Podívejte se na diskuzi v části poznámky.) V případě chyby **_beginthread** vrací hodnotu-1l a **errno** je nastavená na **EAGAIN** , pokud existuje příliš mnoho vláken, **EINVAL** , pokud je argument neplatný nebo pokud je velikost zásobníku nesprávná, nebo na **EACCES** , pokud není dostatek prostředků ( například paměť). V případě chyby **_beginthreadex** vrátí hodnotu 0 a nastaví **errno** a **_doserrno** .
 
-Pokud *start_address* je **NULL**, je vyvolána obslužná rutina neplatného parametru, jak je popsáno v [Parameter Validation](../../c-runtime-library/parameter-validation.md). Pokud smí provádění pokračovat, tyto funkce nastaví **errno** k **EINVAL** a vrátí hodnotu -1.
+Pokud má Start_address **hodnotu null**, je vyvolána obslužná rutina neplatného parametru, jak je popsáno v tématu [ověřování parametru](../../c-runtime-library/parameter-validation.md). Pokud provádění může pokračovat, tyto funkce nastaví **errno** na **EINVAL** a vrátí-1.
 
-Další informace o těchto a dalších návratových kódech naleznete v tématu [errno _doserrno, _sys_errlist a _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+Další informace o těchto a dalších návratových kódech naleznete v tématu [errno, _doserrno, _sys_errlist a _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
-Další informace o **uintptr_t –** , naleznete v tématu [standardní typy](../../c-runtime-library/standard-types.md).
+Další informace o **uintptr_t**naleznete v tématu [Standard Types](../../c-runtime-library/standard-types.md).
 
 ## <a name="remarks"></a>Poznámky
 
-**_Beginthread** funkce vytvoří vlákno, které spustí rutinu na *start_address*. Rutina v *start_address* musí použít **__cdecl** (pro nativní kód) nebo **__clrcall** (pro spravovaný kód) konvence volání a musí mít žádnou návratovou hodnotu. Pokud se podproces vrací z této rutiny, bude automaticky ukončen. Další informace o vláknech naleznete v tématu [podpora multithreadingu ve starším kódu (Visual C++)](../../parallel/multithreading-support-for-older-code-visual-cpp.md).
+Funkce **_beginthread** vytvoří vlákno, které zahájí provádění rutiny na *start_address*. Rutina na *start_address* musí používat **__cdecl** (pro nativní kód) nebo **__clrcall** (pro spravovaný kód) konvence volání a nesmí mít žádnou návratovou hodnotu. Když se vlákno z této rutiny vrátí, automaticky se ukončí. Další informace o vláknech naleznete v tématu [Podpora multithreadingu pro starší kód (vizuál C++)](../../parallel/multithreading-support-for-older-code-visual-cpp.md).
 
-**_beginthreadex** vypadá podobně jako Win32 [CreateThread](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-createthread) další rozhraní API než **_beginthread** nepodporuje. **_beginthreadex** se liší od **_beginthread** následujícími způsoby:
+**_beginthreadex** připomíná rozhraní Win32 [CreateThread](/windows/win32/api/processthreadsapi/nf-processthreadsapi-createthread) API těsněji než **_beginthread** . **_beginthreadex** se liší od **_beginthread** , a to následujícími způsoby:
 
-- **_beginthreadex** má tři další parametry: *initflag*, *zabezpečení*, a **threadaddr**. Nové vlákno lze vytvořit v pozastaveném stavu se zadaným zabezpečením a je přístupný pomocí *thrdaddr*, což není identifikátor vlákna.
+- **_beginthreadex** má tři další parametry: *initflag*, *Security*a **threadaddr**. Nové vlákno lze vytvořit v pozastaveném stavu se zadaným zabezpečením a lze k němu přistupovat pomocí *thrdaddr*, což je identifikátor vlákna.
 
-- Rutina v *start_address* , který je předán **_beginthreadex** musí použít **__stdcall** (pro nativní kód) nebo **__clrcall** (pro spravovaný kód) konvence volání a musí vrátit ukončovací kód vlákna.
+- Rutina na *start_address* , která je předána **_beginthreadex** , musí používat konvenci **__stdcall** (pro nativní kód) nebo **__clrcall** (pro spravovaný kód) a musí vracet ukončovací kód vlákna.
 
-- **_beginthreadex** vrátí při selhání, spíše než-1 L hodnotu 0.
+- **_beginthreadex** vrací 0 při selhání, nikoli-1l.
 
-- Podproces, který je vytvořen pomocí **_beginthreadex** je ukončen voláním [_endthreadex](endthread-endthreadex.md).
+- Vlákno, které je vytvořeno pomocí **_beginthreadex** , je ukončeno voláním [_endthreadex](endthread-endthreadex.md).
 
-**_Beginthreadex** funkce vám dává větší kontrolu nad způsob vytvoření vlákna než **_beginthread** nepodporuje. **_Endthreadex** funkce je také flexibilnější. Třeba index Mei **_beginthreadex**, můžete použít informace o zabezpečení, nastavit počáteční stav podprocesu (spuštěno nebo pozastaveno) a získat identifikátor nově vytvořeného vlákna. Můžete také použít popisovač podprocesu, který je vrácen **_beginthreadex** se synchronizací rozhraní API, které nelze použít s **_beginthread**.
+Funkce **_beginthreadex** poskytuje větší kontrolu nad tím, jak je vlákno vytvořeno, než **_beginthread** . Funkce **_endthreadex** je také pružnější. Například pomocí **_beginthreadex**můžete použít informace o zabezpečení, nastavit počáteční stav vlákna (spuštěno nebo pozastaveno) a získat identifikátor vlákna nově vytvořeného vlákna. Můžete také použít popisovač vlákna, který vrací **_beginthreadex** , s rozhraními API synchronizace, která nelze s **_beginthread**provádět.
 
-Je bezpečnější používat **_beginthreadex** než **_beginthread**. Pokud podproces, který je generován **_beginthread** rychle ukončí zpracování, který je vrácen volajícímu **_beginthread** může být neplatný nebo ukazuje na jiný podproces. Nicméně popisovač, který je vrácen **_beginthreadex** musí být uzavřen volajícím funkce **_beginthreadex**, takže je zaručeno, že pokud se platný popisovač **_beginthreadex** nevrátila chybu.
+Použití **_beginthreadex** než **_beginthread**je bezpečnější. Pokud je vlákno, které generuje **_beginthread** , rychle ukončeno, obslužná rutina, která je vrácena volajícímu **_beginthread** , může být neplatná nebo ukazovat na jiné vlákno. Nicméně popisovač vrácený funkcí **_beginthreadex** musí být uzavřen volajícím **_beginthreadex**, takže je zaručeno, že musí být platným popisovačem, pokud **_beginthreadex** nevrátil chybu.
 
-Můžete volat [_endthread](endthread-endthreadex.md) nebo **_endthreadex** explicitně k ukončení podprocesu; nicméně **_endthread** nebo **_endthreadex** nazývá automaticky při podproces vrací z rutiny, která je předána jako parametr. Ukončení vlákna s voláním **_endthread** nebo **_endthreadex** pomáhá zajistit správné obnovení prostředků, které jsou k vláknu přiděleny.
+Můžete volat [_endthread](endthread-endthreadex.md) nebo **_endthreadex** explicitně pro ukončení vlákna; **_endthread** nebo **_endthreadex** se však zavolá automaticky při návratu vlákna z rutiny, která je předána jako parametr. Ukončení vlákna s voláním **_endthread** nebo **_endthreadex** pomáhá zajistit správné obnovení prostředků, které jsou přiděleny pro vlákno.
 
-**_endthread** automaticky uzavře popisovač vlákna, zatímco **_endthreadex** tak není. Proto při použití **_beginthread** a **_endthread**, explicitně nezavře popisovač vlákna voláním rozhraní Win32 [CloseHandle](/windows/desktop/api/handleapi/nf-handleapi-closehandle) rozhraní API. Toto chování se liší od rozhraní Win32 [ExitThread](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-exitthread) rozhraní API.
+**_endthread** automaticky zavře popisovač vlákna, zatímco **_endthreadex** ne. Proto při použití **_beginthread** a **_endthread**explicitně uzavřete popisovač vlákna voláním rozhraní Win32 [CloseHandle](/windows/win32/api/handleapi/nf-handleapi-closehandle) API. Toto chování se liší od rozhraní Win32 [ExitThread –](/windows/win32/api/processthreadsapi/nf-processthreadsapi-exitthread) API.
 
 > [!NOTE]
-> Pro spustitelný soubor propojeného s Libcmt.lib Nevolejte rozhraní Win32 **ExitThread** rozhraní API, abyste nezabránili systému za běhu z recyklovat přidělené prostředky. **_endthread** a **_endthreadex** uvolní prostředky přidělené vláknu a následně zavolat **ExitThread**.
+> Pro spustitelný soubor propojený s Libcmt. lib Nevolejte rozhraní Win32 **ExitThread –** API, aby nedocházelo k tomu, aby systém za běhu vyvolal nároky přidělené prostředky. **_endthread** a **_endthreadex** uvolní prostředky přiděleného vlákna a pak zavolají **ExitThread –** .
 
-Operační systém zpracovává přidělení zásobníku při buď **_beginthread** nebo **_beginthreadex** nazývá; nemáte předat adresu zásobníku podprocesu některou z těchto funkcí. Kromě toho *stack_size* argument může být 0, ve kterém případ operační systém používá stejnou hodnotu jako zásobník, který je určen pro hlavní vlákno.
+Operační systém zpracovává přidělení zásobníku, pokud je volán buď **_beginthread** nebo **_beginthreadex** ; není nutné předávat adresu zásobníku vláken do některé z těchto funkcí. Kromě toho může být argument *stack_size* 0, v takovém případě operační systém používá stejnou hodnotu jako zásobník, který je určen pro hlavní vlákno.
 
-*seznam_argumentů* je parametr má být předán do nově vytvořeného vlákna. Obvykle je to adresa datové položky, jako je řetězec znaků. *seznam_argumentů* může být **NULL** Pokud není potřeba, ale **_beginthread** a **_beginthreadex** musí mít nějakou hodnotu pro předání do nového vlákna. Všechna vlákna jsou ukončena, pokud kterékoli vlákno použije [přerušit](abort.md), **ukončit**, **_exit**, nebo **exitprocess –** .
+*Arglist* je parametr, který se má předat nově vytvořenému vláknu. Obvykle je to adresa datové položky, jako je například řetězec znaků. *Arglist* může mít **hodnotu null** , pokud není potřeba, ale **_beginthread** a **_beginthreadex** musí předat nějaké hodnotě, která má být předána novému vláknu. Všechna vlákna jsou ukončena, pokud jakékoli vlákno volá funkci [Abort](abort.md), **Exit**, **_exit**nebo **ExitProcess –** .
 
-Národní prostředí nového vlákna je inicializována pomocí na úrovni jednotlivého procesu globální aktuální o národním prostředí. Pokud je povoleno národní prostředí pro vlákno voláním [_configthreadlocale](configthreadlocale.md) (buď globálně, nebo pro nová vlákna), vlákno lze změnit pouze své národní prostředí nezávisle z jiných vláken voláním **setlocale** nebo **_wsetlocale**. Vlákna, které nemají nastaven příznak národní prostředí vlákno může ovlivnit o národním prostředí v všechna vlákna, které nemají taky nastavit příznak národní prostředí vlákno, jakož i všech nově vytvořeného vlákna. Další informace najdete v tématu [národní prostředí](../../c-runtime-library/locale.md).
+Národní prostředí nového vlákna je inicializováno pomocí informací o globálním aktuálním národním prostředí pro proces. Pokud je národní prostředí pro vlákno povoleno voláním [_configthreadlocale](configthreadlocale.md) (buď globálně, nebo pouze pro nové vlákna), vlákno může změnit své národní prostředí nezávisle na jiných vláknech voláním setlocale nebo **_wsetlocale**. Vlákna, která nemají nastaven příznak národního prostředí pro vlákno, mohou ovlivnit informace o národním prostředí ve všech ostatních vláknech, které nemají nastaven příznak národního prostředí pro vlákno a také všechna nově vytvořená vlákna. Další informace najdete v tématu [národní prostředí](../../c-runtime-library/locale.md).
 
-Pro **/CLR** kódu, **_beginthread** a **_beginthreadex** mají dvě přetížení. Jeden má ukazatel na funkci nativní konvence volání a druhý bere **__clrcall** ukazatel na funkci. První přetížení není bezpečné z hlediska domény aplikace a nikdy ani nebude možné. Pokud píšete **/CLR** kód musíte zajistit, že nové vlákno zadá správnou doménu aplikace před přístupem ke spravované prostředky. To můžete provést například pomocí [call_in_appdomain – funkce](../../dotnet/call-in-appdomain-function.md). Druhé přetížení je aplikace bezpečné domény; nově vytvořené vlákno vždy skončí v doméně aplikace volajícího **_beginthread** nebo **_beginthreadex**.
+Pro kód **/CLR** , **_beginthread** a **_beginthreadex** mají dvě přetížení. Jedna má ukazatel na funkci nativní konvence volání a druhý přebírá ukazatel na funkci **__clrcall** . První přetížení není bezpečné pro doménu aplikace a nikdy nebude. Pokud píšete kód **/CLR** , musíte zajistit, aby nové vlákno zadalo správnou doménu aplikace před tím, než přistupuje ke spravovaným prostředkům. To lze provést například pomocí [funkce call_in_appdomain](../../dotnet/call-in-appdomain-function.md). Druhé přetížení je aplikace zabezpečená pro doménu; nově vytvořené vlákno bude vždy ukončeno v doméně aplikace volajícího **_beginthread** nebo **_beginthreadex**.
 
 ## <a name="requirements"></a>Požadavky
 
 |Rutina|Požadovaný hlavičkový soubor|
 |-------------|---------------------|
-|**_beginthread**|\<process.h>|
-|**_beginthreadex**|\<process.h>|
+|**_beginthread**|\<Process. h >|
+|**_beginthreadex**|\<Process. h >|
 
-Další informace o kompatibilitě naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
 
 ## <a name="libraries"></a>Knihovny
 
-Verze s více vlákny [běhových knihoven C](../../c-runtime-library/crt-library-features.md) pouze.
+Pouze vícevláknové verze [knihoven run-time jazyka C](../../c-runtime-library/crt-library-features.md) .
 
-Chcete-li použít **_beginthread** nebo **_beginthreadex**, aplikaci je třeba propojit s jednou z vícevláknových běhových knihoven C.
+Chcete-li použít **_beginthread** nebo **_beginthreadex**, musí aplikace propojit jednu z vícevláknových knihoven run-time jazyka C.
 
 ## <a name="example"></a>Příklad
 
@@ -267,11 +267,11 @@ void Bounce( void * parg )
 }
 ```
 
-Stisknutím libovolné klávesy ukončete vzorovou aplikaci.
+Stisknutím libovolné klávesy ukončete ukázkovou aplikaci.
 
 ## <a name="example"></a>Příklad
 
-Následující ukázkový kód ukazuje, jak můžete použít popisovač podprocesu, který je vrácen **_beginthreadex** spolu se synchronizací API [WaitForSingleObject](/windows/desktop/api/synchapi/nf-synchapi-waitforsingleobject). Hlavní podproces čeká na ukončení před pokračováním druhého podprocesu. Když volá druhé vlákno **_endthreadex**, způsobí, že jeho objekt vlákna přejde do signalizovaného stavu. To umožňuje primárnímu vláknu pokračovat v běhu. Tuto akci nelze provést s **_beginthread** a **_endthread**, protože **_endthread** volání **CloseHandle**, které ničí vlákna objekt před jeho můžete nastaven do signalizovaného stavu.
+Následující vzorový kód ukazuje, jak lze použít popisovač vlákna, který je vrácen pomocí **_beginthreadex** s rozhraním API pro synchronizaci [WaitForSingleObject](/windows/win32/api/synchapi/nf-synchapi-waitforsingleobject). Hlavní vlákno čeká na ukončení druhého vlákna, než pokračuje. Když druhé vlákno volá **_endthreadex**, způsobí, že objekt vlákna přejde do stavu signalizace. To umožňuje, aby primární vlákno pokračovalo v běhu. Tento postup nelze provést s **_beginthread** a **_endthread**, protože **_endthread** volá **CloseHandle**, což zničí objekt vlákna předtím, než může být nastaven na signálový stav.
 
 ```cpp
 // crt_begthrdex.cpp
@@ -325,4 +325,4 @@ Counter should be 1000000; it is-> 1000000
 - [_endthread, _endthreadex](endthread-endthreadex.md)
 - [abort](abort.md)
 - [exit, _Exit, _exit](exit-exit-exit.md)
-- [GetExitCodeThread](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-getexitcodethread)
+- [GetExitCodeThread](/windows/win32/api/processthreadsapi/nf-processthreadsapi-getexitcodethread)

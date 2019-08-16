@@ -1,5 +1,5 @@
 ---
-title: Csharedfile – třída
+title: CSharedFile – třída
 ms.date: 11/04/2016
 f1_keywords:
 - CSharedFile
@@ -12,16 +12,16 @@ helpviewer_keywords:
 - CSharedFile [MFC], Detach
 - CSharedFile [MFC], SetHandle
 ms.assetid: 5d000422-9ede-4318-a8c9-f7412b674f39
-ms.openlocfilehash: 0a9bbf3072a665c04501025d421839fa90a37225
-ms.sourcegitcommit: 6cf0c67acce633b07ff31b56cebd5de3218fd733
+ms.openlocfilehash: 74a34ec169868d3e28f78f33da38dbda21ef23b3
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/24/2019
-ms.locfileid: "67344425"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69502602"
 ---
-# <a name="csharedfile-class"></a>Csharedfile – třída
+# <a name="csharedfile-class"></a>CSharedFile – třída
 
-[Cmemfile –](../../mfc/reference/cmemfile-class.md)-odvozenou třídu, která podporuje sdílené soubory z paměti.
+Třída odvozená [CMemFile](../../mfc/reference/cmemfile-class.md), která podporuje sdílené paměťové soubory.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -35,34 +35,34 @@ class CSharedFile : public CMemFile
 
 |Name|Popis|
 |----------|-----------------|
-|[CSharedFile::CSharedFile](#csharedfile)|Vytvoří `CSharedFile` objektu.|
+|[CSharedFile::CSharedFile](#csharedfile)|`CSharedFile` Vytvoří objekt.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
 |Name|Popis|
 |----------|-----------------|
-|[CSharedFile::Detach](#detach)|Zavře sdílené paměti soubor a vrátí popisovač bloku paměti.|
-|[CSharedFile::SetHandle](#sethandle)|Připojí soubor sdílené paměti na blok paměti.|
+|[CSharedFile::Detach](#detach)|Zavře sdílený soubor paměti a vrátí popisovač jeho bloku paměti.|
+|[CSharedFile::SetHandle](#sethandle)|Připojí soubor sdílené paměti k bloku paměti.|
 
 ## <a name="remarks"></a>Poznámky
 
-Soubory z paměti se chovat jako soubory na disku. Rozdíl je, paměťového souboru je uložené v paměti RAM, nikoli na disku. Soubor paměti je užitečné pro rychlé dočasné úložiště nebo při přenosech nezpracovaná bajtů nebo serializovat objekty mezi nezávislé procesy.
+Soubory paměti se chovají podobně jako soubory na disku. Rozdílem je, že soubor paměti je uložený v paměti RAM místo na disku. Soubor paměti je vhodný pro rychlé dočasné úložiště nebo pro přenos nezpracovaných bajtů nebo serializovaných objektů mezi nezávislými procesy.
 
-Soubory sdílené paměti liší od jiné soubory z paměti, že je paměť přidělená k [GlobalAlloc](/windows/desktop/api/winbase/nf-winbase-globalalloc) funkce Windows. `CSharedFile` Třídy ukládá data v bloku globálně přidělená paměť (vytvořené pomocí `GlobalAlloc`), a tento blok paměti je možné sdílet pomocí DDE, schránku nebo jiných OLE/COM jednotné operace přenosu dat, například pomocí `IDataObject`.
+Sdílené paměťové soubory se liší od ostatních paměťových souborů, které jsou pro ně pro ně přiděleny pomocí funkce [GlobalAlloc](/windows/win32/api/winbase/nf-winbase-globalalloc) systému Windows. Třída ukládá data do globálně přiděleného bloku paměti (vytvořeného pomocí `GlobalAlloc`) a tento blok paměti lze sdílet pomocí DDE, schránky nebo jiných operací OLE/com Uniform data transferu, například pomocí `IDataObject`. `CSharedFile`
 
-`GlobalAlloc` Vrátí HGLOBAL zpracování místo ukazatel na paměti, jako je například ukazatele vrácené [malloc](../../c-runtime-library/reference/malloc.md). Popisovač HGLOBAL je potřeba v určitých aplikacích. Například dávat data do schránky, budete potřebovat popisovač HGLOBAL.
+`GlobalAlloc`Vrátí popisovač HGLOBAL spíše než ukazatel na paměť, jako je například ukazatel, který vrátil. [](../../c-runtime-library/reference/malloc.md) V některých aplikacích je potřeba popisovač HGLOBAL. Například pro vložení dat do schránky potřebujete popisovač HGLOBAL.
 
-`CSharedFile` nepodporuje použití souborů mapovaných do paměti a data nelze sdílet přímo mezi procesy.
+`CSharedFile`nepoužívá soubory mapované paměti a data nelze mezi procesy sdílet přímo.
 
-`CSharedFile` objekty mohou automaticky přidělit paměť, své vlastní. Nebo můžete připojit vlastní bloku paměti `CSharedFile` objektu voláním [CSharedFile::SetHandle](#sethandle). V obou případech je přidělena paměť pro soubor paměti automaticky rostoucí `nGrowBytes`-zvýší velikost, pokud `nGrowBytes` není nula.
+`CSharedFile`objekty mohou automaticky přidělit vlastní paměť. Nebo můžete k `CSharedFile` objektu připojit vlastní blok paměti voláním [CSharedFile:: SetHandle](#sethandle). V obou případech je paměť pro rozmístění souboru paměti automaticky přidělena `nGrowBytes`v přírůstcích po velikosti, `nGrowBytes` Pokud není nula.
 
-Další informace najdete v článku [soubory v prostředí MFC](../../mfc/files-in-mfc.md) a [zpracování souborů](../../c-runtime-library/file-handling.md) v *Run-Time Library Reference*.
+Další informace naleznete v článku [soubory v knihovně MFC](../../mfc/files-in-mfc.md) a [zpracování souborů](../../c-runtime-library/file-handling.md) v *Referenční příručce ke knihovně run-time*.
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
-[Třídy CObject](../../mfc/reference/cobject-class.md)
+[CObject](../../mfc/reference/cobject-class.md)
 
-[CFile](../../mfc/reference/cfile-class.md)
+[CFile –](../../mfc/reference/cfile-class.md)
 
 [CMemFile](../../mfc/reference/cmemfile-class.md)
 
@@ -70,11 +70,11 @@ Další informace najdete v článku [soubory v prostředí MFC](../../mfc/files
 
 ## <a name="requirements"></a>Požadavky
 
-**Header:** afxadv.h
+**Záhlaví:** afxadv. h
 
-##  <a name="csharedfile"></a>  CSharedFile::CSharedFile
+##  <a name="csharedfile"></a>CSharedFile::CSharedFile
 
-Vytvoří `CSharedFile` objektu a přiděluje paměť pro něj.
+`CSharedFile` Vytvoří objekt a přidělí paměti pro něj.
 
 ```
 CSharedFile(
@@ -85,14 +85,14 @@ CSharedFile(
 ### <a name="parameters"></a>Parametry
 
 *nAllocFlags*<br/>
-Příznaky určující, jak má přidělit paměť. Zobrazit [GlobalAlloc](/windows/desktop/api/winbase/nf-winbase-globalalloc) seznam platných hodnot příznaku.
+Příznaky označující, jak má být paměť přidělena. Seznam platných hodnot příznaků najdete v tématu [GlobalAlloc](/windows/win32/api/winbase/nf-winbase-globalalloc) .
 
 *nGrowBytes*<br/>
-Zvýšení přidělení paměti v bajtech.
+Přírůstek přidělení paměti v bajtech.
 
-##  <a name="detach"></a>  CSharedFile::Detach
+##  <a name="detach"></a>CSharedFile::D etach
 
-Voláním této funkce a zavřete soubor paměti odpojit od bloku paměti.
+Voláním této funkce zavřete soubor paměti a odpojte ho od bloku paměti.
 
 ```
 HGLOBAL Detach();
@@ -100,15 +100,15 @@ HGLOBAL Detach();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Obslužná rutina bloku paměti, který obsahuje obsah souboru paměti.
+Popisovač bloku paměti, který obsahuje obsah souboru paměti.
 
 ### <a name="remarks"></a>Poznámky
 
-Můžete znovu otevřít ho voláním [SetHandle](#sethandle), pomocí popisovač vrácený **odpojit**.
+Můžete jej znovu otevřít voláním [SetHandle](#sethandle)pomocí popisovače vráceného funkcí **detach**.
 
-##  <a name="sethandle"></a>  CSharedFile::SetHandle
+##  <a name="sethandle"></a>CSharedFile::SetHandle
 
-Voláním této funkce připojit blok globální paměti, aby `CSharedFile` objektu.
+Voláním této funkce připojíte blok globální paměti k `CSharedFile` objektu.
 
 ```
 void SetHandle(
@@ -119,14 +119,14 @@ void SetHandle(
 ### <a name="parameters"></a>Parametry
 
 *hGlobalMemory*<br/>
-Zpracování do globální paměti, připojí se k `CSharedFile`.
+Popisovač globální paměti, která má být připojena k `CSharedFile`.
 
 *bAllowGrow*<br/>
-Určuje, zda blok paměti může růst.
+Určuje, zda je povolený blok paměti pro růst.
 
 ### <a name="remarks"></a>Poznámky
 
-Pokud *bAllowGrow* je nenulová, velikost bloku paměti se zvyšuje podle potřeby, například pokud se pokusíte zapsat počet bajtů k souboru, než je velikost bloku paměti.
+Pokud je *bAllowGrow* nenulové, velikost bloku paměti se v případě potřeby zvyšuje, například pokud se pokusíte zapsat více bajtů souboru, než je velikost bloku paměti.
 
 ## <a name="see-also"></a>Viz také:
 

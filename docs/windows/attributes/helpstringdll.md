@@ -1,21 +1,21 @@
 ---
-title: helpstringdll – (atribut C++ COM)
+title: helpstringdll (C++ atribut com)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.helpstringdll
 helpviewer_keywords:
 - helpstringdll attribute [C++]
 ms.assetid: 121271fa-f061-492b-b87f-bbfcf4b02e7b
-ms.openlocfilehash: 72f5926018e3ac7ec4770f83d7a2c3438b67d861
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8d6dddef666f074a57f54b8c9447847ff56d26fd
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62409535"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69501479"
 ---
 # <a name="helpstringdll"></a>helpstringdll
 
-Určuje název knihovny DLL použít k provádění vyhledání řetězce dokumentu (lokalizace).
+Určuje název knihovny DLL, která se má použít k provedení vyhledávání řetězců v dokumentu (lokalizace).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -26,11 +26,11 @@ Určuje název knihovny DLL použít k provádění vyhledání řetězce dokume
 ### <a name="parameters"></a>Parametry
 
 *string*<br/>
-Knihovny DLL použít k provádění vyhledání řetězce dokumentu.
+Knihovna DLL, která se má použít k provedení vyhledávání řetězce dokumentu
 
 ## <a name="remarks"></a>Poznámky
 
-**Helpstringdll –** C++ atribut má stejné funkce jako [helpstringdll –](/windows/desktop/Midl/helpstringdll) atribut MIDL.
+Atribut **helpstringdll** C++ má stejné funkce jako atribut [helpstringdll](/windows/win32/Midl/helpstringdll) MIDL.
 
 ## <a name="example"></a>Příklad
 
@@ -49,16 +49,16 @@ __interface IMyI
 
 ## <a name="requirements"></a>Požadavky
 
-### <a name="attribute-context"></a>Atribut kontextu
+### <a name="attribute-context"></a>Kontext atributu
 
 |||
 |-|-|
-|**Platí pro**|**Třída**, **rozhraní**, rozhraní – metoda|
-|**Opakovatelné**|Ne|
-|**Vyžadované atributy**|Žádné|
+|**Platí pro**|**Třída**, **rozhraní**, metoda rozhraní|
+|**REPEATABLE**|Ne|
+|**Požadované atributy**|Žádné|
 |**Neplatné atributy**|Žádné|
 
-Další informace najdete v tématu [kontexty atributů](cpp-attributes-com-net.md#contexts).
+Další informace naleznete v tématu [kontexty atributů](cpp-attributes-com-net.md#contexts).
 
 ## <a name="see-also"></a>Viz také:
 

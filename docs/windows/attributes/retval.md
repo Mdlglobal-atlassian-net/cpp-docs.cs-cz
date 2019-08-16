@@ -1,21 +1,21 @@
 ---
-title: retval (atribut C++ COM)
+title: retval (C++ atribut com)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.retval
 helpviewer_keywords:
 - retval attribute
 ms.assetid: bfa16f08-157d-4eea-afde-1232c54b8501
-ms.openlocfilehash: 9f5ad86a289f8904278a58636e66809ae0edd55b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2a2865c1eda229f1a2fcd457c22119b2908c1caa
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62407403"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69514044"
 ---
 # <a name="retval"></a>retval
 
-Označí parametr, který přijímá návratovou hodnotu člena.
+Určuje parametr, který přijímá vrácenou hodnotu člena.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -25,26 +25,26 @@ Označí parametr, který přijímá návratovou hodnotu člena.
 
 ## <a name="remarks"></a>Poznámky
 
-**Retval** C++ atribut má stejné funkce jako [retval](/windows/desktop/Midl/retval) atribut MIDL.
+Atribut **retval** C++ má stejné funkce jako atribut [retval](/windows/win32/Midl/retval) MIDL.
 
-**retval** musí být uvedena v posledním argumentu v deklaraci funkce.
+parametr **retval** musí být uveden v posledním argumentu v deklaraci funkce.
 
 ## <a name="example"></a>Příklad
 
-Podívejte se na příklad pro [umožňujících vazbu](bindable.md) ukázkový používání **retval**.
+Podívejte se na příklad pro [vázání](bindable.md) pro použití vzorku **retval**.
 
 ## <a name="requirements"></a>Požadavky
 
-### <a name="attribute-context"></a>Atribut kontextu
+### <a name="attribute-context"></a>Kontext atributu
 
 |||
 |-|-|
-|**Platí pro**|Rozhraní parametrů, metody rozhraní|
-|**Opakovatelné**|Ne|
-|**Vyžadované atributy**|**out**|
+|**Platí pro**|Parametr rozhraní, metoda rozhraní|
+|**REPEATABLE**|Ne|
+|**Požadované atributy**|**out**|
 |**Neplatné atributy**|**in**|
 
-Další informace o kontexty atributů najdete v tématu [kontexty atributů](cpp-attributes-com-net.md#contexts).
+Další informace o kontextech atributů naleznete v tématu kontexty [atributů](cpp-attributes-com-net.md#contexts).
 
 ## <a name="see-also"></a>Viz také:
 

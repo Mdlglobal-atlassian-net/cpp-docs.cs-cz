@@ -36,16 +36,16 @@ helpviewer_keywords:
 - GetRowset method
 - GetSchemas method
 ms.assetid: bd7bf0d7-a1c6-4afa-88e3-cfdbdf560703
-ms.openlocfilehash: b764b571aae81f6225028cbe0d052d817d93d183
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3c34f84254fc57b6cd5f8b4763faac313a01636b
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62409028"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69501396"
 ---
 # <a name="idbschemarowsetimpl-class"></a>IDBSchemaRowsetImpl – třída
 
-Poskytuje implementaci pro sad řádků schématu.
+Poskytuje implementaci pro sady řádků schématu.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -57,11 +57,11 @@ class ATL_NO_VTABLE IDBSchemaRowsetImpl : public IDBSchemaRowset
 ### <a name="parameters"></a>Parametry
 
 *SessionClass*<br/>
-Třída, podle kterého `IDBSchemaRowsetImpl` dědí. Tato třída bude obvykle třídu relace uživatele.
+Třída, která `IDBSchemaRowsetImpl` je zděděna. Obvykle tato třída bude třídou relace uživatele.
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** atldb.h
+**Záhlaví:** Atldb. h
 
 ## <a name="members"></a>Členové
 
@@ -69,32 +69,32 @@ Třída, podle kterého `IDBSchemaRowsetImpl` dědí. Tato třída bude obvykle 
 
 |||
 |-|-|
-|[CheckRestrictions](#checkrestrictions)|Ověří platnost omezení proti sada řádků schématu.|
-|[CreateSchemaRowset](#createschemarowset)|Implementuje funkci objektu Tvůrce modelu COM pro objekt zadaný parametrem šablony.|
-|[SetRestrictions](#setrestrictions)|Určuje, která omezení podpory pro sadu řádků schématu konkrétní.|
+|[CheckRestrictions](#checkrestrictions)|Kontroluje platnost omezení proti sadě řádků schématu.|
+|[CreateSchemaRowset](#createschemarowset)|Implementuje funkci tvůrce objektu modelu COM pro objekt určený parametrem šablony.|
+|[SetRestrictions](#setrestrictions)|Určuje, která omezení podporuje konkrétní sada řádků schématu.|
 
 ### <a name="interface-methods"></a>Metody rozhraní
 
 |||
 |-|-|
-|[GetRowset](#getrowset)|Vrací sadu řádků schématu.|
-|[GetSchemas](#getschemas)|Vrátí seznam sad řádků schématu přístupné [IDBSchemaRowsetImpl::GetRowset](../../data/oledb/idbschemarowsetimpl-getrowset.md).|
+|[GetRowset](#getrowset)|Vrátí sadu řádků schématu.|
+|[GetSchemas](#getschemas)|Vrátí seznam sad řádků schématu přístupných pomocí [IDBSchemaRowsetImpl:: GetRowset](../../data/oledb/idbschemarowsetimpl-getrowset.md).|
 
 ## <a name="remarks"></a>Poznámky
 
-Tato třída implementuje [IDBSchemaRowset](/previous-versions/windows/desktop/ms713686(v=vs.85)) rozhraní a funkce přepsaly creator [CreateSchemaRowset](../../data/oledb/idbschemarowsetimpl-createschemarowset.md).
+Tato třída implementuje rozhraní [IDBSchemaRowset](/previous-versions/windows/desktop/ms713686(v=vs.85)) a funkci založena Creator [CreateSchemaRowset](../../data/oledb/idbschemarowsetimpl-createschemarowset.md).
 
-OLE DB pomocí sad řádků schématu vrátí data o datech ve zprostředkovateli. Taková data se často nazývá "metadata." Ve výchozím nastavení, musí vždycky podporovat zprostředkovatele `DBSCHEMA_TABLES`, `DBSCHEMA_COLUMNS`, a `DBSCHEMA_PROVIDER_TYPES`, jak je popsáno v [IDBSchemaRowset](/previous-versions/windows/desktop/ms713686(v=vs.85)) v *OLE DB referenční informace pro programátory*. Sady řádků schématu jsou určené v objektu map schématu. Informace o položkách mapování schématu najdete v tématu [SCHEMA_ENTRY](../../data/oledb/schema-entry.md).
+OLE DB používá sady řádků schématu k vrácení dat o datech ve zprostředkovateli. Tato data se často nazývají "metadata". Ve výchozím nastavení musí `DBSCHEMA_TABLES`poskytovatel vždy podporovat, `DBSCHEMA_COLUMNS`a `DBSCHEMA_PROVIDER_TYPES`, jak je popsáno v části [IDBSchemaRowset](/previous-versions/windows/desktop/ms713686(v=vs.85)) v *referenci OLE DB programátora*. Sady řádků schématu jsou označeny v mapě schématu. Informace o položkách map schématu naleznete v tématu [SCHEMA_ENTRY](../../data/oledb/schema-entry.md).
 
-OLE DB Provider průvodce, v Průvodci objektu ATL automaticky generuje kód pro sad řádků schématu ve vašem projektu. (Ve výchozím nastavení podporuje Průvodce sady řádků schématu povinné už jsme zmínili.) Při vytváření nového konzumenta s použitím Průvodce objektem ATL, používá Průvodce na správná data svázat zprostředkovatele sady řádků schématu. Pokud vaše sady řádků schématu k poskytování správných metadat neimplementují, průvodce se nebudou vázat správná data.
+Průvodce poskytovatelem OLE DB v průvodci objekty ATL automaticky generuje kód pro sady řádků schématu v projektu. (Ve výchozím nastavení Průvodce podporuje výše uvedené povinná sada řádků schématu.) Při vytváření příjemce pomocí Průvodce objekty ATL používá Průvodce sady řádků schématu ke svázání správných dat s poskytovatelem. Pokud neimplementujete sady řádků schématu k poskytnutí správných metadat, průvodce nebude navazovat správná data.
 
-Informace o tom, jak Podpora sad řádků schématu ve zprostředkovateli najdete v tématu [Podpora sad řádků schématu](../../data/oledb/supporting-schema-rowsets.md).
+Informace o tom, jak podporovat sady řádků schématu ve zprostředkovateli, naleznete v tématu [podpůrné sady řádků schématu](../../data/oledb/supporting-schema-rowsets.md).
 
-Další informace o sad řádků schématu najdete v tématu [sad řádků schématu](/previous-versions/windows/desktop/ms712921(v=vs.85)) v *OLE DB referenční informace pro programátory*.
+Další informace o sadách řádků schématu naleznete v tématu [sady řádků schématu](/previous-versions/windows/desktop/ms712921(v=vs.85)) v *referenci programátora OLE DB*.
 
 ## <a name="checkrestrictions"></a> IDBSchemaRowsetImpl::CheckRestrictions
 
-Ověří platnost omezení proti sada řádků schématu.
+Kontroluje platnost omezení proti sadě řádků schématu.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -106,25 +106,25 @@ HRESULT CheckRestrictions(REFGUID rguidSchema,
 #### <a name="parameters"></a>Parametry
 
 *rguidSchema*<br/>
-[in] Odkaz na identifikátor GUID sady řádků požadované schéma (například `DBSCHEMA_TABLES`).
+pro Odkaz na požadovaný identifikátor GUID sady řádků schématu (například `DBSCHEMA_TABLES`).
 
-*cRestrictions*<br/>
-[in] Počet omezení, které příjemce předaný pro sadu řádků schématu.
+*cRestrictions –*<br/>
+pro Počet omezení, která příjemce předal pro sadu řádků schématu.
 
 *rgRestrictions*<br/>
-[in] Pole s délkou *cRestrictions* omezení hodnot, která se má nastavit. Další informace najdete v popisu *rgRestrictions* parametr [SetRestrictions](../../data/oledb/idbschemarowsetimpl-setrestrictions.md).
+pro Pole délky *CRestrictions –* hodnot omezení, které mají být nastaveny. Další informace najdete v popisu parametru *rgRestrictions* v [SetRestrictions](../../data/oledb/idbschemarowsetimpl-setrestrictions.md).
 
 ### <a name="remarks"></a>Poznámky
 
-Použití `CheckRestrictions` ke kontrole platnosti omezení pro sadu řádků schématu. Zkontroluje omezení pro `DBSCHEMA_TABLES`, `DBSCHEMA_COLUMNS`, a `DBSCHEMA_PROVIDER_TYPES` sad řádků schématu. Pojmenujte ji k určení, zda uživatele volání `IDBSchemaRowset::GetRowset` je správná. Pokud chcete zajistit podporu sad řádků schématu než ty, které uvedené výše, měli byste vytvořit vlastní funkce k provedení této úlohy.
+Slouží `CheckRestrictions` ke kontrole platnosti omezení proti sadě řádků schématu. Kontroluje omezení pro `DBSCHEMA_TABLES`sady řádků `DBSCHEMA_COLUMNS`schématu, `DBSCHEMA_PROVIDER_TYPES` a. Zavolejte ho k určení, jestli `IDBSchemaRowset::GetRowset` je volání uživatele správné. Pokud chcete podporovat jiné sady řádků schématu než ty, které jsou uvedeny výše, měli byste vytvořit vlastní funkci pro provedení této úlohy.
 
-`CheckRestrictions` Určuje, pokud je příjemce volání [GetRowset –](../../data/oledb/idbschemarowsetimpl-getrowset.md) správné omezení a typ správný omezení (například VT_BSTR řetězce), které zprostředkovatel podporuje. Také určuje, pokud jsou podporovány správný počet omezení. Ve výchozím nastavení `CheckRestrictions` bude žádat poskytovatele, až [SetRestrictions](../../data/oledb/idbschemarowsetimpl-setrestrictions.md) volání, která omezení podporuje v dané sadě řádků. Poté porovná omezení od uživatele s ohledem podporována zprostředkovatelem a buď úspěšná nebo neúspěšná.
+`CheckRestrictions`Určuje, zda příjemce volá [sadu GetRowset](../../data/oledb/idbschemarowsetimpl-getrowset.md) se správným omezením a správným typem omezení (například VT_BSTR pro řetězec), který podporuje zprostředkovatel. Také určuje, zda je podporován správný počet omezení. Ve výchozím nastavení `CheckRestrictions` vyzve poskytovatele, prostřednictvím volání [SetRestrictions](../../data/oledb/idbschemarowsetimpl-setrestrictions.md) , která omezení podporuje v dané sadě řádků. Pak porovná omezení od příjemce s tím, jak jsou podporována poskytovatelem, a buď uspěje, nebo selže.
 
-Další informace o sad řádků schématu najdete v tématu [IDBSchemaRowset](/previous-versions/windows/desktop/ms713686(v=vs.85)) v *OLE DB referenční informace pro programátory* v sadě Windows SDK.
+Další informace o sadách řádků schématu naleznete v tématu [IDBSchemaRowset](/previous-versions/windows/desktop/ms713686(v=vs.85)) v *referenci OLE DB programátora* v Windows SDK.
 
 ## <a name="createschemarowset"></a> IDBSchemaRowsetImpl::CreateSchemaRowset
 
-Implementuje funkci objektu Tvůrce modelu COM pro objekt zadaný parametrem šablony.
+Implementuje funkci tvůrce objektu modelu COM pro objekt určený parametrem šablony.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -143,40 +143,40 @@ HRESULT CreateSchemaRowset(IUnknown *pUnkOuter,
 #### <a name="parameters"></a>Parametry
 
 *pUnkOuter*<br/>
-[in] Vnější [IUnknown](/windows/desktop/api/unknwn/nn-unknwn-iunknown) pro agregaci, jinak hodnota NULL.
+pro Vnější rozhraní [IUnknown](/windows/win32/api/unknwn/nn-unknwn-iunknown) při agregaci, jinak null.
 
-*cRestrictions*<br/>
-[in] Počet omezení použitých na sady řádků schématu.
+*cRestrictions –*<br/>
+pro Počet omezení použitých pro sadu řádků schématu.
 
 *rgRestrictions*<br/>
-[in] Pole `cRestrictions` **VARIANT**s použít v sadě řádků.
+pro Pole `cRestrictions` **variant**s, které má být použito pro sadu řádků.
 
 *riid*<br/>
-[in] Rozhraní pro [QueryInterface](../../atl/queryinterface.md) pro výstupu `IUnknown`.
+pro Rozhraní pro [QueryInterface](../../atl/queryinterface.md) pro výstup `IUnknown`.
 
 *cPropertySets*<br/>
-[in] Nastaví počet vlastnost nastavit.
+pro Počet sad vlastností, které mají být nastaveny.
 
 *rgPropertySets*<br/>
-[in] Pole [DBPROPSET](/previous-versions/windows/desktop/ms714367(v=vs.85)) struktury, které určují vlastnosti nastavena.
+pro Pole [DBPROPSET](/previous-versions/windows/desktop/ms714367(v=vs.85)) struktury, které určují vlastnosti, které jsou nastaveny.
 
 *ppRowset*<br/>
-[out] Odchozích dat `IUnknown` požadoval *riid*. To `IUnknown` je rozhraní objektu sady řádků schématu.
+mimo Odchozí `IUnknown` požadavek od *riid*. Toto `IUnknown` je rozhraní objektu sady řádků schématu.
 
 *pSchemaRowset*<br/>
-[out] Ukazatel na instanci třídy sady řádků schématu. Obvykle tento parametr se nepoužívá, ale můžete použít, pokud je nutné provést další práce na sadu řádků schématu před přidělovat k objektu modelu COM. Životnost *pSchemaRowset* je svázaná s *ppRowset*.
+mimo Ukazatel na instanci třídy sady řádků schématu. Tento parametr obvykle není použit, ale lze jej použít, pokud je nutné provést více práce na sadě řádků schématu před tím, než je předáte objektu COM. Životnost *pSchemaRowset* je vázána *ppRowset*.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Standardní hodnoty HRESULT.
+Standardní hodnota HRESULT.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato funkce implementuje obecný tvůrce pro všechny druhy sad řádků schématu. Uživateli obvykle nevolá této funkce. Je volána implementace mapování schématu.
+Tato funkce implementuje obecného autora pro všechny typy sad řádků schématu. Obvykle uživatel nevolá tuto funkci. Je volána implementací mapy schématu.
 
 ## <a name="setrestrictions"></a> IDBSchemaRowsetImpl::SetRestrictions
 
-Určuje, která omezení podpory pro sadu řádků schématu konkrétní.
+Určuje, která omezení podporuje konkrétní sada řádků schématu.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -188,30 +188,30 @@ void SetRestrictions(ULONG cRestrictions,
 
 #### <a name="parameters"></a>Parametry
 
-*cRestrictions*<br/>
-[in] Počet omezení *rgRestrictions* pole a počet identifikátory GUID *rguidSchema* pole.
+*cRestrictions –*<br/>
+pro Počet omezení v poli *rgRestrictions* a počet identifikátorů GUID v poli *rguidSchema* .
 
 *rguidSchema*<br/>
-[in] Pole identifikátorů GUID sady řádků schématu, pro které chcete načíst omezení. Každý prvek pole obsahuje identifikátor GUID sady řádků jedno schéma (například `DBSCHEMA_TABLES`).
+pro Pole identifikátorů GUID sady řádků schématu, pro které mají být načtena omezení. Každý prvek pole obsahuje identifikátor GUID jedné sady řádků schématu (například `DBSCHEMA_TABLES`).
 
 *rgRestrictions*<br/>
-[in] Pole s délkou *cRestrictions* omezení hodnot, která se má nastavit. Každý prvek odpovídá omezení pro sadu řádků schématu identifikované identifikátorem GUID. Pokud sada řádků schématu není podporována zprostředkovatelem, prvku nastavená na hodnotu nula. V opačném případě **ULONG** hodnota obsahuje bitová maska, která představuje omezení podporované na tomto sada řádků schématu. Další informace, na kterém omezení odpovídají konkrétní schématu sady řádků, najdete v tabulce sada řádků schématu GUID v [IDBSchemaRowset](/previous-versions/windows/desktop/ms713686(v=vs.85)) v *OLE DB referenční informace pro programátory* v Windows SADA SDK.
+pro Pole délky *CRestrictions –* hodnot omezení, které mají být nastaveny. Každý prvek odpovídá omezením pro sadu řádků schématu identifikovanou identifikátorem GUID. Pokud není sada řádků schématu podporována poskytovatelem, je prvek nastaven na hodnotu nula. V opačném případě hodnota **ulong** obsahuje bitovou masku, která představuje omezení podporovaná na dané sadě řádků schématu. Další informace o tom, která omezení odpovídají konkrétní sadě řádků schématu, naleznete v tabulce identifikátorů GUID sady řádků schématu v sadě [řádků](/previous-versions/windows/desktop/ms713686(v=vs.85)) v *odkazu OLE DB programátor* v Windows SDK.
 
 ### <a name="remarks"></a>Poznámky
 
-`IDBSchemaRowset` Objektu volání `SetRestrictions` k určení, která omezení podpory pro sadu řádků schématu konkrétní (je volán [GetSchemas](../../data/oledb/idbschemarowsetimpl-getschemas.md) prostřednictvím upcasted ukazatele). Omezení povolit uživatelům načítat pouze odpovídající řádky (například vyhledat všechny sloupce v tabulce "MyTable"). Omezení jsou volitelné a v případě, ve které nejsou podporovány (výchozí), vždy vrátí se všechna data.
+Objekt volá `SetRestrictions` k určení, která omezení podporuje konkrétní sada řádků schématu (je volána pomocí GetSchemas přes přetypováníný ukazatel). [](../../data/oledb/idbschemarowsetimpl-getschemas.md) `IDBSchemaRowset` Omezení umožňují spotřebitelům načíst pouze vyhovující řádky (například najít všechny sloupce v tabulce "MyTable"). Omezení jsou volitelná a v případě, že nejsou podporovány žádné (výchozí), jsou všechna data vždy vrácena.
 
-Nastaví výchozí implementace této metody *rgRestrictions* pole prvků na hodnotu 0. Přepište výchozí nastavení ve své třídě relace pro nastavení omezení pro jiné než výchozí.
+Výchozí implementace této metody nastaví prvky pole *rgRestrictions* na hodnotu 0. Přepsáním výchozí hodnoty ve třídě Session nastavte jiná omezení než výchozí.
 
-Informace o implementaci Podpora sad řádků schématu najdete v tématu [Podpora sad řádků schématu](../../data/oledb/supporting-schema-rowsets.md).
+Informace o implementaci podpory sady řádků schématu naleznete v tématu [podpůrné sady řádků schématu](../../data/oledb/supporting-schema-rowsets.md).
 
-Příklad poskytovatele, který podporuje sad řádků schématu, najdete v článku [UpdatePV](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/ATL/OLEDB/Provider/UPDATEPV) vzorku.
+Příklad zprostředkovatele, který podporuje sady řádků schématu, naleznete v ukázce [UpdatePV](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/ATL/OLEDB/Provider/UPDATEPV) .
 
-Další informace o sad řádků schématu najdete v tématu [IDBSchemaRowset](/previous-versions/windows/desktop/ms713686(v=vs.85)) v *OLE DB referenční informace pro programátory* v sadě Windows SDK.
+Další informace o sadách řádků schématu naleznete v tématu [IDBSchemaRowset](/previous-versions/windows/desktop/ms713686(v=vs.85)) v *referenci OLE DB programátora* v Windows SDK.
 
 ## <a name="getrowset"></a> IDBSchemaRowsetImpl::GetRowset
 
-Vrací sadu řádků schématu.
+Vrátí sadu řádků schématu.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -229,38 +229,38 @@ STDMETHOD (GetRowset)(IUnknown *pUnkOuter,
 #### <a name="parameters"></a>Parametry
 
 *pUnkOuter*<br/>
-[in] Vnější `IUnknown` při agregovat; jinak hodnota NULL.
+pro Vnější `IUnknown` při agregaci; jinak null.
 
 *rguidSchema*<br/>
-[in] Odkaz na identifikátor GUID sady řádků požadované schéma (například `DBSCHEMA_TABLES`).
+pro Odkaz na požadovaný identifikátor GUID sady řádků schématu (například `DBSCHEMA_TABLES`).
 
-*cRestrictions*<br/>
-[in] Počet omezení použít v sadě řádků.
+*cRestrictions –*<br/>
+pro Počet omezení, která mají být použita pro sadu řádků.
 
 *rgRestrictions*<br/>
-[in] Pole `cRestrictions` **VARIANT**, které představují omezení.
+pro Pole `cRestrictions` **variant**s, které představuje omezení.
 
 *riid*<br/>
-[in] Identifikátor IID k vyžádání sady řádků schématu nově vytvořený.
+pro Identifikátor IID pro požadavek na nově vytvořenou sadu řádků schématu.
 
 *cPropertySets*<br/>
-[in] Nastaví počet vlastnost nastavit.
+pro Počet sad vlastností, které mají být nastaveny.
 
 *rgPropertySets*<br/>
-[/ out] Pole [DBPROPSET](/previous-versions/windows/desktop/ms714367(v=vs.85)) struktury nastavit pro sadu řádků schématu nově vytvořený.
+[in/out] Pole [DBPROPSET](/previous-versions/windows/desktop/ms714367(v=vs.85)) struktury, které se mají nastavit na nově vytvořené sadě řádků schématu.
 
 *ppRowset*<br/>
-[out] Ukazatel na požadované rozhraní pro nově vytvořené schéma řádků.
+mimo Ukazatel na požadované rozhraní na nově vytvořené sadě řádků schématu.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato metoda vyžaduje, aby uživatel měl schéma mapování ve třídě relace. Pomocí informací o mapování schématu, `GetRowset` vytvoří objekt dané sadě řádků, pokud *rguidSchema* rovná parametru na jednu z položek mapování identifikátory GUID. Zobrazit [SCHEMA_ENTRY](../../data/oledb/schema-entry.md) popis položku mapování.
+Tato metoda vyžaduje, aby měl uživatel ve třídě Session mapu schématu. Pomocí informací o mapě schématu vytvoří `GetRowset` daný objekt sady řádků, pokud je parametr *rguidSchema* roven jednomu z identifikátorů GUID položek mapování. Popis položky mapování naleznete v tématu [SCHEMA_ENTRY](../../data/oledb/schema-entry.md) .
 
-Zobrazit [IDBSchemaRowset::GetRowset](/previous-versions/windows/desktop/ms722634(v=vs.85)) ve Windows SDK.
+Viz [IDBSchemaRowset:: GetRowset](/previous-versions/windows/desktop/ms722634(v=vs.85)) v Windows SDK.
 
 ## <a name="getschemas"></a> IDBSchemaRowsetImpl::GetSchemas
 
-Vrátí seznam sad řádků schématu přístupné [IDBSchemaRowsetImpl::GetRowset](../../data/oledb/idbschemarowsetimpl-getrowset.md).
+Vrátí seznam sad řádků schématu přístupných pomocí [IDBSchemaRowsetImpl:: GetRowset](../../data/oledb/idbschemarowsetimpl-getrowset.md).
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -273,19 +273,19 @@ STDMETHOD (GetSchema s )(ULONG * pcSchemas,
 #### <a name="parameters"></a>Parametry
 
 *pcSchemas*<br/>
-[out] Ukazatel **ULONG** , který je vyplněna počet schémat.
+mimo Ukazatel na **ulong** , který je vyplněn počtem schémat.
 
 *prgSchemas*<br/>
-[out] Ukazatel na pole identifikátorů GUID, který je vyplněný s ukazatelem na pole Sada řádků schématu identifikátory GUID.
+mimo Ukazatel na pole identifikátorů GUID, které jsou vyplněny ukazatelem na pole identifikátorů GUID sady řádků schématu.
 
 *prgRest*<br/>
-[out] Ukazatel na pole **ULONG**, které má být vyplněna pole omezení.
+mimo Ukazatel na pole **ulong**s, které má být vyplněno polem omezení.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato metoda vrací pole všech řádků schématu podporovanou zprostředkovatelem. Zobrazit [IDBSchemaRowset::GetSchemas](/previous-versions/windows/desktop/ms719605(v=vs.85)) ve Windows SDK.
+Tato metoda vrací pole všech sad řádků schématu podporovaných zprostředkovatelem. Viz [IDBSchemaRowset::](/previous-versions/windows/desktop/ms719605(v=vs.85)) GetSchemas v Windows SDK.
 
-Implementaci této funkce vyžaduje, aby uživatel mít schéma mapování ve třídě relace. Pomocí informací o schématu mapování, pak odpovědí s polem identifikátory GUID pro schémata v objektu map. Reprezentuje schémata podporována zprostředkovatelem.
+Implementace této funkce vyžaduje, aby uživatel měl mapu schématu ve třídě Session. Pomocí informací o mapě schématu pak odpoví pole identifikátorů GUID pro schémata na mapě. To představuje schémata podporovaná zprostředkovatelem.
 
 ## <a name="see-also"></a>Viz také:
 

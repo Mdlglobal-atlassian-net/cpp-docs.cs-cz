@@ -1,5 +1,5 @@
 ---
-title: 'Návod: Aktualizace aplikace MFC Scribble (část 1)'
+title: 'Návod: Aktualizace aplikace MFC Klikyháky (část 1)'
 ms.date: 04/25/2019
 helpviewer_keywords:
 - examples [MFC], update existing application
@@ -9,91 +9,91 @@ helpviewer_keywords:
 - MFC Feature Pack, update existing application
 - walkthroughs [MFC], update existing application
 ms.assetid: aa6330d3-6cfc-4c79-8fcb-0282263025f7
-ms.openlocfilehash: a12c2bd2c1c1963630a1bd74b56f2c832573cc94
-ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
+ms.openlocfilehash: 71abf84e4c2afd75b0da88c261c78aa04ae08309
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66450511"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69512933"
 ---
-# <a name="walkthrough-updating-the-mfc-scribble-application-part-1"></a>Návod: Aktualizace aplikace MFC Scribble (část 1)
+# <a name="walkthrough-updating-the-mfc-scribble-application-part-1"></a>Návod: Aktualizace aplikace MFC Klikyháky (část 1)
 
-Tento návod ukazuje, jak změnit existující aplikaci MFC použít uživatelské rozhraní pásu karet. Visual Studio podporuje pásu karet Office 2007 a na Windows 7 Scenic pásu karet. Další informace o uživatelském rozhraní pásu karet najdete v tématu [pásů karet](/windows/desktop/uxguide/cmd-ribbons).
+Tento návod ukazuje, jak upravit existující aplikaci knihovny MFC pro použití uživatelského rozhraní pásu karet. Sada Visual Studio podporuje pás karet Office 2007 i pás karet Windows 7 Scenic. Další informace o uživatelském rozhraní pásu karet najdete v tématu [pásy karet](/windows/win32/uxguide/cmd-ribbons).
 
-Tento názorný postup upravuje classic vzorek Scribble 1.0 MFC, který vám umožní používat myš kreslit čáry. Tato část návodu ukazuje, jak upravit ukázky Scribble tak, aby zobrazil panel pásu karet. [Část 2](../mfc/walkthrough-updating-the-mfc-scribble-application-part-2.md) přidá další tlačítka na panel pásu karet.
+Tento návod upraví klasickou ukázku 1,0 MFC, která vám umožní pomocí myši vytvořit čárové kresby. Tato část návodu ukazuje, jak upravit ukázku Klikyháky tak, aby se zobrazil panel pásu karet. [Část 2](../mfc/walkthrough-updating-the-mfc-scribble-application-part-2.md) přidá na pás karet více tlačítek.
 
 ## <a name="prerequisites"></a>Požadavky
 
-[Vzorek Scribble 1.0 MFC](https://download.microsoft.com/download/4/0/9/40946FEC-EE5C-48C2-8750-B0F8DA1C99A8/MFC/general/Scribble.zip.exe). Nápovědu k převodu do sady Visual Studio 2017 nebo později, naleznete v tématu [portování průvodce: MFC Scribble](../porting/porting-guide-mfc-scribble.md).
+[Ukázka knihovny MFC klikyháky 1,0](https://download.microsoft.com/download/4/0/9/40946FEC-EE5C-48C2-8750-B0F8DA1C99A8/MFC/general/Scribble.zip.exe). Nápovědu k převodu do sady Visual Studio 2017 nebo novější najdete v [tématu Průvodce přenosem: Prostředí MFC –](../porting/porting-guide-mfc-scribble.md)Klikyháky
 
-##  <a name="top"></a> Oddíly
+##  <a name="top"></a>Řezů
 
 Tato část návodu obsahuje následující oddíly:
 
-- [Nahrazení základní třídy](#replaceclass)
+- [Nahrazení základních tříd](#replaceclass)
 
-- [Přidávání bitmap do projektu](#addbitmap)
+- [Přidání rastrových obrázků do projektu](#addbitmap)
 
 - [Přidání prostředku pásu karet do projektu](#addribbon)
 
-- [Vytvoření Instance na pásu karet](#createinstance)
+- [Vytvoření instance panelu pásu karet](#createinstance)
 
-- [Přidáním kategorie pásu karet](#addcategory)
+- [Přidání kategorie pásu karet](#addcategory)
 
 - [Nastavení vzhledu aplikace](#setlook)
 
-##  <a name="replaceclass"></a> Nahrazení základní třídy
+##  <a name="replaceclass"></a>Nahrazení základních tříd
 
-Převést aplikaci, která podporuje nabídky k aplikaci, která podporuje pás karet, musí aplikace, okno rámce a nástrojů třídy odvozeny od aktualizace základní třídy. (My Navrhujeme, že nebudete muset měnit původní ukázky Scribble pomocí. Místo toho vyčistěte projekt Scribble, zkopírujte ho do jiného adresáře a potom upravte kopii.)
+Chcete-li převést aplikaci, která podporuje nabídku na aplikaci, která podporuje pás karet, je nutné z aktualizovaných základních tříd odvodit třídy aplikace, okna rámce a panely nástrojů. (Doporučujeme, abyste původní vzorek Klikyháky nezměnili. Místo toho vyčistěte projekt Klikyháky, zkopírujte ho do jiného adresáře a pak upravte kopii.)
 
-### <a name="to-replace-the-base-classes-in-the-scribble-application"></a>Chcete-li nahradit základní třídy v aplikaci Scribble
+### <a name="to-replace-the-base-classes-in-the-scribble-application"></a>Nahrazení základních tříd v aplikaci Klikyháky
 
-1. V scribble.cpp, ověřte, zda `CScribbleApp::InitInstance` obsahuje volání [AfxOleInit](../mfc/reference/ole-initialization.md#afxoleinit).
+1. V Klikyháky. cpp ověřte, že `CScribbleApp::InitInstance` obsahuje volání [AfxOleInit](../mfc/reference/ole-initialization.md#afxoleinit).
 
-1. Přidejte následující kód do souboru stdafx.h.
+1. Do souboru stdafx. h přidejte následující kód.
 
     ```cpp
     #include <afxcontrolbars.h>
     ```
 
-1. V scribble.h, změňte definici pro `CScribbleApp` třídy, takže je odvozena z [CWinAppEx – třída](../mfc/reference/cwinappex-class.md).
+1. V Klikyháky. h upravte definici pro `CScribbleApp` třídu tak, aby byla odvozena od [třídy CWinAppEx](../mfc/reference/cwinappex-class.md).
 
     ```cpp
     class CScribbleApp: public CWinAppEx
     ```
 
-1. Scribble 1.0 byla zapsána, pokud aplikace Windows použít soubor inicializace (.ini) k uložení dat předvoleb uživatele. Místo inicializačního souboru upravte Scribble k ukládání uživatelských předvoleb v registru. Pokud chcete nastavit klíč registru a základní, zadejte následující kód v `CScribbleApp::InitInstance` po `LoadStdProfileSettings()` příkazu.
+1. Klikyháky 1,0 byl napsán, když aplikace systému Windows použily soubor inicializace (. ini) k uložení dat předvoleb uživatele. Místo inicializačního souboru upravte Klikyháky a uložte předvolby uživatele v registru. Chcete-li nastavit klíč registru a základ, zadejte za `CScribbleApp::InitInstance` `LoadStdProfileSettings()` příkaz následující kód.
 
     ```cpp
     SetRegistryKey(_T("MFCNext\\Samples\\Scribble2"));
     SetRegistryBase(_T("Settings"));
     ```
 
-1. Hlavního rámce pro aplikace (MDI interface) více dokumentů už pochází z `CMDIFrameWnd` třídy. Místo toho je odvozen z [CMDIFrameWndEx](../mfc/reference/cmdiframewndex-class.md) třídy.
+1. Hlavní rámec aplikace MDI (Multiple Document Interface) již není odvozen od `CMDIFrameWnd` třídy. Místo toho je odvozen od třídy [CMDIFrameWndEx](../mfc/reference/cmdiframewndex-class.md) .
 
-    V souborech mainfrm.h a mainfrm.cpp nahradit všechny odkazy na `CMDIFrameWnd` s `CMDIFrameWndEx`.
+    V souborech mainfrm. h a mainfrm. cpp nahraďte všechny odkazy na `CMDIFrameWnd`. `CMDIFrameWndEx`
 
-1. Nahradit v souborech childfrm.h a childfrm.cpp `CMDIChildWnd` s `CMDIChildWndEx`.
+1. V souborech childfrm. h a childfrm. cpp nahraďte `CMDIChildWnd` parametrem `CMDIChildWndEx`.
 
-    V childfrm. h souboru nahraďte `CSplitterWnd` s `CSplitterWndEx`.
+    V childfrm. soubor h, `CSplitterWnd` nahraďte `CSplitterWndEx`parametrem.
 
-1. Upravte panelů nástrojů a stavové řádky používat nové třídy knihovny MFC.
+1. Upravte panely nástrojů a stavové řádky tak, aby používaly nové třídy MFC.
 
-    V souboru mainfrm.h:
+    V souboru mainfrm. h:
 
     1. Nahraďte `CToolBar` za `CMFCToolBar` (Jak velká může být moje znalostní báze?).
 
     1. Nahraďte `CStatusBar` za `CMFCStatusBar` (Jak velká může být moje znalostní báze?).
 
-1. V souboru mainfrm.cpp:
+1. V souboru mainfrm. cpp:
 
-    1. Nahraďte `m_wndToolBar.SetBarStyle` s `m_wndToolBar.SetPaneStyle`
+    1. Nahradit `m_wndToolBar.SetBarStyle``m_wndToolBar.SetPaneStyle`
 
-    1. Nahraďte `m_wndToolBar.GetBarStyle` s `m_wndToolBar.GetPaneStyle`
+    1. Nahradit `m_wndToolBar.GetBarStyle``m_wndToolBar.GetPaneStyle`
 
-    1. Nahraďte `DockControlBar(&m_wndToolBar)` s `DockPane(&m_wndToolBar)`
+    1. Nahradit `DockControlBar(&m_wndToolBar)``DockPane(&m_wndToolBar)`
 
-1. V souboru ipframe.cpp okomentujte následující tři řádky kódu.
+1. V souboru ipframe. cpp přidejte následující tři řádky kódu.
 
     ```cpp
     m_wndToolBar.EnableDocking(CBRS_ALIGN_ANY);
@@ -101,124 +101,124 @@ Převést aplikaci, která podporuje nabídky k aplikaci, která podporuje pás 
     pWndFrame->DockPane(&m_wndToolBar);
     ```
 
-1. Uložte změny a potom sestavíte a spustíte aplikaci.
+1. Uložte změny a pak Sestavte a spusťte aplikaci.
 
-##  <a name="addbitmap"></a> Přidávání bitmap do projektu
+##  <a name="addbitmap"></a>Přidání rastrových obrázků do projektu
 
-Další čtyři kroky tohoto názorného postupu vyžadovat prostředky rastrového obrázku. Získáte příslušné rastrové obrázky různými způsoby:
+Další čtyři kroky tohoto návodu vyžadují prostředky rastrového obrázku. Příslušné rastrové obrázky můžete získat různými způsoby:
 
-- Použití [editory prostředků](../windows/resource-editors.md) vytvářet vlastní rastrových obrázků. Nebo můžete sestavit rastrové obrázky z imagí portable network graphics (.png), které jsou součástí sady Visual Studio a můžete ho stáhnout z editory prostředků [knihovna obrázků sady Visual Studio](https://docs.microsoft.com/visualstudio/designers/the-visual-studio-image-library).
+- Editory [prostředků](../windows/resource-editors.md) použijte k zásobování vlastních rastrových obrázků. Případně můžete pomocí editorů prostředků sestavovat bitmapy z obrázků PNG (Portable Network Graphics), které jsou součástí sady Visual Studio, a lze je stáhnout z [knihovny imagí sady Visual Studio](https://docs.microsoft.com/visualstudio/designers/the-visual-studio-image-library).
 
-    Ale **pásu karet** uživatelského rozhraní vyžaduje, aby určité rastrové obrázky podporující průhledné obrázky. Transparentní rastrové obrázky použijte 32bitový pixelů, kde 24 bitů komponenty červené, zelené a modré barvy a určete 8 bitů *alfa kanál* , který určuje průhlednost barvy. Aktuální editory prostředků můžete zobrazit, ale nemohou měnit rastrové obrázky s 32-bit pixelů. V důsledku toho pomocí editoru obrázků externí místo editory prostředků pro manipulaci s transparentní rastrové obrázky.
+    Uživatelské rozhraní **pásu karet** ale vyžaduje, aby některé bitmapy podporovaly průhledné obrázky. Transparentní rastrové obrázky používají 32 pixelů, kde 24 bitů určují červenou, zelenou a modrou komponentu barvy a 8 bitů definují *alfa kanál* , který určuje průhlednost barvy. Aktuální editory prostředků můžete zobrazit, ale Neupravovat rastry s 32 pixely. V důsledku toho použijte externí editor obrázků namísto editorů prostředků k manipulaci s průhlednými bitmapami.
 
-- Zkopírujte si soubor odpovídající prostředek z jiné aplikace do projektu a poté importovat bitmapy z tohoto souboru.
+- Zkopírujte příslušný soubor prostředků z jiné aplikace do projektu a pak importujte bitmapy z tohoto souboru.
 
-Tento podrobný postup kopíruje soubory prostředků z příkladu, vytvoří v [názorný postup: Vytvoření jednoduché aplikace pásu karet pomocí knihovny MFC](../mfc/walkthrough-creating-a-ribbon-application-by-using-mfc.md).
+Tento návod kopíruje soubory prostředků z příkladu vytvořeného [v návodu: Vytvoření aplikace pásu karet pomocí knihovny MFC](../mfc/walkthrough-creating-a-ribbon-application-by-using-mfc.md).
 
-### <a name="to-add-bitmaps-to-the-project"></a>Chcete-li přidat rastrové obrázky do projektu
+### <a name="to-add-bitmaps-to-the-project"></a>Přidání rastrových obrázků do projektu
 
-1. Zkopírujte následující soubory .bmp z adresáře prostředků pomocí Průzkumníka souborů (`res`). Příklad pro adresář prostředků pásu karet (`res`) Scribble projektu:
+1. Pomocí Průzkumníka souborů zkopírujte následující soubory. bmp z adresáře prostředků (`res`) příkladu pásu karet do adresáře prostředků (`res`) v rámci projektu Klikyháky:
 
-   1. Zkopírujte main.bmp Scribble projektu.
+   1. Zkopírujte Main. bmp do projektu Klikyháky.
 
-   1. Zkopírujte filesmall.bmp a filelarge.bmp Scribble projektu.
+   1. Zkopírujte do svého projektu Klikyháky malý. bmp a Large. bmp.
 
-   1. Vytvořte nové kopie souborů filelarge.bmp a filesmall.bmp, ale ukládat kopie v příkladu pásu karet. Přejmenovat homesmall.bmp kopie a homelarge.bmp a poté přesuňte do projektu Scribble kopie.
+   1. Vytvořte nové kopie velkých a malých souborů. bmp a v příkladu na pásu karet uložte kopie. Přejmenujte kopie homesmall. bmp a homelarge. bmp a potom přesuňte kopie do projektu Klikyháky.
 
-   1. Vytvořte kopii souboru Toolbar.bmp s tím, ale uložit kopii v příkladu pásu karet. Přejmenovat panelicons.bmp kopie a poté přesuňte kopii do svého projektu Scribble.
+   1. Vytvořte kopii souboru Toolbar. bmp, ale kopii uložte v příkladu pásu karet. Přejmenujte kopii panelicons. bmp a pak ji přesuňte do svého projektu Klikyháky.
 
-1. Importujte rastrového obrázku pro aplikaci knihovny MFC. V **zobrazení prostředků**, dvakrát klikněte **scribble.rc** uzlu, dvakrát klikněte na **rastrový obrázek** uzel a potom klikněte na **přidat prostředek**. V dialogovém okně, které se zobrazí, klikněte na tlačítko **Import**. Přejděte `res` adresář, vyberte soubor main.bmp a potom klikněte na tlačítko **otevřít**.
+1. Importujte rastrový obrázek pro aplikaci knihovny MFC. V **prostředky**poklikejte na uzel **Klikyháky. RC** , dvakrát klikněte na uzel **rastrový obrázek** a potom klikněte na **Přidat prostředek**. V dialogovém okně, které se zobrazí, klikněte na **importovat**. Přejděte do `res` adresáře, vyberte soubor Main. bmp a potom klikněte na tlačítko **otevřít**.
 
-   Rastrový obrázek main.bmp obsahuje bitovou kopii 26 × 26. Změna ID rastrový obrázek pro `IDB_RIBBON_MAIN`.
+   Hlavní rastrová obrázek. bmp obsahuje obrázek 26x26. Změňte ID rastrového obrázku na `IDB_RIBBON_MAIN`.
 
-1. Rastrové obrázky pro nabídky soubor, který je připojen k importu **aplikace** tlačítko.
+1. Importujte rastrové obrázky pro nabídku soubor, která je připojena k tlačítku **aplikace** .
 
-   1. Importovat soubor filesmall.bmp, který obsahuje jedenáct 16 x 16 (16 × 176) bitové kopie. Změna ID rastrový obrázek pro `IDB_RIBBON_FILESMALL`.
-
-   > [!NOTE]
-   > Protože potřebujeme pouze prvních osm 16 x 16 imagí (16 × 128), může volitelně oříznout šířku na pravé straně tento rastrový obrázek z 176 do 128.
-
-   1. Importovat filelarge.bmp, který obsahuje devět 32 x 32 (32 x 288) bitové kopie. Změna ID rastrový obrázek pro `IDB_RIBBON_FILELARGE`.
-
-1. Importujte bitmapy pro kategorie pásu karet a panelů. Každou kartu na panelu pásu karet je kategorie a se skládá z textový popisek a volitelné bitovou kopii.
-
-   1. Importujte homesmall.bmp rastrový obrázek, který obsahuje jedenáct 16 x 16 bitových kopií pro malé tlačítko rastrových obrázků. Změna ID rastrový obrázek pro `IDB_RIBBON_HOMESMALL`.
-
-   1. Importujte homelarge.bmp rastrový obrázek, který obsahuje devět 32 x 32 bitové kopie pro velké tlačítko bitmapy. Změna ID rastrový obrázek pro `IDB_RIBBON_HOMELARGE`.
-
-1. Importovat bitmapy pro panely změněnou pásu karet. Tyto rastrové obrázky nebo panel ikon, se použijí po operaci změny velikosti, pokud je příliš malá pro zobrazení na celou panelu pásu karet.
-
-   1. Importujte panelicons.bmp rastrový obrázek, který obsahuje osm 16 x 16 imagí. V **vlastnosti** okno **editoru rastrových obrázků**, umožňuje upravit šířku rastrového obrázku na 64 (16 x 64). Změna ID rastrový obrázek pro `IDB_PANEL_ICONS`.
+   1. Importujte soubor Small. bmp, který obsahuje asi 16 16x16 (16x176) obrázků. Změňte ID rastrového obrázku na `IDB_RIBBON_FILESMALL`.
 
    > [!NOTE]
-   > Protože potřebujeme jenom první čtyři 16 x 16 imagí (16 x 64), může volitelně oříznout šířku na pravé straně tento rastrový obrázek z 128 až 64.
+   > Vzhledem k tomu, že potřebujeme jenom prvních osm imagí (16x128), můžete volitelně oříznout šířku této bitmapy na pravé straně od 176 do 128.
 
-##  <a name="addribbon"></a> Přidání prostředku pásu karet do projektu
+   1. Naimportujte velký. bmp obsahující devět imagí 32x32 (32x288). Změňte ID rastrového obrázku na `IDB_RIBBON_FILELARGE`.
 
-Můžete převést aplikaci, která používá nabídky k aplikaci, která používá pás karet, není nutné odebrat nebo zakázat stávající nabídky. Stačí vytvořit prostředek pásu karet, přidejte tlačítek na pásu karet a nová tlačítka přidružit existující položky nabídky. I když již nejsou viditelné v nabídkách, zprávy z pásu karet jsou směrovány prostřednictvím nabídky a nabídky zástupců pokračovat v práci.
+1. Importujte rastrové obrázky pro kategorie a panely pásu karet. Každá karta na panelu pásu karet je kategorie a skládá se z textového popisku a volitelného obrázku.
 
-Se skládá z pásu karet **aplikace** tlačítko, které je velké tlačítko v levé horní části pásu karet a jednu nebo více karet kategorie. Každá karta kategorie obsahuje jednu nebo více panelů, které fungují jako kontejnery pro tlačítek na pásu karet a ovládacích prvků. Následující postup ukazuje, jak vytvořit prostředek pásu karet a potom přizpůsobit **aplikace** tlačítko.
+   1. Importujte rastrový obrázek homesmall. bmp, který obsahuje jedenáct obrázků pro rastry malých tlačítek. Změňte ID rastrového obrázku na `IDB_RIBBON_HOMESMALL`.
 
-### <a name="to-add-a-ribbon-resource-to-the-project"></a>Chcete-li přidat prostředek pásu karet do projektu
+   1. Importujte rastr homelarge. bmp obsahující devět imagí 32x32 pro rastry velkých tlačítek. Změňte ID rastrového obrázku na `IDB_RIBBON_HOMELARGE`.
 
-1. S Scribble projekt vybraný v **Průzkumníka řešení**v **projektu** nabídky, klikněte na tlačítko **přidat prostředek**.
+1. Import rastrových obrázků pro panely pásu karet se změněnou velikostí Tyto rastrové obrázky nebo ikony panelu se používají po operaci změny velikosti, pokud je pás karet příliš malý pro zobrazení celého panelu.
 
-1. V **přidat prostředek** dialogu **pásu karet** a potom klikněte na tlačítko **nový**.
+   1. Importujte rastrový obrázek panelicons. bmp, který obsahuje 8 × 16 obrázků. V okně **vlastnosti** **editoru rastrového obrázku**nastavte šířku rastrového obrázku na 64 (16x64). Změňte ID rastrového obrázku na `IDB_PANEL_ICONS`.
 
-   Visual Studio vytvoří prostředek pásu karet a otevře v zobrazení Návrh. ID prostředku pásu karet je `IDR_RIBBON1`, který se zobrazí v **zobrazení prostředků**. Na pásu karet obsahuje jednu kategorii a jeden panel.
+   > [!NOTE]
+   > Vzhledem k tomu, že potřebujeme jenom první čtyři obrázky 16x16 (16x64), můžete volitelně oříznout šířku této bitmapy na pravé straně od 128 do 64.
 
-1. Můžete přizpůsobit **aplikace** tlačítko úpravou jeho vlastností. ID zprávy, které se používají v tomto kódu jsou již definovány v nabídce Scribble 1.0.
+##  <a name="addribbon"></a>Přidání prostředku pásu karet do projektu
 
-1. V návrhovém zobrazení, klikněte na tlačítko **aplikace** tlačítko a zobrazte její vlastnosti. Změňte hodnoty vlastností následujícím způsobem: **Image** k `IDB_RIBBON_MAIN`, **výzvy** k `File`, **klíče** k `f`, **Large Images** k `IDB_RIBBON_FILELARGE`a **Small Images** k `IDB_RIBBON_FILESMALL`.
+Když převedete aplikaci, která používá nabídky, na aplikaci, která používá pás karet, nemusíte odebírat ani zakázat existující nabídky. Stačí vytvořit prostředek pásu karet, přidat tlačítka pásu karet a potom přidružit nová tlačítka k existujícím položkám nabídky. I když již nejsou nabídky viditelné, zprávy z panelu pásu karet jsou směrovány pomocí klávesových zkratek nabídek a nabídek, které fungují i nadále.
 
-1. Vytvořit následující změny v nabídce, která se zobrazí, když uživatel klikne **aplikace** tlačítko. Klikněte na tlačítko se třemi tečkami ( **...** ) vedle položky **položky hlavní** otevřít **Editor položek**.
+Pás karet se skládá z tlačítka **aplikace** , což je velké tlačítko v levé horní části pásu karet a jedna nebo více karet kategorií. Každá karta kategorie obsahuje jeden nebo více panelů, které fungují jako kontejnery pro tlačítka a ovládací prvky pásu karet. Následující postup ukazuje, jak vytvořit prostředek pásu karet a pak přizpůsobit tlačítko **aplikace** .
 
-   1. S **položky** typ **tlačítko** vybraný, klikněte na tlačítko **přidat** přidáte tlačítko. Změna **titulek** k `&New`, **ID** k `ID_FILE_NEW`, **Image** k `0`, **velký obrázek** k `0`.
+### <a name="to-add-a-ribbon-resource-to-the-project"></a>Přidání prostředku pásu karet do projektu
 
-   1. Klikněte na tlačítko **přidat** přidáte tlačítko. Změna **titulek** k `&Save`, **ID** k `ID_FILE_SAVE`, **Image** k `2`, a **velký obrázek** k `2`.
+1. Když máte projekt Klikyháky vybraný v **Průzkumník řešení**, v nabídce **projekt** klikněte na **Přidat prostředek**.
 
-   1. Klikněte na tlačítko **přidat** přidáte tlačítko. Změna **titulek** k `Save &As`, **ID** k `ID_FILE_SAVE_AS`, **Image** k `3`, a **velký obrázek** k `3`.
+1. V dialogovém okně **Přidat prostředek** vyberte možnost **pás karet** a pak klikněte na tlačítko **Nový**.
 
-   1. Klikněte na tlačítko **přidat** přidáte tlačítko. Změna **titulek** k `&Print`, **ID** k `ID_FILE_PRINT`, **Image** k `4`, a **velký obrázek** k `4`.
+   Visual Studio vytvoří prostředek pásu karet a otevře ho v zobrazení Návrh. ID prostředku pásu karet je `IDR_RIBBON1`, které se zobrazí v **prostředky**. Pás karet obsahuje jednu kategorii a jeden panel.
 
-   1. Změnit **položky** typ, který **oddělovač** a potom klikněte na tlačítko **přidat**.
+1. Tlačítko **aplikace** můžete přizpůsobit úpravou jeho vlastností. ID zpráv, která jsou použita v tomto kódu, jsou již definována v nabídce pro Klikyháky 1,0.
 
-   1. Změnit **položky** typ, který **tlačítko**. Klikněte na tlačítko **přidat** páté tlačítko Přidat. Změna **titulek** k `&Close`, **ID** k `ID_FILE_CLOSE`, **Image** k `5`, a **velký obrázek** k `5`.
+1. V zobrazení Návrh klikněte na tlačítko **aplikace** a zobrazte jeho vlastnosti. Změňte hodnoty vlastností následujícím způsobem: **Obrázek** na `IDB_RIBBON_MAIN`, **Dotázat** se `File`na **klíče** na `f`, **velké obrázky** na `IDB_RIBBON_FILELARGE`a **malé obrázky** na `IDB_RIBBON_FILESMALL`.
 
-1. Následující změny Vytvoření podnabídky pod **tisk** tlačítko, které jste vytvořili v předchozím kroku.
+1. Následující úpravy vytvoří nabídku, která se zobrazí, když uživatel klikne na tlačítko **aplikace** . Kliknutím na tlačítko se třemi tečkami ( **...** ) vedle **položky hlavní položky** otevřete **Editor položek**.
 
-   1. Klikněte na tlačítko **tisk** tlačítko, změňte **položky** typ, který **popisek**a potom klikněte na tlačítko **vložit**. Změna **titulek** k `Preview and print the document`.
+   1. Když je vybrané **tlačítko** typ **položky** , klikněte na **Přidat** a přidejte tlačítko. Změňte **Titulek** na `&New`, **ID** na `ID_FILE_NEW`, **Obrázek** na `0`, **Obrázek velký** na `0`.
 
-   1. Klikněte na tlačítko **tisk** tlačítko, změňte **položky** typ, který **tlačítko**a klikněte na tlačítko **vložit**. Změna **titulek** k `&Print`, **ID** k `ID_FILE_PRINT`, **Image** k `4`, a **velký obrázek** k `4`.
+   1. Kliknutím na tlačítko **Přidat** přidejte tlačítko. Změňte **Titulek** na `&Save`, **ID** na `ID_FILE_SAVE`, **Obrázek** na `2`a **Obrázek velký** na `2`.
 
-   1. Klikněte na tlačítko **tisk** tlačítko a pak klikněte na tlačítko **vložit** přidáte tlačítko. Změna **titulek** k `&Quick Print`, **ID** k `ID_FILE_PRINT_DIRECT`, **Image** k `7`, a **velký obrázek** k `7`.
+   1. Kliknutím na tlačítko **Přidat** přidejte tlačítko. Změňte **Titulek** na `Save &As`, **ID** na `ID_FILE_SAVE_AS`, **Obrázek** na `3`a **Obrázek velký** na `3`.
 
-   1. Klikněte na tlačítko **tisk** tlačítko a pak klikněte na tlačítko **vložit** k přidání dalšího tlačítka. Změna **titulek** k `Print Pre&view`, **ID** k `ID_FILE_PRINT_PREVIEW`, **Image** k `6`, a **velký obrázek** k `6`.
+   1. Kliknutím na tlačítko **Přidat** přidejte tlačítko. Změňte **Titulek** na `&Print`, **ID** na `ID_FILE_PRINT`, **Obrázek** na `4`a **Obrázek velký** na `4`.
 
-   1. Nyní jste upravili **položky hlavní**. Klikněte na tlačítko **Zavřít** ukončíte **Editor položek**.
+   1. Změňte typ **položky** na **oddělovač** a potom klikněte na tlačítko **Přidat**.
 
-1. Následující změny vytvoří ukončení tlačítko, které se zobrazí v dolní části **aplikace** tlačítka nabídky.
+   1. Změňte typ **položky** na **tlačítko**. Kliknutím na tlačítko **Přidat** přidejte páté tlačítko. Změňte **Titulek** na `&Close`, **ID** na `ID_FILE_CLOSE`, **Obrázek** na `5`a **Obrázek velký** na `5`.
 
-   1. V **vlastnosti** okna, klikněte na tlačítko se třemi tečkami ( **...** ) vedle položky **tlačítko** otevřít **Editor položek**.
+1. Následující úpravy vytvoří podnabídku pod tlačítkem **Tisk** , kterou jste vytvořili v předchozím kroku.
 
-   1. S **položky** typ **tlačítko** vybraný, klikněte na tlačítko **přidat** přidáte tlačítko. Změna **titulek** k `E&xit`, **ID** k `ID_APP_EXIT`, **Image** k `8`.
+   1. Klikněte na tlačítko **Tisk** , změňte typ **položky** na **popisek**a pak klikněte na tlačítko **Vložit**. Změňte **Titulek** na `Preview and print the document`.
 
-   1. Jsme změnili **tlačítka**. Klikněte na tlačítko **Zavřít** ukončíte **Editor položek**.
+   1. Klikněte na tlačítko **Tisk** , změňte typ **položky** na **tlačítko**a klikněte na tlačítko **Vložit**. Změňte **Titulek** na `&Print`, **ID** na `ID_FILE_PRINT`, **Obrázek** na `4`a **Obrázek velký** na `4`.
 
-##  <a name="createinstance"></a> Vytvoření Instance na pásu karet
+   1. Klikněte na tlačítko **Tisk** a potom kliknutím na tlačítko **Vložit** přidejte tlačítko. Změňte **Titulek** na `&Quick Print`, **ID** na `ID_FILE_PRINT_DIRECT`, **Obrázek** na `7`a **Obrázek velký** na `7`.
 
-Následující kroky ukazují, jak vytvořit instance na pásu karet při spuštění aplikace. Chcete-li přidat panel pásu karet do aplikace, deklarujte na pásu karet v souboru mainfrm.h. V souboru mainfrm.cpp napište kód pro načtení prostředku pásu karet.
+   1. Klikněte na tlačítko **Tisk** a potom kliknutím na tlačítko **Vložit** přidejte další tlačítko. Změňte **Titulek** na `Print Pre&view`, **ID** na `ID_FILE_PRINT_PREVIEW`, **Obrázek** na `6`a **Obrázek velký** na `6`.
 
-### <a name="to-create-an-instance-of-the-ribbon-bar"></a>K vytvoření instance na pásu karet
+   1. Nyní jste změnili **hlavní položky**. Kliknutím na **Zavřít** ukončete **Editor položek**.
 
-1. V souboru mainfrm.h přidat datový člen chráněné části `CMainFrame`, definice třídy pro hlavního rámce. Tento člen je panel pásu karet.
+1. Následující změna vytvoří tlačítko ukončit, které se zobrazí v dolní části nabídky tlačítka **aplikace** .
+
+   1. V okně **vlastnosti** kliknutím na tlačítko se třemi tečkami ( **...** ) vedle **tlačítka** otevřete **Editor položek**.
+
+   1. Když je vybrané **tlačítko** typ **položky** , klikněte na **Přidat** a přidejte tlačítko. Změňte **Titulek** na `E&xit`, **ID** na `ID_APP_EXIT`, **Obrázek** na `8`.
+
+   1. Změnili jste **tlačítka**. Kliknutím na **Zavřít** ukončete **Editor položek**.
+
+##  <a name="createinstance"></a>Vytvoření instance panelu pásu karet
+
+Následující kroky ukazují, jak vytvořit instanci panelu pásu karet při spuštění aplikace. Chcete-li přidat panel pásu karet do aplikace, deklarujte pás karet v souboru mainfrm. h. Poté v souboru mainfrm. cpp zadejte kód pro načtení prostředku pásu karet.
+
+### <a name="to-create-an-instance-of-the-ribbon-bar"></a>Vytvoření instance panelu pásu karet
+
+1. V souboru mainfrm. h přidejte datový člen do oddílu `CMainFrame`Protected, definice třídy pro hlavní rámec. Tento člen je pro panel pásu karet.
 
     ```cpp
     // Ribbon bar for the application
     CMFCRibbonBar m_wndRibbonBar;
     ```
 
-2. V souboru mainfrm.cpp, přidejte následující kód před finální `return` příkaz na konci `CMainFrame::OnCreate` funkce. Vytvoří instanci na pásu karet.
+2. V souboru mainfrm. cpp přidejte následující kód před poslední `return` příkaz na konci `CMainFrame::OnCreate` funkce. Vytvoří instanci panelu pásu karet.
 
     ```cpp
     // Create the ribbon bar
@@ -229,30 +229,30 @@ Následující kroky ukazují, jak vytvořit instance na pásu karet při spušt
     m_wndRibbonBar.LoadFromResource(IDR_RIBBON1);
     ```
 
-##  <a name="addcategory"></a> Přizpůsobení prostředek pásu karet
+##  <a name="addcategory"></a>Přizpůsobení prostředku pásu karet
 
-Teď, když jste vytvořili **aplikace** tlačítko, můžete přidat prvky na pás karet.
+Nyní, když jste vytvořili tlačítko **aplikace** , můžete přidat prvky na pás karet.
 
 > [!NOTE]
-> Tento návod používá stejné panelu ikonu pro všechny panely. Ale můžete použít jiných indexů obrázek seznamu zobrazíte další ikony.
+> Tento návod používá stejnou ikonu panelu pro všechny panely. Můžete však použít další indexy seznamu obrázků k zobrazení dalších ikon.
 
-### <a name="to-add-a-home-category-and-edit-panel"></a>Přidat kategorii domovské a upravit panel
+### <a name="to-add-a-home-category-and-edit-panel"></a>Přidání kategorie domů a panelu úprav
 
-1. Scribble program vyžaduje pouze jednu kategorii. V okně návrhu v **nástrojů**, dvakrát klikněte na panel **kategorie** ho přidejte a zobrazit její vlastnosti. Změňte hodnoty vlastností následujícím způsobem: **Titulek** k `&Home`, **Large Images** k `IDB_RIBBON_HOMELARGE`, **Small Images** k `IDB_RIBBON_HOMESMALL`.
+1. Program Klikyháky vyžaduje jenom jednu kategorii. V zobrazení Návrh klikněte v **panelu nástrojů**dvakrát na **kategorie** a přidejte jednu a zobrazte její vlastnosti. Změňte hodnoty vlastností následujícím způsobem: **Titulky do** **malých** obrázků ajejich`IDB_RIBBON_HOMESMALL`obrázky `&Home` `IDB_RIBBON_HOMELARGE`
 
-1. Každá kategorie pásu karet je uspořádaný do pojmenované panelů. Každý panel obsahuje sadu ovládacích prvků tohoto dokončení souvisejících operací. Tato kategorie obsahuje jeden panel. Klikněte na tlačítko **Panel**a potom změňte **titulek** k `Edit`.
+1. Každá kategorie pásu karet je uspořádána do pojmenovaných panelů. Každý panel obsahuje sadu ovládacích prvků, které dokončí související operace. Tato kategorie má jeden panel. Klikněte na **panel**a pak změňte **Titulek** na `Edit`.
 
-1. Chcete **upravit** panelu, přidejte tlačítko za vymazat obsah dokumentu. ID zprávy pro toto tlačítko je již definována v `IDR_SCRIBBTYPE` nabídce prostředků. Zadejte `Clear All` jako text tlačítka a index rastrový obrázek, který upraví na tlačítko. Otevřít **nástrojů**a pak přetáhněte **tlačítko** k **upravit** panelu. Klikněte na tlačítko a pak změňte **titulek** k `Clear All`, **ID** k `ID_EDIT_CLEAR_ALL`, **Index bitové kopie** k `0`, **Large Image Index**  k `0`.
+1. Do panelu **úprav** přidejte tlačítko zodpovědné za vymazání obsahu dokumentu. ID zprávy pro toto tlačítko již bylo definováno v `IDR_SCRIBBTYPE` prostředku nabídky. Zadejte `Clear All` jako text tlačítka a index rastrového obrázku, který tlačítko upraví. Otevřete **panel nástrojů**a přetáhněte **tlačítko** na panel **úprav** . Klikněte na tlačítko a pak změňte **Titulek** na `Clear All`, **ID** na `ID_EDIT_CLEAR_ALL`, **index obrázku** na `0`, **velký index obrázku** na `0`.
 
-1. Uložte změny a potom sestavíte a spustíte aplikaci. Scribble aplikace má být zobrazena, a měl by mít panel pásu karet v horní části okna namísto řádku nabídek. Na pásu karet by měl mít jednu kategorii **Domů**, a **Domů** by měl mít jeden panel **upravit**. Tlačítka pásu karet, který jste přidali by měly být přidruženy s existující obslužné rutiny událostí a **otevřít**, **Zavřít**, **Uložit**, **tisk**, a **Vymazat vše** tlačítka by měla fungovat podle očekávání.
+1. Uložte změny a pak Sestavte a spusťte aplikaci. Aplikace Klikyháky by měla být zobrazena a měla by obsahovat pás karet v horní části okna, nikoli na řádku nabídek. Pás karet by měl mít jednu kategorii, **domovskou stránku**a **Home** by měl mít jeden panel, **Upravit**. Tlačítka pásu karet, která jste přidali, by měla být přidružena k existujícím obslužným rutinám událostí a tlačítka **otevřít**, **Zavřít**, **Uložit**, **Tisk**a **Vymazat** by měla fungovat podle očekávání.
 
-##  <a name="setlook"></a> Nastavení vzhledu aplikace
+##  <a name="setlook"></a>Nastavení vzhledu aplikace
 
-A *správce vzhledu* je globální objekt, který určuje všechny vykreslování pro aplikaci. Protože původní aplikace Scribble používá styl uživatelského rozhraní (UI) Office 2000, aplikace může vypadat zastaralý. Můžete obnovit aplikaci, aby používala správce vzhledu Office 2007, tak, aby se podobá aplikaci sady Office 2007.
+*Vizuální správce* je globální objekt, který ovládá všechny kresby pro aplikaci. Vzhledem k tomu, že původní aplikace Klikyháky používá styl uživatelského rozhraní Office 2000, může aplikace vypadat jako staré. Aplikaci můžete obnovit tak, aby používala aplikaci Office 2007 Visual Manager, aby vypadala jako aplikace Office 2007.
 
-### <a name="to-set-the-look-of-the-application"></a>K nastavení vzhledu aplikace
+### <a name="to-set-the-look-of-the-application"></a>Nastavení vzhledu aplikace
 
-1. V `CMainFrame::OnCreate` funkci, zadejte následující kód před `return 0;` prohlášení, chcete-li změnit výchozí správce vzhledu a vizuální styl.
+1. Ve funkci zadejte následující kód `return 0;` před příkazem pro změnu výchozího vizuálního manažera a stylu. `CMainFrame::OnCreate`
 
     ```cpp
     // Set the default manager to Office 2007
@@ -260,11 +260,11 @@ A *správce vzhledu* je globální objekt, který určuje všechny vykreslován�
     CMFCVisualManagerOffice2007::SetStyle(CMFCVisualManagerOffice2007::Office2007_LunaBlue);
     ```
 
-1. Uložte změny a potom sestavíte a spustíte aplikaci. V uživatelském rozhraní aplikace by měla vypadat podobně jako uživatelského rozhraní sady Office 2007.
+1. Uložte změny a pak Sestavte a spusťte aplikaci. Uživatelské rozhraní aplikace by mělo vypadat jako uživatelské rozhraní sady Office 2007.
 
 ## <a name="next-steps"></a>Další kroky
 
-Změnili jste classic vzorek Scribble 1.0 MFC používat **Návrháře pásu karet**. Teď přejděte na [2. část](../mfc/walkthrough-updating-the-mfc-scribble-application-part-2.md).
+Upravili jste klasickou ukázku 1,0 knihovny MFC pro použití **Návrháře pásu karet**. Teď přejdete na [část 2](../mfc/walkthrough-updating-the-mfc-scribble-application-part-2.md).
 
 ## <a name="see-also"></a>Viz také:
 

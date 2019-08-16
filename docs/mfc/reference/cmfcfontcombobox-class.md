@@ -1,5 +1,5 @@
 ---
-title: Cmfcfontcombobox – třída
+title: CMFCFontComboBox – třída
 ms.date: 11/04/2016
 f1_keywords:
 - CMFCFontComboBox
@@ -16,14 +16,14 @@ helpviewer_keywords:
 - CMFCFontComboBox [MFC], Setup
 - CMFCFontComboBox [MFC], m_bDrawUsingFont
 ms.assetid: 9a53fb0c-7b45-486d-8187-2a4c723d9fbb
-ms.openlocfilehash: ccc4e545b2274d6dbb9989cfb9c047de819b8d32
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 69e8f81e7e01d0610f3cbf88ac1725a21d59838f
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62237467"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69505303"
 ---
-# <a name="cmfcfontcombobox-class"></a>Cmfcfontcombobox – třída
+# <a name="cmfcfontcombobox-class"></a>CMFCFontComboBox – třída
 
 `CMFCFontComboBox` Třída vytvoří ovládací prvek pole se seznamem, který obsahuje seznam písem.
 
@@ -37,36 +37,36 @@ class CMFCFontComboBox : public CComboBox
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
-|[CMFCFontComboBox::CMFCFontComboBox](#cmfcfontcombobox)|Vytvoří `CMFCFontComboBox` objektu.|
+|[CMFCFontComboBox::CMFCFontComboBox](#cmfcfontcombobox)|`CMFCFontComboBox` Vytvoří objekt.|
 |`CMFCFontComboBox::~CMFCFontComboBox`|Destruktor.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
-|`CMFCFontComboBox::CompareItem`|Volá se rozhraním, aby určení relativní pozice nové položky v poli seřazený seznam aktuální prvek pole se seznamem písma. (Přepíše [CComboBox::CompareItem](../../mfc/reference/ccombobox-class.md#compareitem).)|
-|`CMFCFontComboBox::DrawItem`|Volá se rozhraním, chcete-li nakreslit zadanou položku v aktuální prvek pole se seznamem písma. (Přepíše [CComboBox::DrawItem](../../mfc/reference/ccombobox-class.md#drawitem).)|
-|[CMFCFontComboBox::GetSelFont](#getselfont)|Načte informace o aktuálně vybraného písma.|
-|`CMFCFontComboBox::MeasureItem`|Volá se rozhraním informovat Windows rozměry pole se seznamem v aktuální prvek pole se seznamem písma. (Přepíše [CComboBox::MeasureItem](../../mfc/reference/ccombobox-class.md#measureitem).)|
-|`CMFCFontComboBox::PreTranslateMessage`|Přeloží okno zprávy před odesláním do [TranslateMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage) a [DispatchMessage](/windows/desktop/api/winuser/nf-winuser-dispatchmessage) funkce Windows. (Přepíše [CWnd::PreTranslateMessage](../../mfc/reference/cwnd-class.md#pretranslatemessage).)|
-|[CMFCFontComboBox::SelectFont](#selectfont)|Vybere písmo, která odpovídá zadaným kritériím v poli se seznamem písma.|
-|[CMFCFontComboBox::Setup](#setup)|Inicializuje seznam položek v poli se seznamem písma.|
+|`CMFCFontComboBox::CompareItem`|Volá se rozhraním, aby se určila relativní pozice nové položky v poli seřazený seznam pro ovládací prvek pole se seznamem aktuálního písma. (Overrides [CComboBox –:: CompareItem](../../mfc/reference/ccombobox-class.md#compareitem).)|
+|`CMFCFontComboBox::DrawItem`|Volá se rozhraním, aby se nakreslila zadaná položka v ovládacím prvku pole se seznamem aktuálního písma. (Overrides [CComboBox –::D rawitem](../../mfc/reference/ccombobox-class.md#drawitem).)|
+|[CMFCFontComboBox::GetSelFont](#getselfont)|Načte informace o aktuálně vybraném písmu.|
+|`CMFCFontComboBox::MeasureItem`|Volá se rozhraním, aby informovalo okna o dimenzích seznamu v aktuálním ovládacím prvku pole se seznamem písem. (Overrides [CComboBox –:: MeasureItem](../../mfc/reference/ccombobox-class.md#measureitem).)|
+|`CMFCFontComboBox::PreTranslateMessage`|Přeloží zprávy oken před odesláním do funkcí Windows [TranslateMessage](/windows/win32/api/winuser/nf-winuser-translatemessage) a [DispatchMessage](/windows/win32/api/winuser/nf-winuser-dispatchmessage) . (Potlačení [CWnd::P retranslatemessage](../../mfc/reference/cwnd-class.md#pretranslatemessage).)|
+|[CMFCFontComboBox::SelectFont](#selectfont)|Vybere písmo, které odpovídá zadaným kritériím z pole se seznamem Font.|
+|[CMFCFontComboBox:: Setup](#setup)|Inicializuje seznam položek v poli se seznamem písem.|
 
 ### <a name="data-members"></a>Datové členy
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
-|[CMFCFontComboBox::m_bDrawUsingFont](#m_bdrawusingfont)|Určuje rozhraní Framework písma, které slouží k vykreslení položky popisky v aktuální pole se seznamem písma.|
+|[CMFCFontComboBox::m_bDrawUsingFont](#m_bdrawusingfont)|Určuje rozhraní, které má být použito k vykreslení popisků položek v aktuálním písmovém poli se seznamem.|
 
 ## <a name="remarks"></a>Poznámky
 
-Použití `CMFCFontComboBox` objektu v dialogovém okně, přidejte `CMFCFontComboBox` proměnné třídy dialogového okna. Pak v `OnInitDialog` metodu třídy dialogového okna, volání [CMFCFontComboBox::Setup](#setup) metody k inicializaci seznam položek v ovládacím prvku pole se seznamem.
+Chcete-li `CMFCFontComboBox` použít objekt v dialogovém okně, `CMFCFontComboBox` přidejte proměnnou do třídy dialog box. Poté v `OnInitDialog` metodě pro třídu dialogového okna zavolejte metodu [CMFCFontComboBox:: Setup](#setup) pro inicializaci seznamu položek v ovládacím prvku pole se seznamem.
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
-[Třídy CObject](../../mfc/reference/cobject-class.md)
+[CObject](../../mfc/reference/cobject-class.md)
 
 [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)
 
@@ -78,11 +78,11 @@ Použití `CMFCFontComboBox` objektu v dialogovém okně, přidejte `CMFCFontCom
 
 ## <a name="requirements"></a>Požadavky
 
-**Header:** afxfontcombobox.h
+**Záhlaví:** afxfontcombobox. h
 
-##  <a name="cmfcfontcombobox"></a>  CMFCFontComboBox::CMFCFontComboBox
+##  <a name="cmfcfontcombobox"></a>CMFCFontComboBox::CMFCFontComboBox
 
-Vytvoří `CMFCFontComboBox` objektu.
+`CMFCFontComboBox` Vytvoří objekt.
 
 ```
 CMFCFontComboBox();
@@ -92,9 +92,9 @@ CMFCFontComboBox();
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="getselfont"></a>  CMFCFontComboBox::GetSelFont
+##  <a name="getselfont"></a>CMFCFontComboBox::GetSelFont
 
-Načte informace o aktuálně vybraného písma.
+Načte informace o aktuálně vybraném písmu.
 
 ```
 CMFCFontInfo* GetSelFont() const;
@@ -102,13 +102,13 @@ CMFCFontInfo* GetSelFont() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Ukazatel na [cmfcfontinfo – třída](../../mfc/reference/cmfcfontinfo-class.md) objekt, který popisuje písma. To může mít hodnotu NULL, pokud není vybraný žádný font pole se seznamem.
+Ukazatel na objekt [třídy CMFCFontInfo](../../mfc/reference/cmfcfontinfo-class.md) , který popisuje písmo. Může mít hodnotu NULL, pokud není vybráno žádné písmo v poli se seznamem.
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="m_bdrawusingfont"></a>  CMFCFontComboBox::m_bDrawUsingFont
+##  <a name="m_bdrawusingfont"></a>CMFCFontComboBox::m_bDrawUsingFont
 
-Určuje rozhraní Framework písma, které slouží k vykreslení položky popisky v aktuální pole se seznamem písma.
+Určuje rozhraní, které má být použito k vykreslení popisků položek v aktuálním písmovém poli se seznamem.
 
 ```
 static BOOL m_bDrawUsingFont;
@@ -116,11 +116,11 @@ static BOOL m_bDrawUsingFont;
 
 ### <a name="remarks"></a>Poznámky
 
-Tento člen nastavena na hodnotu TRUE pro přesměrování framework použít stejné písmo pro vykreslení každého popisku položky. Tento člen nastavte na hodnotu FALSE pro přímá rozhraní pro vykreslení každého popisku položky s písma, jehož název je stejný jako popisek. Výchozí hodnota tohoto člena je FALSE.
+Nastavte tento člen na hodnotu TRUE, chcete-li směrovat rozhraní tak, aby používalo stejné písmo pro vykreslení popisku každé položky. Nastavte tento člen na hodnotu FALSE, chcete-li směrovat rozhraní tak, aby vykreslilo jmenovku každé položky s písmem, jehož název je stejný jako popisek. Výchozí hodnota tohoto člena je FALSE.
 
-##  <a name="selectfont"></a>  CMFCFontComboBox::SelectFont
+##  <a name="selectfont"></a>CMFCFontComboBox::SelectFont
 
-Vybere písmo, která odpovídá zadaným kritériím v poli se seznamem písma.
+Vybere písmo, které odpovídá zadaným kritériím z pole se seznamem Font.
 
 ```
 BOOL SelectFont(CMFCFontInfo* pDesc);
@@ -133,32 +133,32 @@ BOOL SelectFont(
 ### <a name="parameters"></a>Parametry
 
 *pDesc*<br/>
-[in] Odkazuje na objekt popisu písma.
+pro Odkazuje na objekt popisu písma.
 
 *lpszName*<br/>
-[in] Určuje název písma.
+pro Určuje název písma.
 
 *nCharSet*<br/>
-[in] Určuje znakovou sadu. Výchozí hodnota je DEFAULT_CHARSET. Další informace najdete v tématu `lfCharSet` člena [LOGFONT](/windows/desktop/api/wingdi/ns-wingdi-taglogfonta) struktury.
+pro Určuje znakovou sadu. Výchozí hodnota je DEFAULT_CHARSET. Další informace naleznete v tématu `lfCharSet` člen struktury [LOGFONT](/windows/win32/api/wingdi/ns-wingdi-logfontw) .
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Hodnota TRUE, pokud položka v poli se seznamem písma odpovídá určené písmo popis objektu nebo název písma a charset; v opačném případě hodnota FALSE.
+TRUE, pokud položka v poli se seznamem písem odpovídá zadanému objektu popisu písma nebo názvu písma a znaku charset; v opačném případě FALSE.
 
 ### <a name="remarks"></a>Poznámky
 
-Tuto metodu použijte k výběru a přejděte na položku v poli se seznamem písma, která odpovídá zadaným písma.
+Tuto metodu použijte, chcete-li vybrat položku a přejít k ní v poli se seznamem písem, které odpovídá zadanému písmu.
 
 ### <a name="example"></a>Příklad
 
-Následující příklad ukazuje způsob použití `SelectFont` metodu `CMFCFontComboBox` třídy. V tomto příkladu je součástí [nové ovládací prvky ukázka](../../overview/visual-cpp-samples.md).
+Následující příklad ukazuje, jak použít `SelectFont` metodu `CMFCFontComboBox` ve třídě. Tento příklad je součástí [ukázky nové ovládací prvky](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_NewControls#34](../../mfc/reference/codesnippet/cpp/cmfcfontcombobox-class_1.h)]
 [!code-cpp[NVC_MFC_NewControls#35](../../mfc/reference/codesnippet/cpp/cmfcfontcombobox-class_2.cpp)]
 
-##  <a name="setup"></a>  CMFCFontComboBox::Setup
+##  <a name="setup"></a>CMFCFontComboBox:: Setup
 
-Inicializuje seznam položek v poli se seznamem písma.
+Inicializuje seznam položek v poli se seznamem písem.
 
 ```
 BOOL Setup(
@@ -170,25 +170,25 @@ BOOL Setup(
 ### <a name="parameters"></a>Parametry
 
 *nFontType*<br/>
-[in] Určuje typ písma. Výchozí hodnota je bitová kombinace (nebo) DEVICE_FONTTYPE, RASTER_FONTTYPE a TRUETYPE_FONTTYPE.
+pro Určuje typ písma. Výchozí hodnota je bitová kombinace (nebo) hodnot DEVICE_FONTTYPE, RASTER_FONTTYPE a TRUETYPE_FONTTYPE.
 
 *nCharSet*<br/>
-[in] Určuje znakovou sadu písma. Výchozí hodnota je DEFAULT_CHARSET.
+pro Určuje znakovou sadu písma. Výchozí hodnota je DEFAULT_CHARSET.
 
 *nPitchAndFamily*<br/>
-[in] Určuje písmo rozteč a rodiny. Výchozí hodnota je DEFAULT_PITCH.
+pro Určuje rozteč písma a rodinu. Výchozí hodnota je DEFAULT_PITCH.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Hodnota TRUE, pokud byl úspěšně; inicializovat pole se seznamem písma v opačném případě hodnota FALSE.
+TRUE, pokud se pole se seznamem písem úspěšně inicializoval; v opačném případě FALSE.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato metoda inicializuje pole se seznamem písma výčet nainstalovaný písma, které odpovídají zadaným parametrům a vkládání názvy těchto písmo v poli se seznamem písma.
+Tato metoda inicializuje pole se seznamem písem vynásobením aktuálně nainstalovaných písem, která odpovídají zadaným parametrům, a vložením těchto názvů písem do pole se seznamem Font.
 
 ### <a name="example"></a>Příklad
 
-Následující příklad ukazuje způsob použití `Setup` metodu `CMFCFontComboBox` třídy. V tomto příkladu je součástí [nové ovládací prvky ukázka](../../overview/visual-cpp-samples.md).
+Následující příklad ukazuje, jak použít `Setup` metodu `CMFCFontComboBox` ve třídě. Tento příklad je součástí [ukázky nové ovládací prvky](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_NewControls#34](../../mfc/reference/codesnippet/cpp/cmfcfontcombobox-class_1.h)]
 [!code-cpp[NVC_MFC_NewControls#36](../../mfc/reference/codesnippet/cpp/cmfcfontcombobox-class_3.cpp)]

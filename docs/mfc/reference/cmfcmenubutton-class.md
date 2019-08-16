@@ -1,5 +1,5 @@
 ---
-title: Cmfcmenubutton – třída
+title: CMFCMenuButton – třída
 ms.date: 07/15/2019
 f1_keywords:
 - CMFCMenuButton
@@ -24,16 +24,16 @@ helpviewer_keywords:
 - CMFCMenuButton [MFC], m_nMenuResult
 - CMFCMenuButton [MFC], m_bDefaultClick
 ms.assetid: 53d3d459-1e5a-47c5-8b7f-2e61f6af5187
-ms.openlocfilehash: 71d239c9d1084c69ab2e159a479e66f0cbe66d7a
-ms.sourcegitcommit: fd466f2e14ad001f52f3dbe54f46d77be10f2d7b
+ms.openlocfilehash: d7c23cbda0a5af4dc3fa6b2d9f59497acc9bf5ff
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67894423"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69505213"
 ---
-# <a name="cmfcmenubutton-class"></a>Cmfcmenubutton – třída
+# <a name="cmfcmenubutton-class"></a>CMFCMenuButton – třída
 
-Tlačítko, které zobrazí místní nabídku, informuje o možnosti nabídky uživatele.
+Tlačítko, které zobrazí místní nabídku a sestavy pro výběry v nabídce uživatele.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -47,42 +47,42 @@ class CMFCMenuButton : public CMFCButton
 
 |Name|Popis|
 |----------|-----------------|
-|[CMFCMenuButton::CMFCMenuButton](#cmfcmenubutton)|Vytvoří `CMFCMenuButton` objektu.|
+|[CMFCMenuButton::CMFCMenuButton](#cmfcmenubutton)|`CMFCMenuButton` Vytvoří objekt.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
 |Name|Popis|
 |----------|-----------------|
-|[CMFCMenuButton::PreTranslateMessage](#pretranslatemessage)|Volá se rozhraním před odesláním přeložit zprávy okna. (Přepíše `CMFCButton::PreTranslateMessage`.)|
-|[CMFCMenuButton::SizeToContent](#sizetocontent)|Změní velikost tlačítka podle velikosti jeho textu a obrázků.|
+|[CMFCMenuButton::PreTranslateMessage](#pretranslatemessage)|Volá se rozhraním, aby se mohly překládat zprávy oken předtím, než se odesílají. (Overrides `CMFCButton::PreTranslateMessage`.)|
+|[CMFCMenuButton::SizeToContent](#sizetocontent)|Změní velikost tlačítka v závislosti na velikosti textu a obrázku.|
 
 ### <a name="data-members"></a>Datové členy
 
 |Name|Popis|
 |----------|-----------------|
-|[CMFCMenuButton::m_bOSMenu](#m_bosmenu)|Určuje, zda chcete zobrazit výchozí rozbalovací nabídky systému nebo použít [CContextMenuManager::TrackPopupMenu](../../mfc/reference/ccontextmenumanager-class.md#trackpopupmenu).|
-|[CMFCMenuButton::m_bRightArrow](#m_brightarrow)|Určuje, zda v rozbalovací nabídce se zobrazí pod nebo napravo od panelu.|
-|[CMFCMenuButton::m_bStayPressed](#m_bstaypressed)|Určuje, zda tlačítko nabídky po uživatel uvolní tlačítko změní svůj stav.|
-|[CMFCMenuButton::m_hMenu](#m_hmenu)|Popisovač pro připojené nabídku Windows.|
-|[CMFCMenuButton::m_nMenuResult](#m_nmenuresult)|Identifikátor, který určuje položky, které uživatel vybral v místní nabídce.|
-|[CMFCMenuButton::m_bDefaultClick](#m_bdefaultclick)| Povolit zpracování výchozí (na tlačítko text nebo obrázek).|
+|[CMFCMenuButton::m_bOSMenu](#m_bosmenu)|Určuje, zda se má zobrazit místní nabídka výchozí systém nebo zda má být použita možnost [CContextMenuManager:: TrackPopupMenu](../../mfc/reference/ccontextmenumanager-class.md#trackpopupmenu).|
+|[CMFCMenuButton::m_bRightArrow](#m_brightarrow)|Určuje, zda se místní nabídka zobrazí pod tlačítkem nebo napravo od tlačítka.|
+|[CMFCMenuButton::m_bStayPressed](#m_bstaypressed)|Určuje, zda tlačítko nabídky změní svůj stav poté, co uživatel uvolní tlačítko.|
+|[CMFCMenuButton::m_hMenu](#m_hmenu)|Popisovač připojené nabídky systému Windows.|
+|[CMFCMenuButton::m_nMenuResult](#m_nmenuresult)|Identifikátor, který označuje, kterou položku uživatel vybral z místní nabídky.|
+|[CMFCMenuButton::m_bDefaultClick](#m_bdefaultclick)| Povolí zpracování výchozího nastavení (text/obrázek tlačítka na tlačítku).|
 
 ## <a name="remarks"></a>Poznámky
 
-`CMFCMenuButton` Je třída odvozena z [cmfcbutton – třída](../../mfc/reference/cmfcbutton-class.md) který je zase odvozen z [CButton – třída](../../mfc/reference/cbutton-class.md). Proto můžete použít `CMFCMenuButton` ve vašem kódu, stejně jako byste použili `CButton`.
+Třída je odvozena z [třídy CMFCButton](../../mfc/reference/cmfcbutton-class.md) , která je zase odvozena od [třídy CButton.](../../mfc/reference/cbutton-class.md) `CMFCMenuButton` Proto můžete použít `CMFCMenuButton` ve svém kódu stejným způsobem jako při použití `CButton`.
 
-Když vytvoříte `CMFCMenuButton`, je nutné předat v popisovač do přidružené rozbalovací nabídky. V dalším kroku zavolejte funkci `CMFCMenuButton::SizeToContent`. `CMFCMenuButton::SizeToContent` kontroluje, zda je velikost tlačítka dostatečná zahrnují šipky, která odkazuje na umístění, kde se zobrazí v automaticky otevíraném okně – konkrétně pod nebo napravo od panelu.
+Když vytvoříte `CMFCMenuButton`, musíte předat popisovač do přidružené místní nabídky. Dále zavolejte funkci `CMFCMenuButton::SizeToContent`. `CMFCMenuButton::SizeToContent`kontroluje, zda je velikost tlačítka dostačující pro zahrnutí šipky, která odkazuje na umístění, kde se zobrazí automaticky otevírané okno – konkrétně pod nebo vpravo od tlačítka.
 
 ## <a name="example"></a>Příklad
 
-Následující příklad ukazuje, jak nastavit popisovač nabídky připojeno k tlačítku, změňte velikost tlačítka podle velikosti jeho textu a obrázků a nastavit v rozbalovací nabídce, která se zobrazí v rámci rozhraní. Tento fragment kódu je součástí [nové ovládací prvky ukázka](../../overview/visual-cpp-samples.md).
+Následující příklad ukazuje, jak nastavit popisovač nabídky připojené k tlačítku, změnit velikost tlačítka podle jeho velikosti textu a obrázku a nastavit místní nabídku, která je zobrazena v rámci rozhraní. Tento fragment kódu je součástí [ukázky nové ovládací prvky](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_NewControls#38](../../mfc/reference/codesnippet/cpp/cmfcmenubutton-class_1.h)]
 [!code-cpp[NVC_MFC_NewControls#39](../../mfc/reference/codesnippet/cpp/cmfcmenubutton-class_2.cpp)]
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
-[Třídy CObject](../../mfc/reference/cobject-class.md)
+[CObject](../../mfc/reference/cobject-class.md)
 
 [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)
 
@@ -96,19 +96,19 @@ Následující příklad ukazuje, jak nastavit popisovač nabídky připojeno k 
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** afxmenubutton.h
+**Záhlaví:** afxmenubutton. h
 
-##  <a name="cmfcmenubutton"></a>  CMFCMenuButton::CMFCMenuButton
+##  <a name="cmfcmenubutton"></a>CMFCMenuButton::CMFCMenuButton
 
-Sestaví nový [cmfcmenubutton –](../../mfc/reference/cmfcmenubutton-class.md) objektu.
+Vytvoří nový objekt [CMFCMenuButton](../../mfc/reference/cmfcmenubutton-class.md) .
 
 ```
 CMFCMenuButton();
 ```
 
-##  <a name="m_bosmenu"></a>  CMFCMenuButton::m_bOSMenu
+##  <a name="m_bosmenu"></a>CMFCMenuButton::m_bOSMenu
 
-Logická členskou proměnnou, která označuje, které rozbalovací nabídky zobrazí rozhraní.
+Logická členská proměnná, která určuje, která místní nabídka se zobrazí v rozhraní.
 
 ```
 BOOL m_bOSMenu;
@@ -116,11 +116,11 @@ BOOL m_bOSMenu;
 
 ### <a name="remarks"></a>Poznámky
 
-Pokud `m_bOSMenu` má hodnotu TRUE, volá framework zděděnou `TrackPopupMenu` metody pro tento objekt. V opačném případě volá framework [CContextMenuManager::TrackPopupMenu](../../mfc/reference/ccontextmenumanager-class.md#trackpopupmenu).
+Pokud `m_bOSMenu` má hodnotu true, rozhraní zavolá zděděnou `TrackPopupMenu` metodu pro tento objekt. V opačném případě rozhraní volá [CContextMenuManager:: TrackPopupMenu](../../mfc/reference/ccontextmenumanager-class.md#trackpopupmenu).
 
-##  <a name="m_brightarrow"></a>  CMFCMenuButton::m_bRightArrow
+##  <a name="m_brightarrow"></a>CMFCMenuButton::m_bRightArrow
 
-Logická členské proměnné, která určuje umístění v místní nabídce.
+Logická proměnná členu, která určuje umístění místní nabídky.
 
 ```
 BOOL m_bRightArrow;
@@ -128,11 +128,11 @@ BOOL m_bRightArrow;
 
 ### <a name="remarks"></a>Poznámky
 
-Když uživatel stiskne tlačítko nabídky, aplikace zobrazí rozbalovací nabídky. Rozhraní se zobrazí v rozbalovací nabídce pod tlačítkem nebo napravo od panelu. Tlačítko také má malou šipku, která určuje, kde se objeví v rozbalovací nabídce. Pokud `m_bRightArrow` má hodnotu TRUE, zobrazí rozhraní v rozbalovací nabídce na pravé straně tlačítka. V opačném případě zobrazí rozbalovací nabídce pod tlačítkem.
+Když uživatel stiskne tlačítko nabídky, aplikace zobrazí místní nabídku. V rozhraní se zobrazí místní nabídka buď pod tlačítkem, nebo napravo od tlačítka. Tlačítko má také malou šipku, která označuje, kde se zobrazí místní nabídka. Pokud `m_bRightArrow` je hodnota true, rozhraní zobrazí místní nabídku napravo od tlačítka. V opačném případě se zobrazí místní nabídka pod tlačítkem.
 
-##  <a name="m_bstaypressed"></a>  CMFCMenuButton::m_bStayPressed
+##  <a name="m_bstaypressed"></a>CMFCMenuButton::m_bStayPressed
 
-Logická členské proměnné, která určuje, zda se zobrazí tlačítko stiskne, když uživatel provede výběru v místní nabídce.
+Logická členská proměnná, která určuje, zda se tlačítko nabídky zobrazí, když uživatel provede výběr z místní nabídky.
 
 ```
 BOOL m_bStayPressed;
@@ -140,13 +140,13 @@ BOOL m_bStayPressed;
 
 ### <a name="remarks"></a>Poznámky
 
-Pokud `m_bStayPressed` člen je FALSE, na tlačítko nabídky stane nestisknutý při, že uživatel klikne na tlačítko. V tomto případě rozhraní zobrazí pouze v místní nabídce.
+Pokud je `m_bStayPressed` člen false, tlačítko nabídky se nestiskne při použití tlačítka na tlačítko. V tomto případě se v rozhraní zobrazí pouze místní nabídka.
 
-Pokud `m_bStayPressed` člen je hodnota TRUE, bude stisknutí tlačítka nabídky, když uživatel klikne na tlačítko. Zůstane při stisknutí až poté, co uživatel zavře v rozbalovací nabídce buď výběrem nebo zrušením.
+Pokud má `m_bStayPressed` člen hodnotu true, tlačítko nabídky se stiskne, jakmile uživatel klikne na tlačítko. Zůstane stisknutá, dokud uživatel nezavře místní nabídku, a to buď provedením výběru, nebo zrušením.
 
-##  <a name="m_hmenu"></a>  CMFCMenuButton::m_hMenu
+##  <a name="m_hmenu"></a>CMFCMenuButton::m_hMenu
 
-Popisovač nabídky připojené.
+Popisovač připojené nabídky
 
 ```
 HMENU m_hMenu;
@@ -154,11 +154,11 @@ HMENU m_hMenu;
 
 ### <a name="remarks"></a>Poznámky
 
-V nabídce indikován této členské proměnné, když uživatel klikne na tlačítko nabídky zobrazí rozhraní.
+Rozhraní zobrazí nabídku určenou touto členskou proměnnou, když uživatel klikne na tlačítko nabídky.
 
-##  <a name="m_nmenuresult"></a>  CMFCMenuButton::m_nMenuResult
+##  <a name="m_nmenuresult"></a>CMFCMenuButton::m_nMenuResult
 
-Celé číslo, které označuje, která položka uživatel vybere z místní nabídky.
+Celé číslo, které označuje, kterou položku uživatel vybere z místní nabídky.
 
 ```
 int m_nMenuResult;
@@ -166,11 +166,11 @@ int m_nMenuResult;
 
 ### <a name="remarks"></a>Poznámky
 
-Hodnota této proměnné člena je nula, pokud uživatel zruší nabídce bez výběru nebo pokud dojde k chybě.
+Hodnota této členské proměnné je nula, pokud uživatel nabídku zruší bez provedení výběru, nebo pokud dojde k chybě.
 
-##  <a name="m_bdefaultclick"></a>  CMFCMenuButton::m_bDefaultClick
+##  <a name="m_bdefaultclick"></a>CMFCMenuButton::m_bDefaultClick
 
-Umožňuje zpracovat výchozí Image nebo text na tlačítku.
+Umožňuje výchozí zpracování textu nebo obrázků na tlačítku.
 
 ```
 BOOL  m_bDefaultClick;
@@ -178,11 +178,11 @@ BOOL  m_bDefaultClick;
 
 ### <a name="remarks"></a>Poznámky
 
-M_bDefaultClick nastavení na hodnotu false způsobí, že tlačítko zobrazit v nabídce po kliknutí na libovolné místo na tlačítku.
+Nastavením m_bDefaultClick na hodnotu false dojde k zobrazení nabídky po kliknutí na libovolné místo na tlačítku.
 
-##  <a name="m_nmenuresult"></a>  CMFCMenuButton::m_nMenuResult
+##  <a name="m_nmenuresult"></a>CMFCMenuButton::m_nMenuResult
 
-Celé číslo, které označuje, která položka uživatel vybere z místní nabídky.
+Celé číslo, které označuje, kterou položku uživatel vybere z místní nabídky.
 
 ```
 int m_nMenuResult;
@@ -190,9 +190,9 @@ int m_nMenuResult;
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="pretranslatemessage"></a>  CMFCMenuButton::PreTranslateMessage
+##  <a name="pretranslatemessage"></a>CMFCMenuButton::P reTranslateMessage
 
-Volá se rozhraním před odesláním přeložit zprávy okna.
+Volá se rozhraním, aby se mohly překládat zprávy oken předtím, než se odesílají.
 
 ```
 virtual BOOL PreTranslateMessage(MSG* pMsg);
@@ -201,17 +201,17 @@ virtual BOOL PreTranslateMessage(MSG* pMsg);
 ### <a name="parameters"></a>Parametry
 
 *pMsg*<br/>
-[in] Odkazuje [MSG](/windows/desktop/api/winuser/ns-winuser-tagmsg) struktura, která obsahuje zprávu zpracovat.
+pro Odkazuje na strukturu [MSG](/windows/win32/api/winuser/ns-winuser-msg) , která obsahuje zprávu ke zpracování.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Nenulové, pokud zpráva byl přeložen a by neměl být odeslána; 0, pokud zpráva nebyl přeložen a by měla být odeslána.
+Nenulové, pokud byla zpráva přeložena a neměla by být odeslána; 0, pokud nebyla zpráva přeložena a měla by být odeslána.
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="sizetocontent"></a>  CMFCMenuButton::SizeToContent
+##  <a name="sizetocontent"></a>CMFCMenuButton::SizeToContent
 
-Změní velikost tlačítka podle jeho velikost písma a velikost bitové kopie.
+Změní velikost tlačítka podle velikosti textu a velikosti obrázku.
 
 ```
 virtual CSize SizeToContent(BOOL bCalcOnly = FALSE);
@@ -220,17 +220,17 @@ virtual CSize SizeToContent(BOOL bCalcOnly = FALSE);
 ### <a name="parameters"></a>Parametry
 
 *bCalcOnly*<br/>
-[in] Parametr logické hodnoty označující, zda tato metoda mění velikost tlačítka.
+pro Logický parametr, který určuje, zda tato metoda mění velikost tlačítka.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-A [CSize](../../atl-mfc-shared/reference/csize-class.md) objekt, který určuje novou velikost tlačítka.
+Objekt [CSize](../../atl-mfc-shared/reference/csize-class.md) , který určuje novou velikost tlačítka.
 
 ### <a name="remarks"></a>Poznámky
 
-Při volání této funkce a *bCalcOnly* má hodnotu TRUE, `SizeToContent` bude počítat pouze novou velikost tlačítka.
+Pokud tuto funkci zavoláte a *bCalcOnly* je true `SizeToContent` , vypočítá se jenom nová velikost tlačítka.
 
-Nová velikost tlačítka se počítá podle textu tlačítka, image a šipky. Rozhraní framework přidává předdefinované okrajů 10 pixelů pro vodorovné edge a 5 pixelů pro vertikální edge.
+Nová velikost tlačítka je vypočítána tak, aby odpovídala textu, obrázku a šipce tlačítka. Rozhraní také přidá v předdefinovaných okrajích 10 pixelů pro vodorovnou hranu a 5 pixelů svislého okraje.
 
 ## <a name="see-also"></a>Viz také:
 

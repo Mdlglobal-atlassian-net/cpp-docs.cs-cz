@@ -46,16 +46,16 @@ helpviewer_keywords:
 - vsprintf function
 - _vstprintf function
 ms.assetid: b8ef1c0d-58f9-4a18-841a-f1a989e1c29b
-ms.openlocfilehash: 4b6dd55f90a3766dc250040e27b80f9b1c64fde3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8eb73a5149c1127332b9b8e464da02c6d528610e
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62383422"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69499025"
 ---
-# <a name="vsprintf-vsprintfl-vswprintf-vswprintfl-vswprintfl"></a>vsprintf, _vsprintf_l, vswprintf, _vswprintf_l, __vswprintf_l
+# <a name="vsprintf-_vsprintf_l-vswprintf-_vswprintf_l-__vswprintf_l"></a>vsprintf, _vsprintf_l, vswprintf, _vswprintf_l, __vswprintf_l
 
-Zapíše formátovaný výstup pomocí ukazatele na seznam argumentů. Bezpečnější verze těchto funkcí jsou k dispozici. Zobrazit [vsprintf_s – _vsprintf_s_l –, vswprintf_s – _vswprintf_s_l –](vsprintf-s-vsprintf-s-l-vswprintf-s-vswprintf-s-l.md).
+Zapíše formátovaný výstup pomocí ukazatele na seznam argumentů. K dispozici jsou bezpečnější verze těchto funkcí; viz [vsprintf_s, _vsprintf_s_l, vswprintf_s, _vswprintf_s_l](vsprintf-s-vsprintf-s-l-vswprintf-s-vswprintf-s-l.md).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -120,57 +120,57 @@ int _vswprintf_l(
 
 ### <a name="parameters"></a>Parametry
 
-*Vyrovnávací paměti*<br/>
+*vyrovnávací paměti*<br/>
 Umístění úložiště pro výstup.
 
-*Počet*<br/>
-Maximální počet znaků k uložení širokého řetězce verze této funkce.
+*výpočtu*<br/>
+Maximální počet znaků, které mají být uloženy v rámci verze v řetězci v rámci této funkce.
 
-*Formát*<br/>
+*format*<br/>
 Specifikace formátu.
 
 *argptr*<br/>
 Ukazatel na seznam argumentů.
 
-*Národní prostředí*<br/>
+*jazyka*<br/>
 Národní prostředí, které se má použít
 
 ## <a name="return-value"></a>Návratová hodnota
 
-**vsprintf –** a **vswprintf –** vrátí počet napsaných znaků, nikoli včetně ukončujícího znaku null, nebo zápornou hodnotu, pokud dojde k chybě výstupu. Pokud *vyrovnávací paměti* nebo *formátu* je ukazatel s hodnotou null, tyto funkce vyvolají obslužnou rutinu neplatného parametru, jak je popsáno v [Parameter Validation](../../c-runtime-library/parameter-validation.md). Pokud smí provádění pokračovat, vrátí funkce hodnotu -1 a nastaví **errno** k **EINVAL**.
+**vsprintf** a **vswprintf** vrátí počet zapsaných znaků, včetně ukončujícího znaku null, nebo zápornou hodnotu, pokud dojde k chybě výstupu. Pokud je *vyrovnávací paměť* nebo *Formát* ukazatel s hodnotou null, tyto funkce vyvolají obslužnou rutinu neplatného parametru, jak je popsáno v tématu [ověřování parametru](../../c-runtime-library/parameter-validation.md). Pokud provádění může pokračovat, vrátí tyto funkce hodnotu-1 a nastaví **errno** na **EINVAL**.
 
 Informace o těchto a dalších chybových kódech naleznete v tématu [_doserrno, errno, _sys_errlist a _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Poznámky
 
-Každá z těchto funkcí bere ukazatel na seznam argumentů a potom formátuje a zapisuje poskytnutá data do paměti, na které odkazuje *vyrovnávací paměti*.
+Každá z těchto funkcí bere ukazatel na seznam argumentů a potom formátuje a zapisuje daná data do paměti, na kterou ukazuje *vyrovnávací paměť*.
 
-Verze těchto funkcí s **_l** přípona jsou stejné s tím rozdílem, že používají parametr národního prostředí předaného namísto aktuálního národní prostředí pro vlákno.
+Verze těchto funkcí s příponou **_l** jsou stejné s tím rozdílem, že používají předaný parametr národního prostředí namísto aktuálního národního prostředí vlákna.
 
 > [!IMPORTANT]
-> Pomocí **vsprintf –**, že se žádný způsob, jak omezit počet znaků zapsaných, což znamená, že kód pomocí této funkce je náchylný k přetečení vyrovnávací paměti. Použití [_vsnprintf –](vsnprintf-vsnprintf-vsnprintf-l-vsnwprintf-vsnwprintf-l.md) místo, nebo se telefonicky [_vscprintf –](vscprintf-vscprintf-l-vscwprintf-vscwprintf-l.md) k určení, jak velkou vyrovnávací paměť je potřeba. Také se ujistěte, že *formátu* není uživatelem definovaný řetězec. Další informace najdete v tématu [předcházení přetečení vyrovnávací paměti](/windows/desktop/SecBP/avoiding-buffer-overruns).
+> Pomocí **vsprintf**neexistuje žádný způsob, jak omezit počet zapsaných znaků, což znamená, že kód, který tuto funkci používá, je náchylný k přetečení vyrovnávací paměti. Místo toho použijte [_vsnprintf](vsnprintf-vsnprintf-vsnprintf-l-vsnwprintf-vsnwprintf-l.md) nebo zavolejte [_vscprintf](vscprintf-vscprintf-l-vscwprintf-vscwprintf-l.md) a určete, jak velká je potřeba vyrovnávací paměť. Také se ujistěte, že *Formát* není uživatelem definovaný řetězec. Další informace najdete v tématu [předcházení přetečení vyrovnávací paměti](/windows/win32/SecBP/avoiding-buffer-overruns).
 
-**vswprintf –** odpovídá standardu ISO C, který vyžaduje druhý parametr, *počet*, typu **size_t**. K vynucení starého nestandardního chování definujte **_CRT_NON_CONFORMING_SWPRINTFS**. Staré chování nemusí být v budoucí verzi, takže kód by měl změnit používat nové chování splňující podmínky.
+**vswprintf** odpovídá standardu ISO C, který vyžaduje druhý parametr *Count*typu **size_t**. Chcete-li vynutit staré nestandardní chování, definujte **_CRT_NON_CONFORMING_SWPRINTFS**. Staré chování nemusí být v budoucí verzi, takže kód by měl být změněn tak, aby používal nové vyhovující chování.
 
-V jazyce C++ mají tyto funkce přetížení šablon, která vyvolávají novější, zabezpečené protějšky těchto funkcí. Další informace najdete v tématu [přetížení zabezpečení šablony](../../c-runtime-library/secure-template-overloads.md).
+V C++nástroji mají tyto funkce přetížení šablony, které vyvolávají novější a zabezpečené protějšky těchto funkcí. Další informace najdete v tématu [přetížení zabezpečení šablon](../../c-runtime-library/secure-template-overloads.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapování rutin obecného textu
 
-|Rutina TCHAR.H|_UNICODE a _MBCS nejsou definovány|_MBCS definováno|_UNICODE definováno|
+|Rutina TCHAR.H|_UNICODE & _MBCS nejsou definovány.|_MBCS definováno|_UNICODE definováno|
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_vstprintf**|**vsprintf**|**vsprintf**|**vswprintf**|
 |**_vstprintf_l**|**_vsprintf_l**|**_vsprintf_l**|**_vswprintf_l**|
 
 ## <a name="requirements"></a>Požadavky
 
-|Rutina|Požadovaný hlavičkový soubor|Volitelná záhlaví|
+|Rutina|Požadovaný hlavičkový soubor|Volitelné hlavičky|
 |-------------|---------------------|----------------------|
-|**vsprintf**, **_vsprintf_l**|\<stdio.h > a \<stdarg.h >|\<varargs.h>*|
-|**vswprintf**, **_vswprintf_l**|\<stdio.h > nebo \<wchar.h >, a \<stdarg.h >|\<varargs.h>*|
+|**vsprintf**, **_vsprintf_l**|\<stdio. h > a \<STDARG. h >|\<varargs.h>*|
+|**vswprintf**, **_vswprintf_l**|\<stdio. h > nebo \<WCHAR. h > a \<STDARG. h >|\<varargs.h>*|
 
-\* Vyžaduje se pro kompatibility systému UNIX V.
+\*Vyžaduje se pro kompatibilitu se systémem UNIX V.
 
-Další informace o kompatibilitě, naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Příklad
 
@@ -220,7 +220,7 @@ This is a string
 
 ## <a name="see-also"></a>Viz také:
 
-[Stream vstupně-výstupních operací](../../c-runtime-library/stream-i-o.md)<br/>
+[Vstup/výstup datového proudu](../../c-runtime-library/stream-i-o.md)<br/>
 [vprintf – funkce](../../c-runtime-library/vprintf-functions.md)<br/>
 [Syntaxe specifikace formátu: funkce printf a wprintf](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md)<br/>
 [fprintf, _fprintf_l, fwprintf, _fwprintf_l](fprintf-fprintf-l-fwprintf-fwprintf-l.md)<br/>

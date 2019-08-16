@@ -1,5 +1,5 @@
 ---
-title: CComClassFactorySingleton Class
+title: CComClassFactorySingleton – třída
 ms.date: 11/04/2016
 f1_keywords:
 - CComClassFactorySingleton
@@ -9,19 +9,19 @@ f1_keywords:
 helpviewer_keywords:
 - CComClassFactorySingleton class
 ms.assetid: debb983c-382b-487b-8d42-7ea26dc158b8
-ms.openlocfilehash: c415da15341f7800a706379d991cb753f5991170
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.openlocfilehash: 71705d02140f0392a9ce023c64e7b4125c14443f
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65221172"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69497380"
 ---
-# <a name="ccomclassfactorysingleton-class"></a>CComClassFactorySingleton Class
+# <a name="ccomclassfactorysingleton-class"></a>CComClassFactorySingleton – třída
 
-Tato třída je odvozena z [ccomclassfactory –](../../atl/reference/ccomclassfactory-class.md) a používá [ccomobjectglobal –](../../atl/reference/ccomobjectglobal-class.md) k vytvoření jednoho objektu.
+Tato třída je odvozena z [CComClassFactory](../../atl/reference/ccomclassfactory-class.md) a používá [CComObjectGlobal](../../atl/reference/ccomobjectglobal-class.md) k vytvoření jednoho objektu.
 
 > [!IMPORTANT]
->  Tato třída a jejích členů nelze použít v aplikacích, které jsou spouštěny v modulu Windows Runtime.
+>  Tato třída a její členové nelze použít v aplikacích, které jsou spouštěny v prostředí Windows Runtime.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -33,9 +33,9 @@ class CComClassFactorySingleton : public CComClassFactory
 #### <a name="parameters"></a>Parametry
 
 *T*<br/>
-Třída.
+Vaše třída.
 
-`CComClassFactorySingleton` je odvozen od [ccomclassfactory –](../../atl/reference/ccomclassfactory-class.md) a používá [ccomobjectglobal –](../../atl/reference/ccomobjectglobal-class.md) k vytvoření jednoho objektu. Každé volání `CreateInstance` metoda jednoduše dotazuje tohoto objektu pro ukazatel rozhraní.
+`CComClassFactorySingleton`je odvozen z [CComClassFactory](../../atl/reference/ccomclassfactory-class.md) a používá [CComObjectGlobal](../../atl/reference/ccomobjectglobal-class.md) k vytvoření jednoho objektu. Každé volání `CreateInstance` metody jednoduše dotazuje tento objekt na ukazatel rozhraní.
 
 ## <a name="members"></a>Členové
 
@@ -43,17 +43,17 @@ Třída.
 
 |Name|Popis|
 |----------|-----------------|
-|[CComClassFactorySingleton::CreateInstance](#createinstance)|Dotazy `m_spObj` pro ukazatel rozhraní.|
+|[CComClassFactorySingleton::CreateInstance](#createinstance)|Dotazy `m_spObj` na ukazatel rozhraní|
 
 ### <a name="public-data-members"></a>Veřejné datové členy
 
 |Name|Popis|
 |----------|-----------------|
-|[CComClassFactorySingleton::m_spObj](#m_spobj)|[Ccomobjectglobal –](../../atl/reference/ccomobjectglobal-class.md) přiřazený objekt vytvořený pomocí `CComClassFactorySingleton`.|
+|[CComClassFactorySingleton::m_spObj](#m_spobj)|Objekt [CComObjectGlobal](../../atl/reference/ccomobjectglobal-class.md) , který je `CComClassFactorySingleton`vytvořen pomocí.|
 
 ## <a name="remarks"></a>Poznámky
 
-Objekty knihovny ATL obvykle získat objekt pro vytváření tříd odvozením z [CComCoClass](../../atl/reference/ccomcoclass-class.md). Tato třída obsahuje makra [DECLARE_CLASSFACTORY](aggregation-and-class-factory-macros.md#declare_classfactory), který deklaruje `CComClassFactory` jako výchozí objekt pro vytváření tříd. Chcete-li použít `CComClassFactorySingleton`, zadejte [DECLARE_CLASSFACTORY_SINGLETON](aggregation-and-class-factory-macros.md#declare_classfactory_singleton) makra v definici třídy objektu. Příklad:
+Objekty ATL normálně získávají objekt pro vytváření tříd odvozením z [CComCoClass](../../atl/reference/ccomcoclass-class.md). Tato třída zahrnuje makro [DECLARE_CLASSFACTORY](aggregation-and-class-factory-macros.md#declare_classfactory), které deklaruje `CComClassFactory` jako výchozí objekt pro vytváření tříd. Chcete- `CComClassFactorySingleton`li použít, zadejte makro [DECLARE_CLASSFACTORY_SINGLETON](aggregation-and-class-factory-macros.md#declare_classfactory_singleton) v definici třídy vašeho objektu. Příklad:
 
 [!code-cpp[NVC_ATL_COM#10](../../atl/codesnippet/cpp/ccomclassfactorysingleton-class_1.h)]
 
@@ -71,11 +71,11 @@ Objekty knihovny ATL obvykle získat objekt pro vytváření tříd odvozením z
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** atlcom
+**Záhlaví:** atlcom. h
 
-##  <a name="createinstance"></a>  CComClassFactorySingleton::CreateInstance
+##  <a name="createinstance"></a>CComClassFactorySingleton:: CreateInstance
 
-Volání `QueryInterface` prostřednictvím [m_spObj](#m_spobj) načíst ukazatel rozhraní.
+Volá `QueryInterface` prostřednictvím [m_spObj](#m_spobj) k načtení ukazatele rozhraní.
 
 ```
 STDMETHOD(CreateInstance)(LPUNKNOWN pUnkOuter, REFIID riid, void** ppvObj);
@@ -84,21 +84,21 @@ STDMETHOD(CreateInstance)(LPUNKNOWN pUnkOuter, REFIID riid, void** ppvObj);
 ### <a name="parameters"></a>Parametry
 
 *pUnkOuter*<br/>
-[in] Pokud se objekt vytváří jako součást agregace, pak *pUnkOuter* musí být vnější neznámá. V opačném případě *pUnkOuter* musí mít hodnotu NULL.
+pro Pokud se objekt vytváří jako součást agregace, pak musí být *pUnkOuter* vnějším neznámý. V opačném případě *pUnkOuter* musí mít hodnotu null.
 
 *riid*<br/>
-[in] Identifikátor IID požadované rozhraní. Pokud *pUnkOuter* je jiná než NULL, *riid* musí být `IID_IUnknown`.
+pro IID požadovaného rozhraní. Pokud *pUnkOuter* je jiný než null, musí být `IID_IUnknown`riid.
 
 *ppvObj*<br/>
-[out] Ukazatel na ukazatel rozhraní, který je identifikován *riid*. Pokud objekt nepodporuje toto rozhraní *ppvObj* nastaven na hodnotu NULL.
+mimo Ukazatel na ukazatel rozhraní identifikovaný *riid*. Pokud objekt nepodporuje toto rozhraní, je *ppvObj* nastaveno na hodnotu null.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Standardní hodnoty HRESULT.
+Standardní hodnota HRESULT.
 
 ##  <a name="m_spobj"></a>  CComClassFactorySingleton::m_spObj
 
-[Ccomobjectglobal –](../../atl/reference/ccomobjectglobal-class.md) přiřazený objekt vytvořený pomocí `CComClassFactorySingleton`.
+Objekt [CComObjectGlobal](../../atl/reference/ccomobjectglobal-class.md) , který je `CComClassFactorySingleton`vytvořen pomocí.
 
 ```
 CComPtr<IUnknown> m_spObj;
@@ -106,15 +106,15 @@ CComPtr<IUnknown> m_spObj;
 
 ### <a name="remarks"></a>Poznámky
 
-Každé volání [CreateInstance](#createinstance) metoda jednoduše dotazuje tohoto objektu pro ukazatel rozhraní.
+Každé volání metody [CreateInstance](#createinstance) jednoduše dotazuje tento objekt na ukazatel rozhraní.
 
-Všimněte si, že aktuální formu `m_spObj` uvede k zásadní změně z způsob, který `CComClassFactorySingleton` pracovali v předchozích verzích ATL. V předchozích verzích `CComClassFactorySingleton` objekt byl vytvořen ve stejnou dobu jako objekt pro vytváření tříd, během inicializace serveru. Ve Vizuálu C++.NET 2003 a novějším, objekt je vytvořen laxně, na první požadavek. Tato změna může způsobit chyby v programech, které jsou závislé na dřívější inicializace.
+Všimněte si, že aktuální forma `m_spObj` sady představuje zásadní změnu od způsobu, `CComClassFactorySingleton` jak pracovala v předchozích verzích ATL. V předchozích verzích `CComClassFactorySingleton` byl během inicializace serveru vytvořen objekt ve stejnou dobu jako objekt pro vytváření tříd. V jazyce C++Visual .NET 2003 a novějším je objekt vytvořen laxně vytvářená při první žádosti. Tato změna by mohla způsobit chyby v programech, které spoléhají na prvotní inicializaci.
 
 ## <a name="see-also"></a>Viz také:
 
-[IClassFactory](/windows/desktop/api/unknwnbase/nn-unknwnbase-iclassfactory)<br/>
+[IClassFactory](/windows/win32/api/unknwnbase/nn-unknwnbase-iclassfactory)<br/>
 [CComClassFactory2 – třída](../../atl/reference/ccomclassfactory2-class.md)<br/>
 [CComClassFactoryAutoThread – třída](../../atl/reference/ccomclassfactoryautothread-class.md)<br/>
 [CComObjectRootEx – třída](../../atl/reference/ccomobjectrootex-class.md)<br/>
 [CComGlobalsThreadModel](atl-typedefs.md#ccomglobalsthreadmodel)<br/>
-[Přehled tříd](../../atl/atl-class-overview.md)
+[Přehled třídy](../../atl/atl-class-overview.md)

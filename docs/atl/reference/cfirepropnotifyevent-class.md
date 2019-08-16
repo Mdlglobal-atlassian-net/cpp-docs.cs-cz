@@ -11,19 +11,19 @@ helpviewer_keywords:
 - CFirePropNotifyEvent class
 - connection points [C++], notifying of events
 ms.assetid: eb7a563e-6bce-4cdf-8d20-8c6a5307781b
-ms.openlocfilehash: 493bc00708d031f1bf7a4eb74d56e927a9c3f1dd
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 694127ceccc1d1b55e5da9abca799dff77dcfc60
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62245488"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69496942"
 ---
 # <a name="cfirepropnotifyevent-class"></a>CFirePropNotifyEvent Class
 
-Tato třída poskytuje metody pro oznámení kontejneru jímky týkající se změny vlastností ovládacího prvku.
+Tato třída poskytuje metody pro upozorňování jímky kontejneru týkající se změn vlastností ovládacího prvku.
 
 > [!IMPORTANT]
->  Tato třída a jejích členů nelze použít v aplikacích, které jsou spouštěny v modulu Windows Runtime.
+>  Tato třída a její členové nelze použít v aplikacích, které jsou spouštěny v prostředí Windows Runtime.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -35,26 +35,26 @@ class CFirePropNotifyEvent
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
-|[CFirePropNotifyEvent::FireOnChanged](#fireonchanged)|(Statické) Upozorní kontejneru jímky, které se změnily vlastnosti ovládacího prvku.|
-|[CFirePropNotifyEvent::FireOnRequestEdit](#fireonrequestedit)|(Statické) Upozorní jímky kontejneru, který vlastnosti ovládacího prvku se má změnit.|
+|[CFirePropNotifyEvent::FireOnChanged](#fireonchanged)|Tras Upozorní jímku kontejneru, že došlo ke změně vlastnosti ovládacího prvku.|
+|[CFirePropNotifyEvent::FireOnRequestEdit](#fireonrequestedit)|Tras Upozorní jímku kontejneru na změnu vlastnosti ovládacího prvku.|
 
 ## <a name="remarks"></a>Poznámky
 
-`CFirePropNotifyEvent` má dvě metody, které oznámí jímky kontejneru, který došlo ke změně vlastnosti ovládacího prvku nebo se má změnit.
+`CFirePropNotifyEvent`má dvě metody, které oznamují jímku kontejneru, že došlo ke změně vlastnosti ovládacího prvku nebo se chystá změnit.
 
-Pokud třída implementace ovládacího prvku je odvozena z `IPropertyNotifySink`, `CFirePropNotifyEvent` metody jsou vyvolány při volání `FireOnRequestEdit` nebo `FireOnChanged`. Pokud vaše třída ovládacího prvku není odvozen od `IPropertyNotifySink`, volání těchto funkcí vrátí hodnotu S_OK.
+Pokud třída implementující váš ovládací prvek `IPropertyNotifySink`je odvozena z `CFirePropNotifyEvent` , metody jsou vyvolány při `FireOnChanged`volání `FireOnRequestEdit` nebo. Pokud vaše třída ovládacího prvku není odvozena `IPropertyNotifySink`od, volání těchto funkcí vrátí S_OK.
 
-Další informace o vytváření ovládacích prvků naleznete v tématu [ATL – tutoriál](../../atl/active-template-library-atl-tutorial.md).
+Další informace o vytváření ovládacích prvků naleznete v [kurzu ATL](../../atl/active-template-library-atl-tutorial.md).
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** atlctl.h
+**Záhlaví:** atlctl. h
 
-##  <a name="fireonchanged"></a>  CFirePropNotifyEvent::FireOnChanged
+##  <a name="fireonchanged"></a>CFirePropNotifyEvent::FireOnChanged
 
-Oznámí všechny připojené [ipropertynotifysink –](/windows/desktop/api/ocidl/nn-ocidl-ipropertynotifysink) rozhraní (v každém bodě připojení objektu), která je změněna vlastnost zadaného objektu.
+Upozorní všechna připojená rozhraní [IPropertyNotifySink](/windows/win32/api/ocidl/nn-ocidl-ipropertynotifysink) (na každém bodu připojení objektu), že se změnila zadaná vlastnost objektu.
 
 ```
 static HRESULT FireOnChanged(IUnknown* pUnk, DISPID dispID);
@@ -63,22 +63,22 @@ static HRESULT FireOnChanged(IUnknown* pUnk, DISPID dispID);
 ### <a name="parameters"></a>Parametry
 
 *pUnk*<br/>
-[in] Ukazatel `IUnknown` objektu odesílání oznámení.
+pro Ukazatel na `IUnknown` objekt, který odesílá oznámení.
 
 *dispID*<br/>
-[in] Identifikátor vlastnosti, které se změnily.
+pro Identifikátor vlastnosti, která se změnila.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Jeden standardní hodnoty HRESULT.
+Jedna ze standardních hodnot HRESULT.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato funkce je bezpečné volat i v případě, že ovládací prvek nepodporuje spojovací body.
+Tato funkce je bezpečná pro volání, i když váš ovládací prvek nepodporuje spojovací body.
 
-##  <a name="fireonrequestedit"></a>  CFirePropNotifyEvent::FireOnRequestEdit
+##  <a name="fireonrequestedit"></a>CFirePropNotifyEvent::FireOnRequestEdit
 
-Oznámí všechny připojené [ipropertynotifysink –](/windows/desktop/api/ocidl/nn-ocidl-ipropertynotifysink) rozhraní (v každém bodě připojení objektu), které se zadaný objekt vlastnost se má změnit.
+Upozorní všechna připojená rozhraní [IPropertyNotifySink](/windows/win32/api/ocidl/nn-ocidl-ipropertynotifysink) (na každém bodu připojení objektu), že se má změnit zadaná vlastnost objektu.
 
 ```
 static HRESULT FireOnRequestEdit(IUnknown* pUnk, DISPID dispID);
@@ -87,19 +87,19 @@ static HRESULT FireOnRequestEdit(IUnknown* pUnk, DISPID dispID);
 ### <a name="parameters"></a>Parametry
 
 *pUnk*<br/>
-[in] Ukazatel `IUnknown` objektu odesílání oznámení.
+pro Ukazatel na `IUnknown` objekt, který odesílá oznámení.
 
 *dispID*<br/>
-[in] Identifikátor vlastnosti Chystáte se změnit.
+pro Identifikátor vlastnosti, kterou chcete změnit.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Jeden standardní hodnoty HRESULT.
+Jedna ze standardních hodnot HRESULT.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato funkce je bezpečné volat i v případě, že ovládací prvek nepodporuje spojovací body.
+Tato funkce je bezpečná pro volání, i když váš ovládací prvek nepodporuje spojovací body.
 
 ## <a name="see-also"></a>Viz také:
 
-[Přehled tříd](../../atl/atl-class-overview.md)
+[Přehled třídy](../../atl/atl-class-overview.md)

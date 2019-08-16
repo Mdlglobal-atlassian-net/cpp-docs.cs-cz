@@ -1,21 +1,21 @@
 ---
-title: call_as (C++ atributů COM)
+title: call_as (C++ atribut com)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.call_as
 helpviewer_keywords:
 - call_as attribute
 ms.assetid: a09d7f1f-353b-4870-9b45-f0284161695d
-ms.openlocfilehash: a0051cdca6673800b37d5733c0b849da24010fcb
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f36cf8d1be589cc614a6def583b00af00aabdb61
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62148351"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69501797"
 ---
-# <a name="callas"></a>call_as
+# <a name="call_as"></a>call_as
 
-Umožňuje [místní](local-cpp.md) funkce mají být namapovány na vzdálenou funkci tak, aby při vzdálené funkce je volána, je vyvolána lokální funkce.
+Povoluje mapování [lokální](local-cpp.md) funkce na vzdálenou funkci, aby při volání vzdálené funkce byla vyvolána místní funkce.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -25,16 +25,16 @@ Umožňuje [místní](local-cpp.md) funkce mají být namapovány na vzdálenou 
 
 ### <a name="parameters"></a>Parametry
 
-*– funkce*<br/>
-Lokální funkce, kterou chcete volat při vyvolání vzdálenou funkci.
+*slouží*<br/>
+Místní funkce, kterou chcete volat při vyvolání vzdálené funkce.
 
 ## <a name="remarks"></a>Poznámky
 
-**Call_as** C++ atribut má stejné funkce jako [call_as](/windows/desktop/Midl/call-as) atribut MIDL.
+Atribut **call_as** C++ má stejné funkce jako atribut [call_as](/windows/win32/Midl/call-as) MIDL.
 
 ## <a name="example"></a>Příklad
 
-Následující kód ukazuje, jak můžete **call_as** mapovat funkci nonremotable (`f1`) na funkci lze používat vzdáleně (`Remf1`):
+Následující kód ukazuje, jak můžete použít **call_as** k namapování nevzdáleně spustitelné funkce (`f1`) na funkci vzdáleně (`Remf1`):
 
 ```cpp
 // cpp_attr_ref_call_as.cpp
@@ -50,16 +50,16 @@ __interface IMInterface {
 
 ## <a name="requirements"></a>Požadavky
 
-### <a name="attribute-context"></a>Atribut kontextu
+### <a name="attribute-context"></a>Kontext atributu
 
 |||
 |-|-|
 |**Platí pro**|Metoda rozhraní|
-|**Opakovatelné**|Ne|
-|**Vyžadované atributy**|Žádné|
+|**REPEATABLE**|Ne|
+|**Požadované atributy**|Žádné|
 |**Neplatné atributy**|Žádné|
 
-Další informace o kontexty atributů najdete v tématu [kontexty atributů](cpp-attributes-com-net.md#contexts).
+Další informace o kontextech atributů naleznete v tématu kontexty [atributů](cpp-attributes-com-net.md#contexts).
 
 ## <a name="see-also"></a>Viz také:
 

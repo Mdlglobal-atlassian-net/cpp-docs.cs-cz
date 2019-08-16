@@ -1,17 +1,17 @@
 ---
-title: Atribut s možností vazby (C++ COM)
+title: BIND (C++ atribut com)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.bindable
 helpviewer_keywords:
 - bindable attribute
 ms.assetid: a2360f92-927b-4af8-98cc-6eca7f4ec954
-ms.openlocfilehash: 07f446b946d6703c4a8b9ae59ae0edd8172c6879
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4a74531a40bcacdae4ef98c292884e7a43fa82fe
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62148390"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69501829"
 ---
 # <a name="bindable"></a>bindable
 
@@ -25,19 +25,19 @@ Označuje, že vlastnost podporuje datové vazby.
 
 ## <a name="remarks"></a>Poznámky
 
-**Umožňujících vazbu** C++ atribut má stejné funkce jako [umožňujících vazbu](/windows/desktop/Midl/bindable) atribut MIDL. Lze ji použít v vlastnosti definované [propget](propget.md), [propput](propput.md), nebo [propputref](propputref.md) atributy, nebo můžete ručně definovat metodu s možností vazby.
+Atribut s možností **vazby** má stejné funkce jako atribut MIDL s možností [vazby.](/windows/win32/Midl/bindable) C++ Můžete ji použít ve vlastnostech definovaných pomocí atributů [propget](propget.md), [propput](propput.md)nebo [propputref](propputref.md) , nebo můžete ručně definovat metodu s možností vazby.
 
-Následující ukázky knihovny MFC ukazují použití **umožňujících vazbu**:
+Následující ukázky knihovny MFC ukazují použití **vazby**:
 
 - [Ukázky ovládacích prvků: Ovládací prvky ActiveX založené na knihovně MFC](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/MFC/controls)
 
-- [KR ukázka: Ovládací prvek ActiveX](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/MFC/controls)
+- [Ukázka str: Ovládací prvek ActiveX](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/MFC/controls)
 
 - [Ukázka TESTHELP: Ovládací prvek ActiveX s popisy tlačítek a Nápověda](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/MFC/controls)
 
 ## <a name="example"></a>Příklad
 
-Následující kód ukazuje, jak můžete **umožňujících vazbu** u vlastnosti:
+Následující kód ukazuje, jak lze použít **vázání** u vlastnosti:
 
 ```cpp
 // cpp_attr_ref_bindable.cpp
@@ -60,16 +60,16 @@ __interface IPropDemo : IDispatch {
 
 ## <a name="requirements"></a>Požadavky
 
-### <a name="attribute-context"></a>Atribut kontextu
+### <a name="attribute-context"></a>Kontext atributu
 
 |||
 |-|-|
 |**Platí pro**|Metoda rozhraní|
-|**Opakovatelné**|Ne|
-|**Vyžadované atributy**|Žádný|
+|**REPEATABLE**|Ne|
+|**Požadované atributy**|Žádné|
 |**Neplatné atributy**|Žádné|
 
-Další informace o kontexty atributů najdete v tématu [kontexty atributů](cpp-attributes-com-net.md#contexts).
+Další informace o kontextech atributů naleznete v tématu kontexty [atributů](cpp-attributes-com-net.md#contexts).
 
 ## <a name="see-also"></a>Viz také:
 

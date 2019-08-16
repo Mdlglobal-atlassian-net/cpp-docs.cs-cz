@@ -9,30 +9,30 @@ helpviewer_keywords:
 - OLE DB provider templates [C++], object interfaces
 - OLE DB [C++], interfaces
 ms.assetid: 929e100c-c08c-4b64-8437-d8d1357226f6
-ms.openlocfilehash: fc8d2f5edf854766dcb5dcc8ed6d57a849b8f2a0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a615694a9db75cdaf3b187cf6d29248bd26ef978
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62176015"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69501397"
 ---
 # <a name="data-source-object-interfaces"></a>Rozhraní objektu zdroje dat
 
-V následující tabulce jsou uvedeny povinných a volitelných rozhraní definované pro objekt zdroje dat OLE DB.
+V následující tabulce jsou uvedena povinná a volitelná rozhraní definovaná OLE DB pro objekt zdroje dat.
 
-|Rozhraní|Povinné?|Šablony technologie OLE DB implementované?|
+|Rozhraní|Povinné?|Implementováno pomocí šablon OLE DB?|
 |---------------|---------------|--------------------------------------|
 |`IDBCreateSession`|Povinné|Ano|
 |`IDBInitialize`|Povinné|Ano|
 |`IDBProperties`|Povinné|Ano|
-|[IPersist](/windows/desktop/api/objidl/nn-objidl-ipersist)|Povinné|Ano|
-|[IConnectionPointContainer](/windows/desktop/api/ocidl/nn-ocidl-iconnectionpointcontainer)|volitelná,|Ne|
+|[IPersist](/windows/win32/api/objidl/nn-objidl-ipersist)|Povinné|Ano|
+|[IConnectionPointContainer](/windows/win32/api/ocidl/nn-ocidl-iconnectionpointcontainer)|volitelná,|Ne|
 |`IDBDataSourceAdmin`|volitelná,|Ne|
 |`IDBInfo`|volitelná,|Ne|
-|[IPersistFile](/windows/desktop/api/objidl/nn-objidl-ipersistfile)|volitelná,|Ne|
+|[IPersistFile](/windows/win32/api/objidl/nn-objidl-ipersistfile)|volitelná,|Ne|
 |`ISupportErrorInfo`|volitelná,|Ne|
 
-Zdroje dat objektu implementuje `IDBProperties`, `IDBInitialize`, a `IDBCreateSession` rozhraní prostřednictvím dědičnosti. Můžete nastavit dědění nebo není dědění z jedné z těchto tříd implementace podporovat další funkce. Pokud chcete zajistit podporu `IDBDataSourceAdmin` rozhraní, musí dědit z `IDBDataSourceAdminImpl` třídy.
+Objekt zdroje dat implementuje `IDBProperties`rozhraní, `IDBInitialize`a `IDBCreateSession` prostřednictvím dědičnosti. Můžete zvolit podporu dalších funkcí děděním nebo neděděním z jedné z těchto tříd implementace. Pokud chcete `IDBDataSourceAdmin` rozhraní podporovat, je nutné dědit `IDBDataSourceAdminImpl` z třídy.
 
 ## <a name="see-also"></a>Viz také:
 

@@ -5,23 +5,23 @@ helpviewer_keywords:
 - ODBC, ODBC classes
 - MFC, database applications
 ms.assetid: 88aabe65-84e3-4122-b636-5d334a5fe570
-ms.openlocfilehash: bf0aa11a020a5d15cd23463c31f2713aba38a037
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b57d71ae2dc4e81f10855dc4075713170af952e4
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62182870"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69500356"
 ---
 # <a name="mfc-database-classes"></a>MFC – databázové třídy
 
 > [!NOTE]
->  Společnost Microsoft doporučuje používat ODBC přes 13 ovladače ODBC Microsoft (nebo novější) pro SQL Server pro nové projekty. DAO se už nepodporuje.
+>  Microsoft doporučuje používat rozhraní ODBC přes ovladač Microsoft ODBC Driver 13 (nebo novější) pro SQL Server pro nové projekty. Objekt DAO již není podporován.
 
 Další informace naleznete v následujících tématech:
 
-- [Data Access technologie podrobný popis](https://msdn.microsoft.com/library/ms810810.aspx)
+- [Historie ovladačů pro Microsoft SQL Server](/sql/connect/connect-history)
 
-- [ODBC Driver 13.1 pro SQL Server vydaný](https://blogs.technet.microsoft.com/dataplatforminsider/2016/08/03/odbc-driver-13-1-for-sql-server-released/) 13 ovladač Microsoft ODBC pro SQL Server by měl použít k vytvoření nové aplikace nebo existující aplikace, které je potřeba využívat nové funkce SQL serveru 2016.
+- [Ovladač ODBC 13,1 pro SQL Server vydaný](https://blogs.technet.microsoft.com/dataplatforminsider/2016/08/03/odbc-driver-13-1-for-sql-server-released/) Ovladač Microsoft ODBC Driver 13 pro SQL Server by měl sloužit k vytváření nových aplikací nebo vylepšení stávajících aplikací, které potřebují využívat nové funkce SQL Server 2016.
 
 - [Rozhraní ODBC a knihovna MFC](../data/odbc/odbc-and-mfc.md)
 
@@ -31,4 +31,4 @@ Další informace naleznete v následujících tématech:
 
 ## <a name="see-also"></a>Viz také:
 
-[Přístup k datům programování knihovny MFC nebo ATL)](../data/data-access-programming-mfc-atl.md)
+[Programování přístupu k datům (MFC/ATL)](../data/data-access-programming-mfc-atl.md)

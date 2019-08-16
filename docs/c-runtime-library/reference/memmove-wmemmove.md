@@ -25,16 +25,16 @@ helpviewer_keywords:
 - wmemmove function
 - memmove function
 ms.assetid: 3a906114-9cf3-40d7-bd99-ee452004f218
-ms.openlocfilehash: 988af1c2678e20ea40ce4dfe331a3b6c49db0547
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 27811f56f1956bcaaea4ec589f7e6c71afaca380
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62156561"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69499620"
 ---
 # <a name="memmove-wmemmove"></a>memmove, wmemmove
 
-Jeden vyrovnávací paměti přesune do jiné. Bezpečnější verze těchto funkcí jsou k dispozici. Zobrazit [memmove_s – wmemmove_s –](memmove-s-wmemmove-s.md).
+Přesune jednu vyrovnávací paměť do druhé. K dispozici jsou bezpečnější verze těchto funkcí; viz [memmove_s, wmemmove_s](memmove-s-wmemmove-s.md).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -53,26 +53,26 @@ wchar_t *wmemmove(
 
 ### <a name="parameters"></a>Parametry
 
-*dest*<br/>
-Cílový objekt.
+*propojovací*<br/>
+Cílový objekt
 
 *src*<br/>
 Zdrojový objekt.
 
-*Počet*<br/>
-Počet bajtů (**memmove**) nebo znaky (**wmemmove –**) ke kopírování.
+*výpočtu*<br/>
+Počet bajtů (**memmove**) nebo znaků (**wmemmove**), které mají být zkopírovány.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Hodnota *dest*.
+Hodnota *cíl*.
 
 ## <a name="remarks"></a>Poznámky
 
-Kopie *počet* bajtů (**memmove**) nebo znaky (**wmemmove –**) z *src* k *dest*. Pokud se některé oblasti oblasti zdroj a cíl překrývají, obě funkce Ujistěte se, že se zkopírují původní zdroj bajtů překrývající se oblasti před přepsáním.
+Kopíruje *počet* bajtů (**memmove**) nebo znaků (**wmemmove**) z *Src* na *cíl*. Pokud se některé oblasti zdrojové oblasti a cíle překrývají, obě funkce zajistí, že původní zdrojové bajty v překrývající se oblasti se před přepsáním zkopírují.
 
-**Poznámka k zabezpečení** Ujistěte se, že cílová vyrovnávací paměť je stejný velké nebo větší než zdrojové vyrovnávací paměti. Další informace najdete v tématu [předcházení přetečení vyrovnávací paměti](/windows/desktop/SecBP/avoiding-buffer-overruns).
+**Poznámka k zabezpečení** Ujistěte se, že cílová vyrovnávací paměť má stejnou velikost nebo je větší než zdrojová vyrovnávací paměť. Další informace najdete v tématu [předcházení přetečení vyrovnávací paměti](/windows/win32/SecBP/avoiding-buffer-overruns).
 
-**Memmove** a **wmemmove –** funkce se nepoužívají pouze pokud konstanty **_CRT_SECURE_DEPRECATE_MEMORY** je definovaná před příkazem zahrnutí v pořadí Funkce zastaralé, například v následujícím příkladu:
+Funkce **memmove** a **wmemmove** budou zastaralé pouze v případě, že je konstanta **_CRT_SECURE_DEPRECATE_MEMORY** definována před příkazem include, aby byly funkce zastaralé, například v následujícím příkladu:
 
 ```C
 #define _CRT_SECURE_DEPRECATE_MEMORY
@@ -90,10 +90,10 @@ or
 
 |Rutina|Požadovaný hlavičkový soubor|
 |-------------|---------------------|
-|**memmove**|\<string.h>|
+|**memmove**|\<String. h >|
 |**wmemmove**|\<wchar.h>|
 
-Další informace o kompatibilitě, naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Příklad
 

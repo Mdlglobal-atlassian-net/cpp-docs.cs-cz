@@ -43,19 +43,19 @@ helpviewer_keywords:
 - vtcprintf function
 - formatted text [C++]
 ms.assetid: 4ef8d237-6200-4b66-8731-8c57e5624bb1
-ms.openlocfilehash: e78d2f0b873042bda4fc79df100374b52751aebc
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e5991f903771408a22722dceec3e0c5d84b878e2
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62364841"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69499316"
 ---
-# <a name="vcprintf-vcprintfl-vcwprintf-vcwprintfl"></a>_vcprintf, _vcprintf_l, _vcwprintf, _vcwprintf_l
+# <a name="_vcprintf-_vcprintf_l-_vcwprintf-_vcwprintf_l"></a>_vcprintf, _vcprintf_l, _vcwprintf, _vcwprintf_l
 
-Zapíše formátovaný výstup na konzoli pomocí ukazatele na seznam argumentů. Bezpečnější verze těchto funkcí jsou k dispozici, najdete v článku [_vcprintf_s – _vcprintf_s_l –, _vcwprintf_s – _vcwprintf_s_l –](vcprintf-s-vcprintf-s-l-vcwprintf-s-vcwprintf-s-l.md).
+Zapíše formátovaný výstup do konzoly pomocí ukazatele na seznam argumentů. Bezpečnější verze těchto funkcí jsou k dispozici, viz [_vcprintf_s, _vcprintf_s_l, _vcwprintf_s, _vcwprintf_s_l](vcprintf-s-vcprintf-s-l-vcwprintf-s-vcwprintf-s-l.md).
 
 > [!IMPORTANT]
-> Toto rozhraní API nelze použít v aplikacích, které jsou spouštěny v modulu Windows Runtime. Další informace najdete v tématu [CRT funkce nejsou podporovány v aplikacích pro univerzální platformu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> Toto rozhraní API nelze použít v aplikacích, které jsou spouštěny v prostředí Windows Runtime. Další informace najdete v tématu [funkce CRT nejsou v aplikacích Univerzální platforma Windows podporovány](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -82,47 +82,47 @@ int _vcwprintf_l(
 
 ### <a name="parameters"></a>Parametry
 
-*Formát*<br/>
+*format*<br/>
 Specifikace formátu.
 
 *argptr*<br/>
 Ukazatel na seznam argumentů.
 
-*Národní prostředí*<br/>
+*jazyka*<br/>
 Národní prostředí, které se má použít
 
 Další informace najdete v tématu [specifikace formátu](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md).
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Počet napsaných znaků, nebo zápornou hodnotu, pokud dojde k chybě výstupu. Pokud *formátu* je ukazatel s hodnotou null, je vyvolána obslužná rutina neplatného parametru, jak je popsáno v [Parameter Validation](../../c-runtime-library/parameter-validation.md). Pokud smí provádění pokračovat, **errno** je nastavena na **EINVAL** a vrátí se -1.
+Počet zapsaných znaků nebo záporná hodnota, pokud dojde k chybě výstupu. Pokud je *Format* ukazatel s hodnotou null, je vyvolána obslužná rutina neplatného parametru, jak je popsáno v tématu [ověřování parametru](../../c-runtime-library/parameter-validation.md). Pokud provádění může pokračovat, **errno** je nastaven na **EINVAL** a vrátí-1.
 
 ## <a name="remarks"></a>Poznámky
 
-Každá z těchto funkcí bere ukazatel na seznam argumentů a potom formátuje a zapisuje poskytnutá data do konzoly. **_vcwprintf –** je verze širokého znaku **_vcprintf –**. Bere jako argument řetězec širokého znaku.
+Každá z těchto funkcí bere ukazatel na seznam argumentů a potom formátuje a zapisuje daná data do konzoly. **_vcwprintf** je verze **_vcprintf**pro nejrůznější znaky. Jako argument přijímá řetězec s velkým počtem znaků.
 
-Verze těchto funkcí s **_l** přípona jsou stejné s tím rozdílem, že používají parametr národního prostředí namísto aktuálního národního prostředí předaného.
+Verze těchto funkcí s příponou **_l** jsou stejné s tím rozdílem, že používají předaný parametr národního prostředí namísto aktuálního národního prostředí.
 
 > [!IMPORTANT]
-> Ujistěte se, že *formátu* není uživatelem definovaný řetězec. Další informace najdete v tématu [předcházení přetečení vyrovnávací paměti](/windows/desktop/SecBP/avoiding-buffer-overruns).
+> Ujistěte se, že *Formát* není uživatelem definovaný řetězec. Další informace najdete v tématu [předcházení přetečení vyrovnávací paměti](/windows/win32/SecBP/avoiding-buffer-overruns).
 
 ### <a name="generic-text-routine-mappings"></a>Mapování rutin obecného textu
 
-|Rutina TCHAR.H|_UNICODE a _MBCS nejsou definovány|_MBCS definováno|_UNICODE definováno|
+|Rutina TCHAR.H|_UNICODE & _MBCS nejsou definovány.|_MBCS definováno|_UNICODE definováno|
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_vtcprintf**|**_vcprintf**|**_vcprintf**|**_vcwprintf**|
 |**_vtcprintf_l**|**_vcprintf_l**|**_vcprintf_l**|**_vcwprintf_l**|
 
 ## <a name="requirements"></a>Požadavky
 
-|Rutina|Požadovaný hlavičkový soubor|Volitelná záhlaví|
+|Rutina|Požadovaný hlavičkový soubor|Volitelné hlavičky|
 |-------------|---------------------|----------------------|
-|**_vcprintf**, **_vcprintf_l**|\<conio.h > a \<stdarg.h >|\<varargs.h>*|
-|**_vcwprintf**, **_vcwprintf_l**|\<conio.h > nebo \<wchar.h >, a \<stdarg.h >|\<varargs.h>*|
+|**_vcprintf**, **_vcprintf_l**|\<CONIO. h > a \<STDARG. h >|\<varargs.h>*|
+|**_vcwprintf**, **_vcwprintf_l**|\<CONIO. h > nebo \<WCHAR. h > a \<STDARG. h >|\<varargs.h>*|
 
-\* Vyžaduje se pro kompatibility systému UNIX V.
+\*Vyžaduje se pro kompatibilitu se systémem UNIX V.
 
-Další informace o kompatibilitě, naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Příklad
 
@@ -158,7 +158,7 @@ int main()
 
 ## <a name="see-also"></a>Viz také:
 
-[Stream vstupně-výstupních operací](../../c-runtime-library/stream-i-o.md)<br/>
+[Vstup/výstup datového proudu](../../c-runtime-library/stream-i-o.md)<br/>
 [vprintf – funkce](../../c-runtime-library/vprintf-functions.md)<br/>
 [_cprintf, _cprintf_l, _cwprintf, _cwprintf_l](cprintf-cprintf-l-cwprintf-cwprintf-l.md)<br/>
 [fprintf, _fprintf_l, fwprintf, _fwprintf_l](fprintf-fprintf-l-fwprintf-fwprintf-l.md)<br/>

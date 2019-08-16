@@ -40,16 +40,16 @@ helpviewer_keywords:
 - _wtmpnam function
 - _wtempnam function
 ms.assetid: 3ce75f0f-5e30-42a6-9791-8d7cbfe70fca
-ms.openlocfilehash: 29fa8fc836b1b52bcf66247b3f6aaba47b8c2eaa
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0e8e11182948e9bccf1c55685cc7c3d55ff697c8
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62284864"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69500769"
 ---
-# <a name="tempnam-wtempnam-tmpnam-wtmpnam"></a>_tempnam, _wtempnam, tmpnam, _wtmpnam
+# <a name="_tempnam-_wtempnam-tmpnam-_wtmpnam"></a>_tempnam, _wtempnam, tmpnam, _wtmpnam
 
-Generovat názvy, které lze použít k vytvoření dočasné soubory. Bezpečnější verze některých z těchto funkcí jsou k dispozici. Zobrazit [tmpnam_s – _wtmpnam_s –](tmpnam-s-wtmpnam-s.md).
+Vygenerujte názvy, které můžete použít k vytvoření dočasných souborů. K dispozici jsou bezpečnější verze některých z těchto funkcí; viz [tmpnam_s, _wtmpnam_s](tmpnam-s-wtmpnam-s.md).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -73,44 +73,44 @@ wchar_t *_wtmpnam(
 ### <a name="parameters"></a>Parametry
 
 *prefix*<br/>
-Řetězec, který bude pre čekajícího na názvy vrácené **_tempnam –**.
+Řetězec, který bude označené jako nedokončené do názvů vrácených pomocí **_tempnam**.
 
 *dir*<br/>
-Cesta v názvu souboru používá, pokud neexistuje žádná proměnná prostředí TMP, nebo pokud TMP není platný adresář.
+Cesta použitá v názvu souboru, pokud neexistuje žádná proměnná prostředí TMP, nebo pokud TMP není platný adresář.
 
 *str*<br/>
-Ukazatel, který se uloží vygenerovaný název a bude stejný jako název vrácené funkcí. Je to pohodlný způsob, jak uložit vygenerovaný název.
+Ukazatel, který bude obsahovat vygenerovaný název a bude shodný s názvem vráceným funkcí. Toto je pohodlný způsob, jak uložit vygenerovaný název.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Každá z těchto funkcí vrací ukazatel na název generované nebo **NULL** Pokud dojde k selhání. Selhání může dojít, pokud při pokusu o více než **TMP_MAX** (viz STDIO. H) volání s **tmpnam –** nebo pokud používáte **_tempnam –** a je neplatný název adresáře zadané v proměnné prostředí TMP a v *dir* parametru.
+Každá z těchto funkcí vrací ukazatel na název generovaný nebo **null** , pokud dojde k chybě. K selhání může dojít, pokud se pokusíte o více než **TMP_MAX** (viz stdio. H) volání s **tmpnam** nebo pokud používáte **_tempnam** a v proměnné prostředí TMP a v parametru *dir* je zadán neplatný název adresáře.
 
 > [!NOTE]
-> Ukazatele vrácené **tmpnam –** a **_wtmpnam –** přejděte na interní statické vyrovnávací paměti. [bezplatné](free.md) by neměla být volána k uvolnění těchto ukazatelů. **bezplatné** musí být volána pro ukazatele přidělaná **_tempnam –** a **_wtempnam –**.
+> Ukazatele vracené **tmpnam** a **_wtmpnam** Point do vnitřních statických vyrovnávacích pamětí. pro zrušení přidělení těchto ukazatelů by neměl být volána metoda [Free](free.md) . k ukazatelům přiděleným **_tempnam** a **_wtempnam**se musí volat **bezplatné** požadavky.
 
 ## <a name="remarks"></a>Poznámky
 
-Každá z těchto funkcí vrací název souboru, který ještě neexistuje. **tmpnam –** vrací název, který je jedinečný v určené dočasný adresář Windows vrácený [GetTempPathW](/windows/desktop/api/fileapi/nf-fileapi-gettemppathw). **\_tempnam –** generuje jedinečný název v adresáři než na kterém určené. Všimněte si, než když název souboru je pre čekajícího zpětným lomítkem a informace o cestě, jako je například \fname21, to znamená, že název je platný pro aktuální pracovní adresář.
+Každá z těchto funkcí vrací název souboru, který aktuálně neexistuje. **tmpnam** vrátí název, který je jedinečný v určeném dočasném adresáři Windows vráceném funkcí [GetTempPathW](/windows/win32/api/fileapi/nf-fileapi-gettemppathw). tempnam vygeneruje jedinečný název v jiném než určeném adresáři.  **\_** Všimněte si, že pokud je název souboru před označené jako nedokončené zpětným lomítkem a žádné informace o cestě, jako je například \fname21, znamená to, že název je platný pro aktuální pracovní adresář.
 
-Pro **tmpnam –**, můžete uložit tento název generovaného souboru v *str*. Pokud *str* je **NULL**, pak **tmpnam –** ponechá výsledek v interní statické vyrovnávací paměti. Proto následných volání zničit tuto hodnotu. Název generované **tmpnam –** se skládá z názvu souboru generovaného programu a po prvním volání **tmpnam –**, příponu souboru pořadová čísla v základní 32 (.1 .vvu, když **TMP_MAX**  v STDIO. H je 32 767.)
+V případě **tmpnam**můžete tento vygenerovaný název souboru Uložit do *str*. Pokud má str **hodnotu null**, výsledek **tmpnam** ponechá interní statickou vyrovnávací paměť. Proto jakákoli následná volání zničí tuto hodnotu. Název generovaný pomocí **tmpnam** se skládá z programu generovaného programem a po prvním volání **tmpnam**je přípona souboru sekvenčních čísel v základní 32 (. 1 –. VVU, když **TMP_MAX** v stdio. H je 32 767).
 
-**_tempnam –** bude generovat jedinečný název souboru pro adresář zvolena podle následujících pravidel:
+**_tempnam** vygeneruje jedinečný název souboru pro adresář vybraný pomocí následujících pravidel:
 
-- Pokud proměnná prostředí TMP definované a je nastavena na platný název adresáře, vygeneruje se pro adresář zadaný TMP jedinečné názvy souborů.
+- Pokud je proměnná prostředí TMP definovaná a nastavená na platný název adresáře, vygenerují se jedinečné názvy souborů pro adresář určený pomocí TMP.
 
-- Pokud není definována proměnná prostředí TMP, nebo pokud je nastavena na název adresáře, který neexistuje, **_tempnam –** použije *dir* parametr cesty, pro který vygeneruje jedinečné názvy.
+- Pokud proměnná prostředí TMP není definovaná nebo pokud je nastavená na název adresáře, který neexistuje, **_tempnam** použije parametr *dir* jako cestu, pro kterou bude generovat jedinečné názvy.
 
-- Pokud není definována proměnná prostředí TMP nebo pokud je nastavena na název adresáře, který neexistuje a pokud *dir* je buď **NULL** nebo nastavte na název adresáře, který neexistuje, **_ tempnam –** aktuálního pracovního adresáře použije k vygenerování jedinečné názvy. V současné době Pokud oba TMP a *dir* zadání názvů adresářů, které neexistují, **_tempnam –** volání funkce se nezdaří.
+- Pokud proměnná prostředí TMP není definovaná nebo pokud je nastavená na název adresáře, který neexistuje, a pokud je adresář buď **null** , nebo nastavený na název adresáře, který neexistuje, **_tempnam** použije aktuální pracovní adresář pro genové zpracování. vyhodnotí jedinečné názvy. Pokud v současné době TMP i *dir* určují názvy adresářů, které neexistují, volání funkce **_tempnam** se nezdaří.
 
-Jméno vrácené funkcí **_tempnam –** bude zřetězení *předponu* a pořadové číslo, které se dá vytvořit jedinečný název souboru pro zadaný adresář. **_tempnam –** vygeneruje názvy souborů, které mají bez přípony. **_tempnam –** používá [malloc](malloc.md) k přidělení místa pro název souboru; program je zodpovědná za uvolnění místa na tento, pokud už je nepotřebujete.
+Název vrácený funkcí **_tempnam** bude zřetězením *předpony* a sekvenčního čísla, které se spojí a vytvoří jedinečný název souboru pro zadaný adresář. **_tempnam** vygeneruje názvy souborů bez přípony. **_tempnam** používá [](malloc.md) k přidělení prostoru pro název souboru. program zodpovídá za uvolnění tohoto místa, pokud už ho nepotřebujete.
 
-**_tempnam –** a **tmpnam –** automaticky popisovač vícebajtového znaku zakončeného argumenty řetězce podle potřeby, rozpozná vícebajtové znakové sekvence podle znakovou stránku OEM získané z operačního systému. **_wtempnam –** je verze širokého znaku **_tempnam –**; argumenty a vrácené hodnoty **_wtempnam –** jsou širokoznaké řetězce. **_wtempnam –** a **_tempnam –** chovají stejně, s výjimkou, že **_wtempnam –** nezpracovává vícebajtové znakové řetězce. **_wtmpnam –** je verze širokého znaku **tmpnam –**; argument a návratová hodnota funkce **_wtmpnam –** jsou širokoznaké řetězce. **_wtmpnam –** a **tmpnam –** chovají stejně, s výjimkou, že **_wtmpnam –** nezpracovává vícebajtové znakové řetězce.
+**_tempnam** a **tmpnam** automaticky zpracovávají řetězcové argumenty vícebajtových znaků podle potřeby a zjišťují sekvence vícebajtových znaků podle znakové stránky OEM získané z operačního systému. **_wtempnam** je **_tempnam**verze s velkým znakem; argumenty a návratová hodnota **_wtempnam** jsou řetězce s velkým počtem znaků. **_wtempnam** a **_tempnam** se chovají stejně, s výjimkou toho, že **_wtempnam** zpracovává řetězce vícebajtových znaků. **_wtmpnam** je **tmpnam**verze s velkým znakem; argument a návratová hodnota **_wtmpnam** jsou řetězce s velkým počtem znaků. **_wtmpnam** a **tmpnam** se chovají stejně, s výjimkou toho, že **_wtmpnam** zpracovává řetězce vícebajtových znaků.
 
-Pokud **_DEBUG** a **_CRTDBG_MAP_ALLOC** jsou definovány, **_tempnam –** a **_wtempnam –** jsou nahrazena voláními funkcí [_tempnam – _dbg a _wtempnam_dbg –](tempnam-dbg-wtempnam-dbg.md).
+Pokud jsou definovány **_DEBUG** a **_CRTDBG_MAP_ALLOC** , jsou **_tempnam** a **_wtempnam** nahrazeny voláními [_tempnam_dbg a _wtempnam_dbg](tempnam-dbg-wtempnam-dbg.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapování rutin obecného textu
 
-|Rutina TCHAR.H|_UNICODE a _MBCS nejsou definovány|_MBCS definováno|_UNICODE definováno|
+|Rutina TCHAR.H|_UNICODE & _MBCS nejsou definovány.|_MBCS definováno|_UNICODE definováno|
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_ttmpnam**|**tmpnam**|**tmpnam**|**_wtmpnam**|
 |**_ttempnam**|**_tempnam**|**_tempnam**|**_wtempnam**|
@@ -120,10 +120,10 @@ Pokud **_DEBUG** a **_CRTDBG_MAP_ALLOC** jsou definovány, **_tempnam –** a **
 |Rutina|Požadovaný hlavičkový soubor|
 |-------------|---------------------|
 |**_tempnam**|\<stdio.h>|
-|**_wtempnam**, **_wtmpnam**|\<stdio.h > nebo \<wchar.h >|
+|**_wtempnam**, **_wtmpnam**|\<stdio. h > nebo \<WCHAR. h >|
 |**tmpnam**|\<stdio.h>|
 
-Další informace o kompatibilitě, naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Příklad
 
@@ -198,7 +198,7 @@ c:\tmp\stq3 is safe to use as a temporary file.
 
 ## <a name="see-also"></a>Viz také:
 
-[Stream vstupně-výstupních operací](../../c-runtime-library/stream-i-o.md)<br/>
+[Vstup/výstup datového proudu](../../c-runtime-library/stream-i-o.md)<br/>
 [_getmbcp](getmbcp.md)<br/>
 [malloc](malloc.md)<br/>
 [_setmbcp](setmbcp.md)<br/>

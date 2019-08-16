@@ -6,24 +6,24 @@ helpviewer_keywords:
 - rich edit controls [MFC], character formatting in
 - CRichEditCtrl class [MFC], character formatting in
 ms.assetid: c80f4305-75ad-45f9-8d17-d83d0fe79be5
-ms.openlocfilehash: a7467f9cd6a14dc6dfc2c03b6eb35f71802454fb
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: 4ac996c1cb018a29137e37d9603016dc1c151c58
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64344288"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69508974"
 ---
 # <a name="character-formatting-in-rich-edit-controls"></a>Formátování znaků v ovládacích prvcích pro úpravy s formátováním
 
-Můžete členské funkce ovládacího prvku RichEdit ([CRichEditCtrl](../mfc/reference/cricheditctrl-class.md)) k formátování znaků a načte informace o formátování. Pro znaky můžete zadat písmo, velikost, barvu a efekty, jako je například tučné, kurzíva a chráněné.
+Můžete použít členské funkce ovládacího prvku Rich Edit ([CRichEditCtrl](../mfc/reference/cricheditctrl-class.md)) k formátování znaků a načtení informací o formátování. U znaků můžete zadat řez, velikost, barvu a efekty, jako je tučné písmo, kurzíva a ochrana.
 
-Můžete použít formátování s použitím [SetSelectionCharFormat](../mfc/reference/cricheditctrl-class.md#setselectioncharformat) a [SetWordCharFormat](../mfc/reference/cricheditctrl-class.md#setwordcharformat) členské funkce. Chcete-li zjistit aktuální formátování vybraného textu, použijte [GetSelectionCharFormat](../mfc/reference/cricheditctrl-class.md#getselectioncharformat) členskou funkci. [CHARFORMAT](/windows/desktop/api/richedit/ns-richedit-_charformat) struktura s tyto členské funkce slouží k určení znaku atributy. Mezi důležité členy **CHARFORMAT** je **dwMask**. V `SetSelectionCharFormat` a `SetWordCharFormat`, **dwMask** Určuje atributy, které znak se nastaví ve volání funkce. `GetSelectionCharFormat` sestavy atributy prvního znaku ve výběru; **dwMask** Určuje atributy, které jsou konzistentní v rámci výběr.
+Můžete použít formátování znaků pomocí členských funkcí [SetSelectionCharFormat](../mfc/reference/cricheditctrl-class.md#setselectioncharformat) a [SetWordCharFormat](../mfc/reference/cricheditctrl-class.md#setwordcharformat) . Chcete-li zjistit aktuální formátování znaků pro vybraný text, použijte členskou funkci [GetSelectionCharFormat](../mfc/reference/cricheditctrl-class.md#getselectioncharformat) . Struktura [Charformat](/windows/win32/api/richedit/ns-richedit-_charformat) se používá s těmito členskými funkcemi k určení atributů znaků. Jedním z důležitých členů **Charformat** je **dwMask**. V `SetSelectionCharFormat` a `SetWordCharFormat` **dwMask** určuje, které atributy znaků budou nastaveny tímto voláním funkce. `GetSelectionCharFormat`oznamuje atributy prvního znaku ve výběru; **dwMask** určuje atributy, které jsou konzistentní v rámci výběru.
 
-Můžete také získat a nastavit "výchozí formátování," tedy formátování použité pro všechny následně vložené znaky. Například pokud aplikace nastaví výchozí formátování mají být zobrazena tučně a uživatel potom zadá znak, tento znak je tučně. K získání a nastavení výchozí formátování znaků, použijte [GetDefaultCharFormat](../mfc/reference/cricheditctrl-class.md#getdefaultcharformat) a [SetDefaultCharFormat](../mfc/reference/cricheditctrl-class.md#setdefaultcharformat) členské funkce.
+Můžete také získat a nastavit výchozí formátování znaků, což je formátování použité pro jakékoli následně vložené znaky. Například pokud aplikace nastaví výchozí formátování znaků na tučné a uživatel pak zadá znak, je tento znak tučný. Chcete-li získat a nastavit výchozí formátování znaků, použijte členské funkce [GetDefaultCharFormat](../mfc/reference/cricheditctrl-class.md#getdefaultcharformat) a [SetDefaultCharFormat](../mfc/reference/cricheditctrl-class.md#setdefaultcharformat) .
 
-Atribut "chráněné" znak nedojde ke změně vzhledu textu. Pokud uživatel se pokusí upravit chráněný text, odešle ovládacího prvku nadřazenému oknu **EN_PROTECTED** zpráva s oznámením, což nadřazené okno Povolit nebo zakázat změny. Pokud chcete dostávat tato oznámení, musíte povolit ho pomocí [seteventmask –](../mfc/reference/cricheditctrl-class.md#seteventmask) členskou funkci. Další informace o masky události najdete v tématu [oznámení z ovládacího prvku Rich upravit](../mfc/notifications-from-a-rich-edit-control.md)dále v tomto tématu.
+Atribut "protected" nemění vzhled textu. Pokud se uživatel pokusí upravit chráněný text, ovládací prvek RichEdit pošle svému nadřazenému oknu zprávu **EN_PROTECTED** s oznámením, které umožní nadřazenému oknu povolit nebo zakázat změnu. Chcete-li obdržet tuto zprávu oznámení, je nutné ji povolit pomocí členské funkce [SetEventMask](../mfc/reference/cricheditctrl-class.md#seteventmask) . Další informace o masce události najdete v části [oznámení v ovládacím prvku pro úpravy](../mfc/notifications-from-a-rich-edit-control.md)dále v tomto tématu.
 
-Barva popředí je znak atributu, ale je barva pozadí vlastnost ovládacího prvku RichEdit. Chcete-li nastavit barvu pozadí, použijte [SetBackgroundColor](../mfc/reference/cricheditctrl-class.md#setbackgroundcolor) členskou funkci.
+Barva popředí je znakový atribut, ale barva pozadí je vlastnost ovládacího prvku Rich Edit. Chcete-li nastavit barvu pozadí, použijte členskou funkci [SetBackgroundColor](../mfc/reference/cricheditctrl-class.md#setbackgroundcolor) .
 
 ## <a name="see-also"></a>Viz také:
 

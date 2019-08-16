@@ -6,12 +6,12 @@ f1_keywords:
 - exception/std::terminate_handler
 - exception/std::unexpected_handler
 ms.assetid: 2a338480-35e2-46f7-b223-52d4e84a5768
-ms.openlocfilehash: 58fc19b7cdf9656a4c2978a43a5c77092cc6716d
-ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
+ms.openlocfilehash: aba17b7bf052b6974bf849f60ff895b8e84a1092
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68916998"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69501963"
 ---
 # <a name="ltexceptiongt-typedefs"></a>&lt;výjimka&gt; definice typedef
 
@@ -27,7 +27,7 @@ typedef unspecified exception_ptr;
 
 Neurčená interní třída, která se používá k implementaci `exception_ptr` typu.
 
-`exception_ptr` Použijte objekt pro odkazování na aktuální výjimku nebo instanci uživatelsky definované výjimky. V implementaci společnosti Microsoft je výjimka představována strukturou [EXCEPTION_RECORD](/windows/desktop/api/winnt/ns-winnt-exception_record) . Každý `exception_ptr` objekt obsahuje referenční pole výjimky, které odkazuje na kopii `EXCEPTION_RECORD` struktury, která představuje výjimku.
+`exception_ptr` Použijte objekt pro odkazování na aktuální výjimku nebo instanci uživatelsky definované výjimky. V implementaci společnosti Microsoft je výjimka představována strukturou [EXCEPTION_RECORD](/windows/win32/api/winnt/ns-winnt-exception_record) . Každý `exception_ptr` objekt obsahuje referenční pole výjimky, které odkazuje na kopii `EXCEPTION_RECORD` struktury, která představuje výjimku.
 
 Pokud deklarujete `exception_ptr` proměnnou, proměnná není přidružena k žádné výjimce. Tedy referenční pole výjimky je NULL. Takový objekt se nazývá exception_ptr s *hodnotou null.* `exception_ptr`
 

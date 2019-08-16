@@ -22,19 +22,19 @@ helpviewer_keywords:
 - cwait function
 - _cwait function
 ms.assetid: d9b596b5-45f4-4e03-9896-3f383cb922b8
-ms.openlocfilehash: f7a49497ac71ec15261e1215bd2bbed2e49f42ab
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f356afc91f794753f12b5b673c609ef03fbaa5ec
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62288781"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69499979"
 ---
-# <a name="cwait"></a>_cwait
+# <a name="_cwait"></a>_cwait
 
-Počká, až do doby ukončení jiným procesem.
+Počká, dokud nebude ukončen jiný proces.
 
 > [!IMPORTANT]
-> Toto rozhraní API nelze použít v aplikacích, které jsou spouštěny v modulu Windows Runtime. Další informace najdete v tématu [CRT funkce nejsou podporovány v aplikacích pro univerzální platformu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> Toto rozhraní API nelze použít v aplikacích, které jsou spouštěny v prostředí Windows Runtime. Další informace najdete v tématu [funkce CRT nejsou v aplikacích Univerzální platforma Windows podporovány](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -49,42 +49,42 @@ intptr_t _cwait(
 ### <a name="parameters"></a>Parametry
 
 *termstat*<br/>
-Ukazatel do vyrovnávací paměti, kam se má uložit výsledek kód určený proces, nebo **NULL**.
+Ukazatel na vyrovnávací paměť, kde bude uložen kód výsledku určeného procesu, nebo **hodnota null**.
 
 *procHandle*<br/>
-Popisovač čekání na proces (to znamená, že proces, který má ukončit před **_cwait** může vrátit).
+Popisovač procesu, na kterém se má čekat (to znamená, že proces, který musí skončit před **_cwait** může vracet).
 
-*Akce*<br/>
-HODNOTA NULL: Ignorovat podle aplikací operačního systému Windows. u ostatních aplikací: kód akce k provedení na *procHandle*.
+*kroky*<br/>
+HODNOTA NULL: Ignorují se v aplikacích operačního systému Windows. pro ostatní aplikace: kód akce, který se má provést na *procHandle*.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Pokud zadaný proces úspěšně dokončil, vrátí popisovač určený proces a nastaví *termstat* kódu výsledek vrácený rutinou určeného procesu. V opačném případě vrátí hodnotu -1 a nastaví **errno** následujícím způsobem.
+Po úspěšném dokončení zadaného procesu vrátí popisovač zadaného procesu a nastaví *termstat* na kód výsledku vrácený zadaným procesem. V opačném případě vrátí hodnotu-1 a nastaví **errno** následujícím způsobem.
 
-|Hodnota|Popis|
+|Value|Popis|
 |-----------|-----------------|
-|**ECHILD**|Neexistuje žádný zadaný proces *procHandle* je neplatný nebo volání [metody GetExitCodeProcess](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-getexitcodeprocess) nebo [WaitForSingleObject](/windows/desktop/api/synchapi/nf-synchapi-waitforsingleobject) rozhraní API se nezdařilo.|
-|**EINVAL**|*Akce* je neplatný.|
+|**ECHILD**|Neexistuje žádný zadaný proces, *procHandle* je neplatný nebo volání rozhraní API [GetExitCodeProcess](/windows/win32/api/processthreadsapi/nf-processthreadsapi-getexitcodeprocess) nebo [WaitForSingleObject](/windows/win32/api/synchapi/nf-synchapi-waitforsingleobject) selhalo.|
+|**EINVAL**|*Akce* je neplatná.|
 
-Další informace o těchto a dalších návratových kódech naleznete v tématu [errno _doserrno, _sys_errlist a _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+Další informace o těchto a dalších návratových kódech naleznete v tématu [errno, _doserrno, _sys_errlist a _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Poznámky
 
-**_Cwait** funkce čeká na ukončení ID procesu určeného procesu, která je poskytována *procHandle*. Hodnota *procHandle* , který je předán **_cwait** by měla být hodnota, který je vrácen voláním [_spawn](../../c-runtime-library/spawn-wspawn-functions.md) funkci, kterou vytvořili určeného procesu. Pokud ID procesu ukončí před **_cwait** se nazývá **_cwait** vrátí hodnotu okamžitě. **_cwait** můžete využívat čekání na další známé proces pro který nějaký proces platný popisovač (*procHandle*) existuje.
+Funkce **_cwait** čeká na ukončení ID procesu zadaného procesu, který poskytuje *procHandle*. Hodnota *procHandle* , která je předána **_cwait** , by měla být hodnota, která je vrácena voláním funkce [_spawn](../../c-runtime-library/spawn-wspawn-functions.md) , která vytvořila zadaný proces. Pokud ID procesu končí před voláním **_cwait** , **_cwait** se vrátí hned. **_cwait** může použít jakýkoli proces čekání na jiný známý proces, pro který existuje platný popisovač (*procHandle*).
 
-*termstat* bodů do vyrovnávací paměti, kam se budou ukládat návratový kód určeného procesu. Hodnota *termstat* označuje, zda určený proces byl korektně ukončen voláním Windows [exitprocess –](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-exitprocess) rozhraní API. **Exitprocess –** je voláno interně volá zadaný proces **ukončit** nebo **_exit**, vrátí z **hlavní**, nebo dosáhne konce **hlavní** . Další informace o hodnotu, která je předává zpátky pomocí *termstat*, naleznete v tématu [metody GetExitCodeProcess](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-getexitcodeprocess). Pokud **_cwait** je volána za použití **NULL** hodnota *termstat*, návratový kód určený proces není uložený.
+*termstat* odkazuje na vyrovnávací paměť, kde bude uložen návratový kód zadaného procesu. Hodnota *termstat* označuje, zda byl zadaný proces normálním způsobem ukončen voláním rozhraní API systému Windows [ExitProcess –](/windows/win32/api/processthreadsapi/nf-processthreadsapi-exitprocess) . **ExitProcess –** se nazývá interně, pokud zadaný proces volá **Exit** nebo **_exit**, vrátí hodnotu z **Main**nebo dosáhne konce **Main**. Další informace o hodnotě, která se předává zpět prostřednictvím *termstat*, najdete v tématu [GetExitCodeProcess](/windows/win32/api/processthreadsapi/nf-processthreadsapi-getexitcodeprocess). Pokud je **_cwait** volána pomocí hodnoty **null** pro *termstat*, návratový kód zadaného procesu není uložen.
 
-*Akce* parametr je ignorován operačním systémem Windows, protože nejsou implementované vztahů nadřazenosti a podřízenosti v těchto prostředích.
+Operační systém Windows ignoruje parametr *Action* , protože relace nadřazený-podřízený nejsou v těchto prostředích implementovány.
 
-Není-li *procHandle* -1 nebo -2 (zpracuje aktuální proces nebo vlákno), popisovač se zavře. Proto se v takovém případě nepoužívejte Vrácený popisovač.
+Pokud *procHandle* je-1 nebo-2 (zpracovává aktuální proces nebo vlákno), popisovač bude zavřen. Proto v takovém případě nepoužívejte vrácený popisovač.
 
 ## <a name="requirements"></a>Požadavky
 
 |Rutina|Požadovaný hlavičkový soubor|Volitelné záhlaví|
 |-------------|---------------------|---------------------|
-|**_cwait**|\<process.h>|\<errno.h>|
+|**_cwait**|\<Process. h >|\<errno.h>|
 
-Další informace o kompatibilitě naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Příklad
 

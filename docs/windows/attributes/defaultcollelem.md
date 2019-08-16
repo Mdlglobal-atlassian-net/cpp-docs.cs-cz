@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - defaultcollelem attribute
 ms.assetid: 3dbbd293-8b83-4f70-a36b-64cc1d0b6713
-ms.openlocfilehash: be4ea7097bd811444fca050525338931867998d0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c8848562c1470198d3f2a1b6f285510bcbb43d7c
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62148052"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69501653"
 ---
 # <a name="defaultcollelem"></a>defaultcollelem
 
-Používá pro optimalizaci kódu jazyka Visual Basic.
+Používá se pro Visual Basic optimalizaci kódu.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -25,11 +25,11 @@ Používá pro optimalizaci kódu jazyka Visual Basic.
 
 ## <a name="remarks"></a>Poznámky
 
-**Defaultcollelem** C++ atribut má stejné funkce jako [defaultcollelem](/windows/desktop/Midl/defaultcollelem) atribut MIDL.
+Atribut **defaultcollelem** C++ má stejné funkce jako atribut [defaultcollelem](/windows/win32/Midl/defaultcollelem) MIDL.
 
 ## <a name="example"></a>Příklad
 
-Následující kód ukazuje metodu rozhraní pomocí **defaultcollelem** atribut:
+Následující kód ukazuje metodu rozhraní pomocí atributu **defaultcollelem** :
 
 ```cpp
 // cpp_attr_ref_defaultcollelem.cpp
@@ -46,16 +46,16 @@ __interface IMyForm
 
 ## <a name="requirements"></a>Požadavky
 
-### <a name="attribute-context"></a>Atribut kontextu
+### <a name="attribute-context"></a>Kontext atributu
 
 |||
 |-|-|
 |**Platí pro**|Metoda rozhraní|
-|**Opakovatelné**|Ne|
-|**Vyžadované atributy**|Žádné|
+|**REPEATABLE**|Ne|
+|**Požadované atributy**|Žádné|
 |**Neplatné atributy**|Žádné|
 
-Další informace najdete v tématu [kontexty atributů](cpp-attributes-com-net.md#contexts).
+Další informace naleznete v tématu [kontexty atributů](cpp-attributes-com-net.md#contexts).
 
 ## <a name="see-also"></a>Viz také:
 

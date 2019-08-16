@@ -4,41 +4,41 @@ ms.date: 05/09/2019
 helpviewer_keywords:
 - OLE DB, application design considerations
 ms.assetid: 8caa7d99-d2bb-42c9-8884-74f228bb6ecc
-ms.openlocfilehash: ef2837ea80c61f074cf567ee1fe61fa2cfa0ae73
-ms.sourcegitcommit: 00e26915924869cd7eb3c971a7d0604388abd316
+ms.openlocfilehash: b481d9948d3055247bd284ca794a0fa65905e21b
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/10/2019
-ms.locfileid: "65525309"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69501347"
 ---
 # <a name="ole-db-architectural-design-issues"></a>Problémy s návrhem technologie OLE DB
 
 > [!NOTE]
-> Průvodce spotřebitele ATL OLE DB není k dispozici v aplikaci Visual Studio 2019 a novějším. Funkce můžete přesto přidat ručně. Další informace najdete v tématu [vytvoření příjemce bez použití průvodce](creating-a-consumer-without-using-a-wizard.md).
+> Průvodce příjemcem OLE DB ATL není v aplikaci Visual Studio 2019 a novějších k dispozici. Tuto funkci můžete přesto přidat ručně. Další informace najdete v tématu [Vytvoření příjemce bez použití Průvodce](creating-a-consumer-without-using-a-wizard.md).
 
-Před zahájením aplikaci OLE DB, zvažte následující otázky:
+Před spuštěním aplikace OLE DB je třeba vzít v úvahu následující problémy:
 
-## <a name="what-programming-implementation-will-you-use-to-write-your-ole-db-application"></a>Jaké programovací implementace použijete k zápisu aplikaci OLE DB?
+## <a name="what-programming-implementation-will-you-use-to-write-your-ole-db-application"></a>Jakou implementaci programování použijete k zápisu aplikace OLE DB?
 
-Společnost Microsoft nabízí několik knihoven k provedení této úlohy: knihovny šablon technologie OLE DB, atributy technologie OLE DB a raw rozhraní OLE DB v SDK technologie OLE DB. K dispozici je také průvodců, snadněji napsat program. Tato implementace jsou popsány v [šablony technologie OLE DB, atributy a jiné implementace](../../data/oledb/ole-db-templates-attributes-and-other-implementations.md).
+Společnost Microsoft nabízí několik knihoven pro splnění této úlohy: OLE DB knihovny šablon, OLE DB atributů a nezpracované OLE DB rozhraní v sadě OLE DB SDK. K dispozici jsou také průvodci, které vám pomůžou napsat program. Tyto implementace jsou popsány v tématu [OLE DB šablony, atributy a další implementace](../../data/oledb/ole-db-templates-attributes-and-other-implementations.md).
 
-## <a name="do-you-need-to-write-your-own-provider"></a>Je třeba napsat vlastního zprostředkovatele?
+## <a name="do-you-need-to-write-your-own-provider"></a>Potřebujete napsat vlastního poskytovatele?
 
-Většina vývojářů není potřeba psát vlastní poskytovatele. Společnost Microsoft poskytuje několik poskytovatelů. Při vytváření datového připojení (například když přidáte příjemce do vašeho projektu pomocí **průvodce příjemcem ATL OLE DB**), **vlastnosti propojení dat** dialogové okno zobrazí seznam všech dostupných zprostředkovatelů registrované ve vašem systému. Pokud jednoho z těchto poskytovatelů je vhodný pro vlastní datové úložiště a data aplikace přístup, je nejjednodušší krokem je použít jednu z následujících. Nicméně pokud vaše úložiště dat neodpovídá velikosti jedné z těchto kategorií, budete muset vytvořit vlastního zprostředkovatele. Informace o vytváření poskytovatelů najdete v tématu [šablony zprostředkovatele technologie OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md).
+Většina vývojářů nepotřebuje psát vlastního poskytovatele. Společnost Microsoft poskytuje několik poskytovatelů. Pokaždé, když vytvoříte datové připojení (například když do projektu přidáte příjemce pomocí **průvodce OLE DB příjemcem**), zobrazí se dialogové okno **Vlastnosti datového propojení** všech dostupných zprostředkovatelů registrovaných ve vašem systému. Pokud je jedno z poskytovatelů vhodné pro vaše vlastní datové úložiště a aplikace pro přístup k datům, nejjednodušší je použít jeden z nich. Pokud však vaše úložiště dat nesplňuje některé z těchto kategorií, je nutné vytvořit vlastního poskytovatele. Informace o vytváření zprostředkovatelů najdete v tématu [šablony poskytovatele OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md).
 
-## <a name="what-level-of-support-do-you-need-for-your-consumer"></a>Jaké úroveň podpory je potřeba pro vaše?
+## <a name="what-level-of-support-do-you-need-for-your-consumer"></a>Jakou úroveň podpory potřebujete pro vašeho příjemce?
 
-Některé příjemce může být basic. zatímco jiné můžou být složité. Funkce pro objekty OLE DB je zadána vlastností. Při použití **průvodce příjemcem ATL OLE DB** vytvořte příjemce nebo **Průvodce zprostředkovatelem databáze** k vytvoření poskytovatele, nastaví odpovídající objekt vlastnosti vám umožní poskytovat standardní sadu funkce. Ale pokud příjemce nebo zprostředkovatele třídy generované v Průvodci nepodporují všechno, co budete potřebovat udělat, musíte odkazovat na rozhraní pro tyto třídy v [knihovny šablon technologie OLE DB](../../data/oledb/ole-db-templates.md). Tato rozhraní zabalit nezpracovaná rozhraní technologie OLE DB poskytují dodatečné implementace pro usnadnění jejich používání za vás.
+Někteří příjemci můžou být základní; jiné můžou být složité. Funkce objektů OLE DB je určena vlastnostmi. Když použijete **průvodce OLE DB příjemce ATL** k vytvoření příjemce nebo **Průvodce poskytovatelem databáze** pro vytvoření poskytovatele, nastaví příslušné vlastnosti objektu, které vám poskytnou standardní sadu funkcí. Nicméně pokud třídy příjemce nebo poskytovatele generované průvodcem nepodporují všechno, co je potřeba udělat, musíte odkazovat na rozhraní pro tyto třídy v [knihovně šablon OLE DB](../../data/oledb/ole-db-templates.md). Tato rozhraní zabalí nezpracovaná OLE DB rozhraní, která poskytují dodatečnou implementaci, aby je bylo možné snadněji používat.
 
-Například pokud chcete aktualizovat data v sadě řádků, ale zapomněli zadat při vytváření příjemce pomocí průvodce, můžete zadat funkce po jejich výskytu tak, že nastavíte `DBPROP_IRowsetChange` a `DBPROP_UPDATABILITY` vlastnosti v objektu command. Poté, když se v sadě řádků, má `IRowsetChange` rozhraní.
+Například pokud chcete aktualizovat data v sadě řádků, ale zapomněli jste tuto možnost zadat při vytváření příjemce pomocí průvodce, můžete určit funkčnost za faktem nastavením `DBPROP_IRowsetChange` vlastností a `DBPROP_UPDATABILITY` v objektu Command. Poté, když je vytvořena sada řádků, má `IRowsetChange` rozhraní.
 
-## <a name="do-you-have-older-code-using-another-data-access-technology-ado-odbc-or-dao"></a>Máte starší kód pomocí jiné technologie přístup data (ADO, ODBC a DAO)?
+## <a name="do-you-have-older-code-using-another-data-access-technology-ado-odbc-or-dao"></a>Máte starší kód s použitím jiné technologie pro přístup k datům (ADO, ODBC nebo DAO)?
 
-Je to možné kombinace technologií (jako jsou komponenty technologie OLE DB pomocí komponenty ADO a migrace kód rozhraní ODBC do technologie OLE DB), zahrnující všechny situace je nad rámec dokumentace k Visual C++. Řada článků pokrývajících různé scénáře jsou však k dispozici na na následujících webech Microsoftu:
+S ohledem na možné kombinace technologií (například používání komponent ADO s komponentami OLE DB a migrace kódu ODBC do OLE DB) se pokrývají všechny situace nad rámec dokumentace k vizuálu C++ . Mnoho článků týkajících se různých scénářů je však k dispozici na následujících webech společnosti Microsoft:
 
-- [Nápovědu a podporu Microsoftu](https://support.microsoft.com/)
+- [Pomoc a podpora společnosti Microsoft](https://support.microsoft.com/)
 
-- [Přehled technické články k přístupu k datům společnosti Microsoft](https://msdn.microsoft.com/library/ms810811.aspx)
+- [Přehled technických článků o přístupu k datům společnosti Microsoft](/previous-versions/ms810811(v=msdn.10))
 
 ## <a name="see-also"></a>Viz také:
 

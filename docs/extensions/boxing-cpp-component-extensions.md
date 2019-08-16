@@ -1,28 +1,28 @@
 ---
-title: Zabalení (C++vyhodnocovací a C++/CX)
+title: ZabaleníC++(/CLI C++a/CX)
 ms.date: 10/12/2018
 ms.topic: reference
 helpviewer_keywords:
 - boxing, C++
 ms.assetid: b5fd2c98-c578-4f83-8257-6dd663478665
-ms.openlocfilehash: 0b41cacba8c279447e1e944cc3214ca1ba607665
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6221087b60e76e3a2648366c4efebc4105f0ab58
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62346068"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69509872"
 ---
-# <a name="boxing--ccli-and-ccx"></a>Zabalení (C++vyhodnocovací a C++/CX)
+# <a name="boxing--ccli-and-ccx"></a>ZabaleníC++(/CLI C++a/CX)
 
-Převod typů hodnot na objekty se nazývá *zabalení*, a převod objektů pro typy hodnot se nazývá *rozbalení*.
+Převod typů hodnot na objekty se nazývá zabalenía převod objektů na typy hodnot se nazývá rozbalení.
 
 ## <a name="all-runtimes"></a>Všechny moduly runtime
 
-(Neexistují žádné poznámky o této funkci jazyka, které platí pro všechny moduly runtime.)
+(Žádné poznámky k této funkci jazyka se nevztahují na všechny moduly runtime.)
 
 ## <a name="windows-runtime"></a>prostředí Windows Runtime
 
-C++/CX podporuje syntaxi ve zkráceném tvaru pro typy hodnot zabalení a rozbalení typy odkazů. Typ hodnoty je zabalená, když je přiřazen k proměnné typu `Object`. `Object` Proměnná je instance nezabalená, když je přiřazen do proměnné typu hodnoty a nezabalený typ. je uveden v závorkách, což znamená, když je objektová proměnná přetypována na typ hodnoty.
+C++/CX podporuje zkrácený Syntax pro typy hodnot zabalení a rozbalení typů odkazů. Typ hodnoty je zabalený, když je přiřazen proměnné typu `Object`. `Object` Proměnná je nezabalena, je-li přiřazena proměnné typu hodnoty a nezabalený typ je uveden v závorkách; to znamená, když je proměnná objektu převedena na typ hodnoty.
 
 ```cpp
   Platform::Object^
@@ -32,13 +32,13 @@ value_variable = (value_type) object_variable;
 
 ### <a name="requirements"></a>Požadavky
 
-– Možnost kompilátoru: `/ZW`
+Možnost kompilátoru:`/ZW`
 
 ### <a name="examples"></a>Příklady
 
-Následující kód například polí a unboxes `DateTime` hodnotu. Nejprve příklad získá `DateTime` hodnotu, která představuje aktuální datum a čas a přiřadí ji k `DateTime` proměnné. Pak bude `DateTime` je zabalená, tak, že ji přiřadíte `Object` proměnné. Nakonec je nejprve vybalen zabalené hodnoty tak, že ji přiřadíte do jiného `DateTime` proměnné.
+Následující příklad kódu a odkrabici `DateTime` hodnotu. Nejprve příklad získá `DateTime` hodnotu, která představuje aktuální datum a čas a přiřadí ji `DateTime` k proměnné. Pak je zabalené přiřazením `Object` k proměnné. `DateTime` Nakonec je zabalená hodnota nezabalena přiřazením k jiné `DateTime` proměnné.
 
-Příklad testování, vytvořit `BlankApplication` projektu, nahraďte `BlankPage::OnNavigatedTo()` metoda a pak zadejte zarážky za uzavírací závorku a přiřazení k proměnné `str1`. Pokud v příkladu dosáhne uzavírací závorku, podívejte se `str1`.
+Chcete-li otestovat příklad, vytvořte `BlankApplication` projekt, `BlankPage::OnNavigatedTo()` nahraďte metodu a pak zadejte zarážky na pravé závorce a přiřazení k proměnné `str1`. Když příklad dosáhne uzavírací závorky, Projděte `str1`si.
 
 ```cpp
 void BlankPage::OnNavigatedTo(NavigationEventArgs^ e)
@@ -72,13 +72,13 @@ void BlankPage::OnNavigatedTo(NavigationEventArgs^ e)
 }
 ```
 
-Další informace najdete v tématu [zabalení (C++/CX)](https://msdn.microsoft.com/library/windows/apps/hh969554.aspx).
+Další informace naleznete v tématu [zabaleníC++(/CX)](../cppcx/boxing-c-cx.md).
 
 ## <a name="common-language-runtime"></a>CLR (Common Language Runtime)
 
-Typy do hodnot polí kompilátoru <xref:System.Object>. To je možné z důvodu převodu definované kompilátorem převést hodnotu typů do <xref:System.Object>.
+Hodnoty polí kompilátoru do <xref:System.Object>. To je možné z důvodu převodu typů hodnot na <xref:System.Object>typ, který je definován kompilátorem.
 
-Zabalení a rozbalení povolit typy hodnot jsou považovány za objekty. Typy hodnot včetně struktury typů a vestavěné typy, například int, může být převeden do a z typu <xref:System.Object>.
+Zabalení a rozbalení umožňuje považovat typy hodnot za objekty. Typy hodnot, včetně typů struktury a předdefinovaných typů, jako je například int, lze převést na typ <xref:System.Object>a z něj.
 
 Další informace naleznete v tématu:
 
@@ -92,11 +92,11 @@ Další informace naleznete v tématu:
 
 ### <a name="requirements"></a>Požadavky
 
-– Možnost kompilátoru: `/clr`
+Možnost kompilátoru:`/clr`
 
 ### <a name="examples"></a>Příklady
 
-Následující ukázka ukazuje, jak implicitní zabalení funguje.
+Následující příklad ukazuje, jak funguje implicitní zabalení.
 
 ```cpp
 // vcmcppv2_explicit_boxing2.cpp

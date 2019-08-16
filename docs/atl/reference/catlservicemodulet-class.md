@@ -35,12 +35,12 @@ f1_keywords:
 helpviewer_keywords:
 - CAtlServiceModuleT class
 ms.assetid: 8fc753ce-4a50-402b-9b4a-0a4ce5dd496c
-ms.openlocfilehash: 095d909fefe0053b742368f260cf61937c2f5426
-ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
+ms.openlocfilehash: 2854d0902700b268383eca094bed35843ea73272
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68915873"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69497741"
 ---
 # <a name="catlservicemodulet-class"></a>CAtlServiceModuleT – třída
 
@@ -244,7 +244,7 @@ Volitelné dodatečné řetězce, které mají být zapsány do protokolu událo
 
 ### <a name="remarks"></a>Poznámky
 
-Tato metoda zapisuje podrobnosti do protokolu událostí pomocí funkce [ReportEvent](/windows/desktop/api/winbase/nf-winbase-reporteventa). Pokud žádná služba není spuštěná, pošle se řetězec do konzoly.
+Tato metoda zapisuje podrobnosti do protokolu událostí pomocí funkce [ReportEvent](/windows/win32/api/winbase/nf-winbase-reporteventw). Pokud žádná služba není spuštěná, pošle se řetězec do konzoly.
 
 ##  <a name="m_bservice"></a>CAtlServiceModuleT:: m_bService
 
@@ -280,7 +280,7 @@ SERVICE_STATUS_HANDLE m_hServiceStatus;
 
 ### <a name="remarks"></a>Poznámky
 
-Struktura [SERVICE_STATUS](/windows/desktop/api/winsvc/ns-winsvc-service_status) obsahuje informace o službě.
+Struktura [SERVICE_STATUS](/windows/win32/api/winsvc/ns-winsvc-service_status) obsahuje informace o službě.
 
 ##  <a name="m_status"></a>  CAtlServiceModuleT::m_status
 
@@ -292,7 +292,7 @@ SERVICE_STATUS m_status;
 
 ### <a name="remarks"></a>Poznámky
 
-Struktura [SERVICE_STATUS](/windows/desktop/api/winsvc/ns-winsvc-service_status) obsahuje informace o službě.
+Struktura [SERVICE_STATUS](/windows/win32/api/winsvc/ns-winsvc-service_status) obsahuje informace o službě.
 
 ##  <a name="m_szservicename"></a>  CAtlServiceModuleT::m_szServiceName
 
@@ -432,7 +432,7 @@ HRESULT Run(int nShowCmd = SW_HIDE) throw();
 ### <a name="parameters"></a>Parametry
 
 *nShowCmd*<br/>
-Určuje způsob zobrazení okna. Tento parametr může být jednou z hodnot popsaných v části [WinMain](/windows/desktop/api/winbase/nf-winbase-winmain) . Výchozí hodnota je SW_HIDE.
+Určuje způsob zobrazení okna. Tento parametr může být jednou z hodnot popsaných v části [WinMain](/windows/win32/api/winbase/nf-winbase-winmain) . Výchozí hodnota je SW_HIDE.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -475,7 +475,7 @@ void SetServiceStatus(DWORD dwState) throw();
 ### <a name="parameters"></a>Parametry
 
 *dwState*<br/>
-Nový stav. Možné hodnoty najdete v tématu [SetServiceStatus](/windows/desktop/api/winsvc/nf-winsvc-setservicestatus) .
+Nový stav. Možné hodnoty najdete v tématu [SetServiceStatus](/windows/win32/api/winsvc/nf-winsvc-setservicestatus) .
 
 ### <a name="remarks"></a>Poznámky
 
@@ -492,7 +492,7 @@ HRESULT Start(int nShowCmd) throw();
 ### <a name="parameters"></a>Parametry
 
 *nShowCmd*<br/>
-Určuje způsob zobrazení okna. Tento parametr může být jednou z hodnot popsaných v části [WinMain](/windows/desktop/api/winbase/nf-winbase-winmain) .
+Určuje způsob zobrazení okna. Tento parametr může být jednou z hodnot popsaných v části [WinMain](/windows/win32/api/winbase/nf-winbase-winmain) .
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -553,7 +553,7 @@ int WinMain(int nShowCmd) throw();
 ### <a name="parameters"></a>Parametry
 
 *nShowCmd*<br/>
-Určuje způsob zobrazení okna. Tento parametr může být jednou z hodnot popsaných v části [WinMain](/windows/desktop/api/winbase/nf-winbase-winmain) .
+Určuje způsob zobrazení okna. Tento parametr může být jednou z hodnot popsaných v části [WinMain](/windows/win32/api/winbase/nf-winbase-winmain) .
 
 ### <a name="return-value"></a>Návratová hodnota
 

@@ -21,12 +21,12 @@ f1_keywords:
 helpviewer_keywords:
 - CSid class
 ms.assetid: be58b7ca-5958-49c3-a833-ca341aaaf753
-ms.openlocfilehash: fb496e3bd58d0fe134c37b240eb2698302c6aa64
-ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
+ms.openlocfilehash: ed19ed3cdeb77612e20d826480ab73b9361366e9
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68915701"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69496454"
 ---
 # <a name="csid-class"></a>CSid – třída
 
@@ -97,7 +97,7 @@ class CSid
 
 Aplikace by neměly měnit `SID` strukturu přímo, ale místo toho používají metody poskytované v této obálkové třídě. Viz také [AtlGetOwnerSid](security-global-functions.md#atlgetownersid), [AtlSetGroupSid](security-global-functions.md#atlsetgroupsid), [AtlGetGroupSid](security-global-functions.md#atlgetgroupsid)a [AtlSetOwnerSid](security-global-functions.md#atlsetownersid).
 
-Úvod do modelu řízení přístupu v systému Windows naleznete v tématu [Access Control](/windows/desktop/SecAuthZ/access-control) v Windows SDK.
+Úvod do modelu řízení přístupu v systému Windows naleznete v tématu [Access Control](/windows/win32/SecAuthZ/access-control) v Windows SDK.
 
 ## <a name="requirements"></a>Požadavky
 
@@ -117,7 +117,7 @@ Vrátí LPCTSTR ukazující na název účtu.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato metoda se pokusí najít název zadaného `SID` (identifikátoru zabezpečení). Úplné podrobnosti najdete v tématu [funkce LookupAccountSid](/windows/desktop/api/winbase/nf-winbase-lookupaccountsida).
+Tato metoda se pokusí najít název zadaného `SID` (identifikátoru zabezpečení). Úplné podrobnosti najdete v tématu [funkce LookupAccountSid](/windows/win32/api/winbase/nf-winbase-lookupaccountsidw).
 
 Pokud není `SID` možné najít žádný název účtu, `AccountName` vrátí prázdný řetězec. K tomu může dojít, pokud časový limit sítě brání této metodě v hledání názvu. K tomu dochází taky u identifikátorů zabezpečení, které nemají odpovídající název účtu, `SID` jako je například, který identifikuje přihlašovací relaci.
 
@@ -208,7 +208,7 @@ LPCTSTR Domain() const throw(...);
 
 ### <a name="remarks"></a>Poznámky
 
-Tato metoda se pokusí najít název zadaného `SID` (identifikátoru zabezpečení). Úplné podrobnosti najdete v tématu [funkce LookupAccountSid](/windows/desktop/api/winbase/nf-winbase-lookupaccountsida).
+Tato metoda se pokusí najít název zadaného `SID` (identifikátoru zabezpečení). Úplné podrobnosti najdete v tématu [funkce LookupAccountSid](/windows/win32/api/winbase/nf-winbase-lookupaccountsidw).
 
 Pokud není `SID` možné najít žádný název účtu, `Domain` vrátí doménu jako prázdný řetězec. K tomu může dojít, pokud časový limit sítě brání této metodě v hledání názvu. K tomu dochází taky u identifikátorů zabezpečení, které nemají odpovídající název účtu, `SID` jako je například, který identifikuje přihlašovací relaci.
 
@@ -232,7 +232,7 @@ Vrátí hodnotu TRUE při úspěchu, FALSE při selhání.
 
 ### <a name="remarks"></a>Poznámky
 
-Další podrobnosti najdete v tématu [EqualPrefixSid](/windows/desktop/api/securitybaseapi/nf-securitybaseapi-equalprefixsid) v Windows SDK.
+Další podrobnosti najdete v tématu [EqualPrefixSid](/windows/win32/api/securitybaseapi/nf-securitybaseapi-equalprefixsid) v Windows SDK.
 
 ##  <a name="getlength"></a>CSid:: GetLength
 
@@ -360,7 +360,7 @@ Název účtu.
 Název systému. Tento řetězec může být název vzdáleného počítače. Pokud je tento řetězec NULL, použije se místo toho místní systém.
 
 *pSid*<br/>
-Ukazatel na strukturu [identifikátoru SID](/windows/desktop/api/winnt/ns-winnt-sid) .
+Ukazatel na strukturu [identifikátoru SID](/windows/win32/api/winnt/ns-winnt-sid) .
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -368,7 +368,7 @@ Vrátí hodnotu TRUE při úspěchu, FALSE při selhání. Chcete-li získat roz
 
 ### <a name="remarks"></a>Poznámky
 
-`LoadAccount`pokusí se najít identifikátor zabezpečení pro zadaný název. Další podrobnosti najdete v tématu [funkce LookupAccountSid](/windows/desktop/api/winbase/nf-winbase-lookupaccountsida) .
+`LoadAccount`pokusí se najít identifikátor zabezpečení pro zadaný název. Další podrobnosti najdete v tématu [funkce LookupAccountSid](/windows/win32/api/winbase/nf-winbase-lookupaccountsidw) .
 
 ##  <a name="operator_eq"></a>CSid:: operator =
 
@@ -542,7 +542,7 @@ LPCTSTR Sid() const throw(...);
 
 ### <a name="return-value"></a>Návratová hodnota
 
-`SID` Vrátí strukturu jako řetězec ve formátu vhodném pro zobrazení, ukládání nebo přenos. Ekvivalent [funkce ConvertSidToStringSid](/windows/desktop/api/sddl/nf-sddl-convertsidtostringsida).
+`SID` Vrátí strukturu jako řetězec ve formátu vhodném pro zobrazení, ukládání nebo přenos. Ekvivalent [funkce ConvertSidToStringSid](/windows/win32/api/sddl/nf-sddl-convertsidtostringsidw).
 
 ##  <a name="sidnameuse"></a>ID CSid:: SidNameUse
 

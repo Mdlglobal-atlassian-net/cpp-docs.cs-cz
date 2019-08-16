@@ -72,12 +72,12 @@ helpviewer_keywords:
 - CToolTipCtrl [MFC], Update
 - CToolTipCtrl [MFC], UpdateTipText
 ms.assetid: 8973f70c-b73a-46c7-908d-758f364b9a97
-ms.openlocfilehash: bbd369d282df1cac59e6966a2d832e23b8ff6da0
-ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
+ms.openlocfilehash: 046c8a3f99e8b505ee6a6e8b534318263090e07d
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68916742"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69502257"
 ---
 # <a name="ctooltipctrl-class"></a>CToolTipCtrl – třída
 
@@ -261,7 +261,7 @@ Nenulové, pokud je obdélník úspěšně upravován; v opačném případě 0.
 
 Tato členská funkce vypočítá obdélník zobrazení textu ovládacího prvku s popisem tlačítka z jeho rámečku okna nebo obdélník okna s popisem tlačítka, který je potřeba k zobrazení zadaného obdélníku zobrazení textu.
 
-Tato členská funkce implementuje chování zprávy Win32 [TTM_ADJUSTRECT](/windows/desktop/Controls/ttm-adjustrect), jak je popsáno v Windows SDK.
+Tato členská funkce implementuje chování zprávy Win32 [TTM_ADJUSTRECT](/windows/win32/Controls/ttm-adjustrect), jak je popsáno v Windows SDK.
 
 ##  <a name="create"></a>CToolTipCtrl:: Create
 
@@ -322,7 +322,7 @@ Ukazatel na okno, které je nadřazený ovládacímu prvku.
 Určuje styl ovládacího prvku Tip nástroje. Další informace najdete v části s poznámkami v tématu [Vytvoření](#create) .
 
 *dwStyleEx*<br/>
-Určuje rozšířený styl ovládacího prvku, který se vytváří. Seznam rozšířených stylů Windows naleznete v parametru *dwExStyle* pro [CreateWindowEx](/windows/desktop/api/winuser/nf-winuser-createwindowexa) v Windows SDK.
+Určuje rozšířený styl ovládacího prvku, který se vytváří. Seznam rozšířených stylů Windows naleznete v parametru *dwExStyle* pro [CreateWindowEx](/windows/win32/api/winuser/nf-winuser-createwindowexw) v Windows SDK.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -377,7 +377,7 @@ CSize GetBubbleSize(LPTOOLINFO lpToolInfo) const;
 ### <a name="parameters"></a>Parametry
 
 *lpToolInfo*<br/>
-Ukazatel na strukturu [TOOLINFO](/windows/desktop/api/commctrl/ns-commctrl-tagtoolinfoa) popisu nástroje.
+Ukazatel na strukturu [TOOLINFO](/windows/win32/api/commctrl/ns-commctrl-toolinfow) popisu nástroje.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -385,7 +385,7 @@ Velikost popisu tlačítka
 
 ### <a name="remarks"></a>Poznámky
 
-Tato členská funkce implementuje chování zprávy Win32 [TTM_GETBUBBLESIZE](/windows/desktop/Controls/ttm-getbubblesize), jak je popsáno v Windows SDK.
+Tato členská funkce implementuje chování zprávy Win32 [TTM_GETBUBBLESIZE](/windows/win32/Controls/ttm-getbubblesize), jak je popsáno v Windows SDK.
 
 ##  <a name="getcurrenttool"></a>CToolTipCtrl:: GetCurrentTool
 
@@ -399,7 +399,7 @@ BOOL GetCurrentTool(LPTOOLINFO lpToolInfo) const;
 
 |Parametr|Popis|
 |---------------|-----------------|
-|*lpToolInfo*|mimo Ukazatel na strukturu [TOOLINFO](/windows/desktop/api/commctrl/ns-commctrl-tagtoolinfoa) , která přijímá informace o aktuálním okně s popisem.|
+|*lpToolInfo*|mimo Ukazatel na strukturu [TOOLINFO](/windows/win32/api/commctrl/ns-commctrl-toolinfow) , která přijímá informace o aktuálním okně s popisem.|
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -407,7 +407,7 @@ TRUE, pokud se informace úspěšně načítají; v opačném případě FALSE.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato metoda pošle zprávu [TTM_GETCURRENTTOOL](/windows/desktop/Controls/ttm-getcurrenttool) , která je popsána v Windows SDK.
+Tato metoda pošle zprávu [TTM_GETCURRENTTOOL](/windows/win32/Controls/ttm-getcurrenttool) , která je popsána v Windows SDK.
 
 ### <a name="example"></a>Příklad
 
@@ -440,7 +440,7 @@ Zadaný čas zpoždění v milisekundách
 
 ### <a name="remarks"></a>Poznámky
 
-Tato členská funkce implementuje chování zprávy Win32 [TTM_GETDELAYTIME](/windows/desktop/Controls/ttm-getdelaytime), jak je popsáno v Windows SDK.
+Tato členská funkce implementuje chování zprávy Win32 [TTM_GETDELAYTIME](/windows/win32/Controls/ttm-getdelaytime), jak je popsáno v Windows SDK.
 
 ##  <a name="getmargin"></a>  CToolTipCtrl::GetMargin
 
@@ -464,7 +464,7 @@ void GetMargin(LPRECT lprc) const;
 
 ### <a name="remarks"></a>Poznámky
 
-Tato členská funkce implementuje chování zprávy Win32 [TTM_GETMARGIN](/windows/desktop/Controls/ttm-getmargin), jak je popsáno v Windows SDK.
+Tato členská funkce implementuje chování zprávy Win32 [TTM_GETMARGIN](/windows/win32/Controls/ttm-getmargin), jak je popsáno v Windows SDK.
 
 ##  <a name="getmaxtipwidth"></a>  CToolTipCtrl::GetMaxTipWidth
 
@@ -480,7 +480,7 @@ Maximální šířka okna s popisem tlačítka
 
 ### <a name="remarks"></a>Poznámky
 
-Tato členská funkce implementuje chování zprávy Win32 [TTM_GETMAXTIPWIDTH](/windows/desktop/Controls/ttm-getmaxtipwidth), jak je popsáno v Windows SDK.
+Tato členská funkce implementuje chování zprávy Win32 [TTM_GETMAXTIPWIDTH](/windows/win32/Controls/ttm-getmaxtipwidth), jak je popsáno v Windows SDK.
 
 ##  <a name="gettext"></a>  CToolTipCtrl::GetText
 
@@ -518,11 +518,11 @@ COLORREF GetTipBkColor() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Hodnota [COLORREF](/windows/desktop/gdi/colorref) , která představuje barvu pozadí.
+Hodnota [COLORREF](/windows/win32/gdi/colorref) , která představuje barvu pozadí.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato členská funkce implementuje chování zprávy Win32 [TTM_GETTIPBKCOLOR](/windows/desktop/Controls/ttm-gettipbkcolor), jak je popsáno v Windows SDK.
+Tato členská funkce implementuje chování zprávy Win32 [TTM_GETTIPBKCOLOR](/windows/win32/Controls/ttm-gettipbkcolor), jak je popsáno v Windows SDK.
 
 ##  <a name="gettiptextcolor"></a>  CToolTipCtrl::GetTipTextColor
 
@@ -534,11 +534,11 @@ COLORREF GetTipTextColor() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Hodnota [COLORREF](/windows/desktop/gdi/colorref) , která představuje barvu textu.
+Hodnota [COLORREF](/windows/win32/gdi/colorref) , která představuje barvu textu.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato členská funkce implementuje chování zprávy Win32 [TTM_GETTIPTEXTCOLOR](/windows/desktop/Controls/ttm-gettiptextcolor), jak je popsáno v Windows SDK.
+Tato členská funkce implementuje chování zprávy Win32 [TTM_GETTIPTEXTCOLOR](/windows/win32/Controls/ttm-gettiptextcolor), jak je popsáno v Windows SDK.
 
 ##  <a name="gettitle"></a>CToolTipCtrl:: getTitle
 
@@ -552,11 +552,11 @@ void GetTitle(PTTGETTITLE pttgt) const;
 
 |Parametr|Popis|
 |---------------|-----------------|
-|*pttgt*|mimo Ukazatel na strukturu [TTGETTITLE](/windows/desktop/api/commctrl/ns-commctrl-ttgettitle) , která obsahuje informace o ovládacím prvku ToolTip. Když tato metoda vrátí hodnotu, člen *pszTitle* struktury [TTGETTITLE](/windows/desktop/api/commctrl/ns-commctrl-ttgettitle) odkazuje na text nadpisu.|
+|*pttgt*|mimo Ukazatel na strukturu [TTGETTITLE](/windows/win32/api/commctrl/ns-commctrl-ttgettitle) , která obsahuje informace o ovládacím prvku ToolTip. Když tato metoda vrátí hodnotu, člen *pszTitle* struktury [TTGETTITLE](/windows/win32/api/commctrl/ns-commctrl-ttgettitle) odkazuje na text nadpisu.|
 
 ### <a name="remarks"></a>Poznámky
 
-Tato metoda pošle zprávu [TTM_GETTITLE](/windows/desktop/Controls/ttm-gettitle) , která je popsána v Windows SDK.
+Tato metoda pošle zprávu [TTM_GETTITLE](/windows/win32/Controls/ttm-gettitle) , která je popsána v Windows SDK.
 
 ##  <a name="gettoolcount"></a>  CToolTipCtrl::GetToolCount
 
@@ -598,7 +598,7 @@ Nenulové, pokud bylo úspěšné; v opačném případě 0.
 
 ### <a name="remarks"></a>Poznámky
 
-Členy `hwnd` a `uId` struktury [TOOLINFO](/windows/desktop/api/commctrl/ns-commctrl-tagtoolinfoa) , na které odkazuje *CToolInfo* , identifikují nástroj. Pokud byl tento nástroj zaregistrován pomocí ovládacího prvku popis tlačítka prostřednictvím předchozího volání `AddTool` `TOOLINFO` , struktura je vyplněna informacemi o nástroji.
+Členy `hwnd` a `uId` struktury [TOOLINFO](/windows/win32/api/commctrl/ns-commctrl-toolinfow) , na které odkazuje *CToolInfo* , identifikují nástroj. Pokud byl tento nástroj zaregistrován pomocí ovládacího prvku popis tlačítka prostřednictvím předchozího volání `AddTool` `TOOLINFO` , struktura je vyplněna informacemi o nástroji.
 
 ##  <a name="hittest"></a>  CToolTipCtrl::HitTest
 
@@ -620,7 +620,7 @@ Ukazatel na okno, které obsahuje nástroj.
 Ukazatel na `CPoint` objekt obsahující souřadnice bodu, který má být testován.
 
 *lpToolInfo*<br/>
-Ukazatel na strukturu [TOOLINFO](/windows/desktop/api/commctrl/ns-commctrl-tagtoolinfoa) , která obsahuje informace o nástroji.
+Ukazatel na strukturu [TOOLINFO](/windows/win32/api/commctrl/ns-commctrl-toolinfow) , která obsahuje informace o nástroji.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -662,7 +662,7 @@ void Pop();
 
 ### <a name="remarks"></a>Poznámky
 
-Tato členská funkce implementuje chování zprávy Win32 [TTM_POP](/windows/desktop/Controls/ttm-pop), jak je popsáno v Windows SDK.
+Tato členská funkce implementuje chování zprávy Win32 [TTM_POP](/windows/win32/Controls/ttm-pop), jak je popsáno v Windows SDK.
 
 ##  <a name="popup"></a>CToolTipCtrl::P opup
 
@@ -674,7 +674,7 @@ void Popup();
 
 ### <a name="remarks"></a>Poznámky
 
-Tato metoda pošle zprávu [TTM_POPUP](/windows/desktop/Controls/ttm-popup) , která je popsána v Windows SDK.
+Tato metoda pošle zprávu [TTM_POPUP](/windows/win32/Controls/ttm-popup) , která je popsána v Windows SDK.
 
 ### <a name="example"></a>Příklad
 
@@ -693,7 +693,7 @@ void RelayEvent(LPMSG lpMsg);
 ### <a name="parameters"></a>Parametry
 
 *lpMsg*<br/>
-Ukazatel na strukturu [](/windows/desktop/api/winuser/ns-winuser-msg) zprávy, která obsahuje zprávu pro předání.
+Ukazatel na strukturu [](/windows/win32/api/winuser/ns-winuser-msg) zprávy, která obsahuje zprávu pro předání.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -751,7 +751,7 @@ void SetMargin(LPRECT lprc);
 
 ### <a name="remarks"></a>Poznámky
 
-Tato členská funkce implementuje chování zprávy Win32 [TTM_SETMARGIN](/windows/desktop/Controls/ttm-setmargin), jak je popsáno v Windows SDK.
+Tato členská funkce implementuje chování zprávy Win32 [TTM_SETMARGIN](/windows/win32/Controls/ttm-setmargin), jak je popsáno v Windows SDK.
 
 ##  <a name="setmaxtipwidth"></a>  CToolTipCtrl::SetMaxTipWidth
 
@@ -772,7 +772,7 @@ Předchozí maximální šířka tipu.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato členská funkce implementuje chování zprávy Win32 [TTM_SETMAXTIPWIDTH](/windows/desktop/Controls/ttm-setmaxtipwidth), jak je popsáno v Windows SDK.
+Tato členská funkce implementuje chování zprávy Win32 [TTM_SETMAXTIPWIDTH](/windows/win32/Controls/ttm-setmaxtipwidth), jak je popsáno v Windows SDK.
 
 ##  <a name="settipbkcolor"></a>CToolTipCtrl:: SetTipBkColor
 
@@ -789,7 +789,7 @@ Nová barva pozadí.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato členská funkce implementuje chování zprávy Win32 [TTM_SETTIPBKCOLOR](/windows/desktop/Controls/ttm-settipbkcolor), jak je popsáno v Windows SDK.
+Tato členská funkce implementuje chování zprávy Win32 [TTM_SETTIPBKCOLOR](/windows/win32/Controls/ttm-settipbkcolor), jak je popsáno v Windows SDK.
 
 ##  <a name="settiptextcolor"></a>  CToolTipCtrl::SetTipTextColor
 
@@ -806,7 +806,7 @@ Nová barva textu.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato členská funkce implementuje chování zprávy Win32 [TTM_SETTIPTEXTCOLOR](/windows/desktop/Controls/ttm-settiptextcolor), jak je popsáno v Windows SDK.
+Tato členská funkce implementuje chování zprávy Win32 [TTM_SETTIPTEXTCOLOR](/windows/win32/Controls/ttm-settiptextcolor), jak je popsáno v Windows SDK.
 
 ##  <a name="settitle"></a>CToolTipCtrl:: SetTitle
 
@@ -821,7 +821,7 @@ BOOL SetTitle(
 ### <a name="parameters"></a>Parametry
 
 *uIcon*<br/>
-Viz *ikona* v [TTM_SETTITLE](/windows/desktop/Controls/ttm-settitle) v Windows SDK.
+Viz *ikona* v [TTM_SETTITLE](/windows/win32/Controls/ttm-settitle) v Windows SDK.
 
 *lpstrTitle*<br/>
 Ukazatel na řetězec názvu.
@@ -832,7 +832,7 @@ Nenulové, pokud bylo úspěšné; v opačném případě 0.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato členská funkce implementuje chování zprávy Win32 [TTM_SETTITLE](/windows/desktop/Controls/ttm-settitle), jak je popsáno v Windows SDK.
+Tato členská funkce implementuje chování zprávy Win32 [TTM_SETTITLE](/windows/win32/Controls/ttm-settitle), jak je popsáno v Windows SDK.
 
 ##  <a name="settoolinfo"></a>  CToolTipCtrl::SetToolInfo
 
@@ -845,7 +845,7 @@ void SetToolInfo(LPTOOLINFO lpToolInfo);
 ### <a name="parameters"></a>Parametry
 
 *lpToolInfo*<br/>
-Ukazatel na strukturu [TOOLINFO](/windows/desktop/api/commctrl/ns-commctrl-tagtoolinfoa) , která určuje informace, které mají být nastaveny.
+Ukazatel na strukturu [TOOLINFO](/windows/win32/api/commctrl/ns-commctrl-toolinfow) , která určuje informace, které mají být nastaveny.
 
 ##  <a name="settoolrect"></a>  CToolTipCtrl::SetToolRect
 
@@ -888,7 +888,7 @@ Návratová hodnota se nepoužívá.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato členská funkce emuluje funkce [TTM_SETWINDOWTHEME](/windows/desktop/Controls/ttm-setwindowtheme) zprávy, jak je popsáno v Windows SDK.
+Tato členská funkce emuluje funkce [TTM_SETWINDOWTHEME](/windows/win32/Controls/ttm-setwindowtheme) zprávy, jak je popsáno v Windows SDK.
 
 ##  <a name="update"></a>CToolTipCtrl:: Update
 

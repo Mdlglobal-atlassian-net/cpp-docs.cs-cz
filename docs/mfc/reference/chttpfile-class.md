@@ -26,12 +26,12 @@ helpviewer_keywords:
 - CHttpFile [MFC], SendRequest
 - CHttpFile [MFC], SendRequestEx
 ms.assetid: 399e7c68-bbce-4374-8c55-206e9c7baac6
-ms.openlocfilehash: ff050a89a10c68c639c141891dd51b1b2d58e105
-ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
+ms.openlocfilehash: 0c8c401b43361a5e1472e3470f5ea452c91b957f
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68916001"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69505966"
 ---
 # <a name="chttpfile-class"></a>CHttpFile – třída
 
@@ -126,7 +126,7 @@ Odkaz na objekt [CString](../../atl-mfc-shared/reference/cstringt-class.md) obsa
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Nenulové, pokud bylo úspěšné; v opačném případě 0. Pokud se volání nezdařilo, může být volána funkce Win32 Function [GetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror) , aby bylo možné zjistit příčinu chyby.
+Nenulové, pokud bylo úspěšné; v opačném případě 0. Pokud se volání nezdařilo, může být volána funkce Win32 Function [GetLastError](/windows/win32/api/errhandlingapi/nf-errhandlingapi-getlasterror) , aby bylo možné zjistit příčinu chyby.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -198,10 +198,10 @@ BOOL EndRequest(
 ### <a name="parameters"></a>Parametry
 
 *dwFlags*<br/>
-Příznaky popisující operaci. Seznam příslušných příznaků naleznete v tématu [HttpEndRequest](/windows/desktop/api/wininet/nf-wininet-httpendrequesta) v Windows SDK.
+Příznaky popisující operaci. Seznam příslušných příznaků naleznete v tématu [HttpEndRequest](/windows/win32/api/wininet/nf-wininet-httpendrequestw) v Windows SDK.
 
 *lpBuffIn*<br/>
-Ukazatel na inicializovaný [INTERNET_BUFFERS](/windows/desktop/api/wininet/ns-wininet-internet_buffersa) , který popisuje vstupní vyrovnávací paměť, která se používá pro operaci.
+Ukazatel na inicializovaný [INTERNET_BUFFERS](/windows/win32/api/wininet/ns-wininet-internet_buffersw) , který popisuje vstupní vyrovnávací paměť, která se používá pro operaci.
 
 *dwContext*<br/>
 Identifikátor `CHttpFile` kontextu operace. Další informace o tomto parametru najdete v části poznámky.
@@ -293,7 +293,7 @@ Kombinace atributu pro dotazování a následujících příznaků, které urču
 
 - HTTP_QUERY_FLAG_REQUEST_HEADERS se obvykle aplikace dotazuje na hlavičky odpovědí, ale aplikace také může dotazovat hlavičky požadavků pomocí tohoto příznaku.
 
-- HTTP_QUERY_FLAG_SYSTEMTIME pro hlavičky, jejichž hodnota je řetězec data a času, například "čas" Naposledy změněno ", tento příznak vrátí hodnotu hlavičky jako standardní [SYSTEMTIME –](/windows/desktop/api/minwinbase/ns-minwinbase-systemtime) strukturu Win32, která nevyžaduje, aby aplikace analyzovala data. Použijete-li tento příznak, je vhodné použít `SYSTEMTIME` přepsání funkce.
+- HTTP_QUERY_FLAG_SYSTEMTIME pro hlavičky, jejichž hodnota je řetězec data a času, například "čas" Naposledy změněno ", tento příznak vrátí hodnotu hlavičky jako standardní [SYSTEMTIME –](/windows/win32/api/minwinbase/ns-minwinbase-systemtime) strukturu Win32, která nevyžaduje, aby aplikace analyzovala data. Použijete-li tento příznak, je vhodné použít `SYSTEMTIME` přepsání funkce.
 
 - HTTP_QUERY_FLAG_NUMBER pro hlavičky, jejichž hodnota je číslo, jako je například stavový kód, tento příznak vrací data jako 32-bit číslo.
 
@@ -315,11 +315,11 @@ Odkaz na objekt [CString](../../atl-mfc-shared/reference/cstringt-class.md) , kt
 Hodnota indexu. Viz *lpdwIndex*.
 
 *pSysTime*<br/>
-Ukazatel na strukturu [SYSTEMTIME –](/windows/desktop/api/minwinbase/ns-minwinbase-systemtime) Win32.
+Ukazatel na strukturu [SYSTEMTIME –](/windows/win32/api/minwinbase/ns-minwinbase-systemtime) Win32.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Nenulové, pokud bylo úspěšné; v opačném případě 0. Pokud se volání nezdařilo, může být volána funkce Win32 Function [GetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror) , aby bylo možné zjistit příčinu chyby.
+Nenulové, pokud bylo úspěšné; v opačném případě 0. Pokud se volání nezdařilo, může být volána funkce Win32 Function [GetLastError](/windows/win32/api/errhandlingapi/nf-errhandlingapi-getlasterror) , aby bylo možné zjistit příčinu chyby.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -398,7 +398,7 @@ Odkaz na stavový kód. Stavové kódy označují úspěch nebo neúspěch poža
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Nenulové, pokud bylo úspěšné; v opačném případě 0. Pokud se volání nezdařilo, může být volána funkce Win32 Function [GetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror) , aby bylo možné zjistit příčinu chyby.
+Nenulové, pokud bylo úspěšné; v opačném případě 0. Pokud se volání nezdařilo, může být volána funkce Win32 Function [GetLastError](/windows/win32/api/errhandlingapi/nf-errhandlingapi-getlasterror) , aby bylo možné zjistit příčinu chyby.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -485,13 +485,13 @@ BOOL SendRequestEx(
 Počet bajtů, které se mají v žádosti odeslat.
 
 *dwFlags*<br/>
-Příznaky popisující operaci. Seznam příslušných příznaků naleznete v tématu [HttpSendRequestEx](/windows/desktop/api/wininet/nf-wininet-httpsendrequestexa) v Windows SDK.
+Příznaky popisující operaci. Seznam příslušných příznaků naleznete v tématu [HttpSendRequestEx](/windows/win32/api/wininet/nf-wininet-httpsendrequestexw) v Windows SDK.
 
 *dwContext*<br/>
 Identifikátor `CHttpFile` kontextu operace. Další informace o tomto parametru najdete v části poznámky.
 
 *lpBuffIn*<br/>
-Ukazatel na inicializovaný [INTERNET_BUFFERS](/windows/desktop/api/wininet/ns-wininet-internet_buffersa) , který popisuje vstupní vyrovnávací paměť, která se používá pro operaci.
+Ukazatel na inicializovaný [INTERNET_BUFFERS](/windows/win32/api/wininet/ns-wininet-internet_buffersw) , který popisuje vstupní vyrovnávací paměť, která se používá pro operaci.
 
 *lpBuffOut*<br/>
 Ukazatel na inicializovaný INTERNET_BUFFERS, který popisuje výstupní vyrovnávací paměť, která se používá pro operaci.

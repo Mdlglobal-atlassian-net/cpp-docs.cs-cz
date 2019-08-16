@@ -44,19 +44,19 @@ helpviewer_keywords:
 - _mbsstr_l function
 - strstr function
 ms.assetid: 03d70c3f-2473-45cb-a5f8-b35beeb2748a
-ms.openlocfilehash: 42e02473e062c3af9524ed432aa163b7574342de
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 003e5fd88bdfaafff539c5c993a99cd9ecca0b82
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62223077"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69500824"
 ---
-# <a name="strstr-wcsstr-mbsstr-mbsstrl"></a>strstr, wcsstr, _mbsstr, _mbsstr_l
+# <a name="strstr-wcsstr-_mbsstr-_mbsstr_l"></a>strstr, wcsstr, _mbsstr, _mbsstr_l
 
-Vrací ukazatel na první výskyt řetězce vyhledávání v řetězci.
+Vrací ukazatel na první výskyt hledaného řetězce v řetězci.
 
 > [!IMPORTANT]
-> `_mbsstr` a `_mbsstr_l` nelze použít v aplikacích, které jsou spouštěny v modulu Windows Runtime. Další informace najdete v tématu [CRT funkce nejsou podporovány v aplikacích pro univerzální platformu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> `_mbsstr`a `_mbsstr_l` nelze je použít v aplikacích, které jsou spouštěny v prostředí Windows Runtime. Další informace najdete v tématu [funkce CRT nejsou v aplikacích Univerzální platforma Windows podporovány](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -117,32 +117,32 @@ const unsigned char *_mbsstr_l(
 ### <a name="parameters"></a>Parametry
 
 *str*<br/>
-Řetězec zakončený hodnotou Null pro hledání.
+Řetězec zakončený hodnotou null pro hledání.
 
 *strSearch*<br/>
-Řetězec zakončený hodnotou Null pro hledání.
+Řetězec zakončený hodnotou null, který má být hledán.
 
-*Národní prostředí*<br/>
-Národní prostředí.
+*jazyka*<br/>
+Národní prostředí, které se má použít.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Vrací ukazatel na první výskyt *strSearch* v *str*, nebo hodnota NULL, pokud *strSearch* se nezobrazují v *str*. Pokud *strSearch* odkazuje na řetězec má nulovou délku, funkce vrátí *str*.
+Vrátí ukazatel na první výskyt *strSearch* v *str*nebo hodnotu null, pokud se *strSearch* v *str*nezobrazí. Pokud *strSearch* odkazuje na řetězec o nulové délce, funkce vrátí *str*.
 
 ## <a name="remarks"></a>Poznámky
 
-`strstr` Funkce vrátí ukazatel na první výskyt *strSearch* v *str*. Hledání nezahrnuje ukončovací znaky null. `wcsstr` je širokoznaká verze `strstr` a `_mbsstr` je vícebajtová znaková verze. Argumenty a vrácené hodnoty `wcsstr` jsou širokoznaké řetězce `_mbsstr` jsou vícebajtové znakové řetězce. `_mbsstr` ověří jeho parametry. Pokud *str* nebo *strSearch* má hodnotu NULL, je vyvolána obslužná rutina neplatného parametru, jak je popsáno v [Parameter Validation](../../c-runtime-library/parameter-validation.md) . Pokud smí provádění pokračovat, `_mbsstr` nastaví `errno` EINVAL a vrátí hodnotu 0. `strstr` a `wcsstr` neověří jejich parametry. Tyto tři funkce chovají identicky jinak.
+Funkce vrátí ukazatel na první výskyt strSearch v *str*. `strstr` Hledání nezahrnuje ukončující znaky null. `wcsstr`je verze `strstr` vícebajtového znaku a `_mbsstr` je verze vícebajtového znaku. Argumenty a návratová hodnota `wcsstr` jsou řetězce `_mbsstr` s velkým počtem znaků. hodnoty jsou vícebajtové znakové řetězce. `_mbsstr`ověří jeho parametry. Pokud parametr *str* nebo *strSearch* má hodnotu null, je vyvolána obslužná rutina neplatného parametru, jak je popsáno v tématu [ověřování parametru](../../c-runtime-library/parameter-validation.md) . Pokud provádění může pokračovat, `_mbsstr` nastaví `errno` se na EINVAL a vrátí hodnotu 0. `strstr`a `wcsstr` neověřuje jejich parametry. Tyto tři funkce se chovají identicky jinak.
 
 > [!IMPORTANT]
-> Tyto funkce může mít za následek hrozeb od problémem přetečení vyrovnávací paměti. Problémů přetečení vyrovnávací paměti lze použít k útokům systému, protože umožňují spuštění libovolného kódu, což může způsobit neoprávněné zvýšení úrovně oprávnění. Další informace najdete v tématu [předcházení přetečení vyrovnávací paměti](/windows/desktop/SecBP/avoiding-buffer-overruns).
+> Tyto funkce mohou způsobit ohrožení proti problému s přetečením vyrovnávací paměti. Problémy přetečení vyrovnávací paměti lze použít k útoku na systém, protože mohou umožňovat spuštění libovolného kódu, což může způsobit neoprávněné zvýšení oprávnění. Další informace najdete v tématu [předcházení přetečení vyrovnávací paměti](/windows/win32/SecBP/avoiding-buffer-overruns).
 
-V jazyce C, tyto funkce přijímají **const** ukazatele pro první argument. V jazyce C++ jsou k dispozici dvě přetížení. Přetížení přijímající ukazatel na **const** vrací ukazatel na **const**; verze, která přijímá ukazatel na jinou hodnotu než**const** vrací ukazatel na jinou hodnotu než **Const**. _CRT_CONST_CORRECT_OVERLOADS – makro je definováno, pokud **const** a jiných-**const** verze těchto funkcí jsou k dispozici. Pokud budete potřebovat non -**const** chování pro obě C++ přetížení, definujte symbol _CONST_RETURN.
+V jazyce C tyto funkce přebírají ukazatel const pro první argument. V C++jsou k dispozici dvě přetížení. Přetížení, které přebírá ukazatel na typ const vrací ukazatelna const; verze, která přebírá ukazatel na jiný typ než const, vrací ukazatel na**nekonstantní**hodnotu. Makro _CRT_CONST_CORRECT_OVERLOADS je definováno, pokud jsou k dispozici obě verze const i non-**const** . Pokud pro C++ přetížení vyžadujete nekonstantní chování, definujte symbol _CONST_RETURN.
 
-Výstupní hodnota je ovlivněna nastavením kategorie národního prostředí LC_CTYPE; Další informace najdete v tématu [setlocale _wsetlocale](setlocale-wsetlocale.md). Verze těchto funkcí, které nemají **_l** používají aktuální národní prostředí pro toto chování závislé na národním prostředí; ty, které mají **_l** přípona jsou stejné s tím rozdílem, že místo toho používají Parametr národního prostředí, které je předáno. Další informace najdete v tématu [národní prostředí](../../c-runtime-library/locale.md).
+Výstupní hodnota je ovlivněna nastavením kategorie národního prostředí LC_CTYPE; Další informace naleznete v tématu [setlocale, _wsetlocale](setlocale-wsetlocale.md). Verze těchto funkcí, které nemají příponu **_l** , používají aktuální národní prostředí pro toto chování závislé na národním prostředí; verze s příponou **_l** jsou stejné s tím rozdílem, že místo toho používají parametr národního prostředí, který je předán. Další informace najdete v tématu [národní prostředí](../../c-runtime-library/locale.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapování rutin obecného textu
 
-|Rutina TCHAR.H|_UNICODE a _MBCS nejsou definovány|_MBCS definováno|_UNICODE definováno|
+|Rutina TCHAR.H|_UNICODE & _MBCS nejsou definovány.|_MBCS definováno|_UNICODE definováno|
 |---------------------|------------------------------------|--------------------|-----------------------|
 |`_tcsstr`|`strstr`|`_mbsstr`|`wcsstr`|
 |**není k dispozici**|**není k dispozici**|`_mbsstr_l`|**není k dispozici**|
@@ -151,11 +151,11 @@ Výstupní hodnota je ovlivněna nastavením kategorie národního prostředí L
 
 |Rutina|Požadovaný hlavičkový soubor|
 |-------------|---------------------|
-|`strstr`|\<string.h>|
-|`wcsstr`|\<String.h > nebo \<wchar.h >|
-|`_mbsstr`, `_mbsstr_l`|\<Mbstring.h >|
+|`strstr`|\<String. h >|
+|`wcsstr`|\<String. h > nebo \<WCHAR. h >|
+|`_mbsstr`, `_mbsstr_l`|\<Mbstring. h >|
 
-Další informace o kompatibilitě naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě najdete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Příklad
 
@@ -196,7 +196,7 @@ lazy found at position 36
 
 ## <a name="see-also"></a>Viz také:
 
-[Zacházení s řetězci](../../c-runtime-library/string-manipulation-crt.md)<br/>
+[Manipulace s řetězci](../../c-runtime-library/string-manipulation-crt.md)<br/>
 [Národní prostředí](../../c-runtime-library/locale.md)<br/>
 [Výklad sekvencí vícebajtových znaků](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
 [strcspn, wcscspn, _mbscspn, _mbscspn_l](strcspn-wcscspn-mbscspn-mbscspn-l.md)<br/>

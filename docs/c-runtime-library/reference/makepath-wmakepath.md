@@ -33,16 +33,16 @@ helpviewer_keywords:
 - _wmakepath function
 - tmakepath function
 ms.assetid: 5930b197-a7b8-46eb-8519-2841a58cd026
-ms.openlocfilehash: 073f8aba6936aa33dafcef7ed47f5286802a4948
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: fab53d70df1c5361bc56bc0df16d0d2171f07a94
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62285696"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69499906"
 ---
-# <a name="makepath-wmakepath"></a>_makepath, _wmakepath
+# <a name="_makepath-_wmakepath"></a>_makepath, _wmakepath
 
-Vytvořte název cesty z komponent. Bezpečnější verze těchto funkcí jsou k dispozici. Zobrazit [_makepath_s – _wmakepath_s –](makepath-s-wmakepath-s.md).
+Vytvořte název cesty z komponent. K dispozici jsou bezpečnější verze těchto funkcí; viz [_makepath_s, _wmakepath_s](makepath-s-wmakepath-s.md).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -66,25 +66,25 @@ void _wmakepath(
 ### <a name="parameters"></a>Parametry
 
 *Cesta*<br/>
-Úplná cesta vyrovnávací paměti.
+Vyrovnávací paměť úplné cesty.
 
 *drive*<br/>
-Obsahuje písmeno (A, B a tak dále) odpovídající na požadovaný disk a volitelné koncové dvojtečka. **_makepath –** vloží dvojtečka automaticky složenou cestu Pokud není nalezena. Pokud *jednotky* je **NULL** nebo odkazuje na prázdný řetězec, zobrazí se v složeného žádné písmeno jednotky *cesta* řetězec.
+Obsahuje písmeno (A, B a tak dále) odpovídající požadované jednotce a volitelné koncové čárky. **_makepath** vloží dvojtečku do složené cesty automaticky, pokud chybí. Pokud má jednotka **hodnotu null** nebo odkazuje na prázdný řetězec, v řetězci složené *cesty* se nezobrazí žádné písmeno jednotky.
 
 *dir*<br/>
-Obsahuje cestu adresáře, bez zahrnutí specifikátor jednotky nebo skutečného názvu souboru. Do adresy koncové lomítko je volitelný a lomítkem (/) ani zpětné lomítko (\\) nebo může být možné použít v jediném *dir* argument. Pokud žádného koncového lomítka (/ nebo \\) je zadán, je automaticky vložen. Pokud *dir* je **NULL** nebo odkazuje na prázdný řetězec, žádná cesta k adresáři se vloží do složeného *cesta* řetězec.
+Obsahuje cestu k adresářům, včetně označení jednotky nebo samotného názvu souboru. Koncové lomítko je nepovinné a v jednom argumentu *dir* se může použít lomítko (/) nebo\\zpětné lomítko () nebo obojí. Pokud není zadáno žádné koncové lomítko ( \\/nebo), je vloženo automaticky. Pokud je adresář **null** nebo odkazuje na prázdný řetězec, do řetězce složené *cesty* není vložena žádná cesta k adresáři.
 
-*%{fname/*<br/>
-Obsahuje základní název souboru bez žádné přípony názvů souborů. Pokud *%{fname/* je **NULL** nebo odkazuje na prázdný řetězec, žádný název souboru se vloží do složeného *cesta* řetězec.
+*fname*<br/>
+Obsahuje základní název souboru bez přípony názvu souboru. Pokud má fname **hodnotu null** nebo odkazuje na prázdný řetězec, do řetězce složené *cesty* není vložen žádný název souboru.
 
 *ext*<br/>
-Obsahuje skutečnou příponu souboru, s nebo bez úvodní tečky (.). **_makepath –** vloží období automaticky, pokud se nezobrazí v *ext*. Pokud *ext* je **NULL** nebo odkazuje na prázdný řetězec, bez přípony se vloží do složeného *cesta* řetězec.
+Obsahuje skutečnou příponu názvu souboru s úvodním nebo Bezm počátečního období (.). **_makepath** Vloží tečku automaticky, pokud se nezobrazí v *EXT*. Pokud má EXT **hodnotu null** nebo odkazuje na prázdný řetězec, v řetězci složené *cesty* není vloženo žádné rozšíření.
 
 ## <a name="remarks"></a>Poznámky
 
-**_Makepath –** funkce vytvoří řetězec složené cesty z jednotlivých komponent uložením výsledku v *cesta*. *Cesta* může obsahovat písmeno jednotky, cesta k adresáři, názvu souboru a přípony názvu souboru. **_wmakepath –** je verze širokého znaku **_makepath –**; argumenty, které mají **_wmakepath –** jsou širokoznaké řetězce. **_wmakepath –** a **_makepath –** se jinak chovají stejně.
+Funkce **_makepath** vytvoří řetězec složených cest z jednotlivých komponent a uloží výsledek do *cesty*. *Cesta* může obsahovat písmeno jednotky, cestu k adresáři, název souboru a příponu názvu souboru. **_wmakepath** je **_makepath**verze s velkým znakem; argumenty **_wmakepath** jsou řetězce s libovolným znakem. **_wmakepath** a **_makepath** se chovají stejně jinak.
 
-**Poznámka k zabezpečení** použijte řetězec zakončený hodnotou null. Abyste předešli přetečení vyrovnávací paměti, řetězec zakončený hodnotou null nesmí překročit velikost *cesta* vyrovnávací paměti. **_makepath –** není jisté, že nepřekračuje délku řetězce složenou cestu **_MAX_PATH**. Další informace najdete v tématu [předcházení přetečení vyrovnávací paměti](/windows/desktop/SecBP/avoiding-buffer-overruns).
+**Poznámka k zabezpečení** Použijte řetězec zakončený hodnotou null. Aby nedošlo k přetečení vyrovnávací paměti, řetězec zakončený hodnotou null nesmí být větší než velikost vyrovnávací paměti pro *cestu* . **_makepath** nezajistí, že délka řetězce složené cesty nepřekračuje **_MAX_PATH**. Další informace najdete v tématu [předcházení přetečení vyrovnávací paměti](/windows/win32/SecBP/avoiding-buffer-overruns).
 
 ### <a name="generic-text-routine-mappings"></a>Mapování rutin obecného textu
 
@@ -92,18 +92,18 @@ Obsahuje skutečnou příponu souboru, s nebo bez úvodní tečky (.). **_makepa
 |---------------------|--------------------------------------|--------------------|-----------------------|
 |**_tmakepath**|**_makepath**|**_makepath**|**_wmakepath**|
 
-*Cesta* argumentu musí odkazovat na prázdné vyrovnávací paměti dostatečně velký pro úplnou cestu. Složené *cesta* nesmí být větší než **_MAX_PATH** – konstanta, definovány v Stdlib.h.
+Argument *cesty* musí ukazovat na prázdnou vyrovnávací paměť, která je dostatečně velká pro uložení úplné cesty. Složená *cesta* nesmí být větší než **_MAX_PATH** konstanta definovaná v Stdlib. h.
 
-Pokud se cesta **NULL**, je vyvolána obslužná rutina neplatného parametru, jak je popsáno v [Parameter Validation](../../c-runtime-library/parameter-validation.md). Kromě toho **errno** je nastavena na **EINVAL**. **NULL** hodnoty jsou povoleny pro všechny ostatní parametry.
+Pokud má cesta **hodnotu null**, je vyvolána obslužná rutina neplatného parametru, jak je popsáno v tématu [ověřování parametru](../../c-runtime-library/parameter-validation.md). Kromě toho je **errno** nastaveno na **EINVAL**. Pro všechny ostatní parametry jsou povoleny hodnoty **null** .
 
 ## <a name="requirements"></a>Požadavky
 
 |Rutina|Požadovaný hlavičkový soubor|
 |-------------|---------------------|
 |**_makepath**|\<stdlib.h>|
-|**_wmakepath**|\<stdlib.h > nebo \<wchar.h >|
+|**_wmakepath**|\<Stdlib. h > nebo \<WCHAR. h >|
 
-Další informace o kompatibilitě naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Příklad
 

@@ -37,16 +37,16 @@ helpviewer_keywords:
 - m_szName
 - m_szParseName
 ms.assetid: 21e8e7ea-3511-4afe-b33f-d520f4ff82bb
-ms.openlocfilehash: e609b346bb4a0c2469c24e20540c646fa869ae26
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: dd698499607a5c4f04ccd01207d78fef9328c079
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62230729"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69501400"
 ---
 # <a name="cenumeratoraccessor-class"></a>CEnumeratorAccessor – třída
 
-Používá [CEnumerator](../../data/oledb/cenumerator-class.md) pro přístup k datům z enumerátor sady řádků.
+Používá se v [CEnumerator –](../../data/oledb/cenumerator-class.md) pro přístup k datům ze sady řádků výčtu.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -56,7 +56,7 @@ class CEnumeratorAccessor
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** také atldbcli.h
+**Záhlaví:** atldbcli. h
 
 ## <a name="members"></a>Členové
 
@@ -64,19 +64,19 @@ class CEnumeratorAccessor
 
 |||
 |-|-|
-|[m_bIsParent](#bisparent)|Proměnná označující, zda je čítač nadřazené čítače, pokud je řádek enumerátor.|
-|[m_nType](#ntype)|Proměnná označující, zda řádek popisuje zdroje dat nebo enumerátor.|
-|[m_szDescription](#szdescription)|Popis zdroje dat nebo enumerátor.|
-|[m_szName](#szname)|Název zdroje dat nebo enumerátor.|
-|[m_szParseName](#szparsename)|Řetězec pro [IParseDisplayName](/windows/desktop/api/oleidl/nn-oleidl-iparsedisplayname) získat monikeru pro zdroj dat nebo enumerátor.|
+|[m_bIsParent](#bisparent)|Proměnná, která označuje, zda je enumerátor nadřazeným enumerátorem, pokud je řádek enumerátor.|
+|[m_nType](#ntype)|Proměnná, která označuje, zda řádek popisuje zdroj dat nebo enumerátor.|
+|[m_szDescription](#szdescription)|Popis zdroje dat nebo čítače výčtu.|
+|[m_szName](#szname)|Název zdroje dat nebo čítače výčtu.|
+|[m_szParseName](#szparsename)|Řetězec, který se má předat [IParseDisplayName](/windows/win32/api/oleidl/nn-oleidl-iparsedisplayname) a získat moniker pro zdroj dat nebo enumerátor.|
 
 ## <a name="remarks"></a>Poznámky
 
-Tato sada řádků se skládá z zdroje dat a enumerátory viditelné z aktuálního výčtu.
+Tato sada řádků se skládá ze zdrojů dat a enumerátorů viditelných z aktuálního enumerátoru.
 
 ## <a name="bisparent"></a> CEnumeratorAccessor::m_bIsParent
 
-Proměnná označující, zda je čítač nadřazené čítače, pokud je řádek enumerátor.
+Proměnná, která označuje, zda je enumerátor nadřazeným enumerátorem, pokud je řádek enumerátor.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -86,11 +86,11 @@ VARIANT_BOOL m_bIsParent;
 
 ### <a name="remarks"></a>Poznámky
 
-Zobrazit [ISourcesRowset::GetSourcesRowset](/previous-versions/windows/desktop/ms711200(v=vs.85)) v *OLE DB referenční informace pro programátory* Další informace.
+Další informace najdete v tématu [ISourcesRowset:: GetSourcesRowset](/previous-versions/windows/desktop/ms711200(v=vs.85)) v *Referenční příručce programátora OLE DB* .
 
 ## <a name="ntype"></a> CEnumeratorAccessor::m_nType
 
-Proměnná označující, zda řádek popisuje zdroje dat nebo enumerátor.
+Proměnná, která označuje, zda řádek popisuje zdroj dat nebo enumerátor.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -100,11 +100,11 @@ USHORT m_nType;
 
 ### <a name="remarks"></a>Poznámky
 
-Zobrazit [ISourcesRowset::GetSourcesRowset](/previous-versions/windows/desktop/ms711200(v=vs.85)) v *OLE DB referenční informace pro programátory* Další informace.
+Další informace najdete v tématu [ISourcesRowset:: GetSourcesRowset](/previous-versions/windows/desktop/ms711200(v=vs.85)) v *Referenční příručce programátora OLE DB* .
 
-## <a name="szdescription"></a> CEnumeratorAccessor::m_szDescription
+## <a name="szdescription"></a>CEnumeratorAccessor:: m_szDescription
 
-Popis zdroje dat nebo enumerátor.
+Popis zdroje dat nebo čítače výčtu.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -114,11 +114,11 @@ WCHAR m_szDescription[129];
 
 ### <a name="remarks"></a>Poznámky
 
-Zobrazit [ISourcesRowset::GetSourcesRowset](/previous-versions/windows/desktop/ms711200(v=vs.85)) v *OLE DB referenční informace pro programátory* Další informace.
+Další informace najdete v tématu [ISourcesRowset:: GetSourcesRowset](/previous-versions/windows/desktop/ms711200(v=vs.85)) v *Referenční příručce programátora OLE DB* .
 
 ## <a name="szname"></a> CEnumeratorAccessor::m_szName
 
-Název zdroje dat nebo enumerátor.
+Název zdroje dat nebo čítače výčtu.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -128,11 +128,11 @@ WCHAR m_szName[129];
 
 ### <a name="remarks"></a>Poznámky
 
-Zobrazit [ISourcesRowset::GetSourcesRowset](/previous-versions/windows/desktop/ms711200(v=vs.85)) v *OLE DB referenční informace pro programátory* Další informace.
+Další informace najdete v tématu [ISourcesRowset:: GetSourcesRowset](/previous-versions/windows/desktop/ms711200(v=vs.85)) v *Referenční příručce programátora OLE DB* .
 
 ## <a name="szparsename"></a> CEnumeratorAccessor::m_szParseName
 
-Řetězec pro [IParseDisplayName](/windows/desktop/api/oleidl/nn-oleidl-iparsedisplayname) získat monikeru pro zdroj dat nebo enumerátor.
+Řetězec, který se má předat [IParseDisplayName](/windows/win32/api/oleidl/nn-oleidl-iparsedisplayname) a získat moniker pro zdroj dat nebo enumerátor.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -142,9 +142,9 @@ WCHAR m_szParseName[129];
 
 ### <a name="remarks"></a>Poznámky
 
-Zobrazit [ISourcesRowset::GetSourcesRowset](/previous-versions/windows/desktop/ms711200(v=vs.85)) v *OLE DB referenční informace pro programátory* Další informace.
+Další informace najdete v tématu [ISourcesRowset:: GetSourcesRowset](/previous-versions/windows/desktop/ms711200(v=vs.85)) v *Referenční příručce programátora OLE DB* .
 
 ## <a name="see-also"></a>Viz také:
 
-[OLE DB – šablony příjemce](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
+[Šablony OLE DB příjemců](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
 [Referenční dokumentace k šablonám příjemců OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)

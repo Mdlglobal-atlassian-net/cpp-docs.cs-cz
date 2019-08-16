@@ -8,35 +8,35 @@ f1_keywords:
 helpviewer_keywords:
 - Managed Resources property page
 ms.assetid: 80b80384-ee55-494d-9f0e-907bb98cfc19
-ms.openlocfilehash: 394aac779fceb4d9d5918e4a5ad36eee8be896ea
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 97cf05f881949444879b0d48e3b3c2703a614985
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62321459"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69498234"
 ---
 # <a name="managed-resources-property-page"></a>Stránka vlastností spravovaných zdrojů
 
 Povolí nastavení pro kompilátor prostředků.
 
-**Spravovaných prostředků** stránka vlastností obsahuje následující vlastnosti:
+Stránka vlastností **spravovaných prostředků** obsahuje následující vlastnosti:
 
 - **Logický název prostředku**
 
-   Určuje, *logický název* z vygenerované přechodového souboru .resources. Logický název je název používaný k načtení prostředku. Pokud není zadán žádný logický název, název souboru prostředku (RESX) se používá jako logický název.
+   Určuje *logický název* vygenerovaného zprostředkujícího souboru. Resources. Logický název je název, který se používá k načtení prostředku. Pokud není zadán žádný logický název, použije se jako logický název název souboru prostředků (. resx).
 
 - **Název výstupního souboru**
 
-   Určuje název konečného výstupního souboru, jež přispívají k souboru prostředku (RESX).
+   Určuje název konečného výstupního souboru, do kterého se má soubor prostředků (. resx) přispěje.
 
 - **Výchozí lokalizované prostředky**
 
-   Určuje, zda soubor daného .resx přispívá do výchozích prostředků nebo satelitní knihovna .dll.
+   Určuje, zda daný soubor. resx přispívá do výchozích prostředků nebo satelitní knihovny. dll.
 
-Informace o tom, jak získat přístup **spravovaných prostředků** stránky vlastností naleznete v tématu [vlastnosti kompilátoru a sestavení nastavte C++ v sadě Visual Studio](../working-with-project-properties.md).
+Informace o tom, jak získat přístup ke stránce vlastností **spravovaných prostředků** , najdete v tématu [Nastavení vlastností kompilátoru a sestavení v C++ sadě Visual Studio](../working-with-project-properties.md).
 
 ## <a name="see-also"></a>Viz také:
 
-[Pomocí RC (RC příkazového řádku)](/windows/desktop/menurc/using-rc-the-rc-command-line-)<br>
-[Odkaz na stránku vlastností projektu jazyka C++](property-pages-visual-cpp.md)<br>
+[Použití RC (příkazový řádek RC)](/windows/win32/menurc/using-rc-the-rc-command-line-)<br>
+[C++odkaz na stránku vlastností projektu](property-pages-visual-cpp.md)<br>
 [/ASSEMBLYRESOURCE (vložení spravovaného prostředku)](assemblyresource-embed-a-managed-resource.md)

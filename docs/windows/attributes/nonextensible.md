@@ -1,21 +1,21 @@
 ---
-title: nonextensible – (atribut COM jazyka C++)
+title: nerozšiřitelnýC++ (atribut com)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.nonextensible
 helpviewer_keywords:
 - nonextensible attribute
 ms.assetid: c7ef1554-809f-4ea0-a7cd-dc7786d40c3e
-ms.openlocfilehash: ed396b3d55e16cf195949c713ab574812b796a1a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f2947e223d068ea6cc92a41abe19cb7f920112b2
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62407572"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69514395"
 ---
 # <a name="nonextensible"></a>nonextensible
 
-Určuje, že `IDispatch` implementace obsahuje pouze vlastnosti a metody uvedené v popisu rozhraní a nejde prodloužit s další členy v době běhu.
+Určuje, že `IDispatch` implementace zahrnuje pouze vlastnosti a metody uvedené v popisu rozhraní a nelze je rozšířit o další členy za běhu.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -25,13 +25,13 @@ Určuje, že `IDispatch` implementace obsahuje pouze vlastnosti a metody uveden�
 
 ## <a name="remarks"></a>Poznámky
 
-**Nerozšiřitelnou kategorii** C++ atribut má stejné funkce jako [nerozšiřitelnou kategorii](/windows/desktop/Midl/nonextensible) atribut MIDL.
+Nerozšiřitelný C++ atribut má stejné funkce jako nerozšiřitelný atribut MIDL. [](/windows/win32/Midl/nonextensible)
 
-Použití **nerozšiřitelnou kategorii** také vyžaduje [oleautomation](oleautomation.md) atribut.
+Použití nerozšiřitelného také vyžaduje atribut [oleautomation](oleautomation.md) .
 
 ## <a name="example"></a>Příklad
 
-Následující kód ukazuje jedno použití **nerozšiřitelnou kategorii** atribut:
+Následující kód ukazuje jedno použití nerozšiřitelného atributu:
 
 ```cpp
 // cpp_attr_ref_nonextensible.cpp
@@ -50,16 +50,16 @@ __interface IFireTabCtrl
 
 ## <a name="requirements"></a>Požadavky
 
-### <a name="attribute-context"></a>Atribut kontextu
+### <a name="attribute-context"></a>Kontext atributu
 
 |||
 |-|-|
 |**Platí pro**|**interface**|
-|**Opakovatelné**|Ne|
-|**Vyžadované atributy**|`dual` a `oleautomation`, nebo `dispinterface`|
+|**REPEATABLE**|Ne|
+|**Požadované atributy**|`dual`a `oleautomation`, nebo`dispinterface`|
 |**Neplatné atributy**|Žádné|
 
-Další informace o kontexty atributů najdete v tématu [kontexty atributů](cpp-attributes-com-net.md#contexts).
+Další informace o kontextech atributů naleznete v tématu kontexty [atributů](cpp-attributes-com-net.md#contexts).
 
 ## <a name="see-also"></a>Viz také:
 

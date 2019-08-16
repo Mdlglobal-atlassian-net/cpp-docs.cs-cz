@@ -1,21 +1,21 @@
 ---
-title: / UTF-8 (nastavení zdrojové a spustitelné znakové sady na UTF-8)
+title: /UTF-8. (nastavení zdrojových a spustitelných znakových sad na UTF-8)
 ms.date: 11/04/2016
 f1_keywords:
 - /utf-8
 helpviewer_keywords:
 - /utf-8 compiler option
 ms.assetid: f0e1f3cb-6cae-46eb-9483-04ed13d9b504
-ms.openlocfilehash: 5ac15c63041e76b8bb0d292868bb982c21866078
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1ff0f23ad0758642c73b1b35d6d4dd1be20899cb
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62317286"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69498183"
 ---
-# <a name="utf-8-set-source-and-executable-character-sets-to-utf-8"></a>/ UTF-8 (nastavení zdrojové a spustitelné znakové sady na UTF-8)
+# <a name="utf-8-set-source-and-executable-character-sets-to-utf-8"></a>/UTF-8. (nastavení zdrojových a spustitelných znakových sad na UTF-8)
 
-Určuje zdrojové znakové sady a provedení znakové sady jako UTF-8.
+Určuje zdrojovou znakovou sadu a znakovou sadu spuštění jako UTF-8.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -25,24 +25,24 @@ Určuje zdrojové znakové sady a provedení znakové sady jako UTF-8.
 
 ## <a name="remarks"></a>Poznámky
 
-Můžete použít **/UTF-8** můžete zadat zdroj a spuštění znakové sady jako kódování pomocí kódování UTF-8. Je ekvivalentní se zadáním **/source-charset:utf – 8 /execution-charset:utf – 8** na příkazovém řádku. Některé z těchto možností také umožňuje **/Validate-Charset** možnost ve výchozím nastavení. Seznam podporovaných identifikátory znakových stránek a znakové sady názvy, naleznete v tématu [identifikátory znakových stránek](/windows/desktop/Intl/code-page-identifiers).
+Pomocí možnosti **/UTF-8.** můžete určit zdrojové i spouštěcí znakové sady jako kódované pomocí kódování UTF-8. Je ekvivalentní zadání **/source-charset: UTF-8/Execution-charset: UTF-8** na příkazovém řádku. Kterákoli z těchto možností také ve výchozím nastavení povolí možnost **/Validate-charset** . Seznam podporovaných identifikátorů znakové stránky a názvů znakové sady naleznete v tématu [identifikátory znakové stránky](/windows/win32/Intl/code-page-identifiers).
 
-Ve výchozím nastavení sada Visual Studio zjistí značka pořadí bajtů k určení, zda zdrojový soubor je v zakódovaném formátu Unicode, například UTF-16 nebo UTF-8. Pokud se nenajde žádné značky pořadí bajtů, předpokládá zdrojový soubor je zakódován pomocí aktuální znakové stránce uživatele, pokud zadáte znakovou stránku pomocí **/UTF-8** nebo **/Source-Charset** možnost. Visual Studio umožňuje uložit zdrojovém kódu jazyka C++ pomocí některého z několika kódování znaků. Informace o spuštění a zdrojová znakových sadách najdete v tématu [znakové sady](../../cpp/character-sets.md) v dokumentaci jazyka.
+Ve výchozím nastavení Visual Studio detekuje značku pro určení, zda je zdrojový soubor v kódovaném formátu Unicode, například UTF-16 nebo UTF-8. Pokud není nalezen žádný znak pořadí bajtů, předpokládá se, že zdrojový soubor je kódován pomocí uživatelské znakové stránky, pokud jste nezadali znakovou stránku pomocí **/UTF-8.** nebo možnosti **/source-charset** . Visual Studio umožňuje uložit C++ zdrojový kód pomocí některého z několika kódování znaků. Informace o zdrojových a spouštěcích znakových sadách naleznete v tématu [znakové sady](../../cpp/character-sets.md) v dokumentaci jazyka.
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Nastavení tohoto parametru kompilátoru ve vývojovém prostředí Visual Studio
 
-1. Otevřete projekt **stránky vlastností** dialogové okno. Další informace najdete v tématu [vlastnosti kompilátoru a sestavení nastavte C++ v sadě Visual Studio](../working-with-project-properties.md).
+1. Otevřete dialogové okno **stránky vlastností** projektu. Další informace najdete v tématu [nastavení C++ vlastností kompilátoru a sestavení v sadě Visual Studio](../working-with-project-properties.md).
 
-1. Rozbalte **vlastnosti konfigurace**, **C/C++**, **příkazového řádku** složky.
+1. Rozbalte **Vlastnosti konfigurace**, složka s příkazovým **řádkem** **C/C++** .
 
-1. V **další možnosti**, přidejte **/UTF-8** lze zadat upřednostňované kódování.
+1. V části **Další možnosti**přidejte možnost **/UTF-8.** pro určení upřednostňovaného kódování.
 
-1. Zvolte **OK** uložte provedené změny.
+1. Kliknutím na **tlačítko OK** uložte změny.
 
 ## <a name="see-also"></a>Viz také:
 
 [Parametry kompilátoru MSVC](compiler-options.md)<br/>
 [Syntaxe příkazového řádku kompilátoru MSVC](compiler-command-line-syntax.md)<br/>
-[/ Execution-Charset (nastavení znakové sady spuštění)](execution-charset-set-execution-character-set.md)<br/>
+[/Execution-charset (nastavení znakové sady spuštění)](execution-charset-set-execution-character-set.md)<br/>
 [/source-charset (nastavení zdrojové znakové sady)](source-charset-set-source-character-set.md)<br/>
 [/validate-charset (ověření kompatibilních znaků)](validate-charset-validate-for-compatible-characters.md)

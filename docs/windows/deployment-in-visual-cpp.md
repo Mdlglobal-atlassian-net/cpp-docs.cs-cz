@@ -5,52 +5,52 @@ helpviewer_keywords:
 - deploying applications [C++]
 - application deployment [C++]
 ms.assetid: d4b4ffc0-d2bd-4e4a-84a6-62f1c26f6a09
-ms.openlocfilehash: 8dccf581cff88dc2e8c4a889bed8b47fc140eb7c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 67d5c7b0772eda55d1b653bd73f95ac93e31e644
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62345367"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69514818"
 ---
 # <a name="deployment-in-visual-c"></a>Nasazení ve Visual C++
 
-Instalace aplikace na jiném počítači než vývojovém počítači se označuje jako *nasazení*. Při nasazení aplikace Visual C++ do jiného počítače, je nutné nainstalovat aplikace a všechny soubory knihoven, na kterých závisí. Visual Studio umožňuje tři způsoby nasazení knihoven Visual C++ spolu s aplikací: *centrální nasazení*, *místní nasazení*, a *statické propojování*. Centrální nasazení umístí soubory knihovny v adresáři Windows, kde služba Windows Update můžete je aktualizovat automaticky. Místní nasazení umístí soubory s knihovny ve stejném adresáři jako vaši aplikaci. Je nutné znovu nasadit všechny místně nasazených knihoven sami je aktualizovat. Statické propojení váže kód knihovny do vaší aplikace. Musíte znovu zkompilovat a znova nasazovat aplikaci, abyste mohli využívat všechny aktualizace do knihoven při použití statické propojování.
+Instalace vaší aplikace na jiném počítači, než je vývojový počítač, se označuje jako *nasazení*. Když nasadíte vizuální C++ aplikaci na jiný počítač, musíte nainstalovat aplikaci i všechny soubory knihovny, na kterých závisí. Visual Studio umožňuje tři způsoby, jak nasadit knihovny C++ vizuálů společně s vaší aplikací: *centrální nasazení*, *místní nasazení*a *statické propojení*. Centrální nasazení umístí soubory knihovny do adresáře Windows, kde je služba web Windows Update může aktualizovat automaticky. Místní nasazení umístí soubory knihovny do stejného adresáře jako vaše aplikace. Všechny místně nasazené knihovny je potřeba znovu nasadit, aby je bylo možné aktualizovat. Statické propojení váže kód knihovny do aplikace. Je nutné znovu zkompilovat a znovu nasadit aplikaci, aby při použití statického propojení využila jakékoli aktualizace knihoven.
 
-Knihovna Runtime jazyka C společnosti Microsoft se v sadě Visual Studio 2015, teď vyčleněný do místní knihovní verze konkrétní součásti a nové, která je teď součástí sady Windows Universal C Runtime knihovny. Podrobnosti o nasazení na Universal CRT naleznete v tématu [Universal CRT nasazení](universal-crt-deployment.md).
+V aplikaci Visual Studio 2015 byla knihovna modulu runtime jazyka Microsoft C refaktored na součásti místní knihovny specifické pro danou verzi a nová knihovna univerzálního běhového prostředí jazyka C, která je nyní součástí systému Windows. Podrobnosti o nasazení univerzálního CRT naleznete v tématu [nasazení univerzálního CRT](universal-crt-deployment.md).
 
 ## <a name="central-deployment"></a>Centrální nasazení
 
-Při centrálním nasazení jsou nainstalovány soubory knihovny DLL ve složce Windows\System32 nebo souborů knihoven 32-bit na x64 systémy, Windows\SysWow64 adresáře. Společnost Microsoft automaticky aktualizuje knihovny, které jsou nasazeny centrálně. Pro knihovny Visual C++, které jsou nasazeny místně nebo staticky propojeny musí aktualizace zajistit.
+V centrálním nasazení jsou soubory DLL knihovny nainstalovány v adresáři Windows\System32 nebo pro soubory knihovny 32 v systémech x64, adresář Windows\SysWow64. Společnost Microsoft automaticky aktualizuje knihovny, které jsou nasazeny centrálně. V případě C++ vizuálních knihoven, které jsou místně nasazeny nebo staticky propojeny, je nutné zadat aktualizace.
 
-K centrálnímu nasazení knihoven Visual C++, slouží jedna z těchto dvou zdrojů pro soubory k instalaci:
+K centrálnímu nasazení vizuálních C++ knihoven můžete použít jeden z těchto dvou zdrojů k instalaci souborů:
 
-- *Distribuovatelný balíček* soubory, které jsou samostatné spustitelné soubory příkazového řádku, které obsahují všechny knihovny Visual C++ redistributable v komprimované formě, nebo
+- *Redistribuovatelné soubory balíčku* , což jsou spustitelné soubory samostatného příkazového řádku, které obsahují všechny vizuální C++ distribuovatelné knihovny v komprimované podobě nebo
 
-- *Distribuovatelné slučovací moduly* (soubory .msm), který můžete použít k nasazení konkrétních knihoven a které zahrnete do souboru Instalační služby systému Windows (.msi) vaší aplikace.
+- *Redistribuovatelné slučovací moduly* (soubory. msm), které můžete použít k nasazení specifických knihoven a které zahrnete do souboru Instalační služba systému Windows aplikace (. msi).
 
-Soubor distribuovatelného balíčku nainstaluje všechny knihovny Visual C++ pro určitou architekturu systému. Například pokud vaše aplikace je sestavená pro x64, můžete použít vcredist_x64.exe Distribuovatelný balíček nainstalovat tento vizuál C++ vaše aplikace používá knihovny. Můžete naprogramovat instalačním programem vaší aplikace ke spuštění Distribuovatelný balíček rozhraní jako předpoklad před instalací aplikace.
+Distribuovatelný soubor balíčku nainstaluje všechny knihovny vizuálů C++ pro konkrétní architekturu systému. Například pokud je vaše aplikace sestavena pro x64, můžete použít Distribuovatelný balíček VCRedist_x64. exe k instalaci všech knihoven vizuálů C++ , které vaše aplikace používá. Před instalací aplikace můžete instalačnímu programu aplikace spustit Distribuovatelný balíček jako požadavek.
 
-Slučovací modul umožňuje zařadit logiku nastavení pro konkrétní knihovnu Visual C++ v souboru instalačního programu aplikace Instalační služby systému Windows. Mohou obsahovat libovolný počet nebo jako několik slučovací moduly, jak vaše aplikace vyžaduje. Používejte slučovací moduly, když budete chtít pro minimalizaci velikosti vašeho nasazení binárních souborů.
+Slučovací modul umožňuje zahrnutí logiky nastavení pro konkrétní vizuální C++ knihovnu do instalačního souboru aplikace Instalační služba systému Windows. V případě, že vaše aplikace vyžaduje, můžete zahrnout libovolný počet slučovacích modulů. Slučovací moduly použijte, pokud potřebujete minimalizovat velikost binárních souborů nasazení.
 
-Protože centrální nasazení pomocí distribuovatelných balíčků nebo slučovací moduly povolí Windows Update k automatické aktualizaci knihoven Visual C++, doporučujeme použít knihovnu DLL ve vaší aplikaci místo statické knihovny a použít centrální nasazení místo místního nasazení.
+Vzhledem k tomu, že centrální nasazení pomocí redistribuovatelného balíčku nebo slučovacích modulů umožňuje web Windows Update automatickou aktualizaci C++ knihoven vizuálů, doporučujeme použít knihovny DLL knihoven v aplikaci místo statických knihoven a použít centrální nasazení místo místního nasazení.
 
 ## <a name="local-deployment"></a>Místní nasazení
 
-V místním nasazení se soubory knihovny nainstalují do složky aplikace spolu se spustitelným souborem. Různé verze knihoven Visual C++ redistributable můžete nainstalovat ve stejné složce, protože název souboru každé verze obsahuje číslo verze. Například verze 12 prostředí runtime knihoven jazyka C++ je msvcp120.dll a verze 14 je msvcp140.dll.
+V místním nasazení jsou soubory knihoven nainstalovány ve složce aplikace společně se spustitelným souborem. Do stejné složky lze C++ nainstalovat různé verze Visual redistribuovatelných knihoven, protože název souboru každé verze zahrnuje číslo jeho verze. Například verze 12 C++ běhové knihovny je msvcp120. dll a verze 14 je msvcp140. dll.
 
-Knihovny může rozděleny mezi několik dalších knihoven DLL, označované jako *dot knihovny*. Například některé funkce ve standardní knihovně vydané v sadě Visual Studio 2017 verze 15.6 byl přidán do msvcp140_1.dll, chcete-li zachovat kompatibilitu ABI msvcp140.dll. Pokud používáte Visual Studio 2017 verze 15.6 (sada nástrojů 14.13 –) nebo novější sadu nástrojů ze sady Visual Studio 2017, budete muset místně nasadit tyto knihovny tečkou, stejně jako hlavní knihovny. Tyto samostatné tečkou knihovny jsou zahrnuté do další hlavní verze základní knihovny, pak při změně ABI.
+Knihovna může být rozdělena mezi více dalších knihoven DLL, označovaných jako *knihovny teček*. Například některé funkce ve standardní knihovně vydané v aplikaci Visual Studio 2017 verze 15,6 byly přidány do souboru msvcp140_1. dll pro zachování kompatibility ABI msvcp140. dll. Pokud používáte sadu Visual Studio 2017 verze 15,6 (sada nástrojů 14,13) nebo novější sadu nástrojů ze sady Visual Studio 2017, možná budete muset tyto knihovny teček nasadit místně i do hlavní knihovny. Tyto samostatné knihovny teček jsou následně zahrnuty do další hlavní verze základní knihovny, když se ABI změní.
 
-Vzhledem k tomu, že Microsoft nemůže automaticky místně aktualizace nasazení knihoven Visual C++, nedoporučujeme místní nasazení těchto knihoven. Pokud se rozhodnete použít místní nasazení distribuovatelných knihoven, doporučujeme implementovat vlastní metodu automatických aktualizací místně nasazených knihoven.
+Vzhledem k tomu, že společnost Microsoft nemůže C++ automaticky aktualizovat místně nasazené vizuální knihovny, nedoporučujeme místní nasazení těchto knihoven. Pokud se rozhodnete použít místní nasazení distribuovatelných knihoven, doporučujeme implementovat vlastní metodu automatických aktualizací místně nasazených knihoven.
 
 ## <a name="static-linking"></a>Statické propojení
 
-Kromě dynamicky propojené knihovny sady Visual Studio poskytuje většinu knihovny jako statických knihoven. Můžete staticky propojit statické knihovny, který je pro vaši aplikaci, propojení knihovny kódu objektu přímo do aplikace. Tím se vytvoří jediné binární hodnoty bez závislosti knihoven DLL, takže je nebudete muset nasazovat soubory knihoven Visual C++ samostatně. Však nedoporučujeme tento přístup protože staticky propojené knihovny nelze aktualizovat na místě. Pokud používáte statické propojení a potřebujete propojené knihovny aktualizovat, je nutné aplikaci znovu zkompilovat a opětovně nasadit.
+Kromě dynamicky propojených knihoven aplikace Visual Studio poskytuje většinu svých knihoven jako statické knihovny. Statickou knihovnu je možné staticky propojit s vaší aplikací, to znamená propojit kód objektu knihovny přímo do aplikace. Tím se vytvoří jeden binární soubor bez závislosti DLL, takže nemusíte nasazovat soubory knihovny vizuálů C++ samostatně. Tento přístup však nedoporučujeme, protože staticky propojené knihovny nelze aktualizovat na místě. Pokud používáte statické propojení a potřebujete propojené knihovny aktualizovat, je nutné aplikaci znovu zkompilovat a opětovně nasadit.
 
-## <a name="troubleshooting-deployment-issues"></a>Řešení potíží s nasazení
+## <a name="troubleshooting-deployment-issues"></a>Řešení potíží s nasazením
 
-Pořadí načítání knihoven Visual C++ je závislé na systému. Chcete-li diagnostikovat problémy zavaděče, použijte nástroj depends.exe nebo where.exe. Další informace najdete v tématu [pořadí hledání knihoven DLL (Windows)](/windows/desktop/Dlls/dynamic-link-library-search-order).
+Pořadí načítání vizuálních C++ knihoven je závislé na systému. Chcete-li diagnostikovat problémy zavaděče, použijte nástroj depends.exe nebo where.exe. Další informace naleznete v tématu [pořadí hledání dynamické knihovny (Windows)](/windows/win32/Dlls/dynamic-link-library-search-order).
 
 ## <a name="see-also"></a>Viz také:
 
-- [Nasazení aplikací klasické pracovní plochy](deploying-native-desktop-applications-visual-cpp.md)
+- [Nasazení desktopových aplikací](deploying-native-desktop-applications-visual-cpp.md)
 - [Univerzální nasazení CRT](universal-crt-deployment.md)

@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - CreateInstance method [C++]
 ms.assetid: ab89b0e1-9da3-4784-a079-58b17340f111
-ms.openlocfilehash: c4f6cd54b90ab5fab69f91df67a8bf60b0b658f8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 82b180b3f40683495ed2cfa284bdae8e1afaef9e
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62399355"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69498653"
 ---
-# <a name="comptrtcreateinstance"></a>_com_ptr_t::CreateInstance
+# <a name="_com_ptr_tcreateinstance"></a>_com_ptr_t::CreateInstance
 
-**Microsoft Specific**
+**Specifické pro společnost Microsoft**
 
-Vytvoří novou instanci objektu dle `CLSID` nebo `ProgID`.
+Vytvoří novou instanci objektu daného typu `CLSID` nebo. `ProgID`
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -45,28 +45,28 @@ HRESULT CreateInstance(
 `CLSID` Objektu.
 
 *clsidString*<br/>
-Řetězec znaků Unicode udržující `CLSID` (počínaje "**{**") nebo `ProgID`.
+Řetězec v kódování Unicode, který obsahuje `CLSID` znak (začínající znakem " **{** `ProgID`") nebo.
 
 *clsidStringA*<br/>
-Vícebajtový řetězec používající znakovou stránku ANSI, který udržuje `CLSID` (počínaje "**{**") nebo `ProgID`.
+Vícebajtový řetězec s použitím znakové stránky ANSI, který obsahuje buď `CLSID` (začínající znakem " **{** `ProgID`") nebo.
 
 *dwClsContext*<br/>
 Kontext spuštění spustitelného kódu.
 
 *pOuter*<br/>
-Vnější Neznámá pro [agregace](../atl/aggregation.md).
+Vnější neznámý pro [agregaci](../atl/aggregation.md).
 
 ## <a name="remarks"></a>Poznámky
 
-Tyto členské funkce volají `CoCreateInstance` k vytvoření nového objektu modelu COM a pak dotazů pro typ rozhraní tohoto inteligentního ukazatele. Výsledný ukazatel je pak zapouzdřen v tomto objektu `_com_ptr_t`. `Release` nazývá se sníží počet odkazů na dříve zapouzdřený ukazatel. Tato rutina vrátí hodnotu HRESULT indikuje úspěch nebo selhání.
+Tyto členské funkce volají `CoCreateInstance` k vytvoření nového objektu COM a dotazují se na typ rozhraní tohoto inteligentního ukazatele. Výsledný ukazatel je pak zapouzdřen v tomto objektu `_com_ptr_t`. `Release`je volána pro snížení počtu odkazů pro dříve zapouzdřený ukazatel. Tato rutina vrátí HRESULT, aby označovala úspěch nebo neúspěch.
 
-- **Funkci CreateInstance (***rclsid* **,***dwClsContext***)** vytvoří novou běžící instanci objektu dle `CLSID`.
+- **CreateInstance (** *rclsid* **;** *dwClsContext* **)** Vytvoří novou spuštěnou instanci objektu s daným `CLSID`objektem.
 
-- **Funkci CreateInstance (***clsidString* **,***dwClsContext***)** vytvoří novou běžící instanci objektu dle Řetězec znaků Unicode udržující `CLSID` (počínaje "**{**") nebo `ProgID`.
+- **CreateInstance (** *clsidString* **;** *dwClsContext* **)** Vytvoří novou spuštěnou instanci objektu podle řetězce Unicode, který obsahuje buď `CLSID` (začínající znakem " **{** `ProgID`") nebo.
 
-- **Funkci CreateInstance (***clsidStringA* **,***dwClsContext***)** vytvoří novou běžící instanci objektu dle vícebajtový řetězec udržující `CLSID` (počínaje "**{**") nebo `ProgID`. Volání [MultiByteToWideChar](/windows/desktop/api/stringapiset/nf-stringapiset-multibytetowidechar), kde se předpokládá, že je řetězec uložen ve znakovou stránku ANSI, nikoli znakovou stránku OEM.
+- **CreateInstance (** *clsidStringA* **;** *dwClsContext* **)** Vytvoří novou spuštěnou instanci objektu předaným vícebajtovým znakovým řetězcem, který `CLSID` obsahuje buď (začínající znakem " **{** `ProgID`") nebo. Volá [MultiByteToWideChar](/windows/win32/api/stringapiset/nf-stringapiset-multibytetowidechar), která předpokládá, že řetězec je na znakové stránce ANSI, ne jako znaková stránka OEM.
 
-**Specifické pro END Microsoft**
+**Specifické pro konec Microsoftu**
 
 ## <a name="see-also"></a>Viz také:
 

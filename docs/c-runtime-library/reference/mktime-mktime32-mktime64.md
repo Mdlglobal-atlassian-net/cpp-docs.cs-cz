@@ -31,16 +31,16 @@ helpviewer_keywords:
 - _mktime64 function
 - time, converting
 ms.assetid: 284ed5d4-7064-48a2-bd50-15effdae32cf
-ms.openlocfilehash: 8e9524249d6c90323bdcfc0b92ecf2dad281c79b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c45b69f84a0aec159ed59a480e9358f27c8e85e2
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62156483"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69500986"
 ---
-# <a name="mktime-mktime32-mktime64"></a>mktime, _mktime32, _mktime64
+# <a name="mktime-_mktime32-_mktime64"></a>mktime, _mktime32, _mktime64
 
-Místní čas převeďte na hodnotu kalendáře.
+Převede místní čas na hodnotu kalendáře.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -59,35 +59,35 @@ __time64_t _mktime64(
 ### <a name="parameters"></a>Parametry
 
 *timeptr*<br/>
-Ukazatel na strukturu čas; Zobrazit [asctime –](asctime-wasctime.md).
+Ukazatel na časovou strukturu; viz [asctime](asctime-wasctime.md).
 
 ## <a name="return-value"></a>Návratová hodnota
 
-**_mktime32** vrací čas zadaný kalendář zakódován jako hodnotu typu [time_t](../../c-runtime-library/standard-types.md). Pokud *timeptr* odkazuje na datum před půlnocí, 1. ledna 1970, nebo pokud nemůže být reprezentovaná času v kalendáři, **_mktime32** vrátí hodnotu -1 přetypován na typ **time_t**. Při použití **_mktime32** a pokud *timeptr* odkazuje na data po 23:59:59 18. ledna 2038 koordinovaný univerzální čas (UTC), vrátí hodnotu -1 přetypován na typ **time_t**.
+**_mktime32** vrací zadaný časový čas, který se zakóduje jako hodnota typu [time_t](../../c-runtime-library/standard-types.md). Pokud *timeptr* odkazuje na datum před půlnocí 1. ledna 1970 nebo pokud čas kalendáře nelze reprezentovat, **_mktime32** vrátí-1 přetypování na typ **time_t**. Při použití **_mktime32** a pokud *timeptr* odkazuje na datum po 23:59:59. ledna 2038, KOORDINOVANÝ světový čas (UTC), vrátí-1 přetypování na typ **time_t**.
 
-**_mktime64** vrátí -1 přetypován na typ **__time64_t –** Pokud *timeptr* odkazuje na data po 23:59:59, 31 prosince 3000 UTC.
+**_mktime64** vrátí-1 přetypování na typ **__time64_t** , pokud *timeptr* odkazuje na datum po 23:59:59, 31. prosince 3000, UTC.
 
 ## <a name="remarks"></a>Poznámky
 
-**Mktime**, **_mktime32** a **_mktime64** převádějí (pravděpodobně neúplný) zadaný čas struktura odkazované *timeptr*do plně definovaná struktury s normalizované hodnoty a potom převede **time_t** hodnotu času v kalendáři. Převedený čas má stejné kódování jako hodnot vrácených [čas](time-time32-time64.md) funkce. Původní hodnoty **tm_wday** a **tm_yday** komponenty *timeptr* struktury jsou ignorovány a původní hodnoty ostatní součásti nejsou s omezeným přístupem do svého normálního rozsahu.
+Funkce **mktime**, **_mktime32** a **_mktime64** převádějí poskytnutou časovou strukturu (možná nekompletní), na kterou odkazuje *timeptr* do plně definované struktury s normalizovanými hodnotami a následně je převede na **time_t.** hodnota času kalendáře. Převedený čas má stejné kódování jako hodnoty vrácené funkcí [Time](time-time32-time64.md) . Původní hodnoty komponent **tm_wday** a **tm_yday** struktury *timeptr* jsou ignorovány a původní hodnoty ostatních komponent nejsou omezeny na jejich normální rozsahy.
 
-**mktime** je vložená funkce, která je ekvivalentní **_mktime64**, není-li **_USE_32BIT_TIME_T** je definován v takovém případě je ekvivalentní **_mktime32** .
+**mktime** je vložená funkce ekvivalentní hodnotě **_mktime64**, pokud není definována **_USE_32BIT_TIME_T** , v takovém případě je ekvivalentem **_mktime32**.
 
-Po úpravě na čas UTC **_mktime32** zpracovává data od půlnoci 1. ledna 1970, do 23:59:59 18. ledna 2038 UTC. **_mktime64** zpracovává data od půlnoci 1. ledna 1970 do 23:59:59, 31 prosince 3000. Toto nastavení může způsobit, že tyto funkce k vrátí hodnotu -1 (přetypovat na **time_t**, **__time32_t** nebo **__time64_t –**) i v případě, že zadáte datum je v rozsahu. Například pokud jste v Káhira, Egypt, která je dvě hodiny před časem UTC, dvě hodiny se nejprve bude odečítat od zadáte datum *timeptr*; to teď může vložit vaše data mimo rozsah.
+Po úpravě na čas UTC **_mktime32** zpracovává data od půlnoci 1. ledna 1970 do 23:59:59. ledna, 2038, UTC. **_mktime64** zpracovává data od půlnoci 1. ledna 1970 do 23:59:59, 31. prosince 3000. Toto nastavení může způsobit, že tyto funkce vrátí hodnotu-1 (přetypování do **time_t**, **__time32_t** nebo **__time64_t**), i když zadané datum spadá do rozsahu. Například pokud jste v Cairo, Egyptě, což je dvě hodiny před časem UTC, dvě hodiny se nejprve odečtou od data, které zadáte v *timeptr*. nyní může být datum mimo rozsah.
 
-Tyto funkce slouží k ověření a vyplňte strukturu tm. Pokud úspěšné, tyto funkce nastaví hodnoty **tm_wday** a **tm_yday** podle potřeby a nastavit další součásti představují čas zadaný kalendář, ale jejich hodnotami vynucené na normální rozsahy. Konečná hodnota **tm_mday** není nastavena do **tm_mon** a **tm_year** jsou určeny. Při zadávání **tm** struktury čas, nastavte **tm_isdst** pole:
+Tyto funkce se dají použít k ověření a vyplnění struktury TM. V případě úspěchu tyto funkce nastavují hodnoty **tm_wday** a **tm_yday** podle potřeby a nastavují ostatní komponenty, které reprezentují zadaný kalendářní čas, ale jejich hodnoty jsou vynucené do normálního rozsahu. Konečná hodnota **tm_mday** není nastavena, dokud nejsou určeny **tm_mon** a **tm_year** . Při určování doby struktury **TM** nastavte pole **tm_isdst** na:
 
-- Nula (0) k označení, že je v platnosti (běžný čas).
+- Nula (0) pro indikaci, že standardní čas je platný.
 
-- Hodnota, která je větší než 0, která znamená, že je v platnosti letní čas.
+- Hodnota větší než 0 značící, že je platný letní čas.
 
-- Hodnotu menší než nula, která mají kód knihovny run-time C compute, zda (běžný čas) nebo letního času je v platnosti.
+- Hodnota menší než nula znamená, že kód běhové knihovny jazyka C bude počítat bez ohledu na to, zda platí standardní čas nebo letní čas.
 
-Určuje chování letního času úspory času z knihovny run-time jazyka C [TZ](tzset.md) proměnné prostředí. Pokud **TZ** není nastavena, voláním rozhraní Win32 API [funkce GetTimeZoneInformation](/windows/desktop/api/timezoneapi/nf-timezoneapi-gettimezoneinformation) slouží k získání letní čas informace z operačního systému. Když se to nepovede, knihovně předpokládá, že jsou použita pravidla Spojených států pro implementaci výpočtu letního času. **tm_isdst** je povinné pole. Pokud není nastavena, její hodnota není definována a návratovou hodnotu z těchto funkcí nepředvídatelné. Pokud *timeptr* odkazuje na **tm** struktura vrácený z předchozího volání [asctime –](asctime-wasctime.md), [gmtime](gmtime-gmtime32-gmtime64.md), nebo [localtime](localtime-localtime32-localtime64.md) (nebo varianty těchto funkcí), **tm_isdst** pole obsahuje správnou hodnotu.
+Knihovna run-time jazyka C určí chování letního času z proměnné prostředí [TZ](tzset.md) . Pokud není nastavená oblast **TZ** , Win32 API volání [GetTimeZoneInformation](/windows/win32/api/timezoneapi/nf-timezoneapi-gettimezoneinformation) slouží k získání informací o letním čase z operačního systému. Pokud se to nepovede, knihovna předpokládá, že se použijí pravidla USA pro implementaci výpočtu letního času. **tm_isdst** je povinné pole. Pokud není nastavena, jeho hodnota je nedefinovaná a návratová hodnota z těchto funkcí je nepředvídatelné. Pokud *timeptr* odkazuje na strukturu **TM** , kterou vrátilo předchozí volání [asctime](asctime-wasctime.md), [gmtime](gmtime-gmtime32-gmtime64.md)nebo [localtime](localtime-localtime32-localtime64.md) (nebo varianty těchto funkcí), pole **tm_isdst** obsahuje správnou hodnotu.
 
-Všimněte si, že **gmtime** a **localtime** (a **_gmtime32**, **_gmtime64**, **_localtime32**, a **_localtime64**) použijte jednu vyrovnávací paměť na vlákno pro převod. Pokud zadáte tuto vyrovnávací paměť pro **mktime**, **_mktime32** nebo **_mktime64**, předchozí obsah je zničen.
+Všimněte si, že **gmtime** a **localtime** (a **_gmtime32**, **_gmtime64**, **_localtime32**a **_localtime64**) používají pro převod jednu vyrovnávací paměť na vlákno. Pokud tuto vyrovnávací paměť zadáte do **mktime**, **_mktime32** nebo **_mktime64**, předchozí obsah se zničí.
 
-Tyto funkce ověřují své parametru. Pokud *timeptr* je ukazatel s hodnotou null, je vyvolána obslužná rutina neplatného parametru, jak je popsáno v [Parameter Validation](../../c-runtime-library/parameter-validation.md). Pokud smí provádění pokračovat, vrátí funkce hodnotu -1 a nastaví **errno** k **EINVAL**.
+Tyto funkce ověřují svůj parametr. Pokud je *timeptr* ukazatel s hodnotou null, je vyvolána obslužná rutina neplatného parametru, jak je popsáno v tématu [ověřování parametru](../../c-runtime-library/parameter-validation.md). Pokud provádění může pokračovat, vrátí funkce hodnotu-1 a nastaví **errno** na **EINVAL**.
 
 ## <a name="requirements"></a>Požadavky
 
@@ -97,11 +97,11 @@ Tyto funkce ověřují své parametru. Pokud *timeptr* je ukazatel s hodnotou nu
 |**_mktime32**|\<time.h>|
 |**_mktime64**|\<time.h>|
 
-Další informace o kompatibilitě, naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
 
 ## <a name="libraries"></a>Knihovny
 
-Všechny verze [běhových knihoven C](../../c-runtime-library/crt-library-features.md).
+Všechny verze [knihoven run-time jazyka C](../../c-runtime-library/crt-library-features.md).
 
 ## <a name="example"></a>Příklad
 

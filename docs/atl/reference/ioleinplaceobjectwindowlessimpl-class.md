@@ -20,19 +20,19 @@ helpviewer_keywords:
 - controls [ATL], windowless
 - deactivating ATL
 ms.assetid: a2e0feb4-bc59-4adf-aab2-105457bbdbb4
-ms.openlocfilehash: df14c22f5cf4828b51bf03f6d0f0c4c20cf5a009
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: fdd660daae109ac2a656519131dd9869ceaeaf4e
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62197861"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69495749"
 ---
 # <a name="ioleinplaceobjectwindowlessimpl-class"></a>IOleInPlaceObjectWindowlessImpl Class
 
-Tato třída implementuje `IUnknown` a poskytuje metody, které umožňují ovládací prvek bez oken pro příjem zprávy okna a účastnit se operace přetažení myší.
+Tato třída implementuje `IUnknown` a poskytuje metody, které umožňují řízení bez oken přijímat zprávy oken a zúčastnit se operací přetažení.
 
 > [!IMPORTANT]
->  Tato třída a jejích členů nelze použít v aplikacích, které jsou spouštěny v modulu Windows Runtime.
+>  Tato třída a její členové nelze použít v aplikacích, které jsou spouštěny v prostředí Windows Runtime.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -44,28 +44,28 @@ class IOleInPlaceObjectWindowlessImpl
 #### <a name="parameters"></a>Parametry
 
 *T*<br/>
-Vaše třída odvozena od `IOleInPlaceObjectWindowlessImpl`.
+Vaše třída, která je `IOleInPlaceObjectWindowlessImpl`odvozena z.
 
 ## <a name="members"></a>Členové
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
-|[IOleInPlaceObjectWindowlessImpl::ContextSensitiveHelp](#contextsensitivehelp)|Umožňuje kontextové nápovědy. Implementace knihovny ATL vrátí E_NOTIMPL.|
-|[IOleInPlaceObjectWindowlessImpl::GetDropTarget](#getdroptarget)|Poskytuje `IDropTarget` rozhraní pro místní aktivní, bez oken objekt, který podporuje přetažení. Implementace knihovny ATL vrátí E_NOTIMPL.|
+|[IOleInPlaceObjectWindowlessImpl::ContextSensitiveHelp](#contextsensitivehelp)|Povolí kontextovou Nápověda. Implementace ATL Vrátí E_NOTIMPL.|
+|[IOleInPlaceObjectWindowlessImpl::GetDropTarget](#getdroptarget)|`IDropTarget` Poskytuje rozhraní pro místní aktivní objekt bez oken, který podporuje přetahování myší. Implementace ATL Vrátí E_NOTIMPL.|
 |[IOleInPlaceObjectWindowlessImpl::GetWindow](#getwindow)|Získá popisovač okna.|
-|[IOleInPlaceObjectWindowlessImpl::InPlaceDeactivate](#inplacedeactivate)|Deaktivuje aktivní ovládací prvek na místě.|
-|[IOleInPlaceObjectWindowlessImpl::OnWindowMessage](#onwindowmessage)|Odešle zprávu z kontejneru na ovládací prvek bez oken, která je na místě aktivní.|
-|[IOleInPlaceObjectWindowlessImpl::ReactivateAndUndo](#reactivateandundo)|Znovu aktivuje dříve deaktivované ovládacího prvku. Implementace knihovny ATL vrátí E_NOTIMPL.|
-|[IOleInPlaceObjectWindowlessImpl::SetObjectRects](#setobjectrects)|Určuje, jaká část ovládacího prvku na místě je viditelné.|
-|[IOleInPlaceObjectWindowlessImpl::UIDeactivate](#uideactivate)|Deaktivuje a odebere uživatelské rozhraní, které podporuje aktivace na místě.|
+|[IOleInPlaceObjectWindowlessImpl::InPlaceDeactivate](#inplacedeactivate)|Deaktivuje aktivní místní ovládací prvek.|
+|[IOleInPlaceObjectWindowlessImpl::OnWindowMessage](#onwindowmessage)|Odesílá zprávu z kontejneru do ovládacího prvku bez oken, který je místně aktivní.|
+|[IOleInPlaceObjectWindowlessImpl::ReactivateAndUndo](#reactivateandundo)|Znovu aktivuje dříve deaktivovaný ovládací prvek. Implementace ATL Vrátí E_NOTIMPL.|
+|[IOleInPlaceObjectWindowlessImpl::SetObjectRects](#setobjectrects)|Označuje, jaká část místního ovládacího prvku je viditelná.|
+|[IOleInPlaceObjectWindowlessImpl::UIDeactivate](#uideactivate)|Deaktivuje a odebere uživatelské rozhraní, které podporuje místní aktivaci.|
 
 ## <a name="remarks"></a>Poznámky
 
-[IOleInPlaceObject](/windows/desktop/api/oleidl/nn-oleidl-ioleinplaceobject) rozhraní spravuje opětovné aktivace a deaktivace místní ovládací prvky a určuje, jak velká část ovládací prvek by měl být viditelné. [IOleInPlaceObjectWindowless](/windows/desktop/api/ocidl/nn-ocidl-ioleinplaceobjectwindowless) rozhraní umožňuje ovládací prvek bez oken pro příjem zprávy okna a účastnit se operace přetažení myší. Třída `IOleInPlaceObjectWindowlessImpl` poskytuje výchozí implementaci třídy `IOleInPlaceObject` a `IOleInPlaceObjectWindowless` a implementuje `IUnknown` posíláním informací o k výpisu paměti zařízení v ladění sestavení.
+Rozhraní [IOleInPlaceObject](/windows/win32/api/oleidl/nn-oleidl-ioleinplaceobject) spravuje opětovnou aktivaci a deaktivaci místních ovládacích prvků a určuje, jak velká část ovládacího prvku by měla být viditelná. Rozhraní [IOleInPlaceObjectWindowless](/windows/win32/api/ocidl/nn-ocidl-ioleinplaceobjectwindowless) umožňuje ovládat bez oken příjem zpráv oken a účast na operacích přetažení. Třída `IOleInPlaceObjectWindowlessImpl` poskytuje výchozí `IOleInPlaceObject` implementaci a `IOleInPlaceObjectWindowless` a implementuje `IUnknown` odesláním informací do zařízení výpisu paměti v sestaveních pro ladění.
 
-**Související články** [ATL – tutoriál](../../atl/active-template-library-atl-tutorial.md), [vytvoření projektu ATL](../../atl/reference/creating-an-atl-project.md)
+**Související články** [Kurz ATL](../../atl/active-template-library-atl-tutorial.md), [Vytvoření projektu ATL](../../atl/reference/creating-an-atl-project.md)
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
@@ -75,7 +75,7 @@ Vaše třída odvozena od `IOleInPlaceObjectWindowlessImpl`.
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** atlctl.h
+**Záhlaví:** atlctl. h
 
 ##  <a name="contextsensitivehelp"></a>  IOleInPlaceObjectWindowlessImpl::ContextSensitiveHelp
 
@@ -87,7 +87,7 @@ HRESULT ContextSensitiveHelp(BOOL fEnterMode);
 
 ### <a name="remarks"></a>Poznámky
 
-Zobrazit [IOleWindow::ContextSensitiveHelp](/windows/desktop/api/oleidl/nf-oleidl-iolewindow-contextsensitivehelp) ve Windows SDK.
+Viz [IOleWindow:: ContextSensitiveHelp](/windows/win32/api/oleidl/nf-oleidl-iolewindow-contextsensitivehelp) v Windows SDK.
 
 ##  <a name="getdroptarget"></a>  IOleInPlaceObjectWindowlessImpl::GetDropTarget
 
@@ -99,11 +99,11 @@ HRESULT GetDropTarget(IDropTarget** ppDropTarget);
 
 ### <a name="remarks"></a>Poznámky
 
-Zobrazit [IOleInPlaceObjectWindowless::GetDropTarget](/windows/desktop/api/ocidl/nf-ocidl-ioleinplaceobjectwindowless-getdroptarget) ve Windows SDK.
+Viz [IOleInPlaceObjectWindowless:: GetDropTarget](/windows/win32/api/ocidl/nf-ocidl-ioleinplaceobjectwindowless-getdroptarget) v Windows SDK.
 
 ##  <a name="getwindow"></a>  IOleInPlaceObjectWindowlessImpl::GetWindow
 
-Kontejner volá tuto funkci chcete-li získat popisovač okna ovládacího prvku.
+Kontejner volá tuto funkci, aby získala popisovač okna ovládacího prvku.
 
 ```
 HRESULT GetWindow(HWND* phwnd);
@@ -111,13 +111,13 @@ HRESULT GetWindow(HWND* phwnd);
 
 ### <a name="remarks"></a>Poznámky
 
-S ovládacím prvkem, který je bez oken, i když je aktuálně oddílové nebudou fungovat některé kontejnery. V implementaci ATL Pokud – datový člen třídy ovládacího prvku `m_bWasOnceWindowless` má hodnotu TRUE, funkce vrátí E_FAIL. Jinak, pokud *phwnd* nemá hodnotu NULL, `GetWindow` nastaví \* *phwnd* na datový člen třídy ovládacího prvku `m_hWnd` a vrátí hodnotu S_OK.
+Některé kontejnery nebudou fungovat s ovládacím prvkem, který byl bez okna, i v případě, že je aktuálně okna. V implementaci ATL, pokud je datový člen `m_bWasOnceWindowless` třídy ovládacího prvku true, vrátí funkce E_FAIL. V opačném případě, pokud *phwnd* není `GetWindow` null \* , nastaví *phwnd* na datový člen `m_hWnd` třídy ovládacího prvku a vrátí hodnotu S_OK.
 
-Zobrazit [IOleWindow::GetWindow](/windows/desktop/api/oleidl/nf-oleidl-iolewindow-getwindow) ve Windows SDK.
+Viz [IOleWindow:: GetWindow](/windows/win32/api/oleidl/nf-oleidl-iolewindow-getwindow) v Windows SDK.
 
 ##  <a name="inplacedeactivate"></a>  IOleInPlaceObjectWindowlessImpl::InPlaceDeactivate
 
-Volá se kontejnerem deaktivace aktivní ovládací prvek na místě.
+Volá se kontejnerem, aby se deaktivoval místní aktivní ovládací prvek.
 
 ```
 HRESULT InPlaceDeactivate(HWND* phwnd);
@@ -125,13 +125,13 @@ HRESULT InPlaceDeactivate(HWND* phwnd);
 
 ### <a name="remarks"></a>Poznámky
 
-Tato metoda provádí celé nebo jeho část deaktivaci v závislosti na stavu ovládacího prvku. V případě potřeby deaktivovat ovládacího prvku uživatelského rozhraní a okno ovládacího prvku, pokud existuje, je zničen. Kontejner se zobrazí oznámení, že ovládací prvek již není aktivní v místě. `IOleInPlaceUIWindow` Rozhraní kontejner má být vyjednána nabídky a ohraničení, která místa se uvolní.
+Tato metoda provádí úplnou nebo částečnou deaktivaci v závislosti na stavu ovládacího prvku. V případě potřeby je uživatelské rozhraní ovládacího prvku dezaktivováno a okno ovládacího prvku, pokud je nějaké, je zničeno. Kontejner je upozorněn, že ovládací prvek již není aktivní. `IOleInPlaceUIWindow` Rozhraní používané kontejnerem k vyjednání nabídek a prostoru ohraničení je uvolněno.
 
-Zobrazit [IOleInPlaceObject::InPlaceDeactivate](/windows/desktop/api/oleidl/nf-oleidl-ioleinplaceobject-inplacedeactivate) ve Windows SDK.
+Viz [IOleInPlaceObject:: InPlaceDeactivate](/windows/win32/api/oleidl/nf-oleidl-ioleinplaceobject-inplacedeactivate) v Windows SDK.
 
 ##  <a name="onwindowmessage"></a>  IOleInPlaceObjectWindowlessImpl::OnWindowMessage
 
-Odešle zprávu z kontejneru na ovládací prvek bez oken, která je na místě aktivní.
+Odesílá zprávu z kontejneru do ovládacího prvku bez oken, který je místně aktivní.
 
 ```
 HRESULT OnWindowMessage(
@@ -143,9 +143,9 @@ HRESULT OnWindowMessage(
 
 ### <a name="remarks"></a>Poznámky
 
-Zobrazit [IOleInPlaceObjectWindowless::OnWindowMessage](/windows/desktop/api/ocidl/nf-ocidl-ioleinplaceobjectwindowless-onwindowmessage) ve Windows SDK.
+Viz [IOleInPlaceObjectWindowless:: OnWindowMessage](/windows/win32/api/ocidl/nf-ocidl-ioleinplaceobjectwindowless-onwindowmessage) v Windows SDK.
 
-##  <a name="reactivateandundo"></a>  IOleInPlaceObjectWindowlessImpl::ReactivateAndUndo
+##  <a name="reactivateandundo"></a>IOleInPlaceObjectWindowlessImpl::ReactivateAndUndo
 
 Vrátí E_NOTIMPL.
 
@@ -155,11 +155,11 @@ HRESULT ReactivateAndUndo();
 
 ### <a name="remarks"></a>Poznámky
 
-Zobrazit [IOleInPlaceObject::ReactivateAndUndo](/windows/desktop/api/oleidl/nf-oleidl-ioleinplaceobject-reactivateandundo) ve Windows SDK.
+Viz [IOleInPlaceObject:: ReactivateAndUndo](/windows/win32/api/oleidl/nf-oleidl-ioleinplaceobject-reactivateandundo) v Windows SDK.
 
 ##  <a name="setobjectrects"></a>  IOleInPlaceObjectWindowlessImpl::SetObjectRects
 
-Volá se kontejnerem ovládacího prvku, který došlo ke změně jeho velikosti nebo pozice informovat.
+Volá se kontejnerem, který informuje ovládací prvek, že se změnila jeho velikost nebo pozice.
 
 ```
 HRESULT SetObjectRects(LPCRECT prcPos, LPCRECT prcClip);
@@ -167,13 +167,13 @@ HRESULT SetObjectRects(LPCRECT prcPos, LPCRECT prcClip);
 
 ### <a name="remarks"></a>Poznámky
 
-Aktualizuje ovládacího prvku `m_rcPos` datový člen a zobrazení ovládacího prvku. Zobrazí se pouze část, která protíná oblast ústřižku ovládacího prvku. Pokud byla dříve oříznut zobrazení ovládacího prvku, ale výstřižek se odebral, tuto funkci lze volat pro překreslení ucelený pohled na ovládací prvek.
+Aktualizuje `m_rcPos` datový člen ovládacího prvku a zobrazení ovládacího prvku. Zobrazí se pouze ta část ovládacího prvku, která se protínají oblasti klipu. Pokud byla dříve oříznuta obrazovka ovládacího prvku, ale byl odebrán výstřižek, lze tuto funkci volat pro překreslení celého zobrazení ovládacího prvku.
 
-Zobrazit [IOleInPlaceObject::SetObjectRects](/windows/desktop/api/oleidl/nf-oleidl-ioleinplaceobject-setobjectrects) ve Windows SDK.
+Viz [IOleInPlaceObject:: SetObjectRects](/windows/win32/api/oleidl/nf-oleidl-ioleinplaceobject-setobjectrects) v Windows SDK.
 
-##  <a name="uideactivate"></a>  IOleInPlaceObjectWindowlessImpl::UIDeactivate
+##  <a name="uideactivate"></a>IOleInPlaceObjectWindowlessImpl::UIDeactivate
 
-Deaktivuje a odebere ovládacího prvku uživatelského rozhraní, která podporuje aktivace na místě.
+Deaktivuje a odebere uživatelské rozhraní ovládacího prvku, které podporuje místní aktivaci.
 
 ```
 HRESULT UIDeactivate();
@@ -181,11 +181,11 @@ HRESULT UIDeactivate();
 
 ### <a name="remarks"></a>Poznámky
 
-Nastaví – datový člen třídy ovládacího prvku `m_bUIActive` na hodnotu FALSE. Implementace knihovny ATL této funkce vždy vrátí hodnotu S_OK.
+Nastaví datový člen `m_bUIActive` třídy ovládacího prvku na hodnotu false. Implementace knihovny ATL této funkce vždy vrátí hodnotu S_OK.
 
-Zobrazit [IOleInPlaceObject::UIDeactivate](/windows/desktop/api/oleidl/nf-oleidl-ioleinplaceobject-uideactivate) ve Windows SDK.
+Viz [IOleInPlaceObject:: UIDeactivate](/windows/win32/api/oleidl/nf-oleidl-ioleinplaceobject-uideactivate) v Windows SDK.
 
 ## <a name="see-also"></a>Viz také:
 
 [CComControl – třída](../../atl/reference/ccomcontrol-class.md)<br/>
-[Přehled tříd](../../atl/atl-class-overview.md)
+[Přehled třídy](../../atl/atl-class-overview.md)

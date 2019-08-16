@@ -5,34 +5,34 @@ helpviewer_keywords:
 - registering OLE controls
 - OLE controls [MFC], registering
 ms.assetid: 73c45b7f-7dbc-43f5-bd17-dd77c6acec72
-ms.openlocfilehash: a8ade688b90c99c166073b22a9eed71d1a518dc2
-ms.sourcegitcommit: 934cb53fa4cb59fea611bfeb9db110d8d6f7d165
+ms.openlocfilehash: 9fcbc002913cc6cce86276796a371231ef0f32e1
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65611745"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69501996"
 ---
 # <a name="registering-ole-controls"></a>Registrace ovládacích prvků OLE
 
-Ovládací prvky OLE, jako u jiných objektů serveru OLE je přístupný další aplikace používající OLE. Tím se dosahuje registrace knihovny typů a tříd ovládacího prvku.
+Ovládací prvky OLE, jako jsou jiné objekty serveru OLE, mohou být k dispozici pro jiné aplikace podporující technologii OLE. Toho dosáhnete registrací knihovny typů a třídy ovládacího prvku.
 
-Tyto funkce umožňují přidávat a odebírat ovládacího prvku třídy stránky vlastností a knihovnu typů v registrační databázi Windows:
+Následující funkce umožňují přidat a odebrat třídu ovládacího prvku, stránky vlastností a knihovnu typů v registrační databázi systému Windows:
 
 ### <a name="registering-ole-controls"></a>Registrace ovládacích prvků OLE
 
 |||
 |-|-|
-|[AfxOleRegisterControlClass](#afxoleregistercontrolclass)|Přidá třídu ovládacího prvku do registrační databázi.|
-|[AfxOleRegisterPropertyPageClass](#afxoleregisterpropertypageclass)|Stránka vlastností ovládacího prvku přidá do registrační databázi.|
-|[AfxOleRegisterTypeLib](#afxoleregistertypelib)|Přidá knihovnu typů ovládacího prvku do registrační databázi.|
-|[AfxOleUnregisterClass](#afxoleunregisterclass)|Odebere z registrační databáze třídy ovládacího prvku nebo třídy stránky vlastností.|
-|[AfxOleUnregisterTypeLib](#afxoleunregistertypelib)|Odebere knihovny typů ovládacího prvku z registrační databázi.|
+|[AfxOleRegisterControlClass](#afxoleregistercontrolclass)|Přidá třídu ovládacího prvku do registrační databáze.|
+|[AfxOleRegisterPropertyPageClass](#afxoleregisterpropertypageclass)|Přidá stránku vlastností ovládacího prvku do registrační databáze.|
+|[AfxOleRegisterTypeLib](#afxoleregistertypelib)|Přidá knihovnu typů ovládacího prvku do registrační databáze.|
+|[AfxOleUnregisterClass](#afxoleunregisterclass)|Odebere třídu ovládacího prvku nebo třídu stránky vlastností z registrační databáze.|
+|[AfxOleUnregisterTypeLib](#afxoleunregistertypelib)|Odebere z registrační databáze knihovnu typů ovládacího prvku.|
 
-`AfxOleRegisterTypeLib` je obvykle volána v implementaci ovládacího prvku DLL `DllRegisterServer`. Obdobně `AfxOleUnregisterTypeLib` je volán `DllUnregisterServer`. `AfxOleRegisterControlClass`, `AfxOleRegisterPropertyPageClass`, a `AfxOleUnregisterClass` jsou obvykle volány `UpdateRegistry` členskou funkci třídy ovládacího prvku objekt pro vytváření nebo vlastnosti stránky.
+`AfxOleRegisterTypeLib`se obvykle volá v implementaci sady `DllRegisterServer`DLL ovládacího prvku. `AfxOleUnregisterTypeLib` Podobně je`DllUnregisterServer`volána. `AfxOleRegisterControlClass`, `AfxOleRegisterPropertyPageClass`, a `AfxOleUnregisterClass` jsouobvyklevolányčlenskoufunkcíovládacíhoprvkutřídyneboobjektuvlastnosti.`UpdateRegistry`
 
 ##  <a name="afxoleregistercontrolclass"></a>  AfxOleRegisterControlClass
 
-Zaregistruje třídu ovládacího prvku se registrační databázi Windows.
+Registruje třídu ovládacího prvku s registrační databází systému Windows.
 
 ```
 BOOL AFXAPI AfxOleRegisterControlClass(
@@ -51,36 +51,36 @@ BOOL AFXAPI AfxOleRegisterControlClass(
 ### <a name="parameters"></a>Parametry
 
 *hInstance*<br/>
-Popisovač instance modulu přidružené k třídě ovládacího prvku.
+Obslužná rutina instance modulu přidruženého k třídě ovládacího prvku.
 
-*clsid*<br/>
-Třída jedinečné ID ovládacího prvku.
+*CLSID*<br/>
+Jedinečné ID třídy ovládacího prvku
 
 *pszProgID*<br/>
-Jedinečný Identifikátor programu ovládacího prvku.
+Jedinečné ID programu ovládacího prvku.
 
 *idTypeName*<br/>
-ID prostředku řetězce, který obsahuje název čitelný pro uživatele typu ovládacího prvku.
+ID prostředku řetězce, který obsahuje název typu čitelný uživatelem pro ovládací prvek.
 
 *idBitmap*<br/>
-ID prostředku rastrového obrázku používá k reprezentování ovládacího prvku OLE v panelu nástrojů nebo z palety.
+ID prostředku rastrového obrázku používaného k reprezentaci ovládacího prvku OLE na panelu nástrojů nebo v paletě
 
 *nRegFlags*<br/>
-Obsahuje jeden nebo více z následujících příznaků:
+Obsahuje jeden nebo více následujících příznaků:
 
-- `afxRegInsertable` Umožňuje ovládacímu prvku se zobrazí v dialogovém okně Vložit objekt pro objekty OLE.
+- `afxRegInsertable`Umožňuje ovládacímu prvku zobrazit v dialogovém okně Vložit objekt pro objekty OLE.
 
-- `afxRegApartmentThreading` Nastaví model vláken v registru ThreadingModel = objektu Apartment.
+- `afxRegApartmentThreading`Nastaví model vláken v registru na ThreadingModel = Apartment.
 
-- `afxRegFreeThreading` Nastaví model vláken v registru ThreadingModel = Free.
+- `afxRegFreeThreading`Nastaví model vláken v registru na ThreadingModel = Free.
 
-   Můžete kombinovat dvěma příznaky `afxRegApartmentThreading` a `afxRegFreeThreading` nastavit ThreadingModel = obojí. Zobrazit [InprocServer32](/windows/desktop/com/inprocserver32) v sadě Windows SDK pro další informace o dělení na vlákna registrace modelu.
+   Můžete zkombinovat dva příznaky `afxRegApartmentThreading` a `afxRegFreeThreading` nastavit ThreadingModel = both. Další informace o registraci modelu vláken naleznete v tématu [InprocServer32](/windows/win32/com/inprocserver32) v Windows SDK.
 
 > [!NOTE]
->  V MFC – verze před MFC 4.2 **int** *nRegFlags* parametr byl parametr typu BOOL *bInsertable*, který povolené nebo zakázané ovládací prvek, který má být vložen z Insert Dialogové okno objektu.
+>  V verzích MFC před verzí MFC 4,2 byl parametr **int** *nRegFlags* parametr bool, *bInsertable*, který povolil nebo zakázal ovládacímu prvku vložení z dialogového okna Vložit objekt.
 
 *dwMiscStatus*<br/>
-Obsahuje jeden nebo více z následujících příznaků stav (pro popis příznaků výčtu viz OLEMISC v sadě Windows SDK):
+Obsahuje jeden nebo více následujících příznaků stavu (pro popis příznaků, viz výčet OLEMISC v Windows SDK):
 
 - OLEMISC_RECOMPOSEONRESIZE
 
@@ -121,39 +121,39 @@ Obsahuje jeden nebo více z následujících příznaků stav (pro popis přízn
 - OLEMISC_SETCLIENTSITEFIRST
 
 *tlid*<br/>
-Jedinečné ID třídy ovládacího prvku.
+Jedinečné ID třídy ovládacího prvku
 
 *wVerMajor*<br/>
-Číslo hlavní verze třídy ovládacího prvku.
+Hlavní číslo verze třídy ovládacího prvku.
 
 *wVerMinor*<br/>
-Číslo podverze třídy ovládacího prvku.
+Číslo dílčí verze třídy ovládacího prvku.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Nenulové, pokud byl zaregistrován třídě ovládacího prvku; jinak 0.
+Nenulové, pokud byla třída ovládacího prvku registrována; v opačném případě 0.
 
 ### <a name="remarks"></a>Poznámky
 
-To umožňuje používat kontejnery, které jsou OLE-control ovládacího prvku. `AfxOleRegisterControlClass` aktualizace registru s názvem ovládacího prvku a umístění v systému a také nastaví model vláken, který podporuje ovládací prvek v registru. Další informace najdete v tématu [Technická poznámka 64](../../mfc/tn064-apartment-model-threading-in-activex-controls.md), "Apartment Model práce s vlákny v ovládacích prvků technologie OLE," a [o procesech a vláknech](/windows/desktop/ProcThread/about-processes-and-threads) v sadě Windows SDK.
+To umožňuje ovládacímu prvku používat kontejnery, které mají technologii OLE Control. `AfxOleRegisterControlClass`aktualizuje registr pomocí názvu a umístění ovládacího prvku v systému a také nastaví model vláken, který ovládací prvek podporuje v registru. Další informace naleznete v části [Technická poznámka 64](../../mfc/tn064-apartment-model-threading-in-activex-controls.md), "Apartment-model threading v ovládacích prvcích OLE" a [o procesech a vláknech](/windows/win32/ProcThread/about-processes-and-threads) v Windows SDK.
 
 ### <a name="example"></a>Příklad
 
 [!code-cpp[NVC_MFCAxCtl#11](../../mfc/reference/codesnippet/cpp/registering-ole-controls_1.cpp)]
 
-Výše uvedený příklad ukazuje, jak `AfxOleRegisterControlClass` je volána s příznakem pro Vložitelný a příznak pro objektu apartment modelu sloučeny pomocí operátoru OR dohromady a vytvoří šestého parametru:
+Výše uvedený příklad ukazuje, `AfxOleRegisterControlClass` jak se volá s příznakem pro vkládání a příznak pro ORed modelu apartment pro vytvoření šestého parametru:
 
 [!code-cpp[NVC_MFCAxCtl#12](../../mfc/reference/codesnippet/cpp/registering-ole-controls_2.cpp)]
 
-Ovládací prvek se zobrazí v dialogovém okně Vložit objekt povolené kontejnery a bude s ohledem na modelu objektu apartment. Ovládací prvky s ohledem na model Apartment musí statické třídy, která data se chrání prostřednictvím zámky, zkontrolujte, aby při ovládacího prvku v objektu apartment jeden přistupuje statická data, před jeho dokončením, a jiná instance stejné třídy spustí pomocí, to není zakázáno plánovačem stejná statická data. Všechny přístupy ke statickým datům umístí kód kritický oddíl.
+Ovládací prvek se zobrazí v dialogovém okně Vložit objekt pro povolené kontejnery a bude s ním pracují modelem Apartment. Ovládací prvky s přímým přístupem modelu musí zajistit, aby data statické třídy byla chráněná zámky, takže zatímco ovládací prvek v jednom objektu Apartment přistupuje ke statickým datům, není neaktivní v Plánovači před jeho dokončením a další instance stejné třídy začne používat. stejná statická data. Veškerý přístup ke statickým datům bude uzavřený podle kritického kódu oddílu.
 
 ### <a name="requirements"></a>Požadavky
 
-  **Header** afxctl.h
+  **Header** AFXCTL. h
 
 ##  <a name="afxoleregisterpropertypageclass"></a>  AfxOleRegisterPropertyPageClass
 
-Zaregistruje Windows registrační databáze třídy stránky vlastností.
+Zaregistruje třídu stránky vlastností do registrační databáze systému Windows.
 
 ```
 BOOL AFXAPI AfxOleRegisterPropertyPageClass(
@@ -166,37 +166,37 @@ BOOL AFXAPI AfxOleRegisterPropertyPageClass(
 ### <a name="parameters"></a>Parametry
 
 *hInstance*<br/>
-Popisovač instance modulu přidružené třídy stránky vlastností.
+Obslužná rutina instance modulu přidruženého k třídě stránky vlastností.
 
-*clsid*<br/>
-ID jedinečné třídy stránky vlastností.
+*CLSID*<br/>
+Jedinečné ID třídy stránky vlastností
 
 *idTypeName*<br/>
-ID prostředku řetězce, který obsahuje uživatelem čitelný název stránky vlastností.
+ID prostředku řetězce, který obsahuje název čitelný uživatelem pro stránku vlastností.
 
 *nRegFlags*<br/>
-Příznak může obsahovat:
+Může obsahovat příznak:
 
-- `afxRegApartmentThreading` Nastaví model vláken v registru ThreadingModel = objektu Apartment.
+- `afxRegApartmentThreading`Nastaví model vláken v registru na ThreadingModel = Apartment.
 
 > [!NOTE]
->  V MFC verze starší než MFC 4.2 **int** *nRegFlags* parametr nebyl k dispozici. Všimněte si také, že `afxRegInsertable` příznak není platná možnost pro stránky vlastností a způsobí vyhodnocení v knihovně MFC, pokud je nastavena
+>  V verzích knihovny MFC před verzí MFC 4,2 nebyl parametr **int** *nRegFlags* k dispozici. Všimněte si, že `afxRegInsertable` příznak není platnou možností pro stránky vlastností a v případě, že je nastaven, vyvolá v knihovně MFC kontrolní výraz.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Nenulové, pokud byl zaregistrován třídě ovládacího prvku; jinak 0.
+Nenulové, pokud byla třída ovládacího prvku registrována; v opačném případě 0.
 
 ### <a name="remarks"></a>Poznámky
 
-To umožňuje používat kontejnery, které jsou OLE-control na stránce vlastností. `AfxOleRegisterPropertyPageClass` aktualizace registru s názvem stránky vlastností a jeho umístění v systému a také nastaví model vláken, který podporuje ovládací prvek v registru. Další informace najdete v tématu [Technická poznámka 64](../../mfc/tn064-apartment-model-threading-in-activex-controls.md), "Apartment Model práce s vlákny v ovládacích prvků technologie OLE," a [o procesech a vláknech](/windows/desktop/ProcThread/about-processes-and-threads) v sadě Windows SDK.
+To umožňuje, aby se stránka vlastností použila kontejnery, které mají technologii OLE Control. `AfxOleRegisterPropertyPageClass`aktualizuje registr s názvem stránky vlastností a jeho umístěním v systému a také nastaví model vláken, který ovládací prvek podporuje v registru. Další informace naleznete v části [Technická poznámka 64](../../mfc/tn064-apartment-model-threading-in-activex-controls.md), "Apartment-model threading v ovládacích prvcích OLE" a [o procesech a vláknech](/windows/win32/ProcThread/about-processes-and-threads) v Windows SDK.
 
 ### <a name="requirements"></a>Požadavky
 
-  **Header** afxctl.h
+  **Header** AFXCTL. h
 
 ##  <a name="afxoleregistertypelib"></a>  AfxOleRegisterTypeLib
 
-Zaregistruje knihovnu typů s registrační databáze Windows a umožňuje používat další kontejnery, které jsou OLE-control knihovnu typů.
+Zaregistruje knihovnu typů s registrační databází Windows a umožňuje, aby se knihovna typů použila v jiných kontejnerech, které podporují ovládací prvky OLE.
 
 ```
 BOOL AfxOleRegisterTypeLib(
@@ -209,24 +209,24 @@ BOOL AfxOleRegisterTypeLib(
 ### <a name="parameters"></a>Parametry
 
 *hInstance*<br/>
-Popisovač instance aplikace, které jsou přidružené ke knihovně typů.
+Popisovač instance aplikace přidružené k knihovně typů
 
 *tlid*<br/>
-Jedinečné ID knihovny typů.
+Jedinečné ID knihovny typů
 
 *pszFileName*<br/>
-Odkazuje na volitelný název souboru knihovny typů lokalizované (. Na soubor TLB) pro ovládací prvek.
+Odkazuje na nepovinný název souboru lokalizované knihovny typů (. TLB) pro ovládací prvek.
 
 *pszHelpDir*<br/>
-Název adresáře, kde můžete najít v souboru nápovědy pro knihovnu typů. Pokud má hodnotu NULL, soubor nápovědy je považován za ve stejném adresáři jako samotné knihovny typů.
+Název adresáře, kde lze nalézt soubor s nápovědu pro knihovnu typů. Pokud má hodnotu NULL, předpokládá se, že se soubor Help nachází ve stejném adresáři jako samotná knihovna typů.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Nenulové, pokud knihovna typů byla registrována; jinak 0.
+Nenulové, pokud byla zaregistrována knihovna typů; v opačném případě 0.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato funkce aktualizuje registr název knihovny typů a jeho umístění v systému.
+Tato funkce aktualizuje registr s názvem knihovny typů a jeho umístěním v systému.
 
 ### <a name="example"></a>Příklad
 
@@ -240,7 +240,7 @@ Tato funkce aktualizuje registr název knihovny typů a jeho umístění v syst�
 
 ##  <a name="afxoleunregisterclass"></a>  AfxOleUnregisterClass
 
-Odebere položku Ovládací prvek nebo vlastnost třídy stránky z registrační databázi Windows.
+Odebere položku ovládacího prvku nebo třídy stránky vlastností z registrační databáze systému Windows.
 
 ```
 BOOL AFXAPI AfxOleUnregisterClass(REFCLSID clsID, LPCSTR pszProgID);
@@ -249,22 +249,22 @@ BOOL AFXAPI AfxOleUnregisterClass(REFCLSID clsID, LPCSTR pszProgID);
 ### <a name="parameters"></a>Parametry
 
 *clsID*<br/>
-ID jedinečné třídy stránky, ovládací prvek nebo vlastnost.
+Jedinečné ID třídy ovládacího prvku nebo stránky vlastností.
 
 *pszProgID*<br/>
-Jedinečný Identifikátor programu na stránce ovládací prvek nebo vlastnost.
+Jedinečné ID programu ovládacího prvku nebo stránky vlastností.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Nenulové, pokud ovládací prvek nebo vlastnost třídy stránky byl úspěšně odregistrován; jinak 0.
+Nenulové, pokud byla třída ovládacího prvku nebo stránky vlastností úspěšně odregistrována; v opačném případě 0.
 
 ### <a name="requirements"></a>Požadavky
 
-  **Header** afxctl.h
+  **Header** AFXCTL. h
 
 ##  <a name="afxoleunregistertypelib"></a>  AfxOleUnregisterTypeLib
 
-Voláním této funkce odeberte záznam knihovny typů z registrační databázi Windows.
+Voláním této funkce odeberete položku knihovny typů z registrační databáze systému Windows.
 
 ```
 BOOL AFXAPI AfxOleUnregisterTypeLib(REFGUID tlID);
@@ -273,11 +273,11 @@ BOOL AFXAPI AfxOleUnregisterTypeLib(REFGUID tlID);
 ### <a name="parameters"></a>Parametry
 
 *tlID*<br/>
-Jedinečné ID knihovny typů.
+Jedinečné ID knihovny typů
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Nenulové, pokud byl úspěšně odregistrován; knihovny typů jinak 0.
+Nenulové, pokud se knihovna typů úspěšně zrušila. v opačném případě 0.
 
 ### <a name="example"></a>Příklad
 

@@ -1,21 +1,21 @@
 ---
-title: Volitelný (atribut COM jazyka C++)
+title: volitelné (C++ atribut com)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.optional
 helpviewer_keywords:
 - optional attribute
 ms.assetid: 86656a66-8e11-4589-8e30-9b0f34eeed03
-ms.openlocfilehash: bc6422ff652cfaba5fa71285294b93c1f0e8990e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7891d75adbfeba0d91d4a3aed60423975838951f
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62407585"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69514346"
 ---
 # <a name="optional-c"></a>optional (C++)
 
-Určuje volitelný parametr pro členské funkce.
+Určuje volitelný parametr členské funkce.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -25,11 +25,11 @@ Určuje volitelný parametr pro členské funkce.
 
 ## <a name="remarks"></a>Poznámky
 
-**Volitelné** C++ atribut má stejné funkce jako [volitelné](/windows/desktop/Midl/optional) atribut MIDL.
+**Volitelný** C++ atribut má stejné funkce jako [volitelný](/windows/win32/Midl/optional) atribut MIDL.
 
 ## <a name="example"></a>Příklad
 
-Následující kód ukazuje, jak **volitelné** mohou být použity:
+Následující kód ukazuje, jak je možné použít **volitelné** :
 
 ```cpp
 // cpp_attr_ref_optional.cpp
@@ -46,16 +46,16 @@ __interface IFireTabCtrl : IDispatch
 
 ## <a name="requirements"></a>Požadavky
 
-### <a name="attribute-context"></a>Atribut kontextu
+### <a name="attribute-context"></a>Kontext atributu
 
 |||
 |-|-|
 |**Platí pro**|Parametr rozhraní|
-|**Opakovatelné**|Ne|
-|**Vyžadované atributy**|Žádné|
+|**REPEATABLE**|Ne|
+|**Požadované atributy**|Žádné|
 |**Neplatné atributy**|Žádné|
 
-Další informace o kontexty atributů najdete v tématu [kontexty atributů](cpp-attributes-com-net.md#contexts).
+Další informace o kontextech atributů naleznete v tématu kontexty [atributů](cpp-attributes-com-net.md#contexts).
 
 ## <a name="see-also"></a>Viz také:
 

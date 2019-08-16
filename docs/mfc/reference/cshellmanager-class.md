@@ -28,12 +28,12 @@ helpviewer_keywords:
 - CShellManager [MFC], GetParentItem
 - CShellManager [MFC], ItemFromPath
 ms.assetid: f15c4c1a-6fae-487d-9913-9b7369b33da0
-ms.openlocfilehash: 14e8da573621f712ae9e27647122d305be54b7b0
-ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
+ms.openlocfilehash: 8151550dafdd1bdf8593d555008af387cf548bc8
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68916686"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69502625"
 ---
 # <a name="cshellmanager-class"></a>CShellManager – třída
 
@@ -113,7 +113,7 @@ pro Řetězec obsahující složku, která je ve výchozím nastavení vybrána 
 pro Název dialogového okna
 
 *ulFlags*<br/>
-pro Příznaky určující možnosti dialogového okna. Podrobný popis najdete v tématu [BROWSEINFO](/windows/desktop/api/shlobj_core/ns-shlobj_core-browseinfoa) .
+pro Příznaky určující možnosti dialogového okna. Podrobný popis najdete v tématu [BROWSEINFO](/windows/win32/api/shlobj_core/ns-shlobj_core-browseinfow) .
 
 *piFolderImage*<br/>
 mimo Ukazatel na celočíselnou hodnotu, kde Metoda zapisuje index obrázku vybrané složky.
@@ -156,7 +156,7 @@ Ukazatel na seznam nové položky, pokud je funkce úspěšná, jinak NULL.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato metoda vytvoří nový [ITEMIDLIST](/windows/desktop/api/shtypes/ns-shtypes-itemidlist) , který je dostatečně velký pro zahrnutí *pidl1* a *pidl2*. Pak zkopíruje *pidl1* a *pidl2* do nového seznamu.
+Tato metoda vytvoří nový [ITEMIDLIST](/windows/win32/api/shtypes/ns-shtypes-itemidlist) , který je dostatečně velký pro zahrnutí *pidl1* a *pidl2*. Pak zkopíruje *pidl1* a *pidl2* do nového seznamu.
 
 ##  <a name="copyitem"></a>CShellManager::CopyItem
 

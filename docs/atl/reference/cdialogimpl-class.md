@@ -1,5 +1,5 @@
 ---
-title: CDialogImpl – třída
+title: CDialogImpl – – třída
 ms.date: 11/04/2016
 f1_keywords:
 - CDialogImpl
@@ -17,19 +17,19 @@ helpviewer_keywords:
 - dialog boxes, ATL
 - CDialogImpl class
 ms.assetid: d430bc7b-8a28-4ad3-9507-277bdd2c2c2e
-ms.openlocfilehash: 1124630d8ee15dd284893516bef8057f852b4632
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: bc39a5deeb270b0426a4b199fc9ba01917c292bc
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62245752"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69496815"
 ---
-# <a name="cdialogimpl-class"></a>CDialogImpl – třída
+# <a name="cdialogimpl-class"></a>CDialogImpl – – třída
 
-Tato třída poskytuje metody pro vytváření modální a nemodální dialogové okno.
+Tato třída poskytuje metody pro vytvoření modálního nebo nemodálního dialogového okna.
 
 > [!IMPORTANT]
->  Tato třída a jejích členů nelze použít v aplikacích, které jsou spouštěny v modulu Windows Runtime.
+>  Tato třída a její členové nelze použít v aplikacích, které jsou spouštěny v prostředí Windows Runtime.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -42,10 +42,10 @@ template <class T,
 #### <a name="parameters"></a>Parametry
 
 *T*<br/>
-Vaše třída odvozena od `CDialogImpl`.
+Vaše třída, která je `CDialogImpl`odvozena z.
 
 *TBase*<br/>
-Základní třídy novou třídu. Výchozí základní třída je [cwindow –](../../atl/reference/cwindow-class.md).
+Základní třída vaší nové třídy. Výchozí základní třída je [CWindow](../../atl/reference/cwindow-class.md).
 
 ## <a name="members"></a>Členové
 
@@ -54,52 +54,52 @@ Základní třídy novou třídu. Výchozí základní třída je [cwindow –](
 |||
 |-|-|
 |[Vytvoření](#create)|Vytvoří nemodální dialogové okno.|
-|[DestroyWindow](#destroywindow)|Zničí nemodální dialogové okno.|
+|[DestroyWindow](#destroywindow)|Odstraní nemodální dialogové okno.|
 |[DoModal](#domodal)|Vytvoří modální dialogové okno.|
-|[EndDialog](#enddialog)|Zničí modální dialogové okno.|
+|[EndDialog](#enddialog)|Odstraní modální dialogové okno.|
 
-### <a name="cdialogimplbaset-methods"></a>CDialogImplBaseT metody
+### <a name="cdialogimplbaset-methods"></a>Metody CDialogImplBaseT
 
 |||
 |-|-|
-|[GetDialogProc](#getdialogproc)|Vrátí aktuální proceduru dialogového okna pole.|
-|[MapDialogRect](#mapdialogrect)|Mapy jednotky dialogového okna obdélníku zadaného na obrazovce jednotek (v pixelech).|
+|[GetDialogProc](#getdialogproc)|Vrátí aktuální proceduru dialogového okna.|
+|[MapDialogRect](#mapdialogrect)|Namapuje jednotky dialogového okna zadaného obdélníku na jednotky obrazovky (pixely).|
 |[OnFinalMessage](#onfinalmessage)|Volá se po přijetí poslední zprávy, obvykle WM_NCDESTROY.|
 
 ### <a name="static-functions"></a>Statické funkce
 
 |||
 |-|-|
-|[DialogProc](#dialogproc)|Zpracovává zprávy odeslané do dialogového okna.|
-|[StartDialogProc](#startdialogproc)|Volá se při přijetí první zprávu zpracovat zprávy odeslané do dialogového okna.|
+|[DialogProc](#dialogproc)|Zpracuje zprávy odesílané do dialogového okna.|
+|[StartDialogProc](#startdialogproc)|Volá se při přijetí první zprávy pro zpracování zpráv odeslaných do dialogového okna.|
 
 ## <a name="remarks"></a>Poznámky
 
-S `CDialogImpl` vytvoříte modální a nemodální dialogové okno. `CDialogImpl` poskytuje pole proceduru dialogového okna, který používá výchozí mapování zpráv ke směrování zpráv do příslušné obslužné rutiny.
+Pomocí `CDialogImpl` můžete vytvořit modální nebo nemodální dialogové okno. `CDialogImpl`poskytuje proceduru dialogového okna, která používá výchozí mapu zpráv k přímému směrování zpráv na příslušné obslužné rutiny.
 
-Destruktor základní třídy `~CWindowImplRoot` zajistí, že v okně zmizel před zničení objektu.
+Destruktor `~CWindowImplRoot` základní třídy zajišťuje, že okno je pryč před zničením objektu.
 
-`CDialogImpl` je odvozen od `CDialogImplBaseT`, která je dále odvozeno z `CWindowImplRoot`.
+`CDialogImpl`je odvozen z `CDialogImplBaseT`, který je zase odvozen z. `CWindowImplRoot`
 
 > [!NOTE]
->  Musíte definovat třídu `IDD` člena, který určuje ID prostředku šablony dialogového okna. Například Průvodce projektem ATL automaticky přidá následující řádek do vaší třídy:
+>  Vaše třída musí definovat `IDD` člena, který určuje ID prostředku šablony dialogového okna. Například Průvodce projektem ATL automaticky do vaší třídy přidá následující řádek:
 
 [!code-cpp[NVC_ATL_Windowing#41](../../atl/codesnippet/cpp/cdialogimpl-class_1.h)]
 
-kde `MyDlg` je **krátký název** zadali v průvodci **názvy** stránky.
+kde `MyDlg` je **krátký název** zadaný na stránce s **názvy** průvodce.
 
 |Další informace o|Další informace naleznete v tématu|
 |--------------------------------|---------|
-|Vytváření ovládacích prvků|[ATL – tutoriál](../../atl/active-template-library-atl-tutorial.md)|
-|Pomocí dialogových oken v ATL|[ATL – třídy oken](../../atl/atl-window-classes.md)|
+|Vytváření ovládacích prvků|[Kurz ATL](../../atl/active-template-library-atl-tutorial.md)|
+|Použití dialogových oken v ATL|[ATL – třídy oken](../../atl/atl-window-classes.md)|
 |Průvodce projektem ATL|[Vytvoření projektu ATL](../../atl/reference/creating-an-atl-project.md)|
-|Dialogová okna|[Dialogová okna](/windows/desktop/dlgbox/dialog-boxes) a dalších tématech v sadě Windows SDK|
+|Dialogová okna|[Dialogová okna](/windows/win32/dlgbox/dialog-boxes) a další témata v Windows SDK|
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** atlwin.h
+**Záhlaví:** atlwin. h
 
-##  <a name="create"></a>  CDialogImpl::Create
+##  <a name="create"></a>CDialogImpl –:: Create
 
 Vytvoří nemodální dialogové okno.
 
@@ -117,24 +117,24 @@ HWND Create(
 ### <a name="parameters"></a>Parametry
 
 *hWndParent*<br/>
-[in] Popisovač nadřazenému oknu.
+pro Popisovač okna vlastníka.
 
-**Rect – &** *rect* [in] A [RECT](/previous-versions/dd162897\(v=vs.85\)) struktura určující velikost a umístění dialogového okna.
+**& Rect** *Rect* pro Struktura [Rect](/previous-versions/dd162897\(v=vs.85\)) určující velikost a polohu dialogového okna
 
 *dwInitParam*<br/>
-[in] Určuje hodnotu pro předání do dialogového okna aplikace *lParam* parametr nezavěsíte zprávu.
+pro Určuje hodnotu, která má být předána do dialogového okna v parametru *lParam* zprávy WM_INITDIALOG.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Popisovač do nově vytvořeného dialogových oken.
+Popisovač nově vytvořeného dialogového okna.
 
 ### <a name="remarks"></a>Poznámky
 
-Toto dialogové okno je automaticky připojen k `CDialogImpl` objektu. Chcete-li vytvořit modální dialogové okno, zavolejte [DoModal](#domodal). Druhý výše uvedené přepsání se používá jenom s [ccomcontrol –](../../atl/reference/ccomcontrol-class.md).
+Toto dialogové okno je automaticky připojeno k `CDialogImpl` objektu. Chcete-li vytvořit modální dialogové okno, zavolejte [DoModal](#domodal). Druhé přepsání výše se používá pouze s [CComControl](../../atl/reference/ccomcontrol-class.md).
 
-##  <a name="destroywindow"></a>  CDialogImpl::DestroyWindow
+##  <a name="destroywindow"></a>CDialogImpl –::D estroyWindow
 
-Zničí nemodální dialogové okno.
+Odstraní nemodální dialogové okno.
 
 ```
 BOOL DestroyWindow();
@@ -142,15 +142,15 @@ BOOL DestroyWindow();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Hodnota TRUE, pokud byl úspěšně zničení dialogových oken; v opačném případě FALSE.
+Hodnota TRUE, pokud bylo dialogové okno úspěšně zničeno; v opačném případě FALSE.
 
 ### <a name="remarks"></a>Poznámky
 
-Vrátí hodnotu TRUE, pokud byl úspěšně zničení dialogových oken; v opačném případě FALSE.
+Vrátí hodnotu TRUE, pokud bylo dialogové okno úspěšně zničeno; v opačném případě FALSE.
 
 ##  <a name="dialogproc"></a>  CDialogImpl::DialogProc
 
-Tato statická funkce implementuje pole proceduru dialogového okna.
+Tato statická funkce implementuje proceduru dialogového okna.
 
 ```
 static LRESULT CALLBACK DialogProc(
@@ -163,26 +163,26 @@ static LRESULT CALLBACK DialogProc(
 ### <a name="parameters"></a>Parametry
 
 *hWnd*<br/>
-[in] Popisovač do dialogového okna.
+pro Popisovač dialogového okna.
 
 *uMsg*<br/>
-[in] Zpráva odeslaná do dialogového okna.
+pro Zpráva byla odeslána do dialogového okna.
 
 *wParam*<br/>
-[in] Další informace specifické pro zprávy.
+pro Další informace specifické pro zprávy
 
 *lParam*<br/>
-[in] Další informace specifické pro zprávy.
+pro Další informace specifické pro zprávy
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Hodnota TRUE, pokud zpráva se zpracuje; v opačném případě hodnota FALSE.
+TRUE, pokud je zpráva zpracována; v opačném případě FALSE.
 
 ### <a name="remarks"></a>Poznámky
 
-`DialogProc` Výchozí mapování zpráv používá ke směrování zpráv do příslušné obslužné rutiny.
+`DialogProc`používá výchozí mapu zpráv k přímému směrování zpráv do příslušných obslužných rutin.
 
-Můžete přepsat `DialogProc` jiný mechanismus pro zpracování zpráv.
+Můžete přepsat `DialogProc` a poskytnout tak jiný mechanismus pro zpracování zpráv.
 
 ##  <a name="domodal"></a>  CDialogImpl::DoModal
 
@@ -197,24 +197,24 @@ INT_PTR DoModal(
 ### <a name="parameters"></a>Parametry
 
 *hWndParent*<br/>
-[in] Popisovač nadřazenému oknu. Výchozí hodnota je vrácená hodnota [GetActiveWindow](/windows/desktop/api/winuser/nf-winuser-getactivewindow) funkci Win32.
+pro Popisovač okna vlastníka. Výchozí hodnota je návratová hodnota funkce [GetActiveWindow](/windows/win32/api/winuser/nf-winuser-getactivewindow) Win32.
 
 *dwInitParam*<br/>
-[in] Určuje hodnotu pro předání do dialogového okna aplikace *lParam* parametr nezavěsíte zprávu.
+pro Určuje hodnotu, která má být předána do dialogového okna v parametru *lParam* zprávy WM_INITDIALOG.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-V případě úspěchu se hodnota *nRetCode* parametr zadaný ve volání [EndDialog](#enddialog). Jinak -1.
+V případě úspěchu hodnota parametru *nRetCode* zadaného ve volání metody [EndDialog](#enddialog). V opačném případě-1.
 
 ### <a name="remarks"></a>Poznámky
 
-Toto dialogové okno je automaticky připojen k `CDialogImpl` objektu.
+Toto dialogové okno je automaticky připojeno k `CDialogImpl` objektu.
 
-Vytvoří nemodální dialogové okno, voláním [vytvořit](#create).
+Chcete-li vytvořit nemodální dialogové okno, zavolejte příkaz [Create](#create).
 
-##  <a name="enddialog"></a>  CDialogImpl::EndDialog
+##  <a name="enddialog"></a>CDialogImpl –:: EndDialog
 
-Zničí modální dialogové okno.
+Odstraní modální dialogové okno.
 
 ```
 BOOL EndDialog(int nRetCode);
@@ -223,22 +223,22 @@ BOOL EndDialog(int nRetCode);
 ### <a name="parameters"></a>Parametry
 
 *nRetCode*<br/>
-[in] Hodnota, která má být vrácen [CDialogImpl::DoModal](#domodal).
+pro Hodnota, která má být vrácena funkcí [CDialogImpl –::D omodal](#domodal).
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Hodnota TRUE, pokud jeho zničení dialogových oken; v opačném případě hodnota FALSE.
+TRUE, pokud je dialogové okno zničeno; v opačném případě FALSE.
 
 ### <a name="remarks"></a>Poznámky
 
-`EndDialog` musí být volána prostřednictvím proceduru dialogového okna. Po zničení dialogových oken Windows používá hodnotu *nRetCode* jako návratovou hodnotu pro `DoModal`, který vytvoří dialogové okno.
+`EndDialog`musí být volána prostřednictvím postupu dialogu. Po zničení dialogového okna používá systém Windows hodnotu *nRetCode* jako návratovou hodnotu pro `DoModal`, což vytvořilo dialogové okno.
 
 > [!NOTE]
->  Nevolejte `EndDialog` ke zničení nemodální dialogové okno. Volání [CWindow::DestroyWindow](../../atl/reference/cwindow-class.md#destroywindow) místo.
+>  Nevolejte `EndDialog` pro zničení nemodálního dialogového okna. Místo toho zavolejte [CWindow::D estroywindow](../../atl/reference/cwindow-class.md#destroywindow) .
 
-##  <a name="getdialogproc"></a>  CDialogImpl::GetDialogProc
+##  <a name="getdialogproc"></a>CDialogImpl –:: GetDialogProc
 
-Vrátí `DialogProc`, aktuální proceduru dialogového okna pole.
+Vrátí `DialogProc`aktuální proceduru dialogového okna.
 
 ```
 virtual WNDPROC GetDialogProc();
@@ -246,15 +246,15 @@ virtual WNDPROC GetDialogProc();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Aktuální proceduru dialogového okna pole.
+Aktuální postup pro dialogové okno
 
 ### <a name="remarks"></a>Poznámky
 
-Potlačí tuto metodu za účelem proceduru dialogového okna nahradit svojí vlastní.
+Tuto metodu přepište, pokud chcete proceduru dialogu nahradit vlastními.
 
-##  <a name="mapdialogrect"></a>  CDialogImpl::MapDialogRect
+##  <a name="mapdialogrect"></a>CDialogImpl –:: MapDialogRect
 
-Převede (map) – dialogové okno jednotek zadané obdélník na obrazovku jednotek (v pixelech).
+Převede (mapuje) jednotky dialogového okna zadaného obdélníku na jednotky obrazovky (v pixelech).
 
 ```
 BOOL MapDialogRect(LPRECT lpRect);
@@ -263,17 +263,17 @@ BOOL MapDialogRect(LPRECT lpRect);
 ### <a name="parameters"></a>Parametry
 
 *lpRect*<br/>
-Odkazuje na `CRect` objektu nebo [RECT](/windows/desktop/api/windef/ns-windef-tagrect) struktura, která má obdržet souřadnice klienta, který obklopuje oblast aktualizace aktualizace.
+Odkazuje na `CRect` objekt nebo strukturu [Rect](/windows/win32/api/windef/ns-windef-rect) , která má přijmout souřadnice klienta aktualizace, která obklopuje oblast aktualizace.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Nenulové, pokud aktualizace úspěšně. 0, pokud se aktualizace nezdaří. Chcete-li získat rozšířené informace o chybě, volejte `GetLastError`.
+Nenulové, pokud je aktualizace úspěšná; 0, pokud aktualizace neproběhne úspěšně. Chcete-li získat rozšířené informace o `GetLastError`chybě, zavolejte.
 
 ### <a name="remarks"></a>Poznámky
 
-Funkce nahrazuje souřadnice v zadaném `RECT` struktury pomocí převedený souřadnice, což umožňuje struktura se použije k vytvoření dialogového nebo umístit ovládací prvek v rámci dialogového okna.
+Funkce nahradí souřadnice v zadané `RECT` struktuře pomocí převedených souřadnic, což umožňuje použít strukturu k vytvoření dialogového okna nebo umístit ovládací prvek v rámci dialogového okna.
 
-##  <a name="onfinalmessage"></a>  CDialogImpl::OnFinalMessage
+##  <a name="onfinalmessage"></a>CDialogImpl –:: OnFinalMessage
 
 Volá se po přijetí poslední zprávy (obvykle `WM_NCDESTROY`).
 
@@ -284,15 +284,15 @@ virtual void OnFinalMessage(HWND hWnd);
 ### <a name="parameters"></a>Parametry
 
 *hWnd*<br/>
-[in] Popisovač okna zničen.
+pro Popisovač pro zničené okno.
 
 ### <a name="remarks"></a>Poznámky
 
-Všimněte si, že pokud chcete automaticky odstranit objekt při odstraňování oken, můžete volat **odstranit tento;** tady.
+Všimněte si, že pokud chcete automaticky odstranit objekt po zničení okna, můžete zavolat **Odstranit this;** zde.
 
-##  <a name="startdialogproc"></a>  CDialogImpl::StartDialogProc
+##  <a name="startdialogproc"></a>CDialogImpl –:: StartDialogProc
 
-Volána pouze jednou, při přijetí první zprávu zpracovat zprávy odeslané do dialogového okna.
+Volá se jenom jednou, když se přijme první zpráva, aby se zpracovala zpráva odeslaná do dialogového okna.
 
 ```
 static LRESULT CALLBACK StartDialogProc(
@@ -305,26 +305,26 @@ static LRESULT CALLBACK StartDialogProc(
 ### <a name="parameters"></a>Parametry
 
 *hWnd*<br/>
-[in] Popisovač do dialogového okna.
+pro Popisovač dialogového okna.
 
 *uMsg*<br/>
-[in] Zpráva odeslaná do dialogového okna.
+pro Zpráva byla odeslána do dialogového okna.
 
 *wParam*<br/>
-[in] Další informace specifické pro zprávy.
+pro Další informace specifické pro zprávy
 
 *lParam*<br/>
-[in] Další informace specifické pro zprávy.
+pro Další informace specifické pro zprávy
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Proceduru okna.
+Procedura okna
 
 ### <a name="remarks"></a>Poznámky
 
-Po počáteční volání `StartDialogProc`, `DialogProc` není nastaven jako proceduru dialogového okna a další volání tam.
+Po počátečním volání `StartDialogProc`, `DialogProc` je nastaveno jako dialogový postup a další volání přejdou sem.
 
 ## <a name="see-also"></a>Viz také:
 
 [BEGIN_MSG_MAP](message-map-macros-atl.md#begin_msg_map)<br/>
-[Přehled tříd](../../atl/atl-class-overview.md)
+[Přehled třídy](../../atl/atl-class-overview.md)

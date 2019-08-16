@@ -6,29 +6,29 @@ f1_keywords:
 helpviewer_keywords:
 - C1084
 ms.assetid: b2f273ef-3a14-4d5f-8ce0-7a11a0388fe6
-ms.openlocfilehash: 8c90616165a7b47d4251ace998fd49c613f244b5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b0c8e6a8f8321dccdfd7cee128a4cf06cebda991
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62208812"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69501131"
 ---
 # <a name="fatal-error-c1084"></a>Závažná chyba C1084
 
-Nejde přečíst soubor filetype: 'file': zpráva
+Nedá se přečíst soubor typ_souboru: File: Message.
 
-Tato chyba je obecně výsledek volání se nezdařilo interní systémové rozhraní API provedené kompilátorem. Zpráva zobrazená, když k této chybě dochází často generuje buď [_wcserror_s –](../../c-runtime-library/reference/strerror-s-strerror-s-wcserror-s-wcserror-s.md) nebo [FormatMessage](/windows/desktop/api/winbase/nf-winbase-formatmessage).
+Tato chyba je obvykle výsledkem neúspěšného volání rozhraní API interního systému provedeného kompilátorem. Zpráva zobrazená v případě výskytu této chyby je často generována buď [_wcserror_s](../../c-runtime-library/reference/strerror-s-strerror-s-wcserror-s-wcserror-s.md) nebo [FormatMessage](/windows/win32/api/winbase/nf-winbase-formatmessage).
 
-Provedením následujících kroků může vyřešit C1084:
+Následující kroky vám pomůžou vyřešit C1084:
 
-- Ujistěte se, že zadaný soubor existuje.
+- Zajistěte, aby zadaný soubor existoval.
 
-- Ujistěte se, že jsou nastavené příslušná oprávnění pro přístup k souboru.
+- Zajistěte, aby byla pro přístup k zadanému souboru nastavena příslušná oprávnění.
 
-- Zkontrolujte syntaxi příkazového řádku dodržuje pravidel popsaných v části [syntaxe příkazového řádku kompilátoru](../../build/reference/compiler-command-line-syntax.md).
+- Zajistěte, aby syntaxe příkazového řádku odpovídala pravidlům popsaným v části [syntaxe příkazového řádku kompilátoru](../../build/reference/compiler-command-line-syntax.md).
 
-- Zkontrolujte, že proměnné prostředí **TMP** a **TEMP** jsou správně set, stejně jako příslušná oprávnění pro přístup k adresáři, tyto proměnné prostředí odkazovat. Také zajistěte, aby disky odkazuje **TMP** a **TEMP** proměnné prostředí obsahují odpovídající množství volného místa.
+- Zajistěte, aby byly správně nastaveny proměnné prostředí **TMP** a **TEMP** , a také příslušná oprávnění, aby bylo možné získat přístup k adresářům, na které tyto proměnné prostředí odkazují. Také zajistěte, aby jednotky, na které odkazují proměnné prostředí **TMP** a **TEMP** , obsahovaly dostatečné množství volného místa.
 
-- Pokud zpráva "Chybné číslo souboru" zadaný soubor může mít byla zavření v popředí při kompilaci na pozadí.
+- Pokud se v této zprávě zobrazí zpráva "špatné číslo souboru", zadaný soubor mohl být při kompilování na pozadí uzavřený v popředí.
 
-Po provedení výše uvedených diagnostiky, proveďte čisté sestavení.
+Po provedení výše uvedených diagnostických nástrojů proveďte čisté sestavení.

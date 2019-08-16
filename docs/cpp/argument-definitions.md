@@ -8,12 +8,12 @@ helpviewer_keywords:
 - argv argument
 - argc argument
 ms.assetid: 6148cbf3-ebe8-44f2-b277-de4b723991c7
-ms.openlocfilehash: 92e213b5accbf8fd5f48ac2111a169e585d82a1d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 14e5ea3a051d81828c5f88ac16df60b6ebb5b559
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62184438"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69498818"
 ---
 # <a name="argument-definitions"></a>Definice argumentů
 
@@ -27,26 +27,26 @@ int wmain( int argc, wchar_t* argv[], wchar_t* envp[]);
 umožňují pohodlnou analýzu argumentů příkazového řádku a v případě potřeby přístup k proměnným prostředí. Definice argumentů jsou následující:
 
 *argc*<br/>
-Celé číslo obsahující počet argumentů, které následují v *argv*. *Argc* parametr je vždy větší nebo rovna 1.
+Celé číslo, které obsahuje počet argumentů, které následují v *argv*. Parametr *argc* je vždycky větší nebo roven 1.
 
 *argv*<br/>
-Pole řetězců zakončených znakem null představující argumenty příkazového řádku zadané uživatelem programu. Podle konvence `argv[0]` příkaz, kterým je program vyvolán, `argv[1]` je první argument příkazového řádku a tak dále, dokud `argv[argc]`, což je vždy hodnotu NULL. Zobrazit [přizpůsobení zpracování příkazového řádku](../cpp/customizing-cpp-command-line-processing.md) Další informace o potlačení zpracování příkazového řádku.
+Pole řetězců zakončených znakem null představující argumenty příkazového řádku zadané uživatelem programu. Podle konvence `argv[0]` je příkaz, se kterým je program vyvolán, `argv[1]` je první argument příkazového řádku, a tak dále, dokud `argv[argc]`není hodnota vždy null. Informace o potlačení zpracování příkazového řádku naleznete v tématu [přizpůsobení zpracování příkazového řádku](../cpp/customizing-cpp-command-line-processing.md) .
 
-První argument příkazového řádku je vždy `argv[1]` a poslední je `argv[argc - 1]`.
+První argument příkazového řádku je vždycky `argv[1]` a ten je `argv[argc - 1]`poslední.
 
 > [!NOTE]
-> Podle konvence `argv[0]` příkaz, kterým je vyvolán program.  Nicméně je možné vytvořit podřízený proces pomocí [CreateProcess](/windows/desktop/api/libloaderapi/nf-libloaderapi-getmodulefilenamea) a pokud používáte první a druhý argument (*lpApplicationName* a *lpCommandLine*), `argv[0]` nemusí být název spustitelného souboru; použít [GetModuleFileName –](/windows/desktop/api/libloaderapi/nf-libloaderapi-getmodulefilenamea) k načtení názvu spustitelného souboru a jeho plně kvalifikovanou cestu.
+> Podle konvence `argv[0]` je příkaz, se kterým je program vyvolán.  Je ale možné vytvořit proces pomocí funkce [CreateProcess](/windows/win32/api/libloaderapi/nf-libloaderapi-getmodulefilenamew) a pokud použijete první i druhý argument (*lpApplicationName* a *lpCommandLine*), `argv[0]` nemusí být spustitelný název; použijte [GetModuleFileName –. ](/windows/win32/api/libloaderapi/nf-libloaderapi-getmodulefilenamew)pro načtení názvu spustitelného souboru a jeho plně kvalifikované cesty.
 
 ## <a name="microsoft-specific"></a>Specifické pro Microsoft
 
 *envp*<br/>
-*Envp* pole, které je běžným rozšířením mnoha systémů UNIX, se používá v Microsoft C++. Je to pole řetězců, které představují proměnné nastavené v uživatelském prostředí. Toto pole je ukončeno prvkem položku NULL. Mohou být deklarovány jako pole ukazatelů na **char** (`char *envp[]`) nebo jako ukazatel na ukazatele na **char** (`char **envp`). Pokud program používá `wmain` místo `main`, použijte **wchar_t** datový typ místo **char**. Blok prostředí předaný `main` a `wmain` je "zmrazená" kopie aktuálního prostředí. Pokud později změníte prostředí prostřednictvím volání `putenv` nebo `_wputenv`, aktuální prostředí (vrácené `getenv` nebo `_wgetenv` a `_environ` nebo `_wenviron` proměnná) se změní, ale blok odkazovaný parametrem envp se nezmění. Zobrazit [přizpůsobení zpracování příkazového řádku](../cpp/customizing-cpp-command-line-processing.md) Další informace o potlačení zpracování prostředí. Tento argument je kompatibilní se standardem ANSI v jazyce C, ale ne v jazyce C++.
+Pole *envp* , což je společné rozšíření v mnoha systémech UNIX, se používá v Microsoftu C++. Je to pole řetězců, které představují proměnné nastavené v uživatelském prostředí. Toto pole je ukončeno položkou NULL. Dá se deklarovat jako pole ukazatelů na **char** `char *envp[]`() nebo jako ukazatel na ukazatele na **char** (`char **envp`). Pokud `wmain` program používá `main`místo, použijte datový typ **wchar_t** namísto **char**. Blok prostředí předaný do `main` a `wmain` je "zmrazená" kopie aktuálního prostředí. Pokud následně změníte prostředí prostřednictvím volání `putenv` nebo `_wputenv`, změní se aktuální `getenv` prostředí (jak je `_environ` vráceno nebo `_wgetenv` a proměnná nebo `_wenviron` ), ale blok odkazoval na envp se nezmění. Informace o potlačení zpracování prostředí naleznete v tématu [přizpůsobení zpracování příkazového řádku](../cpp/customizing-cpp-command-line-processing.md) . Tento argument je kompatibilní se standardem ANSI v jazyce C, ale ne v jazyce C++.
 
-**Specifické pro END Microsoft**
+**Specifické pro konec Microsoftu**
 
 ## <a name="example"></a>Příklad
 
-Následující příklad ukazuje způsob použití *argc*, *argv*, a *envp* argumenty `main`:
+Následující příklad ukazuje, jak použít argumenty *argc*, *argv*a *envp* k `main`těmto akcím:
 
 ```cpp
 // argument_definitions.cpp

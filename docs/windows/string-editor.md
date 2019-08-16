@@ -32,137 +32,137 @@ helpviewer_keywords:
 - strings [C++], formatting
 - strings [C++], special characters
 ms.assetid: f71ab8de-3068-4e29-8e28-5a33d18dd416
-ms.openlocfilehash: e596aa475f0fb08609a0772ecc3f8a302e849275
-ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
+ms.openlocfilehash: 996e5f132e5cfa33c39c4cc3ddbeb692f41925bc
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66504810"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69514713"
 ---
 # <a name="string-editor-c"></a>Editor řetězců (C++)
 
-Tabulka řetězců je prostředek Windows, který obsahuje seznam ID, hodnoty a popisky pro všechny řetězce vaší aplikace. Například výzvy stavový řádek jsou umístěny v tabulce řetězců.
+Tabulka řetězců je prostředek systému Windows, který obsahuje seznam identifikátorů, hodnot a titulků pro všechny řetězce vaší aplikace. Například výzvy stavového řádku jsou umístěny v tabulce řetězců.
 
-Při vývoji aplikace, máte několik tabulek řetězců, jeden pro každý jazyk nebo podmínku. Spustitelný soubor modulu má však pouze jedna tabulka řetězců. Běžící aplikaci může odkazovat několik tabulek řetězců, pokud vložené tabulky do jiné knihovny DLL.
+Při vývoji aplikace můžete mít několik tabulek řetězců – jeden pro každý jazyk nebo podmínku. Spustitelný modul však má pouze jednu tabulku řetězců. Běžící aplikace může odkazovat na několik tabulek řetězců, pokud tabulky vložíte do různých knihoven DLL.
 
-Tabulky řetězců umožňují snadno lokalizovat vaši aplikaci do různých jazyků. Pokud jsou všechny řetězce v tabulce řetězců, je možné lokalizovat aplikaci při převodu řetězce (a další prostředky) bez změny zdrojového kódu. Tato situace je lepší než ručně vyhledávání a nahrazování různých řetězců ve zdrojových souborech.
+Tabulky řetězců usnadňují lokalizaci vaší aplikace do různých jazyků. Pokud jsou všechny řetězce v tabulce řetězců, lze lokalizovat aplikace pomocí překladu řetězců (a dalších prostředků) bez změny zdrojového kódu. Tato situace je vhodnější než ruční vyhledávání a nahrazování různých řetězců ve zdrojových souborech.
 
 > [!NOTE]
-> Windows neumožňuje vytvoření tabulky prázdný řetězec. Pokud vytvoříte tabulku řetězců s žádné položky, odstraní se automaticky při ukládání souboru prostředků.
+> Windows neumožňuje vytváření prázdných tabulek řetězců. Pokud vytvoříte tabulku řetězců bez zadání, při uložení souboru prostředků se odstraní automaticky.
 
 ## <a name="how-to"></a>Postupy
 
 **Editor řetězců** vám umožní:
 
-### <a name="to-find-a-string-resource-in-the-string-table"></a>Chcete-li nalézt zdroj řetězce v tabulce řetězců
+### <a name="to-find-a-string-resource-in-the-string-table"></a>Vyhledání prostředku řetězce v tabulce řetězců
 
-1. Otevřete poklepáním na ikonu v tabulce řetězců [zobrazení prostředků](how-to-create-a-resource-script-file.md#create-resources).
+1. Otevřete tabulku řetězců dvojitým kliknutím na její ikonu v [prostředky](how-to-create-a-resource-script-file.md#create-resources).
 
-1. Přejděte do nabídky **upravit** > **najít a nahradit** a zvolte **najít**.
+1. Přejděte do nabídky **Upravit** > **Najít a nahradit** a vyberte **Najít**.
 
-1. V **najít** pole, vyberte předchozí hledaný řetězec z rozevíracího seznamu nebo zadejte titulek identifikátor textu nebo prostředku řetězce, které chcete najít.
+1. V rozevíracím seznamu **Najít** vyberte předchozí hledaný řetězec nebo zadejte text titulku nebo identifikátor prostředku řetězce, který chcete najít.
 
-1. Vyberte některou z **najít** možnosti a vyberte **najít další**.
+1. Vyberte některou z možností **hledání** a vyberte **Najít další**.
 
 > [!TIP]
-> Použití [regulární výrazy](/visualstudio/ide/using-regular-expressions-in-visual-studio) při vyhledávání souborů, použijte **najít v souborech** v příkaz **upravit** nabídky.
+> Chcete-li při hledání souborů použít [regulární výrazy](/visualstudio/ide/using-regular-expressions-in-visual-studio) , použijte příkaz **najít v souborech** v nabídce **Upravit** .
 >
-> Zadejte regulární výraz k vyhledání vzoru, nebo vyberte tlačítko vpravo od **najít** pole k zobrazení seznamu hledání regulárních výrazů. Když vyberete výrazu z tohoto seznamu, je nahrazen jako hledaný text v **najít** pole.
+> Zadejte regulární výraz, který bude odpovídat vzoru, nebo vyberte tlačítko napravo od pole **Najít** , chcete-li zobrazit seznam regulárních výrazů hledání. Když vyberete výraz z tohoto seznamu, nahradí se jako hledaný text v poli **Najít** .
 >
-> Pokud používáte regulární výrazy, ujistěte se, **použít: Regulární výrazy** je zaškrtnuto políčko.
+> Pokud používáte regulární výrazy, ujistěte se, že **používáte: Zaškrtávací políčko** regulární výrazy je zaškrtnuto.
 
-### <a name="to-add-or-delete-a-string-resource"></a>Přidat nebo odstranit prostředek řetězce
+### <a name="to-add-or-delete-a-string-resource"></a>Přidání nebo odstranění prostředku řetězce
 
-Můžete rychle vložení nebo odstranění položek do řetězce pomocí tabulky **Editor řetězců**. Nové řetězce jsou umístěny na konci v tabulce a jsou uvedeny další k dispozici identifikátor. Můžete upravit **ID**, **hodnotu**, nebo **titulek** vlastnosti [okno vlastností](/visualstudio/ide/reference/properties-window) podle potřeby.
+Můžete rychle vložit nebo odstranit položky do tabulky řetězců pomocí **editoru řetězců**. Nové řetězce jsou umístěny na konci tabulky a mají k dispozici další dostupný identifikátor. Podle potřeby můžete upravit vlastnosti **ID**, **hodnoty**nebo **popisku** v [okno Vlastnosti](/visualstudio/ide/reference/properties-window) .
 
-**Editor řetězců** zajišťuje, nepoužívejte ID, které se už používá. Pokud vyberete ID už používá, **Editor řetězců** oznámíme vám to a zařaďte obecné jedinečné ID, například `IDS_STRING58113`.
+**Editor řetězců** zajišťuje, že nepoužíváte ID, které se už používá. Pokud vyberete ID, které se už používá, **Editor řetězců** vás upozorní a pak přiřadí obecné jedinečné ID, `IDS_STRING58113`například.
 
 #### <a name="to-add-a-string-table-entry"></a>Přidání položky tabulky řetězců
 
-1. Otevřete poklepáním na ikonu v tabulce řetězců [zobrazení prostředků](how-to-create-a-resource-script-file.md#create-resources).
+1. Otevřete tabulku řetězců dvojitým kliknutím na její ikonu v [prostředky](how-to-create-a-resource-script-file.md#create-resources).
 
-1. Klikněte pravým tlačítkem v rámci tabulky řetězců a zvolte **nový řetězec**.
+1. Klikněte pravým tlačítkem v tabulce řetězců a vyberte **nový řetězec**.
 
-1. V **Editor řetězců**vyberte **ID** z **ID** rozevíracího seznamu nebo typ *ID* přímo na místě.
+1. V **editoru řetězců**vyberte **ID** z rozevíracího seznamu **ID** nebo zadejte *ID* přímo na místě.
 
-1. Upravit **hodnota**, v případě potřeby.
+1. V případě potřeby upravte **hodnotu**.
 
-1. Zadejte položku pro **titulek**.
+1. Zadejte položku pro **Titulek**.
 
    > [!NOTE]
-   > Řetězce s hodnotou Null nejsou povoleny v tabulkách řetězců Windows. Pokud vytvoříte položku v tabulce řetězec, který je řetězec s hodnotou null, obdržíte zprávu s výzvou k **zadejte řetězec pro tuto položku tabulky**.
+   > V tabulkách řetězců systému Windows nejsou povoleny řetězce s hodnotou null. Pokud vytvoříte položku v tabulce řetězců, která je prázdným řetězcem, zobrazí se zpráva s výzvou, abyste **zadali řetězec pro tuto položku tabulky**.
 
-#### <a name="to-delete-a-string-table-entry"></a>Chcete-li odstranit položky tabulky řetězců
+#### <a name="to-delete-a-string-table-entry"></a>Odstranění položky tabulky řetězců
 
-Vyberte položku, kterou chcete odstranit a proveďte jednu z následujících akcí:
+Vyberte položku, kterou chcete odstranit, a proveďte jednu z následujících akcí:
 
-- Přejděte do nabídky **upravit** > **odstranit**.
+- Přejděte na nabídku **Upravit** > **odstranění**.
 
-- Klikněte pravým tlačítkem na řetězec, který chcete odstranit a zvolte **odstranit**.
+- Klikněte pravým tlačítkem na řetězec, který chcete odstranit, a vyberte **Odstranit**.
 
-- Stisknutím klávesy **odstranit** klíč.
+- Stiskněte klávesu **Delete** .
 
-### <a name="to-move-a-string-from-one-resource-script-file-to-another"></a>Přesunutí řetězce z jednoho zdrojového souboru skriptu na jiný
+### <a name="to-move-a-string-from-one-resource-script-file-to-another"></a>Přesunutí řetězce z jednoho souboru skriptu prostředků do jiného
 
-1. [Otevřete tabulky řetězců v obou souborech .rc](../windows/how-to-create-a-resource-script-file.md).
+1. [V souborech. RC otevřete tabulky řetězců](../windows/how-to-create-a-resource-script-file.md).
 
-1. Klikněte pravým tlačítkem na řetězec, který má přesunout a zvolte **Vyjmout**.
+1. Klikněte pravým tlačítkem myši na řetězec, který chcete přesunout, a vyberte **Vyjmout**.
 
-1. Umístěte kurzor na cíli **Editor řetězců** okna.
+1. Umístěte kurzor do okna Editor cílového **řetězce** .
 
-1. V *.rc* souboru, do kterého chcete přesunout řetězec, klikněte pravým tlačítkem myši a zvolte **vložit**.
-
-> [!NOTE]
-> Pokud **ID** nebo **hodnotu** přesunutý řetězec konfliktů s existujícím **ID** nebo **hodnotu** v cílovém souboru a buď tento **ID** nebo **hodnotu** změn přesunutý řetězec.
-
-### <a name="to-change-the-properties-of-a-string-resource"></a>Chcete-li změnit vlastnosti prostředku řetězce
-
-Můžete použít místní úpravy. Chcete-li změnit **ID**, **hodnotu**, a **titulek** vlastnosti.
+1. V souboru *. RC* , do kterého chcete přesunout řetězec, klikněte pravým tlačítkem myši a vyberte možnost **Vložit**.
 
 > [!NOTE]
->  Můžete také upravit vlastnosti řetězce v [okno vlastností](/visualstudio/ide/reference/properties-window).
+> Pokud je **ID** nebo **hodnota** přesunutého řetězce v konfliktu s existujícím **ID** nebo **hodnotou** v cílovém souboru, buď se změní **identifikátor** nebo **hodnota** přesunutého řetězce.
 
-#### <a name="to-change-a-string-or-its-identifier"></a>Chcete-li změnit její identifikátor nebo řetězec
+### <a name="to-change-the-properties-of-a-string-resource"></a>Změna vlastností prostředku řetězce
 
-1. Otevřete poklepáním na ikonu v tabulce řetězců [zobrazení prostředků](how-to-create-a-resource-script-file.md#create-resources).
+Pomocí místních úprav můžete změnit vlastnosti **ID**, **hodnoty**a **titulku** .
 
-1. Vyberte řetězec, který chcete upravit a dvakrát klikněte **ID**, **hodnotu**, nebo **titulek** sloupec a pak můžete:
+> [!NOTE]
+>  Můžete také upravit vlastnosti řetězce v [okno Vlastnosti](/visualstudio/ide/reference/properties-window).
 
-   - Vyberte **ID** z **ID** rozevíracího seznamu nebo typ *ID* přímo na místě.
+#### <a name="to-change-a-string-or-its-identifier"></a>Změna řetězce nebo jeho identifikátoru
 
-   - Zadejte jiné číslo v **hodnotu** sloupce.
+1. Otevřete tabulku řetězců dvojitým kliknutím na její ikonu v [prostředky](how-to-create-a-resource-script-file.md#create-resources).
 
-   - Zadejte úpravy v operaci **titulek** sloupce.
+1. Vyberte řetězec, který chcete upravit, a dvakrát klikněte na sloupec **ID**, **hodnota**nebo **Titulek** a pak můžete:
 
-#### <a name="to-change-the-caption-property-of-multiple-string-resources"></a>Změna vlastnosti titulku více řetězcové prostředky
+   - V rozevíracím seznamu **ID** vyberte **ID** nebo zadejte *ID* přímo na místě.
 
-1. Otevřete poklepáním na ikonu v tabulce řetězců [zobrazení prostředků](how-to-create-a-resource-script-file.md#create-resources).
+   - Do sloupce **hodnota** zadejte jiné číslo.
 
-1. Vyberte řetězců, které chcete změnit současným **Ctrl** klíče při výběru každé z nich.
+   - Do sloupce titulku zadejte úpravy.
 
-1. V [okno vlastností](/visualstudio/ide/reference/properties-window), zadejte novou hodnotu pro vlastnost, kterou chcete změnit.
+#### <a name="to-change-the-caption-property-of-multiple-string-resources"></a>Změna vlastnosti titulku prostředků s více řetězci
+
+1. Otevřete tabulku řetězců dvojitým kliknutím na její ikonu v [prostředky](how-to-create-a-resource-script-file.md#create-resources).
+
+1. Vyberte řetězce, které chcete změnit, a podržením klávesy **CTRL** při výběru každého z nich.
+
+1. V [okně Vlastnosti](/visualstudio/ide/reference/properties-window)zadejte novou hodnotu vlastnosti, kterou chcete změnit.
 
 1. Stisknutím klávesy **zadejte**.
 
-### <a name="to-add-formatting-or-special-characters-to-a-string-resource"></a>Přidání formátovacích nebo speciálních znaků do řetězce prostředků
+### <a name="to-add-formatting-or-special-characters-to-a-string-resource"></a>Přidání formátování nebo speciálních znaků do prostředku řetězce
 
-1. Otevřete poklepáním na ikonu v tabulce řetězců [zobrazení prostředků](how-to-create-a-resource-script-file.md#create-resources).
+1. Otevřete tabulku řetězců dvojitým kliknutím na její ikonu v [prostředky](how-to-create-a-resource-script-file.md#create-resources).
 
 1. Vyberte řetězec, který chcete upravit.
 
-1. V [okno vlastností](/visualstudio/ide/reference/properties-window), přidejte všechny standardní řídicí sekvence, které tady textu **titulek** pole a stiskněte klávesu **Enter**.
+1. V [okně Vlastnosti](/visualstudio/ide/reference/properties-window)přidejte všechny standardní řídicí sekvence uvedené níže do textu v poli **Titulek** a stiskněte klávesu **ENTER**.
 
-   |Chcete-li získat to...|Zadejte toto...|
+   |K získání...|Zadejte tuto...|
    |-----------------|---------------|
    | Nový řádek | \\n |
    | Návrat na začátek řádku | \\r |
    | Karta | \\t |
-   | Zpětné lomítko (\\) | \\\\ |
-   | Znak ASCII | \\ddd (osmičkové soustavě) |
-   | upozornění (zvonek) | \\a |
+   | Zpětné lomítko\\() | \\\\ |
+   | Znak ASCII | \\DDD (osmičkový zápis) |
+   | Upozornění (zvonek) | \\a |
 
    > [!NOTE]
-   > **Editor řetězců** nepodporuje kompletní řídicí znaky ASCII. Můžete použít pouze ty uvedené výše.
+   > **Editor řetězce** nepodporuje úplnou sadu řídicích asci znaků. Můžete použít jenom ty, které jsou uvedené výše.
 
 ## <a name="requirements"></a>Požadavky
 
@@ -170,7 +170,7 @@ Win32
 
 ## <a name="see-also"></a>Viz také:
 
-[Editory prostředků](../windows/resource-editors.md)
-[řetězce](/windows/desktop/menurc/strings)<br/>
-[O řetězcích](/windows/desktop/menurc/about-strings)<br/>
+[](../windows/resource-editors.md)
+[Řetězce](/windows/win32/menurc/strings) editorů prostředků<br/>
+[O řetězcích](/windows/win32/menurc/about-strings)<br/>
 [Přizpůsobení rozložení oken](/visualstudio/ide/customizing-window-layouts-in-visual-studio)
