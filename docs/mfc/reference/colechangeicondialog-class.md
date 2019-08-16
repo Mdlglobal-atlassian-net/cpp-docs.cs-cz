@@ -16,16 +16,16 @@ helpviewer_keywords:
 - COleChangeIconDialog [MFC], GetIconicMetafile
 - COleChangeIconDialog [MFC], m_ci
 ms.assetid: 8d6e131b-ddbb-4dff-a432-f239efda8e3d
-ms.openlocfilehash: eb5fe38d7cf4058e8de31da3de39dca906671a85
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4cbf1137a15a9f86a6377980526e6d188f4d0a69
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62396168"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69504781"
 ---
 # <a name="colechangeicondialog-class"></a>COleChangeIconDialog Class
 
-Používá se pro dialogové okno změny ikony OLE.
+Používá se pro dialogové okno ikona změny OLE.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -37,35 +37,35 @@ class COleChangeIconDialog : public COleDialog
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
-|[COleChangeIconDialog::COleChangeIconDialog](#colechangeicondialog)|Vytvoří `COleChangeIconDialog` objektu.|
+|[COleChangeIconDialog::COleChangeIconDialog](#colechangeicondialog)|`COleChangeIconDialog` Vytvoří objekt.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
-|[COleChangeIconDialog::DoChangeIcon](#dochangeicon)|Provede změnu zadané v dialogovém okně.|
-|[COleChangeIconDialog::DoModal](#domodal)|Zobrazí dialogové okno 2 změny ikony OLE.|
-|[COleChangeIconDialog::GetIconicMetafile](#geticonicmetafile)|Získá popisovač pro tento metasoubor spojené s formuláři ikonickým této položky.|
+|[COleChangeIconDialog::DoChangeIcon](#dochangeicon)|Provede změnu určenou v dialogovém okně.|
+|[COleChangeIconDialog::DoModal](#domodal)|Zobrazí dialogové okno Změnit ikonu OLE 2.|
+|[COleChangeIconDialog::GetIconicMetafile](#geticonicmetafile)|Získá popisovač metasouboru přidruženého k ikonickým formuláři této položky.|
 
 ### <a name="public-data-members"></a>Veřejné datové členy
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[COleChangeIconDialog::m_ci](#m_ci)|Struktura, která řídí chování dialogového okna.|
 
 ## <a name="remarks"></a>Poznámky
 
-Vytvoření objektu třídy `COleChangeIconDialog` kdy chcete volat dialogovému oknu. Po `COleChangeIconDialog` objekt byl vytvořen, můžete použít [m_ci](#m_ci) struktury k inicializaci hodnoty nebo stavy ovládacích prvků v dialogovém okně. `m_ci` Struktury je typu OLEUICHANGEICON. Další informace o použití této třídy dialogového okna, najdete v článku [DoModal](#domodal) členskou funkci.
+Vytvořte objekt třídy `COleChangeIconDialog` , pokud chcete zavolat toto dialogové okno. Po vytvoření `COleChangeIconDialog` objektu lze pomocí struktury [m_ci](#m_ci) inicializovat hodnoty nebo stavy ovládacích prvků v dialogovém okně. `m_ci` Struktura je typu OleUIChangeIcon. Další informace o použití této třídy dialogového okna naleznete v tématu členská funkce [DoModal](#domodal) .
 
-Další informace najdete v tématu [OLEUICHANGEICON](/windows/desktop/api/oledlg/ns-oledlg-tagoleuichangeicona) struktura v sadě Windows SDK.
+Další informace najdete v tématu struktura [OleUIChangeIcon](/windows/win32/api/oledlg/ns-oledlg-oleuichangeiconw) v Windows SDK.
 
-Další informace o dialogových oknech OLE konkrétní, najdete v článku [dialogová okna v prostředí OLE](../../mfc/dialog-boxes-in-ole.md).
+Další informace o dialogových oknech specifických pro OLE naleznete v dialogových oknech článku [v tématu OLE](../../mfc/dialog-boxes-in-ole.md).
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
-[Třídy CObject](../../mfc/reference/cobject-class.md)
+[CObject](../../mfc/reference/cobject-class.md)
 
 [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)
 
@@ -81,11 +81,11 @@ Další informace o dialogových oknech OLE konkrétní, najdete v článku [dia
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** afxodlgs.h
+**Záhlaví:** afxodlgs. h
 
-##  <a name="colechangeicondialog"></a>  COleChangeIconDialog::COleChangeIconDialog
+##  <a name="colechangeicondialog"></a>COleChangeIconDialog::COleChangeIconDialog
 
-Tato funkce vytvoří pouze `COleChangeIconDialog` objektu.
+Tato funkce vytvoří pouze `COleChangeIconDialog` objekt.
 
 ```
 explicit COleChangeIconDialog(
@@ -97,33 +97,33 @@ explicit COleChangeIconDialog(
 ### <a name="parameters"></a>Parametry
 
 *pItem*<br/>
-Odkazuje na položku, kterou chcete převést.
+Odkazuje na položku, která má být převedena.
 
 *dwFlags*<br/>
-Vytvoření příznak, který bude obsahovat libovolný počet následující hodnoty kombinované pomocí bitového – operátor or:
+Příznak vytvoření, který obsahuje libovolný počet následujících hodnot v kombinaci pomocí bitového operátoru OR:
 
-- CIF_SELECTCURRENT Určuje, že bude aktuální přepínací tlačítko vybrané zpočátku když je volána dialogových oken. Toto nastavení je výchozí.
+- CIF_SELECTCURRENT určuje, že aktuální přepínač bude při volání dialogového okna vybrán jako první. Toto nastavení je výchozí.
 
-- CIF_SELECTDEFAULT Určuje, které se bude přepínač výchozí vybraná zpočátku když je volána dialogových oken.
+- CIF_SELECTDEFAULT Určuje, že výchozí přepínač bude zpočátku vybrán při volání dialogového okna.
 
-- CIF_SELECTFROMFILE Určuje, které se bude přepínač ze souboru vybrat zpočátku když je volána dialogových oken.
+- CIF_SELECTFROMFILE určuje, že přepínač ze souboru od bude při volání dialogového okna vybrán jako první.
 
-- CIF_SHOWHELP Určuje, že na tlačítko Nápověda se zobrazí, když je volána dialogových oken.
+- CIF_SHOWHELP určuje, že se při volání dialogového okna zobrazí tlačítko Help.
 
-- CIF_USEICONEXE Určuje, že ikona by měla být rozbalena z spustitelný soubor určený v `szIconExe` pole [m_ci](#m_ci) místo se načítá z typu. To je užitečné pro vkládání nebo propojení souborů jiných než OLE.
+- CIF_USEICONEXE určuje, že ikona by měla být extrahována ze spustitelného souboru `szIconExe` zadaného v poli [m_ci](#m_ci) namísto načtení z typu. To je užitečné pro vkládání nebo propojení s jinými soubory než OLE.
 
 *pParentWnd*<br/>
-Odkazuje na objekt okna nadřazené nebo vlastník (typu `CWnd`), ke které patří objektu dialogového okna. Pokud je hodnota NULL, nastaví se nadřazené okno dialogového okna do hlavního okna aplikace.
+Odkazuje na objekt okna nadřazeného objektu nebo vlastníka (typu `CWnd`), do kterého objekt dialogového okna patří. Pokud má hodnotu NULL, nadřazené okno dialogového okna bude nastaveno na hlavní okno aplikace.
 
 ### <a name="remarks"></a>Poznámky
 
-Chcete-li zobrazit dialogové okno, zavolejte [DoModal](#domodal) funkce.
+Chcete-li zobrazit dialogové okno, zavolejte funkci [DoModal](#domodal) .
 
-Další informace najdete v tématu [OLEUICHANGEICON](/windows/desktop/api/oledlg/ns-oledlg-tagoleuichangeicona) struktura v sadě Windows SDK.
+Další informace najdete v tématu struktura [OleUIChangeIcon](/windows/win32/api/oledlg/ns-oledlg-oleuichangeiconw) v Windows SDK.
 
-##  <a name="dochangeicon"></a>  COleChangeIconDialog::DoChangeIcon
+##  <a name="dochangeicon"></a>COleChangeIconDialog::D oChangeIcon
 
-Voláním této funkce můžete změnit ikonu představující položku byla vybrána v dialogovém okně po [DoModal](#domodal) vrátí IDOK.
+Voláním této funkce změníte ikonu reprezentující položku na tu, která je vybrána v dialogovém okně po [DoModal](#domodal) vrátí IDOK.
 
 ```
 BOOL DoChangeIcon(COleClientItem* pItem);
@@ -132,15 +132,15 @@ BOOL DoChangeIcon(COleClientItem* pItem);
 ### <a name="parameters"></a>Parametry
 
 *pItem*<br/>
-Odkazuje na položku, jehož ikonu se mění.
+Odkazuje na položku, jejíž ikonu se mění.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Nenulové, pokud změna je úspěšná. jinak 0.
+Nenulové, pokud je změna úspěšná; v opačném případě 0.
 
 ##  <a name="domodal"></a>  COleChangeIconDialog::DoModal
 
-Voláním této funkce Zobrazit dialogové okno změny ikony OLE.
+Voláním této funkce zobrazíte dialogové okno ikona změny OLE.
 
 ```
 virtual INT_PTR DoModal();
@@ -148,23 +148,23 @@ virtual INT_PTR DoModal();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Stav dokončení pro dialogové okno. Jeden z následujících hodnot:
+Stav dokončení dialogového okna Jedna z následujících hodnot:
 
-- IDOK, pokud úspěšně zobrazí dialogové okno.
+- IDOK, pokud se dialogové okno úspěšně zobrazilo.
 
 - IDCANCEL, pokud uživatel zrušil dialogové okno.
 
-- IDABORT, pokud došlo k chybě. Pokud je vrácena IDABORT, zavolejte `COleDialog::GetLastError` členská funkce, chcete-li získat další informace o typu chyby, ke které došlo. Seznam možných chyb, najdete v článku [OleUIChangeIcon](/windows/desktop/api/oledlg/nf-oledlg-oleuichangeicona) funkce v sadě Windows SDK.
+- IDABORT, pokud došlo k chybě. Je-li vrácen IDABORT, zavolejte `COleDialog::GetLastError` členskou funkci pro získání dalších informací o typu chyby, ke které došlo. Seznam možných chyb naleznete v Windows SDK funkci [OleUIChangeIcon](/windows/win32/api/oledlg/nf-oledlg-oleuichangeiconw) .
 
 ### <a name="remarks"></a>Poznámky
 
-Pokud chcete inicializovat různé ovládací prvky dialogového okna pole tak, že nastavíte členy [m_ci](#m_ci) strukturu, je potřeba to udělat před voláním `DoModal`, ale po vytvoření objektu dialogového okna.
+Pokud chcete inicializovat různé ovládací prvky dialogového okna nastavením členů struktury [m_ci](#m_ci) , měli byste to provést před voláním `DoModal`, ale po sestavení objektu dialogového okna.
 
-Pokud `DoModal` vrátí IDOK, můžete volat ostatní členské funkce k načtení nastavení nebo informace, které se vstup uživatelem do dialogových oken.
+Pokud `DoModal` vrátí IDOK, můžete zavolat jiné členské funkce a načíst tak nastavení nebo informace, které uživatel zadal, do dialogového okna.
 
-##  <a name="geticonicmetafile"></a>  COleChangeIconDialog::GetIconicMetafile
+##  <a name="geticonicmetafile"></a>COleChangeIconDialog::GetIconicMetafile
 
-Voláním této funkce se získat popisovač pro tento metasoubor obsahující ikonickým aspekt vybranou položku.
+Voláním této funkce získáte popisovač metasouboru, který obsahuje aspekt ikonickým vybrané položky.
 
 ```
 HGLOBAL GetIconicMetafile() const;
@@ -172,11 +172,11 @@ HGLOBAL GetIconicMetafile() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Popisovač na metasoubor obsahující ikonickým aspekt přes novou ikonu, pokud dialogové okno se zavře výběrem **OK**; v opačném případě ikona, protože byl předtím, než se zobrazí dialogové okno.
+Popisovač metasouboru obsahujícího aspekt ikonickým nové ikony, pokud dialogové okno bylo zavřeno kliknutím na **tlačítko OK**; v opačném případě se ikona změnila před zobrazením dialogového okna.
 
 ##  <a name="m_ci"></a>  COleChangeIconDialog::m_ci
 
-Struktura typu OLEUICHANGEICON používat k ovládání chování dialogové okno změny ikony.
+Struktura typu OLEUICHANGEICON slouží k řízení chování dialogového okna změnit ikonu.
 
 ```
 OLEUICHANGEICON m_ci;
@@ -184,9 +184,9 @@ OLEUICHANGEICON m_ci;
 
 ### <a name="remarks"></a>Poznámky
 
-Přímo nebo prostřednictvím členské funkce, lze upravit členy této struktury.
+Členy této struktury lze upravovat buď přímo, nebo prostřednictvím členských funkcí.
 
-Další informace najdete v tématu [OLEUICHANGEICON](/windows/desktop/api/oledlg/ns-oledlg-tagoleuichangeicona) struktura v sadě Windows SDK.
+Další informace najdete v tématu struktura [OleUIChangeIcon](/windows/win32/api/oledlg/ns-oledlg-oleuichangeiconw) v Windows SDK.
 
 ## <a name="see-also"></a>Viz také:
 

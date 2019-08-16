@@ -56,12 +56,12 @@ helpviewer_keywords:
 - CFileFind [MFC], CloseContext
 - CFileFind [MFC], m_pTM
 ms.assetid: 9990068c-b023-4114-9580-a50182d15240
-ms.openlocfilehash: f2dfd3421d2154b4894b62b71d7993c483a77c53
-ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
+ms.openlocfilehash: 2ec8c50a317a09e97a212e8cd7b9be1b58272af9
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68916128"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69506575"
 ---
 # <a name="cfilefind-class"></a>CFileFind – třída
 
@@ -212,7 +212,7 @@ Vyhrazeno pro `FindFile` vytvoření polymorfního s odvozenými třídami. Mus�
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Nenulové, pokud bylo úspěšné; v opačném případě 0. Chcete-li získat rozšířené informace o chybě, zavolejte funkci Win32 [GetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror).
+Nenulové, pokud bylo úspěšné; v opačném případě 0. Chcete-li získat rozšířené informace o chybě, zavolejte funkci Win32 [GetLastError](/windows/win32/api/errhandlingapi/nf-errhandlingapi-getlasterror).
 
 ### <a name="remarks"></a>Poznámky
 
@@ -270,7 +270,7 @@ virtual BOOL FindNextFile();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Nenulové, pokud existuje více souborů; nula, pokud se soubor našel jako poslední v adresáři, nebo pokud došlo k chybě Chcete-li získat rozšířené informace o chybě, zavolejte funkci Win32 [GetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror). Pokud je nalezen poslední soubor v adresáři, nebo pokud nelze nalézt žádné vyhovující soubory, `GetLastError` vrátí funkce ERROR_NO_MORE_FILES.
+Nenulové, pokud existuje více souborů; nula, pokud se soubor našel jako poslední v adresáři, nebo pokud došlo k chybě Chcete-li získat rozšířené informace o chybě, zavolejte funkci Win32 [GetLastError](/windows/win32/api/errhandlingapi/nf-errhandlingapi-getlasterror). Pokud je nalezen poslední soubor v adresáři, nebo pokud nelze nalézt žádné vyhovující soubory, `GetLastError` vrátí funkce ERROR_NO_MORE_FILES.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -314,7 +314,7 @@ Před voláním `FindNextFile` kterékoli z následujících členských funkcí
 
 - [MatchesMask](#matchesmask)
 
-`FindNextFile`zabalí funkci Win32 [FindNextFile](/windows/desktop/api/fileapi/nf-fileapi-findnextfilea).
+`FindNextFile`zabalí funkci Win32 [FindNextFile](/windows/win32/api/fileapi/nf-fileapi-findnextfilew).
 
 ### <a name="example"></a>Příklad
 
@@ -332,7 +332,7 @@ virtual BOOL GetCreationTime(CTime& refTime) const;
 ### <a name="parameters"></a>Parametry
 
 *pTimeStamp*<br/>
-Ukazatel na strukturu [času](/windows/desktop/api/minwinbase/ns-minwinbase-filetime) souboru obsahující čas, kdy byl soubor vytvořen.
+Ukazatel na strukturu [času](/windows/win32/api/minwinbase/ns-minwinbase-filetime) souboru obsahující čas, kdy byl soubor vytvořen.
 
 *refTime*<br/>
 Odkaz na objekt [CTime –](../../atl-mfc-shared/reference/ctime-class.md) .
@@ -346,7 +346,7 @@ Nenulové, pokud bylo úspěšné; 0, pokud neproběhla úspěšně. `GetCreatio
 Před voláním [](#findnextfile) `GetCreationTime`je nutné volat FindNextFile alespoň jednou.
 
 > [!NOTE]
->  Ne všechny systémy souborů používají stejnou sémantiku k implementaci časového razítka vráceného touto funkcí. Tato funkce může vracet stejnou hodnotu vrácenou jinými funkcemi časového razítka, Pokud podkladový systém souborů nebo server nepodporuje zachování atributu Time. Informace o formátech času najdete v [WIN32_FIND_DATA](/windows/desktop/api/minwinbase/ns-minwinbase-win32_find_dataa) struktuře. V některých operačních systémech byl vrácený čas v časovém pásmu, které se nachází v místním počítači, ale soubor je umístěný. Další informace najdete v tématu rozhraní Win32 [FileTimeToLocalFileTime](/windows/desktop/api/fileapi/nf-fileapi-filetimetolocalfiletime) API.
+>  Ne všechny systémy souborů používají stejnou sémantiku k implementaci časového razítka vráceného touto funkcí. Tato funkce může vracet stejnou hodnotu vrácenou jinými funkcemi časového razítka, Pokud podkladový systém souborů nebo server nepodporuje zachování atributu Time. Informace o formátech času najdete v [WIN32_FIND_DATA](/windows/win32/api/minwinbase/ns-minwinbase-win32_find_dataw) struktuře. V některých operačních systémech byl vrácený čas v časovém pásmu, které se nachází v místním počítači, ale soubor je umístěný. Další informace najdete v tématu rozhraní Win32 [FileTimeToLocalFileTime](/windows/win32/api/fileapi/nf-fileapi-filetimetolocalfiletime) API.
 
 ### <a name="example"></a>Příklad
 
@@ -473,7 +473,7 @@ virtual BOOL GetLastAccessTime(FILETIME* pTimeStamp) const;
 Odkaz na objekt [CTime –](../../atl-mfc-shared/reference/ctime-class.md) .
 
 *pTimeStamp*<br/>
-Ukazatel na strukturu [času](/windows/desktop/api/minwinbase/ns-minwinbase-filetime) souboru obsahující čas posledního otevření souboru.
+Ukazatel na strukturu [času](/windows/win32/api/minwinbase/ns-minwinbase-filetime) souboru obsahující čas posledního otevření souboru.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -484,7 +484,7 @@ Nenulové, pokud bylo úspěšné; 0, pokud neproběhla úspěšně. `GetLastAcc
 Před voláním [](#findnextfile) `GetLastAccessTime`je nutné volat FindNextFile alespoň jednou.
 
 > [!NOTE]
->  Ne všechny systémy souborů používají stejnou sémantiku k implementaci časového razítka vráceného touto funkcí. Tato funkce může vracet stejnou hodnotu vrácenou jinými funkcemi časového razítka, Pokud podkladový systém souborů nebo server nepodporuje zachování atributu Time. Informace o formátech času najdete v [WIN32_FIND_DATA](/windows/desktop/api/minwinbase/ns-minwinbase-win32_find_dataa) struktuře. V některých operačních systémech byl vrácený čas v časovém pásmu, které se nachází v místním počítači, ale soubor je umístěný. Další informace najdete v tématu rozhraní Win32 [FileTimeToLocalFileTime](/windows/desktop/api/fileapi/nf-fileapi-filetimetolocalfiletime) API.
+>  Ne všechny systémy souborů používají stejnou sémantiku k implementaci časového razítka vráceného touto funkcí. Tato funkce může vracet stejnou hodnotu vrácenou jinými funkcemi časového razítka, Pokud podkladový systém souborů nebo server nepodporuje zachování atributu Time. Informace o formátech času najdete v [WIN32_FIND_DATA](/windows/win32/api/minwinbase/ns-minwinbase-win32_find_dataw) struktuře. V některých operačních systémech byl vrácený čas v časovém pásmu, které se nachází v místním počítači, ale soubor je umístěný. Další informace najdete v tématu rozhraní Win32 [FileTimeToLocalFileTime](/windows/win32/api/fileapi/nf-fileapi-filetimetolocalfiletime) API.
 
 ### <a name="example"></a>Příklad
 
@@ -502,7 +502,7 @@ virtual BOOL GetLastWriteTime(CTime& refTime) const;
 ### <a name="parameters"></a>Parametry
 
 *pTimeStamp*<br/>
-Ukazatel na strukturu [času](/windows/desktop/api/minwinbase/ns-minwinbase-filetime) souboru obsahující čas, kdy byl soubor naposledy zapsán.
+Ukazatel na strukturu [času](/windows/win32/api/minwinbase/ns-minwinbase-filetime) souboru obsahující čas, kdy byl soubor naposledy zapsán.
 
 *refTime*<br/>
 Odkaz na objekt [CTime –](../../atl-mfc-shared/reference/ctime-class.md) .
@@ -516,7 +516,7 @@ Nenulové, pokud bylo úspěšné; 0, pokud neproběhla úspěšně. `GetLastWri
 Před voláním [](#findnextfile) `GetLastWriteTime`je nutné volat FindNextFile alespoň jednou.
 
 > [!NOTE]
->  Ne všechny systémy souborů používají stejnou sémantiku k implementaci časového razítka vráceného touto funkcí. Tato funkce může vracet stejnou hodnotu vrácenou jinými funkcemi časového razítka, Pokud podkladový systém souborů nebo server nepodporuje zachování atributu Time. Informace o formátech času najdete v [Win32_Find_Data](/windows/desktop/api/minwinbase/ns-minwinbase-win32_find_dataa) struktuře. V některých operačních systémech byl vrácený čas v časovém pásmu, které se nachází v místním počítači, ale soubor je umístěný. Další informace najdete v tématu rozhraní Win32 [FileTimeToLocalFileTime](/windows/desktop/api/fileapi/nf-fileapi-filetimetolocalfiletime) API.
+>  Ne všechny systémy souborů používají stejnou sémantiku k implementaci časového razítka vráceného touto funkcí. Tato funkce může vracet stejnou hodnotu vrácenou jinými funkcemi časového razítka, Pokud podkladový systém souborů nebo server nepodporuje zachování atributu Time. Informace o formátech času najdete v [WIN32_FIND_DATA](/windows/win32/api/minwinbase/ns-minwinbase-win32_find_dataw) struktuře. V některých operačních systémech byl vrácený čas v časovém pásmu, které se nachází v místním počítači, ale soubor je umístěný. Další informace najdete v tématu rozhraní Win32 [FileTimeToLocalFileTime](/windows/win32/api/fileapi/nf-fileapi-filetimetolocalfiletime) API.
 
 ### <a name="example"></a>Příklad
 
@@ -538,7 +538,7 @@ Délka nalezeného souboru v bajtech
 
 Před voláním [](#findnextfile) `GetLength`je nutné volat FindNextFile alespoň jednou.
 
-`GetLength`pomocí [WIN32_FIND_DATA](/windows/desktop/api/minwinbase/ns-minwinbase-win32_find_dataa) struktury Win32 získá a vrátí hodnotu velikosti souboru (v bajtech).
+`GetLength`pomocí [WIN32_FIND_DATA](/windows/win32/api/minwinbase/ns-minwinbase-win32_find_dataw) struktury Win32 získá a vrátí hodnotu velikosti souboru (v bajtech).
 
 > [!NOTE]
 >  V případě knihovny MFC 7,0 `GetLength` podporuje typy celočíselného celého čísla (64). Dříve existující kód sestavený pomocí této novější verze knihovny může mít za následek upozornění na zkrácení.
@@ -583,7 +583,7 @@ Nenulové, pokud bylo úspěšné; v opačném případě 0.
 
 ### <a name="remarks"></a>Poznámky
 
-Aplikace označí archivní soubor, který se má zálohovat nebo odebrat, s FILE_ATTRIBUTE_ARCHIVE atributem souboru, který je identifikovaný ve struktuře [WIN32_FIND_DATA](/windows/desktop/api/minwinbase/ns-minwinbase-win32_find_dataa) .
+Aplikace označí archivní soubor, který se má zálohovat nebo odebrat, s FILE_ATTRIBUTE_ARCHIVE atributem souboru, který je identifikovaný ve struktuře [WIN32_FIND_DATA](/windows/win32/api/minwinbase/ns-minwinbase-win32_find_dataw) .
 
 Před voláním [](#findnextfile) `IsArchived`je nutné volat FindNextFile alespoň jednou.
 
@@ -607,7 +607,7 @@ Nenulové, pokud bylo úspěšné; v opačném případě 0.
 
 ### <a name="remarks"></a>Poznámky
 
-Komprimovaný soubor je označený jako FILE_ATTRIBUTE_COMPRESSED, atribut souboru identifikovaný ve struktuře [WIN32_FIND_DATA](/windows/desktop/api/minwinbase/ns-minwinbase-win32_find_dataa) . U souboru tento atribut označuje, že všechna data v souboru jsou komprimována. V případě adresáře tento atribut označuje, že komprese je výchozím nastavením pro nově vytvořené soubory a podadresáře.
+Komprimovaný soubor je označený jako FILE_ATTRIBUTE_COMPRESSED, atribut souboru identifikovaný ve struktuře [WIN32_FIND_DATA](/windows/win32/api/minwinbase/ns-minwinbase-win32_find_dataw) . U souboru tento atribut označuje, že všechna data v souboru jsou komprimována. V případě adresáře tento atribut označuje, že komprese je výchozím nastavením pro nově vytvořené soubory a podadresáře.
 
 Před voláním [](#findnextfile) `IsCompressed`je nutné volat FindNextFile alespoň jednou.
 
@@ -631,7 +631,7 @@ Nenulové, pokud bylo úspěšné; v opačném případě 0.
 
 ### <a name="remarks"></a>Poznámky
 
-Soubor, který je adresářem, je označený jako FILE_ATTRIBUTE_DIRECTORY atribut souboru identifikovaný ve struktuře [WIN32_FIND_DATA](/windows/desktop/api/minwinbase/ns-minwinbase-win32_find_dataa) .
+Soubor, který je adresářem, je označený jako FILE_ATTRIBUTE_DIRECTORY atribut souboru identifikovaný ve struktuře [WIN32_FIND_DATA](/windows/win32/api/minwinbase/ns-minwinbase-win32_find_dataw) .
 
 Před voláním [](#findnextfile) `IsDirectory`je nutné volat FindNextFile alespoň jednou.
 
@@ -677,7 +677,7 @@ Nenulové, pokud bylo úspěšné; v opačném případě 0.
 
 ### <a name="remarks"></a>Poznámky
 
-Skryté soubory, které jsou označeny FILE_ATTRIBUTE_HIDDEN, atribut souboru identifikovaný ve struktuře [WIN32_FIND_DATA](/windows/desktop/api/minwinbase/ns-minwinbase-win32_find_dataa) . Skrytý soubor není zahrnutý v běžném výpisu adresáře.
+Skryté soubory, které jsou označeny FILE_ATTRIBUTE_HIDDEN, atribut souboru identifikovaný ve struktuře [WIN32_FIND_DATA](/windows/win32/api/minwinbase/ns-minwinbase-win32_find_dataw) . Skrytý soubor není zahrnutý v běžném výpisu adresáře.
 
 Před voláním [](#findnextfile) `IsHidden`je nutné volat FindNextFile alespoň jednou.
 
@@ -701,7 +701,7 @@ Nenulové, pokud bylo úspěšné; v opačném případě 0.
 
 ### <a name="remarks"></a>Poznámky
 
-Soubory označené FILE_ATTRIBUTE_NORMAL, atribut souboru identifikovaný ve struktuře [WIN32_FIND_DATA](/windows/desktop/api/minwinbase/ns-minwinbase-win32_find_dataa) . V normálním souboru nejsou nastaveny žádné další atributy. Všechny ostatní atributy souboru přepíšou tento atribut.
+Soubory označené FILE_ATTRIBUTE_NORMAL, atribut souboru identifikovaný ve struktuře [WIN32_FIND_DATA](/windows/win32/api/minwinbase/ns-minwinbase-win32_find_dataw) . V normálním souboru nejsou nastaveny žádné další atributy. Všechny ostatní atributy souboru přepíšou tento atribut.
 
 Před voláním [](#findnextfile) `IsNormal`je nutné volat FindNextFile alespoň jednou.
 
@@ -725,7 +725,7 @@ Nenulové, pokud bylo úspěšné; v opačném případě 0.
 
 ### <a name="remarks"></a>Poznámky
 
-Soubor, který je jen pro čtení, je označený jako FILE_ATTRIBUTE_READONLY, atribut souboru identifikovaný ve struktuře [WIN32_FIND_DATA](/windows/desktop/api/minwinbase/ns-minwinbase-win32_find_dataa) . Aplikace můžou takový soubor číst, ale nemůžou do něj zapisovat ani ho odstraňovat.
+Soubor, který je jen pro čtení, je označený jako FILE_ATTRIBUTE_READONLY, atribut souboru identifikovaný ve struktuře [WIN32_FIND_DATA](/windows/win32/api/minwinbase/ns-minwinbase-win32_find_dataw) . Aplikace můžou takový soubor číst, ale nemůžou do něj zapisovat ani ho odstraňovat.
 
 Před voláním [](#findnextfile) `IsReadOnly`je nutné volat FindNextFile alespoň jednou.
 
@@ -749,7 +749,7 @@ Nenulové, pokud bylo úspěšné; v opačném případě 0.
 
 ### <a name="remarks"></a>Poznámky
 
-Systémový soubor je označený jako FILE_ATTRIBUTE_SYSTEM, atribut File identifikovaný ve struktuře [WIN32_FIND_DATA](/windows/desktop/api/minwinbase/ns-minwinbase-win32_find_dataa) . Systémový soubor je součástí systému, nebo je používán výhradně operačním systémem.
+Systémový soubor je označený jako FILE_ATTRIBUTE_SYSTEM, atribut File identifikovaný ve struktuře [WIN32_FIND_DATA](/windows/win32/api/minwinbase/ns-minwinbase-win32_find_dataw) . Systémový soubor je součástí systému, nebo je používán výhradně operačním systémem.
 
 Před voláním [](#findnextfile) `IsSystem`je nutné volat FindNextFile alespoň jednou.
 
@@ -773,7 +773,7 @@ Nenulové, pokud bylo úspěšné; v opačném případě 0.
 
 ### <a name="remarks"></a>Poznámky
 
-Dočasný soubor je označený jako FILE_ATTRIBUTE_TEMPORARY, atribut souboru identifikovaný ve struktuře [WIN32_FIND_DATA](/windows/desktop/api/minwinbase/ns-minwinbase-win32_find_dataa) . Dočasný soubor se používá pro dočasné úložiště. Aplikace by měly zapisovat do souboru pouze v případě, že je to nezbytně nutné. Většina dat souboru zůstává v paměti, aniž by byla vyprázdněna na médium, protože soubor bude brzy odstraněn.
+Dočasný soubor je označený jako FILE_ATTRIBUTE_TEMPORARY, atribut souboru identifikovaný ve struktuře [WIN32_FIND_DATA](/windows/win32/api/minwinbase/ns-minwinbase-win32_find_dataw) . Dočasný soubor se používá pro dočasné úložiště. Aplikace by měly zapisovat do souboru pouze v případě, že je to nezbytně nutné. Většina dat souboru zůstává v paměti, aniž by byla vyprázdněna na médium, protože soubor bude brzy odstraněn.
 
 Před voláním [](#findnextfile) `IsTemporary`je nutné volat FindNextFile alespoň jednou.
 
@@ -804,7 +804,7 @@ virtual BOOL MatchesMask(DWORD dwMask) const;
 ### <a name="parameters"></a>Parametry
 
 *dwMask*<br/>
-Určuje jeden nebo více atributů souboru identifikovaných ve struktuře [WIN32_FIND_DATA](/windows/desktop/api/minwinbase/ns-minwinbase-win32_find_dataa) pro nalezený soubor. Chcete-li vyhledat více atributů, použijte operátor bitového&#124;operátoru OR (). Je přijatelné jakékoli kombinace následujících atributů:
+Určuje jeden nebo více atributů souboru identifikovaných ve struktuře [WIN32_FIND_DATA](/windows/win32/api/minwinbase/ns-minwinbase-win32_find_dataw) pro nalezený soubor. Chcete-li vyhledat více atributů, použijte operátor bitového&#124;operátoru OR (). Je přijatelné jakékoli kombinace následujících atributů:
 
 - FILE_ATTRIBUTE_ARCHIVE soubor je archivní soubor. Aplikace používají tento atribut k označení souborů pro zálohování nebo odebrání.
 
@@ -824,7 +824,7 @@ Určuje jeden nebo více atributů souboru identifikovaných ve struktuře [WIN3
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Nenulové, pokud bylo úspěšné; v opačném případě 0. Chcete-li získat rozšířené informace o chybě, zavolejte funkci Win32 [GetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror).
+Nenulové, pokud bylo úspěšné; v opačném případě 0. Chcete-li získat rozšířené informace o chybě, zavolejte funkci Win32 [GetLastError](/windows/win32/api/errhandlingapi/nf-errhandlingapi-getlasterror).
 
 ### <a name="remarks"></a>Poznámky
 

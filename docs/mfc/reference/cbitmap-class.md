@@ -34,12 +34,12 @@ helpviewer_keywords:
 - CBitmap [MFC], SetBitmapBits
 - CBitmap [MFC], SetBitmapDimension
 ms.assetid: 3980616a-c59d-495a-86e6-62bd3889c84c
-ms.openlocfilehash: 3cd194d0b6303c6d337d7157a521c825f77fc312
-ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
+ms.openlocfilehash: 7161a4cf4484b6cc9e76e6955de558ca6e9121ca
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68916225"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69507444"
 ---
 # <a name="cbitmap-class"></a>CBitmap – – třída
 
@@ -155,7 +155,7 @@ I když rastr nemůže být pro zobrazovací zařízení vybraný přímo, dá s
 
 Až skončíte s `CBitmap` objektem vytvořeným `CreateBitmap` funkcí, nejdřív vyberte rastrový obrázek mimo `CBitmap` kontext zařízení a pak objekt odstraňte.
 
-Další informace najdete v popisu `bmBits` pole `BITMAP` ve struktuře. Struktura [rastrového obrázku](/windows/desktop/api/wingdi/ns-wingdi-tagbitmap) je popsána v rámci členské funkce [CBitmap –:: CreateBitmapIndirect](#createbitmapindirect) .
+Další informace najdete v popisu `bmBits` pole `BITMAP` ve struktuře. Struktura [rastrového obrázku](/windows/win32/api/wingdi/ns-wingdi-bitmap) je popsána v rámci členské funkce [CBitmap –:: CreateBitmapIndirect](#createbitmapindirect) .
 
 ##  <a name="createbitmapindirect"></a>CBitmap –:: CreateBitmapIndirect
 
@@ -168,7 +168,7 @@ BOOL CreateBitmapIndirect(LPBITMAP lpBitmap);
 ### <a name="parameters"></a>Parametry
 
 *lpBitmap*<br/>
-Odkazuje na strukturu [rastrového obrázku](/windows/desktop/api/wingdi/ns-wingdi-tagbitmap) , která obsahuje informace o rastrovém obrázku.
+Odkazuje na strukturu [rastrového obrázku](/windows/win32/api/wingdi/ns-wingdi-bitmap) , která obsahuje informace o rastrovém obrázku.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -178,7 +178,7 @@ Nenulové, pokud bylo úspěšné; v opačném případě 0.
 
 I když rastr nelze vybrat přímo pro zobrazovací zařízení, lze jej vybrat jako aktuální rastrový obrázek pro kontext paměťového zařízení pomocí funkce [CDC:: VybratObjekt](../../mfc/reference/cdc-class.md#selectobject) a zkopírováním do jakéhokoli kompatibilního kontextu zařízení pomocí funkce [CDC:: BitBlt](../../mfc/reference/cdc-class.md#bitblt) nebo [CDC:: Funkce StretchBlt](../../mfc/reference/cdc-class.md#stretchblt) (Funkce [CDC::P atblt](../../mfc/reference/cdc-class.md#patblt) může zkopírovat bitmapu pro aktuální štětec přímo do kontextu zobrazení zařízení.)
 
-Pokud byla `BITMAP` struktura, na kterou odkazoval parametr *lpBitmap* , vyplněna pomocí `GetObject` funkce, nejsou zadány bity rastrového obrázku a rastrový obrázek není inicializovaný. Pro inicializaci rastrového obrázku může aplikace použít funkci, jako je například [CDC:: BitBlt](../../mfc/reference/cdc-class.md#bitblt) nebo [SetDIBits](/windows/desktop/api/wingdi/nf-wingdi-setdibits) , ke zkopírování bitů z rastrového obrázku určeného `CGdiObject::GetObject` prvním parametrem do rastrového obrázku vytvořeného pomocí. `CreateBitmapIndirect`
+Pokud byla `BITMAP` struktura, na kterou odkazoval parametr *lpBitmap* , vyplněna pomocí `GetObject` funkce, nejsou zadány bity rastrového obrázku a rastrový obrázek není inicializovaný. Pro inicializaci rastrového obrázku může aplikace použít funkci, jako je například [CDC:: BitBlt](../../mfc/reference/cdc-class.md#bitblt) nebo [SetDIBits](/windows/win32/api/wingdi/nf-wingdi-setdibits) , ke zkopírování bitů z rastrového obrázku určeného `CGdiObject::GetObject` prvním parametrem do rastrového obrázku vytvořeného pomocí. `CreateBitmapIndirect`
 
 Po dokončení práce s `CBitmap` objektem `CreateBitmapIndirect` vytvořeným funkcí nejprve vyberte rastrový obrázek mimo `CBitmap` kontext zařízení a pak objekt odstraňte.
 
@@ -286,7 +286,7 @@ int GetBitmap(BITMAP* pBitMap);
 ### <a name="parameters"></a>Parametry
 
 *pBitMap*<br/>
-Ukazatel na [bitmapovou](/windows/desktop/api/wingdi/ns-wingdi-tagbitmap) strukturu, která získá vlastnosti obrázku. Tento parametr nesmí mít hodnotu NULL.
+Ukazatel na [bitmapovou](/windows/win32/api/wingdi/ns-wingdi-bitmap) strukturu, která získá vlastnosti obrázku. Tento parametr nesmí mít hodnotu NULL.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -408,7 +408,7 @@ Nenulové, pokud bylo úspěšné; v opačném případě 0.
 
 Ve výchozím nastavení `LoadMappedBitmap` bude mapovat barvy běžně používané v glyfech tlačítek.
 
-Informace o vytvoření mapované bitmapy naleznete v tématu funkce Windows Function [CreateMappedBitmap](https://go.microsoft.com/fwlink/p/?linkid=230562) a struktura [ColorMap](/windows/desktop/api/commctrl/ns-commctrl-colormap) v Windows SDK.
+Informace o vytvoření mapované bitmapy naleznete v tématu funkce Windows Function [CreateMappedBitmap](https://go.microsoft.com/fwlink/p/?linkid=230562) a struktura [ColorMap](/windows/win32/api/commctrl/ns-commctrl-colormap) v Windows SDK.
 
 ##  <a name="loadoembitmap"></a>CBitmap –:: LoadOEMBitmap
 
@@ -469,7 +469,7 @@ Je-li to úspěšné, popisovač objektu GDI systému Windows reprezentovaný `C
 
 Tento operátor je operátor přetypování, který podporuje přímé použití `HBITMAP` objektu.
 
-Další informace o použití grafických objektů naleznete v tématu [Graphics Objects](/windows/desktop/gdi/graphic-objects) in Windows SDK.
+Další informace o použití grafických objektů naleznete v tématu [Graphics Objects](/windows/win32/gdi/graphic-objects) in Windows SDK.
 
 ##  <a name="setbitmapbits"></a>CBitmap –:: SetBitmapBits
 

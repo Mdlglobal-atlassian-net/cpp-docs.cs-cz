@@ -48,16 +48,16 @@ helpviewer_keywords:
 - sntprintf function
 - formatted text [C++]
 ms.assetid: 5976c9c8-876e-4ac9-a515-39f3f7fd0925
-ms.openlocfilehash: 202f2f12de3955a2c9b0f785c3e89280d91a4a95
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8f7ce565467321c8e2ea5c80cae9ef41297ccaed
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62355715"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69499518"
 ---
-# <a name="snprintf-snprintf-snprintfl-snwprintf-snwprintfl"></a>snprintf, _snprintf, _snprintf_l, _snwprintf, _snwprintf_l
+# <a name="snprintf-_snprintf-_snprintf_l-_snwprintf-_snwprintf_l"></a>snprintf, _snprintf, _snprintf_l, _snwprintf, _snwprintf_l
 
-Zapisuje formátovaná data do řetězce. Bezpečnější verze těchto funkcí jsou k dispozici. Zobrazit [_snprintf_s, _snprintf_s_l, _snwprintf_s, _snwprintf_s_l](snprintf-s-snprintf-s-l-snwprintf-s-snwprintf-s-l.md).
+Zapisuje formátovaná data do řetězce. K dispozici jsou bezpečnější verze těchto funkcí; viz [_snprintf_s, _snprintf_s_l, _snwprintf_s, _snwprintf_s_l](snprintf-s-snprintf-s-l-snwprintf-s-snwprintf-s-l.md).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -128,53 +128,53 @@ int _snwprintf_l(
 
 ### <a name="parameters"></a>Parametry
 
-*Vyrovnávací paměti*<br/>
+*vyrovnávací paměti*<br/>
 Umístění úložiště pro výstup
 
-*Počet*<br/>
+*výpočtu*<br/>
 Maximální počet znaků, které se mají uložit
 
-*Formát*<br/>
+*format*<br/>
 Řetězec řízení formátu
 
 *argument*<br/>
 Volitelné argumenty
 
-*Národní prostředí*<br/>
+*jazyka*<br/>
 Národní prostředí, které se má použít
 
-Další informace najdete v tématu [syntaxe specifikace formátu: funkce printf a wprintf](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md).
+Další informace najdete v tématu [syntaxe specifikace formátu: printf a wprintf Functions](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md).
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Umožní **len** mít délku formátovaného datového řetězce, bez ukončujícího znaku null. Obě **len** a *počet* jsou v bajtech pro **snprintf –** a **_snprintf**, široké znaky **_snwprintf**.
+**Len** musí být délka formátovaného datového řetězce, včetně ukončující hodnoty null. **Len** i *Count* jsou v bajtech pro **snprintf** a **_snprintf**, ve znacích **_snwprintf**.
 
-Pro všechny funkce Pokud **len** < *počet*, **len** znaky jsou uloženy v *vyrovnávací paměti*, připojen ukončovací znak null a **len** je vrácena.
+Pro všechny funkce platí, < že pokud je *počet*znaků len uložen ve *vyrovnávací paměti*, je připojen ukončovací znak null a vrátí se **len** .
 
-**Snprintf –** funkce zkrátí výstup při **len** je větší než nebo rovna hodnotě *počet*, tak, že ukončovací znak null v `buffer[count-1]`. Vrácená hodnota je **len**, počet znaků, které by byl výstup Pokud *počet* byla dostatečně velký. **Snprintf –** funkce vrací zápornou hodnotu, pokud dojde k chybě kódování.
+Funkce **snprintf** zkrátí výstup, pokud je **len** větší nebo roven *Count*, vložením ukončovacího znaku null na `buffer[count-1]`. Vrácená hodnota je **len**, počet znaků, které by byly výstupní, pokud byl *počet* dostatečně velký. Funkce **snprintf** vrací zápornou hodnotu, pokud dojde k chybě kódování.
 
-Pro všechny funkce kromě **snprintf –**, pokud **len** = *počet*, **len** znaky jsou uloženy v  *vyrovnávací paměť*, připojen ukončovací znak není null a **len** je vrácena. Pokud **len** > *počet*, *počet* znaky jsou uloženy v *vyrovnávací paměti*, ukončovací znak bez null je připojený a záporná Vrácená hodnota.
+Pro všechny funkce jiné než **snprintf**, pokud = je*počet*znaků len uložen ve *vyrovnávací paměti*, není připojen ukončovací znak null a je vrácena funkce **len** . Pokud je*počet*znaků **len** > uložen ve *vyrovnávací paměti*, není připojen ukončovací znak null a je vrácena záporná hodnota.
 
-Pokud *vyrovnávací paměti* je ukazatel s hodnotou null a *počet* je nula, **len** se vrátí jako počet znaků potřebných k zformátování výstupu, bez ukončujícího znaku null. K úspěšnému volání se stejnými *argument* a *národní prostředí* parametry, přidělit vyrovnávací paměť o velikosti alespoň **len** + 1 znak.
+Pokud je *vyrovnávací paměť* ukazatel s hodnotou null a *počet* je nula, vrátí se **len** jako počet znaků vyžadovaných k formátování výstupu, včetně ukončující hodnoty null. Chcete-li provést úspěšné volání se stejným *argumentem* a parametry *národního prostředí* , přidělte vyrovnávací paměť aspoň **len** + 1 znaků.
 
-Pokud *vyrovnávací paměti* je ukazatel s hodnotou null a *počet* je nenulová nebo pokud *formátu* je ukazatel s hodnotou null, je vyvolána obslužná rutina neplatného parametru, jak je popsáno v [ Ověření parametru](../../c-runtime-library/parameter-validation.md). Pokud smí provádění pokračovat, vrátí funkce hodnotu -1 a nastaví **errno** k **EINVAL**.
+Pokud je *vyrovnávací paměť* ukazatel s hodnotou null a *počet* je nenulový, nebo pokud je *Format* ukazatel s hodnotou null, je vyvolána obslužná rutina neplatného parametru, jak je popsáno v tématu [ověřování parametru](../../c-runtime-library/parameter-validation.md). Pokud provádění může pokračovat, vrátí tyto funkce hodnotu-1 a nastaví **errno** na **EINVAL**.
 
-Informace o těchto a dalších chybových kódech naleznete v tématu [errno _doserrno, _sys_errlist a _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+Informace o těchto a dalších chybových kódech naleznete v tématu [errno, _doserrno, _sys_errlist a _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Poznámky
 
-**Snprintf –** funkce a **_snprintf** řada formátu funkce a úložiště *počet* nebo méně znaků *vyrovnávací paměti*. **Snprintf –** funkce vždy ukládá ukončujícího znaku null, zkracování výstup v případě potřeby. **_Snprintf** rodinu funkcí pouze připojí ukončující znak null, pokud je délka formátovaného řetězce menší než *počet* znaků. Každý *argument* (pokud existuje) je převedena a podle odpovídající specifikace formátu v *formátu*. Formát se skládá z běžných znaků a má stejnou formu a funkci, jako *formátu* argument pro [printf](printf-printf-l-wprintf-wprintf-l.md). Pokud ke kopírování dojde mezi řetězci, které se překrývají, chování není definováno.
+Funkce **snprintf** a **_snprintf** rodina funkcí a *počet* znaků ve *vyrovnávací paměti*. Funkce **snprintf** vždy ukládá ukončující znak null a v případě potřeby zkrátí výstup. **_Snprintf** rodina funkcí připojí pouze ukončující znak null, pokud je délka formátovaného řetězce výhradně menší než *počet* znaků. Každý *argument* (pokud existuje) je převeden a je výstupem podle odpovídající specifikace formátu ve *formátu*. Formát se skládá z běžných znaků a má stejnou formu a funkci jako argument *Format* pro [printf](printf-printf-l-wprintf-wprintf-l.md). Pokud ke kopírování dojde mezi řetězci, které se překrývají, chování není definováno.
 
 > [!IMPORTANT]
-> Ujistěte se, že *formátu* není uživatelem definovaný řetězec. Protože **_snprintf** funkce nezaručují ukončení hodnotu null – zejména, pokud je návratová hodnota *počet*– Ujistěte se, že jsou následuje kód, který přidá ukončovacího znaku null. Další informace najdete v tématu [předcházení přetečení vyrovnávací paměti](/windows/desktop/SecBP/avoiding-buffer-overruns).
+> Ujistěte se, že *Formát* není uživatelem definovaný řetězec. Vzhledem k tomu, že funkce **_snprintf** nezaručují ukončení hodnoty null – zejména pokud je návratová hodnota *Count*, ujistěte se, že jsou následovány kódem, který přidává ukončovací znak null. Další informace najdete v tématu [předcházení přetečení vyrovnávací paměti](/windows/win32/SecBP/avoiding-buffer-overruns).
 
-Počínaje UCRT v sadě Visual Studio 2015 a Windows 10, **snprintf –** už není stejný jako **_snprintf**. **Snprintf –** chování funkce je teď kompatibilní standard C99.
+Od UCRT v prostředí Visual Studio 2015 a Windows 10 se **snprintf** už neshoduje s **_snprintf**. Chování funkce **snprintf** je teď C99 standard kompatibilní.
 
-**_snwprintf** je verze širokého znaku **_snprintf**; argumenty ukazatele pro **_snwprintf** jsou širokoznaké řetězce. Detekce chyb kódování ve **_snwprintf** může lišit od v **_snprintf**. **_snwprintf**, stejně jako **swprintf**, zapíše výstup do řetězce místo do cíle typu **souboru**.
+**_snwprintf** je **_snprintf**verze s velkým znakem; argumenty ukazatele na **_snwprintf** jsou řetězce s velkým znakem. Detekce chyb kódování v **_snwprintf** se může lišit od v **_snprintf**. **_snwprintf**, stejně jako **swprintf**, zapisuje výstup do řetězce namísto cíle typu **File**.
 
-Verze těchto funkcí, které mají **_l** přípona jsou stejné s tím rozdílem, že používají parametr národního prostředí předaného namísto aktuálního národní prostředí pro vlákno.
+Verze těchto funkcí, které mají příponu **_l** , jsou stejné s tím rozdílem, že používají předaný parametr národního prostředí namísto aktuálního národního prostředí vlákna.
 
-V jazyce C++ mají tyto funkce přetížení šablon, která vyvolávají novější, lépe zabezpečené protějšky těchto funkcí. Další informace najdete v tématu [přetížení zabezpečení šablony](../../c-runtime-library/secure-template-overloads.md).
+V jazyce C++ mají tyto funkce přetížení šablon, která vyvolávají novější, lépe zabezpečené protějšky těchto funkcí. Další informace najdete v tématu [přetížení zabezpečení šablon](../../c-runtime-library/secure-template-overloads.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapování rutin obecného textu
 
@@ -188,9 +188,9 @@ V jazyce C++ mají tyto funkce přetížení šablon, která vyvolávají nověj
 |Rutina|Požadovaný hlavičkový soubor|
 |-------------|---------------------|
 |**snprintf**, **_snprintf**,  **_snprintf_l**|\<stdio.h>|
-|**_snwprintf**, **_snwprintf_l**|\<stdio.h > nebo \<wchar.h >|
+|**_snwprintf**, **_snwprintf_l**|\<stdio. h > nebo \<WCHAR. h >|
 
-Další informace o kompatibilitě naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Příklad
 
@@ -307,7 +307,7 @@ character count = 69
 
 ## <a name="see-also"></a>Viz také:
 
-[Stream vstupně-výstupních operací](../../c-runtime-library/stream-i-o.md)<br/>
+[Vstup/výstup datového proudu](../../c-runtime-library/stream-i-o.md)<br/>
 [sprintf, _sprintf_l, swprintf, _swprintf_l, \__swprintf_l](sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)<br/>
 [fprintf, _fprintf_l, fwprintf, _fwprintf_l](fprintf-fprintf-l-fwprintf-fwprintf-l.md)<br/>
 [printf, _printf_l, wprintf, _wprintf_l](printf-printf-l-wprintf-wprintf-l.md)<br/>

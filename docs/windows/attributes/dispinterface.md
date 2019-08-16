@@ -1,21 +1,21 @@
 ---
-title: dispinterface (atribut C++ COM)
+title: odesílající (C++ atribut com)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.dispinterface
 helpviewer_keywords:
 - dispinterface attribute
 ms.assetid: 61c5a4a1-ae92-47e9-8ee4-f847be90172b
-ms.openlocfilehash: 6fd5010dc20d03c518206d81919e3beafbcaa9a9
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: 6360c5e97eae19d7b2d74b3b43d4feae07d4b091
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64346293"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69501615"
 ---
 # <a name="dispinterface"></a>dispinterface
 
-Umístí rozhraní v souboru IDL jako rozhraní odbavení.
+Umístí rozhraní do souboru. idl jako odesílající rozhraní.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -25,35 +25,35 @@ Umístí rozhraní v souboru IDL jako rozhraní odbavení.
 
 ## <a name="remarks"></a>Poznámky
 
-Když **dispinterface** C++ atribut předchází rozhraní, způsobí, že rozhraní být umístěny uvnitř bloku knihovny v souboru generovaného IDL.
+Když atribut **odesílající** C++ rozhraní předchází rozhraní, způsobí, že rozhraní bude umístěno uvnitř bloku knihovny v generovaném souboru. idl.
 
-Pokud zadáte základní třídy, rozhraní odbavení odvodí z `IDispatch`. Je nutné zadat [id](id.md) pro členy rozhraní odbavení.
+Pokud nezadáte základní třídu, rozhraní odeslání bude odvozeno z `IDispatch`. Je nutné zadat [ID](id.md) pro členy rozhraní dispatch.
 
-Příklad použití pro [dispinterface](/windows/desktop/Midl/dispinterface) v dokumentaci k MIDL:
+Příklad použití pro rozhraní [IDispatch](/windows/win32/Midl/dispinterface) v dokumentaci MIDL:
 
 ```cpp
 dispinterface helloPro
    { interface hello; };
 ```
 
-není platný pro **dispinterface** atribut.
+není platný pro atribut **odesílajícího** rozhraní.
 
 ## <a name="example"></a>Příklad
 
-Podívejte se na příklad pro [umožňujících vazbu](bindable.md) příklad, jak používat **dispinterface**.
+Příklad, jak používat **odesílající**rozhraní, najdete v příkladu pro [vázání](bindable.md) .
 
 ## <a name="requirements"></a>Požadavky
 
-### <a name="attribute-context"></a>Atribut kontextu
+### <a name="attribute-context"></a>Kontext atributu
 
 |||
 |-|-|
 |**Platí pro**|**interface**|
-|**Opakovatelné**|Ne|
-|**Vyžadované atributy**|Žádné|
+|**REPEATABLE**|Ne|
+|**Požadované atributy**|Žádné|
 |**Neplatné atributy**|`dual`, `object`, `oleautomation`, `local`, `ms_union`|
 
-Další informace najdete v tématu [kontexty atributů](cpp-attributes-com-net.md#contexts).
+Další informace naleznete v tématu [kontexty atributů](cpp-attributes-com-net.md#contexts).
 
 ## <a name="see-also"></a>Viz také:
 

@@ -14,49 +14,49 @@ helpviewer_keywords:
 - MkTypLib tool
 - .odl files
 ms.assetid: d405bc47-118d-4786-b371-920d035b2047
-ms.openlocfilehash: 32179f3913b52ca46f9ea7314b9957f4f4970713
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 480f8fca46b13d445f372311ed837475c71a1e9d
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62374191"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69509216"
 ---
 # <a name="automation-clients-using-type-libraries"></a>Klienti automatizace: Použití knihoven typů
 
-Klienti automatizace musí mít informace o vlastnostech a metodách objekty serveru, pokud jsou klienti k manipulaci s objekty na servery. Vlastnosti mají datové typy; metody často návratové hodnoty a přijímají parametry. Klient vyžaduje informace o datových typech všechny tyto staticky vázat na typ objektu serveru.
+Pokud klienti mají manipulovat s objekty serverů, musí mít klienti služby Automation informace o vlastnostech a metodách serverových objektů. Vlastnosti mají datové typy; metody často vracejí hodnoty a přijímají parametry. Klient vyžaduje informace o datových typech všech těchto objektů, aby bylo možné staticky vytvořit vazby na typ objektu serveru.
 
-Informace o tomto typu lze provést několika způsoby známé. Doporučený postup je vytvořit knihovnu typů.
+Tyto informace o typu mohou být známy několika způsoby. Doporučeným způsobem je vytvořit knihovnu typů.
 
-Informace o [s MkTypLib](/windows/desktop/Midl/differences-between-midl-and-mktyplib), naleznete v sadě Windows SDK.
+Informace o [MkTypLib](/windows/win32/Midl/differences-between-midl-and-mktyplib)najdete v Windows SDK.
 
-Visual C++ může číst soubor knihovny typů a vytvořit odeslání třídy odvozené od [COleDispatchDriver](../mfc/reference/coledispatchdriver-class.md). Vlastnosti a operace u objektu serveru duplikování má objekt této třídy. Vaše aplikace volá vlastností a operací objektu nebo funkce zděděním od `COleDispatchDriver` trasy těchto volání OLE systému, který pak směruje je do objektu serveru.
+Vizuál C++ může číst soubor knihovny typů a vytvořit třídu Dispatch odvozenou od [COleDispatchDriver](../mfc/reference/coledispatchdriver-class.md). Objekt této třídy má vlastnosti a operace, které duplikují objekty objektu serveru. Vaše aplikace volá vlastnosti a operace tohoto objektu a funkce zděděné z `COleDispatchDriver` tras volá do systému OLE, který je následně směruje na objekt serveru.
 
-Pokud jste se rozhodli zahrnují Automation při vytvoření projektu jazyka Visual C++ automaticky udržuje tento soubor knihovny typů za vás. Jako součást každé sestavení bude se s MkTypLib vytvořen souboru .tlb.
+Vizuál C++ automaticky udržuje tento soubor knihovny typů, pokud se rozhodnete zahrnout automatizaci při vytvoření projektu. V rámci každého sestavení bude soubor. tlb sestaven pomocí MkTypLib.
 
-### <a name="to-create-a-dispatch-class-from-a-type-library-tlb-file"></a>Chcete-li vytvořit třídu odeslání ze souboru knihovny typů (.tlb)
+### <a name="to-create-a-dispatch-class-from-a-type-library-tlb-file"></a>Vytvoření třídy Dispatch ze souboru knihovny typů (. tlb)
 
-1. V zobrazení tříd nebo v Průzkumníku řešení klikněte pravým tlačítkem na projekt a klikněte na tlačítko **přidat** a potom klikněte na tlačítko **přidat třídu** v místní nabídce.
+1. V Zobrazení tříd nebo Průzkumník řešení klikněte pravým tlačítkem myši na projekt a klikněte na **Přidat** a potom v místní nabídce klikněte na **Přidat třídu** .
 
-1. V **přidat třídu** dialogové okno, vyberte **Visual vyhodnocování +/ MFC** složky v levém podokně. Vyberte **třídy knihovny MFC z TypeLib** ikonu v pravém podokně a kliknutím **otevřít**.
+1. V dialogovém okně **Přidat třídu** vyberte v levém podokně **složku C++Visual/MFC** . V pravém podokně vyberte ikonu **knihovny MFC z tabulky TypeLib** a klikněte na **otevřít**.
 
-1. V **přidání třídy z Průvodce knihovnou typů** dialogového okna, vyberte z knihovny typů **dostupné knihovny typů** rozevíracího seznamu. **Rozhraní** pole zobrazí rozhraní, které jsou k dispozici pro vybrané knihovny typů.
-
-    > [!NOTE]
-    >  Rozhraní můžete vybrat z víc než jedné knihovny typů.
-
-   Vyberte rozhraní, dvakrát klikněte na ně nebo klikněte na tlačítko **přidat** tlačítko. Pokud tak učiníte, názvy tříd, odeslání se zobrazí v **generované třídy** pole. Můžete upravit názvy tříd v `Class` pole.
-
-   **Souboru** pole zobrazí soubor, ve kterém se deklarovat třídu. (můžete upravit tento soubor název). Pokud chcete mít záhlaví tak implementační informace, které jsou napsané v existující soubory nebo na jiný adresář než adresáře projektu, můžete použít také na tlačítko Procházet a vyberte další soubory.
+1. V dialogovém okně **Průvodce přidáním třídy z TypeLib** vyberte knihovnu typů z rozevíracího seznamu **Dostupné knihovny typů** . Pole **rozhraní** zobrazuje rozhraní dostupná pro vybranou knihovnu typů.
 
     > [!NOTE]
-    >  Všechny třídy odeslání pro vybrané rozhraní zařadí do zde zadaného souboru. Pokud chcete rozhraní být deklarován v samostatných záhlaví, musíte spustit tohoto průvodce pro každý soubor hlaviček, které chcete vytvořit.
+    >  Můžete vybrat rozhraní z více než jedné knihovny typů.
+
+   Pokud chcete vybrat rozhraní, poklikejte na ně nebo klikněte na tlačítko **Přidat** . V takovém případě se názvy pro třídy odeslání zobrazí v poli vygenerované **třídy** . V `Class` poli můžete upravit názvy tříd.
+
+   V poli **soubor** se zobrazí soubor, ve kterém bude třída deklarována. (můžete také upravit tento název souboru). Můžete také použít tlačítko Procházet a vybrat jiné soubory, pokud upřednostňujete, aby byly informace hlavičky a implementace napsány v existujících souborech nebo v jiném adresáři, než v adresáři projektu.
 
     > [!NOTE]
-    >  Některé informace knihovny typů mohou být uloženy v souborech s. KNIHOVNY DLL. OCX, nebo. OLB přípon souborů.
+    >  Všechny třídy odeslání pro vybraná rozhraní budou vloženy do zadaného souboru. Pokud chcete, aby byla rozhraní deklarována v samostatných hlavičkách, je nutné spustit tohoto průvodce pro každý hlavičkový soubor, který chcete vytvořit.
+
+    > [!NOTE]
+    >  Některé informace o knihovně typů mohou být uloženy v souborech s. KNIHOVNA DLL,. OCX nebo. Přípony souborů OLB
 
 1. Klikněte na tlačítko **Dokončit**.
 
-   Průvodce potom psát kód pro odesílání třídy pomocí zadané třídy a názvy souborů.
+   Průvodce pak zapíše kód pro vaše třídy odeslání pomocí zadané třídy a názvů souborů.
 
 ## <a name="see-also"></a>Viz také:
 

@@ -32,46 +32,46 @@ helpviewer_keywords:
 - drawing [MFC], directly into windows
 - painting and device context
 ms.assetid: d0cd51f1-f778-4c7e-bf50-d738d10433c7
-ms.openlocfilehash: 7893b446c224dd84514ab63dc97cae467792750c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d5337e8d8b83a641458a15612803feeec3b6361c
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62405973"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69508654"
 ---
 # <a name="device-contexts"></a>Kontexty zařízení
 
-Kontext zařízení je datová struktura Windows obsahující informace o vykreslování atributy zařízení, jako je například tiskárnu nebo zobrazení. Všechna volání kreslení probíhají prostřednictvím objektů kontextu zařízení, který zapouzdřuje rozhraní Windows API pro kreslení čáry, tvary a text. Kontexty zařízení povolit kreslení nezávislé na zařízení ve Windows. Kontexty zařízení slouží k vykreslení na obrazovku, na tiskárně nebo do metasouboru.
+Kontext zařízení je datová struktura systému Windows, která obsahuje informace o atributech kreslení zařízení, jako je například displej nebo tiskárna. Všechna volání vykreslování jsou vytvořena pomocí objektu kontextu zařízení, který zapouzdřuje rozhraní API systému Windows pro kreslení čar, tvarů a textu. Kontexty zařízení umožňují kreslení nezávislé na zařízení v systému Windows. Kontexty zařízení lze použít k vykreslení na obrazovku, do tiskárny nebo do metasouboru.
 
-[Cpaintdc –](../mfc/reference/cpaintdc-class.md) objekty zapouzdřují běžné idiom Windows, volání `BeginPaint` funkce, a kreslení v kontextu zařízení a potom volání `EndPaint` funkce. `CPaintDC` Volá konstruktor `BeginPaint` pro vás a volání destruktoru `EndPaint`. Zjednodušený proces je vytvořit [CDC](../mfc/reference/cdc-class.md) objektu, kreslení a pak zničilo `CDC` objektu. V rámci velkou část i tento proces automatizovat. Konkrétně se vaše `OnDraw` funkce je předána `CPaintDC` už připravené (prostřednictvím `OnPrepareDC`), a které upoutat do něj. Je zničen rozhraním, a po návratu z volání vydání Windows základního kontextu zařízení vaší `OnDraw` funkce.
+Objekty [CPaintDC –](../mfc/reference/cpaintdc-class.md) zapouzdřují běžné idiom Windows, zavolají `BeginPaint` funkci, vykreslí do kontextu zařízení `EndPaint` a pak zavolají funkci. Konstruktor volá `BeginPaint` za vás a volá `EndPaint`destruktor. `CPaintDC` Zjednodušeným procesem je vytvoření objektu [CDC](../mfc/reference/cdc-class.md) , vykreslení a zničení `CDC` objektu. V rozhraní je většina i tento proces automatizovaná. Konkrétně je vaše `OnDraw` funkce `CPaintDC` předána už připravená (přes `OnPrepareDC`) a jednoduše se do ní nakreslíte. Je zničena rozhraním a základní kontext zařízení je uvolněn do systému Windows při návratu z volání `OnDraw` funkce.
 
-[Cclientdc –](../mfc/reference/cclientdc-class.md) objekty zapouzdřují práci s kontextu zařízení, která představuje jenom klientské oblasti okna. `CClientDC` Volá konstruktor `GetDC` funkce a volání destruktoru `ReleaseDC` funkce. [Cwindowdc –](../mfc/reference/cwindowdc-class.md) objekty zapouzdřují kontextu zařízení, která představuje celé okno, včetně jeho rámce.
+Objekty [CClientDC –](../mfc/reference/cclientdc-class.md) zapouzdřují práci s kontextem zařízení, který představuje pouze klientskou oblast okna. Konstruktor volá funkci a destruktor volá funkci. `ReleaseDC` `CClientDC` `GetDC` Objekty [CWindowDC](../mfc/reference/cwindowdc-class.md) zapouzdřují kontext zařízení, který představuje celé okno, včetně jeho rámce.
 
-[Cmetafiledc –](../mfc/reference/cmetafiledc-class.md) objekty zapouzdřují kreslení do Windows metafile. Rozdíl od `CPaintDC` předán `OnDraw`, v tomto případě je nutné volat [OnPrepareDC](../mfc/reference/cview-class.md#onpreparedc) sami.
+Objekty [CMetaFileDC –](../mfc/reference/cmetafiledc-class.md) zapouzdřují kreslení do metasouboru Windows. Na rozdíl `CPaintDC` od předaného `OnDraw`do musíte v tomto případě volat [OnPrepareDC](../mfc/reference/cview-class.md#onpreparedc) sami.
 
-## <a name="mouse-drawing"></a>Kreslení myši
+## <a name="mouse-drawing"></a>Kreslení myší
 
-Většina kreslení v rámci programu – a tedy většinu práce kontextu zařízení – provádí se v zobrazení `OnDraw` členskou funkci. Objekty kontextu zařízení však lze použít pro jiné účely. Například k poskytnutí zpětné vazby sledování pohybu myši v zobrazení, budete muset kreslení přímo do zobrazení bez čekání na `OnDraw` volat.
+Většina kreslení v rámci programu – a tedy většina práce v kontextu zařízení – je prováděna v `OnDraw` členské funkci zobrazení. Pro jiné účely však můžete přesto použít objekty kontextu zařízení. Například chcete-li poskytnout zpětnou vazbu ke sledování pohybu myši v zobrazení, je nutné kreslit přímo do zobrazení bez čekání `OnDraw` na volání.
 
-V takovém případě můžete použít [cclientdc –](../mfc/reference/cclientdc-class.md) objekt kontext zařízení pro kreslení přímo do zobrazení.
+V takovém případě můžete použít objekt kontextu zařízení [CClientDC –](../mfc/reference/cclientdc-class.md) k nakreslení přímo do zobrazení.
 
-### <a name="what-do-you-want-to-know-more-about"></a>Co chcete zjistit více informací
+### <a name="what-do-you-want-to-know-more-about"></a>K čemu chcete získat další informace
 
-- [Kontexty zařízení (definice)](/windows/desktop/gdi/device-contexts)
+- [Kontexty zařízení (definice)](/windows/win32/gdi/device-contexts)
 
 - [Kreslení v zobrazení](../mfc/drawing-in-a-view.md)
 
 - [Interpretace vstupu uživatele prostřednictvím zobrazení](../mfc/interpreting-user-input-through-a-view.md)
 
-- [Čar a křivek](/windows/desktop/gdi/lines-and-curves)
+- [Čáry a křivky](/windows/win32/gdi/lines-and-curves)
 
-- [Vyplněné tvary](/windows/desktop/gdi/filled-shapes)
+- [Vyplněné obrazce](/windows/win32/gdi/filled-shapes)
 
-- [Písma a text](/windows/desktop/gdi/fonts-and-text)
+- [Písma a text](/windows/win32/gdi/fonts-and-text)
 
-- [Barvy](/windows/desktop/gdi/colors)
+- [Barvy](/windows/win32/gdi/colors)
 
-- [Mezery souřadnic a transformace](/windows/desktop/gdi/coordinate-spaces-and-transformations)
+- [Souřadnice mezer a transformací](/windows/win32/gdi/coordinate-spaces-and-transformations)
 
 ## <a name="see-also"></a>Viz také:
 

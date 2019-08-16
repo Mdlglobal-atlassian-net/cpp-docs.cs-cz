@@ -1,5 +1,5 @@
 ---
-title: Coleipframewnd – třída
+title: COleIPFrameWnd – třída
 ms.date: 11/04/2016
 f1_keywords:
 - COleIPFrameWnd
@@ -12,16 +12,16 @@ helpviewer_keywords:
 - COleIPFrameWnd [MFC], OnCreateControlBars
 - COleIPFrameWnd [MFC], RepositionFrame
 ms.assetid: 24abb2cb-826c-4dda-a287-d8a8900a5763
-ms.openlocfilehash: 34388e635ba89d732ae3993074a2c8268e2289a3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 483998529b83d9b28c6ab1b219c4f5288dbd8ec7
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62224553"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69503833"
 ---
-# <a name="coleipframewnd-class"></a>Coleipframewnd – třída
+# <a name="coleipframewnd-class"></a>COleIPFrameWnd – třída
 
-Základ pro úpravy okna aplikace na místě.
+Základ pro místní editační okno vaší aplikace.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -33,26 +33,26 @@ class COleIPFrameWnd : public CFrameWnd
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
-|[COleIPFrameWnd::COleIPFrameWnd](#coleipframewnd)|Vytvoří `COleIPFrameWnd` objektu.|
+|[COleIPFrameWnd::COleIPFrameWnd](#coleipframewnd)|`COleIPFrameWnd` Vytvoří objekt.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[COleIPFrameWnd::OnCreateControlBars](#oncreatecontrolbars)|Volá se rozhraním, když se položka aktivuje pro místní úpravy.|
-|[COleIPFrameWnd::RepositionFrame](#repositionframe)|Volá se rozhraním, aby přemístění okna pro úpravy na místě.|
+|[COleIPFrameWnd::RepositionFrame](#repositionframe)|Volá se rozhraním, aby se přeumístilo místní okno pro úpravy.|
 
 ## <a name="remarks"></a>Poznámky
 
-Tato třída se vytvoří a pozice řídit pruhy v rámci okna dokumentu aplikace typu kontejner. Také obstará oznámení vygenerovaná vložený [coleresizebar –](../../mfc/reference/coleresizebar-class.md) objektu, když uživatel změní velikost okna pro úpravy na místě.
+Tato třída vytvoří ovládací prvky pro umístění v rámci okna dokumentu aplikace kontejneru. Také zpracovává oznámení vygenerovaná vloženým objektem [COleResizeBar](../../mfc/reference/coleresizebar-class.md) , když uživatel změní velikost místního okna pro úpravy.
 
-Další informace o používání `COleIPFrameWnd`, najdete v článku [aktivace](../../mfc/activation-cpp.md).
+Další informace o použití nástroje `COleIPFrameWnd`najdete v článku [Aktivace](../../mfc/activation-cpp.md).
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
-[Třídy CObject](../../mfc/reference/cobject-class.md)
+[CObject](../../mfc/reference/cobject-class.md)
 
 [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)
 
@@ -64,11 +64,11 @@ Další informace o používání `COleIPFrameWnd`, najdete v článku [aktivace
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** afxole.h
+**Záhlaví:** AFXOLE. h
 
-##  <a name="coleipframewnd"></a>  COleIPFrameWnd::COleIPFrameWnd
+##  <a name="coleipframewnd"></a>COleIPFrameWnd::COleIPFrameWnd
 
-Vytvoří `COleIPFrameWnd` objektu a inicializuje informací o stavu v místě, která je uložena v strukturu typu OLEINPLACEFRAMEINFO.
+`COleIPFrameWnd` Vytvoří objekt a inicializuje své místní informace o stavu, které jsou uloženy ve struktuře typu OLEINPLACEFRAMEINFO.
 
 ```
 COleIPFrameWnd();
@@ -76,11 +76,11 @@ COleIPFrameWnd();
 
 ### <a name="remarks"></a>Poznámky
 
-Další informace najdete v tématu [OLEINPLACEFRAMEINFO](/windows/desktop/api/oleidl/ns-oleidl-tagoifi) v sadě Windows SDK.
+Další informace najdete v tématu [OLEINPLACEFRAMEINFO](/windows/win32/api/oleidl/ns-oleidl-oifi) v Windows SDK.
 
-##  <a name="oncreatecontrolbars"></a>  COleIPFrameWnd::OnCreateControlBars
+##  <a name="oncreatecontrolbars"></a>COleIPFrameWnd:: OnCreateControlBars
 
-Rámec volá `OnCreateControlBars` fungovat v případě, že položka aktivuje pro místní úpravy.
+Rozhraní volá funkci, `OnCreateControlBars` když je položka aktivována pro místní úpravy.
 
 ```
 virtual BOOL OnCreateControlBars(
@@ -98,19 +98,19 @@ virtual BOOL OnCreateControlBars(
 Ukazatel na okno rámce aplikace kontejneru.
 
 *pWndDoc*<br/>
-Ukazatel na úrovni dokumentu okno kontejneru. Může mít hodnotu NULL, pokud je aplikace SDI kontejner.
+Ukazatel na okno na úrovni dokumentu kontejneru. Může mít hodnotu NULL, pokud je kontejner aplikace SDI.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-V případě úspěchu; nenulovou hodnotu. jinak 0.
+Nenulové při úspěchu; v opačném případě 0.
 
 ### <a name="remarks"></a>Poznámky
 
-Výchozí implementace nemá žádný účinek. Potlačí tuto funkci provést žádné speciální zpracování požadováno, když se vytvoří ovládací panely.
+Výchozí implementace neprovádí žádnou akci. Přepište tuto funkci, aby se při vytváření řídicích panelů prováděly zvláštní požadavky na zpracování.
 
-##  <a name="repositionframe"></a>  COleIPFrameWnd::RepositionFrame
+##  <a name="repositionframe"></a>COleIPFrameWnd::RepositionFrame
 
-Rámec volá `RepositionFrame` členskou funkci Rozvrhněte ovládací pruhy a přemístění okna pro úpravy na místě, takže všechno je viditelný.
+Rozhraní volá `RepositionFrame` členskou funkci pro rozložení ovládacích panelů a přemístění místního okna pro úpravy tak, aby bylo viditelné.
 
 ```
 virtual void RepositionFrame(
@@ -121,18 +121,18 @@ virtual void RepositionFrame(
 ### <a name="parameters"></a>Parametry
 
 *lpPosRect*<br/>
-Ukazatel `RECT` struktury nebo `CRect` objekt, který obsahuje místního rámec okna aktuální souřadnice polohy, v pixelech vzhledem ke klientské oblasti.
+Ukazatel na `RECT` strukturu `CRect` nebo objekt obsahující souřadnice aktuálního umístění okna rámce v pixelech vzhledem k oblasti klienta.
 
 *lpClipRect*<br/>
-Ukazatel `RECT` struktury nebo `CRect` objekt, který obsahuje místního rámec okna aktuální obdélník oříznutí souřadnice, v pixelech vzhledem ke klientské oblasti.
+Ukazatel na `RECT` strukturu `CRect` nebo objekt obsahující aktuální souřadnice oříznutí (v pixelech), které jsou relativní vzhledem ke klientské oblasti.
 
 ### <a name="remarks"></a>Poznámky
 
-Ovládací pruhy v okně kontejneru rozložení se liší od, které provádí pomocí okna rámce jiných než OLE. Okno rámce jiných než OLE vypočítá pozice ovládacích pruhů a dalších objektů z daného oken s rámečkem velikost, jako volání [CFrameWnd::RecalcLayout](../../mfc/reference/cframewnd-class.md#recalclayout). Klientské oblasti je, co je ještě po odečtena místo ovládacích pruhů a dalších objektů. A `COleIPFrameWnd` okně na druhé straně umístí panelů nástrojů v souladu s danou klientské oblasti. Jinými slovy `CFrameWnd::RecalcLayout` funguje "z vnějšku in", zatímco `COleIPFrameWnd::RepositionFrame` funguje "než vnitřní mimo."
+Rozložení ovládacích panelů v okně kontejneru se liší od okna, které se provádí v okně s rámečkem bez OLE. Okno s rámečkem bez OLE vypočítá pozice ovládacích panelů a dalších objektů z dané velikosti rámečku okna, jako v volání metody [CFrameWnd:: RecalcLayout](../../mfc/reference/cframewnd-class.md#recalclayout). Klientská oblast je to, co zbývá po prostoru pro ovládací panely a jiné objekty se odečtou. `COleIPFrameWnd` Okno na druhé straně umisťuje panely nástrojů podle dané klientské oblasti. Jinými slovy `CFrameWnd::RecalcLayout` funguje "z vnějšího" v "," zatímco `COleIPFrameWnd::RepositionFrame` funguje "z vnitřku."
 
 ## <a name="see-also"></a>Viz také:
 
-[Ukázky knihovny MFC HIERSVR](../../overview/visual-cpp-samples.md)<br/>
+[HIERSVR Sample MFC](../../overview/visual-cpp-samples.md)<br/>
 [CFrameWnd – třída](../../mfc/reference/cframewnd-class.md)<br/>
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>
 [CFrameWnd – třída](../../mfc/reference/cframewnd-class.md)

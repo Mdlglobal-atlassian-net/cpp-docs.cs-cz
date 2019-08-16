@@ -1,5 +1,5 @@
 ---
-title: COleDropSource Class
+title: COleDropSource – třída
 ms.date: 11/04/2016
 f1_keywords:
 - COleDropSource
@@ -14,16 +14,16 @@ helpviewer_keywords:
 - COleDropSource [MFC], OnBeginDrag
 - COleDropSource [MFC], QueryContinueDrag
 ms.assetid: d3eecc5f-a70b-4a01-b705-7d2c098ebe17
-ms.openlocfilehash: a2773333ea1dd89f73e7bdf3c5dc2f36945e0810
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3a1e27ca6c1019eb8716194b3b7711238d015d6d
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62391098"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69504004"
 ---
-# <a name="coledropsource-class"></a>COleDropSource Class
+# <a name="coledropsource-class"></a>COleDropSource – třída
 
-Umožňuje dat přetáhnout do cíle přetažení.
+Umožňuje přetáhnout data na cíl přetažení.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -35,31 +35,31 @@ class COleDropSource : public CCmdTarget
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
-|[COleDropSource::COleDropSource](#coledropsource)|Vytvoří `COleDropSource` objektu.|
+|[COleDropSource::COleDropSource](#coledropsource)|`COleDropSource` Vytvoří objekt.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
-|[COleDropSource::GiveFeedback](#givefeedback)|Změní kurzor během operace přetažení myší.|
+|[COleDropSource::GiveFeedback](#givefeedback)|Změní kurzor během operace přetažení.|
 |[COleDropSource::OnBeginDrag](#onbegindrag)|Zpracovává zachycení myši během operace přetažení myší.|
-|[COleDropSource::QueryContinueDrag](#querycontinuedrag)|Kontroluje, zda tažení by měly pokračovat.|
+|[COleDropSource::QueryContinueDrag](#querycontinuedrag)|Zkontroluje, jestli chcete pokračovat v přetahování.|
 
 ## <a name="remarks"></a>Poznámky
 
-[Coledroptarget –](../../mfc/reference/coledroptarget-class.md) třída zpracovává přijímající část operace přetažení myší. `COleDropSource` Objekt zodpovídá za určení, kdy začne operace přetažení, poskytování zpětné vazby během operace přetažení a určení po ukončení operace přetažení.
+Třída [COleDropTarget](../../mfc/reference/coledroptarget-class.md) zpracovává přijímající část operace přetažení. `COleDropSource` Objekt zodpovídá za určení, kdy začne operace přetažení, poskytne zpětnou vazbu během operace přetažení a určí, kdy operace přetažení skončí.
 
-Použití `COleDropSource` objektu, stačí zavolat konstruktor. To zjednodušuje procesu, který určuje, jaké události, jako je například kliknutí myší, začněte pomocí operace přetažení [COleDataSource::DoDragDrop](../../mfc/reference/coledatasource-class.md#dodragdrop), [COleClientItem::DoDragDrop](../../mfc/reference/coleclientitem-class.md#dodragdrop), nebo [ COleServerItem::DoDragDrop](../../mfc/reference/coleserveritem-class.md#dodragdrop) funkce. Těchto funkcí vytvoří `COleDropSource` objekt za vás. Můžete chtít změnit výchozí chování `COleDropSource` přepisovatelné funkce. Tyto členské funkce bude volat rozhraní ve vhodných chvílích.
+Chcete-li `COleDropSource` použít objekt, stačí volat konstruktor. Tím se zjednodušuje proces určení událostí, jako je kliknutí myší, zahájení operace přetažení pomocí [COleDataSource –::D odragdrop](../../mfc/reference/coledatasource-class.md#dodragdrop), [COleClientItem::D odragdrop](../../mfc/reference/coleclientitem-class.md#dodragdrop)nebo [odvozenou třídu COleServerItem::D odragdrop](../../mfc/reference/coleserveritem-class.md#dodragdrop) Function. Tyto funkce vytvoří `COleDropSource` objekt za vás. Možná budete chtít změnit výchozí chování `COleDropSource` přepisovatelných funkcí. Tyto členské funkce budou zavolány v příslušném okamžiku rozhraním.
 
-Další informace o operací přetažení myší pomocí OLE, najdete v článku [oblast pro přetažení přetažení (OLE)](../../mfc/drag-and-drop-ole.md).
+Další informace o operacích přetažení pomocí technologie OLE naleznete v článku [přetahování myší (OLE)](../../mfc/drag-and-drop-ole.md).
 
-Další informace najdete v tématu [IDropSource](/windows/desktop/api/oleidl/nn-oleidl-idropsource) v sadě Windows SDK.
+Další informace najdete v tématu [IDropSource](/windows/win32/api/oleidl/nn-oleidl-idropsource) v Windows SDK.
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
-[Třídy CObject](../../mfc/reference/cobject-class.md)
+[CObject](../../mfc/reference/cobject-class.md)
 
 [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)
 
@@ -67,19 +67,19 @@ Další informace najdete v tématu [IDropSource](/windows/desktop/api/oleidl/nn
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** afxole.h
+**Záhlaví:** AFXOLE. h
 
-##  <a name="coledropsource"></a>  COleDropSource::COleDropSource
+##  <a name="coledropsource"></a>COleDropSource::COleDropSource
 
-Vytvoří `COleDropSource` objektu.
+`COleDropSource` Vytvoří objekt.
 
 ```
 COleDropSource();
 ```
 
-##  <a name="givefeedback"></a>  COleDropSource::GiveFeedback
+##  <a name="givefeedback"></a>COleDropSource:: GiveFeedback může zdroj
 
-Volá se rozhraním po volání [COleDropTarget::OnDragOver](../../mfc/reference/coledroptarget-class.md#ondragover) nebo [COleDropTarget::DragEnter](../../mfc/reference/coledroptarget-class.md#ondragenter).
+Volá se rozhraním po volání [COleDropTarget:: OnDragOver](../../mfc/reference/coledroptarget-class.md#ondragover) nebo [COleDropTarget::D ragenter](../../mfc/reference/coledroptarget-class.md#ondragenter).
 
 ```
 virtual SCODE GiveFeedback(DROPEFFECT dropEffect);
@@ -88,31 +88,31 @@ virtual SCODE GiveFeedback(DROPEFFECT dropEffect);
 ### <a name="parameters"></a>Parametry
 
 *dropEffect*<br/>
-Účinek, který se má zobrazit uživateli, obvykle označující, co by mohlo dojít, pokud přetažení došlo k chybě v tuto chvíli se vybraná data. Obvykle je to hodnota vrácená voláním nejnovější [CView::OnDragEnter](../../mfc/reference/cview-class.md#ondragenter) nebo [CView::OnDragOver](../../mfc/reference/cview-class.md#ondragover). Může být jeden nebo více z následujících akcí:
+Efekt, který by se měl zobrazit uživateli, který obvykle indikuje, co se stane, když v tuto chvíli došlo k přerušení s vybranými daty. Obvykle se jedná o hodnotu vrácenou posledním voláním metody [CView:: OnDragEnter](../../mfc/reference/cview-class.md#ondragenter) nebo [CView:: OnDragOver](../../mfc/reference/cview-class.md#ondragover). Může to být jedna nebo víc z těchto možností:
 
-- Přetažení A DROPEFFECT_NONE nebude povolen.
+- DROPEFFECT_NONE by se nepovolilo přetažení.
 
-- Operace kopírování A DROPEFFECT_COPY by byla prováděna.
+- DROPEFFECT_COPY by se prováděla operace kopírování.
 
-- Operace přesunu A DROPEFFECT_MOVE by byla prováděna.
+- DROPEFFECT_MOVE by se provedla operace přesunutí.
 
-- Odkaz A DROPEFFECT_LINK z vyřazené dat na původní data by byla založena.
+- Bylo navázáno propojení z vynechaných dat na původní data DROPEFFECT_LINK.
 
-- DROPEFFECT_SCROLL A přetažením posuvníku operace se použije nebo dochází v cíli.
+- DROPEFFECT_SCROLL, že se v cíli vyskytuje nebo probíhá operace přetáhnutí.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vrátí DRAGDROP_S_USEDEFAULTCURSORS Pokud přetažením právě probíhá, NOERROR, pokud není.
+Vrátí DRAGDROP_S_USEDEFAULTCURSORS, pokud probíhá přetahování, a pokud není, dojde k chybě.
 
 ### <a name="remarks"></a>Poznámky
 
-Potlačí tuto funkci pro poskytnutí zpětné vazby uživatelů o co by mohlo dojít, pokud přetažení došlo k chybě v tomto okamžiku. Výchozí implementace používá výchozí kurzory OLE. Další informace o operací přetažení myší pomocí OLE, najdete v článku [oblast pro přetažení přetažení (OLE)](../../mfc/drag-and-drop-ole.md).
+Potlačením této funkce poskytnete uživateli zpětnou vazbu o tom, co se stane, když v tomto okamžiku došlo k přerušení. Výchozí implementace používá výchozí kurzory OLE. Další informace o operacích přetažení pomocí technologie OLE naleznete v článku [přetahování myší (OLE)](../../mfc/drag-and-drop-ole.md).
 
-Další informace najdete v tématu [IDropSource::GiveFeedback](/windows/desktop/api/oleidl/nf-oleidl-idropsource-givefeedback), [IDropTarget::DragOver](/windows/desktop/api/oleidl/nf-oleidl-idroptarget-dragover), a [IDropTarget::DragEnter](/windows/desktop/api/oleidl/nf-oleidl-idroptarget-dragenter) v sadě Windows SDK.
+Další informace naleznete v tématu [IDropSource:: GiveFeedback může zdroj](/windows/win32/api/oleidl/nf-oleidl-idropsource-givefeedback), [IDropTarget::D ragover](/windows/win32/api/oleidl/nf-oleidl-idroptarget-dragover)a [IDropTarget::D ragenter](/windows/win32/api/oleidl/nf-oleidl-idroptarget-dragenter) v Windows SDK.
 
-##  <a name="onbegindrag"></a>  COleDropSource::OnBeginDrag
+##  <a name="onbegindrag"></a>COleDropSource::OnBeginDrag
 
-Volá framework při výskytu události, která by mohla spustit operaci přetažení, jako je například stisknutí levého tlačítka myši.
+Volá se rozhraním, když dojde k události, která by mohla zahájit operaci přetažení, například stisknutím levého tlačítka myši.
 
 ```
 virtual BOOL OnBeginDrag(CWnd* pWnd);
@@ -121,19 +121,19 @@ virtual BOOL OnBeginDrag(CWnd* pWnd);
 ### <a name="parameters"></a>Parametry
 
 *pWnd*<br/>
-Odkazuje na okno, obsahující vybrané údaje.
+Odkazuje na okno obsahující vybraná data.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Nenulové, pokud přetažení je povoleno, jinak 0.
+Nenulové, pokud je povoleno přetahování, jinak 0.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato funkce přepište, pokud chcete změnit způsob, jakým je spuštěn proces přetahování. Výchozí implementace zachytí myš a zůstane v režimu přetažení, dokud uživatel stiskne tlačítko myši doleva nebo doprava nebo volání ESC, po kterém ho uvolní tlačítko myši.
+Tuto funkci přepište, pokud chcete změnit způsob, jakým se spouští proces přetahování. Výchozí implementace zachytí myš a zůstane v režimu přetažení, dokud uživatel neklikne na levé nebo pravé tlačítko myši nebo dojde ke stisknutí klávesy ESC, kdy uvolní myš.
 
 ##  <a name="querycontinuedrag"></a>  COleDropSource::QueryContinueDrag
 
-Po přetažení, tato funkce je volána opakovaně rozhraním, dokud nebude operace přetažení zrušena nebo dokončení.
+Po přetahování je tato funkce volána opakovaně rozhraním, dokud se operace přetažení buď neruší, nebo se nedokončí.
 
 ```
 virtual SCODE QueryContinueDrag(
@@ -144,26 +144,26 @@ virtual SCODE QueryContinueDrag(
 ### <a name="parameters"></a>Parametry
 
 *bEscapePressed*<br/>
-Uvádí, zda byla od posledního volání stisknuta klávesa ESC `COleDropSource::QueryContinueDrag`.
+Uvádí, zda byl od posledního volání metody `COleDropSource::QueryContinueDrag`stisknuta klávesa ESC.
 
 *dwKeyState*<br/>
-Obsahuje informace o stavu modifikační klávesy na klávesnici. Jedná se o kombinaci libovolný počet následující: MK_CONTROL MK_SHIFT, MK_ALT, MK_LBUTTON, MK_MBUTTON a MK_RBUTTON.
+Obsahuje stav modifikačních kláves na klávesnici. Jedná se o kombinaci libovolného čísla z následujících možností: MK_CONTROL, MK_SHIFT, MK_ALT, MK_LBUTTON, MK_MBUTTON a MK_RBUTTON.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-DRAGDROP_S_CANCEL Pokud klávesy ESC nebo pravým tlačítkem je stisknutí nebo levého tlačítka je aktivována před přetažením spustí. DRAGDROP_S_DROP, pokud dojde k operaci přetažení. Jinak S_OK.
+DRAGDROP_S_CANCEL, pokud se stiskne klávesa ESC nebo pravé tlačítko, nebo se před spuštěním přetahování vyvolá tlačítko vlevo. DRAGDROP_S_DROP, pokud by došlo k operaci přetažení. Jinak S_OK.
 
 ### <a name="remarks"></a>Poznámky
 
-Dojde k přepsání, které tuto funkci Pokud chcete změnit bod, ve které přetažení se zruší nebo přetažení.
+Tuto funkci přepište, pokud chcete změnit bod, ve kterém se přetažení zruší nebo dojde k přerušení.
 
-Výchozí implementace zahájí rozevíracího nebo zruší přetahování následujícím způsobem. Operace přetažení zruší po stisknutí klávesy ESC nebo pravým tlačítkem myši. Při vyvolání levé tlačítko myši po přetažení spuštění zahájení operace přetažení. V opačném případě vrátí hodnotu S_OK a provádí žádné další operace.
+Výchozí implementace inicializuje přetažení nebo zruší následující přetahování. Po stisknutí klávesy ESC nebo pravého tlačítka myši zruší operaci přetažení. Inicializuje operaci přetažení, když se po zahájení tažení vyvolá levé tlačítko myši. V opačném případě vrátí hodnotu S_OK a neprovede žádné další operace.
 
-Protože tato funkce je volána často, to by mělo být optimalizované co největší míře.
+Vzhledem k tomu, že se tato funkce nazývá často, měla by být optimalizovaná co nejvíce.
 
 ## <a name="see-also"></a>Viz také:
 
-[Ukázky knihovny MFC HIERSVR](../../overview/visual-cpp-samples.md)<br/>
-[Ukázky knihovny MFC OCLIENT](../../overview/visual-cpp-samples.md)<br/>
+[HIERSVR Sample MFC](../../overview/visual-cpp-samples.md)<br/>
+[OCLIENT Sample MFC](../../overview/visual-cpp-samples.md)<br/>
 [CCmdTarget – třída](../../mfc/reference/ccmdtarget-class.md)<br/>
 [Graf hierarchie](../../mfc/hierarchy-chart.md)

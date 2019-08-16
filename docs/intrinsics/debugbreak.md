@@ -8,16 +8,16 @@ helpviewer_keywords:
 - breakpoints, __debugbreak intrinsic
 - __debugbreak intrinsic
 ms.assetid: 1d1e1c0c-891a-4613-ae4b-d790094ba830
-ms.openlocfilehash: 97932dfe0e187a13b72ae5fe70d761224721c3ff
-ms.sourcegitcommit: 1acb6755e11379026a96f63facac4d33f4dc47ae
+ms.openlocfilehash: ed75b94e8bf0aca9369c56f23e8ff00ea6953642
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67314258"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69509497"
 ---
-# <a name="debugbreak"></a>__debugbreak
+# <a name="__debugbreak"></a>__debugbreak
 
-**Microsoft Specific**
+**Specifické pro společnost Microsoft**
 
 Umístí do kódu zarážku, kde uživatel bude vyzván ke spuštění ladicího programu.
 
@@ -29,16 +29,16 @@ void __debugbreak();
 
 ## <a name="requirements"></a>Požadavky
 
-|Vnitřní|Architektura|Záhlaví|
+|Vnitřním|Architektura|Záhlaví|
 |---------------|------------------|------------|
 |`__debugbreak`|x86, x64, ARM, ARM64|\<intrin.h>|
 
 ## <a name="remarks"></a>Poznámky
 
-`__debugbreak` Kompilátoru vnitřní, podobně jako [DebugBreak](https://msdn.microsoft.com/library/windows/desktop/ms679297.aspx), přenosná Win32 způsob, jak způsobit, že zarážku.
+Vnitřní kompilátor, podobně jako DebugBreak, je přenosným způsobem Win32, který způsobuje zarážku. [](/windows/win32/api/debugapi/nf-debugapi-debugbreak) `__debugbreak`
 
 > [!NOTE]
->  Při kompilaci s **/CLR**, funkce obsahující `__debugbreak` bude zkompilována do jazyka MSIL. Klíčové slovo `asm int 3` zajistí zkompilování funkce jako nativní. Další informace najdete v tématu [__asm](../assembler/inline/asm.md).
+>  Při kompilaci s možností **/CLR**bude funkce obsahující `__debugbreak` hodnotu zkompilována do jazyka MSIL. Klíčové slovo `asm int 3` zajistí zkompilování funkce jako nativní. Další informace najdete v tématu [__asm](../assembler/inline/asm.md).
 
 Příklad:
 
@@ -60,11 +60,11 @@ main() {
 
 na počítači architektury x86.
 
-Na ARM64 `__debugbreak` vnitřní zkompilován instrukce `brk #0xF000`.
+V ARM64 `__debugbreak` je vnitřní kompilace zkompilována do instrukce `brk #0xF000`.
 
 Tato rutina je k dispozici pouze jako vnitřní objekt.
 
-**Specifické pro END Microsoft**
+**Specifické pro konec Microsoftu**
 
 ## <a name="see-also"></a>Viz také:
 

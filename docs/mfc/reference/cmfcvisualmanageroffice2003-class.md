@@ -1,5 +1,5 @@
 ---
-title: CMFCVisualManagerOffice2003 Class
+title: CMFCVisualManagerOffice2003 – třída
 ms.date: 11/04/2016
 f1_keywords:
 - CMFCVisualManagerOffice2003
@@ -92,16 +92,16 @@ f1_keywords:
 helpviewer_keywords:
 - CMFCVisualManagerOffice2003 Class [MFC]
 ms.assetid: 115482cd-e349-450a-8dc4-c6023d092aab
-ms.openlocfilehash: dd62ea4073ae1982f01a279a411c8d11e8e5cec3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 718976b8fb961e273f3e17264e6b6d1ddcbda53d
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62374087"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69504615"
 ---
-# <a name="cmfcvisualmanageroffice2003-class"></a>CMFCVisualManagerOffice2003 Class
+# <a name="cmfcvisualmanageroffice2003-class"></a>CMFCVisualManagerOffice2003 – třída
 
-`CMFCVisualManagerOffice2003` Poskytuje vzhled aplikace Microsoft Office 2003 aplikace.
+`CMFCVisualManagerOffice2003`poskytuje aplikaci systém Microsoft Office zobrazení 2003.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -113,107 +113,107 @@ class CMFCVisualManagerOffice2003 : public CMFCVisualManagerOfficeXP
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
-|[CMFCVisualManagerOffice2003::DrawComboBorderWinXP](#drawcomboborderwinxp)|Vykreslí ohraničení pole se seznamem používat aktuální motiv Windows XP. (Přepíše [CMFCVisualManager::DrawComboBorderWinXP](../../mfc/reference/cmfcvisualmanager-class.md#drawcomboborderwinxp).)|
-|[CMFCVisualManagerOffice2003::DrawComboDropButtonWinXP](#drawcombodropbuttonwinxp)|Nakreslí tlačítko rozevíracího pole se seznamem používat aktuální motiv Windows XP. (Overrides [CMFCVisualManager::DrawComboDropButtonWinXP](../../mfc/reference/cmfcvisualmanager-class.md#drawcombodropbuttonwinxp).)|
-|[CMFCVisualManagerOffice2003::DrawCustomizeButton](#drawcustomizebutton)|Nakreslí tlačítko Přizpůsobit.|
-|[CMFCVisualManagerOffice2003::DrawPushButtonWinXP](#drawpushbuttonwinxp)|Nakreslí tlačítka pomocí aktuální motiv Windows XP. (Overrides [CMFCVisualManager::DrawPushButtonWinXP](../../mfc/reference/cmfcvisualmanager-class.md#drawpushbuttonwinxp).)|
-|[CMFCVisualManagerOffice2003::GetBaseThemeColor](#getbasethemecolor)|Získá základní motiv barvu.|
-|[CMFCVisualManagerOffice2003::GetHighlightMenuItemColor](#gethighlightmenuitemcolor)|Získá barva použitá pro položky nabídky zvýrazněné.|
-|[CMFCVisualManagerOffice2003::GetPropertyGridGroupColor](#getpropertygridgroupcolor)|Rozhraní volá tuto metodu za účelem získání barvu pozadí seznamu vlastností. (Přepíše `CMFCVisualManagerOfficeXP::GetPropertyGridGroupColor`.)|
-|[CMFCVisualManagerOffice2003::GetPropertyGridGroupTextColor](#getpropertygridgrouptextcolor)|Rozhraní volá tuto metodu za účelem načtení barvu textu, seznamu vlastností. (Přepíše `CMFCVisualManagerOfficeXP::GetPropertyGridGroupTextColor`.)|
-|[CMFCVisualManagerOffice2003::GetShowAllMenuItemsHeight](#getshowallmenuitemsheight)|Vrátí výšku všechny položky nabídky. (Overrides [CMFCVisualManager::GetShowAllMenuItemsHeight](../../mfc/reference/cmfcvisualmanager-class.md#getshowallmenuitemsheight).)|
-|[CMFCVisualManagerOffice2003::GetSmartDockingBaseGuideColors](#getsmartdockingbaseguidecolors)|Nastaví barvu pozadí zadané základní skupiny a barvy ohraničení. (Přepíše `CMFCVisualManagerOfficeXP::GetSmartDockingBaseGuideColors`.)|
-|[CMFCVisualManagerOffice2003::GetSmartDockingHighlightToneColor](#getsmartdockinghighlighttonecolor)|Získá tón barvu zvýraznění. (Přepíše [CMFCVisualManager::GetSmartDockingHighlightToneColor](../../mfc/reference/cmfcvisualmanager-class.md#getsmartdockinghighlighttonecolor).)|
-|[CMFCVisualManagerOffice2003::GetTabFrameColors](#gettabframecolors)|Rozhraní volá tuto funkci, pokud má k načtení sady barev pro kreslení okno s kartou. (Přepíše [CMFCVisualManager::GetTabFrameColors](../../mfc/reference/cmfcvisualmanager-class.md#gettabframecolors).)|
-|[CMFCVisualManagerOffice2003::GetToolBarCustomizeButtonMargin](#gettoolbarcustomizebuttonmargin)|Získá okraj tlačítka přizpůsobení panelu nástrojů. (Přepíše `CMFCVisualManager::GetToolBarCustomizeButtonMargin`.)|
-|[CMFCVisualManagerOffice2003::GetToolbarDisabledColor](#gettoolbardisabledcolor)|Získá zakázané barev panelu nástrojů. (Přepíše `CMFCVisualManager::GetToolbarDisabledColor`.)|
-|[CMFCVisualManagerOffice2003::GetToolTipInfo](#gettooltipinfo)|Volá se rozhraním, chcete-li získat informace popisu tlačítka. (Přepíše [CMFCVisualManager::GetToolTipInfo](../../mfc/reference/cmfcvisualmanager-class.md#gettooltipinfo).)|
-|[CMFCVisualManagerOffice2003::IsDefaultWinXPColorsEnabled](#isdefaultwinxpcolorsenabled)|Označuje, zda správce vzhledu používá nativní barvy motivu Windows XP.|
-|[CMFCVisualManagerOffice2003::IsDockingTabHasBorder](#isdockingtabhasborder)|Vrátí, zda aktuální správce vzhledu vykreslí ohraničení kolem podoken, které jsou ukotvena a oddělené tabulátory. (Overrides [CMFCVisualManager::IsDockingTabHasBorder](../../mfc/reference/cmfcvisualmanager-class.md#isdockingtabhasborder).)|
-|[CMFCVisualManagerOffice2003::IsHighlightOneNoteTabs](#ishighlightonenotetabs)|Určuje, zda by měl být zvýrazněn karty Onenotu. (Přepíše `CMFCVisualManager::IsHighlightOneNoteTabs`.)|
-|[CMFCVisualManagerOffice2003::IsOffsetPressedButton](#isoffsetpressedbutton)|Volá se rozhraním při kreslení tlačítka panelu nástrojů. (Přepíše `CMFCVisualManager::IsOffsetPressedButton`.)|
-|[CMFCVisualManagerOffice2003::IsStatusBarOfficeXPLook](#isstatusbarofficexplook)|Označuje, zda je Office XP vzhled stavového řádku.|
-|[CMFCVisualManagerOffice2003::IsToolbarRoundShape](#istoolbarroundshape)|Označuje, jestli se zadaný nástrojů kruhového tvaru. (Přepíše [CMFCVisualManager::IsToolbarRoundShape](../../mfc/reference/cmfcvisualmanager-class.md#istoolbarroundshape).)|
-|[CMFCVisualManagerOffice2003::IsUseGlobalTheme](#isuseglobaltheme)|Označuje, zda se používá jako globální motiv Windows XP.|
-|[CMFCVisualManagerOffice2003::IsWindowsThemingSupported](#iswindowsthemingsupported)|Označuje, zda Windows motivů. (Přepíše [CMFCVisualManager::IsWindowsThemingSupported](../../mfc/reference/cmfcvisualmanager-class.md#iswindowsthemingsupported).)|
-|[CMFCVisualManagerOffice2003::OnDrawAutoHideButtonBorder](#ondrawautohidebuttonborder)|Rozhraní volá tuto metodu při ohraničení automaticky skrýt tlačítko. (Overrides [CMFCVisualManager::OnDrawAutoHideButtonBorder](../../mfc/reference/cmfcvisualmanager-class.md#ondrawautohidebuttonborder).)|
-|[CMFCVisualManagerOffice2003::OnDrawBarGripper](#ondrawbargripper)|Volá se rozhraním, když nakreslí úchytu ovládacího prvku panel. (Přepíše `CMFCVisualManagerOfficeXP::OnDrawBarGripper`.)|
-|[CMFCVisualManagerOffice2003::OnDrawBrowseButton](#ondrawbrowsebutton)|Rozhraní volá tuto metodu při kreslení na tlačítko Procházet pro ovládací prvek upravit. (Přepíše `CMFCVisualManagerOfficeXP::OnDrawBrowseButton`.)|
-|[CMFCVisualManagerOffice2003::OnDrawButtonBorder](#ondrawbuttonborder)|Rozhraní volá tuto metodu při ohraničení tlačítka panelu nástrojů. (Přepíše `CMFCVisualManagerOfficeXP::OnDrawButtonBorder`.)|
-|[CMFCVisualManagerOffice2003::OnDrawCaptionBarBorder](#ondrawcaptionbarborder)|Rozhraní volá tuto metodu při kreslení ohraničení [CMFCCaptionBar – třída](../../mfc/reference/cmfccaptionbar-class.md) objektu. (Overrides [CMFCVisualManager::OnDrawCaptionBarBorder](../../mfc/reference/cmfcvisualmanager-class.md#ondrawcaptionbarborder).)|
-|[CMFCVisualManagerOffice2003::OnDrawCheckBoxEx](#ondrawcheckboxex)|Rozhraní volá tuto metodu při kreslení zaškrtávací políčko. (Overrides [CMFCVisualManager::OnDrawCheckBoxEx](../../mfc/reference/cmfcvisualmanager-class.md#ondrawcheckboxex).)|
-|[CMFCVisualManagerOffice2003::OnDrawComboBorder](#ondrawcomboborder)|Rozhraní volá tuto metodu po ohraničení kolem [cmfctoolbarcomboboxbutton – třída](../../mfc/reference/cmfctoolbarcomboboxbutton-class.md) objektu. (Přepíše `CMFCVisualManagerOfficeXP::OnDrawComboBorder`.)|
-|[CMFCVisualManagerOffice2003::OnDrawComboDropButton](#ondrawcombodropbutton)|Rozhraní volá tuto metodu při kreslení na rozevírací tlačítko [cmfctoolbarcomboboxbutton – třída](../../mfc/reference/cmfctoolbarcomboboxbutton-class.md). (Přepíše `CMFCVisualManagerOfficeXP::OnDrawComboDropButton`.)|
-|[CMFCVisualManagerOffice2003::OnDrawControlBorder](#ondrawcontrolborder)|Rozhraní volá tuto metodu při ohraničení ovládacího prvku. (Přepíše [CMFCVisualManager::OnDrawControlBorder](../../mfc/reference/cmfcvisualmanager-class.md#ondrawcontrolborder).)|
-|[CMFCVisualManagerOffice2003::OnDrawExpandingBox](#ondrawexpandingbox)|Rozhraní volá tuto metodu při kreslení zvětšující pole. (Overrides [CMFCVisualManager::OnDrawExpandingBox](../../mfc/reference/cmfcvisualmanager-class.md#ondrawexpandingbox).)|
-|[CMFCVisualManagerOffice2003::OnDrawHeaderCtrlBorder](#ondrawheaderctrlborder)|Rozhraní volá tuto metodu po ohraničení kolem instance [cmfcheaderctrl – třída](../../mfc/reference/cmfcheaderctrl-class.md). (Overrides [CMFCVisualManager::OnDrawHeaderCtrlBorder](../../mfc/reference/cmfcvisualmanager-class.md#ondrawheaderctrlborder).)|
-|[CMFCVisualManagerOffice2003::OnDrawMenuBorder](#ondrawmenuborder)|Rozhraní volá tuto metodu při kreslení ohraničení [cmfcpopupmenu – třída](../../mfc/reference/cmfcpopupmenu-class.md). (Přepíše `CMFCVisualManagerOfficeXP::OnDrawMenuBorder`.)|
-|[CMFCVisualManagerOffice2003::OnDrawOutlookBarSplitter](#ondrawoutlookbarsplitter)|Rozhraní volá tuto metodu při kreslení rozdělovač pro panel aplikace Outlook. (Přepíše [CMFCVisualManager::OnDrawOutlookBarSplitter](../../mfc/reference/cmfcvisualmanager-class.md#ondrawoutlookbarsplitter).)|
-|[CMFCVisualManagerOffice2003::OnDrawOutlookPageButtonBorder](#ondrawoutlookpagebuttonborder)|Volá se rozhraním, když ho ohraničení tlačítka stránky aplikace Outlook. (Overrides [CMFCVisualManager::OnDrawOutlookPageButtonBorder](../../mfc/reference/cmfcvisualmanager-class.md#ondrawoutlookpagebuttonborder).)|
-|[CMFCVisualManagerOffice2003::OnDrawPaneBorder](#ondrawpaneborder)|Rozhraní volá tuto metodu při kreslení ohraničení [cpane – třída](../../mfc/reference/cpane-class.md) objektu. (Přepíše `CMFCVisualManagerOfficeXP::OnDrawPaneBorder`.)|
-|[CMFCVisualManagerOffice2003::OnDrawPaneCaption](#ondrawpanecaption)|Rozhraní volá tuto metodu při kreslení titulek [CDockablePane – třída](../../mfc/reference/cdockablepane-class.md) objektu. (Přepíše `CMFCVisualManagerOfficeXP::OnDrawPaneCaption`.)|
-|[CMFCVisualManagerOffice2003::OnDrawPopupWindowBorder](#ondrawpopupwindowborder)|Rozhraní volá tuto metodu při ohraničení automaticky otevíraném okně. (Přepíše `CMFCVisualManagerOfficeXP::OnDrawPopupWindowBorder`.)|
-|[CMFCVisualManagerOffice2003::OnDrawPopupWindowButtonBorder](#ondrawpopupwindowbuttonborder)|Rozhraní volá tuto metodu, když v automaticky otevíraném okně nakreslí ohraničení tlačítka. (Přepíše `CMFCVisualManagerOfficeXP::OnDrawPopupWindowButtonBorder`.)|
-|[CMFCVisualManagerOffice2003::OnDrawPopupWindowCaption](#ondrawpopupwindowcaption)|Rozhraní volá tuto metodu při kreslení titulek automaticky otevíraném okně. (Přepíše `CMFCVisualManagerOfficeXP::OnDrawPopupWindowCaption`.)|
-|[CMFCVisualManagerOffice2003::OnDrawRibbonButtonsGroup](#ondrawribbonbuttonsgroup)|Rozhraní volá tuto metodu při nakreslí skupina tlačítek na pásu karet. (Overrides [CMFCVisualManager::OnDrawRibbonButtonsGroup](../../mfc/reference/cmfcvisualmanager-class.md#ondrawribbonbuttonsgroup).)|
-|[CMFCVisualManagerOffice2003::OnDrawRibbonCategoryCaption](#ondrawribboncategorycaption)|Rozhraní volá tuto metodu při kreslení záhlaví pro kategorii pásu karet. (Přepíše [CMFCVisualManager::OnDrawRibbonCategoryCaption](../../mfc/reference/cmfcvisualmanager-class.md#ondrawribboncategorycaption).)|
-|[CMFCVisualManagerOffice2003::OnDrawRibbonCategoryTab](#ondrawribboncategorytab)|Rozhraní volá tuto metodu při kreslení na kartu kategorie pásu karet. (Přepíše [CMFCVisualManager::OnDrawRibbonCategoryTab](../../mfc/reference/cmfcvisualmanager-class.md#ondrawribboncategorytab).)|
-|[CMFCVisualManagerOffice2003::OnDrawRibbonProgressBar](#ondrawribbonprogressbar)|Rozhraní volá tuto metodu, když se vykreslí [cmfcribbonprogressbar – třída](../../mfc/reference/cmfcribbonprogressbar-class.md). (Přepíše [CMFCVisualManager::OnDrawRibbonProgressBar](../../mfc/reference/cmfcvisualmanager-class.md#ondrawribbonprogressbar).)|
-|[CMFCVisualManagerOffice2003::OnDrawRibbonQuickAccessToolBarSeparator](#ondrawribbonquickaccesstoolbarseparator)|Rozhraní volá tuto metodu při nakreslí oddělovač na panelu nástrojů Rychlý přístup z pásu karet. (Přepíše `CMFCVisualManagerOfficeXP::OnDrawRibbonQuickAccessToolBarSeparator`.)|
-|[CMFCVisualManagerOffice2003::OnDrawRibbonSliderChannel](#ondrawribbonsliderchannel)|Rozhraní volá tuto metodu při kreslení kanál [cmfcribbonslider – třída](../../mfc/reference/cmfcribbonslider-class.md). (Přepíše [CMFCVisualManager::OnDrawRibbonSliderChannel](../../mfc/reference/cmfcvisualmanager-class.md#ondrawribbonsliderchannel).)|
-|[CMFCVisualManagerOffice2003::OnDrawRibbonSliderThumb](#ondrawribbonsliderthumb)|Rozhraní volá tuto metodu při kreslení thumb z [cmfcribbonslider –](../../mfc/reference/cmfcribbonslider-class.md) objektu. (Přepíše [CMFCVisualManager::OnDrawRibbonSliderThumb](../../mfc/reference/cmfcvisualmanager-class.md#ondrawribbonsliderthumb).)|
-|[CMFCVisualManagerOffice2003::OnDrawRibbonSliderZoomButton](#ondrawribbonsliderzoombutton)|Rozhraní volá tuto metodu při kreslení tlačítka pro přiblížení [cmfcribbonslider –](../../mfc/reference/cmfcribbonslider-class.md) objektu. (Přepíše [CMFCVisualManager::OnDrawRibbonSliderZoomButton](../../mfc/reference/cmfcvisualmanager-class.md#ondrawribbonsliderzoombutton).)|
-|[CMFCVisualManagerOffice2003::OnDrawRibbonStatusBarPane](#ondrawribbonstatusbarpane)|Rozhraní volá tuto metodu při nakreslí podokno na stavovém řádku. (Přepíše `CMFCVisualManagerOfficeXP::OnDrawRibbonStatusBarPane`.)|
-|[CMFCVisualManagerOffice2003::OnDrawScrollButtons](#ondrawscrollbuttons)|Rozhraní volá tuto metodu při kreslení tlačítka pro posunutí. (Přepíše `CMFCVisualManagerOfficeXP::OnDrawScrollButtons`.)|
-|[CMFCVisualManagerOffice2003::OnDrawSeparator](#ondrawseparator)|Rozhraní volá tuto metodu při kreslení oddělovač. (Přepíše `CMFCVisualManagerOfficeXP::OnDrawSeparator`.)|
-|[CMFCVisualManagerOffice2003::OnDrawShowAllMenuItems](#ondrawshowallmenuitems)|Rozhraní volá tuto metodu, když ho kreslení všech položek v nabídce. (Přepíše [CMFCVisualManager::OnDrawShowAllMenuItems](../../mfc/reference/cmfcvisualmanager-class.md#ondrawshowallmenuitems).)|
-|[CMFCVisualManagerOffice2003::OnDrawStatusBarPaneBorder](#ondrawstatusbarpaneborder)|Rozhraní volá tuto metodu po ohraničení pro [CMFCStatusBar – třída](../../mfc/reference/cmfcstatusbar-class.md) objektu. (Přepíše `CMFCVisualManagerOfficeXP::OnDrawStatusBarPaneBorder`.)|
-|[CMFCVisualManagerOffice2003::OnDrawStatusBarProgress](#ondrawstatusbarprogress)|Rozhraní volá tuto metodu při nakreslí indikátor průběhu na [CMFCStatusBar –](../../mfc/reference/cmfcstatusbar-class.md) objektu. (Přepíše [CMFCVisualManager::OnDrawStatusBarProgress](../../mfc/reference/cmfcvisualmanager-class.md#ondrawstatusbarprogress).)|
-|[CMFCVisualManagerOffice2003::OnDrawStatusBarSizeBox](#ondrawstatusbarsizebox)|Rozhraní volá tuto metodu při kreslení velikost pole pro [CMFCStatusBar –](../../mfc/reference/cmfcstatusbar-class.md). (Přepíše [CMFCVisualManager::OnDrawStatusBarSizeBox](../../mfc/reference/cmfcvisualmanager-class.md#ondrawstatusbarsizebox).)|
-|[CMFCVisualManagerOffice2003::OnDrawTab](#ondrawtab)|Rozhraní volá tuto metodu při kreslení karty [cmfcbasetabctrl – třída](../../mfc/reference/cmfcbasetabctrl-class.md) objektu. (Přepíše `CMFCVisualManagerOfficeXP::OnDrawTab`.)|
-|[CMFCVisualManagerOffice2003::OnDrawTabsButtonBorder](#ondrawtabsbuttonborder)|Rozhraní volá tuto metodu při ohraničení kartu tlačítka. (Přepíše `CMFCVisualManagerOfficeXP::OnDrawTabsButtonBorder`.)|
-|[CMFCVisualManagerOffice2003::OnDrawTask](#ondrawtask)|Rozhraní volá tuto metodu, když se vykreslí [cmfctaskspanetask – třída](../../mfc/reference/cmfctaskspanetask-class.md) objektu. (Přepíše `CMFCVisualManagerOfficeXP::OnDrawTask`.)|
-|[CMFCVisualManagerOffice2003::OnDrawTasksGroupAreaBorder](#ondrawtasksgroupareaborder)|Rozhraní volá tuto metodu, když ho ohraničení kolem skupiny [cmfctaskspane – třída](../../mfc/reference/cmfctaskspane-class.md) objektu. (Přepíše `CMFCVisualManagerOfficeXP::OnDrawTasksGroupAreaBorder`.)|
-|[CMFCVisualManagerOffice2003::OnDrawTasksGroupCaption](#ondrawtasksgroupcaption)|Rozhraní volá tuto metodu při kreslení s titulkem [cmfctaskspanetaskgroup – třída](../../mfc/reference/cmfctaskspanetaskgroup-class.md) objektu. (Přepíše `CMFCVisualManagerOfficeXP::OnDrawTasksGroupCaption`.)|
-|[CMFCVisualManagerOffice2003::OnDrawTearOffCaption](#ondrawtearoffcaption)|Rozhraní volá tuto metodu při kreslení s titulkem [cmfcpopupmenu – třída](../../mfc/reference/cmfcpopupmenu-class.md) objektu. (Přepíše `CMFCVisualManagerOfficeXP::OnDrawTearOffCaption`.)|
-|[CMFCVisualManagerOffice2003::OnErasePopupWindowButton](#onerasepopupwindowbutton)|Rozhraní volá tuto metodu při vymaže tlačítko v místním okně. (Přepíše `CMFCVisualManagerOfficeXP::OnErasePopupWindowButton`.)|
-|[CMFCVisualManagerOffice2003::OnEraseTabsArea](#onerasetabsarea)|Rozhraní volá tuto metodu při vymaže oblasti karet na kartě okna. (Přepíše `CMFCVisualManagerOfficeXP::OnEraseTabsArea`.)|
-|[CMFCVisualManagerOffice2003::OnEraseTabsButton](#onerasetabsbutton)|Rozhraní volá tuto metodu při vymaže text a ikona tlačítka kartu. (Přepíše `CMFCVisualManagerOfficeXP::OnEraseTabsButton`.)|
-|[CMFCVisualManagerOffice2003::OnEraseTabsFrame](#onerasetabsframe)|Rozhraní volá tuto metodu, když se odstraní snímek na [cmfcbasetabctrl – třída](../../mfc/reference/cmfcbasetabctrl-class.md). (Přepíše [CMFCVisualManager::OnEraseTabsFrame](../../mfc/reference/cmfcvisualmanager-class.md#onerasetabsframe).)|
-|[CMFCVisualManagerOffice2003::OnFillAutoHideButtonBackground](#onfillautohidebuttonbackground)|Rozhraní volá tuto metodu při vyplní na pozadí automaticky skrýt tlačítko. (Overrides [CMFCVisualManager::OnFillAutoHideButtonBackground](../../mfc/reference/cmfcvisualmanager-class.md#onfillautohidebuttonbackground).)|
-|[CMFCVisualManagerOffice2003::OnFillBarBackground](#onfillbarbackground)|Rozhraní volá tuto metodu při vyplní na pozadí [cbasepane – třída](../../mfc/reference/cbasepane-class.md) objektu. (Přepíše `CMFCVisualManagerOfficeXP::OnFillBarBackground`.)|
-|[CMFCVisualManagerOffice2003::OnFillButtonInterior](#onfillbuttoninterior)|Rozhraní volá tuto metodu při výplně pozadí tlačítka panelu nástrojů. (Přepíše `CMFCVisualManagerOfficeXP::OnFillButtonInterior`.)|
-|[CMFCVisualManagerOffice2003::OnFillCommandsListBackground](#onfillcommandslistbackground)|Rozhraní volá tuto metodu při výplně pozadí tlačítka panelu nástrojů, který patří do seznamu příkazů. (Přepíše `CMFCVisualManagerOfficeXP::OnFillCommandsListBackground`.)|
-|[CMFCVisualManagerOffice2003::OnFillHeaderCtrlBackground](#onfillheaderctrlbackground)|Rozhraní volá tuto metodu při výplně pozadí záhlaví ovládacího prvku. (Overrides [CMFCVisualManager::OnFillHeaderCtrlBackground](../../mfc/reference/cmfcvisualmanager-class.md#onfillheaderctrlbackground).)|
-|[CMFCVisualManagerOffice2003::OnFillHighlightedArea](#onfillhighlightedarea)|Rozhraní volá tuto metodu při vyplní zvýrazněné oblasti tlačítka panelu nástrojů. (Přepíše `CMFCVisualManagerOfficeXP::OnFillHighlightedArea`.)|
-|[CMFCVisualManagerOffice2003::OnFillOutlookBarCaption](#onfilloutlookbarcaption)|Rozhraní volá tuto metodu při výplně pozadí titulku panel aplikace Outlook. (Přepíše [CMFCVisualManager::OnFillOutlookBarCaption](../../mfc/reference/cmfcvisualmanager-class.md#onfilloutlookbarcaption).)|
-|[CMFCVisualManagerOffice2003::OnFillOutlookPageButton](#onfilloutlookpagebutton)|Rozhraní volá tuto metodu při vyplní vnitřní tlačítka stránky aplikace Outlook. (Overrides [CMFCVisualManager::OnFillOutlookPageButton](../../mfc/reference/cmfcvisualmanager-class.md#onfilloutlookpagebutton).)|
-|[CMFCVisualManagerOffice2003::OnFillPopupWindowBackground](#onfillpopupwindowbackground)|Rozhraní volá tuto metodu při vyplní na pozadí automaticky otevírané okno. (Přepíše `CMFCVisualManagerOfficeXP::OnFillPopupWindowBackground`.)|
-|[CMFCVisualManagerOffice2003::OnFillTab](#onfilltab)|Rozhraní volá tuto metodu při výplně pozadí okna Karta. (Přepíše `CMFCVisualManagerOfficeXP::OnFillTab`.)|
-|[CMFCVisualManagerOffice2003::OnFillTasksGroupInterior](#onfilltasksgroupinterior)|Rozhraní volá tuto metodu při vyplní vnitřní [cmfctaskspanetaskgroup – třída](../../mfc/reference/cmfctaskspanetaskgroup-class.md) objektu. (Přepíše `CMFCVisualManagerOfficeXP::OnFillTasksGroupInterior`.)|
-|[CMFCVisualManagerOffice2003::OnFillTasksPaneBackground](#onfilltaskspanebackground)|Rozhraní volá tuto metodu při vyplní na pozadí [cmfctaskspane –](../../mfc/reference/cmfctaskspane-class.md) ovládacího prvku. (Přepíše [CMFCVisualManager::OnFillTasksPaneBackground](../../mfc/reference/cmfcvisualmanager-class.md#onfilltaskspanebackground).)|
-|[CMFCVisualManagerOffice2003::OnHighlightQuickCustomizeMenuButton](#onhighlightquickcustomizemenubutton)|Rámec volá tuto metodu při kreslení zvýrazněný přizpůsobení rychlé tlačítka nabídky. (Přepíše `CMFCVisualManagerOfficeXP::OnHighlightQuickCustomizeMenuButton`.)|
-|[CMFCVisualManagerOffice2003::OnHighlightRarelyUsedMenuItems](#onhighlightrarelyusedmenuitems)|Rozhraní volá tuto metodu při kreslení zvýrazněný příkaz. (Přepíše `CMFCVisualManagerOfficeXP::OnHighlightRarelyUsedMenuItems`.)|
-|[CMFCVisualManagerOffice2003::OnUpdateSystemColors](#onupdatesystemcolors)|Rozhraní volá tuto funkci při změně systémových barev. (Přepíše `CMFCVisualManagerOfficeXP::OnUpdateSystemColors`.)|
-|[CMFCVisualManagerOffice2003::SetDefaultWinXPColors](#setdefaultwinxpcolors)|Určuje, zda správce vzhledu by měl používat nativní barvy motivu Windows XP nebo barvy získané z [GetSysColor](/windows/desktop/api/winuser/nf-winuser-getsyscolor).|
-|[CMFCVisualManagerOffice2003::SetStatusBarOfficeXPLook](#setstatusbarofficexplook)|Určuje, zda má být použito globální motiv Windows XP.|
-|[CMFCVisualManagerOffice2003::SetUseGlobalTheme](#setuseglobaltheme)|Určuje, jestli má správce vzhledu jako globální motiv.|
+|[CMFCVisualManagerOffice2003::DrawComboBorderWinXP](#drawcomboborderwinxp)|Vykreslí ohraničení pole se seznamem pomocí aktuálního motivu systému Windows XP. (Overrides [CMFCVisualManager::D rawcomboborderwinxp](../../mfc/reference/cmfcvisualmanager-class.md#drawcomboborderwinxp).)|
+|[CMFCVisualManagerOffice2003::DrawComboDropButtonWinXP](#drawcombodropbuttonwinxp)|Nakreslí tlačítko rozevíracího seznamu pole se seznamem pomocí aktuálního motivu systému Windows XP. (Overrides [CMFCVisualManager::D rawcombodropbuttonwinxp](../../mfc/reference/cmfcvisualmanager-class.md#drawcombodropbuttonwinxp).)|
+|[CMFCVisualManagerOffice2003::DrawCustomizeButton](#drawcustomizebutton)|Nakreslí tlačítko pro přizpůsobení.|
+|[CMFCVisualManagerOffice2003::DrawPushButtonWinXP](#drawpushbuttonwinxp)|Nakreslí tlačítko push pomocí aktuálního motivu systému Windows XP. (Overrides [CMFCVisualManager::D rawpushbuttonwinxp](../../mfc/reference/cmfcvisualmanager-class.md#drawpushbuttonwinxp).)|
+|[CMFCVisualManagerOffice2003::GetBaseThemeColor](#getbasethemecolor)|Získá barvu základního motivu.|
+|[CMFCVisualManagerOffice2003::GetHighlightMenuItemColor](#gethighlightmenuitemcolor)|Získá barvu použitou pro zvýrazněnou položku nabídky.|
+|[CMFCVisualManagerOffice2003::GetPropertyGridGroupColor](#getpropertygridgroupcolor)|Rozhraní volá tuto metodu, aby získala barvu pozadí seznamu vlastností. (Overrides `CMFCVisualManagerOfficeXP::GetPropertyGridGroupColor`.)|
+|[CMFCVisualManagerOffice2003::GetPropertyGridGroupTextColor](#getpropertygridgrouptextcolor)|Rozhraní volá tuto metodu pro načtení barvy textu seznamu vlastností. (Overrides `CMFCVisualManagerOfficeXP::GetPropertyGridGroupTextColor`.)|
+|[CMFCVisualManagerOffice2003::GetShowAllMenuItemsHeight](#getshowallmenuitemsheight)|Vrátí výšku všech položek nabídky. (Overrides [CMFCVisualManager:: GetShowAllMenuItemsHeight](../../mfc/reference/cmfcvisualmanager-class.md#getshowallmenuitemsheight).)|
+|[CMFCVisualManagerOffice2003::GetSmartDockingBaseGuideColors](#getsmartdockingbaseguidecolors)|Nastaví barvu pozadí zadané základní skupiny a barvu ohraničení. (Overrides `CMFCVisualManagerOfficeXP::GetSmartDockingBaseGuideColors`.)|
+|[CMFCVisualManagerOffice2003::GetSmartDockingHighlightToneColor](#getsmartdockinghighlighttonecolor)|Získá barvu zvýrazněného tónu. (Overrides [CMFCVisualManager:: GetSmartDockingHighlightToneColor](../../mfc/reference/cmfcvisualmanager-class.md#getsmartdockinghighlighttonecolor).)|
+|[CMFCVisualManagerOffice2003::GetTabFrameColors](#gettabframecolors)|Rozhraní volá tuto funkci, když má načíst sadu barev pro vykreslení okna karet. (Overrides [CMFCVisualManager:: GetTabFrameColors](../../mfc/reference/cmfcvisualmanager-class.md#gettabframecolors).)|
+|[CMFCVisualManagerOffice2003::GetToolBarCustomizeButtonMargin](#gettoolbarcustomizebuttonmargin)|Získá okraj tlačítka pro přizpůsobení panelu nástrojů. (Overrides `CMFCVisualManager::GetToolBarCustomizeButtonMargin`.)|
+|[CMFCVisualManagerOffice2003::GetToolbarDisabledColor](#gettoolbardisabledcolor)|Získá zakázanou barvu pro panel nástrojů. (Overrides `CMFCVisualManager::GetToolbarDisabledColor`.)|
+|[CMFCVisualManagerOffice2003::GetToolTipInfo](#gettooltipinfo)|Volá se rozhraním, aby se získaly informace popisu. (Overrides [CMFCVisualManager:: GetToolTipInfo](../../mfc/reference/cmfcvisualmanager-class.md#gettooltipinfo).)|
+|[CMFCVisualManagerOffice2003::IsDefaultWinXPColorsEnabled](#isdefaultwinxpcolorsenabled)|Určuje, zda vizuální správce používá nativní barvy motivů systému Windows XP.|
+|[CMFCVisualManagerOffice2003::IsDockingTabHasBorder](#isdockingtabhasborder)|Vrátí, zda aktuální vizuální manažer vykresluje ohraničení kolem podoken ukotvených a s kartami. (Overrides [CMFCVisualManager:: IsDockingTabHasBorder](../../mfc/reference/cmfcvisualmanager-class.md#isdockingtabhasborder).)|
+|[CMFCVisualManagerOffice2003::IsHighlightOneNoteTabs](#ishighlightonenotetabs)|Určuje, zda mají být zvýrazněny karty aplikace OneNote. (Overrides `CMFCVisualManager::IsHighlightOneNoteTabs`.)|
+|[CMFCVisualManagerOffice2003::IsOffsetPressedButton](#isoffsetpressedbutton)|Volá se rozhraním, když se nakreslí tlačítko na panelu nástrojů. (Overrides `CMFCVisualManager::IsOffsetPressedButton`.)|
+|[CMFCVisualManagerOffice2003::IsStatusBarOfficeXPLook](#isstatusbarofficexplook)|Označuje, zda je v sadě Office XP zobrazen stavový řádek.|
+|[CMFCVisualManagerOffice2003::IsToolbarRoundShape](#istoolbarroundshape)|Určuje, zda má určený panel nástrojů oblý tvar. (Overrides [CMFCVisualManager:: IsToolbarRoundShape](../../mfc/reference/cmfcvisualmanager-class.md#istoolbarroundshape).)|
+|[CMFCVisualManagerOffice2003::IsUseGlobalTheme](#isuseglobaltheme)|Určuje, zda je použit globální motiv systému Windows XP.|
+|[CMFCVisualManagerOffice2003::IsWindowsThemingSupported](#iswindowsthemingsupported)|Určuje, zda jsou okna podporovaná. (Overrides [CMFCVisualManager:: IsWindowsThemingSupported](../../mfc/reference/cmfcvisualmanager-class.md#iswindowsthemingsupported).)|
+|[CMFCVisualManagerOffice2003::OnDrawAutoHideButtonBorder](#ondrawautohidebuttonborder)|Rozhraní volá tuto metodu, když nakreslí ohraničení tlačítka pro automatické skrývání. (Overrides [CMFCVisualManager:: OnDrawAutoHideButtonBorder](../../mfc/reference/cmfcvisualmanager-class.md#ondrawautohidebuttonborder).)|
+|[CMFCVisualManagerOffice2003::OnDrawBarGripper](#ondrawbargripper)|Volá se rozhraním, když nakreslí úchyt pro ovládací panel. (Overrides `CMFCVisualManagerOfficeXP::OnDrawBarGripper`.)|
+|[CMFCVisualManagerOffice2003::OnDrawBrowseButton](#ondrawbrowsebutton)|Rozhraní volá tuto metodu, když nakreslí tlačítko pro procházení pro ovládací prvek pro úpravy. (Overrides `CMFCVisualManagerOfficeXP::OnDrawBrowseButton`.)|
+|[CMFCVisualManagerOffice2003::OnDrawButtonBorder](#ondrawbuttonborder)|Rozhraní volá tuto metodu, když nakreslí ohraničení tlačítka panelu nástrojů. (Overrides `CMFCVisualManagerOfficeXP::OnDrawButtonBorder`.)|
+|[CMFCVisualManagerOffice2003::OnDrawCaptionBarBorder](#ondrawcaptionbarborder)|Rozhraní volá tuto metodu, když nakreslí ohraničení objektu [třídy CMFCCaptionBar](../../mfc/reference/cmfccaptionbar-class.md) . (Overrides [CMFCVisualManager:: OnDrawCaptionBarBorder](../../mfc/reference/cmfcvisualmanager-class.md#ondrawcaptionbarborder).)|
+|[CMFCVisualManagerOffice2003::OnDrawCheckBoxEx](#ondrawcheckboxex)|Rozhraní volá tuto metodu, když nakreslí zaškrtávací políčko. (Overrides [CMFCVisualManager::OnDrawCheckBoxEx](../../mfc/reference/cmfcvisualmanager-class.md#ondrawcheckboxex).)|
+|[CMFCVisualManagerOffice2003::OnDrawComboBorder](#ondrawcomboborder)|Rozhraní volá tuto metodu, když nakreslí ohraničení kolem objektu [třídy CMFCToolbarComboBoxButton](../../mfc/reference/cmfctoolbarcomboboxbutton-class.md) . (Overrides `CMFCVisualManagerOfficeXP::OnDrawComboBorder`.)|
+|[CMFCVisualManagerOffice2003::OnDrawComboDropButton](#ondrawcombodropbutton)|Rozhraní volá tuto metodu, když nakreslí tlačítko drop [třídy CMFCToolbarComboBoxButton](../../mfc/reference/cmfctoolbarcomboboxbutton-class.md). (Overrides `CMFCVisualManagerOfficeXP::OnDrawComboDropButton`.)|
+|[CMFCVisualManagerOffice2003::OnDrawControlBorder](#ondrawcontrolborder)|Rozhraní volá tuto metodu, když nakreslí ohraničení ovládacího prvku. (Overrides [CMFCVisualManager:: OnDrawControlBorder](../../mfc/reference/cmfcvisualmanager-class.md#ondrawcontrolborder).)|
+|[CMFCVisualManagerOffice2003::OnDrawExpandingBox](#ondrawexpandingbox)|Rozhraní volá tuto metodu, když nakreslí rozšiřující box. (Overrides [CMFCVisualManager:: OnDrawExpandingBox](../../mfc/reference/cmfcvisualmanager-class.md#ondrawexpandingbox).)|
+|[CMFCVisualManagerOffice2003::OnDrawHeaderCtrlBorder](#ondrawheaderctrlborder)|Rozhraní volá tuto metodu, když nakreslí ohraničení kolem instance [třídy CMFCHeaderCtrl](../../mfc/reference/cmfcheaderctrl-class.md). (Overrides [CMFCVisualManager:: OnDrawHeaderCtrlBorder](../../mfc/reference/cmfcvisualmanager-class.md#ondrawheaderctrlborder).)|
+|[CMFCVisualManagerOffice2003::OnDrawMenuBorder](#ondrawmenuborder)|Rozhraní volá tuto metodu, když nakreslí ohraničení [třídy CMFCPopupMenu](../../mfc/reference/cmfcpopupmenu-class.md). (Overrides `CMFCVisualManagerOfficeXP::OnDrawMenuBorder`.)|
+|[CMFCVisualManagerOffice2003::OnDrawOutlookBarSplitter](#ondrawoutlookbarsplitter)|Rozhraní volá tuto metodu, když nakreslí rozdělovač pro panel aplikace Outlook. (Overrides [CMFCVisualManager:: OnDrawOutlookBarSplitter](../../mfc/reference/cmfcvisualmanager-class.md#ondrawoutlookbarsplitter).)|
+|[CMFCVisualManagerOffice2003::OnDrawOutlookPageButtonBorder](#ondrawoutlookpagebuttonborder)|Volá se rozhraním, když se nakreslí ohraničení tlačítka Outlook Page. (Overrides [CMFCVisualManager:: OnDrawOutlookPageButtonBorder](../../mfc/reference/cmfcvisualmanager-class.md#ondrawoutlookpagebuttonborder).)|
+|[CMFCVisualManagerOffice2003::OnDrawPaneBorder](#ondrawpaneborder)|Rozhraní volá tuto metodu, když nakreslí ohraničení objektu [třídy CPane](../../mfc/reference/cpane-class.md) . (Overrides `CMFCVisualManagerOfficeXP::OnDrawPaneBorder`.)|
+|[CMFCVisualManagerOffice2003::OnDrawPaneCaption](#ondrawpanecaption)|Rozhraní volá tuto metodu, když nakreslí titulek pro objekt [třídy CDockablePane](../../mfc/reference/cdockablepane-class.md) . (Overrides `CMFCVisualManagerOfficeXP::OnDrawPaneCaption`.)|
+|[CMFCVisualManagerOffice2003::OnDrawPopupWindowBorder](#ondrawpopupwindowborder)|Rozhraní volá tuto metodu, když nakreslí ohraničení automaticky otevíraného okna. (Overrides `CMFCVisualManagerOfficeXP::OnDrawPopupWindowBorder`.)|
+|[CMFCVisualManagerOffice2003::OnDrawPopupWindowButtonBorder](#ondrawpopupwindowbuttonborder)|Rozhraní volá tuto metodu, když nakreslí ohraničení tlačítka v překryvném okně. (Overrides `CMFCVisualManagerOfficeXP::OnDrawPopupWindowButtonBorder`.)|
+|[CMFCVisualManagerOffice2003::OnDrawPopupWindowCaption](#ondrawpopupwindowcaption)|Rozhraní volá tuto metodu, když nakreslí titulek automaticky otevíraného okna. (Overrides `CMFCVisualManagerOfficeXP::OnDrawPopupWindowCaption`.)|
+|[CMFCVisualManagerOffice2003::OnDrawRibbonButtonsGroup](#ondrawribbonbuttonsgroup)|Rozhraní volá tuto metodu, když nakreslí skupinu tlačítek na pásu karet. (Overrides [CMFCVisualManager:: OnDrawRibbonButtonsGroup](../../mfc/reference/cmfcvisualmanager-class.md#ondrawribbonbuttonsgroup).)|
+|[CMFCVisualManagerOffice2003::OnDrawRibbonCategoryCaption](#ondrawribboncategorycaption)|Rozhraní volá tuto metodu, když nakreslí panel titulků pro kategorii pásu karet. (Overrides [CMFCVisualManager:: OnDrawRibbonCategoryCaption](../../mfc/reference/cmfcvisualmanager-class.md#ondrawribboncategorycaption).)|
+|[CMFCVisualManagerOffice2003::OnDrawRibbonCategoryTab](#ondrawribboncategorytab)|Rozhraní volá tuto metodu, když nakreslí kartu pro kategorii pásu karet. (Overrides [CMFCVisualManager:: OnDrawRibbonCategoryTab](../../mfc/reference/cmfcvisualmanager-class.md#ondrawribboncategorytab).)|
+|[CMFCVisualManagerOffice2003::OnDrawRibbonProgressBar](#ondrawribbonprogressbar)|Rozhraní volá tuto metodu, když nakreslí [třídu CMFCRibbonProgressBar](../../mfc/reference/cmfcribbonprogressbar-class.md). (Overrides [CMFCVisualManager:: OnDrawRibbonProgressBar](../../mfc/reference/cmfcvisualmanager-class.md#ondrawribbonprogressbar).)|
+|[CMFCVisualManagerOffice2003::OnDrawRibbonQuickAccessToolBarSeparator](#ondrawribbonquickaccesstoolbarseparator)|Rozhraní volá tuto metodu, když nakreslí oddělovač na panelu nástrojů Rychlý přístup na pásu karet. (Overrides `CMFCVisualManagerOfficeXP::OnDrawRibbonQuickAccessToolBarSeparator`.)|
+|[CMFCVisualManagerOffice2003::OnDrawRibbonSliderChannel](#ondrawribbonsliderchannel)|Rozhraní volá tuto metodu, když nakreslí kanál [třídy CMFCRibbonSlider](../../mfc/reference/cmfcribbonslider-class.md). (Overrides [CMFCVisualManager:: OnDrawRibbonSliderChannel](../../mfc/reference/cmfcvisualmanager-class.md#ondrawribbonsliderchannel).)|
+|[CMFCVisualManagerOffice2003::OnDrawRibbonSliderThumb](#ondrawribbonsliderthumb)|Rozhraní volá tuto metodu, když nakreslí palec objektu [CMFCRibbonSlider](../../mfc/reference/cmfcribbonslider-class.md) . (Overrides [CMFCVisualManager:: OnDrawRibbonSliderThumb](../../mfc/reference/cmfcvisualmanager-class.md#ondrawribbonsliderthumb).)|
+|[CMFCVisualManagerOffice2003::OnDrawRibbonSliderZoomButton](#ondrawribbonsliderzoombutton)|Rozhraní volá tuto metodu při kreslení tlačítek lupy pro objekt [CMFCRibbonSlider](../../mfc/reference/cmfcribbonslider-class.md) . (Overrides [CMFCVisualManager:: OnDrawRibbonSliderZoomButton](../../mfc/reference/cmfcvisualmanager-class.md#ondrawribbonsliderzoombutton).)|
+|[CMFCVisualManagerOffice2003::OnDrawRibbonStatusBarPane](#ondrawribbonstatusbarpane)|Rozhraní volá tuto metodu, když nakreslí podokno na stavovém řádku. (Overrides `CMFCVisualManagerOfficeXP::OnDrawRibbonStatusBarPane`.)|
+|[CMFCVisualManagerOffice2003::OnDrawScrollButtons](#ondrawscrollbuttons)|Rozhraní volá tuto metodu při kreslení tlačítek posouvání. (Overrides `CMFCVisualManagerOfficeXP::OnDrawScrollButtons`.)|
+|[CMFCVisualManagerOffice2003::OnDrawSeparator](#ondrawseparator)|Rozhraní volá tuto metodu, když nakreslí oddělovač. (Overrides `CMFCVisualManagerOfficeXP::OnDrawSeparator`.)|
+|[CMFCVisualManagerOffice2003::OnDrawShowAllMenuItems](#ondrawshowallmenuitems)|Rozhraní volá tuto metodu, když nakreslí všechny položky v nabídce. (Overrides [CMFCVisualManager:: OnDrawShowAllMenuItems](../../mfc/reference/cmfcvisualmanager-class.md#ondrawshowallmenuitems).)|
+|[CMFCVisualManagerOffice2003::OnDrawStatusBarPaneBorder](#ondrawstatusbarpaneborder)|Rozhraní volá tuto metodu, když nakreslí ohraničení objektu [třídy CMFCStatusBar](../../mfc/reference/cmfcstatusbar-class.md) . (Overrides `CMFCVisualManagerOfficeXP::OnDrawStatusBarPaneBorder`.)|
+|[CMFCVisualManagerOffice2003::OnDrawStatusBarProgress](#ondrawstatusbarprogress)|Rozhraní volá tuto metodu, když nakreslí indikátor průběhu objektu [CMFCStatusBar](../../mfc/reference/cmfcstatusbar-class.md) . (Overrides [CMFCVisualManager:: OnDrawStatusBarProgress](../../mfc/reference/cmfcvisualmanager-class.md#ondrawstatusbarprogress).)|
+|[CMFCVisualManagerOffice2003::OnDrawStatusBarSizeBox](#ondrawstatusbarsizebox)|Rozhraní volá tuto metodu, když nakreslí pole velikosti pro [CMFCStatusBar](../../mfc/reference/cmfcstatusbar-class.md). (Overrides [CMFCVisualManager:: OnDrawStatusBarSizeBox](../../mfc/reference/cmfcvisualmanager-class.md#ondrawstatusbarsizebox).)|
+|[CMFCVisualManagerOffice2003::OnDrawTab](#ondrawtab)|Rozhraní volá tuto metodu, když nakreslí karty objektu [třídy CMFCBaseTabCtrl](../../mfc/reference/cmfcbasetabctrl-class.md) . (Overrides `CMFCVisualManagerOfficeXP::OnDrawTab`.)|
+|[CMFCVisualManagerOffice2003::OnDrawTabsButtonBorder](#ondrawtabsbuttonborder)|Rozhraní volá tuto metodu, když nakreslí ohraničení tlačítka na kartě. (Overrides `CMFCVisualManagerOfficeXP::OnDrawTabsButtonBorder`.)|
+|[CMFCVisualManagerOffice2003::OnDrawTask](#ondrawtask)|Rozhraní volá tuto metodu při nakreslení objektu [třídy CMFCTasksPaneTask](../../mfc/reference/cmfctaskspanetask-class.md) . (Overrides `CMFCVisualManagerOfficeXP::OnDrawTask`.)|
+|[CMFCVisualManagerOffice2003::OnDrawTasksGroupAreaBorder](#ondrawtasksgroupareaborder)|Rozhraní volá tuto metodu, když nakreslí ohraničení kolem skupiny v objektu [třídy CMFCTasksPane](../../mfc/reference/cmfctaskspane-class.md) . (Overrides `CMFCVisualManagerOfficeXP::OnDrawTasksGroupAreaBorder`.)|
+|[CMFCVisualManagerOffice2003::OnDrawTasksGroupCaption](#ondrawtasksgroupcaption)|Rozhraní volá tuto metodu při nakreslení titulku pro objekt [třídy CMFCTasksPaneTaskGroup](../../mfc/reference/cmfctaskspanetaskgroup-class.md) . (Overrides `CMFCVisualManagerOfficeXP::OnDrawTasksGroupCaption`.)|
+|[CMFCVisualManagerOffice2003::OnDrawTearOffCaption](#ondrawtearoffcaption)|Rozhraní volá tuto metodu při nakreslení titulku pro objekt [třídy CMFCPopupMenu](../../mfc/reference/cmfcpopupmenu-class.md) . (Overrides `CMFCVisualManagerOfficeXP::OnDrawTearOffCaption`.)|
+|[CMFCVisualManagerOffice2003::OnErasePopupWindowButton](#onerasepopupwindowbutton)|Rozhraní volá tuto metodu, když smaže tlačítko v místním okně. (Overrides `CMFCVisualManagerOfficeXP::OnErasePopupWindowButton`.)|
+|[CMFCVisualManagerOffice2003::OnEraseTabsArea](#onerasetabsarea)|Rozhraní volá tuto metodu při mazání oblasti karet okna s kartami. (Overrides `CMFCVisualManagerOfficeXP::OnEraseTabsArea`.)|
+|[CMFCVisualManagerOffice2003::OnEraseTabsButton](#onerasetabsbutton)|Rozhraní volá tuto metodu při mazání textu a ikony tlačítka na kartě. (Overrides `CMFCVisualManagerOfficeXP::OnEraseTabsButton`.)|
+|[CMFCVisualManagerOffice2003::OnEraseTabsFrame](#onerasetabsframe)|Rozhraní volá tuto metodu, když maže rámec na [CMFCBaseTabCtrl třídě](../../mfc/reference/cmfcbasetabctrl-class.md). (Overrides [CMFCVisualManager:: OnEraseTabsFrame](../../mfc/reference/cmfcvisualmanager-class.md#onerasetabsframe).)|
+|[CMFCVisualManagerOffice2003::OnFillAutoHideButtonBackground](#onfillautohidebuttonbackground)|Rozhraní volá tuto metodu, když vyplní pozadí tlačítka pro automatické skrývání. (Overrides [CMFCVisualManager:: OnFillAutoHideButtonBackground](../../mfc/reference/cmfcvisualmanager-class.md#onfillautohidebuttonbackground).)|
+|[CMFCVisualManagerOffice2003::OnFillBarBackground](#onfillbarbackground)|Rozhraní volá tuto metodu, když vyplní pozadí objektu [třídy CBasePane](../../mfc/reference/cbasepane-class.md) . (Overrides `CMFCVisualManagerOfficeXP::OnFillBarBackground`.)|
+|[CMFCVisualManagerOffice2003::OnFillButtonInterior](#onfillbuttoninterior)|Rozhraní volá tuto metodu, když vyplní pozadí tlačítka panelu nástrojů. (Overrides `CMFCVisualManagerOfficeXP::OnFillButtonInterior`.)|
+|[CMFCVisualManagerOffice2003::OnFillCommandsListBackground](#onfillcommandslistbackground)|Rozhraní volá tuto metodu, když vyplní pozadí tlačítka panelu nástrojů, které patří do seznamu příkazů. (Overrides `CMFCVisualManagerOfficeXP::OnFillCommandsListBackground`.)|
+|[CMFCVisualManagerOffice2003::OnFillHeaderCtrlBackground](#onfillheaderctrlbackground)|Rozhraní volá tuto metodu, když vyplní pozadí ovládacího prvku záhlaví. (Overrides [CMFCVisualManager:: OnFillHeaderCtrlBackground](../../mfc/reference/cmfcvisualmanager-class.md#onfillheaderctrlbackground).)|
+|[CMFCVisualManagerOffice2003::OnFillHighlightedArea](#onfillhighlightedarea)|Rozhraní volá tuto metodu při vyplňování zvýrazněné oblasti tlačítka panelu nástrojů. (Overrides `CMFCVisualManagerOfficeXP::OnFillHighlightedArea`.)|
+|[CMFCVisualManagerOffice2003::OnFillOutlookBarCaption](#onfilloutlookbarcaption)|Rozhraní volá tuto metodu, když vyplní pozadí záhlaví Outlooku. (Overrides [CMFCVisualManager:: OnFillOutlookBarCaption](../../mfc/reference/cmfcvisualmanager-class.md#onfilloutlookbarcaption).)|
+|[CMFCVisualManagerOffice2003::OnFillOutlookPageButton](#onfilloutlookpagebutton)|Rozhraní volá tuto metodu, když vyplní vnitřek tlačítka stránky Outlooku. (Overrides [CMFCVisualManager:: OnFillOutlookPageButton](../../mfc/reference/cmfcvisualmanager-class.md#onfilloutlookpagebutton).)|
+|[CMFCVisualManagerOffice2003::OnFillPopupWindowBackground](#onfillpopupwindowbackground)|Rozhraní volá tuto metodu, když vyplní pozadí automaticky otevíraného okna. (Overrides `CMFCVisualManagerOfficeXP::OnFillPopupWindowBackground`.)|
+|[CMFCVisualManagerOffice2003::OnFillTab](#onfilltab)|Rozhraní volá tuto metodu, když vyplní pozadí okna karet. (Overrides `CMFCVisualManagerOfficeXP::OnFillTab`.)|
+|[CMFCVisualManagerOffice2003::OnFillTasksGroupInterior](#onfilltasksgroupinterior)|Rozhraní volá tuto metodu, když vyplní vnitřek objektu [třídy CMFCTasksPaneTaskGroup](../../mfc/reference/cmfctaskspanetaskgroup-class.md) . (Overrides `CMFCVisualManagerOfficeXP::OnFillTasksGroupInterior`.)|
+|[CMFCVisualManagerOffice2003::OnFillTasksPaneBackground](#onfilltaskspanebackground)|Rozhraní volá tuto metodu, když vyplní pozadí ovládacího prvku [CMFCTasksPane](../../mfc/reference/cmfctaskspane-class.md) . (Overrides [CMFCVisualManager:: OnFillTasksPaneBackground](../../mfc/reference/cmfcvisualmanager-class.md#onfilltaskspanebackground).)|
+|[CMFCVisualManagerOffice2003::OnHighlightQuickCustomizeMenuButton](#onhighlightquickcustomizemenubutton)|Rozhraní volá tuto metodu, když nakreslí zvýrazněné tlačítko nabídky rychlé přizpůsobení. (Overrides `CMFCVisualManagerOfficeXP::OnHighlightQuickCustomizeMenuButton`.)|
+|[CMFCVisualManagerOffice2003::OnHighlightRarelyUsedMenuItems](#onhighlightrarelyusedmenuitems)|Rozhraní volá tuto metodu při nakreslení zvýrazněného příkazu nabídky. (Overrides `CMFCVisualManagerOfficeXP::OnHighlightRarelyUsedMenuItems`.)|
+|[CMFCVisualManagerOffice2003::OnUpdateSystemColors](#onupdatesystemcolors)|Rozhraní volá tuto funkci, když dojde ke změně systémových barev. (Overrides `CMFCVisualManagerOfficeXP::OnUpdateSystemColors`.)|
+|[CMFCVisualManagerOffice2003::SetDefaultWinXPColors](#setdefaultwinxpcolors)|Určuje, jestli má vizuální správce používat nativní barvy nebo barvy motivů Windows XP získané z [GetSysColor](/windows/win32/api/winuser/nf-winuser-getsyscolor).|
+|[CMFCVisualManagerOffice2003::SetStatusBarOfficeXPLook](#setstatusbarofficexplook)|Určuje, že by měl být použit globální motiv systému Windows XP.|
+|[CMFCVisualManagerOffice2003::SetUseGlobalTheme](#setuseglobaltheme)|Určuje, zda vizuální správce používá globální motiv.|
 
 ## <a name="remarks"></a>Poznámky
 
-Můžete použít `CMFCVisualManagerOffice2003` třídy změnit vzhled vaší aplikace tak, aby připomínaly Microsoft Office 2003.
+`CMFCVisualManagerOffice2003` Třídu můžete použít ke změně vzhledu vaší aplikace tak, aby vypadala systém Microsoft Office 2003.
 
 ## <a name="example"></a>Příklad
 
-Následující příklad ukazuje, jak nastavit správce vzhledu office 2003. Tento fragment kódu je součástí [Desktopu výstrah demonstrační ukázka](../../overview/visual-cpp-samples.md).
+Následující příklad ukazuje, jak nastavit sadu Visual Manager sady Office 2003. Tento fragment kódu je součástí ukázky [ukázky upozornění na plochu](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_DesktopAlertDemo#6](../../mfc/reference/codesnippet/cpp/cmfcvisualmanageroffice2003-class_1.cpp)]
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
-[Třídy CObject](../../mfc/reference/cobject-class.md)
+[CObject](../../mfc/reference/cobject-class.md)
 
 [CMFCBaseVisualManager](../../mfc/reference/cmfcbasevisualmanager-class.md)
 
@@ -225,11 +225,11 @@ Následující příklad ukazuje, jak nastavit správce vzhledu office 2003. Ten
 
 ## <a name="requirements"></a>Požadavky
 
-**Header:** afxvisualmanageroffice2003.h
+**Záhlaví:** afxvisualmanageroffice2003. h
 
-##  <a name="drawcomboborderwinxp"></a>  CMFCVisualManagerOffice2003::DrawComboBorderWinXP
+##  <a name="drawcomboborderwinxp"></a>CMFCVisualManagerOffice2003::D rawComboBorderWinXP
 
-Vykreslí ohraničení pole se seznamem používat aktuální motiv Windows XP.
+Vykreslí ohraničení pole se seznamem pomocí aktuálního motivu systému Windows XP.
 
 ```
 virtual BOOL DrawComboBorderWinXP(
@@ -243,29 +243,29 @@ virtual BOOL DrawComboBorderWinXP(
 ### <a name="parameters"></a>Parametry
 
 *pDC*<br/>
-[in] Ukazatel na kontext zařízení.
+pro Ukazatel na kontext zařízení.
 
-*Rect*<br/>
-[in] Ohraničující obdélník hranice pole se seznamem.
+*OBD*<br/>
+pro Ohraničující obdélník ohraničení pole se seznamem.
 
 *bDisabled*<br/>
-[in] Určuje, zda je zakázaný ohraničení pole se seznamem.
+pro Určuje, zda je ohraničení pole se seznamem zakázáno.
 
 *bIsDropped*<br/>
-[in] Určuje, zda se rozbalil ohraničení pole se seznamem.
+pro Určuje, zda je vynechání ohraničení pole se seznamem.
 
 *bIsHighlighted*<br/>
-[in] Určuje, zda je zvýrazněn ohraničení pole se seznamem.
+pro Určuje, zda je zvýrazněno ohraničení pole se seznamem.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vrátí hodnotu PRAVDA, pokud motiv rozhraní API je povoleno, nebo hodnotu NEPRAVDA, pokud tomu tak není.
+Vrátí hodnotu pravda, pokud je povoleno rozhraní API motivů nebo FALSE, pokud ne.
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="drawcombodropbuttonwinxp"></a>  CMFCVisualManagerOffice2003::DrawComboDropButtonWinXP
+##  <a name="drawcombodropbuttonwinxp"></a>CMFCVisualManagerOffice2003::D rawComboDropButtonWinXP
 
-Nakreslí tlačítko rozevíracího pole se seznamem používat aktuální motiv Windows XP.
+Nakreslí tlačítko rozevíracího seznamu pole se seznamem pomocí aktuálního motivu systému Windows XP.
 
 ```
 virtual BOOL DrawComboDropButtonWinXP(
@@ -279,29 +279,29 @@ virtual BOOL DrawComboDropButtonWinXP(
 ### <a name="parameters"></a>Parametry
 
 *pDC*<br/>
-[in] Ukazatel na kontext zařízení.
+pro Ukazatel na kontext zařízení.
 
-*Rect*<br/>
-[in] Ohraničující obdélník tlačítko rozevíracího pole se seznamem.
+*OBD*<br/>
+pro Ohraničující obdélník tlačítka rozevíracího seznamu pole se seznamem.
 
 *bDisabled*<br/>
-[in] Určuje, zda je zakázaný tlačítko rozevíracího pole se seznamem.
+pro Určuje, zda je vypnuto tlačítko rozevíracího seznamu pole se seznamem.
 
 *bIsDropped*<br/>
-[in] Určuje, zda se rozbalil tlačítko rozevíracího pole se seznamem.
+pro Určuje, zda se má rozevírací tlačítko pole se seznamem vyřadit.
 
 *bIsHighlighted*<br/>
-[in] Určuje, zda se zvýrazní tlačítko rozevíracího pole se seznamem.
+pro Určuje, zda je zvýrazněno tlačítko rozevíracího seznamu pole se seznamem.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vrátí hodnotu PRAVDA, pokud motiv rozhraní API je povoleno, nebo hodnotu NEPRAVDA, pokud tomu tak není.
+Vrátí hodnotu pravda, pokud je povoleno rozhraní API motivů nebo FALSE, pokud ne.
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="drawcustomizebutton"></a>  CMFCVisualManagerOffice2003::DrawCustomizeButton
+##  <a name="drawcustomizebutton"></a>CMFCVisualManagerOffice2003::D rawCustomizeButton
 
-Nakreslí tlačítko Přizpůsobit.
+Nakreslí tlačítko pro přizpůsobení.
 
 ```
 virtual void DrawCustomizeButton(
@@ -316,28 +316,28 @@ virtual void DrawCustomizeButton(
 ### <a name="parameters"></a>Parametry
 
 *pDC*<br/>
-[in] Ukazatel na kontext zobrazení.
+pro Ukazatel na kontext zobrazení.
 
-*Rect*<br/>
-[in] Ohraničující obdélník tlačítka
+*OBD*<br/>
+pro Ohraničující obdélník tlačítka
 
 *bIsHorz*<br/>
-[in] Hodnota TRUE, pokud tlačítka vodorovně, nebo hodnotu NEPRAVDA, pokud je svislý.
+pro TRUE, pokud je tlačítko vodorovné, nebo FALSE, pokud je svisle.
 
-*state*<br/>
-[in] Stav tlačítka, protože je potřeba vykreslit (pravidelných, při stisknutí nebo zvýrazněné).
+*státech*<br/>
+pro Stav tlačítka, jak se má vykreslit (normální, stisknuté nebo zvýrazněné).
 
 *bIsCustomize*<br/>
-[in] TRUE, pokud se vlastní image šipka dolů nebo šipka doleva má být vykreslena v obdélníku tlačítka nebo hodnotu NEPRAVDA, pokud tomu tak není.
+pro TRUE, pokud má být obrázek pro přizpůsobení šipky dolů nebo šipka vlevo vykreslený v rámečku tlačítka, nebo NEPRAVDA, pokud není.
 
 *bIsMoreButtons*<br/>
-[in] Hodnota TRUE, pokud horizontal nebo vertical přizpůsobení tlačítka Další image má být vykreslena v obdélníku tlačítka, nebo FALSE, pokud tomu tak není.
+pro TRUE, pokud má být obrázek s dalšími tlačítky přizpůsobený tlačítky vodorovně nebo svisle vykreslený v rámečku tlačítka, nebo FALSE, pokud není.
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="drawpushbuttonwinxp"></a>  CMFCVisualManagerOffice2003::DrawPushButtonWinXP
+##  <a name="drawpushbuttonwinxp"></a>CMFCVisualManagerOffice2003::D rawPushButtonWinXP
 
-Nakreslí tlačítka pomocí aktuální motiv Windows XP.
+Nakreslí tlačítko push pomocí aktuálního motivu systému Windows XP.
 
 ```
 virtual BOOL DrawPushButtonWinXP(
@@ -350,26 +350,26 @@ virtual BOOL DrawPushButtonWinXP(
 ### <a name="parameters"></a>Parametry
 
 *pDC*<br/>
-[in] Ukazatel na kontext zařízení.
+pro Ukazatel na kontext zařízení.
 
-*Rect*<br/>
-[in] Ohraničující obdélník příkazové tlačítko.
+*OBD*<br/>
+pro Ohraničovací obdélník tlačítka pro vložení
 
 *pButton*<br/>
-[in] Ukazatel [cmfcbutton – třída](../../mfc/reference/cmfcbutton-class.md) objektů pro kreslení.
+pro Ukazatel na objekt [třídy CMFCButton](../../mfc/reference/cmfcbutton-class.md) , který se má vykreslit.
 
 *uiState*<br/>
-[in] Ignorovat. Stav je převzata z *pButton*.
+pro Přeskočen. Stav je pořízen z *pButton*.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Hodnota TRUE, pokud je povolená rozhraní API pro motiv; v opačném případě FALSE.
+TRUE, pokud je povoleno rozhraní API motivů; v opačném případě FALSE.
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="getbasethemecolor"></a>  CMFCVisualManagerOffice2003::GetBaseThemeColor
+##  <a name="getbasethemecolor"></a>CMFCVisualManagerOffice2003::GetBaseThemeColor
 
-Získá základní motiv barvu.
+Získá barvu základního motivu.
 
 ```
 virtual COLORREF GetBaseThemeColor();
@@ -377,13 +377,13 @@ virtual COLORREF GetBaseThemeColor();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vrátí barvu motivu v základní motivu, je-li nastavena, nebo barva čelní strany pruhu barev.
+Vrátí barvu motivu základního motivu, pokud je nastavena nebo barva obličeje panelu barev.
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="gethighlightmenuitemcolor"></a>  CMFCVisualManagerOffice2003::GetHighlightMenuItemColor
+##  <a name="gethighlightmenuitemcolor"></a>CMFCVisualManagerOffice2003::GetHighlightMenuItemColor
 
-Získá barva použitá pro položky nabídky zvýrazněné.
+Získá barvu použitou pro zvýrazněnou položku nabídky.
 
 ```
 virtual COLORREF GetHighlightMenuItemColor() const;
@@ -391,13 +391,13 @@ virtual COLORREF GetHighlightMenuItemColor() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vrátí barvu použitou pro položku nabídky zvýrazněné.
+Vrátí barvu použitou pro zvýrazněnou položku nabídky.
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="getpropertygridgroupcolor"></a>  CMFCVisualManagerOffice2003::GetPropertyGridGroupColor
+##  <a name="getpropertygridgroupcolor"></a>CMFCVisualManagerOffice2003::GetPropertyGridGroupColor
 
-Rozhraní volá tuto metodu za účelem získání barvu pozadí seznamu vlastností.
+Rozhraní volá tuto metodu, aby získala barvu pozadí seznamu vlastností.
 
 ```
 virtual COLORREF GetPropertyGridGroupColor(CMFCPropertyGridCtrl* pPropList);
@@ -406,7 +406,7 @@ virtual COLORREF GetPropertyGridGroupColor(CMFCPropertyGridCtrl* pPropList);
 ### <a name="parameters"></a>Parametry
 
 *pPropList*<br/>
-[in] Ukazatel na seznam vlastností, které kreslení rozhraní framework.
+pro Ukazatel na seznam vlastností, který rozhraní kreslí.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -414,11 +414,11 @@ Vrátí barvu pozadí *pPropList*.
 
 ### <a name="remarks"></a>Poznámky
 
-Přepsání této funkce můžete přizpůsobit barvu pozadí seznamu vlastností v aplikaci.
+Přepište tuto funkci, pokud chcete přizpůsobit barvu pozadí seznamu vlastností v aplikaci.
 
 ##  <a name="getpropertygridgrouptextcolor"></a>  CMFCVisualManagerOffice2003::GetPropertyGridGroupTextColor
 
-Rozhraní volá tuto metodu za účelem načtení barvu textu, seznamu vlastností.
+Rozhraní volá tuto metodu pro načtení barvy textu seznamu vlastností.
 
 ```
 virtual COLORREF GetPropertyGridGroupTextColor(CMFCPropertyGridCtrl* pPropList);
@@ -427,19 +427,19 @@ virtual COLORREF GetPropertyGridGroupTextColor(CMFCPropertyGridCtrl* pPropList);
 ### <a name="parameters"></a>Parametry
 
 *pPropList*<br/>
-[in] Ukazatel na seznam vlastností.
+pro Ukazatel na seznam vlastností.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vrátí barvu textu v seznamu zadanou vlastnost.
+Vrátí barvu textu zadaného seznamu vlastností.
 
 ### <a name="remarks"></a>Poznámky
 
-Přepsání této funkce můžete přizpůsobit barvu textu, seznamu vlastností v aplikaci.
+Přepište tuto funkci, pokud chcete přizpůsobit barvu textu seznamu vlastností v aplikaci.
 
-##  <a name="getshowallmenuitemsheight"></a>  CMFCVisualManagerOffice2003::GetShowAllMenuItemsHeight
+##  <a name="getshowallmenuitemsheight"></a>CMFCVisualManagerOffice2003::GetShowAllMenuItemsHeight
 
-Vrátí výšku všechny položky nabídky.
+Vrátí výšku všech položek nabídky.
 
 ```
 virtual int GetShowAllMenuItemsHeight(
@@ -450,20 +450,20 @@ virtual int GetShowAllMenuItemsHeight(
 ### <a name="parameters"></a>Parametry
 
 *pDC*<br/>
-[in] Ukazatel na kontext zařízení.
+pro Ukazatel na kontext zařízení.
 
 *sizeDefault*<br/>
-[in] Výchozí velikost nabídky.
+pro Výchozí velikost nabídky
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Ve výchozím nastavení vrátí výšku veškeré nabídky imagí a okraje.
+Ve výchozím nastavení vrátí výšku všech obrázků nabídek a okrajů.
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="getsmartdockingbaseguidecolors"></a>  CMFCVisualManagerOffice2003::GetSmartDockingBaseGuideColors
+##  <a name="getsmartdockingbaseguidecolors"></a>CMFCVisualManagerOffice2003::GetSmartDockingBaseGuideColors
 
-Nastaví barvu pozadí zadané základní skupiny a barvy ohraničení.
+Nastaví barvu pozadí zadané základní skupiny a barvu ohraničení.
 
 ```
 virtual void GetSmartDockingBaseGuideColors(
@@ -474,16 +474,16 @@ virtual void GetSmartDockingBaseGuideColors(
 ### <a name="parameters"></a>Parametry
 
 *clrBaseGroupBackground*<br/>
-[in] Odkaz [COLORREF](/windows/desktop/gdi/colorref) nastavit barvu pozadí.
+pro Odkaz na [COLORREF](/windows/win32/gdi/colorref) pro nastavení barvy pozadí.
 
 *clrBaseGroupBorder*<br/>
-[in] Odkaz [COLORREF](/windows/desktop/gdi/colorref) nastavit barvu ohraničení.
+pro Odkaz na [COLORREF](/windows/win32/gdi/colorref) , který nastaví barvu ohraničení.
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="getsmartdockinghighlighttonecolor"></a>  CMFCVisualManagerOffice2003::GetSmartDockingHighlightToneColor
+##  <a name="getsmartdockinghighlighttonecolor"></a>CMFCVisualManagerOffice2003::GetSmartDockingHighlightToneColor
 
-Vrátí barvu zvýraznění tónu.
+Vrátí barvu zvýrazněného tónu.
 
 ```
 virtual COLORREF GetSmartDockingHighlightToneColor();
@@ -491,13 +491,13 @@ virtual COLORREF GetSmartDockingHighlightToneColor();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vrátí [COLORREF](/windows/desktop/gdi/colorref) obsahující barvu zvýraznění tónu.
+Vrátí [COLORREF](/windows/win32/gdi/colorref) , který obsahuje barvu zvýrazněného tónu.
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="gettabframecolors"></a>  CMFCVisualManagerOffice2003::GetTabFrameColors
+##  <a name="gettabframecolors"></a>CMFCVisualManagerOffice2003::GetTabFrameColors
 
-Rozhraní volá tuto funkci, pokud má k načtení sady barev pro kreslení okno s kartou.
+Rozhraní volá tuto funkci, když má načíst sadu barev pro vykreslení okna karet.
 
 ```
 virtual void GetTabFrameColors(
@@ -515,37 +515,37 @@ virtual void GetTabFrameColors(
 ### <a name="parameters"></a>Parametry
 
 *pTabWnd*<br/>
-[in] Ukazatel na okno s kartami, kde je rámec vykreslení na kartě.
+pro Ukazatel na okno s kartami, kde snímek nakreslí kartu.
 
 *clrDark*<br/>
-[out] Odkaz na [COLORREF](/windows/desktop/gdi/colorref) parametr, pokud tato metoda ukládá barvu pro Tmavý okraj na kartě.
+mimo Odkaz na parametr [COLORREF](/windows/win32/gdi/colorref) , kde tato metoda ukládá barvu pro tmavé ohraničení karty.
 
 *clrBlack*<br/>
-[out] Odkaz na parametr COLORREF, kde tato metoda ukládá barvu ohraničení okna Karta. Výchozí barvu ohraničení je černá.
+mimo Odkaz na parametr COLORREF, kde tato metoda ukládá barvu ohraničení okna karty. Výchozí barva ohraničení je černá.
 
 *clrHighlight*<br/>
-[out] Odkaz na parametr COLORREF, kde tato metoda ukládá barvu pro zvýraznění stav okna Karta.
+mimo Odkaz na parametr COLORREF, kde tato metoda ukládá barvu pro stav zvýraznění okna karty.
 
 *clrFace*<br/>
-[out] Odkaz na parametr COLORREF, kde tato metoda ukládá barvu pro rozpoznávání tváře okna Karta.
+mimo Odkaz na parametr COLORREF, kde tato metoda ukládá barvu pro obličej okna karty.
 
 *clrDarkShadow*<br/>
-[out] Odkaz na parametr COLORREF, kde tato metoda ukládá Barva stínu okno s kartou.
+mimo Odkaz na parametr COLORREF, kde tato metoda ukládá barvu pro stín okna karty.
 
 *clrLight*<br/>
-[out] Odkaz na parametr COLORREF, kde tato metoda ukládá barvu světla okraji okna Karta.
+mimo Odkaz na parametr COLORREF, kde tato metoda ukládá barvu pro světlou okraj okna karty.
 
 *pbrFace*<br/>
-[out] Ukazatel na odkaz pro štětce. Tato metoda ukládá štětec, který se používá k vyplnění obličej systému okno s kartou v tomto parametru.
+mimo Ukazatel na odkaz štětce. Tato metoda ukládá štětec, který používá k vyplnění obličeje okna karet v tomto parametru.
 
 *pbrBlack*<br/>
-[out] Ukazatel na odkaz pro štětce. Tato metoda ukládá štětec, který se používá k vyplnění černé okraji okna karty v tomto parametru.
+mimo Ukazatel na odkaz štětce. Tato metoda ukládá štětec, který používá, k vyplnění černého okraje okna karty v tomto parametru.
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="gettoolbarcustomizebuttonmargin"></a>  CMFCVisualManagerOffice2003::GetToolBarCustomizeButtonMargin
+##  <a name="gettoolbarcustomizebuttonmargin"></a>CMFCVisualManagerOffice2003::GetToolBarCustomizeButtonMargin
 
-Získá rozpětí pro přizpůsobení panelu nástrojů.
+Získá okraj pro tlačítko Přizpůsobit panelu nástrojů.
 
 ```
 virtual int GetToolBarCustomizeButtonMargin() const;
@@ -553,13 +553,13 @@ virtual int GetToolBarCustomizeButtonMargin() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vrátí rozpětí pro přizpůsobení panelu nástrojů.
+Vrátí okraj pro tlačítko Přizpůsobit panelu nástrojů.
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="gettoolbardisabledcolor"></a>  CMFCVisualManagerOffice2003::GetToolbarDisabledColor
+##  <a name="gettoolbardisabledcolor"></a>CMFCVisualManagerOffice2003::GetToolbarDisabledColor
 
-Získá zakázané barev panelu nástrojů.
+Získá zakázanou barvu pro panel nástrojů.
 
 ```
 virtual COLORREF GetToolbarDisabledColor() const;
@@ -567,13 +567,13 @@ virtual COLORREF GetToolbarDisabledColor() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vrátí [COLORREF](/windows/desktop/gdi/colorref) obsahující barvu zakázané.
+Vrátí [COLORREF](/windows/win32/gdi/colorref) , který obsahuje zakázanou barvu.
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="gettooltipinfo"></a>  CMFCVisualManagerOffice2003::GetToolTipInfo
+##  <a name="gettooltipinfo"></a>CMFCVisualManagerOffice2003::GetToolTipInfo
 
-Volá se rozhraním, chcete-li získat informace popisu tlačítka.
+Volá se rozhraním, aby se získaly informace popisu.
 
 ```
 virtual BOOL GetToolTipInfo(
@@ -584,20 +584,20 @@ virtual BOOL GetToolTipInfo(
 ### <a name="parameters"></a>Parametry
 
 *params*<br/>
-[out] Odkaz na [cmfctooltipinfo – třída](../../mfc/reference/cmfctooltipinfo-class.md) objekt, kde tato metoda vrátí informace popisu tlačítka.
+mimo Odkaz na objekt [třídy CMFCToolTipInfo](../../mfc/reference/cmfctooltipinfo-class.md) , kde tato metoda vrací informace popisu tlačítka.
 
 *nType*<br/>
-[in] Zadejte informace pro informace popisu tlačítka, který se má vrátit.
+pro Zadejte informace o popisku, které mají být vráceny.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-V opačném případě vrátí hodnotu TRUE, pokud se vrátí informace popisku a hodnotu FALSE.
+Vrátí hodnotu TRUE, pokud se vrátí informace o popisku, a v opačném případě FALSE.
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="isdefaultwinxpcolorsenabled"></a>  CMFCVisualManagerOffice2003::IsDefaultWinXPColorsEnabled
+##  <a name="isdefaultwinxpcolorsenabled"></a>CMFCVisualManagerOffice2003::IsDefaultWinXPColorsEnabled
 
-Označuje, zda správce vzhledu používá barvy motivu, které jsou pro nativní Windows XP.
+Určuje, zda vizuální správce používá barvy motivů, které jsou nativní pro systém Windows XP.
 
 ```
 static BOOL IsDefaultWinXPColorsEnabled();
@@ -605,15 +605,15 @@ static BOOL IsDefaultWinXPColorsEnabled();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Hodnota TRUE, pokud správce vzhledu využívá nativní barev. v opačném případě hodnota FALSE.
+TRUE, pokud vizuální správce používá nativní barvy; v opačném případě FALSE.
 
 ### <a name="remarks"></a>Poznámky
 
-Další informace o nativní barvy, naleznete v tématu [CMFCVisualManagerOffice2003::SetDefaultWinXPColors](#setdefaultwinxpcolors).
+Další informace o nativních barvách naleznete v tématu [CMFCVisualManagerOffice2003:: SetDefaultWinXPColors](#setdefaultwinxpcolors).
 
-##  <a name="isdockingtabhasborder"></a>  CMFCVisualManagerOffice2003::IsDockingTabHasBorder
+##  <a name="isdockingtabhasborder"></a>CMFCVisualManagerOffice2003::IsDockingTabHasBorder
 
-Vrátí, zda aktuální správce vzhledu vykreslí ohraničení kolem podoken, které jsou ukotvena a oddělené tabulátory.
+Vrátí, zda aktuální vizuální manažer vykresluje ohraničení kolem podoken ukotvených a s kartami.
 
 ```
 virtual BOOL IsDockingTabHasBorder();
@@ -621,13 +621,13 @@ virtual BOOL IsDockingTabHasBorder();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Hodnota TRUE, pokud správce vzhledu vykreslí ohraničení kolem podoken, které jsou ukotvena a oddělené tabulátory; FALSE v opačném případě.
+TRUE, pokud vizuální správce nakreslí ohraničení kolem ukotvených podoken a s kartami. V opačném případě NEPRAVDA.
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="ishighlightonenotetabs"></a>  CMFCVisualManagerOffice2003::IsHighlightOneNoteTabs
+##  <a name="ishighlightonenotetabs"></a>CMFCVisualManagerOffice2003::IsHighlightOneNoteTabs
 
-Určuje, zda by měl být zvýrazněn karty Onenotu.
+Určuje, zda mají být zvýrazněny karty aplikace OneNote.
 
 ```
 virtual BOOL IsHighlightOneNoteTabs() const;
@@ -639,9 +639,9 @@ Vrátí hodnotu TRUE.
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="isoffsetpressedbutton"></a>  CMFCVisualManagerOffice2003::IsOffsetPressedButton
+##  <a name="isoffsetpressedbutton"></a>CMFCVisualManagerOffice2003::IsOffsetPressedButton
 
-Volá se rozhraním při kreslení tlačítka panelu nástrojů.
+Volá se rozhraním, když se nakreslí tlačítko na panelu nástrojů.
 
 ```
 virtual BOOL IsOffsetPressedButton() const;
@@ -651,11 +651,11 @@ virtual BOOL IsOffsetPressedButton() const;
 
 ### <a name="remarks"></a>Poznámky
 
-Výchozí implementace vrací hodnotu FALSE.
+Výchozí implementace vrátí hodnotu FALSE.
 
-##  <a name="isstatusbarofficexplook"></a>  CMFCVisualManagerOffice2003::IsStatusBarOfficeXPLook
+##  <a name="isstatusbarofficexplook"></a>CMFCVisualManagerOffice2003::IsStatusBarOfficeXPLook
 
-Označuje, zda je Office XP vzhled stavového řádku.
+Označuje, zda je v sadě Office XP zobrazen stavový řádek.
 
 ```
 static BOOL __stdcall IsStatusBarOfficeXPLook();
@@ -665,11 +665,11 @@ static BOOL __stdcall IsStatusBarOfficeXPLook();
 
 ### <a name="remarks"></a>Poznámky
 
-Vrátí hodnotu PRAVDA, pokud je stavový řádek s vzhled Office XP nebo hodnotu NEPRAVDA, pokud není.
+Vrátí hodnotu pravda, pokud je stavový řádek s aplikací Office XP nebo FALSE, pokud ne.
 
-##  <a name="istoolbarroundshape"></a>  CMFCVisualManagerOffice2003::IsToolbarRoundShape
+##  <a name="istoolbarroundshape"></a>CMFCVisualManagerOffice2003::IsToolbarRoundShape
 
-Označuje, zda je zadaný nástrojů kola.
+Označuje, zda je zadaný panel nástrojů oblý.
 
 ```
 virtual BOOL IsToolbarRoundShape(CMFCToolBar* pToolBar);
@@ -678,17 +678,17 @@ virtual BOOL IsToolbarRoundShape(CMFCToolBar* pToolBar);
 ### <a name="parameters"></a>Parametry
 
 *pToolBar*<br/>
-[in] Ukazatel na panel nástrojů.
+pro Ukazatel na příslušný panel nástrojů.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vrátí hodnotu TRUE, pokud je panel nástrojů round, nebo FALSE, pokud je řádku nabídek.
+Vrátí hodnotu TRUE, pokud je panel nástrojů oblý, nebo FALSE, pokud se jedná o panel nabídek.
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="isuseglobaltheme"></a>  CMFCVisualManagerOffice2003::IsUseGlobalTheme
+##  <a name="isuseglobaltheme"></a>CMFCVisualManagerOffice2003::IsUseGlobalTheme
 
-Určuje, zda vaše aplikace používá motiv Windows XP.
+Určuje, jestli vaše aplikace používá motiv Windows XP.
 
 ```
 static BOOL IsUseGlobalTheme();
@@ -696,15 +696,15 @@ static BOOL IsUseGlobalTheme();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Hodnota TRUE, pokud správce vzhledu použije motiv Windows XP. v opačném případě hodnota FALSE.
+TRUE, pokud vizuální správce používá motiv systému Windows XP; v opačném případě FALSE.
 
 ### <a name="remarks"></a>Poznámky
 
-Pomocí této metody [CMFCVisualManagerOffice2003::SetUseGlobalTheme](#setuseglobaltheme) změnit, zda váš správce vzhledu motiv Windows XP.
+Pomocí metody [CMFCVisualManagerOffice2003:: SetUseGlobalTheme](#setuseglobaltheme) můžete změnit, zda váš vizuální správce používá motiv systému Windows XP.
 
-##  <a name="iswindowsthemingsupported"></a>  CMFCVisualManagerOffice2003::IsWindowsThemingSupported
+##  <a name="iswindowsthemingsupported"></a>CMFCVisualManagerOffice2003::IsWindowsThemingSupported
 
-Označuje, zda Windows motivů.
+Určuje, zda jsou okna podporovaná.
 
 ```
 virtual BOOL IsWindowsThemingSupported() const;
@@ -712,13 +712,13 @@ virtual BOOL IsWindowsThemingSupported() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vrátí hodnotu TRUE, pokud se podporuje Windows motivy, nebo FALSE, pokud není.
+Vrátí hodnotu TRUE, pokud je systém Windows podporován, nebo FALSE, pokud ne.
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="ondrawautohidebuttonborder"></a>  CMFCVisualManagerOffice2003::OnDrawAutoHideButtonBorder
+##  <a name="ondrawautohidebuttonborder"></a>CMFCVisualManagerOffice2003::OnDrawAutoHideButtonBorder
 
-Rozhraní volá tuto metodu při ohraničení automaticky skrýt tlačítko.
+Rozhraní volá tuto metodu, když nakreslí ohraničení tlačítka pro automatické skrývání.
 
 ```
 virtual void OnDrawAutoHideButtonBorder(
@@ -731,26 +731,26 @@ virtual void OnDrawAutoHideButtonBorder(
 ### <a name="parameters"></a>Parametry
 
 *pDC*<br/>
-[in] Ukazatel na kontext zařízení.
+pro Ukazatel na kontext zařízení.
 
 *rectBounds*<br/>
-[in] Velikost a umístění automatického skrytí tlačítka.
+pro Velikost a umístění tlačítka pro automatické skrývání.
 
 *rectBorderSize*<br/>
-[in] Velikosti ohraničení.
+pro Velikosti ohraničení.
 
 *pButton*<br/>
-[in] Ukazatel na automaticky skrýt tlačítko. Rozhraní je vykreslení ohraničení pro toto tlačítko.
+pro Ukazatel na tlačítko pro automatické skrývání. Rozhraní vykreslí ohraničení tohoto tlačítka.
 
 ### <a name="remarks"></a>Poznámky
 
-Potlačí tuto metodu v odvozené třídě, pokud chcete přizpůsobit vzhled ohraničení automaticky skrýt tlačítko. Ve výchozím nastavení tato metoda vyplní plochý ohraničení s výchozí barva stínu pro vaši aplikaci.
+Tuto metodu přepište v odvozené třídě, pokud chcete přizpůsobit vzhled ohraničení tlačítka pro automatické skrývání. Ve výchozím nastavení tato metoda vyplní plochý okraj s výchozí barvou stínu pro vaši aplikaci.
 
-*RectBorderSize* parametr neobsahuje souřadnice ohraničení. Obsahuje velikost ohraničení v `top`, `bottom`, `left`, a `right` datové členy. Hodnotu menší než nebo rovno 0 znamená bez ohraničení na této straně automaticky skrýt tlačítko.
+Parametr *rectBorderSize* neobsahuje souřadnice ohraničení. `top`Obsahuje velikost ohraničení v datových členech, `bottom`, `left`a `right` . Hodnota menší nebo rovna 0 znamená, že na této straně tlačítka pro automatické skrývání není žádné ohraničení.
 
-##  <a name="ondrawbargripper"></a>  CMFCVisualManagerOffice2003::OnDrawBarGripper
+##  <a name="ondrawbargripper"></a>CMFCVisualManagerOffice2003::OnDrawBarGripper
 
-Volá se rozhraním, když nakreslí úchytu ovládacího prvku panel.
+Volá se rozhraním, když nakreslí úchyt pro ovládací panel.
 
 ```
 virtual void OnDrawBarGripper(
@@ -763,24 +763,24 @@ virtual void OnDrawBarGripper(
 ### <a name="parameters"></a>Parametry
 
 *pDC*<br/>
-[in] Ukazatel na kontext zařízení pro panel ovládacího prvku.
+pro Ukazatel na kontext zařízení pro ovládací panel.
 
 *rectGripper*<br/>
-[in] Ohraničující obdélník panelu ovládacího prvku.
+pro Ohraničující obdélník ovládacího panelu
 
 *bHorz*<br/>
-[in] Parametr logické hodnoty, která určuje, zda je ovládací prvek panel ukotven vodorovně nebo svisle.
+pro Logický parametr, který určuje, zda je ovládací panel ukotven vodorovně nebo svisle.
 
 *pBar*<br/>
-[in] Ukazatel na ovládacím panelu. Správce vzhledu kreslení úchytu tento panel ovládacího prvku.
+pro Ukazatel na ovládací panel. Vizuální správce nakreslí úchyt tohoto ovládacího panelu.
 
 ### <a name="remarks"></a>Poznámky
 
-Výchozí implementace této metody se zobrazí standardní úchytu. Chcete-li přizpůsobit vzhled úchytu přepsáním této metody v vlastní třídy odvozené od [cmfcvisualmanageroffice2003 –](../../mfc/reference/cmfcvisualmanageroffice2003-class.md) třídy.
+Výchozí implementace této metody zobrazí standardní úchyt. Chcete-li přizpůsobit vzhled úchytu, přepište tuto metodu ve vlastní třídě odvozené od třídy [CMFCVisualManagerOffice2003](../../mfc/reference/cmfcvisualmanageroffice2003-class.md) .
 
-##  <a name="ondrawbrowsebutton"></a>  CMFCVisualManagerOffice2003::OnDrawBrowseButton
+##  <a name="ondrawbrowsebutton"></a>CMFCVisualManagerOffice2003::OnDrawBrowseButton
 
-Další podrobnosti najdete ve zdrojovém kódu v **VC\\atlmfc\\src\\mfc** složce instalace sady Visual Studio.
+Další podrobnosti najdete ve zdrojovém kódu ve složce **VC\\atlmfc\\src\\MFC** v instalaci sady Visual Studio.
 
 ```
 virtual BOOL OnDrawBrowseButton(
@@ -793,19 +793,19 @@ virtual BOOL OnDrawBrowseButton(
 
 ### <a name="parameters"></a>Parametry
 
-[in] *pDC*<br/>
-[in] *rect*<br/>
-[in] *pEdit*<br/>
-[in] *stavu*<br/>
-[in] *clrText*<br/>
+pro *primární řadič domény*<br/>
+pro *Rect*<br/>
+pro *pEdit*<br/>
+pro *stav*<br/>
+pro *clrText*<br/>
 
 ### <a name="return-value"></a>Návratová hodnota
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="ondrawbuttonborder"></a>  CMFCVisualManagerOffice2003::OnDrawButtonBorder
+##  <a name="ondrawbuttonborder"></a>CMFCVisualManagerOffice2003::OnDrawButtonBorder
 
-Rozhraní volá tuto metodu při ohraničení tlačítka panelu nástrojů.
+Rozhraní volá tuto metodu, když nakreslí ohraničení tlačítka panelu nástrojů.
 
 ```
 virtual void OnDrawButtonBorder(
@@ -818,26 +818,26 @@ virtual void OnDrawButtonBorder(
 ### <a name="parameters"></a>Parametry
 
 *pDC*<br/>
-[in] Ukazatel na kontext zařízení tlačítka panelu nástrojů.
+pro Ukazatel na kontext zařízení tlačítka panelu nástrojů.
 
 *pButton*<br/>
-[in] Ukazatel na tlačítka panelu nástrojů. Rozhraní framework ohraničení toto tlačítko.
+pro Ukazatel na tlačítko panelu nástrojů. Rozhraní kreslí ohraničení tohoto tlačítka.
 
-*Rect*<br/>
-[in] Obdélník, který určuje hranice panelu nástrojů.
+*OBD*<br/>
+pro Obdélník, který určuje hranice tlačítka panelu nástrojů.
 
-*state*<br/>
-[in] Výčtový datový typ, který určuje aktuální stav tlačítka panelu nástrojů.
+*státech*<br/>
+pro Výčtový datový typ, který určuje aktuální stav tlačítka panelu nástrojů.
 
 ### <a name="remarks"></a>Poznámky
 
-Výchozí implementace této metody zobrazí standardní ohraničení. Potlačí tuto metodu v odvozené správce vzhledu pro přizpůsobení vzhledu ohraničení tlačítka panelu nástrojů.
+Výchozí implementace této metody zobrazí standardní ohraničení. Tuto metodu přepište v odvozeném vizuálním manažeru, abyste mohli přizpůsobit vzhled ohraničení tlačítka panelu nástrojů.
 
-Možné stavy tlačítka panelu nástrojů `ButtonsIsRegular`, `ButtonsIsPressed`, nebo `ButtonsIsHighlighted`.
+Možné stavy tlačítka panelu nástrojů jsou `ButtonsIsRegular`, `ButtonsIsPressed`nebo `ButtonsIsHighlighted`.
 
-##  <a name="ondrawcaptionbarborder"></a>  CMFCVisualManagerOffice2003::OnDrawCaptionBarBorder
+##  <a name="ondrawcaptionbarborder"></a>CMFCVisualManagerOffice2003::OnDrawCaptionBarBorder
 
-Rozhraní volá tuto metodu při kreslení ohraničení [CMFCCaptionBar – třída](../../mfc/reference/cmfccaptionbar-class.md) objektu.
+Rozhraní volá tuto metodu, když nakreslí ohraničení objektu [třídy CMFCCaptionBar](../../mfc/reference/cmfccaptionbar-class.md) .
 
 ```
 virtual void OnDrawCaptionBarBorder(
@@ -851,27 +851,27 @@ virtual void OnDrawCaptionBarBorder(
 ### <a name="parameters"></a>Parametry
 
 *pDC*<br/>
-[in] Ukazatel na kontext zařízení.
+pro Ukazatel na kontext zařízení.
 
 *pBar*<br/>
-[in] Ukazatel [CMFCCaptionBar – třída](../../mfc/reference/cmfccaptionbar-class.md) objektu. Rozhraní framework kreslení toto záhlaví.
+pro Ukazatel na objekt [třídy CMFCCaptionBar](../../mfc/reference/cmfccaptionbar-class.md) . Rozhraní nakreslí tento pruh titulků.
 
-*Rect*<br/>
-[in] Obdélník, který určuje hranice záhlaví.
+*OBD*<br/>
+pro Obdélník, který určuje hranice panelu titulků.
 
 *clrBarBorder*<br/>
-[in] Barva ohraničení.
+pro Barva ohraničení
 
 *bFlatBorder*<br/>
-[in] TRUE, pokud by měl mít ohraničení bez stromové struktury, 2D vzhled, nebo FALSE, pokud tomu tak není.
+pro TRUE, pokud ohraničení má mít plochý, 2D vzhled nebo FALSE, pokud ne.
 
 ### <a name="remarks"></a>Poznámky
 
-Potlačí tuto metodu v odvozené třídě pro přizpůsobení vzhledu ohraničení záhlaví.
+Tuto metodu přepište v odvozené třídě, aby se přizpůsobil vzhled ohraničení sloupce titulků.
 
-##  <a name="ondrawcheckboxex"></a>  CMFCVisualManagerOffice2003::OnDrawCheckBoxEx
+##  <a name="ondrawcheckboxex"></a>CMFCVisualManagerOffice2003::OnDrawCheckBoxEx
 
-Volá se rozhraním při kreslení zaškrtávací políčko.
+Volá se rozhraním, když se nakreslí zaškrtávací políčko.
 
 ```
 virtual void OnDrawCheckBoxEx(
@@ -886,28 +886,28 @@ virtual void OnDrawCheckBoxEx(
 ### <a name="parameters"></a>Parametry
 
 *pDC*<br/>
-[in] Ukazatel na kontext zařízení.
+pro Ukazatel na kontext zařízení.
 
-*Rect*<br/>
-[in] Ohraničující obdélník na zaškrtávací políčko.
+*OBD*<br/>
+pro Ohraničující obdélník zaškrtávacího políčka
 
-*nState*<br/>
-[in] Stav zaškrtávacího políčka: 0, pokud není zaškrtnuto, 1, pokud je zaškrtnuto, 2, pokud je zaškrtnuto smíšené.
+*nInformace*<br/>
+pro Stav zaškrtávacího políčka: 0, pokud není zaškrtnuto, 1, pokud je zaškrtnuto, 2, pokud se kontrolovala smíšená.
 
 *bHighlighted*<br/>
-[in] TRUE, pokud na zaškrtávací políčko je zvýrazněný nebo hodnotu NEPRAVDA, pokud tomu tak není.
+pro TRUE, pokud je zaškrtávací políčko zvýrazněno nebo FALSE, pokud není.
 
 *bPressed*<br/>
-[in] TRUE, pokud zaškrtávacího políčka je při stisknutí nebo hodnotu NEPRAVDA, pokud tomu tak není.
+pro TRUE, pokud je zaškrtávací políčko stisknuto, nebo FALSE, pokud není.
 
 *bEnabled*<br/>
-[in] TRUE, pokud toto políčko není povolený, nebo hodnotu FALSE, pokud není.
+pro TRUE, pokud je zaškrtávací políčko povoleno, nebo FALSE, pokud není.
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="ondrawcomboborder"></a>  CMFCVisualManagerOffice2003::OnDrawComboBorder
+##  <a name="ondrawcomboborder"></a>CMFCVisualManagerOffice2003::OnDrawComboBorder
 
-Rozhraní volá tuto metodu po ohraničení kolem instance [cmfctoolbarcomboboxbutton – třída](../../mfc/reference/cmfctoolbarcomboboxbutton-class.md).
+Rozhraní volá tuto metodu, když nakreslí ohraničení kolem instance [třídy CMFCToolbarComboBoxButton](../../mfc/reference/cmfctoolbarcomboboxbutton-class.md).
 
 ```
 virtual void OnDrawComboBorder(
@@ -922,30 +922,30 @@ virtual void OnDrawComboBorder(
 ### <a name="parameters"></a>Parametry
 
 *pDC*<br/>
-[in] Ukazatel na kontext zařízení z tlačítka pole se seznamem.
+pro Ukazatel na kontext zařízení u tlačítka pole se seznamem.
 
-*Rect*<br/>
-[in] Obdélník, který určuje hranice tlačítko pole se seznamem.
+*OBD*<br/>
+pro Obdélník, který určuje hranice tlačítka pole se seznamem.
 
 *bDisabled*<br/>
-[in] Parametr logické hodnoty označující, zda je k dispozici tlačítko pole se seznamem.
+pro Logický parametr, který označuje, zda není tlačítko pole se seznamem k dispozici.
 
 *bIsDropped*<br/>
-[in] Parametr logické hodnoty označující, zda pole se seznamem se rozbalil.
+pro Logický parametr, který označuje, zda je pole se seznamem vynecháno.
 
 *bIsHighlighted*<br/>
-[in] Parametr logické hodnoty označující, zda se zvýrazní tlačítko pole se seznamem.
+pro Logický parametr, který označuje, zda je zvýrazněno tlačítko pole se seznamem.
 
 *pButton*<br/>
-[in] Ukazatel `CMFCToolBarComboBoxButton` objektu. Rozhraní framework kreslení toto tlačítko pole se seznamem.
+pro Ukazatel na `CMFCToolBarComboBoxButton` objekt. Rozhraní kreslí toto tlačítko pole se seznamem.
 
 ### <a name="remarks"></a>Poznámky
 
-Potlačí tuto metodu v odvozené správce vzhledu pro přizpůsobení vzhledu ohraničení pole se seznamem.
+Tuto metodu přepište v odvozeném vizuálním správci, abyste mohli přizpůsobit vzhled ohraničení pole se seznamem.
 
-##  <a name="ondrawcombodropbutton"></a>  CMFCVisualManagerOffice2003::OnDrawComboDropButton
+##  <a name="ondrawcombodropbutton"></a>CMFCVisualManagerOffice2003::OnDrawComboDropButton
 
-Rozhraní volá tuto metodu při kreslení na rozevírací tlačítko [cmfctoolbarcomboboxbutton – třída](../../mfc/reference/cmfctoolbarcomboboxbutton-class.md).
+Rozhraní volá tuto metodu, když nakreslí tlačítko drop [třídy CMFCToolbarComboBoxButton](../../mfc/reference/cmfctoolbarcomboboxbutton-class.md).
 
 ```
 virtual void OnDrawComboDropButton(
@@ -960,30 +960,30 @@ virtual void OnDrawComboDropButton(
 ### <a name="parameters"></a>Parametry
 
 *pDC*<br/>
-[in] Ukazatel na kontext zařízení.
+pro Ukazatel na kontext zařízení.
 
-*Rect*<br/>
-[in] Obdélník, který určuje hranice na rozevírací tlačítko.
+*OBD*<br/>
+pro Obdélník, který určuje hranice rozevíracího tlačítka.
 
 *bDisabled*<br/>
-[in] Parametr logické hodnoty označující, zda je na rozevírací tlačítko není k dispozici.
+pro Logický parametr, který označuje, zda není tlačítko rozevíracího seznamu k dispozici.
 
 *bIsDropped*<br/>
-[in] Parametr logické hodnoty označující, zda pole se seznamem se rozbalil.
+pro Logický parametr, který označuje, zda je pole se seznamem vynecháno.
 
 *bIsHighlighted*<br/>
-[in] Parametr logické hodnoty označující, zda se zvýrazněnou rozevírací tlačítko.
+pro Logický parametr, který označuje, zda je tlačítko rozevíracího seznamu zvýrazněno.
 
 *pButton*<br/>
-[in] Ukazatel `CMFCToolBarComboBoxButton` objektu. Rozhraní framework nakreslí rozevírací tlačítko pro toto tlačítko pole se seznamem
+pro Ukazatel na `CMFCToolBarComboBoxButton` objekt. Rozhraní kreslí tlačítko pro toto tlačítko pole se seznamem.
 
 ### <a name="remarks"></a>Poznámky
 
-Potlačí tuto metodu v odvozené správce vzhledu pro přizpůsobení vzhledu tlačítka pro rozevírací tlačítko pole se seznamem.
+Tuto metodu můžete přepsat v odvozeném vizuálním správci a přizpůsobit tak vzhled tlačítka pole se seznamem.
 
-##  <a name="ondrawcontrolborder"></a>  CMFCVisualManagerOffice2003::OnDrawControlBorder
+##  <a name="ondrawcontrolborder"></a>CMFCVisualManagerOffice2003::OnDrawControlBorder
 
-Rozhraní volá tuto metodu při ohraničení ovládacího prvku.
+Rozhraní volá tuto metodu, když nakreslí ohraničení ovládacího prvku.
 
 ```
 virtual void OnDrawControlBorder(CWnd* pWndCtrl);
@@ -992,13 +992,13 @@ virtual void OnDrawControlBorder(CWnd* pWndCtrl);
 ### <a name="parameters"></a>Parametry
 
 *pWndCtrl*<br/>
-[in] Ukazatel [třída CWnd](../../mfc/reference/cwnd-class.md) objekt představující ovládací prvek, pro které chcete kreslit ohraničení.
+pro Ukazatel na objekt [třídy CWnd](../../mfc/reference/cwnd-class.md) reprezentující ovládací prvek, pro který se má ohraničení nakreslit.
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="ondrawexpandingbox"></a>  CMFCVisualManagerOffice2003::OnDrawExpandingBox
+##  <a name="ondrawexpandingbox"></a>CMFCVisualManagerOffice2003::OnDrawExpandingBox
 
-Volá se rozhraním při kreslení zvětšující pole.
+Volá se rozhraním, když se nakreslí rozšiřující rámeček.
 
 ```
 virtual void OnDrawExpandingBox(
@@ -1011,22 +1011,22 @@ virtual void OnDrawExpandingBox(
 ### <a name="parameters"></a>Parametry
 
 *pDC*<br/>
-[in] Ukazatel na kontextu zobrazení, ve kterém se zvětšující pole je potřeba vykreslit.
+pro Ukazatel na kontext zobrazení, ve kterém se má vykreslovat rozbalení boxu.
 
-*Rect*<br/>
-[in] Ohraničující obdélník rozevíracím chcete kreslit.
+*OBD*<br/>
+pro Ohraničující obdélník rozevíracího seznamu, který se má vykreslit
 
 *bIsOpened*<br/>
-[in] TRUE, pokud je otevřený, nebo hodnotu FALSE, pokud není pole chcete kreslit.
+pro TRUE, pokud je pole, které má být vykresleno, nebo FALSE, pokud není.
 
 *colorBox*<br/>
-[in] Barva vnějšího ohraničení pole, které chcete kreslit.
+pro Barva vnějšího ohraničení pole, které má být vykresleno
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="ondrawheaderctrlborder"></a>  CMFCVisualManagerOffice2003::OnDrawHeaderCtrlBorder
+##  <a name="ondrawheaderctrlborder"></a>CMFCVisualManagerOffice2003::OnDrawHeaderCtrlBorder
 
-Rozhraní volá tuto metodu po ohraničení kolem instance [cmfcheaderctrl – třída](../../mfc/reference/cmfcheaderctrl-class.md).
+Rozhraní volá tuto metodu, když nakreslí ohraničení kolem instance [třídy CMFCHeaderCtrl](../../mfc/reference/cmfcheaderctrl-class.md).
 
 ```
 virtual void OnDrawHeaderCtrlBorder(
@@ -1040,25 +1040,25 @@ virtual void OnDrawHeaderCtrlBorder(
 ### <a name="parameters"></a>Parametry
 
 *pCtrl*<br/>
-[in] Ukazatel [cmfcheaderctrl – třída](../../mfc/reference/cmfcheaderctrl-class.md) objektu. Rozhraní framework ohraničení tohoto ovládacího prvku záhlaví.
+pro Ukazatel na objekt [třídy CMFCHeaderCtrl](../../mfc/reference/cmfcheaderctrl-class.md) . Rozhraní kreslí ohraničení tohoto ovládacího prvku záhlaví.
 
 *pDC*<br/>
-[in] Ukazatel na kontext zařízení.
+pro Ukazatel na kontext zařízení.
 
-*Rect*<br/>
-[in] Obdélník, který určuje hranice ovládacího prvku záhlaví.
+*OBD*<br/>
+pro Obdélník, který určuje hranice ovládacího prvku záhlaví.
 
-[in] *bIsPressed*<br/>
-[in] *bIsHighlighted*<br/>
-Parametr logické hodnoty označující, zda je stisknutí ovládacího prvku záhlaví.
+pro *bIsPressed*<br/>
+pro *bIsHighlighted*<br/>
+Logický parametr, který označuje, zda je stisknut ovládací prvek záhlaví.
 
 ### <a name="remarks"></a>Poznámky
 
-Potlačí tuto metodu v odvozené správce vzhledu ohraničení ovládacího prvku záhlaví přizpůsobit.
+Tuto metodu můžete přepsat v odvozeném vizuálním manažeru pro přizpůsobení ohraničení ovládacího prvku záhlaví.
 
-##  <a name="ondrawmenuborder"></a>  CMFCVisualManagerOffice2003::OnDrawMenuBorder
+##  <a name="ondrawmenuborder"></a>CMFCVisualManagerOffice2003::OnDrawMenuBorder
 
-Rozhraní volá tuto metodu při kreslení ohraničení [cmfcpopupmenu – třída](../../mfc/reference/cmfcpopupmenu-class.md).
+Rozhraní volá tuto metodu, když nakreslí ohraničení [třídy CMFCPopupMenu](../../mfc/reference/cmfcpopupmenu-class.md).
 
 ```
 virtual void OnDrawMenuBorder(
@@ -1070,21 +1070,21 @@ virtual void OnDrawMenuBorder(
 ### <a name="parameters"></a>Parametry
 
 *pDC*<br/>
-[in] Ukazatel na kontext zařízení pro [cmfcpopupmenu – třída](../../mfc/reference/cmfcpopupmenu-class.md) objektu.
+pro Ukazatel na kontext zařízení pro objekt [třídy CMFCPopupMenu](../../mfc/reference/cmfcpopupmenu-class.md) .
 
 *pMenu*<br/>
-[in] Ukazatel [cmfcpopupmenu – třída](../../mfc/reference/cmfcpopupmenu-class.md) objektu. Rozhraní framework ohraničení kolem této místní nabídka.
+pro Ukazatel na objekt [třídy CMFCPopupMenu](../../mfc/reference/cmfcpopupmenu-class.md) . Rozhraní kreslí kolem této místní nabídky ohraničení.
 
-*Rect*<br/>
-[in] Obdélník, který určuje hranice v místní nabídce.
+*OBD*<br/>
+pro Obdélník, který určuje hranice místní nabídky.
 
 ### <a name="remarks"></a>Poznámky
 
-Výchozí implementace této metody se zobrazí ohraničení standardní nabídky. Potlačí tuto metodu v odvozené správce vzhledu pro přizpůsobení vzhledu ohraničení nabídky.
+Výchozí implementace této metody zobrazí ohraničení standardní nabídky. Tuto metodu přepište v odvozeném vizuálním manažeru, abyste mohli přizpůsobit vzhled ohraničení nabídky.
 
-##  <a name="ondrawoutlookbarsplitter"></a>  CMFCVisualManagerOffice2003::OnDrawOutlookBarSplitter
+##  <a name="ondrawoutlookbarsplitter"></a>CMFCVisualManagerOffice2003::OnDrawOutlookBarSplitter
 
-Rozhraní volá tuto metodu při kreslení rozdělovač pro panel aplikace Outlook.
+Rozhraní volá tuto metodu, když nakreslí rozdělovač pro panel aplikace Outlook.
 
 ```
 virtual void OnDrawOutlookBarSplitter(
@@ -1095,18 +1095,18 @@ virtual void OnDrawOutlookBarSplitter(
 ### <a name="parameters"></a>Parametry
 
 *pDC*<br/>
-[in] Ukazatel na kontext zařízení.
+pro Ukazatel na kontext zařízení.
 
 *rectSplitter*<br/>
-[in] Obdélník, který určuje hranice příčky.
+pro Obdélník, který určuje hranice rozdělovače.
 
 ### <a name="remarks"></a>Poznámky
 
-Potlačí tuto metodu v odvozené správce vzhledu pro přizpůsobení vzhledu příčky na panel aplikace Outlook.
+Tuto metodu můžete přepsat v odvozeném vizuálním manažeru a přizpůsobit si tak vzhled rozdělovačů na panelu aplikace Outlook.
 
-##  <a name="ondrawoutlookpagebuttonborder"></a>  CMFCVisualManagerOffice2003::OnDrawOutlookPageButtonBorder
+##  <a name="ondrawoutlookpagebuttonborder"></a>CMFCVisualManagerOffice2003::OnDrawOutlookPageButtonBorder
 
-Volá se rozhraním, když ho ohraničení tlačítka stránky aplikace Outlook.
+Volá se rozhraním, když se nakreslí ohraničení tlačítka Outlook Page.
 
 ```
 virtual void OnDrawOutlookPageButtonBorder(
@@ -1119,24 +1119,24 @@ virtual void OnDrawOutlookPageButtonBorder(
 ### <a name="parameters"></a>Parametry
 
 *pDC*<br/>
-[in] Ukazatel na kontext zařízení.
+pro Ukazatel na kontext zařízení.
 
 *rectBtn*<br/>
-[in] Obdélník, který určuje hranice na tlačítku stránky aplikace Outlook.
+pro Obdélník, který určuje hranici tlačítka Outlook Page.
 
 *bIsHighlighted*<br/>
-[in] Logická hodnota, která určuje, zda se zvýrazní tlačítko.
+pro Logická hodnota, která určuje, zda je tlačítko zvýrazněno.
 
 *bIsPressed*<br/>
-[in] Logická hodnota, která určuje, zda stisknutí tlačítka.
+pro Logická hodnota, která určuje, zda je tlačítko stisknuto.
 
 ### <a name="remarks"></a>Poznámky
 
-Potlačí tuto metodu ve vlastní správce vzhledu, chcete-li změnit vzhled tlačítka stránky aplikace Outlook.
+Pokud chcete změnit vzhled tlačítka stránky Outlooku, přepište tuto metodu ve vlastním vizuálním manažeru.
 
-##  <a name="ondrawpaneborder"></a>  CMFCVisualManagerOffice2003::OnDrawPaneBorder
+##  <a name="ondrawpaneborder"></a>CMFCVisualManagerOffice2003::OnDrawPaneBorder
 
-Rozhraní volá tuto metodu při kreslení ohraničení [cpane – třída](../../mfc/reference/cpane-class.md) objektu.
+Rozhraní volá tuto metodu, když nakreslí ohraničení objektu [třídy CPane](../../mfc/reference/cpane-class.md) .
 
 ```
 virtual void OnDrawPaneBorder(
@@ -1148,21 +1148,21 @@ virtual void OnDrawPaneBorder(
 ### <a name="parameters"></a>Parametry
 
 *pDC*<br/>
-[in] Ukazatel na ovládací panel kontextu zařízení.
+pro Ukazatel na kontext zařízení na ovládacím panelu.
 
 *pBar*<br/>
-[in] Ukazatel na stavového řádku. Správce vzhledu ohraničení v tomto podokně.
+pro Ukazatel na podokno. Vizuální správce vykreslí ohraničení tohoto podokna.
 
-*Rect*<br/>
-[in] Obdélník, který určuje hranice v podokně.
+*OBD*<br/>
+pro Obdélník, který určuje hranice podokna.
 
 ### <a name="remarks"></a>Poznámky
 
-Výchozí implementace této metody zobrazí standardní ohraničení. Potlačí tuto metodu v odvozené třídě pro přizpůsobení vzhledu ohraničení.
+Výchozí implementace této metody zobrazí standardní ohraničení. Přepsáním této metody v odvozené třídě upravíte vzhled ohraničení.
 
-##  <a name="ondrawpanecaption"></a>  CMFCVisualManagerOffice2003::OnDrawPaneCaption
+##  <a name="ondrawpanecaption"></a>CMFCVisualManagerOffice2003::OnDrawPaneCaption
 
-Rozhraní volá tuto metodu při kreslení titulek [CDockablePane – třída](../../mfc/reference/cdockablepane-class.md) objektu.
+Rozhraní volá tuto metodu, když nakreslí titulek pro objekt [třídy CDockablePane](../../mfc/reference/cdockablepane-class.md) .
 
 ```
 virtual COLORREF OnDrawPaneCaption(
@@ -1176,29 +1176,29 @@ virtual COLORREF OnDrawPaneCaption(
 ### <a name="parameters"></a>Parametry
 
 *pDC*<br/>
-[in] Ukazatel na kontext zařízení.
+pro Ukazatel na kontext zařízení.
 
 *pBar*<br/>
-[in] Ukazatel [CDockablePane – třída](../../mfc/reference/cdockablepane-class.md) objektu. Rozhraní framework kreslení popisek pro toto podokno.
+pro Ukazatel na objekt [třídy CDockablePane](../../mfc/reference/cdockablepane-class.md) . Rozhraní nakreslí titulek pro toto podokno.
 
 *bActive*<br/>
-[in] Parametr logické hodnoty označující, zda ovládací panel je aktivní.
+pro Logický parametr, který označuje, zda je ovládací panel aktivní.
 
 *rectCaption*<br/>
-[in] Obdélník, který určuje hranice titulek.
+pro Obdélník, který určuje hranice titulku.
 
 *rectButtons*<br/>
-[in] Obdélník, který určuje hranice titulek tlačítka.
+pro Obdélník, který určuje hranice tlačítek titulků.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-A [COLORREF](/windows/desktop/gdi/colorref) parametr, který určuje barvu textu popisku.
+Parametr [COLORREF](/windows/win32/gdi/colorref) , který určuje barvu textu titulku.
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="ondrawpopupwindowborder"></a>  CMFCVisualManagerOffice2003::OnDrawPopupWindowBorder
+##  <a name="ondrawpopupwindowborder"></a>CMFCVisualManagerOffice2003::OnDrawPopupWindowBorder
 
-Rozhraní volá tuto metodu při ohraničení automaticky otevíraném okně.
+Rozhraní volá tuto metodu, když nakreslí ohraničení automaticky otevíraného okna.
 
 ```
 virtual void OnDrawPopupWindowBorder(
@@ -1209,16 +1209,16 @@ virtual void OnDrawPopupWindowBorder(
 ### <a name="parameters"></a>Parametry
 
 *pDC*<br/>
-[in] Ukazatel na kontext zařízení automaticky otevíraném okně.
+pro Ukazatel na kontext zařízení v místním okně.
 
-*Rect*<br/>
-[in] Ohraničující obdélník automaticky otevíraném okně.
+*OBD*<br/>
+pro Ohraničující obdélník překryvného okna.
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="ondrawpopupwindowbuttonborder"></a>  CMFCVisualManagerOffice2003::OnDrawPopupWindowButtonBorder
+##  <a name="ondrawpopupwindowbuttonborder"></a>CMFCVisualManagerOffice2003::OnDrawPopupWindowButtonBorder
 
-Rozhraní volá tuto metodu, když v automaticky otevíraném okně nakreslí ohraničení tlačítka.
+Rozhraní volá tuto metodu, když nakreslí ohraničení tlačítka v překryvném okně.
 
 ```
 virtual void OnDrawPopupWindowButtonBorder(
@@ -1230,19 +1230,19 @@ virtual void OnDrawPopupWindowButtonBorder(
 ### <a name="parameters"></a>Parametry
 
 *pDC*<br/>
-[in] Ukazatel na kontext zařízení tlačítka.
+pro Ukazatel na kontext zařízení tlačítka.
 
 *rectClient*<br/>
-[in] Ohraničující obdélník tlačítka.
+pro Ohraničující obdélník tlačítka.
 
 *pButton*<br/>
-[in] Ukazatel na tlačítko ( [cmfcdesktopalertwndbutton – třída](../../mfc/reference/cmfcdesktopalertwndbutton-class.md) objekt).
+pro Ukazatel na tlačítko (objekt [třídy CMFCDesktopAlertWndButton](../../mfc/reference/cmfcdesktopalertwndbutton-class.md) ).
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="ondrawpopupwindowcaption"></a>  CMFCVisualManagerOffice2003::OnDrawPopupWindowCaption
+##  <a name="ondrawpopupwindowcaption"></a>CMFCVisualManagerOffice2003::OnDrawPopupWindowCaption
 
-Rozhraní volá tuto metodu při kreslení titulek automaticky otevíraném okně.
+Rozhraní volá tuto metodu, když nakreslí titulek automaticky otevíraného okna.
 
 ```
 virtual COLORREF OnDrawPopupWindowCaption(
@@ -1254,25 +1254,25 @@ virtual COLORREF OnDrawPopupWindowCaption(
 ### <a name="parameters"></a>Parametry
 
 *pDC*<br/>
-[in] Ukazatel na kontext zařízení titulek.
+pro Ukazatel na kontext zařízení v titulku.
 
 *rectCaption*<br/>
-[in] Ohraničující obdélník titulek.
+pro Ohraničující obdélník popisku.
 
 *pPopupWnd*<br/>
-[in] Ukazatel na automaticky otevíraném okně, pro který má být vykreslen titulek.
+pro Ukazatel na překryvné okno, pro které se má vykreslit titulek.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Barva textu popisku.
+Barva textu popisku
 
 ### <a name="remarks"></a>Poznámky
 
-Potlačí tuto metodu v odvozené správce vzhledu pro přizpůsobení vzhledu automaticky otevíraném okně popisky.
+Tuto metodu přepište v odvozeném vizuálním manažeru a přizpůsobte si tak vzhled titulků automaticky otevíraných oken.
 
-##  <a name="ondrawribbonbuttonsgroup"></a>  CMFCVisualManagerOffice2003::OnDrawRibbonButtonsGroup
+##  <a name="ondrawribbonbuttonsgroup"></a>CMFCVisualManagerOffice2003::OnDrawRibbonButtonsGroup
 
-Rozhraní volá tuto metodu při nakreslí skupina tlačítek na pásu karet.
+Rozhraní volá tuto metodu, když nakreslí skupinu tlačítek na pásu karet.
 
 ```
 virtual COLORREF OnDrawRibbonButtonsGroup(
@@ -1284,25 +1284,25 @@ virtual COLORREF OnDrawRibbonButtonsGroup(
 ### <a name="parameters"></a>Parametry
 
 *pDC*<br/>
-[in] Ukazatel na kontext zařízení.
+pro Ukazatel na kontext zařízení.
 
 *pGroup*<br/>
-[in] Ukazatel na skupinu tlačítek na pásu karet. Rozhraní framework kreslení tato skupina tlačítek.
+pro Ukazatel na skupinu tlačítek na pásu karet. Rozhraní kreslí tuto skupinu tlačítek.
 
 *rectGroup*<br/>
-[in] Obdélník, který určuje hranice skupiny.
+pro Obdélník, který určuje hranice skupiny.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Rezervovanou hodnotu. Výchozí implementace vrací -1.
+Rezervovaná hodnota. Výchozí implementace vrátí hodnotu-1.
 
 ### <a name="remarks"></a>Poznámky
 
-Potlačí tuto metodu v odvozené správce vzhledu pro přizpůsobení vzhledu skupina tlačítek na pásu karet.
+Tuto metodu můžete přepsat v odvozeném vizuálním manažeru pro přizpůsobení vzhledu skupiny tlačítek na pásu karet.
 
-##  <a name="ondrawribboncategorycaption"></a>  CMFCVisualManagerOffice2003::OnDrawRibbonCategoryCaption
+##  <a name="ondrawribboncategorycaption"></a>CMFCVisualManagerOffice2003::OnDrawRibbonCategoryCaption
 
-Rozhraní volá tuto metodu při kreslení záhlaví pro kategorii pásu karet.
+Rozhraní volá tuto metodu, když nakreslí panel titulků pro kategorii pásu karet.
 
 ```
 virtual COLORREF OnDrawRibbonCategoryCaption(
@@ -1313,22 +1313,22 @@ virtual COLORREF OnDrawRibbonCategoryCaption(
 ### <a name="parameters"></a>Parametry
 
 *pDC*<br/>
-[in] Ukazatel na kontext zařízení kategorie pásu karet.
+pro Ukazatel na kontext zařízení kategorie pásu karet.
 
 *pContextCaption*<br/>
-[in] Ukazatel na záhlaví. Správce vzhledu nakreslí to [cmfcribboncontextcaption – třída](../../mfc/reference/cmfcribboncontextcaption-class.md).
+pro Ukazatel na panel titulků. Visual Manager vykreslí tuto [třídu CMFCRibbonContextCaption](../../mfc/reference/cmfcribboncontextcaption-class.md).
 
 ### <a name="return-value"></a>Návratová hodnota
 
-A [COLORREF](/windows/desktop/gdi/colorref) parametr, který určuje barvu textu v záhlaví.
+Parametr [COLORREF](/windows/win32/gdi/colorref) , který určuje barvu textu na panelu titulků.
 
 ### <a name="remarks"></a>Poznámky
 
-Potlačí tuto metodu v odvozené třídě pro přizpůsobení vzhledu záhlaví pro kategorii pásu karet.
+Tuto metodu přepište v odvozené třídě, aby se přizpůsobil vzhled panelu titulků pro kategorii pásu karet.
 
-##  <a name="ondrawribboncategorytab"></a>  CMFCVisualManagerOffice2003::OnDrawRibbonCategoryTab
+##  <a name="ondrawribboncategorytab"></a>CMFCVisualManagerOffice2003::OnDrawRibbonCategoryTab
 
-Rozhraní volá tuto metodu při kreslení na kartu kategorie pásu karet.
+Rozhraní volá tuto metodu, když nakreslí kartu pro kategorii pásu karet.
 
 ```
 virtual COLORREF OnDrawRibbonCategoryTab(
@@ -1340,25 +1340,25 @@ virtual COLORREF OnDrawRibbonCategoryTab(
 ### <a name="parameters"></a>Parametry
 
 *pDC*<br/>
-[in] Ukazatel na kontext zařízení.
+pro Ukazatel na kontext zařízení.
 
 *pTab*<br/>
-[in] Ukazatel na objekt kartu pásu karet. Rozhraní framework kreslení na této kartě.
+pro Ukazatel na objekt karty pásu karet. Rozhraní nakreslí tuto kartu.
 
 *bIsActive*<br/>
-[in] TRUE, pokud na kartě je aktivní, nebo hodnotu NEPRAVDA, pokud tomu tak není.
+pro TRUE, pokud je karta aktivní, nebo FALSE, pokud ne.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Barva, která se používá pro text na kartu kategorie pásu karet.
+Barva, která se používá pro text na kartě kategorie pásu karet.
 
 ### <a name="remarks"></a>Poznámky
 
-Potlačí tuto metodu v odvozené správce vzhledu pro přizpůsobení vzhledu kartu kategorie pásu karet.
+Tuto metodu můžete přepsat v odvozeném vizuálním manažeru a přizpůsobit tak vzhled karty kategorie pásu karet.
 
-##  <a name="ondrawribbonprogressbar"></a>  CMFCVisualManagerOffice2003::OnDrawRibbonProgressBar
+##  <a name="ondrawribbonprogressbar"></a>CMFCVisualManagerOffice2003::OnDrawRibbonProgressBar
 
-Rozhraní volá tuto metodu, když se vykreslí [cmfcribbonprogressbar – třída](../../mfc/reference/cmfcribbonprogressbar-class.md)objektu.
+Rozhraní volá tuto metodu při nakreslení objektu [třídy CMFCRibbonProgressBar](../../mfc/reference/cmfcribbonprogressbar-class.md).
 
 ```
 virtual void OnDrawRibbonProgressBar(
@@ -1372,27 +1372,27 @@ virtual void OnDrawRibbonProgressBar(
 ### <a name="parameters"></a>Parametry
 
 *pDC*<br/>
-[in] Ukazatel na kontext zařízení.
+pro Ukazatel na kontext zařízení.
 
 *pProgress*<br/>
-[in] Ukazatel [cmfcribbonprogressbar – třída](../../mfc/reference/cmfcribbonprogressbar-class.md) objektu. Rozhraní framework kreslení tento indikátor průběhu.
+pro Ukazatel na objekt [třídy CMFCRibbonProgressBar](../../mfc/reference/cmfcribbonprogressbar-class.md) . Rozhraní kreslí tento indikátor průběhu.
 
 *rectProgress*<br/>
-[in] Obdélník, který určuje hranice indikátor průběhu.
+pro Obdélník, který určuje hranice indikátoru průběhu.
 
 *rectChunk*<br/>
-[in] Obdélník, který určuje hranice okolí indikátor průběhu.
+pro Obdélník, který určuje hranice oblasti obklopující indikátor průběhu.
 
 *bInfiniteMode*<br/>
-[in] TRUE, pokud je panel je v nekonečné režimu, nebo FALSE, pokud není. Výchozí implementace nepoužívá tento parametr.
+pro TRUE, pokud je pruh v nekonečném režimu, nebo FALSE, pokud není. Výchozí implementace nepoužívá tento parametr.
 
 ### <a name="remarks"></a>Poznámky
 
-Potlačí tuto metodu v odvozené třídě pro přizpůsobení vzhledu indikátor průběhu
+Přepsat tuto metodu v odvozené třídě pro přizpůsobení vzhledu indikátoru průběhu
 
-##  <a name="ondrawribbonquickaccesstoolbarseparator"></a>  CMFCVisualManagerOffice2003::OnDrawRibbonQuickAccessToolBarSeparator
+##  <a name="ondrawribbonquickaccesstoolbarseparator"></a>CMFCVisualManagerOffice2003::OnDrawRibbonQuickAccessToolBarSeparator
 
-Rozhraní volá tuto metodu při nakreslí oddělovač na panelu nástrojů Rychlý přístup z pásu karet.
+Rozhraní volá tuto metodu, když nakreslí oddělovač na panelu nástrojů Rychlý přístup na pásu karet.
 
 ```
 virtual void OnDrawRibbonQuickAccessToolBarSeparator(
@@ -1404,21 +1404,21 @@ virtual void OnDrawRibbonQuickAccessToolBarSeparator(
 ### <a name="parameters"></a>Parametry
 
 *pDC*<br/>
-[in] Ukazatel na kontext zařízení.
+pro Ukazatel na kontext zařízení.
 
 *pSeparator*<br/>
-[in] Ukazatel [cmfcribbonseparator – třída](../../mfc/reference/cmfcribbonseparator-class.md) objektu. Rozhraní framework kreslení tento oddělovač pásu karet.
+pro Ukazatel na objekt [třídy CMFCRibbonSeparator](../../mfc/reference/cmfcribbonseparator-class.md) . Rozhraní nakreslí tento oddělovač pásu karet.
 
-*Rect*<br/>
-[in] Obdélník, který určuje hranice oddělovače.
+*OBD*<br/>
+pro Obdélník, který určuje hranice oddělovače.
 
 ### <a name="remarks"></a>Poznámky
 
-Potlačí tuto metodu v odvozené třídě pro přizpůsobení vzhledu oddělovače pásu karet na panelu nástrojů Rychlý přístup.
+Přepsáním této metody v odvozené třídě upravíte vzhled oddělovačů pásu karet na panelu nástrojů Rychlý přístup.
 
-##  <a name="ondrawribbonsliderchannel"></a>  CMFCVisualManagerOffice2003::OnDrawRibbonSliderChannel
+##  <a name="ondrawribbonsliderchannel"></a>CMFCVisualManagerOffice2003::OnDrawRibbonSliderChannel
 
-Rozhraní volá tuto metodu při kreslení kanál [cmfcribbonslider – třída](../../mfc/reference/cmfcribbonslider-class.md).
+Rozhraní volá tuto metodu, když nakreslí kanál [třídy CMFCRibbonSlider](../../mfc/reference/cmfcribbonslider-class.md).
 
 ```
 virtual void OnDrawRibbonSliderChannel(
@@ -1430,21 +1430,21 @@ virtual void OnDrawRibbonSliderChannel(
 ### <a name="parameters"></a>Parametry
 
 *pDC*<br/>
-[in] Ukazatel na kontext zařízení.
+pro Ukazatel na kontext zařízení.
 
 *pSlider*<br/>
-[in] Ukazatel [cmfcribbonslider – třída](../../mfc/reference/cmfcribbonslider-class.md) objektu. Rozhraní framework kreslení kanál pro tento posuvník pásu karet.
+pro Ukazatel na objekt [třídy CMFCRibbonSlider](../../mfc/reference/cmfcribbonslider-class.md) . Rozhraní nakreslí kanál pro tento posuvník pásu karet.
 
-*Rect*<br/>
-[in] Obdélník, který určuje hranice pro kanál posuvník pásu karet.
+*OBD*<br/>
+pro Obdélník, který určuje hranice pro kanál posuvníku.
 
 ### <a name="remarks"></a>Poznámky
 
-Potlačí tuto metodu v odvozené třídě pro přizpůsobení vzhledu kanál posuvník pásu karet.
+Tuto metodu přepište v odvozené třídě, aby se přizpůsobil vzhled kanálu posuvníku pásu karet.
 
-##  <a name="ondrawribbonsliderthumb"></a>  CMFCVisualManagerOffice2003::OnDrawRibbonSliderThumb
+##  <a name="ondrawribbonsliderthumb"></a>CMFCVisualManagerOffice2003::OnDrawRibbonSliderThumb
 
-Rozhraní volá tuto metodu při kreslení thumb z [cmfcribbonslider – třída](../../mfc/reference/cmfcribbonslider-class.md) objektu
+Rozhraní volá tuto metodu, když nakreslí palec objektu [třídy CMFCRibbonSlider](../../mfc/reference/cmfcribbonslider-class.md) .
 
 ```
 virtual void OnDrawRibbonSliderThumb(
@@ -1459,30 +1459,30 @@ virtual void OnDrawRibbonSliderThumb(
 ### <a name="parameters"></a>Parametry
 
 *pDC*<br/>
-[in] Ukazatel na kontext zařízení.
+pro Ukazatel na kontext zařízení.
 
 *pSlider*<br/>
-[in] Ukazatel [cmfcribbonslider – třída](../../mfc/reference/cmfcribbonslider-class.md). Rozhraní framework kreslení thumb pro tento posuvník pásu karet.
+pro Ukazatel na [třídu CMFCRibbonSlider](../../mfc/reference/cmfcribbonslider-class.md). Rozhraní kreslí jezdce pro tento posuvník pásu karet.
 
-*Rect*<br/>
-[in] Obdélník, který určuje hranice thumb pro posuvník pásu karet.
+*OBD*<br/>
+pro Rámeček, který určuje hranice jezdce posuvníku.
 
 *bIsHighlighted*<br/>
-[in] Parametr logické hodnoty označující, zda je zvýrazněn jezdce.
+pro Logický parametr, který označuje, zda je Miniatura zvýrazněna.
 
 *bIsPressed*<br/>
-[in] Parametr logické hodnoty označující, zda se stiskne jezdce.
+pro Logický parametr, který označuje, zda je podržena miniatura.
 
 *bIsDisabled*<br/>
-[in] Parametr logické hodnoty označující, zda je k dispozici jezdce.
+pro Logický parametr, který označuje, zda je k dispozici palec.
 
 ### <a name="remarks"></a>Poznámky
 
-Potlačí tuto metodu v odvozené správce vzhledu pro přizpůsobení vzhledu thumb pro ovládací prvek posuvník pásu karet.
+Tuto metodu přepište v odvozeném vizuálním manažeru, abyste mohli přizpůsobit vzhled jezdce posuvníku.
 
-##  <a name="ondrawribbonsliderzoombutton"></a>  CMFCVisualManagerOffice2003::OnDrawRibbonSliderZoomButton
+##  <a name="ondrawribbonsliderzoombutton"></a>CMFCVisualManagerOffice2003::OnDrawRibbonSliderZoomButton
 
-Rozhraní volá tuto metodu při kreslení tlačítka pro přiblížení [cmfcribbonslider – třída](../../mfc/reference/cmfcribbonslider-class.md) objektu.
+Rozhraní volá tuto metodu při kreslení tlačítek lupy pro objekt [třídy CMFCRibbonSlider](../../mfc/reference/cmfcribbonslider-class.md) .
 
 ```
 virtual void OnDrawRibbonSliderZoomButton(
@@ -1498,33 +1498,33 @@ virtual void OnDrawRibbonSliderZoomButton(
 ### <a name="parameters"></a>Parametry
 
 *pDC*<br/>
-[in] Ukazatel na kontext zařízení.
+pro Ukazatel na kontext zařízení.
 
 *pSlider*<br/>
-[in] Ukazatel [cmfcribbonslider – třída](../../mfc/reference/cmfcribbonslider-class.md) objektu. Rozhraní framework kreslení tento posuvník pásu karet.
+pro Ukazatel na objekt [třídy CMFCRibbonSlider](../../mfc/reference/cmfcribbonslider-class.md) . Rozhraní nakreslí posuvník tohoto pásu karet.
 
-*Rect*<br/>
-[in] Obdélník, který určuje hranice tlačítka lupy na posuvník pásu karet.
+*OBD*<br/>
+pro Obdélník, který určuje hranice tlačítek zvětšení na pásu karet.
 
 *bIsZoomOut*<br/>
-[in] Hodnota TRUE, pokud rozhraní vykreslovat levým tlačítkem s " **-**" pro přiblížení, nebo hodnotu NEPRAVDA, pokud rozhraní vykreslovat s pravým tlačítkem " **+**" pro zvětšení v.
+pro TRUE, pokud by měl rozhraní nakreslit levé tlačítko s " **-** " pro zmenšení nebo NEPRAVDA, pokud by měl rozhraní nakreslit pravé tlačítko se znakem " **+** " pro přiblížení.
 
 *bIsHighlighted*<br/>
-[in] Parametr logické hodnoty označující, zda se zvýrazní tlačítko.
+pro Logický parametr, který označuje, zda je tlačítko zvýrazněno.
 
 *bIsPressed*<br/>
-[in] Parametr logické hodnoty označující, zda stisknutí tlačítka.
+pro Logický parametr, který označuje, zda bylo tlačítko stisknuto.
 
 *bIsDisabled*<br/>
-[in] Parametr logické hodnoty označující, zda tlačítko je k dispozici.
+pro Logický parametr, který označuje, zda je tlačítko nedostupné.
 
 ### <a name="remarks"></a>Poznámky
 
-Ve výchozím nastavení, tlačítka lupy na posuvník pásu karet jsou kroužek s buď **+** nebo **-** přihlásit v centru. Chcete-li přizpůsobit vzhled tlačítka lupy, přepsáním této metody v odvozené správce vzhledu.
+Ve výchozím nastavení jsou tlačítka přiblížení na posuvníku na pásu karet kruhem buď **+** se znaménkem nebo **-** v centru. Chcete-li přizpůsobit vzhled tlačítek lupy, přepište tuto metodu v odvozeném vizuálním manažerovi.
 
-##  <a name="ondrawribbonstatusbarpane"></a>  CMFCVisualManagerOffice2003::OnDrawRibbonStatusBarPane
+##  <a name="ondrawribbonstatusbarpane"></a>CMFCVisualManagerOffice2003::OnDrawRibbonStatusBarPane
 
-Rozhraní volá tuto metodu při nakreslí podokno na stavovém řádku.
+Rozhraní volá tuto metodu, když nakreslí podokno na stavovém řádku.
 
 ```
 virtual COLORREF OnDrawRibbonStatusBarPane(
@@ -1536,25 +1536,25 @@ virtual COLORREF OnDrawRibbonStatusBarPane(
 ### <a name="parameters"></a>Parametry
 
 *pDC*<br/>
-[in] Ukazatel na kontext zařízení.
+pro Ukazatel na kontext zařízení.
 
 *pBar*<br/>
-[in] Ukazatel na stavový řádek, který obsahuje podokna.
+pro Ukazatel na stavový řádek, který obsahuje podokno.
 
 *pPane*<br/>
-[in] Ukazatel na panelu stavového stav. Rozhraní framework nakreslí to [cmfcribbonstatusbarpane – třída](../../mfc/reference/cmfcribbonstatusbarpane-class.md) objektu.
+pro Ukazatel na podokno stavového řádku. Rozhraní nakreslí tento objekt [třídy CMFCRibbonStatusBarPane](../../mfc/reference/cmfcribbonstatusbarpane-class.md) .
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Rezervovanou hodnotu. Výchozí implementace vrací -1.
+Rezervovaná hodnota. Výchozí implementace vrátí hodnotu-1.
 
 ### <a name="remarks"></a>Poznámky
 
-Potlačí tuto metodu v odvozené správce vzhledu pro přizpůsobení vzhledu podokně ve stavovém řádku.
+Tuto metodu přepište v odvozeném vizuálním manažeru, abyste mohli přizpůsobit vzhled podokna ve stavovém řádku.
 
-##  <a name="ondrawscrollbuttons"></a>  CMFCVisualManagerOffice2003::OnDrawScrollButtons
+##  <a name="ondrawscrollbuttons"></a>CMFCVisualManagerOffice2003::OnDrawScrollButtons
 
-Rozhraní volá tuto metodu při kreslení tlačítka pro posunutí.
+Rozhraní volá tuto metodu při kreslení tlačítek posouvání.
 
 ```
 virtual void OnDrawScrollButtons(
@@ -1568,25 +1568,25 @@ virtual void OnDrawScrollButtons(
 ### <a name="parameters"></a>Parametry
 
 *pDC*<br/>
-[in] Ukazatel na kontext zařízení.
+pro Ukazatel na kontext zařízení.
 
-*Rect*<br/>
-[in] Ohraničující obdélník tlačítka pro posunutí.
+*OBD*<br/>
+pro Ohraničující obdélník tlačítek posuvníku
 
 *nBorderSize*<br/>
-[in] Velikost ohraničení kolem tlačítka pro posunutí kreslení.
+pro Velikost ohraničení, které se má vykreslit kolem tlačítek posouvání
 
 *iImage*<br/>
-[in] Identifikátor používaného obrázku tlačítka pro posunutí kreslení.
+pro Identifikátor obrázku, který má být nakreslen tlačítky posuvníku.
 
 *bHilited*<br/>
-[in] TRUE, pokud jsou tlačítka pro posunutí zvýrazněné nebo hodnotu NEPRAVDA, pokud tomu tak není.
+pro TRUE, pokud jsou zvýrazněna tlačítka posouvání, nebo FALSE, pokud ne.
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="ondrawseparator"></a>  CMFCVisualManagerOffice2003::OnDrawSeparator
+##  <a name="ondrawseparator"></a>CMFCVisualManagerOffice2003::OnDrawSeparator
 
-Rozhraní volá tuto metodu při kreslení oddělovač.
+Rozhraní volá tuto metodu, když nakreslí oddělovač.
 
 ```
 virtual void OnDrawSeparator(
@@ -1599,24 +1599,24 @@ virtual void OnDrawSeparator(
 ### <a name="parameters"></a>Parametry
 
 *pDC*<br/>
-[in] Ukazatel na kontext zařízení pro panel ovládacího prvku.
+pro Ukazatel na kontext zařízení pro ovládací panel.
 
 *pBar*<br/>
-[in] Ukazatel na stavového řádku, který obsahuje oddělovače.
+pro Ukazatel na podokno, které obsahuje oddělovač.
 
-*Rect*<br/>
-[in] Obdélník, který určuje hranice oddělovače.
+*OBD*<br/>
+pro Obdélník, který určuje hranice oddělovače.
 
 *bIsHoriz*<br/>
-[in] TRUE, pokud je ukotven v podokně vodorovně, nebo FALSE. Pokud se v podokně je ukotven svisle.
+pro TRUE, pokud je podokno ukotvené vodorovně, nebo FALSE, pokud je podokno ukotveno svisle.
 
 ### <a name="remarks"></a>Poznámky
 
-Oddělovače se na ovládací panely používají k oddělení skupin související ikony. Výchozí implementace této metody zobrazí standardní oddělovač. Potlačí tuto metodu v odvozené správce vzhledu pro přizpůsobení vzhledu oddělovače.
+Oddělovače se používají na ovládacích panelech k oddělení skupin souvisejících ikon. Výchozí implementace této metody zobrazí standardní oddělovač. Tuto metodu přepište v odvozeném vizuálním manažeru, abyste mohli přizpůsobit vzhled oddělovače.
 
-##  <a name="ondrawshowallmenuitems"></a>  CMFCVisualManagerOffice2003::OnDrawShowAllMenuItems
+##  <a name="ondrawshowallmenuitems"></a>CMFCVisualManagerOffice2003::OnDrawShowAllMenuItems
 
-Rozhraní volá tuto metodu, když ho kreslení všech položek v nabídce
+Rozhraní volá tuto metodu, když nakreslí všechny položky v nabídce.
 
 ```
 virtual void OnDrawShowAllMenuItems(
@@ -1628,19 +1628,19 @@ virtual void OnDrawShowAllMenuItems(
 ### <a name="parameters"></a>Parametry
 
 *pDC*<br/>
-[in] Ukazatel na kontext zařízení.
+pro Ukazatel na kontext zařízení.
 
-*Rect*<br/>
-[in] Ohraničující obdélník nabídky, které chcete kreslit.
+*OBD*<br/>
+pro Ohraničující obdélník nabídky, která se má vykreslit
 
-*state*<br/>
-[in] Stav tlačítka.
+*státech*<br/>
+pro Stav tlačítka
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="ondrawstatusbarpaneborder"></a>  CMFCVisualManagerOffice2003::OnDrawStatusBarPaneBorder
+##  <a name="ondrawstatusbarpaneborder"></a>CMFCVisualManagerOffice2003::OnDrawStatusBarPaneBorder
 
-Rozhraní volá tuto metodu po ohraničení pro [CMFCStatusBar – třída](../../mfc/reference/cmfcstatusbar-class.md) objektu.
+Rozhraní volá tuto metodu, když nakreslí ohraničení objektu [třídy CMFCStatusBar](../../mfc/reference/cmfcstatusbar-class.md) .
 
 ```
 virtual void OnDrawStatusBarPaneBorder(
@@ -1654,27 +1654,27 @@ virtual void OnDrawStatusBarPaneBorder(
 ### <a name="parameters"></a>Parametry
 
 *pDC*<br/>
-[in] Ukazatel na kontext zařízení.
+pro Ukazatel na kontext zařízení.
 
 *pBar*<br/>
-[in] Ukazatel [CMFCStatusBar – třída](../../mfc/reference/cmfcstatusbar-class.md) objektu. Rozhraní framework kreslení objektu panelu tento stav.
+pro Ukazatel na objekt [třídy CMFCStatusBar](../../mfc/reference/cmfcstatusbar-class.md) . Rozhraní kreslí tento objekt stavového řádku.
 
 *rectPane*<br/>
-[in] Obdélník, který určuje hranice ve stavovém řádku.
+pro Obdélník, který určuje hranice stavového řádku.
 
 *uiID*<br/>
-[in] ID stavový řádek.
+pro ID stavového řádku
 
 *nStyle*<br/>
-[in] Styl stavového řádku.
+pro Styl stavového řádku
 
 ### <a name="remarks"></a>Poznámky
 
-Potlačí tuto metodu v odvozené správce vzhledu pro přizpůsobení vzhledu ohraničení `CMFCStatusBar` objektu.
+Přepsat tuto metodu v odvozeném vizuálním manažeru k přizpůsobení vzhledu ohraničení `CMFCStatusBar` objektu.
 
-##  <a name="ondrawstatusbarprogress"></a>  CMFCVisualManagerOffice2003::OnDrawStatusBarProgress
+##  <a name="ondrawstatusbarprogress"></a>CMFCVisualManagerOffice2003::OnDrawStatusBarProgress
 
-Rozhraní volá tuto metodu při nakreslí indikátor průběhu na [CMFCStatusBar – třída](../../mfc/reference/cmfcstatusbar-class.md) objektu
+Rozhraní volá tuto metodu, když nakreslí indikátor průběhu objektu [třídy CMFCStatusBar](../../mfc/reference/cmfcstatusbar-class.md) .
 
 ```
 virtual void OnDrawStatusBarProgress(
@@ -1692,34 +1692,34 @@ virtual void OnDrawStatusBarProgress(
 ### <a name="parameters"></a>Parametry
 
 *pDC*<br/>
-[in] Ukazatel na kontext zařízení pro stavového řádku
+pro Ukazatel na kontext zařízení pro stavový řádek
 
 *pStatusBar*<br/>
-[in] [CMFCStatusBar – třída](../../mfc/reference/cmfcstatusbar-class.md) objekt, který obsahuje indikátor průběhu.
+pro Objekt [třídy CMFCStatusBar](../../mfc/reference/cmfcstatusbar-class.md) , který obsahuje indikátor průběhu.
 
 *rectProgress*<br/>
-[in] Obdélník, který určuje hranice indikátor průběhu.
+pro Obdélník, který určuje hranice indikátoru průběhu.
 
 *nProgressTotal*<br/>
-[in] Celkový počet pro indikátor průběhu.
+pro Celkový počet indikátoru průběhu.
 
 *nProgressCurr*<br/>
-[in] Aktuální průběh indikátor průběhu.
+pro Aktuální průběh indikátoru průběhu.
 
 *clrBar*<br/>
-[in] Počáteční barva indikátor průběhu. Hodnota je buď Počáteční barva přechodu nebo celý barevný indikátor průběhu.
+pro Počáteční barva indikátoru průběhu. Hodnota je buď začátek barevného přechodu barvy, nebo úplná barva indikátoru průběhu.
 
 [in] *clrProgressBarDest*<br/>
 [in] *clrProgressText*<br/>
-[in] *bProgressText*<br/>
+pro *bProgressText*<br/>
 
 ### <a name="remarks"></a>Poznámky
 
-Potlačí tuto metodu v odvozené správce vzhledu pro přizpůsobení vzhledu indikátor průběhu na stavovém řádku.
+Přepsáním této metody v odvozeném vizuálním správci přizpůsobte vzhled indikátoru průběhu na stavovém řádku.
 
-##  <a name="ondrawstatusbarsizebox"></a>  CMFCVisualManagerOffice2003::OnDrawStatusBarSizeBox
+##  <a name="ondrawstatusbarsizebox"></a>CMFCVisualManagerOffice2003::OnDrawStatusBarSizeBox
 
-Rozhraní volá tuto metodu při kreslení velikost pole pro [CMFCStatusBar – třída](../../mfc/reference/cmfcstatusbar-class.md).
+Rozhraní volá tuto metodu, když nakreslí pole velikosti pro [třídu CMFCStatusBar](../../mfc/reference/cmfcstatusbar-class.md).
 
 ```
 virtual void OnDrawStatusBarSizeBox(
@@ -1731,21 +1731,21 @@ virtual void OnDrawStatusBarSizeBox(
 ### <a name="parameters"></a>Parametry
 
 *pDC*<br/>
-[in] Ukazatel na kontext zařízení.
+pro Ukazatel na kontext zařízení.
 
 *pStatBar*<br/>
-[in] Ukazatel na stavovém řádku. Rozhraní framework Vloží velikost pole pro tento stavový řádek.
+pro Ukazatel na stavový řádek. Rozhraní nakreslí pole velikost pro tento stavový řádek.
 
 *rectSizeBox*<br/>
-[in] Obdélník, který určuje hranice pole velikost.
+pro Obdélník, který určuje hranice pole velikost.
 
 ### <a name="remarks"></a>Poznámky
 
-Potlačí tuto metodu v odvozené vizuálního správce k přizpůsobení vzhledu velikost pole na stavovém řádku.
+Tuto metodu můžete přepsat v odvozeném vizuálním správci, abyste mohli přizpůsobit vzhled pole velikost na stavovém řádku.
 
-##  <a name="ondrawtab"></a>  CMFCVisualManagerOffice2003::OnDrawTab
+##  <a name="ondrawtab"></a>CMFCVisualManagerOffice2003::OnDrawTab
 
-Rozhraní volá tuto metodu při kreslení karty [cmfcbasetabctrl – třída](../../mfc/reference/cmfcbasetabctrl-class.md) objektu.
+Rozhraní volá tuto metodu, když nakreslí karty objektu [třídy CMFCBaseTabCtrl](../../mfc/reference/cmfcbasetabctrl-class.md) .
 
 ```
 virtual void OnDrawTab(
@@ -1759,27 +1759,27 @@ virtual void OnDrawTab(
 ### <a name="parameters"></a>Parametry
 
 *pDC*<br/>
-[in] Ukazatel na kontext zařízení.
+pro Ukazatel na kontext zařízení.
 
 *rectTab*<br/>
-[in] Obdélník, který určuje hranice ovládacího prvku karta.
+pro Obdélník, který určuje hranice ovládacího prvku karta.
 
 *iTab*<br/>
-[in] Index karty, který vykreslí rozhraní framework.
+pro Index karty, kterou rozhraní kreslí.
 
 *bIsActive*<br/>
-[in] Parametr logické hodnoty, která určuje, zda je na kartě aktivní.
+pro Logický parametr, který určuje, zda je karta aktivní.
 
 *pTabWnd*<br/>
-[in] Ukazatel [cmfcbasetabctrl – třída](../../mfc/reference/cmfcbasetabctrl-class.md) objektu. Rozhraní framework kreslení tento ovládací prvek karta.
+pro Ukazatel na objekt [třídy CMFCBaseTabCtrl](../../mfc/reference/cmfcbasetabctrl-class.md) . Rozhraní kreslí tento ovládací prvek karta.
 
 ### <a name="remarks"></a>Poznámky
 
-A `CMFCBaseTabCtrl` objektu volá tuto metodu, pokud zpracovává zprávu WM_PAINT. Potlačí tuto metodu v odvozené třídě k přizpůsobení vzhledu karty.
+`CMFCBaseTabCtrl` Objekt volá tuto metodu, když zpracovává zprávu WM_PAINT. Přepsáním této metody v odvozené třídě upravíte vzhled karet.
 
-##  <a name="ondrawtabsbuttonborder"></a>  CMFCVisualManagerOffice2003::OnDrawTabsButtonBorder
+##  <a name="ondrawtabsbuttonborder"></a>CMFCVisualManagerOffice2003::OnDrawTabsButtonBorder
 
-Rozhraní volá tuto metodu při ohraničení kartu tlačítka.
+Rozhraní volá tuto metodu, když nakreslí ohraničení tlačítka na kartě.
 
 ```
 virtual void OnDrawTabsButtonBorder(
@@ -1793,27 +1793,27 @@ virtual void OnDrawTabsButtonBorder(
 ### <a name="parameters"></a>Parametry
 
 *pDC*<br/>
-[in] Ukazatel na kontext zařízení.
+pro Ukazatel na kontext zařízení.
 
-*Rect*<br/>
-[in] Obdélník, který určuje hranice na kartě tlačítko.
+*OBD*<br/>
+pro Obdélník, který určuje hranice tlačítka na kartě.
 
 *pButton*<br/>
-[in] Ukazatel [cmfcbutton – třída](../../mfc/reference/cmfcbutton-class.md) rozhraní vykreslí ohraničení, pro které.
+pro Ukazatel na [třídu CMFCButton](../../mfc/reference/cmfcbutton-class.md) , pro kterou rozhraní nakreslí ohraničení.
 
 *uiState*<br/>
-[in] Stav tlačítka (viz [CButton::GetState](../../mfc/reference/cbutton-class.md#getstate)).
+pro Stav tlačítka (viz [CButton:: GetState](../../mfc/reference/cbutton-class.md#getstate)).
 
 *pWndTab*<br/>
-[in] Ukazatel do nadřazeného okna Karta.
+pro Ukazatel na okno nadřazené karty.
 
 ### <a name="remarks"></a>Poznámky
 
-Potlačí tuto metodu v odvozené správce vzhledu pro přizpůsobení vzhledu ohraničení panelu kartu.
+Tuto metodu můžete přepsat v odvozeném vizuálním manažeru a přizpůsobit tak vzhled ohraničení tlačítka na kartě.
 
-##  <a name="ondrawtask"></a>  CMFCVisualManagerOffice2003::OnDrawTask
+##  <a name="ondrawtask"></a>CMFCVisualManagerOffice2003::OnDrawTask
 
-Rozhraní volá tuto metodu, když se vykreslí [cmfctaskspanetask – třída](../../mfc/reference/cmfctaskspanetask-class.md) objektu.
+Rozhraní volá tuto metodu při nakreslení objektu [třídy CMFCTasksPaneTask](../../mfc/reference/cmfctaskspanetask-class.md) .
 
 ```
 virtual void OnDrawTask(
@@ -1827,27 +1827,27 @@ virtual void OnDrawTask(
 ### <a name="parameters"></a>Parametry
 
 *pDC*<br/>
-[in] Ukazatel na kontext zařízení.
+pro Ukazatel na kontext zařízení.
 
 *pTask*<br/>
-[in] Ukazatel [cmfctaskspanetask – třída](../../mfc/reference/cmfctaskspanetask-class.md) objektu. Rozhraní framework kreslení této úlohy.
+pro Ukazatel na objekt [třídy CMFCTasksPaneTask](../../mfc/reference/cmfctaskspanetask-class.md) . Rozhraní nakreslí tuto úlohu.
 
 *pIcons*<br/>
-[in] Ukazatel na seznam obrázků přidružené podokna úloh. Každý úkol obsahuje index obrázku v tomto seznamu.
+pro Ukazatel na seznam obrázků přidružený k podoknu úloh. Každý úkol obsahuje index pro obrázek v tomto seznamu.
 
 *bIsHighlighted*<br/>
-[in] Parametr logické hodnoty, která určuje, zda je zvýrazněn zobrazených úloh.
+pro Logický parametr určující, zda je zobrazený úkol zvýrazněn.
 
 *bIsSelected*<br/>
-[in] Parametr logické hodnoty, která určuje, zda je zaškrtnuto zobrazených úloh.
+pro Logický parametr, který určuje, zda je zobrazený úkol vybrán.
 
 ### <a name="remarks"></a>Poznámky
 
-Rozhraní zobrazuje úlohy na panelu úkolů jako ikonu i text. *PIcons* parametr obsahuje ikonu úkolu označena *pTask*. Potlačí tuto metodu v odvozené třídě pro přizpůsobení vzhledu úlohy na panelu úloh.
+Rozhraní zobrazuje úkoly na hlavním panelu jako ikonu i text. Parametr *pIcons* obsahuje ikonu pro úlohu označenou *pTask*. Tuto metodu přepište v odvozené třídě, abyste mohli přizpůsobit vzhled úkolů na hlavním panelu.
 
-##  <a name="ondrawtasksgroupareaborder"></a>  CMFCVisualManagerOffice2003::OnDrawTasksGroupAreaBorder
+##  <a name="ondrawtasksgroupareaborder"></a>CMFCVisualManagerOffice2003::OnDrawTasksGroupAreaBorder
 
-Rozhraní volá tuto metodu, když ho ohraničení kolem skupiny [cmfctaskspane – třída](../../mfc/reference/cmfctaskspane-class.md) objektu.
+Rozhraní volá tuto metodu, když nakreslí ohraničení kolem skupiny v objektu [třídy CMFCTasksPane](../../mfc/reference/cmfctaskspane-class.md) .
 
 ```
 virtual void OnDrawTasksGroupAreaBorder(
@@ -1860,24 +1860,24 @@ virtual void OnDrawTasksGroupAreaBorder(
 ### <a name="parameters"></a>Parametry
 
 *pDC*<br/>
-[in] Ukazatel na kontext zařízení.
+pro Ukazatel na kontext zařízení.
 
-*Rect*<br/>
-[in] Obdélník, který určuje hranice oblasti skupinu v podokně úloh.
+*OBD*<br/>
+pro Obdélník, který určuje hranice oblasti skupiny v podokně úloh.
 
 *bSpecial*<br/>
-[in] Parametr logické hodnoty, která určuje, pokud je zvýrazněn ohraničení. Hodnota TRUE označuje, že je zvýrazněn ohraničení.
+pro Logický parametr, který určuje, zda je ohraničení zvýrazněno. Hodnota TRUE značí, že ohraničení je zvýrazněno.
 
 *bNoTitle*<br/>
-[in] Parametr logické hodnoty, která určuje, zda oblasti skupiny má název. Hodnota TRUE označuje, oblasti skupina nemá název.
+pro Logický parametr, který určuje, zda má oblast skupiny název. Hodnota TRUE značí, že oblast skupiny nemá název.
 
 ### <a name="remarks"></a>Poznámky
 
-Potlačí tuto funkci v odvozené třídě přizpůsobení ohraničení oblasti skupiny v podokně úloh.
+Přepište tuto funkci v odvozené třídě a upravte ohraničení kolem oblasti skupiny v podokně úloh.
 
-##  <a name="ondrawtasksgroupcaption"></a>  CMFCVisualManagerOffice2003::OnDrawTasksGroupCaption
+##  <a name="ondrawtasksgroupcaption"></a>CMFCVisualManagerOffice2003::OnDrawTasksGroupCaption
 
-Rozhraní volá tuto metodu při kreslení s titulkem [cmfctaskspanetaskgroup – třída](../../mfc/reference/cmfctaskspanetaskgroup-class.md) objektu.
+Rozhraní volá tuto metodu při nakreslení titulku pro objekt [třídy CMFCTasksPaneTaskGroup](../../mfc/reference/cmfctaskspanetaskgroup-class.md) .
 
 ```
 virtual void OnDrawTasksGroupCaption(
@@ -1891,27 +1891,27 @@ virtual void OnDrawTasksGroupCaption(
 ### <a name="parameters"></a>Parametry
 
 *pDC*<br/>
-[in] Ukazatel na kontext zařízení.
+pro Ukazatel na kontext zařízení.
 
 *pGroup*<br/>
-[in] Ukazatel [cmfctaskspanetaskgroup – třída](../../mfc/reference/cmfctaskspanetaskgroup-class.md) objektu. Rozhraní framework kreslení titulek pro tuto skupinu.
+pro Ukazatel na objekt [třídy CMFCTasksPaneTaskGroup](../../mfc/reference/cmfctaskspanetaskgroup-class.md) . Rozhraní nakreslí titulek pro tuto skupinu.
 
 *bIsHighlighted*<br/>
-[in] Parametr logické hodnoty označující, zda je zvýrazněn skupině.
+pro Logický parametr, který označuje, zda je skupina zvýrazněna.
 
 *bIsSelected*<br/>
-[in] Parametr logické hodnoty označující, zda je aktuálně vybrána skupina.
+pro Logický parametr, který označuje, zda je skupina aktuálně vybrána.
 
 *bCanCollapse*<br/>
-[in] Parametr logické hodnoty označující, zda lze sbalit skupiny.
+pro Logický parametr, který označuje, zda lze skupinu sbalit.
 
 ### <a name="remarks"></a>Poznámky
 
-Potlačí tuto metodu v odvozené třídě titulek pro přizpůsobení `CMFCTasksPaneTaskGroup`.
+Přepsat tuto metodu v odvozené třídě pro přizpůsobení titulku pro `CMFCTasksPaneTaskGroup`.
 
 ##  <a name="ondrawtearoffcaption"></a>  CMFCVisualManagerOffice2003::OnDrawTearOffCaption
 
-Rozhraní volá tuto metodu při kreslení s titulkem [cmfcpopupmenu – třída](../../mfc/reference/cmfcpopupmenu-class.md) objektu.
+Rozhraní volá tuto metodu při nakreslení titulku pro objekt [třídy CMFCPopupMenu](../../mfc/reference/cmfcpopupmenu-class.md) .
 
 ```
 virtual void OnDrawTearOffCaption(
@@ -1923,23 +1923,23 @@ virtual void OnDrawTearOffCaption(
 ### <a name="parameters"></a>Parametry
 
 *pDC*<br/>
-[in] Ukazatel na kontext zařízení.
+pro Ukazatel na kontext zařízení.
 
-*Rect*<br/>
-[in] Obdélník, který určuje hranice titulek.
+*OBD*<br/>
+pro Obdélník, který určuje hranice titulku.
 
 *bIsActive*<br/>
-[in] Hodnota TRUE, pokud je aktivní; titulek FALSE v opačném případě.
+pro TRUE, pokud je titulek aktivní; V opačném případě NEPRAVDA.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato funkce je volána rozhraním, když [cmfcpopupmenu – třída](../../mfc/reference/cmfcpopupmenu-class.md) objekt zpracovává zprávu WM_PAINT a vydat titulek odnímatelnými nabídkami.
+Tato funkce je volána rozhraním, když objekt [třídy CMFCPopupMenu](../../mfc/reference/cmfcpopupmenu-class.md) zpracuje zprávu WM_PAINT a musí nakreslit nepřerušený titulek.
 
-Potlačí tuto metodu v odvozené třídě k přizpůsobení vzhledu popisků pro pruhy odnímatelnými nabídkami.
+Tuto metodu přepište v odvozené třídě, abyste mohli přizpůsobit vzhled titulků pro nepoužité řádky.
 
-##  <a name="onerasepopupwindowbutton"></a>  CMFCVisualManagerOffice2003::OnErasePopupWindowButton
+##  <a name="onerasepopupwindowbutton"></a>CMFCVisualManagerOffice2003::OnErasePopupWindowButton
 
-Rozhraní volá tuto metodu při vymaže tlačítko v místním okně.
+Rozhraní volá tuto metodu, když smaže tlačítko v místním okně.
 
 ```
 virtual void OnErasePopupWindowButton(
@@ -1951,19 +1951,19 @@ virtual void OnErasePopupWindowButton(
 ### <a name="parameters"></a>Parametry
 
 *pDC*<br/>
-[in] Ukazatel na kontext zařízení.
+pro Ukazatel na kontext zařízení.
 
 *rectClient*<br/>
-[in] Obdélník, který určuje klientské oblasti okna automaticky otevíraného okna.
+pro Obdélník, který určuje oblast klienta v místním okně.
 
 *pButton*<br/>
-[in] Ukazatel na tlačítko Vymazat.
+pro Ukazatel na tlačítko, které má být smazáno.
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="onerasetabsarea"></a>  CMFCVisualManagerOffice2003::OnEraseTabsArea
+##  <a name="onerasetabsarea"></a>CMFCVisualManagerOffice2003::OnEraseTabsArea
 
-Rozhraní volá tuto metodu při vymaže oblasti karet na kartě okna.
+Rozhraní volá tuto metodu při mazání oblasti karet okna s kartami.
 
 ```
 virtual void OnEraseTabsArea(
@@ -1975,23 +1975,23 @@ virtual void OnEraseTabsArea(
 ### <a name="parameters"></a>Parametry
 
 *pDC*<br/>
-[in] Ukazatel na kontext zařízení.
+pro Ukazatel na kontext zařízení.
 
-*Rect*<br/>
-[in] Obdélník, který určuje hranice od oblasti karet.
+*OBD*<br/>
+pro Obdélník, který určuje hranice oblasti karet.
 
 *pTabWnd*<br/>
-[in] Ukazatel na okno s kartou. Rozhraní framework vymaže kartu oblast okna zadanou kartu.
+pro Ukazatel na okno karty. Rozhraní vymaže oblast tabulátoru pro zadané okno karty.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato funkce je volána rozhraním, když [cmfcbasetabctrl – třída](../../mfc/reference/cmfcbasetabctrl-class.md) zpracovává zprávu WM_PAINT objekt a vymaže oblasti karet.
+Tato funkce je volána rozhraním, když objekt [třídy CMFCBaseTabCtrl](../../mfc/reference/cmfcbasetabctrl-class.md) zpracuje zprávu WM_PAINT a smaže oblast karty.
 
-Potlačí tuto metodu v odvozené správce vzhledu pro přizpůsobení vzhledu karty.
+Tuto metodu můžete přepsat v odvozeném vizuálním manažeru a přizpůsobit si tak vzhled karet.
 
-##  <a name="onerasetabsbutton"></a>  CMFCVisualManagerOffice2003::OnEraseTabsButton
+##  <a name="onerasetabsbutton"></a>CMFCVisualManagerOffice2003::OnEraseTabsButton
 
-Rozhraní volá tuto metodu při vymaže text a ikona tlačítka kartu.
+Rozhraní volá tuto metodu při mazání textu a ikony tlačítka na kartě.
 
 ```
 virtual void OnEraseTabsButton(
@@ -2004,26 +2004,26 @@ virtual void OnEraseTabsButton(
 ### <a name="parameters"></a>Parametry
 
 *pDC*<br/>
-[in] Ukazatel na kontext zařízení.
+pro Ukazatel na kontext zařízení.
 
-*Rect*<br/>
-[in] Obdélník, který určuje hranice na kartě tlačítko.
+*OBD*<br/>
+pro Obdélník, který určuje hranice tlačítka na kartě.
 
 *pButton*<br/>
-[in] Ukazatel na tlačítku kartu. Rozhraní framework vymaže text a ikona pro toto tlačítko.
+pro Ukazatel na tlačítko tabulátoru. Rozhraní vymaže text a ikonu pro toto tlačítko.
 
 *pWndTab*<br/>
-[in] Ukazatel na ovládací prvek karty, která obsahuje tlačítko kartu.
+pro Ukazatel na ovládací prvek karty, který obsahuje tlačítko tabulátoru.
 
 ### <a name="remarks"></a>Poznámky
 
-Rozhraní framework vymaže text a ikona tlačítka při [cmfcbasetabctrl – třída](../../mfc/reference/cmfcbasetabctrl-class.md) WM_ERASEBKGND zprávu zpracuje objektu
+Rozhraní vymaže text a ikonu tlačítka, když objekt [třídy CMFCBaseTabCtrl](../../mfc/reference/cmfcbasetabctrl-class.md) zpracuje zprávu WM_ERASEBKGND.
 
-Potlačí tuto metodu v odvozené správce vzhledu pro přizpůsobení vzhledu kartu tlačítka.
+Tuto metodu můžete přepsat v odvozeném vizuálním správci a přizpůsobit tak vzhled tlačítek karet.
 
-##  <a name="onerasetabsframe"></a>  CMFCVisualManagerOffice2003::OnEraseTabsFrame
+##  <a name="onerasetabsframe"></a>CMFCVisualManagerOffice2003::OnEraseTabsFrame
 
-Rozhraní volá tuto metodu, když se odstraní snímek na [cmfcbasetabctrl – třída](../../mfc/reference/cmfcbasetabctrl-class.md) objektu.
+Rozhraní volá tuto metodu, když maže rámec v objektu [třídy CMFCBaseTabCtrl](../../mfc/reference/cmfcbasetabctrl-class.md) .
 
 ```
 virtual BOOL OnEraseTabsFrame(
@@ -2035,25 +2035,25 @@ virtual BOOL OnEraseTabsFrame(
 ### <a name="parameters"></a>Parametry
 
 *pDC*<br/>
-[in] Ukazatel na kontext zařízení.
+pro Ukazatel na kontext zařízení.
 
-*Rect*<br/>
-[in] Obdélník, který určuje hranice okno s kartou.
+*OBD*<br/>
+pro Obdélník, který určuje hranice okna karty.
 
 *pTabWnd*<br/>
-[in] Ukazatel na okno s kartou. Rozhraní framework vymaže blok pro tuto [cmfcbasetabctrl – třída](../../mfc/reference/cmfcbasetabctrl-class.md).
+pro Ukazatel na okno karty. Rozhraní vymaže rámec pro tuto [třídu CMFCBaseTabCtrl](../../mfc/reference/cmfcbasetabctrl-class.md).
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Hodnota TRUE, pokud je metoda úspěšná, nebo hodnotu NEPRAVDA, pokud tomu tak není.
+TRUE, pokud je metoda úspěšná, nebo FALSE, pokud ne.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato metoda vyplní oblast indikován *rect* barvou pozadí na aktivní kartě. Je voláno, když `CMFCBaseTabCtrl` zpracovává zprávu WM_PAINT objekt a vymaže kartu rámce.
+Tato metoda vyplní plochu určenou v *Rect* barvou pozadí aktivní karty. Je volána, když `CMFCBaseTabCtrl` objekt zpracovává zprávu WM_PAINT a vymaže rámec karty.
 
-##  <a name="onfillautohidebuttonbackground"></a>  CMFCVisualManagerOffice2003::OnFillAutoHideButtonBackground
+##  <a name="onfillautohidebuttonbackground"></a>CMFCVisualManagerOffice2003::OnFillAutoHideButtonBackground
 
-Rozhraní volá tuto metodu při vyplní na pozadí automaticky skrýt tlačítko.
+Rozhraní volá tuto metodu, když vyplní pozadí tlačítka pro automatické skrývání.
 
 ```
 virtual void OnFillAutoHideButtonBackground(
@@ -2065,21 +2065,21 @@ virtual void OnFillAutoHideButtonBackground(
 ### <a name="parameters"></a>Parametry
 
 *pDC*<br/>
-[in] Ukazatel na kontext zařízení.
+pro Ukazatel na kontext zařízení.
 
-*Rect*<br/>
-[in] Obdélník, který určuje hranice automaticky skrýt tlačítko.
+*OBD*<br/>
+pro Obdélník, který určuje hranice tlačítka pro automatické skrývání.
 
 *pButton*<br/>
-[in] Ukazatel [cmfcautohidebutton – třída](../../mfc/reference/cmfcautohidebutton-class.md) objektu. Rozhraní framework výplně pozadí tohoto automatického skrytí tlačítka.
+pro Ukazatel na objekt [třídy CMFCAutoHideButton](../../mfc/reference/cmfcautohidebutton-class.md) . Rozhraní vyplní pozadí tohoto tlačítka pro automatické skrývání.
 
 ### <a name="remarks"></a>Poznámky
 
-Potlačí tuto metodu v odvozené správce vzhledu pro přizpůsobení vzhledu automaticky skrýt tlačítko.
+Přepsáním této metody v odvozeném vizuálním manažeru můžete přizpůsobit vzhled tlačítka pro automatické skrývání.
 
-##  <a name="onfillbarbackground"></a>  CMFCVisualManagerOffice2003::OnFillBarBackground
+##  <a name="onfillbarbackground"></a>CMFCVisualManagerOffice2003::OnFillBarBackground
 
-Rozhraní volá tuto metodu při vyplní na pozadí [cbasepane – třída](../../mfc/reference/cbasepane-class.md) objektu.
+Rozhraní volá tuto metodu, když vyplní pozadí objektu [třídy CBasePane](../../mfc/reference/cbasepane-class.md) .
 
 ```
 virtual void OnFillBarBackground(
@@ -2093,29 +2093,29 @@ virtual void OnFillBarBackground(
 ### <a name="parameters"></a>Parametry
 
 *pDC*<br/>
-[in] Ukazatel na kontext zařízení pro panel ovládacího prvku.
+pro Ukazatel na kontext zařízení pro ovládací panel.
 
 *pBar*<br/>
-[in] Ukazatel [cbasepane – třída](../../mfc/reference/cbasepane-class.md) objektu. Rozhraní framework výplně pozadí v tomto podokně.
+pro Ukazatel na objekt [třídy CBasePane](../../mfc/reference/cbasepane-class.md) . Architektura vyplní pozadí tohoto podokna.
 
 *rectClient*<br/>
-[in] Obdélník, který určuje hranice v podokně.
+pro Obdélník, který určuje hranice podokna.
 
 *rectClip*<br/>
-[in] Obdélník, který určuje výstřižek oblasti podokna.
+pro Obdélník, který určuje oblast oříznutí podokna.
 
 *bNCArea*<br/>
-[in] Rezervovanou hodnotu.
+pro Rezervovaná hodnota.
 
 ### <a name="remarks"></a>Poznámky
 
-Výchozí implementace této metody výplně pozadí panelu 3d barvou pozadí z globální proměnné `afxGlobalData`.
+Výchozí implementace této metody vyplní pozadí pruhu pomocí 3D barvy pozadí z globální proměnné `afxGlobalData`.
 
-Potlačí tuto metodu v odvozené vizuálního správce k přizpůsobení pozadí na stavového řádku.
+Tuto metodu můžete přepsat v odvozeném vizuálním manažeru k přizpůsobení pozadí podokna.
 
-##  <a name="onfillbuttoninterior"></a>  CMFCVisualManagerOffice2003::OnFillButtonInterior
+##  <a name="onfillbuttoninterior"></a>CMFCVisualManagerOffice2003::OnFillButtonInterior
 
-Rozhraní volá tuto metodu při výplně pozadí tlačítka panelu nástrojů.
+Rozhraní volá tuto metodu, když vyplní pozadí tlačítka panelu nástrojů.
 
 ```
 virtual void OnFillButtonInterior(
@@ -2128,24 +2128,24 @@ virtual void OnFillButtonInterior(
 ### <a name="parameters"></a>Parametry
 
 *pDC*<br/>
-[in] Ukazatel na kontext zařízení tlačítka panelu nástrojů.
+pro Ukazatel na kontext zařízení tlačítka panelu nástrojů.
 
 *pButton*<br/>
-[in] Ukazatel na tlačítko, pro kterou je rozhraní vyplnění na pozadí.
+pro Ukazatel na tlačítko, pro které rozhraní naplňuje pozadí.
 
-*Rect*<br/>
-[in] Obdélník, který určuje hranice panelu nástrojů.
+*OBD*<br/>
+pro Obdélník, který určuje hranice tlačítka panelu nástrojů.
 
-*state*<br/>
-[in] Stav panelu nástrojů (jsou možné stavy tlačítka panelu nástrojů `ButtonsIsRegular`, `ButtonsIsPressed`, nebo `ButtonsIsHighlighted`).
+*státech*<br/>
+pro Stav tlačítka panelu nástrojů (možné stavy tlačítka panelu nástrojů jsou `ButtonsIsRegular`, `ButtonsIsPressed`nebo `ButtonsIsHighlighted`).
 
 ### <a name="remarks"></a>Poznámky
 
-Výchozí implementace této metody pomocí výchozí barvy výplně pozadí. Potlačí tuto metodu v odvozené vizuálního správce k přizpůsobení pozadí tlačítka panelu nástrojů.
+Výchozí implementace této metody používá výchozí barvu k vyplnění pozadí. Tuto metodu můžete přepsat v odvozeném vizuálním manažeru a přizpůsobit tak pozadí tlačítka panelu nástrojů.
 
-##  <a name="onfillcommandslistbackground"></a>  CMFCVisualManagerOffice2003::OnFillCommandsListBackground
+##  <a name="onfillcommandslistbackground"></a>CMFCVisualManagerOffice2003::OnFillCommandsListBackground
 
-Rozhraní volá tuto metodu při výplně pozadí tlačítka panelu nástrojů, který patří do seznamu příkazů. Tento seznam příkazů je součástí dialogovém okně přizpůsobení.
+Rozhraní volá tuto metodu, když vyplní pozadí tlačítka panelu nástrojů, které patří do seznamu příkazů. Seznam příkazů je součástí dialogu přizpůsobení.
 
 ```
 virtual COLORREF OnFillCommandsListBackground(
@@ -2157,25 +2157,25 @@ virtual COLORREF OnFillCommandsListBackground(
 ### <a name="parameters"></a>Parametry
 
 *pDC*<br/>
-[in] Ukazatel na kontext zařízení.
+pro Ukazatel na kontext zařízení.
 
-*Rect*<br/>
-[in] Obdélník, který určuje hranice tlačítka.
+*OBD*<br/>
+pro Obdélník, který určuje hranice tlačítka.
 
 *bIsSelected*<br/>
-[in] Parametr logické hodnoty označující, zda je zaškrtnuto tlačítko.
+pro Logický parametr, který označuje, zda je tlačítko vybráno.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Barva textu pro tlačítka panelu nástrojů.
+Barva textu tlačítka panelu nástrojů
 
 ### <a name="remarks"></a>Poznámky
 
-Další informace o přizpůsobení seznamu najdete v tématu [CMFCToolBarButton::OnDrawOnCustomizeList](../../mfc/reference/cmfctoolbarbutton-class.md#ondrawoncustomizelist). Výchozí implementace této metody výplně pozadí podle barevné schéma aktuálně vybraného vzhledu.
+Další informace o seznamu přizpůsobení naleznete v tématu [CMFCToolBarButton:: OnDrawOnCustomizeList](../../mfc/reference/cmfctoolbarbutton-class.md#ondrawoncustomizelist). Výchozí implementace této metody vyplní pozadí na základě barevného schématu aktuálně vybraného vzhledu.
 
-##  <a name="onfillheaderctrlbackground"></a>  CMFCVisualManagerOffice2003::OnFillHeaderCtrlBackground
+##  <a name="onfillheaderctrlbackground"></a>CMFCVisualManagerOffice2003::OnFillHeaderCtrlBackground
 
-Rozhraní volá tuto metodu při výplně pozadí záhlaví ovládacího prvku.
+Rozhraní volá tuto metodu, když vyplní pozadí ovládacího prvku záhlaví.
 
 ```
 virtual void OnFillHeaderCtrlBackground(
@@ -2187,21 +2187,21 @@ virtual void OnFillHeaderCtrlBackground(
 ### <a name="parameters"></a>Parametry
 
 *pCtrl*<br/>
-[in] Ukazatel [cmfcheaderctrl – třída](../../mfc/reference/cmfcheaderctrl-class.md) objektu. Rozhraní framework výplně pozadí pro tento ovládací prvek záhlaví.
+pro Ukazatel na objekt [třídy CMFCHeaderCtrl](../../mfc/reference/cmfcheaderctrl-class.md) . Rozhraní vyplní pozadí pro tento ovládací prvek záhlaví.
 
 *pDC*<br/>
-[in] Ukazatel na kontext zařízení.
+pro Ukazatel na kontext zařízení.
 
-*Rect*<br/>
-[in] Obdélník, který určuje hranice ovládacího prvku záhlaví.
+*OBD*<br/>
+pro Obdélník, který určuje hranice ovládacího prvku záhlaví.
 
 ### <a name="remarks"></a>Poznámky
 
-Potlačí tuto metodu v odvozené vizuálního správce k přizpůsobení vzhledu ovládacího prvku záhlaví.
+Tuto metodu můžete přepsat v odvozeném vizuálním manažeru pro přizpůsobení vzhledu ovládacího prvku záhlaví.
 
 ##  <a name="onfillhighlightedarea"></a>  CMFCVisualManagerOffice2003::OnFillHighlightedArea
 
-Rozhraní volá tuto metodu při vyplní zvýrazněné oblasti tlačítka panelu nástrojů.
+Rozhraní volá tuto metodu při vyplňování zvýrazněné oblasti tlačítka panelu nástrojů.
 
 ```
 virtual void OnFillHighlightedArea(
@@ -2214,22 +2214,22 @@ virtual void OnFillHighlightedArea(
 ### <a name="parameters"></a>Parametry
 
 *pDC*<br/>
-[in] Ukazatel na kontext zařízení.
+pro Ukazatel na kontext zařízení.
 
-*Rect*<br/>
-[in] Ohraničující obdélník zvýrazněné oblasti tak, aby vyplnil.
+*OBD*<br/>
+pro Ohraničující obdélník zvýrazněné oblasti, která se má vyplnit
 
 *pBrush*<br/>
-[in] Štětce a jeho použití v vyplňující oblast, která zvýrazněné.
+pro Štětec, který se má použít při naplňování zvýrazněné oblasti
 
 *pButton*<br/>
-[in] Ukazatel [cmfctoolbarbutton – třída](../../mfc/reference/cmfctoolbarbutton-class.md) objektu, pro které chcete vyplnit zvýrazněné oblasti.
+pro Ukazatel na objekt [třídy CMFCToolBarButton](../../mfc/reference/cmfctoolbarbutton-class.md) , pro který chcete vyplnit zvýrazněnou oblast.
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="onfilloutlookbarcaption"></a>  CMFCVisualManagerOffice2003::OnFillOutlookBarCaption
+##  <a name="onfilloutlookbarcaption"></a>CMFCVisualManagerOffice2003::OnFillOutlookBarCaption
 
-Rozhraní volá tuto metodu při výplně pozadí titulku panel aplikace Outlook.
+Rozhraní volá tuto metodu, když vyplní pozadí záhlaví Outlooku.
 
 ```
 virtual void OnFillOutlookBarCaption(
@@ -2241,23 +2241,23 @@ virtual void OnFillOutlookBarCaption(
 ### <a name="parameters"></a>Parametry
 
 *pDC*<br/>
-[in] Ukazatel na kontext zařízení.
+pro Ukazatel na kontext zařízení.
 
 *rectCaption*<br/>
-[in] Obdélník, který určuje hranice záhlaví.
+pro Obdélník, který určuje hranice panelu titulků.
 
 *clrText*<br/>
-[out] Odkaz na objekt COLORREF, ke které tato metoda zapíše barvu textu v záhlaví.
+mimo Odkaz na objekt COLORREF, na který tato metoda zapisuje barvu textu na panelu titulků.
 
 ### <a name="remarks"></a>Poznámky
 
-Výchozí implementace této metody vyplní záhlaví barvou pro stínů podle aktuální vzhledu.
+Výchozí implementace této metody vyplní pruh titulku barvou pro stíny na základě aktuálního vzhledu.
 
-Potlačí tuto metodu v odvozené správce vzhledu přizpůsobit barvu titulek panel aplikace Outlook.
+Tuto metodu můžete přepsat v odvozeném vizuálním manažeru a přizpůsobit barvu pruhu záhlaví Outlooku.
 
-##  <a name="onfilloutlookpagebutton"></a>  CMFCVisualManagerOffice2003::OnFillOutlookPageButton
+##  <a name="onfilloutlookpagebutton"></a>CMFCVisualManagerOffice2003::OnFillOutlookPageButton
 
-Rozhraní volá tuto metodu při vyplní vnitřní tlačítka stránky aplikace Outlook.
+Rozhraní volá tuto metodu, když vyplní vnitřek tlačítka stránky Outlooku.
 
 ```
 virtual void OnFillOutlookPageButton(
@@ -2271,27 +2271,27 @@ virtual void OnFillOutlookPageButton(
 ### <a name="parameters"></a>Parametry
 
 *pDC*<br/>
-[in] Ukazatel na kontext zařízení.
+pro Ukazatel na kontext zařízení.
 
-*Rect*<br/>
-[in] Obdélník, který určuje hranice na tlačítku stránky aplikace Outlook.
+*OBD*<br/>
+pro Obdélník, který určuje hranice tlačítka Outlook Page.
 
 *bIsHighlighted*<br/>
-[in] Parametr logické hodnoty, která určuje, zda se zvýrazní tlačítko.
+pro Logický parametr, který určuje, zda je tlačítko zvýrazněno.
 
 *bIsPressed*<br/>
-[in] Parametr logické hodnoty, která určuje, zda stisknutí tlačítka.
+pro Logický parametr, který určuje, zda je tlačítko stisknuto.
 
 *clrText*<br/>
-[out] Odkaz na objekt COLORREF, kde tato metoda ukládá barvu textu tlačítka stránky aplikace outlook.
+mimo Odkaz na objekt COLORREF, kde v této metodě je uložena barva textu tlačítka Outlook Page.
 
 ### <a name="remarks"></a>Poznámky
 
-Potlačí tuto funkci v odvozené správce vzhledu pro přizpůsobení vzhledu tlačítka stránky aplikace Outlook.
+Tuto funkci můžete přepsat v odvozeném vizuálním správci a přizpůsobit vzhled tlačítek stránky Outlooku.
 
 ##  <a name="onfillpopupwindowbackground"></a>  CMFCVisualManagerOffice2003::OnFillPopupWindowBackground
 
-Rozhraní volá tuto metodu při vyplní na pozadí automaticky otevírané okno.
+Rozhraní volá tuto metodu, když vyplní pozadí automaticky otevíraného okna.
 
 ```
 virtual void OnFillPopupWindowBackground(
@@ -2302,18 +2302,18 @@ virtual void OnFillPopupWindowBackground(
 ### <a name="parameters"></a>Parametry
 
 *pDC*<br/>
-[in] Ukazatel na kontext zařízení.
+pro Ukazatel na kontext zařízení.
 
-*Rect*<br/>
-[in] Obdélník, který určuje hranice automaticky otevíraném okně.
+*OBD*<br/>
+pro Obdélník, který určuje hranice automaticky otevíraného okna.
 
 ### <a name="remarks"></a>Poznámky
 
-Potlačí tuto metodu v odvozené správce vzhledu pro přizpůsobení vzhledu automaticky otevíraná okna.
+Tuto metodu můžete přepsat v odvozeném vizuálním správci, abyste mohli přizpůsobit vzhled automaticky otevíraných oken.
 
-##  <a name="onfilltab"></a>  CMFCVisualManagerOffice2003::OnFillTab
+##  <a name="onfilltab"></a>CMFCVisualManagerOffice2003::OnFillTab
 
-Rozhraní volá tuto metodu při výplně pozadí okna Karta.
+Rozhraní volá tuto metodu, když vyplní pozadí okna karet.
 
 ```
 virtual void OnFillTab(
@@ -2328,30 +2328,30 @@ virtual void OnFillTab(
 ### <a name="parameters"></a>Parametry
 
 *pDC*<br/>
-[in] Ukazatel na kontext zařízení.
+pro Ukazatel na kontext zařízení.
 
 *rectFill*<br/>
-[in] Obdélník, který určuje hranice pro okno s kartou.
+pro Obdélník, který určuje hranice okna karty.
 
 *pbrFill*<br/>
-[in] Ukazatel na štětec, který používá rozhraní tak, aby vyplnil okno s kartou.
+pro Ukazatel na štětec, který používá rozhraní k vyplnění okna karty.
 
 *iTab*<br/>
-[in] Index založený na nule kartu na kartě, pro kterou rozhraní vyplní na pozadí.
+pro Index karty založený na nule karty, pro kterou rozhraní vyplní pozadí.
 
 *bIsActive*<br/>
-[in] TRUE, pokud na kartě je aktivní, nebo hodnotu NEPRAVDA, pokud tomu tak není.
+pro TRUE, pokud je karta aktivní, nebo FALSE, pokud není.
 
 *pTabWnd*<br/>
-[in] Ukazatel na nadřazený ovládací prvek karty.
+pro Ukazatel na nadřazený ovládací prvek karty.
 
 ### <a name="remarks"></a>Poznámky
 
-Potlačí tuto metodu v odvozené správce vzhledu pro přizpůsobení vzhledu karty.
+Tuto metodu můžete přepsat v odvozeném vizuálním manažeru a přizpůsobit si tak vzhled karet.
 
-##  <a name="onfilltasksgroupinterior"></a>  CMFCVisualManagerOffice2003::OnFillTasksGroupInterior
+##  <a name="onfilltasksgroupinterior"></a>CMFCVisualManagerOffice2003::OnFillTasksGroupInterior
 
-Rozhraní volá tuto metodu při vyplní vnitřní [cmfctaskspanetaskgroup – třída](../../mfc/reference/cmfctaskspanetaskgroup-class.md) objektu.
+Rozhraní volá tuto metodu, když vyplní vnitřek objektu [třídy CMFCTasksPaneTaskGroup](../../mfc/reference/cmfctaskspanetaskgroup-class.md) .
 
 ```
 virtual void OnFillTasksGroupInterior(
@@ -2363,21 +2363,21 @@ virtual void OnFillTasksGroupInterior(
 ### <a name="parameters"></a>Parametry
 
 *pDC*<br/>
-[in] Ukazatel na kontext zařízení.
+pro Ukazatel na kontext zařízení.
 
-*Rect*<br/>
-[in] Obdélník, který určuje hranice skupiny úloh.
+*OBD*<br/>
+pro Obdélník, který určuje hranice skupiny úloh.
 
 *bSpecial*<br/>
-[in] Logická hodnota označující, pokud je vnitřní vyplněn barvou speciální.
+pro Logická hodnota, která označuje, zda je vnitřek vyplněn speciální barvou.
 
 ### <a name="remarks"></a>Poznámky
 
-Potlačí tuto metodu v odvozené správce vzhledu pro přizpůsobení vzhledu skupinu úloh.
+Přepsáním této metody v odvozeném vizuálním manažeru můžete přizpůsobit vzhled skupiny úloh.
 
-##  <a name="onfilltaskspanebackground"></a>  CMFCVisualManagerOffice2003::OnFillTasksPaneBackground
+##  <a name="onfilltaskspanebackground"></a>CMFCVisualManagerOffice2003::OnFillTasksPaneBackground
 
-Rozhraní volá tuto metodu při vyplní na pozadí [cmfctaskspane – třída](../../mfc/reference/cmfctaskspane-class.md) ovládacího prvku.
+Rozhraní volá tuto metodu, když vyplní pozadí ovládacího prvku [třídy CMFCTasksPane](../../mfc/reference/cmfctaskspane-class.md) .
 
 ```
 virtual void OnFillTasksPaneBackground(
@@ -2388,18 +2388,18 @@ virtual void OnFillTasksPaneBackground(
 ### <a name="parameters"></a>Parametry
 
 *pDC*<br/>
-[in] Ukazatel na kontext zařízení.
+pro Ukazatel na kontext zařízení.
 
 *rectWorkArea*<br/>
-[in] Obdélník, který určuje hranice podokna úloh.
+pro Obdélník, který určuje hranice podokna úloh.
 
 ### <a name="remarks"></a>Poznámky
 
-Potlačí tuto metodu v odvozené vizuálního správce k přizpůsobení vzhledu [cmfctaskspane – třída](../../mfc/reference/cmfctaskspane-class.md) objektu.
+Tuto metodu můžete přepsat v odvozeném vizuálním manažeru pro přizpůsobení vzhledu objektu [třídy CMFCTasksPane](../../mfc/reference/cmfctaskspane-class.md) .
 
-##  <a name="onhighlightquickcustomizemenubutton"></a>  CMFCVisualManagerOffice2003::OnHighlightQuickCustomizeMenuButton
+##  <a name="onhighlightquickcustomizemenubutton"></a>CMFCVisualManagerOffice2003::OnHighlightQuickCustomizeMenuButton
 
-Rámec volá tuto metodu při kreslení zvýrazněný přizpůsobení rychlé tlačítka nabídky.
+Rozhraní volá tuto metodu, když nakreslí zvýrazněné tlačítko nabídky rychlé přizpůsobení.
 
 ```
 virtual void OnHighlightQuickCustomizeMenuButton(
@@ -2411,19 +2411,19 @@ virtual void OnHighlightQuickCustomizeMenuButton(
 ### <a name="parameters"></a>Parametry
 
 *pDC*<br/>
-[in] Ukazatel na kontext zařízení pro tlačítko.
+pro Ukazatel na kontext zařízení pro tlačítko.
 
 *pButton*<br/>
-[in] Ukazatel na tlačítku.
+pro Ukazatel na tlačítko.
 
-*Rect*<br/>
-[in] Ohraničující obdélník na tlačítko.
+*OBD*<br/>
+pro Ohraničující obdélník tlačítka
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="onhighlightrarelyusedmenuitems"></a>  CMFCVisualManagerOffice2003::OnHighlightRarelyUsedMenuItems
+##  <a name="onhighlightrarelyusedmenuitems"></a>CMFCVisualManagerOffice2003::OnHighlightRarelyUsedMenuItems
 
-Rozhraní volá tuto metodu při kreslení zvýrazněný příkaz.
+Rozhraní volá tuto metodu při nakreslení zvýrazněného příkazu nabídky.
 
 ```
 virtual void OnHighlightRarelyUsedMenuItems(
@@ -2434,18 +2434,18 @@ virtual void OnHighlightRarelyUsedMenuItems(
 ### <a name="parameters"></a>Parametry
 
 *pDC*<br/>
-[in] Ukazatel na kontext zařízení.
+pro Ukazatel na kontext zařízení.
 
 *rectRarelyUsed*<br/>
-[in] Obdélník, který určuje hranice zvýrazněný příkaz.
+pro Obdélník, který určuje hranice zvýrazněného příkazu.
 
 ### <a name="remarks"></a>Poznámky
 
-Potlačí tuto metodu v odvozené správce vzhledu pro přizpůsobení vzhledu zvýrazněné příkazy.
+Tuto metodu přepište v odvozeném vizuálním manažeru a přizpůsobte si vzhled zvýrazněných příkazů nabídky.
 
 ##  <a name="onupdatesystemcolors"></a>  CMFCVisualManagerOffice2003::OnUpdateSystemColors
 
-Rozhraní volá tuto funkci při změně systémových barev.
+Rozhraní volá tuto funkci, když dojde ke změně systémových barev.
 
 ```
 virtual void OnUpdateSystemColors();
@@ -2453,11 +2453,11 @@ virtual void OnUpdateSystemColors();
 
 ### <a name="remarks"></a>Poznámky
 
-Rozhraní volá tuto metodu v rámci zpracování WM_SYSCOLORCHANGE zprávy. Přepsáním této metody v odvozené vizuálního správce, pokud chcete spustit vlastní kód při změně barev ve vaší aplikaci.
+Rozhraní volá tuto metodu jako součást zpracování zprávy WM_SYSCOLORCHANGE. Tuto metodu přepište v odvozeném vizuálním správci, pokud chcete spustit vlastní kód při změně barev v aplikaci.
 
-##  <a name="setdefaultwinxpcolors"></a>  CMFCVisualManagerOffice2003::SetDefaultWinXPColors
+##  <a name="setdefaultwinxpcolors"></a>CMFCVisualManagerOffice2003::SetDefaultWinXPColors
 
-Určuje, zda správce vzhledu by měl používat nativní barvy motivu Windows XP nebo barvy získané z [GetSysColor](/windows/desktop/api/winuser/nf-winuser-getsyscolor).
+Určuje, jestli má vizuální správce používat nativní barvy nebo barvy motivů Windows XP získané z [GetSysColor](/windows/win32/api/winuser/nf-winuser-getsyscolor).
 
 ```
 static void SetDefaultWinXPColors(BOOL bDefaultWinXPColors = TRUE);
@@ -2466,17 +2466,17 @@ static void SetDefaultWinXPColors(BOOL bDefaultWinXPColors = TRUE);
 ### <a name="parameters"></a>Parametry
 
 *bDefaultWinXPColors*<br/>
-[in] Určuje, zda správce vzhledu použije nativní barev Windows XP.
+pro Určuje, jestli bude vizuální správce používat nativní barvy Windows XP.
 
 ### <a name="remarks"></a>Poznámky
 
-Pokud *bDefaultWinXPColors* má hodnotu TRUE, správce vzhledu použije nativní barev Windows XP například blue, Olivově nebo silver. V opačném případě bude správce vzhledu používat barvy získané z `GetSysColor`. Správce vzhledu používá vizuální prvky, jako je například COLOR_3DFACE COLOR_3DSHADOW, COLOR_3DHIGHLIGHT, COLOR_3DDKSHADOW a COLOR_3DLIGHT.
+Pokud má *bDefaultWinXPColors* hodnotu true, Visual Manager použije nativní barvy Windows XP, jako je například Blue, olivová nebo stříbrné. V opačném případě bude vizuální správce používat barvy získané z `GetSysColor`. Visual Manager používá vizuální prvky, jako jsou COLOR_3DFACE, COLOR_3DSHADOW, COLOR_3DHIGHLIGHT, COLOR_3DDKSHADOW a COLOR_3DLIGHT.
 
-Ve výchozím nastavení `CMFCVisualManagerOffice2003` objekt používá nativní barvy motivu Windows XP.
+Ve výchozím nastavení `CMFCVisualManagerOffice2003` objekt používá nativní barvy motivů systému Windows XP.
 
-##  <a name="setstatusbarofficexplook"></a>  CMFCVisualManagerOffice2003::SetStatusBarOfficeXPLook
+##  <a name="setstatusbarofficexplook"></a>CMFCVisualManagerOffice2003::SetStatusBarOfficeXPLook
 
-Určuje, zda má být použito globální motiv Windows XP.
+Určuje, že by měl být použit globální motiv systému Windows XP.
 
 ```
 static void __stdcall SetStatusBarOfficeXPLook(BOOL bStatusBarOfficeXPLook = TRUE);
@@ -2485,13 +2485,13 @@ static void __stdcall SetStatusBarOfficeXPLook(BOOL bStatusBarOfficeXPLook = TRU
 ### <a name="parameters"></a>Parametry
 
 *bStatusBarOfficeXPLook*<br/>
-[in] Hodnota TRUE, pokud by měl být globální motiv Windows XP používat (výchozí), nebo hodnotu NEPRAVDA, pokud tomu tak není.
+pro TRUE, pokud má být použit globální motiv systému Windows XP (výchozí nastavení), nebo FALSE, pokud ne.
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="setuseglobaltheme"></a>  CMFCVisualManagerOffice2003::SetUseGlobalTheme
+##  <a name="setuseglobaltheme"></a>CMFCVisualManagerOffice2003::SetUseGlobalTheme
 
-Určuje, jestli má správce vzhledu jako globální motiv.
+Určuje, zda vizuální správce používá globální motiv.
 
 ```
 static void SetUseGlobalTheme(BOOL bUseGlobalTheme = TRUE);
@@ -2500,13 +2500,13 @@ static void SetUseGlobalTheme(BOOL bUseGlobalTheme = TRUE);
 ### <a name="parameters"></a>Parametry
 
 *bUseGlobalTheme*<br/>
-[in] Hodnota TRUE, pokud chcete, aby správce vzhledu používat globální motiv. FALSE v opačném případě.
+pro TRUE, pokud chcete, aby vizuální správce používal globální motiv; V opačném případě NEPRAVDA.
 
 ### <a name="remarks"></a>Poznámky
 
-Pokud `CMFCVisualManagerOffice2003` objekt používá jako globální motiv, nakreslí prvky grafického uživatelského rozhraní pomocí [CMFCVisualManagerWindows – třída](../../mfc/reference/cmfcvisualmanagerwindows-class.md).
+Pokud objekt používá globální motiv, nakreslí prvky grafického uživatelského rozhraní pomocí [třídy CMFCVisualManagerWindows.](../../mfc/reference/cmfcvisualmanagerwindows-class.md) `CMFCVisualManagerOffice2003`
 
-Pokud `CMFCVisualManagerOffice2003` objekt nepoužíval jako globální motiv, nakreslí prvky grafického uživatelského rozhraní pomocí [CMFCVisualManagerOfficeXP – třída](../../mfc/reference/cmfcvisualmanagerofficexp-class.md).
+Pokud objekt nepoužívá globální motiv, nakreslí prvky grafického uživatelského rozhraní pomocí [třídy CMFCVisualManagerOfficeXP.](../../mfc/reference/cmfcvisualmanagerofficexp-class.md) `CMFCVisualManagerOffice2003`
 
 ## <a name="see-also"></a>Viz také:
 

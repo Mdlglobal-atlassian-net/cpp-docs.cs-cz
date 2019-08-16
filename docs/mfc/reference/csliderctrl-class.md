@@ -1,5 +1,5 @@
 ---
-title: Csliderctrl – třída
+title: Atributu CSliderCtrl – třída
 ms.date: 11/04/2016
 f1_keywords:
 - CSliderCtrl
@@ -74,16 +74,16 @@ helpviewer_keywords:
 - CSliderCtrl [MFC], SetTipSide
 - CSliderCtrl [MFC], SetToolTips
 ms.assetid: dd12b084-4eda-4550-a810-8f3cfb06b871
-ms.openlocfilehash: 4db27112daf65b2c3f477527cd7b4351b91d7f18
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8fffdfc002b25fdcd72dcbbf53e7e6c321f55296
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62324412"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69502522"
 ---
-# <a name="csliderctrl-class"></a>Csliderctrl – třída
+# <a name="csliderctrl-class"></a>Atributu CSliderCtrl – třída
 
-Poskytuje funkce pro Windows běžný ovládací prvek posuvník.
+Poskytuje funkce pro běžný ovládací prvek posuvníku systému Windows.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -95,65 +95,65 @@ class CSliderCtrl : public CWnd
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
-|[CSliderCtrl::CSliderCtrl](#csliderctrl)|Vytvoří `CSliderCtrl` objektu.|
+|[CSliderCtrl::CSliderCtrl](#csliderctrl)|`CSliderCtrl` Vytvoří objekt.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CSliderCtrl::ClearSel](#clearsel)|Zruší aktuální výběr v ovládacím prvku posuvník.|
-|[CSliderCtrl::ClearTics](#cleartics)|Zruší aktuální osové značky ovládacího prvku slider.|
+|[CSliderCtrl::ClearTics](#cleartics)|Odebere aktuální osové značky z ovládacího prvku posuvník.|
 |[CSliderCtrl::Create](#create)|Vytvoří ovládací prvek posuvníku a připojí ho k `CSliderCtrl` objektu.|
-|[CSliderCtrl::CreateEx](#createex)|Vytvoří ovládací prvek posuvníku se zadaným rozšířené styly Windows a připojí ho k `CSliderCtrl` objektu.|
-|[CSliderCtrl::GetBuddy](#getbuddy)|Načte popisovač asociované okno ovládacího prvku jezdec do daného umístění.|
-|[CSliderCtrl::GetChannelRect](#getchannelrect)|Načte velikosti v ovládacím prvku posuvník kanálu.|
-|[CSliderCtrl::GetLineSize](#getlinesize)|Načte velikosti řádku v ovládacím prvku posuvník.|
-|[CSliderCtrl::GetNumTics](#getnumtics)|Získá počet značek v ovládacím prvku posuvník.|
-|[CSliderCtrl::GetPageSize](#getpagesize)|Získá velikost stránky v ovládacím prvku posuvník.|
-|[CSliderCtrl::GetPos](#getpos)|Načte aktuální pozice posuvníku.|
-|[CSliderCtrl::GetRange](#getrange)|Získá minimální a maximální pozice posuvníku.|
-|[CSliderCtrl::GetRangeMax](#getrangemax)|Získá maximální pozice posuvníku.|
-|[CSliderCtrl::GetRangeMin](#getrangemin)|Získá minimální pozice posuvníku.|
+|[CSliderCtrl::CreateEx](#createex)|Vytvoří ovládací prvek posuvník se zadanými rozšířenými styly Windows a připojí ho k `CSliderCtrl` objektu.|
+|[CSliderCtrl::GetBuddy](#getbuddy)|Načte popisovač k oknu s ovládacím prvkem na posuvníku v daném umístění.|
+|[CSliderCtrl::GetChannelRect](#getchannelrect)|Načte velikost kanálu ovládacího prvku posuvníku.|
+|[CSliderCtrl::GetLineSize](#getlinesize)|Načítá velikost čáry ovládacího prvku posuvník.|
+|[CSliderCtrl::GetNumTics](#getnumtics)|Načte počet značek v ovládacím prvku posuvník.|
+|[CSliderCtrl::GetPageSize](#getpagesize)|Načte velikost stránky ovládacího prvku posuvníku.|
+|[CSliderCtrl::GetPos](#getpos)|Načte aktuální pozici posuvníku.|
+|[CSliderCtrl::GetRange](#getrange)|Načte minimální a maximální polohu posuvníku.|
+|[CSliderCtrl::GetRangeMax](#getrangemax)|Načte maximální pozici posuvníku.|
+|[CSliderCtrl::GetRangeMin](#getrangemin)|Načte minimální pozici posuvníku.|
 |[CSliderCtrl::GetSelection](#getselection)|Načte rozsah aktuálního výběru.|
-|[CSliderCtrl::GetThumbLength](#getthumblength)|Načte délku jezdce v aktuální ovládací prvek posuvník.|
-|[CSliderCtrl::GetThumbRect](#getthumbrect)|Získá velikost jezdce v ovládacím prvku posuvník.|
-|[CSliderCtrl::GetTic](#gettic)|Načte pozici zadané značky zaškrtnutí.|
-|[CSliderCtrl::GetTicArray](#getticarray)|Načte pole osové značky pozice pro ovládací prvek posuvník.|
-|[CSliderCtrl::GetTicPos](#getticpos)|Načte pozici zadané značky zaškrtnutí, v souřadnicích klienta.|
-|[CSliderCtrl::GetToolTips](#gettooltips)|Načte popisovač pro ovládací prvek tooltip přiřazenou ovládacímu prvku posuvník, pokud existuje.|
-|[CSliderCtrl::SetBuddy](#setbuddy)|Přiřadí časové období jako asociovaného okna pro ovládací prvek posuvník.|
-|[CSliderCtrl::SetLineSize](#setlinesize)|Nastaví velikost čáry posuvníku ovládacího prvku.|
-|[CSliderCtrl::SetPageSize](#setpagesize)|Nastaví velikost stránky v ovládacím prvku posuvník.|
-|[CSliderCtrl::SetPos](#setpos)|Nastaví aktuální pozice posuvníku.|
-|[CSliderCtrl::SetRange](#setrange)|Nastaví minimální a maximální pozice posuvníku.|
-|[CSliderCtrl::SetRangeMax](#setrangemax)|Nastaví maximální pozice posuvníku.|
-|[CSliderCtrl::SetRangeMin](#setrangemin)|Nastaví minimální pozice posuvníku.|
+|[CSliderCtrl::GetThumbLength](#getthumblength)|Načte délku posuvníku v aktuálním ovládacím prvku TrackBar.|
+|[CSliderCtrl::GetThumbRect](#getthumbrect)|Načte velikost táhla ovládacího prvku posuvníku.|
+|[CSliderCtrl::GetTic](#gettic)|Načte pozici určené značky.|
+|[CSliderCtrl::GetTicArray](#getticarray)|Načte pole pozic osové značky pro ovládací prvek posuvníku.|
+|[CSliderCtrl::GetTicPos](#getticpos)|Načte pozici zadané osové značky v souřadnicích klienta.|
+|[CSliderCtrl::GetToolTips](#gettooltips)|Načte popisovač k ovládacímu prvku ToolTip přiřazenému ovládacímu prvku posuvník, pokud existuje.|
+|[CSliderCtrl::SetBuddy](#setbuddy)|Přiřadí okno jako kamarád okno pro ovládací prvek posuvníku.|
+|[CSliderCtrl::SetLineSize](#setlinesize)|Nastaví velikost čáry ovládacího prvku posuvník.|
+|[CSliderCtrl::SetPageSize](#setpagesize)|Nastaví velikost stránky ovládacího prvku posuvník.|
+|[CSliderCtrl::SetPos](#setpos)|Nastaví aktuální pozici posuvníku.|
+|[CSliderCtrl::SetRange](#setrange)|Nastaví minimální a maximální polohu posuvníku.|
+|[CSliderCtrl::SetRangeMax](#setrangemax)|Nastaví maximální pozici posuvníku.|
+|[CSliderCtrl::SetRangeMin](#setrangemin)|Nastaví minimální pozici posuvníku.|
 |[CSliderCtrl::SetSelection](#setselection)|Nastaví rozsah aktuálního výběru.|
-|[CSliderCtrl::SetThumbLength](#setthumblength)|Nastaví délku posuvník v aktuální ovládací prvek posuvník.|
-|[CSliderCtrl::SetTic](#settic)|Nastaví pozici zadané značky zaškrtnutí.|
-|[CSliderCtrl::SetTicFreq](#setticfreq)|Nastaví frekvenci osové značky za přírůstek ovládací prvek posuvník.|
-|[CSliderCtrl::SetTipSide](#settipside)|Pozice ovládacího prvku tooltip používané TrackBar – ovládací prvek.|
-|[CSliderCtrl::SetToolTips](#settooltips)|ToolTip – ovládací prvek přiřadí ovládacím prvku posuvník.|
+|[CSliderCtrl::SetThumbLength](#setthumblength)|Nastaví délku posuvníku v aktuálním ovládacím prvku TrackBar.|
+|[CSliderCtrl::SetTic](#settic)|Nastaví pozici zadané osové značky.|
+|[CSliderCtrl::SetTicFreq](#setticfreq)|Nastaví četnost značek zaškrtnutí na přírůstek ovládacího prvku posuvníku.|
+|[CSliderCtrl::SetTipSide](#settipside)|Umístí ovládací prvek ToolTip, který používá ovládací prvek TrackBar.|
+|[CSliderCtrl::SetToolTips](#settooltips)|Přiřadí ovládacímu prvku posuvníku ovládací prvek ToolTip.|
 
 ## <a name="remarks"></a>Poznámky
 
-"Ovládacího prvku posuvník" (také označované jako trackbar) je okno obsahující ovládací prvek posuvník a volitelné osové značky. Když uživatel přesune posuvník, pomocí myši nebo klávesy se šipkami, ovládací prvek odešle upozornění označíte změnu.
+"Ovládací prvek posuvník" (také označovaný jako TrackBar) je okno obsahující posuvník a volitelné osové značky. Když uživatel přesune posuvník pomocí myši nebo směrového klíče, ovládací prvek odešle oznamovací zprávy, aby označoval změnu.
 
-Posuvníky jsou užitečné, pokud chcete uživateli vybrat diskrétní hodnoty nebo sadu po sobě jdoucích hodnot v rozsahu. Například můžete použít ovládací prvek typu jezdec aby uživatel mohl nastavení opakování míry klávesnice přesunete posuvník na dané značky zaškrtnutí.
+Ovládací prvky posuvníku jsou užitečné, pokud chcete, aby uživatel vybral diskrétní hodnotu nebo sadu po sobě jdoucích hodnot v rozsahu. Například můžete použít ovládací prvek posuvníku, který uživateli umožní nastavit rychlost opakování klávesnice přesunutím posuvníku na danou značku.
 
-Tento ovládací prvek (a tedy `CSliderCtrl` třídy) je dostupná jenom pro programy spuštěné v rámci Windows 95/98 a Windows NT verze 3.51 a vyšší.
+Tento ovládací prvek (a `CSliderCtrl` třída) je k dispozici pouze pro programy, které jsou spuštěny v systémech Windows 95/98 a Windows NT verze 3,51 a novější.
 
-Posune posuvník po krocích, které určíte při jeho vytvoření. Například pokud chcete zadat, že posuvník by měl mít celou řadu pěti, posuvník pouze zabírat šest pozice: pozice na levé straně ovládacího prvku posuvníku a jednu pozici pro každý přírůstek v rozsahu. Obvykle každá z těchto umístění je identifikován značky zaškrtnutí.
+Posuvník se přesune v přírůstcích, které zadáte při jeho vytváření. Například pokud určíte, že posuvník by měl mít rozsah pět, může posuvník zabírat pouze šest pozic: polohu na levé straně ovládacího prvku posuvník a jednu pozici pro každý přírůstek v rozsahu. Obvykle je každá z těchto pozic identifikována osové značkou.
 
-Vytvořit ovládací prvek posuvník pomocí konstruktoru a `Create` členskou funkci `CSliderCtrl`. Po vytvoření ovládacího prvku slider. můžete členské funkce ve `CSliderCtrl` můžete změnit různá jeho vlastnosti. Změny, které můžete provést zahrnují nastavení minimální a maximální pozice pro posuvník, značky kreslení, nastavení oblast výběru a změnou pozice posuvníku.
+Vytvoříte posuvník pomocí konstruktoru a `Create` členské `CSliderCtrl`funkce. Po vytvoření ovládacího prvku posuvník můžete použít členské funkce v `CSliderCtrl` pro změnu mnoha jeho vlastností. Mezi změny, které můžete provést, patří nastavení minimální a maximální polohy pro posuvník, vykreslení značek zaškrtnutí, nastavení rozsahu výběru a změna polohy posuvníku.
 
-Další informace o používání `CSliderCtrl`, naleznete v tématu [ovládací prvky](../../mfc/controls-mfc.md) a [používání atributu CSliderCtrl](../../mfc/using-csliderctrl.md).
+Další informace o použití `CSliderCtrl`naleznete v tématu [Controls](../../mfc/controls-mfc.md) and [using atributu CSliderCtrl](../../mfc/using-csliderctrl.md).
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
-[Třídy CObject](../../mfc/reference/cobject-class.md)
+[CObject](../../mfc/reference/cobject-class.md)
 
 [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)
 
@@ -163,9 +163,9 @@ Další informace o používání `CSliderCtrl`, naleznete v tématu [ovládací
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** afxcmn.h
+**Záhlaví:** afxcmn. h
 
-##  <a name="clearsel"></a>  CSliderCtrl::ClearSel
+##  <a name="clearsel"></a>Atributu CSliderCtrl:: ClearSel
 
 Zruší aktuální výběr v ovládacím prvku posuvník.
 
@@ -176,11 +176,11 @@ void ClearSel(BOOL bRedraw = FALSE);
 ### <a name="parameters"></a>Parametry
 
 *bRedraw*<br/>
-Ho překreslit příznak. Pokud tento parametr má hodnotu TRUE, je po výběru se vymaže; překreslení posuvníku v opačném případě se měl překreslit posuvníku.
+Příznak překreslení Pokud má tento parametr hodnotu TRUE, je po vymazání výběru překreslen posuvník. v opačném případě se posuvník nepřekreslí.
 
-##  <a name="cleartics"></a>  CSliderCtrl::ClearTics
+##  <a name="cleartics"></a>Atributu CSliderCtrl:: ClearTics
 
-Zruší aktuální osové značky ovládacího prvku slider.
+Odebere aktuální osové značky z ovládacího prvku posuvník.
 
 ```
 void ClearTics(BOOL bRedraw = FALSE);
@@ -189,9 +189,9 @@ void ClearTics(BOOL bRedraw = FALSE);
 ### <a name="parameters"></a>Parametry
 
 *bRedraw*<br/>
-Ho překreslit příznak. Pokud tento parametr má hodnotu TRUE, je po osové značky jsou vymazány; překreslení posuvníku v opačném případě se měl překreslit posuvníku.
+Příznak překreslení Pokud má tento parametr hodnotu TRUE, posuvník se překreslí po vymazání značek. v opačném případě se posuvník nepřekreslí.
 
-##  <a name="create"></a>  CSliderCtrl::Create
+##  <a name="create"></a>Atributu CSliderCtrl:: Create
 
 Vytvoří ovládací prvek posuvníku a připojí ho k `CSliderCtrl` objektu.
 
@@ -206,32 +206,32 @@ virtual BOOL Create(
 ### <a name="parameters"></a>Parametry
 
 *dwStyle*<br/>
-Určuje styl ovládacího prvku posuvník. Použít libovolnou kombinaci [– styly ovládacích prvků posuvník](/windows/desktop/Controls/trackbar-control-styles), které jsou popsány v sadě Windows SDK do ovládacího prvku.
+Určuje styl ovládacího prvku posuvníku. Použití libovolné kombinace [stylů ovládacího prvku posuvníku](/windows/win32/Controls/trackbar-control-styles), které jsou popsány v Windows SDK, k ovládacímu prvku.
 
-*Rect*<br/>
-Určuje velikost a umístění v ovládacím prvku posuvník. Může být buď [crect –](../../atl-mfc-shared/reference/crect-class.md) objektu nebo [RECT](/previous-versions/dd162897\(v=vs.85\)) struktury.
+*OBD*<br/>
+Určuje velikost a polohu ovládacího prvku posuvníku. Může to být buď objekt [CRect](../../atl-mfc-shared/reference/crect-class.md) , nebo struktura [Rect](/previous-versions/dd162897\(v=vs.85\)) .
 
 *pParentWnd*<br/>
-Určuje nadřazené okno ovládacího prvku posuvník, obvykle `CDialog`. Nesmí být NULL.
+Určuje nadřazené okno ovládacího prvku posuvník, obvykle a `CDialog`. Nesmí mít hodnotu NULL.
 
 *nID*<br/>
-Určuje ID ovládacího prvku posuvník.
+Určuje ID ovládacího prvku posuvníku.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Nenulové, pokud se inicializace byla úspěšná. jinak 0.
+Nenulová, pokud byla inicializace úspěšná; v opačném případě 0.
 
 ### <a name="remarks"></a>Poznámky
 
-Můžete vytvořit `CSliderCtrl` ve dvou krocích. Nejprve volat konstruktor a poté zavolejte `Create`, což vytvoří ovládací prvek posuvníku a připojí ho k `CSliderCtrl` objektu.
+Vytvoří `CSliderCtrl` se ve dvou krocích. Nejprve volejte konstruktor a potom zavolejte `Create`, čímž se vytvoří ovládací prvek posuvník a připojí se `CSliderCtrl` k objektu.
 
-V závislosti na hodnoty nastavené pro *dwStyle*, ovládací prvek posuvník může mít svislé nebo vodorovné orientace. Může mít osové značky na obou stranách obě strany, nebo ani jeden. To lze také zadat rozsah po sobě jdoucích hodnot.
+V závislosti na hodnotách nastavených pro *dwStyle*může mít ovládací prvek posuvník buď svislou, nebo vodorovnou orientaci. Může mít osové značky na obou stranách, na obou stranách nebo ani na žádném. Lze ji také použít k určení rozsahu po sobě jdoucích hodnot.
 
-Chcete-li použít rozšířené styly oken pro ovládací prvek posuvník, zavolejte [CreateEx](#createex) místo `Create`.
+Chcete-li pro ovládací prvek posuvníku použít rozšířené styly [](#createex) oken, zavolejte `Create`CreateEx místo.
 
-##  <a name="createex"></a>  CSliderCtrl::CreateEx
+##  <a name="createex"></a>Atributu CSliderCtrl:: CreateEx
 
-Vytvoří ovládací prvek (podřízené okno) a přidruží ji k `CSliderCtrl` objektu.
+Vytvoří ovládací prvek (podřízené okno) a přidruží ho k `CSliderCtrl` objektu.
 
 ```
 virtual BOOL CreateEx(
@@ -245,39 +245,39 @@ virtual BOOL CreateEx(
 ### <a name="parameters"></a>Parametry
 
 *dwExStyle*<br/>
-Určuje rozšířený styl ovládacího prvku vytváří. Seznam rozšířené styly Windows najdete v tématu *dwExStyle* parametr pro [CreateWindowEx](/windows/desktop/api/winuser/nf-winuser-createwindowexa) v sadě Windows SDK.
+Určuje rozšířený styl ovládacího prvku, který se vytváří. Seznam rozšířených stylů Windows naleznete v parametru *dwExStyle* pro [CreateWindowEx](/windows/win32/api/winuser/nf-winuser-createwindowexw) v Windows SDK.
 
 *dwStyle*<br/>
-Určuje styl ovládacího prvku posuvník. Použít libovolnou kombinaci [– styly ovládacích prvků posuvník](/windows/desktop/Controls/trackbar-control-styles), které jsou popsány v sadě Windows SDK do ovládacího prvku.
+Určuje styl ovládacího prvku posuvníku. Použití libovolné kombinace [stylů ovládacího prvku posuvníku](/windows/win32/Controls/trackbar-control-styles), které jsou popsány v Windows SDK, k ovládacímu prvku.
 
-*Rect*<br/>
-Odkaz na [RECT](/previous-versions/dd162897\(v=vs.85\)) struktura popisující, velikost a umístění okna, které nelze v souřadnice klienta *pParentWnd*.
+*OBD*<br/>
+Odkaz na strukturu [Rect](/previous-versions/dd162897\(v=vs.85\)) popisující velikost a umístění okna, které má být vytvořeno, v souřadnicích klienta *pParentWnd*.
 
 *pParentWnd*<br/>
-Ukazatel na okno, který je nadřazeného ovládacího prvku.
+Ukazatel na okno, které je nadřazený ovládacímu prvku.
 
 *nID*<br/>
-ID ovládacího prvku podřízené okno.
+ID podřízeného okna ovládacího prvku
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Nenulové, pokud je úspěšná. jinak 0.
+Nenulové, pokud bylo úspěšné; v opačném případě 0.
 
 ### <a name="remarks"></a>Poznámky
 
-Použití `CreateEx` místo [vytvořit](#create) použít rozšířené styly Windows určené předponu rozšířeného stylu Windows **WS_EX_**.
+Použijte `CreateEx` místo příkaz [vytvořit](#create) pro použití rozšířených stylů Windows, které jsou určené **WS_EX_** rozšířeným stylem Windows.
 
-##  <a name="csliderctrl"></a>  CSliderCtrl::CSliderCtrl
+##  <a name="csliderctrl"></a>Atributu CSliderCtrl:: atributu CSliderCtrl
 
-Vytvoří `CSliderCtrl` objektu.
+`CSliderCtrl` Vytvoří objekt.
 
 ```
 CSliderCtrl();
 ```
 
-##  <a name="getbuddy"></a>  CSliderCtrl::GetBuddy
+##  <a name="getbuddy"></a>Atributu CSliderCtrl:: getkamarád
 
-Načte popisovač asociované okno ovládacího prvku jezdec do daného umístění.
+Načte popisovač k oknu s ovládacím prvkem na posuvníku v daném umístění.
 
 ```
 CWnd* GetBuddy(BOOL fLocation = TRUE) const;
@@ -286,23 +286,23 @@ CWnd* GetBuddy(BOOL fLocation = TRUE) const;
 ### <a name="parameters"></a>Parametry
 
 *fLocation*<br/>
-Logická hodnota určující, které ze dvou obslužné rutiny buddy okna pro načtení. Může být jedna z následujících hodnot:
+Logická hodnota, která označuje, který ze dvou popisovačů okna se má načíst. Může to být jedna z následujících hodnot:
 
-- Hodnota TRUE načte popisovač buddy vlevo od jezdce. Pokud v ovládacím prvku posuvník používá styl TBS_VERT, načte zprávy buddy nad posuvník.
+- Hodnota TRUE načte popisovač pro kamaráda vlevo od posuvníku. Pokud ovládací prvek posuvník používá styl TBS_VERT, zpráva získá kamaráda nad posuvník.
 
-- FALSE načte popisovač buddy vpravo od jezdce. Pokud v ovládacím prvku posuvník používá styl TBS_VERT, načte zprávy buddy pod posuvník.
+- FALSE načte popisovač pro kamaráda napravo od posuvníku. Pokud ovládací prvek posuvník používá styl TBS_VERT, zpráva získá kamaráda pod posuvníkem.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Ukazatel [CWnd](../../mfc/reference/cwnd-class.md) objekt, který je v místě určeném okna buddy *fLocation*, nebo hodnota NULL, pokud neexistuje žádný asociované okno na tomto místě.
+Ukazatel na objekt [CWnd](../../mfc/reference/cwnd-class.md) , který je přítelm oknem v umístění určeném parametrem *fLocation*, nebo hodnotu null, pokud v daném umístění neexistuje žádné kamarád okno.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato členská funkce implementuje chování zprávy Win32 [TBM_GETBUDDY](/windows/desktop/Controls/tbm-getbuddy), jak je popsáno v sadě Windows SDK. Popis posuvník – styly ovládacího prvku, naleznete v tématu [– styly ovládacího prvku Trackbar](/windows/desktop/Controls/trackbar-control-styles) v sadě Windows SDK.
+Tato členská funkce implementuje chování zprávy Win32 [TBM_GETBUDDY](/windows/win32/Controls/tbm-getbuddy), jak je popsáno v Windows SDK. Popis stylů ovládacího prvku posuvník naleznete v tématu [styly ovládacího prvku TrackBar](/windows/win32/Controls/trackbar-control-styles) v Windows SDK.
 
-##  <a name="getchannelrect"></a>  CSliderCtrl::GetChannelRect
+##  <a name="getchannelrect"></a>Atributu CSliderCtrl:: GetChannelRect
 
-Načte velikost a umístění ohraničující rámeček pro ovládací prvek posuvník kanálu.
+Načte velikost a polohu ohraničujícího obdélníku pro kanál ovládacího prvku posuvníku.
 
 ```
 void GetChannelRect(LPRECT lprc) const;
@@ -311,15 +311,15 @@ void GetChannelRect(LPRECT lprc) const;
 ### <a name="parameters"></a>Parametry
 
 *lprc*<br/>
-Ukazatel [crect –](../../atl-mfc-shared/reference/crect-class.md) objekt, který obsahuje velikost a umístění kanálu je po návratu funkce ohraničující obdélník.
+Ukazatel na objekt [CRect](../../atl-mfc-shared/reference/crect-class.md) , který obsahuje velikost a polohu ohraničujícího obdélníku kanálu při návratu funkce.
 
 ### <a name="remarks"></a>Poznámky
 
-Kanál je oblast, přes který se posuvník posune a který obsahuje zvýraznění, když je vybrána oblast.
+Kanál je oblast, přes kterou se pohybuje posuvník a který obsahuje zvýraznění při výběru rozsahu.
 
-##  <a name="getlinesize"></a>  CSliderCtrl::GetLineSize
+##  <a name="getlinesize"></a>Atributu CSliderCtrl:: GetLineSize
 
-Získá velikost řádků pro ovládací prvek posuvník.
+Načte velikost čáry ovládacího prvku posuvníku.
 
 ```
 int GetLineSize() const;
@@ -327,15 +327,15 @@ int GetLineSize() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Velikost řádků pro ovládací prvek posuvník.
+Velikost čáry ovládacího prvku posuvník
 
 ### <a name="remarks"></a>Poznámky
 
-Velikost řádku ovlivňuje, kolik se posuvník posune po TB_LINEUP a TB_LINEDOWN oznámení. Výchozí nastavení pro velikost řádku je 1.
+Velikost čáry má vliv na to, kolik se posuvník pohybuje pro oznámení TB_LINEUP a TB_LINEDOWN. Výchozí nastavení pro velikost řádku je 1.
 
-##  <a name="getnumtics"></a>  CSliderCtrl::GetNumTics
+##  <a name="getnumtics"></a>Atributu CSliderCtrl:: GetNumTics
 
-Získá počet značek v ovládacím prvku posuvník.
+Načte počet značek v ovládacím prvku posuvník.
 
 ```
 UINT GetNumTics() const;
@@ -345,9 +345,9 @@ UINT GetNumTics() const;
 
 Počet značek v ovládacím prvku posuvník.
 
-##  <a name="getpagesize"></a>  CSliderCtrl::GetPageSize
+##  <a name="getpagesize"></a>Atributu CSliderCtrl:: GetPageSize
 
-Získá velikost stránky pro ovládací prvek posuvník.
+Načte velikost stránky ovládacího prvku posuvníku.
 
 ```
 int GetPageSize() const;
@@ -355,15 +355,15 @@ int GetPageSize() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Velikost stránky pro ovládací prvek posuvník.
+Velikost stránky ovládacího prvku posuvník
 
 ### <a name="remarks"></a>Poznámky
 
-Velikost stránky má vliv na tom, kolik se posuvník posune po TB_PAGEUP a TB_PAGEDOWN oznámení.
+Velikost stránky má vliv na to, kolik se posuvník pohybuje pro oznámení TB_PAGEUP a TB_PAGEDOWN.
 
-##  <a name="getpos"></a>  CSliderCtrl::GetPos
+##  <a name="getpos"></a>Atributu CSliderCtrl:: GetPos
 
-Načte aktuální pozice posuvníku v ovládacím prvku posuvník.
+Načte aktuální pozici posuvníku v ovládacím prvku posuvník.
 
 ```
 int GetPos() const;
@@ -373,9 +373,9 @@ int GetPos() const;
 
 Aktuální pozice.
 
-##  <a name="getrange"></a>  CSliderCtrl::GetRange
+##  <a name="getrange"></a>Atributu CSliderCtrl:: GetRange
 
-Získá maximální a minimální pozice pro posuvník v ovládacím prvku posuvník.
+Načte maximální a minimální polohu posuvníku v ovládacím prvku posuvník.
 
 ```
 void GetRange(
@@ -386,18 +386,18 @@ void GetRange(
 ### <a name="parameters"></a>Parametry
 
 *nMin*<br/>
-Odkaz na celé číslo, které přijímá minimální pozici.
+Odkaz na celé číslo, které obdrží minimální pozici.
 
-*nMax*<br/>
+*Nmaximum*<br/>
 Odkaz na celé číslo, které přijímá maximální pozici.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato funkce zkopíruje hodnoty do celých čísel odkazuje *Nminimum* a *Nmaximum*.
+Tato funkce zkopíruje hodnoty do celých čísel, na která odkazují *nminimum* a *nmaximum*.
 
-##  <a name="getrangemax"></a>  CSliderCtrl::GetRangeMax
+##  <a name="getrangemax"></a>Atributu CSliderCtrl:: GetRangeMax
 
-Získá maximální pozici pro posuvník v ovládacím prvku posuvník.
+Načte maximální pozici posuvníku v ovládacím prvku posuvník.
 
 ```
 int GetRangeMax() const;
@@ -405,11 +405,11 @@ int GetRangeMax() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Maximální pozice ovládacího prvku.
+Maximální poloha ovládacího prvku.
 
-##  <a name="getrangemin"></a>  CSliderCtrl::GetRangeMin
+##  <a name="getrangemin"></a>Atributu CSliderCtrl:: GetRangeMin
 
-Získá minimální pozice pro posuvník v ovládacím prvku posuvník.
+Načte minimální pozici posuvníku v ovládacím prvku posuvník.
 
 ```
 int GetRangeMin() const;
@@ -417,11 +417,11 @@ int GetRangeMin() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Minimální pozice ovládacího prvku.
+Minimální poloha ovládacího prvku.
 
-##  <a name="getselection"></a>  CSliderCtrl::GetSelection
+##  <a name="getselection"></a>Atributu CSliderCtrl:: getselect
 
-Získá počáteční a koncové pozice výběru v ovládacím prvku posuvník.
+Načte počáteční a koncovou pozici aktuálního výběru v ovládacím prvku posuvník.
 
 ```
 void GetSelection(
@@ -432,14 +432,14 @@ void GetSelection(
 ### <a name="parameters"></a>Parametry
 
 *nMin*<br/>
-Odkaz na celé číslo, které přijímá počáteční pozici aktuálního výběru.
+Odkaz na celé číslo, které obdrží počáteční pozici aktuálního výběru.
 
-*nMax*<br/>
-Odkaz na celé číslo, které přijímá koncovou pozici aktuálního výběru.
+*Nmaximum*<br/>
+Odkaz na celé číslo, které obdrží koncovou pozici aktuálního výběru.
 
-##  <a name="getthumblength"></a>  CSliderCtrl::GetThumbLength
+##  <a name="getthumblength"></a>Atributu CSliderCtrl:: GetThumbLength
 
-Načte délku jezdce v aktuální ovládací prvek posuvník.
+Načte délku posuvníku v aktuálním ovládacím prvku TrackBar.
 
 ```
 int GetThumbLength() const;
@@ -447,15 +447,15 @@ int GetThumbLength() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Délka posuvník v pixelech.
+Délka posuvníku v pixelech
 
 ### <a name="remarks"></a>Poznámky
 
-Tato metoda odesílá [TBM_GETTHUMBLENGTH](/windows/desktop/Controls/tbm-getthumblength) zprávu, která je popsána v sadě Windows SDK.
+Tato metoda pošle zprávu [TBM_GETTHUMBLENGTH](/windows/win32/Controls/tbm-getthumblength) , která je popsána v Windows SDK.
 
-##  <a name="getthumbrect"></a>  CSliderCtrl::GetThumbRect
+##  <a name="getthumbrect"></a>Atributu CSliderCtrl:: GetThumbRect
 
-Načte velikost a umístění ohraničující rámeček pro posuvník (palce) v ovládacím prvku posuvník.
+Načte velikost a polohu ohraničujícího obdélníku pro posuvník (palec) v ovládacím prvku posuvník.
 
 ```
 void GetThumbRect(LPRECT lprc) const;
@@ -464,11 +464,11 @@ void GetThumbRect(LPRECT lprc) const;
 ### <a name="parameters"></a>Parametry
 
 *lprc*<br/>
-Ukazatel `CRect` objekt, který obsahuje ohraničující obdélník pro posuvník, pokud funkce vrátí.
+Ukazatel na `CRect` objekt, který obsahuje ohraničující obdélník pro posuvník, když funkce vrátí.
 
-##  <a name="gettic"></a>  CSliderCtrl::GetTic
+##  <a name="gettic"></a>Atributu CSliderCtrl:: GetTic
 
-Načte pozici značky zaškrtnutí v ovládacím prvku posuvník.
+Načte pozici osové značky v ovládacím prvku posuvník.
 
 ```
 int GetTic(int nTic) const;
@@ -477,15 +477,15 @@ int GetTic(int nTic) const;
 ### <a name="parameters"></a>Parametry
 
 *nTic*<br/>
-Index založený na nule, identifikace značky zaškrtnutí.
+Index založený na nule pro identifikaci osové značky.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Umístění zadané značky zaškrtnutí nebo - 1, pokud *nTic* neurčuje platný index.
+Pozice zadaného osové značky nebo-1, pokud *nTic* neurčuje platný index.
 
-##  <a name="getticarray"></a>  CSliderCtrl::GetTicArray
+##  <a name="getticarray"></a>Atributu CSliderCtrl:: GetTicArray
 
-Načte adresu pole obsahující podle polohy značek pro ovládací prvek posuvník.
+Načte adresu pole obsahujícího pozice značek pro ovládací prvek posuvníku.
 
 ```
 DWORD* GetTicArray() const;
@@ -493,11 +493,11 @@ DWORD* GetTicArray() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Adresa pole obsahující pozice označit značek pro ovládací prvek posuvník.
+Adresa pole obsahujícího pozice značek pro ovládací prvek posuvník
 
-##  <a name="getticpos"></a>  CSliderCtrl::GetTicPos
+##  <a name="getticpos"></a>Atributu CSliderCtrl:: GetTicPos
 
-Načte aktuální fyzické umístění značky zaškrtnutí v ovládacím prvku posuvník.
+Načte aktuální fyzickou pozici osové značky v ovládacím prvku posuvník.
 
 ```
 int GetTicPos(int nTic) const;
@@ -506,15 +506,15 @@ int GetTicPos(int nTic) const;
 ### <a name="parameters"></a>Parametry
 
 *nTic*<br/>
-Index založený na nule, identifikace značky zaškrtnutí.
+Index založený na nule pro identifikaci osové značky.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Fyzické umístění, v souřadnicích klienta zadané značky zaškrtnutí nebo - 1, pokud *nTic* neurčuje platný index.
+Fyzická pozice v souřadnicích klienta zadaného osové značky nebo-1, pokud *nTic* neurčuje platný index.
 
 ##  <a name="gettooltips"></a>  CSliderCtrl::GetToolTips
 
-Načte popisovač pro ovládací prvek tooltip přiřazenou ovládacímu prvku posuvník, pokud existuje.
+Načte popisovač k ovládacímu prvku ToolTip přiřazenému ovládacímu prvku posuvník, pokud existuje.
 
 ```
 CToolTipCtrl* GetToolTips() const;
@@ -522,17 +522,17 @@ CToolTipCtrl* GetToolTips() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Ukazatel [CToolTipCtrl](../../mfc/reference/ctooltipctrl-class.md) objektu, nebo hodnota NULL, pokud popisy nejsou používány. Pokud v ovládacím prvku posuvník nepoužívá TBS_TOOLTIPS styl, vrácená hodnota je NULL.
+Ukazatel na objekt [CToolTipCtrl](../../mfc/reference/ctooltipctrl-class.md) nebo hodnotu null, pokud se popisy tlačítek nepoužívají. Pokud ovládací prvek posuvník nepoužívá styl TBS_TOOLTIPS, vrácená hodnota je NULL.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato členská funkce implementuje chování zprávy Win32 [TBM_GETTOOLTIPS](/windows/desktop/Controls/tbm-gettooltips), jak je popsáno v sadě Windows SDK. Všimněte si, že tato členská funkce vrátí `CToolTipCtrl` objektu namísto popisovač do ovládacího prvku.
+Tato členská funkce implementuje chování zprávy Win32 [TBM_GETTOOLTIPS](/windows/win32/Controls/tbm-gettooltips), jak je popsáno v Windows SDK. Všimněte si, že tato členská `CToolTipCtrl` funkce vrátí objekt namísto popisovače ovládacího prvku.
 
-Popis posuvník – styly ovládacího prvku, naleznete v tématu [– styly ovládacího prvku Trackbar](/windows/desktop/Controls/trackbar-control-styles) v sadě Windows SDK.
+Popis stylů ovládacího prvku posuvník naleznete v tématu [styly ovládacího prvku TrackBar](/windows/win32/Controls/trackbar-control-styles) v Windows SDK.
 
-##  <a name="setbuddy"></a>  CSliderCtrl::SetBuddy
+##  <a name="setbuddy"></a>Atributu CSliderCtrl:: SetBuddy
 
-Přiřadí časové období jako asociovaného okna pro ovládací prvek posuvník.
+Přiřadí okno jako kamarád okno pro ovládací prvek posuvníku.
 
 ```
 CWnd* SetBuddy(
@@ -543,28 +543,28 @@ CWnd* SetBuddy(
 ### <a name="parameters"></a>Parametry
 
 *pWndBuddy*<br/>
-Ukazatel `CWnd` objekt, který bude nastaven jako přítel v ovládacím prvku posuvník.
+Ukazatel na `CWnd` objekt, který bude nastaven jako přítel ovládacího prvku posuvník.
 
 *fLocation*<br/>
-Hodnota, která určuje umístění, kam chcete-li zobrazit asociované okno. Tato hodnota může být jedna z následujících akcí:
+Hodnota určující umístění, ve kterém se má zobrazit okno kamaráda Tato hodnota může být jedna z následujících:
 
-- TRUE buddy se zobrazí nalevo od objektu trackbar Pokud ovládací prvek posuvník používá TBS_HORZ style. Používá-li pozice TBS_VERT styl, se zobrazí buddy nad ovládací prvek posuvník.
+- TRUE, pokud ovládací prvek TrackBar používá styl TBS_HORZ, zobrazí se vlevo od TrackBar. Pokud TrackBar používá styl TBS_VERT, zobrazí se kamarád nad ovládacím prvkem TrackBar.
 
-- FALSE buddy se zobrazí napravo od objektu trackbar Pokud ovládací prvek posuvník používá TBS_HORZ styl. Pokud objektu trackbar používá TBS_VERT styl, se zobrazí pod TrackBar – ovládací prvek kamaráda.
+- Hodnota FALSE – kamarád se zobrazí napravo od TrackBar, pokud ovládací prvek TrackBar používá styl TBS_HORZ. Pokud TrackBar používá styl TBS_VERT, zobrazí se kamarád pod ovládacím prvkem TrackBar.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Ukazatel [CWnd](../../mfc/reference/cwnd-class.md) objektu, který byl dříve přiřazen do ovládacího prvku jezdec na tomto místě.
+Ukazatel na objekt [CWnd](../../mfc/reference/cwnd-class.md) , který byl dříve přiřazen k ovládacímu prvku posuvník v daném umístění.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato členská funkce implementuje chování zprávy Win32 [TBM_SETBUDDY](/windows/desktop/Controls/tbm-setbuddy), jak je popsáno v sadě Windows SDK. Všimněte si, že tato členská funkce používá ukazatele na `CWnd` objekty, nikoli úchyty okna pro jeho návratovou hodnotu a parametr.
+Tato členská funkce implementuje chování zprávy Win32 [TBM_SETBUDDY](/windows/win32/Controls/tbm-setbuddy), jak je popsáno v Windows SDK. Všimněte si, že tato členská funkce používá `CWnd` ukazatele na objekty spíše než popisovače okna pro návratovou hodnotu a parametr.
 
-Popis posuvník – styly ovládacího prvku, naleznete v tématu [– styly ovládacího prvku Trackbar](/windows/desktop/Controls/trackbar-control-styles) v sadě Windows SDK.
+Popis stylů ovládacího prvku posuvník naleznete v tématu [styly ovládacího prvku TrackBar](/windows/win32/Controls/trackbar-control-styles) v Windows SDK.
 
-##  <a name="setlinesize"></a>  CSliderCtrl::SetLineSize
+##  <a name="setlinesize"></a>Atributu CSliderCtrl:: SetLineSize
 
-Nastaví velikost čáry pro ovládací prvek posuvník.
+Nastaví velikost čáry ovládacího prvku posuvník.
 
 ```
 int SetLineSize(int nSize);
@@ -573,19 +573,19 @@ int SetLineSize(int nSize);
 ### <a name="parameters"></a>Parametry
 
 *nSize*<br/>
-Novou velikost řádku v ovládacím prvku posuvník.
+Nová velikost řádku ovládacího prvku posuvník
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Původní velikost řádku.
+Velikost předchozího řádku.
 
 ### <a name="remarks"></a>Poznámky
 
-Velikost řádku ovlivňuje, kolik se posuvník posune po TB_LINEUP a TB_LINEDOWN oznámení.
+Velikost čáry má vliv na to, kolik se posuvník pohybuje pro oznámení TB_LINEUP a TB_LINEDOWN.
 
-##  <a name="setpagesize"></a>  CSliderCtrl::SetPageSize
+##  <a name="setpagesize"></a>Atributu CSliderCtrl:: SetPageSize
 
-Nastaví velikost stránky pro ovládací prvek posuvník.
+Nastaví velikost stránky ovládacího prvku posuvníku.
 
 ```
 int SetPageSize(int nSize);
@@ -594,19 +594,19 @@ int SetPageSize(int nSize);
 ### <a name="parameters"></a>Parametry
 
 *nSize*<br/>
-Nové velikosti stránky v ovládacím prvku posuvník.
+Nová velikost stránky ovládacího prvku posuvník
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Velikost předchozí stránky.
+Velikost předchozí stránky
 
 ### <a name="remarks"></a>Poznámky
 
-Velikost stránky má vliv na tom, kolik se posuvník posune po TB_PAGEUP a TB_PAGEDOWN oznámení.
+Velikost stránky má vliv na to, kolik se posuvník pohybuje pro oznámení TB_PAGEUP a TB_PAGEDOWN.
 
-##  <a name="setpos"></a>  CSliderCtrl::SetPos
+##  <a name="setpos"></a>Atributu CSliderCtrl:: SetPos
 
-Nastaví aktuální pozice posuvníku v ovládacím prvku posuvník.
+Nastaví aktuální pozici posuvníku v ovládacím prvku posuvník.
 
 ```
 void SetPos(int nPos);
@@ -615,11 +615,11 @@ void SetPos(int nPos);
 ### <a name="parameters"></a>Parametry
 
 *nPos*<br/>
-Určuje nové pozice posuvníku.
+Určuje novou pozici posuvníku.
 
-##  <a name="setrange"></a>  CSliderCtrl::SetRange
+##  <a name="setrange"></a>Atributu CSliderCtrl:: SetRange
 
-Nastaví rozsah (minimální a maximální pozic) pro posuvník v ovládacím prvku posuvník.
+Nastaví rozsah (minimální a maximální umístění) posuvníku v ovládacím prvku posuvník.
 
 ```
 void SetRange(
@@ -631,17 +631,17 @@ void SetRange(
 ### <a name="parameters"></a>Parametry
 
 *nMin*<br/>
-Minimální pozice pro posuvník.
+Minimální poloha posuvníku
 
-*nMax*<br/>
-Maximální pozici pro posuvník.
+*Nmaximum*<br/>
+Maximální poloha posuvníku
 
 *bRedraw*<br/>
-Příznak redraw. Pokud tento parametr má hodnotu TRUE, je po je nastaven rozsah; překreslení posuvníku v opačném případě se měl překreslit posuvníku.
+Příznak překreslení. Pokud má tento parametr hodnotu TRUE, je po nastavení rozsahu posuvník překreslen. v opačném případě se posuvník nepřekreslí.
 
-##  <a name="setrangemax"></a>  CSliderCtrl::SetRangeMax
+##  <a name="setrangemax"></a>Atributu CSliderCtrl:: SetRangeMax
 
-Nastaví maximální rozsah pro posuvník v ovládacím prvku posuvník.
+Nastaví maximální rozsah posuvníku v ovládacím prvku posuvník.
 
 ```
 void SetRangeMax(
@@ -651,15 +651,15 @@ void SetRangeMax(
 
 ### <a name="parameters"></a>Parametry
 
-*nMax*<br/>
-Maximální pozici pro posuvník.
+*Nmaximum*<br/>
+Maximální poloha posuvníku
 
 *bRedraw*<br/>
-Příznak redraw. Pokud tento parametr má hodnotu TRUE, je po je nastaven rozsah; překreslení posuvníku v opačném případě se měl překreslit posuvníku.
+Příznak překreslení. Pokud má tento parametr hodnotu TRUE, je po nastavení rozsahu posuvník překreslen. v opačném případě se posuvník nepřekreslí.
 
-##  <a name="setrangemin"></a>  CSliderCtrl::SetRangeMin
+##  <a name="setrangemin"></a>Atributu CSliderCtrl:: SetRangeMin
 
-Nastaví minimální rozsah pro posuvník v ovládacím prvku posuvník.
+Nastaví minimální rozsah posuvníku v ovládacím prvku posuvník.
 
 ```
 void SetRangeMin(
@@ -670,14 +670,14 @@ void SetRangeMin(
 ### <a name="parameters"></a>Parametry
 
 *nMin*<br/>
-Minimální pozice pro posuvník.
+Minimální poloha posuvníku
 
 *bRedraw*<br/>
-Příznak redraw. Pokud tento parametr má hodnotu TRUE, je po je nastaven rozsah; překreslení posuvníku v opačném případě se měl překreslit posuvníku.
+Příznak překreslení. Pokud má tento parametr hodnotu TRUE, je po nastavení rozsahu posuvník překreslen. v opačném případě se posuvník nepřekreslí.
 
-##  <a name="setselection"></a>  CSliderCtrl::SetSelection
+##  <a name="setselection"></a>Atributu CSliderCtrl:: SetSelection
 
-Nastaví počáteční a koncová pozice pro aktuální výběr v ovládacím prvku posuvník.
+Nastaví počáteční a koncovou pozici pro aktuální výběr v ovládacím prvku posuvník.
 
 ```
 void SetSelection(
@@ -688,14 +688,14 @@ void SetSelection(
 ### <a name="parameters"></a>Parametry
 
 *nMin*<br/>
-Počáteční pozice pro posuvník.
+Počáteční pozice posuvníku
 
-*nMax*<br/>
-Koncová pozice posuvníku.
+*Nmaximum*<br/>
+Koncová pozice posuvníku
 
-##  <a name="setthumblength"></a>  CSliderCtrl::SetThumbLength
+##  <a name="setthumblength"></a>Atributu CSliderCtrl:: SetThumbLength
 
-Nastaví délku posuvník v aktuální ovládací prvek posuvník.
+Nastaví délku posuvníku v aktuálním ovládacím prvku TrackBar.
 
 ```
 void SetThumbLength(int nLength);
@@ -705,29 +705,29 @@ void SetThumbLength(int nLength);
 
 |Parametr|Popis|
 |---------------|-----------------|
-|*nLength*|[in] Délka posuvník v pixelech.|
+|*nLength*|pro Délka posuvníku v pixelech|
 
 ### <a name="remarks"></a>Poznámky
 
-Tato metoda vyžaduje, aby ovládací prvek posuvník nastavena na [TBS_FIXEDLENGTH](/windows/desktop/Controls/trackbar-control-styles) style.
+Tato metoda vyžaduje, aby byl ovládací prvek TrackBar nastaven na hodnotu [TBS_FIXEDLENGTH](/windows/win32/Controls/trackbar-control-styles) Style.
 
-Tato metoda odesílá [TBM_SETTHUMBLENGTH](/windows/desktop/Controls/tbm-setthumblength) zprávu, která je popsána v sadě Windows SDK.
+Tato metoda pošle zprávu [TBM_SETTHUMBLENGTH](/windows/win32/Controls/tbm-setthumblength) , která je popsána v Windows SDK.
 
 ### <a name="example"></a>Příklad
 
-Následující příklad kódu definuje proměnnou, `m_sliderCtrl`, která je pro přístup k aktuálnímu ovládacímu prvku trackbar. Příklad také definuje proměnnou, `thumbLength`, která je používá k ukládání délka výchozí TrackBar – ovládací prvek thumb součásti. Tyto proměnné se používají v dalším příkladu.
+Následující příklad kódu definuje proměnnou, `m_sliderCtrl`která se používá pro přístup k aktuálnímu ovládacímu prvku TrackBar. Příklad také definuje proměnnou, `thumbLength`která se používá k uložení výchozí délky komponenty TrackBar ovládacího prvku. Tyto proměnné jsou používány v následujícím příkladu.
 
 [!code-cpp[NVC_MFC_CSliderCtrl_s1#1](../../mfc/reference/codesnippet/cpp/csliderctrl-class_1.h)]
 
 ### <a name="example"></a>Příklad
 
-Následující příklad kódu nastaví TrackBar – ovládací prvek thumb komponenty dvakrát jeho výchozí hodnotu.
+Následující příklad kódu nastaví komponentu pro palec ovládacího prvku TrackBar na dvojnásobek výchozí délky.
 
 [!code-cpp[NVC_MFC_CSliderCtrl_s1#2](../../mfc/reference/codesnippet/cpp/csliderctrl-class_2.cpp)]
 
-##  <a name="settic"></a>  CSliderCtrl::SetTic
+##  <a name="settic"></a>Atributu CSliderCtrl:: SetTic
 
-Nastaví pozici značky zaškrtnutí v ovládacím prvku posuvník.
+Nastaví pozici osové značky v ovládacím prvku posuvník.
 
 ```
 BOOL SetTic(int nTic);
@@ -736,15 +736,15 @@ BOOL SetTic(int nTic);
 ### <a name="parameters"></a>Parametry
 
 *nTic*<br/>
-Pozice značky zaškrtnutí. Tento parametr zadejte kladnou hodnotu.
+Pozice osové značky. Tento parametr musí určovat kladnou hodnotu.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Nenulové, pokud je nastavení značky zaškrtnutí; jinak 0.
+Nenulové, pokud je značka zaškrtnutí nastavena; v opačném případě 0.
 
-##  <a name="setticfreq"></a>  CSliderCtrl::SetTicFreq
+##  <a name="setticfreq"></a>Atributu CSliderCtrl:: SetTicFreq
 
-Nastaví frekvenci, s kterou značek se zobrazují značky posuvníku.
+Nastaví četnost, se kterou se budou zobrazovat osové značky v posuvníku.
 
 ```
 void SetTicFreq(int nFreq);
@@ -753,17 +753,17 @@ void SetTicFreq(int nFreq);
 ### <a name="parameters"></a>Parametry
 
 *nFreq*<br/>
-Frekvence osové značky.
+Frekvence značek.
 
 ### <a name="remarks"></a>Poznámky
 
-Například pokud frekvence je nastavená na 2, zobrazí se pro každý další přírůstek v posuvníku rozsahu značky zaškrtnutí. Výchozí nastavení je frekvence 1 (to znamená, že každý přírůstek v rozsahu souvisí se značkou zaškrtnutí).
+Například pokud je frekvence nastavená na hodnotu 2, zobrazí se značka zaškrtnutí pro každé další zvýšení v rozsahu posuvníku. Výchozí nastavení frekvence je 1 (to znamená, že každý přírůstek v rozsahu je přidružen k značce Tick).
 
-Je nutné vytvořit ovládací prvek se stylem TBS_AUTOTICKS použití této funkce. Další informace najdete v tématu [CSliderCtrl::Create](#create).
+Pro použití této funkce je nutné vytvořit ovládací prvek se stylem TBS_AUTOTICKS. Další informace naleznete v tématu [atributu CSliderCtrl:: Create](#create).
 
-##  <a name="settipside"></a>  CSliderCtrl::SetTipSide
+##  <a name="settipside"></a>Atributu CSliderCtrl:: SetTipSide
 
-Pozice ovládacího prvku tooltip používané TrackBar – ovládací prvek.
+Umístí ovládací prvek ToolTip, který používá ovládací prvek TrackBar.
 
 ```
 int SetTipSide(int nLocation);
@@ -771,20 +771,20 @@ int SetTipSide(int nLocation);
 
 ### <a name="parameters"></a>Parametry
 
-*nLocation*<br/>
-Hodnota představující umístění, kam chcete-li zobrazit ovládací prvek tooltip. Seznam možných hodnot, zobrazí zpráva Win32 [TBM_SETTIPSIDE](/windows/desktop/Controls/tbm-settipside), jak je popsáno v sadě Windows SDK.
+*Numístění*<br/>
+Hodnota představující umístění, kde se má zobrazit ovládací prvek ToolTip Seznam možných hodnot naleznete v [TBM_SETTIPSIDE](/windows/win32/Controls/tbm-settipside)zprávy Win32, jak je popsáno v Windows SDK.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Hodnota, která představuje ovládací prvek tooltip předchozí umístění. Návratová hodnota se rovná jednu z možných hodnot pro *Numístění*.
+Hodnota, která představuje předchozí umístění ovládacího prvku ToolTip. Vrácená hodnota se rovná jedné z možných hodnot pro *numístění*.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato členská funkce implementuje chování zprávy Win32 TBM_SETTIPSIDE, jak je popsáno v sadě Windows SDK. Ovládacích prvků posuvník, které používají styl TBS_TOOLTIPS zobrazit popisy tlačítek. Popis posuvník – styly ovládacího prvku, naleznete v tématu [– styly ovládacího prvku Trackbar](/windows/desktop/Controls/trackbar-control-styles) v sadě Windows SDK.
+Tato členská funkce implementuje chování zprávy Win32 TBM_SETTIPSIDE, jak je popsáno v Windows SDK. Ovládací prvky posuvníku, které používají popisy zobrazení ve stylu TBS_TOOLTIPS Popis stylů ovládacího prvku posuvník naleznete v tématu [styly ovládacího prvku TrackBar](/windows/win32/Controls/trackbar-control-styles) v Windows SDK.
 
-##  <a name="settooltips"></a>  CSliderCtrl::SetToolTips
+##  <a name="settooltips"></a>Atributu CSliderCtrl:: SetToolTips
 
-ToolTip – ovládací prvek přiřadí ovládacím prvku posuvník.
+Přiřadí ovládacímu prvku posuvníku ovládací prvek ToolTip.
 
 ```
 void SetToolTips(CToolTipCtrl* pWndTip);
@@ -793,15 +793,15 @@ void SetToolTips(CToolTipCtrl* pWndTip);
 ### <a name="parameters"></a>Parametry
 
 *pWndTip*<br/>
-Ukazatel [CToolTipCtrl](../../mfc/reference/ctooltipctrl-class.md) objekt, který obsahuje popisy tlačítek pro použití s ovládacím prvkem posuvníku.
+Ukazatel na objekt [CToolTipCtrl](../../mfc/reference/ctooltipctrl-class.md) obsahující popisy tlačítek, které mají být použity s ovládacím prvkem posuvník.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato členská funkce implementuje chování zprávy Win32 [TBM_SETTOOLTIPS](/windows/desktop/Controls/tbm-settooltips), jak je popsáno v sadě Windows SDK. Když se stylem TBS_TOOLTIPS ovládacím prvku posuvník, vytvoří ovládací prvek výchozí popisek, který se zobrazí vedle jezdce, zobrazení aktuální pozice posuvníku. Popis posuvník – styly ovládacího prvku, naleznete v tématu [– styly ovládacího prvku Trackbar](/windows/desktop/Controls/trackbar-control-styles) v sadě Windows SDK.
+Tato členská funkce implementuje chování zprávy Win32 [TBM_SETTOOLTIPS](/windows/win32/Controls/tbm-settooltips), jak je popsáno v Windows SDK. Když se vytvoří ovládací prvek posuvníku se stylem TBS_TOOLTIPS, vytvoří se výchozí ovládací prvek ToolTip, který se zobrazí vedle posuvníku, a zobrazí se aktuální pozice posuvníku. Popis stylů ovládacího prvku posuvník naleznete v tématu [styly ovládacího prvku TrackBar](/windows/win32/Controls/trackbar-control-styles) v Windows SDK.
 
 ## <a name="see-also"></a>Viz také:
 
-[Ukázka CMNCTRL2 knihovny MFC](../../overview/visual-cpp-samples.md)<br/>
+[CMNCTRL2 Sample MFC](../../overview/visual-cpp-samples.md)<br/>
 [CWnd – třída](../../mfc/reference/cwnd-class.md)<br/>
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>
 [CProgressCtrl – třída](../../mfc/reference/cprogressctrl-class.md)

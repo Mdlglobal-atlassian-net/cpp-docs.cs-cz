@@ -24,16 +24,16 @@ helpviewer_keywords:
 - COleChangeSourceDialog [MFC], IsValidSource
 - COleChangeSourceDialog [MFC], m_cs
 ms.assetid: d0e08be7-21ef-45e1-97af-fe27d99e3bac
-ms.openlocfilehash: 1d118b132fc110402967e9c7f2b1d74a2164d7c8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 239d7eed89796f414a7665b203ca50fafec51277
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62399717"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69504388"
 ---
 # <a name="colechangesourcedialog-class"></a>COleChangeSourceDialog Class
 
-Používá se pro dialogové okno změny zdroje OLE.
+Používá se pro dialogové okno Změnit zdroj OLE.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -45,39 +45,39 @@ class COleChangeSourceDialog : public COleDialog
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
-|[COleChangeSourceDialog::COleChangeSourceDialog](#colechangesourcedialog)|Vytvoří `COleChangeSourceDialog` objektu.|
+|[COleChangeSourceDialog::COleChangeSourceDialog](#colechangesourcedialog)|`COleChangeSourceDialog` Vytvoří objekt.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
-|[COleChangeSourceDialog::DoModal](#domodal)|Zobrazí dialogové okno změny zdroje OLE.|
-|[COleChangeSourceDialog::GetDisplayName](#getdisplayname)|Získá úplný zdrojový zobrazovaný název.|
-|[COleChangeSourceDialog::GetFileName](#getfilename)|Získá název souboru z název zdroje.|
-|[COleChangeSourceDialog::GetFromPrefix](#getfromprefix)|Získá předponu předchozí zdroje.|
-|[COleChangeSourceDialog::GetItemName](#getitemname)|Získá název položky z název zdroje.|
-|[COleChangeSourceDialog::GetToPrefix](#gettoprefix)|Získá předponu nový zdroj|
-|[COleChangeSourceDialog::IsValidSource](#isvalidsource)|Určuje, zda je platný zdroj.|
+|[COleChangeSourceDialog::DoModal](#domodal)|Zobrazí dialogové okno Změnit zdroj OLE.|
+|[COleChangeSourceDialog::GetDisplayName](#getdisplayname)|Získá úplný zobrazovaný název zdroje.|
+|[COleChangeSourceDialog::GetFileName](#getfilename)|Získá název souboru ze zdrojového názvu.|
+|[COleChangeSourceDialog::GetFromPrefix](#getfromprefix)|Získá předponu předchozího zdroje.|
+|[COleChangeSourceDialog::GetItemName](#getitemname)|Získá název položky ze zdrojového názvu.|
+|[COleChangeSourceDialog::GetToPrefix](#gettoprefix)|Získá předponu nového zdroje.|
+|[COleChangeSourceDialog::IsValidSource](#isvalidsource)|Určuje, zda je zdroj platný.|
 
 ### <a name="public-data-members"></a>Veřejné datové členy
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[COleChangeSourceDialog::m_cs](#m_cs)|Struktura, která řídí chování dialogového okna.|
 
 ## <a name="remarks"></a>Poznámky
 
-Vytvoření objektu třídy `COleChangeSourceDialog` kdy chcete volat dialogovému oknu. Po `COleChangeSourceDialog` objekt byl vytvořen, můžete použít [m_cs](#m_cs) struktury k inicializaci hodnoty nebo stavy ovládacích prvků v dialogovém okně. `m_cs` Struktury je typu [OLEUICHANGESOURCE](/windows/desktop/api/oledlg/ns-oledlg-tagoleuichangesourcea). Další informace o použití této třídy dialogového okna, najdete v článku [DoModal](#domodal) členskou funkci.
+Vytvořte objekt třídy `COleChangeSourceDialog` , pokud chcete zavolat toto dialogové okno. Po vytvoření `COleChangeSourceDialog` objektu lze pomocí struktury [m_cs](#m_cs) inicializovat hodnoty nebo stavy ovládacích prvků v dialogovém okně. Struktura je typu OLEUICHANGESOURCE. [](/windows/win32/api/oledlg/ns-oledlg-oleuichangesourcew) `m_cs` Další informace o použití této třídy dialogového okna naleznete v tématu členská funkce [DoModal](#domodal) .
 
-Další informace najdete v tématu [OLEUICHANGESOURCE](/windows/desktop/api/oledlg/ns-oledlg-tagoleuichangesourcea) struktura v sadě Windows SDK.
+Další informace najdete v tématu struktura [OLEUICHANGESOURCE](/windows/win32/api/oledlg/ns-oledlg-oleuichangesourcew) v Windows SDK.
 
-Další informace o dialogových oknech OLE konkrétní, najdete v článku [dialogová okna v prostředí OLE](../../mfc/dialog-boxes-in-ole.md).
+Další informace o dialogových oknech specifických pro OLE naleznete v dialogových oknech článku [v tématu OLE](../../mfc/dialog-boxes-in-ole.md).
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
-[Třídy CObject](../../mfc/reference/cobject-class.md)
+[CObject](../../mfc/reference/cobject-class.md)
 
 [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)
 
@@ -93,11 +93,11 @@ Další informace o dialogových oknech OLE konkrétní, najdete v článku [dia
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** afxodlgs.h
+**Záhlaví:** afxodlgs. h
 
-##  <a name="colechangesourcedialog"></a>  COleChangeSourceDialog::COleChangeSourceDialog
+##  <a name="colechangesourcedialog"></a>COleChangeSourceDialog::COleChangeSourceDialog
 
-Tato funkce vytvoří `COleChangeSourceDialog` objektu.
+Tato funkce vytvoří `COleChangeSourceDialog` objekt.
 
 ```
 explicit COleChangeSourceDialog(
@@ -108,20 +108,20 @@ explicit COleChangeSourceDialog(
 ### <a name="parameters"></a>Parametry
 
 *pItem*<br/>
-Ukazatel na propojený [COleClientItem](../../mfc/reference/coleclientitem-class.md) jejichž zdrojem je potřeba aktualizovat.
+Ukazatel na propojenou [COleClientItem](../../mfc/reference/coleclientitem-class.md) , jejíž zdroj se má aktualizovat.
 
 *pParentWnd*<br/>
-Odkazuje na objekt okna nadřazené nebo vlastník (typu `CWnd`), ke které patří objektu dialogového okna. Pokud je hodnota NULL, nastaví se nadřazené okno dialogového okna do hlavního okna aplikace.
+Odkazuje na objekt okna nadřazeného objektu nebo vlastníka (typu `CWnd`), do kterého objekt dialogového okna patří. Pokud má hodnotu NULL, nadřazené okno dialogového okna bude nastaveno na hlavní okno aplikace.
 
 ### <a name="remarks"></a>Poznámky
 
-Chcete-li zobrazit dialogové okno, zavolejte [DoModal](#domodal) funkce.
+Chcete-li zobrazit dialogové okno, zavolejte funkci [DoModal](#domodal) .
 
-Další informace najdete v tématu [OLEUICHANGESOURCE](/windows/desktop/api/oledlg/ns-oledlg-tagoleuichangesourcea) strukturu a [OleUIChangeSource](/windows/desktop/api/oledlg/nf-oledlg-oleuichangesourcea) funkce v sadě Windows SDK.
+Další informace najdete v tématu struktura [OLEUICHANGESOURCE](/windows/win32/api/oledlg/ns-oledlg-oleuichangesourcew) a funkce [OLEUICHANGESOURCE](/windows/win32/api/oledlg/nf-oledlg-oleuichangesourcew) v Windows SDK.
 
 ##  <a name="domodal"></a>  COleChangeSourceDialog::DoModal
 
-Voláním této funkce Zobrazit dialogové okno změny zdroje OLE.
+Voláním této funkce zobrazíte dialogové okno Změnit zdroj OLE.
 
 ```
 virtual INT_PTR DoModal();
@@ -129,29 +129,29 @@ virtual INT_PTR DoModal();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Stav dokončení pro dialogové okno. Jeden z následujících hodnot:
+Stav dokončení dialogového okna Jedna z následujících hodnot:
 
-- IDOK, pokud úspěšně zobrazí dialogové okno.
+- IDOK, pokud se dialogové okno úspěšně zobrazilo.
 
 - IDCANCEL, pokud uživatel zrušil dialogové okno.
 
-- IDABORT, pokud došlo k chybě. Pokud je vrácena IDABORT, zavolejte [COleDialog::GetLastError](../../mfc/reference/coledialog-class.md#getlasterror) členská funkce, chcete-li získat další informace o typu chyby, ke které došlo. Seznam možných chyb, najdete v článku [OleUIChangeSource](/windows/desktop/api/oledlg/nf-oledlg-oleuichangesourcea) funkce v sadě Windows SDK.
+- IDABORT, pokud došlo k chybě. Je-li vrácen IDABORT, zavolejte členskou funkci [COleDialog:: GetLastError](../../mfc/reference/coledialog-class.md#getlasterror) , kde získáte další informace o typu chyby, ke které došlo. Seznam možných chyb naleznete v tématu funkce [OLEUICHANGESOURCE](/windows/win32/api/oledlg/nf-oledlg-oleuichangesourcew) v Windows SDK.
 
 ### <a name="remarks"></a>Poznámky
 
-Pokud chcete inicializovat různé ovládací prvky dialogového okna pole tak, že nastavíte členy [m_cs](#m_cs) strukturu, je potřeba to udělat před voláním `DoModal`, ale po vytvoření objektu dialogového okna.
+Pokud chcete inicializovat různé ovládací prvky dialogového okna nastavením členů struktury [m_cs](#m_cs) , měli byste to provést před voláním `DoModal`, ale po sestavení objektu dialogového okna.
 
-Pokud `DoModal` vrátí IDOK, můžete volat členské funkce k načtení nastavení zadaný uživatelem nebo informace z dialogového okna. Následující seznam uvádí typické dotazu funkce:
+Pokud `DoModal` vrátí IDOK, můžete volat členské funkce pro načtení nastavení nebo informací zadaných uživatelem z dialogového okna. Následující seznam uvádí typické funkce dotazů:
 
 - [GetFileName](#getfilename)
 
 - [GetDisplayName](#getdisplayname)
 
-- [GetItemName](#getitemname)
+- [GetItem](#getitemname)
 
-##  <a name="getdisplayname"></a>  COleChangeSourceDialog::GetDisplayName
+##  <a name="getdisplayname"></a>COleChangeSourceDialog:: GetDisplayName
 
-Volání této funkce načtete úplný zobrazovaný název pro položku propojenou klienta.
+Voláním této funkce načtete celé zobrazované jméno pro propojenou položku klienta.
 
 ```
 CString GetDisplayName();
@@ -159,11 +159,11 @@ CString GetDisplayName();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Úplný zdrojový zobrazovaný název (moniker) [COleClientItem](../../mfc/reference/coleclientitem-class.md) zadaný v konstruktoru.
+Úplný zobrazovaný název zdroje (moniker) pro [COleClientItem](../../mfc/reference/coleclientitem-class.md) zadaný v konstruktoru.
 
-##  <a name="getfilename"></a>  COleChangeSourceDialog::GetFileName
+##  <a name="getfilename"></a>COleChangeSourceDialog:: getsoubor
 
-Volání této funkce načtete soubor moniker část zobrazovaného názvu pro položku propojenou klienta.
+Voláním této funkce načtete část monikeru souboru zobrazovaného názvu pro propojenou položku klienta.
 
 ```
 CString GetFileName();
@@ -171,13 +171,13 @@ CString GetFileName();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Část zobrazovaný název zdrojového souboru moniker [COleClientItem](../../mfc/reference/coleclientitem-class.md) zadaný v konstruktoru.
+Část monikeru souboru zdrojového zobrazovaného názvu pro [COleClientItem](../../mfc/reference/coleclientitem-class.md) určenou v konstruktoru.
 
 ### <a name="remarks"></a>Poznámky
 
-Zástupný název souboru spolu s zástupný název položky poskytuje úplný zobrazovaný název.
+Moniker souboru spolu s monikerem položky poskytuje kompletní zobrazované jméno.
 
-##  <a name="getfromprefix"></a>  COleChangeSourceDialog::GetFromPrefix
+##  <a name="getfromprefix"></a>COleChangeSourceDialog::GetFromPrefix
 
 Voláním této funkce získáte předchozí řetězec předpony pro zdroj.
 
@@ -187,19 +187,19 @@ CString GetFromPrefix();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Předchozí předpona řetězce zdroje.
+Předchozí řetězec předpony zdroje.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato funkce až po volání [DoModal](#domodal) vrátí IDOK.
+Tuto funkci volejte až po [DoModal](#domodal) vrátí IDOK.
 
-Tato hodnota pochází přímo z `lpszFrom` člena [OLEUICHANGESOURCE](/windows/desktop/api/oledlg/ns-oledlg-tagoleuichangesourcea) struktury.
+Tato hodnota přichází přímo od `lpszFrom` členu struktury [OLEUICHANGESOURCE](/windows/win32/api/oledlg/ns-oledlg-oleuichangesourcew) .
 
-Další informace najdete v tématu [OLEUICHANGESOURCE](/windows/desktop/api/oledlg/ns-oledlg-tagoleuichangesourcea) struktura v sadě Windows SDK.
+Další informace najdete v tématu struktura [OLEUICHANGESOURCE](/windows/win32/api/oledlg/ns-oledlg-oleuichangesourcew) v Windows SDK.
 
-##  <a name="getitemname"></a>  COleChangeSourceDialog::GetItemName
+##  <a name="getitemname"></a>COleChangeSourceDialog:: GetItem
 
-Volání této funkce načtete zástupný název položky část zobrazovaného názvu pro položku propojenou klienta.
+Voláním této funkce načteme část monikeru položky zobrazovaného názvu pro propojenou položku klienta.
 
 ```
 CString GetItemName();
@@ -207,15 +207,15 @@ CString GetItemName();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Zástupný název položky část zobrazovaný název zdroje [COleClientItem](../../mfc/reference/coleclientitem-class.md) zadaný v konstruktoru.
+Část monikeru položky zdrojového zobrazovaného názvu pro [COleClientItem](../../mfc/reference/coleclientitem-class.md) určenou v konstruktoru.
 
 ### <a name="remarks"></a>Poznámky
 
-Zástupný název souboru spolu s zástupný název položky poskytuje úplný zobrazovaný název.
+Moniker souboru spolu s monikerem položky poskytuje kompletní zobrazované jméno.
 
-##  <a name="gettoprefix"></a>  COleChangeSourceDialog::GetToPrefix
+##  <a name="gettoprefix"></a>COleChangeSourceDialog::GetToPrefix
 
-Volání této funkce získáte nový řetězec předpony pro zdroj.
+Voláním této funkce získáte nový řetězec předpony pro zdroj.
 
 ```
 CString GetToPrefix();
@@ -227,15 +227,15 @@ Nový řetězec předpony zdroje.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato funkce až po volání [DoModal](#domodal) vrátí IDOK.
+Tuto funkci volejte až po [DoModal](#domodal) vrátí IDOK.
 
-Tato hodnota pochází přímo z `lpszTo` člena [OLEUICHANGESOURCE](/windows/desktop/api/oledlg/ns-oledlg-tagoleuichangesourcea) struktury.
+Tato hodnota přichází přímo od `lpszTo` členu struktury [OLEUICHANGESOURCE](/windows/win32/api/oledlg/ns-oledlg-oleuichangesourcew) .
 
-Další informace najdete v tématu [OLEUICHANGESOURCE](/windows/desktop/api/oledlg/ns-oledlg-tagoleuichangesourcea) struktura v sadě Windows SDK.
+Další informace najdete v tématu struktura [OLEUICHANGESOURCE](/windows/win32/api/oledlg/ns-oledlg-oleuichangesourcew) v Windows SDK.
 
 ##  <a name="m_cs"></a>  COleChangeSourceDialog::m_cs
 
-Tento datový člen je struktura typu [OLEUICHANGESOURCE](/windows/desktop/api/oledlg/ns-oledlg-tagoleuichangesourcea).
+Tento datový člen je strukturou typu [OLEUICHANGESOURCE](/windows/win32/api/oledlg/ns-oledlg-oleuichangesourcew).
 
 ```
 OLEUICHANGESOURCE m_cs;
@@ -243,13 +243,13 @@ OLEUICHANGESOURCE m_cs;
 
 ### <a name="remarks"></a>Poznámky
 
-`OLEUICHANGESOURCE` slouží k řízení chování dialogové okno změny zdroje OLE. Členové této struktury lze změnit přímo.
+`OLEUICHANGESOURCE`slouží k řízení chování dialogového okna změnit zdroj OLE. Členy této struktury lze upravovat přímo.
 
-Další informace najdete v tématu [OLEUICHANGESOURCE](/windows/desktop/api/oledlg/ns-oledlg-tagoleuichangesourcea) struktura v sadě Windows SDK.
+Další informace najdete v tématu struktura [OLEUICHANGESOURCE](/windows/win32/api/oledlg/ns-oledlg-oleuichangesourcew) v Windows SDK.
 
 ##  <a name="isvalidsource"></a>  COleChangeSourceDialog::IsValidSource
 
-Voláním této funkce lze zjistit nový zdroj je platný.
+Voláním této funkce zjistíte, zda je nový zdroj platný.
 
 ```
 BOOL IsValidSource();
@@ -257,13 +257,13 @@ BOOL IsValidSource();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Nenulové, pokud nový zdroj je platný, jinak 0.
+Nenulové, pokud je nový zdroj platný, jinak 0.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato funkce až po volání [DoModal](#domodal) vrátí IDOK.
+Tuto funkci volejte až po [DoModal](#domodal) vrátí IDOK.
 
-Další informace najdete v tématu [OLEUICHANGESOURCE](/windows/desktop/api/oledlg/ns-oledlg-tagoleuichangesourcea) struktura v sadě Windows SDK.
+Další informace najdete v tématu struktura [OLEUICHANGESOURCE](/windows/win32/api/oledlg/ns-oledlg-oleuichangesourcew) v Windows SDK.
 
 ## <a name="see-also"></a>Viz také:
 

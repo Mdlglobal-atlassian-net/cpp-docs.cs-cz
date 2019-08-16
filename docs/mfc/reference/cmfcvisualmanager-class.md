@@ -1,5 +1,5 @@
 ---
-title: CMFCVisualManager Class
+title: CMFCVisualManager – třída
 ms.date: 11/04/2016
 f1_keywords:
 - CMFCVisualManager
@@ -344,18 +344,18 @@ helpviewer_keywords:
 - CMFCVisualManager [MFC], SetMenuShadowDepth
 - CMFCVisualManager [MFC], SetShadowHighlightedImage
 ms.assetid: beed80f7-36a2-4d64-9f09-e807cfefc3fe
-ms.openlocfilehash: 7b4d6a31e69e75af240e0e58cbfbb7d2d24291aa
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b631baefdb200c787d7b764ed73b60b3bdd5f592
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62388290"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69504700"
 ---
-# <a name="cmfcvisualmanager-class"></a>CMFCVisualManager Class
+# <a name="cmfcvisualmanager-class"></a>CMFCVisualManager – třída
 
-Poskytuje podporu pro změnu vzhledu aplikace na globální úrovni. `CMFCVisualManager` Třídy spolupracuje se třídou, která poskytuje pokyny pro vykreslení ovládacích prvků GUI ve vaší aplikaci v jednotném stylu. Tyto třídy jsou označovány jako vizuální vedoucí a dědí z `CMFCBaseVisualManager`.
+Poskytuje podporu pro změnu vzhledu aplikace na globální úrovni. `CMFCVisualManager` Třída spolupracuje s třídou, která poskytuje pokyny k vykreslení ovládacích prvků grafického uživatelského rozhraní aplikace pomocí konzistentního stylu. Tyto další třídy jsou označovány jako vizuální manažeři a dědí z `CMFCBaseVisualManager`.
 
-Další podrobnosti najdete ve zdrojovém kódu v **VC\\atlmfc\\src\\mfc** složce instalace sady Visual Studio.
+Další podrobnosti najdete ve zdrojovém kódu ve složce **VC\\atlmfc\\src\\MFC** v instalaci sady Visual Studio.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -367,35 +367,35 @@ class CMFCVisualManager : public CMFCBaseVisualManager
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
-|`CMFCVisualManager::CMFCVisualManager`|Výchozí konstruktor.|
+|`CMFCVisualManager::CMFCVisualManager`|Výchozí konstruktor|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CMFCVisualManager::AdjustFrames](#adjustframes)||
 |[CMFCVisualManager::AdjustToolbars](#adjusttoolbars)||
-|[CMFCVisualManager::AlwaysHighlight3DTabs](#alwayshighlight3dtabs)|Volá se rozhraním, chcete-li zjistit, zda 3D karty by měla vždy vykreslován pomocí barvu zvýraznění.|
+|[CMFCVisualManager::AlwaysHighlight3DTabs](#alwayshighlight3dtabs)|Volá se rozhraním, aby se určilo, jestli se mají vždy kreslit 3D karty pomocí barvy zvýraznění.|
 |[CMFCVisualManager::DestroyInstance](#destroyinstance)||
 |[CMFCVisualManager::DoDrawHeaderSortArrow](#dodrawheadersortarrow)||
 |[CMFCVisualManager::DrawComboDropButtonWinXP](#drawcombodropbuttonwinxp)||
 |[CMFCVisualManager::DrawPushButtonWinXP](#drawpushbuttonwinxp)||
 |[CMFCVisualManager::DrawTextOnGlass](#drawtextonglass)||
-|[CMFCVisualManager::GetAutoHideButtonTextColor](#getautohidebuttontextcolor)|Volá se rozhraním, aby načíst barvu textu pro automaticky skrýt tlačítko.|
-|[CMFCVisualManager::GetButtonExtraBorder](#getbuttonextraborder)|Volá se rozhraním, aby se načetla velikost větší tlačítko, které vyžaduje aktuální správce vzhledu, chcete-li nakreslit tlačítko.|
-|[CMFCVisualManager::GetCaptionBarTextColor](#getcaptionbartextcolor)|Volá se rozhraním, které chcete načíst barvu textu v záhlaví.|
+|[CMFCVisualManager::GetAutoHideButtonTextColor](#getautohidebuttontextcolor)|Volá se rozhraním, aby se načetla barva textu pro tlačítko automatického skrývání.|
+|[CMFCVisualManager::GetButtonExtraBorder](#getbuttonextraborder)|Volá se rozhraním, aby se načetla velikost zvýšeného tlačítka, kterou aktuální vizuální manažer vyžaduje k nakreslení tlačítka.|
+|[CMFCVisualManager::GetCaptionBarTextColor](#getcaptionbartextcolor)|Volá se rozhraním, aby se načetla barva textu na panelu titulků.|
 |[CMFCVisualManager::GetDockingTabsBordersSize](#getdockingtabsborderssize)|Volá se rozhraním, aby se načetla velikost ohraničení ukotveného panelu s kartami.|
 |[CMFCVisualManager::GetHighlightedMenuItemTextColor](#gethighlightedmenuitemtextcolor)||
-|[CMFCVisualManager::GetInstance](#getinstance)|Vrací ukazatel `CMFCVisualManager` objektu.|
+|[CMFCVisualManager:: GetInstance](#getinstance)|Vrátí ukazatel na `CMFCVisualManager` objekt.|
 |[CMFCVisualManager::GetMDITabsBordersSize](#getmditabsborderssize)|Volá se rozhraním, aby se načetla velikost ohraničení okna MDITabs.|
 |[CMFCVisualManager::GetMenuItemTextColor](#getmenuitemtextcolor)||
 |[CMFCVisualManager::GetMenuShadowDepth](#getmenushadowdepth)|Vrátí hodnotu, která určuje šířku a výšku stínu nabídky.|
-|[CMFCVisualManager::GetNcBtnSize](#getncbtnsize)|Volá se rozhraním pro určení velikosti založené na aktuální správce vzhledu tlačítka systému. Systémových tlačítek jsou tlačítka Titulek hlavního rámce, které mapují na příkazy **Zavřít**, **minimalizovat**, **Maximalizovat**, a **obnovení**.|
-|[CMFCVisualManager::GetPopupMenuBorderSize](#getpopupmenubordersize)|Volá se rozhraním, aby se načetla velikost ohraničení v místní nabídce.|
-|[CMFCVisualManager::GetPropertyGridGroupColor](#getpropertygridgroupcolor)|Volá se rozhraním, aby načíst barvu pozadí seznamu vlastností.|
-|[CMFCVisualManager::GetPropertyGridGroupTextColor](#getpropertygridgrouptextcolor)|Volá se rozhraním, které chcete načíst barvu textu, seznamu vlastností.|
+|[CMFCVisualManager::GetNcBtnSize](#getncbtnsize)|Volá se rozhraním, aby se určila velikost systémových tlačítek na základě aktuálního vizuálního manažera. Systémová tlačítka jsou tlačítka v titulku hlavního rámce, která jsou namapována na příkazy **Zavřít**, **minimalizovat**, **maximalizovat**a **obnovit**.|
+|[CMFCVisualManager::GetPopupMenuBorderSize](#getpopupmenubordersize)|Volá se rozhraním, aby se načetla velikost ohraničení místní nabídky.|
+|[CMFCVisualManager::GetPropertyGridGroupColor](#getpropertygridgroupcolor)|Volá se rozhraním, aby se načetla barva pozadí seznamu vlastností.|
+|[CMFCVisualManager::GetPropertyGridGroupTextColor](#getpropertygridgrouptextcolor)|Volá se rozhraním, aby se načetla barva textu seznamu vlastností.|
 |[CMFCVisualManager::GetRibbonHyperlinkTextColor](#getribbonhyperlinktextcolor)||
 |[CMFCVisualManager::GetRibbonPopupBorderSize](#getribbonpopupbordersize)||
 |[CMFCVisualManager::GetRibbonQuickAccessToolBarTextColor](#getribbonquickaccesstoolbartextcolor)||
@@ -403,159 +403,159 @@ class CMFCVisualManager : public CMFCBaseVisualManager
 |[CMFCVisualManager::GetShowAllMenuItemsHeight](#getshowallmenuitemsheight)||
 |[CMFCVisualManager::GetSmartDockingBaseGuideColors](#getsmartdockingbaseguidecolors)||
 |[CMFCVisualManager::GetSmartDockingHighlightToneColor](#getsmartdockinghighlighttonecolor)||
-|[CMFCVisualManager::GetSmartDockingTheme](#getsmartdockingtheme)|Vrátí motiv, který slouží k zobrazení značek inteligentního dokování.|
+|[CMFCVisualManager::GetSmartDockingTheme](#getsmartdockingtheme)|Vrátí motiv použitý k zobrazení značek inteligentního Docker.|
 |[CMFCVisualManager::GetStatusBarPaneTextColor](#getstatusbarpanetextcolor)||
-|[CMFCVisualManager::GetTabFrameColors](#gettabframecolors)|Volá se rozhraním, k načtení sady barev pro použití při kreslení kartu rámce.|
+|[CMFCVisualManager::GetTabFrameColors](#gettabframecolors)|Volá se rozhraním, aby se načetla sada barev, která se má použít, když se nakreslí rámec tabulátoru.|
 |[CMFCVisualManager::GetTabTextColor](#gettabtextcolor)||
-|[CMFCVisualManager::GetToolbarButtonTextColor](#gettoolbarbuttontextcolor)|Volá se rozhraním, aby načíst aktuální barvu textu na panelu nástrojů. Tato barva se liší v závislosti na aktuální správce vzhledu a stav tlačítka.|
-|[CMFCVisualManager::GetToolbarDisabledTextColor](#gettoolbardisabledtextcolor)|Volá se rozhraním k určení barvy textu, který se zobrazí na prvky zakázané nástrojů.|
+|[CMFCVisualManager::GetToolbarButtonTextColor](#gettoolbarbuttontextcolor)|Volá se rozhraním, aby se načetla aktuální barva textu na tlačítku na panelu nástrojů. Tato barva se liší v závislosti na aktuálním vizuálním manažeru a stavu tlačítka.|
+|[CMFCVisualManager::GetToolbarDisabledTextColor](#gettoolbardisabledtextcolor)|Volá se rozhraním, aby se určila barva textu, který se zobrazuje na zakázaných prvcích panelu nástrojů.|
 |[CMFCVisualManager::GetToolbarHighlightColor](#gettoolbarhighlightcolor)||
 |[CMFCVisualManager::GetToolTipInfo](#gettooltipinfo)||
-|[CMFCVisualManager::HasOverlappedAutoHideButtons](#hasoverlappedautohidebuttons)|Určuje, zda automatického skrytí tlačítka překrývat.|
-|[CMFCVisualManager::IsDockingTabHasBorder](#isdockingtabhasborder)|Určuje, zda aktuální správce vzhledu vykreslí ohraničení s kartami dokovací panely.|
-|[CMFCVisualManager::IsEmbossDisabledImage](#isembossdisabledimage)|Určuje, zda by měl ražená zakázané imagí.|
-|[CMFCVisualManager::IsFadeInactiveImage](#isfadeinactiveimage)|Volá se rozhraním, chcete-li zjistit, zda neaktivní imagí na panelu nástrojů nebo nabídce se zobrazí šedě.|
-|[CMFCVisualManager::IsMenuFlatLook](#ismenuflatlook)|Určuje, jestli tlačítka nabídky mají plochá vzhled.|
-|[CMFCVisualManager::IsOfficeXPStyleMenus](#isofficexpstylemenus)|Určuje, zda správce vzhledu implementuje nabídkách Office XP – vizuální styl.|
-|[CMFCVisualManager::IsOwnerDrawCaption](#isownerdrawcaption)|Určuje, zda aktuální správce vzhledu implementuje vykreslovaných vlastníkem titulky okna rámce.|
-|[CMFCVisualManager::IsShadowHighlightedImage](#isshadowhighlightedimage)|Určuje, zda zvýrazněné bitová kopie má stín.|
-|[CMFCVisualManager::OnDrawAutoHideButtonBorder](#ondrawautohidebuttonborder)|Volá se rozhraním, když ho ohraničení pro automaticky skrýt tlačítko.|
-|[CMFCVisualManager::OnDrawBarGripper](#ondrawbargripper)|Volá se rozhraním, když nakreslí úchytu ovládacím panelu. Uživatel musí kliknout na úchytu kvůli přesunutí panelu ovládacího prvku.|
-|[CMFCVisualManager::OnDrawBrowseButton](#ondrawbrowsebutton)|Volá se rozhraním, když nakreslí tlačítko Procházet, který patří do ovládacího prvku pro úpravy ( [cmfceditbrowsectrl – třída](../../mfc/reference/cmfceditbrowsectrl-class.md)).|
-|[CMFCVisualManager::OnDrawButtonBorder](#ondrawbuttonborder)|Volá se rozhraním, když ohraničení tlačítka panelu nástrojů.|
+|[CMFCVisualManager::HasOverlappedAutoHideButtons](#hasoverlappedautohidebuttons)|Určuje, zda se mají automaticky skrývat tlačítka překrývat.|
+|[CMFCVisualManager::IsDockingTabHasBorder](#isdockingtabhasborder)|Určuje, zda aktuální vizuální manažer vykreslí ohraničení kolem ukotvených panelů s kartami.|
+|[CMFCVisualManager::IsEmbossDisabledImage](#isembossdisabledimage)|Určuje, zda mají být neaktivní obrázky vytlačeny.|
+|[CMFCVisualManager::IsFadeInactiveImage](#isfadeinactiveimage)|Volá se rozhraním, aby se určilo, jestli se neaktivní obrázky na panelu nástrojů nebo v nabídce zobrazují šedě.|
+|[CMFCVisualManager::IsMenuFlatLook](#ismenuflatlook)|Určuje, zda mají tlačítka nabídky plochý vzhled.|
+|[CMFCVisualManager::IsOfficeXPStyleMenus](#isofficexpstylemenus)|Určuje, zda Visual Manager implementuje nabídky ve stylu sady Office XP.|
+|[CMFCVisualManager::IsOwnerDrawCaption](#isownerdrawcaption)|Určuje, zda aktuální aplikace Visual Manager implementuje nadpisy vykreslené vlastníkem okna rámce.|
+|[CMFCVisualManager::IsShadowHighlightedImage](#isshadowhighlightedimage)|Určuje, zda má zvýrazněný obrázek stín.|
+|[CMFCVisualManager::OnDrawAutoHideButtonBorder](#ondrawautohidebuttonborder)|Volá se rozhraním, když se nakreslí ohraničení tlačítka pro automatické skrývání.|
+|[CMFCVisualManager::OnDrawBarGripper](#ondrawbargripper)|Volá se rozhraním, když se nakreslí úchyt ovládacího panelu. Uživatel musí kliknout na úchyt, aby se ovládací panel přesunul.|
+|[CMFCVisualManager::OnDrawBrowseButton](#ondrawbrowsebutton)|Volá se rozhraním, když se nakreslí tlačítko pro procházení, které patří do ovládacího prvku pro úpravy ( [Třída CMFCEditBrowseCtrl](../../mfc/reference/cmfceditbrowsectrl-class.md)).|
+|[CMFCVisualManager::OnDrawButtonBorder](#ondrawbuttonborder)|Volá se rozhraním, když se nakreslí ohraničení tlačítka panelu nástrojů.|
 |[CMFCVisualManager::OnDrawButtonSeparator](#ondrawbuttonseparator)||
-|[CMFCVisualManager::OnDrawCaptionBarBorder](#ondrawcaptionbarborder)|Volá se rozhraním, když ho ohraničení panelu titulek.|
+|[CMFCVisualManager::OnDrawCaptionBarBorder](#ondrawcaptionbarborder)|Volá se rozhraním, když se nakreslí ohraničení záhlaví.|
 |[CMFCVisualManager::OnDrawCaptionBarButtonBorder](#ondrawcaptionbarbuttonborder)||
 |[CMFCVisualManager::OnDrawCaptionBarInfoArea](#ondrawcaptionbarinfoarea)||
-|[CMFCVisualManager::OnDrawCaptionButton](#ondrawcaptionbutton)|Volá se rozhraním, když nakreslí titulek tlačítka.|
+|[CMFCVisualManager::OnDrawCaptionButton](#ondrawcaptionbutton)|Volá se rozhraním, když se nakreslí tlačítko Caption.|
 |[CMFCVisualManager::OnDrawCheckBox](#ondrawcheckbox)||
 |[CMFCVisualManager::OnDrawCheckBoxEx](#ondrawcheckboxex)||
-|[CMFCVisualManager::OnDrawComboBorder](#ondrawcomboborder)|Volá se rozhraním, když ohraničení tlačítka pole se seznamem.|
-|[CMFCVisualManager::OnDrawComboDropButton](#ondrawcombodropbutton)|Volá se rozhraním, když nakreslí tlačítko rozevíracího pole se seznamem.|
+|[CMFCVisualManager::OnDrawComboBorder](#ondrawcomboborder)|Volá se rozhraním, když se nakreslí ohraničení tlačítka pole se seznamem.|
+|[CMFCVisualManager::OnDrawComboDropButton](#ondrawcombodropbutton)|Volá se rozhraním, když se nakreslí tlačítko rozevíracího seznamu pole se seznamem.|
 |[CMFCVisualManager::OnDrawControlBorder](#ondrawcontrolborder)||
-|[CMFCVisualManager::OnDrawDefaultRibbonImage](#ondrawdefaultribbonimage)|Volá se rozhraním při kreslení obrázku výchozí pásu karet.|
-|[CMFCVisualManager::OnDrawEditBorder](#ondraweditborder)|Volá se rozhraním, když vytvoří ohraničení kolem [cmfctoolbareditboxbutton –](../../mfc/reference/cmfctoolbareditboxbutton-class.md) objektu.|
+|[CMFCVisualManager::OnDrawDefaultRibbonImage](#ondrawdefaultribbonimage)|Volá se rozhraním, když se nakreslí výchozí image pásu karet.|
+|[CMFCVisualManager::OnDrawEditBorder](#ondraweditborder)|Volá se rozhraním, když nakreslí ohraničení kolem objektu [CMFCToolBarEditBoxButton](../../mfc/reference/cmfctoolbareditboxbutton-class.md) .|
 |[CMFCVisualManager::OnDrawExpandingBox](#ondrawexpandingbox)||
-|[CMFCVisualManager::OnDrawFloatingToolbarBorder](#ondrawfloatingtoolbarborder)|Volá se rozhraním, když vykreslí ohraničení panelu nástrojů s plovoucí desetinnou čárkou. Panel nástrojů s plovoucí desetinnou čárkou je panel nástrojů, který se zobrazí jako okno s minirámcem.|
-|[CMFCVisualManager::OnDrawHeaderCtrlBorder](#ondrawheaderctrlborder)|Volá se rozhraním, když vykreslí ohraničení, která obsahuje ovládací prvek hlavičky.|
-|[CMFCVisualManager::OnDrawHeaderCtrlSortArrow](#ondrawheaderctrlsortarrow)|Volá se rozhraním, když nakreslí šipku řazení ovládacího prvku záhlaví.|
+|[CMFCVisualManager::OnDrawFloatingToolbarBorder](#ondrawfloatingtoolbarborder)|Volá se rozhraním, když se nakreslí ohraničení plovoucího panelu nástrojů. Plovoucí panel nástrojů je panel nástrojů, který se zobrazí jako okno se zkráceným rámcem.|
+|[CMFCVisualManager::OnDrawHeaderCtrlBorder](#ondrawheaderctrlborder)|Volá se rozhraním, když se nakreslí ohraničení, které obsahuje ovládací prvek záhlaví.|
+|[CMFCVisualManager::OnDrawHeaderCtrlSortArrow](#ondrawheaderctrlsortarrow)|Volá se rozhraním, když se nakreslí šipka pro řazení ovládacího prvku záhlaví.|
 |[CMFCVisualManager::OnDrawMenuArrowOnCustomizeList](#ondrawmenuarrowoncustomizelist)||
-|[CMFCVisualManager::OnDrawMenuBorder](#ondrawmenuborder)|Volá se rozhraním, když ho ohraničení nabídky.|
+|[CMFCVisualManager::OnDrawMenuBorder](#ondrawmenuborder)|Volá se rozhraním, když se nakreslí ohraničení nabídky.|
 |[CMFCVisualManager::OnDrawMenuCheck](#ondrawmenucheck)||
 |[CMFCVisualManager::OnDrawMenuItemButton](#ondrawmenuitembutton)||
 |[CMFCVisualManager::OnDrawMenuLabel](#ondrawmenulabel)||
 |[CMFCVisualManager::OnDrawMenuResizeBar](#ondrawmenuresizebar)||
-|[CMFCVisualManager::OnDrawMenuScrollButton](#ondrawmenuscrollbutton)|Volá se rozhraním, když nakreslí tlačítko posouvání nabídky.|
+|[CMFCVisualManager::OnDrawMenuScrollButton](#ondrawmenuscrollbutton)|Volá se rozhraním, když se nakreslí rolovací tlačítko nabídky.|
 |[CMFCVisualManager::OnDrawMenuShadow](#ondrawmenushadow)||
-|[CMFCVisualManager::OnDrawMenuSystemButton](#ondrawmenusystembutton)|Volá se rozhraním, když nakreslí systém tlačítka nabídky **Zavřít**, **minimalizovat**, **Maximalizovat**, a **obnovení**.|
+|[CMFCVisualManager::OnDrawMenuSystemButton](#ondrawmenusystembutton)|Volá se rozhraním, když se nakreslí systémová tlačítka nabídky **Zavřít**, **minimalizovat**, **maximalizovat**a **obnovit**.|
 |[CMFCVisualManager::OnDrawMiniFrameBorder](#ondrawminiframeborder)||
-|[CMFCVisualManager::OnDrawOutlookBarSplitter](#ondrawoutlookbarsplitter)|Volá se rozhraním, když nakreslí rozdělovač pro panel aplikace Outlook. Je příčka vodorovná panel použitý k seskupování ovládacích prvků.|
-|[CMFCVisualManager::OnDrawOutlookPageButtonBorder](#ondrawoutlookpagebuttonborder)|Volá se rozhraním, když ho ohraničení tlačítka stránky aplikace Outlook. Tlačítka stránky aplikace Outlook se zobrazí, pokud obsahuje více tlačítek, než lze zobrazit podokno panelu aplikace Outlook.|
-|[CMFCVisualManager::OnDrawPaneBorder](#ondrawpaneborder)|Volá se rozhraním, když vykreslí ohraničení [cpane – třída](../../mfc/reference/cpane-class.md).|
-|[CMFCVisualManager::OnDrawPaneCaption](#ondrawpanecaption)|Volá se rozhraním, když nakreslí titulek `CPane`.|
+|[CMFCVisualManager::OnDrawOutlookBarSplitter](#ondrawoutlookbarsplitter)|Volá se rozhraním, když se nakreslí rozdělovač pro panel Outlooku. Rozdělovač je vodorovný pruh, který slouží k seskupení ovládacích prvků.|
+|[CMFCVisualManager::OnDrawOutlookPageButtonBorder](#ondrawoutlookpagebuttonborder)|Volá se rozhraním, když se nakreslí ohraničení tlačítka Outlook Page. Tlačítka stránky Outlooku se zobrazí, pokud podokno panelu aplikace Outlook obsahuje více tlačítek, než může zobrazit.|
+|[CMFCVisualManager::OnDrawPaneBorder](#ondrawpaneborder)|Volá se rozhraním, když se nakreslí ohraničení [třídy CPane](../../mfc/reference/cpane-class.md).|
+|[CMFCVisualManager::OnDrawPaneCaption](#ondrawpanecaption)|Volá se rozhraním, když se nakreslí titulek pro `CPane`.|
 |[CMFCVisualManager::OnDrawPaneDivider](#ondrawpanedivider)||
 |[CMFCVisualManager::OnDrawPopupWindowBorder](#ondrawpopupwindowborder)||
 |[CMFCVisualManager::OnDrawPopupWindowButtonBorder](#ondrawpopupwindowbuttonborder)||
 |[CMFCVisualManager::OnDrawPopupWindowCaption](#ondrawpopupwindowcaption)||
-|[CMFCVisualManager::OnDrawRibbonApplicationButton](#ondrawribbonapplicationbutton)|Volá se rozhraním, když se vykreslí **hlavní tlačítko** na pásu karet.|
-|[CMFCVisualManager::OnDrawRibbonButtonBorder](#ondrawribbonbuttonborder)|Volá se rozhraním, když ohraničení tlačítka pásu karet.|
-|[CMFCVisualManager::OnDrawRibbonButtonsGroup](#ondrawribbonbuttonsgroup)|Volá se rozhraním, když nakreslí skupina tlačítek na pásu karet.|
-|[CMFCVisualManager::OnDrawRibbonCaption](#ondrawribboncaption)|Volá se rozhraním při kreslení Titulek hlavního rámce, ale pouze v případě, že na pásu karet je integrovaná s rámce.|
-|[CMFCVisualManager::OnDrawRibbonCaptionButton](#ondrawribboncaptionbutton)|Volá se rozhraním, když nakreslí titulek tlačítka na panelu pásu karet.|
-|[CMFCVisualManager::OnDrawRibbonCategory](#ondrawribboncategory)|Volá se rozhraním, když nakreslí kategorie pásu karet.|
-|[CMFCVisualManager::OnDrawRibbonCategoryCaption](#ondrawribboncategorycaption)|Volá se rozhraním, když nakreslí titulkem kategorie pásu karet.|
+|[CMFCVisualManager::OnDrawRibbonApplicationButton](#ondrawribbonapplicationbutton)|Volá se rozhraním, když se na pásu karet nakreslí **tlačítko Main** .|
+|[CMFCVisualManager::OnDrawRibbonButtonBorder](#ondrawribbonbuttonborder)|Volá se rozhraním, když se nakreslí ohraničení tlačítka pásu karet.|
+|[CMFCVisualManager::OnDrawRibbonButtonsGroup](#ondrawribbonbuttonsgroup)|Volá se rozhraním, když se na pásu karet nakreslí skupina tlačítek.|
+|[CMFCVisualManager::OnDrawRibbonCaption](#ondrawribboncaption)|Volá se rozhraním, když se nakreslí titulek hlavního rámce, ale jenom v případě, že je panel pásu karet integrovaný do rámečku.|
+|[CMFCVisualManager::OnDrawRibbonCaptionButton](#ondrawribboncaptionbutton)|Volá se rozhraním, když se nakreslí tlačítko titulek na panelu pásu karet.|
+|[CMFCVisualManager::OnDrawRibbonCategory](#ondrawribboncategory)|Volá se rozhraním, když se nakreslí kategorie pásu karet.|
+|[CMFCVisualManager::OnDrawRibbonCategoryCaption](#ondrawribboncategorycaption)|Volá se rozhraním, když se nakreslí titulek pro kategorii pásu karet.|
 |[CMFCVisualManager::OnDrawRibbonCategoryScroll](#ondrawribboncategoryscroll)||
-|[CMFCVisualManager::OnDrawRibbonCategoryTab](#ondrawribboncategorytab)|Volá se rozhraním při kreslení na kartu kategorie pásu karet.|
+|[CMFCVisualManager::OnDrawRibbonCategoryTab](#ondrawribboncategorytab)|Volá se rozhraním, když se nakreslí karta pro kategorii pásu karet.|
 |[CMFCVisualManager::OnDrawRibbonCheckBoxOnList](#ondrawribboncheckboxonlist)||
 |[CMFCVisualManager::OnDrawRibbonColorPaletteBox](#ondrawribboncolorpalettebox)||
 |[CMFCVisualManager::OnDrawRibbonDefaultPaneButtonContext](#ondrawribbondefaultpanebuttoncontext)||
-|[CMFCVisualManager::OnDrawRibbonDefaultPaneButton](#ondrawribbondefaultpanebutton)|Volá se rozhraním, když nakreslí výchozí tlačítko podokna pásu karet. Výchozí tlačítko se zobrazí, když uživatel zmenší panel pásu karet tak, aby je příliš malá, chcete-li zobrazit prvky pásu karet. Výchozí tlačítko vykreslením místo a prvky pásu karet jsou přidány jako položky v rozevírací nabídce.|
+|[CMFCVisualManager::OnDrawRibbonDefaultPaneButton](#ondrawribbondefaultpanebutton)|Volá se rozhraním, když se nakreslí výchozí tlačítko panelu pásu karet. Výchozí tlačítko se zobrazí, když uživatel zmenší panel pásu karet tak, aby byl příliš malý na to, aby zobrazil prvky pásu karet. Místo toho je vykresleno výchozí tlačítko a prvky pásu karet jsou přidány jako položky v rozevírací nabídce.|
 |[CMFCVisualManager::OnDrawRibbonDefaultPaneButtonIndicator](#ondrawribbondefaultpanebuttonindicator)||
 |[CMFCVisualManager::OnDrawRibbonGalleryBorder](#ondrawribbongalleryborder)||
 |[CMFCVisualManager::OnDrawRibbonGalleryButton](#ondrawribbongallerybutton)||
 |[CMFCVisualManager::OnDrawRibbonKeyTip](#ondrawribbonkeytip)||
-|[CMFCVisualManager::OnDrawRibbonLabel](#ondrawribbonlabel)|Volá se rozhraním, když ho kreslení plné popisku pásu karet.|
-|[CMFCVisualManager::OnDrawRibbonMainPanelButtonBorder](#ondrawribbonmainpanelbuttonborder)|Volá se rozhraním, když ohraničení, který je umístěn na pásu karet tlačítko **hlavní** panelu. **Hlavní** panel je panelu, který se zobrazí, když uživatel klikne **hlavní tlačítko**.|
-|[CMFCVisualManager::OnDrawRibbonMainPanelFrame](#ondrawribbonmainpanelframe)|Volá se rozhraním, když nakreslí rámeček kolek **hlavní** panelu.|
+|[CMFCVisualManager::OnDrawRibbonLabel](#ondrawribbonlabel)|Volá se rozhraním, když se nakreslí popisek pásu karet.|
+|[CMFCVisualManager::OnDrawRibbonMainPanelButtonBorder](#ondrawribbonmainpanelbuttonborder)|Volá se rozhraním, když se nakreslí ohraničení tlačítka pásu karet, které je umístěné na **hlavním** panelu. **Hlavní** panel je panel, který se zobrazí, když uživatel klikne na **hlavní tlačítko**.|
+|[CMFCVisualManager::OnDrawRibbonMainPanelFrame](#ondrawribbonmainpanelframe)|Volá se rozhraním, když se kolem **hlavního** panelu vykreslí rámec.|
 |[CMFCVisualManager::OnDrawRibbonMenuCheckFrame](#ondrawribbonmenucheckframe)||
-|[CMFCVisualManager::OnDrawRibbonPanel](#ondrawribbonpanel)|Volá se rozhraním, když nakreslí panel pásu karet.|
-|[CMFCVisualManager::OnDrawRibbonPanelCaption](#ondrawribbonpanelcaption)|Volá se rozhraním, když nakreslí titulek panel pásu karet.|
-|[CMFCVisualManager::OnDrawRibbonProgressBar](#ondrawribbonprogressbar)|Volá se rozhraním, když se vykreslí [cmfcribbonprogressbar –](../../mfc/reference/cmfcribbonprogressbar-class.md) objektu.|
-|[CMFCVisualManager::OnDrawRibbonQuickAccessToolBarSeparator](#ondrawribbonquickaccesstoolbarseparator)|Volá se rozhraním, když nakreslí oddělovač na pásu karet **panelu nástrojů Rychlý přístup**.|
-|[CMFCVisualManager::OnDrawRibbonRecentFilesFrame](#ondrawribbonrecentfilesframe)|Volá se rozhraním, když nakreslí rámeček kolek seznam posledních souborů.|
-|[CMFCVisualManager::OnDrawRibbonSliderChannel](#ondrawribbonsliderchannel)|Volá se rozhraním, když nakreslí kanál [cmfcribbonslider –](../../mfc/reference/cmfcribbonslider-class.md) objektu.|
-|[CMFCVisualManager::OnDrawRibbonSliderThumb](#ondrawribbonsliderthumb)|Volá se rozhraním, když nakreslí thumb z `CMFCRibbonSlider` objektu.|
-|[CMFCVisualManager::OnDrawRibbonSliderZoomButton](#ondrawribbonsliderzoombutton)|Volá se rozhraním, když nakreslí přiblížení tlačítek `CMFCRibbonSlider` objektu.|
-|[CMFCVisualManager::OnDrawRibbonStatusBarPane](#ondrawribbonstatusbarpane)|Volá se rozhraním při kreslení panelu stavového řádku pásu karet.|
-|[CMFCVisualManager::OnDrawRibbonTabsFrame](#ondrawribbontabsframe)|Volá se rozhraním, když nakreslí rámeček kolek sadu pás karet.|
+|[CMFCVisualManager::OnDrawRibbonPanel](#ondrawribbonpanel)|Volá se rozhraním, když se nakreslí panel pásu karet.|
+|[CMFCVisualManager::OnDrawRibbonPanelCaption](#ondrawribbonpanelcaption)|Volá se rozhraním, když se nakreslí titulek panelu pásu karet.|
+|[CMFCVisualManager::OnDrawRibbonProgressBar](#ondrawribbonprogressbar)|Volá se rozhraním, když se nakreslí objekt [CMFCRibbonProgressBar](../../mfc/reference/cmfcribbonprogressbar-class.md) .|
+|[CMFCVisualManager::OnDrawRibbonQuickAccessToolBarSeparator](#ondrawribbonquickaccesstoolbarseparator)|Volá se rozhraním, když se nakreslí oddělovač na **panelu nástrojů Rychlý přístup**na pásu karet.|
+|[CMFCVisualManager::OnDrawRibbonRecentFilesFrame](#ondrawribbonrecentfilesframe)|Volá se rozhraním, když nakreslí rámeček kolem seznamu posledních souborů.|
+|[CMFCVisualManager::OnDrawRibbonSliderChannel](#ondrawribbonsliderchannel)|Volá se rozhraním, když se nakreslí kanál objektu [CMFCRibbonSlider](../../mfc/reference/cmfcribbonslider-class.md) .|
+|[CMFCVisualManager::OnDrawRibbonSliderThumb](#ondrawribbonsliderthumb)|Volá se rozhraním, když se nakreslí na palec `CMFCRibbonSlider` objektu.|
+|[CMFCVisualManager::OnDrawRibbonSliderZoomButton](#ondrawribbonsliderzoombutton)|Volá se rozhraním, když se nakreslí tlačítka `CMFCRibbonSlider` přiblížení objektu.|
+|[CMFCVisualManager::OnDrawRibbonStatusBarPane](#ondrawribbonstatusbarpane)|Volá se rozhraním, když se na pásu karet nakreslí podokno stavového řádku.|
+|[CMFCVisualManager::OnDrawRibbonTabsFrame](#ondrawribbontabsframe)|Volá se rozhraním, když nakreslí rámeček kolem sady karet karet.|
 |[CMFCVisualManager::OnDrawScrollButtons](#ondrawscrollbuttons)||
-|[CMFCVisualManager::OnDrawSeparator](#ondrawseparator)|Volá se rozhraním, když nakreslí oddělovač. Oddělovač se obvykle používá v ovládacím panelu k oddělení skupin ikony.|
+|[CMFCVisualManager::OnDrawSeparator](#ondrawseparator)|Volá se rozhraním, když se nakreslí oddělovač. Oddělovač se obvykle používá na ovládacím panelu k oddělení skupin ikon.|
 |[CMFCVisualManager::OnDrawShowAllMenuItems](#ondrawshowallmenuitems)||
-|[CMFCVisualManager::OnDrawSpinButtons](#ondrawspinbuttons)|Volá se rozhraním, když nakreslí číselníků.|
-|[CMFCVisualManager::OnDrawSplitterBorder](#ondrawsplitterborder)|Volá se rozhraním, když ohraničení rozděleného okna.|
-|[CMFCVisualManager::OnDrawSplitterBox](#ondrawsplitterbox)|Volá se rozhraním, když nakreslí přetáhněte pole rozdělovač pro rozděleného okna.|
-|[CMFCVisualManager::OnDrawStatusBarPaneBorder](#ondrawstatusbarpaneborder)|Volá se rozhraním, když ho ohraničení pro panelu stavového řádku.|
-|[CMFCVisualManager::OnDrawStatusBarProgress](#ondrawstatusbarprogress)|Volá se rozhraním, když nakreslí indikátor průběhu stavový řádek.|
-|[CMFCVisualManager::OnDrawStatusBarSizeBox](#ondrawstatusbarsizebox)|Volá se rozhraním, když nakreslí velikost pole stavový řádek.|
-|[CMFCVisualManager::OnDrawTab](#ondrawtab)|Volá se rozhraním, když se vykreslí [cmfctabctrl –](../../mfc/reference/cmfctabctrl-class.md) objektu.|
-|[CMFCVisualManager::OnDrawTabCloseButton](#ondrawtabclosebutton)|Volá se rozhraním, když se vykreslí **Zavřít** tlačítko na aktivní kartě.|
-|[CMFCVisualManager::OnDrawTabContent](#ondrawtabcontent)|Volá se rozhraním, když nakreslí kartu vnitřní (obrázky, texty).|
-|[CMFCVisualManager::OnDrawTabsButtonBorder](#ondrawtabsbuttonborder)|Volá se rozhraním, když ohraničení kartu tlačítka.|
-|[CMFCVisualManager::OnDrawTask](#ondrawtask)|Volá se rozhraním, když ho nakreslí úlohy v podokně úloh.|
-|[CMFCVisualManager::OnDrawTasksGroupAreaBorder](#ondrawtasksgroupareaborder)|Volá se rozhraním, když nakreslí rámeček kolem skupiny oblasti v podokně úloh.|
-|[CMFCVisualManager::OnDrawTasksGroupCaption](#ondrawtasksgroupcaption)|Volá se rozhraním, když ho nakreslí titulek pro skupinu úloh v podokně úloh.|
+|[CMFCVisualManager::OnDrawSpinButtons](#ondrawspinbuttons)|Volá se rozhraním, když se nakreslí tlačítka.|
+|[CMFCVisualManager::OnDrawSplitterBorder](#ondrawsplitterborder)|Volá se rozhraním, když se nakreslí ohraničení rozděleného okna.|
+|[CMFCVisualManager::OnDrawSplitterBox](#ondrawsplitterbox)|Volá se rozhraním, když se pro rozdělené okno nakreslí dělicí pole.|
+|[CMFCVisualManager::OnDrawStatusBarPaneBorder](#ondrawstatusbarpaneborder)|Volá se rozhraním, když se nakreslí ohraničení podokna stavového řádku.|
+|[CMFCVisualManager::OnDrawStatusBarProgress](#ondrawstatusbarprogress)|Volá se rozhraním, když se nakreslí indikátor průběhu stavového řádku.|
+|[CMFCVisualManager::OnDrawStatusBarSizeBox](#ondrawstatusbarsizebox)|Volá se rozhraním, když se nakreslí pole velikost stavového řádku.|
+|[CMFCVisualManager::OnDrawTab](#ondrawtab)|Volá se rozhraním, když se nakreslí objekt [CMFCTabCtrl](../../mfc/reference/cmfctabctrl-class.md) .|
+|[CMFCVisualManager::OnDrawTabCloseButton](#ondrawtabclosebutton)|Volá se rozhraním, když se na aktivní kartě nakreslí tlačítko **Zavřít** .|
+|[CMFCVisualManager::OnDrawTabContent](#ondrawtabcontent)|Volá se rozhraním, když se nakreslí vnitřní karta (obrázky, texty).|
+|[CMFCVisualManager::OnDrawTabsButtonBorder](#ondrawtabsbuttonborder)|Volá se rozhraním, když se nakreslí ohraničení tlačítka tabulátoru.|
+|[CMFCVisualManager::OnDrawTask](#ondrawtask)|Volá se rozhraním, když se nakreslí úkol v podokně úloh.|
+|[CMFCVisualManager::OnDrawTasksGroupAreaBorder](#ondrawtasksgroupareaborder)|Volá se rozhraním, když se kolem oblasti skupiny v podokně úloh nakreslí ohraničení.|
+|[CMFCVisualManager::OnDrawTasksGroupCaption](#ondrawtasksgroupcaption)|Volá se rozhraním, když se nakreslí titulek pro skupinu úloh v podokně úloh.|
 |[CMFCVisualManager::OnDrawTasksGroupIcon](#ondrawtasksgroupicon)||
-|[CMFCVisualManager::OnDrawTearOffCaption](#ondrawtearoffcaption)|Volá se rozhraním, když nakreslí titulek odtržených přemístitelný panel.|
+|[CMFCVisualManager::OnDrawTearOffCaption](#ondrawtearoffcaption)|Volá se rozhraním, když se nakreslí z neposunutého titulu pro odtrhnout panel.|
 |[CMFCVisualManager::OnDrawToolBoxFrame](#ondrawtoolboxframe)||
-|[CMFCVisualManager::OnEraseMDIClientArea](#onerasemdiclientarea)|Volá se rozhraním, když vymaže oblasti klienta MDI.|
+|[CMFCVisualManager::OnEraseMDIClientArea](#onerasemdiclientarea)|Volá se rozhraním, když se vymaže oblast klienta MDI.|
 |[CMFCVisualManager::OnErasePopupWindowButton](#onerasepopupwindowbutton)||
-|[CMFCVisualManager::OnEraseTabsArea](#onerasetabsarea)|Volá se rozhraním, když vymaže oblast karty v okně kartu.|
-|[CMFCVisualManager::OnEraseTabsButton](#onerasetabsbutton)|Volá se rozhraním, když vymaže ikonu a text kartu tlačítka.|
-|[CMFCVisualManager::OnEraseTabsFrame](#onerasetabsframe)|Volá se rozhraním, když vymaže kartu rámce.|
-|[CMFCVisualManager::OnFillAutoHideButtonBackground](#onfillautohidebuttonbackground)|Volá se rozhraním, když se vyplní na pozadí automaticky skrýt tlačítko.|
-|[CMFCVisualManager::OnFillBarBackground](#onfillbarbackground)|Volá se rozhraním, když výplně pozadí ovládací panel.|
-|[CMFCVisualManager::OnFillButtonInterior](#onfillbuttoninterior)|Volá se rozhraním, když výplně pozadí tlačítka panelu nástrojů.|
+|[CMFCVisualManager::OnEraseTabsArea](#onerasetabsarea)|Volá se rozhraním, když se vymaže oblast karty v okně karty.|
+|[CMFCVisualManager::OnEraseTabsButton](#onerasetabsbutton)|Volá se rozhraním, když se vymaže ikona a text tlačítka tabulátoru.|
+|[CMFCVisualManager::OnEraseTabsFrame](#onerasetabsframe)|Volá se rozhraním, když se vymaže rámec karty.|
+|[CMFCVisualManager::OnFillAutoHideButtonBackground](#onfillautohidebuttonbackground)|Volá se rozhraním, když se vyplní pozadí tlačítka pro automatické skrývání.|
+|[CMFCVisualManager::OnFillBarBackground](#onfillbarbackground)|Volá se rozhraním, když se vyplní pozadí ovládacího panelu.|
+|[CMFCVisualManager::OnFillButtonInterior](#onfillbuttoninterior)|Volá se rozhraním, když se vyplní pozadí tlačítka panelu nástrojů.|
 |[CMFCVisualManager::OnFillCaptionBarButton](#onfillcaptionbarbutton)||
-|[CMFCVisualManager::OnFillCommandsListBackground](#onfillcommandslistbackground)|Volá se rozhraním, když výplně pozadí tlačítka panelu nástrojů, který patří do seznamu příkazu, který je součástí dialogového okna vlastního nastavení.|
-|[CMFCVisualManager::OnFillHeaderCtrlBackground](#onfillheaderctrlbackground)|Volá se rozhraním, když výplně pozadí záhlaví ovládacího prvku.|
-|[CMFCVisualManager::OnFillMiniFrameCaption](#onfillminiframecaption)|Volá se rozhraním, když vyplní titulek okna mini rámce.|
-|[CMFCVisualManager::OnFillOutlookBarCaption](#onfilloutlookbarcaption)|Volá se rozhraním, když výplně pozadí titulku panel aplikace Outlook.|
-|[CMFCVisualManager::OnFillOutlookPageButton](#onfilloutlookpagebutton)|Volá se rozhraním, když vyplní vnitřní tlačítka stránky aplikace Outlook.|
-|[CMFCVisualManager::OnFillPopupWindowBackground](#onfillpopupwindowbackground)|Volá se rozhraním, když se vyplní na pozadí automaticky otevíraném okně.|
-|[CMFCVisualManager::OnFillRibbonButton](#onfillribbonbutton)|Volá se rozhraním, když vyplní vnitřní tlačítko pásu karet.|
-|[CMFCVisualManager::OnFillRibbonEdit](#onfillribbonedit)|Volá se rozhraním, když vyplní vnitřní textové pole pásu karet.|
-|[CMFCVisualManager::OnFillRibbonMainPanelButton](#onfillribbonmainpanelbutton)|Volá se rozhraním, když vyplní vnitřní pásu karet na tlačítko **hlavní** panelu.|
-|[CMFCVisualManager::OnFillRibbonMenuFrame](#onfillribbonmenuframe)|Volá se rozhraním, když vyplní rámec nabídky panelu hlavní pás karet.|
+|[CMFCVisualManager::OnFillCommandsListBackground](#onfillcommandslistbackground)|Volá se rozhraním, když vyplní pozadí tlačítka panelu nástrojů, které patří do seznamu příkazů, který je zase součástí dialogového okna přizpůsobení.|
+|[CMFCVisualManager::OnFillHeaderCtrlBackground](#onfillheaderctrlbackground)|Volá se rozhraním, když vyplní pozadí ovládacího prvku záhlaví.|
+|[CMFCVisualManager::OnFillMiniFrameCaption](#onfillminiframecaption)|Volá se rozhraním, když se vyplní titulek okna se zkráceným rámcem.|
+|[CMFCVisualManager::OnFillOutlookBarCaption](#onfilloutlookbarcaption)|Volá se rozhraním, když se vyplní pozadí popisku panelu Outlooku.|
+|[CMFCVisualManager::OnFillOutlookPageButton](#onfilloutlookpagebutton)|Volá se rozhraním, když vyplní vnitřek tlačítka Outlook Page.|
+|[CMFCVisualManager::OnFillPopupWindowBackground](#onfillpopupwindowbackground)|Volá se rozhraním, když se vyplní pozadí automaticky otevíraného okna.|
+|[CMFCVisualManager::OnFillRibbonButton](#onfillribbonbutton)|Volá se rozhraním, když vyplní vnitřek tlačítka pásu karet.|
+|[CMFCVisualManager::OnFillRibbonEdit](#onfillribbonedit)|Volá se rozhraním, když vyplní vnitřek ovládacího prvku pro úpravy pásu karet.|
+|[CMFCVisualManager::OnFillRibbonMainPanelButton](#onfillribbonmainpanelbutton)|Volá se rozhraním, když vyplní vnitřek tlačítka pásu karet umístěného na **hlavním** panelu.|
+|[CMFCVisualManager::OnFillRibbonMenuFrame](#onfillribbonmenuframe)|Volá se rozhraním, když vyplní rámec nabídky hlavního panelu pásu karet.|
 |[CMFCVisualManager::OnFillRibbonQuickAccessToolBarPopup](#onfillribbonquickaccesstoolbarpopup)||
-|[CMFCVisualManager::OnFillSplitterBackground](#onfillsplitterbackground)|Volá se rozhraním, když výplně pozadí rozděleného okna.|
-|[CMFCVisualManager::OnFillTab](#onfilltab)|Volá se rozhraním, když výplně pozadí na kartě.|
-|[CMFCVisualManager::OnFillTasksGroupInterior](#onfilltasksgroupinterior)|Volá se rozhraním, když vyplní vnitřní [cmfctaskspanetaskgroup –](../../mfc/reference/cmfctaskspanetaskgroup-class.md) objektu na [cmfctaskspane –](../../mfc/reference/cmfctaskspane-class.md).|
-|[CMFCVisualManager::OnFillTasksPaneBackground](#onfilltaskspanebackground)|Volá se rozhraním, když vyplní na pozadí `CMFCTasksPane` ovládacího prvku.|
-|[CMFCVisualManager::OnHighlightMenuItem](#onhighlightmenuitem)|Volá se rozhraním, když nakreslí položku zvýrazněné nabídky.|
-|[CMFCVisualManager::OnHighlightRarelyUsedMenuItems](#onhighlightrarelyusedmenuitems)|Voláno rozhraním rozhraní framework při kreslení zvýrazněný a zřídka používané v nabídce.|
-|[CMFCVisualManager::OnNcPaint](#onncpaint)|Volá se rozhraním, když nakreslí neklientské oblasti.|
-|[CMFCVisualManager::OnSetWindowRegion](#onsetwindowregion)|Volá se rozhraním, když se nastaví oblast, která obsahuje snímky a místní nabídky.|
-|[CMFCVisualManager::OnUpdateSystemColors](#onupdatesystemcolors)|Volá se rozhraním, když se změní nastavení systémových barev.|
-|[CMFCVisualManager::RedrawAll](#redrawall)|Všechny ovládací pruhy překreslí v aplikaci.|
+|[CMFCVisualManager::OnFillSplitterBackground](#onfillsplitterbackground)|Volá se rozhraním, když se vyplní pozadí rozděleného okna.|
+|[CMFCVisualManager::OnFillTab](#onfilltab)|Volá se rozhraním, když se vyplní pozadí karty.|
+|[CMFCVisualManager::OnFillTasksGroupInterior](#onfilltasksgroupinterior)|Volá se rozhraním, když vyplní vnitřek objektu [CMFCTasksPaneTaskGroup](../../mfc/reference/cmfctaskspanetaskgroup-class.md) na [CMFCTasksPane](../../mfc/reference/cmfctaskspane-class.md).|
+|[CMFCVisualManager::OnFillTasksPaneBackground](#onfilltaskspanebackground)|Volá se rozhraním, když vyplní pozadí `CMFCTasksPane` ovládacího prvku.|
+|[CMFCVisualManager::OnHighlightMenuItem](#onhighlightmenuitem)|Volá se rozhraním, když se nakreslí Zvýrazněná položka nabídky.|
+|[CMFCVisualManager::OnHighlightRarelyUsedMenuItems](#onhighlightrarelyusedmenuitems)|Volá se rozhraním, když se nakreslí zvýrazněná a zřídka použitá položka nabídky.|
+|[CMFCVisualManager::OnNcPaint](#onncpaint)|Volá se rozhraním, když se nakreslí mimo klientskou oblast.|
+|[CMFCVisualManager::OnSetWindowRegion](#onsetwindowregion)|Volá se rozhraním, když nastavuje oblast, která obsahuje rámce a místní nabídky.|
+|[CMFCVisualManager::OnUpdateSystemColors](#onupdatesystemcolors)|Volá se rozhraním, když změní nastavení systémové barvy.|
+|[CMFCVisualManager::RedrawAll](#redrawall)|Překreslí všechny ovládací panely v aplikaci.|
 |[CMFCVisualManager::RibbonCategoryColorToRGB](#ribboncategorycolortorgb)||
-|[CMFCVisualManager::SetDefaultManager](#setdefaultmanager)|Nastaví výchozí správce vzhledu.|
-|[CMFCVisualManager::SetEmbossDisabledImage](#setembossdisabledimage)|Povolí nebo zakáže embosované režim pro obrázky panelu nástrojů zakázané.|
-|[CMFCVisualManager::SetFadeInactiveImage](#setfadeinactiveimage)|Povolí nebo zakáže vliv osvětlení pro neaktivní Image na nabídku nebo panel nástrojů.|
-|[CMFCVisualManager::SetMenuFlatLook](#setmenuflatlook)|Nastaví příznak označující, zda tlačítka nabídky aplikace jsou sloučené vzhled.|
+|[CMFCVisualManager::SetDefaultManager](#setdefaultmanager)|Nastaví výchozího vizuálního správce.|
+|[CMFCVisualManager::SetEmbossDisabledImage](#setembossdisabledimage)|Povolí nebo zakáže reliéfní režim pro zakázané obrázky na panelu nástrojů.|
+|[CMFCVisualManager::SetFadeInactiveImage](#setfadeinactiveimage)|Povolí nebo zakáže efekt osvětlení pro neaktivní obrázky v nabídce nebo na panelu nástrojů.|
+|[CMFCVisualManager::SetMenuFlatLook](#setmenuflatlook)|Nastaví příznak označující, zda mají tlačítka nabídky aplikace plochý vzhled.|
 |[CMFCVisualManager::SetMenuShadowDepth](#setmenushadowdepth)|Nastaví šířku a výšku stínu nabídky.|
-|[CMFCVisualManager::SetShadowHighlightedImage](#setshadowhighlightedimage)|Nastaví příznak určující, jestli se má zobrazit stínové při vykreslování obrázků zvýrazněné.|
+|[CMFCVisualManager::SetShadowHighlightedImage](#setshadowhighlightedimage)|Nastaví příznak, který označuje, zda se má při vykreslování zvýrazněných obrázků zobrazovat stín.|
 
 ## <a name="remarks"></a>Poznámky
 
-Protože `CMFCVisualManager` třídy ovládací prvky grafického uživatelského rozhraní aplikace, každá aplikace může mít buď jeden výskyt `CMFCVisualManager`, nebo jednu instanci třídy odvozené z `CMFCVisualManager`. Vaše aplikace můžou také fungovat bez `CMFCVisualManager`. Použijte statickou metodu `GetInstance` získat ukazatel na aktuální `CMFCVisualManager`-odvozenému objektu.
+Vzhledem k `CMFCVisualManager` tomu, že třída řídí grafické rozhraní aplikace, každá aplikace může mít buď jednu instanci `CMFCVisualManager`, nebo jednu instanci třídy odvozené z `CMFCVisualManager`. Aplikace může také fungovat bez `CMFCVisualManager`. Použijte statickou metodu `GetInstance` k získání ukazatele na aktuální `CMFCVisualManager`odvozený objekt.
 
-Chcete-li změnit vzhled vaší aplikace je nutné použít jiné třídy, které poskytují metody pro kreslení všechny vizuální prvky vaší aplikace. Mezi příklady těchto tříd patří [CMFCVisualManagerOfficeXP – třída](../../mfc/reference/cmfcvisualmanagerofficexp-class.md), [cmfcvisualmanageroffice2003 – třída](../../mfc/reference/cmfcvisualmanageroffice2003-class.md), a [cmfcvisualmanageroffice2007 – třída](../../mfc/reference/cmfcvisualmanageroffice2007-class.md). Pokud chcete změnit vzhled vaší aplikace, jeden z těchto vizuální vedoucí předat do metody `SetDefaultManager`. Příklad, který ukazuje, jak může aplikace napodobuje vzhled aplikace Microsoft Office 2003 najdete v tématu [cmfcvisualmanageroffice2003 – třída](../../mfc/reference/cmfcvisualmanageroffice2003-class.md).
+Chcete-li změnit vzhled aplikace, je nutné použít jiné třídy, které poskytují metody pro vykreslení všech vizuálních prvků aplikace. Některé příklady těchto tříd jsou [třídy CMFCVisualManagerOfficeXP](../../mfc/reference/cmfcvisualmanagerofficexp-class.md), třídy [CMFCVisualManagerOffice2003](../../mfc/reference/cmfcvisualmanageroffice2003-class.md)a [třídy CMFCVisualManagerOffice2007](../../mfc/reference/cmfcvisualmanageroffice2007-class.md). Chcete-li změnit vzhled aplikace, předejte jednoho z těchto vizuálních manažerů do metody `SetDefaultManager`. Příklad, který ukazuje, jak může vaše aplikace napodobovat vzhled systém Microsoft Office 2003, naleznete v tématu [Třída CMFCVisualManagerOffice2003](../../mfc/reference/cmfcvisualmanageroffice2003-class.md).
 
-Všechny metody vykreslení jsou virtuální. To umožňuje vytvářet vlastní vizuální styl pro grafické uživatelské rozhraní vaší aplikace. Pokud chcete vytvořit vlastní vizuální styl, odvodit třídu z jedné ze tříd správce vzhledu a přepište metody vykreslení, které chcete změnit.
+Všechny metody vykreslování jsou virtuální. To vám umožní vytvořit vlastní vizuální styl pro grafické rozhraní vaší aplikace. Chcete-li vytvořit vlastní vizuální styl, odvodit třídu z jedné z tříd nástroje Visual Manager a přepsat metody kreslení, které chcete změnit.
 
 ## <a name="example"></a>Příklad
 
-Tato ukázka předvádí, jak vytvořit instanci standardní a vlastní `CMFCVisualManager` objekty.
+Tento příklad ukazuje, jak vytvořit instanci standardních a vlastních `CMFCVisualManager` objektů.
 
 ```cpp
 void CMFCSkinsApp::SetSkin (int iIndex)
@@ -587,13 +587,13 @@ void CMFCSkinsApp::SetSkin (int iIndex)
 
 ## <a name="example"></a>Příklad
 
-Následující příklad ukazuje, jak načíst výchozí hodnoty `CMFCVisualManager` objektu. Tento fragment kódu je součástí [podokno úlohy ukázka](../../overview/visual-cpp-samples.md).
+Následující příklad ukazuje, jak načíst výchozí hodnoty `CMFCVisualManager` objektu. Tento fragment kódu je součástí [ukázky podokna úlohy](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_TasksPane#1](../../mfc/reference/codesnippet/cpp/cmfcvisualmanager-class_1.h)]
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
-[Třídy CObject](../../mfc/reference/cobject-class.md)
+[CObject](../../mfc/reference/cobject-class.md)
 
 [CMFCBaseVisualManager](../../mfc/reference/cmfcbasevisualmanager-class.md)
 
@@ -601,9 +601,9 @@ Následující příklad ukazuje, jak načíst výchozí hodnoty `CMFCVisualMana
 
 ## <a name="requirements"></a>Požadavky
 
-**Header:** afxvisualmanager.h
+**Záhlaví:** afxvisualmanager. h
 
-##  <a name="adjustframes"></a>  CMFCVisualManager::AdjustFrames
+##  <a name="adjustframes"></a>CMFCVisualManager::AdjustFrames
 
 ```
 static void __stdcall AdjustFrames();
@@ -611,7 +611,7 @@ static void __stdcall AdjustFrames();
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="adjusttoolbars"></a>  CMFCVisualManager::AdjustToolbars
+##  <a name="adjusttoolbars"></a>CMFCVisualManager::AdjustToolbars
 
 ```
 static void __stdcall AdjustToolbars();
@@ -619,9 +619,9 @@ static void __stdcall AdjustToolbars();
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="alwayshighlight3dtabs"></a>  CMFCVisualManager::AlwaysHighlight3DTabs
+##  <a name="alwayshighlight3dtabs"></a>CMFCVisualManager::AlwaysHighlight3DTabs
 
-Rozhraní volá tuto metodu za účelem určení, zda 3D karty by měl vždy být zvýrazněn aplikace.
+Rozhraní volá tuto metodu, aby určila, zda mají být v aplikaci vždy zvýrazněny trojrozměrné karty.
 
 ```
 virtual BOOL AlwaysHighlight3DTabs() const;
@@ -629,13 +629,13 @@ virtual BOOL AlwaysHighlight3DTabs() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-`TRUE` Pokud by měl být zvýrazněn 3D karty.
+`TRUE`zda mají být zvýrazněny 3D karty.
 
 ### <a name="remarks"></a>Poznámky
 
-Potlačí tuto funkci v odvozené správce vzhledu a return, který by měl být zvýrazněn vždy hodnotu TRUE, pokud 3D karty. Výchozí implementace této metody vrátí hodnotu FALSE.
+Potlačí tuto funkci v odvozeném vizuálním správci a vrátí TRUE, pokud by měly být vždy zvýrazněny 3D karty. Výchozí implementace této metody vrátí hodnotu FALSE.
 
-##  <a name="cmfcvisualmanager"></a>  CMFCVisualManager::CMFCVisualManager
+##  <a name="cmfcvisualmanager"></a>CMFCVisualManager::CMFCVisualManager
 
 ```
 CMFCVisualManager(BOOL bTemporary = FALSE);
@@ -643,11 +643,11 @@ CMFCVisualManager(BOOL bTemporary = FALSE);
 
 ### <a name="parameters"></a>Parametry
 
-[in] *bTemporary*<br/>
+pro *bTemporary*<br/>
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="destroyinstance"></a>  CMFCVisualManager::DestroyInstance
+##  <a name="destroyinstance"></a>CMFCVisualManager::D estroyInstance
 
 ```
 static void __stdcall DestroyInstance(BOOL bAutoDestroyOnly = FALSE);
@@ -655,7 +655,7 @@ static void __stdcall DestroyInstance(BOOL bAutoDestroyOnly = FALSE);
 
 ### <a name="parameters"></a>Parametry
 
-[in] *bAutoDestroyOnly*<br/>
+pro *bAutoDestroyOnly*<br/>
 
 ### <a name="remarks"></a>Poznámky
 
@@ -671,14 +671,14 @@ void DoDrawHeaderSortArrow(
 
 ### <a name="parameters"></a>Parametry
 
-[in] *pDC*<br/>
-[in] *rect*<br/>
-[in] *bIsUp*<br/>
+pro *primární řadič domény*<br/>
+pro *Rect*<br/>
+pro *BISUP*<br/>
 [in] *bDlgCtrl*<br/>
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="drawcomboborderwinxp"></a>  CMFCVisualManager::DrawComboBorderWinXP
+##  <a name="drawcomboborderwinxp"></a>CMFCVisualManager::D rawComboBorderWinXP
 
 ```
 virtual BOOL DrawComboBorderWinXP(CDC*,
@@ -690,15 +690,15 @@ virtual BOOL DrawComboBorderWinXP(CDC*,
 
 ### <a name="parameters"></a>Parametry
 
-[in] *CDC&#42;*<br/>
-[in] *Crect –*<br/>
-[in] *BOOL*<br/>
+pro *CDC&#42;*<br/>
+pro *CRect*<br/>
+pro *Logická* hodnota<br/>
 
 ### <a name="return-value"></a>Návratová hodnota
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="drawcombodropbuttonwinxp"></a>  CMFCVisualManager::DrawComboDropButtonWinXP
+##  <a name="drawcombodropbuttonwinxp"></a>CMFCVisualManager::D rawComboDropButtonWinXP
 
 ```
 virtual BOOL DrawComboDropButtonWinXP(CDC*,
@@ -710,15 +710,15 @@ virtual BOOL DrawComboDropButtonWinXP(CDC*,
 
 ### <a name="parameters"></a>Parametry
 
-[in] *CDC&#42;*<br/>
-[in] *Crect –*<br/>
-[in] *BOOL*<br/>
+pro *CDC&#42;*<br/>
+pro *CRect*<br/>
+pro *Logická* hodnota<br/>
 
 ### <a name="return-value"></a>Návratová hodnota
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="drawpushbuttonwinxp"></a>  CMFCVisualManager::DrawPushButtonWinXP
+##  <a name="drawpushbuttonwinxp"></a>CMFCVisualManager::D rawPushButtonWinXP
 
 ```
 virtual BOOL DrawPushButtonWinXP(CDC*,
@@ -729,10 +729,10 @@ virtual BOOL DrawPushButtonWinXP(CDC*,
 
 ### <a name="parameters"></a>Parametry
 
-[in] *CDC&#42;*<br/>
-[in] *Crect –*<br/>
-[in] *Cmfcbutton –&#42;*<br/>
-[in] *UINT*<br/>
+pro *CDC&#42;*<br/>
+pro *CRect*<br/>
+pro *CMFCButton&#42;*<br/>
+pro *Uint*<br/>
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -752,18 +752,18 @@ virtual BOOL DrawTextOnGlass(
 
 ### <a name="parameters"></a>Parametry
 
-[in] *pDC*<br/>
-[in] *strText*<br/>
-[in] *rect*<br/>
+pro *primární řadič domény*<br/>
+pro *strText*<br/>
+pro *Rect*<br/>
 [in] *dwFlags*<br/>
-[in] *nGlowSize*<br/>
-[in] *clrText*<br/>
+pro *nGlowSize*<br/>
+pro *clrText*<br/>
 
 ### <a name="return-value"></a>Návratová hodnota
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="enabletoolbarbuttonfill"></a>  CMFCVisualManager::EnableToolbarButtonFill
+##  <a name="enabletoolbarbuttonfill"></a>CMFCVisualManager::EnableToolbarButtonFill
 
 ```
 void EnableToolbarButtonFill(BOOL bEnable = TRUE);
@@ -771,13 +771,13 @@ void EnableToolbarButtonFill(BOOL bEnable = TRUE);
 
 ### <a name="parameters"></a>Parametry
 
-[in] *bEnable*<br/>
+pro *bEnable*<br/>
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="getautohidebuttontextcolor"></a>  CMFCVisualManager::GetAutoHideButtonTextColor
+##  <a name="getautohidebuttontextcolor"></a>CMFCVisualManager::GetAutoHideButtonTextColor
 
-Rozhraní volá tuto metodu za účelem načtení automaticky skrýt tlačítko Barva textu.
+Rozhraní volá tuto metodu pro načtení barvy textu tlačítka pro automatické skrývání.
 
 ```
 virtual COLORREF GetAutoHideButtonTextColor(CMFCAutoHideButton* pButton);
@@ -786,19 +786,19 @@ virtual COLORREF GetAutoHideButtonTextColor(CMFCAutoHideButton* pButton);
 ### <a name="parameters"></a>Parametry
 
 *pButton*<br/>
-[in] Ukazatel na automaticky skrýt tlačítko.
+pro Ukazatel na tlačítko pro automatické skrývání.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-A [COLORREF](/windows/desktop/gdi/colorref) parametr, který určuje barvu textu *pButton*.
+Parametr [COLORREF](/windows/win32/gdi/colorref) , který určuje barvu textu *pButton*.
 
 ### <a name="remarks"></a>Poznámky
 
-Potlačí tuto metodu v odvozené třídě přizpůsobit barvu textu tlačítka automatického schovávání ve vaší aplikaci. Chcete-li to provést, vrátí barvu, která chcete, aby vaše aplikace pro použití jako barva textu.
+Přepsat tuto metodu v odvozené třídě pro přizpůsobení barvy textu automatického skrývání tlačítka v aplikaci. Chcete-li to provést, vraťte barvu, kterou má aplikace používat jako barvu textu.
 
-##  <a name="getbuttonextraborder"></a>  CMFCVisualManager::GetButtonExtraBorder
+##  <a name="getbuttonextraborder"></a>CMFCVisualManager::GetButtonExtraBorder
 
-Rozhraní volá tuto metodu při kreslení tlačítka panelu nástrojů.
+Rozhraní volá tuto metodu, když nakreslí tlačítko na panelu nástrojů.
 
 ```
 virtual CSize GetButtonExtraBorder() const;
@@ -806,15 +806,15 @@ virtual CSize GetButtonExtraBorder() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-A [CSize](../../atl-mfc-shared/reference/csize-class.md) objekt, který obsahuje další velikost ohraničení pro tlačítka panelu nástrojů.
+Objekt [CSize](../../atl-mfc-shared/reference/csize-class.md) , který obsahuje dodatečnou velikost ohraničení tlačítek panelu nástrojů.
 
 ### <a name="remarks"></a>Poznámky
 
-Některé vzhledy mají rozšířit ohraničení tlačítka na panelu nástrojů. Potlačí tuto metodu ve vlastní správce vzhledu ohraničení tlačítka na panelu nástrojů v aplikaci rozšířit. Výchozí implementace této metody vrátí prázdném rozměru.
+Některé vzhledy musí roztáhnout ohraničení tlačítek panelu nástrojů. Přepište tuto metodu ve vlastním vizuálním manažeru pro rozšiřování ohraničení tlačítek panelu nástrojů v aplikaci. Výchozí implementace této metody vrací prázdnou velikost.
 
-##  <a name="getcaptionbartextcolor"></a>  CMFCVisualManager::GetCaptionBarTextColor
+##  <a name="getcaptionbartextcolor"></a>CMFCVisualManager::GetCaptionBarTextColor
 
-Rozhraní volá tuto metodu za účelem načtení barvu textu v záhlaví.
+Rozhraní volá tuto metodu pro načtení barvy textu v záhlaví.
 
 ```
 virtual COLORREF GetCaptionBarTextColor(CMFCCaptionBar* pBar);
@@ -823,17 +823,17 @@ virtual COLORREF GetCaptionBarTextColor(CMFCCaptionBar* pBar);
 ### <a name="parameters"></a>Parametry
 
 *pBar*<br/>
-[in] Ukazatel na záhlaví.
+pro Ukazatel na panel titulků.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-A [COLORREF](/windows/desktop/gdi/colorref) parametr, který určuje barvu textu v *pBar*.
+Parametr [COLORREF](/windows/win32/gdi/colorref) , který určuje barvu textu v *pBar*.
 
 ### <a name="remarks"></a>Poznámky
 
-Potlačí tuto metodu v odvozené třídě přizpůsobit barvu textu pro záhlaví. Ve své metodě přepsaného vraťte požadovanou barvu.
+Tuto metodu přepište v odvozené třídě, aby se přizpůsobila barva textu pro pruh titulků. V přepsané metodě vrátí požadovanou barvu.
 
-##  <a name="getcaptionbuttonextraborder"></a>  CMFCVisualManager::GetCaptionButtonExtraBorder
+##  <a name="getcaptionbuttonextraborder"></a>CMFCVisualManager::GetCaptionButtonExtraBorder
 
 ```
 virtual CSize GetCaptionButtonExtraBorder() const;
@@ -843,7 +843,7 @@ virtual CSize GetCaptionButtonExtraBorder() const;
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="getdockingpanecaptionextraheight"></a>  CMFCVisualManager::GetDockingPaneCaptionExtraHeight
+##  <a name="getdockingpanecaptionextraheight"></a>CMFCVisualManager::GetDockingPaneCaptionExtraHeight
 
 ```
 virtual int GetDockingPaneCaptionExtraHeight() const;
@@ -853,9 +853,9 @@ virtual int GetDockingPaneCaptionExtraHeight() const;
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="getdockingtabsborderssize"></a>  CMFCVisualManager::GetDockingTabsBordersSize
+##  <a name="getdockingtabsborderssize"></a>CMFCVisualManager::GetDockingTabsBordersSize
 
-Rozhraní volá tuto metodu při kreslení podokno, které je ukotvena a oddělené tabulátory.
+Rozhraní volá tuto metodu, když nakreslí ukotvené podokno a s kartami.
 
 ```
 virtual int GetDockingTabsBordersSize();
@@ -863,15 +863,15 @@ virtual int GetDockingTabsBordersSize();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Celé číslo, které určuje velikost ohraničení na stavového řádku, který je připojený i s kartami.
+Celé číslo, které označuje velikost ohraničení podokna, které je ukotveno a na kartách.
 
 ### <a name="remarks"></a>Poznámky
 
-Ukotvené podokno se stane s kartami, když uživatel ukotvené více podoken do stejného umístění ve vaší aplikaci.
+Ukotvené podokno se zobrazí na kartách, když uživatel ukotví více podoken do stejného umístění ve vaší aplikaci.
 
-Potlačí tuto metodu ve vlastní správce vzhledu, chcete-li změnit velikost ohraničení s kartami ukotvených ovládacích panelů. Výchozí implementace vrací -1.
+Pokud chcete změnit velikost ohraničení ukotvených ovládacích panelů s kartami, přepište tuto metodu ve vlastním vizuálním manažeru. Výchozí implementace vrátí hodnotu-1.
 
-##  <a name="gethighlightedmenuitemtextcolor"></a>  CMFCVisualManager::GetHighlightedMenuItemTextColor
+##  <a name="gethighlightedmenuitemtextcolor"></a>CMFCVisualManager::GetHighlightedMenuItemTextColor
 
 ```
 virtual COLORREF GetHighlightedMenuItemTextColor(CMFCToolBarMenuButton* pButton);
@@ -879,15 +879,15 @@ virtual COLORREF GetHighlightedMenuItemTextColor(CMFCToolBarMenuButton* pButton)
 
 ### <a name="parameters"></a>Parametry
 
-[in] *pButton*<br/>
+pro *pButton*<br/>
 
 ### <a name="return-value"></a>Návratová hodnota
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="getinstance"></a>  CMFCVisualManager::GetInstance
+##  <a name="getinstance"></a>CMFCVisualManager:: GetInstance
 
-Vrací ukazatel na aktuální [cmfcvisualmanager – třída](../../mfc/reference/cmfcvisualmanager-class.md) objektu pro aplikaci.
+Vrátí ukazatel na aktuální objekt [třídy CMFCVisualManager](../../mfc/reference/cmfcvisualmanager-class.md) pro aplikaci.
 
 ```
 static CMFCVisualManager* GetInstance();
@@ -895,15 +895,15 @@ static CMFCVisualManager* GetInstance();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Ukazatel `CMFCVisualManager` objektu.
+Ukazatel na `CMFCVisualManager` objekt.
 
 ### <a name="remarks"></a>Poznámky
 
-Aplikace může mít pouze jeden `CMFCVisualManager` objekt přidružen. Jedná se o jakéhokoli objektu odvozeného od `CMFCVisualManager` třídy. Tato metoda vrací ukazatel na přidruženou `CMFCVisualManager` objektu. Pokud aplikace nemá žádné přidružené `CMFCVisualManager` objektu, tato metoda se vytvořit a přiřadit k aplikaci.
+K aplikaci může být přidružen pouze `CMFCVisualManager` jeden objekt. To zahrnuje libovolný objekt odvozený od `CMFCVisualManager` třídy. Tato metoda vrací ukazatel na přidružený `CMFCVisualManager` objekt. Pokud aplikace nemá přidružený `CMFCVisualManager` objekt, vytvoří tato metoda jednu a přidruží ji k aplikaci.
 
-##  <a name="getmditabsborderssize"></a>  CMFCVisualManager::GetMDITabsBordersSize
+##  <a name="getmditabsborderssize"></a>CMFCVisualManager::GetMDITabsBordersSize
 
-Rozhraní volá tuto metodu za účelem určení velikost ohraničení okna MDITabs předtím, než se vykreslí v okně.
+Rozhraní volá tuto metodu, aby určila velikost ohraničení okna MDITabs před tím, než okno nakreslí.
 
 ```
 virtual int GetMDITabsBordersSize();
@@ -911,13 +911,13 @@ virtual int GetMDITabsBordersSize();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Velikost ohraničení okna MDITabs.
+Velikost ohraničení okna MDITabs
 
 ### <a name="remarks"></a>Poznámky
 
-Tuto funkci v odvozené třídě přizpůsobit velikost ohraničení okna MDITabs přepište.
+Přepište tuto funkci v odvozené třídě, abyste přizpůsobili velikost ohraničení okna MDITabs.
 
-##  <a name="getmenuimagemargin"></a>  CMFCVisualManager::GetMenuImageMargin
+##  <a name="getmenuimagemargin"></a>CMFCVisualManager::GetMenuImageMargin
 
 ```
 virtual int GetMenuImageMargin() const;
@@ -927,7 +927,7 @@ virtual int GetMenuImageMargin() const;
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="getmenuitemtextcolor"></a>  CMFCVisualManager::GetMenuItemTextColor
+##  <a name="getmenuitemtextcolor"></a>CMFCVisualManager::GetMenuItemTextColor
 
 ```
 virtual COLORREF GetMenuItemTextColor(
@@ -938,15 +938,15 @@ virtual COLORREF GetMenuItemTextColor(
 
 ### <a name="parameters"></a>Parametry
 
-[in] *pButton*<br/>
-[in] *bHighlighted*<br/>
-[in] *bDisabled*<br/>
+pro *pButton*<br/>
+pro *bHighlighted*<br/>
+pro *bDisabled*<br/>
 
 ### <a name="return-value"></a>Návratová hodnota
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="getmenushadowdepth"></a>  CMFCVisualManager::GetMenuShadowDepth
+##  <a name="getmenushadowdepth"></a>CMFCVisualManager::GetMenuShadowDepth
 
 Načte šířku a výšku stínu nabídky.
 
@@ -956,15 +956,15 @@ int GetMenuShadowDepth() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Šířka a výška stínu nabídky v pixelech.
+Šířka a výška stínu nabídky v pixelech
 
 ### <a name="remarks"></a>Poznámky
 
-Šířku a výšku stínu nabídky jsou ekvivalentní. Výchozí hodnota je 7 pixelů.
+Šířka a výška stínu nabídky jsou ekvivalentní. Výchozí hodnota je 7 pixelů.
 
-##  <a name="getncbtnsize"></a>  CMFCVisualManager::GetNcBtnSize
+##  <a name="getncbtnsize"></a>CMFCVisualManager::GetNcBtnSize
 
-Volá se rozhraním, když má načíst velikost tlačítka systému.
+Volá se rozhraním, když má načíst velikost systémových tlačítek.
 
 ```
 virtual CSize GetNcBtnSize(BOOL bSmall) const;
@@ -973,19 +973,19 @@ virtual CSize GetNcBtnSize(BOOL bSmall) const;
 ### <a name="parameters"></a>Parametry
 
 *bSmall*<br/>
-[in] Parametr logické hodnoty označující, zda `GetNcBtnSize` , načtěte velikost tlačítka malé nebo velké systému. Pokud *bSmall* má hodnotu TRUE, `GetNcBtnSize` vrátí velikost tlačítka malé systému. V opačném případě vrátí velikost tlačítka rozsáhlém systému.
+pro Logický parametr, který označuje, `GetNcBtnSize` zda má být načtena velikost malého nebo velkého systémového tlačítka. Pokud má *bSmall* hodnotu true `GetNcBtnSize` , vrátí velikost malého systémového tlačítka. V opačném případě vrátí velikost velkého systémového tlačítka.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-A [CSize](../../atl-mfc-shared/reference/csize-class.md) parametr, který označuje velikost tlačítka systému.
+Parametr [CSize](../../atl-mfc-shared/reference/csize-class.md) , který určuje velikost systémových tlačítek.
 
 ### <a name="remarks"></a>Poznámky
 
-Systémových tlačítek jsou tlačítka titulek okna rámce, které mapují na příkazy **Zavřít**, **minimalizovat**, **Maximalizovat**, a **obnovení**. Velikost těchto tlačítek závisí na aktuální správce vzhledu. Potlačí tuto metodu, pokud chcete přizpůsobit velikost systémových tlačítek ve vaší aplikaci.
+Systémová tlačítka jsou tlačítka v titulku okna rámce, které je namapováno na příkazy **Zavřít**, **minimalizovat**, **maximalizovat**a **obnovit**. Velikost těchto tlačítek závisí na aktuálním vizuálním manažerovi. Tuto metodu přepište, pokud chcete přizpůsobit velikost systémových tlačítek ve vaší aplikaci.
 
-##  <a name="getpopupmenubordersize"></a>  CMFCVisualManager::GetPopupMenuBorderSize
+##  <a name="getpopupmenubordersize"></a>CMFCVisualManager::GetPopupMenuBorderSize
 
-Rozhraní volá tuto metodu za účelem získání velikost ohraničení z místní nabídky.
+Rozhraní volá tuto metodu, aby získala velikost ohraničení místních nabídek.
 
 ```
 virtual int GetPopupMenuBorderSize() const;
@@ -993,13 +993,13 @@ virtual int GetPopupMenuBorderSize() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Celé číslo, které určuje velikost ohraničení rozbalovací nabídky.
+Celé číslo, které určuje velikost ohraničení místních nabídek.
 
 ### <a name="remarks"></a>Poznámky
 
-Potlačí tuto metodu za účelem přizpůsobení velikosti ohraničení nabídek v aplikaci.
+Tuto metodu přepište, chcete-li přizpůsobit velikost ohraničení místních nabídek v aplikaci.
 
-##  <a name="getpopupmenugap"></a>  CMFCVisualManager::GetPopupMenuGap
+##  <a name="getpopupmenugap"></a>CMFCVisualManager::GetPopupMenuGap
 
 ```
 virtual int GetPopupMenuGap() const;
@@ -1009,9 +1009,9 @@ virtual int GetPopupMenuGap() const;
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="getpropertygridgroupcolor"></a>  CMFCVisualManager::GetPropertyGridGroupColor
+##  <a name="getpropertygridgroupcolor"></a>CMFCVisualManager::GetPropertyGridGroupColor
 
-Rozhraní volá tuto metodu za účelem získání barvu pozadí seznamu vlastností.
+Rozhraní volá tuto metodu, aby získala barvu pozadí seznamu vlastností.
 
 ```
 virtual COLORREF GetPropertyGridGroupColor(CMFCPropertyGridCtrl* pPropList);
@@ -1020,19 +1020,19 @@ virtual COLORREF GetPropertyGridGroupColor(CMFCPropertyGridCtrl* pPropList);
 ### <a name="parameters"></a>Parametry
 
 *pPropList*<br/>
-[in] Ukazatel na seznam vlastností, které kreslení rozhraní framework.
+pro Ukazatel na seznam vlastností, který rozhraní kreslí.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-A [COLORREF](/windows/desktop/gdi/colorref) parametr, který určuje barvu pozadí *pPropList*.
+Parametr [COLORREF](/windows/win32/gdi/colorref) , který určuje barvu pozadí *pPropList*.
 
 ### <a name="remarks"></a>Poznámky
 
-Přepsání této funkce můžete přizpůsobit barvu pozadí seznamu vlastností v aplikaci.
+Přepište tuto funkci, pokud chcete přizpůsobit barvu pozadí seznamu vlastností v aplikaci.
 
 ##  <a name="getpropertygridgrouptextcolor"></a>  CMFCVisualManager::GetPropertyGridGroupTextColor
 
-Rozhraní volá tuto metodu za účelem načtení barvu textu, seznamu vlastností.
+Rozhraní volá tuto metodu pro načtení barvy textu seznamu vlastností.
 
 ```
 virtual COLORREF GetPropertyGridGroupTextColor(CMFCPropertyGridCtrl* pPropList);
@@ -1041,15 +1041,15 @@ virtual COLORREF GetPropertyGridGroupTextColor(CMFCPropertyGridCtrl* pPropList);
 ### <a name="parameters"></a>Parametry
 
 *pPropList*<br/>
-[in] Ukazatel na seznam vlastností.
+pro Ukazatel na seznam vlastností.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-A [COLORREF](/windows/desktop/gdi/colorref) parametr, který určuje barvu textu, seznamu vlastností.
+Parametr [COLORREF](/windows/win32/gdi/colorref) , který určuje barvu textu v seznamu vlastností.
 
 ### <a name="remarks"></a>Poznámky
 
-Přepsání této funkce můžete přizpůsobit barvu textu, seznamu vlastností v aplikaci.
+Přepište tuto funkci, pokud chcete přizpůsobit barvu textu seznamu vlastností v aplikaci.
 
 ##  <a name="getribbonhyperlinktextcolor"></a>  CMFCVisualManager::GetRibbonHyperlinkTextColor
 
@@ -1059,13 +1059,13 @@ virtual COLORREF GetRibbonHyperlinkTextColor(CMFCRibbonLinkCtrl* pHyperLink);
 
 ### <a name="parameters"></a>Parametry
 
-[in] *pHyperLink*<br/>
+pro *pHyperLink*<br/>
 
 ### <a name="return-value"></a>Návratová hodnota
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="getribbonpopupbordersize"></a>  CMFCVisualManager::GetRibbonPopupBorderSize
+##  <a name="getribbonpopupbordersize"></a>CMFCVisualManager::GetRibbonPopupBorderSize
 
 ```
 virtual int GetRibbonPopupBorderSize(const CMFCRibbonPanelMenu*) const;
@@ -1073,13 +1073,13 @@ virtual int GetRibbonPopupBorderSize(const CMFCRibbonPanelMenu*) const;
 
 ### <a name="parameters"></a>Parametry
 
-[in] *Cmfcribbonpanelmenu –&#42;*<br/>
+pro *CMFCRibbonPanelMenu&#42;*<br/>
 
 ### <a name="return-value"></a>Návratová hodnota
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="getribbonquickaccesstoolbarchevronoffset"></a>  CMFCVisualManager::GetRibbonQuickAccessToolBarChevronOffset
+##  <a name="getribbonquickaccesstoolbarchevronoffset"></a>CMFCVisualManager::GetRibbonQuickAccessToolBarChevronOffset
 
 ```
 virtual int GetRibbonQuickAccessToolBarChevronOffset();
@@ -1089,7 +1089,7 @@ virtual int GetRibbonQuickAccessToolBarChevronOffset();
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="getribbonquickaccesstoolbarrightmargin"></a>  CMFCVisualManager::GetRibbonQuickAccessToolBarRightMargin
+##  <a name="getribbonquickaccesstoolbarrightmargin"></a>CMFCVisualManager::GetRibbonQuickAccessToolBarRightMargin
 
 ```
 virtual int GetRibbonQuickAccessToolBarRightMargin();
@@ -1099,7 +1099,7 @@ virtual int GetRibbonQuickAccessToolBarRightMargin();
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="getribbonquickaccesstoolbartextcolor"></a>  CMFCVisualManager::GetRibbonQuickAccessToolBarTextColor
+##  <a name="getribbonquickaccesstoolbartextcolor"></a>CMFCVisualManager::GetRibbonQuickAccessToolBarTextColor
 
 ```
 virtual COLORREF GetRibbonQuickAccessToolBarTextColor(BOOL bDisabled = FALSE);
@@ -1107,13 +1107,13 @@ virtual COLORREF GetRibbonQuickAccessToolBarTextColor(BOOL bDisabled = FALSE);
 
 ### <a name="parameters"></a>Parametry
 
-[in] *bDisabled*<br/>
+pro *bDisabled*<br/>
 
 ### <a name="return-value"></a>Návratová hodnota
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="getribbonslidercolors"></a>  CMFCVisualManager::GetRibbonSliderColors
+##  <a name="getribbonslidercolors"></a>CMFCVisualManager::GetRibbonSliderColors
 
 ```
 virtual void GetRibbonSliderColors(
@@ -1127,16 +1127,16 @@ virtual void GetRibbonSliderColors(
 
 ### <a name="parameters"></a>Parametry
 
-[in] *pSlider*<br/>
-[in] *bIsHighlighted*<br/>
-[in] *bIsPressed*<br/>
-[in] *bIsDisabled*<br/>
-[in] *clrLine*<br/>
-[in] *clrFill*<br/>
+pro *pSlider*<br/>
+pro *bIsHighlighted*<br/>
+pro *bIsPressed*<br/>
+pro *bIsDisabled*<br/>
+pro *clrLine*<br/>
+pro *clrFill*<br/>
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="getribbonstatusbartextcolor"></a>  CMFCVisualManager::GetRibbonStatusBarTextColor
+##  <a name="getribbonstatusbartextcolor"></a>CMFCVisualManager::GetRibbonStatusBarTextColor
 
 ```
 virtual COLORREF GetRibbonStatusBarTextColor(CMFCRibbonStatusBar* pStatusBar);
@@ -1144,13 +1144,13 @@ virtual COLORREF GetRibbonStatusBarTextColor(CMFCRibbonStatusBar* pStatusBar);
 
 ### <a name="parameters"></a>Parametry
 
-[in] *pStatusBar*<br/>
+pro *pStatusBar*<br/>
 
 ### <a name="return-value"></a>Návratová hodnota
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="getshowallmenuitemsheight"></a>  CMFCVisualManager::GetShowAllMenuItemsHeight
+##  <a name="getshowallmenuitemsheight"></a>CMFCVisualManager::GetShowAllMenuItemsHeight
 
 ```
 virtual int GetShowAllMenuItemsHeight(
@@ -1160,14 +1160,14 @@ virtual int GetShowAllMenuItemsHeight(
 
 ### <a name="parameters"></a>Parametry
 
-[in] *pDC*<br/>
-[in] *sizeDefault*<br/>
+pro *primární řadič domény*<br/>
+pro *sizeDefault*<br/>
 
 ### <a name="return-value"></a>Návratová hodnota
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="getsmartdockingbaseguidecolors"></a>  CMFCVisualManager::GetSmartDockingBaseGuideColors
+##  <a name="getsmartdockingbaseguidecolors"></a>CMFCVisualManager::GetSmartDockingBaseGuideColors
 
 ```
 virtual void GetSmartDockingBaseGuideColors(
@@ -1182,7 +1182,7 @@ virtual void GetSmartDockingBaseGuideColors(
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="getsmartdockinghighlighttonecolor"></a>  CMFCVisualManager::GetSmartDockingHighlightToneColor
+##  <a name="getsmartdockinghighlighttonecolor"></a>CMFCVisualManager::GetSmartDockingHighlightToneColor
 
 ```
 virtual COLORREF GetSmartDockingHighlightToneColor();
@@ -1192,9 +1192,9 @@ virtual COLORREF GetSmartDockingHighlightToneColor();
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="getsmartdockingtheme"></a>  CMFCVisualManager::GetSmartDockingTheme
+##  <a name="getsmartdockingtheme"></a>CMFCVisualManager::GetSmartDockingTheme
 
-Vrátí motiv, který slouží k zobrazení značek inteligentního dokování.
+Vrátí motiv použitý k zobrazení značek inteligentního Docker.
 
 ```
 virtual AFX_SMARTDOCK_THEME GetSmartDockingTheme();
@@ -1206,7 +1206,7 @@ Vrátí jednu z následujících hodnot výčtu: AFX_SDT_DEFAULT, AFX_SDT_VS2005
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="getstatusbarpanetextcolor"></a>  CMFCVisualManager::GetStatusBarPaneTextColor
+##  <a name="getstatusbarpanetextcolor"></a>CMFCVisualManager::GetStatusBarPaneTextColor
 
 ```
 virtual COLORREF GetStatusBarPaneTextColor(
@@ -1216,16 +1216,16 @@ virtual COLORREF GetStatusBarPaneTextColor(
 
 ### <a name="parameters"></a>Parametry
 
-[in] *pStatusBar*<br/>
-[in] *pPane*<br/>
+pro *pStatusBar*<br/>
+pro *pPane*<br/>
 
 ### <a name="return-value"></a>Návratová hodnota
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="gettabframecolors"></a>  CMFCVisualManager::GetTabFrameColors
+##  <a name="gettabframecolors"></a>CMFCVisualManager::GetTabFrameColors
 
-Rozhraní volá tuto funkci, pokud má k načtení sady barev pro kreslení okno s kartou.
+Rozhraní volá tuto funkci, když má načíst sadu barev pro vykreslení okna karet.
 
 ```
 virtual void GetTabFrameColors(
@@ -1243,37 +1243,37 @@ virtual void GetTabFrameColors(
 ### <a name="parameters"></a>Parametry
 
 *pTabWnd*<br/>
-[in] Ukazatel na okno s kartami, kde je rámec vykreslení na kartě.
+pro Ukazatel na okno s kartami, kde snímek nakreslí kartu.
 
 *clrDark*<br/>
-[out] Odkaz na [COLORREF](/windows/desktop/gdi/colorref) parametr, pokud tato metoda ukládá barvu pro Tmavý okraj na kartě.
+mimo Odkaz na parametr [COLORREF](/windows/win32/gdi/colorref) , kde tato metoda ukládá barvu pro tmavé ohraničení karty.
 
 *clrBlack*<br/>
-[out] Odkaz na parametr COLORREF, kde tato metoda ukládá barvu ohraničení okna Karta. Výchozí barvu ohraničení je černá.
+mimo Odkaz na parametr COLORREF, kde tato metoda ukládá barvu ohraničení okna karty. Výchozí barva ohraničení je černá.
 
 *clrHighlight*<br/>
-[out] Odkaz na parametr COLORREF, kde tato metoda ukládá barvu pro zvýraznění stav okna Karta.
+mimo Odkaz na parametr COLORREF, kde tato metoda ukládá barvu pro stav zvýraznění okna karty.
 
 *clrFace*<br/>
-[out] Odkaz na parametr COLORREF, kde tato metoda ukládá barvu pro rozpoznávání tváře okna Karta.
+mimo Odkaz na parametr COLORREF, kde tato metoda ukládá barvu pro obličej okna karty.
 
 *clrDarkShadow*<br/>
-[out] Odkaz na parametr COLORREF, kde tato metoda ukládá Barva stínu okno s kartou.
+mimo Odkaz na parametr COLORREF, kde tato metoda ukládá barvu pro stín okna karty.
 
 *clrLight*<br/>
-[out] Odkaz na parametr COLORREF, kde tato metoda ukládá barvu světla okraji okna Karta.
+mimo Odkaz na parametr COLORREF, kde tato metoda ukládá barvu pro světlou okraj okna karty.
 
 *pbrFace*<br/>
-[out] Ukazatel na odkaz pro štětce. Tato metoda ukládá štětec, který se používá k vyplnění obličej systému okno s kartou v tomto parametru.
+mimo Ukazatel na odkaz štětce. Tato metoda ukládá štětec, který používá k vyplnění obličeje okna karet v tomto parametru.
 
 *pbrBlack*<br/>
-[out] Ukazatel na odkaz pro štětce. Tato metoda ukládá štětec, který se používá k vyplnění černé okraji okna karty v tomto parametru.
+mimo Ukazatel na odkaz štětce. Tato metoda ukládá štětec, který používá, k vyplnění černého okraje okna karty v tomto parametru.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato funkce v odvozené třídě přepište, pokud budete chtít přizpůsobit sadu barev, které rozhraní používá při kreslení okno s kartou.
+Tuto funkci můžete přepsat v odvozené třídě, pokud chcete přizpůsobit sadu barev, které rozhraní používá při nakreslení okna karty.
 
-##  <a name="gettabhorzmargin"></a>  CMFCVisualManager::GetTabHorzMargin
+##  <a name="gettabhorzmargin"></a>CMFCVisualManager::GetTabHorzMargin
 
 ```
 virtual int GetTabHorzMargin(const CMFCBaseTabCtrl*);
@@ -1281,7 +1281,7 @@ virtual int GetTabHorzMargin(const CMFCBaseTabCtrl*);
 
 ### <a name="parameters"></a>Parametry
 
-[in] *CMFCBaseTabCtrl&#42;*<br/>
+pro *CMFCBaseTabCtrl&#42;*<br/>
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -1298,15 +1298,15 @@ virtual COLORREF GetTabTextColor(
 
 ### <a name="parameters"></a>Parametry
 
-[in] *CMFCBaseTabCtrl&#42;*<br/>
-[in] *int*<br/>
-[in] *BOOL*<br/>
+pro *CMFCBaseTabCtrl&#42;*<br/>
+pro *int*<br/>
+pro *Logická* hodnota<br/>
 
 ### <a name="return-value"></a>Návratová hodnota
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="gettaskspanegroupcaptionheight"></a>  CMFCVisualManager::GetTasksPaneGroupCaptionHeight
+##  <a name="gettaskspanegroupcaptionheight"></a>CMFCVisualManager::GetTasksPaneGroupCaptionHeight
 
 ```
 int GetTasksPaneGroupCaptionHeight() const;
@@ -1316,7 +1316,7 @@ int GetTasksPaneGroupCaptionHeight() const;
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="gettaskspanegroupcaptionhorzoffset"></a>  CMFCVisualManager::GetTasksPaneGroupCaptionHorzOffset
+##  <a name="gettaskspanegroupcaptionhorzoffset"></a>CMFCVisualManager::GetTasksPaneGroupCaptionHorzOffset
 
 ```
 int GetTasksPaneGroupCaptionHorzOffset() const;
@@ -1326,7 +1326,7 @@ int GetTasksPaneGroupCaptionHorzOffset() const;
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="gettaskspanegroupcaptionvertoffset"></a>  CMFCVisualManager::GetTasksPaneGroupCaptionVertOffset
+##  <a name="gettaskspanegroupcaptionvertoffset"></a>CMFCVisualManager::GetTasksPaneGroupCaptionVertOffset
 
 ```
 int GetTasksPaneGroupCaptionVertOffset() const;
@@ -1336,7 +1336,7 @@ int GetTasksPaneGroupCaptionVertOffset() const;
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="gettaskspanegroupvertoffset"></a>  CMFCVisualManager::GetTasksPaneGroupVertOffset
+##  <a name="gettaskspanegroupvertoffset"></a>CMFCVisualManager::GetTasksPaneGroupVertOffset
 
 ```
 int GetTasksPaneGroupVertOffset() const;
@@ -1346,7 +1346,7 @@ int GetTasksPaneGroupVertOffset() const;
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="gettaskspanehorzmargin"></a>  CMFCVisualManager::GetTasksPaneHorzMargin
+##  <a name="gettaskspanehorzmargin"></a>CMFCVisualManager::GetTasksPaneHorzMargin
 
 ```
 int GetTasksPaneHorzMargin() const;
@@ -1356,7 +1356,7 @@ int GetTasksPaneHorzMargin() const;
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="gettaskspaneiconhorzoffset"></a>  CMFCVisualManager::GetTasksPaneIconHorzOffset
+##  <a name="gettaskspaneiconhorzoffset"></a>CMFCVisualManager::GetTasksPaneIconHorzOffset
 
 ```
 int GetTasksPaneIconHorzOffset() const;
@@ -1366,7 +1366,7 @@ int GetTasksPaneIconHorzOffset() const;
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="gettaskspaneiconvertoffset"></a>  CMFCVisualManager::GetTasksPaneIconVertOffset
+##  <a name="gettaskspaneiconvertoffset"></a>CMFCVisualManager::GetTasksPaneIconVertOffset
 
 ```
 int GetTasksPaneIconVertOffset() const;
@@ -1376,7 +1376,7 @@ int GetTasksPaneIconVertOffset() const;
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="gettaskspanetaskhorzoffset"></a>  CMFCVisualManager::GetTasksPaneTaskHorzOffset
+##  <a name="gettaskspanetaskhorzoffset"></a>CMFCVisualManager::GetTasksPaneTaskHorzOffset
 
 ```
 int GetTasksPaneTaskHorzOffset() const;
@@ -1386,7 +1386,7 @@ int GetTasksPaneTaskHorzOffset() const;
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="gettaskspanevertmargin"></a>  CMFCVisualManager::GetTasksPaneVertMargin
+##  <a name="gettaskspanevertmargin"></a>CMFCVisualManager::GetTasksPaneVertMargin
 
 ```
 int GetTasksPaneVertMargin() const;
@@ -1396,9 +1396,9 @@ int GetTasksPaneVertMargin() const;
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="gettoolbarbuttontextcolor"></a>  CMFCVisualManager::GetToolbarButtonTextColor
+##  <a name="gettoolbarbuttontextcolor"></a>CMFCVisualManager::GetToolbarButtonTextColor
 
-Rozhraní volá tuto metodu za účelem určení barvu textu tlačítka panelu nástrojů.
+Rozhraní volá tuto metodu pro určení barvy textu tlačítka panelu nástrojů.
 
 ```
 virtual COLORREF GetToolbarButtonTextColor(
@@ -1409,22 +1409,22 @@ virtual COLORREF GetToolbarButtonTextColor(
 ### <a name="parameters"></a>Parametry
 
 *pButton*<br/>
-[in] Ukazatel na panelu nástrojů.
+pro Ukazatel na tlačítko panelu nástrojů.
 
-*state*<br/>
-[in] Stav panelu nástrojů.
+*státech*<br/>
+pro Stav tlačítka panelu nástrojů
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Barva textu *pButton* když má stav indikován *stavu*.
+Barva textu *pButton* , pokud má stav uvedený v poli *stav*
 
 ### <a name="remarks"></a>Poznámky
 
-Barva textu [cmfctoolbarbutton – třída](../../mfc/reference/cmfctoolbarbutton-class.md) objektu závisí na stav tlačítka. Možné stavy tlačítka panelu nástrojů `ButtonsIsRegular`, `ButtonsIsPressed`, nebo `ButtonsIsHighlighted`.
+Barva textu objektu [třídy CMFCToolBarButton](../../mfc/reference/cmfctoolbarbutton-class.md) závisí na stavu tlačítka. Možné stavy tlačítka panelu nástrojů jsou `ButtonsIsRegular`, `ButtonsIsPressed`nebo `ButtonsIsHighlighted`.
 
-Přepsání této funkce můžete přizpůsobit barvu textu tlačítka panelu nástrojů v aplikaci.
+Tuto funkci můžete přepsat, chcete-li přizpůsobit barvu textu tlačítka panelu nástrojů v aplikaci.
 
-##  <a name="gettoolbarcustomizebuttonmargin"></a>  CMFCVisualManager::GetToolBarCustomizeButtonMargin
+##  <a name="gettoolbarcustomizebuttonmargin"></a>CMFCVisualManager::GetToolBarCustomizeButtonMargin
 
 ```
 virtual int GetToolBarCustomizeButtonMargin() const;
@@ -1434,7 +1434,7 @@ virtual int GetToolBarCustomizeButtonMargin() const;
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="gettoolbardisabledcolor"></a>  CMFCVisualManager::GetToolbarDisabledColor
+##  <a name="gettoolbardisabledcolor"></a>CMFCVisualManager::GetToolbarDisabledColor
 
 ```
 virtual COLORREF GetToolbarDisabledColor() const;
@@ -1444,9 +1444,9 @@ virtual COLORREF GetToolbarDisabledColor() const;
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="gettoolbardisabledtextcolor"></a>  CMFCVisualManager::GetToolbarDisabledTextColor
+##  <a name="gettoolbardisabledtextcolor"></a>CMFCVisualManager::GetToolbarDisabledTextColor
 
-Rozhraní volá tuto funkci k určení barva textu tlačítka na panelu nástrojů, které jsou k dispozici.
+Rozhraní volá tuto funkci k určení barvy textu tlačítek panelu nástrojů, která nejsou k dispozici.
 
 ```
 virtual COLORREF GetToolbarDisabledTextColor();
@@ -1454,13 +1454,13 @@ virtual COLORREF GetToolbarDisabledTextColor();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Barva, která používá rozhraní pro barvu textu tlačítka na panelu nástrojů, které jsou k dispozici.
+Barva, kterou rozhraní používá pro barvu textu tlačítek panelu nástrojů, které nejsou k dispozici.
 
 ### <a name="remarks"></a>Poznámky
 
-Potlačí tuto metodu ve vlastní správce vzhledu nastavit barvu textu tlačítka na panelu nástrojů, které jsou k dispozici.
+Přepište tuto metodu ve vlastním vizuálním manažeru a nastavte barvu textu tlačítek panelu nástrojů, která nejsou k dispozici.
 
-##  <a name="gettoolbarhighlightcolor"></a>  CMFCVisualManager::GetToolbarHighlightColor
+##  <a name="gettoolbarhighlightcolor"></a>CMFCVisualManager::GetToolbarHighlightColor
 
 ```
 virtual COLORREF GetToolbarHighlightColor();
@@ -1470,7 +1470,7 @@ virtual COLORREF GetToolbarHighlightColor();
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="gettooltipinfo"></a>  CMFCVisualManager::GetToolTipInfo
+##  <a name="gettooltipinfo"></a>CMFCVisualManager::GetToolTipInfo
 
 ```
 virtual BOOL GetToolTipInfo(
@@ -1480,16 +1480,16 @@ virtual BOOL GetToolTipInfo(
 
 ### <a name="parameters"></a>Parametry
 
-[in] *parametry*<br/>
-[in] *nTyp*<br/>
+pro *parametry*<br/>
+pro *noznámení*<br/>
 
 ### <a name="return-value"></a>Návratová hodnota
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="hasoverlappedautohidebuttons"></a>  CMFCVisualManager::HasOverlappedAutoHideButtons
+##  <a name="hasoverlappedautohidebuttons"></a>CMFCVisualManager::HasOverlappedAutoHideButtons
 
-Vrátí, zda automatického skrytí tlačítka překrývají v aktuální správce vzhledu.
+Vrátí, zda se tlačítka automatického skrývání překrývají v aktuálním vizuálním manažerovi.
 
 ```
 virtual BOOL HasOverlappedAutoHideButtons() const;
@@ -1497,9 +1497,9 @@ virtual BOOL HasOverlappedAutoHideButtons() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Hodnota TRUE, pokud se překrývají automatického skrytí tlačítka; FALSE, pokud tomu tak není.
+TRUE, pokud se překrývají tlačítka automaticky skrývat; FALSE, pokud ne.
 
-##  <a name="isautodestroy"></a>  CMFCVisualManager::IsAutoDestroy
+##  <a name="isautodestroy"></a>CMFCVisualManager::IsAutoDestroy
 
 ```
 BOOL IsAutoDestroy() const;
@@ -1509,7 +1509,7 @@ BOOL IsAutoDestroy() const;
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="isdefaultwinxppopupbutton"></a>  CMFCVisualManager::IsDefaultWinXPPopupButton
+##  <a name="isdefaultwinxppopupbutton"></a>CMFCVisualManager::IsDefaultWinXPPopupButton
 
 ```
 virtual BOOL IsDefaultWinXPPopupButton(CMFCDesktopAlertWndButton*) const;
@@ -1517,15 +1517,15 @@ virtual BOOL IsDefaultWinXPPopupButton(CMFCDesktopAlertWndButton*) const;
 
 ### <a name="parameters"></a>Parametry
 
-[in] *Cmfcdesktopalertwndbutton –&#42;*<br/>
+pro *CMFCDesktopAlertWndButton&#42;*<br/>
 
 ### <a name="return-value"></a>Návratová hodnota
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="isdockingtabhasborder"></a>  CMFCVisualManager::IsDockingTabHasBorder
+##  <a name="isdockingtabhasborder"></a>CMFCVisualManager::IsDockingTabHasBorder
 
-Vrátí, zda aktuální správce vzhledu vykreslí ohraničení kolem podoken, které jsou ukotvena a oddělené tabulátory.
+Vrátí, zda aktuální vizuální manažer vykresluje ohraničení kolem podoken ukotvených a s kartami.
 
 ```
 virtual BOOL IsDockingTabHasBorder();
@@ -1533,15 +1533,15 @@ virtual BOOL IsDockingTabHasBorder();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Hodnota TRUE, pokud správce vzhledu vykreslí ohraničení kolem podoken, které jsou ukotvena a oddělené tabulátory; FALSE v opačném případě.
+TRUE, pokud vizuální správce nakreslí ohraničení kolem ukotvených podoken a s kartami. V opačném případě NEPRAVDA.
 
 ### <a name="remarks"></a>Poznámky
 
-Ukotveného podokna stane s kartami doku více podoken do stejného umístění.
+Ukotvená podokna se zobrazí s kartami, pokud je více podoken ukotveno ke stejnému umístění.
 
 ##  <a name="isembossdisabledimage"></a>  CMFCVisualManager::IsEmbossDisabledImage
 
-Určuje, zda rozhraní embosses bitové kopie, které jsou k dispozici.
+Určuje, zda architektura vyražené obrázky nejsou k dispozici.
 
 ```
 BOOL IsEmbossDisabledImage() const;
@@ -1549,15 +1549,15 @@ BOOL IsEmbossDisabledImage() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Nenulové, pokud rozhraní embosses bitové kopie, které jsou k dispozici; jinak 0.
+Nenulové, pokud architektura vyreliéfí obrázky, které nejsou k dispozici; v opačném případě 0.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato metoda je volána metodou [CMFCToolBarImages::Draw](../../mfc/reference/cmfctoolbarimages-class.md#draw) při kreslení obrázku na panelu nástrojů, který je k dispozici.
+Tato metoda je volána nástrojem [CMFCToolBarImages::D RAW](../../mfc/reference/cmfctoolbarimages-class.md#draw) při kreslení obrázku na panelu nástrojů, který není k dispozici.
 
 ##  <a name="isfadeinactiveimage"></a>  CMFCVisualManager::IsFadeInactiveImage
 
-Rozhraní volá tuto metodu při kreslení neaktivní imagí, na panelu nástrojů nebo v nabídce.
+Rozhraní volá tuto metodu, když vykresluje neaktivní obrázky na panelu nástrojů nebo v nabídce.
 
 ```
 BOOL IsFadeInactiveImage() const;
@@ -1565,13 +1565,13 @@ BOOL IsFadeInactiveImage() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Nenulové, pokud rozhraní používá efekt osvětlení při kreslení neaktivní imagí, na panelu nástrojů nebo v nabídce; jinak 0.
+Nenulové, pokud rozhraní používá světelný efekt při kreslení neaktivních obrázků na panelu nástrojů nebo v nabídce; v opačném případě 0.
 
 ### <a name="remarks"></a>Poznámky
 
-Můžete aktivovat nebo deaktivovat efekt osvětlení voláním [CMFCVisualManager::SetFadeInactiveImage](#setfadeinactiveimage). Osvětlení efekt je, co je k dispozici Image zobrazí vyblednout.
+Efekt osvětlení můžete aktivovat nebo deaktivovat voláním [CMFCVisualManager:: SetFadeInactiveImage](#setfadeinactiveimage). Efekt osvětlení je to, že nedostupné obrázky vypadají vybledle.
 
-##  <a name="isframemenucheckeditems"></a>  CMFCVisualManager::IsFrameMenuCheckedItems
+##  <a name="isframemenucheckeditems"></a>CMFCVisualManager::IsFrameMenuCheckedItems
 
 ```
 BOOL IsFrameMenuCheckedItems() const;
@@ -1581,7 +1581,7 @@ BOOL IsFrameMenuCheckedItems() const;
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="ishighlightonenotetabs"></a>  CMFCVisualManager::IsHighlightOneNoteTabs
+##  <a name="ishighlightonenotetabs"></a>CMFCVisualManager::IsHighlightOneNoteTabs
 
 ```
 virtual BOOL IsHighlightOneNoteTabs() const;
@@ -1591,7 +1591,7 @@ virtual BOOL IsHighlightOneNoteTabs() const;
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="ishighlightwholemenuitem"></a>  CMFCVisualManager::IsHighlightWholeMenuItem
+##  <a name="ishighlightwholemenuitem"></a>CMFCVisualManager::IsHighlightWholeMenuItem
 
 ```
 virtual BOOL IsHighlightWholeMenuItem();
@@ -1601,7 +1601,7 @@ virtual BOOL IsHighlightWholeMenuItem();
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="islayeredribbonkeytip"></a>  CMFCVisualManager::IsLayeredRibbonKeyTip
+##  <a name="islayeredribbonkeytip"></a>CMFCVisualManager::IsLayeredRibbonKeyTip
 
 ```
 virtual BOOL IsLayeredRibbonKeyTip() const;
@@ -1611,9 +1611,9 @@ virtual BOOL IsLayeredRibbonKeyTip() const;
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="ismenuflatlook"></a>  CMFCVisualManager::IsMenuFlatLook
+##  <a name="ismenuflatlook"></a>CMFCVisualManager::IsMenuFlatLook
 
-Značí, zda zobrazovat nabídky tlačítka bez stromové struktury.
+Určuje, zda se tlačítka v nabídce zobrazují jako ploché.
 
 ```
 BOOL IsMenuFlatLook() const;
@@ -1621,15 +1621,15 @@ BOOL IsMenuFlatLook() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Nenulové, pokud se zdá ploché; tlačítek nabídky jinak 0.
+Nenulové, pokud se tlačítka v nabídce zobrazují jako ploché; 0, jinak.
 
 ### <a name="remarks"></a>Poznámky
 
-Ve výchozím nastavení tlačítka nabídky se nezobrazují bez stromové struktury. Použití [CMFCVisualManager::SetMenuFlatLook](#setmenuflatlook) metodu pro toto chování změnit. Jakmile se zobrazí nabídka tlačítka bez stromové struktury, jejich neměňte vzhled když uživatel klikne na ně.
+Ve výchozím nastavení se tlačítka nabídky nezobrazí jako ploché. Toto chování můžete změnit pomocí metody [CMFCVisualManager:: SetMenuFlatLook](#setmenuflatlook) . Když se tlačítka nabídky zobrazují jako plochá, nemění se vzhled, když na ně uživatel klikne.
 
-##  <a name="isofficexpstylemenus"></a>  CMFCVisualManager::IsOfficeXPStyleMenus
+##  <a name="isofficexpstylemenus"></a>CMFCVisualManager::IsOfficeXPStyleMenus
 
-Označuje, zda správce vzhledu implementuje nabídkách Office XP – vizuální styl.
+Určuje, zda Visual Manager implementuje nabídky ve stylu sady Office XP.
 
 ```
 virtual BOOL IsOfficeXPStyleMenus() const;
@@ -1637,13 +1637,13 @@ virtual BOOL IsOfficeXPStyleMenus() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Nenulové, pokud správce vzhledu zobrazí nabídky Office XP – vizuální styl; jinak 0.
+Nenulové, pokud vizuální správce zobrazí nabídky ve stylu Office XP; v opačném případě 0.
 
 ### <a name="remarks"></a>Poznámky
 
-[Cmfcpopupmenu – třída](../../mfc/reference/cmfcpopupmenu-class.md) volá tuto metodu, pokud má k vykreslení v nabídce a stínové. Ve výchozím nastavení tato metoda vrátí hodnotu FALSE. Pokud chcete použít místní nabídky, podobně jako místní nabídky v Office XP, přepište tuto metodu ve vlastní správce vzhledu a vrátí hodnotu TRUE.
+[Třída CMFCPopupMenu](../../mfc/reference/cmfcpopupmenu-class.md) volá tuto metodu, když má nakreslit nabídku a stín. Ve výchozím nastavení tato metoda vrátí hodnotu FALSE. Pokud chcete použít místní nabídky podobné rozevíracím nabídkám v sadě Office XP, přepište tuto metodu ve vlastním vizuálním manažeru a vraťte hodnotu TRUE.
 
-##  <a name="isoffsetpressedbutton"></a>  CMFCVisualManager::IsOffsetPressedButton
+##  <a name="isoffsetpressedbutton"></a>CMFCVisualManager::IsOffsetPressedButton
 
 ```
 virtual BOOL IsOffsetPressedButton() const;
@@ -1653,9 +1653,9 @@ virtual BOOL IsOffsetPressedButton() const;
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="isownerdrawcaption"></a>  CMFCVisualManager::IsOwnerDrawCaption
+##  <a name="isownerdrawcaption"></a>CMFCVisualManager::IsOwnerDrawCaption
 
-Označuje, zda aktuální správce vzhledu implementuje vykreslovaných vlastníkem titulky.
+Určuje, zda aktuální aplikace Visual Manager implementuje titulky vykreslené vlastníkem.
 
 ```
 virtual BOOL IsOwnerDrawCaption();
@@ -1663,9 +1663,9 @@ virtual BOOL IsOwnerDrawCaption();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Hodnota TRUE, pokud všechny oken s rámečkem v aplikaci mají titulky vykreslené vlastníkem.; FALSE v opačném případě.
+TRUE, pokud mají všechna okna s rámečkem v aplikaci popisky vykreslování vlastníka; V opačném případě NEPRAVDA.
 
-##  <a name="isownerdrawmenucheck"></a>  CMFCVisualManager::IsOwnerDrawMenuCheck
+##  <a name="isownerdrawmenucheck"></a>CMFCVisualManager::IsOwnerDrawMenuCheck
 
 ```
 virtual BOOL IsOwnerDrawMenuCheck();
@@ -1675,9 +1675,9 @@ virtual BOOL IsOwnerDrawMenuCheck();
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="isshadowhighlightedimage"></a>  CMFCVisualManager::IsShadowHighlightedImage
+##  <a name="isshadowhighlightedimage"></a>CMFCVisualManager::IsShadowHighlightedImage
 
-Znamená, zda správce vzhledu zobrazí stíny při vykreslování zvýrazněné imagí.
+Určuje, zda vizuální manažer zobrazuje při vykreslování zvýrazněných obrázků stíny.
 
 ```
 BOOL IsShadowHighlightedImage() const;
@@ -1685,9 +1685,9 @@ BOOL IsShadowHighlightedImage() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Nenulové, pokud správce vzhledu zobrazí stín pod zvýrazněné imagí; jinak 0.
+Nenulové, pokud vizuální manažer zobrazuje stíny pod zvýrazněnými obrázky; 0, jinak.
 
-##  <a name="istoolbarbuttonfillenabled"></a>  CMFCVisualManager::IsToolbarButtonFillEnabled
+##  <a name="istoolbarbuttonfillenabled"></a>CMFCVisualManager::IsToolbarButtonFillEnabled
 
 ```
 BOOL IsToolbarButtonFillEnabled() const;
@@ -1697,7 +1697,7 @@ BOOL IsToolbarButtonFillEnabled() const;
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="istoolbarroundshape"></a>  CMFCVisualManager::IsToolbarRoundShape
+##  <a name="istoolbarroundshape"></a>CMFCVisualManager::IsToolbarRoundShape
 
 ```
 virtual BOOL IsToolbarRoundShape(CMFCToolBar*);
@@ -1705,13 +1705,13 @@ virtual BOOL IsToolbarRoundShape(CMFCToolBar*);
 
 ### <a name="parameters"></a>Parametry
 
-[in] *Cmfctoolbar –&#42;*<br/>
+pro *CMFCToolBar&#42;*<br/>
 
 ### <a name="return-value"></a>Návratová hodnota
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="iswindowsthemingsupported"></a>  CMFCVisualManager::IsWindowsThemingSupported
+##  <a name="iswindowsthemingsupported"></a>CMFCVisualManager::IsWindowsThemingSupported
 
 ```
 virtual BOOL IsWindowsThemingSupported() const;
@@ -1721,7 +1721,7 @@ virtual BOOL IsWindowsThemingSupported() const;
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="onactivateapp"></a>  CMFCVisualManager::OnActivateApp
+##  <a name="onactivateapp"></a>CMFCVisualManager::OnActivateApp
 
 ```
 virtual void OnActivateApp(
@@ -1731,14 +1731,14 @@ virtual void OnActivateApp(
 
 ### <a name="parameters"></a>Parametry
 
-[in] *pWnd*<br/>
-[in] *bActive*<br/>
+pro *pWnd*<br/>
+pro *bActive*<br/>
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="ondrawautohidebuttonborder"></a>  CMFCVisualManager::OnDrawAutoHideButtonBorder
+##  <a name="ondrawautohidebuttonborder"></a>CMFCVisualManager::OnDrawAutoHideButtonBorder
 
-Rozhraní volá tuto metodu při ohraničení automaticky skrýt tlačítko.
+Rozhraní volá tuto metodu, když nakreslí ohraničení tlačítka pro automatické skrývání.
 
 ```
 virtual void OnDrawAutoHideButtonBorder(
@@ -1751,26 +1751,26 @@ virtual void OnDrawAutoHideButtonBorder(
 ### <a name="parameters"></a>Parametry
 
 *pDC*<br/>
-[in] Ukazatel na kontext zařízení.
+pro Ukazatel na kontext zařízení.
 
 *rectBounds*<br/>
-[in] Velikost a umístění automatického skrytí tlačítka.
+pro Velikost a umístění tlačítka pro automatické skrývání.
 
 *rectBorderSize*<br/>
-[in] A [crect –](../../atl-mfc-shared/reference/crect-class.md) parametr, který obsahuje velikosti ohraničení.
+pro Parametr [CRect](../../atl-mfc-shared/reference/crect-class.md) , který obsahuje velikosti ohraničení.
 
 *pButton*<br/>
-[in] Ukazatel na automaticky skrýt tlačítko. Rozhraní je vykreslení ohraničení pro toto tlačítko.
+pro Ukazatel na tlačítko pro automatické skrývání. Rozhraní vykreslí ohraničení tohoto tlačítka.
 
 ### <a name="remarks"></a>Poznámky
 
-Potlačí tuto metodu v odvozené třídě, pokud chcete přizpůsobit vzhled ohraničení automaticky skrýt tlačítko. Ve výchozím nastavení tato metoda vyplní plochý ohraničení s výchozí barva stínu pro vaši aplikaci.
+Tuto metodu přepište v odvozené třídě, pokud chcete přizpůsobit vzhled ohraničení tlačítka pro automatické skrývání. Ve výchozím nastavení tato metoda vyplní plochý okraj s výchozí barvou stínu pro vaši aplikaci.
 
-*RectBorderSize* parametr neobsahuje souřadnice ohraničení. Obsahuje velikost ohraničení v `top`, `bottom`, `left`, a `right` datové členy. Hodnotu menší než nebo rovno 0 znamená bez ohraničení na této straně automaticky skrýt tlačítko.
+Parametr *rectBorderSize* neobsahuje souřadnice ohraničení. `top`Obsahuje velikost ohraničení v datových členech, `bottom`, `left`a `right` . Hodnota menší nebo rovna 0 znamená, že na této straně tlačítka pro automatické skrývání není žádné ohraničení.
 
-##  <a name="ondrawbargripper"></a>  CMFCVisualManager::OnDrawBarGripper
+##  <a name="ondrawbargripper"></a>CMFCVisualManager::OnDrawBarGripper
 
-Volá se rozhraním, když nakreslí úchytu ovládacího prvku panel.
+Volá se rozhraním, když nakreslí úchyt pro ovládací panel.
 
 ```
 virtual void OnDrawBarGripper(
@@ -1783,24 +1783,24 @@ virtual void OnDrawBarGripper(
 ### <a name="parameters"></a>Parametry
 
 *pDC*<br/>
-[in] Ukazatel na kontext zařízení pro panel ovládacího prvku.
+pro Ukazatel na kontext zařízení pro ovládací panel.
 
 *rectGripper*<br/>
-[in] Ohraničující obdélník panelu ovládacího prvku.
+pro Ohraničující obdélník ovládacího panelu
 
 *bHorz*<br/>
-[in] Parametr logické hodnoty, která určuje, zda je ovládací prvek panel ukotven vodorovně nebo svisle.
+pro Logický parametr, který určuje, zda je ovládací panel ukotven vodorovně nebo svisle.
 
 *pBar*<br/>
-[in] Ukazatel na ovládacím panelu. Správce vzhledu kreslení úchytu tento panel ovládacího prvku.
+pro Ukazatel na ovládací panel. Vizuální správce nakreslí úchyt tohoto ovládacího panelu.
 
 ### <a name="remarks"></a>Poznámky
 
-Výchozí implementace této metody se zobrazí standardní úchytu. Chcete-li přizpůsobit vzhled úchytu přepsáním této metody v vlastní třídy odvozené od `CMFCVisualManager` třídy.
+Výchozí implementace této metody zobrazí standardní úchyt. Chcete-li přizpůsobit vzhled úchytu, přepište tuto metodu ve vlastní třídě odvozené od `CMFCVisualManager` třídy.
 
-##  <a name="ondrawbrowsebutton"></a>  CMFCVisualManager::OnDrawBrowseButton
+##  <a name="ondrawbrowsebutton"></a>CMFCVisualManager::OnDrawBrowseButton
 
-Rozhraní volá tuto metodu při kreslení na tlačítko Procházet pro ovládací prvek upravit.
+Rozhraní volá tuto metodu, když nakreslí tlačítko pro procházení pro ovládací prvek pro úpravy.
 
 ```
 virtual BOOL OnDrawBrowseButton(
@@ -1814,31 +1814,31 @@ virtual BOOL OnDrawBrowseButton(
 ### <a name="parameters"></a>Parametry
 
 *pDC*<br/>
-[in] Ukazatel na kontext zařízení.
+pro Ukazatel na kontext zařízení.
 
-*Rect*<br/>
-[in] Obdélník, který určuje hranice pro tlačítko Procházet.
+*OBD*<br/>
+pro Obdélník, který určuje hranici tlačítka Procházet.
 
 *pEdit*<br/>
-[in] Ukazatel na prvek pro úpravy. Správce vzhledu kreslení na tlačítko Procházet pro tento ovládací prvek pro úpravy.
+pro Ukazatel na ovládací prvek pro úpravy. Vizuální správce nakreslí tlačítko pro procházení pro tento ovládací prvek pro úpravy.
 
-*state*<br/>
-[in] Výčtová hodnota, která určuje stav tlačítka.
+*státech*<br/>
+pro Hodnota výčtu, která určuje stav tlačítka.
 
 *clrText*<br/>
-[out] Odkaz na [COLORREF](/windows/desktop/gdi/colorref) parametru. Toto je rezervovanou hodnotu a momentálně nepoužívá.
+mimo Odkaz na parametr [COLORREF](/windows/win32/gdi/colorref) . Toto je rezervovaná hodnota a aktuálně se nepoužívá.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Hodnota TRUE v případě úspěchu; v opačném případě FALSE.
+TRUE v případě úspěchu; v opačném případě FALSE.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato funkce v odvozené třídě přepsat, pokud chcete přizpůsobit vzhled tlačítka Procházet v instancích služby [cmfceditbrowsectrl – třída](../../mfc/reference/cmfceditbrowsectrl-class.md). Možné hodnoty pro stav tlačítka jsou `ButtonsIsRegular`, `ButtonsIsPressed`, a `ButtonsIsHighlighted`.
+Tuto funkci můžete přepsat v odvozené třídě, pokud chcete přizpůsobit vzhled tlačítek procházení v instancích [třídy CMFCEditBrowseCtrl](../../mfc/reference/cmfceditbrowsectrl-class.md). Možné hodnoty pro stav tlačítka jsou `ButtonsIsRegular`, `ButtonsIsPressed`a `ButtonsIsHighlighted`.
 
-##  <a name="ondrawbuttonborder"></a>  CMFCVisualManager::OnDrawButtonBorder
+##  <a name="ondrawbuttonborder"></a>CMFCVisualManager::OnDrawButtonBorder
 
-Rozhraní volá tuto metodu při ohraničení tlačítka panelu nástrojů.
+Rozhraní volá tuto metodu, když nakreslí ohraničení tlačítka panelu nástrojů.
 
 ```
 virtual void OnDrawButtonBorder(
@@ -1851,24 +1851,24 @@ virtual void OnDrawButtonBorder(
 ### <a name="parameters"></a>Parametry
 
 *pDC*<br/>
-[in] Ukazatel na kontext zařízení tlačítka panelu nástrojů.
+pro Ukazatel na kontext zařízení tlačítka panelu nástrojů.
 
 *pButton*<br/>
-[in] Ukazatel na tlačítka panelu nástrojů. Rozhraní framework ohraničení toto tlačítko.
+pro Ukazatel na tlačítko panelu nástrojů. Rozhraní kreslí ohraničení tohoto tlačítka.
 
-*Rect*<br/>
-[in] Obdélník, který určuje hranice panelu nástrojů.
+*OBD*<br/>
+pro Obdélník, který určuje hranice tlačítka panelu nástrojů.
 
-*state*<br/>
-[in] Výčtový datový typ, který určuje aktuální stav tlačítka panelu nástrojů.
+*státech*<br/>
+pro Výčtový datový typ, který určuje aktuální stav tlačítka panelu nástrojů.
 
 ### <a name="remarks"></a>Poznámky
 
-Výchozí implementace této metody zobrazí standardní ohraničení. Potlačí tuto metodu v odvozené správce vzhledu pro přizpůsobení vzhledu ohraničení tlačítka panelu nástrojů.
+Výchozí implementace této metody zobrazí standardní ohraničení. Tuto metodu přepište v odvozeném vizuálním manažeru, abyste mohli přizpůsobit vzhled ohraničení tlačítka panelu nástrojů.
 
-Možné stavy tlačítka panelu nástrojů `ButtonsIsRegular`, `ButtonsIsPressed`, nebo `ButtonsIsHighlighted`.
+Možné stavy tlačítka panelu nástrojů jsou `ButtonsIsRegular`, `ButtonsIsPressed`nebo `ButtonsIsHighlighted`.
 
-##  <a name="ondrawbuttonseparator"></a>  CMFCVisualManager::OnDrawButtonSeparator
+##  <a name="ondrawbuttonseparator"></a>CMFCVisualManager::OnDrawButtonSeparator
 
 ```
 virtual void OnDrawButtonSeparator(
@@ -1881,17 +1881,17 @@ virtual void OnDrawButtonSeparator(
 
 ### <a name="parameters"></a>Parametry
 
-[in] *pDC*<br/>
-[in] *pButton*<br/>
-[in] *rect*<br/>
-[in] *stavu*<br/>
+pro *primární řadič domény*<br/>
+pro *pButton*<br/>
+pro *Rect*<br/>
+pro *stav*<br/>
 [in] *bHorz*<br/>
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="ondrawcaptionbarborder"></a>  CMFCVisualManager::OnDrawCaptionBarBorder
+##  <a name="ondrawcaptionbarborder"></a>CMFCVisualManager::OnDrawCaptionBarBorder
 
-Rozhraní volá tuto metodu při kreslení ohraničení [CMFCCaptionBar – třída](../../mfc/reference/cmfccaptionbar-class.md) objektu.
+Rozhraní volá tuto metodu, když nakreslí ohraničení objektu [třídy CMFCCaptionBar](../../mfc/reference/cmfccaptionbar-class.md) .
 
 ```
 virtual void OnDrawCaptionBarBorder(
@@ -1905,25 +1905,25 @@ virtual void OnDrawCaptionBarBorder(
 ### <a name="parameters"></a>Parametry
 
 *pDC*<br/>
-[in] Ukazatel na kontext zařízení.
+pro Ukazatel na kontext zařízení.
 
 *pBar*<br/>
-[in] Ukazatel `CMFCCaptionBar` objektu. Rozhraní framework kreslení toto záhlaví.
+pro Ukazatel na `CMFCCaptionBar` objekt. Rozhraní nakreslí tento pruh titulků.
 
-*Rect*<br/>
-[in] Obdélník, který určuje hranice záhlaví.
+*OBD*<br/>
+pro Obdélník, který určuje hranice panelu titulků.
 
 *clrBarBorder*<br/>
-[in] Barva ohraničení.
+pro Barva ohraničení
 
 *bFlatBorder*<br/>
-[in] Parametr logické hodnoty, která určuje, zda má ohraničení 2D plochý vzhled.
+pro Logický parametr, který určuje, zda má ohraničení plochý 2D vzhled.
 
 ### <a name="remarks"></a>Poznámky
 
-Potlačí tuto metodu v odvozené třídě pro přizpůsobení vzhledu ohraničení záhlaví.
+Tuto metodu přepište v odvozené třídě, aby se přizpůsobil vzhled ohraničení sloupce titulků.
 
-##  <a name="ondrawcaptionbarbuttonborder"></a>  CMFCVisualManager::OnDrawCaptionBarButtonBorder
+##  <a name="ondrawcaptionbarbuttonborder"></a>CMFCVisualManager::OnDrawCaptionBarButtonBorder
 
 ```
 virtual void OnDrawCaptionBarButtonBorder(
@@ -1939,18 +1939,18 @@ virtual void OnDrawCaptionBarButtonBorder(
 
 ### <a name="parameters"></a>Parametry
 
-[in] *pDC*<br/>
-[in] *pBar*<br/>
-[in] *rect*<br/>
-[in] *bIsPressed*<br/>
-[in] *bIsHighlighted*<br/>
-[in] *bIsDisabled*<br/>
-[in] *bHasDropDownArrow*<br/>
-[in] *bIsSysButton*<br/>
+pro *primární řadič domény*<br/>
+pro *pBar*<br/>
+pro *Rect*<br/>
+pro *bIsPressed*<br/>
+pro *bIsHighlighted*<br/>
+pro *bIsDisabled*<br/>
+pro *bHasDropDownArrow*<br/>
+pro *bIsSysButton*<br/>
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="ondrawcaptionbarinfoarea"></a>  CMFCVisualManager::OnDrawCaptionBarInfoArea
+##  <a name="ondrawcaptionbarinfoarea"></a>CMFCVisualManager::OnDrawCaptionBarInfoArea
 
 ```
 virtual void OnDrawCaptionBarInfoArea(
@@ -1961,15 +1961,15 @@ virtual void OnDrawCaptionBarInfoArea(
 
 ### <a name="parameters"></a>Parametry
 
-[in] *pDC*<br/>
-[in] *pBar*<br/>
-[in] *rect*<br/>
+pro *primární řadič domény*<br/>
+pro *pBar*<br/>
+pro *Rect*<br/>
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="ondrawcaptionbutton"></a>  CMFCVisualManager::OnDrawCaptionButton
+##  <a name="ondrawcaptionbutton"></a>CMFCVisualManager::OnDrawCaptionButton
 
-Rozhraní volá tuto metodu, když se vykreslí [cmfccaptionbutton –](../../mfc/reference/cmfccaptionbutton-class.md) objektu.
+Rozhraní volá tuto metodu, když nakreslí objekt [CMFCCaptionButton](../../mfc/reference/cmfccaptionbutton-class.md) .
 
 ```
 virtual void OnDrawCaptionButton (
@@ -1985,33 +1985,33 @@ virtual void OnDrawCaptionButton (
 ### <a name="parameters"></a>Parametry
 
 *pDC*<br/>
-[in] Ukazatel na kontext zařízení.
+pro Ukazatel na kontext zařízení.
 
 *pButton*<br/>
-[in] Ukazatel `CMFCCaptionButton` objektu. Rozhraní framework kreslení tento titulek tlačítka.
+pro Ukazatel na `CMFCCaptionButton` objekt. Rozhraní kreslí toto tlačítko titulek.
 
 *bActive*<br/>
-[in] Parametr logické hodnoty, která určuje, zda tlačítko je aktivní.
+pro Logický parametr, který určuje, zda je tlačítko aktivní.
 
 *bHorz*<br/>
-[in] Parametr logické hodnoty, která určuje, zda je titulek vodorovný.
+pro Logický parametr, který určuje, zda je titulek vodorovný.
 
 *bMaximized*<br/>
-[in] Parametr logické hodnoty, která určuje, zda je v podokně nadřazené maximalizované.
+pro Logický parametr, který určuje, zda je nadřazené podokno maximalizováno.
 
 *bDisabled*<br/>
-[in] Parametr logické hodnoty, která určuje, zda je titulek tlačítka zakázaný.
+pro Logický parametr, který určuje, zda je tlačítko Titulek zakázáno.
 
 *nImageID*<br/>
-[in] Index obrázku ikony pro tlačítko. Pokud *nImageID* se -1, tato metoda používá index bitové kopie se zaznamenávají do *pButton*.
+pro Index obrázku ikony, která má být použita pro tlačítko. Pokud je *nImageID* -1, tato metoda používá index obrázku zaznamenaný v *pButton*.
 
 ### <a name="remarks"></a>Poznámky
 
-Výchozí implementace této metody se zobrazí malá tlačítka z globální instanci `CMenuImages` třídy. Tlačítka jsou uvedeny v souboru hlaviček pro `CMenuImages`. Mezi příklady patří `CMenuImages::IdClose`, `CMenuImages::IdArowLeft`, `CMenuImages::IdArowRight`, `CMenuImages::IdArowDown`, `CMenuImages::IdArowUp`, a `CMenuImages::IdPinHorz`.
+Výchozí implementace této metody zobrazí malé tlačítko z globální instance `CMenuImages` třídy. Tlačítka jsou uvedena v hlavičkovém souboru pro `CMenuImages`. Mezi příklady patří `CMenuImages::IdClose`, `CMenuImages::IdArowLeft` `CMenuImages::IdArowRight`,,, a`CMenuImages::IdArowUp` .`CMenuImages::IdPinHorz` `CMenuImages::IdArowDown`
 
-Potlačí tuto metodu v odvozené třídě pro přizpůsobení vzhledu titulek tlačítka.
+Přepsáním této metody v odvozené třídě upravíte vzhled tlačítek titulků.
 
-##  <a name="ondrawcheckbox"></a>  CMFCVisualManager::OnDrawCheckBox
+##  <a name="ondrawcheckbox"></a>CMFCVisualManager::OnDrawCheckBox
 
 ```
 virtual void OnDrawCheckBox(
@@ -2024,15 +2024,15 @@ virtual void OnDrawCheckBox(
 
 ### <a name="parameters"></a>Parametry
 
-[in] *pDC*<br/>
-[in] *rect*<br/>
-[in] *bHighlighted*<br/>
-[in] *bChecked*<br/>
-[in] *bEnabled*<br/>
+pro *primární řadič domény*<br/>
+pro *Rect*<br/>
+pro *bHighlighted*<br/>
+pro *bChecked*<br/>
+pro *bEnabled*<br/>
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="ondrawcheckboxex"></a>  CMFCVisualManager::OnDrawCheckBoxEx
+##  <a name="ondrawcheckboxex"></a>CMFCVisualManager::OnDrawCheckBoxEx
 
 ```
 virtual void OnDrawCheckBoxEx(
@@ -2046,18 +2046,18 @@ virtual void OnDrawCheckBoxEx(
 
 ### <a name="parameters"></a>Parametry
 
-[in] *pDC*<br/>
-[in] *rect*<br/>
-[in] *nInformace*<br/>
-[in] *bHighlighted*<br/>
-[in] *bPressed*<br/>
-[in] *bEnabled*<br/>
+pro *primární řadič domény*<br/>
+pro *Rect*<br/>
+pro *nInformace*<br/>
+pro *bHighlighted*<br/>
+pro *bPressed*<br/>
+pro *bEnabled*<br/>
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="ondrawcomboborder"></a>  CMFCVisualManager::OnDrawComboBorder
+##  <a name="ondrawcomboborder"></a>CMFCVisualManager::OnDrawComboBorder
 
-Rozhraní volá tuto metodu po ohraničení kolem instance [cmfctoolbarcomboboxbutton – třída](../../mfc/reference/cmfctoolbarcomboboxbutton-class.md).
+Rozhraní volá tuto metodu, když nakreslí ohraničení kolem instance [třídy CMFCToolbarComboBoxButton](../../mfc/reference/cmfctoolbarcomboboxbutton-class.md).
 
 ```
 virtual void OnDrawComboBorder(
@@ -2072,30 +2072,30 @@ virtual void OnDrawComboBorder(
 ### <a name="parameters"></a>Parametry
 
 *pDC*<br/>
-[in] Ukazatel na kontext zařízení z tlačítka pole se seznamem.
+pro Ukazatel na kontext zařízení u tlačítka pole se seznamem.
 
-*Rect*<br/>
-[in] Obdélník, který určuje hranice tlačítko pole se seznamem.
+*OBD*<br/>
+pro Obdélník, který určuje hranice tlačítka pole se seznamem.
 
 *bDisabled*<br/>
-[in] Parametr logické hodnoty označující, zda je k dispozici tlačítko pole se seznamem.
+pro Logický parametr, který označuje, zda není tlačítko pole se seznamem k dispozici.
 
 *bIsDropped*<br/>
-[in] Parametr logické hodnoty označující, zda pole se seznamem se rozbalil.
+pro Logický parametr, který označuje, zda je pole se seznamem vynecháno.
 
 *bIsHighlighted*<br/>
-[in] Parametr logické hodnoty označující, zda se zvýrazní tlačítko pole se seznamem.
+pro Logický parametr, který označuje, zda je zvýrazněno tlačítko pole se seznamem.
 
 *pButton*<br/>
-[in] Ukazatel `CMFCToolBarComboBoxButton` objektu. Rozhraní framework kreslení toto tlačítko pole se seznamem.
+pro Ukazatel na `CMFCToolBarComboBoxButton` objekt. Rozhraní kreslí toto tlačítko pole se seznamem.
 
 ### <a name="remarks"></a>Poznámky
 
-Potlačí tuto metodu v odvozené správce vzhledu pro přizpůsobení vzhledu ohraničení pole se seznamem.
+Tuto metodu přepište v odvozeném vizuálním správci, abyste mohli přizpůsobit vzhled ohraničení pole se seznamem.
 
-##  <a name="ondrawcombodropbutton"></a>  CMFCVisualManager::OnDrawComboDropButton
+##  <a name="ondrawcombodropbutton"></a>CMFCVisualManager::OnDrawComboDropButton
 
-Rozhraní volá tuto metodu při kreslení na rozevírací tlačítko [cmfctoolbarcomboboxbutton –](../../mfc/reference/cmfctoolbarcomboboxbutton-class.md).
+Rozhraní volá tuto metodu, když nakreslí tlačítko [CMFCToolBarComboBoxButton](../../mfc/reference/cmfctoolbarcomboboxbutton-class.md).
 
 ```
 virtual void OnDrawComboDropButton(
@@ -2110,28 +2110,28 @@ virtual void OnDrawComboDropButton(
 ### <a name="parameters"></a>Parametry
 
 *pDC*<br/>
-[in] Ukazatel na kontext zařízení.
+pro Ukazatel na kontext zařízení.
 
-*Rect*<br/>
-[in] Obdélník, který určuje hranice na rozevírací tlačítko.
+*OBD*<br/>
+pro Obdélník, který určuje hranice rozevíracího tlačítka.
 
 *bDisabled*<br/>
-[in] Parametr logické hodnoty označující, zda je na rozevírací tlačítko není k dispozici.
+pro Logický parametr, který označuje, zda není tlačítko rozevíracího seznamu k dispozici.
 
 *bIsDropped*<br/>
-[in] Parametr logické hodnoty označující, zda pole se seznamem se rozbalil.
+pro Logický parametr, který označuje, zda je pole se seznamem vynecháno.
 
 *bIsHighlighted*<br/>
-[in] Parametr logické hodnoty označující, zda se zvýrazněnou rozevírací tlačítko.
+pro Logický parametr, který označuje, zda je tlačítko rozevíracího seznamu zvýrazněno.
 
 *pButton*<br/>
-[in] Ukazatel `CMFCToolBarComboBoxButton` objektu. Rozhraní framework kreslení na rozevírací tlačítko pro toto tlačítko pole se seznamem.
+pro Ukazatel na `CMFCToolBarComboBoxButton` objekt. Rozhraní kreslí tlačítko pro toto tlačítko pole se seznamem.
 
 ### <a name="remarks"></a>Poznámky
 
-Potlačí tuto metodu v odvozené správce vzhledu pro přizpůsobení vzhledu tlačítka pro rozevírací tlačítko pole se seznamem.
+Tuto metodu můžete přepsat v odvozeném vizuálním správci a přizpůsobit tak vzhled tlačítka pole se seznamem.
 
-##  <a name="ondrawcontrolborder"></a>  CMFCVisualManager::OnDrawControlBorder
+##  <a name="ondrawcontrolborder"></a>CMFCVisualManager::OnDrawControlBorder
 
 ```
 virtual void OnDrawControlBorder(CWnd* pWndCtrl);
@@ -2139,13 +2139,13 @@ virtual void OnDrawControlBorder(CWnd* pWndCtrl);
 
 ### <a name="parameters"></a>Parametry
 
-[in] *pWndCtrl*<br/>
+pro *pWndCtrl*<br/>
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="ondrawdefaultribbonimage"></a>  CMFCVisualManager::OnDrawDefaultRibbonImage
+##  <a name="ondrawdefaultribbonimage"></a>CMFCVisualManager::OnDrawDefaultRibbonImage
 
-Rozhraní volá tuto metodu při kreslení výchozí obrázek, který se používá pro tlačítko pásu karet.
+Rozhraní volá tuto metodu, když nakreslí výchozí obrázek, který se používá pro tlačítko pásu karet.
 
 ```
 virtual void OnDrawDefaultRibbonImage(
@@ -2159,27 +2159,27 @@ virtual void OnDrawDefaultRibbonImage(
 ### <a name="parameters"></a>Parametry
 
 *pDC*<br/>
-[in] Ukazatel na kontext zařízení.
+pro Ukazatel na kontext zařízení.
 
 *rectImage*<br/>
-[in] Obdélník, který určuje hranice výchozí image.
+pro Obdélník, který určuje hranice výchozí image.
 
 *bIsDisabled*<br/>
-[in] Parametr logické hodnoty označující, zda je k dispozici tlačítko pásu karet.
+pro Logický parametr, který označuje, zda není tlačítko pásu karet k dispozici.
 
 *bIsPressed*<br/>
-[in] Parametr logické hodnoty označující, zda se stiskne tlačítko pásu karet.
+pro Logický parametr, který označuje, zda bylo stisknuto tlačítko pásu karet.
 
 *bIsHighlighted*<br/>
-[in] Parametr logické hodnoty označující, zda se zvýrazní tlačítko pásu karet.
+pro Logický parametr, který označuje, zda je zvýrazněno tlačítko pásu karet.
 
 ### <a name="remarks"></a>Poznámky
 
-Přepíše tuto metodu v odvozené vizuálního správce, pokud chcete přizpůsobit obrázek, který se používá pro tlačítko pásu karet.
+Tuto metodu přepište v odvozeném vizuálním správci, pokud chcete přizpůsobit obrázek, který se používá pro tlačítko pásu karet.
 
-##  <a name="ondraweditborder"></a>  CMFCVisualManager::OnDrawEditBorder
+##  <a name="ondraweditborder"></a>CMFCVisualManager::OnDrawEditBorder
 
-Rozhraní volá tuto metodu po ohraničení kolem instance [cmfctoolbareditboxbutton – třída](../../mfc/reference/cmfctoolbareditboxbutton-class.md).
+Rozhraní volá tuto metodu, když nakreslí ohraničení kolem instance [třídy CMFCToolBarEditBoxButton](../../mfc/reference/cmfctoolbareditboxbutton-class.md).
 
 ```
 virtual void OnDrawEditBorder(
@@ -2193,25 +2193,25 @@ virtual void OnDrawEditBorder(
 ### <a name="parameters"></a>Parametry
 
 *pDC*<br/>
-[in] Ukazatel na kontext zařízení.
+pro Ukazatel na kontext zařízení.
 
-*Rect*<br/>
-[in] Obdélník, který určuje hranice `CMFCToolBarEditBoxButton` objektu.
+*OBD*<br/>
+pro Obdélník, který určuje hranice `CMFCToolBarEditBoxButton` objektu.
 
 *bDisabled*<br/>
-[in] Parametr logické hodnoty označující, zda tlačítko je k dispozici.
+pro Logický parametr, který označuje, zda je tlačítko nedostupné.
 
 *bIsHighlighted*<br/>
-[in] Parametr logické hodnoty označující, zda se zvýrazní tlačítko.
+pro Logický parametr, který označuje, zda je tlačítko zvýrazněno.
 
 *pButton*<br/>
-[in] Ukazatel `CMFCToolBarEditBoxButton` objektu. Rozhraní framework ohraničení tohoto tlačítka Upravit pole.
+pro Ukazatel na `CMFCToolBarEditBoxButton` objekt. Rozhraní kreslí ohraničení tohoto tlačítka pro úpravu pole.
 
 ### <a name="remarks"></a>Poznámky
 
-Potlačí tuto metodu v odvozené správce vzhledu ohraničení Přizpůsobit `CMFCToolBarEditBoxButton` objektu.
+Tuto metodu můžete přepsat v odvozeném vizuálním manažeru pro přizpůsobení ohraničení `CMFCToolBarEditBoxButton` objektu.
 
-##  <a name="ondrawexpandingbox"></a>  CMFCVisualManager::OnDrawExpandingBox
+##  <a name="ondrawexpandingbox"></a>CMFCVisualManager::OnDrawExpandingBox
 
 ```
 virtual void OnDrawExpandingBox(
@@ -2223,16 +2223,16 @@ virtual void OnDrawExpandingBox(
 
 ### <a name="parameters"></a>Parametry
 
-[in] *pDC*<br/>
-[in] *rect*<br/>
-[in] *bIsOpened*<br/>
-[in] *colorBox*<br/>
+pro *primární řadič domény*<br/>
+pro *Rect*<br/>
+pro *bIsOpened*<br/>
+pro *colorBox*<br/>
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="ondrawfloatingtoolbarborder"></a>  CMFCVisualManager::OnDrawFloatingToolbarBorder
+##  <a name="ondrawfloatingtoolbarborder"></a>CMFCVisualManager::OnDrawFloatingToolbarBorder
 
-Rozhraní volá tuto metodu při ohraničení panelu nástrojů s plovoucí desetinnou čárkou.
+Rozhraní volá tuto metodu, když nakreslí ohraničení plovoucího panelu nástrojů.
 
 ```
 virtual void OnDrawFloatingToolbarBorder(
@@ -2245,28 +2245,28 @@ virtual void OnDrawFloatingToolbarBorder(
 ### <a name="parameters"></a>Parametry
 
 *pDC*<br/>
-[in] Ukazatel na kontext zařízení.
+pro Ukazatel na kontext zařízení.
 
 *pToolBar*<br/>
-[in] Ukazatel na plovoucí panel nástrojů.
+pro Ukazatel na plovoucí panel nástrojů.
 
 *rectBorder*<br/>
-[in] Obdélník, který určuje hranice plovoucího panelu nástrojů.
+pro Obdélník, který určuje hranice plovoucího panelu nástrojů.
 
 *rectBorderSize*<br/>
-[in] Obdélník, který určuje velikost ohraničení panelu nástrojů.
+pro Obdélník, který určuje velikost ohraničení panelu nástrojů.
 
 ### <a name="remarks"></a>Poznámky
 
-Plovoucí panel nástrojů je panel nástrojů, které se zobrazí jako okno s minirámcem. Obvykle k tomu dojde, když uživatel přetáhne panel nástrojů tak, aby už je ukotven.
+Plovoucí panel nástrojů je panel nástrojů, který se zobrazí jako okno se zkráceným rámcem. K tomu obvykle dochází, když uživatel přetáhne panel nástrojů tak, aby již nebyl ukotven.
 
-Velikost ohraničení se zadává odpovídající parametr v *rectBorderSize*. Šířka horního ohraničení panelu nástrojů je například určená `rectBorderSize.top`.
+Velikost ohraničení je určena odpovídajícím parametrem v *rectBorderSize*. Například šířka horního ohraničení panelu nástrojů je určena `rectBorderSize.top`.
 
-Potlačí tuto metodu v odvozené správce vzhledu pro přizpůsobení vzhledu ohraničení panelu nástrojů s plovoucí desetinnou čárkou.
+Tuto metodu můžete přepsat v odvozeném vizuálním manažeru a přizpůsobit vzhled ohraničení plovoucího panelu nástrojů.
 
-##  <a name="ondrawheaderctrlborder"></a>  CMFCVisualManager::OnDrawHeaderCtrlBorder
+##  <a name="ondrawheaderctrlborder"></a>CMFCVisualManager::OnDrawHeaderCtrlBorder
 
-Rozhraní volá tuto metodu po ohraničení kolem instance [cmfcheaderctrl – třída](../../mfc/reference/cmfcheaderctrl-class.md).
+Rozhraní volá tuto metodu, když nakreslí ohraničení kolem instance [třídy CMFCHeaderCtrl](../../mfc/reference/cmfcheaderctrl-class.md).
 
 ```
 virtual void OnDrawHeaderCtrlBorder(
@@ -2280,27 +2280,27 @@ virtual void OnDrawHeaderCtrlBorder(
 ### <a name="parameters"></a>Parametry
 
 *pCtrl*<br/>
-[in] Ukazatel `CMFCHeaderCtrl` objektu. Rozhraní framework ohraničení tohoto ovládacího prvku záhlaví.
+pro Ukazatel na `CMFCHeaderCtrl` objekt. Rozhraní kreslí ohraničení tohoto ovládacího prvku záhlaví.
 
 *pDC*<br/>
-[in] Ukazatel na kontext zařízení.
+pro Ukazatel na kontext zařízení.
 
-*Rect*<br/>
-[in] Obdélník, který určuje hranice ovládacího prvku záhlaví.
+*OBD*<br/>
+pro Obdélník, který určuje hranice ovládacího prvku záhlaví.
 
 *bIsPressed*<br/>
-[in] Parametr logické hodnoty označující, zda je stisknutí ovládacího prvku záhlaví.
+pro Logický parametr, který označuje, zda je stisknut ovládací prvek záhlaví.
 
 *bIsHighlighted*<br/>
-[in] Parametr logické hodnoty označující, zda je zvýrazněn ovládacího prvku záhlaví.
+pro Logický parametr, který označuje, zda je zvýrazněn ovládací prvek záhlaví.
 
 ### <a name="remarks"></a>Poznámky
 
-Potlačí tuto metodu v odvozené správce vzhledu ohraničení ovládacího prvku záhlaví přizpůsobit.
+Tuto metodu můžete přepsat v odvozeném vizuálním manažeru pro přizpůsobení ohraničení ovládacího prvku záhlaví.
 
 ##  <a name="ondrawheaderctrlsortarrow"></a>  CMFCVisualManager::OnDrawHeaderCtrlSortArrow
 
-Rozhraní volá tuto funkci při kreslení šipku řazení ovládacího prvku záhlaví.
+Rozhraní volá tuto funkci při nakreslení šipky pro řazení ovládacího prvku záhlaví.
 
 ```
 virtual void OnDrawHeaderCtrlSortArrow(
@@ -2313,22 +2313,22 @@ virtual void OnDrawHeaderCtrlSortArrow(
 ### <a name="parameters"></a>Parametry
 
 *pCtrl*<br/>
-[in] Ukazatel na ovládací prvek záhlaví. Správce vzhledu nakreslí šipku řazení tohoto [cmfcheaderctrl – třída](../../mfc/reference/cmfcheaderctrl-class.md) objektu.
+pro Ukazatel na ovládací prvek záhlaví. Vizuální správce Nakreslí šipku řazení tohoto objektu [třídy CMFCHeaderCtrl](../../mfc/reference/cmfcheaderctrl-class.md) .
 
 *pDC*<br/>
-[in] Ukazatel na kontext zařízení.
+pro Ukazatel na kontext zařízení.
 
-*Rect*<br/>
-[in] Obdélník, který určuje hranice šipku řazení.
+*OBD*<br/>
+pro Obdélník, který určuje hranice šipky pro řazení.
 
 *bIsUp*<br/>
-[in] Logická hodnota, která určuje směr řazení šipky.
+pro Logická hodnota, která určuje směr šipky pro řazení.
 
 ### <a name="remarks"></a>Poznámky
 
-Pokud *bIsUp* má hodnotu TRUE, správce vzhledu nakreslí šipka nahoru řazení. Pokud je FALSE, správce vzhledu kreslení řazení šipku dolů. Přepsat `OnDrawHeaderCtrlSortArrow` v odvozené třídě pro přizpůsobení vzhledu tlačítko řazení.
+Pokud má *BISUP* hodnotu true, Visual Manager Nakreslí šipku řazení nahoru. Pokud je hodnota FALSE, vizuální správce Nakreslí šipku řazení dolů. Přepsat `OnDrawHeaderCtrlSortArrow` v odvozené třídě pro přizpůsobení vzhledu tlačítka řazení.
 
-##  <a name="ondrawmenuarrowoncustomizelist"></a>  CMFCVisualManager::OnDrawMenuArrowOnCustomizeList
+##  <a name="ondrawmenuarrowoncustomizelist"></a>CMFCVisualManager::OnDrawMenuArrowOnCustomizeList
 
 ```
 virtual void OnDrawMenuArrowOnCustomizeList(
@@ -2339,15 +2339,15 @@ virtual void OnDrawMenuArrowOnCustomizeList(
 
 ### <a name="parameters"></a>Parametry
 
-[in] *pDC*<br/>
-[in] *rectCommand*<br/>
-[in] *bSelected*<br/>
+pro *primární řadič domény*<br/>
+pro *rectCommand*<br/>
+pro *bSelected*<br/>
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="ondrawmenuborder"></a>  CMFCVisualManager::OnDrawMenuBorder
+##  <a name="ondrawmenuborder"></a>CMFCVisualManager::OnDrawMenuBorder
 
-Rozhraní volá tuto metodu při kreslení ohraničení [CMFCPopupMenu](../../mfc/reference/cmfcpopupmenu-class.md).
+Rozhraní volá tuto metodu, když nakreslí ohraničení [CMFCPopupMenu](../../mfc/reference/cmfcpopupmenu-class.md).
 
 ```
 virtual void OnDrawMenuBorder(
@@ -2359,19 +2359,19 @@ virtual void OnDrawMenuBorder(
 ### <a name="parameters"></a>Parametry
 
 *pDC*<br/>
-[in] Ukazatel na kontext zařízení pro `CMFCPopupMenu` objektu.
+pro Ukazatel na kontext zařízení pro `CMFCPopupMenu` objekt.
 
 *pMenu*<br/>
-[in] Ukazatel `CMFCPopupMenu` objektu. Rozhraní framework ohraničení kolem této místní nabídka.
+pro Ukazatel na `CMFCPopupMenu` objekt. Rozhraní kreslí kolem této místní nabídky ohraničení.
 
-*Rect*<br/>
-[in] Obdélník, který určuje hranice v místní nabídce.
+*OBD*<br/>
+pro Obdélník, který určuje hranice místní nabídky.
 
 ### <a name="remarks"></a>Poznámky
 
-Výchozí implementace této metody se zobrazí ohraničení standardní nabídky. Potlačí tuto metodu v odvozené správce vzhledu pro přizpůsobení vzhledu ohraničení nabídky.
+Výchozí implementace této metody zobrazí ohraničení standardní nabídky. Tuto metodu přepište v odvozeném vizuálním manažeru, abyste mohli přizpůsobit vzhled ohraničení nabídky.
 
-##  <a name="ondrawmenucheck"></a>  CMFCVisualManager::OnDrawMenuCheck
+##  <a name="ondrawmenucheck"></a>CMFCVisualManager::OnDrawMenuCheck
 
 ```
 virtual void OnDrawMenuCheck(
@@ -2384,15 +2384,15 @@ virtual void OnDrawMenuCheck(
 
 ### <a name="parameters"></a>Parametry
 
-[in] *pDC*<br/>
-[in] *pButton*<br/>
-[in] *rect*<br/>
-[in] *bHighlight*<br/>
-[in] *bIsRadio*<br/>
+pro *primární řadič domény*<br/>
+pro *pButton*<br/>
+pro *Rect*<br/>
+pro *bHighlight*<br/>
+pro *bIsRadio*<br/>
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="ondrawmenuitembutton"></a>  CMFCVisualManager::OnDrawMenuItemButton
+##  <a name="ondrawmenuitembutton"></a>CMFCVisualManager::OnDrawMenuItemButton
 
 ```
 virtual void OnDrawMenuItemButton(
@@ -2405,15 +2405,15 @@ virtual void OnDrawMenuItemButton(
 
 ### <a name="parameters"></a>Parametry
 
-[in] *pDC*<br/>
-[in] *pButton*<br/>
-[in] *rectButton*<br/>
-[in] *bHighlight*<br/>
-[in] *bDisabled*<br/>
+pro *primární řadič domény*<br/>
+pro *pButton*<br/>
+pro *rectButton*<br/>
+pro *bHighlight*<br/>
+pro *bDisabled*<br/>
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="ondrawmenulabel"></a>  CMFCVisualManager::OnDrawMenuLabel
+##  <a name="ondrawmenulabel"></a>CMFCVisualManager::OnDrawMenuLabel
 
 ```
 virtual COLORREF OnDrawMenuLabel(
@@ -2423,14 +2423,14 @@ virtual COLORREF OnDrawMenuLabel(
 
 ### <a name="parameters"></a>Parametry
 
-[in] *pDC*<br/>
-[in] *rect*<br/>
+pro *primární řadič domény*<br/>
+pro *Rect*<br/>
 
 ### <a name="return-value"></a>Návratová hodnota
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="ondrawmenuresizebar"></a>  CMFCVisualManager::OnDrawMenuResizeBar
+##  <a name="ondrawmenuresizebar"></a>CMFCVisualManager::OnDrawMenuResizeBar
 
 ```
 virtual void OnDrawMenuResizeBar(
@@ -2441,15 +2441,15 @@ virtual void OnDrawMenuResizeBar(
 
 ### <a name="parameters"></a>Parametry
 
-[in] *pDC*<br/>
-[in] *rect*<br/>
-[in] *nResizeFlags*<br/>
+pro *primární řadič domény*<br/>
+pro *Rect*<br/>
+pro *nResizeFlags*<br/>
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="ondrawmenuscrollbutton"></a>  CMFCVisualManager::OnDrawMenuScrollButton
+##  <a name="ondrawmenuscrollbutton"></a>CMFCVisualManager::OnDrawMenuScrollButton
 
-Rozhraní volá tuto metodu při kreslení tlačítko posouvání nabídky.
+Rozhraní volá tuto metodu, když nakreslí tlačítko posouvání nabídky.
 
 ```
 virtual void OnDrawMenuScrollButton(
@@ -2464,28 +2464,28 @@ virtual void OnDrawMenuScrollButton(
 ### <a name="parameters"></a>Parametry
 
 *pDC*<br/>
-[in] Ukazatel na kontext zařízení.
+pro Ukazatel na kontext zařízení.
 
-*Rect*<br/>
-[in] Obdélník, který určuje hranice tlačítko posouvání.
+*OBD*<br/>
+pro Obdélník, který určuje hranice tlačítka posuvníku.
 
 *bIsScrollDown*<br/>
-[in] Logická hodnota určující, jaký typ tlačítka pro kreslení správce vzhledu. Hodnota TRUE označuje, že správce vzhledu nakreslí dolů tlačítko.
+pro Logická hodnota, která indikuje typ tlačítka, které kreslí vizuální nadřízený. Hodnota TRUE značí, že vizuální nadřízený tlačítko vykreslí.
 
 *bIsHighlited*<br/>
-[in] Logická hodnota, která určuje, zda se zvýrazní tlačítko.
+pro Logická hodnota, která označuje, zda je tlačítko zvýrazněno.
 
 *bIsPressed*<br/>
-[in] Logická hodnota, která určuje, zda stisknutí tlačítka.
+pro Logická hodnota, která označuje, zda bylo tlačítko stisknuto.
 
 *bIsDisabled*<br/>
-[in] Logická hodnota, která určuje, jestli je tlačítko neaktivní.
+pro Logická hodnota, která označuje, zda je tlačítko zakázáno.
 
 ### <a name="remarks"></a>Poznámky
 
-Potlačí tuto metodu v odvozené správce vzhledu pro přizpůsobení vzhledu tlačítka pro posunutí nabídky. Tlačítka pro posunutí nabídky se zobrazí na okraji nabídek při celková výška položky nabídky překračuje výšku rozbalovací nabídky.
+Tuto metodu přepište v odvozeném vizuálním manažeru a přizpůsobte si vzhled tlačítek posouvání nabídky. Tlačítka posouvání nabídky se zobrazí na okraji automaticky otevíraných nabídek, pokud celková výška položek nabídky přesáhne výšku místní nabídky.
 
-##  <a name="ondrawmenushadow"></a>  CMFCVisualManager::OnDrawMenuShadow
+##  <a name="ondrawmenushadow"></a>CMFCVisualManager::OnDrawMenuShadow
 
 ```
 virtual void OnDrawMenuShadow(
@@ -2502,21 +2502,21 @@ virtual void OnDrawMenuShadow(
 
 ### <a name="parameters"></a>Parametry
 
-[in] *pDC*<br/>
-[in] *rectClient*<br/>
-[in] *rectExclude*<br/>
-[in] *nDepth*<br/>
-[in] *iMinBrightness*<br/>
-[in] *iMaxBrightness*<br/>
-[in] *pBmpSaveBottom*<br/>
-[in] *pBmpSaveRight*<br/>
-[in] *bRTL*<br/>
+pro *primární řadič domény*<br/>
+pro *rectClient*<br/>
+pro *rectExclude*<br/>
+pro *nDepth*<br/>
+pro *iMinBrightness*<br/>
+pro *iMaxBrightness*<br/>
+pro *pBmpSaveBottom*<br/>
+pro *pBmpSaveRight*<br/>
+pro *bRTL*<br/>
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="ondrawmenusystembutton"></a>  CMFCVisualManager::OnDrawMenuSystemButton
+##  <a name="ondrawmenusystembutton"></a>CMFCVisualManager::OnDrawMenuSystemButton
 
-Rozhraní volá tuto metodu při kreslení systému tlačítko nabídky pro aplikaci.
+Rozhraní volá tuto metodu, když nakreslí systémové tlačítko nabídky pro aplikaci.
 
 ```
 virtual void OnDrawMenuSystemButton(
@@ -2530,27 +2530,27 @@ virtual void OnDrawMenuSystemButton(
 ### <a name="parameters"></a>Parametry
 
 *pDC*<br/>
-[in] Ukazatel na kontext zařízení.
+pro Ukazatel na kontext zařízení.
 
-*Rect*<br/>
-[in] Obdélník, který určuje hranice tlačítka.
+*OBD*<br/>
+pro Obdélník, který určuje hranice tlačítka.
 
 *uiSystemCommand*<br/>
-[in] Příznak, který určuje příkazu systému, na který je přidružen k tlačítka. Možné hodnoty jsou SC_CLOSE SC_MINIMIZE a SC_RESTORE.
+pro Příznak, který určuje, který systémový příkaz je přidružen k tlačítku. Možné hodnoty jsou SC_CLOSE, SC_MINIMIZE a SC_RESTORE.
 
 *nStyle*<br/>
-[in] Příznak, který určuje aktuální styl tlačítka. Možné hodnoty jsou TBBS_PRESSED TBBS_DISABLED a 0.
+pro Příznak, který určuje aktuální styl tlačítka. Možné hodnoty jsou TBBS_PRESSED, TBBS_DISABLED a 0.
 
 *bHighlight*<br/>
-[in] Parametr logické hodnoty, která určuje, zda se zvýrazní tlačítko.
+pro Logický parametr, který určuje, zda je tlačítko zvýrazněno.
 
 ### <a name="remarks"></a>Poznámky
 
-Tlačítka nabídky systému jsou **Zavřít**, **minimalizovat**, **Maximalizovat**, a **obnovení** tlačítka nachází v záhlaví okna.
+Systémová tlačítka nabídek jsou tlačítka pro **zavření**, **minimalizaci**, **maximalizaci**a **obnovení** umístěná v záhlaví.
 
-Výchozí implementace pro tuto metodu volá [CDC::DrawFrameControl](../../mfc/reference/cdc-class.md#drawframecontrol) DFC_CAPTION typu. Potlačí tuto metodu ve třídě odvozené správce vzhledu pro přizpůsobení vzhledu systémových tlačítek.
+Výchozí implementace této metody volá metodu [CDC::D rawframecontrol](../../mfc/reference/cdc-class.md#drawframecontrol) s typem DFC_CAPTION. Tuto metodu přepište v odvozené třídě vizuálního správce, abyste mohli přizpůsobit vzhled systémových tlačítek.
 
-##  <a name="ondrawminiframeborder"></a>  CMFCVisualManager::OnDrawMiniFrameBorder
+##  <a name="ondrawminiframeborder"></a>CMFCVisualManager::OnDrawMiniFrameBorder
 
 ```
 virtual void OnDrawMiniFrameBorder(
@@ -2562,16 +2562,16 @@ virtual void OnDrawMiniFrameBorder(
 
 ### <a name="parameters"></a>Parametry
 
-[in] *pDC*<br/>
-[in] *pFrameWnd*<br/>
-[in] *rectBorder*<br/>
-[in] *rectBorderSize*<br/>
+pro *primární řadič domény*<br/>
+pro *pFrameWnd*<br/>
+pro *rectBorder*<br/>
+pro *rectBorderSize*<br/>
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="ondrawoutlookbarsplitter"></a>  CMFCVisualManager::OnDrawOutlookBarSplitter
+##  <a name="ondrawoutlookbarsplitter"></a>CMFCVisualManager::OnDrawOutlookBarSplitter
 
-Rozhraní volá tuto metodu při kreslení rozdělovač pro panel aplikace Outlook.
+Rozhraní volá tuto metodu, když nakreslí rozdělovač pro panel aplikace Outlook.
 
 ```
 virtual void OnDrawOutlookBarSplitter(
@@ -2582,18 +2582,18 @@ virtual void OnDrawOutlookBarSplitter(
 ### <a name="parameters"></a>Parametry
 
 *pDC*<br/>
-[in] Ukazatel na kontext zařízení.
+pro Ukazatel na kontext zařízení.
 
 *rectSplitter*<br/>
-[in] Obdélník, který určuje hranice příčky.
+pro Obdélník, který určuje hranice rozdělovače.
 
 ### <a name="remarks"></a>Poznámky
 
-Potlačí tuto metodu v odvozené správce vzhledu pro přizpůsobení vzhledu příčky na panel aplikace Outlook.
+Tuto metodu můžete přepsat v odvozeném vizuálním manažeru a přizpůsobit si tak vzhled rozdělovačů na panelu aplikace Outlook.
 
-##  <a name="ondrawoutlookpagebuttonborder"></a>  CMFCVisualManager::OnDrawOutlookPageButtonBorder
+##  <a name="ondrawoutlookpagebuttonborder"></a>CMFCVisualManager::OnDrawOutlookPageButtonBorder
 
-Volá se rozhraním, když ho ohraničení tlačítka stránky aplikace Outlook.
+Volá se rozhraním, když se nakreslí ohraničení tlačítka Outlook Page.
 
 ```
 virtual void OnDrawOutlookPageButtonBorder(
@@ -2606,24 +2606,24 @@ virtual void OnDrawOutlookPageButtonBorder(
 ### <a name="parameters"></a>Parametry
 
 *pDC*<br/>
-[in] Ukazatel na kontext zařízení.
+pro Ukazatel na kontext zařízení.
 
 *rectBtn*<br/>
-[in] Obdélník, který určuje hranice na tlačítku stránky aplikace Outlook.
+pro Obdélník, který určuje hranici tlačítka Outlook Page.
 
 *bIsHighlighted*<br/>
-[in] Logická hodnota, která určuje, zda se zvýrazní tlačítko.
+pro Logická hodnota, která určuje, zda je tlačítko zvýrazněno.
 
 *bIsPressed*<br/>
-[in] Logická hodnota, která určuje, zda stisknutí tlačítka.
+pro Logická hodnota, která určuje, zda je tlačítko stisknuto.
 
 ### <a name="remarks"></a>Poznámky
 
-Potlačí tuto metodu ve vlastní správce vzhledu, chcete-li změnit vzhled tlačítka stránky aplikace Outlook.
+Pokud chcete změnit vzhled tlačítka stránky Outlooku, přepište tuto metodu ve vlastním vizuálním manažeru.
 
-##  <a name="ondrawpaneborder"></a>  CMFCVisualManager::OnDrawPaneBorder
+##  <a name="ondrawpaneborder"></a>CMFCVisualManager::OnDrawPaneBorder
 
-Rozhraní volá tuto metodu při kreslení ohraničení [cpane – třída](../../mfc/reference/cpane-class.md) objektu.
+Rozhraní volá tuto metodu, když nakreslí ohraničení objektu [třídy CPane](../../mfc/reference/cpane-class.md) .
 
 ```
 virtual void OnDrawPaneBorder(
@@ -2635,21 +2635,21 @@ virtual void OnDrawPaneBorder(
 ### <a name="parameters"></a>Parametry
 
 *pDC*<br/>
-[in] Ukazatel na ovládací panel kontextu zařízení.
+pro Ukazatel na kontext zařízení na ovládacím panelu.
 
 *pBar*<br/>
-[in] Ukazatel na stavového řádku. Správce vzhledu ohraničení v tomto podokně.
+pro Ukazatel na podokno. Vizuální správce vykreslí ohraničení tohoto podokna.
 
-*Rect*<br/>
-[in] Obdélník, který určuje hranice v podokně.
+*OBD*<br/>
+pro Obdélník, který určuje hranice podokna.
 
 ### <a name="remarks"></a>Poznámky
 
-Výchozí implementace této metody zobrazí standardní ohraničení. Potlačí tuto metodu v odvozené třídě pro přizpůsobení vzhledu ohraničení.
+Výchozí implementace této metody zobrazí standardní ohraničení. Přepsáním této metody v odvozené třídě upravíte vzhled ohraničení.
 
-##  <a name="ondrawpanecaption"></a>  CMFCVisualManager::OnDrawPaneCaption
+##  <a name="ondrawpanecaption"></a>CMFCVisualManager::OnDrawPaneCaption
 
-Rozhraní volá tuto metodu při kreslení titulek pro instanci [CDockablePane – třída](../../mfc/reference/cdockablepane-class.md).
+Rozhraní volá tuto metodu, když nakreslí titulek pro instanci [třídy CDockablePane](../../mfc/reference/cdockablepane-class.md).
 
 ```
 virtual COLORREF OnDrawPaneCaption(
@@ -2663,29 +2663,29 @@ virtual COLORREF OnDrawPaneCaption(
 ### <a name="parameters"></a>Parametry
 
 *pDC*<br/>
-[in] Ukazatel na kontext zařízení.
+pro Ukazatel na kontext zařízení.
 
 *pBar*<br/>
-[in] Ukazatel `CDockablePane` objektu. Rozhraní framework kreslení popisek pro toto podokno.
+pro Ukazatel na `CDockablePane` objekt. Rozhraní nakreslí titulek pro toto podokno.
 
 *bActive*<br/>
-[in] Parametr logické hodnoty označující, zda ovládací panel je aktivní.
+pro Logický parametr, který označuje, zda je ovládací panel aktivní.
 
 *rectCaption*<br/>
-[in] Obdélník, který určuje hranice titulek.
+pro Obdélník, který určuje hranice titulku.
 
 *rectButtons*<br/>
-[in] Obdélník, který určuje hranice titulek tlačítka.
+pro Obdélník, který určuje hranice tlačítek titulků.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-A [COLORREF](/windows/desktop/gdi/colorref) parametr, který určuje barvu textu popisku.
+Parametr [COLORREF](/windows/win32/gdi/colorref) , který určuje barvu textu titulku.
 
 ### <a name="remarks"></a>Poznámky
 
-Potlačí tuto metodu v odvozené správce vzhledu pro přizpůsobení vzhledu popisků podokně.
+Tuto metodu přepište v odvozeném vizuálním manažeru, abyste mohli přizpůsobit vzhled titulků podokna.
 
-##  <a name="ondrawpanedivider"></a>  CMFCVisualManager::OnDrawPaneDivider
+##  <a name="ondrawpanedivider"></a>CMFCVisualManager::OnDrawPaneDivider
 
 ```
 virtual void OnDrawPaneDivider(
@@ -2697,14 +2697,14 @@ virtual void OnDrawPaneDivider(
 
 ### <a name="parameters"></a>Parametry
 
-[in] *pDC*<br/>
-[in] *pSlider*<br/>
-[in] *rect*<br/>
-[in] *bAutoHideMode*<br/>
+pro *primární řadič domény*<br/>
+pro *pSlider*<br/>
+pro *Rect*<br/>
+pro *bAutoHideMode*<br/>
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="ondrawpopupwindowborder"></a>  CMFCVisualManager::OnDrawPopupWindowBorder
+##  <a name="ondrawpopupwindowborder"></a>CMFCVisualManager::OnDrawPopupWindowBorder
 
 ```
 virtual void OnDrawPopupWindowBorder(
@@ -2714,12 +2714,12 @@ virtual void OnDrawPopupWindowBorder(
 
 ### <a name="parameters"></a>Parametry
 
-[in] *pDC*<br/>
-[in] *rect*<br/>
+pro *primární řadič domény*<br/>
+pro *Rect*<br/>
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="ondrawpopupwindowbuttonborder"></a>  CMFCVisualManager::OnDrawPopupWindowButtonBorder
+##  <a name="ondrawpopupwindowbuttonborder"></a>CMFCVisualManager::OnDrawPopupWindowButtonBorder
 
 ```
 virtual void OnDrawPopupWindowButtonBorder(
@@ -2730,13 +2730,13 @@ virtual void OnDrawPopupWindowButtonBorder(
 
 ### <a name="parameters"></a>Parametry
 
-[in] *pDC*<br/>
-[in] *rectClient*<br/>
-[in] *pButton*<br/>
+pro *primární řadič domény*<br/>
+pro *rectClient*<br/>
+pro *pButton*<br/>
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="ondrawpopupwindowcaption"></a>  CMFCVisualManager::OnDrawPopupWindowCaption
+##  <a name="ondrawpopupwindowcaption"></a>CMFCVisualManager::OnDrawPopupWindowCaption
 
 ```
 virtual COLORREF OnDrawPopupWindowCaption(
@@ -2747,17 +2747,17 @@ virtual COLORREF OnDrawPopupWindowCaption(
 
 ### <a name="parameters"></a>Parametry
 
-[in] *pDC*<br/>
-[in] *rectCaption*<br/>
-[in] *pPopupWnd*<br/>
+pro *primární řadič domény*<br/>
+pro *rectCaption*<br/>
+pro *pPopupWnd*<br/>
 
 ### <a name="return-value"></a>Návratová hodnota
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="ondrawribbonapplicationbutton"></a>  CMFCVisualManager::OnDrawRibbonApplicationButton
+##  <a name="ondrawribbonapplicationbutton"></a>CMFCVisualManager::OnDrawRibbonApplicationButton
 
-Rozhraní volá tuto metodu, když se vykreslí **hlavní tlačítko** na pásu karet.
+Rozhraní volá tuto metodu, když nakreslí **hlavní tlačítko** na pásu karet.
 
 ```
 virtual void OnDrawRibbonApplicationButton(
@@ -2768,18 +2768,18 @@ virtual void OnDrawRibbonApplicationButton(
 ### <a name="parameters"></a>Parametry
 
 *pDC*<br/>
-[in] Ukazatel na kontext zařízení.
+pro Ukazatel na kontext zařízení.
 
 *pButton*<br/>
-[in] Ukazatel **hlavní tlačítko** na pásu karet.
+pro Ukazatel na **hlavní tlačítko** na pásu karet.
 
 ### <a name="remarks"></a>Poznámky
 
-Potlačí tuto metodu v odvozené správce vzhledu, pokud chcete přizpůsobit vzhled **hlavní tlačítko**.
+Tuto metodu přepište v odvozeném vizuálním správci, pokud chcete přizpůsobit vzhled **hlavního tlačítka**.
 
-##  <a name="ondrawribbonbuttonborder"></a>  CMFCVisualManager::OnDrawRibbonButtonBorder
+##  <a name="ondrawribbonbuttonborder"></a>CMFCVisualManager::OnDrawRibbonButtonBorder
 
-Rozhraní volá tuto metodu, když ho ohraničení jedno tlačítko na pásu karet.
+Rozhraní volá tuto metodu, když nakreslí ohraničení tlačítka na pásu karet.
 
 ```
 virtual void OnDrawRibbonButtonBorder(
@@ -2790,18 +2790,18 @@ virtual void OnDrawRibbonButtonBorder(
 ### <a name="parameters"></a>Parametry
 
 *pDC*<br/>
-[in] Ukazatel na kontext zařízení.
+pro Ukazatel na kontext zařízení.
 
 *pButton*<br/>
-[in] Ukazatel [cmfcribbonbutton –](../../mfc/reference/cmfcribbonbutton-class.md) objektu. Rozhraní framework ohraničení pro toto tlačítko na pásu karet.
+pro Ukazatel na objekt [CMFCRibbonButton](../../mfc/reference/cmfcribbonbutton-class.md) . Rozhraní nakreslí ohraničení tohoto tlačítka na pás karet.
 
 ### <a name="remarks"></a>Poznámky
 
-Potlačí tuto metodu v odvozené vizuálního správce k přizpůsobení vzhledu `CMFCRibbonButton`.
+Přepsat tuto metodu v odvozeném vizuálním manažeru k přizpůsobení vzhledu `CMFCRibbonButton`.
 
-##  <a name="ondrawribbonbuttonsgroup"></a>  CMFCVisualManager::OnDrawRibbonButtonsGroup
+##  <a name="ondrawribbonbuttonsgroup"></a>CMFCVisualManager::OnDrawRibbonButtonsGroup
 
-Rozhraní volá tuto metodu při nakreslí skupina tlačítek na pásu karet.
+Rozhraní volá tuto metodu, když nakreslí skupinu tlačítek na pásu karet.
 
 ```
 virtual COLORREF OnDrawRibbonButtonsGroup(
@@ -2813,25 +2813,25 @@ virtual COLORREF OnDrawRibbonButtonsGroup(
 ### <a name="parameters"></a>Parametry
 
 *pDC*<br/>
-[in] Ukazatel na kontext zařízení.
+pro Ukazatel na kontext zařízení.
 
 *pGroup*<br/>
-[in] Ukazatel na skupinu tlačítek na pásu karet. Rozhraní framework kreslení tato skupina tlačítek.
+pro Ukazatel na skupinu tlačítek na pásu karet. Rozhraní kreslí tuto skupinu tlačítek.
 
 *rectGroup*<br/>
-[in] Obdélník, který určuje hranice skupiny.
+pro Obdélník, který určuje hranice skupiny.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Rezervovanou hodnotu. Výchozí implementace vrací -1.
+Rezervovaná hodnota. Výchozí implementace vrátí hodnotu-1.
 
 ### <a name="remarks"></a>Poznámky
 
-Potlačí tuto metodu v odvozené správce vzhledu pro přizpůsobení vzhledu skupina tlačítek na pásu karet.
+Tuto metodu můžete přepsat v odvozeném vizuálním manažeru pro přizpůsobení vzhledu skupiny tlačítek na pásu karet.
 
-##  <a name="ondrawribboncaption"></a>  CMFCVisualManager::OnDrawRibbonCaption
+##  <a name="ondrawribboncaption"></a>CMFCVisualManager::OnDrawRibbonCaption
 
-Rozhraní volá tuto metodu při kreslení záhlaví okna hlavního rámce. Rozhraní volá tuto metodu pouze v případě, že na pásu karet je integrovaná s hlavního rámce.
+Rozhraní volá tuto metodu, když nakreslí záhlaví okna hlavního rámce. Rozhraní volá tuto metodu pouze v případě, že je pás karet integrován do hlavního rámce.
 
 ```
 virtual void OnDrawRibbonCaption(
@@ -2844,24 +2844,24 @@ virtual void OnDrawRibbonCaption(
 ### <a name="parameters"></a>Parametry
 
 *pDC*<br/>
-[in] Ukazatel na kontext zařízení.
+pro Ukazatel na kontext zařízení.
 
 *pBar*<br/>
-[in] Ukazatel na panel pásu karet. Správce vzhledu kreslení tento panel pásu karet.
+pro Ukazatel na panel pásu karet. Vizuální nadřízený vykreslí tento panel pásu karet.
 
-*Rect*<br/>
-[in] Obdélník, který určuje hranice panelu pásu karet.
+*OBD*<br/>
+pro Obdélník, který určuje hranice panelu pásu karet.
 
 *rectText*<br/>
-[in] Obdélník, který určuje hranice pro text ovládacího prvku záhlaví.
+pro Obdélník, který určuje hranice pro text záhlaví.
 
 ### <a name="remarks"></a>Poznámky
 
-Potlačí tuto funkci v odvozené správce vzhledu pro přizpůsobení vzhledu záhlaví. Tato metoda má vliv na záhlaví pouze v případě, že na pásu karet je integrovaná s oknem hlavního rámce.
+Tuto funkci můžete přepsat v odvozeném vizuálním manažeru, abyste mohli přizpůsobit vzhled panelu titulků. Tato metoda ovlivňuje panel titulků pouze v případě, že je pás karet integrován do hlavního okna rámce.
 
-##  <a name="ondrawribboncaptionbutton"></a>  CMFCVisualManager::OnDrawRibbonCaptionButton
+##  <a name="ondrawribboncaptionbutton"></a>CMFCVisualManager::OnDrawRibbonCaptionButton
 
-Rozhraní volá tuto metodu při kreslení titulek tlačítka na panelu pásu karet.
+Rozhraní volá tuto metodu, když nakreslí tlačítko titulek na panelu pásu karet.
 
 ```
 virtual void OnDrawRibbonCaptionButton(
@@ -2875,15 +2875,15 @@ virtual void OnDrawRibbonCaptionButton(
 Ukazatel na kontext zařízení.
 
 *pButton*<br/>
-Ukazatel `CMFCRibbonCaptionButton` třídy. Rozhraní framework kreslení tento titulek tlačítka.
+Ukazatel na `CMFCRibbonCaptionButton` třídu. Rozhraní kreslí toto tlačítko titulek.
 
 ### <a name="remarks"></a>Poznámky
 
-Potlačí tuto metodu v odvozené správce vzhledu pro přizpůsobení vzhledu titulek tlačítka na pásu karet.
+Tuto metodu můžete přepsat v odvozeném vizuálním manažeru a přizpůsobit vzhled tlačítka titulku na pásu karet.
 
-##  <a name="ondrawribboncategory"></a>  CMFCVisualManager::OnDrawRibbonCategory
+##  <a name="ondrawribboncategory"></a>CMFCVisualManager::OnDrawRibbonCategory
 
-Rozhraní volá tuto metodu, když se vykreslí [cmfcribboncategory –](../../mfc/reference/cmfcribboncategory-class.md) objektu.
+Rozhraní volá tuto metodu, když nakreslí objekt [CMFCRibbonCategory](../../mfc/reference/cmfcribboncategory-class.md) .
 
 ```
 virtual void OnDrawRibbonCategory(
@@ -2895,23 +2895,23 @@ virtual void OnDrawRibbonCategory(
 ### <a name="parameters"></a>Parametry
 
 *pDC*<br/>
-[in] Ukazatel na kontext zařízení.
+pro Ukazatel na kontext zařízení.
 
 *pCategory*<br/>
-[in] Ukazatel `CMFCRibbonCategory` objektu. Rozhraní framework kreslení této kategorie pásu karet.
+pro Ukazatel na `CMFCRibbonCategory` objekt. Rozhraní nakreslí tuto kategorii pásu karet.
 
 *rectCategory*<br/>
-[in] Obdélník, který určuje hranice všechny kategorie panely na pásu karet.
+pro Obdélník, který určuje hranici všech panelů kategorií na pásu karet.
 
 ### <a name="remarks"></a>Poznámky
 
-Kategorie pásu karet je logické seskupení příkazů nabídky. Další informace o kategoriích pásu karet najdete v tématu [cmfcribboncategory – třída](../../mfc/reference/cmfcribboncategory-class.md).
+Kategorie pásu karet je logické seskupení příkazů nabídky. Další informace o kategoriích pásu karet naleznete v tématu [Třída CMFCRibbonCategory](../../mfc/reference/cmfcribboncategory-class.md).
 
-Potlačí tuto metodu v odvozené správce vzhledu pro přizpůsobení vzhledu kategorie pásu karet.
+Tuto metodu můžete přepsat v odvozeném vizuálním manažeru, abyste mohli přizpůsobit vzhled kategorie pásu karet.
 
-##  <a name="ondrawribboncategorycaption"></a>  CMFCVisualManager::OnDrawRibbonCategoryCaption
+##  <a name="ondrawribboncategorycaption"></a>CMFCVisualManager::OnDrawRibbonCategoryCaption
 
-Rozhraní volá tuto metodu při kreslení záhlaví pro kategorii pásu karet.
+Rozhraní volá tuto metodu, když nakreslí panel titulků pro kategorii pásu karet.
 
 ```
 virtual COLORREF OnDrawRibbonCategoryCaption(
@@ -2922,20 +2922,20 @@ virtual COLORREF OnDrawRibbonCategoryCaption(
 ### <a name="parameters"></a>Parametry
 
 *pDC*<br/>
-[in] Kreslení kontextu.
+pro Kontext vykreslování.
 
 *pContextCaption*<br/>
-[in] Ukazatel na záhlaví. Správce vzhledu nakreslí to [cmfcribboncontextcaption – třída](../../mfc/reference/cmfcribboncontextcaption-class.md) objektu.
+pro Ukazatel na panel titulků. Nástroj Visual Manager vykreslí tento objekt [třídy CMFCRibbonContextCaption](../../mfc/reference/cmfcribboncontextcaption-class.md) .
 
 ### <a name="return-value"></a>Návratová hodnota
 
-A [COLORREF](/windows/desktop/gdi/colorref) parametr, který určuje barvu textu v záhlaví.
+Parametr [COLORREF](/windows/win32/gdi/colorref) , který určuje barvu textu na panelu titulků.
 
 ### <a name="remarks"></a>Poznámky
 
-Potlačí tuto metodu v odvozené třídě pro přizpůsobení vzhledu záhlaví pro kategorii pásu karet. Další informace o záhlaví najdete v tématu [cmfcribboncontextcaption – třída](../../mfc/reference/cmfcribboncontextcaption-class.md).
+Tuto metodu přepište v odvozené třídě, aby se přizpůsobil vzhled panelu titulků pro kategorii pásu karet. Další informace o panelu titulků naleznete v tématu [Třída CMFCRibbonContextCaption](../../mfc/reference/cmfcribboncontextcaption-class.md).
 
-##  <a name="ondrawribboncategoryscroll"></a>  CMFCVisualManager::OnDrawRibbonCategoryScroll
+##  <a name="ondrawribboncategoryscroll"></a>CMFCVisualManager::OnDrawRibbonCategoryScroll
 
 ```
 virtual void OnDrawRibbonCategoryScroll(
@@ -2945,14 +2945,14 @@ virtual void OnDrawRibbonCategoryScroll(
 
 ### <a name="parameters"></a>Parametry
 
-[in] *pDC*<br/>
-[in] *pScroll*<br/>
+pro *primární řadič domény*<br/>
+pro *pScroll*<br/>
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="ondrawribboncategorytab"></a>  CMFCVisualManager::OnDrawRibbonCategoryTab
+##  <a name="ondrawribboncategorytab"></a>CMFCVisualManager::OnDrawRibbonCategoryTab
 
-Rozhraní volá tuto metodu při kreslení na kartu kategorie pásu karet.
+Rozhraní volá tuto metodu, když nakreslí kartu pro kategorii pásu karet.
 
 ```
 virtual COLORREF OnDrawRibbonCategoryTab(
@@ -2964,23 +2964,23 @@ virtual COLORREF OnDrawRibbonCategoryTab(
 ### <a name="parameters"></a>Parametry
 
 *pDC*<br/>
-[in] Ukazatel na kontext zařízení.
+pro Ukazatel na kontext zařízení.
 
 *pTab*<br/>
-[in] Ukazatel na instanci `CMFCRibbonTab` třídy. Rozhraní framework kreslení na této kartě.
+pro Ukazatel na instanci `CMFCRibbonTab` třídy. Rozhraní nakreslí tuto kartu.
 
 *bIsActive*<br/>
-[in] Parametr logické hodnoty označující, zda je na kartě aktivní.
+pro Logický parametr, který označuje, zda je karta aktivní.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Barva, která se používá pro text na kartu kategorie pásu karet.
+Barva, která se používá pro text na kartě kategorie pásu karet.
 
 ### <a name="remarks"></a>Poznámky
 
-Potlačí tuto metodu v odvozené správce vzhledu pro přizpůsobení vzhledu kartu kategorie pásu karet. Další informace o kategoriích pásu karet najdete v tématu [cmfcribboncategory – třída](../../mfc/reference/cmfcribboncategory-class.md).
+Tuto metodu můžete přepsat v odvozeném vizuálním manažeru a přizpůsobit tak vzhled karty kategorie pásu karet. Další informace o kategoriích pásu karet naleznete v tématu [Třída CMFCRibbonCategory](../../mfc/reference/cmfcribboncategory-class.md).
 
-##  <a name="ondrawribboncheckboxonlist"></a>  CMFCVisualManager::OnDrawRibbonCheckBoxOnList
+##  <a name="ondrawribboncheckboxonlist"></a>CMFCVisualManager::OnDrawRibbonCheckBoxOnList
 
 ```
 virtual void OnDrawRibbonCheckBoxOnList(
@@ -2993,15 +2993,15 @@ virtual void OnDrawRibbonCheckBoxOnList(
 
 ### <a name="parameters"></a>Parametry
 
-[in] *pDC*<br/>
-[in] *pCheckBox*<br/>
-[in] *rect*<br/>
-[in] *bIsSelected*<br/>
-[in] *bHighlighted*<br/>
+pro *primární řadič domény*<br/>
+pro *pCheckBox*<br/>
+pro *Rect*<br/>
+pro *bIsSelected*<br/>
+pro *bHighlighted*<br/>
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="ondrawribboncolorpalettebox"></a>  CMFCVisualManager::OnDrawRibbonColorPaletteBox
+##  <a name="ondrawribboncolorpalettebox"></a>CMFCVisualManager::OnDrawRibbonColorPaletteBox
 
 ```
 virtual void OnDrawRibbonColorPaletteBox(
@@ -3019,22 +3019,22 @@ virtual void OnDrawRibbonColorPaletteBox(
 
 ### <a name="parameters"></a>Parametry
 
-[in] *pDC*<br/>
-[in] *pColorButton*<br/>
-[in] *pIcon*<br/>
-[in] *barva*<br/>
-[in] *rect*<br/>
-[in] *bDrawTopEdge*<br/>
-[in] *bDrawBottomEdge*<br/>
-[in] *bIsHighlighted*<br/>
-[in] *bIsChecked*<br/>
-[in] *bIsDisabled*<br/>
+pro *primární řadič domény*<br/>
+pro *pColorButton*<br/>
+pro *pIcon*<br/>
+pro *Barva*<br/>
+pro *Rect*<br/>
+pro *bDrawTopEdge*<br/>
+pro *bDrawBottomEdge*<br/>
+pro *bIsHighlighted*<br/>
+pro *bIsChecked*<br/>
+pro *bIsDisabled*<br/>
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="ondrawribbondefaultpanebutton"></a>  CMFCVisualManager::OnDrawRibbonDefaultPaneButton
+##  <a name="ondrawribbondefaultpanebutton"></a>CMFCVisualManager::OnDrawRibbonDefaultPaneButton
 
-Rozhraní volá tuto metodu při kreslení výchozí tlačítko podokna pásu karet.
+Rozhraní volá tuto metodu, když nakreslí výchozí tlačítko pro panel pásu karet.
 
 ```
 virtual void OnDrawRibbonDefaultPaneButton(
@@ -3045,16 +3045,16 @@ virtual void OnDrawRibbonDefaultPaneButton(
 ### <a name="parameters"></a>Parametry
 
 *pDC*<br/>
-[in] Ukazatel na kontext zařízení.
+pro Ukazatel na kontext zařízení.
 
 *pButton*<br/>
-[in] Ukazatel na výchozí tlačítko podokna pásu karet.
+pro Ukazatel na výchozí tlačítko pro panel pásu karet.
 
 ### <a name="remarks"></a>Poznámky
 
-Pokud je minimální velikost velikost podokna pásu karet a neexistuje žádná oblast pro zobrazení obsahu panelu zobrazí rozhraní výchozí tlačítko. Když uživatel klikne na tlačítko výchozí, zobrazí rozhraní rozevírací seznam, který obsahuje obsah pro panel.
+Rozhraní zobrazí výchozí tlačítko při změně velikosti podokna pásu karet na minimální velikost a neexistuje žádná oblast pro zobrazení obsahu panelu. Když uživatel klikne na výchozí tlačítko, rozhraní zobrazí rozevírací nabídku, která obsahuje obsah pro panel.
 
-Potlačí tuto metodu v odvozené správce vzhledu pro přizpůsobení vzhledu výchozí tlačítko.
+Tuto metodu můžete přepsat v odvozeném vizuálním manažeru a přizpůsobit tak vzhled výchozího tlačítka.
 
 ##  <a name="ondrawribbondefaultpanebuttoncontext"></a>  CMFCVisualManager::OnDrawRibbonDefaultPaneButtonContext
 
@@ -3066,12 +3066,12 @@ virtual void OnDrawRibbonDefaultPaneButtonContext(
 
 ### <a name="parameters"></a>Parametry
 
-[in] *pDC*<br/>
-[in] *pButton*<br/>
+pro *primární řadič domény*<br/>
+pro *pButton*<br/>
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="ondrawribbondefaultpanebuttonindicator"></a>  CMFCVisualManager::OnDrawRibbonDefaultPaneButtonIndicator
+##  <a name="ondrawribbondefaultpanebuttonindicator"></a>CMFCVisualManager::OnDrawRibbonDefaultPaneButtonIndicator
 
 ```
 virtual void OnDrawRibbonDefaultPaneButtonIndicator(
@@ -3084,15 +3084,15 @@ virtual void OnDrawRibbonDefaultPaneButtonIndicator(
 
 ### <a name="parameters"></a>Parametry
 
-[in] *pDC*<br/>
-[in] *pButton*<br/>
-[in] *rect*<br/>
-[in] *bIsSelected*<br/>
-[in] *bHighlighted*<br/>
+pro *primární řadič domény*<br/>
+pro *pButton*<br/>
+pro *Rect*<br/>
+pro *bIsSelected*<br/>
+pro *bHighlighted*<br/>
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="ondrawribbongalleryborder"></a>  CMFCVisualManager::OnDrawRibbonGalleryBorder
+##  <a name="ondrawribbongalleryborder"></a>CMFCVisualManager::OnDrawRibbonGalleryBorder
 
 ```
 virtual void OnDrawRibbonGalleryBorder(
@@ -3103,13 +3103,13 @@ virtual void OnDrawRibbonGalleryBorder(
 
 ### <a name="parameters"></a>Parametry
 
-[in] *pDC*<br/>
-[in] *pButton*<br/>
-[in] *rectBorder*<br/>
+pro *primární řadič domény*<br/>
+pro *pButton*<br/>
+pro *rectBorder*<br/>
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="ondrawribbongallerybutton"></a>  CMFCVisualManager::OnDrawRibbonGalleryButton
+##  <a name="ondrawribbongallerybutton"></a>CMFCVisualManager::OnDrawRibbonGalleryButton
 
 ```
 virtual void OnDrawRibbonGalleryButton(
@@ -3119,12 +3119,12 @@ virtual void OnDrawRibbonGalleryButton(
 
 ### <a name="parameters"></a>Parametry
 
-[in] *pDC*<br/>
-[in] *pButton*<br/>
+pro *primární řadič domény*<br/>
+pro *pButton*<br/>
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="ondrawribbonkeytip"></a>  CMFCVisualManager::OnDrawRibbonKeyTip
+##  <a name="ondrawribbonkeytip"></a>CMFCVisualManager::OnDrawRibbonKeyTip
 
 ```
 virtual void OnDrawRibbonKeyTip(
@@ -3136,16 +3136,16 @@ virtual void OnDrawRibbonKeyTip(
 
 ### <a name="parameters"></a>Parametry
 
-[in] *pDC*<br/>
-[in] *pElement*<br/>
-[in] *rect*<br/>
-[in] *str*<br/>
+pro *primární řadič domény*<br/>
+pro *pElement*<br/>
+pro *Rect*<br/>
+pro *str*<br/>
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="ondrawribbonlabel"></a>  CMFCVisualManager::OnDrawRibbonLabel
+##  <a name="ondrawribbonlabel"></a>CMFCVisualManager::OnDrawRibbonLabel
 
-Rozhraní volá tuto metodu při kreslení popisek na pásu karet.
+Rozhraní volá tuto metodu, když nakreslí popisek pásu karet.
 
 ```
 virtual void OnDrawRibbonLabel(
@@ -3157,21 +3157,21 @@ virtual void OnDrawRibbonLabel(
 ### <a name="parameters"></a>Parametry
 
 *pDC*<br/>
-[in] Ukazatel na kontext zařízení.
+pro Ukazatel na kontext zařízení.
 
 *pLabel*<br/>
-[in] Ukazatel [cmfcribbonlabel –](../../mfc/reference/cmfcribbonlabel-class.md) objektu. Rozhraní framework kreslení tento popisek pásu karet.
+pro Ukazatel na objekt [CMFCRibbonLabel](../../mfc/reference/cmfcribbonlabel-class.md) . Rozhraní nakreslí tento popisek pásu karet.
 
-*Rect*<br/>
-[in] Obdélník, který určuje hranice panelu pásu karet.
+*OBD*<br/>
+pro Obdélník, který určuje hranice panelu pásu karet.
 
 ### <a name="remarks"></a>Poznámky
 
-Potlačí tuto metodu v odvozené třídě k přizpůsobení pásu karet popisek.
+Přepište tuto metodu v odvozené třídě pro přizpůsobení popisku pásu karet.
 
-##  <a name="ondrawribbonmainpanelbuttonborder"></a>  CMFCVisualManager::OnDrawRibbonMainPanelButtonBorder
+##  <a name="ondrawribbonmainpanelbuttonborder"></a>CMFCVisualManager::OnDrawRibbonMainPanelButtonBorder
 
-Rozhraní volá tuto metodu při kreslení ohraničení [cmfcribbonbutton –](../../mfc/reference/cmfcribbonbutton-class.md) , který je umístěn na **hlavní** panelu.
+Rozhraní volá tuto metodu, když nakreslí ohraničení [CMFCRibbonButton](../../mfc/reference/cmfcribbonbutton-class.md) , které je umístěno na **hlavním** panelu.
 
 ```
 virtual void OnDrawRibbonMainPanelButtonBorder(
@@ -3182,18 +3182,18 @@ virtual void OnDrawRibbonMainPanelButtonBorder(
 ### <a name="parameters"></a>Parametry
 
 *pDC*<br/>
-[in] Ukazatel na kontext zařízení.
+pro Ukazatel na kontext zařízení.
 
 *pButton*<br/>
-[in] Ukazatel `CMFCRibbonButton` na hlavní panel pásu karet. Rozhraní framework ohraničení pro toto tlačítko.
+pro Ukazatel na `CMFCRibbonButton` umístěný na hlavním panelu pásu karet. Rozhraní nakreslí ohraničení tohoto tlačítka.
 
 ### <a name="remarks"></a>Poznámky
 
-Potlačí tuto metodu v odvozené správce vzhledu pro přizpůsobení vzhledu ohraničení `CMFCRibbonButton` na **hlavní** panelu.
+Tuto metodu přepište v odvozeném vizuálním manažeru, abyste mohli přizpůsobit vzhled ohraničení `CMFCRibbonButton` na **hlavním** panelu.
 
-##  <a name="ondrawribbonmainpanelframe"></a>  CMFCVisualManager::OnDrawRibbonMainPanelFrame
+##  <a name="ondrawribbonmainpanelframe"></a>CMFCVisualManager::OnDrawRibbonMainPanelFrame
 
-Rozhraní volá tuto metodu při nakreslí rámeček kolek [cmfcribbonmainpanel –](../../mfc/reference/cmfcribbonmainpanel-class.md).
+Rozhraní volá tuto metodu, když vykresluje rámeček kolem [CMFCRibbonMainPanel](../../mfc/reference/cmfcribbonmainpanel-class.md).
 
 ```
 virtual void OnDrawRibbonMainPanelFrame(
@@ -3205,19 +3205,19 @@ virtual void OnDrawRibbonMainPanelFrame(
 ### <a name="parameters"></a>Parametry
 
 *pDC*<br/>
-[in] Ukazatel na kontext zařízení.
+pro Ukazatel na kontext zařízení.
 
 *pPanel*<br/>
-[in] Ukazatel `CMFCRibbonMainPanel`.
+pro Ukazatel na `CMFCRibbonMainPanel`.
 
-*Rect*<br/>
-[in] Obdélník, který určuje hranice `CMFCRibbonMainPanel`.
+*OBD*<br/>
+pro Obdélník, který určuje hranice `CMFCRibbonMainPanel`.
 
 ### <a name="remarks"></a>Poznámky
 
-Potlačí tuto metodu v odvozené správce vzhledu přizpůsobit vzhled rámce pro `CMFCRibbonMainPanel`.
+Tuto metodu přepište v odvozeném vizuálním manažeru, abyste mohli přizpůsobit vzhled rámce `CMFCRibbonMainPanel`pro.
 
-##  <a name="ondrawribbonmenucheckframe"></a>  CMFCVisualManager::OnDrawRibbonMenuCheckFrame
+##  <a name="ondrawribbonmenucheckframe"></a>CMFCVisualManager::OnDrawRibbonMenuCheckFrame
 
 ```
 virtual void OnDrawRibbonMenuCheckFrame(
@@ -3228,15 +3228,15 @@ virtual void OnDrawRibbonMenuCheckFrame(
 
 ### <a name="parameters"></a>Parametry
 
-[in] *pDC*<br/>
-[in] *pButton*<br/>
-[in] *rect*<br/>
+pro *primární řadič domény*<br/>
+pro *pButton*<br/>
+pro *Rect*<br/>
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="ondrawribbonpanel"></a>  CMFCVisualManager::OnDrawRibbonPanel
+##  <a name="ondrawribbonpanel"></a>CMFCVisualManager::OnDrawRibbonPanel
 
-Rozhraní volá tuto metodu, když se vykreslí [cmfcribbonpanel –](../../mfc/reference/cmfcribbonpanel-class.md) objektu.
+Rozhraní volá tuto metodu, když nakreslí objekt [CMFCRibbonPanel](../../mfc/reference/cmfcribbonpanel-class.md) .
 
 ```
 virtual COLORREF OnDrawRibbonPanel(
@@ -3249,16 +3249,16 @@ virtual COLORREF OnDrawRibbonPanel(
 ### <a name="parameters"></a>Parametry
 
 *pDC*<br/>
-[in] Ukazatel na kontext zařízení.
+pro Ukazatel na kontext zařízení.
 
 *pPanel*<br/>
-[in] Ukazatel `CMFCRibbonPanel` objektu. Rozhraní framework kreslení tento panel pásu karet.
+pro Ukazatel na `CMFCRibbonPanel` objekt. Rozhraní kreslí tento panel pásu karet.
 
 *rectPanel*<br/>
-[in] Obdélník, který určuje hranice panelu.
+pro Obdélník, který určuje hranice panelu.
 
 *rectCaption*<br/>
-[in] Obdélník, který určuje hranice titulek pro panel.
+pro Obdélník, který určuje hranice titulku pro panel.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -3266,11 +3266,11 @@ Barva textu na panelu pásu karet.
 
 ### <a name="remarks"></a>Poznámky
 
-Potlačí tuto metodu v odvozené třídě pro přizpůsobení vzhledu panel pásu karet.
+Přepsáním této metody v odvozené třídě upravíte vzhled panelu pásu karet.
 
-##  <a name="ondrawribbonpanelcaption"></a>  CMFCVisualManager::OnDrawRibbonPanelCaption
+##  <a name="ondrawribbonpanelcaption"></a>CMFCVisualManager::OnDrawRibbonPanelCaption
 
-Rozhraní volá tuto metodu při kreslení popisek [cmfcribbonpanel – třída](../../mfc/reference/cmfcribbonpanel-class.md).
+Rozhraní volá tuto metodu při nakreslení titulku [třídy CMFCRibbonPanel](../../mfc/reference/cmfcribbonpanel-class.md).
 
 ```
 virtual void OnDrawRibbonPanelCaption(
@@ -3282,21 +3282,21 @@ virtual void OnDrawRibbonPanelCaption(
 ### <a name="parameters"></a>Parametry
 
 *pDC*<br/>
-[in] Ukazatel na kontext zařízení.
+pro Ukazatel na kontext zařízení.
 
 *pPanel*<br/>
-[in] Ukazatel `CMFCRibbonPanel` objektu. Rozhraní framework kreslení titulek pro tento panel pásu karet.
+pro Ukazatel na `CMFCRibbonPanel` objekt. Rozhraní nakreslí titulek pro tento panel pásu karet.
 
 *rectCaption*<br/>
-[in] Obdélník, který určuje hranice titulek pro panel pásu karet.
+pro Obdélník, který určuje hranice popisku panelu pásu karet.
 
 ### <a name="remarks"></a>Poznámky
 
-Potlačí tuto metodu v odvozené třídě pro přizpůsobení vzhledu popisků pro panely pásu karet.
+Tuto metodu přepište v odvozené třídě, abyste mohli přizpůsobit vzhled titulků pro panely pásu karet.
 
-##  <a name="ondrawribbonprogressbar"></a>  CMFCVisualManager::OnDrawRibbonProgressBar
+##  <a name="ondrawribbonprogressbar"></a>CMFCVisualManager::OnDrawRibbonProgressBar
 
-Rozhraní volá tuto metodu, když se vykreslí [cmfcribbonprogressbar – třída](../../mfc/reference/cmfcribbonprogressbar-class.md).
+Rozhraní volá tuto metodu, když nakreslí [třídu CMFCRibbonProgressBar](../../mfc/reference/cmfcribbonprogressbar-class.md).
 
 ```
 virtual void OnDrawRibbonProgressBar(
@@ -3310,27 +3310,27 @@ virtual void OnDrawRibbonProgressBar(
 ### <a name="parameters"></a>Parametry
 
 *pDC*<br/>
-[in] Ukazatel na kontext zařízení.
+pro Ukazatel na kontext zařízení.
 
 *pProgress*<br/>
-[in] Ukazatel `CMFCRibbonProgressBar` objektu. Rozhraní framework kreslení tento indikátor průběhu.
+pro Ukazatel na `CMFCRibbonProgressBar` objekt. Rozhraní kreslí tento indikátor průběhu.
 
 *rectProgress*<br/>
-[in] Obdélník, který určuje hranice indikátor průběhu.
+pro Obdélník, který určuje hranice indikátoru průběhu.
 
 *rectChunk*<br/>
-[in] Obdélník, který určuje hranice okolí indikátor průběhu.
+pro Obdélník, který určuje hranice oblasti obklopující indikátor průběhu.
 
 *bInfiniteMode*<br/>
-[in] Parametr logické hodnoty označující režim indikátor průběhu. Hodnota TRUE znamená, že panel je v režimu nekonečné. Výchozí implementace nepoužívá tento parametr.
+pro Logický parametr, který určuje režim indikátoru průběhu. Hodnota TRUE znamená, že je pruh v nekonečném režimu. Výchozí implementace nepoužívá tento parametr.
 
 ### <a name="remarks"></a>Poznámky
 
-Potlačí tuto metodu v odvozené třídě pro přizpůsobení vzhledu indikátor průběhu.
+Tuto metodu přepište v odvozené třídě, aby se přizpůsobil vzhled indikátoru průběhu.
 
-##  <a name="ondrawribbonquickaccesstoolbarseparator"></a>  CMFCVisualManager::OnDrawRibbonQuickAccessToolBarSeparator
+##  <a name="ondrawribbonquickaccesstoolbarseparator"></a>CMFCVisualManager::OnDrawRibbonQuickAccessToolBarSeparator
 
-Rozhraní volá tuto metodu při nakreslí oddělovač na **panelu nástrojů Rychlý přístup** z pásu karet.
+Rozhraní volá tuto metodu, když nakreslí oddělovač na **panelu nástrojů Rychlý přístup** na pásu karet.
 
 ```
 virtual void OnDrawRibbonQuickAccessToolBarSeparator(
@@ -3342,21 +3342,21 @@ virtual void OnDrawRibbonQuickAccessToolBarSeparator(
 ### <a name="parameters"></a>Parametry
 
 *pDC*<br/>
-[in] Ukazatel na kontext zařízení.
+pro Ukazatel na kontext zařízení.
 
 *pSeparator*<br/>
-[in] Ukazatel [cmfcribbonseparator –](../../mfc/reference/cmfcribbonseparator-class.md) objektu. Rozhraní framework kreslení tento oddělovač pásu karet.
+pro Ukazatel na objekt [CMFCRibbonSeparator](../../mfc/reference/cmfcribbonseparator-class.md) . Rozhraní nakreslí tento oddělovač pásu karet.
 
-*Rect*<br/>
-[in] Obdélník, který určuje hranice oddělovače.
+*OBD*<br/>
+pro Obdélník, který určuje hranice oddělovače.
 
 ### <a name="remarks"></a>Poznámky
 
-Potlačí tuto metodu v odvozené třídě k přizpůsobení vzhledu oddělovače pásu karet na **panelu nástrojů Rychlý přístup**.
+Přepsáním této metody v odvozené třídě upravíte vzhled oddělovačů pásu karet na **panelu nástrojů Rychlý přístup**.
 
-##  <a name="ondrawribbonrecentfilesframe"></a>  CMFCVisualManager::OnDrawRibbonRecentFilesFrame
+##  <a name="ondrawribbonrecentfilesframe"></a>CMFCVisualManager::OnDrawRibbonRecentFilesFrame
 
-Rozhraní volá tuto metodu při nakreslí rámeček kolek seznam naposledy použitých souborů.
+Rozhraní volá tuto metodu, když nakreslí rámeček kolem seznamu posledních souborů.
 
 ```
 virtual void OnDrawRibbonRecentFilesFrame(
@@ -3368,21 +3368,21 @@ virtual void OnDrawRibbonRecentFilesFrame(
 ### <a name="parameters"></a>Parametry
 
 *pDC*<br/>
-[in] Ukazatel na kontext zařízení.
+pro Ukazatel na kontext zařízení.
 
 *pPanel*<br/>
-[in] Ukazatel **hlavní** panel na pásu karet.
+pro Ukazatel na **Hlavní** panel na pásu karet.
 
-*Rect*<br/>
-[in] Obdélník, který určuje hranice rámec pro seznam naposledy použitých souborů.
+*OBD*<br/>
+pro Obdélník, který určuje hranice rámce pro seznam posledních souborů.
 
 ### <a name="remarks"></a>Poznámky
 
-Potlačí tuto metodu v odvozené správce vzhledu přizpůsobit vzhled seznamu naposledy použitých souborů.
+Tuto metodu můžete přepsat v odvozeném vizuálním manažeru a přizpůsobit si tak vzhled seznamu posledních souborů.
 
-##  <a name="ondrawribbonsliderchannel"></a>  CMFCVisualManager::OnDrawRibbonSliderChannel
+##  <a name="ondrawribbonsliderchannel"></a>CMFCVisualManager::OnDrawRibbonSliderChannel
 
-Rozhraní volá tuto metodu při kreslení kanál [cmfcribbonslider – třída](../../mfc/reference/cmfcribbonslider-class.md).
+Rozhraní volá tuto metodu, když nakreslí kanál [třídy CMFCRibbonSlider](../../mfc/reference/cmfcribbonslider-class.md).
 
 ```
 virtual void OnDrawRibbonSliderChannel(
@@ -3394,21 +3394,21 @@ virtual void OnDrawRibbonSliderChannel(
 ### <a name="parameters"></a>Parametry
 
 *pDC*<br/>
-[in] Ukazatel na kontext zařízení.
+pro Ukazatel na kontext zařízení.
 
 *pSlider*<br/>
-[in] Ukazatel na objekt cmfcribbonslider –. Rozhraní framework kreslení kanál pro tento posuvník pásu karet.
+pro Ukazatel na objekt CMFCRibbonSlider. Rozhraní nakreslí kanál pro tento posuvník pásu karet.
 
-*Rect*<br/>
-[in] Obdélník, který určuje hranice pro kanál posuvník pásu karet.
+*OBD*<br/>
+pro Obdélník, který určuje hranice pro kanál posuvníku.
 
 ### <a name="remarks"></a>Poznámky
 
-Potlačí tuto metodu v odvozené třídě pro přizpůsobení vzhledu kanál posuvník pásu karet.
+Tuto metodu přepište v odvozené třídě, aby se přizpůsobil vzhled kanálu posuvníku pásu karet.
 
-##  <a name="ondrawribbonsliderthumb"></a>  CMFCVisualManager::OnDrawRibbonSliderThumb
+##  <a name="ondrawribbonsliderthumb"></a>CMFCVisualManager::OnDrawRibbonSliderThumb
 
-Rozhraní volá tuto metodu při kreslení thumb z [cmfcribbonslider –](../../mfc/reference/cmfcribbonslider-class.md) objektu.
+Rozhraní volá tuto metodu, když nakreslí palec objektu [CMFCRibbonSlider](../../mfc/reference/cmfcribbonslider-class.md) .
 
 ```
 virtual void OnDrawRibbonSliderThumb(
@@ -3423,30 +3423,30 @@ virtual void OnDrawRibbonSliderThumb(
 ### <a name="parameters"></a>Parametry
 
 *pDC*<br/>
-[in] Ukazatel na kontext zařízení.
+pro Ukazatel na kontext zařízení.
 
 *pSlider*<br/>
-[in] Ukazatel `CMFCRibbonSlider`. Rozhraní framework kreslení thumb pro tento posuvník pásu karet.
+pro Ukazatel na `CMFCRibbonSlider`. Rozhraní kreslí jezdce pro tento posuvník pásu karet.
 
-*Rect*<br/>
-[in] Obdélník, který určuje hranice thumb pro posuvník pásu karet.
+*OBD*<br/>
+pro Rámeček, který určuje hranice jezdce posuvníku.
 
 *bIsHighlighted*<br/>
-[in] Parametr logické hodnoty označující, pokud je zvýrazněn jezdce.
+pro Logický parametr, který označuje, zda je zvýrazněna miniatura.
 
 *bIsPressed*<br/>
-[in] Parametr logické hodnoty označující, pokud se stiskne jezdce.
+pro Logický parametr, který označuje, zda je stisknuta klávesa.
 
 *bIsDisabled*<br/>
-[in] Parametr logické hodnoty, který značí, zda je k dispozici jezdce.
+pro Logický parametr, který označuje, zda není k dispozici palec.
 
 ### <a name="remarks"></a>Poznámky
 
-Potlačí tuto metodu v odvozené správce vzhledu pro přizpůsobení vzhledu thumb pro `CMFCRibbonSlider`.
+Tuto metodu přepište v odvozeném vizuálním manažeru, abyste mohli přizpůsobit vzhled jezdce `CMFCRibbonSlider`pro.
 
-##  <a name="ondrawribbonsliderzoombutton"></a>  CMFCVisualManager::OnDrawRibbonSliderZoomButton
+##  <a name="ondrawribbonsliderzoombutton"></a>CMFCVisualManager::OnDrawRibbonSliderZoomButton
 
-Rozhraní volá tuto metodu při kreslení tlačítka pro přiblížení [cmfcribbonslider –](../../mfc/reference/cmfcribbonslider-class.md) objektu.
+Rozhraní volá tuto metodu při kreslení tlačítek lupy pro objekt [CMFCRibbonSlider](../../mfc/reference/cmfcribbonslider-class.md) .
 
 ```
 virtual void OnDrawRibbonSliderZoomButton(
@@ -3462,33 +3462,33 @@ virtual void OnDrawRibbonSliderZoomButton(
 ### <a name="parameters"></a>Parametry
 
 *pDC*<br/>
-[in] Ukazatel na kontext zařízení.
+pro Ukazatel na kontext zařízení.
 
 *pSlider*<br/>
-[in] Ukazatel `CMFCRibbonSlider` objektu. Rozhraní framework kreslení tento posuvník pásu karet.
+pro Ukazatel na `CMFCRibbonSlider` objekt. Rozhraní nakreslí posuvník tohoto pásu karet.
 
-*Rect*<br/>
-[in] Obdélník, který určuje hranice tlačítka lupy na posuvník pásu karet.
+*OBD*<br/>
+pro Obdélník, který určuje hranice tlačítek zvětšení na pásu karet.
 
 *bIsZoomOut*<br/>
-[in] Parametr logické hodnoty označující, které tlačítko vykreslí rozhraní framework. Hodnota TRUE označuje, levým tlačítkem s "-" pro zmenšit. Hodnota FALSE označuje pravým tlačítkem "+" pro zvětšení.
+pro Logický parametr, který určuje, které tlačítko rozhraní kreslí. Hodnota TRUE označuje levé tlačítko s znakem "-" pro oddálení. Hodnota FALSE označuje pravé tlačítko s znakem "+" pro přiblížení.
 
 *bIsHighlighted*<br/>
-[in] Parametr logické hodnoty označující, zda se zvýrazní tlačítko.
+pro Logický parametr, který označuje, zda je tlačítko zvýrazněno.
 
 *bIsPressed*<br/>
-[in] Parametr logické hodnoty označující, zda stisknutí tlačítka.
+pro Logický parametr, který označuje, zda bylo tlačítko stisknuto.
 
 *bIsDisabled*<br/>
-[in] Parametr logické hodnoty označující, zda tlačítko je k dispozici.
+pro Logický parametr, který označuje, zda je tlačítko nedostupné.
 
 ### <a name="remarks"></a>Poznámky
 
-Ve výchozím nastavení, tlačítka lupy na posuvník pásu karet jsou kroužek s buď + nebo - přihlášení v centru. Chcete-li přizpůsobit vzhled tlačítka lupy, přepsáním této metody v odvozené správce vzhledu.
+Ve výchozím nastavení jsou tlačítka přiblížení na posuvníku na pásu karet kruhem s znakem + nebo-signed v centru. Chcete-li přizpůsobit vzhled tlačítek lupy, přepište tuto metodu v odvozeném vizuálním manažerovi.
 
-##  <a name="ondrawribbonstatusbarpane"></a>  CMFCVisualManager::OnDrawRibbonStatusBarPane
+##  <a name="ondrawribbonstatusbarpane"></a>CMFCVisualManager::OnDrawRibbonStatusBarPane
 
-Rozhraní volá tuto metodu při nakreslí podokno na stavovém řádku.
+Rozhraní volá tuto metodu, když nakreslí podokno na stavovém řádku.
 
 ```
 virtual COLORREF OnDrawRibbonStatusBarPane(
@@ -3500,25 +3500,25 @@ virtual COLORREF OnDrawRibbonStatusBarPane(
 ### <a name="parameters"></a>Parametry
 
 *pDC*<br/>
-[in] Ukazatel na kontext zařízení.
+pro Ukazatel na kontext zařízení.
 
 *pBar*<br/>
-[in] Ukazatel na stavový řádek, který obsahuje podokna.
+pro Ukazatel na stavový řádek, který obsahuje podokno.
 
 *pPane*<br/>
-[in] Ukazatel na panelu stavového stav. Rozhraní framework nakreslí to [cmfcribbonstatusbarpane –](../../mfc/reference/cmfcribbonstatusbarpane-class.md) objektu.
+pro Ukazatel na podokno stavového řádku. Rozhraní nakreslí tento objekt [CMFCRibbonStatusBarPane](../../mfc/reference/cmfcribbonstatusbarpane-class.md) .
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Rezervovanou hodnotu. Výchozí implementace vrací -1.
+Rezervovaná hodnota. Výchozí implementace vrátí hodnotu-1.
 
 ### <a name="remarks"></a>Poznámky
 
-Potlačí tuto metodu v odvozené správce vzhledu pro přizpůsobení vzhledu podokně ve stavovém řádku.
+Tuto metodu přepište v odvozeném vizuálním manažeru, abyste mohli přizpůsobit vzhled podokna ve stavovém řádku.
 
-##  <a name="ondrawribbontabsframe"></a>  CMFCVisualManager::OnDrawRibbonTabsFrame
+##  <a name="ondrawribbontabsframe"></a>CMFCVisualManager::OnDrawRibbonTabsFrame
 
-Rozhraní volá tuto metodu při nakreslí rámeček kolek sadu pás karet.
+Rozhraní volá tuto metodu, když vykresluje rámec kolem sady karet karet.
 
 ```
 virtual COLORREF OnDrawRibbonTabsFrame(
@@ -3533,20 +3533,20 @@ virtual COLORREF OnDrawRibbonTabsFrame(
 Ukazatel na kontext zařízení.
 
 *pWndRibbonBar*<br/>
-Ukazatel [CMFCRibbonBar](../../mfc/reference/cmfcribbonbar-class.md) objektu. Rozhraní framework nakreslí rámeček pro tento panel pásu karet.
+Ukazatel na objekt [CMFCRibbonBar](../../mfc/reference/cmfcribbonbar-class.md) . Rozhraní nakreslí rámec pro tento panel pásu karet.
 
 *rectTab*<br/>
-Obdélník, který určuje hranice na pásu karet.
+Obdélník, který určuje hranice karet pásu karet.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Rezervovanou hodnotu. Ve výchozím nastavení tato metoda vrátí hodnotu -1.
+Rezervovaná hodnota. Ve výchozím nastavení tato metoda vrátí hodnotu-1.
 
 ### <a name="remarks"></a>Poznámky
 
-Potlačí tuto metodu v odvozené vizuálního správce k přizpůsobení rámeček kolek sadu karet na pásu karet.
+Tuto metodu můžete přepsat v odvozeném vizuálním správci a přizpůsobit tak rámec kolem sady karet na pásu karet.
 
-##  <a name="ondrawscrollbuttons"></a>  CMFCVisualManager::OnDrawScrollButtons
+##  <a name="ondrawscrollbuttons"></a>CMFCVisualManager::OnDrawScrollButtons
 
 ```
 virtual void OnDrawScrollButtons(
@@ -3559,17 +3559,17 @@ virtual void OnDrawScrollButtons(
 
 ### <a name="parameters"></a>Parametry
 
-[in] *pDC*<br/>
-[in] *rect*<br/>
-[in] *nBorderSize*<br/>
-[in] *iImage*<br/>
-[in] *bHilited*<br/>
+pro *primární řadič domény*<br/>
+pro *Rect*<br/>
+pro *nBorderSize*<br/>
+pro *iImage*<br/>
+pro *bHilited*<br/>
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="ondrawseparator"></a>  CMFCVisualManager::OnDrawSeparator
+##  <a name="ondrawseparator"></a>CMFCVisualManager::OnDrawSeparator
 
-Rozhraní volá tuto metodu při kreslení oddělovač.
+Rozhraní volá tuto metodu, když nakreslí oddělovač.
 
 ```
 virtual void OnDrawSeparator(
@@ -3582,22 +3582,22 @@ virtual void OnDrawSeparator(
 ### <a name="parameters"></a>Parametry
 
 *pDC*<br/>
-[in] Ukazatel na kontext zařízení pro panel ovládacího prvku.
+pro Ukazatel na kontext zařízení pro ovládací panel.
 
 *pBar*<br/>
-[in] Ukazatel na stavového řádku, který obsahuje oddělovače.
+pro Ukazatel na podokno, které obsahuje oddělovač.
 
-*Rect*<br/>
-[in] Obdélník, který určuje hranice oddělovače.
+*OBD*<br/>
+pro Obdélník, který určuje hranice oddělovače.
 
 *bIsHoriz*<br/>
-[in] Parametr logické hodnoty, která určuje orientaci ukotvené podokno. Hodnotu TRUE označuje, že v podokně je ukotven vodorovně. Hodnota FALSE označuje, že v podokně je ukotven svisle.
+pro Logický parametr, který určuje orientaci ukotveného podokna. Hodnota TRUE značí, že je podokno ukotveno vodorovně. Hodnota FALSE znamená, že je podokno ukotveno svisle.
 
 ### <a name="remarks"></a>Poznámky
 
-Oddělovače se na ovládací panely používají k oddělení skupin související ikony. Výchozí implementace této metody zobrazí standardní oddělovač. Potlačí tuto metodu v odvozené správce vzhledu pro přizpůsobení vzhledu oddělovače.
+Oddělovače se používají na ovládacích panelech k oddělení skupin souvisejících ikon. Výchozí implementace této metody zobrazí standardní oddělovač. Tuto metodu přepište v odvozeném vizuálním manažeru, abyste mohli přizpůsobit vzhled oddělovače.
 
-##  <a name="ondrawshowallmenuitems"></a>  CMFCVisualManager::OnDrawShowAllMenuItems
+##  <a name="ondrawshowallmenuitems"></a>CMFCVisualManager::OnDrawShowAllMenuItems
 
 ```
 virtual void OnDrawShowAllMenuItems(
@@ -3608,15 +3608,15 @@ virtual void OnDrawShowAllMenuItems(
 
 ### <a name="parameters"></a>Parametry
 
-[in] *pDC*<br/>
-[in] *rect*<br/>
-[in] *stavu*<br/>
+pro *primární řadič domény*<br/>
+pro *Rect*<br/>
+pro *stav*<br/>
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="ondrawspinbuttons"></a>  CMFCVisualManager::OnDrawSpinButtons
+##  <a name="ondrawspinbuttons"></a>CMFCVisualManager::OnDrawSpinButtons
 
-Rozhraní volá tuto metodu při kreslení instance [cmfcspinbuttonctrl – třída](../../mfc/reference/cmfcspinbuttonctrl-class.md).
+Rozhraní volá tuto metodu, když nakreslí instanci [třídy CMFCSpinButtonCtrl](../../mfc/reference/cmfcspinbuttonctrl-class.md).
 
 ```
 virtual void OnDrawSpinButtons(
@@ -3630,23 +3630,23 @@ virtual void OnDrawSpinButtons(
 ### <a name="parameters"></a>Parametry
 
 *pDC*<br/>
-[in] Ukazatel na kontext zařízení.
+pro Ukazatel na kontext zařízení.
 
 *rectSpin*<br/>
-[in] Obdélník, který určuje hranice číselníku.
+pro Obdélník, který určuje hranice ovládacího prvku číselník.
 
-*nState*<br/>
-[in] Příznak, který označuje stav číselníku. Další informace naleznete v části Poznámky.
+*nInformace*<br/>
+pro Příznak označující stav číselníku. Další informace naleznete v části Poznámky.
 
 *bOrientation*<br/>
-[in] Parametr logické hodnoty, který určuje orientaci ovládacího prvku číselníku. Hodnota TRUE označuje, že je ovládací prvek typu číselník vodorovné. V opačném případě je svislý.
+pro Logický parametr, který určuje orientaci ovládacího prvku číselník. Hodnota TRUE značí, že číselník je vodorovný. V opačném případě je svislý.
 
 *pSpinCtrl*<br/>
-[in] Ukazatel na ovládací prvek typu číselník. Rozhraní framework kreslení tlačítka pro tento ovládací prvek.
+pro Ukazatel na otočení ovládacího prvku. Rozhraní kreslí tlačítka pro tento ovládací prvek.
 
 ### <a name="remarks"></a>Poznámky
 
-*NInformace* parametr označuje stav číselníku. Parametr je jedním z následujících hodnot:
+Parametr *nInformace* určuje stav číselníku. Parametr je jedna z následujících hodnot:
 
 - AFX_SPIN_PRESSEDUP
 
@@ -3658,11 +3658,11 @@ virtual void OnDrawSpinButtons(
 
 - AFX_SPIN_DISABLED
 
-Potlačí tuto metodu v odvozené vizuálního správce k přizpůsobení vzhledu ovládacího prvku číselník.
+Tuto metodu přepište v odvozeném vizuálním manažeru a přizpůsobte si vzhled ovládacího prvku číselník.
 
-##  <a name="ondrawsplitterborder"></a>  CMFCVisualManager::OnDrawSplitterBorder
+##  <a name="ondrawsplitterborder"></a>CMFCVisualManager::OnDrawSplitterBorder
 
-Rozhraní volá tuto metodu po ohraničení kolem instance [CSplitterWndEx třídy](csplitterwndex-class.md).
+Rozhraní volá tuto metodu, když nakreslí ohraničení kolem instance [třídy CSplitterWndEx](csplitterwndex-class.md).
 
 ```
 virtual void OnDrawSplitterBorder(
@@ -3674,21 +3674,21 @@ virtual void OnDrawSplitterBorder(
 ### <a name="parameters"></a>Parametry
 
 *pDC*<br/>
-[in] Ukazatel na kontext zařízení.
+pro Ukazatel na kontext zařízení.
 
 *pSplitterWnd*<br/>
-[in] Ukazatel na okno s rozdělovačem. Rozhraní framework ohraničení pro toto okno.
+pro Ukazatel na okno s rozdělovačem. Rozhraní nakreslí ohraničení tohoto okna.
 
-*Rect*<br/>
-[in] Obdélník, který určuje hranice okna s rozdělovačem.
+*OBD*<br/>
+pro Obdélník, který určuje hranice okna s rozdělovačem.
 
 ### <a name="remarks"></a>Poznámky
 
-Potlačí tuto metodu v odvozené správce vzhledu pro přizpůsobení vzhledu ohraničení pro okno s rozdělovačem.
+Tuto metodu můžete přepsat v odvozeném vizuálním manažeru a přizpůsobit vzhled ohraničení okna s rozdělovačem.
 
-##  <a name="ondrawsplitterbox"></a>  CMFCVisualManager::OnDrawSplitterBox
+##  <a name="ondrawsplitterbox"></a>CMFCVisualManager::OnDrawSplitterBox
 
-Rozhraní volá tuto metodu při kreslí přetahování pole pro instanci [CSplitterWndEx třídy](csplitterwndex-class.md). Přetáhněte pole se zobrazí, když uživatel vybere rozdělovač a změní rozměry podřízená okna.
+Rozhraní volá tuto metodu, když nakreslí pole přetažení pro instanci [třídy CSplitterWndEx](csplitterwndex-class.md). Pole přetažení se zobrazí, když uživatel vybere příčku a změní rozměry podřízených oken.
 
 ```
 virtual void OnDrawSplitterBox(
@@ -3700,21 +3700,21 @@ virtual void OnDrawSplitterBox(
 ### <a name="parameters"></a>Parametry
 
 *pDC*<br/>
-[in] Ukazatel na kontext zařízení.
+pro Ukazatel na kontext zařízení.
 
 *pSplitterWnd*<br/>
-[in] Ukazatel na okno s rozdělovačem. Rozhraní framework vloží pole pro toto okno s rozdělovačem.
+pro Ukazatel na okno s rozdělovačem. Rozhraní nakreslí pole pro toto okno s rozdělovačem.
 
-*Rect*<br/>
-[in] Obdélník, který určuje hranice okna s rozdělovačem.
+*OBD*<br/>
+pro Obdélník, který určuje hranice okna s rozdělovačem.
 
 ### <a name="remarks"></a>Poznámky
 
-Potlačí tuto metodu v odvozené vizuálního správce k přizpůsobení vzhledu přetáhněte pole pro okno s rozdělovačem.
+Tuto metodu přepište v odvozeném vizuálním manažeru, abyste mohli přizpůsobit vzhled pole pro přesunutí okna s rozdělovačem.
 
-##  <a name="ondrawstatusbarpaneborder"></a>  CMFCVisualManager::OnDrawStatusBarPaneBorder
+##  <a name="ondrawstatusbarpaneborder"></a>CMFCVisualManager::OnDrawStatusBarPaneBorder
 
-Rozhraní volá tuto metodu po ohraničení pro [CMFCStatusBar –](../../mfc/reference/cmfcstatusbar-class.md) objektu.
+Rozhraní volá tuto metodu, když nakreslí ohraničení pro objekt [CMFCStatusBar](../../mfc/reference/cmfcstatusbar-class.md) .
 
 ```
 virtual void OnDrawStatusBarPaneBorder(
@@ -3728,27 +3728,27 @@ virtual void OnDrawStatusBarPaneBorder(
 ### <a name="parameters"></a>Parametry
 
 *pDC*<br/>
-[in] Ukazatel na kontext zařízení.
+pro Ukazatel na kontext zařízení.
 
 *pBar*<br/>
-[in] Ukazatel `CMFCStatusBar` objektu. Rozhraní framework kreslení objektu panelu tento stav.
+pro Ukazatel na `CMFCStatusBar` objekt. Rozhraní kreslí tento objekt stavového řádku.
 
 *rectPane*<br/>
-[in] Obdélník, který určuje hranice ve stavovém řádku.
+pro Obdélník, který určuje hranice stavového řádku.
 
 *uiID*<br/>
-[in] ID stavový řádek.
+pro ID stavového řádku
 
 *nStyle*<br/>
-[in] Styl stavového řádku.
+pro Styl stavového řádku
 
 ### <a name="remarks"></a>Poznámky
 
-Potlačí tuto metodu v odvozené správce vzhledu pro přizpůsobení vzhledu ohraničení `CMFCStatusBar` objektu.
+Přepsat tuto metodu v odvozeném vizuálním manažeru k přizpůsobení vzhledu ohraničení `CMFCStatusBar` objektu.
 
-##  <a name="ondrawstatusbarprogress"></a>  CMFCVisualManager::OnDrawStatusBarProgress
+##  <a name="ondrawstatusbarprogress"></a>CMFCVisualManager::OnDrawStatusBarProgress
 
-Rozhraní volá tuto metodu při nakreslí indikátor průběhu na [CMFCStatusBar –](../../mfc/reference/cmfcstatusbar-class.md) objektu.
+Rozhraní volá tuto metodu, když nakreslí indikátor průběhu objektu [CMFCStatusBar](../../mfc/reference/cmfcstatusbar-class.md) .
 
 ```
 virtual void OnDrawStatusBarProgress(
@@ -3766,39 +3766,39 @@ virtual void OnDrawStatusBarProgress(
 ### <a name="parameters"></a>Parametry
 
 *pDC*<br/>
-[in] Ukazatel na kontext zařízení pro stavový řádek.
+pro Ukazatel na kontext zařízení pro stavový řádek.
 
 *pStatusBar*<br/>
-[in] `CMFCStatusBar` Objekt, který obsahuje indikátor průběhu.
+pro `CMFCStatusBar` Objekt, který obsahuje indikátor průběhu.
 
 *rectProgress*<br/>
-[in] Obdélník, který určuje hranice indikátor průběhu.
+pro Obdélník, který určuje hranice indikátoru průběhu.
 
 *nProgressTotal*<br/>
-[in] Celkový počet pro indikátor průběhu.
+pro Celkový počet indikátoru průběhu.
 
 *nProgressCurr*<br/>
-[in] Aktuální průběh indikátor průběhu.
+pro Aktuální průběh indikátoru průběhu.
 
 *clrBar*<br/>
-[in] A [COLORREF](/windows/desktop/gdi/colorref) parametr, který určuje počáteční barvu indikátoru průběhu. Hodnota je buď Počáteční barva přechodu nebo celý barevný indikátor průběhu.
+pro Parametr [COLORREF](/windows/win32/gdi/colorref) , který určuje počáteční barvu indikátoru průběhu. Hodnota je buď začátek barevného přechodu barvy, nebo úplná barva indikátoru průběhu.
 
 *clrProgressBarDest*<br/>
-[in] COLORREF parametr, který označuje konec gradientu barvu pro indikátor průběhu. Pokud *clrProgressBarDest* se -1, rozhraní není nakreslit indikátor průběhu jako barva přechodu. Místo toho vloží indikátor průběhu celé barva určená *clrBar*.
+pro Parametr COLORREF, který označuje konec barevného přechodu pro indikátor průběhu. Pokud je *clrProgressBarDest* -1, rozhraní nekreslí indikátor průběhu jako barevný přechod. Místo toho vyplní celý indikátor průběhu barvou určenou parametrem *clrBar*.
 
 *clrProgressText*<br/>
-[in] COLORREF parametr, který určuje barvu textu pro textová reprezentace aktuální průběh. Tento parametr se ignoruje, pokud *bProgressText* je nastavena na hodnotu FALSE.
+pro Parametr COLORREF, který určuje barvu textu pro textovou reprezentaci aktuálního průběhu. Tento parametr je ignorován, pokud je vlastnost *bProgressText* nastavena na hodnotu false.
 
 *bProgressText*<br/>
-[in] Parametr logické hodnoty označující, jestli se má zobrazit textovou reprezentaci řetězce aktuální průběh.
+pro Logický parametr, který označuje, zda má být zobrazena textová reprezentace aktuálního průběhu.
 
 ### <a name="remarks"></a>Poznámky
 
-Potlačí tuto metodu v odvozené vizuálního správce k přizpůsobení vzhledu `CMFCStatusBar` objektu.
+Tuto metodu můžete přepsat v odvozeném vizuálním manažeru pro přizpůsobení vzhledu `CMFCStatusBar` objektu.
 
-##  <a name="ondrawstatusbarsizebox"></a>  CMFCVisualManager::OnDrawStatusBarSizeBox
+##  <a name="ondrawstatusbarsizebox"></a>CMFCVisualManager::OnDrawStatusBarSizeBox
 
-Rozhraní volá tuto metodu při kreslení velikost pole pro [CMFCStatusBar –](../../mfc/reference/cmfcstatusbar-class.md).
+Rozhraní volá tuto metodu, když nakreslí pole velikosti pro [CMFCStatusBar](../../mfc/reference/cmfcstatusbar-class.md).
 
 ```
 virtual void OnDrawStatusBarSizeBox(
@@ -3810,21 +3810,21 @@ virtual void OnDrawStatusBarSizeBox(
 ### <a name="parameters"></a>Parametry
 
 *pDC*<br/>
-[in] Ukazatel na kontext zařízení.
+pro Ukazatel na kontext zařízení.
 
 *pStatBar*<br/>
-[in] Ukazatel na stavovém řádku. Rozhraní framework Vloží velikost pole pro tento stavový řádek.
+pro Ukazatel na stavový řádek. Rozhraní nakreslí pole velikost pro tento stavový řádek.
 
 *rectSizeBox*<br/>
-[in] Obdélník, který určuje hranice pole velikost.
+pro Obdélník, který určuje hranice pole velikost.
 
 ### <a name="remarks"></a>Poznámky
 
-Potlačí tuto metodu v odvozené vizuálního správce k přizpůsobení vzhledu velikost pole na `CMFCStatusBar`.
+Tuto metodu přepište v odvozeném vizuálním manažeru, abyste mohli přizpůsobit vzhled pole velikost `CMFCStatusBar`na.
 
-##  <a name="ondrawtab"></a>  CMFCVisualManager::OnDrawTab
+##  <a name="ondrawtab"></a>CMFCVisualManager::OnDrawTab
 
-Rozhraní volá tuto metodu při kreslení karty [cmfcbasetabctrl –](../../mfc/reference/cmfcbasetabctrl-class.md) objektu.
+Rozhraní volá tuto metodu, když nakreslí karty pro objekt [CMFCBaseTabCtrl](../../mfc/reference/cmfcbasetabctrl-class.md) .
 
 ```
 virtual void OnDrawTab(
@@ -3838,29 +3838,29 @@ virtual void OnDrawTab(
 ### <a name="parameters"></a>Parametry
 
 *pDC*<br/>
-[in] Ukazatel na kontext zařízení.
+pro Ukazatel na kontext zařízení.
 
 *rectTab*<br/>
-[in] Obdélník, který určuje hranice ovládacího prvku karta.
+pro Obdélník, který určuje hranice ovládacího prvku karta.
 
 *iTab*<br/>
-[in] Index karty, který vykreslí rozhraní framework.
+pro Index karty, kterou rozhraní kreslí.
 
 *bIsActive*<br/>
-[in] Parametr logické hodnoty, která určuje, zda je na kartě aktivní.
+pro Logický parametr, který určuje, zda je karta aktivní.
 
 *pTabWnd*<br/>
-[in] Ukazatel `CMFCBaseTabCtrl` objektu. Rozhraní framework kreslení tento ovládací prvek karta.
+pro Ukazatel na `CMFCBaseTabCtrl` objekt. Rozhraní kreslí tento ovládací prvek karta.
 
 ### <a name="remarks"></a>Poznámky
 
-A `CMFCBaseTabCtrl` objektu volá tuto metodu, pokud zpracovává zprávu WM_PAINT.
+`CMFCBaseTabCtrl` Objekt volá tuto metodu, když zpracovává zprávu WM_PAINT.
 
-Potlačí tuto metodu v odvozené třídě k přizpůsobení vzhledu karty.
+Přepsáním této metody v odvozené třídě upravíte vzhled karet.
 
-##  <a name="ondrawtabclosebutton"></a>  CMFCVisualManager::OnDrawTabCloseButton
+##  <a name="ondrawtabclosebutton"></a>CMFCVisualManager::OnDrawTabCloseButton
 
-Rozhraní volá tuto metodu, když se vykreslí **Zavřít** tlačítko na aktivní kartě.
+Rozhraní volá tuto metodu, když nakreslí tlačítko **Zavřít** na aktivní kartě.
 
 ```
 virtual void OnDrawTabCloseButton(
@@ -3875,30 +3875,30 @@ virtual void OnDrawTabCloseButton(
 ### <a name="parameters"></a>Parametry
 
 *pDC*<br/>
-[in] Ukazatel na kontext zařízení.
+pro Ukazatel na kontext zařízení.
 
-*Rect*<br/>
-[in] Obdélník, který určuje hranice **Zavřít** tlačítko.
+*OBD*<br/>
+pro Obdélník, který určuje hranice tlačítka **Zavřít** .
 
 *pTabWnd*<br/>
-[in] Ukazatel na ovládací prvek karty. Nakreslí rozhraní **Zavřít** tlačítko pro tento ovládací prvek karta.
+pro Ukazatel na ovládací prvek karta. Rozhraní nakreslí tlačítko **Zavřít** pro tento ovládací prvek karta.
 
 *bIsHighlighted*<br/>
-[in] Parametr logické hodnoty označující, zda **Zavřít** se zvýrazní tlačítko.
+pro Logický parametr, který označuje, zda je zvýrazněno tlačítko **Zavřít** .
 
 *bIsPressed*<br/>
-[in] Parametr logické hodnoty označující, zda **Zavřít** stisknutí tlačítka.
+pro Logický parametr, který označuje, zda bylo stisknuto tlačítko **Zavřít** .
 
 *bIsDisabled*<br/>
-[in] Parametr logické hodnoty označující, zda **Zavřít** je tlačítko neaktivní.
+pro Logický parametr, který označuje, zda je tlačítko **Zavřít** zakázáno.
 
 ### <a name="remarks"></a>Poznámky
 
-Potlačí tuto metodu v odvozené vizuálního správce k přizpůsobení vzhledu **Zavřít** tlačítko na aktivní kartě *pTabWnd*.
+Tuto metodu můžete přepsat v odvozeném vizuálním manažeru a přizpůsobit tak vzhled tlačítka **Zavřít** na aktivní kartě *pTabWnd*.
 
 ##  <a name="ondrawtabcontent"></a>  CMFCVisualManager::OnDrawTabContent
 
-Rozhraní volá tuto metodu při kreslení obsah na vnitřní instance [cmfcbasetabctrl – třída](../../mfc/reference/cmfcbasetabctrl-class.md).
+Rozhraní volá tuto metodu, když Nakreslí obsah umístěný v vnitřku instance [třídy CMFCBaseTabCtrl](../../mfc/reference/cmfcbasetabctrl-class.md).
 
 ```
 virtual void OnDrawTabContent(
@@ -3913,30 +3913,30 @@ virtual void OnDrawTabContent(
 ### <a name="parameters"></a>Parametry
 
 *pDC*<br/>
-[in] Ukazatel na kontext zařízení.
+pro Ukazatel na kontext zařízení.
 
 *rectTab*<br/>
-[in] Obdélník, který určuje hranice vnitřní kartu.
+pro Obdélník, který určuje hranice vnitřní karty.
 
 *iTab*<br/>
-[in] Index založený na nule kartě. Rozhraní framework kreslení vnitřní na této kartě.
+pro Index karty založený na nule. Rozhraní kreslí vnitřek této karty.
 
 *bIsActive*<br/>
-[in] Parametr logické hodnoty, která určuje, jestli je aktivní karta.
+pro Logický parametr, který označuje, zda je karta aktivní.
 
 *pTabWnd*<br/>
-[in] Ukazatel do ovládacího prvku, který obsahuje karty, které je cílem vykreslování s kartami.
+pro Ukazatel na ovládací prvek s kartami, který obsahuje vykreslenou kartu.
 
 *clrText*<br/>
-[in] Barva textu na vnitřní kartě.
+pro Barva textu na vnitřním panelu karty
 
 ### <a name="remarks"></a>Poznámky
 
-Vnitřní karta obsahuje text a ikony na kartě. Potlačí tuto metodu v odvozené správce vzhledu pro přizpůsobení vzhledu karty.
+Vnitřní část karty obsahuje text a ikony karty. Tuto metodu můžete přepsat v odvozeném vizuálním manažeru a přizpůsobit si tak vzhled karet.
 
-##  <a name="ondrawtabsbuttonborder"></a>  CMFCVisualManager::OnDrawTabsButtonBorder
+##  <a name="ondrawtabsbuttonborder"></a>CMFCVisualManager::OnDrawTabsButtonBorder
 
-Rozhraní volá tuto metodu při ohraničení kartu tlačítka.
+Rozhraní volá tuto metodu, když nakreslí ohraničení tlačítka na kartě.
 
 ```
 virtual void OnDrawTabsButtonBorder(
@@ -3950,27 +3950,27 @@ virtual void OnDrawTabsButtonBorder(
 ### <a name="parameters"></a>Parametry
 
 *pDC*<br/>
-[in] Ukazatel na kontext zařízení.
+pro Ukazatel na kontext zařízení.
 
-*Rect*<br/>
-[in] Obdélník, který určuje hranice na kartě tlačítko.
+*OBD*<br/>
+pro Obdélník, který určuje hranice tlačítka na kartě.
 
 *pButton*<br/>
-[in] Ukazatel [cmfcbutton –](../../mfc/reference/cmfcbutton-class.md) objektu. Rozhraní framework ohraničení pro tuto `CMFCButton` instance.
+pro Ukazatel na objekt [CMFCButton](../../mfc/reference/cmfcbutton-class.md) . Rozhraní kreslí ohraničení této `CMFCButton` instance.
 
 *uiState*<br/>
-[in] Celé číslo bez znaménka, která určuje stav tlačítka.
+pro Unsigned integer, který určuje stav tlačítka.
 
 *pWndTab*<br/>
-[in] Ukazatel do nadřazeného okna Karta.
+pro Ukazatel na okno nadřazené karty.
 
 ### <a name="remarks"></a>Poznámky
 
-Potlačí tuto metodu v odvozené správce vzhledu pro přizpůsobení vzhledu ohraničení panelu kartu.
+Tuto metodu můžete přepsat v odvozeném vizuálním manažeru a přizpůsobit tak vzhled ohraničení tlačítka na kartě.
 
-##  <a name="ondrawtask"></a>  CMFCVisualManager::OnDrawTask
+##  <a name="ondrawtask"></a>CMFCVisualManager::OnDrawTask
 
-Rozhraní volá tuto metodu, když se vykreslí [cmfctaskspane –](../../mfc/reference/cmfctaskspane-class.md) objektu.
+Rozhraní volá tuto metodu, když nakreslí objekt [CMFCTasksPane](../../mfc/reference/cmfctaskspane-class.md) .
 
 ```
 virtual void OnDrawTask(
@@ -3984,29 +3984,29 @@ virtual void OnDrawTask(
 ### <a name="parameters"></a>Parametry
 
 *pDC*<br/>
-[in] Ukazatel na kontext zařízení.
+pro Ukazatel na kontext zařízení.
 
 *pTask*<br/>
-[in] Ukazatel [cmfctaskspanetask –](../../mfc/reference/cmfctaskspanetask-class.md) objektu. Rozhraní framework kreslení této úlohy.
+pro Ukazatel na objekt [CMFCTasksPaneTask](../../mfc/reference/cmfctaskspanetask-class.md) . Rozhraní nakreslí tuto úlohu.
 
 *pIcons*<br/>
-[in] Ukazatel na seznam obrázků přidružené podokna úloh. Každý úkol obsahuje index obrázku v tomto seznamu.
+pro Ukazatel na seznam obrázků přidružený k podoknu úloh. Každý úkol obsahuje index pro obrázek v tomto seznamu.
 
 *bIsHighlighted*<br/>
-[in] Parametr logické hodnoty, která určuje, zda je zvýrazněn zobrazených úloh.
+pro Logický parametr určující, zda je zobrazený úkol zvýrazněn.
 
 *bIsSelected*<br/>
-[in] Parametr logické hodnoty, která určuje, zda je zaškrtnuto zobrazených úloh.
+pro Logický parametr, který určuje, zda je zobrazený úkol vybrán.
 
 ### <a name="remarks"></a>Poznámky
 
-Rozhraní zobrazuje úlohy na panelu úkolů jako ikonu i text. *PIcons* parametr obsahuje ikonu úkolu označena *pTask*.
+Rozhraní zobrazuje úkoly na hlavním panelu jako ikonu i text. Parametr *pIcons* obsahuje ikonu pro úlohu označenou *pTask*.
 
-Potlačí tuto metodu v odvozené třídě pro přizpůsobení vzhledu úlohy na panelu úloh.
+Tuto metodu přepište v odvozené třídě, abyste mohli přizpůsobit vzhled úkolů na hlavním panelu.
 
-##  <a name="ondrawtasksgroupareaborder"></a>  CMFCVisualManager::OnDrawTasksGroupAreaBorder
+##  <a name="ondrawtasksgroupareaborder"></a>CMFCVisualManager::OnDrawTasksGroupAreaBorder
 
-Rozhraní volá tuto metodu, když ho ohraničení kolem skupiny [cmfctaskspane – třída](../../mfc/reference/cmfctaskspane-class.md).
+Rozhraní volá tuto metodu, když nakreslí ohraničení kolem skupiny ve [třídě CMFCTasksPane](../../mfc/reference/cmfctaskspane-class.md).
 
 ```
 virtual void OnDrawTasksGroupAreaBorder(
@@ -4019,24 +4019,24 @@ virtual void OnDrawTasksGroupAreaBorder(
 ### <a name="parameters"></a>Parametry
 
 *pDC*<br/>
-[in] Ukazatel na kontext zařízení.
+pro Ukazatel na kontext zařízení.
 
-*Rect*<br/>
-[in] Obdélník, který určuje hranice oblasti skupinu v podokně úloh.
+*OBD*<br/>
+pro Obdélník, který určuje hranice oblasti skupiny v podokně úloh.
 
 *bSpecial*<br/>
-[in] Parametr logické hodnoty, která určuje, pokud je zvýrazněn ohraničení. Hodnota TRUE označuje, že je zvýrazněn ohraničení.
+pro Logický parametr, který určuje, zda je ohraničení zvýrazněno. Hodnota TRUE značí, že ohraničení je zvýrazněno.
 
 *bNoTitle*<br/>
-[in] Parametr logické hodnoty, která určuje, zda oblasti skupiny má název. Hodnota TRUE označuje, oblasti skupina nemá název.
+pro Logický parametr, který určuje, zda má oblast skupiny název. Hodnota TRUE značí, že oblast skupiny nemá název.
 
 ### <a name="remarks"></a>Poznámky
 
-Potlačí tuto funkci v odvozené třídě přizpůsobení ohraničení oblasti skupiny v podokně úloh.
+Přepište tuto funkci v odvozené třídě a upravte ohraničení kolem oblasti skupiny v podokně úloh.
 
 ##  <a name="ondrawtasksgroupcaption"></a>  CMFCVisualManager::OnDrawTasksGroupCaption
 
-Rozhraní volá tuto metodu při kreslení s titulkem [cmfctaskspanetaskgroup –](../../mfc/reference/cmfctaskspanetaskgroup-class.md) objektu.
+Rozhraní volá tuto metodu při nakreslení titulku pro objekt [CMFCTasksPaneTaskGroup](../../mfc/reference/cmfctaskspanetaskgroup-class.md) .
 
 ```
 virtual void OnDrawTasksGroupCaption(
@@ -4050,25 +4050,25 @@ virtual void OnDrawTasksGroupCaption(
 ### <a name="parameters"></a>Parametry
 
 *pDC*<br/>
-[in] Ukazatel na kontext zařízení.
+pro Ukazatel na kontext zařízení.
 
 *pGroup*<br/>
-[in] Ukazatel `CMFCTasksPaneTaskGroup` objektu. Rozhraní framework kreslení titulek pro tuto skupinu.
+pro Ukazatel na `CMFCTasksPaneTaskGroup` objekt. Rozhraní nakreslí titulek pro tuto skupinu.
 
 *bIsHighlighted*<br/>
-[in] Parametr logické hodnoty označující, zda je zvýrazněn skupině.
+pro Logický parametr, který označuje, zda je skupina zvýrazněna.
 
 *bIsSelected*<br/>
-[in] Parametr logické hodnoty označující, zda je aktuálně vybrána skupina.
+pro Logický parametr, který označuje, zda je skupina aktuálně vybrána.
 
 *bCanCollapse*<br/>
-[in] Parametr logické hodnoty označující, zda lze sbalit skupiny.
+pro Logický parametr, který označuje, zda lze skupinu sbalit.
 
 ### <a name="remarks"></a>Poznámky
 
-Skupiny úloh se zobrazí na [cmfctaskspane –](../../mfc/reference/cmfctaskspane-class.md) objektu.
+Skupiny úloh se zobrazí v objektu [CMFCTasksPane](../../mfc/reference/cmfctaskspane-class.md) .
 
-Potlačí tuto metodu v odvozené třídě titulek pro přizpůsobení `CMFCTasksPaneTaskGroup`.
+Přepsat tuto metodu v odvozené třídě pro přizpůsobení titulku pro `CMFCTasksPaneTaskGroup`.
 
 ##  <a name="ondrawtasksgroupicon"></a>  CMFCVisualManager::OnDrawTasksGroupIcon
 
@@ -4084,18 +4084,18 @@ virtual void OnDrawTasksGroupIcon(
 
 ### <a name="parameters"></a>Parametry
 
-[in] *pDC*<br/>
-[in] *pGroup*<br/>
-[in] *nIconHOffset*<br/>
-[in] *bIsHighlighted*<br/>
-[in] *bIsSelected*<br/>
-[in] *bCanCollapse*<br/>
+pro *primární řadič domény*<br/>
+pro *pGroup*<br/>
+pro *nIconHOffset*<br/>
+pro *bIsHighlighted*<br/>
+pro *bIsSelected*<br/>
+pro *bCanCollapse*<br/>
 
 ### <a name="remarks"></a>Poznámky
 
 ##  <a name="ondrawtearoffcaption"></a>  CMFCVisualManager::OnDrawTearOffCaption
 
-Rozhraní volá tuto metodu při kreslení s titulkem [cmfcpopupmenu – třída](../../mfc/reference/cmfcpopupmenu-class.md).
+Rozhraní volá tuto metodu při nakreslení titulku pro [třídu CMFCPopupMenu](../../mfc/reference/cmfcpopupmenu-class.md).
 
 ```
 virtual void OnDrawTearOffCaption(
@@ -4107,19 +4107,19 @@ virtual void OnDrawTearOffCaption(
 ### <a name="parameters"></a>Parametry
 
 *pDC*<br/>
-[in] Ukazatel na kontext zařízení.
+pro Ukazatel na kontext zařízení.
 
-*Rect*<br/>
-[in] Obdélník, který určuje hranice titulek.
+*OBD*<br/>
+pro Obdélník, který určuje hranice titulku.
 
 *bIsActive*<br/>
-[in] Hodnota TRUE, pokud je aktivní; titulek FALSE v opačném případě.
+pro TRUE, pokud je titulek aktivní; V opačném případě NEPRAVDA.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato funkce je volána rozhraním, když `CMFCPopupMenu` objekt zpracovává zprávu WM_PAINT a vydat titulek odnímatelnými nabídkami.
+Tato funkce je volána rozhraním, když `CMFCPopupMenu` objekt zpracovává zprávu WM_PAINT a musí nakreslit odtrhnout titulek.
 
-Potlačí tuto metodu v odvozené třídě k přizpůsobení vzhledu popisků pro pruhy odnímatelnými nabídkami.
+Tuto metodu přepište v odvozené třídě, abyste mohli přizpůsobit vzhled titulků pro nepoužité řádky.
 
 ##  <a name="ondrawtoolboxframe"></a>  CMFCVisualManager::OnDrawToolBoxFrame
 
@@ -4131,14 +4131,14 @@ virtual void OnDrawToolBoxFrame(
 
 ### <a name="parameters"></a>Parametry
 
-[in] *pDC*<br/>
-[in] *rect*<br/>
+pro *primární řadič domény*<br/>
+pro *Rect*<br/>
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="onerasemdiclientarea"></a>  CMFCVisualManager::OnEraseMDIClientArea
+##  <a name="onerasemdiclientarea"></a>CMFCVisualManager::OnEraseMDIClientArea
 
-Rozhraní volá tuto metodu při vymaže oblasti klienta MDI.
+Rozhraní volá tuto metodu při mazání oblasti klienta MDI.
 
 ```
 virtual BOOL OnEraseMDIClientArea(
@@ -4149,20 +4149,20 @@ virtual BOOL OnEraseMDIClientArea(
 ### <a name="parameters"></a>Parametry
 
 *pDC*<br/>
-[in] Ukazatel na kontext zařízení.
+pro Ukazatel na kontext zařízení.
 
 *rectClient*<br/>
-[in] Obdélník, který určuje hranice oblasti klienta MDI.
+pro Obdélník, který určuje hranice oblasti klienta MDI.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Rezervovanou hodnotu. Výchozí implementace vrací hodnotu FALSE.
+Rezervovaná hodnota. Výchozí implementace vrátí hodnotu FALSE.
 
 ### <a name="remarks"></a>Poznámky
 
-Potlačí tuto metodu za účelem spuštění vlastního kódu, když správce vzhledu vymaže oblasti klienta MDI.
+Přepište tuto metodu pro spuštění vlastního kódu, když vizuální manažer vymaže oblast klienta MDI.
 
-##  <a name="onerasepopupwindowbutton"></a>  CMFCVisualManager::OnErasePopupWindowButton
+##  <a name="onerasepopupwindowbutton"></a>CMFCVisualManager::OnErasePopupWindowButton
 
 ```
 virtual void OnErasePopupWindowButton(
@@ -4173,15 +4173,15 @@ virtual void OnErasePopupWindowButton(
 
 ### <a name="parameters"></a>Parametry
 
-[in] *pDC*<br/>
-[in] *rectClient*<br/>
-[in] *pButton*<br/>
+pro *primární řadič domény*<br/>
+pro *rectClient*<br/>
+pro *pButton*<br/>
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="onerasetabsarea"></a>  CMFCVisualManager::OnEraseTabsArea
+##  <a name="onerasetabsarea"></a>CMFCVisualManager::OnEraseTabsArea
 
-Rozhraní volá tuto metodu při vymaže oblasti karet na kartě okna.
+Rozhraní volá tuto metodu při mazání oblasti karet okna s kartami.
 
 ```
 virtual void OnEraseTabsArea(
@@ -4193,23 +4193,23 @@ virtual void OnEraseTabsArea(
 ### <a name="parameters"></a>Parametry
 
 *pDC*<br/>
-[in] Ukazatel na kontext zařízení.
+pro Ukazatel na kontext zařízení.
 
-*Rect*<br/>
-[in] Obdélník, který určuje hranice od oblasti karet.
+*OBD*<br/>
+pro Obdélník, který určuje hranice oblasti karet.
 
 *pTabWnd*<br/>
-[in] Ukazatel na okno s kartou. Rozhraní framework vymaže kartu oblast okna zadanou kartu.
+pro Ukazatel na okno karty. Rozhraní vymaže oblast tabulátoru pro zadané okno karty.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato funkce je volána rozhraním, když [cmfcbasetabctrl – třída](../../mfc/reference/cmfcbasetabctrl-class.md) zpracovává zprávu WM_PAINT objekt a vymaže oblasti karet.
+Tato funkce je volána rozhraním, když objekt [třídy CMFCBaseTabCtrl](../../mfc/reference/cmfcbasetabctrl-class.md) zpracuje zprávu WM_PAINT a smaže oblast karty.
 
-Potlačí tuto metodu v odvozené správce vzhledu pro přizpůsobení vzhledu karty.
+Tuto metodu můžete přepsat v odvozeném vizuálním manažeru a přizpůsobit si tak vzhled karet.
 
-##  <a name="onerasetabsbutton"></a>  CMFCVisualManager::OnEraseTabsButton
+##  <a name="onerasetabsbutton"></a>CMFCVisualManager::OnEraseTabsButton
 
-Rozhraní volá tuto metodu při vymaže text a ikona tlačítka kartu.
+Rozhraní volá tuto metodu při mazání textu a ikony tlačítka na kartě.
 
 ```
 virtual void OnEraseTabsButton(
@@ -4222,26 +4222,26 @@ virtual void OnEraseTabsButton(
 ### <a name="parameters"></a>Parametry
 
 *pDC*<br/>
-[in] Ukazatel na kontext zařízení.
+pro Ukazatel na kontext zařízení.
 
-*Rect*<br/>
-[in] Obdélník, který určuje hranice na kartě tlačítko.
+*OBD*<br/>
+pro Obdélník, který určuje hranice tlačítka na kartě.
 
 *pButton*<br/>
-[in] Ukazatel na tlačítku kartu. Rozhraní framework vymaže text a ikona pro toto tlačítko.
+pro Ukazatel na tlačítko tabulátoru. Rozhraní vymaže text a ikonu pro toto tlačítko.
 
 *pWndTab*<br/>
-[in] Ukazatel na ovládací prvek karty, která obsahuje tlačítko kartu.
+pro Ukazatel na ovládací prvek karty, který obsahuje tlačítko tabulátoru.
 
 ### <a name="remarks"></a>Poznámky
 
-Rozhraní framework vymaže text a ikona tlačítka při [cmfcbasetabctrl –](../../mfc/reference/cmfcbasetabctrl-class.md) WM_ERASEBKGND zprávu zpracuje objektu.
+Rozhraní vymaže text a ikonu tlačítka, když objekt [CMFCBaseTabCtrl](../../mfc/reference/cmfcbasetabctrl-class.md) zpracuje zprávu WM_ERASEBKGND.
 
-Potlačí tuto metodu v odvozené správce vzhledu pro přizpůsobení vzhledu kartu tlačítka.
+Tuto metodu můžete přepsat v odvozeném vizuálním správci a přizpůsobit tak vzhled tlačítek karet.
 
-##  <a name="onerasetabsframe"></a>  CMFCVisualManager::OnEraseTabsFrame
+##  <a name="onerasetabsframe"></a>CMFCVisualManager::OnEraseTabsFrame
 
-Rozhraní volá tuto metodu, když se odstraní snímek na [cmfcbasetabctrl – třída](../../mfc/reference/cmfcbasetabctrl-class.md).
+Rozhraní volá tuto metodu, když maže rámec na [CMFCBaseTabCtrl třídě](../../mfc/reference/cmfcbasetabctrl-class.md).
 
 ```
 virtual BOOL OnEraseTabsFrame(
@@ -4253,25 +4253,25 @@ virtual BOOL OnEraseTabsFrame(
 ### <a name="parameters"></a>Parametry
 
 *pDC*<br/>
-[in] Ukazatel na kontext zařízení.
+pro Ukazatel na kontext zařízení.
 
-*Rect*<br/>
-[in] Obdélník, který určuje hranice okno s kartou.
+*OBD*<br/>
+pro Obdélník, který určuje hranice okna karty.
 
 *pTabWnd*<br/>
-[in] Ukazatel na okno s kartou. Rozhraní framework vymaže blok pro tuto `CMFCBaseTabCtrl`.
+pro Ukazatel na okno karty. Rozhraní vymaže rámec pro toto `CMFCBaseTabCtrl`.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Hodnota TRUE, pokud je metoda úspěšná. FALSE v opačném případě.
+TRUE, pokud je metoda úspěšná; V opačném případě NEPRAVDA.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato metoda vyplní oblast indikován *rect* barvou pozadí na aktivní kartě. Je voláno, když `CMFCBaseTabCtrl` zpracovává zprávu WM_PAINT objekt a vymaže kartu rámce.
+Tato metoda vyplní plochu určenou v *Rect* barvou pozadí aktivní karty. Je volána, když `CMFCBaseTabCtrl` objekt zpracovává zprávu WM_PAINT a vymaže rámec karty.
 
-##  <a name="onfillautohidebuttonbackground"></a>  CMFCVisualManager::OnFillAutoHideButtonBackground
+##  <a name="onfillautohidebuttonbackground"></a>CMFCVisualManager::OnFillAutoHideButtonBackground
 
-Rozhraní volá tuto metodu při vyplní na pozadí automaticky skrýt tlačítko.
+Rozhraní volá tuto metodu, když vyplní pozadí tlačítka pro automatické skrývání.
 
 ```
 virtual void OnFillAutoHideButtonBackground(
@@ -4283,21 +4283,21 @@ virtual void OnFillAutoHideButtonBackground(
 ### <a name="parameters"></a>Parametry
 
 *pDC*<br/>
-[in] Ukazatel na kontext zařízení.
+pro Ukazatel na kontext zařízení.
 
-*Rect*<br/>
-[in] Obdélník, který určuje hranice automaticky skrýt tlačítko.
+*OBD*<br/>
+pro Obdélník, který určuje hranice tlačítka pro automatické skrývání.
 
 *pButton*<br/>
-[in] Ukazatel [cmfcautohidebutton –](../../mfc/reference/cmfcautohidebutton-class.md) objektu. Rozhraní framework výplně pozadí tohoto automatického skrytí tlačítka.
+pro Ukazatel na objekt [CMFCAutoHideButton](../../mfc/reference/cmfcautohidebutton-class.md) . Rozhraní vyplní pozadí tohoto tlačítka pro automatické skrývání.
 
 ### <a name="remarks"></a>Poznámky
 
-Potlačí tuto metodu v odvozené správce vzhledu pro přizpůsobení vzhledu automaticky skrýt tlačítko.
+Přepsáním této metody v odvozeném vizuálním manažeru můžete přizpůsobit vzhled tlačítka pro automatické skrývání.
 
-##  <a name="onfillbarbackground"></a>  CMFCVisualManager::OnFillBarBackground
+##  <a name="onfillbarbackground"></a>CMFCVisualManager::OnFillBarBackground
 
-Rozhraní volá tuto metodu při vyplní na pozadí [cbasepane –](../../mfc/reference/cbasepane-class.md) objektu.
+Rozhraní volá tuto metodu, když vyplní pozadí objektu [CBasePane](../../mfc/reference/cbasepane-class.md) .
 
 ```
 virtual void OnFillBarBackground(
@@ -4311,33 +4311,33 @@ virtual void OnFillBarBackground(
 ### <a name="parameters"></a>Parametry
 
 *pDC*<br/>
-[in] Ukazatel na kontext zařízení pro panel ovládacího prvku.
+pro Ukazatel na kontext zařízení pro ovládací panel.
 
 *pBar*<br/>
-[in] Ukazatel `CBasePane` objektu. Rozhraní framework výplně pozadí v tomto podokně.
+pro Ukazatel na `CBasePane` objekt. Architektura vyplní pozadí tohoto podokna.
 
 *rectClient*<br/>
-[in] Obdélník, který určuje hranice v podokně.
+pro Obdélník, který určuje hranice podokna.
 
 *rectClip*<br/>
-[in] Obdélník, který určuje výstřižek oblasti podokna.
+pro Obdélník, který určuje oblast oříznutí podokna.
 
 *bNCArea*<br/>
-[in] Rezervovanou hodnotu.
+pro Rezervovaná hodnota.
 
 ### <a name="remarks"></a>Poznámky
 
-Výchozí implementace této metody výplně pozadí panelu 3d barvou pozadí z globální proměnné `afxGlobalData`. Potlačí tuto metodu v odvozené vizuálního správce k přizpůsobení pozadí na stavového řádku.
+Výchozí implementace této metody vyplní pozadí pruhu pomocí 3D barvy pozadí z globální proměnné `afxGlobalData`. Tuto metodu můžete přepsat v odvozeném vizuálním manažeru k přizpůsobení pozadí podokna.
 
 ### <a name="example"></a>Příklad
 
-Následující příklad ukazuje způsob použití `OnFillBarBackground` v `CMFCVisualManager` třídy. Tento fragment kódu je součástí [Outlook demonstrační ukázka](../../overview/visual-cpp-samples.md).
+Následující příklad ukazuje, jak použít `OnFillBarBackground` `CMFCVisualManager` třídu ve třídě. Tento fragment kódu je součástí ukázkové ukázky pro [Outlook](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_OutlookDemo#4](../../mfc/reference/codesnippet/cpp/cmfcvisualmanager-class_2.cpp)]
 
-##  <a name="onfillbuttoninterior"></a>  CMFCVisualManager::OnFillButtonInterior
+##  <a name="onfillbuttoninterior"></a>CMFCVisualManager::OnFillButtonInterior
 
-Rozhraní volá tuto metodu při výplně pozadí tlačítka panelu nástrojů.
+Rozhraní volá tuto metodu, když vyplní pozadí tlačítka panelu nástrojů.
 
 ```
 virtual void OnFillButtonInterior(
@@ -4350,24 +4350,24 @@ virtual void OnFillButtonInterior(
 ### <a name="parameters"></a>Parametry
 
 *pDC*<br/>
-[in] Ukazatel na kontext zařízení tlačítka panelu nástrojů.
+pro Ukazatel na kontext zařízení tlačítka panelu nástrojů.
 
 *pButton*<br/>
-[in] Ukazatel [cmfctoolbarbutton –](../../mfc/reference/cmfctoolbarbutton-class.md). Rozhraní framework výplně pozadí pro toto tlačítko.
+pro Ukazatel na [CMFCToolBarButton](../../mfc/reference/cmfctoolbarbutton-class.md). Rozhraní vyplní pozadí pro toto tlačítko.
 
-*Rect*<br/>
-[in] Obdélník, který určuje hranice panelu nástrojů.
+*OBD*<br/>
+pro Obdélník, který určuje hranice tlačítka panelu nástrojů.
 
-*state*<br/>
-[in] Stav panelu nástrojů.
+*státech*<br/>
+pro Stav tlačítka panelu nástrojů
 
 ### <a name="remarks"></a>Poznámky
 
-Výchozí implementace této metody pomocí výchozí barvy výplně pozadí. Potlačí tuto metodu v odvozené vizuálního správce k přizpůsobení pozadí tlačítka panelu nástrojů.
+Výchozí implementace této metody používá výchozí barvu k vyplnění pozadí. Tuto metodu můžete přepsat v odvozeném vizuálním manažeru a přizpůsobit tak pozadí tlačítka panelu nástrojů.
 
-Možné stavy tlačítka panelu nástrojů `ButtonsIsRegular`, `ButtonsIsPressed`, nebo `ButtonsIsHighlighted`.
+Možné stavy tlačítka panelu nástrojů jsou `ButtonsIsRegular`, `ButtonsIsPressed`nebo `ButtonsIsHighlighted`.
 
-##  <a name="onfillcaptionbarbutton"></a>  CMFCVisualManager::OnFillCaptionBarButton
+##  <a name="onfillcaptionbarbutton"></a>CMFCVisualManager::OnFillCaptionBarButton
 
 ```
 virtual COLORREF OnFillCaptionBarButton(
@@ -4383,22 +4383,22 @@ virtual COLORREF OnFillCaptionBarButton(
 
 ### <a name="parameters"></a>Parametry
 
-[in] *pDC*<br/>
-[in] *pBar*<br/>
-[in] *rect*<br/>
-[in] *bIsPressed*<br/>
-[in] *bIsHighlighted*<br/>
-[in] *bIsDisabled*<br/>
-[in] *bHasDropDownArrow*<br/>
-[in] *bIsSysButton*<br/>
+pro *primární řadič domény*<br/>
+pro *pBar*<br/>
+pro *Rect*<br/>
+pro *bIsPressed*<br/>
+pro *bIsHighlighted*<br/>
+pro *bIsDisabled*<br/>
+pro *bHasDropDownArrow*<br/>
+pro *bIsSysButton*<br/>
 
 ### <a name="return-value"></a>Návratová hodnota
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="onfillcommandslistbackground"></a>  CMFCVisualManager::OnFillCommandsListBackground
+##  <a name="onfillcommandslistbackground"></a>CMFCVisualManager::OnFillCommandsListBackground
 
-Rozhraní volá tuto metodu při výplně pozadí tlačítka panelu nástrojů, který patří do seznamu příkazů. Tento seznam příkazů je součástí dialogovém okně přizpůsobení.
+Rozhraní volá tuto metodu, když vyplní pozadí tlačítka panelu nástrojů, které patří do seznamu příkazů. Seznam příkazů je součástí dialogu přizpůsobení.
 
 ```
 virtual COLORREF OnFillCommandsListBackground(
@@ -4410,25 +4410,25 @@ virtual COLORREF OnFillCommandsListBackground(
 ### <a name="parameters"></a>Parametry
 
 *pDC*<br/>
-[in] Ukazatel na kontext zařízení.
+pro Ukazatel na kontext zařízení.
 
-*Rect*<br/>
-[in] Obdélník, který určuje hranice tlačítka.
+*OBD*<br/>
+pro Obdélník, který určuje hranice tlačítka.
 
 *bIsSelected*<br/>
-[in] Parametr logické hodnoty označující, zda je zaškrtnuto tlačítko.
+pro Logický parametr, který označuje, zda je tlačítko vybráno.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Barva textu pro tlačítka panelu nástrojů.
+Barva textu tlačítka panelu nástrojů
 
 ### <a name="remarks"></a>Poznámky
 
-Další informace o přizpůsobení seznamu najdete v tématu [CMFCToolBarButton::OnDrawOnCustomizeList](../../mfc/reference/cmfctoolbarbutton-class.md#ondrawoncustomizelist). Výchozí implementace této metody výplně pozadí podle barevné schéma aktuálně vybraného vzhledu.
+Další informace o seznamu přizpůsobení naleznete v tématu [CMFCToolBarButton:: OnDrawOnCustomizeList](../../mfc/reference/cmfctoolbarbutton-class.md#ondrawoncustomizelist). Výchozí implementace této metody vyplní pozadí na základě barevného schématu aktuálně vybraného vzhledu.
 
-##  <a name="onfillheaderctrlbackground"></a>  CMFCVisualManager::OnFillHeaderCtrlBackground
+##  <a name="onfillheaderctrlbackground"></a>CMFCVisualManager::OnFillHeaderCtrlBackground
 
-Rozhraní volá tuto metodu při výplně pozadí záhlaví ovládacího prvku.
+Rozhraní volá tuto metodu, když vyplní pozadí ovládacího prvku záhlaví.
 
 ```
 virtual void OnFillHeaderCtrlBackground(
@@ -4440,21 +4440,21 @@ virtual void OnFillHeaderCtrlBackground(
 ### <a name="parameters"></a>Parametry
 
 *pCtrl*<br/>
-[in] Ukazatel [cmfcheaderctrl –](../../mfc/reference/cmfcheaderctrl-class.md) objektu. Rozhraní framework výplně pozadí pro tento ovládací prvek záhlaví.
+pro Ukazatel na objekt [CMFCHeaderCtrl](../../mfc/reference/cmfcheaderctrl-class.md) . Rozhraní vyplní pozadí pro tento ovládací prvek záhlaví.
 
 *pDC*<br/>
-[in] Ukazatel na kontext zařízení.
+pro Ukazatel na kontext zařízení.
 
-*Rect*<br/>
-[in] Obdélník, který určuje hranice ovládacího prvku záhlaví.
+*OBD*<br/>
+pro Obdélník, který určuje hranice ovládacího prvku záhlaví.
 
 ### <a name="remarks"></a>Poznámky
 
-Potlačí tuto metodu v odvozené vizuálního správce k přizpůsobení vzhledu ovládacího prvku záhlaví.
+Tuto metodu můžete přepsat v odvozeném vizuálním manažeru pro přizpůsobení vzhledu ovládacího prvku záhlaví.
 
-##  <a name="onfillminiframecaption"></a>  CMFCVisualManager::OnFillMiniFrameCaption
+##  <a name="onfillminiframecaption"></a>CMFCVisualManager::OnFillMiniFrameCaption
 
-Rozhraní volá tuto metodu při vyplní záhlaví okna mini rámce.
+Rozhraní volá tuto metodu, když vyplní záhlaví okna se zkráceným rámcem.
 
 ```
 virtual COLORREF OnFillMiniFrameCaption(
@@ -4467,28 +4467,28 @@ virtual COLORREF OnFillMiniFrameCaption(
 ### <a name="parameters"></a>Parametry
 
 *pDC*<br/>
-[in] Ukazatel na kontext zařízení.
+pro Ukazatel na kontext zařízení.
 
 *rectCaption*<br/>
-[in] Obdélník, který určuje hranice záhlaví.
+pro Obdélník, který určuje hranice panelu titulků.
 
 *pFrameWnd*<br/>
-[in] Ukazatel na okno mini rámce. Rozhraní framework kreslení záhlaví pro toto okno.
+pro Ukazatel na malé okno rámce. Rozhraní nakreslí záhlaví okna pro toto okno.
 
 *bActive*<br/>
-[in] Parametr logické hodnoty označující, pokud je toto okno aktivní.
+pro Logický parametr, který označuje, zda je okno aktivní.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Barva, která slouží k naplnění pozadí záhlaví.
+Barva, která se používá k vyplnění pozadí záhlaví.
 
 ### <a name="remarks"></a>Poznámky
 
-Výchozí implementace této metody vyplní záhlaví s aktuální barvu titulek pro aktivní vzhledu.
+Výchozí implementace této metody vyplní záhlaví titulkem aktuální barvu titulku pro aktivní vzhled.
 
-##  <a name="onfilloutlookbarcaption"></a>  CMFCVisualManager::OnFillOutlookBarCaption
+##  <a name="onfilloutlookbarcaption"></a>CMFCVisualManager::OnFillOutlookBarCaption
 
-Rozhraní volá tuto metodu při výplně pozadí titulku panel aplikace Outlook.
+Rozhraní volá tuto metodu, když vyplní pozadí záhlaví Outlooku.
 
 ```
 virtual void OnFillOutlookBarCaption(
@@ -4500,21 +4500,21 @@ virtual void OnFillOutlookBarCaption(
 ### <a name="parameters"></a>Parametry
 
 *pDC*<br/>
-[in] Ukazatel na kontext zařízení.
+pro Ukazatel na kontext zařízení.
 
 *rectCaption*<br/>
-[in] Obdélník, který určuje hranice záhlaví.
+pro Obdélník, který určuje hranice panelu titulků.
 
 *clrText*<br/>
-[out] Odkaz na [COLORREF](/windows/desktop/gdi/colorref) parametru. Metoda zapíše barvu textu v záhlaví pro tento parametr.
+mimo Odkaz na parametr [COLORREF](/windows/win32/gdi/colorref) . Metoda zapisuje do tohoto parametru barvu textu na panelu titulků.
 
 ### <a name="remarks"></a>Poznámky
 
-Výchozí implementace této metody vyplní záhlaví barvou pro stínů podle aktuální vzhledu. Potlačí tuto metodu v odvozené správce vzhledu přizpůsobit barvu titulek panel aplikace Outlook.
+Výchozí implementace této metody vyplní pruh titulku barvou pro stíny na základě aktuálního vzhledu. Tuto metodu můžete přepsat v odvozeném vizuálním manažeru a přizpůsobit barvu pruhu záhlaví Outlooku.
 
-##  <a name="onfilloutlookpagebutton"></a>  CMFCVisualManager::OnFillOutlookPageButton
+##  <a name="onfilloutlookpagebutton"></a>CMFCVisualManager::OnFillOutlookPageButton
 
-Rozhraní volá tuto metodu při vyplní vnitřní tlačítka stránky aplikace Outlook.
+Rozhraní volá tuto metodu, když vyplní vnitřek tlačítka stránky Outlooku.
 
 ```
 virtual void OnFillOutlookPageButton(
@@ -4528,27 +4528,27 @@ virtual void OnFillOutlookPageButton(
 ### <a name="parameters"></a>Parametry
 
 *pDC*<br/>
-[in] Ukazatel na kontext zařízení.
+pro Ukazatel na kontext zařízení.
 
-*Rect*<br/>
-[in] Obdélník, který určuje hranice na tlačítku stránky aplikace Outlook.
+*OBD*<br/>
+pro Obdélník, který určuje hranice tlačítka Outlook Page.
 
 *bIsHighlighted*<br/>
-[in] Parametr logické hodnoty, která určuje, zda se zvýrazní tlačítko.
+pro Logický parametr, který určuje, zda je tlačítko zvýrazněno.
 
 *bIsPressed*<br/>
-[in] Parametr logické hodnoty, která určuje, zda stisknutí tlačítka.
+pro Logický parametr, který určuje, zda je tlačítko stisknuto.
 
 *clrText*<br/>
-[out] Odkaz na [COLORREF](/windows/desktop/gdi/colorref) parametru. Tato metoda ukládá barvu textu tlačítka stránky aplikace outlook v tomto parametru.
+mimo Odkaz na parametr [COLORREF](/windows/win32/gdi/colorref) . Tato metoda ukládá textovou barvu tlačítka stránky Outlooku do tohoto parametru.
 
 ### <a name="remarks"></a>Poznámky
 
-Potlačí tuto funkci v odvozené správce vzhledu pro přizpůsobení vzhledu tlačítka stránky aplikace Outlook.
+Tuto funkci můžete přepsat v odvozeném vizuálním správci a přizpůsobit vzhled tlačítek stránky Outlooku.
 
 ##  <a name="onfillpopupwindowbackground"></a>  CMFCVisualManager::OnFillPopupWindowBackground
 
-Rozhraní volá tuto metodu při vyplní na pozadí automaticky otevírané okno.
+Rozhraní volá tuto metodu, když vyplní pozadí automaticky otevíraného okna.
 
 ```
 virtual void OnFillPopupWindowBackground(
@@ -4559,18 +4559,18 @@ virtual void OnFillPopupWindowBackground(
 ### <a name="parameters"></a>Parametry
 
 *pDC*<br/>
-[in] Ukazatel na kontext zařízení.
+pro Ukazatel na kontext zařízení.
 
-*Rect*<br/>
-[in] Obdélník, který určuje hranice automaticky otevíraném okně.
+*OBD*<br/>
+pro Obdélník, který určuje hranice automaticky otevíraného okna.
 
 ### <a name="remarks"></a>Poznámky
 
-Potlačí tuto metodu v odvozené správce vzhledu pro přizpůsobení vzhledu automaticky otevíraná okna.
+Tuto metodu můžete přepsat v odvozeném vizuálním správci, abyste mohli přizpůsobit vzhled automaticky otevíraných oken.
 
-##  <a name="onfillribbonbutton"></a>  CMFCVisualManager::OnFillRibbonButton
+##  <a name="onfillribbonbutton"></a>CMFCVisualManager::OnFillRibbonButton
 
-Rozhraní volá tuto metodu při vyplní vnitřní tlačítko pásu karet.
+Rozhraní volá tuto metodu, když vyplní vnitřek tlačítka pásu karet.
 
 ```
 virtual COLORREF OnFillRibbonButton(
@@ -4581,22 +4581,22 @@ virtual COLORREF OnFillRibbonButton(
 ### <a name="parameters"></a>Parametry
 
 *pDC*<br/>
-[in] Ukazatel na kontext zařízení.
+pro Ukazatel na kontext zařízení.
 
 *pButton*<br/>
-[in] Ukazatel [cmfcribbonbutton –](../../mfc/reference/cmfcribbonbutton-class.md) objektu. Rozhraní framework vyplní vnitřní toto tlačítko na pásu karet.
+pro Ukazatel na objekt [CMFCRibbonButton](../../mfc/reference/cmfcribbonbutton-class.md) . Rozhraní vyplní vnitřek tohoto tlačítka pásu karet.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Barva textu pro určený tlačítko na pásu karet *pButton* Pokud tlačítko pásu karet podporuje text. Hodnota -1, pokud text je neplatný pro tlačítko pásu karet.
+Barva textu tlačítka pásu zadaného parametrem *pButton* , pokud tlačítko pásu karet podporuje text Hodnota-1, pokud je text pro tlačítko pásu karet neplatný.
 
 ### <a name="remarks"></a>Poznámky
 
-Potlačí tuto metodu v odvozené správce vzhledu přizpůsobit vzhled tlačítek na pásu karet.
+Tuto metodu můžete přepsat v odvozeném vizuálním manažeru a přizpůsobit tak vzhled tlačítek pásu karet.
 
-##  <a name="onfillribbonedit"></a>  CMFCVisualManager::OnFillRibbonEdit
+##  <a name="onfillribbonedit"></a>CMFCVisualManager::OnFillRibbonEdit
 
-Rozhraní volá tuto metodu při vyplní vnitřní instance `CMFCRibbonRichEditCtrl` třídy.
+Rozhraní volá tuto metodu, když vyplní vnitřek instance `CMFCRibbonRichEditCtrl` třídy.
 
 ```
 virtual void OnFillRibbonEdit(
@@ -4614,41 +4614,41 @@ virtual void OnFillRibbonEdit(
 ### <a name="parameters"></a>Parametry
 
 *pDC*<br/>
-[in] Ukazatel na kontext zařízení.
+pro Ukazatel na kontext zařízení.
 
 *pEdit*<br/>
-[in] Ukazatel `CMFCRibbonRichEditCtrl` objektu. Rozhraní framework vyplní vnitřní tento ovládací prvek pro úpravy.
+pro Ukazatel na `CMFCRibbonRichEditCtrl` objekt. Rozhraní vyplní vnitřek tohoto ovládacího prvku pro úpravy.
 
-*Rect*<br/>
-[in] Obdélník, který určuje hranice ovládacího prvku pro úpravy.
+*OBD*<br/>
+pro Obdélník, který určuje hranice ovládacího prvku pro úpravy.
 
 *bIsHighlighted*<br/>
-[in] Parametr logické hodnoty označující, zda je zvýrazněný ovládací prvek pro úpravy.
+pro Logický parametr, který označuje, zda je ovládací prvek pro úpravy zvýrazněn.
 
 *bIsPaneHighlighted*<br/>
-[in] Parametr logické hodnoty označující, zda je zvýrazněn v podokně nadřazené.
+pro Logický parametr, který označuje, zda je nadřazené podokno zvýrazněno.
 
 *bIsDisabled*<br/>
-[in] Parametr logické hodnoty označující, zda ovládací prvek pro úpravy je k dispozici.
+pro Logický parametr, který označuje, zda je ovládací prvek pro úpravy nedostupný.
 
 *clrText*<br/>
-[in] Odkaz na barvu textu v textovém poli.
+pro Odkaz na barvu textu ovládacího prvku pro úpravy.
 
 *clrSelBackground*<br/>
-[in] Odkaz na barvu pozadí ovládacího prvku edit, když je zvýrazněn.
+pro Odkaz na barvu pozadí ovládacího prvku pro úpravy, když je zvýrazněn.
 
 *clrSelText*<br/>
-[in] Odkaz na barvu textu v textovém poli.
+pro Odkaz na barvu vybraného textu v ovládacím prvku pro úpravy.
 
 ### <a name="remarks"></a>Poznámky
 
-`CMFCRibbonRichEditCtrl` Indikován *pEdit* můžou být součástí tlačítko pole se seznamem na pásu karet.
+Označená pEdit může být součástí tlačítka pole se seznamem na pásu karet. `CMFCRibbonRichEditCtrl`
 
-Potlačí tuto metodu v odvozené vizuálního správce k přizpůsobení vzhledu `CMFCRibbonRichEditCtrl`.
+Přepsat tuto metodu v odvozeném vizuálním manažeru k přizpůsobení vzhledu `CMFCRibbonRichEditCtrl`.
 
-##  <a name="onfillribbonmainpanelbutton"></a>  CMFCVisualManager::OnFillRibbonMainPanelButton
+##  <a name="onfillribbonmainpanelbutton"></a>CMFCVisualManager::OnFillRibbonMainPanelButton
 
-Rozhraní volá tuto metodu při vyplní vnitřní pásu karet na tlačítko **hlavní** panelu.
+Rozhraní volá tuto metodu, když vyplní vnitřek tlačítka pásu karet umístěného na **hlavním** panelu.
 
 ```
 virtual COLORREF OnFillRibbonMainPanelButton(
@@ -4659,22 +4659,22 @@ virtual COLORREF OnFillRibbonMainPanelButton(
 ### <a name="parameters"></a>Parametry
 
 *pDC*<br/>
-[in] Ukazatel na kontext zařízení.
+pro Ukazatel na kontext zařízení.
 
 *pButton*<br/>
-[in] Ukazatel [cmfcribbonbutton – třída](../../mfc/reference/cmfcribbonbutton-class.md) objektu. Rozhraní framework vyplní toto tlačítko na pásu karet.
+pro Ukazatel na objekt [třídy CMFCRibbonButton](../../mfc/reference/cmfcribbonbutton-class.md) . Rozhraní vyplní toto tlačítko pásu karet.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Barva textu pro určený tlačítko na pásu karet *pButton* Pokud tlačítko pásu karet podporuje text. Hodnota -1, pokud text je neplatný pro tlačítko pásu karet.
+Barva textu tlačítka pásu zadaného parametrem *pButton* , pokud tlačítko pásu karet podporuje text Hodnota-1, pokud je text pro tlačítko pásu karet neplatný.
 
 ### <a name="remarks"></a>Poznámky
 
-Potlačí tuto metodu v odvozené správce vzhledu přizpůsobit vzhled tlačítek na pásu karet na **hlavní** panelu.
+Tuto metodu můžete přepsat v odvozeném vizuálním manažeru a přizpůsobit tak vzhled tlačítek pásu karet na **hlavním** panelu.
 
-##  <a name="onfillribbonmenuframe"></a>  CMFCVisualManager::OnFillRibbonMenuFrame
+##  <a name="onfillribbonmenuframe"></a>CMFCVisualManager::OnFillRibbonMenuFrame
 
-Rozhraní volá tuto metodu při vyplní rámec nabídky panelu pásu karet.
+Rozhraní volá tuto metodu, když vyplní rámec nabídky na panelu pásu karet.
 
 ```
 virtual void OnFillRibbonMenuFrame(
@@ -4686,19 +4686,19 @@ virtual void OnFillRibbonMenuFrame(
 ### <a name="parameters"></a>Parametry
 
 *pDC*<br/>
-[in] Ukazatel na kontext zařízení.
+pro Ukazatel na kontext zařízení.
 
 *pPanel*<br/>
-[in] Ukazatel na instanci [cmfcribbonmainpanel – třída](../../mfc/reference/cmfcribbonmainpanel-class.md). Rozhraní framework vyplní rámec nabídky pro tento panel pásu karet.
+pro Ukazatel na instanci [třídy CMFCRibbonMainPanel](../../mfc/reference/cmfcribbonmainpanel-class.md). Rozhraní vyplní rámec nabídky pro tento panel pásu karet.
 
-*Rect*<br/>
-[in] Obdélník, který určuje hranice rámec nabídky.
+*OBD*<br/>
+pro Obdélník, který určuje hranice rámce nabídky.
 
 ### <a name="remarks"></a>Poznámky
 
-Potlačí tuto metodu v odvozené správce vzhledu pro přizpůsobení vzhledu nabídek pro `CMFCRibbonMainPanel`.
+Tuto metodu můžete přepsat v odvozeném vizuálním manažeru, chcete-li přizpůsobit vzhled řádku `CMFCRibbonMainPanel`nabídek pro.
 
-##  <a name="onfillribbonquickaccesstoolbarpopup"></a>  CMFCVisualManager::OnFillRibbonQuickAccessToolBarPopup
+##  <a name="onfillribbonquickaccesstoolbarpopup"></a>CMFCVisualManager::OnFillRibbonQuickAccessToolBarPopup
 
 ```
 virtual void OnFillRibbonQuickAccessToolBarPopup(
@@ -4709,15 +4709,15 @@ virtual void OnFillRibbonQuickAccessToolBarPopup(
 
 ### <a name="parameters"></a>Parametry
 
-[in] *pDC*<br/>
-[in] *pMenuBar*<br/>
-[in] *rect*<br/>
+pro *primární řadič domény*<br/>
+pro *pMenuBar*<br/>
+pro *Rect*<br/>
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="onfillsplitterbackground"></a>  CMFCVisualManager::OnFillSplitterBackground
+##  <a name="onfillsplitterbackground"></a>CMFCVisualManager::OnFillSplitterBackground
 
-Rozhraní volá tuto metodu při výplně pozadí okno s rozdělovačem.
+Rozhraní volá tuto metodu, když vyplní pozadí okna s rozdělovačem.
 
 ```
 virtual void OnFillSplitterBackground(
@@ -4729,21 +4729,21 @@ virtual void OnFillSplitterBackground(
 ### <a name="parameters"></a>Parametry
 
 *pDC*<br/>
-[in] Ukazatel na kontext zařízení.
+pro Ukazatel na kontext zařízení.
 
 *pSplitterWnd*<br/>
-[in] Ukazatel na instanci [CSplitterWndEx třídy](csplitterwndex-class.md). Rozhraní framework výplně pozadí pro toto okno s rozdělovačem.
+pro Ukazatel na instanci [třídy CSplitterWndEx](csplitterwndex-class.md). Rozhraní vyplní pozadí pro toto okno s rozdělovačem.
 
-*Rect*<br/>
-[in] Obdélník, který určuje hranice okna s rozdělovačem.
+*OBD*<br/>
+pro Obdélník, který určuje hranice okna s rozdělovačem.
 
 ### <a name="remarks"></a>Poznámky
 
-Potlačí tuto metodu v odvozené správce vzhledu pro přizpůsobení vzhledu okno s rozdělovačem.
+Tuto metodu můžete přepsat v odvozeném vizuálním manažeru, abyste mohli přizpůsobit vzhled okna s rozdělovačem.
 
-##  <a name="onfilltab"></a>  CMFCVisualManager::OnFillTab
+##  <a name="onfilltab"></a>CMFCVisualManager::OnFillTab
 
-Rozhraní volá tuto metodu při výplně pozadí okna Karta.
+Rozhraní volá tuto metodu, když vyplní pozadí okna karet.
 
 ```
 virtual void OnFillTab(
@@ -4758,30 +4758,30 @@ virtual void OnFillTab(
 ### <a name="parameters"></a>Parametry
 
 *pDC*<br/>
-[in] Ukazatel na kontext zařízení.
+pro Ukazatel na kontext zařízení.
 
 *rectFill*<br/>
-[in] Obdélník, který určuje hranice pro okno s kartou.
+pro Obdélník, který určuje hranice okna karty.
 
 *pbrFill*<br/>
-[in] Ukazatel na stopu. Rozhraní používá tento štětce k vyplnění okno s kartou.
+pro Ukazatel na štětec. Rozhraní pomocí tohoto štětce vyplní okno karty.
 
 *iTab*<br/>
-[in] Index založený na nule kartu na kartě, pro kterou rozhraní vyplní na pozadí.
+pro Index karty založený na nule karty, pro kterou rozhraní vyplní pozadí.
 
 *bIsActive*<br/>
-[in] Hodnota TRUE, pokud je na kartě aktivní; v opačném případě FALSE.
+pro TRUE, pokud je karta aktivní; v opačném případě FALSE.
 
 *pTabWnd*<br/>
-[in] Ukazatel na nadřazený ovládací prvek karty.
+pro Ukazatel na nadřazený ovládací prvek karty.
 
 ### <a name="remarks"></a>Poznámky
 
-Potlačí tuto metodu v odvozené správce vzhledu pro přizpůsobení vzhledu karty.
+Tuto metodu můžete přepsat v odvozeném vizuálním manažeru a přizpůsobit si tak vzhled karet.
 
-##  <a name="onfilltasksgroupinterior"></a>  CMFCVisualManager::OnFillTasksGroupInterior
+##  <a name="onfilltasksgroupinterior"></a>CMFCVisualManager::OnFillTasksGroupInterior
 
-Rozhraní volá tuto metodu při vyplní vnitřní [cmfctaskspanetaskgroup –](../../mfc/reference/cmfctaskspanetaskgroup-class.md) objektu.
+Rozhraní volá tuto metodu, když vyplní vnitřek objektu [CMFCTasksPaneTaskGroup](../../mfc/reference/cmfctaskspanetaskgroup-class.md) .
 
 ```
 virtual void OnFillTasksGroupInterior(
@@ -4793,21 +4793,21 @@ virtual void OnFillTasksGroupInterior(
 ### <a name="parameters"></a>Parametry
 
 *pDC*<br/>
-[in] Ukazatel na kontext zařízení.
+pro Ukazatel na kontext zařízení.
 
-*Rect*<br/>
-[in] Obdélník, který určuje hranice skupiny úloh.
+*OBD*<br/>
+pro Obdélník, který určuje hranice skupiny úloh.
 
 *bSpecial*<br/>
-[in] Logická hodnota označující, pokud je vnitřní vyplněn barvou speciální.
+pro Logická hodnota, která označuje, zda je vnitřek vyplněn speciální barvou.
 
 ### <a name="remarks"></a>Poznámky
 
-Potlačí tuto metodu v odvozené správce vzhledu pro přizpůsobení vzhledu skupinu úloh.
+Přepsáním této metody v odvozeném vizuálním manažeru můžete přizpůsobit vzhled skupiny úloh.
 
-##  <a name="onfilltaskspanebackground"></a>  CMFCVisualManager::OnFillTasksPaneBackground
+##  <a name="onfilltaskspanebackground"></a>CMFCVisualManager::OnFillTasksPaneBackground
 
-Rozhraní volá tuto metodu při vyplní na pozadí [cmfctaskspane –](../../mfc/reference/cmfctaskspane-class.md) ovládacího prvku.
+Rozhraní volá tuto metodu, když vyplní pozadí ovládacího prvku [CMFCTasksPane](../../mfc/reference/cmfctaskspane-class.md) .
 
 ```
 virtual void OnFillTasksPaneBackground(
@@ -4818,18 +4818,18 @@ virtual void OnFillTasksPaneBackground(
 ### <a name="parameters"></a>Parametry
 
 *pDC*<br/>
-[in] Ukazatel na kontext zařízení.
+pro Ukazatel na kontext zařízení.
 
 *rectWorkArea*<br/>
-[in] Obdélník, který určuje hranice podokna úloh.
+pro Obdélník, který určuje hranice podokna úloh.
 
 ### <a name="remarks"></a>Poznámky
 
-Potlačí tuto metodu v odvozené vizuálního správce k přizpůsobení vzhledu `CMFCTasksPane` objektu.
+Tuto metodu můžete přepsat v odvozeném vizuálním manažeru pro přizpůsobení vzhledu `CMFCTasksPane` objektu.
 
-##  <a name="onhighlightmenuitem"></a>  CMFCVisualManager::OnHighlightMenuItem
+##  <a name="onhighlightmenuitem"></a>CMFCVisualManager::OnHighlightMenuItem
 
-Rozhraní volá tuto metodu při nakreslí položku zvýrazněné nabídky.
+Rozhraní volá tuto metodu, když nakreslí zvýrazněnou položku nabídky.
 
 ```
 virtual void OnHighlightMenuItem(
@@ -4842,26 +4842,26 @@ virtual void OnHighlightMenuItem(
 ### <a name="parameters"></a>Parametry
 
 *pDC*<br/>
-[in] Ukazatel na kontext zařízení pro nabídky.
+pro Ukazatel na kontext zařízení pro nabídku.
 
 *pButton*<br/>
-[in] Ukazatel [cmfctoolbarmenubutton –](../../mfc/reference/cmfctoolbarmenubutton-class.md) zobrazíte. Výchozí implementace nepoužívá tento parametr.
+pro Ukazatel na objekt [CMFCToolBarMenuButton](../../mfc/reference/cmfctoolbarmenubutton-class.md) , který se má zobrazit. Výchozí implementace nepoužívá tento parametr.
 
-*Rect*<br/>
-[in] Obdélník, který určuje hranice položky nabídky.
+*OBD*<br/>
+pro Obdélník, který určuje hranice položky nabídky.
 
 *clrText*<br/>
-[in] Aktuální barva textu položek nabídek zvýrazněné. Výchozí implementace nepoužívá tento parametr.
+pro Aktuální barva textu zvýrazněných položek nabídky Výchozí implementace nepoužívá tento parametr.
 
 ### <a name="remarks"></a>Poznámky
 
-Výchozí implementace této metody nepoužívá parametry *pButton* nebo *clrText*. Vyplní obdélník určené *rect* barvou pozadí standard.
+Výchozí implementace této metody nepoužívá parametry *pButton* nebo *clrText*. Vyplní obdélník určený v *Rect* se standardní barvou pozadí.
 
-Potlačí tuto metodu v odvozené správce vzhledu pro přizpůsobení vzhledu položky nabídky zvýrazněné. Použití *clrText* parametr změnit barvu textu položky nabídky zvýrazněné.
+Přepsat tuto metodu v odvozeném vizuálním manažeru pro přizpůsobení vzhledu zvýrazněných položek nabídky. Pro úpravu barvy textu zvýrazněné položky nabídky použijte parametr *clrText* .
 
-##  <a name="onhighlightrarelyusedmenuitems"></a>  CMFCVisualManager::OnHighlightRarelyUsedMenuItems
+##  <a name="onhighlightrarelyusedmenuitems"></a>CMFCVisualManager::OnHighlightRarelyUsedMenuItems
 
-Rozhraní volá tuto metodu při kreslení zvýrazněný příkaz.
+Rozhraní volá tuto metodu při nakreslení zvýrazněného příkazu nabídky.
 
 ```
 virtual void OnHighlightRarelyUsedMenuItems(
@@ -4872,16 +4872,16 @@ virtual void OnHighlightRarelyUsedMenuItems(
 ### <a name="parameters"></a>Parametry
 
 *pDC*<br/>
-[in] Ukazatel na kontext zařízení.
+pro Ukazatel na kontext zařízení.
 
 *rectRarelyUsed*<br/>
-[in] Obdélník, který určuje hranice zvýrazněný příkaz.
+pro Obdélník, který určuje hranice zvýrazněného příkazu.
 
 ### <a name="remarks"></a>Poznámky
 
-Potlačí tuto metodu v odvozené správce vzhledu pro přizpůsobení vzhledu zvýrazněné příkazy.
+Tuto metodu přepište v odvozeném vizuálním manažeru a přizpůsobte si vzhled zvýrazněných příkazů nabídky.
 
-##  <a name="onncactivate"></a>  CMFCVisualManager::OnNcActivate
+##  <a name="onncactivate"></a>CMFCVisualManager::OnNcActivate
 
 ```
 virtual BOOL OnNcActivate(
@@ -4891,16 +4891,16 @@ virtual BOOL OnNcActivate(
 
 ### <a name="parameters"></a>Parametry
 
-[in] *pWnd*<br/>
-[in] *bActive*<br/>
+pro *pWnd*<br/>
+pro *bActive*<br/>
 
 ### <a name="return-value"></a>Návratová hodnota
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="onncpaint"></a>  CMFCVisualManager::OnNcPaint
+##  <a name="onncpaint"></a>CMFCVisualManager::OnNcPaint
 
-Rozhraní volá tuto metodu při kreslení neklientské oblasti.
+Rozhraní volá tuto metodu, když nakreslí mimo klientské oblasti.
 
 ```
 virtual BOOL OnNcPaint(
@@ -4912,25 +4912,25 @@ virtual BOOL OnNcPaint(
 ### <a name="parameters"></a>Parametry
 
 *pWnd*<br/>
-[in] Ukazatel na okno jehož neklientská oblast nakreslí rozhraní framework.
+pro Ukazatel na okno, jehož neklientská oblast nakreslí rozhraní.
 
 *lstSysButtons*<br/>
-[in] Seznam systémových tlačítek. Ty se také označují jako popisek tlačítka.
+pro Seznam systémových tlačítek. Tyto prvky se označují také jako tlačítka titulků.
 
 *rectRedraw*<br/>
-[in] Obdélník, který určuje hranice neklientské oblasti.
+pro Obdélník, který určuje hranice oblasti mimo klienta.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Rezervovanou hodnotu. Výchozí implementace vrací hodnotu FALSE.
+Rezervovaná hodnota. Výchozí implementace vrátí hodnotu FALSE.
 
 ### <a name="remarks"></a>Poznámky
 
-Potlačí tuto metodu v odvozené správce vzhledu pro přizpůsobení vzhledu tlačítka okna rámce a popisek.
+Tuto metodu přepište v odvozeném vizuálním manažeru, abyste mohli přizpůsobit vzhled tlačítek rámce okna a popisek.
 
-##  <a name="onsetwindowregion"></a>  CMFCVisualManager::OnSetWindowRegion
+##  <a name="onsetwindowregion"></a>CMFCVisualManager::OnSetWindowRegion
 
-Rozhraní volá tuto metodu po Nastaví oblast, která obsahuje snímky a místní nabídky.
+Rozhraní volá tuto metodu poté, co nastaví oblast, která obsahuje rámce a místní nabídky.
 
 ```
 virtual BOOL OnSetWindowRegion(
@@ -4941,22 +4941,22 @@ virtual BOOL OnSetWindowRegion(
 ### <a name="parameters"></a>Parametry
 
 *pWnd*<br/>
-[in] Ukazatel na okno s oblastí, která se změnila.
+pro Ukazatel na okno s oblastí, která se změnila.
 
 *sizeWindow*<br/>
-[in] Velikost okna.
+pro Velikost okna
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Hodnota TRUE, pokud je metoda úspěšná. FALSE v opačném případě.
+TRUE, pokud je metoda úspěšná; V opačném případě NEPRAVDA.
 
 ### <a name="remarks"></a>Poznámky
 
-Rozhraní volá tuto metodu za účelem upozornit správce vzhledu, oblast nastavené pro rámce a místní nabídky. Další informace najdete v tématu [CWindow::SetWindowRgn](../../atl/reference/cwindow-class.md#setwindowrgn).
+Rozhraní volá tuto metodu pro informování vizuálního manažera, že byla nastavena oblast pro snímky a místní nabídky. Další informace najdete v tématu [CWindow:: SetWindowRgn](../../atl/reference/cwindow-class.md#setwindowrgn).
 
 ##  <a name="onupdatesystemcolors"></a>  CMFCVisualManager::OnUpdateSystemColors
 
-Rozhraní volá tuto funkci při změně systémových barev.
+Rozhraní volá tuto funkci, když změní systémové barvy.
 
 ```
 virtual void OnUpdateSystemColors();
@@ -4964,17 +4964,17 @@ virtual void OnUpdateSystemColors();
 
 ### <a name="remarks"></a>Poznámky
 
-Rozhraní volá tuto metodu v rámci zpracování WM_SYSCOLORCHANGE zprávy. Výchozí implementace nemá žádný účinek. Přepsáním této metody v odvozené vizuálního správce, pokud chcete spustit vlastní kód při změně barev ve vaší aplikaci.
+Rozhraní volá tuto metodu jako součást zpracování zprávy WM_SYSCOLORCHANGE. Výchozí implementace neprovádí žádnou akci. Tuto metodu přepište v odvozeném vizuálním správci, pokud chcete spustit vlastní kód při změně barev v aplikaci.
 
-##  <a name="redrawall"></a>  CMFCVisualManager::RedrawAll
+##  <a name="redrawall"></a>CMFCVisualManager::RedrawAll
 
-Okamžitě překreslí ovládací pruhy v aplikaci.
+Okamžitě překreslí všechny ovládací panely v aplikaci.
 
 ```
 static void RedrawAll();
 ```
 
-##  <a name="ribboncategorycolortorgb"></a>  CMFCVisualManager::RibbonCategoryColorToRGB
+##  <a name="ribboncategorycolortorgb"></a>CMFCVisualManager::RibbonCategoryColorToRGB
 
 ```
 virtual COLORREF RibbonCategoryColorToRGB(AFX_RibbonCategoryColor color);
@@ -4982,13 +4982,13 @@ virtual COLORREF RibbonCategoryColorToRGB(AFX_RibbonCategoryColor color);
 
 ### <a name="parameters"></a>Parametry
 
-[in] *barva*<br/>
+pro *Barva*<br/>
 
 ### <a name="return-value"></a>Návratová hodnota
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="setdefaultmanager"></a>  CMFCVisualManager::SetDefaultManager
+##  <a name="setdefaultmanager"></a>CMFCVisualManager::SetDefaultManager
 
 Nastaví výchozího správce.
 
@@ -4999,17 +4999,17 @@ static void SetDefaultManager(CRuntimeClass* pRTI);
 ### <a name="parameters"></a>Parametry
 
 *pRTI*<br/>
-[in] Ukazatel na informace o modulu runtime pro správce vzhledu.
+pro Ukazatel na běhové informace pro vizuálního správce.
 
 ### <a name="remarks"></a>Poznámky
 
-Použití `CMFCVisualManager` třídy a všechny odvozené vizuální vedoucí k přizpůsobení vzhledu aplikace. Po nastavení výchozího správce vzhledu, tato metoda překreslí vaší aplikace pomocí nového správce vzhledu. Další informace o tom, jak používat vizuální vedoucí najdete v tématu [správce vizualizace](../../mfc/visualization-manager.md).
+`CMFCVisualManager` Použijte třídu a jakékoli odvozené vizuální manažery k přizpůsobení vzhledu aplikace. Po nastavení výchozího vizuálního manažera Tato metoda překreslí aplikaci pomocí nového vizuálního manažera. Další informace o tom, jak používat vizuální manažery, najdete v tématu [správce vizualizace](../../mfc/visualization-manager.md).
 
-Tuto metodu použijte, chcete-li změnit správce vzhledu, která vaše aplikace používá.
+Tuto metodu použijte, chcete-li změnit vizuálního manažera, který vaše aplikace používá.
 
-##  <a name="setembossdisabledimage"></a>  CMFCVisualManager::SetEmbossDisabledImage
+##  <a name="setembossdisabledimage"></a>CMFCVisualManager::SetEmbossDisabledImage
 
-Povolí nebo zakáže embosované režim pro obrázky panelu nástrojů zakázané.
+Povolí nebo zakáže reliéfní režim pro zakázané obrázky na panelu nástrojů.
 
 ```
 void SetEmbossDisabledImage (BOOL bEmboss = TRUE);
@@ -5018,15 +5018,15 @@ void SetEmbossDisabledImage (BOOL bEmboss = TRUE);
 ### <a name="parameters"></a>Parametry
 
 *bEmboss*<br/>
-[in] Parametr logické hodnoty označující, jestli se má povolit embosované režim pro zakázané obrázky panelu nástrojů.
+pro Logický parametr, který označuje, zda má být povolen reliéfový režim pro zakázané obrázky panelu nástrojů.
 
 ### <a name="remarks"></a>Poznámky
 
-Použijte funkci [CMFCVisualManager::IsEmbossDisabledImage](#isembossdisabledimage) k určení, zda je povoleno embosované režimu.
+Pomocí funkce [CMFCVisualManager:: IsEmbossDisabledImage](#isembossdisabledimage) určete, zda je zapnutý režim reliéfu.
 
 ##  <a name="setfadeinactiveimage"></a>  CMFCVisualManager::SetFadeInactiveImage
 
-Povolí nebo zakáže vliv osvětlení pro neaktivní Image na nabídku nebo panel nástrojů.
+Povolí nebo zakáže efekt osvětlení pro neaktivní obrázky v nabídce nebo na panelu nástrojů.
 
 ```
 void SetFadeInactiveImage(BOOL bFade = TRUE);
@@ -5035,15 +5035,15 @@ void SetFadeInactiveImage(BOOL bFade = TRUE);
 ### <a name="parameters"></a>Parametry
 
 *bFade*<br/>
-[in] Parametr logické hodnoty, která určuje, jestli se má povolit osvětlení vliv.
+pro Logický parametr, který určuje, zda má být povolen efekt osvětlení.
 
 ### <a name="remarks"></a>Poznámky
 
-Tento ovládací prvky funkce určuje, zda se zobrazí neaktivní imagí barevně na nabídku nebo panel nástrojů. Pomocí této metody [CMFCVisualManager::IsFadeInactiveImage](#isfadeinactiveimage) k určení, zda je tato funkce povolena.
+Tato funkce určuje, zda se neaktivní obrázky zdají být v nabídce nebo na panelu nástrojů vybledlé. K určení, jestli je tato funkce povolená, použijte metodu [CMFCVisualManager:: IsFadeInactiveImage](#isfadeinactiveimage) .
 
-##  <a name="setmenuflatlook"></a>  CMFCVisualManager::SetMenuFlatLook
+##  <a name="setmenuflatlook"></a>CMFCVisualManager::SetMenuFlatLook
 
-Nastaví příznak určující, zda se nabídky tlačítka zobrazí bez stromové struktury. V opačném případě se zobrazí trojrozměrné.
+Nastaví příznak, který označuje, zda tlačítka nabídky vypadají jako ploché. V opačném případě se zobrazí trojrozměrné.
 
 ```
 void SetMenuFlatLook(BOOL bMenuFlatLook = TRUE);
@@ -5052,13 +5052,13 @@ void SetMenuFlatLook(BOOL bMenuFlatLook = TRUE);
 ### <a name="parameters"></a>Parametry
 
 *bMenuFlatLook*<br/>
-[in] Parametr logické hodnoty označující, zda se nabídky tlačítka zobrazí bez stromové struktury.
+pro Logický parametr, který označuje, zda tlačítka nabídky vypadají jako ploché.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato funkce není ve výchozím nastavení povolena.
+Tato funkce není ve výchozím nastavení povolená.
 
-##  <a name="setmenushadowdepth"></a>  CMFCVisualManager::SetMenuShadowDepth
+##  <a name="setmenushadowdepth"></a>CMFCVisualManager::SetMenuShadowDepth
 
 Nastaví šířku a výšku stínu nabídky.
 
@@ -5069,15 +5069,15 @@ void SetMenuShadowDepth(int nDepth);
 ### <a name="parameters"></a>Parametry
 
 *nDepth*<br/>
-[in] Celé číslo, které určuje hloubku stínové nabídky v pixelech.
+pro Celé číslo, které určuje hloubku stínu nabídky v pixelech.
 
 ### <a name="remarks"></a>Poznámky
 
 Výška a šířka stínu nabídky musí být identické. Výchozí hodnota je 7 pixelů.
 
-##  <a name="setshadowhighlightedimage"></a>  CMFCVisualManager::SetShadowHighlightedImage
+##  <a name="setshadowhighlightedimage"></a>CMFCVisualManager::SetShadowHighlightedImage
 
-Nastaví příznak určující, zda [cmfcvisualmanager –](../../mfc/reference/cmfcvisualmanager-class.md) zobrazí stíny zvýrazněné imagí.
+Nastaví příznak, který označuje, zda [CMFCVisualManager](../../mfc/reference/cmfcvisualmanager-class.md) zobrazuje stíny pro zvýrazněné obrázky.
 
 ```
 void SetShadowHighlightedImage(BOOL bShadow = TRUE);
@@ -5086,15 +5086,15 @@ void SetShadowHighlightedImage(BOOL bShadow = TRUE);
 ### <a name="parameters"></a>Parametry
 
 *bShadow*<br/>
-[in] Parametr logické hodnoty označující, zda správce vzhledu zobrazí stín pod zvýrazněné obrázky.
+pro Logický parametr, který označuje, zda vizuální manažer zobrazuje ve zvýrazněných obrázcích stín.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato funkce je ve výchozím nastavení zakázaná.
+Tato funkce je ve výchozím nastavení vypnutá.
 
 ## <a name="see-also"></a>Viz také:
 
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>
 [Třídy](../../mfc/reference/mfc-classes.md)<br/>
-[CMFCVisualManager::GetInstance](#getinstance)<br/>
+[CMFCVisualManager:: GetInstance](#getinstance)<br/>
 [Správce vizualizace](../../mfc/visualization-manager.md)

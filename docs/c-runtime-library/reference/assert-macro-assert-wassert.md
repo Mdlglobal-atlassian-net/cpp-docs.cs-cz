@@ -28,16 +28,16 @@ helpviewer_keywords:
 - assert function
 - assert macro
 ms.assetid: a9ca031a-648b-47a6-bdf1-65fc7399dd40
-ms.openlocfilehash: 7ac299213ba3de878f7cf2dc99b44c45273bc3b2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a2cc780fbc93aa66bd7fd613c3e155cda27eb7f9
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62341363"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69500340"
 ---
-# <a name="assert-macro-assert-wassert"></a>assert Macro, _assert, _wassert
+# <a name="assert-macro-_assert-_wassert"></a>assert Macro, _assert, _wassert
 
-Vyhodnotí výraz a, pokud je výsledek **false**, vytiskne diagnostickou zprávu a přeruší se, program.
+Vyhodnotí výraz a, pokud je výsledek **false**, vytiskne diagnostickou zprávu a program přeruší.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -59,35 +59,35 @@ void _wassert(
 
 ### <a name="parameters"></a>Parametry
 
-*Výraz*<br/>
-Skalární výraz, který (včetně výrazy ukazatelů), který se vyhodnotí na nenulovou hodnotu (**true**) nebo 0 (**false**).
+*vyjádření*<br/>
+Skalární výraz (včetně výrazů ukazatelů), který vyhodnocuje nenulovou hodnotu (**true**) nebo 0 (**false**).
 
 *message*<br/>
 Zpráva, která se má zobrazit
 
-*Název souboru*<br/>
-Název zdrojového souboru kontrolního výrazu se nezdařilo.
+*Bitmap*<br/>
+Název zdrojového souboru, ve kterém se kontrolní výraz nezdařil.
 
-*Řádek*<br/>
-Číslo řádku ve zdrojovém souboru neplatnost kontrolního výrazu.
+*Link*<br/>
+Číslo řádku ve zdrojovém souboru kontrolního výrazu, který selhal.
 
 ## <a name="remarks"></a>Poznámky
 
-**Vyhodnocení** – makro se obvykle používá k identifikaci logických chyb během vývoje aplikace. Použít k zastavení vykonávání programu, když dojde k neočekávané podmínky implementací *výraz* argument vyhodnotilo **false** pouze pokud program pracuje správně. Kontrolní výraz kontroly můžete vypnout v době kompilace definováním makro **NDEBUG**. Můžete vypnout **vyhodnocení** – makro beze změny zdrojových souborů s využitím **/DNDEBUG** možnost příkazového řádku. Můžete vypnout **vyhodnocení** makra ve zdrojovém kódu s použitím `#define NDEBUG` direktiv před \<assert.h > je součástí.
+Makro **Assert** se obvykle používá k identifikaci logických chyb během vývoje programu. Použijte ji k zastavení provádění programu, pokud dojde k neočekávaným podmínkám implementací argumentu *výrazu* pro vyhodnocení na **hodnotu false** pouze v případě, že program pracuje nesprávně. Kontroly kontrolního výrazu mohou být v době kompilace vypnuty definováním makra **NDEBUG**. Makro **kontrolního výrazu** můžete vypnout bez změny zdrojových souborů pomocí možnosti příkazového řádku **/DNDEBUG** . Makro **Assert** ve zdrojovém kódu můžete vypnout pomocí `#define NDEBUG` direktivy před \<Assert. h > je zahrnuto.
 
-**Vyhodnocení** – makro vytiskne diagnostiku zpráv při *výraz* vyhodnotí jako **false** (0) a volání [přerušit](abort.md) k ukončení programu pro spuštění. Pokud nebyla provedena žádná akce *výraz* je **true** (nenulový). Diagnostická zpráva obsahuje selhání výrazu název zdrojový soubor a číslo řádku kde kontrolní výraz je neplatný.
+Makro **Assert** vytiskne diagnostickou zprávu, když se *výraz* vyhodnotí jako **false** (0), a volání přeruší k ukončení provádění programu. [](abort.md) Pokud je *výraz* **true** (nenulový), není provedena žádná akce. Diagnostická zpráva obsahuje výraz, který selhal, název zdrojového souboru a číslo řádku, kde se kontrolní výraz nezdařil.
 
-Diagnostické zprávy je vytištěna v širokých znaků. Proto bude fungovat podle očekávání, i když nejsou znaky kódování Unicode ve výrazu.
+Diagnostická zpráva se tiskne v rámci velkých znaků. Proto bude fungovat podle očekávání i v případě, že ve výrazu jsou znaky Unicode.
 
-Cíl diagnostické zprávy závisí na typu aplikace, volá se, rutina. Konzolové aplikace vždy zobrazí zpráva prostřednictvím **stderr**. V aplikaci založené na Windows **vyhodnocení** volá Windows [MessageBox](/windows/desktop/api/winuser/nf-winuser-messagebox) funkce k vytvoření okna zprávy pro zobrazení zprávy spolu s **OK** tlačítko. Když uživatel klepne **OK**, program okamžitě přeruší.
+Cíl diagnostické zprávy závisí na typu aplikace, která rutinu volala. Konzolové aplikace vždy obdrží zprávu přes **stderr**. V aplikaci pro Windows vyhodnotí volání funkce [MessageBox](/windows/win32/api/winuser/nf-winuser-messagebox) systému Windows k vytvoření okna se zprávou pro zobrazení zprávy s tlačítkem **OK** . Když uživatel klikne na **tlačítko OK**, program se okamžitě přeruší.
 
-Když je aplikace spojena s ladicí verzí knihovny run-time **vyhodnocení** vytvoří okno se zprávou s tři tlačítka: **Přerušit**, **opakujte**, a **Ignorovat**. Pokud uživatel klikne **přerušit**, program okamžitě přeruší. Pokud uživatel klikne **opakujte**, se nazývá ladicího programu a uživatele můžete ladit program, pokud je povoleno ladění just-in-time (JIT). Pokud uživatel klikne **Ignorovat**, **vyhodnocení** pokračovat normální spuštění: vytvoření okna se zprávou s **OK** tlačítko. Všimněte si, že kliknete na **Ignorovat** při existenci chybového stavu může vést k nedefinovanému chování.
+Pokud je aplikace propojena s ladicí verzí knihoven za běhu, **vyhodnocení** vytvoří okno se zprávou se třemi tlačítky: **Přerušit**, **Opakovat**a **Ignorovat**. Pokud uživatel kliknena možnost přerušit, program se okamžitě zruší. Pokud uživatel klikne na tlačítko **Opakovat**, bude volán ladicí program a uživatel může ladit program, pokud je povoleno ladění JIT (just-in-time). Pokud uživatel klikne na možnost **Ignorovat**, **kontrolní** výraz pokračuje s jeho normálním spuštěním: vytvoření okna se zprávou pomocí tlačítka **OK** . Všimněte si, že kliknutí na **Ignorovat** , pokud existuje chybový stav, může mít za následek nedefinované chování.
 
 Další informace o ladění CRT naleznete v tématu [techniky ladění CRT](/visualstudio/debugger/crt-debugging-techniques).
 
-**_Assert** a **_wassert** funkce jsou vnitřní funkce CRT. Pomáhají minimalizovat kód v objektové soubory potřebné k podpoře kontrolní výrazy. Nedoporučujeme přímo volat tyto funkce.
+Funkce **_ASSERT** a **_wassert** jsou interní funkce CRT. Pomůžou minimalizovat kód vyžadovaný v souborech objektů pro podporu kontrolních výrazů. Nedoporučujeme tyto funkce volat přímo.
 
-**Vyhodnocení** – makro je povolený v ladění a vydání verze běhových knihoven C při **NDEBUG** není definován. Když **NDEBUG** je definován, makro je k dispozici, ale její argument se nevyhodnocuje a nemá žádný vliv. Pokud je povolena, **vyhodnocení** volání maker **_wassert** pro jeho implementaci. Ostatní makra kontrolní výraz [_ASSERT](assert-asserte-assert-expr-macros.md), [_asserte –](assert-asserte-assert-expr-macros.md) a [_ASSERT_EXPR](assert-asserte-assert-expr-macros.md), jsou také k dispozici, ale jenom vyhodnotit výrazy předané k nim, když [_DEBUG](../../c-runtime-library/debug.md) makro bylo definováno a které jsou právě kód spojený s ladicí verze knihoven C run-time.
+Makro **Assert** je povoleno v verzích verze i ladění běhových knihoven jazyka C, pokud není definován **NDEBUG** . Je-li definována **NDEBUG** , je makro k dispozici, ale nevyhodnocuje jeho argument a nemá žádný vliv. Pokud je povoleno, makro **kontrolního výrazu** zavolá **_wassert** pro jeho implementaci. K dispozici jsou také další makra kontrolního výrazu, [_ASSERT](assert-asserte-assert-expr-macros.md), [_ASSERTE](assert-asserte-assert-expr-macros.md) a [_ASSERT_EXPR](assert-asserte-assert-expr-macros.md), ale vyhodnocují pouze ty výrazy, které jsou předány, když je definováno makro [_DEBUG](../../c-runtime-library/debug.md) a když jsou v kódu propojeném s laděním. verze knihoven run-time jazyka C.
 
 ## <a name="requirements"></a>Požadavky
 
@@ -95,11 +95,11 @@ Další informace o ladění CRT naleznete v tématu [techniky ladění CRT](/vi
 |-------------|---------------------|
 |**assert**, **_wassert**|\<assert.h>|
 
-Podpis metody **_assert** funkce není k dispozici v hlavičkovém souboru. Podpis metody **_wassert** funkce je dostupná jenom při **NDEBUG** makro není definované.
+Podpis funkce **_ASSERT** není v hlavičkovém souboru k dispozici. Signatura funkce **_wassert** je k dispozici pouze v případě, že není definováno makro **NDEBUG** .
 
 ## <a name="example"></a>Příklad
 
-V tomto programu **analyze_string** funkce používá **vyhodnocení** – makro testování několik podmínek souvisejících na řetězec a délka. Pokud selže kterákoli z podmínek, program vytiskne zprávu s oznámením, co způsobilo selhání.
+V tomto programu používá funkce **analyze_string** makro **Assert** k testování několika podmínek souvisejících s řetězcem a délkou. Pokud některá z podmínek selže, program vytiskne zprávu s informacemi o tom, co způsobilo chybu.
 
 ```C
 // crt_assert.c
@@ -132,7 +132,7 @@ void analyze_string( char * string )
 }
 ```
 
-Program generuje tento výstup:
+Program vygeneruje tento výstup:
 
 ```Output
 Analyzing string 'abc'
@@ -140,13 +140,13 @@ Analyzing string '(null)'
 Assertion failed: string != NULL, file crt_assert.c, line 25
 ```
 
-Po selhání kontrolního výrazu, v závislosti na verzi operačního systému a knihovny run-time mohou se zobrazit okno se zprávou, která obsahuje přibližně takto:
+Po selhání kontrolního výrazu v závislosti na verzi operačního systému a běhové knihovny se může zobrazit okno se zprávou, které obsahuje něco podobného jako následující:
 
 ```Output
 A problem caused the program to stop working correctly. Windows will close the program and notify you if a solution is available.
 ```
 
-Pokud ladicí program je nainstalovali, zvolte **ladění** tlačítko spuštění ladicího programu, nebo **ukončit program** ukončíte.
+Pokud je nainstalován ladicí program, klikněte na tlačítko **ladit** a spusťte ladicí program nebo **Ukončete program** , který chcete ukončit.
 
 ## <a name="see-also"></a>Viz také:
 

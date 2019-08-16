@@ -1,21 +1,21 @@
 ---
-title: async_uuid – (C++ atributů COM)
+title: async_uuid (C++ atribut com)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.async_uuid
 helpviewer_keywords:
 - async_uuid attribute
 ms.assetid: 235cb0d7-be58-4dd9-983c-e2a21bbc42c6
-ms.openlocfilehash: 4c2bca9165d8b23f8cfa4f0f5523c882fd2f52bf
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 70e73a6286a4b6adaba20b5a35dc16d8389b1948
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62364971"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69501865"
 ---
-# <a name="asyncuuid"></a>async_uuid
+# <a name="async_uuid"></a>async_uuid
 
-Určuje UUID, který nasměruje definovat synchronní a asynchronní verze rozhraní modelu COM kompilátoru MIDL.
+Určuje identifikátor UUID, který přesměruje kompilátor MIDL tak, aby definoval synchronní i asynchronní verzi rozhraní modelu COM.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -26,11 +26,11 @@ Určuje UUID, který nasměruje definovat synchronní a asynchronní verze rozhr
 ### <a name="parameters"></a>Parametry
 
 *uuid*<br/>
-Identifikátor UUID, který identifikuje verzi rozhraní.
+Identifikátor UUID, který určuje verzi rozhraní.
 
 ## <a name="remarks"></a>Poznámky
 
-**Async_uuid –** C++ atribut má stejné funkce jako [async_uuid –](/windows/desktop/Midl/async-uuid) atribut MIDL.
+Atribut **async_uuid** C++ má stejné funkce jako atribut [async_uuid](/windows/win32/Midl/async-uuid) MIDL.
 
 ## <a name="example"></a>Příklad
 
@@ -48,16 +48,16 @@ __interface ICustom {
 
 ## <a name="requirements"></a>Požadavky
 
-### <a name="attribute-context"></a>Atribut kontextu
+### <a name="attribute-context"></a>Kontext atributu
 
 |||
 |-|-|
 |**Platí pro**|`interface`|
-|**Opakovatelné**|Ne|
-|**Vyžadované atributy**|Žádné|
-|**Neplatné atributy**|**dual**, **dispinterface**|
+|**REPEATABLE**|Ne|
+|**Požadované atributy**|Žádné|
+|**Neplatné atributy**|**duální**, **odesílající**|
 
-Další informace o kontexty atributů najdete v tématu [kontexty atributů](cpp-attributes-com-net.md#contexts).
+Další informace o kontextech atributů naleznete v tématu kontexty [atributů](cpp-attributes-com-net.md#contexts).
 
 ## <a name="see-also"></a>Viz také:
 

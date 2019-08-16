@@ -8,40 +8,40 @@ helpviewer_keywords:
 - Clipboard, programming
 - transferring data
 ms.assetid: a71b2824-1f14-4914-8816-54578d73ad4e
-ms.openlocfilehash: 5814b2fdfc7fbcaca00037cc64dd71aa27d65cc3
-ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
+ms.openlocfilehash: d405a7bbe15d2658380e19c1c908e57f2e40a574
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66504615"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69508926"
 ---
 # <a name="clipboard"></a>Schránka
 
-Tato řada článků vysvětluje, jak implementovat podporu pro Windows schránky v aplikacích MFC. Schránka Windows se používá dvěma způsoby:
+Tato rodina článků vysvětluje, jak implementovat podporu pro schránku Windows v aplikacích MFC. Schránka Windows se používá dvěma způsoby:
 
-- Implementace standardních příkazů nabídky upravit, jako je vyjmutí, kopírování a vložení.
+- Implementace standardních příkazů nabídky pro úpravy, jako je například vyjmutí, kopírování a vložení.
 
-- Implementace jednotné data transfer přetažením a přetažení (OLE).
+- Implementace jednotného přenosu dat pomocí přetažení (OLE)
 
-Schránka je standardní Windows metodu přenosu dat mezi zdrojem a cílem. Může být rovněž velmi užitečný v operacích OLE. S nástupem OLE existují dva mechanismy schránky ve Windows. Standardní rozhraní API schránky Windows je stále k dispozici, ale byla doplněna mechanismus pro přenos dat OLE. OLE jednotný přenos dat (UDT) podporuje vyjmutí, kopírování a vložení s schránky a přetažením.
+Schránka je standardní metodou Windows přenosu dat mezi zdrojem a cílem. Může být také velmi užitečné v operacích OLE. U nástupem technologie OLE existují dva mechanismy schránky ve Windows. Standardní rozhraní Windows schránka je stále k dispozici, ale bylo doplněno mechanismem přenosu dat OLE. Rozhraní UDT (OLE Uniform Data Transfer) podporuje vyjmutí, kopírování a vložení ve schránce a přetažení.
 
-Schránka je systémová služba sdílí celou relaci Windows, takže není nutné popisovač nebo své vlastní třídě. Správa pomocí členské funkce třídy do schránky [CWnd](../mfc/reference/cwnd-class.md).
+Schránka je systémová služba sdílená celou relací Windows, takže nemá popisovač ani třídu vlastního typu. Schránku můžete spravovat prostřednictvím členských funkcí třídy [CWnd](../mfc/reference/cwnd-class.md).
 
-## <a name="what-do-you-want-to-know-more-about"></a>Co chcete zjistit více informací
+## <a name="what-do-you-want-to-know-more-about"></a>K čemu chcete získat další informace
 
 - [Kdy používat jednotlivé mechanismy schránky](../mfc/clipboard-when-to-use-each-clipboard-mechanism.md)
 
-- [Pomocí rozhraní API pro tradiční schránky Windows](../mfc/clipboard-using-the-windows-clipboard.md)
+- [Používání tradičních rozhraní Windows schránka API](../mfc/clipboard-using-the-windows-clipboard.md)
 
 - [Použití mechanismu schránky OLE](../mfc/clipboard-using-the-ole-clipboard-mechanism.md)
 
 - [Kopírování a vkládání dat](../mfc/clipboard-copying-and-pasting-data.md)
 
-- [Přidání dalších formátů](../mfc/clipboard-adding-other-formats.md)
+- [Přidávání dalších formátů](../mfc/clipboard-adding-other-formats.md)
 
-- [Schránka Windows](/windows/desktop/dataxchg/clipboard)
+- [Schránka Windows](/windows/win32/dataxchg/clipboard)
 
-- [Provádění operace přetažení (OLE)](../mfc/drag-and-drop-ole.md)
+- [Implementace přetažení (OLE)](../mfc/drag-and-drop-ole.md)
 
 ## <a name="see-also"></a>Viz také:
 

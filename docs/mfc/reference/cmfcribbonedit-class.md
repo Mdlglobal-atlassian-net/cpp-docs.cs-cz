@@ -1,5 +1,5 @@
 ---
-title: Cmfcribbonedit – třída
+title: CMFCRibbonEdit – třída
 ms.date: 11/04/2016
 f1_keywords:
 - CMFCRibbonEdit
@@ -73,16 +73,16 @@ helpviewer_keywords:
 - CMFCRibbonEdit [MFC], SetTextAlign
 - CMFCRibbonEdit [MFC], SetWidth
 ms.assetid: 9b85f1f2-446b-454e-9af9-104fdad8a897
-ms.openlocfilehash: 80ee43ae32416f9f62df419c4afbd46a0aa63cc8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4f973074fbec3d04b1c1a74852b02ff2564217c1
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62237087"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69504953"
 ---
-# <a name="cmfcribbonedit-class"></a>Cmfcribbonedit – třída
+# <a name="cmfcribbonedit-class"></a>CMFCRibbonEdit – třída
 
-Implementuje ovládací prvek úprav, který se nachází na panel pásu karet.
+Implementuje ovládací prvek pro úpravy, který je umístěn na panelu pásu karet.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -94,63 +94,63 @@ class CMFCRibbonEdit : public CMFCRibbonButton
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
-|[CMFCRibbonEdit::CMFCRibbonEdit](#cmfcribbonedit)|Vytvoří `CMFCRibbonEdit` objektu.|
+|[CMFCRibbonEdit::CMFCRibbonEdit](#cmfcribbonedit)|`CMFCRibbonEdit` Vytvoří objekt.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
-|[CMFCRibbonEdit::CanBeStretched](#canbestretched)|Určuje, zda výšku `CMFCRibbonEdit` vertikálně zvýšit ovládacího prvku na výšku řádku pásu karet.|
-|[CMFCRibbonEdit::CMFCRibbonEdit](#cmfcribbonedit)|Vytvoří `CMFCRibbonEdit` objektu.|
-|[CMFCRibbonEdit::CopyFrom](#copyfrom)|Zkopíruje stav zadaného `CMFCRibbonEdit` objektů na aktuální `CMFCRibbonEdit` objektu.|
-|[CMFCRibbonEdit::CreateEdit](#createedit)|Vytvoří nové textové pole pro `CMFCRibbonEdit` objektu.|
-|[CMFCRibbonEdit::DestroyCtrl](#destroyctrl)|Odstraní `CMFCRibbonEdit` objektu.|
-|[CMFCRibbonEdit::DropDownList](#dropdownlist)|Rozbalí pole se seznamem.|
+|[CMFCRibbonEdit::CanBeStretched](#canbestretched)|Označuje, zda se výška `CMFCRibbonEdit` ovládacího prvku může zvětšit svisle na výšku řádku pásu karet.|
+|[CMFCRibbonEdit::CMFCRibbonEdit](#cmfcribbonedit)|`CMFCRibbonEdit` Vytvoří objekt.|
+|[CMFCRibbonEdit::CopyFrom](#copyfrom)|Zkopíruje stav zadaného `CMFCRibbonEdit` objektu do aktuálního `CMFCRibbonEdit` objektu.|
+|[CMFCRibbonEdit::CreateEdit](#createedit)|Vytvoří nové textové pole pro `CMFCRibbonEdit` objekt.|
+|[CMFCRibbonEdit::DestroyCtrl](#destroyctrl)|`CMFCRibbonEdit` Odstraní objekt.|
+|[CMFCRibbonEdit::DropDownList](#dropdownlist)|Zruší seznam.|
 |[CMFCRibbonEdit::EnableSpinButtons](#enablespinbuttons)|Povolí a nastaví rozsah číselníku pro textové pole.|
-|[CMFCRibbonEdit::GetCompactSize](#getcompactsize)|Načte compact velikost `CFMCRibbonEdit` objektu.|
+|[CMFCRibbonEdit::GetCompactSize](#getcompactsize)|Načte kompaktní velikost `CFMCRibbonEdit` objektu.|
 |[CMFCRibbonEdit::GetEditText](#getedittext)|Načte text v textovém poli.|
-|[CMFCRibbonEdit::GetIntermediateSize](#getintermediatesize)|Načte zprostředkující velikost `CMFCRibbonEdit` objektu.|
+|[CMFCRibbonEdit::GetIntermediateSize](#getintermediatesize)|Načte mezilehlé velikosti `CMFCRibbonEdit` objektu.|
 |[CMFCRibbonEdit::GetTextAlign](#gettextalign)|Načte zarovnání textu v textovém poli.|
-|[CMFCRibbonEdit::GetWidth](#getwidth)|Načte šířka v pixelech, o `CMFCRibbonEdit` ovládacího prvku.|
-|[CMFCRibbonEdit::HasCompactMode](#hascompactmode)|Určuje, zda pro velikost zobrazení `CMFCRibbonEdit` ovládací prvek může být compact.|
-|[CMFCRibbonEdit::HasFocus](#hasfocus)|Určuje, zda `CMFCRIbbonEdit` ovládací prvek má fokus.|
-|[CMFCRibbonEdit::HasLargeMode](#haslargemode)|Určuje, zda pro velikost zobrazení `CMFCRibbonEdit` ovládacího prvku mohou být velké.|
-|[CMFCRibbonEdit::HasSpinButtons](#hasspinbuttons)|Označuje, jestli se do textového pole typu číselník.|
-|[CMFCRibbonEdit::IsHighlighted](#ishighlighted)|Určuje, zda `CMFCRibbonEdit` zvýrazněný ovládací prvek.|
-|[CMFCRibbonEdit::OnAfterChangeRect](#onafterchangerect)|Volá se rozhraním, když dimenze zobrazovací obdélník pro `CMFCRibbonEdit` řízení změn.|
-|[CMFCRibbonEdit::OnDraw](#ondraw)|Volá se rozhraním, chcete-li nakreslit `CMFCRibbonEdit` ovládacího prvku.|
-|[CMFCRibbonEdit::OnDrawLabelAndImage](#ondrawlabelandimage)|Volá se rozhraním, aby vykreslení popisku a obrázků pro `CMFCRibbonEdit` ovládacího prvku.|
-|[CMFCRibbonEdit::OnDrawOnList](#ondrawonlist)|Volá se rozhraním, chcete-li nakreslit `CMFCRibbonEdit` ovládací prvek v seznamu příkazů.|
-|[CMFCRibbonEdit::OnEnable](#onenable)|Volá se rozhraním, které chcete povolit nebo zakázat `CMFCRibbonEdit` ovládacího prvku.|
-|[CMFCRibbonEdit::OnHighlight](#onhighlight)|Volá se rozhraním, když ukazatel myši vstoupí do nebo opustí hranice `CMFCRibbonEdit` ovládacího prvku.|
-|[CMFCRibbonEdit::OnKey](#onkey)|Volá se rozhraním, když uživatel stiskne popisek tlačítka a `CMFCRibbonEdit` ovládací prvek má fokus.|
-|[CMFCRibbonEdit::OnLButtonDown](#onlbuttondown)|Volá se rozhraním, aby aktualizace `CMFCRibbonEdit` ovládací prvek, když uživatel stiskne levé tlačítko myši v ovládacím prvku.|
+|[CMFCRibbonEdit:: getwidth](#getwidth)|Načte šířku `CMFCRibbonEdit` ovládacího prvku v pixelech.|
+|[CMFCRibbonEdit::HasCompactMode](#hascompactmode)|Označuje, zda může být velikost zobrazení `CMFCRibbonEdit` pro ovládací prvek komprimována.|
+|[CMFCRibbonEdit::HasFocus](#hasfocus)|Určuje, zda `CMFCRIbbonEdit` má ovládací prvek fokus.|
+|[CMFCRibbonEdit::HasLargeMode](#haslargemode)|Označuje, zda velikost zobrazení pro `CMFCRibbonEdit` ovládací prvek může být velká.|
+|[CMFCRibbonEdit::HasSpinButtons](#hasspinbuttons)|Označuje, zda je v textovém poli tlačítko číselníku.|
+|[CMFCRibbonEdit::IsHighlighted](#ishighlighted)|Označuje, zda `CMFCRibbonEdit` je ovládací prvek zvýrazněn.|
+|[CMFCRibbonEdit::OnAfterChangeRect](#onafterchangerect)|Volá se rozhraním, když se změní rozměry obdélníku `CMFCRibbonEdit` zobrazení ovládacího prvku.|
+|[CMFCRibbonEdit::OnDraw](#ondraw)|Volá se rozhraním, aby se `CMFCRibbonEdit` nakreslil ovládací prvek.|
+|[CMFCRibbonEdit::OnDrawLabelAndImage](#ondrawlabelandimage)|Volá se rozhraním, aby se nakreslil popisek a obrázek `CMFCRibbonEdit` ovládacího prvku.|
+|[CMFCRibbonEdit::OnDrawOnList](#ondrawonlist)|Volá se rozhraním, aby se `CMFCRibbonEdit` ovládací prvek nakreslil v seznamu příkazů.|
+|[CMFCRibbonEdit::OnEnable](#onenable)|Volá se rozhraním, aby se povolil nebo `CMFCRibbonEdit` zakázal ovládací prvek.|
+|[CMFCRibbonEdit:: inzvýrazňovat](#onhighlight)|Volá se rozhraním, když ukazatel vloží nebo opustí hranice `CMFCRibbonEdit` ovládacího prvku.|
+|[CMFCRibbonEdit::OnKey](#onkey)|Volá se rozhraním, když uživatel stiskne KeyTip a `CMFCRibbonEdit` ovládací prvek má fokus.|
+|[CMFCRibbonEdit::OnLButtonDown](#onlbuttondown)|Volá se rozhraním, aby se `CMFCRibbonEdit` aktualizoval ovládací prvek, když uživatel stiskne levé tlačítko myši na ovládacím prvku.|
 |[CMFCRibbonEdit::OnLButtonUp](#onlbuttonup)|Volá se rozhraním, když uživatel uvolní levé tlačítko myši.|
-|[CMFCRibbonEdit::OnRTLChanged](#onrtlchanged)|Volá se rozhraním, aby aktualizace `CMFCRibbonEdit` ovládací prvek při změně směr rozložení.|
-|[CMFCRibbonEdit::OnShow](#onshow)|Volá se rozhraním, zobrazení nebo skrytí `CMFCRibbonEdit` ovládacího prvku.|
-|[CMFCRibbonEdit::Redraw](#redraw)|Aktualizuje zobrazení `CMFCRibbonEdit` ovládacího prvku.|
-|[CMFCRibbonEdit::SetACCData](#setaccdata)|Nastaví data pro usnadnění pro `CMFCRibbonEdit` objektu.|
+|[CMFCRibbonEdit::OnRTLChanged](#onrtlchanged)|Volá se rozhraním, aby se `CMFCRibbonEdit` aktualizoval ovládací prvek, když se změní směr rozvržení.|
+|[CMFCRibbonEdit::OnShow](#onshow)|Volá se rozhraním pro zobrazení nebo skrytí `CMFCRibbonEdit` ovládacího prvku.|
+|[CMFCRibbonEdit:: redraw](#redraw)|Aktualizuje zobrazení `CMFCRibbonEdit` ovládacího prvku.|
+|[CMFCRibbonEdit::SetACCData](#setaccdata)|Nastaví data přístupnosti pro `CMFCRibbonEdit` objekt.|
 |[CMFCRibbonEdit::SetEditText](#setedittext)|Nastaví text v textovém poli.|
 |[CMFCRibbonEdit::SetTextAlign](#settextalign)|Nastaví zarovnání textu v textovém poli.|
-|[CMFCRibbonEdit::SetWidth](#setwidth)|Nastavuje šířku do textového pole u `CMFCRibbonEdit` ovládacího prvku.|
+|[CMFCRibbonEdit::SetWidth](#setwidth)|Nastaví šířku textového pole pro `CMFCRibbonEdit` ovládací prvek.|
 
 ## <a name="remarks"></a>Poznámky
 
 ## <a name="example"></a>Příklad
 
-Následující příklad ukazuje, jak vytvořit `CMFCRibbonEdit` objekt zobrazení tlačítka typu číselník vedle ovládacího prvku pro úpravy a nastavit text ovládacího prvku pro úpravy. Tento fragment kódu je součástí [MS Office 2007 demonstrační ukázka](../../overview/visual-cpp-samples.md).
+Následující příklad ukazuje, jak vytvořit `CMFCRibbonEdit` objekt, Zobrazit tlačítka vedle ovládacího prvku pro úpravy a nastavit text ovládacího prvku pro úpravy. Tento fragment kódu je součástí [ukázky ukázky sady MS Office 2007](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_MSOffice2007Demo#7](../../mfc/reference/codesnippet/cpp/cmfcribbonedit-class_1.cpp)]
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** afxRibbonEdit.h
+**Záhlaví:** afxRibbonEdit. h
 
-##  <a name="canbestretched"></a>  CMFCRibbonEdit::CanBeStretched
+##  <a name="canbestretched"></a>CMFCRibbonEdit::CanBeStretched
 
-Určuje, zda výšku [cmfcribbonedit –](../../mfc/reference/cmfcribbonedit-class.md) vertikálně zvýšit ovládacího prvku na výšku řádku pásu karet.
+Určuje, zda se výška ovládacího prvku [CMFCRibbonEdit](../../mfc/reference/cmfcribbonedit-class.md) může zvětšit svisle na výšku řádku pásu karet.
 
 ```
 virtual BOOL CanBeStretched();
@@ -158,13 +158,13 @@ virtual BOOL CanBeStretched();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-vždy vrátí hodnotu FALSE.
+Vždy vrátí hodnotu FALSE.
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="cmfcribbonedit"></a>  CMFCRibbonEdit::CMFCRibbonEdit
+##  <a name="cmfcribbonedit"></a>CMFCRibbonEdit::CMFCRibbonEdit
 
-Vytvoří [cmfcribbonedit –](../../mfc/reference/cmfcribbonedit-class.md) objektu.
+Vytvoří objekt [CMFCRibbonEdit](../../mfc/reference/cmfcribbonedit-class.md) .
 
 ```
 CMFCRibbonEdit(
@@ -179,24 +179,24 @@ CMFCRibbonEdit();
 ### <a name="parameters"></a>Parametry
 
 *nID*<br/>
-[in] Pro ID příkazu `CMFCRibbonEdit` ovládacího prvku.
+pro ID příkazu pro `CMFCRibbonEdit` ovládací prvek
 
 *nWidth*<br/>
-[in] Šířka v pixelech, v textovém poli pro `CMFCRibbonEdit` ovládacího prvku.
+pro Šířka textového pole `CMFCRibbonEdit` ovládacího prvku v pixelech
 
 *lpszLabel*<br/>
-[in] Popisek `CMFCRibbonEdit` ovládacího prvku.
+pro Popisek `CMFCRibbonEdit` ovládacího prvku
 
 *nImage*<br/>
-[in] Index malý obrázek pro `CMFCRibbonEdit` ovládacího prvku. Kolekce malé obrázky se spravuje pomocí nadřazené kategorie pásu karet.
+pro Index malého obrázku, který má být použit pro `CMFCRibbonEdit` ovládací prvek Kolekce malých obrázků je udržována nadřazenou kategorií pásu karet.
 
 ### <a name="remarks"></a>Poznámky
 
 `CMFCRibbonEdit` Ovládací prvek nepoužívá velký obrázek.
 
-##  <a name="copyfrom"></a>  CMFCRibbonEdit::CopyFrom
+##  <a name="copyfrom"></a>CMFCRibbonEdit::CopyFrom
 
-Zkopíruje stav zadaného [cmfcribbonedit –](../../mfc/reference/cmfcribbonedit-class.md) objektů na aktuální [cmfcribbonedit –](../../mfc/reference/cmfcribbonedit-class.md) objektu.
+Zkopíruje stav zadaného objektu [CMFCRibbonEdit](../../mfc/reference/cmfcribbonedit-class.md) do aktuálního objektu [CMFCRibbonEdit](../../mfc/reference/cmfcribbonedit-class.md) .
 
 ```
 virtual void CopyFrom(const CMFCRibbonBaseElement& src);
@@ -205,15 +205,15 @@ virtual void CopyFrom(const CMFCRibbonBaseElement& src);
 ### <a name="parameters"></a>Parametry
 
 *src*<br/>
-[in] Zdroj `CMFCRibbonEdit` objektu.
+pro Zdrojový `CMFCRibbonEdit` objekt.
 
 ### <a name="remarks"></a>Poznámky
 
-*Src* parametr musí být typu `CMFCRibbonEdit`.
+Parametr *Src* musí být typu `CMFCRibbonEdit`.
 
-##  <a name="createedit"></a>  CMFCRibbonEdit::CreateEdit
+##  <a name="createedit"></a>CMFCRibbonEdit::CreateEdit
 
-Vytvoří nové textové pole pro [cmfcribbonedit –](../../mfc/reference/cmfcribbonedit-class.md) objektu.
+Vytvoří nové textové pole pro objekt [CMFCRibbonEdit](../../mfc/reference/cmfcribbonedit-class.md) .
 
 ```
 virtual CMFCRibbonRichEditCtrl* CreateEdit(
@@ -224,20 +224,20 @@ virtual CMFCRibbonRichEditCtrl* CreateEdit(
 ### <a name="parameters"></a>Parametry
 
 *pWndParent*<br/>
-[in] Ukazatel do nadřazeného okna `CMFCRibbonEdit` objektu.
+pro Ukazatel na nadřazené okno `CMFCRibbonEdit` objektu.
 
 *dwEditStyle*<br/>
-[in] Určuje styl do textového pole. Styly oken uvedených v části poznámky s můžete kombinovat [styly ovládacího prvku pro úpravy](/windows/desktop/Controls/edit-control-styles) , které jsou popsány v sadě Windows SDK.
+pro Určuje styl textového pole. Můžete zkombinovat styly oken uvedené v části poznámky pomocí [stylů textových ovládacích prvků](/windows/win32/Controls/edit-control-styles) , které jsou popsány v Windows SDK.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Ukazatel na nové textové pole, pokud metoda byla úspěšná. v opačném případě hodnota NULL.
+Ukazatel na nové textové pole, pokud byla metoda úspěšná; v opačném případě hodnota NULL.
 
 ### <a name="remarks"></a>Poznámky
 
-Potlačí tuto metodu v odvozené třídě k vytvoření vlastní textové pole.
+Přepsáním této metody v odvozené třídě vytvoříte vlastní textové pole.
 
-Můžete použít následující [styly oken](../../mfc/reference/styles-used-by-mfc.md#window-styles) do textového pole:
+V textovém poli můžete použít následující [styly oken](../../mfc/reference/styles-used-by-mfc.md#window-styles) :
 
 - **WS_CHILD**
 
@@ -249,9 +249,9 @@ Můžete použít následující [styly oken](../../mfc/reference/styles-used-by
 
 - **WS_TABSTOP**
 
-##  <a name="destroyctrl"></a>  CMFCRibbonEdit::DestroyCtrl
+##  <a name="destroyctrl"></a>CMFCRibbonEdit::D estroyCtrl
 
-Odstraní [cmfcribbonedit –](../../mfc/reference/cmfcribbonedit-class.md) objektu.
+Odstraní objekt [CMFCRibbonEdit](../../mfc/reference/cmfcribbonedit-class.md) .
 
 ```
 virtual void DestroyCtrl();
@@ -259,9 +259,9 @@ virtual void DestroyCtrl();
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="dropdownlist"></a>  CMFCRibbonEdit::DropDownList
+##  <a name="dropdownlist"></a>CMFCRibbonEdit::D ropDownList
 
-Rozbalí pole se seznamem.
+Zruší seznam.
 
 ```
 virtual void DropDownList();
@@ -269,9 +269,9 @@ virtual void DropDownList();
 
 ### <a name="remarks"></a>Poznámky
 
-Ve výchozím nastavení tato metoda nemá žádný účinek. Potlačí tuto metodu za účelem rozevírací seznam pole se seznamem.
+Ve výchozím nastavení tato metoda neprovádí žádnou akci. Tuto metodu přepište, pokud chcete rozevírací seznam vyřadit.
 
-##  <a name="enablespinbuttons"></a>  CMFCRibbonEdit::EnableSpinButtons
+##  <a name="enablespinbuttons"></a>CMFCRibbonEdit::EnableSpinButtons
 
 Povolí a nastaví rozsah číselníku pro textové pole.
 
@@ -284,18 +284,18 @@ void EnableSpinButtons(
 ### <a name="parameters"></a>Parametry
 
 *nMin*<br/>
-[in] Minimální hodnotu číselníku.
+pro Minimální hodnota tlačítka číselníku
 
-*nMax*<br/>
-[in] Maximální hodnotu číselníku.
+*Nmaximum*<br/>
+pro Maximální hodnota tlačítka číselníku
 
 ### <a name="remarks"></a>Poznámky
 
-Číselníků zobrazení nahoru a Šipka dolů a umožňují uživatelům procházení pevnou sadu hodnot.
+Tlačítka se zobrazují se šipkou nahoru a dolů a umožňují uživatelům přesouvat pevně danou sadu hodnot.
 
-##  <a name="getcompactsize"></a>  CMFCRibbonEdit::GetCompactSize
+##  <a name="getcompactsize"></a>CMFCRibbonEdit::GetCompactSize
 
-Načte compact velikost [cmfcribbonedit –](../../mfc/reference/cmfcribbonedit-class.md) objektu.
+Načte kompaktní velikost objektu [CMFCRibbonEdit](../../mfc/reference/cmfcribbonedit-class.md) .
 
 ```
 virtual CSize GetCompactSize(CDC* pDC);
@@ -304,7 +304,7 @@ virtual CSize GetCompactSize(CDC* pDC);
 ### <a name="parameters"></a>Parametry
 
 *pDC*<br/>
-[in] Ukazatel na kontext zařízení pro `CMFCRibbonEdit` objektu.
+pro Ukazatel na kontext zařízení pro `CMFCRibbonEdit` objekt.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -312,7 +312,7 @@ Kompaktní velikost `CMFCRibbonEdit` objektu.
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="getedittext"></a>  CMFCRibbonEdit::GetEditText
+##  <a name="getedittext"></a>CMFCRibbonEdit::GetEditText
 
 Načte text v textovém poli.
 
@@ -322,13 +322,13 @@ CString GetEditText() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Text v textovém poli.
+Text v textovém poli
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="getintermediatesize"></a>  CMFCRibbonEdit::GetIntermediateSize
+##  <a name="getintermediatesize"></a>CMFCRibbonEdit::GetIntermediateSize
 
-Načte zprostředkující velikost [cmfcribbonedit –](../../mfc/reference/cmfcribbonedit-class.md) objektu.
+Načte mezilehlé velikosti objektu [CMFCRibbonEdit](../../mfc/reference/cmfcribbonedit-class.md) .
 
 ```
 virtual CSize GetIntermediateSize(CDC* pDC);
@@ -337,15 +337,15 @@ virtual CSize GetIntermediateSize(CDC* pDC);
 ### <a name="parameters"></a>Parametry
 
 *pDC*<br/>
-[in] Ukazatel na kontext zařízení pro `CMFCRibbonEdit` objektu.
+pro Ukazatel na kontext zařízení pro `CMFCRibbonEdit` objekt.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Zprostředkující velikost `CMFCRibbonEdit` objektu.
+Střední velikost `CMFCRibbonEdit` objektu.
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="gettextalign"></a>  CMFCRibbonEdit::GetTextAlign
+##  <a name="gettextalign"></a>CMFCRibbonEdit:: gettextalign
 
 Načte zarovnání textu v textovém poli.
 
@@ -355,23 +355,23 @@ int GetTextAlign() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Textová hodnota zarovnání ve výčtu. Možné hodnoty v části poznámky.
+Hodnota ve výčtu zarovnání textu. Možné hodnoty jsou uvedeny v části poznámky.
 
 ### <a name="remarks"></a>Poznámky
 
-Vrácená hodnota je jeden z následujících – styly ovládacího prvku úprav:
+Vrácená hodnota je jeden z následujících stylů ovládacích prvků pro úpravy:
 
 - **ES_LEFT** pro zarovnání doleva
 
 - **ES_CENTER** pro zarovnání na střed
 
-- **ES_RIGHT** pro zarovnání doprava
+- **ES_RIGHT** pro správné zarovnání
 
-Další informace o těchto stylů, najdete v části [upravit styly ovládacího prvku](/windows/desktop/Controls/edit-control-styles).
+Další informace o těchto stylech naleznete v tématu [Editing Control Styles](/windows/win32/Controls/edit-control-styles).
 
-##  <a name="getwidth"></a>  CMFCRibbonEdit::GetWidth
+##  <a name="getwidth"></a>CMFCRibbonEdit:: getwidth
 
-Načte šířka v pixelech, o [cmfcribbonedit –](../../mfc/reference/cmfcribbonedit-class.md) ovládacího prvku.
+Načte šířku ovládacího prvku [CMFCRibbonEdit](../../mfc/reference/cmfcribbonedit-class.md) v pixelech.
 
 ```
 int GetWidth(BOOL bInFloatyMode = FALSE) const;
@@ -380,17 +380,17 @@ int GetWidth(BOOL bInFloatyMode = FALSE) const;
 ### <a name="parameters"></a>Parametry
 
 *bInFloatyMode*<br/>
-[in] Hodnota TRUE, pokud `CMFCRibbonEdit` ovládací prvek je v režimu s plovoucí desetinnou čárkou; jinak hodnota FALSE.
+pro TRUE, pokud `CMFCRibbonEdit` je ovládací prvek v plovoucím režimu. v opačném případě false.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Šířka v pixelech, o `CMFCRibbonEdit` ovládacího prvku.
+Šířka `CMFCRibbonEdit` ovládacího prvku v pixelech.
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="hascompactmode"></a>  CMFCRibbonEdit::HasCompactMode
+##  <a name="hascompactmode"></a>CMFCRibbonEdit::HasCompactMode
 
-Určuje, zda pro velikost zobrazení [cmfcribbonedit –](../../mfc/reference/cmfcribbonedit-class.md) ovládací prvek může být compact.
+Označuje, zda lze komprimovat velikost zobrazení pro ovládací prvek [CMFCRibbonEdit](../../mfc/reference/cmfcribbonedit-class.md) .
 
 ```
 virtual BOOL HasCompactMode() const;
@@ -402,11 +402,11 @@ Vždy vrátí hodnotu TRUE.
 
 ### <a name="remarks"></a>Poznámky
 
-Ve výchozím nastavení tato metoda vždy vrátí hodnotu TRUE. Přepsáním této metody můžete určit, jestli je možné compact velikost zobrazení.
+Ve výchozím nastavení tato metoda vždy vrátí hodnotu TRUE. Tuto metodu přepište, pokud chcete určit, zda může být velikost zobrazení komprimována.
 
 ##  <a name="hasfocus"></a>  CMFCRibbonEdit::HasFocus
 
-Určuje, zda [cmfcribbonedit –](../../mfc/reference/cmfcribbonedit-class.md) ovládací prvek má fokus.
+Určuje, zda má ovládací prvek [CMFCRibbonEdit](../../mfc/reference/cmfcribbonedit-class.md) fokus.
 
 ```
 virtual BOOL HasFocus() const;
@@ -414,13 +414,13 @@ virtual BOOL HasFocus() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Hodnota TRUE, pokud `CMFCRibbonEdit` ovládací prvek má fokus, jinak hodnota FALSE.
+TRUE, pokud `CMFCRibbonEdit` má ovládací prvek fokus; v opačném případě false.
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="haslargemode"></a>  CMFCRibbonEdit::HasLargeMode
+##  <a name="haslargemode"></a>CMFCRibbonEdit::HasLargeMode
 
-Určuje, zda pro velikost zobrazení [cmfcribbonedit –](../../mfc/reference/cmfcribbonedit-class.md) ovládacího prvku mohou být velké.
+Označuje, zda velikost zobrazení pro ovládací prvek [CMFCRibbonEdit](../../mfc/reference/cmfcribbonedit-class.md) může být velká.
 
 ```
 virtual BOOL HasLargeMode() const;
@@ -428,15 +428,15 @@ virtual BOOL HasLargeMode() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-vždy vrátí hodnotu FALSE.
+Vždy vrátí hodnotu FALSE.
 
 ### <a name="remarks"></a>Poznámky
 
-Ve výchozím nastavení tato metoda vždy vrátí hodnotu FALSE. Potlačí tuto metodu, která označuje, zda zobrazení může být velký.
+Ve výchozím nastavení tato metoda vždycky vrátí hodnotu FALSE. Tuto metodu přepište, pokud chcete určit, zda může být velikost zobrazení velká.
 
-##  <a name="hasspinbuttons"></a>  CMFCRibbonEdit::HasSpinButtons
+##  <a name="hasspinbuttons"></a>CMFCRibbonEdit::HasSpinButtons
 
-Označuje, jestli se do textového pole typu číselník.
+Označuje, zda je v textovém poli tlačítko číselníku.
 
 ```
 virtual BOOL HasSpinButtons() const;
@@ -444,13 +444,13 @@ virtual BOOL HasSpinButtons() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Hodnota TRUE, pokud textové pole má číselníku; v opačném případě FALSE.
+TRUE, pokud má textové pole tlačítko číselníku; v opačném případě FALSE.
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="ishighlighted"></a>  CMFCRibbonEdit::IsHighlighted
+##  <a name="ishighlighted"></a>CMFCRibbonEdit::-zvýrazňovat
 
-Určuje, zda [cmfcribbonedit –](../../mfc/reference/cmfcribbonedit-class.md) zvýrazněný ovládací prvek.
+Určuje, zda je zvýrazněn ovládací prvek [CMFCRibbonEdit](../../mfc/reference/cmfcribbonedit-class.md) .
 
 ```
 virtual BOOL IsHighlighted() const;
@@ -458,13 +458,13 @@ virtual BOOL IsHighlighted() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Hodnota TRUE, pokud `CMFCRibbonEdit` ovládací prvek je zvýrazněný; jinak hodnota FALSE.
+TRUE, je `CMFCRibbonEdit` -li ovládací prvek zvýrazněn; v opačném případě false.
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="onafterchangerect"></a>  CMFCRibbonEdit::OnAfterChangeRect
+##  <a name="onafterchangerect"></a>CMFCRibbonEdit::OnAfterChangeRect
 
-Volá se rozhraním, když dimenze zobrazovací obdélník pro [cmfcribbonedit –](../../mfc/reference/cmfcribbonedit-class.md) řízení změn.
+Volá se rozhraním, když se změní rozměry obdélníku zobrazení pro změnu ovládacího prvku [CMFCRibbonEdit](../../mfc/reference/cmfcribbonedit-class.md) .
 
 ```
 virtual void OnAfterChangeRect(CDC* pDC);
@@ -473,13 +473,13 @@ virtual void OnAfterChangeRect(CDC* pDC);
 ### <a name="parameters"></a>Parametry
 
 *pDC*<br/>
-[in] Ukazatel na kontext zařízení pro `CMFCRibbonEdit` ovládacího prvku.
+pro Ukazatel na kontext zařízení pro `CMFCRibbonEdit` ovládací prvek.
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="ondraw"></a>  CMFCRibbonEdit::OnDraw
+##  <a name="ondraw"></a>CMFCRibbonEdit:: Draw
 
-Volá se rozhraním, chcete-li nakreslit [cmfcribbonedit –](../../mfc/reference/cmfcribbonedit-class.md) ovládacího prvku.
+Volá se rozhraním, aby se nakreslil ovládací prvek [CMFCRibbonEdit](../../mfc/reference/cmfcribbonedit-class.md) .
 
 ```
 virtual void OnDraw(CDC* pDC);
@@ -488,13 +488,13 @@ virtual void OnDraw(CDC* pDC);
 ### <a name="parameters"></a>Parametry
 
 *pDC*<br/>
-[in] Ukazatel na kontext zařízení pro `CMFCRibbonEdit` ovládacího prvku.
+pro Ukazatel na kontext zařízení pro `CMFCRibbonEdit` ovládací prvek.
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="ondrawlabelandimage"></a>  CMFCRibbonEdit::OnDrawLabelAndImage
+##  <a name="ondrawlabelandimage"></a>CMFCRibbonEdit::OnDrawLabelAndImage
 
-Volá se rozhraním, aby vykreslení popisku a obrázků pro [cmfcribbonedit –](../../mfc/reference/cmfcribbonedit-class.md) ovládacího prvku.
+Volá se rozhraním, aby se nakreslil popisek a obrázek pro ovládací prvek [CMFCRibbonEdit](../../mfc/reference/cmfcribbonedit-class.md) .
 
 ```
 virtual void OnDrawLabelAndImage(CDC* pDC);
@@ -503,13 +503,13 @@ virtual void OnDrawLabelAndImage(CDC* pDC);
 ### <a name="parameters"></a>Parametry
 
 *pDC*<br/>
-[in] Ukazatel na kontext zařízení pro `CMFCRibbonEdit` ovládacího prvku.
+pro Ukazatel na kontext zařízení pro `CMFCRibbonEdit` ovládací prvek.
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="ondrawonlist"></a>  CMFCRibbonEdit::OnDrawOnList
+##  <a name="ondrawonlist"></a>CMFCRibbonEdit::OnDrawOnList
 
-Volá se rozhraním, chcete-li nakreslit [cmfcribbonedit –](../../mfc/reference/cmfcribbonedit-class.md) ovládací prvek v seznamu příkazů.
+Volá se rozhraním, aby se nakreslil ovládací prvek [CMFCRibbonEdit](../../mfc/reference/cmfcribbonedit-class.md) v seznamu příkazů.
 
 ```
 virtual void OnDrawOnList(
@@ -524,30 +524,30 @@ virtual void OnDrawOnList(
 ### <a name="parameters"></a>Parametry
 
 *pDC*<br/>
-[in] Ukazatel na kontext zařízení pro `CMFCRibbonEdit` ovládacího prvku.
+pro Ukazatel na kontext zařízení pro `CMFCRibbonEdit` ovládací prvek.
 
 *strText*<br/>
-[in] Zobrazení textu [ ] (../../mfc/reference/cmfcribbonedit-class.md "cmfcribbonedit – třída").
+pro Třída zobrazovaného [ ]textu (../../mfc/reference/cmfcribbonedit-class.md "CMFCRibbonEdit")
 
 *nTextOffset*<br/>
-[in] Vzdálenost v pixelech na levé straně pole se seznamem k zobrazení textu.
+pro Vzdálenost v pixelech, od levé strany seznamu až po zobrazený text
 
-*Rect*<br/>
-[in] Obdélník zobrazení pro `CMFCRibbonEdit` ovládacího prvku.
+*OBD*<br/>
+pro Obdélník `CMFCRibbonEdit` zobrazení ovládacího prvku
 
 *bIsSelected*<br/>
-[in] Tento parametr se nepoužívá.
+pro Tento parametr se nepoužívá.
 
 *bHighlighted*<br/>
-[in] Tento parametr se nepoužívá.
+pro Tento parametr se nepoužívá.
 
 ### <a name="remarks"></a>Poznámky
 
-Pole se seznamem příkazy zobrazí ovládací prvky pásu karet k uživatelům umožnit přizpůsobení panelu nástrojů Rychlý přístup.
+Seznam příkazy zobrazí ovládací prvky pásu karet, které uživatelům umožňují přizpůsobit panel nástrojů Rychlý přístup.
 
-##  <a name="onenable"></a>  CMFCRibbonEdit::OnEnable
+##  <a name="onenable"></a>CMFCRibbonEdit::-Enable
 
-Volá se rozhraním, které chcete povolit nebo zakázat [cmfcribbonedit –](../../mfc/reference/cmfcribbonedit-class.md) ovládacího prvku.
+Volá se rozhraním, aby se povolil nebo zakázal ovládací prvek [CMFCRibbonEdit](../../mfc/reference/cmfcribbonedit-class.md) .
 
 ```
 virtual void OnEnable(BOOL bEnable);
@@ -556,13 +556,13 @@ virtual void OnEnable(BOOL bEnable);
 ### <a name="parameters"></a>Parametry
 
 *bEnable*<br/>
-[in] TRUE, pokud chcete povolte stažení ovládacího prvku; FALSE, pokud chcete zakázat ovládacího prvku.
+pro TRUE pro povolení ovládacího prvku; FALSE pro zakázání ovládacího prvku
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="onhighlight"></a>  CMFCRibbonEdit::OnHighlight
+##  <a name="onhighlight"></a>CMFCRibbonEdit:: inzvýrazňovat
 
-Volá se rozhraním, když ukazatel myši vstoupí do nebo opustí hranice [cmfcribbonedit –](../../mfc/reference/cmfcribbonedit-class.md) ovládacího prvku.
+Volá se rozhraním, když ukazatel vloží nebo opustí hranice ovládacího prvku [CMFCRibbonEdit](../../mfc/reference/cmfcribbonedit-class.md) .
 
 ```
 virtual void OnHighlight(BOOL bHighlight);
@@ -571,13 +571,13 @@ virtual void OnHighlight(BOOL bHighlight);
 ### <a name="parameters"></a>Parametry
 
 *bHighlight*<br/>
-[in] Hodnota TRUE, pokud je ukazatel myši v ohraničené `CMFCRibbonEdit` řízení; jinak hodnota FALSE.
+pro TRUE, pokud je ukazatel v mezích `CMFCRibbonEdit` ovládacího prvku; v opačném případě false.
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="onkey"></a>  CMFCRibbonEdit::OnKey
+##  <a name="onkey"></a>CMFCRibbonEdit::OnKey
 
-Volá se rozhraním, když uživatel stiskne popisek tlačítka a [cmfcribbonedit –](../../mfc/reference/cmfcribbonedit-class.md) ovládací prvek má fokus.
+Volá se rozhraním, když uživatel stiskne KeyTip a ovládací prvek [CMFCRibbonEdit](../../mfc/reference/cmfcribbonedit-class.md) má fokus.
 
 ```
 virtual BOOL OnKey(BOOL bIsMenuKey);
@@ -586,17 +586,17 @@ virtual BOOL OnKey(BOOL bIsMenuKey);
 ### <a name="parameters"></a>Parametry
 
 *bIsMenuKey*<br/>
-[in] Hodnota TRUE, pokud je klávesová zkratka zobrazí místní nabídka; v opačném případě hodnota FALSE.
+pro TRUE, pokud KeyTip zobrazí místní nabídku; v opačném případě FALSE.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Hodnota TRUE, pokud událost byla zpracována; v opačném případě hodnota FALSE.
+TRUE, pokud byla událost zpracována; v opačném případě FALSE.
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="onlbuttondown"></a>  CMFCRibbonEdit::OnLButtonDown
+##  <a name="onlbuttondown"></a>CMFCRibbonEdit::OnLButtonDown
 
-Volá se rozhraním, aby aktualizace [cmfcribbonedit –](../../mfc/reference/cmfcribbonedit-class.md) ovládací prvek, když uživatel stiskne levé tlačítko myši v ovládacím prvku.
+Volá se rozhraním, aby se aktualizoval ovládací prvek [CMFCRibbonEdit](../../mfc/reference/cmfcribbonedit-class.md) , když uživatel stiskne levé tlačítko myši na ovládacím prvku.
 
 ```
 virtual void OnLButtonDown(CPoint point);
@@ -604,12 +604,12 @@ virtual void OnLButtonDown(CPoint point);
 
 ### <a name="parameters"></a>Parametry
 
-*point*<br/>
-[in] Tento parametr se nepoužívá.
+*Vyberte*<br/>
+pro Tento parametr se nepoužívá.
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="onlbuttonup"></a>  CMFCRibbonEdit::OnLButtonUp
+##  <a name="onlbuttonup"></a>CMFCRibbonEdit::OnLButtonUp
 
 Volá se rozhraním, když uživatel uvolní levé tlačítko myši.
 
@@ -619,14 +619,14 @@ virtual void OnLButtonUp(CPoint point);
 
 ### <a name="parameters"></a>Parametry
 
-*point*<br/>
-[in] Tento parametr se nepoužívá.
+*Vyberte*<br/>
+pro Tento parametr se nepoužívá.
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="onrtlchanged"></a>  CMFCRibbonEdit::OnRTLChanged
+##  <a name="onrtlchanged"></a>CMFCRibbonEdit::OnRTLChanged
 
-Volá se rozhraním, aby aktualizace [cmfcribbonedit –](../../mfc/reference/cmfcribbonedit-class.md) ovládací prvek při změně směr rozložení.
+Volá se rozhraním, aby se aktualizoval ovládací prvek [CMFCRibbonEdit](../../mfc/reference/cmfcribbonedit-class.md) , když se změní směr rozvržení.
 
 ```
 virtual void OnRTLChanged(BOOL bIsRTL);
@@ -635,13 +635,13 @@ virtual void OnRTLChanged(BOOL bIsRTL);
 ### <a name="parameters"></a>Parametry
 
 *bIsRTL*<br/>
-[in] Hodnota TRUE v případě rozložení je right to left; FALSE, pokud je rozložení zleva doprava.
+pro TRUE, pokud je rozložení zprava doleva; FALSE, pokud je rozložení zleva doprava.
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="onshow"></a>  CMFCRibbonEdit::OnShow
+##  <a name="onshow"></a>CMFCRibbonEdit:: inshow
 
-Volá se rozhraním, zobrazení nebo skrytí [cmfcribbonedit –](../../mfc/reference/cmfcribbonedit-class.md) ovládacího prvku.
+Volá se rozhraním, aby se zobrazil nebo skryl ovládací prvek [CMFCRibbonEdit](../../mfc/reference/cmfcribbonedit-class.md) .
 
 ```
 virtual void OnShow(BOOL bShow);
@@ -650,13 +650,13 @@ virtual void OnShow(BOOL bShow);
 ### <a name="parameters"></a>Parametry
 
 *bShow*<br/>
-[in] TRUE, pokud chcete zobrazit ovládací prvek; FALSE, pokud chcete skrýt ovládací prvek.
+pro TRUE pro zobrazení ovládacího prvku; FALSE pro skrytí ovládacího prvku
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="redraw"></a>  CMFCRibbonEdit::Redraw
+##  <a name="redraw"></a>CMFCRibbonEdit:: redraw
 
-Aktualizuje zobrazení [cmfcribbonedit –](../../mfc/reference/cmfcribbonedit-class.md) ovládacího prvku.
+Aktualizuje zobrazení ovládacího prvku [CMFCRibbonEdit](../../mfc/reference/cmfcribbonedit-class.md) .
 
 ```
 virtual void Redraw();
@@ -664,11 +664,11 @@ virtual void Redraw();
 
 ### <a name="remarks"></a>Poznámky
 
-Tato metoda překreslí zobrazovací obdélník pro `CMFCRibbonEdit` nepřímo zavoláním [CWnd::RedrawWindow](/windows/desktop/api/winuser/nf-winuser-redrawwindow) Flags RDW_INVALIDATE RDW_ERASE a RDW_UPDATENOW nastavit.
+Tato metoda překreslí zobrazovací obdélník pro `CMFCRibbonEdit` objekt nepřímo voláním [CWnd:: RedrawWindow](/windows/win32/api/winuser/nf-winuser-redrawwindow) se sadou příznaků RDW_INVALIDATE, RDW_ERASE a RDW_UPDATENOW.
 
-##  <a name="setaccdata"></a>  CMFCRibbonEdit::SetACCData
+##  <a name="setaccdata"></a>CMFCRibbonEdit::SetACCData
 
-Nastaví data pro usnadnění pro [cmfcribbonedit –](../../mfc/reference/cmfcribbonedit-class.md) objektu.
+Nastaví data přístupnosti pro objekt [CMFCRibbonEdit](../../mfc/reference/cmfcribbonedit-class.md) .
 
 ```
 virtual BOOL SetACCData(
@@ -679,10 +679,10 @@ virtual BOOL SetACCData(
 ### <a name="parameters"></a>Parametry
 
 *pParent*<br/>
-Ukazatel do nadřazeného okna pro `CMFCRibbonEdit` objektu.
+Ukazatel na nadřazené okno `CMFCRibbonEdit` objektu.
 
 *data*<br/>
-Usnadnění data `CMFCRibbonEdit` objektu.
+Data přístupnosti pro `CMFCRibbonEdit` objekt.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -690,7 +690,7 @@ Vždy vrátí hodnotu TRUE.
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="setedittext"></a>  CMFCRibbonEdit::SetEditText
+##  <a name="setedittext"></a>CMFCRibbonEdit::SetEditText
 
 Nastaví text v textovém poli.
 
@@ -701,9 +701,9 @@ void SetEditText(CString strText);
 ### <a name="parameters"></a>Parametry
 
 *strText*<br/>
-[in] Text do textového pole.
+pro Text textového pole
 
-##  <a name="settextalign"></a>  CMFCRibbonEdit::SetTextAlign
+##  <a name="settextalign"></a>CMFCRibbonEdit:: členskou
 
 Nastaví zarovnání textu v textovém poli.
 
@@ -714,23 +714,23 @@ void SetTextAlign(int nAlign);
 ### <a name="parameters"></a>Parametry
 
 *nAlign*<br/>
-[in] Textová hodnota zarovnání ve výčtu. Možné hodnoty v části poznámky.
+pro Hodnota ve výčtu zarovnání textu. Možné hodnoty jsou uvedeny v části poznámky.
 
 ### <a name="remarks"></a>Poznámky
 
-Parametr *nAlign* je jedním z následujících úprav – styly ovládacích prvků:
+Parametr *nAlign* je jedním z následujících stylů ovládacích prvků pro úpravy:
 
 - ES_LEFT pro zarovnání doleva
 
 - ES_CENTER pro zarovnání na střed
 
-- ES_RIGHT pro zarovnání doprava
+- ES_RIGHT pro správné zarovnání
 
-Další informace o těchto stylů, najdete v části [upravit styly ovládacího prvku](/windows/desktop/Controls/edit-control-styles).
+Další informace o těchto stylech naleznete v tématu [Editing Control Styles](/windows/win32/Controls/edit-control-styles).
 
-##  <a name="setwidth"></a>  CMFCRibbonEdit::SetWidth
+##  <a name="setwidth"></a>CMFCRibbonEdit::SetWidth
 
-Nastavuje šířku do textového pole u [cmfcribbonedit –](../../mfc/reference/cmfcribbonedit-class.md) ovládacího prvku.
+Nastaví šířku textového pole pro ovládací prvek [CMFCRibbonEdit](../../mfc/reference/cmfcribbonedit-class.md) .
 
 ```
 void SetWidth(
@@ -741,14 +741,14 @@ void SetWidth(
 ### <a name="parameters"></a>Parametry
 
 *nWidth*<br/>
-[in] Šířka v pixelech, v textovém poli.
+pro Šířka textového pole v pixelech
 
 *bInFloatyMode*<br/>
-TRUE, pokud chcete nastavit šířku pro režim s plovoucí desetinnou čárkou. FALSE, pokud chcete nastavit šířku běžného režimu.
+TRUE pro nastavení šířky pro plovoucí režim; FALSE pro nastavení šířky pro normální režim.
 
 ### <a name="remarks"></a>Poznámky
 
-`CMFCRibbonEdit` Ovládací prvek má dva šířku v závislosti na jeho režimu zobrazení: s plovoucí desetinnou čárkou a pravidelné režimu.
+`CMFCRibbonEdit` Ovládací prvek má dvě šířky v závislosti na režimu zobrazení: plovoucí režim a běžný režim.
 
 ## <a name="see-also"></a>Viz také:
 

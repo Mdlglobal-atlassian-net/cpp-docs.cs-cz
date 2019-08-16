@@ -8,44 +8,44 @@ helpviewer_keywords:
 - notifications [MFC], tool tips
 - tool tips [MFC], notifications
 ms.assetid: d0370a65-21ba-4676-bcc5-8cf851bbb15c
-ms.openlocfilehash: 97db98322cd7c0d14e46f54a055bbc646c90d785
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a63154f3da539676f31709899568b6486dc6017e
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62240386"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69508521"
 ---
-# <a name="handling-ttnneedtext-notification-for-tool-tips"></a>Zpracování oznámení TTN_NEEDTEXT u popisů tlačítek
+# <a name="handling-ttn_needtext-notification-for-tool-tips"></a>Zpracování oznámení TTN_NEEDTEXT u popisů tlačítek
 
-Jako součást [povolení popisů tlačítek](../mfc/enabling-tool-tips.md), zpracování **TTN_NEEDTEXT** zprávu tak, že přidáte následující položku do mapy zprávu nadřazenému oknu:
+V rámci [povolování tipů](../mfc/enabling-tool-tips.md)k nástrojům zpracováváte zprávu **TTN_NEEDTEXT** přidáním následujícího záznamu do mapy zpráv vašeho okna vlastníka:
 
 [!code-cpp[NVC_MFCControlLadenDialog#40](../mfc/codesnippet/cpp/handling-ttn-needtext-notification-for-tool-tips_1.cpp)]
 
 *memberFxn*<br/>
-Členská funkce se volá, když pro toto tlačítko je nutné zadat text.
+Členská funkce, která má být volána, je-li pro toto tlačítko vyžadován text
 
-Všimněte si, že ID popisku tlačítka je vždy 0.
+Všimněte si, že ID tipu nástroje je vždy 0.
 
-Deklarace funkce obslužné rutiny v definici třídy následujícím způsobem:
+Deklarujte svou funkci obslužné rutiny v definici třídy následujícím způsobem:
 
 [!code-cpp[NVC_MFCControlLadenDialog#53](../mfc/codesnippet/cpp/handling-ttn-needtext-notification-for-tool-tips_2.h)]
 
-kde jsou kurzívou parametry:
+kde jsou tyto parametry kurzívou:
 
 *id*<br/>
-Identifikátor ovládacího prvku, který poslat oznámení. Nepoužívá se. Id ovládacího prvku je převzata z **NMHDR** struktury.
+Identifikátor ovládacího prvku, který odeslal oznámení Nepoužívá se. ID ovládacího prvku se převezme ze struktury **NMHDR** .
 
 *pNMHDR*<br/>
-Ukazatel [NMTTDISPINFO](/windows/desktop/api/commctrl/ns-commctrl-tagnmttdispinfoa) struktury. Tato struktura je také popsáno dále v [ToolTipText – struktura](../mfc/tooltiptext-structure.md).
+Ukazatel na strukturu [NMTTDISPINFO](/windows/win32/api/commctrl/ns-commctrl-nmttdispinfow) . Tato struktura je také popsána dále ve [struktuře ToolTipText](../mfc/tooltiptext-structure.md).
 
 *pResult*<br/>
-Ukazatel na kód výsledku můžete nastavit před vrácením. **TTN_NEEDTEXT** můžete ignorovat obslužné rutiny *pResult* parametru.
+Ukazatel na kód výsledku, který můžete nastavit před vrácením. Obslužné rutiny **TTN_NEEDTEXT** mohou ignorovat parametr *pResult* .
 
-Jako příklad obslužnou rutinu oznámení formulářové zobrazení:
+Jako příklad obslužné rutiny oznámení typu formulář-zobrazení:
 
 [!code-cpp[NVC_MFCControlLadenDialog#54](../mfc/codesnippet/cpp/handling-ttn-needtext-notification-for-tool-tips_3.cpp)]
 
-Volání `EnableToolTips` (Tento fragment z `OnInitDialog`):
+Zavolat `EnableToolTips` (Tento fragment povedený z `OnInitDialog`):
 
 [!code-cpp[NVC_MFCControlLadenDialog#55](../mfc/codesnippet/cpp/handling-ttn-needtext-notification-for-tool-tips_4.cpp)]
 
