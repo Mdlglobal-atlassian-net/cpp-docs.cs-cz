@@ -1587,7 +1587,7 @@
     - name: 'Návod: Vytváření desktopových aplikací pro Windows'
       href: windows/walkthrough-creating-windows-desktop-applications-cpp.md
     - name: Desktopový průvodce pro Windows
-      href: windows/win32-application-wizard.md
+      href: windows/windows-desktop-wizard.md
     - name: Knihovna ATL (Active Template Library)
       href: atl/
     - name: Knihovna MFC (Microsoft Foundation Classes)
@@ -1607,10 +1607,6 @@
               items:
                 - name: Datum a čas – přehled
                   href: atl-mfc-shared/date-and-time.md
-                - name: 'Datum a čas: podpora automatizace'
-                  href: atl-mfc-shared/date-and-time-automation-support.md
-                - name: 'Datum a čas: podpora databáze'
-                  href: atl-mfc-shared/date-and-time-database-support.md
                 - name: Typ DATE
                   href: atl-mfc-shared/date-type.md
             - name: Řetězce (ATL-MFC)
@@ -2888,6 +2884,8 @@
 - name: Odkaz
   expanded: false
   items:
+    - name: Jazyk C/C++ a standardní knihovny
+      href: cpp/c-cpp-language-and-standard-libraries.md
     - name: Jazyky – referenční informace
       expanded: false
       items:
