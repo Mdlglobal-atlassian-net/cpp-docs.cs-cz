@@ -1,5 +1,5 @@
 ---
-title: Cbindstatuscallback – třída
+title: CBindStatusCallback – třída
 ms.date: 11/04/2016
 f1_keywords:
 - CBindStatusCallback
@@ -29,19 +29,19 @@ helpviewer_keywords:
 - data transfer [C++], asynchronous
 - CBindStatusCallback class
 ms.assetid: 0f5da276-6031-4418-b2a9-a4750ef29e77
-ms.openlocfilehash: 6e5e55a23ee678bbedf76f608bc4fdf562cc1822
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 89c65ff034cf7471c379b28116a741b62269a00c
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62259713"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69497606"
 ---
-# <a name="cbindstatuscallback-class"></a>Cbindstatuscallback – třída
+# <a name="cbindstatuscallback-class"></a>CBindStatusCallback – třída
 
 Tato třída implementuje `IBindStatusCallback` rozhraní.
 
 > [!IMPORTANT]
->  Tato třída a jejích členů nelze použít v aplikacích, které jsou spouštěny v modulu Windows Runtime.
+>  Tato třída a její členové nelze použít v aplikacích, které jsou spouštěny v prostředí Windows Runtime.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -55,57 +55,57 @@ class ATL_NO_VTABLE CBindStatusCallback : public CComObjectRootEx <T ::_ThreadMo
 #### <a name="parameters"></a>Parametry
 
 *T*<br/>
-Vaši třídu obsahující funkci, která bude volána, jako jsou data přijata.
+Vaše třída obsahující funkci, která bude volána jako data jsou přijata.
 
 *nBindFlags*<br/>
-Určuje příznaky vazby, které jsou vráceny pomocí [GetBindInfo](#getbindinfo). Výchozí implementace nastaví vazbu byla asynchronní, načte nejnovější verze datového objektu a neukládá načtená data v mezipaměti disku.
+Určuje příznaky vazeb, které jsou vraceny pomocí [GetBindInfo](#getbindinfo). Výchozí implementace nastaví, aby vazba byla asynchronní, získá nejnovější verzi dat nebo objektu a neuloží načtená data do diskové mezipaměti.
 
 ## <a name="members"></a>Členové
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CBindStatusCallback::CBindStatusCallback](#cbindstatuscallback)|Konstruktor|
-|[CBindStatusCallback::~CBindStatusCallback](#dtor)|Destruktor.|
+|[CBindStatusCallback:: ~ CBindStatusCallback](#dtor)|Destruktor.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
-|[CBindStatusCallback::Download](#download)|Vytvoří statickou metodu, která se spustí proces stahování `CBindStatusCallback` objektu a volání `StartAsyncDownload`.|
-|[CBindStatusCallback::GetBindInfo](#getbindinfo)|Volané asynchronní moniker na informace o žádostech na typ vazby, který se má vytvořit.|
-|[CBindStatusCallback::GetPriority](#getpriority)|Volané asynchronní moniker zobrazíte prioritu operace připojení. Implementace knihovny ATL vrátí `E_NOTIMPL`.|
-|[CBindStatusCallback::OnDataAvailable](#ondataavailable)|Volá se, aby poskytují data do vaší aplikace, protože je k dispozici. Čte data a pak volá funkci předán do ní použít data.|
-|[CBindStatusCallback::OnLowResource](#onlowresource)|Volá se, když mají nedostatek prostředků. Implementace knihovny ATL vrátí hodnotu S_OK.|
-|[CBindStatusCallback::OnObjectAvailable](#onobjectavailable)|Volané asynchronní moniker předat ukazatel rozhraní objektu do vaší aplikace. Implementace knihovny ATL vrátí hodnotu S_OK.|
-|[CBindStatusCallback::OnProgress](#onprogress)|Volá se, aby se indikoval průběh procesu stahování dat. Implementace knihovny ATL vrátí hodnotu S_OK.|
+|[CBindStatusCallback::D stáhn](#download)|Statická metoda, která spustí proces stahování, vytvoří `CBindStatusCallback` objekt a volání. `StartAsyncDownload`|
+|[CBindStatusCallback:: GetBindInfo.](#getbindinfo)|Volá se asynchronním monikerem pro vyžádání informací o typu vazby, která se má vytvořit.|
+|[CBindStatusCallback:: GetPriority](#getpriority)|Volá se asynchronním monikerem, aby se získala priorita operace vazby. Implementace knihovny ATL vrátí `E_NOTIMPL`.|
+|[CBindStatusCallback::OnDataAvailable](#ondataavailable)|Volá se, aby se do vaší aplikace poskytovala data, jakmile bude k dispozici. Přečte data a pak zavolá předanou funkci, aby mohla data používat.|
+|[CBindStatusCallback::OnLowResource](#onlowresource)|Volá se, když jsou prostředky nízké. Implementace ATL vrací S_OK.|
+|[CBindStatusCallback::OnObjectAvailable](#onobjectavailable)|Volá se asynchronním monikerem, aby se předal ukazatel rozhraní objektu pro vaši aplikaci. Implementace ATL vrací S_OK.|
+|[CBindStatusCallback:: Progress](#onprogress)|Volá se, aby se označoval průběh procesu stahování dat. Implementace ATL vrací S_OK.|
 |[CBindStatusCallback::OnStartBinding](#onstartbinding)|Volá se při spuštění vazby.|
-|[CBindStatusCallback::OnStopBinding](#onstopbinding)|Volá se, když se zastaví přenos asynchronní data.|
-|[CBindStatusCallback::StartAsyncDownload](#startasyncdownload)|Inicializuje bajty k dispozici a přečtené bajty na nulu, vytvoří objekt stisknutelného typu datový proud z adresy URL a volání `OnDataAvailable` pokaždé, když se data jsou k dispozici.|
+|[CBindStatusCallback::OnStopBinding](#onstopbinding)|Volá se, když se zastaví asynchronní přenos dat.|
+|[CBindStatusCallback::StartAsyncDownload](#startasyncdownload)|Inicializuje dostupné bajty a přečtené bajty na nulu, vytvoří objekt datového proudu typu push z adresy URL a zavolá `OnDataAvailable` všechna data, která jsou k dispozici.|
 
 ### <a name="public-data-members"></a>Veřejné datové členy
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
-|[CBindStatusCallback::m_dwAvailableToRead](#m_dwavailabletoread)|Počet bajtů ke čtení k dispozici.|
-|[CBindStatusCallback::m_dwTotalRead](#m_dwtotalread)|Celkový počet bajtů ke čtení.|
-|[CBindStatusCallback::m_pFunc](#m_pfunc)|Ukazatel na funkci volá, když data jsou k dispozici.|
-|[CBindStatusCallback::m_pT](#m_pt)|Ukazatel na objekt žádosti o přenos dat asynchronní.|
-|[CBindStatusCallback::m_spBindCtx](#m_spbindctx)|Ukazatel [IBindCtx](/windows/desktop/api/objidl/nn-objidl-ibindctx) rozhraní pro aktuální operaci bind.|
-|[CBindStatusCallback::m_spBinding](#m_spbinding)|Ukazatel `IBinding` rozhraní pro aktuální operaci bind.|
-|[CBindStatusCallback::m_spMoniker](#m_spmoniker)|Ukazatel [imoniker –](/windows/desktop/api/objidl/nn-objidl-imoniker) rozhraní pro adresu URL k použití.|
-|[CBindStatusCallback::m_spStream](#m_spstream)|Ukazatel [IStream](/windows/desktop/api/objidl/nn-objidl-istream) rozhraní pro přenos dat.|
+|[CBindStatusCallback::m_dwAvailableToRead](#m_dwavailabletoread)|Počet bajtů, které jsou k dispozici pro čtení.|
+|[CBindStatusCallback::m_dwTotalRead](#m_dwtotalread)|Celkový počet přečtených bajtů|
+|[CBindStatusCallback::m_pFunc](#m_pfunc)|Ukazatel na funkci volanou, když jsou data k dispozici.|
+|[CBindStatusCallback::m_pT](#m_pt)|Ukazatel na objekt požadující přenos asynchronních dat.|
+|[CBindStatusCallback::m_spBindCtx](#m_spbindctx)|Ukazatel na rozhraní [IBindCtx](/windows/win32/api/objidl/nn-objidl-ibindctx) pro aktuální operaci vazby.|
+|[CBindStatusCallback::m_spBinding](#m_spbinding)|Ukazatel na `IBinding` rozhraní pro aktuální operaci vazby.|
+|[CBindStatusCallback::m_spMoniker](#m_spmoniker)|Ukazatel na rozhraní [IMoniker –](/windows/win32/api/objidl/nn-objidl-imoniker) adresy URL, která se má použít.|
+|[CBindStatusCallback::m_spStream](#m_spstream)|Ukazatel na rozhraní [IStream](/windows/win32/api/objidl/nn-objidl-istream) pro přenos dat.|
 
 ## <a name="remarks"></a>Poznámky
 
-`CBindStatusCallback` Implementuje třída `IBindStatusCallback` rozhraní. `IBindStatusCallback` musí být implementované v aplikaci, aby ho mohli dostávat oznámení od asynchronní datové přenosy. Používá asynchronní moniker poskytované systémem `IBindStatusCallback` metody odesílat a přijímat informace o datech asynchronní přenos do a z objektu.
+`CBindStatusCallback` Třída`IBindStatusCallback` implementuje rozhraní. `IBindStatusCallback`musí být implementováno vaší aplikací, aby mohl přijímat oznámení z asynchronního přenosu dat. Asynchronní moniker poskytnutý systémem používá `IBindStatusCallback` metody k posílání a přijímání informací o asynchronním přenosu dat do a z vašeho objektu.
 
-Obvykle `CBindStatusCallback` objekt je přidružený operace konkrétní připojení. Například v [ASYNCHRONNÍ](../../overview/visual-cpp-samples.md) ukázka, když nastavíte vlastnost adresa URL ho vytvoří `CBindStatusCallback` objektu ve volání `Download`:
+`CBindStatusCallback` Objekt je obvykle přidružen k určité operaci vazby. Například v [asynchronní](../../overview/visual-cpp-samples.md) ukázce při nastavování vlastnosti URL vytvoří `CBindStatusCallback` objekt `Download`v volání:
 
 [!code-cpp[NVC_ATL_Windowing#86](../../atl/codesnippet/cpp/cbindstatuscallback-class_1.h)]
 
-Funkce zpětného volání používá asynchronní moniker `OnData` volat vaší aplikace, když má data. Asynchronní monikeru je poskytované systémem.
+Asynchronní moniker používá funkci `OnData` zpětného volání pro volání aplikace, když má data. Asynchronní moniker je poskytován systémem.
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
@@ -119,9 +119,9 @@ Funkce zpětného volání používá asynchronní moniker `OnData` volat vaší
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** atlctl.h
+**Záhlaví:** atlctl. h
 
-##  <a name="cbindstatuscallback"></a>  CBindStatusCallback::CBindStatusCallback
+##  <a name="cbindstatuscallback"></a>CBindStatusCallback::CBindStatusCallback
 
 Konstruktor
 
@@ -131,11 +131,11 @@ CBindStatusCallback();
 
 ### <a name="remarks"></a>Poznámky
 
-Vytvoří objekt pro příjem oznámení týkající se přenosu dat asynchronní. Jeden objekt se obvykle vytvoří pro každou operaci bind.
+Vytvoří objekt pro příjem oznámení o asynchronním přenosu dat. Pro každou operaci vazby je obvykle vytvořen jeden objekt.
 
-Konstruktor také inicializuje [m_pT](#m_pt) a [m_pFunc](#m_pfunc) na hodnotu NULL.
+Konstruktor také inicializuje [m_pT](#m_pt) a [m_pFunc](#m_pfunc) na hodnotu null.
 
-##  <a name="dtor"></a>  Cbindstatuscallback –:: ~ cbindstatuscallback –
+##  <a name="dtor"></a>CBindStatusCallback:: ~ CBindStatusCallback
 
 Destruktor.
 
@@ -147,9 +147,9 @@ Destruktor.
 
 Uvolní všechny přidělené prostředky.
 
-##  <a name="download"></a>  CBindStatusCallback::Download
+##  <a name="download"></a>CBindStatusCallback::D stáhn
 
-Vytvoří `CBindStatusCallback` objektu a volání `StartAsyncDownload` spustit stahovat data asynchronně ze zadané adresy URL.
+Vytvoří objekt a volání `StartAsyncDownload` , která spustí asynchronní stahování dat ze zadané adresy URL. `CBindStatusCallback`
 
 ```
 static HRESULT Download(
@@ -163,33 +163,33 @@ static HRESULT Download(
 ### <a name="parameters"></a>Parametry
 
 *pT*<br/>
-[in] Ukazatel na objekt žádosti o přenos dat asynchronní. `CBindStatusCallback` Objektu je založena na tento objekt třídy.
+pro Ukazatel na objekt požadující přenos asynchronních dat. `CBindStatusCallback` Objekt je založena na třídě tohoto objektu.
 
 *pFunc*<br/>
-[in] Ukazatel na funkci, která bude přijímat data, která je pro čtení. Funkce je členem třídy objektu typu `T`. Zobrazit [StartAsyncDownload](#startasyncdownload) pro syntaxe a příkladu.
+pro Ukazatel na funkci, která přijímá data, která jsou čtena. Funkce je členem třídy typu `T`objektu. Syntaxe a příklad najdete v tématu [StartAsyncDownload](#startasyncdownload) .
 
 *bstrURL*<br/>
-[in] Adresa URL k získání dat z. Může být libovolný platný název adresy URL nebo souboru. Nemůže mít hodnotu NULL. Příklad:
+pro Adresa URL, ze které se mají získat data Může to být libovolná platná adresa URL nebo název souboru. Nemůže mít hodnotu NULL. Příklad:
 
 `CComBSTR mybstr =_T("http://somesite/data.htm")`
 
 *pUnkContainer*<br/>
-[in] `IUnknown` Kontejneru. Ve výchozím nastavení s hodnotou NULL.
+pro `IUnknown` Kontejneru. Ve výchozím nastavení je NULL.
 
 *bRelative*<br/>
-[in] Příznak označující, zda je relativní nebo absolutní adresu URL. FALSE ve výchozím nastavení, což znamená, adresa URL je absolutní.
+pro Příznak označující, zda je adresa URL relativní nebo absolutní. Hodnota FALSE ve výchozím nastavení, což znamená, že adresa URL je absolutní.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Jeden standardní hodnoty HRESULT.
+Jedna ze standardních hodnot HRESULT.
 
 ### <a name="remarks"></a>Poznámky
 
-Pokaždé, když jsou k dispozici data jsou odeslána do objektu prostřednictvím `OnDataAvailable`. `OnDataAvailable` čte data a volá funkci, na které odkazuje *pFunc* (například data uložit nebo vytisknout na obrazovce).
+Pokaždé, když jsou data k dispozici, se do `OnDataAvailable`objektu odesílají prostřednictvím. `OnDataAvailable`přečte data a zavolá funkci, na kterou odkazuje *pFunc* (například pro uložení dat nebo jejich tisk na obrazovku).
 
-##  <a name="getbindinfo"></a>  CBindStatusCallback::GetBindInfo
+##  <a name="getbindinfo"></a>CBindStatusCallback:: GetBindInfo.
 
-Volá se, aby monikeru zjistit, jak vytvořit vazbu.
+Volá se, aby se oznámilo, jak se má moniker vytvořit.
 
 ```
 STDMETHOD(GetBindInfo)(
@@ -200,30 +200,30 @@ STDMETHOD(GetBindInfo)(
 ### <a name="parameters"></a>Parametry
 
 *pgrfBSCF*<br/>
-[out] Ukazatel na BINDF hodnot výčtu označující, jak by měl nastat operace připojení. Ve výchozím nastavení s použitím následujících hodnot výčtu:
+mimo Ukazatel na hodnoty výčtu BINDF, který označuje, jak by měla probíhat operace vazby. Ve výchozím nastavení se nastaví s následujícími hodnotami výčtu:
 
 BINDF_ASYNCHRONOUS asynchronní stahování.
 
-BINDF_ASYNCSTORAGE `OnDataAvailable` vrátí E_PENDING, pokud data ještě nejsou k dispozici místo zablokovaná, dokud se data jsou k dispozici.
+BINDF_ASYNCSTORAGE `OnDataAvailable` vrátí E_PENDING, pokud data ještě nejsou k dispozici, ale neblokuje dokud nejsou k dispozici data.
 
-BINDF_GETNEWESTVERSION operace připojení, načtěte nejnovější verze data.
+BINDF_GETNEWESTVERSION operace vazby by měla načíst nejnovější verzi dat.
 
-BINDF_NOWRITECACHE, které by neměly ukládat operaci bind načíst data v mezipaměti disku.
+BINDF_NOWRITECACHE operace vazby by neměla ukládat načtená data do diskové mezipaměti.
 
 *pbindinfo*<br/>
-[out v] Ukazatel `BINDINFO` struktury poskytuje další informace o jak chce, aby objekt vázání.
+[in, out] Ukazatel na strukturu, `BINDINFO` která poskytuje další informace o tom, jak objekt chce vytvořit vazbu.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Jeden standardní hodnoty HRESULT.
+Jedna ze standardních hodnot HRESULT.
 
 ### <a name="remarks"></a>Poznámky
 
-Výchozí implementace nastaví vazbu byla asynchronní a k použití modelu datová oznámení. V modelu datová oznámení zástupný název jednotky operace asynchronního připojení a průběžně upozorní klienta pokaždé, když jsou k dispozici nová data.
+Výchozí implementace nastaví, aby vazba byla asynchronní a aby používala model nabízených dat. V modelu vkládání dat zastupuje moniker v rámci operace asynchronní vazby a nepřetržitě upozorní klienta, kdykoli jsou k dispozici nová data.
 
-##  <a name="getpriority"></a>  CBindStatusCallback::GetPriority
+##  <a name="getpriority"></a>CBindStatusCallback:: GetPriority
 
-Volané asynchronní moniker zobrazíte prioritu operace připojení.
+Volá se asynchronním monikerem, aby se získala priorita operace vazby.
 
 ```
 STDMETHOD(GetPriority)(LONG* pnPriority);
@@ -232,15 +232,15 @@ STDMETHOD(GetPriority)(LONG* pnPriority);
 ### <a name="parameters"></a>Parametry
 
 *pnPriority*<br/>
-[out] Adresa **dlouhé** proměnné, která v případě úspěchu, obdrží prioritu.
+mimo Adresa **dlouhé** proměnné, která po úspěchu získá prioritu.
 
 ### <a name="return-value"></a>Návratová hodnota
 
 Vrátí E_NOTIMPL.
 
-##  <a name="m_dwavailabletoread"></a>  CBindStatusCallback::m_dwAvailableToRead
+##  <a name="m_dwavailabletoread"></a>CBindStatusCallback::m_dwAvailableToRead
 
-Slouží k ukládání počet bajtů ke čtení k dispozici.
+Dá se použít k uložení počtu bajtů, které se mají přečíst.
 
 ```
 DWORD m_dwAvailableToRead;
@@ -248,11 +248,11 @@ DWORD m_dwAvailableToRead;
 
 ### <a name="remarks"></a>Poznámky
 
-Inicializována na hodnotu nula `StartAsyncDownload`.
+Inicializováno na nulu `StartAsyncDownload`v.
 
-##  <a name="m_dwtotalread"></a>  CBindStatusCallback::m_dwTotalRead
+##  <a name="m_dwtotalread"></a>CBindStatusCallback::m_dwTotalRead
 
-Přenos dat asynchronní čtení kumulativní součet bajtů.
+Kumulativní součet přečtených bajtů v asynchronním přenosu dat.
 
 ```
 DWORD m_dwTotalRead;
@@ -260,11 +260,11 @@ DWORD m_dwTotalRead;
 
 ### <a name="remarks"></a>Poznámky
 
-Zvýší pokaždé, když `OnDataAvailable` je volán počet skutečně přečtených bajtů. Inicializována na hodnotu nula `StartAsyncDownload`.
+Přírůstkové pokaždé `OnDataAvailable` je voláno počtem bajtů, které jsou ve skutečnosti čteny. Inicializováno na nulu `StartAsyncDownload`v.
 
 ##  <a name="m_pfunc"></a>  CBindStatusCallback::m_pFunc
 
-Funkce odkazované `m_pFunc` je volán `OnDataAvailable` po přečte dostupná data (například data uložit nebo vytisknout na obrazovce).
+Funkce, na kterou se odkazuje `m_pFunc` pomocí, je `OnDataAvailable` volána po načtení dostupných dat (například pro uložení dat nebo při tisku na obrazovku).
 
 ```
 ATL_PDATAAVAILABLE m_pFunc;
@@ -272,7 +272,7 @@ ATL_PDATAAVAILABLE m_pFunc;
 
 ### <a name="remarks"></a>Poznámky
 
-Funkce odkazované `m_pFunc` je členem třídy objektu a má následující syntaxi:
+Funkce, na kterou `m_pFunc` ukazuje, je členem třídy objektu a má následující syntaxi:
 
 ```
 void Function_Name(
@@ -282,9 +282,9 @@ void Function_Name(
    );
 ```
 
-##  <a name="m_pt"></a>  CBindStatusCallback::m_pT
+##  <a name="m_pt"></a>CBindStatusCallback::m_pT
 
-Ukazatel na objekt žádosti o přenos dat asynchronní.
+Ukazatel na objekt požadující přenos asynchronních dat.
 
 ```
 T* m_pT;
@@ -292,11 +292,11 @@ T* m_pT;
 
 ### <a name="remarks"></a>Poznámky
 
-`CBindStatusCallback` Objektu je založena na tento objekt třídy.
+`CBindStatusCallback` Objekt je založena na třídě tohoto objektu.
 
-##  <a name="m_spbindctx"></a>  CBindStatusCallback::m_spBindCtx
+##  <a name="m_spbindctx"></a>CBindStatusCallback::m_spBindCtx
 
-Ukazatel [IBindCtx](/windows/desktop/api/objidl/nn-objidl-ibindctx) rozhraní, které poskytuje přístup ke kontextu vazby (objekt, který obsahuje informace o operaci vazby konkrétní moniker).
+Ukazatel na rozhraní [IBindCtx](/windows/win32/api/objidl/nn-objidl-ibindctx) , které poskytuje přístup k kontextu vazby (objekt, který ukládá informace o konkrétní operaci vazby monikeru).
 
 ```
 CComPtr<IBindCtx> m_spBindCtx;
@@ -304,11 +304,11 @@ CComPtr<IBindCtx> m_spBindCtx;
 
 ### <a name="remarks"></a>Poznámky
 
-Inicializováno v `StartAsyncDownload`.
+Inicializováno `StartAsyncDownload`v.
 
-##  <a name="m_spbinding"></a>  CBindStatusCallback::m_spBinding
+##  <a name="m_spbinding"></a>CBindStatusCallback::m_spBinding
 
-Ukazatel `IBinding` rozhraní aktuální operace připojení.
+Ukazatel na `IBinding` rozhraní aktuální operace vazby.
 
 ```
 CComPtr<IBinding> m_spBinding;
@@ -316,11 +316,11 @@ CComPtr<IBinding> m_spBinding;
 
 ### <a name="remarks"></a>Poznámky
 
-Inicializováno v `OnStartBinding` a vydanou v `OnStopBinding`.
+Inicializováno `OnStartBinding` v a vydány v `OnStopBinding`.
 
-##  <a name="m_spmoniker"></a>  CBindStatusCallback::m_spMoniker
+##  <a name="m_spmoniker"></a>CBindStatusCallback::m_spMoniker
 
-Ukazatel [imoniker –](/windows/desktop/api/objidl/nn-objidl-imoniker) rozhraní pro adresu URL k použití.
+Ukazatel na rozhraní [IMoniker –](/windows/win32/api/objidl/nn-objidl-imoniker) adresy URL, která se má použít.
 
 ```
 CComPtr<IMoniker> m_spMoniker;
@@ -328,11 +328,11 @@ CComPtr<IMoniker> m_spMoniker;
 
 ### <a name="remarks"></a>Poznámky
 
-Inicializováno v `StartAsyncDownload`.
+Inicializováno `StartAsyncDownload`v.
 
-##  <a name="m_spstream"></a>  CBindStatusCallback::m_spStream
+##  <a name="m_spstream"></a>CBindStatusCallback::m_spStream
 
-Ukazatel [IStream](/windows/desktop/api/objidl/nn-objidl-istream) rozhraní aktuální operace připojení.
+Ukazatel na rozhraní [IStream](/windows/win32/api/objidl/nn-objidl-istream) aktuální operace vazby.
 
 ```
 CComPtr<IStream> m_spStream;
@@ -340,11 +340,11 @@ CComPtr<IStream> m_spStream;
 
 ### <a name="remarks"></a>Poznámky
 
-Inicializováno v `OnDataAvailable` z `STGMEDIUM` struktury, když příznak BCSF BCSF_FIRSTDATANOTIFICATION a když je příznak BCSF BCSF_LASTDATANOTIFICATION uvolní.
+Inicializováno `OnDataAvailable` ve `STGMEDIUM` struktuře, když je příznak BCSF BCSF_FIRSTDATANOTIFICATION a uvolněn, když je příznak BCSF BCSF_LASTDATANOTIFICATION.
 
-##  <a name="ondataavailable"></a>  CBindStatusCallback::OnDataAvailable
+##  <a name="ondataavailable"></a>CBindStatusCallback::OnDataAvailable
 
-Volání asynchronní moniker poskytnuté systémem `OnDataAvailable` poskytující data do objektu, protože je k dispozici.
+Asynchronní moniker zadaný systémem zavolá `OnDataAvailable` k poskytnutí dat objektu, jakmile bude k dispozici.
 
 ```
 STDMETHOD(
@@ -357,28 +357,28 @@ STDMETHOD(
 ### <a name="parameters"></a>Parametry
 
 *grfBSCF*<br/>
-[in] Hodnota výčtu BSCF. Jeden nebo více z následujících akcí: BSCF_FIRSTDATANOTIFICATION BSCF_INTERMEDIARYDATANOTIFICATION či BSCF_LASTDATANOTIFICATION.
+pro Hodnota výčtu BSCF. Jednu nebo více z následujících možností: BSCF_FIRSTDATANOTIFICATION, BSCF_INTERMEDIARYDATANOTIFICATION nebo BSCF_LASTDATANOTIFICATION.
 
-*dwSize*<br/>
-[in] Souhrnně za (v bajtech) k dispozici od začátku vazby data. Může být nula, která znamená, že objem dat se nevztahuje nebo, že bez ohledu na konkrétní začal být k dispozici.
+*nenulového dwSize funkci*<br/>
+pro Kumulativní množství dat (v bajtech), která jsou k dispozici od začátku vazby. Může být nula, což znamená, že množství dat není relevantní nebo že žádná konkrétní částka nebyla k dispozici.
 
 *pformatetc*<br/>
-[in] Ukazatel [FORMATETC](/windows/desktop/com/the-formatetc-structure) strukturu, která obsahuje formát dat k dispozici. Pokud neexistuje žádný format, může být CF_NULL.
+pro Ukazatel na strukturu [FORMATETC](/windows/win32/com/the-formatetc-structure) , která obsahuje formát dat, která jsou k dispozici. Pokud není žádný formát, může být CF_NULL.
 
 *pstgmed*<br/>
-[in] Ukazatel [STGMEDIUM](/windows/desktop/com/the-stgmedium-structure) struktura, která uchovává skutečná data, která je teď k dispozici.
+pro Ukazatel na strukturu [STGMEDIUM](/windows/win32/com/the-stgmedium-structure) , která obsahuje skutečná data, která jsou nyní k dispozici.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Jeden standardní hodnoty HRESULT.
+Jedna ze standardních hodnot HRESULT.
 
 ### <a name="remarks"></a>Poznámky
 
-`OnDataAvailable` čte data a potom volá metodu třídu objektu (například data uložit nebo vytisknout na obrazovce). Zobrazit [CBindStatusCallback::StartAsyncDownload](#startasyncdownload) podrobnosti.
+`OnDataAvailable`přečte data a pak zavolá metodu třídy vašeho objektu (například pro uložení dat nebo tisku na obrazovku). Podrobnosti najdete v tématu [CBindStatusCallback:: StartAsyncDownload](#startasyncdownload) .
 
-##  <a name="onlowresource"></a>  CBindStatusCallback::OnLowResource
+##  <a name="onlowresource"></a>CBindStatusCallback::OnLowResource
 
-Volá se, když mají nedostatek prostředků.
+Volá se, když jsou prostředky nízké.
 
 ```
 STDMETHOD(OnLowResource)(DWORD /* dwReserved */);
@@ -387,15 +387,15 @@ STDMETHOD(OnLowResource)(DWORD /* dwReserved */);
 ### <a name="parameters"></a>Parametry
 
 *dwReserved*<br/>
-Vyhrazená.
+Rezervovaný.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vrátí hodnotu S_OK.
+Vrací hodnotu S_OK.
 
-##  <a name="onobjectavailable"></a>  CBindStatusCallback::OnObjectAvailable
+##  <a name="onobjectavailable"></a>CBindStatusCallback::OnObjectAvailable
 
-Volané asynchronní moniker předat ukazatel rozhraní objektu do vaší aplikace.
+Volá se asynchronním monikerem, aby se předal ukazatel rozhraní objektu pro vaši aplikaci.
 
 ```
 STDMETHOD(OnObjectAvailable)(REFID /* riid */, IUnknown* /* punk */);
@@ -404,18 +404,18 @@ STDMETHOD(OnObjectAvailable)(REFID /* riid */, IUnknown* /* punk */);
 ### <a name="parameters"></a>Parametry
 
 *riid*<br/>
-Identifikátor rozhraní požadované rozhraní. Nevyužité.
+Identifikátor rozhraní požadovaného rozhraní Nepoužívané.
 
 *punk*<br/>
-Adresa rozhraní IUnknown. Nevyužité.
+Adresa rozhraní IUnknown. Nepoužívané.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vrátí hodnotu S_OK.
+Vrací hodnotu S_OK.
 
-##  <a name="onprogress"></a>  CBindStatusCallback::OnProgress
+##  <a name="onprogress"></a>CBindStatusCallback:: Progress
 
-Volá se, aby se indikoval průběh procesu stahování dat.
+Volá se, aby se označoval průběh procesu stahování dat.
 
 ```
 STDMETHOD(OnProgress)(
@@ -428,24 +428,24 @@ STDMETHOD(OnProgress)(
 ### <a name="parameters"></a>Parametry
 
 *ulProgress*<br/>
-Dlouhé celé číslo bez znaménka. Nevyužité.
+Dlouhé celé číslo bez znaménka. Nepoužívané.
 
 *ulProgressMax*<br/>
-Dlouhé celé číslo bez znaménka nepoužitý.
+Dlouhé celé číslo bez znaménka.
 
 *ulStatusCode*<br/>
-Dlouhé celé číslo bez znaménka. Nevyužité.
+Dlouhé celé číslo bez znaménka. Nepoužívané.
 
 *szStatusText*<br/>
-Adresa řetězcovou hodnotu. Nevyužité.
+Adresa řetězcové hodnoty. Nepoužívané.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vrátí hodnotu S_OK.
+Vrací hodnotu S_OK.
 
-##  <a name="onstartbinding"></a>  CBindStatusCallback::OnStartBinding
+##  <a name="onstartbinding"></a>CBindStatusCallback::OnStartBinding
 
-Nastaví datový člen [m_spBinding](#m_spbinding) k `IBinding` ukazatel v *pBinding*.
+Nastaví datový člen [m_spBinding](#m_spbinding) na `IBinding` ukazatel v *pBinding*.
 
 ```
 STDMETHOD(OnStartBinding)(DWORD /* dwReserved */, IBinding* pBinding);
@@ -457,11 +457,11 @@ STDMETHOD(OnStartBinding)(DWORD /* dwReserved */, IBinding* pBinding);
 Vyhrazeno pro budoucí použití.
 
 *pBinding*<br/>
-[in] Adresa rozhraní IBinding aktuální vazby operace. To nemůže být NULL. Klient by měl zavolá funkci AddRef pro tento ukazatel zachovávat odkaz na objekt binding.
+pro Adresa rozhraní IBinding aktuální operace vazby Tato hodnota nemůže být NULL. Klient by měl zavolat AddRef na tento ukazatel, aby zachoval odkaz na objekt vazby.
 
-##  <a name="onstopbinding"></a>  CBindStatusCallback::OnStopBinding
+##  <a name="onstopbinding"></a>CBindStatusCallback::OnStopBinding
 
-Verze `IBinding` ukazatel v datovém členovi [m_spBinding](#m_spbinding).
+Uvolní ukazatel v datovém členu [m_spBinding.](#m_spbinding) `IBinding`
 
 ```
 STDMETHOD(OnStopBinding)(HRESULT hresult, LPCWSTR /* szError */);
@@ -469,19 +469,19 @@ STDMETHOD(OnStopBinding)(HRESULT hresult, LPCWSTR /* szError */);
 
 ### <a name="parameters"></a>Parametry
 
-*Hodnota HRESULT*<br/>
-Stavový kód vrácený ze operace připojení.
+*HRESULT*<br/>
+Stavový kód vrácený z operace BIND.
 
 *szError*<br/>
-Adresa řetězcovou hodnotu. Nevyužité.
+Adresa řetězcové hodnoty. Nepoužívané.
 
 ### <a name="remarks"></a>Poznámky
 
-Je voláno poskytnuté systémem asynchronní moniker označuje konec operace připojení.
+Volá se asynchronním monikerem zadaným systémem k označení konce operace vazby.
 
-##  <a name="startasyncdownload"></a>  CBindStatusCallback::StartAsyncDownload
+##  <a name="startasyncdownload"></a>CBindStatusCallback::StartAsyncDownload
 
-Začne stahovat data asynchronně ze zadané adresy URL.
+Spustí asynchronní stahování dat ze zadané adresy URL.
 
 ```
 HRESULT StartAsyncDownload(
@@ -495,31 +495,31 @@ HRESULT StartAsyncDownload(
 ### <a name="parameters"></a>Parametry
 
 *pT*<br/>
-[in] Ukazatel na objekt žádosti o přenos dat asynchronní. `CBindStatusCallback` Objektu je založena na tento objekt třídy.
+pro Ukazatel na objekt požadující přenos asynchronních dat. `CBindStatusCallback` Objekt je založena na třídě tohoto objektu.
 
 *pFunc*<br/>
-[in] Ukazatel na funkci, která přijímá data, který je čten. Funkce je členem třídy objektu typu `T`. Zobrazit **poznámky** pro syntaxe a příkladu.
+pro Ukazatel na funkci, která přijímá čtená data. Funkce je členem třídy typu `T`objektu. Syntaxe a příklad najdete v části **poznámky** .
 
 *bstrURL*<br/>
-[in] Adresa URL k získání dat z. Může být libovolný platný název adresy URL nebo souboru. Nemůže mít hodnotu NULL. Příklad:
+pro Adresa URL, ze které se mají získat data Může to být libovolná platná adresa URL nebo název souboru. Nemůže mít hodnotu NULL. Příklad:
 
 `CComBSTR mybstr =_T("http://somesite/data.htm")`
 
 *pUnkContainer*<br/>
-[in] `IUnknown` Kontejneru. Ve výchozím nastavení s hodnotou NULL.
+pro `IUnknown` Kontejneru. Ve výchozím nastavení je NULL.
 
 *bRelative*<br/>
-[in] Příznak označující, zda je relativní nebo absolutní adresu URL. FALSE ve výchozím nastavení, což znamená, adresa URL je absolutní.
+pro Příznak označující, zda je adresa URL relativní nebo absolutní. Hodnota FALSE ve výchozím nastavení, což znamená, že adresa URL je absolutní.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Jeden standardní hodnoty HRESULT.
+Jedna ze standardních hodnot HRESULT.
 
 ### <a name="remarks"></a>Poznámky
 
-Pokaždé, když jsou k dispozici data jsou odeslána do objektu prostřednictvím `OnDataAvailable`. `OnDataAvailable` čte data a volá funkci, na které odkazuje *pFunc* (například data uložit nebo vytisknout na obrazovce).
+Pokaždé, když jsou data k dispozici, se do `OnDataAvailable`objektu odesílají prostřednictvím. `OnDataAvailable`přečte data a zavolá funkci, na kterou odkazuje *pFunc* (například pro uložení dat nebo jejich tisk na obrazovku).
 
-Funkce odkazované *pFunc* je členem třídy objektu a má následující syntaxi:
+Funkce, na kterou odkazuje *pFunc* , je členem třídy objektu a má následující syntaxi:
 
 ```
 void Function_Name(
@@ -528,7 +528,7 @@ void Function_Name(
     DWORD dwSize);
 ```
 
-V následujícím příkladu (z [ASYNCHRONNÍ](../../overview/visual-cpp-samples.md) ukázkové), funkce `OnData` zapíše přijatá data do textového pole.
+V následujícím příkladu (pořízených z [asynchronní](../../overview/visual-cpp-samples.md) ukázky) funkce `OnData` zapisuje přijatá data do textového pole.
 
 ### <a name="example"></a>Příklad
 
@@ -536,4 +536,4 @@ V následujícím příkladu (z [ASYNCHRONNÍ](../../overview/visual-cpp-samples
 
 ## <a name="see-also"></a>Viz také:
 
-[Přehled tříd](../../atl/atl-class-overview.md)
+[Přehled třídy](../../atl/atl-class-overview.md)
