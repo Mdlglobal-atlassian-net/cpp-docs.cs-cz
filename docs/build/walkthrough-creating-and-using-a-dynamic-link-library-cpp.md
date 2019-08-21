@@ -350,7 +350,7 @@ Dále pro volání funkcí MathLibrary ve zdrojovém kódu musí projekt zahrnov
 
 1. V podokně vlastností zaškrtněte políčko vedle rozevíracího seznamu **Další vložené adresáře** a pak zvolte **Upravit**.
 
-   ![Upravte vlastnost další adresáře zahrnutí] . (media/mathclient-additional-include-directories-property.png "Upravte vlastnost další adresáře zahrnutí") .
+   ![Upravte vlastnost další adresáře zahrnutí](media/mathclient-additional-include-directories-property.png "Upravte vlastnost další adresáře zahrnutí")
 
 1. Pokud chcete povolit ovládací prvek pro úpravy, poklikejte na horní podokno dialogového okna **Další vložené adresáře** .
 
@@ -362,7 +362,7 @@ Dále pro volání funkcí MathLibrary ve zdrojovém kódu musí projekt zahrnov
 
    Pokud vaše knihovna DLL a klientské projekty jsou ve stejném řešení, nebo jsou řešení v různých složkách, je nutné odpovídajícím způsobem upravit relativní cestu nebo jinak vyhledat složku pomocí výše popsané metody.
 
-   ![Přidejte umístění záhlaví do vlastnosti další adresáře zahrnutí] . (media/mathclient-additional-include-directories.png "Přidejte umístění záhlaví do vlastnosti další adresáře zahrnutí") .
+   ![Přidejte umístění záhlaví do vlastnosti další adresáře zahrnutí](media/mathclient-additional-include-directories.png "Přidejte umístění záhlaví do vlastnosti další adresáře zahrnutí")
 
 1. Po zadání cesty k souboru hlaviček v dialogovém okně **Další vložené adresáře** klikněte na tlačítko **OK** , vraťte se do dialogového okna **stránky vlastností** a pak kliknutím na tlačítko **OK** uložte změny.
 
@@ -410,7 +410,7 @@ Tento kód může být zkompilován, ale ne propojený, protože linker nemůže
 
 1. V levém podokně vyberte v části **vlastnosti** > konfigurace**linkeru**možnost **Obecné** . V podokně vlastností vyberte rozevírací seznam vedle pole **Další adresáře knihovny** upravit a pak zvolte **Upravit**.
 
-   ![Upravte vlastnost další adresáře knihovny] . (media/mathclient-additional-library-directories-property.png "Upravte vlastnost další adresáře knihovny") .
+   ![Upravte vlastnost další adresáře knihovny.](media/mathclient-additional-library-directories-property.png "Upravte vlastnost další adresáře knihovny")
 
 1. Dvojitým kliknutím v horním podokně dialogového okna **Další adresáře knihovny** povolíte ovládací prvek pro úpravy. V ovládacím prvku pro úpravy zadejte cestu k umístění souboru **MathLibrary. lib** . Je ve složce s názvem `Debug` přímo ve složce řešení. Pokud vytvoříte sestavení pro vydání, výstup bude umístěn do složky s názvem `Release`. Můžete použít následující makro, aby linker mohl najít knihovnu DLL bez ohledu na to, který typ sestavení vytvoříte:
 

@@ -3242,7 +3242,7 @@ Ukazatel na `CBrush` objekt v případě úspěchu; jinak null.
 
 Polotónový štětec zobrazuje pixely, které jsou Alternativně barvy popředí a pozadí k vytvoření vytvořeného vzoru. Následuje příklad vytvořeného vzoru, který byl vytvořen pomocí polotónového štětce.
 
-![Podrobnosti o] prostředcích přeškrtnutého pera (../../mfc/reference/media/vc318s1.gif "Podrobnosti o") prostředcích přeškrtnutého pera
+![Podrobnosti o prostředcích přeškrtnutého pera ](../../mfc/reference/media/vc318s1.gif "Podrobnosti o prostředcích přeškrtnutého pera ")
 
 ##  <a name="getkerningpairs"></a>CDC:: GetKerningPairs
 

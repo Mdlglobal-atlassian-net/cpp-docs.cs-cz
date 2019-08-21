@@ -35,7 +35,7 @@ Stránky vlastností jsou navržené tak, aby se vždy zobrazila a v případě 
 
 Následující ilustrace znázorňuje stejnou stránku vlastností projektu, ale konfigurace byla změněna na Release. Všimněte si jiné hodnoty vlastnosti optimalizace. Všimněte si také, že aktivní konfigurace je stále ladit. Tady můžete nastavit vlastnosti pro jakoukoli konfiguraci. nemusí být aktivní.
 
-![Stránky vlastností&#43; &#43; Visual c++]se stránkami(media/visual-c---property-pages-showing-release-config.png " C++ vlastností") konfigurace vydaných verzí znázorňující konfiguraci vydané verze
+![Stránky vlastností&#43; &#43; Visual c++](media/visual-c---property-pages-showing-release-config.png " C++ vlastností konfigurace vydaných verzí znázorňující konfiguraci vydané verze")
 
 ## <a name="target-platforms"></a>Cílové platformy
 
