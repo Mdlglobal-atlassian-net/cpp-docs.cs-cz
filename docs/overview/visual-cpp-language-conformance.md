@@ -5,12 +5,12 @@ ms.technology: cpp-language
 ms.assetid: 475da6e9-0d78-4b4e-bd23-f41c406c4efe
 author: corob-msft
 ms.author: corob
-ms.openlocfilehash: 15226d41991d5a09d104d2edbfb3dbf2f7432b65
-ms.sourcegitcommit: db1ed91fa7451ade91c3fb76bc7a2b857f8a5eef
+ms.openlocfilehash: 17ed76551102653e2f05e9731834f4787198db49
+ms.sourcegitcommit: 9d4ffb8e6e0d70520a1e1a77805785878d445b8a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "68980530"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69631648"
 ---
 # <a name="microsoft-c-language-conformance-table"></a>Tabulka C++ shody jazyka Microsoft
 
@@ -348,7 +348,7 @@ Možnost kompilátoru [/Zc: noexceptTypes](../build/reference/zc-noexcepttypes.m
 
 <a name="note_C"></a>__C__ Podpora kompilátoru pro pravidla preprocesoru C99 je v aplikaci Visual Studio 2017 nekompletní. Makra variadické jsou podporována, ale v chování preprocesoru existuje mnoho chyb. Předáváme preprocesor a provede experimentální dodávání těchto změn v [/Permissive-](../build/reference/permissive-standards-conformance.md) režimu brzy.
 
-<a name="note_D"></a>__D__ podporován v rámci [/std: c++ 14](../build/reference/std-specify-language-standard-version.md) s upozorněním Suppressible, C4984.
+<a name="note_D"></a>__D__ podporován v rámci [/std: c++ 14](../build/reference/std-specify-language-standard-version.md) s upozorněním Suppressible, [C4984](../error-messages/compiler-warnings/compiler-warning-c4984.md).
 
 <a name="note_E"></a>__E__ Toto je zcela nová implementace nekompatibilní s předchozí `std::experimental` verzí, kterou vyžaduje podpora symlink, opravy chyb a změny v chování vyžadovaném standardem. V současné době \<, včetně systému souborů > poskytuje `std::filesystem` nové a předchozí `std::experimental::filesystem`, včetně \<experimentální/FileSystem > poskytuje pouze starou experimentální implementaci. Experimentální implementace bude ODEBRÁNA v další vydaných vydáních knihovny ABI.
 

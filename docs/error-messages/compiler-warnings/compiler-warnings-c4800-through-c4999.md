@@ -153,12 +153,12 @@ helpviewer_keywords:
 - C5105
 - C5106
 - C5107
-ms.openlocfilehash: 518efdd74a90198818538c1548adb2b7ff37290c
-ms.sourcegitcommit: c3bf94210bdb73be80527166264d49e33784152c
+ms.openlocfilehash: ae73d4ba503dfbbc27f91040c31beb91da3b7e54
+ms.sourcegitcommit: 9d4ffb8e6e0d70520a1e1a77805785878d445b8a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68821123"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69631541"
 ---
 # <a name="compiler-warnings-c4800-through-c5999"></a>Upozornění kompilátoru C4800 až C5999
 
@@ -266,7 +266,8 @@ ms.locfileid: "68821123"
 |Upozornění kompilátoru (úroveň 1) C4973|*symbol*: označený jako zastaralý|
 |Upozornění kompilátoru (úroveň 1) C4974|*symbol*: označený jako zastaralý|
 |Upozornění kompilátoru (úroveň 3) C4981|Warbird: funkce Functions označená jako __forceinline není vložená, protože obsahuje sémantiku výjimky.|
-|Upozornění kompilátoru (úroveň 3) C4985|Název symbolu: atributy nejsou v předchozí deklaraci k dispozici.|
+|[Upozornění kompilátoru C4984](compiler-warning-c4984.md)|If constexpr je rozšíření jazyka C++ 17.|
+|Upozornění kompilátoru (úroveň 3) C4985|'*symbol_name*': atributy nejsou přítomny u předchozí deklarace.|
 |[Upozornění kompilátoru C4986](compiler-warning-c4986.md)|*deklarace*: specifikace výjimky neodpovídá předchozí deklaraci.|
 |Upozornění kompilátoru (úroveň 4) C4987|použito nestandardní rozšíření: 'throw (...)'|
 |Upozornění kompilátoru (úroveň 4) C4988|'*Variable*': proměnná je deklarována mimo obor třídy/funkce|

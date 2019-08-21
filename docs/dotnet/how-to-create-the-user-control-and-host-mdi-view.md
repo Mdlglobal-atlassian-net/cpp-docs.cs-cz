@@ -1,52 +1,52 @@
 ---
-title: 'Postupy: Vytvoření uživatelského ovládacího prvku a hostitelské poskytování zobrazení MDI'
+title: 'Postupy: Vytvoření uživatelského ovládacího prvku a hostování zobrazení MDI'
 ms.custom: get-started-article
 ms.date: 11/04/2016
 helpviewer_keywords:
 - MFC [C++], Windows Forms Controls
 - Windows Forms [C++], MFC support
 ms.assetid: 625b5821-f923-4701-aca0-c1a4ceca4f63
-ms.openlocfilehash: 7d535fce47be5504f6f521cda1267344206287da
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 634dd9c1ad2ce9199cec0dfa7ef067bd45f242f6
+ms.sourcegitcommit: 9d4ffb8e6e0d70520a1e1a77805785878d445b8a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62387432"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69630838"
 ---
-# <a name="how-to-create-the-user-control-and-host-mdi-view"></a>Postupy: Vytvoření uživatelského ovládacího prvku a hostitelské poskytování zobrazení MDI
+# <a name="how-to-create-the-user-control-and-host-mdi-view"></a>Postupy: Vytvoření uživatelského ovládacího prvku a hostování zobrazení MDI
 
-Následující kroky ukazují, jak vytvořit uživatelský ovládací prvek rozhraní .NET Framework, ovládací prvek v knihovně tříd ovládacího prvku (konkrétně v projektu knihovny ovládacích prvků Windows) a poté zkompilovat projekt do sestavení. Ovládací prvek může být potom používán z aplikace knihovny MFC, která používá třídy odvozené z [CView Class](../mfc/reference/cview-class.md) a [CWinFormsView – třída](../mfc/reference/cwinformsview-class.md).
+Následující kroky ukazují, jak vytvořit .NET Framework uživatelský ovládací prvek, vytvořit uživatelský ovládací prvek v knihovně třídy ovládacího prvku (konkrétně v projektu knihovny ovládacích prvků systému Windows) a potom zkompilovat projekt do sestavení. Ovládací prvek lze následně spotřebovat z aplikace MFC, která používá třídy odvozené od [třídy CView](../mfc/reference/cview-class.md) a [třídy CWinFormsView](../mfc/reference/cwinformsview-class.md).
 
-Informace o tom, jak vytvořit uživatelský ovládací prvek Windows Forms a vytvořit knihovnu tříd ovládacího prvku, naleznete v tématu [jak: Vytváření uživatelských ovládacích prvků](/dotnet/framework/winforms/controls/how-to-author-composite-controls).
+Informace o tom, jak vytvořit uživatelský ovládací prvek model Windows Forms a vytvořit knihovnu tříd ovládacího prvku, naleznete [v tématu How to: Vytváření uživatelských ovládacích](/dotnet/framework/winforms/controls/how-to-author-composite-controls)prvků.
 
 > [!NOTE]
->  V některých případech se ovládací prvky Windows Forms, jako je například ovládací prvek mřížky jiného výrobce, pravděpodobně nebudou chovat spolehlivě když jsou hostované v aplikaci MFC. Doporučené řešení je umístit uživatelský ovládací prvek Windows Forms do aplikace knihovny MFC a umístit ovládací prvek mřížky jiného výrobce do uživatelského ovládacího prvku.
+>  V některých případech se model Windows Forms ovládací prvky, jako je například ovládací prvek mřížky jiného výrobce, nemusí chovat spolehlivě při hostování v aplikaci knihovny MFC. Doporučeným řešením je umístit uživatelský ovládací prvek model Windows Forms do aplikace MFC a umístit ovládací prvek mřížky třetí strany do uživatelského ovládacího prvku.
 
-Tento postup předpokládá, že jste vytvořili projekt Knihovna ovládacích prvků Windows Forms s názvem WindowsFormsControlLibrary1, podle postupu v [jak: Vytvoření uživatelského ovládacího prvku a hostitele v dialogovém okně](../dotnet/how-to-create-the-user-control-and-host-in-a-dialog-box.md).
+Tento postup předpokládá, že jste vytvořili projekt knihovny model Windows Forms Controls s názvem WindowsFormsControlLibrary1, podle postupu v [tématu How to: Vytvořte uživatelský ovládací prvek a hostitele v dialogovém okně](../dotnet/how-to-create-the-user-control-and-host-in-a-dialog-box.md).
 
-### <a name="to-create-the-mfc-host-application"></a>Chcete-li vytvořit hostitelskou aplikaci knihovny MFC
+### <a name="to-create-the-mfc-host-application"></a>Vytvoření hostitelské aplikace MFC
 
-1. Vytvořte projekt aplikace knihovny MFC.
+1. Vytvořte projekt aplikace MFC.
 
-   Na **souboru** nabídce vyberte možnost **nový**a potom klikněte na tlačítko **projektu**. V **Visual C++** složky, vyberte **aplikace knihovny MFC**.
+   V nabídce **soubor** vyberte **Nový**a pak klikněte na **projekt**. Ve složce **vizuálu C++**  vyberte možnost **aplikace MFC**.
 
-   V **název** zadejte `MFC02` a změnit **řešení** nastavení **přidat do řešení**. Klikněte na **OK**.
+   Do pole **název** zadejte `MFC02` a změňte nastavení **řešení** na možnost **Přidat do řešení**. Klikněte na **OK**.
 
-   V **Průvodce aplikací knihovny MFC**, přijměte všechny výchozí hodnoty a klikněte na **Dokončit**. Tím se vytvoří aplikace knihovny MFC s rozhraním více dokumentů.
+   V **Průvodci aplikací knihovny MFC**přijměte všechny výchozí hodnoty a potom klikněte na tlačítko **Dokončit**. Tím se vytvoří aplikace MFC s rozhraním více dokumentů.
 
-1. Konfigurace projektu pro podporu Common Language Runtime (CLR).
+1. Nakonfigurujte projekt pro podporu modulu CLR (Common Language Runtime).
 
-   V **Průzkumníka řešení**, klikněte pravým tlačítkem myši `MFC01` uzel projektu a vyberte **vlastnosti** v místní nabídce. **Stránky vlastností** zobrazí se dialogové okno.
+   V **Průzkumník řešení**klikněte pravým tlačítkem myši `MFC01` na uzel projektu a v místní nabídce vyberte možnost **vlastnosti** . Zobrazí se dialogové okno **stránky vlastností** .
 
-   V části **vlastnosti konfigurace**vyberte **Obecné**. V části **výchozí nastavení projektu** nastavte **Common Language Runtime support** k **Common Language Runtime Support (/ clr)**.
+   V části **Vlastnosti konfigurace**vyberte **Obecné**. V části **výchozí nastavení projektu** nastavte podporu **modulu CLR (Common Language Runtime)** na **podporu modulu CLR (/CLR)** .
 
-   V části **vlastnosti konfigurace**, rozbalte **C/C++** a klikněte na tlačítko **Obecné** uzlu. Nastavte **formát ladicích informací** k **Program Database (/Zi)**.
+   V části **Vlastnosti konfigurace**rozbalte **C/C++**  a klikněte na uzel **Obecné** . Nastavte **formát ladicích informací** na **programovou databázi (/Zi)** .
 
-   Klikněte na tlačítko **generování kódu** uzlu. Nastavte **povolit minimální opětovné sestavení** k **ne (/ Gm-)**. Nastavit také **Basic Runtime Checks** k **výchozí**.
+   Klikněte na uzel **generování kódu** . Nastavte **možnost povolit minimální opětovné sestavení** na **ne (/GM-)** . Nastavte také **základní kontroly za běhu** na **výchozí**.
 
-   Klikněte na tlačítko **OK** změny.
+   Změny se projeví po kliknutí na **OK** .
 
-1. Ve stdafx.h přidejte následující řádek:
+1. V souboru *PCH. h* (*stdafx. h* v aplikaci Visual Studio 2017 a starší) přidejte následující řádek:
 
     ```
     #using <System.Windows.Forms.dll>
@@ -54,9 +54,9 @@ Tento postup předpokládá, že jste vytvořili projekt Knihovna ovládacích p
 
 1. Přidejte odkaz na ovládací prvek .NET.
 
-   V **Průzkumníka řešení**, klikněte pravým tlačítkem myši `MFC02` uzel projektu a vyberte **přidat**, **odkazy**. V **stránku vlastností**, klikněte na tlačítko **přidat nový odkaz**, vyberte WindowsFormsControlLibrary1 (v části **projekty** kartu) a klikněte na tlačítko **OK** . To přidá odkaz ve formuláři [/FU](../build/reference/fu-name-forced-hash-using-file.md) – možnost kompilátoru tak, že program bude kompilován; také zkopíruje WindowsFormsControlLibrary1.dll do `MFC02` adresáře projektu tak, aby se bude program spouštět.
+   V **Průzkumník řešení**klikněte pravým tlačítkem myši `MFC02` na uzel projektu a vyberte **Přidat**, **odkazy**. Na **stránce vlastností**klikněte na **Přidat nový odkaz**, vyberte WindowsFormsControlLibrary1 (na kartě **projekty** ) a klikněte na **OK**. Tím se přidá odkaz ve formuláři Možnosti kompilátoru [/Fu](../build/reference/fu-name-forced-hash-using-file.md) , takže program se zkompiluje. také zkopíruje WindowsFormsControlLibrary1. dll do `MFC02` adresáře projektu, takže se program spustí.
 
-1. Ve stdafx.h vyhledejte tento řádek:
+1. V souboru stdafx. h vyhledejte tento řádek:
 
     ```
     #endif // _AFX_NO_AFXCMN_SUPPORT
@@ -68,9 +68,9 @@ Tento postup předpokládá, že jste vytvořili projekt Knihovna ovládacích p
     #include <afxwinforms.h>   // MFC Windows Forms support
     ```
 
-1. Upravte zobrazení třídy tak, aby dědila z [CWinFormsView](../mfc/reference/cwinformsview-class.md).
+1. Upravte třídu zobrazení tak, aby dědila z [CWinFormsView](../mfc/reference/cwinformsview-class.md).
 
-   V MFC02View.h nahraďte [CView](../mfc/reference/cview-class.md) s [CWinFormsView](../mfc/reference/cwinformsview-class.md) tak, aby kód se zobrazí takto:
+   V MFC02View. h nahraďte [CView](../mfc/reference/cview-class.md) pomocí [CWinFormsView](../mfc/reference/cwinformsview-class.md) tak, že se kód zobrazí takto:
 
     ```
     class CMFC02View : public CWinFormsView
@@ -78,9 +78,9 @@ Tento postup předpokládá, že jste vytvořili projekt Knihovna ovládacích p
     };
     ```
 
-   Pokud chcete přidat další zobrazení do vaší aplikace MDI, budete muset volat [CWinApp::AddDocTemplate](../mfc/reference/cwinapp-class.md#adddoctemplate) pro každé zobrazení, které vytvoříte.
+   Pokud chcete přidat další zobrazení do aplikace MDI, budete muset volat [CWinApp:: AddDocTemplate](../mfc/reference/cwinapp-class.md#adddoctemplate) pro každé zobrazení, které vytvoříte.
 
-1. Upravte soubor MFC02View.cpp tak, že změníte CView na CWinFormsView v makru IMPLEMENT_DYNCREATE a mapování zpráv a nahradit stávající prázdný konstruktor za konstruktor uvedený níže:
+1. Upravte soubor MFC02View. cpp pro změnu CView na CWinFormsView v makru IMPLEMENT_DYNCREATE a mapě zpráv a nahraďte existující prázdný konstruktor následujícím konstruktorem:
 
     ```
     IMPLEMENT_DYNCREATE(CMFC02View, CWinFormsView)
@@ -95,11 +95,11 @@ Tento postup předpokládá, že jste vytvořili projekt Knihovna ovládacích p
 
 1. Sestavte a spusťte projekt.
 
-   V **Průzkumníka řešení**, pravým tlačítkem myši na MFC02 a vyberte **nastavit jako spouštěný projekt**.
+   V **Průzkumník řešení**klikněte pravým tlačítkem na MFC02 a vyberte **nastavit jako spouštěný projekt**.
 
    Na **sestavení** nabídky, klikněte na tlačítko **sestavit řešení**.
 
-   Na **ladění** nabídky, klikněte na tlačítko **spustit bez ladění**.
+   V nabídce **ladit** klikněte na **Spustit bez ladění**.
 
 ## <a name="see-also"></a>Viz také:
 

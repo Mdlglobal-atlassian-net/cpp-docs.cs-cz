@@ -1,6 +1,6 @@
 ---
 title: Služby CImage ve – třída
-ms.date: 02/01/2018
+ms.date: 08/19/2019
 f1_keywords:
 - CImage
 - ATLIMAGE/ATL::CImage
@@ -54,12 +54,12 @@ helpviewer_keywords:
 - CImage class
 - transparent color
 ms.assetid: 52861e3d-bf7e-481f-a240-90e88f76c490
-ms.openlocfilehash: 6c651f160fdab582b769cf1764add2cc482745bf
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 3b278f37bbcbe2ee879d9c3d2837267fe31e57e2
+ms.sourcegitcommit: 9d4ffb8e6e0d70520a1e1a77805785878d445b8a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69491331"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69630719"
 ---
 # <a name="cimage-class"></a>Služby CImage ve – třída
 
@@ -193,9 +193,9 @@ Prostřednictvím `CImage`nástroje máte přístup k skutečným bitům oddílu
 Můžete použít `CImage` buď z knihovny MFC nebo knihovny ATL.
 
 > [!NOTE]
-> Při vytváření projektu pomocí `CImage`, je nutné definovat `CString` před zahrnutím `atlimage.h`. Pokud váš projekt používá ATL bez knihovny MFC, `atlstr.h` zahrňte před `atlimage.h`zahrnutím. Pokud váš projekt používá knihovnu MFC (nebo pokud se jedná o projekt ATL s podporou MFC), `afxstr.h` zahrňte před `atlimage.h`zahrnutím.<br/>
+> Při vytváření projektu pomocí `CImage`, je nutné definovat `CString` před zahrnutím *atlimage. h*. Pokud váš projekt používá ATL bez knihovny MFC, přidejte *atlstr. h* před zahrnutím *atlimage. h*. Pokud váš projekt používá knihovnu MFC (nebo pokud se jedná o projekt ATL s podporou MFC), přidejte *afxstr. h* před zahrnutím *atlimage. h*.<br/>
 > <br/>
-> Podobně je nutné zahrnout `atlimage.h` před zahrnutím. `atlimpl.cpp` Pokud to chcete provést snadno, `atlimage.h` zahrňte `stdafx.h`do svého.
+> Podobně musíte zahrnout *atlimage. h* před zahrnutím *Atlimpl. cpp*. Chcete-li to provést snadno, přidejte *atlimage. h* do souboru *PCH. h* (*stdafx. h* v aplikaci Visual Studio 2017 a starší).
 
 ## <a name="requirements"></a>Požadavky
 

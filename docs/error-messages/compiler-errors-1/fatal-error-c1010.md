@@ -1,34 +1,34 @@
 ---
 title: Závažná chyba C1010
-ms.date: 11/04/2016
+ms.date: 08/19/2019
 f1_keywords:
 - C1010
 helpviewer_keywords:
 - C1010
 ms.assetid: dfd035f1-a7a2-40bc-bc92-dc4d7f456767
-ms.openlocfilehash: 204c7ef94d82513338f6635ec9eb22f26fc090a7
-ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.openlocfilehash: 35b0f60f7eb3be887598e7ffaf3e3eae74aefcff
+ms.sourcegitcommit: 9d4ffb8e6e0d70520a1e1a77805785878d445b8a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65448015"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69630784"
 ---
 # <a name="fatal-error-c1010"></a>Závažná chyba C1010
 
-Neočekávaný konec souboru při hledání předkompilované hlavičky. Nezapomněli jste přidat ' #include název "ke zdroji?
+při hledání předkompilované hlavičky byl zjištěn neočekávaný konec souboru. Nezapomněli jste do zdroje přidat název #include?
 
-Zadaný soubor include [/Yu](../../build/reference/yu-use-precompiled-header-file.md) není uveden ve zdrojovém souboru.  Tato možnost je povolena ve výchozím nastavení v aplikaci Visual Studio většina C++ typy projektů a "stdafx.h" je výchozí zahrnout soubor určený parametrem tuto možnost.
+Soubor zahrnutí zadaný pomocí [/Yu](../../build/reference/yu-use-precompiled-header-file.md) není uveden ve zdrojovém souboru.  Tato možnost je ve výchozím nastavení povolená ve většině C++ typů projektů sady Visual Studio a souboru *PCH. h* (*stdafx. h* v aplikaci Visual Studio 2017 a starší) je výchozím souborem zahrnutí zadaným pomocí této možnosti.
 
-V prostředí Visual Studio použijte jednu z následujících metod pro vyřešení této chyby:
+V prostředí sady Visual Studio použijte k vyřešení této chyby jednu z následujících metod:
 
-- Pokud nepoužijete předkompilovaných hlaviček v projektu, nastavte **vytvořit/použít předkompilovanou hlavičku** vlastnost zdrojové soubory pro **není použití předkompilovaných hlaviček**. Nastavení této možnosti kompilátoru, postupujte podle těchto kroků:
+- Pokud ve svém projektu nepoužíváte předkompilované hlavičky, nastavte vlastnost **vytvořit/použít předkompilované záhlaví** zdrojových souborů na nepoužívají **předkompilované hlavičky**. K nastavení této možnosti kompilátoru použijte následující postup:
 
-   1. V podokně Průzkumník řešení projektu, klikněte pravým tlačítkem na název projektu a pak klikněte na tlačítko **vlastnosti**.
+   1. V podokně Průzkumník řešení projektu klikněte pravým tlačítkem myši na název projektu a potom klikněte na příkaz **vlastnosti**.
 
-   1. V levém podokně klikněte **C/C++** složky.
+   1. V levém podokně klikněte na složku **C/C++**  .
 
-   1. Klikněte na tlačítko **předkompilované hlavičky** uzlu.
+   1. Klikněte na uzel **předkompilované hlavičky** .
 
-   1. V pravém podokně klikněte na tlačítko **vytvoření a použití předkompilovaných hlaviček**a potom klikněte na tlačítko **není použití předkompilovaných hlaviček**.
+   1. V pravém podokně klikněte na **vytvořit/použít předkompilovanou hlavičku**a pak klikněte na nepoužívat **předkompilované hlavičky**.
 
-- Ujistěte se, že máte nikoli neúmyslně odstranit, přejmenovat nebo odebrat soubor hlaviček (ve výchozím nastavení, stdafx.h) z aktuálního projektu. Tento soubor se také musí být součástí než jakýkoli jiný kód ve zdrojových souborech pomocí **#include "stdafx.h"**. (Tento soubor hlavičky je zadán jako **vytvořit/použít PCH prostřednictvím souboru** vlastnosti projektu)
+- Ujistěte se, že jste neúmyslně odstranili, přejmenovali nebo odebrali hlavičkový soubor (ve výchozím nastavení stdafx. h) z aktuálního projektu. Tento soubor musí být také zahrnut před jakýmkoli jiným kódem ve zdrojových souborech pomocí **#include stdafx. h**. (Tento hlavičkový soubor je zadaný jako vlastnost souborového projektu **vytvořit/použít PCH** .)

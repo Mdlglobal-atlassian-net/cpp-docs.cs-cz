@@ -1,6 +1,6 @@
 ---
 title: CComModule – třída
-ms.date: 11/04/2016
+ms.date: 08/19/2019
 f1_keywords:
 - CComModule
 - ATLBASE/ATL::CComModule
@@ -31,12 +31,12 @@ helpviewer_keywords:
 - CComModule class
 - DLL modules [C++], ATL
 ms.assetid: f5face2c-8fd8-40e6-9ec3-54ab74701769
-ms.openlocfilehash: 53138081a6d712f775a2cc8f1e6905c45d95d34d
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 482f29bae28841ab40ca8a8f80ab7f0df42ddc8b
+ms.sourcegitcommit: 9d4ffb8e6e0d70520a1e1a77805785878d445b8a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69497107"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69630649"
 ---
 # <a name="ccommodule-class"></a>CComModule – třída
 
@@ -681,7 +681,7 @@ Standardní hodnota HRESULT.
 
 Podobně jako [UpdateRegistryFromResourceD](#updateregistryfromresourced) s `UpdateRegistryFromResourceS` tím rozdílem, že vytvoří statický odkaz na komponentu registru ATL (registrátor).
 
-`UpdateRegistryFromResourceS`bude vyvolána automaticky při zpracování mapy objektů za předpokladu, že přidáte `#define _ATL_STATIC_REGISTRY` do souboru stdafx. h.
+`UpdateRegistryFromResourceS`bude vyvolána automaticky při zpracování mapy objektů za předpokladu, že přidáte `#define _ATL_STATIC_REGISTRY` do souboru *PCH. h* (*stdafx. h* v aplikaci Visual Studio 2017 a starší).
 
 > [!NOTE]
 >  Chcete-li nahradit nahrazující hodnoty za běhu, nezadávejte makro [DECLARE_REGISTRY_RESOURCE](registry-macros.md#declare_registry_resource) nebo [DECLARE_REGISTRY_RESOURCEID](registry-macros.md#declare_registry_resourceid) . Místo toho vytvořte pole `_ATL_REGMAP_ENTRIES` struktur, kde každá položka obsahuje zástupný symbol s proměnnou s hodnotou, která nahradí zástupný symbol za běhu. Pak zavolejte `UpdateRegistryFromResourceS`a předejte pole pro parametr *pMapEntries* . Tím se ve `_ATL_REGMAP_ENTRIES` strukturách přidají všechny nahrazující hodnoty pro náhradní mapu registrátora.

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - MFC Feature Pack, update existing application
 - walkthroughs [MFC], update existing application
 ms.assetid: aa6330d3-6cfc-4c79-8fcb-0282263025f7
-ms.openlocfilehash: 71abf84e4c2afd75b0da88c261c78aa04ae08309
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 8211111e3f9e6fff2377a62689e6f8b1e0e40990
+ms.sourcegitcommit: 9d4ffb8e6e0d70520a1e1a77805785878d445b8a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69512933"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69630401"
 ---
 # <a name="walkthrough-updating-the-mfc-scribble-application-part-1"></a>Návod: Aktualizace aplikace MFC Klikyháky (část 1)
 
@@ -50,7 +50,7 @@ Chcete-li převést aplikaci, která podporuje nabídku na aplikaci, která podp
 
 1. V Klikyháky. cpp ověřte, že `CScribbleApp::InitInstance` obsahuje volání [AfxOleInit](../mfc/reference/ole-initialization.md#afxoleinit).
 
-1. Do souboru stdafx. h přidejte následující kód.
+1. Přidejte následující kód do souboru *PCH. h* (*stdafx. h* v aplikaci Visual Studio 2017 a starší):
 
     ```cpp
     #include <afxcontrolbars.h>

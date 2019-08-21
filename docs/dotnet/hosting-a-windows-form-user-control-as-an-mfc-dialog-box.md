@@ -6,54 +6,54 @@ helpviewer_keywords:
 - Windows Forms [C++], hosting as MFC Dialog
 - hosting Windows Forms control [C++]
 ms.assetid: 0434a9d7-8b14-48e6-ad69-9ba9a684677a
-ms.openlocfilehash: 5b216580f4965e0814b8a100f968a322641a3398
-ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
+ms.openlocfilehash: 96730cb3902674373e3e2429b7bc51cbbe257ff3
+ms.sourcegitcommit: 9d4ffb8e6e0d70520a1e1a77805785878d445b8a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66450720"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69630841"
 ---
 # <a name="hosting-a-windows-form-user-control-as-an-mfc-dialog-box"></a>Hostitelské poskytování uživatelského ovládacího prvku modelu Windows Form jako dialogového okna knihovny MFC
 
-Knihovna MFC poskytuje šablony třídy [CWinFormsDialog](../mfc/reference/cwinformsdialog-class.md) tak, aby uživatelského ovládacího prvku Windows Forms může hostovat (<xref:System.Windows.Forms.UserControl>) v modálním nebo nemodálním dialogovém okně knihovny MFC. `CWinFormsDialog` je odvozen od třídy knihovny MFC [CDialog](../mfc/reference/cdialog-class.md), takže můžete spustit dialogové okno modální a nemodální.
+Knihovna MFC poskytuje třídu šablon [CWinFormsDialog](../mfc/reference/cwinformsdialog-class.md) , takže můžete hostovat model Windows Forms uživatelský ovládací prvek (<xref:System.Windows.Forms.UserControl>) v modálním nebo nemodálním dialogovém okně knihovny MFC. `CWinFormsDialog`je odvozen z třídy MFC [CDialog](../mfc/reference/cdialog-class.md), takže dialogové okno lze spustit jako modální nebo nemodální.
 
-Proces, který `CWinFormsDialog` používá k hostování uživatelského ovládacího prvku je podobný tomu popsanému v [hostitelské poskytování uživatelského Windows Form v dialogovém okně knihovny MFC](../dotnet/hosting-a-windows-form-user-control-in-an-mfc-dialog-box.md). Ale `CWinFormsDialog` spravuje inicializace a poskytování hostitelských služeb uživatelského ovládacího prvku, takže není nutné naprogramovat ručně.
+Proces, který `CWinFormsDialog` používá k hostování uživatelského ovládacího prvku, je podobný jako v tématu [hostování uživatelského ovládacího prvku Windows Form v dialogovém okně knihovny MFC](../dotnet/hosting-a-windows-form-user-control-in-an-mfc-dialog-box.md). `CWinFormsDialog` Nicméně spravuje inicializaci a hostování uživatelského ovládacího prvku tak, aby se nemusela programovat ručně.
 
-Ukázková aplikace, která ukazuje použití s knihovnou MFC modelu Windows Forms, naleznete v tématu [MFC a integrace formulářů Windows](https://www.microsoft.com/downloads/details.aspx?FamilyID=987021bc-e575-4fe3-baa9-15aa50b0f599&displaylang=en).
+Ukázkovou aplikaci, která zobrazuje model Windows Forms používané v prostředí MFC, naleznete v tématu [integrace MFC a model Windows Forms](https://www.microsoft.com/downloads/details.aspx?FamilyID=987021bc-e575-4fe3-baa9-15aa50b0f599&displaylang=en).
 
-### <a name="to-create-the-mfc-host-application"></a>Chcete-li vytvořit hostitelskou aplikaci knihovny MFC
+### <a name="to-create-the-mfc-host-application"></a>Vytvoření hostitelské aplikace MFC
 
-1. Vytvořte projekt aplikace knihovny MFC.
+1. Vytvořte projekt aplikace MFC.
 
-   Na **souboru** nabídce vyberte možnost **nový**a potom klikněte na tlačítko **projektu**. V **Visual C++** složky, vyberte **aplikace knihovny MFC**.
+   V nabídce **soubor** vyberte **Nový**a pak klikněte na **projekt**. Ve složce **vizuálu C++**  vyberte možnost **aplikace MFC**.
 
-   V **název** zadejte `MFC03` a změňte nastavení řešení na **přidat do řešení**. Klikněte na tlačítko **OK**.
+   Do pole **název** zadejte `MFC03` a změňte nastavení řešení na možnost **Přidat do řešení**. Klikněte na tlačítko **OK**.
 
-   V **Průvodce aplikací knihovny MFC**, přijměte všechny výchozí hodnoty a klikněte na **Dokončit**. Tím se vytvoří aplikace knihovny MFC s rozhraním více dokumentů.
+   V **Průvodci aplikací knihovny MFC**přijměte všechny výchozí hodnoty a potom klikněte na tlačítko **Dokončit**. Tím se vytvoří aplikace MFC s rozhraním více dokumentů.
 
-1. Konfigurace projektu.
+1. Nakonfigurujte projekt.
 
-   V **Průzkumníka řešení**, klikněte pravým tlačítkem myši **MFC03** uzel projektu a zvolte **vlastnosti**. **Stránky vlastností** zobrazí se dialogové okno.
+   V **Průzkumník řešení**klikněte pravým tlačítkem myši na uzel projektu **MFC03** a vyberte možnost **vlastnosti**. Zobrazí se dialogové okno **stránky vlastností** .
 
-   V **stránky vlastností** v dialogu **vlastnosti konfigurace** ovládacího prvku stromu, vyberte **Obecné**, pak v **výchozínastaveníprojektu**nastavte **Common Language Runtime support** k **Common Language Runtime Support (/ clr)** . Klikněte na **OK**.
+   V dialogovém okně **stránky vlastností** v ovládacím prvku strom **vlastností konfigurace** vyberte možnost **Obecné**a potom v části **výchozí nastavení projektu** nastavte podporu modulu **CLR** na **Common Language Runtime ( /CLR)** . Klikněte na **OK**.
 
 1. Přidejte odkaz na ovládací prvek .NET.
 
-   V **Průzkumníku řešení**, klikněte pravým tlačítkem myši **MFC03** uzel projektu a zvolte **přidat**, **odkazy**. V **stránku vlastností**, klikněte na tlačítko **přidat nový odkaz**, vyberte WindowsControlLibrary1 (v části **projekty** kartu) a klikněte na tlačítko **OK**. To přidá odkaz ve formuláři [/FU](../build/reference/fu-name-forced-hash-using-file.md) – možnost kompilátoru tak, že program bude kompilován; také zkopíruje WindowsControlLibrary1.dll do `MFC03` adresáře projektu tak, aby se bude program spouštět.
+   V **Průzkumník řešení**klikněte pravým tlačítkem myši na uzel projektu **MFC03** a vyberte možnost **Přidat**, **odkazy**. Na **stránce vlastností**klikněte na **Přidat nový odkaz**, vyberte WindowsControlLibrary1 (na kartě **projekty** ) a klikněte na **OK**. Tím se přidá odkaz ve formuláři Možnosti kompilátoru [/Fu](../build/reference/fu-name-forced-hash-using-file.md) , takže program se zkompiluje. také zkopíruje WindowsControlLibrary1. dll do `MFC03` adresáře projektu, takže se program spustí.
 
-1. Přidat `#include <afxwinforms.h>` do stdafx.h na konci existujícího `#include` příkazy.
+1. Přidejte `#include <afxwinforms.h>` do souboru *PCH. h* (*stdafx. h* v aplikaci Visual Studio 2017 a starší) na konci existujících `#include` příkazů.
 
-1. Přidejte novou třídu, která je podtřídou `CDialog`.
+1. Přidejte novou třídu, která je podtřídami `CDialog`.
 
-   Klikněte pravým tlačítkem na název projektu a přidání třídy knihovny MFC (nazývanou CHostForWinForm), která je podtřídou `CDialog`. Vzhledem k tomu, že nepotřebujete prostředky dialogového, můžete odstranit ID prostředku (vyberte **zobrazení prostředků**, rozbalte **dialogové okno** složku a odstraňte `IDD_HOSTFORWINFORM` prostředků.  Potom odeberte všechny odkazy na ID v kódu.).
+   Klikněte pravým tlačítkem na název projektu a přidejte třídu MFC (označovanou jako CHostForWinForm), `CDialog`kterou podtřídy. Vzhledem k tomu, že nepotřebujete prostředek dialogového okna, můžete odstranit ID prostředku (vyberte **prostředky**, rozbalte složku **dialogového okna** a odstraňte `IDD_HOSTFORWINFORM` prostředek.  Pak odeberte všechny odkazy na ID v kódu.).
 
-1. Nahraďte `CDialog` v CHostForWinForm.h a CHostForWinForm.cpp soubory s `CWinFormsDialog<WindowsControlLibrary1::UserControl1>`.
+1. Nahraďte `CDialog` soubory v CHostForWinForm. h a CHostForWinForm. cpp `CWinFormsDialog<WindowsControlLibrary1::UserControl1>`pomocí.
 
-1. Volejte DoModal na třídě CHostForWinForm.
+1. Volejte DoModal pro třídu CHostForWinForm.
 
-   V MFC03.cpp přidejte `#include "HostForWinForm.h"`.
+   V MFC03. cpp přidejte `#include "HostForWinForm.h"`.
 
-   Před příkaz return v definici CMFC03App::InitInstance přidejte:
+   Před příkazem Return v definici CMFC03App:: InitInstance přidejte:
 
     ```cpp
     CHostForWinForm m_HostForWinForm;
@@ -64,19 +64,19 @@ Ukázková aplikace, která ukazuje použití s knihovnou MFC modelu Windows For
 
    Na **sestavení** nabídky, klikněte na tlačítko **sestavit řešení**.
 
-   Na **ladění** nabídky, klikněte na tlačítko **spustit bez ladění**.
+   V nabídce **ladit** klikněte na **Spustit bez ladění**.
 
-   Dále přidáte kód ke sledování stavu ovládacího prvku Windows Forms z aplikace knihovny MFC.
+   Dále přidáte kód pro monitorování stavu ovládacího prvku v model Windows Forms z aplikace MFC.
 
 1. Přidejte obslužnou rutinu pro OnInitDialog.
 
-   Zobrazení **vlastnosti** okno (F4). V **zobrazení tříd**, vyberte CHostForWinForm. V **vlastnosti** okna, vyberte možnost přepsání a v řádku pro OnInitDialog klikněte v levém sloupci a vyberte \< Přidat >. Tím přidáte následující řádek do CHostForWinForm.h:
+   Zobrazí okno **vlastnosti** (F4). V **zobrazení tříd**vyberte CHostForWinForm. V okně **vlastnosti** vyberte možnost přepsání a v řádku pro OnInitDialog klikněte na sloupec vlevo a vyberte \< přidat >. Tím se přidá následující řádek do CHostForWinForm. h:
 
     ```cpp
     virtual BOOL OnInitDialog();
     ```
 
-1. Definujte OnInitDialog (v CHostForWinForm.cpp) takto:
+1. Definujte OnInitDialog (v CHostForWinForm. cpp) následujícím způsobem:
 
     ```cpp
     BOOL CHostForWinForm::OnInitDialog() {
@@ -86,7 +86,7 @@ Ukázková aplikace, která ukazuje použití s knihovnou MFC modelu Windows For
     }
     ```
 
-1. Dále přidejte obslužnou rutinu OnButton1. Přidejte následující řádky do veřejné sekce třídy CHostForWinForm v CHostForWinForm.h:
+1. Dále přidejte obslužnou rutinu ' Button1 '. Přidejte následující řádky do veřejné sekce třídy CHostForWinForm v CHostForWinForm. h:
 
     ```cpp
     virtual void OnButton1( System::Object^ sender, System::EventArgs^ e );
@@ -96,7 +96,7 @@ Ukázková aplikace, která ukazuje použití s knihovnou MFC modelu Windows For
     END_DELEGATE_MAP()
     ```
 
-   V CHostForWinForm.cpp přidejte tuto definici:
+   V CHostForWinForm. cpp přidejte tuto definici:
 
     ```cpp
     void CHostForWinForm::OnButton1( System::Object^ sender, System::EventArgs^ e )
@@ -105,17 +105,17 @@ Ukázková aplikace, která ukazuje použití s knihovnou MFC modelu Windows For
     }
     ```
 
-1. Sestavte a spusťte projekt. Když kliknete na tlačítko, které je ve formuláři Windows se spustí kód v aplikaci knihovny MFC.
+1. Sestavte a spusťte projekt. Po kliknutí na tlačítko, které je na formuláři Windows, se spustí kód v aplikaci MFC.
 
-    Dále přidáte kód k zobrazení hodnoty z kódu MFC, do textového pole ve formuláři Windows.
+    Dále přidáte kód, který bude zobrazen z kódu knihovny MFC, do textového pole ve formuláři Windows.
 
-1. Do veřejné sekce třídy CHostForWinForm v CHostForWinForm.h přidejte následující deklarace:
+1. Do veřejné sekce třídy CHostForWinForm v CHostForWinForm. h přidejte následující deklaraci:
 
     ```cpp
     CString m_sEditBoxOnWinForm;
     ```
 
-1. V definici DoDataExchange v CHostForWinForm.cpp přidejte následující tři řádky na konec funkce:
+1. V definici DoDataExchange v CHostForWinForm. cpp přidejte následující tři řádky na konec funkce:
 
     ```cpp
     if (pDX->m_bSaveAndValidate)
@@ -124,7 +124,7 @@ Ukázková aplikace, která ukazuje použití s knihovnou MFC modelu Windows For
        GetControl()->textBox1->Text = gcnew System::String(m_sEditBoxOnWinForm);
     ```
 
-1. V definici OnButton1 v CHostForWinForm.cpp přidejte následující tři řádky na konec funkce:
+1. V definici funkce webbutton1 v CHostForWinForm. cpp přidejte následující tři řádky na konec funkce:
 
     ```cpp
     this->UpdateData(TRUE);
@@ -137,4 +137,4 @@ Ukázková aplikace, která ukazuje použití s knihovnou MFC modelu Windows For
 ## <a name="see-also"></a>Viz také:
 
 <xref:System.Windows.Forms.UserControl?displayProperty=fullName>
-[Použití uživatelského ovládacího prvku Windows Form v prostředí MFC](../dotnet/using-a-windows-form-user-control-in-mfc.md)
+[Použití uživatelského ovládacího prvku Windows Form v MFC](../dotnet/using-a-windows-form-user-control-in-mfc.md)

@@ -1,23 +1,23 @@
 ---
 title: Upozornění linkerů LNK4221
-ms.date: 11/04/2016
+ms.date: 08/19/2019
 f1_keywords:
 - LNK4221
 helpviewer_keywords:
 - LNK4221
 ms.assetid: 8e2eb2de-9532-4b85-908a-8c9ff5c4cccb
-ms.openlocfilehash: baea8643001c550aeb3cb35dc6fe414e4330c0c1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 299c3ef76006b347d6770d45ca317ff0eb941ffa
+ms.sourcegitcommit: 9d4ffb8e6e0d70520a1e1a77805785878d445b8a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62160377"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69630807"
 ---
 # <a name="linker-tools-warning-lnk4221"></a>Upozornění linkerů LNK4221
 
-Tento soubor objektu nedefinuje ještě definované veřejné symboly, takže se nepoužije žádná operace propojení, která tuto knihovnu užívá
+Tento soubor objektu nedefinuje žádné dříve nedefinované veřejné symboly, takže ho nebude používat žádná operace propojení, která tuto knihovnu spotřebovává.
 
-Vezměte v úvahu následující fragmenty kódu dvě.
+Vezměte v úvahu následující dva fragmenty kódu.
 
 ```
 // a.cpp
@@ -33,10 +33,20 @@ int function()
 }
 ```
 
-Chcete-li zkompilovat soubory a vytvořte dva soubory objekt, spusťte **cl /c a.cpp b.cpp** z příkazového řádku. Pokud propojíte objektových souborů spuštěním **propojení/lib /out:test.lib a.obj b.obj**, zobrazí se upozornění LNK4221. Pokud jste se objekty spuštěním **propojení/lib /out:test.lib b.obj a.obj**, neobdržíte žádné upozornění.
+Chcete-li zkompilovat soubory a vytvořit dva soubory objektů, spusťte na příkazovém řádku soubor **CL/c a. cpp b. cpp** . Pokud propojíte soubory objektů spuštěním **odkazu/lib/out: test. lib a. obj b. obj**, zobrazí se Upozornění linkerů LNK4221. Pokud propojíte objekty spuštěním **odkazu/lib/out: test. lib b. obj a. obj**, nebudete dostávat žádné upozornění.
 
-Vzhledem k tomu, že má linker funguje způsobem poslední v první (ven LIFO), objeví se bez upozornění v druhém scénáři. V prvním případě b.obj se zpracovává před a.obj a a.obj nemá žádné nové symboly pro přidání. Tím, že linkeru, aby a.obj zpracovat jako první, se můžete vyhnout upozornění.
+V druhém scénáři není vydáno žádné upozornění, protože linker funguje v rámci prvního nebo posledního použití metody LIFO. V prvním scénáři je b. obj zpracován před objektem. obj a. obj nemá žádné nové symboly pro přidání. Tím, že dáte pokyn linkeru ke zpracování. obj, můžete se vyhnout upozornění.
 
-Běžnou příčinou této chyby je po dvou zdrojových souborů zadat možnost [/Yc (Vytvořit předkompilovaný hlavičkový soubor)](../../build/reference/yc-create-precompiled-header-file.md) se stejným názvem souboru záhlaví podle **předkompilovaných hlaviček** pole. Obvyklou příčinou tohoto problému se zabývá stdafx.h, protože ve výchozím nastavení, stdafx.cpp zahrnuje stdafx.h a nepřidá žádné nové symboly. Když jiný zdrojový soubor obsahuje stdafx.h s **/Yc** a při zpracování souboru .obj přidružené před stdafx.obj, linker vyvolá LNK4221.
+::: moniker range=">=vs-2019"
 
-Jeden ze způsobů, jak vyřešit tento problém se ujistěte, že pro každý předkompilované hlavičky, existuje pouze jeden zdrojový soubor, který ji obsahuje **/Yc**. Všechny ostatní soubory zdroje musí používat předkompilovaných hlaviček. Další informace o tom, jak toto nastavení změnit, naleznete v tématu [/Yu (Použít předkompilovaný hlavičkový soubor)](../../build/reference/yu-use-precompiled-header-file.md).
+Obvyklou příčinou této chyby je, že dva zdrojové soubory určují možnost [/Yc (Vytvořit předkompilovaný hlavičkový soubor)](../../build/reference/yc-create-precompiled-header-file.md) se stejným názvem souboru hlaviček, který je zadaný v poli Předkompilovaná **Hlavička** . Obvyklou příčinou tohoto problému je soubor *PCH. h* , protože ve výchozím nastavení soubor *PCH. cpp* obsahuje soubor *PCH. h* a nepřidává žádné nové symboly. Pokud jiný zdrojový soubor obsahuje *PCH. h* s **/YC** a přidružený soubor. obj je zpracován před souborem PCH. obj, linker vyvolá linkerů LNK4221.
+
+::: moniker-end
+
+::: moniker range="<=vs-2017"
+
+Obvyklou příčinou této chyby je, že dva zdrojové soubory určují možnost [/Yc (Vytvořit předkompilovaný hlavičkový soubor)](../../build/reference/yc-create-precompiled-header-file.md) se stejným názvem souboru hlaviček, který je zadaný v poli Předkompilovaná **Hlavička** . Obvyklou příčinou tohoto problému je soubor stdafx *. h* , protože ve výchozím nastavení obsahuje *stdafx* . h a nepřidává žádné nové symboly. Pokud jiný zdrojový soubor obsahuje *stdafx. h* s **/YC** a přidružený soubor. obj je zpracován před stdafx. obj, linker vyvolá linkerů LNK4221.
+
+::: moniker-end
+
+Jedním ze způsobů, jak tento problém vyřešit, je ujistit se, že pro každou předkompilovanou hlavičku je k dispozici pouze jeden zdrojový soubor, který obsahuje **/YC**. Všechny ostatní zdrojové soubory musí používat předkompilované hlavičky. Další informace o tom, jak změnit toto nastavení, naleznete v tématu [/Yu (použít předkompilovaný hlavičkový soubor)](../../build/reference/yu-use-precompiled-header-file.md).

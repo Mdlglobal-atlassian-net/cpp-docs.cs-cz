@@ -1,50 +1,50 @@
 ---
 title: Vytvoření projektu aplikace konzoly C++
-description: Vytvořte konzolovou aplikaci Hello World a Kalkulačka aplikace v jazyce Visual C++
+description: Vytvoření aplikace konzoly pro Hello World a aplikace kalkulačky v vizuáluC++
 ms.custom: mvc
-ms.date: 05/28/2019
+ms.date: 08/19/2019
 ms.topic: tutorial
 ms.devlang: cpp
 ms.assetid: 45138d70-719d-42dc-90d7-1d0ca31a2f54
-ms.openlocfilehash: 9fc5508b68c8e206e76ead08ddb8015dd5133256
-ms.sourcegitcommit: 18f535a6c4cfe58362ed56599b1a875ee71ff6aa
+ms.openlocfilehash: ff1b5295f9fefd681ea76d09349415b59ceac1f2
+ms.sourcegitcommit: 9d4ffb8e6e0d70520a1e1a77805785878d445b8a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/30/2019
-ms.locfileid: "66410768"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69631308"
 ---
 # <a name="create-a-c-console-app-project"></a>Vytvoření projektu aplikace konzoly C++
 
 ::: moniker range=">=vs-2019"
 
-Obvyklým výchozím bodem pro programátor C++ je "Hello, world!" aplikace, která běží na příkazovém řádku. To je, co vytvoříte v sadě Visual Studio v tomto článku a pak budeme pokračovat na něco náročnější: Kalkulačka aplikace.
+Obvyklým výchozím bodem C++ programátora je "Hello, World!" aplikace, která běží na příkazovém řádku. To je to, co vytvoříte v aplikaci Visual Studio v tomto článku, a pak budeme pokračovat na něco náročnějšího: aplikace kalkulačky.
 
 ## <a name="prerequisites"></a>Požadavky
 
-- Sada Visual Studio s **vývoj desktopových aplikací pomocí C++** úlohy, které jsou nainstalované a spuštěné v počítači. Pokud ještě není nainstalovaný, přečtěte si téma [podpora instalace jazyka C++ v sadě Visual Studio](../build/vscpp-step-0-installation.md).
+- Aplikace Visual Studio s **vývojem C++ pro stolní počítače** je nainstalovaná a spuštěná v počítači. Pokud ještě není nainstalován, přečtěte si [téma C++ instalace podpory v aplikaci Visual Studio](../build/vscpp-step-0-installation.md).
 
 ## <a name="create-your-app-project"></a>Vytvoření projektu aplikace
 
-Visual Studio používá *projekty* organizaci kódu pro aplikace, a *řešení* k uspořádání vašich projektů. Projekt obsahuje všechny možnosti, konfigurace a pravidla používaná k vytváření aplikací. Spravuje také vztah mezi všechny projektové soubory a soubory s externí. Pokud chcete vytvořit aplikaci, nejprve vytvoříte nový projekt a řešení.
+Visual Studio používá *projekty* organizaci kódu pro aplikace, a *řešení* k uspořádání vašich projektů. Projekt obsahuje všechny možnosti, konfigurace a pravidla používaná k vytváření aplikací. Spravuje také vztah mezi všechny projektové soubory a soubory s externí. Chcete-li vytvořit aplikaci, nejprve vytvořte nový projekt a řešení.
 
-1. Pokud jste začali sady Visual Studio, zobrazí se dialogové okno Visual Studio 2019. Zvolte **vytvořte nový projekt** začít.
+1. Pokud jste právě spustili aplikaci Visual Studio, zobrazí se dialogové okno Visual Studio 2019. Začněte tím, že kliknete na **vytvořit nový projekt** .
 
-   ![Počáteční dialogovém okně Visual Studio 2019](./media/calc-vs2019-initial-dialog.png "The Visual Studio 2019 počáteční dialogového okna")
+   ![Úvodní dialogové okno sady Visual Studio 2019](./media/calc-vs2019-initial-dialog.png "Úvodní dialogové okno sady Visual Studio 2019")
 
-   V opačném případě v řádku nabídek v sadě Visual Studio, zvolte **souboru** > **nový** > **projektu**. **Vytvořte nový projekt** otevře se okno.
+   V opačném případě na panelu nabídek v aplikaci Visual Studio vyberte **soubor** > **Nový** > **projekt**. Otevře se okno **vytvořit nový projekt** .
 
-1. V seznamu šablon projektu vyberte **konzolovou aplikaci**, klikněte na tlačítko **Další**.
+1. V seznamu šablon projektu zvolte možnost **aplikace konzoly**a pak klikněte na tlačítko **Další**.
 
-   ![Vyberte šablonu Konzolová aplikace](./media/calc-vs2019-choose-console-app.png "vyberte šablonu Konzolová aplikace")
+   ![Zvolit šablonu konzolové aplikace](./media/calc-vs2019-choose-console-app.png "Zvolit šablonu konzolové aplikace")
 
    > [!Important]
-   > Ujistěte se, že zvolíte C++ verzi **konzolovou aplikaci** šablony. Má **C++** , **Windows**, a **konzoly** značky a ikona má "++" v horním.
+   > Ujistěte se, že jste C++ zvolili verzi šablony **aplikace konzoly** . Má značky **C++** , **Windows**a **Console** a ikona obsahuje "+ +" v rohu.
 
-1. V **konfigurovat nový projekt** dialogové okno, vyberte **název projektu** textové pole, pojmenujte svůj projekt nové *CalculatorTutorial*, klikněte na tlačítko **Create** .
+1. V dialogovém okně **Konfigurovat nový projekt** vyberte pole **název projektu** upravit, pojmenujte nový projekt *CalculatorTutorial*a pak zvolte **vytvořit**.
 
-   ![Pojmenujte svůj projekt v konfigurací vašich dialogové okno nového projektu](./media/calc-vs2019-name-your-project.png "pojmenujte svůj projekt v konfigurací vašich dialogové okno nového projektu")
+   ![Pojmenujte projekt v dialogu Konfigurovat nový projekt] . (./media/calc-vs2019-name-your-project.png "Pojmenujte projekt v dialogu Konfigurovat nový projekt") .
 
-   Vytvoří prázdnou aplikaci konzoly Windows C++. Konzolové aplikace pomocí okna konzoly Windows a zobrazte výstup přijímají vstup uživatele. V sadě Visual Studio okno editoru se otevře a zobrazí vygenerovaný kód:
+   Vytvoří se C++ prázdná Konzolová aplikace pro Windows. Konzolové aplikace používají okno konzoly systému Windows k zobrazení výstupu a přijetí vstupu uživatele. V aplikaci Visual Studio se otevře okno editoru a zobrazí se generovaný kód:
 
     ```cpp
     // CalculatorTutorial.cpp : This file contains the 'main' function. Program execution begins and ends there.
@@ -69,29 +69,29 @@ Visual Studio používá *projekty* organizaci kódu pro aplikace, a *řešení*
     //   6. In the future, to open this project again, go to File > Open > Project and select the .sln file
     ```
 
-## <a name="verify-that-your-new-app-builds-and-runs"></a>Ověřte, že vaše nová aplikace se vytvoří a spustí
+## <a name="verify-that-your-new-app-builds-and-runs"></a>Ověřte, že se nová aplikace sestavuje a spustí.
 
-Šablonu pro novou konzolovou aplikaci pro Windows vytvoří jednoduchou aplikaci "Hello World" jazyka C++. V tuto chvíli uvidíte jak Visual Studio vytvoří a spustí aplikace, které vytvoříte přímo z integrovaného vývojového prostředí.
+Šablona pro novou konzolovou aplikaci pro Windows vytvoří jednoduchou C++ aplikaci "Hello World". V tomto okamžiku vidíte, jak aplikace Visual Studio sestavuje a spouští aplikace, které vytvoříte přímo z rozhraní IDE.
 
-1. Chcete-li projekt sestavit, zvolte **sestavit řešení** z **sestavení** nabídky. **Výstup** okno zobrazuje výsledky procesu sestavení.
+1. Chcete-li sestavit projekt, v nabídce **sestavení** klikněte na příkaz **Sestavit řešení** . V okně **výstup** se zobrazí výsledky procesu sestavení.
 
-   ![Sestavte projekt](./media/calc-vs2019-build-your-project.png "sestavení projektu")
+   ![Sestavení projektu](./media/calc-vs2019-build-your-project.png "Sestavení projektu")
 
-1. Chcete-li spustit kód, na panelu nabídek, zvolte **ladění**, **spustit bez ladění**.
+1. Chcete-li spustit kód, na panelu nabídek vyberte možnost **ladit**, **Spustit bez ladění**.
 
-   ![Spustit projekt](./media/calc-vs2019-hello-world-console.png "spustit projekt")
+   ![Spustit projekt](./media/calc-vs2019-hello-world-console.png "Spustit projekt")
 
-   Okno konzoly otevře a spustí vaši aplikaci. Když spustíte aplikaci konzoly v sadě Visual Studio, spustí váš kód a pak vypíše "stisknutím jakékoli klávesy zavřete toto okno. . ." získáte možnost zobrazit výstup. Blahopřejeme! Vytvoření první "Hello, world!" Konzolová aplikace v sadě Visual Studio!
+   Otevře se okno konzoly a pak se spustí vaše aplikace. Když spustíte konzolovou aplikaci v aplikaci Visual Studio, spustí váš kód a pak vytiskne "stisknutím libovolné klávesy zavřete toto okno. . ." abyste měli možnost zobrazit výstup. Blahopřejeme! Vytvořili jste první "Hello, World!" Konzolová aplikace v aplikaci Visual Studio!
 
-1. Stisknutím jakékoli klávesy zavřete okno konzoly a vraťte se do sady Visual Studio.
+1. Stisknutím klávesy zavřete okno konzoly a vraťte se do sady Visual Studio.
 
-Teď máte nástroje pro sestavení a spuštění aplikace po každé změně, chcete-li ověřit, že kód stále funguje podle očekávání. Později vám ukážeme, jak ho ladit, pokud tomu tak není.
+Teď máte nástroje pro sestavení a spuštění vaší aplikace po každé změně, abyste ověřili, že kód pořád funguje podle očekávání. Později vám ukážeme, jak ji ladit, pokud ne.
 
 ## <a name="edit-the-code"></a>Upravit kód
 
-Teď obraťme kód v této šabloně do aplikace kalkulačku.
+Teď kód v této šabloně převeďte do aplikace kalkulačky.
 
-1. V *CalculatorTutorial.cpp* souboru, upravte kód tak, aby odpovídala takto:
+1. V souboru *CalculatorTutorial. cpp* upravte kód tak, aby odpovídal následujícímu příkladu:
 
     ```cpp
     // CalculatorTutorial.cpp : This file contains the 'main' function. Program execution begins and ends there.
@@ -120,37 +120,37 @@ Teď obraťme kód v této šabloně do aplikace kalkulačku.
     //   6. In the future, to open this project again, go to File > Open > Project and select the .sln file
     ```
 
-   > Porozumění kódu:
+   > Princip kódu:
    >
-   > - `#include` Příkazy umožňuje odkazovat na kódu v jiných souborech. V některých případech může se zobrazit název souboru ohraničen ostrými závorkami ( **\<\>** ); jindy je ohraničen uvozovkami ( **""** ). Obecně platí ostré závorky se používají při odkazování na standardní knihovny C++, zatímco nabídky se používá pro jiné soubory.
-   > - `using namespace std;` Řádku instruuje kompilátor, aby očekávají věci ze standardní knihovny C++, který se má použít v tomto souboru. Bez tohoto řádku by musel párový příkaz s každé klíčové slovo z knihovny `std::`, k označení její obor. Například bez tento řádek každý odkaz na `cout` musela zapsat, protože `std::cout`. `using` Příkaz je přidat – tak kód vypadaly úhledně více.
-   > - `cout` – Klíčové slovo se používá k vytištění do standardního výstupu v jazyce C++. **\< \<** Operátor instruuje kompilátor, aby odeslat cokoli, co je napravo od ji ve standardním výstupu.
-   > - **Endl** – klíčové slovo je jako klávesu Enter; ukončení řádku a přesune kurzor na další řádek. Je doporučeno pro umístění `\n` do řetězce (obsažen v "") provést totéž, jako `endl` vždy vyprázdní vyrovnávací paměť a může snížit výkon aplikace, ale protože to je velmi malou aplikaci, `endl` se místo toho používá pro lepší lepší čitelnost.
-   > - Všechny příkazy C++ musí končit středníkem a musí obsahovat všechny aplikací v jazyce C++ `main()` funkce. Tato funkce je program spuštěn na začátku. Veškerý kód musí být dostupný z `main()` jinak se nedá použít.
+   > - `#include` Příkazy umožňují odkazování na kód nacházející se v jiných souborech. V některých případech se může zobrazit název souboru uzavřený pomocí lomených **\<\>** závorek (); další časy je uzavřený pomocí uvozovek ( **""** ). Obecně platí, že při odkazování na C++ standardní knihovnu se používají lomené závorky, zatímco se používají uvozovky pro jiné soubory.
+   > - Řádek instruuje kompilátor, aby čekal na použití C++ standardní knihovny v tomto souboru. `using namespace std;` Bez tohoto řádku by bylo nutné každé klíčové slovo z knihovny předcházet s `std::`, aby bylo možné poznamenat svůj rozsah. Například bez tohoto řádku musí být každý odkaz `cout` napsán jako. `std::cout` `using` Příkaz je přidán, aby bylo možné v kódu vyčistit.
+   > - Klíčové slovo se používá k tisku na standardní výstup v C++ `cout` Operátor instruuje kompilátor, aby odesílal, ať je napravo od něj až po standardní výstup. **\< \<**
+   > - Klíčové slovo **endl** je jako klávesa ENTER. ukončí řádek a přesune kurzor na další řádek. Je lepší postup vložit `\n` dovnitř řetězce (obsaženého "") tak, aby provedl stejnou věc, jak `endl` vždycky vyprázdní vyrovnávací paměť a může snížit výkon programu, ale vzhledem k tomu, že se jedná o velmi malou aplikaci, `endl` se místo toho používá pro lepší čitelnost.
+   > - Všechny C++ příkazy musí končit středníkem a všechny C++ aplikace `main()` musí obsahovat funkci. Tato funkce je to, co program spouští na začátku. Aby bylo možné použít, musí `main()` být veškerý kód přístupný z.
 
-1. Chcete-li uložit soubor, zadejte **Ctrl + S**, nebo zvolte **Uložit** ikonu v horní části rozhraní IDE, ikonu diskety v panelu nástrojů v řádku nabídek.
+1. Soubor uložíte tak, že zadáte **CTRL + S**nebo v horní části rozhraní IDE kliknete na ikonu **Uložit** , na panelu nástrojů pod řádkem nabídek.
 
-1. Chcete-li aplikaci spustit, stiskněte **Ctrl + F5** nebo přejděte na **ladění** nabídky a zvolte **spustit bez ladění**. Měli byste vidět okno konzoly zobrazí zobrazí text uvedený v kódu.
+1. Chcete-li spustit aplikaci, stiskněte klávesy **CTRL + F5** nebo přejděte do nabídky **ladění** a zvolte možnost **Spustit bez ladění**. Mělo by se zobrazit okno konzoly, které zobrazuje text zadaný v kódu.
 
-1. Jakmile budete hotovi, zavřete okno konzoly.
+1. Až skončíte, zavřete okno konzoly.
 
-## <a name="add-code-to-do-some-math"></a>Přidejte kód pro procvičili matematiku
+## <a name="add-code-to-do-some-math"></a>Přidejte kód, abyste mohli provádět některé matematické
 
-Je čas na přidání některých matematických logiku.
+Je čas přidat nějakou matematickou logiku.
 
-### <a name="to-add-a-calculator-class"></a>Přidání třídy Kalkulačka
+### <a name="to-add-a-calculator-class"></a>Přidání třídy kalkulačky
 
-1. Přejděte **projektu** nabídku a zvolte **přidat třídu**. V **název třídy** textové pole, zadejte *Kalkulačka*. Zvolte **OK**. Dva nové soubory nechejte se přidat do projektu. Chcete-li uložit všechny změněné soubory najednou, stiskněte **Ctrl + Shift + S**. Je klávesová zkratka **souboru** > **Uložit vše**. Je také tlačítko panelu nástrojů pro **Uložit vše**, ikona dvou disket nenašel vedle **Uložit** tlačítko. Obecně je vhodné provést **Uložit vše** často, takže můžete Nenechte si ujít všechny soubory při uložení.
+1. Přejděte do nabídky **projekt** a vyberte možnost **Přidat třídu**. V poli **název třídy** upravte zadejte Kalkulačka. Zvolte **OK**. Do projektu se přidají dva nové soubory. Chcete-li uložit všechny změněné soubory najednou, stiskněte klávesy **CTRL + SHIFT + S**. Je to klávesová zkratka pro **soubor** > **Save All**. K dispozici je také tlačítko panelu nástrojů pro možnost **Uložit vše**– ikona dvou disket, která se nachází vedle tlačítka **Uložit** . Obecně platí, že dobrým zvykem je **ukládat všechny** často, takže při ukládání nenajdete žádné soubory.
 
-   ![Vytvořte třídu Kalkulačka](./media/calc-vs2019-create-calculator-class.png "vytvořit třídu Kalkulačka")
+   ![Vytvoření třídy kalkulačky](./media/calc-vs2019-create-calculator-class.png "Vytvoření třídy kalkulačky")
 
-   Třída je jako matrice objektu, která něco dělá. V takovém případě definujeme kalkulačku a jak by mělo fungovat. **Přidat třídu** Průvodce využité nad vytvořené soubory .h a .cpp, které mají stejný název jako třída. Můžete zobrazit úplný seznam souborů v projektu **Průzkumníka řešení** okno viditelné Toolbar integrovaného vývojového prostředí. Pokud v okně není zobrazena, lze jej otevřít z řádku nabídek: Zvolte **zobrazení** > **Průzkumníka řešení**.
+   Třída je jako podrobný plán pro objekt, který něco dělá. V tomto případě definujeme kalkulačku a to, jak má fungovat. Průvodce **přidáním třídy** , který jste použili nad vytvořenými soubory. h a. cpp, které mají stejný název jako třída. Úplný seznam souborů projektu můžete zobrazit v okně **Průzkumník řešení** , které je viditelné na straně integrovaného vývojového prostředí (IDE). Pokud okno není viditelné, můžete ho otevřít z řádku nabídek: zvolit **zobrazení** > **Průzkumník řešení**.
 
-   ![Průzkumník řešení](./media/calc-vs2019-solution-explorer.png "Průzkumníka řešení")
+   ![Průzkumník řešení](./media/calc-vs2019-solution-explorer.png "Průzkumník řešení")
 
-   Teď byste měli mít tři karty, které se otevře v editoru: *CalculatorTutorial.cpp*, *Calculator.h*, a *Calculator.cpp*. Pokud omylem uzavřete jeden z nich, můžete znovu otevřít jej dvojitým kliknutím v **Průzkumníka řešení** okna.
+   Nyní byste měli mít v editoru otevřené tři karty: *CalculatorTutorial. cpp*, *Kalkulačka. h*a *Kalkulačka. cpp*. Pokud jeden z nich omylem zavřete, můžete ho znovu otevřít dvojitým kliknutím v okně **Průzkumník řešení** .
 
-1. V **Calculator.h**, odeberte `Calculator();` a `~Calculator();` řádky, které byly vytvořeny, protože je nebudete potřebovat tady. Dále přidejte následující řádek kódu, takže ho teď vypadá takto:
+1. V programu **Kalkulačka. h**odeberte `Calculator();` řádky `~Calculator();` a, které byly vygenerovány, protože je nebudete potřebovat. Dále přidejte následující řádek kódu, aby soubor byl nyní vypadat takto:
 
     ```cpp
     #pragma once
@@ -163,22 +163,22 @@ Je čas na přidání některých matematických logiku.
 
    > Porozumění kódu
    >
-   > - Je přidaný řádek deklaruje novou funkci s názvem `Calculate`, který použijeme ke spuštění matematických operací pro sčítání, odčítání, násobení a dělení.
-   > - Kód jazyka C++ je uspořádaný do *záhlaví* souborů (.h) a *zdroj* soubory (.cpp). Různé kompilátory podporují několik dalších přípon souborů, ale toto jsou hlavní ty vědět o. Funkce a proměnné jsou obvykle *deklarované*, která je zadaný název a typ, v souborech hlaviček, a *implementované*, nebo při definici, ve zdrojových souborech. Pro přístup kód definovaný v jiném souboru, můžete použít `#include "filename.h"`, kde "filename.h" je název souboru, který deklaruje proměnné nebo funkce, kterou chcete použít.
-   > - Dva řádky odstraněné deklarované *konstruktor* a *destruktor* pro třídu. Pro jednoduchou třídu, jako je ten kompilátor vytvoří za vás a jejich použití jsou nad rámec tohoto kurzu.
-   > - Je dobrým zvykem organizovat kód do různých souborů podle jeho význam, tak, aby byl snadno najít kód, který budete potřebovat později. V našem případě definujeme `Calculator` třídy nezávisle na soubor obsahující `main()` funkce, ale doporučujeme naplánovat tak, aby odkazovaly `Calculator` třídy v `main()`.
+   > - Řádek, který jste přidali, deklaruje novou funkci nazvanou `Calculate`, kterou použijeme ke spouštění matematických operací pro sčítání, odčítání, násobení a dělení.
+   > - C++kód je uspořádán do souborů *hlaviček* (. h) a *zdrojových* souborů (. cpp). Několik dalších přípon souborů je podporováno různými kompilátory, ale jedná se o ty, kterých se dozvíte. Funkce a proměnné jsou obvykle *deklarovány*, to znamená, že jsou zadány název a typ, v hlavičkovýchsouborech a implementovány nebo předány definici ve zdrojových souborech. Chcete-li získat přístup ke kódu definovanému v jiném `#include "filename.h"`souboru, můžete použít, kde ' filename. h ' je název souboru, který deklaruje proměnné nebo funkce, které chcete použít.
+   > - Dva řádky, které jste odstranili, byly deklarovány jako *konstruktor* a *destruktor* pro třídu. Pro jednoduchou třídu, jako je tato, ji kompilátor vytvoří za vás, přičemž jejich použití jsou nad rámec tohoto kurzu.
+   > - Je vhodné organizovat kód do různých souborů na základě toho, co dělá, takže je snadné najít kód, který potřebujete později. V `Calculator` našem případě jsme třídu definovali samostatně ze souboru `main()` obsahujícího funkci, ale plánujeme na ni odkazovat `Calculator` v `main()`.
 
-1. Zobrazí se zelená vlnovku se zobrazí v rámci `Calculate`. Je proto, že jsme ještě nebyl definován `Calculate` funkce v souboru .cpp. Najeďte myší aplikaci word, klikněte na žárovku (v tomto případě šroubovák), která se otevře a zvolte **vytvoření definice "Vypočítat" v Calculator.cpp**.
+1. Pod položkou `Calculate`se zobrazí zelená vlnovka. Je to proto, že jsme `Calculate` funkci v souboru. cpp nedefinovali. Najeďte myší na slovo, klikněte na žárovky (v tomto případě Screwdriver), který se zobrazí, a **v kalkulačce. cpp vyberte vytvořit definici pro ' vypočítat '** .
 
-   ![Vytvoření definice Calculate](./media/calc-vs2019-create-definition.png "vytvořit definici vypočítat")
+   ![Vytvořit definici výpočtu](./media/calc-vs2019-create-definition.png "Vytvořit definici výpočtu")
 
-   Se zobrazí automaticky otevírané okno, které poskytuje náhled změn kódu, která byla vytvořena v jiném souboru. Kód byl přidán do *Calculator.cpp*.
+   Zobrazí se automaticky otevírané okno, které vám nabídne náhled změny kódu provedené v jiném souboru. Kód byl přidán do *kalkulačky. cpp*.
 
-   ![Místní s definicí Calculate](./media/calc-vs2019-pop-up-definition.png "rozbalovací s definicí přepočítat")
+   ![Místní okno s definicí vypočítat](./media/calc-vs2019-pop-up-definition.png "Místní okno s definicí vypočítat")
 
-   V současné době pouze vrátí 0,0. Teď Změníme. Stisknutím klávesy **Esc** automaticky otevírané okno zavřete.
+   V současné době pouze vrátí 0,0. Pojďme to změnit. Stisknutím klávesy **ESC** zavřete automaticky otevírané okno.
 
-1. Přepněte *Calculator.cpp* souborů v okně editoru. Odeberte `Calculator()` a `~Calculator()` oddíly (stejně jako v souboru .h) a přidejte následující kód, který `Calculate()`:
+1. V okně editoru přepněte na soubor *kalkulačky. cpp* . Odeberte oddíly `~Calculator()` `Calculate()`a (stejně jako v souboru. h) a přidejte následující kód do: `Calculator()`
 
     ```cpp
     #include "Calculator.h"
@@ -203,16 +203,16 @@ Je čas na přidání některých matematických logiku.
 
    > Porozumění kódu
    >
-   > - Funkce `Calculate` využívá číslo, operátor a druhé číslo a potom provede požadovanou operaci u čísel.
-   > - Příkaz kontroly přepínač operátoru byla zadaná a to pouze spustí case odpovídající této operaci. Výchozí hodnota: case se používají jako základní v případě, že uživatel zadá operátor není povolena, takže nedojde k narušení program. Obecně je nejvhodnější pro zpracování Neplatný uživatelský vstup elegantnější způsobem, ale jde nad rámec tohoto kurzu.
-   > - `double` – Klíčové slovo označuje typ číslo, které podporuje desetinná čísla. Tímto způsobem kalkulačce dokáže zpracovat desítkové matematické a matematikou celých čísel. `Calculate` Funkce je potřeba vždy vrátí číslo, protože `double` na začátku kódu (označuje návratový typ funkce), což je důvod, proč se vrací 0,0 i ve výchozím nastavení.
-   > - Soubor .h deklaruje funkci *prototypu*, který instruuje kompilátor, předem, jaké parametry se vyžaduje, a jaké návratový typ od něj očekávat. Soubor .cpp má všechny podrobnosti implementace funkce.
+   > - Funkce `Calculate` spotřebovává číslo, operátor a druhé číslo a poté provede požadovanou operaci s čísly.
+   > - Příkaz switch ověří, který operátor byl zadán a provede pouze případ odpovídající této operaci. Výchozí: Case je záložní pro případ, že uživatel zadá operátor, který není přijat, takže program nebude přerušen. Obecně je nejlepší zpracovávat neplatný vstup uživatele efektivněji, ale toto je nad rámec tohoto kurzu.
+   > - `double` Klíčové slovo označuje typ čísla, který podporuje desetinná čísla. Kalkulačka tak může zpracovat desítkové matematické i celočíselné matematické hodnoty. Funkce je vyžadována, aby vždy vracela takové číslo z důvodu `double` na začátku kódu (označuje návratový typ funkce), což je důvod, proč vracíme 0,0 i ve výchozím případu. `Calculate`
+   > - Soubor. h deklaruje *prototyp*funkce, který instruuje kompilátor dopředu, jaké parametry vyžaduje a jaký návratový typ, který má z něj očekávat. Soubor. cpp obsahuje všechny podrobnosti o implementaci funkce.
 
-Je-li sestavit a spustit kód znovu v tomto okamžiku, se stále ukončí po s dotazem, kterou operaci má provést. V dalším kroku upravíte `main` funkce provedete pár výpočtů.
+Pokud v tomto okamžiku sestavíte a znovu spustíte kód, bude i nadále ukončen po žádosti o operaci, která má být provedena. V `main` dalším kroku upravíte funkci, aby se provede několik výpočtů.
 
-### <a name="to-call-the-calculator-class-member-functions"></a>Volání funkce člena třídy Kalkulačka
+### <a name="to-call-the-calculator-class-member-functions"></a>Volání funkcí členů třídy kalkulačky
 
-1. Teď můžeme aktualizovat `main` fungovat v *CalculatorTutorial.cpp*:
+1. Teď pojďme aktualizovat `main` funkci v *CalculatorTutorial. cpp*:
 
     ```cpp
     // CalculatorTutorial.cpp : This file contains the 'main' function. Program execution begins and ends there.
@@ -248,75 +248,75 @@ Je-li sestavit a spustit kód znovu v tomto okamžiku, se stále ukončí po s d
 
    > Porozumění kódu
    >
-   > - Protože programy v jazyce C++ vždy začínají hodnotou `main()` funkce, musíme volání našeho kódu z něj, tak `#include` příkazu je potřeba.
-   > - Některé počáteční proměnné `x`, `y`, `oper`, a `result` jsou deklarovány na ukládání první číslo, druhé číslo, operátor a konečný výsledek. Vždy je dobrým zvykem, abyste jim zajistili některé počáteční hodnoty, aby se zabránilo nedefinované chování, která je, co se zde provádí.
-   > - `Calculator c;` Řádek deklaruje objekt s názvem "c", protože instance `Calculator` třídy. Vlastní třídy je pouze pro fungování kalkulačky; objekt je konkrétní kalkulačky, který provede výpočty.
-   > - `while (true)` Příkaz je smyčka. Kód uvnitř smyčka pokračuje v provádění opakovaně, dokud je podmínka uvnitř `()` platí. Vzhledem k tomu, že podmínka je jednoduše uveden jako `true`, je vždy hodnotu true, takže cyklu navždy. Ukončete program, musí uživatel ručně zavřete okno konzoly. V opačném případě program vždy čeká nový vstup.
-   > - `cin` – Klíčové slovo se používá tak, aby přijímal vstup od uživatele. Tento vstupní datový proud je dostatečně inteligentní, aby zpracoval řádek textu zadaného v okně konzoly a umístěte do každé proměnné, které jsou uvedeny v pořadí, za předpokladu, že vstupní shody uživatele požadovanou specifikaci. Můžete upravit tento řádek tak, aby přijímal různých typů vstupu, například větší než dvě čísla, i když `Calculate()` funkce budete také muset aktualizovat tak, aby se o to postarají.
-   > - `c.Calculate(x, oper, y);` Výraz volání `Calculate` funkce definovali dříve a je zdrojem zadané vstupní hodnoty. Funkce pak vrátí číslo, které se uloží v `result`.
-   > - Nakonec `result` vytiskne na konzolu, tak uživateli se zobrazí výsledek výpočtu.
+   > - Vzhledem C++ k tomu, že se `main()` programy vždy spouštějí ve funkci, musíme z něj zavolat náš další kód, `#include` takže je třeba zadat příkaz.
+   > - Některé počáteční proměnné `x` `y` ,`oper`, a`result` jsou deklarovány pro uložení prvního čísla, druhého čísla, operátoru a konečného výsledku. Je vždy vhodné jim poskytnout některé počáteční hodnoty, aby nedocházelo k nedefinovanému chování, což znamená to, co se děje.
+   > - Řádek deklaruje objekt nazvaný "c" jako instanci `Calculator` třídy. `Calculator c;` Samotná třída je jenom podrobný plán, jak fungují kalkulačky. objekt je konkrétní kalkulačka, která je matematické.
+   > - `while (true)` Příkaz je smyčka. Kód uvnitř smyčky pokračuje v provádění a znovu, dokud podmínka uvnitř `()` obsahuje hodnotu true. Vzhledem k tomu, že je tato `true`podmínka jednoduše uvedená jako, je vždycky true, takže se smyčka spouští trvale. Chcete-li program ukončit, uživatel musí ručně zavřít okno konzoly. V opačném případě bude program vždycky čekat na nový vstup.
+   > - `cin` Klíčové slovo slouží k přijetí vstupu od uživatele. Tento vstupní datový proud je dostatečně automatický pro zpracování řádku textu zadaného v okně konzoly a jeho umístění do každé z uvedených proměnných, v pořadí, za předpokladu, že vstup uživatele odpovídá požadované specifikaci. Tento řádek lze upravit tak, aby přijímal různé typy vstupů, například více než dvě čísla, i když `Calculate()` by mohla být funkce také aktualizována, aby to bylo možné zpracovat.
+   > - `c.Calculate(x, oper, y);` Výraz`Calculate` volá funkci definovanou dříve a zadá zadané vstupní hodnoty. Funkce pak vrátí číslo, které je uloženo v `result`.
+   > - `result` Nakonec je vytištěna do konzoly, takže uživatel uvidí výsledek výpočtu.
 
 ### <a name="build-and-test-the-code-again"></a>Sestavit a otestovat kód znovu
 
-Nyní je čas otestovat program znovu, abyste měli jistotu, že všechno funguje správně.
+Nyní je čas otestovat program znovu, abyste se ujistili, že vše funguje správně.
 
-1. Stisknutím klávesy **Ctrl + F5** znovu sestavte a spusťte aplikaci.
+1. Stisknutím **kombinace kláves CTRL + F5** znovu sestavte a spusťte aplikaci.
 
-1. Zadejte `5 + 5`a stiskněte klávesu **Enter**. Ověřte, že výsledek je 10.
+1. Zadejte `5 + 5`a stiskněte klávesu **ENTER**. Ověřte, že je výsledek 10.
 
-   ![Výsledek 5 + 5](./media/calc-vs2019-five-plus-five.png "výsledek 5 + 5")
+   ![Výsledek 5 + 5](./media/calc-vs2019-five-plus-five.png "Výsledek 5 + 5")
 
 ## <a name="debug-the-app"></a>Ladění aplikace
 
-Vzhledem k tomu, že uživateli je zadarmo zadávat nic do okna konzoly, se ujistěte, že kalkulačky zpracovává vstup podle očekávání. Místo spuštění programu, můžeme ho ladit místo toho tak jsme si můžete prohlédnout, co to dělá podrobně krok za krokem.
+Vzhledem k tomu, že uživatel je zdarma psát do okna konzoly, je nutné se ujistit, že kalkulačka zpracovává určitý vstup podle očekávání. Místo spuštění programu je možné ho místo toho ladit, takže můžeme zkontrolovat, co podrobně dělá, a krok za krokem.
 
-### <a name="to-run-the-app-in-the-debugger"></a>Spusťte aplikaci v ladicím programu
+### <a name="to-run-the-app-in-the-debugger"></a>Spuštění aplikace v ladicím programu
 
-1. Nastavit zarážku na `result = c.Calculate(x, oper, y);` řádku, bezprostředně po uživateli se zobrazí výzva pro vstup. Chcete-li nastavit zarážku, klikněte na tlačítko vedle řádku v šedé svislá čára sledovat levému okraji okna editoru. Zobrazí se červená tečka.
+1. Nastavte zarážku na `result = c.Calculate(x, oper, y);` řádku hned poté, co byl uživatel požádán o vstup. Chcete-li nastavit zarážku, klikněte na tlačítko vedle čáry v šedém svislém pruhu podél levého okraje okna editoru. Zobrazí se červená tečka.
 
    ![Nastavit zarážku](./media/calc-vs2019-set-breakpoint.png "nastavte zarážku")
 
-   Nyní když jsme ladění programu, vždy pozastaví provádění na tento řádek. Už máme přibližnou představu, který pro jednoduché případů bude program. Protože nechceme pozastavit provádění pokaždé, když, vytvoříme zarážka podmíněný.
+   Nyní když program ladíme, vždy pozastaví provádění na daném řádku. Již máme hrubý nápad, který program funguje pro jednoduché případy. Vzhledem k tomu, že nechcete pokaždé pozastavit běh pokaždé, provedeme podmíněný zarážku.
 
-1. Klikněte pravým tlačítkem na červenou tečku představující zarážku a zvolte **podmínky**. Do textového pole podmínky, zadejte `(y == 0) && (oper == '/')`. Zvolte **Zavřít** tlačítko až budete hotovi. Podmínka se automaticky uloží.
+1. Pravým tlačítkem myši klikněte na červenou tečku, která představuje zarážku, a vyberte **podmínky**. Do pole pro úpravy podmínky zadejte `(y == 0) && (oper == '/')`. Až budete hotovi, klikněte na tlačítko **Zavřít** . Podmínka se uloží automaticky.
 
-   ![Nastavení podmíněné zarážky](./media/calc-vs2019-conditional-breakpoint.png "nastavení podmíněné zarážky")
+   ![Nastavení podmíněné zarážky](./media/calc-vs2019-conditional-breakpoint.png "Nastavení podmíněné zarážky")
 
-   Nyní jsme pozastavit provádění na zarážce, konkrétně, pokud dojde k pokusu o dělení hodnotou 0.
+   Nyní pozastavíme provádění na zarážce konkrétně v případě, že došlo k pokusu o dělení 0.
 
-1. Pokud chcete program ladit, stiskněte **F5**, nebo zvolte **místní ladicí program Windows** tlačítka panelu nástrojů, který má ikonu zelenou šipku. Ve vaší aplikaci konzoly Pokud něco jako "5-0", zadejte program se chovat normálně a stále spuštěný. Nicméně pokud zadáte "10 / 0", jeho pozastavení na zarážce. Můžete dokonce vložit libovolný počet mezer mezi operátor a čísla: `cin` je dostatečně inteligentní, aby správně analyzovat vstup.
+1. Chcete-li ladit program, stiskněte klávesu **F5**nebo zvolte tlačítko **místní ladicí program systému Windows** , které má ikonu zelené šipky. Pokud v aplikaci konzoly zadáte něco jako "5-0", program se chová normálně a zůstane spuštěný. Pokud však zadáte "10/0", pozastaví se na zarážce. Mezi operátorem a čísly můžete dokonce vložit libovolný počet mezer: `cin` je dostatečně inteligentní, aby bylo možné správně analyzovat vstup.
 
-   ![Pozastavení na zarážce podmíněného](./media/calc-vs2019-debug-breakpoint.png "pozastavení na zarážce podmíněné")
+   ![Pozastavit na podmíněné zarážce](./media/calc-vs2019-debug-breakpoint.png "Pozastavit na podmíněné zarážce")
 
-### <a name="useful-windows-in-the-debugger"></a>Užitečné windows v ladicím programu
+### <a name="useful-windows-in-the-debugger"></a>Užitečná okna v ladicím programu
 
-Pokaždé, když se při ladění kódu, můžete si všimnout, že se zobrazí několik nových oknech. Možnosti ladění můžou pomoct tato okna. Podívejte se na **automatické hodnoty** okna. **Automatické hodnoty** okno se zobrazuje aktuální hodnoty proměnných použít minimálně tři řádky před a až do aktuálního řádku. Chcete-li zobrazit všechny proměnné z této funkce, přepněte **lokální** okna. Hodnoty těchto proměnných při ladění, můžete upravit ve skutečnosti zobrazíte jaký vliv bude mít v programu. V tomto případě Ponecháme je samostatně.
+Kdykoli budete ladit kód, můžete si všimnout, že se zobrazí některá nová okna. Tato okna můžou pomáhat s vaším prostředím pro ladění. Podívejte se na okno **Automatické** hodnoty. Okno **Automatické** hodnoty zobrazuje aktuální hodnoty proměnných, které byly použity alespoň na tři řádky před a až do aktuálního řádku. Chcete-li zobrazit všechny proměnné z této funkce, přepněte do okna **místní** hodnoty. Hodnoty těchto proměnných můžete v průběhu ladění skutečně upravovat, abyste viděli, jaký má vliv na program. V takovém případě je zadáte samostatně.
 
-   ![V okně místních hodnot](./media/calc-vs2019-debug-locals.png "okno oknech místní hodnoty")
+   ![Okno místních] hodnot (./media/calc-vs2019-debug-locals.png "Okno místních") hodnot
 
-Můžete také pouze najetí myší na proměnné v samotném zobrazíte jejich aktuálními hodnotami, kde je momentálně pozastavený provádění kódu. Ujistěte se, že okno editoru fokus nejprve kliknutím na ni.
+Můžete také umístit ukazatel myši na proměnné v samotném kódu, abyste viděli jejich aktuální hodnoty, kde je provádění aktuálně pozastaveno. Ujistěte se, že je okno editoru aktivní, a to tak, že na něj kliknete nejdřív.
 
-   ![Najetím myší zobrazíte aktuální hodnoty proměnných](./media/calc-vs2019-hover-tooltip.png "při najetí myší, chcete-li zobrazit aktuální hodnoty proměnných")
+   ![Najetím myší zobrazíte aktuální hodnoty proměnných.](./media/calc-vs2019-hover-tooltip.png "Najetím myší zobrazíte aktuální hodnoty proměnných.")
 
-### <a name="to-continue-debugging"></a>Pro pokračování v ladění
+### <a name="to-continue-debugging"></a>Pokračování v ladění
 
-1. Žlutá čára na levé straně se zobrazí aktuální bod provádění. Aktuální řádek volání `Calculate`, takže stiskněte **F11** k **Krokovat s vnořením** funkce. Zorientujete se v těle `Calculate` funkce. Buďte opatrní při používání **Krokovat s vnořením**; Pokud tak učiníte příliš mnoho může odpad spoustu času. Přejde na jakýkoli kód, který používáte na řádek, který používáte, včetně funkce standardní knihovny.
+1. Žlutý řádek na levé straně znázorňuje aktuální bod provádění. Aktuální řádek zavolá `Calculate`, takže stisknutím klávesy **F11** se **zajděte do** funkce. Najdete ho sami v těle `Calculate` funkce. Buďte opatrní při **krokování**; Pokud to uděláte příliš daleko, může dorazit spoustu času. Přejde do libovolného kódu, který použijete na řádku, na kterém se nacházíte, včetně standardních funkcí knihovny.
 
-1. Teď, když bod provádění na začátku `Calculate` funkci, stiskněte klávesu **F10** přesunout na další řádek při provádění programu. **F10** se taky říká **Krokovat s přeskočením**. Můžete použít **Krokovat s přeskočením** přesunout řádcích, bez seznamovat s podrobnostmi o co se děje v jednotlivých součástí řádku. Obecně byste měli použít **Krokovat s přeskočením** místo **Krokovat s vnořením**, pokud nechcete Ponořte se hlouběji do kódu, která je volána z jinde (stejně jako k dosažení tělo `Calculate`).
+1. Teď, když je bod spuštění na začátku `Calculate` funkce, můžete stisknutím klávesy **F10** přejít na další řádek v provádění programu. **F10** se také označuje jako **krok za krokem**. Můžete použít **Krok** nahoru pro přechod mezi řádky a spojnici, aniž byste museli zobrazit podrobnosti o tom, co se v každé části řádku objevuje. Obecně byste měli použít **Krok přes** místo **kroku into**, pokud nechcete podrobně do kódu, který je volán jinam (stejně jako při přístupu k těle `Calculate`).
 
-1. Pokračovat v používání **F10** k **Krokovat s přeskočením** každého řádku, dokud se nevrátíte se zpátky do `main()` fungovat v jiném souboru a zastaví se na `cout` řádku.
+1. Pokračujte v používání nástroje **F10** , abyste mohli **Krokovat** s každým řádkem, `main()` dokud se nevrátíte k funkci v druhém `cout` souboru a zastavíte řádek.
 
-   Vypadá to program provádí, co se očekává: přijímá první číslo a rozděluje po sekundách. Na `cout` řádek, najeďte myší `result` proměnné nebo se podívejte na `result` v **automatické hodnoty** okna. Uvidíte, že její hodnota je uveden jako "informace", který nevypadá moc správně, takže ho opravit. `cout` Řádku právě výstupy, ať hodnota je uložená v `result`, takže když vejdete další řádek předávání pomocí **F10**, v okně konzoly se zobrazí:
+   Vypadá to, že program dělá, co je očekávané: přijímá první číslo a rozděluje ho druhým. Na řádku umístěte ukazatel myši `result` na proměnnou `result` nebo se podívejte do okna **Automatické** hodnoty. `cout` Uvidíte, že jeho hodnota je uvedena jako "INF", což nevypadá správně, takže ji Opravme. Řádek právě vypisuje libovolnou hodnotu uloženou v `result`, takže když postupně jednou zadáte další řádek pomocí nástroje F10, okno konzoly zobrazí: `cout`
 
-   ![Výsledek dělení nulou](./media/calc-vs2019-divide-by-zero-fail.png "výsledek dělení nulou")
+   ![Výsledek dělení nulou](./media/calc-vs2019-divide-by-zero-fail.png "Výsledek dělení nulou")
 
-   Tento výsledek dochází dělení nulou není definováno, takže program neobsahuje numerické odpověď na požadovanou operaci.
+   K tomuto výsledku dochází, protože dělení nulou není definováno, takže program nemá číselnou odpověď na požadovanou operaci.
 
-### <a name="to-fix-the-divide-by-zero-error"></a>Chcete-li vyřešit chybu "dělení nulou"
+### <a name="to-fix-the-divide-by-zero-error"></a>Oprava chyby "dělení nulou"
 
-Pojďme dělení nulou více elegantně zpracovat, to uživateli umožní pochopit i problém.
+Podíváme se, aby dělení nulou bez problémů, takže uživatel může pochopit problém.
 
-1. Proveďte následující změny v *CalculatorTutorial.cpp*. (Můžete nechat program spuštěný při úpravě díky funkci ladicího programu s názvem **upravit a pokračovat**):
+1. Proveďte následující změny v *CalculatorTutorial. cpp*. (Program můžete nechat spuštěný při úpravách, a to díky funkci ladicího programu s názvem **Upravit a pokračovat**):
 
     ```cpp
     // CalculatorTutorial.cpp : This file contains the 'main' function. Program execution begins and ends there.
@@ -357,55 +357,55 @@ Pojďme dělení nulou více elegantně zpracovat, to uživateli umožní pochop
     }
     ```
 
-1. Nyní stiskněte **F5** po. Program pokračuje tímto způsobem, dokud má pozastavit požádat pro uživatelský vstup. Zadejte `10 / 0` znovu. Nyní je užitečnější zpráva vytištěna. Zobrazí se uživateli výzva pro další vstup a program pokračuje v provádění normálně.
+1. Nyní stiskněte klávesu **F5** . Provádění programu pokračuje všemi způsoby, dokud se nemusíte pozastavit, aby pomohlo zadání uživatele. Zadejte `10 / 0` znovu. Nyní je vytištěna užitečnější zpráva. Uživatel je vyzván k zadání dalšího vstupu a program pokračuje v normálním provádění.
 
-   ![Konečný výsledek po změně](./media/calc-vs2019-final-verification.png "konečný výsledek po provedení změn")
+   ![Konečný výsledek po změně](./media/calc-vs2019-final-verification.png "Konečný výsledek po změně")
 
    > [!Note]
-   > Při úpravách kódu při v režimu ladění, existuje riziko kódu budou zastaralá. To se stane, když ladicí program je pořád spuštěný starý kód a ještě neaktualizoval ji se změnami. Ladicí program zobrazí dialogové okno vás informovat, pokud k tomu dojde. V některých případech budete muset stiskněte **F5** aktualizovat právě prováděný kód. Zejména pokud provedete změnu uvnitř funkce při bodu provádění je uvnitř, že funkce, je potřeba krok mimo funkci a pak zpátky do něj znovu zobrazíte aktualizovaný kód. Pokud to nepomůže z nějakého důvodu a objeví se chybová zpráva, můžete zastavit ladění po kliknutí na červený čtvereček na panelu nástrojů v rámci nabídky v horní části rozhraní IDE a pak znovu spusťte ladění tak, že zadáte **F5** nebo výběrem zelené " Přehrát"šipku vedle tlačítka Zastavit na panelu nástrojů.
+   > Při úpravách kódu v režimu ladění existuje riziko, že se kód stane zastaralým. K tomu dojde v případě, že ladicí program stále používá starý kód a ještě neaktualizoval se změnami. Ladicí program zobrazí dialogové okno s informací o tom, kdy k tomu dojde. Někdy může být nutné stisknout klávesu **F5** pro aktualizaci spouštěného kódu. Zejména pokud provedete změnu uvnitř funkce, zatímco je bod provádění uvnitř této funkce, budete muset krok převzít z funkce a následně zpátky do ní získat aktualizovaný kód. Pokud to z nějakého důvodu nefunguje a zobrazí se chybová zpráva, můžete ladění zastavit tak, že v nabídce v horní části rozhraní IDE kliknete na červený čtverec a pak znovu spustíte ladění, a to tak, že zadáte **F5** nebo zvolíte zelenou šipku "Play" vedle položky s. tlačítko nahoru na panelu nástrojů
 
-   > Principy zkratky spuštění a ladění
+   > Principy klávesových zkratek Run a Debug
    >
-   > - **F5** (nebo **ladění** > **spustit ladění**) spustí relaci ladění, pokud ještě není aktivní a spustí program, dokud nebude dosaženo zarážky nebo uživatelského vstupu pro potřeby aplikace. Pokud je nutný zásah uživatele a bez zarážek není k dispozici k volání, program se ukončí a v okně konzoly se ukončí sám při ukončení programu. Pokud máte něco jako "Hello World" program ke spuštění, použijte **Ctrl + F5** nebo nastavte zarážku před zadáním **F5** nechat okno otevřené.
-   > - **CTRL + F5** (nebo **ladění** > **spustit bez ladění**) spustí aplikaci bez přechodu do režimu ladění. Toto je mírně rychlejší než ladění a v okně konzoly se zůstane otevřený po dokončení provádění.
-   > - **F10** (označované jako **Krokovat s přeskočením**) umožňuje iterovat přes kódu řádek po řádku a vizualizace, jak spustit kód a jaké jsou hodnoty proměnných v každém kroku spuštění.
-   > - **F11** (označované jako **Krokovat s vnořením**) funguje podobně jako **Krokovat s přeskočením**, s výjimkou vstoupí do jakékoli funkce volána na řádek provádění. Například pokud spouštěný řádek volá funkci, stiskněte **F11** přesune ukazatel do těla funkce, takže můžete postupovat podle této funkce kód spuštěn před vrátíte do řádku začalo v. Stisknutím klávesy **F10** kroky prostřednictvím volání funkce a pouze přesune na další řádek; volání funkce se stále dochází, ale nebude pozastavit program zobrazit, co dělají.
+   > - **F5** (nebo > ladění**spuštění**ladění) spustí ladicí relaci, pokud již jedna není aktivní, a spustí program, dokud nebude dosaženo zarážky nebo když program potřebuje vstup uživatele. Pokud není nutný žádný vstup uživatele a není k dispozici žádná zarážka, program se ukončí a okno konzoly se po dokončení programu zavře. Pokud máte něco podobného jako spuštění programu "Hello World", použijte **CTRL + F5** nebo nastavte zarážku před zadáním klávesy **F5** , aby okno zůstalo otevřené.
+   > - **CTRL + F5** (nebo **ladění** > **Spustit bez ladění**) spustí aplikaci bez přechodu do režimu ladění. Toto je mírně rychlejší než ladění a okno konzoly zůstane otevřené, i když program dokončí provádění.
+   > - **F10** (označované jako **Krok over**) umožňuje iterovat přes kód, řádek po řádku a vizualizovat, jak se kód spouští a jaké hodnoty proměnných jsou v každém kroku spuštění.
+   > - Klávesa **F11** (označované jako **Krokovat**s vnořením) funguje podobně jako při **Krokovat**s výjimkou kroků na jakékoli funkce, které jsou volány na řádku provádění. Například pokud je řádek spouštěn voláním funkce, stisknutí klávesy **F11** přesune ukazatel na tělo funkce, aby bylo možné sledovat spouštěný kód funkce před návratem k řádku, na kterém jste začali. Stisknutí klávesy **F10** nad voláním funkce a pouhým přechodem na další řádek; k volání funkce stále dochází, ale program se nezastaví, aby vám ukázal, co dělá.
 
-### <a name="close-the-app"></a>Zavřete aplikaci
+### <a name="close-the-app"></a>Zavřít aplikaci
 
-- Pokud je stále spuštěna, zavřete okno konzoly pro aplikaci kalkulačku.
+- Pokud je pořád spuštěný, zavřete okno konzoly pro aplikaci kalkulačky.
 
 ## <a name="the-finished-app"></a>Dokončená aplikace
 
-Blahopřejeme! Dokončení kódu pro aplikaci kalkulačky a integrované a ladit v sadě Visual Studio.
+Blahopřejeme! Dokončili jste kód pro aplikaci kalkulačky a vytvořili jste ho a rozpnuli ho v aplikaci Visual Studio.
 
-## <a name="next-steps"></a>Další kroky
+## <a name="next-steps"></a>Další postup
 
-[Další informace o sadě Visual Studio pro C++](https://blogs.msdn.microsoft.com/vcblog/2017/04/21/getting-started-with-visual-studio-for-c-and-cpp-development/)
+[Další informace o aplikaci Visual Studio proC++](https://blogs.msdn.microsoft.com/vcblog/2017/04/21/getting-started-with-visual-studio-for-c-and-cpp-development/)
 
 ::: moniker-end
 
 ::: moniker range="<vs-2019"
 
-Obvyklým výchozím bodem pro programátor C++ je "Hello, world!" aplikace, která běží na příkazovém řádku. To je, co vytvoříte v sadě Visual Studio v tomto článku a pak budeme pokračovat na něco náročnější: Kalkulačka aplikace.
+Obvyklým výchozím bodem C++ programátora je "Hello, World!" aplikace, která běží na příkazovém řádku. To je to, co vytvoříte v aplikaci Visual Studio v tomto článku, a pak budeme pokračovat na něco náročnějšího: aplikace kalkulačky.
 
 ## <a name="prerequisites"></a>Požadavky
 
-- Sada Visual Studio s **vývoj desktopových aplikací pomocí C++** úlohy, které jsou nainstalované a spuštěné v počítači. Pokud ještě není nainstalovaný, přečtěte si téma [podpora instalace jazyka C++ v sadě Visual Studio](../build/vscpp-step-0-installation.md).
+- Aplikace Visual Studio s **vývojem C++ pro stolní počítače** je nainstalovaná a spuštěná v počítači. Pokud ještě není nainstalován, přečtěte si [téma C++ instalace podpory v aplikaci Visual Studio](../build/vscpp-step-0-installation.md).
 
 ## <a name="create-your-app-project"></a>Vytvoření projektu aplikace
 
-Visual Studio používá *projekty* organizaci kódu pro aplikace, a *řešení* k uspořádání vašich projektů. Projekt obsahuje všechny možnosti, konfigurace a pravidla používaná k vytváření aplikací. Spravuje také vztah mezi všechny projektové soubory a soubory s externí. Pokud chcete vytvořit aplikaci, nejprve vytvoříte nový projekt a řešení.
+Visual Studio používá *projekty* organizaci kódu pro aplikace, a *řešení* k uspořádání vašich projektů. Projekt obsahuje všechny možnosti, konfigurace a pravidla používaná k vytváření aplikací. Spravuje také vztah mezi všechny projektové soubory a soubory s externí. Chcete-li vytvořit aplikaci, nejprve vytvořte nový projekt a řešení.
 
-1. V řádku nabídek v sadě Visual Studio, zvolte **souboru** > **nový** > **projektu**. **Nový projekt** otevře se okno.
+1. Na panelu nabídek v aplikaci Visual Studio vyberte **soubor** > **Nový** > **projekt**. Otevře se okno **Nový projekt** .
 
-2. Na levém bočním panelu, ujistěte se, že **Visual C++** zaškrtnuto. V centru, zvolte **Konzolová aplikace Windows**.
+2. Na levém bočním panelu se ujistěte, že je vybraná možnost **Visual C++**  . V centru vyberte konzolová **aplikace systému Windows**.
 
-3. V **název** textového pole v dolní části, pojmenujte nový projekt *CalculatorTutorial*, klikněte na tlačítko **OK**.
+3. V dolní části **název** zadejte název nového projektu *CalculatorTutorial*a pak zvolte **OK**.
 
-   ![Dialogové okno Nový projekt](./media/calculator-new-project-dialog.png "dialogového okna Nový projekt")
+   ![Dialogové okno Nový projekt](./media/calculator-new-project-dialog.png "Dialogové okno Nový projekt")
 
-   Vytvoří prázdnou aplikaci konzoly Windows C++. Konzolové aplikace pomocí okna konzoly Windows a zobrazte výstup přijímají vstup uživatele. V sadě Visual Studio okno editoru se otevře a zobrazí vygenerovaný kód:
+   Vytvoří se C++ prázdná Konzolová aplikace pro Windows. Konzolové aplikace používají okno konzoly systému Windows k zobrazení výstupu a přijetí vstupu uživatele. V aplikaci Visual Studio se otevře okno editoru a zobrazí se generovaný kód:
 
     ```cpp
     // CalculatorTutorial.cpp : This file contains the 'main' function. Program execution begins and ends there.
@@ -431,29 +431,29 @@ Visual Studio používá *projekty* organizaci kódu pro aplikace, a *řešení*
     //   6. In the future, to open this project again, go to File > Open > Project and select the .sln file
     ```
 
-## <a name="verify-that-your-new-app-builds-and-runs"></a>Ověřte, že vaše nová aplikace se vytvoří a spustí
+## <a name="verify-that-your-new-app-builds-and-runs"></a>Ověřte, že se nová aplikace sestavuje a spustí.
 
-Šablonu pro novou konzolovou aplikaci systému windows vytvoří jednoduchou aplikaci "Hello World" jazyka C++. V tuto chvíli uvidíte jak Visual Studio vytvoří a spustí aplikace, které vytvoříte přímo z integrovaného vývojového prostředí.
+Šablona pro novou konzolovou aplikaci pro Windows vytvoří jednoduchou C++ aplikaci "Hello World". V tomto okamžiku vidíte, jak aplikace Visual Studio sestavuje a spouští aplikace, které vytvoříte přímo z rozhraní IDE.
 
-1. Chcete-li projekt sestavit, zvolte **sestavit řešení** z **sestavení** nabídky. **Výstup** okno zobrazuje výsledky procesu sestavení.
+1. Chcete-li sestavit projekt, v nabídce **sestavení** klikněte na příkaz **Sestavit řešení** . V okně **výstup** se zobrazí výsledky procesu sestavení.
 
-   ![Sestavte projekt](./media/calculator-initial-build-output.png "sestavení projektu")
+   ![Sestavení projektu](./media/calculator-initial-build-output.png "Sestavení projektu")
 
-1. Chcete-li spustit kód, na panelu nabídek, zvolte **ladění**, **spustit bez ladění**.
+1. Chcete-li spustit kód, na panelu nabídek vyberte možnost **ladit**, **Spustit bez ladění**.
 
-   ![Spustit projekt](./media/calculator-hello-world-console.png "spustit projekt")
+   ![Spustit projekt](./media/calculator-hello-world-console.png "Spustit projekt")
 
-   Okno konzoly otevře a spustí vaši aplikaci. Když spustíte aplikaci konzoly v sadě Visual Studio, spustí váš kód a pak vypíše "stisknutím libovolné klávesy, abyste mohli pokračovat. . ." získáte možnost zobrazit výstup. Blahopřejeme! Vytvoření první "Hello, world!" Konzolová aplikace v sadě Visual Studio!
+   Otevře se okno konzoly a pak se spustí vaše aplikace. Když spustíte konzolovou aplikaci v aplikaci Visual Studio, spustí se váš kód a potom se zobrazí zpráva pro pokračování stiskněte libovolnou klávesu. . ." abyste měli možnost zobrazit výstup. Blahopřejeme! Vytvořili jste první "Hello, World!" Konzolová aplikace v aplikaci Visual Studio!
 
-1. Stisknutím jakékoli klávesy zavřete okno konzoly a vraťte se do sady Visual Studio.
+1. Stisknutím klávesy zavřete okno konzoly a vraťte se do sady Visual Studio.
 
-Teď máte nástroje pro sestavení a spuštění aplikace po každé změně, chcete-li ověřit, že kód stále funguje podle očekávání. Později vám ukážeme, jak ho ladit, pokud tomu tak není.
+Teď máte nástroje pro sestavení a spuštění vaší aplikace po každé změně, abyste ověřili, že kód pořád funguje podle očekávání. Později vám ukážeme, jak ji ladit, pokud ne.
 
 ## <a name="edit-the-code"></a>Upravit kód
 
-Teď obraťme kód v této šabloně do aplikace kalkulačku.
+Teď kód v této šabloně převeďte do aplikace kalkulačky.
 
-1. V *CalculatorTutorial.cpp* souboru, upravte kód tak, aby odpovídala takto:
+1. V souboru *CalculatorTutorial. cpp* upravte kód tak, aby odpovídal následujícímu příkladu:
 
     ```cpp
     // CalculatorTutorial.cpp : This file contains the 'main' function. Program execution begins and ends there.
@@ -483,40 +483,40 @@ Teď obraťme kód v této šabloně do aplikace kalkulačku.
     //   6. In the future, to open this project again, go to File > Open > Project and select the .sln file
     ```
 
-   > Porozumění kódu:
+   > Princip kódu:
    >
-   > - `#include` Příkazy umožňuje odkazovat na kódu v jiných souborech. V některých případech může se zobrazit název souboru ohraničen ostrými závorkami ( **\<\>** ); jindy je ohraničen uvozovkami ( **""** ). Obecně platí ostré závorky se používají při odkazování na standardní knihovny C++, zatímco nabídky se používá pro jiné soubory.
-   > - `#include "pch.h"` (Nebo ve starších verzích sady Visual Studio, `#include "stdafx.h"`) řádek odkazuje na něco jako předkompilované hlavičky. Tyto jsou často používány profesionálních programátorů umožňují zrychlit kompilace, ale jsou nad rámec tohoto kurzu.
-   > - `using namespace std;` Řádku instruuje kompilátor, aby očekávají věci ze standardní knihovny C++, který se má použít v tomto souboru. Bez tohoto řádku by musel párový příkaz s každé klíčové slovo z knihovny `std::`, k označení její obor. Například bez tento řádek každý odkaz na `cout` musela zapsat, protože `std::cout`. `using` Příkaz je přidat – tak kód vypadaly úhledně více.
-   > - `cout` – Klíčové slovo se používá k vytištění do standardního výstupu v jazyce C++. **\< \<** Operátor instruuje kompilátor, aby odeslat cokoli, co je napravo od ji ve standardním výstupu.
-   > - **Endl** – klíčové slovo je jako klávesu Enter; ukončení řádku a přesune kurzor na další řádek. Je doporučeno pro umístění `\n` do řetězce (obsažen v "") provést totéž, jako `endl` vždy vyprázdní vyrovnávací paměť a může snížit výkon aplikace, ale protože to je velmi malou aplikaci, `endl` se místo toho používá pro lepší lepší čitelnost.
-   > - Všechny příkazy C++ musí končit středníkem a musí obsahovat všechny aplikací v jazyce C++ `main()` funkce. Tato funkce je program spuštěn na začátku. Veškerý kód musí být dostupný z `main()` jinak se nedá použít.
+   > - `#include` Příkazy umožňují odkazování na kód nacházející se v jiných souborech. V některých případech se může zobrazit název souboru uzavřený pomocí lomených **\<\>** závorek (); další časy je uzavřený pomocí uvozovek ( **""** ). Obecně platí, že při odkazování na C++ standardní knihovnu se používají lomené závorky, zatímco se používají uvozovky pro jiné soubory.
+   > - Řádek (nebo v aplikaci Visual Studio 2017 a `#include "stdafx.h"`starší) odkazuje na něco známého jako Předkompilovaná hlavička. `#include "pch.h"` Ty jsou často používány profesionálními programátory ke zlepšení časů kompilace, ale překračují rozsah tohoto kurzu.
+   > - Řádek instruuje kompilátor, aby čekal na použití C++ standardní knihovny v tomto souboru. `using namespace std;` Bez tohoto řádku by bylo nutné každé klíčové slovo z knihovny předcházet s `std::`, aby bylo možné poznamenat svůj rozsah. Například bez tohoto řádku musí být každý odkaz `cout` napsán jako. `std::cout` `using` Příkaz je přidán, aby bylo možné v kódu vyčistit.
+   > - Klíčové slovo se používá k tisku na standardní výstup v C++ `cout` Operátor instruuje kompilátor, aby odesílal, ať je napravo od něj až po standardní výstup. **\< \<**
+   > - Klíčové slovo **endl** je jako klávesa ENTER. ukončí řádek a přesune kurzor na další řádek. Je lepší postup vložit `\n` dovnitř řetězce (obsaženého "") tak, aby provedl stejnou věc, jak `endl` vždycky vyprázdní vyrovnávací paměť a může snížit výkon programu, ale vzhledem k tomu, že se jedná o velmi malou aplikaci, `endl` se místo toho používá pro lepší čitelnost.
+   > - Všechny C++ příkazy musí končit středníkem a všechny C++ aplikace `main()` musí obsahovat funkci. Tato funkce je to, co program spouští na začátku. Aby bylo možné použít, musí `main()` být veškerý kód přístupný z.
 
-1. Chcete-li uložit soubor, zadejte **Ctrl + S**, nebo zvolte **Uložit** ikonu v horní části rozhraní IDE, ikonu diskety v panelu nástrojů v řádku nabídek.
+1. Soubor uložíte tak, že zadáte **CTRL + S**nebo v horní části rozhraní IDE kliknete na ikonu **Uložit** , na panelu nástrojů pod řádkem nabídek.
 
-1. Chcete-li aplikaci spustit, stiskněte **Ctrl + F5** nebo přejděte na **ladění** nabídky a zvolte **spustit bez ladění**. Pokud se zobrazí automaticky otevírané okno s upozorněním **tento projekt není aktuální**, můžete vybrat **tento dialog již příště nezobrazovat**a klikněte na tlačítko **Ano** k sestavení aplikace. Měli byste vidět okno konzoly zobrazí zobrazí text uvedený v kódu.
+1. Chcete-li spustit aplikaci, stiskněte klávesy **CTRL + F5** nebo přejděte do nabídky **ladění** a zvolte možnost **Spustit bez ladění**. Pokud se zobrazí automaticky otevírané okno s oznámením, že **Tento projekt je zastaralý**, můžete zvolit možnost **znovu nezobrazovat toto dialogové okno**a potom kliknutím na **tlačítko Ano** sestavit aplikaci. Mělo by se zobrazit okno konzoly, které zobrazuje text zadaný v kódu.
 
-   ![Sestavte a spusťte aplikaci](./media/calculator-first-launch.gif "sestavit a spustit aplikaci")
+   ![Sestavení a spuštění aplikace](./media/calculator-first-launch.gif "Sestavení a spuštění aplikace")
 
-1. Jakmile budete hotovi, zavřete okno konzoly.
+1. Až skončíte, zavřete okno konzoly.
 
-## <a name="add-code-to-do-some-math"></a>Přidejte kód pro procvičili matematiku
+## <a name="add-code-to-do-some-math"></a>Přidejte kód, abyste mohli provádět některé matematické
 
-Je čas na přidání některých matematických logiku.
+Je čas přidat nějakou matematickou logiku.
 
-### <a name="to-add-a-calculator-class"></a>Přidání třídy Kalkulačka
+### <a name="to-add-a-calculator-class"></a>Přidání třídy kalkulačky
 
-1. Přejděte **projektu** nabídku a zvolte **přidat třídu**. V **název třídy** textové pole, zadejte *Kalkulačka*. Zvolte **OK**. Dva nové soubory nechejte se přidat do projektu. Chcete-li uložit všechny změněné soubory najednou, stiskněte **Ctrl + Shift + S**. Je klávesová zkratka **souboru** > **Uložit vše**. Je také tlačítko panelu nástrojů pro **Uložit vše**, ikona dvou disket nenašel vedle **Uložit** tlačítko. Obecně je vhodné provést **Uložit vše** často, takže můžete Nenechte si ujít všechny soubory při uložení.
+1. Přejděte do nabídky **projekt** a vyberte možnost **Přidat třídu**. V poli **název třídy** upravte zadejte Kalkulačka. Zvolte **OK**. Do projektu se přidají dva nové soubory. Chcete-li uložit všechny změněné soubory najednou, stiskněte klávesy **CTRL + SHIFT + S**. Je to klávesová zkratka pro **soubor** > **Save All**. K dispozici je také tlačítko panelu nástrojů pro možnost **Uložit vše**– ikona dvou disket, která se nachází vedle tlačítka **Uložit** . Obecně platí, že dobrým zvykem je **ukládat všechny** často, takže při ukládání nenajdete žádné soubory.
 
-   ![Vytvořte třídu Kalkulačka](./media/calculator-create-class.gif "vytvořit třídu Kalkulačka")
+   ![Vytvoření třídy kalkulačky](./media/calculator-create-class.gif "Vytvoření třídy kalkulačky")
 
-   Třída je jako matrice objektu, která něco dělá. V takovém případě definujeme kalkulačku a jak by mělo fungovat. **Přidat třídu** Průvodce využité nad vytvořené soubory .h a .cpp, které mají stejný název jako třída. Můžete zobrazit úplný seznam souborů v projektu **Průzkumníka řešení** okno viditelné Toolbar integrovaného vývojového prostředí. Pokud v okně není zobrazena, lze jej otevřít z řádku nabídek: Zvolte **zobrazení** > **Průzkumníka řešení**.
+   Třída je jako podrobný plán pro objekt, který něco dělá. V tomto případě definujeme kalkulačku a to, jak má fungovat. Průvodce **přidáním třídy** , který jste použili nad vytvořenými soubory. h a. cpp, které mají stejný název jako třída. Úplný seznam souborů projektu můžete zobrazit v okně **Průzkumník řešení** , které je viditelné na straně integrovaného vývojového prostředí (IDE). Pokud okno není viditelné, můžete ho otevřít z řádku nabídek: zvolit **zobrazení** > **Průzkumník řešení**.
 
-   ![Průzkumník řešení](./media/calculator-solution-explorer.png "Průzkumníka řešení")
+   ![Průzkumník řešení](./media/calculator-solution-explorer.png "Průzkumník řešení")
 
-   Teď byste měli mít tři karty, které se otevře v editoru: *CalculatorTutorial.cpp*, *Calculator.h*, a *Calculator.cpp*. Pokud omylem uzavřete jeden z nich, můžete znovu otevřít jej dvojitým kliknutím v **Průzkumníka řešení** okna.
+   Nyní byste měli mít v editoru otevřené tři karty: *CalculatorTutorial. cpp*, *Kalkulačka. h*a *Kalkulačka. cpp*. Pokud jeden z nich omylem zavřete, můžete ho znovu otevřít dvojitým kliknutím v okně **Průzkumník řešení** .
 
-1. V **Calculator.h**, odeberte `Calculator();` a `~Calculator();` řádky, které byly vytvořeny, protože je nebudete potřebovat tady. Dále přidejte následující řádek kódu, takže ho teď vypadá takto:
+1. V programu **Kalkulačka. h**odeberte `Calculator();` řádky `~Calculator();` a, které byly vygenerovány, protože je nebudete potřebovat. Dále přidejte následující řádek kódu, aby soubor byl nyní vypadat takto:
 
     ```cpp
     #pragma once
@@ -529,18 +529,18 @@ Je čas na přidání některých matematických logiku.
 
    > Porozumění kódu
    >
-   > - Je přidaný řádek deklaruje novou funkci s názvem `Calculate`, který použijeme ke spuštění matematických operací pro sčítání, odčítání, násobení a dělení.
-   > - Kód jazyka C++ je uspořádaný do *záhlaví* souborů (.h) a *zdroj* soubory (.cpp). Různé kompilátory podporují několik dalších přípon souborů, ale toto jsou hlavní ty vědět o. Funkce a proměnné jsou obvykle *deklarované*, která je zadaný název a typ, v souborech hlaviček, a *implementované*, nebo při definici, ve zdrojových souborech. Pro přístup kód definovaný v jiném souboru, můžete použít `#include "filename.h"`, kde "filename.h" je název souboru, který deklaruje proměnné nebo funkce, kterou chcete použít.
-   > - Dva řádky odstraněné deklarované *konstruktor* a *destruktor* pro třídu. Pro jednoduchou třídu, jako je ten kompilátor vytvoří za vás a jejich použití jsou nad rámec tohoto kurzu.
-   > - Je dobrým zvykem organizovat kód do různých souborů podle jeho význam, tak, aby byl snadno najít kód, který budete potřebovat později. V našem případě definujeme `Calculator` třídy nezávisle na soubor obsahující `main()` funkce, ale doporučujeme naplánovat tak, aby odkazovaly `Calculator` třídy v `main()`.
+   > - Řádek, který jste přidali, deklaruje novou funkci nazvanou `Calculate`, kterou použijeme ke spouštění matematických operací pro sčítání, odčítání, násobení a dělení.
+   > - C++kód je uspořádán do souborů *hlaviček* (. h) a *zdrojových* souborů (. cpp). Několik dalších přípon souborů je podporováno různými kompilátory, ale jedná se o ty, kterých se dozvíte. Funkce a proměnné jsou obvykle *deklarovány*, to znamená, že jsou zadány název a typ, v hlavičkovýchsouborech a implementovány nebo předány definici ve zdrojových souborech. Chcete-li získat přístup ke kódu definovanému v jiném `#include "filename.h"`souboru, můžete použít, kde ' filename. h ' je název souboru, který deklaruje proměnné nebo funkce, které chcete použít.
+   > - Dva řádky, které jste odstranili, byly deklarovány jako *konstruktor* a *destruktor* pro třídu. Pro jednoduchou třídu, jako je tato, ji kompilátor vytvoří za vás, přičemž jejich použití jsou nad rámec tohoto kurzu.
+   > - Je vhodné organizovat kód do různých souborů na základě toho, co dělá, takže je snadné najít kód, který potřebujete později. V `Calculator` našem případě jsme třídu definovali samostatně ze souboru `main()` obsahujícího funkci, ale plánujeme na ni odkazovat `Calculator` v `main()`.
 
-1. Zobrazí se zelená vlnovku se zobrazí v rámci `Calculate`. Je proto, že jsme ještě nebyl definován `Calculate` funkce v souboru .cpp. Najeďte myší aplikaci word, klikněte na žárovku, která se zobrazí a zvolte **vytvoření definice "Vypočítat" v Calculator.cpp**. Se zobrazí automaticky otevírané okno, které poskytuje náhled změn kódu, která byla vytvořena v jiném souboru. Kód byl přidán do *Calculator.cpp*.
+1. Pod položkou `Calculate`se zobrazí zelená vlnovka. Je to proto, že jsme `Calculate` funkci v souboru. cpp nedefinovali. Najeďte myší na slovo, klikněte na žárovky, který se zobrazí, a **v kalkulačce. cpp vyberte vytvořit definici pro ' vypočítat '** . Zobrazí se automaticky otevírané okno, které vám nabídne náhled změny kódu provedené v jiném souboru. Kód byl přidán do *kalkulačky. cpp*.
 
-   ![Vytvoření definice Calculate](./media/calculator-create-definition.gif "vytvořit definici vypočítat")
+   ![Vytvořit definici výpočtu](./media/calculator-create-definition.gif "Vytvořit definici výpočtu")
 
-   V současné době pouze vrátí 0,0. Teď Změníme. Stisknutím klávesy **Esc** automaticky otevírané okno zavřete.
+   V současné době pouze vrátí 0,0. Pojďme to změnit. Stisknutím klávesy **ESC** zavřete automaticky otevírané okno.
 
-1. Přepněte *Calculator.cpp* souborů v okně editoru. Odeberte `Calculator()` a `~Calculator()` oddíly (stejně jako v souboru .h) a přidejte následující kód, který `Calculate()`:
+1. V okně editoru přepněte na soubor *kalkulačky. cpp* . Odeberte oddíly `~Calculator()` `Calculate()`a (stejně jako v souboru. h) a přidejte následující kód do: `Calculator()`
 
     ```cpp
     #include "pch.h"
@@ -566,16 +566,16 @@ Je čas na přidání některých matematických logiku.
 
    > Porozumění kódu
    >
-   > - Funkce `Calculate` využívá číslo, operátor a druhé číslo a potom provede požadovanou operaci u čísel.
-   > - Příkaz kontroly přepínač operátoru byla zadaná a to pouze spustí case odpovídající této operaci. Výchozí hodnota: case se používají jako základní v případě, že uživatel zadá operátor není povolena, takže nedojde k narušení program. Obecně je nejvhodnější pro zpracování Neplatný uživatelský vstup elegantnější způsobem, ale jde nad rámec tohoto kurzu.
-   > - `double` – Klíčové slovo označuje typ číslo, které podporuje desetinná čísla. Tímto způsobem kalkulačce dokáže zpracovat desítkové matematické a matematikou celých čísel. `Calculate` Funkce je potřeba vždy vrátí číslo, protože `double` na začátku kódu (označuje návratový typ funkce), což je důvod, proč se vrací 0,0 i ve výchozím nastavení.
-   > - Soubor .h deklaruje funkci *prototypu*, který instruuje kompilátor, předem, jaké parametry se vyžaduje, a jaké návratový typ od něj očekávat. Soubor .cpp má všechny podrobnosti implementace funkce.
+   > - Funkce `Calculate` spotřebovává číslo, operátor a druhé číslo a poté provede požadovanou operaci s čísly.
+   > - Příkaz switch ověří, který operátor byl zadán a provede pouze případ odpovídající této operaci. Výchozí: Case je záložní pro případ, že uživatel zadá operátor, který není přijat, takže program nebude přerušen. Obecně je nejlepší zpracovávat neplatný vstup uživatele efektivněji, ale toto je nad rámec tohoto kurzu.
+   > - `double` Klíčové slovo označuje typ čísla, který podporuje desetinná čísla. Kalkulačka tak může zpracovat desítkové matematické i celočíselné matematické hodnoty. Funkce je vyžadována, aby vždy vracela takové číslo z důvodu `double` na začátku kódu (označuje návratový typ funkce), což je důvod, proč vracíme 0,0 i ve výchozím případu. `Calculate`
+   > - Soubor. h deklaruje *prototyp*funkce, který instruuje kompilátor dopředu, jaké parametry vyžaduje a jaký návratový typ, který má z něj očekávat. Soubor. cpp obsahuje všechny podrobnosti o implementaci funkce.
 
-Je-li sestavit a spustit kód znovu v tomto okamžiku, se stále ukončí po s dotazem, kterou operaci má provést. V dalším kroku upravíte `main` funkce provedete pár výpočtů.
+Pokud v tomto okamžiku sestavíte a znovu spustíte kód, bude i nadále ukončen po žádosti o operaci, která má být provedena. V `main` dalším kroku upravíte funkci, aby se provede několik výpočtů.
 
-### <a name="to-call-the-calculator-class-member-functions"></a>Volání funkce člena třídy Kalkulačka
+### <a name="to-call-the-calculator-class-member-functions"></a>Volání funkcí členů třídy kalkulačky
 
-1. Teď můžeme aktualizovat `main` fungovat v *CalculatorTutorial.cpp*:
+1. Teď pojďme aktualizovat `main` funkci v *CalculatorTutorial. cpp*:
 
     ```cpp
     // CalculatorTutorial.cpp : This file contains the 'main' function. Program execution begins and ends there.
@@ -612,81 +612,81 @@ Je-li sestavit a spustit kód znovu v tomto okamžiku, se stále ukončí po s d
 
    > Porozumění kódu
    >
-   > - Protože programy v jazyce C++ vždy začínají hodnotou `main()` funkce, musíme volání našeho kódu z něj, tak `#include` příkazu je potřeba.
-   > - Některé počáteční proměnné `x`, `y`, `oper`, a `result` jsou deklarovány na ukládání první číslo, druhé číslo, operátor a konečný výsledek. Vždy je dobrým zvykem, abyste jim zajistili některé počáteční hodnoty, aby se zabránilo nedefinované chování, která je, co se zde provádí.
-   > - `Calculator c;` Řádek deklaruje objekt s názvem "c", protože instance `Calculator` třídy. Vlastní třídy je pouze pro fungování kalkulačky; objekt je konkrétní kalkulačky, který provede výpočty.
-   > - `while (true)` Příkaz je smyčka. Kód uvnitř smyčka pokračuje v provádění opakovaně, dokud je podmínka uvnitř `()` platí. Vzhledem k tomu, že podmínka je jednoduše uveden jako `true`, je vždy hodnotu true, takže cyklu navždy. Ukončete program, musí uživatel ručně zavřete okno konzoly. V opačném případě program vždy čeká nový vstup.
-   > - `cin` – Klíčové slovo se používá tak, aby přijímal vstup od uživatele. Tento vstupní datový proud je dostatečně inteligentní, aby zpracoval řádek textu zadaného v okně konzoly a umístěte do každé proměnné, které jsou uvedeny v pořadí, za předpokladu, že vstupní shody uživatele požadovanou specifikaci. Můžete upravit tento řádek tak, aby přijímal různých typů vstupu, například větší než dvě čísla, i když `Calculate()` funkce budete také muset aktualizovat tak, aby se o to postarají.
-   > - `c.Calculate(x, oper, y);` Výraz volání `Calculate` funkce definovali dříve a je zdrojem zadané vstupní hodnoty. Funkce pak vrátí číslo, které se uloží v `result`.
-   > - Nakonec `result` vytiskne na konzolu, tak uživateli se zobrazí výsledek výpočtu.
+   > - Vzhledem C++ k tomu, že se `main()` programy vždy spouštějí ve funkci, musíme z něj zavolat náš další kód, `#include` takže je třeba zadat příkaz.
+   > - Některé počáteční proměnné `x` `y` ,`oper`, a`result` jsou deklarovány pro uložení prvního čísla, druhého čísla, operátoru a konečného výsledku. Je vždy vhodné jim poskytnout některé počáteční hodnoty, aby nedocházelo k nedefinovanému chování, což znamená to, co se děje.
+   > - Řádek deklaruje objekt nazvaný "c" jako instanci `Calculator` třídy. `Calculator c;` Samotná třída je jenom podrobný plán, jak fungují kalkulačky. objekt je konkrétní kalkulačka, která je matematické.
+   > - `while (true)` Příkaz je smyčka. Kód uvnitř smyčky pokračuje v provádění a znovu, dokud podmínka uvnitř `()` obsahuje hodnotu true. Vzhledem k tomu, že je tato `true`podmínka jednoduše uvedená jako, je vždycky true, takže se smyčka spouští trvale. Chcete-li program ukončit, uživatel musí ručně zavřít okno konzoly. V opačném případě bude program vždycky čekat na nový vstup.
+   > - `cin` Klíčové slovo slouží k přijetí vstupu od uživatele. Tento vstupní datový proud je dostatečně automatický pro zpracování řádku textu zadaného v okně konzoly a jeho umístění do každé z uvedených proměnných, v pořadí, za předpokladu, že vstup uživatele odpovídá požadované specifikaci. Tento řádek lze upravit tak, aby přijímal různé typy vstupů, například více než dvě čísla, i když `Calculate()` by mohla být funkce také aktualizována, aby to bylo možné zpracovat.
+   > - `c.Calculate(x, oper, y);` Výraz`Calculate` volá funkci definovanou dříve a zadá zadané vstupní hodnoty. Funkce pak vrátí číslo, které je uloženo v `result`.
+   > - `result` Nakonec je vytištěna do konzoly, takže uživatel uvidí výsledek výpočtu.
 
 ### <a name="build-and-test-the-code-again"></a>Sestavit a otestovat kód znovu
 
-Nyní je čas otestovat program znovu, abyste měli jistotu, že všechno funguje správně.
+Nyní je čas otestovat program znovu, abyste se ujistili, že vše funguje správně.
 
-1. Stisknutím klávesy **Ctrl + F5** znovu sestavte a spusťte aplikaci.
+1. Stisknutím **kombinace kláves CTRL + F5** znovu sestavte a spusťte aplikaci.
 
-1. Zadejte `5 + 5`a stiskněte klávesu **Enter**. Ověřte, že výsledek je 10.
+1. Zadejte `5 + 5`a stiskněte klávesu **ENTER**. Ověřte, že je výsledek 10.
 
-   ![Výsledek 5 + 5](./media/calculator-five-plus-five.png "výsledek 5 + 5")
+   ![Výsledek 5 + 5](./media/calculator-five-plus-five.png "Výsledek 5 + 5")
 
 ## <a name="debug-the-app"></a>Ladění aplikace
 
-Vzhledem k tomu, že uživateli je zadarmo zadávat nic do okna konzoly, se ujistěte, že kalkulačky zpracovává vstup podle očekávání. Místo spuštění programu, můžeme ho ladit místo toho tak jsme si můžete prohlédnout, co to dělá podrobně krok za krokem.
+Vzhledem k tomu, že uživatel je zdarma psát do okna konzoly, je nutné se ujistit, že kalkulačka zpracovává určitý vstup podle očekávání. Místo spuštění programu je možné ho místo toho ladit, takže můžeme zkontrolovat, co podrobně dělá, a krok za krokem.
 
-### <a name="to-run-the-app-in-the-debugger"></a>Spusťte aplikaci v ladicím programu
+### <a name="to-run-the-app-in-the-debugger"></a>Spuštění aplikace v ladicím programu
 
-1. Nastavit zarážku na `result = c.Calculate(x, oper, y);` řádku, bezprostředně po uživateli se zobrazí výzva pro vstup. Chcete-li nastavit zarážku, klikněte na tlačítko vedle řádku v šedé svislá čára sledovat levému okraji okna editoru. Zobrazí se červená tečka.
+1. Nastavte zarážku na `result = c.Calculate(x, oper, y);` řádku hned poté, co byl uživatel požádán o vstup. Chcete-li nastavit zarážku, klikněte na tlačítko vedle čáry v šedém svislém pruhu podél levého okraje okna editoru. Zobrazí se červená tečka.
 
    ![Nastavit zarážku](./media/calculator-set-breakpoint.gif "nastavte zarážku")
 
-   Nyní když jsme ladění programu, vždy pozastaví provádění na tento řádek. Už máme přibližnou představu, který pro jednoduché případů bude program. Protože nechceme pozastavit provádění pokaždé, když, vytvoříme zarážka podmíněný.
+   Nyní když program ladíme, vždy pozastaví provádění na daném řádku. Již máme hrubý nápad, který program funguje pro jednoduché případy. Vzhledem k tomu, že nechcete pokaždé pozastavit běh pokaždé, provedeme podmíněný zarážku.
 
-1. Klikněte pravým tlačítkem na červenou tečku představující zarážku a zvolte **podmínky**. Do textového pole podmínky, zadejte `(y == 0) && (oper == '/')`. Zvolte **Zavřít** tlačítko až budete hotovi. Podmínka se automaticky uloží.
+1. Pravým tlačítkem myši klikněte na červenou tečku, která představuje zarážku, a vyberte **podmínky**. Do pole pro úpravy podmínky zadejte `(y == 0) && (oper == '/')`. Až budete hotovi, klikněte na tlačítko **Zavřít** . Podmínka se uloží automaticky.
 
-   ![Nastavení podmíněné zarážky](./media/calculator-conditional-breakpoint.gif "nastavení podmíněné zarážky")
+   ![Nastavení podmíněné zarážky](./media/calculator-conditional-breakpoint.gif "Nastavení podmíněné zarážky")
 
-   Nyní jsme pozastavit provádění na zarážce, konkrétně, pokud dojde k pokusu o dělení hodnotou 0.
+   Nyní pozastavíme provádění na zarážce konkrétně v případě, že došlo k pokusu o dělení 0.
 
-1. Pokud chcete program ladit, stiskněte **F5**, nebo zvolte **místní ladicí program Windows** tlačítka panelu nástrojů, který má ikonu zelenou šipku. Ve vaší aplikaci konzoly Pokud něco jako "5-0", zadejte program se chovat normálně a stále spuštěný. Nicméně pokud zadáte "10 / 0", jeho pozastavení na zarážce. Můžete dokonce vložit libovolný počet mezer mezi operátor a čísla. `cin` je dostatečně inteligentní, aby správně analyzovat vstup.
+1. Chcete-li ladit program, stiskněte klávesu **F5**nebo zvolte tlačítko **místní ladicí program systému Windows** , které má ikonu zelené šipky. Pokud v aplikaci konzoly zadáte něco jako "5-0", program se chová normálně a zůstane spuštěný. Pokud však zadáte "10/0", pozastaví se na zarážce. Mezi operátor a čísla můžete dokonce vložit libovolný počet mezer. `cin` je dostatečně inteligentní, aby bylo možné správně analyzovat vstup.
 
-   ![Pozastavení na zarážce podmíněného](./media/calculator-debug-conditional.gif "pozastavení na zarážce podmíněné")
+   ![Pozastavit na podmíněné zarážce](./media/calculator-debug-conditional.gif "Pozastavit na podmíněné zarážce")
 
-### <a name="useful-windows-in-the-debugger"></a>Užitečné windows v ladicím programu
+### <a name="useful-windows-in-the-debugger"></a>Užitečná okna v ladicím programu
 
-Pokaždé, když se při ladění kódu, můžete si všimnout, že se zobrazí několik nových oknech. Možnosti ladění můžou pomoct tato okna. Podívejte se na **automatické hodnoty** okna. **Automatické hodnoty** okno se zobrazuje aktuální hodnoty proměnných použít minimálně tři řádky před a až do aktuálního řádku.
+Kdykoli budete ladit kód, můžete si všimnout, že se zobrazí některá nová okna. Tato okna můžou pomáhat s vaším prostředím pro ladění. Podívejte se na okno **Automatické** hodnoty. Okno **Automatické** hodnoty zobrazuje aktuální hodnoty proměnných, které byly použity alespoň na tři řádky před a až do aktuálního řádku.
 
-   ![V okně Automatické hodnoty](./media/calculator-autos.png "okno Automatické hodnoty")
+   ![Okno Automatické] hodnoty (./media/calculator-autos.png "Okno Automatické") hodnoty
 
-Chcete-li zobrazit všechny proměnné z této funkce, přepněte **lokální** okna. Hodnoty těchto proměnných při ladění, můžete upravit ve skutečnosti zobrazíte jaký vliv bude mít v programu. V tomto případě Ponecháme je samostatně.
+Chcete-li zobrazit všechny proměnné z této funkce, přepněte do okna **místní** hodnoty. Hodnoty těchto proměnných můžete v průběhu ladění skutečně upravovat, abyste viděli, jaký má vliv na program. V takovém případě je zadáte samostatně.
 
-   ![V okně místních hodnot](./media/calculator-locals.png "okno oknech místní hodnoty")
+   ![Okno místních] hodnot (./media/calculator-locals.png "Okno místních") hodnot
 
-Můžete také pouze najetí myší na proměnné v samotném zobrazíte jejich aktuálními hodnotami, kde je momentálně pozastavený provádění kódu. Ujistěte se, že okno editoru fokus nejprve kliknutím na ni.
+Můžete také umístit ukazatel myši na proměnné v samotném kódu, abyste viděli jejich aktuální hodnoty, kde je provádění aktuálně pozastaveno. Ujistěte se, že je okno editoru aktivní, a to tak, že na něj kliknete nejdřív.
 
-   ![Najetím myší zobrazíte aktuální hodnoty proměnných](./media/calculator-hover-tooltip.gif "při najetí myší, chcete-li zobrazit aktuální hodnoty proměnných")
+   ![Najetím myší zobrazíte aktuální hodnoty proměnných.](./media/calculator-hover-tooltip.gif "Najetím myší zobrazíte aktuální hodnoty proměnných.")
 
-### <a name="to-continue-debugging"></a>Pro pokračování v ladění
+### <a name="to-continue-debugging"></a>Pokračování v ladění
 
-1. Žlutá čára na levé straně se zobrazí aktuální bod provádění. Aktuální řádek volání `Calculate`, takže stiskněte **F11** k **Krokovat s vnořením** funkce. Zorientujete se v těle `Calculate` funkce. Buďte opatrní při používání **Krokovat s vnořením**; Pokud tak učiníte příliš mnoho může odpad spoustu času. Přejde na jakýkoli kód, který používáte na řádek, který používáte, včetně funkce standardní knihovny.
+1. Žlutý řádek na levé straně znázorňuje aktuální bod provádění. Aktuální řádek zavolá `Calculate`, takže stisknutím klávesy **F11** se **zajděte do** funkce. Najdete ho sami v těle `Calculate` funkce. Buďte opatrní při **krokování**; Pokud to uděláte příliš daleko, může dorazit spoustu času. Přejde do libovolného kódu, který použijete na řádku, na kterém se nacházíte, včetně standardních funkcí knihovny.
 
-1. Teď, když bod provádění na začátku `Calculate` funkci, stiskněte klávesu **F10** přesunout na další řádek při provádění programu. **F10** se taky říká **Krokovat s přeskočením**. Můžete použít **Krokovat s přeskočením** přesunout řádcích, bez seznamovat s podrobnostmi o co se děje v jednotlivých součástí řádku. Obecně byste měli použít **Krokovat s přeskočením** místo **Krokovat s vnořením**, pokud nechcete Ponořte se hlouběji do kódu, která je volána z jinde (stejně jako k dosažení tělo `Calculate`).
+1. Teď, když je bod spuštění na začátku `Calculate` funkce, můžete stisknutím klávesy **F10** přejít na další řádek v provádění programu. **F10** se také označuje jako **krok za krokem**. Můžete použít **Krok** nahoru pro přechod mezi řádky a spojnici, aniž byste museli zobrazit podrobnosti o tom, co se v každé části řádku objevuje. Obecně byste měli použít **Krok přes** místo **kroku into**, pokud nechcete podrobně do kódu, který je volán jinam (stejně jako při přístupu k těle `Calculate`).
 
-1. Pokračovat v používání **F10** k **Krokovat s přeskočením** každého řádku, dokud se nevrátíte se zpátky do `main()` fungovat v jiném souboru a zastaví se na `cout` řádku.
+1. Pokračujte v používání nástroje **F10** , abyste mohli **Krokovat** s každým řádkem, `main()` dokud se nevrátíte k funkci v druhém `cout` souboru a zastavíte řádek.
 
-   ![Vystoupení ze Calculate a zkontrolujte výsledek](./media/calculator-undefined-zero.gif "vystoupení ze Calculate a zkontrolovat výsledky")
+   ![Krok z výpočtu a kontroly výsledku](./media/calculator-undefined-zero.gif "Krok z výpočtu a kontroly výsledku")
 
-   Vypadá to program provádí, co se očekává: přijímá první číslo a rozděluje po sekundách. Na `cout` řádek, najeďte myší `result` proměnné nebo se podívejte na `result` v **automatické hodnoty** okna. Uvidíte, že její hodnota je uveden jako "informace", který nevypadá moc správně, takže ho opravit. `cout` Řádku právě výstupy, ať hodnota je uložená v `result`, takže když vejdete další řádek předávání pomocí **F10**, v okně konzoly se zobrazí:
+   Vypadá to, že program dělá, co je očekávané: přijímá první číslo a rozděluje ho druhým. Na řádku umístěte ukazatel myši `result` na proměnnou `result` nebo se podívejte do okna **Automatické** hodnoty. `cout` Uvidíte, že jeho hodnota je uvedena jako "INF", což nevypadá správně, takže ji Opravme. Řádek právě vypisuje libovolnou hodnotu uloženou v `result`, takže když postupně jednou zadáte další řádek pomocí nástroje F10, okno konzoly zobrazí: `cout`
 
-   ![Výsledek dělení nulou](./media/calculator-divide-by-zero-fail.png "výsledek dělení nulou")
+   ![Výsledek dělení nulou](./media/calculator-divide-by-zero-fail.png "Výsledek dělení nulou")
 
-   Tento výsledek dochází dělení nulou není definováno, takže program neobsahuje numerické odpověď na požadovanou operaci.
+   K tomuto výsledku dochází, protože dělení nulou není definováno, takže program nemá číselnou odpověď na požadovanou operaci.
 
-### <a name="to-fix-the-divide-by-zero-error"></a>Chcete-li vyřešit chybu "dělení nulou"
+### <a name="to-fix-the-divide-by-zero-error"></a>Oprava chyby "dělení nulou"
 
-Pojďme dělení nulou více elegantně zpracovat, to uživateli umožní pochopit i problém.
+Podíváme se, aby dělení nulou bez problémů, takže uživatel může pochopit problém.
 
-1. Proveďte následující změny v *CalculatorTutorial.cpp*. (Můžete nechat program spuštěný při úpravě díky funkci ladicího programu s názvem **upravit a pokračovat**):
+1. Proveďte následující změny v *CalculatorTutorial. cpp*. (Program můžete nechat spuštěný při úpravách, a to díky funkci ladicího programu s názvem **Upravit a pokračovat**):
 
     ```cpp
     // CalculatorTutorial.cpp : This file contains the 'main' function. Program execution begins and ends there.
@@ -728,30 +728,30 @@ Pojďme dělení nulou více elegantně zpracovat, to uživateli umožní pochop
     }
     ```
 
-1. Nyní stiskněte **F5** po. Program pokračuje tímto způsobem, dokud má pozastavit požádat pro uživatelský vstup. Zadejte `10 / 0` znovu. Nyní je užitečnější zpráva vytištěna. Zobrazí se uživateli výzva pro další vstup a program pokračuje v provádění normálně.
+1. Nyní stiskněte klávesu **F5** . Provádění programu pokračuje všemi způsoby, dokud se nemusíte pozastavit, aby pomohlo zadání uživatele. Zadejte `10 / 0` znovu. Nyní je vytištěna užitečnější zpráva. Uživatel je vyzván k zadání dalšího vstupu a program pokračuje v normálním provádění.
 
-   ![Konečný výsledek po změně](./media/calculator-final-verification.gif "konečný výsledek po provedení změn")
+   ![Konečný výsledek po změně](./media/calculator-final-verification.gif "Konečný výsledek po změně")
 
    > [!Note]
-   > Při úpravách kódu při v režimu ladění, existuje riziko kódu budou zastaralá. To se stane, když ladicí program je pořád spuštěný starý kód a ještě neaktualizoval ji se změnami. Ladicí program zobrazí dialogové okno vás informovat, pokud k tomu dojde. V některých případech budete muset stiskněte **F5** aktualizovat právě prováděný kód. Zejména pokud provedete změnu uvnitř funkce při bodu provádění je uvnitř, že funkce, je potřeba krok mimo funkci a pak zpátky do něj znovu zobrazíte aktualizovaný kód. Pokud to nepomůže z nějakého důvodu a objeví se chybová zpráva, můžete zastavit ladění po kliknutí na červený čtvereček na panelu nástrojů v rámci nabídky v horní části rozhraní IDE a pak znovu spusťte ladění tak, že zadáte **F5** nebo výběrem zelené " Přehrát"šipku vedle tlačítka Zastavit na panelu nástrojů.
+   > Při úpravách kódu v režimu ladění existuje riziko, že se kód stane zastaralým. K tomu dojde v případě, že ladicí program stále používá starý kód a ještě neaktualizoval se změnami. Ladicí program zobrazí dialogové okno s informací o tom, kdy k tomu dojde. Někdy může být nutné stisknout klávesu **F5** pro aktualizaci spouštěného kódu. Zejména pokud provedete změnu uvnitř funkce, zatímco je bod provádění uvnitř této funkce, budete muset krok převzít z funkce a následně zpátky do ní získat aktualizovaný kód. Pokud to z nějakého důvodu nefunguje a zobrazí se chybová zpráva, můžete ladění zastavit tak, že v nabídce v horní části rozhraní IDE kliknete na červený čtverec a pak znovu spustíte ladění, a to tak, že zadáte **F5** nebo zvolíte zelenou šipku "Play" vedle položky s. tlačítko nahoru na panelu nástrojů
    
-   > Principy zkratky spuštění a ladění
+   > Principy klávesových zkratek Run a Debug
    >
-   > - **F5** (nebo **ladění** > **spustit ladění**) spustí relaci ladění, pokud ještě není aktivní a spustí program, dokud nebude dosaženo zarážky nebo uživatelského vstupu pro potřeby aplikace. Pokud je nutný zásah uživatele a bez zarážek není k dispozici k volání, program se ukončí a v okně konzoly se ukončí sám při ukončení programu. Pokud máte něco jako "Hello World" program ke spuštění, použijte **Ctrl + F5** nebo nastavte zarážku před zadáním **F5** nechat okno otevřené.
-   > - **CTRL + F5** (nebo **ladění** > **spustit bez ladění**) spustí aplikaci bez přechodu do režimu ladění. Toto je mírně rychlejší než ladění a v okně konzoly se zůstane otevřený po dokončení provádění.
-   > - **F10** (označované jako **Krokovat s přeskočením**) umožňuje iterovat přes kódu řádek po řádku a vizualizace, jak spustit kód a jaké jsou hodnoty proměnných v každém kroku spuštění.
-   > - **F11** (označované jako **Krokovat s vnořením**) funguje podobně jako **Krokovat s přeskočením**, s výjimkou vstoupí do jakékoli funkce volána na řádek provádění. Například pokud spouštěný řádek volá funkci, stiskněte **F11** přesune ukazatel do těla funkce, takže můžete postupovat podle této funkce kód spuštěn před vrátíte do řádku začalo v. Stisknutím klávesy **F10** kroky prostřednictvím volání funkce a pouze přesune na další řádek; volání funkce se stále dochází, ale nebude pozastavit program zobrazit, co dělají.
+   > - **F5** (nebo > ladění**spuštění**ladění) spustí ladicí relaci, pokud již jedna není aktivní, a spustí program, dokud nebude dosaženo zarážky nebo když program potřebuje vstup uživatele. Pokud není nutný žádný vstup uživatele a není k dispozici žádná zarážka, program se ukončí a okno konzoly se po dokončení programu zavře. Pokud máte něco podobného jako spuštění programu "Hello World", použijte **CTRL + F5** nebo nastavte zarážku před zadáním klávesy **F5** , aby okno zůstalo otevřené.
+   > - **CTRL + F5** (nebo **ladění** > **Spustit bez ladění**) spustí aplikaci bez přechodu do režimu ladění. Toto je mírně rychlejší než ladění a okno konzoly zůstane otevřené, i když program dokončí provádění.
+   > - **F10** (označované jako **Krok over**) umožňuje iterovat přes kód, řádek po řádku a vizualizovat, jak se kód spouští a jaké hodnoty proměnných jsou v každém kroku spuštění.
+   > - Klávesa **F11** (označované jako **Krokovat**s vnořením) funguje podobně jako při **Krokovat**s výjimkou kroků na jakékoli funkce, které jsou volány na řádku provádění. Například pokud je řádek spouštěn voláním funkce, stisknutí klávesy **F11** přesune ukazatel na tělo funkce, aby bylo možné sledovat spouštěný kód funkce před návratem k řádku, na kterém jste začali. Stisknutí klávesy **F10** nad voláním funkce a pouhým přechodem na další řádek; k volání funkce stále dochází, ale program se nezastaví, aby vám ukázal, co dělá.
 
-### <a name="close-the-app"></a>Zavřete aplikaci
+### <a name="close-the-app"></a>Zavřít aplikaci
 
-- Pokud je stále spuštěna, zavřete okno konzoly pro aplikaci kalkulačku.
+- Pokud je pořád spuštěný, zavřete okno konzoly pro aplikaci kalkulačky.
 
 ## <a name="the-finished-app"></a>Dokončená aplikace
 
-Blahopřejeme! Dokončení kódu pro aplikaci kalkulačky a integrované a ladit v sadě Visual Studio.
+Blahopřejeme! Dokončili jste kód pro aplikaci kalkulačky a vytvořili jste ho a rozpnuli ho v aplikaci Visual Studio.
 
-## <a name="next-steps"></a>Další kroky
+## <a name="next-steps"></a>Další postup
 
-[Další informace o sadě Visual Studio pro C++](https://blogs.msdn.microsoft.com/vcblog/2017/04/21/getting-started-with-visual-studio-for-c-and-cpp-development/)
+[Další informace o aplikaci Visual Studio proC++](https://blogs.msdn.microsoft.com/vcblog/2017/04/21/getting-started-with-visual-studio-for-c-and-cpp-development/)
 
 ::: moniker-end

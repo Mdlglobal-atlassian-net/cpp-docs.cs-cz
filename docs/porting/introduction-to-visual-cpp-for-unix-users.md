@@ -4,64 +4,64 @@ ms.date: 09/01/2017
 helpviewer_keywords:
 - UNIX [C++]
 ms.assetid: 36108b31-e7fa-49a8-a1f7-7077fcbec873
-ms.openlocfilehash: 17f8082ac0442f65b9195b37da18b04f795d3d66
-ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.openlocfilehash: 7f73e51e02eafe46c279a8f828803912d8cd190a
+ms.sourcegitcommit: 9d4ffb8e6e0d70520a1e1a77805785878d445b8a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65448982"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69631700"
 ---
 # <a name="introduction-to-visual-c-for-unix-users"></a>Úvod do prostředí Visual C++ pro uživatele systému UNIX
 
-Toto téma obsahuje informace pro uživatele systému UNIX, kteří se ještě sadu Visual Studio a chcete se stát produktivity pomocí C++ a Visual Studio integrované vývojové prostředí (IDE).
+Toto téma poskytuje informace pro uživatele systému UNIX, kteří jsou noví v C++ aplikaci Visual Studio, a chtějí se starat o produktivitu a integrované vývojové prostředí (IDE) sady Visual Studio.
 
 ## <a name="getting-started-on-the-command-line"></a>Začínáme na příkazovém řádku
 
-Kompilátor C++ z příkazového řádku můžete použít podobným způsobem použijete prostředí příkazového řádku systému UNIX. Při kompilaci z příkazového řádku pomocí příkazového řádku kompilátoru jazyka C a C++ (CL. Soubor EXE) linkeru (odkaz. Soubor EXE) a další nástroje, včetně NMAKE. Soubor EXE, Microsoft verze systémů UNIX Zkontrolujte nástroj.
+C++ Kompilátor z příkazového řádku můžete použít podobným způsobem, jako byste používali prostředí příkazového řádku UNIX. Zkompilujete z příkazového řádku pomocí příkazového řádku C a C++ kompilátoru (CL. EXE), Linker (odkaz). EXE) a další nástroje, včetně nástroje NMAKE. EXE, verze programu pro systém UNIX.
 
-V systému UNIX příkazy jsou nainstalovány v běžné složky, například/usr/bin. V sadě Visual Studio nástroje příkazového řádku jsou nainstalovány v adresáři instalace sady Visual Studio v podadresáři VC\bin a jeho podadresářích. Na rozdíl od systému UNIX tyto nástroje nejsou k dispozici v okně prostý příkazového řádku. Použití nástrojů příkazového řádku, použijte zástupce příkazového řádku pro vývojáře nebo spustit příkaz vývojář souboru, například vcvarsall.bat. Tím se nastaví cesta i ostatním proměnným prostředí, které jsou nezbytné pro kompilaci programy v jazyce C++ z příkazového řádku. Další informace najdete v tématu [kódu sestavení C/C++ v příkazovém řádku](../build/building-on-the-command-line.md) a [názorný postup: Kompilace nativního programu C++ v příkazovém řádku](../build/walkthrough-compiling-a-native-cpp-program-on-the-command-line.md).
+V systému UNIX se příkazy instalují do společné složky, jako je například/usr/bin. V aplikaci Visual Studio jsou nástroje příkazového řádku nainstalovány v instalačním adresáři sady Visual Studio v podadresáři VC\bin a jeho podadresářích. Na rozdíl od systému UNIX nejsou tyto nástroje k dispozici v prostém okně příkazového řádku. Chcete-li použít nástroje příkazového řádku, použijte zástupce příkazového řádku pro vývojáře nebo spusťte soubor příkazu pro vývojáře, například vcvarsall. bat. Tím se nastaví cesta a další proměnné prostředí, které jsou nezbytné pro zkompilování C++ programů z příkazového řádku. Další informace naleznete v tématu [sestavení C/C++ kód na příkazovém řádku](../build/building-on-the-command-line.md) a [Návod: Kompilování nativního C++ programu na příkazovém řádku](../build/walkthrough-compiling-a-native-cpp-program-on-the-command-line.md).
 
-Chcete-li spustit nástroj zástupce příkazového řádku pro vývojáře, zadejte *příkazový řádek pro vývojáře* v desktopu hledat ovládací prvek a vyberte **Developer Command Prompt** výsledek pro vaši verzi sady Visual Studio. Chcete-li vyberte příkazový řádek pro vývojáře, který je předem konkrétního hostitele a Cílová architektura, otevřete **Start** nabídky (Windows ikonu v pravém rohu plochy) a přejděte do složky pro vaši verzi sady Visual Studio , jako například **Visual Studio 2017**. Otevřete složku a zvolte zástupce příkazového řádku pro upřednostňované hostitele a cílové architektury.
+Zástupce příkazového řádku pro vývojáře otevřete tak, že v ovládacím prvku pro hledání na ploše zadáte *příkaz Developer Command Prompt* a zvolíte **Developer Command Prompt** výsledek pro vaši verzi sady Visual Studio. Chcete-li zvolit příkazový řádek vývojáře, který je předem nakonfigurován pro konkrétní hostitele a cílovou architekturu, otevřete nabídku **Start** (ikonu Windows v rohu plochy) a přejděte do složky vaší verze aplikace Visual Studio, jako je například **vizuál Studio 2017**. Otevřete složku a vyberte zástupce příkazového řádku pro preferovanou hostitele a cílovou architekturu.
 
-Využívat výkonnější projekt funkce, jako je ladicí program sady Visual Studio, vyhledávání a příkaz dokončování kódu IntelliSense, vizuální návrhářské nástroje, Správa a tak dále, musíte použít Visual Studio IDE.
+Chcete-li využít výhod výkonnějších funkcí, jako je například ladicí program sady Visual Studio, vyhledávání kódu technologie IntelliSense a dokončování příkazů, vizuální návrháře, řízení projektů a tak dále, je nutné použít rozhraní IDE sady Visual Studio.
 
 ## <a name="debugging-your-code"></a>Ladění kódu
 
-Pokud používáte příkazový řádek a spouštění aplikací na stanici vývoje, uvidíte, že pokud váš kód zjistí narušení přístupu k paměti, neošetřené výjimky nebo další neopravitelné, zobrazí se dialogové okno spustit ladicí program sady Visual Studio chyby. Vyberete-li **OK**, pak spuštění vývojového prostředí sady Visual Studio a ladicí program se otevře do bodu selhání. Chcete-li ladit tímto způsobem vašich aplikací a v takovém případě zdrojový kód by být k dispozici pouze pokud kompilujete s [/Z7, / zi, /ZI (formát informací o ladění)](../build/reference/z7-zi-zi-debug-information-format.md) přepnout. Další informace najdete v tématu [ladění nativního kódu](/visualstudio/debugger/debugging-native-code) a [pomocí integrovaného vývojového prostředí sady Visual Studio pro vývoj v jazyce C++ Desktop](../ide/using-the-visual-studio-ide-for-cpp-desktop-development.md).
+Použijete-li příkazový řádek a spustíte své aplikace na vaší vývojové pracovní stanici, zobrazí se dialogové okno pro spuštění ladicího programu sady Visual Studio, když váš kód narazí na narušení přístupu k paměti, Neošetřená výjimka nebo jiná neodstranitelná. vyskytl. Pokud kliknete na tlačítko **OK**, bude spuštěno vývojové prostředí sady Visual Studio a ladicí program se otevře v bodě selhání. Je možné ladit aplikace tímto způsobem, a v tomto případě by váš zdrojový kód byl k dispozici pouze v případě, že jste zkompilováni s přepínačem [/Z7,/Zi,/Zi (formát ladicích informací)](../build/reference/z7-zi-zi-debug-information-format.md) . Další informace naleznete v tématu [ladění nativního kódu](/visualstudio/debugger/debugging-native-code) a [použití integrovaného vývojového C++ prostředí (IDE) sady Visual Studio pro desktopový vývoj](../ide/using-the-visual-studio-ide-for-cpp-desktop-development.md).
 
 ## <a name="using-the-development-environment"></a>Použití vývojového prostředí
 
-Je jednodušší použít vývojové prostředí pro úpravy a vytváření zdrojového kódu *projektu*. Projekt je kolekce zdroje a související soubory, které budou zkompilovány do jedné jednotky, jako je například knihovna nebo spustitelný soubor. Projekt obsahuje také informace o tom, jak mají být vytvořeny soubory. Informace o projekty jsou uloženy v souboru projektu s příponou .prj.
+Pro úpravu a sestavení zdrojového kódu v *projektu*je snazší použít vývojové prostředí. Projekt je kolekce zdrojových a souvisejících souborů, které budou zkompilovány do jedné jednotky, například knihovny nebo spustitelného souboru. Projekt obsahuje také informace o tom, jak mají být soubory sestaveny. Informace o projektech jsou uloženy v souboru projektu s příponou. prj.
 
-Aplikace, která se skládá z více knihoven a spustitelné soubory, každý potenciálně integrované s různou sadou možností kompilátoru nebo dokonce i v jiném jazyce, jsou uloženy ve více projektech, které jsou součástí jedné *řešení*. Řešení je abstrakcí pro kontejner k seskupení více projektů. Informace o řešení jsou uloženy v souboru s příponou .sln řešení. Další informace najdete v tématu [řešení a projekty v sadě Visual Studio](/visualstudio/ide/solutions-and-projects-in-visual-studio) a [pomocí integrovaného vývojového prostředí sady Visual Studio pro vývoj v jazyce C++ Desktop](../ide/using-the-visual-studio-ide-for-cpp-desktop-development.md).
+Aplikace, která se skládá z více knihoven a spustitelných souborů, z nichž každá je potenciálně sestavena s jinou sadou možností kompilátoru nebo dokonce v jiném jazyce, je uložena ve více projektech, které jsou součástí jednoho *řešení*. Řešení je abstrakcí pro kontejner, který seskupuje více projektů dohromady. Informace o řešeních jsou uloženy v souboru řešení s příponou. sln. Další informace naleznete v tématu [řešení a projekty v aplikaci Visual Studio](/visualstudio/ide/solutions-and-projects-in-visual-studio) a [používání integrovaného vývojového C++ prostředí (IDE) sady Visual Studio pro desktopový vývoj](../ide/using-the-visual-studio-ide-for-cpp-desktop-development.md).
 
 ## <a name="importing-your-existing-code"></a>Import existujícího kódu
 
-Kompilátor C++ můžete použít k sestavení existující kód, který je nastavený na kompilovat s nebo bez souboru pravidel a vložit ho do projektu sady Visual Studio. Další informace najdete v tématu [jak: Vytvoření projektu jazyka C++ z existujícího kódu](../build/how-to-create-a-cpp-project-from-existing-code.md).
+C++ Kompilátor můžete použít k sestavení stávajícího kódu, který je nastaven pro kompilaci s nebo bez souboru pravidel a jeho vložení do projektu aplikace Visual Studio. Další informace najdete v tématu [jak: Vytvoří C++ projekt z existujícího kódu](../build/how-to-create-a-cpp-project-from-existing-code.md).
 
 ## <a name="creating-a-new-project"></a>Vytvoření nového projektu
 
-Vytvořit nové projekty ve vývojovém prostředí. Visual Studio poskytuje mnoho šablon, které poskytují standardní kód pro mnoho běžných projektů. Průvodci aplikací můžete použít ke generování projektů s obrysy kódu pro různé typy aplikací.
+Ve vývojovém prostředí můžete vytvořit nové projekty. Visual Studio poskytuje mnoho šablon, které poskytují standardní kód pro různé běžné projekty. Můžete použít Průvodce aplikací ke generování projektů s osnovami kódu pro různé typy aplikací.
 
-Můžete začít s prázdným projektem pomocí **Konzolová aplikace (Win32) průvodce**. Vyberte **prázdný projekt** zaškrtávací políčko. Potom přidáte nové i stávající soubory do projektu později.
+Můžete začít s prázdným projektem pomocí **Průvodce konzolovou aplikací (Win32)** . Zaškrtněte políčko **prázdný projekt** . Později můžete přidat nové a existující soubory do projektu.
 
-Když vytvoříte projekt, je třeba zadat název projektu. Ve výchozím nastavení název projektu rovná název dynamická knihovna (DLL) nebo spustitelný soubor, který je sestaven z projektu. Další informace najdete v tématu [vytváření řešení a projekty](/visualstudio/ide/creating-solutions-and-projects).
+Při vytváření projektu je nutné projekt pojmenovat. Ve výchozím nastavení se název projektu rovná názvu dynamické knihovny (DLL) nebo spustitelného souboru, který je sestaven z projektu. Další informace najdete v tématu [vytváření řešení a projektů](/visualstudio/ide/creating-solutions-and-projects).
 
 ## <a name="microsoft-specific-modifiers"></a>Modifikátory specifické pro společnost Microsoft
 
-Microsoft C++ kompilátoru implementuje několik rozšíření standardu C++ programovací jazyk pro podporu programování pro operační systémy Windows. Tato rozšíření se používají k určení atributů třídy úložiště, konvence volání funkce a adresování, mimo jiné. Úplný seznam všech podporovaných rozšíření jazyka C++, naleznete v tématu [Modifikátory specifické pro společnost Microsoft](../cpp/microsoft-specific-modifiers.md).
+Kompilátor společnosti C++ Microsoft implementuje několik rozšíření standardního C++ programovacího jazyka pro podporu programování pro operační systémy Windows. Tato rozšíření slouží k určení atributů třídy úložiště, konvencí volání funkce a adresování založeného mimo jiné věci. Úplný seznam všech podporovaných C++ rozšíření najdete v tématu Modifikátory [specifické pro společnost Microsoft](../cpp/microsoft-specific-modifiers.md).
 
-Pomocí můžete zakázat všechna rozšíření specifické pro společnost Microsoft c++ `/Za` – možnost kompilátoru. Tato možnost se doporučuje, pokud chcete napsat kód, který spouští na více platformách. Další informace o `/Za` – možnost kompilátoru, naleznete v tématu [/Za, /Ze (zakázat jazyková rozšíření)](../build/reference/za-ze-disable-language-extensions.md). Další informace o přizpůsobení kompilátoru C++, naleznete v tématu [shoda jazyka Visual C++](../overview/visual-cpp-language-conformance.md) a [nestandardní chování](../cpp/nonstandard-behavior.md).
+Všechna rozšíření specifická pro C++ společnost Microsoft můžete zakázat pomocí `/Za` možnosti kompilátoru. Tato možnost se doporučuje, pokud chcete napsat kód, který se spustí na více platformách. Další informace o `/Za` možnosti kompilátoru naleznete v tématu [/za,/ze (Disable Language Extensions)](../build/reference/za-ze-disable-language-extensions.md). Další informace o C++ souladu s kompilátorem naleznete v tématu formace a nestandardní [chování](../cpp/nonstandard-behavior.md) [jazyka Visual C++ Language](../overview/visual-cpp-language-conformance.md) .
 
 ## <a name="precompiled-headers"></a>Předkompilované hlavičky
 
-Kompilátory Microsoft C a C++ poskytují možnosti pro předkompilaci kódu jakékoli jazyka C nebo C++, včetně vložený kód. Pomocí této výkonné funkce, můžete zkompilovat stabilní části kódu, uložit zkompilovaný kód do souboru a, při následných kompilací kombinovat předkompilovaný kód s kódem, který je stále ve vývoji. Každé následné kompilace je rychlejší, protože není potřeba překompilovat stabilní kód.
+Microsoft C a C++ kompilátory poskytují možnosti pro předkompilování kódu C nebo C++ kód, včetně vloženého kódu. Pomocí této funkce výkonu můžete kompilovat stabilní tělo kódu, ukládat zkompilovaný stav kódu v souboru a během následných kompilací kombinovat předkompilovaný kód s kódem, který je stále ve vývoji. Každá následná kompilace je rychlejší, protože stabilní kód není nutné znovu kompilovat.
 
-Ve výchozím nastavení je všechny předkompilovaný kód zadaný do souborů stdafx.h a stdafx.cpp. **Nový projekt** průvodce automaticky vytvoří tyto soubory můžete pokud nezrušíte **Předkompilovaná hlavička** možnost. Další informace o předkompilovaných hlaviček, naleznete v tématu [vytváření Předkompilované soubory hlaviček](../build/creating-precompiled-header-files.md).
+Ve výchozím nastavení je celý předkompilovaný kód určen v souborech *PCH. h* a *PCH. cpp* (*stdafx. h* a *stdafx. cpp* v aplikaci Visual Studio 2017 a starší). Průvodce **novým projektem** automaticky vytvoří tyto soubory, pokud nevyberete možnost **Předkompilovaná hlavička** . Další informace o předkompilovaných hlavičkách naleznete v tématu [vytváření předkompilovaných hlavičkových souborů](../build/creating-precompiled-header-files.md).
 
 ## <a name="related-sections"></a>Související oddíly
 
-Další informace najdete v tématu [Portování ze systému UNIX do Win32](../porting/porting-from-unix-to-win32.md).
+Další informace najdete v tématu [přenos ze systému UNIX do Win32](../porting/porting-from-unix-to-win32.md).
 
 ## <a name="see-also"></a>Viz také:
 

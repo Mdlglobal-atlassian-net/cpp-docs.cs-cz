@@ -2,12 +2,12 @@
 title: 'Průvodce přenosem: Spy++'
 ms.date: 11/19/2018
 ms.assetid: e558f759-3017-48a7-95a9-b5b779d5e51d
-ms.openlocfilehash: 206698d35239f416d2f13891044aa54fe502500a
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 175f3fbba7e18f625dc3425c236162737689f068
+ms.sourcegitcommit: 9d4ffb8e6e0d70520a1e1a77805785878d445b8a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69511656"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69630451"
 ---
 # <a name="porting-guide-spy"></a>Průvodce přenosem: Spy++
 
@@ -67,7 +67,7 @@ Systém Windows XP již není společností Microsoft podporován, takže i kdy�
 
 Chcete-li se pokusit odstranit chybu, definujte program WINVER tím, že aktualizujete nastavení **vlastností projektu** na nejnižší verzi Windows, na kterou nyní chcete cílit. Seznam hodnot pro různé verze Windows najdete [tady](/windows/win32/WinProg/using-the-windows-headers).
 
-Soubor stdafx. h obsahoval některé z těchto definicí makra.
+Soubor *stdafx. h* obsahoval některé z těchto definicí makra.
 
 ```cpp
 #define WINVER       0x0500  // these defines are set so that we get the
@@ -373,7 +373,7 @@ Těžké použití maker jako v tomto kódu obvykle usnadňuje údržbu kódu. V
 #define PARM(var, type, src)type var = (type)src
 ```
 
-Proto je `lpszBuffer` proměnná deklarována dvakrát ve stejné funkci. Není to proto, že straightfoward tento problém opravit, protože by kód nepoužíval makra (jednoduše odeberte druhou deklaraci typu). V takovém případě máme unfortunate možnost rozhodnout, zda přepsat kód makra jako běžný kód (únavné a případně potenciálně náchylné k chybám), nebo zakázat upozornění.
+Proto je `lpszBuffer` proměnná deklarována dvakrát ve stejné funkci. Není to jasné, aby to bylo možné opravit, protože by kód nepoužíval makra (pouhým odebráním druhé deklarace typu). V takovém případě máme unfortunate možnost rozhodnout, zda přepsat kód makra jako běžný kód (únavné a případně potenciálně náchylné k chybám), nebo zakázat upozornění.
 
 V takovém případě se na toto upozornění rozhodneme zakázat. Dá se to udělat přidáním direktivy pragma následujícím způsobem:
 
@@ -502,7 +502,7 @@ K tomuto problému dochází, pokud byla proměnná poprvé deklarována jako **
 
 ##  <a name="porting_to_unicode"></a>Krok 11. Přenos ze znakové sady MBCS do kódování Unicode
 
-Všimněte si, že ve Windows World říkáme Unicode, obvykle to znamená UTF-16. Jiné operační systémy, jako je Linux, používají UTF-8, ale Windows všeobecně ne. Verze znakové sady MFC byla v Visual Studio 2013 a 2015 zastaralá, ale už se nepoužívá v rámci sady Visual Studio 2017. Pokud používáte Visual Studio 2013 nebo 2015, než se pustíte do kódu znakové sady MBCS pro kódování UTF-16, můžeme dočasně eliminovat upozornění, že sada MBCS je zastaralá, aby bylo možné provést další práci nebo odložit přenos do vhodného času. Aktuální kód používá znakovou sadu MBCS a chcete-li pokračovat, je nutné nainstalovat verzi knihovny MFC ANSI/MBCS. Spíše Velká knihovna MFC není součástí výchozího vývojového prostředí sady Visual Studio **s C++**  instalací, takže musí být vybrána z volitelných součástí instalačního programu. Viz [doplněk MFC MBCS DLL](../mfc/mfc-mbcs-dll-add-on.md). Po stažení a restartování sady Visual Studio můžete kompilovat a propojit s verzí znakové sady MFC, ale chcete-li se zbavit upozornění na znakovou sadu MBCS, pokud používáte Visual Studio 2013 nebo 2015, měli byste také přidat NO_WARN_MBCS_MFC_DEPRECATION do seznamu předdefinovaných makra v oddílu **preprocesoru** vlastností projektu nebo na začátku souboru hlaviček stdafx. h nebo jiného společného hlavičkového souboru.
+Všimněte si, že ve Windows World říkáme Unicode, obvykle to znamená UTF-16. Jiné operační systémy, jako je Linux, používají UTF-8, ale Windows všeobecně ne. Verze znakové sady MFC byla v Visual Studio 2013 a 2015 zastaralá, ale už se nepoužívá v rámci sady Visual Studio 2017. Pokud používáte Visual Studio 2013 nebo 2015, než se pustíte do kódu znakové sady MBCS pro kódování UTF-16, můžeme dočasně eliminovat upozornění, že sada MBCS je zastaralá, aby bylo možné provést další práci nebo odložit přenos do vhodného času. Aktuální kód používá znakovou sadu MBCS a chcete-li pokračovat, je nutné nainstalovat verzi knihovny MFC ANSI/MBCS. Spíše Velká knihovna MFC není součástí výchozího vývojového prostředí sady Visual Studio **s C++**  instalací, takže musí být vybrána z volitelných součástí instalačního programu. Viz [doplněk MFC MBCS DLL](../mfc/mfc-mbcs-dll-add-on.md). Po stažení a restartování sady Visual Studio můžete kompilovat a propojit s verzí znakové sady MFC, ale chcete-li se zbavit upozornění na znakovou sadu MBCS, pokud používáte Visual Studio 2013 nebo 2015, měli byste také přidat NO_WARN_MBCS_MFC_DEPRECATION do seznamu předdefinovaných makra v oddílu **preprocesoru** vlastností projektu nebo na začátku souboru hlaviček *stdafx. h* nebo jiného společného hlavičkového souboru.
 
 Teď máme chyby linkeru.
 

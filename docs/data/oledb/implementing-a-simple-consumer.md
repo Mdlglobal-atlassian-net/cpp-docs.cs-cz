@@ -1,48 +1,48 @@
 ---
 title: Implementace jednoduchého příjemce
-ms.date: 05/09/2019
+ms.date: 08/19/2019
 helpviewer_keywords:
 - OLE DB consumers, implementing
 ms.assetid: 13828167-23a4-4e94-8b6c-878262fda464
-ms.openlocfilehash: 67bce55a19a2aaaf3a8cbb62d7db228513e93c91
-ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
+ms.openlocfilehash: 2f290f2a17c51682c75fbc09118757e5fd12c4f7
+ms.sourcegitcommit: 9d4ffb8e6e0d70520a1e1a77805785878d445b8a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65707536"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69630754"
 ---
 # <a name="implementing-a-simple-consumer"></a>Implementace jednoduchého příjemce
 
 ::: moniker range="vs-2019"
 
-Průvodce spotřebitele ATL OLE DB není k dispozici v aplikaci Visual Studio 2019 a novějším. Funkce můžete přesto přidat ručně. Další informace najdete v tématu [vytvoření příjemce bez použití průvodce](creating-a-consumer-without-using-a-wizard.md).
+Průvodce příjemcem OLE DB ATL není v aplikaci Visual Studio 2019 a novějších k dispozici. Tuto funkci můžete přesto přidat ručně. Další informace najdete v tématu [Vytvoření příjemce bez použití Průvodce](creating-a-consumer-without-using-a-wizard.md).
 
 ::: moniker-end
 
 ::: moniker range="<=vs-2017"
 
-Následující témata ukazují, jak upravit soubory vytvořené **Průvodce aplikací knihovny MFC** a **průvodce příjemcem ATL OLE DB** k vytvoření jednoduchého příjemce. V tomto příkladu má následující části:
+Následující témata ukazují, jak upravit soubory vytvořené **průvodcem aplikací knihovny MFC** a průvodcem **OLE DB příjemce ATL** pro vytvoření jednoduchého příjemce. Tento příklad má následující části:
 
-- [Načítání dat pomocí příjemce](#retrieve) ukazuje, jak implementovat kód v příjemci, který načte všechna data, řádek po řádku z databázové tabulky.
+- [Načítání dat s příjemcem](#retrieve) ukazuje, jak implementovat kód ve spotřebiteli, který čte všechna data, řádek po řádku, z tabulky databáze.
 
-- [Přidání podpory záložky příjemci](#bookmark) ukazuje, jak přidat podporu záložky příjemci.
-
-> [!NOTE]
-> Aplikace příjemce popsané v této části můžete použít k testování `MyProv` a `Provider` ukázkový poskytovatelů.
+- [Přidání podpory záložek příjemci](#bookmark) ukazuje, jak přidat podporu záložky pro příjemce.
 
 > [!NOTE]
-> Jak vytvořit aplikaci uživatelů otestovat `MyProv` (stejný zprostředkovatel je popsáno v [rozšíření jednoduchého zprostředkovatele pouze pro čtení](../../data/oledb/enhancing-the-simple-read-only-provider.md)), musí obsahovat podporu záložku, jak je popsáno v [k přidání podpory záložek Příjemce](#bookmark).
+> Pomocí aplikace příjemce popsané v této části můžete testovat `MyProv` poskytovatele a `Provider` Sample Providers.
 
-## <a name="retrieve" ></a> Načítání dat pomocí příjemce
+> [!NOTE]
+> Chcete-li vytvořit aplikaci příjemce k `MyProv` testování (stejný poskytovatel popsaný v tématu [rozšíření jednoduchého zprostředkovatele pouze pro čtení](../../data/oledb/enhancing-the-simple-read-only-provider.md)), je nutné zahrnout podporu záložky, jak je popsáno v tématu [Přidání podpory záložky pro příjemce](#bookmark).
 
-### <a name="to-modify-the-console-application-to-use-the-ole-db-consumer"></a>Chcete-li změnit konzolovou aplikaci pro použití příjemce technologie OLE DB
+## <a name="retrieve" ></a>Načítání dat s příjemcem
 
-1. V `MyCons.cpp`, změnit hlavní kód vložením tučným písmem následujícím způsobem:
+### <a name="to-modify-the-console-application-to-use-the-ole-db-consumer"></a>Postup úpravy konzolové aplikace pro použití OLE DB příjemce
+
+1. V `MyCons.cpp`změňte hlavní kód vložením tučného textu následujícím způsobem:
 
     ```cpp
     // MyCons.cpp : Defines the entry point for the console application.
     //
-    #include "stdafx.h"
+    #include "pch.h" // "stdafx.h" in Visual Studio 2017 and earlier
     #include "Products.h"
     ...
     int main(int argc, char* argv[])
@@ -64,32 +64,32 @@ Následující témata ukazují, jak upravit soubory vytvořené **Průvodce apl
     }
     ```
 
-## <a name="bookmark" ></a> Přidání podpory záložek příjemci
+## <a name="bookmark" ></a>Přidání podpory záložky pro příjemce
 
-Záložka je sloupec, který jednoznačně identifikuje řádky v tabulce. Obvykle je klíčový sloupec, ale ne vždy; je specifický pro zprostředkovatele. Tato část ukazuje, jak přidat podporu záložky. Uděláte to tak, musíte provést následující kroky v třídě záznamu uživatele:
+Záložka je sloupec, který jednoznačně identifikuje řádky v tabulce. Obvykle se jedná o klíčový sloupec, ale ne vždy. je specifický pro konkrétního poskytovatele. V této části se dozvíte, jak přidat podporu záložek. K tomu je třeba v rámci třídy záznamu uživatele provést následující kroky:
 
-- Vytvoření instance záložky. Jedná se o objekty typu [CBookmark](../../data/oledb/cbookmark-class.md).
+- Vytvořte instanci záložek. Jedná se o objekty typu [CBookmark](../../data/oledb/cbookmark-class.md).
 
-- Požádat o sloupec záložky v poskytovateli nastavením `DBPROP_IRowsetLocate` vlastnost.
+- Vyžádejte od poskytovatele `DBPROP_IRowsetLocate` sloupec záložky nastavením vlastnosti.
 
-- Přidání položky záložky v mapování sloupců s použitím [BOOKMARK_ENTRY](../../data/oledb/bookmark-entry.md) – makro.
+- Přidejte položku záložky k mapě sloupce pomocí makra [BOOKMARK_ENTRY](../../data/oledb/bookmark-entry.md) .
 
-V předchozích krocích vám poskytnou podporu záložky a objektu záložky, se kterým chcete pracovat. Tento příklad kódu ukazuje záložku, následujícím způsobem:
+Předchozí kroky poskytují podporu záložky a objekt záložky, se kterým chcete pracovat. Tento příklad kódu ukazuje záložku následujícím způsobem:
 
 - Otevřete soubor pro zápis.
 
-- Sada řádků výstupní data do souboru po řádcích.
+- Výstupní sada řádků data do řádku souboru podle řádku.
 
-- Přesunout kurzor řádků na záložku voláním [MoveToBookmark](../../data/oledb/crowset-movetobookmark.md).
+- Přesuňte kurzor sady řádků na záložku tím, že zavoláte [MoveToBookmark](../../data/oledb/crowset-movetobookmark.md).
 
-- Výstup označenou záložkou a doplňujte řádek připojení na konec souboru.
+- Vypíše výstup řádku s záložkou a připojí ho ke konci souboru.
 
 > [!NOTE]
-> Pokud používáte k testování této aplikace příjemce `Provider` ukázkovou aplikaci zprostředkovatele, vynechte podpora záložek, které jsou popsané v této části.
+> Použijete-li tuto aplikaci příjemce k otestování `Provider` ukázkové aplikace poskytovatele, ponechte podporu záložky popsanou v této části.
 
-### <a name="to-instantiate-the-bookmark"></a>K vytvoření instance na záložku
+### <a name="to-instantiate-the-bookmark"></a>Vytvoření instance záložky
 
-1. Přistupující objekt musí obsahovat objekt typu [CBookmark](../../data/oledb/cbookmark-class.md). *NSize* parametr určuje velikost vyrovnávací paměti záložek v bajtech (obvykle 4 pro platformy 32 bitů) a 8 pro 64bitové platformy. Přidejte následující deklarace na datové členy sloupců ve třídě záznam uživatele:
+1. Přistupující objekt musí uchovávat objekt typu [CBookmark](../../data/oledb/cbookmark-class.md). Parametr *nSize* určuje velikost vyrovnávací paměti záložky v bajtech (obvykle 4 pro 32 bitové platformy a 8 pro 64-bit Platforms). Přidejte následující deklaraci do datových členů sloupce v třídě záznamu uživatele:
 
     ```cpp
     //////////////////////////////////////////////////////////////////////
@@ -102,9 +102,9 @@ V předchozích krocích vám poskytnou podporu záložky a objektu záložky, s
        ...
     ```
 
-### <a name="to-request-a-bookmark-column-from-the-provider"></a>Požádat o sloupec záložky od poskytovatele
+### <a name="to-request-a-bookmark-column-from-the-provider"></a>Požadavek na sloupec záložky od poskytovatele
 
-1. Přidejte následující kód `GetRowsetProperties` metody ve třídě záznamů uživatele:
+1. Do `GetRowsetProperties` metody ve třídě záznamu uživatele přidejte následující kód:
 
     ```cpp
     // Set the DBPROP_IRowsetLocate property.
@@ -116,9 +116,9 @@ V předchozích krocích vám poskytnou podporu záložky a objektu záložky, s
     }
     ```
 
-### <a name="to-add-a-bookmark-entry-to-the-column-map"></a>Chcete-li přidat položky záložky a mapováním sloupců
+### <a name="to-add-a-bookmark-entry-to-the-column-map"></a>Přidání položky záložky na mapu sloupců
 
-1. Přidejte následující položku do mapy sloupce ve třídě záznam uživatele:
+1. Přidejte následující položku do mapy sloupce v třídě záznamu uživatele:
 
     ```cpp
     // Set a bookmark entry in the column map.
@@ -130,9 +130,9 @@ V předchozích krocích vám poskytnou podporu záložky a objektu záložky, s
     END_COLUMN_MAP()
     ```
 
-### <a name="to-use-a-bookmark-in-your-main-code"></a>Použití záložku v hlavním kódu
+### <a name="to-use-a-bookmark-in-your-main-code"></a>Použití záložky v hlavním kódu
 
-1. V `MyCons.cpp` soubor z konzolové aplikace dříve vytvořili, změňte hlavní kód trochu odlišná. Pokud chcete používat záložky, hlavní kód potřebuje k vytvoření instance objektu své vlastní záložky (`myBookmark`); to je jiná záložka od přístupového objektu (`m_bookmark`).
+1. `MyCons.cpp` V souboru z konzolové aplikace, kterou jste vytvořili dříve, změňte hlavní kód pro čtení následujícím způsobem. Chcete-li použít záložky, je nutné, aby hlavní kód vytvořil instanci svého vlastního`myBookmark`objektu Bookmark (); Jedná se o jinou záložku jako v přistupujícím objektu (`m_bookmark`).
 
     ```cpp
     ///////////////////////////////////////////////////////////////////////
@@ -201,7 +201,7 @@ V předchozích krocích vám poskytnou podporu záložky a objektu záložky, s
     }
     ```
 
-Další informace o záložkách najdete v tématu [pomocí záložky](../../data/oledb/using-bookmarks.md). Příklady záložky jsou také uvedeny v [aktualizace sad řádků](../../data/oledb/updating-rowsets.md).
+Další informace o záložkách najdete v tématu [použití záložek](../../data/oledb/using-bookmarks.md). Příklady záložek jsou také zobrazeny v části [aktualizace sad řádků](../../data/oledb/updating-rowsets.md).
 
 ::: moniker-end
 

@@ -1,120 +1,120 @@
 ---
 title: Přidání ovládacího prvku (ATL – tutoriál, část 2)
 ms.custom: get-started-article
-ms.date: 09/26/2018
+ms.date: 08/19/2019
 ms.assetid: c9575a75-1064-41f1-9697-7aada560c669
-ms.openlocfilehash: 53f38d63a44328bf014f04635a24989a875ddf1e
-ms.sourcegitcommit: 6cf0c67acce633b07ff31b56cebd5de3218fd733
+ms.openlocfilehash: b7952f42b24c4211a2c44ea71fd17e4f65c3421a
+ms.sourcegitcommit: 9d4ffb8e6e0d70520a1e1a77805785878d445b8a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/24/2019
-ms.locfileid: "67344332"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69630700"
 ---
 # <a name="adding-a-control-atl-tutorial-part-2"></a>Přidání ovládacího prvku (ATL – tutoriál, část 2)
 
-V tomto kroku přidat ovládací prvek do projektu, jejich vytváření a testování na webové stránce.
+V tomto kroku přidáte ovládací prvek do projektu, sestavíte ho a otestujete jej na webové stránce.
 
 ## <a name="procedures"></a>Procedury
 
 ### <a name="to-add-an-object-to-an-atl-project"></a>Přidání objektu do projektu ATL
 
-1. V **Průzkumníka řešení**, klikněte pravým tlačítkem myši `Polygon` projektu.
+1. V **Průzkumník řešení**klikněte pravým tlačítkem myši `Polygon` na projekt.
 
-1. Přejděte na **přidat** na místní nabídku a klikněte na **nová položka** v podnabídce.
+1. V místní nabídce vyberte možnost **Přidat** a v podnabídce klikněte na položku **Nová položka** .
 
-    Zobrazí se dialogové okno **Přidat novou položku**. Ve stromové struktuře na levé straně jsou uvedeny různé kategorie objektů.
+    Zobrazí se dialogové okno **Přidat novou položku**. Různé kategorie objektů jsou uvedeny ve stromové struktuře vlevo.
 
-1. Klikněte na tlačítko **ATL** složky.
+1. Klikněte na složku **ATL** .
 
-1. V seznamu šablon na pravé straně vyberte **ovládací prvek ATL**. Klikněte na **Přidat**. **Ovládací prvek ATL** průvodce se otevře a nakonfigurujete ovládací prvek.
+1. V seznamu šablon na pravé straně vyberte **ovládací prvek ATL**. Klikněte na **Přidat**. Otevře se průvodce **ovládacími prvky ATL** a můžete nakonfigurovat ovládací prvek.
 
-1. Typ `PolyCtl` jako krátký název a Všimněte si, že ostatní pole jsou automaticky vyplněna. Neklepejte **Dokončit** ještě, protože je třeba provést některé další změny.
+1. Zadejte `PolyCtl` jako krátký název a Všimněte si, že ostatní pole jsou automaticky dokončená. Neklikejte ještě na **Dokončit** , protože musíte udělat nějaké další změny.
 
-**Ovládací prvek ATL** průvodce **názvy** stránka obsahuje následující pole:
+Stránka s **názvy** průvodce **ovládacím prvkem ATL** obsahuje následující pole:
 
 |Pole|Obsah|
 |-----------|--------------|
 |**Krátký název**|Název, který jste zadali pro ovládací prvek.|
-|**Třída**|Název třídy C++ vytvořený pro implementaci ovládacího prvku.|
-|**.h file**|Soubor vytvořen tak, aby obsahovala definice třídy jazyka C++.|
-|**soubor .cpp**|Soubor vytvořen tak, aby obsahovala implementaci třídy C++.|
+|**Třída**|Název C++ třídy vytvořený k implementaci ovládacího prvku.|
+|**soubor. h**|Soubor vytvořený tak, aby obsahoval definici C++ třídy.|
+|**soubor. cpp**|Soubor vytvořený tak, aby obsahoval implementaci C++ třídy.|
 |**CoClass**|Název třídy komponenty pro tento ovládací prvek.|
-|**Rozhraní**|Název rozhraní, ve kterém ovládací prvek implementuje své vlastní metody a vlastnosti.|
-|**Typ**|Popis pro ovládací prvek.|
-|**ProgID**|Čitelný název, který slouží k vyhledání CLSID ovládacího prvku.|
+|**Rozhraní**|Název rozhraní, ve kterém bude ovládací prvek implementovat své vlastní metody a vlastnosti.|
+|**Typ**|Popis ovládacího prvku|
+|**ProgID**|Čitelný název, který lze použít k vyhledání identifikátoru CLSID ovládacího prvku.|
 
-Najdete tu několik dalších nastavení je potřeba změnit v **ovládací prvek ATL** průvodce.
+V průvodci **ovládacími prvky ATL** se musí změnit několik dalších nastavení.
 
-### <a name="to-enable-support-for-rich-error-information-and-connection-points"></a>Povolení podpory pro bohaté chybové informace a spojovací body
+### <a name="to-enable-support-for-rich-error-information-and-connection-points"></a>Povolení podpory pro bohatou informaci o chybách a spojovací body
 
-1. Klikněte na tlačítko **možnosti** otevřít **možnosti** stránky.
+1. Kliknutím na **Možnosti** otevřete stránku **Možnosti** .
 
-1. Vyberte **spojovací body** zaškrtávací políčko. Tato volba vytvoří podpora pro odchozí rozhraní v souboru IDL.
+1. Zaškrtněte políčko **spojovací body** . Tato možnost vytvoří podporu pro odchozí rozhraní v souboru IDL.
 
-Můžete také přidat rozhraní rozšíření funkcí ovládacího prvku.
+Můžete také přidat rozhraní pro rozšiřování funkcí ovládacího prvku.
 
-### <a name="to-extend-the-controls-functionality"></a>Rozšíření funkcí ovládacího prvku
+### <a name="to-extend-the-controls-functionality"></a>Postup rozšiřování funkcí ovládacího prvku
 
-1. Klikněte na tlačítko **rozhraní** otevřít **rozhraní** stránky.
+1. Kliknutím na **rozhraní** otevřete stránku **rozhraní** .
 
-1. Vyberte `IProvideClassInfo2` a klikněte na tlačítko **nahoru** šipku přesuňte ji **podporované** seznamu.
+1. Vyberte `IProvideClassInfo2` a kliknutím na šipku **nahoru** ho přesuňte do seznamu **podporovaných** .
 
-1. Vyberte `ISpecifyPropertyPages` a klikněte na tlačítko **nahoru** šipku přesuňte ji **podporované** seznamu.
+1. Vyberte `ISpecifyPropertyPages` a kliknutím na šipku **nahoru** ho přesuňte do seznamu **podporovaných** .
 
-Můžete provést také ovládací prvek *Vložitelný*, což znamená, že je Vložitelný do aplikace, které podporují vložené objekty, jako je Excel nebo Word.
+Můžete také nastavit, aby byl ovládací prvek vložený, což znamená, že je možné ho *Vložit*do aplikací podporujících vložené objekty, jako je Excel nebo Word.
 
-### <a name="to-make-the-control-insertable"></a>Chcete-li ovládací prvek jako Vložitelný
+### <a name="to-make-the-control-insertable"></a>Chcete-li umožnit vložení ovládacího prvku
 
-1. Klikněte na tlačítko **vzhled** otevřít **vzhled** stránky.
+1. Kliknutím na tlačítko **vzhled** otevřete stránku **vzhled** .
 
-1. Vyberte **Vložitelný** zaškrtávací políčko.
+1. Zaškrtněte políčko **vložitelné** .
 
-Mnohoúhelník zobrazený v objektu bude mít plnou barvu, takže budete muset přidat `Fill Color` vlastnost zásobníku.
+Mnohoúhelník zobrazený objektem bude mít plnou barvu výplně, takže je nutné přidat `Fill Color` uloženou vlastnost.
 
-### <a name="to-add-a-fill-color-stock-property-and-create-the-control"></a>Přidání uložené vlastnosti Barva výplně a vytvoření ovládacího prvku
+### <a name="to-add-a-fill-color-stock-property-and-create-the-control"></a>Přidání vlastnosti Barva výplně a vytvoření ovládacího prvku
 
-1. Klikněte na tlačítko **uložené vlastnosti** otevřít **uložené vlastnosti** stránky.
+1. Kliknutím na položku **uložené vlastnosti** otevřete stránku **vlastností** s uloženým stavem.
 
-1. V části **nepodporuje**, procházejte seznam možných uložených vlastností. Vyberte `Fill Color` a klikněte na tlačítko **nahoru** šipku přesuňte ji **podporované** seznamu.
+1. V části **není podporováno**, přejděte dolů na seznam možných stavů uložených vlastností. Vyberte `Fill Color` a kliknutím na šipku **nahoru** ho přesuňte do seznamu **podporovaných** .
 
 1. Zvolte **Dokončit**.
 
-Podle průvodce vytvoří ovládací prvek, dojde k několika změnám kódu a přidání souboru. Jsou vytvořeny následující soubory:
+Jak průvodce vytvoří ovládací prvek, dojde k několika změnám kódu a k přidaným souborům. Vytvoří se následující soubory:
 
 |Soubor|Popis|
 |----------|-----------------|
-|PolyCtl.h|Obsahuje implementaci třídy C++ `CPolyCtl`.|
+|PolyCtl.h|Obsahuje většinu implementace `CPolyCtl` C++ třídy.|
 |PolyCtl.cpp|Obsahuje zbývající části `CPolyCtl`.|
-|PolyCtl.rgs|Textový soubor, který obsahuje skript registru používaný k registraci ovládacího prvku.|
+|PolyCtl.rgs|Textový soubor, který obsahuje skript registru použitý k registraci ovládacího prvku.|
 |PolyCtl.htm|Webová stránka obsahující odkaz na nově vytvořený ovládací prvek.|
 
 Průvodce také provede následující změny kódu:
 
-- Přidá `#include` příkazu do souborů stdafx.h a stdafx.cpp zahrnout knihovny ATL soubory potřebné pro podpůrné ovládací prvky.
+- `#include` Přidá příkaz do předkompilovaných hlavičkových souborů, aby zahrnovaly soubory ATL nutné pro podpůrné ovládací prvky.
 
-- Změní Polygon.idl zahrnuje podrobnosti nového ovládacího prvku.
+- Změní mnohoúhelník. idl na zahrnutí podrobností nového ovládacího prvku.
 
-- Přidá nový ovládací prvek do mapy objektu v Polygon.cpp.
+- Přidá nový ovládací prvek do mapy objektů v mnohoúhelníku. cpp.
 
-Nyní můžete vytvořit ovládací prvek a vidět ji v akci.
+Nyní můžete vytvořit ovládací prvek a zobrazit ho v akci.
 
-## <a name="building-and-testing-the-control"></a>Vytváření a testování ovládacího prvku
+## <a name="building-and-testing-the-control"></a>Sestavování a testování ovládacího prvku
 
-### <a name="to-build-and-test-the-control"></a>Pro vytváření a testování ovládacího prvku
+### <a name="to-build-and-test-the-control"></a>Sestavení a otestování ovládacího prvku
 
-1. Na **sestavení** nabídky, klikněte na tlačítko **sestavit mnohoúhelník**.
+1. V nabídce **sestavení** klikněte na příkaz **sestavit mnohoúhelník**.
 
-    Po dokončení sestavení ovládacího prvku klikněte pravým tlačítkem na soubor PolyCtl.htm v **Průzkumníka řešení** a vyberte **zobrazit v prohlížeči**. Zobrazí se webová stránka HTML obsahující ovládací prvek. By se zobrazit stránka s název "testovací stránka ATL 8.0 pro objekt PolyCtl" a ovládacího prvku, text PolyCtl.
-
-> [!NOTE]
-> Pokud ovládací prvek není viditelný, vědět, že některé prohlížeče vyžadovat úpravy nastavení spuštění ovládacích prvků ActiveX. V prohlížeči dokumentaci o tom, jak povolit ovládací prvky ActiveX.
+    Jakmile bude ovládací prvek dokončen sestavování, klikněte pravým tlačítkem myši na PolyCtl. htm v **Průzkumník řešení** a vyberte **Zobrazit v prohlížeči**. Zobrazí se webová stránka HTML obsahující ovládací prvek. Měla by se zobrazit Stránka s názvem "testovací stránka ATL 8,0 pro Object PolyCtl" a vaším ovládacím prvkem text PolyCtl.
 
 > [!NOTE]
-> Po dokončení tohoto kurzu, pokud se zobrazí chybová zpráva, že nelze vytvořit soubor knihovny DLL, zavřete soubor PolyCtl.htm a kontejner testu ovládacího prvku ActiveX a znovu sestavte řešení. Pokud stále nelze vytvořit knihovnu DLL, restartujte počítač, nebo se odhlásit, pokud používáte Terminálové služby.
+> Pokud ovládací prvek není viditelný, víte, že některé prohlížeče vyžadují úpravy nastavení pro spouštění ovládacích prvků ActiveX. Informace o tom, jak povolit ovládací prvky ActiveX, najdete v dokumentaci v prohlížeči.
 
-V dalším kroku přidáte vlastní vlastnost do ovládacího prvku.
+> [!NOTE]
+> Pokud při dokončení tohoto kurzu obdržíte chybovou zprávu, že soubor DLL nelze vytvořit, zavřete soubor PolyCtl. htm a kontejner testu ovládacího prvku ActiveX a znovu sestavte řešení. Pokud stále nemůžete vytvořit knihovnu DLL, restartujte počítač nebo se odhlaste, pokud používáte Terminálovou službu.
 
-[Zpátky ke kroku 1](../atl/creating-the-project-atl-tutorial-part-1.md) &#124; [ke kroku 3](../atl/adding-a-property-to-the-control-atl-tutorial-part-3.md)
+Dále do ovládacího prvku přidáte vlastní vlastnost.
+
+[Zpět ke kroku 1](../atl/creating-the-project-atl-tutorial-part-1.md) &#124; [Ke kroku 3](../atl/adding-a-property-to-the-control-atl-tutorial-part-3.md)
 
 ## <a name="see-also"></a>Viz také:
 

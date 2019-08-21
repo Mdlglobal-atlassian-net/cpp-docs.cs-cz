@@ -1,24 +1,38 @@
 ---
 title: Příklad souboru projektu
-ms.date: 10/09/2018
+ms.date: 08/19/2019
 helpviewer_keywords:
 - .vcxproj files
 - C++ projects, project file format
 ms.assetid: 5261cf45-3136-40a6-899e-dc1339551401
-ms.openlocfilehash: 306b6a7b39db758c3712b1d57460268fc6414726
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.openlocfilehash: 0eb87c3f3ba8bd60f0944ad673d22f9b84e070a5
+ms.sourcegitcommit: 9d4ffb8e6e0d70520a1e1a77805785878d445b8a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65217741"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69630758"
 ---
 # <a name="project-files"></a>Soubory projektu
 
-A C++ soubor projektu v sadě Visual Studio je soubor založený na formátu XML, který má příponu názvu souboru a obsahuje informace potřebné k sestavení C++ projektu. Všimněte si, že import souboru projektu různých souborů projektu, které mají příponu *.props* nebo *.targets*. Tyto soubory obsahují informace o další sestavení a může samotné odkazovat na jiné *.props* nebo *.targets* soubory. Makra v cestě k souboru (například `$(VCTargetsPath)`) jsou závislá na instalaci sady Visual Studio. Další informace o těchto maker a *.props* a *.targets* soubory, naleznete v tématu [VC ++ Directories Property Page](vcpp-directories-property-page.md), [kompilátor C++ nastavit a sestavení vlastnosti v sadě Visual Studio](../working-with-project-properties.md) a [sestavení běžná makra pro příkazy a vlastnosti](common-macros-for-build-commands-and-properties.md).
+Soubor C++ projektu v aplikaci Visual Studio je soubor založený na jazyce XML, který má příponu názvu souboru. vcxproj a obsahuje informace, které jsou požadovány k C++ sestavení projektu. Všimněte si, že soubor projektu importuje různé soubory projektu, které mají příponu ". props" nebo ". targets". Tyto soubory obsahují další informace o sestavení a můžou se sami odkazovat na jiné soubory ". props" nebo ". targets". Makra v cestě k souboru (například `$(VCTargetsPath)`) jsou závislá na instalaci sady Visual Studio. Další informace o těchto makrech a souborech ". props" a ". targets", viz [Stránka vlastností adresářů VC + +](vcpp-directories-property-page.md), [nastavení kompilátoru a vlastností sestavení v sadě C++ Visual Studio](../working-with-project-properties.md) a [společná makra pro příkazy a vlastnosti sestavení](common-macros-for-build-commands-and-properties.md).
 
 ## <a name="example"></a>Příklad
 
-Následující ukázkový soubor .vcxproj byl vytvořen tak, že zadáte **Konzolová aplikace Win32** v **nový projekt** dialogové okno. Ke zpracování do projektu soubor použít nástroj msbuild.exe na příkazovém řádku nebo **sestavení** příkazu v integrovaném vývojovém prostředí. (Tento příklad nelze zpracovat, protože požadovaný zdroj a soubory hlaviček nejsou k dispozici.) Další informace o elementech XML v souboru projektu naleznete v tématu [referenční dokumentace schématu souboru projektu](/visualstudio/msbuild/msbuild-project-file-schema-reference).
+::: moniker range=">=vs-2019"
+
+Následující ukázkový soubor. vcxproj byl vytvořen pomocí **Průvodce pracovní plocha systému Windows** v dialogovém okně **Nový projekt** . Chcete-li zpracovat soubor projektu, použijte buď nástroj MSBuild. exe v příkazovém řádku, nebo příkaz **sestavit** v integrovaném vývojovém prostředí (IDE). (Tuto ukázku nelze zpracovat, protože nejsou zadány požadované zdrojové soubory a soubory hlaviček.) Další informace o prvcích XML v souboru projektu naleznete v tématu [Referenční dokumentace schématu souborů projektu](/visualstudio/msbuild/msbuild-project-file-schema-reference).
+
+::: moniker-end
+
+::: moniker range="<=vs-2017"
+
+Následující ukázkový soubor. vcxproj byl vytvořen zadáním konzolové **aplikace Win32** v dialogovém okně **Nový projekt** . Chcete-li zpracovat soubor projektu, použijte buď nástroj MSBuild. exe v příkazovém řádku, nebo příkaz **sestavit** v integrovaném vývojovém prostředí (IDE). (Tuto ukázku nelze zpracovat, protože nejsou zadány požadované zdrojové soubory a soubory hlaviček.) Další informace o prvcích XML v souboru projektu naleznete v tématu [Referenční dokumentace schématu souborů projektu](/visualstudio/msbuild/msbuild-project-file-schema-reference).
+
+::: moniker-end
+
+
+>[!NOTE]
+> Pro projekty v aplikaci Visual Studio 2017 a starší, `pch.h` změňte `stdafx.h` na `pch.cpp` a `stdafx.cpp`na.
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -102,12 +116,12 @@ Následující ukázkový soubor .vcxproj byl vytvořen tak, že zadáte **Konzo
     <None Include="ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="stdafx.h" />
+    <ClInclude Include="pch.h" />
     <ClInclude Include="targetver.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="SomeProjName.cpp" />
-    <ClCompile Include="stdafx.cpp">
+    <ClCompile Include="pch.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
     </ClCompile>

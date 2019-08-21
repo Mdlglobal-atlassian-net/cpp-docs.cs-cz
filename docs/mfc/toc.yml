@@ -11,22 +11,7 @@
         - name: Obecná témata MFC
           href: general-mfc-topics.md
         - name: Použití zdrojových souborů MFC
-          expanded: false
-          items:
-            - name: Použití zdrojových souborů MFC
-              href: using-the-mfc-source-files.md
-            - name: Příklad komentářů
-              href: an-example-of-the-comments.md
-            - name: '-- Implementační komentář'
-              href: decrement-implementation-comment.md
-            - name: '-- Komentář ke konstruktorům'
-              href: decrement-constructors-comment.md
-            - name: "-- Komentář k\_atributům"
-              href: decrement-attributes-comment.md
-            - name: '-- Komentář k operacím'
-              href: decrement-operations-comment.md
-            - name: "-- Komentář k\_přepisovatelným"
-              href: decrement-overridables-comment.md
+          href: using-the-mfc-source-files.md
         - name: MFC – verze knihovny
           expanded: false
           items:

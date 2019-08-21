@@ -1,16 +1,16 @@
 ---
 title: 'Návod: Odebrání práce z vlákna uživatelského rozhraní'
-ms.date: 04/25/2019
+ms.date: 08/19/2019
 helpviewer_keywords:
 - user-interface threads, removing work from [Concurrency Runtime]
 - removing work from user-interface threads [Concurrency Runtime]
 ms.assetid: a4a65cc2-b3bc-4216-8fa8-90529491de02
-ms.openlocfilehash: 214796777968c8aec7116a848e791aeef0d3af7b
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 2ee15d4660984c9afb77cb20f8ef0dab25a8b933
+ms.sourcegitcommit: 9d4ffb8e6e0d70520a1e1a77805785878d445b8a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69512264"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69631711"
 ---
 # <a name="walkthrough-removing-work-from-a-user-interface-thread"></a>Návod: Odebrání práce z vlákna uživatelského rozhraní
 
@@ -70,7 +70,7 @@ Tato část popisuje, jak vykreslit Mandelbrot Fractal. Tato verze nakreslí Man
 
 #### <a name="to-implement-the-serial-version-of-the-mandelbrot-application"></a>Implementace sériové verze aplikace Mandelbrot
 
-1. Do souboru stdafx. h přidejte následující `#include` direktivu:
+1. V souboru *PCH. h* (*stdafx. h* v aplikaci Visual Studio 2017 a starší) přidejte následující `#include` direktivu:
 
    [!code-cpp[concrt-mandelbrot#1](../../parallel/concrt/codesnippet/cpp/walkthrough-removing-work-from-a-user-interface-thread_1.h)]
 
@@ -124,7 +124,7 @@ Tento příklad také používá objekt [Concurrency:: unbounded_buffer](referen
 
 #### <a name="to-remove-the-drawing-work-from-the-ui-thread"></a>Odebrání práce kreslení z vlákna uživatelského rozhraní
 
-1. Do souboru stdafx. h přidejte následující `#include` direktivy:
+1. V souboru *PCH. h* (*stdafx. h* v aplikaci Visual Studio 2017 a starší) přidejte následující `#include` direktivy:
 
    [!code-cpp[concrt-mandelbrot#101](../../parallel/concrt/codesnippet/cpp/walkthrough-removing-work-from-a-user-interface-thread_9.h)]
 

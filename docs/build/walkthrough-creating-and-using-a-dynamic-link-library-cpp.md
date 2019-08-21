@@ -2,17 +2,17 @@
 title: 'Návod: Vytvoření a použití vlastní knihovny DLL (C++)'
 description: Slouží C++ k vytvoření knihovny DLL (Dynamic-Link Library) systému Windows v aplikaci Visual Studio.
 ms.custom: conceptual
-ms.date: 07/17/2019
+ms.date: 08/19/2019
 helpviewer_keywords:
 - libraries [C++], DLLs
 - DLLs [C++], walkthroughs
 ms.assetid: 3ae94848-44e7-4955-bbad-7d40f493e941
-ms.openlocfilehash: 8ca89471177ba2d1fa98bfaf51b86ed15dcd6d2f
-ms.sourcegitcommit: 7f5b29e24e1be9b5985044a030977485fea0b50c
+ms.openlocfilehash: 9dffec9d7d974ceb3bf1ca4546a303fab47ee0be
+ms.sourcegitcommit: 9d4ffb8e6e0d70520a1e1a77805785878d445b8a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/17/2019
-ms.locfileid: "68299808"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69630683"
 ---
 # <a name="walkthrough-create-and-use-your-own-dynamic-link-library-c"></a>Návod: Vytvoření a použití vlastní knihovny DLL (C++)
 
@@ -210,7 +210,7 @@ Když je definováno makro **MATHLIBRARY&#95;EXPORTS** , makro **rozhraní&#95;M
 
    ```cpp
    // MathLibrary.cpp : Defines the exported functions for the DLL.
-   #include "stdafx.h" // use pch.h in Visual Studio 2019
+   #include "pch.h" // use stdafx.h in Visual Studio 2017 and earlier
    #include <utility>
    #include <limits.h>
    #include "MathLibrary.h"
@@ -310,7 +310,7 @@ Chcete-li použít knihovnu DLL bez ohledu na to, jestli vaše vlastní nebo kni
 
 1. Chcete-li C++ vytvořit aplikaci, která používá knihovnu DLL, kterou jste vytvořili, v řádku nabídek klikněte na položku **soubor** > **Nový** > **projekt**.
 
-1. V levém podokně dialogového okna **Nový projekt** vyberte v části nainstalovaná  > **C++aplikace**možnost **plocha Windows** . V prostředním podokně vyberte možnost **Průvodce desktopovou plochou systému Windows**. Do textového pole **název** zadejte název projektu `MathClient`.
+1. V levém podokně dialogového okna **Nový projekt** vyberte v části nainstalovaná > **C++aplikace**možnost **plocha Windows** . V prostředním podokně vyberte možnost **Průvodce desktopovou plochou systému Windows**. Do textového pole **název** zadejte název projektu `MathClient`.
 
    ![Pojmenovat klientský projekt](media/mathclient-new-project-name-153.png "Pojmenovat klientský projekt")
 

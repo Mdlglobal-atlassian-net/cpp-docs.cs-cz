@@ -2,12 +2,12 @@
 title: 'Postupy: Použití existujícího C++ kódu v aplikaci Univerzální platforma Windows'
 ms.date: 04/08/2019
 ms.assetid: 87e5818c-3081-42f3-a30d-3dca2cf0645c
-ms.openlocfilehash: e587ae88fe8d38a22b351d87ae585efe82acf091
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 5050a9773eea55549958195efa624743f44ed031
+ms.sourcegitcommit: 9d4ffb8e6e0d70520a1e1a77805785878d445b8a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69510384"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69630428"
 ---
 # <a name="how-to-use-existing-c-code-in-a-universal-windows-platform-app"></a>Postupy: Použití existujícího C++ kódu v aplikaci Univerzální platforma Windows
 
@@ -151,7 +151,7 @@ Následující postup platí pro případ, kde máte nativní knihovnu DLL, kter
 
    **Průzkumník řešení** nyní identifikuje projekt jako univerzální projekt pro Windows.
 
-5. Ujistěte se, že název souboru předkompilované hlavičky je správný. V sekci **předkompilované hlavičky** změňte **soubor předkompilované hlavičky** z PCH. h na Stdafx. h. Pokud to neuděláte, zobrazí se následující chyba.
+5. Ujistěte se, že název souboru předkompilované hlavičky je správný. V sekci **předkompilované hlavičky** změňte **soubor předkompilované hlavičky** z *PCH. h* na *stdafx. h*. Pokud to neuděláte, zobrazí se následující chyba.
 
    > Chyba C2857: příkaz ' #include ' zadaný s parametrem příkazového řádku/Ycpch.h nebyl nalezen ve zdrojovém souboru.
 
@@ -165,7 +165,7 @@ Následující postup platí pro případ, kde máte nativní knihovnu DLL, kter
 
    V části**řešení** **projektů** > zaškrtněte políčko vedle projektu knihovny DLL a klikněte na tlačítko **OK** .
 
-8. Do souboru PCH. h vaší aplikace pro UWP zahrňte soubory hlaviček knihovny.
+8. Do souboru *PCH. h* vaší aplikace pro UWP zahrňte soubory hlaviček knihovny.
 
     ```cpp
     #include "..\MyNativeDLL\giraffe.h"
@@ -195,7 +195,7 @@ Můžete však použít statickou knihovnu v UWP bez nutnosti jejich `/ZW`opěto
 
 1. Ve vlastnostech projektu pro projekt UWP v levém podokně vyberte možnost **vlastnosti** > konfigurace**linker** > **input** . V pravém podokně přidejte cestu ke knihovně do vlastnosti **Další závislosti** . Například pro knihovnu v projektu, který umístí svůj výstup do *SolutionFolder –* \Debug\MyNativeLibrary\MyNativeLibrary.lib, přidejte relativní cestu `Debug\MyNativeLibrary\MyNativeLibrary.lib`.
 
-2. Přidejte příkaz include, který odkazuje na hlavičkový soubor na soubor PCH. h (Pokud je k dispozici), nebo v jakémkoli souboru. cpp podle potřeby a začněte přidávat kód, který používá knihovnu.
+2. Přidejte příkaz include, který odkazuje na hlavičkový soubor na soubor *PCH. h* (Pokud je k dispozici), nebo v jakémkoli souboru. cpp podle potřeby a začněte přidávat kód, který používá knihovnu.
 
    ```cpp
    #include "..\MyNativeLibrary\giraffe.h"
@@ -219,7 +219,7 @@ Pokud chcete využívat nativní rozhraní API ve statické knihovně z aplikace
 
 5. Vyberte všechny soubory, které chcete přidat z původního projektu, a zvolte **OK**. Pokud je to nutné pro podsložky, opakujte akci.
 
-6. Teď můžete mít nějaký duplicitní kód. Pokud máte více než jednu předkompilovanou hlavičku (například stdafx. h a PCH. h), vyberte ji, kterou chcete zachovat. Zkopírujte libovolný požadovaný kód, například příkazy include, do kódu, který si zachováte. Pak odstraňte druhý a ve vlastnostech projektu v části **předkompilované hlavičky**Ujistěte se, že název souboru hlaviček je správný.
+6. Teď můžete mít nějaký duplicitní kód. Pokud máte více než jednu předkompilovanou hlavičku (například *stdafx. h* a *PCH. h*), vyberte ji, kterou chcete zachovat. Zkopírujte libovolný požadovaný kód, například příkazy include, do kódu, který si zachováte. Pak odstraňte druhý a ve vlastnostech projektu v části **předkompilované hlavičky**Ujistěte se, že název souboru hlaviček je správný.
 
    Pokud jste soubor změnili tak, aby používal jako předkompilovanou hlavičku, ujistěte se, že možnosti předkompilovaných hlaviček jsou správné pro každý soubor. Postupně vyberte každý soubor. cpp, otevřete jeho okno Vlastnosti a ujistěte se, že všechny jsou nastaveny na **použití (/Yu)** , s výjimkou požadované předkompilované hlavičky, která by měla být nastavena na hodnotu **vytvořit (/Yc)** .
 

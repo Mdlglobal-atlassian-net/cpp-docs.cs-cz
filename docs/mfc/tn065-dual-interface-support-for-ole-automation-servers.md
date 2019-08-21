@@ -9,12 +9,12 @@ helpviewer_keywords:
 - ACDUAL sample [MFC]
 - Automation servers [MFC], dual-interface support
 ms.assetid: b5c8ed09-2f7f-483c-80fc-2a47ad896063
-ms.openlocfilehash: afcbfd643d8b931e61b0f011b66482be5b2bcc82
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 1508b5219f7bb7fd2e9c9a56c42c30bb99686804
+ms.sourcegitcommit: 9d4ffb8e6e0d70520a1e1a77805785878d445b8a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69510996"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69630396"
 ---
 # <a name="tn065-dual-interface-support-for-ole-automation-servers"></a>TN065: Podpora duálního rozhraní pro automatizační servery OLE
 
@@ -267,7 +267,7 @@ Chcete-li upravit nastavení sestavení projektu tak, aby soubor hlaviček obsah
 
 Chcete-li přidat definice **identifikátorů UUID** ze souboru hlaviček generovaného MkTypLib do projektu:
 
-1. Do standardu zahrne hlavičkový soubor generovaný MkTypLib, STDAFX. Y.
+1. Zahrňte do svého standardu hlavičkový soubor generovaný MkTypLib, *stdafx. h*.
 
 2. Vytvořte nový soubor INITIIDS. CPP a přidejte ho do projektu. V tomto souboru zahrňte soubor hlaviček generovaný MkTypLib po zahrnutí OLE2. H a INITGUID. Y
 

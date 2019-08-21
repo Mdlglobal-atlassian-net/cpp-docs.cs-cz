@@ -1,6 +1,6 @@
 ---
 title: Knihovny DLL a C++ chování běhové knihovny jazyka Visual runtime
-ms.date: 05/06/2019
+ms.date: 08/19/2019
 f1_keywords:
 - _DllMainCRTStartup
 - CRT_INIT
@@ -15,12 +15,12 @@ helpviewer_keywords:
 - run-time [C++], DLL startup sequence
 - DLLs [C++], startup sequence
 ms.assetid: e06f24ab-6ca5-44ef-9857-aed0c6f049f2
-ms.openlocfilehash: d44f3bf7a8b06f567b1af221e17085d589e56aca
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 572a0ba70c1ba2d46d2d9fd6d8ac543a77bbbc01
+ms.sourcegitcommit: 9d4ffb8e6e0d70520a1e1a77805785878d445b8a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69492609"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69630360"
 ---
 # <a name="dlls-and-visual-c-run-time-library-behavior"></a>Knihovny DLL a C++ chování běhové knihovny jazyka Visual runtime
 
@@ -30,7 +30,7 @@ Když vytváříte dynamickou knihovnu (DLL) pomocí sady Visual Studio, ve výc
 
 V systému Windows všechny knihovny DLL mohou obsahovat volitelnou funkci vstupního bodu, která je `DllMain`obvykle volána, která je volána pro inicializaci i ukončení. Získáte tak možnost přidělit nebo uvolnit další prostředky podle potřeby. Systém Windows volá funkci vstupního bodu ve čtyřech situacích: připojení procesu, odpojení procesu, připojení vlákna a odpojení vlákna. Když je knihovna DLL načtena do adresního prostoru procesu, buď při načtení aplikace, která používá, nebo když aplikace požaduje knihovnu DLL za běhu, operační systém vytvoří samostatnou kopii dat knihovny DLL. Tento postup se nazývá *připojení procesu*. K *připojení vlákna* dojde v případě, že proces, který je knihovnou DLL načten, vytvoří nové vlákno. K *odpojení vlákna* dojde při ukončení vlákna a *odpojení procesu* je v případě, že knihovna DLL již není vyžadována a je uvolněna aplikací. Operační systém vytvoří samostatné volání do vstupního bodu knihovny DLL pro každou z těchto událostí a předá argument *důvod* pro každý typ události. Například operační systém odesílá `DLL_PROCESS_ATTACH` jako argument *důvod* k signalizaci připojení procesu.
 
-Knihovna VCRuntime poskytuje funkci vstupního bodu volanou `_DllMainCRTStartup` pro zpracování výchozích operací inicializace a ukončení. Při připojení `_DllMainCRTStartup` procesu nastaví funkce kontrolu zabezpečení vyrovnávací paměti, inicializuje CRT a další knihovny, inicializuje informace o typu modulu runtime, inicializuje a volá konstruktory pro statická a nemístní data, inicializuje místní úložiště vlákna. , navýší interní statický čítač pro každé připojení a pak zavolá uživatelem nebo knihovnu zadanou `DllMain`v knihovně. Při odpojení procesu Tato funkce projde kroky v obráceném pořadí. Volá `DllMain`, snižuje vnitřní počítadlo volání destruktorů, volá funkce pro ukončení a registrované `atexit` funkce CRT a oznamuje jakékoli jiné knihovny ukončení. Pokud počítadlo příloh překročí nulu, vrátí `FALSE` funkce, aby označovala systému Windows, že knihovnu DLL lze uvolnit. `_DllMainCRTStartup` Funkce je také volána během připojení vlákna a odpojení vlákna. V těchto případech kód VCRuntime neprovádí žádnou další inicializaci ani ukončení, a stačí volat `DllMain` , aby se zpráva předala společně. Pokud `DllMain` se `FALSE` vrátí z příkazového připojení procesu, selhání `_DllMainCRTStartup` signalizace `DLL_PROCESS_DETACH` , volání `DllMain` znovu a předají se jako argument *důvod* , a pak projde zbytek procesu ukončení.
+Knihovna VCRuntime poskytuje funkci vstupního bodu volanou `_DllMainCRTStartup` pro zpracování výchozích operací inicializace a ukončení. Při připojení `_DllMainCRTStartup` procesu nastaví funkce kontrolu zabezpečení vyrovnávací paměti, inicializuje CRT a další knihovny, inicializuje informace o typu modulu runtime, inicializuje a volá konstruktory pro statická a nemístní data, inicializuje místní úložiště vlákna. , navýší interní statický čítač pro každé připojení a pak zavolá uživatelem nebo knihovnu zadanou `DllMain`v knihovně. Při odpojení procesu Tato funkce projde kroky v obráceném pořadí. Volá `DllMain`, snižuje vnitřní počítadlo volání destruktorů, volá funkce pro ukončení a registrované `atexit` funkce CRT a oznamuje jakékoli jiné knihovny ukončení. Pokud počítadlo příloh překročí nulu, vrátí `FALSE` funkce, aby označovala systému Windows, že knihovnu DLL lze uvolnit. `_DllMainCRTStartup` Funkce je také volána během připojení vlákna a odpojení vlákna. V těchto případech kód VCRuntime neprovádí žádnou další inicializaci ani ukončení, a stačí volat `DllMain` , aby se zpráva předala společně. Pokud `DllMain` se `FALSE` vrátí z příkazového připojení procesu, signalizace `DllMain` selže `DLL_PROCESS_DETACH` , `_DllMainCRTStartup` zavolá se znovu a předají se jako argument *důvod* a pak projde zbytek procesu ukončení.
 
 Při sestavování knihoven DLL v aplikaci Visual Studio je `_DllMainCRTStartup` výchozí vstupní bod dodaný funkcí VCRuntime propojen automaticky. Funkci vstupního bodu pro knihovnu DLL není nutné zadávat pomocí možnosti linkeru [/entry (symbol vstupního bodu)](reference/entry-entry-point-symbol.md) .
 
@@ -125,7 +125,7 @@ Vzhledem k tomu, že knihovny DLL `CWinApp`rozšíření MFC nemají objekt odvo
 Průvodce poskytuje následující kód pro rozšiřující knihovny DLL knihovny MFC. V kódu `PROJNAME` je zástupný symbol pro název vašeho projektu.
 
 ```cpp
-#include "stdafx.h"
+#include "pch.h" // For Visual Studio 2017 and earlier, use "stdafx.h"
 #include <afxdllx.h>
 
 #ifdef _DEBUG
@@ -174,7 +174,7 @@ Rozšiřující knihovny DLL se mohou postarat o multithreading tím, že `DLL_T
 Všimněte si, že hlavičkový soubor Afxdllx. h obsahuje speciální definice pro struktury používané v knihovnách DLL rozšíření MFC, jako `AFX_EXTENSION_MODULE` je `CDynLinkLibrary`definice pro a. Tento hlavičkový soubor byste měli zahrnout do rozšiřující knihovny MFC DLL.
 
 > [!NOTE]
->  Je důležité, abyste nedefinovali ani nedefinovali žádná `_AFX_NO_XXX` makra v Stdafx. h. Tato makra existují pouze k tomu, aby bylo zkontrolováno, zda konkrétní cílová platforma tuto funkci podporuje. Můžete napsat program pro kontrolu těchto maker (například `#ifndef _AFX_NO_OLE_SUPPORT`), ale program by nikdy neměl definovat ani zrušit jejich definici.
+>  Je důležité, abyste nedefinovali ani nedefinovali žádná `_AFX_NO_XXX` makra v souboru *PCH. h* (*stdafx. h* v aplikaci Visual Studio 2017 a starší). Tato makra existují pouze k tomu, aby bylo zkontrolováno, zda konkrétní cílová platforma tuto funkci podporuje. Můžete napsat program pro kontrolu těchto maker (například `#ifndef _AFX_NO_OLE_SUPPORT`), ale program by nikdy neměl definovat ani zrušit jejich definici.
 
 Ukázková inicializační funkce, která zpracovává multithreading, je součástí [použití místního úložiště vlákna v dynamické knihovně](/windows/win32/Dlls/using-thread-local-storage-in-a-dynamic-link-library) v Windows SDK. Všimněte si, že ukázka obsahuje funkci vstupního bodu s názvem `LibMain`, ale tuto funkci `DllMain` byste měli pojmenovat tak, aby fungovala s knihovnami runtime MFC a C.
 
