@@ -70,7 +70,7 @@ Argument `Rep` šablony popisuje typ, který se používá k uchování počtu t
 |[Duration:: operator =](#op_eq)|Snižuje počet uložených impulsů modulo podle zadané hodnoty.|
 |[Duration:: operator * =](#op_star_eq)|Vynásobí uložený počet impulsů zadanou hodnotou.|
 |[Duration:: operator/=](#op_div_eq)|Vydělí uložený počet impulsů podle počtu impulsů zadaného `duration` objektu.|
-|[Duration:: operator + – operátor](#op_add)|Vrátí `*this`.|
+|[duration::operator+](#op_add)|Vrátí `*this`.|
 |[Duration:: operator + +](#op_add_add)|Zvýší počet uložených impulsů.|
 |[Duration:: operator + =](#op_add_eq)|Přidá počet impulsů zadaného `duration` objektu do uloženého počtu impulsů.|
 |[Duration:: operator-=](#operator-_eq)|Odečte počet impulsů zadaného `duration` objektu od uloženého počtu impulsů.|
