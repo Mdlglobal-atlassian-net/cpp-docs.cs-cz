@@ -25,7 +25,7 @@ ms.contentlocale: cs-CZ
 ms.lasthandoff: 07/24/2019
 ms.locfileid: "68448134"
 ---
-# <a name="istreambufiterator-class"></a>istreambuf_iterator – třída
+# <a name="istreambuf_iterator-class"></a>istreambuf_iterator – třída
 
 Třída šablony istreambuf_iterator popisuje vstupní objekt iterátoru, který extrahuje znakové prvky z vyrovnávací paměti vstupního datového proudu, ke kterému přistupuje prostřednictvím objektu, který ukládá, typu ukazatel na `basic_streambuf` \< **CharType**,  **> Vlastností**.
 
@@ -78,7 +78,7 @@ Po sestavování nebo zvyšování objektu třídy istreambuf_iterator pomocí u
 |Operátor|Popis|
 |-|-|
 |[podnikatel](#op_star)|Dereferenční operátor vrátí následující znak v toku.|
-|[operator + + – operátor](#op_add_add)|Vrátí buď následující znak ze vstupního toku, nebo zkopíruje objekt před jeho zvýšením a vrátí kopii.|
+|[operator++](#op_add_add)|Vrátí buď následující znak ze vstupního toku, nebo zkopíruje objekt před jeho zvýšením a vrátí kopii.|
 |[operátor->](#op_arrow)|Vrátí hodnotu členu, pokud existuje.|
 
 ## <a name="requirements"></a>Požadavky
