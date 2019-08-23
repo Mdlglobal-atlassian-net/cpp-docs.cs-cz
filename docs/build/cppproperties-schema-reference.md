@@ -1,107 +1,18 @@
 ---
 title: Referenční informace ke schématu CppProperties.json
-ms.date: 05/16/2019
+ms.date: 08/09/2019
 helpviewer_keywords:
-- CMake in Visual Studio
-ms.openlocfilehash: cf5cd964068ad2e3aeeaf1e057c9bf407f4985f5
-ms.sourcegitcommit: b233f05adae607f75815111006a771c432df5a9d
+- CppProperties.json file [C++]
+ms.openlocfilehash: 06029157b4b3826bc9c34a4434ab390f3eaa5a44
+ms.sourcegitcommit: ace42fa67e704d56d03c03745b0b17d2a5afeba4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67516373"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69975955"
 ---
 # <a name="cpppropertiesjson-schema-reference"></a>Referenční informace ke schématu CppProperties.json
 
-Otevřít složku projekty, které nepoužívají CMake můžete uložit nastavení konfigurace projektu v `CppProperties.json` souboru. (Použití projekty CMake [CMakeSettings.json](customize-cmake-settings.md) souboru.) Integrované vývojové prostředí sady Visual Studio používá `CppProperties.json` pro technologii IntelliSense a navigace v kódu. Konfigurace se skládá z dvojice název/hodnota a definuje #include cesty, přepínače kompilátoru a další parametry. 
-
-
-## <a name="default-configurations"></a>Výchozí konfigurace
-
-Visual Studio poskytuje předdefinované konfigurace pro x86 a x64 pro ladění a vydání. Ve výchozím nastavení, váš projekt, má konfiguraci x86 ladění `CppProperties.json`. Chcete-li přidat novou konfiguraci, klikněte pravým tlačítkem na `CppProperties.json` ve **Průzkumníku řešení** a zvolte **Přidat konfiguraci**:
-
-![Otevřít složku – přidat novou konfiguraci](media/open-folder-add-config.png "otevřít složku přidat novou konfiguraci")
-
-Výchozí konfigurace se tady zobrazí:
-
-```json
-{
-  "configurations": [
-    {
-      "inheritEnvironments": [
-        "msvc_x86"
-      ],
-      "name": "x86-Debug",
-      "includePath": [
-        "${env.INCLUDE}",
-        "${workspaceRoot}\\**"
-      ],
-      "defines": [
-        "WIN32",
-        "_DEBUG",
-        "UNICODE",
-        "_UNICODE"
-      ],
-      "intelliSenseMode": "windows-msvc-x86"
-    },
-    {
-      "inheritEnvironments": [
-        "msvc_x86"
-      ],
-      "name": "x86-Release",
-      "includePath": [
-        "${env.INCLUDE}",
-        "${workspaceRoot}\\**"
-      ],
-      "defines": [
-        "WIN32",
-        "NDEBUG",
-        "UNICODE",
-        "_UNICODE"
-      ],
-      "intelliSenseMode": "windows-msvc-x86"
-    },
-    {
-      "inheritEnvironments": [
-        "msvc_x64"
-      ],
-      "name": "x64-Debug",
-      "includePath": [
-        "${env.INCLUDE}",
-        "${workspaceRoot}\\**"
-      ],
-      "defines": [
-        "WIN32",
-        "_DEBUG",
-        "UNICODE",
-        "_UNICODE"
-      ],
-      "intelliSenseMode": "windows-msvc-x64"
-    },
-    {
-      "inheritEnvironments": [
-        "msvc_x64"
-      ],
-      "name": "x64-Release",
-      "includePath": [
-        "${env.INCLUDE}",
-        "${workspaceRoot}\\**"
-      ],
-      "defines": [
-        "WIN32",
-        "NDEBUG",
-        "UNICODE",
-        "_UNICODE"
-      ],
-      "intelliSenseMode": "windows-msvc-x64"
-    }
-  ]
-}
-```
-Pro vlastnosti, které obsahují sadu povolených hodnot editor kódu zobrazuje dostupné možnosti, když začnete psát:
-
-![Open Folder IntelliSense](media/open-folder-intellisense-mode.png "Open Folder IntelliSense")
-
-
+Projekty otevřené složky, které nepoužívají CMake, mohou ukládat nastavení konfigurace projektu pro technologii IntelliSense v souboru *CppProperties. JSON* . (Projekty CMake používají soubor [CMakeSettings. JSON](customize-cmake-settings.md) .) Konfigurace se skládá z dvojice název/hodnota a definuje #include cesty, přepínače kompilátoru a další parametry. Další informace o tom, jak přidat konfigurace v projektu otevřené složky, najdete v tématu [Otevřít složku projekty C++ ](open-folder-projects-cpp.md) .
 
 ## <a name="configuration-properties"></a>Vlastnosti konfigurace
 
@@ -109,164 +20,118 @@ Konfigurace může mít některou z následujících vlastností:
 
 |||
 |-|-|
-|`name`|Název konfigurace, který se zobrazí v rozevírací nabídce konfigurace C++|
-|`includePath`|Seznam složek, které musí být zadán v cesty zahrnutí (mapuje /I pro většina kompilátorů)|
-|`defines`|seznam maker, která by měla být definována (mapuje /D pro většina kompilátorů)|
-|`compilerSwitches`|jeden nebo více dalších přepínačů, které mohou mít vliv na chování technologie IntelliSense|
-|`forcedInclude`|hlavičky, které mají být automaticky zahrnuty ve všech jednotkách kompilace (/FI mapuje pro MSVC nebo – zahrnout pro clang)|
-|`undefines`|seznam maker na nedefinované (mapuje /U pro MSVC)|
-|`intelliSenseMode`|modul IntelliSense, který se má použít. Můžete určit varianty specifické pro architekturu pro MSVC a gcc, Clang:<br/><br/>- windows-msvc-x86 (default)<br/>- windows-msvc-x64<br/>- msvc-arm<br/>- windows-clang-x86<br/>- windows-clang-x64<br/>-windows-clang-arm<br/>- Linux-x64<br/>- Linux-x86<br/>-Linux-arm<br/>-gccarm|
+|`inheritEnvironments`| Určuje, která prostředí se vztahují na tuto konfiguraci.|
+|`name`|Název konfigurace, který se zobrazí v rozevírací C++ nabídce konfigurace|
+|`includePath`|Seznam složek oddělených čárkami, které se mají zadat v cestě include (mapuje se na/I pro většinu kompilátorů)|
+|`defines`|Seznam maker, která se mají definovat (mapuje na/D pro většinu kompilátorů)|
+|`compilerSwitches`|Jeden nebo více dalších přepínačů, které mohou ovlivnit chování technologie IntelliSense|
+|`forcedInclude`|Hlavička, která má být automaticky zahrnuta v každé kompilační jednotce (mapuje se na/FI pro MSVC nebo-include for Clang)|
+|`undefines`|Seznam maker, která se mají nedefinovat (mapuje se na/U pro MSVC)|
+|`intelliSenseMode`|Modul IntelliSense, který se má použít. Můžete zadat jednu z předdefinovaných variant specifických pro architekturu pro MSVC, RSZ nebo Clang.|
+|`environments`|Uživatelsky definované sady proměnných, které se chovají jako proměnné prostředí v příkazovém řádku a jsou dostupné pomocí $ {env.<VARIABLE>} podokně.|
 
-Poznámka: Hodnoty `msvc-x86` a `msvc-x64` podporují pouze starším verzím. Použití `windows-msvc-*` varianty místo.
+### <a name="intellisensemode-values"></a>hodnoty režim intellisensemode
 
-## <a name="custom-configurations"></a>Vlastní konfigurace
+Editor kódu zobrazuje dostupné možnosti, když začnete psát:
 
+![Otevřít složku IntelliSense](media/open-folder-intellisense-mode.png "Otevřít složku IntelliSense")
 
-Můžete přizpůsobit kteroukoliv z výchozí konfigurace ve `CppProperties.json`, nebo vytvořit nové konfigurace. Každý se zobrazí v rozevírací nabídce konfigurace:
+Podporovány jsou následující hodnoty:
 
-```json
-{
-  "configurations": [
-    {
-      "name": "Windows",
-      ...
-    },
-    {
-      "name": "with EXTERNAL_CODECS",
-      ...
-    }
-  ]
-}
-```
+- windows-msvc-x86
+- windows-msvc-x64
+- windows-msvc-arm
+- windows-msvc-arm64
+- android-clang-x86
+- android-clang-x64
+- android-clang-arm
+- android-clang-arm64
+- ios-clang-x86
+- ios-clang-x64
+- iOS – Clang – ARM
+- ios-clang-arm64
+- windows-clang-x86
+- windows-clang-x64
+- windows-clang-arm
+- windows-clang-arm64
+- linux-gcc-x86
+- linux-gcc-x64
+- Linux – RSZ – ARM
 
-## <a name="system-environment-variables"></a>Proměnné prostředí systému 
+Poznámka: Hodnoty `msvc-x86` a`msvc-x64` jsou podporovány pouze z původních důvodů. Místo toho použijte varianty. `windows-msvc-*`
 
- `CppProperties.json` podporuje systém rozšíření proměnné prostředí pro zahrnout cesty a dalších hodnot vlastností. Syntaxe je `${env.FOODIR}` rozbalit proměnné prostředí `%FOODIR%`. Podporují se také následující proměnných definovaných systémem:
+## <a name="pre-defined-environments"></a>Předem definovaná prostředí
+
+Visual Studio poskytuje následující předdefinovaná prostředí pro Microsoft C++ , která se mapují na odpovídající Developer Command Prompt. Při dědění jednoho z těchto prostředí můžete odkazovat na libovolné proměnné prostředí pomocí globální vlastnosti `env` s touto syntaxí makra: $ {env.\< Proměnná >}.
 
 |Název proměnné|Popis|
 |-----------|-----------------|
 |vsdev|Výchozí prostředí sady Visual Studio|
-|msvc_x86|Sestavit x86 x86 pomocí nástroje|
-|msvc_arm|Kompilování pro ARM pomocí x86 nástroje|
-|msvc_arm64|Použitou ke kompilaci pro ARM64 x86 nástroje|
-|msvc_x86_x64|Kompilace z důvodu AMD64 x86 pomocí nástroje|
-|msvc_x64_x64|Kompilace z důvodu AMD64 použití 64bitových nástrojů|
-|msvc_arm_x64|Kompilace pro použití 64bitových nástrojů ARM|
-|msvc_arm64_x64|Kompilace pro ARM64 použití 64bitových nástrojů|
+|msvc_x86|Kompilovat pro x86 pomocí nástrojů x86|
+|msvc_x64|Kompilovat pro AMD64 pomocí 64 bitových nástrojů|
+|msvc_arm|Kompilovat pro ARM pomocí nástrojů x86|
+|msvc_arm64|Kompilovat pro ARM64 pomocí nástrojů x86|
+|msvc_x86_x64|Kompilovat pro AMD64 pomocí nástrojů x86|
+|msvc_arm_x64|Kompilovat pro ARM pomocí 64 bitových nástrojů|
+|msvc_arm64_x64|Kompilovat pro ARM64 pomocí 64 bitových nástrojů|
 
-Když je nainstalovaná úloha Linux, jsou k dispozici pro systémy Linux a WSL vzdáleným cílením následujících prostředích:
+Po instalaci úlohy se systémem Linux jsou k dispozici následující prostředí pro vzdálenou cílení na systémy Linux a WSL:
 
 |Název proměnné|Popis|
 |-----------|-----------------|
-|linux_x86|Cíl x86 Linux vzdáleně|
-|linux_x64|Cíl x64 Linux vzdáleně|
-|linux_arm|Vzdáleně určené pro ARM Linux|
+|linux_x86|Vzdálené cílení na x86 Linux|
+|linux_x64|Cílení na vzdálené x64 Linux|
+|linux_arm|Vzdálené zacílení na platformu ARM Linux|
 
-## <a name="custom-environment-variables"></a>Vlastní proměnné prostředí
+## <a name="user_defined_environments"></a>Uživatelsky definovaná prostředí
 
-Můžete definovat vlastní proměnné prostředí v `CppProperties.json` buď globálně nebo podle konfigurace. Následující příklad ukazuje, jak výchozí a vlastní proměnné prostředí může být deklarovaný a používá. Globální **prostředí** vlastnost deklaruje proměnnou s názvem **zahrnout** , který mohou využívat všechny konfigurace:
+Volitelně můžete použít `environments` vlastnost k definování sad proměnných v *CppProperties. JSON* buď globálně, nebo podle konfigurace. Tyto proměnné se chovají podobně jako proměnné prostředí v kontextu projektu otevřené složky a jsou k němu přistupované pomocí $ {env.\< Proměnná >} syntax z *Tasks. vs. JSON* a *Launch. vs. JSON* po jejich definování. Nicméně nejsou nutně nastaveny jako skutečné proměnné prostředí v jakémkoli příkazovém řádku, který aplikace Visual Studio používá interně.
 
-```json
-{
-  // The "environments" property is an array of key value pairs of the form
-  // { "EnvVar1": "Value1", "EnvVar2": "Value2" }
-  "environments": [
-    {
-      "INCLUDE": "${workspaceRoot}\src\includes"
-    }
-  ],
-
-  "configurations": [
-    {
-      "inheritEnvironments": [
-        // Inherit the MSVC 32-bit environment and toolchain.
-        "msvc_x86"
-      ],
-      "name": "x86",
-      "includePath": [
-        // Use the include path defined above.
-        "${env.INCLUDE}"
-      ],
-      "defines": [ "WIN32", "_DEBUG", "UNICODE", "_UNICODE" ],
-      "intelliSenseMode": "windows-msvc-x86"
-    },
-    {
-      "inheritEnvironments": [
-        // Inherit the MSVC 64-bit environment and toolchain.
-        "msvc_x64"
-      ],
-      "name": "x64",
-      "includePath": [
-        // Use the include path defined above.
-        "${env.INCLUDE}"
-      ],
-      "defines": [ "WIN32", "_DEBUG", "UNICODE", "_UNICODE" ],
-      "intelliSenseMode": "windows-msvc-x64"
-    }
-  ]
-}
-```
-## <a name="per-configuration-environment-variables"></a>Proměnné prostředí podle konfigurace
-
-Můžete také definujte **prostředí** vlastnosti v konfiguraci. Platí pouze pro tuto konfiguraci a přepíše všechny globální proměnné se stejným názvem. V následujícím příkladu x64 konfigurace definuje místní **zahrnout** proměnné, která přepíše globální hodnotu:
+Když využijete prostředí, musíte ho zadat ve `inheritsEnvironments` vlastnosti i v případě, že je prostředí definované jako součást stejné konfigurace `environment` . vlastnost určuje název prostředí. Následující příklad ukazuje ukázkovou konfiguraci pro povolení IntelliSense pro RSZ v instalaci MSYS2. Všimněte si, jak konfigurace definuje a dědí `mingw_64` prostředí a jak má `includePath` vlastnost přístup `INCLUDE` k proměnné.
 
 ```json
-{
-  "environments": [
+"configurations": [
     {
-      "INCLUDE": "${workspaceRoot}\src\includes"
-    }
-  ],
 
-  "configurations": [
-    {
       "inheritEnvironments": [
-        "msvc_x86"
+        "mingw_64"
       ],
-      "name": "x86",
-      "includePath": [
-        // Use the include path defined in the global environments property.
-        "${env.INCLUDE}"
+      "name": "Mingw64",
+      "includePath ,": [
+        "${env.INCLUDE}",
+        "${workspaceRoot}\\**",
       ],
-      "defines": [ "WIN32", "_DEBUG", "UNICODE", "_UNICODE" ],
-      "intelliSenseMode": "windows-msvc-x86"
-    },
-    {
+      "intelliSenseMode": "linux-gcc-x64",
       "environments": [
         {
-          // Append 64-bit specific include path to env.INCLUDE.
-          "INCLUDE": "${env.INCLUDE};${workspaceRoot}\src\includes64"
+          "MINGW64_ROOT": "C:\\msys64\\mingw64",
+          "BIN_ROOT": "${env.MINGW64_ROOT}\\bin",
+          "FLAVOR": "x86_64-w64-mingw32",
+          "TOOLSET_VERSION": "9.1.0",
+          "PATH": "${env.MINGW64_ROOT}\\bin;${env.MINGW64_ROOT}\\..\\usr\\local\\bin;${env.MINGW64_ROOT}\\..\\usr\\bin;${env.MINGW64_ROOT}\\..\\bin;${env.PATH}",
+          "INCLUDE": "${env.MINGW64_ROOT}\\include\\c++\\${env.TOOLSET_VERSION};${env.MINGW64_ROOT}\\include\\c++\\${env.TOOLSET_VERSION}\\tr1;${env.MINGW64_ROOT}\\include\\c++\\${env.TOOLSET_VERSION}\\${env.FLAVOR};",
+          "environment": "mingw_64"
         }
-      ],
-
-      "inheritEnvironments": [
-        "msvc_x64"
-      ],
-      "name": "x64",
-      "includePath": [
-        // Use the include path defined in the local environments property.
-        "${env.INCLUDE}"
-      ],
-      "defines": [ "WIN32", "_DEBUG", "UNICODE", "_UNICODE" ],
-      "intelliSenseMode": "windows-msvc-x64"
+      ]
     }
   ]
-}
 ```
 
-Všechny vlastní a jsou dostupné v proměnné prostředí výchozí `tasks.vs.json` a `launch.vs.json`.
+Při definování vlastnosti **prostředí** v rámci konfigurace přepíše všechny globální proměnné se stejným názvem.
 
-#### <a name="build-in-macros"></a>Makra sestavení v
+## <a name="built-in-macros"></a>Vestavěná makra
 
-Máte přístup k následující předdefinované makra v `CppProperties.json`:
+V *CppProperties. JSON*máte přístup k následujícím vestavěným makrům:
 
 |||
 |-|-|
 |`${workspaceRoot}`| Úplná cesta ke složce pracovního prostoru|
-|`${projectRoot}`| Úplná cesta ke složce kde `CppProperties.json` nachází|
-|`${env.vsInstallDir}`| Úplná cesta ke složce, kde je nainstalována spuštěné instance sady Visual Studio|
+|`${projectRoot}`| Úplná cesta ke složce, ve které je umístěn *CppProperties. JSON*|
+|`${env.vsInstallDir}`| Úplná cesta ke složce, ve které je nainstalovaná spuštěná instance sady Visual Studio|
 
-Například pokud váš projekt má zahrnout složku a také zahrnuje windows.h a dalších běžných hlaviček ze sady Windows SDK, můžete k aktualizaci vašeho `CppProperties.json` zahrnuje konfiguračního souboru následujícím kódem:
+### <a name="example"></a>Příklad
+
+Pokud má váš projekt složku zahrnutí a obsahuje také *Windows. h* a další běžné hlavičky z Windows SDK, může být vhodné aktualizovat konfigurační soubor *CppProperties. JSON* pomocí následujících součástí:
 
 ```json
 {
@@ -289,8 +154,14 @@ Například pokud váš projekt má zahrnout složku a také zahrnuje windows.h 
 ```
 
 > [!Note]
-> `%WindowsSdkDir%` a `%VCToolsInstallDir%` nejsou nastaveny jako globálních proměnných prostředí proto ujistěte se, že začnete devenv.exe z příkazový řádek vývojáře, který definuje tyto proměnné. (Zadejte "pro vývojáře" v nabídce Windows Start.)
+> `%WindowsSdkDir%`a `%VCToolsInstallDir%` nejsou nastaveny jako globální proměnné prostředí, takže se ujistěte, že spustíte devenv. exe z Developer Command Prompt, který definuje tyto proměnné. (Zadejte "Developer" v nabídce Windows Start.)
 
-## <a name="troubleshoot-intellisense-errors"></a>Řešení potíží technologie IntelliSense
+## <a name="troubleshoot-intellisense-errors"></a>Řešení chyb IntelliSense
 
-Řešení potíží s IntelliSense chyby způsobené chybějící vkládaným, otevřete **seznam chyb** a filtrovat výstup "Pouze technologie IntelliSense" a kódem chyby E1696 "nelze otevřít zdrojový soubor...".
+Pokud se vám technologie IntelliSense, kterou jste očekávali, nezobrazuje, můžete řešit problémy tak, že v **nabídce nástroje** > kliknete na**možnost** > nástroje > **textový editor** > **C/C++** **Upřesnit** a nastavení **Povolit protokolování** na **hodnotu true**. Pokud chcete začít, zkuste nastavit **úroveň protokolování** na 5 a **filtry protokolování** na 8.
+
+![Diagnostické protokoly](media/diagnostic-logging.png)
+
+Výstup je připojen do **okno výstup** a zobrazí se, když zvolíte možnost **zobrazit výstup z: Vizuální C++ protokol** Výstup obsahuje mimo jiné seznam skutečných cest, které IntelliSense pokouší použít. Pokud cesty se neshodují s těmi v *CppProperties. JSON*, zkuste zavřít složku a odstranit podsložku *. vs* , která obsahuje data procházení v mezipaměti.
+
+Chcete-li vyřešit chyby technologie IntelliSense způsobené chybějícími cestami, otevřete **Seznam chyb** a filtrujte jeho výstup na "pouze IntelliSense" a kód chyby E1696 "nemůže otevřít zdrojový soubor...".

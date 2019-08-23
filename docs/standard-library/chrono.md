@@ -10,12 +10,12 @@ f1_keywords:
 - chrono/std::chrono::milliseconds
 - chrono/std::chrono::microseconds
 ms.assetid: 844de749-f306-482e-89bc-6f53c99c8324
-ms.openlocfilehash: f01b00a1469cdf82590a1bdfc742312ec96912c9
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: b3352110c2074b325ac345c05dbf899c0bdbd0ab
+ms.sourcegitcommit: ace42fa67e704d56d03c03745b0b17d2a5afeba4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68459453"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69975911"
 ---
 # <a name="ltchronogt"></a>&lt;chrono&gt;
 
@@ -76,7 +76,14 @@ Počínaje verzí `steady_clock` Visual Studio 2015 se implementace nástroje zm
 
 Další informace o typech poměrů, které jsou používány v následujících definice typedef, naleznete v tématu [ \<poměr >](../standard-library/ratio.md).
 
-||| ||| | `typedef duration<long long, nano> nanoseconds;`| Synonymum pro `duration` typ, který má období vyměřování 1 nanosekund | |`typedef duration<long long, micro> microseconds;`| Synonymum pro `duration` typ, který má období zatržení 1 mikrosekunda | |`typedef duration<long long, milli> milliseconds;`| Synonymum pro `duration` typ, který má období zatržení 1 milisekundu`typedef duration<long long> seconds;`| | | Synonymum pro `duration` typ, který má období zatržení 1 sekundu. | |`typedef duration<int, ratio<60> > minutes;`| Synonymum pro `duration` typ, který má období zatržení 1 minuty. | |`typedef duration<int, ratio<3600> > hours;`| Synonymum pro `duration` typ, který má období zatržení 1 hodina. |
+|||
+|-|-|
+|`typedef duration<long long, nano> nanoseconds;`|Synonymum pro `duration` typ, který má období zatržení 1 nanosekund.|
+|`typedef duration<long long, micro> microseconds;`|Synonymum pro `duration` typ, který má období zatržení 1 mikrosekunda.|
+|`typedef duration<long long, milli> milliseconds;`|Synonymum pro `duration` typ, který má období zatržení 1 milisekundu.|
+|`typedef duration<long long> seconds;`|Synonymum pro `duration` typ, který má období Tick 1 sekunda.|
+|`typedef duration<int, ratio<60> > minutes;`|Synonymum pro `duration` typ, který má období zatržení 1 minuty.|
+|`typedef duration<int, ratio<3600> > hours;`|Synonymum pro `duration` typ, který má období zatržení 1 hodina.|
 
 ### <a name="literals"></a>Literály
 
