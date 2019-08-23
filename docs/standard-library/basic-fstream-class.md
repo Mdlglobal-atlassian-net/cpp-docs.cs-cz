@@ -23,7 +23,7 @@ ms.contentlocale: cs-CZ
 ms.lasthandoff: 07/24/2019
 ms.locfileid: "68459592"
 ---
-# <a name="basicfstream-class"></a>basic_fstream – třída
+# <a name="basic_fstream-class"></a>basic_fstream – třída
 
 Popisuje objekt, který ovládá vkládání a extrakci prvků a kódovaných objektů pomocí vyrovnávací paměti datového proudu [](../standard-library/basic-filebuf-class.md)< třídy basic_filebuf `Tr``Elem`, >, s prvky typu `Elem`, jejichž znak vlastnosti jsou určeny třídou `Tr`.
 
