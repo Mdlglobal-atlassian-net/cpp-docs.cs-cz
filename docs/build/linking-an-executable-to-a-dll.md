@@ -1,6 +1,6 @@
 ---
 title: Propojení spustitelného souboru s knihovnou DLL
-ms.date: 11/04/2016
+ms.date: 08/22/2019
 helpviewer_keywords:
 - run time [C++], linking
 - dynamic load linking [C++]
@@ -11,26 +11,26 @@ helpviewer_keywords:
 - executable files [C++], linking to DLLs
 - loading DLLs [C++]
 ms.assetid: 7592e276-dd6e-4a74-90c8-e1ee35598ea3
-ms.openlocfilehash: c4f9ea7a3606612189e85401b75a0577896fd90e
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: fe0a4fc37291b4ccc904f889a9d38748fc38195c
+ms.sourcegitcommit: ec524d1f87bcce2b26b02e6d297f42c94b3db36e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69493229"
+ms.lasthandoff: 08/26/2019
+ms.locfileid: "70026010"
 ---
 # <a name="link-an-executable-to-a-dll"></a>Propojení spustitelného souboru s knihovnou DLL
 
 Spustitelný soubor odkazuje na (nebo načítá) knihovnu DLL jedním ze dvou způsobů:
 
-- *Implicitní propojení*, kde operační systém knihovnu DLL načte, když je načten spustitelný soubor, který jej používá. Klientský spustitelný soubor volá exportované funkce knihovny DLL stejně, jako kdyby byly funkce staticky propojeny a obsaženy ve spustitelném souboru. Implicitní propojení se někdy označuje jako *statické zatížení* nebo *dynamické propojení při načítání*.
+- *Implicitní propojení*, kde operační systém načte knihovnu DLL ve stejnou dobu jako spustitelný soubor, který ho používá. Klientský spustitelný soubor volá exportované funkce knihovny DLL stejným způsobem jako v případě, že byly funkce staticky propojeny a obsaženy ve spustitelném souboru. Implicitní propojení se někdy označuje jako *statické zatížení* nebo *dynamické propojení při načítání*.
 
-- *Explicitní propojování*, kde operační systém načte knihovnu DLL na vyžádání za běhu. Spustitelný soubor, který používá knihovnu DLL explicitním propojením, musí učinit volání funkce pro explicitní načtení a uvolnění knihovny DLL a pro přístup k funkcím, které jsou exportovány knihovnou DLL. Na rozdíl od volání funkcí ve staticky propojené knihovně musí klientský spustitelný soubor volat exportované funkce v knihovně DLL prostřednictvím ukazatele na funkci. Explicitní propojování se někdy označuje jako dynamické *načítání* nebo *dynamické propojení run-time*.
+- *Explicitní propojování*, kde operační systém načte knihovnu DLL na vyžádání za běhu. Spustitelný soubor, který používá knihovnu DLL explicitním propojením, musí explicitně načíst a uvolnit knihovnu DLL. Také musí nastavit ukazatel na funkci pro přístup ke všem funkcím, které používá z knihovny DLL. Na rozdíl od volání funkcí v staticky propojené knihovně nebo implicitně propojené knihovně DLL musí klientský spustitelný soubor volat exportované funkce v explicitně propojené knihovně DLL prostřednictvím ukazatelů na funkce. Explicitní propojování se někdy označuje jako dynamické *načítání* nebo *dynamické propojení run-time*.
 
 Spustitelný soubor může použít buď metodu propojení, pro propojení se stejnou knihovnou DLL. Kromě toho tyto metody nejsou vzájemně exkluzivní; jeden spustitelný soubor se může implicitně propojit s knihovnou DLL a druhý se k němu může připojit explicitně.
 
 <a name="determining-which-linking-method-to-use"></a>
 
-## <a name="link-an-executable-to-a-dll"></a>Propojení spustitelného souboru s knihovnou DLL
+## <a name="determine-which-linking-method-to-use"></a>Určete, kterou propojovací metodu použít
 
 Zda se má použít implicitní nebo explicitní propojení, je rozhodování o architektuře, které je nutné provést pro svou aplikaci. Existují výhody a nevýhody jednotlivých metod.
 
@@ -40,51 +40,51 @@ Implicitní propojení nastane, pokud kód aplikace volá exportovanou funkci DL
 
 Knihovna importů obsahuje pouze kód pro načtení knihovny DLL a k implementaci volání funkcí v knihovně DLL. Hledání externí funkce v knihovně importu informuje linker, že kód této funkce je v knihovně DLL. Chcete-li přeložit externí odkazy na knihovny DLL, linker jednoduše přidá informace do spustitelného souboru, který oznamuje systému, kde najít kód knihovny DLL při spuštění procesu.
 
-Když systém spustí program, který obsahuje dynamicky propojené odkazy, použije informace ve spustitelném souboru programu k vyhledání požadovaných knihoven DLL. Pokud nemůže najít knihovnu DLL, systém ukončí proces a zobrazí dialogové okno, které hlásí chybu. V opačném případě systém mapuje moduly DLL do adresního prostoru procesu.
+Když systém spustí program, který obsahuje dynamicky propojené odkazy, použije informace ve spustitelném souboru programu k vyhledání požadovaných knihoven DLL. Pokud knihovna DLL nenajde, systém ukončí proces a zobrazí dialogové okno, které hlásí chybu. V opačném případě systém mapuje moduly DLL do adresního prostoru procesu.
 
 Pokud má kterákoli z knihoven DLL funkci vstupního bodu pro inicializaci a ukončovací kód `DllMain`, například, operační systém zavolá funkci. Jeden z parametrů předaných funkci vstupního bodu Určuje kód, který označuje, že se knihovna DLL připojuje k procesu. Pokud funkce vstupního bodu nevrátí hodnotu TRUE, systém ukončí proces a ohlásí chybu.
 
 Nakonec systém upraví spustitelný kód procesu tak, aby poskytoval počáteční adresy pro funkce knihovny DLL.
 
-Podobně jako zbytek kódu programu je kód knihovny DLL mapován do adresního prostoru procesu při spuštění procesu a je načten do paměti pouze v případě potřeby. V důsledku toho `PRELOAD` atributy kódu a `LOADONCALL` používané soubory. def k řízení načítání v předchozích verzích systému Windows již nemají význam.
+Podobně jako zbytek kódu programu, zavaděč mapuje kód knihovny DLL do adresního prostoru procesu při spuštění procesu. Operační systém ho načte do paměti pouze v případě potřeby. V důsledku toho `PRELOAD` atributy kódu a `LOADONCALL` používané soubory. def k řízení načítání v předchozích verzích systému Windows již nemají význam.
 
 ### <a name="explicit-linking"></a>Explicitní propojování
 
-Většina aplikací používá implicitní propojení, protože je nejjednodušší metoda propojování, kterou je možné použít. Existují však situace, kdy je nutné explicitní propojení. Tady jsou některé běžné důvody pro použití explicitního propojení:
+Většina aplikací používá implicitní propojení, protože je nejjednodušší metoda propojování, kterou je potřeba použít. Existují však situace, kdy je nutné explicitní propojení. Tady jsou některé běžné důvody pro použití explicitního propojení:
 
-- Aplikace neznáte název knihovny DLL, která je načtena do doby běhu. Například aplikace může získat název knihovny DLL a exportovaných funkcí z konfiguračního souboru při spuštění.
+- Aplikace neznáte název knihovny DLL, kterou načte, až do doby běhu. Například aplikace může získat název knihovny DLL a exportovaných funkcí z konfiguračního souboru při spuštění.
 
-- Proces, který používá implicitní propojení, je ukončen operačním systémem, pokud se knihovna DLL nenajde při spuštění procesu. Proces, který používá explicitní propojování, není v této situaci zakončený a může se pokusit o zotavení po chybě. Proces může například uživateli oznamovat chybu a nechat si zadat jinou cestu ke knihovně DLL.
+- Proces, který používá implicitní propojení, je ukončen operačním systémem, pokud se knihovna DLL nenajde při spuštění procesu. Proces, který používá explicitní propojování, není v této situaci ukončený a může se pokusit o zotavení z chyby. Proces může například uživateli oznamovat chybu a nechat si zadat jinou cestu ke knihovně DLL.
 
-- Proces, který používá implicitní propojení, je ukončen také v `DllMain` případě, že některá z knihoven DLL, ke kterým je propojena, má funkci, která je neúspěšná. Proces, který používá explicitní propojení, není v této situaci ukončen.
+- Proces, který používá implicitní propojení, je ukončen také v `DllMain` případě, že některá z knihoven DLL, ke kterým je propojena, má funkci, která je neúspěšná. Proces, který používá explicitní propojování, není v této situaci ukončen.
 
-- Aplikace, která implicitně odkazuje na mnoho knihoven DLL, může být pomalá, protože systém Windows načítá všechny knihovny DLL při načtení aplikace. Pro zlepšení výkonu při spuštění se aplikace může propojit implicitně pouze s těmito knihovnami DLL, které jsou požadovány ihned po načtení, a počkat, až jiné knihovny DLL budou vyžadovat, aby k nim explicitně propojí.
+- Aplikace, která implicitně odkazuje na mnoho knihoven DLL, může být pomalá, protože systém Windows načítá všechny knihovny DLL při načtení aplikace. Pro zlepšení výkonu při spuštění může aplikace použít pouze implicitní propojování pro knihovny DLL vyžadované ihned po načtení. Může použít explicitní propojení k načtení jiných knihoven DLL pouze v případě potřeby.
 
-- Explicitní propojování eliminuje nutnost propojení aplikace pomocí knihovny importů. Pokud změny v knihovně DLL způsobují změnu pořadí exportu, aplikace, které používají explicitní propojení, nemusí znovu propojovat, pokud volají `GetProcAddress` pomocí názvu funkce a nikoliv pořadového čísla, zatímco aplikace, které používají implicitní propojení, musí znovu propojit s Nová knihovna pro import.
+- Explicitní propojování eliminuje nutnost propojení aplikace pomocí knihovny importů. Pokud změny v knihovně DLL způsobí změnu pořadí exportu, aplikace nebudou muset znovu propojovat, pokud volají `GetProcAddress` pomocí názvu funkce a nikoli pořadovým číslem. Aplikace, které používají implicitní propojení, musí stále znovu připojit ke změněné knihovně importu.
 
 Tady jsou dvě rizika explicitního propojení, na které byste měli vědět:
 
-- Pokud má `DllMain` knihovna DLL funkci vstupního bodu, operační systém zavolá funkci v kontextu vlákna, které volalo `LoadLibrary`. Funkce vstupního bodu není volána, je-li již knihovna DLL připojena k procesu z důvodu předchozího volání metody `LoadLibrary` , které nemá odpovídající volání `FreeLibrary` funkce. Explicitní propojování může způsobit problémy, pokud knihovna DLL `DllMain` používá funkci k provedení inicializace pro každé vlákno procesu, protože vlákna, která již existují `LoadLibrary` , pokud `AfxLoadLibrary`je volána metoda (nebo), nejsou inicializována.
+- Pokud má `DllMain` knihovna DLL funkci vstupního bodu, operační systém zavolá funkci v kontextu vlákna, které volalo `LoadLibrary`. Funkce vstupního bodu není volána, pokud je již knihovna DLL připojena k procesu z důvodu předchozího volání metody `LoadLibrary` , které nemá odpovídající volání `FreeLibrary` funkce. Explicitní propojování může způsobit problémy, pokud knihovna DLL `DllMain` používá funkci pro inicializaci jednotlivých vláken procesu, protože žádná vlákna, která již existují při `LoadLibrary` volání ( `AfxLoadLibrary`nebo), nejsou inicializována.
 
-- Pokud knihovna DLL deklaruje statická velikost dat jako `__declspec(thread)`, může dojít k chybě ochrany, pokud je explicitně propojena. Poté `LoadLibrary`, co je knihovna DLL načtena voláním, způsobí selhání ochrany vždy, když kód odkazuje na tato data. (Statická velikost dat zahrnuje globální i místní statické položky.) Proto při vytváření knihovny DLL byste se buď vyhnuli použití úložiště místního vlákna, nebo informování uživatelů knihoven DLL o potenciálním nástrahi dynamického načítání vaší knihovny DLL. Další informace najdete v tématu [použití Thread localho úložiště v dynamické knihovně (Windows SDK)](/windows/win32/Dlls/using-thread-local-storage-in-a-dynamic-link-library).
+- Pokud knihovna DLL deklaruje statická velikost dat jako `__declspec(thread)`, může dojít k chybě ochrany, pokud je explicitně propojena. Poté `LoadLibrary`, co je knihovna DLL načtena voláním, způsobí selhání ochrany vždy, když kód odkazuje na tato data. (Statická velikost dat zahrnuje globální i místní statické položky.) To je důvod, proč při vytváření knihovny DLL byste se měli vyhnout použití úložiště místního vlákna. Pokud nemůžete, informujte uživatele knihovny DLL o potenciálním nástrahi dynamického načítání vaší knihovny DLL. Další informace najdete v tématu [použití Thread localho úložiště v dynamické knihovně (Windows SDK)](/windows/win32/Dlls/using-thread-local-storage-in-a-dynamic-link-library).
 
 <a name="linking-implicitly"></a>
 
-## <a name="link-an-executable-to-a-dll"></a>Propojení spustitelného souboru s knihovnou DLL
+## <a name="how-to-use-implicit-linking"></a>Používání implicitního propojení
 
 Chcete-li použít knihovnu DLL implicitním propojením, klientské spustitelné soubory musí získat tyto soubory od poskytovatele knihovny DLL:
 
 - Jeden nebo více hlavičkových souborů (soubory. h), které obsahují deklarace exportovaných dat, funkcí a C++ tříd v knihovně DLL. Třídy, funkce a data exportovaná knihovnou DLL musí být označeny `__declspec(dllimport)` v hlavičkovém souboru. Další informace naleznete v tématu [dllexport, dllimport](../cpp/dllexport-dllimport.md).
 
-- Knihovna importu, která se má propojit s vaším spustitelným souborem. Linker vytvoří knihovnu importu při sestavení knihovny DLL. Další informace najdete v tématu [. Soubory LIB](reference/dot-lib-files-as-linker-input.md).
+- Knihovna importu, která se má propojit s vaším spustitelným souborem. Linker vytvoří knihovnu importu při sestavení knihovny DLL. Další informace naleznete v tématu [soubory LIB jako vstup linkeru](reference/dot-lib-files-as-linker-input.md).
 
 - Skutečný soubor DLL.
 
-Chcete-li použít knihovnu DLL implicitním propojením, spustitelný soubor musí obsahovat hlavičkové soubory, které deklaruje data C++ , funkce nebo třídy exportované knihovnou DLL v každém zdrojovém souboru, který obsahuje volání exportovaných dat, funkcí a tříd. Z perspektivy kódování jsou volání exportovaných funkcí stejná jako jakákoli jiná volání funkce.
+Chcete-li použít data, funkce a třídy v knihovně DLL implicitním propojením, všechny zdrojové soubory klienta musí zahrnovat hlavičkové soubory, které je deklaruje. Z perspektivy kódování jsou volání exportovaných funkcí stejná jako jakákoli jiná volání funkce.
 
-Chcete-li vytvořit volající spustitelný soubor, je nutné propojit s knihovnou import. Použijete-li externí soubor pravidel nebo sestavovací systém, zadejte název souboru knihovny importu, kde jsou uvedeny jiné soubory objektů (. obj) nebo knihovny, které odkazujete.
+Chcete-li vytvořit klientský spustitelný soubor, je nutné propojit knihovnu import knihovny DLL. Použijete-li externí soubor pravidel nebo sestavovací systém, určete knihovnu importu společně s jinými soubory objektů nebo knihovnami, které jsou propojeny.
 
-Operační systém musí být schopný najít soubor DLL při načtení volajícího spustitelného souboru. To znamená, že aplikace musí nasadit nebo ověřit existenci knihovny DLL při instalaci aplikace.
+Operační systém musí být schopný najít soubor DLL při načtení volajícího spustitelného souboru. To znamená, že je nutné buď nasadit nebo ověřit existenci knihovny DLL při instalaci aplikace.
 
 <a name="linking-explicitly"></a>
 
@@ -135,7 +135,7 @@ HRESULT LoadAndCallSomeFunction(DWORD dwParam1, UINT * puParam2)
 }
 ```
 
-Na rozdíl od tohoto příkladu, ve většině případů byste měli volat `LoadLibrary` a `FreeLibrary` pouze jednou v aplikaci pro danou knihovnu DLL, zejména pokud budete volat více funkcí v knihovně DLL nebo opakované volání funkcí knihovny DLL.
+Na rozdíl od tohoto příkladu, ve většině případů byste měli `LoadLibrary` volat `FreeLibrary` a pouze jednou v aplikaci pro danou knihovnu DLL. To je obzvláště true, pokud budete volat více funkcí v knihovně DLL nebo opakovaně volat funkce knihovny DLL.
 
 ## <a name="what-do-you-want-to-know-more-about"></a>K čemu chcete získat další informace?
 
