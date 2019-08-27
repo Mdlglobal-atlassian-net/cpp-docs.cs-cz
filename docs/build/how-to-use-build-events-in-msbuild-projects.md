@@ -4,53 +4,53 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - 'msbuild (c++), howto: use build events in projects'
 ms.assetid: 2a58dc9d-3d50-4e49-97c1-86c5a05ce218
-ms.openlocfilehash: 8f4ccea66f7346512df88fc4c6078752c624aaa9
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.openlocfilehash: 3fe205223b6cf381bbf3e2872b1a84f9d81a3cb7
+ms.sourcegitcommit: 2da5c42928739ca8cd683a9002598f28d8ec5f8e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65221471"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70060066"
 ---
 # <a name="how-to-use-build-events-in-msbuild-projects"></a>Postupy: Použití událostí sestavení v projektech MSBuild
 
-Události sestavení je příkaz, který provádí MSBuild v určité fázi v procesu sestavení. *Před sestavením* před začátkem sestavování dojde k události; *před propojením* před spuštěním kroku odkazu; dojde k události a *po sestavení* výskytu události po sestavení úspěšně se ukončí. Události sestavení dojde pouze v případě, že nastane přidružené sestavení. Například událost před propojením nedojde, pokud krok propojení se nespustí.
+Událost sestavení je příkaz, který MSBuild provádí v konkrétní fázi procesu sestavení. Událost *před sestavením* probíhá před spuštěním sestavení; událost před propojením proběhne před zahájením kroku propojení; a událost *po sestavení* nastane po úspěšném dokončení sestavení. Událost sestavení nastane pouze v případě, že dojde k přidruženému kroku sestavení. Událost před propojením například nenastane, pokud se krok propojení nespustí.
 
-Všech událostí tři sestavení je reprezentován ve skupině definice příkazu elementu (`<Command>`), který je proveden a elementu zprávy (`<Message>`), který je zobrazí, když **MSBuild** provádí události sestavení. Každý element je volitelný a pokud chcete zadat více než jednou stejného elementu, posledního výskytu přednost.
+Jednotlivé tři události sestavení jsou reprezentovány ve skupině definice položky pomocí příkazu (`<Command>`), který je proveden a elementu zprávy (`<Message>`), který se zobrazí, když nástroj **MSBuild** provede událost sestavení. Každý prvek je nepovinný a pokud zadáte stejný prvek několikrát, má přednost poslední výskyt.
 
-Volitelně *použít v sestavení* – element (`<`*události sestavení*`UseInBuild>`) lze zadat ve skupině vlastností k označení, zda je událost sestavení spustit. Hodnota obsahu *použít v sestavení* element je buď **true** nebo **false**. Ve výchozím nastavení, je provedena události sestavení, pokud jeho odpovídajícím *použít v sestavení* prvek je nastaven na `false`.
+Volitelný element *use-in-Build* (`<`*sestavení-Event*`UseInBuild>`) lze zadat ve skupině vlastností, aby označoval, zda je událost sestavení provedena. Hodnota obsahu prvku pro *použití v sestavení* je **true** nebo **false**. Ve výchozím nastavení je událost sestavení provedena, pokud není odpovídající element *use-in-Build* nastaven na `false`hodnotu.
 
-V následující tabulce jsou uvedeny jednotlivých prvků XML události sestavení:
+V následující tabulce jsou uvedeny jednotlivé prvky XML události sestavení:
 
-|– Element XML|Popis|
+|XML – element|Popis|
 |-----------------|-----------------|
-|`PreBuildEvent`|Tato událost se spustí před začátkem sestavení.|
-|`PreLinkEvent`|Tato událost se spustí před zahájením krok propojování.|
+|`PreBuildEvent`|Tato událost se spustí před zahájením sestavování.|
+|`PreLinkEvent`|Tato událost se spustí před zahájením kroku propojení.|
 |`PostBuildEvent`|Tato událost se spustí po dokončení sestavení.|
 
-V následující tabulce jsou uvedeny jednotlivé *použít v sestavení* element:
+V následující tabulce jsou uvedeny jednotlivé prvky pro *použití v sestavení* :
 
-|– Element XML|Popis|
+|XML – element|Popis|
 |-----------------|-----------------|
-|`PreBuildEventUseInBuild`|Určuje, jestli se má spustit *před sestavením* událostí.|
-|`PreLinkEventUseInBuild`|Určuje, jestli se má spustit *před propojením* událostí.|
-|`PostBuildEventUseInBuild`|Určuje, jestli se má spustit *po sestavení* událostí.|
+|`PreBuildEventUseInBuild`|Určuje, zda se má spustit událost *před sestavením* .|
+|`PreLinkEventUseInBuild`|Určuje, zda se má spustit událost *před propojením* .|
+|`PostBuildEventUseInBuild`|Určuje, zda se má spustit událost *po sestavení* .|
 
 ## <a name="example"></a>Příklad
 
-Následující příklad je možné přidat uvnitř elementu projektu MyProject.vcxproj za soubor vytvořený v [názorný postup: Vytvoření pomocí nástroje MSBuild C++ projektu](walkthrough-using-msbuild-to-create-a-visual-cpp-project.md). A *před sestavením* události vytvoří kopii main.cpp; *před propojením* události vytvoří kopii main.obj; a s *po sestavení* události vytvoří kopii tohoto myproject.exe. Je-li projekt se vytvořil pomocí konfiguraci vydané verze, jsou spuštěny událostí sestavení. Pokud projekt se vytvořil pomocí konfiguraci ladění, nebudou provedeny události sestavení.
+Následující příklad lze přidat uvnitř elementu projektu souboru MyProject. vcxproj vytvořeného v [návodu: Vytvoření C++ projektu](walkthrough-using-msbuild-to-create-a-visual-cpp-project.md)pomocí nástroje MSBuild. Událost *před sestavením* vytváří kopii Main. cpp; událost *před propojením* vytváří kopii hlavního objektu. obj;. a událost *po sestavení* vytvoří kopii souboru MyProject. exe. Pokud je projekt sestaven pomocí konfigurace vydané verze, spustí se události sestavení. Pokud je projekt sestaven pomocí konfigurace ladění, události sestavení nejsou provedeny.
 
-```
+``` xml
 <ItemDefinitionGroup>
   <PreBuildEvent>
     <Command>copy $(ProjectDir)main.cpp $(ProjectDir)copyOfMain.cpp</Command>
     <Message>Making a copy of main.cpp </Message>
   </PreBuildEvent>
   <PreLinkEvent>
-<Command>copy $(ProjectDir)$(Configuration)\main.obj $(ProjectDir)$(Configuration)\copyOfMain.obj</Command>
+    <Command>copy $(ProjectDir)$(Configuration)\main.obj $(ProjectDir)$(Configuration)\copyOfMain.obj</Command>
     <Message>Making a copy of main.obj</Message>
   </PreLinkEvent>
   <PostBuildEvent>
-<Command>copy $(ProjectDir)$(Configuration)\$(TargetFileName) $(ProjectDir)$(Configuration)\copyOfMyproject.exe</Command>
+    <Command>copy $(ProjectDir)$(Configuration)\$(TargetFileName) $(ProjectDir)$(Configuration)\copyOfMyproject.exe</Command>
     <Message>Making a copy of myproject.exe</Message>
   </PostBuildEvent>
 </ItemDefinitionGroup>
@@ -70,5 +70,5 @@ Následující příklad je možné přidat uvnitř elementu projektu MyProject.
 
 ## <a name="see-also"></a>Viz také:
 
-[MSBuild na příkazovém řádku - C++](msbuild-visual-cpp.md)<br/>
+[MSBuild na příkazovém řádku –C++](msbuild-visual-cpp.md)<br/>
 [Návod: Vytvoření projektu C++ pomocí nástroje MSBuild](walkthrough-using-msbuild-to-create-a-visual-cpp-project.md)
