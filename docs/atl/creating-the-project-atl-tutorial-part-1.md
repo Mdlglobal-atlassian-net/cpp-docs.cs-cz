@@ -3,19 +3,16 @@ title: Vytvoření projektu (ATL – tutoriál, část 1)
 ms.custom: get-started-article
 ms.date: 08/19/2019
 ms.assetid: f6b727d1-390a-4b27-b82f-daadcd9fc059
-ms.openlocfilehash: 9f7f62ec94d5ac6d6076763853aa19297cf310e6
-ms.sourcegitcommit: 9d4ffb8e6e0d70520a1e1a77805785878d445b8a
+ms.openlocfilehash: 5bb4c6edffd13e13a451b203feea9a03461a9318
+ms.sourcegitcommit: bf1940a39029dbbd861f95480f55e5e8bd25cda0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69630692"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70108372"
 ---
 # <a name="creating-the-project-atl-tutorial-part-1"></a>Vytvoření projektu (ATL – tutoriál, část 1)
 
-Tento kurz vás provede jednotlivými kroky při neatributovém projektu ATL, který vytvoří objekt ActiveX, který zobrazí mnohoúhelník. Objekt obsahuje možnosti umožňující uživateli změnit počet stran, které tvoří mnohoúhelník, a kód pro aktualizaci zobrazení.
-
-> [!NOTE]
-> ATL a MFC nejsou všeobecně podporované v edicích Express sady Visual Studio.
+Tento kurz vás provede jednotlivými kroky prostřednictvím neatributového projektu ATL, který vytvoří objekt ActiveX, který zobrazí mnohoúhelník. Objekt obsahuje možnosti umožňující uživateli změnit počet stran, které tvoří mnohoúhelník, a kód pro aktualizaci zobrazení.
 
 > [!NOTE]
 > V tomto kurzu se vytvoří stejný zdrojový kód jako ukázka mnohoúhelníku. Pokud se chcete vyhnout ručnímu zadávání zdrojového kódu, můžete si ho stáhnout z ukázkového [abstraktního mnohoúhelníku](https://github.com/Microsoft/VCSamples/tree/master/VC2008Samples/ATL/Controls/Polygon). Pak se můžete podívat na zdrojový kód mnohoúhelníku při práci v kurzu nebo ho použít ke kontrole chyb ve vašem projektu.
@@ -51,7 +48,7 @@ Visual Studio vytvoří projekt generováním několika souborů. Tyto soubory m
 
 ::: moniker range="<=vs-2017"
 
-|Soubor|Popis|
+|File|Popis|
 |----------|-----------------|
 |Polygon.cpp|Obsahuje implementaci `DllMain`, `DllCanUnloadNow`, `DllGetClassObject` ,a`DllUnregisterServer`. `DllRegisterServer` Obsahuje také mapu objektu, což je seznam objektů ATL v projektu. Toto je zpočátku prázdné.|
 |Mnohoúhelník. def|Tento soubor definice modulu poskytuje linkeru informace o exportech vyžadovaných vaší knihovnou DLL.|
@@ -67,7 +64,7 @@ Visual Studio vytvoří projekt generováním několika souborů. Tyto soubory m
 
 ::: moniker range=">=vs-2019"
 
-|Soubor|Popis|
+|File|Popis|
 |----------|-----------------|
 |Polygon.cpp|Obsahuje implementaci `DllMain`, `DllCanUnloadNow`, `DllGetClassObject` ,a`DllUnregisterServer`. `DllRegisterServer` Obsahuje také mapu objektu, což je seznam objektů ATL v projektu. Toto je zpočátku prázdné.|
 |Mnohoúhelník. def|Tento soubor definice modulu poskytuje linkeru informace o exportech vyžadovaných vaší knihovnou DLL.|

@@ -1,40 +1,50 @@
 ---
 title: Podrobnosti podpory knihovny ATL přidané průvodcem knihovnou ATL
-ms.date: 11/04/2016
+ms.date: 08/20/2019
 f1_keywords:
 - vc.codewiz.atl.support
 helpviewer_keywords:
 - MFC, ATL support
 - ATL, MFC projects
 ms.assetid: aa66bad0-008f-4886-94c1-2a0a0d04bce4
-ms.openlocfilehash: 2651a83c50b03dfffd1ac0238b6c6d0a61888c88
-ms.sourcegitcommit: 65ed563a8a1d4d90f872a2a6edcb086f84ec9f77
+ms.openlocfilehash: 10bafc9bd06ee94398f91d5af478a6e1cd7ca617
+ms.sourcegitcommit: bf1940a39029dbbd861f95480f55e5e8bd25cda0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/06/2019
-ms.locfileid: "66741561"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70108458"
 ---
 # <a name="details-of-atl-support-added-by-the-atl-wizard"></a>Podrobnosti podpory knihovny ATL přidané průvodcem knihovnou ATL
 
-Pokud jste [přidat podporu ATL do stávající spustitelný soubor knihovny MFC nebo knihovny DLL](../../mfc/reference/adding-atl-support-to-your-mfc-project.md), Visual C++ provede následující změny v existujícím projektu knihovny MFC (v tomto příkladu se nazývá projektu `MFCEXE`):
+::: moniker range=">=vs-2019"
 
-- Jsou přidány dva nové soubory (souboru IDL a souboru .rgs použije k registraci serveru).
+Přidáte-li [podporu knihovny ATL do existujícího spustitelného souboru knihovny MFC nebo knihovny DLL](../../mfc/reference/adding-atl-support-to-your-mfc-project.md), Visual Studio přidá ve výchozím nastavení hlavičkový soubor s názvem `#include` *Framework. h* , který obsahuje direktivy preprocesoru a `#define` umožňuje použití ATL v projektu. Nepřidaly se žádné další soubory ani třídy, jak bylo provedeno v předchozích verzích sady Visual Studio.
 
-- V hlavní aplikaci záhlaví a implementaci souborech (Mfcexe.h a Mfcexe.cpp) nové třídy (odvozený od `CAtlMFCModule`) se přidá. Kromě novou třídu kód přidá `InitInstance` pro registraci. Kód je taky přidaný ke `ExitInstance` funkce pro zrušení objektu třídy. V souboru hlaviček, nakonec dva nové soubory hlaviček (Initguid.h a Mfcexe_i.c) jsou zahrnuty v souboru implementace, deklarace a inicializace nové identifikátory GUID pro `CAtlMFCModule`-odvozené třídy.
+::: moniker-end
 
-- K registraci serveru správně, se přidá záznam pro nový soubor .rgs do souboru prostředků projektu.
+::: moniker range="<=vs-2017"
 
-## <a name="notes-for-dll-projects"></a>Poznámky pro projekty knihovny DLL
+Když [přidáte podporu knihovny ATL do existujícího spustitelného souboru knihovny MFC nebo knihovny DLL](../../mfc/reference/adding-atl-support-to-your-mfc-project.md), aplikace Visual Studio provede následující úpravy v existujícím projektu knihovny MFC (v tomto příkladu je `MFCEXE`projekt volán):
 
-Když přidat podporu ATL do projektu MFC DLL, zobrazí se několik rozdílů. Kód přidá `DLLRegisterServer` a `DLLUnregisterServer` funkce registrace a zrušení registrace knihovny DLL. Kód je taky přidaný ke [DllCanUnloadNow](../../atl/reference/catldllmodulet-class.md#dllcanunloadnow) a [DllGetClassObject](../../atl/reference/catldllmodulet-class.md#dllgetclassobject).
+- Přidají se dva nové soubory (soubor. idl a soubor. rgs, který se používá k registraci serveru).
+
+- V hlavní aplikační hlavičce a implementační soubory (Mfcexe. h a Mfcexe. cpp) je přidána nová třída (odvozená od `CAtlMFCModule`). Kromě nové třídy je kód přidán k `InitInstance` pro registraci. Kód je také přidán do `ExitInstance` funkce pro odvolání objektu třídy. V souboru hlaviček jsou nakonec do implementačního souboru zahrnuty dva nové hlavičkové soubory (Initguid. h a Mfcexe_i. c), které deklaruje a inicializuje nové identifikátory GUID pro třídu odvozenou `CAtlMFCModule`od třídy.
+
+- Pro správné registraci serveru je do souboru prostředků projektu přidána položka nového souboru. rgs.
+
+::: moniker-end
+
+## <a name="notes-for-dll-projects"></a>Poznámky pro projekty knihoven DLL
+
+Při přidání podpory knihovny ATL do projektu knihovny MFC se zobrazí některé rozdíly. Kód se přidá do `DLLRegisterServer` funkcí a `DLLUnregisterServer` pro registraci a zrušení registrace knihovny DLL. Kód je také přidán do [DllCanUnloadNow](../../atl/reference/catldllmodulet-class.md#dllcanunloadnow) a [DllGetClassObject](../../atl/reference/catldllmodulet-class.md#dllgetclassobject).
 
 ## <a name="see-also"></a>Viz také:
 
-[Podpora knihovny ATL v projektu knihovny MFC](../../mfc/reference/adding-atl-support-to-your-mfc-project.md)<br/>
+[Podpora ATL v projektu MFC](../../mfc/reference/adding-atl-support-to-your-mfc-project.md)<br/>
 [Přidání funkce pomocí Průvodců kódem](../../ide/adding-functionality-with-code-wizards-cpp.md)<br/>
 [Přidání třídy](../../ide/adding-a-class-visual-cpp.md)<br/>
 [Přidání členské funkce](../../ide/adding-a-member-function-visual-cpp.md)<br/>
 [Přidání členské proměnné](../../ide/adding-a-member-variable-visual-cpp.md)<br/>
-[Přepisování virtuální funkce](../../ide/overriding-a-virtual-function-visual-cpp.md)<br/>
-[Popisovače zpráv knihovny MFC](../../mfc/reference/adding-an-mfc-message-handler.md)<br/>
-[Navigace strukturou třídy](../../ide/navigate-code-cpp.md)
+[Přepsání virtuální funkce](../../ide/overriding-a-virtual-function-visual-cpp.md)<br/>
+[Obslužná rutina zpráv MFC](../../mfc/reference/adding-an-mfc-message-handler.md)<br/>
+[Navigace ve struktuře třídy](../../ide/navigate-code-cpp.md)

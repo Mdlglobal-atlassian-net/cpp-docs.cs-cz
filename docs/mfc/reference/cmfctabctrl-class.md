@@ -1,6 +1,6 @@
 ---
 title: CMFCTabCtrl – třída
-ms.date: 11/04/2016
+ms.date: 08/28/2019
 f1_keywords:
 - CMFCTabCtrl
 - AFXTABCTRL/CMFCTabCtrl
@@ -104,12 +104,12 @@ helpviewer_keywords:
 - CMFCTabCtrl [MFC], SynchronizeScrollBar
 - CMFCTabCtrl [MFC], m_bEnableActivate
 ms.assetid: d441385d-2c72-4203-96fa-deae2273da35
-ms.openlocfilehash: 442860b1751591c5763a768f9bd9b6ba59f33fa5
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 74f5c6e0471682a6b96e82cb2f80cc53155866ca
+ms.sourcegitcommit: bf1940a39029dbbd861f95480f55e5e8bd25cda0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69504877"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70108492"
 ---
 # <a name="cmfctabctrl-class"></a>CMFCTabCtrl – třída
 
@@ -348,7 +348,7 @@ Následující tabulka popisuje hodnoty, které můžete zadat pro parametr *sty
 
 Následující tabulka uvádí hodnoty, které můžete zadat pro parametr *Location* .
 
-|Umístění|Popis|
+|Location|Popis|
 |--------------|-----------------|
 |LOCATION_BOTTOM|Karty jsou umístěny v dolní části ovládacího prvku karta.|
 |LOCATION_TOP|Karty jsou umístěny v horní části ovládacího prvku karta.|
@@ -970,7 +970,7 @@ TRUE, pokud byla zadaná karta aktivní; FALSE, pokud zadaná hodnota parametru 
 
 ### <a name="remarks"></a>Poznámky
 
-Tato metoda neodesílá oznámení AFX_WM_CHANGE_ACTIVE_TAB do nadřazeného okna ovládacího prvku karta.
+Tím se `AFX_WM_CHANGE_ACTIVE_TAB` oznámení odešle do nadřazeného okna a do nadřazeného rámce ovládacího prvku karta.
 
 Metoda automaticky zavolá metodu [CMFCTabCtrl:: HideActiveWindowHorzScrollBar](#hideactivewindowhorzscrollbar) , aby se zabránilo blikání obrazovky. `SetActiveTab`
 

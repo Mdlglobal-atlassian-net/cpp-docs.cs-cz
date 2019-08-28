@@ -7,37 +7,43 @@ helpviewer_keywords:
 - MFC, ATL support
 - ATL, MFC projects
 ms.assetid: b5fe15d6-7752-4818-b9f9-62482ad35c95
-ms.openlocfilehash: 0f75ffd09da1502e5f1488dbce0d8d2b9623d396
-ms.sourcegitcommit: 65ed563a8a1d4d90f872a2a6edcb086f84ec9f77
+ms.openlocfilehash: fba79db013cd9f4cc62ba5826b53e5fa9b15c83a
+ms.sourcegitcommit: bf1940a39029dbbd861f95480f55e5e8bd25cda0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/06/2019
-ms.locfileid: "66741730"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70108419"
 ---
 # <a name="adding-atl-support-to-your-mfc-project"></a>Přidání podpory knihovny ATL do projektu knihovny MFC
 
-Pokud jste již vytvořili aplikaci založené na knihovně MFC, pak můžete přidat podporu pro aktivní šablony knihovny (ATL) snadno spuštěním přidání podpory knihovny ATL pro Průvodce projektu knihovny MFC.
+Pokud jste již vytvořili aplikaci založenou na knihovně MFC, můžete snadno přidat podporu pro knihovnu ATL (Active Template Library) pomocí integrovaného vývojového prostředí (IDE).
 
 > [!NOTE]
->  ATL a MFC nejsou podporovány obecně v edicích Express sady Visual Studio.
+>  Tato podpora se týká pouze jednoduchých objektů COM přidaných do spustitelného souboru MFC nebo projektu knihovny DLL. Do projektů knihovny MFC lze přidat další objekty COM (včetně ovládacích prvků ActiveX), ale objekty nemusí fungovat podle očekávání.
 
-> [!NOTE]
->  Tato podpora se vztahuje pouze na jednoduché objekty modelu COM, přidat do spustitelného souboru knihovny MFC ani do projektu knihovny DLL. Ostatní objekty modelu COM (včetně ovládacích prvků ActiveX) můžete přidat do projektů MFC, ale objekty nemusí fungovat podle očekávání.
+::: moniker range=">=vs-2019"
 
-### <a name="to-add-atl-support-to-your-mfc-project"></a>Chcete-li přidat podporu ATL do projektu knihovny MFC
+1. V Průzkumník řešení klikněte pravým tlačítkem myši na uzel projektu.
 
-1. V Průzkumníku řešení klikněte pravým tlačítkem na projekt, ke kterému chcete přidat podporu ATL.
+1. V místní nabídce klikněte na tlačítko **Přidat**a poté klikněte na položku **Nová položka**.
 
-1. V místní nabídce klikněte na tlačítko **přidat**a potom klikněte na tlačítko **přidat třídu**.
+1. V levém podokně zvolte **ATL** a pak v prostředním podokně zvolte **Podpora ATL** .
 
-1. Vyberte **přidat podporu ATL do projektu MFC** ikonu.
+::: moniker-end
 
-    > [!NOTE]
-    >  Tato ikona se nachází ve složce ATL **kategorie** podokně.
+::: moniker range="<=vs-2017"
 
-1. Po zobrazení výzvy klikněte na tlačítko **Ano** přidat podporu ATL.
+### <a name="to-add-atl-support-to-your-mfc-project"></a>Přidání podpory knihovny ATL do projektu knihovny MFC
 
-Další informace o způsobu přidání podpory knihovny ATL změn kódu projektu knihovny MFC naleznete v tématu [podrobnosti o podpoře knihovny ATL přidané Průvodcem knihovnou ATL](../../mfc/reference/details-of-atl-support-added-by-the-atl-wizard.md)
+1. V Průzkumník řešení klikněte pravým tlačítkem myši na uzel projektu.
+
+1. V místní nabídce klikněte na **Přidat**a pak klikněte na **Přidat třídu**.
+
+1. V levém podokně vyberte **ATL** a pak zvolte **Přidat podporu ATL do projektu MFC** v prostředním podokně.
+
+::: moniker-end
+
+Další informace o tom, jak Přidání podpory knihovny ATL změny kódu projektu knihovny MFC, naleznete v podrobnostech o [podpoře ATL přidané průvodcem knihovnou ATL](../../mfc/reference/details-of-atl-support-added-by-the-atl-wizard.md)
 
 ## <a name="see-also"></a>Viz také:
 
@@ -45,6 +51,6 @@ Další informace o způsobu přidání podpory knihovny ATL změn kódu projekt
 [Přidání funkce pomocí Průvodců kódem](../../ide/adding-functionality-with-code-wizards-cpp.md)<br/>
 [Přidání členské funkce](../../ide/adding-a-member-function-visual-cpp.md)<br/>
 [Přidání členské proměnné](../../ide/adding-a-member-variable-visual-cpp.md)<br/>
-[Přepisování virtuální funkce](../../ide/overriding-a-virtual-function-visual-cpp.md)<br/>
-[Popisovače zpráv knihovny MFC](../../mfc/reference/adding-an-mfc-message-handler.md)<br/>
-[Navigace strukturou třídy](../../ide/navigate-code-cpp.md)
+[Přepsání virtuální funkce](../../ide/overriding-a-virtual-function-visual-cpp.md)<br/>
+[Obslužná rutina zpráv MFC](../../mfc/reference/adding-an-mfc-message-handler.md)<br/>
+[Navigace ve struktuře třídy](../../ide/navigate-code-cpp.md)
