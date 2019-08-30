@@ -1,15 +1,15 @@
 ---
 title: Průvodce příjemcem knihovny MFC ODBC
-ms.date: 05/09/2019
+ms.date: 08/29/2019
 helpviewer_keywords:
 - wizards [MFC]
 ms.assetid: f64a890b-a252-4887-88a1-782a7cd4ff3d
-ms.openlocfilehash: 2e8741677031ff9b12989d75243a13550d74b608
-ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
+ms.openlocfilehash: 84fdc0d180f5b1b0f2e64c3597cb474611ad3914
+ms.sourcegitcommit: e10a5feea193c249ddc5a6faba48e7c6d8784e73
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65707385"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70177430"
 ---
 # <a name="mfc-odbc-consumer-wizard"></a>Průvodce příjemcem knihovny MFC ODBC
 
@@ -21,64 +21,64 @@ Tento průvodce není k dispozici v aplikaci Visual Studio 2019 a novějším.
 
 ::: moniker range="<=vs-2017"
 
-Tento průvodce nastavuje třídu sady záznamů rozhraní ODBC a datové vazby potřebné pro přístup k danému zdroji dat.
+Tento průvodce nastaví třídu sady záznamů rozhraní ODBC a datové vazby potřebné pro přístup k zadanému zdroji dat.
 
 ## <a name="uielement-list"></a>Seznam prvků uživatelského rozhraní
 
 - **Zdroj dat**
 
-  **Zdroj dat** tlačítko umožňuje nastavit zadaný zdroj dat pomocí zadané ovladače rozhraní ODBC. Další informace o souborech zdroje dat (DSN) najdete v tématu [zdroje dat souborů](/sql/odbc/reference/file-data-sources) v sadě SDK rozhraní ODBC.
+  Tlačítko **zdroj dat** umožňuje nastavit zadaný zdroj dat pomocí zadaného ovladače ODBC. Další informace o souborech zdrojů dat (DSN) najdete v tématu [Souborové zdroje dat](/sql/odbc/reference/file-data-sources) v sadě ODBC SDK.
 
-  **Vybrat zdroj dat** dialogové okno obsahuje dvě karty:
+  V dialogovém okně **Vybrat zdroj dat** jsou dvě karty:
 
-  - **Soubor zdroje dat** kartu:
+  - Karta **zdroj dat souboru** :
 
-     **Hledat v** pole určuje adresář, do kterého chcete vybrat soubory se použije jako zdroj dat. Výchozí hodnota je \Program Files\ODBC\Data zdroje. Existující soubor zdroje dat (DSN soubory) se zobrazí v seznamu hlavních. Můžete buď nastavení zdrojů dat před pomocí **DSN souboru** kartě [správce zdrojů dat ODBC](/sql/odbc/admin/odbc-data-source-administrator), nebo vytvořit nové pomocí tohoto dialogového.
+     V poli **Hledat v** Určete adresář, ve kterém se mají vybrat soubory, které se mají použít jako zdroje dat. Výchozí hodnota je \Program Files\Common Files\ODBC\Data Sources. V hlavním seznamu se zobrazí existující Souborové zdroje dat (soubory. DSN). Můžete buď nastavit zdroje dat předem, pomocí karty **SOUBOROVÉ DSN** ve [Správci zdroje dat ODBC](/sql/odbc/admin/odbc-data-source-administrator)nebo vytvořit nové pomocí tohoto dialogového okna.
 
-     Chcete-li vytvořit nový soubor zdroje dat z tohoto dialogového okna, klikněte na tlačítko `New` k zadání názvu DSN; **vytvořit nový zdroj dat** zobrazí se dialogové okno. V **vytvořit nový zdroj dat** dialogové okno pole, vyberte příslušný ovladač a klikněte na tlačítko `Next`; klikněte na tlačítko **Procházet**a vyberte název souboru, který se použije jako zdroj dat (budete muset vybrat "Všechny soubory" zobrazení – název zdroje dat souborů, jako jsou například soubory XLS); Klikněte na tlačítko `Next`a potom klikněte na tlačítko **Dokončit**. (Pokud jste vybrali soubor bez názvu DSN, zobrazí se specifický ovladač dialogového okna, jako je například "Nastavení rozhraní ODBC Microsoft Excel,", který se převést soubor do zdroje dat DSN.)
+     Chcete-li vytvořit nový soubor zdroje dat z tohoto dialogového okna, `New` klikněte na tlačítko a zadejte název DSN. zobrazí se dialogové okno **vytvořit nový zdroj dat** . V dialogovém okně **vytvořit nový zdroj dat** vyberte příslušný ovladač a klikněte `Next`na tlačítko **Procházet**a vyberte název souboru, který má být použit jako zdroj dat (Pokud chcete zobrazit soubory, které nejsou DSN, například soubory. xls), vyberte možnost všechny soubory. klikněte na a potom klikněte na tlačítko **Dokončit.** `Next` (Pokud jste vybrali jiný soubor než DSN, zobrazí se dialogové okno specifické pro ovladač, jako je například nastavení ODBC Microsoft Excelu, které převede soubor na DSN.)
 
      > [!NOTE]
-     > Můžete také vytvořit nový zdroj dat souboru předem pomocí Správce zdrojů dat ODBC. Z **Start** nabídce vyberte možnost **nastavení**, **ovládací panely**, **nástroje pro správu**, **datové zdroje (ODBC)** a potom **správce zdrojů dat ODBC**.
+     > Nový souborový zdroj dat můžete také vytvořit předem pomocí Správce zdrojů dat ODBC. V nabídce **Start** vyberte **Nastavení**, **Ovládací panely**, **Nástroje pro správu**, **zdroje dat (ODBC)** a potom **Správce zdrojů dat ODBC**.
 
-     **Název DSN** pole můžete zadat název pro zdroj dat souboru. Ujistěte se, že název DSN končí příslušnou příponu souboru, jako je například .xls pro Excelové soubory nebo .mdb pro přístup k souborům.
+     Pole **název DSN** umožňuje zadat název zdroje dat souboru. Je nutné zajistit, aby název DSN byl ukončen odpovídající příponou souboru, například. xls pro soubory aplikace Excel nebo. mdb pro soubory Access.
 
-     Další informace o názvech zdrojů dat, naleznete v tématu [zdroje dat souborů](/sql/odbc/reference/file-data-sources) v sadě SDK rozhraní ODBC.
+     Další informace o DSN najdete v tématu [Souborové zdroje dat](/sql/odbc/reference/file-data-sources) v sadě ODBC SDK.
 
-  - **Zdroj dat pro počítač** kartu:
+  - Karta **zdroje dat počítače** :
 
-     Tato karta obsahuje systém a zdroje dat uživatele. Zdroje dat uživatel jsou specifická pro uživatele na tomto počítači. Systémové zdroje dat je možné všichni uživatelé v tomto počítači nebo ve službě v celém systému. Zobrazit [zdroje dat Machine](/sql/odbc/reference/machine-data-sources) v sadě SDK rozhraní ODBC
+     Tato karta obsahuje seznam systémových a uživatelských zdrojů dat. Uživatelské zdroje dat jsou specifické pro uživatele v tomto počítači. Systémové zdroje dat mohou být použity všemi uživateli v tomto počítači nebo na službě v systému. Zobrazení [zdrojů dat počítačů](/sql/odbc/reference/machine-data-sources) v sadě ODBC SDK
 
-     Další informace o zdroji dat rozhraní ODBC, naleznete v tématu [zdroje dat](/sql/odbc/reference/data-sources) v sadě SDK rozhraní ODBC.
+     Další informace o zdrojích dat ODBC najdete v tématu [zdroje dat](/sql/odbc/reference/data-sources) v sadě ODBC SDK.
 
-  Kliknutím na **OK** vytváření dokončete. **Vyberte databázový objekt** zobrazí se dialogové okno. V tomto dialogovém okně vyberte tabulku nebo zobrazení, že uživatel použije. Mějte na paměti, podržte klávesu CTRL a kliknutím na položky můžete vybrat víc zobrazení a tabulky. Kliknutím na **OK** vytváření dokončete.
+  Kliknutím na **OK** vytváření dokončete. Zobrazí se dialogové okno **Vybrat objekt databáze** . V tomto dialogovém okně vyberte tabulku nebo zobrazení, které bude příjemce používat. Všimněte si, že při kliknutí na položky můžete vybrat více zobrazení a tabulek, a to tak, že podržíte řídicí klíč. Kliknutím na **OK** vytváření dokončete.
 
 - **Třída**
 
       The name of the consumer class, based by default on the name of the file or machine data source that you selected.
 
-- **.h file**
+- **soubor. h**
 
-   Název souboru hlaviček třídy příjemce ve výchozím nastavení na základě názvu souboru nebo počítače zdroje dat, který jste vybrali.
+   Název souboru hlaviček třídy příjemce, na základě výchozího názvu souboru nebo zdroje dat počítače, který jste vybrali.
 
-- **soubor .cpp**
+- **soubor. cpp**
 
-   Název souboru implementace třídy příjemce ve výchozím nastavení na základě názvu souboru nebo počítače zdroje dat, který jste vybrali.
+   Název implementačního souboru třídy příjemce, který je ve výchozím nastavení založen na názvu souboru nebo zdroje dat počítače, který jste vybrali.
 
 - **Typ**
 
-   Určuje, zda je záznamů dynamická sada (výchozí) nebo snímku.
+   Určuje, zda je sada záznamů sadou (výchozí) nebo snímkem.
 
-   - **Dynaset**: Určuje, že je dynamická sada záznamů. Dynamická sada je výsledek dotazu, který poskytuje indexovaném pohledu na data dotazované databázi. Dynamická sada pouze celočíselný index tak, aby původní data ukládá do mezipaměti, a proto nabízí výkon získat snímek. Index odkazuje přímo na každý záznam najít jako výsledek dotazu a označuje, pokud záznam se odebere. Máte také přístup k aktualizované informace v záznamech poslal dotaz. Toto nastavení je výchozí.
+   - **Dynaset**: Určuje, že sada záznamů je dynamická sada. Dynamická sada je výsledkem dotazu, který poskytuje indexované zobrazení na data dotazované databáze. Dynamická sada ukládá do původních dat pouze celočíselný index, a proto nabízí zvýšení výkonu snímku. Index odkazuje přímo na každý záznam, který byl nalezen jako výsledek dotazu, a určuje, zda byl odstraněn záznam. Máte také přístup k aktualizovaným informacím v dotazovaném záznamu. Toto nastavení je výchozí.
 
-   - **Snímek**: Určuje, že je sada záznamů snímku. Snímek je výsledek dotazu a je tak představu o databázi v jednom bodě v čase. Všechny záznamy nalezen jako výsledek dotazu jsou uložené v mezipaměti, takže se nezobrazí žádné změny původních záznamů.
+   - **Snímek**: Určuje, že sada záznamů je snímkem. Snímek je výsledkem dotazu a jedná se o zobrazení databáze v jednom bodě v čase. Všechny záznamy nalezené jako výsledek dotazu jsou uloženy v mezipaměti, takže neuvidíte žádné změny původních záznamů.
 
-- **Vytvořit vazbu všech sloupců**
+- **Vazba všech sloupců**
 
-   Určuje, zda jsou všechny sloupce v tabulce vybrané vázány. Pokud vyberete toto pole (výchozí), jsou všechny sloupce vázány; Pokud toto políčko nezaškrtnete, nejsou vázány žádné sloupce a je třeba svázat ručně ve třídě sady záznamů.
+   Určuje, zda jsou všechny sloupce ve vybrané tabulce svázané. Pokud zaškrtnete toto políčko (výchozí nastavení), budou se svázat všechny sloupce. Pokud toto políčko nevyberete, nejsou svázány žádné sloupce a je nutné je vytvořit ručně ve třídě sady záznamů.
 
 ::: moniker-end
 
 ## <a name="see-also"></a>Viz také:
 
-[Knihovny MFC rozhraní ODBC](../../mfc/reference/adding-an-mfc-odbc-consumer.md)<br/>
+[Využití MFC rozhraní ODBC](../../mfc/reference/adding-an-mfc-odbc-consumer.md)<br/>
 [Přidání funkce pomocí Průvodců kódem](../../ide/adding-functionality-with-code-wizards-cpp.md)

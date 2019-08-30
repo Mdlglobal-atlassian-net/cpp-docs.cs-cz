@@ -1,6 +1,6 @@
 ---
-title: Cd2dellipse – třída
-ms.date: 11/04/2016
+title: CD2DEllipse – třída
+ms.date: 08/29/2019
 f1_keywords:
 - CD2DEllipse
 - AFXRENDERTARGET/CD2DEllipse
@@ -8,14 +8,14 @@ f1_keywords:
 helpviewer_keywords:
 - CD2DEllipse [MFC], CD2DEllipse
 ms.assetid: e9f02f54-acf2-427e-b349-db50cd9a77df
-ms.openlocfilehash: 3abf0736884840be7bdcfcd55cb18a0bc8e69195
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 21087682d40dac521cc949a39ef4b1aab23e7d71
+ms.sourcegitcommit: e10a5feea193c249ddc5a6faba48e7c6d8784e73
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62391267"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70177210"
 ---
-# <a name="cd2dellipse-class"></a>Cd2dellipse – třída
+# <a name="cd2dellipse-class"></a>CD2DEllipse – třída
 
 Obálka pro `D2D1_ELLIPSE`.
 
@@ -29,9 +29,9 @@ class CD2DEllipse : public D2D1_ELLIPSE;
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
-|[CD2DEllipse::CD2DEllipse](#cd2dellipse)|Přetíženo. Vytvoří `CD2DEllipse` objektu z `D2D1_ELLIPSE` objektu.|
+|[CD2DEllipse::CD2DEllipse](#cd2dellipse)|Přetíženo. Vytvoří objekt z `D2D1_ELLIPSE`objektu. `CD2DEllipse`|
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
@@ -41,16 +41,16 @@ class CD2DEllipse : public D2D1_ELLIPSE;
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** afxrendertarget.h
+**Záhlaví:** afxrendertarget. h
 
-##  <a name="cd2dellipse"></a>  CD2DEllipse::CD2DEllipse
+##  <a name="cd2dellipse"></a>CD2DEllipse::CD2DEllipse
 
-Vytvoří objekt cd2dellipse – z cd2drectf – objektu.
+Vytvoří objekt CD2DEllipse z objektu CD2DRectF.
 
 ```
 CD2DEllipse(const CD2DRectF& rect);
 CD2DEllipse(const D2D1_ELLIPSE& ellipse);
-  CD2DEllipse(const D2D1_ELLIPSE* ellipse);
+CD2DEllipse(const D2D1_ELLIPSE* ellipse);
 
 CD2DEllipse(
     const CD2DPointF& ptCenter,
@@ -59,17 +59,17 @@ CD2DEllipse(
 
 ### <a name="parameters"></a>Parametry
 
-*Rect*<br/>
-zdrojového obdélníku
+*OBD*<br/>
+zdrojový obdélník
 
-*tři tečky*<br/>
-Zdroj elipsa
+*elipsy*<br/>
+Elipsa zdrojového kódu
 
 *ptCenter*<br/>
-Středový bod elipsy.
+Středový bod elipsy
 
 *sizeRadius*<br/>
-Poloměr X a Y poloměr elipsy.
+X-RADIUS a Y-poloměr elipsy.
 
 ## <a name="see-also"></a>Viz také:
 

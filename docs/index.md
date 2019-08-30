@@ -1,15 +1,16 @@
 ---
 layout: HubPage
-title: Dokumentace k Visual C++
-description: Další informace o použití jazyka C++ pro vývoj aplikací, služeb a nástrojů pro vaše platformy a zařízení.
+title: Dokumentace C++ k sadě Visual
+description: Naučte se používat C++ k vývoji aplikací, služeb a nástrojů pro vaše platformy a zařízení.
 author: mikeblome
 ms.author: mblome
-ms.openlocfilehash: 5db891bd1ed7a51a623dadfd5cc4e40a081cf0e7
-ms.sourcegitcommit: bc1b14f29a02685f97c7ef5c098d16db6eaf369f
+ms.topic: hub-page
+ms.openlocfilehash: 204571952b7da922ddaac29949568cac3e69d616
+ms.sourcegitcommit: e10a5feea193c249ddc5a6faba48e7c6d8784e73
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/16/2019
-ms.locfileid: "65789017"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70177500"
 ---
 <div id="main" class="v2">
     <div class="container">
@@ -25,7 +26,7 @@ ms.locfileid: "65789017"
                                     </div>
                                 </div>
                                 <div class="cardText">
-                                    <h3>Instalace sady Visual Studio a zvolte úloh C++</h3>
+                                    <h3>Instalace sady C++ Visual Studio a výběr úloh</h3>
                                 </div>
                             </div>
                         </div>
@@ -43,7 +44,7 @@ ms.locfileid: "65789017"
                                     </div>
                                 </div>
                                 <div class="cardText">
-                                    <h3>Začínáme s Visual Studio a jazyka C++</h3>
+                                    <h3>Začínáme se sadou Visual Studio aC++</h3>
                                 </div>
                             </div>
                         </div>
@@ -61,7 +62,7 @@ ms.locfileid: "65789017"
                                     </div>
                                 </div>
                                 <div class="cardText">
-                                    <h3>Co je nového v C++ v sadě Visual Studio</h3>
+                                    <h3>Co je nového C++ v aplikaci Visual Studio</h3>
                                 </div>
                             </div>
                         </div>
@@ -71,7 +72,7 @@ ms.locfileid: "65789017"
         </ul>
     </div>
     <div class="container">
-        <h1>Dokumentace k Visual C++</h1>
+        <h1>Dokumentace C++ k sadě Visual</h1>
         <ul class="pivots">
             <li>
                 <a href="#workloads">Úlohy</a>
@@ -91,7 +92,7 @@ ms.locfileid: "65789017"
                                                 </div>
                                                 <div class="cardText">
                                                     <h3>Vývoj pro univerzální platformu Windows</h3>
-                                                    <p>Vyvíjejte aplikace pro Universal Windows Platform (UPW) pomocí jazyka C++.</p>
+                                                    <p>Vývoj aplikací pro Univerzální platforma Windows (UWP) pomocí nástroje C++.</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -110,7 +111,7 @@ ms.locfileid: "65789017"
                                                 </div>
                                                 <div class="cardText">
                                                     <h3>Vývoj pro Windows v C++</h3>
-                                                    <p>Vytvoření klasické desktopové aplikace pro Windows, statické knihovny a použití Win32, MFC, ATL, COM, knihoven DLL a/nebo C++vyhodnocovací.</p>
+                                                    <p>Vytváření klasických aplikací pro stolní počítače s Windows, statických knihovny a knihoven DLL pomocí Win32, MFC, ATL C++, com a/nebo/CLI.</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -129,7 +130,7 @@ ms.locfileid: "65789017"
                                                 </div>
                                                 <div class="cardText">
                                                     <h3>Vývoj pro Linux</h3>
-                                                    <p>Vytváření aplikací pro různé distribuce Linuxu.</p>
+                                                    <p>Vytvářejte aplikace pro různé distribuce pro Linux.</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -148,7 +149,7 @@ ms.locfileid: "65789017"
                                                 </div>
                                                 <div class="cardText">
                                                     <h3>Vývoj mobilních aplikací pomocí C++</h3>
-                                                    <p>Vytváření mobilních aplikací pro iOS, Android a UPW.</p>
+                                                    <p>Vytvářejte mobilní aplikace pro iOS, Android a UWP.</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -167,7 +168,7 @@ ms.locfileid: "65789017"
                                                 </div>
                                                 <div class="cardText">
                                                     <h3>Vývoj her v C++</h3>
-                                                    <p>Vytvářejte hry a grafické aplikace pomocí rozhraní DirectX, Unreal, Cocos2D a další.</p>
+                                                    <p>Vytvářejte hry a grafické aplikace pomocí rozhraní DirectX, Unreal, Cocos2D a dalších.</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -186,7 +187,7 @@ ms.locfileid: "65789017"
                                                 </div>
                                                 <div class="cardText">
                                                     <h3>Python</h3>
-                                                    <p>Použití nástrojů Python pro Visual Studio k vytvoření aplikací v Pythonu, které pracují s programy v jazyce C++.</p>
+                                                    <p>Pomocí Python Tools for Visual Studio můžete vytvářet aplikace v Pythonu, C++ které komunikují s programy.</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -215,7 +216,7 @@ ms.locfileid: "65789017"
                                                 </div>
                                                 <div class="cardText">
                                                     <h3>Psaní kódu</h3>
-                                                    <p>Zápis, refaktoringu, zkoumat a pochopit kód pomocí editoru kódu.</p>
+                                                    <p>Zápis, refaktoring, zkoumání a pochopení kódu pomocí editoru kódu.</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -234,7 +235,7 @@ ms.locfileid: "65789017"
                                                 </div>
                                                 <div class="cardText">
                                                     <h3>Sestavení</h3>
-                                                    <p>Zkompilovat a propojit kód a optimalizovat pro maximální propustnost.</p>
+                                                    <p>Zkompilujte a propojte svůj kód a optimalizujte maximální propustnost.</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -253,7 +254,7 @@ ms.locfileid: "65789017"
                                                 </div>
                                                 <div class="cardText">
                                                     <h3>Ladění</h3>
-                                                    <p>Ladění kódu C++ v ladicím programu sady Visual Studio.</p>
+                                                    <p>Ladění C++ kódu pomocí ladicího programu sady Visual Studio.</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -272,7 +273,7 @@ ms.locfileid: "65789017"
                                                 </div>
                                                 <div class="cardText">
                                                     <h3>Test</h3>
-                                                    <p>Vytváření testů jednotek pro kód C++.</p>
+                                                    <p>Vytvořte testy jednotek pro svůj C++ kód.</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -291,7 +292,7 @@ ms.locfileid: "65789017"
                                                 </div>
                                                 <div class="cardText">
                                                     <h3>Nasazení</h3>
-                                                    <p>Distribuujte dokončení programu pro koncové uživatele.</p>
+                                                    <p>Distribuujte dokončený program koncovým uživatelům.</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -329,7 +330,7 @@ ms.locfileid: "65789017"
                                                 </div>
                                                 <div class="cardText">
                                                     <h3>Portování a upgradování</h3>
-                                                    <p>Upgradujte na nejnovější verzi sady Visual Studio a migrovat starší verze aplikací pro moderní platformy.</p>
+                                                    <p>Upgradujte na nejnovější verzi sady Visual Studio a migrujte starší aplikace na moderní platformy.</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -357,8 +358,8 @@ ms.locfileid: "65789017"
                                                     </div>
                                                 </div>
                                                 <div class="cardText">
-                                                    <h3>Standard jazyka C/C++ jazyk a knihovny</h3>
-                                                    <p>Implementace společnosti Microsoft programovacích jazyků C/C++ a knihoven.</p>
+                                                    <h3>Standardní C/C++ jazyk a knihovny</h3>
+                                                    <p>Implementace programovacích jazyků a knihovenC++ C/a společnosti Microsoft.</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -376,8 +377,8 @@ ms.locfileid: "65789017"
                                                     </div>
                                                 </div>
                                                 <div class="cardText">
-                                                    <h3>Rozšíření komponent</h3>
-                                                    <p>Rozšíření komponent c++: C++/ Rozhraní příkazového řádku pro .NET – programování a C++/CX pro UPW programování.</p>
+                                                    <h3>Rozšíření součásti</h3>
+                                                    <p>Rozšíření součásti na C++: C++/CLI pro programování .NET a C++/CX pro programování v UWP.</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -395,8 +396,8 @@ ms.locfileid: "65789017"
                                                     </div>
                                                 </div>
                                                 <div class="cardText">
-                                                    <h3>Klasické pracovní plochy knihovny Windows</h3>
-                                                    <p>Microsoft Foundation Classes (MFC) a Active Template Library (ATL)</p>
+                                                    <h3>Desktopové knihovny Windows</h3>
+                                                    <p>Knihovny MFC (Microsoft Foundation Classes) a knihovna ATL (Active Template Library)</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -414,8 +415,8 @@ ms.locfileid: "65789017"
                                                     </div>
                                                 </div>
                                                 <div class="cardText">
-                                                    <h3>Paralelní programování knihovny</h3>
-                                                    <p>Concrt AMP a OpenMP – knihovny pro paralelní programování.</p>
+                                                    <h3>Knihovny paralelního programování</h3>
+                                                    <p>Knihovny ConcRT, AMP a OpenMP pro paralelní programování.</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -433,8 +434,8 @@ ms.locfileid: "65789017"
                                                     </div>
                                                 </div>
                                                 <div class="cardText">
-                                                    <h3>Cloud a síťové knihovny</h3>
-                                                    <p>Použití jazyka C společnosti Microsoft Azure /C++ sady SDK pro IoT, úložiště a další a C++ knihovny open-source REST SDK pro webové programování.</p>
+                                                    <h3>Cloudové a síťové knihovny</h3>
+                                                    <p>Použijte Microsoft Azure C/C++ sady SDK pro IoT, úložiště a další a C++ sadu SDK open-source pro webové programování.</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -452,8 +453,8 @@ ms.locfileid: "65789017"
                                                     </div>
                                                 </div>
                                                 <div class="cardText">
-                                                    <h3>Knihovny Universal Windows Platform</h3>
-                                                    <p>Windows Runtime C++ šablony knihovny (WRL) je knihovna šablon, která poskytuje nízké úrovně způsob vytváření a používání komponent prostředí Windows Runtime.</p>
+                                                    <h3>Knihovny Univerzální platforma Windows</h3>
+                                                    <p>Knihovna šablon C++ prostředí Windows Runtime (WRL) je knihovna šablon, která poskytuje způsob vytváření a používání prostředí Windows runtimech komponent na nízké úrovni.</p>
                                                 </div>
                                             </div>
                                         </div>

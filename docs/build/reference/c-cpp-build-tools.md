@@ -1,37 +1,38 @@
 ---
-title: Nástroje pro vytváření dalších MSVC
-ms.date: 05/06/2019
+title: Další nástroje pro sestavení MSVC
+ms.date: 08/28/2019
 f1_keywords:
 - c.build
 helpviewer_keywords:
 - builds [C++], C/C++ tools
 - tools [C++], build
 ms.assetid: 48d9daf4-6bbf-473a-8ce2-bf2923b69f80
-ms.openlocfilehash: 59c9cb4527de878b06cbb6a7b3abe921e9a60107
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.openlocfilehash: 53c7c2f8c162cd851b4612e75ba14b019d9cbd63
+ms.sourcegitcommit: e10a5feea193c249ddc5a6faba48e7c6d8784e73
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65220215"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70177292"
 ---
-# <a name="additional-msvc-build-tools"></a>Nástroje pro vytváření dalších MSVC
+# <a name="additional-msvc-build-tools"></a>Další nástroje pro sestavení MSVC
 
-Visual Studio poskytuje následující nástroje příkazového řádku pro zobrazení nebo manipulace s výstup sestavení:
+Visual Studio poskytuje následující nástroje příkazového řádku pro zobrazení nebo manipulaci s výstupem sestavení:
 
+- [Lib. EXE](lib-reference.md) slouží k vytvoření a správě knihovny souborů objektů formátu COFF (Common Object File Format). Dá se použít i k vytvoření souborů exportu a importu knihoven pro odkazování na exportované definice.
 
-- [LIB. Soubor EXE](lib-reference.md) slouží k vytváření a správě knihovny objektových souborů Common Object File Format (COFF). To lze použít také k vytváření soubory exportu a importu knihovny na odkaz exportovat definice.
+- [Nástroje Editbin. EXE](editbin-reference.md) slouží k úpravě binárních souborů COFF.
 
-- [EDITBIN –. Soubor EXE](editbin-reference.md) se používá k úpravě binární soubory COFF.
+- [DUMPBIN. EXE](dumpbin-reference.md) zobrazuje informace o binárních souborech COFF (například tabulka symbolů).
 
-- [DUMPBIN. Soubor EXE](dumpbin-reference.md) zobrazí informace COFF binárních souborů (jako je například tabulka symbolů).
+- [NMAKE](nmake-reference.md) čte a spouští soubory pravidel.
 
-- [NMAKE](nmake-reference.md) načte a spustí soubory pravidel.
+- [ERRLOOK](value-edit-control.md), nástroj pro vyhledávání chyb, načte chybovou zprávu systému nebo chybovou zprávu modulu na základě zadané hodnoty.
 
-- [Errlook –](value-edit-control.md), nástroj vyhledávání chyby načte modul chybová zpráva, která je založena na hodnotě zadané nebo chybovou zprávu systému.
+- [Xdcmake](xdcmake-reference.md). Nástroj pro zpracování souborů zdrojového kódu, které obsahují komentáře k dokumentaci označené značkami XML.
 
-- [Xdcmake –](xdcmake-reference.md). Toolfor zpracování souborů zdrojového kódu, které obsahují dokumentační komentáře se označí značky XML.
+- [BSCMAKE. EXE](bscmake-reference.md) (poskytuje se jenom pro zpětnou kompatibilitu) vytvoří soubor s informacemi o procházení (. BSC), který obsahuje informace o symbolech (třídy, funkce, data, makra a typy) v programu. Tyto informace si zobrazíte v oknech Procházet ve vývojovém prostředí. (Soubor. BSC se dá sestavit taky ve vývojovém prostředí.)
 
-- [BSCMAKE. Soubor EXE](bscmake-reference.md) (k dispozici pouze z důvodů zpětné kompatibility): sestavení souboru informace o procházení (.bsc), který obsahuje informace o symbolech (tříd, funkcí, dat, makra a typy) ve svém programu. Tyto informace zobrazit v systému windows vyhledejte ve vývojovém prostředí. (Soubor .bsc je možné také sestavit ve vývojovém prostředí.)
+Windows SDK má také několik nástrojů sestavení, včetně [RC. EXE](/windows/win32/menurc/resource-compiler), který C++ kompilátor vyvolá k kompilování nativních prostředků Windows, jako jsou dialogy, stránky vlastností, bitmapy, tabulky řetězců a tak dále.
 
 ## <a name="see-also"></a>Viz také:
 
