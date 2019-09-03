@@ -1,6 +1,6 @@
 ---
 title: __inbyte
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - __inbyte
 - __inbyte_cpp
@@ -8,45 +8,45 @@ helpviewer_keywords:
 - in instruction
 - __inbyte intrinsic
 ms.assetid: 03b61799-2a08-474d-adc4-2cbf7c81a4d5
-ms.openlocfilehash: 20c583b874c2bdb56affc6a90c8464b82c4824f0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f0036763ed7315a54fbfe6dcc873b46b52f0730c
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62348975"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70222139"
 ---
-# <a name="inbyte"></a>__inbyte
+# <a name="__inbyte"></a>__inbyte
 
-**Microsoft Specific**
+**Specifické pro společnost Microsoft**
 
-Generuje `in` instrukce, vrací jeden bajt čtení z portu určené `Port`.
+Vygeneruje `Port`instrukci a vrátí jeden bajt čtený z portu určeného parametrem. `in`
 
 ## <a name="syntax"></a>Syntaxe
 
-```
+```C
 unsigned char __inbyte(
    unsigned short Port
 );
 ```
 
-#### <a name="parameters"></a>Parametry
+### <a name="parameters"></a>Parametry
 
-*Port*<br/>
-[in] Port, který se má číst z.
+*Přístavní*\
+pro Port, ze kterého se má číst.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Číst bajt z zadaný port.
+Bajt načtený z určeného portu.
 
 ## <a name="requirements"></a>Požadavky
 
-|Vnitřní|Architektura|
+|Vnitřním|Architektura|
 |---------------|------------------|
 |`__inbyte`|x86, x64|
 
-**Soubor hlaviček** \<intrin.h >
+**Hlavičkový soubor** \<intrin. h >
 
-**Specifické pro END Microsoft**
+**Specifické pro konec Microsoftu**
 
 ## <a name="remarks"></a>Poznámky
 
@@ -54,4 +54,4 @@ Tato rutina je k dispozici pouze jako vnitřní objekt.
 
 ## <a name="see-also"></a>Viz také:
 
-[Vnitřní funkce kompilátoru](../intrinsics/compiler-intrinsics.md)
+[Vnitřní objekty kompilátoru](../intrinsics/compiler-intrinsics.md)

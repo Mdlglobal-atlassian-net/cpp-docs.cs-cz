@@ -1,6 +1,6 @@
 ---
 title: __movsb
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - __movsb
 helpviewer_keywords:
@@ -8,22 +8,22 @@ helpviewer_keywords:
 - rep movsb instruction
 - __movsb intrinsic
 ms.assetid: ba5469f6-f797-4cd2-bee8-74c7666c26d4
-ms.openlocfilehash: 42124743c27b297c723780c1bc19038fb54e638d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ca06fc9114f6e824a690cc4e612c21d705a485cd
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62263812"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70217277"
 ---
-# <a name="movsb"></a>__movsb
+# <a name="__movsb"></a>__movsb
 
-**Microsoft Specific**
+**Specifické pro společnost Microsoft**
 
-Z nich generuje řetězec přesunout (`rep movsb`) instrukce.
+Generuje instrukci move String`rep movsb`().
 
 ## <a name="syntax"></a>Syntaxe
 
-```
+```C
 void __movsb(
    unsigned char* Destination,
    unsigned const char* Source,
@@ -31,34 +31,34 @@ void __movsb(
 );
 ```
 
-#### <a name="parameters"></a>Parametry
+### <a name="parameters"></a>Parametry
 
-*cíl*<br/>
-[out] Ukazatel na cíl kopírování.
+*Tabulka*\
+mimo Ukazatel na cíl kopírování.
 
-*Zdroj*<br/>
-[in] Ukazatel na zdroj kopie.
+*Zdrojová*\
+pro Ukazatel na zdroj kopie.
 
-*Počet*<br/>
-[in] Počet bajtů, které mají kopírovat.
+*Výpočtu*\
+pro Počet bajtů, které mají být zkopírovány.
 
 ## <a name="requirements"></a>Požadavky
 
-|Vnitřní|Architektura|
+|Vnitřním|Architektura|
 |---------------|------------------|
 |`__movsb`|x86, x64|
 
-**Soubor hlaviček** \<intrin.h >
+**Hlavičkový soubor** \<intrin. h >
 
 ## <a name="remarks"></a>Poznámky
 
-Výsledkem je, že první `Count` bajtů odkazované `Source` se zkopírují do `Destination` řetězec.
+Výsledkem je, že první `Count` bajty, `Source` na které odkazuje, se zkopírují do `Destination` řetězce.
 
 Tato rutina je k dispozici pouze jako vnitřní objekt.
 
 ## <a name="example"></a>Příklad
 
-```
+```cpp
 // movsb.cpp
 // processor: x86, x64
 #include <stdio.h>
@@ -80,8 +80,8 @@ int main()
 A big black dog. A big black dog.
 ```
 
-**Specifické pro END Microsoft**
+**Specifické pro konec Microsoftu**
 
 ## <a name="see-also"></a>Viz také:
 
-[Vnitřní funkce kompilátoru](../intrinsics/compiler-intrinsics.md)
+[Vnitřní objekty kompilátoru](../intrinsics/compiler-intrinsics.md)

@@ -1,6 +1,6 @@
 ---
-title: float_control
-ms.date: 11/04/2016
+title: float_control – direktiva pragma
+ms.date: 08/29/2019
 f1_keywords:
 - vc-pragma.float_control
 - float_control_CPP
@@ -8,39 +8,41 @@ helpviewer_keywords:
 - float_control pragma
 - pragmas, float_control
 ms.assetid: 4f4ba5cf-3707-413e-927d-5ecdbc0a9a43
-ms.openlocfilehash: 8a7829252cebb726363c67c990a94d08b0d6467a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: aa8cdc07953405175c1753791ab53214d73ba516
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62389213"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70218576"
 ---
-# <a name="floatcontrol"></a>float_control
+# <a name="float_control-pragma"></a>float_control – direktiva pragma
 
 Určuje chování plovoucí desetinné čárky pro funkci.
 
 ## <a name="syntax"></a>Syntaxe
 
-> **#pragma float_control** [ **(** [ *hodnotu* **,** *nastavení* [ **, push** ]] | [ **nabízených** | **pop** ] **)** ]
+> **#pragma float_control**\
+> **#pragma float_control (** { **přesný** | **Strict** | **Except** } **;** { **on** | **off** } [ **; push** ] **)** \
+> **#pragma float_control (** { **push** | **POP** } **)**
 
 ## <a name="options"></a>Možnosti
 
-*Hodnota*, *nastavení* [, **nabízených**]<br/>
-Určuje chování plovoucí desetinné čárky. *Hodnota* může být **přesné**, **striktní**, nebo **s výjimkou**. Další informace najdete v tématu [/fp (určení chování plovoucí desetinné čárky)](../build/reference/fp-specify-floating-point-behavior.md). *Nastavení* může být buď **na** nebo **vypnout**.
+ | přesné, s výjimkou, při vypnutí, nabízení |  | \
+Určuje chování s plovoucí desetinnou čárkou, které může být **přesné**, **striktní**nebo **s výjimkou**. Další informace najdete v tématu [/FP (určení chování s plovoucí](../build/reference/fp-specify-floating-point-behavior.md)desetinnou čárkou). Nastavení lze buď **zapnout** , nebo **vypnout**.
 
-Pokud *hodnotu* je **striktní**, nastavení pro obě **striktní** a **s výjimkou** jsou určeny *nastavení* . **s výjimkou** lze nastavit pouze **na** při **přesné** nebo **striktní** je také nastavena na **na**.
+Pokud je to **striktní**, nastavení pro **Strict** i **s výjimkou** jsou určena nastavením **zapnuto** nebo **vypnuto** . **s výjimkou** lze nastavit pouze hodnotu **on** , pokud je nastavena možnost **přesné** nebo **striktní** , na hodnotu **on**.
 
-Pokud volitelný **nabízených** token se přidá, aktuální nastavení pro *hodnotu* je vloženo do zásobníku vnitřního kompilátoru.
+Pokud je přidán volitelný token **push** , aktuální nastavení pro **float_control** je vloženo do vnitřního zásobníku kompilátoru.
 
-**push**<br/>
-Nabízená aktuální **float_control** nastavení do vnitřního zásobníku kompilátoru
+**replik**\
+Vložení aktuálního nastavení **float_control** do interního zásobníku kompilátoru
 
-**pop**<br/>
-Odebere **float_control** nastavení z vrcholu vnitřního zásobníku kompilátoru a, která umožňuje novou **float_control** nastavení.
+**výstrah**\
+Odebere nastavení **float_control** z vrcholu vnitřního zásobníku kompilátoru a vytvoří nové nastavení **float_control** .
 
 ## <a name="remarks"></a>Poznámky
 
-Nemůžete použít **float_control** Chcete-li **přesné** vypnuté, kdy **s výjimkou** zapnutý. Obdobně **přesné** nelze vypnout, kdy [fenv_access](../preprocessor/fenv-access.md) zapnutý. Přejít od striktní modelu k rychlé modelu s použitím **float_control** – Direktiva pragma, použijte následující kód:
+**Float_control** nelze použít pro **přesné** vypnutí, pokud je to v případě, že je zapnuto. Podobně, **přesný** , nelze vypnout, pokud je zapnutá funkce [fenv_access](../preprocessor/fenv-access.md) . Chcete-li přejít z striktního modelu na rychlý model pomocí direktivy pragma **float_control** , použijte následující kód:
 
 ```cpp
 #pragma float_control(except, off)
@@ -48,7 +50,7 @@ Nemůžete použít **float_control** Chcete-li **přesné** vypnuté, kdy **s v
 #pragma float_control(precise, off)
 ```
 
-Přejít od modelu rychlé striktní modelu s **float_control** – Direktiva pragma, použijte následující kód:
+Chcete-li přejít z rychlého modelu do striktního modelu pomocí direktivy pragma **float_control** , použijte následující kód:
 
 ```cpp
 #pragma float_control(precise, on)
@@ -56,7 +58,7 @@ Přejít od modelu rychlé striktní modelu s **float_control** – Direktiva pr
 #pragma float_control(except, on)
 ```
 
-Pokud nejsou zadány žádné parametry, **float_control** nemá žádný vliv.
+Pokud nejsou zadány žádné možnosti, **float_control** nemá žádný vliv.
 
 Mezi další direktivy pragma pro čísla s plovoucí desetinnou čárkou patří:
 
@@ -66,7 +68,7 @@ Mezi další direktivy pragma pro čísla s plovoucí desetinnou čárkou patř�
 
 ## <a name="example"></a>Příklad
 
-Následující příklad ukazuje, jak zachytit výjimku přetečení s plovoucí desetinnou čárkou pomocí direktivy pragma **float_control**.
+Následující příklad ukazuje, jak zachytit výjimku při přetečení plovoucí desetinné čárky pomocí direktivy pragma **float_control**.
 
 ```cpp
 // pragma_directive_float_control.cpp
@@ -108,4 +110,4 @@ Pass
 
 ## <a name="see-also"></a>Viz také:
 
-[Direktivy Pragma a klíčové slovo __Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)
+[Direktivy pragma a klíčové slovo __pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

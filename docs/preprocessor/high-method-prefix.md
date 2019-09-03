@@ -1,42 +1,40 @@
 ---
-title: high_method_prefix
-ms.date: 10/18/2018
+title: importovat atribut high_method_prefix
+ms.date: 08/29/2019
 f1_keywords:
 - high_method_prefix
 helpviewer_keywords:
 - high_method_prefix attribute
 ms.assetid: cacebf09-12f5-4919-ad40-939e206e340c
-ms.openlocfilehash: 1575b2e3fee461ee0e3987aaf1e770d0611e31ec
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 357ac528a921a9f864f0f7e30252281a4d10e33c
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62383749"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70219018"
 ---
-# <a name="highmethodprefix"></a>high_method_prefix
+# <a name="high_method_prefix-import-attribute"></a>importovat atribut high_method_prefix
 
-**Specifické pro C++**
+**C++Konkrétní**
 
-Určuje předponu pro pojmenování základní vlastnosti a metody.
+Určuje předponu, která se má použít při pojmenování vlastností a metod na vysoké úrovni.
 
 ## <a name="syntax"></a>Syntaxe
 
-```
-high_method_prefix("Prefix")
-```
+> **#import** *typ – Knihovna* **high_method_prefix (** "*prefix*" **)**
 
 ### <a name="parameters"></a>Parametry
 
-*Prefix*<br/>
-Předpona se použije.
+*Směr*\
+Předpona, která se má použít.
 
 ## <a name="remarks"></a>Poznámky
 
-Ve výchozím nastavení základní vlastnosti zpracování chyb a metody vystaveny členským funkcím pojmenovaným bez předpony. Názvy se z knihovny typů.
+Ve výchozím nastavení jsou vlastnosti a metody zpracování chyb vysoké úrovně zpřístupněny členskými funkcemi s názvem bez předpony. Názvy jsou z knihovny typů.
 
-**Specifické pro END C++**
+**Specifické C++ pro konec**
 
 ## <a name="see-also"></a>Viz také:
 
-[atributů #import](../preprocessor/hash-import-attributes-cpp.md)<br/>
-[#import – direktiva](../preprocessor/hash-import-directive-cpp.md)
+[Atributy #import](../preprocessor/hash-import-attributes-cpp.md)\
+[#import direktiva](../preprocessor/hash-import-directive-cpp.md)

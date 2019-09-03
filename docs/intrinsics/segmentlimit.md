@@ -1,59 +1,59 @@
 ---
 title: __segmentlimit
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - __segmentlimit
 helpviewer_keywords:
 - __segmentlimit intrinsic
 - lsl instruction
 ms.assetid: d0bc3630-90cb-4185-8667-686fd41e23d4
-ms.openlocfilehash: 650a847be3270782dc441d0e68c2c80d910e9d1e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9239d8de8ce2065d09ee7975301a2cb41832ba89
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62390383"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70217990"
 ---
-# <a name="segmentlimit"></a>__segmentlimit
+# <a name="__segmentlimit"></a>__segmentlimit
 
-**Microsoft Specific**
+**Specifické pro společnost Microsoft**
 
-Generuje `lsl` (mezní zatížení segmentu) instrukce.
+Generuje instrukci `lsl` (limit segmentu zatížení).
 
 ## <a name="syntax"></a>Syntaxe
 
-```
+```C
 unsigned long __segmentlimit(
    unsigned long a
 );
 ```
 
-#### <a name="parameters"></a>Parametry
+### <a name="parameters"></a>Parametry
 
-*a*<br/>
-[in] Konstanta, která určuje segment selektoru.
+*určitého*\
+pro Konstanta, která určuje selektor segmentů.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Limit segment selektoru segment určený `a`za předpokladu, že modulu pro výběr je platný a je viditelný na aktuální úrovni oprávnění.
+Omezení segmentů výběru segmentů určených a,Pokud je selektor platný a viditelný na aktuální úrovni oprávnění.
 
 ## <a name="requirements"></a>Požadavky
 
-|Vnitřní|Architektura|
+|Vnitřním|Architektura|
 |---------------|------------------|
 |`__segmentlimit`|x86, x64|
 
-**Soubor hlaviček** \<intrin.h >
+**Hlavičkový soubor** \<intrin. h >
 
 ## <a name="remarks"></a>Poznámky
 
-Pokud se limit počtu segmentů nelze načíst, tento pokyn selže. Při selhání tuto instrukci vymaže příznak ZF a návratová hodnota není definována.
+Pokud se limit segmentu nedá načíst, tato instrukce se nezdařila. V případě chyby tato instrukce vymaže příznak ZF a návratová hodnota není definována.
 
 Tato rutina je k dispozici pouze jako vnitřní objekt.
 
 ## <a name="example"></a>Příklad
 
-```
+```cpp
 #include <stdio.h>
 
 #ifdef _M_IX86
@@ -105,8 +105,8 @@ Success!
 sl was changed
 ```
 
-**Specifické pro END Microsoft**
+**Specifické pro konec Microsoftu**
 
 ## <a name="see-also"></a>Viz také:
 
-[Vnitřní funkce kompilátoru](../intrinsics/compiler-intrinsics.md)
+[Vnitřní objekty kompilátoru](../intrinsics/compiler-intrinsics.md)

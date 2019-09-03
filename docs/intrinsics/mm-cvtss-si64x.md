@@ -1,59 +1,59 @@
 ---
 title: _mm_cvtss_si64x
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - _mm_cvtss_si64x
 helpviewer_keywords:
 - cvtss2si intrinsic
 - _mm_cvtss_si64x intrinsic
 ms.assetid: c279aff2-ee29-4271-8829-3ec691bf7718
-ms.openlocfilehash: a3b7ece325d975045046e865e6b090f3f6729558
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6079ed7846a35ff16355f0341d63430f9846057f
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62263331"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70217431"
 ---
-# <a name="mmcvtsssi64x"></a>_mm_cvtss_si64x
+# <a name="_mm_cvtss_si64x"></a>_mm_cvtss_si64x
 
-**Microsoft Specific**
+**Specifické pro společnost Microsoft**
 
-Generuje x64 rozšířenou verzi převést skalární jedné přesnosti s plovoucí desetinnou čárkou bodu čísla na 64bitové celé číslo (`cvtss2si`) instrukce.
+Vygeneruje rozšířenou verzi x64 a číslo s plovoucí desetinnou čárkou převáděnou na 64 (`cvtss2si`) instrukcí typu Integer s jednoduchou přesností.
 
 ## <a name="syntax"></a>Syntaxe
 
-```
+```C
 __int64 _mm_cvtss_si64x(
    __m128 value
 );
 ```
 
-#### <a name="parameters"></a>Parametry
+### <a name="parameters"></a>Parametry
 
-*value*<br/>
-[in] `__m128` Struktury obsahující hodnot s plovoucí čárkou.
+*osa*\
+pro `__m128` Struktura obsahující pohyblivé hodnoty bodu
 
 ## <a name="return-value"></a>Návratová hodnota
 
-64bitové celé číslo, výsledek převodu první hodnota s plovoucí desetinnou čárkou na celé číslo.
+64 celé číslo, výsledek převodu první hodnoty s plovoucí desetinnou čárkou na celé číslo.
 
 ## <a name="requirements"></a>Požadavky
 
-|Vnitřní|Architektura|
+|Vnitřním|Architektura|
 |---------------|------------------|
 |`_mm_cvtss_si64x`|x64|
 
-**Soubor hlaviček** \<intrin.h >
+**Hlavičkový soubor** \<intrin. h >
 
 ## <a name="remarks"></a>Poznámky
 
-První prvek hodnotu struktury je převést na celé číslo a vrátil. Zaokrouhlení řídicí bity v registru MXCSR slouží k určení chování se zaokrouhlováním. Výchozí režim zaokrouhlování je zaokrouhlí na nejbližší zaokrouhlení na číslo sudé, pokud je 0,5 v desetinnou část. Vzhledem k tomu, `__m128` struktura reprezentuje XMM registru, to zabere vnitřní hodnotu z registru XMM a zapisuje je do systémové paměti.
+První prvek hodnoty struktury je převeden na celé číslo a vráceno. Bity ovládacího prvku zaokrouhlování v MXCSR slouží k určení chování zaokrouhlení. Výchozím režimem zaokrouhlení je zaokrouhlit na nejbližší, zaokrouhlení na sudé číslo, pokud je desetinná část 0,5. Vzhledem k tomu, že StrukturapředstavujeregistrXMM,vnitřnípřebíráhodnotuzregistruXMMazapisujejedosystémovépaměti.`__m128`
 
 Tato rutina je k dispozici pouze jako vnitřní objekt.
 
 ## <a name="example"></a>Příklad
 
-```
+```cpp
 // _mm_cvtss_si64x.cpp
 // processor: x64
 #include <intrin.h>
@@ -85,9 +85,9 @@ int main()
 101
 ```
 
-**Specifické pro END Microsoft**
+**Specifické pro konec Microsoftu**
 
 ## <a name="see-also"></a>Viz také:
 
-[__m128d](../cpp/m128d.md)<br/>
-[Vnitřní funkce kompilátoru](../intrinsics/compiler-intrinsics.md)
+[__m128d](../cpp/m128d.md)\
+[Vnitřní objekty kompilátoru](../intrinsics/compiler-intrinsics.md)

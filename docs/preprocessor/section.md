@@ -1,6 +1,6 @@
 ---
-title: section
-ms.date: 11/04/2016
+title: section – direktiva pragma
+ms.date: 08/29/2019
 f1_keywords:
 - section_CPP
 - vc-pragma.section
@@ -8,49 +8,47 @@ helpviewer_keywords:
 - pragmas, section
 - section pragma
 ms.assetid: c67215e9-2c4a-4b0f-b691-2414d2e2d96f
-ms.openlocfilehash: 41479d7d8767438d0e59fbe6beb7e435459dcb1b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 47ae2ff2503317e937e2b3a497357afbd5522a64
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62179630"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70216596"
 ---
-# <a name="section"></a>section
+# <a name="section-pragma"></a>section – direktiva pragma
 
-V souboru .obj, vytvoří oddíl.
+Vytvoří oddíl v souboru. obj.
 
 ## <a name="syntax"></a>Syntaxe
 
-```
-#pragma section( "section-name" [, attributes] )
-```
+> **#pragma oddíl (** "*název oddílu*" [ **,** *atributy* ] **)**
 
 ## <a name="remarks"></a>Poznámky
 
-Významy pojmů *segmentu* a *části* jsou v tomto tématu zaměnitelné.
+Pojem *segment* a *oddíl* má stejný význam jako v tomto článku.
 
-Jakmile je definován oddíl, zůstane v platnosti pro zbývající část kompilace. Nicméně je nutné použít [__declspec(allocate)](../cpp/allocate.md) nebo nic budou umístěny do oddílu.
+Po definování oddílu zůstane platnost pro zbytek kompilace platná. Je však nutné použít [__declspec (allocate)](../cpp/allocate.md)nebo nic není umístěno v části.
 
-*Název oddílu* je povinný parametr, který bude název oddílu. Název nesmí být v konfliktu s názvy oddíl standard. Zobrazit [/SECTION](../build/reference/section-specify-section-attributes.md) seznam názvů byste neměli používat při tvorbě oddílu.
+*název oddílu* je povinný parametr, který se bude jmenovat jako název oddílu. Název nesmí být v konfliktu se standardními názvy oddílů. Seznam názvů, které byste neměli použít při vytváření oddílu, najdete v tématu [/Section](../build/reference/section-specify-section-attributes.md) .
 
-*atributy* je volitelný parametr, který se skládá z jednoho nebo více oddělených čárkou atributů, které chcete přiřadit k části. Je to možné *atributy* jsou:
+*atributy* je volitelný parametr skládající se z jednoho nebo více atributů oddělených čárkami, které se mají přiřadit k oddílu. Možné *atributy* :
 
 |Atribut|Popis|
 |-|-|
-|**read**|Umožňuje čtení operací s daty.|
-|**write**|Umožňuje operací zápisu na data.|
-|**execute**|Umožňuje spuštění kódu.|
-|**Sdílet**|Sdílené složky v části mezi všechny procesy, které načíst obrázek.|
-|**nopage**|Označí oddíl jako nejsou stránkované; užitečné pro ovladače zařízení Win32.|
-|**nocache**|Označí oddílu jako není možné ukládat do mezipaměti; užitečné pro ovladače zařízení Win32.|
-|**discard**|Označí oddílu jako discardable; užitečné pro ovladače zařízení Win32.|
-|**remove**|Označí oddíl jako nejsou rezidentní; virtuální ovladače zařízení (V*x*D) pouze.|
+|**read**|Povoluje operace čtení dat.|
+|**write**|Povoluje operace zápisu na data.|
+|**spustit**|Umožňuje spuštění kódu.|
+|**sdíleného**|Sdílí část mezi všemi procesy, které načítají bitovou kopii.|
+|**na stránce**|Označí oddíl jako nestránkový. Užitečné pro ovladače zařízení Win32.|
+|**nocache**|Označí oddíl jako neukládatelné do mezipaměti. Užitečné pro ovladače zařízení Win32.|
+|**discard**|Označí oddíl jako zahozený. Užitečné pro ovladače zařízení Win32.|
+|**remove**|Označí oddíl jako nerezidentní v paměti. Pouze pro ovladače virtuálních zařízení (V*x*D).|
 
-Pokud nezadáte atributy, budou mít číst části a Zapisovat atributy.
+Pokud nezadáte žádné atributy, oddíl má atributy **pro čtení** a **zápis** .
 
 ## <a name="example"></a>Příklad
 
-V následujícím příkladu první instrukce identifikuje části a jeho atributy. Celé číslo `j` není vložena `mysec` vzhledem k tomu, že nebyla deklarována s `__declspec(allocate)`; `j` přejde do datové části. Celé číslo `i` přejít do `mysec` kvůli jeho `__declspec(allocate)` atribut třídy úložiště.
+V tomto příkladu direktiva pragma prvního oddílu identifikuje oddíl a jeho atributy. Celé číslo `j` není vloženo do `mysec` , protože nebylo deklarováno pomocí `__declspec(allocate)`. Místo toho `j` přejde do oddílu data. Celočíselná `i` hodnota se vrátí `mysec` do výsledku jeho `__declspec(allocate)` atributu Class třídy úložiště.
 
 ```cpp
 // pragma_section.cpp
@@ -65,4 +63,4 @@ int main(){}
 
 ## <a name="see-also"></a>Viz také:
 
-[Direktivy Pragma a klíčové slovo __Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)
+[Direktivy pragma a klíčové slovo __pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

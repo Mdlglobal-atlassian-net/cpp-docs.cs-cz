@@ -1,6 +1,6 @@
 ---
 title: __indwordstring
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - __indwordstring
 - __indwordstring_cpp
@@ -8,22 +8,22 @@ helpviewer_keywords:
 - __indwordstring intrinsic
 - rep insd instruction
 ms.assetid: 96a1cf33-f691-4916-99e4-fa849b61e3a9
-ms.openlocfilehash: 6f50aed8e6efe3b0b0a6e7eaebef5719475463ea
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b0b160ba00b1c0b7aa6bffc913e4cb56d503c2ff
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62263786"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70217833"
 ---
-# <a name="indwordstring"></a>__indwordstring
+# <a name="__indwordstring"></a>__indwordstring
 
-**Microsoft Specific**
+**Specifické pro společnost Microsoft**
 
-Čte data z pomocí zadaný port `rep insd` instrukce.
+Načte data z určeného portu pomocí `rep insd` instrukce.
 
 ## <a name="syntax"></a>Syntaxe
 
-```
+```C
 void __indwordstring(
    unsigned short Port,
    unsigned long* Buffer,
@@ -31,31 +31,31 @@ void __indwordstring(
 );
 ```
 
-#### <a name="parameters"></a>Parametry
+### <a name="parameters"></a>Parametry
 
-*Port*<br/>
-[in] Port, který se má číst z.
+*Přístavní*\
+pro Port, ze kterého se má číst.
 
-*Vyrovnávací paměti*<br/>
-[out] Tady je zapsána data načtená z portu.
+*Vyrovnávací paměti*\
+mimo Data načtená z portu se zapisují sem.
 
-*Počet*<br/>
-[in] Počet bajtů ke čtení.
+*Výpočtu*\
+pro Počet bajtů dat, která se mají číst.
 
 ## <a name="requirements"></a>Požadavky
 
-|Vnitřní|Architektura|
+|Vnitřním|Architektura|
 |---------------|------------------|
 |`__indwordstring`|x86, x64|
 
-**Soubor hlaviček** \<intrin.h >
+**Hlavičkový soubor** \<intrin. h >
 
 ## <a name="remarks"></a>Poznámky
 
 Tato rutina je k dispozici pouze jako vnitřní objekt.
 
-**Specifické pro END Microsoft**
+**Specifické pro konec Microsoftu**
 
 ## <a name="see-also"></a>Viz také:
 
-[Vnitřní funkce kompilátoru](../intrinsics/compiler-intrinsics.md)
+[Vnitřní objekty kompilátoru](../intrinsics/compiler-intrinsics.md)

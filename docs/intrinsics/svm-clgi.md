@@ -1,48 +1,48 @@
 ---
 title: __svm_clgi
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - __svm_clgi
 helpviewer_keywords:
 - CLGI instruction
 - __svm_clgi intrinsic
 ms.assetid: 6640f5ab-9472-46f9-a042-e15c4f1ff858
-ms.openlocfilehash: fe25141499a19a265e2ac3ec746664ecd6cc9a2e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 740c76e5dcc8f94b9257272624a6ad3c1f9726c1
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62390305"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70219966"
 ---
-# <a name="svmclgi"></a>__svm_clgi
+# <a name="__svm_clgi"></a>__svm_clgi
 
-**Microsoft Specific**
+**Specifické pro společnost Microsoft**
 
-Vymaže příznak globální přerušení.
+Odstraní příznak globálního přerušení.
 
 ## <a name="syntax"></a>Syntaxe
 
-```
+```C
 void __svm_clgi( void );
 ```
 
 ## <a name="remarks"></a>Poznámky
 
-`__svm_clgi` Funkce je ekvivalentní volání `CLGI` strojové instrukce. Přerušení globální příznak určuje, jestli mikroprocesoru ignoruje, odloží nebo zpracovává přerušení z důvodu události, například dokončení vstupně-výstupních operací, výstraha teploty hardwaru nebo výjimka ladění.
+Funkce je ekvivalentní `CLGI` instrukci počítače. `__svm_clgi` Příznak globálního přerušení určuje, zda mikroprocesor ignoruje, odloží nebo zpracovává přerušení, kvůli událostem, jako je například dokončení vstupně-výstupních operací, Výstraha teploty hardwaru nebo výjimka ladění.
 
-Tato funkce podporuje interakce monitorování virtuálního počítače hostitele s hostovaného operačního systému a jeho aplikací. Další informace vyhledejte dokument, "ruční svazek programátor architektury AMD64 2: Číslo 24593 revize 3.11, systém programování,"dokumentu na [AMD corporation](https://developer.amd.com/resources/developer-guides-manuals/) lokality.
+Tato funkce podporuje interakci monitorování virtuálního počítače hostitele s hostovaným operačním systémem a jeho aplikacemi. Další informace najdete v tématu "ručním svazkem pro programátory AMD64 architektury": Programování systému, "na webu [AMD Corporation](https://developer.amd.com/resources/developer-guides-manuals/) .
 
 ## <a name="requirements"></a>Požadavky
 
-|Vnitřní|Architektura|
+|Vnitřním|Architektura|
 |---------------|------------------|
 |`__svm_clgi`|x86, x64|
 
-**Soubor hlaviček** \<intrin.h >
+**Hlavičkový soubor** \<intrin. h >
 
-**Specifické pro END Microsoft**
+**Specifické pro konec Microsoftu**
 
 ## <a name="see-also"></a>Viz také:
 
-[Vnitřní funkce kompilátoru](../intrinsics/compiler-intrinsics.md)<br/>
+[Vnitřní objekty kompilátoru](../intrinsics/compiler-intrinsics.md)\
 [__svm_stgi](../intrinsics/svm-stgi.md)

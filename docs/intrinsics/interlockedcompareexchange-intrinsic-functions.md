@@ -1,6 +1,6 @@
 ---
 title: Vnitřní funkce _InterlockedCompareExchange
-ms.date: 12/17/2018
+ms.date: 09/02/2019
 f1_keywords:
 - _InterlockedCompareExchange_HLERelease
 - _InterlockedCompareExchange8_nf
@@ -48,12 +48,12 @@ helpviewer_keywords:
 - InterlockedCompareExchange64_rel intrinsic
 - _InterlockedCompareExchange64_rel intrinsic
 ms.assetid: c3ad79c0-a523-4930-a3a4-69a65d7d5c81
-ms.openlocfilehash: baa3131a7ca533af30e9ed73cd2698c06011488e
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 26dff1c902fff495d5efe45d8da10b1c5da72878
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69509453"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70222055"
 ---
 # <a name="_interlockedcompareexchange-intrinsic-functions"></a>Vnitřní funkce _InterlockedCompareExchange
 
@@ -63,7 +63,7 @@ Provádí prolínání porovnání a výměnu.
 
 ## <a name="syntax"></a>Syntaxe
 
-```
+```C
 long _InterlockedCompareExchange(
    long volatile * Destination,
    long Exchange,
@@ -176,15 +176,15 @@ __int64 _InterlockedCompareExchange64_rel(
 );
 ```
 
-#### <a name="parameters"></a>Parametry
+### <a name="parameters"></a>Parametry
 
-*Tabulka*<br/>
+*Tabulka*\
 [in, out] Ukazatel na cílovou hodnotu. Znaménko je ignorováno.
 
-*Exchange*<br/>
+*Výměn*\
 pro Hodnota Exchange Znaménko je ignorováno.
 
-*Operand porovnávání*<br/>
+*Operand porovnávání*\
 pro Hodnota, která se má porovnat s cílem Znaménko je ignorováno.
 
 ## <a name="return-value"></a>Návratová hodnota
@@ -195,8 +195,8 @@ Návratová hodnota je počáteční hodnota `Destination` ukazatele.
 
 |Vnitřním|Architektura|Záhlaví|
 |---------------|------------------|------------|
-|`_InterlockedCompareExchange`, `_InterlockedCompareExchange8`, `_InterlockedCompareExchange16`, `_InterlockedCompareExchange64`|x86, ARM, x64|\<intrin.h>|
-|`_InterlockedCompareExchange_acq`, `_InterlockedCompareExchange_rel`, `_InterlockedCompareExchange8_acq`, `_InterlockedCompareExchange8_nf`, `_InterlockedCompareExchange8_rel`,`_InterlockedCompareExchange16_acq`, `_InterlockedCompareExchange16_nf`, `_InterlockedCompareExchange16_rel`, `_InterlockedCompareExchange64_acq`, `_InterlockedCompareExchange64_nf`, `_InterlockedCompareExchange64_rel`,|ARM|\<intrin.h>|
+|`_InterlockedCompareExchange`, `_InterlockedCompareExchange8`, `_InterlockedCompareExchange16`, `_InterlockedCompareExchange64`|x86, ARM, x64, ARM64|\<intrin.h>|
+|`_InterlockedCompareExchange_acq`, `_InterlockedCompareExchange_rel`, `_InterlockedCompareExchange8_acq`, `_InterlockedCompareExchange8_nf`, `_InterlockedCompareExchange8_rel`,`_InterlockedCompareExchange16_acq`, `_InterlockedCompareExchange16_nf`, `_InterlockedCompareExchange16_rel`, `_InterlockedCompareExchange64_acq`, `_InterlockedCompareExchange64_nf`, `_InterlockedCompareExchange64_rel`,|ARM, ARM64|\<intrin.h>|
 |`_InterlockedCompareExchange_np`, `_InterlockedCompareExchange16_np`, `_InterlockedCompareExchange64_np`|x64|\<intrin.h>|
 |`_InterlockedCompareExchange_HLEAcquire`, `_InterlockedCompareExchange_HLERelease`, `_InterlockedCompareExchange64_HLEAcquire`, `_InterlockedCompareExchange64_HLERelease`|x86, x64|\<immintrin.h>|
 
@@ -296,7 +296,6 @@ namespace MyInterlockedIntrinsicLock
 }
 
 // ------------------------------------------------------------------
-
 // Data shared by threads
 
 queue<int> SharedQueue;
@@ -435,8 +434,8 @@ int main(
 
 ## <a name="see-also"></a>Viz také:
 
-[_InterlockedCompareExchange128](../intrinsics/interlockedcompareexchange128.md)<br/>
-[Vnitřní funkce _InterlockedCompareExchangePointer](../intrinsics/interlockedcompareexchangepointer-intrinsic-functions.md)<br/>
-[Vnitřní funkce kompilátoru](../intrinsics/compiler-intrinsics.md)<br/>
-[Klíčová slova](../cpp/keywords-cpp.md)<br/>
+[_InterlockedCompareExchange128](../intrinsics/interlockedcompareexchange128.md)\
+[Vnitřní funkce _InterlockedCompareExchangePointer](../intrinsics/interlockedcompareexchangepointer-intrinsic-functions.md)\
+[Vnitřní objekty kompilátoru](../intrinsics/compiler-intrinsics.md)\
+[Klíčov](../cpp/keywords-cpp.md)\
 [Konflikty s kompilátorem x86](../build/x64-software-conventions.md#conflicts-with-the-x86-compiler)

@@ -1,6 +1,6 @@
 ---
 title: __movsw
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - __movsw
 helpviewer_keywords:
@@ -8,57 +8,57 @@ helpviewer_keywords:
 - rep movsw instruction
 - __movsw intrinsic
 ms.assetid: db402ad5-7f0e-449a-b0b0-eea9928d6435
-ms.openlocfilehash: 3d584300b514ec3e79c44a2943b3fb8a79495df4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 67eef7fe0a5b9803650f345740a8c40262cd2014
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62263201"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70221718"
 ---
-# <a name="movsw"></a>__movsw
+# <a name="__movsw"></a>__movsw
 
-**Microsoft Specific**
+**Specifické pro společnost Microsoft**
 
-Z nich generuje řetězec přesunout (`rep movsw`) instrukce.
+Generuje instrukci move String`rep movsw`().
 
 ## <a name="syntax"></a>Syntaxe
 
-```
+```C
 void __movsw(
-   unsigned short* Dest,
+   unsigned short* Destination,
    unsigned short* Source,
    size_t Count
 );
 ```
 
-#### <a name="parameters"></a>Parametry
+### <a name="parameters"></a>Parametry
 
-*cíl*<br/>
-[out] Cíl operace.
+*Tabulka*\
+mimo Cíl operace.
 
-*Zdroj*<br/>
-[in] Zdroj operaci.
+*Zdrojová*\
+pro Zdroj operace.
 
-*Počet*<br/>
-[in] Počet slova, která chcete kopírovat.
+*Výpočtu*\
+pro Počet slov ke zkopírování.
 
 ## <a name="requirements"></a>Požadavky
 
-|Vnitřní|Architektura|
+|Vnitřním|Architektura|
 |---------------|------------------|
 |`__movsw`|x86, x64|
 
-**Soubor hlaviček** \<intrin.h >
+**Hlavičkový soubor** \<intrin. h >
 
 ## <a name="remarks"></a>Poznámky
 
-Výsledkem je, že první `Count` slova odkazované `Source` se zkopírují do `Dest` řetězec.
+Výsledkem je, že první *počty* slov, na které se odkazuje podle *zdroje* , se zkopírují do *cílového* řetězce.
 
 Tato rutina je k dispozici pouze jako vnitřní objekt.
 
 ## <a name="example"></a>Příklad
 
-```
+```cpp
 // movsw.cpp
 // processor: x86, x64
 #include <stdio.h>
@@ -82,8 +82,8 @@ int main()
 0 1 2 3 4 5 6 7 8 9
 ```
 
-**Specifické pro END Microsoft**
+**Specifické pro konec Microsoftu**
 
 ## <a name="see-also"></a>Viz také:
 
-[Vnitřní funkce kompilátoru](../intrinsics/compiler-intrinsics.md)
+[Vnitřní objekty kompilátoru](../intrinsics/compiler-intrinsics.md)

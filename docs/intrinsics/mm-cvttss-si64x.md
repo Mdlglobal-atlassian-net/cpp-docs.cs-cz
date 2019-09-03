@@ -1,59 +1,59 @@
 ---
 title: _mm_cvttss_si64x
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - _mm_cvttss_si64x
 helpviewer_keywords:
 - _mm_cvttss_si64x intrinsic
 - cvttss2si instruction
 ms.assetid: f9a3fd07-5bd8-4758-8744-6315c082cf87
-ms.openlocfilehash: cfdea6ded622cbcbe42bd555edb3029fabad7823
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 69016a4e23b020b2c4c79c6b97a5a76f2b2dc028
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62396649"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70217415"
 ---
-# <a name="mmcvttsssi64x"></a>_mm_cvttss_si64x
+# <a name="_mm_cvttss_si64x"></a>_mm_cvttss_si64x
 
-**Microsoft Specific**
+**Specifické pro společnost Microsoft**
 
-Vysílá x64 rozšířenou verzi Convert s číslem plovoucí desetinné čárky jednoduchou přesnost zkrácení na 64bitové celé číslo (`cvttss2si`) instrukce.
+Vygeneruje rozšířenou verzi x64 s plovoucí desetinnou čárkou s jednoduchou přesností na 64 () instrukcí typu celé číslo`cvttss2si`().
 
 ## <a name="syntax"></a>Syntaxe
 
-```
+```C
 __int64 _mm_cvttss_si64x(
    __m128 value
 );
 ```
 
-#### <a name="parameters"></a>Parametry
+### <a name="parameters"></a>Parametry
 
-*value*<br/>
-[in] `__m128` Struktury obsahující hodnoty s plovoucí desetinnou čárkou jednoduchou přesností.
+*osa*\
+pro `__m128` Struktura obsahující hodnoty s plovoucí desetinnou čárkou s jednoduchou přesností.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Výsledek převodu první hodnota s plovoucí desetinnou čárkou na 64bitové celé číslo.
+Výsledek převodu první hodnoty s plovoucí desetinnou čárkou na 64 celé číslo.
 
 ## <a name="requirements"></a>Požadavky
 
-|Vnitřní|Architektura|
+|Vnitřním|Architektura|
 |---------------|------------------|
 |`_mm_cvttss_si64x`|x64|
 
-**Soubor hlaviček** \<intrin.h >
+**Hlavičkový soubor** \<intrin. h >
 
 ## <a name="remarks"></a>Poznámky
 
-Vnitřní typy se liší od `_mm_cvtss_si64x` pouze v tom, že se zkrátí nepřesné převody směrem k nule. Vzhledem k tomu, `__m128` struktura představuje registru XMM, vygeneruje instrukce přesouvá data z registru XMM do systémové paměti.
+Vnitřní se liší od `_mm_cvtss_si64x` pouze v tom, že nepřesné převody jsou zkráceny směrem k nule. Vzhledem k tomu, že StrukturapředstavujeregistrXMM,vygenerovanáinstrukcepřesunedatazregistruXMMdosystémovépaměti.`__m128`
 
 Tato rutina je k dispozici pouze jako vnitřní objekt.
 
 ## <a name="example"></a>Příklad
 
-```
+```cpp
 // _mm_cvttss_si64x.cpp
 // processor: x64
 #include <intrin.h>
@@ -85,9 +85,9 @@ int main()
 101
 ```
 
-**Specifické pro END Microsoft**
+**Specifické pro konec Microsoftu**
 
 ## <a name="see-also"></a>Viz také:
 
-[__m128](../cpp/m128.md)<br/>
-[Vnitřní funkce kompilátoru](../intrinsics/compiler-intrinsics.md)
+[__m128](../cpp/m128.md)\
+[Vnitřní objekty kompilátoru](../intrinsics/compiler-intrinsics.md)

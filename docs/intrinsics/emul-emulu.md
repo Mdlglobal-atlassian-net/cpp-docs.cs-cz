@@ -1,6 +1,6 @@
 ---
-title: __emul __emulu
-ms.date: 11/04/2016
+title: __emul, __emulu
+ms.date: 09/02/2019
 f1_keywords:
 - __emulu_cpp
 - __emul
@@ -10,22 +10,22 @@ helpviewer_keywords:
 - __emul intrinsic
 - __emulu intrinsic
 ms.assetid: 79545236-cca2-40b8-a4e1-8abce9b26311
-ms.openlocfilehash: 8657c0fb034ac6bbcfbebb946e059ad08d9e7046
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 16b2b38f6f44b99c9f5b9370ba586342a860684e
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62264046"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70216740"
 ---
-# <a name="emul-emulu"></a>__emul __emulu
+# <a name="__emul-__emulu"></a>__emul, __emulu
 
-**Microsoft Specific**
+**Specifické pro společnost Microsoft**
 
-Provádí součinů, které přetečení, co může obsahovat 32bitové celé číslo.
+Provádí násobení přetečení, které může uchovávat celé číslo 32.
 
 ## <a name="syntax"></a>Syntaxe
 
-```
+```C
 __int64 __emul(
    int a,
    int b
@@ -36,13 +36,13 @@ unsigned __int64 __emulu(
 );
 ```
 
-#### <a name="parameters"></a>Parametry
+### <a name="parameters"></a>Parametry
 
-*a*<br/>
-[in] První celočíselný operand násobení.
+*určitého*\
+pro První celočíselný operand násobení.
 
-*b*<br/>
-[in] Druhý operand celé číslo násobení.
+*b*\
+pro Druhý celočíselný operand násobení.
 
 ## <a name="return-value"></a>Návratová hodnota
 
@@ -50,22 +50,22 @@ Výsledek násobení.
 
 ## <a name="requirements"></a>Požadavky
 
-|Vnitřní|Architektura|
+|Vnitřním|Architektura|
 |---------------|------------------|
 |`__emul`|x86, x64|
 |`__emulu`|x86, x64|
 
-**Soubor hlaviček** \<intrin.h >
+**Hlavičkový soubor** \<intrin. h >
 
 ## <a name="remarks"></a>Poznámky
 
-`__emul` přebírá dva 32-bit hodnoty se znaménkem a vrátí výsledek násobení jako 64-bit celočíselnou hodnotu se znaménkem.
+`__emul`převezme 2 32 hodnoty se znaménkem a vrátí výsledek násobení jako celočíselné hodnoty se znaménkem, který se podepisuje jako 64.
 
-`__emulu` má dvě hodnoty 32bitové celé číslo bez znaménka a vrátí výsledek násobení jako hodnotu 64bitové celé číslo bez znaménka.
+`__emulu`přebírá hodnoty 2 32 unsigned integer a vrátí výsledek násobení jako 64 hodnotu unsigned integer.
 
 ## <a name="example"></a>Příklad
 
-```
+```cpp
 // emul.cpp
 // compile with: /EHsc
 // processor: x86, x64
@@ -97,13 +97,13 @@ int main()
 
 ## <a name="output"></a>Výstup
 
-```
+```Output
 -268435456 * 2 = -536870912
 4294967295 * 251658240 = 1080863910317260800
 ```
 
-**Specifické pro END Microsoft**
+**Specifické pro konec Microsoftu**
 
 ## <a name="see-also"></a>Viz také:
 
-[Vnitřní funkce kompilátoru](../intrinsics/compiler-intrinsics.md)
+[Vnitřní objekty kompilátoru](../intrinsics/compiler-intrinsics.md)

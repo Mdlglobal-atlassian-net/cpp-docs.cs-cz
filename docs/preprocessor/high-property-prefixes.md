@@ -1,48 +1,46 @@
 ---
-title: high_property_prefixes
-ms.date: 10/18/2018
+title: importovat atribut high_property_prefixes
+ms.date: 08/29/2019
 f1_keywords:
 - high_property_prefixes
 helpviewer_keywords:
 - high_property_prefixes attribute
 ms.assetid: 91c6cc2b-19b6-4aba-8831-d9e5cccb58b5
-ms.openlocfilehash: 3f8975ec9737e02bb1216166cc6c241549e95a07
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9e44f6f1afae479f803f4c6d866ef3ee38744561
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62409834"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70219002"
 ---
-# <a name="highpropertyprefixes"></a>high_property_prefixes
+# <a name="high_property_prefixes-import-attribute"></a>importovat atribut high_property_prefixes
 
-**Specifické pro C++**
+**C++Konkrétní**
 
 Určuje alternativní předpony pro tři metody vlastností.
 
 ## <a name="syntax"></a>Syntaxe
 
-```
-high_property_prefixes("GetPrefix","PutPrefix","PutRefPrefix")
-```
+> **#import** *typ – Knihovna* **high_property_prefixes (** "*getprefix*" **;** "*PutPrefix*" **;** "*PutRefPrefix*" **)**
 
 ### <a name="parameters"></a>Parametry
 
-*GetPrefix*<br/>
-Předpona se použije pro `propget` metody.
+*Getprefix*\
+Předpona, která se má `propget` použít pro metody.
 
-*PutPrefix*<br/>
-Předpona se použije pro `propput` metody.
+*PutPrefix*\
+Předpona, která se má `propput` použít pro metody.
 
-*PutRefPrefix*<br/>
-Předpona se použije pro `propputref` metody.
+*PutRefPrefix*\
+Předpona, která se má `propputref` použít pro metody.
 
 ## <a name="remarks"></a>Poznámky
 
-Ve výchozím nastavení základní zpracování chyb `propget`, `propput`, a `propputref` metody jsou vystaveny členským funkcím pojmenovaným s předponami `Get`, `Put`, a `PutRef`v uvedeném pořadí.
+Ve výchozím `propget`nastavení jsou metody zpracování chyb na vysoké úrovni, `propput`a `propputref` `Get`vystavovány členskými funkcemi s názvem s předponami `Put`, a `PutRef`v uvedeném pořadí.
 
-**Specifické pro END C++**
+**Specifické C++ pro konec**
 
 ## <a name="see-also"></a>Viz také:
 
-[atributů #import](../preprocessor/hash-import-attributes-cpp.md)<br/>
-[#import – direktiva](../preprocessor/hash-import-directive-cpp.md)
+[Atributy #import](../preprocessor/hash-import-attributes-cpp.md)\
+[#import direktiva](../preprocessor/hash-import-directive-cpp.md)

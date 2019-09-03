@@ -1,6 +1,6 @@
 ---
 title: __movsd
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - __movsd
 helpviewer_keywords:
@@ -8,57 +8,57 @@ helpviewer_keywords:
 - __movsd intrinsic
 - movsd instruction
 ms.assetid: eb5cccf3-aa76-47f0-b9fc-eeca38fd943f
-ms.openlocfilehash: 950e83f2cd03e92bb5a9f953affe8e7ff479a408
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c43f6bdb731abc281d60fe4bc6ecaec1331b9945
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62263176"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70221766"
 ---
-# <a name="movsd"></a>__movsd
+# <a name="__movsd"></a>__movsd
 
-**Microsoft Specific**
+**Specifické pro společnost Microsoft**
 
-Z nich generuje řetězec přesunout (`rep movsd`) instrukce.
+Generuje instrukci move String`rep movsd`().
 
 ## <a name="syntax"></a>Syntaxe
 
-```
+```C
 void __movsd(
-   unsigned long* Dest,
+   unsigned long* Destination,
    unsigned long* Source,
    size_t Count
 );
 ```
 
-#### <a name="parameters"></a>Parametry
+### <a name="parameters"></a>Parametry
 
-*cíl*<br/>
-[out] Cíl operace.
+*Tabulka*\
+mimo Cíl operace.
 
-*Zdroj*<br/>
-[in] Zdroj operaci.
+*Zdrojová*\
+pro Zdroj operace.
 
-*Počet*<br/>
-[in] Počet dvojitými slovy ke kopírování.
+*Výpočtu*\
+pro Počet doubleword, které se mají zkopírovat
 
 ## <a name="requirements"></a>Požadavky
 
-|Vnitřní|Architektura|
+|Vnitřním|Architektura|
 |---------------|------------------|
 |`__movsd`|x86, x64|
 
-**Soubor hlaviček** \<intrin.h >
+**Hlavičkový soubor** \<intrin. h >
 
 ## <a name="remarks"></a>Poznámky
 
-Výsledkem je, že první `Count` x doubleword odkazované `Source` se zkopírují do `Dest` řetězec.
+Výsledkem je, že první *počet* doubleword, na který se odkazuje podle *zdroje* , se zkopíruje do *cílového* řetězce.
 
 Tato rutina je k dispozici pouze jako vnitřní objekt.
 
 ## <a name="example"></a>Příklad
 
-```
+```cpp
 // movsd.cpp
 // processor: x86, x64
 #include <stdio.h>
@@ -83,8 +83,8 @@ int main()
 950 850 750 650 550 450 350 250 150 50
 ```
 
-**Specifické pro END Microsoft**
+**Specifické pro konec Microsoftu**
 
 ## <a name="see-also"></a>Viz také:
 
-[Vnitřní funkce kompilátoru](../intrinsics/compiler-intrinsics.md)
+[Vnitřní objekty kompilátoru](../intrinsics/compiler-intrinsics.md)

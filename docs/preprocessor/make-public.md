@@ -1,6 +1,6 @@
 ---
-title: make_public
-ms.date: 11/04/2016
+title: make_public – direktiva pragma
+ms.date: 08/29/2019
 f1_keywords:
 - vc-pragma.make_public
 - make_public_CPP
@@ -8,37 +8,37 @@ helpviewer_keywords:
 - pragmas, make_public
 - make_public pragma
 ms.assetid: c3665f4d-268a-4932-9661-c37c8ae6a341
-ms.openlocfilehash: d569758f90b9e55f65ad13517f86dea41d151ca8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d12fab685e0088993cb43073c3603bda12edd2f3
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62371760"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70218829"
 ---
-# <a name="makepublic"></a>make_public
+# <a name="make_public-pragma"></a>make_public – direktiva pragma
+
 Označuje, že nativní typ by měl mít veřejný přístup k sestavení.
 
 ## <a name="syntax"></a>Syntaxe
 
-```
-#pragma make_public(type)
-```
+> **#pragma make_public (** *typ* **)**
 
 ### <a name="parameters"></a>Parametry
 
-*typ* je název typu, které chcete mít veřejný přístup k sestavení.
+*textový*\
+Název typu, který má mít veřejné přístupnost sestavení.
 
 ## <a name="remarks"></a>Poznámky
 
-**make_public** oceníte, když je nativní typ, který chcete odkazovat ze souboru .h, jenž nelze změnit. Je-li třeba nativní typ použít v podpisu veřejné funkce v typu s veřejnou viditelností sestavení, musí mít nativní typ také veřejný přístup k sestavení. Pokud toto neplatí, kompilátor vygeneruje upozornění.
+**make_public** je užitečná pro, pokud je nativní typ, na který chcete odkazovat, ze souboru hlaviček, který nelze změnit. Pokud chcete použít nativní typ v signatuře veřejné funkce v typu s viditelností veřejného sestavení, musí mít nativní typ také veřejnou přístupnost sestavení, jinak kompilátor vydá upozornění.
 
-**make_public** musí být zadána v globálním oboru a je platná pouze od bodu v němž je deklarována a platí až na konec souboru se zdrojovým kódem.
+**make_public** musí být zadáno v globálním oboru. Je to v platnosti od bodu, ve kterém je deklarována až po konec souboru zdrojového kódu.
 
-Nativní typ může být implicitně nebo explicitně soukromý. Zobrazit [viditelnost typů](../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Type_visibility) Další informace.
+Nativní typ může být implicitně nebo explicitně soukromý. Další informace najdete v tématu [viditelnost typů](../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Type_visibility).
 
 ## <a name="examples"></a>Příklady
 
-Následující příklad je obsah souboru .h, který obsahuje definice dvou nativních struktur.
+Následující ukázka je obsah hlavičkového souboru, který obsahuje definice dvou nativních struktur.
 
 ```cpp
 // make_public_pragma.h
@@ -46,7 +46,7 @@ struct Native_Struct_1 { int i; };
 struct Native_Struct_2 { int i; };
 ```
 
-Následující příklad kódu používá hlavičkový soubor a ukazuje, že pokud je explicitně označit nativních struktur jako veřejné, pomocí **make_public**, kompilátor vygeneruje upozornění při pokusu o použití nativních struktur v podpisu veřejné funkce veřejného spravovaného typu.
+Následující ukázka kódu používá hlavičkový soubor. Ukazuje, že pokud neoznačíte nativní struktury jako veřejné pomocí **make_public**, kompilátor vygeneruje upozornění, když se pokusíte použít nativní struktury v signatuře veřejné funkce ve veřejném spravovaném typu.
 
 ```cpp
 // make_public_pragma.cpp
@@ -63,4 +63,4 @@ public ref struct A {
 
 ## <a name="see-also"></a>Viz také:
 
-[Direktivy Pragma a klíčové slovo __Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)
+[Direktivy pragma a klíčové slovo __pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

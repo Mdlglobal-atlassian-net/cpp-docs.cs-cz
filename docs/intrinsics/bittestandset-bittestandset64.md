@@ -1,6 +1,6 @@
 ---
 title: _bittestandset, _bittestandset64
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - _bittestandset_cpp
 - _bittestandset64_cpp
@@ -11,22 +11,22 @@ helpviewer_keywords:
 - _bittestandset intrinsic
 - _bittestandset64 intrinsic
 ms.assetid: 6d6c8670-fea0-4c1c-9aad-2bb842715203
-ms.openlocfilehash: dadeeae23b1808bbee13940727a3bdbace1dad54
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d54be5688acfb1e3cfc9d79514c39f665efdd9fd
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62264176"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70216881"
 ---
-# <a name="bittestandset-bittestandset64"></a>_bittestandset, _bittestandset64
+# <a name="_bittestandset-_bittestandset64"></a>_bittestandset, _bittestandset64
 
-**Microsoft Specific**
+**Specifické pro společnost Microsoft**
 
-Generovat instrukce, který zkoumá vlastnost bit `b` adresy `a`, vrátí aktuální hodnotu a nastaví bit na hodnotu 1.
+Vygenerujte instrukci pro prohlédnutí bitu `b` adresy `a`, vrátíte jeho aktuální hodnotu a nastavte bit na 1.
 
 ## <a name="syntax"></a>Syntaxe
 
-```
+```C
 unsigned char _bittestandset(
    long *a,
    long b
@@ -37,26 +37,26 @@ unsigned char _bittestandset64(
 );
 ```
 
-#### <a name="parameters"></a>Parametry
+### <a name="parameters"></a>Parametry
 
-*a*<br/>
-[out v] Ukazatel paměti prozkoumat.
+*určitého*\
+[in, out] Ukazatel na paměť, kterou chcete prošetřit.
 
-*b*<br/>
-[in] Bitová pozice pro testování.
+*b*\
+pro Bitová pozice, která se má testovat
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Bit na zadané pozici.
+Bit na pozici určené.
 
 ## <a name="requirements"></a>Požadavky
 
-|Vnitřní|Architektura|
+|Vnitřním|Architektura|
 |---------------|------------------|
-|`_bittestandset`|x86, ARM, x64|
-|`_bittestandset64`|x64|
+|`_bittestandset`|x86, ARM, x64, ARM64|
+|`_bittestandset64`|x64, ARM64|
 
-**Soubor hlaviček** \<intrin.h >
+**Hlavičkový soubor** \<intrin. h >
 
 ## <a name="remarks"></a>Poznámky
 
@@ -64,7 +64,7 @@ Tato rutina je k dispozici pouze jako vnitřní objekt.
 
 ## <a name="example"></a>Příklad
 
-```
+```cpp
 // bittestandset.cpp
 // processor: x86, ARM, x64
 // This example uses several of the _bittest family of intrinsics
@@ -147,8 +147,8 @@ Flags: 0x4
 Flags: 0x0
 ```
 
-**Specifické pro END Microsoft**
+**Specifické pro konec Microsoftu**
 
 ## <a name="see-also"></a>Viz také:
 
-[Vnitřní funkce kompilátoru](../intrinsics/compiler-intrinsics.md)
+[Vnitřní objekty kompilátoru](../intrinsics/compiler-intrinsics.md)

@@ -1,6 +1,6 @@
 ---
 title: __int2c
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - __int2c
 - __int2c_cpp
@@ -9,35 +9,35 @@ helpviewer_keywords:
 - int 2c instruction
 - __int2c intrinsic
 ms.assetid: aa20ff30-adef-42bb-8577-8010f3122f8e
-ms.openlocfilehash: 36ef8acd3d71c08a356d4210f16205828f691fa5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d8c94ae78a121157a6347548356631b04e8733d5
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62348886"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70222096"
 ---
-# <a name="int2c"></a>__int2c
+# <a name="__int2c"></a>__int2c
 
-**Microsoft Specific**
+**Specifické pro společnost Microsoft**
 
-Generuje `int 2c` instrukce, která aktivuje `2c` přerušení.
+`2c` Vygeneruje `int 2c` instrukci, která aktivuje přerušení.
 
 ## <a name="syntax"></a>Syntaxe
 
-```
+```C
 void __int2c(void);
 ```
 
 ## <a name="requirements"></a>Požadavky
 
-|Vnitřní|Architektura|
+|Vnitřním|Architektura|
 |---------------|------------------|
 |`__int2c`|x86, x64|
 
-**Soubor hlaviček** \<intrin.h >
+**Hlavičkový soubor** \<intrin. h >
 
-**Specifické pro END Microsoft**
+**Specifické pro konec Microsoftu**
 
 ## <a name="see-also"></a>Viz také:
 
-[Vnitřní funkce kompilátoru](../intrinsics/compiler-intrinsics.md)
+[Vnitřní objekty kompilátoru](../intrinsics/compiler-intrinsics.md)

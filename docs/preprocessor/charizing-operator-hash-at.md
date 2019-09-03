@@ -1,6 +1,6 @@
 ---
 title: Charakterizace operátoru (#@)
-ms.date: 11/04/2016
+ms.date: 08/29/2019
 f1_keywords:
 - '#@'
 helpviewer_keywords:
@@ -8,37 +8,38 @@ helpviewer_keywords:
 - charizing operator
 - '#@ preprocessor operator'
 ms.assetid: dee03314-d27c-4063-965c-64756efbef22
-ms.openlocfilehash: c9acc9b9872e096cd441b950632c341e975fecb8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: cb2a4e07287edf5ed2d0850ec7d870c8ef307879
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62403526"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70218543"
 ---
 # <a name="charizing-operator-"></a>Charakterizace operátoru (#@)
-**Microsoft Specific**
 
-Operátor zřetězení lze použít pouze s argumenty makra. Pokud `#@` předchází formální parametr v definici makra, je skutečný argument uzavřen do jednoduchých uvozovek a při rozbalení makra je považován za znak. Příklad:
+**Specifické pro společnost Microsoft**
 
-```
+Operátor zřetězení lze použít pouze s argumenty makra. Pokud `#@` předchází formální parametr v definici makra, je skutečný argument uzavřen v jednoduchých uvozovkách a při rozbalení makra je považován za znak. Příklad:
+
+```cpp
 #define makechar(x)  #@x
 ```
 
 způsobí, že příkaz
 
-```
+```cpp
 a = makechar(b);
 ```
 
 je rozbalen na
 
-```
+```cpp
 a = 'b';
 ```
 
-Znak jednoduchých uvozovek nelze použít spolu s operátorem zřetězení.
+Znak jednoduché uvozovky (`'`) se nedá použít s operátorem charakterizace.
 
-**Specifické pro END Microsoft**
+**Specifické pro konec Microsoftu**
 
 ## <a name="see-also"></a>Viz také:
 

@@ -1,6 +1,6 @@
 ---
 title: _bittest, _bittest64
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - _bittest64
 - _bittest_cpp
@@ -11,22 +11,22 @@ helpviewer_keywords:
 - _bittest64 intrinsic
 - bt instruction
 ms.assetid: 15e62afb-abea-4ee7-a6b1-13efa2034937
-ms.openlocfilehash: 1d29b8bec646bb2da8acfe20479fe0e238db0de5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 37d96cc008d0da018355a2eca63c6c592ab50f12
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62349170"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70216904"
 ---
-# <a name="bittest-bittest64"></a>_bittest, _bittest64
+# <a name="_bittest-_bittest64"></a>_bittest, _bittest64
 
-**Microsoft Specific**
+**Specifické pro společnost Microsoft**
 
-Generuje `bt` instrukce, který zkoumá vlastnost bitu v pozici `b` adresy `a`a vrátí hodnotu této verze.
+Vygeneruje `b` `a`instrukci, která prověřuje bitovou kopii na pozici adresy a vrátí hodnotu tohoto bitu. `bt`
 
 ## <a name="syntax"></a>Syntaxe
 
-```
+```C
 unsigned char _bittest(
    long const *a,
    long b
@@ -39,22 +39,22 @@ unsigned char _bittest64(
 
 ### <a name="parameters"></a>Parametry
 
-*a*<br/>
-[in] Ukazatel paměti prozkoumat.
+*určitého*\
+pro Ukazatel na paměť, kterou chcete prošetřit.
 
-*b*<br/>
-[in] Bitová pozice pro testování.
+*b*\
+pro Bitová pozice, která se má testovat
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Bit na zadané pozici.
+Bit na pozici určené.
 
 ## <a name="requirements"></a>Požadavky
 
-|Vnitřní|Architektura|Záhlaví|
+|Vnitřním|Architektura|Záhlaví|
 |---------------|------------------|------------|
-|`_bittest`|x86, ARM, x64|\<intrin.h>|
-|`_bittest64`|ARM, x64|\<intrin.h>|
+|`_bittest`|x86, ARM, x64, ARM64|\<intrin.h>|
+|`_bittest64`|ARM64, x64|\<intrin.h>|
 
 ## <a name="remarks"></a>Poznámky
 
@@ -100,8 +100,8 @@ Binary representation:
 0000000000000010011000010110010
 ```
 
-**Specifické pro END Microsoft**
+**Specifické pro konec Microsoftu**
 
 ## <a name="see-also"></a>Viz také:
 
-[Vnitřní funkce kompilátoru](../intrinsics/compiler-intrinsics.md)
+[Vnitřní objekty kompilátoru](../intrinsics/compiler-intrinsics.md)

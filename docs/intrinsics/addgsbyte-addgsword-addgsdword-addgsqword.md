@@ -1,6 +1,6 @@
 ---
 title: __addgsbyte, __addgsword, __addgsdword, __addgsqword
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - __addgsdword
 - __addgsqword
@@ -16,22 +16,22 @@ helpviewer_keywords:
 - __addgsdword intrinsic
 - __addgsbyte intrinsic
 ms.assetid: 4fa03e69-d849-49ed-ba37-1d3aa23c2a21
-ms.openlocfilehash: 61fff704e600296443964ab62a0b58799c87b51b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5dddd8b4a887dc0e01107f8c1036a399b4e52d2e
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62264423"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70221091"
 ---
-# <a name="addgsbyte-addgsword-addgsdword-addgsqword"></a>__addgsbyte, __addgsword, __addgsdword, __addgsqword
+# <a name="__addgsbyte-__addgsword-__addgsdword-__addgsqword"></a>__addgsbyte, __addgsword, __addgsdword, __addgsqword
 
-**Microsoft Specific**
+**Specifické pro společnost Microsoft**
 
-Přidat hodnotu do umístění v paměti určený posun vzhledem k začátku `GS` segmentu.
+Přidejte hodnotu do umístění v paměti určené posunem relativně ke začátku `GS` segmentu.
 
 ## <a name="syntax"></a>Syntaxe
 
-```
+```C
 void __addgsbyte(
    unsigned long Offset,
    unsigned char Data
@@ -50,32 +50,34 @@ void __addgsqword(
 );
 ```
 
-#### <a name="parameters"></a>Parametry
+### <a name="parameters"></a>Parametry
 
-*Posun*<br/>
-[in] Posun od začátku `GS`.
+*Polohy*\
+pro Posun od začátku `GS`.
 
-*Data*<br/>
-[in] Hodnota k přidání do umístění v paměti.
+*Údajů*\
+pro Hodnota, která se má přidat do umístění v paměti
 
 ## <a name="requirements"></a>Požadavky
 
-|Vnitřní|Architektura|
+|Vnitřním|Architektura|
 |---------------|------------------|
 |`__addgsbyte`|x64|
 |`__addgsword`|x64|
 |`__addgsdword`|x64|
 |`__addgsqword`|x64|
 
+**Hlavičkový soubor** \<intrin. h >
+
 ## <a name="remarks"></a>Poznámky
 
-Tyto rutiny jsou dostupné jenom jako vnitřní.
+Tyto rutiny jsou k dispozici pouze jako vnitřní.
 
-**Specifické pro END Microsoft**
+**Specifické pro konec Microsoftu**
 
 ## <a name="see-also"></a>Viz také:
 
-[__incgsbyte, \__incgsword, \__incgsdword, \__incgsqword](../intrinsics/incgsbyte-incgsword-incgsdword-incgsqword.md)<br/>
-[__readgsbyte, \__readgsdword, \__readgsqword, \__readgsword](../intrinsics/readgsbyte-readgsdword-readgsqword-readgsword.md)<br/>
-[__writegsbyte, \__writegsdword, \__writegsqword, \__writegsword](../intrinsics/writegsbyte-writegsdword-writegsqword-writegsword.md)<br/>
-[Vnitřní funkce kompilátoru](../intrinsics/compiler-intrinsics.md)
+[__incgsbyte, \__incgsword, \__incgsdword, \__incgsqword](../intrinsics/incgsbyte-incgsword-incgsdword-incgsqword.md)\
+[__readgsbyte, \__readgsdword, \__readgsqword, \__readgsword](../intrinsics/readgsbyte-readgsdword-readgsqword-readgsword.md)\
+[__writegsbyte, \__writegsdword, \__writegsqword, \__writegsword](../intrinsics/writegsbyte-writegsdword-writegsqword-writegsword.md)\
+[Vnitřní objekty kompilátoru](../intrinsics/compiler-intrinsics.md)

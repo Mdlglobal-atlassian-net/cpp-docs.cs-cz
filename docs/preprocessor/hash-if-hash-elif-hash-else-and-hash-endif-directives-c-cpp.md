@@ -1,6 +1,6 @@
 ---
-title: '#IF, #elif, #else a #endif – direktivy (C/C++)'
-ms.date: 11/04/2016
+title: '#if, #elif, #else a #endif – direktivy (C/C++)'
+ms.date: 08/29/2019
 f1_keywords:
 - '#else'
 - '#endif'
@@ -21,87 +21,90 @@ helpviewer_keywords:
 - elif directive (#elif)
 - defined directive
 ms.assetid: c77a175f-6ca8-47d4-8df9-7bac5943d01b
-ms.openlocfilehash: 90fbab45c6408c30198c2a52a42545718002cc11
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2b7ed4733dcafda793b9a945c3f40739b52e040a
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62409886"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70220350"
 ---
-# <a name="if-elif-else-and-endif-directives-cc"></a>Direktivy #if, #elif, #else a #endif (C/C++)
+# <a name="if-elif-else-and-endif-directives-cc"></a>direktivy #if, #elif, #else a #endif (C/C++)
 
-**#If** direktiv s **#elif**, **#else**, a **#endif** direktivy, řídí sestavování částí zdrojového souboru. Pokud výraz, který píšete (po **#if**) má nenulovou hodnotu, skupina řádku bezprostředně po **#if** – direktiva se uchovávají v jednotce překladu.
+Direktiva **#if** s direktivami **#elif**, **#else**a **#endif** řídí kompilaci částí zdrojového souboru. Pokud výraz, který zapisujete (po **#if**), má nenulovou hodnotu, skupina řádků bezprostředně následující po **#if** direktivě je udržována v jednotce překladu.
 
 ## <a name="grammar"></a>Gramatika
 
-*Podmíněné* :<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*část IF části elif*<sub>optimalizované</sub> *část else*<sub>optimalizované</sub> *řádek endif*
+*podmíněné* : \
+&nbsp;&nbsp;&nbsp;&nbsp;*elif část if-* Parts <sub>výslovný souhlas</sub> *Else – část* <sub>výslovný souhlas</sub> *endif-line*
 
-*if-part* :<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*text řádku IF*
+*if-Part* : \
+&nbsp;&nbsp;&nbsp;&nbsp;*text řádku*
 
-*řádek IF* :<br/>
-&nbsp;&nbsp;&nbsp;&nbsp; **#if** *konstantního výrazu.*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp; **#ifdef** *identifikátor*<br/>
+*řádek if-line* : \
+&nbsp;&nbsp;&nbsp;&nbsp; **#if** *konstantní výraz*\
+&nbsp;&nbsp;&nbsp;&nbsp; **#ifdef** *identifikátor*\
 &nbsp;&nbsp;&nbsp;&nbsp; **#ifndef** *identifikátor*
 
-*části elif* :<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*text řádku elif*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*části elif text řádku elif*
+*elif – části* : \
+&nbsp;&nbsp;&nbsp;&nbsp;*text řádku elif*\
+&nbsp;&nbsp;&nbsp;&nbsp;*elif části elif – text řádku*
 
-*řádek elif* :<br/>
+*elif-line* : \
 &nbsp;&nbsp;&nbsp;&nbsp; **#elif** *konstantního výrazu.*
 
-*části else* :<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*text řádku else*
+*Else – část* : \
+&nbsp;&nbsp;&nbsp;&nbsp;*text v jiném řádku*
 
-*řádek else* :<br/>
+*Else-line* : \
 &nbsp;&nbsp;&nbsp;&nbsp; **#else**
 
-*řádek endif* :<br/>
+*endif-line* : \
 &nbsp;&nbsp;&nbsp;&nbsp; **#endif**
 
-Každý **#if** směrnice ve zdrojovém souboru musí mít odpovídající uzavírací **#endif** směrnice. Libovolný počet **#elif** direktivy mohou objevit mezi **#if** a **#endif** direktivy, ale jedna **#else** – direktiva je povolen. **#Else** direktiva, pokud jsou k dispozici, musí být poslední direktivou před parametrem **#endif**.
+## <a name="remarks"></a>Poznámky
 
-**#If**, **#elif**, **#else**, a **#endif** direktiv lze vnořit do jiné části textu jiné **#if**direktivy. Každá vnořená **#else**, **#elif**, nebo **#endif** směrnice patří k nejbližší předchozí **#if** směrnice.
+Každá direktiva **#if** ve zdrojovém souboru musí odpovídat uzavírací direktivě **#endif** . Mezi direktivami **#if** a **#endif** se může vyskytovat libovolný počet direktiv **#elif** , ale je povolená nejvýše jedna direktiva **#else** . Direktiva **#else** , pokud je k dispozici, musí být poslední direktivou před **#endif**.
 
-Všechny direktivy podmíněné kompilace, jako například **#if** a **#ifdef**, musí mít odpovídající uzavírací **#endif** direktivy před koncem souboru; jinak chyba zpráva je vygenerována. Když direktivy podmíněné kompilace jsou obsaženy v vkládané soubory, musí splňovat stejné podmínky: Musí existovat žádné neporovnané direktivy podmíněné kompilace na konci souboru začlenění.
+Direktivy **#if**, **#elif**, **#else**a **#endif** mohou vnořovat do *textových* částí jiných direktiv **#if** . Každá vnořená direktiva **#else**, **#elif**nebo **#endif** patří do nejbližší předchozí direktivy **#if** .
 
-Náhrada makra se provádí v rámci části příkazového řádku, který následuje **#elif** , takže volání makra lze použít v příkazu *konstantní výraz*.
+Všechny direktivy podmíněné kompilace, například **#if** a **#ifdef**, se musí shodovat s direktivou ukončení **#endif** před koncem souboru. V opačném případě se vygeneruje chybová zpráva. Pokud jsou direktivy podmíněné kompilace obsaženy v zahrnutých souborech, musí splňovat stejné podmínky: Na konci souboru include nesmí existovat žádné nespárované direktivy podmíněné kompilace.
 
-Preprocesor vybere jeden z daných výskytů *text* k dalšímu zpracování. Blok zadaný v *text* může být libovolná sekvence textu. Může zabírat více než jeden řádek. Obvykle *text* je text programu, který má význam pro kompilátor nebo preprocesor.
+Nahrazení makra je provedeno v rámci řádku, který následuje **#elif** příkaz, takže volání makra lze použít v *konstantním výrazu*.
 
-Preprocesor zpracuje vybraný *text* a předá ho kompilátoru. Pokud *text* obsahuje direktivy preprocesoru, preprocesor provádí uvedené směrnice. Kompilovány jsou pouze textové bloky vybrané preprocesorem.
+Preprocesor vybere jeden z daných výskytů *textu* pro další zpracování. Blok zadaný v *textu* může být libovolná sekvence textu. Může zabírat více než jeden řádek. Obvykle *text* je text programu, který má význam pro kompilátor nebo preprocesor.
 
-Preprocesor vybere jednu *text* položky vyhodnocením konstantního výrazu po každé **#if** nebo **#elif** směrnice, dokud nenajde true (nenulový) – Konstanta výraz. Vybere celý text (včetně ostatních pokynů preprocesoru počínaje **#** ) až po přidružený **#elif**, **#else**, nebo **#endif** .
+Preprocesor zpracuje vybraný *text* a předá ho kompilátoru. Pokud *text* obsahuje direktivy preprocesoru, preprocesor tyto směrnice provede. Kompilovány jsou pouze textové bloky vybrané preprocesorem.
 
-Pokud všechny výskyty *konstantní výraz* jsou false, nebo pokud žádná **#elif** direktivy nezobrazí, preprocesor vybere textový blok po **#else** klauzuli. Pokud **#else** klauzule je vynechána a všechny instance *konstantní výraz* v **#if** bloku jsou false, je vybrán žádný textový blok.
+Preprocesor vybere jednu položku *textu* vyhodnocením konstantního výrazu po každé **#if** nebo direktivě **#elif** , dokud nenajde konstantní (nenulový) konstantní výraz. Vybere celý text (včetně dalších direktiv **#** preprocesoru počínaje) až do jeho přidruženého **#elif**, **#else**nebo **#endif**.
 
-*Konstantního výrazu* je konstantní výraz celého čísla s těmito dalšími omezeními:
+Pokud jsou všechny výskyty *konstantního výrazu* false nebo pokud se nezobrazí žádné direktivy **#elif** , preprocesor vybere blok textu za klauzulí **#else** . Pokud není k dispozici žádná klauzule **#else** a všechny instance *konstantního výrazu* v bloku **#if** jsou false, není vybrán žádný textový blok.
 
-- Výrazy musí být integrálního typu a může obsahovat pouze celočíselné konstanty, znakové konstanty a **definované** operátor.
+*Konstantní výraz* je celočíselný konstantní výraz s těmito dodatečnými omezeními:
 
-- Výraz nemůže používat `sizeof` nebo operátor přetypování.
+- Výrazy musí být integrálního typu a můžou obsahovat jenom celočíselné konstanty, znakové konstanty a **definovaný** operátor.
 
-- Cílové prostředí nemusí být schopno představovat všechny rozsahy celých čísel.
+- Výraz nemůže být použit `sizeof` nebo operátor přetypování typu.
 
-- Překlad představuje typ **int** stejný jako typ **dlouhé**, a **unsigned int** stejný jako **unsigned long**.
+- Cílové prostředí nemusí být schopné zastupovat všechny rozsahy celých čísel.
 
-- Překladač může přeložit konstanty znaků do sady hodnot kódů odlišných od sady pro cílové prostředí. Pokud chcete určit vlastnosti cílového prostředí, zkontrolujte hodnoty maker z omezení. H v aplikaci sestavené pro cílové prostředí.
+- Překlad představuje typ **int** stejným způsobem jako typ **Long**a **unsigned int** stejným způsobem jako **bez znaménka Long**.
 
-- Výraz nesmí vydávat žádné dotazy na prostředí a musí zůstat izolovaný od podrobností implementace v cílovém počítači.
+- Překladatel může přeložit znakové konstanty na sadu hodnot kódu, které se liší od sady pro cílové prostředí. K určení vlastností cílového prostředí použijte aplikaci vytvořenou pro toto prostředí pro kontrolu hodnot *omezení. Makro H* .
 
-## <a name="defined"></a>definováno
+- Výraz nesmí být prostředím dotazu a musí zůstat izolované z podrobností implementace v cílovém počítači.
 
-Operátor preprocesoru **definované** lze použít ve speciálních výrazech konstant, jak je znázorněno v následující syntaxi:
+## <a name="preprocessor-operators"></a>Operátory preprocesoru
 
-definovaný ( `identifier` )
+### <a name="defined"></a>definováno
 
-Definice `identifier`
+**Definovaný** operátor preprocesoru lze použít ve zvláštních konstantních výrazech, jak je znázorněno v následující syntaxi:
 
-Tento konstantní výraz je považován za hodnotu true (nenulový), pokud *identifikátor* je aktuálně definován; v opačném případě je podmínka NEPRAVDA (0). Identifikátor definovaný jako prázdný text je považován za definovaný. **Definované** – direktiva je možné v **#if** a **#elif** směrnice, ale nikde jinde.
+> **definováno (** *identifikátor* **)** \
+> **definováno** *identifikátor*
 
-V následujícím příkladu **#if** a **#endif** určují direktivy kompilace jednoho ze třech volání funkce:
+Tento konstantní výraz je považován za true (nenulový), pokud je *identifikátor* aktuálně definován. V opačném případě je podmínka NEPRAVDA (0). Identifikátor definovaný jako prázdný text je považován za definovaný. **Definovaný** operátor lze použít v **#if** a direktivě **#elif** , ale nikde else.
+
+V následujícím příkladu direktivy **#if** a **#endif** řídí kompilaci jednoho ze tří volání funkce:
 
 ```C
 #if defined(CREDIT)
@@ -113,9 +116,9 @@ V následujícím příkladu **#if** a **#endif** určují direktivy kompilace j
 #endif
 ```
 
-Volání funkce `credit` se zkompiluje, pokud identifikátor `CREDIT` je definována. Pokud identifikátor `DEBIT` je definován, volání funkce `debit` je zkompilován. Pokud není definován žádný identifikátor, volání `printerror` je zkompilován. Všimněte si, že `CREDIT` a `credit` jsou odlišné identifikátory v jazyce C a C++, protože jejich případy se různí.
+Volání funkce je zkompilováno, je- `credit` li definován identifikátor. `CREDIT` Pokud je definován `DEBIT` identifikátor, `debit` volání funkce je zkompilováno. Pokud není definován žádný identifikátor, volání `printerror` je zkompilováno. A jsou odlišné identifikátory v C a, C++ protože se liší jejich případy. `credit` `CREDIT`
 
-Příkazy podmíněné kompilace v následujícím příkladu předpokládejme dříve definovaná Symbolická konstanta s názvem `DLEVEL`.
+Příkazy podmíněné kompilace v následujícím příkladu předpokládají dříve definovanou symbolický konstantu s názvem `DLEVEL`.
 
 ```C
 #if DLEVEL > 5
@@ -144,9 +147,9 @@ Příkazy podmíněné kompilace v následujícím příkladu předpokládejme d
 #endif
 ```
 
-První **#if** bloku zobrazí dvě sady vnořených **#if**, **#else**, a **#endif** direktivy. První sada směrnic je zpracována pouze v případě `DLEVEL > 5` má hodnotu true. V opačném případě příkazy po **#else** se zpracovávají.
+První blok **#if** zobrazuje dvě sady vnořených **#if**, **#else**a direktivy **#endif** . První sada direktiv je zpracována pouze v případě `DLEVEL > 5` , že má hodnotu true. Jinak se zpracují příkazy po **#else** .
 
-**#Elif** a **#else** direktivy v druhém příkladu se používají k výběru jedné ze čtyř možností na základě hodnoty z `DLEVEL`. Konstanta `STACK` je nastavena na hodnotu 0, 100 nebo 200 v závislosti na definici `DLEVEL`. Pokud `DLEVEL` je větší než 5, pak příkaz
+Direktivy **#elif** a **#else** ve druhém příkladu slouží k vytvoření jedné ze čtyř možností na základě hodnoty `DLEVEL`. Konstanta `STACK` je nastavena na 0, 100 nebo 200 v závislosti na `DLEVEL`definici. Pokud `DLEVEL` je větší než 5, pak příkaz
 
 ```C
 #elif DLEVEL > 5
@@ -155,7 +158,7 @@ display(debugptr);
 
 je zkompilován a `STACK` není definován.
 
-Běžným účelem pro podmíněné kompilace je zabránit vícenásobnému zahrnutí stejného souboru hlavičky. V jazyce C++, kde jsou třídy často definovány v souborech hlaviček, je možné k zabránění více definicím konstrukce, jako následující:
+Běžné použití pro podmíněnou kompilaci je zabránit vícenásobnému zahrnutí stejného hlavičkového souboru. V C++, kde jsou třídy často definovány v hlavičkových souborech, lze pomocí tohoto typu zabránit více definicím:
 
 ```cpp
 /*  EXAMPLE.H - Example header file  */
@@ -164,17 +167,17 @@ Běžným účelem pro podmíněné kompilace je zabránit vícenásobnému zahr
 
 class Example
 {
-...
+    //...
 };
 
 #endif // !defined( EXAMPLE_H )
 ```
 
-Předchozí kód zkontroluje, zda Symbolická konstanta `EXAMPLE_H` je definována. Pokud ano, soubor již byl součástí a nemusí být přepracován. Pokud ne, konstanta `EXAMPLE_H` je definována k označení příklad. H jako již zpracovaného.
+Předchozí kód zkontroluje, zda je symbolická konstanta `EXAMPLE_H` definována. Pokud ano, soubor již byl zahrnut a nepotřebuje znovu zpracovat. V takovém případě je `EXAMPLE_H` konstanta definována jako příklad. H, jak již bylo zpracováno.
 
-## <a name="hasinclude"></a>__has_include
+### <a name="__has_include"></a>__has_include
 
-**Visual Studio 2017 verze 15.3 nebo novější**:  Určuje, zda je k dispozici pro zahrnutí hlavičku knihovny:
+**Visual Studio 2017 verze 15,3 a novější**:  Určuje, zda je k dispozici hlavička knihovny pro zahrnutí:
 
 ```cpp
 #ifdef __has_include
@@ -193,4 +196,4 @@ Předchozí kód zkontroluje, zda Symbolická konstanta `EXAMPLE_H` je definová
 
 ## <a name="see-also"></a>Viz také:
 
-[Preprocesor – direktivy](../preprocessor/preprocessor-directives.md)
+[Direktivy preprocesoru](../preprocessor/preprocessor-directives.md)

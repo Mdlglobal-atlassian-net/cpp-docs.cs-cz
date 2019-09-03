@@ -1,6 +1,6 @@
 ---
 title: __stosd
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - __stosd
 helpviewer_keywords:
@@ -8,57 +8,57 @@ helpviewer_keywords:
 - rep stosd instruction
 - __stosd intrinsic
 ms.assetid: 03104247-1cea-49f6-b6f8-287917bf5680
-ms.openlocfilehash: 43a0efcfb94b7e53dacec16caccdacf86a96f5bb
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c46bb124390ff23d79361c66530493c48faf3f0a
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62390253"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70219977"
 ---
-# <a name="stosd"></a>__stosd
+# <a name="__stosd"></a>__stosd
 
-**Microsoft Specific**
+**Specifické pro společnost Microsoft**
 
-Generuje instrukce řetězec úložiště (`rep stosd`).
+Vygeneruje instrukci řetězce úložiště`rep stosd`().
 
 ## <a name="syntax"></a>Syntaxe
 
-```
+```C
 void __stosd(
-   unsigned long* Dest,
+   unsigned long* Destination,
    unsigned long Data,
    size_t Count
 );
 ```
 
-#### <a name="parameters"></a>Parametry
+### <a name="parameters"></a>Parametry
 
-*cíl*<br/>
-[out] Cíl operace.
+*Tabulka*\
+mimo Cíl operace.
 
-*Data*<br/>
-[in] Data k uložení.
+*Údajů*\
+pro Data, která se mají uložit
 
-*Počet*<br/>
-[in] Délka bloku x doubleword k zápisu.
+*Výpočtu*\
+pro Délka bloku doubleword, který se má zapsat
 
 ## <a name="requirements"></a>Požadavky
 
-|Vnitřní|Architektura|
+|Vnitřním|Architektura|
 |---------------|------------------|
 |`__stosd`|x86, x64|
 
-**Soubor hlaviček** \<intrin.h >
+**Hlavičkový soubor** \<intrin. h >
 
 ## <a name="remarks"></a>Poznámky
 
-Výsledkem je, že doubleword `Data` je zapsán do bloku `Count` x doubleword v umístění v paměti na které odkazuje `Dest`.
+Výsledkem je, že doubleword *data* jsou zapsána do bloku *Count* doubleword v umístění v paměti, na které odkazuje *cíl*.
 
 Tato rutina je k dispozici pouze jako vnitřní objekt.
 
 ## <a name="example"></a>Příklad
 
-```
+```C
 // stosd.c
 // processor: x86, x64
 
@@ -85,8 +85,8 @@ printf_s( "%u %u %u %u",
 0 99999 99999 0
 ```
 
-**Specifické pro END Microsoft**
+**Specifické pro konec Microsoftu**
 
 ## <a name="see-also"></a>Viz také:
 
-[Vnitřní funkce kompilátoru](../intrinsics/compiler-intrinsics.md)
+[Vnitřní objekty kompilátoru](../intrinsics/compiler-intrinsics.md)

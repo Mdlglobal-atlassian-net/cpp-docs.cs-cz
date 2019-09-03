@@ -1,38 +1,38 @@
 ---
 title: _ReturnAddress
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - _ReturnAddress
 helpviewer_keywords:
 - _ReturnAddress intrinsic
 - ReturnAddress intrinsic
 ms.assetid: 7f4a5811-35e6-4f64-ba7c-21203380eeda
-ms.openlocfilehash: e5013b20f9e7ed0349d940d9be61cc1b4afc95d4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2a830ff1e8a2c9551dec52cf10a3d5cf126bde3b
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62390448"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70218056"
 ---
-# <a name="returnaddress"></a>_ReturnAddress
+# <a name="_returnaddress"></a>_ReturnAddress
 
-## <a name="microsoft-specific"></a>Specifické pro Microsoft
+**Specifické pro společnost Microsoft**
 
-`_ReturnAddress` Vnitřní poskytuje adresu podle pokynů ve volání funkce, která se spustí po ovládací prvek vrátí volajícímu.
+`_ReturnAddress` Vnitřní poskytuje adresu instrukcí ve funkci volání, která bude provedena po návratu ovládacího prvku volajícímu.
 
-Vytvářejte následující program a procházet ji krok v ladicím programu. Jak krokovat programem, poznamenejte si adresu, která je vrácena z `_ReturnAddress`. Pak ihned po vrácení z funkce, kde `_ReturnAddress` byl použit, otevřete [jak: Použití okna zpětného překladu](/visualstudio/debugger/how-to-use-the-disassembly-window) a Všimněte si, že adresa má být proveden další pokyn odpovídá adrese vrácená `_ReturnAddress`.
+Sestavte následující program a proveďte jeho krok v ladicím programu. Při procházení programu si poznamenejte adresu, která je vrácena z `_ReturnAddress`. Potom hned po návratu z funkce, kde `_ReturnAddress` byla použita, [otevřete postup: Použijte okno](/visualstudio/debugger/how-to-use-the-disassembly-window) zpětný překlad a Všimněte si, že adresa další instrukce, která se má provést, se shoduje s adresou `_ReturnAddress`vrácenou z.
 
-Optimalizace, například vkládání může mít vliv na návratovou adresu. Například, pokud je uvedený ukázkový program kompilován [/Ob1](../build/reference/ob-inline-function-expansion.md), `inline_func` budou vloženy do volání funkce `main`. Proto volání `_ReturnAddress` z `inline_func` a `main` bude každý vytváří stejnou hodnotu.
+Tato zpáteční adresa může mít vliv na optimalizace, jako je například vkládání. Například pokud je ukázkový program kompilován pomocí [/OB1](../build/reference/ob-inline-function-expansion.md), `inline_func` bude vložen do volání funkce, `main`. Proto volání `_ReturnAddress` z `inline_func` a `main` budou každé vracet stejnou hodnotu.
 
-Když `_ReturnAddress` se používá v programu kompilovaného s [/CLR](../build/reference/clr-common-language-runtime-compilation.md), funkce obsahující `_ReturnAddress` volání se zkompilovat jako nativní funkce. Když funkci zkompilovat jako spravovaná volání do funkce obsahující `_ReturnAddress`, `_ReturnAddress` nemusí chovat dle očekávání.
+Při `_ReturnAddress` použití v programu zkompilovaném pomocí [/CLR](../build/reference/clr-common-language-runtime-compilation.md)bude funkce obsahující `_ReturnAddress` volání zkompilována jako nativní funkce. Pokud je funkce kompilována jako spravovaná volání do funkce obsahující `_ReturnAddress`, `_ReturnAddress` nemusí chovat podle očekávání.
 
 ## <a name="requirements"></a>Požadavky
 
-**Soubor hlaviček** \<intrin.h >
+**Hlavičkový soubor** \<intrin. h >
 
 ## <a name="example"></a>Příklad
 
-```
+```cpp
 // compiler_intrinsics__ReturnAddress.cpp
 #include <stdio.h>
 #include <intrin.h>
@@ -61,10 +61,10 @@ int main(void)
 }
 ```
 
-**Specifické pro END Microsoft**
+**Specifické pro konec Microsoftu**
 
 ## <a name="see-also"></a>Viz také:
 
-[_AddressOfReturnAddress](../intrinsics/addressofreturnaddress.md)<br/>
-[Vnitřní funkce kompilátoru](../intrinsics/compiler-intrinsics.md)<br/>
+[_AddressOfReturnAddress](../intrinsics/addressofreturnaddress.md)\
+[Vnitřní objekty kompilátoru](../intrinsics/compiler-intrinsics.md)\
 [Klíčová slova](../cpp/keywords-cpp.md)

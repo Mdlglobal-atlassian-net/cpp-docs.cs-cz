@@ -1,40 +1,38 @@
 ---
-title: rename_search_namespace
-ms.date: 10/18/2018
+title: importovat atribut rename_search_namespace
+ms.date: 08/29/2019
 f1_keywords:
 - rename_search_namespace
 helpviewer_keywords:
 - rename_search_namespace attribute
 ms.assetid: 47c9d7fd-59dc-4c62-87a1-9011a0040167
-ms.openlocfilehash: ca5d24ca9cc12e9defaa395cf150bc3c04ee4439
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 42c6edb6aa34b441db8041dd2974728c138b2c82
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62179773"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70216631"
 ---
-# <a name="renamesearchnamespace"></a>rename_search_namespace
+# <a name="rename_search_namespace-import-attribute"></a>importovat atribut rename_search_namespace
 
-**Specifické pro C++**
+**C++Konkrétní**
 
-Má stejné funkce jako [rename_namespace](../preprocessor/rename-namespace.md) atribut, ale je použita v knihovnách typů, které používáte `#import` s [auto_search –](../preprocessor/auto-search.md) atribut.
+Má stejné funkce jako atribut [rename_namespace](../preprocessor/rename-namespace.md) , ale používá se v knihovnách typů, kde `#import` direktivu použijete spolu s atributem [auto_search](../preprocessor/auto-search.md) .
 
 ## <a name="syntax"></a>Syntaxe
 
-```
-rename_search_namespace("NewName")
-```
+> **#import** *typ – Knihovna* **rename_search_namespace (** "*newname*" **)**
 
 ### <a name="parameters"></a>Parametry
 
-*NewName*<br/>
+*Nového*\
 Nový název oboru názvů.
 
 ## <a name="remarks"></a>Poznámky
 
-**Specifické pro END C++**
+**Specifické C++ pro konec**
 
 ## <a name="see-also"></a>Viz také:
 
-[atributů #import](../preprocessor/hash-import-attributes-cpp.md)<br/>
-[#import – direktiva](../preprocessor/hash-import-directive-cpp.md)
+[Atributy #import](../preprocessor/hash-import-attributes-cpp.md)\
+[#import direktiva](../preprocessor/hash-import-directive-cpp.md)

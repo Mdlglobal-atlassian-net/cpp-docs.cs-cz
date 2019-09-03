@@ -1,6 +1,6 @@
 ---
 title: _InterlockedAddLargeStatistic
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - _InterlockedAddLargeStatistic
 - _InterlockedAddLargeStatistic_cpp
@@ -8,35 +8,35 @@ helpviewer_keywords:
 - _InterlockedAddLargeStatistic intrinsic
 - InterlockedAddLargeStatistic intrinsic
 ms.assetid: 2802e74b-bcee-46e4-b562-894908d44409
-ms.openlocfilehash: 6f9d599a8d7668c6c8a37846275e8338002589d1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: de8c5b7dfd2462dddcb98324ebacc44c8148d85e
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62349485"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70222086"
 ---
-# <a name="interlockedaddlargestatistic"></a>_InterlockedAddLargeStatistic
+# <a name="_interlockedaddlargestatistic"></a>_InterlockedAddLargeStatistic
 
-**Microsoft Specific**
+**Specifické pro společnost Microsoft**
 
-Provádí doplněk interlocked, ve které je první operand hodnotu 64-bit.
+Provede propojené přizpůsobování, ve kterém první operand je 64 hodnota.
 
 ## <a name="syntax"></a>Syntaxe
 
-```
+```C
 long _InterlockedAddLargeStatistic(
    __int64 volatile * Addend,
    long Value
 );
 ```
 
-#### <a name="parameters"></a>Parametry
+### <a name="parameters"></a>Parametry
 
-*Sčítanec*<br/>
-[out v] Ukazatel na první operand operace přidání. Hodnota, na které je nahrazena výsledek součtu.
+*Sčítanec*\
+[in, out] Ukazatel na první operand operace přidání. Hodnota, na kterou se odkazuje, je nahrazena výsledkem přidání.
 
-*Hodnota*<br/>
-[in] Druhý operand. Hodnota k přidání prvního operandu.
+*Osa*\
+pro Druhý operand; hodnota, která se má přidat do prvního operandu.
 
 ## <a name="return-value"></a>Návratová hodnota
 
@@ -44,21 +44,21 @@ Hodnota druhého operandu.
 
 ## <a name="requirements"></a>Požadavky
 
-|Vnitřní|Architektura|
+|Vnitřním|Architektura|
 |---------------|------------------|
 |`_InterlockedAddLargeStatistic`|x86|
 
-**Soubor hlaviček** \<intrin.h >
+**Hlavičkový soubor** \<intrin. h >
 
 ## <a name="remarks"></a>Poznámky
 
-Tomto vnitřní není atomic vzhledem k tomu, že je implementován jako dva samostatné uzamčené pokyny. Atomic čtení 64-bit, nacházející se na jiné vlákno během provádění této vnitřní může vést čtených hodnot.
+`_InterlockedAddLargeStatistic` Vnitřní operace není atomická, protože je implementována jako dvě samostatné uzamčené instrukce. Atomová 64 čtení, ke kterému dochází v jiném vlákně během provádění vnitřního, může způsobit čtení nekonzistentní hodnoty.
 
-Tato funkce se chová jako překážku pro čtení i zápis. Další informace najdete v tématu [_ReadWriteBarrier](../intrinsics/readwritebarrier.md).
+`_InterlockedAddLargeStatistic`chová se jako bariéra pro čtení i zápis. Další informace najdete v tématu [_ReadWriteBarrier](../intrinsics/readwritebarrier.md).
 
-**Specifické pro END Microsoft**
+**Specifické pro konec Microsoftu**
 
 ## <a name="see-also"></a>Viz také:
 
-[Vnitřní funkce kompilátoru](../intrinsics/compiler-intrinsics.md)<br/>
+[Vnitřní objekty kompilátoru](../intrinsics/compiler-intrinsics.md)\
 [Konflikty s kompilátorem x86](../build/x64-software-conventions.md#conflicts-with-the-x86-compiler)

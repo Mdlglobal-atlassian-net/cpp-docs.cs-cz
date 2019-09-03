@@ -1,20 +1,20 @@
 ---
 title: _div64
-ms.date: 04/17/2019
+ms.date: 09/02/2019
 f1_keywords:
 - _div64
 helpviewer_keywords:
 - _div64 intrinsic
-ms.openlocfilehash: a221cc7cf0655a41873c6777aecd8a9b27131b74
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1d05c5d6e25540a5de1b2f8231697c9a738759ce
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62264111"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70216772"
 ---
-# <a name="div64"></a>_div64
+# <a name="_div64"></a>_div64
 
-`_div64` Vnitřní rozděluje 64bitové celé číslo pomocí 32bitové celé číslo. Návratová hodnota obsahuje podíl a vnitřní Vrátí zbytek prostřednictvím parametru ukazatele. `_div64` je **specifické pro Microsoft**.
+`_div64` Vnitřní dělí 64 celé číslo na 32 celé číslo. Vrácená hodnota drží podíl a vnitřní Vrátí zbytek prostřednictvím parametru ukazatele. `_div64`je **specifická pro společnost Microsoft**.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -29,31 +29,31 @@ int _div64(
 ### <a name="parameters"></a>Parametry
 
 *podíl* \
-[in] 64bitové celé číslo se má dělit.
+pro 64 celé číslo, které se má rozdělit.
 
 *dělitel* \
-[in] 32bitové celé číslo k rozdělení.
+pro 32 celé číslo, které se má rozdělit.
 
-*Zbývající* \
-[out] 32bitové celé číslo bity zbytek.
+*Hledáte* \
+mimo 32 celé číslo bitů zbytku.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-32 bitů podíl.
+32 bitů podílu.
 
 ## <a name="remarks"></a>Poznámky
 
-`_div64` Vnitřní rozdělí *dělenec* podle *dělitel*. Zbývající ukládá 32bitové celé číslo, na které odkazuje *zbývající*a vrátí 32 bitů podíl.
+Vnitřní dělí dělenec dělitelem. `_div64` Ukládá zbytek v 32 celé číslo, na které ukazuje *zbytek*, a vrátí 32 bitů podílu.
 
-`_div64` Vnitřní je k dispozici od verze Visual Studio. 2019 RTM.
+`_div64` Vnitřní verze je k dispozici počínaje verzí Visual Studio 2019 RTM.
 
 ## <a name="requirements"></a>Požadavky
 
-|Vnitřní|Architektura|Záhlaví|
+|Vnitřním|Architektura|Záhlaví|
 |---------------|------------------|------------|
 |`_div64`|x86, x64|\<immintrin.h>|
 
 ## <a name="see-also"></a>Viz také:
 
 [_udiv64](udiv64.md) \
-[Vnitřní funkce kompilátoru](compiler-intrinsics.md)
+[Vnitřní objekty kompilátoru](compiler-intrinsics.md)

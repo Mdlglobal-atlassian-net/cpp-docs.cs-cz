@@ -1,6 +1,6 @@
 ---
-title: '#Chyba – direktiva (C++)'
-ms.date: 11/04/2016
+title: '#error – direktiva (C/C++)'
+ms.date: 08/29/2019
 f1_keywords:
 - '#error'
 helpviewer_keywords:
@@ -8,27 +8,26 @@ helpviewer_keywords:
 - preprocessor, directives
 - error directive (#error directive)
 ms.assetid: d550a802-ff19-4347-9597-688935d23b2b
-ms.openlocfilehash: dc229a8eae6938cba32787ecbec6a5aa6a17ab47
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: bfb5c18f20319e6e6d345f28d3e1850714334b71
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62383982"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70216118"
 ---
-# <a name="error-directive-cc"></a>#error – direktiva (C++)
-**#Error** – direktiva generuje zadané uživatelem chybovou zprávu v době kompilace a ukončí kompilace.
+# <a name="error-directive-cc"></a>#error direktiva (CC++/)
+
+Direktiva **#error** emituje uživatelem zadanou chybovou zprávu v době kompilace a pak ukončí kompilaci.
 
 ## <a name="syntax"></a>Syntaxe
 
-```
-#errortoken-string
-```
+> **#error** *token – řetězec*
 
 ## <a name="remarks"></a>Poznámky
 
-Obsahuje chybovou zprávu, která tato direktiva generuje *řetězci tokenu* parametru. *Řetězci tokenu* parametr není řídí podle rozšíření makra. Tato direktiva je nejužitečnější při předběžném zpracování oznamujících developer program nekonzistence nebo porušení omezení. Následující příklad ukazuje Chyba při zpracování během předběžného zpracování:
+Chybová zpráva, kterou tato direktiva generuje, zahrnuje parametr *řetězce tokenu* . Parametr *řetězce tokenu* nepodléhá rozšíření makra. Tato direktiva je nejužitečnější během předběžného zpracování, která upozorní vývojáře na nekonzistenci programu nebo porušení omezení. Následující příklad ukazuje zpracování chyb během předběžného zpracování:
 
-```
+```cpp
 #if !defined(__cplusplus)
 #error C++ compiler required.
 #endif
@@ -36,4 +35,4 @@ Obsahuje chybovou zprávu, která tato direktiva generuje *řetězci tokenu* par
 
 ## <a name="see-also"></a>Viz také:
 
-[Preprocesor – direktivy](../preprocessor/preprocessor-directives.md)
+[Direktivy preprocesoru](../preprocessor/preprocessor-directives.md)

@@ -1,26 +1,26 @@
 ---
-title: Variadická makra
-ms.date: 11/04/2016
+title: Makra variadické
+ms.date: 08/29/2019
 helpviewer_keywords:
 - variadic macros [C++]
 - __VA_ARGS__ variadic macro specifier
 ms.assetid: 51e757dc-0134-4bb2-bb74-64ea5ad75134
-ms.openlocfilehash: da159ef979ccc38845064debebae55356bc9e9bd
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 171ea797adc1e407a8b7ef0592508653f758df64
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62179566"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70216519"
 ---
-# <a name="variadic-macros"></a>Variadická makra
+# <a name="variadic-macros"></a>Makra variadické
 
 Makra variadic jsou makra podobná funkcím, které obsahují proměnný počet argumentů.
 
 ## <a name="remarks"></a>Poznámky
 
-Chcete-li použít makra variadic, lze zadat tři tečky jako poslední formální argument v definici makra a identifikátor nahrazení `__VA_ARGS__` může použít v definici pro vložení dalších argumentů.  `__VA_ARGS__` je nahrazen všemi argumenty, které odpovídají třem tečkám, včetně čárek mezi nimi.
+Chcete-li použít makra variadické, mohou být tři tečky zadány jako konečný formální argument v definici makra a identifikátor `__VA_ARGS__` nahrazení lze použít v definici pro vložení dalších argumentů.  `__VA_ARGS__`je nahrazen všemi argumenty, které se shodují se třemi tečkami, včetně čárky mezi nimi.
 
-Standard C určuje, že třem tečkám musí být předán alespoň jeden argument, aby se makro nepřekládalo na výraz s koncovou čárkou.  Implementace jazyka Visual C++ potlačí koncovou čárku, pokud nejsou třem tečkám předány žádné argumenty.
+Standard jazyka C určuje, že se třemi tečkami musí být předán alespoň jeden argument, aby bylo zajištěno, že makro nebude přeloženo na výraz s koncovou čárkou. Tradiční implementace společnosti C++ Microsoft potlačuje koncovou čárku, pokud se tři tečky nepředávají žádné argumenty.
 
 ## <a name="example"></a>Příklad
 

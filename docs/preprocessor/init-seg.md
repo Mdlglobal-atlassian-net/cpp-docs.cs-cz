@@ -1,6 +1,6 @@
 ---
-title: init_seg
-ms.date: 11/04/2016
+title: init_seg – direktiva pragma
+ms.date: 08/29/2019
 f1_keywords:
 - vc-pragma.init_seg
 - init_seg_CPP
@@ -9,69 +9,69 @@ helpviewer_keywords:
 - init_seg pragma
 - data segment initializing [C++]
 ms.assetid: 40a5898a-5c85-4aa9-8d73-3d967eb13610
-ms.openlocfilehash: 801496739fd9bd2b8a14e699ca4da9fe79f3a28d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5e57ea0eedfc1df6e196391c5edd3acfbad0a7c7
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62383708"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70221001"
 ---
-# <a name="initseg"></a>init_seg
+# <a name="init_seg-pragma"></a>init_seg – direktiva pragma
 
-**Specifické pro C++**
+**C++Konkrétní**
 
-Určuje část – klíčové slovo nebo kód, který má vliv pořadí spuštění po spuštění kódu.
+Určuje klíčové slovo nebo oddíl kódu, který má vliv na pořadí, ve kterém je spuštěn spouštěcí kód.
 
 ## <a name="syntax"></a>Syntaxe
 
-```
-#pragma init_seg({ compiler | lib | user | "section-name" [, func-name]} )
-```
+> **#pragma init_seg (** { **Compiler** | **lib** | **User** | "*název oddílu*" [ **,** *Func-Name* ]} **)**
 
 ## <a name="remarks"></a>Poznámky
 
-Významy pojmů *segmentu* a *části* jsou v tomto tématu zaměnitelné.
+Pojem *segment* a *oddíl* má stejný význam jako v tomto článku.
 
-Inicializace globálních statických objektů může zahrnovat provádění kódu, a proto je nutné zadat klíčové slovo, který definuje, kdy jsou objekty byly konstruovány. Je zvláště důležité pro použití **init_seg –** direktivy pragma v dynamické knihovny (DLL) nebo nutnosti inicializace knihovny.
+Vzhledem k tomu, že kód je někdy vyžadován k inicializaci globálních statických objektů, je nutné určit, kdy vytvořit objekty. Konkrétně je důležité použít direktivu pragma **init_seg** v knihovnách DLL (Dynamic-Link Library) nebo v knihovnách, které vyžadují inicializaci.
 
-Možnosti **init_seg –** – Direktiva pragma jsou:
+Možnosti direktivy pragma **init_seg** jsou:
 
-*compiler*<br/>
-Vyhrazeno pro inicializaci knihovny run-time C společnosti Microsoft. Objekty v této skupině jsou vytvořeny jako první.
+**přepínač**\
+Vyhrazeno pro inicializaci knihovny runtime jazyka C společnosti Microsoft. Objekty v této skupině jsou konstruovány jako první.
 
-*lib*<br/>
-K dispozici pro třídy knihovny třetí strany dodavatelů inicializace. Objekty v této skupině jsou vytvořeny po těch označen jako *kompilátoru* , ale před všechny ostatní.
+**Knihovna**\
+K dispozici pro inicializace výrobců tříd třetích stran. Objekty v této skupině jsou konstruovány po označení jako **kompilátor**, ale před všemi ostatními.
 
-*Uživatel*<br/>
-Přístupné všem uživatelům. Objekty v této skupině jsou vytvořeny jako poslední.
+**uživatelský**\
+K dispozici pro libovolného uživatele. Objekty v této skupině jsou vytvářeny jako poslední.
 
-*Název oddílu* umožňuje explicitní specifikaci části inicializace. Objekty v zadané uživatelem *název oddílu* nejsou implicitně vytvořený, ale jejich adresy jsou umístěné v části s názvem podle *název oddílu*.
+*název oddílu*\
+Umožňuje explicitní určení oddílu inicializace. Objekty v uživatelsky definovaném *oddílu – název* nejsou implicitně sestaveny. Jejich adresy se ale nacházejí v části s názvem podle *názvu oddílu*.
 
-Dáte název oddílu, který bude obsahovat ukazatele na funkce pomocné rutiny, které vytvoří globální objekty deklarované v tomto modulu za direktivou.
+*Název oddílu* , který udělíte, bude obsahovat odkazy na pomocné funkce, které vytvoří globální objekty deklarované po direktivě pragma v tomto modulu.
 
-Seznam názvů byste neměli používat při tvorbě oddílu, naleznete v tématu [/SECTION](../build/reference/section-specify-section-attributes.md).
+Seznam názvů, které byste neměli používat při vytváření oddílu, najdete v tématu [/Section](../build/reference/section-specify-section-attributes.md).
 
-*Název Func* určuje funkci, která se má volat místo `atexit` při ukončení programu. Tato pomocná funkce také voláním [atexit](../c-runtime-library/reference/atexit.md) s ukazatelem na destruktor pro globální objekt. Pokud zadáte identifikátor funkce – Direktiva pragma formuláře
+*Func-Name*\
+Určuje funkci, která bude volána místo `atexit` při ukončení programu. Tato pomocná funkce také volá [atexit](../c-runtime-library/reference/atexit.md) s ukazatelem na destruktor pro globální objekt. Pokud zadáte identifikátor funkce v direktivě pragma formuláře,
 
 ```cpp
 int __cdecl myexit (void (__cdecl *pf)(void))
 ```
 
-pak zavolá se funkce namísto knihovny run-time C `atexit`. To umožňuje sestavit seznam destruktory, které budou muset být volána, když budete chtít zničit objekty.
+pak bude funkce volána místo knihovny `atexit`run-time jazyka C. Umožňuje vytvořit seznam destruktorů, které mají být volány, až budete připraveni na zničení objektů.
 
-Pokud potřebujete odložení inicializace (například v knihovně DLL) můžete zadat název oddílu, který explicitně. Konstruktory musíte pak zavolat pro každý statických objektů.
+Pokud potřebujete odložit inicializaci (například v knihovně DLL), můžete se rozhodnout zadat název oddílu explicitně. Váš kód musí následně volat konstruktory pro každý statický objekt.
 
-Neexistují žádné uvozovky kolem identifikátor `atexit` nahrazení.
+Neexistují žádné uvozovky kolem identifikátoru pro `atexit` nahrazení.
 
-Objekty budou stále umístěny v části určené jiných XXX_seg direktivy pragma.
+Vaše objekty budou stále umístěny v oddílech definovaných jinými `XXX_seg` direktivami pragma.
 
-Objekty, které jsou deklarovány v modulu nebude automaticky inicializován pomocí C run-time. Je potřeba udělat tento sami.
+Objekty, které jsou deklarovány v modulu, nejsou automaticky inicializovány modulem runtime jazyka C. Váš kód musí provést inicializaci.
 
-Ve výchozím nastavení `init_seg` oddíly jsou jen pro čtení. Pokud je název oddílu. CRT, kompilátor tiše změní atribut jen pro čtení, i když je určen pro čtení, zápis.
+Ve výchozím nastavení `init_seg` jsou oddíly jen pro čtení. Pokud je `.CRT`název oddílu, kompilátor tiše změní atribut jen pro čtení, a to i v případě, že je označený jako Read a Write.
 
-Nelze zadat **init_seg –** více než jednou v jednotce překladu.
+V jednotce překladu nemůžete zadat **init_seg** více než jednou.
 
-I v případě, že váš objekt nemá žádné uživatelem definovaný konstruktor, konstruktor nejsou explicitně definovány v kódu, kompilátor může vygenerovat (například pro vazbu ukazatele v tabulce). Váš kód bude mít tudíž volat konstruktor vygenerovaný kompilátorem.
+I v případě, že váš objekt nemá uživatelem definovaný konstruktor, který je explicitně definován v kódu, kompilátor může vygenerovat jeden za vás. Například může vytvořit jednu pro svázání ukazatelů v tabulce. V případě potřeby váš kód volá konstruktor generovaný kompilátorem.
 
 ## <a name="example"></a>Příklad
 
@@ -156,4 +156,4 @@ A()
 
 ## <a name="see-also"></a>Viz také:
 
-[Direktivy Pragma a klíčové slovo __Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)
+[Direktivy pragma a klíčové slovo __pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

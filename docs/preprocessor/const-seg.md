@@ -1,6 +1,6 @@
 ---
-title: const_seg
-ms.date: 09/17/2018
+title: const_seg – direktiva pragma
+ms.date: 08/29/2019
 f1_keywords:
 - vc-pragma.const_seg
 - const_seg_CPP
@@ -8,50 +8,52 @@ helpviewer_keywords:
 - pragmas, const_seg
 - const_seg pragma
 ms.assetid: 1eb58ee2-fb0e-4a39-9621-699c8f5ef957
-ms.openlocfilehash: c58f154f5e1ab6906b45d59f454a7dc2b5c0bfbe
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 845583889eb922ba97d145eefe6bca280a83817b
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62366586"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70220429"
 ---
-# <a name="constseg"></a>const_seg
-Určuje segment kde [const](../cpp/const-cpp.md) proměnné, které jsou uloženy v souboru .obj.
+# <a name="const_seg-pragma"></a>const_seg – direktiva pragma
+
+Určuje oddíl (segment), kde jsou uloženy [konstantní](../cpp/const-cpp.md) proměnné v souboru objektu (. obj).
 
 ## <a name="syntax"></a>Syntaxe
 
-```
-#pragma const_seg ( [ [ { push | pop}, ] [ identifier, ] ] [ "segment-name" [, "segment-class" ] )
-```
+> **#pragma const_seg (** ["*název oddílu*" [ **,** "*oddíl-Class*"]] **)** \
+> **#pragma const_seg (** { **push** | **POP** } [ **,** *identifikátor* ] [ **,** "*oddíl-Name*" [ **;** "*Class-Class*"]] **)**
 
 ### <a name="parameters"></a>Parametry
 
-**push**<br/>
-(Volitelné) Vloží záznam do zásobníku vnitřního kompilátoru. A **nabízených** může mít *identifikátor* a *segment-name*.
+**replik**\
+Volitelné Vloží záznam do interního zásobníku kompilátoru. **Nabízení oznámení** může mít *identifikátor* a *název oddílu*.
 
-**pop**<br/>
-(Volitelné) Odstraní záznam z vrcholu vnitřního zásobníku kompilátoru.
+**výstrah**\
+Volitelné Odebere záznam z vrcholu vnitřního zásobníku kompilátoru. **POP** může mít *identifikátor* a *název oddílu*. Pomocí jednoho příkazu **POP** můžete v rámci identifikátoru otevřít více záznamů. Název *oddílu* se po zobrazení pop zobrazí jako aktivní název oddílu const.
 
-*identifier*<br/>
-(Volitelné) Při použití s **nabízených**, přiřadí název záznamu ve vnitřním zásobníku kompilátoru. Při použití s **pop**, vyjme všechny záznamy z vnitřního zásobníku až do *identifikátor* li *identifikátor* nebyl nalezen v interním zásobníku, nic nevezme.
+*RID*\
+Volitelné Při použití s **nabízenou**sadou přiřadí název záznamu v interním zásobníku kompilátoru. Při použití s **POP**direktiva vyřadí záznamy z vnitřního zásobníku, dokud se neodebere *identifikátor* . Pokud *identifikátor* není v interním zásobníku nalezen, nic není vybráno.
 
-Pomocí *identifikátor* vyjmout několik záznamů lze jedním z jedné **pop** příkazu.
+"*název oddílu*" \
+Volitelné Název oddílu. Při použití s **bodem POP**se zásobník odstará a *název oddílu* se zobrazí jako aktivní název oddílu const.
 
-"*segment-name*"<br/>
-(Volitelné) Název segmentu. Při použití s **pop**, je zásobník odebrán a *segment-name* stane aktivním názvem segmentu.
-
-"*segment-class*"<br/>
-(Volitelné) Zahrnuto z důvodu kompatibility s jazykem C++ starším než verze 2.0. Ignorováno.
+"*oddíl-Class*" \
+Volitelné Ignoruje se, ale je součástí kompatibility s verzemi C++ Microsoftu staršími než verze 2,0.
 
 ## <a name="remarks"></a>Poznámky
 
-Významy pojmů *segmentu* a *části* jsou v tomto tématu zaměnitelné.
+*Oddíl* v souboru objektu je pojmenovaný blok dat, který je načten do paměti jako jednotka. *Oddíl const* je oddíl, který obsahuje konstantní data. V tomto článku mají *segment* a *oddíl* stejný význam.
 
-Soubory OBJ lze zobrazit pomocí [dumpbin](../build/reference/dumpbin-command-line.md) aplikace. Výchozím segmentem v souboru obj `const` proměnné je segment .rdata. Některé `const` proměnných, například skaláry, jsou automaticky vloženy do kódu. Vložený kód se v segmentu .rdata nezobrazí.
+Direktiva pragma **const_seg** instruuje kompilátor, aby všechny konstantní datové položky z jednotky překladu do oddílu const s názvem *section-name*. Výchozí oddíl v souboru objektu pro proměnné const je. `.rdata` Některé proměnné const, například skalární, jsou automaticky vloženy do datového proudu kódu. Vložená kód se nezobrazuje v `.rdata`. Direktiva pragma **const_seg** bez parametru *názvu oddílu* obnoví název oddílu pro následné **konstantní** datové položky na `.rdata`.
 
-Definování vyžadující dynamická inicializace v objektu `const_seg` způsobí nedefinované chování.
+Definujete-li objekt, který vyžaduje dynamickou inicializaci `const_seg`v, je výsledkem nedefinované chování.
 
-`#pragma const_seg` bez parametrů obnoví segment .rdata.
+Seznam názvů, které se nedají použít k vytvoření oddílu, najdete v tématu [/Section](../build/reference/section-specify-section-attributes.md).
+
+Můžete také zadat oddíly pro inicializovaná data ([data_seg](../preprocessor/data-seg.md)), neinicializovaná data ([bss_seg](../preprocessor/bss-seg.md)) a funkce ([code_seg](../preprocessor/code-seg.md)).
+
+Můžete použít [DUMPBIN. Aplikace EXE](../build/reference/dumpbin-command-line.md) pro zobrazení souborů objektů. Verze nástroje DUMPBIN pro každou podporovanou cílovou architekturu je součástí sady Visual Studio.
 
 ## <a name="example"></a>Příklad
 
@@ -89,12 +91,6 @@ test3
 test4
 ```
 
-## <a name="comments"></a>Komentáře
-
-Zobrazit [/SECTION](../build/reference/section-specify-section-attributes.md) seznam názvů byste neměli používat při tvorbě oddílu.
-
-Můžete také určit oddíly pro inicializovaná data ([data_seg](../preprocessor/data-seg.md)), neinicializovaná data ([bss_seg](../preprocessor/bss-seg.md)) a funkce ([code_seg](../preprocessor/code-seg.md)).
-
 ## <a name="see-also"></a>Viz také:
 
-[Direktivy Pragma a klíčové slovo __Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)
+[Direktivy pragma a klíčové slovo __pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

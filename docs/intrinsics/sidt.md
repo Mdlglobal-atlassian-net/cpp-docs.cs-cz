@@ -1,52 +1,51 @@
 ---
 title: __sidt
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - __sidt
 helpviewer_keywords:
 - sidt instruction
 - __sidt intrinsic
 ms.assetid: 01e83d14-6e63-4dea-8f64-5a0339d69641
-ms.openlocfilehash: 88dbb4713577fcf224e1c5646bf4c38b2a1dfafe
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d6b685da0e02373307a3149c5b7b28213f37ad40
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62390318"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70222321"
 ---
-# <a name="sidt"></a>__sidt
+# <a name="__sidt"></a>__sidt
 
-**Microsoft Specific**
+**Specifické pro společnost Microsoft**
 
-Uloží hodnotu registru tabulky popisovače přerušení (IDTR) v zadaném umístění v paměti.
+Ukládá v zadaném umístění v paměti hodnotu registru deskriptoru přerušení (IDTR).
 
 ## <a name="syntax"></a>Syntaxe
 
-```
+```C
 void __sidt(void * Destination);
 ```
 
-#### <a name="parameters"></a>Parametry
+### <a name="parameters"></a>Parametry
 
-|Parametr|Popis|
-|---------------|-----------------|
-|*cíl*|[in] Ukazatel na umístění v paměti, kde je uložen IDTR.|
+*Tabulka*\
+pro Ukazatel na umístění v paměti, kde je uložen IDTR.
 
 ## <a name="requirements"></a>Požadavky
 
-|Vnitřní|Architektura|
+|Vnitřním|Architektura|
 |---------------|------------------|
 |`__sidt`|x86, x64|
 
-**Soubor hlaviček** \<intrin.h >
+**Hlavičkový soubor** \<intrin. h >
 
 ## <a name="remarks"></a>Poznámky
 
-`__sidt` Funkce je ekvivalentní volání `SIDT` strojové instrukce. Další informace vyhledejte dokument, "ruční architektury Intel softwarový vývojář, svazek 2: Instrukce nastavit odkaz,"na [společnosti Intel Corporation](https://software.intel.com/articles/intel-sdm) lokality.
+Funkce je ekvivalentní `SIDT` instrukci počítače. `__sidt` Pokud chcete získat další informace, vyhledejte dokument "Intel Architecture Software Developer 's Manual, Volume 2: Odkaz na sadu instrukcí "na webu [společnosti Intel](https://software.intel.com/articles/intel-sdm) .
 
-**Specifické pro END Microsoft**
+**Specifické pro konec Microsoftu**
 
 ## <a name="see-also"></a>Viz také:
 
-[Vnitřní funkce kompilátoru](../intrinsics/compiler-intrinsics.md)<br/>
+[Vnitřní objekty kompilátoru](../intrinsics/compiler-intrinsics.md)\
 [__lidt](../intrinsics/lidt.md)

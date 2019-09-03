@@ -1,57 +1,56 @@
 ---
 title: __svm_vmrun
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - __svm_vmrun
 helpviewer_keywords:
 - __svm_vmrun intrinsic
 - VMRUN instruction
 ms.assetid: ae98a781-fc17-47b2-b40f-86fcebf1867b
-ms.openlocfilehash: 40e53b2ebd54fc109b47f3067e5f89ce50b327de
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f23df894cc8ad1c270c4c0acbc97cab727e47d93
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62390201"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70219818"
 ---
-# <a name="svmvmrun"></a>__svm_vmrun
+# <a name="__svm_vmrun"></a>__svm_vmrun
 
-**Microsoft Specific**
+**Specifické pro společnost Microsoft**
 
-Spustí provádění kódu hosta virtuálního počítače, který odpovídá řídicí blok zadaný virtuální počítač (VMCB).
+Spustí spuštění kódu hosta virtuálního počítače, který odpovídá zadanému řídicímu bloku virtuálního počítače (VMCB).
 
 ## <a name="syntax"></a>Syntaxe
 
-```
+```C
 void __svm_vmrun(
    size_t VmcbPhysicalAddress
 );
 ```
 
-#### <a name="parameters"></a>Parametry
+### <a name="parameters"></a>Parametry
 
-|Parametr|Popis|
-|---------------|-----------------|
-|*VmcbPhysicalAddress*|[in] Fyzickou adresu VMCB.|
+*VmcbPhysicalAddress*\
+pro Fyzická adresa VMCB.
 
 ## <a name="remarks"></a>Poznámky
 
-`__svm_vmrun` Funkce používá minimální množství informací VMCB zahájíte spuštěním kódu hosta virtuálního počítače. Použití [__svm_vmsave](../intrinsics/svm-vmsave.md) nebo [__svm_vmload](../intrinsics/svm-vmload.md) fungovat, pokud potřebujete další informace pro zpracování složitých přerušení nebo přepněte do jiného typu Host.
+`__svm_vmrun` Funkce používá k zahájení provádění kódu hosta virtuálního počítače minimální množství informací v VMCB. Použijte funkci [__svm_vmsave](../intrinsics/svm-vmsave.md) nebo [__svm_vmload](../intrinsics/svm-vmload.md) , pokud potřebujete další informace pro zpracování složitého přerušení nebo přepnutí na jiný host.
 
-`__svm_vmrun` Funkce je ekvivalentní volání `VMRUN` strojové instrukce. Tato funkce podporuje interakce monitorování virtuálního počítače hostitele s hostovaného operačního systému a jeho aplikací. Další informace vyhledejte dokument, "ruční svazek programátor architektury AMD64 2: Číslo 24593 revize 3.11 nebo novější na systému programování,"dokumentu [AMD corporation](https://developer.amd.com/resources/developer-guides-manuals/) lokality.
+Funkce je ekvivalentní `VMRUN` instrukci počítače. `__svm_vmrun` Tato funkce podporuje interakci monitorování virtuálního počítače hostitele s hostovaným operačním systémem a jeho aplikacemi. Další informace najdete v dokumentu, "ručním svazkem pro programátory AMD64 architektury AMD64: Programování systému, "číslo dokumentu 24593, revize 3,11 nebo novější, na webu [AMD Corporation](https://developer.amd.com/resources/developer-guides-manuals/) .
 
 ## <a name="requirements"></a>Požadavky
 
-|Vnitřní|Architektura|
+|Vnitřním|Architektura|
 |---------------|------------------|
 |`__svm_vmrun`|x86, x64|
 
-**Soubor hlaviček** \<intrin.h >
+**Hlavičkový soubor** \<intrin. h >
 
-**Specifické pro END Microsoft**
+**Specifické pro konec Microsoftu**
 
 ## <a name="see-also"></a>Viz také:
 
-[Vnitřní funkce kompilátoru](../intrinsics/compiler-intrinsics.md)<br/>
-[__svm_vmsave](../intrinsics/svm-vmsave.md)<br/>
+[Vnitřní objekty kompilátoru](../intrinsics/compiler-intrinsics.md)\
+[__svm_vmsave](../intrinsics/svm-vmsave.md)\
 [__svm_vmload](../intrinsics/svm-vmload.md)

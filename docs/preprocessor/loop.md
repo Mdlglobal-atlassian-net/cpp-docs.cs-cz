@@ -1,47 +1,45 @@
 ---
-title: loop
-ms.date: 10/18/2018
+title: loop – direktiva pragma
+ms.date: 08/29/2019
 f1_keywords:
 - loop_CPP
 - vc-pragma.loop
 ms.assetid: 6d5bb428-cead-47e7-941d-7513bbb162c7
-ms.openlocfilehash: a1640881d98073381a941478f4b78177a95698d7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 013540ffe120f42c15538ce86661753b9cf9416f
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62411328"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70220857"
 ---
-# <a name="loop"></a>loop
+# <a name="loop-pragma"></a>loop – direktiva pragma
 
-Určuje, jak bude kód smyčky zohledněn pomocí automatického paralelizéru, anebo vylučuje smyčku z úvahy pomocí automatického vektorizéru.
+Určuje, jak má být kód smyčky považován za auto-paralelizace, nebo vylučuje smyčku z úvahy pomocí auto-vektorizace.
 
 ## <a name="syntax"></a>Syntaxe
 
-```
-#pragma loop( hint_parallel(n) )
-#pragma loop( no_vector )
-#pragma loop( ivdep )
-```
+> **cyklus #pragma (hint_parallel (** *n* **))** \
+> **cyklus #pragma (no_vector)** \
+> **cyklus #pragma (ivdep)**
 
 ### <a name="parameters"></a>Parametry
 
-*hint_parallel(n)*<br/>
-Dává pokyn kompilátoru, že tato smyčka měla být paralelizována přes *n* vláken, ve kterém *n* je kladný celočíselný literál nebo nula. Pokud *n* je nula, maximální počet vláken se používá v době běhu. To je pokyn kompilátoru, ne příkaz, a není zaručeno, že tato smyčka bude paralelizována. Pokud má smyčka závislosti na datech nebo strukturální problémy, tato smyčka například ukládá do skaláru, který je použit mimo tělo smyčky, nebude smyčka paralelizována.
+**hint_parallel (** *n* **)** \
+Pomocný parametr kompilátoru, že by se tato smyčka měla paralelně nacházet v *n* vláknech, kde *n* je kladný celočíselný literál nebo nula. Pokud *n* je nula, je v době běhu použit maximální počet vláken. Je to pomocný parametr kompilátoru, nikoli příkaz. Není nijak zaručeno, že smyčka bude paralelní. Pokud má smyčka závislosti dat nebo strukturální problémy, nebude se paralelně provádět. Nejedná se například o paralelní, pokud je uložen na skalární hodnotu, která je použita mimo tělo smyčky.
 
-Kompilátor ignoruje tuto možnost, pokud [/Qpar](../build/reference/qpar-auto-parallelizer.md) je zadán přepínač kompilátoru.
+Kompilátor ignoruje tuto možnost, pokud není zadán přepínač kompilátoru [/Qpar](../build/reference/qpar-auto-parallelizer.md) .
 
-*no_vector*<br/>
-Ve výchozím nastavení je automatický vektorizér zapnutý a pokusí se vektorizovat všechny smyčky, které vyhodnotí, že budou užitečné. Zadáním této direktivy pragma zakážete automatickou vektorizaci smyčky, která jej následuje.
+**no_vector**\
+Ve výchozím nastavení se automaticky vektorizace pokusí vektorizovaná všechny smyčky, které vyhodnotí. Zadáním této direktivy pragma zakážete automatické vektorizace pro smyčku, která následuje.
 
-*ivdep*<br/>
-Dá pokyn kompilátoru ignorovat závislosti vektorů pro tuto smyčku. Toto použijte ve spojení s *hint_parallel*.
+**ivdep**\
+Pomocný parametr kompilátoru pro ignorování závislostí vektoru pro tuto smyčku. Tuto možnost použijte spolu s **hint_parallel**.
 
 ## <a name="remarks"></a>Poznámky
 
-Použít **smyčky** – Direktiva pragma, umístěte ji těsně před – není v – definici smyčky. Tato direktiva pragma se projeví v rozsahu smyčky, která ji následuje. Smyčce lze zadat více direktiv pragma v libovolném pořadí, ale je nutné každou z nich uvést v samostatném výrazu direktivy pragma.
+Chcete-li použít direktivu pragma **smyčky** , umístěte ji bezprostředně před, nikoli do definice smyčky. Tato direktiva pragma se projeví v rozsahu smyčky, která ji následuje. Smyčce lze zadat více direktiv pragma v libovolném pořadí, ale je nutné každou z nich uvést v samostatném výrazu direktivy pragma.
 
 ## <a name="see-also"></a>Viz také:
 
-[Automatická paralelizace a automatická vektorizace](../parallel/auto-parallelization-and-auto-vectorization.md)<br/>
-[Direktivy Pragma a klíčové slovo __Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)
+[Automatické Paralelismuy a automatické rozvektory](../parallel/auto-parallelization-and-auto-vectorization.md)\
+[Direktivy pragma a klíčové slovo __pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

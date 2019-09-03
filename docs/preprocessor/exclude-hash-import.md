@@ -1,45 +1,43 @@
 ---
-title: exclude (#import)
-ms.date: 10/18/2018
+title: vyloučit import atributu
+ms.date: 08/29/2019
 f1_keywords:
 - exclude
 helpviewer_keywords:
 - exclude attribute
 ms.assetid: 0883248a-d4bf-420e-9848-807b28fa976e
-ms.openlocfilehash: d6a320089d5954b2cf1d0d96ae1f37656f2ddd58
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6a3625ee0dd44f3e2731e1240fea5f3dd4ed109e
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62389317"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70218715"
 ---
-# <a name="exclude-import"></a>vyloučit (\#import)
+# <a name="exclude-import-attribute"></a>vyloučit import atributu
 
-**Specifické pro C++**
+**C++Konkrétní**
 
 Vyloučí položky z generovaných souborů hlaviček knihoven typů.
 
 ## <a name="syntax"></a>Syntaxe
 
-```
-exclude("Name1"[, "Name2",...])
-```
+> **#import** *typ – Knihovna* **exclude (** "*název1*" [ **,** "*název2*"...] **)**
 
 ### <a name="parameters"></a>Parametry
 
-*Name1*<br/>
+*Name1*\
 První položka, která má být vyloučena.
 
-*Name2*<br/>
-Druhá položka, která má být vyloučena (je-li zapotřebí).
+*Soubor2*\
+Volitelné Druhá a pozdější položky, které se mají vyloučit (v případě potřeby)
 
 ## <a name="remarks"></a>Poznámky
 
-Knihovny typů mohou obsahovat definice položek definovaných v systémových hlavičkách nebo jiných knihovnách typů. Tento atribut může přijmout libovolný počet argumentů, přičemž každý z nich je položkou knihovny typů nejvyšší úrovně, která má být vyloučena.
+Knihovny typů mohou obsahovat definice položek definovaných v systémových hlavičkách nebo jiných knihovnách typů. Tento atribut může obsahovat libovolný počet argumentů, kde každá je položka knihovny typů nejvyšší úrovně, která má být vyloučena.
 
-**Specifické pro END C++**
+**Specifické C++ pro konec**
 
 ## <a name="see-also"></a>Viz také:
 
-[atributů #import](../preprocessor/hash-import-attributes-cpp.md)<br/>
-[#import – direktiva](../preprocessor/hash-import-directive-cpp.md)
+[Atributy #import](../preprocessor/hash-import-attributes-cpp.md)\
+[#import direktiva](../preprocessor/hash-import-directive-cpp.md)

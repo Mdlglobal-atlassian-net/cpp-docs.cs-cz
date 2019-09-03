@@ -1,6 +1,6 @@
 ---
 title: __readfsbyte, __readfsdword, __readfsqword, __readfsword
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - __readfsword
 - __readfsdword
@@ -16,22 +16,22 @@ helpviewer_keywords:
 - readfsqword intrinsic
 - __readfsqword intrinsic
 ms.assetid: f6ee7203-4179-402c-a464-0746c84ce6ac
-ms.openlocfilehash: f291747d1f46ebdf3ea1f71cd9ab7e074058201d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 30040b33fe8c686bc0cda585c525ae2926cdf314
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62262730"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70222359"
 ---
-# <a name="readfsbyte-readfsdword-readfsqword-readfsword"></a>__readfsbyte, __readfsdword, __readfsqword, __readfsword
+# <a name="__readfsbyte-__readfsdword-__readfsqword-__readfsword"></a>__readfsbyte, __readfsdword, __readfsqword, __readfsword
 
-**Microsoft Specific**
+**Specifické pro společnost Microsoft**
 
-Čtení paměti z umístění, které určuje posun vzhledem k začátku segmentu služby FS.
+Načte paměť z umístění určeného posunem relativně vzhledem k začátku segmentu FS.
 
 ## <a name="syntax"></a>Syntaxe
 
-```
+```C
 unsigned char __readfsbyte(
    unsigned long Offset
 );
@@ -46,33 +46,33 @@ unsigned __int64 __readfsqword(
 );
 ```
 
-#### <a name="parameters"></a>Parametry
+### <a name="parameters"></a>Parametry
 
-*Posun*<br/>
-[in] Posun od začátku `FS` ke čtení z.
+*Polohy*\
+pro Posun od začátku `FS` do pro čtení.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Obsah paměti byte, word, dvojitého slova nebo quadword (jak je uvedeno podle názvu funkce volaná) v umístění `FS:[Offset]`.
+Obsah paměti bajtů, slov, doubleword nebo quadword (podle názvu funkce s názvem) v umístění `FS:[Offset]`.
 
 ## <a name="requirements"></a>Požadavky
 
-|Vnitřní|Architektura|
+|Vnitřním|Architektura|
 |---------------|------------------|
 |`__readfsbyte`|x86|
 |`__readfsdword`|x86|
 |`__readfsqword`|x86|
 |`__readfsword`|x86|
 
-**Soubor hlaviček** \<intrin.h >
+**Hlavičkový soubor** \<intrin. h >
 
 ## <a name="remarks"></a>Poznámky
 
-Tyto rutiny jsou k dispozici pouze jako vnitřní funkce.
+Tyto rutiny jsou k dispozici pouze jako vnitřní objekty.
 
-**Specifické pro END Microsoft**
+**Specifické pro konec Microsoftu**
 
 ## <a name="see-also"></a>Viz také:
 
-[__writefsbyte, \__writefsdword, \__writefsqword, \__writefsword](../intrinsics/writefsbyte-writefsdword-writefsqword-writefsword.md)<br/>
-[Vnitřní funkce kompilátoru](../intrinsics/compiler-intrinsics.md)
+[__writefsbyte, \__writefsdword, \__writefsqword, \__writefsword](../intrinsics/writefsbyte-writefsdword-writefsqword-writefsword.md)\
+[Vnitřní objekty kompilátoru](../intrinsics/compiler-intrinsics.md)

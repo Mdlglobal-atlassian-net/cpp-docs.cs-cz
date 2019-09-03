@@ -1,49 +1,49 @@
 ---
 title: _mm_stream_si64x
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - _mm_stream_si64x
 helpviewer_keywords:
 - movnti instruction
 - _mm_stream_si64x intrinsic
 ms.assetid: 114c2cd0-085f-41aa-846e-87bdd56c9ee7
-ms.openlocfilehash: d7f7a75be1602fbb70a230b0dd3a791be99d092a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f6ed0f2482ecbcdaa4d50034e0d08381768847a2
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62396636"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70221744"
 ---
-# <a name="mmstreamsi64x"></a>_mm_stream_si64x
+# <a name="_mm_stream_si64x"></a>_mm_stream_si64x
 
-**Microsoft Specific**
+**Specifické pro společnost Microsoft**
 
-Generuje instrukce MOVNTI. Zapisuje data `Source` určeného umístění paměti `Dest`, bez zahlcení mezipamětí.
+Vygeneruje instrukci MOVNTI. Zapíše data ve *zdroji* do umístění v paměti určeném *cílem*, bez znečištění mezipamětí.
 
 ## <a name="syntax"></a>Syntaxe
 
-```
+```C
 void _mm_stream_si64x(
-   __int64 * Dest,
+   __int64 * Destination,
    __int64 Source
 );
 ```
 
-#### <a name="parameters"></a>Parametry
+### <a name="parameters"></a>Parametry
 
-*cíl*<br/>
-[out] Ukazatel na umístění pro zápis zdrojová data.
+*Tabulka*\
+mimo Ukazatel na umístění, do kterého mají být zapsána zdrojová data.
 
-*Zdroj*<br/>
-[in] Data k zápisu.
+*Zdrojová*\
+pro Data, která mají být zapsána.
 
 ## <a name="requirements"></a>Požadavky
 
-|Vnitřní|Architektura|
+|Vnitřním|Architektura|
 |---------------|------------------|
 |`_mm_stream_si64x`|x64|
 
-**Soubor hlaviček** \<intrin.h >
+**Hlavičkový soubor** \<intrin. h >
 
 ## <a name="remarks"></a>Poznámky
 
@@ -75,8 +75,8 @@ int main()
 0 ffffffffffff 0 0
 ```
 
-**Specifické pro END Microsoft**
+**Specifické pro konec Microsoftu**
 
 ## <a name="see-also"></a>Viz také:
 
-[Vnitřní funkce kompilátoru](../intrinsics/compiler-intrinsics.md)
+[Vnitřní objekty kompilátoru](../intrinsics/compiler-intrinsics.md)

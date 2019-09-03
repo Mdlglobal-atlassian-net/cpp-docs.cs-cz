@@ -1,44 +1,42 @@
 ---
-title: no_registry
-ms.date: 10/18/2018
+title: importovat atribut no_registry
+ms.date: 08/29/2019
 f1_keywords:
 - no_registry
 helpviewer_keywords:
 - no_registry attribute
 ms.assetid: d30de4e2-551c-428c-98fd-951330d578d3
-ms.openlocfilehash: 2a0fd9a761f765aa9562ab18c095f683b80c7987
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7c81cc2f570cb9ac4e977dac6d55cb69e491d3b2
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62411315"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70220720"
 ---
-# <a name="noregistry"></a>no_registry
+# <a name="no_registry-import-attribute"></a>importovat atribut no_registry
 
-**no_registry s: %** sděluje kompilátoru, aby v registru nevyhledával knihovny typů importované pomocí `#import`.
+**no_registry** instruuje kompilátor, aby nehledal v registru knihovny typů importované pomocí `#import`.
 
 ## <a name="syntax"></a>Syntaxe
 
-```
-#import filename no_registry
-```
+> **#import** *typ – Knihovna* **no_registry**
 
 ### <a name="parameters"></a>Parametry
 
-*Název souboru*<br/>
+*typ – Knihovna*\
 Knihovna typů.
 
 ## <a name="remarks"></a>Poznámky
 
-Pokud odkazovanou knihovnu typů nebyl nalezen v adresářích souborů k zahrnutí, kompilace se nezdaří, i v případě, že knihovna typů nachází v registru.  **no_registry s: %** rozšíří do ostatních knihoven typů importovaných implicitně pomocí `auto_search`.
+Pokud se v adresářích include nenajde odkazovaná knihovna typů, kompilace se nezdařila i v případě, že se knihovna typů nachází v registru.  **no_registry** se šíří do jiných knihoven typů implicitně naimportovaných pomocí `auto_search`.
 
-Kompilátor nikdy nebude hledat v registru typy knihoven, které jsou určeny názvem souboru a které jsou předány přímo do direktivy `#import`.
+Kompilátor nikdy nehledá v registru knihovny typů, které jsou určeny názvem souboru a jsou předány přímo `#import`do.
 
-Když `auto_search` není zadána, další `#import`s se dá vygenerovat pomocí **no_registry s: %** nastavení počáteční `#import` (pokud počáteční `#import` byl – direktiva **no_registry s: %** , `auto_search`– vygeneruje `#import` je také **no_registry s: %**.)
+Je `auto_search` -li parametr zadán, `#import` jsou další direktivy generovány pomocí nastavení **no_registry** počáteční `#import`. Pokud byla počáteční `#import` `auto_search`direktiva **no_registry**, vytvoří `#import` se také **no_registry**.
 
-**no_registry s: %** je užitečné, pokud chcete importovat křížově odkazované knihovny typů bez rizika, že kompilátor vyhledá starší verzi souboru v registru. **no_registry s: %** je také užitečné, pokud knihovna typů není registrována.
+**no_registry** je užitečné, pokud chcete importovat knihovny typů s křížovými odkazy. Zachovává kompilátor hledáním starší verze souboru v registru. **no_registry** je užitečná také v případě, že není zaregistrována knihovna typů.
 
 ## <a name="see-also"></a>Viz také:
 
-[atributů #import](../preprocessor/hash-import-attributes-cpp.md)<br/>
-[#import – direktiva](../preprocessor/hash-import-directive-cpp.md)
+[Atributy #import](../preprocessor/hash-import-attributes-cpp.md)\
+[#import direktiva](../preprocessor/hash-import-directive-cpp.md)

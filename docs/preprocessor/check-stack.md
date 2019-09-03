@@ -1,6 +1,6 @@
 ---
-title: check_stack
-ms.date: 11/04/2016
+title: check_stack – direktiva pragma
+ms.date: 08/29/2019
 f1_keywords:
 - vc-pragma.check_stack
 - check_stack_CPP
@@ -9,38 +9,37 @@ helpviewer_keywords:
 - pragmas, check_stack
 - pragmas, check_stack usage table
 ms.assetid: f18e20cc-9abb-48b7-ad62-8d384875b996
-ms.openlocfilehash: 49477a3b39db17047f349e341bd05c04954c964c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4c976692ec36cedcb73825ee0cc7093736a3a3dc
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62212396"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70216135"
 ---
-# <a name="checkstack"></a>check_stack
-Instruuje kompilátor, chcete-li vypnout sondy zásobníku, pokud `off` (nebo `-`) je zadán, nebo chcete zapnout sondy zásobníku, pokud `on` (nebo `+`) je zadán.
+# <a name="check_stack-pragma"></a>check_stack – direktiva pragma
+
+Instruuje kompilátor, aby vypnul sondy zásobníku, Pokud je zadán **-** (nebo), nebo zapněte sondy zásobníku, pokud je zadána na **+** (nebo).
 
 ## <a name="syntax"></a>Syntaxe
 
-```
-#pragma check_stack([ {on | off}] )
-#pragma check_stack{+ | -}
-```
+> **#pragma check_stack (** [{ **on** | **off** }] **)** \
+> **#pragma check_stack** { **+**  |  **-** }
 
 ## <a name="remarks"></a>Poznámky
 
-Pokud není uveden žádný argument, jsou považovány sondy zásobníku podle výchozích nastavení. Tato direktiva pragma se projeví v první funkci definovanou po direktivy pragma je zobrazena. Sondy zásobníku se ani jedna část maker ani funkcí, které jsou generované jako vložené.
+Tato direktiva pragma se projeví u první funkce definované po výskytu direktivy pragma. Sondy zásobníku nejsou součástí maker ani funkcí, které jsou vygenerovány jako vložené.
 
-Pokud není argument **check_stack –** – Direktiva pragma, kontrolou zásobníku se vrátí do chování zadané na příkazovém řádku. Další informace najdete v tématu [kompilátory](../build/reference/compiler-options.md). Interakce `#pragma check_stack` a [/Gs](../build/reference/gs-control-stack-checking-calls.md) možnost je shrnuto v následující tabulce.
+Pokud nezadáte argument pro direktivu pragma **check_stack** , Kontrola zásobníku se vrátí k chování zadanému na příkazovém řádku. Další informace naleznete v tématu [Možnosti kompilátoru](../build/reference/compiler-options.md). Interakce `#pragma check_stack` s možností a [/GS](../build/reference/gs-control-stack-checking-calls.md) je shrnuta v následující tabulce.
 
-### <a name="using-the-checkstack-pragma"></a>Pomocí check_stack – direktiva Pragma
+### <a name="using-the-check_stack-pragma"></a>Použití direktivy pragma check_stack
 
-|Syntaxe|Zkompilovaná<br /><br /> /GS – možnost?|Akce|
+|Syntaxe|Kompilováno s<br /><br /> /GS možnost?|Akce|
 |------------|------------------------------------|------------|
-|`#pragma check_stack( )` Nebo<br /><br /> `#pragma check_stack`|Ano|Vypne kontroly zásobníku pro funkce, které následují|
-|`#pragma check_stack( )` Nebo<br /><br /> `#pragma check_stack`|Ne|Zapne kontroly zásobníku pro funkce, které následují|
-|`#pragma check_stack(on)`<br /><br /> Nebo `#pragma check_stack +`|Ano nebo Ne|Zapne kontroly zásobníku pro funkce, které následují|
-|`#pragma check_stack(off)`<br /><br /> Nebo `#pragma check_stack -`|Ano nebo Ne|Vypne kontroly zásobníku pro funkce, které následují|
+|`#pragma check_stack( )`ani<br /><br /> `#pragma check_stack`|Ano|Vypne kontrolu zásobníku pro funkce, které následují.|
+|`#pragma check_stack( )`ani<br /><br /> `#pragma check_stack`|Ne|Zapne kontrolu zásobníku pro funkce, které následují.|
+|`#pragma check_stack(on)`<br /><br /> ani`#pragma check_stack +`|Ano nebo Ne|Zapne kontrolu zásobníku pro funkce, které následují.|
+|`#pragma check_stack(off)`<br /><br /> ani`#pragma check_stack -`|Ano nebo Ne|Vypne kontrolu zásobníku pro funkce, které následují.|
 
 ## <a name="see-also"></a>Viz také:
 
-[Direktivy Pragma a klíčové slovo __Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)
+[Direktivy pragma a klíčové slovo __pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

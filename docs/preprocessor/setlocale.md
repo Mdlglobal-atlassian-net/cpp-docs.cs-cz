@@ -1,6 +1,6 @@
 ---
-title: setlocale
-ms.date: 11/04/2016
+title: setlocale – direktiva pragma
+ms.date: 08/29/2019
 f1_keywords:
 - setlocale_CPP
 - vc-pragma.setlocale
@@ -8,37 +8,35 @@ helpviewer_keywords:
 - pragmas, setlocale
 - setlocale pragma
 ms.assetid: e60b43d9-fbdf-4c4e-ac85-805523a13b86
-ms.openlocfilehash: b2f28a14b4d4585575a39dd9a936a56a84eeddc4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 219354595e5c63b2f13211d43bfa517d97413251
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62179617"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70218173"
 ---
-# <a name="setlocale"></a>setlocale
+# <a name="setlocale-pragma"></a>setlocale – direktiva pragma
 
-Určuje národní prostředí (země/oblast a jazyk) při překladu konstant širokého znaku a řetězcových literálů.
+Definuje *národní prostředí*, zemi, oblast a jazyk, které se mají použít při překladu konstant a řetězcových literálů s velkým znakem.
 
 ## <a name="syntax"></a>Syntaxe
 
-```
-#pragma setlocale( "[locale-string]" )
-```
+> **#pragma setlocale ("** [ *locale-string* ] **")**
 
 ## <a name="remarks"></a>Poznámky
 
-Vzhledem k tomu, že se algoritmus převodu vícebajtových znaků na široké znaky může lišit na základě národního prostředí nebo mohou kompilace probíhat v jiném národní prostředí lišícího se od prostředí, kde bude spuštěn spustitelný soubor, poskytuje tato direktiva pragma způsob určení cílového národního prostředí v době kompilace. Tím je zaručeno, že řetězce širokého znaku budou uloženy ve správném formátu.
+Vzhledem k tomu, že algoritmus pro převod vícebajtových znaků na široké znaky se může lišit podle národního prostředí, nebo může kompilace probíhat v jiném národním prostředí, ze kterého se spustí spustitelný soubor, tato direktiva pragma poskytuje způsob, jak určit cílové národní prostředí v době kompilace. Garantuje, že řetězce s velkým znakem jsou uloženy ve správném formátu.
 
-Výchozí hodnota *řetězec národního prostředí* je "".
+Výchozí *národní prostředí-řetězec* je "".
 
-Národní prostředí "C" mapuje každý znak v řetězci na jeho hodnotu jako **wchar_t** (unsigned short). Jiné hodnoty, které jsou platné pro `setlocale` jsou ty položky, které jsou součástí [Language Strings](../c-runtime-library/language-strings.md) seznamu. Je například možné setkat se s:
+Národní prostředí "C" mapuje každý znak v řetězci na jeho hodnotu jako **wchar_t**. Další platné hodnoty pro `setlocale` jsou záznamy, které se nacházejí v seznamu [řetězce jazyka](../c-runtime-library/language-strings.md) . Můžete například zadat:
 
 ```cpp
 #pragma setlocale("dutch")
 ```
 
-Schopnost vydávat řetězec jazyka závisí na znakové stránce a podpoře ID jazyka na počítači.
+Možnost zadat řetězec jazyka závisí na znakové stránce a podpoře ID jazyka na vašem počítači.
 
 ## <a name="see-also"></a>Viz také:
 
-[Direktivy Pragma a klíčové slovo __Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)
+[Direktivy pragma a klíčové slovo __pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

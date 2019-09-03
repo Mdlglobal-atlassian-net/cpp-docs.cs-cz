@@ -1,6 +1,6 @@
 ---
 title: Vnitřní funkce _InterlockedDecrement
-ms.date: 12/17/2018
+ms.date: 09/02/2019
 f1_keywords:
 - _InterlockedDecrement16_rel_cpp
 - _InterlockedDecrement16_acq_cpp
@@ -44,12 +44,12 @@ helpviewer_keywords:
 - _InterlockedDecrement64_nf intrinsic
 - InterlockedDecrement_rel intrinsic
 ms.assetid: 5268fce3-86b5-4b2b-b96c-2e531a3fb9b5
-ms.openlocfilehash: 43bf7a9b788c176490ec3fe08e370708eaf000ce
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: f7d46cc90c9925a49948da488c2ed7ede7bdee8f
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69509402"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70217674"
 ---
 # <a name="_interlockeddecrement-intrinsic-functions"></a>Vnitřní funkce _InterlockedDecrement
 
@@ -59,7 +59,7 @@ Poskytuje vnitřní podporu kompilátoru pro funkci Win32 Windows SDK [Interlock
 
 ## <a name="syntax"></a>Syntaxe
 
-```
+```C
 long _InterlockedDecrement(
    long * lpAddend
 );
@@ -98,9 +98,9 @@ __int64 _InterlockedDecrement64_nf(
 );
 ```
 
-#### <a name="parameters"></a>Parametry
+### <a name="parameters"></a>Parametry
 
-*lpAddend*<br/>
+*lpAddend*\
 [in, out] Ukazatel na proměnnou, která má být snížena.
 
 ## <a name="return-value"></a>Návratová hodnota
@@ -111,8 +111,9 @@ Návratová hodnota je výsledná snížená hodnota.
 
 |Vnitřním|Architektura|
 |---------------|------------------|
-|`_InterlockedDecrement`, `_InterlockedDecrement16`, `_InterlockedDecrement64`|x86, ARM, x64|
-|`_InterlockedDecrement_acq`, `_InterlockedDecrement_rel`, `_InterlockedDecrement_nf`, `_InterlockedDecrement16_acq`, `_InterlockedDecrement16_rel`, `_InterlockedDecrement16_nf`, `_InterlockedDecrement64_acq`, `_InterlockedDecrement64_rel`, `_InterlockedDecrement64_nf`,|ARM|
+|`_InterlockedDecrement`, `_InterlockedDecrement16`|x86, ARM, x64, ARM64|
+|`_InterlockedDecrement64`|ARM, x64, ARM64|
+|`_InterlockedDecrement_acq`, `_InterlockedDecrement_rel`, `_InterlockedDecrement_nf`, `_InterlockedDecrement16_acq`, `_InterlockedDecrement16_rel`, `_InterlockedDecrement16_nf`, `_InterlockedDecrement64_acq`, `_InterlockedDecrement64_rel`, `_InterlockedDecrement64_nf`,|ARM, ARM64|
 
 **Hlavičkový soubor** \<intrin. h >
 
@@ -198,6 +199,6 @@ void __cdecl SimpleThread(void* pParam) {
 
 ## <a name="see-also"></a>Viz také:
 
-[Vnitřní funkce kompilátoru](../intrinsics/compiler-intrinsics.md)<br/>
-[Klíčová slova](../cpp/keywords-cpp.md)<br/>
+[Vnitřní objekty kompilátoru](../intrinsics/compiler-intrinsics.md)\
+[Klíčov](../cpp/keywords-cpp.md)\
 [Konflikty s kompilátorem x86](../build/x64-software-conventions.md#conflicts-with-the-x86-compiler)

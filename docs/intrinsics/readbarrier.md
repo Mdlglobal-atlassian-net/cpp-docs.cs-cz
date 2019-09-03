@@ -1,48 +1,48 @@
 ---
 title: _ReadBarrier
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - _ReadBarrier
 helpviewer_keywords:
 - _ReadBarrier intrinsic
 ms.assetid: f9e54a92-61bc-4f55-8195-b8932065a796
-ms.openlocfilehash: f31293b2bef0304bcdc58f0a8dbfce0436df9843
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8bbcecf95daeef6ea2d40877d37e0eb6b7f3a0e8
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62396551"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70217096"
 ---
-# <a name="readbarrier"></a>_ReadBarrier
+# <a name="_readbarrier"></a>_ReadBarrier
 
-**Microsoft Specific**
+**Specifické pro společnost Microsoft**
 
-Limituje optimalizace kompilátoru, které můžete změnit pořadí operací přístupu k paměti přes místa volání.
+Omezuje optimalizace kompilátoru, které mohou změnit pořadí operací přístupu k paměti napříč bodem volání.
 
 > [!CAUTION]
->  `_ReadBarrier`, `_WriteBarrier`, A `_ReadWriteBarrier` – vnitřní prvky kompilátoru a `MemoryBarrier` makra jsou všechny zastaralé a neměl by se používat. Pro komunikace mezi vlákny, použijte mechanismy pro zaslání [atomic_thread_fence –](../standard-library/atomic-functions.md#atomic_thread_fence) a [std::atomic\<T >](../standard-library/atomic.md) , která jsou definována v [ C++ standardní knihovny](../standard-library/cpp-standard-library-reference.md). Pro přístup k hardwaru použijte [/volatile:iso](../build/reference/volatile-volatile-keyword-interpretation.md) – možnost kompilátoru spolu s [volatile](../cpp/volatile-cpp.md) – klíčové slovo.
+> Vnitřní prvky `_WriteBarrier`kompilátoru, a a makrojsouzastaraléanemělybysepoužívat.`MemoryBarrier` `_ReadBarrier` `_ReadWriteBarrier` Pro komunikaci mezi vlákny použijte mechanismy jako [atomic_thread_fence](../standard-library/atomic-functions.md#atomic_thread_fence) a [std:\<: Atomic T >](../standard-library/atomic.md) , které jsou definovány ve [ C++ standardní knihovně](../standard-library/cpp-standard-library-reference.md). V případě hardwarového přístupu použijte možnost kompilátoru [/volatile: ISO](../build/reference/volatile-volatile-keyword-interpretation.md) spolu s klíčovým slovem [volatile](../cpp/volatile-cpp.md) .
 
 ## <a name="syntax"></a>Syntaxe
 
-```
+```C
 void _ReadBarrier(void);
 ```
 
 ## <a name="requirements"></a>Požadavky
 
-|Vnitřní|Architektura|
+|Vnitřním|Architektura|
 |---------------|------------------|
 |`_ReadBarrier`|x86, x64|
 
-**Soubor hlaviček** \<intrin.h >
+**Hlavičkový soubor** \<intrin. h >
 
 ## <a name="remarks"></a>Poznámky
 
-`_ReadBarrier` Vnitřně limituje optimalizace kompilátoru, které mohou odebrat nebo změnit pořadí operací přístupu k paměti přes místa volání.
+`_ReadBarrier` Vnitřní omezuje optimalizace kompilátoru, které mohou odebrat nebo změnit pořadí operací přístupu k paměti v bodě volání.
 
-**Specifické pro END Microsoft**
+**Specifické pro konec Microsoftu**
 
 ## <a name="see-also"></a>Viz také:
 
-[Vnitřní funkce kompilátoru](../intrinsics/compiler-intrinsics.md)<br/>
+[Vnitřní objekty kompilátoru](../intrinsics/compiler-intrinsics.md)\
 [Klíčová slova](../cpp/keywords-cpp.md)

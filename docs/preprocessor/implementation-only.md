@@ -1,43 +1,42 @@
 ---
-title: implementation_only
-ms.date: 11/04/2016
+title: importovat atribut implementation_only
+ms.date: 08/29/2019
 f1_keywords:
 - implementation_only
 helpviewer_keywords:
 - implementation_only attribute
 ms.assetid: d8cabc86-4425-45a0-9587-d57536980088
-ms.openlocfilehash: c1435ca74ac2b5a73c308592b1affe6fca097d1b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 08144b3c815350acfe6a856b36d2d88085d1c04d
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62383948"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70218983"
 ---
-# <a name="implementationonly"></a>implementation_only
-**Specifické pro C++**
+# <a name="implementation_only-import-attribute"></a>importovat atribut implementation_only
 
-Potlačí generování souboru .tlh hlavičky (primární hlavičkový soubor).
+**C++Konkrétní**
+
+Potlačí generování `.tlh` primárního souboru hlaviček knihovny typů.
 
 ## <a name="syntax"></a>Syntaxe
 
-```
-implementation_only
-```
+> **#import** *typ – Knihovna* **implementation_only**
 
 ## <a name="remarks"></a>Poznámky
 
-Tento soubor obsahuje všechny deklarace, na které se používá k vystavení obsah knihovny typů. Záhlaví souboru tli, s implementacemi členské funkce obálky se vygeneruje a zahrnout do kompilace.
+Tento soubor obsahuje všechny deklarace, které slouží k vystavení obsahu knihovny typů. `.tli` Hlavičkový soubor s implementacemi členských funkcí obálky se vygeneruje a zahrne do kompilace.
 
-Pokud tento atribut je zadána, je obsah hlavičky tli v stejný obor názvů, jako je obvykle používají v hlavičce .tlh. Kromě toho členské funkce nejsou deklarovány jako vložené.
+Při zadání tohoto atributu je obsah `.tli` záhlaví ve stejném oboru názvů jako ten, který se běžně používá `.tlh` v hlavičce. Kromě toho členské funkce nejsou deklarovány jako inline.
 
-**Implementation_only –** atribut je určena pro použití ve spojení s [no_implementation –](../preprocessor/no-implementation.md) atribut jako způsob, jak zachovat implementace mimo soubor předkompilované hlavičky (PCH). `#import` Příkaz `no_implementation` atribut je umístěn ve zdrojové oblasti použité k vytvoření soubor PCH. Výsledný soubor PCH se používá několik zdrojových souborů. `#import` Příkaz **implementation_only –** mimo oblast PCH se pak použije atribut. Je nutné použít tento příkaz pouze jednou v jednom ze zdrojových souborů. Tím se vygeneruje všechny požadované obálky členské funkce bez další rekompilace pro každý zdrojový soubor.
+Atribut **implementation_only** je určen pro použití ve spojení s atributem [no_implementation](../preprocessor/no-implementation.md) jako způsob zachování implementace z souboru předkompilované hlavičky (PCH). `#import` Příkaz`no_implementation` s atributem je umístěn ve zdrojové oblasti použité k vytvoření souboru PCH. Výsledný soubor PCH používá několik zdrojových souborů. Příkaz s atributem implementation_only se pak použije vně oblasti PCH. `#import` Tento příkaz je nutné použít pouze jednou v jednom ze zdrojových souborů. Generuje všechny požadované členské funkce obálky bez další nové kompilace pro každý zdrojový soubor.
 
 > [!NOTE]
-> **Implementation_only –** atribut v jednom `#import` příkaz musí být ve spojení s jiným `#import` prohlášení o stejný typ knihovny, s `no_implementation` atribut. V opačném případě se nevygeneruje chyby kompilátoru. Důvodem je, že generované obálkové třídy definice `#import` příkaz `no_implementation` atributů je potřeba kompilovat implementace generovaných **implementation_only –** atribut.
+> Atribut **implementation_only** v jednom `#import` příkazu musí být použit ve spojení s jiným `#import` příkazem stejné knihovny typů s `no_implementation` atributem. V opačném případě jsou generovány chyby kompilátoru. Důvodem je, že definice obálkové třídy vygenerované `#import` příkazem `no_implementation` s atributem jsou požadovány pro zkompilování implementací generovaných atributem **implementation_only** .
 
-**Specifické pro END C++**
+**Specifické C++ pro konec**
 
 ## <a name="see-also"></a>Viz také:
 
-[atributů #import](../preprocessor/hash-import-attributes-cpp.md)<br/>
-[#import – direktiva](../preprocessor/hash-import-directive-cpp.md)
+[Atributy #import](../preprocessor/hash-import-attributes-cpp.md)\
+[#import direktiva](../preprocessor/hash-import-directive-cpp.md)

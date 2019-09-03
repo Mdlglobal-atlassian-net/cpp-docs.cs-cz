@@ -1,54 +1,55 @@
 ---
-title: '#Importovat atributy (C++)'
-ms.date: 11/04/2016
+title: '#Import atributů (C++)'
+ms.date: 08/29/2019
 helpviewer_keywords:
 - '#import directive, attributes'
 ms.assetid: 2a5085e3-82ee-4f83-892b-0aa6cc13863b
-ms.openlocfilehash: 954dfec50db75c0e3d11f0924b0ee398cd211fe1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7e0de241bd27269d7d758c49bc54c4bf435cf383
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62407702"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70220103"
 ---
-# <a name="import-attributes-c"></a>#import – atributy (C++)
-Obsahuje odkazy na atributy použité s `#import` směrnice.
+# <a name="import-attributes-c"></a>Atributy #import (C++)
 
-**Microsoft Specific**
+Obsahuje odkazy na atributy používané s `#import` direktivou.
 
-Následující atributy jsou k dispozici na `#import` směrnice.
+**Specifické pro společnost Microsoft**
+
+Následující atributy jsou k dispozici pro `#import` direktivu.
 
 |Atribut|Popis|
 |---------------|-----------------|
 |[auto_rename](../preprocessor/auto-rename.md)|Přejmenuje vyhrazená slova jazyka C++ přidáním dvou podtržítek (__) k názvu proměnné a vyřeší tak možné konflikty názvů.|
 |[auto_search](../preprocessor/auto-search.md)|Určuje, že v případě, kdy je na knihovnu typů odkazováno direktivou #import a sama odkazuje na jinou knihovnu typů, může kompilátor zavést implicitní direktivu #import na tuto jinou knihovnu typů.|
-|[embedded_idl](../preprocessor/embedded-idl.md)|Určuje, že knihovna typů je zapsána do souboru .tlh se zachovaným kódem atributem generován.|
-|[Vyloučení](../preprocessor/exclude-hash-import.md)|Vyloučí položky z generovaných souborů hlaviček knihoven typů.|
-|[high_method_prefix](../preprocessor/high-method-prefix.md)|Určuje předponu pro pojmenování základní vlastnosti a metody.|
+|[embedded_idl](../preprocessor/embedded-idl.md)|Určuje, že knihovna typů je zapsána do souboru. tlh s zachovaným kódem generovaným atributem.|
+|[slevy](../preprocessor/exclude-hash-import.md)|Vyloučí položky z generovaných souborů hlaviček knihoven typů.|
+|[high_method_prefix](../preprocessor/high-method-prefix.md)|Určuje předponu, která se má použít při pojmenování vlastností a metod na vysoké úrovni.|
 |[high_property_prefixes](../preprocessor/high-property-prefixes.md)|Určuje alternativní předpony pro tři metody vlastností.|
-|[implementation_only](../preprocessor/implementation-only.md)|Potlačí generování souboru .tlh hlavičky (primární hlavičkový soubor).|
+|[implementation_only](../preprocessor/implementation-only.md)|Potlačí generování hlavičkového souboru. tlh (primární hlavičkový soubor).|
 |[include()](../preprocessor/include-parens.md)|Zakáže automatické vyloučení.|
 |[inject_statement](../preprocessor/inject-statement.md)|Vloží svůj argument jako zdrojový text do hlavičky knihovny typů.|
-|[named_guids](../preprocessor/named-guids.md)|Instruuje kompilátor, aby definovat a inicializaci proměnných identifikátor GUID v původní stylu formuláře `LIBID_MyLib`, `CLSID_MyCoClass`, `IID_MyInterface`, a `DIID_MyDispInterface`.|
+|[named_guids](../preprocessor/named-guids.md)|Instruuje kompilátor, aby definoval a inicializoval proměnné GUID `LIBID_MyLib`ve starém stylu formuláře, `CLSID_MyCoClass`, `IID_MyInterface`a `DIID_MyDispInterface`.|
 |[no_auto_exclude](../preprocessor/no-auto-exclude.md)|Zakáže automatické vyloučení.|
-|[no_dual_interfaces](../preprocessor/no-dual-interfaces.md)|Změny způsobu, jakým kompilátor generuje funkce obálky pro duální rozhraní metody.|
-|[no_implementation](../preprocessor/no-implementation.md)|Potlačí generování tli hlavičky, která obsahuje implementace členské funkce obálky.|
-|[no_namespace](../preprocessor/no-namespace.md)|Určuje, že název oboru názvů není generovaný kompilátorem.|
-|[no_registry](../preprocessor/no-registry.md)|Říká kompilátoru, aby v registru nevyhledával knihovny typů.|
-|[no_search_namespace](../preprocessor/no-search-namespace.md)|Má stejné funkce jako [no_namespace](../preprocessor/no-namespace.md) atribut, ale je použita v knihovny typů, které můžete použít direktivu #import s [auto_search –](../preprocessor/auto-search.md) atribut.|
+|[no_dual_interfaces](../preprocessor/no-dual-interfaces.md)|Mění způsob, jakým kompilátor generuje obálkové funkce pro metody duálního rozhraní.|
+|[no_implementation](../preprocessor/no-implementation.md)|Potlačí generování hlavičky. tli, která obsahuje implementace členských funkcí obálky.|
+|[no_namespace](../preprocessor/no-namespace.md)|Určuje, že kompilátor negeneruje název oboru názvů.|
+|[no_registry](../preprocessor/no-registry.md)|Instruuje kompilátor, aby nehledal v registru knihovny typů.|
+|[no_search_namespace](../preprocessor/no-search-namespace.md)|Má stejné funkce jako atribut [no_namespace](../preprocessor/no-namespace.md) , ale používá se pro knihovny typů, které používají direktivu #import s atributem [auto_search](../preprocessor/auto-search.md) .|
 |[no_smart_pointers](../preprocessor/no-smart-pointers.md)|Potlačí vytváření inteligentních ukazatelů pro všechna rozhraní v knihovně typů.|
-|[raw_dispinterfaces](../preprocessor/raw-dispinterfaces.md)|Instruuje kompilátor, aby generovat funkce nízké úrovně obálky pro dispinterface metody a vlastnosti, které volají `IDispatch::Invoke` a vrátí kód chyby: HRESULT.|
-|[raw_interfaces_only](../preprocessor/raw-interfaces-only.md)|Potlačí generování obálky funkce zpracování chyb a [vlastnost](../cpp/property-cpp.md) deklarace, které používají tyto funkce obálky.|
-|[raw_method_prefix](../preprocessor/raw-method-prefix.md)|Určuje jinou předponu vyhnete kolize názvů.|
-|[raw_native_types](../preprocessor/raw-native-types.md)|Zakáže použití tlačítek třídy pro podporu modelu COM v funkce obálky vysoké úrovně a místo toho vynutí použití nižší úrovně datových typů.|
+|[raw_dispinterfaces](../preprocessor/raw-dispinterfaces.md)|Instruuje kompilátor, aby vygeneroval funkce obálky nízké úrovně pro metody a vlastnosti pro vyvolání `IDispatch::Invoke` a vrátí kód chyby HRESULT.|
+|[raw_interfaces_only](../preprocessor/raw-interfaces-only.md)|Potlačí generování obálkových funkcí zpracování chyb a deklarací [vlastností](../cpp/property-cpp.md) , které používají tyto funkce obálky.|
+|[raw_method_prefix](../preprocessor/raw-method-prefix.md)|Určuje jinou předponu, aby se předešlo kolizím názvů.|
+|[raw_native_types](../preprocessor/raw-native-types.md)|Zakáže použití tříd podpory modelu COM v obálkových funkcích vysoké úrovně a vynutí místo toho použití datových typů nízké úrovně.|
 |[raw_property_prefixes](../preprocessor/raw-property-prefixes.md)|Určuje alternativní předpony pro tři metody vlastností.|
-|[Přejmenovat](../preprocessor/rename-hash-import.md)|Funguje kolem problémy kolizí název.|
+|[Změňte](../preprocessor/rename-hash-import.md)|Funguje kolem problémů kolize názvů.|
 |[rename_namespace](../preprocessor/rename-namespace.md)|Přejmenuje obor názvů, který obsahuje obsah knihovny typů.|
-|[rename_search_namespace](../preprocessor/rename-search-namespace.md)|Má stejné funkce jako [rename_namespace](../preprocessor/rename-namespace.md) atribut, ale je použita v knihovny typů, které můžete použít direktivu #import s [auto_search –](../preprocessor/auto-search.md) atribut.|
-|[tlbid](../preprocessor/tlbid.md)|Umožňuje načítání knihoven jiné než primární typ knihovny.|
+|[rename_search_namespace](../preprocessor/rename-search-namespace.md)|Má stejné funkce jako atribut [rename_namespace](../preprocessor/rename-namespace.md) , ale používá se pro knihovny typů, které používají direktivu #import s atributem [auto_search](../preprocessor/auto-search.md) .|
+|[tlbid](../preprocessor/tlbid.md)|Umožňuje načíst knihovny jiné než primární typ knihovny.|
 
-**Specifické pro END Microsoft**
+**Specifické pro konec Microsoftu**
 
 ## <a name="see-also"></a>Viz také:
 
-[#import – direktiva](../preprocessor/hash-import-directive-cpp.md)
+[#import direktiva](../preprocessor/hash-import-directive-cpp.md)

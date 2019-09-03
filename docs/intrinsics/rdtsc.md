@@ -1,6 +1,6 @@
 ---
 title: __rdtsc
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - __rdtsc
 helpviewer_keywords:
@@ -8,46 +8,46 @@ helpviewer_keywords:
 - rdtsc instruction
 - Read Time Stamp Counter instruction
 ms.assetid: e31d0e51-c9bb-42ca-bbe9-a81ffe662387
-ms.openlocfilehash: 6f30be3340ae1be237bb2f8a008a8cb60c7351f0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 837b68ca6ac63587cd43a7e8828777221c677e3c
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62396571"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70217145"
 ---
-# <a name="rdtsc"></a>__rdtsc
+# <a name="__rdtsc"></a>__rdtsc
 
-**Microsoft Specific**
+**Specifické pro společnost Microsoft**
 
-Generuje `rdtsc` instrukce, která vrátí časové razítko procesoru. Časové razítko procesoru zaznamenává počet hodinových cyklů od posledního resetování.
+Vygeneruje `rdtsc` instrukci, která vrací časové razítko procesoru. Časové razítko procesoru zaznamenává počet hodinových cyklů od posledního resetování.
 
 ## <a name="syntax"></a>Syntaxe
 
-```
+```C
 unsigned __int64 __rdtsc();
 ```
 
 ## <a name="return-value"></a>Návratová hodnota
 
-64bitové celé číslo bez znaménka představující počet cyklů.
+64 unsigned integer reprezentující počet impulsů.
 
 ## <a name="requirements"></a>Požadavky
 
-|Vnitřní|Architektura|
+|Vnitřním|Architektura|
 |---------------|------------------|
 |`__rdtsc`|x86, x64|
 
-**Soubor hlaviček** \<intrin.h >
+**Hlavičkový soubor** \<intrin. h >
 
 ## <a name="remarks"></a>Poznámky
 
 Tato rutina je k dispozici pouze jako vnitřní.
 
-Výklad TSC hodnotu této generace hardwaru se liší od v dřívějších verzích x64. Najdete v článku hardware příruček pro další informace.
+Interpretace hodnoty čítače TSC v pozdějších generacích hardwaru se liší od v dřívějších verzích x64. Další informace najdete v příručkách k hardwaru.
 
 ## <a name="example"></a>Příklad
 
-```
+```cpp
 // rdtsc.cpp
 // processor: x86, x64
 #include <stdio.h>
@@ -67,8 +67,8 @@ int main()
 3363423610155519 ticks
 ```
 
-**Specifické pro END Microsoft**
+**Specifické pro konec Microsoftu**
 
 ## <a name="see-also"></a>Viz také:
 
-[Vnitřní funkce kompilátoru](../intrinsics/compiler-intrinsics.md)
+[Vnitřní objekty kompilátoru](../intrinsics/compiler-intrinsics.md)

@@ -1,28 +1,28 @@
 ---
 title: __vmx_vmptrst
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - __vmx_vmptrst
 helpviewer_keywords:
 - __vmx_vmptrst intrinsic
 - VMPTRST instruction
 ms.assetid: 8dc66e47-03a0-41b0-8e25-c1485f42817a
-ms.openlocfilehash: 5ef02dd4401e0c10a84be008d7cb25841e0359cd
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e559746be9e2a3fe5e81afa4d290265394db3e36
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62389993"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70219482"
 ---
-# <a name="vmxvmptrst"></a>__vmx_vmptrst
+# <a name="__vmx_vmptrst"></a>__vmx_vmptrst
 
-**Microsoft Specific**
+**Specifické pro společnost Microsoft**
 
-Ukládá ukazatel na aktuální struktura řízení virtuálních počítačů (VMCS) na zadané adrese.
+Ukládá ukazatel na aktuální strukturu řízení virtuálních počítačů (VMCS) na zadané adrese.
 
 ## <a name="syntax"></a>Syntaxe
 
-```
+```C
 void __vmx_vmptrst(
    unsigned __int64 *VmcsPhysicalAddress
 );
@@ -30,26 +30,26 @@ void __vmx_vmptrst(
 
 ### <a name="parameters"></a>Parametry
 
-*VmcsPhysicalAddress*<br/>
-[in] Adresa aktuální ukazatel VMCS se mají ukládat.
+*VmcsPhysicalAddress*\
+pro Adresa, kde je uložen aktuální ukazatel VMCS
 
 ## <a name="remarks"></a>Poznámky
 
-Ukazatel VMCS je 64-bit fyzickou adresu.
+Ukazatel VMCS je 64 fyzická adresa.
 
-`__vmx_vmptrst` Funkce je ekvivalentní volání `VMPTRST` strojové instrukce. Tato funkce podporuje interakce monitorování virtuálního počítače hostitele s hostovaného operačního systému a jeho aplikací. Další informace, hledání dokumentů "Intel Virtualization technické specifikace pro the architekturou IA-32 Intel," dokumentu C97063-002 čísla na [společnosti Intel Corporation](https://software.intel.com/articles/intel-sdm) lokality.
+Funkce je ekvivalentní `VMPTRST` instrukci počítače. `__vmx_vmptrst` Tato funkce podporuje interakci monitorování virtuálního počítače hostitele s hostovaným operačním systémem a jeho aplikacemi. Další informace najdete v dokumentu "Technická specifikace technologie Intel Virtualization pro architekturu IA-32 Intel," číslo dokumentu C97063-002 "na webu [společnosti Intel](https://software.intel.com/articles/intel-sdm) .
 
 ## <a name="requirements"></a>Požadavky
 
-|Vnitřní|Architektura|
+|Vnitřním|Architektura|
 |---------------|------------------|
 |`__vmx_vmptrst`|x86, x64|
 
-**Soubor hlaviček** \<intrin.h >
+**Hlavičkový soubor** \<intrin. h >
 
-**Specifické pro END Microsoft**
+**Specifické pro konec Microsoftu**
 
 ## <a name="see-also"></a>Viz také:
 
-[Vnitřní funkce kompilátoru](../intrinsics/compiler-intrinsics.md)<br/>
+[Vnitřní objekty kompilátoru](../intrinsics/compiler-intrinsics.md)\
 [__vmx_vmptrld](../intrinsics/vmx-vmptrld.md)

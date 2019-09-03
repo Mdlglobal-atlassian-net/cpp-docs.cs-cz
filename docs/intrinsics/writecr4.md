@@ -1,51 +1,51 @@
 ---
 title: __writecr4
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - _writecr4
 helpviewer_keywords:
 - _writecr4 intrinsic
 ms.assetid: ab7651d7-b86b-4be7-a0a0-7263099c70fc
-ms.openlocfilehash: bbeb282e0e2c386d95009bef277546a260057334
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1afdadcdfdbf1060c87e3865dd5597b0b9a2ea6b
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62389954"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70219266"
 ---
-# <a name="writecr4"></a>__writecr4
+# <a name="__writecr4"></a>__writecr4
 
-**Microsoft Specific**
+**Specifické pro společnost Microsoft**
 
-Zapíše hodnotu `Data` CR4 registrace.
+Zapíše hodnotu `Data` do CR4 registru.
 
 ## <a name="syntax"></a>Syntaxe
 
-```
+```C
 void writecr4(
    unsigned __int64 Data
 );
 ```
 
-#### <a name="parameters"></a>Parametry
+### <a name="parameters"></a>Parametry
 
-*Data*<br/>
-[in] Hodnota k zápisu do registru CR4.
+*Údajů*\
+pro Hodnota, která se má zapsat do registru CR4
 
 ## <a name="requirements"></a>Požadavky
 
-|Vnitřní|Architektura|
+|Vnitřním|Architektura|
 |---------------|------------------|
 |`__writecr4`|x86, x64|
 
-**Soubor hlaviček** \<intrin.h >
+**Hlavičkový soubor** \<intrin. h >
 
 ## <a name="remarks"></a>Poznámky
 
-Tomto vnitřní je k dispozici pouze v režimu jádra a rutina je dostupný jenom jako vnitřní.
+Tato vnitřní funkce je k dispozici pouze v režimu jádra a rutina je k dispozici pouze jako vnitřní.
 
-**Specifické pro END Microsoft**
+**Specifické pro konec Microsoftu**
 
 ## <a name="see-also"></a>Viz také:
 
-[Vnitřní funkce kompilátoru](../intrinsics/compiler-intrinsics.md)
+[Vnitřní objekty kompilátoru](../intrinsics/compiler-intrinsics.md)

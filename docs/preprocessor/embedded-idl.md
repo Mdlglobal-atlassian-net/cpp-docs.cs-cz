@@ -1,38 +1,35 @@
 ---
-title: embedded_idl
-ms.date: 10/18/2018
+title: importovat atribut embedded_idl
+ms.date: 08/29/2019
 f1_keywords:
 - embedded_idl
 helpviewer_keywords:
 - embedded_idl attribute
 ms.assetid: f1c1c2e8-3872-4172-8795-8d1288a20452
-ms.openlocfilehash: c46924d2757d01a934c21a70f23e6556f6a10fd3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 01948b171b20ad0a3bf3e7a41047f1fe3df185b0
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62389343"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70216324"
 ---
-# <a name="embeddedidl"></a>embedded_idl
+# <a name="embedded_idl-import-attribute"></a>importovat atribut embedded_idl
 
-**Specifické pro C++**
+**C++Konkrétní**
 
-Určuje, že knihovna typů je zapsána do souboru .tlh se zachovaným kódem atributem generován.
+Určuje, zda je knihovna typů zapsána `.tlh` do souboru s zachovaným kódem generovaným atributem.
 
 ## <a name="syntax"></a>Syntaxe
 
-```
-embedded_idl[("param")]
-```
+> **#import** *typ – Knihovna* **embedded_idl** [ **(** { **"emitidl"**  |  **"no_emitidl"** } **)** ]
 
 ### <a name="parameters"></a>Parametry
 
-*param*<br/>
-Může být jedna ze dvou hodnot:
+**emitidl**\
+Informace o typu importované z *knihovny typů* jsou k dispozici v IDL generovaném pro projekt s atributy. Toto chování je výchozí a je platné, pokud nezadáte parametr do `embedded_idl`.
 
-- **emitidl**: Informace o typu naimportované z knihovny typelib bude k dispozici v generované projektu s atributy IDL.  Toto je výchozí nastavení a bude platit, pokud nezadáte parametr `embedded_idl`.
-
-- **no_emitidl**: Informace o typu naimportované z knihovny typelib nebudou k dispozici v generované projektu s atributy IDL.
+**"no_emitidl"** \
+Informace o typu importované z *knihovny typů* nejsou přítomny v IDL generovaném pro projekt s atributy.
 
 ## <a name="example"></a>Příklad
 
@@ -44,11 +41,9 @@ Může být jedna ze dvou hodnot:
 #import "\school\bin\importlib.tlb" embedded_idl("no_emitidl")
 ```
 
-## <a name="remarks"></a>Poznámky
-
-**Specifické pro END C++**
+**Specifické C++ pro konec**
 
 ## <a name="see-also"></a>Viz také:
 
-[atributů #import](../preprocessor/hash-import-attributes-cpp.md)<br/>
-[#import – direktiva](../preprocessor/hash-import-directive-cpp.md)
+[Atributy #import](../preprocessor/hash-import-attributes-cpp.md)\
+[#import direktiva](../preprocessor/hash-import-directive-cpp.md)

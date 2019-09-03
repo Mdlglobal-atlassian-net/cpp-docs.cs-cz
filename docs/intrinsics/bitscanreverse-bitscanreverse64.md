@@ -1,6 +1,6 @@
 ---
 title: _BitScanReverse, _BitScanReverse64
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - _BitScanReverse64
 - _BitScanReverse_cpp
@@ -11,22 +11,22 @@ helpviewer_keywords:
 - _BitScanReverse intrinsic
 - BitScanReverse intrinsic
 ms.assetid: 2520a207-af8b-4aad-9ae7-831abeadf376
-ms.openlocfilehash: 3639aac38f4c7df82cbbdb23ed9038ac86ba2cc0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 848c153967e5581f08f1d499a28ab282ee2602df
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62264280"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70216955"
 ---
-# <a name="bitscanreverse-bitscanreverse64"></a>_BitScanReverse, _BitScanReverse64
+# <a name="_bitscanreverse-_bitscanreverse64"></a>_BitScanReverse, _BitScanReverse64
 
-**Microsoft Specific**
+**Specifické pro společnost Microsoft**
 
-Hledat maskování dat od nejvýznamnější bit (MSB) na nejméně významných bitů (LSB) u nastaveného bitu (1).
+Prohledejte data masky z nejvýznamnějšího bitu (MSB) tak, aby nejméně závažná bitová (LSB) pro nastavený bit (1).
 
 ## <a name="syntax"></a>Syntaxe
 
-```
+```C
 unsigned char _BitScanReverse(
    unsigned long * Index,
    unsigned long Mask
@@ -37,28 +37,28 @@ unsigned char _BitScanReverse64(
 );
 ```
 
-#### <a name="parameters"></a>Parametry
+### <a name="parameters"></a>Parametry
 
-*Index*<br/>
-[out] Načtená verze umístění prvního nastaveného bitu (1) nalezena.
+*Indexovacím*\
+mimo Bylo načteno s bitovou pozicí prvního nastaveného bitu (1).
 
-*Maska*<br/>
-[in] 32bitové nebo 64bitové hodnotu vyhledávání.
+*Zrušit*\
+pro Hodnota 32 nebo 64, která se má vyhledat.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Nenulovou hodnotu, pokud `Index` byl sady, nebo 0, pokud nebyly nalezeny žádné sady bitů.
+Nenulová, `Index` Pokud byla nastavena, nebo 0, pokud nebyla nalezena žádná sada bitů.
 
 ## <a name="requirements"></a>Požadavky
 
-|Vnitřní|Architektura|Záhlaví|
+|Vnitřním|Architektura|Záhlaví|
 |---------------|------------------|------------|
-|`_BitScanReverse`|x86, ARM, x64|\<intrin.h>|
-|`_BitScanReverse64`|ARM, x64||
+|`_BitScanReverse`|x86, ARM, x64, ARM64|\<intrin.h>|
+|`_BitScanReverse64`|ARM64, x64|\<intrin.h>|
 
 ## <a name="example"></a>Příklad
 
-```
+```cpp
 // BitScanReverse.cpp
 // compile with: /EHsc
 #include <iostream>
@@ -87,21 +87,17 @@ int main()
 }
 ```
 
-## <a name="input"></a>Vstup
-
-```
+```Input
 12
 ```
 
-## <a name="sample-output"></a>Vzorový výstup
-
-```
+```Output
 Enter a positive integer as the mask:
 Mask: 12 Index: 3
 ```
 
-**Specifické pro END Microsoft**
+**Specifické pro konec Microsoftu**
 
 ## <a name="see-also"></a>Viz také:
 
-[Vnitřní funkce kompilátoru](../intrinsics/compiler-intrinsics.md)
+[Vnitřní objekty kompilátoru](../intrinsics/compiler-intrinsics.md)

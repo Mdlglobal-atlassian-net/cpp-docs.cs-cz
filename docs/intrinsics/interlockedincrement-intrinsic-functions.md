@@ -1,6 +1,6 @@
 ---
 title: Vnitřní funkce _InterlockedIncrement
-ms.date: 12/17/2018
+ms.date: 09/02/2019
 f1_keywords:
 - _InterlockedIncrement_acq
 - _InterlockedIncrement16_rel_cpp
@@ -44,12 +44,12 @@ helpviewer_keywords:
 - _InterlockedIncrement_acq intrinsic
 - InterlockedIncrement intrinsic
 ms.assetid: 37700615-f372-438b-bcef-d76e11839482
-ms.openlocfilehash: 58c71c577e3d87ca72836134a4f895f32170fe7f
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 4dd9ae9ba5454b0afefa332689d94fa3619a07a6
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69509353"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70221984"
 ---
 # <a name="_interlockedincrement-intrinsic-functions"></a>Vnitřní funkce _InterlockedIncrement
 
@@ -59,7 +59,7 @@ Poskytněte vnitřní podporu kompilátoru pro funkci Win32 Windows SDK [Interlo
 
 ## <a name="syntax"></a>Syntaxe
 
-```
+```C
 long _InterlockedIncrement(
    long * lpAddend
 );
@@ -98,9 +98,9 @@ __int64 _InterlockedIncrement64_nf(
 );
 ```
 
-#### <a name="parameters"></a>Parametry
+### <a name="parameters"></a>Parametry
 
-*lpAddend*<br/>
+*lpAddend*\
 [in, out] Ukazatel na proměnnou, která se má zvýšit.
 
 ## <a name="return-value"></a>Návratová hodnota
@@ -111,8 +111,9 @@ Vrácená hodnota je výsledná přírůstková hodnota.
 
 |Vnitřním|Architektura|Záhlaví|
 |---------------|------------------|------------|
-|`_InterlockedIncrement`, `_InterlockedIncrement16`, `_InterlockedIncrement64`|x86, ARM, x64|\<intrin.h>|
-|`_InterlockedIncrement_acq`, `_InterlockedIncrement_rel`, `_InterlockedIncrement_nf`, `_InterlockedIncrement16_acq`, `_InterlockedIncrement16_rel`, `_InterlockedIncrement16_nf`, `_InterlockedIncrement64_acq`, `_InterlockedIncrement64_rel`, `_InterlockedIncrement64_nf`|ARM|\<intrin.h>|
+|`_InterlockedIncrement`, `_InterlockedIncrement16`|x86, ARM, x64, ARM64|\<intrin.h>|
+|`_InterlockedIncrement64`|ARM, x64, ARM64|\<intrin.h>|
+|`_InterlockedIncrement_acq`, `_InterlockedIncrement_rel`, `_InterlockedIncrement_nf`, `_InterlockedIncrement16_acq`, `_InterlockedIncrement16_rel`, `_InterlockedIncrement16_nf`, `_InterlockedIncrement64_acq`, `_InterlockedIncrement64_rel`, `_InterlockedIncrement64_nf`|ARM, ARM64|\<intrin.h>|
 
 ## <a name="remarks"></a>Poznámky
 
@@ -120,7 +121,7 @@ Existuje několik variant `_InterlockedIncrement` , které se liší v závislos
 
 `_InterlockedIncrement16` `_InterlockedIncrement64` I když `_InterlockedIncrement` funkce funguje s 32 celočíselnými hodnotami, pracuje na 16bitových celočíselných hodnotách a pracuje na 64 celočíselných hodnotách.
 
-Pokud potřebujete sémantiku získání a vydání, jako `_acq` na `_rel` začátku a na konci kritického oddílu, používejte na platformách ARM vnitřní funkce a přípony. Vnitřní přípona s `_nf` příponou "bez plotu" nefunguje jako bariéra paměti.
+Pokud potřebujete sémantiku získání a vydání, jako `_acq` na `_rel` začátku a na konci kritického oddílu, používejte na platformách ARM vnitřní funkce a přípony. Vnitřní přípona s `_nf` příponou (bez plotu) nefunguje jako bariéra paměti.
 
 Proměnná, na `lpAddend` kterou se odkazuje parametr, musí být zarovnaná na hranici 32. v opačném případě tato funkce selže u víceprocesorových systémů s více procesory a systémy, které nejsou x86. Další informace najdete v tématu [Zarovnání](../cpp/align-cpp.md).
 
@@ -136,6 +137,6 @@ Ukázku použití `_InterlockedIncrement`naleznete v tématu [_InterlockedDecrem
 
 ## <a name="see-also"></a>Viz také:
 
-[Vnitřní funkce kompilátoru](../intrinsics/compiler-intrinsics.md)<br/>
-[Klíčová slova](../cpp/keywords-cpp.md)<br/>
+[Vnitřní objekty kompilátoru](../intrinsics/compiler-intrinsics.md)\
+[Klíčov](../cpp/keywords-cpp.md)\
 [Konflikty s kompilátorem x86](../build/x64-software-conventions.md#conflicts-with-the-x86-compiler)

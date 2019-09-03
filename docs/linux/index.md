@@ -1,17 +1,18 @@
 ---
 layout: LandingPage
-title: Vývoj pro Linux v dokumentaci k C++
-description: Vytvářet a ladit aplikace běžící na Linuxu.
-ms.openlocfilehash: ac80c6ad3b0650d7da20f18b049af0242ffa5704
-ms.sourcegitcommit: fde637f823494532314790602c2819f889706ff6
+title: Vývoj pro Linux C++ s využitím dokumentace
+description: Vytváření a ladění aplikací běžících na Linux.
+ms.topic: landing-page
+ms.openlocfilehash: ee956f25914e1996acb6776d9ecbb8c9e79c689b
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "67042731"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70216100"
 ---
-# <a name="linux-development-with-c-documentation"></a>Vývoj pro Linux v dokumentaci k C++
+# <a name="linux-development-with-c-documentation"></a>Vývoj pro Linux C++ s využitím dokumentace
 
-Vytvářet a ladit aplikace spuštěné na vzdálené počítače s Linuxem nebo subsystému Windows pro Linux pomocí sady Visual Studio 2017 nebo novější.
+K vytváření a ladění aplikací běžících na vzdálených počítačích se systémem Linux nebo v subsystému Windows pro Linux použijte Visual Studio 2017 a novější.
 
 <ul class="panelContent cardsF">
     <li>
@@ -26,7 +27,7 @@ Vytvářet a ladit aplikace spuštěné na vzdálené počítače s Linuxem nebo
                     </div>
                     <div class="cardText">
                         <h3>Instalace a konfigurace úlohy Linux</h3>
-                        <p>Zjistěte, jak nastavit Visual Studio 2017 a novější k sestavení aplikace pro Linux v C++.</p>
+                        <p>Naučte se, jak nastavit Visual Studio 2017 a novější pro vytváření aplikací C++pro Linux v nástroji.</p>
                     </div>
                 </div>
             </div>
@@ -45,7 +46,7 @@ Vytvářet a ladit aplikace spuštěné na vzdálené počítače s Linuxem nebo
                     </div>
                     <div class="cardText">
                         <h3>C++Blog týmu</h3>
-                        <p>Udržovat v aktuálním stavu na nejnovější C++ funkcí v sadě Visual Studio.</p>
+                        <p>Zajistěte si aktuálnost všech nejnovějších C++ funkcí v aplikaci Visual Studio.</p>
                     </div>
                 </div>
             </div>
@@ -56,7 +57,7 @@ Vytvářet a ladit aplikace spuštěné na vzdálené počítače s Linuxem nebo
 
 ---
 
-<h2>Odkaz</h2>
+<h2>Reference</h2>
 
 <ul class="panelContent cardsW">
     <li>

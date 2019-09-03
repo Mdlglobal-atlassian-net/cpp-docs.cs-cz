@@ -1,6 +1,6 @@
 ---
 title: _bittestandcomplement, _bittestandcomplement64
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - _bittestandcomplement64
 - _bittestandcomplement64_cpp
@@ -11,22 +11,22 @@ helpviewer_keywords:
 - _bittestandcomplement intrinsic
 - _bittestandcomplement64 intrinsic
 ms.assetid: 53fa12dd-835e-4e5d-baec-a431c8678806
-ms.openlocfilehash: 4c0fc11ca890c64da3ff41c8679a17a733c81d4c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b1dcfe86aad18c8261029c9111681e1882bc96f5
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62264235"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70222202"
 ---
-# <a name="bittestandcomplement-bittestandcomplement64"></a>_bittestandcomplement, _bittestandcomplement64
+# <a name="_bittestandcomplement-_bittestandcomplement64"></a>_bittestandcomplement, _bittestandcomplement64
 
-**Microsoft Specific**
+**Specifické pro společnost Microsoft**
 
-Generovat instrukce, který zkoumá vlastnost bit `b` adresy `a`, vrátí aktuální hodnotu a nastaví bit svému doplňku.
+Vygenerujte instrukci, která prověřuje bit `b` adresy `a`, vrátí jeho aktuální hodnotu a nastaví bit na jeho doplněk.
 
 ## <a name="syntax"></a>Syntaxe
 
-```
+```C
 unsigned char _bittestandcomplement(
    long *a,
    long b
@@ -37,26 +37,26 @@ unsigned char _bittestandcomplement64(
 );
 ```
 
-#### <a name="parameters"></a>Parametry
+### <a name="parameters"></a>Parametry
 
-*a*<br/>
-[out v] Ukazatel paměti prozkoumat.
+*určitého*\
+[in, out] Ukazatel na paměť, kterou chcete prošetřit.
 
-*b*<br/>
-[in] Bitová pozice pro testování.
+*b*\
+pro Bitová pozice, která se má testovat
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Bit na zadané pozici.
+Bit na pozici určené.
 
 ## <a name="requirements"></a>Požadavky
 
-|Vnitřní|Architektura|
+|Vnitřním|Architektura|
 |---------------|------------------|
-|`_bittestandcomplement`|x86, ARM, x64|
-|`_bittestandcomplement64`|x64|
+|`_bittestandcomplement`|x86, ARM, x64, ARM64|
+|`_bittestandcomplement64`|x64, ARM64|
 
-**Soubor hlaviček** \<intrin.h >
+**Hlavičkový soubor** \<intrin. h >
 
 ## <a name="remarks"></a>Poznámky
 
@@ -64,7 +64,7 @@ Tato rutina je k dispozici pouze jako vnitřní objekt.
 
 ## <a name="example"></a>Příklad
 
-```
+```cpp
 // bittestandcomplement.cpp
 // processor: x86, IPF, x64
 #include <stdio.h>
@@ -92,9 +92,7 @@ int main()
 }
 ```
 
-## <a name="sample-output"></a>Vzorový výstup
-
-```
+```Output
 Initial value: 1
 Testing bit 1
 Value changed to 3, Result: 0
@@ -102,8 +100,8 @@ Testing bit 0
 Value changed to 0, Result: 1
 ```
 
-**Specifické pro END Microsoft**
+**Specifické pro konec Microsoftu**
 
 ## <a name="see-also"></a>Viz také:
 
-[Vnitřní funkce kompilátoru](../intrinsics/compiler-intrinsics.md)
+[Vnitřní objekty kompilátoru](../intrinsics/compiler-intrinsics.md)

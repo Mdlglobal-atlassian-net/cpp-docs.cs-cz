@@ -1,36 +1,35 @@
 ---
-title: raw_dispinterfaces
-ms.date: 11/04/2016
+title: importovat atribut raw_dispinterfaces
+ms.date: 08/29/2019
 f1_keywords:
 - raw_dispinterfaces
 helpviewer_keywords:
 - raw_dispinterfaces attribute
 ms.assetid: f762864d-29bf-445b-825a-ba7b29a95409
-ms.openlocfilehash: ef8ed3992c77df0f1d551e923ddc90c2d1bb9b0b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 73c58b72b27de8dcf96e8ab9464d0fb6bce12b66
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62179838"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70216222"
 ---
-# <a name="rawdispinterfaces"></a>raw_dispinterfaces
-**Specifické pro C++**
+# <a name="raw_dispinterfaces-import-attribute"></a>importovat atribut raw_dispinterfaces
 
-Instruuje kompilátor, aby generovat funkce nízké úrovně obálky pro dispinterface metody a vlastnosti, které volají `IDispatch::Invoke` a vrátí kód chyby: HRESULT.
+**C++Konkrétní**
+
+Instruuje kompilátor, aby vygeneroval obálkové funkce nízké úrovně pro metody pro vyhlašování a vlastnosti `IDispatch::Invoke` , které volají, a vrátí kód chyby HRESULT.
 
 ## <a name="syntax"></a>Syntaxe
 
-```
-raw_dispinterfaces
-```
+> **#import** *typ – Knihovna* **raw_dispinterfaces**
 
 ## <a name="remarks"></a>Poznámky
 
-Pokud tento atribut není zadaný, pouze vysoké úrovně jsou generovány obálky, které vyvolají výjimky C++ v případě selhání.
+Pokud tento atribut není zadán, jsou vygenerovány pouze obálky vysoké úrovně, které vyvolávají C++ výjimky při selhání.
 
-**Specifické pro END C++**
+**Specifické C++ pro konec**
 
 ## <a name="see-also"></a>Viz také:
 
-[atributů #import](../preprocessor/hash-import-attributes-cpp.md)<br/>
-[#import – direktiva](../preprocessor/hash-import-directive-cpp.md)
+[Atributy #import](../preprocessor/hash-import-attributes-cpp.md)\
+[#import direktiva](../preprocessor/hash-import-directive-cpp.md)

@@ -1,44 +1,45 @@
 ---
 title: C/C++ – referenční dokumentace preprocesoru
-ms.date: 11/04/2016
+ms.date: 08/29/2019
 helpviewer_keywords:
 - preprocessor
 - preprocessor, reference overview
 ms.assetid: e4a52843-7016-4f6d-8b40-cb1ace18f805
-ms.openlocfilehash: 9eb94b105af976d1e1f49e212e0117c43c430683
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.openlocfilehash: 79031cd16390f9a77b1b12e54bf23502f6e535f0
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65220400"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70218770"
 ---
 # <a name="cc-preprocessor-reference"></a>C/C++ – referenční dokumentace preprocesoru
-*C/C++ Preprocessor Reference* popisuje preprocesor, jak je implementován v jazyce Microsoft C/C++. Preprocesor provádí předběžné operace v souborech C a C++ dříve, než jsou předány kompilátoru. Preprocesor můžete použít k podmíněné kompilaci kódu, vložení souborů, zadejte kompilace chybové zprávy a použití pravidel specifických pro části kódu.
+
+*Referenční dokumentace CC++ /preprocesoru* vysvětluje preprocesor, jak je implementován v Microsoft C/.C++ Preprocesor provádí předběžné operace se soubory C a C++ před jejich předáním do kompilátoru. Můžete použít preprocesor pro podmíněné kompilování kódu, vkládání souborů, určení chybových zpráv při kompilaci a použití pravidel specifických pro konkrétní počítač pro oddíly kódu.
 
 ## <a name="in-this-section"></a>V tomto oddílu
 
-[Preprocesor – direktivy](../preprocessor/preprocessor-directives.md)<br/>
-Popisuje směrnice, které se obvykle používá ke snadnému sestavení v různých pracovních prostředích a snadné změně zdrojových programů.
+[Direktivy preprocesoru](../preprocessor/preprocessor-directives.md)\
+Popisuje direktivy, které se obvykle používají k snadné změně zdrojových programů a jejich snadné kompilaci v různých prostředích pro spuštění.
 
-[Operátory preprocesoru](../preprocessor/preprocessor-operators.md)<br/>
-Tento článek popisuje čtyři operátory závislé na preprocesoru používané v kontextu `#define` směrnice.
+[Operátory preprocesoru](../preprocessor/preprocessor-operators.md)\
+Popisuje čtyři operátory pro preprocesory, které se používají v kontextu `#define` direktivy.
 
-[Předdefinovaná makra](../preprocessor/predefined-macros.md)<br/>
-Popisuje předdefinovaná makra podle standardu ANSI a Microsoft C++.
+[Předdefinovaná makra](../preprocessor/predefined-macros.md)\
+Popisuje Předdefinovaná makra, která jsou určena ANSI C++a Microsoftem.
 
-[Pragmas](../preprocessor/pragma-directives-and-the-pragma-keyword.md)<br/>
-Tento článek popisuje direktivy, které představují způsob, jakým každý kompilátor nabízí funkce závislé na počítače a operačního systému při zachování celkové kompatibility s jazyky C a C++.
+[Direktivy pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)\
+Popisuje direktivy pragma, které nabízejí způsob, jakým každý kompilátor nabízí funkce specifické pro počítač a operační systém při zachování celkové kompatibility s jazyky C a C++ .
 
 ## <a name="related-sections"></a>Související oddíly
 
-[Referenční dokumentace jazyka C++](../cpp/cpp-language-reference.md)<br/>
-Poskytuje referenční materiál pro implementaci jazyka C++ společnosti Microsoft.
+[C++Referenční dokumentace jazyka](../cpp/cpp-language-reference.md)\
+Poskytuje referenční materiály pro implementaci C++ jazyka od Microsoftu.
 
-[Referenční dokumentace jazyka C](../c-language/c-language-reference.md)<br/>
-Poskytuje referenční materiál pro implementaci jazyka C společnosti Microsoft.
+[Referenční dokumentace jazyka C](../c-language/c-language-reference.md)\
+Poskytuje referenční materiály pro implementaci jazyka C od společnosti Microsoft.
 
-[Sestavení programu v jazyce C/C++](../build/reference/c-cpp-building-reference.md)<br/>
-Obsahuje odkazy na témata pojednávající možnosti kompilátoru a propojovacího programu.
+[Reference CC++ /Build](../build/reference/c-cpp-building-reference.md)\
+Obsahuje odkazy na témata, která pojednávají o možnostech kompilátoru a linkeru.
 
-[Projekty sady Visual Studio – C++](../build/creating-and-managing-visual-cpp-projects.md)<br/>
-Popisuje uživatelské rozhraní v sadě Visual Studio, který umožňuje určit adresáře, které systém projektu prohledávat při vyhledávání souborů projektu v jazyce C++.
+[Projekty sady Visual Studio –C++](../build/creating-and-managing-visual-cpp-projects.md)\
+Popisuje uživatelské rozhraní v aplikaci Visual Studio, které umožňuje určit adresáře, ve kterých bude systém projektu vyhledávat soubory pro váš C++ projekt.

@@ -1,6 +1,6 @@
 ---
-title: funkce (C/C++)
-ms.date: 11/04/2016
+title: function – direktiva pragma
+ms.date: 08/29/2019
 f1_keywords:
 - function_CPP
 - vc-pragma.function
@@ -8,27 +8,26 @@ helpviewer_keywords:
 - function pragma
 - pragmas, function
 ms.assetid: cbd1bd60-fabf-4b5a-9c3d-2d9f4b871365
-ms.openlocfilehash: c57ff2053b3c1fd52474c7eb0dd598641632f789
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f99f3c878789a6c47fdb0d48e0a8690d65fa8062
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62409925"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70220135"
 ---
-# <a name="function-cc"></a>funkce (C/C++)
-Určuje, že budou vytvořena volání funkcí zadaných v seznamu argumentů direktivy pragma.
+# <a name="function-pragma"></a>function – direktiva pragma
+
+Instruuje kompilátor, aby vygeneroval volání funkcí zadaných v seznamu argumentů direktivy pragma místo jejich vkládání.
 
 ## <a name="syntax"></a>Syntaxe
 
-```
-#pragma function( function1 [, function2, ...] )
-```
+> **#pragma – funkce (** *Function1* [ **,** *function2* ...] **)**
 
 ## <a name="remarks"></a>Poznámky
 
-Pokud používáte `intrinsic` – Direktiva pragma (nebo /Oi) Chcete-li sdělit kompilátoru, aby vytvářel vnitřní funkce (vnitřní funkce jsou vytvořeny jako vložený kód, nikoli jako volání funkce), můžete použít **funkce** – Direktiva pragma k vynucení explicitního volání funkce. Po nalezení direktivy pragma function se její účinek projeví v první definici funkce obsahující zadanou vnitřní funkci. Účinek trvá do konce zdrojového souboru nebo do výskytu `intrinsic` zadávající stejnou vnitřní funkci. **Funkce** – Direktiva pragma lze použít pouze vně funkce – na globální úrovni.
+Vnitřní funkce jsou obvykle generovány jako vložený kód, nikoli jako volání funkce. Použijete-li [vnitřní direktivu pragma](intrinsic.md) nebo možnost kompilátoru [/Oi](../build/reference/oi-generate-intrinsic-functions.md) k oznámení kompilátoru, aby vygeneroval vnitřní funkce, můžete použít direktivu pragma **funkce** k explicitnímu vynucení volání funkce. Po výskytu direktivy pragma **funkce** se projeví v první definici funkce obsahující zadanou vnitřní funkci. Efekt pokračuje do konce zdrojového souboru nebo do výskytu `intrinsic` direktivy pragma, která určuje stejnou vnitřní funkci. Direktivu pragma **funkce** lze použít pouze mimo funkci na globální úrovni.
 
-Seznam funkcí, které mají vlastní vnitřní podobu, naleznete v tématu [#pragma intrinsic](../preprocessor/intrinsic.md).
+Seznam funkcí, které mají vnitřní formuláře, najdete v tématu [vnitřní direktiva pragma](intrinsic.md).
 
 ## <a name="example"></a>Příklad
 
@@ -84,4 +83,4 @@ str is '!!!!!!!!!!!!!!!'
 
 ## <a name="see-also"></a>Viz také:
 
-[Direktivy Pragma a klíčové slovo __Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)
+[Direktivy pragma a klíčové slovo __pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

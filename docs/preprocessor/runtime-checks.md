@@ -1,6 +1,6 @@
 ---
-title: runtime_checks
-ms.date: 11/04/2016
+title: runtime_checks – direktiva pragma
+ms.date: 08/29/2019
 f1_keywords:
 - vc-pragma.runtime_checks
 - runtime_checks_CPP
@@ -8,58 +8,55 @@ helpviewer_keywords:
 - runtime_checks pragma
 - pragmas, runtime_checks
 ms.assetid: ae50b43f-f88d-47ad-a2db-3389e9e7df5b
-ms.openlocfilehash: 44c26fb90a2d2f9ba78ec7dba7cceed65a4b4ed7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a1c8e6cca27e157818e6ec80182f8fefa112daf1
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62179981"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70216618"
 ---
-# <a name="runtimechecks"></a>runtime_checks
-Zakáže nebo obnoví [/RTC](../build/reference/rtc-run-time-error-checks.md) nastavení.
+# <a name="runtime_checks-pragma"></a>runtime_checks – direktiva pragma
+
+Zakáže nebo obnoví nastavení [/RTC](../build/reference/rtc-run-time-error-checks.md) .
 
 ## <a name="syntax"></a>Syntaxe
 
-```
-#pragma runtime_checks( "[runtime_checks]", {restore | off} )
-```
+> **#pragma runtime_checks ("** [ *runtime_checks* ] **";** { **Restore** | **off** } **)**
 
 ## <a name="remarks"></a>Poznámky
 
-Nelze povolit kontrolu za běhu, který není povolená s možností kompilátoru. Například, pokud nezadáte `/RTCs`, zadání `#pragma runtime_checks( "s", restore)` neumožní ověřování rámců zásobníku.
+Nelze povolit kontrolu za běhu, která nebyla povolena možností kompilátoru. Například pokud nezadáte `/RTCs` na příkazovém řádku, zadáním `#pragma runtime_checks( "s", restore)` nepovolíte ověřování snímku zásobníku.
 
-**Runtime_checks –** – Direktiva pragma musí být uvedena mimo funkci a na první funkci definovanou po viděli direktivy pragma se projeví. *Obnovení* a *vypnout* argumenty zapnutí možnosti zadané v **runtime_checks –** zapnutí nebo vypnutí.
+Direktiva pragma **runtime_checks** se musí vyskytovat vně funkce a projeví se v první funkci definované po zobrazení direktivy pragma. Argumenty **Restore** a **off** zapínají možnosti zadané v **runtime_checks** nebo off.
 
-**Runtime_checks –** může být nula nebo více parametrů je znázorněno v následující tabulce.
+**Runtime_checks** může být nula nebo více parametrů uvedených v následující tabulce.
 
-### <a name="parameters-of-the-runtimechecks-pragma"></a>Parametry runtime_checks – direktiva Pragma
+### <a name="parameters-of-the-runtime_checks-pragma"></a>Parametry direktivy pragma runtime_checks
 
-|Parametry|Typ kontroly za běhu|
+| Parametr (y) | Typ kontroly za běhu |
 |--------------------|-----------------------------|
-|*s*|Umožňuje seskupit ověření (snímek).|
-|*c*|Oznámí, že na menší datový typ, který vede ke ztrátě dat je přiřazena hodnota.|
-|*u*|Oznámí, pokud se nějaká proměnná použije předtím, než se definuje.|
+| **s** | Povolí ověřování zásobníku (Frame). |
+| **c** | Vytvoří sestavy, je-li přiřazena hodnota k menšímu datovému typu, který má za následek ztrátu dat. |
+| **u** | Hlásí, že je před definováním proměnné použita proměnná. |
 
-Toto jsou stejná písmena použít s `/RTC` – možnost kompilátoru. Příklad:
+Tyto parametry jsou stejné jako používané s `/RTC` možností kompilátoru. Příklad:
 
-```
+```cpp
 #pragma runtime_checks( "sc", restore )
 ```
 
-Použití **runtime_checks –** – Direktiva pragma se prázdný řetězec (**""**) je zvláštní forma direktivy:
+Použití direktivy pragma **runtime_checks** s prázdným řetězcem ( **""** ) je zvláštní forma direktivy:
 
-- Při použití *vypnout* parametr, ukazuje kontroly chyb za běhu, uvedené v tabulce výše, vypnuto.
+- Při použití parametru **off** dojde k vypnutí kontrol chyb za běhu uvedených v tabulce výše.
 
-- Při použití *obnovení* parametr resetuje kontroly chyb za běhu na ty, které jste zadali pomocí `/RTC` – možnost kompilátoru.
+- Použijete-li parametr Restore, dojde k resetování kontrol chyb za běhu do těch, které jste zadali pomocí `/RTC` možnosti kompilátoru.
 
-```
+```cpp
 #pragma runtime_checks( "", off )
-.
-.
-.
+/* runtime checks are off in this region */
 #pragma runtime_checks( "", restore )
 ```
 
 ## <a name="see-also"></a>Viz také:
 
-[Direktivy Pragma a klíčové slovo __Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)
+[Direktivy pragma a klíčové slovo __pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

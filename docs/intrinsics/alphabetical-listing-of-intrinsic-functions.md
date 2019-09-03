@@ -6,16 +6,16 @@ helpviewer_keywords:
 - intrinsics, alphabetical list
 - intrinsics
 ms.assetid: 178f88a2-7e8e-43ac-b55e-ef3298bef895
-ms.openlocfilehash: 67206e63d163b489c5087e6bc6759cde30a3d6c4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ff6957436ecfb86ae44388e55488981f528f2c73
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62264308"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70220078"
 ---
 # <a name="alphabetical-listing-of-intrinsic-functions"></a>Abecední seznam vnitřních funkcí
 
-V následujících částech jsou specifické pro společnost Microsoft vnitřní funkce dostupné na některé nebo všechny architektury. Další podporované vnitřní objekty jsou popsány výrobci procesoru, v souborech hlaviček nebo na svých webech. Najdete v článku [vnitřní objekty ARM](../intrinsics/arm-intrinsics.md), [x86 vnitřních objektů](../intrinsics/x86-intrinsics-list.md), a [x64 vnitřních objektů](../intrinsics/x64-amd64-intrinsics-list.md) oddíly pro odkazy na dokumentaci výrobce. Funkce jazyka C Run-time Library (CRT), které mají vnitřní objekty, které jsou pro ně implementováno nejsou uvedené. Tyto funkce jsou dokumentovány v článku [C Run-Time Library Reference](../c-runtime-library/c-run-time-library-reference.md).
+V následujících částech jsou popsány vnitřní funkce specifické pro společnost Microsoft, které jsou k dispozici v některých nebo všech architekturách. Další podporované vnitřní prvky jsou zdokumentovány výrobci procesorů, a to buď v hlavičkových souborech, nebo na svých webech. Odkazy na dokumentaci výrobce najdete v částech [vnitřní objekty ARM](../intrinsics/arm-intrinsics.md), [vnitřní objekty x86](../intrinsics/x86-intrinsics-list.md)a [x64](../intrinsics/x64-amd64-intrinsics-list.md) . Funkce běhové knihovny jazyka C (CRT), které mají pro ně implementovány vnitřní objekty, zde nejsou popsány. Tyto funkce jsou zdokumentovány v [referenčních informacích ke knihovně run-time jazyka C](../c-runtime-library/c-run-time-library-reference.md).
 
 [__addfsbyte, \__addfsword, \__addfsdword](../intrinsics/addfsbyte-addfsword-addfsdword.md)
 
@@ -75,9 +75,9 @@ V následujících částech jsou specifické pro společnost Microsoft vnitřn�
 
 [Vnitřní funkce _InterlockedAnd](../intrinsics/interlockedand-intrinsic-functions.md)
 
-[Vnitřní funkce _interlockedbittestandreset](../intrinsics/interlockedbittestandreset-intrinsic-functions.md)
+[vnitřní funkce _interlockedbittestandreset](../intrinsics/interlockedbittestandreset-intrinsic-functions.md)
 
-[Vnitřní funkce _interlockedbittestandset](../intrinsics/interlockedbittestandset-intrinsic-functions.md)
+[vnitřní funkce _interlockedbittestandset](../intrinsics/interlockedbittestandset-intrinsic-functions.md)
 
 [Vnitřní funkce _InterlockedCompareExchange](../intrinsics/interlockedcompareexchange-intrinsic-functions.md)
 
@@ -275,4 +275,4 @@ V následujících částech jsou specifické pro společnost Microsoft vnitřn�
 
 ## <a name="see-also"></a>Viz také:
 
-[Vnitřní funkce kompilátoru](../intrinsics/compiler-intrinsics.md)
+[Vnitřní objekty kompilátoru](../intrinsics/compiler-intrinsics.md)

@@ -1,6 +1,6 @@
 ---
-title: __incgsbyte __incgsword, __incgsdword, __incgsqword
-ms.date: 11/04/2016
+title: __incgsbyte, __incgsword, __incgsdword, __incgsqword
+ms.date: 09/02/2019
 f1_keywords:
 - __incgsdword
 - __incgsqword_cpp
@@ -16,22 +16,22 @@ helpviewer_keywords:
 - __incgsqword intrinsic
 - __incgsdword intrinsic
 ms.assetid: 06bfdf4f-7643-4fe0-8455-60ce3068073e
-ms.openlocfilehash: 3b96fbdb343fa40b6615ac7f91f83099a294624c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8b4e88b4ccd2cf1d2a3130e3a535de1c9a434320
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62264020"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70217793"
 ---
-# <a name="incgsbyte-incgsword-incgsdword-incgsqword"></a>__incgsbyte __incgsword, __incgsdword, __incgsqword
+# <a name="__incgsbyte-__incgsword-__incgsdword-__incgsqword"></a>__incgsbyte, __incgsword, __incgsdword, __incgsqword
 
-**Microsoft Specific**
+**Specifické pro společnost Microsoft**
 
-Přidejte jej na hodnotu v paměti umístění určené posun vzhledem k začátku `GS` segmentu.
+Přidejte jednu k hodnotě v umístění v paměti určené posunem relativně k začátku `GS` segmentu.
 
 ## <a name="syntax"></a>Syntaxe
 
-```
+```C
 void __incgsbyte(
    unsigned long Offset
 );
@@ -46,29 +46,31 @@ void __incgsqword(
 );
 ```
 
-#### <a name="parameters"></a>Parametry
+### <a name="parameters"></a>Parametry
 
-*Posun*<br/>
-[in] Posun od začátku `GS`.
+*Polohy*\
+pro Posun od začátku `GS`.
 
 ## <a name="requirements"></a>Požadavky
 
-|Vnitřní|Architektura|
+|Vnitřním|Architektura|
 |---------------|------------------|
 |`__incgsbyte`|x64|
 |`__incgsword`|x64|
 |`__incgsdword`|x64|
 |`__incgsqword`|x64|
 
+**Hlavičkový soubor** \<intrin. h >
+
 ## <a name="remarks"></a>Poznámky
 
-Tyto rutiny jsou dostupné jenom jako vnitřní.
+Tyto rutiny jsou k dispozici pouze jako vnitřní.
 
-**Specifické pro END Microsoft**
+**Specifické pro konec Microsoftu**
 
 ## <a name="see-also"></a>Viz také:
 
-[__addgsbyte, \__addgsword, \__addgsdword, \__addgsqword](../intrinsics/addgsbyte-addgsword-addgsdword-addgsqword.md)<br/>
-[__readgsbyte, \__readgsdword, \__readgsqword, \__readgsword](../intrinsics/readgsbyte-readgsdword-readgsqword-readgsword.md)<br/>
-[__writegsbyte, \__writegsdword, \__writegsqword, \__writegsword](../intrinsics/writegsbyte-writegsdword-writegsqword-writegsword.md)<br/>
-[Vnitřní funkce kompilátoru](../intrinsics/compiler-intrinsics.md)
+[\__addgsbyte, \__addgsword, \__addgsdword, \__addgsqword](../intrinsics/addgsbyte-addgsword-addgsdword-addgsqword.md)\
+[\__readgsbyte, \__readgsdword, \__readgsqword, \__readgsword](../intrinsics/readgsbyte-readgsdword-readgsqword-readgsword.md)\
+[\__writegsbyte, \__writegsdword, \__writegsqword, \__writegsword](../intrinsics/writegsbyte-writegsdword-writegsqword-writegsword.md)\
+[Vnitřní objekty kompilátoru](../intrinsics/compiler-intrinsics.md)

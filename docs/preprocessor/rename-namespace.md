@@ -1,44 +1,42 @@
 ---
-title: rename_namespace
-ms.date: 10/18/2018
+title: importovat atribut rename_namespace
+ms.date: 08/29/2019
 f1_keywords:
 - rename_namespace
 helpviewer_keywords:
 - rename_namespace attribute
 ms.assetid: 45006d2b-36cd-4bec-98b9-3b8ec45299e3
-ms.openlocfilehash: 7b3917a7114ca44d092f10a7831bb35bc64e9387
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d319d7390e7c7dce070a35be44aad37c7a34e1a0
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62179760"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70216651"
 ---
-# <a name="renamenamespace"></a>rename_namespace
+# <a name="rename_namespace-import-attribute"></a>importovat atribut rename_namespace
 
-**Specifické pro C++**
+**C++Konkrétní**
 
 Přejmenuje obor názvů, který obsahuje obsah knihovny typů.
 
 ## <a name="syntax"></a>Syntaxe
 
-```
-rename_namespace("NewName")
-```
+> **#import** *typ – Knihovna* **rename_namespace (** "*newname*" **)**
 
 ### <a name="parameters"></a>Parametry
 
-*NewName*<br/>
+*Nového*\
 Nový název oboru názvů.
 
 ## <a name="remarks"></a>Poznámky
 
-Přijímá jeden argument, *NewName*, která určuje nový název pro obor názvů.
+Atribut **rename_namespace** přebírá jeden argument, *newname*, který určuje nový název oboru názvů.
 
-Chcete-li odebrat obor názvů, použijte [no_namespace](../preprocessor/no-namespace.md) místo atributu.
+Chcete-li odebrat obor názvů, použijte raději atribut [no_namespace](../preprocessor/no-namespace.md) .
 
-**Specifické pro END C++**
+**Specifické C++ pro konec**
 
 ## <a name="see-also"></a>Viz také:
 
-[atributů #import](../preprocessor/hash-import-attributes-cpp.md)<br/>
-[#import – direktiva](../preprocessor/hash-import-directive-cpp.md)
+[Atributy #import](../preprocessor/hash-import-attributes-cpp.md)\
+[#import direktiva](../preprocessor/hash-import-directive-cpp.md)

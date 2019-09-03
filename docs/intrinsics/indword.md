@@ -1,6 +1,6 @@
 ---
 title: __indword
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - __indword_cpp
 - __indword
@@ -8,50 +8,50 @@ helpviewer_keywords:
 - in instruction
 - __indword intrinsic
 ms.assetid: 1068d686-586e-4e36-b962-d1d7c3315260
-ms.openlocfilehash: 063ebd92682f8011bc6b60eee14c3443bc04c333
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 790b65c8a565124df92b82b7ea17174788086a96
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62348923"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70222115"
 ---
-# <a name="indword"></a>__indword
+# <a name="__indword"></a>__indword
 
-**Microsoft Specific**
+**Specifické pro společnost Microsoft**
 
-Načte data o jedno slovo double pomocí zadaný port `in` instrukce.
+Přečte z určeného portu jedno z hodnot typu Double a pomocí `in` instrukce.
 
 ## <a name="syntax"></a>Syntaxe
 
-```
+```C
 unsigned long __indword(
    unsigned short Port
 );
 ```
 
-#### <a name="parameters"></a>Parametry
+### <a name="parameters"></a>Parametry
 
-*Port*<br/>
-[in] Port, který se má číst z.
+*Přístavní*\
+pro Port, ze kterého se má číst.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Slovo čtení z portu.
+Slovo se načte z portu.
 
 ## <a name="requirements"></a>Požadavky
 
-|Vnitřní|Architektura|
+|Vnitřním|Architektura|
 |---------------|------------------|
 |`__indword`|x86, x64|
 
-**Soubor hlaviček** \<intrin.h >
+**Hlavičkový soubor** \<intrin. h >
 
 ## <a name="remarks"></a>Poznámky
 
 Tato rutina je k dispozici pouze jako vnitřní objekt.
 
-**Specifické pro END Microsoft**
+**Specifické pro konec Microsoftu**
 
 ## <a name="see-also"></a>Viz také:
 
-[Vnitřní funkce kompilátoru](../intrinsics/compiler-intrinsics.md)
+[Vnitřní objekty kompilátoru](../intrinsics/compiler-intrinsics.md)

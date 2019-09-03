@@ -1,6 +1,6 @@
 ---
 title: __outbytestring
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - __outbytestring
 helpviewer_keywords:
@@ -8,22 +8,22 @@ helpviewer_keywords:
 - __outbytestring intrinsic
 - outsb instruction
 ms.assetid: c9150661-9c18-427f-bae8-710bba6ed78c
-ms.openlocfilehash: 41064dda6a1a0b9ad4c15f98c3f3081f08ef8db6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 31caf17db5d56efccd6b30200994b1080356b4c1
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62396610"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70217168"
 ---
-# <a name="outbytestring"></a>__outbytestring
+# <a name="__outbytestring"></a>__outbytestring
 
-**Microsoft Specific**
+**Specifické pro společnost Microsoft**
 
-Generuje `rep outsb` instrukce, která odesílá první `Count` bajtů dat, na které odkazuje `Buffer` na port určený `Port`.
+Vygeneruje `Count` `Buffer` `Port`instrukci, která pošle prvních bajtů dat, na které odkazuje, na port určený parametrem. `rep outsb`
 
 ## <a name="syntax"></a>Syntaxe
 
-```
+```C
 void __outbytestring(
    unsigned short Port,
    unsigned char* Buffer,
@@ -31,31 +31,31 @@ void __outbytestring(
 );
 ```
 
-#### <a name="parameters"></a>Parametry
+### <a name="parameters"></a>Parametry
 
-*Port*<br/>
-[in] Port pro odesílání dat na.
+*Přístavní*\
+pro Port, do kterého se mají data odeslat.
 
-*Vyrovnávací paměti*<br/>
-[in] Data, která mají být odeslány zadaný port.
+*Vyrovnávací paměti*\
+pro Data, která se mají odeslat na zadaný port.
 
-*Počet*<br/>
-[in] Počet bajtů dat k odeslání.
+*Výpočtu*\
+pro Počet bajtů dat, která se mají odeslat.
 
 ## <a name="requirements"></a>Požadavky
 
-|Vnitřní|Architektura|
+|Vnitřním|Architektura|
 |---------------|------------------|
 |`__outbytestring`|x86, x64|
 
-**Soubor hlaviček** \<intrin.h >
+**Hlavičkový soubor** \<intrin. h >
 
 ## <a name="remarks"></a>Poznámky
 
 Tato rutina je k dispozici pouze jako vnitřní objekt.
 
-**Specifické pro END Microsoft**
+**Specifické pro konec Microsoftu**
 
 ## <a name="see-also"></a>Viz také:
 
-[Vnitřní funkce kompilátoru](../intrinsics/compiler-intrinsics.md)
+[Vnitřní objekty kompilátoru](../intrinsics/compiler-intrinsics.md)

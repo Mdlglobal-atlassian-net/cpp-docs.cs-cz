@@ -1,52 +1,53 @@
 ---
 title: __svm_invlpga
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - __svm_invlpga
 helpviewer_keywords:
 - __svm_invlpga intrinsic
 - INVLPGA instruction
 ms.assetid: aa6578ce-8278-464b-8815-a0fc45330915
-ms.openlocfilehash: 5e470fc12ad47aa156c513b293543fa356398d5e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e0f8ef02efdb64f70bb65f6f017449fcc03beca1
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62390266"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70219883"
 ---
-# <a name="svminvlpga"></a>__svm_invlpga
+# <a name="__svm_invlpga"></a>__svm_invlpga
 
-**Microsoft Specific**
+**Specifické pro společnost Microsoft**
 
-Zruší platnost položky mapování adresy ve vyrovnávací paměti počítače překlad doplňování vzhled. Parametry zadejte virtuální adresu a adresu místo identifikátor stránky zrušit platnost.
+Zruší platnost položky mapování adres v vyrovnávací paměti pro překlad z překladu počítače. Parametry určují virtuální adresu a identifikátor adresního prostoru stránky k neplatnosti.
 
 ## <a name="syntax"></a>Syntaxe
 
-```
-void __svm_invlpga(void *Va, int ASID);
+```C
+void __svm_invlpga(void *Vaddr, int as_id);
 ```
 
-#### <a name="parameters"></a>Parametry
+### <a name="parameters"></a>Parametry
 
-|Parametr|Popis|
-|---------------|-----------------|
-|*Va*|[in] Virtuální adresa stránky zrušit platnost.|
-|*ASID*|[in] Adresa místa identifikátor (ASID) na stránce zrušit platnost.|
+*Vaddr*\
+pro Virtuální adresa stránky, která se má neověřit
+
+*as_id*\
+pro Identifikátor adresního prostoru (ASID) stránky pro zrušení platnosti.
 
 ## <a name="remarks"></a>Poznámky
 
-`__svm_invlpga` Funkce je ekvivalentní volání `INVLPGA` strojové instrukce. Tato funkce podporuje interakce monitorování virtuálního počítače hostitele s hostovaného operačního systému a jeho aplikací. Další informace vyhledejte dokument, "ruční svazek programátor architektury AMD64 2: Číslo 24593 revize 3.11, systém programování,"dokumentu na [AMD corporation](https://developer.amd.com/resources/developer-guides-manuals/) lokality.
+Funkce je ekvivalentní `INVLPGA` instrukci počítače. `__svm_invlpga` Tato funkce podporuje interakci monitorování virtuálního počítače hostitele s hostovaným operačním systémem a jeho aplikacemi. Další informace najdete v dokumentu, "ručním svazkem pro programátory AMD64 architektury AMD64: Programování systému, "číslo dokumentu 24593, revize 3,11, na webu [AMD Corporation](https://developer.amd.com/resources/developer-guides-manuals/) .
 
 ## <a name="requirements"></a>Požadavky
 
-|Vnitřní|Architektura|
+|Vnitřním|Architektura|
 |---------------|------------------|
 |`__svm_invlpga`|x86, x64|
 
-**Soubor hlaviček** \<intrin.h >
+**Hlavičkový soubor** \<intrin. h >
 
-**Specifické pro END Microsoft**
+**Specifické pro konec Microsoftu**
 
 ## <a name="see-also"></a>Viz také:
 
-[Vnitřní funkce kompilátoru](../intrinsics/compiler-intrinsics.md)
+[Vnitřní objekty kompilátoru](../intrinsics/compiler-intrinsics.md)

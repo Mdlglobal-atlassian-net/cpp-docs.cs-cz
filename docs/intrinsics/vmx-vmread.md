@@ -1,64 +1,65 @@
 ---
 title: __vmx_vmread
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - __vmx_vmread
 helpviewer_keywords:
 - VMREAD instruction
 - __vmx_vmread intrinsic
 ms.assetid: 08bdd7a0-6435-4ea6-b9a0-f592d870e5aa
-ms.openlocfilehash: 5c7b72ba3bf1bd60324704b774bcedaf5612240f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 409835ac29d6f2e839de62291cc5b142166a465c
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62390045"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70219430"
 ---
-# <a name="vmxvmread"></a>__vmx_vmread
+# <a name="__vmx_vmread"></a>__vmx_vmread
 
-**Microsoft Specific**
+**Specifické pro společnost Microsoft**
 
-Načte zadaného pole z aktuální řídicí struktura virtuálního počítače (VMCS) a umístí jej do zadaného umístění.
+Přečte zadané pole z aktuální struktury řízení virtuálních počítačů (VMCS) a umístí ho do zadaného umístění.
 
 ## <a name="syntax"></a>Syntaxe
 
-```
+```C
 unsigned char __vmx_vmread(
    size_t Field,
    size_t *FieldValue
 );
 ```
 
-#### <a name="parameters"></a>Parametry
+### <a name="parameters"></a>Parametry
 
-|Parametr|Popis|
-|---------------|-----------------|
-|*Pole*|[in] Pole VMCS ke čtení.|
-|*FieldValue*|[in] Ukazatel na umístění pro ukládání hodnoty horní četlo VMCS pole určené identifikátorem `Field` parametru.|
+*Dílčí*\
+pro Pole VMCS pro čtení.
+
+*Hodnotapole*\
+pro Ukazatel na umístění pro uložení hodnoty načtený z pole VMCS zadaného `Field` parametrem.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-|Hodnota|Význam|
+|Value|Význam|
 |-----------|-------------|
 |0|Operace byla úspěšná.|
-|1|Operace se nezdařila s rozšířenou stav k dispozici v `VM-instruction error field` z aktuální VMCS.|
-|2|Operace selhala, aniž by k dispozici.|
+|1|Operace se nezdařila s rozšířeným stavem dostupným v `VM-instruction error field` aktuálním VMCS.|
+|2|Operace se nezdařila bez dostupného stavu.|
 
 ## <a name="remarks"></a>Poznámky
 
-`__vmx_vmread` Funkce je ekvivalentní volání `VMREAD` strojové instrukce. Hodnota `Field` parametr je kódovaný pole index, který je popsán v dokumentaci k Intel. Další informace, hledání dokumentů "Intel Virtualization technické specifikace pro the architekturou IA-32 Intel," dokumentu C97063-002 čísla na [společnosti Intel Corporation](https://software.intel.com/articles/intel-sdm) lokality a pak naleznete v dodatku C tohoto dokumentu .
+Funkce je ekvivalentní `VMREAD` instrukci počítače. `__vmx_vmread` Hodnota `Field` parametru je kódovaný index pole, který je popsán v dokumentaci k platformě Intel. Další informace najdete v příloze C tématu "technické specifikace virtualizace Intel pro architekturu IA-32 Intel" na webu [společnosti Intel](https://software.intel.com/articles/intel-sdm) .
 
 ## <a name="requirements"></a>Požadavky
 
-|Vnitřní|Architektura|
+|Vnitřním|Architektura|
 |---------------|------------------|
 |`__vmx_vmread`|x64|
 
-**Soubor hlaviček** \<intrin.h >
+**Hlavičkový soubor** \<intrin. h >
 
-**Specifické pro END Microsoft**
+**Specifické pro konec Microsoftu**
 
 ## <a name="see-also"></a>Viz také:
 
-[Vnitřní funkce kompilátoru](../intrinsics/compiler-intrinsics.md)<br/>
+[Vnitřní objekty kompilátoru](../intrinsics/compiler-intrinsics.md)\
 [__vmx_vmwrite](../intrinsics/vmx-vmwrite.md)

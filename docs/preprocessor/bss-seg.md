@@ -1,6 +1,6 @@
 ---
-title: bss_seg
-ms.date: 10/22/2018
+title: bss_seg – direktiva pragma
+ms.date: 08/29/2019
 f1_keywords:
 - vc-pragma.bss_seg
 - bss_seg_CPP
@@ -8,51 +8,52 @@ helpviewer_keywords:
 - pragmas, bss_seg
 - bss_seg pragma
 ms.assetid: 755f0154-de51-4778-97d3-c9b24e445079
-ms.openlocfilehash: 489ced11bb6024fdf9818872c07ab7feebfeabf3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a343fb45b4bbe4789f38b7a1102572cf4241ec53
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62212410"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70218545"
 ---
-# <a name="bssseg"></a>bss_seg
+# <a name="bss_seg-pragma"></a>bss_seg – direktiva pragma
 
-Určuje segment neinicializované proměnné, kde jsou uloženy v souboru .obj.
+Určuje oddíl (segment), kde jsou uloženy neinicializované proměnné v souboru objektu (. obj).
 
 ## <a name="syntax"></a>Syntaxe
 
-```
-#pragma bss_seg( [ [ { push | pop }, ] [ identifier, ] ] [ "segment-name" [, "segment-class" ] )
-```
+> **#pragma bss_seg (** ["*název oddílu*" [ **,** "*oddíl-Class*"]] **)** \
+> **#pragma bss_seg (** { **push** | **POP** } [ **,** *identifikátor* ] [ **,** "*oddíl-Name*" [ **;** "*Class-Class*"]] **)**
 
 ### <a name="parameters"></a>Parametry
 
-**push**<br/>
-(Volitelné) Vloží záznam do zásobníku vnitřního kompilátoru. A *pu*TV * může mít *identifikátor* a *segment-name*.
+**replik**\
+Volitelné Vloží záznam do interního zásobníku kompilátoru. **Nabízení oznámení** může mít *identifikátor* a *název oddílu*.
 
-**pop**<br/>
-(Volitelné) Odstraní záznam z vrcholu vnitřního zásobníku kompilátoru.
+**výstrah**\
+Volitelné Odebere záznam z vrcholu vnitřního zásobníku kompilátoru. **POP** může mít *identifikátor* a *název oddílu*. Pomocí jednoho příkazu **POP** můžete v rámci identifikátoru otevřít více záznamů. Název *oddílu* se zobrazí jako aktivní název oddílu BSS za bodem POP.
 
-*identifier*<br/>
-(Volitelné) Při použití s **nabízených**, přiřadí název záznamu ve vnitřním zásobníku kompilátoru. *identifikátor* vyjmout několik záznamů lze jedním z jedné **pop** příkazu. Při použití s **pop**, direktivy Vyjme všechny záznamy z vnitřního zásobníku až do *identifikátor* li *identifikátor* nebyl nalezen v interním zásobníku, nic není odebrány.
+*RID*\
+Volitelné Při použití s **nabízenou**sadou přiřadí název záznamu v interním zásobníku kompilátoru. Při použití s **POP**direktiva vyřadí záznamy z vnitřního zásobníku, dokud se neodebere *identifikátor* . Pokud *identifikátor* není v interním zásobníku nalezen, nic není vybráno.
 
-*"segment-name"*<br/>
-(Volitelné) Název segmentu. Při použití s **pop**, je zásobník odebrán a *segment-name* stane aktivním názvem segmentu.
+*"název oddílu"* \
+Volitelné Název oddílu. Při použití s **bodem POP**se zásobník vyjímá a *název oddílu* se zobrazí jako aktivní název oddílu BSS.
 
-*"segment-class"*<br/>
-(Volitelné) Zahrnuto z důvodu kompatibility s jazykem C++ starším než verze 2.0. Ignorováno.
+*"oddíl-Class"* \
+Volitelné Ignoruje se, ale je součástí kompatibility s verzemi C++ Microsoftu staršími než verze 2,0.
 
 ## <a name="remarks"></a>Poznámky
 
-. Soubory obj lze zobrazit pomocí [dumpbin](../build/reference/dumpbin-command-line.md) aplikace. Výchozí segment v souboru obj neinicializovaná data je .bss. V některých případech použití **bss_seg** můžete urychlit načítání časy seskupením neinicializovaná data do jednoho oddílu.
+*Oddíl* v souboru objektu je pojmenovaný blok dat, který je načten do paměti jako jednotka. *Oddíl BSS* je oddíl, který obsahuje neinicializovaná data. V tomto článku mají *segment* a *oddíl* stejný význam.
 
-**bss_seg** bez parametrů obnoví nastavení segmentu na .bss.
+Direktiva pragma **bss_seg** instruuje kompilátor, aby uvedl všechny neinicializované datové položky z jednotky překladu do oddílu BSS s názvem *section-name*. V některých případech může použití **bss_seg** zrychlit načítání tím, že seskupí neinicializovaná data do jednoho oddílu. Ve výchozím nastavení se název oddílu BSS, který se používá pro neinicializovaná data v souboru objektu `.bss`, nazývá. Direktiva pragma **bss_seg** bez parametru *section-name* obnoví název oddílu BSS pro následné neinicializované položky dat na `.bss`.
 
-Data Alokovaná pomocí **bss_seg** – Direktiva pragma nezachovává žádné informace o jeho umístění.
+Data přidělená pomocí direktivy pragma **bss_seg** neuchovávají žádné informace o umístění.
 
-Můžete také určit oddíly pro inicializovaná data ([data_seg](../preprocessor/data-seg.md)), funkce ([code_seg](../preprocessor/code-seg.md)) a proměnné const ([const_seg](../preprocessor/const-seg.md)).
+Seznam názvů, které se nedají použít k vytvoření oddílu, najdete v tématu [/Section](../build/reference/section-specify-section-attributes.md).
 
-Zobrazit [/SECTION](../build/reference/section-specify-section-attributes.md) seznam názvů byste neměli používat při tvorbě oddílu.
+Můžete také zadat oddíly pro inicializovaná data ([data_seg](../preprocessor/data-seg.md)), Functions ([code_seg](../preprocessor/code-seg.md)) a const Variables ([const_seg](../preprocessor/const-seg.md)).
+
+Můžete použít [DUMPBIN. Aplikace EXE](../build/reference/dumpbin-command-line.md) pro zobrazení souborů objektů. Verze nástroje DUMPBIN pro každou podporovanou cílovou architekturu je součástí sady Visual Studio.
 
 ## <a name="example"></a>Příklad
 
@@ -74,4 +75,4 @@ int main() {
 
 ## <a name="see-also"></a>Viz také:
 
-[Direktivy Pragma a klíčové slovo __Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)
+[Direktivy pragma a klíčové slovo __pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

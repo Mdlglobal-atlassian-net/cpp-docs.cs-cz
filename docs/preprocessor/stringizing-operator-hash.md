@@ -1,6 +1,6 @@
 ---
 title: Operátor nastavení velikosti řetězce (#)
-ms.date: 11/04/2016
+ms.date: 08/29/2019
 f1_keywords:
 - '#'
 helpviewer_keywords:
@@ -12,29 +12,29 @@ helpviewer_keywords:
 - macros [C++], converting parameters to strings
 - '# preprocessor operator'
 ms.assetid: 1175dd19-4538-43b3-ad97-a008ab80e7b1
-ms.openlocfilehash: d90d07c8f3cce6c443be0eb994db494746c00fcc
-ms.sourcegitcommit: 40ffe764244784c715b086c79626ac390b855d47
+ms.openlocfilehash: 5a1b43198e59bc1e69cdf1b56db56be75719fe46
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68711144"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70216550"
 ---
 # <a name="stringizing-operator-"></a>Operátor nastavení velikosti řetězce (#)
 
-Symbol čísla nebo operátor "převodu" ( **#** ) převede parametry makra na řetězcové literály bez rozšíření definice parametru. Používá se pouze spolu s makry, která přijímají argumenty. Je-li operátor uveden v definici makra před formálním parametrem, je skutečný argument předaný voláním makra uzavřen do uvozovek a považován za řetězcový literál. Řetězcový literál pak nahradí všechny výskyty kombinace operátoru převodu na řetězec a formálního parametru v definici makra.
+Symbol čísla nebo operátor "převodu" ( **#** ) převede parametry makra na řetězcové literály bez rozšíření definice parametru. Používá se pouze s makry, která přijímají argumenty. Je-li operátor uveden v definici makra před formálním parametrem, je skutečný argument předaný voláním makra uzavřen do uvozovek a považován za řetězcový literál. Řetězcový literál pak nahradí všechny výskyty kombinace operátoru převodu na řetězec a formálního parametru v definici makra.
 
 > [!NOTE]
 > Rozšíření standardu ANSI jazyka C společností Microsoft (verze 6.0 a starší), ve kterém byly dříve rozvíjeny formální argumenty maker uvnitř řetězcových literálů a znakových konstant, již není podporováno. Kód, který se spoléhat na toto rozšíření, by měl být přepsán pomocí **#** operátoru převodu ().
 
-Prázdný znak před prvním a za posledním tokenem skutečného argumentu je ignorován. Všechny prázdné znaky mezi tokeny ve skutečném argumentu jsou ve výsledném řetězcovém literálu redukovány na jediný prázdný znak. Proto vyskytne-li se mezi dvěma tokeny ve skutečném argumentu komentář, je redukován na jediný prázdný znak. K výslednému řetězcovému literálu jsou automaticky připojeny všechny sousedící řetězcové literály, od nichž je výsledný literál oddělen pouze prázdnými znaky.
+Prázdné místo, které předchází prvnímu tokenu a následuje poslední token skutečného argumentu, je ignorováno. Všechny prázdné znaky mezi tokeny ve skutečném argumentu jsou ve výsledném řetězcovém literálu redukovány na jediný prázdný znak. Proto pokud se vyskytne komentář mezi dvěma tokeny ve skutečném argumentu, je zmenšen na jeden prázdný znak. Výsledný řetězcový literál je automaticky zřetězen se všemi sousedními řetězcovými literály, které jsou odděleny pouze prázdným znakem.
 
-Pokud znak obsažený v argumentu obvykle vyžaduje řídící sekvenci při použití v řetězcovém literálu (například znak uvozovky ( **"** ) nebo zpětného lomítka ( **\\** )), je nutné automaticky vložit zpětné lomítko. před znakem.
+Pokud znak obsažený v argumentu obvykle vyžaduje řídící sekvenci při použití v řetězcovém literálu, například znak uvozovky (`"`) nebo zpětného lomítka (`\`), je nezbytné zpětné lomítko automaticky vloženo před znak.
 
-Operátor Visual C++ převodu se chová správně, když je použit s řetězci, které obsahují řídicí sekvence. V této situaci kompilátor generuje [chybu kompilátoru C2017](../error-messages/compiler-errors-1/compiler-error-c2017.md).
+Operátor Microsoft C++ převodu se chová správně, když se používá s řetězci, které obsahují řídicí sekvence. V této situaci kompilátor generuje [chybu kompilátoru C2017](../error-messages/compiler-errors-1/compiler-error-c2017.md).
 
 ## <a name="examples"></a>Příklady
 
-Následující příklad ukazuje definici makra obsahující operátor převodu na řetězec a hlavní funkci, která makro volá:
+Následující příklad ukazuje definici makra, která obsahuje operátor převodu a funkci main, která vyvolá makro:
 
 ```cpp
 // stringizer.cpp

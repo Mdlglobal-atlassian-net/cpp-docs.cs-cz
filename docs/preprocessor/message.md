@@ -1,6 +1,6 @@
 ---
-title: " – zpráva"
-ms.date: 11/04/2016
+title: message – direktiva pragma
+ms.date: 08/29/2019
 f1_keywords:
 - message_CPP
 - vc-pragma.message
@@ -8,31 +8,30 @@ helpviewer_keywords:
 - message pragma
 - pragmas, message
 ms.assetid: 67414f25-ed47-4079-a5dc-21d9d1a39754
-ms.openlocfilehash: e9383238fd308ec59a9767f56af1c07fc3cfcf07
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 48605fbef3b6d81c140e663e950429cd3dcf9b19
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62371734"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70218796"
 ---
-# <a name="message"></a> – zpráva
+# <a name="message-pragma"></a>message – direktiva pragma
+
 Odešle řetězcový literál na standardní výstup bez ukončení kompilace.
 
 ## <a name="syntax"></a>Syntaxe
 
-```
-#pragma message( messagestring )
-```
+> **#pragma zpráva (** *zpráva-String* **)**
 
 ## <a name="remarks"></a>Poznámky
 
-Typické použití **zpráva** – Direktiva pragma je zobrazení informačních zpráv během kompilace.
+Typickým použitím direktivy pragma **zprávy** je zobrazení informativních zpráv v době kompilace.
 
-*Messagestring* parametr může být makro, které se rozbalí na řetězcový literál a lze zřetězit s řetězcovými literály v libovolné kombinaci těchto maker.
+Parametr *řetězce zprávy* může být makro, které se rozbalí do řetězcového literálu, a tato makra můžete zřetězit s řetězcovými literály v libovolné kombinaci.
 
-Pokud použijete předdefinované makro v **zpráva** – Direktiva pragma, makro by měla vrátit řetězec, jinak bude nutné výstup makra převést na řetězec.
+Použijete-li předdefinované makro v direktivě pragma **zprávy** , musí makro vracet řetězec. V opačném případě bude nutné převést výstup makra na řetězec.
 
-Následující fragment kódu používá **zpráva** – Direktiva pragma pro zobrazení zpráv během kompilace:
+Následující fragment kódu používá direktivu pragma **zprávy** pro zobrazení zpráv během kompilace:
 
 ```cpp
 // pragma_directives_message1.cpp
@@ -59,4 +58,4 @@ Následující fragment kódu používá **zpráva** – Direktiva pragma pro zo
 
 ## <a name="see-also"></a>Viz také:
 
-[Direktivy Pragma a klíčové slovo __Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)
+[Direktivy pragma a klíčové slovo __pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

@@ -1,6 +1,6 @@
 ---
 title: __writegsbyte, __writegsdword, __writegsqword, __writegsword
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - __writegsbyte
 - __writegsqword
@@ -12,22 +12,22 @@ helpviewer_keywords:
 - __writegsword intrinsic
 - __writegsdword intrinsic
 ms.assetid: 7746cf6d-2259-4139-9aab-c07dd75c8037
-ms.openlocfilehash: dbd3fff75107ae61f7680dee84b72ff3153bfa8e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7b9e812776e9b2bb0820905d088111669096db64
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62389772"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70221196"
 ---
-# <a name="writegsbyte-writegsdword-writegsqword-writegsword"></a>__writegsbyte, __writegsdword, __writegsqword, __writegsword
+# <a name="__writegsbyte-__writegsdword-__writegsqword-__writegsword"></a>__writegsbyte, __writegsdword, __writegsqword, __writegsword
 
-**Microsoft Specific**
+**Specifické pro společnost Microsoft**
 
-Zápis paměti do umístění určeného proměnnou posun vzhledem k začátku segmentu GS.
+Zápis paměti do umístění určeného posunem relativně vzhledem k začátku segmentu GS.
 
 ## <a name="syntax"></a>Syntaxe
 
-```
+```C
 void __writegsbyte(
    unsigned long Offset,
    unsigned char Data
@@ -46,32 +46,32 @@ void __writegsqword(
 );
 ```
 
-#### <a name="parameters"></a>Parametry
+### <a name="parameters"></a>Parametry
 
-*Posun*<br/>
-[in] Posun od začátku GS k zápisu.
+*Polohy*\
+pro Posun od začátku GS, do kterého se má zapisovat
 
-*Data*<br/>
-[in] Hodnota k zápisu.
+*Údajů*\
+pro Hodnota, která má být zapsána.
 
 ## <a name="requirements"></a>Požadavky
 
-|Vnitřní|Architektura|
+|Vnitřním|Architektura|
 |---------------|------------------|
 |`__writegsbyte`|x64|
 |`__writegsdword`|x64|
 |`__writegsqword`|x64|
 |`__writegsword`|x64|
 
-**Soubor hlaviček** \<intrin.h >
+**Hlavičkový soubor** \<intrin. h >
 
 ## <a name="remarks"></a>Poznámky
 
-Tyto rutiny jsou dostupné jenom jako vnitřní.
+Tyto rutiny jsou k dispozici pouze jako vnitřní.
 
-**Specifické pro END Microsoft**
+**Specifické pro konec Microsoftu**
 
 ## <a name="see-also"></a>Viz také:
 
-[__readgsbyte, \__readgsdword, \__readgsqword, \__readgsword](../intrinsics/readgsbyte-readgsdword-readgsqword-readgsword.md)<br/>
-[Vnitřní funkce kompilátoru](../intrinsics/compiler-intrinsics.md)
+[__readgsbyte, \__readgsdword, \__readgsqword, \__readgsword](../intrinsics/readgsbyte-readgsdword-readgsqword-readgsword.md)\
+[Vnitřní objekty kompilátoru](../intrinsics/compiler-intrinsics.md)

@@ -1,16 +1,16 @@
 ---
-title: Upozornění kompilátoru, která jsou ve výchozím natavení vypnuta.
-ms.date: 05/30/2018
+title: Upozornění kompilátoru, která jsou ve výchozím nastavení vypnutá
+ms.date: 08/29/2019
 helpviewer_keywords:
 - warnings, compiler
 - cl.exe compiler, setting options
 ms.assetid: 69809cfb-a38a-4035-b154-283a61938df8
-ms.openlocfilehash: 1a95153f3cefd2bcfcae6ebb297a7c6b52944f82
-ms.sourcegitcommit: d3829ae0c3db909f96057755a80665f5ea4896ea
+ms.openlocfilehash: a8b203c94d4a5af28837627fda1b8e1631dfb0c0
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69550476"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70220484"
 ---
 # <a name="compiler-warnings-that-are-off-by-default"></a>Upozornění kompilátoru, která jsou ve výchozím nastavení vypnutá
 
@@ -150,15 +150,13 @@ Následující upozornění jsou ve výchozím nastavení vypnuta v aplikaci Vis
 |C5042 (úroveň 3)|'*Function*': deklarace funkcí v oboru bloku nelze zadat ' inline ' na standard C++; odebrat specifikátor inline <sup>15,5</sup>|
 |[C5045](../error-messages/compiler-warnings/c5045.md)|Kompilátor vloží Spectre zmírnění paměti, pokud je zadaný přepínač/Qspectre <sup>15,7</sup>|
 
-<sup>14,1</sup> toto upozornění je k dispozici počínaje verzí Visual Studio 2015 Update 1.<br/>
-<sup>14,3</sup> toto upozornění je k dispozici od začátku v aplikaci Visual Studio 2015 Update 3.<br/>
-<sup>15,3</sup> toto upozornění je k dispozici počínaje verzí Visual Studio 2017 15,3.<br/>
-<sup>15,5</sup> toto upozornění je k dispozici počínaje verzí Visual Studio 2017 15,5.<br/>
-<sup>15,7</sup> toto upozornění je k dispozici počínaje verzí Visual Studio 2017 15,7.<br/>
-<sup>15,8</sup> toto upozornění je k dispozici počínaje verzí Visual Studio 2017 15,8.<br/>
-::: moniker range=">= vs-2019"
-<sup>16,0</sup> toto upozornění je dostupné od verze Visual Studio 2019 RTM.<br/>
-::: moniker-end
+<sup>14,1</sup> toto upozornění je k dispozici od začátku v aplikaci Visual Studio 2015 Update 1. \
+<sup>14,3</sup> toto upozornění je k dispozici od začátku v aplikaci Visual Studio 2015 Update 3. \
+<sup>15,3</sup> toto upozornění je dostupné od verze Visual Studio 2017 15,3. \
+<sup>15,5</sup> toto upozornění je dostupné od verze Visual Studio 2017 15,5. \
+<sup>15,7</sup> toto upozornění je dostupné od verze Visual Studio 2017 15,7. \
+<sup>15,8</sup> toto upozornění je dostupné od verze Visual Studio 2017 15,8. \
+<sup>16,0</sup> toto upozornění je dostupné od verze Visual Studio 2019 RTM. \
 <sup>Oprávnění</sup> Toto upozornění je vypnuté, pokud není nastavená možnost kompilátoru [/Permissive-](../build/reference/permissive-standards-conformance.md) .
 
 ## <a name="warnings-off-by-default-in-earlier-versions"></a>Upozornění vypnutá ve výchozím nastavení v dřívějších verzích

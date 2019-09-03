@@ -1,38 +1,36 @@
 ---
-title: tlbid
-ms.date: 10/18/2018
+title: importovat atribut TLBID
+ms.date: 08/29/2019
 f1_keywords:
 - tlbid
 helpviewer_keywords:
 - tlbid attribute
 ms.assetid: 54b06785-191b-4e77-a9a5-485f2b4acb09
-ms.openlocfilehash: ae79ce9245bb1c0425c3e9b92dd27b52fa443dba
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 364fb224b0f2769cb0933e71d18ff70768189328
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62179604"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70216531"
 ---
-# <a name="tlbid"></a>tlbid
+# <a name="tlbid-import-attribute"></a>importovat atribut TLBID
 
-**Specifické pro C++**
+**C++Konkrétní**
 
-Umožňuje načítání knihoven jiné než primární typ knihovny.
+Umožňuje načíst knihovny jiné než primární typ knihovny.
 
 ## <a name="syntax"></a>Syntaxe
 
-```
-tlbid(number)
-```
+> **#import** *Type-Library-DLL* **TLBID (** *číslo* **)**
 
 ### <a name="parameters"></a>Parametry
 
-*Číslo*<br/>
-Počet knihovnu typů v `filename`.
+*Automatické*\
+Číslo knihovny typů v *knihovně typů type-library-DLL*.
 
 ## <a name="remarks"></a>Poznámky
 
-Pokud více knihoven typů jsou součástí jedné knihovny DLL, je možné načítat knihovny jiné než primární typ knihovny pomocí **tlbid**.
+Pokud je do jediné knihovny DLL integrováno více knihoven typů, je možné načíst knihovny jiné než primární typ knihovny pomocí **TLBID**.
 
 Příklad:
 
@@ -46,9 +44,9 @@ je ekvivalentní:
 LoadTypeLib("MyResource.dll\\2");
 ```
 
-**Specifické pro END C++**
+**Specifické C++ pro konec**
 
 ## <a name="see-also"></a>Viz také:
 
-[atributů #import](../preprocessor/hash-import-attributes-cpp.md)<br/>
-[#import – direktiva](../preprocessor/hash-import-directive-cpp.md)
+[Atributy #import](../preprocessor/hash-import-attributes-cpp.md)\
+[#import direktiva](../preprocessor/hash-import-directive-cpp.md)

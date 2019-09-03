@@ -1,6 +1,6 @@
 ---
-title: fp_contract
-ms.date: 03/12/2018
+title: fp_contract – direktiva pragma
+ms.date: 08/29/2019
 f1_keywords:
 - vc-pragma.fp_contract
 - fp_contract_CPP
@@ -8,26 +8,26 @@ helpviewer_keywords:
 - pragmas, fp_contract
 - fp_contract pragma
 ms.assetid: 15b97338-6680-4287-ba2a-2dccc5b2ccf5
-ms.openlocfilehash: 14c3ac60d4fc0f45fcf0ece6c3f73153e5de4271
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 833d8e7f4b8c9da18901610e52afed619468c5c3
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62409912"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70218561"
 ---
-# <a name="fpcontract"></a>fp_contract
+# <a name="fp_contract-pragma"></a>fp_contract – direktiva pragma
 
-Určuje, zda provede s plovoucí desetinnou čárkou zkracování. S plovoucí desetinnou čárkou zkracování je instrukce, jako je například FMA (taveného-vynásobit-přidat), který kombinuje dvě samostatné operace s plovoucí desetinnou do jediná instrukce. Použijte tyto pokyny může ovlivnit přesnost s plovoucí desetinnou čárkou, protože namísto zaokrouhlení po každé operaci, může pouze jednou zaokrouhlit procesoru po operace.
+Určuje, jestli se má vykonat kontrakt s plovoucí desetinnou čárkou. Kontrakt s plovoucí desetinnou čárkou je instrukce, jako je FMA (s vynásobeným přidáním), který kombinuje dva samostatné operace s plovoucí desetinnou čárkou do jediné instrukce. Použití těchto instrukcí může ovlivnit přesnost s plovoucí desetinnou čárkou, protože místo zaokrouhlování po každé operaci může procesor po obou operacích zaokrouhlit jenom jednou.
 
 ## <a name="syntax"></a>Syntaxe
 
-> **#pragma fp_contract (** { **na** | **vypnout** } **)**
+> **#pragma fp_contract (** { **on** | **off** } **)**
 
 ## <a name="remarks"></a>Poznámky
 
-Ve výchozím nastavení **fp_contract** je **na**. Říká kompilátoru, aby použil pokyny s plovoucí desetinnou čárkou zmenšení, kde je to možné. Nastavte **fp_contract** k **vypnout** zachovat jednotlivých instrukcí s plovoucí desetinnou čárkou.
+Ve výchozím nastavení je fp_contract **zapnutý**. To kompilátoru oznamuje, že pokud je to možné, použijte pokyny pro kontrakt s plovoucí desetinnou čárkou. Nastavte **fp_contract** na **off** pro zachování jednotlivých instrukcí s plovoucí desetinnou čárkou.
 
-Další informace o chování plovoucí desetinné čárky, naleznete v tématu [/fp (určení chování plovoucí desetinné čárky)](../build/reference/fp-specify-floating-point-behavior.md).
+Další informace o chování plovoucí desetinné čárky naleznete v tématu [/FP (určení chování s plovoucí](../build/reference/fp-specify-floating-point-behavior.md)desetinnou čárkou).
 
 Mezi další direktivy pragma pro čísla s plovoucí desetinnou čárkou patří:
 
@@ -37,7 +37,7 @@ Mezi další direktivy pragma pro čísla s plovoucí desetinnou čárkou patř�
 
 ## <a name="example"></a>Příklad
 
-Kód generovaný z tohoto příkladu nepoužívá instrukci sloučeného vícenásobného sčítání, i když je k dispozici na cílový procesor. Pokud jste zakomentovali `#pragma fp_contract (off)`, generovaný kód může použít instrukci sloučeného vícenásobného sčítání, pokud je k dispozici.
+Kód vygenerovaný z této ukázky nepoužívá pojistou instrukci pro přidání, i když je k dispozici v cílovém procesoru. Pokud zadáte komentář `#pragma fp_contract (off)`, vygenerovaný kód může použít instrukci s pojistkou, pokud je k dispozici.
 
 ```cpp
 // pragma_directive_fp_contract.cpp
@@ -77,4 +77,4 @@ out = 4.587525000000000e+03
 
 ## <a name="see-also"></a>Viz také:
 
-[Direktivy Pragma a klíčové slovo __Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)
+[Direktivy pragma a klíčové slovo __pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

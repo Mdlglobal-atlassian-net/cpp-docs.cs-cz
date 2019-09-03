@@ -1,6 +1,6 @@
 ---
-title: '#undef – direktiva (C++)'
-ms.date: 11/04/2016
+title: '#undef – direktiva (C/C++)'
+ms.date: 08/29/2019
 f1_keywords:
 - '#undef'
 helpviewer_keywords:
@@ -8,34 +8,32 @@ helpviewer_keywords:
 - undef directive (#undef)
 - preprocessor, directives
 ms.assetid: 88900e0e-2c19-4a63-b681-f3d3133c24ca
-ms.openlocfilehash: 4f4f5ce244be6d7f4e13d7a2abc5d21232c08d9d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1a69bc568579e7da7c7e3816cb67c8153b8f1a27
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62409847"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70220215"
 ---
-# <a name="undef-directive-cc"></a>#undef – direktiva (C++)
+# <a name="undef-directive-cc"></a>#undef direktiva (CC++/)
+
 Odebere (zruší definici) název dříve vytvořený pomocí direktivy `#define`.
 
 ## <a name="syntax"></a>Syntaxe
 
-```
-#undef
-identifier
-```
+> **#undef** *identifikátor*
 
 ## <a name="remarks"></a>Poznámky
 
-**#Undef** směrnice odstraní stávající definici *identifikátor*. V důsledku toho další výskyty tohoto *identifikátor* preprocesorem ignorovány. Chcete-li odebrat definici makra pomocí **#undef**, zadejte pouze *identifikátor* ; neudělujte seznam parametrů.
+Direktiva **#undef** odstraní aktuální definici identifikátoru. V důsledku toho jsou další výskyty *identifikátoru* ignorovány preprocesorem. Chcete-li odebrat definici makra pomocí **#undef**, zadejte pouze *identifikátor*makra, nikoli seznam parametrů.
 
-Můžete také použít **#undef** směrnice pro identifikátor, který nemá žádnou předchozí definici. Tím je zajištěno, že tento identifikátor není definován. Nahrazení makra není provedena v rámci **#undef** příkazy.
+Direktivu **#undef** můžete použít také pro identifikátor, který nemá žádnou předchozí definici. Tím je zajištěno, že tento identifikátor není definován. Nahrazení makra není provedeno v rámci příkazů **#undef** .
 
-**#Undef** – direktiva je obvykle spojená s `#define` směrnice vytvoření oblasti ve zdrojovém programu, ve kterém má identifikátor zvláštní význam. Určitá funkce zdrojového programu například může použít konstanty manifestu pro definování hodnot specifických pro prostředí, které nemají vliv na zbytek programu. **#Undef** – direktiva funguje taky s `#if` směrnice pro řízení podmíněné kompilace zdrojového programu. Zobrazit [#if, #elif, #else a #endif](../preprocessor/hash-if-hash-elif-hash-else-and-hash-endif-directives-c-cpp.md) Další informace.
+Direktiva **#undef** je obvykle spárována s `#define` direktivou pro vytvoření oblasti ve zdrojovém programu, ve které má identifikátor zvláštní význam. Určitá funkce zdrojového programu například může použít konstanty manifestu pro definování hodnot specifických pro prostředí, které nemají vliv na zbytek programu. Direktiva **#undef** také pracuje s `#if` direktivou pro řízení podmíněné kompilace zdrojového programu. Další informace najdete v tématu [direktivy #if, #elif, #else a #endif](../preprocessor/hash-if-hash-elif-hash-else-and-hash-endif-directives-c-cpp.md).
 
-V následujícím příkladu **#undef** odebere direktiva definice Symbolické konstanty a makra. Je uveden pouze identifikátor makra.
+V následujícím příkladu direktiva **#undef** odebere definice symbolické konstanty a makra. Je uveden pouze identifikátor makra.
 
-```
+```C
 #define WIDTH 80
 #define ADD( X, Y ) ((X) + (Y))
 .
@@ -45,12 +43,12 @@ V následujícím příkladu **#undef** odebere direktiva definice Symbolické k
 #undef ADD
 ```
 
-**Microsoft Specific**
+**Specifické pro společnost Microsoft**
 
-Lze zrušit definici z příkazového řádku pomocí maker `/U` možnost, následované názvy maker mají být zrušeny. Účinek tohoto příkazu odpovídá sekvenci `#undef` *název makra* příkazy na začátku souboru.
+Makra lze z příkazového řádku nedefinovat pomocí `/U` možnosti, následovaná názvy maker, které mají být nedefinovány. Účinek vystavení tohoto příkazu je ekvivalentem posloupnosti `#undef` příkazů *názvu makra* na začátku souboru.
 
-**Specifické pro END Microsoft**
+**Specifické pro konec Microsoftu**
 
 ## <a name="see-also"></a>Viz také:
 
-[Preprocesor – direktivy](../preprocessor/preprocessor-directives.md)
+[Direktivy preprocesoru](../preprocessor/preprocessor-directives.md)

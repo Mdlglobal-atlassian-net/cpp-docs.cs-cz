@@ -1,22 +1,22 @@
 ---
-title: Preprocesor – direktivy
-ms.date: 06/28/2018
+title: Direktivy preprocesoru
+ms.date: 08/29/2019
 helpviewer_keywords:
 - directives, preprocessor
 - preprocessor, directives
 ms.assetid: e0fc4564-b6cf-4a36-bf51-6ccd7abd0a94
-ms.openlocfilehash: 9481e977f2afb3de27a74278893a217fde48044b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 86432ebf210523dd958f3258075d9e9c6d3bb4e6
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62179968"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70222275"
 ---
-# <a name="preprocessor-directives"></a>Preprocesor – direktivy
+# <a name="preprocessor-directives"></a>Direktivy preprocesoru
 
-Direktivy preprocesoru, jako například `#define` a `#ifdef`, se obvykle používají ke snadnému sestavení v různých pracovních prostředích a snadné změně zdrojových programů. Směrnice ve zdrojovém souboru říkají preprocesoru, že má provést konkrétní akce. Preprocesor může například nahradit tokeny v textu, vložit obsah z jiných souborů do zdrojového souboru nebo potlačit kompilaci části souboru odebráním úseků textu. Řádky preprocesoru jsou rozpoznány a provedeny před rozšířením makra. Proto pokud se makro rozšíří na něco, co vypadá jako příkaz preprocesoru, tento příkaz není rozpoznáván preprocesorem.
+Direktivy preprocesoru, jako `#define` jsou a `#ifdef`, se obvykle používají k usnadnění změny zdrojových programů a jejich kompilaci v různých prostředích pro spuštění. Direktivy ve zdrojovém souboru oznamují, aby preprocesor přijal konkrétní akce. Například preprocesor může nahradit tokeny v textu, vložit obsah dalších souborů do zdrojového souboru nebo potlačit kompilaci části souboru odebráním oddílů textu. Řádky preprocesoru jsou rozpoznány a provedeny před rozšířením makra. Proto pokud se makro rozšíří na něco, co vypadá jako příkaz preprocesoru, není rozpoznán preprocesorem.
 
-Příkazy preprocesoru používají stejnou znakovou sadu jako příkazy zdrojového souboru, s tím rozdílem, že Řídící sekvence nejsou podporovány. Znaková sada použitá v rámci příkazu preprocesoru je stejná jako znaková sada spuštění. Preprocesor rozpoznává také negativní hodnoty znaků.
+Příkazy preprocesoru používají stejnou sadu znaků jako příkazy zdrojového souboru, s výjimkou, že řídicí sekvence nejsou podporovány. Znaková sada použitá v příkazech preprocesoru je stejná jako znaková sada spuštění. Preprocesor také rozpoznává záporné hodnoty znaků.
 
 Preprocesor rozpoznává následující direktivy:
 
@@ -27,12 +27,12 @@ Preprocesor rozpoznává následující direktivy:
 |[#else](../preprocessor/hash-if-hash-elif-hash-else-and-hash-endif-directives-c-cpp.md)|[#ifdef](../preprocessor/hash-ifdef-and-hash-ifndef-directives-c-cpp.md)|[#line](../preprocessor/hash-line-directive-c-cpp.md)|[#endif](../preprocessor/hash-if-hash-elif-hash-else-and-hash-endif-directives-c-cpp.md)|
 |[#ifndef](../preprocessor/hash-ifdef-and-hash-ifndef-directives-c-cpp.md)|[#pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)|||
 
-Znak čísla (**#**) musí být první nemezerový znak na řádku, který obsahuje směrnici; mezerové znaky mohou objevit mezi znakem čísla a prvním písmenem směrnice. Některé direktivy zahrnují argumenty nebo hodnoty. Jakýkoli text, který následuje direktivu (s výjimkou argumentu nebo hodnotu, která je součástí této direktivy) musí být předcházen oddělovač jednořádkový komentář (**//**) nebo uzavřen mezi oddělovače komentáře ( __/ \*\*/__). Řádky obsahující pokyny preprocesoru lze navázat tak, že bezprostředně před značku konec řádku zpětným lomítkem (**\\**).
+Znak čísla (`#`) musí být prvním neprázdným znakem na řádku, který obsahuje direktivu. Mezi znakem čísla a prvním písmenem direktivy se mohou vyskytovat prázdné znaky. Některé direktivy obsahují argumenty nebo hodnoty. Jakýkoli text, který následuje za direktivou (s výjimkou argumentu nebo hodnoty, který je součástí direktivy), musí předcházet oddělovač komentářů () s jedním`//`řádkem () nebo uzavřený v oddělovačích komentářů (`/* */`). Řádky obsahující direktivy preprocesoru lze pokračovat přímo před značkou konce řádku pomocí zpětného lomítka (`\`).
 
-Direktivy preprocesoru může vyskytovat kdekoli ve zdrojovém souboru, ale se vztahují pouze na zbývající část zdrojového souboru.
+Direktivy preprocesoru se mohou objevit kdekoli ve zdrojovém souboru, ale po zobrazení se vztahují pouze na zbytek zdrojového souboru.
 
 ## <a name="see-also"></a>Viz také:
 
-[Operátory preprocesoru](../preprocessor/preprocessor-operators.md)<br/>
-[Předdefinovaná makra](../preprocessor/predefined-macros.md)<br/>
-[C/C++ – referenční dokumentace preprocesoru](../preprocessor/c-cpp-preprocessor-reference.md)
+[Operátory preprocesoru](../preprocessor/preprocessor-operators.md)\
+[Předdefinovaná makra](../preprocessor/predefined-macros.md)\
+[c/c++ – referenční dokumentace preprocesoru](../preprocessor/c-cpp-preprocessor-reference.md)

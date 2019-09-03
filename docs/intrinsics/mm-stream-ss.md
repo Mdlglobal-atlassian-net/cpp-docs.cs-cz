@@ -1,41 +1,41 @@
 ---
 title: _mm_stream_ss
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - _mm_stream_ss
 helpviewer_keywords:
 - movntss instruction
 - _mm_stream_ss intrinsic
 ms.assetid: c53dffe9-0dfe-4063-85d3-e8987b870fce
-ms.openlocfilehash: 76c6c848351df773b9857b2f83726b64db982d9f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 005f4f697d64f6ea68b35dc32daf1217be463a2a
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62263227"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70217345"
 ---
-# <a name="mmstreamss"></a>_mm_stream_ss
+# <a name="_mm_stream_ss"></a>_mm_stream_ss
 
-**Microsoft Specific**
+**Specifické pro společnost Microsoft**
 
-Zapíše data 32-bit do umístění v paměti bez zahlcení mezipamětí.
+Zapisuje 32 – bitová data do umístění v paměti bez znečišťujících mezipamětí.
 
 ## <a name="syntax"></a>Syntaxe
 
-```
+```C
 void _mm_stream_ss(
-   float * Dest,
+   float * Destination,
    __m128 Source
 );
 ```
 
-#### <a name="parameters"></a>Parametry
+### <a name="parameters"></a>Parametry
 
-*cíl*<br/>
-[out] Ukazatel na umístění, do níž je zapsána zdrojová data.
+*Tabulka*\
+mimo Ukazatel na umístění, kde jsou napsána zdrojová data.
 
-*Zdroj*<br/>
-[in] 128bitové číslo, které obsahuje `float` hodnota má být zapsán v její dolní části 32 bitů...
+*Zdrojová*\
+pro 128 číslo, které obsahuje `float` hodnotu, která se má zapsat do dolních 32 bitů.
 
 ## <a name="return-value"></a>Návratová hodnota
 
@@ -43,17 +43,17 @@ void _mm_stream_ss(
 
 ## <a name="requirements"></a>Požadavky
 
-|Vnitřní|Architektura|
+|Vnitřním|Architektura|
 |---------------|------------------|
 |`_mm_stream_ss`|SSE4a|
 
-**Soubor hlaviček** \<intrin.h >
+**Hlavičkový soubor** \<intrin. h >
 
 ## <a name="remarks"></a>Poznámky
 
-Tomto vnitřní vygeneruje `movntss` instrukce. Chcete-li určit hardwarovou podporu pro tento pokyn, zavolejte `__cpuid` vnitřní s `InfoType=0x80000001` a zkontrolujte bit 6 `CPUInfo[2] (ECX)`. Tento bit jinak je 1 podporováno podle pokynů a 0.
+Vnitřní vygeneruje `movntss` instrukci. Chcete-li zjistit hardwarovou podporu pro tuto instrukci, `InfoType=0x80000001` zavolejte `__cpuid` vnitřní s a zkontrolujte `CPUInfo[2] (ECX)`bit 6 z. Tento bit je 1, pokud je instrukce podporována a 0 jinak.
 
-Při spuštění kódu, který používá `_mm_stream_ss` vnitřní na hardwaru, který není podporován `movntss` instrukce, výsledky nepředvídatelné.
+Pokud spustíte kód, který používá `_mm_stream_ss` vnitřní na hardwaru, který `movntss` nepodporuje instrukci, výsledky se nepředvídatelné.
 
 ## <a name="example"></a>Příklad
 
@@ -87,14 +87,14 @@ f[0] = -1, f[1] = -2
 f[2] = -3, f[3] = 3
 ```
 
-**Specifické pro END Microsoft**
+**Specifické pro konec Microsoftu**
 
-Copyright 2007 by Advanced Micro Devices, Inc. Všechna práva vyhrazena. Reprodukovat se svolením rozšířené Micro zařízení, Inc.
+Copyright 2007 od Advanced Micro Devices, Inc. Všechna práva vyhrazena. Reprodukováno s oprávněním z Advanced Micro Devices, Inc.
 
 ## <a name="see-also"></a>Viz také:
 
-[_mm_stream_sd](../intrinsics/mm-stream-sd.md)<br/>
-[_mm_stream_ps](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_stream_ps)<br/>
-[_mm_store_ss](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_store_ss)<br/>
-[_mm_sfence](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_sfence)<br/>
-[Vnitřní funkce kompilátoru](../intrinsics/compiler-intrinsics.md)
+[_mm_stream_sd](../intrinsics/mm-stream-sd.md)\
+[_mm_stream_ps](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_stream_ps)\
+[_mm_store_ss](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_store_ss)\
+[_mm_sfence](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_sfence)\
+[Vnitřní objekty kompilátoru](../intrinsics/compiler-intrinsics.md)

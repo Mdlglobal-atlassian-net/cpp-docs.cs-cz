@@ -1,6 +1,6 @@
 ---
-title: komponenta
-ms.date: 04/08/2019
+title: component – direktiva pragma
+ms.date: 08/29/2019
 f1_keywords:
 - vc-pragma.component
 - component_CPP
@@ -8,26 +8,26 @@ helpviewer_keywords:
 - component pragma
 - pragmas, component
 ms.assetid: 7b66355e-3201-4c14-8190-f4a2a81a604a
-ms.openlocfilehash: 4870860650a39d27639ad18100ba37ba14aa15c0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 578c590bdb4223f173e0249c18d0eea4e78a18db
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62366911"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70220477"
 ---
-# <a name="component"></a>komponenta
+# <a name="component-pragma"></a>component – direktiva pragma
 
-Kontrolou shromažďování informací o procházení nebo závislostech ze zdrojových souborů.
+Řídí shromažďování informací o procházení nebo informací o závislostech v rámci zdrojových souborů.
 
 ## <a name="syntax"></a>Syntaxe
 
-> **komponenta #pragma (prohlížeč,** { **na** | **vypnout** } [**,** **odkazy** [**,** *název* ]] **)** \
-> **komponenta #pragma (minrebuild na** | **vypnuto)** \
-> **komponenta #pragma (mintypeinfo na** | **vypnuto)**
+> **součást #pragma (Browser;** { **on** | **off** } [ **;** **References** [ **;** *Name* ]] **)**  \
+> **součást #pragma (minrebuild,** { **on** | **off** } **)**  \
+> **součást #pragma (mintypeinfo,** { **on** | **off** } **)**
 
 ## <a name="remarks"></a>Poznámky
 
-### <a name="browser"></a>Prohlížeč
+### <a name="browser"></a>Browser
 
 Toto shromažďování lze zapnout nebo vypnout a lze určit konkrétní názvy, které mají být při shromažďování informací ignorovány.
 
@@ -40,9 +40,9 @@ Použití zapnutí nebo vypnutí řídí shromažďování informací procházen
 zastaví shromažďování informací o procházení kompilátorem.
 
 > [!NOTE]
-> Chcete-li zapnout shromažďování informací o procházení s touto direktivou pragma [informací o procházení nejprve povoleny](../build/reference/building-browse-information-files-overview.md).
+> Chcete-li zapnout shromažďování informací o procházení pomocí této direktivy pragma, [je nutné nejprve povolit informace o procházení](../build/reference/building-browse-information-files-overview.md).
 
-`references` Možnost se dá použít s nebo bez něj *název* argument. Pomocí `references` bez *název* Zapne nebo vypne shromažďování odkazů (které se mají shromažďovat, ale bude pokračovat další informace o procházení). Příklad:
+Možnost **odkazy** lze použít s argumentem *Name* nebo bez něj. Použití **odkazů** bez *názvu* zapíná nebo vypíná shromažďování odkazů (ale další informace o procházení jsou stále shromažďovány). Příklad:
 
 ```cpp
 #pragma component(browser, off, references)
@@ -50,21 +50,21 @@ zastaví shromažďování informací o procházení kompilátorem.
 
 zastaví shromažďování informací o odkazech kompilátorem.
 
-Pomocí `references` s *název* a `off` zabrání odkazům na argument *název* povolí, v okně informací o procházení. Tuto syntaxi použijte, pokud chcete ignorovat názvy a typy, které vás nezajímají, a pokud chcete zmenšit velikost souborů s informacemi o procházení. Příklad:
+Použití **odkazů** s *názvem* a **vypnuto** zabraňuje zobrazování odkazů na *název* v okně informace o procházení. Tuto syntaxi použijte, pokud chcete ignorovat názvy a typy, které vás nezajímají, a pokud chcete zmenšit velikost souborů s informacemi o procházení. Příklad:
 
 ```cpp
 #pragma component(browser, off, references, DWORD)
 ```
 
-odkazy na DWORD od tohoto okamžiku ignoruje. Můžete zapnout shromažďování odkazů na DWORD zpět na pomocí `on`:
+ignoruje odkazy na DWORD z tohoto okamžiku předá. Shromažďování odkazů na DWORD můžete znovu zapnout pomocí:
 
 ```cpp
 #pragma component(browser, on, references, DWORD)
 ```
 
-Toto je jediný způsob, jak obnovit shromažďování odkazů na argument *název*; je nutné explicitně zapnout všechny *název* , který jste vypnuli.
+Toto je jediný způsob, jak obnovit shromažďování odkazů na *název*; musíte explicitně zapnout všechny *názvy* , které jste vypnuli.
 
-Aby preprocesor zabránil rozšíření argumentu *název* (například rozšíření NULL na hodnotu 0), umístěte kolem něj uvozovky:
+Chcete-li zabránit preprocesoru v rozšíření *názvu* (například zvětšení hodnoty null na hodnotu 0), vložte kolem něj uvozovky:
 
 ```cpp
 #pragma component(browser, off, references, "NULL")
@@ -72,18 +72,18 @@ Aby preprocesor zabránil rozšíření argumentu *název* (například rozší�
 
 ### <a name="minimal-rebuild"></a>Minimální opětovné sestavení
 
-Zastaralá [/Gm (povolení minimálního opětovného sestavení)](../build/reference/gm-enable-minimal-rebuild.md) funkce vyžaduje kompilátor, aby vytvářet a ukládat C++ třídy informací o závislostech, které zabírá místo na disku. Chcete-li ušetřit místo na disku, můžete použít `#pragma component( minrebuild, off )` vždy, když není nutné shromažďovat informace o závislostech, například v neměnných souborech hlaviček. Vložit `#pragma component(minrebuild, on)` po neměnné třídy, chcete-li závislostí kolekce znovu.
+Zastaralá funkce [/GM (povolit minimální opětovné sestavení)](../build/reference/gm-enable-minimal-rebuild.md) vyžaduje, aby kompilátor vytvořil a uložil C++ informace o závislostech třídy, které přebírají místo na disku. Chcete-li ušetřit místo na disku, `#pragma component( minrebuild, off )` můžete použít vždy, když nepotřebujete shromažďovat informace o závislostech, například v nezměněných hlavičkových souborech. Vložení `#pragma component( minrebuild, on )` po nezměněných tříd pro opětovné zapnutí kolekce závislostí.
 
-### <a name="reduce-type-information"></a>Omezení informací o typech
+### <a name="reduce-type-information"></a>Snížení informací o typu
 
-`mintypeinfo` Možnost snižuje ladicí informace pro zadanou oblast. Objem těchto informací je značný a ovlivňuje soubory .pdb a .obj. V oblasti mintypeinfo nelze ladit třídy a struktury. Použití možnosti mintypeinfo může být užitečné, chcete-li zabránit následujícímu upozornění:
+`mintypeinfo` Možnost zmenší informace o ladění pro určenou oblast. Objem těchto informací je značný a ovlivňuje soubory .pdb a .obj. V oblasti mintypeinfo nelze ladit třídy a struktury. Použití možnosti mintypeinfo může být užitečné, chcete-li zabránit následujícímu upozornění:
 
 ```cmd
 LINK : warning LNK4018: too many type indexes in PDB "filename", discarding subsequent type information
 ```
 
-Další informace najdete v tématu [/Gm (povolení minimálního opětovného sestavení)](../build/reference/gm-enable-minimal-rebuild.md) – možnost kompilátoru.
+Další informace naleznete v tématu možnost kompilátoru [/GM (povolit minimální opětovné sestavení)](../build/reference/gm-enable-minimal-rebuild.md) .
 
 ## <a name="see-also"></a>Viz také:
 
-[Direktivy Pragma a klíčové slovo __Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)
+[Direktivy pragma a klíčové slovo __pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

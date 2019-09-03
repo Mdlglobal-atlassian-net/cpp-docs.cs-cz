@@ -1,42 +1,42 @@
 ---
 title: __getcallerseflags
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - _getcallerseflags
 - _getcallerseflags_cpp
 helpviewer_keywords:
 - _getcallerseflags intrinsic
 ms.assetid: 2386596f-33aa-4cc7-b026-5a834637270a
-ms.openlocfilehash: a2df7087c605882340da16f56dae2e991c5d7dd1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d6279db10ec38da7482b26e19e31f2d34dd48a07
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62264098"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70222162"
 ---
-# <a name="getcallerseflags"></a>__getcallerseflags
+# <a name="__getcallerseflags"></a>__getcallerseflags
 
-**Microsoft Specific**
+**Specifické pro společnost Microsoft**
 
 Vrátí hodnotu EFLAGS z kontextu volajícího.
 
 ## <a name="syntax"></a>Syntaxe
 
-```
+```C
 unsigned int __getcallerseflags(void);
 ```
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Hodnota EFLAGS z kontextu volajícího.
+EFLAGS hodnota z kontextu volajícího.
 
 ## <a name="requirements"></a>Požadavky
 
-|Vnitřní|Architektura|
+|Vnitřním|Architektura|
 |---------------|------------------|
 |`__getcallerseflags`|x86, x64|
 
-**Soubor hlaviček** \<intrin.h >
+**Hlavičkový soubor** \<intrin. h >
 
 ## <a name="remarks"></a>Poznámky
 
@@ -44,7 +44,7 @@ Tato rutina je k dispozici pouze jako vnitřní objekt.
 
 ## <a name="example"></a>Příklad
 
-```
+```cpp
 // getcallerseflags.cpp
 // processor: x86, x64
 
@@ -78,8 +78,8 @@ EFLAGS 0x202
 EFLAGS 0x206
 ```
 
-**Specifické pro END Microsoft**
+**Specifické pro konec Microsoftu**
 
 ## <a name="see-also"></a>Viz také:
 
-[Vnitřní funkce kompilátoru](../intrinsics/compiler-intrinsics.md)
+[Vnitřní objekty kompilátoru](../intrinsics/compiler-intrinsics.md)

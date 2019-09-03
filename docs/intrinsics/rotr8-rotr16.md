@@ -1,6 +1,6 @@
 ---
-title: _rotr8 _rotr16
-ms.date: 11/04/2016
+title: _rotr8, _rotr16
+ms.date: 09/02/2019
 f1_keywords:
 - _rotr16
 - _rotr8
@@ -8,22 +8,22 @@ helpviewer_keywords:
 - _rotr8 intrinsic
 - _rotr16 intrinsic
 ms.assetid: dfbd2c82-82b4-427a-ad52-51609027ebff
-ms.openlocfilehash: 27c3a9d914d04ecdffb7fa74dc3c8f79a442445c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 66598a4e6cdc26fa60a87cd32abaa34319ebe6cc
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62390396"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70218040"
 ---
-# <a name="rotr8-rotr16"></a>_rotr8 _rotr16
+# <a name="_rotr8-_rotr16"></a>_rotr8, _rotr16
 
-**Microsoft Specific**
+**Specifické pro společnost Microsoft**
 
-Otočte doprava na nejméně významných bitů (LSB) zadaný počet pozic bit vstupní hodnoty.
+Otočí vstupní hodnoty vpravo k nejméně významnému bitu (LSB) o zadaný počet bitových pozic.
 
 ## <a name="syntax"></a>Syntaxe
 
-```
+```C
 unsigned char _rotr8(
    unsigned char value,
    unsigned char shift
@@ -34,34 +34,34 @@ unsigned short _rotr16(
 );
 ```
 
-#### <a name="parameters"></a>Parametry
+### <a name="parameters"></a>Parametry
 
-*value*<br/>
-[in] Hodnota, otočí.
+*osa*\
+pro Hodnota, která se má otočit
 
-*shift*<br/>
-[in] Počet bitů na otočení.
+*posouvá*\
+pro Počet bitů, které se mají otočit
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Otočený hodnotu.
+Otočená hodnota.
 
 ## <a name="requirements"></a>Požadavky
 
-|Vnitřní|Architektura|
+|Vnitřním|Architektura|
 |---------------|------------------|
-|`_rotr8`|x86, ARM, x64|
-|`_rotr16`|x86, ARM, x64|
+|`_rotr8`|x86, ARM, x64, ARM64|
+|`_rotr16`|x86, ARM, x64, ARM64|
 
-**Soubor hlaviček** \<intrin.h >
+**Hlavičkový soubor** \<intrin. h >
 
 ## <a name="remarks"></a>Poznámky
 
-Na rozdíl od operaci posunutí doprava, při provádění správné otočení bity nižšího řádu, které spadají mimo nízká kategorie přesunou do bitové pozice vyššího řádu.
+Na rozdíl od operace pravého posunutí při spuštění pravého otočení se v dolních pořadích, které spadají do dolního konce, přesunou do nejdůležitějších bitových pozic.
 
 ## <a name="example"></a>Příklad
 
-```
+```cpp
 // rotr.cpp
 #include <stdio.h>
 #include <intrin.h>
@@ -99,9 +99,9 @@ Rotating 0x41 right by 7 bits gives 0x82
 Rotating unsigned short 0x12 right by 10 bits gives 0x480
 ```
 
-**Specifické pro END Microsoft**
+**Specifické pro konec Microsoftu**
 
 ## <a name="see-also"></a>Viz také:
 
-[_rotl8, _rotl16](../intrinsics/rotl8-rotl16.md)<br/>
-[Vnitřní funkce kompilátoru](../intrinsics/compiler-intrinsics.md)
+[_rotl8, _rotl16](../intrinsics/rotl8-rotl16.md)\
+[Vnitřní objekty kompilátoru](../intrinsics/compiler-intrinsics.md)

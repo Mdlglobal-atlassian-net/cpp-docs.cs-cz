@@ -1,6 +1,6 @@
 ---
-title: code_seg
-ms.date: 11/04/2016
+title: code_seg – direktiva pragma
+ms.date: 08/29/2019
 f1_keywords:
 - code_seg_CPP
 - vc-pragma.code_seg
@@ -8,56 +8,56 @@ helpviewer_keywords:
 - pragmas, code_seg
 - code_seg pragma
 ms.assetid: bf4faac1-a511-46a6-8d9e-456851d97d56
-ms.openlocfilehash: e566fb01bf70b343b75254a10466bdda2bc7ce1b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0144b3ed220c39cd30aeb8e53bc2aa3c0381b668
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62403500"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70218321"
 ---
-# <a name="codeseg"></a>code_seg
-Určuje textový segment, kde jsou funkce uloženy v souboru .obj.
+# <a name="code_seg-pragma"></a>code_seg – direktiva pragma
+
+Určuje textový oddíl (segment), ve kterém jsou funkce uloženy v souboru objektu (. obj).
 
 ## <a name="syntax"></a>Syntaxe
 
-```
-#pragma code_seg( [ [ { push | pop }, ] [ identifier, ] ] [ "segment-name" [, "segment-class" ] )
-```
+> **#pragma code_seg (** ["*název oddílu*" [ **,** "*oddíl-Class*"]] **)** \
+> **#pragma code_seg (** { **push** | **POP** } [ **,** *identifikátor* ] [ **,** "*oddílový název*" [ **,** "*oddíl-Class*"]] **)**
 
 ### <a name="parameters"></a>Parametry
 
-**push**<br/>
-(Volitelné) Vloží záznam do zásobníku vnitřního kompilátoru. A **nabízených** může mít *identifikátor* a *segment-name*.
+**replik**\
+Volitelné Vloží záznam do interního zásobníku kompilátoru. **Nabízení oznámení** může mít *identifikátor* a *název oddílu*.
 
-**pop**<br/>
-(Volitelné) Odstraní záznam z vrcholu vnitřního zásobníku kompilátoru.
+**výstrah**\
+Volitelné Odebere záznam z vrcholu vnitřního zásobníku kompilátoru. **POP** může mít *identifikátor* a *název oddílu*. Pomocí jednoho příkazu **POP** můžete v rámci identifikátoru otevřít více záznamů. Název *oddílu* se zobrazí jako název oddílu aktivního textu za bodem POP.
 
-*identifier*<br/>
-(Volitelné) Při použití s **nabízených**, přiřadí název záznamu ve vnitřním zásobníku kompilátoru. Při použití s **pop**, vyjme všechny záznamy z vnitřního zásobníku až do *identifikátor* li *identifikátor* nebyl nalezen v interním zásobníku, nic nevezme.
+*RID*\
+Volitelné Při použití s **nabízenou**sadou přiřadí název záznamu v interním zásobníku kompilátoru. Při použití s **POP**direktiva vyřadí záznamy z vnitřního zásobníku, dokud se neodebere *identifikátor* . Pokud *identifikátor* není v interním zásobníku nalezen, nic není vybráno.
 
-*identifikátor* vyjmout několik záznamů pro odebrání pouze s jedním **pop** příkazu.
+"*název oddílu*" \
+Volitelné Název oddílu. Při použití s **bodem POP**se zásobník odstará a *název oddílu* se bude jmenovat jako aktivní textový oddíl.
 
-"*segment-name*"<br/>
-(Volitelné) Název segmentu. Při použití s **pop**, je zásobník odebrán a *segment-name* stane názvem textového segmentu.
-
-"*segment-class*"<br/>
-(Volitelné) Ignorováno, ale zahrnuto pro kompatibilitu s verzemi jazyka C++ před verzí 2.0.
+"*oddíl-Class*" \
+Volitelné Ignoruje se, ale je součástí kompatibility s verzemi C++ Microsoftu staršími než verze 2,0.
 
 ## <a name="remarks"></a>Poznámky
 
-**Code_seg** – Direktiva pragma neřídí umístění objektového kódu generovaného pro instancované šablony ani kódu generovaného implicitně kompilátorem, například zvláštní členské funkce. Doporučujeme použít [__declspec(code_seg(...)) ](../cpp/code-seg-declspec.md) místo toho atribut, protože s ním můžete ovládat umístění celého objektového kódu. To zahrnuje kód generovaný kompilátorem.
+*Oddíl* v souboru objektu je pojmenovaný blok dat, který je načten do paměti jako jednotka. *Textový oddíl* je oddíl, který obsahuje spustitelný kód. V tomto článku mají *segment* a *oddíl* stejný význam.
 
-A *segmentu* soubor v .obj je pojmenovaný blok dat, který je načten do paměti jako celek. A *textový segment* je segment, který obsahuje spustitelný kód. V tomto článku se podmínky *segmentu* a *části* zaměňují.
+Direktiva pragma **code_seg** instruuje kompilátor, aby uvedl veškerý následný objektový kód z jednotky překladu do textového oddílu s názvem *section-name*. Ve výchozím nastavení je oddíl Text použitý pro funkce v souboru objektu pojmenován `.text`. **Code_seg** direktiva pragma bez parametru *názvu oddílu* obnoví název oddílu textu pro následný kód `.text`objektu.
 
-**Code_seg** – Direktiva pragma instruuje kompilátor, aby uvedl veškerý následný objektový kód z převodu jednotky do textového segmentu text s názvem *segment-name*. Ve výchozím nastavení se textový segment použitý v souboru .obj nazývá .text.
+Direktiva pragma **code_seg** neřídí umístění kódu objektu generovaného pro instance šablon. Ani neřídí kód vygenerovaný implicitně kompilátorem, jako jsou například speciální členské funkce. Pro řízení tohoto kódu doporučujeme místo toho použít atribut [__declspec (code_seg (...))](../cpp/code-seg-declspec.md) . Poskytuje vám kontrolu nad umístěním veškerého kódu objektu, včetně kódu vygenerovaného kompilátorem.
 
-A **code_seg** – Direktiva pragma bez parametrů obnoví název textového segmentu pro následný objektový kód na .text.
+Seznam názvů, které se nedají použít k vytvoření oddílu, najdete v tématu [/Section](../build/reference/section-specify-section-attributes.md).
 
-Můžete použít [DUMPBIN. Soubor EXE](../build/reference/dumpbin-command-line.md) aplikace k zobrazení souborů obj. Součástí sady Visual Studio jsou verze DUMPBIN pro každou podporovanou cílovou architekturu.
+Můžete také zadat oddíly pro inicializovaná data ([data_seg](../preprocessor/data-seg.md)), neinicializovaná data ([bss_seg](../preprocessor/bss-seg.md)) a const Variables ([const_seg](../preprocessor/const-seg.md)).
+
+Můžete použít [DUMPBIN. Aplikace EXE](../build/reference/dumpbin-command-line.md) pro zobrazení souborů objektů. Verze nástroje DUMPBIN pro každou podporovanou cílovou architekturu je součástí sady Visual Studio.
 
 ## <a name="example"></a>Příklad
 
-Tento příklad ukazuje způsob použití **code_seg** – Direktiva pragma pro ovládací prvek, kde objektového kódu:
+Tento příklad ukazuje, jak použít direktivu pragma **code_seg** pro řízení, kde je kód objektu vložen:
 
 ```cpp
 // pragma_directive_code_seg.cpp
@@ -80,11 +80,7 @@ int main() {
 }
 ```
 
-Seznam názvů, které by neměly být použít k vytvoření oddílu, naleznete v tématu [/SECTION](../build/reference/section-specify-section-attributes.md).
-
-Můžete také určit oddíly pro inicializovaná data ([data_seg](../preprocessor/data-seg.md)), neinicializovaná data ([bss_seg](../preprocessor/bss-seg.md)) a proměnné const ([const_seg](../preprocessor/const-seg.md)).
-
 ## <a name="see-also"></a>Viz také:
 
-[code_seg (__declspec)](../cpp/code-seg-declspec.md)<br/>
-[Direktivy Pragma a klíčové slovo __Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)
+[code_seg (__declspec)](../cpp/code-seg-declspec.md)\
+[Direktivy pragma a klíčové slovo __pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

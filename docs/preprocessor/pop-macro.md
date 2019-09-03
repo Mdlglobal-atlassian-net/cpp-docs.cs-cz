@@ -1,6 +1,6 @@
 ---
-title: pop_macro
-ms.date: 11/04/2016
+title: pop_macro – direktiva pragma
+ms.date: 08/29/2019
 f1_keywords:
 - vc-pragma.pop_macro
 - pop_macro_CPP
@@ -8,27 +8,24 @@ helpviewer_keywords:
 - pop_macro pragma
 - pragmas, pop_macro
 ms.assetid: 3b5489d0-69ba-4c66-b572-2748af0f12bb
-ms.openlocfilehash: 0ea7d37332ce50fd1d21acba058da721a23f2097
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f9e097d139e1df5c9ba09ad9ca99f0cfe6bbbfb3
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62180131"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70218293"
 ---
-# <a name="popmacro"></a>pop_macro
-Nastaví hodnotu vlastnosti *macro_name* makra na hodnotu na vrcholu zásobníku tohoto makra.
+# <a name="pop_macro-pragma"></a>pop_macro – direktiva pragma
+
+Nastaví hodnotu makra *název makra* na hodnotu v horní části zásobníku pro toto makro.
 
 ## <a name="syntax"></a>Syntaxe
 
-```
-#pragma pop_macro("
-macro_name
-")
-```
+> **#pragma pop_macro (** "*název makra*" **)**
 
 ## <a name="remarks"></a>Poznámky
 
-Nejprve musíte vydat [push_macro](../preprocessor/push-macro.md) pro *macro_name* předtím, než vám pomůžou **pop_macro**.
+Aby bylo možné provést **pop_macro**, je nutné vystavit [push_macro](../preprocessor/push-macro.md) pro *název makra* .
 
 ## <a name="example"></a>Příklad
 
@@ -66,4 +63,4 @@ int main() {
 
 ## <a name="see-also"></a>Viz také:
 
-[Direktivy Pragma a klíčové slovo __Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)
+[Direktivy pragma a klíčové slovo __pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

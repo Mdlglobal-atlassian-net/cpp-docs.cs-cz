@@ -1,56 +1,56 @@
 ---
 title: __outword
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - __outword
 helpviewer_keywords:
 - __outword intrinsic
 - out instruction
 ms.assetid: 995f8834-0f50-4b4f-a7a2-af0e7c371cda
-ms.openlocfilehash: 067f438d2135f4d61245606ab25af5a6f1ec9568
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 766f6adff5ea0212f48ff8727024ac7a5729c944
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62262954"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70221402"
 ---
-# <a name="outword"></a>__outword
+# <a name="__outword"></a>__outword
 
-**Microsoft Specific**
+**Specifické pro společnost Microsoft**
 
-Generuje `out` instrukce, která odesílá slovo `Data` portu vstupně-výstupní operace určené `Port`.
+Vygeneruje instrukci, která odešle slovo data z vstupně-výstupního portu určeného portem. `out`
 
 ## <a name="syntax"></a>Syntaxe
 
-```
+```C
 void __outword(
    unsigned short Port,
    unsigned short Data
 );
 ```
 
-#### <a name="parameters"></a>Parametry
+### <a name="parameters"></a>Parametry
 
-*Port*<br/>
-[in] Port pro odesílání dat na.
+*Přístavní*\
+pro Port, do kterého se mají data odeslat.
 
-*Data*<br/>
-[in] Data, která má být odeslána.
+*Údajů*\
+pro Data, která mají být odeslána.
 
 ## <a name="requirements"></a>Požadavky
 
-|Vnitřní|Architektura|
+|Vnitřním|Architektura|
 |---------------|------------------|
 |`__outword`|x86, x64|
 
-**Soubor hlaviček** \<intrin.h >
+**Hlavičkový soubor** \<intrin. h >
 
 ## <a name="remarks"></a>Poznámky
 
 Tato rutina je k dispozici pouze jako vnitřní objekt.
 
-**Specifické pro END Microsoft**
+**Specifické pro konec Microsoftu**
 
 ## <a name="see-also"></a>Viz také:
 
-[Vnitřní funkce kompilátoru](../intrinsics/compiler-intrinsics.md)
+[Vnitřní objekty kompilátoru](../intrinsics/compiler-intrinsics.md)

@@ -1,6 +1,6 @@
 ---
 title: __stosb
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - __stosb
 helpviewer_keywords:
@@ -8,51 +8,51 @@ helpviewer_keywords:
 - __stosb intrinsic
 - stosb instruction
 ms.assetid: 634589ed-2da3-439b-a381-a214d89bf10c
-ms.openlocfilehash: 679f1a892a6ee5b458a05d1577ecf766bed385dd
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: edf74da4c8b5aa97e542d89f55b3ed8411db9bac
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62390279"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70221210"
 ---
-# <a name="stosb"></a>__stosb
+# <a name="__stosb"></a>__stosb
 
-**Microsoft Specific**
+**Specifické pro společnost Microsoft**
 
-Generuje instrukce řetězec úložiště (`rep stosb`).
+Vygeneruje instrukci řetězce úložiště`rep stosb`().
 
 ## <a name="syntax"></a>Syntaxe
 
-```
+```C
 void __stosb(
-   unsigned char* Dest,
+   unsigned char* Destination,
    unsigned char Data,
    size_t Count
 );
 ```
 
-#### <a name="parameters"></a>Parametry
+### <a name="parameters"></a>Parametry
 
-*cíl*<br/>
-[out] Cíl operace.
+*Tabulka*\
+mimo Cíl operace.
 
-*Data*<br/>
-[in] Data k uložení.
+*Údajů*\
+pro Data, která se mají uložit
 
-*Počet*<br/>
-[in] Délka bloku bajty k zápisu.
+*Výpočtu*\
+pro Délka bloku bajtů k zápisu.
 
 ## <a name="requirements"></a>Požadavky
 
-|Vnitřní|Architektura|
+|Vnitřním|Architektura|
 |---------------|------------------|
 |`__stosb`|x86, x64|
 
-**Soubor hlaviček** \<intrin.h >
+**Hlavičkový soubor** \<intrin. h >
 
 ## <a name="remarks"></a>Poznámky
 
-Výsledkem je, že znak `Data` je zapsán do bloku `Count` bajtů v `Dest` řetězec.
+Výsledkem je, že znaková *data* jsou zapsána do bloku *počtu* bajtů v *cílovém* řetězci.
 
 Tato rutina je k dispozici pouze jako vnitřní objekt.
 
@@ -83,8 +83,8 @@ int main()
 *@@@@@@**************************
 ```
 
-**Specifické pro END Microsoft**
+**Specifické pro konec Microsoftu**
 
 ## <a name="see-also"></a>Viz také:
 
-[Vnitřní funkce kompilátoru](../intrinsics/compiler-intrinsics.md)
+[Vnitřní objekty kompilátoru](../intrinsics/compiler-intrinsics.md)

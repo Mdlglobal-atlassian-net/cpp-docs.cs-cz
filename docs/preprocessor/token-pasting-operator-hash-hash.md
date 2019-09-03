@@ -1,26 +1,26 @@
 ---
-title: Operátor vložení tokenu (##)
-ms.date: 11/04/2016
+title: Operátor vkládající token (##)
+ms.date: 08/29/2019
 f1_keywords:
 - '##'
 helpviewer_keywords:
 - preprocessor, operators
 - '## preprocessor operator'
 ms.assetid: 4f173503-990f-4bff-aef3-ec4d1f1458ef
-ms.openlocfilehash: dab4da5fd65fc280d2061256a580a015917d24b6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4bf1b8c8f56ab9375503c9e8fb6a906706fc70bb
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62179591"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70218114"
 ---
-# <a name="token-pasting-operator-"></a>Operátor vložení tokenu (##)
+# <a name="token-pasting-operator-"></a>Operátor vkládající token (##)
 
-Operátor double znak čísla neboli "vložení tokenu" (**##**), který se někdy nazývá operátor "slučování", se používá v makrech objektu a podobné funkce. Umožňuje sloučit samostatné tokeny do jediného tokenu, a proto nemůže být prvním nebo posledním tokenem v definici makra.
+Operátor dvojitého znaménka nebo operátor *vložení tokenu* ( **##** ), který se někdy označuje jako operátor *sloučení* nebo *kombinování* , se používá v makrech podobných objektech a funkcích. Umožňuje připojit samostatné tokeny do jediného tokenu, a proto nemůže být prvním nebo posledním tokenem v definici makra.
 
 Pokud je formální parametr v definici makra předcházen nebo následován operátorem vložení tokenu, je formální parametr okamžitě nahrazen nerozbaleným vlastním argumentem. Rozšíření makra není na argumentu provedeno před nahrazením.
 
-Poté je každý výskyt operátoru vložení tokenu v *řetězci tokenu* je odebrán a tokeny předcházejí a následují, jsou zřetězeny. Výsledný token musí být platný token. V takovém případě je tento token prověřen pro možná nahrazení, pokud představuje název makra. Identifikátor představuje název, kterým bude tento zřetězený token v programu před nahrazením znám. Každý token představuje token definovaný jinde, buď v programu, nebo na příkazovém řádku kompilátoru. Mezera před nebo za tímto operátorem je nepovinná.
+Následně se odeberou všechny výskyty operátoru vložení tokenu v *řetězci tokenu* a pak se zřetězí tokeny předcházející a následující. Výsledný token musí být platný token. V takovém případě je tento token prověřen pro možná nahrazení, pokud představuje název makra. Identifikátor představuje název, kterým bude tento zřetězený token v programu před nahrazením znám. Každý token představuje token definovaný jinde, buď v programu, nebo na příkazovém řádku kompilátoru. Mezera před nebo za tímto operátorem je nepovinná.
 
 Tento příklad ukazuje použití operátorů převodu na řetězec a vložení tokenu v určeném výstupu programu:
 

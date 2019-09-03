@@ -1,6 +1,6 @@
 ---
-title: zastaralé (C/C++)
-ms.date: 11/04/2016
+title: zastaralá direktiva pragma
+ms.date: 08/29/2019
 f1_keywords:
 - vc-pragma.deprecated
 - deprecated_CPP
@@ -8,35 +8,33 @@ helpviewer_keywords:
 - deprecated pragma
 - pragmas, deprecated
 ms.assetid: 9c046f12-7875-499a-8d5d-12f8642fed2d
-ms.openlocfilehash: 262b23e6e4813a5e22bc3f4e7c9a18efb9988a7c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2e76d1c53cb900c108e2839a9aad17b330143a5d
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62389291"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70222400"
 ---
-# <a name="deprecated-cc"></a>zastaralé (C/C++)
+# <a name="deprecated-pragma"></a>zastaralá direktiva pragma
 
-**Zastaralé** – Direktiva pragma umožňuje určit, že funkce, typ nebo jakýkoli jiný identifikátor pravděpodobně nebude podporovat v budoucí verzi nebo by již nelze použít.
+Zastaralá direktiva pragma vám umožní označit, že funkce, typ nebo jakýkoli jiný identifikátor již nemusí být v budoucí verzi podporován nebo by již neměl být použit.
 
 > [!NOTE]
-> Informace o C ++ 14 `[[deprecated]]` atribut a pokyny, kdy se má použít atribut vs Microsoft declspec nebo direktivy pragma naleznete v tématu [C++ standardní atributy](../cpp/attributes.md) atribut.
+> Informace o atributu c++ `[[deprecated]]` 14 a pokyny k použití tohoto atributu místo modifikátoru společnosti Microsoft `__declspec(deprecated)` nebo **zastaralé** direktivy pragma naleznete v tématu [atributy v C++ ](../cpp/attributes.md).
 
 ## <a name="syntax"></a>Syntaxe
 
-```
-#pragma deprecated( identifier1 [,identifier2, ...] )
-```
+> **#pragma zastaralé (** *identifier1* [ **;** *identifier2* ...] **)**
 
 ## <a name="remarks"></a>Poznámky
 
-Když kompilátor narazí určený identifikátor **zastaralé** – Direktiva pragma, vydá upozornění kompilátoru [C4995](../error-messages/compiler-warnings/compiler-warning-level-3-c4995.md).
+Když kompilátor narazí na identifikátor určený zastaralou direktivou pragma, vydává upozornění kompilátoru [C4995](../error-messages/compiler-warnings/compiler-warning-level-3-c4995.md).
 
 Názvy maker lze označit jako zastaralé. Umístěte název makra do uvozovek, jinak dojde k rozšíření makra.
 
-Vzhledem k tomu, **zastaralé** – Direktiva pragma lze použít na všechny odpovídající identifikátory a podpisů nebere účtu, není nejlepší možnosti pro ukončení podpory pro konkrétní verze přetížených funkcí. Žádné odpovídající název funkce, která je přeneseny do rozsahu se aktivuje upozornění.
+Vzhledem k tomu, že zastaralá direktiva pragma funguje na všech shodných identifikátorech a nebere v úvahu signatury, není nejlepší možností pro zastaralé konkrétní verze přetížených funkcí. Libovolný odpovídající název funkce, která je uvedena v oboru, aktivuje upozornění.
 
-Doporučujeme použít C ++ 14 `[[deprecated]]` atribut, pokud je to možné, namísto **zastaralé** direktivy pragma. Specifické pro Microsoft [__declspec(deprecated)](../cpp/deprecated-cpp.md) modifikátoru deklarace je také vhodnější použít v mnoha případech než **zastaralé** direktivy pragma. `[[deprecated]]` Atribut a `__declspec(deprecated)` modifikátor vám umožňují určit stav již nepoužívaných konkrétních podob přetížených funkcí. Diagnostické upozornění se zobrazí pouze na odkazy na konkrétní přetížení funkce atribut nebo modifikátor se vztahuje na.
+Doporučujeme použít atribut c++ 14 `[[deprecated]]` , pokud je to možné, namísto **zastaralé** direktivy pragma. Modifikátor deklarace [__declspec (](../cpp/deprecated-cpp.md) nepoužívaného společností Microsoft) je také lepší volbou v mnoha případech, než je zastaralá direktiva pragma. `[[deprecated]]` Atribut a`__declspec(deprecated)` modifikátor umožňují zadat zastaralý stav pro konkrétní formy přetížených funkcí. Diagnostické upozornění se zobrazí pouze v odkazech na konkrétní přetíženou funkci, na kterou se atribut nebo modifikátor vztahuje.
 
 ## <a name="example"></a>Příklad
 
@@ -77,4 +75,4 @@ int main() {
 
 ## <a name="see-also"></a>Viz také:
 
-[Direktivy Pragma a klíčové slovo __Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)
+[Direktivy pragma a klíčové slovo __pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

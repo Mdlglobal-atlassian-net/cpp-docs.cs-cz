@@ -1,53 +1,53 @@
 ---
 title: __readdr
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - __readdr
 helpviewer_keywords:
 - __readdr intrinsic
 ms.assetid: 061b05da-c85e-4052-b392-106f14bb84f1
-ms.openlocfilehash: 9d265fe75abaa7ad3cfd508613766cc3b600ee14
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 646330ca92af08903485fd4583eb2c217fe3e023
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62263280"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70216684"
 ---
-# <a name="readdr"></a>__readdr
+# <a name="__readdr"></a>__readdr
 
-Přečte hodnotu do registru zadaného ladění.
+Přečte hodnotu zadaného registru ladění.
 
 ## <a name="syntax"></a>Syntaxe
 
-```
-unsigned         __readdr(unsigned int DebugRegister);
-unsigned __int64 __readdr(unsigned int DebugRegister);
+```C
+unsigned         __readdr(unsigned int DebugRegister); /* x86 */
+unsigned __int64 __readdr(unsigned int DebugRegister); /* x64 */
 ```
 
-#### <a name="parameters"></a>Parametry
+### <a name="parameters"></a>Parametry
 
-*DebugRegister*<br/>
-[in] Registrace – konstanta od 0 do 7, který identifikuje ladění.
+*DebugRegister*\
+pro Konstanta od 0 do 7, která identifikuje registr ladění.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Hodnota registru zadané ladění.
+Hodnota zadaného registru pro ladění.
 
 ## <a name="remarks"></a>Poznámky
 
-Tyto vnitřní objekty jsou k dispozici pouze v režimu jádra a rutiny jsou k dispozici pouze jako vnitřní funkce.
+Tyto vnitřní objekty jsou k dispozici pouze v režimu jádra a rutiny jsou k dispozici pouze jako vnitřní.
 
 ## <a name="requirements"></a>Požadavky
 
-|Vnitřní|Architektura|
+|Vnitřním|Architektura|
 |---------------|------------------|
 |`__readdr`|x86, x64|
 
-**Soubor hlaviček** \<intrin.h >
+**Hlavičkový soubor** \<intrin. h >
 
-**Specifické pro END Microsoft**
+**Specifické pro konec Microsoftu**
 
 ## <a name="see-also"></a>Viz také:
 
-[Vnitřní funkce kompilátoru](../intrinsics/compiler-intrinsics.md)<br/>
+[Vnitřní objekty kompilátoru](../intrinsics/compiler-intrinsics.md)\
 [__readeflags](../intrinsics/readeflags.md)

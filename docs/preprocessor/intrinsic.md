@@ -1,6 +1,6 @@
 ---
-title: " – vnitřní funkce"
-ms.date: 04/11/2018
+title: intrinsic – direktiva pragma
+ms.date: 08/29/2019
 f1_keywords:
 - intrinsic_CPP
 - vc-pragma.intrinsic
@@ -8,30 +8,28 @@ helpviewer_keywords:
 - intrinsic pragma
 - pragmas, intrinsic
 ms.assetid: 25c86ac7-ef40-47b7-a2c0-fada9c5dc3c5
-ms.openlocfilehash: 393a73fcf31c7c00b2057862792ff0536cc98ad8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: bb4403abf5e278ed3727af660579e22ab69592c7
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62212371"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70220940"
 ---
-# <a name="intrinsic"></a> – vnitřní funkce
+# <a name="intrinsic-pragma"></a>intrinsic – direktiva pragma
 
 Určuje, že volání funkcí zadaných v seznamu argumentů direktivy pragma jsou vnitřní.
 
 ## <a name="syntax"></a>Syntaxe
 
-```cpp
-#pragma intrinsic( function1 [, function2, ...] )
-```
+> **vnitřní #pragma (** *Function1* [ **;** _function2_ ...]) **)**
 
 ## <a name="remarks"></a>Poznámky
 
-**Vnitřní** – Direktiva pragma sděluje kompilátoru, že funkce je známo chování.  Kompilátor může funkci zavolat a nenahradit volání vloženými instrukcemi, pokud tím bude zvýšen výkon.
+**Vnitřní** direktiva pragma říká kompilátoru, že funkce má známé chování. Kompilátor může funkci zavolat a nenahradit volání vloženými instrukcemi, pokud tím bude zvýšen výkon.
 
-Funkce knihoven s vnitřními formami jsou uvedeny níže. Jednou **vnitřní** je Direktiva pragma zobrazena, projeví v první definici funkce obsahující zadanou vnitřní funkci. Účinek trvá do konce zdrojového souboru nebo do výskytu `function` zadávající stejnou vnitřní funkci. **Vnitřní** – Direktiva pragma lze použít pouze vně definice funkce – na globální úrovni.
+Funkce knihoven s vnitřními formami jsou uvedeny níže. Jakmile se zobrazí **vnitřní** direktiva pragma, projeví se v první definici funkce obsahující zadanou vnitřní funkci. Efekt pokračuje do konce zdrojového souboru nebo do výskytu `function` direktivy pragma, která určuje stejnou vnitřní funkci. **Vnitřní** direktivu pragma lze použít pouze mimo definici funkce na globální úrovni.
 
-Následující funkce mají vnitřní formy a vnitřní formy se používají při zadávání [/Oi](../build/reference/oi-generate-intrinsic-functions.md):
+Následující funkce mají vnitřní formy a vnitřní formuláře se používají při zadání [/Oi](../build/reference/oi-generate-intrinsic-functions.md):
 
 |||||
 |-|-|-|-|
@@ -42,15 +40,15 @@ Následující funkce mají vnitřní formy a vnitřní formy se používají p�
 |[_lrotl](../c-runtime-library/reference/lrotl-lrotr.md)|[_strset](../c-runtime-library/reference/strset-strset-l-wcsset-wcsset-l-mbsset-mbsset-l.md)|[memset](../c-runtime-library/reference/memset-wmemset.md)||
 |[_lrotr](../c-runtime-library/reference/lrotl-lrotr.md)|[abs](../c-runtime-library/reference/abs-labs-llabs-abs64.md)|[strcat](../c-runtime-library/reference/strcat-wcscat-mbscat.md)||
 
-Programy používající vnitřní funkce jsou rychlejší, protože neobsahují režii volání funkcí, mohou však být větší kvůli většímu množství dodatečně vygenerovaného kódu.
+Programy, které používají vnitřní funkce, jsou rychlejší, protože nemají režii volání funkce, ale mohou být větší z důvodu vygenerování dalšího kódu.
 
-**x86 konkrétní**
+**Specifické pro procesory x86**
 
-`_disable` a `_enable` vnitřní objekty generovat _enable zakazují nebo povolují přerušení a může být užitečné v ovladačích režimu jádra.
+Vnitřní objekty `_enable` a generují instrukce režimu jádra, které zakazují nebo povolují přerušení a můžou být užitečné v ovladačích režimu jádra. `_disable`
 
 ### <a name="example"></a>Příklad
 
-Zkompilujte následující kód z příkazového řádku pomocí `cl -c -FAs sample.c` a podívejte se na sample.asm vidět, že do x86 instrukcí CLI a sti architektury:
+Zkompilujte následující kód z příkazového řádku s `cl -c -FAs sample.c` a podívejte se na Sample. asm a podívejte se, že se na něj dostanou příkazy rozhraní příkazového řádku x86 a STI:
 
 ```cpp
 // pragma_directive_intrinsic.cpp
@@ -67,28 +65,28 @@ int main() {
 }
 ```
 
-**Specifické pro end x86**
+**Specifické pro konec x86**
 
 Funkce s plovoucí desetinnou čárkou uvedené níže nemají skutečné vnitřní formy. Namísto nich mají verze, které argumenty předávají přímo do čipu plovoucí desetinné čárky místo jejich ukládání do zásobníku programu:
 
 |||||
 |-|-|-|-|
-|[acos](../c-runtime-library/reference/acos-acosf-acosl.md)|[cosh](../c-runtime-library/reference/cosh-coshf-coshl.md)|[Pow](../c-runtime-library/reference/pow-powf-powl.md)|[tanh](../c-runtime-library/reference/tanh-tanhf-tanhl.md)|
-|[asin](../c-runtime-library/reference/asin-asinf-asinl.md)|[Fmod –](../c-runtime-library/reference/fmod-fmodf.md)|[sinh](../c-runtime-library/reference/sinh-sinhf-sinhl.md)||
+|[acos](../c-runtime-library/reference/acos-acosf-acosl.md)|[cosh](../c-runtime-library/reference/cosh-coshf-coshl.md)|[log](../c-runtime-library/reference/pow-powf-powl.md)|[tanh –](../c-runtime-library/reference/tanh-tanhf-tanhl.md)|
+|[ASIN](../c-runtime-library/reference/asin-asinf-asinl.md)|[FMOD –](../c-runtime-library/reference/fmod-fmodf.md)|[sinh –](../c-runtime-library/reference/sinh-sinhf-sinhl.md)||
 
-Funkce s plovoucí desetinnou čárkou uvedené níže mají skutečné vnitřní formy, když zadáte [/Oi](../build/reference/oi-generate-intrinsic-functions.md), [/og](../build/reference/og-global-optimizations.md), a [Fast](../build/reference/fp-specify-floating-point-behavior.md) (nebo jakákoli možnost obsahující možnost/og: [/ Ox](../build/reference/ox-full-optimization.md), [/O1](../build/reference/o1-o2-minimize-size-maximize-speed.md)a/O2):
+Funkce s plovoucí desetinnou čárkou uvedené níže mají skutečné vnitřní formy při zadání [/Oi](../build/reference/oi-generate-intrinsic-functions.md), [/og](../build/reference/og-global-optimizations.md)a [/FP: Fast](../build/reference/fp-specify-floating-point-behavior.md) (nebo jakékoli možnosti, která zahrnuje/Og: [/Ox](../build/reference/ox-full-optimization.md), [/O1](../build/reference/o1-o2-minimize-size-maximize-speed.md)a [/O2](../build/reference/o1-o2-minimize-size-maximize-speed.md)):
 
 |||||
 |-|-|-|-|
 |[atan](../c-runtime-library/reference/atan-atanf-atanl-atan2-atan2f-atan2l.md)|[exp](../c-runtime-library/reference/exp-expf.md)|[log10](../c-runtime-library/reference/log-logf-log10-log10f.md)|[sqrt](../c-runtime-library/reference/sqrt-sqrtf-sqrtl.md)|
-|[atan2](../c-runtime-library/reference/atan-atanf-atanl-atan2-atan2f-atan2l.md)|[log](../c-runtime-library/reference/log-logf-log10-log10f.md)|[sin](../c-runtime-library/reference/sin-sinf-sinl.md)|[Tan](../c-runtime-library/reference/tan-tanf-tanl.md)|
-|[cos](../c-runtime-library/reference/cos-cosf-cosl.md)||||
+|[atan2](../c-runtime-library/reference/atan-atanf-atanl-atan2-atan2f-atan2l.md)|[protokolu](../c-runtime-library/reference/log-logf-log10-log10f.md)|[tlačítek](../c-runtime-library/reference/sin-sinf-sinl.md)|[nádrž](../c-runtime-library/reference/tan-tanf-tanl.md)|
+|[Cos](../c-runtime-library/reference/cos-cosf-cosl.md)||||
 
-Můžete použít [/FP: strict](../build/reference/fp-specify-floating-point-behavior.md) nebo [/Za](../build/reference/za-ze-disable-language-extensions.md) přepsat generování možností skutečně vnitřních plovoucích. V tomto případě jsou funkce generovány jako rutiny knihoven, které předávají argumenty přímo do čipu plovoucí desetinné čárky namísto jejich ukládání do zásobníku programu.
+Můžete použít [/FP: Strict](../build/reference/fp-specify-floating-point-behavior.md) nebo [/za](../build/reference/za-ze-disable-language-extensions.md) k přepsání generace skutečných možností s plovoucí desetinnou čárkou. V tomto případě jsou funkce generovány jako rutiny knihoven, které předávají argumenty přímo do čipu plovoucí desetinné čárky namísto jejich ukládání do zásobníku programu.
 
-Zobrazit [#pragma funkce](../preprocessor/function-c-cpp.md) informace a příklad toho, jak povolit nebo zakázat vnitřní funkce pro blok zdrojového textu.
+Informace a příklad, jak povolit nebo zakázat vnitřní objekty pro blok zdrojového textu, naleznete v tématu [#pragma Functions](../preprocessor/function-c-cpp.md) .
 
 ## <a name="see-also"></a>Viz také:
 
-[Direktivy Pragma a klíčové slovo __Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)<br/>
+[Direktivy pragma a klíčové slovo __pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)\
 [Vnitřní funkce kompilátoru](../intrinsics/compiler-intrinsics.md)

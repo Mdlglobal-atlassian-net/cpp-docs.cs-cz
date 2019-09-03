@@ -1,52 +1,52 @@
 ---
 title: __ud2
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - __ud2
 helpviewer_keywords:
 - UD2 instruction
 - __ud2 intrinsic
 ms.assetid: 0831cd5a-8b65-402e-bb57-11e1d5d7ffd2
-ms.openlocfilehash: a36ab5c25ac9138b2a4d6810cc2a339e534f1695
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b5aa20804099af4d75dcc62a5e62ccc0d4a09566
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62390175"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70219755"
 ---
-# <a name="ud2"></a>__ud2
+# <a name="__ud2"></a>__ud2
 
-**Microsoft Specific**
+**Specifické pro společnost Microsoft**
 
-Generuje instrukce nedefinovaný.
+Vygeneruje nedefinovanou instrukci.
 
 ## <a name="syntax"></a>Syntaxe
 
-```
+```C
 void __ud2();
 ```
 
 ## <a name="remarks"></a>Poznámky
 
-Procesor vyvolá výjimku neplatný operační kód, pokud spustí nedefinované instrukce.
+Procesor vyvolá neplatnou výjimku opcode, pokud spustíte nedefinovanou instrukci.
 
-`__ud2` Funkce je ekvivalentní volání `UD2` strojové instrukce a je k dispozici pouze v režimu jádra. Další informace vyhledejte dokument, "ruční architektury Intel softwarový vývojář, svazek 2: Instrukce nastavit odkaz,"na [společnosti Intel Corporation](https://software.intel.com/articles/intel-sdm) lokality.
+Funkce je ekvivalentní `UD2` instrukci počítače a je k dispozici pouze v režimu jádra. `__ud2` Pokud chcete získat další informace, vyhledejte dokument "Intel Architecture Software Developer 's Manual, Volume 2: Odkaz na sadu instrukcí "na webu [společnosti Intel](https://software.intel.com/articles/intel-sdm) .
 
 ## <a name="requirements"></a>Požadavky
 
-|Vnitřní|Architektura|
+|Vnitřním|Architektura|
 |---------------|------------------|
 |`__ud2`|x86, x64|
 
-**Soubor hlaviček** \<intrin.h >
+**Hlavičkový soubor** \<intrin. h >
 
-**Specifické pro END Microsoft**
+**Specifické pro konec Microsoftu**
 
 ## <a name="example"></a>Příklad
 
-Následující příklad spustí nedefinované instrukce, která vyvolává výjimku. Obslužná rutina výjimky poté změní návratový kód od nuly do jednoho.
+Následující příklad provede nedefinovanou instrukci, která vyvolá výjimku. Obslužná rutina výjimky pak změní návratový kód od nuly na jeden.
 
-```
+```cpp
 // __ud2_intrinsic.cpp
 #include <stdio.h>
 #include <intrin.h>
@@ -84,4 +84,4 @@ After __ud2().  Return code = 1.
 
 ## <a name="see-also"></a>Viz také:
 
-[Vnitřní funkce kompilátoru](../intrinsics/compiler-intrinsics.md)
+[Vnitřní objekty kompilátoru](../intrinsics/compiler-intrinsics.md)

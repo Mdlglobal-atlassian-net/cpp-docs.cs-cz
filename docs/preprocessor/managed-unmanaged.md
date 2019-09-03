@@ -1,6 +1,6 @@
 ---
-title: managed, unmanaged
-ms.date: 11/04/2016
+title: managed, unmanaged – direktivy pragma
+ms.date: 08/29/2019
 f1_keywords:
 - vc-pragma.unmanaged
 - managed_CPP
@@ -12,44 +12,43 @@ helpviewer_keywords:
 - pragmas, managed
 - unmanaged pragma
 ms.assetid: f072ddcc-e1ec-408a-8ce1-326ddb60e4a4
-ms.openlocfilehash: 7fa1e3274b85faa9f3f72f4db5bf586ee5d8e274
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4c13155d1c84966a593df11baf525a0c3539f02c
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62409860"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70218808"
 ---
-# <a name="managed-unmanaged"></a>managed, unmanaged
-Povolení řízení na úrovni funkce pro kompilování funkcí jako spravovaných nebo nespravovaných.
+# <a name="managed-unmanaged-pragmas"></a>managed, unmanaged – direktivy pragma
+
+Povolit řízení na úrovni funkce pro kompilaci funkcí jako spravovaných nebo nespravovaných.
 
 ## <a name="syntax"></a>Syntaxe
 
-```
-#pragma managed
-#pragma unmanaged
-#pragma managed([push,] on | off)
-#pragma managed(pop)
-```
+> **#pragma spravované**\
+> **nespravované #pragma**\
+> **#pragma spravované (**  | [ **push,** ] {**off** } **)** \
+> **spravované #pragma (pop)**
 
 ## <a name="remarks"></a>Poznámky
 
-[/CLR](../build/reference/clr-common-language-runtime-compilation.md) – možnost kompilátoru poskytuje řízení na úrovni modulu pro kompilování funkcí jako spravovaných nebo nespravovaných.
+Možnost kompilátoru [/CLR](../build/reference/clr-common-language-runtime-compilation.md) poskytuje ovládací prvky na úrovni modulu pro kompilaci funkcí buď jako spravované, nebo nespravované.
 
-Nespravovaná funkce bude zkompilována pro nativní platformu a provádění části programu bude modulem CLR (Common Language Runtime) předáno nativní platformě.
+Nespravovaná funkce bude zkompilována pro nativní platformu. Provádění této části programu bude modulem CLR (Common Language Runtime) předáno nativní platformě.
 
 Funkce jsou ve výchozím nastavení při použití `/clr` kompilovány jako spravované.
 
-Při použití direktivy pragma:
+Při použití těchto direktiv pragma:
 
-- Přidání direktivy pragma před funkci, ale nikoliv do těla funkce.
+- Přidejte direktivu pragma před funkci, ale ne uvnitř těla funkce.
 
-- Přidání direktivy pragma po `#include` příkazy. Nepoužívejte direktivy pragma před `#include` příkazy.
+- Přidejte direktivu pragma `#include` po příkazech. Tyto direktivy pragma Nepoužívejte `#include` před příkazy.
 
-Kompilátor ignoruje **spravované** a **nespravované** direktivy pragma Pokud `/clr` se nepoužívá při kompilaci.
+Kompilátor ignoruje **spravované** a nespravované direktivy pragma `/clr` , pokud se v kompilaci nepoužívá.
 
-Když je vytvořena instance funkce šablony, stav direktivy pragma v době definice šablony určuje, zda je spravovaná nebo nespravovaná.
+Při vytvoření instance funkce šablony určuje, zda je stav direktiva pragma při definování šablony, pokud je spravovaný nebo nespravovaný.
 
-Další informace najdete v tématu [inicializace smíšených sestavení](../dotnet/initialization-of-mixed-assemblies.md).
+Další informace naleznete v tématu [inicializace smíšených sestavení](../dotnet/initialization-of-mixed-assemblies.md).
 
 ## <a name="example"></a>Příklad
 
@@ -89,4 +88,4 @@ In unmanaged function.
 
 ## <a name="see-also"></a>Viz také:
 
-[Direktivy Pragma a klíčové slovo __Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)
+[Direktivy pragma a klíčové slovo __pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

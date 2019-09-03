@@ -1,6 +1,6 @@
 ---
 title: __inword
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - __indword_cpp
 - __indword
@@ -8,50 +8,50 @@ helpviewer_keywords:
 - in instruction
 - __inword intrinsic
 ms.assetid: 5c617edd-6709-40a1-aad2-40d5e39283c6
-ms.openlocfilehash: f7355f64eeb2ace550d272ac6a9b1414e90eb172
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: cfb6e5a11bed5feec3435ab604d22b8f532d3400
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62264488"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70217527"
 ---
-# <a name="inword"></a>__inword
+# <a name="__inword"></a>__inword
 
-**Microsoft Specific**
+**Specifické pro společnost Microsoft**
 
-Čte data z pomocí zadaný port `in` instrukce.
+Načte data z určeného portu pomocí `in` instrukce.
 
 ## <a name="syntax"></a>Syntaxe
 
-```
+```C
 unsigned short __inword(
    unsigned short Port
 );
 ```
 
-#### <a name="parameters"></a>Parametry
+### <a name="parameters"></a>Parametry
 
-*Port*<br/>
-[in] Port, který se má číst z.
+*Přístavní*\
+pro Port, ze kterého se má číst.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Slovo data načtená.
+Slovo přečtených dat
 
 ## <a name="requirements"></a>Požadavky
 
-|Vnitřní|Architektura|
+|Vnitřním|Architektura|
 |---------------|------------------|
 |`__inword`|x86, x64|
 
-**Soubor hlaviček** \<intrin.h >
+**Hlavičkový soubor** \<intrin. h >
 
 ## <a name="remarks"></a>Poznámky
 
 Tato rutina je k dispozici pouze jako vnitřní objekt.
 
-**Specifické pro END Microsoft**
+**Specifické pro konec Microsoftu**
 
 ## <a name="see-also"></a>Viz také:
 
-[Vnitřní funkce kompilátoru](../intrinsics/compiler-intrinsics.md)
+[Vnitřní objekty kompilátoru](../intrinsics/compiler-intrinsics.md)

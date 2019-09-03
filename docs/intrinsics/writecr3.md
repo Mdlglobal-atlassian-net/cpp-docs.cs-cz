@@ -1,51 +1,51 @@
 ---
 title: __writecr3
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - _writecr3
 helpviewer_keywords:
 - _writecr3 intrinsic
 ms.assetid: 959d49fa-69d5-47cf-88d2-7688367fe38f
-ms.openlocfilehash: 88467e4fb39abc9526e47a73f998d630470111a9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f2472a21fe42f10dbf0918480ef02f7e48109747
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62389928"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70219275"
 ---
-# <a name="writecr3"></a>__writecr3
+# <a name="__writecr3"></a>__writecr3
 
-**Microsoft Specific**
+**Specifické pro společnost Microsoft**
 
-Zapíše hodnotu `Data` CR3 registrace.
+Zapíše hodnotu `Data` do cr3 registru.
 
 ## <a name="syntax"></a>Syntaxe
 
-```
+```C
 void writecr3(
    unsigned __int64 Data
 );
 ```
 
-#### <a name="parameters"></a>Parametry
+### <a name="parameters"></a>Parametry
 
-*Data*<br/>
-[in] Hodnota k zápisu do registru CR3.
+*Údajů*\
+pro Hodnota, která se má zapsat do registru CR3
 
 ## <a name="requirements"></a>Požadavky
 
-|Vnitřní|Architektura|
+|Vnitřním|Architektura|
 |---------------|------------------|
 |`__writecr3`|x86, x64|
 
-**Soubor hlaviček** \<intrin.h >
+**Hlavičkový soubor** \<intrin. h >
 
 ## <a name="remarks"></a>Poznámky
 
-Tomto vnitřní je k dispozici pouze v režimu jádra a rutina je dostupný jenom jako vnitřní.
+Tato vnitřní funkce je k dispozici pouze v režimu jádra a rutina je k dispozici pouze jako vnitřní.
 
-**Specifické pro END Microsoft**
+**Specifické pro konec Microsoftu**
 
 ## <a name="see-also"></a>Viz také:
 
-[Vnitřní funkce kompilátoru](../intrinsics/compiler-intrinsics.md)
+[Vnitřní objekty kompilátoru](../intrinsics/compiler-intrinsics.md)

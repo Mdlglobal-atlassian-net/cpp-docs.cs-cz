@@ -1,6 +1,6 @@
 ---
 title: _BitScanForward, _BitScanForward64
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - _BitScanForward
 - _BitScanForward_cpp
@@ -11,22 +11,22 @@ helpviewer_keywords:
 - bsf instruction
 - BitScanForward intrinsic
 ms.assetid: 405e60fb-0815-42a7-9b02-6fc035122203
-ms.openlocfilehash: 8b09aeee485611ddd20d51b4c1e36ec98c03c26e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 91f43d19259419b78d1910a00a154d2d4f0adfc7
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62264215"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70222219"
 ---
-# <a name="bitscanforward-bitscanforward64"></a>_BitScanForward, _BitScanForward64
+# <a name="_bitscanforward-_bitscanforward64"></a>_BitScanForward, _BitScanForward64
 
-**Microsoft Specific**
+**Specifické pro společnost Microsoft**
 
-Hledat maskování dat z nejméně významných bitů (LSB) na nejvýznamnější bit (MSB) nastaveného bitu (1).
+Vyhledávejte data masky z nejméně významného bitu (LSB) na nejvýznamnější bit (MSB) pro nastavený bit (1).
 
 ## <a name="syntax"></a>Syntaxe
 
-```
+```C
 unsigned char _BitScanForward(
    unsigned long * Index,
    unsigned long Mask
@@ -37,34 +37,34 @@ unsigned char _BitScanForward64(
 );
 ```
 
-#### <a name="parameters"></a>Parametry
+### <a name="parameters"></a>Parametry
 
-*Index*<br/>
-[out] Načtená verze umístění prvního nastaveného bitu (1) nalezena.
+*Indexovacím*\
+mimo Bylo načteno s bitovou pozicí prvního nastaveného bitu (1).
 
-*Maska*<br/>
-[in] 32bitové nebo 64bitové hodnotu vyhledávání.
+*Zrušit*\
+pro Hodnota 32 nebo 64, která se má vyhledat.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-0, pokud maska je nula. nenulový jinak.
+0, pokud je maska nulová; nenulové jinak.
 
 ## <a name="remarks"></a>Poznámky
 
-Pokud nastaveného bitu nenajde, vrátí se bit umístění prvního nastaveného bitu nalezen v prvním parametru. Pokud se nenajde žádný nastaveného bitu, je vrácena 0. v opačném případě vrátí hodnotu 1.
+Pokud se nalezne sada bitů, v prvním parametru se vrátí bitová pozice první sady zjištěných bitů. Pokud se nenajde žádná sada bitů, vrátí se 0. v opačném případě se vrátí 1.
 
 ## <a name="requirements"></a>Požadavky
 
-|Vnitřní|Architektura|
+|Vnitřním|Architektura|
 |---------------|------------------|
-|`_BitScanForward`|x86, ARM, x64|
-|`_BitScanForward64`|ARM, x64|
+|`_BitScanForward`|x86, ARM, x64, ARM64|
+|`_BitScanForward64`|ARM64, x64|
 
-**Soubor hlaviček** \<intrin.h >
+**Hlavičkový soubor** \<intrin. h >
 
 ## <a name="example"></a>Příklad
 
-```
+```cpp
 // BitScanForward.cpp
 // compile with: /EHsc
 #include <iostream>
@@ -93,21 +93,17 @@ int main()
 }
 ```
 
-## <a name="input"></a>Vstup
-
-```
+```Input
 12
 ```
 
-## <a name="sample-output"></a>Vzorový výstup
-
-```
+```Output
 Enter a positive integer as the mask:
 Mask: 12 Index: 2
 ```
 
-**Specifické pro END Microsoft**
+**Specifické pro konec Microsoftu**
 
 ## <a name="see-also"></a>Viz také:
 
-[Vnitřní funkce kompilátoru](../intrinsics/compiler-intrinsics.md)
+[Vnitřní objekty kompilátoru](../intrinsics/compiler-intrinsics.md)

@@ -1,29 +1,29 @@
 ---
-title: Definice souhrnu gramatiky
-ms.date: 11/04/2016
+title: Definice shrnutí gramatiky
+ms.date: 08/29/2019
 helpviewer_keywords:
 - preprocessor, definitions
 - preprocessor
 ms.assetid: cc752dc8-6f4e-4347-a556-e0d9ef4c46bd
-ms.openlocfilehash: 6e8671ba0d68b13f68db0f2b08dab4fe98f917e7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 93cf6ffc5daf53a106c9f15a2289e2b52739d72f
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62389278"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70222421"
 ---
-# <a name="definitions-for-the-grammar-summary"></a>Definice souhrnu gramatiky
+# <a name="definitions-for-the-grammar-summary"></a>Definice shrnutí gramatiky
 
 Terminály jsou koncové body v definici syntaxe. Žádné jiné řešení není možné. Terminály obsahují sadu vyhrazených slov a uživatelské identifikátory.
 
-Neterminály jsou zástupné symboly v syntaxi. Většina je definována jinde v tomto souhrnu syntaxe. Definice mohou být rekurzivní. Následující neterminály jsou definovány v [lexikální konvence](../cpp/lexical-conventions.md) část *referenční dokumentace jazyka C++*:
+Neterminály jsou zástupné symboly v syntaxi. Většina je definována jinde v tomto souhrnu syntaxe. Definice mohou být rekurzivní. Následující neterminály jsou definovány v části [lexikální konvence](../cpp/lexical-conventions.md) v  *C++ referenční příručce jazyka*:
 
-`constant`, *constant-expression*, *identifier*, *keyword*, `operator`, `punctuator`
+*konstanta*, *konstantní výraz*, *identifikátor*, *klíčové slovo*, *operátor*, *punctuator*
 
-Volitelná součást je označena pomocí indexovaný <sub>optimalizované</sub>. Následuje příklad označující volitelný výraz uzavřený do složených závorek:
+Volitelná součást je označena jako volitelná. <sub></sub> Následuje příklad označující volitelný výraz uzavřený do složených závorek:
 
-**{** *výraz*<sub>optimalizované</sub> **}**
+**{** *Expression*<sub>opt</sub> **}**
 
 ## <a name="see-also"></a>Viz také:
 
-[Gramatický souhrn (C/C++)](../preprocessor/grammar-summary-c-cpp.md)
+[Souhrn gramatiky (CC++/)](../preprocessor/grammar-summary-c-cpp.md)

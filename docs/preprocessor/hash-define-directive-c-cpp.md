@@ -1,6 +1,6 @@
 ---
-title: '##define – direktiva (C/C++)'
-ms.date: 11/04/2016
+title: '#define – direktiva (C/C++)'
+ms.date: 08/29/2019
 f1_keywords:
 - '#define'
 helpviewer_keywords:
@@ -10,40 +10,39 @@ helpviewer_keywords:
 - '#define directive, syntax'
 - '#define directive'
 ms.assetid: 33cf25c6-b24e-40bf-ab30-9008f0391710
-ms.openlocfilehash: 8a0cc7e7836a0c82c72055fe8d9e7497995485d0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b72e2468b9e9984237c81f5cdb3c5691fe95cbd0
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62409899"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70216275"
 ---
-# <a name="define-directive-cc"></a>#define – direktiva (C++)
+# <a name="define-directive-cc"></a>#define Direktiva (CC++/)
 
-**#Define** vytvoří *– makro*, což je seskupení identifikátoru nebo identifikátoru parametrizované s řetězec tokenu. Po definování makra může kompilátor nahradit řetězec tokenu pro každý výskyt identifikátoru ve zdrojovém souboru.
+**#Define** vytvoří *makro*, které je přidružení identifikátoru nebo parametrizovaného identifikátoru s řetězcem tokenu. Po definování makra může kompilátor nahradit řetězec tokenu pro každý výskyt identifikátoru ve zdrojovém souboru.
 
 ## <a name="syntax"></a>Syntaxe
 
-`#define` *identifikátor* *řetězci tokenu*<sub>optimalizované</sub>
-
-`#define` *identifikátor* `(` *identifikátor*<sub>optimalizované</sub> `,` *...*  `,` *identifikátor*<sub>optimalizované</sub> `)` *řetězci tokenu*<sub>optimalizované</sub>
+> **#define** *identifikátor* *token – řetězec* <sub>výslovný souhlas</sub>\
+> **#define** *identifikátor* **(** <sub>souhlas</sub>**s** identifikátorem,... **,** *identifikátor* <sub>výslovný souhlas</sub> **)** *token –* <sub>vyjádření</sub> řetězce
 
 ## <a name="remarks"></a>Poznámky
 
-**#Define** – direktiva způsobí, že kompilátor nahradí *řetězci tokenu* pro každý výskyt *identifikátor* ve zdrojovém souboru. *Identifikátor* nahrazuje pouze v případě, že tvoří token. To znamená *identifikátor* nebude nahrazen, pokud se zobrazí v komentáři, v řetězci, nebo jako součást delšího identifikátoru. Další informace najdete v tématu [tokeny](../cpp/tokens-cpp.md).
+Direktiva **#define** způsobí, že kompilátor nahradí *řetězec tokenu* pro každý výskyt *identifikátoru* ve zdrojovém souboru. *Identifikátor* je nahrazen pouze v případě, že tvoří token. To znamená, že *identifikátor* není nahrazen, pokud se zobrazí v komentáři, v řetězci nebo jako součást delšího identifikátoru. Další informace najdete v tématu [tokeny](../cpp/tokens-cpp.md).
 
-*Řetězci tokenu* argument se skládá z řady tokenů, jako jsou klíčová slova, konstanty nebo úplná prohlášení. Jeden nebo více prázdných znaků musí oddělovat *řetězci tokenu* z *identifikátor*. Toto prázdné místo není považováno za součást nahrazeného textu, ani není libovolným prázdný znakem, který následuje za posledním tokenem textu.
+Argument *token-String* se skládá z řady tokenů, jako jsou klíčová slova, konstanty nebo příkazy Complete. Jeden nebo více prázdných znaků musí oddělit *řetězec tokenu* od *identifikátoru*. Tento prázdný znak není považován za součást nahrazeného textu, ani není prázdným znakem, který následuje za posledním tokenem textu.
 
-A `#define` bez *řetězci tokenu* odebere výskyty *identifikátor* ze zdrojového souboru. *Identifikátor* zůstane definován a může být testován pomocí `#if defined` a `#ifdef` direktivy.
+Bez token *-String* odebere výskyty identifikátoru ze zdrojového souboru. `#define` *Identifikátor* zůstává definován a lze jej testovat pomocí `#if defined` direktiv a. `#ifdef`
 
-Druhá forma syntaxe definuje funkci podobnou makru s parametry. Tento tvar přijímá volitelný seznam parametrů, které musí být uvedena v závorkách. Poté, co je makro definované, každý další výskyt *identifikátor*( *identifikátor*<sub>optimalizované</sub>,..., *identifikátor* <sub>optimalizované</sub> ) je nahrazena verzi *řetězci tokenu* argument, který má skutečné argumenty nahrazené za formální parametry.
+Druhá forma syntaxe definuje makro podobné funkci s parametry. Tento formulář přijme volitelný seznam parametrů, které musí být uvedeny v závorkách. Po definování makra se každým dalším výskytem *identifikátoru*(<sub>opt opt</sub>,...,<sub>opt opt</sub> ) nahradí verze argumentu *řetězce tokenu* , který má skutečné argumenty. nahradily se formálními parametry.
 
-Názvy formálních parametrů se zobrazí v *řetězci tokenu* k označení míst, kde jsou nahrazeny skutečnými hodnotami. Každý název parametru se může objevit více než jednou v *řetězci tokenu*, a názvy se mohou objevit v libovolném pořadí. Počet argumentů ve volání musí odpovídat počtu parametrů v definici makra. Liberální použití závorek zaručuje správnou interpretaci složitých skutečných argumentů.
+Formální názvy parametrů se zobrazí v *řetězci tokenu* k označení umístění, kde jsou nahrazeny skutečné hodnoty. Každý název parametru se může v *řetězci tokenu*objevit víckrát a názvy se můžou objevit v libovolném pořadí. Počet argumentů v volání musí odpovídat počtu parametrů v definici makra. Liberalizace použití závorek zaručuje správné interpretaci složitých skutečných argumentů.
 
-Formální parametry v seznamu jsou odděleny čárkami. Každý název v seznamu musí být jedinečný a seznam musí být uzavřen v závorkách. Žádné mezery *identifikátor* a levou závorku. Pomocí řetězení řádků – umístěte zpětné lomítko (`\`) bezprostředně před znak – pro dlouhé direktivy na několika zdrojových řádcích. Rozsah formálních parametrů názvu rozšiřuje na nový řádek, který končí *řetězci tokenu*.
+Formální parametry v seznamu jsou odděleny čárkami. Každý název v seznamu musí být jedinečný a seznam musí být uzavřený v závorkách. Žádné mezery nesmí oddělovat *identifikátor* a levou závorku. Použijte zřetězení řádků – umístěte zpětné lomítko (`\`) těsně před znak nového řádku – pro dlouhé direktivy na více zdrojových řádcích. Rozsah formálního názvu parametru rozšiřuje na nový řádek, který ukončuje *řetězec tokenu*.
 
-Když se makro bylo definováno ve druhé formě syntaxe, následné textové instance následované seznamem argumentů značí volání makra. Skutečné argumenty, které následují po instanci *identifikátor* ve zdrojovém souboru budou odpovídat odpovídajícím formálním parametrům v definici makra. Každý formální parametr v *řetězci tokenu* , který není předcházen nastavení velikosti řetězce (`#`), zřetězení (`#@`), nebo vložení tokenu (`##`) operátor, nebo není následován `##` je operátor nahrazen příslušným skutečným argumentem. Jakékoli makro ve skutečném argumentu je rozbaleno dříve, než direktiva nahradí formální parametr. (Operátory jsou popsány v [operátory preprocesoru](../preprocessor/preprocessor-operators.md).)
+Pokud bylo makro definováno ve formuláři druhé syntaxe, následné textové instance následované seznamem argumentů označují volání makra. Skutečné argumenty, které následují po instanci *identifikátoru* ve zdrojovém souboru, odpovídají odpovídajícím formálním parametrům v definici makra. Každý formální parametr v *řetězci tokenu* , který není před operátorem převodu`#`(), charakterizace (`#@`) nebo token-vložení (`##`), nebo nenásledován `##` operátorem, je nahrazen odpovídajícím skutečný argument. Všechna makra ve skutečném argumentu jsou rozbalena před tím, než direktiva nahradí formální parametr. (Operátory jsou popsány v části [operátory preprocesoru](../preprocessor/preprocessor-operators.md).)
 
-Následující příklady maker s argumenty ilustrují druhou formu **#define** syntaxi:
+Následující příklady maker s argumenty ilustrují druhou formu syntaxe **#define** :
 
 ```C
 // Macro to define cursor lines
@@ -54,67 +53,67 @@ Následující příklady maker s argumenty ilustrují druhou formu **#define** 
     ((rand()%(int)(((max) + 1)-(min)))+ (min))
 ```
 
-Argumenty s vedlejšími účinky občas způsobují neočekávané výsledky maker. Daný formální parametr se může zobrazit více než jednou v *řetězci tokenu*. Pokud výraz s vedlejšími účinky nahrazuje tento formální parametr, může být výraz s vedlejšími účinky, vyhodnocen více než jednou. (Podívejte se na příklady v části [operátor vložení tokenu (##)](../preprocessor/token-pasting-operator-hash-hash.md).)
+Argumenty s vedlejšími účinky někdy způsobují, že makra vytvářejí neočekávané výsledky. Daný formální parametr se může v *řetězci tokenu*objevit více než jednou. Pokud je tento formální parametr nahrazen výrazem s vedlejšími účinky, výraz s vedlejšími účinky může být vyhodnocen více než jednou. (Podívejte se na příklady v části [operátor vložení tokenu (# #)](../preprocessor/token-pasting-operator-hash-hash.md).)
 
-`#undef` – Direktiva způsobí, že definice preprocesoru identifikátoru budou vymazány. Zobrazit [direktiva #undef](../preprocessor/hash-undef-directive-c-cpp.md) Další informace.
+`#undef` Direktiva způsobí zapomenutí Definice preprocesoru identifikátoru. Další informace najdete v [direktivě #undef](../preprocessor/hash-undef-directive-c-cpp.md) .
 
-Pokud dojde k název makra definovaného v *řetězci tokenu* (i v důsledku jiného rozšiřujícího makra), nerozbalí.
+Pokud název definovaného makra nastane v *řetězci tokenu* (i v důsledku jiného rozšíření makra), není rozbalen.
 
-Sekundy **#define** pro makro se stejným názvem vygeneruje upozornění, pokud není druhá sekvence tokenů shodná s první.
+Druhý **#define** pro makro se stejným názvem vygeneruje upozornění, pokud druhá sekvence tokenu není shodná s prvním.
 
-**Microsoft Specific**
+**Specifické pro společnost Microsoft**
 
-Microsoft C/C++ umožňuje znovu definovat makro, pokud je nová definice syntakticky shodná s původní definice. Jinými slovy dvě definice mohou mít různé názvy parametrů. Toto chování se liší od standardu ANSI C, který vyžaduje, aby dvě definice byly lexikálně identické.
+Pokud je nováC++ definice syntakticky shodná s původní definicí, můžete znovu definovat makro společnosti Microsoft C/s. Jinými slovy, dvě definice mohou mít různé názvy parametrů. Toto chování se liší od ANSI C, které vyžaduje, aby byly dvě definice lexikální.
 
-Například následující dvě makra jsou shodná s výjimkou názvů parametrů. ANSI C nepovoluje tuto nová definice, ale Microsoft C/C++ jej zkompiluje bez chyb.
+Například následující dvě makra jsou shodná s výjimkou názvů parametrů. ANSI C nepovoluje taková předefinování, ale Microsoft C jeC++ zkompiluje bez chyby.
 
 ```C
 #define multiply( f1, f2 ) ( f1 * f2 )
 #define multiply( a1, a2 ) ( a1 * a2 )
 ```
 
-Na druhé straně následující dvě makra nejsou stejné a vygeneruje upozornění v jazyce Microsoft C/C++.
+Na druhé straně následující dvě makra nejsou totožná a vygenerují upozornění v Microsoft C/C++.
 
 ```C
 #define multiply( f1, f2 ) ( f1 * f2 )
 #define multiply( a1, a2 ) ( b1 * b2 )
 ```
 
-**Specifické pro END Microsoft**
+**Specifické pro konec Microsoftu**
 
-Tento příklad ukazuje, **#define** – direktiva:
+Tento příklad ukazuje direktivu **#define** :
 
 ```C
 #define WIDTH       80
 #define LENGTH      ( WIDTH + 10 )
 ```
 
-První příkaz určuje identifikátor `WIDTH` jako celočíselnou konstantu 80 a definuje `LENGTH` z hlediska `WIDTH` a celočíselnou konstantou 10. Každý výskyt `LENGTH` nahrazuje (`WIDTH + 10`). Následně bude každý výskyt `WIDTH + 10` je nahrazen výrazem (`80 + 10`). Závorky kolem `WIDTH + 10` jsou důležité, protože řídí výklad ve vyjádřeních, jako jsou následující:
+První příkaz definuje identifikátor `WIDTH` jako celočíselnou konstantu 80 a definuje `LENGTH` z hlediska `WIDTH` a celočíselnou konstantu 10. Každý výskyt `LENGTH` je nahrazen řetězcem (`WIDTH + 10`). V takovém případě `WIDTH + 10` je každý výskyt nahrazen výrazem (`80 + 10`). Závorky kolem `WIDTH + 10` jsou důležité, protože ovládají výklad v příkazech, jako jsou následující:
 
 ```C
 var = LENGTH * 20;
 ```
 
-Po fázi předzpracování se příkazu stane:
+Po fázi předzpracování se příkaz zobrazí jako:
 
 ```C
 var = ( 80 + 10 ) * 20;
 ```
 
-který se hodnotí jako 1800. Bez závorek je výsledek:
+který se vyhodnotí jako 1800. Bez závorek je výsledkem:
 
 ```C
 var = 80 + 10 * 20;
 ```
 
-které vyhodnocuje 280.
+který se vyhodnotí jako 280.
 
-**Microsoft Specific**
+**Specifické pro společnost Microsoft**
 
-Definování maker a konstant pomocí [/D](../build/reference/d-preprocessor-definitions.md) – možnost kompilátoru má stejný účinek jako použití **#define** direktiva předzpracování na začátku souboru. Pomocí možnosti /D lze definovat až 30 maker.
+Definování maker a konstant pomocí možnosti [/d](../build/reference/d-preprocessor-definitions.md) Compiler má stejný účinek jako použití direktivy předběžného zpracování **#define** na začátku souboru. Pomocí možnosti/D lze definovat až 30 maker.
 
-**Specifické pro END Microsoft**
+**Specifické pro konec Microsoftu**
 
 ## <a name="see-also"></a>Viz také:
 
-[Preprocesor – direktivy](../preprocessor/preprocessor-directives.md)
+[Direktivy preprocesoru](../preprocessor/preprocessor-directives.md)

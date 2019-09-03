@@ -1,6 +1,6 @@
 ---
 title: Vnitřní funkce _InterlockedExchange
-ms.date: 12/17/2018
+ms.date: 09/02/2019
 f1_keywords:
 - _InterlockedExchange_rel
 - _InterlockedExchange8_nf
@@ -44,12 +44,12 @@ helpviewer_keywords:
 - _InterlockedExchange intrinsic
 - _InterlockedExchange8_nf
 ms.assetid: be2f232a-6301-462a-a92b-fcdeb8b0f209
-ms.openlocfilehash: c96ce57854bfb3eea0e1b8bc6283984c7fce50f9
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 53c3545be5e74d802fe63f8e7c03d2a7a2b26110
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69509390"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70222003"
 ---
 # <a name="_interlockedexchange-intrinsic-functions"></a>Vnitřní funkce _InterlockedExchange
 
@@ -59,7 +59,7 @@ Generuje atomickou instrukci pro nastavení zadané hodnoty.
 
 ## <a name="syntax"></a>Syntaxe
 
-```
+```C
 long _InterlockedExchange(
    long volatile * Target,
    long Value
@@ -142,12 +142,12 @@ __int64 _InterlockedExchange64_rel(
 );
 ```
 
-#### <a name="parameters"></a>Parametry
+### <a name="parameters"></a>Parametry
 
-*Cílové*<br/>
+*Cílové*\
 [in, out] Ukazatel na hodnotu, která má být vyměněna. Funkce nastaví tuto proměnnou na `Value` a vrátí její předchozí hodnotu.
 
-*Hodnota*<br/>
+*Osa*\
 pro Hodnota, která se má vyměňovat s hodnotou, na `Target`kterou ukazuje.
 
 ## <a name="return-value"></a>Návratová hodnota
@@ -158,9 +158,11 @@ Vrátí počáteční hodnotu, na `Target`kterou ukazuje.
 
 |Vnitřním|Architektura|Záhlaví|
 |---------------|------------------|------------|
-|`_InterlockedExchange`, `_InterlockedExchange8`, `_InterlockedExchange16`, `_InterlockedExchange64`|x86, ARM, x64|\<intrin.h>|
-|`_InterlockedExchange_acq`, `_InterlockedExchange_nf`, `_InterlockedExchange_rel`, `_InterlockedExchange8_acq`, `_InterlockedExchange8_nf`, `_InterlockedExchange8_rel`, `_InterlockedExchange16_acq`, `_InterlockedExchange16_nf`, `_InterlockedExchange16_rel`, `_InterlockedExchange64_acq`, `_InterlockedExchange64_nf`, `_InterlockedExchange64_rel`,|ARM|\<intrin.h>|
-|`_InterlockedExchange_HLEAcquire`, `_InterlockedExchange_HLERelease`, `_InterlockedExchange64_HLEAcquire`, `_InterlockedExchange64_HLERelease`|x86, x64|\<immintrin.h>|
+|`_InterlockedExchange`, `_InterlockedExchange8`, `_InterlockedExchange16`|x86, ARM, x64, ARM64|\<intrin.h>|
+|`_InterlockedExchange64`|ARM, x64, ARM64|\<intrin.h>|
+|`_InterlockedExchange_acq`, `_InterlockedExchange_nf`, `_InterlockedExchange_rel`, `_InterlockedExchange8_acq`, `_InterlockedExchange8_nf`, `_InterlockedExchange8_rel`, `_InterlockedExchange16_acq`, `_InterlockedExchange16_nf`, `_InterlockedExchange16_rel`, `_InterlockedExchange64_acq`, `_InterlockedExchange64_nf`, `_InterlockedExchange64_rel`,|ARM, ARM64|\<intrin.h>|
+|`_InterlockedExchange_HLEAcquire`, `_InterlockedExchange_HLERelease`|x86, x64|\<immintrin.h>|
+|`_InterlockedExchange64_HLEAcquire`, `_InterlockedExchange64_HLERelease`|x64|\<immintrin.h>|
 
 ## <a name="remarks"></a>Poznámky
 
@@ -184,6 +186,6 @@ Ukázku použití `_InterlockedExchange`naleznete v tématu [_InterlockedDecreme
 
 ## <a name="see-also"></a>Viz také:
 
-[Vnitřní funkce kompilátoru](../intrinsics/compiler-intrinsics.md)<br/>
-[Klíčová slova](../cpp/keywords-cpp.md)<br/>
+[Vnitřní objekty kompilátoru](../intrinsics/compiler-intrinsics.md)\
+[Klíčov](../cpp/keywords-cpp.md)\
 [Konflikty s kompilátorem x86](../build/x64-software-conventions.md#conflicts-with-the-x86-compiler)

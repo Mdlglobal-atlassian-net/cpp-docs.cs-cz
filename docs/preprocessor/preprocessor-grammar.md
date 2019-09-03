@@ -1,91 +1,91 @@
 ---
 title: Gramatika preprocesoru
-ms.date: 09/04/2018
+ms.date: 08/29/2019
 helpviewer_keywords:
 - preprocessor
 - grammar, preprocessor
 - preprocessor, grammar
 ms.assetid: 6cd33fad-0b08-4592-9be8-7359c43e24e9
-ms.openlocfilehash: 6177cf5fddba549e410842ef3f270edcc13d4782
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f0916e3cc9bbdb398db693286dacc4517df03557
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62179877"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70222257"
 ---
 # <a name="preprocessor-grammar"></a>Gramatika preprocesoru
 
-*ovládací prvek řádku*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp; **#define** *identifikátor* *řetězci tokenu*<sub>optimalizované</sub><br/>
-&nbsp;&nbsp;&nbsp;&nbsp; **#define** <em>identifikátor</em> **(** *identifikátor*<sub>optimalizované</sub> **,** ... **,** *identifikátor*<sub>optimalizované</sub> **)** *řetězci tokenu*<sub>optimalizované</sub><br/>
-&nbsp;&nbsp;&nbsp;&nbsp; **#include** **"** *path-spec* **"**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp; **#include** **\<** *path-spec* **>**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp; **#line** *sekvence číslic* **"** *filename* **"** <sub>optimalizované</sub><br/>
-&nbsp;&nbsp;&nbsp;&nbsp; **#undef** *identifikátor*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp; **#error** *řetězci tokenu*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp; **#pragma** *řetězci tokenu*
+*řídicí čára*: \
+&nbsp;&nbsp;&nbsp;&nbsp; **#define** *identifikátor* *token – řetězec* <sub>výslovný souhlas</sub>\
+&nbsp;&nbsp;&nbsp;&nbsp; **#define** *identifikátor* **(** &#x2800;&#x200B;<sub>souhlas</sub> **s** identifikátorem,... **,** *identifikátor* &#x200B; <sub></sub>opt&#x2800; **)** *token – opt-String*<sub></sub>\
+&nbsp;&nbsp;&nbsp;&nbsp; **#include** **"** _cesta – specifikace_ **"** \
+&nbsp;&nbsp;&nbsp;&nbsp; **#include** _cesta – specifikace_ **\<** **>** \
+&nbsp;&nbsp;&nbsp;&nbsp; **#line** *sekvence číslic* **"** _název souboru_ **"** &#x200B; <sub>výslovný souhlas</sub>  \
+&nbsp;&nbsp;&nbsp;&nbsp; **#undef** *identifikátor*\
+&nbsp;&nbsp;&nbsp;&nbsp; **#error** *token – řetězec*\
+&nbsp;&nbsp;&nbsp;&nbsp; **#pragma** *token – řetězec*
 
-*constant-expression*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**definovaný (** *identifikátor* **)**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**definované** *identifikátor*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;Další konstantní výraz
+*konstantní výraz*: \
+&nbsp;&nbsp;&nbsp;&nbsp;**definováno (** &#x2800;*identifikátor*&#x2800; **)** \
+&nbsp;&nbsp;&nbsp;&nbsp;**definováno** *identifikátor*\
+&nbsp;&nbsp;&nbsp;&nbsp;jakýkoli jiný konstantní výraz
 
-*Podmíněné* :<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*část IF* *části elif*<sub>optimalizované</sub> *část else*<sub>optimalizované</sub> *řádek endif*
+*podmíněné*: \
+&nbsp;&nbsp;&nbsp;&nbsp;*if – část* *elif – části* <sub>výslovný souhlas</sub> *Else – část* <sub>výslovný souhlas</sub> *endif-line*
 
-*if-part* :<br/>
+*if-Part*: \
 &nbsp;&nbsp;&nbsp;&nbsp;*if-line* *text*
 
-*řádek IF* :<br/>
-&nbsp;&nbsp;&nbsp;&nbsp; **#if** *konstantního výrazu.*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp; **#ifdef** *identifikátor*<br/>
+*řádek if-line*: \
+&nbsp;&nbsp;&nbsp;&nbsp; **#if** *konstantní výraz*\
+&nbsp;&nbsp;&nbsp;&nbsp; **#ifdef** *identifikátor*\
 &nbsp;&nbsp;&nbsp;&nbsp; **#ifndef** *identifikátor*
 
-*části elif* :<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*elif-line* *text*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*části elif* *řádku elif* *text*
+*elif – části*: \
+&nbsp;&nbsp;&nbsp;&nbsp;*elif-line* *text*\
+&nbsp;&nbsp;&nbsp;&nbsp;*elif – části* *elif-line* *text*
 
-*řádek elif* :<br/>
-&nbsp;&nbsp;&nbsp;&nbsp; **#elif** *konstantního výrazu.*
+*elif-line*: \
+&nbsp;&nbsp;&nbsp;&nbsp; **#elif** *konstantní výraz*
 
-*části else* :<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*else-line* *text*
+*Else – část*: \
+&nbsp;&nbsp;&nbsp;&nbsp;*Else-line* *text*
 
-*řádek else* :<br/>
+*Else-line*: \
 &nbsp;&nbsp;&nbsp;&nbsp; **#else**
 
-*řádek endif* :<br/>
+*endif-line*: \
 &nbsp;&nbsp;&nbsp;&nbsp; **#endif**
 
-*sekvence číslic* :<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*digit*<br/>
+*sekvence číslic*: \
+&nbsp;&nbsp;&nbsp;&nbsp;*základní*\
 &nbsp;&nbsp;&nbsp;&nbsp;*sekvence číslic* *číslice*
 
-*číslice* : jeden z<br/>
+*číslice*: jedna z těchto \
 &nbsp;&nbsp;&nbsp;&nbsp;**0 1 2 3 4 5 6 7 8 9**
 
-*řetězcový token* :<br/>
+*řetězec tokenu*: \
 &nbsp;&nbsp;&nbsp;&nbsp;Řetězec tokenů
 
-*token* :<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*keyword*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*identifikátor*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*Konstanty*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp; *– Operátor*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*interpunkci*
+*token*: \
+&nbsp;&nbsp;&nbsp;&nbsp;*klíčové slovo*\
+&nbsp;&nbsp;&nbsp;&nbsp;*RID*\
+&nbsp;&nbsp;&nbsp;&nbsp;*změnil*\
+&nbsp;&nbsp;&nbsp;&nbsp;*podnikatel*\
+&nbsp;&nbsp;&nbsp;&nbsp;*punctuator*
 
-*Název souboru* :<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;Název souboru právní operačního systému
+*název souboru*: \
+&nbsp;&nbsp;&nbsp;&nbsp;Platný název souboru operačního systému
 
-*Path-spec* :<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;Cesta k souboru právní
+*cesta-specifikace*: \
+&nbsp;&nbsp;&nbsp;&nbsp;Platná cesta k souboru
 
-*text* :<br/>
+*text*: \
 &nbsp;&nbsp;&nbsp;&nbsp;Libovolná sekvence textu
 
 > [!NOTE]
-> Následující neterminály jsou rozbaleny v [lexikální konvence](../cpp/lexical-conventions.md) část *referenční dokumentace jazyka C++* : *konstantní*, *konstantního výrazu.* , *identifikátor*, *– klíčové slovo*, *operátor*, a *interpunkci*.
+> Následující neterminály se rozbalí v části [lexikální konvence](../cpp/lexical-conventions.md) referenčního  *C++ jazyka*: konstanta, *konstantní výraz*, *identifikátor*, *klíčové slovo*, *operátor*a.  *punctuator*.
 
 ## <a name="see-also"></a>Viz také:
 
-[Gramatický souhrn (C/C++)](../preprocessor/grammar-summary-c-cpp.md)
+[Souhrn gramatiky (CC++/)](../preprocessor/grammar-summary-c-cpp.md)

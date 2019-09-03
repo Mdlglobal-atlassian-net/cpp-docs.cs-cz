@@ -1,6 +1,6 @@
 ---
 title: __faststorefence
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - __faststorefence_cpp
 - __faststorefence
@@ -8,43 +8,43 @@ helpviewer_keywords:
 - __faststorefence intrinsic
 - sfence instruction
 ms.assetid: 6c6eb973-3cf0-4306-b3af-cfde9b0210a5
-ms.openlocfilehash: a0c8027f443a475b03521920e2e036e7ed4eaafb
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d11a20666612fe1bca22f5d46b93e898dae375f6
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62349001"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70222175"
 ---
-# <a name="faststorefence"></a>__faststorefence
+# <a name="__faststorefence"></a>__faststorefence
 
-**Microsoft Specific**
+**Specifické pro společnost Microsoft**
 
-Záruky, že každý předchozí odkaz paměti, včetně načítají a ukládají odkazy na paměť, je viditelné globálně před všechny odkazy na další paměti.
+Garantuje, že všechny předchozí odkazy na paměť, včetně odkazů na paměť Load i Store, jsou globálně viditelné před každým dalším odkazem na paměť.
 
 ## <a name="syntax"></a>Syntaxe
 
-```
+```C
 void __faststorefence();
 ```
 
 ## <a name="requirements"></a>Požadavky
 
-|Vnitřní|Architektura|
+|Vnitřním|Architektura|
 |---------------|------------------|
 |`__faststorefence`|x64|
 
-**Soubor hlaviček** \<intrin.h >
+**Hlavičkový soubor** \<intrin. h >
 
 ## <a name="remarks"></a>Poznámky
 
-Generuje posloupnost instrukce barrier úplné paměti, že záruky načítají a ukládají operace vydané před vnitřní jsou globálně viditelná před spuštěním bude pokračovat. Efekt je srovnatelná se ale rychlejší než `_mm_mfence` vnitřní na všechny x64 platformy.
+Vygeneruje úplnou sekvenci instrukcí pro zajištění bariéry paměti, která garantuje operace načtení a uložení, které jsou vydány před tím, než bude provádění pokračovat. Efekt je srovnatelný, ale rychlejší než `_mm_mfence` vnitřní na všech platformách x64.
 
-Na platformě AMD64 Tato rutina generuje instrukce, který je rychlejší ohrazení úložiště než `sfence` instrukce. Zadání časově kritického kódu, použijte tuto vnitřní místo `_mm_sfence` pouze na platformách AMD64. Na platformách Intel x64 `_mm_sfence` instrukce je rychlejší.
+Na platformě amd64 Tato rutina generuje instrukci, která je rychlejší ochranou úložiště než `sfence` instrukce. Pro kód kritický pro čas použijte tento vnitřní místo `_mm_sfence` jenom na platformách amd64. Na platformách `_mm_sfence` Intel x64 je instrukce rychlejší.
 
 Tato rutina je k dispozici pouze jako vnitřní objekt.
 
-**Specifické pro END Microsoft**
+**Specifické pro konec Microsoftu**
 
 ## <a name="see-also"></a>Viz také:
 
-[Vnitřní funkce kompilátoru](../intrinsics/compiler-intrinsics.md)
+[Vnitřní objekty kompilátoru](../intrinsics/compiler-intrinsics.md)

@@ -1,28 +1,28 @@
 ---
 title: __vmx_vmptrld
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - __vmx_vmptrld
 helpviewer_keywords:
 - __vmx_vmptrld intrinsic
 - VMPTRLD instruction
 ms.assetid: 95c9ec5b-1a81-41ba-983e-327bd6a65fcb
-ms.openlocfilehash: e3d552720d454a4f22af368616b3953452c6db0e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 79b5a8b34b652ae1f011e89c793a7157c9e435ee
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62390032"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70219504"
 ---
-# <a name="vmxvmptrld"></a>__vmx_vmptrld
+# <a name="__vmx_vmptrld"></a>__vmx_vmptrld
 
-**Microsoft Specific**
+**Specifické pro společnost Microsoft**
 
-Načte ukazatel na aktuální struktura řízení virtuálních počítačů (VMCS) ze zadané adresy.
+Načte ukazatel na aktuální strukturu řízení virtuálních počítačů (VMCS) ze zadané adresy.
 
 ## <a name="syntax"></a>Syntaxe
 
-```
+```C
 int __vmx_vmptrld(
    unsigned __int64 *VmcsPhysicalAddress
 );
@@ -30,37 +30,37 @@ int __vmx_vmptrld(
 
 ### <a name="parameters"></a>Parametry
 
-*VmcsPhysicalAddress*<br/>
-[in] Adresa ukazatele VMCS se mají ukládat.
+*VmcsPhysicalAddress*\
+pro Adresa, kde je uložen ukazatel VMCS.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-0<br/>
+0,8
 Operace byla úspěšná.
 
-1<br/>
-Operace se nezdařila s rozšířenou stav k dispozici v `VM-instruction error field` z aktuální VMCS.
+první
+Operace se nezdařila s rozšířeným stavem dostupným v `VM-instruction error field` aktuálním VMCS.
 
-2<br/>
-Operace selhala, aniž by k dispozici.
+odst
+Operace se nezdařila bez dostupného stavu.
 
 ## <a name="remarks"></a>Poznámky
 
-Ukazatel VMCS je 64-bit fyzickou adresu.
+Ukazatel VMCS je 64 fyzická adresa.
 
-`__vmx_vmptrld` Funkce je ekvivalentní volání `VMPTRLD` strojové instrukce. Tato funkce podporuje interakce monitorování virtuálního počítače hostitele s hostovaného operačního systému a jeho aplikací. Další informace, hledání dokumentů "Intel Virtualization technické specifikace pro the architekturou IA-32 Intel," dokumentu C97063-002 čísla na [společnosti Intel Corporation](https://software.intel.com/articles/intel-sdm) lokality.
+Funkce je ekvivalentní `VMPTRLD` instrukci počítače. `__vmx_vmptrld` Tato funkce podporuje interakci monitorování virtuálního počítače hostitele s hostovaným operačním systémem a jeho aplikacemi. Další informace najdete v dokumentu "Technická specifikace technologie Intel Virtualization pro architekturu IA-32 Intel," číslo dokumentu C97063-002 "na webu [společnosti Intel](https://software.intel.com/articles/intel-sdm) .
 
 ## <a name="requirements"></a>Požadavky
 
-|Vnitřní|Architektura|
+|Vnitřním|Architektura|
 |---------------|------------------|
 |`__vmx_vmptrld`|x64|
 
-**Soubor hlaviček** \<intrin.h >
+**Hlavičkový soubor** \<intrin. h >
 
-**Specifické pro END Microsoft**
+**Specifické pro konec Microsoftu**
 
 ## <a name="see-also"></a>Viz také:
 
-[Vnitřní funkce kompilátoru](../intrinsics/compiler-intrinsics.md)<br/>
+[Vnitřní objekty kompilátoru](../intrinsics/compiler-intrinsics.md)\
 [__vmx_vmptrst](../intrinsics/vmx-vmptrst.md)

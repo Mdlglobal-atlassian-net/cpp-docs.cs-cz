@@ -1,6 +1,6 @@
 ---
 title: Vnitřní funkce _InterlockedAdd
-ms.date: 12/17/2018
+ms.date: 09/02/2019
 f1_keywords:
 - _InterlockedAdd64_acq_cpp
 - _InterlockedAdd64_acq
@@ -26,22 +26,22 @@ helpviewer_keywords:
 - _InterlockedAdd_acq intrinsic
 - _InterlockedAdd64_rel intrinsic
 ms.assetid: 3d319603-ea9c-4fdd-ae61-e52430ccc3b1
-ms.openlocfilehash: 348e936bb05796e36ae45095f25b943076cec464
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c540cfe6abd8ae6dc2933e7fb21e2a331c21ea71
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62349514"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70217736"
 ---
-# <a name="interlockedadd-intrinsic-functions"></a>Vnitřní funkce _InterlockedAdd
+# <a name="_interlockedadd-intrinsic-functions"></a>Vnitřní funkce _InterlockedAdd
 
-**Microsoft Specific**
+**Specifické pro společnost Microsoft**
 
-Tyto funkce provádět atomické toho, které zajišťuje, že operace úspěšně dokončí po více než jedno vlákno má přístup do sdílené proměnné.
+Tyto funkce provádějí atomické sčítání, které zajistí, že se operace úspěšně dokončí, když má více než jedno vlákno přístup ke sdílené proměnné.
 
 ## <a name="syntax"></a>Syntaxe
 
-```
+```C
 long _InterlockedAdd(
    long volatile * Addend,
    long Value
@@ -76,38 +76,38 @@ __int64 _InterlockedAdd64_rel(
 );
 ```
 
-#### <a name="parameters"></a>Parametry
+### <a name="parameters"></a>Parametry
 
-*Sčítanec*<br/>
-[out v] Ukazatel na celé číslo, které mají být přidány do; výsledek součtu nahrazena.
+*Sčítanec*\
+[in, out] Ukazatel na celé číslo, které má být přidáno do; nahrazeno výsledkem přidání.
 
-*Hodnota*<br/>
-[in] Hodnota k přidání.
+*Osa*\
+pro Hodnota, která má být přidána.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Obě funkce vrátí výsledek součtu.
+Obě funkce vrátí výsledek přidání.
 
 ## <a name="requirements"></a>Požadavky
 
-|Vnitřní|Architektura|
+|Vnitřním|Architektura|
 |---------------|------------------|
-|`_InterlockedAdd`|ARM|
-|`_InterlockedAdd_acq`|ARM|
-|`_InterlockedAdd_nf`|ARM|
-|`_InterlockedAdd_rel`|ARM|
-|`_InterlockedAdd64`|ARM|
-|`_InterlockedAdd64_acq`|ARM|
-|`_InterlockedAdd64_nf`|ARM|
-|`_InterlockedAdd64_rel`|ARM|
+|`_InterlockedAdd`|ARM, ARM64|
+|`_InterlockedAdd_acq`|ARM, ARM64|
+|`_InterlockedAdd_nf`|ARM, ARM64|
+|`_InterlockedAdd_rel`|ARM, ARM64|
+|`_InterlockedAdd64`|ARM, ARM64|
+|`_InterlockedAdd64_acq`|ARM, ARM64|
+|`_InterlockedAdd64_nf`|ARM, ARM64|
+|`_InterlockedAdd64_rel`|ARM, ARM64|
 
-**Soubor hlaviček** \<intrin.h >
+**Hlavičkový soubor** \<intrin. h >
 
 ## <a name="remarks"></a>Poznámky
 
-Verze těchto funkcí s `_acq` nebo `_rel` přípony provedení propojené dodatek následující sémantika získání nebo vydání. *Sémantika získání* znamená, že výsledek operace jsou dostupná pro všechna vlákna a procesory než vyšší paměti operace čtení a zápisu. Získání je užitečné, když zadáte kritický oddíl. *Uvolnění sémantiku* nastavena jako viditelná pro všechny vlákna a procesory než výsledek operace jsou dostupná vlastní prostředky, které všechny paměti čte a zapisuje budou ukončeny. Verze je užitečné při opuštění kritický oddíl. Vnitřní objekty s `_nf` příponu ("žádná ohrazení") doby něco neuděláte jako překážku paměti.
+Verze těchto funkcí s `_acq` příponami nebo `_rel` provádějí propojená rozšíření, která následují jako Sémantika získání nebo vydání. *Získání sémantiky* znamená, že výsledek operace je viditelný pro všechna vlákna a procesory před pozdějšími čteními a zápisy paměti. Získání je užitečné při zadávání kritické části. *Sémantika vydání* znamená, že všechny čtení a zápisy paměti jsou nuceně viditelné všem vláknům a procesorům před tím, než je výsledek operace sám viditelný. Verze je užitečná, když opouštíte kritickou část. Vnitřní objekty s `_nf` příponou (bez plotu) nefungují jako bariéra paměti.
 
-Tyto rutiny jsou dostupné jenom jako vnitřní funkce.
+Tyto rutiny jsou k dispozici pouze jako vnitřní objekty.
 
 ## <a name="example"></a>Příklad
 
@@ -167,9 +167,9 @@ ff0000000000 + ff0000ffffffff = ffff00ffffffff
 Return value: ffff00ffffffff
 ```
 
-**Specifické pro END Microsoft**
+**Specifické pro konec Microsoftu**
 
 ## <a name="see-also"></a>Viz také:
 
-[Vnitřní funkce kompilátoru](../intrinsics/compiler-intrinsics.md)<br/>
+[Vnitřní objekty kompilátoru](../intrinsics/compiler-intrinsics.md)\
 [Konflikty s kompilátorem x86](../build/x64-software-conventions.md#conflicts-with-the-x86-compiler)

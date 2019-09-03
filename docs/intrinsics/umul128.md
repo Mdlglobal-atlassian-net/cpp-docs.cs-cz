@@ -1,27 +1,27 @@
 ---
 title: _umul128
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - __umul128
 helpviewer_keywords:
 - __umul128 intrinsic
 ms.assetid: 13684df3-3ac7-467c-b258-a0e93bc490b5
-ms.openlocfilehash: afca1e62127ac2dbcfc407982dbe191d379b4acb
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 205f0f7f9046ede624bb09e18d8ede32fadbc3de
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62390097"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70219688"
 ---
-# <a name="umul128"></a>_umul128
+# <a name="_umul128"></a>_umul128
 
-**Microsoft Specific**
+**Specifické pro společnost Microsoft**
 
-Vynásobí dvě 64-bit celých čísel bez znaménka předaný jako první dva argumenty a umístí vysokou 64bitová verze produktu 64bitové celé číslo bez znaménka na které odkazuje `HighProduct` a vrátí nízké 64bitová verze produktu.
+Vynásobí 2 64 celých čísel bez znaménka, která byla předána jako první dva argumenty a umístí vysoké 64 bity produktu do 64-bit unsigned integer ukazují na `HighProduct` hodnotu a vrátí nízké 64 bity produktu.
 
 ## <a name="syntax"></a>Syntaxe
 
-```
+```C
 unsigned __int64 _umul128(
    unsigned __int64 Multiplier,
    unsigned __int64 Multiplicand,
@@ -29,30 +29,30 @@ unsigned __int64 _umul128(
 );
 ```
 
-#### <a name="parameters"></a>Parametry
+### <a name="parameters"></a>Parametry
 
-*Násobitel*<br/>
-[in] První 64bitové celé číslo pro vynásobení.
+*Koeficient*\
+pro První 64 celé číslo, které se má vynásobit.
 
-*Násobenec*<br/>
-[in] Druhé 64bitové celé číslo pro vynásobení.
+*Multiplicand*\
+pro Druhé 64 celé číslo, které se má vynásobit.
 
-*HighProduct*<br/>
-[out] 64 bitů produktu.
+*HighProduct*\
+mimo Vysoký 64 bitů produktu.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Nízká 64 bitů produktu.
+Dolních 64 bitů produktu.
 
 ## <a name="requirements"></a>Požadavky
 
-|Vnitřní|Architektura|Záhlaví|
+|Vnitřním|Architektura|Záhlaví|
 |---------------|------------------|------------|
 |`_umul128`|x64|\<intrin.h>|
 
 ## <a name="example"></a>Příklad
 
-```
+```C
 // umul128.c
 // processor: x64
 
@@ -77,8 +77,8 @@ int main()
 0xfffffffffffffff * 0xf0000000 = 0xeffffffffffffff10000000
 ```
 
-**Specifické pro END Microsoft**
+**Specifické pro konec Microsoftu**
 
 ## <a name="see-also"></a>Viz také:
 
-[Vnitřní funkce kompilátoru](../intrinsics/compiler-intrinsics.md)
+[Vnitřní objekty kompilátoru](../intrinsics/compiler-intrinsics.md)

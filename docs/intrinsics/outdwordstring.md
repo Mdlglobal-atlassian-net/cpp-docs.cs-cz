@@ -1,6 +1,6 @@
 ---
 title: __outdwordstring
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - __outdwordstring
 helpviewer_keywords:
@@ -8,22 +8,22 @@ helpviewer_keywords:
 - __outdwordstring intrinsic
 - rep outsd instruction
 ms.assetid: 55b31a65-aab7-4b5c-b61d-d9e2fb0c497a
-ms.openlocfilehash: 51cb4a97d271d6d41d39d1025e3a5d34b273cdc4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 50908a65795af617f18a497c073cfefe009dfd80
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62396584"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70217158"
 ---
-# <a name="outdwordstring"></a>__outdwordstring
+# <a name="__outdwordstring"></a>__outdwordstring
 
-**Microsoft Specific**
+**Specifické pro společnost Microsoft**
 
-Generuje `rep outsd` instrukce, která odesílá `Count` začínající na x doubleword `Buffer` portu vstupně-výstupní operace určené `Port`.
+Vygeneruje `Count` `Buffer` `Port`instrukci, která odesílá doubleword počínaje na vstupně-výstupním portu určeném parametrem. `rep outsd`
 
 ## <a name="syntax"></a>Syntaxe
 
-```
+```C
 void __outdwordstring(
    unsigned short Port,
    unsigned long* Buffer,
@@ -31,31 +31,31 @@ void __outdwordstring(
 );
 ```
 
-#### <a name="parameters"></a>Parametry
+### <a name="parameters"></a>Parametry
 
-*Port*<br/>
-[in] Port pro odesílání dat na.
+*Přístavní*\
+pro Port, do kterého se mají data odeslat.
 
-*Vyrovnávací paměti*<br/>
-[in] Ukazatel na data, která mají být odeslány zadaný port.
+*Vyrovnávací paměti*\
+pro Ukazatel na data, která se mají odeslat na zadaný port.
 
-*Počet*<br/>
-[in] Počet x doubleword k odeslání.
+*Výpočtu*\
+pro Počet doubleword, které se mají odeslat
 
 ## <a name="requirements"></a>Požadavky
 
-|Vnitřní|Architektura|
+|Vnitřním|Architektura|
 |---------------|------------------|
 |`__outdwordstring`|x86, x64|
 
-**Soubor hlaviček** \<intrin.h >
+**Hlavičkový soubor** \<intrin. h >
 
 ## <a name="remarks"></a>Poznámky
 
 Tato rutina je k dispozici pouze jako vnitřní objekt.
 
-**Specifické pro END Microsoft**
+**Specifické pro konec Microsoftu**
 
 ## <a name="see-also"></a>Viz také:
 
-[Vnitřní funkce kompilátoru](../intrinsics/compiler-intrinsics.md)
+[Vnitřní objekty kompilátoru](../intrinsics/compiler-intrinsics.md)

@@ -1,6 +1,6 @@
 ---
 title: __rdtscp
-ms.date: 07/11/2019
+ms.date: 09/02/2019
 f1_keywords:
 - __rdtscp
 helpviewer_keywords:
@@ -8,51 +8,51 @@ helpviewer_keywords:
 - __rdtscp intrinsic
 - rdtscp instruction
 ms.assetid: f17d9a9c-88bb-44e0-b69d-d516bc1c93ee
-ms.openlocfilehash: b8a31c6d19cd171cbe909c75a27c2389866bd578
-ms.sourcegitcommit: 0e3da5cea44437c132b5c2ea522bd229ea000a10
+ms.openlocfilehash: 4dcabd6ed0f7fb3f422927815cbdc91f2b4b9d43
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/12/2019
-ms.locfileid: "67861115"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70221321"
 ---
-# <a name="rdtscp"></a>__rdtscp
+# <a name="__rdtscp"></a>__rdtscp
 
-**Microsoft Specific**
+**Specifické pro společnost Microsoft**
 
-Generuje `rdtscp` instrukce, zapíše `TSC_AUX[31:0`] do paměti a vrátí čítač razítko času 64-bit (`TSC)` výsledek.
+Vygeneruje `TSC_AUX[31:0``TSC)` instrukci, zápisy] do paměti a vrátí počítadlo 64 časového razítka (výsledek. `rdtscp`
 
 ## <a name="syntax"></a>Syntaxe
 
-```
+```C
 unsigned __int64 __rdtscp(
-   unsigned int * Aux
+   unsigned int * AUX
 );
 ```
 
-#### <a name="parameters"></a>Parametry
+### <a name="parameters"></a>Parametry
 
-*Aux*<br/>
-[out] Ukazatel na umístění, která bude obsahovat obsah registru specifické pro počítač `TSC_AUX[31:0]`.
+*POMOCNÉ*\
+mimo Ukazatel na umístění, které bude obsahovat obsah registru `TSC_AUX[31:0]`pro konkrétní počítač.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Počet cyklů 64bitové celé číslo bez znaménka.
+64 unsigned integer počet impulsů.
 
 ## <a name="requirements"></a>Požadavky
 
-|Vnitřní|Architektura|
+|Vnitřním|Architektura|
 |---------------|------------------|
 |`__rdtscp`|x86, x64|
 
-**Soubor hlaviček** \<intrin.h >
+**Hlavičkový soubor** \<intrin. h >
 
 ## <a name="remarks"></a>Poznámky
 
-Tomto vnitřní vygeneruje `rdtscp` instrukce. Chcete-li určit hardwarovou podporu pro tento pokyn, zavolejte `__cpuid` vnitřní s `InfoType=0x80000001` a zkontrolujte bit 27 `CPUInfo[3] (EDX)`. Tato verze je 1, pokud podporované instrukce a 0 jinak.  Pokud jste spustili kód, který používá tuto vnitřní hardware, který není podporován `rdtscp` instrukce, výsledky nepředvídatelné.
+`__rdtscp` Vnitřní`rdtscp` vygeneruje instrukci. Chcete-li zjistit hardwarovou podporu pro tuto instrukci, `InfoType=0x80000001` zavolejte `__cpuid` vnitřní objekt with `CPUInfo[3] (EDX)`a zkontrolujte bit 27. Tento bit je 1, pokud je instrukce podporována a 0 jinak.  Pokud spustíte kód, který používá vnitřní na hardwaru, který nepodporuje `rdtscp` instrukci, výsledky se nepředvídatelné.
 
-Tento pokyn počká, až uzavřeli dohodu o všech předchozích kroků a všech předchozích načtení jsou viditelné globálně. Však není serializaci instrukce. Zobrazit Intelu a AMD příruček pro další informace.
+Tato instrukce počká, dokud se nespustí všechny předchozí pokyny a že všechna předchozí načtení budou globálně viditelná. Nejedná se však o serializaci instrukcí. Další informace najdete v příručkách Intel a AMD.
 
-Hodnoty ve smyslu `TSC_AUX[31:0]` závisí na operačním systému.
+Význam hodnoty v `TSC_AUX[31:0]` závislosti na operačním systému.
 
 ## <a name="example"></a>Příklad
 
@@ -74,10 +74,9 @@ int main()
 TSC_AUX was 0
 ```
 
-**Specifické pro END Microsoft**
-
+**Specifické pro konec Microsoftu**
 
 ## <a name="see-also"></a>Viz také:
 
-[__rdtsc](../intrinsics/rdtsc.md)<br/>
-[Vnitřní funkce kompilátoru](../intrinsics/compiler-intrinsics.md)
+[__rdtsc](../intrinsics/rdtsc.md)\
+[Vnitřní objekty kompilátoru](../intrinsics/compiler-intrinsics.md)

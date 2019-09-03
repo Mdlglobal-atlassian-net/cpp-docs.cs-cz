@@ -1,6 +1,6 @@
 ---
 title: __ll_rshift
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - __ll_rshift_cpp
 - __ll_rshift
@@ -8,55 +8,55 @@ helpviewer_keywords:
 - __ll_rshift intrinsic
 - ll_rshift intrinsic
 ms.assetid: ef13b732-d122-44a0-add9-f5544a2c4ab2
-ms.openlocfilehash: e39f8fe797467569077dd24baf49670607915107
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ad17991d84acb7e531baf9435610ebd566197a22
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62263357"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70217496"
 ---
-# <a name="llrshift"></a>__ll_rshift
+# <a name="__ll_rshift"></a>__ll_rshift
 
-**Microsoft Specific**
+**Specifické pro společnost Microsoft**
 
-Posune 64 bitů hodnotu zadanou pomocí prvního parametru vpravo o počet bitů určený druhý parametr.
+Posune 64 hodnotu určenou prvním parametrem vpravo podle počtu bitů určených druhým parametrem.
 
 ## <a name="syntax"></a>Syntaxe
 
-```
+```C
 __int64 __ll_rshift(
    __int64 Mask,
    int nBit
 );
 ```
 
-#### <a name="parameters"></a>Parametry
+### <a name="parameters"></a>Parametry
 
-*Maska*<br/>
-[in] 64bitové celočíselné hodnoty posunutí doprava.
+*Zrušit*\
+pro Hodnota 64 celé číslo, která se má posunout vpravo.
 
-*nBit*<br/>
-[in] Počet bitů, chcete-li posunout modulo 64 na x64 a modulo 32 na x86.
+*nBit*\
+pro Počet bitů, které se mají posunout, modulo 64 na x64 a modulo 32 v x86
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Maska o `nBit` bits.
+Maska posunutá pomocí `nBit` bitů.
 
 ## <a name="requirements"></a>Požadavky
 
-|Vnitřní|Architektura|
+|Vnitřním|Architektura|
 |---------------|------------------|
 |`__ll_rshift`|x86, x64|
 
-**Soubor hlaviček** \<intrin.h >
+**Hlavičkový soubor** \<intrin. h >
 
 ## <a name="remarks"></a>Poznámky
 
-Není-li druhý parametr je větší než 64 na x64 (32 na x86), toto číslo provedena modulo 64 (32 na x86) k určení počtu bitů a posunutí. `ll` Předponu označuje, že se jedná operaci na `long long`, další název `__int64`, 64-bit celočíselný typ se znaménkem.
+Pokud je druhý parametr větší než 64 na platformě x64 (32 na platformě x86), toto číslo povede k určení počtu bitů, které se mají posunout, na hodnotu modulo 64 (32 na platformě x86). Předpona označuje, že se jedná o `long long`operaci s jiným názvem pro `__int64`typ integrálu s podpisem 64. `ll`
 
 ## <a name="example"></a>Příklad
 
-```
+```cpp
 // ll_rshift.cpp
 // compile with: /EHsc
 // processor: x86, x64
@@ -80,19 +80,20 @@ int main()
 
 ## <a name="output"></a>Výstup
 
-```
+```Output
 ffffffffffffff00
 - 100
 fffffffffffffff0
 - 10
 ```
 
-**Poznámka:** Pokud `_ull_rshift` byl použit, MSB hodnotu posunuta doprava by byl nula, tak v případě záporné hodnoty by byly získány požadovaný výsledek.
+> [!NOTE]
+> Pokud `_ull_rshift` byl použit, hodnota MSB pravého posunutí by měla být nulová, takže požadovaný výsledek nebude získán v případě záporné hodnoty.
 
-**Specifické pro END Microsoft**
+**Specifické pro konec Microsoftu**
 
 ## <a name="see-also"></a>Viz také:
 
-[Vnitřní funkce kompilátoru](../intrinsics/compiler-intrinsics.md)<br/>
-[__ll_lshift](../intrinsics/ll-lshift.md)<br/>
+[Vnitřní objekty kompilátoru](../intrinsics/compiler-intrinsics.md)\
+[__ll_lshift](../intrinsics/ll-lshift.md)\
 [__ull_rshift](../intrinsics/ull-rshift.md)

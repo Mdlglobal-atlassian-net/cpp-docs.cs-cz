@@ -1,50 +1,49 @@
 ---
 title: __writeeflags
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - __writeeflags
 helpviewer_keywords:
 - __writeeflags intrinsics
 ms.assetid: a62a522c-d7fa-4f10-a620-a3b32bdf3f17
-ms.openlocfilehash: 6679a3b16def3ed413c5cec2a4bb7d5fe5d732c8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e43789d2fbed1bdc52665531c61c6c932a27f5ab
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62389915"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70219142"
 ---
-# <a name="writeeflags"></a>__writeeflags
+# <a name="__writeeflags"></a>__writeeflags
 
-Zapíše zadané hodnoty do programu zaregistrovat stavu a ovládací prvek (EFLAGS).
+Zapíše zadanou hodnotu do registru status program and Control (EFLAGS).
 
 ## <a name="syntax"></a>Syntaxe
 
-```
-void __writeeflags(unsigned Value);
-void __writeeflags(unsigned __int64 Value);
+```C
+void __writeeflags(unsigned Value); /* x86 */
+void __writeeflags(unsigned __int64 Value); /* x64 */
 ```
 
-#### <a name="parameters"></a>Parametry
+### <a name="parameters"></a>Parametry
 
-|Parametr|Popis|
-|---------------|-----------------|
-|*Hodnota*|[in] Hodnota k zápisu do registru EFLAGS. `Value` Parametr je 32 bitů dlouhý pro 32bitové platformě a 64 bitů dlouhý pro 64bitovou platformu.|
+*Osa*\
+pro Hodnota, která se má zapsat do registru EFLAGS `Value` Parametr je 32 bitů dlouhý pro 32 platformu a v případě 64bitové platformy se 64 bity 64 prodlouží.
 
 ## <a name="remarks"></a>Poznámky
 
-Tyto rutiny jsou k dispozici pouze jako vnitřní funkce.
+Tyto rutiny jsou k dispozici pouze jako vnitřní objekty.
 
 ## <a name="requirements"></a>Požadavky
 
-|Vnitřní|Architektura|
+|Vnitřním|Architektura|
 |---------------|------------------|
 |`__writeeflags`|x86, x64|
 
-**Soubor hlaviček** \<intrin.h >
+**Hlavičkový soubor** \<intrin. h >
 
-**Specifické pro END Microsoft**
+**Specifické pro konec Microsoftu**
 
 ## <a name="see-also"></a>Viz také:
 
-[Vnitřní funkce kompilátoru](../intrinsics/compiler-intrinsics.md)<br/>
+[Vnitřní objekty kompilátoru](../intrinsics/compiler-intrinsics.md)\
 [__readeflags](../intrinsics/readeflags.md)

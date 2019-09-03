@@ -1,52 +1,52 @@
 ---
 title: __writedr
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - __writedr
 helpviewer_keywords:
 - __writedr intrinsic
 ms.assetid: ac55c1ee-df2f-41d4-a429-6f369d2a934d
-ms.openlocfilehash: c495e8c80029680512358198ca8fb0ce6e65414d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 715ef7432d506c2758c9c3da913e9c0ebb24e13f
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62389863"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70219221"
 ---
-# <a name="writedr"></a>__writedr
+# <a name="__writedr"></a>__writedr
 
-Zadaná hodnota zapíše do registru zadaného ladění.
+Zapíše zadanou hodnotu do určeného registru pro ladění.
 
 ## <a name="syntax"></a>Syntaxe
 
+```C
+void __writedr(unsigned DebugRegister, unsigned DebugValue); /* x86 */
+void __writedr(unsigned DebugRegister, unsigned __int64 DebugValue); /* x64 */
 ```
-void __writedr(unsigned DebugRegister, unsigned DebugValue);
-void __writedr(unsigned DebugRegister, unsigned __int64 DebugValue);
-```
 
-#### <a name="parameters"></a>Parametry
+### <a name="parameters"></a>Parametry
 
-*DebugRegister*<br/>
-[in] Číslo od 0 do 7, který identifikuje ladění registru.
+*DebugRegister*\
+pro Číslo od 0 do 7, které identifikuje registr ladění.
 
-*DebugValue*<br/>
-[in] Hodnota k zápisu do dialogu ladit zaregistrovat.
+*DebugValue*\
+pro Hodnota, která se má zapsat do registru ladění.
 
 ## <a name="remarks"></a>Poznámky
 
-Tyto vnitřní objekty jsou k dispozici pouze v režimu jádra a rutiny jsou k dispozici pouze jako vnitřní funkce.
+Tyto vnitřní objekty jsou k dispozici pouze v režimu jádra a rutiny jsou k dispozici pouze jako vnitřní.
 
 ## <a name="requirements"></a>Požadavky
 
-|Vnitřní|Architektura|
+|Vnitřním|Architektura|
 |---------------|------------------|
 |`__writedr`|x86, x64|
 
-**Soubor hlaviček** \<intrin.h >
+**Hlavičkový soubor** \<intrin. h >
 
-**Specifické pro END Microsoft**
+**Specifické pro konec Microsoftu**
 
 ## <a name="see-also"></a>Viz také:
 
-[Vnitřní funkce kompilátoru](../intrinsics/compiler-intrinsics.md)<br/>
+[Vnitřní objekty kompilátoru](../intrinsics/compiler-intrinsics.md)\
 [__readdr](../intrinsics/readdr.md)

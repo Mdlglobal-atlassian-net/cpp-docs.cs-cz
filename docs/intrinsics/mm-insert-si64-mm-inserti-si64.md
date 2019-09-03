@@ -1,6 +1,6 @@
 ---
 title: _mm_insert_si64, _mm_inserti_si64
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - _mm_inserti_si64
 - _mm_insert_si64
@@ -9,22 +9,22 @@ helpviewer_keywords:
 - _mm_insert_si64 intrinsic
 - _mm_inserti_si64 intrinsic
 ms.assetid: 897a4b36-8b08-4b00-a18f-7850f5732d7d
-ms.openlocfilehash: f8c8f2f9b33588513e25b2290772aac464f46808
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 08469ad8049df2a07f0e66d650c1ca3118f8b980
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62396675"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70221771"
 ---
-# <a name="mminsertsi64-mminsertisi64"></a>_mm_insert_si64, _mm_inserti_si64
+# <a name="_mm_insert_si64-_mm_inserti_si64"></a>_mm_insert_si64, _mm_inserti_si64
 
-**Microsoft Specific**
+**Specifické pro společnost Microsoft**
 
-Generuje `insertq` pokyny, jak vložit bits ze svým druhým operandem do jeho prvním operandem.
+`insertq` Generuje instrukci pro vložení bitů z jeho druhého operandu do prvního operandu.
 
 ## <a name="syntax"></a>Syntaxe
 
-```
+```C
 __m128i _mm_insert_si64(
    __m128i Source1,
    __m128i Source2
@@ -37,46 +37,46 @@ __m128i _mm_inserti_si64(
 );
 ```
 
-#### <a name="parameters"></a>Parametry
+### <a name="parameters"></a>Parametry
 
-*Zdroj1*<br/>
-[in] 128bitové pole se vstupní data v její dolní 64 bitů, do kterých se vloží pole.
+*Source1*\
+pro 128 pole, které má vstupní data v dolních 64 bitech, do kterých bude vloženo pole.
 
-*Zdroj2*<br/>
-[in] 128bitové pole s dat vložte bity jsou nízké.  Pro `_mm_insert_si64`, také obsahuje popisovač pole v jeho bitů.
+*Source2*\
+pro 128 pole obsahující data, která mají být vložena do dolních bitů.  `_mm_insert_si64`Obsahuje také popisovač pole v jeho horních bitech.
 
-*Délka*<br/>
-[in] Celočíselná konstanta, která určuje délku pole pro vložení.
+*Časový*\
+pro Celočíselná konstanta, která určuje délku pole, které má být vloženo.
 
-*Index*<br/>
-[in] Celočíselná konstanta, která určuje index nejméně významných bitů pole, do kterého budou data vložena.
+*Indexovacím*\
+pro Celočíselná konstanta, která určuje index nejméně významného bitu pole, do kterého budou vložena data.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-128bitové pole, jehož dolním 64 bitů obsahovat původní nízké 64 bitů z `Source1` pomocí zadané bitové pole nahrazuje nízké bity `Source2`. Horní 64 bitů vrácené hodnoty nejsou definovány.
+128 pole, jehož dolní 64 bitů obsahuje původní nízké 64 bitů *source1*, se zadaným bitovým polem nahrazeným dolními bity *SOURCE2*. Horní 64é bity návratové hodnoty nejsou definovány.
 
 ## <a name="requirements"></a>Požadavky
 
-|Vnitřní|Architektura|
+|Vnitřním|Architektura|
 |---------------|------------------|
 |`_mm_insert_si64`|SSE4a|
 |`_mm_inserti_si64`|SSE4a|
 
-**Soubor hlaviček** \<intrin.h >
+**Hlavičkový soubor** \<intrin. h >
 
 ## <a name="remarks"></a>Poznámky
 
-Tomto vnitřní vygeneruje `insertq` pokyny, jak vložit bitů z `Source2` do `Source1`. Existují dvě verze tohoto vnitřní: `_mm_inserti_si64`, okamžité verze a `_mm_insert_si64` je – okamžitě.  Každá verze extrahuje bitového pole dané délky z zdroj2 a vloží jej do zdroj1.  Extrahované bity jsou nejméně významných bitů zdroj2.  Zdroj1 pole, do kterého budou vloženy těchto bitů je definována délku a index jeho nejméně významných bitů.  Index a délka hodnoty pocházejí mod 64, tedy -1 do 127 číslic se interpretují jako 63. Pokud součet (nižší) bit index a délky pole (nižší) je větší než 64, nejsou výsledky definovány. Hodnota 0 pro délku pole je interpretován jako 64.  Pokud je index délku a bitová pole jsou obě nulové, služba bits 63:0 z `Source2` jsou vloženy do `Source1`.  Pokud délka pole je nula, ale bit index je nenulová, nejsou výsledky definovány.
+Tyto vnitřní objekty generují `insertq` instrukci pro vložení bitů z *SOURCE2* do *source1*. Existují dvě verze: `_mm_inserti_si64`, je okamžitá verze a `_mm_insert_si64` je neokamžitá. Každá verze extrahuje bitové pole dané délky z SOURCE2 a vloží je do source1.  Extrahované bity mají nejméně významné bity z SOURCE2.  Pole source1, do kterého budou vloženy tyto bity, jsou definovány délkou a indexem jeho nejméně významného bitu.  Hodnoty délky a indexu jsou pořízeny mod 64, takže obě-1 i 127 jsou interpretovány jako 63. Je-li součet velikosti (redukovaného) bitového indexu a (zmenšeného) délky pole větší než 64, nejsou výsledky definovány. Hodnota nula pro délku pole je interpretována jako 64. Pokud je délka pole a bitový index nula, do *source1*se vloží bity 63:0 *SOURCE2* . Pokud je délka pole nula, ale bit indexu je nenulový, výsledky nejsou definovány.
 
-Ve volání _mm_insert_si64 délka pole je součástí bits 77:72 zdroj2 a indexu v bits 69:64.
+V volání _mm_insert_si64 je délka pole obsažena v bitech 77:72 z SOURCE2 a v indexu v bitech 69:64.
 
-Při volání `_mm_inserti_si64` argumentů, kompilátor nemůže určit být konstanty typu integer, kompilátor generuje kód se zabalit tyto hodnoty do registru XMM a k volání `_mm_insert_si64`.
+Pokud zavoláte `_mm_inserti_si64` argumenty, které kompilátor nemůže určit jako celočíselné konstanty, kompilátor vygeneruje kód pro zabalení těchto hodnot do XMM registru a volání `_mm_insert_si64`.
 
-K určení hardwarovou podporu `insertq` volání instrukce `__cpuid` vnitřní s `InfoType=0x80000001` a zkontrolujte bit 6 `CPUInfo[2] (ECX)`. Tato verze bude 1, pokud podporované instrukce a 0 jinak. Pokud jste spustili kód, který používá tuto vnitřní hardware, který není podporován `insertq` instrukce, výsledky nepředvídatelné.
+Chcete-li zjistit hardwarovou `insertq` podporu instrukce, `__cpuid` zavolejte vnitřní s `InfoType=0x80000001` a zkontrolujte bit 6 z `CPUInfo[2] (ECX)`. Tento bit je 1, pokud je instrukce podporována a 0 jinak. Pokud spustíte kód, který používá vnitřní na hardwaru, který nepodporuje `insertq` instrukci, výsledky se nepředvídatelné.
 
 ## <a name="example"></a>Příklad
 
-```
+```cpp
 // Compile this sample with: /EHsc
 #include <iostream>
 #include <intrin.h>
@@ -118,11 +118,11 @@ result2 = 0xfffffffff3210fff
 result3 = 0xfffffffff3210fff
 ```
 
-**Specifické pro END Microsoft**
+**Specifické pro konec Microsoftu**
 
-Copyright 2007 by Advanced Micro Devices, Inc. Všechna práva vyhrazena. Reprodukovat se svolením rozšířené Micro zařízení, Inc.
+Copyright 2007 od Advanced Micro Devices, Inc. Všechna práva vyhrazena. Reprodukováno s oprávněním z Advanced Micro Devices, Inc.
 
 ## <a name="see-also"></a>Viz také:
 
-[_mm_extract_si64, _mm_extracti_si64](../intrinsics/mm-extract-si64-mm-extracti-si64.md)<br/>
-[Vnitřní funkce kompilátoru](../intrinsics/compiler-intrinsics.md)
+[_mm_extract_si64, _mm_extracti_si64](../intrinsics/mm-extract-si64-mm-extracti-si64.md)\
+[Vnitřní objekty kompilátoru](../intrinsics/compiler-intrinsics.md)

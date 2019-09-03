@@ -1,10 +1,13 @@
 ---
 title: vnitřní funkce _interlockedbittestandset
-ms.date: 12/17/2018
+ms.date: 09/02/2019
 f1_keywords:
 - _interlockedbittestandset_cpp
 - _interlockedbittestandset_HLEAcquire
 - _interlockedbittestandset64
+- _interlockedbittestandset64_acq
+- _interlockedbittestandset64_nf
+- _interlockedbittestandset64_rel
 - _interlockedbittestandset
 - _interlockedbittestandset_rel
 - _interlockedbittestandset64_HLEAcquire
@@ -18,22 +21,22 @@ helpviewer_keywords:
 - _interlockedbittestandset64 intrinsic
 - lock_bts instruction
 ms.assetid: b1b7e334-53ea-48cf-ba60-5fa3ef51a1fc
-ms.openlocfilehash: 3da533b3cf2ab8f396e4ba284cc0bf921a5c80b5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9679abf674b5ef366818e73504c3c8c80c5d8ed7
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62396774"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70217759"
 ---
-# <a name="interlockedbittestandset-intrinsic-functions"></a>vnitřní funkce _interlockedbittestandset
+# <a name="_interlockedbittestandset-intrinsic-functions"></a>vnitřní funkce _interlockedbittestandset
 
-**Microsoft Specific**
+**Specifické pro společnost Microsoft**
 
-Generovat instrukce, který zkoumá vlastnost bit `b` adresy `a` a vrátí jeho aktuální hodnotu před nastavením na hodnotu 1.
+Vygenerujte instrukci pro prohlédnutí bitu `b` adresy `a` a vraťte její aktuální hodnotu, než ji nanastavíte na 1.
 
 ## <a name="syntax"></a>Syntaxe
 
-```
+```C
 unsigned char _interlockedbittestandset(
    long *a,
    long b
@@ -62,6 +65,18 @@ unsigned char _interlockedbittestandset64(
    __int64 *a,
    __int64 b
 );
+unsigned char _interlockedbittestandset64_acq(
+   __int64 *a,
+   __int64 b
+);
+unsigned char _interlockedbittestandset64_nf(
+   __int64 *a,
+   __int64 b
+);
+unsigned char _interlockedbittestandset64_rel(
+   __int64 *a,
+   __int64 b
+);
 unsigned char _interlockedbittestandset64_HLEAcquire(
    __int64 *a,
    __int64 b
@@ -72,41 +87,42 @@ unsigned char _interlockedbittestandset64_HLERelease(
 );
 ```
 
-#### <a name="parameters"></a>Parametry
+### <a name="parameters"></a>Parametry
 
-*a*<br/>
-[in] Ukazatel paměti prozkoumat.
+*určitého*\
+pro Ukazatel na paměť, kterou chcete prošetřit.
 
-*b*<br/>
-[in] Bitová pozice pro testování.
+*b*\
+pro Bitová pozice, která se má testovat
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Hodnota na pozici bitu `b` předtím, než je nastavena.
+Hodnota bitu na pozici `b` před nastavením.
 
 ## <a name="requirements"></a>Požadavky
 
-|Vnitřní|Architektura|Záhlaví|
+|Vnitřním|Architektura|Záhlaví|
 |---------------|------------------|------------|
-|`_interlockedbittestandset`|x86, ARM, x64|\<intrin.h>|
-|`_interlockedbittestandset_acq`, `_interlockedbittestandset_nf`, `_interlockedbittestandset_rel`|ARM|\<intrin.h>|
+|`_interlockedbittestandset`|x86, ARM, x64, ARM64|\<intrin.h>|
+|`_interlockedbittestandset_acq`, `_interlockedbittestandset_nf`, `_interlockedbittestandset_rel`|ARM, ARM64|\<intrin.h>|
+|`_interlockedbittestandset64_acq`, `_interlockedbittestandset64_nf`, `_interlockedbittestandset64_rel`|ARM64|\<intrin.h>|
 |`_interlockedbittestandset_HLEAcquire`, `_interlockedbittestandset_HLERelease`|x86, x64|\<immintrin.h>|
-|`_interlockedbittestandset64`|x64|\<intrin.h>|
+|`_interlockedbittestandset64`|x64, ARM64|\<intrin.h>|
 |`_interlockedbittestandset64_HLEAcquire`, `_interlockedbittestandset64_HLERelease`|x64|\<immintrin.h>|
 
 ## <a name="remarks"></a>Poznámky
 
-Na x86 a x64 procesory, použijte tyto vnitřní objekty `lock bts` instrukce ke čtení a zadané bit nastaven na hodnotu 1. Je atomická operace.
+U procesorů x86 a x64 tyto vnitřní funkce používají `lock bts` instrukci ke čtení a nastavení zadaného bitu na 1. Operace je atomická.
 
-Na procesorech ARM, pomocí vnitřní objekty s `_acq` a `_rel` přípony pro získání a uvolnění sémantiky, jako například na začátku a konci kritický oddíl. Vnitřní objekty ARM pomocí `_nf` příponu ("žádná ohrazení") nefungují jako překážku paměti.
+Na procesorech ARM a ARM64 používejte vnitřní `_acq` funkce a `_rel` přípony pro získání a vydání sémantiky, jako například na začátku a konci kritické části. Vnitřní objekty ARM s `_nf` příponou (bez plotu) nefungují jako bariéra paměti.
 
-Na procesorech Intel, které podporují pokyny Elize zámek hardwaru (HLE), vnitřní objekty s `_HLEAcquire` a `_HLERelease` přípony zahrnují nápovědu pro procesor, který může zrychlit výkonu odstraněním kroku zámek zápisu v hardwaru. Pokud tyto vnitřní objekty jsou volány u procesorů, které nepodporují HLE, doporučení se ignoruje.
+V procesorech Intel, které podporují pokyny Elizi (hardware Lock), vnitřní `_HLEAcquire` funkce a `_HLERelease` přípony obsahují nápovědu pro procesor, který může urychlit odstranění zámku v případě hardwarového zápisu. Pokud jsou tyto vnitřní objekty volány u procesorů, které nepodporují HLE, bude pomocný parametr ignorován.
 
-Tyto rutiny jsou dostupné jenom jako vnitřní funkce.
+Tyto rutiny jsou k dispozici pouze jako vnitřní objekty.
 
-**Specifické pro END Microsoft**
+**Specifické pro konec Microsoftu**
 
 ## <a name="see-also"></a>Viz také:
 
-[Vnitřní funkce kompilátoru](../intrinsics/compiler-intrinsics.md)<br/>
+[Vnitřní objekty kompilátoru](../intrinsics/compiler-intrinsics.md)\
 [Konflikty s kompilátorem x86](../build/x64-software-conventions.md#conflicts-with-the-x86-compiler)

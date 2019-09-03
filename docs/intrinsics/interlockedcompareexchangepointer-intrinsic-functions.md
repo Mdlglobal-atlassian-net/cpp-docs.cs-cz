@@ -1,6 +1,6 @@
 ---
 title: Vnitřní funkce _InterlockedCompareExchangePointer
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - _InterlockedCompareExchangePointer_HLERelease
 - _InterlockedCompareExchangePointer_rel
@@ -24,12 +24,12 @@ helpviewer_keywords:
 - _InterlockedCompareExchangePointer_nf intrinsic
 - _InterlockedCompareExchangePointer_np intrinsic
 ms.assetid: 97fde59d-2bf9-42aa-a0fe-a5b6befdd44b
-ms.openlocfilehash: 7b8ba4fe6224292d0160f859aeb630fc17c2d992
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: c0a0083c19df51d2d2eccb7a7bbf6521303c1f85
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69509439"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70222032"
 ---
 # <a name="_interlockedcompareexchangepointer-intrinsic-functions"></a>Vnitřní funkce _InterlockedCompareExchangePointer
 
@@ -39,7 +39,7 @@ Provede atomickou operaci, která uloží `Exchange` adresu `Destination` do `De
 
 ## <a name="syntax"></a>Syntaxe
 
-```
+```C
 void * _InterlockedCompareExchangePointer (
    void * volatile * Destination,
    void * Exchange,
@@ -77,15 +77,15 @@ long _InterlockedCompareExchangePointer_rel (
 );
 ```
 
-#### <a name="parameters"></a>Parametry
+### <a name="parameters"></a>Parametry
 
-*Tabulka*<br/>
+*Tabulka*\
 [in, out] Ukazatel na ukazatel na cílovou hodnotu. Znaménko je ignorováno.
 
-*Exchange*<br/>
+*Výměn*\
 pro Ukazatel Exchange Znaménko je ignorováno.
 
-*Operand porovnávání*<br/>
+*Operand porovnávání*\
 pro Ukazatel na porovnání s cílem. Znaménko je ignorováno.
 
 ## <a name="return-value"></a>Návratová hodnota
@@ -96,8 +96,8 @@ Návratová hodnota je počáteční hodnota cíle.
 
 |Vnitřním|Architektura|Záhlaví|
 |---------------|------------------|------------|
-|`_InterlockedCompareExchangePointer`|x86, ARM, x64|\<intrin.h>|
-|`_InterlockedCompareExchangePointer_acq`, `_InterlockedCompareExchangePointer_nf`, `_InterlockedCompareExchangePointer_rel`|ARM|\<iiintrin.h>|
+|`_InterlockedCompareExchangePointer`|x86, ARM, x64, ARM64|\<intrin.h>|
+|`_InterlockedCompareExchangePointer_acq`, `_InterlockedCompareExchangePointer_nf`, `_InterlockedCompareExchangePointer_rel`|ARM, ARM64|\<iiintrin.h>|
 |`_InterlockedCompareExchangePointer_HLEAcquire`, `_InterlockedCompareExchangePointer_HLERelease`|x86, x64|\<immintrin.h>|
 
 ## <a name="remarks"></a>Poznámky
@@ -108,7 +108,7 @@ Návratová hodnota je počáteční hodnota cíle.
 
 Příklad použití `_InterlockedCompareExchangePointer`naleznete v tématu [_InterlockedDecrement](../intrinsics/interlockeddecrement-intrinsic-functions.md).
 
-Pokud potřebujete sémantiku získání a vydání, jako `_acq` na `_rel` začátku a na konci kritického oddílu, používejte na platformách ARM vnitřní funkce a přípony. Vnitřní objekty ARM s `_nf` příponou ("bez plotu") nefungují jako bariéra paměti.
+Pokud potřebujete sémantiku získání a vydání, jako `_acq` na `_rel` začátku a na konci kritického oddílu, používejte na platformách ARM vnitřní funkce a přípony. Vnitřní objekty ARM s `_nf` příponou (bez plotu) nefungují jako bariéra paměti.
 
 Vnitřní objekty s `_np` příponou ("bez předběžného navýšení") brání v tom, aby kompilátor vložil možné operace předběžného načtení.
 
@@ -120,5 +120,5 @@ Tyto rutiny jsou k dispozici pouze jako vnitřní objekty.
 
 ## <a name="see-also"></a>Viz také:
 
-[Vnitřní funkce kompilátoru](../intrinsics/compiler-intrinsics.md)<br/>
+[Vnitřní objekty kompilátoru](../intrinsics/compiler-intrinsics.md)\
 [Klíčová slova](../cpp/keywords-cpp.md)

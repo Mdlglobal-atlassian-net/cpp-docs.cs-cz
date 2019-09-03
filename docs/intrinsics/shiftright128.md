@@ -1,27 +1,27 @@
 ---
 title: __shiftright128
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - __shiftright128
 helpviewer_keywords:
 - __shiftright128 intrinsic
 ms.assetid: 5419a6c4-0de1-43fb-b314-4faa5b2d051f
-ms.openlocfilehash: b721abc9be22709fdc221951e2012300d6b96762
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a18a9958a51f291e4997c23e87ee48f739562416
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62390331"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70220015"
 ---
-# <a name="shiftright128"></a>__shiftright128
+# <a name="__shiftright128"></a>__shiftright128
 
-**Microsoft Specific**
+**Specifické pro společnost Microsoft**
 
-Množství 128-bit, vyjádřené dvě veličiny 64-bit posune `LowPart` a `HighPart`, vpravo o počet bitů určený `Shift` a vrátí nízké 64 bitů výsledku.
+Posune 128 množství, které je reprezentováno jako 2 64 množství `LowPart` bitů a `HighPart`napravo podle počtu bitů určených parametrem `Shift` , a vrátí nižší 64 bitů výsledku.
 
 ## <a name="syntax"></a>Syntaxe
 
-```
+```C
 unsigned __int64 __shiftright128(
    unsigned __int64 LowPart,
    unsigned __int64 HighPart,
@@ -29,40 +29,40 @@ unsigned __int64 __shiftright128(
 );
 ```
 
-#### <a name="parameters"></a>Parametry
+### <a name="parameters"></a>Parametry
 
-*LowPart*<br/>
-[in] Nízká 64 bitů množství 128 bitů a posunutí.
+*LowPart*\
+pro Dolní 64 bitů 128 množství, které se má posunout
 
-*HighPart*<br/>
-[in] Vysoká 64 bitů množství 128 bitů a posunutí.
+*HighPart*\
+pro Horní 64 bitů 128 množství, které se má posunout
 
-*SHIFT*<br/>
-[in] Počet bitů na posunu.
+*Posouvá*\
+pro Počet bitů, které se mají posunout
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Nízká 64 bitů výsledku.
+Dolních 64 bitů výsledku.
 
 ## <a name="requirements"></a>Požadavky
 
-|Vnitřní|Architektura|
+|Vnitřním|Architektura|
 |---------------|------------------|
 |`__shiftright128`|x64|
 
-**Soubor hlaviček** \<intrin.h >
+**Hlavičkový soubor** \<intrin. h >
 
 ## <a name="remarks"></a>Poznámky
 
-`Shift` Hodnota je vždy modulo 64 tak, že, například při volání `__shiftright128(0, 1, 64)`, funkce změní horní část `0` bits klikněte pravým tlačítkem myši a vrátí dolní část z `0` a ne `1` jako jinak lze očekávat.
+`0` `__shiftright128(0, 1, 64)` `1` `0` Hodnota je vždy modulo 64, takže pokud například voláte, funkce posune pravou část bitů vpravo a vrátí malou část a ne tak, jak by jinak bylo možné očekávat. `Shift`
 
 ## <a name="example"></a>Příklad
 
-Příklad najdete v tématu [__shiftleft128](../intrinsics/shiftleft128.md).
+Příklad naleznete v tématu [__shiftleft128](../intrinsics/shiftleft128.md).
 
-**Specifické pro END Microsoft**
+**Specifické pro konec Microsoftu**
 
 ## <a name="see-also"></a>Viz také:
 
-[__shiftleft128](../intrinsics/shiftleft128.md)<br/>
-[Vnitřní funkce kompilátoru](../intrinsics/compiler-intrinsics.md)
+[__shiftleft128](../intrinsics/shiftleft128.md)\
+[Vnitřní objekty kompilátoru](../intrinsics/compiler-intrinsics.md)

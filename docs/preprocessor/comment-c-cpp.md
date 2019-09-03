@@ -1,6 +1,6 @@
 ---
-title: comment (C/C++)
-ms.date: 11/04/2016
+title: comment – direktiva pragma
+ms.date: 08/29/2019
 f1_keywords:
 - vc-pragma.comment
 - comment_CPP
@@ -10,88 +10,81 @@ helpviewer_keywords:
 - pragmas, comment
 - comment pragma
 ms.assetid: 20f099ff-6303-49b3-9c03-a94b6aa69b85
-ms.openlocfilehash: fb9bfef2ae751529b8424143cde020e78f17ec72
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3175ad5318bcc6fd9aa6233258ccec9033c89be8
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62403474"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70219097"
 ---
-# <a name="comment-cc"></a>comment (C/C++)
+# <a name="comment-pragma"></a>comment – direktiva pragma
 
-Umístí záznam komentář do objektu souboru nebo spustitelný soubor.
+Umístí záznam komentáře do souboru objektu nebo do spustitelného souboru.
 
 ## <a name="syntax"></a>Syntaxe
 
-```
-#pragma comment( comment-type [,"commentstring"] )
-```
+> **#pragma komentář (** *komentář-typ* [ **,** "*Komentář-řetězec*"] **)**
 
 ## <a name="remarks"></a>Poznámky
 
-*Typů komentář* je jedním z předdefinované identifikátory, které jsou popsané níže, který určuje typ záznamu komentář. Volitelný *commentstring* není řetězcový literál, který poskytuje další informace o některých typů komentář. Protože *commentstring* je textový literál, dodržuje všechna pravidla pro řetězcové literály s ohledem na řídicí znaky, uvozovky (`"`) a zřetězení.
+*Typ komentáře* je jeden z předdefinovaných identifikátorů popsaných níže, který určuje typ záznamu komentáře. Volitelný *řetězec komentáře* je řetězcový literál, který poskytuje další informace pro některé typy komentářů. Vzhledem k tomu, že *řetězec komentáře* je řetězcový literál, dodržuje všechna pravidla pro řetězcové literály s ohledem na řídicí znaky, vložené uvozovky`"`() a zřetězení.
 
-### <a name="compiler"></a> – kompilátor
+### <a name="compiler"></a>– kompilátor
 
-Umístí název a číslo verze kompilátoru do souboru objektu. Tento záznam komentář se ignoruje linkerem. Pokud zadáte *commentstring* parametr pro tento typ záznamu, kompilátor vygeneruje upozornění.
+Umístí název a číslo verze kompilátoru do souboru objektu. Tento záznam komentáře se v linkeru ignoruje. Pokud zadáte parametr *řetězce komentáře* pro tento typ záznamu, kompilátor vygeneruje upozornění.
 
-### <a name="exestr"></a>exestr
+### <a name="lib"></a>Knihovna
 
-Místa *commentstring* do souboru objektu. V době spojení, tento řetězec nachází ve spustitelném souboru. Řetězec není načtena do paměti při načtení spustitelného souboru; je však možné najít s programem, který vyhledá tisknutelný řetězce v souborech. Jedno použití pro tento typ záznamu komentář, je vložit číslo verze nebo podobné informace ve spustitelném souboru.
+Umístí záznam hledání knihovny do souboru objektů. K tomuto typu komentáře musí doprovázet parametr *řetězce Comment* obsahující název (a případně cestu) knihovny, kterou má linker Hledat. Název knihovny následuje po výchozí knihovně – prohledání záznamů v souboru objektů; linker vyhledá tuto knihovnu stejně, jako kdyby se na příkazovém řádku jmenovala Tato knihovna, a to za předpokladu, že knihovna není zadaná pomocí [/NODEFAULTLIB](../build/reference/nodefaultlib-ignore-libraries.md). V jednom zdrojovém souboru můžete umístit více záznamů hledání knihovny. Každý záznam se zobrazí v souboru objektu ve stejném pořadí, ve kterém byl nalezen ve zdrojovém souboru.
 
-`exestr` je zastaralá a bude v budoucí verzi; odebrána linker nezpracovává záznam komentář.
-
-### <a name="lib"></a>lib
-
-Záznam knihovny vyhledávání umístí do souboru objektu. Tento typ komentáře musí být doplněny *commentstring* parametr obsahující název (a případně cestu) knihovny, který chcete, aby linkeru, aby hledání. Výchozí knihovna hledání záznamy v souboru objektů; následuje název knihovny propojovací program vyhledá pro tuto knihovnu stejně, jako by vám měl s názvem ho v příkazovém řádku za předpokladu, že není zadaný knihovny s [: / NODEFAULTLIB](../build/reference/nodefaultlib-ignore-libraries.md). Umístíte více záznamů vyhledávání knihovny ve stejném zdrojovém souboru; Každý záznam se zobrazí v souboru objektu ve stejném pořadí, ve kterém dochází ve zdrojovém souboru.
-
-Pokud je důležité pořadí výchozí knihovny a přidání knihovny, kompilaci [/Zl](../build/reference/zl-omit-default-library-name.md) přepínač zabrání názvu výchozí knihovny umístěných v modulu objektu. Druhý comment – Direktiva pragma pak lze použít pro vložení názvu výchozí knihovny po přidání knihovny. Knihoven uvedené pomocí direktivy pragma se zobrazí v modulu objektu ve stejném pořadí, ve kterém se nacházejí ve zdrojovém kódu.
+Pokud je důležité pořadí výchozí knihovny a přidané knihovny důležité, kompilace s přepínačem [/zl](../build/reference/zl-omit-default-library-name.md) zabrání v umístění názvu výchozí knihovny do modulu Object. Direktivu pragma druhého komentáře pak lze použít k vložení názvu výchozí knihovny po přidané knihovně. Knihovny uvedené s těmito direktivami pragma se zobrazí v modulu objektu ve stejném pořadí, ve kterém jsou nalezeny ve zdrojovém kódu.
 
 ### <a name="linker"></a>linker
 
-Místa [– možnost linkeru](../build/reference/linker-options.md) do souboru objektu. Tento typ komentáře můžete použít k určení linkeru namísto předávání do příkazového řádku nebo zadání ve vývojovém prostředí. Například můžete zadat / include – možnost vynutit zahrnutí symbol:
+Umístí [možnost linkeru](../build/reference/linker-options.md) do souboru objektu. Pomocí tohoto typu komentáře můžete zadat možnost linkeru místo předání do příkazového řádku nebo jeho zadání ve vývojovém prostředí. Například můžete zadat možnost/include pro vynucení zahrnutí symbolu:
 
-```
+```C
 #pragma comment(linker, "/include:__mySymbol")
 ```
 
-Pouze následující (*typů komentář*) jsou k dispozici identifikátor propojovacího programu předat možnosti linkeru:
+Pouze následující možnosti linkeru (*typ komentář*) jsou k dispozici pro předání do identifikátoru linkeru:
 
-- [/ DEFAULTLIB](../build/reference/defaultlib-specify-default-library.md)
+- [/DEFAULTLIB](../build/reference/defaultlib-specify-default-library.md)
 
 - [/EXPORT](../build/reference/export-exports-a-function.md)
 
-- [/ INCLUDE](../build/reference/include-force-symbol-references.md)
+- [/INCLUDE](../build/reference/include-force-symbol-references.md)
 
 - [/MANIFESTDEPENDENCY](../build/reference/manifestdependency-specify-manifest-dependencies.md)
 
 - [/MERGE](../build/reference/merge-combine-sections.md)
 
-- [/ SECTION](../build/reference/section-specify-section-attributes.md)
+- [/SECTION](../build/reference/section-specify-section-attributes.md)
 
 ### <a name="user"></a>uživatel
 
-Obecné komentáře umístí do souboru objektu. *Commentstring* parametr obsahuje text komentáře. Tento záznam komentář se ignoruje linkerem.
+Umístí obecný komentář do souboru objektu. Parametr *řetězce komentáře* obsahuje text komentáře. Tento záznam komentáře se v linkeru ignoruje.
 
-Následující direktivy pragma přikazuje linkeru pro hledání EMAPI. Knihovny LIB při propojování. Propojovací program vyhledá první v aktuálním pracovním adresáři a poté v cestě zadané v proměnné prostředí LIB.
+## <a name="examples"></a>Příklady
 
-```
+Následující direktiva pragma způsobí, že linker vyhledá EMAPI. Knihovna LIB při propojování Linker nejdříve vyhledá v aktuálním pracovním adresáři a pak v cestě zadané v proměnné prostředí LIB.
+
+```C
 #pragma comment( lib, "emapi" )
 ```
 
-Následující direktivy pragma způsobí, že kompilátor umístí název a číslo verze kompilátoru do souboru objektu:
+Následující direktiva pragma způsobí, že kompilátor umístí do souboru objektu název a číslo verze kompilátoru:
 
-```
+```C
 #pragma comment( compiler )
 ```
 
-> [!NOTE]
-> Pro komentáře trvají *commentstring* parametr, můžete použít makra v jakémkoli místě, kde by použít textový literál, za předpokladu, že se makro rozbalí na řetězcový literál. Také lze zřetězit libovolnou kombinaci řetězcové literály a makra, která rozšířit na řetězcové literály. Například následující příkaz je přijatelné:
+Pro komentáře, které přijímají parametr *řetězce Comment* , můžete použít makro na jakémkoli místě, kde byste použili řetězcový literál, za předpokladu, že se makro rozšíří na řetězcový literál. Můžete také zřetězit libovolnou kombinaci řetězcových literálů a makra, která se rozšiřují na řetězcové literály. Například následující příkaz je přijatelný:
 
-```
+```C
 #pragma comment( user, "Compiled on " __DATE__ " at " __TIME__ )
 ```
 
 ## <a name="see-also"></a>Viz také:
 
-[Direktivy Pragma a klíčové slovo __Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)
+[Direktivy pragma a klíčové slovo __pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

@@ -1,6 +1,6 @@
 ---
-title: region, endregion
-ms.date: 10/18/2018
+title: region, endregion – direktivy pragma
+ms.date: 08/29/2019
 f1_keywords:
 - vc-pragma.endregion
 - endregion_CPP
@@ -12,37 +12,35 @@ helpviewer_keywords:
 - endregion pragma
 - region pragma
 ms.assetid: c697f807-622f-4796-851b-68a42bbecd84
-ms.openlocfilehash: c73a90aa2be83d643b74dde4645081e89da3ff73
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4a01e04582ac81d678aa0702945c62ee974a4428
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62179747"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70222377"
 ---
-# <a name="region-endregion"></a>region, endregion
+# <a name="region-endregion-pragmas"></a>region, endregion – direktivy pragma
 
-`#pragma region` Umožňuje určit blok kódu, které můžete rozbalit nebo sbalit při použití [funkce osnovy](/visualstudio/ide/outlining) z editoru kódu sady Visual Studio.
+`#pragma region`umožňuje zadat blok kódu, který lze rozbalit nebo sbalit při použití [funkce sbalení](/visualstudio/ide/outlining) editoru Visual Studio Code.
 
 ## <a name="syntax"></a>Syntaxe
 
-```
-#pragma region name
-#pragma endregion comment
-```
+> **oblast #pragma** *název*\
+> **#pragma endregion** *Komentář*
 
 ### <a name="parameters"></a>Parametry
 
-*Komentář*<br/>
-(Volitelné) Komentář, který se zobrazí v editoru kódu.
+*vytvořena*\
+Volitelné Komentář, který se má zobrazit v editoru kódu
 
-*Jméno*<br/>
-(Volitelné) Název oblasti.  Tento název se zobrazí v editoru kódu.
+*Jméno*\
+Volitelné Název oblasti Tento název se zobrazí v editoru kódu.
 
 ## <a name="remarks"></a>Poznámky
 
-`#pragma endregion` označuje konec `#pragma region` bloku.
+`#pragma endregion`označuje konec `#pragma region` bloku.
 
-A `#region` bloku musí být ukončen direktivou `#pragma endregion`.
+Blok musí končit `#pragma endregion`direktivou. `#region`
 
 ## <a name="example"></a>Příklad
 
@@ -59,4 +57,4 @@ int main() {}
 
 ## <a name="see-also"></a>Viz také:
 
-[Direktivy Pragma a klíčové slovo __Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)
+[Direktivy pragma a klíčové slovo __pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

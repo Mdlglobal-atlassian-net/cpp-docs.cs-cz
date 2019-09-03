@@ -1,35 +1,33 @@
 ---
-title: auto_search
-ms.date: 11/04/2016
+title: importovat Atribut auto_search
+ms.date: 08/29/2019
 f1_keywords:
 - auto_search
 helpviewer_keywords:
 - auto_search attribute
 ms.assetid: 0fee2503-cd28-4d8c-b4d5-15ca0a91d2d2
-ms.openlocfilehash: 29638afbe42a5c5f1894bc7047d10e05363f494e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 36c30b9a1c560659d117203c3146806ef3a1ad4a
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62403552"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70216295"
 ---
-# <a name="autosearch"></a>auto_search
+# <a name="auto_search-import-attribute"></a>importovat Atribut auto_search
 
-**Specifické pro C++**
+**C++Konkrétní**
 
-Určuje, že při odkazování na knihovnu typů s `#import` a sama odkazuje na jinou knihovnu typů, může kompilátor zavést implicitní `#import` pro tuto jinou knihovnu typů.
+Určuje, že pokud se na knihovnu typů odkazuje `#import` a samo odkazuje na jinou knihovnu typů, kompilátor může provést implicitní `#import` pro jinou knihovnu typů.
 
 ## <a name="syntax"></a>Syntaxe
 
-```
-auto_search
-```
+> **#import** *typ – Knihovna* **auto_search**
 
 ## <a name="remarks"></a>Poznámky
 
-**Specifické pro END C++**
+**Specifické C++ pro konec**
 
 ## <a name="see-also"></a>Viz také:
 
-[atributů #import](../preprocessor/hash-import-attributes-cpp.md)<br/>
-[#import – direktiva](../preprocessor/hash-import-directive-cpp.md)
+[Atributy #import](../preprocessor/hash-import-attributes-cpp.md)\
+[#import direktiva](../preprocessor/hash-import-directive-cpp.md)
