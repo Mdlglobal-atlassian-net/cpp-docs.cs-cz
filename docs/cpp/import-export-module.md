@@ -10,16 +10,16 @@ helpviewer_keywords:
 - modules [C++], import
 - modules [C++], export
 description: Použijte příkaz Import pro přístup k typům a funkcím definovaným v zadaném modulu.
-ms.openlocfilehash: fbb9c45ec816c859edb4df38ad67dc7778247e87
-ms.sourcegitcommit: 7b039b5f32f6c59be6c6bb1cffafd69c3bfadd35
+ms.openlocfilehash: ee1d50a76a3304359c0771aa0174968439f5faa4
+ms.sourcegitcommit: fd0f8839da5c6a3663798a47c6b0bb6e63b518bd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68537764"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70273627"
 ---
 # <a name="module-import-export"></a>modul, import, export
 
-Klíčová slova **modul**, **Import**a **Export** jsou k dispozici v `/experimental:modules` c++ 20 a vyžadují přepínač kompilátoru společně `/std:c++latest`s. Další informace najdete v tématu [Přehled modulů v C++ ](modules-cpp.md).
+Klíčová slova **modul**, **Import**a **Export** jsou k dispozici v c++ 20 a vyžadují přepínač kompilátoru [/Experimental: Module](../build/reference/experimental-module.md) společně s [/std: C + + nejnovější](../build/reference/std-specify-language-standard-version.md). Další informace najdete v tématu [Přehled modulů v C++ ](modules-cpp.md).
 
 ## <a name="module"></a>module
 
@@ -87,4 +87,5 @@ class Baz
 ```
 
 ## <a name="see-also"></a>Viz také
+
 [Přehled modulů vC++](modules-cpp.md)

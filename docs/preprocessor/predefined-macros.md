@@ -143,12 +143,12 @@ helpviewer_keywords:
 - _WINRT_DLL macro
 - __func__ identifier
 ms.assetid: 1cc5f70a-a225-469c-aed0-fe766238e23f
-ms.openlocfilehash: ab478cd8ac51b5cb88cec38f80541df8a7be2789
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: 15b70b0292f671d99b320c8d23598e68b47adb0d
+ms.sourcegitcommit: fd0f8839da5c6a3663798a47c6b0bb6e63b518bd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70222292"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70273821"
 ---
 # <a name="predefined-macros"></a>Předdefinovaná makra
 
@@ -160,7 +160,7 @@ MSVC podporuje Předdefinovaná makra preprocesoru, která vyžaduje standard AN
 
 Kompilátor podporuje tento předdefinovaný identifikátor určený podle ISO C99 a ISO C++ 11.
 
-- **&#95;&#95; funkce &#95;Func** Neúplný a Nekvalifikovaný název ohraničující funkce jako místní **statické** pole const typu Function.
+- **&#95;&#95; funkce &#95;Func** Neúplný a Nekvalifikovaný název ohraničující funkce jako místní **statické pole const** **typu Function.**
 
     ```cpp
     void example(){
@@ -182,7 +182,7 @@ Kompilátor podporuje tato předdefinovaná makra určená standardy ISO C99 a I
 
 - **&#95; STDC &#95; &#95;** Definováno jako 1 pouze při kompilování jako C a pokud je určena možnost kompilátoru [/za](../build/reference/za-ze-disable-language-extensions.md) . V opačném případě Nedefinováno.
 
-- **&#95;&#95;STDC&#95;&#95; Hosted** jako 1, pokud je implementace *hostovaná implementace*, jednu, která podporuje celou požadovanou standardní knihovnu. V opačném případě definováno jako 0.
+- **&#95;&#95;STDC&#95;Hosted&#95;**  jako 1, pokud je implementace *hostovaná implementace*, jednu, která podporuje celou požadovanou standardní knihovnu. V opačném případě definováno jako 0.
 
 - **&#95;&#95;STDCPP&#95;vlákna&#95;**  definovaná jako 1 pouze v případě, že program může mít více než jedno vlákno spuštění a kompilován jako C++. V opačném případě Nedefinováno.
 
@@ -403,6 +403,16 @@ MSVC podporuje tato další předdefinovaná makra.
 
 - **&#95;&#95;Pokud&#95;je&#95;** nastavena jedna z možností kompilátoru [/RTC](../build/reference/rtc-run-time-error-checks.md) , kontroly modulu runtime MSVC definovány jako 1. V opačném případě Nedefinováno.
 
+- **&#95;MSVC&#95;tradiční** definovaný jako 0, pokud je nastaven režim/Experimental pro preprocesor [: preprocesor](../build/reference/rtc-run-time-error-checks.md) . Definováno jako 1 ve výchozím nastavení, nebo pokud je nastavena možnost [/Experimental: preprocesor-](../build/reference/rtc-run-time-error-checks.md) Compiler, aby označovala tradiční preprocesor, který je používán. **&#95;MSVC&#95;tradiční** makro a [/Experimental: možnost kompilátoru (povolit režim shody preprocesoru)](../build/reference/experimental-preprocessor.md) je k dispozici počínaje verzí Visual Studio 2017 verze 15,8.
+
+   ```cpp
+   #if defined(_MSVC_TRADITIONAL) && _MSVC_TRADITIONAL
+   // Logic using the traditional preprocessor
+   #else
+   // Logic using cross-platform compatible preprocessor
+   #endif
+   ```
+
 - **&#95;MT** Definováno jako 1, pokud je zadána [/MD nebo/MDD](../build/reference/md-mt-ld-use-run-time-library.md) (VÍCEVLÁKNOVÁ knihovna DLL) nebo [/Mt nebo/MTD](../build/reference/md-mt-ld-use-run-time-library.md) (vícevláknové). V opačném případě Nedefinováno.
 
 - **&#95;NATIVNÍ&#95;WCHAR&#95;T&#95;definovaná** jako 1, když je nastavená možnost kompilátoru [/Zc: wchar_t](../build/reference/zc-wchar-t-wchar-t-is-native-type.md) . V opačném případě Nedefinováno.
@@ -418,7 +428,7 @@ MSVC podporuje tato další předdefinovaná makra.
    }
    ```
 
-- **&#95;Před&#95; rychlým** Definováno jako 1, pokud je nastavena možnost kompilátoru [/analyze](../build/reference/analyze-code-analysis.md) . V opačném případě Nedefinováno.
+- **&#95;Před rychlým&#95;** Definováno jako 1, pokud je nastavena možnost kompilátoru [/analyze](../build/reference/analyze-code-analysis.md) . V opačném případě Nedefinováno.
 
 - **&#95;&#95; Časové &#95;razítko** Definováno jako řetězcový literál, který obsahuje datum a čas poslední změny aktuálního zdrojového souboru, ve zkráceném formátu s konstantní délkou vrácenou funkcí CRT [asctime](../c-runtime-library/reference/asctime-wasctime.md) , `Fri 19 Aug 13:32:58 2016`například. Toto makro je vždy definováno.
 

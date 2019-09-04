@@ -1,5 +1,5 @@
 ---
-title: CMFCToolTipCtrl Class
+title: CMFCToolTipCtrl – třída
 ms.date: 11/04/2016
 f1_keywords:
 - CMFCToolTipCtrl
@@ -32,18 +32,18 @@ helpviewer_keywords:
 - CMFCToolTipCtrl [MFC], SetLocation
 - CMFCToolTipCtrl [MFC], SetParams
 ms.assetid: 9fbfcfb1-a8ab-417f-ae29-9a9ca85ee58f
-ms.openlocfilehash: aaf9d9570906b7886d8ec78575c39db5d62099f7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5376fd21f84411c86ade564d7c76d073ccb909a6
+ms.sourcegitcommit: fd0f8839da5c6a3663798a47c6b0bb6e63b518bd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62388303"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70273683"
 ---
-# <a name="cmfctooltipctrl-class"></a>CMFCToolTipCtrl Class
+# <a name="cmfctooltipctrl-class"></a>CMFCToolTipCtrl – třída
 
-Implementace rozšířeného popisku na základě [ctooltipctrl – třída](../../mfc/reference/ctooltipctrl-class.md). Popisek na základě `CMFCToolTipCtrl` třída může zobrazit ikonu, popisek a popis. Můžete upravit jeho vzhled pomocí přechodové výplně, vlastní text a barvy ohraničení, tučným písmem, zaoblených rohů nebo stylu bublin.
+Rozšířená implementace tooltipu na základě [třídy CToolTipCtrl](../../mfc/reference/ctooltipctrl-class.md) Popis na základě `CMFCToolTipCtrl` třídy může zobrazit ikonu, popisek a popis. Můžete přizpůsobit jeho vizuální vzhled pomocí přechodové výplně, vlastního textu a barev ohraničení, tučného textu, zaoblených rohů nebo stylu bubliny.
 
-Další podrobnosti najdete ve zdrojovém kódu v **VC\\atlmfc\\src\\mfc** složce instalace sady Visual Studio.
+Další podrobnosti najdete ve zdrojovém kódu ve složce **VC\\atlmfc\\src\\MFC** v instalaci sady Visual Studio.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -55,78 +55,67 @@ class CMFCToolTipCtrl : public CToolTipCtrl
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
-|`CMFCToolTipCtrl::CMFCToolTipCtrl`|Výchozí konstruktor.|
+|`CMFCToolTipCtrl::CMFCToolTipCtrl`|Výchozí konstruktor|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
-|[CMFCToolTipCtrl::GetIconSize](#geticonsize)|Vrátí velikost ikony v popisku.|
-|[CMFCToolTipCtrl::GetParams](#getparams)|Vrátí nastavení zobrazení popisu.|
-|[CMFCToolTipCtrl::OnDrawBorder](#ondrawborder)|Ohraničení popisku pole.|
+|[CMFCToolTipCtrl::GetIconSize](#geticonsize)|Vrátí velikost ikony v popisu tlačítka.|
+|[CMFCToolTipCtrl::GetParams](#getparams)|Vrátí nastavení zobrazení popisku.|
+|[CMFCToolTipCtrl::OnDrawBorder](#ondrawborder)|Vykreslí ohraničení popisu tlačítka.|
 |[CMFCToolTipCtrl::OnDrawDescription](#ondrawdescription)||
-|[CMFCToolTipCtrl::OnDrawIcon](#ondrawicon)|V popisku se zobrazí ikona.|
-|[CMFCToolTipCtrl::OnDrawLabel](#ondrawlabel)|Kreslení plné popisku popisu tlačítka nebo vypočítá velikost popisku.|
-|[CMFCToolTipCtrl::OnDrawSeparator](#ondrawseparator)|Nakreslí oddělovač mezi popisek a popis v popisu tlačítka.|
-|[CMFCToolTipCtrl::OnFillBackground](#onfillbackground)|Vyplní pozadí popisu tlačítka.|
-|[CMFCToolTipCtrl::SetDescription](#setdescription)|Nastaví popis, který se má zobrazit v popisu tlačítka.|
+|[CMFCToolTipCtrl::OnDrawIcon](#ondrawicon)|Zobrazí ikonu v popisu tlačítka.|
+|[CMFCToolTipCtrl::OnDrawLabel](#ondrawlabel)|Nakreslí popisek popisku nebo vypočítá velikost popisku.|
+|[CMFCToolTipCtrl::OnDrawSeparator](#ondrawseparator)|Nakreslí oddělovač mezi popiskem a popisem v popisu tlačítka.|
+|[CMFCToolTipCtrl::OnFillBackground](#onfillbackground)|Vyplní pozadí popisku.|
+|[CMFCToolTipCtrl::SetDescription](#setdescription)|Nastaví popis, který má být zobrazen pomocí popisu tlačítka.|
 |[CMFCToolTipCtrl::SetFixedWidth](#setfixedwidth)||
 |[CMFCToolTipCtrl::SetHotRibbonButton](#sethotribbonbutton)||
 |[CMFCToolTipCtrl::SetLocation](#setlocation)||
-|[CMFCToolTipCtrl::SetParams](#setparams)|Určuje vzhled popisku pomocí `CMFCToolTipInfo` objektu.|
+|[CMFCToolTipCtrl::SetParams](#setparams)|Určuje vizuální vzhled popisu tlačítka pomocí `CMFCToolTipInfo` objektu.|
 
 ## <a name="remarks"></a>Poznámky
 
-Použití `CMFCToolTipCtrl`, `CMFCToolTipInfo`, a [ctooltipmanager – třída](../../mfc/reference/ctooltipmanager-class.md) objekty společně k implementaci vlastní popisy ve vaší aplikaci.
+Použijte `CMFCToolTipCtrl` ,`CMFCToolTipInfo`a [CTooltipManager objekty třídy](../../mfc/reference/ctooltipmanager-class.md) společně pro implementaci přizpůsobených popisů v aplikaci.
 
-Například použití prvku tooltips stylu bublin, postupujte podle těchto kroků:
+Chcete-li například použít popisky ve stylu bubliny, postupujte takto:
 
-1. Použití [CWinAppEx – třída](../../mfc/reference/cwinappex-class.md) metody k inicializaci správce popisu tlačítka ve vaší aplikaci.
+1. Použijte metodu [třídy CWinAppEx](../../mfc/reference/cwinappex-class.md) k inicializaci správce popisů v aplikaci.
 
-2. Vytvoření `CMFCToolTipInfo` struktury zadat vizuální styl, který chcete:
+2. `CMFCToolTipInfo` Vytvořte strukturu pro určení vizuálního stylu, který chcete:
 
 ```
 CMFCToolTipInfo params;
-    params.m_bBoldLabel = FALSE;
-    params.m_bDrawDescription = FALSE;
-    params.m_bDrawIcon = FALSE;
-    params.m_bRoundedCorners = TRUE;
-    params.m_bDrawSeparator = FALSE;
-    if (m_bCustomColors)
+params.m_bBoldLabel = FALSE;
+params.m_bDrawDescription = FALSE;
+params.m_bDrawIcon = FALSE;
+params.m_bRoundedCorners = TRUE;
+params.m_bDrawSeparator = FALSE;
+if (m_bCustomColors)
 {
-    params.m_clrFill = RGB (255,
-    255,
-    255);
-
-    params.m_clrFillGradient = RGB (228,
-    228,
-    240);
-
-    params.m_clrText = RGB (61,
-    83,
-    80);
-
-    params.m_clrBorder = RGB (144,
-    149,
-    168);
+    params.m_clrFill = RGB (255, 255, 255);
+    params.m_clrFillGradient = RGB (228, 228, 240);
+    params.m_clrText = RGB (61, 83, 80);
+    params.m_clrBorder = RGB (144, 149, 168);
 
 }
 ```
-3. Použití [CTooltipManager::SetTooltipParams](../../mfc/reference/ctooltipmanager-class.md#settooltipparams) metoda nastavení stylu pro všechny popisky v aplikaci s použitím styly definované v `CMFCToolTipInfo` objektu:
+3. Pomocí metody [CTooltipManager:: SetTooltipParams](../../mfc/reference/ctooltipmanager-class.md#settooltipparams) nastavte styl vizuálu pro všechny popisy v aplikaci pomocí stylů definovaných v `CMFCToolTipInfo` objektu:
 
 ```
 theApp.GetTooltipManager ()->SetTooltipParams (AFX_TOOLTIP_TYPE_ALL,
     RUNTIME_CLASS (CMFCToolTipCtrl), &params);
 ```
-Můžete také odvodit novou třídu z `CMFCToolTipCtrl` chování ovládací prvek popisku a vykreslování. Pokud chcete nastavit nové třídě ovládacího prvku popisu tlačítka, použijte `CTooltipManager::SetTooltipParams` metody:
+Můžete také odvodit novou třídu z `CMFCToolTipCtrl` pro řízení chování a vykreslování popisu tlačítka. Chcete-li určit novou třídu ovládacího prvku ToolTip, `CTooltipManager::SetTooltipParams` použijte metodu:
 
 ```
 myApp.GetTooltipManager ()->SetTooltipParams (AFX_TOOLTIP_TYPE_ALL,
     RUNTIME_CLASS (CMyToolTipCtrl))
 ```
-Chcete-li obnovit výchozí popisek třídu ovládacího prvku a vzhled popisku resetovat do výchozího stavu, zadejte hodnotu NULL v modulu runtime třídy a popis tlačítka informace o parametrech `SetTooltipParams`:
+Chcete-li obnovit výchozí třídu ToolTip Control a resetovat vzhled popisku na jeho výchozí stav, zadejte hodnotu NULL v parametrech `SetTooltipParams`běhové třídy a v informacích popisu tlačítka:
 
 ```
 theApp.GetTooltipManager ()->SetTooltipParams (AFX_TOOLTIP_TYPE_ALL,
@@ -136,13 +125,13 @@ theApp.GetTooltipManager ()->SetTooltipParams (AFX_TOOLTIP_TYPE_ALL,
 
 ## <a name="example"></a>Příklad
 
-Následující příklad ukazuje, jak vytvořit `CMFCToolTipCtrl` objektu, nastavit popis, který se zobrazí popisek a nastavte šířku ovládacího prvku tooltip.
+Následující příklad ukazuje, jak vytvořit `CMFCToolTipCtrl` objekt, nastavit popis, který se zobrazí pomocí popisku, a nastavit šířku ovládacího prvku ToolTip.
 
 [!code-cpp[NVC_MFC_RibbonApp#41](../../mfc/reference/codesnippet/cpp/cmfctooltipctrl-class_1.cpp)]
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
-[Třídy CObject](../../mfc/reference/cobject-class.md)
+[CObject](../../mfc/reference/cobject-class.md)
 
 [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)
 
@@ -154,7 +143,7 @@ Následující příklad ukazuje, jak vytvořit `CMFCToolTipCtrl` objektu, nasta
 
 ## <a name="requirements"></a>Požadavky
 
-**Header:** afxtooltipctrl.h
+**Záhlaví:** afxToolTipCtrl. h
 
 ##  <a name="cmfctooltipctrl"></a>  CMFCToolTipCtrl::CMFCToolTipCtrl
 
@@ -164,13 +153,13 @@ CMFCToolTipCtrl(CMFCToolTipInfo* pParams = NULL);
 
 ### <a name="parameters"></a>Parametry
 
-[in] *pParams*<br/>
+pro *pParams*<br/>
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="geticonsize"></a>  CMFCToolTipCtrl::GetIconSize
+##  <a name="geticonsize"></a>CMFCToolTipCtrl::GetIconSize
 
-Vrátí velikost ikony v popisku.
+Vrátí velikost ikony v popisu tlačítka.
 
 ```
 virtual CSize GetIconSize();
@@ -178,11 +167,11 @@ virtual CSize GetIconSize();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Velikost ikony v pixelech.
+Velikost ikony v pixelech
 
-##  <a name="getparams"></a>  CMFCToolTipCtrl::GetParams
+##  <a name="getparams"></a>CMFCToolTipCtrl:: GetParam
 
-Vrátí nastavení zobrazení popisu.
+Vrátí nastavení zobrazení popisku.
 
 ```
 const CMFCToolTipInfo& GetParams() const;
@@ -190,11 +179,11 @@ const CMFCToolTipInfo& GetParams() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Aktuální nastavení zobrazení popisu tlačítka, které jsou uložené v [cmfctooltipinfo – třída](../../mfc/reference/cmfctooltipinfo-class.md) objektu.
+Aktuální nastavení zobrazení popisu, která jsou uložena v objektu [třídy CMFCToolTipInfo](../../mfc/reference/cmfctooltipinfo-class.md) .
 
 ##  <a name="ondrawborder"></a>  CMFCToolTipCtrl::OnDrawBorder
 
-Ohraničení popisku pole.
+Vykreslí ohraničení popisu tlačítka.
 
 ```
 virtual void OnDrawBorder(
@@ -206,19 +195,19 @@ virtual void OnDrawBorder(
 ### <a name="parameters"></a>Parametry
 
 *pDC*<br/>
-[in] Ukazatel na kontext zařízení.
+pro Ukazatel na kontext zařízení.
 
-*Rect*<br/>
-[in] Ohraničující obdélník ovládacího prvku tooltip.
+*OBD*<br/>
+pro Ohraničující obdélník popisku.
 
 *clrLine*<br/>
-[in] Barva ohraničení.
+pro Barva ohraničení
 
 ### <a name="remarks"></a>Poznámky
 
-Potlačí tuto metodu v odvozené třídě pro přizpůsobení vzhledu ohraničení popisu tlačítka.
+Přepsáním této metody v odvozené třídě upravíte vzhled ohraničení popisku.
 
-##  <a name="ondrawdescription"></a>  CMFCToolTipCtrl::OnDrawDescription
+##  <a name="ondrawdescription"></a>CMFCToolTipCtrl::OnDrawDescription
 
 ```
 virtual CSize OnDrawDescription(
@@ -229,9 +218,9 @@ virtual CSize OnDrawDescription(
 
 ### <a name="parameters"></a>Parametry
 
-[in] *pDC*<br/>
-[in] *rect*<br/>
-[in] *bCalcOnly*<br/>
+pro *primární řadič domény*<br/>
+pro *Rect*<br/>
+pro *bCalcOnly*<br/>
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -239,7 +228,7 @@ virtual CSize OnDrawDescription(
 
 ##  <a name="ondrawicon"></a>  CMFCToolTipCtrl::OnDrawIcon
 
-V popisku se zobrazí ikona.
+Zobrazí ikonu v popisu tlačítka.
 
 ```
 virtual BOOL OnDrawIcon(
@@ -250,22 +239,22 @@ virtual BOOL OnDrawIcon(
 ### <a name="parameters"></a>Parametry
 
 *pDC*<br/>
-[in] Ukazatel na kontext zařízení.
+pro Ukazatel na kontext zařízení.
 
 *rectImage*<br/>
-[in] Souřadnice na ikonu.
+pro Souřadnice ikony
 
 ### <a name="return-value"></a>Návratová hodnota
 
-TRUE, pokud byl nakreslen ikonu. V opačném případě FALSE.
+TRUE, pokud byla ikona vykreslena. V opačném případě FALSE.
 
 ### <a name="remarks"></a>Poznámky
 
-Potlačí tuto metodu v odvozené třídy za účelem zobrazení vlastní ikony. Musí také přepsat [CMFCToolTipCtrl::GetIconSize](#geticonsize) umožňující popisek, který správně vypočítat rozložení textu a popis.
+Přepište tuto metodu v odvozené třídě, aby se zobrazila vlastní ikona. Je také nutné přepsat [CMFCToolTipCtrl:: GetIconSize](#geticonsize) , aby popis mohl správně vypočítat rozložení textu a popisu.
 
 ##  <a name="ondrawlabel"></a>  CMFCToolTipCtrl::OnDrawLabel
 
-Kreslení plné popisku popisu tlačítka nebo vypočítá velikost popisku.
+Nakreslí popisek popisku nebo vypočítá velikost popisku.
 
 ```
 virtual CSize OnDrawLabel(
@@ -277,25 +266,25 @@ virtual CSize OnDrawLabel(
 ### <a name="parameters"></a>Parametry
 
 *pDC*<br/>
-[in] Ukazatel na kontext zařízení.
+pro Ukazatel na kontext zařízení.
 
-*Rect*<br/>
-[in] Popisek oblasti ohraničující obdélník.
+*OBD*<br/>
+pro Ohraničující obdélník oblasti popisku.
 
 *bCalcOnly*<br/>
-[in] Při hodnotě TRUE se nebude vykreslen popisek.
+pro Při hodnotě TRUE se popisek nevykresluje.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Velikost popisku v pixelech.
+Velikost popisku v pixelech
 
 ### <a name="remarks"></a>Poznámky
 
-Potlačí tuto metodu v odvozené třídě, pokud chcete přizpůsobit vzhled popisku tooltip.
+Tuto metodu přepište v odvozené třídě, pokud chcete přizpůsobit vzhled popisku ToolTip.
 
-##  <a name="ondrawseparator"></a>  CMFCToolTipCtrl::OnDrawSeparator
+##  <a name="ondrawseparator"></a>CMFCToolTipCtrl::OnDrawSeparator
 
-Nakreslí oddělovač mezi popisek a popis v popisu tlačítka.
+Nakreslí oddělovač mezi popiskem a popisem v popisu tlačítka.
 
 ```
 virtual void OnDrawSeparator(
@@ -308,26 +297,26 @@ virtual void OnDrawSeparator(
 ### <a name="parameters"></a>Parametry
 
 *pDC*<br/>
-[in] Ukazatel na kontext zařízení.
+pro Ukazatel na kontext zařízení.
 
 *x1*<br/>
-[in] Vodorovné souřadnice levého koncový oddělovač
+pro Vodorovná souřadnice levého konce oddělovače
 
 *x2*<br/>
-[in] Vodorovné souřadnice pravého konce oddělovače.
+pro Vodorovná souřadnice pravého konce oddělovače
 
 *Y*<br/>
-[in] Svislé souřadnice oddělovače.
+pro Svislá souřadnice oddělovače
 
 ### <a name="remarks"></a>Poznámky
 
-Výchozí implementace nakreslí čáru z bodu (x1, y) do bodu (x2, y).
+Výchozí implementace nakreslí čáru od bodu (x1, y) k bodu (X2, y).
 
-Potlačí tuto metodu v odvozené třídě pro přizpůsobení vzhledu oddělovače.
+Přepsáním této metody v odvozené třídě upravíte vzhled oddělovače.
 
 ##  <a name="onfillbackground"></a>  CMFCToolTipCtrl::OnFillBackground
 
-Vyplní pozadí popisu tlačítka.
+Vyplní pozadí popisku.
 
 ```
 virtual void OnFillBackground(
@@ -340,26 +329,26 @@ virtual void OnFillBackground(
 ### <a name="parameters"></a>Parametry
 
 *pDC*<br/>
-[in] Ukazatel na kontext zařízení.
+pro Ukazatel na kontext zařízení.
 
-*Rect*<br/>
-[in] Určuje ohraničující obdélník oblasti tak, aby vyplnil.
+*OBD*<br/>
+pro Určuje ohraničující obdélník oblasti, která má být vyplněna.
 
 *clrText*<br/>
-[in] Barva popředí popisu tlačítka.
+pro Barva popředí tlačítka
 
 *clrLine*<br/>
-[in] Barva ohraničení a čára oddělovač mezi popisek a popis.
+pro Barva ohraničení a oddělovací čára mezi popiskem a popisem
 
 ### <a name="remarks"></a>Poznámky
 
-Výchozí implementace vyplní obdélník, který je určen *rect* s barvu nebo vzorek určené posledního volání [CMFCToolTipCtrl::SetParams](#setparams).
+Výchozí implementace vyplní obdélník, který je určen jako *Rect* , barvou nebo vzorkem určeným posledním voláním metody [CMFCToolTipCtrl:: setparams](#setparams).
 
-Potlačí tuto metodu v odvozené třídě, pokud chcete přizpůsobit vzhled ovládacího prvku tooltip.
+Tuto metodu přepište v odvozené třídě, pokud chcete přizpůsobit vzhled popisu tlačítka.
 
-##  <a name="setdescription"></a>  CMFCToolTipCtrl::SetDescription
+##  <a name="setdescription"></a>CMFCToolTipCtrl::SetDescription
 
-Nastaví popis, který se má zobrazit v popisu tlačítka.
+Nastaví popis, který má být zobrazen pomocí popisu tlačítka.
 
 ```
 virtual void SetDescription(const CString strDesrciption);
@@ -368,13 +357,13 @@ virtual void SetDescription(const CString strDesrciption);
 ### <a name="parameters"></a>Parametry
 
 *strDesrciption*<br/>
-[in] Text popisu.
+pro Text popisu
 
 ### <a name="remarks"></a>Poznámky
 
-Text popisu, který se zobrazí na ovládacím prvku ToolStrip za oddělovače.
+Text popisu se zobrazí v popisku pod oddělovačem.
 
-##  <a name="setfixedwidth"></a>  CMFCToolTipCtrl::SetFixedWidth
+##  <a name="setfixedwidth"></a>CMFCToolTipCtrl::SetFixedWidth
 
 ```
 void SetFixedWidth(
@@ -384,12 +373,12 @@ void SetFixedWidth(
 
 ### <a name="parameters"></a>Parametry
 
-[in] *nWidthRegular*<br/>
-[in] *nWidthLargeImage*<br/>
+pro *nWidthRegular*<br/>
+pro *nWidthLargeImage*<br/>
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="sethotribbonbutton"></a>  CMFCToolTipCtrl::SetHotRibbonButton
+##  <a name="sethotribbonbutton"></a>CMFCToolTipCtrl::SetHotRibbonButton
 
 ```
 void SetHotRibbonButton(CMFCRibbonButton* pRibbonButton);
@@ -397,11 +386,11 @@ void SetHotRibbonButton(CMFCRibbonButton* pRibbonButton);
 
 ### <a name="parameters"></a>Parametry
 
-[in] *pRibbonButton*<br/>
+pro *pRibbonButton*<br/>
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="setlocation"></a>  CMFCToolTipCtrl::SetLocation
+##  <a name="setlocation"></a>CMFCToolTipCtrl::SetLocation
 
 ```
 void SetLocation(CPoint pt);
@@ -409,13 +398,13 @@ void SetLocation(CPoint pt);
 
 ### <a name="parameters"></a>Parametry
 
-[in] *pt*<br/>
+pro *PT*<br/>
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="setparams"></a>  CMFCToolTipCtrl::SetParams
+##  <a name="setparams"></a>CMFCToolTipCtrl::SetParams
 
-Určuje vzhled popisku pomocí [cmfctooltipinfo – třída](../../mfc/reference/cmfctooltipinfo-class.md) objektu.
+Určuje vizuální vzhled popisu tlačítka pomocí objektu [třídy CMFCToolTipInfo](../../mfc/reference/cmfctooltipinfo-class.md) .
 
 ```
 void SetParams(CMFCToolTipInfo* pParams);
@@ -424,11 +413,11 @@ void SetParams(CMFCToolTipInfo* pParams);
 ### <a name="parameters"></a>Parametry
 
 *pParams*<br/>
-[in] Ukazatel [cmfctooltipinfo – třída](../../mfc/reference/cmfctooltipinfo-class.md) objekt, který obsahuje parametry zobrazení.
+pro Ukazatel na objekt [třídy CMFCToolTipInfo](../../mfc/reference/cmfctooltipinfo-class.md) , který obsahuje parametry zobrazení.
 
 ### <a name="remarks"></a>Poznámky
 
-Pokaždé, když se zobrazí popis tlačítka, je vykreslen pomocí barvy a styly vizuál, který *pParams* určuje. Hodnota *pParams* je uložen v chráněný člen `m_Params`, který je přístupný prostřednictvím odvozené třídy, která přepíše [CMFCToolTipCtrl::OnDrawBorder](#ondrawborder), [cmfctooltipctrl –: : OnDrawIcon](#ondrawicon), [CMFCToolTipCtrl::OnDrawLabel](#ondrawlabel), [CMFCToolTipCtrl::OnDrawSeparator](#ondrawseparator), nebo [CMFCToolTipCtrl::OnFillBackground](#onfillbackground)udržovat zadané vzhled.
+Pokaždé, když se zobrazí popisek, vykreslí se pomocí barev a vizuálních stylů, které *pParams* určuje. Hodnota *pParams* je uložena v chráněném členu `m_Params`, ke kterému lze přivodit odvozenou třídou, která přepisuje [CMFCToolTipCtrl:: OnDrawBorder](#ondrawborder), [CMFCToolTipCtrl:: OnDrawIcon](#ondrawicon), [CMFCToolTipCtrl:: OnDrawLabel ](#ondrawlabel), [CMFCToolTipCtrl:: OnDrawSeparator](#ondrawseparator)nebo [CMFCToolTipCtrl:: OnFillBackground](#onfillbackground) pro zachování zadaného vzhledu.
 
 ## <a name="see-also"></a>Viz také:
 

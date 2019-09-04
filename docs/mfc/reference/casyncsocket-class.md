@@ -1,6 +1,6 @@
 ---
 title: CAsyncSocket – třída
-ms.date: 11/04/2016
+ms.date: 09/03/2019
 f1_keywords:
 - CAsyncSocket
 - AFXSOCK/CAsyncSocket
@@ -74,12 +74,12 @@ helpviewer_keywords:
 - CAsyncSocket [MFC], OnSend
 - CAsyncSocket [MFC], m_hSocket
 ms.assetid: cca4d5a1-aa0f-48bd-843e-ef0e2d7fc00b
-ms.openlocfilehash: ef938796faf8e9b9272a519ed1e51037edc90425
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 4e14052d400268a8852298113ba9b51fda713dc8
+ms.sourcegitcommit: fd0f8839da5c6a3663798a47c6b0bb6e63b518bd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69507532"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70273794"
 ---
 # <a name="casyncsocket-class"></a>CAsyncSocket – třída
 
@@ -337,7 +337,7 @@ Délka adresy v *lpSockAddr* v bajtech
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Nenulové, pokud je funkce úspěšná; jinak 0 a konkrétní kód chyby lze načíst voláním funkce [GetLastError](#getlasterror). Následující chyby se vztahují na tuto členskou funkci:
+Nenulové, pokud je funkce úspěšná; jinak 0 a konkrétní kód chyby lze načíst voláním funkce [GetLastError](#getlasterror). Následující seznam obsahuje několik chyb, které mohou být vráceny. Úplný seznam najdete v tématu [kódy chyb Windows Sockets](/windows/win32/winsock/windows-sockets-error-codes-2).
 
 - Před použitím tohoto rozhraní API musí dojít k WSANOTINITIALISED úspěšnému [AfxSocketInit](../../mfc/reference/application-information-and-management.md#afxsocketinit) .
 
@@ -523,7 +523,7 @@ Nenulové, pokud je funkce úspěšná; jinak 0 a konkrétní kód chyby lze na�
 
 ### <a name="remarks"></a>Poznámky
 
-`Create`volání [](#socket) a v případě úspěchu volá metodu [BIND](#bind) , aby vytvořila vazby soketu se zadanou adresou. Podporovány jsou následující typy soketů:
+`Create`volání [a v případě úspěchu volá metodu](#socket) [BIND](#bind) , aby vytvořila vazby soketu se zadanou adresou. Podporovány jsou následující typy soketů:
 
 - SOCK_STREAM poskytuje sekvenční, spolehlivé a plně duplexní datové proudy bajtů založené na připojení. Používá protokol TCP (Transmission Control Protocol) pro rodinu internetových adres.
 
@@ -533,7 +533,7 @@ Nenulové, pokud je funkce úspěšná; jinak 0 a konkrétní kód chyby lze na�
     >  Členská funkce přebírá odkaz na nový prázdný `CSocket` objekt jako svůj parametr. `Accept` Tento objekt je nutné vytvořit před voláním `Accept`. Mějte na paměti, že pokud se tento objekt soketu dostane mimo rozsah, připojení se zavře. Nevolejte `Create` pro tento nový objekt soketu.
 
 > [!IMPORTANT]
-> `Create`není bezpečná pro přístup z více vláken.  Pokud ji voláte v prostředí s více vlákny, kde by mohla být vyvolána současně různými vlákny, nezapomeňte chránit jednotlivá volání pomocí mutexu nebo jiného zámku synchronizace.
+> `Create`není bezpečná pro přístup **z více vláken** .  Pokud ji voláte v prostředí s více vlákny, kde by mohla být vyvolána současně různými vlákny, nezapomeňte chránit jednotlivá volání pomocí mutexu nebo jiného zámku synchronizace.
 
 Další informace o streamování a soketech datagram najdete v článcích [Windows Sockets: Pozadí](../../mfc/windows-sockets-background.md) a[sokety Windows: Porty a adresy](../../mfc/windows-sockets-ports-and-socket-addresses.md) soketu a [rozhraní API pro Windows Sockets 2](/windows/win32/WinSock/windows-sockets-start-page-2).
 

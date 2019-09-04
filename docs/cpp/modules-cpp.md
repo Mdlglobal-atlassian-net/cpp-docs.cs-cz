@@ -1,18 +1,18 @@
 ---
-title: Přehled modulů vC++
+title: Přehled modulů v C++
 ms.date: 07/23/2019
 helpviewer_keywords:
 - modules [C++]
 - modules [C++], overview
 description: Moduly v C++ 20 poskytují moderní alternativu hlavičkových souborů.
-ms.openlocfilehash: 84683d9c4b0e1a514b17883b89c58488b9879edb
-ms.sourcegitcommit: 7b039b5f32f6c59be6c6bb1cffafd69c3bfadd35
+ms.openlocfilehash: 17495aa3e295b26fcfa5c489ff6793bb75d13d68
+ms.sourcegitcommit: fd0f8839da5c6a3663798a47c6b0bb6e63b518bd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68537770"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70273674"
 ---
-# <a name="overview-of-modules-in-c"></a>Přehled modulů vC++
+# <a name="overview-of-modules-in-c"></a>Přehled modulů v C++
 
 C++ 20 zavádí *moduly*, moderní řešení pro součásti C++ knihoven a programů. Modul je sada souborů zdrojového kódu, které jsou kompilovány nezávisle na [jednotkách překladu](https://wikipedia.org/wiki/Translation_unit_(programming)) , které je importují. Moduly eliminují nebo významně snižují mnohé problémy spojené s používáním hlavičkových souborů a také potenciálně omezují dobu kompilace. Makra, direktivy preprocesoru a neexportované názvy deklarované v modulu nejsou viditelné, takže nemají žádný vliv na kompilaci jednotky překladu, která modul importuje. Moduly můžete importovat v libovolném pořadí bez obav o předefinování maker. Deklarace v importované jednotce překladu se nepodílejí na řešení přetížení ani při vyhledávání názvů v importovaném modulu. Jakmile je modul zkompilován jednou, výsledky jsou uloženy v binárním souboru, který popisuje všechny exportované typy, funkce a šablony. Tento soubor může být zpracován mnohem rychleji než hlavičkový soubor a může být znovu použit kompilátorem každé místo, kde je modul importován v projektu.
 
@@ -20,7 +20,7 @@ Moduly lze použít vedle sebe se soubory hlaviček. C++ Zdrojový soubor může
 
 ## <a name="enable-modules-in-the-microsoft-c-compiler"></a>Povolení modulů v kompilátoru Microsoftu C++
 
-Od verze Visual Studio 2019 verze 16,2 nejsou moduly v kompilátoru Microsoftu C++ plně implementované. Pomocí funkce moduly můžete vytvořit moduly s jedním oddílem a importovat standardní moduly knihovny poskytované společností Microsoft. Chcete-li povolit podporu pro moduly, `/experimental:modules` zkompilujte `/std:c++latest`s a. V projektu sady Visual Studio klikněte pravým tlačítkem myši na uzel projektu v **Průzkumník řešení** a vyberte **vlastnosti**. V rozevíracím seznamu **Konfigurace** nastavte možnost **všechny konfigurace**a pak zvolte možnost **vlastnosti** > konfigurace moduly povolení >  > **C++** **C++ jazyka C/jazyk ( experimentální)** .
+Od verze Visual Studio 2019 verze 16,2 nejsou moduly v kompilátoru Microsoftu C++ plně implementované. Pomocí funkce moduly můžete vytvořit moduly s jedním oddílem a importovat standardní moduly knihovny poskytované společností Microsoft. Pokud chcete povolit podporu pro moduly, zkompilujte s [/Experimental: Module](../build/reference/experimental-module.md) a [/std: c + + nejnovější](../build/reference/std-specify-language-standard-version.md). V projektu sady Visual Studio klikněte pravým tlačítkem myši na uzel projektu v **Průzkumník řešení** a vyberte **vlastnosti**. V rozevíracím seznamu **Konfigurace** nastavte možnost **všechny konfigurace**a pak zvolte možnost **vlastnosti** > konfigurace moduly povolení >  > **C++** **C++ jazyka C/jazyk ( experimentální)** .
 
 Modul a kód, který ho využívá, musí být kompilovány se stejnými možnostmi kompilátoru.
 

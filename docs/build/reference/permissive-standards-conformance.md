@@ -1,5 +1,5 @@
 ---
-title: / permissive-(shoda se standardy)
+title: /permissive- (shoda se standardy)
 ms.date: 03/08/2019
 f1_keywords:
 - /permissive
@@ -10,53 +10,53 @@ helpviewer_keywords:
 - Standards conformance compiler options
 - permissive compiler options [C++]
 ms.assetid: db1cc175-6e93-4a2e-9396-c3725d2d8f71
-ms.openlocfilehash: 05089ef4f0a516f932d82f13be979da572701ae2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: aca0fbc6a2ca36ceae26ba060b5bf92fea79c32c
+ms.sourcegitcommit: fd0f8839da5c6a3663798a47c6b0bb6e63b518bd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62320042"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70273729"
 ---
-# <a name="permissive--standards-conformance"></a>/ permissive-(shoda se standardy)
+# <a name="permissive--standards-conformance"></a>/permissive- (shoda se standardy)
 
-Zadejte režim přizpůsobení standardy pro kompilátor. Pomocí této možnosti můžete zjistit a opravit problémech přizpůsobení v kódu, aby bylo více správné a větší přenositelnost.
+Zadejte režim shody standardů pro kompilátor. Tuto možnost použijte, když chcete identifikovat a opravit problémy s kompatibilitou ve vašem kódu, aby byly lépe správné a lépe přenositelné.
 
 ## <a name="syntax"></a>Syntaxe
 
-> **/permissive-**
+> **/Permissive-**
 
 ## <a name="remarks"></a>Poznámky
 
-Tato možnost je podporována v sadě Visual Studio 2017 nebo novější.
+Tato možnost je podporována v aplikaci Visual Studio 2017 nebo novější.
 
-Můžete použít **/ permissive-** – možnost kompilátoru k určení chování kompilátoru vyhovující standardům. Tato možnost zakáže povolující chování a nastaví [/Zc](zc-conformance.md) – možnosti kompilátoru pro striktní shodu. V integrovaném vývojovém prostředí tato možnost také vytvoří podtržení nonkonformní kódu technologie IntelliSense modul.
+Pomocí možnosti kompilátoru **/Permissive-** můžete zadat chování kompilátoru vyhovující standardům. Tato možnost zakáže opravňující chování a nastaví možnosti kompilátoru [/Zc](zc-conformance.md) pro striktní shodu. V integrovaném vývojovém prostředí (IDE) Tato možnost také umožňuje, aby modul IntelliSense podtrhnout nevyhovující kód.
 
-Ve výchozím nastavení **/ permissive-** v nové projekty vytvořené pomocí sady Visual Studio 2017 verze 15.5 a novějších verzích je nastavená možnost. Ve výchozím nastavení v dřívějších verzích není nastavena. Když je tato možnost nastavená, kompilátor vygeneruje diagnostických chyby nebo upozornění při nestandardní jazykové konstrukce jsou zjištěny ve vašem kódu, včetně některých běžných chyb v pre-C ++ 11 kódu.
+Ve výchozím nastavení je možnost **/Permissive-** nastavena v nových projektech vytvořených sadou Visual Studio 2017 verze 15,5 a novějšími verzemi. Ve výchozím nastavení se v dřívějších verzích nenastavuje. Když je tato možnost nastavena, kompilátor generuje diagnostické chyby nebo upozornění, pokud jsou ve vašem kódu zjištěny nestandardní jazykové konstrukce, včetně některých běžných chyb v kódu před C + + 11.
 
-**/ Permissive-** možnost je kompatibilní s téměř všechny soubory hlavičky z nejnovější sady Windows, jako je například Software Development Kit (SDK) nebo Windows Driver Kit (WDK), od Windows Fall Creators SDK (10.0.16299.0). Starší verze sady SDK se pravděpodobně nezdaří zkompilovat v rámci **/ permissive-** různé zdroje důvodů shodu kódu. Kompilátor a sady SDK příjemce na časové ose jinou verzi, proto nejsou některé zbývající problémy. Problémy s konkrétní záhlaví souboru, naleznete v tématu [problémy záhlaví Windows](#windows-header-issues) níže.
+Možnost **/Permissive-** je kompatibilní s téměř všemi soubory hlaviček z nejnovějších sad Windows, jako je sada SDK (Software Development Kit) nebo sada Windows Driver Kit (WDK), počínaje verzí Windows v sadě Creators SDK (10.0.16299.0). Starší verze sady SDK se nemusí podařit zkompilovat do **/Permissive-** pro různé důvody shody zdrojového kódu. Kompilátor a sady SDK dodávají na různých časových osách vydaných verzí, proto existují některé zbývající problémy. Konkrétní problémy se soubory hlaviček najdete v [záhlaví Windows](#windows-header-issues) níže.
 
-**/ Permissive-** sady možností [/Zc: referencebinding](zc-referencebinding-enforce-reference-binding-rules.md), [/Zc: strictstrings](zc-strictstrings-disable-string-literal-type-conversion.md), a [/Zc: rvaluecast](zc-rvaluecast-enforce-type-conversion-rules.md) možnosti vyhovující chování. Výchozí chování nonkonformní tyto možnosti. Můžete předat konkrétní **/Zc** možnosti po **/ permissive-** na příkazový řádek pro toto chování přepsat.
+Možnost **/Permissive-** nastaví možnosti [/Zc: referenceBinding](zc-referencebinding-enforce-reference-binding-rules.md), [/Zc: strictStrings](zc-strictstrings-disable-string-literal-type-conversion.md)a [/Zc: rvalueCast](zc-rvaluecast-enforce-type-conversion-rules.md) pro vyhovující chování. Tyto možnosti jsou standardně nevyhovující chování. Můžete předat konkrétní možnosti **/Zc** po **/Permissive-** na příkazovém řádku, aby se toto chování potlačilo.
 
-Ve verzích od kompilátoru v sadě Visual Studio 2017 verze 15.3 **/ permissive-** sady možností [/Zc: ternary](zc-ternary.md) možnost. Kompilátor také implementuje další požadavky na název pro dvoufázové vyhledávání. Když **/ permissive-** nastavena možnost, kompilátor analyzuje definice šablony funkce a třídy a identifikuje nezávislé a závislé názvů používaných v šablonách. V této verzi se provádí pouze název analýzu závislostí.
+Ve verzích kompilátoru počínaje verzí Visual Studio 2017 verze 15,3 možnost **/Permissive-** nastaví možnost [/Zc: Ternární](zc-ternary.md) . Kompilátor také implementuje více požadavků pro vyhledávání názvů se dvěma fázemi. Pokud je nastavena možnost **/Permissive-** , kompilátor analyzuje funkce a definice šablon tříd a identifikuje závislé a nezávislé názvy používané v šablonách. V této verzi se provádí jenom analýza závislých názvů.
 
-Rozšíření specifické pro prostředí a jazyk oblastí, které standardní opustí až po provedení nejsou ovlivněny **/ permissive-**. Například specifické pro společnost Microsoft `__declspec`, konvence volání a klíčová slova a direktivy pragma specifických pro kompilátor nebo atributy zpracování strukturovaných výjimek nejsou označeny příznakem kompilátorem v **/ permissive-** režimu.
+Rozšíření specifická pro prostředí a jazykové oblasti, které standardní verze ponechává až do implementace, nejsou ovlivněny **/Permissive-** . Například konvence volání specifická `__declspec`pro společnost Microsoft a strukturovaná klíčová slova strukturovaného zpracování výjimek a direktivy pragma specifické pro kompilátor nejsou příznakem kompilátoru v režimu **/Permissive-** .
 
-**/ Permissive-** možnost využívá podporu shoda v aktuální verzi kompilátoru k určení, které jazykové konstrukce jsou nevyhovující. Možnost určí, jestli váš kód odpovídá na konkrétní verzi jazyka C++ standard. Chcete-li povolit všechny implementované kompilátoru podporu pro nejnovější koncept standardu, použijte [/std:latest](std-specify-language-standard-version.md) možnost. Chcete-li omezit podporu kompilátoru aktuální implementace standardu C ++ 17, použijte [/std: c ++ 17](std-specify-language-standard-version.md) možnost. Chcete-li omezit podporu kompilátoru tak, aby lépe odpovídaly standard C ++ 14, použijte [/std: c ++ 14](std-specify-language-standard-version.md) možnost, která je výchozí nastavení.
+Možnost **/Permissive-** používá podporu shody v aktuální verzi kompilátoru k určení, které jazykové konstrukce nejsou vyhovující. Možnost neurčuje, zda kód odpovídá určité verzi C++ Standard. Pokud chcete povolit veškerou implementovanou podporu kompilátoru pro nejnovější koncept standardu, použijte možnost [/std: nejnovější](std-specify-language-standard-version.md) . Chcete-li omezit podporu kompilátoru na aktuálně implementovaný Standard C++ 17, použijte možnost [/std: c++ 17](std-specify-language-standard-version.md) . Chcete-li omezit podporu kompilátoru na přesněji odpovídat standardu C++ 14, použijte možnost [/std: c++ 14](std-specify-language-standard-version.md) , což je výchozí hodnota.
 
-Ne všechny C ++ 11, C ++ 14 nebo C ++ 17 vyhovující standardům kódu je podporována kompilátorem MSVC se všemi verzemi sady Visual Studio 2017. V závislosti na verzi sady Visual Studio **/ permissive-** možnost nemusí rozpoznat problémy týkající se některé aspekty dvoufázové vyhledávání názvů vazby nekonstantní odkaz na dočasný, zpracuje kopírování inicializace jako přímé init, povolení více uživatelem definovaných převodů inicializace nebo alternativní tokeny pro logické operátory a dalších oblastí shoda není podporováno. Další informace o problémech přizpůsobení v aplikaci Visual C++, naleznete v tématu [nestandardní chování](../../cpp/nonstandard-behavior.md). Chcete-li získat maximum z **/ permissive-**, aktualizujte na nejnovější verzi sady Visual Studio.
+Ne všechny standardy kódu C++ 11, C++ 14 nebo C++ 17 jsou podporovány kompilátorem MSVC ve všech verzích sady Visual Studio 2017. V závislosti na verzi sady Visual Studio nemusí možnost **/Permissive-** detekovat problémy týkající se některých aspektů dvou fází vyhledávání názvů, vázání nekonstantních odkazů na dočasné a zpracování příkazu copy init jako přímého příkazu init, který umožňuje více uživatelsky definovaných. převody v inicializačním nebo alternativním tokenech pro logické operátory a jiné nepodporované oblasti shody. Další informace o problémech s kompatibilitou ve vizuálu C++najdete v tématu [nestandardní chování](../../cpp/nonstandard-behavior.md). Pokud chcete získat maximum z **/Permissive-** , aktualizujte sadu Visual Studio na nejnovější verzi.
 
-### <a name="how-to-fix-your-code"></a>Postup opravy kódu
+### <a name="how-to-fix-your-code"></a>Jak opravit kód
 
-Tady je několik příkladů kódu, který je rozpoznán jako nevyhovující při použití **/ permissive-**, spolu s doporučené způsoby, jak vyřešit problémy.
+Tady je několik příkladů kódu, který se detekuje jako nevyhovující při použití **/Permissive-** , spolu s navrhovanými způsoby, jak tyto problémy vyřešit.
 
-#### <a name="use-default-as-an-identifier-in-native-code"></a>Použít výchozí jako identifikátor v nativním kódu
+#### <a name="use-default-as-an-identifier-in-native-code"></a>Použít jako identifikátor v nativním kódu výchozí hodnotu
 
 ```cpp
 void func(int default); // Error C2321: 'default' is a keyword, and
                         // cannot be used in this context
 ```
 
-#### <a name="look-up-members-in-dependent-base"></a>Vyhledání členy v závislé base
+#### <a name="look-up-members-in-dependent-base"></a>Vyhledat členy v závislém základu
 
 ```cpp
 template <typename T>
@@ -84,7 +84,7 @@ void h() {
 }
 ```
 
-#### <a name="use-of-qualified-names-in-member-declarations"></a>Použijte kvalifikované názvy v deklaracích členů
+#### <a name="use-of-qualified-names-in-member-declarations"></a>Použití kvalifikovaných názvů v deklaracích členů
 
 ```cpp
 struct A {
@@ -94,7 +94,7 @@ struct A {
 };
 ```
 
-#### <a name="initialize-multiple-union-members-in-a-member-initializer"></a>Inicializovat více členy, které jsou v inicializátoru člena sjednocení.
+#### <a name="initialize-multiple-union-members-in-a-member-initializer"></a>Inicializovat více členů sjednocení v inicializátoru člena
 
 ```cpp
 union U
@@ -109,7 +109,7 @@ union U
 };
 ```
 
-#### <a name="hidden-friend-name-lookup-rules"></a>Pravidla vyhledávání název skrytou přítele
+#### <a name="hidden-friend-name-lookup-rules"></a>Skrytá pravidla vyhledávání názvů přátel
 
 ```cpp
 // Example 1
@@ -137,7 +137,7 @@ void g() {
 }
 ```
 
-#### <a name="use-scoped-enums-in-array-bounds"></a>Použití oboru výčtů v hranice pole
+#### <a name="use-scoped-enums-in-array-bounds"></a>Použít vymezené výčty v hranicích pole
 
 ```cpp
 enum class Color {
@@ -149,7 +149,7 @@ int data[Color::Blue]; // error C3411: 'Color' is not valid as the size
                        // Cast to type size_t or int to fix.
 ```
 
-#### <a name="use-for-each-in-native-code"></a>Použijte pro každý v nativním kódu
+#### <a name="use-for-each-in-native-code"></a>Použít pro každý z nativního kódu
 
 ```cpp
 void func() {
@@ -164,7 +164,7 @@ void func() {
 }
 ```
 
-#### <a name="use-of-atl-attributes"></a>Používání atributů ATL
+#### <a name="use-of-atl-attributes"></a>Použití atributů ATL
 
 ```cpp
 // Example 1
@@ -233,21 +233,21 @@ class ATL_NO_VTABLE CFooImpl : public ICustom,
 };
 ```
 
-#### <a name="ambiguous-conditional-operator-arguments"></a>Argumenty nejednoznačný podmíněný operátor
+#### <a name="ambiguous-conditional-operator-arguments"></a>Dvojznačné argumenty podmíněného operátoru
 
-Ve verzích kompilátoru před Visual Studio 2017 verze 15.3, kompilátor přijmout argumenty pro podmíněný operátor (nebo tříhodnotový operátor) `?:` , které jsou považovány za nejednoznačné Standard. V **/ permissive-** režimu, kompilátor nyní vyvolá jednu nebo více diagnostiky v případech, kdy se zkompiloval bez diagnostiky v dřívějších verzích.
+Ve verzích kompilátoru před Visual Studio 2017 verze 15,3 kompilátor přijal argumenty pro podmíněný operátor (nebo Ternární operátor) `?:` , které jsou považovány za dvojznačné standardem. V režimu **/Permissive-** nyní kompilátor vydává jednu nebo více diagnostických nástrojů v případech, které byly zkompilovány bez diagnostiky v dřívějších verzích.
 
-Běžné chyby, které mohou být důsledkem této změny patří:
+Mezi běžné chyby, které mohou nastat při této změně, patří:
 
-- Chyba C2593: 'operator'? je nejednoznačný
+- Chyba C2593: operátor? je dvojznačný
 
-- Chyba C2679: binární '?': nenašel se žádný operátor, který by zpracovával pravý operand typu "B" (nebo neexistuje žádný přijatelný převod)
+- Chyba C2679: binární '? ': nebyl nalezen žádný operátor, který by zpracovával pravý operand typu ' B ' (nebo neexistuje žádný přijatelný převod)
 
-- Chyba C2678: binární '?': nenašel se žádný operátor, který by zpracovával levý operand typu "A" (nebo neexistuje žádný přijatelný převod)
+- Chyba C2678: binární '? ': nebyl nalezen žádný operátor, který by zpracovával levý operand typu ' A ' (nebo neexistuje žádný přijatelný převod).
 
-- Chyba C2446: ":": žádný převod z "B" na "A"
+- Chyba C2446: ': ': žádný převod z ' B ' na ' A '
 
-Vzor typické kód, který může způsobit potíže při některých tříd jazyka C poskytuje z jiného typu T neexplicitní konstruktor a operátor bez explicitního převodu typu T. Platné převody jsou v tomto případě převodu druhý argument typu třetí argument a třetí argument převodu na typ druhého argumentu. Protože obě jsou platné, je nejednoznačný podle standardu.
+Typický vzor kódu, který může být příčinou tohoto problému, je, že některé třídy C poskytují neexplicitní konstruktor z jiného typu T a neexplicitní operátor převodu na typ T. V tomto případě jsou platnými převody jak převod druhého argumentu na typ třetího argumentu, tak i převod třetího argumentu na typ druhého argumentu. Vzhledem k tomu, že obě jsou platné, je nejednoznačné podle standardu.
 
 ```cpp
 // Example 1: class that provides conversion to and initialization from some type T
@@ -267,7 +267,7 @@ auto y = cond ? 7 : int(a);
 auto z = cond ? A(7) : a;
 ```
 
-Je důležité výjimky tohoto společného modelu při T představuje jeden z typů řetězec zakončený hodnotou null (například `const char *`, `const char16_t *`, a tak dále) a skutečný argument `?:` není řetězcový literál odpovídající typu. C ++ 17 se změnila sémantiku z C ++ 14. V důsledku toho je v části přijato kódem v příkladu 2 **/std: c ++ 14** a zamítnutých podle **/std: c ++ 17** při **/Zc: ternary** nebo **/permissive-** se používá.
+K tomuto běžnému vzoru má zásadní výjimku, pokud T představuje jeden z typů řetězců zakončených hodnotou null (například `const char *` `const char16_t *`,, a tak dále) a skutečný argument pro `?:` je řetězcový literál odpovídajícího typu. C++ 17 změnil sémantiku z C++ 14. V důsledku toho je kód v příkladu 2 přijatý v **/std: c++ 14** a zamítnutý v **/std: c++ 17** při použití **/Zc: Ternární** nebo **/Permissive-** .
 
 ```cpp
 // Example 2: exception from the above
@@ -288,7 +288,7 @@ auto x = cond ? "A" : s;
 auto y = cond ? "A" : static_cast<const char*>(s);
 ```
 
-Dalším užitečným, kde se zobrazí chyby je v podmíněných operátorů s jedním argumentem typu `void`. Tento případ může běžně docházet ve vyhodnocení jako makra.
+Další případ, kde se mohou zobrazit chyby, je v podmíněných operátorech `void`s jedním argumentem typu. Tento případ může být běžný v makrech, jako je například vyhodnocení.
 
 ```cpp
 // Example 3: void arguments
@@ -299,7 +299,7 @@ void myassert(const char* text, const char* file, int line);
 #define ASSERT_B(ex) (void)((ex) ? void() : myassert(#ex, __FILE__, __LINE__))
 ```
 
-Může se také zobrazí chyby v metaprogramování, kde typy výsledků podmiňovací operátor může změnit v části **/Zc: ternary** a **/ permissive-**. Jeden ze způsobů, jak vyřešit tento problém je použití [std::remove_reference](../../standard-library/remove-reference-class.md) na výsledný typ.
+V šabloně metaprogramování šablonou mohou být zobrazeny také chyby, kde se typy výsledků podmíněného operátoru mohou změnit v části **/Zc: Ternární** a **/Permissive-** . Jedním ze způsobů, jak tento problém vyřešit, je použít pro výsledný typ [std:: remove_reference](../../standard-library/remove-reference-class.md) .
 
 ```cpp
 // Example 4: different result types
@@ -311,9 +311,9 @@ decltype(auto) x = cond ? a : b; // char without, const char& with /Zc:ternary
 const char (&z)[2] = count > 3 ? "A" : "B"; // const char* without /Zc:ternary
 ```
 
-#### <a name="two-phase-name-look-up"></a>Název pro dvoufázové vyhledávání
+#### <a name="two-phase-name-look-up"></a>Vyhledávací název se dvěma fázemi
 
-Když **/ permissive-** nastavena možnost, kompilátor analyzuje funkce a třídy definice šablon identifikace nezávislé a závislé názvů používaných v šablonách podle potřeby pro název pro dvoufázové vyhledávání. V sadě Visual Studio 2017 verze 15.3 se provádí analýzu závislostí název. Nezávislé názvy, které nejsou deklarovány v rámci definice šablony zejména způsobit diagnostickou zprávu znamének podle normy ISO C++. V sadě Visual Studio 2017 verze 15.7 se taky dělá vazby závislé na jiné názvy, které vyžadují vyhledávání závislého na argumentu v rámci definice.
+Je-li nastavena možnost **/Permissive-** , kompilátor analyzuje funkce a definice šablon třídy, identifikuje závislé a nezávislé názvy používané v šablonách, jak je požadováno pro vyhledávání názvů se dvěma fázemi. V aplikaci Visual Studio 2017 verze 15,3 je provedena analýza závislosti názvů. Konkrétně nezávislé názvy, které nejsou deklarovány v kontextu definice šablony, způsobují diagnostické zprávy podle požadavků standardu ISO C++ . V aplikaci Visual Studio 2017 verze 15,7 jsou také provedeny vazby nezávislých názvů, které vyžadují vyhledávání závislé na argumentech v kontextu definice.
 
 ```cpp
 // dependent base
@@ -339,17 +339,17 @@ int main()
 }
 ```
 
-Pokud chcete použít starší verzi chování pro dvoufázové vyhledávání, ale jinak mají **/ permissive-** chování, přidejte **/Zc:twoPhase-** možnost.
+Pokud chcete starší chování při dvoufázovém vyhledávání, ale jinak chcete chování **/Permissive-** , přidejte parametr **/Zc: twoPhase-** Option.
 
-### <a name="windows-header-issues"></a>Problémy záhlaví Windows
+### <a name="windows-header-issues"></a>Problémy s hlavičkou Windows
 
-**/ Permissive-** možnost je příliš přísné pro verze sady Windows než Windows Fall Creators Update SDK (10.0.16299.0) nebo Windows Driver Kit (WDK) verze 1709. Doporučujeme aktualizovat na nejnovější verze sady Windows Chcete-li použít **/ permissive-** ve vašem kódu ovladače Windows nebo zařízení.
+Možnost **/Permissive-** je pro verze sad Windows moc striktní, než Windows patří Creators Update SDK (10.0.16299.0) nebo Windows Driver Kit (WDK) verze 1709. Doporučujeme, abyste provedli aktualizaci na nejnovější verze sad Windows, aby bylo možné používat **/Permissive-** v kódu ovladače pro Windows nebo zařízení.
 
-Některé hlavičkových souborů ve Windows dubna 2018 Update SDK (10.0.17134.0), Windows Fall Creators Update SDK (10.0.16299.0) nebo Windows Driver Kit (WDK) 1709, ještě další problémy, které je znekompatibilnit použití **/permissive-**. Chcete-li tyto problémy obejít, doporučujeme omezit použití těchto hlaviček pouze těchto souborů se zdrojovým kódem, které požadují a odeberte **/ permissive-** možnost při kompilaci kódu konkrétní zdrojové soubory.
+Některé hlavičkové soubory v sadě Windows duben 2018 Update SDK (10.0.17134.0), Windows patří Creators Update SDK (10.0.16299.0) nebo sada Windows Driver Kit (WDK) 1709, stále mají problémy, které je nekompatibilní s používáním **/Permissive-** . Chcete-li tyto problémy obejít, doporučujeme omezit použití těchto hlaviček pouze na ty soubory zdrojového kódu, které je vyžadují, a odebrat možnost **/Permissive-** při kompilaci těchto souborů se specifickým zdrojovým kódem.
 
-Tyto hlavičky knihovny WRL WinRT vydané v Windows. dubna 2018 Update SDK (10.0.17134.0) nejsou s čistou **/ permissive-**. Chcete-li tyto problémy vyřešit, buď nepoužívejte **/ permissive-**, nebo použijte **/ permissive-** s **/Zc:twoPhase-** při práci s těmito záhlavími:
+Tato Hlavičková WRL WinRT vydaná v sadě Windows duben 2018 Update SDK (10.0.17134.0) se nečistí pomocí **/Permissive-** . Pokud chcete tyto problémy obejít, buď Nepoužívejte **/Permissive-** , nebo použijte **/Permissive-** s parametrem **/Zc: twoPhase –** při práci s těmito záhlavími:
 
-- Problémy v winrt/wrl/async.h
+- Problémy v WinRT/WRL/Async. h
 
    ```Output
    C:\Program Files (x86)\Windows Kits\10\Include\10.0.17134.0\winrt\wrl\async.h(483): error C3861: 'TraceDelegateAssigned': identifier not found
@@ -358,15 +358,15 @@ Tyto hlavičky knihovny WRL WinRT vydané v Windows. dubna 2018 Update SDK (10.0
    C:\Program Files (x86)\Windows Kits\10\Include\10.0.17134.0\winrt\wrl\async.h(513): error C3861: 'TraceProgressNotificationComplete': identifier not found
    ```
 
-- Problém při winrt/wrl/implements.h
+- Problém v WinRT/WRL/Implements. h
 
    ```Output
    C:\Program Files (x86)\Windows Kits\10\include\10.0.17134.0\winrt\wrl\implements.h(2086): error C2039: 'SetStrongReference': is not a member of 'Microsoft::WRL::Details::WeakReferenceImpl'
    ```
 
-Tyto hlavičky uživatelského režimu vydání v Windows. dubna 2018 Update SDK (10.0.17134.0) nejsou s čistou **/ permissive-**. Chcete-li vyřešit tyto problémy, nepoužívejte **/ permissive-** při práci s těmito záhlavími:
+Tyto hlavičky uživatelských režimů vydané v sadě Windows duben 2018 Update SDK (10.0.17134.0) se nečistí pomocí **/Permissive-** . Pokud chcete tyto problémy obejít, nepoužívejte **/Permissive-** při práci s těmito hlavičkami:
 
-- Problémy v um/Tune.h
+- Problémy v um a ladit. h
 
    ```Output
    C:\ProgramFiles(x86)\Windows Kits\10\include\10.0.17134.0\um\tune.h(139): error C3861: 'Release': identifier not found
@@ -375,13 +375,13 @@ Tyto hlavičky uživatelského režimu vydání v Windows. dubna 2018 Update SDK
    C:\Program Files (x86)\Windows Kits\10\include\10.0.17134.0\um\tune.h(1240): note: 'Release': function declaration must be available as none of the arguments depend on a template parameter
    ```
 
-- Problém při um/spddkhlp.h
+- Problém v um/spddkhlp. h
 
    ```Output
    C:\Program Files (x86)\Windows Kits\10\include\10.0.17134.0\um\spddkhlp.h(759): error C3861: 'pNode': identifier not found
    ```
 
-- Problémy v um/refptrco.h
+- Problémy v um/refptrco. h
 
    ```Output
    C:\Program Files (x86)\Windows Kits\10\include\10.0.17134.0\um\refptrco.h(179): error C2760: syntax error: unexpected token 'identifier', expected 'type specifier'
@@ -389,11 +389,11 @@ Tyto hlavičky uživatelského režimu vydání v Windows. dubna 2018 Update SDK
    C:\Program Files (x86)\Windows Kits\10\include\10.0.17134.0\um\refptrco.h(395): error C2760: syntax error: unexpected token 'identifier', expected 'type specifier'
    ```
 
-Tyto problémy jsou specifické pro záhlaví uživatelského režimu ve Windows Fall Creators Update SDK (10.0.16299.0):
+Tyto problémy se týkají hlaviček uživatelských režimů v sadě Windows Update Creators SDK (10.0.16299.0):
 
-- Problém při um/Query.h
+- Problém v um/dotaz. h
 
-   Při použití **/ permissive-** přepínač kompilátoru `tagRESTRICTION` struktura nezkompiluje kvůli case(RTOr) člena 'nebo'.
+   Při použití přepínače `tagRESTRICTION` kompilátoru/Permissive-není struktura zkompilována v důsledku člena Case (RTOr) nebo.
 
    ```cpp
    struct tagRESTRICTION
@@ -415,21 +415,21 @@ Tyto problémy jsou specifické pro záhlaví uživatelského režimu ve Windows
    };
    ```
 
-   Chcete-li tento problém vyřešit, kompilovat soubory, které zahrnují Query.h bez **/ permissive-** možnost.
+   Chcete-li tento problém vyřešit, zkompilujte soubory, které zahrnují Query. h bez možnosti **/Permissive-** .
 
-- Problém při um/cellularapi_oem.h
+- Problém v um/cellularapi_oem. h
 
-   Při použití **/ permissive-** přepínače kompilátoru, Dopředná deklarace `enum UICCDATASTOREACCESSMODE` způsobí, že upozornění:
+   Při použití přepínače kompilátoru **/Permissive-** se Dopředná deklarace `enum UICCDATASTOREACCESSMODE` vyvolá upozornění:
 
    ```cpp
    typedef enum UICCDATASTOREACCESSMODE UICCDATASTOREACCESSMODE; // C4471
    ```
 
-   Dopředná deklarace výčtu mimo obor je rozšířením společnosti Microsoft. Chcete-li tento problém vyřešit, kompilovat soubory, které zahrnují cellularapi_oem.h bez **/ permissive-** , nebo použitím [/wd](compiler-option-warning-level.md) možnost nečinnosti upozornění C4471.
+   Dopředná deklarace výčtu bez oboru je rozšířením společnosti Microsoft. Chcete-li tento problém vyřešit, zkompilujte soubory, které zahrnují cellularapi_oem. h bez možnosti **/Permissive-** , nebo použijte možnost [/WD](compiler-option-warning-level.md) pro netiché upozornění C4471.
 
-- Problém při um/omscript.h
+- Problém v um/omscript. h
 
-   V C ++ 03, převod z řetězcového literálu na BSTR (což je typedef pro "wchar_t *") je zastaralý, ale povoleno. V C ++ 11 převod již není povolena.
+   V jazyce C++ 03 je převod z řetězcového literálu na typ BSTR (který je typu typedef na wchar_t *) zastaralý, ale povolený. V jazyce C++ 11 již převod není povolen.
 
    ```cpp
    virtual /* [id] */ HRESULT STDMETHODCALLTYPE setExpression(
@@ -438,25 +438,25 @@ Tyto problémy jsou specifické pro záhlaví uživatelského režimu ve Windows
        /* [in][defaultvalue] */ __RPC__in BSTR language = L"") = 0; // C2440
    ```
 
-   Chcete-li tento problém vyřešit, kompilovat soubory, které zahrnují omscript.h bez **/ permissive-** , nebo použitím **/Zc:strictStrings-** místo.
+   Chcete-li tento problém vyřešit, zkompilujte soubory, které zahrnují omscript. h bez možnosti **/Permissive-** , nebo použijte parametr **/Zc: strictStrings-** namísto.
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Nastavení tohoto parametru kompilátoru ve vývojovém prostředí Visual Studio
 
-V sadě Visual Studio 2017 verze 15.5 a novějších verzích použijte tento postup:
+V aplikaci Visual Studio 2017 verze 15,5 a novější použijte tento postup:
 
-1. Otevřete svůj projekt **stránky vlastností** dialogové okno.
+1. Otevřete dialogové okno **stránky vlastností** projektu.
 
-1. Vyberte **vlastnosti konfigurace** > **C/C++** > **jazyk** stránku vlastností.
+1. Vyberte stránku vlastností **Konfigurace** > **C/C++**  > **jazyk** .
 
-1. Změnit **režim přizpůsobení** hodnoty vlastnosti **Ano (/ permissive-)**. Zvolte **OK** nebo **použít** uložte provedené změny.
+1. Změňte hodnotu vlastnosti **Režim odpovídání** na **Ano (/Permissive-)** . Změny uložte kliknutím na **OK** nebo **použít** .
 
-Ve verzích před Visual Studio 2017 verze 15.5 použijte tento postup:
+V části verze před Visual Studio 2017 verze 15,5 použijte tento postup:
 
-1. Otevřete svůj projekt **stránky vlastností** dialogové okno.
+1. Otevřete dialogové okno **stránky vlastností** projektu.
 
-1. Vyberte **vlastnosti konfigurace** > **C/C++** > **příkazového řádku** stránku vlastností.
+1. Vyberte stránku vlastností **Konfigurace** > **C/C++**  > **příkazový řádek** .
 
-1. Zadejte **/ permissive-** – možnost kompilátoru v **další možnosti** pole. Zvolte **OK** nebo **použít** uložte provedené změny.
+1. Do pole **Další možnosti** zadejte možnost kompilátoru **/Permissive-** . Změny uložte kliknutím na **OK** nebo **použít** .
 
 ### <a name="to-set-this-compiler-option-programmatically"></a>Programové nastavení tohoto parametru kompilátoru
 
@@ -464,5 +464,5 @@ Ve verzích před Visual Studio 2017 verze 15.5 použijte tento postup:
 
 ## <a name="see-also"></a>Viz také:
 
-- [Parametry kompilátoru MSVC](compiler-options.md)
-- [Syntaxe příkazového řádku kompilátoru MSVC](compiler-command-line-syntax.md)
+[Možnosti kompilátoru MSVC](compiler-options.md)\
+[Syntaxe příkazového řádku kompilátoru MSVC](compiler-command-line-syntax.md)
