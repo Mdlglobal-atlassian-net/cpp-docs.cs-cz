@@ -58,6 +58,8 @@
               href: build/project-property-inheritance.md
             - name: Změna vlastností a cílů beze změny souboru projektu
               href: build/modify-project-properties-without-changing-project-file.md
+        - name: Clang/LLVM v projektech sady Visual Studio (MSBuild)
+          href: build/clang-support-msbuild.md
         - name: Referenční knihovny a komponenty v okamžiku sestavení
           href: build/adding-references-in-visual-cpp-projects.md
         - name: Uspořádání výstupních souborů projektu
@@ -4794,7 +4796,7 @@
                       href: preprocessor/null-directive.md
                     - name: '#undef – direktiva (C/C++)'
                       href: preprocessor/hash-undef-directive-c-cpp.md
-                    - name: '#using – direktiva (C/C++)'
+                    - name: '#using – direktiva (C++/CLI)'
                       href: preprocessor/hash-using-directive-cpp.md
                 - name: Operátory preprocesoru
                   expanded: false
@@ -4829,10 +4831,10 @@
                   href: preprocessor/conventions.md
                 - name: Gramatika preprocesoru
                   href: preprocessor/preprocessor-grammar.md
-            - name: Direktivy Pragma a klíčové slovo __Pragma
+            - name: Direktivy pragma a klíčové slovo __pragma
               expanded: false
               items:
-                - name: Direktivy Pragma a klíčové slovo __Pragma
+                - name: Direktivy pragma a klíčové slovo __pragma
                   href: preprocessor/pragma-directives-and-the-pragma-keyword.md
                 - name: alloc_text – direktiva pragma
                   href: preprocessor/alloc-text.md
