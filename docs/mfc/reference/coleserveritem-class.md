@@ -74,12 +74,12 @@ helpviewer_keywords:
 - COleServerItem [MFC], OnShow
 - COleServerItem [MFC], m_sizeExtent
 ms.assetid: 80256df6-3888-4256-944b-787d4b2e6b0d
-ms.openlocfilehash: e369cfcbf94a1e5abc59d6f66aa71599efb11765
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: dcae304e8571ecb5743002638ea23f13c3e21517
+ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69503758"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70741348"
 ---
 # <a name="coleserveritem-class"></a>Odvozenou třídu COleServerItem – třída
 
@@ -153,7 +153,7 @@ Propojená položka může představovat některé nebo všechny serverové doku
 
 `COleServerItem` Třída definuje několik přepisovatelných členských funkcí, které jsou volány pomocí knihovny DLL (Dynamic Link Library) systému OLE, obvykle v reakci na požadavky z aplikace typu kontejner. Tyto členské funkce umožňují aplikaci kontejneru manipulovat s položkou nepřímo různými způsoby, jako je zobrazení, provádění jejích operací nebo načítání dat v různých formátech.
 
-Chcete- `COleServerItem`li použít, odvodit z něj třídu a implementovat členské funkce nakreslit a [serializovat](../../mfc/reference/cobject-class.md#serialize) . [](#ondraw) `OnDraw` Funkce poskytuje metasouborové reprezentace položky, která umožňuje zobrazení, když aplikace typu kontejner otevírá složený dokument. `Serialize` Funkceposkytujenativníreprezentacepoložky,cožumožňujepřenášetvloženoupoložkumeziaplikacemi`CObject` serveru a kontejnerů. [OnGetExtent](#ongetextent) poskytuje přirozené velikosti položky kontejneru a povoluje kontejneru velikost položky.
+Chcete- `COleServerItem`li použít, odvodit z něj třídu a implementovat členské funkce [nakreslit](#ondraw) a [serializovat](../../mfc/reference/cobject-class.md#serialize) . `OnDraw` Funkce poskytuje metasouborové reprezentace položky, která umožňuje zobrazení, když aplikace typu kontejner otevírá složený dokument. `Serialize` Funkceposkytujenativníreprezentacepoložky,cožumožňujepřenášetvloženoupoložkumeziaplikacemi`CObject` serveru a kontejnerů. [OnGetExtent](#ongetextent) poskytuje přirozené velikosti položky kontejneru a povoluje kontejneru velikost položky.
 
 Další informace o serverech a souvisejících tématech najdete v článku [servery: Implementace serveru](../../mfc/servers-implementing-a-server.md) a "Vytvoření aplikace typu kontejner/server" v kontejnerech článků [: Pokročilé funkce](../../mfc/containers-advanced-features.md).
 
@@ -186,7 +186,7 @@ Ukazatel na `COleDataSource` objekt, ve kterém mají být umístěna data.
 
 ### <a name="remarks"></a>Poznámky
 
-Aby bylo možné zadat prezentační [](#ondraw) formát (obrázek metasouboru) pro položku, je nutné, abyste nasadili členskou funkci nakreslit. Chcete-li podporovat jiné formáty převodu, zaregistrujte je pomocí objektu [COleDataSource –](../../mfc/reference/coledatasource-class.md) vráceného funkcí GetDataSource a přepište členskou funkci [OnRenderData](#onrenderdata) , aby poskytovala data ve formátech, které chcete podporovat. [](#getdatasource)
+Aby bylo možné zadat Prezentační formát (obrázek metasouboru) pro položku, je nutné, abyste nasadili členskou funkci [nakreslit](#ondraw) . Chcete-li podporovat jiné formáty převodu, zaregistrujte je pomocí objektu [COleDataSource –](../../mfc/reference/coledatasource-class.md) vráceného funkcí [GetDataSource](#getdatasource) a přepište členskou funkci [OnRenderData](#onrenderdata) , aby poskytovala data ve formátech, které chcete podporovat.
 
 ##  <a name="coleserveritem"></a>Odvozenou třídu COleServerItem:: odvozenou třídu COleServerItem
 
@@ -221,7 +221,7 @@ Nastavte tuto hodnotu na TRUE, pokud se mají data odkazu zkopírovat do schrán
 
 ### <a name="remarks"></a>Poznámky
 
-Funkce používá členskou funkci [OnGetClipboardData](#ongetclipboarddata) k vytvoření objektu [COleDataSource –](../../mfc/reference/coledatasource-class.md) obsahujícího data položky OLE ve formátech, které jsou podporovány. Funkce pak umístí `COleDataSource` objekt do schránky pomocí funkce [COleDataSource –:: SetClipboard](../../mfc/reference/coledatasource-class.md#setclipboard) . `COleDataSource` Objekt obsahuje nativní data položky a její reprezentace ve formátu CF_METAFILEPICT a také data v libovolných formátech převodu, které se rozhodnete podporovat. Aby fungovala tato [](../../mfc/reference/cobject-class.md#serialize) členská funkce, je nutné implementovat serializaci a funkci [Draw](#ondraw) .
+Funkce používá členskou funkci [OnGetClipboardData](#ongetclipboarddata) k vytvoření objektu [COleDataSource –](../../mfc/reference/coledatasource-class.md) obsahujícího data položky OLE ve formátech, které jsou podporovány. Funkce pak umístí `COleDataSource` objekt do schránky pomocí funkce [COleDataSource –:: SetClipboard](../../mfc/reference/coledatasource-class.md#setclipboard) . `COleDataSource` Objekt obsahuje nativní data položky a její reprezentace ve formátu CF_METAFILEPICT a také data v libovolných formátech převodu, které se rozhodnete podporovat. Aby fungovala tato členská funkce, je nutné implementovat [serializaci](../../mfc/reference/cobject-class.md#serialize) a funkci [Draw](#ondraw) .
 
 ##  <a name="dodragdrop"></a>Odvozenou třídu COleServerItem::D oDragDrop
 
@@ -346,7 +346,7 @@ void GetEmbedSourceData(LPSTGMEDIUM lpStgMedium);
 ### <a name="parameters"></a>Parametry
 
 *lpStgMedium*<br/>
-Ukazatel na strukturu [STGMEDIUM](/windows/win32/api/objidl/ns-objidl-stgmedium) , která bude přijímat data CF_EMBEDSOURCE pro položku OLE.
+Ukazatel na strukturu [STGMEDIUM](/windows/win32/api/objidl/ns-objidl-ustgmedium~r1) , která bude přijímat data CF_EMBEDSOURCE pro položku OLE.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -354,7 +354,7 @@ Tento formát zahrnuje nativní data položky. Aby tato funkce fungovala `Serial
 
 Výsledek lze přidat ke zdroji dat pomocí [COleDataSource –:: CacheData](../../mfc/reference/coledatasource-class.md#cachedata). Tato funkce je volána automaticky pomocí [odvozenou třídu COleServerItem:: OnGetClipboardData](#ongetclipboarddata).
 
-Další informace najdete v tématu [STGMEDIUM](/windows/win32/api/objidl/ns-objidl-stgmedium) v Windows SDK.
+Další informace najdete v tématu [STGMEDIUM](/windows/win32/api/objidl/ns-objidl-ustgmedium~r1) v Windows SDK.
 
 ##  <a name="getitemname"></a>Odvozenou třídu COleServerItem:: GetItem
 
@@ -383,7 +383,7 @@ BOOL GetLinkSourceData(LPSTGMEDIUM lpStgMedium);
 ### <a name="parameters"></a>Parametry
 
 *lpStgMedium*<br/>
-Ukazatel na strukturu [STGMEDIUM](/windows/win32/api/objidl/ns-objidl-stgmedium) , která bude přijímat data CF_LINKSOURCE pro položku OLE.
+Ukazatel na strukturu [STGMEDIUM](/windows/win32/api/objidl/ns-objidl-ustgmedium~r1) , která bude přijímat data CF_LINKSOURCE pro položku OLE.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -395,7 +395,7 @@ Tento formát obsahuje identifikátor CLSID popisující typ položky OLE a info
 
 Výsledek lze přidat do zdroje dat pomocí [COleDataSource –:: CacheData](../../mfc/reference/coledatasource-class.md#cachedata). Tato funkce je volána automaticky [OnGetClipboardData](#ongetclipboarddata).
 
-Další informace najdete v tématu [STGMEDIUM](/windows/win32/api/objidl/ns-objidl-stgmedium) v Windows SDK.
+Další informace najdete v tématu [STGMEDIUM](/windows/win32/api/objidl/ns-objidl-ustgmedium~r1) v Windows SDK.
 
 ##  <a name="getobjectdescriptordata"></a>Odvozenou třídu COleServerItem:: GetObjectDescriptorData
 
@@ -417,13 +417,13 @@ Posun kliknutí myší v levém horním rohu položky OLE Může mít hodnotu NU
 Velikost položky OLE Může mít hodnotu NULL.
 
 *lpStgMedium*<br/>
-Ukazatel na strukturu [STGMEDIUM](/windows/win32/api/objidl/ns-objidl-stgmedium) , která bude přijímat data CF_OBJECTDESCRIPTOR pro položku OLE.
+Ukazatel na strukturu [STGMEDIUM](/windows/win32/api/objidl/ns-objidl-ustgmedium~r1) , která bude přijímat data CF_OBJECTDESCRIPTOR pro položku OLE.
 
 ### <a name="remarks"></a>Poznámky
 
 Informace se zkopírují do struktury `STGMEDIUM` , na kterou odkazuje *lpStgMedium*. Tento formát obsahuje informace potřebné pro dialog Vložit speciální.
 
-Další informace najdete v tématu [STGMEDIUM](/windows/win32/api/objidl/ns-objidl-stgmedium) v Windows SDK.
+Další informace najdete v tématu [STGMEDIUM](/windows/win32/api/objidl/ns-objidl-ustgmedium~r1) v Windows SDK.
 
 ##  <a name="isconnected"></a>Odvozenou třídu COleServerItem::-Connected
 
@@ -521,7 +521,7 @@ Hodnota-1 je obvykle alias pro jinou operaci. Pokud není podporováno otevírá
 
 ### <a name="remarks"></a>Poznámky
 
-Pokud byla aplikace typu kontejner vytvořena pomocí knihovna Microsoft Foundation Class, je tato funkce volána, když je volána členská funkce [COleClientItem:: Activate](../../mfc/reference/coleclientitem-class.md#activate) odpovídajícího `COleClientItem` objektu. Výchozí implementace volá členskou funkci [inshow](#onshow) , pokud je zadána primární operace nebo OLEIVERB_SHOW, [Open](#onopen) , pokud je ZADÁN sekundární příkaz nebo OLEIVERB_OPEN, a když je zadán [](#onhide) parametr OLEIVERB_HIDE. Výchozí implementace volá `OnShow` , pokud *iVerb* není jednou z výše uvedených příkazů.
+Pokud byla aplikace typu kontejner vytvořena pomocí knihovna Microsoft Foundation Class, je tato funkce volána, když je volána členská funkce [COleClientItem:: Activate](../../mfc/reference/coleclientitem-class.md#activate) odpovídajícího `COleClientItem` objektu. Výchozí implementace volá členskou funkci [inshow](#onshow) , pokud je zadána primární operace nebo OLEIVERB_SHOW, [Open](#onopen) , pokud je ZADÁN sekundární příkaz nebo OLEIVERB_OPEN [, a když](#onhide) je zadán parametr OLEIVERB_HIDE. Výchozí implementace volá `OnShow` , pokud *iVerb* není jednou z výše uvedených příkazů.
 
 Tuto funkci přepište, pokud vaše primární příkaz tuto položku nezobrazuje. Například pokud je položka záznam zvuku a jeho primárním příkazem je přehráno, nemusíte zobrazit serverovou aplikaci, aby ji bylo možné přehrát.
 
@@ -655,7 +655,7 @@ Nenulové, pokud bylo úspěšné; v opačném případě 0.
 
 ### <a name="remarks"></a>Poznámky
 
-Pokud byla aplikace typu kontejner napsána s knihovna Microsoft Foundation Class, je tato funkce volána, [](../../mfc/reference/coleclientitem-class.md#getextent) když je volána funkce getvelikost členské `COleClientItem` funkce odpovídajícího objektu. Výchozí implementace neprovádí žádnou akci. Musíte ji implementovat sami. Tuto funkci potlačíte, pokud chcete provádět zvláštní zpracování při zpracování požadavku na velikost položky OLE.
+Pokud byla aplikace typu kontejner napsána s knihovna Microsoft Foundation Class, je tato funkce volána, když je volána funkce [getvelikost](../../mfc/reference/coleclientitem-class.md#getextent) členské `COleClientItem` funkce odpovídajícího objektu. Výchozí implementace neprovádí žádnou akci. Musíte ji implementovat sami. Tuto funkci potlačíte, pokud chcete provádět zvláštní zpracování při zpracování požadavku na velikost položky OLE.
 
 ##  <a name="onhide"></a>Odvozenou třídu COleServerItem:: Hide
 
@@ -745,7 +745,7 @@ virtual BOOL OnRenderData(
 Odkazuje na strukturu [FORMATETC](/windows/win32/api/objidl/ns-objidl-formatetc) s určením formátu, ve kterém jsou požadovány informace.
 
 *lpStgMedium*<br/>
-Odkazuje na strukturu [STGMEDIUM](/windows/win32/api/objidl/ns-objidl-stgmedium) , ve které se mají vrátit data.
+Odkazuje na strukturu [STGMEDIUM](/windows/win32/api/objidl/ns-objidl-ustgmedium~r1) , ve které se mají vrátit data.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -759,7 +759,7 @@ Pokud je *lpStgMedium*-> *TYMED* TYMED_NULL, STGMEDIUM by měl být přidělen a
 
 Toto je pokročilá přepsatelné. Tuto funkci potlačíte tak, aby poskytovala data v požadovaném formátu a na středních médiích. V závislosti na vašich datech možná budete chtít místo toho přepsat jednu z dalších verzí této funkce. Pokud jsou vaše data malá a pevná velikost, přepište `OnRenderGlobalData`. Pokud jsou vaše data v souboru nebo mají proměnlivou velikost, popište `OnRenderFileData`.
 
-Další informace naleznete v tématu [IDataObject:: GetData](/windows/win32/api/objidl/nf-objidl-idataobject-getdata), [STGMEDIUM](/windows/win32/api/objidl/ns-objidl-stgmedium), [FORMATETC](/windows/win32/api/objidl/ns-objidl-formatetc)a [TYMED](/windows/win32/api/objidl/ne-objidl-tymed) v Windows SDK.
+Další informace naleznete v tématu [IDataObject:: GetData](/windows/win32/api/objidl/nf-objidl-idataobject-getdata), [STGMEDIUM](/windows/win32/api/objidl/ns-objidl-ustgmedium~r1), [FORMATETC](/windows/win32/api/objidl/ns-objidl-formatetc)a [TYMED](/windows/win32/api/objidl/ne-objidl-tymed) v Windows SDK.
 
 ##  <a name="onrenderfiledata"></a>  COleServerItem::OnRenderFileData
 
@@ -863,7 +863,7 @@ virtual BOOL OnSetData(
 Ukazatel na strukturu [FORMATETC](/windows/win32/api/objidl/ns-objidl-formatetc) , která určuje formát dat.
 
 *lpStgMedium*<br/>
-Ukazatel na strukturu [STGMEDIUM](/windows/win32/api/objidl/ns-objidl-stgmedium) , ve které jsou uložena data.
+Ukazatel na strukturu [STGMEDIUM](/windows/win32/api/objidl/ns-objidl-ustgmedium~r1) , ve které jsou uložena data.
 
 *bRelease*<br/>
 Označuje, kdo má po dokončení volání funkce vlastnictví úložného média. Volající určí, kdo zodpovídá za uvolnění prostředků přidělených za médium úložiště. Volající to provede nastavením *bRelease*. Pokud je *bRelease* nenulového, serverová položka převezme vlastnictví a uvolní médium, když ho jeho používání dokončí. Když je *bRelease* 0, volající zachová vlastnictví a položka serveru může používat médium úložiště pouze po dobu trvání volání.
@@ -878,7 +878,7 @@ Položka serveru převezme vlastnictví dat, dokud je neúspěšně nezískala. 
 
 Výchozí implementace neprovádí žádnou akci. Přepište tuto funkci, aby se data položky OLE nahradila zadanými daty. Toto je pokročilá přepsatelné.
 
-Další informace naleznete v tématu [STGMEDIUM](/windows/win32/api/objidl/ns-objidl-stgmedium), [FORMATETC](/windows/win32/api/objidl/ns-objidl-formatetc)a [ReleaseStgMedium](/windows/win32/api/ole2/nf-ole2-releasestgmedium) v Windows SDK.
+Další informace naleznete v tématu [STGMEDIUM](/windows/win32/api/objidl/ns-objidl-ustgmedium~r1), [FORMATETC](/windows/win32/api/objidl/ns-objidl-formatetc)a [ReleaseStgMedium](/windows/win32/api/ole2/nf-ole2-releasestgmedium) v Windows SDK.
 
 ##  <a name="onsetextent"></a>Odvozenou třídu COleServerItem:: OnSetExtent
 

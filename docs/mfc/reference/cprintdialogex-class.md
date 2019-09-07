@@ -38,12 +38,12 @@ helpviewer_keywords:
 - CPrintDialogEx [MFC], PrintSelection
 - CPrintDialogEx [MFC], m_pdex
 ms.assetid: 1d506703-ee1c-44cc-b4ce-4e778fec26b8
-ms.openlocfilehash: 2334fb0a420e14aa4fa8b8b570671fb9a611de32
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 76c3968b20a66e9653fd769339e23ede2a756bbd
+ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69502883"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70741333"
 ---
 # <a name="cprintdialogex-class"></a>CPrintDialogEx – třída
 
@@ -94,7 +94,7 @@ Můžete spoléhat na rozhraní a zpracovávat mnoho aspektů procesu tisku pro 
 
 Pokud chcete, aby aplikace zpracovávala tisk bez zapojení rozhraní, můžete použít `CPrintDialogEx` třídu "tak, jak je" se zadaným konstruktorem, nebo můžete odvodit vlastní třídu dialogového okna z `CPrintDialogEx` a napsat konstruktor, který bude vyhovovat vašim potřebám. V obou případech se tato dialogová okna budou chovat jako standardní dialogová okna knihovny MFC, protože jsou odvozena z třídy `CCommonDialog`.
 
-Chcete-li `CPrintDialogEx` použít objekt, nejprve vytvořte objekt `CPrintDialogEx` pomocí konstruktoru. Po vytvoření dialogového okna můžete nastavit nebo změnit libovolné hodnoty ve struktuře [m_pdex](#m_pdex) a inicializovat tak hodnoty ovládacích prvků dialogového okna. Struktura je typu PrintDlgEx. [](/windows/win32/api/commdlg/ns-commdlg-pdexw) `m_pdex` Další informace o této struktuře naleznete v Windows SDK.
+Chcete-li `CPrintDialogEx` použít objekt, nejprve vytvořte objekt `CPrintDialogEx` pomocí konstruktoru. Po vytvoření dialogového okna můžete nastavit nebo změnit libovolné hodnoty ve struktuře [m_pdex](#m_pdex) a inicializovat tak hodnoty ovládacích prvků dialogového okna. Struktura je typu PrintDlgEx. [](/windows/win32/api/commdlg/ns-commdlg-printdlgexw) `m_pdex` Další informace o této struktuře naleznete v Windows SDK.
 
 `m_pdex` Pokud nezadáte vlastní popisovače v nástroji `hDevMode` pro členy a `hDevNames` , nezapomeňte po dokončení dialogového okna zavolat funkci `GlobalFree` systému Windows pro tyto popisovače.
 
@@ -143,7 +143,7 @@ CPrintDialogEx(
 ### <a name="parameters"></a>Parametry
 
 *dwFlags*<br/>
-Jeden nebo více příznaků, které lze použít k přizpůsobení nastavení dialogového okna v kombinaci s použitím bitového operátoru OR. Například příznak PD_ALLPAGES nastaví výchozí rozsah tisku na všechny stránky dokumentu. Další informace o těchto příznacích najdete v [PrintDlgEx](/windows/win32/api/commdlg/ns-commdlg-pdexw) struktuře v Windows SDK.
+Jeden nebo více příznaků, které lze použít k přizpůsobení nastavení dialogového okna v kombinaci s použitím bitového operátoru OR. Například příznak PD_ALLPAGES nastaví výchozí rozsah tisku na všechny stránky dokumentu. Další informace o těchto příznacích najdete v [PrintDlgEx](/windows/win32/api/commdlg/ns-commdlg-printdlgexw) struktuře v Windows SDK.
 
 *pParentWnd*<br/>
 Ukazatel na nadřazené nebo vlastní okno dialogového okna.
@@ -224,7 +224,7 @@ Pokud je nastaven příznak PD_RETURNDC, `hDevNames` nebude tato funkce vracet p
 
 ##  <a name="getdevicename"></a>CPrintDialogEx:: getnázev_zařízení
 
-Tuto funkci zavolejte po volání metody [DoModal](#domodal) , která načte název aktuálně vybrané tiskárny, nebo po volání funkce [](#getdefaults) GetDefaults pro načtení názvu výchozí tiskárny.
+Tuto funkci zavolejte po volání metody [DoModal](#domodal) , která načte název aktuálně vybrané tiskárny, nebo po volání funkce [GetDefaults](#getdefaults) pro načtení názvu výchozí tiskárny.
 
 ```
 CString GetDeviceName() const;
@@ -240,7 +240,7 @@ Použijte ukazatel na `CString` objekt `GetDeviceName` vrácený jako hodnota `l
 
 ##  <a name="getdevmode"></a>CPrintDialogEx:: getdevmode
 
-Tuto funkci zavolejte po volání [DoModal](#domodal) nebo [](#getdefaults) GetDefaults, aby se načetly informace o tiskovém zařízení.
+Tuto funkci zavolejte po volání [DoModal](#domodal) nebo [GetDefaults](#getdefaults) , aby se načetly informace o tiskovém zařízení.
 
 ```
 LPDEVMODE GetDevMode() const;
@@ -252,7 +252,7 @@ Struktura dat [DEVMODE](/windows/win32/api/wingdi/ns-wingdi-devmodea) , která o
 
 ##  <a name="getdrivername"></a>CPrintDialogEx:: getnázev_ovladače
 
-Tuto funkci zavolejte po volání [DoModal](#domodal) nebo [](#getdefaults) GetDefaults, aby se načetl název ovladače zařízení definovaného systémem.
+Tuto funkci zavolejte po volání [DoModal](#domodal) nebo [GetDefaults](#getdefaults) , aby se načetl název ovladače zařízení definovaného systémem.
 
 ```
 CString GetDriverName() const;
@@ -268,7 +268,7 @@ CString GetDriverName() const;
 
 ##  <a name="getportname"></a>CPrintDialogEx:: GetPort
 
-Tuto funkci zavolejte po volání [DoModal](#domodal) nebo [](#getdefaults) GetDefaults, aby se načetl název aktuálně vybraného portu tiskárny.
+Tuto funkci zavolejte po volání [DoModal](#domodal) nebo [GetDefaults](#getdefaults) , aby se načetl název aktuálně vybraného portu tiskárny.
 
 ```
 CString GetPortName() const;
@@ -304,7 +304,7 @@ PRINTDLGEX m_pdex;
 
 ### <a name="remarks"></a>Poznámky
 
-Po sestavení `CPrintDialogEx` objektu lze použít `m_pdex` k nastavení různých aspektů dialogového okna před voláním členské funkce [DoModal](#domodal) . Další informace o `m_pdex` struktuře naleznete v tématu [PrintDlgEx](/windows/win32/api/commdlg/ns-commdlg-pdexw) v Windows SDK.
+Po sestavení `CPrintDialogEx` objektu lze použít `m_pdex` k nastavení různých aspektů dialogového okna před voláním členské funkce [DoModal](#domodal) . Další informace o `m_pdex` struktuře naleznete v tématu [PrintDlgEx](/windows/win32/api/commdlg/ns-commdlg-printdlgexw) v Windows SDK.
 
 Změníte-li datový člen přímo, přepíšete všechny výchozí chování. `m_pdex`
 
@@ -358,7 +358,7 @@ TRUE, je-li vytištěn pouze rozsah stránek v dokumentu; v opačném případě
 
 ### <a name="remarks"></a>Poznámky
 
-Zadané rozsahy stránek lze určit z [m_pdex](#m_pdex) ( `nPageRanges`viz, `nMaxPageRanges`a `lpPageRanges` ve struktuře [PrintDlgEx](/windows/win32/api/commdlg/ns-commdlg-pdexw) v Windows SDK).
+Zadané rozsahy stránek lze určit z [m_pdex](#m_pdex) ( `nPageRanges`viz, `nMaxPageRanges`a `lpPageRanges` ve struktuře [PrintDlgEx](/windows/win32/api/commdlg/ns-commdlg-printdlgexw) v Windows SDK).
 
 ##  <a name="printselection"></a>CPrintDialogEx::P rintSelection
 

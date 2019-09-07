@@ -20,12 +20,12 @@ helpviewer_keywords:
 - CColorDialog [MFC], OnColorOK
 - CColorDialog [MFC], m_cc
 ms.assetid: d013dc25-9290-4b5d-a97e-95ad7208e13b
-ms.openlocfilehash: 3031b1e5870dd7f59af7adf48a6a77aaccdf53fc
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: f5c235008b72996424e01ee912ca78ecffab450a
+ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69507202"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70741580"
 ---
 # <a name="ccolordialog-class"></a>CColorDialog – třída
 
@@ -72,7 +72,7 @@ class CColorDialog : public CCommonDialog
 
 Chcete-li `CColorDialog` vytvořit objekt, použijte poskytnutý konstruktor nebo odvodit novou třídu a použijte vlastní konstruktor.
 
-Po vytvoření dialogového okna můžete nastavit nebo změnit libovolné hodnoty ve struktuře [m_cc](#m_cc) a inicializovat tak hodnoty ovládacích prvků dialogového okna. Struktura *m_cc* je typu [chooseColor](/windows/win32/api/commdlg/ns-commdlg-choosecolorw).
+Po vytvoření dialogového okna můžete nastavit nebo změnit libovolné hodnoty ve struktuře [m_cc](#m_cc) a inicializovat tak hodnoty ovládacích prvků dialogového okna. Struktura *m_cc* je typu [chooseColor](/windows/win32/api/commdlg/ns-commdlg-choosecolora~r1).
 
 Po inicializaci ovládacích prvků dialogového okna zavolejte `DoModal` členskou funkci pro zobrazení dialogového okna a umožněte uživateli vybrat barvu. `DoModal`Vrátí výběr uživatele dialogového okna pro tlačítko OK (IDOK) nebo zrušit (IDCANCEL).
 
@@ -126,7 +126,7 @@ CColorDialog(
 Výchozí výběr barvy Pokud není zadána žádná hodnota, výchozí hodnota je RGB (0, 0, 0) (černá).
 
 *dwFlags*<br/>
-Sada příznaků, které přizpůsobují funkce a vzhled dialogového okna. Další informace najdete v tématu struktura [chooseColor](/windows/win32/api/commdlg/ns-commdlg-choosecolorw) v Windows SDK.
+Sada příznaků, které přizpůsobují funkce a vzhled dialogového okna. Další informace najdete v tématu struktura [chooseColor](/windows/win32/api/commdlg/ns-commdlg-choosecolora~r1) v Windows SDK.
 
 *pParentWnd*<br/>
 Ukazatel na nadřazené nebo vlastní okno dialogového okna.
@@ -199,7 +199,7 @@ Každý z 16 hodnot RGB ve vráceném poli se inicializuje na RGB (255255255) (b
 
 ##  <a name="m_cc"></a>  CColorDialog::m_cc
 
-Struktura typu [chooseColor](/windows/win32/api/commdlg/ns-commdlg-choosecolorw), jejíž členové ukládají charakteristiky a hodnoty dialogového okna.
+Struktura typu [chooseColor](/windows/win32/api/commdlg/ns-commdlg-choosecolora~r1), jejíž členové ukládají charakteristiky a hodnoty dialogového okna.
 
 ```
 CHOOSECOLOR m_cc;
@@ -239,7 +239,7 @@ Přepsání `OnColorOK` umožňuje odmítat barvu, kterou uživatel zadá do dia
 
 Obvykle tuto funkci nemusíte používat, protože rozhraní poskytuje výchozí ověřování barev a zobrazí okno se zprávou, pokud je zadána neplatná barva.
 
-Můžete volat [SetCurrentColor](#setcurrentcolor) z v rámci `OnColorOK` vynucení výběru barvy. Po `OnColorOK` vyvolání (to znamená, že uživatel klikne na **tlačítko OK** , aby se změnila Změna barvy), [](#getcolor) můžete volat metodu GetColor pro získání hodnoty RGB nové barvy.
+Můžete volat [SetCurrentColor](#setcurrentcolor) z v rámci `OnColorOK` vynucení výběru barvy. Po `OnColorOK` vyvolání (to znamená, že uživatel klikne na **tlačítko OK** , aby se změnila Změna barvy), můžete volat metodu [GetColor](#getcolor) pro získání hodnoty RGB nové barvy.
 
 ### <a name="example"></a>Příklad
 

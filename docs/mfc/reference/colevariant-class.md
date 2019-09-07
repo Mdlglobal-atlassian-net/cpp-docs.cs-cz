@@ -20,12 +20,12 @@ helpviewer_keywords:
 - COleVariant [MFC], GetByteArrayFromVariantArray
 - COleVariant [MFC], SetString
 ms.assetid: e1b5cd4a-b066-4b9b-b48b-6215ed52d998
-ms.openlocfilehash: 0676f4896401ab777570666236c4639ad94c3a05
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 49cd4a8d3db436d5e3c4d29efbb4d80b4741a270
+ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69503053"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70739779"
 ---
 # <a name="colevariant-class"></a>COleVariant – třída
 
@@ -68,14 +68,14 @@ class COleVariant : public tagVARIANT
 
 ## <a name="remarks"></a>Poznámky
 
-Tento typ dat se používá v automatizaci OLE. Konkrétně struktura [DISPPARAMS](/windows/win32/api/oaidl/ns-oaidl-tagdispparams) obsahuje ukazatel na pole variantních struktur. Struktura se používá k předání parametrů rozhraní [IDispatch:: Invoke.](/windows/win32/api/oaidl/nf-oaidl-idispatch-invoke) `DISPPARAMS`
+Tento typ dat se používá v automatizaci OLE. Konkrétně struktura [DISPPARAMS](/windows/win32/api/oaidl/ns-oaidl-dispparams) obsahuje ukazatel na pole variantních struktur. Struktura se používá k předání parametrů rozhraní [IDispatch:: Invoke.](/windows/win32/api/oaidl/nf-oaidl-idispatch-invoke) `DISPPARAMS`
 
 > [!NOTE]
 > Tato třída je odvozena z `VARIANT` struktury. To znamená, že můžete předat `COleVariant` do parametr, který volá `VARIANT` pro a, aby datové členy `VARIANT` struktury byly přístupné datovým členům `COleVariant`.
 
 Dvě související třídy MFC [COleCurrency](../../mfc/reference/colecurrency-class.md) a [COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md) zapouzdřují variantní datové typy Currency ( `VT_CY`) a Date ( `VT_DATE`). Třída se používá rozsáhle v třídách rozhraní DAO; tyto třídy si můžete prohlédnout pro typické použití této třídy, například [CDaoQueryDef](../../mfc/reference/cdaoquerydef-class.md) a [CDaoRecordset.](../../mfc/reference/cdaorecordset-class.md) `COleVariant`
 
-Další informace naleznete v tématu [variant](/windows/win32/api/oaidl/ns-oaidl-variant), [Currency](/windows/win32/api/wtypes/ns-wtypes-cy), [DISPPARAMS](/windows/win32/api/oaidl/ns-oaidl-tagdispparams)a [IDispatch:: Invoke](/windows/win32/api/oaidl/nf-oaidl-idispatch-invoke) v Windows SDK.
+Další informace naleznete v tématu [variant](/windows/win32/api/oaidl/ns-oaidl-variant), [Currency](/windows/win32/api/wtypes/ns-wtypes-cy~r1), [DISPPARAMS](/windows/win32/api/oaidl/ns-oaidl-dispparams)a [IDispatch:: Invoke](/windows/win32/api/oaidl/nf-oaidl-idispatch-invoke) v Windows SDK.
 
 Další informace o `COleVariant` třídě a jejím použití v automatizaci OLE naleznete v tématu "předávání parametrů v automatizaci OLE" v článku [Automatizace](../../mfc/automation.md).
 

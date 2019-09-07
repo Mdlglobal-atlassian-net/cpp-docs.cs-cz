@@ -106,12 +106,12 @@ helpviewer_keywords:
 - CMFCMenuBar [MFC], SetRecentlyUsedMenus
 - CMFCMenuBar [MFC], SetShowAllCommands
 ms.assetid: 8a3ce4c7-b012-4dc0-b4f8-53c10b4b86b8
-ms.openlocfilehash: 61a5f83e31b4793ca6467287c99f3b9708659402
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 278feca6b64915d0cf789e8f68af3c3fdf9b3129
+ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69505234"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70739477"
 ---
 # <a name="cmfcmenubar-class"></a>CMFCMenuBar – třída
 
@@ -141,7 +141,7 @@ class CMFCMenuBar : public CMFCToolbar
 |[CMFCMenuBar:: Create](#create)|Vytvoří ovládací prvek nabídky a připojí ho k `CMFCMenuBar` objektu.|
 |[CMFCMenuBar::CreateEx](#createex)|`CMFCMenuBar` Vytvoří objekt s dalšími možnostmi stylu.|
 |[CMFCMenuBar::CreateFromMenu](#createfrommenu)|`CMFCMenuBar` Inicializuje objekt. Přijímá parametr HMENU, který funguje jako šablona pro vyplněný `CMFCMenuBar`.|
-|[CMFCMenuBar::EnableHelpCombobox](#enablehelpcombobox)|Povolí pole se seznamem, které je umístěné na pravé straně řádku nabídek.|
+|[CMFCMenuBar::EnableHelpCombobox](#enablehelpcombobox)|Povolí pole **se seznamem** , které je umístěné na pravé straně řádku nabídek.|
 |[CMFCMenuBar::EnableMenuShadows](#enablemenushadows)|Určuje, zda se mají zobrazovat stíny pro místní nabídky.|
 |[CMFCMenuBar::GetAvailableExpandSize](#getavailableexpandsize)|(Overrides [CPane:: GetAvailableExpandSize](../../mfc/reference/cpane-class.md#getavailableexpandsize).)|
 |[CMFCMenuBar::GetColumnWidth](#getcolumnwidth)|Vrátí šířku tlačítek panelu nástrojů. (Overrides [CMFCToolBar:: GetColumnWidth](../../mfc/reference/cmfctoolbar-class.md#getcolumnwidth).)|
@@ -428,7 +428,7 @@ Tuto metodu použijte, chcete-li, aby měl ovládací prvek nabídky stejné pol
 
 ##  <a name="enablehelpcombobox"></a>CMFCMenuBar::EnableHelpCombobox
 
-Povolí pole se seznamem, které je umístěné na pravé straně řádku nabídek.
+Povolí pole **se seznamem** , které je umístěné na pravé straně řádku nabídek.
 
 ```
 void EnableHelpCombobox(
@@ -440,7 +440,7 @@ void EnableHelpCombobox(
 ### <a name="parameters"></a>Parametry
 
 *uiID*<br/>
-pro ID příkazu pro tlačítko v poli se seznamem .
+pro ID příkazu pro **tlačítko v poli se seznamem.**
 
 *lpszPrompt*<br/>
 pro Řetězec obsahující text, který se v rozhraní zobrazí v poli se seznamem, pokud je prázdný a není aktivní. Například "sem zadejte text."
@@ -450,7 +450,7 @@ pro Šířka tlačítka pro pole se seznamem v pixelech
 
 ### <a name="remarks"></a>Poznámky
 
-Pole se seznamem **help** se podobá poli se seznamem v aplikaci Microsoft Word v řádku nabídek.
+Pole se seznamem **help** se podobá **poli se seznamem** v aplikaci Microsoft Word v řádku nabídek.
 
 Při volání této metody s *uiID* nastavenou na hodnotu 0 Tato metoda skryje pole se seznamem. V opačném případě tato metoda zobrazí pole se seznamem automaticky na pravé straně řádku nabídek. Po volání této metody zavolejte [CMFCMenuBar:: GetHelpCombobox](#gethelpcombobox) , abyste získali ukazatel na vložený objekt [CMFCToolBarComboBoxButton](../../mfc/reference/cmfctoolbarcomboboxbutton-class.md) .
 
@@ -557,7 +557,7 @@ CMFCToolBarComboBoxButton* GetHelpCombobox();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Ukazatel na pole se seznamem **help** . Hodnota NULL, Pokud je pole se seznamem pomocníka skryté nebo není povoleno.
+Ukazatel na pole se seznamem **help** . Hodnota NULL, pokud je pole se seznamem **pomocníka** skryté nebo není povoleno.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -1037,7 +1037,7 @@ static BOOL SetMenuFont(
 ### <a name="parameters"></a>Parametry
 
 *lpLogFont*<br/>
-pro Ukazatel na strukturu [LOGFONT](/windows/win32/api/dimm/ns-dimm-__midl___midl_itf_dimm_0000_0000_0003) , která definuje písmo, které má být nastaveno.
+pro Ukazatel na strukturu [LOGFONT](/windows/win32/api/dimm/ns-dimm-logfonta) , která definuje písmo, které má být nastaveno.
 
 *bHorz*<br/>
 pro TRUE, pokud chcete, aby byl parametr *lpLogFont* použit pro vertikální písmo, false, pokud chcete použít pro horizontální písmo.

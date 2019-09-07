@@ -52,12 +52,12 @@ helpviewer_keywords:
 - COleDocument [MFC], OnUpdatePasteLinkMenu
 - COleDocument [MFC], OnUpdatePasteMenu
 ms.assetid: dc2ecb99-03e1-44c7-bb69-48056dd1b672
-ms.openlocfilehash: 666ca54f55c5bb0dd4070a4984500dc19dc9d372
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: b92c796fdaa972966dcbfa85b1e34f267b6c629c
+ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69504041"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70741600"
 ---
 # <a name="coledocument-class"></a>COleDocument – třída
 
@@ -177,9 +177,9 @@ Nenulové, pokud byla funkce úspěšná; v opačném případě 0.
 
 Tato funkce aktualizuje zařízení cíle tisku pro všechny položky, ale neaktualizuje mezipaměť prezentace pro tyto položky. Chcete-li aktualizovat mezipaměť prezentace pro položku, zavolejte [COleClientItem:: UpdateLink](../../mfc/reference/coleclientitem-class.md#updatelink).
 
-Argumenty této funkce obsahují informace, které technologie OLE používá k identifikaci cílového zařízení. Struktura [PRINTDLG](/windows/win32/api/commdlg/ns-commdlg-pdw) obsahuje informace, které systém Windows používá k inicializaci běžného tiskového dialogového okna. Po zavření uživatele v dialogovém okně vrátí systém Windows informace o výběru uživatele v této struktuře. Člen objektu `PRINTDLG` CPrintDialog je struktura. [](../../mfc/reference/cprintdialog-class.md) `m_pd`
+Argumenty této funkce obsahují informace, které technologie OLE používá k identifikaci cílového zařízení. Struktura [PRINTDLG](/windows/win32/api/commdlg/ns-commdlg-printdlga) obsahuje informace, které systém Windows používá k inicializaci běžného tiskového dialogového okna. Po zavření uživatele v dialogovém okně vrátí systém Windows informace o výběru uživatele v této struktuře. Člen objektu `PRINTDLG` CPrintDialog je struktura. [](../../mfc/reference/cprintdialog-class.md) `m_pd`
 
-Další informace najdete v tématu struktura [PRINTDLG](/windows/win32/api/commdlg/ns-commdlg-pdw) v Windows SDK.
+Další informace najdete v tématu struktura [PRINTDLG](/windows/win32/api/commdlg/ns-commdlg-printdlga) v Windows SDK.
 
 Další informace najdete v tématu struktura [DVTARGETDEVICE](/windows/win32/api/objidl/ns-objidl-dvtargetdevice) v Windows SDK.
 

@@ -64,12 +64,12 @@ helpviewer_keywords:
 - CHeaderCtrl [MFC], SetItem
 - CHeaderCtrl [MFC], SetOrderArray
 ms.assetid: b847ac90-5fae-4a87-88e0-ca45f77b8b3b
-ms.openlocfilehash: 407ba2747ed4d6e56e56fe4ccb2ccb828240a732
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 62915da703e1c938e65643ab389999b83c72d459
+ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69506712"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70741532"
 ---
 # <a name="cheaderctrl-class"></a>CHeaderCtrl – třída
 
@@ -502,7 +502,7 @@ BOOL GetItem(
 Určuje index založený na nule položky, která se má načíst.
 
 *pHeaderItem*<br/>
-Ukazatel na strukturu [HDITEM](/windows/win32/api/commctrl/ns-commctrl-_hd_itemw) , která obdrží novou položku. Tato struktura je použita s `InsertItem` členskými funkcemi a. `SetItem` Všechny příznaky nastavené v `mask` elementu zajišťují, aby hodnoty v odpovídajících prvcích byly po návratu správně vyplněny. Pokud je `mask` prvek nastaven na hodnotu nula, hodnoty v ostatních prvcích struktury jsou nevýznamné.
+Ukazatel na strukturu [HDITEM](/windows/win32/api/commctrl/ns-commctrl-hditemw) , která obdrží novou položku. Tato struktura je použita s `InsertItem` členskými funkcemi a. `SetItem` Všechny příznaky nastavené v `mask` elementu zajišťují, aby hodnoty v odpovídajících prvcích byly po návratu správně vyplněny. Pokud je `mask` prvek nastaven na hodnotu nula, hodnoty v ostatních prvcích struktury jsou nevýznamné.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -542,7 +542,7 @@ BOOL GetItemDropDownRect(
 
 |Parametr|Popis|
 |---------------|-----------------|
-|*iItem*|pro Index položky záhlaví, jejichž styl je HDF_SPLITBUTTON, je počítán od nuly. Další informace naleznete v tématu `fmt` člen struktury [HDITEM](/windows/win32/api/commctrl/ns-commctrl-_hd_itemw) .|
+|*iItem*|pro Index položky záhlaví, jejichž styl je HDF_SPLITBUTTON, je počítán od nuly. Další informace naleznete v tématu `fmt` člen struktury [HDITEM](/windows/win32/api/commctrl/ns-commctrl-hditemw) .|
 |*lpRect*|mimo Ukazatel na strukturu [Rect](/previous-versions/dd162897\(v=vs.85\)) pro příjem informací o ohraničujícím obdélníku.|
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -669,7 +669,7 @@ int HitTest(LPHDHITTESTINFO* phdhti);
 
 |Parametr|Popis|
 |---------------|-----------------|
-|*phdhti*|[in, out] Ukazatel na strukturu [HDHITTESTINFO](/windows/win32/api/commctrl/ns-commctrl-_hd_hittestinfo) , která určuje bod k otestování a přijímá výsledky testu.|
+|*phdhti*|[in, out] Ukazatel na strukturu [HDHITTESTINFO](/windows/win32/api/commctrl/ns-commctrl-hdhittestinfo) , která určuje bod k otestování a přijímá výsledky testu.|
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -707,7 +707,7 @@ int InsertItem(
 Index vycházející z položky, která má být vložena. Pokud je hodnota nula, položka je vložena na začátek ovládacího prvku záhlaví. Pokud je hodnota větší než maximální hodnota, položka je vložena na konec ovládacího prvku záhlaví.
 
 *phdi*<br/>
-Ukazatel na strukturu [HDITEM](/windows/win32/api/commctrl/ns-commctrl-_hd_itemw) , která obsahuje informace o položce, která má být vložena.
+Ukazatel na strukturu [HDITEM](/windows/win32/api/commctrl/ns-commctrl-hditemw) , která obsahuje informace o položce, která má být vložena.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -728,7 +728,7 @@ BOOL Layout(HDLAYOUT* pHeaderLayout);
 ### <a name="parameters"></a>Parametry
 
 *pHeaderLayout*<br/>
-Ukazatel na strukturu [HDLAYOUT](/windows/win32/api/commctrl/ns-commctrl-_hd_layout) , která obsahuje informace používané k nastavení velikosti a umístění ovládacího prvku záhlaví.
+Ukazatel na strukturu [HDLAYOUT](/windows/win32/api/commctrl/ns-commctrl-hdlayout) , která obsahuje informace používané k nastavení velikosti a umístění ovládacího prvku záhlaví.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -917,7 +917,7 @@ BOOL SetItem(
 Index položky, která má být zpracována od nuly.
 
 *pHeaderItem*<br/>
-Ukazatel na strukturu [HDITEM](/windows/win32/api/commctrl/ns-commctrl-_hd_itemw) , která obsahuje informace o nové položce.
+Ukazatel na strukturu [HDITEM](/windows/win32/api/commctrl/ns-commctrl-hditemw) , která obsahuje informace o nové položce.
 
 ### <a name="return-value"></a>Návratová hodnota
 

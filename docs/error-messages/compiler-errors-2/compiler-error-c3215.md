@@ -7,19 +7,19 @@ helpviewer_keywords:
 - C3215
 ms.assetid: d0d16007-8885-42e0-b086-2d3a61f348c5
 ms.openlocfilehash: 24f17d2990c9258168a6d37fef101c21f62cb08d
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59778719"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70739487"
 ---
 # <a name="compiler-error-c3215"></a>Chyba kompilátoru C3215
 
-'type1': Parametr obecného typu už se omezuje podle 'type2'
+Typ1: parametr obecného typu se už omezuje pomocí "typ2".
 
-Omezení byla zadána více než jednou.
+Omezení bylo zadáno více než jednou.
 
-Další informace o obecných typů viz [obecných typů](../../extensions/generics-cpp-component-extensions.md).
+Další informace o obecných typech naleznete v tématu [generické typy](../../extensions/generics-cpp-component-extensions.md).
 
 Následující ukázka generuje C3215:
 
@@ -33,7 +33,7 @@ where T : A,A
 ref class C {};   // C3215
 ```
 
-Možná řešení:
+Možné řešení:
 
 ```
 // C3215b.cpp

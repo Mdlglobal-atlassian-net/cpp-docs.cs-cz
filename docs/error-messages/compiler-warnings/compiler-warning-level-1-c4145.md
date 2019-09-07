@@ -1,5 +1,5 @@
 ---
-title: Kompilátor upozornění (úroveň 1) C4145
+title: Upozornění kompilátoru (úroveň 1) C4145
 ms.date: 11/04/2016
 f1_keywords:
 - C4145
@@ -7,17 +7,17 @@ helpviewer_keywords:
 - C4145
 ms.assetid: 0440777a-cca2-4159-aff5-e67a254ad64a
 ms.openlocfilehash: 10c0211bfda354a00e05cba3131d047fce843df8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50553787"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70741107"
 ---
-# <a name="compiler-warning-level-1-c4145"></a>Kompilátor upozornění (úroveň 1) C4145
+# <a name="compiler-warning-level-1-c4145"></a>Upozornění kompilátoru (úroveň 1) C4145
 
-'expression1': relační výraz jako výraz přepínače; potenciální záměna s: "expression2.
+' Výraz1 ': relační výraz jako výraz přepínače; možná záměna s použitím příkazu Výraz2
 
-A `switch` příkaz používá relační výraz jako výraz jeho ovládací prvek, jehož výsledkem je logická hodnota pro **případ** příkazy. Neměli jste na mysli *expression2*?
+Příkaz používá relační výraz jako výraz ovládacího prvku, který má za následek logickou hodnotu pro příkazy **case.** `switch` Měli jste na *mysli?*
 
 ## <a name="example"></a>Příklad
 

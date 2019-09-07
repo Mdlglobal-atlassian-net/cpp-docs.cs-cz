@@ -15,12 +15,12 @@ f1_keywords:
 helpviewer_keywords:
 - CComCurrency class
 ms.assetid: a1c3d10a-bba6-40cc-8bcf-aed9023c8a9e
-ms.openlocfilehash: 11463b7113876abdf0743b9f8c7df373fadd99ef
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: d6eb67e04ebb2b9084874a586eafc744df2d3f40
+ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69497292"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70739771"
 ---
 # <a name="ccomcurrency-class"></a>CComCurrency – třída
 
@@ -84,7 +84,7 @@ class CComCurrency
 
 `CComCurrency` Obálka implementuje operace aritmetického, přiřazení a porovnání pro tento typ s pevnou desetinnou čárkou. Pro řízení chyb zaokrouhlování, ke kterým může dojít při výpočtech s pevnou desetinnou čárkou, byly vybrány podporované aplikace.
 
-`CComCurrency` Objekt poskytuje přístup k číslům na obou stranách desetinné čárky ve formě dvou komponent: celočíselná komponenta, která ukládá hodnotu nalevo od desetinné čárky, a zlomkovou komponentu, která ukládá hodnotu napravo od desetinná čárka. Zlomková komponenta se ukládá interně jako celočíselná hodnota mezi-9999 (CY_MIN_FRACTION) a + 9999 (CY_MAX_FRACTION). Metoda [CComCurrency::](#getfraction) getzloma vrátí hodnotu škálované faktorem 10000 (CY_SCALE).
+`CComCurrency` Objekt poskytuje přístup k číslům na obou stranách desetinné čárky ve formě dvou komponent: celočíselná komponenta, která ukládá hodnotu nalevo od desetinné čárky, a zlomkovou komponentu, která ukládá hodnotu napravo od desetinná čárka. Zlomková komponenta se ukládá interně jako celočíselná hodnota mezi-9999 (CY_MIN_FRACTION) a + 9999 (CY_MAX_FRACTION). Metoda [CComCurrency:: Getzloma](#getfraction) vrátí hodnotu škálované faktorem 10000 (CY_SCALE).
 
 Při zadávání celočíselné a zlomkové komponenty `CComCurrency` objektu si pamatujte, že desetinná komponenta je číslo v rozsahu 0 až 9999. To je důležité při obchodování s měnou, jako je US dolar, která vyjadřuje částky za použití jenom dvou platných číslic za desetinnou čárkou. I když se poslední dvě číslice nezobrazí, musí se vzít v úvahu.
 
@@ -642,5 +642,5 @@ Vrátí hodnotu S_OK při úspěchu nebo chybu HRESULT při selhání.
 ## <a name="see-also"></a>Viz také:
 
 [COleCurrency – třída](../../mfc/reference/colecurrency-class.md)<br/>
-[MĚNĚ](/windows/win32/api/wtypes/ns-wtypes-cy)<br/>
+[MĚNĚ](/windows/win32/api/wtypes/ns-wtypes-cy~r1)<br/>
 [Přehled třídy](../../atl/atl-class-overview.md)

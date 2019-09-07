@@ -2,63 +2,63 @@
 title: DLLs (C++/CX)
 ms.date: 02/06/2018
 ms.assetid: 5b8bcc57-64dd-4c54-9f24-26a25bd5dddd
-ms.openlocfilehash: 13e733f0be27fe532af6109bdd6fc53291265e66
-ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.openlocfilehash: 4db0ed4f11f03c65c440c7b654653347da1d4536
+ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65447235"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70740262"
 ---
 # <a name="dlls-ccx"></a>DLLs (C++/CX)
 
-Visual Studio můžete použít k vytvoření standardním Win32 DLL nebo součásti prostředí Windows Runtime knihovny DLL, která mohou být spotřebovány aplikací univerzální platformy Windows (UPW). Standardní knihovny DLL, který byl vytvořen pomocí verze sady Visual Studio nebo službou Microsoft C++ kompilátoru, která je starší než Visual Studio 2012 v aplikace pro UPW nemusí načíst správně a nemusí předat ověřovací test aplikace v Microsoft Store.
+Můžete použít aplikaci Visual Studio k vytvoření standardní knihovny DLL Win32 nebo knihovny DLL prostředí Windows Runtime komponenty, které mohou být spotřebovány aplikacemi Univerzální platforma Windows (UWP). Standardní knihovna DLL, která byla vytvořena pomocí verze sady Visual Studio nebo kompilátoru společnosti Microsoft C++ , která je starší než Visual Studio 2012, se nemusí správně načíst v aplikaci pro UWP a nemůže předat ověřovací test aplikace v Microsoft Store.
 
-## <a name="windows-runtime-component-dlls"></a>Součást prostředí Windows Runtime knihovny DLL
+## <a name="windows-runtime-component-dlls"></a>Knihovny DLL prostředí Windows Runtime komponent
 
-V téměř všech případech Pokud chcete vytvořit knihovnu DLL pro použití v aplikaci UWP, vytvořte ho jako součást prostředí Windows Runtime pomocí šablony projektu s tímto názvem. Vytvoření projektu součásti prostředí Windows Runtime pro knihovny DLL, které mají veřejné nebo privátní typy Windows Runtime. Součást prostředí Windows Runtime je přístupná z aplikací, které jsou napsané v libovolném jazyce kompatibilního s Windows Runtime. Ve výchozím nastavení kompilátoru pro součást prostředí Windows Runtime projektu použijte **/ZW** přepnout. Soubor .winmd musí mít stejný název, který má kořenový obor názvů. Například třída, která má název A.B.C.MyClass dá vytvořit instance pouze v případě, že je definována v souboru metadat, který je pojmenován A.winmd a A.B.winmd nebo A.B.C.winmd. Název knihovny DLL nemusí odpovídat názvu souboru .winmd.
+V téměř všech případech, pokud chcete vytvořit knihovnu DLL pro použití v aplikaci UWP, ji vytvořte jako komponentu prostředí Windows Runtime pomocí šablony projektu daného názvu. Můžete vytvořit projekt komponenty prostředí Windows Runtime pro knihovny DLL, které mají typy Public nebo Private prostředí Windows Runtime. K prostředí Windows Runtime komponentě se dá dostat z aplikací, které jsou napsané v jakémkoli jazyce kompatibilním s prostředí Windows Runtime. Ve výchozím nastavení má nastavení kompilátoru pro projekt komponenty prostředí Windows Runtime použít přepínač **/ZW** . Soubor. winmd musí mít stejný název, který má kořenový obor názvů. Například třída s názvem A. B. C. MyClass může být vytvořena pouze v případě, že je definována v souboru metadat s názvem A. winmd nebo A. B. winmd nebo A. B. C. winmd. Název knihovny DLL není nutné odpovídat názvu souboru. winmd.
 
-Další informace najdete v tématu [vytváření komponent Windows Runtime v jazyce C++](/windows/uwp/winrt-components/creating-windows-runtime-components-in-cpp).
+Další informace naleznete v tématu [Creating prostředí Windows Runtime Components C++in ](/windows/uwp/winrt-components/creating-windows-runtime-components-in-cpp).
 
-### <a name="to-reference-a-third-party-windows-runtime-component-binary-in-your-project"></a>Chcete-li odkazovat na součást prostředí Windows Runtime třetích stran binární ve vašem projektu
+### <a name="to-reference-a-third-party-windows-runtime-component-binary-in-your-project"></a>Odkazování na binární soubor komponenty prostředí Windows Runtime třetí strany v projektu
 
-1. Otevřete místní nabídku pro projekt, který bude používat knihovny DLL a klikněte na tlačítko **vlastnosti**. Na **společné vlastnosti** zvolte **přidat nový odkaz** tlačítko.
+1. Otevřete místní nabídku pro projekt, který bude používat knihovnu DLL, a pak zvolte možnost **vlastnosti**. Na stránce **společné vlastnosti** klikněte na tlačítko **Přidat nový odkaz** .
 
-1. Součást prostředí Windows Runtime se skládá z soubor DLL a soubor .winmd obsahující metadata. Tyto soubory jsou obvykle umístěny ve stejné složce. V levém podokně **přidat odkaz** dialogového okna zvolte **Procházet** tlačítko a pak přejděte do umístění knihovny DLL a jeho soubor winmd. Další informace najdete v tématu [sady SDK rozšíření](/visualstudio/extensibility/creating-a-software-development-kit#ExtensionSDKs).
+1. Komponenta prostředí Windows Runtime se skládá ze souboru DLL a souboru. winmd, který obsahuje metadata. Obvykle se tyto soubory nacházejí ve stejné složce. V levém podokně dialogového okna **Přidat odkaz** klikněte na tlačítko **Procházet** a potom přejděte do umístění knihovny DLL a jejího souboru winmd. Další informace najdete v tématu [rozšiřující sady SDK](/visualstudio/extensibility/creating-a-software-development-kit#extension-sdks).
 
 ## <a name="standard-dlls"></a>Standardní knihovny DLL
 
-Můžete vytvořit standardní knihovny DLL pro kód jazyka C++, který nebude využívat nebo vytvářet veřejné typy Windows Runtime a využívat z aplikace pro UPW. Typ projektu dynamické knihovny (DLL) použijte, pokud chcete migrovat existující knihovny DLL pro kompilaci v této verzi sady Visual Studio, ale kód nejde převést na projekt pro součást prostředí Windows Runtime. Při použití následujících kroků, knihovny DLL se nasadí společně s vaší aplikace v balíčku .appx spustitelný soubor.
+Můžete vytvořit standardní knihovnu DLL pro C++ kód, který nespotřebovává nebo produkuje veřejné prostředí Windows Runtime typy a spotřebovat ho z aplikace pro UWP. Použijte typ projektu dynamické knihovny (DLL), pokud chcete pouze migrovat existující knihovnu DLL pro kompilaci v této verzi sady Visual Studio, ale nikoli převést kód na projekt prostředí Windows Runtime komponenty. Použijete-li následující postup, knihovna DLL bude nasazena společně se spustitelným souborem aplikace v balíčku. appx.
 
-### <a name="to-create-a-standard-dll-in-visual-studio"></a>Chcete-li vytvořit standardní knihovny DLL v sadě Visual Studio
+### <a name="to-create-a-standard-dll-in-visual-studio"></a>Vytvoření standardní knihovny DLL v aplikaci Visual Studio
 
-1. V panelu nabídky zvolte **souboru**, **nový**, **projektu**a pak vyberte **dynamické propojení knihovna (DLL)** šablony.
+1. Na panelu nabídek zvolte položku **soubor**, **Nový**, **projekt**a potom vyberte šablonu **Knihovna DLL (Dynamic Link Library)** .
 
-1. Zadejte název projektu a klikněte na tlačítko **OK** tlačítko.
+1. Zadejte název projektu a pak klikněte na tlačítko **OK** .
 
-1. Přidejte kód. Nezapomeňte použít `__declspec(dllexport)` pro funkce, které máte v úmyslu export – například `__declspec(dllexport) Add(int I, in j);`
+1. Přidejte kód. Nezapomeňte použít `__declspec(dllexport)` pro funkce, které máte v úmyslu exportovat – například`__declspec(dllexport) Add(int I, in j);`
 
-1. Přidat `#include winapifamily.h` zahrnout tento soubor hlavičky ze sady Windows SDK pro aplikace pro UPW a nastavte makro `WINAPI_FAMILY=WINAPI_PARTITION_APP`.
+1. Přidejte `#include winapifamily.h` pro zahrnutí tohoto souboru hlaviček z Windows SDK pro aplikace pro UWP a nastavte makro `WINAPI_FAMILY=WINAPI_PARTITION_APP`.
 
-### <a name="to-reference-a-standard-dll-project-from-the-same-solution"></a>Chcete-li odkazovat standardní projektu knihovny DLL ve stejném řešení
+### <a name="to-reference-a-standard-dll-project-from-the-same-solution"></a>Odkazování na standardní projekt knihovny DLL ze stejného řešení
 
-1. Otevřete místní nabídku pro projekt, který bude používat knihovny DLL a klikněte na tlačítko **vlastnosti**. Na **společné vlastnosti** zvolte **přidat nový odkaz** tlačítko.
+1. Otevřete místní nabídku pro projekt, který bude používat knihovnu DLL, a pak zvolte možnost **vlastnosti**. Na stránce **společné vlastnosti** klikněte na tlačítko **Přidat nový odkaz** .
 
-1. V levém podokně vyberte **řešení**a potom v pravém podokně vyberte příslušné políčko.
+1. V levém podokně vyberte **řešení**a potom zaškrtněte příslušné políčko v pravém podokně.
 
-1. Soubory zdrojového kódu, přidejte `#include` – příkaz souboru hlaviček knihovny DLL, podle potřeby.
+1. V souborech zdrojového kódu přidejte `#include` příkaz pro hlavičkový soubor DLL podle potřeby.
 
-### <a name="to-reference-a-standard-dll-binary"></a>Chcete-li odkazovat standardní binární soubor knihovny DLL
+### <a name="to-reference-a-standard-dll-binary"></a>Odkazování na standardní binární soubor DLL
 
-1. Zkopírujte soubor knihovny DLL, .lib soubor a soubor hlaviček a vložte je do vhodného umístění, například v aktuální složce projektu.
+1. Zkopírujte soubor DLL, soubor. lib a hlavičkový soubor a vložte je do známého umístění, například do složky aktuálního projektu.
 
-1. Otevřete místní nabídku pro projekt, který bude používat knihovny DLL a klikněte na tlačítko **vlastnosti**. Na **vlastnosti konfigurace**, **Linkeru**, **vstup** stránce, přidejte soubor .lib jako závislost.
+1. Otevřete místní nabídku pro projekt, který bude používat knihovnu DLL, a pak zvolte možnost **vlastnosti**. Na stránce **Vlastnosti konfigurace**, **linker**, **vstupní** stránka přidejte soubor. lib jako závislost.
 
-1. Soubory zdrojového kódu, přidejte `#include` – příkaz souboru hlaviček knihovny DLL, podle potřeby.
+1. V souborech zdrojového kódu přidejte `#include` příkaz pro hlavičkový soubor DLL podle potřeby.
 
-### <a name="to-migrate-an-existing-win32-dll-for-uwp-app-compatibility"></a>K migraci existujícího Win32 DLL z důvodu kompatibility aplikace UPW
+### <a name="to-migrate-an-existing-win32-dll-for-uwp-app-compatibility"></a>Migrace stávající knihovny DLL Win32 pro kompatibilitu aplikací pro UWP
 
-1. Vytvořte projekt typu knihovny DLL (Universal Windows) a přidejte do ní existující zdrojový kód.
+1. Vytvořte projekt typu DLL (univerzální pro Windows) a přidejte do něj svůj existující zdrojový kód.
 
-1. Přidat `#include winapifamily.h` zahrnout tento soubor hlavičky ze sady Windows SDK pro aplikace pro UPW a nastavte makro `WINAPI_FAMILY=WINAPI_PARTITION_APP`.
+1. Přidejte `#include winapifamily.h` pro zahrnutí tohoto souboru hlaviček z Windows SDK pro aplikace pro UWP a nastavte makro `WINAPI_FAMILY=WINAPI_PARTITION_APP`.
 
-1. Soubory zdrojového kódu, přidejte `#include` – příkaz souboru hlaviček knihovny DLL, podle potřeby.
+1. V souborech zdrojového kódu přidejte `#include` příkaz pro hlavičkový soubor DLL podle potřeby.

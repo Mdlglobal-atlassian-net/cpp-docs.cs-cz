@@ -818,12 +818,12 @@ helpviewer_keywords:
 - CWnd [MFC], WindowProc
 - CWnd [MFC], m_hWnd
 ms.assetid: 49a832ee-bc34-4126-88b3-bc1d9974f6c4
-ms.openlocfilehash: 5e7a0b0d7f5c41c60fc10784518c4c075c13f778
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: bbd1f60c3628d5fcd103e220362004ec34ab2c41
+ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69502145"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70740997"
 ---
 # <a name="cwnd-class"></a>CWnd – třída
 
@@ -2750,7 +2750,7 @@ void EnableActiveAccessibility();
 
 ### <a name="remarks"></a>Poznámky
 
-Výchozí aktivní podpora přístupnosti knihovny MFC je dostačující pro standardní okna a ovládací prvky, včetně ovládacích prvků ActiveX; Pokud však vaše `CWnd`odvozená třída obsahuje prvky uživatelského rozhraní, které nejsou v uživatelském rozhraní, knihovna MFC nemá žádný způsob, jak je o nich vědět. V takovém případě musíte přepsat příslušné [aktivní členské funkce](/windows/win32/winauto/sdk-components) přístupnosti ve vaší třídě a musíte volat `EnableActiveAccessibility` v konstruktoru třídy.
+Výchozí aktivní podpora přístupnosti knihovny MFC je dostačující pro standardní okna a ovládací prvky, včetně ovládacích prvků ActiveX; Pokud však vaše `CWnd`odvozená třída obsahuje prvky uživatelského rozhraní, které nejsou v uživatelském rozhraní, knihovna MFC nemá žádný způsob, jak je o nich vědět. V takovém případě musíte přepsat příslušné [aktivní členské funkce přístupnosti](/windows/win32/winauto/sdk-components) ve vaší třídě a musíte volat `EnableActiveAccessibility` v konstruktoru třídy.
 
 ##  <a name="enabledynamiclayout"></a>CWnd:: EnableDynamicLayout
 
@@ -2864,12 +2864,12 @@ TRUE, pokud jsou k dispozici tipy nástrojů; v opačném případě FALSE.
 
 ### <a name="remarks"></a>Poznámky
 
-Přepište [OnToolHitTest](#ontoolhittest) a poskytněte [TOOLINFO](/windows/win32/api/commctrl/ns-commctrl-toolinfow) strukturu nebo struktury pro okno.
+Přepište [OnToolHitTest](#ontoolhittest) a poskytněte [TOOLINFO](/windows/win32/api/commctrl/ns-commctrl-tttoolinfoa) strukturu nebo struktury pro okno.
 
 > [!NOTE]
 > Některá okna, například [CToolBar –](../../mfc/reference/ctoolbar-class.md), poskytují integrovanou implementaci [OnToolHitTest](#ontoolhittest).
 
-Další informace o této struktuře naleznete v tématu [TOOLINFO](/windows/win32/api/commctrl/ns-commctrl-toolinfow) v Windows SDK.
+Další informace o této struktuře naleznete v tématu [TOOLINFO](/windows/win32/api/commctrl/ns-commctrl-tttoolinfoa) v Windows SDK.
 
 Jednoduché volání `EnableToolTips` není dostačující pro zobrazení tipů nástrojů pro podřízené ovládací prvky, pokud není nadřazené okno odvozeno z `CFrameWnd`. Důvodem je `CFrameWnd` , že poskytuje výchozí obslužnou rutinu pro oznámení TTN_NEEDTEXT. Pokud vaše nadřazené okno není odvozeno z `CFrameWnd`, to znamená, že pokud se jedná o dialogové okno nebo zobrazení formuláře, popisy tlačítek pro podřízené ovládací prvky se nezobrazí správně, pokud neposkytnete obslužnou rutinu pro oznámení TTN_NEEDTEXT Tool. Viz [tipy nástrojů](../../mfc/tool-tips-in-windows-not-derived-from-cframewnd.md).
 
@@ -3629,7 +3629,7 @@ CWnd* GetAncestor(UINT gaFlags) const;
 ### <a name="parameters"></a>Parametry
 
 *gaFlags*<br/>
-Určuje nadřazený prvek, který se má načíst. Úplný seznam možných hodnot naleznete v tématu GetAncestor [](/windows/win32/api/winuser/nf-winuser-getancestor).
+Určuje nadřazený prvek, který se má načíst. Úplný seznam možných hodnot naleznete v tématu [GetAncestor](/windows/win32/api/winuser/nf-winuser-getancestor).
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -3637,7 +3637,7 @@ Pokud je funkce úspěšná, návratová hodnota je ukazatel na objekt okna pře
 
 ### <a name="remarks"></a>Poznámky
 
-Tato členská funkce emuluje funkčnost funkce GetAncestor, [](/windows/win32/api/winuser/nf-winuser-getancestor)jak je popsáno v Windows SDK.
+Tato členská funkce emuluje funkčnost funkce [GetAncestor](/windows/win32/api/winuser/nf-winuser-getancestor), jak je popsáno v Windows SDK.
 
 ##  <a name="getcapture"></a>CWnd:: getcapture
 
@@ -3714,7 +3714,7 @@ Souřadnice klienta určují levý horní a dolní roh oblasti klienta. Vzhledem
 
 ### <a name="example"></a>Příklad
 
-  Podívejte se na příklad pro [CWnd::](#isiconic)deicond.
+  Podívejte se na příklad pro [CWnd:: Deicond](#isiconic).
 
 ##  <a name="getclipboardowner"></a>CWnd:: GetClipboardOwner
 
@@ -3772,7 +3772,7 @@ Ukazatel rozhraní vrácený `GetControlUnknown` neodkazuje na odkaz. Nevolejte 
 
 ##  <a name="getcurrentmessage"></a>CWnd:: GetCurrentMessage
 
-Vrátí ukazatel na zprávu, kterou toto okno právě zpracovává. By mělo být voláno pouze v případě, že je v členské funkci obslužné rutiny zprávy.
+Vrátí ukazatel na zprávu, kterou toto okno právě zpracovává. By mělo být voláno<em>pouze v případě</em> , **že je v**členské funkci obslužné rutiny zprávy.
 
 ```
 static const MSG* PASCAL GetCurrentMessage();
@@ -3780,7 +3780,7 @@ static const MSG* PASCAL GetCurrentMessage();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vrátí ukazatel na strukturu [MSG](/windows/win32/api/winuser/ns-winuser-msg) obsahující zprávu, kterou okno právě zpracovává. By mělo být voláno pouze vpřípadě, že je obslužná rutina<em>zprávy</em> zapnuta.
+Vrátí ukazatel na strukturu [MSG](/windows/win32/api/winuser/ns-winuser-msg) obsahující zprávu, kterou okno právě zpracovává. By mělo být voláno pouze v případě, že je obslužná rutina<em>zprávy</em> **zapnuta**.
 
 ### <a name="example"></a>Příklad
 
@@ -4404,7 +4404,7 @@ Ukazatel na `CWnd` objekt.
 
 Pokud okno nemá žádného vlastníka, bude ve výchozím nastavení vrácen ukazatel na objekt nadřazeného okna. Všimněte si, že vztah mezi vlastníkem a vlastníkem se liší od aspektu nadřazeného a podřízeného v několika důležitých aspektech. Například okno s nadřazeným objektem je omezeno na klientskou oblast svého nadřazeného okna. Vlastní okna lze vykreslit v jakémkoli umístění na ploše.
 
-Koncept vlastnictví této funkce se liší od konceptu vlastnictví GetWindow. [](/windows/win32/api/winuser/nf-winuser-getwindow)
+Koncept vlastnictví této funkce se liší od konceptu vlastnictví [GetWindow](/windows/win32/api/winuser/nf-winuser-getwindow).
 
 ##  <a name="getparent"></a>CWnd:: GetParent
 
@@ -5683,8 +5683,8 @@ Následující příklad ukazuje různé systémové ikony, které lze použít 
 |||
 |-|-|
 |![Ikona &#40;zastavení&#41; x]–(../../mfc/reference/media/vc364f1.gif "&#41; ikona &#40;zastavení")|MB_ICONHAND, MB_ICONSTOP a MB_ICONERROR|
-|![Máte &#40;lepší informace? &#41; ]ikona(../../mfc/reference/media/vc364f2.gif " &#40;pomocníka&#41; ? ikona")|MB_ICONQUESTION|
-|![&#33; Důležitá &#40; &#41; ikona](../../mfc/reference/media/vc364f3.gif "důležité &#40; &#33; &#41; ")|MB_ICONEXCLAMATION a MB_ICONWARNING|
+|![Máte &#40;lepší informace? ikona &#41; ](../../mfc/reference/media/vc364f2.gif " &#40;pomocníka&#41; ? ikona")|MB_ICONQUESTION|
+|![&#41; Důležitá &#40; &#33; ikona](../../mfc/reference/media/vc364f3.gif "důležité &#40; &#33; &#41; ")|MB_ICONEXCLAMATION a MB_ICONWARNING|
 |![Informace o&#41; &#40;]i ikona(../../mfc/reference/media/vc364f4.gif " &#40;&#41; ")|MB_ICONASTERISK a MB_ICONINFORMATION|
 
 ### <a name="example"></a>Příklad
@@ -5818,7 +5818,7 @@ Určuje novou šířku `CWnd`.
 Určuje novou výšku `CWnd`.
 
 *bRepaint*<br/>
-Určuje, `CWnd` zda má být překresleno. Je-li `CWnd` nastavena hodnota true, obdrží zprávu [](#onpaint) [WM_PAINT](/windows/win32/gdi/wm-paint) ve své obslužné rutině zprávy o tom, jak je obvyklé. Pokud má tento parametr hodnotu FALSE, nedochází k žádnému překreslení jakéhokoli druhu. To platí pro klientskou oblast, na neklientskou oblast (včetně názvu a posuvníků) a do jakékoli části nadřazeného okna, které se v důsledku `CWnd`přesunu nekryje. Pokud má tento parametr hodnotu false, aplikace musí explicitně zrušit platnost nebo překreslit všechny části `CWnd` a nadřazené okno, které musí být překresleny.
+Určuje, `CWnd` zda má být překresleno. Je-li `CWnd` nastavena hodnota true, obdrží zprávu [WM_PAINT](/windows/win32/gdi/wm-paint) [ve své obslužné](#onpaint) rutině zprávy o tom, jak je obvyklé. Pokud má tento parametr hodnotu FALSE, nedochází k žádnému překreslení jakéhokoli druhu. To platí pro klientskou oblast, na neklientskou oblast (včetně názvu a posuvníků) a do jakékoli části nadřazeného okna, které se v důsledku `CWnd`přesunu nekryje. Pokud má tento parametr hodnotu false, aplikace musí explicitně zrušit platnost nebo překreslit všechny části `CWnd` a nadřazené okno, které musí být překresleny.
 
 *lpRect*<br/>
 Objekt [CRect](../../atl-mfc-shared/reference/crect-class.md) nebo [Struktura Rect](/windows/win32/api/windef/ns-windef-rect) , která určuje novou velikost a polohu.
@@ -6133,7 +6133,7 @@ Obsahuje kód kontroly, kód přechodu na klíč, předchozí stav klíče a kó
 
 ### <a name="remarks"></a>Poznámky
 
-Tato funkce se volá před členskou [](#onkeyup) funkcí prokeyup a po volání členské funkce [OnKeyDown](#onkeydown) . `OnChar`obsahuje hodnotu stisknuté nebo vydané klávesy klávesnice.
+Tato funkce se volá před členskou funkcí [prokeyup](#onkeyup) a po volání členské funkce [OnKeyDown](#onkeydown) . `OnChar`obsahuje hodnotu stisknuté nebo vydané klávesy klávesnice.
 
 Vzhledem k tomu, že mezi stisknutými klíči a `OnChar` vygenerovanými voláními není nutně žádná korespondence 1:1, informace v *nFlags* většinou nejsou užitečné pro aplikace. Informace v *nFlags* platí pouze pro poslední volání `OnKeyUp` `OnKeyDown` členské funkce nebo členskou `OnChar`funkci, která předchází volání.
 
@@ -6516,7 +6516,7 @@ Chcete-li změnit barvu pozadí víceřádkového ovládacího prvku pro úpravy
 
 ##  <a name="ondeadchar"></a>CWnd:: OnDeadChar
 
-Rozhraní volá tuto členskou funkci při volání členské [](#onkeyup) funkce webkeyup a členských funkcí [OnKeyDown](#onkeydown) .
+Rozhraní volá tuto členskou funkci při volání členské funkce [webkeyup](#onkeyup) a členských funkcí [OnKeyDown](#onkeydown) .
 
 ```
 afx_msg void OnDeadChar(
@@ -6552,7 +6552,7 @@ Tato členská funkce se dá použít k zadání znaku pro nedoručený klíč. 
 
 Aplikace obvykle používá `OnDeadChar` k poskytnutí zpětné vazby ke každému stisknutí klávesy uživatelem. Například aplikace může zobrazit zvýraznění v aktuálním znaku pozice bez přesunutí blikajícího kurzoru.
 
-Vzhledem k tomu, že mezi stisknutými klávesami a `OnDeadChar` voláními není nutně shoda 1:1, informace v *nFlags* většinou nejsou užitečné pro aplikace. Informace v *nFlags* se vztahují pouze na nejnovější volání členské funkce prokeyup [](#onkeyup) nebo na členskou `OnDeadChar` funkci [OnKeyDown](#onkeydown) , která předchází volání.
+Vzhledem k tomu, že mezi stisknutými klávesami a `OnDeadChar` voláními není nutně shoda 1:1, informace v *nFlags* většinou nejsou užitečné pro aplikace. Informace v *nFlags* se vztahují pouze na nejnovější volání členské funkce [prokeyup](#onkeyup) nebo na členskou `OnDeadChar` funkci [OnKeyDown](#onkeydown) , která předchází volání.
 
 U klávesnic IBM Enhanced 101-a 102-Key jsou rozšířené klíče správnou klávesou ALT a pravou klávesovou zkratkou v hlavní části klávesnice. klávesy INS, DEL, domů, konec, stránka nahoru, stránka dolů a šipky v clusterech nalevo od číselné klávesnice; a lomítkem (/) a klávesy ENTER na numerické klávesnici. Některé další klávesnice můžou podporovat bit rozšířených klíčů v *nFlags*.
 
@@ -6809,7 +6809,7 @@ Určuje, zda je relace ukončena. Má hodnotu TRUE, pokud je relace ukončena; v
 
 Volání informuje objekt o `CWnd` tom, zda je relace ve skutečnosti zakončena. `OnEndSession`
 
-Pokud je OHYBOVÁ hodnota true, může systém Windows ukončit kdykoli po vrácení všech aplikací ze zpracování tohoto volání. V důsledku toho aplikace provede všechny úlohy vyžadované k ukončení v rámci `OnEndSession`.
+Pokud je *ohybová* hodnota true, může systém Windows ukončit kdykoli po vrácení všech aplikací ze zpracování tohoto volání. V důsledku toho aplikace provede všechny úlohy vyžadované k ukončení v rámci `OnEndSession`.
 
 Při ukončování relace není nutné volat členskou funkci [DestroyWindow](#destroywindow) ani funkci Windows [PostQuitMessage](/windows/win32/api/winuser/nf-winuser-postquitmessage) .
 
@@ -7396,7 +7396,7 @@ Pro zprávu WM_KEYDOWN má bit přechodu na klíč (bit 15) hodnotu 0 a bit kont
 
 Nesystémový klíč je klávesová zkratka, která se stiskne při stisknutí klávesy ALT nebo stisknutí klávesy klávesnice, která se stiskne `CWnd` , když má fokus vstupu.
 
-Z důvodu automatického opakování může dojít k více než `OnKeyDown` jednomu volání před tím, než je provedeno volání členské funkce webkeyup. [](#onkeyup) Bit, který označuje předchozí stav klíče, lze použít k určení, zda `OnKeyDown` je volání první přechod nebo opakovaný přechod.
+Z důvodu automatického opakování může dojít k více než `OnKeyDown` jednomu volání před tím, než je provedeno volání členské funkce [webkeyup](#onkeyup) . Bit, který označuje předchozí stav klíče, lze použít k určení, zda `OnKeyDown` je volání první přechod nebo opakovaný přechod.
 
 U klávesnic IBM Enhanced 101-a 102-Key jsou rozšířené klíče správnou klávesou ALT a pravou klávesovou zkratkou v hlavní části klávesnice. klávesy INS, DEL, domů, konec, stránka nahoru, stránka dolů a šipky v clusterech nalevo od číselné klávesnice; a lomítkem (/) a klávesy ENTER na numerické klávesnici. Některé další klávesnice můžou podporovat bit rozšířených klíčů v *nFlags*.
 
@@ -8709,7 +8709,7 @@ Aplikace vrátí nenulovou hodnotu, pokud zpracovává tuto zprávu; v opačném
 
 Přepište tuto členskou funkci v odvozené třídě pro zpracování zprávy WM_NOTIFY. Přepsání nebude zpracovávat mapu zprávy, pokud není volána základní třída `OnNotify` .
 
-Další informace o zprávě WM_NOTIFY najdete v článku technické poznámky 61 (TN061), [ON_NOTIFY a WM_NOTIFY zprávy](../../mfc/tn061-on-notify-and-wm-notify-messages.md). Může vás také zajímat související témata, která jsou popsána v [tématech řízení](../../mfc/controls-mfc.md)a TN062, reflexe [zprávy pro ovládací prvky systému Windows](../../mfc/tn062-message-reflection-for-windows-controls.md).
+Další informace o zprávě WM_NOTIFY najdete v článku technické poznámky 61 (TN061), [ON_NOTIFY a WM_NOTIFY zprávy](../../mfc/tn061-on-notify-and-wm-notify-messages.md). Může vás také zajímat související témata, která jsou popsána v [tématech řízení](../../mfc/controls-mfc.md)a TN062, [reflexe zprávy pro ovládací prvky systému Windows](../../mfc/tn062-message-reflection-for-windows-controls.md).
 
 ##  <a name="onnotifyformat"></a>CWnd:: OnNotifyFormat
 
@@ -9858,7 +9858,7 @@ virtual INT_PTR OnToolHitTest(
 Určuje souřadnici x a y kurzoru. Tyto souřadnice jsou vždycky relativní vzhledem k levému hornímu rohu okna.
 
 *pTI*<br/>
-Ukazatel na strukturu [TOOLINFO](/windows/win32/api/commctrl/ns-commctrl-toolinfow) . Ve výchozím nastavení jsou nastaveny následující hodnoty struktury:
+Ukazatel na strukturu [TOOLINFO](/windows/win32/api/commctrl/ns-commctrl-tttoolinfoa) . Ve výchozím nastavení jsou nastaveny následující hodnoty struktury:
 
 - *popisovač HWND*  =  dookna`m_hWnd`
 
@@ -9880,7 +9880,7 @@ Pokud oblast, ke které je popis tlačítka přidružen, není tlačítko, `OnTo
 
 Přepsáním `OnToolHitTest` poskytnete jiné informace, než je výchozí hodnota.
 
-Další informace o struktuře naleznete v tématu [TOOLINFO](/windows/win32/api/commctrl/ns-commctrl-toolinfow)v Windows SDK.
+Další informace o struktuře naleznete v tématu [TOOLINFO](/windows/win32/api/commctrl/ns-commctrl-tttoolinfoa)v Windows SDK.
 
 ##  <a name="ontouchinput"></a>CWnd:: OnTouchInput
 
@@ -10287,7 +10287,7 @@ Hodnota TRUE, pokud byla zpráva zpracována; v opačném případě FALSE.
 
 `OnWndMsg`Určuje typ zprávy a buď volá příslušnou funkci rozhraní (například [příkaz](#oncommand) WM_COMMAND pro), nebo najde příslušnou zprávu v mapě zpráv.
 
-Další informace o reflexi zprávy naleznete v tématu [manipulace](../../mfc/handling-reflected-messages.md)s reflektující se zprávami.
+Další informace o reflexi zprávy naleznete v tématu [manipulace s reflektující](../../mfc/handling-reflected-messages.md)se zprávami.
 
 ##  <a name="onxbuttondblclk"></a>CWnd:: OnXButtonDblClk
 
@@ -10795,7 +10795,7 @@ Jedná se o pomocnou funkci, která odráží *zprávu* do jejího zdroje.
 
 Zrcadlené zprávy se odesílají přímo do [CWnd:: OnWndMsg](#onwndmsg) nebo [CCmdTarget:: OnCmdMsg –](../../mfc/reference/ccmdtarget-class.md#oncmdmsg).
 
-Další informace o reflexi zprávy naleznete v tématu [manipulace](../../mfc/handling-reflected-messages.md)s reflektující se zprávami.
+Další informace o reflexi zprávy naleznete v tématu [manipulace s reflektující](../../mfc/handling-reflected-messages.md)se zprávami.
 
 ##  <a name="reflectlastmsg"></a>CWnd:: ReflectLastMsg
 
@@ -10823,7 +10823,7 @@ Nenulové, pokud byla zpráva zpracována; v opačném případě 0.
 
 Tato členská funkce volá [SendChildNotifyLastMsg](#sendchildnotifylastmsg) , pokud okno identifikované pomocí *hWndChild* je ovládací prvek OLE nebo okno v trvalé mapě.
 
-Další informace o reflexi zprávy naleznete v tématu [manipulace](../../mfc/handling-reflected-messages.md)s reflektující se zprávami.
+Další informace o reflexi zprávy naleznete v tématu [manipulace s reflektující](../../mfc/handling-reflected-messages.md)se zprávami.
 
 ##  <a name="releasedc"></a>CWnd:: ReleaseDC
 
@@ -11063,7 +11063,7 @@ Nenulové, pokud podřízené okno zpracovalo zprávu odeslanou její nadřazen�
 
 `SendChildNotifyLastMsg`Odeslat aktuální zprávu do zdroje, pokud se jedná o zprávu, která se odrazí.
 
-Další informace o reflexi zprávy naleznete v tématu [manipulace](../../mfc/handling-reflected-messages.md)s reflektující se zprávami.
+Další informace o reflexi zprávy naleznete v tématu [manipulace s reflektující](../../mfc/handling-reflected-messages.md)se zprávami.
 
 ##  <a name="senddlgitemmessage"></a>CWnd:: SendDlgItemMessage
 
@@ -11533,7 +11533,7 @@ Tento vlastník pak může přijímat zprávy příkazů z aktuálního objektu 
 
 Je často vhodné navázat spojení mezi objekty okna, které nesouvisí s hierarchií okna. Například [CToolBar –](../../mfc/reference/ctoolbar-class.md) odesílá oznámení vlastníkovi, nikoli svému nadřazenému. To umožňuje, aby se panel nástrojů stal podřízenou položkou jednoho okna (například okno aplikace kontejneru OLE) při posílání oznámení do jiného okna (jako je místní okno rámce). Kromě toho, když dojde k deaktivaci nebo aktivaci okna serveru při místních úpravách, jakékoliv okno vlastněné oknem rámců je skryté nebo zobrazené. Toto vlastnictví je explicitně nastaveno s voláním metody `SetOwner`.
 
-Koncept vlastnictví této funkce se liší od konceptu vlastnictví GetWindow. [](/windows/win32/api/winuser/nf-winuser-getwindow)
+Koncept vlastnictví této funkce se liší od konceptu vlastnictví [GetWindow](/windows/win32/api/winuser/nf-winuser-getwindow).
 
 ##  <a name="setparent"></a>CWnd:: setParent –
 

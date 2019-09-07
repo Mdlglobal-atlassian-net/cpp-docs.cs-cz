@@ -1,5 +1,5 @@
 ---
-title: soubory CAB, cabsf, cabsl –
+title: cabs, cabsf, cabsl
 ms.date: 11/04/2016
 apiname:
 - cabs
@@ -31,15 +31,15 @@ helpviewer_keywords:
 - cabsl function
 ms.assetid: 6b8eb453-cc8f-4972-bebf-351cbdfdfc15
 ms.openlocfilehash: cfa437a5d248a83568032d4c9ef8d4f938074dfe
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50623957"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70739883"
 ---
-# <a name="cabs-cabsf-cabsl"></a>soubory CAB, cabsf, cabsl –
+# <a name="cabs-cabsf-cabsl"></a>cabs, cabsf, cabsl
 
-Načte hodnotu absolutní komplexního čísla.
+Načte absolutní hodnotu komplexního čísla.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -64,28 +64,28 @@ long double cabsl(
 ### <a name="parameters"></a>Parametry
 
 *z*<br/>
-Komplexní čísla.
+Komplexní číslo.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Absolutní hodnota *z*.
+Absolutní hodnota *z.*
 
 ## <a name="remarks"></a>Poznámky
 
-Protože jazyk C++ umožňuje přetížení, můžete volat přetížení **souborů CAB** trvají **_Fcomplex** nebo **_Lcomplex** hodnoty a návrat **float** nebo **dlouhé** **double** hodnoty. V programu jazyka C **souborů CAB** vždy přijímá **_Dcomplex** hodnotu a vrátí **double** hodnotu.
+Vzhledem C++ k tomu, že umožňuje přetížení, můžete volat přetížení **kabin** , která přijímají hodnoty **_Fcomplex** nebo **_Lcomplex** , a vracet hodnoty **float** nebo **Long** **Double** . V programu v jazyce C přebírají **kabiny** vždycky hodnotu **_Dcomplex** a vrátí hodnotu **Double** .
 
 ## <a name="requirements"></a>Požadavky
 
-|Rutina|Záhlaví C|Hlaviček jazyka C++|
+|Rutina|Hlavička jazyka C|C++hlaviček|
 |-------------|--------------|------------------|
-|**soubory CAB**, **cabsf**, **cabsl –**|\<complex.h>|\<ccomplex >|
+|**kabiny**, **cabsf**, **kabiny**|\<complex.h>|\<ccomplex >|
 
-Další informace o kompatibilitě naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Viz také:
 
 [Abecední seznam odkazů na funkce](crt-alphabetical-function-reference.md)<br/>
-[Norm a normf, norml](norm-normf-norml1.md)<br/>
+[norm, normf, norml](norm-normf-norml1.md)<br/>
 [creal, crealf, creall](creal-crealf-creall.md)<br/>
 [cproj, cprojf, cprojl](cproj-cprojf-cprojl.md)<br/>
 [conj, conjf, conjl](conj-conjf-conjl.md)<br/>

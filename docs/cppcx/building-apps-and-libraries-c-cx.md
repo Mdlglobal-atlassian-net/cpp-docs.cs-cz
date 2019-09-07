@@ -1,17 +1,17 @@
 ---
-title: Vývoj aplikací a knihoven (C++/CX)
+title: Sestavování aplikací aC++knihoven (/CX)
 ms.date: 12/30/2016
 ms.assetid: ec2821a5-3479-4e64-9c2d-c777049f2cdc
-ms.openlocfilehash: d31b917a4f082d9c9eee41c23a79ce5ed1aa9f4e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b12b294d4d881df5ce4c4cbea2f3f76476e80090
+ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62257924"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70740360"
 ---
-# <a name="building-apps-and-libraries-ccx"></a>Vývoj aplikací a knihoven (C++/CX)
+# <a name="building-apps-and-libraries-ccx"></a>Sestavování aplikací aC++knihoven (/CX)
 
-V tématech v této části najdete několik podrobnosti o použití systému sestavení k vytvoření aplikace pro univerzální platformu Windows nebo komponenty prostředí Windows Runtime.
+Témata v této části poskytují několik podrobností o použití systému sestavení k vytvoření Univerzální platforma Windows aplikace nebo prostředí Windows Runtime součásti.
 
 ## <a name="in-this-section"></a>V tomto oddílu
 
@@ -21,4 +21,5 @@ V tématech v této části najdete několik podrobnosti o použití systému se
 
 - [Knihovny DLL](../cppcx/dlls-c-cx.md)
 
-Poznámka: Vizuální C++ nepodporuje optimalizace na základě profilu pro univerzální platformu Windows. Pokusíte-li se sestavit projekt s těmito možnostmi nastavenými v prostředí IDE, dojde k chybě sestavení. Konzolové aplikace také nejsou podporovány.
+>[!NOTE]
+>Visual Studio nepodporuje optimalizace na základě profilu pro Univerzální platforma Windows. Pokusíte-li se sestavit projekt s těmito možnostmi nastavenými v prostředí IDE, dojde k chybě sestavení. Nepodporují se také konzolové aplikace.

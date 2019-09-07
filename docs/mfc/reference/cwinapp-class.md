@@ -192,12 +192,12 @@ helpviewer_keywords:
 - CWinApp [MFC], m_nAutosaveInterval
 - CWinApp [MFC], m_pDataRecoveryHandler
 ms.assetid: e426a3cd-0d15-40d6-bd55-beaa5feb2343
-ms.openlocfilehash: 732bdf980240b1f496c1aca56c8a89b6a7f52d27
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: c35cc01b352285402885587f6d0b91e2c2bdd4ae
+ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69502183"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70741239"
 ---
 # <a name="cwinapp-class"></a>CWinApp – třída
 
@@ -850,7 +850,7 @@ BOOL GetPrinterDeviceDefaults(struct tagPDA* pPrintDlg);
 ### <a name="parameters"></a>Parametry
 
 *pPrintDlg*<br/>
-Ukazatel na strukturu [PRINTDLG](/windows/win32/api/commdlg/ns-commdlg-pdw) .
+Ukazatel na strukturu [PRINTDLG](/windows/win32/api/commdlg/ns-commdlg-printdlga) .
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -1434,7 +1434,7 @@ LPCTSTR m_pszAppName;
 
 Název aplikace může pocházet z parametru předaného konstruktoru [CWinApp](#cwinapp) nebo, pokud není zadán, k řetězci prostředku s ID AFX_IDS_APP_TITLE. Pokud se název aplikace v prostředku nenajde, pochází z programu. Název souboru EXE.
 
-Vráceno globální funkcí [AfxGetAppName](application-information-and-management.md#afxgetappname). `m_pszAppName`je veřejná proměnná typu const **char**<strong>\*</strong>.
+Vráceno globální funkcí [AfxGetAppName](application-information-and-management.md#afxgetappname). `m_pszAppName`je veřejná proměnná typu **const char**<strong>\*</strong>.
 
 > [!NOTE]
 > Pokud přiřadíte hodnotu k `m_pszAppName`, je nutné ji dynamicky přidělit na haldu. Destruktor volá Free () s tímto ukazatelem. `CWinApp` Chcete použít `_tcsdup`funkci běhové knihovny () pro přidělení. Než přiřadíte novou hodnotu, uvolněte také paměť přidružená k aktuálnímu ukazateli. Příklad:
@@ -1455,7 +1455,7 @@ LPCTSTR m_pszExeName;
 
 ### <a name="remarks"></a>Poznámky
 
-Na rozdíl od [m_pszAppName](#m_pszappname)nesmí tento název obsahovat prázdné znaky. `m_pszExeName`je veřejná proměnná typu const **char**<strong>\*</strong>.
+Na rozdíl od [m_pszAppName](#m_pszappname)nesmí tento název obsahovat prázdné znaky. `m_pszExeName`je veřejná proměnná typu **const char**<strong>\*</strong>.
 
 > [!NOTE]
 > Pokud přiřadíte hodnotu k `m_pszExeName`, je nutné ji dynamicky přidělit na haldu. Destruktor volá Free () s tímto ukazatelem. `CWinApp` Chcete použít `_tcsdup`funkci běhové knihovny () pro přidělení. Než přiřadíte novou hodnotu, uvolněte také paměť přidružená k aktuálnímu ukazateli. Příklad:
@@ -1472,7 +1472,7 @@ LPCTSTR m_pszHelpFilePath;
 
 ### <a name="remarks"></a>Poznámky
 
-Ve výchozím nastavení se rozhraní inicializuje `m_pszHelpFilePath` na název aplikace pomocí ". Připojí se HLP. Chcete-li změnit název souboru s příponou Help `m_pszHelpFilePath` , nastavte ukazatel na řetězec, který obsahuje úplný název požadovaného souboru Help. Vhodným místem, jak to udělat, je funkce [InitInstance](#initinstance) aplikace. `m_pszHelpFilePath`je veřejná proměnná typu const **char**<strong>\*</strong>.
+Ve výchozím nastavení se rozhraní inicializuje `m_pszHelpFilePath` na název aplikace pomocí ". Připojí se HLP. Chcete-li změnit název souboru s příponou Help `m_pszHelpFilePath` , nastavte ukazatel na řetězec, který obsahuje úplný název požadovaného souboru Help. Vhodným místem, jak to udělat, je funkce [InitInstance](#initinstance) aplikace. `m_pszHelpFilePath`je veřejná proměnná typu **const char**<strong>\*</strong>.
 
 > [!NOTE]
 > Pokud přiřadíte hodnotu k `m_pszHelpFilePath`, je nutné ji dynamicky přidělit na haldu. Destruktor volá Free () s tímto ukazatelem. `CWinApp` Chcete použít `_tcsdup`funkci běhové knihovny () pro přidělení. Než přiřadíte novou hodnotu, uvolněte také paměť přidružená k aktuálnímu ukazateli. Příklad:
@@ -1489,7 +1489,7 @@ LPCTSTR m_pszProfileName;
 
 ### <a name="remarks"></a>Poznámky
 
-`m_pszProfileName`je veřejná proměnná typu const **char**<strong>\*</strong>.
+`m_pszProfileName`je veřejná proměnná typu **const char**<strong>\*</strong>.
 
 > [!NOTE]
 > Pokud přiřadíte hodnotu k `m_pszProfileName`, je nutné ji dynamicky přidělit na haldu. Destruktor volá Free () s tímto ukazatelem. `CWinApp` Chcete použít `_tcsdup`funkci běhové knihovny () pro přidělení. Než přiřadíte novou hodnotu, uvolněte také paměť přidružená k aktuálnímu ukazateli. Příklad:
@@ -1793,7 +1793,7 @@ virtual BOOL PreTranslateMessage(MSG* pMsg);
 ### <a name="parameters"></a>Parametry
 
 *pMsg*<br/>
-Ukazatel na strukturu [zprávy](/windows/win32/api/winuser/ns-winuser-tagmsg) , která obsahuje zprávu ke zpracování.
+Ukazatel na strukturu [zprávy](/windows/win32/api/winuser/ns-winuser-msg) , která obsahuje zprávu ke zpracování.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -1886,7 +1886,7 @@ virtual LRESULT ProcessWndProcException(
 Ukazatel na nezachycenou výjimku.
 
 *pMsg*<br/>
-Zpráva [](/windows/win32/api/winuser/ns-winuser-msg)zobrazi, která obsahuje informace o zprávě systému Windows, která způsobila, že rozhraní vyvolalo výjimku.
+Zpráva [zobrazi,](/windows/win32/api/winuser/ns-winuser-msg)která obsahuje informace o zprávě systému Windows, která způsobila, že rozhraní vyvolalo výjimku.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -2052,7 +2052,7 @@ Hodnota typu **int** , kterou vrací `WinMain`.
 
 ### <a name="remarks"></a>Poznámky
 
-`Run`Získá a odešle zprávy systému Windows, dokud aplikace neobdrží zprávu WM_QUIT. Pokud fronta zpráv aplikace v současné době neobsahuje žádné zprávy, `Run` volání při nečinnosti zpracovává zpracování nečinného času. [](#onidle) Příchozí zprávy přecházejí do členské funkce [PreTranslateMessage](#pretranslatemessage) pro zvláštní zpracování a pak na funkci `TranslateMessage` Windows pro překlad standardních klávesnic `DispatchMessage` . nakonec se zavolá funkce Windows.
+`Run`Získá a odešle zprávy systému Windows, dokud aplikace neobdrží zprávu WM_QUIT. Pokud fronta zpráv aplikace v současné době neobsahuje žádné zprávy, `Run` volání při [nečinnosti](#onidle) zpracovává zpracování nečinného času. Příchozí zprávy přecházejí do členské funkce [PreTranslateMessage](#pretranslatemessage) pro zvláštní zpracování a pak na funkci `TranslateMessage` Windows pro překlad standardních klávesnic `DispatchMessage` . nakonec se zavolá funkce Windows.
 
 `Run`je zřídka přepsán, ale můžete ji přepsat, aby poskytovala zvláštní chování.
 

@@ -28,12 +28,12 @@ f1_keywords:
 helpviewer_keywords:
 - CComSafeArray class
 ms.assetid: ee349aef-33db-4c85-bd08-5d86a3c9d53a
-ms.openlocfilehash: 36750990dc62d5b24cf1107ac8a2724df787a47d
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 79b1dc844f53f739dc48eb6177e57810ff0c8412
+ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69496998"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70739596"
 ---
 # <a name="ccomsafearray-class"></a>CComSafeArray – třída
 
@@ -100,7 +100,7 @@ Typ dat, který bude uložen v poli.
 
 ## <a name="remarks"></a>Poznámky
 
-`CComSafeArray`poskytuje obálku pro třídu [datového typu SafeArray](/windows/win32/api/oaidl/ns-oaidl-tagsafearray) , což usnadňuje vytváření a správu jednoduchých a multidimenzionálních polí téměř kteréhokoli typu PODPOROVANÉho variantou.
+`CComSafeArray`poskytuje obálku pro třídu [datového typu SafeArray](/windows/win32/api/oaidl/ns-oaidl-safearray) , což usnadňuje vytváření a správu jednoduchých a multidimenzionálních polí téměř kteréhokoli typu PODPOROVANÉho variantou.
 
 `CComSafeArray`zjednodušuje předávání polí mezi procesy a navíc poskytuje dodatečné zabezpečení kontrolou hodnot indexu pole v horních a dolních mezích.
 
@@ -662,7 +662,7 @@ Příznak *bcopy* je při přidání prvků typu BSTR nebo variant do pole přih
 
 ## <a name="see-also"></a>Viz také:
 
-[SAFEARRAY – datový typ](/windows/win32/api/oaidl/ns-oaidl-tagsafearray)<br/>
+[SAFEARRAY – datový typ](/windows/win32/api/oaidl/ns-oaidl-safearray)<br/>
 [CComSafeArray:: Create](#create)<br/>
 [CComSafeArray::D estroy](#destroy)<br/>
 [Přehled třídy](../../atl/atl-class-overview.md)

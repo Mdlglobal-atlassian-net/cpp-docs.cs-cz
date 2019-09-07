@@ -30,12 +30,12 @@ helpviewer_keywords:
 - cursors [C++], importing and exporting
 - images [C++], exporting
 ms.assetid: 65f523e8-017f-4fc6-82d1-083c56d9131f
-ms.openlocfilehash: 56cff04d64f2f0a64fc216fbd418954b4c11b0f2
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 718de310bc4fb0cb0072065bc4e7b7adadb182aa
+ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69514742"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70740654"
 ---
 # <a name="how-to-manage-resources-c"></a>Postupy: Správa prostředků (C++)
 
@@ -76,7 +76,7 @@ Nemůžete přetahovat, kopírovat, vyjmout ani vkládat soubory prostředků v 
 
 Při kopírování v prostředku můžete změnit jeho vlastnost jazyka nebo podmínky nebo obojí.
 
-- Jazyk prostředku určuje jazyk používaný službou [FindResource](/windows/win32/api/winbase/nf-winbase-findresourcew) , který vám usnadní identifikaci prostředku, pro který hledáte. Prostředky můžou mít rozdíly pro každý jazyk, který nesouvisí s textem, například akcelerátory, které můžou fungovat jenom na japonské klávesnici nebo na rastrovém obrázku, který by měl být vhodný jenom pro Čínskě lokalizovaná sestavení.
+- Jazyk prostředku určuje jazyk používaný službou [FindResource](/windows/win32/api/winbase/nf-winbase-findresourcea) , který vám usnadní identifikaci prostředku, pro který hledáte. Prostředky můžou mít rozdíly pro každý jazyk, který nesouvisí s textem, například akcelerátory, které můžou fungovat jenom na japonské klávesnici nebo na rastrovém obrázku, který by měl být vhodný jenom pro Čínskě lokalizovaná sestavení.
 
 - Podmínka prostředku je definovaný symbol, který určuje podmínku, za kterou se má použít tato konkrétní kopie prostředku.
 

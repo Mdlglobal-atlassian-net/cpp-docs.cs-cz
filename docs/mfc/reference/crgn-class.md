@@ -46,12 +46,12 @@ helpviewer_keywords:
 - CRgn [MFC], RectInRegion
 - CRgn [MFC], SetRectRgn
 ms.assetid: d904da84-76aa-481e-8780-b09485f49e64
-ms.openlocfilehash: 34dcc618f603302c5598e42588ffad78d61ee222
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 97266ac9e4f1885149ce521f554ad2f22daee6e0
+ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69502716"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70741505"
 ---
 # <a name="crgn-class"></a>CRgn – třída
 
@@ -78,7 +78,7 @@ class CRgn : public CGdiObject
 |[CRgn::CombineRgn](#combinergn)|Nastaví objekt tak, aby byl ekvivalentní sjednocení dvou zadaných `CRgn` objektů. `CRgn`|
 |[CRgn::CopyRgn](#copyrgn)|Nastaví objekt tak, aby byl kopií zadaného `CRgn` objektu. `CRgn`|
 |[CRgn::CreateEllipticRgn](#createellipticrgn)|`CRgn` Inicializuje objekt s eliptickou oblastí.|
-|[CRgn::CreateEllipticRgnIndirect](#createellipticrgnindirect)|Inicializuje objekt s eliptickou oblastí definovanou strukturou [Rect.](/windows/win32/api/windef/ns-windef-tagrect) `CRgn`|
+|[CRgn::CreateEllipticRgnIndirect](#createellipticrgnindirect)|Inicializuje objekt s eliptickou oblastí definovanou strukturou [Rect.](/windows/win32/api/windef/ns-windef-rect) `CRgn`|
 |[CRgn::CreateFromData](#createfromdata)|Vytvoří oblast z dané oblasti a dat transformace.|
 |[CRgn::CreateFromPath](#createfrompath)|Vytvoří oblast z cesty, která je vybrána v daném kontextu zařízení.|
 |[CRgn::CreatePolygonRgn](#createpolygonrgn)|`CRgn` Inicializuje objekt pomocí mnohoúhelníkové oblasti. Systém automaticky uzavře mnohoúhelník, pokud je to nutné, kreslením čáry z posledního vrcholu vrcholu do prvního.|
@@ -769,7 +769,7 @@ Určuje logickou souřadnici x bodu k otestování.
 Určuje logickou souřadnici y bodu, který se má testovat.
 
 *Vyberte*<br/>
-Souřadnice x a y bodu určují souřadnice x a y bodu k otestování hodnoty. Parametr *Point* může být `POINT` buď struktura, nebo `CPoint` objekt.
+Souřadnice x a y bodu určují souřadnice x a *y bodu k* otestování hodnoty. Parametr *Point* může být `POINT` buď struktura, nebo `CPoint` objekt.
 
 ### <a name="return-value"></a>Návratová hodnota
 

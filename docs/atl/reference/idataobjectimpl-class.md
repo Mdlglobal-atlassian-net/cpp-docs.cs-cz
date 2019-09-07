@@ -20,12 +20,12 @@ helpviewer_keywords:
 - IDataObjectImpl class
 - IDataObject, ATL implementation
 ms.assetid: b680f0f7-7795-40a1-a0f6-f48768201c89
-ms.openlocfilehash: 8e3369edd0731ede0892a405ef3de4e7b4cfdef1
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 80b5dfacd5f0c8b0deb8455a59d3f71b73a35ba0
+ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69495947"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70739561"
 ---
 # <a name="idataobjectimpl-class"></a>IDataObjectImpl – třída
 
@@ -65,7 +65,7 @@ Vaše třída, která je `IDataObjectImpl`odvozena z.
 
 ## <a name="remarks"></a>Poznámky
 
-Rozhraní [IDataObject](/windows/win32/api/objidl/nn-objidl-idataobject) poskytuje metody pro podporu jednotného přenos dat. `IDataObject`používá ke čtení a ukládání dat standardní struktury formátu [FORMATETC](/windows/win32/api/objidl/ns-objidl-formatetc) a [STGMEDIUM](/windows/win32/api/objidl/ns-objidl-stgmedium) .
+Rozhraní [IDataObject](/windows/win32/api/objidl/nn-objidl-idataobject) poskytuje metody pro podporu jednotného přenos dat. `IDataObject`používá ke čtení a ukládání dat standardní struktury formátu [FORMATETC](/windows/win32/api/objidl/ns-objidl-formatetc) a [STGMEDIUM](/windows/win32/api/objidl/ns-objidl-ustgmedium~r1) .
 
 `IDataObject`také spravuje připojení ke zpracování oznámení o změně dat v pokynech pro upozorňování. Aby klient mohl přijímat oznámení o změnách dat z datového objektu, musí implementovat rozhraní [IAdviseSink](/windows/win32/api/objidl/nn-objidl-iadvisesink) u objektu s názvem příjímka Advise. Když klient potom volá `IDataObject::DAdvise`, vytvoří se připojení mezi datovým objektem a jímkou oznámení.
 

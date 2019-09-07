@@ -8,17 +8,17 @@ helpviewer_keywords:
 - uuid __declspec keyword
 ms.assetid: 9d004621-09bc-4a8d-871b-648f5d5102d7
 ms.openlocfilehash: c121ad99dfbe0021a263f324ccdb9a95441bba33
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50511654"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70740465"
 ---
 # <a name="uuid-c"></a>uuid (C++)
 
-**Specifické pro Microsoft**
+**Specifické pro společnost Microsoft**
 
-Kompilátor připojí identifikátor GUID ke třídě nebo struktuře deklarované nebo definované (úplná definice objektu modelu COM pouze) se **uuid** atribut.
+Kompilátor připojí identifikátor GUID ke třídě nebo struktuře deklarované nebo definované (pouze úplné definice objektů COM) s atributem **UUID** .
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -28,18 +28,18 @@ __declspec( uuid("ComObjectGUID") ) declarator
 
 ## <a name="remarks"></a>Poznámky
 
-**Uuid** atribut přijímá řetězec jako svůj argument. Tento řetězec pojmenuje identifikátor GUID v normálním formátu registru s nebo bez něj **{}** oddělovače. Příklad:
+Atribut **UUID** bere jako argument řetězec. Tento řetězec pojmenovává identifikátor GUID v normálním formátu registru s oddělovači **{}** nebo bez něj. Příklad:
 
 ```cpp
 struct __declspec(uuid("00000000-0000-0000-c000-000000000046")) IUnknown;
 struct __declspec(uuid("{00020400-0000-0000-c000-000000000046}")) IDispatch;
 ```
 
-Tento atribut lze použít v opětovné deklaraci. To hlavičkám systému poskytnout definici rozhraní umožňuje `IUnknown`a opětovnou deklaraci v jiném souboru hlaviček (například \<comdef.h >) k zadání identifikátoru GUID.
+Tento atribut lze použít v opětovné deklaraci. To umožňuje systémovým hlavičkám dodat definice rozhraní `IUnknown`, jako je a změna deklarace v některé jiné hlavičce ( \<například Comdef. h >) k poskytnutí identifikátoru GUID.
 
-Klíčové slovo [__uuidof](../cpp/uuidof-operator.md) lze použít k získání konstanty identifikátoru GUID připojeného k uživatelem definovaného typu.
+Klíčové slovo [__uuidof](../cpp/uuidof-operator.md) lze použít k načtení KONSTANTNÍho identifikátoru GUID připojeného k uživatelsky definovanému typu.
 
-**Specifické pro END Microsoft**
+**Specifické pro konec Microsoftu**
 
 ## <a name="see-also"></a>Viz také:
 

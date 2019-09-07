@@ -1,31 +1,31 @@
 ---
-title: Zabalení (C++/CX)
+title: ZabaleníC++(/CX)
 ms.date: 12/30/2016
 ms.assetid: edfb12fa-2a9b-42f6-bdac-d4d76cb8274e
-ms.openlocfilehash: 3c281229b509ef72d37400b2088a6663be1afe42
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 90c5af31efc6523683227dbf54c85390bc98510a
+ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62257957"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70740669"
 ---
-# <a name="boxing-ccx"></a>Zabalení (C++/CX)
+# <a name="boxing-ccx"></a>ZabaleníC++(/CX)
 
-*Zabalení* proměnné typu hodnoty jako například zahrnuje [Windows::Foundation::DateTime](/uwp/api/windows.foundation.datetime)– nebo základní skalární typ. například `int`– v referenční třídě při proměnná je předána metodě, která přebírá [ Platform::Object ^](../cppcx/platform-object-class.md) jako jeho typ vstupu.
+*Zabalením* je zalomení proměnné typu hodnoty, jako je například [Windows:: Foundation::D atetime](/uwp/api/windows.foundation.datetime), nebo základní skalární `int`typ jako – v referenční třídě, když je proměnná předána metodě, která jako svůj vstupní typ používá [Platform:: Object ^.](../cppcx/platform-object-class.md) .
 
-## <a name="passing-a-value-type-to-an-object-parameter"></a>Předání typu hodnoty na objekt ^ parametr
+## <a name="passing-a-value-type-to-an-object-parameter"></a>Předání typu hodnoty do objektu ^ Parameter
 
-I když není nutné explicitně pole proměnnou umožní předat parametr metody typu [Platform::Object ^](../cppcx/platform-object-class.md), třeba při načtení hodnoty, které byly dříve zabalená explicitně přetypovat zpět do původního typu.
+I když nemusíte explicitně zadat proměnnou pro předání parametru metody typu [Platform:: Object ^](../cppcx/platform-object-class.md), musíte explicitně přetypovat zpět na původní typ při načtení hodnot, které byly dříve zabaleny.
 
 [!code-cpp[cx_boxing#01](../cppcx/codesnippet/CPP/cx_boxing/class1.cpp#01)]
 
-### <a name="using-platformiboxt-to-support-nullable-value-types"></a>Pomocí Platform::ibox –\<T > pro podporu typů s možnou hodnotou Null
+### <a name="using-platformiboxt-to-support-nullable-value-types"></a>Použití Platform:: iBox\<T > pro podporu typů hodnot s možnou hodnotou null
 
-C# a Visual Basic podporují koncept typy s možnou hodnotou Null. V C++/CX, můžete použít `Platform::IBox<T>` typ zpřístupňují veřejných metod, které podporují parametry typu s možnou hodnotou Null. Následující příklad ukazuje C++/CX veřejnou metodu, která vrátí hodnotu null, když C# / / volající předává pro jeden z argumentů hodnotu null.
+C#a Visual Basic podporují koncept typů s možnou hodnotou null. V C++/CX můžete použít `Platform::IBox<T>` typ k vystavení veřejných metod, které podporují parametry typu hodnoty s možnou hodnotou null. Následující příklad ukazuje veřejnou metodu C++/CX, která vrací hodnotu null v případě C# , že volající předává hodnotu null pro jeden z argumentů.
 
 [!code-cpp[cx_boxing#02](../cppcx/codesnippet/CPP/cx_boxing/class1.h#02)]
 
-V jazyce C# XAML klienta můžete ho využívat takto:
+V klientovi C# XAML ho můžete využít takto:
 
 ```
 
@@ -40,5 +40,5 @@ V jazyce C# XAML klienta můžete ho využívat takto:
 
 [Systém typů (C++/CX)](../cppcx/type-system-c-cx.md)<br/>
 [Přetypování (C++/CX)](../cppcx/casting-c-cx.md)<br/>
-[Referenční dokumentace jazyka Visual C++](../cppcx/visual-c-language-reference-c-cx.md)<br/>
+[Referenční zdroje k jazyku C++/CX](../cppcx/visual-c-language-reference-c-cx.md)<br/>
 [Referenční informace o oborech názvů](../cppcx/namespaces-reference-c-cx.md)

@@ -4,16 +4,16 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - applications [MFC], managing
 ms.assetid: b72f4154-24db-4e75-bca3-6873e2459c15
-ms.openlocfilehash: 934e89d928104c33f0c2038f136b5ad0ca48cbd4
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 52e6dbaa07fa8343a07533f071d538d9f76b0f61
+ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69507774"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70741165"
 ---
 # <a name="application-information-and-management"></a>Informace o aplikacích a správa aplikací
 
-Při psaní aplikace vytvoříte jeden objekt odvozený od sebe [](../../mfc/reference/cwinapp-class.md). V některých případech můžete chtít získat informace o tomto objektu mimo `CWinApp`objekt odvozený od objektu. Nebo budete možná potřebovat přístup k jiným globálním objektům "Manager".
+Při psaní aplikace vytvoříte jeden objekt odvozený [od sebe.](../../mfc/reference/cwinapp-class.md) V některých případech můžete chtít získat informace o tomto objektu mimo `CWinApp`objekt odvozený od objektu. Nebo budete možná potřebovat přístup k jiným globálním objektům "Manager".
 
 Knihovna Microsoft Foundation Class poskytuje následující globální funkce, které vám pomůžou dosáhnout těchto úloh:
 
@@ -178,7 +178,7 @@ HINSTANCE AFXAPI AfxFindResourceHandle( LPCTSTR lpszName,  LPCTSTR lpszType );
 *lpszName*<br/>
 Ukazatel na řetězec obsahující ID prostředku.
 *lpszType*<br/>
-Ukazatel na typ prostředku. Seznam typů prostředků naleznete v tématu [FindResource](/windows/win32/api/winbase/nf-winbase-findresourcew) v Windows SDK.
+Ukazatel na typ prostředku. Seznam typů prostředků naleznete v tématu [FindResource](/windows/win32/api/winbase/nf-winbase-findresourcea) v Windows SDK.
 
 ### <a name="return-value"></a>Návratová hodnota
 

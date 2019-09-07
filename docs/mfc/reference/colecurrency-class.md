@@ -22,12 +22,12 @@ helpviewer_keywords:
 - COleCurrency [MFC], m_cur
 - COleCurrency [MFC], m_status
 ms.assetid: 3a36e345-303f-46fb-a57c-858274378a8d
-ms.openlocfilehash: a23bc489fce00d9ba0be6a3aa71468b469bf54c8
-ms.sourcegitcommit: e10a5feea193c249ddc5a6faba48e7c6d8784e73
+ms.openlocfilehash: fc7c64ada1100b0fc0a51670de3e8ec04b141b04
+ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70177414"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70741638"
 ---
 # <a name="colecurrency-class"></a>COleCurrency – třída
 
@@ -128,7 +128,7 @@ Všechny tyto konstruktory vytvoří nové `COleCurrency` objekty inicializovan�
 
 - COleCurrency () vytvoří `COleCurrency` objekt inicializovaný jako 0 (nula).
 
-- COleCurrency (`cySrc`) vytvoří `COleCurrency` objekt z hodnoty [měny](/windows/win32/api/wtypes/ns-wtypes-cy) .
+- COleCurrency (`cySrc`) vytvoří `COleCurrency` objekt z hodnoty [měny](/windows/win32/api/wtypes/ns-wtypes-cy~r1) .
 
 - COleCurrency (`curSrc`) vytvoří `COleCurrency` objekt z existujícího `COleCurrency` objektu. Nový objekt má stejný stav jako zdrojový objekt.
 
@@ -136,7 +136,7 @@ Všechny tyto konstruktory vytvoří nové `COleCurrency` objekty inicializovan�
 
 - `COleCurrency(`nUnits`, `nFractionalUnits`) Constructs a `COleCurrency objekt ze zadaných číselných komponent. Pokud je absolutní hodnota zlomkové části větší než 10 000, provede se příslušná úprava jednotek. Všimněte si, že jednotky a zlomkové součásti jsou určeny pomocí podepsaných dlouhých hodnot.
 
-Další informace naleznete v části [Měna](/windows/win32/api/wtypes/ns-wtypes-cy) a [varianty](/windows/win32/api/oaidl/ns-oaidl-variant) v Windows SDK.
+Další informace naleznete v části [Měna](/windows/win32/api/wtypes/ns-wtypes-cy~r1) a [varianty](/windows/win32/api/oaidl/ns-oaidl-variant) v Windows SDK.
 
 ### <a name="example"></a>Příklad
 
@@ -236,14 +236,14 @@ Další informace o operacích, které můžou nastavit stav na neplatné, najde
 
 ##  <a name="m_cur"></a>COleCurrency::m_cur
 
-Základní struktura [měny](/windows/win32/api/wtypes/ns-wtypes-cy) pro tento `COleCurrency` objekt.
+Základní struktura [měny](/windows/win32/api/wtypes/ns-wtypes-cy~r1) pro tento `COleCurrency` objekt.
 
 ### <a name="remarks"></a>Poznámky
 
 > [!CAUTION]
 >  Změna hodnoty ve `CURRENCY` struktuře, k níž se přistupovalo pomocí ukazatele vráceného touto funkcí, změní hodnotu `COleCurrency` tohoto objektu. Nemění stav tohoto `COleCurrency` objektu.
 
-Další informace najdete v tématu o [měně](/windows/win32/api/wtypes/ns-wtypes-cy) v Windows SDK.
+Další informace najdete v tématu o [měně](/windows/win32/api/wtypes/ns-wtypes-cy~r1) v Windows SDK.
 
 ##  <a name="m_status"></a>COleCurrency::m_status
 
@@ -292,7 +292,7 @@ Další informace o operacích, které můžou nastavit stav na neplatné, najde
 - [operator * =,/=](#operator_star_div_eq)
 
 > [!CAUTION]
->  Tento datový člen slouží k pokročilým programovacím situacím. Měli byste použít funkce GetStatus a [](#getstatus) [SetStatus](#setstatus)vložených členů. Další `SetStatus` upozornění týkající se explicitního nastavení tohoto datového člena najdete v tématu.
+>  Tento datový člen slouží k pokročilým programovacím situacím. Měli byste použít funkce [GetStatus](#getstatus) a [SetStatus](#setstatus)vložených členů. Další `SetStatus` upozornění týkající se explicitního nastavení tohoto datového člena najdete v tématu.
 
 ##  <a name="operator_eq"></a>COleCurrency:: operator =
 
@@ -314,7 +314,7 @@ Následuje stručný popis každého operátoru:
 
 - **operator = (** *varSrc* **)** – operátor Je-li `VARIANT` převod hodnoty (nebo objektu [COleVariant](../../mfc/reference/colevariant-class.md) ) na měnu ( `VT_CY`) úspěšný, je převedená hodnota zkopírována do tohoto `COleCurrency` objektu a její stav je nastaven na hodnotu platné. Pokud převod není úspěšný, hodnota `COleCurrency` objektu je nastavena na 0 a jeho stav na neplatné.
 
-Další informace naleznete v části [Měna](/windows/win32/api/wtypes/ns-wtypes-cy) a [varianty](/windows/win32/api/oaidl/ns-oaidl-variant) v Windows SDK.
+Další informace naleznete v části [Měna](/windows/win32/api/wtypes/ns-wtypes-cy~r1) a [varianty](/windows/win32/api/oaidl/ns-oaidl-variant) v Windows SDK.
 
 ### <a name="example"></a>Příklad
 

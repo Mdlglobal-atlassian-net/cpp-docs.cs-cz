@@ -152,12 +152,12 @@ helpviewer_keywords:
 - CRichEditCtrl [MFC], StreamOut
 - CRichEditCtrl [MFC], Undo
 ms.assetid: 2be52788-822c-4c27-aafd-2471231e74eb
-ms.openlocfilehash: fc2b4c08b5a999f0369199e0dd65a09a7cdf8dff
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: b3c02c8c2754ce7edb40cff5e44efb74a16353fc
+ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69503152"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70741544"
 ---
 # <a name="cricheditctrl-class"></a>CRichEditCtrl – třída
 
@@ -1051,7 +1051,7 @@ DWORD GetSelectionCharFormat(CHARFORMAT& cf) const;  DWORD GetSelectionCharForma
 ### <a name="parameters"></a>Parametry
 
 *cf*<br/>
-V první verzi ukazatel na strukturu [Charformat](/windows/win32/api/richedit/ns-richedit-_charformat) pro příjem atributů formátování znaků aktuálního výběru.
+V první verzi ukazatel na strukturu [Charformat](/windows/win32/api/richedit/ns-richedit-charformata) pro příjem atributů formátování znaků aktuálního výběru.
 
 Ve druhé verzi je ukazatel na strukturu [CHARFORMAT2](/windows/win32/api/richedit/ns-richedit-charformat2w) , což je rozšíření s bohatou úpravou 2,0 do `CHARFORMAT` struktury pro příjem atributů formátování znaků aktuálního výběru.
 
@@ -1548,7 +1548,7 @@ void RequestResize();
 
 Tato funkce je užitečná během zpracování [CWnd::-size](../../mfc/reference/cwnd-class.md#onsize) pro `CRichEditCtrl` objekt s nižším množstvím.
 
-Další informace naleznete v části zpráva [EM_REQUESTRESIZE](/windows/win32/Controls/em-requestresize) a **ovládací prvky pro úpravy** s formátováním s formátováním pro [prvky s bohatou úpravou](/windows/win32/Controls/about-rich-edit-controls) v Windows SDK.
+Další informace naleznete v části zpráva [EM_REQUESTRESIZE](/windows/win32/Controls/em-requestresize) a **ovládací prvky pro úpravy s formátováním** s formátováním pro [prvky s bohatou úpravou](/windows/win32/Controls/about-rich-edit-controls) v Windows SDK.
 
 ##  <a name="setautourldetect"></a>CRichEditCtrl:: SetAutoURLDetect
 
@@ -1618,7 +1618,7 @@ BOOL SetDefaultCharFormat(CHARFORMAT2& cf);
 ### <a name="parameters"></a>Parametry
 
 *cf*<br/>
-V první verzi je ukazatel na strukturu [Charformat](/windows/win32/api/richedit/ns-richedit-_charformat) obsahující nové výchozí atributy formátování znaků.
+V první verzi je ukazatel na strukturu [Charformat](/windows/win32/api/richedit/ns-richedit-charformata) obsahující nové výchozí atributy formátování znaků.
 
 Ve druhé verzi je ukazatel na strukturu [CHARFORMAT2](/windows/win32/api/richedit/ns-richedit-charformat2w) , což je rozšíření s bohatou úpravou 2,0 do `CHARFORMAT` struktury, které obsahuje výchozí atributy formátování znaků.
 
@@ -1684,7 +1684,7 @@ Další informace najdete v tématu [EM_SETMODIFY](/windows/win32/Controls/em-se
 
 ### <a name="example"></a>Příklad
 
-  Podívejte se na příklad [](#getmodify)pro GetModify.
+  Podívejte se na příklad pro [GetModify](#getmodify).
 
 ##  <a name="setolecallback"></a>CRichEditCtrl:: SetOLECallback
 
@@ -1920,7 +1920,7 @@ BOOL SetSelectionCharFormat(CHARFORMAT2& cf);
 ### <a name="parameters"></a>Parametry
 
 *cf*<br/>
-V první verzi je ukazatel na strukturu [Charformat](/windows/win32/api/richedit/ns-richedit-_charformat) obsahující nové atributy formátování znaků pro aktuální výběr.
+V první verzi je ukazatel na strukturu [Charformat](/windows/win32/api/richedit/ns-richedit-charformata) obsahující nové atributy formátování znaků pro aktuální výběr.
 
 Ve druhé verzi je ukazatel na strukturu [CHARFORMAT2](/windows/win32/api/richedit/ns-richedit-charformat2w) , což je rozšíření s bohatou úpravou 2,0 do `CHARFORMAT` struktury, které obsahuje nové atributy formátování znaků pro aktuální výběr.
 
@@ -2033,7 +2033,7 @@ BOOL SetWordCharFormat(CHARFORMAT2& cf);
 ### <a name="parameters"></a>Parametry
 
 *cf*<br/>
-V první verzi je ukazatel na strukturu [Charformat](/windows/win32/api/richedit/ns-richedit-_charformat) , která obsahuje nové atributy formátování znaků aktuálně vybraného slova.
+V první verzi je ukazatel na strukturu [Charformat](/windows/win32/api/richedit/ns-richedit-charformata) , která obsahuje nové atributy formátování znaků aktuálně vybraného slova.
 
 Ve druhé verzi je ukazatel na strukturu [CHARFORMAT2](/windows/win32/api/richedit/ns-richedit-charformat2w) , což je rozšíření s bohatou úpravou 2,0 do `CHARFORMAT` struktury, které obsahuje nové atributy formátování znaků aktuálně vybraného slova.
 

@@ -12,16 +12,16 @@ f1_keywords:
 helpviewer_keywords:
 - CComSafeArrayBound class
 ms.assetid: dd6299db-5f84-4630-bbf0-f5add5318437
-ms.openlocfilehash: bd77c2a788e769c74518d73b45c3c05ff27b3f58
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 0386092ac26e71fcf5e840594a6b07f56cc9badd
+ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69496897"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70739751"
 ---
 # <a name="ccomsafearraybound-class"></a>CComSafeArrayBound – třída
 
-Tato třída je obálkou pro strukturu [SAFEARRAYBOUND](/windows/win32/api/oaidl/ns-oaidl-tagsafearraybound) .
+Tato třída je obálkou pro strukturu [SAFEARRAYBOUND](/windows/win32/api/oaidl/ns-oaidl-safearraybound) .
 
 ## <a name="syntax"></a>Syntaxe
 

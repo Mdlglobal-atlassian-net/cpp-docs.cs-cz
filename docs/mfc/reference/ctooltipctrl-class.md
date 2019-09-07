@@ -72,12 +72,12 @@ helpviewer_keywords:
 - CToolTipCtrl [MFC], Update
 - CToolTipCtrl [MFC], UpdateTipText
 ms.assetid: 8973f70c-b73a-46c7-908d-758f364b9a97
-ms.openlocfilehash: 046c8a3f99e8b505ee6a6e8b534318263090e07d
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: bf32671eb3535de1bf072e24bc642145e87c84ee
+ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69502257"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70741420"
 ---
 # <a name="ctooltipctrl-class"></a>CToolTipCtrl – třída
 
@@ -319,7 +319,7 @@ virtual BOOL CreateEx(
 Ukazatel na okno, které je nadřazený ovládacímu prvku.
 
 *dwStyle*<br/>
-Určuje styl ovládacího prvku Tip nástroje. Další informace najdete v části s poznámkami v tématu [Vytvoření](#create) .
+Určuje styl ovládacího prvku Tip nástroje. Další informace najdete v části s **poznámkami** v tématu [Vytvoření](#create) .
 
 *dwStyleEx*<br/>
 Určuje rozšířený styl ovládacího prvku, který se vytváří. Seznam rozšířených stylů Windows naleznete v parametru *dwExStyle* pro [CreateWindowEx](/windows/win32/api/winuser/nf-winuser-createwindowexw) v Windows SDK.
@@ -377,7 +377,7 @@ CSize GetBubbleSize(LPTOOLINFO lpToolInfo) const;
 ### <a name="parameters"></a>Parametry
 
 *lpToolInfo*<br/>
-Ukazatel na strukturu [TOOLINFO](/windows/win32/api/commctrl/ns-commctrl-toolinfow) popisu nástroje.
+Ukazatel na strukturu [TOOLINFO](/windows/win32/api/commctrl/ns-commctrl-tttoolinfoa) popisu nástroje.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -399,7 +399,7 @@ BOOL GetCurrentTool(LPTOOLINFO lpToolInfo) const;
 
 |Parametr|Popis|
 |---------------|-----------------|
-|*lpToolInfo*|mimo Ukazatel na strukturu [TOOLINFO](/windows/win32/api/commctrl/ns-commctrl-toolinfow) , která přijímá informace o aktuálním okně s popisem.|
+|*lpToolInfo*|mimo Ukazatel na strukturu [TOOLINFO](/windows/win32/api/commctrl/ns-commctrl-tttoolinfoa) , která přijímá informace o aktuálním okně s popisem.|
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -598,7 +598,7 @@ Nenulové, pokud bylo úspěšné; v opačném případě 0.
 
 ### <a name="remarks"></a>Poznámky
 
-Členy `hwnd` a `uId` struktury [TOOLINFO](/windows/win32/api/commctrl/ns-commctrl-toolinfow) , na které odkazuje *CToolInfo* , identifikují nástroj. Pokud byl tento nástroj zaregistrován pomocí ovládacího prvku popis tlačítka prostřednictvím předchozího volání `AddTool` `TOOLINFO` , struktura je vyplněna informacemi o nástroji.
+Členy `hwnd` a `uId` struktury [TOOLINFO](/windows/win32/api/commctrl/ns-commctrl-tttoolinfoa) , na které odkazuje *CToolInfo* , identifikují nástroj. Pokud byl tento nástroj zaregistrován pomocí ovládacího prvku popis tlačítka prostřednictvím předchozího volání `AddTool` `TOOLINFO` , struktura je vyplněna informacemi o nástroji.
 
 ##  <a name="hittest"></a>  CToolTipCtrl::HitTest
 
@@ -620,7 +620,7 @@ Ukazatel na okno, které obsahuje nástroj.
 Ukazatel na `CPoint` objekt obsahující souřadnice bodu, který má být testován.
 
 *lpToolInfo*<br/>
-Ukazatel na strukturu [TOOLINFO](/windows/win32/api/commctrl/ns-commctrl-toolinfow) , která obsahuje informace o nástroji.
+Ukazatel na strukturu [TOOLINFO](/windows/win32/api/commctrl/ns-commctrl-tttoolinfoa) , která obsahuje informace o nástroji.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -693,7 +693,7 @@ void RelayEvent(LPMSG lpMsg);
 ### <a name="parameters"></a>Parametry
 
 *lpMsg*<br/>
-Ukazatel na strukturu [](/windows/win32/api/winuser/ns-winuser-msg) zprávy, která obsahuje zprávu pro předání.
+Ukazatel [na strukturu zprávy](/windows/win32/api/winuser/ns-winuser-msg) , která obsahuje zprávu pro předání.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -747,7 +747,7 @@ void SetMargin(LPRECT lprc);
 ### <a name="parameters"></a>Parametry
 
 *lprc*<br/>
-`RECT` Adresa struktury obsahující informace o okraji, které mají být nastaveny. Členové `RECT` struktury nedefinují ohraničující obdélník. Popis informací o okrajích naleznete v tématu [CToolTipCtrl::](#getmargin) getmarže.
+`RECT` Adresa struktury obsahující informace o okraji, které mají být nastaveny. Členové `RECT` struktury nedefinují ohraničující obdélník. Popis informací o okrajích naleznete v tématu [CToolTipCtrl:: Getmarže](#getmargin) .
 
 ### <a name="remarks"></a>Poznámky
 
@@ -845,7 +845,7 @@ void SetToolInfo(LPTOOLINFO lpToolInfo);
 ### <a name="parameters"></a>Parametry
 
 *lpToolInfo*<br/>
-Ukazatel na strukturu [TOOLINFO](/windows/win32/api/commctrl/ns-commctrl-toolinfow) , která určuje informace, které mají být nastaveny.
+Ukazatel na strukturu [TOOLINFO](/windows/win32/api/commctrl/ns-commctrl-tttoolinfoa) , která určuje informace, které mají být nastaveny.
 
 ##  <a name="settoolrect"></a>  CToolTipCtrl::SetToolRect
 

@@ -2,20 +2,20 @@
 title: Částečné třídy (C++/CX)
 ms.date: 12/30/2016
 ms.assetid: 69d93575-636c-4564-8cca-6dfba0c7e328
-ms.openlocfilehash: 71df19e98192a7704d4528fe730ce79977383a9b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 703f12498e0f2c68448e2b3896d3d5f906aba779
+ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62384995"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70740478"
 ---
 # <a name="partial-classes-ccx"></a>Částečné třídy (C++/CX)
 
-Částečné třídy je konstrukce, která podporuje scénáře, ve kterých chcete upravit část definice třídy a automatické generování kódu softwaru – například Návrhář XAML, je také upravovat kód ve stejné třídě. S použitím částečnou třídu, můžete zabránit návrháře přepsání kódu. V projektu sady Visual Studio `partial` modifikátor se použijí automaticky generovaného souboru.
+Částečná třída je konstrukce, která podporuje scénáře, ve kterých upravujete jednu část definice třídy, a automatický software pro generování kódu, například Návrhář XAML, je také upravován kódem ve stejné třídě. Pomocí částečné třídy můžete zabránit návrháři v přepsání kódu. V projektu `partial` sady Visual Studio je modifikátor použit automaticky pro vygenerovaný soubor.
 
 ## <a name="syntax"></a>Syntaxe
 
-Chcete-li definovat částečné třídy, použijte `partial` – klíčové slovo bezprostředně před klíč třídy z jaké by byly definici běžné třídy. Klíčové slovo jako například `partial ref class` je kontextové klíčové slovo, který obsahuje prázdné znaky. V následující konstrukce jsou podporovány částečné definice.
+Chcete-li definovat částečnou třídu, `partial` použijte klíčové slovo bezprostředně před klíčovou zkratkou třídy, co by jinak bylo definice normální třídy. Klíčové slovo, jako `partial ref class` je kontextové klíčové slovo, které obsahuje prázdné znaky. Částečné definice jsou podporovány v následujících konstrukcích.
 
 - `class` Nebo `struct`
 
@@ -25,53 +25,53 @@ Chcete-li definovat částečné třídy, použijte `partial` – klíčové slo
 
 - `enum` Nebo `enum class`
 
-- `ref interface`, `interface class`, `interface struct`, nebo `__interface`
+- `ref interface`, `interface class`, `interface struct`nebo`__interface`
 
 - `union`
 
-Tento příklad ukazuje částečné `ref class`:
+Tento příklad ukazuje částečnou `ref class`:
 
 [!code-cpp[cx_partial#01](../cppcx/codesnippet/CPP/partialclassexample/class1.h#01)]
 
 ## <a name="contents"></a>Obsah
 
-Definice částečné třídy může obsahovat cokoli, co může obsahovat definici úplné třídy, pokud `partial` – klíčové slovo byly vynechány. S jednou výjimkou to zahrnuje všechny platná konstrukce, jako jsou základní třídy, datové členy, členské funkce, výčty, deklarace typu friend a atributy. Vložená definice členů statických dat jsou povolené a.
+Definice částečné třídy může obsahovat cokoli, co definice celé třídy může obsahovat, pokud `partial` bylo klíčové slovo vynecháno. Jedinou výjimkou je to, že zahrnuje všechny platné konstrukce, jako jsou základní třídy, datové členy, členské funkce, výčty, deklarace typu Friend a atributy. A vložené definice statických datových členů jsou povoleny.
 
-Jedinou výjimkou je třída usnadnění. Například příkaz `public partial class MyInvalidClass {/* ... */};` chybu. Všechny specifikátory přístupu, které se používají v definici částečné třídy pro MyInvalidClass nemají vliv na výchozí dostupnost v definici následné částečné nebo úplné třídy pro MyInvalidClass.
+Jedinou výjimkou je přístupnost třídy. Například příkaz `public partial class MyInvalidClass {/* ... */};` je chyba. Všechny specifikátory přístupu, které jsou používány v definici částečné třídy pro MyInvalidClass, nemají vliv na výchozí přístupnost v následné částečné nebo úplné definici třídy pro MyInvalidClass.
 
-Následující fragment kódu ukazuje usnadnění přístupu. V první částečná třída `Method1` je veřejné, protože jeho přístupnost je veřejná. V druhém částečné třídy `Method2` je privátní, protože třída výchozí dostupnost je privátní.
+Následující fragment kódu ukazuje přístupnost. V první částečné třídě je veřejná `Method1` , protože její přístupnost je veřejná. Ve druhé dílčí třídě je soukromá `Method2` , protože přístupnost výchozí třídy je soukromá.
 
 [!code-cpp[cx_partial#02](../cppcx/codesnippet/CPP/partialclassexample/class1.h#02)]
 
 ## <a name="declaration"></a>Deklarace
 
-Částečnou definici třídy, jako například *MyClass* je pouze deklaraci MyClass. To znamená, ho pouze název zavede *MyClass*. *MyClass* nelze použít tak, aby se vyžaduje definice třídy, například velikost znalost *MyClass* nebo pomocí základní nebo členský z *MyClass*. *MyClass* se považuje za definovat pouze když kompilátor narazí bez částečnou definicí *MyClass*.
+Částečná definice třídy, jako je například *MyClass* , je pouze deklarací MyClass. To znamená, že zavádí pouze název *MyClass*. *MyClass* nelze použít způsobem, který vyžaduje definici třídy, například znalost velikosti *MyClass* nebo použití základní nebo člena *MyClass*. *MyClass* je považována za určenou pouze v případě, že kompilátor narazí na nečástečnou definici *MyClass*.
 
-Následující příklad ukazuje chování deklarací částečné třídy. Po deklaraci #1 *MyClass* lze použít jako v případě, že by byl zapsán jako Dopředná deklarace `ref class MyClass;`. Deklarace je ekvivalentem deklarace #1.Declaration #3 #2 je platný, protože je Dopředná deklarace třídy. Deklarace #4 není platný, ale protože
+Následující příklad ukazuje chování deklarace částečné třídy. Po deklaraci #1 lze použít *MyClass* , jako by byla zapsána jako dopředná `ref class MyClass;`deklarace. Deklarace #2 je ekvivalentní #1 deklarací. deklarace #3 je platná, protože se jedná o dopřednou deklaraci třídy. Deklarace #4 však není platná, protože
 
-*MyClass* není plně definovaná.
+*MyClass* není zcela definován.
 
-Deklarace #5 nepoužívá `partial` – klíčové slovo a deklarace plně definuje *MyClass*. V důsledku toho deklarace #6 je platný.
+Deklarace #5 nepoužívá `partial` klíčové slovo a deklarace plně definuje *MyClass*. V důsledku toho je deklarace #6 platná.
 
 [!code-cpp[Cx_partial#03](../cppcx/codesnippet/CPP/partialclassexample/class1.h#03)]
 
-## <a name="number-and-ordering"></a>Počet a pořadí
+## <a name="number-and-ordering"></a>Počet a řazení
 
-Může být nula nebo více definicí částečné třídy pro každou úplnou definici třídy.
+Pro každou úplnou definici třídy může být k dispozici nula nebo více definic dílčí třídy.
 
-Každá částečné třídy definice třídy musí předcházet lexikálně jednu úplnou definici této třídy, ale nemusí být předcházet dopředné deklarace třídy. Pokud není žádná úplná definice třídy, pak deklarací částečné třídy lze pouze dopředné deklarace.
+Každá definice dílčí třídy třídy musí být lexikální před jednou úplnou definicí této třídy, ale nemusí předcházet před dopředné deklarace třídy. Pokud neexistuje úplná definice třídy, deklarace částečné třídy mohou být pouze předávány deklarace.
 
-Všechny třídy klíče jako `class` a `struct` se musí shodovat. Například, jedná se o chybu kódu `partial class X {}; struct X {};`.
+Všechny klíče třídy, například `class` a, `struct` musí odpovídat. Například se jedná o chybu kódu `partial class X {}; struct X {};`.
 
-Následující příklad ukazuje počet a pořadí. Poslední částečná deklarace se nezdaří, protože třída je již definován.
+Následující příklad znázorňuje číslo a řazení. Poslední částečná deklarace se nezdařila, protože třída je již definována.
 
 [!code-cpp[cx_partial#04](../cppcx/codesnippet/CPP/partialclassexample/class1.h#04)]
 
-## <a name="full-definition"></a>Kompletní definici
+## <a name="full-definition"></a>Úplná definice
 
-Místě úplnou definici třídy X chování je stejné jako kdyby byly definice X měl deklarovány základních tříd, členů a tak dále, v pořadí, ve kterém byly došlo k a definované v částečné třídy. To znamená, obsah částečné třídy zacházeno, jako by byly napsány Přejme během úplné definice třídy a vyhledávání názvů a ostatní jazyka pravidla se použijí Přejme během úplné definice třídy jako obsah částečné třídy byly vytvořeny na místě
+V bodě úplné definice třídy X je chování stejné, jako kdyby definice X deklarovala všechny základní třídy, členy a tak dále, v pořadí, ve kterém byly nalezeny a definovány v dílčích třídách. To znamená, že obsah dílčích tříd je považován za, i když byly zapsány v místě úplné definice třídy, a vyhledávání názvů a další jazyková pravidla jsou použita v bodě úplné definice třídy, jako by se jednalo o obsah dílčích tříd. byly zapsány na místě
 
-Následující dva příklady mají stejné význam platnosti a účinnosti. První příklad používá částečné třídy a v druhém příkladu se nepodporuje.
+Následující dva příklady kódu mají stejný význam a účinek. První příklad používá částečnou třídu a druhý příklad ne.
 
 [!code-cpp[cx_partial#05](../cppcx/codesnippet/CPP/partialclassexample/class1.h#05)]
 
@@ -79,17 +79,17 @@ Následující dva příklady mají stejné význam platnosti a účinnosti. Prv
 
 ## <a name="templates"></a>Šablony
 
-Částečná třída nemůže být šablona.
+Částečná třída nemůže být šablonou.
 
 ## <a name="restrictions"></a>Omezení
 
-Částečné třídy nemůžou zahrnovat nad rámec jednoho překladové jednotce.
+Částečná třída nemůže být mimo jednu jednotku překladu.
 
-`partial` – Klíčové slovo je podporována pouze v kombinaci s `ref class` – klíčové slovo nebo `value class` – klíčové slovo.
+Klíčové slovo je podporováno pouze v kombinaci `ref class` s klíčovým slovem `value class` nebo klíčovým slovem. `partial`
 
 ### <a name="examples"></a>Příklady
 
-Následující příklad definuje `Address` třídy mezi dva soubory kódu. Upraví návrháře `Address.details.h` a upravíte `Address.h`. Používá pouze definici třídy v prvním souboru `partial` – klíčové slovo.
+Následující příklad definuje `Address` třídu napříč dvěma soubory kódu. Návrhář upraví `Address.details.h` a Vy upravíte `Address.h`. Klíčové slovo se `partial` používá jenom v definici třídy v prvním souboru.
 
 [!code-cpp[cx_partial#07](../cppcx/codesnippet/CPP/partialclassexample/address.details.h#07)]
 
@@ -98,5 +98,5 @@ Následující příklad definuje `Address` třídy mezi dva soubory kódu. Upra
 ## <a name="see-also"></a>Viz také:
 
 [Systém typů](../cppcx/type-system-c-cx.md)<br/>
-[Referenční dokumentace jazyka Visual C++](../cppcx/visual-c-language-reference-c-cx.md)<br/>
+[Referenční zdroje k jazyku C++/CX](../cppcx/visual-c-language-reference-c-cx.md)<br/>
 [Referenční informace o oborech názvů](../cppcx/namespaces-reference-c-cx.md)

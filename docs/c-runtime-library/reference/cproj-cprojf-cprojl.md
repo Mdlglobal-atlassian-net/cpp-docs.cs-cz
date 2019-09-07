@@ -1,5 +1,5 @@
 ---
-title: cproj cprojf, cprojl
+title: cproj, cprojf, cprojl
 ms.date: 11/04/2016
 apiname:
 - cproj
@@ -31,15 +31,15 @@ helpviewer_keywords:
 - cprojl function
 ms.assetid: 32b49623-13bf-4cae-802e-7912d75030fe
 ms.openlocfilehash: f1054172a7b5afde134ce9fa735a7eeda3bddafb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50445666"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70739852"
 ---
-# <a name="cproj-cprojf-cprojl"></a>cproj cprojf, cprojl
+# <a name="cproj-cprojf-cprojl"></a>cproj, cprojf, cprojl
 
-Načte projekce komplexního čísla v oblasti jsou při výpočtu.
+Načte projekci komplexního čísla v Reimann koule.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -64,28 +64,28 @@ _Lcomplex cprojl(
 ### <a name="parameters"></a>Parametry
 
 *z*<br/>
-Komplexní čísla.
+Komplexní číslo.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Projekci *z* v oblasti jsou při výpočtu.
+Projekce *z v koule* Reimann
 
 ## <a name="remarks"></a>Poznámky
 
-Protože jazyk C++ umožňuje přetížení, můžete volat přetížení **cproj** , která používají a vrací **_Fcomplex** a **_Lcomplex** hodnoty. V programu jazyka C **cproj** vždy převezme a vrátí **_Dcomplex** hodnotu.
+Vzhledem C++ k tomu, že umožňuje přetížení, můžete volat přetížení **cproj** , která přijímají a vracejí hodnoty **_Fcomplex** a **_Lcomplex** . V programu v jazyce C **cproj** vždycky přebírá a vrací hodnotu **_Dcomplex** .
 
 ## <a name="requirements"></a>Požadavky
 
-|Rutina|Záhlaví C|Hlaviček jazyka C++|
+|Rutina|Hlavička jazyka C|C++hlaviček|
 |-------------|--------------|------------------|
 |**cproj**, **cprojf**, **cprojl**|\<complex.h>|\<ccomplex >|
 
-Další informace o kompatibilitě naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Viz také:
 
 [Abecední seznam odkazů na funkce](crt-alphabetical-function-reference.md)<br/>
-[Norm a normf, norml](norm-normf-norml1.md)<br/>
+[norm, normf, norml](norm-normf-norml1.md)<br/>
 [creal, crealf, creall](creal-crealf-creall.md)<br/>
 [conj, conjf, conjl](conj-conjf-conjl.md)<br/>
 [cimag, cimagf, cimagl](cimag-cimagf-cimagl.md)<br/>

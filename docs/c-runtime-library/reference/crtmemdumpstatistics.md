@@ -23,13 +23,13 @@ helpviewer_keywords:
 - CrtMemDumpStatistics function
 ms.assetid: 27b9d731-3184-4a2d-b9a7-6566ab28a9fe
 ms.openlocfilehash: 66eb58b65f3fa20e01ad16d68f3fe1baafd8cd04
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50605124"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70739801"
 ---
-# <a name="crtmemdumpstatistics"></a>_CrtMemDumpStatistics
+# <a name="_crtmemdumpstatistics"></a>_CrtMemDumpStatistics
 
 Vypíše informace hlavičky ladění pro zadaný stav haldy ve formě čitelné pro uživatele (pouze pro ladicí verzi).
 
@@ -43,26 +43,26 @@ void _CrtMemDumpStatistics(
 
 ### <a name="parameters"></a>Parametry
 
-*Stav*<br/>
+*státech*<br/>
 Ukazatel na stav haldy pro výpis.
 
 ## <a name="remarks"></a>Poznámky
 
-**_Crtmemdumpstatistics –** funkce Vypíše informace hlavičky ladění pro určitý stav haldy ve formě čitelné pro uživatele. Pomocí statistiky výpisu lze v aplikaci sledovat přidělování a vyhledávat problémy s pamětí. Stav paměti může obsahovat specifický stav haldy nebo rozdíl mezi dvěma stavy. Když [_DEBUG](../../c-runtime-library/debug.md) není definován, jsou volání **_crtmemdumpstatistics –** odstraněna během předběžného zpracování.
+Funkce **_CrtMemDumpStatistics** vypíše informace hlavičky ladění pro zadaný stav haldy ve formě čitelné uživatelem. Pomocí statistiky výpisu lze v aplikaci sledovat přidělování a vyhledávat problémy s pamětí. Stav paměti může obsahovat specifický stav haldy nebo rozdíl mezi dvěma stavy. Když není definovaný [_DEBUG](../../c-runtime-library/debug.md) , volání **_CrtMemDumpStatistics** se během předběžného zpracování odeberou.
 
-*Stavu* parametr musí být ukazatel **_CrtMemState** struktura, která byla vyplněna pomocí [_crtmemcheckpoint –](crtmemcheckpoint.md) nebo vrácena funkcí [_ Crtmemdifference –](crtmemdifference.md) před **_crtmemdumpstatistics –** je volána. Pokud *stavu* je **NULL**, je vyvolána obslužná rutina neplatného parametru, jak je popsáno v [Parameter Validation](../../c-runtime-library/parameter-validation.md). Pokud smí provádění pokračovat, **errno** je nastavena na **EINVAL** a nebyla provedena žádná akce. Další informace najdete v tématu [errno _doserrno, _sys_errlist a _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+Parametr *State* musí být ukazatel na strukturu **_CrtMemState** , která byla vyplněna pomocí [_CrtMemCheckpoint](crtmemcheckpoint.md) nebo vrácená [_CrtMemDifference](crtmemdifference.md) před voláním **_CrtMemDumpStatistics** . Pokud je stav **null**, je vyvolána obslužná rutina neplatného parametru, jak je popsáno v tématu [ověřování parametru](../../c-runtime-library/parameter-validation.md). Pokud provádění může pokračovat, **errno** je nastaven na **EINVAL** a není provedena žádná akce. Další informace najdete v tématech [errno, _doserrno, _sys_errlist a _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
-Další informace o funkcích stavu haldy a **_CrtMemState** struktury, přečtěte si téma [funkce vykazování stavu haldy](/visualstudio/debugger/crt-debug-heap-details). Další informace o způsobu jsou bloky paměti přidělené, inicializovat a správy v ladicí verzi základní haldy viz [podrobnosti haldy ladění CRT](/visualstudio/debugger/crt-debug-heap-details).
+Další informace o funkcích stavu haldy a struktuře **_CrtMemState** naleznete v tématu [funkce vytváření sestav o stavu haldy](/visualstudio/debugger/crt-debug-heap-details). Další informace o způsobu přidělování, inicializace a správy paměťových bloků v ladicí verzi základní haldy najdete v [podrobnostech o haldě ladění CRT](/visualstudio/debugger/crt-debug-heap-details).
 
 ## <a name="requirements"></a>Požadavky
 
-|Rutina|Požadovaný hlavičkový soubor|Volitelná záhlaví|
+|Rutina|Požadovaný hlavičkový soubor|Volitelné hlavičky|
 |-------------|---------------------|----------------------|
 |**_CrtMemDumpStatistics**|\<crtdbg.h>|\<errno.h>|
 
-Další informace o kompatibilitě naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
 
-**Knihovny:** ladicí verze [funkce knihovny CRT](../../c-runtime-library/crt-library-features.md) pouze.
+**Knihovna** Ladit verze pouze [funkcí knihoven CRT](../../c-runtime-library/crt-library-features.md) .
 
 ## <a name="see-also"></a>Viz také:
 

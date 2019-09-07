@@ -22,15 +22,15 @@ helpviewer_keywords:
 - btowc function
 ms.assetid: 99a46e02-6f86-4569-af79-5feca012add8
 ms.openlocfilehash: 399f56fe133a9f67ed457b435ae6c0496e1ecaa5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50514673"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70740005"
 ---
 # <a name="btowc"></a>btowc
 
-Určení, zda celočíselná hodnota představuje platné jednobajtový znak ve stavu počáteční posun.
+Určí, zda celočíselná hodnota představuje platný znak jednobajtového znaku v počátečním stavu posunutí.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -42,20 +42,20 @@ wint_t btowc(
 
 ### <a name="parameters"></a>Parametry
 
-*Znak*<br/>
-Celé číslo k testování.
+*character*<br/>
+Celé číslo k otestování.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Vrátí širokoznaká reprezentace znaku, pokud celé číslo představuje platné jednobajtový znak ve stavu počáteční posun. WEOF vrátí, pokud celé číslo se konec souboru nebo není platný jednobajtový znak ve stavu počáteční posun. Výstup této funkce je ovlivněna aktuálním **LC_TYPE** národní prostředí.
+Vrátí reprezentaci celého znaku znaku, pokud celé číslo představuje platný znak jednobajtového znaku v počátečním stavu posunutí. Vrátí WEOF, pokud je celočíselná hodnota EOF nebo není platným znakem jednobajtové v počátečním stavu posunutí. Výstup této funkce je ovlivněn aktuálním národním prostředím **LC_TYPE** .
 
 ## <a name="requirements"></a>Požadavky
 
 |Rutina|Požadovaný hlavičkový soubor|
 |-------------|---------------------|
-|**btowc**|\<stdio.h > nebo \<wchar.h >|
+|**btowc**|\<stdio. h > nebo \<WCHAR. h >|
 
-Další informace o kompatibilitě, naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Viz také:
 

@@ -16,12 +16,12 @@ f1_keywords:
 helpviewer_keywords:
 - CAtlFileMappingBase class
 ms.assetid: be555723-2790-4f57-a8fb-be4d68460775
-ms.openlocfilehash: 3d9627c7a19cccc0cd3aec46d71b23c8a84711bf
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: a20a8f6c00f9404aa819b87a6a69ad2c08fb4561
+ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69497774"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70739550"
 ---
 # <a name="catlfilemappingbase-class"></a>CAtlFileMappingBase Class
 
@@ -190,7 +190,7 @@ Velikost mapování Pokud je hodnota 0, je maximální velikost objektu mapován
 Posun souboru, kde má být mapování zahájeno. Hodnota posunu musí být násobkem členitosti přidělení paměti systému.
 
 *dwMappingProtection*<br/>
-Ochrana požadovaná pro zobrazení souboru při mapování souboru. Viz *flProtect* v [CreateFileMapping](/windows/win32/api/winbase/nf-winbase-createfilemappingw) ve Windows SDK.
+Ochrana požadovaná pro zobrazení souboru při mapování souboru. Viz *flProtect* v [CreateFileMapping](/windows/win32/api/winbase/nf-winbase-createfilemappinga) ve Windows SDK.
 
 *dwViewDesiredAccess*<br/>
 Určuje typ přístupu k zobrazení souboru, a proto ochranu stránek mapovaných souborem. Viz *dwDesiredAccess* v [MapViewOfFileEx –](/windows/win32/api/memoryapi/nf-memoryapi-mapviewoffileex) ve Windows SDK.
@@ -201,7 +201,7 @@ Vrátí hodnotu S_OK při úspěchu nebo chybu HRESULT při selhání.
 
 ### <a name="remarks"></a>Poznámky
 
-Po vytvoření objektu mapování souborů nesmí velikost souboru přesáhnout velikost objektu mapování souborů;. Pokud k tomu dojde, ne veškerý obsah souboru bude k dispozici pro sdílení. Další podrobnosti najdete v tématu [CreateFileMapping](/windows/win32/api/winbase/nf-winbase-createfilemappingw) a [MapViewOfFileEx –](/windows/win32/api/memoryapi/nf-memoryapi-mapviewoffileex) v Windows SDK.
+Po vytvoření objektu mapování souborů nesmí velikost souboru přesáhnout velikost objektu mapování souborů;. Pokud k tomu dojde, ne veškerý obsah souboru bude k dispozici pro sdílení. Další podrobnosti najdete v tématu [CreateFileMapping](/windows/win32/api/winbase/nf-winbase-createfilemappinga) a [MapViewOfFileEx –](/windows/win32/api/memoryapi/nf-memoryapi-mapviewoffileex) v Windows SDK.
 
 ### <a name="example"></a>Příklad
 
@@ -233,7 +233,7 @@ Název objektu mapování
 Odkazuje na hodnotu BOOL, která je nastavena na hodnotu TRUE, pokud objekt mapování již existoval.
 
 *lpsa*<br/>
-Ukazatel na `SECURITY_ATTRIBUTES` strukturu, která určuje, zda vrácený popisovač mohou být děděny podřízenými procesy. Viz *lpAttributes* v [CreateFileMapping](/windows/win32/api/winbase/nf-winbase-createfilemappingw) ve Windows SDK.
+Ukazatel na `SECURITY_ATTRIBUTES` strukturu, která určuje, zda vrácený popisovač mohou být děděny podřízenými procesy. Viz *lpAttributes* v [CreateFileMapping](/windows/win32/api/winbase/nf-winbase-createfilemappinga) ve Windows SDK.
 
 *dwMappingProtection*<br/>
 Ochrana požadovaná pro zobrazení souboru, když je soubor namapován. Viz *flProtect* v `CreateFileMapping` tématu Windows SDK.
@@ -247,7 +247,7 @@ Vrátí hodnotu S_OK při úspěchu nebo chybu HRESULT při selhání.
 
 ### <a name="remarks"></a>Poznámky
 
-`MapShareMem`umožňuje sdílet existující objekt mapování souborů vytvořený pomocí [CreateFileMapping](/windows/win32/api/winbase/nf-winbase-createfilemappingw), aby bylo možné mezi procesy sdílet.
+`MapShareMem`umožňuje sdílet existující objekt mapování souborů vytvořený pomocí [CreateFileMapping](/windows/win32/api/winbase/nf-winbase-createfilemappinga), aby bylo možné mezi procesy sdílet.
 
 ##  <a name="openmapping"></a>CAtlFileMappingBase::OpenMapping
 

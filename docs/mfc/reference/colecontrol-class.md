@@ -334,12 +334,12 @@ helpviewer_keywords:
 - COleControl [MFC], IsInvokeAllowed
 - COleControl [MFC], SetInitialDataFormats
 ms.assetid: 53e95299-38e8-447b-9c5f-a381d27f5123
-ms.openlocfilehash: 14a195b22c2b26ee0180c68741fab623623fc36e
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 97c605426ed0ac869714f0f83d4957f7f6ce7d87
+ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69504757"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70741401"
 ---
 # <a name="colecontrol-class"></a>COleControl – – Třída
 
@@ -951,7 +951,7 @@ Ukazatel na `CPropExchange` objekt. Rozhraní poskytuje tento objekt pro vytvoř
 
 ### <a name="remarks"></a>Poznámky
 
-Tato funkce obvykle volá PX_ou rodinu funkcí k načtení nebo uložení specifických vlastností definovaných uživatelem ovládacího prvku OLE.
+Tato funkce obvykle volá **PX_ou** rodinu funkcí k načtení nebo uložení specifických vlastností definovaných uživatelem ovládacího prvku OLE.
 
 Pokud byl Průvodce ovládacím prvkem použit k vytvoření projektu ovládacího prvku OLE, přepsaná verze této funkce provede serializaci uložených vlastností podporovaných `COleControl` voláním `COleControl::DoPropExchange`funkce základní třídy. Při přidávání uživatelsky definovaných vlastností do ovládacího prvku OLE budete muset tuto funkci upravit, aby se vaše nové vlastnosti serializovány. Další informace o serializaci naleznete v článku [ovládací prvky ActiveX: Serializace](../../mfc/mfc-activex-controls-serializing.md).
 
@@ -1540,7 +1540,7 @@ short GetAppearance ();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Návratová hodnota určuje aktuální nastavení vzhledu jako krátkou (VT_I2) hodnotu, pokud je úspěšná. Tato hodnota je nula, pokud je vzhled ovládacího prvku plochý a 1, pokud je vzhled ovládacího prvku 3D.
+Návratová hodnota určuje aktuální nastavení vzhledu jako **krátkou** (VT_I2) hodnotu, pokud je úspěšná. Tato hodnota je nula, pokud je vzhled ovládacího prvku plochý a 1, pokud je vzhled ovládacího prvku 3D.
 
 ##  <a name="getbackcolor"></a>COleControl –:: GetBackColor
 
@@ -3178,7 +3178,7 @@ virtual BOOL OnRenderData(
 Odkazuje na strukturu [FORMATETC](/windows/win32/api/objidl/ns-objidl-formatetc) s určením formátu, ve kterém jsou požadovány informace.
 
 *lpStgMedium*<br/>
-Odkazuje na strukturu [STGMEDIUM](/windows/win32/api/objidl/ns-objidl-stgmedium) , ve které se mají vrátit data.
+Odkazuje na strukturu [STGMEDIUM](/windows/win32/api/objidl/ns-objidl-ustgmedium~r1) , ve které se mají vrátit data.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -3301,7 +3301,7 @@ virtual BOOL OnSetData(
 Ukazatel na strukturu [FORMATETC](/windows/win32/api/objidl/ns-objidl-formatetc) , která určuje formát dat.
 
 *lpStgMedium*<br/>
-Ukazatel na strukturu [STGMEDIUM](/windows/win32/api/objidl/ns-objidl-stgmedium) , ve které jsou uložena data.
+Ukazatel na strukturu [STGMEDIUM](/windows/win32/api/objidl/ns-objidl-ustgmedium~r1) , ve které jsou uložena data.
 
 *bRelease*<br/>
 TRUE, pokud by měl ovládací prvek uvolnit paměťové médium; FALSE, pokud by neměl ovládací prvek uvolnit paměťové médium.

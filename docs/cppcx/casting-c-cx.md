@@ -1,29 +1,29 @@
 ---
-title: Přetypování (C++/CX)
+title: PřetypováníC++(/CX)
 ms.date: 06/19/2018
 ms.assetid: 5247f6c7-6a0a-4021-97c9-21c868bd9455
-ms.openlocfilehash: 65d489d14c91b462e5a2bbe8bd60fce2657904a7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6711320fd9ca52360f702e029fdc8e129c90c6cd
+ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62258210"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70740543"
 ---
-# <a name="casting-ccx"></a>Přetypování (C++/CX)
+# <a name="casting-ccx"></a>PřetypováníC++(/CX)
 
-Čtyři operátory různých přetypování se vztahují na typy Windows Runtime: [static_cast – operátor](../cpp/static-cast-operator.md), [dynamic_cast – operátor](../cpp/dynamic-cast-operator.md), **operátoru safe_cast**, a [ reinterpret_cast – operátor](../cpp/reinterpret-cast-operator.md). **safe_cast** a **static_cast** vyvolat výjimku, pokud převod nelze provést; [static_cast – operátor](../cpp/static-cast-operator.md) také provede kontrolu typů za kompilace. **přetypování dynamic_cast** vrátí **nullptr** , pokud se typ převést nepodaří. I když **reinterpret_cast** vrátí nenulovou hodnotu, může být neplatný. Z tohoto důvodu doporučujeme je velmi riskantní používat **reinterpret_cast** Pokud si nejste jisti, že bude úspěšné přetypování. Kromě toho doporučujeme nepoužívat přetypování ve stylu jazyka C ve vaší C++/CX kódu, protože jsou stejné jako **reinterpret_cast**.
+Čtyři různé operátory přetypování se vztahují na prostředí Windows Runtime typy: [operátor static_cast](../cpp/static-cast-operator.md), [operátor dynamic_cast](../cpp/dynamic-cast-operator.md), **operátor safe_cast**a [operátor reinterpret_cast](../cpp/reinterpret-cast-operator.md). **safe_cast** a **static_cast** vyvolají výjimku, když převod nelze provést; [operátor static_cast](../cpp/static-cast-operator.md) také provádí kontrolu typu při kompilaci. **dynamic_cast** vrátí **nullptr** , pokud se nezdařilo převést typ. I když **reinterpret_cast** vrací hodnotu, která není null, může být neplatná. Z tohoto důvodu doporučujeme, abyste **přetypování reinterpret_cast** nepoužili, Pokud nevíte, že přetypování bude úspěšné. Kromě toho doporučujeme, abyste v kódu C++/CX nepoužívali přetypování ve stylu jazyka C, protože jsou stejné jako **reinterpret_cast**.
 
-Kompilovacími a běhovými také provést implicitní přetypování – například v operace zabalení, když typ hodnoty nebo předdefinovaný typ jsou předány jako argumenty metody parametr, jehož typ je `Object^`. Teoreticky by měla implicitní přetypování nikdy nezpůsobí výjimku za běhu; Pokud kompilátor nemůže provést implicitní převod, vyvolá chybu v době kompilace.
+Kompilátor a modul runtime také provádějí implicitní přetypování – například v operacích zabalení, pokud je typ hodnoty nebo předdefinovaný typ předán jako argumenty metodě, jejíž typ parametru je `Object^`. Teoreticky by implicitní přetypování nikdy nezpůsobilo výjimku za běhu; Pokud kompilátor nemůže provést implicitní převod, vyvolá chybu v době kompilace.
 
-Prostředí Windows Runtime je abstrakcí modelu COM, který používá kódy chyb HRESULT místo výjimek. Obecně platí [Platform::InvalidCastException –](../cppcx/platform-invalidcastexception-class.md) označuje chybu nízké úrovně modelu COM z E_NOINTERFACE.
+Prostředí Windows Runtime je abstrakcí přes model COM, která místo výjimek používá kódy chyb HRESULT. Obecně platí, že [Platform:: InvalidCastException](../cppcx/platform-invalidcastexception-class.md) označuje chybu typu com nízké úrovně E_NOINTERFACE.
 
-## <a name="staticcast"></a>static_cast
+## <a name="static_cast"></a>static_cast
 
-A **static_cast** je zaškrtnuté políčko v době kompilace k určení, zda je mezi těmito dvěma typy vztah dědičnosti. Přetypování způsobí chybu kompilátoru, pokud nejsou související typy.
+**Přetypování static_cast** je kontrolováno v době kompilace, aby bylo zjištěno, zda existuje vztah dědičnosti mezi dvěma typy. Přetypování způsobí chybu kompilátoru, pokud typy nesouvisejí.
 
-A **static_cast** na ref třídy také způsobí, že kontrola běhu, která se má provést. A **static_cast** na ref třída projít ověřením čas kompilace ale nezdaří za běhu; v tomto případě `Platform::InvalidCastException` je vyvolána výjimka. Obecně platí nemusíte tyto výjimky zpracovat, protože téměř vždy označují programové chyby, které se můžete vyloučit během vývoje a testování.
+**Přetypování static_cast** na referenční třídě také způsobí provedení kontrolního běhu. **Přetypování static_cast** u třídy ref class může předat ověření doby kompilace, ale v době běhu stále selže; v tomto případě `Platform::InvalidCastException` je vyvolána výjimka. Obecně není nutné tyto výjimky zpracovávat, protože téměř vždy označují programové chyby, které lze eliminovat při vývoji a testování.
 
-Použití **static_cast** Pokud kód deklaruje explicitně relaci mezi těmito dvěma typy a jste proto si jisti, že by měl fungovat přetypování.
+Použijte **přetypování static_cast** , pokud kód explicitně deklaruje relaci mezi těmito dvěma typy a Vy tedy zajistěte, aby přetypování mělo fungovat.
 
 ```cpp
     interface class A{};
@@ -34,11 +34,11 @@ Použití **static_cast** Pokud kód deklaruje explicitně relaci mezi těmito d
     Class1^ c = static_cast<Class1^>(obj);
 ```
 
-## <a name="safecast"></a>safe_cast
+## <a name="safe_cast"></a>safe_cast
 
-**Safe_cast** operátor je součástí prostředí Windows Runtime. Provede kontrolu typu za běhu a vyvolá výjimku `Platform::InvalidCastException` Pokud převod selže. Použití **safe_cast** po selhání za běhu naznačuje výjimečné podmínce. Hlavním účelem **safe_cast** je vám pomůže identifikovat programové chyby během vývoje a testování, fáze v místě, kde k nim dojde. Není nutné zpracovat výjimku, protože neošetřená výjimka, samotný identifikuje bod selhání.
+Operátor **safe_cast** je součástí prostředí Windows Runtime. Provede kontrolu typu za běhu a vyvolá výjimku `Platform::InvalidCastException` , pokud převod neproběhne úspěšně. Použijte **safe_cast** , pokud chyba za běhu indikuje mimořádnou podmínku. Hlavním účelem **safe_cast** je pomáhat identifikovat programové chyby během fází vývoje a testování v místě, kde se vyskytují. Nemusíte zpracovávat výjimku, protože Neošetřená výjimka identifikuje bod selhání.
 
-Používání operátoru safe_cast, pokud kód nedeklaruje relace, ale jste si jisti, že by měl fungovat přetypování.
+Použijte safe_cast, pokud kód nedeklaruje vztah, ale jste si jisti, že přetypování by mělo fungovat.
 
 ```cpp
     // A and B are not related
@@ -53,9 +53,9 @@ Používání operátoru safe_cast, pokud kód nedeklaruje relace, ale jste si j
     B^ obj2 = safe_cast<B^>(obj);
 ```
 
-## <a name="dynamiccast"></a>dynamic_cast
+## <a name="dynamic_cast"></a>dynamic_cast
 
-Použití **dynamic_cast** při přetypování objektu (přesněji řečeno, hat **^**) na více odvozený typ, očekáváte, že buď cílový objekt může být někdy **nullptr** nebo, který může selhat přetypování a vy chcete zpracovávat jako regulární kódové cestě místo výjimku tuto podmínku. Například v **prázdná aplikace (Universal Windows)** šablony projektu, `OnLaunched` metoda používá app.xamp.cpp **dynamic_cast** k ověření, zda má obsah okna aplikace. Není chyba Pokud nemá obsahu; jde o očekávané stav. `Windows::Current::Content` je `Windows::UI::XAML::UIElement` a převod `Windows::UI.XAML::Controls::Frame`, což je více odvozený typ v hierarchii dědičnosti.
+Použijte **dynamic_cast** při přetypování objektu (konkrétně na Hat **^** ) na více odvozený typ, očekáváte, že cílový objekt může někdy být **nullptr** nebo že přetypování může selhat a chcete tuto podmínku zpracovat jako místo výjimky regulární cesta kódu. Například v šabloně `OnLaunched` projektu **prázdná aplikace (univerzální pro Windows)** metoda v App. XAMP. cpp používá **přetypování dynamic_cast** k otestování, zda má okno aplikace obsah. Nejedná se o chybu, pokud nemá obsah; je to očekávaná podmínka. `Windows::Current::Content`je a je převod na, což je více odvozený typ v hierarchii dědičnosti. `Windows::UI.XAML::Controls::Frame` `Windows::UI::XAML::UIElement`
 
 ```cpp
 void App::OnLaunched(Windows::ApplicationModel::Activation::LaunchActivatedEventArgs^ args)
@@ -74,15 +74,15 @@ void App::OnLaunched(Windows::ApplicationModel::Activation::LaunchActivatedEvent
 }
 ```
 
-Další používání **dynamic_cast** je testovat `Object^` k určení, zda obsahuje zabalený typ hodnoty. V takovém případě pokus `dynamic_cast<Platform::Box>` nebo `dynamic_cast<Platform::IBox>`.
+Dalším použitím **dynamic_cast** je `Object^` zjistit, zda obsahuje zabalený typ hodnoty. V tomto případě se pokusíte `dynamic_cast<Platform::Box>` o `dynamic_cast<Platform::IBox>`nebo.
 
-## <a name="dynamiccast-and-tracking-references-"></a>odkazy přetypování dynamic_cast a sledování (%)
+## <a name="dynamic_cast-and-tracking-references-"></a>odkazy dynamic_cast a sledování (%)
 
-Můžete také použít **dynamic_cast** sledovacímu odkazu, ale v tomto případě přetypování se chová jako **safe_cast**. Vyvolá `Platform::InvalidCastException` při selhání vzhledem k tomu, že sledovací odkaz nemůže mít hodnotu **nullptr**.
+Můžete také použít **přetypování dynamic_cast** na sledovací odkaz, ale v tomto případě se přetypování chová jako **safe_cast**. Vyvolá `Platform::InvalidCastException` se při selhání, protože odkaz sledování nemůže mít hodnotu **nullptr**.
 
-## <a name="reinterpretcast"></a>reinterpret_cast
+## <a name="reinterpret_cast"></a>reinterpret_cast
 
-Doporučujeme, abyste je velmi riskantní používat [reinterpret_cast](../cpp/reinterpret-cast-operator.md) protože je prováděna kontrola v době kompilace ani kontrolu za běhu. V nejhorším případě **reinterpret_cast** umožňuje programovací chyby pokračovat nezjištěné po v době vývoje a způsobit drobné nebo katastrofální chyby v chování vašeho programu. Proto doporučujeme použít **reinterpret_cast** pouze v těchto výjimečných případech, kdy musíte přetypovat mezi nesouvisejících typů a víte, že bude úspěšné přetypování. Příklad výjimečných používání je převést typ Windows Runtime na svůj podkladový typ ABI – to znamená, že jsou převzetí kontroly nad pro objekt pro počítání odkazů. K tomuto účelu doporučujeme použít [comptr – třída](../cpp/com-ptr-t-class.md) inteligentního ukazatele. V opačném případě je třeba konkrétně volat verze v rozhraní. Následující příklad ukazuje, jak třídy ref class lze převést na `IInspectable*`.
+Doporučujeme nepoužívat [přetypování reinterpret_cast](../cpp/reinterpret-cast-operator.md) , protože není provedena žádná kontrolní doba kompilace ani kontrolní doba běhu. V nejhorším případě **přetypování reinterpret_cast** umožňuje programovacím chybám jít v době vývoje na nezjištěnou hodnotu a způsobit drobné nebo závažné chyby v chování programu. Proto doporučujeme použít **přetypování reinterpret_cast** pouze ve výjimečných případech, pokud je nutné přetypování mezi nesouvisejícími typy a víte, že přetypování bude úspěšné. Příkladem zřídka používaného použití je převést prostředí Windows Runtime typ na svůj základní typ ABI – to znamená, že přebíráte počítání odkazů pro objekt. K tomu doporučujeme použít inteligentní ukazatel [třídy ComPtr](../cpp/com-ptr-t-class.md) . V opačném případě je nutné volat vydání na rozhraní. Následující příklad ukazuje, jak třída ref class může být převedena na `IInspectable*`.
 
 ```cpp
 #include <wrl.h>
@@ -92,21 +92,21 @@ ComPtr<IInspectable> inspectable = reinterpret_cast<IInspectable*>(winRtObject);
 // ...
 ```
 
-Pokud používáte **reinterpret_cast** pro převod z oneWindows modul Runtime rozhraní do jiného, vám zajistí, že objekt vydávaly dvakrát. Proto pouze používejte toto přetypování při převodu na rozšíření rozhraní komponenty než Visual C++.
+Použijete-li **přetypování reinterpret_cast** k převodu z rozhraní oneWindows runtime na jiný, způsobí to, že se objekt uvolní dvakrát. Proto použijte pouze toto přetypování při převodu na rozhraní rozšíření bezC++ součásti.
 
 ## <a name="abi-types"></a>Typy ABI
 
-- Typy ABI živě v záhlaví v sadě Windows SDK. Pohodlná, záhlaví pojmenován v oborech názvů – například `windows.storage.h`.
+- Typy ABI jsou v Windows SDK živé v hlavičkách. V praktických případech jsou hlavičky pojmenovány po oborech názvů, `windows.storage.h`například.
 
-- Typy ABI živé ve speciální obor názvů ABI – například `ABI::Windows::Storage::Streams::IBuffer*`.
+- Typy ABI jsou `ABI::Windows::Storage::Streams::IBuffer*`živé ve speciálním oboru názvů ABI – například.
 
-- Převody mezi typem rozhraní Windows Runtime a jeho ekvivalentní typ ABI jsou vždy bezpečné – to znamená `IBuffer^` k `ABI::IBuffer*`.
+- Převody mezi prostředí Windows Runtime typu rozhraní a jeho ekvivalentním typem ABI jsou vždy bezpečná – tedy `IBuffer^` na. `ABI::IBuffer*`
 
-- Modul runtime třídy Windows Runtime by měla vždy převést na `IInspectable*` nebo výchozí rozhraní, pokud je, který je znám.
+- Třída prostředí Windows Runtime runtime by měla být vždy převedena `IInspectable*` na nebo její výchozí rozhraní, pokud je známo.
 
-- Po převodu na typy ABI vlastní doba života typu a musí dodržovat pravidla COM. Doporučujeme, abyste použili `WRL::ComPtr` ke zjednodušení správy životního cyklu ABI ukazatelů.
+- Po převodu na typy ABI vlastníte dobu života typu a musí následovat pravidla modelu COM. Pro zjednodušení správy životnosti `WRL::ComPtr` ukazatelů ABI doporučujeme použít.
 
-Následující tabulka shrnuje případy, ve kterých je bezpečné používat **reinterpret_cast**. V každém případě přetypování je bezpečné v obou směrech.
+Následující tabulka shrnuje případy, ve kterých je bezpečné použít **přetypování reinterpret_cast**. V každém případě je přetypování v obou směrech bezpečné.
 
 |||
 |-|-|
@@ -122,5 +122,5 @@ Následující tabulka shrnuje případy, ve kterých je bezpečné používat *
 ## <a name="see-also"></a>Viz také:
 
 - [Systém typů](../cppcx/type-system-c-cx.md)
-- [Referenční dokumentace jazyka Visual C++](../cppcx/visual-c-language-reference-c-cx.md)
+- [Referenční zdroje k jazyku C++/CX](../cppcx/visual-c-language-reference-c-cx.md)
 - [Referenční informace o oborech názvů](../cppcx/namespaces-reference-c-cx.md)

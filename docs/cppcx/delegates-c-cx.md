@@ -1,137 +1,137 @@
 ---
-title: Delegáti (C++/CX)
+title: DelegátiC++(/CX)
 ms.date: 01/22/2017
 ms.assetid: 3175bf1c-86d8-4eda-8d8f-c5b6753d8e38
-ms.openlocfilehash: e2158adad288045c9a98889dbe97e834dc93ea71
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3ab455044b98cdd8c7b13a650f729efc2132797e
+ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62406922"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70740285"
 ---
-# <a name="delegates-ccx"></a>Delegáti (C++/CX)
+# <a name="delegates-ccx"></a>DelegátiC++(/CX)
 
-`delegate` – Klíčové slovo se používá k deklaraci typu odkaz, který je ekvivalentní prostředí Windows Runtime a objektu funkce ve standardním jazyce C++. Deklarace delegáta, která je podobná signatuře funkce; Určuje návratový typ a typy parametrů musí mít jeho zabalené funkce. Toto je uživatelský delegát deklarace:
+Klíčové slovo slouží k deklaraci typu odkazu, který je prostředí Windows Runtime ekvivalentem objektu funkce ve standardu C++ `delegate` Deklarace delegáta podobná podpisu funkce; Určuje návratový typ a typy parametrů, které musí mít zabalená funkce. Toto je uživatelsky definovaná deklarace delegáta:
 
 ```cpp
 public delegate void PrimeFoundHandler(int result);
 ```
 
-Delegáty se běžně používají ve spojení s událostmi. Událost má typ delegáta, téměř stejným způsobem, že třída může mít typ rozhraní. Delegát reprezentuje kontrakt, který mnohem splnění obslužných rutin událostí. Tady je člen třídy události jehož typ je dříve definovaného delegáta:
+Delegáti se nejčastěji používají ve spojení s událostmi. Událost má typ delegáta, podobně jako třída může mít typ rozhraní. Delegát představuje kontrakt, který obslužné rutiny událostí hodně splní. Zde je člen třídy události, jehož typ je dříve definovaný delegát:
 
 ```cpp
 event PrimeFoundHandler^ primeFoundEvent;
 ```
 
-Při deklarování delegáty, kteří budou přístupné pro klienty napříč binárním rozhraním aplikace Windows Runtime, použijte [Windows::Foundation:: typedeventhandler\<TSender, TResult >](/uwp/api/windows.foundation.typedeventhandler). Tento delegát má předdefinovaná proxy a zástupných procedur binární soubory, které umožňují využívat klientů Javascript.
+Při deklaraci delegátů, kteří budou vystaveni klientům v rámci binárního rozhraní prostředí Windows Runtime aplikace, použijte [Windows:: Foundation\<:: TypedEventHandler TSender, TResult >](/uwp/api/windows.foundation.typedeventhandler). Tento delegát má předdefinované binární soubory proxy a zástupné procedury, které umožňují, aby je mohli používat klienti JavaScriptu.
 
-## <a name="consuming-delegates"></a>Použití delegátů
+## <a name="consuming-delegates"></a>Používání delegátů
 
-Když vytvoříte aplikaci pro univerzální platformu Windows, můžete často pracují s delegátem jako typu události, která zveřejňuje třídy Windows Runtime. Chcete-li přihlásit odběr události, vytvořit instanci typ delegáta tak, že určíte funkci – nebo lambda –, který odpovídá signatuře delegátu. Potom použijte `+=` operátor pro předání objektu delegáta pro člen události ve třídě. To se označuje jako přihlášení k odběru události. Při instanci třídy"" události je volána funkce, spolu s všechny rutiny, které byly přidány do objektu nebo jiné objekty.
+Při vytváření Univerzální platforma Windows aplikace často pracujete s delegátem jako typ události, kterou třída prostředí Windows Runtime zpřístupňuje. Chcete-li se přihlásit k odběru události, vytvořte instanci svého typu delegáta zadáním funkce (neboli výrazu lambda), která odpovídá podpisu delegáta. Pak použijte `+=` operátor k předání objektu delegáta členovi události třídy. Tento postup se označuje jako odběr události. Když je instance třídy "aktivována" událost, je volána funkce společně s dalšími obslužnými rutinami, které byly přidány do objektu nebo jiných objektů.
 
 > [!TIP]
-> Visual Studio spoustu práce udělá za vás při vytváření obslužné rutiny události. Například pokud chcete zadat obslužné rutiny události v kódu XAML, zobrazí se popisku tlačítka. Pokud se rozhodnete popis tlačítka, Visual Studio automaticky vytvoří metodu obslužné rutiny události a přidruží ji k události publikování třídy.
+> Když vytvoříte obslužnou rutinu události, Visual Studio provede spoustu práce. Například pokud zadáte obslužnou rutinu události v kódu jazyka XAML, zobrazí se popis tlačítka. Pokud zvolíte popis tlačítka, Visual Studio automaticky vytvoří metodu obslužné rutiny události a přidruží ji k události třídy publikování.
 
-Následující příklad zobrazuje základní vzor. `Windows::Foundation::TypedEventHandler` je typ delegátu. Funkce obslužné rutiny se vytvoří s použitím pojmenované funkce.
+Následující příklad ukazuje základní vzor. `Windows::Foundation::TypedEventHandler`je typ delegáta. Funkce obslužné rutiny je vytvořena pomocí pojmenované funkce.
 
-V app.h:
+V App. h:
 
 [!code-cpp[cx_delegates#120](../cppcx/codesnippet/CPP/delegatesevents/class1.h#120)]
 
-V app.cpp:
+V App. cpp:
 
 [!code-cpp[cx_delegates#121](../cppcx/codesnippet/CPP/delegatesevents/class1.cpp#121)]
 
 > [!WARNING]
-> Obecně pro obslužnou rutinu události, je vhodnější použít pojmenované funkce namísto výrazu lambda, pokud trvat velmi pečlivě, aby se zabránilo cyklické odkazy. Pojmenované funkce zachycuje ukazatel "Tento" podle nestálý odkaz, ale výraz lambda zachytí silné odkazem a vytváří cyklický odkaz. Další informace najdete v tématu [slabé odkazy a cykly zásadní](../cppcx/weak-references-and-breaking-cycles-c-cx.md).
+> Obecně platí, že pro obslužnou rutinu události je vhodnější použít pojmenovanou funkci namísto lambda, pokud nebudete mít skvělou péči vyhnout se cyklickým odkazům. Pojmenovaná funkce zachycuje "This" ukazatel na základě slabého odkazu, ale lambda ho zachytí silným odkazem a vytvoří cyklický odkaz. Další informace najdete v tématu [slabé odkazy a průlomové cykly](../cppcx/weak-references-and-breaking-cycles-c-cx.md).
 
-Podle úmluvy názvy delegáta obslužné rutiny události, které jsou definovány pomocí prostředí Windows Runtime mít formát _služba ._protokol * EventHandler – například RoutedEventHandler SizeChangedEventHandler či SuspendingEventHandler. Podle konvence také delegátů obslužných rutin události mají dva parametry a vracet typ void. Delegát, který nemá parametry typu, je první parametr typu [Platform::Object ^](../cppcx/platform-object-class.md); obsahuje odkaz na odesílatele, což je objekt, která vyvolala událost. Je třeba přetypovat zpět na původní typ, než použití argumentu v metodě obslužné rutiny události. V obslužné rutiny delegáta události, které má parametry typu, určuje první parametr typu typ odesílatele a druhý parametr je popisovač na referenční třídu, která uchovává informace o události. Podle konvence, tato třída má název \*EventArgs. Například delegát RoutedEventHandler má druhý operátor typu RoutedEventArgs ^, a druhý operátor typu DragEventArgs DragEventHander ^.
+Podle konvencí názvy delegátů obslužných rutin události, které jsou definovány prostředí Windows Runtime, mají formu * EventHandler, například RoutedEventHandler, SizeChangedEventHandler nebo SuspendingEventHandler. I podle konvence mají Delegáti obslužné rutiny události dva parametry a vracet typ void. V delegátu, který nemá parametry typu, je první parametr typu [Platform:: Object ^](../cppcx/platform-object-class.md);. obsahuje odkaz na odesílatele, což je objekt, který událost vyvolal. Před použitím argumentu v metodě obslužné rutiny události je třeba přetypovat zpět na původní typ. V delegátu obslužné rutiny události, který má parametry typu, určuje první parametr typu odesílatele a druhý parametr popisovač referenční třídy, která obsahuje informace o události. Podle konvence je tato třída pojmenována \*EventArgs. Například delegát RoutedEventHandler má druhý parametr typu RoutedEventArgs ^ a DragEventHander má druhý parametr typu DragEventArgs ^.
 
-Podle konvence jsou delegáty, kteří se zabalit kód, který se spustí po dokončení asynchronní operace s názvem * CompletedHandler. Tyto delegáty jsou definovány jako vlastnosti třídy, nikoli jako události. Proto nepoužívejte `+=` operátor přihlásit se k odběru; právě přiřadit objektu delegáta k vlastnosti.
+Podle konvence delegáti, kteří zabalí kód, který se spustí po dokončení asynchronní operace, mají název * CompletedHandler. Tito Delegáti jsou definováni jako vlastnosti třídy, nikoli jako události. Proto `+=` operátor nepoužíváte k přihlášení k odběru. pouze k této vlastnosti přiřadíte objekt delegáta.
 
 > [!TIP]
-> Technologie IntelliSense jazyka C++ nezobrazí úplný delegáta; Proto se nijak nepomáhá můžete zjistit, konkrétní typ parametr EventArgs. Najít typ, můžete přejít na **prohlížeče objektů** a podívejte se na `Invoke` metodu pro delegáta.
+> C++IntelliSense nezobrazuje úplný podpis delegáta; Proto vám nepomůže určit konkrétní typ parametru EventArgs. Chcete-li najít typ, můžete přejít na **Prohlížeč objektů** a podívat se `Invoke` na metodu delegáta.
 
-## <a name="creating-custom-delegates"></a>Vytváří se vlastní delegáty
+## <a name="creating-custom-delegates"></a>Vytváření vlastních delegátů
 
-Můžete definovat vlastní delegáty, k definování obslužných rutin událostí nebo k povolení příjemcům a zajistěte tak předání vlastní funkce pro vaše komponenta Windows Runtime. Stejně jako jakýkoli jiný typ Windows Runtime nelze použít deklaraci veřejný delegát jako obecný.
+Můžete definovat vlastní delegáty, definovat obslužné rutiny událostí nebo umožnit příjemcům předat vlastní funkce prostředí Windows Runtime komponentě. Stejně jako u jakéhokoli jiného typu prostředí Windows Runtime nemůže být veřejný delegát deklarovaný jako obecný.
 
 ### <a name="declaration"></a>Deklarace
 
-Deklarace delegáta vypadá podobně jako deklarace funkce s tím rozdílem, že je typ delegátu. Obvykle je deklarovat delegáta v oboru názvů, i když lze také vnořit deklaraci delegáta v deklaraci třídy. Následující delegát zapouzdřuje všechny funkce, které přijímá `ContactInfo^` jako vstup a vrátí `Platform::String^`.
+Deklarace delegáta se podobá deklaraci funkce s tím rozdílem, že delegát je typu. Obvykle deklarujete delegáta v oboru názvů, i když můžete také vnořit deklaraci delegáta v deklaraci třídy. Následující delegát zapouzdřuje jakoukoliv funkci, která přijímá `ContactInfo^` jako vstup, a `Platform::String^`vrátí.
 
 [!code-cpp[cx_delegates#111](../cppcx/codesnippet/CPP/delegatesevents/class1.h#111)]
 
-Po deklaraci typu delegáta, je možné deklarovat členy třídy tohoto typu nebo metody, které přebírají objekty tohoto typu jako parametry. Metoda nebo funkce může také vracet typ delegáta. V následujícím příkladu `ToCustomString` metoda přijímá jako vstupní parametr delegátu. Tato metoda umožňuje klientským kódem, aby poskytují vlastní funkce, která vytvoří řetězec z některé nebo všechny veřejné vlastnosti `ContactInfo` objektu.
+Po deklaraci typu delegáta můžete deklarovat členy třídy tohoto typu nebo metody, které přijímají objekty daného typu jako parametry. Metoda nebo funkce může také vracet typ delegáta. V následujícím příkladu `ToCustomString` metoda přebírá delegáta jako vstupní parametr. Metoda umožňuje klientskému kódu poskytnout vlastní funkci, která vytvoří řetězec z některých nebo všech veřejných vlastností `ContactInfo` objektu.
 
 [!code-cpp[Cx_delegates#112](../cppcx/codesnippet/CPP/delegatesevents/class1.h#112)]
 
 > [!NOTE]
-> Můžete použít "^" stejně jako jakékoli Windows runtime na typ symbolu při odkazu na typ delegáta.
+> Symbol "^" použijete při odkazování na typ delegáta, stejně jako u jakéhokoli typu odkazu prostředí Windows Runtime.
 
-Vždy deklaraci události má typ delegáta. Tento příklad ukazuje typické delegáta podpisu typ v modulu Windows Runtime:
+Deklarace události má vždycky typ delegáta. Tento příklad ukazuje typický podpis typu delegáta v prostředí Windows Runtime:
 
 [!code-cpp[cx_delegates#122](../cppcx/codesnippet/CPP/delegatesevents/class1.h#122)]
 
-`Click` Událost v `Windows:: UI::Xaml::Controls::Primitives::ButtonBase` třída je typu `RoutedEventHandler`. Další informace najdete v tématu [události](../cppcx/events-c-cx.md).
+Událost ve třídě je typu `RoutedEventHandler`. `Windows:: UI::Xaml::Controls::Primitives::ButtonBase` `Click` Další informace najdete v tématu [události](../cppcx/events-c-cx.md).
 
-Klientský kód nejprve vytvoří instanci delegáta pomocí `ref new` a výraz lambda, který je kompatibilní s podpisem delegáta a definuje vlastní chování.
+Kód klienta nejprve vytvoří instanci delegátu pomocí `ref new` a poskytne lambda, která je kompatibilní s podpisem delegáta, a definuje vlastní chování.
 
 [!code-cpp[Cx_delegates#113](../cppcx/codesnippet/CPP/delegatesevents/class1.cpp#113)]
 
-Potom volá členskou funkci a předává delegáta. Předpokládejme, že `ci` je `ContactInfo^` instance a `textBlock` je XAML `TextBlock^`.
+Pak zavolá členskou funkci a předá delegáta. Předpokládejme, `ci` že `ContactInfo^` je instancí a `textBlock` je XAML `TextBlock^`.
 
 [!code-cpp[Cx_delegates#114](../cppcx/codesnippet/CPP/delegatesevents/class1.cpp#114)]
 
-V následujícím příkladu, klientská aplikace předává do veřejné metody v součásti prostředí Windows Runtime, který spouští delegáta pro každou položku v vlastního delegáta `Vector`:
+V dalším příkladu klientská aplikace projde vlastní delegát na veřejnou metodu ve prostředí Windows Runtime komponentě, která spustí delegáta pro každou položku v `Vector`:
 
 [!code-cpp[Cx_delegates#118](../cppcx/codesnippet/CPP/clientapp/mainpage.xaml.cpp#118)]
 
 [!code-cpp[Cx_delegates#119](../cppcx/codesnippet/CPP/delegatesevents/class1.cpp#119)]
 
-### <a name="construction"></a>Konstrukce
+### <a name="construction"></a>Stavbě
 
-Můžete vytvořit delegáta z kteréhokoli z těchto objektů:
+Můžete vytvořit delegáta z libovolného z těchto objektů:
 
 - lambda
 
-- statické funkce
+- static – funkce
 
-- pointer-to-member
+- ukazatel na člena
 
-- std::Function
+- std:: Function
 
-Následující příklad ukazuje, jak vytvořit delegáta z každého z těchto objektů. Využité delegáta přesně stejným způsobem bez ohledu na typ objektu, který slouží k jeho vytvoření.
+Následující příklad ukazuje, jak vytvořit delegáta z každého z těchto objektů. Můžete využít delegáta přesně stejným způsobem bez ohledu na typ objektu, který je použit k jeho sestavení.
 
 [!code-cpp[Cx_delegates#115](../cppcx/codesnippet/CPP/delegatesevents/class1.cpp#115)]
 
 > [!WARNING]
-> Pokud výraz lambda, který zachycuje ukazatel "Tento" použijete, nezapomeňte použít `-=` operátor explicitně zrušit registraci z událostí před ukončením výrazu lambda. Další informace najdete v tématu [události](../cppcx/events-c-cx.md).
+> Použijete-li lambda, který zachycuje ukazatel "This", nezapomeňte použít `-=` operátor k explicitnímu zrušení registrace z události před ukončením výrazu lambda. Další informace najdete v tématu [události](../cppcx/events-c-cx.md).
 
-### <a name="generic-delegates"></a>Obecní delegáti
+### <a name="generic-delegates"></a>Obecné delegáty
 
-Obecní delegáti v C++/CX mají omezení, podobně jako deklarace obecných tříd. Nemohou být deklarovány jako veřejná. Můžete deklarovat soukromé nebo interní obecného delegáta a používat ji v C++, ale rozhraní .NET nebo klientů JavaScript nelze ho zpracovat vzhledem k tomu, že se emitovat do metadat .winmd. V tomto příkladu deklaruje obecného delegáta, který může používat pouze C++:
+Obecní delegáti C++v/CX mají omezení podobná deklaracím obecných tříd. Nemohou být deklarovány jako veřejné. Můžete deklarovat privátní nebo interní delegáta a spotřebovat ho z C++, ale klienti .NET nebo JavaScript ho nemůžou spotřebovat, protože se neemitují do metadat. winmd. Tento příklad deklaruje obecný delegát, který může používat pouze C++:
 
 [!code-cpp[Cx_delegates#116](../cppcx/codesnippet/CPP/delegatesevents/class1.h#116)]
 
-Následující příklad deklaruje specializovanou instanci třídy delegáta uvnitř definice třídy:
+Následující příklad deklaruje specializované instance delegáta uvnitř definice třídy:
 
 [!code-cpp[Cx_delegates#117](../cppcx/codesnippet/CPP/delegatesevents/class1.h#117)]
 
-## <a name="delegates-and-threads"></a>Delegáty a vlákna
+## <a name="delegates-and-threads"></a>Delegáti a vlákna
 
-Delegát, stejně jako objekt funkce, obsahuje kód, který se spustí někdy v budoucnu. Pokud kód, který vytváří a předává delegáta a funkci, která přijme a zpracuje delegáta, běží ve stejném vlákně, co jsou poměrně jednoduché. Pokud toto vlákno je vlákno uživatelského rozhraní, delegáta můžete přímo pracovat s objekty uživatelského rozhraní, jako je například ovládací prvky XAML.
+Delegát, stejně jako objekt funkce, obsahuje kód, který bude v budoucnu spuštěn v určitou dobu. Pokud kód, který vytvoří a předává delegáta, a funkci, která přijímá a spustí delegáta, jsou spuštěny ve stejném vlákně, jsou objekty relativně jednoduché. Pokud je toto vlákno vláknem uživatelského rozhraní, delegát může přímo manipulovat s objekty uživatelského rozhraní, jako jsou například ovládací prvky XAML.
 
-Pokud se klientská aplikace načte komponenty prostředí Windows Runtime, která běží na jednovláknový objekt apartment a poskytuje delegáta pro tuto součást, pak ve výchozím nastavení je delegát vyvolán přímo u vlákna STA. Většina komponent prostředí Windows Runtime můžete spustit v režimu STA nebo MTA.
+Pokud klientská aplikace načte prostředí Windows Runtime komponentu, která běží v vlákně s vláknem, a poskytuje delegáta této součásti, pak ve výchozím nastavení je delegát vyvolán přímo ve vlákně STA. Většina prostředí Windows Runtime komponent může běžet v prostředí STA nebo MTA.
 
-Pokud kód, který spouští delegáta je spuštěna v jiném vlákně – například v rámci objektu concurrency::task – pak zodpovědná za synchronizaci přístup ke sdíleným datům. Například Pokud delegát obsahuje odkaz na vektoru a ovládací prvek XAML obsahuje odkaz na tento stejný vektoru, je nutné provést kroky předcházet zablokování nebo časování, které mohou nastat při delegáta i ovládací prvek XAML pokus o přístup k vektoru na sam čas e. Můžete také pečlivě, že delegát nebude se pokoušet zachycení podle reference lokálních proměnných, které může být předtím, než je delegát vyvolán dostanou mimo rozsah.
+Pokud kód, který spouští delegáta, je spuštěn v jiném vlákně, například v kontextu objektu concurrency:: Task, potom zodpovídáte za synchronizaci přístupu ke sdíleným datům. Například pokud váš delegát obsahuje odkaz na vektor a ovládací prvek XAML má odkaz na stejný vektor, je nutné provést kroky, abyste zabránili zablokování nebo konfliktům časování, ke kterým může dojít, když se delegát i ovládací prvek XAML pokusí o přístup ke vektoru v Sam. čas e. Je také nutné dbát na to, aby se delegát nepokoušel zachytit pomocí referenčních místních proměnných, které mohou být před vyvoláním delegáta přecházet mimo rozsah.
 
-Pokud chcete vytvořený delegát být ve stejném vlákně, který byl vytvořen na zpětné volání – například pokud předáte do komponenty, která běží v prostředí MTA komplexu – a má být vyvolána ve stejném vlákně jako Tvůrce , pak pomocí přetížení konstruktoru delegáta, který přebírá sekundy `CallbackContext` parametru. Toto přetížení použijte pouze na delegáty, kteří mají registrované proxy/zástupné procedury; Ne všechny delegáty, které jsou definovány v Windows.winmd jsou registrované.
+Pokud chcete, aby byl vytvořený delegát volán zpátky ve stejném vlákně, ve kterém byl vytvořen, například pokud ho předáte do komponenty, která běží v izolovaném prostoru MTA, a chcete ji vyvolat ve stejném vlákně jako tvůrce a pak použijte přetížení konstruktoru delegáta, které přijímá druhý `CallbackContext` parametr. Toto přetížení používejte jenom u delegátů, kteří mají registrovaný proxy/zástupnou proceduru; nejsou registrováni Všichni delegáti, kteří jsou definováni ve Windows. winmd.
 
-Pokud jste se seznámili s obslužné rutiny události v rozhraní .NET, víte, že doporučeným postupem je vytvořit místní kopii předtím, než se aktivuje událost. Tím se vyhnete časování, ve kterých může být obslužné rutiny události odebrán těsně před plánovaným začátkem události je vyvolána. Není to nutné k tomu C++/CX vzhledem k tomu, že při přidávání nebo odebírání obslužných rutin událostí se vytvoří nový seznam obslužné rutiny. Protože objekt jazyka C++ zvýší počet odkazů na seznam obslužných rutin před vyvoláním události, není zaručeno, že všechny obslužné rutiny bude platit. To ale také znamená, že pokud odeberete obslužné rutiny události v konzumním vlákně, tato obslužná rutina může stále získat vyvolána, pokud publikování objektu stále pracuje na jeho kopii v seznamu je nyní zastaralá. Publikování objekt nebude aktualizovaný seznam získáte až do příštího vyvolá událost.
+Pokud jste obeznámeni s obslužnými rutinami událostí v rozhraní .NET, víte, že doporučeným postupem je vytvořit místní kopii události před tím, než se ji spustí. Tím se zabrání konfliktům časování, ve kterém může být obslužná rutina události odebrána těsně před vyvoláním události. Tuto akci není nutné provádět v C++/CX, protože když jsou obslužné rutiny událostí přidány nebo odebrány, vytvoří se nový seznam obslužných rutin. Vzhledem k C++ tomu, že objekt zvyšuje počet odkazů v seznamu obslužných rutin před vyvoláním události, je zaručeno, že všechny obslužné rutiny budou platné. Nicméně to znamená, že pokud odeberete obslužnou rutinu události ve fungujícím vlákně, tato obslužná rutina může být vyvolána i v případě, že objekt publikování stále pracuje na kopii seznamu, která je nyní zastaralá. Publikovaný objekt nebude získávat aktualizovaný seznam do okamžiku, kdy událost příště vyvolá.
 
 ## <a name="see-also"></a>Viz také:
 
 [Systém typů](../cppcx/type-system-c-cx.md)<br/>
-[Referenční dokumentace jazyka Visual C++](../cppcx/visual-c-language-reference-c-cx.md)<br/>
+[Referenční zdroje k jazyku C++/CX](../cppcx/visual-c-language-reference-c-cx.md)<br/>
 [Referenční informace o oborech názvů](../cppcx/namespaces-reference-c-cx.md)

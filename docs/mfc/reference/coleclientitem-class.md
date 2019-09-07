@@ -164,12 +164,12 @@ helpviewer_keywords:
 - COleClientItem [MFC], OnScrollBy
 - COleClientItem [MFC], OnShowItem
 ms.assetid: 7f571b7c-2758-4839-847a-0cf1ef643128
-ms.openlocfilehash: 4a4492e168d36b114811192c8a5c341a62c156ad
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 9f97f117f0fd8570855079aca7bdfd7a63118bc5
+ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69504379"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70740871"
 ---
 # <a name="coleclientitem-class"></a>COleClientItem – třída
 
@@ -285,7 +285,7 @@ Položka OLE může být buď vložená, nebo propojená. Pokud je vložená, da
 
 `COleClientItem`definuje několik přepisovatelných funkcí, které jsou volány v reakci na požadavky ze serverové aplikace. Tyto k přepisovatelným obvykle fungují jako oznámení. Tím umožníte, aby serverová aplikace informovala kontejner o změnách, které uživatel provede při úpravách položky OLE, nebo k načtení informací potřebných během úprav.
 
-`COleClientItem`lze použít buď s třídou [COleDocument](../../mfc/reference/coledocument-class.md), [COleLinkingDoc](../../mfc/reference/colelinkingdoc-class.md)nebo [COleServerDoc](../../mfc/reference/coleserverdoc-class.md) . Chcete- `COleClientItem`li použít, odvodit z něj třídu a [](#onchange) implementovat členskou funkci s příponou, která definuje, jak kontejner reaguje na změny provedené u položky. Pro podporu místní aktivace přepište členskou funkci [OnGetItemPosition](#ongetitemposition) . Tato funkce poskytuje informace o zobrazené pozici položky OLE.
+`COleClientItem`lze použít buď s třídou [COleDocument](../../mfc/reference/coledocument-class.md), [COleLinkingDoc](../../mfc/reference/colelinkingdoc-class.md)nebo [COleServerDoc](../../mfc/reference/coleserverdoc-class.md) . Chcete- `COleClientItem`li použít, odvodit z něj třídu a [implementovat členskou funkci](#onchange) s příponou, která definuje, jak kontejner reaguje na změny provedené u položky. Pro podporu místní aktivace přepište členskou funkci [OnGetItemPosition](#ongetitemposition) . Tato funkce poskytuje informace o zobrazené pozici položky OLE.
 
 Další informace o použití rozhraní kontejneru najdete v kontejnerech článků [: Implementace kontejneru](../../mfc/containers-implementing-a-container.md) a [Aktivace](../../mfc/activation-cpp.md).
 
@@ -1099,7 +1099,7 @@ Nenulové, pokud bylo úspěšné; v opačném případě 0.
 
 ### <a name="remarks"></a>Poznámky
 
-Funkce může používat reprezentace metasouboru pro položku OLE vytvořenou funkcí vykreslit [](../../mfc/reference/coleserveritem-class.md#ondraw) členskou funkcí `COleServerItem`.
+Funkce může používat reprezentace metasouboru pro položku OLE vytvořenou funkcí [vykreslit](../../mfc/reference/coleserveritem-class.md#ondraw) členskou funkcí `COleServerItem`.
 
 Obvykle se používá `Draw` pro zobrazení obrazovky a předání kontextu zařízení obrazovky jako *primárního řadiče domény*. V takovém případě je nutné zadat pouze první dva parametry.
 
@@ -1332,7 +1332,7 @@ UINT GetItemState() const;
 
 ### <a name="remarks"></a>Poznámky
 
-Chcete-li být upozorněni na změnu stavu položky OLE, použijte [](#onchange) funkci přiměnit členskou funkci.
+Chcete-li být upozorněni na změnu stavu položky OLE, použijte funkci [přiměnit](#onchange) členskou funkci.
 
 Další informace najdete v kontejnerech článků [: Stavy](../../mfc/containers-client-item-states.md)klientských položek.
 
@@ -1478,7 +1478,7 @@ Nenulové, pokud je položka OLE čistá; v opačném případě 0.
 
 ### <a name="remarks"></a>Poznámky
 
-Další informace naleznete v tématu [IPersistStorage::](/windows/win32/api/objidl/nf-objidl-ipersiststorage-isdirty) dedirty v Windows SDK.
+Další informace naleznete v tématu [IPersistStorage:: Dedirty](/windows/win32/api/objidl/nf-objidl-ipersiststorage-isdirty) v Windows SDK.
 
 ##  <a name="isopen"></a>COleClientItem:: Open
 
@@ -1748,7 +1748,7 @@ Ukazatel na ukazatel na hlavní okno rámce.
 Ukazatel na ukazatel na okno rámce dokumentu.
 
 *lpFrameInfo*<br/>
-Ukazatel na strukturu [OLEINPLACEFRAMEINFO](/windows/win32/api/oleidl/ns-oleidl-oifi) , která obdrží informace o okně rámce.
+Ukazatel na strukturu [OLEINPLACEFRAMEINFO](/windows/win32/api/oleidl/ns-oleidl-oleinplaceframeinfo) , která obdrží informace o okně rámce.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -1762,7 +1762,7 @@ Pokud je kontejner aplikace MDI, výchozí implementace vrátí ukazatel na obje
 
 Tuto funkci popište pouze v případě, že výchozí implementace nevyhovuje vaší aplikaci. Například pokud má vaše aplikace paradigma uživatelského rozhraní, které se liší od SDI nebo MDI. Toto je pokročilá přepsatelné.
 
-Další informace naleznete v tématu [IOleInPlaceSite:: GetWindowContext](/windows/win32/api/oleidl/nf-oleidl-ioleinplacesite-getwindowcontext) a struktura [OLEINPLACEFRAMEINFO](/windows/win32/api/oleidl/ns-oleidl-oifi) v Windows SDK.
+Další informace naleznete v tématu [IOleInPlaceSite:: GetWindowContext](/windows/win32/api/oleidl/nf-oleidl-ioleinplacesite-getwindowcontext) a struktura [OLEINPLACEFRAMEINFO](/windows/win32/api/oleidl/ns-oleidl-oleinplaceframeinfo) v Windows SDK.
 
 ##  <a name="oninsertmenus"></a>COleClientItem:: OnInsertMenus
 
@@ -2008,7 +2008,7 @@ Hodnota z výčtu DVASPECT. Tento parametr může mít jednu z následujících 
 
 ### <a name="remarks"></a>Poznámky
 
-Aspekt určuje, jak má být položka vykreslena vykreslením, když je použita výchozí hodnota argumentu *nDrawAspect* této funkce. [](#draw)
+Aspekt určuje, jak má být položka vykreslena [vykreslením](#draw) , když je použita výchozí hodnota argumentu *nDrawAspect* této funkce.
 
 Tato funkce je volána automaticky pomocí ikony Change (a dalších dialogových oken, které volají dialogové okno Změnit ikonu), aby bylo možné zobrazit aspekty zobrazení ikonickým v případě, že uživatel požaduje.
 
@@ -2151,7 +2151,7 @@ BOOL SetPrintDevice(const PRINTDLG* ppd);
 Ukazatel na strukturu dat [DVTARGETDEVICE](/windows/win32/api/objidl/ns-objidl-dvtargetdevice) , která obsahuje informace o novém zařízení cílení na tisk. Může mít hodnotu NULL.
 
 *ppd*<br/>
-Ukazatel na strukturu dat [PRINTDLG](/windows/win32/api/commdlg/ns-commdlg-pdw) , která obsahuje informace o novém zařízení cílení na tisk. Může mít hodnotu NULL.
+Ukazatel na strukturu dat [PRINTDLG](/windows/win32/api/commdlg/ns-commdlg-printdlga) , která obsahuje informace o novém zařízení cílení na tisk. Může mít hodnotu NULL.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -2163,7 +2163,7 @@ Tato funkce aktualizuje pro položku cílové zařízení pro tisk, ale neaktual
 
 Argumenty této funkce obsahují informace, které systém OLE používá k identifikaci cílového zařízení. `PRINTDLG` Struktura obsahuje informace, které systém Windows používá k inicializaci běžného tiskového dialogového okna. Po zavření uživatele v dialogovém okně vrátí systém Windows informace o výběru uživatele v této struktuře. Člen objektu `PRINTDLG` CPrintDialog je struktura. [](../../mfc/reference/cprintdialog-class.md) `m_pd`
 
-Další informace o této struktuře naleznete v tématu [PRINTDLG](/windows/win32/api/commdlg/ns-commdlg-pdw) v Windows SDK.
+Další informace o této struktuře naleznete v tématu [PRINTDLG](/windows/win32/api/commdlg/ns-commdlg-printdlga) v Windows SDK.
 
 Další informace najdete v tématu [DVTARGETDEVICE](/windows/win32/api/objidl/ns-objidl-dvtargetdevice) v Windows SDK.
 

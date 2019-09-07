@@ -7,14 +7,14 @@ helpviewer_keywords:
 - LNK4073
 ms.assetid: a0c80242-3395-45bd-bbe7-4f31d7ac9e3a
 ms.openlocfilehash: e1cdb3274f118605353dbd3a3661ef6fc1cf37b6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50639806"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70740703"
 ---
 # <a name="linker-tools-warning-lnk4073"></a>Upozornění linkerů LNK4073
 
-nedá se vytvořit mapa souboru .ilk; nepřírůstkově
+Nelze vytvořit mapu pro soubor. ilk; nepřírůstkové propojení
 
-Nebyl k dispozici rozsáhlou dostatek souvislé místo ve sdílené paměti pro odkaz můžete vytvořit soubor stavu přírůstků (propojení.ilk). ODKAZ provést nepřírůstková sestavení.
+Ve sdílené paměti není dost volného místa pro odkaz k vytvoření souboru přírůstkového stavu (. ilk). ODKAZ provedl nepřírůstkové sestavení.

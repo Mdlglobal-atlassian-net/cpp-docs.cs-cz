@@ -7,14 +7,14 @@ helpviewer_keywords:
 - LNK4071
 ms.assetid: 803f8c34-8219-4f55-a4ae-7133ceff2ba3
 ms.openlocfilehash: 0aa54d2469c34a55fbe3e82eabe77ec27e8a8b66
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50601770"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70740725"
 ---
 # <a name="linker-tools-warning-lnk4071"></a>Upozornění linkerů LNK4071
 
-nedá se propojit přírůstkově u následných odkazů
+nejde přírůstkově propojit s následnými odkazy.
 
-ODKAZ nalezeno více definic pro jeden nebo víc symbolů, ale [/FORCE](../../build/reference/force-force-file-output.md) nebo **/FORCE:MULTIPLE** byla použita k vytvoření výstupní soubor bez ohledu na chyby. ODKAZ odstranit soubor stavu přírůstků (propojení.ilk).
+ODKAZ nalezl více definic pro jeden nebo více symbolů, ale [/Force](../../build/reference/force-force-file-output.md) nebo **/Force:** bylo použito více pro vytvoření výstupního souboru bez ohledu na chyby. ODKAZ odstranil soubor přírůstkového stavu (. ilk).

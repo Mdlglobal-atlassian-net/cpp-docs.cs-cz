@@ -28,12 +28,12 @@ helpviewer_keywords:
 - COleDataObject [MFC], IsDataAvailable
 - COleDataObject [MFC], Release
 ms.assetid: d1cc84be-2e1c-4bb3-a8a0-565eb08aaa34
-ms.openlocfilehash: c25fd7e91c59d7bea06325fbb27471d8f90f589d
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: e706489a84ad564949e2c2d3d193173fc19b9828
+ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69504250"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70741631"
 ---
 # <a name="coledataobject-class"></a>COleDataObject – třída
 
@@ -76,7 +76,7 @@ Mezi tyto typy přenosů dat patří zdroj a cíl. Zdroj dat je implementován j
 
 Tato třída umožňuje určit, zda data existují v zadaném formátu. Můžete také vytvořit výčet dostupných formátů dat nebo ověřit, zda je daný formát k dispozici, a pak načíst data v upřednostňovaném formátu. Načítání objektů lze provést několika různými způsoby, včetně použití [CFile –](../../mfc/reference/cfile-class.md), HGLOBAL nebo `STGMEDIUM` struktury.
 
-Další informace najdete v tématu struktura [STGMEDIUM](/windows/win32/api/objidl/ns-objidl-stgmedium) v Windows SDK.
+Další informace najdete v tématu struktura [STGMEDIUM](/windows/win32/api/objidl/ns-objidl-ustgmedium~r1) v Windows SDK.
 
 Další informace o použití datových objektů v aplikaci naleznete v článku [datové objekty a zdroje dat (OLE)](../../mfc/data-objects-and-data-sources-ole.md).
 
@@ -189,7 +189,7 @@ BOOL GetData(
 Formát, ve kterém se mají vracet data Tento parametr může být jedním z předdefinovaných formátů schránky nebo hodnotou vrácenou nativní funkcí Windows [RegisterClipboardFormat](/windows/win32/api/winuser/nf-winuser-registerclipboardformatw) .
 
 *lpStgMedium*<br/>
-Odkazuje na strukturu [STGMEDIUM](/windows/win32/api/objidl/ns-objidl-stgmedium) , která bude přijímat data.
+Odkazuje na strukturu [STGMEDIUM](/windows/win32/api/objidl/ns-objidl-ustgmedium~r1) , která bude přijímat data.
 
 *lpFormatEtc*<br/>
 Odkazuje na strukturu [FORMATETC](/windows/win32/api/objidl/ns-objidl-formatetc) popisující formát, ve kterém se mají vracet data. Zadejte hodnotu pro tento parametr, pokud chcete zadat další informace o formátu za formát schránky určený parametrem *cfFormat*. Pokud má hodnotu null, použijí se výchozí hodnoty pro ostatní pole ve `FORMATETC` struktuře.
@@ -200,7 +200,7 @@ Nenulové, pokud bylo úspěšné; v opačném případě 0.
 
 ### <a name="remarks"></a>Poznámky
 
-Další informace naleznete v tématu [IDataObject:: GetData](/windows/win32/api/objidl/nf-objidl-idataobject-getdata), [STGMEDIUM](/windows/win32/api/objidl/ns-objidl-stgmedium)a [FORMATETC](/windows/win32/api/objidl/ns-objidl-formatetc) v Windows SDK.
+Další informace naleznete v tématu [IDataObject:: GetData](/windows/win32/api/objidl/nf-objidl-idataobject-getdata), [STGMEDIUM](/windows/win32/api/objidl/ns-objidl-ustgmedium~r1)a [FORMATETC](/windows/win32/api/objidl/ns-objidl-formatetc) v Windows SDK.
 
 Další informace najdete v tématu [RegisterClipboardFormat](/windows/win32/api/winuser/nf-winuser-registerclipboardformatw) v Windows SDK.
 

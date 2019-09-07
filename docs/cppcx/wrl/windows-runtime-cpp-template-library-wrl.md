@@ -3,12 +3,12 @@ title: Knihovna šablon C++ prostředí Windows Runtime (WRL)
 ms.date: 11/04/2016
 ms.topic: landing-page
 ms.assetid: b915afce-553b-44a7-b8dc-0ab601758eb0
-ms.openlocfilehash: bff4c0721903f20bd5d09c25e358126f42d47651
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: 7a92676d198ed9ddffeae9a834ebd358c2c58e90
+ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70218389"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70740834"
 ---
 # <a name="windows-runtime-c-template-library-wrl"></a>Knihovna šablon C++ prostředí Windows Runtime (WRL)
 
@@ -32,7 +32,7 @@ Knihovna šablon C++ prostředí Windows Runtime a C++/CX poskytují různé vý
 - C++/CX představuje hodnoty modelu COM HRESULT jako výjimky. Pokud jste zdědili základ kódu, který používá model COM, nebo který nepoužívá výjimky, můžete zjistit, že knihovna šablon C++ prostředí Windows Runtime je přirozenější způsob, jak pracovat s prostředí Windows Runtime, protože nemusíte používat výjimky.
 
    > [!NOTE]
-   > Knihovna šablon C++ prostředí Windows Runtime používá hodnoty HRESULT a nevyvolává výjimky. Kromě toho knihovna šablon prostředí Windows Runtime C++ používá inteligentní ukazatele a vzor RAII k zajištění správného zničení objektů, když kód aplikace vyvolá výjimku. Další informace o inteligentních ukazatelích a RAII najdete v [](../../cpp/smart-pointers-modern-cpp.md) tématu věnovaném inteligentním ukazatelům a objektům pro [vlastní prostředky (RAII)](../../cpp/objects-own-resources-raii.md).
+   > Knihovna šablon C++ prostředí Windows Runtime používá hodnoty HRESULT a nevyvolává výjimky. Kromě toho knihovna šablon prostředí Windows Runtime C++ používá inteligentní ukazatele a vzor RAII k zajištění správného zničení objektů, když kód aplikace vyvolá výjimku. Další informace o inteligentních ukazatelích a RAII najdete v tématu věnovaném [inteligentním ukazatelům](../../cpp/smart-pointers-modern-cpp.md) a [objektům pro vlastní prostředky (RAII)](../../cpp/objects-own-resources-raii.md).
 
 - Účel a návrh knihovny šablon prostředí Windows Runtime C++ nechte inspirovat knihovny ATL (Active Template Library), což je sada tříd založených na C++ šablonách, které zjednodušují programování objektů com. Vzhledem k C++ tomu, že knihovna C++ šablon prostředí Windows Runtime používá k zabalení prostředí Windows Runtime Standard, lze snadněji portovat a pracovat s mnoha EXISTUJÍCÍmi komponentami com napsanými v ATL do prostředí Windows Runtime. Pokud již znáte knihovnu ATL, můžete zjistit, že prostředí Windows Runtime C++ programování knihovny šablon je snazší.
 
@@ -125,7 +125,7 @@ Funkce [zpětného volání](callback-function-wrl.md) vytvoří objekt, jehož 
 
 ### <a name="eventsource"></a>EventSource
 
-[EventSource](eventsource-class.md) se používá ke správě obslužných rutin událostí delegátů. Použijte knihovnu C++ šablon prostředí Windows Runtime k implementaci delegáta a použijte `EventSource` k přidání, odebrání a vyvolání delegátů.
+[EventSource](eventsource-class.md) se používá ke správě obslužných rutin událostí *delegátů* . Použijte knihovnu C++ šablon prostředí Windows Runtime k implementaci delegáta a použijte `EventSource` k přidání, odebrání a vyvolání delegátů.
 
 ### <a name="asyncbase"></a>AsyncBase
 
@@ -147,5 +147,5 @@ Funkce [zpětného volání](callback-function-wrl.md) vytvoří objekt, jehož 
 |-|-|
 |[Klíčová rozhraní API podle kategorie](key-wrl-apis-by-category.md)|Zvýrazní typy, funkce C++ a makra primární knihovny šablon prostředí Windows Runtime.|
 |[Referenční informace](wrl-reference.md)|Obsahuje referenční informace pro knihovnu šablon C++ prostředí Windows Runtime.|
-|[Rychlé reference (prostředí Windows Runtime a vizuálu C++)](../../cppcx/quick-reference-c-cx.md)|Stručně popisuje C++funkce/CX, které podporují prostředí Windows Runtime.|
+|[Rychlý referenční C++pro/CX)](../../cppcx/quick-reference-c-cx.md)|Stručně popisuje C++funkce/CX, které podporují prostředí Windows Runtime.|
 |[Používání komponent prostředí Windows Runtime v jazyce VisualC++](/windows/uwp/winrt-components/walkthrough-creating-a-basic-windows-runtime-component-in-cpp-and-calling-it-from-javascript-or-csharp)|Ukazuje, jak použít C++/CX k vytvoření základní komponenty prostředí Windows Runtime.|

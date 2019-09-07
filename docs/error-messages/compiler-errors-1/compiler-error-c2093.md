@@ -7,17 +7,17 @@ helpviewer_keywords:
 - C2093
 ms.assetid: 17529a70-9169-46b5-9fc6-57a5ce224e6a
 ms.openlocfilehash: d57b452e63f7bf76051ef6a23c5f8f6ba81aed1e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50511147"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70741144"
 ---
 # <a name="compiler-error-c2093"></a>Chyba kompilátoru C2093
 
-'variable1': Nelze inicializovat pomocí adresy automatické proměnné 'variable2.
+' variable1 ': nejde inicializovat pomocí adresy automatické proměnné ' rozsahu2 '.
 
-Při kompilaci s [/Za](../../build/reference/za-ze-disable-language-extensions.md), program se pokusil pomocí adresy automatické proměnné jako inicializátor.
+Při kompilaci s [/za](../../build/reference/za-ze-disable-language-extensions.md)se program pokusil použít adresu automatické proměnné jako inicializátor.
 
 Následující ukázka generuje C2093:
 

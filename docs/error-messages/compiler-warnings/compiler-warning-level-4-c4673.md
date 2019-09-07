@@ -1,5 +1,5 @@
 ---
-title: Kompilátor upozornění (úroveň 4) C4673
+title: Upozornění kompilátoru (úroveň 4) C4673
 ms.date: 11/04/2016
 f1_keywords:
 - C4673
@@ -7,17 +7,17 @@ helpviewer_keywords:
 - C4673
 ms.assetid: 95626ec6-f05b-43c7-8b9a-a60a6f98dd30
 ms.openlocfilehash: ceaa5cd647dfb527713613b9ce3b5cd81a780fd7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50657727"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70741378"
 ---
-# <a name="compiler-warning-level-4-c4673"></a>Kompilátor upozornění (úroveň 4) C4673
+# <a name="compiler-warning-level-4-c4673"></a>Upozornění kompilátoru (úroveň 4) C4673
 
-'identifier' vyvolání těchto typů nebude brát v lokalitě catch
+throw ' identifikátor ' následující typy se nebudou brát v úvahu na webu catch.
 
-Objekt throw nemůže být zpracovány v **catch** bloku. Každý typ, který nelze zpracovat je uvedená ve výstupu chyba hned za řádek obsahující toto upozornění. Každý Nezpracovaný typ má své vlastní upozornění. Přečtěte si upozornění pro každý typ konkrétní informace.
+V bloku **catch** nelze zpracovat objekt throw. Každý typ, který nelze zpracovat, je uveden ve výstupu chyby hned za řádkem obsahujícím toto upozornění. Každý neošetřený typ má své vlastní upozornění. Další informace najdete v upozornění pro každý konkrétní typ.
 
 Následující ukázka generuje C4673:
 

@@ -156,12 +156,12 @@ helpviewer_keywords:
 - CMDIFrameWndEx [MFC], m_bCanCovertControlBarToMDIChild
 - CMDIFrameWndEx [MFC], m_bDisableSetRedraw
 ms.assetid: dbcafcb3-9a7a-4f11-9dfe-ba57565c81d0
-ms.openlocfilehash: 7973cf89eaa2090a8f1548f38a728f1100d5cbec
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 42e630c1280eb366f9007511ac5d74ac19455a56
+ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69505539"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70741598"
 ---
 # <a name="cmdiframewndex-class"></a>CMDIFrameWndEx – třída
 
@@ -533,7 +533,7 @@ Vrátí hodnotu TRUE, pokud je operace úspěšná. V opačném případě vrát
 
 ### <a name="remarks"></a>Poznámky
 
-Voláním této metody můžete ukotvit několik objektů podokna v předdefinovaném pořadí. Tato metoda ukotví podokno určené PBarem nalevo od podokna určeného parametrem *pLeftOf*.
+Voláním této metody můžete ukotvit několik objektů podokna v předdefinovaném pořadí. Tato metoda ukotví podokno určené *pBarem* nalevo od podokna určeného parametrem *pLeftOf*.
 
 ### <a name="example"></a>Příklad
 
@@ -838,7 +838,7 @@ pro Určuje ID prostředku nabídky.
 pro Určuje text položky.
 
 *bShowHelpButton*<br/>
-pro Určuje, zda má být v dialogovém okně Správa systému Windows zobrazeno tlačítko pro zobrazení.
+pro Určuje, zda má být v dialogovém okně Správa systému Windows **zobrazeno tlačítko pro** zobrazení.
 
 *uiMenuTextResId*<br/>
 pro Identifikátor prostředku řetězce, který obsahuje textový řetězec položky.
@@ -1218,7 +1218,7 @@ Pokud chcete načíst nebo uložit stav karet a skupin MDI a seznam otevřených
 
 - Při vytváření hlavního rámce volejte [CMDIFrameWndEx:: LoadMDIState](#loadmdistate) . Doporučené místo pro toto volání je před prvním zobrazením hlavního rámce. Přidejte `CWinAppEx::EnableLoadWindowPlacement` předpřidáním`pMainFrame->LoadFrame (IDR_MAINFRAME);.` povolání`LoadMDIState` , aby se zobrazil hlavní rámec na pozici, která byla uložena v registru. `CBCGPWorkspace::ReloadWindowPlacement` `(FALSE);` `(pMainFrame);`
 
-- `GetDocumentName` Přepsat`CMDIChildWndEx`v odvozené třídě, pokud vaše aplikace zobrazuje dokumenty, které nejsou uloženy jako soubory. Vrácený řetězec bude uložen v registru jako identifikátor dokumentu. Základní implementace [CMDIChildWndEx::](../../mfc/reference/cmdichildwndex-class.md#getdocumentname) getdocumenter vrací hodnotu získanou z [objektu CDocument:: GetPath](../../mfc/reference/cdocument-class.md#getpathname).
+- `GetDocumentName` Přepsat`CMDIChildWndEx`v odvozené třídě, pokud vaše aplikace zobrazuje dokumenty, které nejsou uloženy jako soubory. Vrácený řetězec bude uložen v registru jako identifikátor dokumentu. Základní implementace [CMDIChildWndEx:: Getdocumenter](../../mfc/reference/cmdichildwndex-class.md#getdocumentname) vrací hodnotu získanou z [objektu CDocument:: GetPath](../../mfc/reference/cdocument-class.md#getpathname).
 
 - Přepsat [CMDIFrameWndEx:: CreateDocumentWindow](#createdocumentwindow) pro správné vytváření dokumentů při jejich načítání z registru. První parametr je `GetDocumentName` vrácený řetězec.
 
@@ -1502,7 +1502,7 @@ virtual BOOL OnMenuButtonToolHitTest(
 pro Tlačítko panelu nástrojů
 
 *pTI*<br/>
-mimo Ukazatel na strukturu [TOOLINFO](/windows/win32/api/commctrl/ns-commctrl-toolinfow) .
+mimo Ukazatel na strukturu [TOOLINFO](/windows/win32/api/commctrl/ns-commctrl-tttoolinfoa) .
 
 ### <a name="return-value"></a>Návratová hodnota
 

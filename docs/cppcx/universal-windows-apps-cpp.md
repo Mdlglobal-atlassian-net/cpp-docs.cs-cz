@@ -3,12 +3,12 @@ title: Univerzální aplikace pro Windows (C++)
 ms.date: 03/30/2018
 ms.assetid: 357121cc-d390-4bae-b34a-39614861a9f4
 ms.topic: landing-page
-ms.openlocfilehash: 6c2bf7e44e3f1cb2c73ccaaed4363e34cbd7f0c9
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: 68952e93e4f91ac3653a9991802ad42854d9d25a
+ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70218366"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70741033"
 ---
 # <a name="universal-windows-apps-c"></a>Univerzální aplikace pro Windows (C++)
 
@@ -24,7 +24,7 @@ Pomocí převaděče aplikace pro stolní počítače můžete zabalit stávají
 
 |||
 |-|-|
-|[Referenční C++ dokumentace jazyka VisualC++(/CX)](visual-c-language-reference-c-cx.md)|V této části najdete popis sady rozšíření C++ , které zjednodušují spotřebu rozhraní prostředí Windows Runtime API a umožňují zpracování chyb založené na výjimkách.|
+|[C++/CX – Referenční dokumentace jazyka](visual-c-language-reference-c-cx.md)|V této části najdete popis sady rozšíření C++ , které zjednodušují spotřebu rozhraní prostředí Windows Runtime API a umožňují zpracování chyb založené na výjimkách.|
 |[Sestavení aplikací a knihoven (C++/CX)](building-apps-and-libraries-c-cx.md)|Popisuje postup vytvoření knihoven DLL a statických knihoven, které jsou k dispozici z aplikace nebo komponenty C++/CX.|
 |[Kurz: Vytvoření aplikace pro UWP "Hello, World" C++v/CX](/windows/uwp/get-started/create-a-basic-windows-10-app-in-cpp)|Návod, který zavádí základní koncepty vývoje aplikací pro UWP v C++/CX. |
 |[Vytváření komponent prostředí Windows Runtime v C++/CX](/windows/uwp/winrt-components/creating-windows-runtime-components-in-cpp)|Popisuje postup vytvoření knihoven DLL, které mohou využívat jiné aplikace a komponenty UWP.|

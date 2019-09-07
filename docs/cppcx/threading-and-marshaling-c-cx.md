@@ -1,5 +1,5 @@
 ---
-title: Práce s vlákny a zařazování (C++/CX)
+title: Dělení na vlákna a zařazováníC++(/CX)
 ms.date: 12/30/2016
 f1_keywords:
 - C4451
@@ -8,36 +8,36 @@ helpviewer_keywords:
 - agility, C++/CX
 - C++/CX, threading issues
 ms.assetid: 83e9ca1d-5107-4194-ae6f-e01bd928c614
-ms.openlocfilehash: 4206dd9c675325d3141a56b0e57f6cf67dc5693d
-ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.openlocfilehash: 05601367b6907e34d9d67364d35988a37ceae40c
+ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65448145"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70741124"
 ---
-# <a name="threading-and-marshaling-ccx"></a>Práce s vlákny a zařazování (C++/CX)
+# <a name="threading-and-marshaling-ccx"></a>Dělení na vlákna a zařazováníC++(/CX)
 
-V převážné většině případů instance tříd modulu Windows Runtime, stejně jako se standardními objekty C++, je přístupný z libovolného vlákna. Tyto třídy jsou označovány jako "agilní". Ale malý počet Windows Runtime třídy, které se dodávají s Windows jsou mimo agilní a musí být využity více jako objekty modelu COM než standardní objektů jazyka C++. Nemusíte být odborníkem na modelu COM použít třídy – agile, ale potřeba vzít v úvahu třídy modelu vláken a její chování zařazování. Tento článek obsahuje základní informace a pokyny pro těchto výjimečných případech, ve kterých je nutné používat instanci-agilní třídy.
+V obrovské většině případů jsou instance prostředí Windows Runtime třídy, jako jsou standardní C++ objekty, dostupné z libovolného vlákna. Takové třídy se označují jako "agilní". Nicméně malý počet prostředí Windows Runtime tříd, které jsou dodávány s Windows, je neagilní a musí se spotřebovat více jako objekty modelu COM než standardní C++ objekty. Nemusíte být odborníkem na model COM, abyste mohli používat neagilní třídy, ale je nutné vzít v úvahu model vláken třídy a jeho chování zařazování. Tento článek poskytuje základní informace a pokyny pro scénáře, ve kterých je nutné spotřebovat instanci neagilní třídy.
 
-## <a name="threading-model-and-marshaling-behavior"></a>Model vláken a chování zařazování
+## <a name="threading-model-and-marshaling-behavior"></a>Model dělení na vlákna a chování zařazování
 
-Třída Windows Runtime podporuje přístupu souběžných vláken různými způsoby, je uvedené dva atributy, které se použijí k ní:
+Prostředí Windows Runtime třída může podporovat souběžný přístup k vláknům různými způsoby, jak je uvedeno ve dvou atributech, které jsou na něj aplikovány:
 
-- `ThreadingModel` atribut může mít jednu z hodnot – STA, MTA, nebo obojí, podle definice `ThreadingModel` výčtu.
+- `ThreadingModel`atribut může mít jednu z hodnot – sta, MTA nebo obojí, jak je definováno `ThreadingModel` výčtem.
 
-- `MarshallingBehavior` atribut může mít jednu z hodnot – Agile, None, nebo standardní podle definice `MarshallingType` výčtu.
+- `MarshallingBehavior`atribut může mít jednu z hodnot – agilní, žádný nebo standardní, jak je `MarshallingType` definováno výčtem.
 
-`ThreadingModel` Atribut určuje, kde je načtena třída při aktivaci: jenom v kontextu (STA) vlákno uživatelského rozhraní, pouze v kontextu vlákna (MTA) na pozadí nebo v kontextu vlákna, která vytvoří objekt (i). `MarshallingBehavior` Hodnoty atributů odkazovat sama na chování na objekt v různých kontextech dělení na vlákna; ve většině případů není nutné pochopit tyto hodnoty podrobně.  Tříd, které jsou k dispozici v rozhraní Windows API, mají přibližně 90 procent `ThreadingModel`= obě a `MarshallingType`= Agile. To znamená, že se zpracování detailech dělení na vlákna transparentně a efektivně.   Při použití `ref new` vytvořit třídu "agilní", můžete volat metody v něm, z vaší hlavní aplikací vlákna nebo z jednoho nebo více pracovních vláken.  Jinými slovy, můžete použít třídu agilní – bez ohledu na to, zda je poskytnut Windows nebo třetí strany, z libovolného místa v kódu. Nemusíte mít obavy pomocí třídy model vláken nebo chování zařazování.
+`ThreadingModel` Atribut určuje, kde je třída načtena při aktivaci: pouze v kontextu vlákna uživatelského rozhraní (STA) pouze v kontextu vlákna na pozadí (MTA) nebo v kontextu vlákna, které vytváří objekt (obojí). Hodnoty `MarshallingBehavior` atributu odkazují na to, jak se objekt chová v různých kontextech zřetězení. ve většině případů nemusíte tyto hodnoty podrobněji porozumět.  Třídy, které jsou poskytovány rozhraním API systému Windows, přibližně 90% mají `ThreadingModel`= obojí a `MarshallingType`= agilní. To znamená, že mohou transparentně a efektivně zpracovávat podrobnosti o vláknech nízké úrovně.   Když použijete `ref new` k vytvoření agilní třídy, můžete na ni volat metody z hlavního vlákna aplikace nebo z jednoho nebo více pracovních vláken.  Jinými slovy, můžete použít agilní třídu – bez ohledu na to, zda je poskytována systémem Windows nebo třetí stranou – z libovolného místa v kódu. Nemusíte mít obavy z modelu vláken třídy nebo chování zařazování.
 
-## <a name="consuming-windows-runtime-components"></a>Použití součástí prostředí Windows Runtime
+## <a name="consuming-windows-runtime-components"></a>Spotřebovávání komponent prostředí Windows Runtime
 
-Když vytvoříte aplikaci pro univerzální platformu Windows, může interaktivně pracovat s komponentami agilní a agile. Při interakci s-agilní komponenty, může dojít k následující upozornění.
+Když vytváříte aplikaci Univerzální platforma Windows, můžete pracovat s agilními i neagilními komponentami. Pokud pracujete s neagilními komponentami, může dojít k následujícímu upozornění.
 
-### <a name="compiler-warning-c4451-when-consuming-non-agile-classes"></a>Kompilátor varování C4451 při využívání-agilní třídy
+### <a name="compiler-warning-c4451-when-consuming-non-agile-classes"></a>Upozornění kompilátoru C4451 při spotřebovávání neagilních tříd
 
-Z různých důvodů nemůže být některé třídy agile. Pokud jste přístupu k instance-agilní tříd z vlákna uživatelského rozhraní a vlákna na pozadí, a pak provést další pro vás k zajištění správného chování za běhu. Microsoft C++ kompilátor vyvolá upozornění při vytvoření instance – agile run-time třída ve vaší aplikaci v globálním oboru nebo deklarovat-agilní typ jako členem třídy ref class, která je označena jako agile.
+Z různých důvodů nemůžou být některé třídy agilní. Pokud přistupujete k instancím neagilních tříd jak z vlákna uživatelského rozhraní, tak z vlákna na pozadí, pak je potřeba mít další péči, abyste zajistili správné chování v době běhu. Při vytváření C++ instance neagilní běhové třídy ve vaší aplikaci v globálním oboru nebo deklarace neagilního typu jako člena třídy v referenční třídě, která je označena jako agilní, dojde k problémům s kompilátorem společnosti Microsoft.
 
-Agilní tříd nejjednodušší řešit jsou ty, které mají `ThreadingModel`= obě a `MarshallingType`= Standard.  Provedením těchto tříd agilní stačí použít `Agile<T>` pomocná třída.   Následující příklad ukazuje deklaraci-agilní objekt typu `Windows::Security::Credentials::UI::CredentialPickerOptions^`a upozornění kompilátoru, která je výsledkem vydala.
+Třídy, které nejsou agilní, nejjednodušší pro práci jsou ty, které mají `ThreadingModel`= obojí i `MarshallingType`= Standard.  Tyto třídy můžete zjednodušit pouhým použitím `Agile<T>` pomocné třídy.   Následující příklad ukazuje deklaraci neagilního objektu typu `Windows::Security::Credentials::UI::CredentialPickerOptions^`a upozornění kompilátoru, které je vystaveno v důsledku.
 
 ```
 
@@ -57,19 +57,19 @@ ref class MyOptions
     };
 ```
 
-Toto je upozornění, která je vydala:
+Tady je upozornění, které se vystavilo:
 
 > `Warning 1 warning C4451: 'Platform::Agile<T>::_object' : Usage of ref class 'Windows::Security::Credentials::UI::CredentialPickerOptions' inside this context can lead to invalid marshaling of object across contexts. Consider using 'Platform::Agile<Windows::Security::Credentials::UI::CredentialPickerOptions>' instead`
 
-Když přidáte odkaz – člen oboru nebo globálním rozsahem – na objekt, který má chování zařazování "Standard", kompilátor vyvolá upozornění, s výzvou k zabalení typu v `Platform::Agile<T>`: `Consider using 'Platform::Agile<Windows::Security::Credentials::UI::CredentialPickerOptions>' instead` Pokud používáte `Agile<T>`, třídy můžete využívat jako ostatní agilní třídy. Použití `Platform::Agile<T>` za těchto okolností:
+Když přidáte odkaz – v oboru členů nebo globálním oboru – na objekt, který má chování zařazování "Standard", kompilátor vydá upozornění, které vás upozorní na zabalení typu v `Platform::Agile<T>`: `Consider using 'Platform::Agile<Windows::Security::Credentials::UI::CredentialPickerOptions>' instead`Používáte-li `Agile<T>`, můžete třídu použít jako jakoukoli jinou agilní třídu. V `Platform::Agile<T>` těchto případech použijte:
 
-- Agilní proměnná je deklarovaná v globálním oboru.
+- Neagilní proměnná je deklarována v globálním oboru.
 
-- Agilní proměnná je deklarovaná v oboru třídy a může se stát, že využívání kódu může smuggle ukazatel – to znamená, ho používat v různých objektu apartment bez správné zařazování.
+- Neagilní proměnná je deklarována v oboru třídy a existuje možnost, že při využívání kódu může být ukazatel použit v jiném podmnožině bez správného zařazování.
 
-Pokud ani jeden z těchto podmínek použití, můžete označit třídu obsahující jako agile. Jinými slovy, doporučujeme přímo držet-agilní objekty pouze v třídách agilní a držet objekty agilní prostřednictvím Platform::agile –\<T > v třídách agile.
+Pokud neplatí žádná z těchto podmínek, můžete označit třídu, která ji obsahuje, jako neagilní. Jinými slovy, byste měli přímo držet neagilní objekty pouze v neagilních třídách a uchovávat neagilní objekty prostřednictvím Platform:: agilní\<T > v agilních třídách.
 
-Následující příklad ukazuje, jak používat `Agile<T>` tak, aby můžete upozornění ignorovat.
+Následující příklad ukazuje, jak použít `Agile<T>` , abyste mohli upozornění bezpečně ignorovat.
 
 ```
 
@@ -91,17 +91,17 @@ ref class MyOptions
     };
 ```
 
-Všimněte si, že `Agile` nelze předat jako parametr ref class nebo návratovou hodnotu. `Agile<T>::Get()` Metoda vrátí popisovač na objektu (^), kterou můžete předat napříč binárním rozhraním aplikace (ABI) v veřejnou metodu nebo vlastnost.
+Všimněte si `Agile` , že nelze předat jako návratovou hodnotu nebo parametr v referenční třídě. `Agile<T>::Get()` Metoda vrátí popisovač objektu (^), který můžete předat napříč binárním rozhraním aplikace (ABI) ve veřejné metodě nebo vlastnosti.
 
-V jazyce Visual C++, při vytváření odkazu na třídu prostředí Windows Runtime uvnitř procesu, který má chování zařazování "None", kompilátor vydá upozornění C4451 ale nebude navrhnout, zvažte použití `Platform::Agile<T>`.  Kompilátor nemůže nabízí pomoc nad rámec tohoto upozornění, proto je vaší odpovědností, abyste pomocí třídy správně a ujistěte se, že váš kód volá komponenty STA pouze z vlákna uživatelského rozhraní a komponenty MTA pouze z vlákna na pozadí.
+Když vytvoříte odkaz na prostředí Windows Runtime třídu, která má zařazování chování "none", kompilátor vydá upozornění C4451, ale nenavrhne použití `Platform::Agile<T>`.  Kompilátor nemůže nabízet žádnou nápovědu mimo toto upozornění, takže je vaše zodpovědnost za správné použití třídy a zajištění, že váš kód volá součásti STA pouze z vlákna uživatelského rozhraní a součásti MTA pouze z vlákna na pozadí.
 
-## <a name="authoring-agile-windows-runtime-components"></a>Vytváření agilních součásti prostředí Windows Runtime
+## <a name="authoring-agile-windows-runtime-components"></a>Vytváření agilních prostředí Windows Runtime komponent
 
-Při definování třídy ref class v C++/CX, je ve výchozím nastavení agilní – to znamená, že má `ThreadingModel`= obě a `MarshallingType`= Agile.  Pokud používáte knihovna šablon C++ Windows Runtime, můžete vytvořit třídu agilní odvozením z `FtmBase`, který používá `FreeThreadedMarshaller`.  Pokud vytváříte třídu, která má `ThreadingModel`= obě nebo `ThreadingModel`= MTA, ujistěte se, že třída je bezpečná pro vlákno.
+Pokud definujete referenční třídu v C++/CX, je ve výchozím nastavení agilní – to znamená, že má `ThreadingModel`hodnotu = obojí i `MarshallingType`= agilní.  Pokud používáte knihovnu šablon prostředí Windows Runtime C++ , můžete svou třídu agilním odvozovat odvozením z `FtmBase` `FreeThreadedMarshaller`, která používá.  Pokud vytváříte třídu, která má `ThreadingModel`= obojí nebo `ThreadingModel`= MTA, ujistěte se, že je třída bezpečná pro přístup z více vláken.
 
-Můžete upravit model vláken a zařazování chování třídy ref class. Pokud provedete změny, které vykreslují třídy bez agile, však musíte znát důsledky, které jsou spojeny s těmito změnami.
+Můžete upravit model vláken a chování zařazování třídy ref class. Nicméně pokud provedete změny, které vykreslí třídu, která není agilní, je nutné pochopit důsledky, které jsou k těmto změnám přidruženy.
 
-Následující příklad ukazuje, jak použít `MarshalingBehavior` a `ThreadingModel` atributy do třídy modulu runtime v knihovně tříd modulu Windows Runtime. Pokud aplikace používá knihovnu DLL a používá `ref new` – klíčové slovo k aktivaci `MySTAClass` třídu objektu, objekt se aktivuje v jednovláknovém objektu apartment a nepodporuje zařazování.
+Následující příklad ukazuje, jak použít `MarshalingBehavior` a `ThreadingModel` atributy pro běhovou třídu v knihovně tříd prostředí Windows Runtime. Když aplikace používá knihovnu DLL a používá `ref new` klíčové slovo k `MySTAClass` aktivaci objektu třídy, je objekt aktivován v objektu apartment s jedním vláknem a nepodporuje zařazování.
 
 ```
 using namespace Windows::Foundation::Metadata;
@@ -114,13 +114,13 @@ public ref class MySTAClass
 };
 ```
 
-Nezapečetěné třídy musí mít atribut nastavení zařazování a dělení na vlákna, aby kompilátor můžete ověřit, že odvozené třídy mají stejnou hodnotu pro tyto atributy. Pokud třída nemá nastavené explicitně, kompilátor vygeneruje chybu a kompilace se nezdaří. Všechny třídy, která je odvozena z unsealedclass generuje chybu kompilátoru v některém z těchto případů:
+Nezapečetěná třída musí mít nastavení atributů zařazování a vlákna, aby kompilátor mohl ověřit, že odvozené třídy mají stejnou hodnotu pro tyto atributy. Pokud třída nemá explicitně nastavené nastavení, kompilátor vygeneruje chybu a kompilace se nezdařila. Jakákoli třída odvozená z unsealedclass vygeneruje chybu kompilátoru v jednom z těchto případů:
 
-- `ThreadingModel` a `MarshallingBehavior` atributů nejsou definovány v odvozené třídě.
+- Atributy `ThreadingModel` a`MarshallingBehavior` nejsou definovány v odvozené třídě.
 
-- Hodnoty `ThreadingModel` a `MarshallingBehavior` atributy v odvozené třídě se neshodují v základní třídě.
+- Hodnoty atributů `ThreadingModel` a `MarshallingBehavior` v odvozené třídě se neshodují s hodnotami v základní třídě.
 
-Práce s vlákny a zařazovací informace, který vyžaduje prostředí Windows Runtime komponenty třetích stran je zadáno v manifestu registrační informace aplikace pro komponentu. Doporučujeme vám, abyste provedli všechny vaše součásti prostředí Windows Runtime agile. Tím se zajistí, že kód klienta můžete volat vaše komponenta z jakékoli vlákno v aplikaci a zlepšuje výkon při volání selžou, protože jsou přímá volání, které mají žádné zařazování. Pokud vytváříte vaší třídy tímto způsobem, pak klientský kód nebude muset používat `Platform::Agile<T>` využívat vaší třídy.
+Informace o dělení na vlákna a zařazování, které vyžaduje součást prostředí Windows Runtime třetí strany, jsou uvedené v informacích o registraci manifestu aplikace pro komponentu. Doporučujeme, abyste všechny prostředí Windows Runtime komponenty byly agilní. Tím je zajištěno, že kód klienta může volat vaši komponentu z libovolného vlákna v aplikaci a zvyšuje výkon těchto volání, protože se jedná o Přímá volání, která nemají žádné zařazování. Pokud třídu vytváříte tímto způsobem, nemusí se kód klienta používat `Platform::Agile<T>` ke spotřebě vaší třídy.
 
 ## <a name="see-also"></a>Viz také:
 

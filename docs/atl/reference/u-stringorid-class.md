@@ -9,12 +9,12 @@ helpviewer_keywords:
 - _U_STRINGorID class
 - U_STRINGorID class
 ms.assetid: 443cdc00-d265-4b27-8ef3-2feb95f3e5e3
-ms.openlocfilehash: 57363dbe2a1e7166b8da401900c3a7f913e63a9d
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: c57d983e9680ce6d2cab375e427b80f4d3b6c2d6
+ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69495103"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70739583"
 ---
 # <a name="_u_stringorid-class"></a>_U_STRINGorID – třída
 
@@ -45,7 +45,7 @@ class _U_STRINGorID
 
 ## <a name="remarks"></a>Poznámky
 
-Tato třída je navržená pro implementaci obálek do rozhraní API pro správu prostředků systému Windows, jako jsou funkce [FindResource](/windows/win32/api/winbase/nf-winbase-findresourcew), [LoadIcon](/windows/win32/api/winuser/nf-winuser-loadiconw)a [LoadMenu](/windows/win32/api/winuser/nf-winuser-loadmenuw) , které přijímají Argument LPCTSTR, který může být buď název prostředku, nebo jeho ID.
+Tato třída je navržená pro implementaci obálek do rozhraní API pro správu prostředků systému Windows, jako jsou funkce [FindResource](/windows/win32/api/winbase/nf-winbase-findresourcea), [LoadIcon](/windows/win32/api/winuser/nf-winuser-loadiconw)a [LoadMenu](/windows/win32/api/winuser/nf-winuser-loadmenuw) , které přijímají Argument LPCTSTR, který může být buď název prostředku, nebo jeho ID.
 
 Třída definuje dvě přetížení konstruktoru: jeden akceptuje Argument LPCTSTR a druhý akceptuje argument UINT. Argument UINT je převeden na typ prostředku kompatibilní s funkcemi správy prostředků systému Windows pomocí makra MAKEINTRESOURCE a výsledku uloženého v jednom datovém členu třídy [m_lpstr](#_u_stringorid__m_lpstr). Argument konstruktoru LPCTSTR je uložen přímo bez konverze.
 
