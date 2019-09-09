@@ -1,16 +1,16 @@
 ---
 title: /Qspectre
-ms.date: 10/12/2018
+ms.date: 09/06/2019
 f1_keywords:
 - VC.Project.VCCLCompilerTool.SpectreMitigation
 helpviewer_keywords:
 - /Qspectre
-ms.openlocfilehash: 2b784e464f98ae6a1f9285f799d903ae689bf6d5
-ms.sourcegitcommit: 0867d648e0955ebad7260b5fbebfd6cd4d58f3c7
+ms.openlocfilehash: e8d03075a980a9b9c345ce351413e39a3c3444cb
+ms.sourcegitcommit: 7babce70714242cf498ca811eec3695fad3abd03
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68340989"
+ms.lasthandoff: 09/09/2019
+ms.locfileid: "70808830"
 ---
 # <a name="qspectre"></a>/Qspectre
 
@@ -31,6 +31,9 @@ V původním vydání možnost **/Qspectre** pracovala pouze na optimalizovaném
 Knihovny Microsoft C++ Visual jsou dostupné také ve verzích se zmírněním Spectre. Spectre-zmírňované knihovny pro Visual Studio 2017 a novější je možné stáhnout v Instalační program pro Visual Studio. Jsou k dispozici na kartě **jednotlivé komponenty** v části **kompilátory, nástroje sestavení a moduly runtime**a mají v názvu "knihovny for Spectre". Knihovny DLL i statické běhové knihovny s povolenou zmírňování jsou k dispozici pro podmnožinu vizuálních C++ modulů runtime: Spouštěcí kód VC + +, knihovny vcruntime140, msvcp140, concrt140 a vcamp140. Knihovny DLL jsou podporovány pouze pro místní nasazení aplikace. Obsah pro Distribuovatelný běhové C++ knihovny Visual 2017 a novější nebyl změněn.
 
 Můžete také nainstalovat Spectre-zmírňované knihovny pro MFC a ATL. Jsou k dispozici na kartě **jednotlivé komponenty** v části sady **SDK, knihovny a architektury**.
+
+> [!NOTE]
+> Pro aplikace nebo komponenty Universal Windows (UWP) neexistují žádné verze Spectre knihoven s omezením. Místní nasazení takových knihoven aplikace není možné.
 
 ### <a name="applicability"></a>Použitelnost
 
@@ -64,15 +67,29 @@ Pokud sestavíte kód pomocí **/Qspectre** a tyto knihovny nejsou nainstalován
 
 ### <a name="additional-information"></a>Další informace
 
-Další informace najdete v oficiálním informačním zpravodaji pro [zabezpečení Microsoftu ADV180002, pokyny pro zmírnění spekulativních ohrožení zabezpečení na straně stran](https://portal.msrc.microsoft.com/en-US/security-guidance/advisory/ADV180002). Doprovodné materiály jsou k dispozici také od společnosti Intel, [spekulativních rizik kanálu na straně spuštění](https://software.intel.com/sites/default/files/managed/c5/63/336996-Speculative-Execution-Side-Channel-Mitigations.pdf)a ARM, a to díky kanálům na [straně spekulativních kanálů](https://developer.arm.com/-/media/Files/pdf/Cache_Speculation_Side-channels.pdf). Přehled pro Spectre a Meltdown, který je specifický pro systém Windows, najdete v tématu [Principy dopadu na výkon Spectre a Meltdown na systémy Windows](https://www.microsoft.com/security/blog/2018/01/09/understanding-the-performance-impact-of-spectre-and-meltdown-mitigations-on-windows-systems/). Přehled chyb zabezpečení Spectre řešených zmírněními hrozeb v MSVC najdete v tématu [Spectre zmírnění v MSVC](https://devblogs.microsoft.com/cppblog/spectre-mitigations-in-msvc./) na blogu C++ týmu.
+Další informace najdete v oficiálním [informačním zpravodaji pro zabezpečení Microsoftu ADV180002, pokyny pro zmírnění spekulativních ohrožení zabezpečení na straně stran](https://portal.msrc.microsoft.com/en-US/security-guidance/advisory/ADV180002). Doprovodné materiály jsou k dispozici také od společnosti Intel, [spekulativních rizik kanálu na straně spuštění](https://software.intel.com/sites/default/files/managed/c5/63/336996-Speculative-Execution-Side-Channel-Mitigations.pdf)a ARM, a to díky kanálům na [straně spekulativních kanálů](https://developer.arm.com/-/media/Files/pdf/Cache_Speculation_Side-channels.pdf). Přehled pro Spectre a Meltdown, který je specifický pro systém Windows, najdete v tématu [Principy dopadu na výkon Spectre a Meltdown na systémy Windows](https://www.microsoft.com/security/blog/2018/01/09/understanding-the-performance-impact-of-spectre-and-meltdown-mitigations-on-windows-systems/). Přehled chyb zabezpečení Spectre řešených zmírněními hrozeb v MSVC najdete v tématu [Spectre zmírnění v MSVC](https://devblogs.microsoft.com/cppblog/spectre-mitigations-in-msvc./) na blogu C++ týmu.
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Nastavení tohoto parametru kompilátoru ve vývojovém prostředí Visual Studio
+
+::: moniker range="vs-2019"
+
+1. Otevřete dialogové okno **stránky vlastností** projektu. Podrobnosti najdete v tématu [nastavení C++ vlastností kompilátoru a sestavení v sadě Visual Studio](../working-with-project-properties.md).
+
+1. Vyberte stránku vlastností **Konfigurace** > **C/C++**  > **generování kódu** .
+
+1. Vyberte novou hodnotu pro vlastnost **zmírnění rizika Spectre** . Kliknutím na **tlačítko OK** aplikujte změnu.
+
+::: moniker-end
+
+::: moniker range="<=vs-2017"
 
 1. Otevřete dialogové okno **stránky vlastností** projektu. Podrobnosti najdete v tématu [nastavení C++ vlastností kompilátoru a sestavení v sadě Visual Studio](../working-with-project-properties.md).
 
 1. Vyberte stránku vlastností **Konfigurace** > **C/C++**  > **příkazový řádek** .
 
 1. Do pole **Další možnosti** zadejte možnost kompilátoru **/Qspectre** . Kliknutím na **tlačítko OK** aplikujte změnu.
+
+::: moniker-end
 
 ### <a name="to-set-this-compiler-option-programmatically"></a>Programové nastavení tohoto parametru kompilátoru
 
