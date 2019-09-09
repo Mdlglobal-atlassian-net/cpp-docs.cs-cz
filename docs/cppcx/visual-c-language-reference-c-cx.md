@@ -1,15 +1,15 @@
 ---
-title: Referenční C++ dokumentace jazyka VisualC++(/CX)
+title: C++/CX – Referenční dokumentace jazyka
 ms.date: 09/15/2017
 ms.assetid: 3f6abf92-4e5e-4ed8-8e11-f9252380d30a
-ms.openlocfilehash: 0b2d344f9889d5669164cd917ba569b5f35d83a5
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: ed8e2374daf862e99517fb113e869504b7c7aabc
+ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69498427"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70740866"
 ---
-# <a name="visual-c-language-reference-ccx"></a>Referenční C++ dokumentace jazyka VisualC++(/CX)
+# <a name="ccx-language-reference"></a>C++/CX – Referenční dokumentace jazyka
 
 C++/CX je sada rozšíření C++ , která umožňují vytváření aplikací pro Windows a prostředí Windows Runtime komponent v idiom, která je co nejblíže k modernímu. C++ Pomocí C++technologie/CX můžete psát aplikace a komponenty pro Windows v nativním kódu, který C#umožňuje snadnou interakci s visualmi, Visual Basicmi a JavaScriptu a dalšími jazyky, které podporují prostředí Windows Runtime. V těchto vzácných případech, které vyžadují přímý přístup k nezpracovaným rozhraním COM nebo nevýjimečný kód, můžete [použít C++ knihovnu šablon prostředí Windows Runtime (WRL)](../windows/windows-runtime-cpp-template-library-wrl.md).
 
@@ -38,4 +38,4 @@ Pomocí nástroje C++/CX můžete vytvořit:
 |[Referenční informace o oborech názvů](../cppcx/namespaces-reference-c-cx.md)|Referenční dokumentace pro výchozí obor názvů, obor názvů platformy, Platform:: Collections a související obory názvů.|
 |[Nepodporované funkce CRT v aplikacích pro Univerzální platformu Windows](../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)|Obsahuje seznam funkcí CRT, které nejsou k dispozici pro použití v aplikacích prostředí Windows Runtime.|
 |[Začínáme s aplikacemi pro Windows 10](/windows/uwp/get-started/)|Poskytuje základní informace o aplikacích pro Windows 10 a odkazy na Další informace.|
-|[C++/CX – část 0 \[z\]n: Úvod](https://blogs.msdn.microsoft.com/vcblog/2012/08/29/ccx-part-0-of-n-an-introduction/)<br /><br />[C++/CX – část 1 \[z\]n: Jednoduchá třída](https://blogs.msdn.microsoft.com/vcblog/2012/09/05/ccx-part-1-of-n-a-simple-class/)<br /><br />[C++/CX – část 2 \[z\]n: Typy, které nosit Hats](https://blogs.msdn.microsoft.com/vcblog/2012/09/17/ccx-part-2-of-n-types-that-wear-hats/)<br /><br />[C++/CX – část 3 \[z\]n: Pod konstrukcí](https://blogs.msdn.microsoft.com/vcblog/2012/10/05/ccx-part-3-of-n-under-construction/)<br /><br />[C++/CX – část 4 \[z\]n: Statické členské funkce](https://blogs.msdn.microsoft.com/vcblog/2012/10/19/ccx-part-4-of-n-static-member-functions/)|Úvodní vizuál C++ série blogů na C++/CX.|
+|[C++/CX – část 0 \[z\]n: Úvod](https://blogs.msdn.microsoft.com/vcblog/2012/08/29/ccx-part-0-of-n-an-introduction/)<br /><br />[C++/CX – část 1 \[z\]n: Jednoduchá třída](https://blogs.msdn.microsoft.com/vcblog/2012/09/05/ccx-part-1-of-n-a-simple-class/)<br /><br />[C++/CX – část 2 \[z\]n: Typy, které nosit Hats](https://blogs.msdn.microsoft.com/vcblog/2012/09/17/ccx-part-2-of-n-types-that-wear-hats/)<br /><br />[C++/CX – část 3 \[z\]n: Pod konstrukcí](https://blogs.msdn.microsoft.com/vcblog/2012/10/05/ccx-part-3-of-n-under-construction/)<br /><br />[C++/CX – část 4 \[z\]n: Statické členské funkce](https://blogs.msdn.microsoft.com/vcblog/2012/10/19/ccx-part-4-of-n-static-member-functions/)|Úvodní série blogů na C++/CX.|
