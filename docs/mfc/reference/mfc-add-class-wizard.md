@@ -1,89 +1,77 @@
 ---
 title: Průvodce přidáním třídy MFC
-ms.date: 11/04/2016
+ms.date: 09/06/2019
 f1_keywords:
 - vc.codewiz.class.mfc.simple.overview
 helpviewer_keywords:
 - MFC Add Class Wizard
 - wizards [MFC]
 ms.assetid: ad3b0989-d307-43b2-9417-3f9a78889024
-ms.openlocfilehash: fa9b947ae6fc0e48aaecde61e35a5f4152c85f27
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2c82e084de2123c579299ca6490bdfcfdac5d255
+ms.sourcegitcommit: 3caf5261b3ea80d9cf14038c116ba981d655cd13
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62412725"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70908008"
 ---
 # <a name="mfc-add-class-wizard"></a>Průvodce přidáním třídy MFC
 
-Pomocí tohoto kódu průvodce Přidat třídu do existujícího projektu knihovny MFC nebo přidání třídy do projektu ATL, který podporuje knihovnu MFC. Můžete také přidat třídy knihovny MFC pro projekty Win32, které mají podporu knihovny MFC. Funkce, které jste zadali při vytváření projektu určete možnosti dostupné v tomto dialogovém.
+Pomocí tohoto průvodce kódem můžete přidat třídu do existujícího projektu knihovny MFC nebo přidat třídu do projektu ATL, který podporuje knihovnu MFC. Třídy knihovny MFC můžete také přidat do projektů Win32, které mají podporu knihovny MFC. Funkce, které jste zadali při vytváření projektu, určují možnosti, které jsou k dispozici v tomto dialogovém okně. Chcete-li získat přístup k průvodci, klikněte na tlačítko **Přidat třídu** v [Průvodci třídou](mfc-class-wizard.md).
+
+![Průvodce přidáním třídy MFC](media/add-mfc-class-wizard.png "Průvodce přidáním třídy MFC")
 
 ## <a name="names"></a>Názvy
 
-Na této stránce zadejte název třídy, základní třídy a názvy souborů pro novou třídu.
+Na této stránce zadejte název třídy, základní třídu a názvy souborů pro novou třídu.
 
 - **Název třídy**
 
-  Určuje název nové třídy a poskytuje výchozí základ pro názvy identifikátorů a souborů na této stránce. Třídy jazyka C++ se obvykle začínáte s "C", tedy například "CMyClass" stane "MyClass.h", a tak dále.
+  Určuje název nové třídy a poskytuje výchozí základ pro názvy ID a soubory na této stránce. C++třídy obvykle začínají řetězcem "C", takže například "CMyClass" bude "MyClass. h" atd.
 
 - **Základní třída**
 
-  Určuje název základní třídy pro novou třídu. Ve výchozím nastavení, základní třída je [CWnd](../../mfc/reference/cwnd-class.md). Základní třídy, které jste vybrali Určuje, zda ostatní pole na této stránce jsou aktivní.
+  Určuje název základní třídy pro novou třídu. Ve výchozím nastavení je základní třídou [CWnd](../../mfc/reference/cwnd-class.md). Základní třída, kterou vyberete, určuje, zda jsou ostatní pole na této stránce aktivní.
 
-  Typ třídy, které jste nastavili jako základní třída určuje, zda třída má dialogové okno ID nebo ID prostředku. Obecné typy tříd jsou následující:
+  Typ třídy, kterou nastavíte jako základní třídu určuje, zda má třída ID dialogového okna nebo ID prostředku. Obecné typy tříd jsou následující:
 
-  - Třídy, jako například [CButton](../../mfc/reference/cbutton-class.md), [CWnd](../../mfc/reference/cwnd-class.md), nebo [CDocument](../../mfc/reference/cdocument-class.md), které nevyžadují dialogové okno s ID nebo ID prostředku. Tyto třídy nepoužívejte ID dialogové okno nebo prostředků. Pokud vyberete jednu z těchto tříd pro základní třídu, **ID dialogu** pole a **ID prostředku DHTML** pole jsou neaktivní.
+  - Třídy jako [CButton](../../mfc/reference/cbutton-class.md), [CWnd](../../mfc/reference/cwnd-class.md)nebo [objektu CDOCUMENT](../../mfc/reference/cdocument-class.md), které nevyžadují ID dialogu nebo ID prostředku. Tyto třídy nepoužívají dialog nebo ID prostředku. Pokud pro základní třídu vyberete jednu z těchto tříd, pole **ID dialogového okna** a **ID prostředku DHTML** budou neaktivní.
 
-  - Třídy, jako například [CDialog](../../mfc/reference/cdialog-class.md), [CFormView](../../mfc/reference/cformview-class.md), nebo [CPropertyPage](../../mfc/reference/cpropertypage-class.md), které vyžadují identifikátor dialogového okna.
+  - Třídy jako [CDialog](../../mfc/reference/cdialog-class.md), [CFormView](../../mfc/reference/cformview-class.md)nebo [CPropertyPage –](../../mfc/reference/cpropertypage-class.md), které vyžadují ID dialogu.
 
-  - Třída [CDHtmlDialog](../../mfc/reference/cdhtmldialog-class.md), což vyžaduje ID dialogu, ID prostředku DHTML a název souboru HTML.
+  - Třída [CDHtmlDialog](../../mfc/reference/cdhtmldialog-class.md), která vyžaduje ID dialogu, ID prostředku DHTML a název souboru HTML.
 
-  Pro třídy, které vyžadují ID dialogu, může pro vás výhodnější používat [editor prostředků](../../windows/resource-editors.md) k vytvoření prostředku dialogového okna, přiřaďte jeho ID v [okno vlastností](/visualstudio/ide/reference/properties-window)a poté vytvoříte třídu související Pomocí tohoto ID prostředku. Zobrazit [vytváření nového dialogového okna](../../windows/creating-a-new-dialog-box.md) Další informace o vytvoření standardního dialogového okna Windows.
+  Pro třídy, které vyžadují ID dialogu, může být efektivnější použít [Editor prostředků](../../windows/resource-editors.md) k vytvoření prostředku dialogového okna, přiřazení jeho ID v [Průvodci třídou](mfc-class-wizard.md)a následné vytvoření třídy přidružené k tomuto ID prostředku. Další informace o vytvoření standardního dialogového okna systému Windows naleznete v tématu [Vytvoření nového dialogového okna](../../windows/creating-a-new-dialog-box.md) .
 
   > [!NOTE]
-  > Pokud nejprve vytvoříte prostředek dialogového okna a odvodit svou novou třídu `CDHtmlDialog`, odstranit standardní Windows **OK** a **zrušit** tlačítka, která se zobrazí v dialogovém okně výchozí. Standardní dialogové okno Windows hostuje DHTML formuláře, který obsahuje vlastní **OK** a **zrušit** tlačítka.
+  > Pokud nejprve vytvoříte prostředek dialogového okna a odvodíte jeho novou třídu z `CDHtmlDialog`, odstraňte standardní tlačítka Windows **OK** a **Storno** , která se zobrazí v dialogovém okně výchozí. Standardní dialogové okno systému Windows je hostitelem formuláře DHTML, který obsahuje vlastní tlačítka **OK** a **Storno** .
 
-  Při vašem dialogovém okně mohou obsahovat ovládací prvky Windows a ovládací prvky jazyka DHTML, se nedoporučuje.
+  I když vaše dialogové okno může obsahovat ovládací prvky Windows i ovládací prvky DHTML, nedoporučuje se.
 
 - **ID dialogu**
 
-  Určuje ID dialogu, pokud jste vybrali `CDialog`, `CFormView`, `CPropertyPage`, nebo `CDHtmlDialog` jako **základní třída**.
+  Určuje ID dialogového okna, `CDialog`Pokud jste vybrali, `CFormView`, `CPropertyPage`nebo `CDHtmlDialog` jako **základní třídu**.
 
-- **.h file**
+- **soubor. h**
 
-  Nastaví název hlavičkového souboru pro nový objekt třídy. Ve výchozím nastavení, tento název je založen na názvu je zadat v **název třídy**. Klikněte na tlačítko se třemi tečkami uložení názvu souboru do umístění podle vaší volby, nebo připojit k existujícímu souboru deklaraci třídy. Pokud zvolíte existující soubor, Průvodce neuloží se do vybraného umístění dokud kliknutím **Dokončit** v průvodci.
+  Nastaví název hlavičkového souboru pro novou třídu objektu. Ve výchozím nastavení je tento název založen na názvu, který zadáte v **názvu třídy**. Kliknutím na tlačítko se třemi tečkami uložte název souboru do zvoleného umístění nebo přidejte deklaraci třídy do existujícího souboru. Pokud zvolíte existující soubor, průvodce ho nebude ukládat do vybraného umístění, dokud v průvodci nekliknete na **Dokončit** .
 
-  Průvodce nepřepisuje soubor. Pokud jste vybrali název existujícího souboru, po kliknutí na **Dokončit**, Průvodce vás vyzve k označení, zda by měla být k obsah souboru připojen deklaraci třídy. Klikněte na tlačítko **Ano** pro připojení k souboru, klikněte na tlačítko **ne** pro návrat do průvodce a zadejte jiný název souboru.
+  Průvodce nepřepisuje soubor. Pokud vyberete název existujícího souboru, po kliknutí na tlačítko **Dokončit**vás průvodce vyzve, abyste označili, zda má být deklarace třídy připojena k obsahu souboru. Kliknutím na **Ano** přidejte soubor. Kliknutím na **ne** se vrátíte do průvodce a zadáte jiný název souboru.
 
-- **soubor .cpp**
+- **soubor. cpp**
 
-  Nastaví název implementačního souboru pro nový objekt třídy. Ve výchozím nastavení, tento název je založen na názvu je zadat v **název třídy**. Klikněte na tlačítko se třemi tečkami se uložit název souboru do umístění podle vašeho výběru. Soubor se neukládá do vybraného umístění, dokud nekliknete na tlačítko **Dokončit** v průvodci.
+  Nastaví název implementačního souboru pro třídu nového objektu. Ve výchozím nastavení je tento název založen na názvu, který zadáte v **názvu třídy**. Kliknutím na tlačítko se třemi tečkami uložte název souboru do zvoleného umístění. Soubor není uložen do vybraného umístění, dokud nekliknete na tlačítko **Dokončit** v průvodci.
 
-  Průvodce nepřepisuje soubor. Pokud jste vybrali název existujícího souboru, po kliknutí na **Dokončit**, Průvodce vás vyzve k označení, zda má být připojen implementace třídy do obsahu souboru. Klikněte na tlačítko **Ano** pro připojení k souboru, klikněte na tlačítko **ne** pro návrat do průvodce a zadejte jiný název souboru.
+  Průvodce nepřepisuje soubor. Pokud vyberete název existujícího souboru, po kliknutí na tlačítko **Dokončit**vás průvodce vyzve, abyste označili, zda by měla být implementace třídy připojena k obsahu souboru. Kliknutím na **Ano** přidejte soubor. Kliknutím na **ne** se vrátíte do průvodce a zadáte jiný název souboru.
 
-- **Active accessibility**
+- **Aktivní přístupnost**
 
-  Umožňuje podporu knihovny MFC Active Accessibility voláním [EnableActiveAccessibility](../../mfc/reference/cwnd-class.md#enableactiveaccessibility) v konstruktoru. Tato možnost je dostupná pro třídy odvozené z [CWnd](../../mfc/reference/cwnd-class.md).
-
-- **ID prostředku DHTML**
-
-  Platí pro třídy odvozené od `CDHtmlDialog` pouze. Určuje Identifikátor prostředku dialogového okna DHTML. ID prostředku se zobrazí v části HTML souboru .rc v projektu, spolu s názvem souboru dialogové okno pole HTML. DHTML prostředků, pomocí tohoto ID se hostuje dialogovém okně identifikovaný **ID dialogu**.
-
-- **.HTM file**
-
-  Platí pro třídy odvozené od `CDHtmlDialog` pouze. Nastaví název souboru ve formátu HTML pro dialogové okno Dynamic HTML. Ve výchozím nastavení tento název souboru je podle názvu třídy. Název souboru se zobrazí v části HTML souboru .rc v projektu, spolu s ID DHTML dialog box prostředku.
+  Povolí podporu aktivního usnadnění knihovny MFC voláním [EnableActiveAccessibility](../../mfc/reference/cwnd-class.md#enableactiveaccessibility) v konstruktoru. Tato možnost je k dispozici pro třídy odvozené od [CWnd](../../mfc/reference/cwnd-class.md).
 
 - **Automatizace**
 
-  Nastaví úroveň třídy podpory pro [automatizace](../../mfc/automation.md). Automation na úrovni třídy je k dispozici pro všechny třídy, které podporují služby Automation. Je také k dispozici pro projekty vytvořené pomocí podpory pro automatizaci. To znamená, že projekt knihovny MFC [podporuje ATL](../../atl/reference/mfc-support-in-atl-projects.md), nebo projektu knihovny MFC, pro kterou jste vybrali **automatizace** zaškrtávací políčko [rozšířené funkce](../../mfc/reference/advanced-features-mfc-application-wizard.md) stránce knihovny MFC Průvodce aplikací.
+  Nastaví na úrovni třídy podporu pro [automatizaci](../../mfc/automation.md). Automatizace na úrovni třídy je k dispozici pro všechny třídy, které podporují automatizaci. Je k dispozici také pro projekty vytvořené s podporou pro automatizaci. To znamená, že buď projekt knihovny MFC, který [podporuje ATL](../../atl/reference/mfc-support-in-atl-projects.md), nebo projekt knihovny MFC, pro který jste zaškrtli políčko **Automatizace** , na stránce [Pokročilé funkce](../../mfc/reference/advanced-features-mfc-application-wizard.md) v Průvodci aplikací knihovny MFC.
 
-  |Možnost|Popis|
-  |------------|-----------------|
-  |**Žádné**|Označuje, že třída nemá žádné podporu automatizace.|
-  |**Automatizace**|Označuje, že třída podporuje služby Automation. Pokud vyberete tuto možnost, nově vytvořené třídy je k dispozici jako programovatelný objekt automatizace klientskými aplikacemi, jako je například Microsoft Visual Basic a aplikaci Microsoft Excel. Tato možnost není k dispozici pro základní třídy uvedeny za touto tabulkou.|
-  |**Vytvořitelný modelem ID typu**|Označuje, že třídu a projekt podporovat jiné aplikace, vytváření objektů této třídy pomocí automatizace. Pomocí této možnosti můžete klientům automatizace přímo vytvořit automatizační objekt. Typ Identifikátoru v textovém poli používá klientská aplikace zadat objekt, který má být vytvořen; je v celém systému a musí být jedinečný. Tato možnost není k dispozici pro základní třídy uvedeny za touto tabulkou.|
-
-  Podpora automatizace není k dispozici pro následující základní třídy:
+   Podpora automatizace není k dispozici pro následující základní třídy:
 
   - `CAsyncMonitorFile`
 
@@ -107,17 +95,7 @@ Na této stránce zadejte název třídy, základní třídy a názvy souborů p
 
   - `CSocket`
 
-- **ID typu**
-
-  Nastaví ID typu třídy. **ID typu** zřetězí název projektu a název nové třídy následujícím způsobem: *MFCProj.MFCClass*. Toto ID lze změnit pouze v případě, že jste vybrali **automatizace** možnost **Vytvořitelné podle ID typu**.
-
-- **Generování DocTemplate prostředků**
-
-  Indikuje, že dokumenty, které vytvořila aplikace prostředků šablony dokumentu. Pokud chcete aktivovat toto zaškrtávací políčko, projektu musí podporovat architekturu document/view knihovny MFC a musí být základní třídy této třídy [CFormView](../../mfc/reference/cformview-class.md).
-
-  Zobrazit [šablony dokumentů a proces vytváření dokumentů/zobrazení](../../mfc/document-templates-and-the-document-view-creation-process.md) Další informace.
-
 ## <a name="see-also"></a>Viz také:
 
-[MFC Class](../../mfc/reference/adding-an-mfc-class.md)<br/>
+[MFC – třída](../../mfc/reference/adding-an-mfc-class.md)<br/>
 [Přidání třídy](../../ide/adding-a-class-visual-cpp.md)

@@ -1,6 +1,6 @@
 ---
-title: CWordArray Class
-ms.date: 11/04/2016
+title: CWordArray – třída
+ms.date: 09/07/2019
 f1_keywords:
 - CWordArray
 - AFXCOLL/CWordArray
@@ -42,16 +42,16 @@ helpviewer_keywords:
 - CObArray [MFC], SetAtGrow
 - CObArray [MFC], SetSize
 ms.assetid: 2ba2c194-2c6c-40ff-9db4-e9dbe57e1f57
-ms.openlocfilehash: 945a77436f41f4981392e583c831723e667f867c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c136bbb14e0d7cffc604813731b6f87ba18063cf
+ms.sourcegitcommit: 3caf5261b3ea80d9cf14038c116ba981d655cd13
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62323606"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70907913"
 ---
-# <a name="cwordarray-class"></a>CWordArray Class
+# <a name="cwordarray-class"></a>CWordArray – třída
 
-Podporuje pole s 16bitovými slovy.
+Podporuje pole 16bitových slov.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -61,7 +61,7 @@ class CWordArray : public CObject
 
 ## <a name="members"></a>Členové
 
-Členské funkce `CWordArray` jsou podobné jako u členských funkcí třídy [cobarray –](../../mfc/reference/cobarray-class.md). Z důvodu podobnosti, můžete použít `CObArray` referenční dokumentaci pro konkrétní členské funkce. Po zobrazení [CObject](../../mfc/reference/cobject-class.md) ukazatele jako parametr funkce nebo návratová hodnota, nahraďte slovo.
+Členské funkce `CWordArray` jsou podobné jako členské funkce třídy [CObArray](../../mfc/reference/cobarray-class.md). Z důvodu této podobnosti můžete použít `CObArray` referenční dokumentaci pro konkrétní členské funkce. Všude, kde vidíte ukazatel [CObject](../../mfc/reference/cobject-class.md) jako parametr funkce nebo návratovou hodnotu, nahraďte slovo.
 
 `CObject* CObArray::GetAt( int <nIndex> ) const;`
 
@@ -71,62 +71,62 @@ například se přeloží na
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
 |[CObArray::CObArray](../../mfc/reference/cobarray-class.md#cobarray)|Vytvoří prázdné pole.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
-|[CObArray::Add](../../mfc/reference/cobarray-class.md#add)|Přidá prvek na konec pole. v případě potřeby se zvětší pole.|
-|[CObArray::Append](../../mfc/reference/cobarray-class.md#append)|Připojí další pole k poli; v případě potřeby se zvětší pole.|
-|[CObArray::Copy](../../mfc/reference/cobarray-class.md#copy)|Zkopíruje jiného objektu array do pole. v případě potřeby se zvětší pole.|
-|[CObArray::ElementAt](../../mfc/reference/cobarray-class.md#elementat)|Vrátí dočasný odkaz na ukazatel na prvek v poli.|
-|[CObArray::FreeExtra](../../mfc/reference/cobarray-class.md#freeextra)|Uvolní všechny nevyužité paměti nad aktuální horní mez.|
-|[CObArray::GetAt](../../mfc/reference/cobarray-class.md#getat)|Vrátí hodnotu na daném indexu.|
-|[CObArray::GetCount](../../mfc/reference/cobarray-class.md#getcount)|Získá počet elementů v tomto poli.|
-|[CObArray::GetData](../../mfc/reference/cobarray-class.md#getdata)|Umožňuje přístup k prvkům v poli. Může mít hodnotu NULL.|
-|[CObArray::GetSize](../../mfc/reference/cobarray-class.md#getsize)|Získá počet elementů v tomto poli.|
+|[CObArray:: Add](../../mfc/reference/cobarray-class.md#add)|Přidá prvek na konec pole; v případě potřeby zvětší pole.|
+|[CObArray:: Append](../../mfc/reference/cobarray-class.md#append)|Připojí další pole k poli. v případě potřeby zvětší pole.|
+|[CObArray:: Copy](../../mfc/reference/cobarray-class.md#copy)|Zkopíruje do pole jiné pole; v případě potřeby zvětší pole.|
+|[CObArray::ElementAt](../../mfc/reference/cobarray-class.md#elementat)|Vrátí dočasný odkaz na ukazatel elementu v rámci pole.|
+|[CObArray::FreeExtra](../../mfc/reference/cobarray-class.md#freeextra)|Uvolní veškerou nevyužitou paměť nad rámec aktuální horní meze.|
+|[CObArray::GetAt](../../mfc/reference/cobarray-class.md#getat)|Vrátí hodnotu v daném indexu.|
+|[CObArray:: GetCount](../../mfc/reference/cobarray-class.md#getcount)|Získá počet prvků v tomto poli.|
+|[CObArray:: GetData](../../mfc/reference/cobarray-class.md#getdata)|Umožňuje přístup k prvkům v poli. Může mít hodnotu NULL.|
+|[CObArray:: GetSize](../../mfc/reference/cobarray-class.md#getsize)|Získá počet prvků v tomto poli.|
 |[CObArray::GetUpperBound](../../mfc/reference/cobarray-class.md#getupperbound)|Vrátí největší platný index.|
-|[CObArray::InsertAt](../../mfc/reference/cobarray-class.md#insertat)|Vloží zadaný index elementu (nebo všechny prvky v jiného objektu array).|
-|[CObArray::IsEmpty](../../mfc/reference/cobarray-class.md#isempty)|Určuje, zda je pole prázdné.|
+|[CObArray::InsertAt](../../mfc/reference/cobarray-class.md#insertat)|Vloží prvek (nebo všechny prvky v jiném poli) do zadaného indexu.|
+|[CObArray::-Empty](../../mfc/reference/cobarray-class.md#isempty)|Určuje, zda je pole prázdné.|
 |[CObArray::RemoveAll](../../mfc/reference/cobarray-class.md#removeall)|Odebere všechny prvky z tohoto pole.|
-|[CObArray::RemoveAt](../../mfc/reference/cobarray-class.md#removeat)|Odebere element na konkrétní indexu.|
-|[CObArray::SetAt](../../mfc/reference/cobarray-class.md#setat)|Nastaví hodnotu pro daný index; pole nesmí růst.|
-|[CObArray::SetAtGrow](../../mfc/reference/cobarray-class.md#setatgrow)|Nastaví hodnotu pro daný index; v případě potřeby se zvětší pole.|
-|[CObArray::SetSize](../../mfc/reference/cobarray-class.md#setsize)|Nastaví počet prvků, které mají být obsažena v tomto poli.|
+|[CObArray:: funkce RemoveAt](../../mfc/reference/cobarray-class.md#removeat)|Odebere prvek v konkrétním indexu.|
+|[CObArray::SetAt](../../mfc/reference/cobarray-class.md#setat)|Nastaví hodnotu pro daný index. pole není povoleno zvětšit.|
+|[CObArray::SetAtGrow](../../mfc/reference/cobarray-class.md#setatgrow)|Nastaví hodnotu pro daný index. v případě potřeby zvětší pole.|
+|[CObArray:: SetSize](../../mfc/reference/cobarray-class.md#setsize)|Nastaví počet prvků, které mají být obsaženy v tomto poli.|
 
 ### <a name="public-operators"></a>Veřejné operátory
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
-|[CObArray::operator&#91;&#93;](../../mfc/reference/cobarray-class.md#operator_at)|Nastaví nebo získá prvek na zadaném indexu.|
+|[CObArray:: operator&#91;&#93;](../../mfc/reference/cobarray-class.md#operator_at)|Nastaví nebo Získá prvek na zadaném indexu.|
 
 ## <a name="remarks"></a>Poznámky
 
-`CWordArray` zahrnuje [IMPLEMENT_SERIAL](run-time-object-model-services.md#implement_serial) – makro na podporu serializace a výpis z jeho prvků. Pokud je pole slov uloženo do archivu, s operátorem vložení přetížené nebo se [CObject::Serialize](../../mfc/reference/cobject-class.md#serialize) členská funkce, každý element je, v důsledku, serializovat.
+`CWordArray`zahrnuje makro [IMPLEMENT_SERIAL](run-time-object-model-services.md#implement_serial) pro podporu serializace a dumpingu jeho prvků. Je-li pole slov uloženo do archivu, buď pomocí přetíženého operátoru vložení, nebo pomocí členské funkce [CObject:: serializovat](../../mfc/reference/cobject-class.md#serialize) , je každý prvek následně serializován.
 
 > [!NOTE]
->  Před použitím pole, použijte `SetSize` vytvoření jeho velikost a přidělit paměť pro něj. Pokud nepoužijete `SetSize`, přidání prvků pole způsobí, že ho bude často nevyčerpané a zkopírovat. Časté realokace a kopírování jsou neefektivní a může fragmentovat paměti.
+>  Před použitím pole použijte `SetSize` k určení jeho velikosti a přidělení paměti pro něj. Pokud nepoužíváte `SetSize`, přidání prvků do pole způsobí, že bude často znovu přidělen a zkopírován. Časté přerozdělování a kopírování je neefektivní a může fragmentovat paměť.
 
-Pokud potřebujete s výpisem paměti jednotlivých prvků v poli, nastavte na 1 nebo větší hloubky kontextu s výpisem paměti.
+Pokud potřebujete výpis paměti jednotlivých prvků v poli, je nutné nastavit hloubku kontextu výpisu na hodnotu 1 nebo vyšší.
 
-Další informace o používání `CWordArray`, najdete v článku [kolekce](../../mfc/collections.md).
+Další informace o použití nástroje `CWordArray`najdete v článku [kolekce](../../mfc/collections.md)článků.
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
-[Třídy CObject](../../mfc/reference/cobject-class.md)
+[CObject](../../mfc/reference/cobject-class.md)
 
 `CWordArray`
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** afxcoll.h
+**Záhlaví:** afxcoll. h
 
-##  <a name="icommandsource_interface"></a>  Icommandsource – rozhraní
+##  <a name="icommandsource_interface"></a>Rozhraní rozhraní ICommandSource
 
-Spravuje příkazy, odeslané ze zdrojového objektu příkazu do uživatelského ovládacího prvku.
+Spravuje příkazy odesílané ze zdrojového objektu příkazu do uživatelského ovládacího prvku.
 
 ```
 interface class ICommandSource
@@ -134,15 +134,15 @@ interface class ICommandSource
 
 ### <a name="remarks"></a>Poznámky
 
-Když hostujete uživatelského ovládacího prvku v zobrazení knihovny MFC [CWinFormsView – třída](../../mfc/reference/cwinformsview-class.md) trasy příkazy a aktualizace příkazů zpráv uživatelského rozhraní do uživatelského ovládacího prvku, aby mohla zpracovávat příkazy knihovny MFC (například rámec nabídky položek a tlačítka panelu nástrojů). Implementací, můžete poskytnout uživatelský ovládací prvek odkazu na `ICommandSource` objektu.
+Při hostování uživatelského ovládacího prvku v zobrazení knihovny MFC, [třídy CWinFormsView](../../mfc/reference/cwinformsview-class.md) směrují příkazy a zprávy uživatelského rozhraní příkazu k ovládacímu prvku, aby umožnily zpracování příkazů MFC (například položky nabídky rámce a tlačítka panelu nástrojů). Implementací udělíte uživatelskému ovládacímu prvku odkaz na `ICommandSource` objekt.
 
-Zobrazit [jak: Přidání směrování příkazů do ovládacího prvku Windows Forms](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md) příklad, jak používat `ICommandTarget`.
+Viz [jak: Přidejte směrování příkazů do ovládacího prvku](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md) model Windows Forms, který ukazuje, jak použít. `ICommandTarget`
 
-Další informace o používání formulářů Windows, naleznete v tématu [použití uživatelského ovládacího prvku Windows Form v prostředí MFC](../../dotnet/using-a-windows-form-user-control-in-mfc.md).
+Další informace o použití model Windows Forms naleznete v tématu [použití uživatelského ovládacího prvku Windows Form v knihovně MFC](../../dotnet/using-a-windows-form-user-control-in-mfc.md).
 
-##  <a name="addcommandhandler"></a>  ICommandSource::AddCommandHandler
+##  <a name="addcommandhandler"></a>Rozhraní ICommandSource:: AddCommandHandler
 
-Obslužná rutina příkazu přidá do zdrojového objektu příkazu.
+Přidá obslužnou rutinu příkazu do zdrojového objektu příkazu.
 
 ```
 void AddCommandHandler(
@@ -153,20 +153,20 @@ void AddCommandHandler(
 ### <a name="parameters"></a>Parametry
 
 *cmdID*<br/>
-ID příkazu.
+ID příkazu
 
 *cmdHandler*<br/>
 Popisovač metody obslužné rutiny příkazu.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato metoda přidá obslužnou rutinu příkazu *cmdHandler* do zdrojového objektu příkazu a mapuje obslužná rutina *cmdID*.
+Tato metoda přidá obslužnou rutinu příkazu *cmdHandler* do zdrojového objektu příkazu a mapuje obslužnou rutinu na *cmdID*.
 
-Zobrazit [jak: Přidání směrování příkazů do ovládacího prvku Windows Forms](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md) příklad, jak používat `AddCommandHandler`.
+Viz [jak: Přidejte směrování příkazů do ovládacího prvku](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md) model Windows Forms, který ukazuje, jak použít. `AddCommandHandler`
 
-##  <a name="addcommandrangehandler"></a>  ICommandSource::AddCommandRangeHandler
+##  <a name="addcommandrangehandler"></a>Rozhraní ICommandSource:: AddCommandRangeHandler
 
-Přidá skupinu obslužné rutiny příkazů do zdrojového objektu příkazu.
+Přidá skupinu obslužných rutin příkazu do zdrojového objektu příkazu.
 
 ```
 void AddCommandRangeHandler(
@@ -178,21 +178,21 @@ void AddCommandRangeHandler(
 ### <a name="parameters"></a>Parametry
 
 *cmdIDMin*<br/>
-Počáteční index rozsahu ID příkazu.
+Počáteční index rozsahu ID příkazu
 
 *cmdIDMax*<br/>
-Poslední index rozsahu ID příkazu.
+Koncový index rozsahu ID příkazů
 
 *cmdHandler*<br/>
-Popisovač metody obslužné rutiny zpráv, ke které jsou mapovány příkazy.
+Popisovač metody obslužné rutiny zpráv, ke které jsou příkazy mapovány.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato metoda mapuje souvislý rozsah ID příkazů do jedné zprávy rutiny a přidá jej do zdrojového objektu příkazu. Používá se pro zpracování skupina tlačítek, související s jednu metodu.
+Tato metoda mapuje souvislý rozsah ID příkazů na jednu obslužnou rutinu zpráv a přidá ji do zdrojového objektu příkazu. Slouží ke zpracování skupiny souvisejících tlačítek s jednou metodou.
 
-##  <a name="addcommandrangeuihandler"></a>  ICommandSource::AddCommandRangeUIHandler
+##  <a name="addcommandrangeuihandler"></a>Rozhraní ICommandSource:: AddCommandRangeUIHandler
 
-Přidá skupinu obslužné rutiny zpráv uživatelské rozhraní příkazů do zdrojového objektu příkazu.
+Přidá skupinu obslužných rutin zpráv příkazu uživatelského rozhraní do zdrojového objektu příkazu.
 
 ```
 void AddCommandRangeUIHandler(
@@ -204,21 +204,21 @@ void AddCommandRangeUIHandler(
 ### <a name="parameters"></a>Parametry
 
 *cmdIDMin*<br/>
-Počáteční index rozsahu ID příkazu.
+Počáteční index rozsahu ID příkazu
 
 *cmdIDMax*<br/>
-Poslední index rozsahu ID příkazu.
+Koncový index rozsahu ID příkazů
 
 *cmdHandler*<br/>
-Popisovač metody obslužné rutiny zpráv, ke které jsou mapovány příkazy.
+Popisovač metody obslužné rutiny zpráv, ke které jsou příkazy mapovány.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato metoda mapuje souvislý rozsah ID příkazů do obslužné rutiny zpráv příkaz rozhraní jednoho uživatele a přidá jej do zdrojového objektu příkazu. Používá se pro zpracování skupina tlačítek, související s jednu metodu.
+Tato metoda mapuje souvislý rozsah ID příkazů na obslužnou rutinu zprávy příkazu jediného uživatelského rozhraní a přidá ji do zdrojového objektu příkazu. Slouží ke zpracování skupiny souvisejících tlačítek s jednou metodou.
 
-##  <a name="addcommanduihandler"></a>  ICommandSource::AddCommandUIHandler
+##  <a name="addcommanduihandler"></a>Rozhraní ICommandSource:: AddCommandUIHandler
 
-Obslužné rutiny zpráv uživatelské rozhraní příkaz přidá do zdrojového objektu příkazu.
+Přidá do zdrojového objektu příkazu obslužnou rutinu zprávy příkazu uživatelského rozhraní.
 
 ```
 void AddCommandUIHandler(
@@ -229,16 +229,16 @@ void AddCommandUIHandler(
 ### <a name="parameters"></a>Parametry
 
 *cmdID*<br/>
-ID příkazu.
+ID příkazu
 
 *cmdUIHandler*<br/>
-Popisovač pro metodu obslužné rutiny zpráv příkaz uživatelské rozhraní.
+Popisovač metody obslužné rutiny zprávy příkazu uživatelského rozhraní.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato metoda přidá popisovač zprávy uživatelské rozhraní příkaz *cmdHandler* do zdrojového objektu příkazu a mapuje obslužná rutina *cmdID*.
+Tato metoda přidá do zdrojového objektu příkazu obslužnou rutinu zprávy příkazu uživatelského rozhraní *cmdHandler* a mapuje obslužnou rutinu na *cmdID*.
 
-##  <a name="postcommand"></a>  ICommandSource::PostCommand
+##  <a name="postcommand"></a>Rozhraní ICommandSource::P ostCommand
 
 Odešle zprávu bez čekání na zpracování.
 
@@ -248,16 +248,16 @@ void PostCommand(unsigned int command);
 
 ### <a name="parameters"></a>Parametry
 
-*Příkaz*<br/>
-Identifikátor příkazu zprávy, která se má zveřejnit.
+*systému*<br/>
+ID příkazu zprávy, která má být odeslána.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato metoda asynchronně odešle zprávu mapovat na ID určené *příkaz*. Volá [CWnd::PostMessage](../../mfc/reference/cwnd-class.md#postmessage) umístit zprávy do fronty zpráv a vrátí v okně bez čekání na okno odpovídající zprávu.
+Tato metoda asynchronně odesílá zprávu namapovanou na ID určené *příkazem*. Volá [CWnd::P ostmessage](../../mfc/reference/cwnd-class.md#postmessage) umístit zprávu do fronty zpráv v okně a pak se vrátí bez čekání na odpovídající okno ke zpracování zprávy.
 
-##  <a name="removecommandhandler"></a>  ICommandSource::RemoveCommandHandler
+##  <a name="removecommandhandler"></a>Rozhraní ICommandSource:: RemoveCommandHandler
 
-Obslužná rutina příkazu odebere ze zdrojového objektu příkazu.
+Odebere obslužnou rutinu příkazu ze zdrojového objektu příkazu.
 
 ```
 void RemoveCommandHandler(unsigned int cmdID);
@@ -266,15 +266,15 @@ void RemoveCommandHandler(unsigned int cmdID);
 ### <a name="parameters"></a>Parametry
 
 *cmdID*<br/>
-ID příkazu.
+ID příkazu
 
 ### <a name="remarks"></a>Poznámky
 
-Tato metoda odstraní obslužná rutina příkazu namapované na *cmdID* ze zdrojového objektu příkazu.
+Tato metoda odebere obslužnou rutinu příkazu namapovanou na *cmdID* ze zdrojového objektu příkazu.
 
-##  <a name="removecommandrangehandler"></a>  ICommandSource::RemoveCommandRangeHandler
+##  <a name="removecommandrangehandler"></a>Rozhraní ICommandSource:: RemoveCommandRangeHandler
 
-Odebere skupinu obslužné rutiny příkazů ze zdrojového objektu příkazu.
+Odebere skupinu obslužných rutin příkazů ze zdrojového objektu příkazu.
 
 ```
 void RemoveCommandRangeUIHandler(
@@ -285,18 +285,18 @@ void RemoveCommandRangeUIHandler(
 ### <a name="parameters"></a>Parametry
 
 *cmdIDMin*<br/>
-Počáteční index rozsahu ID příkazu.
+Počáteční index rozsahu ID příkazu
 
 *cmdIDMax*<br/>
-Poslední index rozsahu ID příkazu.
+Koncový index rozsahu ID příkazů
 
 ### <a name="remarks"></a>Poznámky
 
-Tato metoda odstraní skupinu z namapované na ID příkazů určené obslužné rutiny zpráv *cmdIDMin* a *cmdIDMax*, ze zdrojového objektu příkazu.
+Tato metoda odebere skupinu obslužných rutin zpráv mapovaných na ID příkazů zadaných pomocí *cmdIDMin* a *cmdIDMax*ze zdrojového objektu příkazu.
 
-##  <a name="removecommandrangeuihandler"></a>  ICommandSource::RemoveCommandRangeUIHandler
+##  <a name="removecommandrangeuihandler"></a>Rozhraní ICommandSource:: RemoveCommandRangeUIHandler
 
-Odebere skupinu obslužné rutiny zpráv uživatelské rozhraní příkazů ze zdrojového objektu příkazu.
+Odebere skupinu obslužných rutin zpráv příkazu uživatelského rozhraní ze zdrojového objektu příkazu.
 
 ```
 void RemoveCommandRangeUIHandler(
@@ -307,18 +307,18 @@ void RemoveCommandRangeUIHandler(
 ### <a name="parameters"></a>Parametry
 
 *cmdIDMin*<br/>
-Počáteční index rozsahu ID příkazu.
+Počáteční index rozsahu ID příkazu
 
 *cmdIDMax*<br/>
-Poslední index rozsahu ID příkazu.
+Koncový index rozsahu ID příkazů
 
 ### <a name="remarks"></a>Poznámky
 
-Tato metoda odstraní skupinu uživatelské rozhraní příkaz obslužné rutiny zpráv, mapovat na ID příkazů určené *cmdIDMin* a *cmdIDMax*, ze zdrojového objektu příkazu.
+Tato metoda odebere skupinu obslužných rutin zpráv příkazu uživatelského rozhraní, které jsou mapovány na ID příkazů určené parametrem *cmdIDMin* a *cmdIDMax*, ze zdrojového objektu příkazu.
 
-##  <a name="removecommanduihandler"></a>  ICommandSource::RemoveCommandUIHandler
+##  <a name="removecommanduihandler"></a>Rozhraní ICommandSource:: RemoveCommandUIHandler
 
-Obslužná rutina příkazu zprávy uživatelské rozhraní se odebere ze zdrojového objektu příkazu.
+Odebere obslužnou rutinu zprávy příkazu uživatelského rozhraní ze zdrojového objektu příkazu.
 
 ```
 void RemoveCommandUIHandler(unsigned int cmdID);
@@ -327,15 +327,15 @@ void RemoveCommandUIHandler(unsigned int cmdID);
 ### <a name="parameters"></a>Parametry
 
 *cmdID*<br/>
-ID příkazu.
+ID příkazu
 
 ### <a name="remarks"></a>Poznámky
 
-Tato metoda odstraní uživatelské rozhraní zpráva obslužná rutina příkazu namapované na *cmdID* ze zdrojového objektu příkazu.
+Tato metoda odebere obslužnou rutinu zprávy příkazu uživatelského rozhraní namapovanou na *cmdID* ze zdrojového objektu příkazu.
 
-##  <a name="sendcommand"></a>  ICommandSource::SendCommand
+##  <a name="sendcommand"></a>Rozhraní ICommandSource:: SendCommand
 
-Odešle zprávu a čeká na zpracování před vrácením.
+Před vrácením pošle zprávu a počká, než se zpracuje.
 
 ```
 void SendCommand(unsigned int command);
@@ -343,16 +343,16 @@ void SendCommand(unsigned int command);
 
 ### <a name="parameters"></a>Parametry
 
-*Příkaz*<br/>
-Identifikátor příkazu zprávy k odeslání.
+*systému*<br/>
+ID příkazu zprávy, která se má odeslat
 
 ### <a name="remarks"></a>Poznámky
 
-Tato metoda synchronně odešle zprávu mapovat na ID určené *příkaz*. Volá [CWnd::SendMessage](../../mfc/reference/cwnd-class.md#sendmessage) mají být umístěny zprávy okna fronty zpráv a počká až tuto proceduru okna zpracovala zpráva před vrácením.
+Tato metoda synchronně odesílá zprávu namapovanou na ID určené *příkazem*. Volá [CWnd:: SendMessage](../../mfc/reference/cwnd-class.md#sendmessage) k umístění zprávy do fronty zpráv v okně a počká, dokud tento proces okna před vrácením nezpracovává zprávu.
 
-##  <a name="icommandtarget_interface"></a>  Icommandtarget – rozhraní
+##  <a name="icommandtarget_interface"></a>Rozhraní ICommandTarget
 
-Uživatelský ovládací prvek poskytuje rozhraní pro příjem příkazy ze zdrojového objektu příkazu.
+Poskytuje uživatelský ovládací prvek s rozhraním pro příjem příkazů ze zdrojového objektu příkazu.
 
 ```
 interface class ICommandTarget
@@ -360,15 +360,15 @@ interface class ICommandTarget
 
 ### <a name="remarks"></a>Poznámky
 
-Když hostujete uživatelského ovládacího prvku v zobrazení knihovny MFC [CWinFormsView](../../mfc/reference/cwinformsview-class.md) trasy příkazy a aktualizace příkazů zpráv uživatelského rozhraní do uživatelského ovládacího prvku, aby mohla zpracovávat příkazy knihovny MFC (například rámec nabídky položek a tlačítka panelu nástrojů). Implementací `ICommandTarget`, poskytnout uživatelský ovládací prvek odkazu na objekt.
+Při hostování uživatelského ovládacího prvku v zobrazení knihovny MFC [CWinFormsView](../../mfc/reference/cwinformsview-class.md) trasy příkazy a aktualizovat zprávy uživatelského rozhraní příkazů do uživatelského ovládacího prvku, aby mohl zpracovávat příkazy MFC (například položky nabídky rámce a tlačítka panelu nástrojů). Implementací `ICommandTarget`udělíte uživatelskému ovládacímu prvku odkaz na objekt.
 
-Zobrazit [jak: Přidání směrování příkazů do ovládacího prvku Windows Forms](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md) příklad, jak používat `ICommandTarget`.
+Viz [jak: Přidejte směrování příkazů do ovládacího prvku](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md) model Windows Forms, který ukazuje, jak použít. `ICommandTarget`
 
-Další informace o používání formulářů Windows, naleznete v tématu [použití uživatelského ovládacího prvku Windows Form v prostředí MFC](../../dotnet/using-a-windows-form-user-control-in-mfc.md).
+Další informace o použití model Windows Forms naleznete v tématu [použití uživatelského ovládacího prvku Windows Form v knihovně MFC](../../dotnet/using-a-windows-form-user-control-in-mfc.md).
 
-##  <a name="initialize"></a>  ICommandTarget::Initialize
+##  <a name="initialize"></a>ICommandTarget:: Initialize
 
-Inicializuje objekt cílového příkazu.
+Inicializuje cílový objekt příkazu.
 
 ```
 void Initialize(ICommandSource^ cmdSource);
@@ -377,17 +377,17 @@ void Initialize(ICommandSource^ cmdSource);
 ### <a name="parameters"></a>Parametry
 
 *cmdSource*<br/>
-Popisovač do zdrojového objektu příkazu.
+Popisovač zdrojového objektu příkazu.
 
 ### <a name="remarks"></a>Poznámky
 
-Když hostujete uživatelského ovládacího prvku v zobrazení knihovny MFC [CWinFormsView](../../mfc/reference/cwinformsview-class.md) trasy příkazy a aktualizace příkazů zpráv uživatelského rozhraní do uživatelského ovládacího prvku, aby mohla zpracovávat příkazy knihovny MFC.
+Při hostování uživatelského ovládacího prvku v zobrazení knihovny MFC [CWinFormsView](../../mfc/reference/cwinformsview-class.md) trasy příkazy a aktualizovat zprávy uživatelského rozhraní příkazů do uživatelského ovládacího prvku, aby mohl zpracovávat příkazy MFC.
 
-Tato metoda inicializuje cílový objekt příkazu a přidruží ji k objektu zdroje zadaného příkazu *cmdSource*. By měla být volána v implementaci třídy uživatelského ovládacího prvku. Při inicializaci, byste měli zaregistrovat obslužné rutiny příkazů s zdrojového objektu příkazu voláním [ICommandSource::AddCommandHandler](../../mfc/reference/icommandsource-interface.md) v `Initialize` implementace. Zobrazit [jak: Přidání směrování příkazů do ovládacího prvku Windows Forms](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md) příklad, jak používat `Initialize` provedete to tak.
+Tato metoda inicializuje cílový objekt příkazu a přidruží ho k zadanému zdrojovému objektu příkazu *cmdSource*. Měla by být volána v implementaci třídy uživatelského ovládacího prvku. Při inicializaci byste měli zaregistrovat obslužné rutiny příkazů u objektu zdrojového příkazu voláním [rozhraní ICommandSource:: AddCommandHandler](../../mfc/reference/icommandsource-interface.md) v `Initialize` implementaci. Viz [jak: Přidejte směrování příkazů do ovládacího prvku](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md) model Windows Forms, kde můžete příklad použít `Initialize` k tomu.
 
-##  <a name="icommandui_interface"></a>  Icommandui – rozhraní
+##  <a name="icommandui_interface"></a>Rozhraní ICommandUI
 
-Slouží ke správě uživatelských rozhraní příkazů.
+Spravuje příkazy uživatelského rozhraní.
 
 ```
 interface class ICommandUI
@@ -395,19 +395,19 @@ interface class ICommandUI
 
 ### <a name="remarks"></a>Poznámky
 
-Toto rozhraní poskytuje metody a vlastnosti, které spravují uživatelských rozhraní příkazů. `ICommandUI` je podobný [ccmdui – třída](../../mfc/reference/ccmdui-class.md), s tím rozdílem, že `ICommandUI` se používá pro aplikace knihovny MFC, které spolupracují s komponent architektury .NET.
+Toto rozhraní poskytuje metody a vlastnosti, které spravují příkazy uživatelského rozhraní. `ICommandUI`se podobá [třídě CCmdUI –](../../mfc/reference/ccmdui-class.md), s tím `ICommandUI` rozdílem, že se používá pro aplikace MFC, které spolupracují s komponentami .NET.
 
-`ICommandUI` se používá v rámci `ON_UPDATE_COMMAND_UI` obslužná rutina-odvozené třídy. Když uživatel aplikace aktivuje (zaškrtne nebo kliknutí) nabídka, každá položka nabídky se zobrazí jako povolené nebo zakázané. Cíl každý příkaz nabídky poskytuje tyto informace implementací `ON_UPDATE_COMMAND_UI` obslužné rutiny. Pro každý z objektů příkaz uživatelského rozhraní v aplikaci použijte okno Vlastnosti vytvořit položku mapování zpráv a prototyp funkce pro každou obslužnou rutinu.
+`ICommandUI`se používá v `ON_UPDATE_COMMAND_UI` obslužné rutině v odvozené třídě. Když se uživatel aplikace aktivuje (vybere nebo klikne) na nabídku, zobrazí se každá položka nabídky jako povolená nebo zakázaná. Cíl jednotlivých příkazů nabídky poskytuje tyto informace implementací `ON_UPDATE_COMMAND_UI` obslužné rutiny. Pro každý z objektů uživatelského rozhraní příkazu v aplikaci použijte [Průvodce třídou](mfc-class-wizard.md) nebo okno **vlastností** (v **zobrazení tříd**) k vytvoření položky mapování zpráv a prototypu funkce pro každou obslužnou rutinu.
 
-Další informace o tom, jak `ICommandUI` rozhraní se používá v směrování příkazů, naleznete v tématu [jak: Příkaz přidat ovládací prvek směrování Windows Forms](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md).
+Další informace o tom, jak `ICommandUI` se rozhraní používá při směrování příkazu, najdete [v tématu How to: Přidejte směrování příkazů do ovládacího prvku](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md)model Windows Forms.
 
-Další informace o používání formulářů Windows, naleznete v tématu [použití uživatelského ovládacího prvku Windows Form v prostředí MFC](../../dotnet/using-a-windows-form-user-control-in-mfc.md).
+Další informace o použití model Windows Forms naleznete v tématu [použití uživatelského ovládacího prvku Windows Form v knihovně MFC](../../dotnet/using-a-windows-form-user-control-in-mfc.md).
 
-Další informace o jak se spravují uživatelských rozhraní příkazů v knihovně MFC, naleznete v tématu [ccmdui – třída](../../mfc/reference/ccmdui-class.md).
+Další informace o tom, jak jsou příkazy uživatelského rozhraní spravovány v knihovně MFC, naleznete v tématu [Třída CCmdUI –](../../mfc/reference/ccmdui-class.md).
 
-##  <a name="check"></a>  ICommandUI::Check
+##  <a name="check"></a>ICommandUI:: check
 
-Nastaví položku uživatelského rozhraní pro tento příkaz do příslušné kontroly stavu.
+Nastaví položku uživatelského rozhraní pro tento příkaz na příslušný stav kontroly.
 
 ```
 property UICheckState Check;
@@ -415,17 +415,17 @@ property UICheckState Check;
 
 ### <a name="remarks"></a>Poznámky
 
-Tato vlastnost nastaví položku uživatelského rozhraní pro tento příkaz do příslušné kontroly stavu. Nastavte `Check` následující hodnoty:
+Tato vlastnost nastaví položku uživatelského rozhraní pro tento příkaz na příslušný stav kontroly. Nastavte `Check` následující hodnoty:
 
 |Termín|Definice|
 |----------|----------------|
 |0|Zrušte zaškrtnutí políčka|
 |1|Kontrola|
-|2|Nastavte neurčitý|
+|2|Nastavit neurčitelné|
 
-##  <a name="continuerouting"></a>  ICommandUI::ContinueRouting
+##  <a name="continuerouting"></a>ICommandUI::ContinueRouting
 
-Určuje mechanismus směrování příkazu pokračujte směrování aktuální zprávu v řetězu obslužné rutiny.
+Oznamuje mechanismu směrování příkazů, aby pokračoval v směrování aktuální zprávy o řetězu obslužných rutin.
 
 ```
 void ContinueRouting();
@@ -433,11 +433,11 @@ void ContinueRouting();
 
 ### <a name="remarks"></a>Poznámky
 
-To je funkce členů s pokročilým členstvím, které byste měli použít ve spojení s [ON_COMMAND_EX](message-map-macros-mfc.md#on_command_ex) obslužná rutina, která vrátí hodnotu FALSE. Další informace viz technická Poznámka [TN006: Zprávy Maps](../../mfc/tn006-message-maps.md).
+Toto je pokročilá členská funkce, která by se měla používat ve spojení s obslužnou rutinou [ON_COMMAND_EX](message-map-macros-mfc.md#on_command_ex) , která vrací hodnotu false. Další informace najdete v tématu technická Poznámka [TN006: Mapy](../../mfc/tn006-message-maps.md)zpráv.
 
-##  <a name="enabled"></a>  ICommandUI::Enabled
+##  <a name="enabled"></a>ICommandUI:: Enabled
 
-Povolí nebo zakáže položku uživatelského rozhraní pro tento příkaz.
+Povoluje nebo zakazuje položku uživatelského rozhraní pro tento příkaz.
 
 ```
 property bool Enabled;
@@ -445,11 +445,11 @@ property bool Enabled;
 
 ### <a name="remarks"></a>Poznámky
 
-Tato vlastnost povolí nebo zakáže položku uživatelského rozhraní pro tento příkaz. Nastavte `Enabled` na hodnotu TRUE, FALSE povolíte položku, pro jeho zakázání.
+Tato vlastnost povoluje nebo zakazuje položku uživatelského rozhraní pro tento příkaz. Nastavte `Enabled` na hodnotu true, chcete-li povolit položku, hodnotu false pro její zakázání.
 
-##  <a name="id"></a>  ICommandUI::ID
+##  <a name="id"></a>ICommandUI:: ID
 
-Získá ID rozhraní objekt uživatele reprezentován `ICommandUI` objektu.
+Získá ID objektu uživatelského rozhraní reprezentovaného `ICommandUI` objektem.
 
 ```
 property unsigned int ID;
@@ -457,11 +457,11 @@ property unsigned int ID;
 
 ### <a name="remarks"></a>Poznámky
 
-Tato vlastnost získá ID (popisovač) položky nabídky, tlačítka panelu nástrojů nebo jiné rozhraní objekt uživatele reprezentován `ICommandUI` objektu.
+Tato vlastnost získá ID (popisovač) položky nabídky, tlačítka panelu nástrojů nebo jiného objektu uživatelského rozhraní reprezentovaného `ICommandUI` objektem.
 
-##  <a name="index"></a>  ICommandUI::Index
+##  <a name="index"></a>ICommandUI:: index
 
-Získá index rozhraní objekt uživatele reprezentován `ICommandUI` objektu.
+Získá index objektu uživatelského rozhraní reprezentovaného `ICommandUI` objektem.
 
 ```
 property unsigned int Index;
@@ -469,11 +469,11 @@ property unsigned int Index;
 
 ### <a name="remarks"></a>Poznámky
 
-Tato vlastnost získá index položky nabídky, tlačítka panelu nástrojů (popisovač) nebo jiné rozhraní objekt uživatele reprezentován `ICommandUI` objektu.
+Tato vlastnost získá index (popisovač) položky nabídky, tlačítko panelu nástrojů nebo jiný objekt uživatelského rozhraní reprezentovaný `ICommandUI` objektem.
 
-##  <a name="radio"></a>  ICommandUI::Radio
+##  <a name="radio"></a>ICommandUI:: Radio
 
-Nastaví položku uživatelského rozhraní pro tento příkaz do příslušné kontroly stavu.
+Nastaví položku uživatelského rozhraní pro tento příkaz na příslušný stav kontroly.
 
 ```
 property bool Radio;
@@ -481,11 +481,11 @@ property bool Radio;
 
 ### <a name="remarks"></a>Poznámky
 
-Tato vlastnost nastaví položku uživatelského rozhraní pro tento příkaz do příslušné kontroly stavu. Nastavte `Radio` na hodnotu TRUE pro povolení položka, jinak FALSE.
+Tato vlastnost nastaví položku uživatelského rozhraní pro tento příkaz na příslušný stav kontroly. Nastavte `Radio` na hodnotu true, pokud chcete položku Povolit. v opačném případě false.
 
-##  <a name="text"></a>  ICommandUI::Text
+##  <a name="text"></a>ICommandUI:: text
 
-Nastaví text položku uživatelského rozhraní pro tento příkaz.
+Nastaví text položky uživatelského rozhraní pro tento příkaz.
 
 ```
 property String^ Text;
@@ -493,11 +493,11 @@ property String^ Text;
 
 ### <a name="remarks"></a>Poznámky
 
-Tato vlastnost nastavuje vlastnost text položky uživatelského rozhraní pro tento příkaz. Nastavte `Text` na popisovač řetězce textu.
+Tato vlastnost nastavuje text položky uživatelského rozhraní pro tento příkaz. Nastavte `Text` na popisovač textového řetězce.
 
-##  <a name="iview_interface"></a>  IView – rozhraní
+##  <a name="iview_interface"></a>Rozhraní IView
 
-Implementuje několik metod, které [CWinFormsView](../../mfc/reference/cwinformsview-class.md) používá k odesílání oznámení zobrazení spravovatelného ovládacího prvku.
+Implementuje několik metod, které [CWinFormsView](../../mfc/reference/cwinformsview-class.md) používá k odesílání oznámení zobrazení spravovanému ovládacímu prvku.
 
 ```
 interface class IView
@@ -505,15 +505,15 @@ interface class IView
 
 ### <a name="remarks"></a>Poznámky
 
-`IView` implementuje několik metod, které `CWinFormsView` používá k předávání běžné zobrazení oznámení na hostované spravovatelného ovládacího prvku. Jedná se o [OnInitialUpdate](../../mfc/reference/iview-interface.md), [OnUpdate](../../mfc/reference/iview-interface.md) a [OnActivateView](../../mfc/reference/iview-interface.md).
+`IView`implementuje několik metod, `CWinFormsView` které nástroj používá pro přeposílání běžných oznámení o zobrazení do hostovaného spravovaného ovládacího prvku. Jsou to [OnInitialUpdate](../../mfc/reference/iview-interface.md), [Update](../../mfc/reference/iview-interface.md) a [OnActivateView](../../mfc/reference/iview-interface.md).
 
-`IView` je podobný [CView](../../mfc/reference/cview-class.md), ale používá se pouze s ovládacími prvky a spravované zobrazení.
+`IView`je podobný jako [CView](../../mfc/reference/cview-class.md), ale používá se pouze se spravovanými zobrazeními a ovládacími prvky.
 
-Další informace o používání formulářů Windows, naleznete v tématu [použití uživatelského ovládacího prvku Windows Form v prostředí MFC](../../dotnet/using-a-windows-form-user-control-in-mfc.md).
+Další informace o použití model Windows Forms naleznete v tématu [použití uživatelského ovládacího prvku Windows Form v knihovně MFC](../../dotnet/using-a-windows-form-user-control-in-mfc.md).
 
-##  <a name="onactivateview"></a>  IView::OnActivateView
+##  <a name="onactivateview"></a>IView:: OnActivateView
 
-Volá se v prostředí MFC, když se aktivuje nebo deaktivuje zobrazení.
+Volá se knihovnou MFC při aktivaci nebo deaktivaci zobrazení.
 
 ```
 void OnActivateView(bool activate);
@@ -521,20 +521,20 @@ void OnActivateView(bool activate);
 
 ### <a name="parameters"></a>Parametry
 
-*Aktivovat*<br/>
-Určuje, zda je zobrazení se aktivuje nebo deaktivuje.
+*aktivací*<br/>
+Označuje, zda se zobrazení aktivuje nebo deaktivuje.
 
-##  <a name="oninitialupdate"></a>  IView::OnInitialUpdate
+##  <a name="oninitialupdate"></a>IView:: OnInitialUpdate
 
-Volá se rozhraním po zobrazení je nejprve připojen k dokumentu, ale před začátku zobrazení.
+Volá se rozhraním po prvním připojení zobrazení k dokumentu, ale před tím, než se zobrazení zpočátku zobrazí.
 
 ```
 void OnInitialUpdate();
 ```
 
-##  <a name="onupdate"></a>  IView::OnUpdate
+##  <a name="onupdate"></a>IView:: inupdate
 
-Volá se v prostředí MFC po dokumentu v zobrazení se změnila.
+Volá se knihovnou MFC po úpravě dokumentu zobrazení.
 
 ```
 void OnUpdate();
@@ -542,10 +542,10 @@ void OnUpdate();
 
 ### <a name="remarks"></a>Poznámky
 
-Tato funkce umožňuje zobrazení aktualizovat zobrazení tak, aby odrážely změny.
+Tato funkce umožňuje zobrazení aktualizovat zobrazení tak, aby odráželo úpravy.
 
 ## <a name="see-also"></a>Viz také:
 
-[Ukázky knihovny MFC shromažďování](../../overview/visual-cpp-samples.md)<br/>
+[Ukázka MFC – shromáždit](../../overview/visual-cpp-samples.md)<br/>
 [CObject – třída](../../mfc/reference/cobject-class.md)<br/>
 [Graf hierarchie](../../mfc/hierarchy-chart.md)

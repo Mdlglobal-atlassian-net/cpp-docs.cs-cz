@@ -8,16 +8,16 @@ helpviewer_keywords:
 - header controls [MFC], processing notifications
 - header control notifications
 ms.assetid: e6c6af7c-d458-4d33-85aa-48014ccde5f6
-ms.openlocfilehash: f60a0c918476702881984f976b220130727cf4b0
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: bc811763fe3f4717b8baaeb4a23df1ae59bb1979
+ms.sourcegitcommit: 3caf5261b3ea80d9cf14038c116ba981d655cd13
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69507949"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70908125"
 ---
 # <a name="processing-header-control-notifications"></a>Zpracování oznámení ovládacího prvku záhlaví
 
-Ve vaší třídě zobrazení nebo dialogového okna použijte okno Vlastnosti k vytvoření funkce obslužné rutiny [OnChildNotify](../mfc/reference/cwnd-class.md#onchildnotify) s příkazem Switch pro jakékoli oznamovací zprávy řízení hlaviček ([CHeaderCtrl](../mfc/reference/cheaderctrl-class.md)), které chcete zpracovat (viz téma [mapování zpráv na funkce ](../mfc/reference/mapping-messages-to-functions.md)). Oznámení se odesílají do nadřazeného okna, když uživatel klikne nebo dvakrát klikne na položku záhlaví, přetahuje oddělovač mezi položkami a tak dále.
+Ve vaší třídě zobrazení nebo dialogového okna použijte [Průvodce třídami](reference/mfc-class-wizard.md) k vytvoření funkce obslužné rutiny [OnChildNotify](../mfc/reference/cwnd-class.md#onchildnotify) s příkazem Switch pro všechny oznamovací zprávy řízení hlaviček ([CHeaderCtrl](../mfc/reference/cheaderctrl-class.md)), které chcete zpracovat (viz [mapování zpráv na Funkce](../mfc/reference/mapping-messages-to-functions.md)). Oznámení se odesílají do nadřazeného okna, když uživatel klikne nebo dvakrát klikne na položku záhlaví, přetahuje oddělovač mezi položkami a tak dále.
 
 Oznamovací zprávy přidružené k ovládacímu prvku záhlaví jsou uvedeny v [odkazu ovládacího prvku záhlaví](/windows/win32/controls/header-control-reference) v Windows SDK.
 

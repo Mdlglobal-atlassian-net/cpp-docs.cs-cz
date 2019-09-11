@@ -1,15 +1,15 @@
 ---
 title: Mapy událostí
-ms.date: 06/20/2018
+ms.date: 09/07/2019
 helpviewer_keywords:
 - event maps [MFC]
 ms.assetid: 1ed53aee-bc53-43cd-834a-6fb935c0d29b
-ms.openlocfilehash: ef730574b26a4c3619df886b72770ce7e035a40e
-ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
+ms.openlocfilehash: 34741dc05efe77c0932343739540370f54db6008
+ms.sourcegitcommit: 3caf5261b3ea80d9cf14038c116ba981d655cd13
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68916468"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70907898"
 ---
 # <a name="event-maps"></a>Mapy událostí
 
@@ -21,7 +21,7 @@ Knihovna Microsoft Foundation Class nabízí programovací model optimalizovaný
 
 `EVENT_STOCK_CLICK` Makro indikuje, že ovládací prvek aktivuje událost po kliknutí pokaždé, když detekuje kliknutí myší. Podrobnější seznam dalších uložených událostí najdete v článku [ovládací prvky ActiveX: Události](../../mfc/mfc-activex-controls-events.md). K dispozici jsou také makra, která označují vlastní události.
 
-I když jsou makra mapování událostí důležitá, obecně je nevložíte přímo. Důvodem je, že okno Vlastnosti automaticky vytvoří položky mapování událostí ve zdrojových souborech, když ji použijete k přidružení funkcí pro spouštění událostí s událostmi. Kdykoli budete chtít upravit nebo přidat položku mapování událostí, můžete použít okno Vlastnosti.
+I když jsou makra mapování událostí důležitá, obecně je nevložíte přímo. Důvodem je, že okno **vlastnosti** (v **zobrazení tříd**) automaticky vytvoří položky mapování událostí ve zdrojových souborech, když ho použijete k přidružení funkcí pro spouštění událostí s událostmi. Kdykoli budete chtít upravit nebo přidat položku mapování událostí, můžete použít okno **vlastnosti** .
 
 Pro podporu map událostí poskytuje MFC následující makra:
 
@@ -143,7 +143,7 @@ Určuje seznam obsahující 32 celé číslo představující hodnotu barvy RGB 
 |VTS_COLOR|OLE_COLOR|
 |VTS_CY|MĚNĚ|
 |VTS_DATE|DATE|
-|VTS_BSTR|typ const __znak\*__|
+|VTS_BSTR|typ **const** __znak\*__|
 |VTS_DISPATCH|LPDISPATCH|
 |VTS_FONT|`IFontDispatch*`|
 |VTS_HANDLE|POPISOVAČ|

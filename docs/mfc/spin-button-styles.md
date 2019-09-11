@@ -1,39 +1,39 @@
 ---
 title: Styly číselníků
-ms.date: 11/04/2016
+ms.date: 09/09/2019
 helpviewer_keywords:
 - styles [MFC], CSpinButtonCtrl
 - CSpinButtonCtrl class [MFC], styles
 - styles [MFC], spin button control
 - spin button control, styles
 ms.assetid: fb4a7f6f-9182-47be-bccf-0728fdc5332f
-ms.openlocfilehash: d955ba1d76ee4d5648613ddaf6c5f6a652f3d3af
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1aae4b7e4c63929ebe03c97d50f05754bc13ec26
+ms.sourcegitcommit: 3caf5261b3ea80d9cf14038c116ba981d655cd13
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62307169"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70907862"
 ---
 # <a name="spin-button-styles"></a>Styly číselníků
 
-Mnoho nastavení typu číselník ([atributu CSpinButtonCtrl](../mfc/reference/cspinbuttonctrl-class.md)) se řídí styly. Můžete nastavit následující styly pomocí **vlastnosti** okna v editoru dialogového okna.
+Mnohé z nastavení pro tlačítko číselníku ([atributu CSpinButtonCtrl](../mfc/reference/cspinbuttonctrl-class.md)) jsou ovládány styly. Můžete nastavit následující styly pomocí [Průvodce třídou](reference/mfc-class-wizard.md).
 
-- **Orientace** svislý nebo vodorovný. Určuje orientaci ovládacího prvku tlačítka se šipkami. Související se stylem UDS_HORZ.
+- **Orientace** Buď svislá, nebo vodorovná. Určuje orientaci tlačítek se šipkami. Přidruženo k UDS_HORZ stylu.
 
-- **Zarovnání** nepřipojené, vlevo nebo vpravo. Určuje umístění číselníku. Levá a pravá umístit vedle asociované okno číselníku. Šířka asociovaného okna se sníží tak, aby vyhovovaly číselníku. Styly UDS_ALIGNLEFT a UDS_ALIGNRIGHT přidružený.
+- **Zarovnání** Jedna z nepřipojeného, levého nebo pravého. Určuje umístění tlačítka pro otočení. Vlevo a vpravo umístěte tlačítko číselníku vedle okna s kamarádem. Šířka okna kamaráda se zmenší tak, aby se přizpůsobila k tlačítku číselníku. Přidruženo ke stylům UDS_ALIGNLEFT a UDS_ALIGNRIGHT.
 
-- **Auto Buddy** automaticky vybere předchozí okno v pořadí vykreslování jako asociované okno na číselníku. V šabloně dialogu Toto je ovládací prvek, který předchází číselníku v pořadí. Související se stylem UDS_AUTOBUDDY.
+- **Automatický kamarád** Automaticky vybere předchozí okno v pořadí vykreslování jako přítel pro tlačítko číselníku. V šabloně dialogového okna se jedná o ovládací prvek, který předchází číselníku v pořadí ovládacích prvků. Přidruženo k UDS_AUTOBUDDY stylu.
 
-- **Nastavte Buddy Integer** způsobí, že ovládací prvek typu číselník zvýší a sníží titulek asociovaného okna jako aktuální pozici změny. Související se stylem UDS_SETBUDDYINT.
+- **Nastavit celé číslo kamaráda** Způsobí, že číselník zvýší a sníží titulek okna kamaráda při změně aktuální pozice. Přidruženo k UDS_SETBUDDYINT stylu.
 
-- **No Thousands** nevkládá tisíců oddělovač v hodnotě v popiscích asociovaného okna. Související se stylem UDS_NOTHOUSANDS.
+- **Žádné tisíce** Nevloží oddělovač tisíců do hodnoty v popisku okna kamarád. Přidruženo k UDS_NOTHOUSANDS stylu.
 
     > [!NOTE]
-    >  Tento styl nastavte, pokud chcete používat výměna dat dialogových oken (DDX) k získání celočíselnou hodnotu z přidružený ovládací prvek. `DDX_Text` nepřijímá vložený oddělovače tisíců.
+    >  Tento styl nastavte, pokud chcete k získání celočíselné hodnoty z kamarádního ovládacího prvku použít dialogové okno výměny dat (DDX). `DDX_Text`nepřijímá vložené oddělovače tisíců.
 
-- **Zabalení** způsobí, že pozice "zabalení", protože hodnota je zvýšena nebo snížena nad rámec přesahují rozsah ovládacího prvku. Související se stylem UDS_WRAP.
+- **Zalamovat** Způsobí, že je pozice "Wrap" nastavena jako hodnota zvětšena nebo snížena nad rozsah ovládacího prvku. Přidruženo k UDS_WRAP stylu.
 
-- **Klávesy se šipkami** způsobí, že typu číselník tlačítko přičtena nebo odečtena pozice při stisknutí kláves Šipka nahoru a Šipka dolů. Související se stylem UDS_ARROWKEYS.
+- **Klávesy se šipkami** Způsobí, že číselník zvýší nebo sníží pozici při stisknutí kláves Šipka nahoru a dolů. Přidruženo k UDS_ARROWKEYS stylu.
 
 ## <a name="see-also"></a>Viz také:
 

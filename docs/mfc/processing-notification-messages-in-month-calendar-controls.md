@@ -8,26 +8,26 @@ helpviewer_keywords:
 - notifications [MFC], for CMonthCalCtrl
 - notifications [MFC], month calendar control
 ms.assetid: 607c3e90-0756-493b-9503-ce835a50c7ab
-ms.openlocfilehash: fc0bb475a95450c281c92b500083c9502df50931
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: 452d24bf1ffd157366f357a510e8c8cfaad28d91
+ms.sourcegitcommit: 3caf5261b3ea80d9cf14038c116ba981d655cd13
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64346145"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70908081"
 ---
 # <a name="processing-notification-messages-in-month-calendar-controls"></a>Zpracování zpráv s oznámením v ovládacím prvku měsíční kalendář
 
-Jak uživatelé komunikovat s ovládacím prvku měsíční kalendář (Výběr data a/nebo zobrazení jiného měsíce), ovládacího prvku (`CMonthCalCtrl`) odesílá zprávy s oznámením nezašle nadřazenému oknu, obvykle objekt zobrazení nebo dialogového okna. Tyto zprávy zpracovávají, pokud budete chtít udělat něco v odpovědi. Například když uživatel vybere na nový měsíc, chcete-li zobrazit, můžete poskytnout sadu kalendářních dat, které by měl být oznámil.
+Jelikož uživatelé pracují s ovládacím prvkem měsíční kalendář (výběr dat nebo zobrazení jiného měsíce), ovládací prvek (`CMonthCalCtrl`) odesílá oznámení do svého nadřazeného okna, obvykle v zobrazení nebo v objektu dialogového okna. Pokud chcete něco udělat v reakci, Zpracujte tyto zprávy. Když například uživatel vybere nový měsíc k zobrazení, můžete zadat sadu kalendářních dat, která by měla být zvýrazněna.
 
-Použijte okno Vlastnosti pro přidání obslužné rutiny oznamovacích do nadřazené třídu pro ty zprávy, které chcete implementovat.
+Pomocí [Průvodce třídou](reference/mfc-class-wizard.md) přidejte do nadřazené třídy obslužné rutiny oznámení pro ty zprávy, které chcete implementovat.
 
-Následující seznam popisuje různé upozornění odeslaných nástrojem ovládací prvek měsíční kalendář.
+Následující seznam popisuje různá oznámení odesílaná ovládacím prvkem měsíční kalendář.
 
-- Vyžaduje mcn_getdaystate – informace o tom, které mají být zobrazeny dny tučným písmem. Informace o zpracování toto oznámení, naleznete v tématu [nastavení stavu dne ovládací prvek měsíční kalendář](../mfc/setting-the-day-state-of-a-month-calendar-control.md).
+- MCN_GETDAYSTATE žádosti o informace o tom, které dny by se měly zobrazovat tučně. Informace o zpracování tohoto oznámení naleznete v tématu [Nastavení stavu dne v ovládacím prvku měsíční kalendář](../mfc/setting-the-day-state-of-a-month-calendar-control.md).
 
-- Upozorňují MCN_SELCHANGE nadřazeného objektu, který došlo ke změně vybrané datum nebo rozsah data.
+- MCN_SELCHANGE upozorní nadřazeného objektu na změnu vybraného data nebo rozsahu data.
 
-- Upozorňují MCN_SELECT nadřazeného objektu, který byl proveden výběru explicitní data.
+- MCN_SELECT upozorní nadřazenou položku, že byl proveden explicitní výběr data.
 
 ## <a name="see-also"></a>Viz také:
 

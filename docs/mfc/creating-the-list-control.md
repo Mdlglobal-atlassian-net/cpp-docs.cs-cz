@@ -5,32 +5,32 @@ helpviewer_keywords:
 - CListCtrl class [MFC], creating control
 - list controls [MFC]
 ms.assetid: a4cb1729-31b6-4d2b-a44b-367474848a39
-ms.openlocfilehash: 7b2cb47699339dd413dc1bfae7623069da56e7a4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f1c5d8db93421e1d3ae0e39aec82bdf0f5529f1f
+ms.sourcegitcommit: 3caf5261b3ea80d9cf14038c116ba981d655cd13
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62242247"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70907928"
 ---
 # <a name="creating-the-list-control"></a>Vytvoření ovládacího prvku seznam
 
-Jak řídit seznamu ([CListCtrl](../mfc/reference/clistctrl-class.md)) se vytvoří závisí na tom, jestli jste pomocí ovládacího prvku přímo nebo horizontálních oddílů pomocí třídy [CListView](../mfc/reference/clistview-class.md) místo. Pokud používáte `CListView`, rozhraní vytvoří zobrazení jako součást jeho pořadí vytváření dokumentů/zobrazení. Vytváření zobrazení seznamu vytvoří ovládací prvek seznamu také (dvě se stejnou věc). Ovládací prvek je vytvořen v zobrazení [OnCreate](../mfc/reference/cwnd-class.md#oncreate) funkci obslužné rutiny. V tomto případě je připravené k přidání položek prostřednictvím volání do ovládacího prvku [GetListCtrl](../mfc/reference/clistview-class.md#getlistctrl).
+Způsob vytvoření ovládacího prvku seznam ([CListCtrl](../mfc/reference/clistctrl-class.md)) závisí na tom, zda ovládací prvek používáte přímo, nebo místo toho použití třídy [CListView –](../mfc/reference/clistview-class.md) . Pokud použijete `CListView`, rozhraní sestaví zobrazení jako součást sekvence vytváření dokumentů/zobrazení. Vytvořením zobrazení seznamu se vytvoří také ovládací prvek seznam (dva jsou stejné). Ovládací prvek je vytvořen ve funkci obslužné rutiny [Create](../mfc/reference/cwnd-class.md#oncreate) pro zobrazení. V tomto případě je ovládací prvek připraven k přidávání položek prostřednictvím volání [GetListCtrl](../mfc/reference/clistview-class.md#getlistctrl).
 
-### <a name="to-use-clistctrl-directly-in-a-dialog-box"></a>Použití třídy CListCtrl přímo v dialogovém okně
+### <a name="to-use-clistctrl-directly-in-a-dialog-box"></a>Použití CListCtrl přímo v dialogovém okně
 
-1. V editoru dialogového okna přidáte do šablony prostředku dialogového okna ovládacího prvku seznamu. Zadejte své ID ovládacího prvku.
+1. V editoru dialogového okna přidejte ovládací prvek seznam do prostředku šablony dialogového okna. Zadejte ID ovládacího prvku.
 
-1. Použití [Průvodce přidáním členské proměnné](../ide/adding-a-member-variable-visual-cpp.md) přidat členskou proměnnou typu `CListCtrl` s vlastností ovládacího prvku. Tento člen můžete použít k volání `CListCtrl` členské funkce.
+1. Pomocí [Průvodce přidáním členské proměnné](../ide/adding-a-member-variable-visual-cpp.md) přidejte členskou proměnnou typu `CListCtrl` s vlastností Control. Tento člen můžete použít k volání `CListCtrl` členských funkcí.
 
-1. Použijte okno Vlastnosti pro mapování obslužné rutiny funkce ve třídě dialog pro všechna oznámení ovládacího prvku seznam zpráv je potřeba zpracovat (viz [mapování zpráv na funkce](../mfc/reference/mapping-messages-to-functions.md)).
+1. Použijte [Průvodce třídami](reference/mfc-class-wizard.md) k mapování funkcí obslužných rutin ve třídě dialogového okna pro všechny zprávy s oznámením ovládacího prvku seznam, které je třeba zpracovat (viz [mapování zpráv na funkce](../mfc/reference/mapping-messages-to-functions.md)).
 
-1. V [OnInitDialog](../mfc/reference/cdialog-class.md#oninitdialog), nastavení stylů pro `CListCtrl`. Zobrazit [změna stylů ovládacího prvku seznamu](../mfc/changing-list-control-styles.md). Určuje druh "Zobrazit" se zobrazí v ovládacím prvku, i když můžete později změnit zobrazení.
+1. V [OnInitDialog](../mfc/reference/cdialog-class.md#oninitdialog)nastavte styly pro `CListCtrl`. Viz [Změna stylů ovládacího prvku seznam](../mfc/changing-list-control-styles.md). Tím se určuje druh zobrazení, které se zobrazí v ovládacím prvku, i když můžete zobrazení později změnit.
 
-### <a name="to-use-clistctrl-in-a-nondialog-window"></a>V okně nondialog použití třídy CListCtrl
+### <a name="to-use-clistctrl-in-a-nondialog-window"></a>Použití CListCtrl v nedialogovém okně
 
-1. Definování ovládacího prvku ve třídě zobrazení nebo okno.
+1. Definujte ovládací prvek ve třídě zobrazení nebo okna.
 
-1. Volání ovládacího prvku [vytvořit](../mfc/reference/clistctrl-class.md#create) členské funkce, případně v [OnInitialUpdate](../mfc/reference/cview-class.md#oninitialupdate), může být co nejdříve jako nadřazené okno [OnCreate](../mfc/reference/cwnd-class.md#oncreate) funkci obslužné rutiny (Pokud jste vytvoření podtřídy ovládacího prvku). Nastavení stylů pro ovládací prvek.
+1. Zavolejte členskou funkci [Create](../mfc/reference/clistctrl-class.md#create) ovládacího prvku, případně v [OnInitialUpdate](../mfc/reference/cview-class.md#oninitialupdate), případně jako funkci obslužné rutiny [Create](../mfc/reference/cwnd-class.md#oncreate) nadřazeného okna (Pokud se jedná o podtřídu ovládacího prvku). Nastavte styly ovládacího prvku.
 
 ## <a name="see-also"></a>Viz také:
 

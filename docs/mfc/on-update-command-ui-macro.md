@@ -1,6 +1,6 @@
 ---
 title: ON_UPDATE_COMMAND_UI – makro
-ms.date: 11/04/2016
+ms.date: 09/06/2019
 f1_keywords:
 - ON_UPDATE_COMMAND_UI
 helpviewer_keywords:
@@ -9,22 +9,22 @@ helpviewer_keywords:
 - command-handler macros
 - updating user-interface objects [MFC]
 ms.assetid: 3e72b50f-4119-4c82-81cf-6e09b132de05
-ms.openlocfilehash: 986bc4f12223048a20f88da5d164b24dc1c08ace
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 467e130f3e6518cc4ec554f6574fb9fcbabaf1f3
+ms.sourcegitcommit: 3caf5261b3ea80d9cf14038c116ba981d655cd13
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62385349"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70907944"
 ---
-# <a name="onupdatecommandui-macro"></a>ON_UPDATE_COMMAND_UI – makro
+# <a name="on_update_command_ui-macro"></a>ON_UPDATE_COMMAND_UI – makro
 
-Použití **vlastnosti** okno pro připojení objektu uživatelského rozhraní pro obslužnou rutinu aktualizace příkazů v příkazu cílový objekt. Bude automaticky připojit ID objektu uživatelské rozhraní ON_UPDATE_COMMAND_UI – makro a vytvořte obslužnou rutinu v objektu, který bude zpracovávat aktualizace. Zobrazit [mapování zpráv na funkce](../mfc/reference/mapping-messages-to-functions.md) Další informace.
+Chcete-li připojit objekt uživatelského rozhraní k obslužné rutině aktualizace příkazu v objektu Target příkazu, otevřete **zobrazení tříd**, klikněte pravým tlačítkem na třídu, do které bude obslužná rutina přidána, a zvolte možnost **Průvodce třídou**. V seznamu na levé straně Najděte ID objektu uživatelského rozhraní a v pravém podokně zvolte **UPDATE_COMMAND_UI** a klikněte na **Přidat obslužnou rutinu**. Tím se ve třídě vytvoří funkce obslužné rutiny a přidá odpovídající položku v mapě zpráv. Další informace najdete v tématu [mapování zpráv na funkce](../mfc/reference/mapping-messages-to-functions.md) . V podokně **zprávy** můžete určit další zprávy, které se mají zpracovat. 
 
-Například pokud chcete vymazat všechny příkaz v nabídce Úpravy váš program aktualizovat, použijte **vlastnosti** se okno Přidat položku mapování zpráv ve třídě zvolené deklaraci funkce obslužné rutiny aktualizace příkazů `OnUpdateEditClearAll` ve třídě deklarace a šablonu funkce empty v souboru implementace třídy. Prototyp funkce vypadá takto:
+Například chcete-li aktualizovat příkaz Zrušit vše v nabídce úprav programu, použijte **Průvodce třídou** k přidání položky mapování zpráv do vybrané třídy, deklarace funkce pro obslužnou rutinu aktualizace příkazu volanou `OnUpdateEditClearAll` v deklaraci třídy a prázdné Šablona funkce v implementačním souboru třídy Prototyp funkce vypadá takto:
 
 [!code-cpp[NVC_MFCDocView#2](../mfc/codesnippet/cpp/on-update-command-ui-macro_1.h)]
 
-Všechny obslužné rutiny, zobrazí se funkce, jako jsou **afx_msg** – klíčové slovo. Stejně jako všechny obslužné rutiny aktualizace, přijímá jeden argument, ukazatel `CCmdUI` objektu.
+Podobně jako všechny obslužné rutiny, deklarace funkce zobrazuje klíčové slovo **afx_msg** . Stejně jako všechny obslužné rutiny aktualizace přebírá jeden argument, ukazatel na `CCmdUI` objekt.
 
 ## <a name="see-also"></a>Viz také:
 

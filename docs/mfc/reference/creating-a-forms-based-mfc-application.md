@@ -1,18 +1,18 @@
 ---
 title: Vytváření aplikací MFC založených na formulářích
-ms.date: 08/19/2019
+ms.date: 09/09/2019
 f1_keywords:
 - vc.appwiz.mfcforms.project
 helpviewer_keywords:
 - applications [MFC], forms-based
 - forms-based applications [MFC]
 ms.assetid: 048d2f7d-b60d-4386-ad8e-71d49af9c05e
-ms.openlocfilehash: 95c7f6061933245b2eb2b796e7a678e1e6b010a6
-ms.sourcegitcommit: bf1940a39029dbbd861f95480f55e5e8bd25cda0
+ms.openlocfilehash: 1dbbc5c29f85ced846cb3e07a02a5d6a55c94b20
+ms.sourcegitcommit: 3caf5261b3ea80d9cf14038c116ba981d655cd13
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70108465"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70908056"
 ---
 # <a name="creating-a-forms-based-mfc-application"></a>Vytváření aplikací MFC založených na formulářích
 
@@ -30,7 +30,7 @@ Každá aplikace založená na dialogu, podle definice, je založena na formulá
 
 Základní třída pro aplikace založené na formulářích je [CFormView](cformview-class.md). Pokud má vaše aplikace podporu databáze, můžete také vybrat libovolnou třídu, která je odvozena z `CFormView`. Formulář je jakékoli okno odvozené z `CFormView` nebo z libovolné třídy, ze `CFormView`které dědí.
 
-I v případě, že použijete základní třídu, jako je například [CView](cview-class.md), můžete později vytvořit své aplikace založené na formulářích [přidáním třídy MFC](adding-an-mfc-class.md) odvozené `CFormView` z a zaškrtnutím políčka **Generovat generovat prostředky** v [Průvodci třídou MFC](document-template-strings-mfc-add-class-wizard.md).
+I v případě, že použijete základní třídu, jako je například [CView](cview-class.md), můžete později vytvořit své aplikace na základě [Přidání třídy knihovny MFC](adding-an-mfc-class.md) odvozené `CFormView`z.
 
 Po dokončení průvodce se projekt otevře a pokud jste vybrali `CFormView` (nebo třídu, která dědí z `CFormView`) jako základní třídu, nebo pokud jste vytvořili dialogovou aplikaci, vizuál C++ otevře Editor dialogových oken. V tuto chvíli jste připraveni navrhnout první formulář.
 
@@ -43,13 +43,13 @@ Po dokončení průvodce se projekt otevře a pokud jste vybrali `CFormView` (ne
 1. Vyberte **jeden dokument**, **více dokumentů**nebo **více dokumentů nejvyšší úrovně**.
 
     > [!NOTE]
-    >  Pokud jste zvolili aplikaci SDI, MDI nebo více aplikací rozhraní dokumentu nejvyšší úrovně, `CView` je ve výchozím nastavení nastavena jako základní třída pro zobrazení vaší aplikace na stránce vygenerované [třídy](generated-classes-mfc-application-wizard.md) v průvodci. Chcete-li vytvořit aplikaci založenou na formulářích, je `CFormView` nutné vybrat jako základní třídu pro zobrazení aplikace. Všimněte si, že Průvodce neposkytuje podporu tisku pro aplikace založené na formulářích.
+    >  Pokud jste zvolili aplikaci SDI, MDI nebo více aplikací rozhraní dokumentu nejvyšší úrovně, `CView` je ve výchozím nastavení nastavena jako základní třída pro zobrazení vaší aplikace na stránce [vygenerované třídy](generated-classes-mfc-application-wizard.md) v průvodci. Chcete-li vytvořit aplikaci založenou na formulářích, je `CFormView` nutné vybrat jako základní třídu pro zobrazení aplikace. Všimněte si, že Průvodce neposkytuje podporu tisku pro aplikace založené na formulářích.
 
 1. Na ostatních stránkách průvodce nastavte další požadované možnosti projektu.
 
 1. Vytvořte kostru aplikace kliknutím na tlačítko **Dokončit** .
 
-Další informace naleznete v tématu:
+Další informace naleznete v tématu:
 
 - [Odvozené třídy zobrazení](../derived-view-classes-available-in-mfc.md)
 

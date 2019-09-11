@@ -1,5 +1,5 @@
 ---
-title: 'Kontejnery ovládacích prvků ActiveX: Ošetření událostí ovládacího prvku ActiveX'
+title: 'ActiveX – kontejnery ovládacích prvků: Zpracování událostí z ovládacího prvku ActiveX'
 ms.date: 09/12/2018
 helpviewer_keywords:
 - event handlers [MFC], ActiveX controls
@@ -11,61 +11,61 @@ helpviewer_keywords:
 - events [MFC], ActiveX controls
 - BEGIN_EVENTSINK_MAP macro
 ms.assetid: f9c106db-052f-4e32-82ad-750646aa760b
-ms.openlocfilehash: 8087d84d2203e4f910200acdd1b00e58d14f920e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7487792fbc9fe6775640f40755a7f725543fb9f3
+ms.sourcegitcommit: 3caf5261b3ea80d9cf14038c116ba981d655cd13
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62394894"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70907763"
 ---
-# <a name="activex-control-containers-handling-events-from-an-activex-control"></a>Kontejnery ovládacích prvků ActiveX: Ošetření událostí ovládacího prvku ActiveX
+# <a name="activex-control-containers-handling-events-from-an-activex-control"></a>ActiveX – kontejnery ovládacích prvků: Zpracování událostí z ovládacího prvku ActiveX
 
-Tento článek popisuje, v okně Vlastnosti instalace obslužné rutiny událostí pro ovládací prvky ActiveX v kontejneru ovládacího prvku ActiveX. Obslužné rutiny událostí slouží k přijímání oznámení (z ovládacího prvku) o určité události a provést některé akce v odpovědi. Toto oznámení se nazývá "vyvoláním" události.
+Tento článek pojednává o použití okna **vlastností** (v **zobrazení tříd**) k instalaci obslužných rutin událostí pro ovládací prvky ActiveX v kontejneru ovládacího prvku ActiveX. Obslužné rutiny události se používají k přijímání oznámení (z ovládacího prvku) určitých událostí a k provedení určité akce v reakci. Toto oznámení se nazývá "vyvolávání" události.
 
 >[!IMPORTANT]
-> ActiveX je starší technologie, která by neměla být používána při novém vývoji. Další informace o moderních technologií, které nahrazují ActiveX naleznete v tématu [ovládací prvky ActiveX](activex-controls.md).
+> ActiveX je starší verze technologie, která by se neměla používat pro nový vývoj. Další informace o moderních technologiích, které nahrazují prvky ActiveX, naleznete v tématu [ovládací prvky ActiveX](activex-controls.md).
 
 > [!NOTE]
->  Tento článek používá založené na dialogu ActiveX ovládací prvek kontejneru projekt s názvem kontejneru a vloženému ovládacímu prvku s názvem KR jako příklady v procedurách a kódu.
+>  V tomto článku se používá projekt kontejneru ovládacího prvku ActiveX s názvem kontejner a vložený ovládací prvek s názvem circ jako příklady v postupech a kódu.
 
-Pomocí tlačítka události v okně Vlastnosti, můžete vytvořit mapu událostí, ke kterým může dojít v vaše kontejnerové aplikace ovládacího prvku ActiveX. Toto mapování, nazývá "událostí jímky mapa," se vytvářejí a udržují Visual C++ při přidání obslužné rutiny událostí na třídě ovládacího prvku kontejneru. Každá obslužná rutina události, implementuje pomocí položka mapy událostí mapuje na členskou funkci obslužné rutiny události kontejneru určité události. Tato funkce obslužnou rutinu události je volána, když zadanou událost se aktivuje v objektu ovládacího prvku ActiveX.
+Pomocí tlačítka události v okně **vlastnosti** (v **zobrazení tříd**) můžete vytvořit mapu událostí, ke kterým může dojít v aplikaci kontejneru ovládacího prvku ActiveX. Tato mapa, označovaná jako "mapa jímky událostí", je vytvořena a spravována jazykem C++ Visual při přidávání obslužných rutin událostí do třídy kontejneru ovládacího prvku. Každá obslužná rutina události, která je implementována pomocí položky mapování události, mapuje konkrétní událost na členskou funkci obslužné rutiny události kontejneru. Tato funkce obslužné rutiny události je volána, když je zadaná událost vyvolána objektem ovládacího prvku ActiveX.
 
-Další informace o mapy jímek událostí najdete v tématu [mapy jímek událostí](../mfc/reference/event-sink-maps.md) v *knihovny tříd*.
+Další informace o mapách jímky událostí najdete v tématu [mapy jímky událostí](../mfc/reference/event-sink-maps.md) v *referenční dokumentaci knihovny tříd*.
 
-##  <a name="_core_event_handler_modifications_to_the_project"></a> Úpravy obslužné rutiny událostí do projektu
+##  <a name="_core_event_handler_modifications_to_the_project"></a>Změny obslužné rutiny událostí v projektu
 
-Použijete-li přidat obslužné rutiny událostí v okně Vlastnosti, mapu jímky událostí je deklarovány a definovány ve vašem projektu. Následující příkazy jsou přidány do ovládacího prvku. Soubor CPP při prvním přidání obslužné rutiny události. Tento kód deklaruje mapu událostí jímky pro třídy dialogového okna (v tomto případě `CContainerDlg`):
+Při použití okna **vlastnosti** pro přidání obslužných rutin událostí je mapa jímky událostí deklarována a definována v projektu. Následující příkazy jsou přidány do ovládacího prvku. Soubor CPP při prvním přidání obslužné rutiny události Tento kód deklaruje mapu jímky událostí pro třídu dialogového okna (v tomto případě `CContainerDlg`):
 
 [!code-cpp[NVC_MFC_AxCont#8](../mfc/codesnippet/cpp/activex-control-containers-handling-events-from-an-activex-control_1.cpp)]
 [!code-cpp[NVC_MFC_AxCont#9](../mfc/codesnippet/cpp/activex-control-containers-handling-events-from-an-activex-control_2.cpp)]
 
-Použijte okno Vlastnosti pro přidání události, události namapovat záznam (`ON_EVENT`) se přidá na mapě událostí jímky a obslužné rutiny události funkce se přidá do kontejneru implementace (. Soubor CPP).
+Při použití okna **vlastnosti** k přidání událostí se do mapy jímky událostí přidá položka (`ON_EVENT`) mapa události a do implementace kontejneru se přidá funkce obslužné rutiny události (. CPP).
 
-Následující příklad deklaruje obslužnou rutinu události, volá `OnClickInCircCtrl`, pro ovládací prvek KR `ClickIn` události:
+Následující příklad deklaruje obslužnou rutinu události, která je `OnClickInCircCtrl`volána pro `ClickIn` událost ovládacího prvku str:
 
 [!code-cpp[NVC_MFC_AxCont#10](../mfc/codesnippet/cpp/activex-control-containers-handling-events-from-an-activex-control_3.cpp)]
 
-Navíc následující šablona se přidá do `CContainerDlg` implementace třídy (. Soubor CPP) pro členské funkce obslužné rutiny události:
+Kromě toho je do `CContainerDlg` implementace třídy přidána následující šablona (. CPP) pro členskou funkci obslužné rutiny události:
 
 [!code-cpp[NVC_MFC_AxCont#11](../mfc/codesnippet/cpp/activex-control-containers-handling-events-from-an-activex-control_4.cpp)]
 
-Další informace o makra jímky událostí, naleznete v tématu [mapy jímek událostí](../mfc/reference/event-sink-maps.md) v *knihovny tříd*.
+Další informace o makrech jímky událostí naleznete v tématu [mapy jímky událostí](../mfc/reference/event-sink-maps.md) v *Referenci knihovny tříd*.
 
-#### <a name="to-create-an-event-handler-function"></a>Chcete-li vytvořit funkci obslužné rutiny událostí
+#### <a name="to-create-an-event-handler-function"></a>Vytvoření funkce obslužné rutiny událostí
 
-1. Zobrazení tříd vyberte třídy dialogového okna, která obsahuje ovládací prvek ActiveX. V tomto příkladu použijte `CContainerDlg`.
+1. Z Zobrazení tříd vyberte třídu dialogového okna, která obsahuje ovládací prvek ActiveX. V tomto příkladu použijte `CContainerDlg`.
 
-1. V okně Vlastnosti klikněte na tlačítko **události** tlačítko.
+1. V okně **vlastnosti** klikněte na tlačítko **události** .
 
-1. V okně Vlastnosti vyberte ID ovládacího prvku vloženému ovládacímu prvku ActiveX. V tomto příkladu použijte `IDC_CIRCCTRL1`.
+1. V okně **vlastnosti** vyberte ID ovládacího prvku vloženého ovládacího prvku ActiveX. V tomto příkladu použijte `IDC_CIRCCTRL1`.
 
-   V okně Vlastnosti se zobrazí seznam událostí, které mohou být vyvolané vloženému ovládacímu prvku ActiveX. Žádnou členskou funkci zobrazeny tučně už má přiřazenou funkce obslužné rutiny.
+   V okně **vlastnosti** se zobrazí seznam událostí, které mohou být aktivovány integrovaným ovládacím prvkem ActiveX. Žádná členská funkce zobrazená tučně již má přiřazené obslužné rutiny.
 
-1. Vyberte událost má třídy dialogového okna pro zpracování. V tomto příkladu vyberte **klikněte na tlačítko**.
+1. Vyberte událost, kterou má třída dialogového okna zpracovat. V tomto příkladu vyberte **možnost kliknout**.
 
-1. Z rozevíracího seznamu na pravé straně vyberte  **\<Přidat > ClickCircctrl1**.
+1. V rozevíracím seznamu na pravé straně vyberte  **\<přidat > ClickCircctrl1**.
 
-1. Dvakrát klikněte na novou funkci obslužné rutiny ze zobrazení tříd pro přechod na kód obslužné rutiny událostí v implementaci (. Soubor CPP) `CContainerDlg`.
+1. Dvojím kliknutím na novou funkci obslužné rutiny z Zobrazení tříd přejděte na kód obslužné rutiny události v implementaci (. CPP) souboru `CContainerDlg`.
 
 ## <a name="see-also"></a>Viz také:
 

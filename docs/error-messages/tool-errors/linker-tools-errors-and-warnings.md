@@ -1,6 +1,6 @@
 ---
 title: Chyby a upozornění linkerů
-ms.date: 04/17/2019
+ms.date: 09/10/2019
 f1_keywords:
 - LNK1100
 - LNK1101
@@ -139,7 +139,54 @@ f1_keywords:
 - LNK1329
 - LNK1330
 - LNK1331
-- LNK1332
+- LNK1333
+- LNK1334
+- LNK1335
+- LNK1336
+- LNK1337
+- LNK1338
+- LNK1339
+- LNK1340
+- LNK1341
+- LNK1342
+- LNK1343
+- LNK1344
+- LNK1345
+- LNK1346
+- LNK1347
+- LNK1348
+- LNK1349
+- LNK1350
+- LNK1351
+- LNK1353
+- LNK1354
+- LNK1355
+- LNK1356
+- LNK1360
+- LNK1361
+- LNK1362
+- LNK1363
+- LNK1364
+- LNK1365
+- LNK1366
+- LNK1367
+- LNK1368
+- LNK1369
+- LNK1370
+- LNK1371
+- LNK1372
+- LNK1373
+- LNK1375
+- LNK1376
+- LNK1377
+- LNK1378
+- LNK1379
+- LNK1380
+- LNK1381
+- LNK1382
+- LNK1383
+- LNK1384
+- LNK1385
 - LNK2002
 - LNK2003
 - LNK2009
@@ -156,7 +203,13 @@ f1_keywords:
 - LNK2035
 - LNK2036
 - LNK2037
-- LNK2039
+- LNK2038
+- LNK2040
+- LNK2041
+- LNK2042
+- LNK2043
+- LNK2044
+- LNK2045
 - LNK4003
 - LNK4012
 - LNK4013
@@ -234,149 +287,175 @@ f1_keywords:
 - LNK4262
 - LNK4263
 - LNK4264
+- LNK4265
+- LNK4266
+- LNK4267
+- LNK4268
+- LNK4269
+- LNK4270
+- LNK4271
+- LNK4272
+- LNK4273
+- LNK4274
+- LNK4275
+- LNK4276
+- LNK4277
+- LNK4278
+- LNK4279
+- LNK4280
+- LNK4281
+- LNK4282
+- LNK4283
+- LNK4284
+- LNK4285
+- LNK4287
+- LNK4288
+- LNK4289
+- LNK4290
 helpviewer_keywords:
 - errors [C++]
 - linker [C++], errors and warnings
 - errors [C++], linker
 ms.assetid: d4b12c0f-4dae-48b2-9b9e-fedf94c94cb0
-ms.openlocfilehash: 064f469dc7dd133c6f17f38da1bb9c2eb1907918
-ms.sourcegitcommit: 283cb64fd7958a6b7fbf0cd8534de99ac8d408eb
+ms.openlocfilehash: 8e611cd20374c912de8d648f51c97177e0d070f1
+ms.sourcegitcommit: 3caf5261b3ea80d9cf14038c116ba981d655cd13
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64857485"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70907850"
 ---
 # <a name="linker-tools-errors-and-warnings-lnkxxxx"></a>Chyby a upozornění linkerů (LNKxxxx)
 
-Linkerů odkaz, LIB, DUMPBIN a nástroje EDITBIN sdílejí společné spustitelný soubor, který generuje tyto chyby a upozornění. Nástroje pro generování upozornění formuláře LNK*xxxx*, kde *xxxx* je čtyřmístné číslo.
+PROPOJENÍ nástrojů linkeru, LIB, DUMPBIN a nástroje EDITBIN sdílejí společný spustitelný soubor, který generuje tyto chyby a upozornění. Nástroje generují upozornění formuláře LNK*xxxx*, kde *xxxx* je číslo se čtyřmi číslicemi.
 
 [!INCLUDE[error-boilerplate](../../error-messages/includes/error-boilerplate.md)]
 
-## <a name="linker-tools-errors"></a>Chyby nástroje linkeru
+## <a name="linker-tools-errors"></a>Chyby nástrojů linkeru
 
-[Chyba Linkerů LNK1000](../../error-messages/tool-errors/linker-tools-error-lnk1000.md) \
-[Chyba Linkerů LNK1103](../../error-messages/tool-errors/linker-tools-error-lnk1103.md) \
-[Chyba Linkerů LNK1104](../../error-messages/tool-errors/linker-tools-error-lnk1104.md) \
-[Chyba Linkerů LNK1106](../../error-messages/tool-errors/linker-tools-error-lnk1106.md) \
-[Chyba Linkerů LNK1107](../../error-messages/tool-errors/linker-tools-error-lnk1107.md) \
-[Chyba Linkerů LNK1112](../../error-messages/tool-errors/linker-tools-error-lnk1112.md) \
-[Chyba Linkerů LNK1113](../../error-messages/tool-errors/linker-tools-error-lnk1113.md) \
-[Chyba Linkerů LNK1120](../../error-messages/tool-errors/linker-tools-error-lnk1120.md) \
-[Chyba Linkerů LNK1123](../../error-messages/tool-errors/linker-tools-error-lnk1123.md) \
-[Chyba Linkerů LNK1127](../../error-messages/tool-errors/linker-tools-error-lnk1127.md) \
-[Chyba Linkerů LNK1136](../../error-messages/tool-errors/linker-tools-error-lnk1136.md) \
-[Chyba Linkerů LNK1140](../../error-messages/tool-errors/linker-tools-error-lnk1140.md) \
-[Chyba Linkerů LNK1141](../../error-messages/tool-errors/linker-tools-error-lnk1141.md) \
-[Chyba Linkerů LNK1143](../../error-messages/tool-errors/linker-tools-error-lnk1143.md) \
-[Chyba Linkerů LNK1152](../../error-messages/tool-errors/linker-tools-error-lnk1152.md) \
-[Chyba Linkerů LNK1158](../../error-messages/tool-errors/linker-tools-error-lnk1158.md) \
-[Chyba Linkerů LNK1164](../../error-messages/tool-errors/linker-tools-error-lnk1164.md) \
-[Chyba Linkerů LNK1166](../../error-messages/tool-errors/linker-tools-error-lnk1166.md) \
-[Chyba Linkerů LNK1168](../../error-messages/tool-errors/linker-tools-error-lnk1168.md) \
-[Chyba Linkerů LNK1169](../../error-messages/tool-errors/linker-tools-error-lnk1169.md) \
-[Chyba Linkerů LNK1179](../../error-messages/tool-errors/linker-tools-error-lnk1179.md) \
-[Chyba Linkerů LNK1181](../../error-messages/tool-errors/linker-tools-error-lnk1181.md) \
-[Chyba Linkerů LNK1188](../../error-messages/tool-errors/linker-tools-error-lnk1188.md) \
-[Chyba Linkerů LNK1189](../../error-messages/tool-errors/linker-tools-error-lnk1189.md) \
-[Chyba Linkerů LNK1196](../../error-messages/tool-errors/linker-tools-error-lnk1196.md) \
-[Linker Tools Error LNK1200](../../error-messages/tool-errors/linker-tools-error-lnk1200.md) \
-[Linker Tools Error LNK1201](../../error-messages/tool-errors/linker-tools-error-lnk1201.md) \
-[Chyba Linkerů LNK1211](../../error-messages/tool-errors/linker-tools-error-lnk1211.md) \
-[Chyba Linkerů LNK1215](../../error-messages/tool-errors/linker-tools-error-lnk1215.md) \
-[Linker Tools Error LNK1218](../../error-messages/tool-errors/linker-tools-error-lnk1218.md) \
-[Chyba Linkerů LNK1221](../../error-messages/tool-errors/linker-tools-error-lnk1221.md) \
-[Chyba Linkerů LNK1223](../../error-messages/tool-errors/linker-tools-error-lnk1223.md) \
-[Chyba Linkerů LNK1224](../../error-messages/tool-errors/linker-tools-error-lnk1224.md) \
-[Chyba Linkerů LNK1237](../../error-messages/tool-errors/linker-tools-error-lnk1237.md) \
-[Chyba Linkerů LNK1240](../../error-messages/tool-errors/linker-tools-error-lnk1240.md) \
-[Chyba Linkerů LNK1241](../../error-messages/tool-errors/linker-tools-error-lnk1241.md) \
-[Chyba Linkerů LNK1245](../../error-messages/tool-errors/linker-tools-error-lnk1245.md) \
-[Chyba Linkerů LNK1248](../../error-messages/tool-errors/linker-tools-error-lnk1248.md) \
-[Chyba Linkerů LNK1256](../../error-messages/tool-errors/linker-tools-error-lnk1256.md) \
-[Chyba Linkerů LNK1264](../../error-messages/tool-errors/linker-tools-error-lnk1264.md) \
-[Chyba Linkerů LNK1277](../../error-messages/tool-errors/linker-tools-error-lnk1277.md) \
-[Chyba Linkerů LNK1282](../../error-messages/tool-errors/linker-tools-error-lnk1282.md) \
-[Chyba Linkerů LNK1287](../../error-messages/tool-errors/linker-tools-error-lnk1287.md) \
-[Chyba Linkerů LNK1296](../../error-messages/tool-errors/linker-tools-error-lnk1296.md) \
-[Chyba Linkerů LNK1301](../../error-messages/tool-errors/linker-tools-error-lnk1301.md) \
-[Chyba Linkerů LNK1302](../../error-messages/tool-errors/linker-tools-error-lnk1302.md) \
-[Chyba Linkerů LNK1306](../../error-messages/tool-errors/linker-tools-error-lnk1306.md) \
-[Chyba Linkerů LNK1309](../../error-messages/tool-errors/linker-tools-error-lnk1309.md) \
-[Chyba Linkerů LNK1312](../../error-messages/tool-errors/linker-tools-error-lnk1312.md) \
-[Chyba Linkerů LNK1313](../../error-messages/tool-errors/linker-tools-error-lnk1313.md) \
-[Chyba Linkerů LNK1314](../../error-messages/tool-errors/linker-tools-error-lnk1314.md) \
+[LINKERŮ LNK1000 chyba nástrojů linkeru](../../error-messages/tool-errors/linker-tools-error-lnk1000.md) \
+[LINKERŮ LNK1103 chyba nástrojů linkeru](../../error-messages/tool-errors/linker-tools-error-lnk1103.md) \
+[LINKERŮ LNK1104 chyba nástrojů linkeru](../../error-messages/tool-errors/linker-tools-error-lnk1104.md) \
+[LINKERŮ LNK1106 chyba nástrojů linkeru](../../error-messages/tool-errors/linker-tools-error-lnk1106.md) \
+[LINKERŮ LNK1107 chyba nástrojů linkeru](../../error-messages/tool-errors/linker-tools-error-lnk1107.md) \
+[LINKERŮ LNK1112 chyba nástrojů linkeru](../../error-messages/tool-errors/linker-tools-error-lnk1112.md) \
+[LINKERŮ LNK1113 chyba nástrojů linkeru](../../error-messages/tool-errors/linker-tools-error-lnk1113.md) \
+[LINKERŮ LNK1120 chyba nástrojů linkeru](../../error-messages/tool-errors/linker-tools-error-lnk1120.md) \
+[LINKERŮ LNK1123 chyba nástrojů linkeru](../../error-messages/tool-errors/linker-tools-error-lnk1123.md) \
+[LINKERŮ LNK1127 chyba nástrojů linkeru](../../error-messages/tool-errors/linker-tools-error-lnk1127.md) \
+[LINKERŮ LNK1136 chyba nástrojů linkeru](../../error-messages/tool-errors/linker-tools-error-lnk1136.md) \
+[LINKERŮ LNK1140 chyba nástrojů linkeru](../../error-messages/tool-errors/linker-tools-error-lnk1140.md) \
+[LINKERŮ LNK1141 chyba nástrojů linkeru](../../error-messages/tool-errors/linker-tools-error-lnk1141.md) \
+[LINKERŮ LNK1143 chyba nástrojů linkeru](../../error-messages/tool-errors/linker-tools-error-lnk1143.md) \
+[LINKERŮ LNK1152 chyba nástrojů linkeru](../../error-messages/tool-errors/linker-tools-error-lnk1152.md) \
+[LINKERŮ LNK1158 chyba nástrojů linkeru](../../error-messages/tool-errors/linker-tools-error-lnk1158.md) \
+[LINKERŮ LNK1164 chyba nástrojů linkeru](../../error-messages/tool-errors/linker-tools-error-lnk1164.md) \
+[LINKERŮ LNK1166 chyba nástrojů linkeru](../../error-messages/tool-errors/linker-tools-error-lnk1166.md) \
+[LINKERŮ LNK1168 chyba nástrojů linkeru](../../error-messages/tool-errors/linker-tools-error-lnk1168.md) \
+[LINKERŮ LNK1169 chyba nástrojů linkeru](../../error-messages/tool-errors/linker-tools-error-lnk1169.md) \
+[LINKERŮ LNK1179 chyba nástrojů linkeru](../../error-messages/tool-errors/linker-tools-error-lnk1179.md) \
+[LINKERŮ LNK1181 chyba nástrojů linkeru](../../error-messages/tool-errors/linker-tools-error-lnk1181.md) \
+[LINKERŮ LNK1188 chyba nástrojů linkeru](../../error-messages/tool-errors/linker-tools-error-lnk1188.md) \
+[LINKERŮ LNK1189 chyba nástrojů linkeru](../../error-messages/tool-errors/linker-tools-error-lnk1189.md) \
+[LINKERŮ LNK1196 chyba nástrojů linkeru](../../error-messages/tool-errors/linker-tools-error-lnk1196.md) \
+[LINKERŮ LNK1200 chyba nástrojů linkeru](../../error-messages/tool-errors/linker-tools-error-lnk1200.md) \
+[LINKERŮ LNK1201 chyba nástrojů linkeru](../../error-messages/tool-errors/linker-tools-error-lnk1201.md) \
+[LINKERŮ LNK1211 chyba nástrojů linkeru](../../error-messages/tool-errors/linker-tools-error-lnk1211.md) \
+[LINKERŮ LNK1215 chyba nástrojů linkeru](../../error-messages/tool-errors/linker-tools-error-lnk1215.md) \
+[LINKERŮ LNK1218 chyba nástrojů linkeru](../../error-messages/tool-errors/linker-tools-error-lnk1218.md) \
+[LINKERŮ LNK1221 chyba nástrojů linkeru](../../error-messages/tool-errors/linker-tools-error-lnk1221.md) \
+[LINKERŮ LNK1223 chyba nástrojů linkeru](../../error-messages/tool-errors/linker-tools-error-lnk1223.md) \
+[LINKERŮ LNK1224 chyba nástrojů linkeru](../../error-messages/tool-errors/linker-tools-error-lnk1224.md) \
+[LINKERŮ LNK1237 chyba nástrojů linkeru](../../error-messages/tool-errors/linker-tools-error-lnk1237.md) \
+[LINKERŮ LNK1240 chyba nástrojů linkeru](../../error-messages/tool-errors/linker-tools-error-lnk1240.md) \
+[LINKERŮ LNK1241 chyba nástrojů linkeru](../../error-messages/tool-errors/linker-tools-error-lnk1241.md) \
+[LINKERŮ LNK1245 chyba nástrojů linkeru](../../error-messages/tool-errors/linker-tools-error-lnk1245.md) \
+[LINKERŮ LNK1248 chyba nástrojů linkeru](../../error-messages/tool-errors/linker-tools-error-lnk1248.md) \
+[LINKERŮ LNK1256 chyba nástrojů linkeru](../../error-messages/tool-errors/linker-tools-error-lnk1256.md) \
+[LINKERŮ LNK1264 chyba nástrojů linkeru](../../error-messages/tool-errors/linker-tools-error-lnk1264.md) \
+[LINKERŮ LNK1277 chyba nástrojů linkeru](../../error-messages/tool-errors/linker-tools-error-lnk1277.md) \
+[LINKERŮ LNK1282 chyba nástrojů linkeru](../../error-messages/tool-errors/linker-tools-error-lnk1282.md) \
+[LINKERŮ LNK1287 chyba nástrojů linkeru](../../error-messages/tool-errors/linker-tools-error-lnk1287.md) \
+[LINKERŮ LNK1296 chyba nástrojů linkeru](../../error-messages/tool-errors/linker-tools-error-lnk1296.md) \
+[LINKERŮ LNK1301 chyba nástrojů linkeru](../../error-messages/tool-errors/linker-tools-error-lnk1301.md) \
+[LINKERŮ LNK1302 chyba nástrojů linkeru](../../error-messages/tool-errors/linker-tools-error-lnk1302.md) \
+[LINKERŮ LNK1306 chyba nástrojů linkeru](../../error-messages/tool-errors/linker-tools-error-lnk1306.md) \
+[LINKERŮ LNK1309 chyba nástrojů linkeru](../../error-messages/tool-errors/linker-tools-error-lnk1309.md) \
+[LINKERŮ LNK1312 chyba nástrojů linkeru](../../error-messages/tool-errors/linker-tools-error-lnk1312.md) \
+[LINKERŮ LNK1313 chyba nástrojů linkeru](../../error-messages/tool-errors/linker-tools-error-lnk1313.md) \
+[LINKERŮ LNK1314 chyba nástrojů linkeru](../../error-messages/tool-errors/linker-tools-error-lnk1314.md) \
 [LNK1318 chyba nástrojů linkeru](../../error-messages/tool-errors/linker-tools-error-lnk1318.md) \
-[Chyba Linkerů LNK1332](../../error-messages/tool-errors/linker-tools-error-lnk1332.md) \
-[Chyba Linkerů LNK1561](../../error-messages/tool-errors/linker-tools-error-lnk1561.md) \
-[Chyba Linkerů LNK2001](../../error-messages/tool-errors/linker-tools-error-lnk2001.md) \
-[Chyba Linkerů LNK2004](../../error-messages/tool-errors/linker-tools-error-lnk2004.md) \
-[Chyba Linkerů LNK2005](../../error-messages/tool-errors/linker-tools-error-lnk2005.md) \
-[Chyba Linkerů LNK2008](../../error-messages/tool-errors/linker-tools-error-lnk2008.md) \
-[Chyba Linkerů LNK2011](../../error-messages/tool-errors/linker-tools-error-lnk2011.md) \
-[Chyba Linkerů LNK2013](../../error-messages/tool-errors/linker-tools-error-lnk2013.md) \
-[Chyba Linkerů LNK2017](../../error-messages/tool-errors/linker-tools-error-lnk2017.md) \
-[Chyba Linkerů LNK2019](../../error-messages/tool-errors/linker-tools-error-lnk2019.md) \
-[Chyba Linkerů LNK2020](../../error-messages/tool-errors/linker-tools-error-lnk2020.md) \
-[Chyba Linkerů LNK2022](../../error-messages/tool-errors/linker-tools-error-lnk2022.md) \
-[Chyba Linkerů LNK2023](../../error-messages/tool-errors/linker-tools-error-lnk2023.md) \
-[Chyba Linkerů LNK2026](../../error-messages/tool-errors/linker-tools-error-lnk2026.md) \
-[Chyba Linkerů LNK2027](../../error-messages/tool-errors/linker-tools-error-lnk2027.md) \
-[Chyba Linkerů LNK2028](../../error-messages/tool-errors/linker-tools-error-lnk2028.md) \
-[Chyba Linkerů LNK2031](../../error-messages/tool-errors/linker-tools-error-lnk2031.md) \
-[Chyba Linkerů LNK2033](../../error-messages/tool-errors/linker-tools-error-lnk2033.md) \
+[LINKERŮ LNK1332 chyba nástrojů linkeru](../../error-messages/tool-errors/linker-tools-error-lnk1332.md) \
+[LNK1352 chyba nástrojů linkeru](../../error-messages/tool-errors/linker-tools-error-lnk1352.md) \
+[LINKERŮ LNK1561 chyba nástrojů linkeru](../../error-messages/tool-errors/linker-tools-error-lnk1561.md) \
+[LINKERŮ LNK2001 chyba nástrojů linkeru](../../error-messages/tool-errors/linker-tools-error-lnk2001.md) \
+[LINKERŮ LNK2004 chyba nástrojů linkeru](../../error-messages/tool-errors/linker-tools-error-lnk2004.md) \
+[LINKERŮ LNK2005 chyba nástrojů linkeru](../../error-messages/tool-errors/linker-tools-error-lnk2005.md) \
+[LINKERŮ LNK2008 chyba nástrojů linkeru](../../error-messages/tool-errors/linker-tools-error-lnk2008.md) \
+[LINKERŮ LNK2011 chyba nástrojů linkeru](../../error-messages/tool-errors/linker-tools-error-lnk2011.md) \
+[LINKERŮ LNK2013 chyba nástrojů linkeru](../../error-messages/tool-errors/linker-tools-error-lnk2013.md) \
+[LINKERŮ LNK2017 chyba nástrojů linkeru](../../error-messages/tool-errors/linker-tools-error-lnk2017.md) \
+[LINKERŮ LNK2019 chyba nástrojů linkeru](../../error-messages/tool-errors/linker-tools-error-lnk2019.md) \
+[LINKERŮ LNK2020 chyba nástrojů linkeru](../../error-messages/tool-errors/linker-tools-error-lnk2020.md) \
+[LINKERŮ LNK2022 chyba nástrojů linkeru](../../error-messages/tool-errors/linker-tools-error-lnk2022.md) \
+[LINKERŮ LNK2023 chyba nástrojů linkeru](../../error-messages/tool-errors/linker-tools-error-lnk2023.md) \
+[LINKERŮ LNK2026 chyba nástrojů linkeru](../../error-messages/tool-errors/linker-tools-error-lnk2026.md) \
+[LINKERŮ LNK2027 chyba nástrojů linkeru](../../error-messages/tool-errors/linker-tools-error-lnk2027.md) \
+[LINKERŮ LNK2028 chyba nástrojů linkeru](../../error-messages/tool-errors/linker-tools-error-lnk2028.md) \
+[LINKERŮ LNK2031 chyba nástrojů linkeru](../../error-messages/tool-errors/linker-tools-error-lnk2031.md) \
+[LINKERŮ LNK2033 chyba nástrojů linkeru](../../error-messages/tool-errors/linker-tools-error-lnk2033.md) \
 [Chyba linkerů LNK2039](../../error-messages/tool-errors/linker-tools-error-lnk2039.md)
 
-## <a name="linker-tools-warnings"></a>Upozornění linkerů
+## <a name="linker-tools-warnings"></a>Upozornění nástrojů linkeru
 
-[Linker Tools Warning LNK4001](../../error-messages/tool-errors/linker-tools-warning-lnk4001.md) \
-[Upozornění Linkerů LNK4002](../../error-messages/tool-errors/linker-tools-warning-lnk4002.md) \
-[Upozornění Linkerů LNK4006](../../error-messages/tool-errors/linker-tools-warning-lnk4006.md) \
-[Upozornění Linkerů LNK4010](../../error-messages/tool-errors/linker-tools-warning-lnk4010.md) \
-[Upozornění Linkerů LNK4014](../../error-messages/tool-errors/linker-tools-warning-lnk4014.md) \
-[LNK4020 upozornění Linkerů](../../error-messages/tool-errors/linker-tools-warning-lnk4020.md) \
-[Upozornění Linkerů LNK4022](../../error-messages/tool-errors/linker-tools-warning-lnk4022.md) \
-[Upozornění Linkerů LNK4039](../../error-messages/tool-errors/linker-tools-warning-lnk4039.md) \
-[Upozornění Linkerů LNK4044](../../error-messages/tool-errors/linker-tools-warning-lnk4044.md) \
-[Upozornění Linkerů LNK4049](../../error-messages/tool-errors/linker-tools-warning-lnk4049.md) \
-[Upozornění Linkerů LNK4065](../../error-messages/tool-errors/linker-tools-warning-lnk4065.md) \
-[Upozornění Linkerů LNK4070](../../error-messages/tool-errors/linker-tools-warning-lnk4070.md) \
-[Upozornění Linkerů LNK4071](../../error-messages/tool-errors/linker-tools-warning-lnk4071.md) \
-[Upozornění Linkerů LNK4073](../../error-messages/tool-errors/linker-tools-warning-lnk4073.md) \
-[Upozornění Linkerů LNK4075](../../error-messages/tool-errors/linker-tools-warning-lnk4075.md) \
-[Upozornění Linkerů LNK4076](../../error-messages/tool-errors/linker-tools-warning-lnk4076.md) \
-[Upozornění Linkerů LNK4078](../../error-messages/tool-errors/linker-tools-warning-lnk4078.md) \
-[Upozornění Linkerů LNK4086](../../error-messages/tool-errors/linker-tools-warning-lnk4086.md) \
-[Upozornění Linkerů LNK4092](../../error-messages/tool-errors/linker-tools-warning-lnk4092.md) \
-[Upozornění Linkerů LNK4096](../../error-messages/tool-errors/linker-tools-warning-lnk4096.md) \
-[Upozornění Linkerů LNK4098](../../error-messages/tool-errors/linker-tools-warning-lnk4098.md) \
-[Upozornění Linkerů LNK4099](../../error-messages/tool-errors/linker-tools-warning-lnk4099.md) \
-[Upozornění Linkerů LNK4102](../../error-messages/tool-errors/linker-tools-warning-lnk4102.md) \
-[Upozornění Linkerů LNK4104](../../error-messages/tool-errors/linker-tools-warning-lnk4104.md) \
-[Upozornění Linkerů LNK4105](../../error-messages/tool-errors/linker-tools-warning-lnk4105.md) \
-[Upozornění Linkerů LNK4194](../../error-messages/tool-errors/linker-tools-warning-lnk4194.md) \
-[Upozornění Linkerů LNK4197](../../error-messages/tool-errors/linker-tools-warning-lnk4197.md) \
-[Upozornění Linkerů LNK4199](../../error-messages/tool-errors/linker-tools-warning-lnk4199.md) \
-[Linker Tools Warning LNK4200](../../error-messages/tool-errors/linker-tools-warning-lnk4200.md) \
-[Linker Tools Warning LNK4204](../../error-messages/tool-errors/linker-tools-warning-lnk4204.md) \
-[Upozornění Linkerů LNK4205](../../error-messages/tool-errors/linker-tools-warning-lnk4205.md) \
-[Upozornění Linkerů LNK4206](../../error-messages/tool-errors/linker-tools-warning-lnk4206.md) \
-[Linker Tools Warning LNK4210](../../error-messages/tool-errors/linker-tools-warning-lnk4210.md) \
-[Linker Tools Warning LNK4216](../../error-messages/tool-errors/linker-tools-warning-lnk4216.md) \
-[Upozornění Linkerů LNK4217](../../error-messages/tool-errors/linker-tools-warning-lnk4217.md) \
-[Linker Tools Warning LNK4219](../../error-messages/tool-errors/linker-tools-warning-lnk4219.md) \
-[Linker Tools Warning LNK4220](../../error-messages/tool-errors/linker-tools-warning-lnk4220.md) \
-[Upozornění Linkerů LNK4221](../../error-messages/tool-errors/linker-tools-warning-lnk4221.md) \
-[Upozornění Linkerů LNK4222](../../error-messages/tool-errors/linker-tools-warning-lnk4222.md) \
-[Upozornění Linkerů LNK4224](../../error-messages/tool-errors/linker-tools-warning-lnk4224.md) \
-[Upozornění Linkerů LNK4227](../../error-messages/tool-errors/linker-tools-warning-lnk4227.md) \
-[Upozornění Linkerů LNK4229](../../error-messages/tool-errors/linker-tools-warning-lnk4229.md) \
-[Upozornění Linkerů LNK4237](../../error-messages/tool-errors/linker-tools-warning-lnk4237.md) \
-[Upozornění Linkerů LNK4247](../../error-messages/tool-errors/linker-tools-warning-lnk4247.md) \
-[Upozornění Linkerů LNK4248](../../error-messages/tool-errors/linker-tools-warning-lnk4248.md) \
-[Upozornění Linkerů LNK4253](../../error-messages/tool-errors/linker-tools-warning-lnk4253.md) \
-[Linker Tools Warning LNK4254](../../error-messages/tool-errors/linker-tools-warning-lnk4254.md) \
+[LINKERŮ LNK4001 – upozornění nástrojů linkeru](../../error-messages/tool-errors/linker-tools-warning-lnk4001.md) \
+[LINKERŮ LNK4002 – upozornění nástrojů linkeru](../../error-messages/tool-errors/linker-tools-warning-lnk4002.md) \
+[LINKERŮ LNK4006 – upozornění nástrojů linkeru](../../error-messages/tool-errors/linker-tools-warning-lnk4006.md) \
+[LINKERŮ LNK4010 – upozornění nástrojů linkeru](../../error-messages/tool-errors/linker-tools-warning-lnk4010.md) \
+[LINKERŮ LNK4014 – upozornění nástrojů linkeru](../../error-messages/tool-errors/linker-tools-warning-lnk4014.md) \
+[LNK4020 – upozornění nástrojů linkeru](../../error-messages/tool-errors/linker-tools-warning-lnk4020.md) \
+[LINKERŮ LNK4022 – upozornění nástrojů linkeru](../../error-messages/tool-errors/linker-tools-warning-lnk4022.md) \
+[LINKERŮ LNK4039 – upozornění nástrojů linkeru](../../error-messages/tool-errors/linker-tools-warning-lnk4039.md) \
+[LINKERŮ LNK4044 – upozornění nástrojů linkeru](../../error-messages/tool-errors/linker-tools-warning-lnk4044.md) \
+[LINKERŮ LNK4049 – upozornění nástrojů linkeru](../../error-messages/tool-errors/linker-tools-warning-lnk4049.md) \
+[LINKERŮ LNK4065 – upozornění nástrojů linkeru](../../error-messages/tool-errors/linker-tools-warning-lnk4065.md) \
+[LINKERŮ LNK4070 – upozornění nástrojů linkeru](../../error-messages/tool-errors/linker-tools-warning-lnk4070.md) \
+[LINKERŮ LNK4071 – upozornění nástrojů linkeru](../../error-messages/tool-errors/linker-tools-warning-lnk4071.md) \
+[LINKERŮ LNK4073 – upozornění nástrojů linkeru](../../error-messages/tool-errors/linker-tools-warning-lnk4073.md) \
+[LINKERŮ LNK4075 – upozornění nástrojů linkeru](../../error-messages/tool-errors/linker-tools-warning-lnk4075.md) \
+[LINKERŮ LNK4076 – upozornění nástrojů linkeru](../../error-messages/tool-errors/linker-tools-warning-lnk4076.md) \
+[LINKERŮ LNK4078 – upozornění nástrojů linkeru](../../error-messages/tool-errors/linker-tools-warning-lnk4078.md) \
+[LINKERŮ LNK4086 – upozornění nástrojů linkeru](../../error-messages/tool-errors/linker-tools-warning-lnk4086.md) \
+[LINKERŮ LNK4092 – upozornění nástrojů linkeru](../../error-messages/tool-errors/linker-tools-warning-lnk4092.md) \
+[LINKERŮ LNK4096 – upozornění nástrojů linkeru](../../error-messages/tool-errors/linker-tools-warning-lnk4096.md) \
+[LINKERŮ LNK4098 – upozornění nástrojů linkeru](../../error-messages/tool-errors/linker-tools-warning-lnk4098.md) \
+[LINKERŮ LNK4099 – upozornění nástrojů linkeru](../../error-messages/tool-errors/linker-tools-warning-lnk4099.md) \
+[LINKERŮ LNK4102 – upozornění nástrojů linkeru](../../error-messages/tool-errors/linker-tools-warning-lnk4102.md) \
+[LINKERŮ LNK4104 – upozornění nástrojů linkeru](../../error-messages/tool-errors/linker-tools-warning-lnk4104.md) \
+[LINKERŮ LNK4105 – upozornění nástrojů linkeru](../../error-messages/tool-errors/linker-tools-warning-lnk4105.md) \
+[LINKERŮ LNK4194 – upozornění nástrojů linkeru](../../error-messages/tool-errors/linker-tools-warning-lnk4194.md) \
+[LINKERŮ LNK4197 – upozornění nástrojů linkeru](../../error-messages/tool-errors/linker-tools-warning-lnk4197.md) \
+[LINKERŮ LNK4199 – upozornění nástrojů linkeru](../../error-messages/tool-errors/linker-tools-warning-lnk4199.md) \
+[LINKERŮ LNK4200 – upozornění nástrojů linkeru](../../error-messages/tool-errors/linker-tools-warning-lnk4200.md) \
+[LINKERŮ LNK4204 – upozornění nástrojů linkeru](../../error-messages/tool-errors/linker-tools-warning-lnk4204.md) \
+[LINKERŮ LNK4205 – upozornění nástrojů linkeru](../../error-messages/tool-errors/linker-tools-warning-lnk4205.md) \
+[LINKERŮ LNK4206 – upozornění nástrojů linkeru](../../error-messages/tool-errors/linker-tools-warning-lnk4206.md) \
+[LINKERŮ LNK4210 – upozornění nástrojů linkeru](../../error-messages/tool-errors/linker-tools-warning-lnk4210.md) \
+[LINKERŮ LNK4216 – upozornění nástrojů linkeru](../../error-messages/tool-errors/linker-tools-warning-lnk4216.md) \
+[LINKERŮ LNK4217 – upozornění nástrojů linkeru](../../error-messages/tool-errors/linker-tools-warning-lnk4217.md) \
+[LINKERŮ LNK4219 – upozornění nástrojů linkeru](../../error-messages/tool-errors/linker-tools-warning-lnk4219.md) \
+[LINKERŮ LNK4220 – upozornění nástrojů linkeru](../../error-messages/tool-errors/linker-tools-warning-lnk4220.md) \
+[LINKERŮ LNK4221 – upozornění nástrojů linkeru](../../error-messages/tool-errors/linker-tools-warning-lnk4221.md) \
+[LINKERŮ LNK4222 – upozornění nástrojů linkeru](../../error-messages/tool-errors/linker-tools-warning-lnk4222.md) \
+[LINKERŮ LNK4224 – upozornění nástrojů linkeru](../../error-messages/tool-errors/linker-tools-warning-lnk4224.md) \
+[LINKERŮ LNK4227 – upozornění nástrojů linkeru](../../error-messages/tool-errors/linker-tools-warning-lnk4227.md) \
+[LINKERŮ LNK4229 – upozornění nástrojů linkeru](../../error-messages/tool-errors/linker-tools-warning-lnk4229.md) \
+[LINKERŮ LNK4237 – upozornění nástrojů linkeru](../../error-messages/tool-errors/linker-tools-warning-lnk4237.md) \
+[LINKERŮ LNK4247 – upozornění nástrojů linkeru](../../error-messages/tool-errors/linker-tools-warning-lnk4247.md) \
+[LINKERŮ LNK4248 – upozornění nástrojů linkeru](../../error-messages/tool-errors/linker-tools-warning-lnk4248.md) \
+[LINKERŮ LNK4253 – upozornění nástrojů linkeru](../../error-messages/tool-errors/linker-tools-warning-lnk4253.md) \
+[LINKERŮ LNK4254 – upozornění nástrojů linkeru](../../error-messages/tool-errors/linker-tools-warning-lnk4254.md) \
 [Upozornění linkerů LNK4286](../../error-messages/tool-errors/linker-tools-warning-lnk4286.md)
 
 ## <a name="see-also"></a>Viz také:
 
-[C /C++ nástroje chyby a upozornění kompilátoru a sestavení](../compiler-errors-1/c-cpp-build-errors.md)
+[Chyby aC++ upozornění pro nástroje C/kompilátor a sestavení](../compiler-errors-1/c-cpp-build-errors.md)
