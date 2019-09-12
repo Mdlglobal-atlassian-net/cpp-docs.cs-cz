@@ -3208,7 +3208,7 @@ C++ Kompilátor v Visual Studio 2013 detekuje neshody v _ITERATOR_DEBUG_LEVEL, k
 
    - Místo volání, například `afxGlobalData.IsD2DInitialized`, volejte. `AfxGetD2DState->IsD2DInitialized`
 
-- Odebrala se zastaralá knihovna ATL *. Soubory CPP ze složky \atlmfc\include\
+- Odebrala se zastaralá knihovna ATL *. Soubory CPP ze složky \atlmfc\include
 
 - Pro `afxGlobalData` splnění`DLLMain` požadavků byla na vyžádání přesunuta inicializace na vyžádání místo v čase inicializace CRT.
 
