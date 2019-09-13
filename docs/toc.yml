@@ -6395,8 +6395,6 @@
                   expanded: false
                   items:
                     - name: Soubory a streamy
-                      href: c-runtime-library/files-and-streams.md
-                    - name: Textové a binární streamy
                       href: c-runtime-library/text-and-binary-streams.md
                     - name: Bajtové a široké streamy
                       href: c-runtime-library/byte-and-wide-streams.md
