@@ -1,10 +1,10 @@
 ---
 title: _ismbbgraph, _ismbbgraph_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _ismbbgraph_l
 - _ismbbgraph
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _ismbbgraph
 - _ismbbgraph_l
@@ -28,16 +31,16 @@ helpviewer_keywords:
 - _ismbbgraph function
 - ismbbgraph function
 ms.assetid: b60db718-134f-4796-acc1-592d0b9efbb7
-ms.openlocfilehash: d5b5dace39e674744148a1ddf0c692692fb889f8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 096450869f9a150585b3102cea155ecd948c5751
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62286769"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70954189"
 ---
-# <a name="ismbbgraph-ismbbgraphl"></a>_ismbbgraph, _ismbbgraph_l
+# <a name="_ismbbgraph-_ismbbgraph_l"></a>_ismbbgraph, _ismbbgraph_l
 
-Určuje, zda je určitý vícebajtový znak grafickým znakem.
+Určuje, zda je konkrétní vícebajtový znak grafickým znakem.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -54,10 +57,10 @@ int _ismbbgraph_l (
 ### <a name="parameters"></a>Parametry
 
 *c*<br/>
-Celé číslo k testování.
+Celé číslo, které se má testovat.
 
-*Národní prostředí*<br/>
-Národní prostředí.
+*jazyka*<br/>
+Národní prostředí, které se má použít.
 
 ## <a name="return-value"></a>Návratová hodnota
 
@@ -65,20 +68,20 @@ Vrací nenulovou hodnotu, pokud výraz:
 
 `isctype(c, ( _PUNCT | _UPPER | _LOWER | _DIGIT )) || _ismbbkprint(c)`
 
-je nenulový pro *c*, nebo 0, pokud není. **_ismbbgraph –** používá aktuální národní prostředí pro všechna závislá chování. **_ismbbgraph_l –** je stejná s tím rozdílem, že používá národní prostředí předané. Další informace najdete v tématu [národní prostředí](../../c-runtime-library/locale.md).
+je nenulové pro *c*nebo 0, pokud není. **_ismbbgraph** používá aktuální národní prostředí pro jakékoli chování závislé na národním prostředí. **_ismbbgraph_l** je totožný s tím rozdílem, že místo toho používá národní prostředí. Další informace najdete v tématu [národní prostředí](../../c-runtime-library/locale.md).
 
 ## <a name="requirements"></a>Požadavky
 
 |Rutina|Požadovaný hlavičkový soubor|
 |-------------|---------------------|
-|**_ismbbgraph**|\<mbctype.h>|
-|**_ismbbgraph_l**|\<mbctype.h>|
+|**_ismbbgraph**|\<Mbctype. h >|
+|**_ismbbgraph_l**|\<Mbctype. h >|
 
-Další informace o kompatibilitě naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
 
 ## <a name="libraries"></a>Knihovny
 
-Všechny verze [běhových knihoven C](../../c-runtime-library/crt-library-features.md).
+Všechny verze [knihoven run-time jazyka C](../../c-runtime-library/crt-library-features.md).
 
 ## <a name="see-also"></a>Viz také:
 
