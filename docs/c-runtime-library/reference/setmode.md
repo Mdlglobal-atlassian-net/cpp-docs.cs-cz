@@ -1,9 +1,9 @@
 ---
 title: _setmode
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _setmode
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _setmode
 helpviewer_keywords:
@@ -26,16 +29,16 @@ helpviewer_keywords:
 - files [C++], translation
 - setmode function
 ms.assetid: 996ff7cb-11d1-43f4-9810-f6097182642a
-ms.openlocfilehash: 67cca27ba03a99d7e192d438a98f1bb3a93845ee
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7f14cc9451b93a9077916b8c650645990ba654a3
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62356386"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70948593"
 ---
-# <a name="setmode"></a>_setmode
+# <a name="_setmode"></a>_setmode
 
-Nastaví režim překladu souboru.
+Nastaví režim překladu souborů.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -51,38 +54,38 @@ int _setmode (
 *fd*<br/>
 Popisovač souboru.
 
-*Režim*<br/>
-Nový režim překladu.
+*Mode*<br/>
+Nový režim překladu
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Pokud je úspěšná, vrátí předchozí režim překladu.
+V případě úspěchu vrátí předchozí režim překladu.
 
-Pokud jsou předány neplatné parametry pro tuto funkci, vyvolán obslužnou rutinu neplatného parametru, jak je popsáno v [Parameter Validation](../../c-runtime-library/parameter-validation.md). Pokud smí provádění pokračovat, tato funkce vrátí hodnotu -1 a nastaví **errno** buď **EBADF**, což znamená neplatného popisovače souboru, nebo **EINVAL**, který Určuje neplatnou *režimu* argument.
+Jsou-li do této funkce předány neplatné parametry, je vyvolána obslužná rutina neplatného parametru, jak je popsáno v tématu [ověřování parametru](../../c-runtime-library/parameter-validation.md). Pokud provádění může pokračovat, vrátí tato funkce hodnotu-1 a nastaví **errno** na buď **EBADF**, což znamená neplatný popisovač souboru, nebo **EINVAL**, který označuje neplatný argument *režimu* .
 
 Další informace o těchto a dalších návratových kódech naleznete v tématu [_doserrno, errno, _sys_errlist a _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Poznámky
 
-**_Setmode** funkce nastaví *režimu* režim překladu souboru Dal *fd*. Předání **_O_TEXT** jako *režimu* nastaví text (který je, přeloženém) režimu. Návrat na začátek řádku return-line informačního kanálu kombinace (CR-LF) jsou přeloženy do jednoho kanálu znak na vstupním řádku. Znaky informačního kanálu řádků jsou přeloženy do na výstupu jako kombinace CR-LF. Předání **_O_BINARY** sady binárním (nepřeloženém) režimu, ve kterém jsou tyto překlady potlačeny.
+Funkce **_setmode** nastaví *režim* překladu souboru, který je dán souborem *FD*. Předávání **_O_TEXT** jako *režim* nastavuje text (to je přeložený) režim. Kombinace návratového kanálu návratového řádku (CR-LF) jsou přeloženy na jeden znak víceřádkového kanálu na vstupu. Znaky kanálu čáry se ve výstupu překládají na kombinace znaků CR-LF. Předání **_O_BINARY** sady do binárního (nepřeloženého) režimu, ve kterém jsou tyto překlady potlačeny.
 
-Můžete také předat **_O_U16TEXT**, **_O_U8TEXT**, nebo **_O_WTEXT** pro povolení režimu Unicode, jak je uvedeno v druhém příkladu dále v tomto dokumentu.
-
-> [!CAUTION]
-> Režim kódování Unicode je pro funkce široký tisku (například `wprintf`) a není podporována pro úzké funkce tisku. Použití funkce úzký tisk v režimu datového proudu Unicode aktivuje assert.
-
-**_setmode** se obvykle používá k úpravě výchozí režim překladu **stdin** a **stdout**, ale můžete ji použít na jakýkoli soubor. Pokud použijete **_setmode** pro popisovače souborů pro datový proud, volejte **_setmode** před provedením jakékoli operace vstupní nebo výstupní v datovém proudu.
+Můžete také předat **_O_U16TEXT**, **_O_U8TEXT**nebo **_O_WTEXT** pro povolení režimu Unicode, jak je znázorněno v druhém příkladu dále v tomto dokumentu.
 
 > [!CAUTION]
-> Pokud zapíšete data do datového proudu souboru explicitně vyprázdnění kód pomocí [fflush –](fflush.md) před použitím **_setmode** ke změně režimu. Pokud není vyprázdnění kód, může se zobrazit neočekávané chování. Pokud jste nenapsali data do datového proudu, není nutné vyprázdnit kód.
+> Režim kódování Unicode je určen pro funkce pro nejrůznější tisk ( `wprintf`například) a není podporován pro funkce úzkého tisku. Použití funkce úzkého tisku v datovém proudu režimu Unicode aktivuje vyhodnocení.
+
+**_setmode** se obvykle používá k úpravě výchozího režimu překladu **stdin** a **stdout**, ale můžete ho použít v jakémkoli souboru. Pokud **_setmode** použijete pro popisovač souboru pro datový proud, zavolejte **_setmode** před provedením jakékoli operace vstupu nebo výstupu v datovém proudu.
+
+> [!CAUTION]
+> Pokud zapisujete data do datového proudu souboru, kód explicitně vyprázdněte pomocí [fflush](fflush.md) před tím, než použijete **_setmode** ke změně režimu. Pokud kód nezaprázdnete, může dojít k neočekávanému chování. Pokud jste do datového proudu nezapsali data, nemusíte tento kód vyprázdnit.
 
 ## <a name="requirements"></a>Požadavky
 
-|Rutina|Požadovaný hlavičkový soubor|Volitelná záhlaví|
+|Rutina|Požadovaný hlavičkový soubor|Volitelné hlavičky|
 |-------------|---------------------|----------------------|
 |**_setmode**|\<io.h>|\<fcntl.h>|
 
-Další informace o kompatibilitě naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Příklad
 

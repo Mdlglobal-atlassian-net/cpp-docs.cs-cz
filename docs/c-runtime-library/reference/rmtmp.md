@@ -1,9 +1,9 @@
 ---
 title: _rmtmp
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _rmtmp
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - rmtmp
 - _rmtmp
@@ -27,16 +30,16 @@ helpviewer_keywords:
 - files [C++], removing
 - temporary files [C++], removing
 ms.assetid: 7419501e-2587-4f2a-b469-0dca07f84736
-ms.openlocfilehash: bf4f2cff48e8660682fc8a00d10d9a1fe960a6a7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 314399cf174974132a3635631162a7ffa89342c4
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62357419"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70949162"
 ---
-# <a name="rmtmp"></a>_rmtmp
+# <a name="_rmtmp"></a>_rmtmp
 
-Odstraní dočasné soubory.
+Odebere dočasné soubory.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -47,11 +50,11 @@ int _rmtmp( void );
 
 ## <a name="return-value"></a>Návratová hodnota
 
-**_rmtmp –** vrátí počet dočasné soubory uzavřen a odstraněn.
+**_rmtmp** vrátí počet uzavřených a odstraněných dočasných souborů.
 
 ## <a name="remarks"></a>Poznámky
 
-**_Rmtmp –** funkce vyčistí všechny dočasné soubory v aktuálním adresáři. Funkce odebere pouze ty soubory, které jsou vytvořené **tmpfile –**; použít pouze ve stejném adresáři, ve kterém byly vytvořeny dočasné soubory.
+Funkce **_rmtmp** vyčistí všechny dočasné soubory v aktuálním adresáři. Funkce odebere pouze soubory vytvořené pomocí **tmpfile**; Používejte ho jenom ve stejném adresáři, ve kterém se vytvořily dočasné soubory.
 
 ## <a name="requirements"></a>Požadavky
 
@@ -59,19 +62,19 @@ int _rmtmp( void );
 |-------------|---------------------|
 |**_rmtmp**|\<stdio.h>|
 
-Další informace o kompatibilitě naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
 
 ## <a name="libraries"></a>Knihovny
 
-Všechny verze [běhových knihoven C](../../c-runtime-library/crt-library-features.md).
+Všechny verze [knihoven run-time jazyka C](../../c-runtime-library/crt-library-features.md).
 
 ## <a name="example"></a>Příklad
 
-Podívejte se na příklad pro [tmpfile –](tmpfile.md).
+Podívejte se na příklad pro [tmpfile](tmpfile.md).
 
 ## <a name="see-also"></a>Viz také:
 
-[Stream vstupně-výstupních operací](../../c-runtime-library/stream-i-o.md)<br/>
+[Vstup/výstup datového proudu](../../c-runtime-library/stream-i-o.md)<br/>
 [_flushall](flushall.md)<br/>
 [tmpfile](tmpfile.md)<br/>
 [_tempnam, _wtempnam, tmpnam, _wtmpnam](tempnam-wtempnam-tmpnam-wtmpnam.md)<br/>

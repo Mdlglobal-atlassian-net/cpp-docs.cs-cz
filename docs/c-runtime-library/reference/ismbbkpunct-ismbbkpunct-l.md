@@ -1,10 +1,10 @@
 ---
 title: _ismbbkpunct, _ismbbkpunct_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _ismbbkpunct_l
 - _ismbbkpunct
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - ismbbkpunct_l
 - _ismbbkpunct_l
@@ -28,16 +31,16 @@ helpviewer_keywords:
 - ismbbkpunct function
 - _ismbbkpunct function
 ms.assetid: a04c59cd-5ca7-4296-bec0-2b0d7f04edd0
-ms.openlocfilehash: 24a82bdf0dde2beb0978226208c151689e06ed72
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 35f09013fbbe522a1eb747f2d2131a5fbb23f765
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62287027"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70954091"
 ---
-# <a name="ismbbkpunct-ismbbkpunctl"></a>_ismbbkpunct, _ismbbkpunct_l
+# <a name="_ismbbkpunct-_ismbbkpunct_l"></a>_ismbbkpunct, _ismbbkpunct_l
 
-Kontroluje, zda je vícebajtový znak je znak interpunkce.
+Kontroluje, zda vícebajtový znak je znak interpunkce.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -54,23 +57,23 @@ int _ismbbkpunct_l(
 ### <a name="parameters"></a>Parametry
 
 *c*<br/>
-Celé číslo k testování.
+Celé číslo, které se má testovat.
 
-*Národní prostředí*<br/>
-Národní prostředí.
+*jazyka*<br/>
+Národní prostředí, které se má použít.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-**_ismbbkpunct –** vrací nenulovou hodnotu, pokud celé číslo *c* je jiné než ASCII interpunkční symbol, nebo 0, pokud není. Například pouze v kódové stránce 932 **_ismbbkpunct –** interpunkční znaménka katakana. **_ismbbkpunct –** používá aktuální národní prostředí pro všechna nastavení závislé na národním prostředí znak. **_ismbbkpunct_l –** je totožný s tím rozdílem, že používá národní prostředí, které je předáno. Další informace najdete v tématu [národní prostředí](../../c-runtime-library/locale.md).
+**_ismbbkpunct** vrací nenulovou hodnotu, pokud celé číslo *c* je symbol interpunkce mimo ASCII, nebo 0, pokud není. Například pouze v kódové stránce 932 **_ismbbkpunct** testy pro interpunkční znaménka Katakana. **_ismbbkpunct** používá aktuální národní prostředí pro všechna nastavení znaků závislá na národním prostředí. **_ismbbkpunct_l** je totožný s tím rozdílem, že používá národní prostředí, které je předáno. Další informace najdete v tématu [národní prostředí](../../c-runtime-library/locale.md).
 
 ## <a name="requirements"></a>Požadavky
 
 |Rutina|Požadovaný hlavičkový soubor|
 |-------------|---------------------|
-|**_ismbbkpunct**|\<mbctype.h>|
-|**_ismbbkpunct_l**|\<mbctype.h>|
+|**_ismbbkpunct**|\<Mbctype. h >|
+|**_ismbbkpunct_l**|\<Mbctype. h >|
 
-Další informace o kompatibilitě naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Viz také:
 

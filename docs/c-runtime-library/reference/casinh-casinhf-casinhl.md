@@ -1,11 +1,11 @@
 ---
-title: casinh casinhf, casinhl
+title: casinh, casinhf, casinhl
 ms.date: 11/04/2016
-apiname:
+api_name:
 - casinh
 - casinhl
 - casinhf
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - casinh
 - casinhf
@@ -30,16 +33,16 @@ helpviewer_keywords:
 - casinhf function
 - casinhl function
 ms.assetid: bd18340b-21dd-4c86-a14e-e8e15dd97e3b
-ms.openlocfilehash: c274f4dcdfb16317820ce5c39918fa6135210eea
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6deec85dc980a7bd421de87349f512564912d98c
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62340674"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70943373"
 ---
-# <a name="casinh-casinhf-casinhl"></a>casinh casinhf, casinhl
+# <a name="casinh-casinhf-casinhl"></a>casinh, casinhf, casinhl
 
-Načte inverzní hyperbolický sinus komplexního čísla s kusy větev mimo interval [-i, + můžu] imaginární ose.
+Načte inverzní hyperbolický sinus komplexního čísla s větvemi mimo interval [-i, + i] podél imaginární osy.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -64,23 +67,23 @@ _Lcomplex casinhl(
 ### <a name="parameters"></a>Parametry
 
 *z*<br/>
-Komplexní čísla, která představuje úhel v radiánech.
+Komplexní číslo představující úhel v radiánech.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Inverzní hyperbolický sinus *z*, v radiánech. Výsledek není vázaný na skutečné ose a v intervalu [-iπ/2 + iπ/2] imaginární ose.
+Inverzní hyperbolický sinus z *z*v radiánech. Výsledek je bez vazby podél reálné osy a v intervalu [-iπ/2, + iπ/2] podél imaginární osy.
 
 ## <a name="remarks"></a>Poznámky
 
-Protože C++ umožňuje přetížení, můžete volat přetížení **casinh** , která používají a vrací **_Fcomplex** a **_Lcomplex** hodnoty. V programu jazyka C **casinh** vždy převezme a vrátí **_Dcomplex** hodnotu.
+Vzhledem C++ k tomu, že umožňuje přetížení, můžete volat přetížení **casinh** , která přijímají a vracejí hodnoty **_Fcomplex** a **_Lcomplex** . V programu v jazyce C **casinh** vždycky přebírá a vrací hodnotu **_Dcomplex** .
 
 ## <a name="requirements"></a>Požadavky
 
-|Rutina|Záhlaví C|Hlaviček jazyka C++|
+|Rutina|Hlavička jazyka C|C++hlaviček|
 |-------------|--------------|------------------|
-|**casinh**,               **casinhf**, **casinhl**|\<complex.h>|\<ccomplex>|
+|**casinh**, **casinhf**, **casinhl**|\<complex.h>|\<ccomplex >|
 
-Další informace o kompatibilitě naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Viz také:
 

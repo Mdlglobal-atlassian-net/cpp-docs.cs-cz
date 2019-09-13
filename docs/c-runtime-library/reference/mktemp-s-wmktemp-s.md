@@ -1,10 +1,10 @@
 ---
 title: _mktemp_s, _wmktemp_s
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _mktemp_s
 - _wmktemp_s
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - wmktemp_s
 - mktemp_s
@@ -32,16 +35,16 @@ helpviewer_keywords:
 - wmktemp_s function
 - temporary files [C++]
 ms.assetid: 92a7e269-7f3d-4c71-bad6-14bc827a451d
-ms.openlocfilehash: fef10f2cfbcc0332741d560a41a782b70ed14798
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b0db1a50f638c6130e4beb6798431179edec153b
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62156531"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70951585"
 ---
-# <a name="mktemps-wmktemps"></a>_mktemp_s, _wmktemp_s
+# <a name="_mktemp_s-_wmktemp_s"></a>_mktemp_s, _wmktemp_s
 
-Vytvoří jedinečný název souboru. Jde o verzích [_mktemp – _wmktemp –](mktemp-wmktemp.md) s rozšířeními zabezpečení, jak je popsáno v [funkce zabezpečení v CRT](../../c-runtime-library/security-features-in-the-crt.md).
+Vytvoří jedinečný název souboru. Jedná se o verze [_mktemp, _wmktemp](mktemp-wmktemp.md) s vylepšeními zabezpečení, jak [je popsáno v části funkce zabezpečení v CRT](../../c-runtime-library/security-features-in-the-crt.md).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -67,28 +70,28 @@ errno_t _wmktemp_s(
 ### <a name="parameters"></a>Parametry
 
 *nameTemplate*<br/>
-Vzor názvů souborů.
+Vzor názvu souboru.
 
 *sizeInChars*<br/>
-Velikost vyrovnávací paměti v jednobajtové znaky v **_mktemp_s –**; široké znaky v **_wmktemp_s –**, včetně ukončovacího znaku null.
+Velikost vyrovnávací paměti v jednobajtových znacích v **_mktemp_s**; velké znaky v **_wmktemp_s**, včetně ukončovacího znaku null.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Obě tyto funkce vrací nulu v případě úspěchu; Kód chyby při selhání.
+Obě tyto funkce vrátí nulu při úspěchu; chybový kód při selhání.
 
-### <a name="error-conditions"></a>Chybové podmínky
+### <a name="error-conditions"></a>Chybové stavy
 
 |*nameTemplate*|*sizeInChars*|Návratová hodnota|Nová hodnota v *nameTemplate*|
 |----------------|-------------------|----------------------|-------------------------------|
-|**NULL**|Všechny|**EINVAL**|**NULL**|
-|Nesprávný formát (viz poznámky části správný formát)|Všechny|**EINVAL**|Prázdný řetězec|
-|Všechny|< = počet bezpodmínečný|**EINVAL**|Prázdný řetězec|
+|**NULL**|Jakýmikoli|**EINVAL**|**NULL**|
+|Nesprávný formát (pro správný formát viz oddíl poznámky)|Jakýmikoli|**EINVAL**|Prázdný řetězec|
+|Jakýmikoli|< = počet X|**EINVAL**|Prázdný řetězec|
 
-Pokud dojde k některé z výše uvedených chybové stavy, vyvolán obslužnou rutinu neplatného parametru, jak je popsáno v [Parameter Validation](../../c-runtime-library/parameter-validation.md). Pokud smí provádění pokračovat, **errno** je nastavena na **EINVAL** a funkce vrátí **EINVAL**.
+Pokud dojde k některé z výše uvedených chybových podmínek, je vyvolána obslužná rutina neplatného parametru, jak je popsáno v tématu [ověřování parametru](../../c-runtime-library/parameter-validation.md). Pokud provádění může pokračovat, **errno** je nastaven na **EINVAL** a funkce vrátí **EINVAL**.
 
 ## <a name="remarks"></a>Poznámky
 
-**_Mktemp_s –** funkce vytvoří jedinečný název souboru tak, že upravíte *nameTemplate* argument, tak, aby po volání, *nameTemplate* ukazatel odkazuje na řetězec nový název souboru obsahujícího. **_mktemp_s –** automaticky zpracovává argumenty vícebajtových řetězců znaků podle potřeby, rozpozná vícebajtové znakové sekvence podle vícebajtové znakové stránky, která aktuálně používaných systémem za běhu. **_wmktemp_s –** je verze širokého znaku **_mktemp_s –**; argument **_wmktemp_s –** je širokoznaký řetězec. **_wmktemp_s –** a **_mktemp_s –** se jinak chovají stejně, s výjimkou, že **_wmktemp_s –** nezpracovává vícebajtové znakové řetězce.
+Funkce **_mktemp_s** vytvoří jedinečný název souboru úpravou argumentu *nameTemplate* , aby po volání odkazoval ukazatel *nameTemplate* na řetězec obsahující nový název souboru. **_mktemp_s** automaticky zpracovává argumenty vícebajtového řetězce znaků podle potřeby a rozpozná vícebajtové znakové sekvence podle vícebajtové znakové stránky, která je aktuálně používána systémem za běhu. **_wmktemp_s** je **_mktemp_s**verze s velkým znakem; argumentem **_wmktemp_s** je řetězec s velkým počtem znaků. **_wmktemp_s** a **_mktemp_s** se chovají identicky jinak, s tím rozdílem, že **_wmktemp_s** zpracovává řetězce vícebajtových znaků.
 
 ### <a name="generic-text-routine-mappings"></a>Mapování rutin obecného textu
 
@@ -96,36 +99,36 @@ Pokud dojde k některé z výše uvedených chybové stavy, vyvolán obslužnou 
 |---------------------|--------------------------------------|--------------------|-----------------------|
 |**_tmktemp_s**|**_mktemp_s**|**_mktemp_s**|**_wmktemp_s**|
 
-*NameTemplate* argument má tvar **baseXXXXXX**, kde *základní* je součástí nový název souboru, který zadáte, a každá X je zástupný symbol pro znak poskytl **_mktemp_s –**. Každý zástupný znak v *nameTemplate* musí být velké písmeno x **_mktemp_s –** zachová *základní* a nahradí první Koncové X abecední znak. **_mktemp_s –** nahrazuje následující koncové bezpodmínečný s hodnotou pět číslic; tato hodnota je jedinečné číslo identifikující volání procesu, nebo v programech s více vlákny, volajícího vlákna.
+Argument *nameTemplate* má formu **baseXXXXXX**, kde *Base* je součást nového názvu souboru, kterou zadáte, a každá X je zástupný symbol pro znak dodaný **_mktemp_s**. Každý zástupný znak v *nameTemplate* musí být velkými písmeny x. **_mktemp_s** , který zachovává *základ* , a nahradí první koncový znak x znakem abecedy. **_mktemp_s** nahrazuje následující koncový znak X s hodnotou s pěti číslicemi; Tato hodnota je jedinečné číslo identifikující volající proces nebo ve vícevláknových programech, volajícím vlákně.
 
-Každé úspěšné volání **_mktemp_s –** upraví *nameTemplate*. V každé následné volání ze stejného procesu nebo vlákna se stejným *nameTemplate* argument, **_mktemp_s –** kontroluje názvy souborů, které odpovídají názvům vrácený **_mktemp_s –** v předchozích volání. Pokud neexistuje žádný soubor pro daný název **_mktemp_s –** vrátí tento název. Pokud soubor existuje pro všechny názvy, dříve vrácené **_mktemp_s –** vytvoří nový název nahrazením abecední znak použít v názvu dříve vrácenou s další dostupné malé písmeno, v pořadí od "a" až "z". Například pokud *základní* je:
+Každé úspěšné volání **_mktemp_s** mění *nameTemplate*. V každém následném volání ze stejného procesu nebo vlákna se stejným argumentem *nameTemplate* **_mktemp_s** kontroluje názvy souborů, které odpovídají názvům vráceným funkcí **_mktemp_s** v předchozích voláních. Pokud pro daný název neexistují žádné soubory, **_mktemp_s** tento název vrátí. Pokud soubory existují u všech dříve vrácených názvů, **_mktemp_s** vytvoří nový název nahrazením abecedního znaku, který se použil v dříve vráceném názvu, s následujícím dostupným malým malým písmenem, v pořadí od a do z. Například pokud je *základní* :
 
-> **fn**
+> **VistaScan**
 
-a hodnota pět číslic poskytnutých **_mktemp_s –** 12345, je vrácena křestní jméno:
+a hodnota s pěti číslicemi, kterou poskytuje **_mktemp_s** , je 12345, jméno, které se vrátí, je:
 
 > **fna12345**
 
-Pokud tento název se používá k vytvoření souboru FNA12345 a tento soubor stále existuje, další název vrátil volání od stejného procesu nebo vlákna se stejným *základní* pro *nameTemplate* je:
+Pokud se tento název používá k vytvoření souboru FNA12345 a tento soubor stále existuje, další název vrácený při volání ze stejného procesu nebo vlákna se stejným *základem* pro *nameTemplate* je:
 
 > **fnb12345**
 
-Pokud FNA12345 neexistuje, další název vrácený opět:
+Pokud FNA12345 neexistuje, vrátí se další název znovu:
 
 > **fna12345**
 
-**_mktemp_s –** můžete vytvořit až 26 jedinečné názvy souborů pro libovolnou kombinaci dané *základní* a *nameTemplate* hodnoty. Proto FNZ12345 je poslední jedinečný název **_mktemp_s –** můžete vytvořit *základní* a *nameTemplate* hodnot použitých v tomto příkladu.
+**_mktemp_s** může vytvořit maximálně 26 jedinečných názvů souborů pro všechny dané kombinace *základních* a *nameTemplate* hodnot. Proto je FNZ12345 poslední jedinečný název souboru **_mktemp_s** může vytvořit pro *základní* a *nameTemplate* hodnoty použité v tomto příkladu.
 
-V jazyce C++ je použití těchto funkcí zjednodušeno díky přetížení šablon; přetížení mohou odvodit délku vyrovnávací paměti automaticky (tím eliminuje nutnost zadat argument velikosti) a dokážou automaticky nahradit starší, nezabezpečené funkce jejími novějšími, zabezpečené protějšky. Další informace najdete v tématu [přetížení zabezpečení šablony](../../c-runtime-library/secure-template-overloads.md).
+V C++systému je použití těchto funkcí zjednodušeno díky přetížení šablon; přetížení můžou odvodit délku vyrovnávací paměti automaticky (eliminují nutnost zadat argument velikosti) a můžou automaticky nahradit starší nezabezpečené funkce jejich novějšími, zabezpečenými protějšky. Další informace najdete v tématu [přetížení zabezpečení šablon](../../c-runtime-library/secure-template-overloads.md).
 
 ## <a name="requirements"></a>Požadavky
 
 |Rutina|Požadovaný hlavičkový soubor|
 |-------------|---------------------|
 |**_mktemp_s**|\<io.h>|
-|**_wmktemp_s**|\<IO.h > nebo \<wchar.h >|
+|**_wmktemp_s**|\<IO. h > nebo \<WCHAR. h >|
 
-Další informace o kompatibilitě naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Příklad
 

@@ -1,10 +1,10 @@
 ---
 title: _strtime, _wstrtime
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _wstrtime
 - _strtime
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-time-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _wstrtime
 - _strtime
@@ -33,16 +36,16 @@ helpviewer_keywords:
 - _tstrtime function
 - time, copying
 ms.assetid: 9e538161-cf49-44ec-bca5-c0ab0b9e4ca3
-ms.openlocfilehash: 9d874321418854a703886eb80ee23ac1cba57fa4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ea4a2b304dc30ec167f8a9094bcf278ff0d31f77
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62223088"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70946562"
 ---
-# <a name="strtime-wstrtime"></a>_strtime, _wstrtime
+# <a name="_strtime-_wstrtime"></a>_strtime, _wstrtime
 
-Kopírování času do vyrovnávací paměti. Bezpečnější verze těchto funkcí jsou k dispozici. Zobrazit [_strtime_s – _wstrtime_s –](strtime-s-wstrtime-s.md).
+Zkopírujte čas do vyrovnávací paměti. K dispozici jsou bezpečnější verze těchto funkcí; viz [_strtime_s, _wstrtime_s](strtime-s-wstrtime-s.md).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -66,23 +69,23 @@ wchar_t *_wstrtime(
 ### <a name="parameters"></a>Parametry
 
 *timestr*<br/>
-Řetězce času.
+Řetězec času.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Vrací ukazatel na výsledný řetězec znak *timestr*.
+Vrátí ukazatel na výsledný řetězec znaků *timestr*.
 
 ## <a name="remarks"></a>Poznámky
 
-**_Strtime –** funkce kopíruje do vyrovnávací paměti, na které odkazuje aktuálním místním časem *timestr*. Čas je formátován jako **hh: mm:** kde **hh** dvou číslic představující hodiny ve 24hodinovém formátu, je **mm** je dvou číslic představující minut za hodinu a **ss** je dvou číslic představující sekund. Například řetězec **18:23:44** představuje 23 minut a 44 sekund po 6 hodin Vyrovnávací paměť musí být dlouhý aspoň 9 bajtů.
+Funkce **_strtime** kopíruje aktuální místní čas do vyrovnávací paměti, na kterou ukazuje *timestr*. Čas je formátován jako **HH: mm: SS** , kde **HH** je dvě číslice představující hodinu ve 24hodinovém zápisu, **mm** jsou dvě číslice představující minuty po hodinách a **SS** jsou dvě číslice představující sekundy. Například řetězec **18:23:44** představuje 23 minut a 44 sekund za 6 hodin. Vyrovnávací paměť musí být alespoň 9 bajtů dlouhá.
 
-**_wstrtime –** je verze širokého znaku **_strtime –**; argument a návratová hodnota funkce **_wstrtime –** jsou širokoznaké řetězce. Tyto funkce chovají identicky jinak. Pokud *timestr* je **NULL** ukazatele nebo pokud *timestr* je v nesprávném formátu, neplatný je vyvolána obslužná rutina parametru, jak je popsáno v [parametr Ověření](../../c-runtime-library/parameter-validation.md). Pokud se výjimka může pokračovat, vrátí tyto funkce **NULL** a nastavte **errno** k **EINVAL** Pokud *timestr* byla **NULL** nebo nastavte **errno** k **ERANGE** Pokud *timestr* je v nesprávném formátu.
+**_wstrtime** je **_strtime**verze s velkým znakem; argument a návratová hodnota **_wstrtime** jsou řetězce s velkým počtem znaků. Tyto funkce se chovají identicky jinak. Pokud je *timestr* ukazatel s **hodnotou null** , nebo pokud je *timestr* formátován nesprávně, je vyvolána obslužná rutina neplatného parametru, jak je popsáno v tématu [ověřování parametru](../../c-runtime-library/parameter-validation.md). Pokud může výjimka pokračovat, tyto funkce vrátí **hodnotu null** a nastaví **errno** na **EINVAL** , pokud *Timestr* bylo **null** nebo nastavte **errno** na **ERANGE** , pokud je *timestr* formátován nesprávně.
 
-V jazyce C++ mají tyto funkce přetížení šablon, která vyvolávají novější, zabezpečené protějšky těchto funkcí. Další informace najdete v tématu [přetížení zabezpečení šablony](../../c-runtime-library/secure-template-overloads.md).
+V C++nástroji mají tyto funkce přetížení šablony, které vyvolávají novější a zabezpečené protějšky těchto funkcí. Další informace najdete v tématu [přetížení zabezpečení šablon](../../c-runtime-library/secure-template-overloads.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapování rutin obecného textu
 
-|Rutina TCHAR.H|_UNICODE a _MBCS nejsou definovány|_MBCS definováno|_UNICODE definováno|
+|Rutina TCHAR.H|_UNICODE & _MBCS nejsou definovány.|_MBCS definováno|_UNICODE definováno|
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_tstrtime**|**_strtime**|**_strtime**|**_wstrtime**|
 
@@ -91,9 +94,9 @@ V jazyce C++ mají tyto funkce přetížení šablon, která vyvolávají nověj
 |Rutina|Požadovaný hlavičkový soubor|
 |-------------|---------------------|
 |**_strtime**|\<time.h>|
-|**_wstrtime**|\<Time.h > nebo \<wchar.h >|
+|**_wstrtime**|\<Time. h > nebo \<WCHAR. h >|
 
-Další informace o kompatibilitě, naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Příklad
 

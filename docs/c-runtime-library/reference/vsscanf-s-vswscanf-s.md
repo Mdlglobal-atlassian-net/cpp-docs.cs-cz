@@ -1,10 +1,10 @@
 ---
 title: vsscanf_s, vswscanf_s
 ms.date: 11/04/2016
-apiname:
+api_name:
 - vswscanf_s
 - vsscanf_s
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,22 +15,25 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - vsscanf_s
 - vswscanf_s
 - _vstscanf_s
 ms.assetid: 7b732e68-c6f4-4579-8917-122f5a7876e1
-ms.openlocfilehash: 3106e3533f5bb65334f8a4f3d38f55d886faef4c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: bacda4288a6745ea57c31e68e515ae7b37418096
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62188709"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70946021"
 ---
-# <a name="vsscanfs-vswscanfs"></a>vsscanf_s, vswscanf_s
+# <a name="vsscanf_s-vswscanf_s"></a>vsscanf_s, vswscanf_s
 
-Čtení formátovaných dat z řetězce. Tyto verze [vsscanf – vswscanf –](vsscanf-vswscanf.md) mají rozšíření zabezpečení popsaná v [funkce zabezpečení v CRT](../../c-runtime-library/security-features-in-the-crt.md).
+Přečte formátovaná data z řetězce. Tyto verze [vsscanf, vswscanf](vsscanf-vswscanf.md) mají vylepšení zabezpečení, jak je popsáno v [části funkce zabezpečení v CRT](../../c-runtime-library/security-features-in-the-crt.md).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -49,41 +52,41 @@ int vswscanf_s(
 
 ### <a name="parameters"></a>Parametry
 
-*Vyrovnávací paměti*<br/>
+*vyrovnávací paměti*<br/>
 Uložená data
 
-*Formát*<br/>
-Řetězec řízení formátu Další informace najdete v tématu [pole Specifikace formátu: funkce scanf a wscanf](../../c-runtime-library/format-specification-fields-scanf-and-wscanf-functions.md).
+*format*<br/>
+Řetězec řízení formátu Další informace najdete v tématu [formátování pole Specifikace: scanf a wscanf Functions](../../c-runtime-library/format-specification-fields-scanf-and-wscanf-functions.md).
 
 *arglist*<br/>
-Seznam argumentů s proměnnou délkou.
+Seznam argumentů proměnných
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Každá z těchto funkcí vrátí počet polí, která jsou úspěšně převedena a přidělena; Vrácená hodnota nezahrnuje pole, která byla načtena, ale nejsou přiřazena. Vrácená hodnota 0 označuje, že nebyla přiřazena žádná pole. Vrácená hodnota je **EOF** pro chybu nebo pokud je dosaženo konce řetězce před prvním převodem.
+Každá z těchto funkcí vrátí počet polí, která jsou úspěšně převedena a přiřazena; Vrácená hodnota nezahrnuje pole, která byla načtena, ale nebyla přiřazena. Návratová hodnota 0 značí, že nebyla přiřazena žádná pole. Návratová hodnota je znak **EOF** pro chybu, nebo pokud je dosaženo konce řetězce před prvním převodem.
 
-Pokud *vyrovnávací paměti* nebo *formátu* je **NULL** vyvolána ukazatel, obslužná rutina neplatného parametru, jak je popsáno v [Parameter Validation](../../c-runtime-library/parameter-validation.md). Pokud smí provádění pokračovat, vrátí funkce hodnotu -1 a nastaví **errno** k **EINVAL**.
+Pokud je *vyrovnávací paměť* nebo *Formát* ukazatel s **hodnotou null** , je vyvolána obslužná rutina neplatného parametru, jak je popsáno v tématu [ověřování parametru](../../c-runtime-library/parameter-validation.md). Pokud provádění může pokračovat, vrátí tyto funkce hodnotu-1 a nastaví **errno** na **EINVAL**.
 
-Informace o těchto a dalších chybových kódech naleznete v tématu [errno _doserrno, _sys_errlist a _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+Informace o těchto a dalších chybových kódech naleznete v tématu [errno, _doserrno, _sys_errlist a _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Poznámky
 
-**Vsscanf_s** funkce načítá data z *vyrovnávací paměti* do umístění, která jsou uvedena v každém argumentu v *seznam_argumentů* seznam argumentů. Argumenty v seznamu argumentů určují odkazy na proměnné, které mají typ, který odpovídá specifikátoru typů ve *formátu*. Na rozdíl od méně bezpečné verze **vsscanf –**, parametr velikosti vyrovnávací paměti je povinný, pokud používáte znaky pole typu **c**, **C**, **s**, **S**, nebo sad řízení řetězců, které jsou uzavřeny v **[]**. Velikost vyrovnávací paměti ve znacích musí být dodána jako další parametr ihned po každého parametru mezipaměti, který jej vyžaduje.
+Funkce **vsscanf_s** čte data z *vyrovnávací paměti* do umístění, která jsou uvedena v každém argumentu v seznamu argumentů *Arglist* . Argumenty v seznamu argumentů určují ukazatele na proměnné, které mají typ odpovídající specifikátoru typu ve *formátu*. Na rozdíl od méně bezpečné verze **vsscanf**je vyžadován parametr velikosti vyrovnávací paměti, pokud použijete znaky pole Type **c**, **c**, **s**, **s**nebo sady řízení řetězce, které jsou uzavřeny v **[]** . Velikost vyrovnávací paměti ve znacích se musí zadat jako další parametr hned za parametrem vyrovnávací paměti, který to vyžaduje.
 
-Vyrovnávací paměť obsahuje ukončující znak null. Pole pro specifikaci šířky slouží k zajištění, že token, který je určen pro čtení, se vejde do vyrovnávací paměti. Pokud žádná pole pro specifikaci šířky a čtený token je nevejdou do vyrovnávací paměti, není nic zapsáno do vyrovnávací paměti.
+Velikost vyrovnávací paměti zahrnuje ukončující hodnotu null. Pole Specifikace šířky se dá použít k zajištění toho, že token, který je čten v, se vejde do vyrovnávací paměti. Pokud není použito pole Specifikace šířky a token načtený v je příliš velký, aby se vešel do vyrovnávací paměti, do této vyrovnávací paměti se nezapisuje žádné informace.
 
-Další informace najdete v tématu [scanf_s _scanf_s_l –, wscanf_s – _wscanf_s_l –](scanf-s-scanf-s-l-wscanf-s-wscanf-s-l.md) a [scanf – znaky pole typu](../../c-runtime-library/scanf-type-field-characters.md).
+Další informace naleznete v tématu [scanf_s, _scanf_s_l, wscanf_s, _wscanf_s_l](scanf-s-scanf-s-l-wscanf-s-wscanf-s-l.md) a [scanf Type Characters Field](../../c-runtime-library/scanf-type-field-characters.md).
 
 > [!NOTE]
-> Velikost parametru je typu **bez znaménka**, nikoli **size_t**.
+> Parametr size je typu **bez znaménka**, nikoli **size_t**.
 
-*Formátu* argument řídí interpretaci vstupních polí a má stejnou formu a funkci jako *formátu* argument **scanf_s** funkce. Pokud ke kopírování dojde mezi řetězci, které se překrývají, chování není definováno.
+Argument *Format* řídí interpretaci vstupních polí a má stejnou formu a funkci jako argument *Format* pro funkci **scanf_s** . Pokud ke kopírování dojde mezi řetězci, které se překrývají, chování není definováno.
 
-**vswscanf_s** je verze širokého znaku **vsscanf_s**; argumenty, které mají **vswscanf_s** jsou širokoznaké řetězce. **vsscanf_s** nezpracovává vícebajtové znaky v šestnáctkové soustavě. **vswscanf_s** nezpracovává šestnáctkové kódování Unicode s plnou šířkou nebo znaky "oblasti kompatibility". V opačném případě **vswscanf_s** a **vsscanf_s** chovají identicky.
+**vswscanf_s** je **vsscanf_s**verze s velkým znakem; argumenty **vswscanf_s** jsou řetězce s libovolným znakem. **vsscanf_s** nezpracovává vícebajtové šestnáctkové znaky. **vswscanf_s** nezpracovává šestnáctkové znaky Unicode s plnou šířkou nebo "zónu kompatibility". V opačném případě se **vswscanf_s** a **vsscanf_s** chovají stejně.
 
 ### <a name="generic-text-routine-mappings"></a>Mapování rutin obecného textu
 
-|Rutina TCHAR.H|_UNICODE a _MBCS nejsou definovány|_MBCS definováno|_UNICODE definováno|
+|Rutina TCHAR.H|_UNICODE & _MBCS nejsou definovány.|_MBCS definováno|_UNICODE definováno|
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_vstscanf_s**|**vsscanf_s**|**vsscanf_s**|**vswscanf_s**|
 
@@ -92,9 +95,9 @@ Další informace najdete v tématu [scanf_s _scanf_s_l –, wscanf_s – _wscan
 |Rutina|Požadovaný hlavičkový soubor|
 |-------------|---------------------|
 |**vsscanf_s**|\<stdio.h>|
-|**vswscanf_s**|\<stdio.h > nebo \<wchar.h >|
+|**vswscanf_s**|\<stdio. h > nebo \<WCHAR. h >|
 
-Další informace o kompatibilitě, naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Příklad
 
@@ -150,7 +153,7 @@ Real:     = 15.000000
 
 ## <a name="see-also"></a>Viz také:
 
-[Stream vstupně-výstupních operací](../../c-runtime-library/stream-i-o.md)<br/>
+[Vstup/výstup datového proudu](../../c-runtime-library/stream-i-o.md)<br/>
 [scanf, _scanf_l, wscanf, _wscanf_l](scanf-scanf-l-wscanf-wscanf-l.md)<br/>
 [sscanf, _sscanf_l, swscanf, _swscanf_l](sscanf-sscanf-l-swscanf-swscanf-l.md)<br/>
 [sscanf_s, _sscanf_s_l, swscanf_s, _swscanf_s_l](sscanf-s-sscanf-s-l-swscanf-s-swscanf-s-l.md)<br/>

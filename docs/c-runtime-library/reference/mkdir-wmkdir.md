@@ -1,10 +1,10 @@
 ---
 title: _mkdir, _wmkdir
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _wmkdir
 - _mkdir
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-filesystem-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _mkdir
 - tmkdir
@@ -33,14 +36,14 @@ helpviewer_keywords:
 - _mkdir function
 - _tmkdir function
 ms.assetid: 7f22d01d-63a5-4712-a6e7-d34878b2d840
-ms.openlocfilehash: 0d89e1f0930cf9131156a4691069f1f17c15c124
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0d2fd45b566909a61a04a5cabb34c74b9b253430
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62285194"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70951721"
 ---
-# <a name="mkdir-wmkdir"></a>_mkdir, _wmkdir
+# <a name="_mkdir-_wmkdir"></a>_mkdir, _wmkdir
 
 Vytvoří nový adresář.
 
@@ -58,24 +61,24 @@ int _wmkdir(
 
 ### <a name="parameters"></a>Parametry
 
-*DirName*<br/>
-Cesta pro nový adresář.
+*dirname*<br/>
+Cesta k novému adresáři
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Každá z těchto funkcí vrací hodnotu 0, pokud byl vytvořen nový adresář. V chybě, vrátí funkce hodnotu -1 a nastaví **errno** následujícím způsobem.
+Každá z těchto funkcí vrací hodnotu 0, pokud byl nový adresář vytvořen. Při chybě vrátí funkce hodnotu-1 a nastaví **errno** následujícím způsobem.
 
-**EEXIST** adresáře se nevytvořil, protože *dirname* je název existujícího souboru, adresáře nebo zařízení.
+**EEXIST** Adresář nebyl vytvořen, protože *dirname* je název existujícího souboru, adresáře nebo zařízení.
 
-**ENOENT** cesta nebyla nalezena.
+**ENOENT** Cesta nebyla nalezena.
 
 Další informace o těchto a dalších návratových kódech naleznete v tématu [_doserrno, errno, _sys_errlist a _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Poznámky
 
-**_Mkdir –** funkce vytvoří nový adresář se zadaným *dirname.* **_mkdir –** lze vytvořit pouze jeden nový adresář za volání, takže pouze poslední součástí *dirname* můžete název nového adresáře. **_mkdir** does not translate path delimiters. V systému Windows NT, zpětné lomítko ( \\) a lomítkem (/) jsou platná cesta oddělovače ve znakové řetězce v běhové rutiny.
+Funkce **_mkdir** vytvoří nový adresář se zadaným *dirname.* **_mkdir** může vytvořit jenom jeden nový adresář pro každé volání, takže jenom poslední součást *dirname* může pojmenovat nový adresář. **_mkdir** nepřevádí oddělovače cest. V systému Windows NT jsou zpětným lomítkem \\() a lomítkem (/) platné oddělovače cest v řetězcích znaků v běhových rutinách.
 
-**_wmkdir –** je verze širokého znaku **_mkdir –**; *dirname* argument **_wmkdir –** je širokoznaký řetězec. **_wmkdir –** a **_mkdir –** se jinak chovají stejně.
+**_wmkdir** je **_mkdir**verze s velkým znakem; Argument *dirname* pro **_wmkdir** je řetězec s velkým znakem. **_wmkdir** a **_mkdir** se chovají stejně jinak.
 
 ### <a name="generic-text-routine-mappings"></a>Mapování rutin obecného textu
 
@@ -87,14 +90,14 @@ Další informace o těchto a dalších návratových kódech naleznete v témat
 
 |Rutina|Požadovaný hlavičkový soubor|
 |-------------|---------------------|
-|**_mkdir**|\<direct.h>|
-|**_wmkdir**|\<Direct.h > nebo \<wchar.h >|
+|**_mkdir**|\<Direct. h >|
+|**_wmkdir**|\<Direct. h > nebo \<WCHAR. h >|
 
-Další informace o kompatibilitě naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
 
 ## <a name="libraries"></a>Knihovny
 
-Všechny verze [běhových knihoven C](../../c-runtime-library/crt-library-features.md).
+Všechny verze [knihoven run-time jazyka C](../../c-runtime-library/crt-library-features.md).
 
 ## <a name="example"></a>Příklad
 

@@ -1,9 +1,9 @@
 ---
 title: _freea
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _freea
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -14,7 +14,10 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - freea
 - _freea
@@ -23,16 +26,16 @@ helpviewer_keywords:
 - freea function
 - memory deallocation
 ms.assetid: dcd30584-dd9d-443b-8c4c-13237a1cecac
-ms.openlocfilehash: ac9c5528755898b0de131bccf94185b501b0e720
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: dcad8bea4f8cec28d8cb15a9937b1032593ef0cc
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62333065"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70956713"
 ---
-# <a name="freea"></a>_freea
+# <a name="_freea"></a>_freea
 
-Zruší přidělení nebo ho uvolní blok paměti.
+Zruší přidělení nebo uvolní blok paměti.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -45,7 +48,7 @@ void _freea(
 ### <a name="parameters"></a>Parametry
 
 *memblock*<br/>
-Dříve přidělený blok paměti určený k uvolnění.
+Dříve přidělený blok paměti, který se má uvolnit
 
 ## <a name="return-value"></a>Návratová hodnota
 
@@ -53,25 +56,25 @@ Dříve přidělený blok paměti určený k uvolnění.
 
 ## <a name="remarks"></a>Poznámky
 
-**_Freea –** funkce zruší přidělení bloku paměti (*memblock*), která byla dříve přidělena voláním [_malloca](malloca.md). **_freea –** kontroluje, pokud byla přidělena paměť na haldu nebo do zásobníku. Pokud byl přidělen do zásobníku **_freea –** nemá žádný účinek. Pokud byl přidělen na haldě, je počet bajtů při byl přidělen blok ekvivalentní počet uvolněných bajtů. Pokud *memblock* je **NULL**, ukazatel je ignorována a **_freea –** okamžitě vrátí. Pokus o uvolnění neplatný ukazatel (ukazatele na blok paměti, který nebyl přidělen pomocí **_malloca**) může mít vliv na následné přidělování požadavků a způsobit chyby.
+Funkce **_freea** zruší přidělení paměti bloku (*memblock*), který byl dříve přidělen voláním [_malloca](malloca.md). **_freea** zkontroluje, jestli byla paměť přidělená haldě nebo zásobníku. Pokud byla přidělena v zásobníku, **_freea** neprovede žádnou akci. Pokud byla tato halda přidělena, počet uvolněných bajtů se rovná počtu bajtů požadovaných při přidělení bloku. Pokud má Memblock **hodnotu null**, ukazatel se ignoruje a **_freea** se okamžitě vrátí. Pokus o uvolnění neplatného ukazatele (ukazatel na blok paměti, který nebyl přidělen nástrojem **_malloca**) může ovlivnit následné žádosti o přidělení a způsobit chyby.
 
-**_freea –** volání **bezplatné** interně v případě, že zjistí, že paměť přidělena v haldě. Zda je paměť na haldě nebo zásobníku je určeno značku umístěné v paměti na adrese bezprostředně před přidělené paměti.
+**_freea** volá **bezplatná** interní, pokud zjistí, že paměť je přidělena haldě. Zda je paměť na haldě, nebo zásobník je určena značkou umístěnou v paměti na adrese bezprostředně předcházející přidělené paměti.
 
-Pokud dojde k chybě v uvolňování paměti, **errno** nastaven s informacemi z operačního systému na povaze selhání. Další informace najdete v tématu [errno _doserrno, _sys_errlist a _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+Pokud dojde k chybě při uvolnění paměti, **errno** se nastaví s informacemi z operačního systému podle povahy selhání. Další informace najdete v tématech [errno, _doserrno, _sys_errlist a _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
-Po bloku paměti byl uvolněn, [_heapmin –](heapmin.md) minimalizuje množství volné paměti v haldě slučování nevyužité oblasti a uvolněním je zpět do operačního systému. Uvolněné paměti, který není v operačním systému, budou obnoveny do volného fondu a je k dispozici pro přidělení znovu.
+Po uvolnění bloku paměti [_heapmin](heapmin.md) minimalizuje množství volné paměti v haldě sloučením nepoužívaných oblastí a jejich uvolněním zpět do operačního systému. Uvolněná paměť, která není vydána v operačním systému, se obnoví do volného fondu a je možné ji znovu přidělit.
 
-Volání **_freea –** musí doprovázejí veškerá volání **_malloca**. Je také chybou volání **_freea –** dvakrát na stejnou paměť. Když je aplikace spojena s ladicí verzí knihovny run-time jazyka C, zejména s [_malloc_dbg](malloc-dbg.md) funkce přidané do aplikace tak, že definujete **_CRTDBG_MAP_ALLOC**, je snazší najít chybějící nebo duplicitní volání **_freea –**. Další informace o tom, jak je spravována halda během procesu ladění, naleznete v tématu [haldy pro ladění CRT](/visualstudio/debugger/crt-debug-heap-details).
+Volání **_freea** musí doprovázet všechna volání **_malloca**. Je také chyba volat **_freea** dvakrát ve stejné paměti. Pokud je aplikace propojena s ladicí verzí běhových knihoven jazyka C, zejména s funkcemi [_malloc_dbg](malloc-dbg.md) povolenými definováním **_CRTDBG_MAP_ALLOC**, je snazší najít chybějící nebo duplicitní volání **_freea**. Další informace o tom, jak je halda spravována během procesu ladění, naleznete v [haldě ladění CRT](/visualstudio/debugger/crt-debug-heap-details).
 
-**_freea –** je označen `__declspec(noalias)`, což znamená, že funkce je zaručeno, že neupraví globální proměnné. Další informace najdete v tématu [noalias](../../cpp/noalias.md).
+**_freea** je označena `__declspec(noalias)`, což znamená, že funkce je zaručena, že nemění globální proměnné. Další informace najdete v tématu [jiné](../../cpp/noalias.md).
 
 ## <a name="requirements"></a>Požadavky
 
 |Funkce|Požadovaný hlavičkový soubor|
 |--------------|---------------------|
-|**_freea**|\<stdlib.h > a \<malloc.h >|
+|**_freea**|\<Stdlib. h > a \<. h >|
 
-Další informace o kompatibilitě naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Příklad
 

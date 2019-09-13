@@ -1,9 +1,9 @@
 ---
 title: _CrtSetDbgFlag
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _CrtSetDbgFlag
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -14,7 +14,10 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _CRTDBG_REPORT_FLAG
 - _CRTDBG_CHECK_EVERY_16_DF
@@ -50,16 +53,16 @@ helpviewer_keywords:
 - CRTDBG_CHECK_CRT_DF macro
 - _CRTDBG_CHECK_CRT_DF macro
 ms.assetid: b5657ffb-6178-4cbf-9886-1af904ede94c
-ms.openlocfilehash: dcb8e37090e4c15ba849e76ca1cb1cc646a7bcc0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8506b593a579c8dd1791e56c320bd9d8e2ee9ba2
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62348182"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70938618"
 ---
-# <a name="crtsetdbgflag"></a>_CrtSetDbgFlag
+# <a name="_crtsetdbgflag"></a>_CrtSetDbgFlag
 
-Načte nebo změní stav **_crtDbgFlag** příznak, který řídí chování přidělení správce hald ladění (pouze ladicí verze).
+Načte nebo upraví stav příznaku **_crtDbgFlag** pro řízení chování přidělení Správce haldy ladění (pouze ladicí verze).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -80,34 +83,34 @@ Vrátí předchozí stav **_crtDbgFlag**.
 
 ## <a name="remarks"></a>Poznámky
 
-**_CrtSetDbgFlag** funkce umožňuje, aby aplikace k řízení, jak správce hald ladění sleduje přidělování paměti tak, že upravíte bitového pole **_crtDbgFlag** příznak. Nastavením bity (zapnout), aplikace můžete dát pokyn k provedení speciální operace ladění, včetně kontroly pro nevracení paměti při ukončení aplikace a vytváření sestav, pokud nějaké najde, správce hald ladění budete jen Simulovat podmínky nedostatku paměti podle určení, že uvolněné bloky paměti by měla zůstat v propojeném seznamu haldy a ověření integrity haldy zkontrolováním každý blok paměti na každý požadavek na přidělení. Když [_DEBUG](../../c-runtime-library/debug.md) není definován, jsou volání **_CrtSetDbgFlag** odstraněna během předběžného zpracování.
+Funkce **_CrtSetDbgFlag** umožňuje aplikaci řídit způsob, jakým Správce haldy ladění sleduje přidělení paměti úpravou bitových polí příznaku **_crtDbgFlag** . Nastavením bitů (zapnutí) může aplikace dát správci haldy ladění, aby provedl speciální operace ladění, včetně kontroly nevracení paměti při ukončení aplikace a vytváření sestav, pokud se nějaká najde, a simuluje podmínky nízké paměti určení, že uvolněné paměťové bloky by měly zůstat v propojeném seznamu haldy a ověřit integritu haldy kontrolou každého bloku paměti při každé žádosti o přidělení. Když není definovaný [_DEBUG](../../c-runtime-library/debug.md) , volání **_CrtSetDbgFlag** se během předběžného zpracování odeberou.
 
-V následující tabulce jsou uvedeny bitových polí pro **_crtDbgFlag** a popisuje jejich chování. Protože nastavení bits výsledky v zvýšenou výstup diagnostiky a rychlost provádění sníženou programu, nejsou nastaveny tyto bity (vypnuté) ve výchozím nastavení. Další informace o těchto bitových polí naleznete v tématu [funkce vykazování stavu haldy](/visualstudio/debugger/crt-debug-heap-details).
+Následující tabulka uvádí bitová pole pro **_crtDbgFlag** a popisuje jejich chování. Vzhledem k tomu, že nastavení bitů vede ke zvýšení výstupu diagnostiky a snížení rychlosti provádění programu, tyto bity nejsou ve výchozím nastavení nastavené (vypnuté). Další informace o těchto bitových polích naleznete v tématu [funkce vytváření sestav o stavu haldy](/visualstudio/debugger/crt-debug-heap-details).
 
-|Bitové pole.|Výchozí|Popis|
+|Bitové pole|Výchozí|Popis|
 |---------------|-------------|-----------------|
-|**_CRTDBG_ALLOC_MEM_DF**|DÁLE|ON: Povolit přidělení haldy ladění a použití identifikátorů typ bloku paměti, jako například **_CLIENT_BLOCK**. OFF: Přidat nové přidělení propojeném seznamu haldy, ale nastavit typ do bloku **_IGNORE_BLOCK**.<br /><br /> Můžete také kombinovat s žádným z makra haldy frekvence kontroly.|
-|**_CRTDBG_CHECK_ALWAYS_DF**|OFF|ON: Volání [_CrtCheckMemory](crtcheckmemory.md) při každé žádosti o přidělování a navracení zpět. VYPNUTO: **_CrtCheckMemory** musí být explicitně volána.<br /><br /> Haldy frekvence kontroly makra nemají žádný vliv, pokud je tento příznak nastaven.|
-|**_CRTDBG_CHECK_CRT_DF**|OFF|ON: Zahrnout **_CRT_BLOCK** typy ve stavu přetečení zjišťování a paměti rozdíl operace. OFF: Paměť používaná interně knihovnou run-time je ignorována pomocí těchto operací.<br /><br /> Můžete také kombinovat s žádným z makra haldy frekvence kontroly.|
-|**_CRTDBG_DELAY_FREE_MEM_DF**|OFF|ON: Zachovat uvolněné bloky paměti v propojeném seznamu haldy, přiřazovat je **_FREE_BLOCK** zadejte a vyplnit hodnota bajtu 0xDD. OFF: Nezachovat uvolněné bloky v propojeném seznamu haldy.<br /><br /> Můžete také kombinovat s žádným z makra haldy frekvence kontroly.|
-|**_CRTDBG_LEAK_CHECK_DF**|OFF|ON: Proveďte automatické nevracení při ukončení programu prostřednictvím volání na kontrolu [_CrtDumpMemoryLeaks](crtdumpmemoryleaks.md) a vygenerovat zprávu o chybách v případě, že aplikace se nezdařilo uvolnit všechny přidělené paměti. OFF: Neprovádějte automaticky nevracení kontrolu při ukončení programu.<br /><br /> Můžete také kombinovat s žádným z makra haldy frekvence kontroly.|
+|**_CRTDBG_ALLOC_MEM_DF**|PNETE|PNETE Povolte přidělení haldy ladění a použití identifikátorů typu blok paměti, jako je **_CLIENT_BLOCK**. ZAOKROUHL Přidejte nové přidělení do propojeného seznamu haldy, ale nastavte typ bloku na **_IGNORE_BLOCK**.<br /><br /> Lze také kombinovat s libovolnými makry kontroly frekvence haldy.|
+|**_CRTDBG_CHECK_ALWAYS_DF**|OFF|PNETE Zavolejte [_CrtCheckMemory](crtcheckmemory.md) při každé žádosti o přidělení a zrušení přidělení. OFF: **_CrtCheckMemory** se musí volat explicitně.<br /><br /> V případě, že je tento příznak nastaven, nejsou makra kontroly frekvence haldy nijak ovlivněna.|
+|**_CRTDBG_CHECK_CRT_DF**|OFF|PNETE Zahrňte typy **_CRT_BLOCK** do operací detekce nevracení a rozdíl stavu paměti. ZAOKROUHL Tato operace ignoruje paměť používaná interně knihovnou run-time.<br /><br /> Lze také kombinovat s libovolnými makry kontroly frekvence haldy.|
+|**_CRTDBG_DELAY_FREE_MEM_DF**|OFF|PNETE Zachovejte uvolněné paměťové bloky v propojeném seznamu haldy, přiřaďte jim typ **_FREE_BLOCK** a vyplňte je hodnotou bajtu 0xDD. ZAOKROUHL Neuchovávat uvolněné bloky v propojeném seznamu haldy.<br /><br /> Lze také kombinovat s libovolnými makry kontroly frekvence haldy.|
+|**_CRTDBG_LEAK_CHECK_DF**|OFF|PNETE Provede automatickou kontrolu nevracení při ukončení programu prostřednictvím volání [_CrtDumpMemoryLeaks](crtdumpmemoryleaks.md) a vygeneruje zprávu o chybách, pokud aplikace nemůže uvolnit veškerou paměť, kterou přidělenu má. ZAOKROUHL Neprovádějte automatickou kontrolu nevracení při ukončení programu.<br /><br /> Lze také kombinovat s libovolnými makry kontroly frekvence haldy.|
 
-**Kontrola haldy frekvence makra**
+**Halda – kontrolní makra frekvence**
 
-Můžete určit, jak často knihovny run-time C provede ověření haldy ladění (**_CrtCheckMemory**) na základě počtu volání **malloc**, **realloc**, **bezplatné**, a **_msize –**.
+Můžete určit, jak často knihovna run-time jazyka C provede ověření haldy ladění ( **_CrtCheckMemory**) na základě počtu **volání,** **realokace**, **Free**a **_msize**.
 
-**_CrtSetDbgFlag** pak zkontroluje horní 16 bitů *newFlag* parametr pro hodnotu. Zadaná hodnota je počet **malloc**, **realloc**, **bezplatné**, a **_msize –** volání mezi **_CrtCheckMemory**  volání. Čtyři předdefinovaná makra jsou k dispozici pro tento účel.
+**_CrtSetDbgFlag** pak zkontroluje horní 16 bitů parametru *newFlag* pro hodnotu. Zadaná hodnota je počet volání **pro_msize** , **realokace** **,** **Free**a mezi voláními **_CrtCheckMemory** . Pro tento účel jsou k dispozici čtyři Předdefinovaná makra.
 
-|– Makro|Počet volání malloc, realloc, bezplatná a _msize – mezi voláními _CrtCheckMemory|
+|– Makro|Počet volání pro_msize, realokace, Free a mezi voláními _CrtCheckMemory|
 |-----------|------------------------------------------------------------------------------------------|
 |_CRTDBG_CHECK_EVERY_16_DF|16|
 |_CRTDBG_CHECK_EVERY_128_DF|128|
 |_CRTDBG_CHECK_EVERY_1024_DF|1024|
-|_CRTDBG_CHECK_DEFAULT_DF|0 (ve výchozím nastavení žádné kontroly haldy)|
+|_CRTDBG_CHECK_DEFAULT_DF|0 (ve výchozím nastavení nekontrolují haldy)|
 
-Ve výchozím nastavení **_CrtCheckMemory** se volá jednou každých 1 024 časy volání **malloc**, **realloc**, **bezplatné**, a **_ msize –**.
+Ve výchozím nastavení se _CrtCheckMemory volá jednou za každých 1 024 časů, které **zavoláte**do **za** , **realokace**, **Free**a **_msize**.
 
-Například můžete zadat haldu kontrolovat každých 16 **malloc**, **realloc**, **bezplatné**, a **_msize –** operací s následujícím kódem:
+Můžete například zadat kontrolu haldy **každých 16,** **realokace**, **bezplatné**a **_msize** operace s následujícím kódem:
 
 ```C
 #include <crtdbg.h>
@@ -126,21 +129,21 @@ int main( )
 }
 ```
 
-Horní 16 bitů *newFlag* parametru jsou ignorovány, pokud je zadán _CRTDBG_CHECK_ALWAYS_DF. V takovém případě **_CrtCheckMemory** je volána pokaždé, když voláte **malloc**, **realloc**, **bezplatné**, a **_msize –**.
+Horní 16 bitů parametru *newFlag* se při zadání _CRTDBG_CHECK_ALWAYS_DF ignoruje. V tomto případě se **_CrtCheckMemory** volá pokaždé **, když**zavoláte metodu, **realokace**, **Free**a **_msize**.
 
-*newFlag* je nový stav vyrovnat **_crtDbgFlag** a je kombinace hodnot pro každou z bitových polí.
+*newFlag* je nový stav, který se má použít pro **_crtDbgFlag** a je kombinací hodnot pro každé z bitových polí.
 
-### <a name="to-change-one-or-more-of-these-bit-fields-and-create-a-new-state-for-the-flag"></a>Chcete-li změnit jedno nebo více těchto bitových polí a vytvoření nového stavu pro příznak
+### <a name="to-change-one-or-more-of-these-bit-fields-and-create-a-new-state-for-the-flag"></a>Změna jednoho nebo více těchto bitových polí a vytvoření nového stavu pro příznak
 
-1. Volání **_CrtSetDbgFlag** s *newFlag* rovna **_CRTDBG_REPORT_FLAG** pro získání aktuálního **_crtDbgFlag** stavu a uložit Vrácená hodnota v dočasné proměnné.
+1. Zavolejte **_CrtSetDbgFlag** s *NewFlag* rovno **_CRTDBG_REPORT_FLAG** pro získání aktuálního stavu **_crtDbgFlag** a uložte vrácenou hodnotu do dočasné proměnné.
 
-1. Zapněte všechny bity pomocí logické bitové **nebo** dočasné proměnné s odpovídajícími bitovými maskami (představovanými v kódu aplikace konstantami manifestu).
+1. Zapněte jakékoli bity pomocí bitové **nebo** dočasné proměnné s odpovídajícím vyčíslení (reprezentovaným v kódu aplikace pomocí konstant manifestu).
 
-1. Vypnout podle bity **a**- ing proměnnou logickou bitovou hodnotou **není** z příslušné bitovými maskami.
+1. Vypněte ostatní bity na základě **a**proměnnou s bitovým operátorem **Not** příslušného vyčíslení.
 
-1. Volání **_CrtSetDbgFlag** s *newFlag* rovna hodnotu uloženou v dočasné proměnné, chcete-li nastavit nový stav pro **_crtDbgFlag**.
+1. Pokud chcete nastavit nový stav pro **_crtDbgFlag**, zavolejte **_CrtSetDbgFlag** s *newFlag* rovným hodnotě uložené v dočasné proměnné.
 
-Následující kód ukazuje, jak simulovat nedostatku paměti podmínky udržováním uvolnění paměťových bloků v propojeném seznamu haldy a zabránit **_CrtCheckMemory** byla volána na každý požadavek na přidělení:
+Následující kód ukazuje, jak simulovat podmínky nízké paměti tím, že zachováte volné bloky paměti v propojeném seznamu haldy a zabráníte volání **_CrtCheckMemory** při každém požadavku na přidělení:
 
 ```C
 // Get the current state of the flag
@@ -159,11 +162,11 @@ tmpFlag &= ~_CRTDBG_CHECK_ALWAYS_DF;
 _CrtSetDbgFlag( tmpFlag );
 ```
 
-Přehled správy paměti a halda ladění, naleznete v tématu [podrobnosti haldy ladění CRT](/visualstudio/debugger/crt-debug-heap-details).
+Přehled správy paměti a haldy ladění najdete v [podrobnostech o haldě ladění CRT](/visualstudio/debugger/crt-debug-heap-details).
 
-Zakázat pomocí příznaku **_CrtSetDbgFlag** funkce, měli byste **a** proměnnou bitový **není** z bitové masky.
+Chcete-li zakázat příznak s funkcí **_CrtSetDbgFlag** , měli byste **a** proměnnou s bitovým operátorem **Not** bitové masky.
 
-Pokud *newFlag* není platnou hodnotu, tato funkce vyvolá obslužnou rutinu neplatného parametru, jak je popsáno v [Parameter Validation](../../c-runtime-library/parameter-validation.md). Pokud smí provádění pokračovat, tato funkce nastaví **errno** k **EINVAL** a vrátí do předchozího stavu **_crtDbgFlag**.
+Pokud *newFlag* není platná hodnota, tato funkce vyvolá obslužnou rutinu neplatného parametru, jak je popsáno v tématu [ověřování parametru](../../c-runtime-library/parameter-validation.md). Pokud provádění může pokračovat, tato funkce nastaví **errno** na **EINVAL** a vrátí předchozí stav **_crtDbgFlag**.
 
 ## <a name="requirements"></a>Požadavky
 
@@ -171,11 +174,11 @@ Pokud *newFlag* není platnou hodnotu, tato funkce vyvolá obslužnou rutinu nep
 |-------------|---------------------|
 |**_CrtSetDbgFlag**|\<crtdbg.h>|
 
-Další informace o kompatibilitě naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
 
 ## <a name="libraries"></a>Knihovny
 
-Ladicí verze [běhových knihoven C](../../c-runtime-library/crt-library-features.md) pouze.
+Ladit verze pouze [knihoven run-time jazyka C](../../c-runtime-library/crt-library-features.md) .
 
 ## <a name="example"></a>Příklad
 

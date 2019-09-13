@@ -1,9 +1,9 @@
 ---
 title: _configthreadlocale
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _configthreadlocale
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-locale-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _configthreadlocale
 - configthreadlocale
@@ -26,16 +29,16 @@ helpviewer_keywords:
 - per-thread locale
 - thread locale
 ms.assetid: 10e4050e-b587-4f30-80bc-6c76b35fc770
-ms.openlocfilehash: 99e10a0330ba4880ea181e9fe3d56f3fb6bd6493
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: aac0d36654a81e5d616ffff28e5a254fe06628a3
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62340258"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70939026"
 ---
-# <a name="configthreadlocale"></a>_configthreadlocale
+# <a name="_configthreadlocale"></a>_configthreadlocale
 
-Nastaví možnosti národního prostředí pro vlákno.
+Konfiguruje možnosti národního prostředí pro vlákno.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -46,33 +49,33 @@ int _configthreadlocale( int per_thread_locale_type );
 ### <a name="parameters"></a>Parametry
 
 *per_thread_locale_type*<br/>
-Možnost nastavit. Jedna z možností uvedených v následující tabulce.
+Možnost, kterou chcete nastavit. Jedna z možností uvedených v následující tabulce.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Předchozí stav národního prostředí pro vlákno (**_DISABLE_PER_THREAD_LOCALE** nebo **_ENABLE_PER_THREAD_LOCALE**), nebo hodnota -1 při selhání.
+Předchozí stav národního prostředí pro vlákno ( **_DISABLE_PER_THREAD_LOCALE** nebo **_ENABLE_PER_THREAD_LOCALE**) nebo-1 při selhání.
 
 ## <a name="remarks"></a>Poznámky
 
-**_Configurethreadlocale** funkce se používá k řízení používání národní prostředí specifické pro vlákno. Použijte jednu z těchto *per_thread_locale_type* možností k určení stavu národního prostředí pro vlákno:
+Funkce **_configurethreadlocale** slouží k řízení použití národních prostředí specifických pro vlákno. Použijte jednu z těchto možností *per_thread_locale_type* k určení nebo určení stavu národního prostředí pro vlákno:
 
 | Možnost | Popis |
 |-|-|
-| **_ENABLE_PER_THREAD_LOCALE** | Zkontrolujte aktuální národní prostředí pro vlákno použijte specifické pro vlákno. Následující volání **setlocale** v tomto vlákně ovlivňují pouze vlastní národní prostředí vlákna. |
-| **_DISABLE_PER_THREAD_LOCALE** | Zkontrolujte aktuální vlákno používalo globální národní prostředí. Následující volání **setlocale** v tomto vlákně ovlivňují ostatní vlákna používající globální národní prostředí. |
-| **0** | Načte aktuální nastavení pro toto konkrétní vlákno. |
+| **_ENABLE_PER_THREAD_LOCALE** | Nastaví aktuální vlákno pro použití národního prostředí specifického pro vlákno. Následná volání funkce **setlocale** v tomto vlákně ovlivňují pouze vlastní národní prostředí vlákna. |
+| **_DISABLE_PER_THREAD_LOCALE** | Nastaví aktuální vlákno na používání globálního národního prostředí. Následná volání funkce **setlocale** v tomto vlákně ovlivňují jiná vlákna pomocí globálního národního prostředí. |
+| **0** | Načte aktuální nastavení tohoto konkrétního vlákna. |
 
-Tyto funkce ovlivňují chování **setlocale**, **_tsetlocale –**, **_wsetlocale**, a **_setmbcp**. Pokud je národní prostředí pro vlákno zakázáno, všechna následná volání **setlocale** nebo **_wsetlocale** změní národní prostředí všech vláken, které používají globální národní prostředí. Když je povoleno národní prostředí pro vlákno, **setlocale** nebo **_wsetlocale** ovlivní pouze národního prostředí aktuálního vlákna.
+Tyto funkce mají vliv na chování funkce **setlocale**, **_tsetlocale**, **_wsetlocale**a **_setmbcp**. Když je národní prostředí pro vlákno zakázané, jakékoli následné volání metody **setlocale** nebo **_wsetlocale** změní národní prostředí všech vláken, která používají globální národní prostředí. Pokud je povoleno národní prostředí pro vlákno, **setlocale** nebo **_wsetlocale** má vliv pouze na národní prostředí aktuálního vlákna.
 
-Pokud používáte **_configurethreadlocale** k povolení národního prostředí pro vlákno, doporučujeme vám, že zavoláte **setlocale** nebo **_wsetlocale** k nastavení upřednostňovaného národního prostředí v tomto vlákně ihned poté.
+Použijete-li **_configurethreadlocale** pro povolení národního prostředí pro vlákno, doporučujeme, abyste voláním **setlocale** nebo **_wsetlocale** nastavili upřednostňované národní prostředí v tomto vlákně hned následně.
 
-Pokud *per_thread_locale_type* není jedna z hodnot uvedených v tabulce, tato funkce vyvolá obslužnou rutinu neplatného parametru, jak je popsáno v [Parameter Validation](../../c-runtime-library/parameter-validation.md). Pokud smí provádění pokračovat, tato funkce nastaví **errno** k **EINVAL** a vrátí hodnotu -1.
+Pokud *per_thread_locale_type* není jednou z hodnot uvedených v tabulce, tato funkce vyvolá obslužnou rutinu neplatného parametru, jak je popsáno v tématu [ověřování parametru](../../c-runtime-library/parameter-validation.md). Pokud provádění může pokračovat, tato funkce nastaví **errno** na **EINVAL** a vrátí-1.
 
 ## <a name="requirements"></a>Požadavky
 
 |Rutina|Požadovaný hlavičkový soubor|
 |-------------|---------------------|
-|**_configthreadlocale**|\<Locale.h >|
+|**_configthreadlocale**|\<locale. h >|
 
 ## <a name="example"></a>Příklad
 

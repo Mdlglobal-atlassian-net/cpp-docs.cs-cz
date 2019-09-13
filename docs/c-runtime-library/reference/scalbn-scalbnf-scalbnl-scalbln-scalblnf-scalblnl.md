@@ -1,14 +1,14 @@
 ---
 title: scalbn, scalbnf, scalbnl, scalbln, scalblnf, scalblnl
 ms.date: 04/05/2018
-apiname:
+api_name:
 - scalblnl
 - scalbnl
 - scalbnf
 - scalblnf
 - scalbn
 - scalbln
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -20,7 +20,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - scalblnf
 - scalbnl
@@ -36,16 +39,16 @@ helpviewer_keywords:
 - scalbnf function
 - scalblnf function
 ms.assetid: df2f1543-8e39-4af4-a5cf-29307e64807d
-ms.openlocfilehash: 7109340afaa634fc21177380d015c9eace506081
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 794d0bdceb13aafb83de85fb29e47a4fa3125cd6
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62357158"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70948898"
 ---
 # <a name="scalbn-scalbnf-scalbnl-scalbln-scalblnf-scalblnl"></a>scalbn, scalbnf, scalbnl, scalbln, scalblnf, scalblnl
 
-Integrální sílu FLT_RADIX vynásobí číslo s plovoucí desetinnou čárkou.
+Vynásobí číslo s plovoucí desetinnou čárkou integrální silou FLT_RADIX.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -98,27 +101,27 @@ long double scalblnl(
 Hodnota s plovoucí desetinnou čárkou.
 
 *exp*<br/>
-Exponent celé číslo.
+Celočíselný exponent.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-**Scalbn –** vrátí funkce hodnotu *x* \* **FLT_RADIX**<sup>exp</sup> po úspěšném provedení. Při přetečení (v závislosti na znaménko *x*), **scalbn –** vrátí **HUGE_VAL**; **errno** nastavena na hodnotu **ERANGE** .
+Funkce **scalbn –** vrací hodnotu *x* \* **FLT_RADIX**<sup>exp</sup> v případě úspěchu. Při přetečení (v závislosti na znaménku *x*) vrátí **scalbn –** +/- **HUGE_VAL**; hodnota **errno** je nastavená na **ERANGE**.
 
-Další informace o **errno** a možnou chybu návratové hodnoty, najdete v článku [errno _doserrno, _sys_errlist a _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+Další informace o **errno** a možných návratových hodnotách chyb naleznete v tématu [errno, _doserrno, _sys_errlist a _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Poznámky
 
-**FLT_RADIX** je definována v \<float.h > jako nativní s plovoucí desetinnou čárkou základ číselné soustavy; v systémech binárního souboru, má hodnotu 2, a **scalbn –** je ekvivalentní [ldexp –](ldexp.md).
+**FLT_RADIX** je definována v \<float. h > jako nativní Číselná soustava s plovoucí desetinnou čárkou. v binárních systémech má hodnotu 2 a **scalbn –** je ekvivalentem [ldexp –](ldexp.md).
 
-Protože jazyk C++ umožňuje přetížení, můžete volat přetížení **scalbn –** a **scalbln** , která používají a vrací **float** nebo **dlouhé** **double** typy. V programu jazyka C **scalbn –** vždy přijímá **double** a **int** a vrátí **double**, a **scalbln**vždy přijímá **double** a **dlouhé** a vrátí **double**.
+Vzhledem C++ k tomu, že umožňuje přetížení, můžete volat přetížení **scalbn –** a **scalbln** , které přebírají a vracejí typ **float** nebo **Long** **Double** . V programu v jazyce C **scalbn –** vždycky přebírá **Double** a **int** a vrací **Double**a **scalbln** vždycky přebírá **Double** a **Long** a vrací hodnotu **Double**.
 
 ## <a name="requirements"></a>Požadavky
 
-|Funkce|Záhlaví C|Hlaviček jazyka C++|
+|Funkce|Hlavička jazyka C|C++hlaviček|
 |--------------|--------------|------------------|
-|**scalbn –**, **scalbnf –**, **scalbnl**, **scalbln**, **scalblnf**, **scalblnl**|\<math.h>|\<cmath>|
+|**scalbn –** , **scalbnf –** , **scalbnl**, **scalbln**, **scalblnf**, **scalblnl**|\<Math. h >|\<cmath >|
 
-Další informace o kompatibilitě, naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Příklad
 

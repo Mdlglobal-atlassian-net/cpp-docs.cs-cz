@@ -1,9 +1,9 @@
 ---
 title: ferror
 ms.date: 11/04/2016
-apiname:
+api_name:
 - ferror
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - ferror
 helpviewer_keywords:
@@ -23,16 +26,16 @@ helpviewer_keywords:
 - streams, testing for errors
 - errors [C++], testing for stream
 ms.assetid: 528a34bc-f2aa-4c3f-b89a-5b148e6864f7
-ms.openlocfilehash: 2be90ffe8a135b4108abd9504099bd2f6c28f249
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4efb1b01ac94f1cb2d28bffb1f09b594a0e71479
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62334330"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70941106"
 ---
 # <a name="ferror"></a>ferror
 
-Testy pro chybu na datový proud.
+Testuje chybu v datovém proudu.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -45,17 +48,17 @@ int ferror(
 ### <a name="parameters"></a>Parametry
 
 *stream*<br/>
-Ukazatel na **souboru** struktury.
+Ukazatel na strukturu **souborů** .
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Pokud nedojde k žádné chybě na *stream*, **ferror** vrátí hodnotu 0. V opačném případě vrací nenulovou hodnotu. Pokud je datový proud **NULL**, **ferror** vyvolá obslužnou rutinu neplatného parametru, jak je popsáno v [Parameter Validation](../../c-runtime-library/parameter-validation.md). Pokud smí provádění pokračovat, tato funkce nastaví **errno** k **EINVAL** a vrátí hodnotu 0.
+Pokud u *streamu*nedošlo k žádné **chybě, potom** vrátí ' 0 '. V opačném případě vrátí nenulovou hodnotu. Pokud má datový proud **hodnotu null**, vyvolá **odvození** neplatnou obslužnou rutinu parametru, jak je popsáno v tématu [ověřování parametru](../../c-runtime-library/parameter-validation.md). Pokud provádění může pokračovat, tato funkce nastaví **errno** na **EINVAL** a vrátí hodnotu 0.
 
-Zobrazit [_doserrno, errno, _sys_errlist a _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) Další informace o těchto a dalších chybových kódech.
+Další informace o těchto a dalších chybových kódech naleznete v tématech [_doserrno, errno, _sys_errlist a _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) .
 
 ## <a name="remarks"></a>Poznámky
 
-**Ferror** rutinní (implementovány jako funkce i makra) test pro čtení nebo zápis chyby v souboru přidruženého k *stream*. Pokud došlo k chybě, indikátor chyby pro datový proud zůstane nastavený, dokud datový proud je uzavřen nebo převinuta, nebo dokud **clearerr –** je volána před ním.
+Rutina **doporučující** (implementovaná jako funkce a jako makro) testuje chybu čtení nebo zápisu v souboru přidruženém ke *streamu*. Pokud došlo k chybě, indikátor chyb pro datový proud zůstane nastavený, dokud datový proud není uzavřený nebo předaný, nebo dokud na něj **clearerr** nevolá.
 
 ## <a name="requirements"></a>Požadavky
 
@@ -63,7 +66,7 @@ Zobrazit [_doserrno, errno, _sys_errlist a _sys_nerr](../../c-runtime-library/er
 |--------------|---------------------|
 |**ferror**|\<stdio.h>|
 
-Další informace o kompatibilitě, naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Příklad
 
@@ -72,7 +75,7 @@ Podívejte se na příklad pro [feof](feof.md).
 ## <a name="see-also"></a>Viz také:
 
 [Zpracování chyb](../../c-runtime-library/error-handling-crt.md)<br/>
-[Stream vstupně-výstupních operací](../../c-runtime-library/stream-i-o.md)<br/>
+[Vstup/výstup datového proudu](../../c-runtime-library/stream-i-o.md)<br/>
 [clearerr](clearerr.md)<br/>
 [_eof](eof.md)<br/>
 [feof](feof.md)<br/>

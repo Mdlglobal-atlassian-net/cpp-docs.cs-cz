@@ -1,9 +1,9 @@
 ---
 title: free
 ms.date: 11/04/2016
-apiname:
+api_name:
 - free
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,23 +15,26 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-heap-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - free
 helpviewer_keywords:
 - memory blocks, deallocating
 - free function
 ms.assetid: 74ded9cf-1863-432e-9306-327a42080bb8
-ms.openlocfilehash: f56212874f05ea5d4ab7bd826a7a4c145551dfc0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7e09bec7c83eae64064e3997f2e8d5632a47258a
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62287756"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70956731"
 ---
 # <a name="free"></a>free
 
-Zruší přidělení nebo ho uvolní blok paměti.
+Zruší přidělení nebo uvolní blok paměti.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -44,33 +47,33 @@ void free(
 ### <a name="parameters"></a>Parametry
 
 *memblock*<br/>
-Dříve přidělený blok paměti určený k uvolnění.
+Dříve přidělený blok paměti, který se má uvolnit
 
 ## <a name="remarks"></a>Poznámky
 
-**Bezplatné** funkce zruší přidělení bloku paměti (*memblock*), která byla dříve přidělena voláním **calloc**, **malloc**, nebo **realloc**. Počet uvolněných bajtů je ekvivalentní k počtu bajtů při byl přidělen blok (nebo v případě třídy nevyčerpané **realloc**). Pokud *memblock* je **NULL**, ukazatel je ignorována a **bezplatné** okamžitě vrátí. Pokus o uvolnění neplatný ukazatel (ukazatele na blok paměti, který nebyl přidělen pomocí **calloc**, **malloc**, nebo **realloc**) může mít vliv na následné přidělování požadavků a způsobit chyby.
+Funkce **Free uvolní** blok paměti (*memblock*), který byl dříve přidělen voláním metody **calloc** **,** nebo **realokace**. Počet uvolněných bajtů se rovná počtu bajtů požadovaných v době, kdy byl blok přidělen (nebo znovu přidělen v případě **přepřidělení**). Pokud má Memblock **hodnotu null**, ukazatel se ignoruje **a okamžitě se vrátí** . Při pokusu o uvolnění neplatného ukazatele (ukazatel na blok **paměti, který**nebyl přidělen pomocí **calloc**, nezdařila nebo **realokace**) může ovlivnit následné žádosti o přidělení a způsobit chyby.
 
-Pokud dojde k chybě v uvolňování paměti, **errno** nastaven s informacemi z operačního systému na povaze selhání. Další informace najdete v tématu [errno _doserrno, _sys_errlist a _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+Pokud dojde k chybě při uvolnění paměti, **errno** se nastaví s informacemi z operačního systému podle povahy selhání. Další informace najdete v tématech [errno, _doserrno, _sys_errlist a _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
-Po bloku paměti byl uvolněn, [_heapmin –](heapmin.md) minimalizuje množství volné paměti v haldě slučování nevyužité oblasti a uvolněním je zpět do operačního systému. Uvolněné paměti, který není v operačním systému, budou obnoveny do volného fondu a je k dispozici pro přidělení znovu.
+Po uvolnění bloku paměti [_heapmin](heapmin.md) minimalizuje množství volné paměti v haldě sloučením nepoužívaných oblastí a jejich uvolněním zpět do operačního systému. Uvolněná paměť, která není vydána v operačním systému, se obnoví do volného fondu a je možné ji znovu přidělit.
 
-Když je aplikace spojena s ladicí verzí knihovny run-time C **bezplatné** přeloží na [_free_dbg –](free-dbg.md). Další informace o tom, jak je spravována halda během procesu ladění, naleznete v tématu [haldy pro ladění CRT](/visualstudio/debugger/crt-debug-heap-details).
+Je-li aplikace propojena s ladicí verzí běhových knihoven jazyka C, je **bezplatná** překládána na [_free_dbg](free-dbg.md). Další informace o tom, jak je halda spravována během procesu ladění, naleznete v [haldě ladění CRT](/visualstudio/debugger/crt-debug-heap-details).
 
-**bezplatné** je označen `__declspec(noalias)`, což znamená, že funkce je zaručeno, že neupraví globální proměnné. Další informace najdete v tématu [noalias](../../cpp/noalias.md).
+**Free** je označena `__declspec(noalias)`, což znamená, že funkce zaručuje, že nemění globální proměnné. Další informace najdete v tématu [jiné](../../cpp/noalias.md).
 
-K uvolnění paměti s [_malloca](malloca.md), použijte [_freea –](freea.md).
+K uvolnění paměti přidělené [_malloca](malloca.md)použijte [_freea](freea.md).
 
 ## <a name="requirements"></a>Požadavky
 
 |Funkce|Požadovaný hlavičkový soubor|
 |--------------|---------------------|
-|**free**|\<stdlib.h > a \<malloc.h >|
+|**free**|\<Stdlib. h > a \<. h >|
 
-Další informace o kompatibilitě, naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Příklad
 
-Podívejte se na příklad pro [malloc](malloc.md).
+Podívejte [se na příklad pro.](malloc.md)
 
 ## <a name="see-also"></a>Viz také:
 

@@ -1,9 +1,9 @@
 ---
 title: _CrtSetAllocHook
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _CrtSetAllocHook
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -14,7 +14,10 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _CrtSetAllocHook
 - CrtSetAllocHook
@@ -22,16 +25,16 @@ helpviewer_keywords:
 - _CrtSetAllocHook function
 - CrtSetAllocHook function
 ms.assetid: 405df37b-2fd1-42c8-83bc-90887f17f29d
-ms.openlocfilehash: cfa466ec4bce6034c15a627ccab4ee4bb0ef8f5b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 303f682b54abc5e44cb7fdd4c89012dd9913288b
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62347399"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70938487"
 ---
-# <a name="crtsetallochook"></a>_CrtSetAllocHook
+# <a name="_crtsetallochook"></a>_CrtSetAllocHook
 
-Nainstaluje funkce klienta definované přidělení zapojení do proces přidělení paměti ladění za běhu jazyka C (pouze ladicí verze).
+Nainstaluje uživatelsky definovanou funkci alokace tím, že se připojí k procesu přidělování paměti ladění C za běhu (pouze ladicí verze).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -44,17 +47,17 @@ _CRT_ALLOC_HOOK _CrtSetAllocHook(
 ### <a name="parameters"></a>Parametry
 
 *allocHook*<br/>
-Nové funkce klienta definované přidělení k připojení do procesu přidělení paměti ladění za běhu C.
+Nová funkce alokace definovaná u klienta, která se připojí k procesu přidělování paměti ladění C Runtime.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Vrátí funkce háku předem definované přidělení, nebo **NULL** Pokud *allocHook* je **NULL**.
+Vrátí dříve definovanou funkci přidělujícího zavěšení nebo **hodnotu null** , pokud má *allocHook* **hodnotu null**.
 
 ## <a name="remarks"></a>Poznámky
 
-**_CrtSetAllocHook** umožňuje aplikaci připojit svou vlastní funkci rozdělení do procesu přidělení paměti knihovny C ladění za běhu. Díky tomu všechna volání funkce přidělení ladění přidělit, přidělit jinému uživateli nebo bez triggerů bloku paměti během volání funkce háku vaší aplikace. **_CrtSetAllocHook** umožní snadno pro metodu testování, způsob, jakým aplikace zpracovává situace nedostatku paměti, schopnost zkoumat vzory přidělování a možnost později protokolovat informace o přidělení paměti pro aplikaci analýzy. Když [_DEBUG](../../c-runtime-library/debug.md) není definován, jsou volání **_CrtSetAllocHook** odstraněna během předběžného zpracování.
+**_CrtSetAllocHook** umožňuje aplikaci zapojit svou vlastní funkci přidělení do procesu přidělování paměti knihovny ladění jazyka C. V důsledku toho každé volání funkce alokace ladění pro přidělení, opětovné přidělení nebo uvolnění bloku paměti aktivuje volání funkce zavěšení aplikace. **_CrtSetAllocHook** poskytuje aplikaci s snadnou metodou testování způsobu, jakým aplikace zpracovává nedostatečné paměťové situace, možnost kontrolovat vzory přidělení a možnost zaznamenávat informace o přidělení pro pozdější analýzu. Když není definovaný [_DEBUG](../../c-runtime-library/debug.md) , volání **_CrtSetAllocHook** se během předběžného zpracování odeberou.
 
-**_CrtSetAllocHook** funkce nainstaluje novou funkci klienta definované přidělení podle *allocHook* a vrací funkci dříve definované připojení. Následující příklad ukazuje, jak by měla být prototypem háku přidělení definované klienta:
+Funkce **_CrtSetAllocHook** nainstaluje novou funkci přidělení definovanou pro klienta zadanou v *allocHook* a vrátí dříve definovanou funkci Hooku. Následující příklad ukazuje, jakým způsobem by měl být prototypem přiděleného zavěšení definovaného klientem:
 
 ```C
 int YourAllocHook( int allocType, void *userData, size_t size,
@@ -62,20 +65,20 @@ int YourAllocHook( int allocType, void *userData, size_t size,
                    const unsigned char *filename, int lineNumber);
 ```
 
-**AllocType** argument určuje typ operace přidělení (**_HOOK_ALLOC**, **_HOOK_REALLOC**, a **_HOOK_FREE**), který volání funkce háku přidělení pro aktivaci. Pokud je spouštěcí typ přidělení **_HOOK_FREE**, *userData* je ukazatel na část dat uživatele bloku paměti se být uvolněna. Nicméně, pokud je spouštěcí typ přidělení **_HOOK_ALLOC** nebo **_HOOK_REALLOC**, *userData* je **NULL** protože bloku paměti nebyl dosud přidělen.
+Argument **allocType** určuje typ operace přidělení ( **_HOOK_ALLOC**, **_HOOK_REALLOC**a **_HOOK_FREE**), která aktivovala volání funkce Hooku přidělení. Když je typ přidělení triggeru **_HOOK_FREE**, *UserData* je ukazatel na oddíl data uživatele v bloku paměti, který se chystá uvolnit. Pokud je však aktivační typ přidělení **_HOOK_ALLOC** nebo **_HOOK_REALLOC**, *UserData* má **hodnotu null** , protože blok paměti nebyl dosud přidělen.
 
-*velikost* určuje blokovat velikost paměti v bajtech, *blockType* označuje typ bloku paměti *requestNumber* je číslo pořadí přidělení objektu bloku paměti a v případě k dispozici, *filename* a **lineNumber** zadat zdrojového souboru název a číslo řádku kde spouštěcí přidělení operace se iniciovala.
+*Velikost* určuje velikost bloku paměti v bajtech, *blockType* označuje typ bloku paměti, *requestNumber* je číslo pořadí přidělení objektu bloku paměti a, pokud je k dispozici, *filename* a **číslo řádku** zadejte název zdrojového souboru a číslo řádku, kde byla inicializována operace přidělení aktivační události.
 
-Po dokončení zpracování funkce háku musí vrátit logickou hodnotu, která informuje proces hlavní přidělování za běhu C, jak chcete pokračovat. Když chce, aby funkce háku přidělení hlavní postup pokračovat, protože pokud kdyby funkce háku nikdy volána, pak by měl vrátit funkce háku **TRUE**. To způsobí, že původní operace spouštěcí přidělení má být proveden. Pomocí této implementaci funkce háku shromáždit a uložit informace o přidělení paměti pro pozdější analýzu, aniž by zasahovala do aktuální operaci správy přidělení nebo stavu haldy ladění.
+Po dokončení zpracování funkce zavěšení musí vrátit logickou hodnotu, která oznamuje hlavnímu procesu přidělování za běhu jazyka C, jak pokračovat. Když funkce Hooku požaduje, aby hlavní proces přidělení pokračoval, jako kdyby funkce Hooku nebyla nikdy volána, měla by funkce Hooku vracet **hodnotu true**. To způsobí, že se spustí původní operace přidělení. Pomocí této implementace může funkce zavěšení shromáždit a uložit informace o přidělení pro pozdější analýzu, aniž by došlo ke konfliktu s aktuální operací přidělení nebo stavem haldy ladění.
 
-Pokud funkce háku požaduje hlavní přidělení procesu pokračovat jako spouštěcí přidělení operace byla volána a se nezdařilo, pak by měl vrátit funkce háku **FALSE**. Pomocí této implementaci funkce háku simulace širokou škálu paměti a ladění haldy stavy k otestování způsob, jakým aplikace zpracovává každé situaci.
+Když funkce zavěšení chce, aby hlavní proces přidělení pokračoval, jako kdyby byla volána operace přidělení, a selhala, funkce Hooku by měla vrátit **hodnotu false**. Pomocí této implementace může funkce zavěšení simulovat velký rozsah stavů paměti a ladit stavy haldy k otestování toho, jak aplikace zpracovává jednotlivé situace.
 
-Chcete-li zaškrtnutí háku funkce, předejte **NULL** k **_CrtSetAllocHook**.
+Chcete-li vymazat funkci Hooku, předejte **hodnotu null** do **_CrtSetAllocHook**.
 
-Další informace o tom, **_CrtSetAllocHook** jde použít s dalšími funkcemi správy paměti nebo o zápis funkce háku definované klienta najdete v tématu [zápis funkce háku ladění](/visualstudio/debugger/debug-hook-function-writing).
+Další informace o tom, jak se dá **_CrtSetAllocHook** použít s dalšími funkcemi pro správu paměti nebo jak napsat vlastní funkce zavěšení definované klientem, najdete v článku [psaní funkcí vidlice ladění](/visualstudio/debugger/debug-hook-function-writing).
 
 > [!NOTE]
-> **_CrtSetAllocHook** není podporován v rámci **/CLR: pure**. **/CLR: pure** a **/CLR: safe** – možnosti kompilátoru jsou zastaralé v sadě Visual Studio 2015 a odebrat v sadě Visual Studio 2017.
+> **_CrtSetAllocHook** není podporován v rámci **/clr: Pure**. Možnosti **/clr: Pure** a **/clr: Safe** jsou v aplikaci Visual Studio 2015 zastaralé a odebrané v aplikaci Visual Studio 2017.
 
 ## <a name="requirements"></a>Požadavky
 
@@ -83,15 +86,15 @@ Další informace o tom, **_CrtSetAllocHook** jde použít s dalšími funkcemi 
 |-------------|---------------------|
 |**_CrtSetAllocHook**|\<crtdbg.h>|
 
-Další informace o kompatibilitě naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
 
 ## <a name="libraries"></a>Knihovny
 
-Ladicí verze [běhových knihoven C](../../c-runtime-library/crt-library-features.md) pouze.
+Ladit verze pouze [knihoven run-time jazyka C](../../c-runtime-library/crt-library-features.md) .
 
 ## <a name="example"></a>Příklad
 
-Pro ukázku toho, jak používat **_CrtSetAllocHook**, naleznete v tématu [crt_dbg2](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/crt/crt_dbg2).
+Ukázku použití **_CrtSetAllocHook**naleznete v tématu [crt_dbg2](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/crt/crt_dbg2).
 
 ## <a name="see-also"></a>Viz také:
 

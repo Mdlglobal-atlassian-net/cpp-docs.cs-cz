@@ -1,10 +1,10 @@
 ---
 title: _beginthread, _beginthreadex
 ms.date: 02/27/2018
-apiname:
+api_name:
 - _beginthread
 - _beginthreadex
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-runtime-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - beginthread
 - _beginthread
@@ -29,12 +32,12 @@ helpviewer_keywords:
 - _beginthreadex function
 - beginthread function
 ms.assetid: 0df64740-a978-4358-a88f-fb0702720091
-ms.openlocfilehash: 27bc850281f7591b4fa23a03e9adc3bc02bda87b
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 8714e945464dd98483f9347c4226321a96cda61c
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69500307"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70943635"
 ---
 # <a name="_beginthread-_beginthreadex"></a>_beginthread, _beginthreadex
 
@@ -130,7 +133,7 @@ Operační systém zpracovává přidělení zásobníku, pokud je volán buď *
 
 *Arglist* je parametr, který se má předat nově vytvořenému vláknu. Obvykle je to adresa datové položky, jako je například řetězec znaků. *Arglist* může mít **hodnotu null** , pokud není potřeba, ale **_beginthread** a **_beginthreadex** musí předat nějaké hodnotě, která má být předána novému vláknu. Všechna vlákna jsou ukončena, pokud jakékoli vlákno volá funkci [Abort](abort.md), **Exit**, **_exit**nebo **ExitProcess –** .
 
-Národní prostředí nového vlákna je inicializováno pomocí informací o globálním aktuálním národním prostředí pro proces. Pokud je národní prostředí pro vlákno povoleno voláním [_configthreadlocale](configthreadlocale.md) (buď globálně, nebo pouze pro nové vlákna), vlákno může změnit své národní prostředí nezávisle na jiných vláknech voláním setlocale nebo **_wsetlocale**. Vlákna, která nemají nastaven příznak národního prostředí pro vlákno, mohou ovlivnit informace o národním prostředí ve všech ostatních vláknech, které nemají nastaven příznak národního prostředí pro vlákno a také všechna nově vytvořená vlákna. Další informace najdete v tématu [národní prostředí](../../c-runtime-library/locale.md).
+Národní prostředí nového vlákna je inicializováno pomocí informací o globálním aktuálním národním prostředí pro proces. Pokud je národní prostředí pro vlákno povoleno voláním [_configthreadlocale](configthreadlocale.md) (buď globálně, nebo pouze pro nové vlákna), vlákno může změnit své národní prostředí nezávisle na jiných vláknech voláním **setlocale** nebo **_wsetlocale**. Vlákna, která nemají nastaven příznak národního prostředí pro vlákno, mohou ovlivnit informace o národním prostředí ve všech ostatních vláknech, které nemají nastaven příznak národního prostředí pro vlákno a také všechna nově vytvořená vlákna. Další informace najdete v tématu [národní prostředí](../../c-runtime-library/locale.md).
 
 Pro kód **/CLR** , **_beginthread** a **_beginthreadex** mají dvě přetížení. Jedna má ukazatel na funkci nativní konvence volání a druhý přebírá ukazatel na funkci **__clrcall** . První přetížení není bezpečné pro doménu aplikace a nikdy nebude. Pokud píšete kód **/CLR** , musíte zajistit, aby nové vlákno zadalo správnou doménu aplikace před tím, než přistupuje ke spravovaným prostředkům. To lze provést například pomocí [funkce call_in_appdomain](../../dotnet/call-in-appdomain-function.md). Druhé přetížení je aplikace zabezpečená pro doménu; nově vytvořené vlákno bude vždy ukončeno v doméně aplikace volajícího **_beginthread** nebo **_beginthreadex**.
 

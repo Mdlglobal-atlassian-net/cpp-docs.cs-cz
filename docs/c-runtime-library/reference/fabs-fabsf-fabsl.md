@@ -1,11 +1,11 @@
 ---
 title: fabs, fabsf, fabsl
 ms.date: 04/05/2018
-apiname:
+api_name:
 - fabsf
 - fabs
 - fabsl
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - fabs
 - fabsf
@@ -32,12 +35,12 @@ helpviewer_keywords:
 - fabs function
 - fabsl function
 ms.assetid: 23bca210-f408-4f5e-b46b-0ccaaec31e36
-ms.openlocfilehash: 8df36c06fb3ca9af9be4cf704998946b3eaf9a6c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 155b0e4ced7eb4ea0ade5445a62fc385f0c157e9
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62334941"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70941484"
 ---
 # <a name="fabs-fabsf-fabsl"></a>fabs, fabsf, fabsl
 
@@ -70,27 +73,27 @@ Hodnota s plovoucí desetinnou čárkou.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-**Fabs –** funkce vrátí absolutní hodnotu argumentu *x*. Není vrácena žádná chyba.
+Funkce **fabs –** vrací absolutní hodnotu argumentu *x*. Nevrátila se žádná chybová zpráva.
 
-|Vstup|Výjimka SEH|Výjimka Matherr|
+|Vstup|Výjimka SEH|Výjimka matherr|
 |-----------|-------------------|-----------------------|
-|ROZMEZÍ QNAN, AJÍT|žádná|_DOMAIN|
+|QNAN, ZASÁHNOUT|žádná|_DOMAIN|
 
 ## <a name="remarks"></a>Poznámky
 
-Jazyk C++ umožňuje přetížení, takže můžete volat přetížení **fabs –** zadáte-li \<cmath > záhlaví. V programu jazyka C **fabs –** vždy převezme a vrátí **double**.
+C++umožňuje přetížení, takže můžete volat přetížení **fabs –** , pokud zahrnete \<hlavičku cmath >. V programu v jazyce C **fabs –** vždycky přebírá a vrací **Double**.
 
 ## <a name="requirements"></a>Požadavky
 
-|Funkce|Požadovaná hlavička C|Požadované hlaviček jazyka C++|
+|Funkce|Povinné záhlaví jazyka C|Požadovaná C++ hlavička|
 |--------------|-----------------------|---------------------------|
-|**fabs –**, **fabsf –**, **fabsl**|\<math.h>|\<cmath > nebo \<math.h >|
+|**fabs –** , **fabsf –** , **fabsl**|\<Math. h >|\<cmath > nebo \<Math. h >|
 
-Další informace o kompatibilitě, naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Příklad
 
-Podívejte se na příklad pro [abs](abs-labs-llabs-abs64.md).
+Podívejte se na příklad pro [ABS](abs-labs-llabs-abs64.md).
 
 ## <a name="see-also"></a>Viz také:
 

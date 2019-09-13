@@ -1,12 +1,12 @@
 ---
 title: strstr, wcsstr, _mbsstr, _mbsstr_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _mbsstr
 - wcsstr
 - _mbsstr_l
 - strstr
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -20,7 +20,10 @@ apilocation:
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
 - ntoskrnl.exe
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _fstrstr
 - _ftcsstr
@@ -44,12 +47,12 @@ helpviewer_keywords:
 - _mbsstr_l function
 - strstr function
 ms.assetid: 03d70c3f-2473-45cb-a5f8-b35beeb2748a
-ms.openlocfilehash: 003e5fd88bdfaafff539c5c993a99cd9ecca0b82
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 8c113e02f308b634b6bcb8aea6e46fc14b9abd92
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69500824"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70946592"
 ---
 # <a name="strstr-wcsstr-_mbsstr-_mbsstr_l"></a>strstr, wcsstr, _mbsstr, _mbsstr_l
 
@@ -136,7 +139,7 @@ Funkce vrátí ukazatel na první výskyt strSearch v *str*. `strstr` Hledání 
 > [!IMPORTANT]
 > Tyto funkce mohou způsobit ohrožení proti problému s přetečením vyrovnávací paměti. Problémy přetečení vyrovnávací paměti lze použít k útoku na systém, protože mohou umožňovat spuštění libovolného kódu, což může způsobit neoprávněné zvýšení oprávnění. Další informace najdete v tématu [předcházení přetečení vyrovnávací paměti](/windows/win32/SecBP/avoiding-buffer-overruns).
 
-V jazyce C tyto funkce přebírají ukazatel const pro první argument. V C++jsou k dispozici dvě přetížení. Přetížení, které přebírá ukazatel na typ const vrací ukazatelna const; verze, která přebírá ukazatel na jiný typ než const, vrací ukazatel na**nekonstantní**hodnotu. Makro _CRT_CONST_CORRECT_OVERLOADS je definováno, pokud jsou k dispozici obě verze const i non-**const** . Pokud pro C++ přetížení vyžadujete nekonstantní chování, definujte symbol _CONST_RETURN.
+V jazyce C tyto funkce přebírají ukazatel **const** pro první argument. V C++jsou k dispozici dvě přetížení. Přetížení, které přebírá ukazatel na typ **const** vrací ukazatel na **const**; verze, která přebírá ukazatel na jiný typ než**const** , vrací ukazatel na**nekonstantní**hodnotu. Makro _CRT_CONST_CORRECT_OVERLOADS je definováno, pokud jsou k dispozici obě verze **const** i non-**const** . Pokud pro C++ přetížení vyžadujete**nekonstantní** chování, definujte symbol _CONST_RETURN.
 
 Výstupní hodnota je ovlivněna nastavením kategorie národního prostředí LC_CTYPE; Další informace naleznete v tématu [setlocale, _wsetlocale](setlocale-wsetlocale.md). Verze těchto funkcí, které nemají příponu **_l** , používají aktuální národní prostředí pro toto chování závislé na národním prostředí; verze s příponou **_l** jsou stejné s tím rozdílem, že místo toho používají parametr národního prostředí, který je předán. Další informace najdete v tématu [národní prostředí](../../c-runtime-library/locale.md).
 

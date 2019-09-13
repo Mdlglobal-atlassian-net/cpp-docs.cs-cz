@@ -1,9 +1,9 @@
 ---
 title: _msize_dbg
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _msize_dbg
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -14,7 +14,10 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _msize_dbg
 - msize_dbg
@@ -23,14 +26,14 @@ helpviewer_keywords:
 - _msize_dbg function
 - msize_dbg function
 ms.assetid: a333f4b6-f8a2-4e61-bb69-cb34063b8cef
-ms.openlocfilehash: 3b6d08d44162d8263ca88147fe86166924d7d162
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7fa12689a35beaad0727c14327d1b948a62c29d0
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62156301"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70951482"
 ---
-# <a name="msizedbg"></a>_msize_dbg
+# <a name="_msize_dbg"></a>_msize_dbg
 
 Vypočítá velikost bloku paměti v haldě (pouze ladicí verze).
 
@@ -46,22 +49,22 @@ size_t _msize_dbg(
 ### <a name="parameters"></a>Parametry
 
 *userData*<br/>
-Ukazatele na blok paměti, pro které chcete určit velikost.
+Ukazatel na blok paměti, pro který chcete určit velikost.
 
 *blockType*<br/>
-Typ bloku paměti zadaná: **_CLIENT_BLOCK** nebo **_NORMAL_BLOCK**.
+Typ zadaného bloku paměti: **_CLIENT_BLOCK** nebo **_NORMAL_BLOCK**.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Při úspěšném dokončení **_msize_dbg –** vrátí velikost (v bajtech) zadaná paměťová bloku; v opačném případě vrátí **NULL**.
+Po úspěšném dokončení vrátí **_msize_dbg** velikost zadaného bloku paměti (v bajtech). v opačném případě vrátí **hodnotu null**.
 
 ## <a name="remarks"></a>Poznámky
 
-**_msize_dbg –** je ladicí verze _[msize –](msize.md) funkce. Když [_DEBUG](../../c-runtime-library/debug.md) není definován, každé volání **_msize_dbg –** je omezená na volání **_msize –**. Obě **_msize –** a **_msize_dbg –** vypočítat velikost bloku paměti v haldě základní, ale **_msize_dbg –** přidá dvou funkcí ladění: Zahrnuje vrácená velikost vyrovnávací paměti na obou stranách část uživatele bloku paměti a umožňuje výpočty velikosti pro konkrétní blok typy.
+**_msize_dbg** je ladicí verze funkce _[msize](msize.md) . Pokud není definován [_DEBUG](../../c-runtime-library/debug.md) , každé volání **_msize_dbg** je sníženo na volání **_msize**. **_Msize** i **_msize_dbg** vypočítávají velikost bloku paměti v základní haldě, ale **_msize_dbg** přidává dvě funkce ladění: Obsahuje vyrovnávací paměti na kterékoli straně uživatelské části bloku paměti ve vrácené velikosti a umožňuje výpočty velikosti pro konkrétní typy bloků.
 
-Informace o způsobu jsou bloky paměti přidělené, inicializovat a správy v ladicí verzi základní haldy viz [podrobnosti haldy ladění CRT](/visualstudio/debugger/crt-debug-heap-details). Informace o typech bloku přidělení a způsob jejich použití naleznete v tématu [typy bloků na haldě ladění](/visualstudio/debugger/crt-debug-heap-details). Informace o rozdílech mezi volání funkce haldy standardní a jeho ladicí verze v sestavení pro ladění aplikace najdete v tématu [ladění verze z funkcí přidělení haldy](/visualstudio/debugger/debug-versions-of-heap-allocation-functions).
+Informace o způsobu přidělování, inicializace a správy paměťových bloků v ladicí verzi základní haldy najdete v [podrobnostech o haldě ladění CRT](/visualstudio/debugger/crt-debug-heap-details). Informace o typech bloků přidělení a způsobu jejich použití naleznete v tématu [typy bloků v haldě ladění](/visualstudio/debugger/crt-debug-heap-details). Informace o rozdílech mezi voláním standardní funkce haldy a její ladicí verzí v sestavení ladění aplikace najdete v tématu [ladění verzí funkcí přidělení haldy](/visualstudio/debugger/debug-versions-of-heap-allocation-functions).
 
-Tato funkce ověřuje svůj parametr. Pokud *memblock* je ukazatel s hodnotou null, **_msize –** vyvolá obslužnou rutinu neplatného parametru, jak je popsáno v [Parameter Validation](../../c-runtime-library/parameter-validation.md). Pokud je chyba zpracována, funkce nastaví **errno** k **EINVAL** a vrátí hodnotu -1.
+Tato funkce ověří svůj parametr. Pokud je *memblock* ukazatel s hodnotou null, **_msize** vyvolá neplatnou obslužnou rutinu parametru, jak je popsáno v tématu [ověřování parametru](../../c-runtime-library/parameter-validation.md). Pokud je chyba zpracována, funkce nastaví **errno** na **EINVAL** a vrátí-1.
 
 ## <a name="requirements"></a>Požadavky
 
@@ -69,11 +72,11 @@ Tato funkce ověřuje svůj parametr. Pokud *memblock* je ukazatel s hodnotou nu
 |-------------|---------------------|
 |**_msize_dbg**|\<crtdbg.h>|
 
-Další informace o kompatibilitě naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
 
 ## <a name="libraries"></a>Knihovny
 
-Ladicí verze [běhových knihoven C](../../c-runtime-library/crt-library-features.md) pouze.
+Ladit verze pouze [knihoven run-time jazyka C](../../c-runtime-library/crt-library-features.md) .
 
 ## <a name="example"></a>Příklad
 

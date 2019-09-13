@@ -1,11 +1,11 @@
 ---
-title: Norm a normf, norml
+title: norm, normf, norml
 ms.date: 04/05/2018
-apiname:
+api_name:
 - norm
 - normf
 - norml
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - norm
 - normf
@@ -30,16 +33,16 @@ helpviewer_keywords:
 - normf function
 - norml function
 ms.assetid: 9786ecfe-0019-4553-b378-0af6c691e15c
-ms.openlocfilehash: 3c1803a54f0dfc27975af5bb0eeb7e5c042b2579
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8deaa07d984a3840c73e594535ffffc9078d4716
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62156133"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70951321"
 ---
-# <a name="norm-normf-norml"></a>Norm a normf, norml
+# <a name="norm-normf-norml"></a>norm, normf, norml
 
-Načte kvadratických velikost komplexního čísla.
+Načte čtvercovou velikost složeného čísla.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -57,23 +60,23 @@ long double norm( _Lcomplex z );  // C++ only
 ### <a name="parameters"></a>Parametry
 
 *z*<br/>
-Komplexní čísla.
+Komplexní číslo.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Ve čtverci velikost *z*.
+Čtvercový *Rozsah z.*
 
 ## <a name="remarks"></a>Poznámky
 
-Protože C++ umožňuje přetížení, můžete volat přetížení **norm** trvají **_Fcomplex** nebo **_Lcomplex** hodnoty a návrat **float**nebo **long double** hodnoty. V programu jazyka C **norm** vždy přijímá **_Dcomplex** hodnotu a vrátí **double** hodnotu.
+Vzhledem C++ k tomu, že umožňuje přetížení, můžete volat přetížení **normy** , které přijímají hodnoty **_Fcomplex** nebo **_Lcomplex** , a vracet hodnoty **float** nebo **Long Double** . V programu v jazyce C **norma** vždy přebírá hodnotu **_Dcomplex** a vrací hodnotu **Double** .
 
 ## <a name="requirements"></a>Požadavky
 
-|Rutina|Záhlaví C|Hlaviček jazyka C++|
+|Rutina|Hlavička jazyka C|C++hlaviček|
 |-------------|--------------|------------------|
-|**Norm**, **normf**, **norml**|\<complex.h>|\<complex.h>|
+|**norma**, **normf**, **norma**|\<complex.h>|\<complex.h>|
 
-**_Fcomplex**, **_Dcomplex**, a **_Lcomplex** typy jsou specifické pro společnost Microsoft ekvivalenty neimplementovaná nativní typy C99 **float _Complex** , **double _Complex**, a **long double _Complex**v uvedeném pořadí.  Další informace o kompatibilitě naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
+Typy **_Fcomplex**, **_Dcomplex**a **_Lcomplex** jsou specifické pro společnost Microsoft ekvivalenty neimplementovaných nativních typů C99 typu **float _Complex**, **Double _Complex**a **Long Double _Complex**, v uvedeném pořadí.  Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Viz také:
 

@@ -1,9 +1,9 @@
 ---
 title: _chsize
 ms.date: 03/29/2018
-apiname:
+api_name:
 - _chsize
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _chsize
 helpviewer_keywords:
@@ -25,16 +28,16 @@ helpviewer_keywords:
 - files [C++], changing size
 - chsize function
 ms.assetid: b3e881c5-7b27-4837-a3d4-c51591ab10ff
-ms.openlocfilehash: 5c60f3aa08a405eb9a83dc6ba8636cd316a32925
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7fe07b2261396be491b833ff52186024edd0b919
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62340323"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70942967"
 ---
-# <a name="chsize"></a>_chsize
+# <a name="_chsize"></a>_chsize
 
-Změní velikost souboru. Bezpečnější verze je k dispozici. Zobrazit [_chsize_s –](chsize-s.md).
+Změní velikost souboru. Je k dispozici bezpečnější verze; viz [_chsize_s](chsize-s.md).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -50,20 +53,20 @@ int _chsize(
 *fd*<br/>
 Popisovač souboru odkazující na otevřený soubor.
 
-*Velikost*<br/>
-Novou velikost souboru v bajtech.
+*hodnota*<br/>
+Nová délka souboru v bajtech
 
 ## <a name="return-value"></a>Návratová hodnota
 
-**_chsize –** vrací hodnotu 0, pokud je úspěšně změněna velikost souboru. Návratová hodnota-1 označuje chybu: **errno** je nastavena na **EACCES** Pokud zadaný soubor je jen pro čtení nebo zadaný soubor je uzamčen před přístupem, do **EBADF** Pokud Popisovač je neplatný, **ENOSPC** Pokud již není místo na zařízení, nebo **EINVAL** Pokud *velikost* je menší než nula.
+**_chsize** vrací hodnotu 0, pokud je velikost souboru úspěšně změněna. Návratová hodnota-1 označuje chybu: **errno** je nastavená na **EACCES** , pokud je zadaný soubor jen pro čtení, nebo je zadaný soubor uzamčený proti přístupu, aby **EBADF** v případě, že je popisovač neplatný, **ENOSPC** , pokud na zařízení není žádné místo, nebo **EINVAL** , pokud je *Velikost* menší než nula.
 
-Zobrazit [_doserrno, errno, _sys_errlist a _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) Další informace o těchto a dalších návratových kódů.
+Další informace o těchto a dalších návratových kódech naleznete v tématech [_doserrno, errno, _sys_errlist a _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) .
 
 ## <a name="remarks"></a>Poznámky
 
-**_Chsize –** rozšiřuje funkce nebo zkrátí soubor přidružený k *fd* délce určené *velikost*. Soubor musí být otevřen v režimu, který umožňuje zápis. Znaky s hodnotou Null ('\0') se připojují, pokud je soubor rozšířeno. Soubor je zkrácen, dojde ke ztrátě všech dat od konce zkrácený soubor původní délku souboru.
+Funkce **_chsize** rozšiřuje nebo zkrátí soubor přidružený k *FD* na délku určenou *velikostí*. Soubor musí být otevřen v režimu, který povoluje zápis. Pokud je soubor rozšířený, připojí se znaky null (' \ 0 '). Pokud je soubor zkrácený, ztratí se všechna data z konce zkráceného souboru do původní délky souboru.
 
-Tato funkce ověřuje své parametry. Pokud *velikost* je menší než nula nebo *fd* je popisovače souborů, je vyvolána obslužná rutina neplatného parametru, jak je popsáno v [Parameter Validation](../../c-runtime-library/parameter-validation.md).
+Tato funkce ověří své parametry. Pokud je *Velikost* menší než nula nebo *FD* je chybný popisovač souboru, je vyvolána obslužná rutina neplatného parametru, jak je popsáno v tématu [ověřování parametru](../../c-runtime-library/parameter-validation.md).
 
 ## <a name="requirements"></a>Požadavky
 
@@ -71,7 +74,7 @@ Tato funkce ověřuje své parametry. Pokud *velikost* je menší než nula nebo
 |-------------|---------------------|---------------------|
 |**_chsize**|\<io.h>|\<errno.h>|
 
-Další informace o kompatibilitě naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Příklad
 

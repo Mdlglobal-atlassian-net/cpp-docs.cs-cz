@@ -1,11 +1,11 @@
 ---
 title: nan, nanf, nanl
 ms.date: 01/31/2019
-apiname:
+api_name:
 - nanf
 - nan
 - nanl
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - nan
 - nanl
@@ -27,16 +30,16 @@ helpviewer_keywords:
 - nanf function
 - nanl function
 ms.assetid: 790e9158-80ab-43e0-8f5a-096198553fd9
-ms.openlocfilehash: df3985a28bc351bdf196c0a1561bd3e25b661c87
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9574eb0382f3bb7fc3c51d504aba9e29d0692c09
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62156263"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70951422"
 ---
 # <a name="nan-nanf-nanl"></a>nan, nanf, nanl
 
-Vrátí hodnotu tichý NaN.
+Vrací hodnotu tichého NaN.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -48,22 +51,22 @@ long double nanl( const char* input );
 
 ### <a name="parameters"></a>Parametry
 
-*Vstup*<br/>
-Hodnotu řetězce.
+*vstup*<br/>
+Řetězcová hodnota.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-**Nan** vrátí funkce hodnotu tichý NaN.
+Funkce **NaN** vrací tichou hodnotu NaN.
 
 ## <a name="remarks"></a>Poznámky
 
-**Nan** funkce vrátí hodnotu s plovoucí desetinnou čárkou, která odpovídá na (bez zabezpečení) tichý NaN. *Vstupní* hodnota se ignoruje. Informace o tom, jak je reprezentovaná NaN pro výstup, naleznete v tématu [printf _printf_l –, wprintf _wprintf_l –](printf-printf-l-wprintf-wprintf-l.md).
+Funkce **NaN** vrací hodnotu s plovoucí desetinnou čárkou, která odpovídá tichému (bez signalizaci) NaN. *Vstupní* hodnota je ignorována. Informace o způsobu reprezentace NaN pro výstup naleznete v tématu [printf, _printf_l, wprintf, _wprintf_l](printf-printf-l-wprintf-wprintf-l.md).
 
 ## <a name="requirements"></a>Požadavky
 
-|Funkce|Záhlaví C|Hlaviček jazyka C++|
+|Funkce|Hlavička jazyka C|C++hlaviček|
 |--------------|--------------|------------------|
-|**NaN**, **nanf –**, **nanl**|\<math.h>|\<cmath > nebo \<math.h >|
+|**NaN**, **nanf –** , **nanl**|\<Math. h >|\<cmath > nebo \<Math. h >|
 
 ## <a name="see-also"></a>Viz také:
 

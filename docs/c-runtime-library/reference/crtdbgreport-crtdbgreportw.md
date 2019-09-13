@@ -1,10 +1,10 @@
 ---
 title: _CrtDbgReport, _CrtDbgReportW
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _CrtDbgReport
 - _CrtDbgReportW
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - CrtDbgReport
 - CrtDbgReportW
@@ -28,12 +31,12 @@ helpviewer_keywords:
 - CrtDbgReportW function
 - _CrtDbgReportW function
 ms.assetid: 6e581fb6-f7fb-4716-9432-f0145d639ecc
-ms.openlocfilehash: b5579a8996950c5f3e923f67ed2a5e667bb566fa
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 986777f755a749e858f7e51b5aa19f10090db13a
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69500004"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70938838"
 ---
 # <a name="_crtdbgreport-_crtdbgreportw"></a>_CrtDbgReport, _CrtDbgReportW
 
@@ -82,7 +85,7 @@ Volitelné substituční argumenty používané *formátem*.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-U všech cílů sestav **_CrtDbgReport** a **_CrtDbgReportW** vrátí-1, pokud dojde k chybě, a 0, pokud nebyly zjištěny žádné chyby. Pokud je však cílem sestavy okno zprávy ladění a uživatel klikne na tlačítko **Opakovat** , tyto funkce vrátí hodnotu 1. Pokud uživatel klikne na tlačítko přerušit v okně zprávy ladění, tyto funkce okamžitě přeruší a nevrátí hodnotu.
+U všech cílů sestav **_CrtDbgReport** a **_CrtDbgReportW** vrátí-1, pokud dojde k chybě, a 0, pokud nebyly zjištěny žádné chyby. Pokud je však cílem sestavy okno zprávy ladění a uživatel klikne na tlačítko **Opakovat** , tyto funkce vrátí hodnotu 1. Pokud uživatel klikne na tlačítko **přerušit** v okně zprávy ladění, tyto funkce okamžitě přeruší a nevrátí hodnotu.
 
 Makra [_RPT, _RPTF](rpt-rptf-rptw-rptfw-macros.md) ladění volají **_CrtDbgReport** pro generování jejich sestav ladění. Verze těchto maker pro nejrůznější znaky a také [_ASSERT, _ASSERTE](assert-asserte-assert-expr-macros.md), [_RPTW](rpt-rptf-rptw-rptfw-macros.md) a [_RPTFW](rpt-rptf-rptw-rptfw-macros.md)použijte **_CrtDbgReportW** pro generování jejich sestav ladění. Když **_CrtDbgReport** nebo **_CrtDbgReportW** vrátí 1, tato makra spustí ladicí program za předpokladu, že je povoleno ladění JIT (just-in-time).
 
@@ -92,7 +95,7 @@ Makra [_RPT, _RPTF](rpt-rptf-rptw-rptfw-macros.md) ladění volají **_CrtDbgRep
 
 **_CrtDbgReportW** je verze **_CrtDbgReport**pro nejrůznější znaky. Všechny parametry výstupu a řetězce jsou v řetězcích s velkým znakem; v opačném případě je stejný jako znaková verze s jedním bajtem.
 
-**_CrtDbgReport** a **_CrtDbgReportW** vytvoří uživatelskou zprávu pro sestavu ladění nahrazením argumentů [**n**] v řetězci *formátu* pomocí stejných pravidel definovaných v **printf** nebo  **funkce wprintf** Tyto funkce pak vygenerují sestavu ladění a určí cíl nebo cíle na základě aktuálního režimu sestavy a souboru definovaného pro *ReportType*. Když se sestava pošle do okna zprávy ladění, *názvy souborů*, **číslo řádku**a *Module* jsou zahrnuté do informací zobrazených v okně.
+**_CrtDbgReport** a **_CrtDbgReportW** vytvoří uživatelskou zprávu pro sestavu ladění nahrazením argumentů [**n** *] v řetězci* *formátu* pomocí stejných pravidel definovaných v **printf** nebo  **funkce wprintf** Tyto funkce pak vygenerují sestavu ladění a určí cíl nebo cíle na základě aktuálního režimu sestavy a souboru definovaného pro *ReportType*. Když se sestava pošle do okna zprávy ladění, *názvy souborů*, **číslo řádku**a *Module* jsou zahrnuté do informací zobrazených v okně.
 
 Následující tabulka uvádí dostupné možnosti pro režim sestavy nebo režimy a soubor a výsledné chování **_CrtDbgReport** a **_CrtDbgReportW**. Tyto možnosti jsou definovány jako bitové příznaky v \<souboru Crtdbg. h >.
 

@@ -1,9 +1,9 @@
 ---
 title: _RTC_GetErrDesc
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _RTC_GetErrDesc
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -14,7 +14,10 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - RTC_GetErrDesc
 - _RTC_GetErrDesc
@@ -23,16 +26,16 @@ helpviewer_keywords:
 - _RTC_GetErrDesc function
 - RTC_GetErrDesc function
 ms.assetid: 7994ec2b-5488-4fd4-806d-a166c9a9f927
-ms.openlocfilehash: d164626ea89bbe10f5b2ffe4224bf6381e40bab0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7174e9242b77a904df817886df4f8c763e3e0b2c
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62357379"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70949060"
 ---
-# <a name="rtcgeterrdesc"></a>_RTC_GetErrDesc
+# <a name="_rtc_geterrdesc"></a>_RTC_GetErrDesc
 
-Vrátí krátký popis typu (RTC) Kontrola chyb za běhu.
+Vrátí stručný popis typu běhu pro kontrolu chyb (RTC).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -45,11 +48,11 @@ const char * _RTC_GetErrDesc(
 ### <a name="parameters"></a>Parametry
 
 *errnum*<br/>
-Číslo mezi 0 a 1 menší než hodnota vrácená **_rtc_numerrors –**.
+Číslo od 0 do 1 menší než hodnota vrácená funkcí **_RTC_NumErrors**.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Znakový řetězec, který obsahuje stručný popis jednoho z typů chyb zjištěných systému kontroly chyb za běhu. Pokud chyba je menší než nula nebo větší než nebo rovna hodnotě vrácené [_rtc_numerrors –](rtc-numerrors.md), **_RTC_GetErrDesc** vrátí **NULL**.
+Řetězec znaků, který obsahuje krátký popis jednoho z typů chyb zjištěných systémem kontroly chyb při spuštění. Pokud je chyba menší než nula nebo větší než nebo rovna hodnotě vrácené funkcí [_RTC_NumErrors](rtc-numerrors.md), **_RTC_GetErrDesc** vrátí **hodnotu null**.
 
 ## <a name="requirements"></a>Požadavky
 
@@ -57,11 +60,11 @@ Znakový řetězec, který obsahuje stručný popis jednoho z typů chyb zjišt�
 |-------------|---------------------|
 |**_RTC_GetErrDesc**|\<rtcapi.h>|
 
-Další informace najdete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace najdete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
 
 ## <a name="libraries"></a>Knihovny
 
-Všechny verze [běhových knihoven C](../../c-runtime-library/crt-library-features.md).
+Všechny verze [knihoven run-time jazyka C](../../c-runtime-library/crt-library-features.md).
 
 ## <a name="see-also"></a>Viz také:
 

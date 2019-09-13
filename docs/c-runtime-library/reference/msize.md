@@ -1,9 +1,9 @@
 ---
 title: _msize
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _msize
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-heap-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - msize
 - _msize
@@ -24,16 +27,16 @@ helpviewer_keywords:
 - msize function
 - _msize function
 ms.assetid: 02b1f89e-d0d7-4f12-938a-9eeba48a0f88
-ms.openlocfilehash: 0321e42face817a0a9f12d780f72c86c67ba308d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c1760cfa6a416e2eb4cd7b549cb5ae9bed00a609
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62156288"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70951435"
 ---
-# <a name="msize"></a>_msize
+# <a name="_msize"></a>_msize
 
-Vrátí velikost bloku paměti přidělení na haldě.
+Vrací velikost bloku paměti přiděleného v haldě.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -46,35 +49,35 @@ size_t _msize(
 ### <a name="parameters"></a>Parametry
 
 *memblock*<br/>
-Ukazatele na blok paměti.
+Ukazatel na blok paměti.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-**_msize –** vrátí velikost (v bajtech) jako celé číslo bez znaménka.
+**_msize** vrací velikost (v bajtech) jako unsigned integer.
 
 ## <a name="remarks"></a>Poznámky
 
-**_Msize –** funkce vrátí velikost v bajtech, blok paměti přidělený volání **calloc**, **malloc**, nebo **realloc**.
+Funkce **_msize** vrací velikost bloku paměti, který je přidělen voláním metody **calloc**, pole nebo **realokace** **, v**bajtech.
 
-Když je aplikace spojena s ladicí verzí knihovny run-time C **_msize –** přeloží na [_msize_dbg –](msize-dbg.md). Další informace o tom, jak je spravována halda během procesu ladění, naleznete v tématu [haldy pro ladění CRT](/visualstudio/debugger/crt-debug-heap-details).
+Pokud je aplikace propojena s ladicí verzí knihoven C Runtime, **_msize** se přeloží na [_msize_dbg](msize-dbg.md). Další informace o tom, jak je halda spravována během procesu ladění, naleznete v [haldě ladění CRT](/visualstudio/debugger/crt-debug-heap-details).
 
-Tato funkce ověřuje svůj parametr. Pokud *memblock* je ukazatel s hodnotou null, **_msize –** vyvolá obslužnou rutinu neplatného parametru, jak je popsáno v [Parameter Validation](../../c-runtime-library/parameter-validation.md). Pokud je chyba zpracována, funkce nastaví **errno** k **EINVAL** a vrátí hodnotu -1.
+Tato funkce ověří svůj parametr. Pokud je *memblock* ukazatel s hodnotou null, **_msize** vyvolá neplatnou obslužnou rutinu parametru, jak je popsáno v tématu [ověřování parametru](../../c-runtime-library/parameter-validation.md). Pokud je chyba zpracována, funkce nastaví **errno** na **EINVAL** a vrátí-1.
 
 ## <a name="requirements"></a>Požadavky
 
 |Rutina|Požadovaný hlavičkový soubor|
 |-------------|---------------------|
-|**_msize**|\<malloc.h>|
+|**_msize**|\<. h >|
 
-Další informace o kompatibilitě naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
 
 ## <a name="libraries"></a>Knihovny
 
-Všechny verze [běhových knihoven C](../../c-runtime-library/crt-library-features.md).
+Všechny verze [knihoven run-time jazyka C](../../c-runtime-library/crt-library-features.md).
 
 ## <a name="example"></a>Příklad
 
-Podívejte se na příklad pro [realloc](realloc.md).
+Podívejte se na příklad pro [přepřidělení](realloc.md).
 
 ## <a name="see-also"></a>Viz také:
 

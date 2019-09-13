@@ -1,12 +1,12 @@
 ---
 title: atol, _atol_l, _wtol, _wtol_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - atol
 - _wtol_l
 - _wtol
 - _atol_l
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -18,7 +18,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-convert-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _atol_l
 - _ttol_l
@@ -43,16 +46,16 @@ helpviewer_keywords:
 - wtol function
 - _wtol function
 ms.assetid: cedfc21c-2d64-4e9c-bd04-bdf60b12db46
-ms.openlocfilehash: 486b6dc3bdfbbaf4b7becadde76768a0bb1c7c00
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 04a2951a48e6dd2c3820551e0fc603ad4ed81086
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62347805"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70943584"
 ---
-# <a name="atol-atoll-wtol-wtoll"></a>atol, _atol_l, _wtol, _wtol_l
+# <a name="atol-_atol_l-_wtol-_wtol_l"></a>atol, _atol_l, _wtol, _wtol_l
 
-Převod řetězce na dlouhé celé číslo.
+Převede řetězec na dlouhé celé číslo.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -78,34 +81,34 @@ long _wtol_l(
 *str*<br/>
 Řetězec, který má být převeden.
 
-*Národní prostředí*<br/>
-Národní prostředí.
+*jazyka*<br/>
+Národní prostředí, které se má použít.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Každá funkce vrátí **dlouhé** hodnotu interpretací vstupních znaků jako číslo. Vrácená hodnota je 0L pro **atol –** Pokud vstup nelze převést na hodnotu daného typu.
+Každá funkce vrací **dlouhou** hodnotu vytvořenou interpretací vstupních znaků jako čísla. Návratová hodnota je 0L pro **atol** , pokud vstup nelze převést na hodnotu tohoto typu.
 
-V případě přetečení s velkými kladnými hodnotami **atol –** vrátí **LONG_MAX**; v případě přetečení s velkými zápornými hodnotami, **LONG_MIN** je Vrátí. Ve všech případech mimo rozsah **errno** je nastavena na **ERANGE**. Pokud parametr předaný **NULL**, je vyvolána obslužná rutina neplatného parametru, jak je popsáno v [Parameter Validation](../../c-runtime-library/parameter-validation.md). Pokud smí provádění pokračovat, tyto funkce nastaví **errno** k **EINVAL** a vrátí 0.
+V případě přetečení s velkými objemy integrálních hodnot vrátí **atol** hodnotu **LONG_MAX**; v případě přetečení s velkými zápornými celočíselnými hodnotami se vrátí **LONG_MIN** . V všech případech mimo rozsah je **errno** nastaveno na **ERANGE**. Pokud předaný parametr má **hodnotu null**, je vyvolána obslužná rutina neplatného parametru, jak je popsáno v tématu [ověřování parametru](../../c-runtime-library/parameter-validation.md). Pokud provádění může pokračovat, tyto funkce nastaví **errno** na **EINVAL** a vrátí hodnotu 0.
 
 ## <a name="remarks"></a>Poznámky
 
-Tyto funkce převádějí řetězec znaků pro hodnotu typu long integer (**atol –**).
+Tyto funkce převádějí řetězec znaků na hodnotu typu Long Integer (**atol**).
 
-Vstupní řetězec je posloupnost znaků, které lze interpretovat jako hodnotu zadaného typu. Funkce zastaví čtení vstupního řetězce u prvního znaku, který nebude rozpoznán jako část čísla. Tento znak může být znak null ('\0' nebo L '\0') řetězce se ukončuje.
+Vstupní řetězec je posloupnost znaků, které lze interpretovat jako číselnou hodnotu zadaného typu. Funkce zastaví čtení vstupního řetězce u prvního znaku, který nemůže rozpoznat jako součást čísla. Tento znak může být znak null (' \ 0 ' nebo L ' \ 0 ') ukončující řetězec.
 
-*Str* argument **atol –** má následující formát:
+Argument *str* pro **atol** má následující tvar:
 
-> [*whitespace*] [*sign*] [*digits*]]
+> [*prázdné znaky*] [*Sign*] [*číslice*]]
 
-A *prázdné znaky* se skládá ze znaků mezera nebo tabulátor, které jsou ignorovány; *přihlašování* je buď plus (+) nebo minus (-); a *číslic* je jeden nebo více číslic.
+*Mezera* se skládá z mezer nebo znaků tabulátoru, které jsou ignorovány; *znaménko* je buď znaménko plus (+) nebo minus (-); a *číslice* jsou jednou nebo více číslicemi.
 
-**_wtol –** je stejný jako **atol –** s tím rozdílem, že vyžaduje řetězec širokých znaků.
+**_wtol** je shodná s **atol** s tím rozdílem, že používá řetězec s velkým počtem znaků.
 
-Verze těchto funkcí s **_l** přípona jsou stejné s tím rozdílem, že používají parametr národního prostředí namísto aktuálního národního prostředí předaného. Další informace najdete v tématu [národní prostředí](../../c-runtime-library/locale.md).
+Verze těchto funkcí s příponou **_l** jsou stejné s tím rozdílem, že používají předaný parametr národního prostředí namísto aktuálního národního prostředí. Další informace najdete v tématu [národní prostředí](../../c-runtime-library/locale.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapování rutin obecného textu
 
-|Rutina TCHAR.H|_UNICODE a _MBCS nejsou definovány|_MBCS definováno|_UNICODE definováno|
+|Rutina TCHAR.H|_UNICODE & _MBCS nejsou definovány.|_MBCS definováno|_UNICODE definováno|
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_tstol**|**atol**|**atol**|**_wtol**|
 |**_ttol**|**atol**|**atol**|**_wtol**|
@@ -115,11 +118,11 @@ Verze těchto funkcí s **_l** přípona jsou stejné s tím rozdílem, že pou�
 |Rutiny|Požadovaný hlavičkový soubor|
 |--------------|---------------------|
 |**atol**|\<stdlib.h>|
-|**_atol_l**, **_wtol**, **_wtol_l**|\<stdlib.h > a \<wchar.h >|
+|**_atol_l**, **_wtol**, **_wtol_l**|\<Stdlib. h > a \<WCHAR. h >|
 
 ## <a name="example"></a>Příklad
 
-Tento program ukazuje, jak lze převést čísel uložených jako řetězce na číselné hodnoty pomocí **atol –** funkce.
+Tento program ukazuje, jak mohou být čísla uložená jako řetězce převedeny na číselné hodnoty pomocí funkce **atol** .
 
 ```C
 // crt_atol.c

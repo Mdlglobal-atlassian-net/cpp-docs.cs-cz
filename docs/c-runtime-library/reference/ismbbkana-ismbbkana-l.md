@@ -1,10 +1,10 @@
 ---
 title: _ismbbkana, _ismbbkana_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _ismbbkana_l
 - _ismbbkana
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _ismbbkana_l
 - ismbbkana_l
@@ -28,16 +31,16 @@ helpviewer_keywords:
 - ismbbkana function
 - ismbbkana_l function
 ms.assetid: 64d4eb4a-205a-40ef-be35-ff9d77fabbaf
-ms.openlocfilehash: 723b914f5df92f20e4982bf6f7f04d1b251606f7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0ac05940f6ae9d0c0bd3cb2f6ea73fe301557be4
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62287014"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70954152"
 ---
-# <a name="ismbbkana-ismbbkanal"></a>_ismbbkana, _ismbbkana_l
+# <a name="_ismbbkana-_ismbbkana_l"></a>_ismbbkana, _ismbbkana_l
 
-Testuje na symbol katakany a je specifické pro znakovou stránku 932.
+Testuje symbol Katakana a je specifický pro znakovou stránku 932.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -54,23 +57,23 @@ int _ismbbkana_l(
 ### <a name="parameters"></a>Parametry
 
 *c*<br/>
-Celé číslo k testování.
+Celé číslo, které se má testovat.
 
-*Národní prostředí*<br/>
-Národní prostředí.
+*jazyka*<br/>
+Národní prostředí, které se má použít.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-**_ismbbkana –** vrací nenulovou hodnotu, pokud celé číslo *c* je katakana symbol, nebo 0, pokud není. **_ismbbkana –** používá aktuální národní prostředí pro závislé na národním prostředí znak informace. **_ismbbkana_l –** je totožný s tím rozdílem, že používá předaný objekt národního prostředí. Další informace najdete v tématu [národní prostředí](../../c-runtime-library/locale.md).
+**_ismbbkana** vrací nenulovou hodnotu, pokud je celé číslo *c* symbol Katakana nebo 0, pokud není. **_ismbbkana** používá aktuální národní prostředí pro informace o znacích závislé na národním prostředí. **_ismbbkana_l** je totožný s tím rozdílem, že používá předaný objekt národního prostředí. Další informace najdete v tématu [národní prostředí](../../c-runtime-library/locale.md).
 
 ## <a name="requirements"></a>Požadavky
 
 |Rutina|Požadovaný hlavičkový soubor|
 |-------------|---------------------|
-|**_ismbbkana**|\<mbctype.h>|
-|**_ismbbkana_l**|\<mbctype.h>|
+|**_ismbbkana**|\<Mbctype. h >|
+|**_ismbbkana_l**|\<Mbctype. h >|
 
-Další informace o kompatibilitě naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Viz také:
 

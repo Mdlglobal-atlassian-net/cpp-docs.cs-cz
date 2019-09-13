@@ -1,10 +1,10 @@
 ---
 title: _rmdir, _wrmdir
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _wrmdir
 - _rmdir
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-filesystem-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - trmdir
 - _trmdir
@@ -33,14 +36,14 @@ helpviewer_keywords:
 - _wrmdir function
 - wrmdir function
 ms.assetid: 652c2a5a-b0ac-4493-864e-1edf484333c5
-ms.openlocfilehash: 0d0d9a25b70746174a66abbe088b297a5d9a0942
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 396e620bfabe240638dc070ff87582b16287ff60
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62357457"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70949207"
 ---
-# <a name="rmdir-wrmdir"></a>_rmdir, _wrmdir
+# <a name="_rmdir-_wrmdir"></a>_rmdir, _wrmdir
 
 Odstraní adresář.
 
@@ -57,26 +60,26 @@ int _wrmdir(
 
 ### <a name="parameters"></a>Parametry
 
-*DirName*<br/>
-Cesta adresáře, která se má odebrat.
+*dirname*<br/>
+Cesta k adresáři, který se má odebrat
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Každá z těchto funkcí vrátí 0, pokud adresáře se úspěšně odstranil. Návratová hodnota-1 označuje chybu a **errno** nastavena na jednu z následujících hodnot:
+Každá z těchto funkcí vrátí hodnotu 0, pokud se adresář úspěšně odstraní. Návratová hodnota-1 označuje chybu a **errno** je nastavena na jednu z následujících hodnot:
 
-|Hodnota errno|Podmínka|
+|hodnota errno|Podmínka|
 |-|-|
-| **ENOTEMPTY** | Danou cestu není adresář, adresář není prázdný nebo adresář je aktuální pracovní adresář nebo kořenový adresář. |
-| **ENOENT** | Cesta je neplatná. |
-| **EACCES** | Program má otevřený popisovač do adresáře. |
+| **ENOTEMPTY** | Daná cesta není adresář, adresář není prázdný nebo adresář je buď aktuální pracovní adresář, nebo kořenový adresář. |
+| **ENOENT** | Cesta není platná. |
+| **EACCES** | Program má otevřený popisovač k adresáři. |
 
 Další informace o těchto a dalších návratových kódech naleznete v tématu [_doserrno, errno, _sys_errlist a _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Poznámky
 
-**_Rmdir –** funkce odstraní adresář zadaný *dirname*. Adresář musí být prázdný a nesmí být aktuálního pracovního adresáře nebo do kořenového adresáře.
+Funkce **_rmdir** odstraní adresář určený parametrem *dirname*. Adresář musí být prázdný a nesmí se jednat o aktuální pracovní adresář nebo kořenový adresář.
 
-**_wrmdir –** je verze širokého znaku **_rmdir –**; *dirname* argument **_wrmdir –** je širokoznaký řetězec. **_wrmdir –** a **_rmdir –** se jinak chovají stejně.
+**_wrmdir** je **_rmdir**verze s velkým znakem; Argument *dirname* pro **_wrmdir** je řetězec s velkým znakem. **_wrmdir** a **_rmdir** se chovají stejně jinak.
 
 ### <a name="generic-text-routine-mappings"></a>Mapování rutin obecného textu
 
@@ -88,18 +91,18 @@ Další informace o těchto a dalších návratových kódech naleznete v témat
 
 |Rutina|Požadovaný hlavičkový soubor|
 |-------------|---------------------|
-|**_rmdir**|\<direct.h>|
-|**_wrmdir**|\<Direct.h > nebo \<wchar.h >|
+|**_rmdir**|\<Direct. h >|
+|**_wrmdir**|\<Direct. h > nebo \<WCHAR. h >|
 
-Další informace o kompatibilitě naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
 
 ## <a name="libraries"></a>Knihovny
 
-Všechny verze [běhových knihoven C](../../c-runtime-library/crt-library-features.md).
+Všechny verze [knihoven run-time jazyka C](../../c-runtime-library/crt-library-features.md).
 
 ## <a name="example"></a>Příklad
 
-Podívejte se na příklad pro [_mkdir –](mkdir-wmkdir.md).
+Podívejte se na příklad pro [_mkdir](mkdir-wmkdir.md).
 
 ## <a name="see-also"></a>Viz také:
 

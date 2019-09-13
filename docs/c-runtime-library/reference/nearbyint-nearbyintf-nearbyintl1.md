@@ -1,11 +1,11 @@
 ---
 title: nearbyint, nearbyintf, nearbyintl
 ms.date: 04/05/2018
-apiname:
+api_name:
 - nearbyint
 - nearbyintf
 - nearbyintl
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - nearbyint
 - nearbyintf
@@ -30,16 +33,16 @@ helpviewer_keywords:
 - nearbyintf function
 - nearbyintl function
 ms.assetid: dd39cb68-96b0-434b-820f-6ff2ea65584f
-ms.openlocfilehash: 827286c840c6564c8c3f8b351197b0201509d241
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: cd0a7d00c5019dd1e483d555df6db8d9770e61c1
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62156197"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70951397"
 ---
 # <a name="nearbyint-nearbyintf-nearbyintl"></a>nearbyint, nearbyintf, nearbyintl
 
-Zaokrouhlí zadanou hodnotu s plovoucí desetinnou čárkou na celá čísla a vrátí tuto hodnotu ve formátu s plovoucí desetinnou čárkou.
+Zaokrouhlí zadanou hodnotu s plovoucí desetinnou čárkou na celé číslo a vrátí tuto hodnotu ve formátu s plovoucí desetinnou čárkou.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -57,37 +60,37 @@ long double nearbyint( long double x ); //C++ only
 ### <a name="parameters"></a>Parametry
 
 *x*<br/>
-Hodnota má být zaokrouhleno.
+Hodnota, která má být zaokrouhlena.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Pokud je úspěšná, vrátí *x*, zaokrouhlený na nejbližší celé číslo pomocí aktuální formát zaokrouhlení podle [fegetround](fegetround-fesetround2.md). V opačném případě funkce může vrátit jednu z následujících hodnot:
+V případě úspěchu vrátí *x*, zaokrouhlené na nejbližší celé číslo, pomocí aktuálního formátu zaokrouhlení, jak je uvedeno v [fegetround](fegetround-fesetround2.md). V opačném případě funkce může vracet jednu z následujících hodnot:
 
-|Problém|Vrátí|
+|Problém|vrátit|
 |-----------|------------|
-|*x* = ±INFINITY|±INFINITY ponechat beze změny|
-|*x* = ±0|±0 ponechat beze změny|
+|*x* = ± nekonečno|± Nekonečno, nezměněno|
+|*x* = ±0|± 0, nezměněno|
 |*x* = NaN|NaN|
 
-Nejsou hlášeny chyby prostřednictvím [_matherr](matherr.md); konkrétně, tato funkce nehlásí žádné **FE_INEXACT** výjimky.
+Chyby nejsou hlášeny prostřednictvím [_matherr](matherr.md); Konkrétně tato funkce neoznamuje žádné **FE_INEXACT** výjimky.
 
 ## <a name="remarks"></a>Poznámky
 
-Hlavní rozdíl mezi touto funkcí a [rint](rint-rintf-rintl.md) je, že tato funkce nevyvolá nepřesné výjimky s plovoucí desetinnou čárkou bodu.
+Hlavním rozdílem mezi touto funkcí a [isknout](rint-rintf-rintl.md) je, že tato funkce nevyvolává nepřesnou výjimku s plovoucí desetinnou čárkou.
 
-Protože maximálních hodnot s plovoucí desetinnou čárkou jsou přesné celých čísel, tato funkce se nikdy přetečení samostatně; Místo toho výstup může přetéci vrácené hodnoty, podle toho, kterou verzi funkce použijete.
+Vzhledem k tomu, že maximální počet hodnot s plovoucí desetinnou čárkou jsou přesná celá čísla, nebude tato funkce nikdy přeplněna sebou; místo toho může výstup přetečení hodnoty vrácenou v závislosti na verzi používané funkce.
 
-Jazyk C++ umožňuje přetížení, takže můžete volat přetížení **nearbyint –** , která používají a vrací **float** nebo **dlouhé** **double** parametry. V programu jazyka C **nearbyint –** vždy převezme dvě double hodnoty a vrátí hodnotu double.
+C++umožňuje přetížení, takže můžete volat přetížení **nearbyint –** , která přebírají a vracejí parametry **float** nebo **Long** **Double** . V programu v jazyce C **nearbyint –** vždy přebírá dvě hodnoty Double a vrátí hodnotu Double.
 
 ## <a name="requirements"></a>Požadavky
 
-|Funkce|Záhlaví C|Hlaviček jazyka C++|
+|Funkce|Hlavička jazyka C|C++hlaviček|
 |--------------|--------------|------------------|
-|**nearbyint –**, **nearbyintf –**, **nearbyintl**|\<math.h>|\<cmath > nebo \<math.h >|
+|**nearbyint –** , **nearbyintf –** , **nearbyintl**|\<Math. h >|\<cmath > nebo \<Math. h >|
 
-Další informace o kompatibilitě, naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Viz také:
 
 [Abecední seznam odkazů na funkce](crt-alphabetical-function-reference.md)<br/>
-[Matematické a podpora plovoucí desetinné čárky](../floating-point-support.md)<br/>
+[Podpora matematických a plovoucích bodů](../floating-point-support.md)<br/>

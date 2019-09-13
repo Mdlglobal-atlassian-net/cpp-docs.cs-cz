@@ -1,9 +1,9 @@
 ---
 title: _RTC_SetErrorFunc
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _RTC_SetErrorFunc
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -14,7 +14,10 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - RTC_SetErrorFunc
 - _RTC_SetErrorFunc
@@ -22,16 +25,16 @@ helpviewer_keywords:
 - RTC_SetErrorFunc function
 - _RTC_SetErrorFunc function
 ms.assetid: b2292722-0d83-4092-83df-3d5b19880666
-ms.openlocfilehash: 6b292d685eea8eccb9e9b2a3c3e6cd903d501005
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6b173dd9af9fe11146341468c44a0abc10ce90bc
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62357203"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70949017"
 ---
-# <a name="rtcseterrorfunc"></a>_RTC_SetErrorFunc
+# <a name="_rtc_seterrorfunc"></a>_RTC_SetErrorFunc
 
-Označí funkci jako obslužné rutiny pro generování sestav kontroly chyb za běhu (RTCs). Tato funkce je zastaralá; použít **_RTC_SetErrorFuncW** místo.
+Určí funkci jako obslužnou rutinu pro kontroly chyb za běhu generování sestav (RTCs). Tato funkce je zastaralá. místo toho použijte **_RTC_SetErrorFuncW** .
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -43,16 +46,16 @@ _RTC_error_fn _RTC_SetErrorFunc(
 
 ### <a name="parameters"></a>Parametry
 
-*– funkce*<br/>
+*slouží*<br/>
 Adresa funkce, která bude zpracovávat kontroly chyb za běhu.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Dříve definované chybovou funkci. Pokud neexistuje žádná dříve definované funkce, vrátí **NULL**.
+Dříve definovaná funkce Error. Pokud není k dispozici žádná dříve definovaná funkce, vrátí **hodnotu null**.
 
 ## <a name="remarks"></a>Poznámky
 
-Nepoužívejte tuto funkci. Místo toho použijte **_RTC_SetErrorFuncW**. Se uchovávají pouze z důvodu zpětné kompatibility.
+Nepoužívejte tuto funkci. místo toho použijte **_RTC_SetErrorFuncW**. Je zachována pouze z důvodu zpětné kompatibility.
 
 ## <a name="requirements"></a>Požadavky
 
@@ -60,11 +63,11 @@ Nepoužívejte tuto funkci. Místo toho použijte **_RTC_SetErrorFuncW**. Se uch
 |-------------|---------------------|
 |**_RTC_SetErrorFunc**|\<rtcapi.h>|
 
-Další informace najdete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace najdete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
 
 ## <a name="libraries"></a>Knihovny
 
-Všechny verze [běhových knihoven C](../../c-runtime-library/crt-library-features.md).
+Všechny verze [knihoven run-time jazyka C](../../c-runtime-library/crt-library-features.md).
 
 ## <a name="see-also"></a>Viz také:
 

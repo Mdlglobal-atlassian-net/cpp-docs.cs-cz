@@ -1,9 +1,9 @@
 ---
 title: wcrtomb_s
 ms.date: 11/04/2016
-apiname:
+api_name:
 - wcrtomb_s
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-convert-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - wcrtomb_s
 helpviewer_keywords:
@@ -24,16 +27,16 @@ helpviewer_keywords:
 - multibyte characters
 - characters, converting
 ms.assetid: 9a8a1bd0-1d60-463d-a3a2-d83525eaf656
-ms.openlocfilehash: 7fe7fba861eecec562928cf381973f62a4db60fb
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c1612e7fc4e40e05c46f06d8a29b69534c359421
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62155469"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70945850"
 ---
-# <a name="wcrtombs"></a>wcrtomb_s
+# <a name="wcrtomb_s"></a>wcrtomb_s
 
-Převeďte na její znázornění vícebajtový znak širokého znaku. Verze [wcrtomb –](wcrtomb.md) s rozšířeními zabezpečení, jak je popsáno v [funkce zabezpečení v CRT](../../c-runtime-library/security-features-in-the-crt.md).
+Převést velký znak na jeho vícebajtovou reprezentaci znaků. Verze [wcrtomb](wcrtomb.md) s vylepšeními zabezpečení, jak je popsáno v [části funkce zabezpečení v CRT](../../c-runtime-library/security-features-in-the-crt.md).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -57,37 +60,37 @@ errno_t wcrtomb_s(
 ### <a name="parameters"></a>Parametry
 
 *pReturnValue*<br/>
-Vrátí počet zapsaných bajtů nebo -1, pokud došlo k chybě.
+Vrátí počet zapsaných bajtů nebo-1, pokud došlo k chybě.
 
 *mbchar*<br/>
-Výsledný vícebajtovou převede znak.
+Výsledný vícebajtový převedený znak.
 
 *sizeOfmbchar*<br/>
-Velikost *mbchar* proměnné v bajtech.
+Velikost proměnné *mbchar* v bajtech
 
 *wchar*<br/>
-Široký znak pro převod.
+Velký znak pro převod.
 
 *mbstate*<br/>
-Ukazatel **mbstate_t** objektu.
+Ukazatel na objekt **mbstate_t** .
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Vrátí nulu nebo **errno** hodnotu, pokud dojde k chybě.
+Vrátí hodnotu nula nebo **errno** , pokud dojde k chybě.
 
 ## <a name="remarks"></a>Poznámky
 
-**Wcrtomb_s –** funkce převede široký znak, od Zadaný převod stavu součástí *mbstate*, oproti hodnotě obsažené v *wchar*, do Adresa reprezentována *mbchar*. *PReturnValue* hodnota bude počet bajtů převést, ale ne víc než **MB_CUR_MAX** bajtů nebo -1, pokud došlo k chybě.
+Funkce **wcrtomb_s** převede velký znak počínaje zadaným stavem konverze obsaženým v *mbstate*z hodnoty obsažené v *WCHAR*do adresy reprezentované *mbchar*. Hodnota *pReturnValue* bude počet převedených bajtů, ale ne více než **MB_CUR_MAX** bajtů, nebo-1, pokud došlo k chybě.
 
-Pokud *mbstate* má hodnotu null, vnitřní **mbstate_t** stav převodu se používá. Pokud součástí znak *wchar* nemá odpovídající vícebajtový znak, hodnotu *pReturnValue* bude mít hodnotu -1 a funkce vrátí hodnotu **errno** Hodnota **EILSEQ**.
+Pokud má *mbstate* hodnotu null, použije se vnitřní stav konverze **mbstate_t** . Pokud znak obsažený v *WCHAR* nemá odpovídající vícebajtový znak, bude hodnota *pReturnValue* -1 a funkce vrátí hodnotu **errno** **EILSEQ**.
 
-**Wcrtomb_s –** funkce se liší od [wctomb_s – _wctomb_s_l –](wctomb-s-wctomb-s-l.md) podle jeho restartability. Stav převodu je uložen v *mbstate* pro pozdější volání na stejné nebo jiné funkce nabízet možnost restartování. Při použití funkcí restartovatelnou službu a nonrestartable případě nejsou výsledky definovány. Například byste použili aplikaci **wcsrlen** spíše než **wcslen –**, pokud je následných volání **wcsrtombs_s –** používaly místo **wcstombs_s –**.
+Funkce **wcrtomb_s** se od jejího spuštění liší od [wctomb_s, _wctomb_s_l](wctomb-s-wctomb-s-l.md) . Stav konverze je uložen v *mbstate* pro následné volání stejné nebo jiné možné funkce, které lze spustit. Výsledky nejsou definovány při kombinování použití opakovaných a nerestartů funkcí. Například aplikace bude používat **wcsrlen** namísto **wcslen**, pokud bylo použito následné volání **wcsrtombs_s** namísto **wcstombs_s**.
 
-V jazyce C++ je použití této funkce zjednodušeno díky přetížení šablon; přetížení mohou odvodit délku vyrovnávací paměti automaticky (tím eliminuje nutnost zadat argument velikosti) a dokážou automaticky nahradit starší, nezabezpečené funkce jejími novějšími, zabezpečené protějšky. Další informace najdete v tématu [přetížení zabezpečení šablony](../../c-runtime-library/secure-template-overloads.md).
+V C++systému je použití této funkce zjednodušeno pomocí přetížení šablon; přetížení můžou odvodit délku vyrovnávací paměti automaticky (eliminují nutnost zadat argument velikosti) a můžou automaticky nahradit starší nezabezpečené funkce jejich novějšími, zabezpečenými protějšky. Další informace najdete v tématu [přetížení zabezpečení šablon](../../c-runtime-library/secure-template-overloads.md).
 
 ## <a name="exceptions"></a>Výjimky
 
-**Wcrtomb_s –** funkce je bezpečné s více vlákny za předpokladu, žádné funkce v aktuálním vlákně volá **setlocale** při provádění této funkce a *mbstate* má hodnotu null.
+Funkce **wcrtomb_s** je vláknově bezpečná, dokud žádná funkce v aktuálním vlákně nevolá **setlocale** při provádění této funkce a *mbstate* má hodnotu null.
 
 ## <a name="example"></a>Příklad
 

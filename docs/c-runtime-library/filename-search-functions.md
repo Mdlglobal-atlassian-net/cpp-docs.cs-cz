@@ -1,7 +1,7 @@
 ---
-title: Funkce hledání názvů souborů
+title: Funkce vyhledávání názvů souborů
 ms.date: 11/04/2016
-apilocation:
+api_location:
 - msvcr100.dll
 - msvcr120.dll
 - msvcr90.dll
@@ -9,7 +9,10 @@ apilocation:
 - msvcr80.dll
 - msvcr110.dll
 - msvcr110_clr0400.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 helpviewer_keywords:
 - file names [C++], searching for
 - _find function
@@ -17,16 +20,16 @@ helpviewer_keywords:
 - find function
 - _wfind function
 ms.assetid: 2bc2f8ef-44e4-4271-b3e8-666d36fde828
-ms.openlocfilehash: aebdf2e5aaf6d59e5ee39af05540604206ec6c23
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ecc01362bdc14af32df5093ad1ac1ee606026d8f
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62343781"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70940369"
 ---
-# <a name="filename-search-functions"></a>Funkce hledání názvů souborů
+# <a name="filename-search-functions"></a>Funkce vyhledávání názvů souborů
 
-Tyto funkce hledání a zavřete Vyhledá zadaný soubor názvy:
+Tyto funkce hledají a zavřou hledání u zadaných názvů souborů:
 
 - [_findnext, _wfindnext](../c-runtime-library/reference/findnext-functions.md)
 
@@ -36,62 +39,62 @@ Tyto funkce hledání a zavřete Vyhledá zadaný soubor názvy:
 
 ## <a name="remarks"></a>Poznámky
 
-`_findfirst` Funkce obsahuje informace o první výskyt název souboru, který odpovídá zadané v souboru `filespec` argument. Můžete použít v `filespec` libovolnou kombinaci zástupných znaků, která je podporována operačním systémem hostitele.
+Funkce poskytuje informace o první instanci názvu souboru, který se shoduje se souborem zadaným `filespec` v argumentu. `_findfirst` Můžete použít v `filespec` libovolné kombinaci zástupných znaků, které podporuje hostitelský operační systém.
 
-Funkce vrací informace o souboru v `_finddata_t` struktura, která je definována v IO.h. Různé funkce v rodině použít mnoho variant na `_finddata_t` struktury. Na úrovni basic `_finddata_t` struktura obsahuje následující prvky:
+Funkce vrací informace o souboru ve `_finddata_t` struktuře, která je definována v IO. h. Různé funkce v rodině využívají mnoho variant `_finddata_t` struktury. Základní `_finddata_t` struktura zahrnuje následující prvky:
 
 `unsigned attrib`<br/>
-Atribut souboru.
+Atribut File
 
 `time_t time_create`<br/>
-Čas vytvoření souboru (L-1 pro systémy souborů FAT). Tentokrát je uložen ve formátu UTC. Chcete-li převést na místní čas, použijte [localtime_s –](../c-runtime-library/reference/localtime-s-localtime32-s-localtime64-s.md).
+Čas vytvoření souboru (-1L pro systémy souborů FAT). Tento čas je uložen ve formátu UTC. Chcete-li převod na místní čas, použijte [localtime_s](../c-runtime-library/reference/localtime-s-localtime32-s-localtime64-s.md).
 
 `time_t time_access`<br/>
-Čas posledního přístupu k souboru (L-1 pro systémy souborů FAT). Tentokrát je uložen ve formátu UTC. Chcete-li převést na místní čas, použijte `localtime_s`.
+Čas posledního přístupu k souboru (-1L pro systémy souborů FAT). Tento čas je uložen ve formátu UTC. Pro převod na místní čas použijte `localtime_s`.
 
 `time_t time_write`<br/>
-Čas posledního zápisu do souboru. Tentokrát je uložen ve formátu UTC. Chcete-li převést na místní čas, použijte `localtime_s`.
+Čas posledního zápisu do souboru. Tento čas je uložen ve formátu UTC. Pro převod na místní čas použijte `localtime_s`.
 
 `_fsize_t size`<br/>
-Délka souboru v bajtech.
+Délka souboru v bajtech
 
-`char name`[ `_MAX_PATH`] Název odpovídající soubor nebo adresář bez cesty zakončený hodnotou null.
+`char name`[ `_MAX_PATH`] Název souboru nebo adresáře zakončený hodnotou null, bez cesty.
 
-V systémech souborů, které nepodporují vytváření a času posledního přístupu k souboru, jako je například systém souborů FAT `time_create` a `time_access` pole jsou vždy hodnotu-1 L.
+V systémech souborů, které nepodporují dobu vytváření a posledního přístupu k souboru, jako je například systém souborů FAT, `time_create` jsou pole a `time_access` vždy-1l.
 
-`_MAX_PATH` je definována v souboru Stdlib.h jako 260 bajtů.
+`_MAX_PATH`je definována v Stdlib. h jako 260 bajtů.
 
-Nelze určit cílové atributy (například `_A_RDONLY`) k omezení operace find. Tyto atributy jsou vráceny v `attrib` pole `_finddata_t` struktury a může mít následující hodnoty (definovaný v IO.h). Uživatelé neměli byste tedy spoléhat na tyto jsou pouze hodnoty, který je možné, `attrib` pole.
+Pro omezení operace Find nelze zadat cílové atributy `_A_RDONLY`(například). Tyto atributy jsou vráceny v `attrib` poli `_finddata_t` struktury a mohou mít následující hodnoty (definované v IO. h). Uživatelé by neměli spoléhat na to, že jsou pro `attrib` pole dostupné jenom hodnoty.
 
 `_A_ARCH`<br/>
-Archivovat. Nastavit vždy, když je soubor změněn a zrušena **zálohování** příkazu. Hodnota: 0x20.
+Zálohovat. Nastaví se pokaždé, když se soubor změní a vymaže příkazem **Backup** . Osa 0x20.
 
 `_A_HIDDEN`<br/>
-Skrytý soubor. Pomocí příkazu DIR viděli obecně, pokud nechcete použít **/AH** možnost. Vrátí informace o normální soubory a soubory, které mají tento atribut. Hodnota: 0x02.
+Skrytý soubor. Obecně se nezobrazuje v příkazu DIR, pokud nepoužijete možnost **/Ah** . Vrátí informace o běžných souborech a souborech, které mají tento atribut. Osa 0x02.
 
 `_A_NORMAL`<br/>
-Normální. Soubor nemá žádné další atributy nastavit a může číst nebo zapsat bez omezení. Hodnota: 0x00.
+Běžnou. Soubor nemá žádné další atributy nastavené a lze ho číst nebo zapisovat do bez omezení. Osa 0x00.
 
 `_A_RDONLY`<br/>
-Jen pro čtení. Soubor nelze otevřít pro zápis a nelze vytvořit soubor, který má stejný název. Hodnota: 0x01.
+Jen pro čtení. Soubor nelze otevřít pro zápis a soubor, který má stejný název, nelze vytvořit. Osa 0x01.
 
 `_A_SUBDIR`<br/>
-Podadresář. Hodnota: 0x10.
+Podadresář. Osa 0x10.
 
 `_A_SYSTEM`<br/>
-Systém souborů. Není obvykle používá u **DIR** příkazu, pokud **/A** nebo **/A:S** možnost se používá. Hodnota: 0x04.
+Systémový soubor. Nezobrazuje se obvykle pomocí příkazu **dir** , pokud není použita možnost **/a** nebo **/a: S** . Osa 0x04.
 
-`_findnext` Najde další název, pokud existuje, který odpovídá `filespec` argumentu zadaného v dřívějším volání `_findfirst`. `fileinfo` Argument by měl ukazovat na strukturu inicializován pomocí předchozího volání `_findfirst`. Pokud se najde shoda, `fileinfo` se změnil obsah struktury, jak je popsáno výše. V opačném případě je ponechán beze změny. `_findclose` zadaný hledaný popisovač se zavře a uvolní všechny související prostředky pro obě `_findfirst` a `_findnext`. Popisovač vrácený buď `_findfirst` nebo `_findnext` musí být předán nejprve `_findclose`, před provedením operace úprav, jako je například odstranění, o adresářích, které tvoří cesty předaný k nim.
+`_findnext`najde další název, pokud existuje, který odpovídá `filespec` argumentu zadanému ve starším `_findfirst`volání metody. Argument by měl ukazovat na strukturu inicializovaná předchozím `_findfirst`voláním metody. `fileinfo` Pokud je nalezena shoda, `fileinfo` obsah struktury se změní jak je popsáno výše. V opačném případě zůstane beze změny. `_findclose`zavře zadaný vyhledávací popisovač a uvolní všechny přidružené prostředky pro i `_findfirst`. `_findnext` Popisovač vrácený buď `_findfirst` nebo `_findnext` musí být nejprve předán do `_findclose`, před provedením operací úprav, jako je například odstranění, lze provést v adresářích, které tvoří cesty, které jsou předány.
 
-Můžete vnořit `_find` funkce. Například, pokud je volání `_findfirst` nebo `_findnext` najde soubor, který je podadresář, nové hledání lze inicializovat pomocí jiného volání `_findfirst` nebo `_findnext`.
+`_find` Funkce lze vnořit. Například pokud volání `_findfirst` nebo `_findnext` nalezne soubor, který je podadresářem, lze nové hledání `_findfirst` zahájit jiným voláním nebo `_findnext`.
 
-`_wfindfirst` a `_wfindnext` jsou širokoznaké verze `_findfirst` a `_findnext`. Struktura argument širokoznaké verze má `_wfinddata_t` datový typ, který je definován v IO.h a v souboru Wchar.h. Pole datového typu jsou stejné jako `_finddata_t` datového typu, s výjimkou, že v `_wfinddata_t` název pole je typu `wchar_t` místo typu `char`. V opačném případě `_wfindfirst` a `_wfindnext` chovají stejně jako `_findfirst` a `_findnext`.
+`_wfindfirst`a `_wfindnext` jsou `_findfirst` verze a `_findnext`. Argument Structure verze s vysokými znaky má `_wfinddata_t` datový typ, který je definován v IO. h a v WCHAR. h. Pole tohoto datového typu jsou stejná `_finddata_t` jako u datového typu, s tím rozdílem, že v `_wfinddata_t` poli název je typ `wchar_t` místo typu `char`. V opačném případě `_wfindfirst` se `_findfirst` `_findnext`chovástejnějakoa. `_wfindnext`
 
-`_findfirst` a `_findnext` použít 64-bit time typu. Pokud je nutné použít typ staré 32bitové času, můžete definovat `_USE_32BIT_TIME_T`. Verze těchto funkcí, které mají `32` přípony v názvu použijte typ času 32-bit a těmi, kdo `64` příponu použít 64-bit time typu.
+`_findfirst`a `_findnext` použijte typ času 64. Pokud je nutné použít starý typ času 32, můžete definovat `_USE_32BIT_TIME_T`. Verze těchto funkcí, které mají `32` příponu ve svých názvech, používají typ času 32, a ty `64` s příponou používají typ času 64.
 
-Funkce `_findfirst32i64`, `_findnext32i64`, `_wfindfirst32i64`, a `_wfindnext32i64` také se chovají stejně jako čas 32bitové verze typů z těchto funkcí s výjimkou použití a vrácení délky souboru 64-bit. Funkce `_findfirst64i32`, `_findnext64i32`, `_wfindfirst64i32`, a `_wfindnext64i32` použít 64-bit time typu, ale použijte 32bitový soubor délky. Tyto funkce používají odpovídající variace `_finddata_t` typ, ve kterém pole mají rozdílné typy pro čas a velikost souboru.
+Funkce `_findfirst32i64`, `_findnext32i64`, a`_wfindfirst32i64`se také chovají stejně jako verze s 32 bitového formátu času těchto funkcí s tím rozdílem, že používají a vracejí 64 bitů souborů. `_wfindnext32i64` Funkce `_findfirst64i32` ,`_findnext64i32`, a`_wfindnext64i32` používají typ času 64-bit, ale používají 32 délky souborů. `_wfindfirst64i32` Tyto funkce používají odpovídající variace `_finddata_t` typu, ve kterém mají pole různé typy pro čas a velikost souboru.
 
-`_finddata_t` je ve skutečnosti makro, které se vyhodnotí jako `_finddata64i32_t` (nebo `_finddata32_t` Pokud `_USE_32BIT_TIME_T` je definována). Následující tabulka shrnuje změny na `_finddata_t`:
+`_finddata_t`je ve skutečnosti makro, které se vyhodnotí `_finddata32_t` jako `_USE_32BIT_TIME_T` `_finddata64i32_t` (nebo pokud je definováno). Následující tabulka shrnuje variace pro `_finddata_t`:
 
 |Struktura|Typ času|Typ velikosti souboru|
 |---------------|---------------|--------------------|
@@ -101,7 +104,7 @@ Funkce `_findfirst32i64`, `_findnext32i64`, `_wfindfirst32i64`, a `_wfindnext32i
 |`_finddata32i64_t`, `_wfinddata32i64_t`|`__time32_t`|`__int64`|
 |`_finddata64i32_t`, `_wfinddata64i32_t`|`__time64_t`|`_fsize_t`|
 
-`_fsize_t` je `typedef` pro `unsigned long` (32bitová verze).
+`_fsize_t`je a `typedef` pro `unsigned long` (32 bitů).
 
 ## <a name="example"></a>Příklad
 

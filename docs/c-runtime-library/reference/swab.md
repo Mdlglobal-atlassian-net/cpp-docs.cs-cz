@@ -1,10 +1,10 @@
 ---
 title: _swab
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _swab
 - stdlib/_swab
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-utility-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _swab
 - stdlib/_swab
@@ -26,16 +29,16 @@ helpviewer_keywords:
 - swab function
 - bytes, swapping
 ms.assetid: 017142f2-050c-4f6a-8b49-6b094f58ec94
-ms.openlocfilehash: 64753383bcb94947e6b413b5f55ac6e2d9c7dbca
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b0faba55c42023f4d66adae68de6be2c1ab009a0
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62245502"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70946290"
 ---
-# <a name="swab"></a>_swab
+# <a name="_swab"></a>_swab
 
-Záměna bajtů.
+Prohodí bajty.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -50,31 +53,31 @@ void _swab(
 ## <a name="parameters"></a>Parametry
 
 *src*<br/>
-Zkopírovat a dat prohodit.
+Data, která se mají zkopírovat a zaměnit
 
-*dest*<br/>
-Umístění úložiště pro byl prohozen. data.
+*propojovací*<br/>
+Umístění úložiště pro zaměněná data.
 
 *n*<br/>
-Počet bajtů, které mají být zkopírovány a prohodit.
+Počet bajtů, které mají být zkopírovány a prohozeny.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-**Swab –** funkce nevrací hodnotu. Funkce sady **errno** k **EINVAL** Pokud buď *src* nebo *dest* ukazatele má hodnotu null nebo *n* menší než nula a neplatný parametr je vyvolána obslužná rutina, jak je popsáno v [Parameter Validation](../../c-runtime-library/parameter-validation.md).
+Funkce **stěr** nevrací hodnotu. Funkce nastaví **errno** na **EINVAL** , pokud buď má ukazatel *Src* nebo *cíl* hodnotu null nebo *n* je menší než nula, a je vyvolána obslužná rutina neplatného parametru, jak je popsáno v tématu [ověřování parametru](../../c-runtime-library/parameter-validation.md).
 
-Zobrazit [_doserrno, errno, _sys_errlist a _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) Další informace o tomto a dalších návratových kódech.
+Další informace o tomto a dalších návratových kódech naleznete v tématu [_doserrno, errno, _sys_errlist a _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) .
 
 ## <a name="remarks"></a>Poznámky
 
-Pokud *n* je sudé, **_swab –** funkce kopie *n* bajtů z *src*zaměňuje každý pár sousední bajtů a uloží výsledek v *dest*. Pokud *n* je liché, **_swab –** zkopíruje a zamění první *n*-1 bajtů *src*, a poslední bajt není zkopírován. **_Swab –** funkce se obvykle používá k připravte binární data pro přenos na počítač, který se používá pořadím různých bajtů.
+Pokud *n* je i, funkce **_swab** kopíruje *n* bajtů z *Src*, zahodí každou dvojici sousedících bajtů a výsledek uloží na *cíl*. Pokud *n* je lichá, **_swab** zkopíruje a zamění prvních *n*-1 bajtů *Src*a finální bajt není kopírován. Funkce **_swab** se obvykle používá k přípravě binárních dat pro přenos do počítače, který používá jiné pořadí bajtů.
 
 ## <a name="requirements"></a>Požadavky
 
 |Rutina|Požadovaný hlavičkový soubor|
 |-------------|---------------------|
-|**_swab**|C: \<stdlib.h > C++: \<cstdlib – > nebo \<stdlib.h >|
+|**_swab**|C: \<Stdlib. h > C++: \<cstdlib > nebo \<Stdlib. h >|
 
-Další informace o kompatibilitě, naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Příklad
 

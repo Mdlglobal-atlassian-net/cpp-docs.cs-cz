@@ -1,12 +1,12 @@
 ---
 title: _ungetch, _ungetwch, _ungetch_nolock, _ungetwch_nolock
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _ungetch_nolock
 - _ungetwch_nolock
 - _ungetwch
 - _ungetch
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -18,7 +18,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-conio-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _ungetch_nolock
 - ungetwch
@@ -44,19 +47,19 @@ helpviewer_keywords:
 - ungetwch_nolock function
 - _ungetwch function
 ms.assetid: 70ae71c6-228c-4883-a57d-de6d5f873825
-ms.openlocfilehash: 7407d26606bd5242c430961faa4f60090b83f036
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2f6b782334df710ac9fe6359fda77b40a31e060c
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62268868"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70945911"
 ---
-# <a name="ungetch-ungetwch-ungetchnolock-ungetwchnolock"></a>_ungetch, _ungetwch, _ungetch_nolock, _ungetwch_nolock
+# <a name="_ungetch-_ungetwch-_ungetch_nolock-_ungetwch_nolock"></a>_ungetch, _ungetwch, _ungetch_nolock, _ungetwch_nolock
 
-Posune zpět poslední znak, který je přečten z konzoly.
+Posune zpátky poslední znak, který se načte z konzoly.
 
 > [!IMPORTANT]
-> Toto rozhraní API nelze použít v aplikacích, které jsou spouštěny v modulu Windows Runtime. Další informace najdete v tématu [CRT funkce nejsou podporovány v aplikacích pro univerzální platformu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> Toto rozhraní API nelze použít v aplikacích, které jsou spouštěny v prostředí Windows Runtime. Další informace najdete v tématu [funkce CRT nejsou v aplikacích Univerzální platforma Windows podporovány](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -78,21 +81,21 @@ wint_t _ungetwch_nolock(
 ### <a name="parameters"></a>Parametry
 
 *c*<br/>
-Znak k posunutí.
+Znak, který má být vložen.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Obě funkce vrátí znak *c* v případě úspěšného ověření. Pokud dojde k chybě **_ungetch** vrací hodnotu **EOF** a **_ungetwch –** vrátí **WEOF**.
+Obě funkce vrátí znak *c* v případě úspěchu. Pokud dojde k chybě, vrátí **_ungetch** hodnotu **EOF** a **_ungetwch** vrátí **WEOF**.
 
 ## <a name="remarks"></a>Poznámky
 
-Tyto funkce vrátí znak *c* zpět do konzoly, což způsobí *c* bude další znak přečtený **_getch** nebo **_getche** (nebo **_getwch –** nebo **_getwche –**). **_ungetch** a **_ungetwch –** selhat, pokud jsou volány více než jednou před dalším čtením. *c* nemusí být argument **EOF** (nebo **WEOF**).
+Tyto funkce načtou znak *c* zpátky do konzoly, což způsobí, že *c* bude dalším znakem čteným **_getch** nebo **_getche** (nebo **_getwch** nebo **_getwche**). **_ungetch** a **_ungetwch** selžou, pokud jsou volány více než jednou před dalším čtením. Argument *jazyka c* nemůže být znak **EOF** (nebo **WEOF**).
 
-Verze s **_nolock** přípona jsou stejné s tím rozdílem, že nejsou chráněny před rušením jinými vlákny. Může být rychlejší, protože nejsou spojené režii uzamykáním ostatních vláken. Tyto funkce používejte pouze v kontextech bezpečných na vlákna, jako je například aplikace s jedním vláknem nebo pokud volající obor již zpracovává izolaci vláken.
+Verze s příponou **_nolock** jsou stejné s tím rozdílem, že nejsou chráněny před rušením jinými vlákny. Můžou být rychlejší, protože neúčtují režii na uzamykání jiných vláken. Tyto funkce použijte pouze v kontextech bezpečných pro přístup z více vláken, jako jsou například aplikace s jedním vláknem nebo kde volající obor již zpracovává izolaci vlákna.
 
 ### <a name="generic-text-routine-mappings"></a>Mapování rutin obecného textu
 
-|Rutina TCHAR.H|_UNICODE a _MBCS nejsou definovány|_MBCS definováno|_UNICODE definováno|
+|Rutina TCHAR.H|_UNICODE & _MBCS nejsou definovány.|_MBCS definováno|_UNICODE definováno|
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_ungettch**|**_ungetch**|**_ungetch**|**_ungetwch**|
 |**_ungettch_nolock**|**_ungetch_nolock**|**_ungetch_nolock**|**_ungetwch_nolock**|
@@ -101,10 +104,10 @@ Verze s **_nolock** přípona jsou stejné s tím rozdílem, že nejsou chráně
 
 |Rutina|Požadovaný hlavičkový soubor|
 |-------------|---------------------|
-|**_ungetch**, **_ungetch_nolock –**|\<conio.h>|
-|**_ungetwch**, **_ungetwch_nolock**|\<conio.h > nebo \<wchar.h >|
+|**_ungetch**, **_ungetch_nolock**|\<CONIO. h >|
+|**_ungetwch**, **_ungetwch_nolock**|\<CONIO. h > nebo \<WCHAR. h >|
 
-Další informace o kompatibilitě, naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Příklad
 

@@ -1,12 +1,12 @@
 ---
 title: atoi, _atoi_l, _wtoi, _wtoi_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _wtoi
 - _wtoi_l
 - atoi
 - _atoi_l
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -19,7 +19,10 @@ apilocation:
 - ucrtbase.dll
 - api-ms-win-crt-convert-l1-1-0.dll
 - ntoskrnl.exe
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _tstoi
 - _wtoi
@@ -41,16 +44,16 @@ helpviewer_keywords:
 - atoi function
 - wtoi function
 ms.assetid: ad7fda30-28ab-421f-aaad-ef0b8868663a
-ms.openlocfilehash: b6a1f52e6c83f53230c736db3a506aed4b52e434
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8d66a219aea1451e745e32f7affbfb59b73ff796
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62347844"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70943740"
 ---
-# <a name="atoi-atoil-wtoi-wtoil"></a>atoi, _atoi_l, _wtoi, _wtoi_l
+# <a name="atoi-_atoi_l-_wtoi-_wtoi_l"></a>atoi, _atoi_l, _wtoi, _wtoi_l
 
-Převeďte řetězec na celé číslo.
+Převést řetězec na celé číslo.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -76,30 +79,30 @@ int _wtoi_l(
 *str*<br/>
 Řetězec, který má být převeden.
 
-*Národní prostředí*<br/>
-Národní prostředí.
+*jazyka*<br/>
+Národní prostředí, které se má použít.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Každá funkce vrátí **int** hodnotu interpretací vstupních znaků jako číslo. Vrácená hodnota je 0 pro **atoi –** a **_wtoi –**, pokud vstup nelze převést na hodnotu daného typu.
+Každá funkce vrátí hodnotu typu **int** vytvořenou interpretací vstupních znaků jako čísla. Návratová hodnota je 0 pro **atoi** a **_wtoi**, pokud vstup nelze převést na hodnotu tohoto typu.
 
-V případě přetečení s velkými zápornými hodnotami **LONG_MIN** je vrácena. **atoi –** a **_wtoi –** vrátit **INT_MAX** a **INT_MIN** na těchto podmínkách. Ve všech případech mimo rozsah **errno** je nastavena na **ERANGE**. Pokud parametr předaný **NULL**, je vyvolána obslužná rutina neplatného parametru, jak je popsáno v [Parameter Validation](../../c-runtime-library/parameter-validation.md). Pokud smí provádění pokračovat, tyto funkce nastaví **errno** k **EINVAL** a vrátí 0.
+V případě přetečení s velkými zápornými celočíselnými hodnotami se vrátí **LONG_MIN** . **atoi** a **_wtoi** vrátí **INT_MAX** a **INT_MIN** za tyto podmínky. V všech případech mimo rozsah je **errno** nastaveno na **ERANGE**. Pokud předaný parametr má **hodnotu null**, je vyvolána obslužná rutina neplatného parametru, jak je popsáno v tématu [ověřování parametru](../../c-runtime-library/parameter-validation.md). Pokud provádění může pokračovat, tyto funkce nastaví **errno** na **EINVAL** a vrátí hodnotu 0.
 
 ## <a name="remarks"></a>Poznámky
 
-Tyto funkce převádějí řetězec znaků na celočíselnou hodnotu (**atoi –** a **_wtoi –**). Vstupní řetězec je posloupnost znaků, které lze interpretovat jako hodnotu zadaného typu. Funkce zastaví čtení vstupního řetězce u prvního znaku, který nebude rozpoznán jako část čísla. Tento znak může být znak null ('\0' nebo L '\0') řetězce se ukončuje.
+Tyto funkce převádějí řetězec znaků na celočíselnou hodnotu (**atoi** a **_wtoi**). Vstupní řetězec je posloupnost znaků, které lze interpretovat jako číselnou hodnotu zadaného typu. Funkce zastaví čtení vstupního řetězce u prvního znaku, který nemůže rozpoznat jako součást čísla. Tento znak může být znak null (' \ 0 ' nebo L ' \ 0 ') ukončující řetězec.
 
-*Str* argument **atoi –** a **_wtoi –** má následující formát:
+Argument *str* pro **atoi** a **_wtoi** má následující tvar:
 
-> [*whitespace*] [*sign*] [*digits*]]
+> [*prázdné znaky*] [*Sign*] [*číslice*]]
 
-A *prázdné znaky* se skládá ze znaků mezera nebo tabulátor, které jsou ignorovány; *přihlašování* je buď plus (+) nebo minus (-); a *číslic* je jeden nebo více číslic.
+*Mezera* se skládá z mezer nebo znaků tabulátoru, které jsou ignorovány; *znaménko* je buď znaménko plus (+) nebo minus (-); a *číslice* jsou jednou nebo více číslicemi.
 
-Verze těchto funkcí s **_l** přípona jsou stejné s tím rozdílem, že používají parametr národního prostředí namísto aktuálního národního prostředí předaného. Další informace najdete v tématu [národní prostředí](../../c-runtime-library/locale.md).
+Verze těchto funkcí s příponou **_l** jsou stejné s tím rozdílem, že používají předaný parametr národního prostředí namísto aktuálního národního prostředí. Další informace najdete v tématu [národní prostředí](../../c-runtime-library/locale.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapování rutin obecného textu
 
-|Rutina TCHAR.H|_UNICODE a _MBCS nejsou definovány|_MBCS definováno|_UNICODE definováno|
+|Rutina TCHAR.H|_UNICODE & _MBCS nejsou definovány.|_MBCS definováno|_UNICODE definováno|
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_tstoi**|**atoi**|**atoi**|**_wtoi**|
 |**_ttoi**|**atoi**|**atoi**|**_wtoi**|
@@ -109,11 +112,11 @@ Verze těchto funkcí s **_l** přípona jsou stejné s tím rozdílem, že pou�
 |Rutiny|Požadovaný hlavičkový soubor|
 |--------------|---------------------|
 |**atoi**|\<stdlib.h>|
-|**_atoi_l**, **_wtoi**, **_wtoi_l**|\<stdlib.h > nebo \<wchar.h >|
+|**_atoi_l**, **_wtoi**, **_wtoi_l**|\<Stdlib. h > nebo \<WCHAR. h >|
 
 ## <a name="example"></a>Příklad
 
-Tento program ukazuje, jak lze převést čísel uložených jako řetězce na číselné hodnoty pomocí **atoi –** funkce.
+Tento program ukazuje, jak mohou být čísla uložená jako řetězce převedeny na číselné hodnoty pomocí funkcí **atoi** .
 
 ```C
 // crt_atoi.c

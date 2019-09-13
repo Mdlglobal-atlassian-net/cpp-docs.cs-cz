@@ -1,11 +1,11 @@
 ---
 title: _mkgmtime, _mkgmtime32, _mkgmtime64
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _mkgmtime32
 - _mkgmtime64
 - _mkgmtime
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-time-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _mkgmtime64
 - mkgmtime32
@@ -36,16 +39,16 @@ helpviewer_keywords:
 - _mkgmtime32 function
 - time, converting
 ms.assetid: b4ca2b67-e198-4f43-b3e2-e8ad6bd01867
-ms.openlocfilehash: 65d96d79a45e05e4b371315c0612ed086f6ea2a0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: fcd1e3fdcca37d7e5bb381c234a6d8555ce2766c
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62156496"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70951672"
 ---
-# <a name="mkgmtime-mkgmtime32-mkgmtime64"></a>_mkgmtime, _mkgmtime32, _mkgmtime64
+# <a name="_mkgmtime-_mkgmtime32-_mkgmtime64"></a>_mkgmtime, _mkgmtime32, _mkgmtime64
 
-Převede čas UTC reprezentovaný **struktura** **tm** na čas UTC reprezentovaný **time_t** typu.
+Převede čas UTC reprezentovaný **strukturou** **TM** na čas UTC reprezentovaný typem **time_t** .
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -64,31 +67,31 @@ __time64_t _mkgmtime64(
 ### <a name="parameters"></a>Parametry
 
 *timeptr*<br/>
-Ukazatel na čas UTC jako **struktura** **tm** pro převod.
+Ukazatel na čas UTC jako **Struktura** **TM** pro převod.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Množství typu **__time32_t** nebo **__time64_t –** představující dobu v sekundách uplynulých od půlnoci 1. ledna 1970, koordinovaný univerzální čas (UTC). Pokud datum je mimo rozsah (viz část poznámky) nebo vstup se nedá interpretovat jako platný čas, návratovou hodnotou -1.
+Množství typu **__time32_t** nebo **__time64_t** představující počet sekund uplynulých od půlnoci 1. ledna 1970 ve standardu UTC (Coordinated Universal Time). Pokud je datum mimo rozsah (viz oddíl poznámky) nebo vstup nelze interpretovat jako platný čas, vrácená hodnota je-1.
 
 ## <a name="remarks"></a>Poznámky
 
-**_Mkgmtime32 –** a **_mkgmtime64 –** převádějí na čas UTC **__time32_t** nebo **__time64_t –** typ představující čas v ČAS UTC. K převodu místní čas na čas UTC, použijte **mktime**, **_mktime32**, a **_mktime64** místo.
+Funkce **_mkgmtime32** a **_mkgmtime64** převádějí čas UTC na typ **__time32_t** nebo **__time64_t** představující čas ve standardu UTC. Chcete-li převést místní čas na čas UTC, použijte místo toho **mktime**, **_mktime32**a **_mktime64** .
 
-**_mkgmtime –** je vložená funkce, který se vyhodnotí **_mkgmtime64 –**, a **time_t** je ekvivalentní **__time64_t –**. Pokud je nutné donutit kompilátor k interpretaci **time_t** jako staré 32bitové **time_t**, můžete definovat **_USE_32BIT_TIME_T**. To se nedoporučuje, protože aplikace může selhat po 18. ledna 2038 (maximální rozsah 32bitové **time_t**), a to není povoleno vůbec na 64bitových platformách.
+**_mkgmtime** je vložená funkce, která se vyhodnocuje jako **_mkgmtime64**a **time_t** je ekvivalentem **__time64_t**. Pokud potřebujete vynutit, aby kompilátor interpretoval **time_t** jako starou 32 **time_t**, můžete definovat **_USE_32BIT_TIME_T**. To se nedoporučuje, protože vaše aplikace může selhat i po 18. lednu 2038 (maximální rozsah 32 bitové **time_t**) a není povolená na všech počítačích s 64.
 
-Času předané v se změní takto, stejným způsobem, jak se mění s **_mktime** funkce: **tm_wday** a **tm_yday** se nastaví na nové hodnoty podle hodnoty **tm_mday** a **tm_year**. Při zadávání **tm** struktury čas, nastavte **tm_isdst** pole:
+Předaná časová struktura se změní takto, stejným způsobem jako změny pomocí funkcí **_mktime** : pole **tm_wday** a **tm_yday** jsou nastavena na nové hodnoty na základě hodnot **tm_mday** a **tm_year**. Při určování doby struktury **TM** nastavte pole **tm_isdst** na:
 
-- Nula (0) k označení, že je v platnosti (běžný čas).
+- Nula (0) pro indikaci, že standardní čas je platný.
 
-- Hodnota, která je větší než 0, která znamená, že je v platnosti letní čas.
+- Hodnota větší než 0 značící, že je platný letní čas.
 
-- Hodnotu menší než nula, která mají kód knihovny run-time C compute, zda (běžný čas) nebo letního času je v platnosti.
+- Hodnota menší než nula znamená, že kód běhové knihovny jazyka C bude počítat bez ohledu na to, zda platí standardní čas nebo letní čas.
 
-Knihovny run-time C používá proměnnou prostředí TZ k určení správné letní čas. Pokud není nastavena TZ, operační systém je dotazován zobrazíte správné místní letního času chování. **tm_isdst** je povinné pole. Pokud není nastavený, jeho hodnota není definována a návratovou hodnotu z **mktime** nepředvídatelné.
+Knihovna run-time jazyka C používá proměnnou prostředí TZ k určení správného letního času. Pokud není nastavená funkce TZ, je dotaz na operační systém, který získá správné místní chování letního času. **tm_isdst** je povinné pole. Pokud není nastavena, jeho hodnota není definována a návratová hodnota z **mktime** je nepředvídatelné.
 
-Rozsah **_mkgmtime32 –** funkce je mezi půlnocí 1. ledna 1970, UTC do 23:59:59 18. ledna 2038 UTC. Rozsah **_mkgmtime64 –** je od půlnoci 1. ledna 1970, UTC do 23:59:59, 31 prosince 3000 UTC. Návratová hodnota-1 za následek datem mimo rozsah. Rozsah **_mkgmtime –** závisí na tom, zda **_USE_32BIT_TIME_T** je definována. Pokud není definován (výchozí) rozsahu je **_mkgmtime64 –**; v opačném případě rozsah je omezen na rozsah 32bitové **_mkgmtime32 –**.
+Rozsah funkce **_mkgmtime32** je od půlnoci, od 1. ledna 1970, UTC do 23:59:59, 15. ledna 2038, UTC. Rozsah **_mkgmtime64** je od půlnoci 1. ledna 1970, UTC do 23:59:59, 31. prosince 3000, UTC. Datum mimo rozsah má za následek návratovou hodnotu-1. Rozsah **_mkgmtime** závisí na tom, zda je definován **_USE_32BIT_TIME_T** . Pokud není definován (výchozí), rozsah je **_mkgmtime64**; v opačném případě je rozsah omezen na 32. **_mkgmtime32**rozsah.
 
-Všimněte si, že **gmtime** a **localtime** pomocí jedné staticky přidělenou vyrovnávací paměti pro převod. Pokud zadáte tuto vyrovnávací paměť pro **mkgmtime –**, předchozí obsah je zničen.
+Všimněte si, že **gmtime** a **localtime** používají jednu staticky přidělenou vyrovnávací paměť pro převod. Pokud zadáte tuto vyrovnávací paměť na **mkgmtime**, bude předchozí obsah zničen.
 
 ## <a name="example"></a>Příklad
 
@@ -139,7 +142,7 @@ Local Time: Thu Feb 15 17:14:52 2007
 Greenwich Mean Time: Fri Feb 16 01:14:52 2007
 ```
 
-Následující příklad ukazuje, jak neúplné struktura je vyplněná vypočítané hodnoty dne v týdnu a den v roce.
+Následující příklad ukazuje, jak se vyplní nekompletní struktura pomocí vypočítaných hodnot dne v týdnu a dne v roce.
 
 ```C
 // crt_mkgmtime2.c

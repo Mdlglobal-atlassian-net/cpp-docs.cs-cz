@@ -1,10 +1,10 @@
 ---
 title: _ismbbkalnum, _ismbbkalnum_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _ismbbkalnum
 - _ismbbkalnum_l
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _ismbbkalnum
 - ismbbkalnum
@@ -28,16 +31,16 @@ helpviewer_keywords:
 - _ismbbkalnum function
 - ismbbkalnum function
 ms.assetid: e1d70e7b-29d0-469c-9d93-442b99de22ac
-ms.openlocfilehash: 4eca5738068dab7393f70edf619629b179637e73
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2b7f188e38a2d13bf08210d6c2408ab996f18849
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62158004"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70954180"
 ---
-# <a name="ismbbkalnum-ismbbkalnuml"></a>_ismbbkalnum, _ismbbkalnum_l
+# <a name="_ismbbkalnum-_ismbbkalnum_l"></a>_ismbbkalnum, _ismbbkalnum_l
 
-Určuje, zda je určitý vícebajtový znak ne ASCII textový symbol.
+Určuje, zda konkrétní vícebajtový znak není textový symbol, který není ASCII.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -54,23 +57,23 @@ int _ismbbkalnum_l(
 ### <a name="parameters"></a>Parametry
 
 *c*<br/>
-Celé číslo k testování.
+Celé číslo, které se má testovat.
 
-*Národní prostředí*<br/>
-Národní prostředí.
+*jazyka*<br/>
+Národní prostředí, které se má použít.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-**_ismbbkalnum –** vrací nenulovou hodnotu, pokud celé číslo *c* je ne ASCII textový symbol jiný než interpunkce, nebo 0, pokud není. **_ismbbkalnum –** používá aktuální národní prostředí pro závislé na národním prostředí znak informace. **_ismbbkalnum_l –** je stejný jako **_ismbbkalnum –** s tím rozdílem, že přijímá jako parametr národního prostředí. Další informace najdete v tématu [národní prostředí](../../c-runtime-library/locale.md).
+**_ismbbkalnum** vrací nenulovou hodnotu, pokud celé číslo *c* je jiný textový symbol než ASCII, než je interpunkční znaménko, nebo 0, pokud není. **_ismbbkalnum** používá aktuální národní prostředí pro informace o znacích závislé na národním prostředí. **_ismbbkalnum_l** je identická s **_ismbbkalnum** s tím rozdílem, že přebírá národní prostředí jako parametr. Další informace najdete v tématu [národní prostředí](../../c-runtime-library/locale.md).
 
 ## <a name="requirements"></a>Požadavky
 
 |Rutina|Požadovaný hlavičkový soubor|
 |-------------|---------------------|
-|**_ismbbkalnum**|\<mbctype.h>|
-|**_ismbbkalnum_l**|\<mbctype.h>|
+|**_ismbbkalnum**|\<Mbctype. h >|
+|**_ismbbkalnum_l**|\<Mbctype. h >|
 
-Další informace o kompatibilitě naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Viz také:
 

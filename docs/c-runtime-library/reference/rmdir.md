@@ -1,9 +1,9 @@
 ---
 title: rmdir
 ms.date: 11/04/2016
-apiname:
+api_name:
 - rmdir
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -14,19 +14,22 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - rmdir
 helpviewer_keywords:
 - rmdir function
 ms.assetid: 03a0aff4-f66c-42a9-bee9-84c46f994952
-ms.openlocfilehash: 4646999fa577b18f03ac74d5207fb8479dc08f80
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 92f38e090870115e465de59456339d45be963602
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62357496"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70949173"
 ---
 # <a name="rmdir"></a>rmdir
 
-Tato funkce POSIX je zastaralá. Použít bitovou kopii ISO C++ splňující podmínky [_rmdir –](rmdir-wrmdir.md) místo.
+Tato funkce POSIX je zastaralá. Místo toho použijte C++ [_rmdir](rmdir-wrmdir.md) ISO.

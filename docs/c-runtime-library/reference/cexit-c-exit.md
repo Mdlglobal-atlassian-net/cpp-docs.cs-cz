@@ -1,10 +1,10 @@
 ---
 title: _cexit, _c_exit
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _c_exit
 - _cexit
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-runtime-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _cexit
 - c_exit
@@ -29,16 +32,16 @@ helpviewer_keywords:
 - _cexit function
 - c_exit function
 ms.assetid: f3072045-9924-4b1a-9fef-b0dcd6d12663
-ms.openlocfilehash: a075e8a8e965a195765b86ffa21fed0915dbf5ab
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: aa25d73bef1d85adfed77ba926e2d381e02e45e8
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62335487"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70939258"
 ---
-# <a name="cexit-cexit"></a>_cexit, _c_exit
+# <a name="_cexit-_c_exit"></a>_cexit, _c_exit
 
-Provádí operace vyčištění a vrátí bez ukončení procesu.
+Provede operace vyčištění a vrátí se bez ukončení procesu.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -49,16 +52,16 @@ void _c_exit( void );
 
 ## <a name="remarks"></a>Poznámky
 
-**_Cexit –** volání v poslední dovnitř, první (ven LIFO) objednávky, funkce registrované pomocí funkcí **atexit** a **_onexit**. Potom **_cexit –** vyprázdní všechny vyrovnávací paměti vstupně-výstupní operace a zavře všechny otevřené datové proudy před vrácením. **_c_exit –** je stejný jako **_exit** , ale vrací do volajícího procesu bez zpracování **atexit** nebo **_onexit** nebo vyprazdňování vyrovnávací paměti datového proudu. Chování **ukončit**, **_exit**, **_cexit –**, a **_c_exit –** je uveden v následující tabulce.
+Funkce **_cexit** volá v pořadí posledních v, First-out (LIFO) funkce zaregistrované v **atexit** a **_onexit**. **_Cexit** vyprázdní všechny vstupně-výstupní vyrovnávací paměti a před vrácením zavře všechny otevřené streamy. **_c_exit** je stejná jako **_exit** , ale vrátí se do volajícího procesu bez zpracování **atexit** nebo **_onexit** nebo vyprázdnění vyrovnávací paměti datového proudu. V následující tabulce je uvedeno chování funkce **Exit**, **_exit**, **_cexit**a **_c_exit** .
 
 |Funkce|Chování|
 |--------------|--------------|
-|**exit**|Provádí kompletní postupy ukončení knihovny jazyka C, ukončí proces a se zadaným stavovým kódem se ukončí.|
-|**_exit**|Provádí rychlé postupy ukončení knihovny jazyka C, ukončí proces a se zadaným stavovým kódem se ukončí.|
-|**_cexit**|Provádí kompletní postupy ukončení knihovny jazyka C a vrátí volajícímu, ale neukončí proces.|
-|**_c_exit**|Provádí rychlé postupy ukončení knihovny jazyka C a vrátí volajícímu, ale neukončí proces.|
+|**exit**|Provede kompletní postupy ukončení knihovny jazyka C, ukončí proces a ukončí se zadaným kódem stavu.|
+|**_exit**|Provádí rychlé postupy ukončení knihovny jazyka C, ukončí proces a ukončí se zadaným stavovým kódem.|
+|**_cexit**|Provede kompletní postupy ukončení knihovny jazyka C a vrátí se volajícímu, ale neukončí proces.|
+|**_c_exit**|Provede rychlé postupy ukončení knihovny jazyka C a vrátí se volajícímu, ale neukončí proces.|
 
-Při volání **_cexit –** nebo **_c_exit –** funkcí, nejsou volány destruktory dočasných nebo automatických objektů, které existují v okamžiku volání. Automatický objekt je objekt, který je definován ve funkci, kde tento objekt není deklarován jako statický. Dočasný objekt je objekt vytvořený kompilátorem. Chcete-li zničit automatický objekt před voláním **_cexit –** nebo **_c_exit –**, explicitně zavolejte destruktor objektu následovně:
+Při volání funkce **_cexit** nebo **_c_exit** nejsou volány destruktory pro všechny dočasné nebo automatické objekty, které existují v době volání. Automatický objekt je objekt, který je definován ve funkci, kde objekt není deklarován jako static. Dočasný objekt je objekt vytvořený kompilátorem. Chcete-li odstranit automatický objekt před voláním **_cexit** nebo **_c_exit**, explicitně zavolejte destruktor pro objekt následujícím způsobem:
 
 ```cpp
 myObject.myClass::~myClass( );
@@ -68,10 +71,10 @@ myObject.myClass::~myClass( );
 
 |Rutina|Požadovaný hlavičkový soubor|
 |-------------|---------------------|
-|**_cexit**|\<process.h>|
-|**_c_exit**|\<process.h>|
+|**_cexit**|\<Process. h >|
+|**_c_exit**|\<Process. h >|
 
-Další informace o kompatibilitě naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Viz také:
 

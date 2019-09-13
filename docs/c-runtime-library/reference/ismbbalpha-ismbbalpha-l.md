@@ -1,10 +1,10 @@
 ---
 title: _ismbbalpha, _ismbbalpha_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _ismbbalpha
 - _ismbbalpha_l
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - ismbbalpha
 - ismbbalpha_l
@@ -28,16 +31,16 @@ helpviewer_keywords:
 - _ismbbalpha function
 - _ismbbalpha_l function
 ms.assetid: 8e54cb92-fc2b-41f5-8ab4-b22ac8aa9ad0
-ms.openlocfilehash: c08a92ae0630c977f12deb1d0bd7587f575efd86
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: fe60eec2eb7f93d866340aabe382bf32d6b04b21
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62331555"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70954260"
 ---
-# <a name="ismbbalpha-ismbbalphal"></a>_ismbbalpha, _ismbbalpha_l
+# <a name="_ismbbalpha-_ismbbalpha_l"></a>_ismbbalpha, _ismbbalpha_l
 
-Určuje, zda je zadaný vícebajtový znak je alfa.
+Určuje, zda je zadaný vícebajtový znak alfa.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -53,31 +56,31 @@ int _ismbbalpha_l(
 ### <a name="parameters"></a>Parametry
 
 *c*<br/>
-Celé číslo k testování.
+Celé číslo, které se má testovat.
 
-*Národní prostředí*<br/>
-Národní prostředí.
+*jazyka*<br/>
+Národní prostředí, které se má použít.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-**_ismbbalpha –** vrací nenulovou hodnotu, pokud výraz:
+**_ismbbalpha** vrací nenulovou hodnotu, pokud výraz:
 
 `isalpha(c) || _ismbbkalnum(c)`
 
-je nenulový pro *c*, nebo 0, pokud není. **_ismbbalpha –** používá aktuální národní prostředí pro všechna nastavení závislé na národním prostředí znak. **_ismbbalpha_l –** je stejná s tím rozdílem, že používá Předaný parametr národního prostředí.
+je nenulové pro *c*nebo 0, pokud není. **_ismbbalpha** používá aktuální národní prostředí pro všechna nastavení znaků závislá na národním prostředí. **_ismbbalpha_l** je totožný s tím rozdílem, že používá předané národní prostředí.
 
 ## <a name="requirements"></a>Požadavky
 
 |Rutina|Požadovaný hlavičkový soubor|
 |-------------|---------------------|
-|**_ismbbalpha**|\<mbctype.h>|
-|**_ismbbalpha_l**|\<mbctype.h>|
+|**_ismbbalpha**|\<Mbctype. h >|
+|**_ismbbalpha_l**|\<Mbctype. h >|
 
-Další informace o kompatibilitě naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
 
 ## <a name="libraries"></a>Knihovny
 
-Všechny verze [běhových knihoven C](../../c-runtime-library/crt-library-features.md).
+Všechny verze [knihoven run-time jazyka C](../../c-runtime-library/crt-library-features.md).
 
 ## <a name="see-also"></a>Viz také:
 
