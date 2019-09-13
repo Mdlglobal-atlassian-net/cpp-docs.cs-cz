@@ -1,9 +1,9 @@
 ---
 title: _commit
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _commit
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _commit
 - commit
@@ -26,16 +29,16 @@ helpviewer_keywords:
 - _commit function
 - committing files to disk
 ms.assetid: d0c74d3a-4f2d-4fb0-b140-2d687db3d233
-ms.openlocfilehash: 8408158cb3d4ef0d29d9af24d8a2acbd28e00192
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b5a417deef48c89751f56feec480e90444728687
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62340351"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70939052"
 ---
-# <a name="commit"></a>_commit
+# <a name="_commit"></a>_commit
 
-Vyprázdnění souboru přímo na disk.
+Vyprázdní soubor přímo na disku.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -52,21 +55,21 @@ Popisovač souboru odkazující na otevřený soubor.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-**_potvrdit** vrátí hodnotu 0, pokud soubor byl úspěšně vyprázdněných na disk. Návratová hodnota-1 označuje chybu.
+**_commit** vrátí hodnotu 0, pokud byl soubor úspěšně vyprázdněn na disk. Návratová hodnota-1 označuje chybu.
 
 ## <a name="remarks"></a>Poznámky
 
-**_Potvrdit** funkce vynutí operačního systému zápisu do souboru spojené s *fd* na disk. Toto volání se zajistí okamžitě, vyprázdní zadaný soubor není na základě vlastního uvážení operačního systému.
+Funkce **_commit** vynutí, aby operační systém napsal soubor přidružený k *FD* na disk. Toto volání zajistí, že se zadaný soubor okamžitě vyprázdní, ne podle uvážení operačního systému.
 
-Pokud *fd* je neplatného popisovače souboru, je vyvolána obslužná rutina neplatného parametru, jak je popsáno v [Parameter Validation](../../c-runtime-library/parameter-validation.md). Pokud smí provádění pokračovat, vrátí funkce hodnotu -1 a **errno** je nastavena na **EBADF**.
+Pokud je *FD* neplatný popisovač souboru, je vyvolána obslužná rutina neplatného parametru, jak je popsáno v tématu [ověřování parametru](../../c-runtime-library/parameter-validation.md). Pokud provádění může pokračovat, funkce vrátí hodnotu-1 a **errno** je nastavena na **EBADF**.
 
 ## <a name="requirements"></a>Požadavky
 
-|Rutina|Požadovaný hlavičkový soubor|Volitelná záhlaví|
+|Rutina|Požadovaný hlavičkový soubor|Volitelné hlavičky|
 |-------------|---------------------|----------------------|
 |**_commit**|\<io.h>|\<errno.h>|
 
-Další informace o kompatibilitě naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Viz také:
 

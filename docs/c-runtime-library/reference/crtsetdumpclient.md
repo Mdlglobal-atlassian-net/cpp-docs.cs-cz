@@ -1,9 +1,9 @@
 ---
 title: _CrtSetDumpClient
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _CrtSetDumpClient
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -14,7 +14,10 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _CrtSetDumpClient
 - CrtSetDumpClient
@@ -22,16 +25,16 @@ helpviewer_keywords:
 - _CrtSetDumpClient function
 - CrtSetDumpClient function
 ms.assetid: f3dd06d0-c331-4a12-b68d-25378d112033
-ms.openlocfilehash: 09f319f6298dbec6b229b2923bd86fc9b50314de
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: f739f86a8410c66135704d61944d122a38c196a5
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64342999"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70938563"
 ---
-# <a name="crtsetdumpclient"></a>_CrtSetDumpClient
+# <a name="_crtsetdumpclient"></a>_CrtSetDumpClient
 
-Nainstaluje definované aplikací funkce pro výpis **_CLIENT_BLOCK** zadejte paměťových bloků (pouze ladicí verze).
+Nainstaluje funkci definovanou aplikací k vypsání bloků paměti typu **_CLIENT_BLOCK** (pouze ladicí verze).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -42,29 +45,29 @@ _CRT_DUMP_CLIENT _CrtSetDumpClient( _CRT_DUMP_CLIENT dumpClient );
 ### <a name="parameters"></a>Parametry
 
 *dumpClient*<br/>
-Novou funkci výpisu paměti definované klienta k připojení do procesu výpisu paměti ladění za běhu C.
+Nová funkce výpisu paměti definovaná klientem, která se připojí k procesu výpisu paměti ladění C Runtime.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Vrátí dříve definované klientský blok funkce výpisu paměti.
+Vrátí dříve definovanou funkci výpisu bloku klienta.
 
 ## <a name="remarks"></a>Poznámky
 
-**_CrtSetDumpClient** funkce umožňuje, aby aplikace k připojení vlastní funkce pro výpis objektů uložených v **_CLIENT_BLOCK** bloky paměti do jazyka C Runtime ladění procesu výpisu paměti. V důsledku toho se pokaždé, když se ladění výpisu funkce, jako [_CrtMemDumpAllObjectsSince](crtmemdumpallobjectssince.md) nebo [_CrtDumpMemoryLeaks](crtdumpmemoryleaks.md) výpisy stavu systému **_CLIENT_BLOCK** bloku paměti, aplikace také je volána funkce s výpisem paměti. **_CrtSetDumpClient** poskytuje snadno aplikace pro zjištění nevracení paměti a probíhá ověřování nebo vytváření sestav obsah data uložená v **_CLIENT_BLOCK** bloky. Když [_DEBUG](../../c-runtime-library/debug.md) není definován, jsou volání **_CrtSetDumpClient** odstraněna během předběžného zpracování.
+Funkce **_CrtSetDumpClient** umožňuje aplikaci připojit svoji vlastní funkci k vypsání objektů uložených v blocích paměti **_CLIENT_BLOCK** do procesu výpisu paměti ladění jazyka C za běhu. Výsledkem je, že pokaždé, když funkce výpisu ladění, jako je [_CrtMemDumpAllObjectsSince](crtmemdumpallobjectssince.md) nebo [_CrtDumpMemoryLeaks](crtdumpmemoryleaks.md) , vypíše blok paměti **_CLIENT_BLOCK** , zavolá se i funkce výpisu paměti aplikace. **_CrtSetDumpClient** poskytuje aplikaci s jednoduchou metodou zjišťování nevracení paměti a ověřování nebo vytváření sestav obsahu dat uložených v blocích **_CLIENT_BLOCK** . Když není definovaný [_DEBUG](../../c-runtime-library/debug.md) , volání **_CrtSetDumpClient** se během předběžného zpracování odeberou.
 
-**_CrtSetDumpClient** funkce nainstaluje novou funkci s výpisem paměti definované aplikací podle *dumpClient* a vrací funkci dříve definovaná s výpisem paměti. Příklad funkce s výpisem paměti blok klienta vypadá takto:
+Funkce **_CrtSetDumpClient** nainstaluje novou funkci výpisu definované aplikace zadanou v *dumpClient* a vrátí dříve definovanou funkci výpisu paměti. Příkladem funkce výpisu bloku klienta je následující:
 
 ```C
 void DumpClientFunction( void *userPortion, size_t blockSize );
 ```
 
-*UserPortion* argument je ukazatel na začátku části dat uživatele bloku paměti a *velikost bloku* určuje blokovat velikost přidělené paměti v bajtech. Funkce s výpisem paměti blok klienta musí vracet **void**. Ukazatel na funkci s výpisem paměti klienta, který je předán **_CrtSetDumpClient** je typu **_crt_dump_client –**, jak jsou definovány v souboru Crtdbg.h:
+Argument *userPortion* je ukazatel na začátek části uživatelských dat bloku paměti a *velikostí bloku* určuje velikost přiděleného bloku paměti v bajtech. Funkce výpisu bloku klienta musí vracet **typ void**. Ukazatel na funkci výpisu klienta, která je předána do **_CrtSetDumpClient** , je typu **_CRT_DUMP_CLIENT**, jak je definováno v souboru Crtdbg. h:
 
 ```C
 typedef void (__cdecl *_CRT_DUMP_CLIENT)( void *, size_t );
 ```
 
-Další informace o funkcích, které pracují s **_CLIENT_BLOCK** zadejte bloky paměti naleznete v tématu [funkce háku bloku klienta](/visualstudio/debugger/client-block-hook-functions). [_CrtReportBlockType](crtreportblocktype.md) funkci můžete použít k vrácení informací o typech bloku a podtypy.
+Další informace o funkcích, které pracují s bloky paměti typu **_CLIENT_BLOCK** , najdete v tématu [funkce zavěšení bloků klienta](/visualstudio/debugger/client-block-hook-functions). Funkci [_CrtReportBlockType](crtreportblocktype.md) lze použít k vrácení informací o typech a podtypůch bloků.
 
 ## <a name="requirements"></a>Požadavky
 
@@ -72,11 +75,11 @@ Další informace o funkcích, které pracují s **_CLIENT_BLOCK** zadejte bloky
 |-------------|---------------------|
 |**_CrtSetDumpClient**|\<crtdbg.h>|
 
-Další informace o kompatibilitě naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
 
 ## <a name="libraries"></a>Knihovny
 
-Ladicí verze [běhových knihoven C](../../c-runtime-library/crt-library-features.md) pouze.
+Ladit verze pouze [knihoven run-time jazyka C](../../c-runtime-library/crt-library-features.md) .
 
 ## <a name="see-also"></a>Viz také:
 

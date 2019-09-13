@@ -1,11 +1,11 @@
 ---
 title: cbrt, cbrtf, cbrtl
 ms.date: 04/05/2018
-apiname:
+api_name:
 - cbrt
 - cbrtf
 - cbrtl
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - cbrtl
 - cbrt
@@ -27,16 +30,16 @@ helpviewer_keywords:
 - cbrtf function
 - cbrt function
 ms.assetid: ab51d916-3db2-4beb-b46a-28b4062cd33f
-ms.openlocfilehash: c395a063cfa07cdfb7e841f19bc64fb1c57ca796
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d3983c5d3237b1a6cb82887a690919cbf21401ab
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62341091"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70939294"
 ---
 # <a name="cbrt-cbrtf-cbrtl"></a>cbrt, cbrtf, cbrtl
 
-Vypočítá kořenové datové krychle.
+Vypočítá kořen datové krychle.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -65,23 +68,23 @@ Hodnota s plovoucí desetinnou čárkou
 
 ## <a name="return-value"></a>Návratová hodnota
 
-**Cbrt –** vrátí funkce datové krychle kořen *x*.
+Funkce **cbrt –** vrací kořenovou datovou krychli *x*.
 
-|Vstup|Výjimka SEH|**_matherr** Exception|
+|Vstup|Výjimka SEH|**_matherr** Jímka|
 |-----------|-------------------|--------------------------|
-|± ∞, QNAN, IND|žádná|žádná|
+|∞, QNAN, ZASÁHNOUT|žádná|žádná|
 
 ## <a name="remarks"></a>Poznámky
 
-Protože jazyk C++ umožňuje přetížení, můžete volat přetížení **cbrt –** trvají **float** nebo **dlouhé** **double** typy. V programu jazyka C **cbrt –** vždy převezme a vrátí **double**.
+Vzhledem C++ k tomu, že umožňuje přetížení, můžete volat přetížení **cbrt –** , která přebírají **float** nebo **Long** **Double** Types. V programu v jazyce C **cbrt –** vždycky přebírá a vrací **Double**.
 
 ## <a name="requirements"></a>Požadavky
 
-|Funkce|Záhlaví C|Hlaviček jazyka C++|
+|Funkce|Hlavička jazyka C|C++hlaviček|
 |--------------|--------------|------------------|
-|**cbrt**, **cbrtf**, **cbrtl**|\<math.h>|\<cmath>|
+|**cbrt**, **cbrtf**, **cbrtl**|\<Math. h >|\<cmath >|
 
-Další informace o kompatibilitě, naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Příklad
 

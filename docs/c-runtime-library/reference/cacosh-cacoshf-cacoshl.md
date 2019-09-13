@@ -1,11 +1,11 @@
 ---
-title: cacosh cacoshf, cacoshl
+title: cacosh, cacoshf, cacoshl
 ms.date: 11/04/2016
-apiname:
+api_name:
 - cacosh
 - cacoshf
 - cacoshl
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - cacosh
 - cacoshf
@@ -30,16 +33,16 @@ helpviewer_keywords:
 - cacoshf function
 - cacoshl function
 ms.assetid: 83fd05eb-3587-4741-9be6-589a830a1703
-ms.openlocfilehash: aa31dfa1b29eda18d34528fc8aa9544e58a5a082
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 05ba0b37540e9f1b2dbb4d255e0fa033b54762d1
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62340726"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70943404"
 ---
-# <a name="cacosh-cacoshf-cacoshl"></a>cacosh cacoshf, cacoshl
+# <a name="cacosh-cacoshf-cacoshl"></a>cacosh, cacoshf, cacoshl
 
-Načte inverzní hyperbolický kosinus komplexního čísla s větví Vyjmout na hodnoty menší než 1 skutečné ose. .
+Načte inverzní hyperbolický kosinus komplexního čísla s vyjmutím větve na hodnoty menší než 1 na skutečné ose. .
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -64,23 +67,23 @@ _Lcomplex cacoshl(
 ### <a name="parameters"></a>Parametry
 
 *z*<br/>
-Komplexní čísla, která představuje úhel v radiánech.
+Komplexní číslo představující úhel v radiánech.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Inverzní hyperbolický kosinus *z*, v radiánech. Výsledkem je bez vazby a nezáporná skutečné osy a v intervalu [-iπ, + iπ] imaginární ose.
+Inverzní hyperbolický kosinus *z v*radiánech. Výsledek je neohraničený a není záporný podél skutečné osy a v intervalu [-iπ, + iπ] podél imaginární osy.
 
 ## <a name="remarks"></a>Poznámky
 
-Protože C++ umožňuje přetížení, můžete volat přetížení **cacosh** , která používají a vrací **_Fcomplex** a **_Lcomplex** hodnoty. V programu jazyka C **cacosh** vždy převezme a vrátí **_Dcomplex** hodnotu.
+Vzhledem C++ k tomu, že umožňuje přetížení, můžete volat přetížení **cacosh** , která přijímají a vracejí hodnoty **_Fcomplex** a **_Lcomplex** . V programu v jazyce C **cacosh** vždycky přebírá a vrací hodnotu **_Dcomplex** .
 
 ## <a name="requirements"></a>Požadavky
 
-|Rutina|Záhlaví C|Hlaviček jazyka C++|
+|Rutina|Hlavička jazyka C|C++hlaviček|
 |-------------|--------------|------------------|
-|**cacosh**,               **cacoshf**, **cacoshl**|\<complex.h>|\<ccomplex>|
+|**cacosh**, **cacoshf**, **cacoshl**|\<complex.h>|\<ccomplex >|
 
-Další informace o kompatibilitě naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Viz také:
 

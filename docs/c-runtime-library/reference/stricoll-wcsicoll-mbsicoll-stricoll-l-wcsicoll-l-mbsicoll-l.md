@@ -1,14 +1,14 @@
 ---
 title: _stricoll, _wcsicoll, _mbsicoll, _stricoll_l, _wcsicoll_l, _mbsicoll_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _mbsicoll_l
 - _stricoll_l
 - _mbsicoll
 - _wcsicoll_l
 - _wcsicoll
 - _stricoll
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -21,7 +21,10 @@ apilocation:
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
 - api-ms-win-crt-string-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - stricoll
 - _stricoll
@@ -51,19 +54,19 @@ helpviewer_keywords:
 - strings [C++], comparing by code page
 - ftcsicoll function
 ms.assetid: 8ec93016-5a49-49d2-930f-721566661d82
-ms.openlocfilehash: bd2406751fd2855afd02743c98938e530398e7d1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 952d3b25f9c3741313e791c49f88a7d2e79ac60b
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62353661"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70940703"
 ---
-# <a name="stricoll-wcsicoll-mbsicoll-stricolll-wcsicolll-mbsicolll"></a>_stricoll, _wcsicoll, _mbsicoll, _stricoll_l, _wcsicoll_l, _mbsicoll_l
+# <a name="_stricoll-_wcsicoll-_mbsicoll-_stricoll_l-_wcsicoll_l-_mbsicoll_l"></a>_stricoll, _wcsicoll, _mbsicoll, _stricoll_l, _wcsicoll_l, _mbsicoll_l
 
-Porovná řetězce pomocí informací specifických pro národní prostředí.
+Porovná řetězce s použitím informací specifických pro národní prostředí.
 
 > [!IMPORTANT]
-> **_mbsicoll –** a **_mbsicoll_l –** nelze použít v aplikacích, které jsou spouštěny v modulu Windows Runtime. Další informace najdete v tématu [CRT funkce nejsou podporovány v aplikacích pro univerzální platformu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> **_mbsicoll** a **_mbsicoll_l** nelze použít v aplikacích, které jsou spouštěny v prostředí Windows Runtime. Další informace najdete v tématu [funkce CRT nejsou v aplikacích Univerzální platforma Windows podporovány](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -99,36 +102,36 @@ int _mbsicoll_l(
 
 ### <a name="parameters"></a>Parametry
 
-*string1*, *string2*<br/>
-Řetězec zakončený hodnotou Null pro srovnání.
+*řetězec1*, *řetězec2*<br/>
+Řetězec zakončený hodnotou null k porovnání
 
-*Národní prostředí*<br/>
+*jazyka*<br/>
 Národní prostředí, které se má použít
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Každá z těchto funkcí vrací hodnotu určující vztah *řetězec1* k *řetězec2*, následujícím způsobem.
+Každá z těchto funkcí vrací hodnotu, která označuje vztah *řetězec1* k *řetězec2*, následovně.
 
 |Návratová hodnota|Vztah řetězec1 k řetězec2|
 |------------------|----------------------------------------|
 |< 0|*řetězec1* menší než *řetězec2*|
-|0|*řetězec1* shodné s *řetězec2*|
+|0|*řetězec1* totožný s *řetězec2*|
 |> 0|*řetězec1* větší než *řetězec2*|
 |**_NLSCMPERROR**|Došlo k chybě.|
 
-Každá z těchto funkcí vrací **_NLSCMPERROR**. Chcete-li použít **_NLSCMPERROR**, zahrňte \<string.h > nebo \<mbstring.h >. **_wcsicoll –** může selhat, pokud buď *řetězec1* nebo *řetězec2* obsahuje kódy širokého znaku mimo doménu pořadí řazení. Pokud dojde k chybě, **_wcsicoll –** může nastavit **errno** k **EINVAL**. Chcete-li zkontrolovat chyby volání **_wcsicoll –**, nastavte **errno** na hodnotu 0 a zkontrolujte **errno** po volání **_wcsicoll –**.
+Každá z těchto funkcí vrací **_NLSCMPERROR**. Chcete-li použít **_NLSCMPERROR**, \<zadejte buď String. h \<> nebo Mbstring. h >. **_wcsicoll** může selhat, pokud buď *řetězec1* nebo *řetězec2* obsahuje kódy číselných znaků mimo doménu pořadí řazení. Když dojde k chybě, **_wcsicoll** může nastavit **errno** na **EINVAL**. Chcete-li vyhledat chybu volání **_wcsicoll**, nastavte **errno** na hodnotu 0 a po volání **_wcsicoll**zaškrtněte **errno** .
 
 ## <a name="remarks"></a>Poznámky
 
-Každá z těchto funkcí provádí porovnávání bez *řetězec1* a *řetězec2* podle kódové stránky, aktuálně používán. Tyto funkce by měla sloužit pouze v případě, že existuje rozdíl mezi znakové sady a lexikografickým pořadím znaků v aktuální znakové stránce a tento rozdíl je relevantní pro porovnání řetězců.
+Každá z těchto funkcí provádí porovnání typu *řetězec1* a *řetězec2* bez rozlišování velkých a malých písmen podle znakové stránky, která se právě používá. Tyto funkce by měly být použity pouze v případě, že existuje rozdíl mezi pořadím znakových sad a pořadím znaků lexikografickým pořadím na aktuální znakové stránce a tento rozdíl je pro porovnání řetězců v zájmu.
 
-**_stricmp –** se liší od **_stricoll –** v tom, že **_stricmp –** porovnání je ovlivňován **LC_CTYPE**, že **_stricoll –** je podle porovnání **LC_CTYPE** a **LC_COLLATE** kategorie národního prostředí. Další informace o **LC_COLLATE** kategorie, naleznete v tématu [setlocale](setlocale-wsetlocale.md) a [kategorie národního prostředí](../../c-runtime-library/locale-categories.md). Verze těchto funkcí bez **_l** přípony použití aktuálního národního prostředí; verze s **_l** přípona jsou stejné s tím rozdílem, že používají předané národní prostředí. Další informace najdete v tématu [národní prostředí](../../c-runtime-library/locale.md).
+**_stricmp** se liší od **_stricoll** v tom, že porovnání **_stricmp** je ovlivněno **LC_CTYPE**, zatímco **_stricoll** porovnání je podle kategorií **LC_CTYPE** a **LC_COLLATE** jazyka. Další informace o kategorii **LC_COLLATE** naleznete v tématu [setlocale](setlocale-wsetlocale.md) and [locale Categories](../../c-runtime-library/locale-categories.md). Verze těchto funkcí bez přípony **_l** používají aktuální národní prostředí; verze s příponou **_l** jsou stejné s tím rozdílem, že místo toho používají předané národní prostředí. Další informace najdete v tématu [národní prostředí](../../c-runtime-library/locale.md).
 
-Všechny tyto funkce ověřují své parametry. Pokud *řetězec1* nebo *řetězec2* jsou **NULL** vyvolána ukazatele, obslužná rutina neplatného parametru, jak je popsáno v [Parameter Validation](../../c-runtime-library/parameter-validation.md). Pokud provádění může pokračovat, vrátí tyto funkce **_NLSCMPERROR** a nastavte **errno** k **EINVAL**.
+Všechny tyto funkce ověřují své parametry. Pokud je parametr *řetězec1* nebo *řetězec2* ukazateli s **hodnotou null** , je vyvolána obslužná rutina neplatného parametru, jak je popsáno v tématu [ověřování parametru](../../c-runtime-library/parameter-validation.md). Pokud provádění může pokračovat, vrátí tyto funkce **_NLSCMPERROR** a nastaví **errno** na **EINVAL**.
 
 ### <a name="generic-text-routine-mappings"></a>Mapování rutin obecného textu
 
-|Rutina TCHAR.H|_UNICODE a _MBCS nejsou definovány|_MBCS definováno|_UNICODE definováno|
+|Rutina TCHAR.H|_UNICODE & _MBCS nejsou definovány.|_MBCS definováno|_UNICODE definováno|
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_tcsicoll**|**_stricoll**|**_mbsicoll**|**_wcsicoll**|
 
@@ -136,16 +139,16 @@ Všechny tyto funkce ověřují své parametry. Pokud *řetězec1* nebo *řetěz
 
 |Rutina|Požadovaný hlavičkový soubor|
 |-------------|---------------------|
-|**_stricoll**, **_stricoll_l**|\<string.h>|
-|**_wcsicoll**, **_wcsicoll_l**|\<wchar.h>, \<string.h>|
-|**_mbsicoll**, **_mbsicoll_l**|\<Mbstring.h >|
+|**_stricoll**, **_stricoll_l**|\<String. h >|
+|**_wcsicoll**, **_wcsicoll_l**|\<WCHAR. h >, \<String. h >|
+|**_mbsicoll**, **_mbsicoll_l**|\<Mbstring. h >|
 
-Další informace o kompatibilitě, naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Viz také:
 
 [Národní prostředí](../../c-runtime-library/locale.md)<br/>
-[Zacházení s řetězci](../../c-runtime-library/string-manipulation-crt.md)<br/>
+[Manipulace s řetězci](../../c-runtime-library/string-manipulation-crt.md)<br/>
 [strcoll – funkce](../../c-runtime-library/strcoll-functions.md)<br/>
 [localeconv](localeconv.md)<br/>
 [_mbsnbcoll, _mbsnbcoll_l, _mbsnbicoll, _mbsnbicoll_l](mbsnbcoll-mbsnbcoll-l-mbsnbicoll-mbsnbicoll-l.md)<br/>

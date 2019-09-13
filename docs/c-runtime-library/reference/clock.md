@@ -1,9 +1,9 @@
 ---
 title: clock
 ms.date: 11/04/2016
-apiname:
+api_name:
 - clock
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-time-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - clock
 helpviewer_keywords:
@@ -25,12 +28,12 @@ helpviewer_keywords:
 - processor time used
 - calculating processor time used
 ms.assetid: 3e1853dd-498f-49ba-b06a-f2315f20904e
-ms.openlocfilehash: 2fabd18fb28cb5ea13dfb156ea21e8743c2afd49
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 836d0c6448adb4c99a251a0e97aa642e30362dcb
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69500270"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70939119"
 ---
 # <a name="clock"></a>clock
 
@@ -50,7 +53,7 @@ Uplynulý čas od inicializace CRT na začátku procesu, měřená v jednotkách
 
 Funkce **Clock** obsahuje informace o tom, kolik hodinových hodin bylo dokončeno od inicializace CRT během spuštění procesu. Všimněte si, že tato funkce nevyhovuje výhradně normě ISO C, která určuje, že jako návratová hodnota se použije čistý čas procesoru. K získání časů procesoru použijte funkci Win32 [GetProcessTimes](/windows/win32/api/processthreadsapi/nf-processthreadsapi-getprocesstimes) . Chcete-li určit uplynulý čas v sekundách, vydělte hodnotu vrácenou funkcí **Clock** makra **CLOCKS_PER_SEC**.
 
-Hodnota vrácená hodinami může přesáhnout maximální hodnotu **clock_t**, která je dost času. Po delší době procesu je hodnota vrácená **hodinou** vždy `(clock_t)(-1)`, jak je uvedeno ve standardu ISO C99 standard (7.23.2.1) a ISO C11 Standard (7.27.2.1). Společnost Microsoft implementuje **clock_t** jako **dlouhé**celé číslo se 32 znaménkem a makro **CLOCKS_PER_SEC** je definováno jako 1000. Tato hodnota poskytuje maximální hodnotu funkce **hodin** 2147483,647 sekund nebo asi 24,8 dní. Nespoléhá se na hodnotu vrácenou v procesech, které jsou spuštěny po dobu delší než tento časový rozsah. K zaznamenání uplynulých časů [](time-time32-time64.md) během mnoha let můžete použít funkci 64 nebo funkci [QueryPerformanceCounter](/windows/win32/api/profileapi/nf-profileapi-queryperformancecounter) pro Windows.
+Hodnota vrácená **hodinami** může přesáhnout maximální hodnotu **clock_t**, která je dost času. Po delší době procesu je hodnota vrácená **hodinou** vždy `(clock_t)(-1)`, jak je uvedeno ve standardu ISO C99 standard (7.23.2.1) a ISO C11 Standard (7.27.2.1). Společnost Microsoft implementuje **clock_t** jako **dlouhé**celé číslo se 32 znaménkem a makro **CLOCKS_PER_SEC** je definováno jako 1000. Tato hodnota poskytuje maximální hodnotu funkce **hodin** 2147483,647 sekund nebo asi 24,8 dní. Nespoléhá se na hodnotu vrácenou v procesech, které jsou spuštěny **po dobu** delší než tento časový rozsah. K zaznamenání uplynulých časů během mnoha let můžete [použít funkci 64 nebo funkci](time-time32-time64.md) [QueryPerformanceCounter](/windows/win32/api/profileapi/nf-profileapi-queryperformancecounter) pro Windows.
 
 ## <a name="requirements"></a>Požadavky
 

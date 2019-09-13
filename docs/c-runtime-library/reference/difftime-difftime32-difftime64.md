@@ -1,11 +1,11 @@
 ---
 title: difftime, _difftime32, _difftime64
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _difftime32
 - difftime
 - _difftime64
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-time-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _difftime64
 - difftime
@@ -32,16 +35,16 @@ helpviewer_keywords:
 - _difftime64 function
 - difftime32 function
 ms.assetid: 4cc0ac2b-fc7b-42c0-8283-8c9d10c566d0
-ms.openlocfilehash: 80aaac1696fc82db248b097e73a2d89d81a20346
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 51d74ae447e87e91e9be3c27864b8dfe7f490b14
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62288520"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70937648"
 ---
-# <a name="difftime-difftime32-difftime64"></a>difftime, _difftime32, _difftime64
+# <a name="difftime-_difftime32-_difftime64"></a>difftime, _difftime32, _difftime64
 
-Najde rozdíl mezi dvěma časy.
+Vyhledá rozdíl mezi dvěma časy.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -54,34 +57,34 @@ double _difftime64( __time64_t timeEnd, __time64_t timeStart );
 ### <a name="parameters"></a>Parametry
 
 *timeEnd*<br/>
-Čas dokončení.
+Čas ukončení.
 
 *timeStart*<br/>
-Čas začátku.
+Čas zahájení.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-**difftime –** vrátí uplynulý čas v sekundách, z *timeStart* k *timeEnd*. Vrácená hodnota je číslo s plovoucí desetinnou čárkou dvojitou přesností. Návratová hodnota může být 0 udávající chybu.
+**difftime** vrátí uplynulý čas v sekundách, od *timeStart* do *timeEnd*. Vrácená hodnota je číslo s plovoucí desetinnou čárkou a dvojitou přesností. Vrácená hodnota může být 0, což značí chybu.
 
 ## <a name="remarks"></a>Poznámky
 
-**Difftime –** funkce vypočítá rozdíl mezi dvěma hodnotami zadaný čas *timeStart* a *timeEnd*.
+Funkce **difftime** vypočítá rozdíl mezi dvěma zadanými časovými hodnotami *timeStart* a *timeEnd*.
 
-Zadaná hodnota času se musí vejít do rozsahu **time_t**. **time_t** je 64bitová hodnota. Díky tomu se konec rozsahu byla prodloužena z 23:59:59 18. ledna 2038 UTC do 23:59:59, 31 prosince 3000. Nižší řadu **time_t** je stále půlnoci 1. ledna 1970.
+Zadaná hodnota času se musí vejít do rozsahu **time_t**. **time_t** je 64 hodnota. Proto se konec rozsahu rozšířil z 23:59:59. ledna 2038, UTC na 23:59:59, 31. prosince, 3000. Dolní rozsah **time_t** je stále půlnoc, 1. ledna 1970.
 
-**difftime –** je vložená funkce, který se vyhodnotí buď **_difftime32 –** nebo **_difftime64 –** podle toho, jestli **_USE_32BIT_TIME_T** je definována. _difftime32 – a _difftime64 – je možné přímo na vynucené použití určité velikosti typu time.
+**difftime** je vložená funkce, která je vyhodnocena buď na **_difftime32** , nebo na **_difftime64** v závislosti na tom, zda je definována **_USE_32BIT_TIME_T** . _difftime32 a _difftime64 lze použít přímo k vynucení použití konkrétní velikosti typu času.
 
-Tyto funkce ověřují své parametry. Pokud z parametrů je nula nebo záporná, obslužná rutina neplatného parametru je vyvolána, jak je popsáno v [Parameter Validation](../../c-runtime-library/parameter-validation.md). Pokud smí provádění pokračovat, tyto funkce vrátí 0 a nastaví **errno** k **EINVAL**.
+Tyto funkce ověřují své parametry. Pokud je některý z parametrů nula nebo negativní, je vyvolána obslužná rutina neplatného parametru, jak je popsáno v tématu [ověřování parametru](../../c-runtime-library/parameter-validation.md). Pokud provádění může pokračovat, vrátí tyto funkce 0 a nastaví **errno** na **EINVAL**.
 
 ## <a name="requirements"></a>Požadavky
 
 |Rutina|Požadovaný hlavičkový soubor|
 |-------------|---------------------|
-|**difftime –**|\<time.h>|
+|**difftime**|\<time.h>|
 |**_difftime32**|\<time.h>|
 |**_difftime64**|\<time.h>|
 
-Další informace o kompatibilitě, naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Příklad
 

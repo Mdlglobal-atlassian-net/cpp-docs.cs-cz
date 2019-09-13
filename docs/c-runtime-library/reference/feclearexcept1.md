@@ -1,9 +1,9 @@
 ---
 title: feclearexcept1
 ms.date: 04/05/2018
-apiname:
+api_name:
 - feclearexcept
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,23 +15,26 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-runtime-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - feclearexcept
 - fenv/feclearexcept
 helpviewer_keywords:
 - feclearexcept function
 ms.assetid: ef419da3-c248-4432-b53c-8e7a475d9533
-ms.openlocfilehash: 3c2f037a5be903fc006debfa7319c483431fdd92
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9899d7068a289e7d5f71cb42a8373869d60c3070
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62334733"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70941273"
 ---
 # <a name="feclearexcept"></a>feclearexcept
 
-Pokusí se Vymazat příznaky výjimky s plovoucí desetinnou čárkou určený argumentem.
+Pokusy o vymazání příznaků výjimek s plovoucí desetinnou čárkou, které jsou určeny argumentem.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -44,34 +47,34 @@ int feclearexcept(
 ### <a name="parameters"></a>Parametry
 
 *s výjimkou*<br/>
-Příznaky výjimky stav vymazání.
+Příznaky stavu výjimky, které mají být vymazány.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Vrátí hodnotu nula, pokud *, s výjimkou* je nula, nebo pokud byly úspěšně vymazal všechny zadané výjimky. V opačném případě vrací nenulovou hodnotu.
+Vrátí hodnotu nula, pokud *s výjimkou* je nula, nebo pokud byly všechny zadané výjimky úspěšně vymazány. V opačném případě vrátí nenulovou hodnotu.
 
 ## <a name="remarks"></a>Poznámky
 
-**Feclearexcept** pokusí funkce zrušte plovoucí bod příznaky výjimky stav určeného *, s výjimkou*. Funkce podporuje těchto maker výjimek definovaných v fenv.h:
+Funkce **feclearexcept** se pokusí vymazat příznaky stavu výjimky s plovoucí desetinnou čárkou, které jsou určené *výjimkou*. Funkce podporuje tato makra výjimky definovaná v fenv. h:
 
-|Výjimka – makro|Popis|
+|Makro výjimky|Popis|
 |---------------------|-----------------|
-|FE_DIVBYZERO|V dříve s plovoucí desetinnou čárkou operace; došlo k chybě singularity nebo pole byl vytvořen hodnotu nekonečno.|
-|FE_INEXACT|Funkce musela být zaokrouhlit uložený výsledek dříve operace s plovoucí desetinnou čárkou.|
-|FE_INVALID|V rámci starší operace s plovoucí desetinnou čárkou došlo k chybě domény.|
-|FE_OVERFLOW|Došlo k chybě rozsah; předchozí výsledek operace s plovoucí desetinnou čárkou byl příliš velký a nelze je reprezentovat.|
-|FE_UNDERFLOW|Předchozí výsledek operace s plovoucí desetinnou čárkou byl příliš malá, aby se dala vyjádřit v úplnou přesností; byl vytvořen nenormální hodnota.|
-|FE_ALL_EXCEPT|Bitový operátor OR všech nepodporuje výjimky s plovoucí desetinnou čárkou.|
+|FE_DIVBYZERO|V dřívější operaci s plovoucí desetinnou čárkou došlo k chybě v záčísle nebo objektu. byla vytvořena hodnota nekonečno.|
+|FE_INEXACT|Funkce byla nucena zaokrouhlit uložený výsledek předchozí operace s plovoucí desetinnou čárkou.|
+|FE_INVALID|V dřívější operaci s plovoucí desetinnou čárkou došlo k chybě domény.|
+|FE_OVERFLOW|Došlo k chybě rozsahu; předchozí výsledek operace s plovoucí desetinnou čárkou byl pro reprezentaci příliš velký.|
+|FE_UNDERFLOW|Předchozí výsledek operace s plovoucí desetinnou čárkou byl příliš malý, aby byl reprezentován s plnou přesností. byla vytvořena deběžná hodnota.|
+|FE_ALL_EXCEPT|Bitové nebo všechny podporované výjimky s plovoucí desetinnou čárkou.|
 
-*, S výjimkou* argument může být nula nebo bitový operátor OR jednoho nebo více z maker výjimek podporované. Výsledek libovolné jiné hodnoty argumentu není definován.
+Argument *excepts* může být nula nebo BITOVÝ operátor OR jednoho nebo více podporovaných maker výjimek. Výsledek jakékoli jiné hodnoty argumentu není definován.
 
 ## <a name="requirements"></a>Požadavky
 
-|Funkce|Záhlaví C|Hlaviček jazyka C++|
+|Funkce|Hlavička jazyka C|C++hlaviček|
 |--------------|--------------|------------------|
-|**feclearexcept**|\<fenv.h>|\<cfenv>|
+|**feclearexcept**|\<fenv. h >|\<cfenv>|
 
-Další informace o kompatibilitě, naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Viz také:
 

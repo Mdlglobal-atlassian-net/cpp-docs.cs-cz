@@ -1,11 +1,11 @@
 ---
-title: COSH – coshf –, coshl –
+title: cosh, coshf, coshl
 ms.date: 04/11/2018
-apiname:
+api_name:
 - cosh
 - coshf
 - coshl
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - cosh
 - coshf
@@ -28,16 +31,16 @@ helpviewer_keywords:
 - coshl function
 - trigonometric functions
 - hyperbolic functions
-ms.openlocfilehash: 0f55e084e760cb6d04dbe7ec4fefb5e2ac1d79fd
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 446988e67ca6e3b4a3839a9336f1ea4e2755c124
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62347441"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70938998"
 ---
-# <a name="cosh-coshf-coshl"></a>COSH – coshf –, coshl –
+# <a name="cosh-coshf-coshl"></a>cosh, coshf, coshl
 
-Vypočte hyperbolický kosinus.
+Vypočítá hyperbolický kosinus.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -59,30 +62,30 @@ long double cosh( long double x );  // C++ only
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Hyperbolický kosinus *x*.
+Hyperbolický kosinus hodnoty *x*.
 
-Ve výchozím nastavení, pokud je výsledek příliš velké **cosh**, **coshf –**, nebo **coshl –** volání funkce vrátí **HUGE_VAL** a nastaví **errno** k **ERANGE**.
+Ve výchozím nastavení, pokud je výsledek příliš velký ve volání **cosh –** , **coshf –** nebo **coshl** , vrátí funkce **HUGE_VAL** a nastaví **errno** na **ERANGE**.
 
-|Vstup|Výjimka SEH|Výjimka Matherr|
+|Vstup|Výjimka SEH|Výjimka matherr|
 |-----------|-------------------|-----------------------|
 |± **QNAN**, **IND**|žádná|**_DOMAIN**|
-|*x* ≥ 7.104760e + 002|**NEPŘESNÉ**+**PŘETEČENÍ**|**PŘETEČENÍ**|
+|*×* ≥ 7.104760 e + 002|**NEPŘESNÉ**+**PŘETEČENÍ**|**PLNĚ**|
 
 ## <a name="remarks"></a>Poznámky
 
-Protože jazyk C++ umožňuje přetížení, můžete volat přetížení **cosh** , která používají a vrací **float** nebo **dlouhé** **double** hodnoty. V programu jazyka C **cosh** vždy převezme a vrátí **double**.
+Vzhledem C++ k tomu, že umožňuje přetížení, můžete volat přetížení **cosh –** , která přijímají a vracejí hodnoty **float** nebo **Long** **Double** . V programu v jazyce C **cosh –** vždycky přebírá a vrací **Double**.
 
 ## <a name="requirements"></a>Požadavky
 
-|Rutina|Požadované záhlaví (C)|Požadované záhlaví (C++)|
+|Rutina|Požadovaná hlavička (C)|Požadovaná hlavička (C++)|
 |-------------|---------------------|-|
-|**coshf**, **cosl**, **coshl**|\<math.h>|\<cmath > nebo \<math.h >|
+|**coshf –** , **cosl**, **coshl**|\<Math. h >|\<cmath > nebo \<Math. h >|
 
-Další informace o kompatibilitě, naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Příklad
 
-Podívejte se na příklad v [sinh sinhf –, sinhl –](sinh-sinhf-sinhl.md).
+Podívejte se na příklad v [sinh –, sinhf –, sinhl](sinh-sinhf-sinhl.md).
 
 ## <a name="see-also"></a>Viz také:
 

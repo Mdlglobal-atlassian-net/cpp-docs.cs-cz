@@ -1,9 +1,9 @@
 ---
 title: feraiseexcept
 ms.date: 04/05/2018
-apiname:
+api_name:
 - feraiseexcept
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -14,23 +14,24 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: HeaderDef
+api_type:
+- HeaderDef
 f1_keywords:
 - feraiseexcept
 - fenv/feraiseexcept
 helpviewer_keywords:
 - feraiseexcept function
 ms.assetid: 87e89151-83c2-4563-9a9a-45666245d437
-ms.openlocfilehash: 581dd4026a20ce7221945c5815af3ae102f132fa
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 40ff315c179a6b62a3073d4f07e4e6a6d1c1acab
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62334356"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70941132"
 ---
 # <a name="feraiseexcept"></a>feraiseexcept
 
-Vyvolá zadané výjimky s plovoucí desetinnou čárkou.
+Vyvolává zadané výjimky s plovoucí desetinnou čárkou.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -43,38 +44,38 @@ int feraiseexcept(
 ### <a name="parameters"></a>Parametry
 
 *s výjimkou*<br/>
-Výjimky plovoucí desetinné čárky pro vyvolání.
+Výjimky s plovoucí desetinnou čárkou k vyvolání.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Pokud všechny zadané výjimky jsou vyvolány úspěšně, vrátí hodnotu 0.
+Pokud jsou všechny zadané výjimky vyvolány úspěšně, vrátí hodnotu 0.
 
 ## <a name="remarks"></a>Poznámky
 
-**Feraiseexcept** funkce se pokusí vyvolat výjimky plovoucí desetinné čárky určené *, s výjimkou*.   **Feraiseexcept** funkce podporuje těchto maker výjimek definovaných v \<fenv.h >:
+Funkce **feraiseexcept** se pokusí vyvolat výjimky s plovoucí desetinnou čárkou, které jsou určené *výjimkou*.   Funkce **feraiseexcept** podporuje tato makra výjimek definovaná v \<fenv. h >:
 
-|Výjimka – makro|Popis|
+|Makro výjimky|Popis|
 |---------------------|-----------------|
-|FE_DIVBYZERO|V dříve s plovoucí desetinnou čárkou operace; došlo k chybě singularity nebo pole byl vytvořen hodnotu nekonečno.|
-|FE_INEXACT|Funkce musela být zaokrouhlit uložený výsledek dříve operace s plovoucí desetinnou čárkou.|
-|FE_INVALID|V rámci starší operace s plovoucí desetinnou čárkou došlo k chybě domény.|
-|FE_OVERFLOW|Došlo k chybě rozsah; předchozí výsledek operace s plovoucí desetinnou čárkou byl příliš velký a nelze je reprezentovat.|
-|FE_UNDERFLOW|Předchozí výsledek operace s plovoucí desetinnou čárkou byl příliš malá, aby se dala vyjádřit v úplnou přesností; byl vytvořen nenormální hodnota.|
-|FE_ALLEXCEPT|Bitový operátor OR všech nepodporuje výjimky s plovoucí desetinnou čárkou.|
+|FE_DIVBYZERO|V dřívější operaci s plovoucí desetinnou čárkou došlo k chybě v záčísle nebo objektu. byla vytvořena hodnota nekonečno.|
+|FE_INEXACT|Funkce byla nucena zaokrouhlit uložený výsledek předchozí operace s plovoucí desetinnou čárkou.|
+|FE_INVALID|V dřívější operaci s plovoucí desetinnou čárkou došlo k chybě domény.|
+|FE_OVERFLOW|Došlo k chybě rozsahu; předchozí výsledek operace s plovoucí desetinnou čárkou byl pro reprezentaci příliš velký.|
+|FE_UNDERFLOW|Předchozí výsledek operace s plovoucí desetinnou čárkou byl příliš malý, aby byl reprezentován s plnou přesností. byla vytvořena deběžná hodnota.|
+|FE_ALLEXCEPT|Bitové nebo všechny podporované výjimky s plovoucí desetinnou čárkou.|
 
-*, S výjimkou* argument může být nula, jeden hodnoty makra výjimek nebo bitový nebo dvě nebo více z maker výjimek podporované. Je-li zadané výjimky maker FE_OVERFLOW nebo FE_UNDERFLOW, může být FE_INEXACT výjimka vyvolána jako vedlejší efekt.
+Argument *excepts* může být nula, jedna z hodnot makra výjimky nebo bitová nebo druhá z podporovaných maker výjimek. Pokud je jedno ze zadaných maker výjimek FE_OVERFLOW nebo FE_UNDERFLOW, může být výjimka FE_INEXACT vyvolána jako vedlejší efekt.
 
-Pokud chcete používat tuto funkci, musíte vypnout s plovoucí desetinnou čárkou optimalizace, které by mohla zabránit přístupu pomocí `#pragma fenv_access(on)` direktiv před voláním. Další informace najdete v tématu [fenv_access](../../preprocessor/fenv-access.md).
+Chcete-li použít tuto funkci, je nutné vypnout optimalizace plovoucí desetinné čárky, které by mohly zabránit přístupu `#pragma fenv_access(on)` pomocí direktivy před voláním. Další informace najdete v tématu [fenv_access](../../preprocessor/fenv-access.md).
 
-**Specifické pro Microsoft:** Výjimky podle *, s výjimkou* jsou vyvolány v pořadí FE_INVALID, FE_DIVBYZERO FE_OVERFLOW, FE_UNDERFLOW, FE_INEXACT. Ale FE_INEXACT mohou být vyvolány po vyvolání FE_OVERFLOW nebo FE_UNDERFLOW i v případě, že není zadán v *, s výjimkou*. **Specifické pro end Microsoft**
+**Specifické pro společnost Microsoft:** Výjimky určené v *s výjimkou* jsou vyvolány v pořadí FE_INVALID, FE_DIVBYZERO, FE_OVERFLOW, FE_UNDERFLOW, FE_INEXACT. Nicméně FE_INEXACT lze vyvolat, když je vyvolána FE_OVERFLOW nebo FE_UNDERFLOW, i když není zadáno v *s výjimkou*. **Specifické pro konec Microsoftu**
 
 ## <a name="requirements"></a>Požadavky
 
-|Funkce|Záhlaví C|Hlaviček jazyka C++|
+|Funkce|Hlavička jazyka C|C++hlaviček|
 |--------------|--------------|------------------|
-|*feraiseexcept*|\<fenv.h>|\<cfenv>|
+|*feraiseexcept*|\<fenv. h >|\<cfenv>|
 
-Další informace o kompatibilitě, naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Viz také:
 

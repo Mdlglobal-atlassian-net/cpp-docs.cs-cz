@@ -1,14 +1,14 @@
 ---
 title: erf, erff, erfl, erfc, erfcf, erfcl
 ms.date: 01/31/2019
-apiname:
+api_name:
 - erff
 - erfl
 - erf
 - erfc
 - erfcf
 - erfcl
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -20,7 +20,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - erfl
 - erf
@@ -36,12 +39,12 @@ helpviewer_keywords:
 - erfcf function
 - erfc function
 ms.assetid: 144d90d3-e437-41c2-a659-cd57596023b5
-ms.openlocfilehash: 4270d8366686ea282a4dd37741d9f8e37991b88f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: df724ed056c02d79b5b51f97ae4aaf8ae267fde5
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62289202"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70937622"
 ---
 # <a name="erf-erff-erfl-erfc-erfcf-erfcl"></a>erf, erff, erfl, erfc, erfcf, erfcl
 
@@ -89,25 +92,25 @@ Hodnota s plovoucí desetinnou čárkou.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-**Erf** funkce vrátí Gauss chybovou funkci *x*. **Erfc** vrátí funkce Gauss doplňkovou chybovou funkci *x*.
+Funkce **ERF** vrátí funkci Gauss Error *x*. Funkce **ERFC –** vrátí doplňkovou funkci Gauss Error *x*.
 
 ## <a name="remarks"></a>Poznámky
 
-**Erf** funkce vypočítá chybovou funkci Gauss z *x*, který je definován jako:
+Funkce **ERF** vypočítá funkci Gauss Error *x*, která je definována jako:
 
-![Chyba funkce x](media/crt_erf_formula.PNG "chybovou funkci x")
+![Funkce Error x](media/crt_erf_formula.PNG "Funkce Error x")
 
-Doplňková chybová funkce Gauss je definována jako 1 – erf(x). **Erf** vrátí funkce hodnotu v rozsahu-1.0 1.0. Není vrácena žádná chyba. **Erfc** vrátí funkce hodnotu v rozsahu 0 až 2. Pokud *x* je příliš velká pro **erfc**, **errno** proměnná je nastavená na **ERANGE**.
+Doplňková chybová funkce Gauss je definována jako 1 – ERF (x). Funkce **ERF** vrací hodnotu v rozsahu-1,0 až 1,0. Nevrátila se žádná chybová zpráva. Funkce **ERFC –** vrací hodnotu v rozsahu 0 až 2. Pokud je *x* pro **ERFC –** moc velké, proměnná **errno** je nastavená na **ERANGE**.
 
-Protože jazyk C++ umožňuje přetížení, můžete volat přetížení **erf** a **erfc** , která používají a vrací **float** a **dlouhé** **double** typy. V programu jazyka C **erf** a **erfc** vždy převezme a vrátí **double**.
+Vzhledem C++ k tomu, že umožňuje přetížení, můžete volat přetížení funkce **ERF** a **ERFC –** , které přebírají a vracejí typ **float** a **Long** **Double** . V programu v jazyce C, funkce **ERF** a **ERFC –** vždy převezme a vrátí hodnotu **Double**.
 
 ## <a name="requirements"></a>Požadavky
 
 |Funkce|Požadovaný hlavičkový soubor|
 |--------------|---------------------|
-|**erf**, **erff**, **erfl**, **erfc**, **erfcf**, **erfcl**|\<math.h>|
+|**ERF**, **erff –** , **erfl**, **ERFC –** , **erfcf –** , **erfcl**|\<Math. h >|
 
-Další informace o kompatibilitě, naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Viz také:
 

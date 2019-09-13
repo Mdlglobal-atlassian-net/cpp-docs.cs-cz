@@ -1,9 +1,9 @@
 ---
 title: fetestexcept
 ms.date: 04/05/2018
-apiname:
+api_name:
 - fetestexcept
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,23 +15,26 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-runtime-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - fetestexcept
 - fenv/fetestexcept
 helpviewer_keywords:
 - fetestexept function
 ms.assetid: ca4dc43f-5573-440d-bc19-ead7571b13dc
-ms.openlocfilehash: ed75ab0ff13029f6ec10c1aafbcb7f7b23b46fd6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 61a68b4569d52b550da3fad12c077b82bb067fa9
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62334162"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70941011"
 ---
 # <a name="fetestexcept"></a>fetestexcept
 
-Určuje, které příznaky stavu zadané výjimky s plovoucí desetinnou čárkou jsou aktuálně nastaveny.
+Určuje, které ze zadaných příznaků stavu výjimky s plovoucí desetinnou čárkou jsou aktuálně nastaveny.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -44,36 +47,36 @@ int fetestexcept(
 ### <a name="parameters"></a>Parametry
 
 *s výjimkou*<br/>
-Bitový operátor OR příznaků s plovoucí desetinnou čárkou stav testování.
+Bitové příznaky stavu s plovoucí desetinnou čárkou pro testování.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-V případě úspěchu vrátí bitová maska obsahující bitový operátor OR maker výjimek s plovoucí desetinnou čárkou, které odpovídají příznaky výjimky stav aktuálně nastavit. Vrátí hodnotu 0, pokud žádný z výjimky jsou nastavené.
+Při úspěchu vrátí bitovou masku obsahující bitovou nebo logickou makra výjimky s plovoucí desetinnou čárkou, která odpovídá aktuálně nastaveným příznakům stavu výjimky. Vrátí hodnotu 0, pokud není nastavena žádná výjimka.
 
 ## <a name="remarks"></a>Poznámky
 
-Můžete určit, výjimek, které byly vyvolány pomocí plovoucí pomocí funkce fetestexcept bodu operace. Použití *, s výjimkou* parametr k určení stavu příznacích výjimek k testování. **Fetestexcept** funkce používá těchto maker výjimek definovaných v \<fenv.h > v *, s výjimkou* a návratovou hodnotu:
+Použijte funkci fetestexcept k určení, které výjimky byly vyvolány operací s plovoucí desetinnou čárkou. Použijte parametr *s výjimkou* k určení, které příznaky stavu výjimek mají být testovány. Funkce **fetestexcept** používá tato makra výjimek definovaná v \<fenv. h > v části *s výjimkou* a návratovou hodnotou:
 
-|Výjimka – makro|Popis|
+|Makro výjimky|Popis|
 |---------------------|-----------------|
-|FE_DIVBYZERO|V dříve s plovoucí desetinnou čárkou operace; došlo k chybě singularity nebo pole byl vytvořen hodnotu nekonečno.|
-|FE_INEXACT|Funkce musela být zaokrouhlit uložený výsledek dříve operace s plovoucí desetinnou čárkou.|
-|FE_INVALID|V rámci starší operace s plovoucí desetinnou čárkou došlo k chybě domény.|
-|FE_OVERFLOW|Došlo k chybě rozsah; předchozí výsledek operace s plovoucí desetinnou čárkou byl příliš velký a nelze je reprezentovat.|
-|FE_UNDERFLOW|Předchozí výsledek operace s plovoucí desetinnou čárkou byl příliš malá, aby se dala vyjádřit v úplnou přesností; byl vytvořen nenormální hodnota.|
-|FE_ALLEXCEPT|Bitový operátor OR všech nepodporuje výjimky s plovoucí desetinnou čárkou.|
+|FE_DIVBYZERO|V dřívější operaci s plovoucí desetinnou čárkou došlo k chybě v záčísle nebo objektu. byla vytvořena hodnota nekonečno.|
+|FE_INEXACT|Funkce byla nucena zaokrouhlit uložený výsledek předchozí operace s plovoucí desetinnou čárkou.|
+|FE_INVALID|V dřívější operaci s plovoucí desetinnou čárkou došlo k chybě domény.|
+|FE_OVERFLOW|Došlo k chybě rozsahu; předchozí výsledek operace s plovoucí desetinnou čárkou byl pro reprezentaci příliš velký.|
+|FE_UNDERFLOW|Předchozí výsledek operace s plovoucí desetinnou čárkou byl příliš malý, aby byl reprezentován s plnou přesností. byla vytvořena deběžná hodnota.|
+|FE_ALLEXCEPT|Bitové nebo všechny podporované výjimky s plovoucí desetinnou čárkou.|
 
-Zadaný *, s výjimkou* argument může být 0, jeden makra podporované výjimek s plovoucí desetinnou čárkou nebo bitový nebo dvě nebo více z makra. Vliv ostatních *, s výjimkou* hodnota argumentu není definován.
+Zadaný *s výjimkou* argumentu může mít hodnotu 0, jednu z podporovaných maker výjimek s plovoucí desetinnou čárkou nebo bitovou nebo dvě či více maker. Účinek jakékoli jiné *s výjimkou* hodnoty argumentu není definován.
 
-Pokud chcete používat tuto funkci, musíte vypnout s plovoucí desetinnou čárkou optimalizace, které by mohla zabránit přístupu pomocí `#pragma fenv_access(on)` direktiv před voláním. Další informace najdete v tématu [fenv_access](../../preprocessor/fenv-access.md).
+Chcete-li použít tuto funkci, je nutné vypnout optimalizace plovoucí desetinné čárky, které by mohly zabránit přístupu `#pragma fenv_access(on)` pomocí direktivy před voláním. Další informace najdete v tématu [fenv_access](../../preprocessor/fenv-access.md).
 
 ## <a name="requirements"></a>Požadavky
 
-|Funkce|Záhlaví C|Hlaviček jazyka C++|
+|Funkce|Hlavička jazyka C|C++hlaviček|
 |--------------|--------------|------------------|
-|**fetestexcept**|\<fenv.h>|\<cfenv>|
+|**fetestexcept**|\<fenv. h >|\<cfenv>|
 
-Další informace o kompatibilitě, naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Viz také:
 

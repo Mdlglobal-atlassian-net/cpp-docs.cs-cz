@@ -1,9 +1,9 @@
 ---
 title: _fcvt
 ms.date: 04/05/2018
-apiname:
+api_name:
 - _fcvt
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-convert-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _fcvt
 helpviewer_keywords:
@@ -25,16 +28,16 @@ helpviewer_keywords:
 - fcvt function
 - floating-point functions
 ms.assetid: 74584c88-f0dd-4907-8fca-52da5df583f5
-ms.openlocfilehash: ae9323e3bb629fd61b35a8c844b00bfcc73235bb
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a90f8510e734c8459867d323eccccc75e94983d1
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62334837"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70941317"
 ---
-# <a name="fcvt"></a>_fcvt
+# <a name="_fcvt"></a>_fcvt
 
-Převede číslo s plovoucí desetinnou čárkou na řetězec. Bezpečnější verze této funkce je k dispozici. Zobrazit [_fcvt_s –](fcvt-s.md).
+Převede číslo s plovoucí desetinnou čárkou na řetězec. K dispozici je bezpečnější verze této funkce; viz [_fcvt_s](fcvt-s.md).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -50,34 +53,34 @@ char *_fcvt(
 ### <a name="parameters"></a>Parametry
 
 *value*<br/>
-Číslo, které má být převeden.
+Číslo, které má být převedeno.
 
-*Počet*<br/>
+*výpočtu*<br/>
 Počet číslic za desetinnou čárkou.
 
-*DEC*<br/>
-Ukazatel pozice uložené desetinné čárky.
+*18.12*<br/>
+Ukazatel na uloženou pozici desetinných míst.
 
 *sign*<br/>
-Ukazatel na ukazatel uložené přihlašování.
+Ukazatel na uložený indikátor znaménka.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-**_fcvt –** vrací ukazatel na řetězec číslic, **NULL** při chybě.
+**_fcvt** vrací ukazatel na řetězec číslic a **hodnotu null** při chybě.
 
 ## <a name="remarks"></a>Poznámky
 
-**_Fcvt –** funkce převede číslo s plovoucí desetinnou čárkou na řetězec znaků zakončené znakem null. *Hodnotu* parametru je číslo s plovoucí desetinnou čárkou má být převeden. **_fcvt –** ukládá na číslice *hodnota* jako řetězec a připojí znak null ('\0'). *Počet* parametr určuje počet číslic, které mají být uloženy za desetinnou čárkou. Jsou nadbytečné číslic zaokrouhlena *počet* umístí. Pokud jsou kratší než *počet* číslicemi přesnosti, řetězec je doplněny nulami.
+Funkce **_fcvt** převede číslo s plovoucí desetinnou čárkou na řetězec znaků zakončený hodnotou null. Parametr *Value* je číslo s plovoucí desetinnou čárkou, které má být převedeno. **_fcvt** ukládá číslice *hodnoty* jako řetězec a připojí znak null (' \ 0 '). Parametr *Count* určuje počet číslic, které mají být uloženy za desetinnou čárkou. Nadbytečné číslice se zaokrouhlují na *počty* míst. Pokud je k dispozici *méně než číslice* typu přesnosti, je řetězec doplněn nulami.
 
-Celkový počet číslic vrácený **_fcvt –** nesmí překročit **_CVTBUFSIZE**.
+Celkový počet číslic vrácených funkcí **_fcvt** nebude přesáhnout **_CVTBUFSIZE**.
 
-Pouze číslice jsou uloženy v řetězci. Pozice desetinné čárky a znaménko *hodnotu* můžete získat *dec* a přihlašování po volání. *Dec* parametr odkazuje na celočíselnou hodnotu; poskytuje tuto hodnotu celého čísla pozici od desetinné čárky s ohledem na začátku řetězce. Nula nebo záporné celé číslo označuje, zda desetinné čárky je nalevo od první číslice. Parametr *přihlašování* odkazuje na celé číslo označující znaménko *hodnota*. Celé číslo je nastavena na 0, pokud *hodnotu* kladné a nastaven na nenulovou hodnotu, počet Pokud *hodnotu* je záporný.
+V řetězci jsou uloženy pouze číslice. Pozice desetinné čárky a znaménko *hodnoty* lze získat z *dec* a podepsat po volání. Parametr *dec* odkazuje na celočíselnou hodnotu; Tato celočíselná hodnota udává pozici desetinné čárky vůči začátku řetězce. Nula nebo záporná celočíselná hodnota značí, že desetinná čárka leží vlevo od první číslice. *Symbol* parametru odkazuje na celé číslo označující znaménko *hodnoty*. Celé číslo je nastavené na 0, pokud je *hodnota* kladná a je nastavená na nenulové číslo, pokud je *hodnota* záporná.
 
-Rozdíl mezi **_ecvt –** a **_fcvt –** probíhá vyhodnocení *počet* parametru. **_ecvt –** interpretuje *počet* jako celkový počet číslic ve výstupním řetězci, zatímco **_fcvt –** interpretuje *počet* jako počet číslic za desetinné čárky.
+Rozdíl mezi **_ecvt** a **_fcvt** je ve výkladu parametru *Count* . **_ecvt** interpretuje *čítač* jako celkový počet číslic ve výstupním řetězci, zatímco **_fcvt** interpretuje *počet číslic* za desetinnou čárkou.
 
-**_ecvt –** a **_fcvt –** pomocí jedné staticky přidělenou vyrovnávací paměti pro převod. Každé volání některé z těchto rutin zničí výsledků z předchozího volání.
+**_ecvt** a **_fcvt** používají pro převod jednu staticky přidělenou vyrovnávací paměť. Každé volání jedné z těchto rutin zničí výsledky předchozího volání.
 
-Tato funkce ověřuje své parametry. Pokud *dec* nebo *přihlašování* je **NULL**, nebo *počet* je 0, je vyvolána obslužná rutina neplatného parametru, jak je popsáno v [parametr Ověření](../../c-runtime-library/parameter-validation.md). Pokud smí provádění pokračovat, **errno** je nastavena na **EINVAL** a **NULL** je vrácena.
+Tato funkce ověří své parametry. Pokud má parametr *dec* nebo *Sign* **hodnotu null**nebo je *počet* 0, je vyvolána obslužná rutina neplatného parametru, jak je popsáno v tématu [ověřování parametru](../../c-runtime-library/parameter-validation.md). Pokud provádění může pokračovat, **errno** je nastaven na **EINVAL** a vrátí **hodnotu null** .
 
 ## <a name="requirements"></a>Požadavky
 
@@ -85,7 +88,7 @@ Tato funkce ověřuje své parametry. Pokud *dec* nebo *přihlašování* je **N
 |--------------|---------------------|
 |**_fcvt**|\<stdlib.h>|
 
-Další informace o kompatibilitě naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Příklad
 

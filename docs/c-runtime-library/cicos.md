@@ -1,9 +1,9 @@
 ---
 title: _CIcos
 ms.date: 04/11/2018
-apiname:
+api_name:
 - _CIcos
-apilocation:
+api_location:
 - msvcr90.dll
 - msvcrt.dll
 - msvcr120.dll
@@ -12,7 +12,10 @@ apilocation:
 - msvcr110_clr0400.dll
 - msvcr110.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - CIcos
 - _CIcos
@@ -20,16 +23,16 @@ helpviewer_keywords:
 - _CIcos intrinsic
 - CIcos intrinsic
 ms.assetid: 6fc203fb-66f3-4ead-9784-f85833c26f1b
-ms.openlocfilehash: fef9ef9e197dcd6e8a1880c3acdfa2755ccf1ae1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5a57e948a73b8c4243ebe5a8a12f62cc55a40f3b
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62290206"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70940540"
 ---
-# <a name="cicos"></a>_CIcos
+# <a name="_cicos"></a>_CIcos
 
-Vypočítá kosinus nejvyšší hodnotu v zásobníku s plovoucí desetinnou čárkou.
+Vypočítá kosinus horní hodnoty v zásobníku s plovoucí desetinnou čárkou.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -39,9 +42,9 @@ void __cdecl _CIcos();
 
 ## <a name="remarks"></a>Poznámky
 
-Tato verze [cos](../c-runtime-library/reference/cos-cosf-cosl.md) funkce má specializované konvence volání, které kompilátor rozpozná. Urychluje provádění, protože kopie zabraňuje generovaných a pomáhá při přidělení registru.
+Tato verze funkce [cos](../c-runtime-library/reference/cos-cosf-cosl.md) má specializovanou konvenci volání, kterou kompilátor rozumí. Zrychluje spouštění, protože brání vygenerování kopií a pomáhá s přidělením registru.
 
-Výsledná hodnota je vloženy do horní části zásobníku s plovoucí desetinnou čárkou.
+Výsledná hodnota je vložena do horní části zásobníku s plovoucí desetinnou čárkou.
 
 ## <a name="requirements"></a>Požadavky
 

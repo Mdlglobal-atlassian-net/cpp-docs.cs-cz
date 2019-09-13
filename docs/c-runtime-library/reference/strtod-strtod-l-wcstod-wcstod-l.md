@@ -1,12 +1,12 @@
 ---
 title: strtod, _strtod_l, wcstod, _wcstod_l
 ms.date: 10/20/2017
-apiname:
+api_name:
 - wcstod
 - _wcstod_l
 - _strtod_l
 - strtod
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -18,7 +18,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-convert-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _tcstod
 - strtod
@@ -42,16 +45,16 @@ helpviewer_keywords:
 - _strtod_l function
 - string conversion, to floating point values
 ms.assetid: 0444f74a-ba2a-4973-b7f0-1d77ba88c6ed
-ms.openlocfilehash: c8c2b3b491e2e7265829fa88580529dc757ace8c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5372525eb99dc9d39e31b10def0377c9aad5296c
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62376468"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70946495"
 ---
-# <a name="strtod-strtodl-wcstod-wcstodl"></a>strtod, _strtod_l, wcstod, _wcstod_l
+# <a name="strtod-_strtod_l-wcstod-_wcstod_l"></a>strtod, _strtod_l, wcstod, _wcstod_l
 
-Převod řetězců na hodnoty dvojitou přesností.
+Převede řetězce na hodnotu s dvojitou přesností.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -79,51 +82,51 @@ double wcstod_l(
 ### <a name="parameters"></a>Parametry
 
 *strSource*<br/>
-Řetězec zakončený hodnotou Null pro převod.
+Řetězec zakončený hodnotou null pro převod.
 
 *endptr*<br/>
 Ukazatel na znak, který zastaví skenování.
 
-*Národní prostředí*<br/>
+*jazyka*<br/>
 Národní prostředí, které se má použít
 
 ## <a name="return-value"></a>Návratová hodnota
 
-**strtod** vrátí hodnotu čísla s plovoucí desetinnou čárkou, s výjimkou případů, kdy by reprezentace způsobila přetečení, ve kterém takovém případě funkce vrátí +/-**HUGE_VAL**. Znaménko **HUGE_VAL** odpovídá znaménku hodnoty, kterou nejde reprezentovat. **strtod** vrátí hodnotu 0, pokud převod lze provést nebo dochází k podtečení.
+**strtod** vrací hodnotu čísla s plovoucí desetinnou čárkou, s výjimkou případů, kdy by reprezentace způsobila přetečení. v takovém případě funkce vrací hodnotu +/-**HUGE_VAL**. Znaménko **HUGE_VAL** odpovídá znaménku hodnoty, kterou nelze reprezentovat. **strtod** vrátí hodnotu 0, pokud převod nelze provést, nebo dojde k podtečení.
 
-**wcstod –** vrátí hodnoty analogicky k **strtod**. U obou funkcí **errno** je nastavena na **ERANGE** Pokud dojde k přetečení nebo podtečení a je vyvolána obslužná rutina neplatného parametru, jak je popsáno v [Parameter Validation](../../c-runtime-library/parameter-validation.md). Zobrazit [_doserrno, errno, _sys_errlist a _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) Další informace o tomto a dalších návratových kódech.
+**wcstod** vrací hodnoty obdobně **strtod**. Pro obě funkce je **errno** nastaveno na **ERANGE** , pokud dojde k přetečení nebo podtečení a je vyvolána obslužná rutina neplatného parametru, jak je popsáno v tématu [ověřování parametru](../../c-runtime-library/parameter-validation.md). Další informace o tomto a dalších návratových kódech naleznete v tématu [_doserrno, errno, _sys_errlist a _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) .
 
 ## <a name="remarks"></a>Poznámky
 
-Každá funkce převede vstupní řetězec *strSource* k **double**. **Strtod** funkce převede *strSource* na hodnotu s dvojitou přesností. **strtod** zastaví čtení řetězce *strSource* u prvního znaku, který nebude rozpoznán jako část čísla. Může to být ukončující znak null. **wcstod –** je verze širokého znaku **strtod**; její *strSource* argument je širokoznaký řetězec. Tyto funkce chovají identicky jinak.
+Každá funkce převede vstupní řetězec *strSource* na **typ Double**. Funkce **strtod** převede *strSource* na hodnotu s dvojitou přesností. **strtod** zastaví čtení řetězce *strSource* u prvního znaku, který nelze rozpoznat jako součást čísla. Může to být ukončující znak null. **wcstod** je **strtod**verze s velkým znakem; jeho argument *strSource* je řetězec s velkým znakem. Tyto funkce se chovají identicky jinak.
 
 ### <a name="generic-text-routine-mappings"></a>Mapování rutin obecného textu
 
-|Rutina TCHAR.H|_UNICODE a _MBCS nejsou definovány|_MBCS definováno|_UNICODE definováno|
+|Rutina TCHAR.H|_UNICODE & _MBCS nejsou definovány.|_MBCS definováno|_UNICODE definováno|
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_tcstod**|**strtod**|**strtod**|**wcstod**|
 |**_tcstod_l**|**_strtod_l**|**_strtod_l**|**_wcstod_l**|
 
-**LC_NUMERIC** kategorie aktuálního národního prostředí určuje rozpoznávání znaku radix bodu v *strSource*. Další informace najdete v tématu [setlocale](setlocale-wsetlocale.md). Funkce bez **_l** přípona používají aktuální národní prostředí; **_strtod_l –** je stejný jako **_strtod_l –** s tím rozdílem, že používají *národní prostředí* místo něho předán. Další informace najdete v tématu [národní prostředí](../../c-runtime-library/locale.md).
+Nastavení kategorie **LC_NUMERIC** aktuálního národního prostředí Určuje rozpoznávání znaku bodu základu v *strSource*. Další informace naleznete v tématu [setlocale](setlocale-wsetlocale.md). Funkce bez přípony **_l** používají aktuální národní prostředí; **_strtod_l** je identická s **_strtod_l** s tím rozdílem, že místo toho používají předané *národní prostředí* . Další informace najdete v tématu [národní prostředí](../../c-runtime-library/locale.md).
 
-Pokud *endptr* není **NULL**, ukazatel na znak, který zastavil skenování, je uložen v umístění, na které odkazuje *endptr*. Pokud žádné převody nemohou být provedeny (nebyly nalezeny žádné platné číslice nebo byla zadána neplatná základna), hodnota *strSource* je uložen v umístění, na které odkazuje *endptr*.
+Pokud *endptr* není **null**, ukazatel na znak, který zastavil skenování, je uložen v umístění, na které odkazuje *endptr*. Pokud převod nelze provést (nebyly nalezeny žádné platné číslice nebo byla zadána neplatná základna), hodnota *strSource* je uložena v umístění, na které odkazuje *endptr*.
 
-**strtod** očekává, že *strSource* tak, aby odkazoval na řetězec z jedné z následujících forem:
+**strtod** očekává, že *strSource* odkazuje na řetězec jedné z následujících forem:
 
 [*prázdné*] [*přihlašovací*] {*číslic* [*základ –* *číslic*] &#124;  *základ –* *číslic*} [{**e** &#124; **E**} [*přihlašovací*] *číslic*] [*prázdné*] [*přihlašovací*] {**0 x** &#124; **0 X**} {*hexdigits* [ *základ –* *hexdigits*] &#124; *základ –* *hexdigits*} [{**p** &#124; **P**} [*přihlašovací*] *hexdigits*] [*prázdné*] [*přihlašovací*] { **INF** &#124; **INFINITY**} [*prázdné*] [*přihlašovací*]  **NAN** [*pořadí*]
 
-Volitelný úvodní *prázdné znaky* může skládat ze znaků mezera a tabulátor, které jsou ignorovány; *přihlašování* je buď plus (+) nebo minus (-); *číslic* jsou jeden nebo více desítkových číslic; *hexdigits* jsou jednoho nebo několika šestnáctkovými číslicemi; *základ číselné soustavy* je číselnou soustavou znaků bodu, buď tečku (.) v výchozí národní prostředí "C", nebo specifické pro národní prostředí hodnotu, pokud aktuální národní prostředí je jiné, nebo když *národní prostředí* určena; *pořadí* je posloupnost alfanumerické znaky nebo znaky podtržení. Ve formulářích decimal a šestnáctkové číslo Pokud žádné číslice se před číselnou soustavou znaků bodu, alespoň se musí nacházet za číselnou soustavou znaků bodu. Ve formuláři desítkové může následovat desítkových číslic exponentu, které se skládají z úvodního písmene (**e** nebo **E**) a volitelného znaménka. V šestnáctkovém formátu, může být následován šestnáctkových číslic exponentu, které se skládají z úvodního písmene (**p** nebo **P**) a volitelně šestnáctkové celé číslo se znaménkem, který představuje exponent jako mocninou čísla 2. V obou tvarech Pokud se nezobrazí část ani Číselná soustava znaků postupuje bod, bod Číselná soustava znaků se předpokládá, že podle poslední číslice v řetězci. V obou se ignoruje velikost písmen **INF** a **NAN** formuláře. První znak, který není vhodná pro jednu z těchto forem zastaví skenování.
+Volitelný úvodní *mezera* se může skládat z mezer a znaků tabulátoru, které jsou ignorovány; *znaménko* je buď znaménko plus (+) nebo minus (-); *číslice* jsou jednu nebo více desítkových číslic; *hexdigits* jsou jedna nebo více hexadecimálních číslic; *základ* je znak bodu základu, buď tečka (.) ve výchozím národním prostředí "C", nebo hodnota specifická pro národní prostředí, pokud je aktuální národní prostředí jiné nebo pokud je zadané *národní prostředí* . *sekvence* je posloupnost alfanumerických znaků nebo znaků podtržítka. V desítkových i hexadecimálních číslech, pokud se neobjeví žádné číslice před znakem číselného bodu, musí být alespoň jedna uvedena po znaku bodu základu. V desítkovém formátu může za desetinnou čárkou následovat exponent, který se skládá z úvodního písmene (**e** nebo **e**) a volitelně podepsaného celého čísla. V hexadecimálním formátu může být šestnáctkové číslo následováno exponentem, který se skládá z úvodního písmene (**p** nebo **p**) a volitelně podepsaného šestnáctkového čísla, které představuje exponent jako mocninu 2. V obou formách, pokud se nezobrazí část exponentu ani znak číselného bodu, předpokládá se, že se za poslední číslici v řetězci má použít znak bodu základu. Případ se ignoruje ve formulářích **INF** i **NaN** . První znak, který není vhodný pro jednu z těchto forem, zastaví kontrolu.
 
-UCRT verze těchto funkcí nepodporuje převod až po Fortran – vizuální styl (**d** nebo **D**) exponentu písmena. Toto nestandardní rozšíření je podporován v předchozích verzích CRT a může být k zásadní změně vašeho kódu. Verze UCRT podporují hexadecimálními řetězci a dopad na dobu odezvy INF a NAN hodnoty, které nejsou podporované v dřívějších verzích. Také to může způsobit změny způsobující chyby ve vašem kódu. Například by řetězců "0x1a" interpretovat **strtod** za 0,0 v předchozích verzích, ale jako 26.0 ve verzi UCRT.
+Verze UCRT těchto funkcí nepodporují konverzi exponentů pro styl FORTRAN (**d** nebo **d**). Toto nestandardní rozšíření bylo podporováno staršími verzemi CRT a může být zásadní změnou kódu. Verze UCRT podporují hexadecimální řetězce a kulaté Trip hodnot INF a NAN, které se v dřívějších verzích nepodporovaly. To může také způsobit zásadní změny v kódu. Například řetězec "0x1a" by byl interpretován **strtod** jako 0,0 v předchozích verzích, ale jako 26,0 ve verzi UCRT.
 
 ## <a name="requirements"></a>Požadavky
 
 |Rutina|Požadovaný hlavičkový soubor|
 |-------------|---------------------|
-|**strtod**, **_strtod_l**|C: &lt;stdlib.h > C++: &lt;cstdlib – > nebo &lt;stdlib.h > |
-|**wcstod**, **_wcstod_l**|C: &lt;stdlib.h > nebo &lt;wchar.h > C++: &lt;cstdlib – >, &lt;stdlib.h > nebo &lt;wchar.h > |
+|**strtod**, **_strtod_l**|C: &lt;Stdlib. h > C++: &lt;cstdlib > nebo &lt;Stdlib. h > |
+|**wcstod**, **_wcstod_l**|C: &lt;Stdlib. h > nebo &lt;WCHAR. h > C++: &lt;cstdlib >, &lt;Stdlib. h > nebo &lt;WCHAR. h > |
 
-Další informace o kompatibilitě, naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Příklad
 

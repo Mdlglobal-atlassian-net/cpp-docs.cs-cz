@@ -1,9 +1,9 @@
 ---
 title: _CrtIsMemoryBlock
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _CrtIsMemoryBlock
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -14,7 +14,10 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - CrtlsMemoryBlock
 - _CrtIsMemoryBlock
@@ -22,16 +25,16 @@ helpviewer_keywords:
 - _CrtIsMemoryBlock function
 - CrtIsMemoryBlock function
 ms.assetid: f7cbbc60-3690-4da0-a07b-68fd7f250273
-ms.openlocfilehash: c4a85ebeb45552c6f5355853de2a45766d6bc984
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f29745acd06f6f5b3fa96367444e800bdc3e8e3a
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62339894"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70938735"
 ---
-# <a name="crtismemoryblock"></a>_CrtIsMemoryBlock
+# <a name="_crtismemoryblock"></a>_CrtIsMemoryBlock
 
-Ověřuje, že je blok paměti zadaná v lokální haldy a má platný ladění haldy blok typu identifikátoru (pouze ladicí verze).
+Ověří, zda je zadaný blok paměti v místní haldě a zda má platný identifikátor typu bloku haldy ladění (pouze ladicí verze).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -48,38 +51,38 @@ int _CrtIsMemoryBlock(
 ### <a name="parameters"></a>Parametry
 
 *userData*<br/>
-Ukazatel na začátku bloku paměti k ověření.
+Ukazatel na začátek bloku paměti, který chcete ověřit.
 
-*Velikost*<br/>
+*hodnota*<br/>
 Velikost zadaného bloku (v bajtech).
 
 *requestNumber*<br/>
-Ukazatel na číslo přidělení bloku nebo **NULL**.
+Ukazatel na číslo přidělení bloku nebo **hodnotu null**.
 
-*Název souboru*<br/>
-Ukazatel na název zdrojového souboru, který požaduje bloku nebo **NULL**.
+*Bitmap*<br/>
+Ukazatel na název zdrojového souboru, který požadoval blok nebo **hodnotu null**.
 
-*linenumber*<br/>
-Ukazatel na číslo řádku ve zdrojovém souboru nebo **NULL**.
+*číslo řádku*<br/>
+Ukazatel na číslo řádku ve zdrojovém souboru nebo **hodnota null**.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-**_Crtismemoryblock –** vrátí **TRUE** pokud blok zadaný paměti se nachází v rámci lokální haldy a má platný ladění haldy blok typu identifikátor; v opačném případě vrátí funkce **FALSE**.
+**_CrtIsMemoryBlock** vrátí **hodnotu true** , pokud je zadaný blok paměti umístěný v rámci místní haldy a má platný identifikátor typu bloku haldy ladění. v opačném případě vrátí funkce **hodnotu false**.
 
 ## <a name="remarks"></a>Poznámky
 
-**_Crtismemoryblock –** funkce ověří, že zadaná paměťová bloku se nachází v rámci lokální haldy vaší aplikace a má platný blok typu identifikátoru. Tuto funkci můžete použít také k získání číslo pořadí přidělení objektu a název a řádek číslo zdrojového souboru, kde byla původně požadována přidělení bloku paměti. Předejte jinou hodnotu než**NULL** hodnoty *requestNumber*, *filename*, nebo *linenumber* způsobí, že parametry **_ Crtismemoryblock –** můžete nastavit tyto parametry pro hodnoty v záhlaví bloku paměti ladění, pokud najde blok v lokální haldy. Když [_DEBUG](../../c-runtime-library/debug.md) není definován, jsou volání **_crtismemoryblock –** odstraněna během předběžného zpracování.
+Funkce **_CrtIsMemoryBlock** ověřuje, zda je zadaný blok paměti umístěn v rámci místní haldy aplikace a zda má platný identifikátor typu bloku. Pomocí této funkce lze také získat číslo pořadí přidělení objektu a název nebo číslo zdrojového souboru, kde bylo přidělení bloků paměti původně vyžádáno. Předání hodnot, které nejsou**null** pro parametry *requestNumber*, *filename*nebo *číslo řádku* způsobí, že **_CrtIsMemoryBlock** nastaví tyto parametry na hodnoty v hlavičce ladění paměťového bloku, pokud nalezne blok v lokální halda. Když není definovaný [_DEBUG](../../c-runtime-library/debug.md) , volání **_CrtIsMemoryBlock** se během předběžného zpracování odeberou.
 
-Pokud **_crtismemoryblock –** selže, vrátí **FALSE** a výstupních parametrů, které jsou inicializovány na výchozí hodnoty: *requestNumber* a **číslo řádku**  jsou nastaveny na hodnotu 0 a *filename* je nastavena na **NULL**.
+Pokud **_CrtIsMemoryBlock** dojde k chybě, vrátí **hodnotu false** a výstupní parametry jsou inicializovány na výchozí hodnoty: *requestNumber* a **číslo řádku** jsou nastaveny na hodnotu 0 a *Parametr filename* je nastaven na **hodnotu null**.
 
-Protože tato funkce vrací **TRUE** nebo **FALSE**, mohou být předány do jednoho z [_ASSERT](assert-asserte-assert-expr-macros.md) makra vytvořit jednoduchý mechanismus zpracování ladění chyb. Následující příklad způsobí selhání kontrolního výrazu, pokud zadaná adresa není umístěn v rámci lokální haldy:
+Vzhledem k tomu, že tato funkce vrací **hodnotu true** nebo **false**, může být předána jednomu z [_ASSERT](assert-asserte-assert-expr-macros.md) maker pro vytvoření jednoduchého mechanismu pro zpracování chyb ladění. Následující příklad způsobí selhání kontrolního výrazu, pokud zadaná adresa není umístěna v místní haldě:
 
 ```C
 _ASSERTE( _CrtIsMemoryBlock( userData, size, &requestNumber,
           &filename, &linenumber ) );
 ```
 
-Další informace o tom, **_crtismemoryblock –** jde použít s další funkce ladění a makra, najdete v článku [makra pro vytváření sestav](/visualstudio/debugger/macros-for-reporting). Informace o způsobu jsou bloky paměti přidělené, inicializovat a správy v ladicí verzi základní haldy viz [podrobnosti haldy ladění CRT](/visualstudio/debugger/crt-debug-heap-details).
+Další informace o tom, jak lze **_CrtIsMemoryBlock** použít s dalšími funkcemi ladění a makry, naleznete v tématu [makra pro vytváření sestav](/visualstudio/debugger/macros-for-reporting). Informace o způsobu přidělování, inicializace a správy paměťových bloků v ladicí verzi základní haldy najdete v [podrobnostech o haldě ladění CRT](/visualstudio/debugger/crt-debug-heap-details).
 
 ## <a name="requirements"></a>Požadavky
 
@@ -87,15 +90,15 @@ Další informace o tom, **_crtismemoryblock –** jde použít s další funkce
 |-------------|---------------------|
 |**_CrtIsMemoryBlock**|\<crtdbg.h>|
 
-Další informace o kompatibilitě naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
 
 ## <a name="libraries"></a>Knihovny
 
-Ladicí verze [běhových knihoven C](../../c-runtime-library/crt-library-features.md) pouze.
+Ladit verze pouze [knihoven run-time jazyka C](../../c-runtime-library/crt-library-features.md) .
 
 ## <a name="example"></a>Příklad
 
-Podívejte se na příklad pro [_crtisvalidheappointer –](crtisvalidheappointer.md) tématu.
+Podívejte se na příklad tématu [_CrtIsValidHeapPointer](crtisvalidheappointer.md) .
 
 ## <a name="see-also"></a>Viz také:
 

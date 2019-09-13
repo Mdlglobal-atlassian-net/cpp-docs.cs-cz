@@ -1,10 +1,10 @@
 ---
 title: _ungetc_nolock, _ungetwc_nolock
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _ungetwc_nolock
 - _ungetc_nolock
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _ungettc_nolock
 - ungetwc_nolock
@@ -32,14 +35,14 @@ helpviewer_keywords:
 - ungettc_nolock function
 - ungetc_nolock function
 ms.assetid: aa02d5c2-1be1-46d2-a8c4-b61269e9d465
-ms.openlocfilehash: 55888f122af0848c92204168a23cca93e2517904
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4228a573a0277c9bacc8beea81cbff6a70e3fe83
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62268881"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70945917"
 ---
-# <a name="ungetcnolock-ungetwcnolock"></a>_ungetc_nolock, _ungetwc_nolock
+# <a name="_ungetc_nolock-_ungetwc_nolock"></a>_ungetc_nolock, _ungetwc_nolock
 
 Posune znak zpět do datového proudu.
 
@@ -59,24 +62,24 @@ wint_t _ungetwc_nolock(
 ### <a name="parameters"></a>Parametry
 
 *c*<br/>
-Znak k posunutí.
+Znak, který má být vložen.
 
 *stream*<br/>
-Ukazatel na **souboru** struktury.
+Ukazatel na strukturu **souborů** .
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Pokud úspěšná, každá z těchto funkcí vrátí argument znaku *c*. Pokud *c* nemůže být posunut zpět nebo pokud byl načten žádný znak, vstupního datového proudu je beze změny a **_ungetc_nolock –** vrátí **EOF**; **_ungetwc_nolock –** vrátí **WEOF**. Pokud *stream* je **NULL**, **EOF** nebo **WEOF** je vrácena a **errno** je nastavena na  **EINVAL**.
+V případě úspěchu každá z těchto funkcí vrátí argument znaků *c*. Pokud *c* nelze vrátit zpět nebo pokud nebyl načten žádný znak, vstupní datový proud se nezměnil a **_ungetc_nolock** vrátí **EOF**. **_ungetwc_nolock** vrátí **WEOF**. Pokud je *datový proud* **null**, vrátí se znak **EOF** nebo **WEOF** a **errno** je nastaven na **EINVAL**.
 
 Informace o těchto a dalších chybových kódech naleznete v tématu [_doserrno, errno, _sys_errlist a _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Poznámky
 
-Tyto funkce jsou nezamykací verze **ungetc –** a **ungetwc –**. Verze s **_nolock** přípona jsou stejné s tím rozdílem, že nejsou chráněny před rušením jinými vlákny. Může být rychlejší, protože nejsou spojené režii uzamykáním ostatních vláken. Tyto funkce používejte pouze v kontextech bezpečných na vlákna, jako je například aplikace s jedním vláknem nebo pokud volající obor již zpracovává izolaci vláken.
+Tyto funkce jsou neuzamykání verzí **ungetc –** a **ungetwc**. Verze s příponou **_nolock** jsou stejné s tím rozdílem, že nejsou chráněny před rušením jinými vlákny. Můžou být rychlejší, protože neúčtují režii na uzamykání jiných vláken. Tyto funkce použijte pouze v kontextech bezpečných pro přístup z více vláken, jako jsou například aplikace s jedním vláknem nebo kde volající obor již zpracovává izolaci vlákna.
 
 ### <a name="generic-text-routine-mappings"></a>Mapování rutin obecného textu
 
-|Rutina TCHAR.H|_UNICODE a _MBCS nejsou definovány|_MBCS definováno|_UNICODE definováno|
+|Rutina TCHAR.H|_UNICODE & _MBCS nejsou definovány.|_MBCS definováno|_UNICODE definováno|
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_ungettc_nolock**|**_ungetc_nolock**|**_ungetc_nolock**|**_ungetwc_nolock**|
 
@@ -85,12 +88,12 @@ Tyto funkce jsou nezamykací verze **ungetc –** a **ungetwc –**. Verze s **_
 |Rutina|Požadovaný hlavičkový soubor|
 |-------------|---------------------|
 |**_ungetc_nolock**|\<stdio.h>|
-|**_ungetwc_nolock**|\<stdio.h > nebo \<wchar.h >|
+|**_ungetwc_nolock**|\<stdio. h > nebo \<WCHAR. h >|
 
-Další informace o kompatibilitě, naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Viz také:
 
-[Stream vstupně-výstupních operací](../../c-runtime-library/stream-i-o.md)<br/>
+[Vstup/výstup datového proudu](../../c-runtime-library/stream-i-o.md)<br/>
 [getc, getwc](getc-getwc.md)<br/>
 [putc, putwc](putc-putwc.md)<br/>

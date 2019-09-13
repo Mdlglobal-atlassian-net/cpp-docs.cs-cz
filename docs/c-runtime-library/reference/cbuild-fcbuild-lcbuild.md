@@ -1,11 +1,11 @@
 ---
-title: _Cbuild _FCbuild, _LCbuild
+title: _Cbuild, _FCbuild, _LCbuild
 ms.date: 03/30/2018
-apiname:
+api_name:
 - _Cbuild
 - _FCbuild
 - _LCbuild
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _Cbuild
 - _FCbuild
@@ -29,16 +32,16 @@ helpviewer_keywords:
 - _Cbuild function
 - _FCbuild function
 - _LCbuild function
-ms.openlocfilehash: 5565c87a3cccd1715a1357f417238587f3fba4d5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b0ae50f40f0ca0a926e1eef586c6610a04b6ea7a
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62340463"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70943219"
 ---
-# <a name="cbuild-fcbuild-lcbuild"></a>_Cbuild _FCbuild, _LCbuild
+# <a name="_cbuild-_fcbuild-_lcbuild"></a>_Cbuild, _FCbuild, _LCbuild
 
-Sestaví komplexního čísla z reálné a imaginární části.
+Sestaví komplexní číslo z reálných a imaginárních částí.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -50,27 +53,27 @@ _Lcomplex _LCbuild( long double real, long double imaginary );
 
 ### <a name="parameters"></a>Parametry
 
-*Real*<br/>
-Skutečné součástí komplexní čísla k vytvoření.
+*nemovitostí*<br/>
+Reálná část komplexního čísla k sestavení.
 
-*imaginary*<br/>
-Imaginární části komplexního čísla k vytvoření.
+*imaginární*<br/>
+Imaginární část komplexního čísla k sestavení.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-A **_Dcomplex**, **_Fcomplex**, nebo **_Lcomplex** struktura, která představuje komplexní čísla (*skutečné*, *imaginární*  \* můžu) pro hodnoty s plovoucí desetinnou čárkou typu zadaný.
+Struktura **_Dcomplex**, **_Fcomplex**nebo **_Lcomplex** , která představuje komplexní číslo \* (*reálné*, *imaginární část* i) pro hodnoty zadaného typu s plovoucí desetinnou čárkou.
 
 ## <a name="remarks"></a>Poznámky
 
-**_Cbuild**, **_FCbuild**, a **_LCbuild** funkce zjednodušení vytváření komplexních typů. Použití [creal crealf, creall](creal-crealf-creall.md) a [cimag cimagf, cimagl](cimag-cimagf-cimagl.md) funkce k načtení reálné a imaginární části zastoupené komplexní čísla.
+Funkce **_Cbuild**, **_FCbuild**a **_LCbuild** zjednodušují vytváření komplexních typů. Pomocí funkcí [creal, crealf, creall](creal-crealf-creall.md) a [cimag, cimagf,](cimag-cimagf-cimagl.md) cimagl můžete načíst reálné a imaginární části zastoupených komplexních čísel.
 
 ## <a name="requirements"></a>Požadavky
 
-|Rutina|Záhlaví C|Hlaviček jazyka C++|
+|Rutina|Hlavička jazyka C|C++hlaviček|
 |-------------|--------------|------------------|
-|**_Cbuild**, **_FCbuild**, **_LCbuild**|\<complex.h>|\<ccomplex>|
+|**_Cbuild**, **_FCbuild**, **_LCbuild**|\<complex.h>|\<ccomplex >|
 
-Tyto funkce jsou specifické pro společnost Microsoft. Typy **_Dcomplex**, **_Fcomplex**, a **_Lcomplex** jsou specifické pro společnost Microsoft – ekvivalenty k neimplementovaná C99 nativní typy **double _Complex** , **float _Complex**, a **long double _Complex**v uvedeném pořadí. Další informace o kompatibilitě naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
+Tyto funkce jsou specifické pro společnost Microsoft. Typy **_Dcomplex**, **_Fcomplex**a **_Lcomplex** jsou ekvivalenty od společnosti Microsoft pro neimplementované nativní typy C99 **Double _Complex**, **float _Complex**a **Long Double _Complex**, v uvedeném pořadí. Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Viz také:
 

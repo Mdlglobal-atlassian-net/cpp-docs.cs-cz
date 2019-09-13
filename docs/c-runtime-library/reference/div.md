@@ -1,9 +1,9 @@
 ---
 title: div, ldiv, lldiv
 ms.date: 04/05/2018
-apiname:
+api_name:
 - div
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-utility-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - div
 helpviewer_keywords:
@@ -25,16 +28,16 @@ helpviewer_keywords:
 - dividing integers
 - remainder computing
 ms.assetid: 8ae80d97-54fd-499e-b14c-e30993b58119
-ms.openlocfilehash: 0ee1b3b6a5d7b15470ffe1e667b4077d1f9581e4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5b40fa0c4cc9cdf0c0de0f6af21da04b0c70369f
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62339257"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70937691"
 ---
 # <a name="div-ldiv-lldiv"></a>div, ldiv, lldiv
 
-Počítá podíl a zbytek dvou celočíselných hodnot.
+Vypočítá podíl a zbytek dvou celočíselných hodnot.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -67,20 +70,20 @@ lldiv_t div(
 ### <a name="parameters"></a>Parametry
 
 *numer*<br/>
-Čítač.
+Čitatel.
 
 *denom*<br/>
 Jmenovatel.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-**div** volaná pomocí argumentů typu **int** vrátí strukturu typu **div_t**, která zahrnuje podíl a zbytek. Návratová hodnota s argumenty typu **dlouhé** je **ldiv_t**a návratová hodnota s argumenty typu **dlouhé** **dlouhé** je **lldiv_t**. **div_t**, **ldiv_t**, a **lldiv_t** jsou definovány v \<stdlib.h >.
+**div** volané pomocí argumentů typu **int** vrátí strukturu typu **div_t**, která zahrnuje podíl a zbytek. Návratová hodnota s argumenty typu **Long** je **ldiv_t**a návratová hodnota s argumenty typu **Long** **Long** je **lldiv_t**. **div_t**, **ldiv_t**a **lldiv_t** jsou definovány v \<Stdlib. h >.
 
 ## <a name="remarks"></a>Poznámky
 
-**Div** funkce rozdělí *číslo* podle *denom* a tím počítá podíl a zbytek. [Div_t](../../c-runtime-library/standard-types.md) struktura obsahuje podíl, **quot**a zbytek **rem**. Znaménko podílu je stejné jako matematický podíl. Jeho absolutní hodnota je největší celé číslo menší než absolutní hodnota matematického podílu. Je-li jmenovatelem 0, program se ukončí s chybovou zprávou.
+Funkce **div** rozdělí *numer* podle *denom* a vypočte podíl a zbytek. Struktura [div_t](../../c-runtime-library/standard-types.md) obsahuje podíl, **quot**a zbytek, **rem**. Znaménko podílu je stejné jako u matematického podílu. Jeho absolutní hodnota je největší celé číslo, které je menší než absolutní hodnota matematického podílu. Pokud je jmenovatel 0, program se ukončí s chybovou zprávou.
 
-Přetížení **div** , která přijímají argumenty typu **dlouhé** nebo **dlouhé** **dlouhé** jsou dostupné pouze pro kód jazyka C++. Návratové typy [ldiv_t](../../c-runtime-library/standard-types.md) a [lldiv_t](../../c-runtime-library/standard-types.md) obsahuje členy **quot** a **rem**, které mají stejný význam jako členové **div_t**.
+Přetížení **div** , která přijímají argumenty typu **Long** nebo **Long** **, jsou k** dispozici pouze pro C++ kód. Návratové typy [ldiv_t](../../c-runtime-library/standard-types.md) a [lldiv_t](../../c-runtime-library/standard-types.md) obsahují členy **quot** a **rem**, které mají stejný význam jako členové **div_t**.
 
 ## <a name="requirements"></a>Požadavky
 
@@ -88,7 +91,7 @@ Přetížení **div** , která přijímají argumenty typu **dlouhé** nebo **dl
 |-------------|---------------------|
 |**div**, **ldiv**, **lldiv**|\<stdlib.h>|
 
-Další informace o kompatibilitě, naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Příklad
 

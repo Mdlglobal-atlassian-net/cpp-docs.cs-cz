@@ -1,9 +1,9 @@
 ---
 title: __security_init_cookie
 ms.date: 11/04/2016
-apiname:
+api_name:
 - __security_init_cookie
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -14,7 +14,10 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - security_init_cookie
 - __security_init_cookie
@@ -24,14 +27,14 @@ helpviewer_keywords:
 - security_init_cookie function
 - global security cookie
 ms.assetid: 32119905-0897-4a1c-84ca-bffd16c9b2af
-ms.openlocfilehash: c7b25e05b4574a7b397cd07d55000a5e53db58f6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9f7e9924f4a96803749418d777e5ee2020f9df78
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62356833"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70948722"
 ---
-# <a name="securityinitcookie"></a>__security_init_cookie
+# <a name="__security_init_cookie"></a>__security_init_cookie
 
 Inicializuje soubor cookie globálního zabezpečení.
 
@@ -43,24 +46,24 @@ void __security_init_cookie(void);
 
 ## <a name="remarks"></a>Poznámky
 
-Soubor cookie globálního zabezpečení se používá pro ochranu přetečení vyrovnávací paměti v kódu zkompilovaném pomocí [/GS (Kontrola zabezpečení vyrovnávací paměti)](../../build/reference/gs-buffer-security-check.md) a v kódu, který používá zpracování výjimek. Při vstupu do funkce chráněné přetečení souboru cookie, který je vložen do zásobníku a při ukončení, je hodnota v zásobníku porovnána s globálním souborem cookie. Případný rozdíl mezi nimi označuje, že došlo k přetečení vyrovnávací paměti a dojde k okamžitému ukončení programu.
+Soubor cookie globálního zabezpečení se používá pro ochranu přetečení vyrovnávací paměti v kódu kompilovaném pomocí [/GS (kontrolu zabezpečení vyrovnávací paměti)](../../build/reference/gs-buffer-security-check.md) a v kódu, který používá zpracování výjimek. V případě vstupu na funkci chráněnou přetečením se soubor cookie vloží do zásobníku a při ukončení se hodnota v zásobníku porovná s globálním souborem cookie. Případný rozdíl mezi nimi indikuje, že došlo k přetečení vyrovnávací paměti a způsobuje okamžité ukončení programu.
 
-Za normálních okolností **__security_init_cookie** je volán CRT při inicializaci. Pokud vynecháte inicializace CRT – například, pokud používáte [/Entry](../../build/reference/entry-entry-point-symbol.md) k určení vstupního bodu – musí zavolat **__security_init_cookie** sami. Pokud **__security_init_cookie** není volána, globální soubor cookie zabezpečení je nastavena na výchozí hodnotu a dojde k narušení ochranu přetečení vyrovnávací paměti. Vzhledem k tomu, že útočník může zneužít tuto výchozí hodnotu souboru cookie pro kyberzločince kontroly přetečení vyrovnávací paměti, doporučujeme vždy volat **__security_init_cookie** při definování vlastní vstupní bod.
+Za normálních okolností je **__security_init_cookie** volán při INICIALIZACI v CRT. Pokud obdržíte inicializaci CRT – například pokud použijete [/entry](../../build/reference/entry-entry-point-symbol.md) k určení vstupního bodu, musíte volat **__security_init_cookie** sami. Pokud není voláno **__security_init_cookie** , globální soubor cookie zabezpečení je nastaven na výchozí hodnotu a ochrana přetečení vyrovnávací paměti bude ohrožena. Vzhledem k tomu, že útočník může zneužít tuto výchozí hodnotu souboru cookie k připravení kontrol přetečení vyrovnávací paměti, doporučujeme, abyste při definování vlastního vstupního bodu vždy volali **__security_init_cookie** .
 
-Volání **__security_init_cookie** nutné provést před kteroukoli chráněný proti přetečení zadání funkce; v opačném případě se zjistil přetečení vyrovnávací paměti nesprávné. Další informace najdete v tématu [C Runtime chyba R6035](../../error-messages/tool-errors/c-runtime-error-r6035.md).
+Volání **__security_init_cookie** musí být provedeno před zadáním jakékoli funkce chráněné při přetečení. v opačném případě se zjistí přetečení vyrovnávací paměti spurious. Další informace naleznete v tématu [C Runtime Error R6035](../../error-messages/tool-errors/c-runtime-error-r6035.md).
 
 ## <a name="example"></a>Příklad
 
-Podívejte se na příklady v [C Runtime chyba R6035](../../error-messages/tool-errors/c-runtime-error-r6035.md).
+Podívejte se na příklady v tématu [C Error runtime R6035](../../error-messages/tool-errors/c-runtime-error-r6035.md).
 
 ## <a name="requirements"></a>Požadavky
 
 |Rutina|Požadovaný hlavičkový soubor|
 |-------------|---------------------|
-|**__security_init_cookie**|\<process.h>|
+|**__security_init_cookie**|\<Process. h >|
 
-**__security_init_cookie** je rozšířením společnosti Microsoft pro standardní knihovny C Runtime. Informace o kompatibilitě naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
+**__security_init_cookie** je rozšířením společnosti Microsoft pro standardní knihovnu prostředí runtime jazyka C. Informace o kompatibilitě najdete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Viz také:
 
-[Středisko Microsoft Security Response Center](https://www.microsoft.com/msrc?rtc=1)
+[Centrum Microsoft Security Response Center](https://www.microsoft.com/msrc?rtc=1)

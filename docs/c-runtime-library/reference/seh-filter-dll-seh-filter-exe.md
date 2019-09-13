@@ -1,11 +1,11 @@
 ---
 title: _seh_filter_dll, _seh_filter_exe
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _XcptFilter
 - _seh_filter_dll
 - _seh_filter_exe
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-runtime-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - XcptFilter
 - _XcptFilter
@@ -31,16 +34,16 @@ helpviewer_keywords:
 - _seh_filter_dll function
 - _seh_filter_exe function
 ms.assetid: 747e5963-3a12-4bf5-b5c4-d4c1b6068e15
-ms.openlocfilehash: 51d6a21b3867eb830a7d9f9b4b9b0ac844cd5aa1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c8c76a4a1d1a39e26f5e78869d3b107578d2085a
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62356729"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70948697"
 ---
-# <a name="sehfilterdll-sehfilterexe"></a>_seh_filter_dll, _seh_filter_exe
+# <a name="_seh_filter_dll-_seh_filter_exe"></a>_seh_filter_dll, _seh_filter_exe
 
-Identifikuje výjimku a související akci, která se mají provést.
+Identifikuje výjimku a související akci, která má být provedena.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -58,20 +61,20 @@ int __cdecl _seh_filter_exe(
 ### <a name="parameters"></a>Parametry
 
 *_ExceptionNum*<br/>
-Identifikátor pro výjimku.
+Identifikátor výjimky.
 
 *_ExceptionPtr*<br/>
 Ukazatel na informace o výjimce.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Celé číslo, které určuje akce, která má být provedena, na základě výsledku zpracování výjimek.
+Celé číslo označující akci, která má být provedena, na základě výsledku zpracování výjimky.
 
 ## <a name="remarks"></a>Poznámky
 
-Tyto metody jsou volány výrazu filtru výjimky [zkuste-except – příkaz](../../cpp/try-except-statement.md). Metoda consults konstantní interní tabulku k identifikaci výjimky a proveďte příslušnou akci, jak je znázorněno zde. Čísla výjimky jsou definovány v souboru winnt.h a čísla signálu jsou definovány v souboru signal.h.
+Tyto metody jsou volány výrazem filtru výjimek [příkazu try-except](../../cpp/try-except-statement.md). Metoda požádá o konstantní interní tabulku pro identifikaci výjimky a určení vhodné akce, jak je znázorněno zde. Čísla výjimek jsou definována v souboru Winnt. h a čísla signálů jsou definována v souboru Signal. h.
 
-|Počet výjimek (unsigned long)|Číslo signálu|
+|Číslo výjimky (bez znaménka Long)|Číslo signálu|
 |----------------------------------------|-------------------|
 |STATUS_ACCESS_VIOLATION|SIGSEGV|
 |STATUS_ILLEGAL_INSTRUCTION|SIGILL|
@@ -86,7 +89,7 @@ Tyto metody jsou volány výrazu filtru výjimky [zkuste-except – příkaz](..
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** corecrt_startup.h
+**Záhlaví:** corecrt_startup. h
 
 ## <a name="see-also"></a>Viz také:
 

@@ -1,14 +1,14 @@
 ---
 title: _stricmp, _wcsicmp, _mbsicmp, _stricmp_l, _wcsicmp_l, _mbsicmp_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _stricmp_l
 - _mbsicmp
 - _wcsicmp
 - _mbsicmp_l
 - _stricmp
 - _wcsicmp_l
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -22,7 +22,10 @@ apilocation:
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
 - api-ms-win-crt-string-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _ftcsicmp
 - _stricmp
@@ -56,19 +59,19 @@ helpviewer_keywords:
 - mbsicmp_l function
 - _strcmpi function
 ms.assetid: 0e1ee515-0d75-435a-a445-8875d4669b50
-ms.openlocfilehash: d27b2128d79d7ff3ab0150e182d494fed52d46ca
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 108a3c572174be5048d0bba48a4da0f4a735f458
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62353832"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70940680"
 ---
-# <a name="stricmp-wcsicmp-mbsicmp-stricmpl-wcsicmpl-mbsicmpl"></a>_stricmp, _wcsicmp, _mbsicmp, _stricmp_l, _wcsicmp_l, _mbsicmp_l
+# <a name="_stricmp-_wcsicmp-_mbsicmp-_stricmp_l-_wcsicmp_l-_mbsicmp_l"></a>_stricmp, _wcsicmp, _mbsicmp, _stricmp_l, _wcsicmp_l, _mbsicmp_l
 
-Provádí porovnávání řetězců.
+Provede porovnání řetězců bez rozlišování velkých a malých písmen.
 
 > [!IMPORTANT]
-> **_mbsicmp –** a **_mbsicmp_l –** nelze použít v aplikacích, které jsou spouštěny v modulu Windows Runtime. Další informace najdete v tématu [CRT funkce nejsou podporovány v aplikacích pro univerzální platformu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> **_mbsicmp** a **_mbsicmp_l** nelze použít v aplikacích, které jsou spouštěny v prostředí Windows Runtime. Další informace najdete v tématu [funkce CRT nejsou v aplikacích Univerzální platforma Windows podporovány](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -104,44 +107,44 @@ int _mbsicmp_l(
 
 ### <a name="parameters"></a>Parametry
 
-*string1*, *string2*<br/>
-Řetězec zakončený hodnotou Null pro srovnání.
+*řetězec1*, *řetězec2*<br/>
+Řetězec zakončený hodnotou null k porovnání
 
-*Národní prostředí*<br/>
-Národní prostředí.
+*jazyka*<br/>
+Národní prostředí, které se má použít.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Návratová hodnota označuje vztah *řetězec1* k *řetězec2* následujícím způsobem.
+Vrácená hodnota označuje vztah *řetězec1* na *řetězec2* následujícím způsobem.
 
 |Návratová hodnota|Popis|
 |------------------|-----------------|
 |< 0|*řetězec1* menší než *řetězec2*|
-|0|*řetězec1* shodné s *řetězec2*|
+|0|*řetězec1* totožný s *řetězec2*|
 |> 0|*řetězec1* větší než *řetězec2*|
 
-V případě chyby **_mbsicmp –** vrátí **_NLSCMPERROR**, který je definován v \<string.h > a \<mbstring.h >.
+V případě chyby vrátí **_mbsicmp** hodnotu **_NLSCMPERROR**, která je definována v \<String. h > a \<Mbstring. h >.
 
 ## <a name="remarks"></a>Poznámky
 
-**_Stricmp –** funkce ordinally porovná *řetězec1* a *řetězec2* po převedení jednotlivé znaky na malá písmena a vrátí hodnotu, která jejich vztahu. **_stricmp –** se liší od **_stricoll –** v tom, že **_stricmp –** porovnání pouze ovlivněny **LC_CTYPE**, který určuje, jaké znaky jsou nahoře a malá písmena. **_Stricoll –** funkce porovná řetězce podle i **LC_CTYPE** a **LC_COLLATE** kategorie národního prostředí, včetně případu a řazení pořadí. Další informace o **LC_COLLATE** kategorie, naleznete v tématu [setlocale](setlocale-wsetlocale.md) a [kategorie národního prostředí](../../c-runtime-library/locale-categories.md). Verze těchto funkcí bez **_l** přípona používají aktuální národní prostředí pro chování závislé na národním prostředí. Verze s příponou jsou identické, s tím rozdílem, že používají předané národní prostředí. Pokud není nastavený národní prostředí, používá se národní prostředí jazyka C. Další informace najdete v tématu [národní prostředí](../../c-runtime-library/locale.md).
+Funkce **_stricmp** pořadová čísla *řetězec1* a *řetězec2* porovnává po převodu jednotlivých znaků na malá písmena a vrátí hodnotu, která označuje jejich relaci. **_stricmp** se liší od **_stricoll** v tom, že porovnání **_Stricmp** je ovlivněno pouze **LC_CTYPE**, což určuje, které znaky jsou velká a malá písmena. Funkce **_stricoll** porovnává řetězce podle kategorií **LC_CTYPE** a **LC_COLLATE** národního prostředí, které zahrnuje i pořadí řazení. Další informace o kategorii **LC_COLLATE** naleznete v tématu [setlocale](setlocale-wsetlocale.md) and [locale Categories](../../c-runtime-library/locale-categories.md). Verze těchto funkcí bez přípony **_l** používají aktuální národní prostředí pro chování závislé na národním prostředí. Verze s příponou jsou stejné s tím rozdílem, že místo toho používají předané národní prostředí. Pokud národní prostředí nebylo nastaveno, použije se národní prostředí jazyka C. Další informace najdete v tématu [národní prostředí](../../c-runtime-library/locale.md).
 
 > [!NOTE]
-> **_stricmp –** je ekvivalentní **_strcmpi –**. Můžete třeba používat Zaměnitelně, ale **_stricmp –** je preferovaný standard.
+> **_stricmp** je ekvivalentem **_strcmpi**. Je možné je použít zaměnitelné, ale **_stricmp** je upřednostňovaným standardem.
 
-**_Strcmpi –** funkce je ekvivalentní volání **_stricmp –** a je k dispozici pouze z důvodů zpětné kompatibility.
+Funkce **_strcmpi** je ekvivalentní hodnotě **_stricmp** a je k dispozici pouze pro zpětnou kompatibilitu.
 
-Protože **_stricmp –** malá porovnání, může způsobit neočekávané chování.
+Vzhledem k tomu, že **_stricmp** provádí porovnávání malými písmeny, může dojít k neočekávanému chování.
 
-Pro ilustraci při převodu podle malá a velká **_stricmp –** ovlivní výsledek porovnání, se předpokládá, že máte dva řetězce JOHNSTON a JOHN_HENRY. JOHNSTON řetězec JOHN_HENRY se budou považovat za méně než protože "_" má hodnotu ASCII nižší než malá S. Ve skutečnosti libovolný znak, který má hodnotu ASCII 91 až 96 se budou považovat za méně než nabízí jakýkoli písmeno.
+K ilustraci, když převod velkých a malých písmen pomocí **_stricmp** ovlivňuje výsledek porovnání, Předpokládejme, že máte dva řetězce Johnston a JOHN_HENRY. Řetězec JOHN_HENRY bude považován za míň než JOHNSTON, protože "_" má nižší hodnotu ASCII než malá a velká písmena. Každý znak, který má hodnotu ASCII mezi 91 a 96, bude považován za méně než jakékoli písmeno.
 
-Pokud [strcmp –](strcmp-wcscmp-mbscmp.md) funkce se použije namísto **_stricmp –**, bude větší než JOHNSTONOVY JOHN_HENRY.
+Pokud se místo **_stricmp**používá funkce [strcmp](strcmp-wcscmp-mbscmp.md) , JOHN_HENRY bude větší než Johnston.
 
-**_wcsicmp –** a **_mbsicmp –** jsou širokoznaké a vícebajtové verze **_stricmp –**. Argumenty a vrácené hodnoty **_wcsicmp –** jsou širokoznaké řetězce **_mbsicmp –** jsou vícebajtové znakové řetězce. **_mbsicmp –** rozpozná vícebajtové znakové sekvence podle aktuální vícebajtové znakové stránce a vrátí **_NLSCMPERROR** v případě chyby. Další informace najdete v tématu [znakové stránky](../../c-runtime-library/code-pages.md). Tyto tři funkce chovají identicky jinak.
+**_wcsicmp** a **_mbsicmp** jsou verze s velkým znakem a vícebajtovým znakem **_stricmp**. Argumenty a návratová hodnota **_wcsicmp** jsou řetězce s velkým počtem znaků; ty z **_mbsicmp** jsou vícebajtové znakové řetězce. **_mbsicmp** rozpoznává vícebajtové znakové sekvence podle aktuální vícebajtové znakové stránky a vrátí **_NLSCMPERROR** na chybu. Další informace najdete v tématu [znakové stránky](../../c-runtime-library/code-pages.md). Tyto tři funkce se chovají identicky jinak.
 
-**_wcsicmp –** a **wcscmp –** chovají stejně, s výjimkou, že **wcscmp –** nepřevádí argumenty na malá písmena před jejich porovnání. **_mbsicmp –** a **_mbscmp –** chovají stejně, s výjimkou, že **_mbscmp –** nepřevádí argumenty na malá písmena před jejich porovnání.
+**_wcsicmp** a **wcscmp** se chovají stejně, s výjimkou toho, že **wcscmp** nepřevede své argumenty na malá písmena před jejich porovnáním. **_mbsicmp** a **_mbscmp** se chovají stejně, s výjimkou toho, že **_mbscmp** nepřevede své argumenty na malá písmena před jejich porovnáním.
 
-Je potřeba volat [setlocale](setlocale-wsetlocale.md) pro **_wcsicmp –** pro práci s Latin 1 znaků. Národní prostředí jazyka C je výsledkem bude ve výchozím nastavení, tedy například ä nesmí rovnat Ä. Volání **setlocale** s všechna národní prostředí kromě národní prostředí jazyka C před voláním **_wcsicmp –**. Následující příklad ukazuje, jak **_wcsicmp –** je citlivé na národní prostředí:
+Abyste mohli pracovat s latinkou 1 znaky, budete muset zavolat [setlocali](setlocale-wsetlocale.md) pro **_wcsicmp** . Národní prostředí jazyka C je ve výchozím nastavení platné, takže například ä se nerovná se Ä. Před voláním **_wcsicmp**volejte **setlocale** s jakýmkoli národním prostředím jiným než národním prostředím C. Následující příklad ukazuje, jak je **_wcsicmp** citlivá na národní prostředí:
 
 ```C
 // crt_stricmp_locale.c
@@ -157,13 +160,13 @@ int main() {
 }
 ```
 
-Alternativou je volání [_create_locale _wcreate_locale](create-locale-wcreate-locale.md) a předejte objekt vrácený národního prostředí jako parametr **_wcsicmp_l –**.
+Alternativou je volání [_create_locale, _wcreate_locale](create-locale-wcreate-locale.md) a předání vráceného objektu národního prostředí jako parametru do **_wcsicmp_l**.
 
-Všechny tyto funkce ověřují své parametry. Pokud *řetězec1* nebo *řetězec2* jsou ukazatelé s hodnotou null, je vyvolána obslužná rutina neplatného parametru, jak je popsáno v [Parameter Validation](../../c-runtime-library/parameter-validation.md) . Pokud provádění může pokračovat, vrátí tyto funkce **_NLSCMPERROR** a nastavte **errno** k **EINVAL**.
+Všechny tyto funkce ověřují své parametry. Pokud je parametr *řetězec1* nebo *řetězec2* ukazateli s hodnotou null, je vyvolána obslužná rutina neplatného parametru, jak je popsáno v tématu [ověřování parametru](../../c-runtime-library/parameter-validation.md) . Pokud provádění může pokračovat, vrátí tyto funkce **_NLSCMPERROR** a nastaví **errno** na **EINVAL**.
 
 ### <a name="generic-text-routine-mappings"></a>Mapování rutin obecného textu
 
-|Rutina TCHAR.H|_UNICODE a _MBCS nejsou definovány|_MBCS definováno|_UNICODE definováno|
+|Rutina TCHAR.H|_UNICODE & _MBCS nejsou definovány.|_MBCS definováno|_UNICODE definováno|
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_tcsicmp**|**_stricmp**|**_mbsicmp**|**_wcsicmp**|
 
@@ -171,11 +174,11 @@ Všechny tyto funkce ověřují své parametry. Pokud *řetězec1* nebo *řetěz
 
 |Rutina|Požadovaný hlavičkový soubor|
 |-------------|---------------------|
-|**_stricmp**, **_stricmp_l**|\<string.h>|
-|**_wcsicmp**, **_wcsicmp_l**|\<String.h > nebo \<wchar.h >|
-|**_mbsicmp**, **_mbsicmp_l**|\<Mbstring.h >|
+|**_stricmp**, **_stricmp_l**|\<String. h >|
+|**_wcsicmp**, **_wcsicmp_l**|\<String. h > nebo \<WCHAR. h >|
+|**_mbsicmp**, **_mbsicmp_l**|\<Mbstring. h >|
 
-Další informace o kompatibilitě, naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Příklad
 
@@ -228,7 +231,7 @@ Compare strings:
 
 ## <a name="see-also"></a>Viz také:
 
-[Zacházení s řetězci](../../c-runtime-library/string-manipulation-crt.md)<br/>
+[Manipulace s řetězci](../../c-runtime-library/string-manipulation-crt.md)<br/>
 [memcmp, wmemcmp](memcmp-wmemcmp.md)<br/>
 [_memicmp, _memicmp_l](memicmp-memicmp-l.md)<br/>
 [strcmp, wcscmp, _mbscmp](strcmp-wcscmp-mbscmp.md)<br/>

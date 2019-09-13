@@ -1,9 +1,9 @@
 ---
 title: _ecvt_s
 ms.date: 04/05/2018
-apiname:
+api_name:
 - _ecvt_s
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-convert-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - ecvt_s
 - _ecvt_s
@@ -25,16 +28,16 @@ helpviewer_keywords:
 - numbers, converting
 - converting double numbers
 ms.assetid: d52fb0a6-cb91-423f-80b3-952a8955d914
-ms.openlocfilehash: 0123c618eb5ba614bd8e5b5b3f1f4b0aff539c4c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c50200d16a5e542c247d1c85f8c104381af4a883
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62288245"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70937718"
 ---
-# <a name="ecvts"></a>_ecvt_s
+# <a name="_ecvt_s"></a>_ecvt_s
 
-Převede **double** číslo na řetězec. Toto je verze [_ecvt –](ecvt.md) s rozšířeními zabezpečení, jak je popsáno v [funkce zabezpečení v CRT](../../c-runtime-library/security-features-in-the-crt.md).
+Převede **dvojité** číslo na řetězec. Jedná se o verzi [_ecvt](ecvt.md) s vylepšeními zabezpečení, jak je popsáno v [části funkce zabezpečení v CRT](../../c-runtime-library/security-features-in-the-crt.md).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -60,55 +63,55 @@ errno_t _ecvt_s(
 ### <a name="parameters"></a>Parametry
 
 *_Buffer*<br/>
-Naplní se ukazatel na řetězec číslic, výsledku převodu.
+Vyplněný ukazatelem na řetězec číslic, výsledek převodu.
 
 *_SizeInBytes*<br/>
 Velikost vyrovnávací paměti v bajtech.
 
 *_Value*<br/>
-Číslo, které má být převeden.
+Číslo, které má být převedeno.
 
 *_Count*<br/>
-Počet číslic, které jsou uložené.
+Počet uložených číslic.
 
 *_Dec*<br/>
-Pozice uložené desetinné čárky.
+Pozice uloženého desetinného místa.
 
-*_Přihlásit*<br/>
-Znak převedený čísla.
+*_Sign*<br/>
+Znaménko převedeného čísla.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Nula v případě úspěchu. Vrácená hodnota je kód chyby, pokud dojde k selhání. Kódy chyb jsou definovány v Errno.h. Další informace najdete v tématu [errno _doserrno, _sys_errlist a _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+Nula v případě úspěchu. Návratová hodnota je kód chyby, pokud dojde k selhání. Kódy chyb jsou definovány v errno. h. Další informace najdete v tématech [errno, _doserrno, _sys_errlist a _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
-V případě neplatného parametru, jak je uvedeno v následující tabulce, tato funkce vyvolá obslužnou rutinu neplatného parametru, jak je popsáno v [Parameter Validation](../../c-runtime-library/parameter-validation.md). Pokud smí provádění pokračovat, tato funkce nastaví **errno** k **EINVAL** a vrátí **EINVAL**.
+V případě neplatného parametru, jak je uvedeno v následující tabulce, tato funkce vyvolá obslužnou rutinu neplatného parametru, jak je popsáno v tématu [ověřování parametru](../../c-runtime-library/parameter-validation.md). Pokud provádění může pokračovat, tato funkce nastaví **errno** na **EINVAL** a vrátí **EINVAL**.
 
-### <a name="error-conditions"></a>Chybové podmínky
+### <a name="error-conditions"></a>Chybové stavy
 
-|*_Buffer*|*_SizeInBytes*|_Value|_Count|_Dec|_Sign|Návratová hodnota|Hodnota v *vyrovnávací paměti*|
+|*_Buffer*|*_SizeInBytes*|_Value|_Count|_Dec|_Sign|Návratová hodnota|Hodnota v *bufferu*|
 |---------------|--------------------|-------------|-------------|-----------|------------|------------------|-----------------------|
-|**NULL**|Všechny|Všechny|Všechny|Všechny|Všechny|**EINVAL**|Nedojde ke změně.|
-|Není **NULL** (odkazuje na platný paměti)|<=0|Všechny|Všechny|Všechny|Všechny|**EINVAL**|Nedojde ke změně.|
-|Všechny|Všechny|Všechny|Všechny|**NULL**|Všechny|**EINVAL**|Nedojde ke změně.|
-|Všechny|Všechny|Všechny|Všechny|Všechny|**NULL**|**EINVAL**|Nedojde ke změně.|
+|**NULL**|Jakýmikoli|Jakýmikoli|Jakýmikoli|Jakýmikoli|Jakýmikoli|**EINVAL**|Nezměněno.|
+|Není **null** (ukazuje na platnou paměť)|<=0|Jakýmikoli|Jakýmikoli|Jakýmikoli|Jakýmikoli|**EINVAL**|Nezměněno.|
+|Jakýmikoli|Jakýmikoli|Jakýmikoli|Jakýmikoli|**NULL**|Jakýmikoli|**EINVAL**|Nezměněno.|
+|Jakýmikoli|Jakýmikoli|Jakýmikoli|Jakýmikoli|Jakýmikoli|**NULL**|**EINVAL**|Nezměněno.|
 
 ## <a name="security-issues"></a>Problémy se zabezpečením
 
-**_ecvt_s –** může vygenerovat narušení přístupu, pokud *vyrovnávací paměti* neodkazuje na platný paměti a není **NULL**.
+**_ecvt_s** může vygenerovat porušení přístupu, pokud *vyrovnávací paměť* neukazuje na platnou paměť a není **null**.
 
 ## <a name="remarks"></a>Poznámky
 
-**_Ecvt_s –** funkce převede číslo s plovoucí desetinnou čárkou na řetězec znaků. *_Value* parametru je číslo s plovoucí desetinnou čárkou má být převeden. Tato funkce ukládá až *počet* číslic *_Value* jako řetězec a připojí znak null ('\0'). Pokud počet číslic v *_Value* překračuje *_Count*, poloměr zaoblení číslice nižšího řádu. Pokud jsou kratší než *počet* číslic, řetězec je doplněny nulami.
+Funkce **_ecvt_s** převede číslo s plovoucí desetinnou čárkou na řetězec znaků. Parametr *_Value* je číslo s plovoucí desetinnou čárkou, které má být převedeno. Tato funkce ukládá až do *počtu* číslic *_Value* jako řetězec a připojí znak null (' \ 0 '). Pokud počet číslic v *_Value* překračuje *_Count*, je číslice dolního řádu zaokrouhlena. Pokud jsou k dispozici méně než číslice *Count* , je řetězec doplněn nulami.
 
-Pouze číslice jsou uloženy v řetězci. Pozice desetinné čárky a znaménko *_Value* můžete získat *_Dec* a *podep_sat* po volání. *_Dec* parametr odkazuje na celočíselnou hodnotu poskytuje pozici od desetinné čárky s ohledem na začátku řetězce. Hodnota 0 nebo záporné celé číslo označuje, že desetinné čárky je nalevo od první číslice. *Podep_sat* parametr odkazuje na celé číslo označující znaménko převedený číslo. Pokud je hodnota celého čísla 0, je kladné číslo. V opačném případě je číslo záporné.
+V řetězci jsou uloženy pouze číslice. Pozice desetinné čárky a znaménko *_Value* lze získat z *_Dec* a *_Sign* po volání. Parametr *_Dec* odkazuje na celočíselnou hodnotu, která dává pozici desetinné čárky s ohledem na začátek řetězce. Hodnota 0 nebo záporné celé číslo označuje, že desetinná čárka leží vlevo od první číslice. Parametr *_Sign* odkazuje na celé číslo, které označuje znaménko převedeného čísla. Pokud je celočíselná hodnota 0, je číslo kladné. V opačném případě je číslo záporné.
 
-Vyrovnávací paměť o délce **_CVTBUFSIZE** je dostačující pro libovolnou hodnotu s plovoucí desetinnou čárkou.
+Vyrovnávací paměť s délkou **_CVTBUFSIZE** je dostačující pro libovolnou hodnotu s plovoucí desetinnou čárkou.
 
-Rozdíl mezi **_ecvt_s –** a **_fcvt_s –** probíhá vyhodnocení *_Count* parametru. **_ecvt_s –** interpretuje *_Count* jako celkový počet číslic ve výstupním řetězci, zatímco **_fcvt_s –** interpretuje *_Count* jako počet číslic za desetinné čárky.
+Rozdíl mezi **_ecvt_s** a **_fcvt_s** je ve výkladu parametru *_Count* . **_ecvt_s** interpretuje *_Count* jako celkový počet číslic ve výstupním řetězci, zatímco **_fcvt_s** interpretuje *_Count* jako počet číslic za desetinnou čárkou.
 
-V jazyce C++ je použití touto funkcí zjednodušeno díky přetížení šablon; přetížení mohou odvodit velikost vyrovnávací paměti automaticky, takže odpadá nutnost určit velikost argumentu. Další informace najdete v tématu [přetížení zabezpečení šablony](../../c-runtime-library/secure-template-overloads.md).
+V C++systému je použití této funkce zjednodušené přetížením šablony; přetížení může odvodit délku vyrovnávací paměti automaticky a eliminuje nutnost zadat argument Size. Další informace najdete v tématu [přetížení zabezpečení šablon](../../c-runtime-library/secure-template-overloads.md).
 
-Ladicí verze této funkce nejprve naplní vyrovnávací paměť hodnotou 0xFD. Chcete-li toto chování zakázat, použijte [_crtsetdebugfillthreshold –](crtsetdebugfillthreshold.md).
+Ladicí verze této funkce nejprve vyplní vyrovnávací paměť pomocí 0xFD. Pokud chcete toto chování zakázat, použijte [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md).
 
 ## <a name="requirements"></a>Požadavky
 
@@ -116,7 +119,7 @@ Ladicí verze této funkce nejprve naplní vyrovnávací paměť hodnotou 0xFD. 
 |--------------|---------------------|---------------------|
 |**_ecvt_s**|\<stdlib.h>|\<errno.h>|
 
-Další informace o kompatibilitě naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Příklad
 

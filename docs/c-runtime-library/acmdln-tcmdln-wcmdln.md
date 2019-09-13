@@ -1,12 +1,15 @@
 ---
 title: _acmdln, _tcmdln, _wcmdln
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _wcmdln
 - _acmdln
-apilocation:
+api_location:
 - msvcrt.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _acmdln
 - acmdln
@@ -22,16 +25,16 @@ helpviewer_keywords:
 - tcmdln global variable
 - acmdln global variable
 ms.assetid: 4fc0a6a0-3f93-420a-a19f-5276061ba539
-ms.openlocfilehash: f4cacb512cb9b5bb6ea22f4dc4014ac2a2eeebe6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 07061244e06256341a6da7d04e5487e81c4b9378
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62290505"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70940622"
 ---
-# <a name="acmdln-tcmdln-wcmdln"></a>_acmdln, _tcmdln, _wcmdln
+# <a name="_acmdln-_tcmdln-_wcmdln"></a>_acmdln, _tcmdln, _wcmdln
 
-Interní globální proměnné CRT. Příkazový řádek.
+Interní globální proměnná CRT Příkazový řádek.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -47,7 +50,7 @@ wchar_t * _wcmdln;
 
 ## <a name="remarks"></a>Poznámky
 
-Tyto interní proměnné CRT ukládání úplný příkazový řádek. Jsou přístupné na exportované symboly pro CRT, ale nejsou určeny pro použití ve vašem kódu. `_acmdln` ukládá data jako řetězec znaků. `_wcmdln` ukládá data jako řetězec širokých znaků. `_tcmdln` může být definována buď jako `_acmdln` nebo `_wcmdln`podle toho, které je vhodné.
+Tyto interní proměnné CRT ukládají úplný příkazový řádek. Jsou zpřístupněny v exportovaných symbolech pro CRT, ale nejsou určeny pro použití ve vašem kódu. `_acmdln`ukládá data jako řetězec znaků. `_wcmdln`ukládá data jako řetězec s velkým znakem. `_tcmdln`lze definovat buď `_acmdln` nebo `_wcmdln`, v závislosti na tom, který z nich je vhodný.
 
 ## <a name="see-also"></a>Viz také:
 

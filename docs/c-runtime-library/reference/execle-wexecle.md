@@ -1,10 +1,10 @@
 ---
 title: _execle, _wexecle
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _execle
 - _wexecle
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-process-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - wexecle
 - _execle
@@ -27,19 +30,19 @@ helpviewer_keywords:
 - _wexecle function
 - _execle function
 ms.assetid: 75efa9c5-96b7-4e23-acab-06258901f63a
-ms.openlocfilehash: dbd84dd8d8e150a063dad4dc89a572c317bce544
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3480b2220c71984dcc30cec54d00deac1f4dfbc7
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62288159"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70937378"
 ---
-# <a name="execle-wexecle"></a>_execle, _wexecle
+# <a name="_execle-_wexecle"></a>_execle, _wexecle
 
-Načte a spustí nový podřízený proces.
+Načte a spustí nové podřízené procesy.
 
 > [!IMPORTANT]
-> Toto rozhraní API nelze použít v aplikacích, které jsou spouštěny v modulu Windows Runtime. Další informace najdete v tématu [CRT funkce nejsou podporovány v aplikacích pro univerzální platformu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> Toto rozhraní API nelze použít v aplikacích, které jsou spouštěny v prostředí Windows Runtime. Další informace najdete v tématu [funkce CRT nejsou v aplikacích Univerzální platforma Windows podporovány](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -63,27 +66,27 @@ intptr_t _wexecle(
 ### <a name="parameters"></a>Parametry
 
 *cmdname*<br/>
-Cesta k souboru pro spuštění.
+Cesta k souboru, který má být spuštěn.
 
 *arg0*, ... *argn*<br/>
 Seznam ukazatelů na parametry.
 
 *envp*<br/>
-Pole ukazatelů do nastavení prostředí.
+Pole ukazatelů na nastavení prostředí
 
 ## <a name="return-value"></a>Návratová hodnota
 
-V případě úspěchu se tato funkce nevrací do volajícího procesu. Návratová hodnota-1 označuje chybu, v takovém případě **errno** je nastavena globální proměnná.
+V případě úspěchu se tyto funkce nevrátí do volajícího procesu. Návratová hodnota-1 označuje chybu. v takovém případě je nastavena globální proměnná **errno** .
 
-|**errno** hodnota|Popis|
+|hodnota **errno**|Popis|
 |-------------------|-----------------|
-|**E2BIG**|Místa požadovaného pro argumenty a nastavení prostředí je větší než 32 KB.|
-|**EACCES**|Zadaný soubor má narušení uzamčení nebo sdílení.|
-|**EINVAL**|Neplatný parametr.|
-|**EMFILE**|Je otevřeno příliš mnoho souborů. (Zadaný soubor musí být otevřen pro určení, zda je spustitelný soubor.)|
+|**E2BIG**|Požadované místo pro argumenty a nastavení prostředí překračuje 32 KB.|
+|**EACCES**|U zadaného souboru došlo k narušení uzamčení nebo sdílení.|
+|**EINVAL**|Neplatný parametr|
+|**EMFILE**|Je otevřeno příliš mnoho souborů. (Zadaný soubor musí být otevřen, aby bylo možné zjistit, zda je spustitelný.)|
 |**ENOENT**|Soubor nebo cesta nebyla nalezena.|
-|**ENOEXEC**|Zadaný soubor není spustitelný soubor nebo má neplatný formát spustitelného souboru.|
-|**ENOMEM**|Není k dispozici ke spuštění nového procesu; není dostatek paměti dostupná paměť byla poškozena; nebo existuje neplatný blok, což znamená, že volající proces nebyl správně přiděleny.|
+|**ENOEXEC**|Zadaný soubor není spustitelný nebo má neplatný formát spustitelného souboru.|
+|**ENOMEM**|K provedení nového procesu není k dispozici dostatek paměti. dostupná paměť je poškozená; nebo existuje neplatný blok, který indikuje, že volající proces nebyl správně přidělen.|
 
 Další informace o těchto návratových kódech naleznete v tématu [_doserrno, errno, _sys_errlist a _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
@@ -91,20 +94,20 @@ Další informace o těchto návratových kódech naleznete v tématu [_doserrno
 
 Každá z těchto funkcí načte a spustí nový proces a předá každý argument příkazového řádku jako samostatný parametr a předá pole ukazatelů do nastavení prostředí.
 
-**_Execle –** funkce ověřují své parametry. Pokud *cmdname* nebo *arg0* je ukazatel s hodnotou null nebo prázdný řetězec, tyto funkce vyvolají obslužnou rutinu neplatného parametru, jak je popsáno v [Parameter Validation](../../c-runtime-library/parameter-validation.md). Pokud smí provádění pokračovat, tyto funkce nastaví **errno** k **EINVAL** a vrátí hodnotu -1. Není spuštěn žádný nový proces.
+Funkce **_execle** ověřují jejich parametry. Pokud je *cmdname* nebo *arg0* ukazatel s hodnotou null nebo prázdný řetězec, tyto funkce vyvolají obslužnou rutinu neplatného parametru, jak je popsáno v tématu [ověřování parametru](../../c-runtime-library/parameter-validation.md). Pokud provádění může pokračovat, tyto funkce nastaví **errno** na **EINVAL** a vrátí-1. Nespustí se žádný nový proces.
 
 ## <a name="requirements"></a>Požadavky
 
 |Funkce|Požadovaný hlavičkový soubor|Volitelné záhlaví|
 |--------------|---------------------|---------------------|
-|**_execle**|\<process.h>|\<errno.h>|
-|**_wexecle**|\<Process.h > nebo \<wchar.h >|\<errno.h>|
+|**_execle**|\<Process. h >|\<errno.h>|
+|**_wexecle**|\<Process. h > \<nebo WCHAR. h >|\<errno.h>|
 
-Další informace najdete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace najdete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Příklad
 
-Podívejte se na příklad v [funkce _exec, _wexec](../../c-runtime-library/exec-wexec-functions.md).
+Podívejte se na příklad v [_exec, _Wexec Functions](../../c-runtime-library/exec-wexec-functions.md).
 
 ## <a name="see-also"></a>Viz také:
 

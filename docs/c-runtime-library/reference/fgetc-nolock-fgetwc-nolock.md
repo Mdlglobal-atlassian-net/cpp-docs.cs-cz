@@ -1,10 +1,10 @@
 ---
 title: _fgetc_nolock, _fgetwc_nolock
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _fgetc_nolock
 - _fgetwc_nolock
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _fgetwc_nolock
 - fgettc_nolock
@@ -35,16 +38,16 @@ helpviewer_keywords:
 - reading characters from streams
 - _fgettc_nolock function
 ms.assetid: fb8e7c5b-4503-493a-879e-6a1db75aa114
-ms.openlocfilehash: 568a96caf481fbaf3e80cf60958dc826db49dd86
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5bc2ff8e8ca36a9c6acee821d1507767f4b1a0d5
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62333966"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70940885"
 ---
-# <a name="fgetcnolock-fgetwcnolock"></a>_fgetc_nolock, _fgetwc_nolock
+# <a name="_fgetc_nolock-_fgetwc_nolock"></a>_fgetc_nolock, _fgetwc_nolock
 
-Přečte znak z datového proudu bez zamčení vlákna.
+Přečte znak z datového proudu bez blokování vlákna.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -60,30 +63,30 @@ wint_t _fgetwc_nolock(
 ### <a name="parameters"></a>Parametry
 
 *stream*<br/>
-Ukazatel **souboru** struktury.
+Ukazatel na strukturu **souborů** .
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Zobrazit[fgetc – fgetwc –](fgetc-fgetwc.md).
+Viz[fgetc, fgetwc](fgetc-fgetwc.md).
 
 ## <a name="remarks"></a>Poznámky
 
-**_fgetc_nolock –** a **_fgetwc_nolock –** jsou stejné jako **fgetc –** a **fgetwc –** v uvedeném pořadí, s tím rozdílem, že nejsou chráněny před rušením podle ostatní vlákna. Mohou být rychlejší, protože nejsou spojené režii uzamykáním ostatních vláken. Tyto funkce používejte pouze v kontextech bezpečných na vlákna, jako je například aplikace s jedním vláknem nebo pokud volající obor již zpracovává izolaci vláken.
+**_fgetc_nolock** a **_fgetwc_nolock** jsou stejné jako **fgetc** a **fgetwc**, s tím rozdílem, že nejsou chráněny před rušením jinými vlákny. Můžou být rychlejší, protože neúčtují režii na uzamykání jiných vláken. Tyto funkce použijte pouze v kontextech bezpečných pro přístup z více vláken, jako jsou například aplikace s jedním vláknem nebo kde volající obor již zpracovává izolaci vlákna.
 
 ### <a name="generic-text-routine-mappings"></a>Mapování rutin obecného textu
 
 |Rutina Tchar.h|_UNICODE a _MBCS nejsou definovány.|_MBCS definováno|_UNICODE definováno|
 |---------------------|--------------------------------------|--------------------|-----------------------|
-|**_fgettc_nolock –**|**_fgetc_nolock**|**_fgetc_nolock**|**_fgetwc_nolock**|
+|**_fgettc_nolock**|**_fgetc_nolock**|**_fgetc_nolock**|**_fgetwc_nolock**|
 
 ## <a name="requirements"></a>Požadavky
 
 |Funkce|Požadovaný hlavičkový soubor|
 |--------------|---------------------|
 |**_fgetc_nolock**|\<stdio.h>|
-|**_fgetwc_nolock**|\<stdio.h > nebo \<wchar.h >|
+|**_fgetwc_nolock**|\<stdio. h > nebo \<WCHAR. h >|
 
-Další informace o kompatibilitě naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Příklad
 
@@ -121,7 +124,7 @@ int main( void )
 }
 ```
 
-## <a name="input-crtfgetcnolocktxt"></a>Vstup: crt_fgetc_nolock.txt
+## <a name="input-crt_fgetc_nolocktxt"></a>Vstup: crt_fgetc_nolock. txt
 
 ```Input
 Line one.
@@ -137,6 +140,6 @@ Line two.
 
 ## <a name="see-also"></a>Viz také:
 
-[Stream vstupně-výstupních operací](../../c-runtime-library/stream-i-o.md)<br/>
+[Vstup/výstup datového proudu](../../c-runtime-library/stream-i-o.md)<br/>
 [fputc, fputwc](fputc-fputwc.md)<br/>
 [getc, getwc](getc-getwc.md)<br/>

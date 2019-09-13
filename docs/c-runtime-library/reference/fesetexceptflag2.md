@@ -1,9 +1,9 @@
 ---
 title: fesetexceptflag
 ms.date: 04/05/2018
-apiname:
+api_name:
 - fesetexceptflag
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,23 +15,26 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-runtime-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - fesetexceptflag
 - fenv/fesetexceptflag
 helpviewer_keywords:
 - fesetexceptflag function
 ms.assetid: 2f7dad77-9e54-4097-a3e3-35176ace4de5
-ms.openlocfilehash: 9ac79e790f0b1e7a89413a0d4974f6053c95616e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 29a6b36b0744bec30463fe55df05fe26180b93fe
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62333992"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70941089"
 ---
 # <a name="fesetexceptflag"></a>fesetexceptflag
 
-Nastaví příznaky zadaný stav s plovoucí desetinnou čárkou v aktuálním prostředí s plovoucí desetinnou čárkou.
+Nastaví zadané příznaky stavu s plovoucí desetinnou čárkou v aktuálním prostředí s plovoucí desetinnou čárkou.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -45,39 +48,39 @@ int fesetexceptflag(
 ### <a name="parameters"></a>Parametry
 
 *pstatus*<br/>
-Ukazatel na **fexcept_t** objekt, který obsahuje hodnoty nastavit výjimku příznaky stavu. Objekt může být nastaven na předchozím voláním [fegetexceptflag](fegetexceptflag2.md).
+Ukazatel na objekt **fexcept_t** obsahující hodnoty pro nastavení příznaků stavu výjimky na. Objekt může být nastaven pomocí předchozího volání [fegetexceptflag](fegetexceptflag2.md).
 
 *s výjimkou*<br/>
-Příznaky stavu výjimek plovoucí desetinné čárky pro nastavení.
+Příznaky stavu výjimky s plovoucí desetinnou čárkou pro nastavení.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Pokud všechny příznaky stavu zadané výjimky jsou úspěšně nastavené, vrátí hodnotu 0. V opačném případě vrací nenulovou hodnotu.
+Pokud jsou všechny zadané příznaky stavu výjimky úspěšně nastaveny, vrátí hodnotu 0. V opačném případě vrátí nenulovou hodnotu.
 
 ## <a name="remarks"></a>Poznámky
 
-**Fesetexceptflag** funkce nastaví stav příznaky stavu výjimky s plovoucí desetinnou čárkou určené *, s výjimkou* na odpovídající hodnoty nastavené v **fexcept_t** objekt, který odkazuje *pstatus*.  Nevyvolával výjimky. *Pstatus* ukazatel musí odkazovat na platný **fexcept_t** objektu nebo následné chování není definováno. **Fesetexceptflag** funkce podporuje tyto hodnoty makra výjimek *, s výjimkou*definované v \<fenv.h >:
+Funkce **fesetexceptflag** nastaví stav příznaků stavu výjimky s plovoucí desetinnou čárkou, které jsou určeny *s výjimkou* odpovídajících hodnot nastavených v objektu **fexcept_t** , na který odkazuje *pStatus*.  Nevyvolává výjimky. Ukazatel *pStatus* musí ukazovat na platný objekt **fexcept_t** , nebo následné chování není definováno. Funkce **fesetexceptflag** podporuje tyto hodnoty makra výjimky v *s výjimkou*, které jsou \<definovány v fenv. h >:
 
-|Výjimka – makro|Popis|
+|Makro výjimky|Popis|
 |---------------------|-----------------|
-|FE_DIVBYZERO|V dříve s plovoucí desetinnou čárkou operace; došlo k chybě singularity nebo pole byl vytvořen hodnotu nekonečno.|
-|FE_INEXACT|Funkce musela být zaokrouhlit uložený výsledek dříve operace s plovoucí desetinnou čárkou.|
-|FE_INVALID|V rámci starší operace s plovoucí desetinnou čárkou došlo k chybě domény.|
-|FE_OVERFLOW|Došlo k chybě rozsah; předchozí výsledek operace s plovoucí desetinnou čárkou byl příliš velký a nelze je reprezentovat.|
-|FE_UNDERFLOW|Předchozí výsledek operace s plovoucí desetinnou čárkou byl příliš malá, aby se dala vyjádřit v úplnou přesností; byl vytvořen nenormální hodnota.|
-|FE_ALLEXCEPT|Bitový operátor OR všech nepodporuje výjimky s plovoucí desetinnou čárkou.|
+|FE_DIVBYZERO|V dřívější operaci s plovoucí desetinnou čárkou došlo k chybě v záčísle nebo objektu. byla vytvořena hodnota nekonečno.|
+|FE_INEXACT|Funkce byla nucena zaokrouhlit uložený výsledek předchozí operace s plovoucí desetinnou čárkou.|
+|FE_INVALID|V dřívější operaci s plovoucí desetinnou čárkou došlo k chybě domény.|
+|FE_OVERFLOW|Došlo k chybě rozsahu; předchozí výsledek operace s plovoucí desetinnou čárkou byl pro reprezentaci příliš velký.|
+|FE_UNDERFLOW|Předchozí výsledek operace s plovoucí desetinnou čárkou byl příliš malý, aby byl reprezentován s plnou přesností. byla vytvořena deběžná hodnota.|
+|FE_ALLEXCEPT|Bitové nebo všechny podporované výjimky s plovoucí desetinnou čárkou.|
 
-*, S výjimkou* argument může být nula, jeden makra podporované výjimek s plovoucí desetinnou čárkou nebo bitový nebo dvě nebo více z makra. Účinek libovolné jiné hodnoty argumentu není definován.
+Argument *excepts* může být nula, jedna z podporovaných maker výjimek s plovoucí desetinnou čárkou nebo bitovou nebo dvou nebo více makrů. Účinek jakékoli jiné hodnoty argumentu není definován.
 
-Pokud chcete používat tuto funkci, musíte vypnout s plovoucí desetinnou čárkou optimalizace, které by mohla zabránit přístupu pomocí `#pragma fenv_access(on)` direktiv před voláním. Další informace najdete v tématu [fenv_access](../../preprocessor/fenv-access.md).
+Chcete-li použít tuto funkci, je nutné vypnout optimalizace plovoucí desetinné čárky, které by mohly zabránit přístupu `#pragma fenv_access(on)` pomocí direktivy před voláním. Další informace najdete v tématu [fenv_access](../../preprocessor/fenv-access.md).
 
 ## <a name="requirements"></a>Požadavky
 
-|Funkce|Záhlaví C|Hlaviček jazyka C++|
+|Funkce|Hlavička jazyka C|C++hlaviček|
 |--------------|--------------|------------------|
-|**fesetexceptflag**|\<fenv.h>|\<cfenv>|
+|**fesetexceptflag**|\<fenv. h >|\<cfenv>|
 
-Další informace o kompatibilitě, naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Viz také:
 

@@ -1,9 +1,9 @@
 ---
 title: fesetenv
 ms.date: 04/05/2018
-apiname:
+api_name:
 - fesetenv
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,19 +15,22 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-runtime-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - fesetenv
 - fenv/fesetenv
 helpviewer_keywords:
 - fesetenv function
 ms.assetid: ffc64fff-8ea7-4d59-9e04-ff96ef8cd012
-ms.openlocfilehash: 8c91bfbb89df964fed0a632d5fb5ebac47ebe948
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 155b9f635f6e8c3dc5acb61126f41c49cd32601f
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62334182"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70941114"
 ---
 # <a name="fesetenv"></a>fesetenv
 
@@ -44,27 +47,27 @@ int fesetenv(
 ### <a name="parameters"></a>Parametry
 
 *penv*<br/>
-Ukazatel **fenv_t** objekt, který obsahuje prostředí s plovoucí desetinnou čárkou jako sada voláním [fegetenv](fegetenv1.md) nebo [feholdexcept](feholdexcept2.md). Můžete také zadat výchozí spouštěcí prostředí s plovoucí desetinnou čárkou pomocí **FE_DFL_ENV** – makro.
+Ukazatel na objekt **fenv_t** , který obsahuje prostředí s plovoucí desetinnou čárkou, jak je nastaveno voláním [fegetenv](fegetenv1.md) nebo [feholdexcept](feholdexcept2.md). Pomocí makra **FE_DFL_ENV** můžete také určit výchozí prostředí s plovoucí desetinnou čárkou, které je spouštěno.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Vrátí hodnotu 0, pokud prostředí byl úspěšně nastaven. V opačném případě vrací nenulovou hodnotu.
+Vrátí hodnotu 0, pokud bylo prostředí úspěšně nastaveno. V opačném případě vrátí nenulovou hodnotu.
 
 ## <a name="remarks"></a>Poznámky
 
-**Fesetenv** funkce nastaví aktuální prostředí s plovoucí desetinnou čárkou z hodnoty uložené v **fenv_t** objekt, který odkazuje *penv*. Plovoucí bodu prostředí je sada příznaky stavu a ovládací prvek režimy, které ovlivňují výpočtů s plovoucí desetinnou čárkou. To zahrnuje režimu zaokrouhlování a příznaky stavu pro výjimky s plovoucí desetinnou čárkou.  Pokud *penv* není **FE_DFL_ENV** nebo neodkazuje na platnou **fenv_t** objektu, následné chování není definováno.
+Funkce **fesetenv** nastaví aktuální prostředí s plovoucí desetinnou čárkou z hodnoty uložené v objektu **fenv_t** , na kterou odkazuje *penv*. Prostředí s plovoucí desetinnou čárkou je sada příznaků stavu a řídicích režimů, které ovlivňují výpočty s plovoucí desetinnou čárkou. To zahrnuje režim zaokrouhlení a příznaky stavu pro výjimky s plovoucí desetinnou čárkou.  Pokud *penv* není **FE_DFL_ENV** nebo neukazuje na platný objekt **fenv_t** , následné chování není definováno.
 
-Voláním této funkce nastaví výjimku příznaky stavu, které jsou v *penv* objektu, ale nevyvolá těchto výjimek.
+Volání této funkce nastaví příznaky stavu výjimky, které jsou v objektu *penv* , ale nevyvolává tyto výjimky.
 
-Pokud chcete používat tuto funkci, musíte vypnout s plovoucí desetinnou čárkou optimalizace, které by mohla zabránit přístupu pomocí `#pragma fenv_access(on)` direktiv před voláním. Další informace najdete v tématu [fenv_access](../../preprocessor/fenv-access.md).
+Chcete-li použít tuto funkci, je nutné vypnout optimalizace plovoucí desetinné čárky, které by mohly zabránit přístupu `#pragma fenv_access(on)` pomocí direktivy před voláním. Další informace najdete v tématu [fenv_access](../../preprocessor/fenv-access.md).
 
 ## <a name="requirements"></a>Požadavky
 
-|Funkce|Záhlaví C|Hlaviček jazyka C++|
+|Funkce|Hlavička jazyka C|C++hlaviček|
 |--------------|--------------|------------------|
-|**fesetenv**|\<fenv.h>|\<cfenv>|
+|**fesetenv**|\<fenv. h >|\<cfenv>|
 
-Další informace o kompatibilitě, naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Viz také:
 

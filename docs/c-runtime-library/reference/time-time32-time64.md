@@ -1,11 +1,11 @@
 ---
 title: time, _time32, _time64
 ms.date: 11/06/2018
-apiname:
+api_name:
 - time
 - _time64
 - _time32
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-time-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - time
 - _time64
@@ -33,16 +36,16 @@ helpviewer_keywords:
 - system time
 - time64 function
 ms.assetid: 280e00f2-2b93-4ece-94cd-e048484c6cc7
-ms.openlocfilehash: 693b70b3682876d7e6c3721f5d06aa13d31abb96
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 02dc7f250fe26d9ed7abfd89ca9a4c2163312e6d
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62155586"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70946093"
 ---
-# <a name="time-time32-time64"></a>time, _time32, _time64
+# <a name="time-_time32-_time64"></a>time, _time32, _time64
 
-Získá systémového času.
+Získá systémový čas.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -59,21 +62,21 @@ Ukazatel na umístění úložiště pro čas.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Vrátí čas v sekundách uplynulých od půlnoci 1. ledna 1970, nebo -1 v případě chyby.
+Vrátí čas v sekundách uplynulý od půlnoci 1. ledna 1970 nebo-1 v případě chyby.
 
 ## <a name="remarks"></a>Poznámky
 
-**Čas** funkce vrátí dobu v sekundách uplynulých od půlnoci (00: 00:00), 1. ledna 1970, koordinovaný univerzální čas (UTC), podle systémových hodin. Vrácená hodnota je uložen v umístění Dal *destTime*. Tento parametr může mít **NULL**, v takovém případě není uložený návratovou hodnotu.
+Funkce **Time** vrátí počet sekund uplynulý od půlnoci (00:00:00), 1. ledna 1970, koordinovaný světový čas (UTC) podle systémových hodin. Vrácená hodnota je uložena v umístění uvedeném hodnotou *destTime*. Tento parametr může mít **hodnotu null**. v takovém případě se návratová hodnota neukládá.
 
-**čas** tvoří obálku pro **_time64** a **time_t** je ve výchozím nastavení rovna **__time64_t –**. Pokud je nutné donutit kompilátor k interpretaci **time_t** jako staré 32bitové **time_t**, můžete definovat **_USE_32BIT_TIME_T**. To se nedoporučuje, protože může vaše aplikace selhat po 18. ledna 2038; Použijte toto makro není povolena na 64bitových platformách.
+**čas** je obálka pro **_time64** a **time_t** je ve výchozím nastavení ekvivalentní hodnotě **__time64_t**. Pokud potřebujete vynutit, aby kompilátor interpretoval **time_t** jako starou 32 **time_t**, můžete definovat **_USE_32BIT_TIME_T**. Nedoporučuje se to, protože aplikace může selhat i po 18. lednu 2038; použití tohoto makra není na 64ch platformách povoleno.
 
 ## <a name="requirements"></a>Požadavky
 
-|Rutina|Požadovaná hlavička C|Požadované hlaviček jazyka C++|
+|Rutina|Povinné záhlaví jazyka C|Požadovaná C++ hlavička|
 |-------|------|---------------------|
-|**time**, **\_time32**, **\_time64**|\<time.h>|\<CTime – > nebo \<time.h >|
+|**time**, **\_time32**, **\_time64**|\<time.h>|\<CTime – > nebo \<Time. h >|
 
-Další informace o kompatibilitě, naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Příklad
 

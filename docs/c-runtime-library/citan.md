@@ -1,9 +1,9 @@
 ---
 title: _CItan
 ms.date: 04/11/2018
-apiname:
+api_name:
 - _CItan
-apilocation:
+api_location:
 - msvcr100.dll
 - msvcr110_clr0400.dll
 - msvcr80.dll
@@ -12,7 +12,10 @@ apilocation:
 - msvcr90.dll
 - msvcr120.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _CItan
 - CItan
@@ -20,16 +23,16 @@ helpviewer_keywords:
 - CItan intrinsic
 - _CItan intrinsic
 ms.assetid: d1ea3113-50a2-45a6-b6bc-680fcdcc0928
-ms.openlocfilehash: d64ce3e187a055185a82868988825c418b3f54bd
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e509d785648148e51004950076147b69c2db18ec
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62344782"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70940466"
 ---
-# <a name="citan"></a>_CItan
+# <a name="_citan"></a>_CItan
 
-Vypočítá jeho tangens nejvyšší hodnotu v zásobníku s plovoucí desetinnou čárkou.
+Vypočítá tangens horní hodnoty v zásobníku s plovoucí desetinnou čárkou.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -39,9 +42,9 @@ void __cdecl _CItan();
 
 ## <a name="remarks"></a>Poznámky
 
-Tato verze [tan](../c-runtime-library/reference/tan-tanf-tanl.md) funkce má specializované konvence volání, které kompilátor rozpozná. Funkce urychluje provádění, protože kopie zabraňuje generovaných a pomáhá při přidělení registru.
+Tato verze funkce [tan](../c-runtime-library/reference/tan-tanf-tanl.md) má specializovanou konvenci volání, kterou kompilátor rozumí. Funkce zrychlí spuštění, protože brání vygenerování kopií a pomáhá s přidělením registru.
 
-Výsledná hodnota je vloženy do horní části zásobníku s plovoucí desetinnou čárkou.
+Výsledná hodnota je vložena do horní části zásobníku s plovoucí desetinnou čárkou.
 
 ## <a name="requirements"></a>Požadavky
 

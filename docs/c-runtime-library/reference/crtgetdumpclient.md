@@ -1,9 +1,9 @@
 ---
 title: _CrtGetDumpClient
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _CrtGetDumpClient
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -14,7 +14,10 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - CrtGetDumpClient
 - _CrtGetDumpClient
@@ -22,16 +25,16 @@ helpviewer_keywords:
 - _CrtGetDumpClient function
 - CrtGetDumpClient function
 ms.assetid: 9051867f-341b-493b-b53d-45d2b454a3ad
-ms.openlocfilehash: e4700bd936bec97014508c4a971f6e6c278c6a11
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4b5c6c7d4d123d2d419f104ddaabd57c10ad320e
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62339920"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70938751"
 ---
-# <a name="crtgetdumpclient"></a>_CrtGetDumpClient
+# <a name="_crtgetdumpclient"></a>_CrtGetDumpClient
 
-Načte aktuální definovaného aplikací funkce pro výpis **_CLIENT_BLOCK** zadejte paměťových bloků (pouze ladicí verze).
+Načte aktuální funkci definovanou aplikací pro výpis paměťových bloků typu **_CLIENT_BLOCK** (pouze ladicí verze).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -41,13 +44,13 @@ _CRT_DUMP_CLIENT _CrtGetDumpClient( void );
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Vrátí aktuální rutinu s výpisem paměti.
+Vrátí aktuální rutinu výpisu paměti.
 
 ## <a name="remarks"></a>Poznámky
 
-**_Crtgetdumpclient –** funkce načte aktuální funkci připojení pro výpis objektů uložených v **_CLIENT_BLOCK** bloky paměti jazyka C run-time ladění procesu výpisu paměti.
+Funkce **_CrtGetDumpClient** načte aktuální funkci Hooku pro objekty, které jsou uložené v blocích paměti **_CLIENT_BLOCK** pro proces výpisu paměti ladění C za běhu.
 
-Další informace o použití jiné funkce háku podporující za běhu a psaní vlastních klienta definované funkce háku naleznete v tématu [ladění zápis funkce háku](/visualstudio/debugger/debug-hook-function-writing).
+Další informace o používání dalších funkcí běhu s podporou zavěšení a psaní vlastních funkcí zavěšení definovaných klientem naleznete v tématu [ladění funkce vidlice](/visualstudio/debugger/debug-hook-function-writing).
 
 ## <a name="requirements"></a>Požadavky
 
@@ -55,11 +58,11 @@ Další informace o použití jiné funkce háku podporující za běhu a psaní
 |-------------|---------------------|
 |**_CrtGetDumpClient**|\<crtdbg.h>|
 
-Další informace o kompatibilitě naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
 
 ## <a name="libraries"></a>Knihovny
 
-Ladicí verze [běhových knihoven C](../../c-runtime-library/crt-library-features.md) pouze.
+Ladit verze pouze [knihoven run-time jazyka C](../../c-runtime-library/crt-library-features.md) .
 
 ## <a name="see-also"></a>Viz také:
 

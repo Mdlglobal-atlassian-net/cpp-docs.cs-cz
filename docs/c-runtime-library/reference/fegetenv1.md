@@ -1,9 +1,9 @@
 ---
 title: fegetenv
 ms.date: 04/05/2018
-apiname:
+api_name:
 - fetegenv
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,23 +15,26 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-runtime-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - fegetenv
 - fenv/fegetenv
 helpviewer_keywords:
 - fetegenv function
 ms.assetid: 68962421-6978-4b27-8e4c-ad1577830cf6
-ms.openlocfilehash: d3985e4dd2b3944bcdddb79605887def7ba15473
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b2e3566eb96174d0f0ccd6beb401824cc052c995
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62334408"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70941249"
 ---
 # <a name="fegetenv"></a>fegetenv
 
-Uloží aktuální prostředí s plovoucí desetinnou čárkou zadaného objektu.
+Ukládá aktuální prostředí s plovoucí desetinnou čárkou v zadaném objektu.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -44,25 +47,25 @@ int fegetenv(
 ### <a name="parameters"></a>Parametry
 
 *penv*<br/>
-Ukazatel **fenv_t** objekt obsahovat aktuální hodnoty s plovoucí desetinnou čárkou prostředí.
+Ukazatel na objekt **fenv_t** , který obsahuje aktuální hodnoty prostředí s plovoucí desetinnou čárkou.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Vrátí hodnotu 0, pokud prostředí s plovoucí desetinnou čárkou byl úspěšně uložen v *penv*. V opačném případě vrací nenulovou hodnotu.
+Vrátí hodnotu 0, pokud bylo prostředí s plovoucí desetinnou čárkou úspěšně uloženo v *penv*. V opačném případě vrátí nenulovou hodnotu.
 
 ## <a name="remarks"></a>Poznámky
 
-**Fegetenv** funkce ukládá aktuální prostředí s plovoucí desetinnou čárkou v objektu, na které odkazuje *penv*. Plovoucí bodu prostředí je sada příznaky stavu a ovládací prvek režimy, které ovlivňují výpočtů s plovoucí desetinnou čárkou. To zahrnuje režimu zaokrouhlení směrem a příznaky stavu pro výjimky s plovoucí desetinnou čárkou.  Pokud *penv* neodkazuje na platnou **fenv_t** objektu, následné chování není definováno.
+Funkce **fegetenv** ukládá aktuální prostředí s plovoucí desetinnou čárkou v objektu, na který ukazuje *penv*. Prostředí s plovoucí desetinnou čárkou je sada příznaků stavu a řídicích režimů, které ovlivňují výpočty s plovoucí desetinnou čárkou. To zahrnuje režim směru zaokrouhlení a příznaky stavu pro výjimky s plovoucí desetinnou čárkou.  Pokud *penv* neodkazuje na platný objekt **fenv_t** , následné chování není definováno.
 
-Pokud chcete používat tuto funkci, musíte vypnout s plovoucí desetinnou čárkou optimalizace, které by mohla zabránit přístupu pomocí `#pragma fenv_access(on)` direktiv před voláním. Další informace najdete v tématu [fenv_access](../../preprocessor/fenv-access.md).
+Chcete-li použít tuto funkci, je nutné vypnout optimalizace plovoucí desetinné čárky, které by mohly zabránit přístupu `#pragma fenv_access(on)` pomocí direktivy před voláním. Další informace najdete v tématu [fenv_access](../../preprocessor/fenv-access.md).
 
 ## <a name="requirements"></a>Požadavky
 
-|Funkce|Záhlaví C|Hlaviček jazyka C++|
+|Funkce|Hlavička jazyka C|C++hlaviček|
 |--------------|--------------|------------------|
-|**fegetenv**|\<fenv.h>|\<cfenv>|
+|**fegetenv**|\<fenv. h >|\<cfenv>|
 
-Další informace o kompatibilitě, naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Viz také:
 

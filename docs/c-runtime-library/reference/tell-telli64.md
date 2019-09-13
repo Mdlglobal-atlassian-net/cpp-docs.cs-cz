@@ -1,10 +1,10 @@
 ---
 title: _tell, _telli64
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _telli64
 - _tell
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - tell
 - telli64
@@ -30,14 +33,14 @@ helpviewer_keywords:
 - telli64 function
 - _telli64 function
 ms.assetid: 1500e8f9-8fec-4253-9eec-ec66125dfc9b
-ms.openlocfilehash: 628f37d3b8a39a75fb2329a1b2805426f15e821f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 54f672a1b230103d6f9ae1c45d2c9e487764939e
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62258569"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70946260"
 ---
-# <a name="tell-telli64"></a>_tell, _telli64
+# <a name="_tell-_telli64"></a>_tell, _telli64
 
 Získá pozici ukazatele souboru.
 
@@ -54,20 +57,20 @@ __int64 _telli64(
 
 ### <a name="parameters"></a>Parametry
 
-*handle*<br/>
-Soubor deskriptoru odkazující na otevření souboru.
+*popisovač*<br/>
+Popisovač souboru odkazující na otevřený soubor.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Aktuální pozice ukazatel na soubor. Na zařízeních nepodporující vyhledávání návratová hodnota není definována.
+Aktuální pozice ukazatele na soubor. U zařízení, která neumožňují hledání, není tato návratová hodnota definována.
 
-Návratová hodnota l-1 označuje chybu. Pokud *zpracování* je neplatného popisovače souboru, je vyvolána obslužná rutina neplatného parametru, jak je popsáno v [Parameter Validation](../../c-runtime-library/parameter-validation.md). Pokud smí provádění pokračovat, tyto funkce nastaví **errno** k **EBADF** a vrátí hodnotu-1 L.
+Návratová hodnota-1L označuje chybu. Pokud je *popisovačem* neplatný popisovač souboru, je vyvolána obslužná rutina neplatného parametru, jak je popsáno v tématu [ověřování parametru](../../c-runtime-library/parameter-validation.md). Pokud provádění může pokračovat, tyto funkce nastaví **errno** na **EBADF** a vrátí-1l.
 
-Zobrazit [_doserrno, errno, _sys_errlist a _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) Další informace o tomto a dalších návratových kódů.
+Další informace o tomto a dalších návratových kódech naleznete v tématech [_doserrno, errno, _sys_errlist a _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) .
 
 ## <a name="remarks"></a>Poznámky
 
-**_Tell –** funkce získá aktuální pozice ukazatel na soubor (pokud existuje) přidružené k *zpracování* argument. Pozice je vyjádřena jako počet bajtů od začátku souboru. Pro **_telli64 –** funkce, tato hodnota je vyjádřena jako 64bitové celé číslo.
+Funkce **_tell** získá aktuální pozici ukazatele souboru (pokud existuje) přidruženého k argumentu *popisovače* . Pozice je vyjádřena jako počet bajtů od začátku souboru. Pro funkci **_telli64** se tato hodnota vyjádří jako celé číslo 64.
 
 ## <a name="requirements"></a>Požadavky
 
@@ -75,7 +78,7 @@ Zobrazit [_doserrno, errno, _sys_errlist a _sys_nerr](../../c-runtime-library/er
 |-------------|---------------------|
 |**_tell**, **_telli64**|\<io.h>|
 
-Další informace o kompatibilitě, naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Příklad
 
@@ -110,7 +113,7 @@ int main( void )
 }
 ```
 
-### <a name="input-crttelltxt"></a>Vstup: crt_tell.txt
+### <a name="input-crt_telltxt"></a>Vstup: crt_tell. txt
 
 ```Input
 Line one.

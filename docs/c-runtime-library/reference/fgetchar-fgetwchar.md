@@ -1,10 +1,10 @@
 ---
 title: _fgetchar, _fgetwchar
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _fgetchar
 - _fgetwchar
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - fgetwchar
 - _fgettchar
@@ -32,16 +35,16 @@ helpviewer_keywords:
 - standard input, reading from
 - fgetchar function
 ms.assetid: 8bce874c-701a-41a3-b1b2-feff266fb5b9
-ms.openlocfilehash: c74618fa0be5392062d13618ff73e2ef45bf7c2a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 90a97308b8c60776d52e58feb84c5398456f26d5
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62333953"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70940867"
 ---
-# <a name="fgetchar-fgetwchar"></a>_fgetchar, _fgetwchar
+# <a name="_fgetchar-_fgetwchar"></a>_fgetchar, _fgetwchar
 
-Přečte znak z **stdin**.
+Přečte znak ze **standardního vstupu**.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -52,13 +55,13 @@ wint_t _fgetwchar( void );
 
 ## <a name="return-value"></a>Návratová hodnota
 
-**\_fgetchar –** vrátí znak čtený jako **int** nebo vrátí `EOF` k označení chyby nebo konce souboru. **\_fgetwchar –** vrátí, jako [wint_t](../../c-runtime-library/standard-types.md), široký znak, který odpovídá znaku číst nebo vrátí `WEOF` k označení chyby nebo konce souboru. Pro obě funkce použijte **feof** nebo **ferror** k rozlišení mezi chybou a podmínkou end souboru.
+fgetchar vrátí znak načtený jako **int** nebo vrátí `EOF` k označení chyby nebo konce souboru.  **\_** fgetwchar vrátí jako [wint_t](../../c-runtime-library/standard-types.md), což je celý znak, který odpovídá znaku Read nebo vrátí `WEOF` k označení chyby nebo konce souboru.  **\_** U obou funkcí použijte **feof** nebo **trajekt** k rozlišení mezi chybou a stavem konce souboru.
 
 ## <a name="remarks"></a>Poznámky
 
-Tyto funkce přečtou jeden znak z **stdin**. Funkce potom zvýší přidružený ukazatel na soubor (je-li definován) tak, aby odkazoval na další znak. Pokud je datový proud na konci souboru, je nastaven indikátor konce souboru pro datový proud.
+Tyto funkce čtou jeden znak ze **standardního vstupu**. Funkce poté zvýší přidružený ukazatel na soubor (je-li definován), aby ukazoval na další znak. Pokud je datový proud na konci souboru, je nastaven indikátor konce souboru pro datový proud.
 
-**_fgetchar** je ekvivalentní `fgetc( stdin )`. Je také ekvivalentní **getchar**, ale implementována pouze jako funkce, nikoli jako funkce a makro. **_fgetwchar –** je verze širokého znaku **_fgetchar**.
+**_fgetchar** je ekvivalentem `fgetc( stdin )`. Je také ekvivalentní s funkcí **GetChar**, ale je implementována pouze jako funkce, nikoli jako funkce a makro. **_fgetwchar** je verze **_fgetchar**pro nejrůznější znaky.
 
 Tyto funkce nejsou kompatibilní se standardem ANSI.
 
@@ -73,9 +76,9 @@ Tyto funkce nejsou kompatibilní se standardem ANSI.
 |Funkce|Požadovaný hlavičkový soubor|
 |--------------|---------------------|
 |**_fgetchar**|\<stdio.h>|
-|**_fgetwchar**|\<stdio.h > nebo \<wchar.h >|
+|**_fgetwchar**|\<stdio. h > nebo \<WCHAR. h >|
 
-Konzole není podporována v aplikacích pro univerzální platformu Windows (UPW). Standardní datový proud popisovačů, které jsou spojeny s konzolou –**stdin**, **stdout**, a **stderr**– musí být přesměrován před funkcí jazyka C za běhu můžete použít v aplikacích pro UWP . Další informace o kompatibilitě naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
+Konzola není v aplikacích Univerzální platforma Windows (UWP) podporována. Standardní popisovače streamů, které jsou spojeny s konzolou –**stdin**, **stdout**a **stderr**– musí být přesměrované před tím, než je funkce běhového běhu v aplikacích pro UWP můžou použít. Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Příklad
 
@@ -117,6 +120,6 @@ Line two.
 
 ## <a name="see-also"></a>Viz také:
 
-[Stream vstupně-výstupních operací](../../c-runtime-library/stream-i-o.md)<br/>
+[Vstup/výstup datového proudu](../../c-runtime-library/stream-i-o.md)<br/>
 [fputc, fputwc](fputc-fputwc.md)<br/>
 [getc, getwc](getc-getwc.md)<br/>

@@ -1,9 +1,9 @@
 ---
 title: feholdexcept
 ms.date: 04/05/2018
-apiname:
+api_name:
 - feholdexcept
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,23 +15,26 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-runtime-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - feholdexcept
 - fenv/feholdexcept
 helpviewer_keywords:
 - feholdexcept function
 ms.assetid: 88e512ae-b5d8-452c-afe9-c824cd3ef1d8
-ms.openlocfilehash: 26097398b9f9d498ab4c56690dc9c6cbb950bafb
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: bd55a4ed627d731f7246d589d4b74b4173e31d4e
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62334382"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70941191"
 ---
 # <a name="feholdexcept"></a>feholdexcept
 
-Uloží aktuální prostředí s plovoucí desetinnou čárkou určeném objektu, vymaže příznaky stav s plovoucí desetinnou čárkou a, pokud je to možné, umístí do režimu bez zastavení s plovoucí desetinnou čárkou prostředí.
+Uloží aktuální prostředí s plovoucí desetinnou čárkou v zadaném objektu, vymaže příznaky stavu s plovoucí desetinnou čárkou a pokud je to možné, umístí prostředí s plovoucí desetinnou čárkou do režimu bez zastavení.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -44,27 +47,27 @@ int feholdexcept(
 ### <a name="parameters"></a>Parametry
 
 *penv*<br/>
-Ukazatel **fenv_t** objekt obsahující kopii prostředí s plovoucí desetinnou čárkou.
+Ukazatel na objekt **fenv_t** , který obsahuje kopii prostředí s plovoucí desetinnou čárkou.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Vrátí hodnotu nula a pouze v případě funkce je moct úspěšně zapnout zpracování výjimek s plovoucí desetinnou čárkou bez zastavení.
+Vrátí nulu pouze v případě, že funkce může úspěšně zapnout zpracování výjimek s plovoucí desetinnou čárkou.
 
 ## <a name="remarks"></a>Poznámky
 
-**Feholdexcept** funkce se používá k uložení stavu aktuální prostředí s plovoucí desetinnou čárkou bod v **fenv_t** objekt, který odkazuje *penv*a nastavit prostředí přerušit provádění na výjimky s plovoucí desetinnou čárkou. To se označuje jako režim bez zastavení.  Tento režim pokračuje, dokud prostředí je obnovit pomocí [fesetenv](fesetenv1.md) nebo [feupdateenv](feupdateenv.md).
+Funkce **feholdexcept** se používá k uložení stavu aktuálního prostředí s plovoucí desetinnou čárkou v objektu **fenv_t** , na který odkazuje *penv*, a k nastavení prostředí tak, aby se nepřerušilo provádění u výjimek s plovoucí desetinnou čárkou. Tento stav je známý jako režim bez zastavení.  Tento režim pokračuje, dokud se prostředí neobnoví pomocí [fesetenv](fesetenv1.md) nebo [feupdateenv](feupdateenv.md).
 
-Tuto funkci můžete použít na začátku podprogram, který je potřeba skrýt jeden nebo více výjimek plovoucí desetinné čárky od volajícího. Chcete-li ohlásit výjimku, jednoduše zrušte nechtěné výjimkami pomocí [feclearexcept,](feclearexcept1.md) a pak ukončit režim bez zastavení voláním **feupdateenv**.
+Tuto funkci můžete použít na začátku subrutiny, které potřebují skrýt jednu nebo více výjimek s plovoucí desetinnou čárkou od volajícího. Chcete-li ohlásit výjimku, můžete jednoduše vymazat nechtěné výjimky pomocí [feclearexcept](feclearexcept1.md) a poté ukončit režim bez zastavení volání **feupdateenv**.
 
-Pokud chcete používat tuto funkci, musíte vypnout s plovoucí desetinnou čárkou optimalizace, které by mohla zabránit přístupu pomocí `#pragma fenv_access(on)` direktiv před voláním. Další informace najdete v tématu [fenv_access](../../preprocessor/fenv-access.md).
+Chcete-li použít tuto funkci, je nutné vypnout optimalizace plovoucí desetinné čárky, které by mohly zabránit přístupu `#pragma fenv_access(on)` pomocí direktivy před voláním. Další informace najdete v tématu [fenv_access](../../preprocessor/fenv-access.md).
 
 ## <a name="requirements"></a>Požadavky
 
-|Funkce|Záhlaví C|Hlaviček jazyka C++|
+|Funkce|Hlavička jazyka C|C++hlaviček|
 |--------------|--------------|------------------|
-|**feholdexcept**|\<fenv.h>|\<cfenv>|
+|**feholdexcept**|\<fenv. h >|\<cfenv>|
 
-Další informace o kompatibilitě, naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Viz také:
 

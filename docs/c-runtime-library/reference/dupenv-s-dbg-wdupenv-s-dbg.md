@@ -1,10 +1,10 @@
 ---
 title: _dupenv_s_dbg, _wdupenv_s_dbg
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _dupenv_s_dbg
 - _wdupenv_s_dbg
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _tdupenv_s_dbg
 - _dupenv_s_dbg
@@ -29,16 +32,16 @@ helpviewer_keywords:
 - wdupenv_s_dbg function
 - _dupenv_s_dbg function
 ms.assetid: e3d81148-e24e-46d0-a21d-fd87b5e6256c
-ms.openlocfilehash: 95d8c18a0ebc543304fdb6bf51c4adde589333aa
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6c61986184f93c6cf6e83b33f77dce2bd017cfae
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62339218"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70937680"
 ---
-# <a name="dupenvsdbg-wdupenvsdbg"></a>_dupenv_s_dbg, _wdupenv_s_dbg
+# <a name="_dupenv_s_dbg-_wdupenv_s_dbg"></a>_dupenv_s_dbg, _wdupenv_s_dbg
 
-Získání hodnoty z aktuálního prostředí.  Verze [_dupenv_s – _wdupenv_s –](dupenv-s-wdupenv-s.md) , přidělení paměti s [_malloc_dbg](malloc-dbg.md) poskytnout další informace o ladění.
+Získá hodnotu z aktuálního prostředí.  Verze [_dupenv_s, _wdupenv_s](dupenv-s-wdupenv-s.md) , které přidělují paměť s [_malloc_dbg](malloc-dbg.md) k poskytnutí dalších informací o ladění.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -63,41 +66,41 @@ errno_t _wdupenv_s_dbg(
 
 ### <a name="parameters"></a>Parametry
 
-*Vyrovnávací paměti*<br/>
-Vyrovnávací paměť pro ukládání hodnotu proměnné.
+*vyrovnávací paměti*<br/>
+Vyrovnávací paměť pro uložení hodnoty proměnné
 
 *numberOfElements*<br/>
 Velikost *vyrovnávací paměti*.
 
-*varname*<br/>
-Název proměnné prostředí.
+*název_proměnné*<br/>
+Název proměnné prostředí
 
 *blockType*<br/>
 Požadovaný typ bloku paměti: **_CLIENT_BLOCK** nebo **_NORMAL_BLOCK**.
 
-*Název souboru*<br/>
-Ukazatel na název zdrojového souboru nebo **NULL**.
+*Bitmap*<br/>
+Ukazatel na název zdrojového souboru nebo **hodnotu null**.
 
-*linenumber*<br/>
-Číslo řádku ve zdrojovém souboru nebo **NULL**.
+*číslo řádku*<br/>
+Číslo řádku ve zdrojovém souboru nebo **hodnota null**.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Nula v případě úspěchu; při selhání kód chyby.
+Nula při úspěchu – chybový kód při selhání.
 
-Tyto funkce ověřují své parametry; Pokud *vyrovnávací paměti* nebo *název_proměnné* je **NULL**, je vyvolána obslužná rutina neplatného parametru, jak je popsáno v [Parameter Validation](../../c-runtime-library/parameter-validation.md). Pokud smí provádění pokračovat, funkce nastaví **errno** k **EINVAL** a vrátit **EINVAL**.
+Tyto funkce ověřují své parametry; Pokud je *vyrovnávací paměť* nebo *název_proměnné* **null**, je vyvolána obslužná rutina neplatného parametru, jak je popsáno v tématu [ověřování parametru](../../c-runtime-library/parameter-validation.md). Pokud provádění může pokračovat, funkce nastaví **errno** na **EINVAL** a vrátí **EINVAL**.
 
-Pokud těmto funkcím nelze přidělit dostatek paměti, že nastavené *vyrovnávací paměti* k **NULL** a *numberOfElements* na 0 a vrátí **ENOMEM**.
+Pokud tyto funkce nemůžou přidělit dostatek paměti, nastaví *vyrovnávací paměť* na **hodnotu null** a *NumberOfElements* na 0 a vrátí **ENOMEM**.
 
 ## <a name="remarks"></a>Poznámky
 
-**_Dupenv_s_dbg –** a **_wdupenv_s_dbg –** funkce jsou stejné jako **_dupenv_s –** a **_wdupenv_s –** s tím rozdílem, že když **_DEBUG** je definován, tyto funkce používají ladicí verze [malloc](malloc.md), [_malloc_dbg](malloc-dbg.md), přidělení paměti pro hodnotu proměnné prostředí. Informace o ladění funkcí **_malloc_dbg**, naleznete v tématu [_malloc_dbg](malloc-dbg.md).
+Funkce **_dupenv_s_dbg** a **_wdupenv_s_dbg** jsou stejné jako **_dupenv_s** a **_wdupenv_s** s tím rozdílem, že pokud je definována **_DEBUG** , používají tyto funkce ladicí verzi [](malloc.md), [_malloc_dbg](malloc-dbg.md), pro přidělení paměti pro hodnotu proměnné prostředí. Informace o funkcích ladění pro **_malloc_dbg**najdete v tématu [_malloc_dbg](malloc-dbg.md).
 
-Chcete-li explicitně volat tyto funkce ve většině případů nepotřebujete. Místo toho můžete definovat příznak **_CRTDBG_MAP_ALLOC**. Když **_CRTDBG_MAP_ALLOC** je definován, jsou volání **_dupenv_s –** a **_wdupenv_s –** budou přemapovány na **_dupenv_s_dbg –** a **_wdupenv_s_dbg –**, se *blockType* nastavena na **_NORMAL_BLOCK**. Proto není potřeba explicitně volat tyto funkce, pokud chcete označit jako bloky haldy **_CLIENT_BLOCK**. Další informace o typech bloku, naleznete v tématu [typy bloků na haldě ladění](/visualstudio/debugger/crt-debug-heap-details).
+Tyto funkce není nutné volat explicitně ve většině případů. Místo toho můžete definovat příznak **_CRTDBG_MAP_ALLOC**. Pokud je definována **_CRTDBG_MAP_ALLOC** , volání **_dupenv_s** a **_wdupenv_s** jsou přemapována na **_Dupenv_s_dbg** a **_Wdupenv_s_dbg**v uvedeném pořadí s *blockType* nastavenou na **_NORMAL_BLOCK**. Proto nemusíte tyto funkce volat explicitně, pokud nechcete označit bloky haldy jako **_CLIENT_BLOCK**. Další informace o typech bloků naleznete v tématu [typy bloků v haldě ladění](/visualstudio/debugger/crt-debug-heap-details).
 
 ### <a name="generic-text-routine-mappings"></a>Mapování rutin obecného textu
 
-|Rutina TCHAR.H|_UNICODE a _MBCS nejsou definovány|_MBCS definováno|_UNICODE definováno|
+|Rutina TCHAR.H|_UNICODE & _MBCS nejsou definovány.|_MBCS definováno|_UNICODE definováno|
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_tdupenv_s_dbg**|**_dupenv_s_dbg**|**_dupenv_s_dbg**|**_wdupenv_s_dbg**|
 
@@ -108,7 +111,7 @@ Chcete-li explicitně volat tyto funkce ve většině případů nepotřebujete.
 |**_dupenv_s_dbg**|\<crtdbg.h>|
 |**_wdupenv_s_dbg**|\<crtdbg.h>|
 
-Další informace o kompatibilitě, naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Příklad
 

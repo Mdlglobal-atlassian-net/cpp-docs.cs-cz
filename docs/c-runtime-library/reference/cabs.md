@@ -1,9 +1,9 @@
 ---
 title: _cabs
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _cabs
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - cabsl
 - _cabs
@@ -28,14 +31,14 @@ helpviewer_keywords:
 - _cabs function
 - calculating absolute values
 ms.assetid: fea292ee-1a39-4a0a-b416-4a189346ff26
-ms.openlocfilehash: 3e95b6f568ce66b8e9e5483bd1dcbcfaa7af3d28
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5e2536fbeed2f466d3795e2ed26e643279e8bc67
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62341064"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70943414"
 ---
-# <a name="cabs"></a>_cabs
+# <a name="_cabs"></a>_cabs
 
 Vypočítá absolutní hodnotu komplexního čísla.
 
@@ -50,23 +53,23 @@ double _cabs(
 ### <a name="parameters"></a>Parametry
 
 *z*<br/>
-Komplexní čísla.
+Komplexní číslo.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-**_cabs** vrátí absolutní hodnotu svého argumentu, pokud je úspěšná. Při přetečení **_cabs** vrátí **HUGE_VAL** a nastaví **errno** k **ERANGE**. Můžete změnit zpracování chyb pomocí [_matherr](matherr.md).
+**_cabs** vrátí absolutní hodnotu svého argumentu, pokud je úspěšná. Při přetečení **_cabs** vrátí **HUGE_VAL** a nastaví **errno** na **ERANGE**. Zpracování chyb můžete změnit pomocí [_matherr](matherr.md).
 
 ## <a name="remarks"></a>Poznámky
 
-**_Cabs** funkce vypočítá absolutní hodnotu komplexního čísla, která musí být strukturu typu [_complex](../../c-runtime-library/standard-types.md). Struktura *z* se skládá z proceduru reálnou součástí *x* a imaginární části *y*. Volání **_cabs** produkuje hodnotu ekvivalentní výraz `sqrt( z.x * z.x + z.y * z.y )`.
+Funkce **_cabs** vypočítá absolutní hodnotu komplexního čísla, které musí být struktura typu [_complex](../../c-runtime-library/standard-types.md). Struktura *z* se skládá z reálné komponenty *x* a imaginární komponenty *y*. Volání **_cabs** vytvoří hodnotu ekvivalentní výrazu `sqrt( z.x * z.x + z.y * z.y )`.
 
 ## <a name="requirements"></a>Požadavky
 
 |Rutina|Požadovaný hlavičkový soubor|
 |-------------|---------------------|
-|**_cabs**|\<math.h>|
+|**_cabs**|\<Math. h >|
 
-Další informace o kompatibilitě naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Příklad
 

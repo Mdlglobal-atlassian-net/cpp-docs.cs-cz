@@ -1,10 +1,10 @@
 ---
 title: _cgets_s, _cgetws_s
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _cgetws_s
 - _cgets_s
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-conio-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _cgets_s
 - cgets_s
@@ -30,19 +33,19 @@ helpviewer_keywords:
 - _cgetws_s function
 - cgetws_s function
 ms.assetid: 38b74897-afe6-4dd9-a43f-36a3c0d72c5c
-ms.openlocfilehash: 8341b775df3b9cbaececdfaa1f17e075d7c7416c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2039fc32cecb768c3c3fbc239446abedeb48f188
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62340582"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70939268"
 ---
-# <a name="cgetss-cgetwss"></a>_cgets_s, _cgetws_s
+# <a name="_cgets_s-_cgetws_s"></a>_cgets_s, _cgetws_s
 
-Získá znak řetězce z konzoly. Tyto verze [_cgets a _cgetws –](../../c-runtime-library/cgets-cgetws.md) mají rozšíření zabezpečení popsaná v [funkce zabezpečení v CRT](../../c-runtime-library/security-features-in-the-crt.md).
+Získá řetězec znaků z konzoly. Tyto verze [_cgets a _cgetws](../../c-runtime-library/cgets-cgetws.md) mají vylepšení zabezpečení, jak je popsáno v [části funkce zabezpečení v CRT](../../c-runtime-library/security-features-in-the-crt.md).
 
 > [!IMPORTANT]
-> Toto rozhraní API nelze použít v aplikacích, které jsou spouštěny v modulu Windows Runtime. Další informace najdete v tématu [CRT funkce nejsou podporovány v aplikacích pro univerzální platformu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> Toto rozhraní API nelze použít v aplikacích, které jsou spouštěny v prostředí Windows Runtime. Další informace najdete v tématu [funkce CRT nejsou v aplikacích Univerzální platforma Windows podporovány](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -71,34 +74,34 @@ errno_t _cgetws_s(
 
 ### <a name="parameters"></a>Parametry
 
-*Vyrovnávací paměti*<br/>
-Umístění úložiště pro data.
+*vyrovnávací paměti*<br/>
+Umístění úložiště pro data
 
 *numberOfElements*<br/>
-Velikost vyrovnávací paměti v jednobajtové nebo široké znaky, které je taky maximální počet znaků pro čtení.
+Velikost vyrovnávací paměti v jednobajtových nebo velkých znacích, což je také maximální počet znaků, které mají být čteny.
 
 *pSizeRead*<br/>
-Počet znaků, které skutečně číst.
+Počet znaků, které jsou ve skutečnosti čteny.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Vrácená hodnota je nula v případě úspěchu; v opačném případě chybu kódu, pokud dojde k chybě.
+Návratová hodnota je v případě úspěchu nulová. v opačném případě kód chyby, pokud dojde k selhání.
 
-### <a name="error-conditions"></a>Chybové podmínky
+### <a name="error-conditions"></a>Chybové stavy
 
-|*Vyrovnávací paměti*|*numberOfElements*|*pSizeRead*|Vrátí|Obsah *vyrovnávací paměti*|
+|*vyrovnávací paměti*|*numberOfElements*|*pSizeRead*|vrátit|Obsah *vyrovnávací paměti*|
 |--------------|------------------------|-----------------|------------|--------------------------|
-|**NULL**|Všechny|Všechny|**EINVAL**|není k dispozici|
-|Není **NULL**|nula|Všechny|**EINVAL**|Nezměněno|
-|Není **NULL**|Všechny|**NULL**|**EINVAL**|řetězec nulové délky|
+|**NULL**|Jakýmikoli|Jakýmikoli|**EINVAL**|není k dispozici|
+|Není **null**|nula|Jakýmikoli|**EINVAL**|Neupraveno|
+|Není **null**|Jakýmikoli|**NULL**|**EINVAL**|řetězec s nulovou délkou|
 
 ## <a name="remarks"></a>Poznámky
 
-**_cgets_s** a **_cgetws_s –** čtení řetězce z konzoly a zkopírujte řetězec (s ukončovací znak null) do *vyrovnávací paměti*. **_cgetws_s –** je verze širokého znaku funkce; jiné, než je stejný jako znak velikost, chování tyto dvě funkce. Maximální velikost řetězce ke čtení je předán jako *numberOfElements* parametru. Tato velikost by měla obsahovat znak navíc pro ukončující znak null. Skutečný počet znaků, přečtěte si je umístěn v *pSizeRead*.
+**_cgets_s** a **_cgetws_s** čtou z konzoly řetězec a do *vyrovnávací paměti*kopíruje řetězec (s ukončovacím znakem null). **_cgetws_s** je verze funkce s velkým znakem. Kromě velikosti znaku je chování těchto dvou funkcí stejné. Maximální velikost řetězce, který se má načíst, se předává jako parametr *numberOfElements* . Tato velikost by měla obsahovat znak navíc pro ukončující hodnotu null. Skutečný počet čtených znaků je umístěný v *pSizeRead*.
 
-Pokud dojde k chybě během operace nebo při ověřování parametrů, vyvolán obslužnou rutinu neplatného parametru, jak je popsáno v [Parameter Validation](../../c-runtime-library/parameter-validation.md) . Pokud smí provádění pokračovat, **errno** je nastavena na **EINVAL** a **EINVAL** je vrácena.
+Pokud během operace nebo při ověřování parametrů dojde k chybě, je vyvolána obslužná rutina neplatného parametru, jak je popsáno v tématu [ověřování parametru](../../c-runtime-library/parameter-validation.md) . Pokud provádění může pokračovat, **errno** je nastaven na **EINVAL** a vrátí **EINVAL** .
 
-V jazyce C++ je použití těchto funkcí zjednodušeno díky přetížení šablon; přetížení mohou odvodit délku vyrovnávací paměti automaticky, a tím eliminuje nutnost zadat argument velikosti a dokážou automaticky nahradit starší, méně zabezpečené funkce jejími novějšími, bezpečnějšími protějšky. Další informace najdete v tématu [přetížení zabezpečení šablony](../../c-runtime-library/secure-template-overloads.md).
+V C++nástroji je použití těchto funkcí zjednodušeno pomocí přetížení šablon; přetížení můžou odvodit délku vyrovnávací paměti automaticky, čímž eliminují nutnost zadat argument velikosti a můžou automaticky nahradit starší a méně zabezpečené funkce jejich novějšími, bezpečnějšími protějšky. Další informace najdete v tématu [přetížení zabezpečení šablon](../../c-runtime-library/secure-template-overloads.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapování rutin obecného textu
 
@@ -110,10 +113,10 @@ V jazyce C++ je použití těchto funkcí zjednodušeno díky přetížení šab
 
 |Rutina|Požadovaný hlavičkový soubor|
 |-------------|---------------------|
-|**_cgets_s**|\<conio.h>|
-|**_cgetws_s**|\<conio.h > nebo \<wchar.h >|
+|**_cgets_s**|\<CONIO. h >|
+|**_cgetws_s**|\<CONIO. h > nebo \<WCHAR. h >|
 
-Další informace o kompatibilitě naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Viz také:
 

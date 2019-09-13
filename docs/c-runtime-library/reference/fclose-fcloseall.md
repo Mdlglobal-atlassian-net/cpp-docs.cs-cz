@@ -1,10 +1,10 @@
 ---
 title: fclose, _fcloseall
 ms.date: 11/04/2016
-apiname:
+api_name:
 - fclose
 - _fcloseall
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - fclose
 - _fcloseall
@@ -25,16 +28,16 @@ helpviewer_keywords:
 - streams, closing
 - _fcloseall function
 ms.assetid: c3c6ea72-92c6-450a-a33e-3e568d2784a4
-ms.openlocfilehash: 4713ffb7ecdf8da73e5f949bbef7be124dfaf28a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 215925fb16f5d51e481ae92cbb45b0270bd5ebd4
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62334876"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70941507"
 ---
-# <a name="fclose-fcloseall"></a>fclose, _fcloseall
+# <a name="fclose-_fcloseall"></a>fclose, _fcloseall
 
-Zavře datový proud (**fclose –**) nebo zavře všechny otevřené datové proudy (**_fcloseall**).
+Zavře datový proud (**fclose**) nebo zavře všechny otevřené streamy ( **_fcloseall**).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -48,32 +51,32 @@ int _fcloseall( void );
 ### <a name="parameters"></a>Parametry
 
 *stream*<br/>
-Ukazatel na **souboru** struktury.
+Ukazatel na strukturu **souborů** .
 
 ## <a name="return-value"></a>Návratová hodnota
 
-**fclose –** vrátí hodnotu 0, pokud datový proud je uzavřen úspěšně. **_fcloseall** vrátí celkový počet datových proudů uzavřen. Obě funkce vrátí **EOF** udávající chybu.
+**fclose** vrátí hodnotu 0, pokud byl datový proud úspěšně zavřen. **_fcloseall** vrátí celkový počet uzavřených datových proudů. Obě funkce vrací **EOF** pro indikaci chyby.
 
 ## <a name="remarks"></a>Poznámky
 
-**Fclose –** funkce zavře *stream*. Pokud *stream* je **NULL**, je vyvolána obslužná rutina neplatného parametru, jak je popsáno v [Parameter Validation](../../c-runtime-library/parameter-validation.md). Pokud smí provádění pokračovat, **fclose –** nastaví **errno** k **EINVAL** a vrátí **EOF**. Dále je doporučeno *stream* ukazatel vždy kontrolovány před voláním této funkce.
+Funkce **fclose** ukončí *datový proud*. Pokud má *datový proud* **hodnotu null**, je vyvolána obslužná rutina neplatného parametru, jak je popsáno v tématu [ověřování parametru](../../c-runtime-library/parameter-validation.md). Pokud provádění může pokračovat, **fclose** nastaví **errno** na **EINVAL** a vrátí **EOF**. Doporučuje se před voláním této funkce vždy zkontrolovat ukazatel na *datový proud* .
 
-Zobrazit [_doserrno, errno, _sys_errlist a _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) Další informace o těchto a dalších chybových kódech.
+Další informace o těchto a dalších chybových kódech naleznete v tématech [_doserrno, errno, _sys_errlist a _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) .
 
-**_Fcloseall** funkce zavře všechny otevřené datových proudů s výjimkou **stdin**, **stdout**, **stderr** (a v operačním systému MS-DOS, **_stdaux**  a **_stdprn**). Také se zavře a odstraní všechny dočasných souborů vytvořených databázovým **tmpfile –**. V obou funkcí, před uzavírací vyprázdní všechny vyrovnávací paměti přidružený datový proud. System – přidělené vyrovnávací paměti se vydávají při datový proud je uzavřen. Vyrovnávací paměti přiřazené uživatelem s **setbuf –** a **setvbuf –** nedojde k uvolnění automaticky.
+Funkce **_fcloseall** zavře všechny otevřené streamy kromě **stdin**, **stdout**, **stderr** (a v systémech MS-DOS, **_stdaux** a **_stdprn**). Také se zavře a odstraní všechny dočasné soubory vytvořené nástrojem **tmpfile**. V obou funkcích jsou před zavřením vyprázdněny všechny vyrovnávací paměti spojené s datovým proudem. Po zavření datového proudu jsou uvolněny vyrovnávací paměti přidělené systémem. Vyrovnávací paměti přiřazené uživatelem s **setbuf** a **setvbuf –** nejsou automaticky uvolněny.
 
-**Poznámka:** V případě tyto funkce používají zavřete datový proud, podkladového popisovače souborů a operačním systémem popisovač souboru (nebo soketu) jsou uzavřeny, a také datového proudu. Proto pokud soubor byl původně otevřen jako soubor zpracování nebo popisovač souboru a je uzavřen **fclose –**, proveďte volání není také **_Zavřít** na zavřít popisovač souboru; nelze volat funkci Win32  **CloseHandle** zavřít popisovač souboru.
+**Poznámka:** Pokud jsou tyto funkce použity k zavření datového proudu, jsou zavřeny podkladové popisovače souborů a popisovač souboru operačního systému (nebo soket) a také datový proud. Proto pokud byl soubor původně otevřen jako popisovač souboru nebo popisovač souboru a je uzavřený pomocí **fclose**, Nevolejte také **_close** pro zavření popisovače souboru; Nevolejte **CloseHandle** funkce Win32 pro zavření popisovače souboru.
 
-**fclose –** a **_fcloseall** přidat kód pro ochranu před rušením z jiných vláken. Nezamykací verze nástroje **fclose –**, naleznete v tématu **_fclose_nolock –**.
+**fclose** a **_fcloseall** obsahují kód pro ochranu proti rušení z jiných vláken. Neuzamykání verze **fclose**naleznete v tématu **_fclose_nolock**.
 
 ## <a name="requirements"></a>Požadavky
 
 |Funkce|Požadovaný hlavičkový soubor|
 |--------------|---------------------|
-|**fclose –**|\<stdio.h>|
+|**fclose**|\<stdio.h>|
 |**_fcloseall**|\<stdio.h>|
 
-Další informace o kompatibilitě, naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Příklad
 
@@ -81,7 +84,7 @@ Podívejte se na příklad pro [fopen](fopen-wfopen.md).
 
 ## <a name="see-also"></a>Viz také:
 
-[Stream vstupně-výstupních operací](../../c-runtime-library/stream-i-o.md)<br/>
+[Vstup/výstup datového proudu](../../c-runtime-library/stream-i-o.md)<br/>
 [_close](close.md)<br/>
 [_fdopen, _wfdopen](fdopen-wfdopen.md)<br/>
 [fflush](fflush.md)<br/>

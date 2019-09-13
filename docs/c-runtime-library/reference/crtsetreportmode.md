@@ -1,9 +1,9 @@
 ---
 title: _CrtSetReportMode
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _CrtSetReportMode
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -14,7 +14,10 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _CrtSetReportMode
 - CrtSetReportMode
@@ -22,16 +25,16 @@ helpviewer_keywords:
 - _CrtSetReportMode function
 - CrtSetReportMode function
 ms.assetid: 3ecc6a12-afdd-4242-b046-8187ff6d4b36
-ms.openlocfilehash: 2096d39a8ba316fc76c97517a16e34231940e7f4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ae7e83ac009d572f8a9f6484519b0cdfb7499ce3
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62335292"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70938467"
 ---
-# <a name="crtsetreportmode"></a>_CrtSetReportMode
+# <a name="_crtsetreportmode"></a>_CrtSetReportMode
 
-Určuje cíle nebo cílů pro typ konkrétní sestavy generované **_CrtDbgReport** a makra, které volají [_CrtDbgReport _crtdbgreportw –](crtdbgreport-crtdbgreportw.md), jako například [_ASSERT, _asserte –, Makra _ASSERT_EXPR](assert-asserte-assert-expr-macros.md), [_ASSERT, _asserte –, _ASSERT_EXPR makra](assert-asserte-assert-expr-macros.md), [_RPT, _RPTF, _RPTW, _rptfw – makra](rpt-rptf-rptw-rptfw-macros.md), a [_RPT, _RPTF, _RPTW, _rptfw – makra](rpt-rptf-rptw-rptfw-macros.md) (pouze ladicí verze).
+Určuje cíl nebo cíle pro konkrétní typ sestavy generovaný **_CrtDbgReport** a všechna makra, která volají [_CrtDbgReport, _CrtDbgReportW](crtdbgreport-crtdbgreportw.md), jako je [_ASSERT, _ASSERTE, _ASSERT_EXPR maker](assert-asserte-assert-expr-macros.md), [_ASSERT, _ASSERTE, _ Makra ASSERT_EXPR](assert-asserte-assert-expr-macros.md), [_RPT, _RPTF, _RPTW, _RPTFW makra](rpt-rptf-rptw-rptfw-macros.md)a [_RPT, _RPTF, _RPTW, _RPTFW makra](rpt-rptf-rptw-rptfw-macros.md) (pouze ladicí verze).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -45,54 +48,54 @@ int _CrtSetReportMode(
 ### <a name="parameters"></a>Parametry
 
 *reportType*<br/>
-Typ sestavy: **_CRT_WARN**, **_CRT_ERROR**, a **_CRT_ASSERT**.
+Typ sestavy: **_CRT_WARN**, **_CRT_ERROR**a **_CRT_ASSERT**.
 
 *reportMode*<br/>
-Nová sestava režim nebo režimy *reportType*.
+Nový režim sestavy nebo režimy pro *ReportType*.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Při úspěšném dokončení **_CrtSetReportMode** vrátí předchozí sestavu režimu nebo režimů pro typ sestavy určený v *reportType*. Pokud je předána neplatná hodnota jako *reportType* nebo je zadaný neplatný režim pro *ReportMode*, **_CrtSetReportMode** vyvolá obslužnou rutinu neplatného parametru, jako popsané v [Parameter Validation](../../c-runtime-library/parameter-validation.md). Pokud smí provádění pokračovat, tato funkce nastaví **errno** k **EINVAL** a vrátí hodnotu -1. Další informace najdete v tématu [errno _doserrno, _sys_errlist a _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+Po úspěšném dokončení vrátí **_CrtSetReportMode** předchozí režim nebo režimy sestavy pro typ sestavy zadaný v *ReportType*. Pokud je předána neplatná hodnota jako *ReportType* nebo je zadán neplatný režim pro *ReportMode*, **_CrtSetReportMode** vyvolá obslužnou rutinu neplatného parametru, jak je popsáno v tématu [ověřování parametru](../../c-runtime-library/parameter-validation.md). Pokud provádění může pokračovat, tato funkce nastaví **errno** na **EINVAL** a vrátí-1. Další informace najdete v tématech [errno, _doserrno, _sys_errlist a _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Poznámky
 
-**_CrtSetReportMode** Určuje cíl výstupu **_CrtDbgReport**. Protože makra [_ASSERT](assert-asserte-assert-expr-macros.md), [_asserte –](assert-asserte-assert-expr-macros.md), [_RPT](rpt-rptf-rptw-rptfw-macros.md), a [_RPTF](rpt-rptf-rptw-rptfw-macros.md) volání **_CrtDbgReport**, **_CrtSetReportMode** Určuje cíl výstupu textu zadaným makra.
+**_CrtSetReportMode** určuje cíl výstupu pro **_CrtDbgReport**. Vzhledem k **tomu, že** makra [_ASSERT](assert-asserte-assert-expr-macros.md), [_ASSERTE](assert-asserte-assert-expr-macros.md), [_RPT](rpt-rptf-rptw-rptfw-macros.md)a [_RPTF](rpt-rptf-rptw-rptfw-macros.md) volání **_CrtDbgReport**určuje cíl výstupu textu zadaného pomocí těchto maker.
 
-Když [_DEBUG](../../c-runtime-library/debug.md) není definován, jsou volání **_CrtSetReportMode** odstraněna během předběžného zpracování.
+Když není definovaný [_DEBUG](../../c-runtime-library/debug.md) , volání **_CrtSetReportMode** se během předběžného zpracování odeberou.
 
-Pokud není volána **_CrtSetReportMode** definovat cíl výstupu zpráv, pak následující výchozí hodnoty jsou aktivní:
+Pokud nevoláte **_CrtSetReportMode** k definování výstupního cíle zpráv, platí následující výchozí hodnoty:
 
-- Chyby a selhání kontrolního výrazu jsou směrované na okno zprávy ladění.
+- Selhání kontrolního výrazu a chyby jsou směrovány do okna zprávy ladění.
 
-- Upozornění z aplikace Windows se odesílají do okna výstup ladicího programu.
+- Upozornění z aplikací systému Windows jsou odesílána do okna výstupu ladicího programu.
 
-- Upozornění z konzolové aplikace nejsou zobrazeny.
+- Upozornění z konzolových aplikací se nezobrazí.
 
-Následující tabulka uvádí typy sestav, které jsou definovány v souboru Crtdbg.h.
+V následující tabulce jsou uvedeny typy sestav definované v souboru Crtdbg. h.
 
 |Typ sestavy|Popis|
 |-----------------|-----------------|
-|**_CRT_WARN**|Upozornění, zprávy a informace, které nejsou vyžadují okamžitou pozornost.|
-|**_CRT_ERROR**|Chyby, neodstranitelné chyby a problémy, které vyžadují okamžitou pozornost.|
-|**_CRT_ASSERT**|Selhání kontrolního výrazu (s prohlašovanou výrazy, které vedou k **FALSE**).|
+|**_CRT_WARN**|Upozornění, zprávy a informace, které nevyžadují okamžitou pozornost.|
+|**_CRT_ERROR**|Chyby, neodstranitelné problémy a problémy, které vyžadují okamžitou pozornost.|
+|**_CRT_ASSERT**|Chyby kontrolního výrazu (výrazy, které se vyhodnotí jako **NEPRAVDA**)|
 
-**_CrtSetReportMode** funkce přiřadí nový režim sestavy podle *ReportMode* typ sestavy určený v *reportType* a vrátí dříve definované režim sestavy pro *reportType*. V následující tabulce jsou uvedeny dostupné možnosti pro *ReportMode* a výsledné chování **_CrtDbgReport**. Tyto možnosti jsou definovány jako bitové příznaky v souboru Crtdbg.h.
+Funkce **_CrtSetReportMode** přiřadí nový režim sestavy zadaný v *ReportMode* k typu sestavy určenému v *ReportType* a vrátí dříve definovaný režim sestavy pro *ReportType*. V následující tabulce jsou uvedeny dostupné možnosti pro *ReportMode* a výsledné chování **_CrtDbgReport**. Tyto možnosti jsou definovány jako bitové příznaky v souboru Crtdbg. h.
 
-|Režim sestavy|_CrtDbgReport chování|
+|Režim sestavy|Chování _CrtDbgReport|
 |-----------------|-----------------------------|
-|**_CRTDBG_MODE_DEBUG**|Zapíše zprávu do okna výstup ladicího programu.|
-|**_CRTDBG_MODE_FILE**|Zapíše popisovač souboru uživatelem zadané zprávy. [_CrtSetReportFile](crtsetreportfile.md) by měla být volána pro definování konkrétního souboru nebo datový proud použít jako cíl.|
-|**_CRTDBG_MODE_WNDW**|Vytvoří okno se zprávou pro zobrazení zprávy spolu s [přerušit](abort.md), **opakujte**, a **Ignorovat** tlačítka.|
-|**_CRTDBG_REPORT_MODE**|Vrátí *ReportMode* pro zadaný rozbočovač *reportType*:<br /><br /> 1   **_CRTDBG_MODE_FILE**<br /><br /> 2   **_CRTDBG_MODE_DEBUG**<br /><br /> 4   **_CRTDBG_MODE_WNDW**|
+|**_CRTDBG_MODE_DEBUG**|Zapíše zprávu do okna výstupu ladicího programu.|
+|**_CRTDBG_MODE_FILE**|Zapíše zprávu do popisovače souboru zadaného uživatelem. [_CrtSetReportFile](crtsetreportfile.md) by měla být volána k definování konkrétního souboru nebo datového proudu, který chcete použít jako cíl.|
+|**_CRTDBG_MODE_WNDW**|Vytvoří okno se zprávou, ve kterém se zobrazí zpráva s tlačítky pro [přerušení](abort.md), **opakování**a **ignorování** .|
+|**_CRTDBG_REPORT_MODE**|Vrátí *ReportMode* pro zadaný *ReportType*:<br /><br /> 1   **_CRTDBG_MODE_FILE**<br /><br /> 2   **_CRTDBG_MODE_DEBUG**<br /><br /> 4   **_CRTDBG_MODE_WNDW**|
 
-Každý typ sestavy mohou být zaznamenány vůbec pomocí jedna, dvě nebo tři režimy nebo žádný. Proto je možné mít víc než jeden cíl definovaného pro typ jednu sestavu. Například následující fragment kódu způsobí selhání kontrolního výrazu k odeslání do obou okno zprávy ladění a **stderr**:
+Každý typ sestavy lze nahlásit pomocí jednoho, dvou nebo tří režimů nebo vůbec bez režimu. Proto je možné pro jeden typ sestavy definovat více než jeden cíl. Například následující fragment kódu způsobí, že chyby kontrolního výrazu budou odesílány do okna zprávy ladění i do **stderr**:
 
 ```C
 _CrtSetReportMode( _CRT_ASSERT, _CRTDBG_MODE_FILE | _CRTDBG_MODE_WNDW );
 _CrtSetReportFile( _CRT_ASSERT, _CRTDBG_FILE_STDERR );
 ```
 
-Kromě toho vytváření sestav režimu nebo režimů pro každý typ sestavy lze ovládat samostatně. Například je možné určit, že *reportType* z **_CRT_WARN** být odeslána jako výstupní řetězec ladění, zatímco **_CRT_ASSERT** se zobrazí okno zprávy ladění pomocí a odesílat **stderr**, dřív ilustrované.
+Kromě toho se dá režim generování sestav nebo režimy pro jednotlivé typy sestav řídit samostatně. Například je možné určit, že se má *ReportType* **_CRT_WARN** odeslat do výstupního řetězce ladění, zatímco **_CRT_ASSERT** se zobrazí pomocí okna zprávy ladění a odesláno do **stderr**, jak je uvedeno výše.
 
 ## <a name="requirements"></a>Požadavky
 
@@ -100,9 +103,9 @@ Kromě toho vytváření sestav režimu nebo režimů pro každý typ sestavy lz
 |-------------|---------------------|---------------------|
 |**_CrtSetReportMode**|\<crtdbg.h>|\<errno.h>|
 
-Další informace o kompatibilitě naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
 
-**Knihovny:** Ladicí verze [funkce knihovny CRT](../../c-runtime-library/crt-library-features.md) pouze.
+**Knihovna** Ladit verze pouze [funkcí knihoven CRT](../../c-runtime-library/crt-library-features.md) .
 
 ## <a name="see-also"></a>Viz také:
 
