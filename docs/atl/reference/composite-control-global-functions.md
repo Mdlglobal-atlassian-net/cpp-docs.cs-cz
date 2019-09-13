@@ -18,12 +18,12 @@ f1_keywords:
 helpviewer_keywords:
 - composite controls, global functions
 ms.assetid: 536884cd-e863-4c7a-ab0a-604dc60a0bbe
-ms.openlocfilehash: 58c7fed2d6e95967101e98589a13c114fe2e9a8a
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 525fc01247053a1e2bc993398978cb332262a1a5
+ms.sourcegitcommit: effb516760c0f956c6308eeded48851accc96b92
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69496637"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70927772"
 ---
 # <a name="composite-control-global-functions"></a>Globální funkce složeného ovládacího prvku
 
@@ -156,18 +156,18 @@ ATLAPI AtlAxCreateControl(
 *lpszName*<br/>
 Ukazatel na řetězec, který má být předán ovládacímu prvku. Musí být formátován jedním z následujících způsobů:
 
-- Identifikátor ProgID, například "MSCAL. Calendar. 7 "
+- Identifikátor ProgID, například`"MSCAL.Calendar.7"`
 
-- CLSID jako {8E27C92B-1264-101C-8A2F-040224009C02}
+- Identifikátor CLSID, jako např.`"{8E27C92B-1264-101C-8A2F-040224009C02}"`
 
-- Adresa URL jako<http://www.microsoft.com>""
+- Adresa URL jako`"<https://www.microsoft.com>"`
 
-- Odkaz na aktivní dokument, jako je například "File://\\\Documents\MyDoc.doc"
+- Odkaz na aktivní dokument, jako např.`"file://\\\Documents\MyDoc.doc"`
 
-- Fragment kódu HTML, jako je například "MSHTML\<: HTML\<> tělo > Toto je řádek textu\</body >\</HTML >"
+- Fragment kódu HTML, jako např.`"MSHTML:\<HTML>\<BODY>This is a line of text\</BODY>\</HTML>"`
 
    > [!NOTE]
-   > "MSHTML:" musí předcházet fragment HTML, aby byl označený jako datový proud MSHTML.
+   > `"MSHTML:"`musí předcházet fragment HTML, aby byl označený jako datový proud MSHTML.
 
 *hWnd*<br/>
 pro Zpracuje okno, ke kterému bude ovládací prvek připojen.
@@ -208,18 +208,18 @@ ATLAPI AtlAxCreateControlEx(
 *lpszName*<br/>
 Ukazatel na řetězec, který má být předán ovládacímu prvku. Musí být formátován jedním z následujících způsobů:
 
-- Identifikátor ProgID, například "MSCAL. Calendar. 7 "
+- Identifikátor ProgID, například`"MSCAL.Calendar.7"`
 
-- CLSID jako {8E27C92B-1264-101C-8A2F-040224009C02}
+- Identifikátor CLSID, jako např.`"{8E27C92B-1264-101C-8A2F-040224009C02}"`
 
-- Adresa URL jako<http://www.microsoft.com>""
+- Adresa URL jako`"<https://www.microsoft.com>"`
 
-- Odkaz na aktivní dokument, jako je například "File://\\\Documents\MyDoc.doc"
+- Odkaz na aktivní dokument, jako např.`"file://\\\Documents\MyDoc.doc"`
 
-- Fragment kódu HTML, jako je například "MSHTML\<: HTML\<> tělo > Toto je řádek textu\</body >\</HTML >"
+- Fragment kódu HTML, jako např.`"MSHTML:\<HTML>\<BODY>This is a line of text\</BODY>\</HTML>"`
 
    > [!NOTE]
-   > "MSHTML:" musí předcházet fragment HTML, aby byl označený jako datový proud MSHTML.
+   > `"MSHTML:"`musí předcházet fragment HTML, aby byl označený jako datový proud MSHTML.
 
 *hWnd*<br/>
 pro Zpracuje okno, ke kterému bude ovládací prvek připojen.
@@ -267,18 +267,18 @@ ATLAPI AtlAxCreateControlLic(
 *lpszName*<br/>
 Ukazatel na řetězec, který má být předán ovládacímu prvku. Musí být formátován jedním z následujících způsobů:
 
-- Identifikátor ProgID, například "MSCAL. Calendar. 7 "
+- Identifikátor ProgID, například`"MSCAL.Calendar.7"`
 
-- CLSID jako {8E27C92B-1264-101C-8A2F-040224009C02}
+- Identifikátor CLSID, jako např.`"{8E27C92B-1264-101C-8A2F-040224009C02}"`
 
-- Adresa URL jako<http://www.microsoft.com>""
+- Adresa URL jako`"<https://www.microsoft.com>"`
 
-- Odkaz na aktivní dokument, jako je například "File://\\\Documents\MyDoc.doc"
+- Odkaz na aktivní dokument, jako např.`"file://\\\Documents\MyDoc.doc"`
 
-- Fragment kódu HTML, jako je například "MSHTML\<: HTML\<> tělo > Toto je řádek textu\</body >\</HTML >"
+- Fragment kódu HTML, jako např.`"MSHTML:\<HTML>\<BODY>This is a line of text\</BODY>\</HTML>"`
 
    > [!NOTE]
-   > "MSHTML:" musí předcházet fragment HTML, aby byl označený jako datový proud MSHTML.
+   > `"MSHTML:"`musí předcházet fragment HTML, aby byl označený jako datový proud MSHTML.
 
 *hWnd*<br/>
 Zpracuje okno, ke kterému bude ovládací prvek připojen.
@@ -321,18 +321,18 @@ ATLAPI AtlAxCreateControlLicEx(
 *lpszName*<br/>
 Ukazatel na řetězec, který má být předán ovládacímu prvku. Musí být formátován jedním z následujících způsobů:
 
-- Identifikátor ProgID, například "MSCAL. Calendar. 7 "
+- Identifikátor ProgID, například`"MSCAL.Calendar.7"`
 
-- CLSID jako {8E27C92B-1264-101C-8A2F-040224009C02}
+- Identifikátor CLSID, jako např.`"{8E27C92B-1264-101C-8A2F-040224009C02}"`
 
-- Adresa URL jako<http://www.microsoft.com>""
+- Adresa URL jako`"<https://www.microsoft.com>"`
 
-- Odkaz na aktivní dokument, jako je například "File://\\\Documents\MyDoc.doc"
+- Odkaz na aktivní dokument, jako např.`"file://\\\Documents\MyDoc.doc"`
 
-- Fragment kódu HTML, jako je například "MSHTML\<: HTML\<> tělo > Toto je řádek textu\</body >\</HTML >"
+- Fragment kódu HTML, jako např.`"MSHTML:\<HTML>\<BODY>This is a line of text\</BODY>\</HTML>"`
 
    > [!NOTE]
-   > "MSHTML:" musí předcházet fragment HTML, aby byl označený jako datový proud MSHTML.
+   > `"MSHTML:"`musí předcházet fragment HTML, aby byl označený jako datový proud MSHTML.
 
 *hWnd*<br/>
 Zpracuje okno, ke kterému bude ovládací prvek připojen.

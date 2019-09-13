@@ -6,10 +6,10 @@ helpviewer_keywords:
 - cl.exe compiler, setting options
 ms.assetid: 69809cfb-a38a-4035-b154-283a61938df8
 ms.openlocfilehash: a8b203c94d4a5af28837627fda1b8e1631dfb0c0
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.sourcegitcommit: 7babce70714242cf498ca811eec3695fad3abd03
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/03/2019
+ms.lasthandoff: 09/11/2019
 ms.locfileid: "70220484"
 ---
 # <a name="compiler-warnings-that-are-off-by-default"></a>Upozornění kompilátoru, která jsou ve výchozím nastavení vypnutá
@@ -42,8 +42,8 @@ Následující upozornění jsou ve výchozím nastavení vypnuta v aplikaci Vis
 
 |||
 |-|-|
-|[C4061](../error-messages/compiler-warnings/compiler-warning-level-4-c4061.md) (úroveň 4)|enumerátor*Identifier*v přepínači výčtu Enum není explicitně zpracovánpopiskem Case.|
-|[C4062](../error-messages/compiler-warnings/compiler-warning-level-4-c4062.md) (úroveň 4)|enumerátor*Identifier*v přepínači výčtu enum se nezpracovává.|
+|[C4061](../error-messages/compiler-warnings/compiler-warning-level-4-c4061.md) (úroveň 4)|enumerátor*Identifier*v přepínači výčtu Enum není explicitně zpracován popiskem*case.*|
+|[C4062](../error-messages/compiler-warnings/compiler-warning-level-4-c4062.md) (úroveň 4)|enumerátor*Identifier*v přepínači výčtu enum se nezpracovává *.*|
 | [C4165](../error-messages/compiler-warnings/compiler-warning-level-1-c4165.md) (úroveň 1) | Hodnota HRESULT se převádí na bool; Opravdu to chcete? |
 | [C4191](../error-messages/compiler-warnings/compiler-warning-level-3-c4191.md) (úroveň 3)|'*Operator*': nebezpečný převod z '*type_of_expression*' na '*type_required*'|
 |[C4242](../error-messages/compiler-warnings/compiler-warning-level-4-c4242.md) (úroveň 4)|'*Identifier*': převod z '*typ1*' na '*typ2*', možná ztráta dat|
@@ -89,11 +89,11 @@ Následující upozornění jsou ve výchozím nastavení vypnuta v aplikaci Vis
 |C4587 (úroveň 1)|'*anonymous_structure*': Změna chování: konstruktor už se nevolá implicitně|
 |C4588 (úroveň 1)|'*anonymous_structure*': Změna chování: destruktor už se nevolá implicitně|
 |[C4596](../error-messages/compiler-warnings/c4596.md) (úroveň 4)|'*Identifier*': neplatný kvalifikovaný název v deklaraci člena <sup>14,3</sup> <sup>Perm</sup>|
-|C4598 (úroveň 1 a úroveň 3)|' #include '*záhlaví*' ': číslo hlavičky v předkompilované hlavičce neodpovídá aktuální kompilaci na této pozici <sup>14,3</sup>|
-|C4599 (úroveň 3)|'*možnost* *path*': číslo argumentu příkazového řádku neodpovídá předkompilované hlavičce <sup>14,3</sup>|
+|C4598 (úroveň 1 a úroveň 3)|' #include '*záhlaví*' ' *: číslo hlavičky v předkompilované* hlavičce neodpovídá aktuální kompilaci na této pozici <sup>14,3</sup>|
+|C4599 (úroveň 3)|'*možnost* *path*': číslo argumentu příkazového *řádku neodpovídá předkompilované* hlavičce <sup>14,3</sup>|
 |C4605 (úroveň 1)|/D*makro*je zadané na aktuálním příkazovém řádku, ale při sestavení předkompilované hlavičky se nezadalo.|
 |[C4608](../error-messages/compiler-warnings/compiler-warning-level-3-c4608.md) (úroveň 3)|'*union_member*' již byl inicializován jiným členem Union v seznamu inicializátorů, '*union_member*' <sup>Perm</sup>|
-|[C4619](../error-messages/compiler-warnings/compiler-warning-level-3-c4619.md) (úroveň 3)|#pragma upozornění: neexistuje žádné upozornění číslo.|
+|[C4619](../error-messages/compiler-warnings/compiler-warning-level-3-c4619.md) (úroveň 3)|#pragma upozornění: neexistuje žádné upozornění*číslo.*|
 |[C4623](../error-messages/compiler-warnings/compiler-warning-level-4-c4623.md) (úroveň 4)|'derived class': výchozí konstruktor nelze generovat, protože výchozí konstruktor základní třídy je nedostupný|
 |[C4625](../error-messages/compiler-warnings/compiler-warning-level-4-c4625.md) (úroveň 4)|'derived class': kopírovací konstruktor nelze generovat, protože kopírovací konstruktor základní třídy je nedostupný|
 |[C4626](../error-messages/compiler-warnings/compiler-warning-level-4-c4626.md) (úroveň 4)|'derived class': operátor přiřazení nelze generovat, protože operátor přiřazení základní třídy je nedostupný|
@@ -109,14 +109,14 @@ Následující upozornění jsou ve výchozím nastavení vypnuta v aplikaci Vis
 |[C4710](../error-messages/compiler-warnings/compiler-warning-level-4-c4710.md) (úroveň 4)|'*Function*': funkce není vložena|
 |[C4738](../error-messages/compiler-warnings/compiler-warning-level-3-c4738.md) (úroveň 3)|ukládání 32bitového plovoucího výsledku do paměti, možná ztráta|
 |[C4746](../error-messages/compiler-warnings/compiler-warning-c4746.md)|nestálý přístup k*výrazu*podléhá nastavení/volatile:\<ISO&#124;MS >; zvažte použití vnitřních funkcí __iso_volatile_load/Store.|
-|C4749 (úroveň 4)|podmíněně podporováno: OffsetOf použito pro typ, který není standard-layout|
+|C4749 (úroveň 4)|podmíněně podporováno: OffsetOf použito*pro typ,* který není standard-layout|
 |C4767 (úroveň 4)|název oddílu '*symbol*' je delší než 8 znaků a linker bude zkrácen.|
 |C4768 (úroveň 3)|atributy __declspec před specifikací propojení se ignorují.|
 |C4774 (úroveň 4)|'*String*': formátovací řetězec očekávaný v *čísle* argumentu není řetězcový literál.|
 |C4777 (úroveň 4)|'*Function*': formátovací řetězec '*řetězec*' vyžaduje argument typu '*typ1*', ale *číslo* argumentu variadické má typ '*typ2*'|
 |C4786 (úroveň 3)|'*symbol*': název objektu byl zkrácen na znaky '*Number*' v ladicích informacích|
 | [C4800](../error-messages/compiler-warnings/compiler-warning-level-3-c4800.md) (úroveň 4) | Implicitní převod z*typu*na bool Možné ztráty informací <sup>16,0</sup> |
-|[C4820](../error-messages/compiler-warnings/compiler-warning-level-4-c4820.md) (úroveň 4)|odsazeníbajtů, které se přidalo po sestavení '*MEMBER_NAME*'|
+|[C4820](../error-messages/compiler-warnings/compiler-warning-level-4-c4820.md) (úroveň 4)|odsazení*bajtů,* které se přidalo po sestavení '*MEMBER_NAME*'|
 | [C4822](../error-messages/compiler-warnings/compiler-warning-level-1-c4822.md) (úroveň 1) | '*Member*': členská funkce lokální třídy nemá tělo |
 |C4826 (úroveň 2)|Převod z '*typ1*' na '*typ2*' je rozšířen o znaménko. To může způsobit neočekávané chování modulu runtime.|
 |C4837 (úroveň 4)|zjistil se trigraph:?? *znak*nahrazen*znakem*|
@@ -142,8 +142,8 @@ Následující upozornění jsou ve výchozím nastavení vypnuta v aplikaci Vis
 |C5029 (úroveň 4)|používá se nestandardní rozšíření: atributy zarovnání C++ v se použijí jenom na proměnné, datové členy a typy značek.|
 |C5031 (úroveň 4)|upozornění #pragma (pop): pravděpodobně neshoda, stav upozornění na vyjímání stavu vloženo v jiném souboru <sup>14,1</sup>|
 |C5032 (úroveň 4)|zjištěno upozornění #pragma (push) bez odpovídajícího #pragma upozornění (pop) <sup>14,1</sup>|
-|C5034|Použití vnitřních vnitřních objektůzpůsobí, že *funkce* Function se zkompiluje jako kód hosta <sup>15,3</sup> .|
-|C5035|použití funkce Function způsobí, že funkce Function se zkompiluje jako kód hosta <sup>15,3</sup> .|
+|C5034|použití*vnitřních vnitřních objektů*způsobí, že *funkce* Function se zkompiluje jako kód hosta <sup>15,3</sup> .|
+|C5035|použití*funkce Function* *způsobí, že funkce Function se* zkompiluje jako kód hosta <sup>15,3</sup> .|
 |C5036 (úroveň 1)|při kompilaci s/Hybrid: x86arm64 '*typ1*' do '*typ2*' <sup>15,3</sup> ' – převod ukazatele na funkci vararg|
 |[C5038](../error-messages/compiler-warnings/c5038.md) (úroveň 4)|datový člen*člen1*se inicializuje po datovém členu '*member2*' <sup>15,3</sup>|
 |C5039 (úroveň 4)|'*Function*': ukazatel nebo odkaz na potenciálně vyvolání funkce předaný do extern funkce jazyka C v rámci-EHC. Pokud tato funkce vyvolá výjimku, může dojít k nedefinovanému chování. <sup>15.5</sup>|

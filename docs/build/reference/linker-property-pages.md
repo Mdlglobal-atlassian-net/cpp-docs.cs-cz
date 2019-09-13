@@ -1,18 +1,18 @@
 ---
 title: Stránky vlastností linkeru
-ms.date: 7/24/2019
+ms.date: 07/24/2019
 ms.topic: article
 ms.assetid: 7e7671e5-a35a-4e67-9bdb-661d75c4d11e
-ms.openlocfilehash: 17880d50ae012b640cb83f3766883ab2b1bcbe73
-ms.sourcegitcommit: 7b039b5f32f6c59be6c6bb1cffafd69c3bfadd35
+ms.openlocfilehash: 55fcefd826ec6ecb153adad495e21ce97aa432f1
+ms.sourcegitcommit: effb516760c0f956c6308eeded48851accc96b92
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68537599"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70927705"
 ---
 # <a name="linker-property-pages"></a>Stránky vlastností linkeru
 
-Následující vlastnosti jsou nalezeny v části**vlastnosti** >  **projektu** > **vlastnosti** > konfigurace**linker**. Další informace o linkeru naleznete v tématu [CL vyvolá](cl-invokes-the-linker.md) Možnosti linkeru a [linkeru](linker-options.md).
+Následující vlastnosti jsou nalezeny v části**vlastnosti** >  **projektu** > **vlastnosti** > konfigurace**linker**. Další informace o linkeru naleznete v tématu [CL vyvolá Možnosti linkeru](cl-invokes-the-linker.md) a [linkeru](linker-options.md).
 
 ## <a name="general-property-page"></a>Obecná stránka vlastností
 
@@ -26,7 +26,7 @@ Vytiskne zprávy o průběhu linkeru.
 
 **Vlastnit**
 
-- Nenastaveno – bez podrobností
+- **Nenastaveno** – bez podrobností
 - **Zobrazit všechny zprávy o průběhu** – zobrazí všechny zprávy o průběhu. 
 - **Pro prohledávané knihovny** – zobrazí zprávy o průběhu, které označují pouze prohledávané knihovny.
 - **O skládání COMDAT během optimalizovaného propojování** – zobrazí informace o skládání COMDAT během optimalizovaného propojování.
@@ -48,7 +48,7 @@ Možnost [/nologo](nologo-suppress-startup-banner-linker.md) zabraňuje zobrazen
 
 ### <a name="ignore-import-library"></a>Ignorovat knihovnu importu
 
-Tato vlastnost oznamuje linkeru, že neodkazuje žádný z výstupů. lib vygenerovaných z tohoto sestavení do libovolného závislého projektu. To umožňuje systému projektu zpracovávat soubory. dll, které při sestavení nevytvářejí soubor. lib. Pokud projekt závisí na jiném projektu, který vytváří knihovnu DLL, systém projektu automaticky propojí soubor. lib vytvořený tímto podřízeným projektem. To nemusí být potřeba pro projekty, které vytvářejí knihovny COM DLL nebo knihovny DLL, které jsou jen pro prostředky; Tyto knihovny DLL nemají smysluplné exporty. Pokud knihovna DLL neobsahuje žádné exporty, linker negeneruje soubor. lib. Pokud na disku není k dispozici žádný soubor export. lib a systém projektu sdělí linkeru, aby provedl propojení s touto (chybějící) knihovnou DLL, odkaz se nezdařil. K vyřešení tohoto problému použijte vlastnost **Ignorovat knihovnu import** . Když je nastaveno na **Ano**, systém projektu ignoruje přítomnost nebo absence daného souboru. lib a způsobí, že každý projekt, který závisí na tomto projektu, nebude propojen s neexistujícím souborem. lib.
+Tato vlastnost oznamuje linkeru, že neodkazuje žádný z výstupů. lib vygenerovaných z tohoto sestavení do libovolného závislého projektu. Umožňuje systému projektu zpracovávat soubory. dll, které při sestavení nevytvářejí soubor. lib. Pokud projekt závisí na jiném projektu, který vytváří knihovnu DLL, systém projektu automaticky propojí soubor. lib vytvořený tímto podřízeným projektem. Tato vlastnost může být zbytečná v projektech, které vytváří knihovny COM DLL nebo knihovny DLL s pouze prostředky, protože tyto knihovny DLL nemají smysluplné exporty. Pokud knihovna DLL neobsahuje žádné exporty, linker negeneruje soubor. lib. Není-li k dispozici žádný soubor export. lib a systém projektu přikáže linkeru, aby provedl propojení s chybějící knihovnou DLL, odkaz se nezdařil. K vyřešení tohoto problému použijte vlastnost **Ignorovat knihovnu import** . Když je nastaveno na **Ano**, systém projektu ignoruje přítomnost nebo nepřítomnost souboru. lib a způsobí, že každý projekt, který závisí na tomto projektu, nebude propojen s neexistujícím souborem. lib.
 
 Chcete-li programově získat přístup k <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.IgnoreImportLibrary%2A>této vlastnosti, přečtěte si téma.
 
@@ -60,7 +60,7 @@ Chcete-li programově získat přístup k <xref:Microsoft.VisualStudio.VCProject
 
 ### <a name="per-user-redirection"></a>Přesměrování podle uživatele
 
-Registrace v aplikaci Visual Studio se tradičně provedla v registru HKEY_CLASSES_ROOT (HKCR). V případě systému Windows Vista a novějších operačních systémů je pro přístup k HKCR nutné spustit aplikaci Visual Studio v režimu zvýšeného oprávnění. Vývojáři nechtějí vždy spouštět v režimu zvýšené úrovně, ale stále musí fungovat s registrací. Přesměrování vázané na uživatele umožňuje registraci bez nutnosti spuštění v tomto režimu.
+Registrace v aplikaci Visual Studio se tradičně provedla v registru HKEY_CLASSES_ROOT (HKCR). V případě systému Windows Vista a novějších operačních systémů je pro přístup k HKCR nutné spustit aplikaci Visual Studio v režimu zvýšeného oprávnění. Vývojáři nechtějí vždycky spouštět v režimu zvýšené úrovně, ale pořád musí fungovat s registrací. Přesměrování vázané na uživatele umožňuje registraci bez nutnosti spuštění v režimu zvýšené úrovně.
 
 Přesměrování dle uživatele vynutí přesměrování zápisu do HKCR na HKEY\_aktuálního\_uživatele (HKCU). Pokud je přesměrování pro jednotlivé uživatele vypnuté, může způsobit [chybu sestavení projektu PRJ0050](../../error-messages/tool-errors/project-build-error-prj0050.md) , když se program pokusí zapisovat do HKCR.
 
@@ -72,11 +72,11 @@ Umožňuje uživateli přepsat cestu ke knihovně prostředí. ([/LIBPATH](libpa
 
 Určuje, zda se mají propojit soubory. lib, které jsou vytvářeny závislými projekty. Obvykle je vhodné propojit soubory. lib, ale nemusí se jednat o případ některých knihoven DLL.
 
-Můžete také zadat soubor. obj zadáním názvu souboru a relativní cesty, například. \\. \MyLibProject\MyObjFile.obj". Pokud zdrojový kód pro soubor. obj #includes předkompilovanou hlavičku, například PCH. h, pak je soubor PCH. obj umístěný ve stejné složce jako MyObjFile. obj a Vy musíte také přidat soubor PCH. obj jako další závislost.
+Můžete také zadat soubor. obj zadáním názvu souboru a relativní cesty, například. \\. \MyLibProject\MyObjFile.obj". Pokud zdrojový kód souboru. obj #includes předkompilovanou hlavičku, například PCH. h, pak je soubor PCH. obj umístěn ve stejné složce jako MyObjFile. obj. Také je nutné přidat soubor PCH. obj jako další závislost.
 
 ### <a name="use-library-dependency-inputs"></a>Použít vstupy závislosti knihoven
 
-Určuje, zda se při propojování výstupů knihoven závislostí projektu použijí vstupy nástroje Librarian spíše než samotný soubor knihovny. Ve velkém projektu, když závislý projekt vytvoří soubor. lib, je přírůstkové propojení zakázáno. Pokud existuje mnoho závislých projektů, které vytvářejí soubory. lib, sestavení aplikace může trvat dlouhou dobu. Pokud je tato vlastnost nastavena na **hodnotu Ano**, projektový systém odkazuje v souborech. obj pro. knihovny vytvořených závislými projekty, čímž umožňuje přírůstkové propojení.
+Určuje, zda budou použity vstupy pro nástroj Librarian namísto samotného souboru knihovny při propojování výstupů knihoven závislostí projektu. Ve velkém projektu, když závislý projekt vytvoří soubor. lib, je přírůstkové propojení zakázáno. Pokud existuje mnoho závislých projektů, které vytvářejí soubory. lib, sestavení aplikace může trvat dlouhou dobu. Pokud je tato vlastnost nastavena na **hodnotu Ano**, projektový systém odkazuje v souborech. obj pro. knihovny vytvořených závislými projekty a umožňuje přírůstkové propojení.
 
 Informace o tom, jak získat přístup k stránce vlastností **obecného** linkeru, naleznete v tématu [Nastavení vlastností kompilátoru a sestavení v sadě C++ Visual Studio](../working-with-project-properties.md).
 
@@ -86,7 +86,7 @@ Určuje, zda má linker zobrazit ukazatel průběhu ukazující, jaké procento 
 
 ### <a name="prevent-dll-binding"></a>Zabránit vazbě knihoven DLL
 
-[/ALLOWBIND](allowbind-prevent-dll-binding.md): v záhlaví knihovny DLL nejsou nastaveny žádné bity, které označují, že se k souboru BIND. exe nepovoluje svázat. Je možné, že nebudete mít vazbu na knihovnu DLL, pokud byla digitálně podepsaná (vazba zruší platnost podpisu).
+[/ALLOWBIND](allowbind-prevent-dll-binding.md): v hlavičce knihovny DLL nejsou nastaveny žádné bity, které označují, že není možné svázat image. Je možné, že nebudete mít vazbu na knihovnu DLL, pokud byla digitálně podepsaná (vazba zruší platnost podpisu).
 
 ### <a name="treat-linker-warning-as-errors"></a>Zpracovávat upozornění linkeru jako chyby
 
@@ -94,12 +94,12 @@ Určuje, zda má linker zobrazit ukazatel průběhu ukazující, jaké procento 
 
 ### <a name="force-file-output"></a>Vynutit výstup souboru
 
-Možnost [/Force](force-force-file-output.md) přikáže linkeru, aby vytvořil soubor. exe nebo knihovnu DLL i v případě, že se na symbol odkazuje, ale není definován nebo je definován násobek. Může vytvořit neplatný soubor. exe.
+Možnost [/Force](force-force-file-output.md) přikáže linkeru, aby vytvořil soubor. exe nebo knihovnu DLL i v případě, že se na symbol odkazuje, ale není definován, nebo je definován násobek. Může vytvořit neplatný soubor. exe.
 
 **Vlastnit**
 
 - **Enabled** –/Force bez argumentů předpokládá vícenásobné i nevyřešené.
-- **Vynásobit definovaný symbol pouze** pomocí parametru/Force: Multiple k vytvoření výstupního souboru, bez ohledu na to, zda propojení nalezne více než jednu definici pro symbol.
+- **Vynásobit definovaný symbol pouze** pomocí parametru/Force: Multiple k vytvoření výstupního souboru, a to i v případě, že odkaz vyhledá více než jednu definici pro symbol.
 - **Pouze nedefinovaný symbol** – k vytvoření výstupního souboru, bez ohledu na to, zda odkaz najde nedefinovaný symbol, použijte příkaz/Force: unresolveed. /FORCE: nevyřešeno je ignorováno, pokud je symbol vstupního bodu nevyřešený.
 
 ### <a name="create-hot-patchable-image"></a>Vytvořit bitovou kopii s aktivní opravou
@@ -129,7 +129,7 @@ Možnost [/NODEFAULTLIB](nodefaultlib-ignore-libraries.md) přikáže linkeru, a
 
 ### <a name="ignore-specific-default-libraries"></a>Ignorovat specifické výchozí knihovny
 
-Určuje jeden nebo více názvů výchozích knihoven, které se mají ignorovat. více knihoven oddělte středníkem. (/NODEFAULTLIB: [název; název;...])
+Určuje jeden nebo více názvů výchozích knihoven, které se mají ignorovat. Více knihoven oddělte středníkem. (/NODEFAULTLIB: [název; název;...])
 
 ### <a name="module-definition-file"></a>Soubor definice modulu
 
@@ -236,10 +236,10 @@ Možnost [/Subsystem](subsystem-specify-subsystem.md) oznamuje operačnímu syst
 
 **Vlastnit**
 
-- Nenastaveno-není nastaven žádný subsystém.
+- **Nenastaveno** -není nastaven žádný subsystém.
 - **Konzola** – aplikace v režimu znaků Win32 Konzolové aplikace jsou v operačním systému přiděleny konzolou. Je-li definována Main nebo wmain, je konzola výchozím nastavením.
 - **Systém Windows** -aplikace nevyžaduje konzolu, pravděpodobně proto, že vytváří vlastní okna pro interakci s uživatelem. Je-li definována hodnota WinMain nebo wWinMain, je výchozím systémem systém WINDOWS.
-- Ovladače nativního zařízení pro systém Windows NT. Pokud je zadáno/DRIVER: WDM, NATIVNÍ je výchozí hodnota.
+- Ovladače **nativního** zařízení pro systém Windows NT. Pokud je zadáno/DRIVER: WDM, NATIVNÍ je výchozí hodnota.
 - Aplikace **rozhraní EFI** – aplikace EFI.
 - Ovladač **spouštěcí služby EFI** – ovladač spouštěcí služby EFI
 - **EFI ROM** – EFI ROM
@@ -276,11 +276,11 @@ Možnost [/TSAWARE](tsaware-create-terminal-server-aware-application.md) nastav�
 
 ### <a name="swap-run-from-cd"></a>Prohodit běh z CD
 
-Možnost [/SWAPRUN](swaprun-load-linker-output-to-swap-file.md) určuje, že operační systém nejprve zkopíruje výstup linkeru do odkládacího souboru a pak z něj spustí bitovou kopii. Toto je funkce systému Windows NT 4,0 (a novější). Když zadáte **CD** , operační systém zkopíruje image na vyměnitelném disku do stránkovacího souboru a načte ho.
+Možnost [/SWAPRUN](swaprun-load-linker-output-to-swap-file.md) určuje, že operační systém nejprve zkopíruje výstup linkeru do odkládacího souboru a pak z něj spustí bitovou kopii. Tato možnost je funkce systému Windows NT 4,0 (a novější). Když zadáte **CD** , operační systém zkopíruje image na vyměnitelném disku do stránkovacího souboru a načte ho.
 
 ### <a name="swap-run-from-network"></a>Prohození spouštění ze sítě
 
-Možnost [/SWAPRUN](swaprun-load-linker-output-to-swap-file.md) určuje, že operační systém nejprve zkopíruje výstup linkeru do odkládacího souboru a pak z něj spustí bitovou kopii. Toto je funkce systému Windows NT 4,0 (a novější). Je-li zadán parametr **net** , bude operační systém nejprve kopírovat binární obrázek ze sítě do odkládacího souboru a načíst jej z něj. Tato možnost je užitečná pro spuštěné aplikace v síti.
+Možnost [/SWAPRUN](swaprun-load-linker-output-to-swap-file.md) určuje, že operační systém nejprve zkopíruje výstup linkeru do odkládacího souboru a pak z něj spustí bitovou kopii. Tato možnost je funkce systému Windows NT 4,0 (a novější). Je-li zadán parametr **net** , bude operační systém nejprve kopírovat binární obrázek ze sítě do odkládacího souboru a načíst jej z něj. Tato možnost je užitečná pro spuštěné aplikace v síti.
 
 ### <a name="driver"></a>Faktorů
 
@@ -288,7 +288,7 @@ Pomocí možnosti linkeru [/Driver](driver-windows-nt-kernel-mode-driver.md) mů
 
 **Vlastnit**
 
-- Nenastaveno-výchozí nastavení ovladače.
+- **Nenastaveno** -výchozí nastavení ovladače.
 - Ovladač **ovladače**
 - **Pouze** /Driver: v linkeru způsobí, že LINKER přidá IMAGE_FILE_UP_SYSTEM_ONLY bit do vlastností ve výstupní hlavičce a určí, že se jedná o ovladač JEDNOPROCESOROVÉHO (up). Operační systém odmítne načíst ovladač do systému s více procesory (MP).
 - **WDM** -/Driver: WDM způsobí, že LINKER nastaví použití parametru bit v poli DLLCHARACTERISTICS volitelného záhlaví.
@@ -297,11 +297,11 @@ Pomocí možnosti linkeru [/Driver](driver-windows-nt-kernel-mode-driver.md) mů
 
 ### <a name="references"></a>Odkazy
 
-[/Opt](opt-optimizations.md): ref eliminuje funkce nebo data, která nejsou nikdy odkazována v době, kdy/OPT: NOREF udržuje funkce nebo data, která nejsou nikdy odkazována. 
+[/Opt](opt-optimizations.md): ref eliminuje funkce nebo data, která nejsou nikdy odkazována, zatímco/OPT: NOREF udržuje funkce nebo data, která nejsou nikdy odkazována.
 
 ### <a name="enable-comdat-folding"></a>Povolit skládání sekvencí COMDAT
 
-Pomocí [/opt](opt-optimizations.md): ICF\[= iterace] proveďte identické skládání COMDAT. 
+Pomocí [/opt](opt-optimizations.md): ICF\[= iterace] proveďte identické skládání COMDAT.
 
 ### <a name="function-order"></a>Pořadí funkcí
 
@@ -413,7 +413,7 @@ Kvalifikátor **Unload** oznamuje funkci opožděného načítání, aby podporo
 
 ### <a name="nobind-delay-loaded-dll"></a>Knihovna DLL pro odložené načtení zpoždění vazby
 
-Kvalifikátor **IAT** přikáže linkeru, aby NEzahrnoval s možností vazby v konečné imagi. Výchozím nastavením je vytvoření IAT s možností vazby pro odložené načítání knihoven DLL. ([/DELAY](delay-delay-load-import-settings.md): NENÍ VÁZÁNO)
+Kvalifikátor IAT přikáže linkeru, aby nezahrnoval s **možností vazby v** konečné imagi. Výchozím nastavením je vytvoření IAT s možností vazby pro odložené načítání knihoven DLL. ([/DELAY](delay-delay-load-import-settings.md): NENÍ VÁZÁNO)
 
 ### <a name="import-library"></a>Importovat knihovnu
 

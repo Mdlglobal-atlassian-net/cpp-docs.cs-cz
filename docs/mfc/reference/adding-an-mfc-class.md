@@ -1,38 +1,32 @@
 ---
 title: Přidání třídy knihovny MFC
-ms.date: 11/04/2016
+ms.date: 09/06/2019
 f1_keywords:
 - vc.codewiz.classes.adding.mfc
 helpviewer_keywords:
 - classes [MFC], adding MFC
 - MFC, adding classes
 ms.assetid: 9a96b67f-40bf-43d4-8872-2f8dfc5404f1
-ms.openlocfilehash: 1cc3dc734917da46af99e67da40fe243941102e3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 266940092e68a76f2ac485a81ac6ac90b02ee0ac
+ms.sourcegitcommit: 3caf5261b3ea80d9cf14038c116ba981d655cd13
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62296771"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70907644"
 ---
 # <a name="adding-an-mfc-class"></a>Přidání třídy knihovny MFC
 
-Chcete-li přidat třídy odvozené od třídy knihovny Microsoft Foundation Class (MFC) do svého projektu, použijte **přidat třídu** příkaz k dispozici v [zobrazení tříd](/visualstudio/ide/viewing-the-structure-of-code). Zadejte název nové třídy, vyberte základní třídy a vyberte ID dialogových oken, ke kterému je přidružena (pokud existuje). Kód průvodce vytvoří soubor hlaviček a soubor implementace a přidá je do projektu.
+Chcete-li přidat třídy odvozené od tříd knihovny knihovny MFC (Microsoft Foundation Class) do projektu, použijte tlačítko **Přidat třídu** v [Průvodci třídou](mfc-class-wizard.md). Zadejte název nové třídy, vyberte základní třídu a vyberte ID dialogového okna, ke kterému je přidruženo (pokud existuje). Průvodce vytvoří hlavičkový soubor a implementační soubor a přidá je do projektu.
 
 > [!NOTE]
->  Třídy knihovny MFC lze přidat do aplikace knihovny ATL modelu COM, pokud jste původně [aplikace vytvořené pomocí podpory knihovny MFC](../../atl/reference/mfc-support-in-atl-projects.md). Můžete také přidat třídy knihovny MFC pro projekty Win32, které mají podporu knihovny MFC.
+>  Třídy knihovny MFC lze přidat do aplikace ATL COM, pokud jste původně [vytvořili aplikaci s podporou knihovny MFC](../../atl/reference/mfc-support-in-atl-projects.md). Třídy knihovny MFC můžete také přidat do projektů Win32, které mají podporu knihovny MFC.
 
 ### <a name="to-add-an-mfc-class-to-your-project"></a>Přidání třídy knihovny MFC do projektu
 
-1. Ze zobrazení tříd klikněte pravým tlačítkem na název projektu. Klikněte na tlačítko **přidat** a potom klikněte na tlačítko **přidat třídu** otevřít [přidat třídu](../../ide/add-class-dialog-box.md) dialogové okno.
-
-1. V podokně šablony vyberte **třídy knihovny MFC** a stiskněte klávesu **přidat** tlačítko.
-
-1. Definovat nastavení pro novou třídu v [Průvodce třídami MFC](../../mfc/reference/mfc-add-class-wizard.md) dialogové okno.
-
-1. Klikněte na tlačítko **Dokončit** zavřete průvodce a zobrazit novou třídu v zobrazení tříd. Můžete také zobrazit soubory vytvářené průvodcem v **Průzkumníka řešení**.
+Z Zobrazení tříd klikněte pravým tlačítkem myši na název projektu. Klikněte na **Průvodce třídami** a pak klikněte na **Přidat třídu** . otevře se dialogové okno [Přidat třídu knihovny MFC](mfc-add-class-wizard.md) . Pomocí **Průvodce třídou** přidejte obslužné rutiny zpráv nebo nové metody.
 
 ## <a name="see-also"></a>Viz také:
 
 [Přidání funkce pomocí Průvodců kódem](../../ide/adding-functionality-with-code-wizards-cpp.md)<br/>
 [Přidání třídy](../../ide/adding-a-class-visual-cpp.md)<br/>
-[Přehled tříd](../../mfc/class-library-overview.md)
+[Přehled třídy](../../mfc/class-library-overview.md)

@@ -10,33 +10,33 @@ helpviewer_keywords:
 - functions [MFC], handler
 - messages [MFC], Windows
 ms.assetid: 19412a8b-2c38-4502-81da-13c823c7e36c
-ms.openlocfilehash: d60ae52225ddd993c1768d0b5ce1989ab0192e45
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4f512c3b9a7fce5cddd582fa774742d2b1ac0967
+ms.sourcegitcommit: 3caf5261b3ea80d9cf14038c116ba981d655cd13
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62358229"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70907430"
 ---
 # <a name="handlers-for-standard-windows-messages"></a>Obslužné rutiny pro standardní zprávy Windows
 
-Výchozí obslužné rutiny pro standardní zprávy Windows (**WM_**) jsou předdefinovány v třídě `CWnd`. Knihovna tříd základů názvy pro tyto obslužné rutiny na název zprávy. Například obslužné rutiny pro **WM_PAINT** zprávy je deklarován v `CWnd` jako:
+Výchozí obslužné rutiny pro standardní zprávy systému Windows (**WM_** ) jsou `CWnd`předdefinované ve třídě. Knihovna tříd je založena na názvech těchto obslužných rutin. Například obslužná rutina pro zprávu **WM_PAINT** je deklarována v `CWnd` podobě:
 
 `afx_msg void OnPaint();`
 
-**Afx_msg** – klíčové slovo navrhuje vliv C++ **virtuální** – klíčové slovo rozlišuje obslužné rutiny z jiných `CWnd` členské funkce. Upozorňujeme, že tyto funkce nejsou ve skutečnosti virtuální; Místo toho implementaci prostřednictvím mapy zpráv. Mapy zpráv závisí výhradně na standardní makra preprocesoru, nikoli na rozšíření jazyka C++. **Afx_msg** – klíčové slovo se překládá na prázdné místo po předběžném zpracování.
+Klíčové slovo **afx_msg** navrhuje vliv C++ klíčového slova **Virtual** pomocí rozlišení obslužných rutin od ostatních `CWnd` členských funkcí. Všimněte si ale, že tyto funkce nejsou ve skutečnosti virtuální; místo toho jsou implementovány prostřednictvím map zpráv. Mapy zpráv závisí výhradně na standardních makrech preprocesoru, nikoli na žádném rozšíření C++ jazyka. Klíčové slovo **afx_msg** se po předzpracování převede na prázdné místo.
 
-K přepsání obslužná rutina definovaná v základní třídě, stačí Definujte funkci s stejný prototyp v odvozené třídě a aby položka mapy zpráv pro obslužnou rutinu. Vaše obslužná rutina "přepisuje" Obslužná rutina se stejným názvem v některém z základních třídách této třídy.
+Pro přepsání obslužné rutiny definované v základní třídě stačí definovat funkci se stejným prototypem v odvozené třídě a vytvořit položku mapování zpráv pro obslužnou rutinu. Vaše obslužná rutina "Přepisuje" všechny obslužné rutiny se stejným názvem v kterékoli ze základních tříd vaší třídy.
 
-V některých případech se vaše obslužná rutina by měly volat obslužnou rutinu přepsané v základní třídě tak základní třídy a Windows může pracovat ve zprávě. Pokud voláte obslužnou rutinu základní třídy v přepsání závisí na okolnostech. Někdy musíte nejprve volat obslužnou rutinu základní třídy a někdy naposledy. Někdy je volat obslužnou rutinu základní třídy podmíněně, pokud jste vybrali možnost zpracovávat zprávy sami. V některých případech by měla volat obslužnou rutinu základní třídy a pak podmíněně spustit vlastní kód obslužné rutiny, v závislosti na hodnotu nebo stav vrácený obslužnou rutinu základní třídy.
+V některých případech by obslužná rutina měla volat přepsanou obslužnou rutinu v základní třídě, aby základní třídy a systém Windows mohly pracovat se zprávou. Místo volání obslužné rutiny základní třídy v přepsání závisí na okolnostech. Někdy je nutné zavolat rutinu základní třídy jako první a někdy poslední. Někdy je volána rutina základní třídy, pokud se rozhodnete Nezpracovávat zprávu sami. Někdy byste měli zavolat obslužnou rutinu základní třídy a pak podmíněně spustit vlastní kód obslužné rutiny v závislosti na hodnotě nebo stavu vráceném obslužnou rutinou základní třídy.
 
 > [!CAUTION]
->  Není bezpečné upravit argumentů předaných do obslužné rutiny, pokud máte v úmyslu předat obslužnou rutinu základní třídy. Například můžete mít tendenci k úpravě *nChar* argument `OnChar` obslužná rutina (k převodu na velká písmena, například). Toto chování je poměrně skrytého, ale pokud potřebujete k dosažení tohoto efektu `CWnd` členskou funkci `SendMessage` místo.
+>  V případě, že je v úmyslu předat obslužné rutině základní třídy, není bezpečné upravovat argumenty předané obslužné rutině. Můžete například zvážit úpravu argumentu `OnChar` *nchar* obslužné rutiny (pro převod na velká písmena, například). Toto chování je poměrně zakryté, ale pokud k tomu potřebujete, použijte `CWnd` místo toho členskou funkci. `SendMessage`
 
-Jak se určují správný způsob, jak přepsat danou zprávu, když v okně Vlastnosti zapíše kostru obslužné rutiny pro danou zprávu – `OnCreate` obslužné rutiny pro **WM_CREATE**, například – výkresy ho ve formuláři Doporučené přepsané členskou funkci. V následujícím příkladu se doporučuje, aby obslužná rutina nejprve volat obslužnou rutinu základní třídy a pokračovat pouze za předpokladu, že nevrací hodnotu -1.
+Jak určíte správný způsob, jak přepsat danou zprávu, když [Průvodce třídou](reference/mfc-class-wizard.md) zapíše kostru funkce obslužné rutiny pro danou zprávu – `OnCreate` obslužná rutina pro **WM_CREATE**, například, se náčrtuje ve formě Doporučené přepsaná členská funkce Následující příklad doporučuje, aby obslužná rutina nejprve volala obslužnou rutinu základní třídy a pokračovala pouze za podmínkou, že nevrátí-1.
 
 [!code-cpp[NVC_MFCMessageHandling#3](../mfc/codesnippet/cpp/handlers-for-standard-windows-messages_1.cpp)]
 
-Podle úmluvy názvy tyto obslužné rutiny začínají předponou "Na". Některé z těchto obslužných rutin nepřebírají žádné argumenty, zatímco jiné přijímají několik. Některé také mít návratový typ jiný než **void**. Výchozích obslužných rutin pro všechny **WM_** zprávy jsou dokumentovány v článku *odkaz knihovny MFC* jako členské funkce třídy `CWnd` jejichž názvy začínají řetězcem "Na". V deklaraci členské funkce `CWnd` mají předponu **afx_msg**.
+Podle konvence názvy těchto obslužných rutin začínají předponou "on". Některé z těchto obslužných rutin nevyužívají žádné argumenty, zatímco jiné vybírají několik. Některé mají také návratový typ jiný než **void**. Výchozí obslužné rutiny pro všechny zprávy **WM_** jsou zdokumentovány v *Referenci knihovny MFC* jako členské funkce `CWnd` třídy, jejichž názvy začínají na "on". Deklarace členské funkce v `CWnd` mají předponu **afx_msg**.
 
 ## <a name="see-also"></a>Viz také:
 

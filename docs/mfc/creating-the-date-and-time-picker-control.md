@@ -5,34 +5,34 @@ helpviewer_keywords:
 - DateTimePicker control [MFC], creating
 - CDateTimeCtrl class [MFC], creating
 ms.assetid: 764ec2fb-98cd-478b-a5f2-d63f0bb12279
-ms.openlocfilehash: b3dd04d917667ff04001a455263d2a2f4af9bf9c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: de9baf63577d163b82da1c5977a6ccba6539c73a
+ms.sourcegitcommit: 3caf5261b3ea80d9cf14038c116ba981d655cd13
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62242390"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70907592"
 ---
 # <a name="creating-the-date-and-time-picker-control"></a>Vytvoření ovládacího prvku pro výběr data a času
 
-Vytvoření prvku Výběr data a času závisí na tom, jestli jsou pomocí ovládacího prvku v dialogovém okně nebo vytváří v okně nondialog.
+Způsob vytvoření ovládacího prvku pro výběr data a času závisí na tom, jestli ovládací prvek používáte v dialogovém okně nebo když ho vytvoříte v nedialogovém okně.
 
 ### <a name="to-use-cdatetimectrl-directly-in-a-dialog-box"></a>Použití atributu CDateTimeCtrl přímo v dialogovém okně
 
-1. V editoru dialogového okna přidáte do šablony prostředku dialogového okna k datu a ovládacího prvku pro výběr času. Zadejte své ID ovládacího prvku.
+1. V editoru dialogového okna přidejte ovládací prvek pro výběr data a času do prostředku šablony dialogového okna. Zadejte ID ovládacího prvku.
 
-1. Zadejte všechny styly potřeby pomocí dialogového okna Vlastnosti prvku Výběr data a času.
+1. Určete všechny požadované styly pomocí dialogového okna vlastnosti ovládacího prvku pro výběr data a času.
 
-1. Použití [Průvodce přidáním členské proměnné](../ide/adding-a-member-variable-visual-cpp.md) přidat členskou proměnnou typu [atributu CDateTimeCtrl](../mfc/reference/cdatetimectrl-class.md) s vlastností ovládacího prvku. Tento člen můžete použít k volání `CDateTimeCtrl` členské funkce.
+1. Pomocí [Průvodce přidáním členské proměnné](../ide/adding-a-member-variable-visual-cpp.md) přidejte členskou proměnnou typu [atributu CDateTimeCtrl](../mfc/reference/cdatetimectrl-class.md) s vlastností Control. Tento člen můžete použít k volání `CDateTimeCtrl` členských funkcí.
 
-1. Použijte okno Vlastnosti pro mapování obslužné rutiny funkce ve třídě dialogového okna pro ovládací prvek výběru libovolné datum čas [oznámení](../mfc/processing-notification-messages-in-date-and-time-picker-controls.md) potřebujete zpracovávat zprávy (viz [mapování zpráv na funkce](../mfc/reference/mapping-messages-to-functions.md)).
+1. Použijte [Průvodce třídami](reference/mfc-class-wizard.md) k mapování funkcí obslužných rutin ve třídě dialogového okna pro všechny [oznamovací](../mfc/processing-notification-messages-in-date-and-time-picker-controls.md) zprávy ovládacího prvku Výběr data a času, které je třeba zpracovat (viz [mapování zpráv na funkce](../mfc/reference/mapping-messages-to-functions.md)).
 
-1. V [OnInitDialog](../mfc/reference/cdialog-class.md#oninitdialog), nastavte pro všechny další styly `CDateTimeCtrl` objektu.
+1. V [OnInitDialog](../mfc/reference/cdialog-class.md#oninitdialog)nastavte další styly pro `CDateTimeCtrl` objekt.
 
-### <a name="to-use-cdatetimectrl-in-a-nondialog-window"></a>V okně nondialog použití atributu CDateTimeCtrl
+### <a name="to-use-cdatetimectrl-in-a-nondialog-window"></a>Použití atributu CDateTimeCtrl v nedialogovém okně
 
-1. Deklarujte ve třídě zobrazení nebo okna ovládacího prvku.
+1. Deklarujte ovládací prvek ve třídě zobrazení nebo okna.
 
-1. Volání ovládacího prvku [vytvořit](../mfc/reference/ctabctrl-class.md#create) členské funkce, případně v [OnInitialUpdate](../mfc/reference/cview-class.md#oninitialupdate), může být co nejdříve jako nadřazené okno [OnCreate](../mfc/reference/cwnd-class.md#oncreate) funkci obslužné rutiny (Pokud jste vytvoření podtřídy ovládacího prvku). Nastavení stylů pro ovládací prvek.
+1. Zavolejte členskou funkci [Create](../mfc/reference/ctabctrl-class.md#create) ovládacího prvku, případně v [OnInitialUpdate](../mfc/reference/cview-class.md#oninitialupdate), případně jako funkci obslužné rutiny [Create](../mfc/reference/cwnd-class.md#oncreate) nadřazeného okna (Pokud se jedná o podtřídu ovládacího prvku). Nastavte styly ovládacího prvku.
 
 ## <a name="see-also"></a>Viz také:
 

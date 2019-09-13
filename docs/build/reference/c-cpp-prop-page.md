@@ -1,14 +1,14 @@
 ---
 title: Vlastnosti CC++ /Project (Visual Studio)
-ms.date: 7/18/2019
+ms.date: 07/18/2019
 ms.topic: article
 ms.assetid: 16375038-4917-4bd0-9a2a-26343c1708b7
-ms.openlocfilehash: 91edf30ef0e5f38088727c0280d2edf07cdebfa5
-ms.sourcegitcommit: 7b039b5f32f6c59be6c6bb1cffafd69c3bfadd35
+ms.openlocfilehash: 2f7fe025eb69fc1977713c638eef0742074bd9fb
+ms.sourcegitcommit: effb516760c0f956c6308eeded48851accc96b92
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68537571"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70927752"
 ---
 # <a name="cc-property-pages"></a>Stránky vlastnostíC++ C/a
 
@@ -314,7 +314,7 @@ Potlačí nebo povolí jazyková rozšíření. Nastaví [/za](za-ze-disable-lan
 
 Povolí nebo potlačí režim shody. Nastaví [/Permissive-](permissive-standards-conformance.md).
 
-### <a name="treat-wchart-as-built-in-type"></a>Považovat WChar_t za vestavěný typ
+### <a name="treat-wchar_t-as-built-in-type"></a>Považovat WChar_t za vestavěný typ
 
 Je-li tento parametr zadán, typ wchar_t se změní na nativní typ, který se mapuje na __wchar_t stejným způsobem jako krátká mapování na __int16. Parametr [/Zc: wchar_t](zc-wchar-t-wchar-t-is-native-type.md) je ve výchozím nastavení zapnutý.
 

@@ -1,6 +1,6 @@
 ---
 title: rand
-ms.date: 1/02/2018
+ms.date: 01/02/2018
 apiname:
 - rand
 apilocation:
@@ -26,16 +26,16 @@ helpviewer_keywords:
 - rand function
 - pseudorandom numbers
 - numbers, generating pseudorandom
-ms.openlocfilehash: 868c6239ac1b86dfc9ac72cc8cc83d1ba3002b4a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: 407640c5f00ae54c43450abcbbe8c2e3ba0fcf95
+ms.sourcegitcommit: effb516760c0f956c6308eeded48851accc96b92
+ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62357769"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70927531"
 ---
 # <a name="rand"></a>rand
 
-Pseudonáhodná čísla vygeneruje pomocí algoritmu dobře známé a plně reprodukovatelné. Více programově bezpečné verze této funkce je k dispozici. Zobrazit [rand_s –](rand-s.md). Generované čísel **rand** nejsou kryptograficky zabezpečené. Pro další kryptograficky zabezpečené generování náhodných čísel, pomocí [rand_s –](rand-s.md) nebo funkce deklarované v C++ standardní knihovny v [ \<náhodné >](../../standard-library/random.md).
+Vygeneruje pseudonáhodných číslo pomocí dobře známého a plně reprodukovatelného algoritmu. K dispozici je programově zabezpečená verze této funkce; viz [rand_s](rand-s.md). Čísla generovaná pomocí funkce **Rand** nejsou kryptograficky zabezpečena. Pro kryptograficky zabezpečené generování náhodných čísel použijte [rand_s](rand-s.md) nebo funkce deklarované ve standardní knihovně v C++ [ \<části náhodný >](../../standard-library/random.md).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -45,13 +45,13 @@ int rand( void );
 
 ## <a name="return-value"></a>Návratová hodnota
 
-**rand** vrátí pseudonáhodná čísla, jak je popsáno výše. Není vrácena žádná chyba.
+**Rand** Vrátí pseudonáhodných číslo, jak je popsáno výše. Nevrátila se žádná chybová zpráva.
 
 ## <a name="remarks"></a>Poznámky
 
-**Rand** funkce vrací pseudonáhodných celé číslo v rozsahu 0 až **RAND_MAX** (32767). Použití [srand –](srand.md) funkce pro generátor pseudonáhodných čísel před voláním **rand**.
+Funkce **Rand** vrátí celé číslo pseudonáhodných v rozsahu 0 až **RAND_MAX** (32767). Před voláním funkce **Rand**použijte funkci [srand](srand.md) k osazení generátoru pseudonáhodných.
 
-**Rand** funkce generuje posloupnost dobře známé a není vhodná pro použití jako kryptografické funkce. Pro další kryptograficky zabezpečené generování náhodných čísel, pomocí [rand_s –](rand-s.md) nebo funkce deklarované v C++ standardní knihovny v [ \<náhodné >](../../standard-library/random.md). Informace o čem je problém s **rand** a jak \<náhodné > řeší tyto nedostatky, najdete v tomto videu s názvem [rand považovat za škodlivých](https://channel9.msdn.com/Events/GoingNative/2013/rand-Considered-Harmful).
+Funkce **NÁHČÍSLO** vygeneruje dobře známou sekvenci a není vhodná pro použití jako kryptografická funkce. Pro kryptograficky zabezpečené generování náhodných čísel použijte [rand_s](rand-s.md) nebo funkce deklarované ve standardní knihovně v C++ [ \<části náhodný >](../../standard-library/random.md). Informace o tom, co je pro **funkci NÁHČÍSLO** chybné \<, a o tom, jak náhodná > řeší tyto nedostatky, najdete v tomto videu s názvem [Rand považovaný za škodlivý](https://channel9.msdn.com/Events/GoingNative/2013/rand-Considered-Harmful).
 
 ## <a name="requirements"></a>Požadavky
 
@@ -59,7 +59,7 @@ int rand( void );
 |-------------|---------------------|
 |**rand**|\<stdlib.h>|
 
-Další informace o kompatibilitě, naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Příklad
 

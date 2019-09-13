@@ -1,6 +1,6 @@
 ---
 title: Stránky vlastností kompilátoru MIDL
-ms.date: 7/24/2019
+ms.date: 07/24/2019
 ms.topic: article
 ms.assetid: 57498a01-fccc-4a0e-a036-6ff702f83126
 f1_keywords:
@@ -47,12 +47,12 @@ f1_keywords:
 - VC.Project.VCMidlTool.RedirectOutputAndErrors
 - VC.Project.VCMidlTool.MinimumTargetSystem
 - vc.project.AdditionalOptionsPage
-ms.openlocfilehash: 0113fbd68d7687236b91b098ead2ac6b8338fee9
-ms.sourcegitcommit: af4ab63866ed09b5988ed53f1bb6996a54f02484
+ms.openlocfilehash: e9c9cb75d326642c86405992a4bf9d7da9e578df
+ms.sourcegitcommit: effb516760c0f956c6308eeded48851accc96b92
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/05/2019
-ms.locfileid: "68787065"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70927693"
 ---
 # <a name="midl-property-pages"></a>MIDL – stránky vlastností
 
@@ -110,7 +110,7 @@ Určuje výchozí znakový typ kompilátoru jazyka C, který bude použit ke kom
 
 **Vlastnit**
 
-- Podepsaný podpisem
+- Podepsaný **podpisem**
 - **Unsigned** – bez znaménka
 - **ASCII** – ASCII
 
@@ -120,7 +120,7 @@ Určuje, které prostředí se má cílit ([/ENV](/windows/win32/midl/-env) arm3
 
 **Vlastnit**
 
-- Nenastaveno-Win32
+- **Nenastaveno** -Win32
 - **Microsoft Windows 32 – bit** – Win32
 - **Microsoft Windows 64 – bit v Itanium** -ia64
 - **Microsoft Windows ARM** – ARM
@@ -270,7 +270,7 @@ Určuje úroveň balení struktur v cílovém systému (/ZpN).
 
 **Vlastnit**
 
-- Nenastavené – nenastavené
+- **Nenastavené** – nenastavené
 - **1 bajt** – Zp1
 - **2 bajt** – Zp2
 - **4 bajt** – Zp4

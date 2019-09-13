@@ -264,12 +264,12 @@ helpviewer_keywords:
 - CListCtrl [MFC], SubItemHitTest
 - CListCtrl [MFC], Update
 ms.assetid: fe08a1ca-4b05-4ff7-a12a-ee4c765a2197
-ms.openlocfilehash: bd511cf574d0f710134de4768ac27a8be1248e95
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: c8f1b8a9ed0ca8437ba40e77b47448d1bb209d20
+ms.sourcegitcommit: effb516760c0f956c6308eeded48851accc96b92
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69505618"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70927921"
 ---
 # <a name="clistctrl-class"></a>CListCtrl – třída
 
@@ -1003,7 +1003,7 @@ Tato metoda implementuje chování makra Win32, [ListView_GetBkImage](/windows/w
         if (m_myListCtrl.GetBkImage(&bki) && (bki.ulFlags == LVBKIF_SOURCE_NONE))
         {
             m_myListCtrl.SetBkImage(
-                _T("http://www.microsoft.com/library/images/gifs/homepage/microsoft.gif"),
+                _T("https://www.microsoft.com/library/images/gifs/homepage/microsoft.gif"),
                 TRUE);
         }
 ```
@@ -2028,7 +2028,7 @@ Délka vyrovnávací paměti, na kterou odkazuje *lpszText*.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Verze vracející celočíselná vrátí délku načteného řetězce.
+Verze **vracející celočíselná vrátí délku** načteného řetězce.
 
 Verze vracející `CString` text vrátí text položky.
 

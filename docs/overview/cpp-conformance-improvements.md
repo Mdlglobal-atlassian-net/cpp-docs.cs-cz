@@ -5,12 +5,12 @@ description: Microsoft C++ v aplikaci Visual Studio pokračuje v plném souladu 
 ms.technology: cpp-language
 author: mikeblome
 ms.author: mblome
-ms.openlocfilehash: aeaaab704706bee575e3ae44726522cd04c17433
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: 8eae104d21de271f11c727262939121c20050092
+ms.sourcegitcommit: effb516760c0f956c6308eeded48851accc96b92
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70222312"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70927949"
 ---
 # <a name="c-conformance-improvements-in-visual-studio"></a>Vylepšení shody C++ se sadou Visual Studio
 
@@ -123,7 +123,7 @@ int main()
 
 ### <a name="lambda-closures"></a>Uzavření lambda
 
-V jazyce C++ 14 nejsou typy uzavření lambda literály. Primárním pořadím tohoto pravidla je, že výraz lambda nesmí být přiřazen `constexpr` proměnné. Následující kód zkompiluje bez chyb v aplikaci Visual Studio 2017, ale v aplikaci Visual Studio 2019 vyvolá *C2127: l: Neplatná inicializace entity constexpr s*nekonstantním výrazem:
+V jazyce C++ 14 nejsou typy uzavření lambda literály. Primárním pořadím tohoto pravidla je, že výraz lambda nesmí být přiřazen `constexpr` proměnné. Následující kód zkompiluje bez chyb v aplikaci Visual Studio 2017, ale v aplikaci Visual Studio 2019 vyvolá *C2127: l: Neplatná inicializace entity constexpr s nekonstantním výrazem*:
 
 ```cpp
 int main()
@@ -268,7 +268,7 @@ int main() {
 
 ### <a name="binary-expressions-with-different-enum-types"></a>Binární výrazy s různými typy výčtů
 
-Možnost použít běžné aritmetické převody na operandech, kde jedna je výčtového typu a druhá je jiný typ výčtu nebo typ s plovoucí desetinnou čárkou je zastaralá v C++ 20 ([P1120R0](http://wg21.link/p1120r0)). V aplikaci Visual Studio 2019 verze 16,2 a novější následující kód vytvoří upozornění úrovně 4, pokud je povolená možnost [/std: c + + nejnovější](../build/reference/std-specify-language-standard-version.md) kompilátor:
+Možnost použít běžné aritmetické převody na operandech, kde jedna je výčtového typu a druhá je jiný typ výčtu nebo typ s plovoucí desetinnou čárkou je zastaralá v C++ 20 ([P1120R0](https://wg21.link/p1120r0)). V aplikaci Visual Studio 2019 verze 16,2 a novější následující kód vytvoří upozornění úrovně 4, pokud je povolená možnost [/std: c + + nejnovější](../build/reference/std-specify-language-standard-version.md) kompilátor:
 
 ```cpp
 enum E1 { a };
@@ -290,7 +290,7 @@ int main() {
 
 ### <a name="binary-expressions-with-enumeration-and-floating-point-types"></a>Binární výrazy s typy výčtu a s plovoucí desetinnou čárkou
 
-Možnost použít běžné aritmetické převody na operandech, kde jedna je výčtového typu a druhá je jiný typ výčtu nebo typ s plovoucí desetinnou čárkou je zastaralá v C++ 20 ([P1120R0](http://wg21.link/p1120r0)). Jinými slovy, použití binární operace mezi výčtem a typem s plovoucí desetinnou čárkou je nyní upozornění, když je povolena možnost [/std: c + + nejnovější](../build/reference/std-specify-language-standard-version.md) kompilátor:
+Možnost použít běžné aritmetické převody na operandech, kde jedna je výčtového typu a druhá je jiný typ výčtu nebo typ s plovoucí desetinnou čárkou je zastaralá v C++ 20 ([P1120R0](https://wg21.link/p1120r0)). Jinými slovy, použití binární operace mezi výčtem a typem s plovoucí desetinnou čárkou je nyní upozornění, když je povolena možnost [/std: c + + nejnovější](../build/reference/std-specify-language-standard-version.md) kompilátor:
 
 ```cpp
 enum E1 { a };
@@ -310,7 +310,7 @@ int main() {
 
 ### <a name="equality-and-relational-comparisons-of-arrays"></a>Rovnost a relační porovnání polí
 
-Rovnost a relační porovnání mezi dvěma operandy typu pole jsou zastaralé v C++ 20 ([P1120R0](http://wg21.link/p1120r0)). Jinými slovy, porovnání operace mezi dvěma poli (bez ohledu na pořadí a rozsah podobnosti) je nyní upozornění. Počínaje verzí Visual Studio 2019 verze 16,2 následující kód vytvoří *C5056: operator ' = = ': zastaralé pro typy polí* , pokud je povolena možnost [/std: c + + nejnovější](../build/reference/std-specify-language-standard-version.md) kompilátor:
+Rovnost a relační porovnání mezi dvěma operandy typu pole jsou zastaralé v C++ 20 ([P1120R0](https://wg21.link/p1120r0)). Jinými slovy, porovnání operace mezi dvěma poli (bez ohledu na pořadí a rozsah podobnosti) je nyní upozornění. Počínaje verzí Visual Studio 2019 verze 16,2 následující kód vytvoří *C5056: operator ' = = ': zastaralé pro typy polí* , pokud je povolena možnost [/std: c + + nejnovější](../build/reference/std-specify-language-standard-version.md) kompilátor:
 
 ```cpp
 int main() {
@@ -744,7 +744,7 @@ parametr zprávy pro `static_assert` je nepovinný. Další informace najdete v 
 
 ### <a name="c17-fallthrough-attribute"></a>C++ 17: `[[fallthrough]]` atribut
 
-V **/std:** v režimu `[[fallthrough]]` c++ 17 lze atribut použít v kontextu příkazů Switch jako pomocný parametr kompilátoru, který je určen k navýšení chování. Tento atribut brání kompilátoru v vydávání upozornění v takových případech. Další informace naleznete v tématu [formuling for \[ \[fallthrough\] \] Attribute](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0188r0.pdf).
+V **/std:** v režimu `[[fallthrough]]` c++ 17 lze atribut použít v kontextu příkazů Switch jako pomocný parametr kompilátoru, který je určen k navýšení chování. Tento atribut brání kompilátoru v vydávání upozornění v takových případech. Další informace naleznete v tématu [formuling for \[ \[\] fallthrough\] Attribute](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0188r0.pdf).
 
 ### <a name="generalized-range-based-for-loops"></a>Generalizovaná smyčka for – založený na rozsahu
 
@@ -778,7 +778,7 @@ Je možné, že je nyní v jedné deklaraci uložena hodnota s jednotlivými ná
 
 ### <a name="construction-rules-for-enum-class-values"></a>Pravidla vytváření pro `enum class` hodnoty
 
-Nyní je implicitní nebo nezúžený převod z nadřízeného typu výčtu na samotný výčet, pokud jeho definice nezavádí enumerátor a zdroj používá syntaxi Inicializace seznamu. Další informace najdete v tématu [pravidla vytváření pro hodnoty](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0138r2.pdf) a výčty [](../cpp/enumerations-cpp.md#no_enumerators)výčtových tříd.
+Nyní je implicitní nebo nezúžený převod z nadřízeného typu výčtu na samotný výčet, pokud jeho definice nezavádí enumerátor a zdroj používá syntaxi Inicializace seznamu. Další informace najdete v tématu [pravidla vytváření pro hodnoty](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0138r2.pdf) a [výčty](../cpp/enumerations-cpp.md#no_enumerators)výčtových tříd.
 
 ### <a name="capturing-this-by-value"></a>Zachycení `*this` podle hodnoty
 
@@ -2109,7 +2109,7 @@ struct B : A {
 
 ### <a name="inline-variables"></a>Vložené proměnné
 
-Statické datové členy constexpr jsou nyní implicitně vloženy, což znamená, že jejich deklarace v rámci třídy je nyní jejich definicí. Použití definice mimo řádek pro statický datový člen constexpr je redundantní a teď je zastaralé. V aplikaci Visual Studio 2017 verze 15,5 platí, že pokud je použit přepínač **/std: c++ 17** , teď následující kód vytvoří upozornění C5041 *' size ': definice mimo řádek pro statický datový člen constexpr není potřebná a v c++ 17 je*zastaralá:
+Statické datové členy constexpr jsou nyní implicitně vloženy, což znamená, že jejich deklarace v rámci třídy je nyní jejich definicí. Použití definice mimo řádek pro statický datový člen constexpr je redundantní a teď je zastaralé. V aplikaci Visual Studio 2017 verze 15,5 platí, že pokud je použit přepínač **/std: c++ 17** , teď následující kód vytvoří upozornění C5041 *' size ': definice mimo řádek pro statický datový člen constexpr není potřebná a v c++ 17 je zastaralá*:
 
 ```cpp
 struct X {
@@ -2381,7 +2381,7 @@ Chcete-li chybu opravit, změňte druhý řádek na `using  X = T;`.
 
 instance [__declspec](../cpp/declspec.md) již není povolena na pravé straně definice šablony aliasu. Tento kód byl dříve přijat, ale byl ignorován kompilátorem a nikdy nevede k upozornění zastaralosti při použití aliasu.
 
-Místo toho C++ se dá použít standardní [ \[ \[\] atribut\] ](../cpp/attributes.md) unstared a v systému Visual Studio 2017 verze 15,6. Následující kód teď vytvoří *chybu syntaxe C2760: Neočekávaný token __declspec, očekával se typ specifikátoru typu*:.
+Místo toho C++ se [ \[dá použít\] standardní \[atribut\] ](../cpp/attributes.md) unstared a v systému Visual Studio 2017 verze 15,6. Následující kód teď vytvoří *chybu syntaxe C2760: Neočekávaný token __declspec, očekával se typ specifikátoru typu*:.
 
 ```cpp
 template <typename T>
@@ -2468,7 +2468,7 @@ public:
 
 ### <a name="offsetof-with-constant-expressions"></a>`offsetof`s konstantními výrazy
 
-[OffsetOf](../c-runtime-library/reference/offsetof-macro.md) se tradičně implementoval pomocí makra, které vyžaduje přetypování [reinterpret_cast](../cpp/reinterpret-cast-operator.md). Toto použití je v kontextech, které vyžadují konstantní výraz, neplatných, ale C++ u kompilátoru společnosti Microsoft je tradičně povoluje. Makro, které je dodáváno jako součást standardní knihovny, správně používá vnitřní ( **__builtin_offsetof**) kompilátor, ale mnoho lidí použilo štych makra k definování vlastního `offsetof`. `offsetof`
+[OffsetOf](../c-runtime-library/reference/offsetof-macro.md) se tradičně implementoval pomocí makra, které vyžaduje [přetypování reinterpret_cast](../cpp/reinterpret-cast-operator.md). Toto použití je v kontextech, které vyžadují konstantní výraz, neplatných, ale C++ u kompilátoru společnosti Microsoft je tradičně povoluje. Makro, které je dodáváno jako součást standardní knihovny, správně používá vnitřní ( **__builtin_offsetof**) kompilátor, ale mnoho lidí použilo štych makra k definování vlastního `offsetof`. `offsetof`
 
 V aplikaci Visual Studio 2017 verze 15,8 kompilátor omezuje oblasti, které se tyto `reinterpret_cast` operátory mohou zobrazit ve výchozím režimu, aby kód pomohly odpovídat standardnímu C++ chování. V rámci [/Permissive-](../build/reference/permissive-standards-conformance.md)jsou omezení ještě přísnější. Použití výsledku `offsetof` v místech, které vyžadují konstantní výrazy, může mít za následek kód, který vydává upozornění C4644, že *použití OffsetOf vzoru založeného na makru v konstantních výrazech je nestandardní; C++ použijte OffsetOf definované ve standardu. místo toho* nebo C2975 *neplatný argument šablony, byl očekáván konstantní výraz v čase kompilace*.
 

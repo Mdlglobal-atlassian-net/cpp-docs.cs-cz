@@ -7,27 +7,27 @@ helpviewer_keywords:
 - message classes [MFC], finding
 - message-map macros
 ms.assetid: bf59fbc8-b222-42d3-b5d3-0a79aa3cb923
-ms.openlocfilehash: d9b9a50062334822f34047b8e22e67541ccaa952
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c50c6fc1134f579859530972dc864103c4e0ebcf
+ms.sourcegitcommit: 3caf5261b3ea80d9cf14038c116ba981d655cd13
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62217855"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70907358"
 ---
 # <a name="where-to-find-message-maps"></a>Kde hledat mapy zpráv
 
-Při vytváření nového kostru aplikace pomocí Průvodce aplikací, Průvodce aplikací zapíše mapy zpráv pro každou třídu cíli příkazu, které vytvoří za vás. To zahrnuje odvozené aplikace, dokumentu, zobrazení a třídy oken s rámečkem. Některé z těchto zprávy maps už máte položky zadané pomocí Průvodce aplikací pro určité zprávy a předdefinovaných příkazů a některé jsou jenom zástupné symboly pro obslužné rutiny, které přidáte.
+Když vytváříte novou kostru aplikace pomocí Průvodce aplikací, Průvodce aplikací zapíše mapu zpráv pro každou třídu cílového příkazu, kterou vytvoří. To zahrnuje vaše odvozené třídy aplikace, dokumentu, zobrazení a oken s rámečkem. Některé z těchto map zpráv již mají položky zadané v Průvodci aplikací pro určité zprávy a předdefinované příkazy a některé jsou pouze zástupné symboly pro obslužné rutiny, které budete přidávat.
 
-Mapování třídy zpráv se nachází v. Soubor CPP pro třídu. Práce s mapami základní zpráv, které vytvoří Průvodce aplikací, použijte v okně Vlastnosti mohli přidat záznamy pro zprávy a příkazy, které bude zpracovávat jednotlivé třídy. Mapování typické zprávy může vypadat následovně, poté, co přidáte některé položky:
+Mapa zpráv třídy je umístěna v. Soubor CPP pro třídu Práce se základními mapami zpráv, které Průvodce aplikací vytvoří, můžete použít [Průvodce třídou](reference/mfc-class-wizard.md) k přidání položek pro zprávy a příkazy, které budou zpracovávat jednotlivé třídy. Typická mapa zpráv může po přidání některých položek vypadat takto:
 
 [!code-cpp[NVC_MFCMessageHandling#1](../mfc/codesnippet/cpp/where-to-find-message-maps_1.cpp)]
 
-Mapy zpráv se skládá z kolekce maker. Dvě makra [BEGIN_MESSAGE_MAP](reference/message-map-macros-mfc.md#begin_message_map) a [END_MESSAGE_MAP](reference/message-map-macros-mfc.md#end_message_map), párování mapování zprávy. Dalších maker, jako například `ON_COMMAND`, vyplňte obsah v mapování zprávy.
+Mapa zpráv se skládá z kolekce maker. Mapa zpráv se dvěma makry, [BEGIN_MESSAGE_MAP](reference/message-map-macros-mfc.md#begin_message_map) a [END_MESSAGE_MAP](reference/message-map-macros-mfc.md#end_message_map). Další makra, například `ON_COMMAND`, vyplňte obsah v mapě zprávy.
 
 > [!NOTE]
->  Makra map zpráv nejsou následuje středníkem.
+>  Makra map zpráv nejsou následována středníkem.
 
-Při použití průvodce Přidat třídu pro vytvoření nové třídy obsahuje mapy zpráv pro třídu. Alternativně můžete vytvořit mapu zpráv ručně pomocí editoru zdrojového kódu.
+Použijete-li Průvodce přidáním třídy k vytvoření nové třídy, bude pro třídu k dispozici mapa zpráv. Případně můžete vytvořit mapu zpráv ručně pomocí editoru zdrojového kódu.
 
 ## <a name="see-also"></a>Viz také:
 

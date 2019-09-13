@@ -1,70 +1,70 @@
 ---
 title: MFC – koncepce
-ms.date: 1/09/2018
+ms.date: 01/09/2018
 f1_keywords:
 - Concepts
-ms.openlocfilehash: 8d021350125acda52bb4ecf3919282cb7bbe52b1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5617051dc700bb1dd594a13627c9e3d01ef9caa9
+ms.sourcegitcommit: effb516760c0f956c6308eeded48851accc96b92
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62239021"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70927907"
 ---
 # <a name="mfc-concepts"></a>MFC – koncepce
 
-Tato část obsahuje rámcové a úlohově zaměřená témata, které vám pomůžou programovat pomocí knihovny Microsoft Foundation Class (MFC).
+Tato část obsahuje koncepční témata a témata založená na úlohách, které vám pomůžou programovat pomocí knihovny Microsoft Foundation Class (MFC).
 
 ## <a name="in-this-section"></a>V tomto oddílu
 
 [Obecná témata MFC](../mfc/general-mfc-topics.md)<br/>
-Tento článek popisuje technické podrobnosti knihovny MFC.
+Popisuje technické podrobnosti knihovny MFC.
 
 [Použití objektů CObject](../mfc/using-cobject.md)<br/>
-Poskytuje odkazy na použití `CObject`, základní třídu pro většinu tříd v knihovně MFC.
+Obsahuje odkazy na použití `CObject`, základní třídu pro většinu tříd v knihovně MFC.
 
 [Kolekce](../mfc/collections.md)<br/>
-Popisuje třídy kolekcí vytvořené z a nevytvořené ze šablon jazyka C++.
+Popisuje třídy kolekcí vytvořené z a nevytvořené z C++ šablon.
 
 [Datum a čas](../atl-mfc-shared/date-and-time.md)<br/>
-Obsahuje odkazy na témata popisující použití data a času s knihovnou MFC.
+Obsahuje odkazy na témata, která pojednávají s použitím data a času s knihovnou MFC.
 
 [Soubory](../mfc/files-in-mfc.md)<br/>
-Tento článek popisuje `CFile` a zpracování souborů v knihovně MFC.
+Popisuje `CFile` a postup zpracování souborů v knihovně MFC.
 
 [Správa paměti (MFC)](../mfc/memory-management.md)<br/>
-Popisuje, jak využít univerzální služby týkající se správy paměti.
+Popisuje, jak využít služby pro obecné účely související se správou paměti.
 
 [Zpracování a mapování zpráv](../mfc/message-handling-and-mapping.md)<br/>
-Popisuje způsob zpracování zprávy a příkazy v rámci rozhraní knihovny MFC a jejich připojení k příslušným obslužným funkcím.
+Popisuje, jak jsou zprávy a příkazy zpracovávány rozhraním MFC a jak je připojit ke svým obslužným funkcím.
 
 [Serializace](../mfc/serialization-in-mfc.md)<br/>
-Vysvětluje mechanizmus serializace, který umožňující objektů zachována i mezi spuštěními vaší aplikace.
+Vysvětluje mechanizmus serializace poskytnutý k tomu, aby bylo možné zachovat objekty mezi spuštěním programu.
 
 ## <a name="related-sections"></a>Související oddíly
 
 [Zpracování výjimek (MFC)](../mfc/exception-handling-in-mfc.md)<br/>
-Vysvětluje mechanismus zpracování výjimek, který je k dispozici v knihovně MFC.
+Vysvětluje mechanismy zpracování výjimek, které jsou k dispozici v knihovně MFC.
 
 [Základy internetového programování v prostředí MFC](../mfc/mfc-internet-programming-basics.md)<br/>
-Tento článek popisuje třídy knihovny MFC, které podporují programování na Internetu.
+Popisuje třídy knihovny MFC, které podporují programování v Internetu.
 
 [Úlohy internetového programování MFC](../mfc/mfc-internet-programming-tasks.md)<br/>
-Popisuje, jak přidat podporu Internetu do vašich aplikací.
+Popisuje, jak přidat podporu Internetu do aplikací.
 
 [Podpora znakových sad Unicode a MBCS](../atl-mfc-shared/unicode-and-multibyte-character-set-mbcs-support.md)<br/>
-Vysvětluje, jak použít MFC a ATL – podpora pro Unicode a vícebajtových znakových sad.
+Vysvětluje, jak používat podporu MFC a ATL pro Unicode a vícebajtové znakové sady.
 
 [MFC COM](../mfc/mfc-com.md)<br/>
-Tento článek popisuje podmnožinu knihovny MFC, která je navržena pro podporu modelu COM, zatímco většina aktivní šablony knihovny (ATL) je určena k programování v modelu.
+Popisuje podmnožinu knihovny MFC, která je navržena pro podporu modelu COM, zatímco většina knihoven ATL (Active Template Library) je navržena pro programování v modelu COM.
 
 [Multithreading s použitím jazyka C++ a prostředí MFC](../parallel/multithreading-with-cpp-and-mfc.md)<br/>
-Popisuje, co jsou procesy a vlákna a přístup knihovny MFC k multithreadingu.
+Popisuje, co jsou procesy a vlákna a popisuje přístup knihovny MFC k multithreadingu.
 
 [Windows Sockets v prostředí MFC](../mfc/windows-sockets.md)<br/>
-Zahrnuje implementaci knihovny MFC rozhraní Windows Sockets.
+Pokrývá implementaci rozhraní Windows Sockets knihovny MFC.
 
-[Odkaz knihovny MFC](../mfc/mfc-desktop-applications.md)<br/>
-Poskytuje referenční materiál pro knihovnu MFC, sadu tříd představující aplikační rozhraní, což je rozhraní napsané pro rozhraní API Windows.
+[MFC – referenční informace](../mfc/mfc-desktop-applications.md)<br/>
+Poskytuje referenční materiál pro knihovnu MFC, sadu tříd, které tvoří aplikační rozhraní, což je rozhraní aplikace napsané pro rozhraní API systému Windows.
 
 [Ukázky knihovny MFC](../overview/visual-cpp-samples.md)<br/>
-Obsahuje odkazy na ukázky, které ukazují, jak použít knihovnu MFC v aplikací klasické pracovní plochy, knihovny DLL, databázových aplikacích, ovládacích prvků, webových aplikací a dalších.
+Obsahuje odkazy na ukázky, které ukazují, jak používat knihovnu MFC v aplikacích klasické pracovní plochy, knihovnách DLL, databázových aplikacích, ovládacích prvcích, webových aplikacích a dalších.

@@ -1,81 +1,81 @@
 ---
-title: Přidání funkce pomocí průvodců kódem (C++)
+title: Přidání funkcí pomocí průvodců kódemC++()
 ms.date: 05/14/2019
 helpviewer_keywords:
 - code wizards [C++]
 ms.assetid: 6afb7ef9-7056-423d-b244-91bb4236d1d7
-ms.openlocfilehash: efced3be3a0bcc7efe16aef1061c4cd9ec1ed21c
-ms.sourcegitcommit: 65ed563a8a1d4d90f872a2a6edcb086f84ec9f77
+ms.openlocfilehash: 360f206ff4dae0b49650e131ccd86ecf9a0ed87d
+ms.sourcegitcommit: 3caf5261b3ea80d9cf14038c116ba981d655cd13
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/06/2019
-ms.locfileid: "66741642"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70907492"
 ---
-# <a name="adding-functionality-with-code-wizards-c"></a>Přidání funkce pomocí průvodců kódem (C++)
+# <a name="adding-functionality-with-code-wizards-c"></a>Přidání funkcí pomocí průvodců kódemC++()
 
-Po vytvoření projektu můžete změnit nebo přidat funkce tohoto projektu. Mezi tyto úlohy patří vytváření nových tříd, přidává nové členské funkce a proměnné a přidání automatizace metody a vlastnosti. Průvodci kódem jsou navržené tak, aby šlo dělat tyto věci.
+Po vytvoření projektu budete chtít změnit nebo přidat do funkce tohoto projektu. Mezi takové úlohy patří vytváření nových tříd, přidávání nových členských funkcí a proměnných a přidání metod a vlastností automatizace. Průvodci kódem jsou navrženi tak, aby umožňovala provádět všechny tyto akce.
 
 > [!NOTE]
-> V aplikaci Visual Studio 2019 odeberou se následující průvodci kódem zřídka používají. Obecné podpory knihovny ATL a MFC nemá žádný vliv, odebrání těchto průvodců. Ukázkový kód pro tyto technologie v Microsoft Docs a úložišti VCSamples GitHub archivuje.
+> Následující zřídka používané průvodce kódem jsou v aplikaci Visual Studio 2019 odebrány. Obecná podpora pro ATL a MFC není ovlivněna odebráním těchto průvodců. Vzorový kód pro tyto technologie je archivován na Microsoft Docs a úložišti GitHubu VCSamples.
 
 - Průvodce komponentami ATL COM+ 1.0
 - Průvodce komponentami ATL Active Server Pages
-- Průvodce zprostředkovatelem ATL OLE DB
+- Průvodce poskytovatelem OLE DB ATL
 - Průvodce stránkou vlastností ATL
-- Průvodce příjemcem ATL OLE DB
-- Příjemce ODBC knihovny MFC
-- Třída knihovny MFC z ovládacího prvku ActiveX
-- Třída knihovny MFC z typu Lib.
+- Průvodce příjemcem OLE DB ATL
+- Příjemce knihovny MFC rozhraní ODBC
+- Třída MFC z ovládacího prvku ActiveX
+- Třída MFC z knihovny typů.
 
 
 > [!NOTE]
->  Teď můžete přidat obslužné rutiny zpráv a mapování zpráv na ně a přepsat virtuální funkce MFC pomocí [okno vlastností](/visualstudio/ide/reference/properties-window).
+>  Můžete přidat obslužné rutiny zpráv a mapovat do nich zprávy a přepsat virtuální funkce knihovny MFC pomocí [Průvodce třídou MFC](../mfc/reference/mfc-class-wizard.md).
 
-## <a name="accessing-c-code-wizards"></a>Přístup k C++ průvodců kódu
+## <a name="accessing-c-code-wizards"></a>Přístup C++ k průvodcům kódu
 
-Existují tři umístění, kam máte přístup C++ průvodců kódu:
+Existují tři umístění, kde můžete získat přístup C++ k průvodcům kódu:
 
-- Na **projektu** nabídky, **přidat novou položku** příkazu můžete zobrazit `Add New Item` dialogové okno, které vám pomůžou při přidávání nové soubory do projektu. **Přidat třídu** příkaz zobrazí [přidat třídu](../ide/add-class-dialog-box.md) dialogové okno, které pak otevřete Průvodce pro každou třídu typů můžete přidat do projektu. **Přidat prostředek** příkaz zobrazí [přidat prostředek](../windows/add-resource-dialog-box.md) dialogové okno, ze kterého můžete vytvořit nebo vybrat prostředek pro přidání do projektu.
+- V nabídce **projekt** lze pomocí příkazu **Přidat novou položku** `Add New Item` vyvolat dialogové okno, které vám pomůže přidat do projektu nové soubory. Příkaz **Přidat třídu** zobrazí dialogové okno [Přidat třídu](../ide/add-class-dialog-box.md) , které v nástroji otevře Průvodce pro každý typ třídy, který můžete přidat do projektu. Pro třídy knihovny MFC použijte [Průvodce třídou MFC](../mfc/reference/mfc-class-wizard.md). V příkazu **Přidat prostředek** se zobrazí dialogové okno [Přidat prostředek](../windows/add-resource-dialog-box.md) , ve kterém můžete vytvořit nebo vybrat prostředek, který chcete přidat do projektu.
 
-   Pokud je zvýraznění třídu nebo rozhraní v projektu v zobrazení tříd **projektu** nabídka zobrazí následující příkazy:
+   Pokud v Zobrazení tříd zvýrazníte třídu nebo rozhraní v projektu, v nabídce **projekt** se zobrazí také následující příkazy:
 
-   - **Implementovat rozhraní** (z třídy ovládacího prvku jenom)
+   - **Implementovat rozhraní** (pouze z třídy ovládacího prvku)
 
    - **Přidat funkci**
 
    - **Přidat proměnnou**
 
-   - **Přidat připojovací bod** (pouze třídy ATL)
+   - **Přidat bod připojení** (Pouze třída ATL)
 
-   - **Přidejte metodu** (z rozhraní jenom)
+   - **Přidat metodu** (jenom z rozhraní)
 
-   - **Přidat vlastnost** (z rozhraní jenom)
+   - **Přidat vlastnost** (jenom z rozhraní)
 
-   - **Přidat událost** (z třídy ovládacího prvku jenom)
+   - **Přidat událost** (pouze z třídy ovládacího prvku)
 
-- V **Průzkumníka řešení**, pravým tlačítkem myši na libovolné složky a kliknutím na **přidat** ze zástupce nabídky vám umožní přidávat nové nebo existující soubory, další složky, položky, tříd, prostředky a webové odkazy na projekt.
+- V **Průzkumník řešení**klikněte pravým tlačítkem myši na libovolnou složku a kliknutím na tlačítko **Přidat** z místní nabídky můžete přidat nové nebo existující soubory, další složky, položky, třídy, prostředky a webové odkazy na projekt.
 
-- Z [okno Zobrazení tříd](/visualstudio/ide/viewing-the-structure-of-code), že kliknete pravým tlačítkem na příslušný uzel a kliknutím na **přidat** ze zástupce v nabídce vám umožní přidávat funkce, proměnné, třídy, vlastnosti, metody, události, rozhraní, body připojení, nebo jiný kód do vašeho projektu.
+- V [okně zobrazení tříd](/visualstudio/ide/viewing-the-structure-of-code)klikněte pravým tlačítkem myši na příslušný uzel a kliknutím na tlačítko **Přidat** z místní nabídky můžete přidat funkce, proměnné, třídy, vlastnosti, metody, události, rozhraní, spojovací body nebo jiný kód do vaší projektem.
 
    > [!NOTE]
-   > Visual Studio neposkytuje průvodce můžete přidat rozhraní do projektu. Můžete přidat rozhraní do projektu knihovny ATL nebo do [přidání podpory knihovny ATL do projektu knihovny MFC](../mfc/reference/adding-atl-support-to-your-mfc-project.md) tak Přidání jednoduchého objektu pomocí [Průvodce jednoduchý objekt knihovny ATL](../atl/reference/atl-simple-object-wizard.md). Můžete také otevřít soubor .idl projektu a vytvořte rozhraní tak, že zadáte:
+   > Visual Studio neposkytuje průvodce pro přidání rozhraní do projektu. Můžete přidat rozhraní do projektu ATL nebo přidat [podporu knihovny ATL do projektu knihovny MFC](../mfc/reference/adding-atl-support-to-your-mfc-project.md) přidáním jednoduchého objektu pomocí [Průvodce jednoduchým objektem ATL](../atl/reference/atl-simple-object-wizard.md). Alternativně otevřete soubor. idl projektu a vytvořte rozhraní zadáním:
 
     ```IDL
     interface IMyInterface {
     };
     ```
 
-   Zobrazit [implementace rozhraní](../ide/implementing-an-interface-visual-cpp.md) a [přidání objektů a ovládacích prvků do projektu ATL](../atl/reference/adding-objects-and-controls-to-an-atl-project.md) Další informace.
+   Další informace naleznete v tématu [implementace rozhraní](../ide/implementing-an-interface-visual-cpp.md) a [Přidání objektů a ovládacích prvků do projektu ATL](../atl/reference/adding-objects-and-controls-to-an-atl-project.md) .
 
-   |Průvodce přístupový kód|Popis|
+   |Průvodce kódem pro přístup z|Popis|
    |-----------------------------|-----------------|
-   |Přidat novou položku|Průvodci kódem přidat novou položku přidat zdrojové soubory do projektu. V případě potřeby další adresáře jsou vytvořeny tak, aby obsahovala soubory, kde se očekává, že modul sestavení projektu je najít. Průvodci kódem, které jsou k dispozici ikona přidání položky patří:<br /><br />-Přidáte zdrojové soubory C++ (.cpp, .h, .idl, .rc, .srf, .def, .rgs).<br />-Přidáte soubory vývojového webového (HTML, ASP, CSS, .xml).<br />-Přidáte nástroj pro soubory a soubory prostředků (.bmp, .cur, ICO, .rct, .sql, txt).<br /><br />Tito průvodci kódu obecně nepožadují žádné informace, ale přidejte soubor do vašeho vývojového stromu. Může přejmenování souboru v okně Vlastnosti.|
-   |Průzkumník řešení|Průvodci kódem, který je k dispozici v Průzkumníku řešení závisí na místě, kde kurzoru při klikněte pravým tlačítkem na položku. Pokud **přidat** možnost se nezobrazí, klikněte pravým tlačítkem na položku, přesuňte ukazatel myši nahoru o jednu úroveň ve stromové struktuře vývoje a zkuste to znovu. Průvodci kódem vždy umístí další kód na příslušné místo ve stromové struktuře vývoj bez ohledu na to kdy je ukazatel myši. Průvodci kódem, které jsou k dispozici z Průzkumníka řešení, patří:<br /><br />-Přidat třídě (otevře **přidat třídu** dialogové okno obsahuje Průvodce kódem).<br />-Přidat prostředek (nové, Import, nebo vlastní).<br />-Přidáte webový odkaz.|
-   |zobrazení tříd|Průvodci kódem, který je k dispozici ze zobrazení tříd, závisí na místě, kde kurzoru při klikněte pravým tlačítkem myši klikněte na položku. Pokud **přidat** možnost se nezobrazí, klikněte pravým tlačítkem myši klikněte na položku, přesuňte ukazatel myši nahoru o jednu úroveň ve stromu tříd a zkuste to znovu. Průvodci kódem vždy umístí další kód na příslušné místo ve stromové struktuře vývoj bez ohledu na to kdy je ukazatel myši. Průvodci kódem, které jsou k dispozici ze zobrazení tříd patří:<br /><br />- [Přidat členskou funkci](../ide/adding-a-member-function-visual-cpp.md).<br />- [Přidat členskou proměnnou](../ide/adding-a-member-variable-visual-cpp.md).<br />- [Přidejte třídu](../ide/adding-a-class-visual-cpp.md).<br />- [Implementovat rozhraní](../ide/implement-interface-wizard.md) (z třídy ovládacího prvku jenom)<br />- [Přidat připojovací bod](../ide/implement-connection-point-wizard.md) (pouze třídy ATL)<br />- [Přidejte metodu](../ide/add-method-wizard.md) (z rozhraní jenom)<br />- [Přidat vlastnost](../ide/names-add-property-wizard.md) (z rozhraní jenom)<br />- [Přidat událost](../ide/add-event-wizard.md) (z třídy ovládacího prvku jenom)<br /><br />Přidat třídu výběr otevře **přidat třídu** dialogové okno, které vám umožňuje přístup ke všem přidat třídu Průvodce kódem.|
+   |Přidat novou položku|Průvodce přidáním nového kódu položky přidá zdrojové soubory do projektu. V případě potřeby jsou vytvořeny další adresáře, aby obsahovaly soubory, které modul pro sestavení projektu očekává, že je najde. Průvodci kódem dostupný z ikony Přidat položku zahrnují:<br /><br />-Přidat C++ zdrojové soubory (. cpp,. h,. idl,. RC,. SRF,. def,. rgs).<br />-Přidat webové vývojové soubory (. html,. ASP,. CSS,. XML).<br />– Přidejte soubory nástrojů a prostředků (. bmp,. měna,. ico,. RCT,. SQL,. txt).<br /><br />Tato průvodce kódem obecně nežádá o žádné informace, ale přidá soubor do stromu vývoje. Tento soubor můžete přejmenovat v okně vlastností.|
+   |Průzkumník řešení|Průvodci kódem dostupnými z Průzkumník řešení závisí na tom, kde se fokus kurzoru nachází po kliknutí pravým tlačítkem myši na položku. Pokud se možnost **Přidat** nezobrazí, když kliknete pravým tlačítkem myši na položku, přesuňte kurzor o jednu úroveň výš ve vývojovém stromu a zkuste to znovu. Průvodce kódem bude vždy umístit další kód do příslušného místa ve vývojovém stromu, bez ohledu na to, kde je kurzor. Průvodci kódem dostupný z Průzkumník řešení zahrnují:<br /><br />-Přidat třídu (otevře se dialogové okno **Přidat třídu** obsahující nové průvodce kódem).<br />-Přidat prostředek (nový, import nebo vlastní).<br />-Přidat webový odkaz.|
+   |zobrazení tříd|Průvodci kódem dostupnými z Zobrazení tříd závisí na tom, kde se fokus kurzoru zobrazí po kliknutí pravým tlačítkem myši na položku. Pokud se možnost **Přidat** nezobrazí, když kliknete pravým tlačítkem myši na položku, přesuňte kurzor o jednu úroveň výš ve stromu tříd a akci opakujte. Průvodce kódem bude vždy umístit další kód do příslušného místa ve vývojovém stromu, bez ohledu na to, kde je kurzor. Průvodci kódem dostupný z Zobrazení tříd zahrnují:<br /><br />- [Přidat členskou funkci](../ide/adding-a-member-function-visual-cpp.md)<br />- [Přidejte členskou proměnnou](../ide/adding-a-member-variable-visual-cpp.md).<br />- [Přidat třídu](../ide/adding-a-class-visual-cpp.md).<br />- [Implementovat rozhraní](../ide/implement-interface-wizard.md) (pouze z třídy ovládacího prvku)<br />- [Přidat bod připojení](../ide/implement-connection-point-wizard.md) (Pouze třída ATL)<br />- [Přidat metodu](../ide/add-method-wizard.md) (jenom z rozhraní)<br />- [Přidat vlastnost](../ide/names-add-property-wizard.md) (jenom z rozhraní)<br />- [Přidat událost](../ide/add-event-wizard.md) (pouze z třídy ovládacího prvku)<br /><br />Výběrem Přidat třídu se otevře dialogové okno **Přidat třídu** , které vám umožní přístup ke všem novým průvodcům přidáním kódu třídy.|
 
 ## <a name="see-also"></a>Viz také:
 
-[Přepisování virtuální funkce](../ide/overriding-a-virtual-function-visual-cpp.md)<br>
-[Procházet vaše C++ kódové základny v sadě Visual Studio](../ide/navigate-code-cpp.md)<br>
-[C++typy projektů v sadě Visual Studio](../build/reference/visual-cpp-project-types.md)<br>
-[Soubor typy vytvořené pro sadu Visual Studio C++ projekty](../build/reference/file-types-created-for-visual-cpp-projects.md)
+[Přepsání virtuální funkce](../ide/overriding-a-virtual-function-visual-cpp.md)<br>
+[Procházení základu C++ kódu v aplikaci Visual Studio](../ide/navigate-code-cpp.md)<br>
+[C++typy projektů v aplikaci Visual Studio](../build/reference/visual-cpp-project-types.md)<br>
+[Typy souborů vytvořených pro projekty sady C++ Visual Studio](../build/reference/file-types-created-for-visual-cpp-projects.md)

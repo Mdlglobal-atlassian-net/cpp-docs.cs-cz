@@ -1,6 +1,6 @@
 ---
 title: CDialog – třída
-ms.date: 11/04/2016
+ms.date: 09/07/2019
 f1_keywords:
 - CDialog
 - AFXWIN/CDialog
@@ -40,12 +40,12 @@ helpviewer_keywords:
 - CDialog [MFC], OnCancel
 - CDialog [MFC], OnOK
 ms.assetid: ca64b77e-2cd2-47e3-8eff-c2645ad578f9
-ms.openlocfilehash: d9969b7dd41dc7a67e21bb2735b1d716bd988d07
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: b07190c70fb11950b25aff45fb10e850c0e81b24
+ms.sourcegitcommit: 3caf5261b3ea80d9cf14038c116ba981d655cd13
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69506878"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70907610"
 ---
 # <a name="cdialog-class"></a>CDialog – třída
 
@@ -97,7 +97,7 @@ Dialogová okna jsou dvou typů: modální a nemodální. Modální dialogové o
 
 Objekt je kombinací šablony dialogového okna `CDialog`a třídy odvozené od třídy. `CDialog` Pomocí editoru dialogových oken vytvořte šablonu dialogového okna a uložte ji do prostředku, pak pomocí Průvodce přidáním třídy vytvořte třídu odvozenou z `CDialog`.
 
-Dialogové okno, podobně jako jakékoli jiné okno, přijímá zprávy ze systému Windows. V dialogovém okně máte zejména zájem o zpracování oznamovacích zpráv z ovládacích prvků v dialogovém okně, protože to je způsob, jakým uživatel komunikuje s vaším dialogovým oknem. Pomocí okno Vlastnosti vyberte, které zprávy chcete zpracovat, a přidejte příslušné položky mapy zpráv a členské funkce obslužné rutiny zpráv do třídy za vás. Stačí pouze psát kód specifický pro aplikaci ve funkcích členů obslužné rutiny.
+Dialogové okno, podobně jako jakékoli jiné okno, přijímá zprávy ze systému Windows. V dialogovém okně máte zejména zájem o zpracování oznamovacích zpráv z ovládacích prvků v dialogovém okně, protože to je způsob, jakým uživatel komunikuje s vaším dialogovým oknem. Pomocí [Průvodce třídami](mfc-class-wizard.md) vyberte, které zprávy chcete zpracovat, a přidejte příslušné položky mapování zpráv a členské funkce obslužné rutiny zpráv do třídy za vás. Stačí pouze psát kód specifický pro aplikaci ve funkcích členů obslužné rutiny.
 
 Pokud dáváte přednost, můžete vždy napsat položky a členské funkce mapy zpráv ručně.
 
@@ -121,7 +121,7 @@ Pokud vytvoříte dialogové okno ručně, přidáte potřebné členské promě
 
 Modální dialogové okno se automaticky zavře, když uživatel stiskne tlačítka OK nebo Storno nebo když váš kód volá `EndDialog` členskou funkci.
 
-Při implementaci nemodálního dialogového okna vždy přepište `OnCancel` členskou funkci a zavolejte `DestroyWindow` v ní. Nevolejte základní třídu `CDialog::OnCancel`, protože volá `EndDialog`, což způsobí, že dialogové okno nebude viditelné, ale neodstraní ho. Měli byste také přepsat `PostNcDestroy` pro nemodální dialogová okna, abybylo možné je odstranit, protože nemodální dialogová okna se obvykle přiřazují s **novými**. Modální dialogová okna jsou obvykle vytvořena na snímku a nepotřebují `PostNcDestroy` vyčištění.
+Při implementaci nemodálního dialogového okna vždy přepište `OnCancel` členskou funkci a zavolejte `DestroyWindow` v ní. Nevolejte základní třídu `CDialog::OnCancel`, protože volá `EndDialog`, což způsobí, že dialogové okno nebude viditelné, ale neodstraní ho. Měli byste také přepsat `PostNcDestroy` pro nemodální dialogová okna, aby bylo možné **je odstranit,** protože nemodální dialogová okna se obvykle přiřazují s **novými**. Modální dialogová okna jsou obvykle vytvořena na snímku a nepotřebují `PostNcDestroy` vyčištění.
 
 Další informace o `CDialog`naleznete v [dialogových oknech](../../mfc/dialog-boxes.md).
 

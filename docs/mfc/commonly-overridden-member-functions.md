@@ -1,6 +1,6 @@
 ---
 title: Běžně přepisované členské funkce
-ms.date: 11/04/2016
+ms.date: 09/06/2019
 helpviewer_keywords:
 - CDialog class [MFC], members
 - OnInitDialog function
@@ -10,34 +10,34 @@ helpviewer_keywords:
 - OnOK function
 - MFC dialog boxes [MFC], overriding member functions
 ms.assetid: 78eb566c-e361-4c86-8db5-c7e2791b249a
-ms.openlocfilehash: 26a1527dbdac4b2a9deb57fb13481f8d2f9cb5b7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f63dd6079b96181305f3207d4a1ef823df8d8ba4
+ms.sourcegitcommit: 3caf5261b3ea80d9cf14038c116ba981d655cd13
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62152023"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70907692"
 ---
 # <a name="commonly-overridden-member-functions"></a>Běžně přepisované členské funkce
 
-Následující tabulka uvádí nejvíce pravděpodobně členské funkce přepsat v vaše `CDialog`-odvozené třídy.
+V následující tabulce jsou uvedeny nejpravděpodobnější členské funkce pro přepsání v `CDialog`odvozené třídě.
 
-### <a name="commonly-overridden-member-functions-of-class-cdialog"></a>Běžně přepisované členské funkce CDialog – třída
+### <a name="commonly-overridden-member-functions-of-class-cdialog"></a>Běžně přepsané členské funkce třídy CDialog
 
-|Členská funkce|Zpráva, která reaguje na|Účelem přepsání|
+|Členská funkce|Zpráva, na kterou reaguje|Účel přepsání|
 |---------------------|----------------------------|-----------------------------|
-|`OnInitDialog`|**NEZAVĚSÍTE**|Inicializujte ovládací prvky dialogových oken.|
-|`OnOK`|**BN_CLICKED** pro tlačítko **IDOK**|Reagujte, když uživatel klikne na tlačítko OK.|
-|`OnCancel`|**BN_CLICKED** pro tlačítko **IDCANCEL**|Reagujte, když uživatel klikne na tlačítko Storno.|
+|`OnInitDialog`|**WM_INITDIALOG**|Inicializujte ovládací prvky dialogového okna.|
+|`OnOK`|**BN_CLICKED** pro tlačítko **IDOK**|Pokud uživatel klikne na tlačítko OK, odpovězte.|
+|`OnCancel`|**BN_CLICKED** pro tlačítko **IDCANCEL**|Reagovat, když uživatel klikne na tlačítko Storno.|
 
-`OnInitDialog`, `OnOK`, a `OnCancel` jsou virtuální funkce. K jejich přepsání, deklarujete přepisující funkce v třídě odvozené dialogového okna pomocí [okno vlastností](/visualstudio/ide/reference/properties-window).
+`OnInitDialog`, `OnOK` a`OnCancel` jsou virtuální funkce. Chcete-li je přepsat, deklarujete funkci přepsání v odvozené třídě dialogu pomocí [Průvodce třídou MFC](reference/mfc-class-wizard.md).
 
-`OnInitDialog` je volána těsně před plánovaným zobrazí dialogové okno. Je nutné volat výchozí `OnInitDialog` obslužnou rutinu z přepsání – obvykle jako první akci v obslužné rutině. Ve výchozím nastavení `OnInitDialog` vrátí **TRUE** k označení, že fokusu musí být nastaveno na první ovládací prvek v dialogovém okně.
+`OnInitDialog`se volá těsně před tím, než se zobrazí dialogové okno. Musíte zavolat výchozí `OnInitDialog` obslužnou rutinu z vašeho přepsání, obvykle jako první akce v obslužné rutině. Ve výchozím nastavení `OnInitDialog` vrátí **hodnotu true** k označení, že fokus by měl být nastaven na první ovládací prvek v dialogovém okně.
 
-`OnOK` Obvykle je přepsána pro nemodální, ale ne modální dialogová okna. Pokud přepíšete této obslužné rutiny pro modální dialogové okno, zavolejte verzi základní třídy z přepsání – Chcete-li zajistit `EndDialog` se nazývá – nebo se telefonicky `EndDialog` sami.
+`OnOK`je obvykle přepsána pro nemodální, ale ne modální dialogová okna. Pokud přepíšete tuto obslužnou rutinu pro modální dialogové okno, zavolejte verzi základní třídy z vašeho přepsání, aby se `EndDialog` zajistilo, že je `EndDialog` volána – nebo zavolejte sami.
 
-`OnCancel` Obvykle je přepsána pro nemodální dialogová okna.
+`OnCancel`je obvykle přepsána pro nemodální dialogová okna.
 
-Další informace o těchto funkcích najdete v tématu třídy [CDialog](../mfc/reference/cdialog-class.md) v *odkaz knihovny MFC* a diskuse o [životní cyklus dialogového okna](../mfc/life-cycle-of-a-dialog-box.md).
+Další informace o těchto členských funkcích naleznete v tématu Třída [CDialog](../mfc/reference/cdialog-class.md) v *Referenci knihovny MFC* a diskuze o [životním cyklu dialogového okna](../mfc/life-cycle-of-a-dialog-box.md).
 
 ## <a name="see-also"></a>Viz také:
 

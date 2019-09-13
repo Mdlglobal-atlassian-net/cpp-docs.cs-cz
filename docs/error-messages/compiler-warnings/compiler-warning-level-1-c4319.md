@@ -1,27 +1,27 @@
 ---
-title: Kompilátor upozornění (úroveň 1) C4319
-ms.date: 1/18/2018
+title: Upozornění kompilátoru (úroveň 1) C4319
+ms.date: 01/18/2018
 f1_keywords:
 - C4319
 helpviewer_keywords:
 - C4319
 ms.assetid: 1fac8048-9bd6-4552-a21c-192c67772bb9
-ms.openlocfilehash: 20b268bacd6e7e259e9b4fa1c9e98fa6fd353718
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2d5ae8fcf5a527031c3a974b227f713675f31ffa
+ms.sourcegitcommit: effb516760c0f956c6308eeded48851accc96b92
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62385469"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70926105"
 ---
-# <a name="compiler-warning-level-1-c4319"></a>Kompilátor upozornění (úroveň 1) C4319
+# <a name="compiler-warning-level-1-c4319"></a>Upozornění kompilátoru (úroveň 1) C4319
 
-> "~": nulové rozšíření "*type1*"do"*type2*' větší velikosti
+> ~: nulová hodnota "*typ1*" na "*typ2*" o větší velikost
 
-Výsledkem **~** – operátor (bitový doplněk) je bez znaménka a pak rozšířit nula je převedena na typ větší.
+Výsledek operátoru **~** (bitového doplňku) je nepodepsaný a pak se při převodu na větší typ rozšíří nulou.
 
 ## <a name="example"></a>Příklad
 
-V následujícím příkladu `~(a - 1)` je vyhodnocen jako výraz unsigned long 32bitová verze a následně převeden do 64 bitů nulové rozšíření. To může vést k výsledkům neočekávaná operace.
+V následujícím příkladu `~(a - 1)` je vyhodnocen jako 32 řetězec s nepodepsaným znaménkem a poté převeden na 64 bitů pomocí nulové přípony. To může vést k neočekávaným výsledkům operace.
 
 ```cpp
 // C4319.cpp

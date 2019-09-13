@@ -194,12 +194,12 @@ helpviewer_keywords:
 - CHtmlView [MFC], SetWidth
 - CHtmlView [MFC], Stop
 ms.assetid: 904976af-73de-4aba-84ac-cfae8e2be09a
-ms.openlocfilehash: 2d00a7216778f4a9a40b9d503bce7d26982669e0
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 9643379136398de7ce4d98aaa9ab5f22fa488c0e
+ms.sourcegitcommit: effb516760c0f956c6308eeded48851accc96b92
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69506067"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70927940"
 ---
 # <a name="chtmlview-class"></a>CHtmlView – – třída
 
@@ -1194,7 +1194,7 @@ Ukazatel na řetězec, který je vyhodnocen jako adresa URL, název souboru UNC 
 
 Ne každý snímek vyvolá tuto událost, ale každý rámec, který aktivuje událost [OnDownloadBegin](#ondownloadbegin) , vyvolá odpovídající `OnDocumentComplete` událost.
 
-Adresa URL uvedená v *lpszURL* může být odlišná od adresy URL, na kterou se prohlížeč dozvěděl, protože tato adresa URL je kanonická a kvalifikovaná adresa URL. Například pokud aplikace určuje adresu URL "www.Microsoft.com" ve volání metody [Navigate](#navigate) nebo [Navigate2](#navigate2), adresa URL předaná pomocí `OnNavigateComplete2` bude "<http://www.microsoft.com/>". Také pokud Server přesměroval prohlížeč na jinou adresu URL, Přesměrovaná adresa URL se zobrazí zde.
+Adresa URL uvedená v *lpszURL* může být odlišná od adresy URL, na kterou se prohlížeč dozvěděl, protože tato adresa URL je kanonická a kvalifikovaná adresa URL. Například pokud aplikace `"www.microsoft.com"` Určuje adresu URL v volání [Navigate](#navigate) nebo [Navigate2](#navigate2), adresa URL předaná `OnNavigateComplete2` bude. `"<https://www.microsoft.com/>"` Také pokud Server přesměroval prohlížeč na jinou adresu URL, Přesměrovaná adresa URL se zobrazí zde.
 
 ##  <a name="ondocwindowactivate"></a>CHtmlView –:: OnDocWindowActivate
 
@@ -1458,7 +1458,7 @@ virtual void OnNavigateComplete2(LPCTSTR strURL);
 
 Parametr URL může být PIDL v případě entity oboru názvů prostředí, pro kterou neexistuje reprezentace adresy URL.
 
-Všimněte si, že adresa URL obsažená v *strURL* může být odlišná od adresy URL, na kterou se prohlížeč dozvěděl, protože tato adresa URL je kanonická a kvalifikovaná adresa URL. Například pokud aplikace určuje adresu URL "www.Microsoft.com" ve volání metody [Navigate](#navigate) nebo [Navigate2](#navigate2), adresa URL předaná pomocí `OnNavigateComplete2` bude "<http://www.microsoft.com/>". Také pokud Server přesměroval prohlížeč na jinou adresu URL, Přesměrovaná adresa URL se zobrazí zde.
+Všimněte si, že adresa URL obsažená v *strURL* může být odlišná od adresy URL, na kterou se prohlížeč dozvěděl, protože tato adresa URL je kanonická a kvalifikovaná adresa URL. Například pokud aplikace `"www.microsoft.com"` Určuje adresu URL v volání [Navigate](#navigate) nebo [Navigate2](#navigate2), adresa URL předaná `OnNavigateComplete2` bude. `"<https://www.microsoft.com/>"` Také pokud Server přesměroval prohlížeč na jinou adresu URL, Přesměrovaná adresa URL se zobrazí zde.
 
 ##  <a name="onnavigateerror"></a>CHtmlView –:: OnNavigateError
 

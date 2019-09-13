@@ -1,42 +1,42 @@
 ---
 title: /DISASM
-ms.date: 1/17/2018
+ms.date: 01/17/2018
 f1_keywords:
 - /disasm
 helpviewer_keywords:
 - -DISASM dumpbin option
 - DISASM dumpbin option
 - /DISASM dumpbin option
-ms.openlocfilehash: 10e8187e896b3922438a8cf2dafa0aec4c91f904
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: fb394b2266470e77c50ce5398aea961c37ac34fb
+ms.sourcegitcommit: effb516760c0f956c6308eeded48851accc96b92
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62272058"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70927723"
 ---
 # <a name="disasm"></a>/DISASM
 
-Tisk zpětný překlad kódu oddílů ve výstupu DUMPBIN.
+Vytiskne zpětný překlad částí kódu ve výstupu DUMPBIN.
 
 ## <a name="syntax"></a>Syntaxe
 
-> **/ DISASM**{**:**\[**BAJTŮ**|**NOBYTES**]}
+> **/DISASM** { **:** \[BAJTŮV|BAJTECH **]}**
 
 ### <a name="arguments"></a>Arguments
 
-**BAJTY**<br/>
-Obsahuje instrukce bajtů společně s interpretovaný operačních kódů a argumenty ve výstupu zpětný překlad. Toto je výchozí možnost.
+**PSANÝ**<br/>
+Zahrnuje bajty instrukcí spolu s interpretací operačních kódů a argumentů ve výstupu zpětného překladu. Toto je výchozí možnost.
 
-**NOBYTES**<br/>
-Nezahrnuje bajtů instrukcí ve výstupu zpětný překlad.
+**POČET BAJTŮ**<br/>
+Nezahrnuje bajty instrukcí ve výstupu zpětného překladu.
 
 ## <a name="remarks"></a>Poznámky
 
-**/DISASM** možnost zobrazí zpětný překlad kódu oddílů v souboru. Pokud jsou přítomna v souboru používá symboly ladění.
+Možnost **/DISASM** zobrazí zpětný překlad částí kódu v souboru. Používá symboly ladění, pokud jsou k dispozici v souboru.
 
-**/ DISASM** by měla sloužit pouze pro nativní, ne spravované Image. Je ekvivalentní nástroj pro spravovaný kód [ILDASM](/dotnet/framework/tools/ildasm-exe-il-disassembler).
+**/DISASM** by mělo být použito pouze pro nativní, nespravované, image. Ekvivalentní nástroj pro spravovaný kód je [Ildasm](/dotnet/framework/tools/ildasm-exe-il-disassembler).
 
-Pouze [/HEADERS](headers.md) – možnost nástroje DUMPBIN je k dispozici pro použití na soubory vytvořené [/GL (celková optimalizace programu)](gl-whole-program-optimization.md) – možnost kompilátoru.
+Pouze možnost [/Headers](headers.md) DUMPBIN je k dispozici pro soubory vytvořené pomocí možnosti kompilátoru [/GL (celý program optimalizace celého programu)](gl-whole-program-optimization.md) .
 
 ## <a name="see-also"></a>Viz také:
 

@@ -1,6 +1,6 @@
 ---
 title: abort
-ms.date: 1/02/2018
+ms.date: 01/02/2018
 apiname:
 - abort
 apilocation:
@@ -22,19 +22,19 @@ helpviewer_keywords:
 - aborting current process
 - abort function
 - processes, aborting
-ms.openlocfilehash: d8cb190e36a64e8bd8cfcb75bc9a19c2a394fc48
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: ee07e50504b53e9e363f8b4fc5e9f4414637c449
+ms.sourcegitcommit: effb516760c0f956c6308eeded48851accc96b92
+ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62342195"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70927467"
 ---
 # <a name="abort"></a>abort
 
 Přeruší aktuální proces a vrátí kód chyby.
 
 > [!NOTE]
-> Nepoužívejte tuto metodu k vypnutí aplikace Microsoft Store nebo aplikace pro univerzální platformu Windows (UPW), s výjimkou testování nebo ladění scénářů. Zavření aplikace pro Store způsoby programátorské nebo uživatelské rozhraní nejsou povoleny podle [zásady Microsoft Store](/legal/windows/agreements/store-policies). Další informace najdete v tématu [životní cyklus aplikace UPW](/windows/uwp/launch-resume/app-lifecycle).
+> Tuto metodu nepoužívejte k ukončení aplikace Microsoft Store aplikace nebo Univerzální platforma Windows (UWP), s výjimkou scénářů testování nebo ladění. Programové a uživatelské možnosti pro zavření aplikace ze Storu nejsou povolené podle [zásad Microsoft Store](/legal/windows/agreements/store-policies). Další informace najdete v tématu [životní cyklus aplikace UWP](/windows/uwp/launch-resume/app-lifecycle).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -44,41 +44,41 @@ void abort( void );
 
 ## <a name="return-value"></a>Návratová hodnota
 
-**přerušit** nevrátí ovládací prvek do volajícího procesu. Ve výchozím nastavení, zkontroluje obslužné rutiny přerušení signálu a vyvolá `SIGABRT` je-li nastavena. Potom **přerušit** ukončí aktuální proces a vrátí kód ukončení nadřazenému procesu.
+**přerušení** nevrátí řízení volajícímu procesu. Ve výchozím nastavení kontroluje popisovač signálu přerušení a vyvolá `SIGABRT` , pokud je nastavena hodnota. Pak **přerušení** ukončí aktuální proces a vrátí ukončovací kód nadřazenému procesu.
 
 ## <a name="remarks"></a>Poznámky
 
-**Microsoft Specific**
+**Specifické pro společnost Microsoft**
 
-Ve výchozím nastavení, když je aplikace sestavena s běhovou ladicí knihovnou **přerušit** rutina zobrazí chybovou zprávu před `SIGABRT` je vyvolána. Pro aplikace konzoly spuštěné v režimu konzoly, je zpráva odeslána `STDERR`. Aplikace klasické pracovní plochy Windows a aplikace konzoly spuštěné v režimu zobrazení v okně zobrazí zpráva v okně se zprávou. Chcete-li potlačit tuto zprávu, použijte [_set_abort_behavior](set-abort-behavior.md) zrušte `_WRITE_ABORT_MSG` příznak. Zobrazená zpráva závisí na verzi běhového prostředí. Pro aplikace vytvořené pomocí nejnovější verze aplikace Visual C++ zpráva vypadá takto:
+Ve výchozím nastavení, když je aplikace sestavena pomocí běhové běhové knihovny , před `SIGABRT` vyvoláním rutiny Abort se zobrazí chybová zpráva. V případě konzolových aplikací spuštěných v režimu konzoly je zpráva odeslána `STDERR`na adresu. Aplikace klasické pracovní plochy systému Windows a konzolové aplikace spuštěné v režimu okna zobrazí zprávu v okně se zprávou. Pokud chcete zprávu potlačit, použijte [_set_abort_behavior](set-abort-behavior.md) a vymažte `_WRITE_ABORT_MSG` příznak. Zobrazená zpráva závisí na verzi používaného běhového prostředí. Pro aplikace sestavené pomocí nejaktuálnější verze vizuálu C++se zpráva podobá této:
 
-> Byla volána R6010 - abort()
+> R6010-Abort () bylo voláno.
 
-V předchozích verzích běhové knihovny jazyka C byla zobrazena tato zpráva:
+V předchozích verzích běhové knihovny jazyka C se tato zpráva zobrazila:
 
-> Tato aplikace vydala požadavek modulu Runtime, aby ji ukončil neobvyklým způsobem. Kontaktujte prosím tým podpory vaší aplikace pro další informace.
+> Tato aplikace požádala modul runtime o ukončení neobvyklým způsobem. Pro další informace se obraťte na tým podpory aplikace.
 
-Při kompilaci programu v režimu ladění, okno se zprávou zobrazí možnosti pro **přerušit**, **opakujte**, nebo **Ignorovat**. Pokud uživatel zvolí **přerušit**, program okamžitě ukončí a vrátí kód ukončení 3. Pokud uživatel zvolí **opakujte**, ladicí program je vyvolán pro ladění just-in-time, pokud je k dispozici. Pokud uživatel zvolí **Ignorovat**, **přerušit** pokračuje v normálním zpracování.
+Když je program kompilován v režimu ladění, okno se zprávou zobrazí možnosti **přerušení**, **opakování**nebo **ignorování**. Pokud uživatel zvolí **přerušení**, program se okamžitě ukončí a vrátí ukončovací kód 3. Pokud uživatel zvolí **opakování**, ladicí program je vyvolán pro ladění za běhu, je-li k dispozici. Pokud uživatel zvolí možnost **Ignorovat**, operace **přerušit** pokračuje normálním zpracováním.
 
-V maloobchodních a ladicích sestaveních **přerušit** zkontroluje, zda je nastavena obslužná rutina přerušení signálu. Pokud je nastavena obslužná rutina signálu než výchozí, **přerušit** volání `raise(SIGABRT)`. Použití [signál](signal.md) funkce pro přidružení přerušení signálu rutinu s `SIGABRT` signálu. Můžete provést vlastní akce – například vyčištění prostředků nebo protokolování informací – a ukončit aplikaci s vlastním kódem chyby ve funkci obslužné rutiny. Pokud není definován žádný popisovač vlastního signálu, **přerušit** nevyvolá `SIGABRT` signálu.
+V maloobchodních i ladicích sestaveních **přeruší** aplikace kontrolu, zda je nastavena obslužná rutina přerušení signálu. Pokud je nastavena obslužná rutina jiného než výchozího signálu, **přeruší** volání `raise(SIGABRT)`. Pomocí funkce [Signal](signal.md) přidružte funkci `SIGABRT` obslužné rutiny signálu přerušení k signálu. Můžete provádět vlastní akce – například vyčistit prostředky nebo protokolovat informace – a ukončit aplikaci s vlastním kódem chyby ve funkci obslužné rutiny. Pokud není definován žádný vlastní obslužná rutina signálu, **přerušení** nevyvolává `SIGABRT` signál.
 
-Ve výchozím nastavení v sestaveních bez ladění aplikací konzoly nebo stolního počítače **přerušit** pak vyvolá mechanismus Windows Error Reporting Service (dříve označovaný jako zotavení po havárii. Watson) na zprávy o selhání společnosti Microsoft. Toto chování může být povoleno nebo zakázáno voláním `_set_abort_behavior` a nastavením nebo maskováním `_CALL_REPORTFAULT` příznak. Když je příznak nastaven, Windows zobrazí okno se zprávou s textem typu "Problém způsobil, že program přestal správně fungovat." Uživatel může rozhodnout pro vyvolání ladicího programu pomocí **ladění** tlačítko, nebo zvolte **ukončit program** tlačítko Ukončit aplikaci s chybovým kódem, který je definován v operačním systému.
+Ve výchozím nastavení se v neladit buildu desktopových nebo konzolových aplikací **přeruší** a vyvolá mechanismus služby zasílání zpráv o chybách systému Windows (dřív označovaný jako Dr. Watson) k nahlášení selhání společnosti Microsoft. Toto chování lze povolit nebo zakázat voláním `_set_abort_behavior` a nastavením nebo maskování `_CALL_REPORTFAULT` příznaku. Pokud je nastaven příznak, systém Windows zobrazí okno se zprávou s textem "problém způsobil, že program přestal pracovat správně." Uživatel může zvolit vyvolání ladicího programu s tlačítkem **ladění** nebo kliknutím na tlačítko **Zavřít program** ukončit aplikaci s kódem chyby, který je definován operačním systémem.
 
-Pokud není vyvolána obslužná rutina hlášení chyb Windows, pak **přerušit** volání [_exit](exit-exit-exit.md) k ukončení procesu s ukončovací kód 3 a vrátí kontrolu nadřazenému procesu nebo operačního systému. `_exit` Vyprázdní vyrovnávací paměť datového proudu nebo proveďte `atexit` / `_onexit` zpracování.
+Pokud není vyvolána obslužná rutina zasílání zpráv o chybách systému Windows, **přeruší** volání [_exit](exit-exit-exit.md) k ukončení procesu s ukončovacím kódem 3 a vrátí řízení nadřazenému procesu nebo operačnímu systému. `_exit`nevyprázdní vyrovnávací paměti datového proudu ani `atexit` / `_onexit` zpracování.
 
 Další informace o ladění CRT naleznete v tématu [techniky ladění CRT](/visualstudio/debugger/crt-debugging-techniques).
 
-**Specifické pro end Microsoft**
+**Specifické pro konec Microsoftu**
 
 ## <a name="requirements"></a>Požadavky
 
 |Rutina|Požadovaný hlavičkový soubor|
 |-------------|---------------------|
-|**abort**|\<Process.h > nebo \<stdlib.h >|
+|**abort**|\<Process. h > \<nebo Stdlib. h >|
 
 ## <a name="example"></a>Příklad
 
-Následující program pokusí otevřít soubor a přeruší se, pokud se pokus nezdaří.
+Následující program se pokusí otevřít soubor a přeruší se, pokud se pokus nezdaří.
 
 ```C
 // crt_abort.c

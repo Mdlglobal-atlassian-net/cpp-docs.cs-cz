@@ -1,6 +1,6 @@
 ---
-title: 'Servery: Implementace Windows rámečkem na místě'
-ms.date: 11/04/2016
+title: 'Servery: Implementace oken s rámečkem na místě'
+ms.date: 09/09/2019
 helpviewer_keywords:
 - frame windows [MFC], implementing
 - OLE server applications [MFC], frame windows
@@ -8,46 +8,46 @@ helpviewer_keywords:
 - frame windows [MFC], in-place
 - in-place frame windows
 ms.assetid: 09bde4d8-15e2-4fba-8d14-9b954d926b92
-ms.openlocfilehash: 887de747ced25d427b82e528a3b85634fabff4d9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: bc5439003b7c891ac3f4000c9b7820746aec4c8d
+ms.sourcegitcommit: 3caf5261b3ea80d9cf14038c116ba981d655cd13
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62307949"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70907541"
 ---
-# <a name="servers-implementing-in-place-frame-windows"></a>Servery: Implementace Windows rámečkem na místě
+# <a name="servers-implementing-in-place-frame-windows"></a>Servery: Implementace oken s rámečkem na místě
 
-Tento článek vysvětluje, co musíte udělat, abyste implementace oken s rámečkem na místě v vizuální úpravy serverové aplikace, pokud použijete Průvodce aplikací nejsou k vytvoření serverové aplikace. Místo podle postupu uvedeného v tomto článku, můžete použít existující třídy oken s rámečkem na místě z aplikace vygenerované průvodcem aplikací nebo ukázku v jazyce Visual C++ k dispozici.
+V tomto článku se dozvíte, co musíte udělat, abyste v serverové aplikaci pro vizuální úpravy implementovali okna s rámečkem na místě, pokud nepoužíváte průvodce aplikací k vytvoření serverové aplikace. Místo toho, jak je uvedeno v tomto článku, můžete použít existující třídu místního okna na místě z aplikace vygenerované průvodcem aplikací nebo ukázky dodané s vizuálů C++.
 
-#### <a name="to-declare-an-in-place-frame-window-class"></a>Chcete-li deklarovat třídu oken s rámečkem na místě
+#### <a name="to-declare-an-in-place-frame-window-class"></a>Deklarace třídy vloženého okna na místě
 
-1. Odvodit třídu oken s rámečkem na místě ze `COleIPFrameWnd`.
+1. Odvodit místní třídu okna s rámečkem z `COleIPFrameWnd`.
 
-   - DECLARE_DYNCREATE – makro Použíjte v záhlaví souboru třídy.
+   - Použijte makro DECLARE_DYNCREATE v souboru hlaviček třídy.
 
-   - Použijte IMPLEMENT_DYNCREATE – makro v souboru implementace (.cpp) třídy. Objekty této třídy, který se má vytvořit v rámci rozhraní díky tomu.
+   - Použijte makro IMPLEMENT_DYNCREATE v souboru implementace třídy (. cpp). To umožňuje, aby objekty této třídy byly vytvořeny rozhraním.
 
-1. Deklarace `COleResizeBar` člen třídy oken s rámečkem. To je potřeba, pokud chcete, aby podporovalo změnu velikosti na místě v serverových aplikacích.
+1. Deklarujete `COleResizeBar` člena v třídě okna s rámečkem. To je nutné v případě, že chcete v serverových aplikacích podporovat místní změnu velikosti.
 
-   Deklarovat `OnCreate` obslužná rutina zprávy (pomocí **vlastnosti** okno) a volat `Create` pro vaše `COleResizeBar` člen, pokud jste ji definovali.
+   Deklarujte obslužnou rutinu `Create` `COleResizeBar` [](reference/mfc-class-wizard.md) zprávy(pomocíPrůvodcetřídou)azavolejtesvůjčlen,pokudjstehodefinovali`OnCreate` .
 
-1. Pokud máte panel nástrojů, deklarujte `CToolBar` člen třídy oken s rámečkem.
+1. Pokud máte panel nástrojů, deklarujte `CToolBar` člena v třídě okna s rámečkem.
 
-   Přepsat `OnCreateControlBars` členská funkce k vytvoření panelu nástrojů, když je na místě aktivní server. Příklad:
+   Přepište `OnCreateControlBars` členskou funkci pro vytvoření panelu nástrojů, když je server aktivní. Příklad:
 
    [!code-cpp[NVC_MFCOleServer#1](../mfc/codesnippet/cpp/servers-implementing-in-place-frame-windows_1.cpp)]
 
-   Přečtěte si diskuzi o tento kód po kroku 5.
+   Podívejte se na diskuzi o tomto kódu podle kroku 5.
 
-1. Zahrňte soubor hlaviček pro této třídy oken s rámečkem na místě hlavní soubor.
+1. Do hlavního souboru. cpp zahrňte hlavičkový soubor pro tuto třídu vloženého okna na místě.
 
-1. V `InitInstance` třídě aplikace, zavolejte `SetServerInfo` funkce objektu šablony dokumentu k určení prostředků a v místní okno rámce pro použití v otevřené a místní úpravy.
+1. V `InitInstance` aplikaci pro třídu aplikace `SetServerInfo` zavolejte funkci objektu šablony dokumentu a určete tak prostředky a místní okno rámce, které se použije v otevřených a místních úpravách.
 
-Řadu funkce volání **Pokud** příkaz vytvoří panel nástrojů z prostředků serveru k dispozici. Panel nástrojů v tomto okamžiku je součástí hierarchie okno kontejneru. Protože tento panel nástrojů je odvozený z `CToolBar`, předat své zprávy na jeho vlastníka, okno rámce aplikace kontejneru, není-li změnit vlastníka. To je důvod, proč volání `SetOwner` je nezbytné. Toto volání se změní v okně, kde příkazy jsou odesílány být okno rámečkem na místě serveru, což způsobí zprávy, které mají být předána serveru. To umožňuje, aby react pro operace na panelu nástrojů, které poskytuje server.
+Řada volání funkcí v příkazu **if** vytvoří panel nástrojů z prostředků, které server poskytl. V tomto okamžiku je panel nástrojů součástí hierarchie okna kontejneru. Vzhledem k tomu, že tento `CToolBar`panel nástrojů je odvozen z, předává své zprávy vlastníkovi, oknu rámce aplikace kontejneru, pokud nezměníte vlastníka. To je důvod, proč `SetOwner` je volání nutné. Toto volání změní okno, ve kterém jsou příkazy odesílány jako místní okno rámce serveru, což způsobí, že budou zprávy předány serveru. To umožňuje, aby server reagoval na operace na panelu nástrojů, který poskytuje.
 
-Identifikátor rastrového obrázku panelu nástrojů by měla být stejná jako ostatní prostředky v místě definované v serveru aplikaci. Zobrazit [nabídky a prostředky: Serverové doplňky](../mfc/menus-and-resources-server-additions.md) podrobnosti.
+ID rastrového obrázku panelu nástrojů by mělo být stejné jako jiné místní prostředky definované v serverové aplikaci. Zobrazit [nabídky a prostředky: Přidání](../mfc/menus-and-resources-server-additions.md) podrobností o serveru.
 
-Další informace najdete v tématu [COleIPFrameWnd](../mfc/reference/coleipframewnd-class.md), [coleresizebar –](../mfc/reference/coleresizebar-class.md), a [CDocTemplate::SetServerInfo](../mfc/reference/cdoctemplate-class.md#setserverinfo) v *odkazy na knihovnu tříd*.
+Další informace naleznete v tématu [COleIPFrameWnd](../mfc/reference/coleipframewnd-class.md), [COleResizeBar](../mfc/reference/coleresizebar-class.md)a [CDocTemplate –:: SetServerInfo](../mfc/reference/cdoctemplate-class.md#setserverinfo) v *dokumentaci knihovny tříd*.
 
 ## <a name="see-also"></a>Viz také:
 

@@ -7,61 +7,61 @@ helpviewer_keywords:
 - list controls [MFC], List view
 - virtual list controls
 ms.assetid: 319f841f-e426-423a-8276-d93f965b0b45
-ms.openlocfilehash: 7372aca9e24a554e01f7a61f43d6170e99fe34c5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a6e76a812a6196c487f72516e2b88198a544fdc7
+ms.sourcegitcommit: 3caf5261b3ea80d9cf14038c116ba981d655cd13
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62358241"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70907335"
 ---
 # <a name="virtual-list-controls"></a>Ovládací prvky typu virtuální seznam
 
-Ovládací prvek seznam virtuálních je ovládací prvek zobrazení seznamu, který má LVS_OWNERDATA styl. Tento styl umožňuje kontrolu pro podporu až počet položek **DWORD** (počet položek výchozí rozšiřuje pouze na **int**). Největší výhodou poskytovaných tímto stylem ale možnost používat pouze podmnožinu datových položek v paměti v daný okamžik. To umožňuje ovládací prvek zobrazení virtuálního seznamu do řešení pro použití s velkými databázemi informací, kde specifických metod přístupu k datům, jsou už zavedené.
+Seznam virtuálních seznamů je ovládací prvek zobrazení seznamu, který má styl LVS_OWNERDATA. Tento styl umožňuje ovládacímu prvku podporovat počet položek až do **hodnoty DWORD** (výchozí počet položek se rozšiřuje pouze na celé **číslo**). Největší výhoda poskytovaná tímto stylem však umožňuje pouze podmnožinu datových položek v paměti. To umožňuje, aby se ovládací prvek zobrazení seznamu virtuálních seznamů zapůjčuje k použití s velkými databázemi informací, kde jsou již používány konkrétní metody přístupu k datům.
 
 > [!NOTE]
->  Kromě toho, že seznam virtuálních funkcí v `CListCtrl`, MFC také funguje stejně v [CListView](../mfc/reference/clistview-class.md) třídy.
+>  Kromě poskytování funkce virtuálních seznamů v `CListCtrl`prostředí MFC také poskytuje stejnou funkci ve třídě [CListView –](../mfc/reference/clistview-class.md) .
 
-Existují některé problémy s kompatibilitou, které byste měli znát při vývoji ovládací prvky typu virtuální seznam. Další informace najdete v části problémy s kompatibilitou tématu ovládací prvky zobrazení seznamu v sadě Windows SDK.
+Existují některé problémy s kompatibilitou, které byste měli znát při vývoji ovládacích prvků virtuálních seznamů. Další informace naleznete v části problémy s kompatibilitou v tématu ovládací prvky seznam-zobrazení v Windows SDK.
 
-## <a name="handling-the-lvngetdispinfo-notification"></a>Zpracování oznámení LVN_GETDISPINFO
+## <a name="handling-the-lvn_getdispinfo-notification"></a>Zpracování oznámení LVN_GETDISPINFO
 
-Ovládací prvky typu virtuální seznam Udržovat velmi málo informací položky. S výjimkou výběr položek a detailní informace informace o všech položkách spravuje vlastník ovládacího prvku. Rozhraním, přes LVN_GETDISPINFO zprávu s oznámením je požadované informace. K poskytování požadované informace, musí vlastník ovládací prvek typu virtuální seznam (nebo samotný ovládací prvek) zpracovat toto oznámení. Snadno to provést pomocí okna vlastnosti (viz [mapování zpráv na funkce](../mfc/reference/mapping-messages-to-functions.md)). Výsledný kód by měl vypadat přibližně jako v následujícím příkladu (kde `CMyDialog` vlastní objekt ovládacího prvku seznam virtuálních a dialogového okna je zpracování oznámení):
+Ovládací prvky virtuálního seznamu udržují velmi málo informací o položkách. S výjimkou výběru položek a informací o výběru jsou všechny informace o položkách spravovány vlastníkem ovládacího prvku. Rozhraní požaduje informace prostřednictvím oznamovací zprávy LVN_GETDISPINFO. Aby bylo možné poskytnout požadované informace, musí toto oznámení zpracovat vlastník ovládacího prvku Virtual list (nebo samotného ovládacího prvku). To se dá snadno udělat pomocí [Průvodce třídami](reference/mfc-class-wizard.md) (viz [mapování zpráv na funkce](../mfc/reference/mapping-messages-to-functions.md)). Výsledný kód by měl vypadat podobně jako v následujícím příkladu (kde `CMyDialog` vlastní objekt ovládacího prvku seznam virtuálních seznamů a dialogové okno zpracovává oznámení):
 
 [!code-cpp[NVC_MFCControlLadenDialog#23](../mfc/codesnippet/cpp/virtual-list-controls_1.cpp)]
 
-V obslužné rutině LVN_GETDISPINFO zprávy oznámení musíte zkontrolovat, pokud chcete zobrazit, jaké typy informací jsou požadovány. Možné hodnoty jsou:
+V obslužné rutině zprávy s oznámením LVN_GETDISPINFO je nutné ověřit, zda jsou požadovány informace o typu. Možné hodnoty jsou:
 
-- `LVIF_TEXT` *PszText* člena musí být vyplněna.
+- `LVIF_TEXT`Člen *pszText* musí být vyplněn.
 
-- `LVIF_IMAGE` *IImage* člena musí být vyplněna.
+- `LVIF_IMAGE`Člen *iImage* musí být vyplněn.
 
-- `LVIF_INDENT` *IIndent* člena musí být vyplněna.
+- `LVIF_INDENT`Člen *iIndent* musí být vyplněn.
 
-- `LVIF_PARAM` *LParam* člena musí být vyplněna. (Není k dispozici pro podřízené položky.)
+- `LVIF_PARAM`Člen *lParam* musí být vyplněn. (Pro dílčí položky nejsou k dispozici.)
 
-- `LVIF_STATE` *Stavu* člena musí být vyplněna.
+- `LVIF_STATE`Člen *stavu* musí být vyplněn.
 
-Pak by mělo nabízet, požadované libovolné informace zpět do rozhraní.
+Pak byste měli dodat jakékoli informace, které jsou požadovány zpět do rozhraní.
 
-Následující příklad (přijatá z těla obslužné rutina oznámení pro objekt ovládacího prvku seznamu) ukazuje možných metod zadáním informací pro vyrovnávací paměti textu a obrázku položky:
+Následující příklad (pořízený z těla obslužné rutiny oznámení pro objekt ovládacího prvku seznamu) ukazuje jednu z možných metod poskytnutím informací pro textové vyrovnávací paměti a obrázek položky:
 
 [!code-cpp[NVC_MFCControlLadenDialog#24](../mfc/codesnippet/cpp/virtual-list-controls_2.cpp)]
 
-## <a name="caching-and-virtual-list-controls"></a>Ukládání do mezipaměti a virtuální ovládacích prvcích seznam
+## <a name="caching-and-virtual-list-controls"></a>Ovládací prvky pro ukládání do mezipaměti a virtuální seznam
 
-Protože tento typ ovládacího prvku seznam je určený pro velké datové sady, doporučuje se, že je požadovaná položka ukládat data do mezipaměti ke zlepšení výkonu načítání. Rozhraní framework poskytuje mechanismus komentování mezipaměti pomáhat při optimalizaci mezipaměti zasláním oznámení LVN_ODCACHEHINT.
+Vzhledem k tomu, že tento typ ovládacího prvku seznam je určený pro velké datové sady, doporučujeme ukládat do mezipaměti požadovaná data položek, aby se zlepšil výkon při načítání. Rozhraní poskytuje mechanismus pro dodávání mezipaměti, který pomáhá optimalizovat mezipaměť odesláním zprávy s oznámením LVN_ODCACHEHINT.
 
-Následující příklad aktualizuje mezipaměť s rozsahem předaný funkci obslužné rutiny.
+Následující příklad aktualizuje mezipaměť s rozsahem předaným funkci obslužné rutiny.
 
 [!code-cpp[NVC_MFCControlLadenDialog#25](../mfc/codesnippet/cpp/virtual-list-controls_3.cpp)]
 
-Další informace o přípravě a zachování v mezipaměti naleznete v části Správa mezipaměti tématu ovládací prvky zobrazení seznamu v sadě Windows SDK.
+Další informace o přípravě a údržbě mezipaměti naleznete v části Správa mezipaměti v tématu ovládací prvky seznam-zobrazení v Windows SDK.
 
-## <a name="finding-specific-items"></a>Vyhledání konkrétních položek
+## <a name="finding-specific-items"></a>Hledání konkrétních položek
 
-Zprávy oznámení LVN_ODFINDITEM posílá ovládací prvek typu virtuální seznam při dané položky ovládacího prvku musí být nalezen. Zpráva oznámení se pošle, když ovládací prvek zobrazení seznamu obdrží rychlý přístup ke klíčům, nebo když přijme zprávu LVM_FINDITEM. Hledat informace jsou odeslány ve formě **LVFINDINFO** strukturou, který je členem z **NMLVFINDITEM** struktury. Tuto zprávu zpracovat tak, že přepíšete `OnChildNotify` funkce vašeho seznamu řízení objektu a uvnitř těla obslužné rutiny, zkontrolujte LVN_ODFINDITEM zprávy. Pokud se nenašel, proveďte příslušnou akci.
+Zpráva oznámení LVN_ODFINDITEM je odeslána ovládacím prvkem Virtual list, když je třeba najít konkrétní položku ovládacího prvku seznamu. Zpráva oznámení se odešle, když ovládací prvek zobrazení seznamu přijme rychlý přístup k klíči nebo když obdrží zprávu LVM_FINDITEM. Informace o hledání jsou odesílány ve formě struktury **LVFINDINFO** , která je členem struktury **NMLVFINDITEM** . Zpracování této zprávy přepsáním `OnChildNotify` funkce objektu ovládacího prvku seznamu a uvnitř těla obslužné rutiny vyhledejte zprávu LVN_ODFINDITEM. Pokud se najde, proveďte příslušnou akci.
 
-Byste měli být připraveni vyhledejte položku, která odpovídá informace poskytují ovládací prvek zobrazení seznamu. Index položky v případě úspěchu nebo -1 by měla vrátit, pokud není nalezen žádný odpovídající položka.
+Měli byste být připraveni vyhledat položku, která odpovídá informacím uvedeným v ovládacím prvku zobrazení seznamu. Index položky byste měli vracet, pokud je to úspěšné, nebo-1, pokud se nenajde žádná vyhovující položka.
 
 ## <a name="see-also"></a>Viz také:
 

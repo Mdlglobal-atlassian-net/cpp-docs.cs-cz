@@ -1,31 +1,35 @@
 ---
-title: 'Postupy: Zařazování řetězců v kódu pomocí služby PInvoke'
+title: 'Postupy: Zařazování řetězců pomocí PInvoke'
 ms.custom: get-started-article
-ms.date: 11/04/2016
+ms.date: 09/09/2016
 helpviewer_keywords:
 - interop [C++], strings
 - marshaling [C++], strings
 - data marshaling [C++], strings
 - platform invoke [C++], strings
 ms.assetid: bcc75733-7337-4d9b-b1e9-b95a98256088
-ms.openlocfilehash: f316e33f1711ea0053fb68c0af7e89f90b793e05
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d3b39a4ce40de2a26ffba4f52ab1e39c94767089
+ms.sourcegitcommit: 3caf5261b3ea80d9cf14038c116ba981d655cd13
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62404400"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70907565"
 ---
-# <a name="how-to-marshal-strings-using-pinvoke"></a>Postupy: Zařazování řetězců v kódu pomocí služby PInvoke
+# <a name="how-to-marshal-strings-using-pinvoke"></a>Postupy: Zařazování řetězců pomocí PInvoke
 
-Toto téma vysvětluje, jak nativní funkce, které přijímají řetězce ve stylu jazyka C lze volat pomocí řetězce CLR zadejte System::String s využitím podpory nástroje nespravovaného kódu rozhraní .NET Framework. Programátoři jazyka Visual C++ jsou ukončena. doporučujeme místo toho použijte funkce zprostředkovatele komunikace C++ (Pokud je to možné), protože deklarace P/Invoke obsahuje malý kompilace zpráv o chybách, není typově bezpečný a může být pracná k implementaci. Pokud nespravované rozhraní API je zabalený jako knihovnu DLL a zdrojový kód není k dispozici, pak P/Invoke je jedinou možností, ale jinak naleznete v tématu [pomocí zprostředkovatele komunikace C++ (implicitní služba PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md).
+Toto téma vysvětluje, jak nativní funkce, které přijímají řetězce ve stylu jazyka C, mohou být volány pomocí typu řetězce CLR System:: String, který využívá .NET Framework podporu vyvolání platformy. Vizuální C++ programátory jsou doporučováni používat C++ funkce spolupráce (Pokud je to možné), protože volání nespravovaného volání poskytuje malé zprávy o chybách při kompilaci, nejedná se o typově bezpečný a může být zdlouhavé pro implementaci. Pokud je nespravované rozhraní API zabaleno jako knihovna DLL a zdrojový kód není k dispozici, pak je P/Invoke jedinou možností, ale v opačném případě viz [použití C++ zprostředkovatele komunikace (implicitní PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md).
 
-Spravované a nespravované řetězce jsou stanoveny odlišně v paměti, takže předávání řetězce ze spravované na nespravované funkce vyžaduje <xref:System.Runtime.InteropServices.MarshalAsAttribute> atribut pokyn kompilátoru k vložení vyžaduje převod mechanismy pro zařazování dat řetězce správné a bezpečné.
+Spravované a nespravované řetězce jsou v paměti rozloženy jinak, takže předávání řetězců ze spravovaných do nespravovaných funkcí vyžaduje, <xref:System.Runtime.InteropServices.MarshalAsAttribute> aby kompilátor pro vložení požadovaných mechanismů převodu pro zařazování řetězcových dat nahlásil. správně a bezpečně.
 
-Stejně jako u funkce, které používají jenom typy vnitřních datových <xref:System.Runtime.InteropServices.DllImportAttribute> se používá k deklaraci spravovaný vstupní body do nativních funkcí, ale--při předávání řetězce – místo definování těchto vstupních bodů, aby přijímaly řetězců ve stylu C, popisovač <xref:System.String> typu je možné místo toho. Tento parametr vyzve kompilátoru k vložení kódu, který provede požadované převod. Pro každý argument funkce v nespravované funkci, která přebírá řetězec <xref:System.Runtime.InteropServices.MarshalAsAttribute> atribut má použít k označení, že na objekt řetězce by měl být zařazen do nativní funkce jako řetězec stylu C.
+Stejně jako u funkcí, které používají pouze vnitřní datové <xref:System.Runtime.InteropServices.DllImportAttribute> typy, se používá k deklaraci spravovaných vstupních bodů do nativních funkcí, ale--pro předávání řetězců, namísto definování těchto vstupních bodů jako přebírání řetězců ve stylu jazyka C <xref:System.String> , popisovače typu místo toho je možné použít. To vyzve kompilátor k vložení kódu, který provede požadovaný převod. Pro každý argument funkce v nespravované funkci, která přebírá řetězec, <xref:System.Runtime.InteropServices.MarshalAsAttribute> by měl být použit atribut k označení toho, že by měl být objekt String zařazen do nativní funkce jako řetězec ve stylu jazyka C.
+
+Zařazovací program zalomí volání nespravované funkce ve skryté obálce, která bude připravovat a kopírovat spravovaný řetězec do místně přiděleného řetězce v nespravovaném kontextu, který je poté předán nespravované funkci. Pokud se nespravované funkce vrátí, obálka buď odstraní prostředek, nebo pokud byl v zásobníku, je uvolněna, když se obálka dopadne mimo rozsah. Nespravovaná funkce není zodpovědná za tuto paměť. Nespravovaný kód vytvoří a odstraní jenom paměť v haldě nastavené podle vlastní CRT, takže nikdy nedochází k potížím s modulem pro zařazování pomocí jiné verze CRT.
+
+Pokud vaše nespravované funkce vrátí řetězec buď jako návratovou hodnotu, nebo jako výstupní parametr, zařazovací modul ho zkopíruje do nového spravovaného řetězce a pak uvolní paměť. Další informace naleznete v tématu [výchozí chování zařazování](/dotnet/framework/interop/default-marshaling-behavior) a [zařazování dat pomocí vyvolání platformy](/dotnet/framework/interop/marshaling-data-with-platform-invoke).
 
 ## <a name="example"></a>Příklad
 
-Následující kód se skládá z nespravovaného a spravovaný modul. Nespravovaný modul je knihovnu DLL, která definuje funkci nazvanou TakesAString, který přijímá řetězec ANSI C-style ve formě char *. Spravovaný modul je aplikace příkazového řádku, který importuje TakesAString funkce, ale definuje, aby přijímaly spravované System.String místo typu char\*. <xref:System.Runtime.InteropServices.MarshalAsAttribute> Atribut slouží k určení, jak by měly být zařazeny spravované řetězce při volání TakesAString.
+Následující kód se skládá z nespravovaného a spravovaného modulu. Nespravovaný modul je knihovna DLL, která definuje funkci nazvanou TakesAString, která přijímá řetězec ANSI ve stylu jazyka C ve formě znaku *. Spravovaný modul je aplikace příkazového řádku, která importuje funkci TakesAString, ale definuje ji jako přebírání spravovaného systému. řetězec místo znaku\*. <xref:System.Runtime.InteropServices.MarshalAsAttribute> Atribut slouží k určení, jak by měl být spravovaný řetězec zařazen při volání funkce TakesAString.
 
 ```
 // TraditionalDll2.cpp
@@ -73,9 +77,9 @@ int main() {
 }
 ```
 
-Tento postup způsobí, že kopie řetězec, který má být postavená na nespravované haldě, takže změny provedené na řetězec pomocí nativní funkce se neprojeví v spravovaného kopie řetězce.
+Tato technika způsobí, že kopie řetězce bude vytvořena na nespravované haldě, takže změny provedené v řetězci nativní funkcí nebudou promítnuty do spravované kopie řetězce.
 
-Všimněte si, že žádná část knihovny DLL je přístupný pro spravovaný kód prostřednictvím tradiční #include. Ve skutečnosti knihovny DLL přistupuje pouze za běhu, takže problémy s funkcí importovány pomocí `DllImport` nebudou zjištěna v době kompilace.
+Všimněte si, že žádná část knihovny DLL není k dispozici pro spravovaný kód prostřednictvím tradiční direktivy #include. Knihovna DLL je ve skutečnosti k dispozici pouze za běhu, takže problémy s funkcemi importovanými v nástroji `DllImport` nebudou zjištěny v době kompilace.
 
 ## <a name="see-also"></a>Viz také:
 

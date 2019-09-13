@@ -1,6 +1,6 @@
 ---
 title: Použití uživatelského ovládacího prvku Windows Form v prostředí MFC
-ms.date: 1/08/2018
+ms.date: 01/08/2018
 helpviewer_keywords:
 - MFC [C++], Windows Forms support
 - interoperability [C++], Windows Forms in MFC
@@ -9,32 +9,32 @@ helpviewer_keywords:
 - interop [C++], MFC
 - Windows Forms [C++], MFC support
 ms.assetid: 63fb099b-1dff-469c-9e34-dab52e122fcd
-ms.openlocfilehash: 38c5c37712b430b137934d441056e60f2c130f78
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: efabbf84778d925ec1de03f5f4ea0ca09185bd81
+ms.sourcegitcommit: effb516760c0f956c6308eeded48851accc96b92
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62384488"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70926058"
 ---
 # <a name="using-a-windows-form-user-control-in-mfc"></a>Použití uživatelského ovládacího prvku Windows Form v prostředí MFC
 
-Pomocí třídy pro podporu knihovny MFC Windows Forms může hostovat ovládacích prvků Windows Forms v rámci vašich aplikací knihovny MFC jako ovládací prvek ActiveX v dialogových oknech MFC nebo zobrazení. Kromě toho je možné hostovat modelu Windows Forms jako dialogová okna knihovny MFC.
+Pomocí model Windows Forms třídy podpory knihovny MFC můžete hostovat model Windows Forms ovládací prvky v rámci svých aplikací knihovny MFC jako ovládací prvek ActiveX v dialogových oknech knihovny MFC nebo zobrazeních. Kromě toho mohou být model Windows Forms formuláře hostovány jako dialogová okna knihovny MFC.
 
 Následující části popisují, jak:
 
-- Hostování ovládacího prvku Windows Forms v dialogovém okně knihovny MFC.
+- Hostování ovládacího prvku model Windows Forms v dialogovém okně knihovny MFC.
 
-- Hostování uživatelského ovládacího prvku Windows Forms jako zobrazení MFC.
+- Hostování uživatelského ovládacího prvku model Windows Forms jako zobrazení MFC.
 
-- Hostování formuláře Windows Forms jako dialogového okna knihovny MFC.
-
-> [!NOTE]
-> Integrace formulářů Windows MFC funguje jenom v projektech, které dynamicky propojit s knihovnou MFC (projekty, ve kterém `_AFXDLL` je definována).
+- Hostování formuláře model Windows Forms jako dialogového okna knihovny MFC.
 
 > [!NOTE]
-> Když vytváříte aplikaci pomocí privátního (upravené) kopírování z rozhraní Windows Forms knihovny MFC DLL (mfcmifc80.dll), dojde k instalaci v mezipaměti GAC, není-li nahradit klíč Microsoftu s vlastním klíčem dodavatele. Další informace o podepisování sestavení naleznete v tématu [programování se sestaveními](/dotnet/framework/app-domains/programming-with-assemblies) a [sestavení se silným názvem (podepisování sestavení) (C++vyhodnocovací)](../dotnet/strong-name-assemblies-assembly-signing-cpp-cli.md).
+> Knihovna MFC model Windows Forms Integration funguje pouze v projektech, které jsou propojeny dynamicky s `_AFXDLL` knihovnou MFC (projekty, ve kterých je definována).
 
-Pokud vaše aplikace knihovny MFC používá Windows Forms, musíte redistribuovat mfcmifc80.dll s vaší aplikací. Další informace najdete v tématu [Redistribuce knihovny MFC](../windows/redistributing-the-mfc-library.md).
+> [!NOTE]
+> Při sestavování aplikace pomocí soukromé (upravené) kopie knihovny DLL model Windows Forms rozhraní knihovny MFC (mfcmifc80. dll), nebude možné ji nainstalovat do mezipaměti GAC, pokud nenahradíte klíč společnosti Microsoft vlastním klíčem dodavatele. Další informace o podepisování sestavení naleznete v tématu [programování se sestaveními](/dotnet/framework/app-domains/programming-with-assemblies) a [sestavení se silným názvem (podepisováníC++sestavení) (/CLI)](../dotnet/strong-name-assemblies-assembly-signing-cpp-cli.md).
+
+Pokud vaše aplikace MFC používá model Windows Forms, je nutné znovu distribuovat mfcmifc80. dll s vaší aplikací. Další informace naleznete v tématu [Redistribuce knihovny MFC](../windows/redistributing-the-mfc-library.md).
 
 ## <a name="in-this-section"></a>V tomto oddílu
 
@@ -44,7 +44,7 @@ Pokud vaše aplikace knihovny MFC používá Windows Forms, musíte redistribuov
 
 [Hostitelské poskytování uživatelského ovládacího prvku modelu Windows Form jako dialogového okna knihovny MFC](../dotnet/hosting-a-windows-form-user-control-as-an-mfc-dialog-box.md)
 
-## <a name="reference"></a>Odkaz
+## <a name="reference"></a>Reference
 
 [CWinFormsControl – třída](../mfc/reference/cwinformscontrol-class.md)
 

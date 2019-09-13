@@ -1,6 +1,6 @@
 ---
 title: Směrování příkazů
-ms.date: 11/04/2016
+ms.date: 09/06/2019
 helpviewer_keywords:
 - MFC, command routing
 - command handling [MFC], routing commands
@@ -8,40 +8,40 @@ helpviewer_keywords:
 - handlers, command [MFC]
 - command routing
 ms.assetid: 9393a956-bdd4-47c5-9013-dbd680433f93
-ms.openlocfilehash: ae9741a66e944b60dc38c1366353e43977e1ee7a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8d1e1e59c56439c01655a1416df645ccc6922411
+ms.sourcegitcommit: 3caf5261b3ea80d9cf14038c116ba981d655cd13
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62165140"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70907620"
 ---
 # <a name="command-routing"></a>Směrování příkazů
 
-Vaše odpovědnosti v práci s příkazy je omezená na vytváření map zpráv spojení mezi příkazy a příslušným obslužným funkcím, úloh, pro který použijete v okně Vlastnosti. Také musíte napsat obslužné rutiny většinu příkazů.
+Vaše zodpovědnost za práci s příkazy je omezená na to, aby připojení map zpráv mezi příkazy a jejich obslužnými rutinami bylo omezené na úlohu, pro kterou použijete [Průvodce třídou MFC](reference/mfc-class-wizard.md). Také je nutné napsat kód pro obslužné rutiny příkazů.
 
-Windows se obvykle posílají do okna hlavního rámce, ale příkaz zprávy pak jsou směrovány na jiné objekty. Rozhraní framework směruje příkazů pomocí standardní posloupnost příkaz cílové objektů, z nichž jeden má mít obslužnou rutinu pro příkaz. Každý objekt cíl příkazu ověří jeho mapy zprávy zobrazíte, pokud může zpracovávat příchozí zprávy.
+Zprávy systému Windows jsou obvykle odesílány do hlavního okna rámce, ale zprávy příkazů jsou poté směrovány do jiných objektů. Rozhraní směruje příkazy přes standardní sekvenci objektů příkazového cíle, přičemž jedna z nich by měla mít obslužnou rutinu pro příkaz. Každý objekt Target příkazu zkontroluje mapu zprávy a zjistí, zda může zpracovávat příchozí zprávu.
 
-Různé třídy cíl příkazu zkontrolujte že mapy vlastních zpráv v různých časech. Třída obvykle směruje příkazu k určitým objektům a umožnit jim první příležitosti v příkazu. Pokud žádná z těchto objektů zpracovává příkaz, původní třídy kontroluje svůj vlastní mapu zpráv. Potom pokud ho nelze zadat samotná obslužná rutina, se může směrovat příkaz ještě další cíle příkazů. V tabulce [trasy standardní příkaz](#_core_standard_command_route) níže ukazuje, jak každý z třídy struktury toto pořadí. Obecné pořadí, ve kterém směruje cíl příkazu příkazu je:
+Různé třídy cílového příkazu kontrolují svoje vlastní mapy zpráv v různých časech. Třída obvykle směruje příkaz na určité jiné objekty, aby je bylo možné nejprve zadat v příkazu. Pokud žádný z těchto objektů nezpracovává příkaz, původní Třída zkontroluje svou vlastní mapu zpráv. Pokud pak nemůže dodávat obslužnou rutinu samu sebe, může to směrovat příkaz na ještě více cílů příkazu. Níže uvedená [trasa příkazu TABLE Standard](#_core_standard_command_route) ukazuje, jak každá z těchto tříd obsahuje strukturu této sekvence. Obecné pořadí, ve kterém cíl příkazu směruje příkaz:
 
-1. Na cíl příkazu jeho aktuálně aktivní podřízený objekt.
+1. Na svůj aktuálně aktivní podřízený objekt cílového příkazu.
 
-1. Na sebe sama.
+1. Do sebe samé.
 
-1. Pro další cíle příkazů.
+1. Do jiných cílů příkazu.
 
-Jak nákladné je tento mechanismus směrování porovnání vaše obslužná rutina nemá v reakci na příkaz, je nízké náklady směrování. Berte v úvahu, že rozhraní framework generuje příkazy pouze v případě, že uživatel pracuje s objektem uživatelského rozhraní.
+Jak nákladný je tento mechanismus směrování v porovnání s tím, co obslužná rutina reaguje na příkaz, náklady na směrování jsou nízké. Uvědomte si, že rozhraní generuje příkazy pouze v případě, že uživatel pracuje s objektem uživatelského rozhraní.
 
-### <a name="_core_standard_command_route"></a> Standardní příkaz trasy
+### <a name="_core_standard_command_route"></a>Standardní příkazová trasa
 
-|Pokud objekt tohoto typu přijme příkaz. . .|Poskytuje samostatně a dalších objektů cíl příkazu příležitost dobře se zpracovat příkaz v tomto pořadí:|
+|Když objekt tohoto typu obdrží příkaz. . .|Sám sobě a jiným cílovým objektům příkazu umožní zpracovat příkaz v tomto pořadí:|
 |----------------------------------------------------------|-----------------------------------------------------------------------------------------------------|
-|Okno rámce MDI (`CMDIFrameWnd`)|1.  Aktivní `CMDIChildWnd`<br />2.  Toto okno rámce<br />3.  Aplikace (`CWinApp` objektu)|
-|Okna rámce dokumentu (`CFrameWnd`, `CMDIChildWnd`)|1.  Aktivní zobrazení<br />2.  Toto okno rámce<br />3.  Aplikace (`CWinApp` objektu)|
+|Okno rámce MDI (`CMDIFrameWnd`)|1.  Aktivně`CMDIChildWnd`<br />2.  Toto okno rámce<br />3.  Aplikace (`CWinApp` objekt)|
+|Okno rámce dokumentu (`CFrameWnd`, `CMDIChildWnd`)|1.  Aktivní zobrazení<br />2.  Toto okno rámce<br />3.  Aplikace (`CWinApp` objekt)|
 |Zobrazit|1.  Toto zobrazení<br />2.  Dokument připojený k zobrazení|
-|Dokument|1.  Tento dokument<br />2.  Šablona dokumentu, které jsou připojené k dokumentu|
-|Dialogové okno|1.  Toto dialogové okno<br />2.  Okno, které vlastní dialogových oken<br />3.  Aplikace (`CWinApp` objektu)|
+|Dokument|1.  Tento dokument<br />2.  Šablona dokumentu připojená k dokumentu|
+|Dialogové okno|1.  Toto dialogové okno<br />2.  Okno, které vlastní dialogové okno<br />3.  Aplikace (`CWinApp` objekt)|
 
-Pokud zmíníte číslované položky ve druhém sloupci v předchozí tabulce jiné objekty, jako je například dokument, najdete v odpovídající položku v prvním sloupci. Například při čtení v druhém sloupci, že zobrazení předá příkazu, který bude jeho dokumentu, naleznete v příspěvku "Dokumentů" v prvním sloupci sledovat další směrování.
+Kde číslované položky ve druhém sloupci v předchozí tabulce zmiňují jiné objekty, jako je například dokument, viz odpovídající položka v prvním sloupci. Například při čtení v druhém sloupci, který zobrazení předává příkaz do svého dokumentu, si přečtěte část "dokument" v prvním sloupci a sledujte směrování dál.
 
 ## <a name="see-also"></a>Viz také:
 

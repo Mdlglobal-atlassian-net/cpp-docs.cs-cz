@@ -1,27 +1,27 @@
 ---
-title: Kompilátor upozornění (úroveň 4) C4295
-ms.date: 1/09/2018
+title: Upozornění kompilátoru (úroveň 4) C4295
+ms.date: 01/09/2018
 f1_keywords:
 - C4295
 helpviewer_keywords:
 - C4295
 ms.assetid: 20dbff85-9f62-4ca3-8fe9-079d4512006d
-ms.openlocfilehash: ed31ea19f9c36a9c6fab7452a4bfc3843a151059
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5e8b546e4eb4b60197db504382b3230e779b1dec
+ms.sourcegitcommit: effb516760c0f956c6308eeded48851accc96b92
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62400874"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70924854"
 ---
-# <a name="compiler-warning-level-4-c4295"></a>Kompilátor upozornění (úroveň 4) C4295
+# <a name="compiler-warning-level-4-c4295"></a>Upozornění kompilátoru (úroveň 4) C4295
 
-> "*pole*': pole je příliš malá, aby zahrnují ukončujícího znaku null
+> '*Array*': pole je příliš malé pro vložení ukončujícího znaku null
 
-Pole byl inicializován, ale poslední znak v poli není null; přístup k poli jako řetězec může vést k neočekávaným výsledkům.
+Pole bylo inicializováno, ale poslední znak v poli není null; přístup k poli jako řetězec může způsobit neočekávané výsledky.
 
 ## <a name="example"></a>Příklad
 
-Následující ukázka generuje C4295. Chcete-li vyřešit tento problém, můžete deklarovat velikost pole pro uchování větší ukončujícího znaku null z inicializátoru řetězec, nebo můžete použít seznam inicializátorů pole aby záměru vymazat, že je to pole `char`, není řetězec zakončený hodnotou null.
+Následující ukázka generuje C4295. Chcete-li tento problém vyřešit, můžete deklarovat větší velikost pole, pro uložení ukončující hodnoty null z inicializačního řetězce, nebo můžete použít seznam inicializátorů pole, aby záměr vymazal, že se jedná o pole `char`, nikoli řetězec zakončený hodnotou null.
 
 ```C
 // C4295.c

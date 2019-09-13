@@ -1,5 +1,5 @@
 ---
-title: 'MFC – ovládací prvky ActiveX: Přidání vlastních událostí'
+title: 'MFC – ovládací prvky ActiveX: Přidávání vlastních událostí'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - MFC ActiveX controls [MFC], events [MFC]
@@ -15,121 +15,119 @@ helpviewer_keywords:
 - custom events [MFC]
 - FireEvent method, adding custom events
 ms.assetid: c584d053-1e34-47aa-958e-37d3e9b85892
-ms.openlocfilehash: 48c5ddbc8a3bcf6f74c251820e83cdebcef05bc9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d22eb6016635c509d6b8bb2068f00125d0227ca2
+ms.sourcegitcommit: 3caf5261b3ea80d9cf14038c116ba981d655cd13
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62400731"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70907309"
 ---
-# <a name="mfc-activex-controls-adding-custom-events"></a>MFC – ovládací prvky ActiveX: Přidání vlastních událostí
+# <a name="mfc-activex-controls-adding-custom-events"></a>MFC – ovládací prvky ActiveX: Přidávání vlastních událostí
 
-Vlastní události liší od uložených událostí, že se automaticky aktivuje třídou `COleControl`. Vlastní události rozpoznává určité akce, určí vývojářem ovládacích prvků, jako událost. Události položek mapování pro vlastní události jsou reprezentovány EVENT_CUSTOM – makro. Následující části implementuje vlastní události pro projekt ovládacího prvku ActiveX, který byl vytvořen pomocí Průvodce ovládacím prvkem ActiveX.
+Vlastní události se liší od uložených událostí v tom, že nejsou automaticky spouštěny `COleControl`třídou. Vlastní událost rozpoznává určitou akci určenou vývojářem ovládacího prvku jako událost. Položky mapování událostí pro vlastní události jsou reprezentovány pomocí makra EVENT_CUSTOM. V následující části je implementována vlastní událost pro projekt ovládacího prvku ActiveX, který byl vytvořen pomocí Průvodce ovládacím prvkem ActiveX.
 
-##  <a name="_core_adding_a_custom_event_with_classwizard"></a> Přidání vlastních událostí s Průvodce přidáním události
+##  <a name="_core_adding_a_custom_event_with_classwizard"></a>Přidání vlastní události pomocí Průvodce přidáním události
 
-Následující procedura přidá určité vlastní události, clickin –. Tento postup slouží k přidání dalších vlastních událostí. Nahraďte název vaší vlastní události a jeho parametry pro název clickin – událost a parametry.
+Následující postup přidá konkrétní vlastní událost ClickIn. Pomocí tohoto postupu můžete přidat další vlastní události. Pro název a parametry události ClickIn nahraďte vlastní název události a její parametry.
 
-#### <a name="to-add-the-clickin-custom-event-using-the-add-event-wizard"></a>Chcete-li přidat vlastní událost clickin – pomocí Průvodce přidáním události
+#### <a name="to-add-the-clickin-custom-event-using-the-add-event-wizard"></a>Přidání vlastní události ClickIn pomocí Průvodce přidáním události
 
-1. Načtení projektu ovládacího prvku.
+1. Načtěte projekt ovládacího prvku.
 
-1. V zobrazení tříd klikněte pravým tlačítkem na třídy vašeho ovládacího prvku ActiveX otevřete místní nabídku.
+1. V **zobrazení tříd**klikněte pravým tlačítkem myši na třídu ovládacího prvku ActiveX a otevřete místní nabídku.
 
-1. V místní nabídce klikněte na tlačítko **přidat** a potom klikněte na tlačítko **přidat událost**.
+1. V místní nabídce klikněte na **Přidat** a pak klikněte na **Přidat událost**.
 
-   Otevře se Průvodce přidáním události.
+   Tím se otevře Průvodce přidáním události.
 
-1. V **název události** pole, nejprve vyberte jakékoli existující události a poté klikněte na **vlastní** přepínač tlačítko a pak zadejte *clickin –*.
+1. V poli **název události** nejdřív vyberte libovolnou existující událost, potom klikněte na **vlastní** přepínač a zadejte *ClickIn*.
 
-1. V **interní název** zadejte název funkce události jeho spuštění. V tomto příkladu použijte výchozí hodnotu poskytované Průvodce přidání události (`FireClickIn`).
+1. Do pole **interní název** zadejte název funkce vyvolávání události. V tomto příkladu použijte výchozí hodnotu poskytnutou průvodcem přidáním události (`FireClickIn`).
 
-1. Přidat parametr s názvem *xCoord* (typ *OLE_XPOS_PIXELS*), použije **název parametru** a **typ parametru** ovládacích prvků.
+1. Přidejte parametr s názvem *xCoord* (typ *OLE_XPOS_PIXELS*) s použitím ovládacích prvků **název parametru** a **typ parametru** .
 
-1. Přidejte druhý parametr, s názvem *yCoord* (typ *OLE_YPOS_PIXELS*).
+1. Přidejte druhý parametr nazvaný *yCoord* (typ *OLE_YPOS_PIXELS*).
 
-1. Klikněte na tlačítko **Dokončit** vytvořit událost.
+1. Kliknutím na tlačítko **Dokončit** Vytvořte událost.
 
-##  <a name="_core_classwizard_changes_for_custom_events"></a> Přidejte změny událostí, které průvodce pro vlastní události
+##  <a name="_core_classwizard_changes_for_custom_events"></a>Přidat změny Průvodce událostí pro vlastní události
 
-Když přidáte vlastní událost, provede Průvodce přidáním události změny třídy ovládacího prvku. H. CPP, a. Soubory IDL. Následující ukázky kódu jsou specifické pro clickin – událost.
+Když přidáte vlastní událost, Průvodce přidáním události provede změny ve třídě ovládacího prvku. H,. CPP a. Soubory IDL Následující ukázky kódu jsou specifické pro událost ClickIn.
 
-Následující řádky se přidají do záhlaví (. H) soubor třídy vašeho ovládacího prvku:
+Do záhlaví se přidají následující řádky (. H) souboru vaší třídy ovládacího prvku:
 
 [!code-cpp[NVC_MFC_AxUI#7](../mfc/codesnippet/cpp/mfc-activex-controls-adding-custom-events_1.h)]
 
-Tento kód deklaruje vložená funkce volána `FireClickIn` , která volá [COleControl::FireEvent](../mfc/reference/colecontrol-class.md#fireevent) s parametry a clickin – událost můžete definovat pomocí Průvodce přidáním události.
+Tento kód deklaruje vloženou funkci nazvanou `FireClickIn` , která volá [COleControl –:: fireEvent](../mfc/reference/colecontrol-class.md#fireevent) s událostí ClickIn a parametry, které jste definovali pomocí Průvodce přidáním události.
 
-Kromě toho se přidá následující řádek do mapy událostí pro ovládací prvek umístěný v implementaci (. Soubor CPP) třídy ovládacího prvku:
+Kromě toho se do mapy událostí ovládacího prvku přidá následující řádek, který se nachází v implementaci (. CPP) souboru vaší třídy ovládacího prvku:
 
 [!code-cpp[NVC_MFC_AxUI#8](../mfc/codesnippet/cpp/mfc-activex-controls-adding-custom-events_2.cpp)]
 
-Tento kód se mapuje na vložené funkce clickin – událost `FireClickIn`, předávání parametrů můžete definovat pomocí Průvodce přidáním události.
+Tento kód mapuje Event ClickIn na vloženou funkci `FireClickIn`a předává parametry, které jste definovali pomocí Průvodce přidáním události.
 
-Nakonec se přidá následující řádek do ovládacího prvku. Soubor IDL:
+Nakonec se do ovládacího prvku přidá následující řádek. Soubor IDL:
 
 [!code-cpp[NVC_MFC_AxUI#9](../mfc/codesnippet/cpp/mfc-activex-controls-adding-custom-events_3.idl)]
 
-Tento řádek přiřadí clickin – událost konkrétní identifikační číslo, na základě pozice události v seznamu událostí Průvodce přidáním události. Položka v seznamu událostí umožňuje kontejner předvídat události. Je třeba zadat kód obslužné rutiny, který se spustí, když se aktivuje událost.
+Tento řádek přiřadí konkrétní identifikační číslo události ClickIn z pozice události v seznamu událostí Průvodce přidáním události. Položka v seznamu událostí umožňuje kontejneru odhadnout událost. Například může poskytovat kód obslužné rutiny, který se spustí při vyvolání události.
 
-##  <a name="_core_calling_fireclickin"></a> Fireclickin – volání
+##  <a name="_core_calling_fireclickin"></a>Volání FireClickIn
 
-Teď, když jste přidali vlastní událost clickin – pomocí Průvodce přidáním události, musíte rozhodnout, kdy je tato událost se aktivuje. To lze provést zavoláním `FireClickIn` při výskytu příslušnou akci. V tomto výkladu používá ovládací prvek `InCircle` funkci uvnitř obslužné rutiny zpráv WM_LBUTTONDOWN Chcete-li vyvolat clickin – událost, když uživatel klikne do kruhové nebo elipsy oblasti. Následující procedura přidá obslužnou rutinu WM_LBUTTONDOWN.
+Teď, když jste přidali vlastní událost ClickIn pomocí Průvodce přidáním události, je nutné se rozhodnout, kdy má být událost aktivována. To provedete tak `FireClickIn` , že zavoláte, když dojde k příslušné akci. Pro tuto diskuzi používá `InCircle` ovládací prvek funkci v `WM_LBUTTONDOWN` rámci obslužné rutiny zpráv k vyvolání události ClickIn, když uživatel klikne dovnitř kruhové nebo elipsovité oblasti. Následující postup přidá `WM_LBUTTONDOWN` obslužnou rutinu.
 
-#### <a name="to-add-a-message-handler-with-the-add-event-wizard"></a>Chcete-li přidat obslužné rutiny zpráv pomocí Průvodce přidáním události
+#### <a name="to-add-a-message-handler-with-the-add-event-wizard"></a>Přidání obslužné rutiny zpráv pomocí Průvodce přidáním události
 
-1. Načtení projektu ovládacího prvku.
+1. Načtěte projekt ovládacího prvku.
 
-1. V zobrazení tříd vyberte třídy vašeho ovládacího prvku ActiveX.
+1. V **zobrazení tříd**vyberte svou třídu ovládacího prvku ActiveX.
 
-1. V okně Vlastnosti klikněte na tlačítko **zprávy** tlačítko.
+1. V okně **vlastnosti** se zobrazí seznam zpráv, které mohou být zpracovány ovládacím prvkem ActiveX. Žádná zpráva zobrazená tučně již obsahuje přiřazenou funkci obslužné rutiny.
 
-   V okně Vlastnosti se zobrazí seznam zpráv, které mohou být zpracovány ovládací prvek ActiveX. Všechny zprávy zobrazeny tučně již má funkci obslužné rutiny přiřazenou.
+1. Vyberte zprávu, kterou chcete zpracovat. V tomto příkladu vyberte `WM_LBUTTONDOWN`.
 
-1. V okně Vlastnosti vyberte zprávu, kterou chcete zpracovat. V tomto příkladu vyberte WM_LBUTTONDOWN.
+1. V rozevíracím seznamu na pravé straně vyberte  **\<přidat > OnLButtonDown**.
 
-1. Z rozevíracího seznamu na pravé straně vyberte  **\<Přidat > onlbuttondown –**.
+1. Dvojím kliknutím na novou funkci obslužné rutiny v **zobrazení tříd** přejděte na kód obslužné rutiny zprávy v implementaci (. CPP) ovládacího prvku ActiveX.
 
-1. Dvakrát klikněte na novou funkci obslužné rutiny v zobrazení tříd pro přechod na kód obslužné rutiny zprávy v implementaci (. Soubor CPP) ovládacího prvku ActiveX.
-
-Následující kód volá ukázka `InCircle` pracovat pokaždé, když dojde ke kliknutí na levé tlačítko myši v rámci okna ovládacího prvku. Tato ukázka najdete ve funkci obslužné rutiny WM_LBUTTONDOWN `OnLButtonDown`v [KR ukázka](../overview/visual-cpp-samples.md) abstraktní.
+Následující ukázka kódu volá `InCircle` funkci při každém kliknutí levým tlačítkem myši v okně ovládacího prvku. Tuto ukázku lze nalézt ve `WM_LBUTTONDOWN` `OnLButtonDown`funkci obslužné rutiny, v [ukázce Sample](../overview/visual-cpp-samples.md) abstract.
 
 [!code-cpp[NVC_MFC_AxUI#10](../mfc/codesnippet/cpp/mfc-activex-controls-adding-custom-events_4.cpp)]
 
 > [!NOTE]
->  Když Průvodce přidáním události vytvoří obslužné rutiny zpráv pro akce tlačítka myši, se automaticky přidá volání stejné obslužná rutina zprávy základní třídy. Neodebírejte toto volání. Pokud váš ovládací prvek používá některou z zprávy uložených týkající se myši, obslužné rutiny zpráv v základní třídě musí být volána k zajištění, že se správně zpracovává zachycení myši.
+>  Když Průvodce přidáním události vytvoří obslužné rutiny zpráv pro akce tlačítek myši, bude automaticky přidáno volání stejné obslužné rutiny zprávy základní třídy. Toto volání neodstraňujte. Pokud váš ovládací prvek používá některou z burzovních zpráv myši, musí být zavolány obslužné rutiny zpráv v základní třídě, aby bylo zajištěno, že je zachycení myši správně zpracováno.
 
-V následujícím příkladu se událost aktivuje při kliknutím na dochází pouze uvnitř zacyklená nebo elipsy oblasti v ovládacím prvku. K dosažení tohoto chování, můžete umístit `InCircle` funkce v implementaci ovládacího prvku (. Soubor CPP):
+V následujícím příkladu se událost aktivuje pouze v případě, že v ovládacím prvku dojde k kliknutí uvnitř kruhové nebo elipsovité oblasti. Chcete-li dosáhnout tohoto chování, můžete umístit `InCircle` funkci do implementace ovládacího prvku (. CPP):
 
 [!code-cpp[NVC_MFC_AxUI#11](../mfc/codesnippet/cpp/mfc-activex-controls-adding-custom-events_5.cpp)]
 
-Budete také muset přidat následující typ deklarace `InCircle` funkce do ovládacího prvku záhlaví (. H) file:
+Také budete muset přidat následující deklaraci `InCircle` funkce do hlavičky ovládacího prvku (. H) soubor:
 
 [!code-cpp[NVC_MFC_AxUI#12](../mfc/codesnippet/cpp/mfc-activex-controls-adding-custom-events_6.h)]
 
-##  <a name="_core_custom_events_with_stock_names"></a> Vlastní události s názvy uložených
+##  <a name="_core_custom_events_with_stock_names"></a>Vlastní události s názvy akcií
 
-Se stejným názvem jako uložených událostí, můžete vytvořit vlastní události, ale nemůže implementovat v stejný ovládací prvek. Můžete například chtít vytvořit vlastní události, volá se, která se neaktivuje, když základní událost kliknutí by normálně aktivují, klikněte na tlačítko. Může pak vyvolat událost Click kdykoli po zavolání funkce jeho spuštění.
+Můžete vytvořit vlastní události se stejným názvem jako s uloženými událostmi, ale nelze je implementovat ve stejném ovládacím prvku. Můžete například chtít vytvořit vlastní událost s názvem kliknout, která se neaktivuje, když by se událost akcie normálně aktivovala. Událost Click pak můžete vyvolat kdykoli voláním funkce vypálení.
 
-Následující procedura přidá vlastní klikněte na událost.
+Následující postup přidá vlastní událost kliknutí.
 
-#### <a name="to-add-a-custom-event-that-uses-a-stock-event-name"></a>Chcete-li přidat vlastní událost, která používá název základní událost
+#### <a name="to-add-a-custom-event-that-uses-a-stock-event-name"></a>Přidání vlastní události, která používá název uložené události
 
-1. Načtení projektu ovládacího prvku.
+1. Načtěte projekt ovládacího prvku.
 
-1. V zobrazení tříd klikněte pravým tlačítkem na třídy vašeho ovládacího prvku ActiveX otevřete místní nabídku.
+1. V **zobrazení tříd**klikněte pravým tlačítkem myši na třídu ovládacího prvku ActiveX a otevřete místní nabídku.
 
-1. V místní nabídce klikněte na tlačítko **přidat** a potom klikněte na tlačítko **přidat událost**.
+1. V místní nabídce klikněte na **Přidat** a pak klikněte na **Přidat událost**.
 
-   Otevře se Průvodce přidáním události.
+   Tím se otevře Průvodce přidáním události.
 
-1. V **název události** rozevíracího seznamu vyberte název základní událost. V tomto příkladu vyberte **klikněte na tlačítko**.
+1. V rozevíracím seznamu **název události** vyberte uložený název události. V tomto příkladu vyberte **možnost kliknout**.
 
-1. Pro **typ události**vyberte **vlastní**.
+1. Jako **Typ události**vyberte **vlastní**.
 
-1. Klikněte na tlačítko **Dokončit** vytvořit událost.
+1. Kliknutím na tlačítko **Dokončit** Vytvořte událost.
 
-1. Volání `FireClick` na příslušných místech ve vašem kódu.
+1. Zavolejte `FireClick` na vhodné místo v kódu.
 
 ## <a name="see-also"></a>Viz také:
 

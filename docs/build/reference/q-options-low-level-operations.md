@@ -1,38 +1,38 @@
 ---
 title: /Q – možnosti (operace nízké úrovně)
-ms.date: 1/23/2018
+ms.date: 01/23/2018
 f1_keywords:
 - /q
 helpviewer_keywords:
 - Q compiler option [C++]
 - -Q compiler option [C++]
 - /Q compiler option [C++]
-ms.openlocfilehash: 5bbb63b4f437f8aefd5c84c1c1c4bd20bdb965cb
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6348226aa38d1f2eefdf9e19e27c4c87bd2f0812
+ms.sourcegitcommit: effb516760c0f956c6308eeded48851accc96b92
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62319392"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70927670"
 ---
 # <a name="q-options-low-level-operations"></a>/Q – možnosti (operace nízké úrovně)
 
-Můžete použít **/Q** – možnosti kompilátoru k provedení následujících operací nízké úrovně kompilátoru:
+K provedení následujících operací kompilátoru nižší úrovně můžete použít možnosti kompilátoru **/q** :
 
-- [/ Qfast_transcendentals (vynucení rychlých transcendentních objektů)](qfast-transcendentals-force-fast-transcendentals.md): Vytvoří rychlé transcendentals.
+- [/Qfast_transcendentals (vynutit rychlé transcendentní objekty)](qfast-transcendentals-force-fast-transcendentals.md): Generuje rychle transcendentní objekty.
 
-- [/ QIfist (potlačit _ftol)](qifist-suppress-ftol.md): Potlačí `_ftol` při převodu z typu s plovoucí desetinnou čárkou na celočíselný typ je povinné (jenom x86).
+- [/QIfist (Potlačit _ftol)](qifist-suppress-ftol.md): Potlačí `_ftol` , když je vyžadován převod z typu s plovoucí desetinnou čárkou na celočíselný typ (pouze x86).
 
-- [/ Qimprecise_fwaits (odebrání příkazů fwaits z bloků Try)](qimprecise-fwaits-remove-fwaits-inside-try-blocks.md): Odebere `fwait` příkazy uvnitř `try` bloky.
+- [/Qimprecise_fwaits (odebrat příkazů fwaits uvnitř bloků try)](qimprecise-fwaits-remove-fwaits-inside-try-blocks.md): Odebere `fwait` příkazy uvnitř `try` bloků.
 
-- [/ Qpar (Automatická paralelizace)](qpar-auto-parallelizer.md): Povolí automatickou paralelizaci smyček, které jsou označeny [#pragma loop()](../../preprocessor/loop.md) směrnice.
+- [/Qpar (auto-paralelizace)](qpar-auto-parallelizer.md): Povoluje automatické paralelismuing smyček, které jsou označeny direktivou [#pragma Loop ()](../../preprocessor/loop.md) .
 
-- [/ Qpar-report (úroveň sestav automatický Paralelizér)](qpar-report-auto-parallelizer-reporting-level.md): Povolí protokolování úrovní pro automatickou paralelizaci.
+- [/Qpar-Report (úroveň vytváření sestav auto-paralelizace)](qpar-report-auto-parallelizer-reporting-level.md): Povoluje úrovně generování sestav pro automatické paralelismus.
 
-- [/ Qsafe_fp_loads](qsafe-fp-loads.md): Potlačuje optimalizace pro registr s plovoucí desetinnou čárkou zatížením a pro přesuny mezi pamětí a MMX registrů.
+- [/Qsafe_fp_loads](qsafe-fp-loads.md): Potlačí optimalizace pro načtení registru s plovoucí desetinnou čárkou a pro přesun mezi registry paměti a MMX.
 
-- [/ Qspectre](qspectre.md): Vygeneruje instrukce ke zmírnění určité chyby zabezpečení Spectre.
+- [/Qspectre](qspectre.md): Vygeneruje pokyny pro zmírnění některých ohrožení zabezpečení Spectre.
 
-- [/ Qvec-report (úroveň sestav automatickou vektorizací)](qvec-report-auto-vectorizer-reporting-level.md): Povolí protokolování úrovní pro automatickou vektorizaci.
+- [/Qvec-Report (úroveň vytváření sestav auto-vektorizace)](qvec-report-auto-vectorizer-reporting-level.md): Povoluje generování úrovní pro automatické rozkládání.
 
 ## <a name="see-also"></a>Viz také:
 

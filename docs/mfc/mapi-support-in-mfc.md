@@ -9,52 +9,52 @@ helpviewer_keywords:
 - MAPI, MFC
 - OnFileSendMail method [MFC]
 ms.assetid: cafbecb1-0427-4077-b4b8-159bae5b49b8
-ms.openlocfilehash: 9b873ca1b3384adab6487fb3af9dc1401aaad12c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e46eaf2bd84d4cebd2215ab2752ce3bb8e1eb9b3
+ms.sourcegitcommit: 3caf5261b3ea80d9cf14038c116ba981d655cd13
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62225523"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70907682"
 ---
 # <a name="mapi-support-in-mfc"></a>Podpora MAPI v MFC
 
-Knihovna MFC poskytuje podporu pro podmnožinu z Microsoft Application Program rozhraní MAPI (Messaging) ve třídě `CDocument`. Konkrétně `CDocument` má členské funkce, které určují, zda je na počítači koncového uživatele pro podporu e-mailu a pokud ano, povolit odeslat poštu příkaz, jehož ID standardní příkaz je ID_FILE_SEND_MAIL. Funkce obslužné rutiny knihovny MFC pro tento příkaz umožňuje uživateli poslat dokument e-mailem.
+MFC poskytuje podporu pro podmnožinu rozhraní MAPI (Messaging Application Program) společnosti Microsoft ve třídě `CDocument`. `CDocument` Konkrétně má členské funkce, které určují, zda je na počítači koncového uživatele k dispozici podpora pošty a v případě potřeby povolte příkaz Odeslat poštu, jehož ID standardního příkazu je ID_FILE_SEND_MAIL. Funkce obslužné rutiny MFC pro tento příkaz umožňuje uživateli odeslat dokument prostřednictvím elektronické pošty.
 
 > [!TIP]
->  I když MFC nejsou zapouzdření celou sadu funkce MAPI, můžete stále volat rozhraní MAPI funkce přímo, stejně jako funkce rozhraní Win32 API můžete volat přímo z aplikace knihovny MFC.
+>  I když knihovna MFC nepouzdřuje celou sadu funkcí rozhraní MAPI, můžete i nadále volat funkce rozhraní MAPI přímo, stejně jako můžete volat funkce Win32 API přímo z programů MFC.
 
-Příkaz v aplikaci je jednoduché a poskytování odeslat e-mailu. Knihovna MFC poskytuje implementaci pro balíček dokumentu (to znamená `CDocument`-odvozenému objektu) jako přílohu a odeslat ho jako e-mailu. Je ekvivalentní k příkazu Uložit soubor, který uloží tuto přílohu (serializuje) obsah dokumentu a e-mailovou zprávu. Tato implementace vyzývá poštovního klienta na počítač uživatele a přidělit uživateli příležitost k řešení e-mailu a přidání předmět a text zprávy do e-mailovou zprávu. Uživatelé uvidí jejich známých poštovní aplikaci uživatelského rozhraní. Tato funkce je poskytnut pomocí dvou `CDocument` členské funkce: `OnFileSendMail` a `OnUpdateFileSendMail`.
+Poskytování příkazu pro odeslání pošty ve vaší aplikaci je velmi snadné. Knihovna MFC poskytuje implementaci pro zabalení dokumentu (tj `CDocument`. objektu odvozeného) jako přílohy a jeho odeslání jako e-mailu. Tato příloha je ekvivalentní příkazu k uložení souboru, který ukládá (serializace) obsah dokumentu do e-mailové zprávy. Tato implementace volá klienta pošty na počítači uživatele, aby mohl dát uživateli možnost adresovat e-mail a přidat předmět a text zprávy do e-mailové zprávy. Uživatelé uvidí své známé uživatelské rozhraní e-mailové aplikace. Tato funkce je poskytována dvěma `CDocument` členskými funkcemi: `OnFileSendMail` a `OnUpdateFileSendMail`.
 
-Rozhraní MAPI potřebuje číst soubor k odeslání přílohy. Pokud aplikace si zachová svůj datový soubor otevřít během `OnFileSendMail` volání funkce, soubor je potřeba otevřít s režimem sdílenou složku, která umožňuje přístup k souboru mezi více procesy.
+Rozhraní MAPI musí přečíst soubor pro odeslání přílohy. Pokud aplikace udržuje svůj datový soubor otevřený během `OnFileSendMail` volání funkce, soubor musí být otevřen s režimem sdílení, který umožňuje více procesům přístup k souboru.
 
 > [!NOTE]
 >  Přepsání verze `OnFileSendMail` pro třídu `COleDocument` správně zpracovává složené dokumenty.
 
-#### <a name="to-implement-a-send-mail-command-with-mfc"></a>Implementace příkazu Odeslat e-mailu s knihovnou MFC
+#### <a name="to-implement-a-send-mail-command-with-mfc"></a>Implementace příkazu pro odeslání pošty pomocí MFC
 
-1. Tento vizuál použít C++ editor nabídek k přidání položky nabídky, jejichž ID příkazu je ID_FILE_SEND_MAIL.
+1. Pomocí editoru vizuálních C++ nabídek přidejte položku nabídky, jejíž ID příkazu je ID_FILE_SEND_MAIL.
 
-   Toto ID příkazu je poskytovaného rámcem v AFXRES. H. Příkaz je přidat do jakékoli nabídky, ale obvykle je přidána do **souboru** nabídky.
+   Toto ID příkazu je poskytováno rozhraním v AFXRES. Y. Příkaz lze přidat do jakékoli nabídky, je však obvykle přidán do nabídky **soubor** .
 
-1. Ručně přidejte následující text do mapy dokumentu zpráva:
+1. Do mapy zpráv v dokumentu ručně přidejte následující:
 
    [!code-cpp[NVC_MFCDocView#9](../mfc/codesnippet/cpp/mapi-support-in-mfc_1.cpp)]
 
     > [!NOTE]
-    >  Toto mapování zpráv se dá použít pro dokumentu odvozen od buď `CDocument` nebo `COleDocument` – použila správné základní třídy v obou případech, přestože je ve své třídě odvozené dokumentu mapování zprávy.
+    >  Toto rozvržení zprávy funguje pro dokument odvozený od `CDocument` nebo `COleDocument` – v obou případech používá správnou základní třídu, a to i v případě, že je mapa zpráv v odvozené třídě dokumentu.
 
-1. Sestavení aplikace.
+1. Sestavte aplikaci.
 
-Pokud je k dispozici podpora e-mailu, MFC umožňuje položku nabídky s `OnUpdateFileSendMail` a následně zpracuje příkaz s `OnFileSendMail`. Pokud není k dispozici podpora e-mailu, MFC automaticky odstraní položku nabídky tak, že uživatel neuvidí.
+Pokud je k dispozici podpora pošty, knihovna MFC povolí položku `OnUpdateFileSendMail` nabídky s a následně zpracuje příkaz `OnFileSendMail`s. Pokud není k dispozici podpora pošty, knihovna MFC automaticky odebere položku nabídky, aby ji uživatel neuvidí.
 
 > [!TIP]
->  Místo ruční přidávání položek mapování zprávu, jak je uvedeno výše, můžete v okně Vlastnosti třídy mapování zpráv na funkce. Další informace najdete v tématu [mapování zpráv na funkce](../mfc/reference/mapping-messages-to-functions.md).
+>  Místo ručního přidávání položek mapování zpráv, jak je popsáno výše, můžete použít [Průvodce třídou](reference/mfc-class-wizard.md) třídy k mapování zpráv na funkce. Další informace najdete v tématu [mapování zpráv na funkce](../mfc/reference/mapping-messages-to-functions.md).
 
-Související informace naleznete v tématu [MAPI](../mfc/mapi.md) Přehled.
+Související informace najdete v tématu Přehled [rozhraní MAPI](../mfc/mapi.md) .
 
-Další informace o `CDocument` členské funkce, které umožňují MAPI, naleznete v tématu:
+Další informace o `CDocument` členských funkcích, které povolují rozhraní MAPI, najdete v těchto tématech:
 
-- [CDocument::OnFileSendMail](../mfc/reference/cdocument-class.md#onfilesendmail)
+- [Objektu CDocument:: OnFileSendMail](../mfc/reference/cdocument-class.md#onfilesendmail)
 
 - [CDocument::OnUpdateFileSendMail](../mfc/reference/cdocument-class.md#onupdatefilesendmail)
 

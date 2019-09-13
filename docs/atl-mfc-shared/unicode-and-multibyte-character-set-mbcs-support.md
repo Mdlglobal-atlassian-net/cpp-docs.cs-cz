@@ -1,6 +1,6 @@
 ---
-title: Kódování Unicode a vícebajtových znaků (MBCS) podporu sady
-ms.date: 1/09/2017
+title: Podpora Unicode a vícebajtové znakové sady (MBCS)
+ms.date: 01/09/2017
 helpviewer_keywords:
 - MFC [C++], character set support
 - MBCS [C++], strings and MFC support
@@ -10,90 +10,90 @@ helpviewer_keywords:
 - Unicode [C++], string objects
 - strings [C++], Unicode
 - strings [C++], character set support
-ms.openlocfilehash: 59e8759ffbe61b80c74d8b5aba5bc50886d6b23d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 983b3d9bc72d99ab3c665f86cffd205dccf873e8
+ms.sourcegitcommit: effb516760c0f956c6308eeded48851accc96b92
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62252672"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70927892"
 ---
-# <a name="unicode-and-multibyte-character-set-mbcs-support"></a>Kódování Unicode a vícebajtových znaků (MBCS) podporu sady
+# <a name="unicode-and-multibyte-character-set-mbcs-support"></a>Podpora Unicode a vícebajtové znakové sady (MBCS)
 
-Některé jazyky, třeba japonštinu a čínštinu, mají velké znak sady. Pro podporu programování pro tyto trhy, umožňuje třídy knihovny MFC (Microsoft Foundation) dva různé přístupy k zpracování velkého znakových sad:
+Některé jazyky, například japonské a čínské, mají velké znakové sady. Pro podporu programování pro tyto trhy umožňuje knihovna Microsoft Foundation Class (MFC) dva různé přístupy ke zpracování velkých znakových sad:
 
-- [Kódování Unicode](#mfc-support-for-unicode-strings), `wchar_t` na základě široké znaky a řetězce s kódováním UTF-16.
+- [Kódování Unicode](#mfc-support-for-unicode-strings), `wchar_t` založené na znacích a řetězce kódované jako UTF-16.
 
-- [Vícebajtové znakové sady (MBCS)](#mfc-support-for-mbcs-strings), **char** na základě jednoho nebo dvoubajtové znaky a řetězce zakódován do sady znaků specifických pro národní prostředí.
+- [Vícebajtové znakové sady (MBCS)](#mfc-support-for-mbcs-strings) **, znaky** jednoduchého nebo dvoubajtového znaku a řetězce kódované v sadě znaků specifické pro národní prostředí.
 
-Microsoft se doporučuje knihovny MFC kódování Unicode pro veškeré nové vývojové a knihovny MBCS byla vyřazena jako zastaralá v sadě Visual Studio 2013 a Visual Studio 2015. To již neplatí. Upozornění na zastaralost znakové sady MBCS v sadě Visual Studio 2017 byly odebrány.
+Společnost Microsoft doporučuje knihovny MFC Unicode pro všechny nové vývojové prostředí a knihovny znakové sady MBCS byly zastaralé v Visual Studio 2013 a sadě Visual Studio 2015. To již neplatí. Upozornění na zastaralost znakové sady MBCS byla v aplikaci Visual Studio 2017 odebrána.
 
 ## <a name="mfc-support-for-unicode-strings"></a>Podpora MFC pro řetězce Unicode
 
-Celou knihovnu třídy knihovny MFC podmíněně povoleny znaky znakové sady Unicode a řetězce jako UTF-16 uložené v širokých znaků. Zejména třídy [CString](../atl-mfc-shared/reference/cstringt-class.md) kódování Unicode.
+Celá knihovna tříd knihovny MFC je podmíněně povolena pro znaky Unicode a řetězce uložené v rámci velkých znaků jako UTF-16. Konkrétně třída [CString](../atl-mfc-shared/reference/cstringt-class.md) má povolenou znakovou sadu Unicode.
 
-Tyto knihovny ladicího programu a soubory DLL slouží k podpoře kódování Unicode v prostředí MFC:
+Tyto knihovny, ladicí program a soubory DLL se používají k podpoře kódování Unicode v MFC:
 
 |||||
 |-|-|-|-|
 |UAFXCW.LIB|UAFXCW.PDB|UAFXCWD.LIB|UAFXCWD.PDB|
-|MFC*verze*U.LIB|MFC*version*U.PDB|MFC*version*U.DLL|MFC*version*UD.LIB|
-|MFC*version*UD.PDB|MFC*version*UD.DLL|MFCS*verze*U.LIB|MFCS*version*U.PDB|
-|MFCS*version*UD.LIB|MFCS*version*UD.PDB|MFCM*verze*U.LIB|MFCM*version*U.PDB|
-|MFCM*version*U.DLL|MFCM*version*UD.LIB|MFCM*version*UD.PDB|MFCM*version*UD.DLL|
+|MFC*verze*U. lib|MFC*version*U.PDB|MFC*version*U.DLL|UD*verze*knihovny MFC. Knihovna|
+|MFC*version*UD.PDB|MFC*version*UD.DLL|MFCS*verze*U. lib|MFCS*version*U.PDB|
+|MFCS*verze*ud. Knihovna|MFCS*version*UD.PDB|MFCM*verze*U. lib|MFCM*version*U.PDB|
+|MFCM*version*U.DLL|MFCM*verze*ud. Knihovna|MFCM*verze*ud. PDB|MFCM*version*UD.DLL|
 
-(*verze* představuje číslo verze souboru; například "140" znamená, že verze 14.0.)
+(*verze* představuje číslo verze souboru, například ' 140 ' znamená verzi 14,0.)
 
-`CString` je založen na datovém typu TCHAR. Pokud pro sestavení programu je definován symbol _UNICODE, TCHAR je definována jako typ `wchar_t`, 16bitový znak typ kódování. V opačném případě Tchar – je definován jako **char**, běžný znak 8bitové kódování. Proto v kódování Unicode `CString` se skládá ze znaků 16 bitů. Bez kódování Unicode, se skládá ze znaků typu **char**.
+`CString`je založena na datovém typu TCHAR. Pokud je symbol _UNICODE definován pro sestavení vašeho programu, TCHAR je definován jako typ `wchar_t`, 16bitový typ kódování znaků. V opačném případě jsou TCHARy definovány jako **char**, což je normální 8bitové kódování znaků. Proto `CString` se v části Unicode skládá ze 16 bitových znaků. Bez kódování Unicode se skládá z znaků typu **char**.
 
-K dokončení programování Unicode vaší aplikace, musíte také:
+Chcete-li dokončit programování v kódování Unicode vaší aplikace, je nutné také:
 
-- Použijte makro _T podmíněně kód literál řetězce přenositelnost na kódování Unicode.
+- Použijte makro _T pro podmíněné kódování řetězců literálů pro přenos do kódování Unicode.
 
-- Při předávání řetězce věnujte pozornost, jestli argumenty funkce vyžadují délka ve znacích nebo délka v bajtech. Rozdíl je důležité, pokud používáte řetězců v kódu Unicode.
+- Při předávání řetězců věnujte pozornost tomu, zda argumenty funkce vyžadují délku ve znacích nebo délku v bajtech. Rozdíl je důležitý, pokud používáte řetězce Unicode.
 
-- Použijte přenosné verze funkcí jazyka C za běhu zpracování řetězců.
+- Používejte přenositelné verze funkcí pro zpracování řetězců jazyka C za běhu.
 
-- Použijte následující datové typy znaků a ukazatelů na znaky:
+- Pro znaky a ukazatele znaků použijte následující typy dat:
 
-   - Použít TCHAR, kde můžete využít **char**.
+   - Použijte TCHAR, kde byste použili **char**.
 
-   - Použít LPTSTR, kde můžete využít **char**<strong>\*</strong>.
+   - Použijte LPTSTR, kde byste použili **char**<strong>\*</strong>.
 
-   - Použít LPCTSTR, kde můžete využít **const char**<strong>\*</strong>. `CString` poskytuje operátor LPCTSTR k převodu mezi `CString` a LPCTSTR.
+   - Použijte LPCTSTR, kde byste použili **const char**<strong>\*</strong>. `CString`poskytuje operátor LPCTSTR k převodu mezi `CString` a LPCTSTR.
 
-`CString` poskytuje také s ohledem na Unicode konstruktory, operátory přiřazení a operátory porovnání.
+`CString`poskytuje také konstruktory podporující kódování Unicode, operátory přiřazení a operátory porovnání.
 
-[Run-Time Library Reference](../c-runtime-library/c-run-time-library-reference.md) definuje přenosná verze všechny jeho funkce pro zpracování řetězce. Další informace najdete v části kategorie [internacionalizace](../c-runtime-library/internationalization.md).
+Referenční dokumentace ke [knihovně modulu runtime](../c-runtime-library/c-run-time-library-reference.md) definuje přenositelné verze všech svých funkcí pro zpracování řetězců. Další informace najdete v tématu [mezinárodní](../c-runtime-library/internationalization.md)přidaná kategorie.
 
 ## <a name="mfc-support-for-mbcs-strings"></a>Podpora MFC pro řetězce znakové sady MBCS
 
-Knihovna tříd je povolená i u vícebajtových znakových sad, ale nastavuje pouze pro dvoubajtové znakové (sady DBCS).
+Knihovna tříd je také povolena pro vícebajtové znakové sady, ale pouze pro dvoubajtové znakové sady (DBCS).
 
-Vícebajtové znakové sady znak může být jeden nebo dva bajty široké. Pokud se jedná o dva bajty široké, jeho první bajt je speciální "vedoucí bajt" zvolená, který je z určitého rozsahu, v závislosti na tom, jaký kód stránky se používá. Dohromady, vedoucí a "poslední bajt" Zadejte jedinečné znaky kódování.
+V vícebajtové znakové sadě může být znak jeden nebo dva bajty na šířku. Pokud jsou dva bajty široké, první bajt je speciální "vedoucí bajt", který se vybere z konkrétního rozsahu v závislosti na používané znakové stránce. Společně a "koncové bajty" určují jedinečné kódování znaků.
 
-Pokud pro sestavení programu je definován symbol _MBCS, typu TCHAR, na kterém `CString` vychází, mapuje **char**. Je určit, které bajtů `CString` jsou vedoucí bajty a které jsou záznam bajtů. Knihovny run-time jazyka C poskytuje funkce, které vám pomohou určit to.
+Pokud je symbol _MBCS definován pro sestavení programu, zadejte TCHAR, na kterém `CString` je založena, se mapuje na **char**. Je až na to, abyste zjistili, které bajty v `CString` jsou vedoucí bajty a které jsou koncové bajty. Knihovna run-time jazyka C poskytuje funkce, které vám pomůžou je určit.
 
-V části DBCS daný řetězec může obsahovat všechny jednobajtové znaky ANSI, všechny dvoubajtové znaky nebo kombinaci obou. Tyto možnosti vyžadují zvláštní pozornost při analýze řetězce. Jedná se o `CString` objekty.
+V rámci sady DBCS může daný řetězec obsahovat všechny jednobajtové znaky ANSI, všechny dvoubajtové znaky nebo kombinaci obou. Tyto možnosti vyžadují zvláštní péči při analýze řetězců. To zahrnuje `CString` objekty.
 
 > [!NOTE]
-> Serializace řetězce Unicode v prostředí MFC může číst řetězce Unicode a MBCS bez ohledu na to, kterou verzi aplikace, kterou používáte. Datové soubory jsou přenosné mezi verzemi sady Unicode a MBCS programu.
+> Serializace řetězců Unicode v knihovně MFC může číst řetězce Unicode a MBCS bez ohledu na to, kterou verzi aplikace používáte. Datové soubory jsou přenosné mezi verzemi programu Unicode a MBCS.
 
-`CString` Členské funkce použít speciální "obecný text" verze funkcí jazyka C za běhu, které volají nebo používají s ohledem na Unicode funkce. Proto například pokud `CString` by obvykle volání funkce `strcmp`, volá funkci odpovídající obecného textu `_tcscmp` místo. V závislosti na tom, jak jsou definované _UNICODE a _MBCS symboly `_tcscmp` mapuje následujícím způsobem:
+`CString`Členské funkce používají speciální verze "obecného textu" běhových funkcí jazyka C, které volají, nebo používají funkce podporující kódování Unicode. Proto, pokud `CString` by například funkce obvykle volala `strcmp`, volá místo toho odpovídající funkci `_tcscmp` obecného textu. V závislosti na tom, jak jsou definovány symboly _MBCS a _UNICODE `_tcscmp` , se provede mapování následujícím způsobem:
 
 |||
 |-|-|
 |_MBCS definováno|`_mbscmp`|
 |_UNICODE definováno|`wcscmp`|
-|Ani jedna symbol definovaný|`strcmp`|
+|Není definován žádný symbol.|`strcmp`|
 
 > [!NOTE]
-> _MBCS symboly a _UNICODE se vzájemně vylučují.
+> Symboly _MBCS a _UNICODE se vzájemně vylučují.
 
-Mapování obecného textu funkcí pro všechny rutiny zpracování řetězce za běhu jsou popsány v [C Run-Time Library Reference](../c-runtime-library/c-run-time-library-reference.md). Seznam najdete v tématu [internacionalizace](../c-runtime-library/internationalization.md).
+Mapování funkcí obecného textu pro všechny rutiny zpracování řetězců běhu jsou popsány v tématu Referenční dokumentace běhové [knihovny jazyka C](../c-runtime-library/c-run-time-library-reference.md). Seznam najdete v tématu [mezinárodní](../c-runtime-library/internationalization.md).
 
-Obdobně `CString` metody jsou implementovány pomocí mapování obecného datového typu. Povolit znakovou sadu MBCS a Unicode, knihovna MFC používá TCHAR pro **char** nebo `wchar_t`, LPTSTR pro **char** <strong>\*</strong> nebo `wchar_t*`a LPCTSTR pro **const char** <strong>\*</strong> nebo `const wchar_t*`. Tyto zajistit správné mapování znakové sady MBCS a Unicode.
+`CString` Podobně metody jsou implementovány pomocí mapování obecných datových typů. Chcete-li povolit znakovou sadu MBCS i Unicode, knihovna MFC používá `wchar_t`TCHAR pro char nebo, `wchar_t*`LPTSTR pro **char** <strong>\*</strong> nebo a LPCTSTR pro `const wchar_t*` **const char** <strong>\*</strong> nebo. To zajistí správné mapování buď znakové sady MBCS nebo Unicode.
 
 ## <a name="see-also"></a>Viz také:
 
 [Řetězce (ATL/MFC)](../atl-mfc-shared/strings-atl-mfc.md)<br/>
-[Zacházení s řetězci](../c-runtime-library/string-manipulation-crt.md)
+[Manipulace s řetězci](../c-runtime-library/string-manipulation-crt.md)

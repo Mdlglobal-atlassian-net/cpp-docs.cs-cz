@@ -1,6 +1,6 @@
 ---
 title: 'Návod: Aktualizace aplikace MFC Klikyháky (část 1)'
-ms.date: 04/25/2019
+ms.date: 09/09/2019
 helpviewer_keywords:
 - examples [MFC], update existing application
 - ribbon UI, porting to
@@ -9,12 +9,12 @@ helpviewer_keywords:
 - MFC Feature Pack, update existing application
 - walkthroughs [MFC], update existing application
 ms.assetid: aa6330d3-6cfc-4c79-8fcb-0282263025f7
-ms.openlocfilehash: 8211111e3f9e6fff2377a62689e6f8b1e0e40990
-ms.sourcegitcommit: 9d4ffb8e6e0d70520a1e1a77805785878d445b8a
+ms.openlocfilehash: 23ddf92514674c32e28c259c4c7aa8f742302485
+ms.sourcegitcommit: 3caf5261b3ea80d9cf14038c116ba981d655cd13
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69630401"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70907423"
 ---
 # <a name="walkthrough-updating-the-mfc-scribble-application-part-1"></a>Návod: Aktualizace aplikace MFC Klikyháky (část 1)
 
@@ -107,7 +107,7 @@ Chcete-li převést aplikaci, která podporuje nabídku na aplikaci, která podp
 
 Další čtyři kroky tohoto návodu vyžadují prostředky rastrového obrázku. Příslušné rastrové obrázky můžete získat různými způsoby:
 
-- Editory [prostředků](../windows/resource-editors.md) použijte k zásobování vlastních rastrových obrázků. Případně můžete pomocí editorů prostředků sestavovat bitmapy z obrázků PNG (Portable Network Graphics), které jsou součástí sady Visual Studio, a lze je stáhnout z [knihovny imagí sady Visual Studio](https://docs.microsoft.com/visualstudio/designers/the-visual-studio-image-library).
+- [Editory prostředků](../windows/resource-editors.md) použijte k zásobování vlastních rastrových obrázků. Případně můžete pomocí editorů prostředků sestavovat bitmapy z obrázků PNG (Portable Network Graphics), které jsou součástí sady Visual Studio, a lze je stáhnout z [knihovny imagí sady Visual Studio](https://docs.microsoft.com/visualstudio/designers/the-visual-studio-image-library).
 
     Uživatelské rozhraní **pásu karet** ale vyžaduje, aby některé bitmapy podporovaly průhledné obrázky. Transparentní rastrové obrázky používají 32 pixelů, kde 24 bitů určují červenou, zelenou a modrou komponentu barvy a 8 bitů definují *alfa kanál* , který určuje průhlednost barvy. Aktuální editory prostředků můžete zobrazit, ale Neupravovat rastry s 32 pixely. V důsledku toho použijte externí editor obrázků namísto editorů prostředků k manipulaci s průhlednými bitmapami.
 
@@ -199,6 +199,7 @@ Pás karet se skládá z tlačítka **aplikace** , což je velké tlačítko v l
 
 1. Následující změna vytvoří tlačítko ukončit, které se zobrazí v dolní části nabídky tlačítka **aplikace** .
 
+   1. Vyberte kartu **prostředky** v **Průzkumník řešení**.
    1. V okně **vlastnosti** kliknutím na tlačítko se třemi tečkami ( **...** ) vedle **tlačítka** otevřete **Editor položek**.
 
    1. Když je vybrané **tlačítko** typ **položky** , klikněte na **Přidat** a přidejte tlačítko. Změňte **Titulek** na `E&xit`, **ID** na `ID_APP_EXIT`, **Obrázek** na `8`.

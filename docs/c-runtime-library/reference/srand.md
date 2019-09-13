@@ -1,6 +1,6 @@
 ---
 title: srand
-ms.date: 1/02/2018
+ms.date: 01/02/2018
 apiname:
 - srand
 apilocation:
@@ -29,16 +29,16 @@ helpviewer_keywords:
 - pseudorandom numbers
 - starting points, setting random
 - starting points
-ms.openlocfilehash: 6545d4eba6c17fd55bb2b8cf23fb0319d1c96bee
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: d74ae4cbec5a76df48bb2b56acab7329e6cf8aa5
+ms.sourcegitcommit: effb516760c0f956c6308eeded48851accc96b92
+ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62354883"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70927409"
 ---
 # <a name="srand"></a>srand
 
-Nastaví počáteční hodnotu seed pro generátor pseudonáhodných čísel používaný **rand** funkce.
+Nastaví počáteční počáteční hodnotu generátoru pseudonáhodných čísel používaného funkcí **Rand** .
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -50,12 +50,12 @@ void srand(
 
 ### <a name="parameters"></a>Parametry
 
-*Počáteční hodnota*<br/>
+*sazení*<br/>
 Počáteční hodnota pro generování pseudonáhodných čísel
 
 ## <a name="remarks"></a>Poznámky
 
-**Srand –** funkce nastaví výchozí bod pro generování posloupnosti pseudonáhodných celých čísel v aktuálním vlákně. Chcete-li znovu inicializovat generátor vytvořit stejnou sekvenci výsledků, zavolejte **srand –** fungovat a využívat stejné *počáteční hodnoty* argument znovu. Jakákoli jiná hodnota parametru *počáteční hodnoty* nastaví generátor na jiný výchozí bod v pseudonáhodné posloupnosti. **rand** načte pseudonáhodná čísla, která jsou generována. Volání **rand** před voláním **srand –** vygeneruje stejnou posloupnost jako volání funkce **srand –** s *počáteční hodnoty* hodnotou 1 předanou parametru.
+Funkce **srand** nastaví počáteční bod pro generování řady celých čísel pseudonáhodných v aktuálním vlákně. Chcete-li znovu inicializovat generátor, aby vytvořil stejnou sekvenci výsledků, zavolejte funkci **srand** a použijte stejný argument *počáteční* hodnoty. Jakákoli jiná hodnota pro *počáteční* hodnotu nastaví generátor na jiný výchozí bod v pseudonáhodných sekvenci. **Rand** načítá pseudonáhodných čísla, která jsou generována. Volání **Rand** před jakýmkoli voláním **srand** generuje stejnou sekvenci jako volání **srand** s *osivem* předanou jako 1.
 
 ## <a name="requirements"></a>Požadavky
 
@@ -63,11 +63,11 @@ Počáteční hodnota pro generování pseudonáhodných čísel
 |-------------|---------------------|
 |**srand**|\<stdlib.h>|
 
-Další informace o kompatibilitě, naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Příklad
 
-Podívejte se na příklad pro [rand](rand.md).
+Podívejte se na příklad pro [Rand](rand.md).
 
 ## <a name="see-also"></a>Viz také:
 

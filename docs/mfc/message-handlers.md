@@ -9,22 +9,22 @@ helpviewer_keywords:
 - handlers [MFC], command
 - handlers [MFC], message
 ms.assetid: 51bc4e76-dbe3-4cc2-b026-3199d56b2fa9
-ms.openlocfilehash: 0d3ed6239b638a0e161cd7e3580f4fe6e1b4a7e7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 25805187f88c5423ea41cd7cbe346e44e7d7d36a
+ms.sourcegitcommit: 3caf5261b3ea80d9cf14038c116ba981d655cd13
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62383753"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70907465"
 ---
 # <a name="message-handlers"></a>Obslužné rutiny zpráv
 
-V knihovně MFC, vyhrazené *obslužná rutina* funkce zpracovává každou samostatnou zprávu. Obslužná rutina zprávy funkce jsou členské funkce třídy. Tato dokumentace používá podmínky *obslužná rutina zprávy členskou funkci*, *obslužná rutina zprávy funkce*, *obslužná rutina zprávy*, a *obslužná rutina*Zaměnitelně. Některé druhy obslužné rutiny zpráv se také označují jako "obslužné rutiny příkazů."
+V knihovně MFC zpracovává vyhrazená funkce *obslužné rutiny* každou samostatnou zprávu. Funkce obslužných rutin zpráv jsou členské funkce třídy. Tato dokumentace používá výrazy *– členské funkce obslužných rutin zpráv*, *funkce obslužných*rutin zpráv, *popisovače zpráv*a *obslužné rutiny* . Některé druhy obslužných rutin zpráv se označují také jako "obslužné rutiny příkazu".
 
-Zápis účty obslužné rutiny zpráv pro velkou část práce při psaní rozhraní framework aplikace. Tento článek řady popisuje, jak funguje mechanismus zpracování zpráv.
+Psaní účtů obslužných rutin zpráv pro velký podíl vaší práce v zápisu aplikace architektury. Tato rodina článků popisuje, jak funguje mechanismus zpracování zpráv.
 
-Co dělá obslužné rutiny pro zprávy, to nemá cokoliv, co chcete v reakci na tuto zprávu. Můžete vytvořit pomocí okna Vlastnosti třídy obslužné rutiny a pak vyplňte obslužné rutiny kódu pomocí editoru zdrojového kódu.
+K čemu obslužná rutina zprávy slouží bez ohledu na to, co chcete v reakci na tuto zprávu provést. Obslužné rutiny lze vytvořit pomocí [Průvodce třídou](reference/mfc-class-wizard.md) třídy a potom vyplnit kód obslužné rutiny pomocí editoru zdrojového kódu.
 
-Vám pomůže všem zařízením služby Microsoft Visual C++ a knihovnou MFC napsat obslužné rutině. Seznam všech tříd naleznete v tématu [– přehled knihovny tříd](../mfc/class-library-overview.md) v *odkaz knihovny MFC*.
+K psaní obslužných rutin můžete použít všechny funkce sady C++ Microsoft Visual a MFC. Seznam všech tříd naleznete v tématu [Přehled knihovny tříd](../mfc/class-library-overview.md) v *Referenci knihovny MFC*.
 
 ## <a name="see-also"></a>Viz také:
 

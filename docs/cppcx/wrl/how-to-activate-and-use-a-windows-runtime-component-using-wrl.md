@@ -3,12 +3,12 @@ title: 'Postupy: Aktivace a použití komponenty prostředí Windows Runtime pom
 ms.date: 11/04/2016
 ms.topic: reference
 ms.assetid: 54828f02-6af3-45d1-b965-d0104442f8d5
-ms.openlocfilehash: 9e15886e9045f15adb929678ba45023ce80fb084
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 59a031968933ab151dc97a8089aff629026f5ea5
+ms.sourcegitcommit: effb516760c0f956c6308eeded48851accc96b92
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69498393"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70926067"
 ---
 # <a name="how-to-activate-and-use-a-windows-runtime-component-using-wrl"></a>Postupy: Aktivace a použití komponenty prostředí Windows Runtime pomocí WRL
 
@@ -48,7 +48,7 @@ Následující kroky používají `Windows::Foundation::IUriRuntimeClass` rozhra
 
    Prostředí Windows Runtime používá k identifikaci typů plně kvalifikované názvy. `RuntimeClass_Windows_Foundation_Uri` Parametr je řetězec, který je poskytován prostředí Windows Runtime a obsahuje požadovaný název běhové třídy.
 
-4. Inicializujte proměnnou [Microsoft:: WRL:: Wrappers:: HSTRING](hstring-class.md) , která představuje identifikátor `"http://www.microsoft.com"`URI.
+4. Inicializujte proměnnou [Microsoft:: WRL:: Wrappers:: HSTRING](hstring-class.md) , která představuje identifikátor `"https://www.microsoft.com"`URI.
 
    [!code-cpp[wrl-consume-component#6](../codesnippet/CPP/how-to-activate-and-use-a-windows-runtime-component-using-wrl_4.cpp)]
 

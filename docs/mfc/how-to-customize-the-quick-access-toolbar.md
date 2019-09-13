@@ -1,31 +1,31 @@
 ---
 title: 'Postupy: Přizpůsobení panelu nástrojů Rychlý přístup'
-ms.date: 11/19/2018
+ms.date: 09/07/2019
 helpviewer_keywords:
 - quick access toolbar [MFC], customization
 ms.assetid: 2554099b-0c89-4605-9249-31bf9cbcefe0
-ms.openlocfilehash: c53e405eafe310c0bfc03a916ab85181ae67a34b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8b2eb6f7c80c77f69e2bbb65b7bb31a385014c8c
+ms.sourcegitcommit: 3caf5261b3ea80d9cf14038c116ba981d655cd13
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62396425"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70907784"
 ---
 # <a name="how-to-customize-the-quick-access-toolbar"></a>Postupy: Přizpůsobení panelu nástrojů Rychlý přístup
 
-Panel nástrojů Rychlý přístup (QAT) je přizpůsobitelný panel nástrojů, který obsahuje sadu příkazů, které jsou buď zobrazí vedle tlačítka, aplikace nebo na kartách kategorie. Následující obrázek znázorňuje typický panelu nástrojů Rychlý přístup.
+Panel nástrojů Rychlý přístup (QAT) je přizpůsobitelný panel nástrojů, který obsahuje sadu příkazů, které se zobrazují buď vedle tlačítka aplikace, nebo pod kartami kategorií. Na následujícím obrázku vidíte typický panel nástrojů Rychlý přístup.
 
-![Panel nástrojů Rychlý přístup pásu karet MFC](../mfc/media/quick_access_toolbar.png "panel nástrojů Rychlý přístup knihovny MFC pásu karet")
+![Panel nástrojů Rychlý přístup k pásu karet MFC](../mfc/media/quick_access_toolbar.png "Panel nástrojů Rychlý přístup k pásu karet MFC")
 
-Přizpůsobení panelu nástrojů Rychlý přístup, otevřete ho **vlastnosti** okna, upravte příkazy a pak zobrazte náhled ovládacího prvku pásu karet.
+Chcete-li přizpůsobit panel nástrojů Rychlý přístup, otevřete jej v okně **vlastnosti** , upravte jeho příkazy a potom zobrazte náhled ovládacího prvku pásu karet.
 
-### <a name="to-open-the-quick-access-toolbar-in-the-properties-window"></a>Chcete-li otevřít panel nástrojů Rychlý přístup v okně Vlastnosti
+### <a name="to-open-the-quick-access-toolbar-in-the-properties-window"></a>Otevření panelu nástrojů Rychlý přístup v okno Vlastnosti
 
-1. V sadě Visual Studio na **zobrazení** nabídky, klikněte na tlačítko **zobrazení prostředků**.
+1. V aplikaci Visual Studio klikněte v nabídce **zobrazení** na příkaz **prostředky**.
 
-1. V **zobrazení prostředků**, dvakrát klikněte na prostředek pásu karet se zobrazí na návrhové ploše.
+1. V **prostředky**dvakrát klikněte na prostředek pásu karet a zobrazte ho na návrhové ploše.
 
-1. Na návrhové ploše, klikněte pravým tlačítkem na panelu nástrojů Rychlý přístup k nabídce a potom klikněte na **vlastnosti**.
+1. Na návrhové ploše klikněte pravým tlačítkem myši na nabídku panelu nástrojů Rychlý přístup a pak klikněte na **vlastnosti**.
 
 ## <a name="quick-access-toolbar-properties"></a>Vlastnosti panelu nástrojů Rychlý přístup
 
@@ -33,24 +33,24 @@ Následující tabulka definuje vlastnosti panelu nástrojů Rychlý přístup.
 
 |Vlastnost|Definice|
 |--------------|----------------|
-|Pozici panelu nástrojů Rychlý přístup|Určuje pozici panelu nástrojů Rychlý přístup při spuštění aplikace. Umístění může být buď **nad** nebo **níže** ovládací prvek pásu karet.|
-|Položky panelu nástrojů Rychlý přístup|Určuje příkazy, které jsou k dispozici pro panel nástrojů Rychlý přístup.|
+|Pozice QAT|Určuje umístění panelu nástrojů Rychlý přístup při spuštění aplikace. Pozice může být buď **nad** , nebo **pod** ovládacím prvkem pásu karet.|
+|QAT položky|Určuje příkazy, které jsou k dispozici pro panel nástrojů Rychlý přístup.|
 
-#### <a name="to-add-or-remove-commands-on-the-quick-access-toolbar"></a>Chcete-li přidat nebo odebrat příkazy na panelu nástrojů Rychlý přístup
+#### <a name="to-add-or-remove-commands-on-the-quick-access-toolbar"></a>Přidání nebo odebrání příkazů na panelu nástrojů Rychlý přístup
 
-1. V **vlastnosti** okna, klikněte na tlačítko **QAT Items**a potom klikněte na tlačítko se třemi tečkami **(...)** .
+1. V okně **vlastnosti** klikněte na položku **QAT položky**a potom klikněte na tlačítko se třemi tečkami **(...)** .
 
-1. V **Edito položek** dialogové okno, použijte **přidat** a **odebrat** tlačítka Upravit seznam příkazů na panelu nástrojů Rychlý přístup.
+1. V dialogovém okně **Editor položek QAT** pomocí tlačítek **Přidat** a **Odebrat** upravte seznam příkazů na panelu nástrojů Rychlý přístup.
 
-1. Pokud chcete příkazu se zobrazí na panelu nástrojů Rychlý přístup a nabídky panelu nástrojů Rychlý přístup, zaškrtněte políčko vedle příkazu. Pokud chcete příkazu se zobrazí pouze v nabídce, zrušte zaškrtnutí pole.
+1. Pokud se má příkaz Zobrazit na panelu nástrojů Rychlý přístup i v nabídce panelu nástrojů Rychlý přístup, zaškrtněte políčko vedle příkazu. Pokud chcete, aby se příkaz zobrazil pouze v nabídce, zrušte zaškrtnutí políčka.
 
 ## <a name="previewing-the-ribbon"></a>Náhled pásu karet
 
-Rychlé příkazy nástrojů přístup se nezobrazují na návrhové ploše. K jejich zobrazení, musíte zobrazit náhled pásu karet nebo spusťte aplikaci.
+Příkazy panelu nástrojů Rychlý přístup se nezobrazují na návrhové ploše. Chcete-li je zobrazit, musíte buď zobrazit náhled pásu karet, nebo spustit aplikaci.
 
-#### <a name="to-preview-the-ribbon-control"></a>Na pásu karet ovládací prvek náhledu
+#### <a name="to-preview-the-ribbon-control"></a>Náhled ovládacího prvku pás karet
 
-- Na **nástrojů editoru pásu karet**, klikněte na tlačítko **testovat pás karet**.
+- Na **panelu nástrojů editoru pásu karet**klikněte na tlačítko **testovat pás karet**.
 
 ## <a name="see-also"></a>Viz také:
 

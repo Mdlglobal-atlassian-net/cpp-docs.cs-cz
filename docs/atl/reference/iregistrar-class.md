@@ -1,6 +1,6 @@
 ---
-title: Iregistrar – rozhraní
-ms.date: 2/1/2017
+title: Rozhraní IRegistrar
+ms.date: 02/01/2017
 f1_keywords:
 - IRegistrar
 - ATLIFASE/ATL::IRegistrar
@@ -15,16 +15,16 @@ f1_keywords:
 helpviewer_keywords:
 - Iregistrar Interface
 ms.assetid: e88c04b7-0c93-4ae8-aeb9-ecd78f87421e
-ms.openlocfilehash: 984d95a1e0adb6835db7ca4bcabcff21f0be7beb
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e347bdba1656a53cd705123a26650dad50d3892f
+ms.sourcegitcommit: effb516760c0f956c6308eeded48851accc96b92
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62276013"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70927759"
 ---
-# <a name="iregistrar-interface"></a>Iregistrar – rozhraní
+# <a name="iregistrar-interface"></a>Rozhraní IRegistrar
 
-Toto rozhraní je definováno v atliface.h a používá se interně pomocí catlmodule – členské funkce, jako [UpdateRegistryFromResourceD](catlmodule-class.md#updateregistryfromresourced).
+Toto rozhraní je definováno v atliface. h a používá se interně pomocí členských funkcí CAtlModule, jako je [UpdateRegistryFromResourceD](catlmodule-class.md#updateregistryfromresourced).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -34,30 +34,30 @@ typedef interface IRegistrar IRegistrar;
 
 ## <a name="remarks"></a>Poznámky
 
-Naleznete v tématu [použití nahraditelných parametrů (preprocesor The registrátoru)](../../atl/using-replaceable-parameters-the-registrar-s-preprocessor.md) další podrobnosti.
+Další podrobnosti najdete v tématu [Použití nahraditelných parametrů (preprocesor registrátora)](../../atl/using-replaceable-parameters-the-registrar-s-preprocessor.md) .
 
 ## <a name="members"></a>Členové
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Název|Popis|
+|Name|Popis|
 |----------|-----------------|
-|[IRegistrar::ResourceRegisterSz](#resourceregistersz)|Zaregistruje prostředku. |
+|[IRegistrar::ResourceRegisterSz](#resourceregistersz)|Zaregistruje prostředek. |
 |[IRegistrar::ResourceUnregisterSz](#resourceunregistersz)| Zruší registraci prostředku.|
-|[IRegistrar::FileRegister](#fileregister)|Zaregistruje soubor.|
+|[IRegistrar:: registr – registr](#fileregister)|Registruje soubor.|
 |[IRegistrar::FileUnregister](#fileunregister)|Zruší registraci souboru.|
-|[IRegistrar::StringRegister](#stringregister)|Zaregistruje řetězec.|
-|[IRegistrar::StringUnregister](#stringunregister)|Zruší registraci řetězec|
-|[IRegistrar::ResourceRegister](#resourceregister)|Zaregistruje prostředku.|
+|[IRegistrar::StringRegister](#stringregister)|Registruje řetězec.|
+|[IRegistrar::StringUnregister](#stringunregister)|Zruší registraci řetězce.|
+|[IRegistrar::ResourceRegister](#resourceregister)|Zaregistruje prostředek.|
 |[IRegistrar::ResourceUnregister](#resourceunregister)|Zruší registraci prostředku.|
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** atlifase.h
+**Záhlaví:** atlifase. h
 
-##  <a name="resourceregistersz"></a>  IRegistrar::ResourceRegisterSz
+##  <a name="resourceregistersz"></a>IRegistrar::ResourceRegisterSz
 
-Zaregistruje prostředku.
+Zaregistruje prostředek.
 
 ```
 virtual HRESULT STDMETHODCALLTYPE ResourceRegisterSz(
@@ -66,7 +66,7 @@ virtual HRESULT STDMETHODCALLTYPE ResourceRegisterSz(
     /* [in] */ _In_z_ LPCOLESTR szType) = 0;
 ```
 
-##  <a name="resourceunregistersz"></a>  IRegistrar::ResourceUnregisterSz
+##  <a name="resourceunregistersz"></a>IRegistrar::ResourceUnregisterSz
 
 Zruší registraci prostředku.
 
@@ -77,16 +77,16 @@ virtual HRESULT STDMETHODCALLTYPE ResourceUnregisterSz(
     /* [in] */ _In_z_ LPCOLESTR szType) = 0;
 ```
 
-##  <a name="fileregister"></a>  IRegistrar::FileRegister
+##  <a name="fileregister"></a>IRegistrar:: registr – registr
 
-Zaregistruje soubor.
+Registruje soubor.
 
 ```
 virtual HRESULT STDMETHODCALLTYPE FileRegister(
     /* [in] */ _In_z_ LPCOLESTR fileName) = 0;
 ```
 
-##  <a name="fileunregister"></a>  IRegistrar::FileUnregister
+##  <a name="fileunregister"></a>IRegistrar::FileUnregister
 
 Zruší registraci souboru.
 
@@ -95,27 +95,27 @@ virtual HRESULT STDMETHODCALLTYPE FileUnregister(
     /* [in] */ _In_z_ LPCOLESTR fileName) = 0;
 ```
 
-##  <a name="stringregister"></a>  IRegistrar::StringRegister
+##  <a name="stringregister"></a>IRegistrar::StringRegister
 
-Zaregistruje zadaný řetězec data.
+Zaregistruje zadaná data řetězce.
 
 ```
 virtual HRESULT STDMETHODCALLTYPE StringRegister(
     /* [in] */ _In_z_ LPCOLESTR data) = 0;
 ```
 
-##  <a name="stringunregister"></a>  IRegistrar::StringUnregister
+##  <a name="stringunregister"></a>IRegistrar::StringUnregister
 
-Zruší registraci dat zadaný řetězec.
+Zruší registraci zadaných řetězcových dat.
 
 ```
 virtualHRESULT STDMETHODCALLTYPE StringUnregister(
     /* [in] */ _In_z_ LPCOLESTR data) = 0;
 ```
 
-##  <a name="resourceregister"></a>  IRegistrar::ResourceRegister
+##  <a name="resourceregister"></a>IRegistrar::ResourceRegister
 
-Zaregistruje prostředku.
+Zaregistruje prostředek.
 
 ```
 virtual HRESULT STDMETHODCALLTYPE ResourceRegister(
@@ -124,7 +124,7 @@ virtual HRESULT STDMETHODCALLTYPE ResourceRegister(
     /* [in] */ _In_z_ LPCOLESTR szType) = 0;
 ```
 
-##  <a name="resourceunregister"></a>  IRegistrar::ResourceUnregister
+##  <a name="resourceunregister"></a>IRegistrar::ResourceUnregister
 
 Zruší registraci prostředku.
 
@@ -138,6 +138,6 @@ virtualHRESULT STDMETHODCALLTYPE ResourceUnregister(
 ## <a name="see-also"></a>Viz také:
 
 [Použití nahraditelných parametrů (preprocesor registrátoru)](../../atl/using-replaceable-parameters-the-registrar-s-preprocessor.md)<br/>
-[Přehled tříd](../../atl/atl-class-overview.md)<br/>
+[Přehled třídy](../../atl/atl-class-overview.md)<br/>
 [Třídy modulů](../../atl/atl-module-classes.md)<br/>
-[Komponenta registru (Registrar)](../../atl/atl-registry-component-registrar.md)
+[Součást registru (registrátor)](../../atl/atl-registry-component-registrar.md)
