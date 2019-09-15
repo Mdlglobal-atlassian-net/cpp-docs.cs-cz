@@ -1,9 +1,9 @@
 ---
 title: _realloc_dbg
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _realloc_dbg
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -14,7 +14,10 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _realloc_dbg
 - realloc_dbg
@@ -25,16 +28,16 @@ helpviewer_keywords:
 - memory, reallocating
 - _realloc_dbg function
 ms.assetid: 7c3cb780-51ed-4d9c-9929-cdde606d846a
-ms.openlocfilehash: 9b30dfd6fbae9a4831ff53e7896aeb995657da03
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 58d12ed6f4b013996f3f59cba1b146b823adbee6
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62357743"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70949517"
 ---
-# <a name="reallocdbg"></a>_realloc_dbg
+# <a name="_realloc_dbg"></a>_realloc_dbg
 
-Znovu zadaný blok paměti v haldě alokuje přesunutí nebo změně velikosti bloku (pouze ladicí verze).
+Znovu přidělí zadaný blok paměti v haldě přesunutím a/nebo změnou velikosti bloku (pouze ladicí verze).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -51,35 +54,35 @@ void *_realloc_dbg(
 ### <a name="parameters"></a>Parametry
 
 *userData*<br/>
-Ukazatele na blok paměti dříve přidělené.
+Ukazatel na dříve přidělený blok paměti.
 
 *newSize*<br/>
-Požadovaná velikost pro reallocated bloku (v bajtech).
+Požadovaná velikost pro znovu přidělený blok (bajty)
 
 *blockType*<br/>
-Požadovaný typ pro reallocated blok: **_CLIENT_BLOCK** nebo **_NORMAL_BLOCK**.
+Požadovaný typ pro znovu přidělený blok: **_CLIENT_BLOCK** nebo **_NORMAL_BLOCK**.
 
-*Název souboru*<br/>
-Ukazatel na název zdrojového souboru, který vyžadují **realloc** operace nebo **NULL**.
+*Bitmap*<br/>
+Ukazatel na název zdrojového souboru, který požadoval operaci **realokace** nebo **null**.
 
-*linenumber*<br/>
-Číslo řádku ve zdrojovém souboru kde **realloc** operace byla požadována nebo **NULL**.
+*číslo řádku*<br/>
+Číslo řádku ve zdrojovém souboru, kde byla požadována operace **realokace** nebo **hodnota null**.
 
-*Filename* a *linenumber* parametry jsou k dispozici pouze při **_realloc_dbg –** explicitně volána nebo [_CRTDBG_MAP_ALLOC](../../c-runtime-library/crtdbg-map-alloc.md) byla definována konstanta preprocesoru.
+Parametry *filename* a *číslo řádku* jsou k dispozici pouze v případě, že byla explicitně volána metoda **_realloc_dbg** nebo byla definována konstanta preprocesoru [_CRTDBG_MAP_ALLOC](../../c-runtime-library/crtdbg-map-alloc.md) .
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Při úspěšném dokončení, tato funkce vrací ukazatel na část uživatele bloku paměti nevyčerpané, volá funkci novou obslužnou rutinu nebo vrátí **NULL**. Úplný popis návratový chování najdete v části poznámky. Další informace o tom, jak použít nové funkce obslužné rutiny najdete v tématu [realloc](realloc.md) funkce.
+Po úspěšném dokončení Tato funkce buď vrátí ukazatel na uživatelskou část bloku přerozdělené paměti, zavolá novou funkci obslužné rutiny nebo vrátí **hodnotu null**. Úplný popis vráceného chování naleznete v následující části poznámky. Další informace o použití nové funkce obslužné rutiny naleznete v tématu funkce [realokace](realloc.md) .
 
 ## <a name="remarks"></a>Poznámky
 
-**_realloc_dbg –** je ladicí verzi [realloc](realloc.md) funkce. Když [_DEBUG](../../c-runtime-library/debug.md) není definován, každé volání **_realloc_dbg –** je omezená na volání **realloc**. Obě **realloc** a **_realloc_dbg –** přidělení bloku paměti v haldě základní, ale **_realloc_dbg –** obsáhne některé funkce pro ladění: vyrovnávací paměť po obou stranách část uživatele bloku pro testování nevracení, parametr typu blok pro sledování konkrétní přidělení typů a *filename*/*linenumber* informací pro určení původu požadavky na přidělení.
+**_realloc_dbg** je ladicí verze funkce [realokace](realloc.md) . Pokud není definován [_DEBUG](../../c-runtime-library/debug.md) , každé volání **_realloc_dbg** je sníženo na volání pro **repřidělení**. **Realokace** a **_realloc_dbg** znovu přidělí blok paměti v základní haldě, ale **_realloc_dbg** se přizpůsobí několika funkcím pro ladění: vyrovnávací paměti na obou stranách bloku pro testování nevracení, parametr typu bloku pro Sledujte konkrétní typy přidělení a*číslo řádku* informace o *názvu souboru*/, abyste zjistili původ požadavků na přidělení.
 
-**_realloc_dbg –** znovu alokuje blok zadaná paměťová s mírně více místa požadovaného *newSize*. *newSize* může být větší nebo menší než velikost bloku původně přidělené paměti. Další místo používá správce hald ladění k propojení paměť bloků ladicího a k poskytování aplikací s informace hlavičky ladění a přepsat vyrovnávací paměti. Přerozdělení může způsobit přechod původního paměťového bloku na jiné místo v haldě, jakož i změníte velikost bloku paměti. Pokud se přesune blok paměti obsah původního bloku jsou přepsány.
+**_realloc_dbg** znovu přidělí zadaný blok paměti o více místa, než je požadovaný *NewSize*. *NewSize* může být větší nebo menší než velikost původně přiděleného bloku paměti. Dodatečné místo se používá správcem haldy ladění k propojení bloků paměti ladění a k poskytnutí aplikace s informacemi hlavičky ladění a přepsat vyrovnávací paměti. Přerozdělení může mít za následek přesunutí původního bloku paměti na jiné místo v haldě a změnu velikosti bloku paměti. Pokud se blok paměti přesune, obsah původního bloku se přepíše.
 
-**_realloc_dbg –** nastaví **errno** k **ENOMEM** Pokud selhání přidělení paměti nebo pokud přesahuje velikost potřebné paměti (včetně režie již bylo zmíněno dříve) **_HEAP_ MAXREQ**. Informace o tomto a dalších chybových kódech naleznete v tématu [errno _doserrno, _sys_errlist a _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+**_realloc_dbg** nastaví **errno** na **ENOMEM** , pokud se přidělení paměti nepovede, nebo pokud velikost potřebné paměti (včetně výše zmíněné režie) překračuje **_HEAP_MAXREQ**. Další informace o tomto a dalších chybových kódech naleznete v tématu [errno, _doserrno, _sys_errlist a _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
-Informace o způsobu jsou bloky paměti přidělené, inicializovat a správy v ladicí verzi základní haldy viz [podrobnosti haldy ladění CRT](/visualstudio/debugger/crt-debug-heap-details). Informace o typech bloku přidělení a způsob jejich použití naleznete v tématu [typy bloků na haldě ladění](/visualstudio/debugger/crt-debug-heap-details). Informace o rozdílech mezi volání funkce haldy standardní a jeho ladicí verze v sestavení pro ladění aplikace najdete v tématu [ladění verze z funkcí přidělení haldy](/visualstudio/debugger/debug-versions-of-heap-allocation-functions).
+Informace o způsobu přidělování, inicializace a správy paměťových bloků v ladicí verzi základní haldy najdete v [podrobnostech o haldě ladění CRT](/visualstudio/debugger/crt-debug-heap-details). Informace o typech bloků přidělení a způsobu jejich použití naleznete v tématu [typy bloků v haldě ladění](/visualstudio/debugger/crt-debug-heap-details). Informace o rozdílech mezi voláním standardní funkce haldy a její ladicí verzí v sestavení ladění aplikace najdete v tématu [ladění verzí funkcí přidělení haldy](/visualstudio/debugger/debug-versions-of-heap-allocation-functions).
 
 ## <a name="requirements"></a>Požadavky
 
@@ -87,15 +90,15 @@ Informace o způsobu jsou bloky paměti přidělené, inicializovat a správy v 
 |-------------|---------------------|
 |**_realloc_dbg**|\<crtdbg.h>|
 
-Další informace o kompatibilitě naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
 
 ## <a name="libraries"></a>Knihovny
 
-Ladicí verze [běhových knihoven C](../../c-runtime-library/crt-library-features.md) pouze.
+Ladit verze pouze [knihoven run-time jazyka C](../../c-runtime-library/crt-library-features.md) .
 
 ## <a name="example"></a>Příklad
 
-Podívejte se na příklad v [_msize_dbg –](msize-dbg.md) tématu.
+Podívejte se na příklad v tématu [_msize_dbg](msize-dbg.md) .
 
 ## <a name="see-also"></a>Viz také:
 

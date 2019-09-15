@@ -1,10 +1,10 @@
 ---
 title: memcpy_s, wmemcpy_s
 ms.date: 11/04/2016
-apiname:
+api_name:
 - memcpy_s
 - wmemcpy_s
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - ucrtbase.dll
 - api-ms-win-crt-string-l1-1-0.dll
 - ntoskrnl.exe
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - wmemcpy_s
 - memcpy_s
@@ -25,16 +28,16 @@ helpviewer_keywords:
 - memcpy_s function
 - wmemcpy_s function
 ms.assetid: 5504e20a-83d9-4063-91fc-3f55f7dabe99
-ms.openlocfilehash: 802d75307096e649df15b1864b99699fba92a3a1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8078590df6950201ef81356ba6c28173e80572ee
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62285328"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70952804"
 ---
-# <a name="memcpys-wmemcpys"></a>memcpy_s, wmemcpy_s
+# <a name="memcpy_s-wmemcpy_s"></a>memcpy_s, wmemcpy_s
 
-Kopie bajtů mezi vyrovnávací paměti. Jde o verzích [memcpy wmemcpy –](memcpy-wmemcpy.md) s rozšířeními zabezpečení, jak je popsáno v [funkce zabezpečení v CRT](../../c-runtime-library/security-features-in-the-crt.md).
+Kopíruje bajty mezi vyrovnávacími paměťmi. Jedná se o verze [memcpy, wmemcpy](memcpy-wmemcpy.md) s vylepšeními zabezpečení, jak [je popsáno v části funkce zabezpečení v CRT](../../c-runtime-library/security-features-in-the-crt.md).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -55,45 +58,45 @@ errno_t wmemcpy_s(
 
 ### <a name="parameters"></a>Parametry
 
-*dest*<br/>
-Vyrovnávací paměť nového.
+*propojovací*<br/>
+Nová vyrovnávací paměť.
 
 *destSize*<br/>
-Velikost cílové vyrovnávací paměti v bajtech pro memcpy_s – a široké znaky (wchar_t) pro wmemcpy_s –.
+Velikost cílové vyrovnávací paměti v bajtech pro memcpy_s a šířku znaků (wchar_t) pro wmemcpy_s.
 
 *src*<br/>
-Zkopírovat z vyrovnávací paměti.
+Vyrovnávací paměť, ze které se má kopírovat.
 
-*Počet*<br/>
-Počet znaků, které mají kopírovat.
+*výpočtu*<br/>
+Počet znaků, které mají být zkopírovány.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Nula v případě úspěchu; Kód chyby při selhání.
+Nula v případě úspěchu; chybový kód při selhání.
 
-### <a name="error-conditions"></a>Chybové podmínky
+### <a name="error-conditions"></a>Chybové stavy
 
-|*dest*|*destSize*|*src*|*Počet*|Návratová hodnota|Obsah *dest*|
+|*propojovací*|*destSize*|*src*|*výpočtu*|Návratová hodnota|Obsah cíle|
 |------------|----------------|-----------|---|------------------|------------------------|
-|Všechny|Všechny|Všechny|0|0|Nezměněno|
-|**NULL**|Všechny|Všechny|nulová|**EINVAL**|Nezměněno|
-|Všechny|Všechny|**NULL**|nulová|**EINVAL**|*DEST* je vynulován|
-|Všechny|< *Počet*|Všechny|nulová|**ERANGE**|*DEST* je vynulován|
+|Jakýmikoli|Jakýmikoli|Jakýmikoli|0|0|Neupraveno|
+|**NULL**|Jakýmikoli|Jakýmikoli|bez nuly|**EINVAL**|Neupraveno|
+|Jakýmikoli|Jakýmikoli|**NULL**|bez nuly|**EINVAL**|*cíl* je nula|
+|Jakýmikoli|< *výpočtu*|Jakýmikoli|bez nuly|**ERANGE**|*cíl* je nula|
 
 ## <a name="remarks"></a>Poznámky
 
-**memcpy_s –** kopie *počet* bajtů z *src* k *dest*; **wmemcpy_s –** kopie *počet* široké znaky (dva bajty). Pokud zdroj a cíl překrývají, chování **memcpy_s –** není definován. Použití **memmove_s –** zpracování překrývající se oblasti.
+**memcpy_s** kopíruje *počet* bajtů ze *Src* na *cíl*; **wmemcpy_s** kopíruje *počet* znaků v šířce (dva bajty). Pokud se zdrojový a cílový překrývají, chování **memcpy_s** není definováno. Použijte **memmove_s** k obsluze překrývajících se oblastí.
 
-Tyto funkce ověřují své parametry. Pokud *počet* je nenulová a *dest* nebo *src* je ukazatel s hodnotou null, nebo *destSize* je menší než *počet*, tyto funkce vyvolají obslužnou rutinu neplatného parametru, jak je popsáno v [Parameter Validation](../../c-runtime-library/parameter-validation.md). Pokud provádění může pokračovat, vrátí tyto funkce **EINVAL** nebo **ERANGE** a nastavte **errno** návratovou hodnotu.
+Tyto funkce ověřují své parametry. Pokud je *počet* nenulový a *cíl* nebo *Src* je ukazatel s hodnotou null, nebo *destSize* je menší než *Count*, tyto funkce vyvolají obslužnou rutinu neplatného parametru, jak je popsáno v tématu [ověřování parametru](../../c-runtime-library/parameter-validation.md). Pokud provádění může pokračovat, vrátí tyto funkce **EINVAL** nebo **ERANGE** a nastaví **errno** na vrácenou hodnotu.
 
 ## <a name="requirements"></a>Požadavky
 
 |Rutina|Požadovaný hlavičkový soubor|
 |-------------|---------------------|
-|**memcpy_s**|\<Memory.h > nebo \<string.h >|
+|**memcpy_s**|\<Memory. h > nebo \<String. h >|
 |**wmemcpy_s**|\<wchar.h>|
 
-Další informace o kompatibilitě, naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Příklad
 

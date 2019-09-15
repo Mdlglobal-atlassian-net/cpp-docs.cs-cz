@@ -1,9 +1,9 @@
 ---
 title: _controlfp_s
 ms.date: 04/05/2018
-apiname:
+api_name:
 - _controlfp_s
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-runtime-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - controlfp_s
 - _controlfp_s
@@ -26,16 +29,16 @@ helpviewer_keywords:
 - EM_AMBIGUOUS
 - _controlfp_s function
 ms.assetid: a51fc3f6-ab13-41f0-b227-6bf02d98e987
-ms.openlocfilehash: 0624cbfb4870ca87efebac01a8de682b588a4ca3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0d12c139f305a3c66419a4e27905ac9f73345f4d
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62335374"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70942885"
 ---
-# <a name="controlfps"></a>_controlfp_s
+# <a name="_controlfp_s"></a>_controlfp_s
 
-Získá a nastaví slovo ovládacího prvku s plovoucí desetinnou čárkou. Tato verze [_control87 _controlfp, \__control87_2](control87-controlfp-control87-2.md) má rozšíření zabezpečení, jak je popsáno v [funkce zabezpečení v CRT](../../c-runtime-library/security-features-in-the-crt.md).
+Získá a nastaví řídicí slovo s plovoucí desetinnou čárkou. Tato verze [_control87, _controlfp a \__control87_2](control87-controlfp-control87-2.md) má vylepšení zabezpečení, jak je popsáno v [části funkce zabezpečení v CRT](../../c-runtime-library/security-features-in-the-crt.md).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -50,32 +53,32 @@ errno_t _controlfp_s(
 ### <a name="parameters"></a>Parametry
 
 *currentControl*<br/>
-Aktuální hodnota řídicí slovo bit.
+Aktuální bitová hodnota řídicího slova.
 
 *newControl*<br/>
-Nové bitové hodnoty kontrolního slova.
+Nové bitové hodnoty řídicího slova.
 
-*Maska*<br/>
-Maska pro nové bity ovládacího slova, chcete-li nastavit.
+*zrušit*<br/>
+Maska pro nové bity řídicího slova, které se mají nastavit
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Nula v případě úspěchu, nebo **errno** kód chyby hodnoty.
+Nula v případě úspěchu nebo kód chyby **errno** hodnoty.
 
 ## <a name="remarks"></a>Poznámky
 
-**_Controlfp_s –** funkce je nezávislá na platformě a bezpečnější verze **_control87**, který získá slovo ovládacího prvku s plovoucí desetinnou čárkou do adresy, která je uložena v  *currentControl* a nastavuje ho pomocí *newControl*. Bity v hodnotách označují stav ovládacího prvku s plovoucí desetinnou čárkou. Stav ovládacího prvku s plovoucí desetinnou čárkou umožňuje programu změnit přesnost, zaokrouhlení a režimy nekonečna matematickém s plovoucí desetinnou čárkou balíčku, v závislosti na platformě. Můžete také použít **_controlfp_s –** k maskování nebo odmaskování výjimek s plovoucí desetinnou čárkou.
+Funkce **_controlfp_s** je nezávislý na platformě a bezpečnější verze **_control87**, která získá kontrolní slovo s plovoucí desetinnou čárkou na adresu uloženou v *CurrentControl* a nastaví ji pomocí *newControl*. Bity v hodnotách označují stav ovládacího prvku s plovoucí desetinnou čárkou. Stav ovládacího prvku s plovoucí desetinnou čárkou umožňuje programu změnit přesnost, zaokrouhlování a režimy nekonečno v matematickém balíčku s plovoucí desetinnou čárkou v závislosti na platformě. **_Controlfp_s** můžete použít také k maskování nebo zrušení maskování výjimek s plovoucí desetinnou čárkou.
 
-Pokud hodnota *maska* se rovná 0, **_controlfp_s –** získá slovo s plovoucí desetinnou čárkou ovládací prvek a uloží získanou hodnotu v *currentControl*.
+Pokud je hodnota *masky* rovna 0, **_controlfp_s** získá řídicí slovo s plovoucí desetinnou čárkou a uloží načtenou hodnotu v *currentControl*.
 
-Pokud *maska* je nenulová, je nastavena nová hodnota pro řídicí slovo: Pro některé bit, který je nastaven (to je rovno 1) v *maska*, odpovídající bit v *nové* slouží k aktualizaci řídicího slova. Jinými slovy *fpcntrl* = ((*fpcntrl* & ~*maska*) &#124; (*newControl* & *masky* )) kde *fpcntrl* je slovo s plovoucí desetinnou čárkou ovládacího prvku. V tomto scénáři *currentControl* je nastavena na hodnotu po dokončení změny; nejde původní bitové hodnoty kontrolního slova.
+Pokud je *Maska* nenulová, je nastavena nová hodnota pro řídicí slovo: Pro každý bit, který je nastaven na *masce*(tj. roven 1), se k aktualizaci řídicího slova používá odpovídající bit v *New* . Jinými slovy *fpcntrl* = ((*fpcntrl* & ~*Mask*) &#124; (*Maska* *newControl* & )), kde *fpcntrl* je řídicí slovo s plovoucí desetinnou čárkou. V tomto scénáři je *currentControl* nastaveno na hodnotu po dokončení změny; Nejedná se o starou bitovou hodnotu řídicího slova.
 
 > [!NOTE]
-> Ve výchozím nastavení běhové knihovny maskují všechny výjimky s plovoucí desetinnou čárkou.
+> Ve výchozím nastavení maskují knihovny run-time všechny výjimky s plovoucí desetinnou čárkou.
 
-**_controlfp_s –** je téměř shodná **_control87** fungovat na Intel (x86) x64 a ARM platformy. Pokud cílíte na platformy ARM, x64 nebo x86, můžete použít **_control87** nebo **_controlfp_s –**.
+**_controlfp_s** je téměř totožná s funkcí **_control87** na platformách Intel (x86), x64 a ARM. Pokud cílíte na platformy x86, x64 nebo ARM, můžete použít **_control87** nebo **_controlfp_s**.
 
-Rozdíl mezi **_control87** a **_controlfp_s –** je v tom, jak zachází s hodnoty denormal. Pro Intel (x86), x 64 a ARM platformy **_control87** nastavit a zrušit masku výjimka DENORMAL OPERAND. **_controlfp_s –** neupraví masku výjimky DENORMAL OPERAND. Tento příklad ukazuje rozdíl:
+Rozdíl mezi **_control87** a **_controlfp_s** je ve způsobu, jakým zpracovává destandardní hodnoty. Pro platformy Intel (x86), x64 a ARM může **_control87** nastavit a vymazat masku výjimky denormálního operandu. **_controlfp_s** neupravuje masku výjimky denormálního operandu. Tento příklad ukazuje rozdíl:
 
 ```C
 _control87( _EM_INVALID, _MCW_EM );
@@ -85,9 +88,9 @@ _controlfp_s( &current_word, _EM_INVALID, _MCW_EM );
 // DENORMAL exception mask remains unchanged.
 ```
 
-Možné hodnoty pro konstantu masky (*maska*) a nové hodnoty ovládacího prvku (*newControl*) jsou uvedeny v následující tabulce šestnáctkových hodnot. Použijte přenosné konstanty uvedené níže (**_MCW_EM**, **_EM_INVALID**, a tak dále) jako argumenty pro tyto funkce místo poskytování šestnáctkových hodnot explicitně.
+Možné hodnoty pro konstantu masky (*Maska*) a nové hodnoty ovládacího prvku (*newControl*) jsou uvedeny v následující tabulce hexadecimálních hodnot. Použijte přenosné konstanty uvedené níže ( **_MCW_EM**, **_EM_INVALID**a tak dále) jako argumenty pro tyto funkce místo toho, aby explicitně poskytovaly hexadecimální hodnoty.
 
-(X86) platformy odvozené od platformy Intel podporují DENORMAL vstupní a výstupní hodnoty v hardwaru. X86 chování je zachovat hodnoty DENORMAL. Platforma ARM a x64 podporu platformy, které mají SSE2 povolují operandy DENORMAL a výsledky se nebo na hodnotu nula. **_Controlfp_s –**, **_controlfp**, a **_control87** funkce poskytují masku ke změně tohoto chování. Následující příklad demonstruje použití této masky:
+Platformy Intel (x86) – odvozené platformy podporují denormální vstupní a výstupní hodnoty v hardwaru. Chování x86 je zachovat hodnoty destandardní. Platforma ARM a platformy x64, které mají podporu SSE2, umožňují vyprázdnit normální operandy a výsledky, které mají být vyprázdněny, nebo musí být vynucené nula. Funkce **_controlfp_s**, **_controlfp**a **_control87** poskytují masku pro změnu tohoto chování. Následující příklad demonstruje použití této masky:
 
 ```C
 unsigned int current_word = 0;
@@ -99,33 +102,33 @@ _controlfp_s(&current_word, _DN_FLUSH, _MCW_DN);
 // and x64 processors with SSE2 support. Ignored on other x86 platforms.
 ```
 
-Na platformách ARM **_controlfp_s –** funkce se vztahuje na registru FPSCR. Na x64 architektury, pouze kontrolní slovo SSE2, která je uložena v registru MXCSR je ovlivněno. Na platformách Intel (x86) **_controlfp_s –** ovlivňuje řídicí slova pro x87 i SSE2, pokud jsou k dispozici. Je možné, dvěma řídicími slovy není konzistentní mezi sebou (z důvodu předchozího volání [__control87_2](control87-controlfp-control87-2.md), například), pokud existuje nekonzistence mezi dvěma řídicími slovy **_controlfp_s –** nastaví **EM_AMBIGUOUS** příznak v *currentControl*. Toto je upozornění, že vrácené řídicí slovo nemusí přesně reprezentovat stav obou slova s plovoucí desetinnou čárkou ovládacího prvku.
+Na platformách ARM se funkce **_controlfp_s** vztahuje na registr FPSCR. V architekturách x64 je ovlivněno pouze řídicí slovo SSE2, které je uloženo v registru MXCSR. Na platformách Intel (x86) **_controlfp_s** ovlivňuje řídicí slova pro X87 i SSE2, pokud je k dispozici. Je možné, že dvě řídicí slova budou vzájemně nekonzistentní (například kvůli předchozímu volání [__control87_2](control87-controlfp-control87-2.md)); Pokud existuje nekonzistence mezi dvěma řídicími slovy, **_controlfp_s** nastaví příznak **EM_AMBIGUOUS** v *currentControl*. Toto je upozornění, že vrácené řídicí slovo nemusí přesně reprezentovat stav obou slov ovládacího prvku s plovoucí desetinnou čárkou.
 
-ARM a x64 architektury, změna režimu nekonečno ani přesnost s plovoucí desetinnou čárkou se nepodporuje. Pokud se maska ovládacího prvku přesnosti používá na x64 platformy, funkce vyvolá kontrolní výraz a je vyvolána obslužná rutina neplatného parametru, jak je popsáno v [Parameter Validation](../../c-runtime-library/parameter-validation.md).
+V architekturách ARM a x64 se změna režimu nekonečna nebo přesnost s plovoucí desetinnou čárkou nepodporuje. Pokud se na platformě x64 používá maska ovládacího prvku Precision, funkce vyvolá kontrolní výraz a vyvolá neplatnou obslužnou rutinu parametru, jak je popsáno v tématu [ověřování parametru](../../c-runtime-library/parameter-validation.md).
 
-Pokud maska není nastavena správně, tato funkce generuje výjimku neplatného parametru, jak je popsáno v [Parameter Validation](../../c-runtime-library/parameter-validation.md). Pokud provádění může pokračovat, tato funkce vrací **EINVAL** a nastaví **errno** k **EINVAL**.
+Pokud maska není nastavena správně, tato funkce vygeneruje výjimku neplatného parametru, jak je popsáno v tématu [ověřování parametru](../../c-runtime-library/parameter-validation.md). Pokud provádění může pokračovat, vrátí tato funkce **EINVAL** a nastaví **errno** na **EINVAL**.
 
-Tato funkce je ignorována, pokud použijete [/CLR (kompilace Common Language Runtime)](../../build/reference/clr-common-language-runtime-compilation.md) zkompilovat, protože modul CLR (CLR) podporuje pouze základní přesnost s plovoucí desetinnou čárkou.
+Tato funkce se ignoruje, pokud použijete funkci [/CLR (Common Language Runtime Compilation)](../../build/reference/clr-common-language-runtime-compilation.md) ke kompilaci, protože modul CLR (Common Language Runtime) podporuje pouze výchozí přesnost s plovoucí desetinnou čárkou.
 
-### <a name="mask-constants-and-values"></a>Maska konstanty a hodnoty
+### <a name="mask-constants-and-values"></a>Konstanty a hodnoty masky
 
-Pro **_MCW_EM** maska zrušení nastaví výjimku, která povoluje výjimku hardwaru; nastavení skryje výjimku. Pokud **_EM_UNDERFLOW** nebo **_EM_OVERFLOW** dochází, není vyvolána žádná výjimka hardwaru, dokud je proveden další pokyn s plovoucí desetinnou čárkou. Chcete-li vygenerovat hardwarovou výjimku ihned po **_EM_UNDERFLOW** nebo **_EM_OVERFLOW**, zavolejte instrukci MASM FWAIT.
+V případě masky **_MCW_EM** se zrušením nastaví výjimka, která umožňuje hardwarovou výjimku. jeho nastavením skryje výjimku. Pokud dojde k **_EM_UNDERFLOW** nebo **_EM_OVERFLOW** , není vyvolána žádná výjimka hardwaru, dokud nebude provedena další instrukce s plovoucí desetinnou čárkou. Chcete-li vygenerovat hardwarovou výjimku hned po **_EM_UNDERFLOW** nebo **_EM_OVERFLOW**, zavolejte instrukci FWAIT MASM.
 
-|Maska|Šestnáctková hodnota|Konstanta|Šestnáctková hodnota|
+|Zrušit|Šestnáctková hodnota|Konstanta|Šestnáctková hodnota|
 |----------|---------------|--------------|---------------|
-|**_MCW_DN** (ovládací prvek denormal)|0x03000000|**_DN_SAVE**<br /><br /> **_DN_FLUSH**|0x00000000<br /><br /> 0x01000000|
-|**_MCW_EM** (přerušení masku výjimky)|0x0008001F|**_EM_INVALID**<br /><br /> **_EM_DENORMAL**<br /><br /> **_EM_ZERODIVIDE**<br /><br /> **_EM_OVERFLOW**<br /><br /> **_EM_UNDERFLOW**<br /><br /> **_EM_INEXACT**|0x00000010<br /><br /> 0x00080000<br /><br /> 0x00000008<br /><br /> 0x00000004<br /><br /> 0x00000002<br /><br /> 0x00000001|
-|**_MCW_IC** (ovládací prvek nekonečno)<br /><br /> (Není podporován na ARM nebo x64 platformy.)|0x00040000|**_IC_AFFINE**<br /><br /> **_IC_PROJECTIVE**|0x00040000<br /><br /> 0x00000000|
-|**_MCW_RC** (ovládací prvek zaokrouhlení)|0x00000300|**_RC_CHOP**<br /><br /> **_RC_UP**<br /><br /> **_RC_DOWN**<br /><br /> **_RC_NEAR**|0x00000300<br /><br /> 0x00000200<br /><br /> 0x00000100<br /><br /> 0x00000000|
-|**_MCW_PC** (ovládací prvek přesnost)<br /><br /> (Není podporován na ARM nebo x64 platformy.)|0x00030000|**_PC_24** (24 bitů)<br /><br /> **_PC_53** (53 bitů)<br /><br /> **_PC_64** (64 bitů)|0x00020000<br /><br /> 0x00010000<br /><br /> 0x00000000|
+|**_MCW_DN** (Nestandardní ovládací prvek)|0x03000000|**_DN_SAVE**<br /><br /> **_DN_FLUSH**|0x00000000<br /><br /> 0x01000000|
+|**_MCW_EM** (Maska výjimky přerušení)|0x0008001F|**_EM_INVALID**<br /><br /> **_EM_DENORMAL**<br /><br /> **_EM_ZERODIVIDE**<br /><br /> **_EM_OVERFLOW**<br /><br /> **_EM_UNDERFLOW**<br /><br /> **_EM_INEXACT**|0x00000010<br /><br /> 0x00080000<br /><br /> 0x00000008<br /><br /> 0x00000004<br /><br /> 0x00000002<br /><br /> 0x00000001|
+|**_MCW_IC** (Ovládací prvek nekonečno)<br /><br /> (Nepodporuje se na platformách ARM nebo x64.)|0x00040000|**_IC_AFFINE**<br /><br /> **_IC_PROJECTIVE**|0x00040000<br /><br /> 0x00000000|
+|**_MCW_RC** (Ovládací prvek zaokrouhlení)|0x00000300|**_RC_CHOP**<br /><br /> **_RC_UP**<br /><br /> **_RC_DOWN**<br /><br /> **_RC_NEAR**|0x00000300<br /><br /> 0x00000200<br /><br /> 0x00000100<br /><br /> 0x00000000|
+|**_MCW_PC** (Řízení přesnosti)<br /><br /> (Nepodporuje se na platformách ARM nebo x64.)|0x00030000|**_PC_24** (24 bitů)<br /><br /> **_PC_53** (53 bitů)<br /><br /> **_PC_64** (64 bitů)|0x00020000<br /><br /> 0x00010000<br /><br /> 0x00000000|
 
 ## <a name="requirements"></a>Požadavky
 
 |Rutina|Požadovaný hlavičkový soubor|
 |-------------|---------------------|
-|**_controlfp_s**|\<float.h >|
+|**_controlfp_s**|\<float. h >|
 
-Další informace o kompatibilitě naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Příklad
 

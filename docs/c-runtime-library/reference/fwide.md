@@ -1,9 +1,9 @@
 ---
 title: fwide
 ms.date: 11/04/2016
-apiname:
+api_name:
 - fwide
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -14,22 +14,25 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - fwide
 helpviewer_keywords:
 - fwide function
 ms.assetid: a4641f5b-d74f-4946-95d5-53a64610d28d
-ms.openlocfilehash: d992ebc527744beeb4ef14175e3f10646a77a064
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2e986ba5ab28072f4933e555eea32a5893c8df56
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62287613"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70956223"
 ---
 # <a name="fwide"></a>fwide
 
-Neimplementovaná.
+Neimplementované.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -43,18 +46,18 @@ int fwide(
 ### <a name="parameters"></a>Parametry
 
 *stream*<br/>
-Ukazatel na **souboru** struktury (ignorováno).
+Ukazatel na strukturu **souborů** (ignorováno).
 
-*Režim*<br/>
-Novou šířku datového proudu: kladné pro široký znak, záporné pro byte, nula ponechat beze změny. (Tato hodnota se ignoruje.)
+*Mode*<br/>
+Nová šířka datového proudu: kladná hodnota pro velký znak, záporná pro bajt, nula, která nezůstane beze změny. (Tato hodnota se ignoruje.)
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Tato funkce aktuálně jenom vrací *režimu*.
+Tato funkce aktuálně vrací jenom *režim*.
 
 ## <a name="remarks"></a>Poznámky
 
-Aktuální verze této funkce není v souladu se standardem.
+Aktuální verze této funkce nedodržuje Standard.
 
 ## <a name="requirements"></a>Požadavky
 
@@ -62,4 +65,4 @@ Aktuální verze této funkce není v souladu se standardem.
 |--------------|---------------------|
 |**fwide**|\<wchar.h>|
 
-Další informace najdete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace najdete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).

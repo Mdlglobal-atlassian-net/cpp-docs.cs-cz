@@ -1,9 +1,9 @@
 ---
 title: _unlock_file
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _unlock_file
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-filesystem-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _unlock_file
 - unlock_file
@@ -25,16 +28,16 @@ helpviewer_keywords:
 - _unlock_file function
 - unlocking files
 ms.assetid: cf380a51-6d3a-4f38-bd64-2d4fb57b4369
-ms.openlocfilehash: e3d11cbd59ef5846b33908ae6b6c40d7ea6125e8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2983408f066ea00c0b7ab111d9a6349700ecaece
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62353537"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70957481"
 ---
-# <a name="unlockfile"></a>_unlock_file
+# <a name="_unlock_file"></a>_unlock_file
 
-Odemkne souboru, což jiné procesy pro přístup k souboru.
+Odemkne soubor a umožní jiným procesům přístup k souboru.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -46,12 +49,12 @@ void _unlock_file(
 
 ### <a name="parameters"></a>Parametry
 
-*Soubor*<br/>
+*souborů*<br/>
 Popisovač souboru.
 
 ## <a name="remarks"></a>Poznámky
 
-**_Unlock_file –** funkce odemyká soubor určený parametrem *souboru*. Odemknutí souboru umožňuje přístup k souboru s jinými procesy. Tato funkce by neměla být volána, pokud **_lock_file –** dříve volalo *souboru* ukazatele. Volání **_unlock_file –** u souboru, která není uzamčena může vést k zablokování. Příklad najdete v tématu [_lock_file –](lock-file.md).
+Funkce **_unlock_file** odemkne soubor určený parametrem *File*. Odemknutí souboru umožňuje přístup k souboru jiným procesům. Tato funkce by neměla být volána, pokud jste předtím nevolali **_lock_file** na ukazatel *souboru* . Volání **_unlock_file** na Neuzamčený soubor může způsobit zablokování. Příklad naleznete v tématu [_lock_file](lock-file.md).
 
 ## <a name="requirements"></a>Požadavky
 
@@ -59,7 +62,7 @@ Popisovač souboru.
 |-------------|---------------------|
 |**_unlock_file**|\<stdio.h>|
 
-Další informace o kompatibilitě, naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Viz také:
 

@@ -1,14 +1,14 @@
 ---
 title: lrint, lrintf, lrintl, llrint, llrintf, llrintl
 ms.date: 04/05/2018
-apiname:
+api_name:
 - lrint
 - lrintl
 - lrintf
 - llrint
 - llrintf
 - llrintl
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -20,7 +20,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - lrint
 - lrintf
@@ -42,16 +45,16 @@ helpviewer_keywords:
 - llrintf function
 - llrintl function
 ms.assetid: 28ccd5b3-5e6f-434f-997d-a21d51b8ce7f
-ms.openlocfilehash: 01680a62e654112475a55bd8eac0cc14d254e2a2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 72870c3548f0fd6972183b0c090708c6eddc591e
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62285769"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70953127"
 ---
 # <a name="lrint-lrintf-lrintl-llrint-llrintf-llrintl"></a>lrint, lrintf, lrintl, llrint, llrintf, llrintl
 
-Zadaná hodnota s plovoucí desetinnou čárkou na nejbližší celočíselnou hodnotu, zaokrouhlí na základě aktuální režim zaokrouhlování a směr.
+Zaokrouhlí zadanou hodnotu s plovoucí desetinnou čárkou na nejbližší celočíselnou hodnotu pomocí současného režimu zaokrouhlení a směru.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -100,31 +103,31 @@ long long int llrintl(
 ### <a name="parameters"></a>Parametry
 
 *x*<br/>
-Hodnota má být zaokrouhleno.
+Hodnota, která má být zaokrouhlena.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Pokud je úspěšná, vrátí zaoblenými hodnota integrálního *x*.
+V případě úspěchu vrátí zaokrouhlenou celočíselnou hodnotu *x*.
 
-|Problém|Vrátí|
+|Problém|vrátit|
 |-----------|------------|
-|*x* je mimo rozsah návratový typ<br /><br /> *x* = ±∞<br /><br /> *x* = NaN|Vyvolá **FE_INVALID** a vrací nulu (0).|
+|*x* je mimo rozsah návratového typu.<br /><br /> *x* = ± ∞<br /><br /> *x* = NaN|Vyvolává **FE_INVALID** a vrací nulu (0).|
 
 ## <a name="remarks"></a>Poznámky
 
-Protože jazyk C++ umožňuje přetížení, můžete volat přetížení **lrint** a **llrint** trvají **float** a **dlouhé**  **dvojité** typy. V programu jazyka C **lrint** a **llrint** vždy směrují **double**.
+Vzhledem C++ k tomu, že umožňuje přetížení, můžete volat přetížení **lrint** a **llrint** , které přebírají **float** a **Long** **Double** Types. V programu v jazyce C **lrint** a **llrint** vždycky pobírají **dvojitou**hodnotu.
 
-Pokud *x* nepředstavuje s plovoucí desetinnou čárkou ekvivalent celočíselnou hodnotu, tato funkce vyvolá **FE_INEXACT**.
+Pokud *x* nepředstavuje ekvivalent plovoucí desetinné čárky integrální hodnoty, tyto funkce vyvolají **FE_INEXACT**.
 
-**Specifické pro Microsoft**: Pokud výsledek je mimo rozsah návratového typu nebo pokud je parametr nekonečno a NaN, vrácená hodnota je definován implementací. Kompilátor společnosti Microsoft vrátí nulové hodnoty (0).
+**Specifické pro společnost Microsoft**: Pokud je výsledek mimo rozsah návratového typu nebo pokud je parametr hodnota NaN nebo Infinite, vrácená hodnota je definovaná implementací. Kompilátor Microsoft vrátí hodnotu nula (0).
 
 ## <a name="requirements"></a>Požadavky
 
-|Funkce|Záhlaví C|Hlaviček jazyka C++|
+|Funkce|Hlavička jazyka C|C++hlaviček|
 |--------------|--------------|------------------|
-|**lrint**, **lrintf**, **lrintl**, **llrint**, **llrintf**, **llrintl**|\<math.h>|\<cmath>|
+|**lrint**, **lrintf**, **lrintl**, **llrint**, **llrintf**, **llrintl**|\<Math. h >|\<cmath >|
 
-Další informace o kompatibilitě, naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Viz také:
 

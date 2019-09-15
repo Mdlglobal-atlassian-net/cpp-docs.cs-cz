@@ -1,9 +1,9 @@
 ---
 title: _set_SSE2_enable
 ms.date: 04/05/2018
-apiname:
+api_name:
 - _set_SSE2_enable
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _set_SSE2_enable
 - set_SSE2_enable
@@ -24,16 +27,16 @@ helpviewer_keywords:
 - Streaming SIMD Extensions 2 instructions
 - set_SSE2_enable function
 ms.assetid: 55db895d-fc1e-475a-9110-b781a9bb51c5
-ms.openlocfilehash: c340423e93b6487a4a951e4b96055cba6e474269
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8838282db851c6811a3f24c75a03b31c5870e6d3
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62356534"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70948364"
 ---
-# <a name="setsse2enable"></a>_set_SSE2_enable
+# <a name="_set_sse2_enable"></a>_set_SSE2_enable
 
-Povolí nebo zakáže použití instrukcí Streaming SIMD Extensions 2 (SSE2) v CRT matematických rutin. (Tato funkce není k dispozici na x64 architektury vzhledem k tomu, že je ve výchozím nastavení povolené SSE2.)
+Povolí nebo zakáže použití Streaming SIMD Extensions 2 (SSE2) instrukcí v matematických rutinách CRT. (Tato funkce není k dispozici v architekturách x64, protože ve výchozím nastavení je povolená služba SSE2.)
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -45,47 +48,47 @@ int _set_SSE2_enable(
 
 ### <a name="parameters"></a>Parametry
 
-*Příznak*<br/>
-1 pro zapnutí provádění SSE2; 0 pro vypnutí implementace SSE2. Ve výchozím nastavení je implementace SSE2 povolené u procesorů, které ho podporují.
+*příznaků*<br/>
+1 pro povolení implementace SSE2; 0 pro zakázání implementace SSE2 Ve výchozím nastavení je implementace SSE2 povolená u procesorů, které ho podporují.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Nenulové, pokud je povolené provádění SSE2; nula v případě implementace SSE2 je zakázaná.
+Nenulová, je-li povolena implementace SSE2; nula, pokud je SSE2 implementace zakázána.
 
 ## <a name="remarks"></a>Poznámky
 
-Následující funkce mají implementace SSE2, které se dá nastavit pomocí **_set_sse2_enable –**:
+Následující funkce mají SSE2 implementace, které lze povolit pomocí **_set_SSE2_enable**:
 
 - [atan](atan-atanf-atanl-atan2-atan2f-atan2l.md)
 
-- [ceil](ceil-ceilf-ceill.md)
+- [ceil –](ceil-ceilf-ceill.md)
 
 - [exp](exp-expf.md)
 
-- [Dolní mez](floor-floorf-floorl.md)
+- [řízení](floor-floorf-floorl.md)
 
-- [log](log-logf-log10-log10f.md)
+- [protokolu](log-logf-log10-log10f.md)
 
 - [log10](log-logf-log10-log10f.md)
 
-- [modf](modf-modff-modfl.md)
+- [modf –](modf-modff-modfl.md)
 
-- [Pow](pow-powf-powl.md)
+- [log](pow-powf-powl.md)
 
-Implementace SSE2 z těchto funkcí může přidělit odpovědi trochu jinak než výchozí implementace, protože SSE2 mezilehlých hodnot s plovoucí desetinnou čárkou množství 64-bit ale hodnoty, ležící výchozí implementace jsou 80 bitů počty s plovoucí desetinnou čárkou.
+SSE2 implementace těchto funkcí může vést ke mírně odlišným odpovědím, než je výchozí implementace, protože SSE2 mezilehlé hodnoty jsou 64, ale výchozí implementace mezihodnot jsou 80-bit. množství s plovoucí desetinnou čárkou.
 
 > [!NOTE]
-> Pokud používáte [/Oi (Generovat vnitřní funkce)](../../build/reference/oi-generate-intrinsic-functions.md) – možnost kompilátoru ke kompilaci projektu, může se zobrazit, který **_set_sse2_enable –** nemá žádný vliv. **/Oi** – možnost kompilátoru dává kompilátoru oprávnění k použití vnitřních objektů pro nahrazení volání CRT; toto chování potlačuje účinek **_set_sse2_enable –**. Pokud chcete zaručit, že **/Oi** nepřepisuje **_set_sse2_enable –**, použijte **/Oi-** ke kompilaci projektu. To může být také vhodné při použití jiné přepínače kompilátoru, které znamenají **/Oi**.
+> Použijete-li možnost kompilátoru [/Oi (generovat vnitřní funkce)](../../build/reference/oi-generate-intrinsic-functions.md) pro zkompilování projektu, může se zdát, že **_set_SSE2_enable** nemá žádný vliv. Možnost kompilátoru **/Oi** dává kompilátoru oprávnění k použití vnitřníchy k nahrazení volání CRT; Toto chování Přepisuje účinek **_set_SSE2_enable**. Chcete-li zaručit, že **/Oi** nepřepisuje **_set_SSE2_enable**, použijte k zkompilování projektu **/Oi-** . To může být také dobrý postup při použití dalších přepínačů kompilátoru, které implikují **/Oi**.
 
-Implementace SSE2 se používá jenom v případě, že se maskují všechny výjimky. Použití [_control87 – _controlfp](control87-controlfp-control87-2.md) pro masku výjimky.
+Implementace SSE2 se používá pouze v případě, že jsou všechny výjimky maskovány. Použijte [_control87, _controlfp](control87-controlfp-control87-2.md) k maskování výjimek.
 
 ## <a name="requirements"></a>Požadavky
 
 |Rutina|Požadovaný hlavičkový soubor|
 |-------------|---------------------|
-|**_set_SSE2_enable**|\<math.h>|
+|**_set_SSE2_enable**|\<Math. h >|
 
-Další informace o kompatibilitě naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Příklad
 

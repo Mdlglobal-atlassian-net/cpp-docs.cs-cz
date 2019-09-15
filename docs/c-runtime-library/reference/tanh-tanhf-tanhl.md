@@ -1,11 +1,11 @@
 ---
-title: TANH, tanhf –, tanhl
+title: tanh, tanhf, tanhl
 ms.date: 04/10/2018
-apiname:
+api_name:
 - tanh
 - tanhf
 - tanhl
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - tanh
 - tanhf
@@ -30,16 +33,16 @@ helpviewer_keywords:
 - tanhf function
 - trigonometric functions
 - hyperbolic functions
-ms.openlocfilehash: 3b9c7269d3c945301106098fc944383bbc364e5a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0d249768ed26a55e639cced55bae6b923dbf521b
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62258314"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70957535"
 ---
-# <a name="tanh-tanhf-tanhl"></a>TANH, tanhf –, tanhl
+# <a name="tanh-tanhf-tanhl"></a>tanh, tanhf, tanhl
 
-Vypočte hyperbolický tangens.
+Vypočítá hyperbolický tangens.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -61,23 +64,23 @@ long double tanh( long double x );  // C++ only
 
 ## <a name="return-value"></a>Návratová hodnota
 
-**Tanh** funkce vrací hyperbolický tangens *x*. Není vrácena žádná chyba.
+Funkce **tanh –** vrací hyperbolický tangens *x*. Nevrátila se žádná chybová zpráva.
 
-|Vstup|Výjimka SEH|**Matherr** výjimky|
+|Vstup|Výjimka SEH|**Matherr** Jímka|
 |-----------|-------------------|-------------------------|
-|ROZMEZÍ QNAN, AJÍT|žádná|_DOMAIN|
+|QNAN, ZASÁHNOUT|žádná|_DOMAIN|
 
 ## <a name="remarks"></a>Poznámky
 
-Protože jazyk C++ umožňuje přetížení, můžete volat přetížení **tanh** , která používají a vrací **float** nebo **dlouhé** **double** hodnoty. V programu jazyka C **tanh** vždy převezme a vrátí **double**.
+Vzhledem C++ k tomu, že umožňuje přetížení, můžete volat přetížení **tanh –** , která přijímají a vracejí hodnoty **float** nebo **Long** **Double** . V programu v jazyce C **tanh –** vždycky přebírá a vrací **Double**.
 
 ## <a name="requirements"></a>Požadavky
 
-|Rutina|Požadované záhlaví (C)|Požadované záhlaví (C)|
+|Rutina|Požadovaná hlavička (C)|Požadovaná hlavička (C)|
 |-------------|---------------------|-|
-|**tanh**, **tanhf**, **tanhl**|\<math.h>|\<cmath > nebo \<math.h >|
+|**tanh –** , **tanhf –** , **tanhl**|\<Math. h >|\<cmath > nebo \<Math. h >|
 
-Další informace o kompatibilitě, naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Příklad
 

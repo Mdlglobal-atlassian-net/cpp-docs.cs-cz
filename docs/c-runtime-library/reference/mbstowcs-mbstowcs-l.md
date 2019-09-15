@@ -1,10 +1,10 @@
 ---
 title: mbstowcs, _mbstowcs_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - mbstowcs
 - _mbstowcs_l
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -18,7 +18,10 @@ apilocation:
 - api-ms-win-crt-multibyte-l1-1-0.dll
 - api-ms-win-crt-convert-l1-1-0.dll
 - ntoskrnl.exe
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - mbstowcs
 helpviewer_keywords:
@@ -26,12 +29,12 @@ helpviewer_keywords:
 - mbstowcs_l function
 - mbstowcs function
 ms.assetid: 96696b27-e068-4eeb-8006-3f7a0546ae6d
-ms.openlocfilehash: cae1034d0bcb9789f5cb709399d4992de44cae9d
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 3df851b08edfa9dfe5bf9b42b9abfd45a8939606
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69499784"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70952036"
 ---
 # <a name="mbstowcs-_mbstowcs_l"></a>mbstowcs, _mbstowcs_l
 
@@ -89,7 +92,7 @@ Pokud **mbstowcs** úspěšně převede zdrojový řetězec, vrátí počet pře
 
 ## <a name="remarks"></a>Poznámky
 
-Funkce **mbstowcs** převádí až do maximálního počtu vícebajtových znaků, na které odkazuje *mbstr* na řetězec odpovídajících velkých znaků, které jsou určeny aktuálním národním prostředím. Ukládá výsledný řetězec s velkým znakem na adrese reprezentované *wcstr*. Výsledek je podobný sérii volání [mbtowc](mbtowc-mbtowc-l.md). Pokud **mbstowcs** narazí na jednobajtové znak null (' \ 0 ') buď před, nebo pokud dojde k *výpočtu* , převede znak null na znak null s velkým znakem (L ' \ 0 ') a zastaví. Proto řetězec s řetězci v *wcstr* je zakončený hodnotou null pouze v případě, že při převodu dojde k znaku null. Pokud se sekvence, na které ukazuje *wcstr* a *mbstr* , překrývají, chování není definováno.
+Funkce **mbstowcs** převádí až do maximálního *počtu vícebajtových* znaků, na které odkazuje *mbstr* na řetězec odpovídajících velkých znaků, které jsou určeny aktuálním národním prostředím. Ukládá výsledný řetězec s velkým znakem na adrese reprezentované *wcstr*. Výsledek je podobný sérii volání [mbtowc](mbtowc-mbtowc-l.md). Pokud **mbstowcs** narazí na jednobajtové znak null (' \ 0 ') buď před, nebo pokud dojde k *výpočtu* , převede znak null na znak null s velkým znakem (L ' \ 0 ') a zastaví. Proto řetězec s řetězci v *wcstr* je zakončený hodnotou null pouze v případě, že při převodu dojde k znaku null. Pokud se sekvence, na které ukazuje *wcstr* a *mbstr* , překrývají, chování není definováno.
 
 Pokud argument *wcstr* má **hodnotu null**, **mbstowcs** vrátí počet velkých znaků, které by měly být výsledkem převodu, včetně ukončovacího znaku null. Aby bylo možné vrátit správnou hodnotu, musí být zdrojový řetězec zakončen znakem null. Pokud potřebujete výsledný řetězec s velkým znakem, který má být zakončený hodnotou null, přidejte jednu na vrácenou hodnotu.
 

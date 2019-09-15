@@ -1,9 +1,9 @@
 ---
 title: _umask
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _umask
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-filesystem-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _umask
 helpviewer_keywords:
@@ -26,16 +29,16 @@ helpviewer_keywords:
 - file permissions [C++]
 - files [C++], permission settings for
 ms.assetid: 5e9a13ba-5321-4536-8721-6afb6f4c8483
-ms.openlocfilehash: 113bf97b0fe93204cd41de20bc36a8be080a88b6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 44614384427b9b70102da03972969c9aa8ef4b83
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62155417"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70957497"
 ---
-# <a name="umask"></a>_umask
+# <a name="_umask"></a>_umask
 
-Nastaví výchozí masku souboru oprávnění. Bezpečnější verze této funkce je k dispozici. Zobrazit [_umask_s –](umask-s.md).
+Nastaví výchozí masku oprávnění souboru. K dispozici je bezpečnější verze této funkce; viz [_umask_s](umask-s.md).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -46,39 +49,39 @@ int _umask( int pmode );
 ### <a name="parameters"></a>Parametry
 
 *pmode*<br/>
-Výchozí nastavení oprávnění.
+Výchozí nastavení oprávnění
 
 ## <a name="return-value"></a>Návratová hodnota
 
-**_umask –** vrátí předchozí hodnotu *pmode*. Není vrácena žádná chyba.
+**_umask** vrací předchozí hodnotu *pmode*. Nevrátila se žádná chybová zpráva.
 
 ## <a name="remarks"></a>Poznámky
 
-**_Umask –** funkce nastaví masky souboru oprávnění aktuálního procesu k režimu určeném *pmode*. Maska oprávnění soubor upravuje nastavení oprávnění nové soubory vytvořené v **_creat –**, **_Otevřít**, nebo **_sopen**. Pokud bit masky je 1, odpovídající bit v souboru hodnota požadovaná oprávnění nastavená na hodnotu 0 (zakázáno). Pokud bit masky na hodnotu 0, odpovídající bit zůstane beze změny. Nastavení oprávnění pro nový soubor není nastavena, dokud není zavřena soubor poprvé.
+Funkce **_umask** nastavuje masku oprávnění souboru pro aktuální proces do režimu určeného parametrem *pmode*. Maska oprávnění soubor upravuje nastavení oprávnění nových souborů vytvořených pomocí **_creat**, **_open**nebo **_sopen**. Pokud je bit v masce 1, odpovídající bit v hodnotě požadovaného oprávnění souboru je nastaven na hodnotu 0 (zakázáno). Pokud je bit v masce 0, odpovídající bit zůstane beze změny. Nastavení oprávnění pro nový soubor není nastavené, dokud se soubor nezavřá poprvé.
 
-Celočíselný výraz *pmode* obsahuje jednu nebo obě z následujících konstant manifestu definovaných v SYS\STAT. V:
+Celočíselný výraz *pmode* obsahuje jednu nebo obě následující konstanty manifestu definované v SYS\STAT. Y
 
 |*pmode*| |
 |-|-|
 | **_S_IWRITE** | Zápis povolen. |
-| **_S_IREAD** | Čtení povolené. |
-| **_S_IREAD** &#124; **_S_IWRITE** | Čtení a zápis povolen. |
+| **_S_IREAD** | Čtení je povoleno. |
+| **_S_IREAD** &#124; **_S_IWRITE** | Čtení a zápis jsou povoleny. |
 
-Když jsou uvedeny oba konstanty, jsou spojeny pomocí bitového operátoru OR – operátor ( **&#124;** ). Pokud *pmode* argument je **_S_IREAD**, není povoleno čtení (soubor je jen pro zápis). Pokud *pmode* argument je **_S_IWRITE**, není povolen zápis (soubor je jen pro čtení). Pokud je bit zápisu nastavený v masce, všechny nové soubory bude třeba jen pro čtení. Upozorňujeme, že zástupného kódu MS-DOS a operační systémy Windows, je čitelný; všechny soubory není možné poskytnout oprávnění jen pro zápis. Proto nastavení čtení bit s **_umask –** nemá žádný vliv na jeho režimy.
+Jsou-li obě konstanty zadány, jsou spojeny s bitovým operátorem OR ( **&#124;** ). Pokud je argument *Pmode* **_S_IREAD**, čtení není povoleno (soubor je jen pro zápis). Pokud je argument *Pmode* **_S_IWRITE**, zápis není povolen (soubor je jen pro čtení). Například pokud je bit zápisu nastaven v masce, všechny nové soubory budou jen pro čtení. Všimněte si, že v operačních systémech MS-DOS a Windows jsou všechny soubory čitelné. není možné poskytovat oprávnění pouze pro zápis. Proto nastavení bitu pro čtení pomocí **_umask** nemá žádný vliv na režimy souboru.
 
-Pokud *pmode* není kombinaci některou z konstant manifestu nebo zahrnuje alternativní sadu konstant, funkce bude jednoduše ignorovat ty.
+Pokud *pmode* není kombinací jedné z celočíselných konstant nebo zahrnuje alternativní sadu konstant, funkce je jednoduše ignoruje.
 
 ## <a name="requirements"></a>Požadavky
 
 |Rutina|Požadovaný hlavičkový soubor|
 |-------------|---------------------|
-|**_umask**|\<IO.h >, \<sys/stat.h >, \<sys/types.h >|
+|**_umask**|\<IO. h >, \<sys/stat. h >, \<sys/Types. h >|
 
-Další informace o kompatibilitě, naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
 
 ## <a name="libraries"></a>Knihovny
 
-Všechny verze [běhových knihoven C](../../c-runtime-library/crt-library-features.md).
+Všechny verze [knihoven run-time jazyka C](../../c-runtime-library/crt-library-features.md).
 
 ## <a name="example"></a>Příklad
 

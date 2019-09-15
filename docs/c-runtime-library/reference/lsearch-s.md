@@ -1,9 +1,9 @@
 ---
 title: _lsearch_s
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _lsearch_s
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-utility-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _lsearch_s
 - lsearch_s
@@ -28,16 +31,16 @@ helpviewer_keywords:
 - _lsearch_s function
 - lsearch_s function
 ms.assetid: d2db0635-be7a-4799-8660-255f14450882
-ms.openlocfilehash: f57a96622419e3f72fc2df5b260cbbbdd59666ae
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1c3c0ac41a4805acb558c75fb5ff4cbc0e3aa838
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62156952"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70952994"
 ---
-# <a name="lsearchs"></a>_lsearch_s
+# <a name="_lsearch_s"></a>_lsearch_s
 
-Provádí lineárního hledání pro hodnotu. Verze [_lsearch –](lsearch.md) s rozšířeními zabezpečení, jak je popsáno v [funkce zabezpečení v CRT](../../c-runtime-library/security-features-in-the-crt.md).
+Provede lineární hledání hodnoty. Verze [_lsearch](lsearch.md) s vylepšeními zabezpečení, jak je popsáno v [části funkce zabezpečení v CRT](../../c-runtime-library/security-features-in-the-crt.md).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -55,45 +58,45 @@ void *_lsearch_s(
 ### <a name="parameters"></a>Parametry
 
 *key*<br/>
-Objekt pro hledání.
+Objekt, který chcete vyhledat.
 
 *base*<br/>
-Ukazatel na základní pole, které chcete prohledat.
+Ukazatel na základ pole, které má být prohledáno.
 
-*Číslo*<br/>
-Počet prvků.
+*Automatické*<br/>
+Počet elementů.
 
-*Velikost*<br/>
-Velikost jednotlivých prvků pole v bajtech.
+*hodnota*<br/>
+Velikost každého prvku pole v bajtech
 
 *compare*<br/>
-Ukazatel na rutiny porovnání. Druhý parametr je ukazatel na klíč pro hledání. Třetí parametr je ukazatel na prvek pole k porovnání s klíči.
+Ukazatel na srovnávací rutinu. Druhým parametrem je ukazatel na klíč pro hledání. Třetí parametr je ukazatel na prvek pole, který má být porovnán s klíčem.
 
 *context*<br/>
-Ukazatel na objekt, který může přistupovat ve funkci porovnání.
+Ukazatel na objekt, který je pravděpodobně k dispozici ve funkci porovnání.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Pokud *klíč* nenajde, **_lsearch_s –** vrací ukazatel na prvek v poli *základní* , který odpovídá *klíč*. Pokud *klíč* nenajde, **_lsearch_s –** vrací ukazatel na nově přidané položky na konec pole.
+Pokud je *klíč* nalezen, vrátí **_lsearch_s** ukazatel na element pole na *bázi Base* , který odpovídá *klíči*. Pokud *klíč* není nalezen, vrátí **_lsearch_s** ukazatel na nově přidanou položku na konci pole.
 
-Pokud jsou předány neplatné parametry pro funkci, vyvolán obslužnou rutinu neplatného parametru, jak je popsáno v [Parameter Validation](../../c-runtime-library/parameter-validation.md). Pokud smí provádění pokračovat, pak **errno** je nastavena na **EINVAL** a funkce vrátí **NULL**. Další informace najdete v tématu [errno _doserrno, _sys_errlist a _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+Pokud jsou funkci předány neplatné parametry, je vyvolána obslužná rutina neplatného parametru, jak je popsáno v tématu [ověřování parametru](../../c-runtime-library/parameter-validation.md). Pokud provádění může pokračovat, pak je **errno** nastaveno na **EINVAL** a funkce vrátí **hodnotu null**. Další informace najdete v tématech [errno, _doserrno, _sys_errlist a _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
-### <a name="error-conditions"></a>Chybové podmínky
+### <a name="error-conditions"></a>Chybové stavy
 
-|*key*|*base*|*compare*|*Číslo*|*Velikost*|**errno**|
+|*key*|*base*|*compare*|*Automatické*|*hodnota*|**errno**|
 |-----------|------------|---------------|-----------|------------|-------------|
-|**NULL**|Všechny|Všechny|Všechny|Všechny|**EINVAL**|
-|Všechny|**NULL**|Všechny|!= 0|Všechny|**EINVAL**|
-|Všechny|Všechny|Všechny|Všechny|nula|**EINVAL**|
-|Všechny|Všechny|**NULL**|Aplikace|Všechny|**EINVAL**|
+|**NULL**|Jakýmikoli|Jakýmikoli|Jakýmikoli|Jakýmikoli|**EINVAL**|
+|Jakýmikoli|**NULL**|Jakýmikoli|!= 0|Jakýmikoli|**EINVAL**|
+|Jakýmikoli|Jakýmikoli|Jakýmikoli|Jakýmikoli|nula|**EINVAL**|
+|Jakýmikoli|Jakýmikoli|**NULL**|K|Jakýmikoli|**EINVAL**|
 
 ## <a name="remarks"></a>Poznámky
 
-**_Lsearch_s –** funkce provádí lineárního hledání pro hodnotu *klíč* v poli *číslo* prvky, každý z *šířka* bajtů. Na rozdíl od **bsearch_s –**, **_lsearch_s –** nevyžaduje, aby pole, který se má seřadit. Pokud *klíč* nenajde, pak **_lsearch_s –** přidá na konec objektu array a zvýší hodnotu *číslo*.
+Funkce **_lsearch_s** provede lineární hledání *klíč* hodnoty v poli *číselných* prvků, přičemž každý z nich má *šířku* . Na rozdíl od **bsearch_s**, **_lsearch_s** nevyžaduje řazení pole. Pokud se *klíč* nenajde, **_lsearch_s** ho přidá na konec pole a zvýší *číslo*.
 
-*Porovnání* funkce je ukazatel na uživatelem zadané rutinou, která porovná dva prvky pole a vrátí hodnotu určující jejich vztahu. *Porovnání* funkce také přijímá ukazatel na kontextu jako první argument. **_lsearch_s –** volání *porovnání* jednou nebo vícekrát během hledání předání ukazatele do dvou prvků pole při každém volání. *porovnání* musí porovnat prvků a vrátíte se buď nenulovou hodnotu (tj. elementy se liší), nebo 0 (tj. elementy jsou identické).
+Funkce *Compare* je ukazatel na uživatelsky zadanou rutinu, která porovná dva prvky pole a vrátí hodnotu určující jejich relaci. Funkce *Compare* také převezme ukazatel na kontext jako první argument. volání **_lsearch_s** při hledání *porovnávají* jednou nebo víckrát a předají ukazatel na dva prvky pole při každém volání. *porovnání* musí porovnat prvky a pak vracet buď nenulové hodnoty (což znamená, že prvky jsou rozdílné) nebo 0 (což znamená, že prvky jsou identicky).
 
-*Kontextu* ukazatele může být užitečné, pokud hledaný datová struktura je součástí objektu a *porovnání* funkce potřebuje pro přístup ke členům objektu. Například v kódu *porovnání* funkce lze přetypovat ukazatele do příslušného objektu typu a přístup členů tohoto objektu. Přidání *kontextu* díky ukazatel **_lsearch_s –** bezpečnější, protože další kontext je možné, aby se zabránilo vícenásobnému přístupu chyb spojených s použitím statické proměnné pro zpřístupnění dat pro *porovnání* funkce.
+*Kontextový* ukazatel může být užitečný, pokud je struktura prohledávaných dat součástí objektu a funkce *Compare* potřebuje přístup k členům objektu. Například kód ve funkci *Compare* může přetypovat ukazatel void na příslušný typ objektu a přistupovat ke členům tohoto objektu. Přidání *kontextového* ukazatele činí **_lsearch_sější** , protože další kontext lze použít k tomu, aby se předešlo Vícenásobný přístup chybám přidruženým k použití statických proměnných k zpřístupnění dat funkci *Compare* .
 
 ## <a name="requirements"></a>Požadavky
 
@@ -101,7 +104,7 @@ Pokud jsou předány neplatné parametry pro funkci, vyvolán obslužnou rutinu 
 |-------------|---------------------|
 |**_lsearch_s**|\<search.h>|
 
-Další informace o kompatibilitě naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Viz také:
 

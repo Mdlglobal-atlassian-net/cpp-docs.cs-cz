@@ -1,9 +1,9 @@
 ---
 title: _close
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _close
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _close
 helpviewer_keywords:
@@ -23,16 +26,16 @@ helpviewer_keywords:
 - close function
 - files [C++], closing
 ms.assetid: 4708a329-8acf-4cd9-b7b0-a952e1897247
-ms.openlocfilehash: faea008903136e8abdc39297672b31800ada796d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e274cd45c42a5cf49430ecce69e111cbbf6fe88b
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62340011"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70942933"
 ---
-# <a name="close"></a>_close
+# <a name="_close"></a>_close
 
-Soubor se zavře.
+Zavře soubor.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -49,15 +52,15 @@ Popisovač souboru odkazující na otevřený soubor.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-**_Zavřít** vrátí hodnotu 0, pokud soubor byl úspěšně uzavřen. Návratová hodnota-1 označuje chybu.
+**_close** vrátí hodnotu 0, pokud byl soubor úspěšně uzavřen. Návratová hodnota-1 označuje chybu.
 
 ## <a name="remarks"></a>Poznámky
 
-**_Zavřít** funkce zavře soubor přidružený k *fd*.
+Funkce **_close** zavře soubor přidružený k *FD*.
 
-Popisovače souborů a podkladové popisovač souboru operačního systému jsou zavřené. Proto není nutné volat **CloseHandle** Pokud soubor byl původně otevřen použitím funkce Win32 **CreateFile** a převedeny na popisovač souboru pomocí **_open_osfhandle –**.
+Popisovač souboru a podkladový popisovač souboru operačního systému jsou zavřené. Proto není nutné volat **CloseHandle** , pokud byl soubor původně otevřen pomocí funkce Win32 **CreateFile** a převeden na popisovač souboru pomocí **_open_osfhandle**.
 
-Tato funkce ověřuje své parametry. Pokud *fd* je popisovače souborů, je vyvolána obslužná rutina neplatného parametru, jak je popsáno v [Parameter Validation](../../c-runtime-library/parameter-validation.md). Pokud smí provádění pokračovat, vrátí funkce hodnotu -1 a **errno** je nastavena na **EBADF**.
+Tato funkce ověří své parametry. Pokud je *FD* Chybný popisovač souboru, je vyvolána obslužná rutina neplatného parametru, jak je popsáno v tématu [ověřování parametru](../../c-runtime-library/parameter-validation.md). Pokud provádění může pokračovat, funkce vrátí hodnotu-1 a **errno** je nastavena na **EBADF**.
 
 ## <a name="requirements"></a>Požadavky
 
@@ -65,11 +68,11 @@ Tato funkce ověřuje své parametry. Pokud *fd* je popisovače souborů, je vyv
 |-------------|---------------------|---------------------|
 |**_close**|\<io.h>|\<errno.h>|
 
-Další informace o kompatibilitě naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Příklad
 
-Podívejte se na příklad pro [_Otevřít](open-wopen.md).
+Podívejte se na příklad pro [_open](open-wopen.md).
 
 ## <a name="see-also"></a>Viz také:
 

@@ -1,14 +1,14 @@
 ---
 title: hypot, hypotf, hypotl, _hypot, _hypotf, _hypotl
 ms.date: 04/05/2018
-apiname:
+api_name:
 - _hypotf
 - hypot
 - hypotf
 - _hypot
 - _hypotl
 - hypotl
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -20,7 +20,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - hypotf
 - hypotl
@@ -37,16 +40,16 @@ helpviewer_keywords:
 - calculating hypotenuses
 - _hypot function
 ms.assetid: 6a13887f-bd53-43fc-9d77-5b42d6e49925
-ms.openlocfilehash: ea25ea87a0ec23a0e98dbdc7bb92ce691fc2fa0f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8cee9e217b23c43a9ce5a1521b52215301b932fe
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62157394"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70954795"
 ---
-# <a name="hypot-hypotf-hypotl-hypot-hypotf-hypotl"></a>hypot, hypotf, hypotl, _hypot, _hypotf, _hypotl
+# <a name="hypot-hypotf-hypotl-_hypot-_hypotf-_hypotl"></a>hypot, hypotf, hypotl, _hypot, _hypotf, _hypotl
 
-Výpočet přepony.
+Vypočítá přepony.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -84,23 +87,23 @@ Hodnoty s plovoucí desetinnou čárkou.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-V případě úspěšného ověření **hypot –** vrátí délku přepony; při přetečení **hypot –** vrátí INF (nekonečno) a **errno** proměnná je nastavená na **ERANGE** . Můžete použít **_matherr** k úpravě zpracování chyb.
+V případě úspěchu vrátí **hypot –** délku přepony; při přetečení vrátí **HYPOT –** INF (Infinity) a proměnná **errno** je nastavená na **ERANGE**. Pomocí **_matherr** můžete upravit zpracování chyb.
 
-Další informace o návratových kódech naleznete v tématu [errno _doserrno, _sys_errlist a _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+Další informace o návratových kódech naleznete v tématu [errno, _doserrno, _sys_errlist a _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Poznámky
 
-**Hypot –** funkce Vypočítat délku přepony pravoúhlého trojúhelníku, zadané délky dvou stran *x* a *y* (jinými slovy, druhou odmocninu *x*<sup>2</sup> + *y*<sup>2</sup>).
+Funkce **hypot –** vypočítávají délku přepony pravého trojúhelníku s ohledem na délku dvou stran *x* a *y* (jinými slovy, druhá odmocnina *x*<sup>2</sup> + *y*<sup>2</sup>).
 
-Verze funkcí, které mají úvodní podtržítka jsou k dispozici pro kompatibilitu se staršími standardy. Jejich chování je stejné jako ty, které nemají úvodní podtržítka. Doporučujeme používat verze bez úvodních podtržítek pro nový kód.
+Verze funkcí, které mají počáteční podtržítka, jsou k dispozici pro kompatibilitu s předchozími standardy. Jejich chování je stejné jako verze, které nemají úvodní podtržítka. Doporučujeme používat verze bez počátečních podtržítek pro nový kód.
 
 ## <a name="requirements"></a>Požadavky
 
 |Rutina|Požadovaný hlavičkový soubor|
 |-------------|---------------------|
-|**hypot**, **hypotf**, **hypotl**, **_hypot**, **_hypotf**, **_hypotl**|\<math.h>|
+|**hypot**, **hypotf**, **hypotl**, **_hypot**, **_hypotf**, **_hypotl**|\<Math. h >|
 
-Další informace o kompatibilitě naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Příklad
 

@@ -1,9 +1,9 @@
 ---
 title: localeconv
 ms.date: 11/04/2016
-apiname:
+api_name:
 - localeconv
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-locale-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - localeconv
 helpviewer_keywords:
@@ -23,12 +26,12 @@ helpviewer_keywords:
 - localeconv function
 - locales, getting information on
 ms.assetid: 7ecdb1f2-88f5-4037-a0e7-c754ab003660
-ms.openlocfilehash: bf26e4f7b7fb4f0334b57604fe5c4996312bd62a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ca7113903e1ed6e9ffb94bef79beba41e09bfb71
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62286303"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70953361"
 ---
 # <a name="localeconv"></a>localeconv
 
@@ -42,86 +45,86 @@ struct lconv *localeconv( void );
 
 ## <a name="return-value"></a>Návratová hodnota
 
-**localeconv** vrací ukazatel na objekt vyplněné typu [lconv – struktura](../../c-runtime-library/standard-types.md). Hodnoty obsažené v objektu jsou kopírovány z nastavení národního prostředí v místní úložiště vláken a může ji přepsat následných volání **localeconv**. Změny provedené na hodnoty v tomto objektu neprovádějte žádné změny nastavení národního prostředí. Volání [setlocale](setlocale-wsetlocale.md) s *kategorie* hodnoty **LC_ALL**, **LC_MONETARY**, nebo **LC_NUMERIC** přepište obsah struktury.
+**localeconv** vrací ukazatel na vyplněný objekt typu [struct lconv](../../c-runtime-library/standard-types.md). Hodnoty obsažené v objektu jsou zkopírovány z nastavení národního prostředí v místním úložišti vlákna a lze je přepsat následnými voláními **localeconv**. Změny provedené v hodnotách v tomto objektu nemění nastavení národního prostředí. Volání funkce [setlocale](setlocale-wsetlocale.md) s hodnotami *kategorie* **LC_ALL**, **LC_MONETARY**nebo **LC_NUMERIC** přepisují obsah struktury.
 
 ## <a name="remarks"></a>Poznámky
 
-**Localeconv** funkce načte podrobné informace o formátování čísel pro aktuální národní prostředí. Tyto informace jsou uloženy v strukturu typu **lconv –**. **Lconv –** struktury definované v národním prostředí. H, obsahuje následující členy:
+Funkce **localeconv** získá podrobné informace o číselném formátování pro aktuální národní prostředí. Tyto informace jsou uloženy ve struktuře typu **lconv**. Struktura **lconv** definovaná v národním prostředí. H obsahuje následující členy:
 
 |Pole|Význam|
 |-|-|
-decimal_point –,<br/>_W_decimal_point|Ukazatel na znak pro neměnové množství desetinné čárky.
-thousands_sep –,<br/>_W_thousands_sep|Ukazatel na znak, který odděluje skupiny číslic nalevo od desetinné čárky pro neměnové množství.
-grouping|Ukazatel **char**– velikost celé číslo, které obsahuje velikost každé skupiny čísel v Neměnové množství.
-int_curr_symbol,<br/>_W_int_curr_symbol|Ukazatel na symbol mezinárodní měny pro aktuální národní prostředí. První tři znaky zadat symbol měny mezinárodní, jak jsou definovány v *ISO 4217 kódy pro reprezentaci měn a fondů* standard. Čtvrtý (bezprostředně předcházející znak null) odděluje symbol měny mezinárodní od peněžních množství.
-currency_symbol,<br/>_W_currency_symbol|Ukazatel na symbol místní měny pro aktuální národní prostředí.
-mon_decimal_point,<br/>_W_mon_decimal_point|Ukazatel na znak pro peněžní množství desetinné čárky.
-mon_thousands_sep,<br/>_W_mon_thousands_sep|Ukazatel na oddělovače skupin číslic nalevo od desetinné čárky v peněžní množství.
-mon_grouping|Ukazatel **char**– velikost celé číslo, které obsahuje velikost každé skupiny čísel v peněžní množství.
-positive_sign –,<br/>_W_positive_sign|Řetězec označující znaménko nezáporné peněžní množství.
-negative_sign –,<br/>_W_negative_sign|Řetězec označující znaménko záporné peněžní množství.
-int_frac_digits|Počet číslic vpravo od desetinné čárky v mezinárodním měřítku formátovaný peněžní množství.
-frac_digits|Počet číslic vpravo od desetinné čárky v formátovaný peněžní množství.
-p_cs_precedes|Nastavte na 1, pokud hodnota pro nezáporné formátovaný peněžní množství předchází symbol měny. Nastavte na hodnotu 0, pokud následuje symbol za hodnotou.
-p_sep_by_space|Nastavte na 1, pokud je symbol měny z hodnoty pro nezáporné formátovaný peněžní množství odděleny mezerou. Nastavte na hodnotu 0, pokud neexistuje žádný prostor oddělení.
-n_cs_precedes|Nastavte na 1, pokud hodnota záporná formátovaný peněžní množství předchází symbol měny. Nastavte na hodnotu 0, pokud symbol úspěšné hodnotu.
-n_sep_by_space|Nastavte na 1, pokud je symbol měny z hodnoty pro záporné formátovaný peněžní množství odděleny mezerou. Nastavte na hodnotu 0, pokud neexistuje žádný prostor oddělení.
-p_sign_posn|Pozice kladné znaménko v nezáporné ve formátu peněžní množství.
-n_sign_posn|Pozice kladné znaménko v záporné hodnoty ve formátu peněžní množství.
+decimal_point,<br/>_W_decimal_point|Ukazatel na znak desetinné čárky pro nepeněžní množství.
+thousands_sep,<br/>_W_thousands_sep|Ukazatel na znak, který odděluje skupiny číslic nalevo od desetinné čárky pro nepeněžní množství.
+grouping|Ukazatel na celé číslo velikosti **znaků**, které obsahuje velikost každé skupiny číslic v nepeněžních množstvích.
+int_curr_symbol,<br/>_W_int_curr_symbol|Ukazatel na symbol mezinárodní měny pro aktuální národní prostředí První tři znaky určují abecední symbol mezinárodní měny, jak je definovaný v *kódech ISO 4217 pro reprezentace standardu Currency a fondů* . Čtvrtý znak (bezprostředně předchozí znak null) odděluje mezinárodní symbol měny od peněžního množství.
+currency_symbol,<br/>_W_currency_symbol|Ukazatel na symbol místní měny pro aktuální národní prostředí
+mon_decimal_point,<br/>_W_mon_decimal_point|Ukazatel na znak desetinné čárky pro peněžní množství.
+mon_thousands_sep,<br/>_W_mon_thousands_sep|Ukazatel na oddělovač pro skupiny číslic nalevo od desetinného místa v peněžních množstvích.
+mon_grouping|Ukazatel na celé číslo velikosti **znaků**, které obsahuje velikost každé skupiny číslic v peněžních množstvích.
+positive_sign,<br/>_W_positive_sign|Řetězec označující znaménko pro nezáporné peněžní množství.
+negative_sign,<br/>_W_negative_sign|Řetězec označující znaménko pro záporné peněžní množství.
+int_frac_digits|Počet číslic vpravo od desetinné čárky v mezinárodně formátovaných peněžních množství.
+frac_digits|Počet číslic vpravo od desetinné čárky ve formátovaných peněžních množstvích.
+p_cs_precedes|Nastavte na hodnotu 1, pokud symbol měny předchází hodnotě nezáporného naformátovaného peněžního množství. Nastavte na 0, pokud symbol sleduje hodnotu.
+p_sep_by_space|Nastavte na hodnotu 1, pokud je symbol měny oddělen mezerou od hodnoty pro nezáporné naformátované peněžní množství. Nastavte na 0, pokud není odděleno místo.
+n_cs_precedes|Nastavte na 1, pokud symbol měny předchází hodnotě pro záporné naformátované peněžní množství. Nastavte na hodnotu 0, pokud symbol uspěje.
+n_sep_by_space|Nastavte na hodnotu 1, pokud je symbol měny oddělen mezerou od hodnoty pro záporné naformátované peněžní množství. Nastavte na 0, pokud není odděleno místo.
+p_sign_posn|Pozice kladného přihlašování nezáporných peněžních množství.
+n_sign_posn|Pozice kladného znaménka v záporném naformátovaném peněžním množství.
 
-S výjimkou případů zadaný, členem **lconv –** struktury, která má `char *` a `wchar_t *` verze jsou ukazatele na řetězce. Některé z těchto, které se rovná **""** (nebo **L ""** pro **wchar_t** <strong>\*</strong>) je buď nulovou délku, nebo se nepodporuje v aktuálním národní prostředí. Všimněte si, že **decimal_point –** a **_W_decimal_point** jsou vždy podporované a nenulovou délkou.
+S výjimkou určení, členové struktury **lconv** , které mají `char *` a `wchar_t *` verze, jsou ukazatele na řetězce. Jakýkoli z nich, který se rovná **""** (nebo **L ""** pro **wchar_t** <strong>\*</strong>") má buď nulovou délku, nebo není v aktuálním národním prostředí podporován. Všimněte si, že **decimal_point** a **_W_decimal_point** jsou vždycky podporované a nenulovou délkou.
 
-**Char** členy struktury jsou nezáporná čísly, nikoli znaky. Některé z těchto, které se rovná **CHAR_MAX** se nepodporuje v aktuálním národním prostředí.
+Členy **znaku** struktury jsou malá nezáporná čísla, nikoli znaky. Některé z těchto těch, které se rovnají **CHAR_MAX** , se v aktuálním národním prostředí nepodporují.
 
-Hodnoty **seskupení** a **mon_grouping** jsou interpretovány dle následujících pravidel:
+Hodnoty **seskupení** a **mon_grouping** jsou interpretovány podle následujících pravidel:
 
-- **CHAR_MAX** -nebude provádět žádné další seskupení.
+- **CHAR_MAX** – neprovádějte žádné další seskupení.
 
-- Pro každý zbývající číslice 0 – použijte předchozí prvek.
+- 0 – použít předchozí prvek pro každou zbývající číslici.
 
-- *n* – počet číslic, které společně tvoří aktuální skupinu. Další prvek je prověřit, abyste zjistili velikost další skupiny číslic před aktuální skupinou.
+- *n* -počet číslic, které tvoří aktuální skupinu. Další prvek je přezkoumán za účelem určení velikosti další skupiny číslic před aktuální skupinou.
 
-Hodnoty pro **int_curr_symbol** jsou interpretovány dle následujících pravidel:
+Hodnoty pro **int_curr_symbol** se interpretují podle následujících pravidel:
 
-- První tři znaky zadat symbol měny mezinárodní, jak jsou definovány v *ISO 4217 kódy pro reprezentaci měn a fondů* standard.
+- První tři znaky určují abecední symbol mezinárodní měny, jak je definován v *kódu ISO 4217 pro reprezentaci standardu Currency a fondů* .
 
-- Čtvrtý znak (bezprostředně předchází znak null) odděluje symbol měny mezinárodní od peněžních množství.
+- Čtvrtý znak (bezprostředně před znakem null) odděluje mezinárodní symbol měny od peněžního množství.
 
-Hodnoty pro **p_cs_precedes** a **n_cs_precedes** jsou interpretovány dle následujících pravidel ( **n_cs_precedes** pravidlo je v závorkách):
+Hodnoty pro **p_cs_precedes** a **n_cs_precedes** se interpretují podle následujících pravidel (pravidlo **n_cs_precedes** je v závorkách):
 
-- 0 – symbol měny se řídí hodnota nezáporné (negativní) formátovaná peněžní hodnota.
+- 0 – symbol měny následuje hodnota nezáporné (záporné) formátované peněžní hodnoty.
 
-- 1 - symbol měny předchází hodnotu nezáporné (negativní) formátovaná peněžní hodnota.
+- 1 – symbol měny předchází hodnotě nezáporné (záporné) formátované peněžní hodnoty.
 
-Hodnoty pro **p_sep_by_space** a **n_sep_by_space** jsou interpretovány dle následujících pravidel ( **n_sep_by_space** pravidlo je v závorkách):
+Hodnoty pro **p_sep_by_space** a **n_sep_by_space** se interpretují podle následujících pravidel (pravidlo **n_sep_by_space** je v závorkách):
 
-- 0 – symbol měny je oddělená od hodnoty místo pro nezáporné (negativní) formátovaná peněžní hodnota.
+- 0 – symbol měny je od hodnoty oddělen mezerou pro nezáporné (záporné) naformátovaná peněžní hodnota.
 
-- 1 – neexistuje žádný prostor oddělení mezi symbol měny a hodnota pro nezáporné (negativní) formátovaný peněžní hodnota.
+- 1 – mezi symbolem měny a hodnotou nezáporné (záporné) formátované peněžní hodnoty není žádné oddělení.
 
-Hodnoty pro **p_sign_posn** a **n_sign_posn** jsou interpretovány dle následujících pravidel:
+Hodnoty pro **p_sign_posn** a **n_sign_posn** se interpretují podle následujících pravidel:
 
-- 0 – závorky před a za symbol množství a měny.
+- 0 – závorky jsou obklopené množství a symbol měny.
 
-- 1 – přihlášení řetězec předchází symbol množství a měny.
+- 1 – řetězec znaménka předchází množství a symbolu měny.
 
-- 2 – znak řetězec následuje symbol množství a měny.
+- 2 – řetězec podepisuje podle množství a symbolu měny.
 
-- 3 – znak řetězec bezprostředně předchází symbol měny.
+- 3 – znaménko řetězce bezprostředně před symbolem měny.
 
-- 4 - sign řetězec bezprostředně následuje symbol měny.
+- 4 – podepište řetězec ihned po symbolu měny.
 
 ## <a name="requirements"></a>Požadavky
 
 |Rutina|Požadovaný hlavičkový soubor|
 |-------------|---------------------|
-|**localeconv**|\<Locale.h >|
+|**localeconv**|\<locale. h >|
 
-Další informace o kompatibilitě, naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
 
 ## <a name="libraries"></a>Knihovny
 
-Všechny verze [běhových knihoven C](../../c-runtime-library/crt-library-features.md).
+Všechny verze [knihoven run-time jazyka C](../../c-runtime-library/crt-library-features.md).
 
 ## <a name="see-also"></a>Viz také:
 

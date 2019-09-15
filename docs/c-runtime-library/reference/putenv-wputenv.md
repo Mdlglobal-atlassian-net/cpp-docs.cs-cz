@@ -1,10 +1,10 @@
 ---
 title: _putenv, _wputenv
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _putenv
 - _wputenv
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-environment-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _tputenv
 - _wputenv
@@ -34,19 +37,19 @@ helpviewer_keywords:
 - _tputenv function
 - environment variables, modifying
 ms.assetid: 9ba9b7fd-276e-45df-8420-d70c4204b8bd
-ms.openlocfilehash: 952a4d62f6ceb6b689091ac09f6ca338d0b10864
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8fe699a476ea1dd09a6ce9922294bce398df16b2
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62357884"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70949884"
 ---
-# <a name="putenv-wputenv"></a>_putenv, _wputenv
+# <a name="_putenv-_wputenv"></a>_putenv, _wputenv
 
-Vytvoří, změní nebo odebere proměnné prostředí. Bezpečnější verze těchto funkcí jsou k dispozici. Zobrazit [_putenv_s _wputenv_s –](putenv-s-wputenv-s.md).
+Vytvoří, změní nebo odebere proměnné prostředí. K dispozici jsou bezpečnější verze těchto funkcí; viz [_putenv_s, _wputenv_s](putenv-s-wputenv-s.md).
 
 > [!IMPORTANT]
-> Toto rozhraní API nelze použít v aplikacích, které jsou spouštěny v modulu Windows Runtime. Další informace najdete v tématu [CRT funkce nejsou podporovány v aplikacích pro univerzální platformu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> Toto rozhraní API nelze použít v aplikacích, které jsou spouštěny v prostředí Windows Runtime. Další informace najdete v tématu [funkce CRT nejsou v aplikacích Univerzální platforma Windows podporovány](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -62,15 +65,15 @@ int _wputenv(
 ### <a name="parameters"></a>Parametry
 
 *envstring*<br/>
-Definice řetězců prostředí.
+Definice řetězce prostředí.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Vrátit 0 v případě úspěchu nebo -1 v případě chyby.
+Vrátí 0, pokud bylo úspěšné, nebo-1 v případě chyby.
 
 ## <a name="remarks"></a>Poznámky
 
-**_Putenv** funkce přidává nové proměnné prostředí nebo upravuje hodnoty existujících proměnných prostředí. Proměnné prostředí definují prostředí, ve kterém se proces spustí (například výchozí cesta pro vyhledávání pro knihovny, které chcete propojit s programem). **_wputenv** je verze širokého znaku **_putenv**; *envstring* argument **_wputenv** je širokoznaký řetězec.
+Funkce **_putenv** přidá nové proměnné prostředí nebo upraví hodnoty stávajících proměnných prostředí. Proměnné prostředí definují prostředí, ve kterém se proces spouští (například výchozí cesta pro hledání knihoven, které mají být propojeny s programem). **_wputenv** je **_putenv**verze s velkým znakem; Argument *envstring* pro **_wputenv** je řetězec s velkým znakem.
 
 ### <a name="generic-text-routine-mappings"></a>Mapování rutin obecného textu
 
@@ -78,29 +81,29 @@ Vrátit 0 v případě úspěchu nebo -1 v případě chyby.
 |---------------------|--------------------------------------|--------------------|-----------------------|
 |**_tputenv**|**_putenv**|**_putenv**|**_wputenv**|
 
-*Envstring* argument musí být ukazatel na řetězec ve formě *název_proměnné*=*value_string*, kde *název_proměnné* je Název proměnné prostředí, která se přidá nebo upraví a *value_string* je hodnota proměnné. Pokud *název_proměnné* je již součástí životního prostředí, její hodnota je nahrazena *value_string*; v opačném případě nová *název_proměnné* proměnnou a její *value_string*  hodnoty jsou přidány do prostředí. Proměnnou můžete odebrat z prostředí zadáním prázdného *value_string*, nebo jinými slovy, zadáním pouze *název_proměnné*=.
+Argument *envstring* musí být ukazatel na řetězec ve tvaru *název_proměnné*=*value_string*, kde *název_proměnné* je název proměnné prostředí, kterou chcete přidat nebo upravit, a *value_string* je proměnná osa. Pokud je hodnota *název_proměnné* již součástí prostředí, je její hodnota nahrazena hodnotou *value_string*; v opačném případě se nová proměnná *název_proměnné* a její hodnota *value_string* přidají do prostředí. Můžete odebrat proměnnou z prostředí zadáním prázdného *value_stringu*nebo jinými slovy zadáním pouze *název_proměnné*=.
 
-**_putenv** a **_wputenv** vliv jenom prostředí, které je místní pro aktuální proces; nelze je použít ke změně úrovně příkazového prostředí. To znamená, že tyto funkce pracují pouze na datových strukturách dostupných knihovně runtime a ne na segmentu prostředí vytvořeném pro proces operačním systémem. Když skončí aktuální proces, prostředí se vrátí na úroveň volajícího procesu (ve většině případů úroveň operačního systému). Upravené prostředí však mohou být předány do všech nových procesů vytvořených službou **_spawn**, **_exec**, nebo **systému**, a tyto nové procesy budou mít všechny nové položky přidané **_putenv** a **_wputenv**.
+**_putenv** a **_wputenv** ovlivňují jenom prostředí, které je pro aktuální proces místní. nelze je použít pro úpravu prostředí na úrovni příkazu. To znamená, že tyto funkce pracují pouze s datovými strukturami dostupnými pro běhovou knihovnu a nikoli s segmentem prostředí vytvořeným pro proces operačním systémem. Po ukončení aktuálního procesu se prostředí vrátí na úroveň volajícího procesu (ve většině případů na úrovni operačního systému). Upravené prostředí však lze předat všem novým procesům vytvořeným pomocí **_spawn**, **_exec**nebo **systému**a tyto nové procesy získají všechny nové položky přidané **_putenv** a **_wputenv**.
 
-Neměňte položku prostředí přímo: místo toho použijte **_putenv** nebo **_wputenv** ho změnit. Zejména přímé uvolňování prvků **[] _environ** globální pole, které by mohly vést k adresování neplatné paměti.
+Neměňte položku prostředí přímo: místo toho pro změnu použijte **_putenv** nebo **_wputenv** . Konkrétně přímé uvolnění prvků v globálním poli **_environ []** může vést k adresování neplatné paměti.
 
-**GETENV** a **_putenv** pomocí globální proměnné **_environ** pro přístup k tabulce prostředí. **_wgetenv** a **_wputenv** použít **_wenviron**. **_putenv** a **_wputenv** může změnit hodnotu **_environ** a **_wenviron**, a zrušit tak platnost **_envp** argument **hlavní** a **_wenvp** argument **wmain**. Proto je bezpečnější používat **_environ** nebo **_wenviron** pro přístup k informacím o prostředí. Další informace o vztahu **_putenv** a **_wputenv** ke globálním proměnným viz [_environ _wenviron](../../c-runtime-library/environ-wenviron.md).
+**getenv** a **_putenv** používají globální proměnnou **_environ** pro přístup k tabulce prostředí; **_wgetenv** a **_wputenv** používají **_wenviron**. **_putenv** a **_wputenv** mohou změnit hodnotu **_environ** a **_wenviron**, čímž se neověřuje argument **_envp** **Main** a argument **_wenvp** pro **wmain**. Proto je bezpečnější použít pro přístup k informacím o prostředí **_environ** nebo **_wenviron** . Další informace o vztahu **_putenv** a **_wputenv** ke globálním proměnným naleznete v tématu [_environ, _wenviron](../../c-runtime-library/environ-wenviron.md).
 
 > [!NOTE]
-> **_Putenv** a **_getenv** rodinách funkcí nejsou vláknově bezpečné. **_getenv** může vrátit ukazatel řetězce při **_putenv** upravuje řetězec, což způsobí náhodná selhání. Ujistěte se, že volání těchto funkcí jsou synchronizována.
+> Řady funkcí **_putenv** a **_getenv** nejsou bezpečné pro přístup z více vláken. **_getenv** může vracet ukazatel na řetězec, zatímco **_putenv** upravuje řetězec a způsobuje náhodných selhání. Ujistěte se, že jsou volání těchto funkcí synchronizovaná.
 
 ## <a name="requirements"></a>Požadavky
 
 |Rutina|Požadovaný hlavičkový soubor|
 |-------------|---------------------|
 |**_putenv**|\<stdlib.h>|
-|**_wputenv**|\<stdlib.h > nebo \<wchar.h >|
+|**_wputenv**|\<Stdlib. h > nebo \<WCHAR. h >|
 
-Další informace o kompatibilitě naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Příklad
 
-Pro ukázku toho, jak používat **_putenv**, naleznete v tématu [getenv _wgetenv](getenv-wgetenv.md).
+Ukázku použití **_putenv**naleznete v tématu [getenv, _wgetenv](getenv-wgetenv.md).
 
 ## <a name="see-also"></a>Viz také:
 

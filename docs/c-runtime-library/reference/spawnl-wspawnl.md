@@ -1,10 +1,10 @@
 ---
 title: _spawnl, _wspawnl
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _wspawnl
 - _spawnl
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-process-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - spawnl
 - wspawnl
@@ -31,19 +34,19 @@ helpviewer_keywords:
 - wspawnl function
 - process creation
 ms.assetid: dd4584c9-7173-4fc5-b93a-6e7d3c2316d7
-ms.openlocfilehash: 11ff3447487fcaf1a4225825c222b873005b2a1c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b39e76b010fd0d3b9ae3dc8d0104c69ce97ac87e
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62355273"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70947827"
 ---
-# <a name="spawnl-wspawnl"></a>_spawnl, _wspawnl
+# <a name="_spawnl-_wspawnl"></a>_spawnl, _wspawnl
 
 Vytvoří a spustí nový proces.
 
 > [!IMPORTANT]
-> Toto rozhraní API nelze použít v aplikacích, které jsou spouštěny v modulu Windows Runtime. Další informace najdete v tématu [CRT funkce nejsou podporovány v aplikacích pro univerzální platformu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> Toto rozhraní API nelze použít v aplikacích, které jsou spouštěny v prostředí Windows Runtime. Další informace najdete v tématu [funkce CRT nejsou v aplikacích Univerzální platforma Windows podporovány](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -68,47 +71,47 @@ intptr_t _wspawnl(
 
 ### <a name="parameters"></a>Parametry
 
-*Režim*<br/>
+*Mode*<br/>
 Režim spuštění pro volající proces.
 
 *cmdname*<br/>
-Cesta k souboru, který má být proveden.
+Cesta k souboru, který má být spuštěn.
 
 *arg0*, *arg1*, ... *argn*<br/>
-Seznam ukazatelů na argumenty. *Arg0* argument je obvykle ukazatel na *cmdname*. Argumenty *arg1* prostřednictvím *argn* jsou ukazatele na znakové řetězce tvořící nový seznam argumentů. Následující *argn*, musí existovat **NULL** ukazatel k označení konce seznamu argumentů.
+Seznam ukazatelů na argumenty. Argument *arg0* je obvykle ukazatel na *cmdname*. Argumenty *arg1* až *argn* jsou ukazatele na řetězce znaků, které tvoří nový seznam argumentů. Následující *argn*musí mít ukazatel s **hodnotou null** k označení konce seznamu argumentů.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Návratová hodnota ze synchronního **_spawnl** nebo **_wspawnl –** (**_P_WAIT** zadaný pro *režimu*) je stav ukončení nového procesu. Hodnota vrácená z asynchronního **_spawnl** nebo **_wspawnl –** (**_P_NOWAIT** nebo **_P_NOWAITO** zadaný pro *režimu* ) je obslužná rutina procesu. Stav ukončení je 0, pokud proces skončil normálně. Můžete nastavit stav ukončení na nenulovou hodnotu, pokud spuštěný proces konkrétně zavolá **ukončit** rutiny s nenulovým argumentem. Pokud nový proces explicitně nenastavil pozitivní, označuje pozitivní abnormální ukončení zrušením nebo přerušením. Návratová hodnota-1 označuje chybu (není spuštěn nový proces). V takovém případě **errno** nastavena na jednu z následujících hodnot.
+Návratová hodnota z synchronního **_spawnl** nebo **_wspawnl** ( **_P_WAIT** zadaná pro *režim*) je stav ukončení nového procesu. Vrácená hodnota z asynchronního **_spawnl** nebo **_wspawnl** ( **_P_NOWAIT** nebo **_P_NOWAITO** určená pro *režim*) je obslužná rutina procesu. Stav ukončení je 0, pokud byl proces ukončen normálně. Stav ukončení můžete nastavit na nenulovou hodnotu, pokud vytvořený proces konkrétně volá rutinu **ukončení** s nenulovým argumentem. Pokud nový proces neexplicitně nastavil kladný stav ukončení, pozitivní stav ukončení indikuje abnormální ukončení s přerušením nebo přerušením. Návratová hodnota-1 označuje chybu (nový proces není spuštěn). V tomto případě je **errno** nastaveno na jednu z následujících hodnot.
 
 |||
 |-|-|
-| **E2BIG** | Seznam argumentů přesahuje 1024 bajtů. |
-| **EINVAL** | *režim* argument je neplatný. |
+| **E2BIG** | Seznam argumentů překračuje 1024 bajtů. |
+| **EINVAL** | Argument *režimu* je neplatný. |
 | **ENOENT** | Soubor nebo cesta nebyla nalezena. |
-| **ENOEXEC** | Zadaný soubor není spustitelný soubor nebo má neplatný formát spustitelného souboru. |
-| **ENOMEM** | Nedostatek paměti je k dispozici ke spuštění nového procesu. |
+| **ENOEXEC** | Zadaný soubor není spustitelný nebo má neplatný formát spustitelného souboru. |
+| **ENOMEM** | K provedení nového procesu není k dispozici dostatek paměti. |
 
 Další informace o těchto a dalších návratových kódech naleznete v tématu [_doserrno, errno, _sys_errlist a _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
-Tyto funkce ověřují své parametry. Pokud *cmdname* nebo *arg0* je prázdný řetězec nebo ukazatel s hodnotou null, obslužná rutina neplatného parametru, je vyvolána, jak je popsáno v [Parameter Validation](../../c-runtime-library/parameter-validation.md). Pokud smí provádění pokračovat, tyto funkce nastaví **errno** k **EINVAL**a vrátí hodnotu -1. Není vytvořen žádný nový proces.
+Tyto funkce ověřují své parametry. Pokud je buď *cmdname* nebo *arg0* prázdný řetězec nebo ukazatel s hodnotou null, je vyvolána obslužná rutina neplatného parametru, jak je popsáno v tématu [ověřování parametru](../../c-runtime-library/parameter-validation.md). Pokud provádění může pokračovat, tyto funkce nastaví **errno** na **EINVAL**a vrátí-1. Nevytvoří se žádný nový proces.
 
 ## <a name="remarks"></a>Poznámky
 
-Každá z těchto funkcí vytvoří a spustí nový proces, přičemž předá každý argument příkazového řádku jako samostatný parametr.
+Každá z těchto funkcí vytvoří a spustí nový proces a předá každý argument příkazového řádku jako samostatný parametr.
 
 ## <a name="requirements"></a>Požadavky
 
 |Rutina|Požadovaný hlavičkový soubor|
 |-------------|---------------------|
-|**_spawnl**|\<process.h>|
-|**_wspawnl**|\<stdio.h > nebo \<wchar.h >|
+|**_spawnl**|\<Process. h >|
+|**_wspawnl**|\<stdio. h > nebo \<WCHAR. h >|
 
-Další informace o kompatibilitě naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Příklad
 
-Podívejte se na příklad v [_spawn, _wspawn – funkce](../../c-runtime-library/spawn-wspawn-functions.md).
+Podívejte se na příklad v [_spawn, _Wspawn Functions](../../c-runtime-library/spawn-wspawn-functions.md).
 
 ## <a name="see-also"></a>Viz také:
 

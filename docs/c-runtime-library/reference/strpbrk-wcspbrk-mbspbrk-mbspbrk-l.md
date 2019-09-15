@@ -1,12 +1,12 @@
 ---
 title: strpbrk, wcspbrk, _mbspbrk, _mbspbrk_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _mbspbrk
 - wcspbrk
 - _mbspbrk_l
 - strpbrk
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -19,7 +19,10 @@ apilocation:
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
 - api-ms-win-crt-string-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _fstrpbrk
 - _mbspbrk
@@ -44,19 +47,19 @@ helpviewer_keywords:
 - _mbspbrk function
 - mbspbrk_l function
 ms.assetid: 80b504f7-a167-4dde-97ad-4ae3000dc810
-ms.openlocfilehash: 059b0659a8088783c6d169288de486b41a6e8d82
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d6b18ab6dabfb1181f3e65507d27f6afe98a5b9f
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62209564"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70947152"
 ---
-# <a name="strpbrk-wcspbrk-mbspbrk-mbspbrkl"></a>strpbrk, wcspbrk, _mbspbrk, _mbspbrk_l
+# <a name="strpbrk-wcspbrk-_mbspbrk-_mbspbrk_l"></a>strpbrk, wcspbrk, _mbspbrk, _mbspbrk_l
 
-Prohledává řetězce na znaky v zadaných znakových sadách.
+Hledá v řetězcích znaky v určených znakových sadách.
 
 > [!IMPORTANT]
-> `_mbspbrk` a `_mbspbrk_l` nelze použít v aplikacích, které jsou spouštěny v modulu Windows Runtime. Další informace najdete v tématu [CRT funkce nejsou podporovány v aplikacích pro univerzální platformu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> `_mbspbrk`a `_mbspbrk_l` nelze je použít v aplikacích, které jsou spouštěny v prostředí Windows Runtime. Další informace najdete v tématu [funkce CRT nejsou v aplikacích Univerzální platforma Windows podporovány](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -117,35 +120,35 @@ const unsigned char *_mbspbrk_l(
 ### <a name="parameters"></a>Parametry
 
 *str*<br/>
-Zakončený hodnotou Null, hledaný řetězec.
+Hledaný řetězec zakončený hodnotou null.
 
 *strCharSet*<br/>
-Sada znaků zakončených znakem null.
+Znaková sada zakončená hodnotou null
 
-*Národní prostředí*<br/>
-Národní prostředí.
+*jazyka*<br/>
+Národní prostředí, které se má použít.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Vrací ukazatel na první výskyt libovolného znaku od *strCharSet* v *str*, nebo NULOVÉHO ukazatele, pokud dva řetězce argumenty nemají žádné znaky společné.
+Vrátí ukazatel na první výskyt libovolného znaku z *strCharSet* v *str*nebo na ukazatel s hodnotou null, pokud dva řetězcové argumenty nemají společné znaky.
 
 ## <a name="remarks"></a>Poznámky
 
-`strpbrk` Funkce vrátí ukazatel na první výskyt znaku v *str* , který patří do sady znaků v *strCharSet*. Hledání nezahrnuje ukončovací znak null.
+Funkce vrací ukazatel na první výskyt znaku v *str* , který patří do sady znaků v *strCharSet.* `strpbrk` Hledání nezahrnuje ukončující znak null.
 
-`wcspbrk` a `_mbspbrk` jsou širokoznaké a vícebajtové verze `strpbrk`. Argumenty a vrácené hodnoty `wcspbrk` jsou širokoznaké řetězce `_mbspbrk` jsou vícebajtové znakové řetězce.
+`wcspbrk`a `_mbspbrk` jsou`strpbrk`verze s velkým znakem a vícebajtovým znakem. Argumenty a návratová hodnota `wcspbrk` jsou řetězce `_mbspbrk` s velkým počtem znaků. hodnoty jsou vícebajtové znakové řetězce.
 
-`_mbspbrk` ověří jeho parametry. Pokud *str* nebo *strCharSet* má hodnotu NULL, je vyvolána obslužná rutina neplatného parametru, jak je popsáno v [Parameter Validation](../../c-runtime-library/parameter-validation.md). Pokud smí provádění pokračovat, `_mbspbrk` vrátí hodnotu NULL a nastaví `errno` k EINVAL. `strpbrk` a `wcspbrk` neověří jejich parametry. Tyto tři funkce chovají identicky jinak.
+`_mbspbrk`ověří jeho parametry. Pokud parametr *str* nebo *strCharSet* má hodnotu null, je vyvolána obslužná rutina neplatného parametru, jak je popsáno v tématu [ověřování parametru](../../c-runtime-library/parameter-validation.md). Pokud provádění může pokračovat, `_mbspbrk` vrátí hodnotu null a nastaví `errno` na EINVAL. `strpbrk`a `wcspbrk` neověřuje jejich parametry. Tyto tři funkce se chovají identicky jinak.
 
-`_mbspbrk` je podobný `_mbscspn` s tím rozdílem, že `_mbspbrk` vrátí ukazatel, nikoli hodnotu typu [size_t](../../c-runtime-library/standard-types.md).
+`_mbspbrk`se podobá `_mbscspn` s tím `_mbspbrk` rozdílem, že vrací ukazatel namísto hodnoty typu [size_t](../../c-runtime-library/standard-types.md).
 
-V jazyce C, tyto funkce přijímají **const** ukazatele pro první argument. V jazyce C++ jsou k dispozici dvě přetížení. Přetížení přijímající ukazatel na **const** vrací ukazatel na **const**; verze, která přijímá ukazatel na jinou hodnotu než**const** vrací ukazatel na jinou hodnotu než**const** . _CRT_CONST_CORRECT_OVERLOADS – makro je definováno, pokud **const** a jiných-**const** verze těchto funkcí jsou k dispozici. Pokud budete potřebovat non -**const** chování pro obě C++ přetížení, definujte symbol _CONST_RETURN.
+V jazyce C tyto funkce přebírají ukazatel **const** pro první argument. V C++jsou k dispozici dvě přetížení. Přetížení přebírající ukazatel na **konstantu** vrací ukazatel na **const**; verze, která přebírá ukazatel na jiný typ než**const** , vrací ukazatel na**nekonstantní**hodnotu. Makro _CRT_CONST_CORRECT_OVERLOADS je definováno, pokud jsou k dispozici obě verze **const** i non-**const** . Pokud pro C++ přetížení vyžadujete**nekonstantní** chování, definujte symbol _CONST_RETURN.
 
-Výstupní hodnota je ovlivněna nastavením kategorie nastavení LC_CTYPE národního prostředí; Další informace najdete v tématu [setlocale](setlocale-wsetlocale.md). Verze těchto funkcí bez **_l** používají aktuální národní prostředí pro toto chování závislé na národním prostředí; verze se **_l** přípona je identická s tím rozdílem, že používá parametr národního prostředí místo něho předán v. Další informace najdete v tématu [národní prostředí](../../c-runtime-library/locale.md).
+Výstupní hodnota je ovlivněna nastavením kategorie LC_CTYPE národního prostředí; Další informace naleznete v tématu [setlocale](setlocale-wsetlocale.md). Verze těchto funkcí bez přípony **_l** používají aktuální národní prostředí pro toto chování závislé na národním prostředí; verze s příponou **_l** je shodná s tím rozdílem, že používá předaný parametr národního prostředí. Další informace najdete v tématu [národní prostředí](../../c-runtime-library/locale.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapování rutin obecného textu
 
-|Rutina TCHAR.H|_UNICODE a _MBCS nejsou definovány|_MBCS definováno|_UNICODE definováno|
+|Rutina TCHAR.H|_UNICODE & _MBCS nejsou definovány.|_MBCS definováno|_UNICODE definováno|
 |---------------------|------------------------------------|--------------------|-----------------------|
 |`_tcspbrk`|`strpbrk`|`_mbspbrk`|`wcspbrk`|
 |**není k dispozici**|**není k dispozici**|`_mbspbrk_l`|**není k dispozici**|
@@ -154,11 +157,11 @@ Výstupní hodnota je ovlivněna nastavením kategorie nastavení LC_CTYPE náro
 
 |Rutina|Požadovaný hlavičkový soubor|
 |-------------|---------------------|
-|`strpbrk`|\<string.h>|
-|`wcspbrk`|\<String.h > nebo \<wchar.h >|
-|`_mbspbrk`, `_mbspbrk_l`|\<Mbstring.h >|
+|`strpbrk`|\<String. h >|
+|`wcspbrk`|\<String. h > nebo \<WCHAR. h >|
+|`_mbspbrk`, `_mbspbrk_l`|\<Mbstring. h >|
 
-Další informace o kompatibilitě naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě najdete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Příklad
 
@@ -196,7 +199,7 @@ int main( void )
 
 ## <a name="see-also"></a>Viz také:
 
-[Zacházení s řetězci](../../c-runtime-library/string-manipulation-crt.md)<br/>
+[Manipulace s řetězci](../../c-runtime-library/string-manipulation-crt.md)<br/>
 [Národní prostředí](../../c-runtime-library/locale.md)<br/>
 [Výklad sekvencí vícebajtových znaků](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
 [strcspn, wcscspn, _mbscspn, _mbscspn_l](strcspn-wcscspn-mbscspn-mbscspn-l.md)<br/>

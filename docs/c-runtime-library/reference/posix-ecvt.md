@@ -1,9 +1,9 @@
 ---
 title: ecvt
 ms.date: 11/04/2016
-apiname:
+api_name:
 - ecvt
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -14,19 +14,22 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - ecvt
 helpviewer_keywords:
 - ecvt function
 ms.assetid: a24fccea-033a-4cc7-b120-4fd0f525a7e3
-ms.openlocfilehash: 655abb00251ce3fd6210c7824c9e6522b01a82cd
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7e42d578a8ff4814e317558b3bb18ba477f7b7e5
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62155963"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70950948"
 ---
 # <a name="ecvt"></a>ecvt
 
-Tato funkce POSIX je zastaralá. Použít bitovou kopii ISO C++ splňující podmínky [_ecvt –](ecvt.md) nebo s rozšířeným zabezpečením [_ecvt_s –](ecvt-s.md) místo.
+Tato funkce POSIX je zastaralá. Místo toho použijte C++ [_ecvt](ecvt.md) podle standardu ISO nebo [_ecvt_s](ecvt-s.md) s vylepšeným zabezpečením.

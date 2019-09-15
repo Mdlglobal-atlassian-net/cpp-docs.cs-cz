@@ -1,9 +1,9 @@
 ---
 title: toascii, __toascii
 ms.date: 11/04/2016
-apiname:
+api_name:
 - __toascii
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-convert-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - __toascii
 - toascii
@@ -27,16 +30,16 @@ helpviewer_keywords:
 - __toascii function
 - ASCII characters, converting to
 ms.assetid: a07c0608-b0e2-4da2-a20c-7b64d6a9b77c
-ms.openlocfilehash: 22f76bdbdb21eb5b3cc9a226c111e321ee2fd0ce
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 09df829511b38b87cb41e32a59bee9f38a9b8f32
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62155512"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70957462"
 ---
-# <a name="toascii-toascii"></a>toascii, __toascii
+# <a name="toascii-__toascii"></a>toascii, __toascii
 
-Převede znaky ASCII 7 bitů na zkrácení.
+Převede znaky na 7 bitů ASCII zkrácením.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -50,25 +53,25 @@ int __toascii(
 ### <a name="parameters"></a>Parametry
 
 *c*<br/>
-Znak pro převod.
+Znak, který se má převést
 
 ## <a name="return-value"></a>Návratová hodnota
 
-**__toascii –** převede hodnotu *c* do ASCII 7 bitů v rozsahu a vrátí výsledek. Vyhrazená k indikaci chyby není žádnou návratovou hodnotu.
+**__toascii** převede hodnotu *c* na 7 bitů rozsahu ASCII a vrátí výsledek. Není vyhrazena žádná návratová hodnota pro indikaci chyby.
 
 ## <a name="remarks"></a>Poznámky
 
-**__Toascii –** rutina převede daný znak na znak ASCII zkrácením 7 bity nižšího řádu. Je použita žádná transformace.
+Rutina **__toascii** Převede daný znak na znak ASCII tím, že ho ořízne na nižší pořadí 7 bitů. Není použita žádná jiná transformace.
 
-**__Toascii –** rutina je definován jako makra, pokud _CTYPE_DISABLE_MACROS preprocesor makro je definováno. Z důvodu zpětné kompatibility **toascii** je definován jako makra pouze tehdy, když [ &#95; &#95;STDC&#95; &#95; ](../../preprocessor/predefined-macros.md) není definované nebo je definováno jako 0; v opačném případě není definováno.
+Rutina **__toascii** je definována jako makro, pokud není definován preprocesor makra _CTYPE_DISABLE_MACROS. Z důvodu zpětné kompatibility je **ToAscii** definováno jako makro pouze v případě, že [ &#95; &#95;STDC&#95; ](../../preprocessor/predefined-macros.md) není definován nebo je definován jako 0; v opačném případě není definován.
 
 ## <a name="requirements"></a>Požadavky
 
 |Rutina|Požadovaný hlavičkový soubor|
 |-------------|---------------------|
-|**toascii**, **__toascii**|C: \<ctype.h ><br /><br /> Jazyk C++: \<cctype – > nebo \<ctype.h >|
+|**toascii**, **__toascii**|C: \<CType. h ><br /><br /> C++: \<cctype > nebo \<CType. h >|
 
-**Toascii** – makro je rozšířením POSIX a **__toascii –** je implementace POSIX rozšíření specifické pro společnost Microsoft. Další informace o kompatibilitě, naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
+**ToAscii** makro je rozšíření POSIX a **__toascii** je implementace rozšíření POSIX specifická pro společnost Microsoft. Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Viz také:
 

@@ -1,10 +1,10 @@
 ---
 title: _getc_nolock, _getwc_nolock
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _getc_nolock
 - _getwc_nolock
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - getc_nolock
 - _gettc_nolock
@@ -35,14 +38,14 @@ helpviewer_keywords:
 - gettc_nolock function
 - _gettc_nolock function
 ms.assetid: eb37b272-e177-41c9-b077-12ce7ffd3b88
-ms.openlocfilehash: 82c7e1f44dc3177985560319067f9114964218bb
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f6c2da5297e07d82fdea96452c3282c19329f24f
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62287492"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70955510"
 ---
-# <a name="getcnolock-getwcnolock"></a>_getc_nolock, _getwc_nolock
+# <a name="_getc_nolock-_getwc_nolock"></a>_getc_nolock, _getwc_nolock
 
 Přečte znak z datového proudu.
 
@@ -64,11 +67,11 @@ Vstupní datový proud.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Zobrazit [getc, getwc –](getc-getwc.md).
+Viz [getc –, getwc](getc-getwc.md).
 
 ## <a name="remarks"></a>Poznámky
 
-Tyto funkce jsou stejné jako **getc** a **getwc –** s tím rozdílem, že nepoužívejte zámky volajícího vlákna. Mohou být rychlejší, protože nejsou spojené režii uzamykáním ostatních vláken. Tyto funkce používejte pouze v kontextech bezpečných na vlákna, jako je například aplikace s jedním vláknem nebo pokud volající obor již zpracovává izolaci vláken.
+Tyto funkce jsou stejné jako **getc –** a **getwc** s tím rozdílem, že neblokují volající vlákno. Můžou být rychlejší, protože neúčtují režii na uzamykání jiných vláken. Tyto funkce použijte pouze v kontextech bezpečných pro přístup z více vláken, jako jsou například aplikace s jedním vláknem nebo kde volající obor již zpracovává izolaci vlákna.
 
 ### <a name="generic-text-routine-mappings"></a>Mapování rutin obecného textu
 
@@ -81,9 +84,9 @@ Tyto funkce jsou stejné jako **getc** a **getwc –** s tím rozdílem, že nep
 |Rutina|Požadovaný hlavičkový soubor|
 |-------------|---------------------|
 |**getc_nolock**|\<stdio.h>|
-|**getwc_nolock**|\<stdio.h > nebo \<wchar.h >|
+|**getwc_nolock**|\<stdio. h > nebo \<WCHAR. h >|
 
-Další informace o kompatibilitě naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Příklad
 
@@ -121,7 +124,7 @@ int main()
 }
 ```
 
-### <a name="input-crtgetcnolocktxt"></a>Vstup: crt_getc_nolock.txt
+### <a name="input-crt_getc_nolocktxt"></a>Vstup: crt_getc_nolock. txt
 
 ```Input
 Line the first.
@@ -136,7 +139,7 @@ Input was: Line the first.
 
 ## <a name="see-also"></a>Viz také:
 
-[Stream vstupně-výstupních operací](../../c-runtime-library/stream-i-o.md)<br/>
+[Vstup/výstup datového proudu](../../c-runtime-library/stream-i-o.md)<br/>
 [fgetc, fgetwc](fgetc-fgetwc.md)<br/>
 [_getch, _getwch](getch-getwch.md)<br/>
 [putc, putwc](putc-putwc.md)<br/>

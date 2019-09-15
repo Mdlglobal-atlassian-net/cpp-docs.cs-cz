@@ -1,7 +1,7 @@
 ---
-title: offsetof Macro
+title: OffsetOf – makro
 ms.date: 11/04/2016
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -12,23 +12,26 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - offsetof
 helpviewer_keywords:
 - structure members, offset
 - offsetof macro
 ms.assetid: f3b4eb16-a882-4d38-afc9-eebd976a7352
-ms.openlocfilehash: a0f367dbe6fa2681a7d413304f32b5699b8f7cee
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 278fca89046fcfc98e8c3ff726918cb4319e4ab0
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62156061"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70951251"
 ---
-# <a name="offsetof-macro"></a>offsetof Macro
+# <a name="offsetof-macro"></a>OffsetOf – makro
 
-Načte posun člen od začátku své nadřazené struktury.
+Načte posun člena od začátku jeho nadřazené struktury.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -42,33 +45,33 @@ size_t offsetof(
 ### <a name="parameters"></a>Parametry
 
 *structName*<br/>
-Název nadřazené struktury data.
+Název nadřazené datové struktury
 
 *memberName*<br/>
-Název členu v nadřazené struktury dat pro který chcete určit posun.
+Název člena v nadřazené datové struktuře, pro který se má určit posun.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-**offsetof** Vrátí posun od začátku své nadřazené struktury dat v bajtech zadaného člena. Je definováno pro bitové pole.
+**OffsetOf** vrací posun v bajtech zadaného člena od začátku své nadřazené datové struktury. Není definováno pro bitová pole.
 
 ## <a name="remarks"></a>Poznámky
 
-**Offsetof** – makro vrací posun v bajtech *memberName* od začátku této struktuře určené *structName* jako hodnotu typu **size_ t**. Můžete určit typy s **struktura** – klíčové slovo.
+Makro **OffsetOf** vrací posun v bajtech *člena* od začátku struktury určené parametrem *struct* jako hodnotu typu **size_t**. Můžete určit typy pomocí klíčového slova **struct** .
 
 > [!NOTE]
-> **offsetof** není funkce a nemůže být popisují pomocí prototyp C.
+> **OffsetOf** není funkce a nelze ji popsat pomocí prototypu jazyka C.
 
 ## <a name="requirements"></a>Požadavky
 
 |Rutina|Požadovaný hlavičkový soubor|
 |-------------|---------------------|
-|**offsetof**|\<stddef.h>|
+|**OffsetOf**|\<stddef.h>|
 
-Další informace o kompatibilitě, naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
 
 ## <a name="libraries"></a>Knihovny
 
-Všechny verze [běhových knihoven C](../../c-runtime-library/crt-library-features.md).
+Všechny verze [knihoven run-time jazyka C](../../c-runtime-library/crt-library-features.md).
 
 ## <a name="see-also"></a>Viz také:
 

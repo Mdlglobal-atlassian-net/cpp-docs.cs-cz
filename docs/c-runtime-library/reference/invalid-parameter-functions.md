@@ -1,14 +1,17 @@
 ---
 title: _invalid_parameter, _invalid_parameter_noinfo, _invalid_parameter_noinfo_noreturn, _invoke_watson
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _invalid_parameter
 - _invalid_parameter_noinfo
 - _invalid_parameter_noinfo_noreturn
 - _invoke_watson
-apilocation:
+api_location:
 - api-ms-win-crt-runtime-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - CORECRT/_invalid_parameter
 - _invalid_parameter
@@ -19,16 +22,16 @@ f1_keywords:
 - CORECRT/_invoke_watson
 - _invoke_watson
 ms.assetid: a4d6f1fd-ce56-4783-8719-927151a7a814
-ms.openlocfilehash: e43d5caaeebb6303d209d870c804357117812985
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b2714c140a2396d88c700689244c6ec04e12169c
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62157536"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70954609"
 ---
-# <a name="invalidparameter-invalidparameternoinfo-invalidparameternoinfonoreturn-invokewatson"></a>_invalid_parameter, _invalid_parameter_noinfo, _invalid_parameter_noinfo_noreturn, _invoke_watson
+# <a name="_invalid_parameter-_invalid_parameter_noinfo-_invalid_parameter_noinfo_noreturn-_invoke_watson"></a>_invalid_parameter, _invalid_parameter_noinfo, _invalid_parameter_noinfo_noreturn, _invoke_watson
 
-Tyto funkce používají běhové knihovny jazyka C pro zpracování neplatné parametry předané do funkce knihovny CRT. Váš kód může také použití těchto funkcí pro podporu výchozí nebo přizpůsobitelné manipulaci s neplatnými parametry.
+Tyto funkce používá běhová knihovna jazyka C ke zpracování neplatných parametrů předaných funkcím knihovny CRT. Váš kód může také používat tyto funkce k podpoře výchozího nebo přizpůsobitelného zpracování neplatných parametrů.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -58,34 +61,34 @@ _invoke_watson(
 
 ## <a name="parameters"></a>Parametry
 
-*Výraz*<br/>
-Řetězec představující zdrojový kód parametr výraz, který není platný.
+*vyjádření*<br/>
+Řetězec představující výraz parametru zdrojového kódu, který není platný.
 
-*Název_funkce*<br/>
-Název funkce, která volá obslužná rutina.
+*function_name*<br/>
+Název funkce, která se nazývá obslužná rutina.
 
 *název_souboru*<br/>
-Souboru zdrojového kódu, kde byla volána obslužnou rutinu.
+Soubor zdrojového kódu, kde byla obslužná rutina volána.
 
 *line_number*<br/>
-Číslo řádku ve zdrojovém kódu, kde byla volána obslužnou rutinu.
+Číslo řádku ve zdrojovém kódu, kde byla obslužná rutina volána.
 
-*reserved*<br/>
-Nevyužité.
+*rezervovaný*<br/>
+Nepoužívané.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Tyto funkce nevrátí hodnotu. **_Invalid_parameter_noinfo_noreturn** a **_invoke_watson** funkce nevrací do volajícího a v některých případech **_invalid_parameter** a **_invalid_parameter_noinfo** nemusí vracet volajícímu.
+Tyto funkce nevracejí hodnotu. Funkce **_invalid_parameter_noinfo_noreturn** a **_invoke_watson** se nevrátí volajícímu a v některých případech se **_invalid_parameter** a **_invalid_parameter_noinfo** nemusí vrátit volajícímu.
 
 ## <a name="remarks"></a>Poznámky
 
-Když funkce knihovny prostředí runtime jazyka C jsou předány neplatné parametry, knihovně funkce volání *obslužná rutina neplatného parametru*, funkce, která může být určeno programátorovi, aby provádět několik věcí. Například ji může nahlásit problém pro uživatele, zápis do protokolu, přerušení ladicího programu, ukončete program nebo nedělat nic vůbec. Pokud není zadána žádná funkce programátorem obslužnou rutinu výchozí **_invoke_watson**, je volána.
+Když jsou funkce běhové knihovny jazyka C předány neplatným parametrům, funkce knihovny volá *neplatnou obslužnou rutinu parametru*, funkci, která může být určena programátorem k provedení některé z několika věcí. Může například nahlásit problém uživateli, zapsat do protokolu, přerušit ladicí program, ukončit program nebo neprovádět žádné akce. Pokud programátor nezadá žádnou funkci, zavolá se výchozí obslužná rutina **_invoke_watson**.
 
-Ve výchozím nastavení, když není platná hodnota parametru je identifikován v ladění kódu, funkce knihovny CRT volat funkci **_invalid_parameter** pomocí podrobné parametrů. V kódu bez ladění **_invalid_parameter_noinfo** funkce je volána, který volá **_invalid_parameter** funkce pomocí prázdné parametry. Pokud funkce knihovny CRT bez ladění vyžaduje ukončení programu **_invalid_parameter_noinfo_noreturn** funkce je volána, který volá **_invalid_parameter** funkce pomocí prázdné parametry, za nímž následuje volání **_invoke_watson** funkci a vynuťte ukončení programu.
+Ve výchozím nastavení, pokud je v kódu ladění identifikován neplatný parametr, funkce knihovny CRT volá funkci **_invalid_parameter** pomocí podrobných parametrů. V kódu bez ladění je volána funkce **_invalid_parameter_noinfo** , která volá funkci **_invalid_parameter** s použitím prázdných parametrů. Pokud funkce knihovny CRT bez ladění vyžaduje ukončení programu, je volána funkce **_invalid_parameter_noinfo_noreturn** , která volá funkci **_invalid_parameter** pomocí prázdných parametrů následovaných voláním **_invoke_ funkce Watson** pro vynucení ukončení programu.
 
-**_Invalid_parameter** funkce kontroly, zda byl nastaven uživatelem definované neplatný parametr obslužné rutiny a pokud ano, zavolá se. Například, pokud byl nastaven uživatelem definované obslužné rutiny místního vlákna voláním [set_thread_local_invalid_parameter_handler](set-invalid-parameter-handler-set-thread-local-invalid-parameter-handler.md) v aktuálním vlákně, je volána, vrátí funkce. Jinak, pokud byl nastaven uživatelem definované globální neplatný parametr obslužné rutiny voláním [set_invalid_parameter_handler –](set-invalid-parameter-handler-set-thread-local-invalid-parameter-handler.md), je volána, vrátí funkce. V opačném případě výchozí obslužnou rutinu **_invoke_watson** je volána. Výchozí chování **_invoke_watson** je ukončit program. Uživatelem definované obslužné rutiny může zrušit nebo vrátit. Doporučujeme vám, že uživatelem definované obslužné rutiny ukončete program, není-li obnovení některých.
+Funkce **_invalid_parameter** ověřuje, zda byla nastavena uživatelsky definovaný neplatný parametr obslužné rutiny, a pokud ano, zavolá ji. Například pokud uživatelem definovaná obslužná rutina místního vlákna byla nastavena voláním [set_thread_local_invalid_parameter_handler](set-invalid-parameter-handler-set-thread-local-invalid-parameter-handler.md) v aktuálním vlákně, je volána, poté funkce vrátí. V opačném případě, pokud byla uživatelem definovaná obslužná rutina globálního neplatného parametru nastavena voláním [set_invalid_parameter_handler](set-invalid-parameter-handler-set-thread-local-invalid-parameter-handler.md), je volána, funkce vrátí. V opačném případě je volána výchozí obslužná rutina **_invoke_watson** . Výchozím chováním **_invoke_watson** je ukončení programu. Může skončit nebo vracet uživatelsky definované obslužné rutiny. Doporučujeme, aby uživatelsky definované obslužné rutiny ukončily program, pokud není jisté obnovení.
 
-Pokud výchozí obslužnou rutinu **_invoke_watson** je volána, pokud procesor podporuje [__fastfail](../../intrinsics/fastfail.md) operace, je vyvolán, pomocí parametru **FAST_FAIL_INVALID_ARG** a proces skončí. V opačném případě je vyvolána výjimka rychlé převzetí služeb při, což může být zachycena připojený ladicí program. Pokud proces může pokračovat, je ukončen voláním Windows **TerminateProcess** funkce pomocí stavem kód výjimky **STATUS_INVALID_CRUNTIME_PARAMETER**.
+Pokud je volána výchozí obslužná rutina **_invoke_watson** , pokud procesor podporuje operaci [__fastfail](../../intrinsics/fastfail.md) , je vyvolána pomocí parametru **FAST_FAIL_INVALID_ARG** a proces je ukončen. V opačném případě je vyvolána rychlá výjimka selhání, která může být zachycena připojeným ladicím programem. Pokud může proces pokračovat, je ukončen voláním funkce Windows **TerminateProcess** pomocí stavu kódu výjimky **STATUS_INVALID_CRUNTIME_PARAMETER**.
 
 ## <a name="requirements"></a>Požadavky
 
@@ -93,7 +96,7 @@ Pokud výchozí obslužnou rutinu **_invoke_watson** je volána, pokud procesor 
 |--------------|------------------|
 |**_invalid_parameter**, **_invalid_parameter_noinfo**, **_invalid_parameter_noinfo_noreturn**, **_invoke_watson**|\<corecrt.h>|
 
-Další informace o kompatibilitě, naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Viz také:
 

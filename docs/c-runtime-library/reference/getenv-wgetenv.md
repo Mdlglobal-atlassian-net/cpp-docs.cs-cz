@@ -1,10 +1,10 @@
 ---
 title: getenv, _wgetenv
 ms.date: 11/04/2016
-apiname:
+api_name:
 - getenv
 - _wgetenv
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-environment-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _wgetenv
 - getenv
@@ -30,19 +33,19 @@ helpviewer_keywords:
 - _tgetenv function
 - _wgetenv function
 ms.assetid: 3b9cb9ab-a126-4e0e-a44f-6c5a7134daf4
-ms.openlocfilehash: 79c685fef8d6a4b966c53bb7d94b423d16971976
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7cacd8588bcc74c6d064da370ce6254aada56c12
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62157666"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70955062"
 ---
-# <a name="getenv-wgetenv"></a>getenv, _wgetenv
+# <a name="getenv-_wgetenv"></a>getenv, _wgetenv
 
-Získá hodnotu z aktuálního prostředí. Bezpečnější verze těchto funkcí jsou k dispozici. Zobrazit [getenv_s – _wgetenv_s –](getenv-s-wgetenv-s.md).
+Získá hodnotu z aktuálního prostředí. K dispozici jsou bezpečnější verze těchto funkcí; viz [getenv_s, _wgetenv_s](getenv-s-wgetenv-s.md).
 
 > [!IMPORTANT]
-> Toto rozhraní API nelze použít v aplikacích, které jsou spouštěny v modulu Windows Runtime. Další informace najdete v tématu [CRT funkce nejsou podporovány v aplikacích pro univerzální platformu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> Toto rozhraní API nelze použít v aplikacích, které jsou spouštěny v prostředí Windows Runtime. Další informace najdete v tématu [funkce CRT nejsou v aplikacích Univerzální platforma Windows podporovány](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -57,49 +60,49 @@ wchar_t *_wgetenv(
 
 ### <a name="parameters"></a>Parametry
 
-*varname*<br/>
-Název proměnné prostředí.
+*název_proměnné*<br/>
+Název proměnné prostředí
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Vrací ukazatel na vstupní tabulku prostředí obsahující *název_proměnné*. Není bezpečné ke změně hodnoty proměnné prostředí pomocí vrácenému ukazateli. Použití [_putenv](putenv-wputenv.md) funkce ke změně hodnoty proměnné prostředí. Vrácená hodnota je **NULL** Pokud *název_proměnné* nebyl nalezen v tabulce prostředí.
+Vrátí ukazatel na položku tabulky prostředí obsahující *název_proměnné*. Není bezpečné upravovat hodnotu proměnné prostředí pomocí vráceného ukazatele. Pomocí funkce [_putenv](putenv-wputenv.md) můžete změnit hodnotu proměnné prostředí. Návratová hodnota má **hodnotu null** , pokud se v tabulce prostředí nenalezne *název_proměnné* .
 
 ## <a name="remarks"></a>Poznámky
 
-**Getenv** funkce prohledává seznam proměnných prostředí pro *název_proměnné*. **GETENV** není malá a velká písmena v operačním systému Windows. **GETENV** a **_putenv** použijte kopii prostředí, na které odkazuje globální proměnnou **_environ** pro přístup k prostředí. **GETENV** funguje pouze na datových strukturách dostupných knihovně runtime a ne na prostředí "segmentu" vytvořili pro proces operačním systémem. Proto programy, které používají *envp* argument [hlavní](../../cpp/main-program-startup.md) nebo [wmain](../../cpp/main-program-startup.md) může načíst neplatné informace.
+Funkce **getenv** vyhledá v seznamu proměnných prostředí pro *název_proměnné*. **getenv** nerozlišuje velká a malá písmena v operačním systému Windows. **getenv** a **_putenv** používají kopii prostředí, na které odkazuje globální proměnná **_environ** pro přístup k prostředí. **getenv** funguje pouze v datových strukturách dostupných pro běhovou knihovnu, nikoli v prostředí segmentu vytvořeném pro proces operačním systémem. Proto programy, které používají argument *envp* pro [Main](../../cpp/main-program-startup.md) nebo [wmain](../../cpp/main-program-startup.md) , mohou načíst neplatné informace.
 
-Pokud *název_proměnné* je **NULL**, tato funkce vyvolá obslužnou rutinu neplatného parametru, jak je popsáno v [Parameter Validation](../../c-runtime-library/parameter-validation.md). Pokud smí provádění pokračovat, tato funkce nastaví **errno** k **EINVAL** a vrátí **NULL**.
+Pokud hodnota *název_proměnné* je **null**, tato funkce vyvolá obslužnou rutinu neplatného parametru, jak je popsáno v tématu [ověřování parametru](../../c-runtime-library/parameter-validation.md). Pokud provádění může pokračovat, tato funkce nastaví **errno** na **EINVAL** a vrátí **hodnotu null**.
 
-**_wgetenv** je verze širokého znaku **getenv**; argument a návratová hodnota funkce **_wgetenv** jsou širokoznaké řetězce. **_Wenviron** globální proměnná je verze širokého znaku **_environ**.
+**_wgetenv** je **getenv**verze s velkým znakem; argument a návratová hodnota **_wgetenv** jsou řetězce s velkým počtem znaků. Globální proměnná **_wenviron** je verze **_environ**s velkým znakem.
 
-V aplikaci znakové sady MBCS (například v programu SBCS ASCII) **_wenviron** je zpočátku **NULL** protože prostředí se skládá z vícebajtové znakové řetězce. Pak v prvním volání [_wputenv](putenv-wputenv.md), nebo při prvním volání **_wgetenv** Pokud prostředí (MBCS) již existuje, odpovídající prostředí řetězce širokého znaku se vytvoří a je následně odkázáno pomocí **_wenviron**.
+V programu znakové sady MBCS (například v programu SBCS ASCII) je **_wenviron** zpočátku **null** , protože prostředí se skládá z řetězců vícebajtových znaků. Poté při prvním volání [_wputenv](putenv-wputenv.md)nebo při prvním volání **_wgetenv** , pokud již existuje prostředí (MBCS), je vytvořeno odpovídající prostředí řetězců s velkým znakem znaků a následně na něj odkazuje **_wenviron**.
 
-Podobně jako v Unicode (**_wmain**) program, **_environ** je zpočátku **NULL** protože prostředí se skládá z řetězce širokého znaku. Pak v prvním volání **_putenv**, nebo při prvním volání **getenv** Pokud prostředí (Unicode) již existuje, odpovídající prostředí MBCS je vytvořen a je následně odkázáno pomocí **_ Environ**.
+Podobně v programu Unicode ( **_wmain**) je **_environ** zpočátku **null** , protože prostředí se skládá z řetězců s velkým počtem znaků. Pak při prvním volání **_putenv**nebo při prvním volání **getenv** Pokud již existuje prostředí (Unicode), vytvoří se odpovídající prostředí znakové sady MBCS a následně na něj odkazuje **_environ**.
 
-Pokud dvě kopie prostředí (znaková sada MBCS a Unicode) existují současně v programu v jazyce, za běhu systému, musíte mít obě kopie, což vede k času provádění. Například pokaždé, když voláte **_putenv**, volání **_wputenv** také provádí automaticky, takže odpovídají řetězce dvě prostředí.
+V případě, že dvě kopie prostředí (MBCS a Unicode) existují současně v programu, musí operační systém uchovávat obě kopie, což má za následek pomalejší dobu provádění. Například pokaždé, když voláte **_putenv**, volání **_wputenv** je také provedeno automaticky, aby oba řetězce prostředí odpovídaly.
 
 > [!CAUTION]
-> Ve výjimečných případech při údržbě systému za běhu Unicode verze a vícebajtová verze prostředí, tyto dvě prostředí verze nemusí odpovídat přesně. Důvodem je, že i když jakýkoli jedinečný řetězec vícebajtového znaku zakončeného mapuje na jedinečné řetězec znaků Unicode, mapování z jedinečný řetězec znaků Unicode na řetězec vícebajtového znaku není nutně jedinečné. Další informace najdete v tématu [_environ _wenviron](../../c-runtime-library/environ-wenviron.md).
+> Ve výjimečných případech platí, že když systém za běhu udržuje jak verzi Unicode, tak vícebajtovou verzi prostředí, tyto dvě verze prostředí nemusí přesně odpovídat. Důvodem je, že i když jakýkoliv jedinečný řetězec vícebajtových znaků mapuje na jedinečný řetězec v kódování Unicode, mapování z jedinečného řetězce Unicode na řetězec vícebajtových znaků není nutně jedinečné. Další informace najdete v tématu [_environ, _wenviron](../../c-runtime-library/environ-wenviron.md).
 
 > [!NOTE]
-> **_Putenv** a **_getenv** rodinách funkcí nejsou vláknově bezpečné. **_getenv** může vrátit ukazatel řetězce při **_putenv** upravuje řetězec, což způsobí náhodná selhání. Ujistěte se, že volání těchto funkcí jsou synchronizována.
+> Řady funkcí **_putenv** a **_getenv** nejsou bezpečné pro přístup z více vláken. **_getenv** může vracet ukazatel na řetězec, zatímco **_putenv** upravuje řetězec a způsobuje náhodných selhání. Ujistěte se, že jsou volání těchto funkcí synchronizovaná.
 
 ### <a name="generic-text-routine-mappings"></a>Mapování rutin obecného textu
 
-|Rutina TCHAR.H|_UNICODE a _MBCS nejsou definovány|_MBCS definováno|_UNICODE definováno|
+|Rutina TCHAR.H|_UNICODE & _MBCS nejsou definovány.|_MBCS definováno|_UNICODE definováno|
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_tgetenv**|**getenv**|**getenv**|**_wgetenv**|
 
-Zkontrolujte nebo změňte hodnotu **TZ** proměnné, použijte prostředí **getenv**, **_putenv** a **_tzset –** podle potřeby. Další informace o **TZ**, naleznete v tématu [_tzset –](tzset.md) a [_daylight, časové pásmo a _tzname](../../c-runtime-library/daylight-dstbias-timezone-and-tzname.md).
+Chcete-li ověřit nebo změnit hodnotu proměnné prostředí **TZ** , použijte **getenv**, **_putenv** a **_tzset** podle potřeby. Další informace o **TZ**najdete v tématech [_tzset](tzset.md) a [_daylight, TimeZone a _tzname](../../c-runtime-library/daylight-dstbias-timezone-and-tzname.md).
 
 ## <a name="requirements"></a>Požadavky
 
 |Rutina|Požadovaný hlavičkový soubor|
 |-------------|---------------------|
 |**getenv**|\<stdlib.h>|
-|**_wgetenv**|\<stdlib.h > nebo \<wchar.h >|
+|**_wgetenv**|\<Stdlib. h > nebo \<WCHAR. h >|
 
-Další informace o kompatibilitě, naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Příklad
 

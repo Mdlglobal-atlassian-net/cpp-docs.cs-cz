@@ -1,12 +1,12 @@
 ---
 title: va_arg, va_copy, va_end, va_start
 ms.date: 11/04/2016
-apiname:
+api_name:
 - va_arg
 - va_end
 - va_copy
 - va_start
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - va_arg
 - va_start
@@ -37,16 +40,16 @@ helpviewer_keywords:
 - va_alist macro
 - va_copy macro
 ms.assetid: a700dbbd-bfe5-4077-87b6-3a07af74a907
-ms.openlocfilehash: cc0a903f6bc4895f7d2ea6e80990dea94f28c6c2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 47bd9e3913c6664a52c970dd8a190636683d214e
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62353563"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70957363"
 ---
-# <a name="vaarg-vacopy-vaend-vastart"></a>va_arg, va_copy, va_end, va_start
+# <a name="va_arg-va_copy-va_end-va_start"></a>va_arg, va_copy, va_end, va_start
 
-Seznamy argumentů proměnných přístupy.
+Přistupuje k seznamům proměnných argumentů.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -74,44 +77,44 @@ void va_start(
 ### <a name="parameters"></a>Parametry
 
 *type*<br/>
-Typ argumentu, který se má načíst.
+Typ argumentu, který se má načíst
 
 *arg_ptr*<br/>
 Ukazatel na seznam argumentů.
 
-*dest*<br/>
-Ukazatel na seznam argumentů, které mají být inicializovány z *src*
+*propojovací*<br/>
+Ukazatel na seznam argumentů, které mají být inicializovány ze *Src*
 
 *src*<br/>
-Ukazatel na inicializované seznam argumentů, které mají zkopírovat do *dest*.
+Ukazatel na inicializovaný seznam argumentů ke zkopírování na *cíl*.
 
 *prev_param*<br/>
-Parametr, který předchází první nepovinný argument.
+Parametr, který předchází prvnímu volitelnému argumentu.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-**va_arg** vrátí aktuální argument. **va_copy**, **va_start** a **va_end** nesmí vracet hodnoty.
+**va_arg** vrací aktuální argument. **va_copy**, **va_start** a **va_end** nevrací hodnoty.
 
 ## <a name="remarks"></a>Poznámky
 
-**Va_arg**, **va_copy**, **va_end**, a **va_start** makra poskytují přenosný způsob pro přístup k argumentům funkce při funkce má proměnný počet argumentů. Existují dvě verze makra: Makra definovaná v STDARG. H v souladu s normou, ISO C99 Makra definovaná ve funkcích VARARGS. H jsou zastaralé, ale se zachovává kvůli zpětné kompatibilitě s kódem, který byl zapsán před ANSI C89 standard.
+Makra **va_arg**, **va_copy**, **va_end**a **va_start** poskytují přenosný způsob, jak přistupovat k argumentům funkce v případě, že funkce přebírá proměnný počet argumentů. Existují dvě verze maker: Makra definovaná v STDARG. H vyhovuje standardu ISO C99; Makra definovaná v VARARG H jsou zastaralé, ale jsou zachovány kvůli zpětné kompatibilitě s kódem, který byl napsán před standardem ANSI c89.
 
-Tato makra se předpokládá, že funkce nepřebírá pevný počet povinné argumenty, za nímž následuje proměnný počet volitelné argumenty. Povinné argumenty jsou deklarovány jako běžný parametrů pro funkci a je přístupný prostřednictvím názvy parametrů. Nepovinné argumenty jsou přístupné prostřednictvím makra v STDARG. H (ani parametry vararg. H pro kód, který byl zapsán před standardu ANSI C89), který nastaví ukazatel na první nepovinný argument v seznamu argumentů, načte argumenty v seznamu a resetuje ukazatel po dokončení zpracování argumentů.
+Tato makra předpokládají, že funkce přijímá pevný počet požadovaných argumentů následovaný proměnným počtem volitelných argumentů. Požadované argumenty jsou deklarovány jako běžné parametry funkce a jsou dostupné prostřednictvím názvů parametrů. K volitelným argumentům se dostanete prostřednictvím maker v STDARG. H (nebo VARARGS. H pro kód, který byl napsán před standardem ANSI c89), který nastaví ukazatel na první volitelný argument v seznamu argumentů, načte argumenty ze seznamu a po dokončení zpracování argumentu obnoví ukazatel.
 
-Standardní makra jazyka C definovaná v STDARG. H, používají se následujícím způsobem:
+Standardní makra jazyka C definovaná v STDARG. H se používají takto:
 
-- **va_start** nastaví *arg_ptr* první volitelné argumentu v seznam argumentů, který je předán do funkce. Argument *arg_ptr* musí mít **va_list** typu. Argument *prev_param* je název povinný parametr, který bezprostředně předchází první nepovinný argument v seznamu argumentů. Pokud *prev_param* je deklarována pomocí třídy úložiště register makro chování není definováno. **va_start** musí být použita před **va_arg** je použit poprvé.
+- **va_start** nastaví *arg_ptr* na první volitelný argument v seznamu argumentů předaných funkci. Argument *arg_ptr* musí mít typ **va_list** . Argument *prev_param* je název požadovaného parametru, který bezprostředně předchází první volitelný argument v seznamu argumentů. Pokud je *prev_param* deklarována s třídou úložiště registru, chování makra není definováno. **va_start** se musí použít před prvním použitím **va_arg** .
 
-- **va_arg** načte hodnotu *typ* z umístění, které je dán *arg_ptr*a zvýší hodnotu *arg_ptr* tak, aby odkazoval na další argument v seznamu podle pomocí velikosti *typ* k určení, kde začíná další argument. **va_arg** lze použít libovolný počet pokusů o ve funkci k načtení ze seznamu argumentů.
+- **va_arg** načítá hodnotu *typu* z umístění, které je přiděleno *arg_ptr*a zvyšuje *arg_ptr* , aby odkazoval na další argument v seznamu pomocí velikosti *typu* k určení, kde se spustí další argument. **va_arg** lze použít libovolným počtem výskytů funkce k načtení argumentů ze seznamu.
 
-- **va_copy** vytvoří kopii tohoto seznamu argumentů v jejím aktuálním stavu. *Src* parametr musí být již inicializována s **va_start**; to může mít aktualizované a přinášejí **va_arg** volání, ale nesmí obnovit s **va_end** . Další argument, který načte **va_arg** z *dest* je stejný jako další argument, který je načten z *src*.
+- **va_copy** vytvoří kopii seznamu argumentů v aktuálním stavu. Parametr *Src* již musí být inicializován pomocí **va_start**; je možné, že byla aktualizována pomocí volání **va_arg** , ale nesmí být resetována pomocí **va_end**. Další argument načtený pomocí **va_arg** z *cíl* je stejný jako další argument načtený z *Src*.
 
-- Jakmile se načetly všechny argumenty, **va_end** resetuje ukazatel na **NULL**. **va_end** musí být volána na každý seznam argumentů, který je inicializován s **va_start** nebo **va_copy** dříve, než funkce vrátí.
+- Po načtení všech argumentů **va_end** obnoví ukazatel na **hodnotu null**. **va_end** se musí volat v každém seznamu argumentů, který je inicializovaný s **va_start** nebo **va_copy** , než se funkce vrátí.
 
 > [!NOTE]
-> Makra ve funkcích VARARGS. H jsou zastaralé a je zachován pouze z důvodu zpětné kompatibility s kódem, který byl zapsán před standardu ANSI C89. Ve všech ostatních případech použijte makra v STDARGS. H.
+> Makra v VARARG. H jsou zastaralá a jsou zachovaná pouze pro zpětnou kompatibilitu s kódem, který byl napsán před standardem ANSI c89. Ve všech ostatních případech použijte makra v STDARGS. Y.
 
-Když jsou kompilovány pomocí [/CLR (kompilace Common Language Runtime)](../../build/reference/clr-common-language-runtime-compilation.md), programy, které používají makra může způsobit neočekávané výsledky kvůli rozdílům mezi nativní a common language runtime (CLR) typ systémy. Vezměte v úvahu tento program:
+Pokud jsou kompilovány pomocí [/CLR (modul CLR (Common Language Runtime Compilation))](../../build/reference/clr-common-language-runtime-compilation.md), mohou programy, které používají tato makra, generovat neočekávané výsledky z důvodu rozdílů mezi nativními systémy a systémy typů CLR (Common Language Runtime). Vezměte v úvahu tento program:
 
 ```C
 #include <stdio.h>
@@ -143,7 +146,7 @@ int main()
 }
 ```
 
-Všimněte si, že **testit** očekává, že její druhý parametr bude buď **int** nebo **char**<strong>\*</strong>. Argumenty předané jsou 0xffffffff ( **bez znaménka** **int**, nikoli **int**) a **NULL** (ve skutečnosti k **int**, nikoli **char**<strong>\*</strong>). Když je program zkompilován pro nativní kód, vytvoří tento výstup:
+Všimněte si, že **testIt** očekává, že jeho druhý parametr bude buď **int** , nebo **char**<strong>\*</strong>. Předávané argumenty jsou 0xFFFFFFFF ( **unsigned** **int**, not **int**) a **null** (ve skutečnosti **int**, nikoli **char**<strong>\*</strong>). Když je program zkompilován pro nativní kód, vytvoří tento výstup:
 
 ```Output
 -1
@@ -153,13 +156,13 @@ Všimněte si, že **testit** očekává, že její druhý parametr bude buď **
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** \<stdio.h > a \<stdarg.h >
+**Hlavička:** stdio. h > a \<STDARG. h > \<
 
-**Nepoužívané záhlaví:** \<souboru varargs.h >
+**Zastaralé záhlaví:** \<VarArgs. h >
 
 ## <a name="libraries"></a>Knihovny
 
-Všechny verze [běhových knihoven C](../../c-runtime-library/crt-library-features.md).
+Všechny verze [knihoven run-time jazyka C](../../c-runtime-library/crt-library-features.md).
 
 ## <a name="example"></a>Příklad
 
