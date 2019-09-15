@@ -1,10 +1,10 @@
 ---
 title: wcstombs, _wcstombs_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - wcstombs
 - _wcstombs_l
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - ucrtbase.dll
 - api-ms-win-crt-convert-l1-1-0.dll
 - ntoskrnl.exe
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - wcstombs
 - _wcstombs_l
@@ -30,12 +33,12 @@ helpviewer_keywords:
 - characters, converting
 - string conversion, multibyte character strings
 ms.assetid: 91234252-9ea1-423a-af99-e9d0ce4a40e3
-ms.openlocfilehash: b5ee2a0e5636e9c1d1f3fc204b2b6cbf8b733d45
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: e4aa09ec8e6d97762d39e63aa05b0eb0cc159d17
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69498987"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70945113"
 ---
 # <a name="wcstombs-_wcstombs_l"></a>wcstombs, _wcstombs_l
 
@@ -92,7 +95,7 @@ Pokud **wcstombs** úspěšně převede vícebajtový řetězec, vrátí počet 
 
 Funkce **wcstombs** převede řetězec s velkým znakem, na který odkazuje *wcstr* na odpovídající vícebajtové znaky, a uloží výsledky do pole *mbstr* . Parametr *Count* označuje maximální počet bajtů, které mohou být uloženy ve vícebajtovém výstupním řetězci (tj. velikost *mbstr*). Obecně není známo, kolik bajtů bude vyžadováno při převodu řetězce širokého znaku. Některé velké znaky budou vyžadovat pouze jeden bajt ve výstupním řetězci; jiné vyžadují dva. Pokud jsou v vícebajtovém výstupním řetězci dva bajty pro každý velký znak ve vstupním řetězci (včetně širšího znaku null), je zaručeno, že je výsledek přizpůsoben.
 
-Pokud **wcstombs** nalezne znak null znaků (L ' \ 0 ') před nebo po výskytu, převede ho na 8 bitů 0 a zastaví. Proto je řetězec vícebajtového znaku na *mbstr* zakončený hodnotou null pouze v případě, že při převodu dojde v **wcstombs** k znaku null znaků s velkým znakem. Pokud se sekvence, na které ukazuje *wcstr* a *mbstr* , překrývají, chování **wcstombs** není definováno.
+Pokud **wcstombs** nalezne znak null znaků (L ' \ 0 ') před *nebo po* výskytu, převede ho na 8 bitů 0 a zastaví. Proto je řetězec vícebajtového znaku na *mbstr* zakončený hodnotou null pouze v případě, že při převodu dojde v **wcstombs** k znaku null znaků s velkým znakem. Pokud se sekvence, na které ukazuje *wcstr* a *mbstr* , překrývají, chování **wcstombs** není definováno.
 
 Pokud má argument *Mbstr* **hodnotu null**, **wcstombs** vrátí požadovanou velikost v bajtech cílového řetězce.
 

@@ -1,11 +1,11 @@
 ---
 title: assert Macro, _assert, _wassert
 ms.date: 11/04/2016
-apiname:
+api_name:
 - assert
 - _assert
 - _wassert
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-runtime-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - assert
 - _assert
@@ -28,12 +31,12 @@ helpviewer_keywords:
 - assert function
 - assert macro
 ms.assetid: a9ca031a-648b-47a6-bdf1-65fc7399dd40
-ms.openlocfilehash: a2cc780fbc93aa66bd7fd613c3e155cda27eb7f9
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: badca46a0793e51602f0de87dfca21816dcd6295
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69500340"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70939624"
 ---
 # <a name="assert-macro-_assert-_wassert"></a>assert Macro, _assert, _wassert
 
@@ -75,13 +78,13 @@ Název zdrojového souboru, ve kterém se kontrolní výraz nezdařil.
 
 Makro **Assert** se obvykle používá k identifikaci logických chyb během vývoje programu. Použijte ji k zastavení provádění programu, pokud dojde k neočekávaným podmínkám implementací argumentu *výrazu* pro vyhodnocení na **hodnotu false** pouze v případě, že program pracuje nesprávně. Kontroly kontrolního výrazu mohou být v době kompilace vypnuty definováním makra **NDEBUG**. Makro **kontrolního výrazu** můžete vypnout bez změny zdrojových souborů pomocí možnosti příkazového řádku **/DNDEBUG** . Makro **Assert** ve zdrojovém kódu můžete vypnout pomocí `#define NDEBUG` direktivy před \<Assert. h > je zahrnuto.
 
-Makro **Assert** vytiskne diagnostickou zprávu, když se *výraz* vyhodnotí jako **false** (0), a volání přeruší k ukončení provádění programu. [](abort.md) Pokud je *výraz* **true** (nenulový), není provedena žádná akce. Diagnostická zpráva obsahuje výraz, který selhal, název zdrojového souboru a číslo řádku, kde se kontrolní výraz nezdařil.
+Makro **Assert** vytiskne diagnostickou zprávu, když se *výraz* vyhodnotí jako **false** (0), a volání [přeruší](abort.md) k ukončení provádění programu. Pokud je *výraz* **true** (nenulový), není provedena žádná akce. Diagnostická zpráva obsahuje výraz, který selhal, název zdrojového souboru a číslo řádku, kde se kontrolní výraz nezdařil.
 
 Diagnostická zpráva se tiskne v rámci velkých znaků. Proto bude fungovat podle očekávání i v případě, že ve výrazu jsou znaky Unicode.
 
-Cíl diagnostické zprávy závisí na typu aplikace, která rutinu volala. Konzolové aplikace vždy obdrží zprávu přes **stderr**. V aplikaci pro Windows vyhodnotí volání funkce [MessageBox](/windows/win32/api/winuser/nf-winuser-messagebox) systému Windows k vytvoření okna se zprávou pro zobrazení zprávy s tlačítkem **OK** . Když uživatel klikne na **tlačítko OK**, program se okamžitě přeruší.
+Cíl diagnostické zprávy závisí na typu aplikace, která rutinu volala. Konzolové aplikace vždy obdrží zprávu přes **stderr**. V aplikaci pro Windows vyhodnotí **volání funkce** [MessageBox](/windows/win32/api/winuser/nf-winuser-messagebox) systému Windows k vytvoření okna se zprávou pro zobrazení zprávy s tlačítkem **OK** . Když uživatel klikne na **tlačítko OK**, program se okamžitě přeruší.
 
-Pokud je aplikace propojena s ladicí verzí knihoven za běhu, **vyhodnocení** vytvoří okno se zprávou se třemi tlačítky: **Přerušit**, **Opakovat**a **Ignorovat**. Pokud uživatel kliknena možnost přerušit, program se okamžitě zruší. Pokud uživatel klikne na tlačítko **Opakovat**, bude volán ladicí program a uživatel může ladit program, pokud je povoleno ladění JIT (just-in-time). Pokud uživatel klikne na možnost **Ignorovat**, **kontrolní** výraz pokračuje s jeho normálním spuštěním: vytvoření okna se zprávou pomocí tlačítka **OK** . Všimněte si, že kliknutí na **Ignorovat** , pokud existuje chybový stav, může mít za následek nedefinované chování.
+Pokud je aplikace propojena s ladicí verzí knihoven za běhu, **vyhodnocení** vytvoří okno se zprávou se třemi tlačítky: **Přerušit**, **Opakovat**a **Ignorovat**. Pokud uživatel klikne na možnost **přerušit**, program se okamžitě zruší. Pokud uživatel klikne na tlačítko **Opakovat**, bude volán ladicí program a uživatel může ladit program, pokud je povoleno ladění JIT (just-in-time). Pokud uživatel klikne na možnost **Ignorovat**, **kontrolní** výraz pokračuje s jeho normálním spuštěním: vytvoření okna se zprávou pomocí tlačítka **OK** . Všimněte si, že kliknutí na **Ignorovat** , pokud existuje chybový stav, může mít za následek nedefinované chování.
 
 Další informace o ladění CRT naleznete v tématu [techniky ladění CRT](/visualstudio/debugger/crt-debugging-techniques).
 

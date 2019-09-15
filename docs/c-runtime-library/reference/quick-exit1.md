@@ -1,9 +1,9 @@
 ---
 title: quick_exit1
 ms.date: 11/04/2016
-apiname:
+api_name:
 - quick_exit
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-runtime-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - quick_exit
 - process/quick_exit
@@ -23,16 +26,16 @@ f1_keywords:
 helpviewer_keywords:
 - quick_exit function
 ms.assetid: ecfbdae6-01c4-45fa-aaeb-b368e1de2a9c
-ms.openlocfilehash: 50f1ee72cce04c2bebc8f7396a2b6fad98301dd7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 86246ed7a32dcd2f12b38aa4148570fc5fb3b7a6
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62358031"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70949671"
 ---
-# <a name="quickexit"></a>quick_exit
+# <a name="quick_exit"></a>quick_exit
 
-Způsobí, že ukončení normální programu dojde k.
+Způsobí, že dojde k ukončení normálního programu.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -45,27 +48,27 @@ __declspec(noreturn) void quick_exit(
 ### <a name="parameters"></a>Parametry
 
 *status*<br/>
-Stavový kód se vraťte do hostitelského prostředí.
+Stavový kód, který se má vrátit do hostitelského prostředí.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-**Quick_exit** funkce nemůže vracet volajícímu.
+Funkce **quick_exit** se nemůže vrátit volajícímu.
 
 ## <a name="remarks"></a>Poznámky
 
-**Quick_exit** funkce způsobí ukončení normální programu. Volá žádné funkce registrovaných **atexit**, **_onexit** nebo registrovaných obslužné rutiny signálu **signál** funkce. Chování není definováno, pokud **quick_exit** je volána více než jednou, nebo pokud **ukončit** funkce se také nazývá.
+Funkce **quick_exit** způsobuje normální ukončení programu. Nevolá žádné funkce zaregistrované v **atexit**, **_onexit** nebo obslužných rutinách signálu zaregistrovaných funkcí **Signal** . Chování není definováno, pokud je **quick_exit** voláno více než jednou, nebo pokud je volána také funkce **Exit** .
 
-**Quick_exit** volání v poslední dovnitř, první (ven LIFO) objednávky, funkce registrované pomocí funkcí **at_quick_exit**, s výjimkou pro tyto funkce již voláno, když byl zaregistrován funkce.  Chování není definováno, pokud [longjmp](longjmp.md) přišla během volání registrované funkci, která by jej měla ukončit volání funkce.
+Funkce **quick_exit** volá v pořadí posledních v, First-out (LIFO) funkce zaregistrované v **at_quick_exit**, s výjimkou těch, které již byly volány při registraci funkce.  Chování není definováno, pokud je provedeno volání [longjmp](longjmp.md) během volání registrované funkce, která by ukončila volání funkce.
 
-Po zavolání funkce registrované **quick_exit** vyvolá **_Exit** pomocí *stav* hodnoty k vrácení ovládacího prvku do hostitelského prostředí.
+Po volání registrovaných funkcí **quick_exit** vyvolá **_Exit** pomocí hodnoty *status* pro vrácení řízení hostitelskému prostředí.
 
 ## <a name="requirements"></a>Požadavky
 
 |Rutina|Požadovaný hlavičkový soubor|
 |-------------|---------------------|
-|**quick_exit**|\<Process.h > nebo \<stdlib.h >|
+|**quick_exit**|\<Process. h > \<nebo Stdlib. h >|
 
-Další informace o kompatibilitě naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě najdete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Viz také:
 

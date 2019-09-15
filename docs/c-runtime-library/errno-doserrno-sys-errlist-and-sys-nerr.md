@@ -1,11 +1,14 @@
 ---
 title: errno, _doserrno, _sys_errlist, and _sys_nerr
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _errno
-apilocation:
+api_location:
 - msvcrt.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _sys_errlist
 - errno
@@ -21,16 +24,16 @@ helpviewer_keywords:
 - _sys_nerr global variable
 - sys_nerr global variable
 ms.assetid: adbec641-6d91-4e19-8398-9a34046bd369
-ms.openlocfilehash: 57d04fe5867c6a969b6aeca40f26b18b5dcd7a61
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5b10d98dab41151290d4e44e031f659108b0c73c
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62344041"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70944558"
 ---
-# <a name="errno-doserrno-syserrlist-and-sysnerr"></a>errno, _doserrno, _sys_errlist, and _sys_nerr
+# <a name="errno-_doserrno-_sys_errlist-and-_sys_nerr"></a>errno, _doserrno, _sys_errlist, and _sys_nerr
 
-Globální makra, které obsahují kódy chyb, které jsou nastavené během provádění programu a řetězec ekvivalenty kódy chyb pro zobrazení.
+Globální makra, která obsahují chybové kódy, které jsou nastaveny během spuštění programu a řetězcové ekvivalenty kódů chyb pro zobrazení.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -43,21 +46,21 @@ Globální makra, které obsahují kódy chyb, které jsou nastavené během pro
 
 ## <a name="remarks"></a>Poznámky
 
-Obě `errno` a `_doserrno` jsou modulem runtime při spuštění programu nastaveny na hodnotu 0. `errno` je nastaven na chybu při volání funkce úrovni systému. Protože `errno` obsahuje hodnotu pro poslední volání, které je tato hodnota může být změněna následným voláním. Knihovny runtime volá tuto sadu `errno` v případě chyby nerušte zaškrtnutí políčka `errno` v případě úspěchu. Vždy vymažte `errno` voláním `_set_errno(0)` bezprostředně před volání, které může nastavit a zkontrolovat ihned po volání.
+`errno` A`_doserrno` při spuštění programu nastaví modul runtime na hodnotu 0. `errno`je nastaven na chybu ve volání na úrovni systému. Vzhledem `errno` k tomu, že aplikace drží hodnotu pro poslední volání, která ji nastavila, tato hodnota může být změněna pomocí následných volání. Volání běhové knihovny, které je `errno` nastaveno na chybu, nelze po `errno` úspěšném vymazání vymazat. Vždy zrušte `errno` volání `_set_errno(0)` bezprostředně před voláním, které může nastavit, a okamžitě po volání.
 
-V případě chyby `errno` není nutně nastavena na stejnou hodnotu jako chybový kód vrácený voláním systému. Vstupně-výstupních operací `_doserrno` ukládá kód chyby operačního systému: ekvivalenty `errno` kódy. Pro většinu operací bez vstupně-, hodnota `_doserrno` není nastaven.
+V případě `errno` chyby není nutně nastaveno na stejnou hodnotu, jako kód chyby vrácený systémovým voláním. V případě vstupně-výstupních `_doserrno` operací ukládá kód chybových `errno` kódů operačního systému odpovídající kódy. Pro většinu operací, které nejsou v/v, není nastavena `_doserrno` hodnota.
 
-Každý `errno` hodnota je přidružena chybovou zprávu ve `_sys_errlist` , který lze vytisknout pomocí jedné z [perror](../c-runtime-library/reference/perror-wperror.md) funkce nebo uložený v řetězci pomocí jedné z [strerror](../c-runtime-library/reference/strerror-strerror-wcserror-wcserror.md) nebo [strerror_s –](../c-runtime-library/reference/strerror-s-strerror-s-wcserror-s-wcserror-s.md) funkce. `perror` a `strerror` funkce použijte `_sys_errlist` pole a `_sys_nerr`– počet prvků v `_sys_errlist`– ke zpracování informací o chybách. Přímý přístup k `_sys_errlist` a `_sys_nerr` z důvodů zabezpečení kódu je zastaralý. Doporučujeme používat bezpečnější funkční verze místo globální makra, jak je znázorněno zde:
+Každá `errno` hodnota je přidružena k chybové zprávě v `_sys_errlist` , která může být vytištěna pomocí jedné z funkcí [pError](../c-runtime-library/reference/perror-wperror.md) nebo uložena v řetězci pomocí jedné z funkcí [strerror –](../c-runtime-library/reference/strerror-strerror-wcserror-wcserror.md) nebo [strerror_s](../c-runtime-library/reference/strerror-s-strerror-s-wcserror-s-wcserror-s.md) . `_sys_errlist`Funkce `perror` a `strerror` používají`_sys_errlist` pole a`_sys_nerr`– počet prvků v – pro zpracování informací o chybě. V případech zabezpečení `_sys_errlist` kódu `_sys_nerr` je přímý přístup k a zastaralý. Doporučujeme, abyste místo globálních maker používali bezpečnější a funkční verze, jak je znázorněno zde:
 
-|Globální – makro|Funkční ekvivalenty|
+|Globální makro|Funkční ekvivalenty|
 |------------------|----------------------------|
 |`_doserrno`|[_get_doserrno](../c-runtime-library/reference/get-doserrno.md), [_set_doserrno](../c-runtime-library/reference/set-doserrno.md)|
 |`errno`|[_get_errno](../c-runtime-library/reference/get-errno.md), [_set_errno](../c-runtime-library/reference/set-errno.md)|
 |`_sys_errlist`, `_sys_nerr`|[strerror_s, _strerror_s, _wcserror_s, \__wcserror_s](../c-runtime-library/reference/strerror-s-strerror-s-wcserror-s-wcserror-s.md)|
 
-Knihovna matematických rutin nastavuje `errno` voláním [_matherr](../c-runtime-library/reference/matherr.md). Chcete-li matematické chyby ošetřit jinak, napište vlastní rutinu podle `_matherr` a pojmenujte ho `_matherr`.
+Knihovny matematické rutiny nastavené `errno` voláním [_matherr](../c-runtime-library/reference/matherr.md). Chcete-li zpracovat matematické chyby jinak, napište vlastní rutinu podle `_matherr` popisu odkazu a pojmenujte ji. `_matherr`
 
-Všechny `errno` hodnoty v následující tabulce jsou předdefinované konstanty v \<errno.h >, a jsou kompatibilní se systémem UNIX. Pouze `ERANGE`, `EILSEQ`, a `EDOM` zadávají se ve standardu ISO C99.
+Všechny `errno` hodnoty v následující tabulce jsou předdefinované konstanty v \<errno. h > a jsou kompatibilní se systémem UNIX. Pouze `ERANGE`, `EILSEQ` a`EDOM` jsou zadány ve standardu ISO C99.
 
 |Konstanta|Zpráva o systémové chybě|Value|
 |--------------|--------------------------|-----------|
@@ -104,12 +107,12 @@ Všechny `errno` hodnoty v následující tabulce jsou předdefinované konstant
 
 ## <a name="requirements"></a>Požadavky
 
-|Globální – makro|Požadovaný hlavičkový soubor|Volitelné záhlaví|
+|Globální makro|Požadovaný hlavičkový soubor|Volitelné záhlaví|
 |------------------|---------------------|---------------------|
-|`errno`|\<errno.h > nebo \<stdlib.h >, \<cerrno – > nebo \<cstdlib – > (C++)||
+|`errno`|\<errno. h > nebo \<Stdlib. h >, \<cerrno > nebo \<cstdlib > (C++)||
 |`_doserrno`, `_sys_errlist`, `_sys_nerr`|\<stdlib.h>, \<cstdlib> (C++)|\<errno.h>, \<cerrno> (C++)|
 
-`_doserrno`, `_sys_errlist`, A `_sys_nerr` makra jsou rozšíření společnosti Microsoft. Další informace o kompatibilitě naleznete v tématu [kompatibility](../c-runtime-library/compatibility.md).
+Makra `_doserrno`, `_sys_errlist` a`_sys_nerr` jsou rozšíření společnosti Microsoft. Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Viz také:
 

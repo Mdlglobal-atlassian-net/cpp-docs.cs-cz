@@ -1,9 +1,9 @@
 ---
 title: wctype
 ms.date: 11/04/2016
-apiname:
+api_name:
 - wctype
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -14,23 +14,26 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - wctype
 helpviewer_keywords:
 - wctype function
 - wide characters
 ms.assetid: 14aded12-4087-4123-bc48-db4e10999223
-ms.openlocfilehash: 81caf8e1ab04635d205d7b01af2d4c2896eec01c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f77082bbcc5f3cd9d82fb40993c3ac678e7e7ba2
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62155313"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70957804"
 ---
 # <a name="wctype"></a>wctype
 
-Určuje pravidlo klasifikace pro kódy širokého znaku.
+Určuje pravidlo klasifikace pro kódy s velkým znakem.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -43,37 +46,37 @@ wctype_t wctype(
 ### <a name="parameters"></a>Parametry
 
 *property*<br/>
-Vlastnost řetězce.
+Řetězec vlastnosti
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Pokud **LC_CTYPE** kategorie aktuálního národního prostředí nedefinuje pravidlo klasifikace, jejíž název odpovídá řetězci vlastnost *vlastnost*, vrátí funkce hodnotu nula. V opačném případě se vrací nenulovou hodnotu, vhodný pro použití jako druhý argument pro následné volání [towctrans –](towctrans.md).
+Pokud kategorie **LC_CTYPE** aktuálního národního prostředí nedefinuje pravidlo klasifikace, jehož název odpovídá *vlastnosti*řetězce vlastnosti, vrátí funkce hodnotu nula. V opačném případě vrátí nenulovou hodnotu vhodnou pro použití jako druhý argument u následného volání [towctrans](towctrans.md).
 
 ## <a name="remarks"></a>Poznámky
 
-Funkce určuje pravidla klasifikace pro kódy širokého znaku. Následující páry volání mají stejné chování ve všech národních prostředích (ale implementace můžete definovat další klasifikační pravidla i v národním prostředí "C"):
+Funkce Určuje pravidlo klasifikace pro kódy s velkým znakem. Následující páry volání mají stejné chování ve všech národních prostředích (ale implementace může definovat další pravidla klasifikace i v národním prostředí "C"):
 
 |Funkce|Stejné jako|
 |--------------|-------------|
-|iswalnum(c)|iswctype (c, wctype ("alnum"))|
-|iswalpha(c)|iswctype (c, wctype ("Alfa"))|
-|iswcntrl(c)|iswctype(c, wctype( "cntrl" ) )|
-|iswdigit(c)|iswctype (c, wctype ("číslice"))|
-|iswgraph(c)|iswctype (c, wctype ("graf"))|
-|iswlower(c)|iswctype (c, wctype ("malé"))|
-|iswprint(c)|iswctype (c, wctype ("print"))|
-|iswpunct(c)|iswctype (c, wctype ("punct"))|
-|iswspace(c)|iswctype (c, wctype ("místo"))|
-|iswupper(c)|iswctype (c, wctype ("horní"))|
-|iswxdigit(c)|iswctype (c, wctype ("xdigit"))|
+|iswalnum (c)|iswctype (c; wctype ("alnum"))|
+|iswalpha (c)|iswctype (c; wctype ("alfa"))|
+|iswcntrl(c)|iswctype (c; wctype ("TAB"))|
+|iswdigit (c)|iswctype (c; wctype ("číslice"))|
+|iswgraph (c)|iswctype (c; wctype ("Graph"))|
+|iswlower (c)|iswctype (c; wctype ("Lower"))|
+|iswprint (c)|iswctype (c; wctype ("Tisk"))|
+|iswpunct (c)|iswctype (c; wctype ("punct"))|
+|iswspace (c)|iswctype (c; wctype ("prostor"))|
+|iswupper (c)|iswctype (c; wctype ("Upper"))|
+|iswxdigit (c)|iswctype (c; wctype ("xdigit"))|
 
 ## <a name="requirements"></a>Požadavky
 
 |Rutina|Požadovaný hlavičkový soubor|
 |-------------|---------------------|
-|**wctype**|\<wctype.h >|
+|**wctype**|\<wctype. h >|
 
-Další informace o kompatibilitě, naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Viz také:
 

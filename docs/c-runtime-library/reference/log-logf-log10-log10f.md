@@ -1,14 +1,14 @@
 ---
-title: protokol, logf –, logl, log10, log10f –, log10l
+title: log, logf –, logl, log10 –, log10f –, log10l
 ms.date: 04/05/2018
-apiname:
+api_name:
 - log10f
 - logf
 - log10
 - log
 - log10l
 - logl
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -20,7 +20,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - logf
 - logl
@@ -40,16 +43,16 @@ helpviewer_keywords:
 - logf function
 - logarithms
 ms.assetid: 7adc77c2-04f7-4245-a980-21215563cfae
-ms.openlocfilehash: c8e3f73e61fefa7a39a6d53d63739b094d78c499
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f610ead4d71a877051fdec8df2a1564089141eea
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62286009"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70953233"
 ---
-# <a name="log-logf-logl-log10-log10f-log10l"></a>protokol, logf –, logl, log10, log10f –, log10l
+# <a name="log-logf-logl-log10-log10f-log10l"></a>log, logf –, logl, log10 –, log10f –, log10l
 
-Výpočet logaritmů.
+Vypočítá logaritmy.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -72,31 +75,31 @@ long double log10( long double x );  // C++ only
 ### <a name="parameters"></a>Parametry
 
 *x*<br/>
-Hodnota, jejíž logaritmus se má nacházet.
+Hodnota, jejíž logaritmus má být nalezen.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-**Protokolu** funkce vrátí přirozený logaritmus (základní *e*) z *x* v případě úspěšného ověření. **Log10** funkce Vrátí logaritmus o základu 10. Pokud *x* je negativní, vrátí tyto funkce neomezenou (Najít), ve výchozím nastavení. Pokud *x* je 0, vrátí nekonečno (INF).
+Funkce **protokolu** Vrátí přirozený logaritmus (základ *e*) *x* v případě úspěchu. Funkce **log10 –** vrací logaritmus o základu 10. Pokud je *x* záporné, vrátí tyto funkce ve výchozím nastavení neurčitelné (). Pokud je *x* 0, vrátí nekonečno (INF).
 
-|Vstup|Výjimka SEH|Výjimka Matherr|
+|Vstup|Výjimka SEH|Výjimka matherr|
 |-----------|-------------------|-----------------------|
-|ROZMEZÍ QNAN, AJÍT|žádná|_DOMAIN|
+|QNAN, ZASÁHNOUT|žádná|_DOMAIN|
 |± 0|ZERODIVIDE|_SING|
-|*x* < 0|NEPLATNÝ|_DOMAIN|
+|*x* < 0|NENÍ|_DOMAIN|
 
-**protokol** a **log10** mít implementaci, která používá Streaming SIMD Extensions 2 (SSE2). Zobrazit [_set_sse2_enable –](set-sse2-enable.md) informace a omezení používání implementace SSE2.
+**protokol** a **log10 –** mají implementaci, která používá streaming SIMD Extensions 2 (SSE2). Informace a omezení použití implementace SSE2 najdete v tématu [_set_SSE2_enable](set-sse2-enable.md) .
 
 ## <a name="remarks"></a>Poznámky
 
-Jazyk C++ umožňuje přetížení, takže můžete volat přetížení **protokolu** a **log10** , která používají a vrací **float** nebo **long double** hodnoty. V programu jazyka C **protokolu** a **log10** vždy převezme a vrátí **double**.
+C++umožňuje přetížení, takže můžete volat přetížení **log** a **log10 –** , která přijímají a vracejí hodnoty **float** nebo **Long Double** . V programu v jazyce C, **protokol** a **log10 –** vždycky přebírají a vracejí **dvojitou**hodnotu.
 
 ## <a name="requirements"></a>Požadavky
 
 |Rutina|Požadovaný hlavičkový soubor|
 |-------------|---------------------|
-|**protokol**, **logf –**, **logl**, **log10**, **log10f –**, **log10l**|\<math.h>|
+|**log**, **logf –** , **logl**, **log10 –** , **log10f –** , **log10l**|\<Math. h >|
 
-Další informace o kompatibilitě, naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Příklad
 
@@ -127,7 +130,7 @@ log( 9000.00 ) = 9.104980
 log10( 9000.00 ) = 3.954243
 ```
 
-Chcete-li generovat logaritmů u jiných základů, použijte matematický vztah: protokolu základní b == přirozený logaritmus (o) / přirozené protokolu (b).
+Chcete-li generovat logaritmy pro jiné základy, použijte matematický vztah: log Base b of a = = přirozený protokol (a)/přirozený protokol (b).
 
 ```cpp
 // logbase.cpp

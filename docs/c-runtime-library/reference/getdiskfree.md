@@ -1,9 +1,9 @@
 ---
 title: _getdiskfree
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _getdiskfree
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-filesystem-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - getdiskfree
 - _getdiskfree
@@ -26,19 +29,19 @@ helpviewer_keywords:
 - disk size
 - getdiskfree function
 ms.assetid: 47a3f6cf-4816-452a-8f3d-1c3ae02a0f2a
-ms.openlocfilehash: 03c39802301406bc4250328983c8cf8bad94497f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0feee21ee76d076263ea3750d00fd0142f26b7d9
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62331763"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70955100"
 ---
-# <a name="getdiskfree"></a>_getdiskfree
+# <a name="_getdiskfree"></a>_getdiskfree
 
-Informace o diskové jednotce využije k vyplnění **_diskfree_t –** struktury.
+Používá k naplnění struktury **_diskfree_t** informace o diskové jednotce.
 
 > [!IMPORTANT]
-> Toto rozhraní API nelze použít v aplikacích, které jsou spouštěny v modulu Windows Runtime. Další informace najdete v tématu [CRT funkce nejsou podporovány v aplikacích pro univerzální platformu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> Toto rozhraní API nelze použít v aplikacích, které jsou spouštěny v prostředí Windows Runtime. Další informace najdete v tématu [funkce CRT nejsou v aplikacích Univerzální platforma Windows podporovány](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -52,18 +55,18 @@ unsigned _getdiskfree(
 ### <a name="parameters"></a>Parametry
 
 *drive*<br/>
-Disková jednotka, pro které chcete informace.
+Disková jednotka, pro kterou chcete získat informace.
 
 *driveinfo*<br/>
-A **_diskfree_t –** struktura, která naplní se informace o jednotce.
+Struktura **_diskfree_t** , která bude naplněna informacemi o jednotce.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Pokud funkce uspěje, vrácená hodnota je nula. Pokud funkce selže, vrácená hodnota je kód chyby. Hodnota **errno** nastavena pro všechny chyby, které jsou vráceny v operačním systému. Další informace o chybové stavy, které jsou označeny **errno**, naleznete v tématu [errno – konstanty](../../c-runtime-library/errno-constants.md).
+Pokud je funkce úspěšná, vrácená hodnota je nula. Pokud se funkce nezdařila, vrácená hodnota je kód chyby. Hodnota **errno** je nastavena pro všechny chyby, které jsou vráceny operačním systémem. Další informace o chybových podmínkách, které jsou označeny **errno**, naleznete v tématu [konstanty errno](../../c-runtime-library/errno-constants.md).
 
 ## <a name="remarks"></a>Poznámky
 
-**_Diskfree_t –** struktura je definován v Direct.h.
+Struktura **_diskfree_t** je definována v Direct. h.
 
 ```C
 struct _diskfree_t {
@@ -74,15 +77,15 @@ struct _diskfree_t {
 };
 ```
 
-Tato funkce ověřuje své parametry. Pokud *driveinfo* ukazatel **NULL** nebo *jednotky* určuje neplatná jednotka, tato funkce vyvolá obslužnou rutinu neplatného parametru, jak je popsáno v [ Ověření parametru](../../c-runtime-library/parameter-validation.md). Pokud provádění může pokračovat, funkce vrátí **EINVAL** a nastaví **errno** k **EINVAL**. Jednotky platné rozsahu od 0 do 26. A *jednotky* hodnota 0 určuje aktuální jednotku; po tomto datu, čísla namapovat na písmena anglické abecedy takové, že 1 označuje jednotce A, 3 označuje jednotce C a tak dále.
+Tato funkce ověří své parametry. Pokud má ukazatel *DriveInfo* **hodnotu null** nebo *jednotka* určuje neplatnou jednotku, vyvolá tato funkce obslužnou rutinu neplatného parametru, jak je popsáno v tématu [ověřování parametru](../../c-runtime-library/parameter-validation.md). Pokud provádění může pokračovat, funkce vrátí **EINVAL** a nastaví **errno** na **EINVAL**. Platný rozsah jednotek je od 0 do 26. Hodnota *jednotky* 0 určuje aktuální jednotku. potom se čísla mapují na písmena anglické abecedy, například 1 označuje jednotku A, 3 označuje jednotku C atd.
 
 ## <a name="requirements"></a>Požadavky
 
 |Rutina|Požadovaný hlavičkový soubor|
 |-------------|---------------------|
-|**_getdiskfree**|\<direct.h>|
+|**_getdiskfree**|\<Direct. h >|
 
-Další informace o kompatibilitě naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Příklad
 

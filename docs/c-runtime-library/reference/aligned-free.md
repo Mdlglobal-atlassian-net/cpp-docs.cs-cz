@@ -1,9 +1,9 @@
 ---
 title: _aligned_free
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _aligned_free
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-heap-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - aligned_free
 - _aligned_free
@@ -23,16 +26,16 @@ helpviewer_keywords:
 - _aligned_free function
 - aligned_free function
 ms.assetid: ed1ce952-cdfc-4682-85cc-f75d4101603d
-ms.openlocfilehash: e2d1dc1172d1cd0d31f8daa8125bd052252393c0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 44556d3f044a567f4903ef14a4b2a9b353af02ff
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62341649"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70943974"
 ---
-# <a name="alignedfree"></a>_aligned_free
+# <a name="_aligned_free"></a>_aligned_free
 
-Uvolní blok paměti, která byla přidělena pomocí [_aligned_malloc](aligned-malloc.md) nebo [_aligned_offset_malloc –](aligned-offset-malloc.md).
+Uvolňuje blok paměti, který byl přidělen pomocí [_aligned_malloc](aligned-malloc.md) nebo [_aligned_offset_malloc](aligned-offset-malloc.md).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -45,19 +48,19 @@ void _aligned_free (
 ### <a name="parameters"></a>Parametry
 
 *memblock*<br/>
-Ukazatele na blok paměti, která se vrátila `_aligned_malloc` nebo `_aligned_offset_malloc` funkce.
+Ukazatel na blok paměti, který byl vrácen do `_aligned_malloc` funkce or. `_aligned_offset_malloc`
 
 ## <a name="remarks"></a>Poznámky
 
-**_aligned_free –** je označen `__declspec(noalias)`, což znamená, že funkce je zaručeno, že neupraví globální proměnné. Další informace najdete v tématu [noalias](../../cpp/noalias.md).
+**_aligned_free** je označena `__declspec(noalias)`, což znamená, že funkce je zaručena, že nemění globální proměnné. Další informace najdete v tématu [jiné](../../cpp/noalias.md).
 
-Tuto funkci nelze ověřit svůj parametr, na rozdíl od jiných funkcí CRT _aligned. Pokud *memblock* je ukazatel s hodnotou NULL, tato funkce provede jednoduše žádná akce. Nezmění `errno` a vyvolá obslužnou rutinu neplatného parametru. Pokud dojde k chybě ve funkci kvůli pomocí dříve _aligned funkce přidělení bloku paměti nebo chybné zarovnání paměti dochází kvůli některé nepředvídaných calamity, funkce vygeneruje sestavu ladění z [_RPT, _RPTF, _RPTW, _Rptfw makra](rpt-rptf-rptw-rptfw-macros.md).
+Tato funkce neověřuje svůj parametr, na rozdíl od ostatních _alignedch funkcí CRT. Pokud je *memblock* ukazatel s hodnotou null, tato funkce jednoduše neprovede žádné akce. Nemění `errno` se a nevyvolává obslužnou rutinu neplatného parametru. Pokud dojde k chybě ve funkci kvůli pomocí dříve _aligned funkce přidělení bloku paměti nebo chybné zarovnání paměti dochází kvůli některé nepředvídaných calamity, funkce vygeneruje sestavu ladění z [_RPT, _RPTF, _RPTW, _Rptfw makra](rpt-rptf-rptw-rptfw-macros.md).
 
 ## <a name="requirements"></a>Požadavky
 
 |Rutina|Požadovaný hlavičkový soubor|
 |-------------|---------------------|
-|**_aligned_free**|\<malloc.h>|
+|**_aligned_free**|\<. h >|
 
 ## <a name="example"></a>Příklad
 

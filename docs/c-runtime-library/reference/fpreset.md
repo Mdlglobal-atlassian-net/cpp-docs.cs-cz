@@ -1,9 +1,9 @@
 ---
 title: _fpreset
 ms.date: 04/05/2018
-apiname:
+api_name:
 - _fpreset
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-runtime-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _fpreset
 - fpreset
@@ -24,14 +27,14 @@ helpviewer_keywords:
 - floating-point numbers, resetting math package
 - _fpreset function
 ms.assetid: f31c6a04-b464-4f07-a7c4-42133360e328
-ms.openlocfilehash: 0b3ea4289cd0ff031fd2828e3c4183911459297c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 842b9c794d04d71f8f6ca97e35fb3cac2f7bb1ec
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62333232"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70957017"
 ---
-# <a name="fpreset"></a>_fpreset
+# <a name="_fpreset"></a>_fpreset
 
 Obnoví balíček s plovoucí desetinnou čárkou.
 
@@ -43,17 +46,17 @@ void _fpreset( void );
 
 ## <a name="remarks"></a>Poznámky
 
-**_Fpreset –** funkce znovu inicializuje s plovoucí desetinnou čárkou matematickém balíčku. **_fpreset –** se obvykle používá s **signál**, **systému**, nebo **_exec** nebo **_spawn** funkce. Pokud program traps signály Chyba plovoucí desetinné čárky (**SIGFPE**) s **signál**, ho můžete bezpečně zotavit s plovoucí desetinnou čárkou chyby vyvoláním **_fpreset –** a pomocí **longjmp**.
+Funkce **_fpreset** znovu inicializuje matematický balíček s plovoucí desetinnou čárkou. **_fpreset** se obvykle používá s funkcemi **signálu**, **systému** **nebo** **_spawn** . Pokud program zachytávání chybových signálů s plovoucí desetinnou čárkou (**SIGFPE**) **signálem**, může se bezpečně zotavit z chyb s plovoucí desetinnou čárkou vyvoláním **_fpreset** a použitím **longjmp**.
 
-Tato funkce je zastaralá při kompilaci s [/CLR (kompilace Common Language Runtime)](../../build/reference/clr-common-language-runtime-compilation.md) protože modul CLR podporuje pouze základní přesnost s plovoucí desetinnou čárkou.
+Tato funkce je při kompilaci s možností [/CLR (Common Language Runtime Compilation)](../../build/reference/clr-common-language-runtime-compilation.md) zastaralá, protože modul CLR (Common Language Runtime) podporuje jenom výchozí přesnost s plovoucí desetinnou čárkou.
 
 ## <a name="requirements"></a>Požadavky
 
 |Funkce|Požadovaný hlavičkový soubor|
 |--------------|---------------------|
-|**_fpreset**|\<float.h >|
+|**_fpreset**|\<float. h >|
 
-Další informace o kompatibilitě naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Příklad
 

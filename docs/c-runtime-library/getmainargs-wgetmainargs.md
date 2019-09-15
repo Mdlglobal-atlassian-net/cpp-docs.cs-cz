@@ -1,10 +1,10 @@
 ---
 title: __getmainargs, __wgetmainargs
 ms.date: 11/04/2016
-apiname:
+api_name:
 - __wgetmainargs
 - __getmainargs
-apilocation:
+api_location:
 - msvcr100.dll
 - msvcrt.dll
 - msvcr110_clr0400.dll
@@ -12,7 +12,10 @@ apilocation:
 - msvcr110.dll
 - msvcr90.dll
 - msvcr120.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - __wgetmainargs
 - __getmainargs
@@ -20,16 +23,16 @@ helpviewer_keywords:
 - __wgetmainargs
 - __getmainargs
 ms.assetid: f72f54eb-9509-4bdf-8752-40fc49055439
-ms.openlocfilehash: 6e2bf21f2ac50d3486af56f9581ff6c8d0e0c309
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: dbf186fa699e8faf85385fd322482a4373b3fd60
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62343436"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70940352"
 ---
-# <a name="getmainargs-wgetmainargs"></a>__getmainargs, __wgetmainargs
+# <a name="__getmainargs-__wgetmainargs"></a>__getmainargs, __wgetmainargs
 
-Vyvolá parsování příkazového řádku a zkopíruje argumenty, které mají `main()` zpět prostřednictvím předaný ukazatele.
+Vyvolá analýzu příkazového řádku a zkopíruje argumenty pro `main()` zpět předanými ukazateli.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -52,27 +55,27 @@ int __wgetmainargs (
 #### <a name="parameters"></a>Parametry
 
 `_Argc`<br/>
-Celé číslo obsahující počet argumentů, které následují v `argv`. Parametr `argc` je vždy větší nebo roven 1.
+Celé číslo, které obsahuje počet argumentů, které následují `argv`v. Parametr `argc` je vždy větší nebo roven 1.
 
 `_Argv`<br/>
-Pole řetězců zakončených znakem null představující argumenty příkazového řádku zadané uživatelem programu. Podle konvence `argv[0]` příkaz, kterým je program vyvolán, argv [1] je první argument příkazového řádku a tak dále, dokud argv [argc], což je vždy **NULL**. První argument příkazového řádku je vždy `argv[1]` a poslední je `argv[argc - 1]`.
+Pole řetězců zakončených znakem null představující argumenty příkazového řádku zadané uživatelem programu. Podle konvence `argv[0]` je příkaz, se kterým se program vyvolá, argv [1] je první argument příkazového řádku a tak dále, dokud argv [argc], které je vždycky **null**. První argument příkazového řádku je vždycky `argv[1]` a ten je `argv[argc - 1]`poslední.
 
 `_Env`<br/>
-Pole řetězců, které představují proměnné nastavené v uživatelském prostředí. Toto pole je ukončeno prvkem **NULL** položka.
+Pole řetězců, které reprezentují proměnné nastavené v uživatelském prostředí. Toto pole je ukončeno položkou **null** .
 
 `_DoWildCard`<br/>
-Celé číslo, pokud na hodnotu 1 rozšíří zástupné znaky v argumentech příkazového řádku, nebo pokud nastaveno na 0 nemá žádný účinek.
+Celé číslo, které je-li nastaveno na hodnotu 1, rozbalí zástupné znaky v argumentech příkazového řádku nebo pokud je nastaveno na hodnotu 0, neprovede nic.
 
 `_StartInfo`<br/>
-Další informace, které se mají předat CRT knihovny DLL.
+Další informace, které mají být předány knihovně DLL CRT.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-0 v případě úspěchu; zápornou hodnotu, pokud není úspěšné.
+0, pokud bylo úspěšné; záporná hodnota v případě neúspěchu.
 
 ## <a name="remarks"></a>Poznámky
 
-Použití `__getmainargs` na platformách jiných širokého znaku a `__wgetmainargs` na platformách širokého znaku (Unicode).
+Používejte `__getmainargs` na jiných než různých znakových platformách `__wgetmainargs` a na platformách s velkým znakem (Unicode).
 
 ## <a name="requirements"></a>Požadavky
 

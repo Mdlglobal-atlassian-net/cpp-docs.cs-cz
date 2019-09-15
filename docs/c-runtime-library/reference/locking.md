@@ -1,9 +1,9 @@
 ---
 title: _locking
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _locking
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _locking
 helpviewer_keywords:
@@ -25,16 +28,16 @@ helpviewer_keywords:
 - files [C++], locking
 - _locking function
 ms.assetid: 099aaac1-d4ca-4827-aed6-24dff9844150
-ms.openlocfilehash: 90327ed3388d4f18e0f64f92c33112c9ddd800f5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4450c511b9d98c31b7e6a777f54f3bd8e0affbb7
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62157460"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70953272"
 ---
-# <a name="locking"></a>_locking
+# <a name="_locking"></a>_locking
 
-Uzamyká nebo odemyká bajtů do souboru.
+Zamkne nebo odemkne bajty souboru.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -51,52 +54,52 @@ int _locking(
 *fd*<br/>
 Popisovač souboru.
 
-*Režim*<br/>
-Uzamčení akce k provedení.
+*Mode*<br/>
+Akce zamykání, která se má provést
 
 *nbytes*<br/>
-Počet bajtů, které mají zamknout.
+Počet bajtů, které mají být zamčeny.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-**_locking –** v případě úspěchu vrátí hodnotu 0. Návratová hodnota-1 označuje chybu, v takovém případě [errno](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) nastavena na jednu z následujících hodnot.
+**_locking** vrací 0, pokud bylo úspěšné. Návratová hodnota-1 označuje chybu, v takovém případě je [errno](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) nastavena na jednu z následujících hodnot.
 
-|Hodnota errno|Podmínka|
+|hodnota errno|Podmínka|
 |-|-|
-| **EACCES** | Uzamčení porušení (soubor již zamčený nebo odemčený). |
-| **EBADF** | Popisovač souboru je neplatná. |
-| **EDEADLOCK** | Narušení uzamčení. Vrátí, když **_LK_LOCK** nebo **_LK_RLCK** příznak zadán a nelze jej uzamknout soubor po 10 pokusech. |
-| **EINVAL** | Byl zadán neplatný argument **_locking –**. |
+| **EACCES** | Narušení uzamčení (soubor je už uzamčený nebo odemčený). |
+| **EBADF** | Neplatný popisovač souboru |
+| **EDEADLOCK** | Narušení zámku. Vrátí se, když je zadaný příznak **_LK_LOCK** nebo **_LK_RLCK** a soubor se nedá uzamknout po 10 pokusech. |
+| **EINVAL** | **_Locking**byl zadán neplatný argument. |
 
-Pokud selže z důvodu chybný parametr, jako je například neplatného popisovače souboru, vyvolán obslužnou rutinu neplatného parametru, jak je popsáno v [Parameter Validation](../../c-runtime-library/parameter-validation.md).
+Pokud je selhání způsobeno chybným parametrem, jako je neplatný popisovač souboru, je vyvolána obslužná rutina neplatného parametru, jak je popsáno v tématu [ověřování parametru](../../c-runtime-library/parameter-validation.md).
 
 ## <a name="remarks"></a>Poznámky
 
-**_Locking –** funkce uzamyká nebo odemyká *nbytes* bajtů do souboru určeného parametrem *fd*. Zamykací bajty v souboru brání v přístupu k těmto bajtů s jinými procesy. Všechny blokování a odblokování začne na aktuální pozici ukazatele souboru a pokračuje ještě *nbytes* bajtů. Je možné zamykací bajty za koncem souboru.
+Funkce **_locking** zamkne nebo odemkne *nBytes* bajtů souboru zadaného parametrem *FD*. Uzamykání bajtů v souboru brání v přístupu k těmto bajtům jiným procesům. Všechna uzamknutí nebo odemknutí začíná na aktuální pozici ukazatele souboru a pokračuje pro další *nBytes* bajty. Je možné zamknout bajty za konec souboru.
 
-*režim* musí být jedna z následujících konstant manifestu, které jsou definovány v Locking.h.
+*režim* musí být jedna z následujících konstant manifestu, které jsou definovány v uzamykání. h.
 
-|*režim* hodnota|Efekt|
+|hodnota *režimu*|Efekt|
 |-|-|
-| **_LK_LOCK** | Zamkne zadaný počet bajtů. Pokud nelze uzamknout počet bajtů, program okamžitě pokusí znovu za 1 sekundu. Pokud po 10 pokusech, nelze uzamknout počet bajtů, konstanta vrátí chybu. |
-| **_LK_NBLCK** | Zamkne zadaný počet bajtů. Pokud nelze uzamknout počet bajtů, konstanta vrátí chybu. |
+| **_LK_LOCK** | Zamkne zadané bajty. Pokud bajty nelze zamknout, program se hned po 1 sekundách pokusí znovu. Pokud po 10 pokusech nelze bajty uzamknout, vrátí konstanta chybu. |
+| **_LK_NBLCK** | Zamkne zadané bajty. Pokud bajty nelze uzamknout, vrátí konstanta chybu. |
 | **_LK_NBRLCK** | Stejné jako **_LK_NBLCK**. |
 | **_LK_RLCK** | Stejné jako **_LK_LOCK**. |
-| **_LK_UNLCK** | Odemkne zadané bajtů, které musí mít dříve uzamčen. |
+| **_LK_UNLCK** | Odemkne zadané bajty, které se musí dřív uzamknout. |
 
-Jde zamknout souboru více oblastí, které se nepřekrývají. Oblast odemykají musí být dříve uzamčeny. **_locking –** nemá sloučení sousední oblasti; pokud jsou dvě oblasti uzamčené vedle sebe, každou oblast, musí být odemčený samostatně. Oblastí by měl uzamknou jen krátce a by měl být odemknout před zavřením souboru nebo standardním ukončením programu.
+Více oblastí souboru, které se nepřekrývají, lze uzamknout. Odemknutá oblast musí být dříve uzamčena. **_locking** neslučuje sousední oblasti; Pokud se dvě uzamčené oblasti sousedí, je nutné každou oblast odemknout samostatně. Oblasti by se měly uzamknout jenom krátce a před zavřením souboru nebo ukončením programu by se měly odemknout.
 
 ## <a name="requirements"></a>Požadavky
 
 |Rutina|Požadovaný hlavičkový soubor|Volitelné záhlaví|
 |-------------|---------------------|---------------------|
-|**_locking**|\<IO.h > a \<sys/locking.h >|\<errno.h>|
+|**_locking**|\<IO. h > a \<sys/uzamykání. h >|\<errno.h>|
 
-Další informace o kompatibilitě naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
 
 ## <a name="libraries"></a>Knihovny
 
-Všechny verze [běhových knihoven C](../../c-runtime-library/crt-library-features.md).
+Všechny verze [knihoven run-time jazyka C](../../c-runtime-library/crt-library-features.md).
 
 ## <a name="example"></a>Příklad
 
@@ -149,7 +152,7 @@ int main( void )
 }
 ```
 
-### <a name="input-crtlockingtxt"></a>Vstup: crt_locking.txt
+### <a name="input-crt_lockingtxt"></a>Vstup: crt_locking. txt
 
 ```Input
 The first thirty bytes of this file will be locked.

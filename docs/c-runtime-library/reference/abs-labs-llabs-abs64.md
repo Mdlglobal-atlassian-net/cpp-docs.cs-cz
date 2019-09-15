@@ -1,12 +1,12 @@
 ---
 title: abs, labs, llabs, _abs64
 ms.date: 04/05/2018
-apiname:
+api_name:
 - abs
 - _abs64
 - labs
 - llabs
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -18,7 +18,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-utility-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - stdlib/_abs64
 - math/abs
@@ -36,14 +39,14 @@ helpviewer_keywords:
 - _abs64 function
 - calculating absolute values
 ms.assetid: 60f789d1-4a1e-49f5-9e4e-0bdb277ea26a
-ms.openlocfilehash: 61aa0a48757a35708ffb85d2c0525bb4eac82d56
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: bf5b4be654a3bd48b3e0d43ac97ce02b348942bc
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62341987"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70939934"
 ---
-# <a name="abs-labs-llabs-abs64"></a>abs, labs, llabs, _abs64
+# <a name="abs-labs-llabs-_abs64"></a>abs, labs, llabs, _abs64
 
 Vypočítá absolutní hodnotu argumentu.
 
@@ -71,26 +74,26 @@ float abs( float n );   // C++ only
 
 ## <a name="return-value"></a>Návratová hodnota
 
-**Abs**, **labs**, **llabs –** a **_abs64 –** funkce vrátí absolutní hodnotu parametru *n*. Není vrácena žádná chyba.
+Funkce **ABS**, **Labs**, **LLabs** a **_abs64** vrátí absolutní hodnotu parametru *n*. Nevrátila se žádná chybová zpráva.
 
 ## <a name="remarks"></a>Poznámky
 
-Protože jazyk C++ umožňuje přetížení, můžete volat přetížení **abs** , která používají a vrací **dlouhé**, **dlouhé** **dlouhé**,  **float**, **double**, a **dlouhé** **double** hodnoty. Tato přetížení jsou definovány v \<cmath > záhlaví. V programu jazyka C **abs** vždy převezme a vrátí **int**.
+Vzhledem C++ k tomu, že umožňuje přetížení, můžete volat přetížení funkce **ABS** , která přijímá a vrací **dlouhé**, **dlouhé**hodnoty **float**, **Double**a **Long** **Double** . Tato přetížení jsou definována v \<hlavičce > cmath. V programu v jazyce C funkce **ABS** vždycky přebírá a vrací **int**.
 
-**Specifické pro Microsoft**: Protože oblast záporných celých čísel, která lze znázornit pomocí libovolný integrální typ, je větší než rozsah kladných celých čísel, která lze znázornit pomocí tohoto typu, je možné zadat argument do těchto funkcí, které nelze převést. Pokud absolutní hodnota argumentu nemůže být reprezentována návratovým typem, **abs** funkce vrátí nezměněnou hodnotu argumentu. Konkrétně `abs(INT_MIN)` vrátí `INT_MIN`, `labs(LONG_MIN)` vrátí `LONG_MIN`, `llabs(LLONG_MIN)` vrátí `LLONG_MIN`, a `_abs64(_I64_MIN)` vrátí `_I64_MIN`. To znamená, že **abs** funkce nelze používat k zajištění kladné hodnoty.
+**Specifické pro společnost Microsoft**: Vzhledem k tomu, že rozsah záporných celých čísel, která lze znázornit pomocí jakéhokoli integrálního typu, je větší než rozsah kladných celých čísel, která lze znázornit pomocí tohoto typu, je možné zadat argument pro tyto funkce, které nelze převést. Pokud absolutní hodnota argumentu nemůže být reprezentována návratovým typem, funkce **ABS** vrátí hodnotu argumentu beze změny. `abs(INT_MIN)` Konkrétně vrací`INT_MIN` ,vrací`LLONG_MIN`, vracía`_abs64(_I64_MIN)` vrací .`_I64_MIN` `labs(LONG_MIN)` `LONG_MIN` `llabs(LLONG_MIN)` To znamená, že funkce **ABS** nelze použít k zaručení kladné hodnoty.
 
 ## <a name="requirements"></a>Požadavky
 
-|Rutina|Požadovaná hlavička C|Požadované hlaviček jazyka C++|
+|Rutina|Povinné záhlaví jazyka C|Požadovaná C++ hlavička|
 |-------------|-----------------------|---------------------------|
-|**abs**, **labs**, **llabs**|\<Math.h > nebo \<stdlib.h >|\<cmath >, \<cstdlib – >, \<stdlib.h > nebo \<math.h >|
-|**_abs64**|\<stdlib.h>|\<cstdlib – > nebo \<stdlib.h >|
+|**abs**, **labs**, **llabs**|\<Math. h > nebo \<Stdlib. h >|\<cmath >, \<cstdlib >, \<Stdlib. h > nebo \<Math. h >|
+|**_abs64**|\<stdlib.h>|\<cstdlib > nebo \<Stdlib. h >|
 
-Použití přetížené verze **abs** v jazyce C++, musíte zahrnout \<cmath > záhlaví.
+Chcete-li použít přetížené verze funkce **ABS** v C++, je \<nutné zahrnout hlavičku > cmath.
 
 ## <a name="example"></a>Příklad
 
-Tento program vypočítá a zobrazí absolutní hodnoty několik čísel.
+Tento program počítá a zobrazuje absolutní hodnoty několika čísel.
 
 ```C
 // crt_abs.c

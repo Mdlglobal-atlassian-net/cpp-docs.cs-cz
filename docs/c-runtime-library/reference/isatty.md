@@ -1,9 +1,9 @@
 ---
 title: _isatty
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _isatty
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _isatty
 helpviewer_keywords:
@@ -24,16 +27,16 @@ helpviewer_keywords:
 - _isatty function
 - checking character devices
 ms.assetid: 9f1b2e87-0cd7-4079-b187-f2b7ca15fcbe
-ms.openlocfilehash: ef0df5f859779c081df47ef4bfe938ec2601d524
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2d2ba2fdfeb1c8bffe47b0953f0629746d2eb599
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62157471"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70954559"
 ---
-# <a name="isatty"></a>_isatty
+# <a name="_isatty"></a>_isatty
 
-Určuje, zda je soubor popisovač spojen se znakovým zařízením.
+Určuje, zda je popisovač souboru přidružen ke znakovým zařízením.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -44,17 +47,17 @@ int _isatty( int fd );
 ### <a name="parameters"></a>Parametry
 
 *fd*<br/>
-Popisovač souboru odkazující na testované zařízení.
+Popisovač souboru, který odkazuje na zařízení, které se má testovat
 
 ## <a name="return-value"></a>Návratová hodnota
 
-**_isatty –** vrací nenulovou hodnotu, pokud je popisovač spojen se znakovým zařízením. V opačném případě **_isatty –** vrátí hodnotu 0.
+**_isatty** vrací nenulovou hodnotu, pokud je popisovač přidružen ke znakovým zařízením. V opačném případě **_isatty** vrátí hodnotu 0.
 
 ## <a name="remarks"></a>Poznámky
 
-**_Isatty –** funkce určuje, zda *fd* souvisí se znakovým zařízením (terminál, konzole, tiskárna nebo sériový port).
+Funkce **_isatty** určuje, zda je *FD* přidružen ke znakovým zařízením (terminál, konzola, tiskárna nebo sériový port).
 
-Tato funkce ověřuje *fd* parametru. Pokud *fd* je nesprávný ukazatel souboru, je vyvolána obslužná rutina neplatného parametru, jak je popsáno v [Parameter Validation](../../c-runtime-library/parameter-validation.md). Pokud smí provádění pokračovat, funkce vrátí hodnotu 0 a nastaví **errno** k **EBADF**.
+Tato funkce ověří parametr *FD* . Pokud je *FD* špatný ukazatel na soubor, je vyvolána obslužná rutina neplatného parametru, jak je popsáno v tématu [ověřování parametru](../../c-runtime-library/parameter-validation.md). Pokud provádění může pokračovat, vrátí funkce hodnotu 0 a nastaví **errno** na **EBADF**.
 
 ## <a name="requirements"></a>Požadavky
 
@@ -62,11 +65,11 @@ Tato funkce ověřuje *fd* parametru. Pokud *fd* je nesprávný ukazatel souboru
 |-------------|---------------------|
 |**_isatty**|\<io.h>|
 
-Další informace o kompatibilitě naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
 
 ## <a name="libraries"></a>Knihovny
 
-Všechny verze [běhových knihoven C](../../c-runtime-library/crt-library-features.md).
+Všechny verze [knihoven run-time jazyka C](../../c-runtime-library/crt-library-features.md).
 
 ## <a name="example"></a>Příklad
 

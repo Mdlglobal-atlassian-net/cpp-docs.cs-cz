@@ -1,9 +1,9 @@
 ---
 title: _CIlog
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _CIlog
-apilocation:
+api_location:
 - msvcr90.dll
 - msvcr120.dll
 - msvcr80.dll
@@ -12,7 +12,10 @@ apilocation:
 - msvcr100.dll
 - msvcrt.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _CIlog
 - CIlog
@@ -20,16 +23,16 @@ helpviewer_keywords:
 - _CIlog intrinsic
 - CIlog intrinsic
 ms.assetid: 23503854-ddaa-4fe0-a4a3-7fbb3a43bdec
-ms.openlocfilehash: 29b35e5807ca3bd1fbb994118314952a9a1760c4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: edc096680522da50910eb42a95a481b83be8791d
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62290089"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70944801"
 ---
-# <a name="cilog"></a>_CIlog
+# <a name="_cilog"></a>_CIlog
 
-Vypočítá přirozený logaritmus nejvyšší hodnotu v zásobníku.
+Vypočítá přirozený logaritmus hodnoty nejvyšší úrovně v zásobníku.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -39,9 +42,9 @@ void __cdecl _CIlog();
 
 ## <a name="remarks"></a>Poznámky
 
-Tato verze `log` funkce má specializované konvence volání, které kompilátor rozpozná. Urychluje provádění, protože kopie zabraňuje generovaných a pomáhá při přidělení registru.
+Tato verze `log` funkce má specializovanou konvenci volání, kterou kompilátor rozumí. Zrychluje spouštění, protože brání vygenerování kopií a pomáhá s přidělením registru.
 
-Výsledná hodnota je vloženy do horní části zásobníku.
+Výsledná hodnota je vložena do horní části zásobníku.
 
 ## <a name="requirements"></a>Požadavky
 

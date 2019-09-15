@@ -1,9 +1,9 @@
 ---
 title: _heapmin
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _heapmin
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-heap-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _heapmin
 - heapmin
@@ -27,16 +30,16 @@ helpviewer_keywords:
 - _heapmin function
 - heapmin function
 ms.assetid: c0bccdf6-2d14-4d7b-a7ff-d6a17bdb410f
-ms.openlocfilehash: 130986894d1e2a68415e6ab9218641eff484ffd1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c36a1028e42d59217586cc50adcb612e78072b03
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62157221"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70954796"
 ---
-# <a name="heapmin"></a>_heapmin
+# <a name="_heapmin"></a>_heapmin
 
-Uvolní paměť nevyužité haldy v operačním systému.
+Uvolní nevyužitou paměť haldy operačnímu systému.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -46,21 +49,21 @@ int _heapmin( void );
 
 ## <a name="return-value"></a>Návratová hodnota
 
-V případě úspěšného ověření **_heapmin –** vrátí hodnotu 0; v opačném případě vrátí funkce hodnotu -1 a nastaví **errno** k **ENOSYS**.
+V případě úspěchu vrátí **_heapmin** hodnotu 0; v opačném případě vrátí funkce hodnotu-1 a nastaví **errno** na **ENOSYS**.
 
 Další informace o tomto a dalších návratových kódech naleznete v tématu [_doserrno, errno, _sys_errlist a _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Poznámky
 
-**_Heapmin –** funkce minimalizuje haldy uvolněním nevyužité haldy paměti pro operační systém. Pokud operační systém nepodporuje **_heapmin –**(například Windows 98), vrátí funkce hodnotu -1 a nastaví **errno** k **ENOSYS**.
+Funkce **_heapmin** minimalizuje haldu uvolněním nevyužité paměti haldy do operačního systému. Pokud operační systém nepodporuje **_heapmin**(například Windows 98), vrátí funkce hodnotu-1 a nastaví **errno** na **ENOSYS**.
 
 ## <a name="requirements"></a>Požadavky
 
 |Rutina|Požadovaný hlavičkový soubor|Volitelné záhlaví|
 |-------------|---------------------|---------------------|
-|**_heapmin**|\<malloc.h>|\<errno.h>|
+|**_heapmin**|\<. h >|\<errno.h>|
 
-Další informace o kompatibilitě naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Viz také:
 

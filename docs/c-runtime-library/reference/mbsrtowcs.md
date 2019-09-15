@@ -1,9 +1,9 @@
 ---
 title: mbsrtowcs
 ms.date: 11/04/2016
-apiname:
+api_name:
 - mbsrtowcs
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,22 +15,25 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-convert-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - mbsrtowcs
 helpviewer_keywords:
 - mbsrtowcs function
 ms.assetid: f3a29de8-e36e-425b-a7fa-a258e6d7909d
-ms.openlocfilehash: 2bc0c8c9e2d871b6d1748c42dc02c627244dbf69
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: de7b25ea8a520dfe2c9cb26ec8989624b670dcb9
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62331139"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70952052"
 ---
 # <a name="mbsrtowcs"></a>mbsrtowcs
 
-Převede řetězec vícebajtového znaku v aktuální národní prostředí na odpovídající řetězec širokých znaků, s možností objektu restartování uprostřed vícebajtového znaku. Bezpečnější verze této funkce je k dispozici. Zobrazit [mbsrtowcs_s –](mbsrtowcs-s.md).
+Převede vícebajtový řetězec znaků v aktuálním národním prostředí na odpovídající řetězec s velkým počtem znaků s možností restartu uprostřed vícebajtového znaku. K dispozici je bezpečnější verze této funkce; viz [mbsrtowcs_s](mbsrtowcs-s.md).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -53,40 +56,40 @@ size_t mbsrtowcs(
 ### <a name="parameters"></a>Parametry
 
 *wcstr*<br/>
-Adresa pro uložení výsledný převést řetězec širokých znaků.
+Adresa pro uložení výsledného převedeného řetězce velkých znaků.
 
 *mbstr*<br/>
-Nepřímý odkaz na umístění řetězec vícebajtový znak pro převod.
+Nepřímý ukazatel na umístění vícebajtového řetězce znaků, který má být převeden.
 
-*Počet*<br/>
-Maximální počet znaků (ne v bajtech) můžete převést a uložit do *wcstr*.
+*výpočtu*<br/>
+Maximální počet znaků (není bajtů), který se má převést a uložit v *wcstr*.
 
 *mbstate*<br/>
-Ukazatel **mbstate_t** převodu stavu objektu. Pokud tato hodnota je ukazatel s hodnotou null, použije se statické interní převodu stav objektu. Protože vnitřní **mbstate_t** objektu není bezpečná pro vlákno, doporučujeme vám vždy předání vlastní *mbstate* parametru.
+Ukazatel na objekt stavu převodu **mbstate_t** . Pokud je tato hodnota ukazatel s hodnotou null, je použit statický objekt stavu převodu. Vzhledem k tomu, že interní objekt **mbstate_t** není bezpečný pro přístup z více vláken, doporučujeme vždy předat vlastní parametr *mbstate* .
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Vrátí počet znaků úspěšně převeden, bez ukončujícího znaku null, pokud existuje. Vrátí (Pokud došlo k chybě a nastaví size_t)(-1) **errno** k EILSEQ.
+Vrátí počet převedených znaků, včetně ukončujícího znaku null, pokud existuje. Vrátí (size_t) (-1), pokud došlo k chybě, a nastaví **errno** na EILSEQ.
 
 ## <a name="remarks"></a>Poznámky
 
-**Mbsrtowcs –** funkce převede řetězec vícebajtových znaků nepřímo odkazované *mbstr*, do široké znaky, které jsou uloženy ve vyrovnávací paměti, na které odkazuje *wcstr*, použití stavu převodu součástí *mbstate*. Převod bude pokračovat pro jednotlivé znaky až do obou ukončujícího znaku null vícebajtového znaku, nalezen vícebajtové sekvence, která neodpovídá platnému znaku v aktuálním národním prostředí, nebo dokud *počet* byly převedeny znaků. Pokud **mbsrtowcs –** zaznamená vícebajtový znak null ('\0') před nebo po *počet* dojde, převede ho na 16-bit ukončující znak null a zastaví.
+Funkce **mbsrtowcs** převede řetězec vícebajtových znaků, na které se nepřímo odkazovalo na *mbstr*, do velkých znaků uložených ve vyrovnávací paměti, na které ukazuje *wcstr*, pomocí stavu převodu obsaženého v *mbstate*. Převod pro každý znak pokračuje, dokud není nalezen ukončovací znak null, který nesouhlasí s platným znakem v aktuálním národním prostředím, nebo dokud nejsou znaky *Count* veden. Pokud **mbsrtowcs** narazí na vícebajtový znak null (' \ 0 ') buď před, nebo pokud dojde k *výpočtu* , převede ho na 16bitový ukončující znak null a zastaví se.
 
-Díky tomu se řetězec širokých znaků na *wcstr* je zakončený hodnotou null jenom v případě **mbsrtowcs –** během převodu dojde vícebajtového znaku null. Pokud sekvence odkazované *mbstr* a *wcstr* překrývají, chování **mbsrtowcs –** není definován. **mbsrtowcs –** vliv podle kategorie LC_TYPE aktuálního národního prostředí.
+Proto je řetězec s velkým znakem na *wcstr* zakončený hodnotou null pouze v případě, že při převodu dojde v **mbsrtowcs** k vícebajtovém znaku null. Pokud se sekvence, na které ukazuje *mbstr* a *wcstr* , překrývají, chování **mbsrtowcs** není definováno. **mbsrtowcs** je ovlivněna kategorií LC_TYPE aktuálního národního prostředí.
 
-**Mbsrtowcs –** funkce se liší od [mbstowcs _mbstowcs_l –](mbstowcs-mbstowcs-l.md) podle jeho restartability. Stav převodu je uložen v *mbstate* pro pozdější volání na stejné nebo jiné funkce nabízet možnost restartování. Při použití funkcí restartovatelnou službu a nonrestartable případě nejsou výsledky definovány.  Například by měla aplikace použít **mbsrlen** místo **mbslen –**, pokud je následných volání **mbsrtowcs –** se použije namísto **mbstowcs**.
+Funkce **mbsrtowcs** se od jejího spuštění liší od [mbstowcs, _mbstowcs_l](mbstowcs-mbstowcs-l.md) . Stav konverze je uložen v *mbstate* pro následné volání stejné nebo jiné možné funkce, které lze spustit. Výsledky nejsou definovány při kombinování použití opakovaných a nerestartů funkcí.  Například aplikace by měla používat **mbsrlen** namísto **mbslen**, pokud je místo **mbstowcs**použito následné volání **mbsrtowcs** .
 
-Pokud *wcstr* není nulový ukazatel, ukazatel objektu odkazované *mbstr* se přiřadí ukazatel s hodnotou null, pokud převod zastavena, protože bylo dosaženo ukončujícího znaku null. V opačném případě je přiřazena adresa pouze posledních převést poslední vícebajtového znaku, případné. To umožňuje volání další funkce restartovat převod, kde toto volání zastavení.
+Pokud *wcstr* není ukazatel s hodnotou null, je objekt ukazatele, na který odkazuje *mbstr* , přiřazen ukazatel s hodnotou null, pokud se převod zastavil, protože bylo dosaženo ukončujícího znaku null. V opačném případě se jim přiřadí adresa hned za poslední vícebajtový znak, pokud nějaký existuje. To umožňuje následné volání funkce pro restartování převodu tam, kde bylo toto volání zastaveno.
 
-Pokud *wcstr* argument je ukazatel s hodnotou null, *počet* argument ignorován a **mbsrtowcs –** vrátí požadovaná velikost pro cílový řetězec širokých znaků. Pokud *mbstate* je ukazatel s hodnotou null, funkce, která používá interní vláknově bezpečné statické **mbstate_t** převodu stavu objektu. Pokud sekvence znaků *mbstr* nemá odpovídající vícebajtové reprezentace znaku, vrátí se -1 a **errno** je nastavena na **EILSEQ**.
+Pokud je argument *wcstr* ukazatel s hodnotou null, je argument *Count* ignorován a **mbsrtowcs** vrátí požadovanou velikost pro cílový řetězec v různých znacích. Pokud je *mbstate* ukazatel s hodnotou null, funkce používá statický objekt stavu konverze **mbstate_t** , který není bezpečný pro přístup z více vláken. Pokud znak sekvence *mbstr* neobsahuje odpovídající vícebajtovou reprezentaci znaků, je vrácena znak-1 a **errno** je nastaven na hodnotu **EILSEQ**.
 
-Pokud *mbstr* vyvolána isa ukazatel s hodnotou null, obslužná rutina neplatného parametru, jak je popsáno v [Parameter Validation](../../c-runtime-library/parameter-validation.md). Pokud smí provádění pokračovat, tato funkce nastaví **errno** k **EINVAL** a vrátí hodnotu -1.
+Pokud je ukazatel s hodnotou null *mbstr* ISA, je vyvolána obslužná rutina neplatného parametru, jak je popsáno v tématu [ověřování parametru](../../c-runtime-library/parameter-validation.md). Pokud provádění může pokračovat, tato funkce nastaví **errno** na **EINVAL** a vrátí-1.
 
-V jazyce C++ má tato funkce přetížení šablon, které vyvolá novější, zabezpečené protějšky této funkce. Další informace najdete v tématu [přetížení zabezpečení šablony](../../c-runtime-library/secure-template-overloads.md).
+V C++systému má tato funkce přetížení šablony, které vyvolá novější a zabezpečený protějšek této funkce. Další informace najdete v tématu [přetížení zabezpečení šablon](../../c-runtime-library/secure-template-overloads.md).
 
 ## <a name="exceptions"></a>Výjimky
 
-**Mbsrtowcs –** funkce je bezpečné s více vlákny za předpokladu, žádné funkce v aktuálním vlákně volá **setlocale** tak dlouho, dokud tato funkce provádí a *mbstate* argument není ukazatel s hodnotou null.
+Funkce **mbsrtowcs** je vláknově bezpečná, dokud žádná funkce v aktuálním vlákně nevolá funkci **setlocale** , pokud je tato funkce prováděna a argument *mbstate* není ukazatel s hodnotou null.
 
 ## <a name="requirements"></a>Požadavky
 

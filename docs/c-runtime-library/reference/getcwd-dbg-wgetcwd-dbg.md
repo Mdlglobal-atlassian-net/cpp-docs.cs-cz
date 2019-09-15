@@ -1,10 +1,10 @@
 ---
 title: _getcwd_dbg, _wgetcwd_dbg
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _wgetcwd_dbg
 - _getcwd_dbg
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-environment-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _getcwd_dbg
 - _wgetcwd_dbg
@@ -31,16 +34,16 @@ helpviewer_keywords:
 - _wgetcwd_dbg function
 - directories [C++], current working
 ms.assetid: 8d5d151f-d844-4aa6-a28c-1c11a22dc00d
-ms.openlocfilehash: 9616c5f7e29b4f003d3943ba058d1f1a1d5adb5c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3eb318b9b2faa8716abdd26eafa926c8072b5614
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62287225"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70955284"
 ---
-# <a name="getcwddbg-wgetcwddbg"></a>_getcwd_dbg, _wgetcwd_dbg
+# <a name="_getcwd_dbg-_wgetcwd_dbg"></a>_getcwd_dbg, _wgetcwd_dbg
 
-Ladicí verze [_getcwd _wgetcwd –](getcwd-wgetcwd.md) funkcí (k dispozici pouze při ladění).
+Ladicí verze funkcí [_getcwd, _wgetcwd](getcwd-wgetcwd.md) (k dispozici pouze během ladění).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -63,8 +66,8 @@ wchar_t *_wgetcwd_dbg(
 
 ### <a name="parameters"></a>Parametry
 
-*Vyrovnávací paměti*<br/>
-Umístění úložiště pro danou cestu.
+*vyrovnávací paměti*<br/>
+Umístění úložiště pro cestu
 
 *maxlen*<br/>
 Maximální délka cesty ve znacích: **char** pro **_getcwd_dbg** a **wchar_t** pro **_wgetcwd_dbg**.
@@ -72,23 +75,23 @@ Maximální délka cesty ve znacích: **char** pro **_getcwd_dbg** a **wchar_t**
 *blockType*<br/>
 Požadovaný typ bloku paměti: **_CLIENT_BLOCK** nebo **_NORMAL_BLOCK**.
 
-*Název souboru*<br/>
-Ukazatel na název zdrojového souboru, který požadovanou operaci přidělení nebo **NULL**.
+*Bitmap*<br/>
+Ukazatel na název zdrojového souboru, který požadoval operaci přidělení, nebo **hodnotu null**.
 
-*linenumber*<br/>
-Číslo řádku ve zdrojovém souboru, ve kterém se požadovaná operace rozdělení nebo **NULL**.
+*číslo řádku*<br/>
+Číslo řádku ve zdrojovém souboru, kde byla požadována operace přidělení, nebo **hodnota null**.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Vrací ukazatel na *vyrovnávací paměti*. A **NULL** vrátit hodnota označuje chybu, a **errno** je nastaven buď na **ENOMEM**, označující, že není dostatek paměti k přidělení *maxlen* bajtů (když **NULL** argument je zadána jako *vyrovnávací paměti*), nebo **ERANGE**, označující, že cesta je delší než *maxlen*  znaků.
+Vrátí ukazatel na *vyrovnávací paměť*. Návratová hodnota **null** označuje chybu a **errno** je nastavená na **ENOMEM**, což značí, že není dostatek paměti k přidělení *MAXLEN* bajtů (když je jako *vyrovnávací paměť*uveden argument **null** ) nebo **ERANGE** , což značí, že cesta je delší než *MAXLEN* znaků.
 
-Další informace najdete v tématu [errno _doserrno, _sys_errlist a _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+Další informace najdete v tématech [errno, _doserrno, _sys_errlist a _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Poznámky
 
-**_Getcwd_dbg** a **_wgetcwd_dbg** funkce jsou stejné jako **_getcwd** a **_wgetcwd –** s tím rozdílem, že když **_ LADĚNÍ** je definován, tyto funkce používají ladicí verze **malloc** a **_malloc_dbg** přidělení paměti, pokud **NULL** je předán jako první parametr. Další informace najdete v tématu [_malloc_dbg](malloc-dbg.md).
+Funkce **_getcwd_dbg** a **_wgetcwd_dbg** jsou stejné jako **_getcwd** a **_wgetcwd** s tím rozdílem, že při definování **_DEBUG** používají tyto funkce ladicí **verzi typu \** a **_malloc_dbg** pro Přidělte paměť, pokud je **hodnota null** předána jako první parametr. Další informace najdete v tématu [_malloc_dbg](malloc-dbg.md).
 
-Chcete-li explicitně volat tyto funkce ve většině případů nepotřebujete. Místo toho můžete definovat **_CRTDBG_MAP_ALLOC** příznak. Když **_CRTDBG_MAP_ALLOC** je definován, jsou volání **_getcwd** a **_wgetcwd –** budou přemapovány na **_getcwd_dbg** a **_ wgetcwd_dbg –**, se *blockType* nastavena na **_NORMAL_BLOCK**. Proto není potřeba explicitně volat tyto funkce, pokud chcete označit jako bloky haldy **_CLIENT_BLOCK**. Další informace najdete v tématu [typy bloků na haldě ladění](/visualstudio/debugger/crt-debug-heap-details).
+Tyto funkce není nutné volat explicitně ve většině případů. Místo toho můžete definovat příznak **_CRTDBG_MAP_ALLOC** . Pokud je definována **_CRTDBG_MAP_ALLOC** , volání **_getcwd** a **_wgetcwd** jsou přemapována na **_Getcwd_dbg** a **_Wgetcwd_dbg**v uvedeném pořadí s *blockType* nastavenou na **_NORMAL_BLOCK**. Proto nemusíte tyto funkce volat explicitně, pokud nechcete označit bloky haldy jako **_CLIENT_BLOCK**. Další informace naleznete v tématu [typy bloků v haldě ladění](/visualstudio/debugger/crt-debug-heap-details).
 
 ## <a name="generic-text-routine-mappings"></a>Mapování rutin obecného textu
 
@@ -103,7 +106,7 @@ Chcete-li explicitně volat tyto funkce ve většině případů nepotřebujete.
 |**_getcwd_dbg**|\<crtdbg.h>|
 |**_wgetcwd_dbg**|\<crtdbg.h>|
 
-Další informace o kompatibilitě naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Viz také:
 

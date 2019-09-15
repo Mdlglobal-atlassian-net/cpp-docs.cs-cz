@@ -1,9 +1,9 @@
 ---
 title: fread_s
 ms.date: 11/04/2016
-apiname:
+api_name:
 - fread_s
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,19 +15,22 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - fread_s
 - stdio/fread_s
 ms.assetid: ce735de0-f005-435d-a8f2-6f4b80ac775e
-ms.openlocfilehash: 1adc999d37025392f03a11daebfffdeeb637d92b
-ms.sourcegitcommit: 878a164fe6d550ca81ab87d8425c8d3cd52fe384
+ms.openlocfilehash: d1f1756af7427ecdfc8ff332f4a2211984a177d8
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/22/2019
-ms.locfileid: "68376133"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70956839"
 ---
-# <a name="freads"></a>fread_s
+# <a name="fread_s"></a>fread_s
 
 Načte data z datového proudu. Tato verze [fread](fread.md) má vylepšení zabezpečení, jak je popsáno v [části funkce zabezpečení v CRT](../../c-runtime-library/security-features-in-the-crt.md).
 
@@ -68,7 +71,7 @@ Další informace o kódech chyb naleznete v tématu [_doserrno, errno, _sys_err
 
 ## <a name="remarks"></a>Poznámky
 
-Funkce **fread_s** čte až do *počtu* položek *elementSize* bajtů ze vstupního *datového proudu* a ukládá je do *vyrovnávací paměti*.  Ukazatel na soubor, který je přidružený  ke streamu (pokud existuje), se zvýší o počet čtených bajtů. Je-li daný datový proud otevřen v textovém režimu, jsou páry datových kanálů návratového řádku nahrazeny znaky jednoduchého znaku čáry. Náhrada nemá žádný vliv na ukazatel na soubor nebo na vrácenou hodnotu. Pozice ukazatele na soubor je neurčitá, pokud dojde k chybě. Nelze určit hodnotu částečného čtení položky.
+Funkce **fread_s** čte až do *počtu* položek *elementSize* bajtů ze vstupního *datového proudu* a ukládá je do *vyrovnávací paměti*.  Ukazatel na soubor, který je přidružený ke streamu (pokud existuje), se zvýší o počet čtených bajtů. Je-li daný datový proud otevřen v textovém režimu, jsou páry datových kanálů návratového řádku nahrazeny znaky jednoduchého znaku čáry. Náhrada nemá žádný vliv na ukazatel na soubor nebo na vrácenou hodnotu. Pozice ukazatele na soubor je neurčitá, pokud dojde k chybě. Nelze určit hodnotu částečného čtení položky.
 
 Tato funkce zamkne další vlákna. Pokud vyžadujete neuzamykání verze, použijte **_fread_nolock**.
 

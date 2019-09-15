@@ -1,14 +1,14 @@
 ---
 title: copysign, copysignf, copysignl, _copysign, _copysignf, _copysignl
 ms.date: 04/05/2018
-apiname:
+api_name:
 - copysignf
 - copysignl
 - _copysignl
 - _copysign
 - _copysignf
 - copysign
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -20,7 +20,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _copysignl
 - copysign
@@ -36,16 +39,16 @@ helpviewer_keywords:
 - _copysign function
 - copysignf function
 ms.assetid: 009216d6-72a2-402d-aa6c-91d924b2c9e4
-ms.openlocfilehash: 6f450da4a4391f94d1905beefdeca8e3f01fec51
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1575f0863b56256513cf6a93cf7b63f3d921af57
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62349053"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70942857"
 ---
-# <a name="copysign-copysignf-copysignl-copysign-copysignf-copysignl"></a>copysign, copysignf, copysignl, _copysign, _copysignf, _copysignl
+# <a name="copysign-copysignf-copysignl-_copysign-_copysignf-_copysignl"></a>copysign, copysignf, copysignl, _copysign, _copysignf, _copysignl
 
-Vrátí hodnotu, která má velikost jednoho argumentu a znaménko druhého.
+Vrátí hodnotu, která má velikost jednoho argumentu a znaménko jiného.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -92,20 +95,20 @@ Hodnota s plovoucí desetinnou čárkou, která je vrácena jako znaménko výsl
 
 ## <a name="return-value"></a>Návratová hodnota
 
-**Copysign –** funkce vrátí hodnotu s plovoucí desetinnou čárkou, která kombinuje velikost *x* a znaménko *y*. Není vrácena žádná chyba.
+Funkce **copysign –** vrací hodnotu s plovoucí desetinnou čárkou, která kombinuje velikost *x* a znaménko *y*. Nevrátila se žádná chybová zpráva.
 
 ## <a name="remarks"></a>Poznámky
 
-Protože jazyk C++ umožňuje přetížení, můžete volat přetížení **copysign –** , která používají a vrací **float** nebo **dlouhé** **double** hodnoty. V programu jazyka C **copysign –** vždy převezme a vrátí **double**.
+Vzhledem C++ k tomu, že umožňuje přetížení, můžete volat přetížení **copysign –** , která přijímají a vracejí hodnoty **float** nebo **Long** **Double** . V programu v jazyce C **copysign –** vždycky přebírá a vrací **Double**.
 
 ## <a name="requirements"></a>Požadavky
 
 |Rutina|Požadovaný hlavičkový soubor|
 |-------------|---------------------|
-|**_copysign**|\<float.h >|
-|**copysign**, **copysignf**, **copysignl**, **_copysignf**, **_copysignl**|\<math.h>|
+|**_copysign**|\<float. h >|
+|**copysign**, **copysignf**, **copysignl**, **_copysignf**, **_copysignl**|\<Math. h >|
 
-Další informace o kompatibilitě naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Viz také:
 

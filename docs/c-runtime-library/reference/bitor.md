@@ -1,7 +1,7 @@
 ---
 title: bitor
 ms.date: 11/04/2016
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -12,7 +12,10 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - bitor
 - std.bitor
@@ -20,16 +23,16 @@ f1_keywords:
 helpviewer_keywords:
 - bitor function
 ms.assetid: 3c0a3711-9c74-41f2-b400-2f7797da30d1
-ms.openlocfilehash: e8bb78e73b8beca4cbffd975f41c3432cf9fdefe
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: bda47a4590095ecf089efa23b983622e2fbd1a59
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62340986"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70939445"
 ---
 # <a name="bitor"></a>bitor
 
-Alternativa k &#124; operátor.
+Alternativa k &#124; operátoru.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -40,7 +43,7 @@ Alternativa k &#124; operátor.
 
 ## <a name="remarks"></a>Poznámky
 
-Makro provede operátor &#124;.
+Makro vypočítá operátor &#124;.
 
 ## <a name="example"></a>Příklad
 
@@ -70,4 +73,4 @@ int main( )
 
 ## <a name="requirements"></a>Požadavky
 
-**Header:** \<iso646.h>
+**Hlavička:** \<iso646. h >

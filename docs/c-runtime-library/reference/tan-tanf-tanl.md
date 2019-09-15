@@ -1,11 +1,11 @@
 ---
-title: Tan, tanf –, tanl
+title: tan, tanf, tanl
 ms.date: 04/10/2018
-apiname:
+api_name:
 - tan
 - tanf
 - tanl
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - tan
 - tanf
@@ -32,14 +35,14 @@ helpviewer_keywords:
 - tanf function
 - trigonometric functions
 ms.assetid: 36cc0ce8-9c80-4653-b354-ddb3b378b6bd
-ms.openlocfilehash: 79a374142a914e8c2c7cf5c094d443b16e4bce88
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c79c56555e04c865b70d52a6b1a6e3da1ce94c87
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62258621"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70946892"
 ---
-# <a name="tan-tanf-tanl"></a>Tan, tanf –, tanl
+# <a name="tan-tanf-tanl"></a>tan, tanf, tanl
 
 Vypočítá tangens.
 
@@ -63,24 +66,24 @@ long double tan( long double x );  // C++ only
 
 ## <a name="return-value"></a>Návratová hodnota
 
-**Tan** funkce vrátí tangens *x*. Pokud *x* je větší než nebo rovno 263 nebo menší než nebo rovna hodnotě-263, dojde ke ztrátě významu výsledku.
+Funkce **tan** vrací tangens *x*. Pokud *x* je větší nebo rovno 263 nebo menší než nebo rovno-263, dojde ke ztrátě významnosti ve výsledku.
 
-|Vstup|Výjimka SEH|**Matherr** výjimky|
+|Vstup|Výjimka SEH|**Matherr** Jímka|
 |-----------|-------------------|-------------------------|
-|ROZMEZÍ QNAN, AJÍT|žádná|_DOMAIN|
-|± INF|**NEPLATNÝ**|_DOMAIN|
+|QNAN, ZASÁHNOUT|žádná|_DOMAIN|
+|± INF|**NENÍ**|_DOMAIN|
 
 ## <a name="remarks"></a>Poznámky
 
-Protože jazyk C++ umožňuje přetížení, můžete volat přetížení **tan** , která používají a vrací **float** nebo **dlouhé** **double** hodnoty. V programu jazyka C **tan** vždy převezme a vrátí **double**.
+Vzhledem C++ k tomu, že umožňuje přetížení, můžete volat **přetížení, která** přijímají a vracejí hodnoty **float** nebo **Long** **Double** . V programu v jazyce C provede funkce **tan** vždycky a vrátí hodnotu **Double**.
 
 ## <a name="requirements"></a>Požadavky
 
-|Rutina|Požadované záhlaví (C)|Požadované záhlaví (C++)|
+|Rutina|Požadovaná hlavička (C)|Požadovaná hlavička (C++)|
 |-------------|---------------------|-|
-|**Tan**, **tanf –**, **tanl**|\<math.h>|\<cmath > nebo \<math.h >|
+|**tan**, **tanf –** , **tanl**|\<Math. h >|\<cmath > nebo \<Math. h >|
 
-Další informace o kompatibilitě, naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Příklad
 

@@ -1,11 +1,11 @@
 ---
 title: strcat, wcscat, _mbscat
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _mbscat
 - wcscat
 - strcat
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -19,7 +19,10 @@ apilocation:
 - api-ms-win-crt-multibyte-l1-1-0.dll
 - api-ms-win-crt-string-l1-1-0.dll
 - ntoskrnl.exe
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _mbscat
 - _ftcscat
@@ -40,19 +43,19 @@ helpviewer_keywords:
 - appending strings
 - wcscat function
 ms.assetid: c89c4ef1-817a-44ff-a229-fe22d06ba78a
-ms.openlocfilehash: 629b66a5c9dded3a910919f5e302a97c4f731240
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 973c54c18e941b29526cb3e9b1cadb98f6582c4a
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62354337"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70958279"
 ---
-# <a name="strcat-wcscat-mbscat"></a>strcat, wcscat, _mbscat
+# <a name="strcat-wcscat-_mbscat"></a>strcat, wcscat, _mbscat
 
-Připojí řetězec. Bezpečnější verze těchto funkcí jsou k dispozici. Zobrazit [strcat_s wcscat_s –, _mbscat_s –](strcat-s-wcscat-s-mbscat-s.md).
+Připojí řetězec. K dispozici jsou bezpečnější verze těchto funkcí; viz [strcat_s, wcscat_s, _mbscat_s](strcat-s-wcscat-s-mbscat-s.md).
 
 > [!IMPORTANT]
-> **_mbscat_s –** nelze použít v aplikacích, které jsou spouštěny v modulu Windows Runtime. Další informace najdete v tématu [CRT funkce nejsou podporovány v aplikacích pro univerzální platformu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> **_mbscat_s** nelze použít v aplikacích, které jsou spouštěny v prostředí Windows Runtime. Další informace najdete v tématu [funkce CRT nejsou v aplikacích Univerzální platforma Windows podporovány](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -89,29 +92,29 @@ unsigned char *_mbscat(
 ### <a name="parameters"></a>Parametry
 
 *strDestination*<br/>
-Řetězec cíle zakončený hodnotou Null.
+Cílový řetězec zakončený hodnotou null.
 
 *strSource*<br/>
-Řetězec zakončený hodnotou Null zdroje.
+Zdrojový řetězec zakončený hodnotou null.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Každá z těchto funkcí vrátí na cílový řetězec (*strDestination*). Žádná návratová hodnota je vyhrazená k indikaci chyby.
+Každá z těchto funkcí vrátí cílový řetězec (*strDestination*). Žádná návratová hodnota není vyhrazena pro indikaci chyby.
 
 ## <a name="remarks"></a>Poznámky
 
-**Strcat –** připojí funkce *strSource* k *strDestination* a ukončí výsledný řetězec znakem null. Počáteční znak *strSource* přepíše ukončující znak null proměnné *strDestination*. Chování **strcat –** není definováno, pokud se zdrojový a cílový řetězec překrývají.
+Funkce **strcat** připojí *strSource* k *strDestination* a ukončí výsledný řetězec znakem null. Počáteční znak *strSource* přepíše ukončující znak null hodnoty *strDestination*. Chování **strcat** není definováno, pokud se zdrojový a cílový řetězec překrývají.
 
 > [!IMPORTANT]
-> Protože **strcat –** nekontroluje dostatek místa v *strDestination* před připojením *strSource*, jde o potenciální příčinu přetečení vyrovnávací paměti. Zvažte použití [strncat –](strncat-strncat-l-wcsncat-wcsncat-l-mbsncat-mbsncat-l.md) místo.
+> Vzhledem k tomu, že **strcat** není před připojením *strSource*zkontrolován dostatek místa v *strDestination* , je potenciální příčinou přetečení vyrovnávací paměti. Místo toho zvažte použití [strncat](strncat-strncat-l-wcsncat-wcsncat-l-mbsncat-mbsncat-l.md) .
 
-**wcscat –** a **_mbscat –** jsou širokoznaké a vícebajtové verze **strcat –**. Argumenty a vrácené hodnoty **wcscat –** jsou širokoznaké řetězce **_mbscat –** jsou vícebajtové znakové řetězce. Tyto tři funkce chovají identicky jinak.
+**wcscat** a **_mbscat** jsou verze s velkým znakem a vícebajtovým znakem **strcat**. Argumenty a návratová hodnota **wcscat** jsou řetězce s velkým počtem znaků; ty z **_mbscat** jsou vícebajtové znakové řetězce. Tyto tři funkce se chovají identicky jinak.
 
-V jazyce C++ mají tyto funkce přetížení šablon, která vyvolávají novější, zabezpečené protějšky těchto funkcí. Další informace najdete v tématu [přetížení zabezpečení šablony](../../c-runtime-library/secure-template-overloads.md).
+V C++nástroji mají tyto funkce přetížení šablony, které vyvolávají novější a zabezpečené protějšky těchto funkcí. Další informace najdete v tématu [přetížení zabezpečení šablon](../../c-runtime-library/secure-template-overloads.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapování rutin obecného textu
 
-|Rutina TCHAR.H|_UNICODE a _MBCS nejsou definovány|_MBCS definováno|_UNICODE definováno|
+|Rutina TCHAR.H|_UNICODE & _MBCS nejsou definovány.|_MBCS definováno|_UNICODE definováno|
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_tcscat**|**strcat**|**_mbscat**|**wcscat**|
 
@@ -119,19 +122,19 @@ V jazyce C++ mají tyto funkce přetížení šablon, která vyvolávají nověj
 
 |Rutina|Požadovaný hlavičkový soubor|
 |-------------|---------------------|
-|**strcat**|\<string.h>|
-|**wcscat**|\<String.h > nebo \<wchar.h >|
-|**_mbscat**|\<Mbstring.h >|
+|**strcat**|\<String. h >|
+|**wcscat**|\<String. h > nebo \<WCHAR. h >|
+|**_mbscat**|\<Mbstring. h >|
 
-Další informace o kompatibilitě, naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Příklad
 
-Podívejte se na příklad pro [strcpy –](strcpy-wcscpy-mbscpy.md).
+Podívejte se na příklad pro [strcpy](strcpy-wcscpy-mbscpy.md).
 
 ## <a name="see-also"></a>Viz také:
 
-[Zacházení s řetězci](../../c-runtime-library/string-manipulation-crt.md)<br/>
+[Manipulace s řetězci](../../c-runtime-library/string-manipulation-crt.md)<br/>
 [strncat, _strncat_l, wcsncat, _wcsncat_l, _mbsncat, _mbsncat_l](strncat-strncat-l-wcsncat-wcsncat-l-mbsncat-mbsncat-l.md)<br/>
 [strncmp, wcsncmp, _mbsncmp, _mbsncmp_l](strncmp-wcsncmp-mbsncmp-mbsncmp-l.md)<br/>
 [strncpy, _strncpy_l, wcsncpy, _wcsncpy_l, _mbsncpy, _mbsncpy_l](strncpy-strncpy-l-wcsncpy-wcsncpy-l-mbsncpy-mbsncpy-l.md)<br/>

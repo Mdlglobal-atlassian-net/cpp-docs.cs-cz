@@ -1,11 +1,11 @@
 ---
-title: Sin sinf –, sinl –
+title: sin, sinf, sinl
 ms.date: 04/10/2018
-apiname:
+api_name:
 - sinl
 - sinf
 - sin
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _sinl
 - sinf
@@ -31,14 +34,14 @@ helpviewer_keywords:
 - trigonometric functions
 - sinf function
 ms.assetid: 737de73e-3590-45f9-8257-dc1c0c489dfc
-ms.openlocfilehash: 7006d7246837e5dc69733a007b3f7dab1c55280e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e4ef8ac08ada6162932bbf9b872f30e6aa88b79b
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62356248"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70948063"
 ---
-# <a name="sin-sinf-sinl"></a>Sin sinf –, sinl –
+# <a name="sin-sinf-sinl"></a>sin, sinf, sinl
 
 Vypočítá sinus hodnoty s plovoucí desetinnou čárkou.
 
@@ -62,26 +65,26 @@ long double sin(long double x);  // C++ only
 
 ## <a name="return-value"></a>Návratová hodnota
 
-**Sin** funkce vrátí sinus *x*. Pokud *x* je větší než nebo rovno 263 nebo menší než nebo rovna hodnotě-263, dojde ke ztrátě významu výsledku.
+Funkce **Sin** Vrátí sinus hodnoty *x*. Pokud *x* je větší nebo rovno 263 nebo menší než nebo rovno-263, dojde ke ztrátě významnosti ve výsledku.
 
-|Vstup|Výjimka SEH|Výjimka Matherr|
+|Vstup|Výjimka SEH|Výjimka matherr|
 |-----------|-------------------|-----------------------|
-|ROZMEZÍ QNAN, AJÍT|Žádný|_DOMAIN|
-|Rozmezí ∞ (sin, sinf – sinl –.)|NEPLATNÝ|_DOMAIN|
+|QNAN, ZASÁHNOUT|Žádné|_DOMAIN|
+|± ∞ (sin, sinf –, Sinl)|NENÍ|_DOMAIN|
 
-Další informace o návratových kódech naleznete v tématu [errno _doserrno, _sys_errlist a _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+Další informace o návratových kódech naleznete v tématu [errno, _doserrno, _sys_errlist a _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Poznámky
 
-Protože jazyk C++ umožňuje přetížení, můžete volat přetížení **sin** , která používají a vrací **float** nebo **dlouhé** **double** hodnoty. V programu jazyka C **sin** vždy převezme a vrátí **double**.
+Vzhledem C++ k tomu, že umožňuje přetížení, můžete volat přetížení **Sin** , která přijímají a vracejí hodnoty **float** nebo **Long** **Double** . V programu v jazyce C funkce **Sin** vždycky bere a vrací hodnotu **Double**.
 
 ## <a name="requirements"></a>Požadavky
 
-|Rutina|Požadované záhlaví (C)|Požadované záhlaví (C++)|
+|Rutina|Požadovaná hlavička (C)|Požadovaná hlavička (C++)|
 |-|-|-|
-|**Sin**, **sinf –**, **sinl –**|\<math.h>|\<cmath > nebo \<math.h >|
+|**Sin**, **sinf –** , **Sinl**|\<Math. h >|\<cmath > nebo \<Math. h >|
 
-Další informace o kompatibilitě, naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Příklad
 

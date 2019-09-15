@@ -1,11 +1,11 @@
 ---
-title: cacos cacosf, cacosl
+title: cacos, cacosf, cacosl
 ms.date: 11/04/2016
-apiname:
+api_name:
 - cacos
 - cacosf
 - cacosl
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - cacos
 - cacosf
@@ -30,16 +33,16 @@ helpviewer_keywords:
 - cacosf function
 - cacosl function
 ms.assetid: 78118c00-0a07-49c1-8a13-4bf19ce3aea8
-ms.openlocfilehash: 18757ecd30f399ca3d1fdb77e8bff8213a265e74
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5b0751703b9b9cdcdb50e265a6b5d3c929d89ae1
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62348572"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70939402"
 ---
-# <a name="cacos-cacosf-cacosl"></a>cacos cacosf, cacosl
+# <a name="cacos-cacosf-cacosl"></a>cacos, cacosf, cacosl
 
-Načte Arkus kosinus komplexního čísla s kusy větev mimo interval [-1, + 1] na skutečné ose.
+Načte Arkus kosinus komplexního čísla s větvemi mimo interval [-1, + 1] podél reálné osy.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -57,23 +60,23 @@ _Lcomplex cacos( _Lcomplex z );  // C++ only
 ### <a name="parameters"></a>Parametry
 
 *z*<br/>
-Komplexní čísla, která představuje úhel v radiánech.
+Komplexní číslo představující úhel v radiánech.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Arkus kosinus *z*, v radiánech. Výsledkem je bez vazby na ose imaginární a v v intervalu [0, pí] skutečný ose. Pokud dojde k chybě domény *z* nespadá do intervalu [-1, + 1].
+Arkus kosinus *z v*radiánech. Výsledek je neohraničený podél imaginární osy a v intervalu [0, π] podél reálné osy. K chybě domény dojde, pokud *z* je mimo interval [-1, + 1].
 
 ## <a name="remarks"></a>Poznámky
 
-Protože C++ umožňuje přetížení, můžete volat přetížení **cacos** , která používají a vrací **_Fcomplex** a **_Lcomplex** hodnoty. V programu jazyka C **cacos** vždy převezme a vrátí **_Dcomplex** hodnotu.
+Vzhledem C++ k tomu, že umožňuje přetížení, můžete volat přetížení **cacos** , která přijímají a vracejí hodnoty **_Fcomplex** a **_Lcomplex** . V programu v jazyce C **cacos** vždycky přebírá a vrací hodnotu **_Dcomplex** .
 
 ## <a name="requirements"></a>Požadavky
 
-|Rutina|Záhlaví C|Hlaviček jazyka C++|
+|Rutina|Hlavička jazyka C|C++hlaviček|
 |-------------|--------------|------------------|
-|**cacos**, **cacosf**, **cacosl**|\<complex.h>|\<ccomplex>|
+|**cacos**, **cacosf**, **cacosl**|\<complex.h>|\<ccomplex >|
 
-Další informace o kompatibilitě naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Viz také:
 

@@ -1,10 +1,10 @@
 ---
 title: _cputs, _cputws
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _cputws
 - _cputs
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-conio-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - cputws
 - _cputs
@@ -30,19 +33,19 @@ helpviewer_keywords:
 - console, sending strings to
 - cputws function
 ms.assetid: ec418484-0f8d-43ec-8d8b-198a556c659e
-ms.openlocfilehash: 81d2364cd1fc409ca3267bc416bd3cbd16c62a15
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 46fce16078b9ce289d45ee4e62bb4076eaf5795a
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62340234"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70942634"
 ---
-# <a name="cputs-cputws"></a>_cputs, _cputws
+# <a name="_cputs-_cputws"></a>_cputs, _cputws
 
-Převede řetězec do konzoly.
+Vloží řetězec do konzoly.
 
 > [!IMPORTANT]
-> Toto rozhraní API nelze použít v aplikacích, které jsou spouštěny v modulu Windows Runtime. Další informace najdete v tématu [CRT funkce nejsou podporovány v aplikacích pro univerzální platformu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> Toto rozhraní API nelze použít v aplikacích, které jsou spouštěny v prostředí Windows Runtime. Další informace najdete v tématu [funkce CRT nejsou v aplikacích Univerzální platforma Windows podporovány](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -62,13 +65,13 @@ Výstupní řetězec.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-V případě úspěšného ověření **_cputs –** vrátí hodnotu 0. Pokud funkce selže, vrátí nenulovou hodnotu.
+V případě úspěchu vrátí **_cputs** 0. Pokud funkce dojde k chybě, vrátí nenulovou hodnotu.
 
 ## <a name="remarks"></a>Poznámky
 
-**_Cputs –** funkce zapíše řetězec zakončený hodnotou null, který ukazuje *str* přímo na konzoli. Kombinaci návrat na začátek řádku return-line kanál (CR-LF) nejsou automaticky připojeny na řetězec.
+Funkce **_cputs** zapisuje řetězec zakončený hodnotou null, na který ukazuje *str* přímo do konzoly. Kombinace návratového kanálu návratového řádku (CR-LF) není automaticky připojena k řetězci.
 
-Tato funkce ověřuje svůj parametr. Pokud *str* je **NULL**, je vyvolána obslužná rutina neplatného parametru, jak je popsáno v [Parameter Validation](../../c-runtime-library/parameter-validation.md). Pokud smí provádění pokračovat, **errno** je nastavena na **EINVAL** a vrátí se -1.
+Tato funkce ověří svůj parametr. Pokud je parametr *str* **null**, je vyvolána obslužná rutina neplatného parametru, jak je popsáno v tématu [ověřování parametru](../../c-runtime-library/parameter-validation.md). Pokud provádění může pokračovat, **errno** je nastaven na **EINVAL** a vrátí-1.
 
 ### <a name="generic-text-routine-mappings"></a>Mapování rutin obecného textu
 
@@ -80,14 +83,14 @@ Tato funkce ověřuje svůj parametr. Pokud *str* je **NULL**, je vyvolána obsl
 
 |Rutina|Požadovaný hlavičkový soubor|Volitelné záhlaví|
 |-------------|---------------------|---------------------|
-|**_cputs**|\<conio.h>|\<errno.h>|
-|**_cputws**|\<conio.h>|\<errno.h>|
+|**_cputs**|\<CONIO. h >|\<errno.h>|
+|**_cputws**|\<CONIO. h >|\<errno.h>|
 
-Další informace o kompatibilitě naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
 
 ## <a name="libraries"></a>Knihovny
 
-Všechny verze [běhových knihoven C](../../c-runtime-library/crt-library-features.md).
+Všechny verze [knihoven run-time jazyka C](../../c-runtime-library/crt-library-features.md).
 
 ## <a name="example"></a>Příklad
 

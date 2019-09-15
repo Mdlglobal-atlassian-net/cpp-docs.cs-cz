@@ -1,9 +1,9 @@
 ---
 title: mbsinit
 ms.date: 11/04/2016
-apiname:
+api_name:
 - mbsinit
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -14,18 +14,21 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - mbsinit
 helpviewer_keywords:
 - mbsinit function
 ms.assetid: 4618555b-baaa-4d04-93fa-36abae411034
-ms.openlocfilehash: 8b467ae7f705fc2f4b2b38d3f76f3936f30ec15e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e3b1eecc252a2bee83997aa6f2f6f47a96d3321a
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62331542"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70952372"
 ---
 # <a name="mbsinit"></a>mbsinit
 
@@ -42,17 +45,17 @@ int mbsinit(
 ### <a name="parameters"></a>Parametry
 
 *PS*<br/>
-Ukazatel [mbstate_t](../../c-runtime-library/standard-types.md) proměnné.
+Ukazatel na proměnnou [mbstate_t](../../c-runtime-library/standard-types.md) .
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Nenulovou hodnotu, pokud *ps* je **NULL** nebo, pokud není uprostřed převod.
+Nenulová, pokud *PS* má **hodnotu null** nebo pokud není uprostřed převodu.
 
 ## <a name="remarks"></a>Poznámky
 
-Při použití jednou z funkcí ANSI, které provede **mbstate_t** ukazatel předávání na adresu vaší **mbstate_t** vrátí informace o tom, zda byl převeden posledního bajtu ve vyrovnávací paměti.
+Při použití jedné z funkcí ANSI, které přebírají ukazatel **mbstate_t** , předává adresa vašeho **mbstate_t** informace o tom, zda byl poslední bajt vyrovnávací paměti převeden.
 
-Na stránce odpovídající kód musí být nainstalovaný pro podporu vícebajtových znaků.
+Aby bylo možné podporovat vícebajtové znaky, je nutné nainstalovat příslušnou znakovou stránku.
 
 ## <a name="example"></a>Příklad
 

@@ -1,9 +1,9 @@
 ---
 title: __max
 ms.date: 04/05/2018
-apiname:
+api_name:
 - __max
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -14,7 +14,10 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - max
 - __max
@@ -23,16 +26,16 @@ helpviewer_keywords:
 - maximum macro
 - __max macro
 ms.assetid: 05c936f6-0e22-45d6-a58d-4bc102e9dae2
-ms.openlocfilehash: 32e1207ea4bb030ac5303de32c0566f98e0596a3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: dac82ecd1c96d1edf9175a29797d93c65bc19c99
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62156861"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70952753"
 ---
-# <a name="max"></a>__max
+# <a name="__max"></a>__max
 
-Makro preprocesoru, které vrátí větší ze dvou hodnot.
+Makro preprocesoru, které vrací větší ze dvou hodnot.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -43,17 +46,17 @@ Makro preprocesoru, které vrátí větší ze dvou hodnot.
 ### <a name="parameters"></a>Parametry
 
 *a*, *b*<br/>
-Hodnoty libovolného číselného typu, který se má porovnat.
+Hodnoty libovolného číselného typu, které mají být porovnány.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-**__max** vrátí větší z jejích argumentů.
+**__max** vrátí větší z jeho argumentů.
 
 ## <a name="remarks"></a>Poznámky
 
-**__Max** – makro porovná dvě hodnoty a vrátí hodnotu větší z nich. Argumenty může být libovolný číselný datový typ, podepsaný nebo nepodepsaný řetězec. Argumenty a vrácené hodnoty musí být stejného datového typu.
+Makro **__max** porovná dvě hodnoty a vrátí hodnotu větší. Argumenty mohou být libovolného číselného datového typu, podepsán nebo bez znaménka. Oba argumenty i návratová hodnota musí být stejného datového typu.
 
-Argument vrátil je dvakrát vyhodnocovaný makra. To může vést k neočekávaným výsledkům, pokud je argument výrazu, který se mění její hodnotu, když je vyhodnocen, jako například `*p++`.
+Vrácený argument je vyhodnocen dvakrát makrem. To může vést k neočekávaným výsledkům, pokud je argument výraz, který při vyhodnocení změní jeho hodnotu, například `*p++`.
 
 ## <a name="requirements"></a>Požadavky
 
@@ -63,7 +66,7 @@ Argument vrátil je dvakrát vyhodnocovaný makra. To může vést k neočekáva
 
 ## <a name="example"></a>Příklad
 
-Další informace, podívejte se na příklad pro [__min](min.md).
+Další informace najdete v příkladu pro [__min](min.md).
 
 ## <a name="see-also"></a>Viz také:
 

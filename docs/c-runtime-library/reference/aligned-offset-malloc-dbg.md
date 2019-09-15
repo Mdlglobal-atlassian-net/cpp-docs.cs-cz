@@ -1,9 +1,9 @@
 ---
 title: _aligned_offset_malloc_dbg
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _aligned_offset_malloc_dbg
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -14,7 +14,10 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _aligned_offset_malloc_dbg
 - aligned_offset_malloc_dbg
@@ -22,16 +25,16 @@ helpviewer_keywords:
 - _aligned_offset_malloc_dbg function
 - aligned_offset_malloc_dbg function
 ms.assetid: 6c242307-c59e-4d63-aae5-d8cbec8e021c
-ms.openlocfilehash: 96fe9e7fda0d0cdfdbfa5462e4f601e3649e2233
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4fbacb170fd1ae1ce92de4a11ea85ff42b3942a0
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62348871"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70939774"
 ---
-# <a name="alignedoffsetmallocdbg"></a>_aligned_offset_malloc_dbg
+# <a name="_aligned_offset_malloc_dbg"></a>_aligned_offset_malloc_dbg
 
-Přidělí paměť v zadaných hranicích zarovnání (pouze ladicí verze).
+Přidělí paměť v zadané hranici zarovnání (pouze ladicí verze).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -47,40 +50,40 @@ void * _aligned_offset_malloc_dbg(
 
 ### <a name="parameters"></a>Parametry
 
-*Velikost*<br/>
-Velikost požadované alokace paměti.
+*hodnota*<br/>
+Velikost požadované alokace paměti
 
-*Zarovnání*<br/>
-Hodnota zarovnání, které musí být celočíselnou mocninou 2.
+*bod*<br/>
+Hodnota zarovnání, která musí být celočíselnou mocninou 2.
 
-*Posun*<br/>
-Posun na přidělení paměti pro vynucení zarovnání.
+*polohy*<br/>
+Posun k přidělení paměti pro vynucení zarovnání.
 
-*Název souboru*<br/>
-Ukazatel na název zdrojového souboru, který požadovanou operaci přidělení nebo **NULL**.
+*Bitmap*<br/>
+Ukazatel na název zdrojového souboru, který požadoval operaci přidělení, nebo **hodnotu null**.
 
-*linenumber*<br/>
-Číslo řádku ve zdrojovém souboru, ve kterém se požadovaná operace rozdělení nebo **NULL**.
+*číslo řádku*<br/>
+Číslo řádku ve zdrojovém souboru, kde byla požadována operace přidělení, nebo **hodnota null**.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Ukazatele na blok paměti, která byla přidělena nebo **NULL** Pokud se operace nezdařila.
+Ukazatel na blok paměti, který byl přidělen nebo **null** v případě, že operace se nezdařila.
 
 ## <a name="remarks"></a>Poznámky
 
-**_aligned_offset_malloc_dbg –** je ladicí verzi [_aligned_offset_malloc –](aligned-offset-malloc.md) funkce. Když [_DEBUG](../../c-runtime-library/debug.md) není definován, každé volání **_aligned_offset_malloc_dbg –** je omezená na volání **_aligned_offset_malloc –**. Obě **_aligned_offset_malloc –** a **_aligned_offset_malloc_dbg –** přidělení bloku paměti v haldě základní, ale **_aligned_offset_malloc_dbg –** nabízí několik funkce ladění: vyrovnávací paměť po obou stranách část blok, který má test pro přetečení s uživatelským a *filename*/*linenumber* informací pro určení původu požadavky na přidělení. Sledování přidělování konkrétní typy s parametrem typu blok není podporovaný ladicí funkce pro zarovnané přidělení. Zobrazí se zarovnané přidělení jako _normal_block – blok typu.
+**_aligned_offset_malloc_dbg** je ladicí verze funkce [_aligned_offset_malloc](aligned-offset-malloc.md) . Pokud není definován [_DEBUG](../../c-runtime-library/debug.md) , každé volání **_aligned_offset_malloc_dbg** je sníženo na volání **_aligned_offset_malloc**. **_Aligned_offset_malloc** i **_aligned_offset_malloc_dbg** přidělují blok paměti v základní haldě, ale **_aligned_offset_malloc_dbg** nabízí několik funkcí pro ladění: vyrovnávací paměti na obou stranách bloku uživatele na Otestujte nevracení a*číslo řádku* informace o *názvu souboru*/, abyste zjistili původ požadavků na přidělení. Sledování specifických typů přidělení s parametrem typu bloku není podporovanou funkcí ladění pro zarovnávání přidělení. Zarovnaná přidělení se zobrazí jako typ bloku _NORMAL_BLOCK.
 
-**_aligned_offset_malloc_dbg –** přiděluje blok paměti se trochu více místa požadovaného *velikost*. Další místo používá správce hald ladění k propojení paměť bloků ladicího a k poskytování aplikací s informace hlavičky ladění a přepsat vyrovnávací paměti. Při přidělení bloku část uživatele bloku je vyplněny hodnotou 0xCD a každý z vyrovnávací paměti přepsání jsou vyplněny 0xFD.
+**_aligned_offset_malloc_dbg** přiděluje blok paměti o něco více místa, než je požadovaná *Velikost*. Dodatečné místo se používá správcem haldy ladění k propojení bloků paměti ladění a k poskytnutí aplikace s informacemi hlavičky ladění a přepsat vyrovnávací paměti. Po přidělení bloku je uživatelská část bloku vyplněna hodnotou 0xCD a každá z vyrovnávací paměti přepsání je vyplněna 0xFD.
 
-**_aligned_offset_malloc_dbg –** je užitečné v situacích, kde je potřeba zarovnání na prvek vnořené; například, pokud zarovnání bylo potřeba ve vnořené třídě.
+**_aligned_offset_malloc_dbg** je užitečné v situacích, kdy je nutné zarovnat na vnořeném prvku. Například pokud bylo zarovnání nutné pro vnořenou třídu.
 
-**_aligned_offset_malloc_dbg –** vychází **malloc**; Další informace najdete v tématu [malloc](malloc.md).
+_aligned_offset_malloc_dbg je založen na **za** . Další informace najdete [v tématu.](malloc.md)
 
-Tato funkce nastaví **errno** k **ENOMEM** Pokud přidělení paměti se nezdařilo nebo pokud byla větší než požadovaná velikost **_heap_maxreq –**. Další informace o **errno**, naleznete v tématu [errno _doserrno, _sys_errlist a _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md). Navíc **_aligned_offset_malloc –** ověří jeho parametry. Pokud *zarovnání* není mocninou čísla 2 nebo, pokud *posun* je větší než nebo rovna hodnotě *velikost* a nenulovou hodnotu, tato funkce vyvolá obslužnou rutinu neplatného parametru, jak je popsáno v [ Ověření parametru](../../c-runtime-library/parameter-validation.md). Pokud provádění může pokračovat, tato funkce vrací **NULL** a nastaví **errno** k **EINVAL**.
+Tato funkce nastaví **errno** na **ENOMEM** , pokud se přidělení paměti nepovedlo nebo pokud je požadovaná velikost větší než **_HEAP_MAXREQ**. Další informace o **errno**najdete v tématu [errno, _doserrno, _sys_errlist a _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md). **_Aligned_offset_malloc** také ověří své parametry. Pokud *Zarovnání* není mocninou 2 nebo pokud je *posun* větší nebo roven *velikosti* a nenulové hodnotě, tato funkce vyvolá obslužnou rutinu neplatného parametru, jak je popsáno v tématu [ověřování parametru](../../c-runtime-library/parameter-validation.md). Pokud provádění může pokračovat, tato funkce vrátí **hodnotu null** a nastaví **errno** na **EINVAL**.
 
-Informace o způsobu jsou bloky paměti přidělené, inicializovat a správy v ladicí verzi základní haldy viz [podrobnosti haldy ladění CRT](/visualstudio/debugger/crt-debug-heap-details).
+Informace o způsobu přidělování, inicializace a správy paměťových bloků v ladicí verzi základní haldy najdete v [podrobnostech o haldě ladění CRT](/visualstudio/debugger/crt-debug-heap-details).
 
-Informace o typech bloku přidělení a způsob jejich použití naleznete v tématu [typy bloků na haldě ladění](/visualstudio/debugger/crt-debug-heap-details).
+Informace o typech bloků přidělení a způsobu jejich použití naleznete v tématu [typy bloků v haldě ladění](/visualstudio/debugger/crt-debug-heap-details).
 
 ## <a name="requirements"></a>Požadavky
 
@@ -88,11 +91,11 @@ Informace o typech bloku přidělení a způsob jejich použití naleznete v té
 |-------------|---------------------|
 |**_aligned_offset_malloc_dbg**|\<crtdbg.h>|
 
-Další informace o kompatibilitě naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
 
 ## <a name="libraries"></a>Knihovny
 
-Ladicí verze [běhových knihoven C](../../c-runtime-library/crt-library-features.md) pouze.
+Ladit verze pouze [knihoven run-time jazyka C](../../c-runtime-library/crt-library-features.md) .
 
 ## <a name="see-also"></a>Viz také:
 

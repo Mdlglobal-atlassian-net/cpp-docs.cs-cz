@@ -1,9 +1,9 @@
 ---
 title: setjmp
 ms.date: 08/14/2018
-apiname:
+api_name:
 - setjmp
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - ntoskrnl.exe
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - setjmp
 helpviewer_keywords:
@@ -23,12 +26,12 @@ helpviewer_keywords:
 - current state
 - setjmp function
 ms.assetid: 684a8b27-e8eb-455b-b4a8-733ca1cbd7d2
-ms.openlocfilehash: 9f1a2b71a7b8fc7603c36938879348dca16288e2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4a88467f5b94ceae4281a35f1486380a877be2e5
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62356417"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70948242"
 ---
 # <a name="setjmp"></a>setjmp
 
@@ -44,31 +47,31 @@ int setjmp(
 
 ### <a name="parameters"></a>Parametry
 
-*env*<br/>
-Proměnná, ve kterém je uložené prostředí.
+*ENV*<br/>
+Proměnná, ve které je prostředí uloženo.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Vrátí hodnotu 0 po uložení prostředí zásobníku. Pokud **setjmp** vrátí kvůli `longjmp` volání, vrátí *hodnotu* argument `longjmp`, nebo, pokud *hodnotu* argument `longjmp` je 0, **setjmp** vrátí hodnotu 1. Není vrácena žádná chyba.
+Po uložení prostředí zásobníku vrátí hodnotu 0. Pokud **se setjmp** vrátí `longjmp` jako výsledek volání, vrátí argument `longjmp`Value, nebo pokud argument `longjmp` Value hodnoty je 0, **setjmp** vrátí hodnotu 1. Nevrátila se žádná chybová zpráva.
 
 ## <a name="remarks"></a>Poznámky
 
-**Setjmp** uloží prostředí zásobníku, který můžete následně obnovit, pomocí funkce `longjmp`. Pokud se použijí společně, **setjmp** a `longjmp` poskytují způsob provedení nemístního **goto**. Jsou obvykle slouží k předání ovládacího prvku spuštění pro zpracování chyb nebo kódu obnovení v dříve volané rutině bez použití normální volání nebo vrácení konvence.
+Funkce **setjmp** uloží prostředí zásobníku, které můžete následně obnovit pomocí `longjmp`. Při použití společně **setjmp** a `longjmp` poskytují způsob, jak spustit příkaz **goto**, který není místní. Obvykle se používají k předávání chybového řízení nebo kódu obnovení do dříve volané rutiny bez použití běžných konvencí volání nebo návratu.
 
-Volání **setjmp** uloží v aktuálním prostředí zásobníku *env*. Následné volání `longjmp` obnoví uložené prostředí a vrátí řízení do bodu bezprostředně po odpovídající **setjmp** volání. Všechny proměnné (s výjimkou proměnné registru) přístupné pro rutiny přijímají ovládacího prvku s hodnotami měli při `longjmp` byla volána.
+Volání **setjmp** uloží aktuální prostředí zásobníku v *ENV*. Následné volání pro `longjmp` obnovení uloženého prostředí a vrátí řízení do bodu hned za odpovídajícím voláním **setjmp** . Všechny proměnné (kromě proměnných registru), které jsou přístupné rutině přijímajícího řízení, obsahují hodnoty `longjmp` , které byly volány při volání.
 
-Není možné použít **setjmp** pro přechod z nativní do spravovaného kódu.
+Není možné použít **setjmp** k přechodu z nativního kódu do spravovaného kódu.
 
-**Microsoft Specific**
+**Specifické pro společnost Microsoft**
 
-V kódu C++ společnosti Microsoft na Windows **longjmp** používá stejnou sémantiku odvíjení zásobníku jako kód zpracování výjimek. Je bezpečné používat ve stejných míst, mohou být vyvolány výjimky jazyka C++. Toto použití však není přenosný a má určitá úskalí některé důležité. Podrobnosti najdete v tématu [longjmp](longjmp.md).
+V kódu C++ Microsoft ve Windows používá **longjmp** stejnou sémantiku uvolňování zásobníku jako kód pro zpracování výjimek. Použití lze bezpečně použít na stejných místech, C++ jako je možné výjimky vystavit. Toto využití ale není přenosné a přináší několik důležitých aspektů. Podrobnosti najdete v tématu [longjmp](longjmp.md).
 
-**Specifické pro END Microsoft**
+**Specifické pro konec Microsoftu**
 
 > [!NOTE]
-> V přenositelném kódu C++ nelze předpokládat `setjmp` a `longjmp` podporovat sémantiku objektu C++. Konkrétně `setjmp` / `longjmp` pár má nedefinované chování, pokud nahrazení volání `setjmp` a `longjmp` podle **catch** a **throw** by měl vyvolat nejsou v netriviálních destruktory všech automatických objektů. V programech jazyka C++ doporučujeme že použít mechanismus zpracování výjimek jazyka C++.
+> C++ V přenositelném kódu nemůžete `setjmp` předpokládat `longjmp` a C++ podporovat sémantiku objektu. `setjmp` `longjmp` Konkrétně dvojice volánímánedefinovanéchování,pokudsenahrazujíacatchathrowvyvolájakékolinetriviálnídestruktoryprojakékoliautomatickéobjekty.`longjmp` `setjmp` / V C++ programech doporučujeme použít mechanismus zpracování C++ výjimek.
 
-Další informace najdete v tématu [použití funkcí setjmp a longjmp](../../cpp/using-setjmp-longjmp.md).
+Další informace najdete v tématu [použití setjmp a longjmp](../../cpp/using-setjmp-longjmp.md).
 
 ## <a name="requirements"></a>Požadavky
 
@@ -76,11 +79,11 @@ Další informace najdete v tématu [použití funkcí setjmp a longjmp](../../c
 |-------------|---------------------|
 |**setjmp**|\<setjmp.h>|
 
-Další informace o kompatibilitě, naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Příklad
 
-Podívejte se na příklad pro [_fpreset –](fpreset.md).
+Podívejte se na příklad pro [_fpreset](fpreset.md).
 
 ## <a name="see-also"></a>Viz také:
 

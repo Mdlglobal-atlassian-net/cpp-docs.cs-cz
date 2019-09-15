@@ -1,13 +1,13 @@
 ---
 title: snprintf, _snprintf, _snprintf_l, _snwprintf, _snwprintf_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _snwprintf
 - _snprintf
 - _snprintf_l
 - _snwprintf_l
 - snprintf
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -19,7 +19,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - ntoskrnl.exe
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _snprintf
 - snprintf_l
@@ -48,12 +51,12 @@ helpviewer_keywords:
 - sntprintf function
 - formatted text [C++]
 ms.assetid: 5976c9c8-876e-4ac9-a515-39f3f7fd0925
-ms.openlocfilehash: 8f7ce565467321c8e2ea5c80cae9ef41297ccaed
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: a1d11efebad57bdcf44ca959384f449640dad701
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69499518"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70948008"
 ---
 # <a name="snprintf-_snprintf-_snprintf_l-_snwprintf-_snwprintf_l"></a>snprintf, _snprintf, _snprintf_l, _snwprintf, _snwprintf_l
 
@@ -149,11 +152,11 @@ Další informace najdete v tématu [syntaxe specifikace formátu: printf a wpri
 
 **Len** musí být délka formátovaného datového řetězce, včetně ukončující hodnoty null. **Len** i *Count* jsou v bajtech pro **snprintf** a **_snprintf**, ve znacích **_snwprintf**.
 
-Pro všechny funkce platí, < že pokud je *počet*znaků len uložen ve *vyrovnávací paměti*, je připojen ukončovací znak null a vrátí se **len** .
+Pro všechny funkce platí, **že pokud** < je*počet*znaků len uložen ve *vyrovnávací paměti*, je připojen **ukončovací znak null** a vrátí se **len** .
 
 Funkce **snprintf** zkrátí výstup, pokud je **len** větší nebo roven *Count*, vložením ukončovacího znaku null na `buffer[count-1]`. Vrácená hodnota je **len**, počet znaků, které by byly výstupní, pokud byl *počet* dostatečně velký. Funkce **snprintf** vrací zápornou hodnotu, pokud dojde k chybě kódování.
 
-Pro všechny funkce jiné než **snprintf**, pokud = je*počet*znaků len uložen ve *vyrovnávací paměti*, není připojen ukončovací znak null a je vrácena funkce **len** . Pokud je*počet*znaků **len** > uložen ve *vyrovnávací paměti*, není připojen ukončovací znak null a je vrácena záporná hodnota.
+Pro všechny funkce jiné než **snprintf** **, pokud** = je*počet*znaků len uložen ve *vyrovnávací paměti*, není připojen **ukončovací znak null** a je vrácena funkce **len** . Pokud je*počet*znaků **len** > uložen ve *vyrovnávací paměti*, není připojen ukončovací znak null a je vrácena záporná hodnota.
 
 Pokud je *vyrovnávací paměť* ukazatel s hodnotou null a *počet* je nula, vrátí se **len** jako počet znaků vyžadovaných k formátování výstupu, včetně ukončující hodnoty null. Chcete-li provést úspěšné volání se stejným *argumentem* a parametry *národního prostředí* , přidělte vyrovnávací paměť aspoň **len** + 1 znaků.
 

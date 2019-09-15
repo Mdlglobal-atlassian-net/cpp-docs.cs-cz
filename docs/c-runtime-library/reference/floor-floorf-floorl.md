@@ -1,11 +1,11 @@
 ---
 title: floor, floorf, floorl
 ms.date: 04/05/2018
-apiname:
+api_name:
 - floorf
 - floorl
 - floor
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - floor
 - floorl
@@ -29,16 +32,16 @@ helpviewer_keywords:
 - calculating floors of values
 - floorl function
 ms.assetid: e9955f70-d659-414f-8050-132e13c8ff36
-ms.openlocfilehash: 050b7ea0eedf07666fa52145eeaf43f8fde2e18b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c646437b4a1d79ef79e53d79fcbc342e5360f3cd
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62333583"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70957160"
 ---
 # <a name="floor-floorf-floorl"></a>floor, floorf, floorl
 
-Vypočítá dolní mez hodnoty.
+Vypočítá podlahovou hodnotu hodnoty.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -67,25 +70,25 @@ Hodnota s plovoucí desetinnou čárkou.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-**Floor** funkce vrátí hodnotu s plovoucí desetinnou čárkou, která představuje největší celé číslo, které je menší než nebo rovna hodnotě *x*. Není vrácena žádná chyba.
+Funkce **Floor** vrací hodnotu s plovoucí desetinnou čárkou, která představuje největší celé číslo, které je menší nebo rovno *x*. Nevrátila se žádná chybová zpráva.
 
-|Vstup|Výjimka SEH|Výjimka Matherr|
+|Vstup|Výjimka SEH|Výjimka matherr|
 |-----------|-------------------|-----------------------|
-|ROZMEZÍ QNAN, AJÍT|žádná|_DOMAIN|
+|QNAN, ZASÁHNOUT|žádná|_DOMAIN|
 
-**dolní mez** má implementace, která používá Streaming SIMD Extensions 2 (SSE2). Informace a omezení týkající se použití implementace SSE2, naleznete v tématu [_set_sse2_enable –](set-sse2-enable.md).
+**podlahová plocha** má implementaci, která používá streaming SIMD Extensions 2 (SSE2). Informace a omezení týkající se použití implementace SSE2 naleznete v tématu [_set_SSE2_enable](set-sse2-enable.md).
 
 ## <a name="remarks"></a>Poznámky
 
-Jazyk C++ umožňuje přetížení, takže můžete volat přetížení **floor** , která používají a vrací **float** a **dlouhé** **double** hodnoty. V programu jazyka C **floor** vždy převezme a vrátí **double**.
+C++umožňuje přetížení, takže můžete volat přetížení **podlah** , která přijímají a vracejí hodnoty **float** a **Long** **Double** . V programu v jazyce C má **podlaha** vždycky a vrací hodnotu **Double**.
 
 ## <a name="requirements"></a>Požadavky
 
 |Funkce|Požadovaný hlavičkový soubor|
 |--------------|---------------------|
-|**dolní mez**, **floorf –**, **floorl –**|\<math.h>|
+|**podlahová**, **floorf –á**, **podlahová**|\<Math. h >|
 
-Další informace o kompatibilitě, naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Příklad
 

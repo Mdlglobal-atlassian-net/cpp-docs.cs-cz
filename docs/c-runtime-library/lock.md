@@ -1,9 +1,9 @@
 ---
 title: _lock
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _lock
-apilocation:
+api_location:
 - msvcr110_clr0400.dll
 - msvcr120.dll
 - msvcr100.dll
@@ -12,7 +12,10 @@ apilocation:
 - msvcr110.dll
 - msvcrt.dll
 - msvcr120_clr0400.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - lock
 - _lock
@@ -20,19 +23,19 @@ helpviewer_keywords:
 - lock function
 - _lock function
 ms.assetid: 29f77c37-30de-4b3d-91b6-030216e645a6
-ms.openlocfilehash: d29488c6dec15fb58eef24f50c1bfafefb8e85c6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 666fdb8febebe133ae09ef3632cb38b6527d1210
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62343235"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70944489"
 ---
-# <a name="lock"></a>_lock
+# <a name="_lock"></a>_lock
 
-Získá zámek více vláken.
+Získá zámek s více vlákny.
 
 > [!IMPORTANT]
->  Tato funkce je zastaralá. Od v sadě Visual Studio 2015, není k dispozici v CRT.
+>  Tato funkce je zastaralá. Počínaje verzí Visual Studio 2015 není k dispozici v CRT.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -45,15 +48,15 @@ void __cdecl _lock
 #### <a name="parameters"></a>Parametry
 
 *locknum*<br/>
-[in] Identifikátor zámek k získání.
+pro Identifikátor zámku, který se má získat.
 
 ## <a name="remarks"></a>Poznámky
 
-Pokud již byly získány zámek, tato metoda přesto získá zámek a způsobí, že vnitřní chybě C Runtime (CRT). Pokud metoda nemůže získat zámek, ukončí kvůli závažné chybě a nastaví kód chyby: `_RT_LOCK`.
+Pokud zámek již byl získán, tato metoda přesto získá zámek a způsobí interní chybu jazyka C run-time (CRT). Pokud metoda nemůže získat zámek, ukončí se s závažnou chybou a kód chyby nastaví na `_RT_LOCK`.
 
 ## <a name="requirements"></a>Požadavky
 
-**Zdroj:** mlock.c
+**Zdroj:** mlock. c
 
 ## <a name="see-also"></a>Viz také:
 

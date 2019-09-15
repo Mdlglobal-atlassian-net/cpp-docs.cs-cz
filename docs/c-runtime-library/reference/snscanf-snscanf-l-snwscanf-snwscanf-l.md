@@ -1,12 +1,12 @@
 ---
 title: _snscanf, _snscanf_l, _snwscanf, _snwscanf_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _snwscanf
 - _snscanf_l
 - _snscanf
 - _snwscanf_l
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _snscanf
 - _snscanf_l
@@ -48,16 +51,16 @@ helpviewer_keywords:
 - strings [C++], reading
 - _snscanf function
 ms.assetid: da1ac890-f905-4cd7-954b-3c90957b5551
-ms.openlocfilehash: ba80bec70bbb96c383d0bbe73ed52f30fb90b7ef
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f259eede1b2927b4676467c3450504f7ff7c19de
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62355403"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70947932"
 ---
-# <a name="snscanf-snscanfl-snwscanf-snwscanfl"></a>_snscanf, _snscanf_l, _snwscanf, _snwscanf_l
+# <a name="_snscanf-_snscanf_l-_snwscanf-_snwscanf_l"></a>_snscanf, _snscanf_l, _snwscanf, _snwscanf_l
 
-Čtení formátovaných dat z řetězce zadané délky. Bezpečnější verze těchto funkcí jsou k dispozici. Zobrazit [_snscanf_s – _snscanf_s_l –, _snwscanf_s – _snwscanf_s_l –](snscanf-s-snscanf-s-l-snwscanf-s-snwscanf-s-l.md).
+Přečte formátovaná data o zadané délce z řetězce. K dispozici jsou bezpečnější verze těchto funkcí; viz [_snscanf_s, _snscanf_s_l, _snwscanf_s, _snwscanf_s_l](snscanf-s-snscanf-s-l-snwscanf-s-snwscanf-s-l.md).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -92,34 +95,34 @@ int __cdecl _snwscanf_l(
 
 ### <a name="parameters"></a>Parametry
 
-*Vstup*<br/>
-Vstupní řetězec prozkoumat.
+*vstup*<br/>
+Vstupní řetězec, který se má prošetřit
 
-*Délka*<br/>
-Počet znaků k prozkoumání v *vstupní*.
+*length*<br/>
+Počet znaků, které mají být zkontrolovány ve *vstupu*.
 
-*Formát*<br/>
+*format*<br/>
 Jeden nebo více specifikátorů formátu.
 
 *...*<br/>
-Volitelné proměnné, které se použijí k ukládání hodnot extrahován ze vstupního řetězce specifikátory formátu v *formátu*.
+Volitelné proměnné, které budou použity k uložení hodnot extrahovaných ze vstupního řetězce specifikátory formátu ve *formátu*.
 
-*Národní prostředí*<br/>
+*jazyka*<br/>
 Národní prostředí, které se má použít
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Obě tyto funkce vrátí počet polí úspěšně převedena a přidělena; Vrácená hodnota nezahrnuje pole, která byla načtena, ale nejsou přiřazena. Vrácená hodnota 0 označuje, že nebyla přiřazena žádná pole. Vrácená hodnota je **EOF** pro chybu nebo pokud je dosaženo konce řetězce před prvním převodem. Další informace najdete v tématu [sscanf –](sscanf-sscanf-l-swscanf-swscanf-l.md).
+Obě tyto funkce vrátí počet úspěšně převedených a přiřazených polí. Vrácená hodnota nezahrnuje pole, která byla načtena, ale nebyla přiřazena. Návratová hodnota 0 značí, že nebyla přiřazena žádná pole. Návratová hodnota je znak **EOF** pro chybu, nebo pokud je dosaženo konce řetězce před prvním převodem. Další informace najdete v tématu [sscanf](sscanf-sscanf-l-swscanf-swscanf-l.md).
 
-Pokud *vstupní* nebo *formátu* je **NULL** ukazatele, nebo, pokud *délka* je menší než nebo rovna nule, je vyvolána obslužná rutina neplatného parametru, jako popsané v [Parameter Validation](../../c-runtime-library/parameter-validation.md). Pokud provádění může pokračovat, vrátí tyto funkce **EOF** a nastavte **errno** k **EINVAL**.
+Pokud je *vstup* nebo *Formát* ukazatel s **hodnotou null** , nebo pokud je *Délka* menší nebo rovna nule, je vyvolána obslužná rutina neplatného parametru, jak je popsáno v tématu [ověřování parametru](../../c-runtime-library/parameter-validation.md). Pokud provádění může pokračovat, vrátí tyto funkce **EOF** a nastaví **errno** na **EINVAL**.
 
 Informace o těchto a dalších chybových kódech naleznete v tématu [_doserrno, errno, _sys_errlist a _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Poznámky
 
-Tato funkce je třeba **sscanf –** s tím rozdílem, že poskytuje možnost určit pevný počet znaků k prozkoumání ze vstupního řetězce. Další informace najdete v tématu [sscanf –](sscanf-sscanf-l-swscanf-swscanf-l.md).
+Tato funkce se podobá **sscanf** s tím rozdílem, že poskytuje možnost zadat pevný počet znaků, které se mají prozkoumávat ze vstupního řetězce. Další informace najdete v tématu [sscanf](sscanf-sscanf-l-swscanf-swscanf-l.md).
 
-Verze těchto funkcí s **_l** přípona jsou stejné s tím rozdílem, že používají parametr národního prostředí předaného namísto aktuálního národní prostředí pro vlákno.
+Verze těchto funkcí s příponou **_l** jsou stejné s tím rozdílem, že používají předaný parametr národního prostředí namísto aktuálního národního prostředí vlákna.
 
 ### <a name="generic-text-routine-mappings"></a>Mapování rutin obecného textu
 
@@ -133,9 +136,9 @@ Verze těchto funkcí s **_l** přípona jsou stejné s tím rozdílem, že pou�
 |Rutina|Požadovaný hlavičkový soubor|
 |-------------|---------------------|
 |**_snscanf**, **_snscanf_l**|\<stdio.h>|
-|**_snwscanf**, **_snwscanf_l**|\<stdio.h > nebo \<wchar.h >|
+|**_snwscanf**, **_snwscanf_l**|\<stdio. h > nebo \<WCHAR. h >|
 
-Další informace o kompatibilitě naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Příklad
 

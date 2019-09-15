@@ -1,13 +1,13 @@
 ---
 title: tolower, _tolower, towlower, _tolower_l, _towlower_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _tolower_l
 - towlower
 - tolower
 - _tolower
 - _towlower_l
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -21,7 +21,10 @@ apilocation:
 - ucrtbase.dll
 - api-ms-win-crt-string-l1-1-0.dll
 - ntoskrnl.exe
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _totlower
 - tolower
@@ -43,14 +46,14 @@ helpviewer_keywords:
 - characters, converting
 - _towlower_l function
 ms.assetid: 86e0fc02-94ae-4472-9631-bf8e96f67b92
-ms.openlocfilehash: f7d017235eddb19b08353dceb332a2721e7434aa
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5d182fca50befac3393012572e68e65a8c81fa72
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62155511"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70957456"
 ---
-# <a name="tolower-tolower-towlower-tolowerl-towlowerl"></a>tolower, _tolower, towlower, _tolower_l, _towlower_l
+# <a name="tolower-_tolower-towlower-_tolower_l-_towlower_l"></a>tolower, _tolower, towlower, _tolower_l, _towlower_l
 
 Převede znak na malá písmena.
 
@@ -79,44 +82,44 @@ int _towlower_l(
 ### <a name="parameters"></a>Parametry
 
 *c*<br/>
-Znak pro převod.
+Znak, který se má převést
 
-*Národní prostředí*<br/>
-Národní prostředí pro překlad specifických pro národní prostředí.
+*jazyka*<br/>
+Národní prostředí, které se má použít pro překlad specifický pro národní prostředí.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Každá z těchto rutin převádí kopii *c* na malá písmena, pokud převod je možné a vrátí výsledek. Vyhrazená k indikaci chyby není žádnou návratovou hodnotu.
+Každá z těchto rutin převede kopii *c* na malý případ, pokud je převod možný, a vrátí výsledek. Není vyhrazena žádná návratová hodnota pro indikaci chyby.
 
 ## <a name="remarks"></a>Poznámky
 
-Pokud je to možné a relevantní každá z těchto rutin dané velké písmeno převede na malá písmena. Převod velikosti písmen **towlower –** je specifických pro národní prostředí. V případě se změní pouze znaky relevantní pro aktuální národní prostředí. Funkce bez **_l** příponu použít aktuálně nastavené národního prostředí. Verze těchto funkcí, které mají **_l** přípona trvat národního prostředí jako parametr, který budete používat místo aktuálně nastavené národního prostředí. Další informace najdete v tématu [národní prostředí](../../c-runtime-library/locale.md).
+Každá z těchto rutin převede zadané velké písmeno na malé písmeno, pokud je to možné a důležité. Konverze velikosti **towlower** je specifická pro národní prostředí. V případě změny jsou změněny pouze znaky relevantní pro aktuální národní prostředí. Funkce bez přípony **_l** používají aktuálně nastavené národní prostředí. Verze těchto funkcí, které mají příponu **_l** , přebírají národní prostředí jako parametr a používají jej namísto aktuálně nastaveného národního prostředí. Další informace najdete v tématu [národní prostředí](../../c-runtime-library/locale.md).
 
-Aby **_tolower –** očekávané výsledky, [__isascii –](isascii-isascii-iswascii.md) a [isupper](isupper-isupper-l-iswupper-iswupper-l.md) musí obě vrací nenulovou hodnotu.
+Aby **_tolower** poskytovala očekávané výsledky, [__isascii](isascii-isascii-iswascii.md) a [Upper](isupper-isupper-l-iswupper-iswupper-l.md) musí vracet nenulovou hodnotu.
 
 ### <a name="generic-text-routine-mappings"></a>Mapování rutin obecného textu
 
-|Rutina TCHAR.H|_UNICODE a _MBCS nejsou definovány|_MBCS definováno|_UNICODE definováno|
+|Rutina TCHAR.H|_UNICODE & _MBCS nejsou definovány.|_MBCS definováno|_UNICODE definováno|
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_totlower**|**tolower**|**_mbctolower**|**towlower**|
 |**_totlower_l**|**_tolower_l**|**_mbctolower_l**|**_towlower_l**|
 
 > [!NOTE]
-> **_tolower_l –** a **_towlower_l –** mít žádnou závislost národního prostředí a neměly by být volány přímo. Jsou určeny pro interní použití rozhraním **_totlower_l**.
+> **_tolower_l** a **_towlower_l** nemají žádnou závislost národního prostředí a nejsou určeny k přímému volání. Jsou k dispozici pro interní použití v **_totlower_l**.
 
 ## <a name="requirements"></a>Požadavky
 
 |Rutina|Požadovaný hlavičkový soubor|
 |-------------|---------------------|
-|**tolower**|\<ctype.h>|
-|**_tolower**|\<ctype.h>|
-|**towlower**|\<ctype.h > nebo \<wchar.h >|
+|**tolower**|\<CType. h >|
+|**_tolower**|\<CType. h >|
+|**towlower**|\<CType. h > nebo \<WCHAR. h >|
 
-Další informace o kompatibilitě, naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Příklad
 
-Podívejte se na příklad v [funkcí](../../c-runtime-library/to-functions.md).
+Podívejte se na příklad v tématu [funkce](../../c-runtime-library/to-functions.md).
 
 ## <a name="see-also"></a>Viz také:
 

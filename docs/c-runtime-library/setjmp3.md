@@ -1,9 +1,9 @@
 ---
 title: _setjmp3
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _setjmp3
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr90.dll
 - msvcr110.dll
@@ -11,7 +11,10 @@ apilocation:
 - msvcr110_clr0400.dll
 - msvcr100.dll
 - msvcr120.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - setjmp3
 - _setjmp3
@@ -19,16 +22,16 @@ helpviewer_keywords:
 - _setjmp3 function
 - setjmp3 function
 ms.assetid: 6129c2f3-8bac-4fdb-a827-44e1eebba500
-ms.openlocfilehash: e2c89acf1de88b831d70a0f438cdf14148a48632
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d7120ddd10322d0b7391608fd388d9f45c1600e8
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62268795"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70957797"
 ---
-# <a name="setjmp3"></a>_setjmp3
+# <a name="_setjmp3"></a>_setjmp3
 
-Vnitřní funkce CRT. Novou implementaci `setjmp` funkce.
+Vnitřní funkce CRT. Nová implementace `setjmp` funkce.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -42,22 +45,22 @@ int _setjmp3(
 
 #### <a name="parameters"></a>Parametry
 
-*env*<br/>
-[out] Adresa vyrovnávací paměti pro ukládání informací o stavu.
+*ENV*<br/>
+mimo Adresa vyrovnávací paměti pro ukládání informací o stavu.
 
-*Počet*<br/>
-[in] Počet dalších `DWORD`s informací, které jsou uloženy v `optional parameters`.
+*výpočtu*<br/>
+pro Počet dalších `DWORD`s informacemi, které jsou uloženy `optional parameters`v.
 
-*Volitelné parametry*<br/>
-[in] Další data nasdílí `setjmp` vnitřní. První `DWORD` je ukazatel na funkci, která slouží k uvolnění doplňující data a vrátit se stálé registraci stavu. Druhá `DWORD` je úroveň, zkuste obnovit. Další data se uloží do pole Obecná data v `jmp_buf`.
+*volitelné parametry*<br/>
+pro Další data, která jsou `setjmp` vydaná vnitřními. První `DWORD` je ukazatel na funkci, který se používá k unwind dat navíc a návrat do nestálého stavu registrace. Druhá `DWORD` je úroveň pokusu o obnovení. Všechna další data jsou uložena do obecného datového pole v `jmp_buf`.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Vždy vrátí hodnotu 0.
+Vždycky vrátí hodnotu 0.
 
 ## <a name="remarks"></a>Poznámky
 
-Nepoužívejte tuto funkci v programu v jazyce C++. Je vnitřní funkce, která nepodporuje C++. Další informace o tom, jak používat `setjmp`, naleznete v tématu [používání setjmp/longjmp](../cpp/using-setjmp-longjmp.md).
+Nepoužívejte tuto funkci v C++ programu. Jedná se o vnitřní funkci, která nepodporuje C++. Další informace o tom, jak používat `setjmp`, najdete v tématu [použití setjmp/longjmp](../cpp/using-setjmp-longjmp.md).
 
 ## <a name="requirements"></a>Požadavky
 

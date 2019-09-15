@@ -1,11 +1,11 @@
 ---
-title: carg cargf, cargl
+title: carg, cargf, cargl
 ms.date: 11/04/2016
-apiname:
+api_name:
 - carg
 - cargf
 - cargl
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - carg
 - cargf
@@ -30,16 +33,16 @@ helpviewer_keywords:
 - cargf function
 - cargl function
 ms.assetid: 610d6a93-b929-46ab-a966-b77db0b804be
-ms.openlocfilehash: 584732594cd9ca9579907986e3dc3b5f3dbf52c0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e66b0b3545b3f28a8f7b4ca14c29ffe1e0fc260c
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62340713"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70939305"
 ---
-# <a name="carg-cargf-cargl"></a>carg cargf, cargl
+# <a name="carg-cargf-cargl"></a>carg, cargf, cargl
 
-Načte argument komplexního čísla s větví vyjmout skutečné ose záporné.
+Načte argument komplexního čísla s vydělenou větví kolem záporné reálné osy.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -64,23 +67,23 @@ long double cargl(
 ### <a name="parameters"></a>Parametry
 
 *z*<br/>
-Komplexní čísla.
+Komplexní číslo.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Argument (označované také jako fáze) *z*. Výsledkem je v intervalu [-pí, + pí].
+Argument (označovaný také jako fáze) *z.* Výsledek je v intervalu [-π, + π].
 
 ## <a name="remarks"></a>Poznámky
 
-Protože C++ umožňuje přetížení, můžete volat přetížení **carg** trvají **_Fcomplex** nebo **_Lcomplex** hodnoty a návrat **float**nebo **dlouhé** **double** hodnoty. V programu jazyka C **carg** vždy přijímá **_Dcomplex** hodnotu a vrátí **double** hodnotu.
+Vzhledem C++ k tomu, že umožňuje přetížení, můžete volat přetížení **carg** , která přijímají hodnoty **_Fcomplex** nebo **_Lcomplex** , a vracet hodnoty **float** nebo **Long** **Double** . V programu v jazyce C **carg** vždy převezme **_Dcomplex** hodnotu a vrátí hodnotu **Double** .
 
 ## <a name="requirements"></a>Požadavky
 
-|Rutina|Záhlaví C|Hlaviček jazyka C++|
+|Rutina|Hlavička jazyka C|C++hlaviček|
 |-------------|--------------|------------------|
-|**carg**, **cargf**, **cargl**|\<complex.h>|\<ccomplex>|
+|**carg**, **cargf**, **cargl**|\<complex.h>|\<ccomplex >|
 
-Další informace o kompatibilitě naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Viz také:
 

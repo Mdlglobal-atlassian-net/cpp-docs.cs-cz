@@ -1,9 +1,9 @@
 ---
 title: chsize
 ms.date: 11/04/2016
-apiname:
+api_name:
 - chsize
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -14,19 +14,22 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - chsize
 helpviewer_keywords:
 - chsize function
 ms.assetid: f94d62f6-b539-4cbf-bf99-b81d081b4216
-ms.openlocfilehash: 63e81ad2386b1480f6481724bbbab6282028a2cf
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5687065c878dfb5fddb504f5c93047e07681dd76
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62156012"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70950940"
 ---
 # <a name="chsize"></a>chsize
 
-Tato funkce POSIX je zastaralá. Použít bitovou kopii ISO C++ splňující podmínky [_chsize –](chsize.md) nebo s rozšířeným zabezpečením [_chsize_s –](chsize-s.md) místo.
+Tato funkce POSIX je zastaralá. Místo toho použijte C++ [_chsize](chsize.md) podle standardu ISO nebo [_chsize_s](chsize-s.md) s vylepšeným zabezpečením.

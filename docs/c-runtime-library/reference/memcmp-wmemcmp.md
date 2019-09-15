@@ -1,10 +1,10 @@
 ---
 title: memcmp, wmemcmp
 ms.date: 11/04/2016
-apiname:
+api_name:
 - memcmp
 - wmemcmp
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,8 +17,10 @@ apilocation:
 - ntdll.dll
 - ucrtbase.dll
 - ntoskrnl.exe
-apitype: DLLExport
-topictype: APIRef
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - memcmp
 - wmemcmp
@@ -26,12 +28,12 @@ helpviewer_keywords:
 - wmemcmp function
 - memcmp function
 ms.assetid: 0c21c3e3-8ee4-40e5-add1-eb26d225fd8d
-ms.openlocfilehash: 228a74ac8cc83bca169779f1afd6936f5be59bee
-ms.sourcegitcommit: 010ecc2bb9a15deea192a34975176ec0426aa3d8
+ms.openlocfilehash: 2fa902c0fa5a4a78f6fd3e46edeb3799aaf92569
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/28/2019
-ms.locfileid: "66265628"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70951924"
 ---
 # <a name="memcmp-wmemcmp"></a>memcmp, wmemcmp
 
@@ -60,35 +62,35 @@ První vyrovnávací paměť.
 *buffer2*<br/>
 Druhá vyrovnávací paměť.
 
-*Počet*<br/>
-Počet znaků, které mají být porovnány. (Porovnává bajtů pro **memcmp**, široké znaky **wmemcmp –**).
+*výpočtu*<br/>
+Počet znaků, které mají být porovnány. (Porovná bajty pro **memcmp**, velké znaky pro **wmemcmp**).
 
 ## <a name="return-value"></a>Návratová hodnota
 
 Návratová hodnota označuje vztah mezi vyrovnávacími pamětmi.
 
-|Návratová hodnota|Vztah prvních *počet* znaků proměnných buf1 a buf2|
+|Návratová hodnota|Relace prvních *počtů* znaků buf1 a buf2|
 |------------------|---------------------------------------------------------------|
 |< 0|*buffer1* menší než *buffer2*|
-|0|*buffer1* shodné s *buffer2*|
+|0|*buffer1* identické s *buffer2*|
 |> 0|*buffer1* větší než *buffer2*|
 
 ## <a name="remarks"></a>Poznámky
 
-Porovnává první z nich *počet* znaků *buffer1* a *buffer2* a vrátí hodnotu, která určuje jejich vzájemný vztah. Znaménko nenulové návratové hodnoty je znamení rozdílu mezi prvním párem různých hodnot ve vyrovnávacích pamětech. Tyto hodnoty jsou interpretovány jako **bez znaménka** **char** pro **memcmp**a stejně jako **wchar_t** pro **wmemcmp –**.
+Porovná první *počet* znaků *buffer1* a *buffer2* a vrátí hodnotu, která označuje jejich relaci. Znaménko nenulové návratové hodnoty je znamení rozdílu mezi prvním párem různých hodnot ve vyrovnávacích pamětech. Hodnoty jsou interpretovány jako **nepodepsaný** **znak** pro **memcmp**a jako **wchar_t** pro **wmemcmp**.
 
 ## <a name="requirements"></a>Požadavky
 
 |Rutina|Požadovaný hlavičkový soubor|
 |-------------|---------------------|
-|**memcmp**|\<Memory.h > nebo \<string.h >|
+|**memcmp**|\<Memory. h > nebo \<String. h >|
 |**wmemcmp**|\<wchar.h>|
 
-Další informace o kompatibilitě, naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
 
 ## <a name="libraries"></a>Knihovny
 
-Všechny verze [knihovny run-time C](../../c-runtime-library/crt-library-features.md).
+Všechny verze [knihovny run-time jazyka C](../../c-runtime-library/crt-library-features.md).
 
 ## <a name="example"></a>Příklad
 

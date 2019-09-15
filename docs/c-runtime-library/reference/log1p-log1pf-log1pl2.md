@@ -1,11 +1,11 @@
 ---
-title: log1p – log1pf –, log1pl2
+title: log1p, log1pf, log1pl2
 ms.date: 04/05/2018
-apiname:
+api_name:
 - log1p
 - log1pf
 - log1pl
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - log1p
 - log1pf
@@ -30,16 +33,16 @@ helpviewer_keywords:
 - log1pf function
 - log1pl function
 ms.assetid: a40d965d-b4f6-42f4-ba27-2395546f7c12
-ms.openlocfilehash: 2ac864d7e28823c95b0202c0a8f2454d03c64aff
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: aad6675a832e1715c505026fe11ffe77f1f6d275
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62285983"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70953221"
 ---
-# <a name="log1p-log1pf-log1pl"></a>log1p – log1pf –, log1pl
+# <a name="log1p-log1pf-log1pl"></a>log1p –, log1pf –, log1pl
 
-Vypočítá přirozený logaritmus 1 a zadané hodnoty.
+Vypočítá přirozený logaritmus hodnoty 1 a zadanou hodnotu.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -72,38 +75,38 @@ Argument s plovoucí desetinnou čárkou.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-V případě úspěchu vrátí fyzická (základní -*e*) z protokolu (*x* + 1).
+Je-li to úspěšné, vrátí přirozený (základní-*e*) protokol (*x* + 1).
 
-V opačném případě může vracet instanci jednoho z následujících hodnot:
+V opačném případě může vracet jednu z následujících hodnot:
 
 |Vstup|Výsledek|Výjimka SEH|errno|
 |-----------|------------|-------------------|-----------|
-|+ inf|+ inf|||
-|Denormals|Stejné jako vstup|PODTEČENÍ||
+|\+ INF|\+ INF|||
+|Denormalizované|Stejné jako vstup|PODTEČENÍ||
 |±0|Stejné jako vstup|||
-|-1|-inf|DIVBYZERO|ERANGE|
-|< -1|NaN|NEPLATNÝ|EDOM|
-|-inf|NaN|NEPLATNÝ|EDOM|
-|±SNaN|Stejné jako vstup|NEPLATNÝ||
-|±QNaN nekonečno|Stejné jako vstup|||
+|-1|– INF|DIVBYZERO|ERANGE|
+|< -1|pak|NENÍ|EDOM|
+|– INF|pak|NENÍ|EDOM|
+|± SNaN|Stejné jako vstup|NENÍ||
+|QNaN, neomezeno|Stejné jako vstup|||
 
-**Errno** hodnota nastavená na ERANGE Pokud *x* = -1. **Errno** nastavena na hodnotu **EDOM** Pokud *x* < -1.
+Hodnota **errno** je nastavená na ERANGE, pokud *x* =-1. Hodnota **errno** je nastavená na **EDOM** , pokud *x* <-1.
 
 ## <a name="remarks"></a>Poznámky
 
-**Log1p –** funkce mohou mít přesnější, než pomocí `log(x + 1)` při *x* blíží 0.
+Funkce **log1p –** můžou být přesnější než při použití `log(x + 1)` , když je *x* blízko 0.
 
-Protože jazyk C++ umožňuje přetížení, můžete volat přetížení **log1p –** , která používají a vrací **float** a **dlouhé** **double** typy. V programu jazyka C **log1p –** vždy převezme a vrátí **double**.
+Vzhledem C++ k tomu, že umožňuje přetížení, můžete volat přetížení **log1p –** , která přijímají a vracejí typ **float** a **Long** **Double** . V programu v jazyce C **log1p –** vždycky přebírá a vrací **Double**.
 
-Pokud *x* přirozené číslo, je tato funkce vrací logaritmus faktoriál (*x* – 1).
+Pokud je *x* přirozené číslo, vrátí tato funkce logaritmus faktoriál (*x* -1).
 
 ## <a name="requirements"></a>Požadavky
 
-|Funkce|Záhlaví C|Hlaviček jazyka C++|
+|Funkce|Hlavička jazyka C|C++hlaviček|
 |--------------|--------------|------------------|
-|**log1p**, **log1pf**, **log1pl**|\<math.h>|\<cmath>|
+|**log1p –** , **log1pf –** , **log1pl**|\<Math. h >|\<cmath >|
 
-Další informace o kompatibilitě, naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Viz také:
 

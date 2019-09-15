@@ -1,9 +1,9 @@
 ---
 title: _CIsin
 ms.date: 04/10/2018
-apiname:
+api_name:
 - _CIsin
-apilocation:
+api_location:
 - msvcr80.dll
 - msvcr100.dll
 - msvcrt.dll
@@ -12,7 +12,10 @@ apilocation:
 - msvcr90.dll
 - msvcr110_clr0400.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - CIsin
 - _CIsin
@@ -20,16 +23,16 @@ helpviewer_keywords:
 - _CIsin intrinsic
 - CIsin intrinsic
 ms.assetid: f215f39a-2341-4f1c-ba8e-cb522451ceb2
-ms.openlocfilehash: a76aa2b0e0438afa5728d26451c2a146ed262cab
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 66f26e9fa4dd08d18b15deca4efa40c236e092c9
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62290232"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70944549"
 ---
-# <a name="cisin"></a>_CIsin
+# <a name="_cisin"></a>_CIsin
 
-Vypočítá jeho sinus nejvyšší hodnotu v zásobníku s plovoucí desetinnou čárkou.
+Vypočítá sinus horní hodnoty v zásobníku s plovoucí desetinnou čárkou.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -39,9 +42,9 @@ void __cdecl _CIsin();
 
 ## <a name="remarks"></a>Poznámky
 
-Tato verze vnitřní [sin](../c-runtime-library/reference/sin-sinf-sinl.md) funkce má specializované konvence volání, které kompilátor rozpozná. Urychluje provádění, protože kopie zabraňuje generovaných a pomáhá při přidělení registru.
+Tato vnitřní verze funkce [Sin](../c-runtime-library/reference/sin-sinf-sinl.md) má specializovanou konvenci volání, kterou kompilátor rozumí. Zrychluje spouštění, protože brání vygenerování kopií a pomáhá s přidělením registru.
 
-Výsledná hodnota je vloženy do horní části zásobníku s plovoucí desetinnou čárkou.
+Výsledná hodnota je vložena do horní části zásobníku s plovoucí desetinnou čárkou.
 
 ## <a name="requirements"></a>Požadavky
 

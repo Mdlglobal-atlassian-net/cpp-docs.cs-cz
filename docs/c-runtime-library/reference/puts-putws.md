@@ -1,10 +1,10 @@
 ---
 title: puts, _putws
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _putws
 - puts
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _putts
 - _putws
@@ -30,14 +33,14 @@ helpviewer_keywords:
 - putts function
 - _putws function
 ms.assetid: 32dada12-ed45-40ac-be06-3feeced9ecd6
-ms.openlocfilehash: 0151d29f627a8f6b91142d619f64921333bb48f5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1cd38678b321853cb229d86f9554bb76efbc84d6
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62358083"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70949791"
 ---
-# <a name="puts-putws"></a>puts, _putws
+# <a name="puts-_putws"></a>puts, _putws
 
 Zapíše řetězec do **stdout**.
 
@@ -59,36 +62,36 @@ Výstupní řetězec.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Pokud je úspěšná, vrátí nezápornou hodnotu. Pokud **vloží** selže, vrátí **EOF**; Pokud **_putws** selže, vrátí **WEOF**. Pokud *str* je ukazatel s hodnotou null, je vyvolána obslužná rutina neplatného parametru, jak je popsáno v [Parameter Validation](../../c-runtime-library/parameter-validation.md). Pokud smí provádění pokračovat, funkce nastaví **errno** k **EINVAL** a vrátit **EOF** nebo **WEOF**.
+Pokud je úspěšná, vrátí nezápornou hodnotu. Pokud **operace** vložení selžou, vrátí **EOF**. Pokud **_putws** selžou, vrátí **WEOF**. Pokud je *str* ukazatel s hodnotou null, je vyvolána obslužná rutina neplatného parametru, jak je popsáno v tématu [ověřování parametru](../../c-runtime-library/parameter-validation.md). Pokud provádění může pokračovat, funkce nastaví **errno** na **EINVAL** a vrátí **EOF** nebo **WEOF**.
 
 Informace o těchto a dalších chybových kódech naleznete v tématu [_doserrno, errno, _sys_errlist a _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Poznámky
 
-**Vloží** funkce zápisy *str* do standardního výstupního datového proudu **stdout**, nahraďte řetězec koncový znak null ('\0') znakem nového řádku ('\n') v výstupní datový proud.
+Funkce **vložení** zapisuje *str* do standardního výstupního proudu **stdout**a nahradí ukončovací znak null řetězce (' \ 0 ') znakem nového řádku (' \ 0 ') ve výstupním datovém proudu.
 
-**_putws –** je verze širokého znaku **vloží**; tyto dvě funkce se chovají stejně jako v případě, že datový proud je otevřen v režimu ANSI. **Vloží** aktuálně nepodporuje výstup do datového proudu UNICODE.
+**_putws** je verze s velkým znakem, kterou **přináší**. Tyto dvě funkce se chovají stejně, pokud je datový proud otevřen v režimu ANSI. vložení v současné **době nepodporuje výstup** do datového proudu Unicode.
 
-**_putwch** zapíše znaky Unicode pomocí aktuálního nastavení CONSOLE LOCALE.
+**_putwch** zapisuje znaky Unicode pomocí aktuálního nastavení národního prostředí konzoly.
 
 ### <a name="generic-text-routine-mappings"></a>Mapování rutin obecného textu
 
-|Rutina TCHAR.H|_UNICODE a _MBCS nejsou definovány|_MBCS definováno|_UNICODE definováno|
+|Rutina TCHAR.H|_UNICODE & _MBCS nejsou definovány.|_MBCS definováno|_UNICODE definováno|
 |---------------------|------------------------------------|--------------------|-----------------------|
-|**_putts**|**Vloží**|**Vloží**|**_putws**|
+|**_putts**|**zaskladnění**|**zaskladnění**|**_putws**|
 
 ## <a name="requirements"></a>Požadavky
 
 |Rutina|Požadovaný hlavičkový soubor|
 |-------------|---------------------|
-|**Vloží**|\<stdio.h>|
+|**zaskladnění**|\<stdio.h>|
 |**_putws**|\<stdio.h>|
 
-Konzole není podporována v aplikacích pro univerzální platformu Windows (UPW). Standardní datový proud popisovačů, které jsou spojeny s konzolou, **stdin**, **stdout**, a **stderr**, musí být přesměrován před funkcí jazyka C za běhu můžete použít v aplikacích pro UWP . Další informace o kompatibilitě, naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
+Konzola není v aplikacích Univerzální platforma Windows (UWP) podporována. Standardní popisovače streamů, které jsou spojeny s konzolou, **stdin**, **stdout**a **stderr**, musí být přesměrované před tím, než je funkce modulu runtime jazyka C můžou použít v aplikacích pro UWP. Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
 
 ## <a name="libraries"></a>Knihovny
 
-Všechny verze [běhových knihoven C](../../c-runtime-library/crt-library-features.md).
+Všechny verze [knihoven run-time jazyka C](../../c-runtime-library/crt-library-features.md).
 
 ## <a name="example"></a>Příklad
 
@@ -112,6 +115,6 @@ Hello world from puts!
 
 ## <a name="see-also"></a>Viz také:
 
-[Stream vstupně-výstupních operací](../../c-runtime-library/stream-i-o.md)<br/>
+[Vstup/výstup datového proudu](../../c-runtime-library/stream-i-o.md)<br/>
 [fputs, fputws](fputs-fputws.md)<br/>
 [fgets, fgetws](fgets-fgetws.md)<br/>

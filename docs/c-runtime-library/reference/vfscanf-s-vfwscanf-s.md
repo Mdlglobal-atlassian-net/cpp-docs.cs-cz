@@ -1,10 +1,10 @@
 ---
 title: vfscanf_s, vfwscanf_s
 ms.date: 11/04/2016
-apiname:
+api_name:
 - vfscanf_s
 - vfwscanf_s
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,22 +15,25 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - vfscanf_s
 - vfwscanf_s
 - _vftscanf_s
 ms.assetid: 9b0133f0-9a18-4581-b24b-3b72683ad432
-ms.openlocfilehash: 7f2f39ef124220ddee0b42242a9991d63fe5969a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2c6f3504c9c12ad5429a1b9649eda351c473671a
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62364854"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70957379"
 ---
-# <a name="vfscanfs-vfwscanfs"></a>vfscanf_s, vfwscanf_s
+# <a name="vfscanf_s-vfwscanf_s"></a>vfscanf_s, vfwscanf_s
 
-Čtení formátovaných dat z datového proudu. Tyto verze vfscanf, vfwscanf mají rozšíření zabezpečení, jak je popsáno v [funkce zabezpečení v CRT](../../c-runtime-library/security-features-in-the-crt.md).
+Čte formátovaná data z datového proudu. Tyto verze vfscanf, vfwscanf mají vylepšení zabezpečení, jak je popsáno v [části funkce zabezpečení v CRT](../../c-runtime-library/security-features-in-the-crt.md).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -50,32 +53,32 @@ int vfwscanf_s(
 ### <a name="parameters"></a>Parametry
 
 *stream*<br/>
-Ukazatel na **souboru** struktury.
+Ukazatel na strukturu **souborů** .
 
-*Formát*<br/>
+*format*<br/>
 Řetězec řízení formátu
 
 *arglist*<br/>
-Seznam argumentů s proměnnou délkou.
+Seznam argumentů proměnných
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Každá z těchto funkcí vrátí počet polí, která jsou úspěšně převedena a přidělena; Vrácená hodnota nezahrnuje pole, která byla načtena, ale nejsou přiřazena. Vrácená hodnota 0 označuje, že nebyla přiřazena žádná pole. Pokud dojde k chybě nebo pokud je dosaženo konce souboru datového proudu před prvním převodem, vrácená hodnota je **EOF** pro **vfscanf_s** a **vfwscanf_s**.
+Každá z těchto funkcí vrátí počet polí, která jsou úspěšně převedena a přiřazena; Vrácená hodnota nezahrnuje pole, která byla načtena, ale nebyla přiřazena. Návratová hodnota 0 značí, že nebyla přiřazena žádná pole. Pokud dojde k chybě nebo pokud je před prvním převodem dosaženo konce souboru datového proudu, je vrácená hodnota znak **EOF** pro **vfscanf_s** a **vfwscanf_s**.
 
-Tyto funkce ověřují své parametry. Pokud *stream* je neplatný ukazatel na soubor, nebo *formátu* je ukazatel s hodnotou null, tyto funkce vyvolají obslužnou rutinu neplatného parametru, jak je popsáno v [Parameter Validation](../../c-runtime-library/parameter-validation.md). Pokud provádění může pokračovat, vrátí tyto funkce **EOF** a nastavte **errno** k **EINVAL**.
+Tyto funkce ověřují své parametry. Pokud je *datový proud* neplatný ukazatel na *soubor nebo je* nastaven ukazatel s hodnotou null, tyto funkce vyvolají obslužnou rutinu neplatného parametru, jak je popsáno v tématu [ověřování parametru](../../c-runtime-library/parameter-validation.md). Pokud provádění může pokračovat, vrátí tyto funkce **EOF** a nastaví **errno** na **EINVAL**.
 
 ## <a name="remarks"></a>Poznámky
 
-**Vfscanf_s** funkce čte data z aktuální pozice *stream* do umístění, která jsou uvedena v každém *seznam_argumentů* seznam argumentů (pokud existuje). Každý argument v seznamu musí být ukazatel na proměnnou typu, který odpovídá specifikátoru typů ve *formátu*. *Formát* řídí interpretaci vstupních polí a má stejnou formu a funkci, jako *formátu* argument pro **scanf_s**; naleznete v tématu [pole Specifikace formátu: Funkce scanf a wscanf](../../c-runtime-library/format-specification-fields-scanf-and-wscanf-functions.md) popis *formátu*. **vfwscanf_s** je verze širokého znaku **vfscanf_s**; argument formátu **vfwscanf_s** je širokoznaký řetězec. Tyto funkce chovají stejně jako v případě, že datový proud je otevřen v režimu ANSI. **vfscanf_s** aktuálně nepodporuje vstup z datového proudu UNICODE.
+Funkce **vfscanf_s** čte data z aktuální pozice *datového proudu* do umístění, která jsou uvedena v seznamu argumentů *Arglist* (pokud existuje). Každý argument v seznamu musí být ukazatel na proměnnou typu, který odpovídá specifikátoru typu ve *formátu*. *Formát* řídí interpretaci vstupních polí a má stejnou formu a funkci jako argument *Format* pro **scanf_s**; Popis *formátu*naleznete v části [pole specifikace formátu: scanf a wscanf Functions](../../c-runtime-library/format-specification-fields-scanf-and-wscanf-functions.md) . **vfwscanf_s** je **vfscanf_s**verze s velkým znakem; argument Format pro **vfwscanf_s** je řetězec s velkým znakem. Tyto funkce se chovají stejně, pokud je datový proud otevřen v režimu ANSI. **vfscanf_s** v současné době nepodporuje vstup z datového proudu Unicode.
 
-Hlavní rozdíl mezi bezpečnějšími funkcemi (které mají **_Malá** přípona) a ostatními verzemi je, že bezpečnější funkce vyžadují velikost znaků jednotlivých **c**, **C**, **s**, **S**, a **[** typu pole být předán jako argument bezprostředně následující proměnnou. Další informace najdete v tématu [scanf_s _scanf_s_l –, wscanf_s – _wscanf_s_l –](scanf-s-scanf-s-l-wscanf-s-wscanf-s-l.md) a [specifikace šířky scanf](../../c-runtime-library/scanf-width-specification.md).
+Hlavním rozdílem mezi bezpečnějšími funkcemi (které mají příponu **_s** ) a ostatními verzemi je, že bezpečnější funkce vyžadují velikost ve znacích každého pole **c**, **c**, **s**, a **[** **Type, které**má být předán jako argument bezprostředně za proměnnou. Další informace najdete v tématu [specifikace šířky](../../c-runtime-library/scanf-width-specification.md) [scanf_s, _scanf_s_l, wscanf_s, _wscanf_s_l](scanf-s-scanf-s-l-wscanf-s-wscanf-s-l.md) a scanf.
 
 > [!NOTE]
-> Velikost parametru je typu **bez znaménka**, nikoli **size_t**.
+> Parametr size je typu **bez znaménka**, nikoli **size_t**.
 
 ### <a name="generic-text-routine-mappings"></a>Mapování rutin obecného textu
 
-|Rutina TCHAR.H|_UNICODE a _MBCS nejsou definovány|_MBCS definováno|_UNICODE definováno|
+|Rutina TCHAR.H|_UNICODE & _MBCS nejsou definovány.|_MBCS definováno|_UNICODE definováno|
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_vftscanf_s**|**vfscanf_s**|**vfscanf_s**|**vfwscanf_s**|
 
@@ -84,9 +87,9 @@ Hlavní rozdíl mezi bezpečnějšími funkcemi (které mají **_Malá** přípo
 |Funkce|Požadovaný hlavičkový soubor|
 |--------------|---------------------|
 |**vfscanf_s**|\<stdio.h>|
-|**vfwscanf_s**|\<stdio.h > nebo \<wchar.h >|
+|**vfwscanf_s**|\<stdio. h > nebo \<WCHAR. h >|
 
-Další informace o kompatibilitě, naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Příklad
 
@@ -158,7 +161,7 @@ x
 
 ## <a name="see-also"></a>Viz také:
 
-[Stream vstupně-výstupních operací](../../c-runtime-library/stream-i-o.md)<br/>
+[Vstup/výstup datového proudu](../../c-runtime-library/stream-i-o.md)<br/>
 [_cscanf_s, _cscanf_s_l, _cwscanf_s, _cwscanf_s_l](cscanf-s-cscanf-s-l-cwscanf-s-cwscanf-s-l.md)<br/>
 [fprintf_s, _fprintf_s_l, fwprintf_s, _fwprintf_s_l](fprintf-s-fprintf-s-l-fwprintf-s-fwprintf-s-l.md)<br/>
 [scanf_s, _scanf_s_l, wscanf_s, _wscanf_s_l](scanf-s-scanf-s-l-wscanf-s-wscanf-s-l.md)<br/>

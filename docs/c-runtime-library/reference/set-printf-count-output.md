@@ -1,9 +1,9 @@
 ---
 title: _set_printf_count_output
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _set_printf_count_output
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - set_printf_count_output
 - _set_printf_count_output
@@ -24,16 +27,16 @@ helpviewer_keywords:
 - set_printf_count_output function
 - _set_printf_count_output function
 ms.assetid: d8259ec5-764e-42d0-9169-72172e95163b
-ms.openlocfilehash: 0d4847d850b39c7c03ea92a98499715b1e6a4913
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0d53b4e4c56a69582a4eb517fa1a5c9e10cd7d2f
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62356521"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70948420"
 ---
-# <a name="setprintfcountoutput"></a>_set_printf_count_output
+# <a name="_set_printf_count_output"></a>_set_printf_count_output
 
-Povolit nebo zakázat podporu **%n** formátu [printf _printf_l –, wprintf _wprintf_l –](printf-printf-l-wprintf-wprintf-l.md)-řady funkcí.
+Povolí nebo zakáže podporu formátu **% n** ve funkcích [printf, _printf_l, wprintf a _wprintf_l](printf-printf-l-wprintf-wprintf-l.md)-Family.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -45,16 +48,16 @@ int _set_printf_count_output(
 
 ### <a name="parameters"></a>Parametry
 
-*Povolit*<br/>
-Nenulové hodnoty povolit **%n** podporovat, 0 pro vypnutí **%n** podporovat.
+*aby*<br/>
+Nenulová hodnota pro povolení podpory **% n** , 0 pro zakázání podpory **% n** .
 
 ## <a name="property-valuereturn-value"></a>Hodnota vlastnosti / návratová hodnota
 
-Stav **%n** podporovat před voláním této funkce: Pokud nenulové **%n** byla povolená podpora, 0, pokud byla zakázána.
+Stav podpory **% n** před voláním této funkce: nenulová, pokud byla povolena podpora **% n** , 0, pokud byla zakázána.
 
 ## <a name="remarks"></a>Poznámky
 
-Z důvodů zabezpečení, podpora **%n** specifikátor formátu je ve výchozím nastavení zakázána **printf** a jeho variant. Pokud **%n** dochází v **printf** specifikace formátu, výchozí chování je vyvolají obslužnou rutinu neplatného parametru, jak je popsáno v [Parameter Validation](../../c-runtime-library/parameter-validation.md). Volání **_set_printf_count_output –** s argumentem nenulové způsobí **printf**-produktovou řadu funkcí pro interpretaci **%n** jak je popsáno v [formátu Syntaxe specifikace: funkce printf a wprintf](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md).
+Z důvodu zabezpečení je podpora specifikátoru formátu **% n** ve výchozím nastavení zakázána v **printf** a ve všech jeho variantách. Pokud je **% n** zjištěn ve specifikaci formátu **printf** , výchozí chování je vyvolat neplatnou obslužnou rutinu parametru, jak je popsáno v tématu [ověřování parametru](../../c-runtime-library/parameter-validation.md). Volání **_set_printf_count_output** s nenulovým argumentem způsobí, že funkce **printf**-Family interpretují **% n** , jak je popsáno v [syntaxi specifikace formátu: printf a wprintf Functions](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md).
 
 ## <a name="requirements"></a>Požadavky
 
@@ -62,7 +65,7 @@ Z důvodů zabezpečení, podpora **%n** specifikátor formátu je ve výchozím
 |-------------|---------------------|
 |**_set_printf_count_output**|\<stdio.h>|
 
-Další informace o kompatibilitě, naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Příklad
 

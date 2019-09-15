@@ -1,7 +1,7 @@
 ---
 title: _countof – makro
 ms.date: 03/22/2018
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -12,7 +12,10 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _countof
 - countof
@@ -20,16 +23,16 @@ helpviewer_keywords:
 - countof macro
 - _countof macro
 ms.assetid: 86198767-f7e5-4beb-898d-3cbbf60350a3
-ms.openlocfilehash: 60b4350d6cf14a545de67de0bdaee70ee2099006
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3debd63da7d218e29f31847034c69d89b4691643
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62335344"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70942692"
 ---
-# <a name="countof-macro"></a>_countof – makro
+# <a name="_countof-macro"></a>_countof – makro
 
-Vypočítá počet prvků v poli staticky přiřazované.
+Vypočítá počet prvků ve staticky vyhrazeném poli.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -39,18 +42,18 @@ Vypočítá počet prvků v poli staticky přiřazované.
 
 ### <a name="parameters"></a>Parametry
 
-*Pole*<br/>
+*array*<br/>
 Název pole.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Počet prvků v poli, vyjádřené jako **size_t**.
+Počet prvků v poli vyjádřený jako **size_t**.
 
 ## <a name="remarks"></a>Poznámky
 
-**_countof** je implementovaný jako preprocesorové makro podobné funkce. Verze C++ obsahuje další šablony strojů k detekci v době kompilace, pokud je předán ukazatel místo staticky deklarovaným pole.
+**_countof** je implementováno jako preprocesorové makro typu ". C++ Verze má přídavná zařízení šablon pro detekci v době kompilace, pokud je předán ukazatel namísto staticky deklarovaného pole.
 
-Ujistěte se, že *pole* je ve skutečnosti pole, nikoli ukazatel. V jazyce C **_countof** vytváří chybné výsledky, pokud *pole* ukazatel. V C++, **_countof** nejde zkompilovat, pokud *pole* ukazatel.  Pole předána jako parametr funkce *decays na ukazatel*, což znamená, že v rámci této funkce nelze použít **_countof** k určení rozsahu objektu array.
+Ujistěte se, že *pole* je ve skutečnosti pole, nikoli ukazatel. V jazyce C **_countof** vytvoří chybné výsledky, pokud je *pole* ukazatelem. V C++ **_countof** neproběhne kompilace, pokud je *pole* ukazatelem.  Pole předané jako parametr funkci *Decays na ukazatel*, což znamená, že v rámci funkce nelze použít **_countof** k určení rozsahu pole.
 
 ## <a name="requirements"></a>Požadavky
 

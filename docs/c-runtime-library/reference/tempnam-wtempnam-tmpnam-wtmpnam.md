@@ -1,12 +1,12 @@
 ---
 title: _tempnam, _wtempnam, tmpnam, _wtmpnam
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _wtempnam
 - _wtmpnam
 - tmpnam
 - _tempnam
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -18,7 +18,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - wtempnam
 - _wtmpnam
@@ -40,12 +43,12 @@ helpviewer_keywords:
 - _wtmpnam function
 - _wtempnam function
 ms.assetid: 3ce75f0f-5e30-42a6-9791-8d7cbfe70fca
-ms.openlocfilehash: 0e8e11182948e9bccf1c55685cc7c3d55ff697c8
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 9fd1eb9f2f718afec5b7d5555145fcd7e5cc17cf
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69500769"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70957523"
 ---
 # <a name="_tempnam-_wtempnam-tmpnam-_wtmpnam"></a>_tempnam, _wtempnam, tmpnam, _wtmpnam
 
@@ -100,9 +103,9 @@ V případě **tmpnam**můžete tento vygenerovaný název souboru Uložit do *s
 
 - Pokud proměnná prostředí TMP není definovaná nebo pokud je nastavená na název adresáře, který neexistuje, **_tempnam** použije parametr *dir* jako cestu, pro kterou bude generovat jedinečné názvy.
 
-- Pokud proměnná prostředí TMP není definovaná nebo pokud je nastavená na název adresáře, který neexistuje, a pokud je adresář buď **null** , nebo nastavený na název adresáře, který neexistuje, **_tempnam** použije aktuální pracovní adresář pro genové zpracování. vyhodnotí jedinečné názvy. Pokud v současné době TMP i *dir* určují názvy adresářů, které neexistují, volání funkce **_tempnam** se nezdaří.
+- Pokud proměnná prostředí TMP není definovaná nebo pokud je nastavená na název adresáře, který neexistuje, a *Pokud je adresář* buď **null** , nebo nastavený na název adresáře, který neexistuje, **_tempnam** použije aktuální pracovní adresář pro genové zpracování. vyhodnotí jedinečné názvy. Pokud v současné době TMP i *dir* určují názvy adresářů, které neexistují, volání funkce **_tempnam** se nezdaří.
 
-Název vrácený funkcí **_tempnam** bude zřetězením *předpony* a sekvenčního čísla, které se spojí a vytvoří jedinečný název souboru pro zadaný adresář. **_tempnam** vygeneruje názvy souborů bez přípony. **_tempnam** používá [](malloc.md) k přidělení prostoru pro název souboru. program zodpovídá za uvolnění tohoto místa, pokud už ho nepotřebujete.
+Název vrácený funkcí **_tempnam** bude zřetězením *předpony* a sekvenčního čísla, které se spojí a vytvoří jedinečný název souboru pro zadaný adresář. **_tempnam** vygeneruje názvy souborů bez přípony. **_tempnam** používá [k přidělení prostoru pro název](malloc.md) souboru. program zodpovídá za uvolnění tohoto místa, pokud už ho nepotřebujete.
 
 **_tempnam** a **tmpnam** automaticky zpracovávají řetězcové argumenty vícebajtových znaků podle potřeby a zjišťují sekvence vícebajtových znaků podle znakové stránky OEM získané z operačního systému. **_wtempnam** je **_tempnam**verze s velkým znakem; argumenty a návratová hodnota **_wtempnam** jsou řetězce s velkým počtem znaků. **_wtempnam** a **_tempnam** se chovají stejně, s výjimkou toho, že **_wtempnam** zpracovává řetězce vícebajtových znaků. **_wtmpnam** je **tmpnam**verze s velkým znakem; argument a návratová hodnota **_wtmpnam** jsou řetězce s velkým počtem znaků. **_wtmpnam** a **tmpnam** se chovají stejně, s výjimkou toho, že **_wtmpnam** zpracovává řetězce vícebajtových znaků.
 

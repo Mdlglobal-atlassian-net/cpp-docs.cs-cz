@@ -1,10 +1,10 @@
 ---
 title: mbrtoc16, mbrtoc323
 ms.date: 11/04/2016
-apiname:
+api_name:
 - mbrtoc16
 - mbrtoc32
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-convert-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - mbrtoc16
 - mbrtoc32
@@ -26,16 +29,16 @@ helpviewer_keywords:
 - mbrtoc16 function
 - mbrtoc32 function
 ms.assetid: 099ade4d-56f7-4e61-8b45-493f1d7a64bd
-ms.openlocfilehash: f8573ac321772d19141be0228891b290ba48b217
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 52bcec5911fdc2ecbb073ae0042777aa4eb2b963
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62331581"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70952449"
 ---
 # <a name="mbrtoc16-mbrtoc32"></a>mbrtoc16, mbrtoc32
 
-Převede první vícebajtového znaku v úzký řetězcový na ekvivalentní UTF-16 nebo UTF-32 znaků.
+Přeloží první vícebajtový znak v úzkém řetězci na ekvivalentní znak UTF-16 nebo UTF-32.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -58,44 +61,44 @@ size_t mbrtoc32(
 ### <a name="parameters"></a>Parametry
 
 *destination*<br/>
-Ukazatel **char16_t** nebo **char32_t** ekvivalent vícebajtový znak pro převod. Pokud má hodnotu null, funkce hodnotu neukládá.
+Ukazatel na **char16_t** nebo **char32_t** ekvivalent vícebajtového znaku pro převod. Pokud má hodnotu null, funkce neuloží hodnotu.
 
 *source*<br/>
-Ukazatel na řetězec vícebajtový znak pro převod.
+Ukazatel na řetězec vícebajtových znaků, který se má převést.
 
 *max_bytes*<br/>
-Maximální počet bajtů v *zdroj* prozkoumat pro znak pro převod. Toto musí být číslo v rozsahu od 1 do počtu bajtů, včetně jakékoli ukončovacího znaku null, zbývajících v *zdroj*.
+Maximální počet bajtů ve *zdroji* , který má být prověřen pro znak, který má být převeden. Mělo by se jednat o hodnotu mezi 1 a počtem bajtů, včetně znaku null, zbývající ve *zdroji*.
 
-*state*<br/>
-Ukazatel **mbstate_t** převodu stav objektu použité k interpretaci vícebajtový řetězec, který má jeden nebo více znaků výstupu.
+*státech*<br/>
+Ukazatel na objekt stavu konverze **mbstate_t** sloužící k interpretaci vícebajtového řetězce na jeden nebo více výstupních znaků.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-V případě úspěchu vrátí hodnotu první z těchto podmínek, které se vztahuje, aktuálně stanovaném *stavu* hodnotu:
+Při úspěchu vrátí hodnotu první z těchto podmínek, které platí, s ohledem na hodnotu aktuálního *stavu* :
 
 |Value|Podmínka|
 |-----------|---------------|
-|0|Další *max_bytes* nebo méně znaků převést z *zdroj* odpovídají široké znaky null, což je hodnota uložená Pokud *cílové* nemá hodnotu null.<br /><br /> *Stav* obsahuje počáteční posun stavu.|
-|Mezi 1 a *max_bytes*včetně|Vrácená hodnota je počet bajtů *zdroj* dokončit, který je platný vícebajtový znak. Převedený širokého znaku je uložen, pokud *cílové* nemá hodnotu null.|
-|-3|Dalšího širokého znaku vyplývající z předchozího volání funkce jsou uložená v *cílové* Pokud *cílové* nemá hodnotu null. Žádné bajty z *zdroj* se spotřebovávají toto volání funkce.<br /><br /> Když *zdroj* odkazuje na vícebajtového znaku, který vyžaduje více než jeden širokého znaku představující (například náhradní pár), pak bude *stavu* hodnota je aktualizována tak, aby se zapíše následující volání funkce  na další znak.|
-|-2|Další *max_bytes* bajtů představují neúplný, ale potenciálně platný, vícebajtového znaku. Žádná hodnota je uložená v *cílové*. Tento výsledek může dojít, pokud *max_bytes* je nula.|
-|-1|Došlo k chybě kódování. Další *max_bytes* nebo menší počet bajtů se nepodílejí na dokončení a je platný vícebajtový znak. Žádná hodnota je uložená v *cílové*.<br /><br /> **EILSEQ** je uložen v **errno** a stav převodu *stavu* není zadána.|
+|0|Další *max_bytes* nebo méně znaků převedených ze *zdroje* odpovídají znaku null, který je uložený v případě, že *cílová* hodnota není null.<br /><br /> *stav* obsahuje počáteční stav posunutí.|
+|Mezi 1 a *max_bytes*, včetně|Vrácená hodnota je počet bajtů *zdroje* , které dokončí platný vícebajtový znak. V případě, že *cíl* není null, je uložený široce převedený znak.|
+|-3|Další širší znak, který je výsledkem předchozího volání funkce, byl uložen v *cíli* , pokud *cílová* hodnota není null. Toto volání funkce nespotřebovává žádné bajty ze *zdroje* .<br /><br /> Když *zdroj* odkazuje na vícebajtový znak, který vyžaduje více než jeden širší znak, který reprezentuje (například náhradní pár), pak je hodnota *stavu* aktualizována tak, aby další volání funkce zapisovalo další znak.|
+|-2|Další *max_bytes* bajty reprezentují neúplný, ale potenciálně platný vícebajtový znak. V *cíli*není uložená žádná hodnota. K tomuto výsledku může dojít, pokud je *max_bytes* nula.|
+|-1|Došlo k chybě kódování. Další *max_bytes* nebo méně bajtů nepřispívají k kompletnímu a platnému vícebajtovém znaku. V *cíli*není uložená žádná hodnota.<br /><br /> **EILSEQ** je uložený v **errno** a *stav* konverze není Neurčeno.|
 
 ## <a name="remarks"></a>Poznámky
 
-**Mbrtoc16** funkce přečte až *max_bytes* bajtů z *zdroj* najít první kompletní a platný vícebajtový znak a potom úložiště ekvivalentní UTF-16 znak *cílové*. Zdroj bajtů se interpretují podle aktuální národní prostředí pro vlákno vícebajtové. Pokud vícebajtový znak vyžaduje více než jeden znak výstup kódování UTF-16, jako je například náhradní pár, pak bude *stavu* je hodnota nastavena na ukládání další znak v kódování UTF-16 *cílové* na další volání **mbrtoc16**. **Mbrtoc32** funkcí jsou identické, ale výstup se ukládá jako UTF-32 znaků.
+Funkce **mbrtoc16** čte až *max_bytes* bajtů ze *zdroje* , aby našel první úplný, platný vícebajtový znak a pak v *cíli*uloží ekvivalentní znak UTF-16. Zdrojové bajty jsou interpretovány podle aktuálního vlákna vícebajtového národního prostředí. Pokud vícebajtový znak vyžaduje více než jeden výstupní znak UTF-16, například náhradní pár, pak je hodnota *stav* nastavená na uložení dalšího znaku UTF-16 v *cíli* při dalším volání **mbrtoc16**. Funkce **mbrtoc32** je shodná, ale výstup je uložen jako znak UTF-32.
 
-Pokud *zdroj* má hodnotu null, tyto funkce vrácená ekvivalent volání bylo vytvořeno s použitím argumenty **NULL** pro *cílové*, **""** pro *zdroj*a 1 pro *max_bytes*. Předané hodnoty *cílové* a *max_bytes* jsou ignorovány.
+Pokud má *zdroj* hodnotu null, vrátí tyto funkce ekvivalent volání pomocí argumentů s **hodnotou null** pro *cíl*, **""** pro *zdroj*a 1 pro *max_bytes*. Předané hodnoty *Destination* a *max_bytes* jsou ignorovány.
 
-Pokud *zdroj* není null, funkce začne na začátku řetězce a zkontroluje až *max_bytes* bajtů k určení počtu bajtů vyžadovaných k dokončení dalšího vícebajtového znaku, včetně Všechny sekvence shift. Pokud přezkoumán bajtů obsahovat platnou a kompletní vícebajtový znak, funkce převede znak na odpovídající 16bitové nebo 32bitové široký znak nebo znaky. Pokud *cílové* není null, funkce ukládá výsledek první (a případně pouze) znaku v cílové. Pokud potřebujete další výstupní znaky, je hodnota *stavu*tak, aby následná volání funkce výstupní další znaky a vrátí hodnotu -3. Pokud další znaky výstup nejsou povinné, pak *stavu* nastavena do stavu počáteční posun.
+Pokud *zdroj* není null, funkce začíná na začátku řetězce a zkontroluje až *max_bytes* bajtů a určí počet bajtů vyžadovaných k dokončení dalšího vícebajtového znaku, včetně všech sekvencí posunutí. Pokud prošetřené bajty obsahují platný a kompletní vícebajtový znak, funkce převede znak na ekvivalentní 16bitový nebo 32 celý znak nebo znaky. Pokud *cíl* není null, funkce ukládá první (a možná pouze) výsledný znak v cíli. Pokud jsou požadovány další výstupní znaky, hodnota je nastavena ve *stavu*, takže následné volání funkce výstup dalších znaků a vrátí hodnotu-3. Pokud nejsou požadovány žádné další výstupní znaky, pak je *stav* nastaven na počáteční stav posunutí.
 
 ## <a name="requirements"></a>Požadavky
 
-|Funkce|Záhlaví C|Hlaviček jazyka C++|
+|Funkce|Hlavička jazyka C|C++hlaviček|
 |--------------|--------------|------------------|
 |**mbrtoc16**, **mbrtoc32**|\<uchar.h>|\<cuchar>|
 
-Další informace o kompatibilitě, naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Viz také:
 

@@ -1,12 +1,12 @@
 ---
 title: fprintf, _fprintf_l, fwprintf, _fwprintf_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - fwprintf
 - fprintf
 - _fprintf_l
 - _fwprintf_l
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - fprintf
 - fwprintf
@@ -35,16 +38,16 @@ helpviewer_keywords:
 - print formatted data to streams
 - fwprintf_l function
 ms.assetid: 34a87e1c-6e4d-4d48-a611-58314dd4dc4b
-ms.openlocfilehash: d84ef50e6fd522e393bb87664fb1eb47f3d32bb4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1a296b8ac97a7f20a3834814c1ca3b7319720148
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62333193"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70956990"
 ---
-# <a name="fprintf-fprintfl-fwprintf-fwprintfl"></a>fprintf, _fprintf_l, fwprintf, _fwprintf_l
+# <a name="fprintf-_fprintf_l-fwprintf-_fwprintf_l"></a>fprintf, _fprintf_l, fwprintf, _fwprintf_l
 
-Tisk formátovaných dat do datového proudu. Bezpečnější verze těchto funkcí jsou k dispozici. Zobrazit [fprintf_s – _fprintf_s_l –, fwprintf_s – _fwprintf_s_l –](fprintf-s-fprintf-s-l-fwprintf-s-fwprintf-s-l.md).
+Tisk formátovaných dat do datového proudu. K dispozici jsou bezpečnější verze těchto funkcí; viz [fprintf_s, _fprintf_s_l, fwprintf_s, _fwprintf_s_l](fprintf-s-fprintf-s-l-fwprintf-s-fwprintf-s-l.md).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -76,39 +79,39 @@ int _fwprintf_l(
 ### <a name="parameters"></a>Parametry
 
 *stream*<br/>
-Ukazatel na **souboru** struktury.
+Ukazatel na strukturu **souborů** .
 
-*Formát*<br/>
+*format*<br/>
 Řetězec řízení formátu
 
 *argument*<br/>
 Volitelné argumenty
 
-*Národní prostředí*<br/>
+*jazyka*<br/>
 Národní prostředí, které se má použít
 
 ## <a name="return-value"></a>Návratová hodnota
 
-**fprintf** vrátí počet zapsaných bajtů. **fwprintf –** vrátí počet širokých znaků, které jsou zapsány. Každá z těchto funkcí vrací zápornou hodnotu. místo toho při výskytu chyby výstupu. Pokud *stream* nebo *formátu* je **NULL**, tyto funkce vyvolají obslužnou rutinu neplatného parametru, jak je popsáno v [Parameter Validation](../../c-runtime-library/parameter-validation.md). Pokud smí provádění pokračovat, vrátí funkce hodnotu -1 a nastaví **errno** k **EINVAL**. Formátovací řetězec není kontroluje platnost znaků formátování je to, jestli používáte **fprintf_s –** nebo **fwprintf_s –**.
+**fprintf –** vrátí počet zapsaných bajtů. **fwprintf** vrátí počet zapsaných velkých znaků. Každá z těchto funkcí vrací zápornou hodnotu, pokud dojde k chybě výstupu. Pokud má *datový proud* nebo *Formát* **hodnotu null**, tyto funkce vyvolají obslužnou rutinu neplatného parametru, jak je popsáno v tématu [ověřování parametru](../../c-runtime-library/parameter-validation.md). Pokud provádění může pokračovat, vrátí funkce hodnotu-1 a nastaví **errno** na **EINVAL**. Formátovací řetězec není kontrolován pro platné formátovací znaky, protože je použit **fprintf_s** nebo **fwprintf_s**.
 
-Zobrazit [_doserrno, errno, _sys_errlist a _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) Další informace o těchto a dalších chybových kódech.
+Další informace o těchto a dalších chybových kódech naleznete v tématech [_doserrno, errno, _sys_errlist a _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) .
 
 ## <a name="remarks"></a>Poznámky
 
-**fprintf** formátuje a vytiskne řadu znaků a hodnot do výstupu *stream*. Každá funkce *argument* (pokud existuje) je převeden a uložen podle odpovídající specifikace formátu v *formátu*. Pro **fprintf**, *formátu* argument má stejnou syntaxi a použití, který má v **printf**.
+**fprintf –** formátuje a tiskne řadu znaků a hodnot do výstupního *datového proudu*. Každý *argument* funkce (pokud existuje) je převeden a výstup podle odpovídající specifikace formátu ve *formátu*. Pro **fprintf –** má argument *Format* stejnou syntaxi a používá ho v **printf**.
 
-**fwprintf –** je verze širokého znaku **fprintf**; v **fwprintf –**, *formátu* je širokoznaký řetězec. Tyto funkce chovají stejně jako v případě, že datový proud je otevřen v režimu ANSI. **fprintf** aktuálně nepodporuje výstup do datového proudu UNICODE.
+**fwprintf** je **fprintf –** verze s velkým znakem; ve **fwprintf**je *Formát* řetězec s velkým znakem. Tyto funkce se chovají stejně, pokud je datový proud otevřen v režimu ANSI. **fprintf –** v současné době nepodporuje výstup do datového proudu Unicode.
 
-Verze těchto funkcí s **_l** přípona jsou stejné s tím rozdílem, že používají parametr národního prostředí předaného namísto aktuálního národní prostředí pro vlákno.
+Verze těchto funkcí s příponou **_l** jsou stejné s tím rozdílem, že používají předaný parametr národního prostředí namísto aktuálního národního prostředí vlákna.
 
 > [!IMPORTANT]
-> Ujistěte se, že *formátu* není uživatelem definovaný řetězec.
+> Ujistěte se, že *Formát* není uživatelem definovaný řetězec.
 
 ### <a name="generic-text-routine-mappings"></a>Mapování rutin obecného textu
 
-|Rutina TCHAR.H|_UNICODE a _MBCS nejsou definovány|_MBCS definováno|_UNICODE definováno|
+|Rutina TCHAR.H|_UNICODE & _MBCS nejsou definovány.|_MBCS definováno|_UNICODE definováno|
 |---------------------|------------------------------------|--------------------|-----------------------|
-|**_ftprintf**|**fprintf**|**fprintf**|**fwprintf**|
+|**_ftprintf**|**fprintf –**|**fprintf –**|**fwprintf**|
 |**_ftprintf_l**|**_fprintf_l**|**_fprintf_l**|**_fwprintf_l**|
 
 Další informace najdete v tématu [specifikace formátu](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md).
@@ -118,9 +121,9 @@ Další informace najdete v tématu [specifikace formátu](../../c-runtime-libra
 |Funkce|Požadovaný hlavičkový soubor|
 |--------------|---------------------|
 |**fprintf**, **_fprintf_l**|\<stdio.h>|
-|**fwprintf**, **_fwprintf_l**|\<stdio.h > nebo \<wchar.h >|
+|**fwprintf**, **_fwprintf_l**|\<stdio. h > nebo \<WCHAR. h >|
 
-Další informace o kompatibilitě, naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Příklad
 
@@ -161,7 +164,7 @@ this is a string
 
 ## <a name="see-also"></a>Viz také:
 
-[Stream vstupně-výstupních operací](../../c-runtime-library/stream-i-o.md)<br/>
+[Vstup/výstup datového proudu](../../c-runtime-library/stream-i-o.md)<br/>
 [_cprintf, _cprintf_l, _cwprintf, _cwprintf_l](cprintf-cprintf-l-cwprintf-cwprintf-l.md)<br/>
 [fscanf, _fscanf_l, fwscanf, _fwscanf_l](fscanf-fscanf-l-fwscanf-fwscanf-l.md)<br/>
 [sprintf, _sprintf_l, swprintf, _swprintf_l, \__swprintf_l](sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)<br/>

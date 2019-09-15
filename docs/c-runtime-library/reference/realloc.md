@@ -1,9 +1,9 @@
 ---
 title: realloc
 ms.date: 11/04/2016
-apiname:
+api_name:
 - realloc
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-heap-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _brealloc
 - _nrealloc
@@ -32,16 +35,16 @@ helpviewer_keywords:
 - _frealloc function
 - reallocate memory blocks
 ms.assetid: 2b2239de-810b-4b11-9438-32ab0a244185
-ms.openlocfilehash: 0d61746365a8ded8d68072b1f398a18ba6ce7605
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6197b7bca3ec9f416696e1ded8ea5ca813392616
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62357665"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70949502"
 ---
 # <a name="realloc"></a>realloc
 
-Změnit přidělení bloků paměti.
+Znovu přidělit bloky paměti.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -55,48 +58,48 @@ void *realloc(
 ### <a name="parameters"></a>Parametry
 
 *memblock*<br/>
-Ukazatele na blok paměti dříve přidělené.
+Ukazatel na dříve přidělený blok paměti.
 
-*Velikost*<br/>
-Nová velikost v bajtech.
+*hodnota*<br/>
+Nová velikost v bajtech
 
 ## <a name="return-value"></a>Návratová hodnota
 
-**realloc** vrátí **void** ukazatele na blok paměti a nevyčerpané prostředky se (může být přesunutý).
+**realokace** vrátí ukazatel **void** na blok paměti realokace (a případně přesunuto).
 
-Pokud není k dispozici dostatek paměti a rozbalte na danou velikost bloku, původního bloku je vlevo beze změny, a **NULL** je vrácena.
+Pokud není dostatek dostupné paměti pro rozšíření bloku na danou velikost, původní blok zůstane beze změny a vrátí **hodnotu null** .
 
-Pokud *velikost* nula, je blok odkazovaný parametrem *memblock* je uvolněn; vrácená hodnota je **NULL**, a *memblock* zbývá odkazující na uvolnění bloku.
+Pokud je *Velikost* nulová, pak je uvolněn blok, na který odkazuje *memblock* ; Vrácená hodnota je **null**a *memblock* vlevo odkazuje na uvolněný blok.
 
-Návratová hodnota odkazuje na prostor úložiště, která je zaručeně jako vhodně zarovnaný pro úložiště libovolného typu objektu. Získání ukazatele na typ jiný než **void**, použijte přetypování typu na návratovou hodnotu.
+Vrácená hodnota odkazuje na prostor úložiště, který je zaručen vhodným způsobem pro uložení libovolného typu objektu. Chcete-li získat ukazatel na jiný typ než **void**, použijte přetypování typu u vrácené hodnoty.
 
 ## <a name="remarks"></a>Poznámky
 
-**Realloc** funkce změní velikost přidělené paměti bloku. *Memblock* argument odkazuje na začátku bloku paměti. Pokud *memblock* je **NULL**, **realloc** se chová stejně jako **malloc** a přiděluje nový blok *velikost*bajtů. Pokud *memblock* není **NULL**, měla by být ukazatel vrácený z předchozího volání **calloc**, **malloc**, nebo **realloc** .
+Funkce **realokace** změní velikost přiděleného bloku paměti. Argument *memblock* odkazuje na začátek bloku paměti. Pokud má Memblock **hodnotu null**, **realokace** se chová stejným **způsobem jako \** a přidělí nový blok *velikosti* bajtů. Pokud *memblock* není **null**, mělo by se jednat o ukazatel vrácený předchozím voláním metody **calloc** **, pro**nebo **realokace**.
 
-*Velikost* argument poskytuje novou velikost bloku, v bajtech. Obsah bloku jsou až po kratší velikostí novém i starém beze změny i nový blok může být v jiném umístění. Vzhledem k tomu, že nový blok může být nové umístění paměti, vrácený ukazatel **realloc** nemusí být předány prostřednictvím ukazatele *memblock* argument. **realloc** nemá nulovou nově přidělenou paměť v případě růstu vyrovnávací paměti.
+Argument *Size* poskytuje novou velikost bloku v bajtech. Obsah bloku se nezměnil do kratšího z nových a starých velikostí, i když nový blok může být v jiném umístění. Vzhledem k tomu, že nový blok může být v novém umístění v paměti, ukazatel vrácený funkcí **realokace** není zaručen jako ukazatel předaný pomocí argumentu *memblock* . **realokace** nemá v případě růstu vyrovnávací paměti nula nově přidělené paměti.
 
-**realloc** nastaví **errno** k **ENOMEM** Pokud selhání přidělení paměti, nebo pokud požadované množství paměti překročí **_heap_maxreq –**. Informace o tomto a dalších chybových kódech naleznete v tématu [errno _doserrno, _sys_errlist a _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+**realokace** nastaví **errno** na **ENOMEM** , pokud se přidělení paměti nepovede nebo pokud je velikost požadované paměti větší než **_HEAP_MAXREQ**. Informace o tomto a dalších chybových kódech naleznete v tématu [errno, _doserrno, _sys_errlist a _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
-**realloc** volání **malloc** Chcete-li použít C++ [_set_new_mode](set-new-mode.md) funkce nastavíte nový režim obslužné rutiny. Nový režim obslužné rutiny Určuje, zda je při selhání, **malloc** je volat nové rutiny obsluhy úmluvu [_set_new_handler](set-new-handler.md). Ve výchozím nastavení **malloc** nevolá nové rutiny obsluhy při selhání přidělení paměti. Toto výchozí chování můžete přepsat tak, aby, když **realloc** selže přidělování paměti, **malloc** volá nové rutiny obsluhy ve stejném způsobu, jakým **nové** operátor Když selže ze stejného důvodu. Chcete-li přepsat výchozí hodnotu, zavolejte
+**realokace** volá **hodnotu** _set_new_mode, aby bylo možné C++ použít funkci [](set-new-mode.md) k nastavení nového režimu obslužné rutiny. Nový režim obslužné rutiny **označuje, zda je při** selhání zavolána nová rutina obslužné rutiny nastavenou na [_set_new_handler](set-new-handler.md). Ve výchozím nastavení nevolá hodnota \ nevolá novou rutinu obslužné rutiny při selhání přidělení paměti. Toto výchozí chování můžete přepsat tak, **aby při opětovném přidělení paměti** nebylo volání nové obslužné rutiny nové rutiny obslužné rutiny stejným způsobem jako operátor **New** **, když** dojde k chybě ze stejného důvodu. Chcete-li přepsat výchozí hodnotu, zavolejte
 
 ```C
 _set_new_mode(1);
 ```
 
-zpočátku v těch, které jsou programu nebo propojení s knihovnou NEWMODE. OBJ (viz [možnosti propojení](../../c-runtime-library/link-options.md)).
+nejdříve v programu nebo se připojte pomocí NEWMODE. OBJ (viz [možnosti propojení](../../c-runtime-library/link-options.md)).
 
-Když je aplikace spojena s ladicí verzí knihovny run-time C **realloc** přeloží na [_realloc_dbg –](realloc-dbg.md). Další informace o tom, jak je spravována halda během procesu ladění, naleznete v tématu [haldy pro ladění CRT](/visualstudio/debugger/crt-debug-heap-details).
+Pokud je aplikace propojena s ladicí verzí knihoven jazyka C Runtime, **realokace** se přeloží na [_realloc_dbg](realloc-dbg.md). Další informace o tom, jak je halda spravována během procesu ladění, naleznete v [haldě ladění CRT](/visualstudio/debugger/crt-debug-heap-details).
 
-**realloc** je označen `__declspec(noalias)` a `__declspec(restrict)`, což znamená, že funkce je zaručeno, že neupraví globální proměnné a Vrácený ukazatel není alias. Další informace najdete v tématu [noalias](../../cpp/noalias.md) a [omezit](../../cpp/restrict.md).
+**realokace** je označena `__declspec(restrict)`jako `__declspec(noalias)` , což znamená, že funkce zaručuje, že nemění globální proměnné a že ukazatel, který vrátil, nemá alias. Další informace najdete [v tématech a](../../cpp/noalias.md) [omezení](../../cpp/restrict.md).
 
 ## <a name="requirements"></a>Požadavky
 
 |Rutina|Požadovaný hlavičkový soubor|
 |-------------|---------------------|
-|**realloc**|\<stdlib.h > a \<malloc.h >|
+|**realloc**|\<Stdlib. h > a \<. h >|
 
-Další informace o kompatibilitě, naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Příklad
 

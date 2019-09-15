@@ -1,11 +1,11 @@
 ---
-title: fmod – fmodf –, fmodl
+title: FMOD –, fmodf –, fmodl
 ms.date: 04/05/2018
-apiname:
+api_name:
 - fmod
 - fmodf
 - fmodl
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - fmod
 - _fmodl
@@ -29,14 +32,14 @@ helpviewer_keywords:
 - fmod function
 - floating-point numbers, calculating remainders
 ms.assetid: 6962d369-d11f-40b1-a6d7-6f67239f8a23
-ms.openlocfilehash: 78677be1a0c9921c35e54d43a00b8956a9d858b6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e98432a73df8b872593d4cd610139bdfa72a25c4
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62333349"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70957083"
 ---
-# <a name="fmod-fmodf-fmodl"></a>fmod – fmodf –, fmodl
+# <a name="fmod-fmodf-fmodl"></a>FMOD –, fmodf –, fmodl
 
 Vypočítá zbytek s plovoucí desetinnou čárkou.
 
@@ -72,21 +75,21 @@ Hodnoty s plovoucí desetinnou čárkou.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-**fmod –** Vrátí zbytek s plovoucí desetinnou čárkou z *x* / *y*. Pokud hodnota *y* je 0,0, **fmod** vrátí tichý NaN. Informace o reprezentaci tichého NaN **printf** řady, viz [printf](printf-printf-l-wprintf-wprintf-l.md).
+**FMOD –** vrátí zbytek s plovoucí desetinnou čárkou pro *x* / *y*. Pokud hodnota *y* je 0,0, vrátí **FMOD –** tichou hodnotu NaN. Informace o reprezentace tichého NaN **printf** Family naleznete v tématu [printf](printf-printf-l-wprintf-wprintf-l.md).
 
 ## <a name="remarks"></a>Poznámky
 
-**Fmod** funkce vypočítá zbytek s plovoucí desetinnou čárkou *f* z *x* / *y* tak, aby *x*  =  *můžu* \* *y* + *f*, kde *můžu* je celé číslo, *f* má stejné znaménko jako *x*a absolutní hodnota *f* je menší než absolutní hodnota *y*.
+Funkce **FMOD –** vypočítá zbytek s plovoucí desetinnou čárkou *f* z *x* / *y* tak, aby *x* = *i* \* *y* + *f*, kde *i* je celé číslo, *f* má stejné znaménko jako *x*a absolutní hodnota *f* je menší než absolutní hodnota *y*.
 
-Jazyk C++ umožňuje přetížení, takže můžete volat přetížení **fmod** , která používají a vrací **float** a **dlouhé** **double** hodnoty. V programu jazyka C **fmod** vždy má dva **double** argumenty a vrátí **double**.
+C++umožňuje přetížení, takže můžete volat přetížení **FMOD –** , která přijímají a vracejí hodnoty **float** a **Long** **Double** . V programu v jazyce C **FMOD –** vždy přebírá dva **dvojité** argumenty a vrací hodnotu **Double**.
 
 ## <a name="requirements"></a>Požadavky
 
 |Funkce|Požadovaný hlavičkový soubor|
 |--------------|---------------------|
-|**fmod**, **fmodf**, **fmodl**|\<math.h>|
+|**FMOD –** , **fmodf –** , **fmodl**|\<Math. h >|
 
-Další informace o kompatibilitě, naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Příklad
 

@@ -1,10 +1,10 @@
 ---
 title: memchr, wmemchr
 ms.date: 03/31/2019
-apiname:
+api_name:
 - wmemchr
 - memchr
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - ntoskrnl.exe
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - memchr
 - wmemchr
@@ -24,16 +27,16 @@ helpviewer_keywords:
 - memchr function
 - wmemchr function
 ms.assetid: 5a348581-28f1-4256-8434-687245f7fc9f
-ms.openlocfilehash: 00a1f0d12047cc388b56074a657ffd739e986827
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c951716d623d900f975e9d6f8a1c762a155b1a7a
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62285258"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70951948"
 ---
 # <a name="memchr-wmemchr"></a>memchr, wmemchr
 
-Vyhledání znaků ve vyrovnávací paměti.
+Hledání znaků ve vyrovnávací paměti.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -72,37 +75,37 @@ const wchar_t *wmemchr(
 
 ### <a name="parameters"></a>Parametry
 
-*Vyrovnávací paměti*<br/>
-Ukazatel do vyrovnávací paměti.
+*vyrovnávací paměti*<br/>
+Ukazatel na vyrovnávací paměť.
 
 *c*<br/>
-Znak k vyhledání.
+Znak, který chcete vyhledat.
 
-*Počet*<br/>
-Počet znaků ke kontrole.
+*výpočtu*<br/>
+Počet znaků, které mají být zkontrolovány.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Pokud je úspěšná, vrátí ukazatel na první umístění *c* v *vyrovnávací paměti*. V opačném případě vrátí hodnotu NULL.
+V případě úspěchu vrátí ukazatel na první umístění *c* ve *vyrovnávací paměti*. V opačném případě vrátí hodnotu NULL.
 
 ## <a name="remarks"></a>Poznámky
 
-`memchr` a `wmemchr` vyhledá první výskyt *c* v prvním *počet* znaků *vyrovnávací paměti*. Zastaví najde *c* nebo kdy se má ohlásilo první *počet* znaků.
+`memchr`a `wmemchr` vyhledejte první výskyt *c* v prvním *počtu* znaků *vyrovnávací paměti*. Zastaví se, když najde *c* nebo při zkontrolování prvního *počtu* znaků.
 
-V jazyce C, tyto funkce přijímají **const** ukazatele pro první argument. V jazyce C++ jsou k dispozici dvě přetížení. Přetížení přijímající ukazatel na **const** vrací ukazatel na **const**; verze, která přijímá ukazatel na jinou hodnotu než**const** vrací ukazatel na jinou hodnotu než**const** . Makro \_CRT\_CONST\_OPRAVTE\_PŘETÍŽENÍ je definováno, pokud **const** a jiných-**const** verze těchto funkcí jsou k dispozici. Pokud budete potřebovat non -**const** chování pro obě přetížení C++ v jazyce C++, definujte symbol \_CONST\_vrátit.
+V jazyce C tyto funkce přebírají ukazatel **const** pro první argument. V C++jsou k dispozici dvě přetížení. Přetížení přebírající ukazatel na **konstantu** vrací ukazatel na **const**; verze, která přebírá ukazatel na jiný typ než**const** , vrací ukazatel na**nekonstantní**hodnotu. Je- \_li\_k\_dispozici verze **const** i non-**const** , je definováno správné\_přetížení makra v CRT. Pokud vyžadujete**nekonstantní** chování pro C++ přetížení C++v, definujte symbol \_const\_Return.
 
 ## <a name="requirements"></a>Požadavky
 
 |Rutina|Požadovaný hlavičkový soubor|
 |-------------|---------------------|
-|`memchr`|\<Memory.h > nebo \<string.h >|
+|`memchr`|\<Memory. h > nebo \<String. h >|
 |`wmemchr`|\<wchar.h>|
 
-Další informace o kompatibilitě naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě najdete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
 
 ## <a name="libraries"></a>Knihovny
 
-Všechny verze [běhových knihoven C](../../c-runtime-library/crt-library-features.md).
+Všechny verze [knihoven run-time jazyka C](../../c-runtime-library/crt-library-features.md).
 
 ## <a name="example"></a>Příklad
 

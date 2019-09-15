@@ -1,11 +1,11 @@
 ---
 title: strcpy, wcscpy, _mbscpy
 ms.date: 11/04/2016
-apiname:
+api_name:
 - strcpy
 - wcscpy
 - _mbscpy
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -19,7 +19,10 @@ apilocation:
 - api-ms-win-crt-multibyte-l1-1-0.dll
 - api-ms-win-crt-string-l1-1-0.dll
 - ntoskrnl.exe
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _mbscpy
 - _ftcscpy
@@ -38,19 +41,19 @@ helpviewer_keywords:
 - _ftcscpy function
 - _mbscpy function
 ms.assetid: f97a4f81-e9ee-4f15-888a-0fa5d7094c5a
-ms.openlocfilehash: fa6c0122f2e62c5b39b3da7b9b7c25aa8974f768
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b54bdc2f930b805df036a1fa5d5b1595ea738b88
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62354104"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70958254"
 ---
-# <a name="strcpy-wcscpy-mbscpy"></a>strcpy, wcscpy, _mbscpy
+# <a name="strcpy-wcscpy-_mbscpy"></a>strcpy, wcscpy, _mbscpy
 
-Zkopíruje řetězec. Bezpečnější verze těchto funkcí jsou k dispozici. Zobrazit [strcpy_s wcscpy_s –, _mbscpy_s –](strcpy-s-wcscpy-s-mbscpy-s.md).
+Zkopíruje řetězec. K dispozici jsou bezpečnější verze těchto funkcí; viz [strcpy_s, wcscpy_s, _mbscpy_s](strcpy-s-wcscpy-s-mbscpy-s.md).
 
 > [!IMPORTANT]
-> **_mbscpy –** nelze použít v aplikacích, které jsou spouštěny v modulu Windows Runtime. Další informace najdete v tématu [CRT funkce nejsou podporovány v aplikacích pro univerzální platformu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> **_mbscpy** nelze použít v aplikacích, které jsou spouštěny v prostředí Windows Runtime. Další informace najdete v tématu [funkce CRT nejsou v aplikacích Univerzální platforma Windows podporovány](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -87,29 +90,29 @@ unsigned char *_mbscpy(
 ### <a name="parameters"></a>Parametry
 
 *strDestination*<br/>
-Cílový řetězec.
+Cílový řetězec
 
 *strSource*<br/>
-Řetězec zakončený hodnotou Null zdroje.
+Zdrojový řetězec zakončený hodnotou null.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Každá z těchto funkcí vrátí na cílový řetězec. Žádná návratová hodnota je vyhrazená k indikaci chyby.
+Každá z těchto funkcí vrátí cílový řetězec. Žádná návratová hodnota není vyhrazena pro indikaci chyby.
 
 ## <a name="remarks"></a>Poznámky
 
-**Strcpy –** funkce kopie *strSource*, včetně ukončujícího nulového znaku do umístění, která je zadána *strDestination*. Chování **strcpy –** není definováno, pokud se zdrojový a cílový řetězec překrývají.
+Funkce **strcpy** kopíruje *strSource*, včetně ukončujícího znaku null, do umístění zadaného parametrem *strDestination*. Chování **strcpy** není definováno, pokud se zdrojový a cílový řetězec překrývají.
 
 > [!IMPORTANT]
-> Protože **strcpy –** nekontroluje dostatek místa v *strDestination* před zkopírováním *strSource*, jde o potenciální příčinu přetečení vyrovnávací paměti. Proto doporučujeme použít [strcpy_s](strcpy-s-wcscpy-s-mbscpy-s.md) místo.
+> Vzhledem k tomu, že **strcpy** nekontroluje dostatek místa v *strDestination* před kopírováním *strSource*, je potenciální příčinou přetečení vyrovnávací paměti. Proto doporučujeme místo toho používat [strcpy_s](strcpy-s-wcscpy-s-mbscpy-s.md) .
 
-**wcscpy –** a **_mbscpy –** , jsou širokoznaké a vícebajtové verze **strcpy –**. Argumenty a vrácené hodnoty **wcscpy –** jsou širokoznaké řetězce **_mbscpy –** jsou vícebajtové znakové řetězce. Tyto tři funkce chovají identicky jinak.
+**wcscpy** a **_mbscpy** jsou, v uvedeném pořadí, verze s velkým znakem a vícebajtovým znakem **strcpy**. Argumenty a návratová hodnota **wcscpy** jsou řetězce s velkým počtem znaků; ty z **_mbscpy** jsou vícebajtové znakové řetězce. Tyto tři funkce se chovají identicky jinak.
 
-V jazyce C++ mají tyto funkce přetížení šablon, která vyvolávají novější, zabezpečené protějšky těchto funkcí. Další informace najdete v tématu [přetížení zabezpečení šablony](../../c-runtime-library/secure-template-overloads.md).
+V C++nástroji mají tyto funkce přetížení šablony, které vyvolávají novější a zabezpečené protějšky těchto funkcí. Další informace najdete v tématu [přetížení zabezpečení šablon](../../c-runtime-library/secure-template-overloads.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapování rutin obecného textu
 
-|Rutina TCHAR.H|_UNICODE a _MBCS nejsou definovány|_MBCS definováno|_UNICODE definováno|
+|Rutina TCHAR.H|_UNICODE & _MBCS nejsou definovány.|_MBCS definováno|_UNICODE definováno|
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_tcscpy**|**strcpy**|**_mbscpy**|**wcscpy**|
 
@@ -117,11 +120,11 @@ V jazyce C++ mají tyto funkce přetížení šablon, která vyvolávají nověj
 
 |Rutina|Požadovaný hlavičkový soubor|
 |-------------|---------------------|
-|**strcpy**|\<string.h>|
-|**wcscpy**|\<String.h > nebo \<wchar.h >|
-|**_mbscpy**|\<Mbstring.h >|
+|**strcpy**|\<String. h >|
+|**wcscpy**|\<String. h > nebo \<WCHAR. h >|
+|**_mbscpy**|\<Mbstring. h >|
 
-Další informace o kompatibilitě, naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Příklad
 
@@ -160,7 +163,7 @@ String = Hello world from strcpy and strcat!
 
 ## <a name="see-also"></a>Viz také:
 
-[Zacházení s řetězci](../../c-runtime-library/string-manipulation-crt.md)<br/>
+[Manipulace s řetězci](../../c-runtime-library/string-manipulation-crt.md)<br/>
 [strcat, wcscat, _mbscat](strcat-wcscat-mbscat.md)<br/>
 [strcmp, wcscmp, _mbscmp](strcmp-wcscmp-mbscmp.md)<br/>
 [strncat, _strncat_l, wcsncat, _wcsncat_l, _mbsncat, _mbsncat_l](strncat-strncat-l-wcsncat-wcsncat-l-mbsncat-mbsncat-l.md)<br/>

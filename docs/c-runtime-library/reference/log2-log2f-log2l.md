@@ -1,11 +1,11 @@
 ---
-title: log2 – log2f –, log2l
+title: log2, log2f, log2l
 ms.date: 04/05/2018
-apiname:
+api_name:
 - log2
 - log2l
 - log2f
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,18 +17,21 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 ms.assetid: 94d11b38-70b7-4d3a-94ac-523153c92b2e
-ms.openlocfilehash: d70d074b13b0f24f1f040ef0e861e073e303ac7b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: bf1734ea2f96fa1c09b3b0d1f43b681fc31c8f9f
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62285936"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70953158"
 ---
-# <a name="log2-log2f-log2l"></a>log2 – log2f –, log2l
+# <a name="log2-log2f-log2l"></a>log2, log2f, log2l
 
-Určuje binární logaritmus (základ-2) zadanou hodnotu.
+Určuje dvojkový logaritmus (dekadický-2) zadané hodnoty.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -57,37 +60,37 @@ long double log2l(
 ### <a name="parameters"></a>Parametry
 
 *x*<br/>
-Hodnota určená k určení logaritmus o základu 2 z.
+Hodnota, která určuje logaritmus o základu 2.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-V případě úspěchu vrátí vrátit log2 *x*.
+Po úspěšném návratu vrátí log2 – *x*.
 
-V opačném případě může vracet instanci jednoho z následujících hodnot:
+V opačném případě může vracet jednu z následujících hodnot:
 
-|Problém|Vrátí|
+|Problém|vrátit|
 |-----------|------------|
 |*x* < 0|NaN|
-|*x* = ±0|-NEKONEČNO|
+|*x* = ±0|– NEKONEČNO|
 |*x* = 1|+0|
-|+ NEKONEČNO|+ NEKONEČNO|
+|\+ NEKONEČNO|\+ NEKONEČNO|
 |NaN|NaN|
-|chyby domény|NaN|
-|Chyba pole|– HUGE_VAL, - HUGE_VALF, nebo - HUGE_VALL|
+|Chyba domény|NaN|
+|Chyba pole|-HUGE_VAL,-HUGE_VALF nebo-HUGE_VALL|
 
-Jsou hlášeny chyby uvedené v [_matherr](matherr.md).
+Chyby jsou hlášeny podle zadání v [_matherr](matherr.md).
 
 ## <a name="remarks"></a>Poznámky
 
-Pokud x je celé číslo, vrátí funkce v podstatě index založený na nule nejvýznamnější 1 bit *x*.
+Pokud x je celé číslo, tato funkce v podstatě vrátí index s nejvýraznějším 1 bitem hodnoty *x*od nuly.
 
 ## <a name="requirements"></a>Požadavky
 
-|Funkce|Záhlaví C|Hlaviček jazyka C++|
+|Funkce|Hlavička jazyka C|C++hlaviček|
 |--------------|--------------|------------------|
-|**log2**, **log2f**, **log2l**|\<math.h>|\<cmath>|
+|**log2 –** , **log2f –** , **log2l**|\<Math. h >|\<cmath >|
 
-Další informace o kompatibilitě, naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Viz také:
 

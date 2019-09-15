@@ -1,9 +1,9 @@
 ---
 title: _amsg_exit
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _amsg_exit
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -14,22 +14,25 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _amsg_exit
 helpviewer_keywords:
 - _amsg_exit
 ms.assetid: 146d4faf-d763-43a4-b264-12711196456b
-ms.openlocfilehash: 87cd08a6c60a1e29b8a8e15edbfdd69d338d875d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2d577bfcf0584ef982ab43ff98674d0cfadd14ba
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62335617"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70939701"
 ---
-# <a name="amsgexit"></a>_amsg_exit
+# <a name="_amsg_exit"></a>_amsg_exit
 
-Vydá chybovou zprávu zadaného modulu runtime a následně skončí aplikace s kódem chyby 255.
+Vygeneruje zadanou chybovou zprávu za běhu a pak ukončí vaši aplikaci s kódem chyby 255.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -40,11 +43,11 @@ void _amsg_exit ( int rterrnum );
 ### <a name="parameters"></a>Parametry
 
 *rterrnum*<br/>
-Identifikační číslo chybovou zprávu modulu runtime definované v systému.
+Identifikační číslo chybové zprávy modulu runtime definované systémem.
 
 ## <a name="remarks"></a>Poznámky
 
-Tato funkce generuje runtime chybová zpráva na **stderr** pro konzolové aplikace a zobrazí zprávy ve zprávě pole pro aplikace Windows. V režimu ladění můžete vyvolat ladicí program před ukončením.
+Tato funkce emituje chybovou zprávu modulu runtime do **stderr** pro konzolové aplikace nebo zobrazí zprávu v okně se zprávou pro aplikace systému Windows. V režimu ladění můžete před ukončením vyvolat ladicí program.
 
 ## <a name="requirements"></a>Požadavky
 

@@ -1,11 +1,11 @@
 ---
-title: SINH – sinhf –, sinhl –
+title: sinh, sinhf, sinhl
 ms.date: 04/10/2018
-apiname:
+api_name:
 - sinhl
 - sinhf
 - sinhl
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - sinh
 - sinhf
@@ -31,16 +34,16 @@ helpviewer_keywords:
 - sinhf function
 - sinhl function
 - hyperbolic functions
-ms.openlocfilehash: 7327809a20569c520aa799690203458d54e30fb5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6ae500cf595707acf9022b1c52232314c36cfe4d
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62356274"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70948090"
 ---
-# <a name="sinh-sinhf-sinhl"></a>SINH – sinhf –, sinhl –
+# <a name="sinh-sinhf-sinhl"></a>sinh, sinhf, sinhl
 
-Vypočte hyperbolický sinus.
+Vypočítá hyperbolický sinus.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -62,26 +65,26 @@ long double sinh(long double x);  // C++ only
 
 ## <a name="return-value"></a>Návratová hodnota
 
-**Sinh** funkce vrací hyperbolický sinus *x*. Ve výchozím nastavení, pokud je výsledek příliš velký **sinh** nastaví **errno** k **ERANGE** a vrátí rozmezí**HUGE_VAL**.
+Funkce **sinh –** vrací hyperbolický sinus *x*. Ve výchozím nastavení platí, že pokud je výsledek příliš velký, **sinh –** nastaví **errno** na **ERANGE** a vrátí ±**HUGE_VAL**.
 
-|Vstup|Výjimka SEH|Výjimka Matherr|
+|Vstup|Výjimka SEH|Výjimka matherr|
 |-----------|-------------------|-----------------------|
-|ROZMEZÍ QNAN, AJÍT|Žádné|_DOMAIN|
-|&#124;x&#124; ≥ 7.104760e + 002|OVERFLOW + NEPŘESNÉ|PŘETEČENÍ|
+|QNAN, ZASÁHNOUT|Žádné|_DOMAIN|
+|&#124;×&#124; ≥ 7.104760 e + 002|PŘETEČENÍ + NEPŘESNÉ|PLNĚ|
 
-Další informace o návratových kódech naleznete v tématu [errno _doserrno, _sys_errlist a _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+Další informace o návratových kódech naleznete v tématu [errno, _doserrno, _sys_errlist a _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Poznámky
 
-Protože jazyk C++ umožňuje přetížení, můžete volat přetížení **sinh** , která používají a vrací **float** nebo **dlouhé** **double** hodnoty. V programu jazyka C **sinh** vždy převezme a vrátí **double**.
+Vzhledem C++ k tomu, že umožňuje přetížení, můžete volat přetížení **sinh –** , která přijímají a vracejí hodnoty **float** nebo **Long** **Double** . V programu v jazyce C **sinh –** vždycky přebírá a vrací **Double**.
 
 ## <a name="requirements"></a>Požadavky
 
-|Rutina|Požadované záhlaví (C)|Požadované záhlaví (C++)|
+|Rutina|Požadovaná hlavička (C)|Požadovaná hlavička (C++)|
 |-|-|-|
-|**sinh**, **sinhf**, **sinhl**|\<math.h>|\<cmath > nebo \<math.h >|
+|**sinh**, **sinhf**, **sinhl**|\<Math. h >|\<cmath > nebo \<Math. h >|
 
-Další informace o kompatibilitě, naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Příklad
 

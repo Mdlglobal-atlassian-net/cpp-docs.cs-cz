@@ -1,10 +1,10 @@
 ---
 title: _mbccpy_s, _mbccpy_s_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _mbccpy_s
 - _mbccpy_s_l
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _mbccpy_s_l
 - mbccpy_s_l
@@ -32,19 +35,19 @@ helpviewer_keywords:
 - _tccpy_s_l function
 - _mbccpy_s_l function
 ms.assetid: b6e965fa-53c1-4ec3-85ef-a1c4b4f2b2da
-ms.openlocfilehash: f9a7554630bd3b46196358c01c21b99978c53e53
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 26fad83c5b7847e0050fe490cad30e0643aefd74
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62156847"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70952637"
 ---
-# <a name="mbccpys-mbccpysl"></a>_mbccpy_s, _mbccpy_s_l
+# <a name="_mbccpy_s-_mbccpy_s_l"></a>_mbccpy_s, _mbccpy_s_l
 
-Zkopíruje jeden vícebajtový znak z řetězce do jiného řetězce. Tyto verze [_mbccpy _mbccpy_l –](mbccpy-mbccpy-l.md) mají rozšíření zabezpečení popsaná v [funkce zabezpečení v CRT](../../c-runtime-library/security-features-in-the-crt.md).
+Zkopíruje jeden vícebajtový znak z řetězce do jiného řetězce. Tyto verze [_mbccpy, _mbccpy_l](mbccpy-mbccpy-l.md) mají vylepšení zabezpečení, jak je popsáno v [části funkce zabezpečení v CRT](../../c-runtime-library/security-features-in-the-crt.md).
 
 > [!IMPORTANT]
-> Toto rozhraní API nelze použít v aplikacích, které jsou spouštěny v modulu Windows Runtime. Další informace najdete v tématu [CRT funkce nejsou podporovány v aplikacích pro univerzální platformu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> Toto rozhraní API nelze použít v aplikacích, které jsou spouštěny v prostředí Windows Runtime. Další informace najdete v tématu [funkce CRT nejsou v aplikacích Univerzální platforma Windows podporovány](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -79,60 +82,60 @@ errno_t _mbccpy_s_l(
 
 ### <a name="parameters"></a>Parametry
 
-*dest*<br/>
+*propojovací*<br/>
 Cíl kopírování.
 
 *buffSizeInBytes*<br/>
 Velikost cílové vyrovnávací paměti.
 
 *pCopied*<br/>
-Vyplněno počtem bajtů zkopírovaný (1 nebo 2 v případě úspěchu). Předejte **NULL** Pokud vám nezáleží číslo.
+Vyplněno počtem zkopírovaných bajtů (1 nebo 2, pokud bylo úspěšné). Pokud si číslo nezáleží, předejte **hodnotu null** .
 
 *src*<br/>
 Vícebajtový znak pro kopírování.
 
-*Národní prostředí*<br/>
-Národní prostředí.
+*jazyka*<br/>
+Národní prostředí, které se má použít.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Nula v případě úspěchu; Kód chyby při selhání. Pokud *src* nebo *dest* je **NULL**, nebo pokud více než **buffSizeinBytes** bajtů má být zkopírováno do *dest*, pak je vyvolána obslužná rutina neplatného parametru, jak je popsáno v [Parameter Validation](../../c-runtime-library/parameter-validation.md). Pokud provádění může pokračovat, vrátí funkce **EINVAL** a **errno** je nastavena na **EINVAL**.
+Nula v případě úspěchu; chybový kód při selhání. Pokud má *Src* nebo cíl **hodnotu null**nebo pokud by *byl do cíle*zkopírováno více než **buffSizeinBytes** bajtů, je vyvolána obslužná rutina neplatného parametru, jak je popsáno v tématu [ověřování parametru](../../c-runtime-library/parameter-validation.md). Pokud provádění může pokračovat, funkce vrátí **EINVAL** a **errno** je nastaven na **EINVAL**.
 
 ## <a name="remarks"></a>Poznámky
 
-**_Mbccpy_s –** funkce kopíruje jeden vícebajtový znak *src* k *dest*. Pokud *src* neodkazuje na úvodní bajt vícebajtového znaku, jako je určeno implicitním voláním [_ismbblead](ismbblead-ismbblead-l.md), jeden bajt, který *src* odkazuje na zkopírován. Pokud *src* ukazuje na vedoucí bajt, ale následující bajt je 0 a tedy neplatný, pak 0 je zkopírována do *dest*, **errno** je nastavena na **EILSEQ**a Funkce vrátí **EILSEQ**.
+Funkce **_mbccpy_s** kopíruje jeden vícebajtový znak z *Src* na *cíl*. Pokud *Src* neodkazuje na vedoucí bajt vícebajtového znaku, jak je určeno implicitním voláním [_ismbblead](ismbblead-ismbblead-l.md), pak je zkopírován jeden bajt, na který *Src* odkazuje. Pokud *Src* odkazuje na vedoucí bajt, ale následující bajt je 0 a tedy neplatný, pak 0 se zkopíruje na *cíl*, **errno** je nastaven na **EILSEQ**a funkce vrátí **EILSEQ**.
 
-**_mbccpy_s –** není znak zakončení null; nicméně, pokud *src* odkazuje na prázdný znak, pak tato hodnota null je zkopírována do *dest* (to je jen regulární jednobajtová kopie).
+**_mbccpy_s** nepřipojuje ukončovací znak null; Pokud však *Src* odkazuje na znak null, pak je tato hodnota null zkopírována do *cíle (Jedná se pouze* o běžnou jednobajtovou kopii).
 
-Hodnota v *pCopied* je vyplněna počtem zkopírovaných. Možné hodnoty jsou 1 a 2, pokud je operace úspěšná. Pokud **NULL** je předán, tento parametr je ignorován.
+Hodnota v *pCopied* se vyplní počtem zkopírovaných bajtů. Možné hodnoty jsou 1 a 2, pokud je operace úspěšná. Pokud je předána **hodnota null** , tento parametr je ignorován.
 
-|*src*|zkopírovat do *dest*|*pCopied*|Návratová hodnota|
+|*src*|zkopírováno na *cíl*|*pCopied*|Návratová hodnota|
 |-----------|----------------------|---------------|------------------|
-|vedoucí bajt|vedoucí bajt|1|0|
+|jiný než vedoucí bajt|jiný než vedoucí bajt|1|0|
 |0|0|1|0|
-|vedoucí znak následovaný jiným znakem než 0|vedoucí znak následovaný jiným znakem než 0|2|0|
-|vedoucí znak následovaný 0|0|1|**EILSEQ**|
+|vedoucí bajt následovaný jiným než 0|vedoucí bajt následovaný jiným než 0|2|0|
+|vedoucí – bajt následovaný 0|0|1|**EILSEQ**|
 
 Všimněte si, že druhý řádek je pouze zvláštním případem prvního. Všimněte si také, že tabulka předpokládá *buffSizeInBytes* >= *pCopied*.
 
-**_mbccpy_s –** používá aktuální národní prostředí pro všechna závislá chování. **_mbccpy_s_l –** je stejný jako **_mbccpy_s –** s tím rozdílem, že **_mbccpy_s_l –** používá pro všechna chování závislé na národním prostředí předané národní prostředí.
+**_mbccpy_s** používá aktuální národní prostředí pro jakékoli chování závislé na národním prostředí. **_mbccpy_s_l** je shodná s **_mbccpy_s** s tím rozdílem, že **_mbccpy_s_l** používá národní prostředí předané pro jakékoli chování závislé na národním prostředí.
 
-V jazyce C++ je použití těchto funkcí zjednodušeno díky přetížení šablon; přetížení mohou odvodit délku vyrovnávací paměti automaticky, takže odpadá nutnost určit velikost argumentu. Další informace najdete v tématu [přetížení zabezpečení šablony](../../c-runtime-library/secure-template-overloads.md).
+V C++systému je použití těchto funkcí zjednodušeno díky přetížení šablon; přetížení mohou odvodit délku vyrovnávací paměti automaticky a eliminují nutnost zadat argument Size. Další informace najdete v tématu [přetížení zabezpečení šablon](../../c-runtime-library/secure-template-overloads.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapování rutin obecného textu
 
 |Rutina Tchar.h|_UNICODE a _MBCS nejsou definovány.|_MBCS definováno|_UNICODE definováno|
 |---------------------|--------------------------------------|--------------------|-----------------------|
-|**_tccpy_s**|Mapuje se na makro nebo vloženou funkci.|**_mbccpy_s**|Mapuje se na makro nebo vloženou funkci.|
+|**_tccpy_s**|Provede mapování na makro nebo vloženou funkci.|**_mbccpy_s**|Provede mapování na makro nebo vloženou funkci.|
 
 ## <a name="requirements"></a>Požadavky
 
 |Rutina|Požadovaný hlavičkový soubor|
 |-------------|---------------------|
-|**_mbccpy_s**|\<Mbstring.h >|
-|**_mbccpy_s_l**|\<Mbstring.h >|
+|**_mbccpy_s**|\<Mbstring. h >|
+|**_mbccpy_s_l**|\<Mbstring. h >|
 
-Další informace o kompatibilitě naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Viz také:
 

@@ -1,9 +1,9 @@
 ---
 title: _recalloc
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _recalloc
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-heap-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _recalloc
 - recalloc
@@ -23,16 +26,16 @@ helpviewer_keywords:
 - _recalloc function
 - recalloc function
 ms.assetid: 1db8305a-3f03-418c-8844-bf9149f63046
-ms.openlocfilehash: 3bcc238dcb950a8e30af16efc557e99d933efe92
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f06631fe4dd0abcb0b18895ccb04e5b52cda6a2c
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62357718"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70949451"
 ---
-# <a name="recalloc"></a>_recalloc
+# <a name="_recalloc"></a>_recalloc
 
-Kombinace **realloc** a **calloc**. Znovu alokuje pole v paměti a inicializuje jeho prvky na hodnotu 0.
+Kombinace **realokace** a **calloc**. Znovu přidělí pole v paměti a inicializuje jeho prvky na hodnotu 0.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -47,51 +50,51 @@ void *_recalloc(
 ### <a name="parameters"></a>Parametry
 
 *memblock*<br/>
-Ukazatele na blok paměti dříve přidělené.
+Ukazatel na dříve přidělený blok paměti.
 
-*Číslo*<br/>
-Počet prvků.
+*Automatické*<br/>
+Počet elementů.
 
-*Velikost*<br/>
-Délka v bajtech každého prvku.
+*hodnota*<br/>
+Délka v bajtech každého elementu.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-**_recalloc –** vrátí **void** ukazatele na blok paměti a nevyčerpané prostředky se (může být přesunutý).
+**_recalloc** vrátí ukazatel **void** na blok paměti realokováno (a případně přesunuto).
 
-Pokud není k dispozici dostatek paměti a rozbalte na danou velikost bloku, původního bloku je vlevo beze změny, a **NULL** je vrácena.
+Pokud není dostatek dostupné paměti pro rozšíření bloku na danou velikost, původní blok zůstane beze změny a vrátí **hodnotu null** .
 
-Pokud je požadovaná velikost nula, pak bloku odkazované *memblock* je uvolněn; vrácená hodnota je **NULL**, a *memblock* zbývá odkazující na uvolněné bloku.
+Pokud je požadovaná velikost nulová, pak je uvolněn blok, na který odkazuje *memblock* ; Vrácená hodnota je **null**a *memblock* vlevo odkazuje na uvolněný blok.
 
-Návratová hodnota odkazuje na prostor úložiště, která je zaručeně jako vhodně zarovnaný pro úložiště libovolného typu objektu. Získání ukazatele na typ jiný než **void**, použijte přetypování typu na návratovou hodnotu.
+Vrácená hodnota odkazuje na prostor úložiště, který je zaručen vhodným způsobem pro uložení libovolného typu objektu. Chcete-li získat ukazatel na jiný typ než **void**, použijte přetypování typu u vrácené hodnoty.
 
 ## <a name="remarks"></a>Poznámky
 
-**_Recalloc –** funkce změní velikost přidělené paměti bloku. *Memblock* argument odkazuje na začátku bloku paměti. Pokud *memblock* je **NULL**, **_recalloc –** se chová stejně jako [calloc](calloc.md) a přiděluje nový blok *číslo*  *  *velikost* bajtů. Každý prvek je inicializován na hodnotu 0. Pokud *memblock* není **NULL**, měla by být ukazatel vrácený z předchozího volání **calloc**, [malloc](malloc.md), nebo [realloc ](realloc.md).
+Funkce **_recalloc** změní velikost přiděleného bloku paměti. Argument *memblock* odkazuje na začátek bloku paměti. Pokud má memblock **hodnotu null**, **_recalloc** se chová stejným způsobem jako [calloc](calloc.md) a přidělí nový blok bajtů s *číselnou* * *velikostí* . Každý prvek je inicializován na hodnotu 0. Pokud *memblock* není **null**, mělo by se jednat o ukazatel vrácený předchozím voláním metody **calloc** [, pro](malloc.md)nebo [realokace](realloc.md).
 
-Vzhledem k tomu, že nový blok může být nové umístění paměti, vrácený ukazatel **_recalloc –** nemusí být předány prostřednictvím ukazatele *memblock* argument.
+Vzhledem k tomu, že nový blok může být v novém umístění v paměti, ukazatel vrácený funkcí **_recalloc** není zaručený ukazatel předaný pomocí argumentu *memblock* .
 
-**_recalloc –** nastaví **errno** k **ENOMEM** Pokud selhání přidělení paměti, nebo pokud požadované množství paměti překročí **_heap_maxreq –**. Informace o tomto a dalších chybových kódech naleznete v tématu [errno _doserrno, _sys_errlist a _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+**_recalloc** nastaví **errno** na **ENOMEM** , pokud se přidělení paměti nepovede nebo pokud je velikost požadované paměti větší než **_HEAP_MAXREQ**. Informace o tomto a dalších chybových kódech naleznete v tématu [errno, _doserrno, _sys_errlist a _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
-**recalloc –** volání **realloc** Chcete-li použít C++ [_set_new_mode](set-new-mode.md) funkce nastavíte nový režim obslužné rutiny. Nový režim obslužné rutiny Určuje, zda je při selhání, **realloc** je volat nové rutiny obsluhy úmluvu [_set_new_handler](set-new-handler.md). Ve výchozím nastavení **realloc** nevolá nové rutiny obsluhy při selhání přidělení paměti. Toto výchozí chování můžete přepsat tak, aby, když **_recalloc –** selže přidělování paměti, **realloc** volá nové rutiny obsluhy ve stejném způsobu, jakým **nové** – operátor provede, když ze stejného důvodu selže. Chcete-li přepsat výchozí hodnotu, zavolejte
+**recalloc** volá **realokace** za účelem použití C++ funkce [_set_new_mode](set-new-mode.md) k nastavení nového režimu obslužné rutiny. Nový režim obslužné rutiny označuje, zda je při selhání **realokace** volána nová rutina obslužné rutiny, jak je nastaveno na [_set_new_handler](set-new-handler.md). Ve výchozím nastavení opětovná **alokace** nevolá novou rutinu obslužné rutiny při selhání přidělení paměti. Toto výchozí chování můžete přepsat tak, že když **_recalloc** nepomůže přidělit paměť, **realokace** volá novou rutinu obslužné rutiny stejným způsobem jako operátor **New** při neúspěchu ze stejného důvodu. Chcete-li přepsat výchozí hodnotu, zavolejte
 
 ```C
 _set_new_mode(1);
 ```
 
-zpočátku v programu nebo propojení s NEWMODE.OBJ.
+do začátku v programu nebo propojte pomocí NEWMODE. OBJ.
 
-Když je aplikace spojena s ladicí verzí knihovny run-time C **_recalloc –** přeloží na [_recalloc_dbg –](recalloc-dbg.md). Další informace o tom, jak je spravována halda během procesu ladění, naleznete v tématu [haldy pro ladění CRT](/visualstudio/debugger/crt-debug-heap-details).
+Pokud je aplikace propojena s ladicí verzí knihoven C Runtime, **_recalloc** se přeloží na [_recalloc_dbg](recalloc-dbg.md). Další informace o tom, jak je halda spravována během procesu ladění, naleznete v [haldě ladění CRT](/visualstudio/debugger/crt-debug-heap-details).
 
-**_recalloc –** je označen `__declspec(noalias)` a `__declspec(restrict)`, což znamená, že funkce je zaručeno, že neupraví globální proměnné a Vrácený ukazatel není alias. Další informace najdete v tématu [noalias](../../cpp/noalias.md) a [omezit](../../cpp/restrict.md).
+**_recalloc** je označena `__declspec(restrict)`jako `__declspec(noalias)` , což znamená, že funkce zaručuje, že nemění globální proměnné a že ukazatel, který vrátil, nemá alias. Další informace najdete [v tématech a](../../cpp/noalias.md) [omezení](../../cpp/restrict.md).
 
 ## <a name="requirements"></a>Požadavky
 
 |Rutina|Požadovaný hlavičkový soubor|
 |-------------|---------------------|
-|**_recalloc**|\<stdlib.h > a \<malloc.h >|
+|**_recalloc**|\<Stdlib. h > a \<. h >|
 
-Další informace o kompatibilitě, naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Viz také:
 

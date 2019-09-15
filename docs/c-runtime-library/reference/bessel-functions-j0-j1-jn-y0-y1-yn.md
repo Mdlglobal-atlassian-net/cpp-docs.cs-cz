@@ -1,14 +1,14 @@
 ---
 title: 'Besselovy funkce: _j0, _j1, _jn, _y0, _y1, _yn'
 ms.date: 04/05/2018
-apiname:
+api_name:
 - _j0
 - _j1
 - _jn
 - _y0
 - _y1
 - _yn
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -20,7 +20,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - c.bessel
 - _j0
@@ -38,16 +41,16 @@ helpviewer_keywords:
 - _y1 function
 - _yn function
 ms.assetid: a21a8bf1-df9d-4ba0-a8c2-e7ef71921d96
-ms.openlocfilehash: 682eaa99d0be1b959152ff94cc10a86aa68d988d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5420b34846998cdbcb4814d8319274f1a3516d91
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62341110"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70939463"
 ---
-# <a name="bessel-functions-j0-j1-jn-y0-y1-yn"></a>Besselovy funkce: _j0, _j1, _jn, _y0, _y1, _yn
+# <a name="bessel-functions-_j0-_j1-_jn-_y0-_y1-_yn"></a>Besselovy funkce: _j0, _j1, _jn, _y0, _y1, _yn
 
-Besselovy funkce takového typu, první nebo druhé objednávek vypočítá 0, 1 nebo n. Besselovy funkce se běžně používají v matematice teorie elektromagnetická wave.
+Vypočítá Besselovu funkci prvního nebo druhého druhu objednávky 0, 1 nebo n. Besselova funkce se běžně používají v matematickém kosinus elektromagnetických vln.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -80,35 +83,35 @@ double _yn(
 Hodnota s plovoucí desetinnou čárkou.
 
 *n*<br/>
-Celé číslo pořadí Besselovy funkce.
+Celočíselné pořadí Besselova funkce.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Každá z těchto rutin vrací funkci Besselovy *x*. Pokud *x* je záporná v **_y0**, **_y1**, nebo **_yn** funkce a běžné sady **errno** k  **EDOM**, vytiskne **_DOMAIN** chybová zpráva pro **stderr**a vrátí **_HUGE_VAL**. Můžete upravit pomocí pro zpracování chyb **_matherr**.
+Každá z těchto rutin Vrátí Besselovu funkci *x*. Pokud je *x* záporné ve funkcích **_y0**, **_y1**nebo **_Yn** , rutina nastaví **errno** na **EDOM**, vytiskne chybovou zprávu **_DOMAIN** na **stderr**a vrátí **_HUGE_VAL**. Zpracování chyb můžete upravit pomocí **_matherr**.
 
 ## <a name="remarks"></a>Poznámky
 
-**_J0**, **_j1**, a **_jn** rutin vrací Besselovy funkce první druhu: orders 0, 1 nebo n, v uvedeném pořadí.
+Rutiny **_j0**, **_j1**a **_jn** vrací Besselova funkce prvního druhu: Orders 0, 1 a n v uvedeném pořadí.
 
-|Vstup|Výjimka SEH|Výjimka Matherr|
+|Vstup|Výjimka SEH|Výjimka matherr|
 |-----------|-------------------|-----------------------|
-|± **QNAN**, **IND**|**NEPLATNÝ**|**_DOMAIN**|
+|± **QNAN**, **IND**|**NENÍ**|**_DOMAIN**|
 
-**_Y0**, **_y1**, a **_yn** rutin vrací Besselovy funkce takového typu, druhý: orders 0, 1 nebo n, v uvedeném pořadí.
+Rutiny **_y0**, **_y1**a **_yn** vracejí Besselova funkce druhého druhu: Orders 0, 1 a n v uvedeném pořadí.
 
-|Vstup|Výjimka SEH|Výjimka Matherr|
+|Vstup|Výjimka SEH|Výjimka matherr|
 |-----------|-------------------|-----------------------|
-|± **QNAN**, **IND**|**NEPLATNÝ**|**_DOMAIN**|
+|± **QNAN**, **IND**|**NENÍ**|**_DOMAIN**|
 |± 0|**ZERODIVIDE**|**_SING**|
-|&#124;x&#124; < 0,0|**NEPLATNÝ**|**_DOMAIN**|
+|&#124;x&#124; < 0,0|**NENÍ**|**_DOMAIN**|
 
 ## <a name="requirements"></a>Požadavky
 
 |Rutina|Požadovaný hlavičkový soubor|
 |-------------|---------------------|
-|**_j0**, **_j1**, **_jn**, **_y0**, **_y1**, **_yn**|\<cmath > (C++), \<math.h > (C, C++)|
+|**_j0**, **_j1**, **_jn**, **_y0**, **_y1**, **_yn**|\<cmath > (C++), \<Math. h > (C, C++)|
 
-Další informace o kompatibilitě, naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Příklad
 

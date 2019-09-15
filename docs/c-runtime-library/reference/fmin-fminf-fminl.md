@@ -1,11 +1,11 @@
 ---
 title: fmin, fminf, fminl
 ms.date: 04/05/2018
-apiname:
+api_name:
 - fmin
 - fminf
 - fminl
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - fmin
 - fminf
@@ -30,12 +33,12 @@ helpviewer_keywords:
 - fminf function
 - fminl function
 ms.assetid: 1916dfb5-99c1-4b0d-aefb-513525c3f2ac
-ms.openlocfilehash: f73853e18bd5d7f699cd2c3109fe5fb830859bf1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: df01f2205291920b8c0519db622c93048278beb1
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62333375"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70957092"
 ---
 # <a name="fmin-fminf-fminl"></a>fmin, fminf, fminl
 
@@ -80,27 +83,27 @@ Druhá hodnota pro porovnání.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Pokud je úspěšná, vrátí menší z *x* nebo *y*.
+V případě úspěchu vrátí menší hodnoty *x* nebo *y*.
 
 |Vstup|Výsledek|
 |-----------|------------|
-|*x* NaN|*y*|
-|*y* NaN|*x*|
-|*x* a *y* jsou NaN|NaN|
+|*x* je NaN|*y*|
+|*y* je NaN|*x*|
+|*x* a *y* jsou NaN.|NaN|
 
-Funkci nezpůsobí [_matherr](matherr.md) má být volána, způsobit, že všechny výjimky s plovoucí desetinnou čárkou nebo změňte hodnotu vlastnosti **errno**.
+Funkce nezpůsobí vyvolání [_matherr](matherr.md) , způsobují výjimky s plovoucí desetinnou čárkou nebo mění hodnotu **errno**.
 
 ## <a name="remarks"></a>Poznámky
 
-Protože jazyk C++ umožňuje přetížení, můžete volat přetížení **fmin** , která používají a vrací **float** a **dlouhé** **double** typy. V programu jazyka C **fmin** vždy převezme a vrátí **double**.
+Vzhledem C++ k tomu, že umožňuje přetížení, můžete volat přetížení **fmin –** , která přijímají a vracejí typ **float** a **Long** **Double** . V programu v jazyce C **fmin –** vždycky přebírá a vrací **Double**.
 
 ## <a name="requirements"></a>Požadavky
 
 |Rutina|Požadovaný hlavičkový soubor|
 |-------------|---------------------|
-|**Fmin –**, **fminf –**, **fminl**|C: \<math.h ><br />Jazyk C++: \<math.h > nebo \<cmath >|
+|**fmin –** , **fminf –** , **fminl**|C: \<Math. h ><br />C++: \<Math. h > nebo \<cmath >|
 
-Další informace o kompatibilitě, naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Viz také:
 

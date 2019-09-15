@@ -1,9 +1,9 @@
 ---
 title: _heapwalk
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _heapwalk
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-heap-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - heapwalk
 - _heapwalk
@@ -24,19 +27,19 @@ helpviewer_keywords:
 - heapwalk function
 - _heapwalk function
 ms.assetid: 2df67649-fb00-4570-a8b1-a4eca5738744
-ms.openlocfilehash: cc2a49d9032746cc6c82c9dc401fc96baabbe2e1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8dc7ee9335f227bde93a414748ff70b165c44f8d
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62331685"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70954779"
 ---
-# <a name="heapwalk"></a>_heapwalk
+# <a name="_heapwalk"></a>_heapwalk
 
 Projde haldu a vrátí informace o další položce.
 
 > [!IMPORTANT]
-> Toto rozhraní API nelze použít v aplikacích, které jsou spouštěny v modulu Windows Runtime s výjimkou v sestaveních ladění. Další informace najdete v tématu [CRT funkce nejsou podporovány v aplikacích pro univerzální platformu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> Toto rozhraní API nelze použít v aplikacích, které jsou spouštěny v prostředí Windows Runtime s výjimkou sestavení ladění. Další informace najdete v tématu [funkce CRT nejsou v aplikacích Univerzální platforma Windows podporovány](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -51,40 +54,40 @@ Vyrovnávací paměť obsahující informace o haldě.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-**_heapwalk** vrátí jednu z následujících konstant manifestu celé číslo definovaných v Malloc.h.
+**_heapwalk** vrátí jednu z následujících celočíselných konstant manifestu definovaných ve typu. h.
 
 |Návratová hodnota|Význam|
 |-|-|
-|**_HEAPBADBEGIN**| Počáteční informace hlavičky jsou neplatné nebo nebyly nalezeny.|
-|**_HEAPBADNODE**| Haldy poškozený nebo nalezený špatný uzel.|
-|**_HEAPBADPTR**| **_Pentry** pole **_heapinfo –** struktury neobsahuje platný ukazatel do haldy nebo *entryinfo* je ukazatel s hodnotou null.|
-|**_HEAPEND**| Úspěšně bylo dosaženo konce haldy.|
-|**_HEAPEMPTY –**| Halda neinicializována.|
-|**_HEAPOK**| Zatím; žádné chyby *entryinfo* se aktualizuje informacemi o další položce haldy.|
+|**_HEAPBADBEGIN**| Informace počáteční hlavičky jsou neplatné nebo se nenašly.|
+|**_HEAPBADNODE**| Byl nalezen poškozený nebo chybný uzel haldy.|
+|**_HEAPBADPTR**| Pole **_pentry** struktury **_HEAPINFO** neobsahuje platný ukazatel na haldu nebo *entryinfo* je ukazatel s hodnotou null.|
+|**_HEAPEND**| Konec haldy byl úspěšně dosažen.|
+|**_HEAPEMPTY**| Halda není inicializovaná.|
+|**_HEAPOK**| Zatím žádné chyby; *entryinfo* se aktualizuje o informace o další položce haldy.|
 
-Kromě toho, pokud dojde k chybě **_heapwalk** nastaví **errno** k **ENOSYS**.
+Kromě toho, pokud dojde k chybě, **_heapwalk** nastaví **errno** na **ENOSYS**.
 
 ## <a name="remarks"></a>Poznámky
 
-**_Heapwalk** funkce umožňuje ladění problémů souvisejících s haldou v aplikacích. Funkce projde haldu, procházení jednu položku na jedno zavolání a vrátí ukazatel na strukturu typu **_heapinfo –** , který obsahuje informace o další položce haldy. **_Heapinfo –** typ definovaný v souboru Malloc.h, obsahuje následující prvky.
+Funkce **_heapwalk** pomáhá ladit problémy související s haldou v programech. Funkce projde haldou, projde jednu položku pro každé volání a vrátí ukazatel na strukturu typu **_HEAPINFO** , která obsahuje informace o další položce haldy. Typ **_HEAPINFO** definovaný v typu. h obsahuje následující prvky.
 
 |Pole|Význam|
 |-|-|
-|`int *_pentry`|Ukazatel vstupu haldy.|
-|`size_t _size`|Velikost záznamu haldy.|
-|`int _useflag`|Příznak, který označuje, zda je položka haldy používá.|
+|`int *_pentry`|Ukazatel na položku haldy.|
+|`size_t _size`|Velikost položky haldy.|
+|`int _useflag`|Příznak, který označuje, zda je položka haldy používána.|
 
-Volání **_heapwalk** , která vrací **_heapok –** ukládá velikost zadání v **_velikost** pole a nastaví **_useflag** buď pole **_FREEENTRY** nebo **_USEDENTRY** (obojí jsou konstanty definované v Malloc.h). Pro získání těchto informací o první položce v haldě, předejte **_heapwalk** ukazatel **_heapinfo –** strukturu, jejíž **_pentry** člen je **NULL** . Pokud operační systém nepodporuje **_heapwalk**(například Windows 98), funkce vrátí **_heapend –** a nastaví **errno** k **ENOSYS**.
+Volání **_heapwalk** , které vrací **_HEAPOK** , ukládá velikost položky v poli **_Size** a nastaví pole **_useflag** na **_FREEENTRY** nebo **_USEDENTRY** (obě jsou konstanty definované v systému. h). Chcete-li získat tyto informace o první položce v haldě, předejte **_heapwalk** ukazatel na strukturu **_HEAPINFO** , jejíž člen **_pentry** je **null**. Pokud operační systém nepodporuje **_heapwalk**(například Windows 98), funkce vrátí **_HEAPEND** a nastaví **errno** na **ENOSYS**.
 
-Tato funkce ověřuje svůj parametr. Pokud *entryinfo* je ukazatel s hodnotou null, je vyvolána obslužná rutina neplatného parametru, jak je popsáno v [Parameter Validation](../../c-runtime-library/parameter-validation.md). Pokud smí provádění pokračovat, **errno** je nastavena na **EINVAL** a funkce vrátí **_heapbadptr –**.
+Tato funkce ověří svůj parametr. Pokud je *entryinfo* ukazatel s hodnotou null, je vyvolána obslužná rutina neplatného parametru, jak je popsáno v tématu [ověřování parametru](../../c-runtime-library/parameter-validation.md). Pokud provádění může pokračovat, **errno** je nastaven na **EINVAL** a funkce vrátí **_HEAPBADPTR**.
 
 ## <a name="requirements"></a>Požadavky
 
 |Rutina|Požadovaný hlavičkový soubor|Volitelné záhlaví|
 |-------------|---------------------|---------------------|
-|**_heapwalk**|\<malloc.h>|\<errno.h>|
+|**_heapwalk**|\<. h >|\<errno.h>|
 
-Další informace o kompatibilitě naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Příklad
 

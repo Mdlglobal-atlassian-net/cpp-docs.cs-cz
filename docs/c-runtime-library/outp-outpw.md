@@ -1,10 +1,10 @@
 ---
 title: outp, outpw
 ms.date: 11/04/2016
-apiname:
+api_name:
 - outpw
 - outp
-apilocation:
+api_location:
 - msvcr100.dll
 - msvcr110_clr0400.dll
 - msvcrt.dll
@@ -12,7 +12,10 @@ apilocation:
 - msvcr110.dll
 - msvcr120.dll
 - msvcr80.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - outp
 - outpw
@@ -20,19 +23,19 @@ helpviewer_keywords:
 - outpw function
 - outp function
 ms.assetid: ab29dc04-e440-4c3f-83b1-420e65b5df75
-ms.openlocfilehash: 8c4d6ecf60086e1d5ff58e3271f446cba4cff079
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 646e882d4ead9ea52a17b4fe483f49bf94ccf9b7
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62342208"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70940025"
 ---
 # <a name="outp-outpw"></a>outp, outpw
 
-Tyto funkce POSIX je zastaralá. Použít bitovou kopii ISO C++ splňující podmínky [_outp – _outpw –, _outpd –](../c-runtime-library/outp-outpw-outpd.md) místo.
+Tyto funkce POSIX jsou zastaralé. Místo toho použijte C++ ISO [_outp, _outpw, _outpd](../c-runtime-library/outp-outpw-outpd.md) .
 
 > [!IMPORTANT]
->  Tyto funkce jsou zastaralé. Od v sadě Visual Studio 2015, nejsou k dispozici v CRT.
+>  Tyto funkce jsou zastaralé. Počínaje verzí Visual Studio 2015 nejsou k dispozici v CRT.
 
 > [!IMPORTANT]
->  Toto rozhraní API nelze použít v aplikacích, které jsou spouštěny v modulu Windows Runtime. Další informace najdete v tématu [CRT funkce nejsou podporovány v aplikacích pro univerzální platformu Windows](../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+>  Toto rozhraní API nelze použít v aplikacích, které jsou spouštěny v prostředí Windows Runtime. Další informace najdete v tématu [funkce CRT nejsou v aplikacích Univerzální platforma Windows podporovány](../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).

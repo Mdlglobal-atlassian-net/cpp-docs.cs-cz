@@ -1,10 +1,10 @@
 ---
 title: gets_s, _getws_s
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _getws_s
 - gets_s
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _getws_s
 - gets_s
@@ -31,16 +34,16 @@ helpviewer_keywords:
 - gets_s function
 - standard input, reading from
 ms.assetid: 5880c36f-122c-4061-a1a5-aeeced6fe58c
-ms.openlocfilehash: f71fafceaf1974bc5ff736ff175a67cf6c924ee6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f282b4e8de12185a19e07374cf565788dc549136
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62157653"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70954973"
 ---
-# <a name="getss-getwss"></a>gets_s, _getws_s
+# <a name="gets_s-_getws_s"></a>gets_s, _getws_s
 
-Získá řádek z **stdin** datového proudu. Tyto verze [získá, _getws](../../c-runtime-library/gets-getws.md) mají rozšíření zabezpečení popsaná v [funkce zabezpečení v CRT](../../c-runtime-library/security-features-in-the-crt.md).
+Získá řádek ze streamu **stdin** . Tyto verze aplikace [_getws](../../c-runtime-library/gets-getws.md) mají vylepšení zabezpečení, jak je popsáno v [části funkce zabezpečení v CRT](../../c-runtime-library/security-features-in-the-crt.md).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -65,7 +68,7 @@ wchar_t *_getws_s( wchar_t (&buffer)[size] ); // C++ only
 
 ### <a name="parameters"></a>Parametry
 
-*Vyrovnávací paměti*<br/>
+*vyrovnávací paměti*<br/>
 Umístění úložiště pro vstupní řetězec.
 
 *sizeInCharacters*<br/>
@@ -73,23 +76,23 @@ Velikost vyrovnávací paměti.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Vrátí *vyrovnávací paměti* v případě úspěšného ověření. A **NULL** ukazatel myši informuje o podmínku chyby nebo end souboru. Použití [ferror](ferror.md) nebo [feof](feof.md) k určení, která z nich došlo k chybě.
+Pokud je úspěšná, vrátí *do vyrovnávací paměti* . Ukazatel s **hodnotou null** indikuje stav chyby nebo konce souboru. K určení, která z nich se stala, použijte [trajekt](ferror.md) nebo [feof](feof.md) .
 
 ## <a name="remarks"></a>Poznámky
 
-**Gets_s –** funkce přečte řádek ze standardního vstupního proudu **stdin** a uloží jej do *vyrovnávací paměti*. Řádek obsahuje všechny znaky až včetně první znak nového řádku ('\n'). **gets_s –** pak nahradí znak nového znaku znakem null ('\0') před vrácením řádku. Oproti tomu **fgets_s** funkce zachová znak nového řádku.
+Funkce **gets_s** čte řádek ze standardního vstupního streamu **stdin** a ukládá ho do *vyrovnávací paměti*. Řádek se skládá ze všech znaků až do a včetně prvního znaku nového řádku (' \n '). **gets_s** pak před vrácením řádku nahradí znak nového řádku znakem null (' \ 0 '). Naproti tomu funkce **fgets_s** zachová znak nového řádku.
 
-Pokud je první přečtený znak znakem znak koncové souboru, je uložen znak null na začátku *vyrovnávací paměti* a **NULL** je vrácena.
+Pokud je první přečtený znak znakem konce souboru, je na začátku *vyrovnávací paměti* uložen znak null a je vrácena **hodnota null** .
 
-**_getws_s –** je verze širokého znaku **gets_s –**; její argument a návratová hodnota jsou širokoznaké řetězce.
+**_getws_s** je **gets_s**verze s velkým znakem; jeho argument a návratová hodnota jsou řetězce s velkým znakem.
 
-Pokud *vyrovnávací paměti* je **NULL** nebo *sizeInCharacters* je menší než nebo rovno nule, nebo pokud vyrovnávací paměť je příliš malá, aby obsahovat vstupního řádku a ukončovacího znaku null, tyto funkce vyvolají obslužnou rutinu neplatného parametru, jak je popsáno v [Parameter Validation](../../c-runtime-library/parameter-validation.md). Pokud provádění může pokračovat, vrátí tyto funkce **NULL** a nastaví errno na **ERANGE**.
+Pokud má *vyrovnávací paměť* **hodnotu null** nebo je *sizeInCharacters* menší nebo rovna nule nebo pokud je vyrovnávací paměť příliš malá pro vložení vstupního řádku a ukončovacího znaku null, tyto funkce vyvolají obslužnou rutinu neplatného parametru, jak je popsáno v [parametru. Ověřování](../../c-runtime-library/parameter-validation.md). Pokud provádění může pokračovat, vrátí tyto funkce **hodnotu null** a nastaví errno na **ERANGE**.
 
-V jazyce C++ je použití těchto funkcí zjednodušeno díky přetížení šablon; přetížení mohou odvodit délku vyrovnávací paměti automaticky (tím eliminuje nutnost zadat argument velikosti) a dokážou automaticky nahradit starší, nezabezpečené funkce jejími novějšími, zabezpečené protějšky. Další informace najdete v tématu [přetížení zabezpečení šablony](../../c-runtime-library/secure-template-overloads.md).
+V C++systému je použití těchto funkcí zjednodušeno díky přetížení šablon; přetížení můžou odvodit délku vyrovnávací paměti automaticky (eliminují nutnost zadat argument velikosti) a můžou automaticky nahradit starší nezabezpečené funkce jejich novějšími, zabezpečenými protějšky. Další informace najdete v tématu [přetížení zabezpečení šablon](../../c-runtime-library/secure-template-overloads.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapování rutin obecného textu
 
-|Rutina TCHAR.H|_UNICODE a _MBCS nejsou definovány|_MBCS definováno|_UNICODE definováno|
+|Rutina TCHAR.H|_UNICODE & _MBCS nejsou definovány.|_MBCS definováno|_UNICODE definováno|
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_getts_s**|**gets_s**|**gets_s**|**_getws_s**|
 
@@ -98,9 +101,9 @@ V jazyce C++ je použití těchto funkcí zjednodušeno díky přetížení šab
 |Rutina|Požadovaný hlavičkový soubor|
 |-------------|---------------------|
 |**gets_s**|\<stdio.h>|
-|**_getws_s**|\<stdio.h > nebo \<wchar.h >|
+|**_getws_s**|\<stdio. h > nebo \<WCHAR. h >|
 
-Konzole není podporována v aplikacích pro univerzální platformu Windows (UPW). Standardní datový proud popisovačů, které jsou spojeny s konzolou, **stdin**, **stdout**, a **stderr**, musí být přesměrován před funkcí jazyka C za běhu můžete použít v aplikacích pro UWP . Další informace o kompatibilitě, naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
+Konzola není v aplikacích Univerzální platforma Windows (UWP) podporována. Standardní popisovače streamů, které jsou spojeny s konzolou, **stdin**, **stdout**a **stderr**, musí být přesměrované před tím, než je funkce modulu runtime jazyka C můžou použít v aplikacích pro UWP. Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Příklad
 
@@ -129,7 +132,7 @@ The line entered was: Hello there!
 
 ## <a name="see-also"></a>Viz také:
 
-[Stream vstupně-výstupních operací](../../c-runtime-library/stream-i-o.md)<br/>
+[Vstup/výstup datového proudu](../../c-runtime-library/stream-i-o.md)<br/>
 [gets, _getws](../../c-runtime-library/gets-getws.md)<br/>
 [fgets, fgetws](fgets-fgetws.md)<br/>
 [fputs, fputws](fputs-fputws.md)<br/>

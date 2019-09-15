@@ -1,11 +1,11 @@
 ---
 title: fmax, fmaxf, fmaxl
 ms.date: 04/05/2018
-apiname:
+api_name:
 - fmax
 - fmaxf
 - fmaxl
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - fmax
 - fmaxf
@@ -30,16 +33,16 @@ helpviewer_keywords:
 - fmaxf function
 - fmaxl function
 ms.assetid: a773ccf7-495e-4a9a-8c6d-dfb53e341e35
-ms.openlocfilehash: 371d53257427f2235048807968c82fec1b8bf699
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 27b495e9344ca7e2e3e061b19fee696ce2bdceb2
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62333428"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70957120"
 ---
 # <a name="fmax-fmaxf-fmaxl"></a>fmax, fmaxf, fmaxl
 
-Určení větší ze dvou číselných hodnot, které se zadané.
+Určete větší ze dvou zadaných číselných hodnot.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -80,29 +83,29 @@ Druhá hodnota pro porovnání.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Pokud je úspěšná, vrátí větší z následujících *x* nebo *y*. Vrácená hodnota je přesné a nezávisí na jakoukoli formu zaokrouhlení.
+V případě úspěchu vrátí větší hodnotu *x* nebo *y*. Vrácená hodnota je přesně a nezávisí na žádné formě zaokrouhlování.
 
-V opačném případě může vracet instanci jednoho z následujících hodnot:
+V opačném případě může vracet jednu z následujících hodnot:
 
-|Problém|Vrátí|
+|Problém|vrátit|
 |-----------|------------|
 |*x* = NaN|*y*|
 |*y* = NaN|*x*|
 |*x* a *y* = NaN|NaN|
 
-Tato funkce nebude používat chyby uvedené v [_matherr](matherr.md).
+Tato funkce nepoužívá chyby zadané v [_matherr](matherr.md).
 
 ## <a name="remarks"></a>Poznámky
 
-Protože jazyk C++ umožňuje přetížení, můžete volat přetížení fmax, které používají a vrací plovoucí desetinnou čárkou a typy long double. Fmax – v programu jazyka C, vždy převezme a vrátí double.
+Vzhledem C++ k tomu, že umožňuje přetížení, můžete volat přetížení Fmax –, která přijímají a vracejí typ float a long double. V programu v jazyce C Fmax – vždycky přebírá a vrací Double.
 
 ## <a name="requirements"></a>Požadavky
 
-|Funkce|Záhlaví C|Hlaviček jazyka C++|
+|Funkce|Hlavička jazyka C|C++hlaviček|
 |--------------|--------------|------------------|
-|**fmax**, **fmaxf**, **fmaxl**|\<math.h>|\<cmath > nebo \<math.h >|
+|**fmax**, **fmaxf**, **fmaxl**|\<Math. h >|\<cmath > nebo \<Math. h >|
 
-Další informace o kompatibilitě, naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Viz také:
 

@@ -1,11 +1,11 @@
 ---
 title: acosh, acoshf, acoshl
 ms.date: 04/05/2018
-apiname:
+api_name:
 - acoshf
 - acosh
 - acoshl
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - acosh
 - acoshf
@@ -30,12 +33,12 @@ helpviewer_keywords:
 - acosh function
 - acoshl function
 ms.assetid: 6985c4d7-9e2a-44ce-9a9b-5a43015f15f7
-ms.openlocfilehash: e61b9ed4222898e3f2340a5e54f6983fb0411c72
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b547bc0db23f446672c8838419aeb9b0f32c16c3
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62341688"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70944081"
 ---
 # <a name="acosh-acoshf-acoshl"></a>acosh, acoshf, acoshl
 
@@ -61,24 +64,24 @@ Hodnota s plovoucí desetinnou čárkou.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-**Acosh –** funkce vrátí hyberbolic inverzní kosinus (hyperbolický Arkus kosinus) *x*. Tyto funkce jsou platné po domény *x* ≥ 1. Pokud *x* je menší než 1 `errno` je nastavena na `EDOM` a výsledkem je tichý NaN. Pokud *x* je tichý NaN, nekonečno, nebo nekonečno, je vrácena stejnou hodnotu.
+Funkce **acosh –** vrací inverzní arkustangens kosinus (oblouk hyperbolický kosinus) *x*. Tyto funkce jsou platné v doméně *x* ≥ 1. Pokud je *x* menší než 1, `errno` je nastaveno na `EDOM` a výsledek je tiché NaN. Pokud *x* je tiché NaN, nekonečný nebo nekonečno, je vrácena stejná hodnota.
 
-|Vstup|Výjimka SEH|`_matherr` Výjimka|
+|Vstup|Výjimka SEH|`_matherr`Jímka|
 |-----------|-------------------|--------------------------|
-|ROZMEZÍ QNAN, AJÍT INF|žádná|žádná|
+|QNAN, ZASÁHNOUT, INF|žádná|žádná|
 |*x* < 1|žádná|žádná|
 
 ## <a name="remarks"></a>Poznámky
 
-Při použití jazyka C++, můžete volat přetížení **acosh –** , která používají a vrací **float** nebo **dlouhé** **double** hodnoty. V programu jazyka C **acosh –** vždy převezme a vrátí **double**.
+C++Při použití můžete volat přetížení **acosh –** , která přebírají a vracejí hodnoty **float** nebo **Long** **Double** . V programu v jazyce C **acosh –** vždycky přebírá a vrací **Double**.
 
 ## <a name="requirements"></a>Požadavky
 
-|Funkce|Záhlaví C|Hlaviček jazyka C++|
+|Funkce|Hlavička jazyka C|C++hlaviček|
 |--------------|--------------|------------------|
-|**acosh**, **acoshf**, **acoshl**|\<math.h>|\<cmath>|
+|**acosh**, **acoshf**, **acoshl**|\<Math. h >|\<cmath >|
 
-Další informace o kompatibilitě, naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Příklad
 

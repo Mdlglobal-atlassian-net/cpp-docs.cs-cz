@@ -1,10 +1,10 @@
 ---
 title: _lrotl, _lrotr
 ms.date: 04/04/2018
-apiname:
+api_name:
 - _lrotl
 - _lrotr
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-utility-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - lrotr
 - lrotl
@@ -31,16 +34,16 @@ helpviewer_keywords:
 - _lrotl function
 - bits, rotating
 ms.assetid: d42f295b-35f9-49d2-9ee4-c66896ffe68e
-ms.openlocfilehash: 71ca61676e4551155f9f14e792c5c1cee65ddb7e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ea78aeb8829a80abae345b4e9e6ac3a7bbaddf8b
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62156964"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70953033"
 ---
-# <a name="lrotl-lrotr"></a>_lrotl, _lrotr
+# <a name="_lrotl-_lrotr"></a>_lrotl, _lrotr
 
-Otočí bitů doleva (**_lrotl –**) nebo doprava (**_lrotr –**).
+Otočí bity doleva ( **_lrotl**) nebo Right ( **_lrotr**).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -52,18 +55,18 @@ unsigned long _lrotr( unsigned long value, int shift );
 ### <a name="parameters"></a>Parametry
 
 *value*<br/>
-Hodnota, která otočen.
+Hodnota, která se má otočit
 
-*shift*<br/>
-Počet bitů, chcete-li posunout *hodnota*.
+*posouvá*<br/>
+Počet bitů na posunutí *hodnoty*.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Obě funkce vrátí hodnotu otočený. Není vrácena žádná chyba.
+Obě funkce vrací otočenou hodnotu. Nevrátila se žádná chybová zpráva.
 
 ## <a name="remarks"></a>Poznámky
 
-**_Lrotl –** a **_lrotr –** otočit funkce *hodnotu* podle *shift* bits. **_lrotl –** otočí hodnoty left směrem k více významných bitů. **_lrotr –** bude otáčet doprava hodnotu směrem k méně významných bitů. Obě funkce zabalení bits otočen vypnout jeden konec *hodnota* na druhém konci.
+Funkce **_lrotl** a **_lrotr** otočí *hodnoty* pomocí *SHIFT* bitů. **_lrotl** otočí hodnotu vlevo a k většímu počtu významných bitů. **_lrotr** otočí hodnotu vpravo směrem k méně významným bitům. Obě funkce zabalí bity za jeden konec *hodnoty* na druhý koncový objekt.
 
 ## <a name="requirements"></a>Požadavky
 
@@ -71,7 +74,7 @@ Obě funkce vrátí hodnotu otočený. Není vrácena žádná chyba.
 |-------------|---------------------|
 |**_lrotl**, **_lrotr**|\<stdlib.h>|
 
-Další informace o kompatibilitě naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Příklad
 

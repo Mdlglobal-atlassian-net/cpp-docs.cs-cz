@@ -1,9 +1,9 @@
 ---
 title: __CxxFrameHandler
 ms.date: 11/04/2016
-apiname:
+api_name:
 - __CxxFrameHandler
-apilocation:
+api_location:
 - msvcr110.dll
 - msvcrt.dll
 - msvcr80.dll
@@ -11,22 +11,25 @@ apilocation:
 - msvcr110_clr0400.dll
 - msvcr90.dll
 - msvcr120.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - __CxxFrameHandler
 helpviewer_keywords:
 - __CxxFrameHandler
 ms.assetid: b79ac97f-425a-42ae-9b91-8beaef935333
-ms.openlocfilehash: d059df597826c68f4f51eb85f592b7eb44ac7d1f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4cb5ae10d4281c4a7167db7adf4ea6788ad3e3c0
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62344606"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70944500"
 ---
-# <a name="cxxframehandler"></a>__CxxFrameHandler
+# <a name="__cxxframehandler"></a>__CxxFrameHandler
 
-Vnitřní funkce CRT. Používá CRT pro zpracování strukturovaných výjimek snímků.
+Vnitřní funkce CRT. Používá se v CRT ke zpracování strukturovaných rámců výjimek.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -42,20 +45,20 @@ EXCEPTION_DISPOSITION __CxxFrameHandler(
 #### <a name="parameters"></a>Parametry
 
 *pExcept*<br/>
-Záznam o výjimce, která je předána možné `catch` příkazy.
+Záznam výjimky, který je předán možným `catch` příkazům.
 
 *pRN*<br/>
-Dynamické informace o zásobníku, který se používá ke zpracování výjimky. Další informace najdete v tématu ehdata.h.
+Dynamické informace o bloku zásobníku, který se používá pro zpracování výjimky. Další informace naleznete v tématu ehdata. h.
 
 *pContext*<br/>
-Kontext. (Nelze použít na procesorech Intel.)
+Souvislost. (Nepoužívá se na procesorech Intel.)
 
 *pDC*<br/>
-Další informace o funkci položku a v zásobníku rámce.
+Další informace o položce funkce a snímku zásobníku.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Jeden z *výrazu filtru* hodnot použitých [zkuste-except – příkaz](../cpp/try-except-statement.md).
+Jedna z hodnot *výrazu filtru* , kterou používá [příkaz try-except](../cpp/try-except-statement.md).
 
 ## <a name="remarks"></a>Poznámky
 
@@ -63,4 +66,4 @@ Jeden z *výrazu filtru* hodnot použitých [zkuste-except – příkaz](../cpp/
 
 |Rutina|Požadovaný hlavičkový soubor|
 |-------------|---------------------|
-|__CxxFrameHandler|excpt.h, ehdata.h|
+|__CxxFrameHandler|EXCPT. h, ehdata. h|

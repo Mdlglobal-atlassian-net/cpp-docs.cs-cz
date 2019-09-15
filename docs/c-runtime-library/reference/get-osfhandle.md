@@ -1,9 +1,9 @@
 ---
 title: _get_osfhandle
 ms.date: 05/29/2018
-apiname:
+api_name:
 - _get_osfhandle
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - get_osfhandle
 - _get_osfhandle
@@ -25,16 +28,16 @@ helpviewer_keywords:
 - _get_osfhandle function
 - file handles [C++], operating system
 ms.assetid: 0bdd728a-4fd8-410b-8c9f-01a121135196
-ms.openlocfilehash: cc3b50e3d3f65bee83b8df83aa0adb5c8694e35a
-ms.sourcegitcommit: 8adabe177d557c74566c13145196c11cef5d10d4
+ms.openlocfilehash: 65060689e0a7fc72b67da8fc3bf7ce0af75fd645
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/10/2019
-ms.locfileid: "66821658"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70955773"
 ---
-# <a name="getosfhandle"></a>_get_osfhandle
+# <a name="_get_osfhandle"></a>_get_osfhandle
 
-Načte popisovač souboru operačního systému, který je spojen s popisovačem zadaného souboru.
+Načte popisovač souborů operačního systému, který je přidružený k zadanému popisovači souboru.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -51,16 +54,16 @@ Existující popisovač souboru.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Vrátí popisovač souboru operačního systému, pokud *fd* je platný. V opačném případě je vyvolána obslužná rutina neplatného parametru, jak je popsáno v [Parameter Validation](../../c-runtime-library/parameter-validation.md). Pokud provádění může pokračovat, vrátí **INVALID_HANDLE_VALUE** (-1). Nastaví také **errno** k **EBADF**, která neplatný popisovač souboru. Abyste zabránili upozornění při použití vráceného výsledku jako popisovač souboru Win32, přetypujte ji na **zpracování** typu.
+Vrátí popisovač souboru operačního systému, pokud je *FD* platný. V opačném případě je vyvolána obslužná rutina neplatného parametru, jak je popsáno v tématu [ověřování parametru](../../c-runtime-library/parameter-validation.md). Pokud provádění může pokračovat, vrátí **INVALID_HANDLE_VALUE** (-1). Nastaví také **errno** na **EBADF**, což značí neplatný popisovač souboru. Chcete-li se vyhnout upozornění, když je výsledek použit jako popisovač souboru Win32, přetypujte jej na typ **popisovače** .
 
 > [!NOTE]
-> Když **stdin**, **stdout**, a **stderr** nejsou přidružené k stream (například v aplikaci Windows bez okna konzoly), hodnoty popisovače souboru Tyto datové proudy jsou vráceny z [_fileno](fileno.md) jako zvláštní hodnota -2. Podobně pokud použijete hodnotu 0, 1 nebo 2 jako parametr popisovače souboru místo výsledku volání **_fileno**, **_get_osfhandle –** také vrátí hodnotu zvláštní hodnota -2, pokud není popisovač souboru přidružen pomocí služby stream a nenastaví **errno**. Ale to není platný soubor popisovač hodnota a následná volání, které se pokoušejí jeho použití jsou pravděpodobně selže.
+> Když se **stdin**, **stdout**a **stderr** nevztahují ke streamu (například v aplikaci Windows bez okna konzoly), hodnoty popisovačů souborů pro tyto datové proudy se vrátí z [_fileno](fileno.md) jako speciální hodnota – 2. Podobně pokud použijete 0, 1 nebo 2 jako parametr popisovače souboru namísto volání **_fileno**, **_get_osfhandle** také vrátí speciální hodnotu-2, pokud popisovač souboru není přidružen ke streamu a nenastaví **errno**. Nejedná se však o platnou hodnotu popisovače souboru a následné volání, která se pokoušejí použít, budou pravděpodobně neúspěšná.
 
 Další informace o **EBADF** a dalších chybových kódech naleznete v tématu [_doserrno, errno, _sys_errlist a _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Poznámky
 
-Zavřete soubor, jehož popisovač souboru operačního systému (OS) se získá **_get_osfhandle –** , volání [_Zavřít](close.md) na popisovač souboru *fd*. Nikdy neměl volat **CloseHandle** na návratový typ této funkce. Vlastní podkladové popisovač souboru operačního systému *fd* popisovač souboru a je uzavřen, když [_Zavřít](close.md) je volán na *fd*. Pokud popisovač souboru je vlastněna `FILE *` datový proud a následným voláním [fclose –](fclose-fcloseall.md) zabývat `FILE *` datový proud se zavře popisovače souborů a podkladové popisovač souboru operačního systému. V takovém případě Nevolejte [_Zavřít](close.md) na popisovač souboru.
+Chcete-li zavřít soubor, jehož popisovač souboru operačního systému (OS) je získán nástrojem **_get_osfhandle**, zavolejte [_close](close.md) na popisovač souboru *FD*. Pro návratovou hodnotu této funkce nikdy Nevolejte **CloseHandle** . Podkladový popisovač souboru operačního systému je vlastněn popisovačem souboru *FD* a je uzavřen při volání [_close](close.md) na *FD*. Pokud popisovač souboru vlastní `FILE *` datový proud, pak voláním [fclose](fclose-fcloseall.md) v tomto `FILE *` datovém proudu se zavře popisovač souboru i podkladový popisovač souboru operačního systému. V takovém případě Nevolejte [_close](close.md) na popisovač souboru.
 
 ## <a name="requirements"></a>Požadavky
 
@@ -68,7 +71,7 @@ Zavřete soubor, jehož popisovač souboru operačního systému (OS) se získá
 |-------------|---------------------|
 |**_get_osfhandle**|\<io.h>|
 
-Další informace o kompatibilitě naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Viz také:
 

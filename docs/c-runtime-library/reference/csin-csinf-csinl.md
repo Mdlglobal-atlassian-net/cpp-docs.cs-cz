@@ -1,11 +1,11 @@
 ---
-title: csin csinf, csinl
+title: csin, csinf, csinl
 ms.date: 11/04/2016
-apiname:
+api_name:
 - csin
 - csinf
 - csinl
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - csin
 - csinf
@@ -30,16 +33,16 @@ helpviewer_keywords:
 - csinf function
 - csinl function
 ms.assetid: 3ed475e8-9aae-42ba-a25c-7ae656a0fd4d
-ms.openlocfilehash: 66483c9121750c3333850d6244704b89b8893cad
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c0e0c57596ac36dbe3c0b72f79177b8df7b15af0
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62288846"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70941994"
 ---
-# <a name="csin-csinf-csinl"></a>csin csinf, csinl
+# <a name="csin-csinf-csinl"></a>csin, csinf, csinl
 
-Načte hodnotu sinus tohoto komplexního čísla.
+Načte sinus komplexního čísla.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -64,23 +67,23 @@ _Lcomplex csinl(
 ### <a name="parameters"></a>Parametry
 
 *z*<br/>
-Komplexní čísla, která představuje úhel v radiánech.
+Komplexní číslo představující úhel v radiánech.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Sinus *z*, v radiánech.
+Sinus z *z*v radiánech.
 
 ## <a name="remarks"></a>Poznámky
 
-Protože C++ umožňuje přetížení, můžete volat přetížení **csin** , která používají a vrací **_Fcomplex** a **_Lcomplex** hodnoty. V programu jazyka C **csin** vždy převezme a vrátí **_Dcomplex** hodnotu.
+Vzhledem C++ k tomu, že umožňuje přetížení, můžete volat přetížení **csin** , která přijímají a vracejí hodnoty **_Fcomplex** a **_Lcomplex** . V programu v jazyce C **csin** vždycky přebírá a vrací hodnotu **_Dcomplex** .
 
 ## <a name="requirements"></a>Požadavky
 
-|Rutina|Záhlaví C|Hlaviček jazyka C++|
+|Rutina|Hlavička jazyka C|C++hlaviček|
 |-------------|--------------|------------------|
-|**csin**, **csinf**, **csinl**|\<complex.h>|\<ccomplex>|
+|**csin**, **csinf**, **csinl**|\<complex.h>|\<ccomplex >|
 
-Další informace o kompatibilitě naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Viz také:
 

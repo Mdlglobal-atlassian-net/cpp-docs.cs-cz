@@ -1,12 +1,12 @@
 ---
-title: ___mb_cur_max_func ___mb_cur_max_l_func, __p___mb_cur_max, __mb_cur_max
+title: ___mb_cur_max_func, ___mb_cur_max_l_func, __p___mb_cur_max, __mb_cur_max
 ms.date: 11/04/2016
-apiname:
+api_name:
 - ___mb_cur_max_l_func
 - __p___mb_cur_max
 - ___mb_cur_max_func
 - __mb_cur_max
-apilocation:
+api_location:
 - msvcr110_clr0400.dll
 - msvcr110.dll
 - msvcr80.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr90.dll
 - msvcr120.dll
 - api-ms-win-crt-locale-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - ___mb_cur_max_func
 - ___mb_cur_max_l_func
@@ -27,16 +30,16 @@ helpviewer_keywords:
 - ___mb_cur_max_l_func
 - __p___mb_cur_max
 ms.assetid: 60d36108-1ca7-45a6-8ce7-68a91f13e3a1
-ms.openlocfilehash: 9d5178a9a0801767019b713696ddf809c3fe6f0c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a37ae2134d92310d6a530c759559b5e4b4af00f6
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62342762"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70944200"
 ---
-# <a name="mbcurmaxfunc-mbcurmaxlfunc-pmbcurmax-mbcurmax"></a>___mb_cur_max_func ___mb_cur_max_l_func, __p___mb_cur_max, __mb_cur_max
+# <a name="___mb_cur_max_func-___mb_cur_max_l_func-__p___mb_cur_max-__mb_cur_max"></a>___mb_cur_max_func, ___mb_cur_max_l_func, __p___mb_cur_max, __mb_cur_max
 
-Vnitřní funkce CRT. Získá maximální počet bajtů ve vícebajtové znakové pro aktuálního nebo zadaného národního prostředí.
+Vnitřní funkce CRT. Načte maximální počet bajtů v vícebajtovém znaku pro aktuální nebo zadané národní prostředí.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -49,25 +52,25 @@ int * __p___mb_cur_max(void);
 
 #### <a name="parameters"></a>Parametry
 
-Struktura národní prostředí načíst výsledky z národního prostředí. Pokud je tato hodnota null, použije se aktuální národní prostředí pro vlákno.
+národní prostředí, ze kterého struktura národního prostředí Získá výsledek. Pokud je tato hodnota null, použije se aktuální národní prostředí vlákna.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Maximální počet bajtů ve vícebajtové znakové pro aktuální národní prostředí pro vlákno nebo zadanému národnímu prostředí.
+Maximální počet bajtů v vícebajtovém znaku pro aktuální národní prostředí vlákna nebo zadané národní prostředí.
 
 ## <a name="remarks"></a>Poznámky
 
-Toto je vnitřní funkce, která CRT používá k načtení aktuální hodnota [MB_CUR_MAX](../c-runtime-library/mb-cur-max.md) – makro z úložiště thread local. Doporučujeme použít `MB_CUR_MAX` – makro ve vašem kódu pro přenositelnost.
+Toto je interní funkce, kterou CRT používá k načtení aktuální hodnoty makra [MB_CUR_MAX](../c-runtime-library/mb-cur-max.md) z Thread localho úložiště. Doporučujeme použít `MB_CUR_MAX` makro v kódu pro přenositelnost.
 
-`__mb_cur_max` – Makro je pohodlný způsob, jak volat `___mb_cur_max_func()` funkce. `__p___mb_cur_max` Funkce je definována pro kompatibilitu s Visual C++ 5.0 a starších verzí.
+Makro je pohodlný způsob, jak `___mb_cur_max_func()` zavolat funkci. `__mb_cur_max` Funkce je definována pro kompatibilitu s Visual C++ 5,0 a staršími verzemi. `__p___mb_cur_max`
 
-Vnitřní funkce CRT jsou specifický pro implementaci a může změnit jednotlivých vydání. Nedoporučujeme jejich použití ve vašem kódu.
+Interní funkce CRT jsou specifické pro konkrétní implementaci a můžou se měnit s každou vydanou verzí. Nedoporučujeme jejich použití ve vašem kódu.
 
 ## <a name="requirements"></a>Požadavky
 
 |Rutina|Požadovaný hlavičkový soubor|
 |-------------|---------------------|
-|`___mb_cur_max_func`, `___mb_cur_max_l_func`, `__p___mb_cur_max`|\<ctype.h>, \<stdlib.h>|
+|`___mb_cur_max_func`, `___mb_cur_max_l_func`, `__p___mb_cur_max`|\<CType. h >, \<Stdlib. h >|
 
 ## <a name="see-also"></a>Viz také:
 

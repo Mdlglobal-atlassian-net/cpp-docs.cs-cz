@@ -1,9 +1,9 @@
 ---
 title: wcrtomb
 ms.date: 11/04/2016
-apiname:
+api_name:
 - wcrtomb
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-convert-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - wcrtomb
 helpviewer_keywords:
@@ -24,16 +27,16 @@ helpviewer_keywords:
 - multibyte characters
 - characters, converting
 ms.assetid: 717f1b21-2705-4b7f-b6d0-82adc5224340
-ms.openlocfilehash: a5fad3f41c7ed459a1af3fae7c6a5a85c867d5ad
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8d2108b90f6884113f0bd974bf7aa634544adf5f
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62188650"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70945225"
 ---
 # <a name="wcrtomb"></a>wcrtomb
 
-Převeďte na její znázornění vícebajtový znak širokého znaku. Bezpečnější verze této funkce je k dispozici. Zobrazit [wcrtomb_s –](wcrtomb-s.md).
+Převést velký znak na jeho vícebajtovou reprezentaci znaků. K dispozici je bezpečnější verze této funkce; viz [wcrtomb_s](wcrtomb-s.md).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -54,31 +57,31 @@ size_t wcrtomb(
 ### <a name="parameters"></a>Parametry
 
 *mbchar*<br/>
-Výsledný vícebajtovou převede znak.
+Výsledný vícebajtový převedený znak.
 
 *wchar*<br/>
-Široký znak pro převod.
+Velký znak pro převod.
 
 *mbstate*<br/>
-Ukazatel **mbstate_t** objektu.
+Ukazatel na objekt **mbstate_t** .
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Vrátí počet bajtů potřebných k zastoupení převedený vícebajtový znak, jinak -1 Pokud dojde k chybě.
+Vrátí počet bajtů, které musí představovat převedený vícebajtový znak, jinak a-1, pokud dojde k chybě.
 
 ## <a name="remarks"></a>Poznámky
 
-**Wcrtomb –** funkce převede široký znak, od Zadaný převod stavu součástí *mbstate*, oproti hodnotě obsažené v *wchar*, do Adresa reprezentována *mbchar*. Vrácená hodnota je počet bajtů potřebných k zastoupení odpovídající vícebajtový znak, ale nebudou nalezeny více než **MB_CUR_MAX** bajtů.
+Funkce **wcrtomb** převede velký znak počínaje zadaným stavem konverze obsaženým v *mbstate*z hodnoty obsažené v *WCHAR*do adresy reprezentované *mbchar*. Vrácená hodnota je počet bajtů, které musí představovat odpovídající vícebajtový znak, ale nebude vracet více než **MB_CUR_MAX** bajtů.
 
-Pokud *mbstate* má hodnotu null, vnitřní **mbstate_t** objekt, který obsahuje stav převodu *mbchar* se používá. Pokud sekvence znaků *wchar* nemá odpovídající vícebajtové reprezentace znaku, vrátí se -1 a **errno** je nastavena na **EILSEQ**.
+Pokud má *mbstate* hodnotu null, použije se vnitřní objekt **mbstate_t** obsahující stav konverze *mbchar* . Pokud znak sekvence *WCHAR* neobsahuje odpovídající vícebajtovou reprezentaci znaků, je vrácena znak-1 a **errno** je nastaven na hodnotu **EILSEQ**.
 
-**Wcrtomb –** funkce se liší od [wctomb – _wctomb_l –](wctomb-wctomb-l.md) podle jeho restartability. Stav převodu je uložen v *mbstate* pro pozdější volání na stejné nebo jiné funkce nabízet možnost restartování. Při použití funkcí restartovatelnou službu a nonrestartable případě nejsou výsledky definovány. Například byste použili aplikaci **wcsrlen** spíše než **wcsnlen –**, pokud je následných volání **wcsrtombs –** používaly místo **wcstombs –**.
+Funkce **wcrtomb** se od jejího spuštění liší od [wctomb, _wctomb_l](wctomb-wctomb-l.md) . Stav konverze je uložen v *mbstate* pro následné volání stejné nebo jiné možné funkce, které lze spustit. Výsledky nejsou definovány při kombinování použití opakovaných a nerestartů funkcí. Například aplikace bude používat **wcsrlen** namísto **wcsnlen**, pokud bylo použito následné volání **wcsrtombs** namísto **wcstombs**.
 
-V jazyce C++ má tato funkce přetížení šablon, které vyvolá novější, zabezpečené protějšky této funkce. Další informace najdete v tématu [přetížení zabezpečení šablony](../../c-runtime-library/secure-template-overloads.md).
+V C++nástroji má tato funkce přetížení šablony, které vyvolá novější a zabezpečené protějšky této funkce. Další informace najdete v tématu [přetížení zabezpečení šablon](../../c-runtime-library/secure-template-overloads.md).
 
 ## <a name="exceptions"></a>Výjimky
 
-**Wcrtomb –** funkce je bezpečné s více vlákny za předpokladu, žádné funkce v aktuálním vlákně volá **setlocale** při provádění této funkce a při *mbstate* má hodnotu null.
+Funkce **wcrtomb** je vláknově bezpečná, dokud žádná funkce v aktuálním vlákně nevolá funkci **setlocale** při provádění této funkce a v případě, že *mbstate* má hodnotu null.
 
 ## <a name="example"></a>Příklad
 

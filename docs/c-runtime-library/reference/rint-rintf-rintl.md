@@ -1,11 +1,11 @@
 ---
 title: rint, rintf, rintl
 ms.date: 04/05/2018
-apiname:
+api_name:
 - rintf
 - rintl
 - rint
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - rintf
 - rintl
@@ -27,12 +30,12 @@ helpviewer_keywords:
 - rint function
 - rintl function
 ms.assetid: 312ae3e6-278c-459a-9393-11b8f87d9184
-ms.openlocfilehash: 9e0e3875b7484735b5439c6c0e0a7252940d4552
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 57c4dc60d6b4d29e5c46fa6f1d03d0710ed44309
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62357587"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70949267"
 ---
 # <a name="rint-rintf-rintl"></a>rint, rintf, rintl
 
@@ -54,28 +57,28 @@ long double rint( long double x );  // C++ only
 ### <a name="parameters"></a>Parametry
 
 *x*<br/>
-Hodnota s plovoucí desetinnou čárkou k zaokrouhlení.
+Hodnota s plovoucí desetinnou čárkou, která má být zaokrouhlena.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-**Isknout** funkce vrátí hodnotu s plovoucí desetinnou čárkou, která představuje na nejbližší celé číslo k *x*. Středové hodnoty jsou zaokrouhleny podle aktuálního nastavení režimu zaokrouhlení s plovoucí desetinnou čárkou, stejné jako **nearbyint –** funkce. Na rozdíl od **nearbyint –** funkce, **isknout** funkce může vyvolat **FE_INEXACT** výjimek plovoucí desetinné čárky, pokud výsledek se liší v hodnotě z argumentu. Není vrácena žádná chyba.
+Funkce **isknout** vrací hodnotu s plovoucí desetinnou čárkou, která představuje nejbližší celé číslo na *ose x*. Hodnoty uprostřed jsou zaokrouhleny podle aktuálního nastavení režimu zaokrouhlení s plovoucí desetinnou čárkou, stejné jako funkce **nearbyint –** . Na rozdíl od funkcí **nearbyint –** mohou funkce **isknout** vyvolat výjimku **FE_INEXACT** s plovoucí desetinnou čárkou, pokud se výsledek liší hodnotou z argumentu. Nevrátila se žádná chybová zpráva.
 
-|Vstup|Výjimka SEH|**_matherr** Exception|
+|Vstup|Výjimka SEH|**_matherr** Jímka|
 |-----------|-------------------|--------------------------|
-|± ∞, QNAN, IND|žádná|žádná|
-|Denormals|EXCEPTION_FLT_UNDERFLOW|žádná|
+|∞, QNAN, ZASÁHNOUT|žádná|žádná|
+|Denormalizované|EXCEPTION_FLT_UNDERFLOW|žádná|
 
 ## <a name="remarks"></a>Poznámky
 
-Protože jazyk C++ umožňuje přetížení, můžete volat přetížení **isknout** , která používají a vrací **float** a **dlouhé** **double** hodnoty. V programu jazyka C **isknout** vždy převezme a vrátí **double**.
+Vzhledem C++ k tomu, že umožňuje přetížení, můžete volat přetížení **isknout** , která přijímají a vracejí hodnoty **float** a **Long** **Double** . V programu v jazyce C **isknout** vždycky přebírá a vrací **Double**.
 
 ## <a name="requirements"></a>Požadavky
 
-|Funkce|Záhlaví C|Hlaviček jazyka C++|
+|Funkce|Hlavička jazyka C|C++hlaviček|
 |--------------|--------------|------------------|
-|**rint**, **rintf**, **rintl**|\<math.h>|\<cmath>|
+|**isknout**, **rintf**, **rintl**|\<Math. h >|\<cmath >|
 
-Další informace o kompatibilitě, naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Příklad
 
@@ -122,4 +125,4 @@ rintl(-2.500000) is -3
 [lrint, lrintf, lrintl, llrint, llrintf, llrintl](lrint-lrintf-lrintl-llrint-llrintf-llrintl.md)<br/>
 [lround, lroundf, lroundl, llround, llroundf, llroundl](lround-lroundf-lroundl-llround-llroundf-llroundl.md)<br/>
 [nearbyint, nearbyintf, nearbyintl](nearbyint-nearbyintf-nearbyintl1.md)<br/>
-[Tisknout](rint-rintf-rintl.md)<br/>
+[isknout](rint-rintf-rintl.md)<br/>

@@ -1,12 +1,12 @@
 ---
 title: _ismbslead, _ismbstrail, _ismbslead_l, _ismbstrail_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _ismbstrail
 - _ismbslead_l
 - _ismbslead
 - _ismbstrail_l
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -18,7 +18,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _ismbslead
 - ismbs
@@ -40,19 +43,19 @@ helpviewer_keywords:
 - ismbstrail_l function
 - _ismbstrail_l function
 ms.assetid: 86d2cd7a-3cff-443a-b713-14cc17a231e9
-ms.openlocfilehash: 5b4d3f371f4be640cc22a1bdc3d920acf88e2585
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 71a5d2a82c01a41f945ef3fa8c7652f846f05103
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62287354"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70953770"
 ---
-# <a name="ismbslead-ismbstrail-ismbsleadl-ismbstraill"></a>_ismbslead, _ismbstrail, _ismbslead_l, _ismbstrail_l
+# <a name="_ismbslead-_ismbstrail-_ismbslead_l-_ismbstrail_l"></a>_ismbslead, _ismbstrail, _ismbslead_l, _ismbstrail_l
 
-Provede kontextové testy pro zájemce řetězec vícebajtových znaků a záznam pro bajty a určuje, zda daný podřetězec ukazatel odkazuje na vedoucí bajt nebo druhý bajt.
+Provádí testy závislé na kontextu pro řetězce a koncové bajty vícebajtových znaků a určuje, zda daný ukazatel dílčího řetězce ukazuje na vedoucí bajt nebo na koncový bajt.
 
 > [!IMPORTANT]
-> Toto rozhraní API nelze použít v aplikacích, které jsou spouštěny v modulu Windows Runtime. Další informace najdete v tématu [CRT funkce nejsou podporovány v aplikacích pro univerzální platformu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> Toto rozhraní API nelze použít v aplikacích, které jsou spouštěny v prostředí Windows Runtime. Další informace najdete v tématu [funkce CRT nejsou v aplikacích Univerzální platforma Windows podporovány](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -80,36 +83,36 @@ int _ismbstrail_l(
 ### <a name="parameters"></a>Parametry
 
 *str*<br/>
-Ukazatel na začátku řetězce nebo předchozí známé vedoucí bajt.
+Ukazatel na začátek řetězce nebo předchozí známý vedoucí bajt.
 
-*aktuální*<br/>
-Ukazatel pozice v řetězci, který má být testována.
+*aktivní*<br/>
+Ukazatel na pozici v řetězci, který má být testován.
 
-*Národní prostředí*<br/>
+*jazyka*<br/>
 Národní prostředí, které se má použít
 
 ## <a name="return-value"></a>Návratová hodnota
 
-**_ismbslead –** vrátí hodnotu -1, pokud znak je vedoucí bajt a **_ismbstrail –** vrátí hodnotu -1, pokud znak je druhý bajt. Pokud vstupní řetězce jsou platné, ale nejsou vedoucím bajtem nebo bajt, tyto funkce vrací nulu. Pokud je některý z nich **NULL**, je vyvolána obslužná rutina neplatného parametru, jak je popsáno v [Parameter Validation](../../c-runtime-library/parameter-validation.md). Pokud provádění může pokračovat, vrátí tyto funkce **NULL** a nastavte **errno** k **EINVAL**.
+**_ismbslead** vrátí hodnotu-1, pokud je znak vedoucí bajt a **_ismbstrail** vrátí-1, pokud je znakem koncový bajt. Pokud jsou vstupní řetězce platné, ale nejsou vedoucí bajt nebo koncový bajt, vrátí tyto funkce nulu. Pokud má některý argument **hodnotu null**, je vyvolána obslužná rutina neplatného parametru, jak je popsáno v tématu [ověřování parametru](../../c-runtime-library/parameter-validation.md). Pokud provádění může pokračovat, vrátí tyto funkce **hodnotu null** a nastaví **errno** na **EINVAL**.
 
 ## <a name="remarks"></a>Poznámky
 
-**_ismbslead –** a **_ismbstrail –** jsou pomalejší než **_ismbblead** a **_ismbbtrail** verze protože berou v úvahu kontext řetězce.
+**_ismbslead** a **_ismbstrail** jsou pomalejší než verze **_ismbblead** a **_ismbbtrail** , protože převezmou kontext řetězce na účet.
 
-Verze těchto funkcí, které mají **_l** přípona jsou stejné s tím rozdílem, že pro své chování závislé na národním prostředí používají předané národní prostředí namísto aktuálního národního prostředí. Další informace najdete v tématu [národní prostředí](../../c-runtime-library/locale.md).
+Verze těchto funkcí, které mají příponu **_l** , jsou shodné s tím rozdílem, že pro své chování závislé na národním prostředí používají předané národní prostředí namísto aktuálního národního prostředí. Další informace najdete v tématu [národní prostředí](../../c-runtime-library/locale.md).
 
 ## <a name="requirements"></a>Požadavky
 
 |Rutina|Požadovaný hlavičkový soubor|Volitelné záhlaví|
 |-------------|---------------------|---------------------|
-|**_ismbslead**|\<Mbctype.h > nebo \<mbstring.h >|\<ctype.h>,* \<limits.h>, \<stdlib.h>|
-|**_ismbstrail –**|\<Mbctype.h > nebo \<mbstring.h >|\<ctype.h>,* \<limits.h>, \<stdlib.h>|
-|**_ismbslead_l**|\<Mbctype.h > nebo \<mbstring.h >|\<ctype.h>,* \<limits.h>, \<stdlib.h>|
-|**_ismbstrail_l**|\<Mbctype.h > nebo \<mbstring.h >|\<ctype.h>,* \<limits.h>, \<stdlib.h>|
+|**_ismbslead**|\<Mbctype. h > nebo \<Mbstring. h >|\<CType. h >, * \<Limits. h > \<, Stdlib. h >|
+|**_ismbstrail**|\<Mbctype. h > nebo \<Mbstring. h >|\<CType. h >, * \<Limits. h > \<, Stdlib. h >|
+|**_ismbslead_l**|\<Mbctype. h > nebo \<Mbstring. h >|\<CType. h >, * \<Limits. h > \<, Stdlib. h >|
+|**_ismbstrail_l**|\<Mbctype. h > nebo \<Mbstring. h >|\<CType. h >, * \<Limits. h > \<, Stdlib. h >|
 
-\* Pro konstanty manifestu pro zkušební podmínky.
+\*Pro konstanty manifestu pro podmínky testu.
 
-Další informace o kompatibilitě naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Viz také:
 

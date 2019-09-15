@@ -1,9 +1,9 @@
 ---
 title: _gcvt
 ms.date: 04/05/2018
-apiname:
+api_name:
 - _gcvt
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-convert-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _gcvt
 helpviewer_keywords:
@@ -28,16 +31,16 @@ helpviewer_keywords:
 - strings [C++], converting from floating point
 - CVTBUFSIZE
 ms.assetid: 5761411e-c06b-409a-912f-810fe7f4bcb5
-ms.openlocfilehash: 9cf966b455af601d09b4444a5c590e305a6681c8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3618f5571275783131c74c89f29218f89023f70e
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62332246"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70956106"
 ---
-# <a name="gcvt"></a>_gcvt
+# <a name="_gcvt"></a>_gcvt
 
-Převede hodnotu s plovoucí desetinnou čárkou na řetězec, který je uložený ve vyrovnávací paměti. Bezpečnější verze této funkce je k dispozici. Zobrazit [_gcvt_s –](gcvt-s.md).
+Převede hodnotu s plovoucí desetinnou čárkou na řetězec, který je uložen ve vyrovnávací paměti. K dispozici je bezpečnější verze této funkce; viz [_gcvt_s](gcvt-s.md).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -52,25 +55,25 @@ char *_gcvt(
 ### <a name="parameters"></a>Parametry
 
 *value*<br/>
-Hodnota k převedení.
+Hodnota, která má být převedena.
 
-*číslice*<br/>
-Počet platných číslic, které jsou uložené.
+*znak*<br/>
+Počet uložených platných číslic.
 
-*Vyrovnávací paměti*<br/>
+*vyrovnávací paměti*<br/>
 Umístění úložiště pro výsledek.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-**_gcvt –** vrací ukazatel na řetězec číslic.
+**_gcvt** vrací ukazatel na řetězec číslic.
 
 ## <a name="remarks"></a>Poznámky
 
-**_Gcvt –** funkce převede plovoucí desetinné čárky *hodnotu* na řetězec znaků (která zahrnuje desetinné čárky a možné podepsat bajtů) a uloží řetězec v *vyrovnávací paměti*. *Vyrovnávací paměti* by měl být dostatečně velký, aby odpovídala převedená hodnota plus ukončujícího znaku null, která se automaticky připojí. Pokud vyrovnávací paměť o velikosti *číslic* + 1 se používá, funkce přepíše konce vyrovnávací paměti. Je to proto převedený řetězec obsahuje desetinnou čárkou a může obsahovat znak a exponentu informace. Neexistuje žádné ustanovení přetečení. **_gcvt –** pokusí vytvořit *číslic* číslic ve formátu desetinného čísla. V případě nedostupnosti vznikne *číslic* číslic v exponenciálním formátu. Během převodu může potlačit koncovými nulami.
+Funkce **_gcvt** převede *hodnotu* s plovoucí desetinnou čárkou na řetězec znaků (který obsahuje desetinnou čárku a možné znak pro podepsání) a uloží řetězec do *vyrovnávací paměti*. *Vyrovnávací paměť* by měla být dostatečně velká, aby odpovídala převedené hodnotě, a ukončujícímu znaku null, který je automaticky připojen. Pokud je použita velikost vyrovnávací *paměti + 1* , funkce přepíše konec vyrovnávací paměti. Důvodem je, že převedený řetězec obsahuje desetinnou čárku a může obsahovat informace o znaménku a exponentu. Neexistuje žádné zajištění pro přetečení. **_gcvt** se pokusí *vydávat číslice číslic v* desítkovém formátu. Pokud to nemůže *, vytvoří číslice číslice v* exponenciálním formátu. Koncové nuly lze v převodu potlačit.
 
-A *vyrovnávací paměti* délky **_CVTBUFSIZE** je dostatečná pro všechny plovoucí desetinnou čárkou.
+*Vyrovnávací paměť* s délkou **_CVTBUFSIZE** je dostačující pro všechny hodnoty s plovoucí desetinnou čárkou.
 
-Tato funkce ověřuje své parametry. Pokud *vyrovnávací paměti* je **NULL**, je vyvolána obslužná rutina neplatného parametru, jak je popsáno v [Parameter Validation](../../c-runtime-library/parameter-validation.md). Pokud smí provádění pokračovat, tato funkce nastaví **errno** k **EINVAL** a vrátí **NULL**.
+Tato funkce ověří své parametry. Pokud má *vyrovnávací paměť* **hodnotu null**, je vyvolána obslužná rutina neplatného parametru, jak je popsáno v tématu [ověřování parametru](../../c-runtime-library/parameter-validation.md). Pokud provádění může pokračovat, tato funkce nastaví **errno** na **EINVAL** a vrátí **hodnotu null**.
 
 ## <a name="requirements"></a>Požadavky
 
@@ -78,7 +81,7 @@ Tato funkce ověřuje své parametry. Pokud *vyrovnávací paměti* je **NULL**,
 |-------------|---------------------|
 |**_gcvt**|\<stdlib.h>|
 
-Další informace o kompatibilitě naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Příklad
 

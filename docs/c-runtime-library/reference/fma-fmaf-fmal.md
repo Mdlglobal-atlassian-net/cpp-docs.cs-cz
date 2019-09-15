@@ -1,11 +1,11 @@
 ---
 title: fma, fmaf, fmal
 ms.date: 04/05/2018
-apiname:
+api_name:
 - fma
 - fmaf
 - fmal
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - fma
 - fmaf
@@ -30,16 +33,16 @@ helpviewer_keywords:
 - fmaf function
 - fmal function
 ms.assetid: 584a6037-da1e-4e86-9f0c-97aae86de0c0
-ms.openlocfilehash: f96592e245e443bae2f3334da51cae5572753708
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4ddc4061e5a24ee3b5176aedc569d134d85e0002
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62333492"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70957109"
 ---
 # <a name="fma-fmaf-fmal"></a>fma, fmaf, fmal
 
-Vynásobí dvě hodnoty společně, přidá třetí hodnotu a potom zaokrouhlí výsledek, aniž by ztratily všechny přesnost kvůli zprostředkující zaokrouhlení.
+Vynásobí dvě hodnoty dohromady, přidá třetí hodnotu a pak výsledek zaokrouhlí, aniž by došlo ke ztrátě přesnosti kvůli zaokrouhlení.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -78,44 +81,44 @@ long double fmal(
 ### <a name="parameters"></a>Parametry
 
 *x*<br/>
-První hodnota pro násobení.
+První hodnota, která se má vynásobit.
 
 *y*<br/>
-Druhá hodnota pro násobení.
+Druhá hodnota, která se má vynásobit.
 
 *z*<br/>
-Hodnota k přidání.
+Hodnota, která má být přidána.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Vrátí `(x * y) + z`. Návratová hodnota se zaokrouhlí formátu aktuální zaokrouhlení.
+Vrátí `(x * y) + z`. Návratová hodnota se pak zaokrouhluje pomocí aktuálního formátu zaokrouhlení.
 
-V opačném případě může vracet instanci jednoho z následujících hodnot:
+V opačném případě může vracet jednu z následujících hodnot:
 
-|Problém|Vrátí|
+|Problém|vrátit|
 |-----------|------------|
-|*x* = NEKONEČNO, *y* = 0 nebo<br /><br /> *x* = 0, *y* = NEKONEČNO|NaN|
-|*x* nebo *y* = přesné rozmezí NEKONEČNO, *z* = NEKONEČNO s opačným znaménkem|NaN|
+|*x* = nekonečno, *y* = 0 nebo<br /><br /> *x* = 0, *y* = nekonečno|NaN|
+|*x* nebo *y* = přesné ± nekonečno, *z* = nekonečno s opačným znaménkem|NaN|
 |*x* nebo *y* = NaN|NaN|
-|Ne (*x* = 0, *y*= nekonečno) a *z* = NaN<br /><br /> Ne (*x*= nekonečno, *y*= 0) a *z* = NaN|NaN|
-|Chyba přetečení rozsahu|±HUGE_VAL, ±HUGE_VALF nebo ±HUGE_VALL|
-|Chyba podtečení rozsahu|správnou hodnotu, po zaokrouhlení.|
+|NOT (*x* = 0, *y*= nekonečno) a *z* = NaN<br /><br /> Ne (*x*= nekonečno, *y*= 0) a *z* = NaN|NaN|
+|Chyba rozsahu přetečení|± HUGE_VAL, ± HUGE_VALF nebo ± HUGE_VALL|
+|Chyba podtečení rozsahu|správná hodnota, po zaokrouhlení.|
 
-Jsou hlášeny chyby uvedené v [_matherr](matherr.md).
+Chyby jsou hlášeny podle zadání v [_matherr](matherr.md).
 
 ## <a name="remarks"></a>Poznámky
 
-Protože jazyk C++ umožňuje přetížení, můžete volat přetížení **fma** , která používají a vrací **float** a **dlouhé** **double** typy. V programu jazyka C **fma** vždy převezme a vrátí **double**.
+Vzhledem C++ k tomu, že umožňuje přetížení, můžete volat přetížení **FMA** , která přijímají a vracejí typ **float** a **Long** **Double** . V programu v jazyce C **FMA** vždycky přebírá a vrací **Double**.
 
-Tato funkce vypočítá hodnotu jako by byly provedeny s nekonečnou přesností a zaokrouhlí pak konečný výsledek.
+Tato funkce vypočítá hodnotu, jako by byla převedena na nekonečnou přesnost, a pak zaokrouhlí konečný výsledek.
 
 ## <a name="requirements"></a>Požadavky
 
-|Funkce|Záhlaví C|Hlaviček jazyka C++|
+|Funkce|Hlavička jazyka C|C++hlaviček|
 |--------------|--------------|------------------|
-|**fma**, **fmaf**, **fmal**|\<math.h>|\<cmath>|
+|**FMA**, **fmaf –** , **fmal**|\<Math. h >|\<cmath >|
 
-Další informace o kompatibilitě, naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Viz také:
 

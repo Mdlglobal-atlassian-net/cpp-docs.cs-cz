@@ -1,11 +1,11 @@
 ---
-title: cpow cpowf, cpowl
+title: cpow, cpowf, cpowl
 ms.date: 11/04/2016
-apiname:
+api_name:
 - cpow
 - cpowf
 - cpowl
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - cpow
 - cpowf
@@ -30,16 +33,16 @@ helpviewer_keywords:
 - cpowf function
 - complex/cpowl function
 ms.assetid: 83fe2187-22b7-4295-ab16-4d77abdbb80b
-ms.openlocfilehash: 588c437a01237de297e1db31fb2c507eb1145d90
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 005bafd4b19164f5c85be839a90fc7d5259d61bf
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62339842"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70942693"
 ---
-# <a name="cpow-cpowf-cpowl"></a>cpow cpowf, cpowl
+# <a name="cpow-cpowf-cpowl"></a>cpow, cpowf, cpowl
 
-Načte hodnotu pro číslo umocněné na zadanou, kde jsou základní a exponent komplexní čísla. Tato funkce má větev snížili pro exponent skutečné ose záporné.
+Načte hodnotu čísla umocněné na zadanou mocninu, kde základní a exponent jsou komplexní čísla. Tato funkce má vyříznout větev pro exponent podél záporné reálné osy.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -67,23 +70,23 @@ _Lcomplex cpowl(
 Základ.
 
 *y*<br/>
-Exponent.
+Exponent
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Hodnota *x* umocněné na sílu *y* s větví snížili pro *x* skutečné ose záporné.
+Hodnota *x* umocněná mocninou *y* s vyříznutím větve pro *x* na základě záporné skutečné osy.
 
 ## <a name="remarks"></a>Poznámky
 
-Protože C++ umožňuje přetížení, můžete volat přetížení **cpow** , která používají a vrací **_Fcomplex** a **_Lcomplex** hodnoty. V programu jazyka C **cpow** vždy převezme a vrátí **_Dcomplex** hodnotu.
+Vzhledem C++ k tomu, že umožňuje přetížení, můžete volat přetížení **cpow** , která přijímají a vracejí hodnoty **_Fcomplex** a **_Lcomplex** . V programu v jazyce C **cpow** vždycky přebírá a vrací hodnotu **_Dcomplex** .
 
 ## <a name="requirements"></a>Požadavky
 
-|Rutina|Záhlaví C|Hlaviček jazyka C++|
+|Rutina|Hlavička jazyka C|C++hlaviček|
 |-------------|--------------|------------------|
-|**cpow**,               **cpowf**, **cpowl**|\<complex.h>|\<ccomplex>|
+|**cpow**,               **cpowf**, **cpowl**|\<complex.h>|\<ccomplex >|
 
-Další informace o kompatibilitě naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Viz také:
 

@@ -1,11 +1,11 @@
 ---
 title: _Cmulcr, _FCmulcr, _LCmulcr
 ms.date: 03/30/2018
-apiname:
+api_name:
 - _Cmulcr
 - _FCmulcr
 - _LCmulcr
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _Cmulcr
 - _FCmulcr
@@ -29,16 +32,16 @@ helpviewer_keywords:
 - _Cmulcr function
 - _FCmulcr function
 - _LCmulcr function
-ms.openlocfilehash: ce45b1b1081faba18d8532d3a55d1be877cf84e3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: cbff1c2cb0e66da77b6fdc8127b78fb475aa5080
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62340401"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70942888"
 ---
-# <a name="cmulcr-fcmulcr-lcmulcr"></a>_Cmulcr, _FCmulcr, _LCmulcr
+# <a name="_cmulcr-_fcmulcr-_lcmulcr"></a>_Cmulcr, _FCmulcr, _LCmulcr
 
-Vynásobí komplexního čísla s plovoucí desetinnou čárkou číslem.
+Vynásobí komplexní číslo číslem s plovoucí desetinnou čárkou.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -51,26 +54,26 @@ _Lcomplex _LCmulcr( _Lcomplex x, long double y );
 ### <a name="parameters"></a>Parametry
 
 *x*<br/>
-Jeden z operandů komplexní pro násobení.
+Jeden ze složitých operandů k násobení.
 
 *y*<br/>
-S plovoucí desetinnou čárkou operand pro násobení.
+Operand s plovoucí desetinnou čárkou, který se má vynásobit.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-A **_Dcomplex**, **_Fcomplex**, nebo **_Lcomplex** struktura, která představuje komplexní produktu komplexního čísla *x* a číslo s desetinnou flaoting *y*.
+Struktura **_Dcomplex**, **_Fcomplex**nebo **_Lcomplex** , která představuje komplexní produkt se složitým číslem *x* a Flaoting-Point číslo *y*.
 
 ## <a name="remarks"></a>Poznámky
 
-Protože předdefinovaných aritmetických operátorů, nebudou fungovat v implementaci společnosti Microsoft komplexní typy, **_Cmulcr**, **_FCmulcr**, a **_LCmulcr** funkce zjednodušení násobení komplexní typy, typy hodnot s plovoucí desetinnou čárkou.
+Vzhledem k tomu, že předdefinované aritmetické operátory nefungují na implementaci komplexních typů od společnosti Microsoft, funkce **_Cmulcr**, **_FCmulcr**a **_LCmulcr** zjednodušují násobení složitých typů pomocí typů s plovoucí desetinnou čárkou.
 
 ## <a name="requirements"></a>Požadavky
 
-|Rutina|Záhlaví C|Hlaviček jazyka C++|
+|Rutina|Hlavička jazyka C|C++hlaviček|
 |-------------|--------------|------------------|
 |**_Cmulcr**, **_FCmulcr**, **_LCmulcr**|\<complex.h>|\<complex.h>|
 
-Tyto funkce jsou specifické pro společnost Microsoft. Typy **_Dcomplex**, **_Fcomplex**, a **_Lcomplex** jsou specifické pro společnost Microsoft – ekvivalenty k neimplementovaná C99 nativní typy **double _Complex** , **float _Complex**, a **long double _Complex**v uvedeném pořadí. Další informace o kompatibilitě naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
+Tyto funkce jsou specifické pro společnost Microsoft. Typy **_Dcomplex**, **_Fcomplex**a **_Lcomplex** jsou ekvivalenty od společnosti Microsoft pro neimplementované nativní typy C99 **Double _Complex**, **float _Complex**a **Long Double _Complex**, v uvedeném pořadí. Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Viz také:
 

@@ -1,11 +1,11 @@
 ---
 title: clog, clogf, clogl
 ms.date: 11/04/2016
-apiname:
+api_name:
 - clog
 - clogf
 - clogl
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - clog
 - clogf
@@ -30,16 +33,16 @@ helpviewer_keywords:
 - clogf function
 - clogl function
 ms.assetid: 870b9b0b-6618-46f3-bfcf-da595cbd5e18
-ms.openlocfilehash: fcbc9ba7984898d51f7a3d0beb5ef7c8b6d6892c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 76ee6e4e81c275c8cbed0f74914521c0b44499bb
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62340635"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70942926"
 ---
 # <a name="clog-clogf-clogl"></a>clog, clogf, clogl
 
-Načte přirozený logaritmus komplexní čísla s větví vyjmout skutečné ose záporné.
+Načte přirozený logaritmus komplexního čísla s vyjmutím větve kolem záporné reálné osy.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -64,17 +67,17 @@ _Lcomplex clogl(
 ### <a name="parameters"></a>Parametry
 
 *z*<br/>
-Základ logaritmu.
+Základ logaritmu
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Přirozený logaritmus *z*. Výsledkem je bez vazby na skutečné ose a v intervalu [-iπ, + iπ] imaginární ose.
+Přirozený logaritmus z *.* Výsledek není ohraničený podél reálné osy a v intervalu [-iπ, + iπ] podél imaginární osy.
 
-Je to možné návratové hodnoty jsou:
+Možné vrácené hodnoty jsou:
 
 |parametr z|Návratová hodnota|
 |-----------------|------------------|
-|Kladné|Logaritmus o základu 10 z z|
+|Kladné|Logaritmus o základu 10 z|
 |Nula|- ∞|
 |Záporný|NaN|
 |NaN|NaN|
@@ -82,15 +85,15 @@ Je to možné návratové hodnoty jsou:
 
 ## <a name="remarks"></a>Poznámky
 
-Protože C++ umožňuje přetížení, můžete volat přetížení **clog** , která používají a vrací **_Fcomplex** a **_Lcomplex** hodnoty. V programu jazyka C **clog** vždy převezme a vrátí **_Dcomplex** hodnotu.
+Vzhledem C++ k tomu, že umožňuje přetížení, můžete volat přetížení **CLOG** , která přijímají a vracejí hodnoty **_Fcomplex** a **_Lcomplex** . V programu v jazyce C **CLOG** vždycky přebírá a vrací hodnotu **_Dcomplex** .
 
 ## <a name="requirements"></a>Požadavky
 
-|Rutina|Záhlaví C|Hlaviček jazyka C++|
+|Rutina|Hlavička jazyka C|C++hlaviček|
 |-------------|--------------|------------------|
-|**clog**, **clogf**, **clogl**|\<complex.h>|\<ccomplex>|
+|**CLOG**, **clogf**, **clogl**|\<complex.h>|\<ccomplex >|
 
-Další informace o kompatibilitě naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Viz také:
 

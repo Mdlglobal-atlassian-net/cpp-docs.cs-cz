@@ -1,14 +1,17 @@
 ---
 title: 'Pole specifikace formátu: funkce scanf a wscanf'
 ms.date: 11/04/2016
-apilocation:
+api_location:
 - msvcr80.dll
 - msvcr110.dll
 - msvcr90.dll
 - msvcr100.dll
 - msvcr110_clr0400.dll
 - msvcr120.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - wscanf
 - scanf
@@ -21,42 +24,42 @@ helpviewer_keywords:
 - format specification fields for scanf function
 - type fields
 ms.assetid: 7e95de1b-0b71-4de3-9f81-c9560c78e039
-ms.openlocfilehash: 5b45de9af3642825f1fddf3a1560b2fc1dbc4ffc
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 78b64ea29aebdfb355525be69dc7a9fdece55367
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62343729"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70944419"
 ---
 # <a name="format-specification-fields-scanf-and-wscanf-functions"></a>Pole specifikace formátu: funkce scanf a wscanf
 
-Zde uvedené informace platí pro celý `scanf` řadu funkcí, včetně bezpečné verze a popisuje symboly pozná `scanf` funguje jak parsovat vstupní datový proud, jako je například vstupního datového proudu `stdin` pro `scanf`, na hodnoty, které jsou vloženy do programu proměnné.
+Zde uvedené informace platí pro celou `scanf` rodinu funkcí, včetně zabezpečených verzí a popisuje symboly, které slouží k `scanf` oznámení funkcím, jak analyzovat vstupní datový proud, jako je vstupní datový proud `stdin` pro `scanf`do hodnot, které jsou vloženy do proměnných programu.
 
 Specifikace formátu má následující formát:
 
-`%`[`*`] [[šířka](../c-runtime-library/scanf-width-specification.md)] [{[h &#124; l &#124; ll &#124; I64 &#124; L](../c-runtime-library/scanf-width-specification.md)}][typu](../c-runtime-library/scanf-type-field-characters.md)
+`%`[`*`] [[Width](../c-runtime-library/scanf-width-specification.md)] [{[h &#124; l &#124; šechny &#124; I64 &#124; l](../c-runtime-library/scanf-width-specification.md)}][typ](../c-runtime-library/scanf-type-field-characters.md)
 
-`format` Určuje interpretují vstupní argument a může obsahovat jednu nebo více z následujících akcí:
+`format` Argument určuje výklad vstupu a může obsahovat jednu nebo více z následujících možností:
 
-- Prázdné znaky: prázdné (""); Karta ('\t'); nebo znaku nového řádku ('\n'). Prázdný znak způsobí, že `scanf` číst, ale ne ukládat všechny po sobě jdoucích prázdných znaků ve vstupním až do další znak prázdné znaky. Jeden prázdný znak ve formátu odpovídá jakékoli číslo (včetně 0) a kombinace prázdné znaky ve vstupu.
+- Prázdné znaky: prázdné (' '); TAB (' \t '); nebo nový řádek (' \n '). Prázdný znak má za následek `scanf` čtení, ale ne uložení, všechny po sobě jdoucí prázdné znaky ve vstupu až k dalšímu neprázdnému znaku. Jeden prázdný znak ve formátu odpovídá libovolnému číslu (včetně 0) a kombinaci prázdných znaků ve vstupu.
 
-- Bez prázdných znaků, s výjimkou znak procent (`%`). Způsobí, že znaku prázdný znak `scanf` pro čtení, ale ne ukládat odpovídající znaku prázdný znak. Pokud následující znak ve vstupním datovém proudu neodpovídá, `scanf` ukončí.
+- Jiné než prázdné znaky, s výjimkou znaku procenta (`%`). Neprázdný znak má za následek `scanf` čtení, ale nikoli uložení, odpovídajícího neprázdného znaku. Pokud se další znak ve vstupním datovém proudu neshoduje, `scanf` ukončí.
 
-- Specifikace zavedené znak procent formátu (`%`). Specifikace formátu způsobí, že `scanf` ke čtení a převod znaků ve vstupním do zadaného typu hodnoty. Hodnota je přiřazená k argumentu v seznam argumentů.
+- Specifikace formátu zavedené znakem procenta (`%`) Specifikace formátu způsobuje `scanf` čtení a převod znaků ve vstupu na hodnoty zadaného typu. Hodnota je přiřazena k argumentu v seznamu argumentů.
 
-Formát je pro čtení zleva doprava. Znaky mimo specifikace formátu se očekává tak, aby odpovídala pořadí znaků ve vstupním datovém proudu; odpovídající znaky ve vstupním datovém proudu jsou zkontrolovány, ale nebyly uloženy. Pokud se znakem ve vstupním datovém proudu je v konfliktu s specifikace formátu `scanf` ukončí, a znak, který zůstane v vstupního datového proudu jako v případě, kdyby byl načten.
+Formát je čten zleva doprava. Očekává se, že znaky mimo specifikace formátu budou odpovídat sekvenci znaků ve vstupním proudu; vyhovující znaky ve vstupním datovém proudu jsou prohledávány, ale nejsou uloženy. Pokud znak ve vstupním datovém proudu koliduje se specifikací formátu `scanf` , končí a znak zůstane ve vstupním proudu, jako by nebyl přečten.
 
-Vyskytne první specifikaci formátu hodnota první vstupní pole je převeden podle téhle specifikaci a uložen v umístění, která je zadána první `argument`. Druhá specifikace formátu způsobí, že druhé vstupní pole bude převeden a uložen do druhého `argument`, a tak dále až do konce řetězce formátu.
+Při zjištění prvního formátu je hodnota prvního vstupního pole převedena podle této specifikace a uložena v umístění, které je určeno prvním `argument`. Druhá specifikace formátu způsobí, že druhé vstupní pole bude převedeno a Uloženo v druhém `argument`a tak dále až na konci formátovacího řetězce.
 
-Vstupní pole je definován jako všechny znaky až po první znak prázdným (místo, tabulátor nebo nový řádek), nebo až po první znak, který nelze převést podle specifikace formátu, nebo dokud šířku pole (Pokud je zadaný) dostupný. Pokud existuje příliš mnoho argumentů pro danou specifikací, další argumenty jsou vyhodnoceny ale ignorována. Výsledky nepředvídatelné, pokud nejsou k dispozici dostatečný počet argumentů pro specifikace formátu.
+Vstupní pole je definováno jako všechny znaky až do prvního prázdného znaku (mezerník, TAB nebo nového znaku) nebo až po první znak, který nelze převést podle specifikace formátu, nebo dokud není dosaženo šířky pole (Pokud je zadáno). Pokud je pro dané specifikace příliš mnoho argumentů, jsou vyhodnoceny nadbytečné argumenty, ale budou ignorovány. Výsledky jsou nepředvídatelné, pokud není dostatek argumentů pro specifikaci formátu.
 
-Každé pole Specifikace formátu je znak nebo číslo značící danou formátovací volbu. `type` Znak, který se zobrazí za poslední formátu volitelné pole, určuje, zda vstupní pole je interpretován jako znak, řetězec nebo číslo.
+Každé pole specifikace formátu je jeden znak nebo číslo značící konkrétní možnost formátu. `type` Znak, který se zobrazí po posledním volitelném poli formátu, určuje, zda je vstupní pole interpretováno jako znak, řetězec nebo číslo.
 
-Nejjednodušší specifikace formátu obsahuje pouze znak procent a `type` znaku (například `%s`). Pokud znak procent (`%`) je následován znakem, nemá žádný význam jako formát řídicí znak, znak a následující znaky (až do další znak procent) považovány za běžné posloupnost znaků, to znamená, posloupnost znaky, které musí odpovídat vstupu. Například, chcete-li určit, že má být vstupní znak procent, použít `%%`.
+Specifikace nejjednoduššího formátu obsahuje pouze znak procenta a `type` znak ( `%s`například). Pokud je znak procenta (`%`) následován znakem, který nemá žádný význam jako znak pro řízení formátu, je tento znak a následující znaky (až k dalšímu znaku procenta) považovány za běžnou sekvenci znaků, tj. sekvence znaky, které musí odpovídat vstupu. Například chcete-li určit, že znak procenta-znaménka má být Input, použijte `%%`.
 
-Hvězdičku (`*`) následující znak procent potlačí přiřazení další vstupní pole, které je interpretován jako pole určeného typu. Pole je zkontrolovány, ale nebyly uloženy.
+Hvězdička (`*`) za znakem procenta potlačuje přiřazení dalšího vstupního pole, které je interpretováno jako pole zadaného typu. Pole je prohledáváno, ale není uloženo.
 
-Bezpečné verze (ty, které mají `_s` přípony) z `scanf` řady funkcí vyžadují, aby ihned po každého parametru typu předat parametr velikosti vyrovnávací paměti `c`, `C`, `s`, `S`nebo `[`. Další informace o bezpečné verze `scanf` řadu funkcí, naleznete v tématu [scanf_s _scanf_s_l –, wscanf_s – _wscanf_s_l –](../c-runtime-library/reference/scanf-s-scanf-s-l-wscanf-s-wscanf-s-l.md).
+`_s` Zabezpečené verze (s příponou) `scanf` rodiny funkcí vyžadují, aby byl parametr velikosti vyrovnávací paměti předán Hned za každý parametr typu `c`, `C`, `s`, `S` nebo`[`. Další informace o zabezpečených verzích `scanf` řady funkcí naleznete v tématu [scanf_s, _scanf_s_l, wscanf_s, _wscanf_s_l](../c-runtime-library/reference/scanf-s-scanf-s-l-wscanf-s-wscanf-s-l.md).
 
 ## <a name="see-also"></a>Viz také:
 

@@ -1,11 +1,11 @@
 ---
-title: Cos cosf –, cosl –
+title: cos, cosf, cosl
 ms.date: 04/05/2018
-apiname:
+api_name:
 - cos
 - cosf
 - cosl
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - cos
 - cosf
@@ -31,14 +34,14 @@ helpviewer_keywords:
 - trigonometric functions
 - cosines, calculating
 ms.assetid: ae90435e-6b68-4a47-a81f-be87d5c08f16
-ms.openlocfilehash: b050fd98a35028b121def8b665fce62ad58ec437
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4d07a8636aabc4973c7beb9725a39e98c229a098
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62335357"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70942824"
 ---
-# <a name="cos-cosf-cosl"></a>Cos cosf –, cosl –
+# <a name="cos-cosf-cosl"></a>cos, cosf, cosl
 
 Vypočítá kosinus.
 
@@ -62,28 +65,28 @@ long double cos( long double x );  // C++ only
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Kosinus *x*. Pokud *x* je větší než nebo rovno 263 nebo menší než nebo rovna hodnotě-263, dojde ke ztrátě významu výsledku.
+Kosinus hodnoty *x*. Pokud *x* je větší nebo rovno 263 nebo menší než nebo rovno-263, dojde ke ztrátě významnosti ve výsledku.
 
-|Vstup|Výjimka SEH|Výjimka Matherr|
+|Vstup|Výjimka SEH|Výjimka matherr|
 |-----------|-------------------|-----------------------|
-|ROZMEZÍ QNAN, AJÍT|žádná|**_DOMAIN**|
-|± INF|**NEPLATNÝ**|**_DOMAIN**|
+|QNAN, ZASÁHNOUT|žádná|**_DOMAIN**|
+|± INF|**NENÍ**|**_DOMAIN**|
 
 ## <a name="remarks"></a>Poznámky
 
-Protože jazyk C++ umožňuje přetížení, můžete volat přetížení **cos** , která používají a vrací **float** nebo **dlouhé** **double** hodnoty. V programu jazyka C **cos** vždy převezme a vrátí **double**.
+Vzhledem C++ k tomu, že umožňuje přetížení, můžete volat přetížení ovládacího programu **cos** , který přijímá a vrací hodnoty **typu float** nebo **Long** **Double** . V programu v jazyce C provede funkce **cos** vždycky a vrátí hodnotu **Double**.
 
 ## <a name="requirements"></a>Požadavky
 
-|Rutina|Požadovaná hlavička C|Požadované hlaviček jazyka C++|
+|Rutina|Povinné záhlaví jazyka C|Požadovaná C++ hlavička|
 |-------------|---------------------|-|
-|**cos**, **cosh**, **cosf**|\<math.h>|\<cmath > nebo \<math.h >|
+|**cos**, **cosh**, **cosf**|\<Math. h >|\<cmath > nebo \<Math. h >|
 
-Další informace o kompatibilitě, naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Příklad
 
-Podívejte se na příklad v [sin, sinf –, sinl –](sin-sinf-sinl.md).
+Podívejte se na příklad ve [Sin, sinf –, Sinl](sin-sinf-sinl.md).
 
 ## <a name="see-also"></a>Viz také:
 

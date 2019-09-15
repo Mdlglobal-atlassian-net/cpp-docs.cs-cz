@@ -1,9 +1,9 @@
 ---
 title: _get_current_locale
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _get_current_locale
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-locale-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - get_current_locale
 - __get_current_locale
@@ -26,16 +29,16 @@ helpviewer_keywords:
 - locales, getting information on
 - __get_current_locale function
 ms.assetid: 572217f2-a37a-4105-a293-a250b4fabd99
-ms.openlocfilehash: 87c30ee701d8f7d3a89a0aa61ba18a7f854bc9b1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a17e730b350eaf88cf1c51502fda3df5ae30f611
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62332286"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70956083"
 ---
-# <a name="getcurrentlocale"></a>_get_current_locale
+# <a name="_get_current_locale"></a>_get_current_locale
 
-Získá místní objekt představující aktuální národní prostředí.
+Získá objekt národního prostředí představující aktuální národní prostředí.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -45,21 +48,21 @@ _locale_t _get_current_locale(void);
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Místní objekt představující aktuální národní prostředí.
+Objekt národního prostředí představující aktuální národní prostředí.
 
 ## <a name="remarks"></a>Poznámky
 
-**_Get_current_locale –** funkce získá v současné době nastavené národního prostředí pro vlákno a vrátí objekt národního prostředí představující toto národní prostředí.
+Funkce **_get_current_locale** získá aktuálně nastavené národní prostředí pro vlákno a vrátí objekt národního prostředí, který představuje toto národní prostředí.
 
-Předchozí název této funkce **__get_current_locale –** (se dvěma vedoucími podtržítky) je zastaralá.
+Předchozí název této funkce, **__get_current_locale** (se dvěma počátečními podtržítky), byl zastaralý.
 
 ## <a name="requirements"></a>Požadavky
 
 |Rutina|Požadovaný hlavičkový soubor|
 |-------------|---------------------|
-|**_get_current_locale**|\<Locale.h >|
+|**_get_current_locale**|\<locale. h >|
 
-Další informace o kompatibilitě naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Viz také:
 

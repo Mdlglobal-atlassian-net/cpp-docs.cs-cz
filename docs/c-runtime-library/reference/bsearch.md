@@ -1,9 +1,9 @@
 ---
 title: bsearch
 ms.date: 11/04/2016
-apiname:
+api_name:
 - bsearch
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,23 +16,26 @@ apilocation:
 - ucrtbase.dll
 - api-ms-win-crt-utility-l1-1-0.dll
 - ntoskrnl.exe
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - bsearch
 helpviewer_keywords:
 - arrays [CRT], binary search
 - bsearch function
 ms.assetid: e0ad2f47-e7dd-49ed-8288-870457a14a2c
-ms.openlocfilehash: e170ce67d22c0d97825a7eb754546a29daac6d89
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9e44e85d1c6d73a68da2edd099cdeb6156f9759d
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62347753"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70939439"
 ---
 # <a name="bsearch"></a>bsearch
 
-Provádí binární vyhledávání seřazené pole. Bezpečnější verze této funkce je k dispozici. Zobrazit [bsearch_s –](bsearch-s.md).
+Provede binární hledání seřazeného pole. K dispozici je bezpečnější verze této funkce; viz [bsearch_s](bsearch-s.md).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -49,47 +52,47 @@ void *bsearch(
 ### <a name="parameters"></a>Parametry
 
 *key*<br/>
-Objekt pro hledání.
+Objekt, který chcete vyhledat.
 
 *base*<br/>
-Ukazatele na základní dat hledání.
+Ukazatel na základ dat hledání
 
-*Číslo*<br/>
-Počet prvků.
+*Automatické*<br/>
+Počet elementů.
 
 *Šířka*<br/>
-Šířka prvků.
+Šířka prvků
 
 *compare*<br/>
-Funkce zpětného volání, která porovná dva elementy. První je ukazatel na klíč pro hledání a druhý je ukazatel na prvek pole, která se má porovnat s klíčem.
+Funkce zpětného volání, která porovnává dva elementy. První je ukazatel na klíč pro hledání a druhý je ukazatel na prvek pole, který má být porovnán s klíčem.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-**bsearch –** vrací ukazatel na výskyt *klíč* pole, na které odkazuje *základní*. Pokud *klíč* nenajde, vrátí funkce hodnotu **NULL**. Pokud pole není ve vzestupném pořadí řazení nebo obsahuje duplicitní záznamy s identickými klíči, je výsledkem nepředvídatelné.
+**bSearch** vrací ukazatel na výskyt *klíče* v poli, na které ukazuje *základ*. Pokud *klíč* není nalezen, funkce vrátí **hodnotu null**. Pokud pole není ve vzestupném pořadí řazení nebo obsahuje duplicitní záznamy se stejnými klíči, výsledek je nepředvídatelné.
 
 ## <a name="remarks"></a>Poznámky
 
-**Bsearch –** funkce provádí binárního vyhledávání seřazené pole *číslo* prvky, každý z *šířka* bajty. *Základní* hodnota je ukazatel na základní pole pro hledání, a *klíč* je hodnota vyhledané. *Porovnání* parametrem je ukazatel do uživatelem zadané rutinu, která porovnává požadovaný klíč k elementu pole a vrátí jednu z následujících hodnot zadáním jejich vztahu:
+Funkce **bSearch** provádí binární hledání seřazeného pole *číselného* prvku, přičemž každý z nich má velikost *v bajtech* . *Základní* hodnota je ukazatel na základ pole, které má být prohledáno, a *klíč* je hledaná hodnota. Parametr *Compare* je ukazatel na uživatelsky zadanou rutinu, která porovnává požadovaný klíč s prvkem pole a vrací jednu z následujících hodnot, které určují jejich vztah:
 
-|Hodnota vrácená *porovnání* rutina|Popis|
+|Hodnota vrácená rutinou *Compare*|Popis|
 |-----------------------------------------|-----------------|
 |\< 0|Klíč je menší než prvek pole.|
-|0|Klíč je rovna prvek pole.|
+|0|Klíč je roven elementu pole.|
 |> 0|Klíč je větší než prvek pole.|
 
-Tato funkce ověřuje své parametry. Pokud *porovnání*, *klíč* nebo *číslo* je **NULL**, nebo pokud *základní* je **NULL**a *číslo* je nenulová nebo pokud *šířka* je nula, je vyvolána obslužná rutina neplatného parametru, jak je popsáno v [Parameter Validation](../../c-runtime-library/parameter-validation.md). Pokud smí provádění pokračovat, **errno** je nastavena na `EINVAL` a funkce vrátí **NULL**.
+Tato funkce ověří své parametry. Pokud je **hodnota** *Compare*, *klíč* nebo *číslo* null nebo pokud je hodnota *Base* **null** a *číslo* je nenulové, nebo pokud je *Šířka* nula, je vyvolána obslužná rutina neplatného parametru, jak je popsáno v tématu [ověřování parametru. ](../../c-runtime-library/parameter-validation.md). Pokud provádění může pokračovat, **errno** je nastaven na `EINVAL` a funkce vrátí **hodnotu null**.
 
 ## <a name="requirements"></a>Požadavky
 
 |Rutina|Požadovaný hlavičkový soubor|
 |-------------|---------------------|
-|**bsearch**|\<stdlib.h > a \<search.h >|
+|**bsearch**|\<Stdlib. h > a \<Search. h >|
 
-Další informace o kompatibilitě, naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Příklad
 
-Tento program řadí pole řetězců s qsort – a pak používá bsearch – k vyhledání slov "cat".
+Tento program seřadí pole řetězců pomocí qsort a pak pomocí bSearch hledá slovo "Cat".
 
 ```C
 // crt_bsearch.c

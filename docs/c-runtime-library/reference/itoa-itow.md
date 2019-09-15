@@ -1,7 +1,7 @@
 ---
 title: _itoa, funkce _itow
 ms.date: 08/19/2019
-apiname:
+api_name:
 - itoa
 - _itoa
 - ltoa
@@ -15,7 +15,7 @@ apiname:
 - _ultow
 - _i64tow
 - _ui64tow
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -28,7 +28,10 @@ apilocation:
 - ucrtbase.dll
 - api-ms-win-crt-convert-l1-1-0.dll
 - ntoskrnl.exe
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _itoa
 - _ltoa
@@ -99,12 +102,12 @@ helpviewer_keywords:
 - converting numbers, to strings
 - _itoa function
 ms.assetid: 46592a00-77bb-4e73-98c0-bf629d96cea6
-ms.openlocfilehash: afe7a190fe6630e3fbcb42d0d782e050952f56fc
-ms.sourcegitcommit: 9d4ffb8e6e0d70520a1e1a77805785878d445b8a
+ms.openlocfilehash: 97085ab8a8c720d278374868f9b1c90a91a6da3b
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69630417"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70953573"
 ---
 # <a name="itoa-_itoa-ltoa-_ltoa-ultoa-_ultoa-_i64toa-_ui64toa-_itow-_ltow-_ultow-_i64tow-_ui64tow"></a>itoa, _itoa, ltoa, _ltoa, ultoa, _ultoa, _i64toa, _ui64toa, _itow, _ltow, _ultow, _i64tow, _ui64tow
 
@@ -211,7 +214,7 @@ Pro přenositelnost zdrojového kódu můžete chtít zachovat názvy POSIX ve v
 
 ### <a name="maximum-conversion-count-macros"></a>Makra maximálního počtu převodů
 
-Pro usnadnění vytváření zabezpečených vyrovnávacích pamětí pro převody zahrnuje CRT i některá užitečná makra. Ty definují velikost vyrovnávací paměti potřebné k převodu nejdelší možné hodnoty každého typu celého čísla, včetně ukončovacího znaku null a znaku znaménka pro několik běžných základů. Aby bylo zajištěno, že vyrovnávací paměť pro převod je dostatečně velká pro příjem převodu v základnítřídě určené podle základu, použijte při přidělování vyrovnávací paměti jedno z těchto definovaných maker. To pomáhá zabránit chybám přetečení vyrovnávací paměti při převodu integrálních typů na řetězce. Tato makra jsou definována, když ve zdroji zadáte buď Stdlib. h, nebo WCHAR. h.
+Pro usnadnění vytváření zabezpečených vyrovnávacích pamětí pro převody zahrnuje CRT i některá užitečná makra. Ty definují velikost vyrovnávací paměti potřebné k převodu nejdelší možné hodnoty každého typu celého čísla, včetně ukončovacího znaku null a znaku znaménka pro několik běžných základů. Aby bylo zajištěno, že vyrovnávací paměť pro převod je dostatečně velká pro příjem převodu v základní třídě určené podle *základu*, použijte při přidělování vyrovnávací paměti jedno z těchto definovaných maker. To pomáhá zabránit chybám přetečení vyrovnávací paměti při převodu integrálních typů na řetězce. Tato makra jsou definována, když ve zdroji zadáte buď Stdlib. h, nebo WCHAR. h.
 
 Chcete-li použít jedno z těchto maker ve funkci pro převod řetězce, deklarujte vyrovnávací paměť pro převod příslušného typu znaku a použijte hodnotu makra pro celočíselný typ a základ jako dimenzi vyrovnávací paměti. Tato tabulka uvádí makra, která jsou vhodná pro jednotlivé funkce v uvedených základech:
 

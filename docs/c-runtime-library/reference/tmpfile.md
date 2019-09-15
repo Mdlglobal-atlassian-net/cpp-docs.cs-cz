@@ -1,9 +1,9 @@
 ---
 title: tmpfile
 ms.date: 11/04/2016
-apiname:
+api_name:
 - tmpfile
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - tmpfile
 helpviewer_keywords:
@@ -23,16 +26,16 @@ helpviewer_keywords:
 - tmpfile function
 - temporary files, creating
 ms.assetid: c4a4dc24-70da-438d-ae4e-98352d88e375
-ms.openlocfilehash: 98afcb7a3e04a96a1b08bc1b975634153e550839
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f58c23050fe89f84f283c3784a7c0cee72637bf2
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62155560"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70957545"
 ---
 # <a name="tmpfile"></a>tmpfile
 
-Vytvoří dočasný soubor. Tato funkce je zastaralá, protože bezpečnější verze je k dispozici. Zobrazit [tmpfile_s –](tmpfile-s.md).
+Vytvoří dočasný soubor. Tato funkce je zastaralá, protože je k dispozici bezpečnější verze; viz [tmpfile_s](tmpfile-s.md).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -42,15 +45,15 @@ FILE *tmpfile( void );
 
 ## <a name="return-value"></a>Návratová hodnota
 
-V případě úspěšného ověření **tmpfile –** vrátí ukazatel streamu. V opačném případě vrátí **NULL** ukazatele.
+V případě úspěchu vrátí **tmpfile** ukazatel na datový proud. V opačném případě vrátí ukazatel s **hodnotou null** .
 
 ## <a name="remarks"></a>Poznámky
 
-**Tmpfile –** funkce vytvoří dočasný soubor a vrátí ukazatel na tento stream. Dočasný soubor se vytvoří v kořenovém adresáři. Chcete-li vytvořit dočasný soubor v jiný adresář než kořenový, použijte [tmpnam –](tempnam-wtempnam-tmpnam-wtmpnam.md) nebo [tempnam –](tempnam-wtempnam-tmpnam-wtmpnam.md) ve spojení s [fopen](fopen-wfopen.md).
+Funkce **tmpfile** vytvoří dočasný soubor a vrátí ukazatel na tento datový proud. Dočasný soubor se vytvoří v kořenovém adresáři. Chcete-li vytvořit dočasný soubor v jiném než kořenovém adresáři, použijte [tmpnam](tempnam-wtempnam-tmpnam-wtmpnam.md) nebo [tempnam](tempnam-wtempnam-tmpnam-wtmpnam.md) ve spojení s [fopen](fopen-wfopen.md).
 
-Pokud soubor nejde otevřít, **tmpfile –** vrátí **NULL** ukazatele. Tento dočasný soubor automaticky odstraní při zavření souboru, když program skončí normálně, ani když **_rmtmp –** je volána, za předpokladu, že aktuální pracovní adresář nezmění. Dočasný soubor je otevřen v **w + b** režimu (binární čtení a zápis).
+Pokud soubor nelze otevřít, **tmpfile** vrátí ukazatel s **hodnotou null** . Tento dočasný soubor se automaticky odstraní při zavření souboru, když se program normálně ukončí, nebo když se zavolá **_rmtmp** . za předpokladu, že se aktuální pracovní adresář nemění. Dočasný soubor je otevřen v režimu **w + b** (binární režim pro čtení a zápis).
 
-Selhání může dojít, pokud při pokusu o více než TMP_MAX (viz STDIO. H) volání s **tmpfile –**.
+K selhání může dojít, pokud se pokusíte o více než TMP_MAX (viz STDIO. H) volání s **tmpfile**.
 
 ## <a name="requirements"></a>Požadavky
 
@@ -58,7 +61,7 @@ Selhání může dojít, pokud při pokusu o více než TMP_MAX (viz STDIO. H) v
 |-------------|---------------------|
 |**tmpfile**|\<stdio.h>|
 
-Další informace o kompatibilitě, naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Příklad
 
@@ -101,6 +104,6 @@ Temporary file 3 was created
 
 ## <a name="see-also"></a>Viz také:
 
-[Stream vstupně-výstupních operací](../../c-runtime-library/stream-i-o.md)<br/>
+[Vstup/výstup datového proudu](../../c-runtime-library/stream-i-o.md)<br/>
 [_rmtmp](rmtmp.md)<br/>
 [_tempnam, _wtempnam, tmpnam, _wtmpnam](tempnam-wtempnam-tmpnam-wtmpnam.md)<br/>

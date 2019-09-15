@@ -1,11 +1,11 @@
 ---
-title: creal crealf, creall
+title: creal, crealf, creall
 ms.date: 03/30/2018
-apiname:
+api_name:
 - creal
 - crealf
 - creall
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - creal
 - crealf
@@ -30,16 +33,16 @@ helpviewer_keywords:
 - crealf function
 - creall function
 ms.assetid: fa3ac62f-7aa3-4238-a71f-d6b00cd0c7c8
-ms.openlocfilehash: 32fd0898ccac80b74b467dbfe0a136eef139e642
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ebd52a23765177d74f2bff5660f806ee5c4a9573
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62339746"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70942611"
 ---
-# <a name="creal-crealf-creall"></a>creal crealf, creall
+# <a name="creal-crealf-creall"></a>creal, crealf, creall
 
-Získá skutečný součástí komplexního čísla.
+Načte skutečnou část komplexního čísla.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -57,23 +60,23 @@ long double creal( _Lcomplex z );  // C++ only
 ### <a name="parameters"></a>Parametry
 
 *z*<br/>
-Komplexní čísla.
+Komplexní číslo.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Skutečné součástí *z*.
+Skutečná část *z.*
 
 ## <a name="remarks"></a>Poznámky
 
-Protože C++ umožňuje přetížení, můžete volat přetížení **creal** trvají **_Fcomplex** nebo **_Lcomplex** hodnoty a návrat **float**nebo **long double** hodnoty. V programu jazyka C **creal** vždy přijímá **_Dcomplex** hodnotu a vrátí **double** hodnotu.
+Vzhledem C++ k tomu, že umožňuje přetížení, můžete volat přetížení **creal** , která přijímají hodnoty **_Fcomplex** nebo **_Lcomplex** , a vracet hodnoty **float** nebo **Long Double** . V programu v jazyce C **creal** vždy převezme **_Dcomplex** hodnotu a vrátí hodnotu **Double** .
 
 ## <a name="requirements"></a>Požadavky
 
-|Rutina|Záhlaví C|Hlaviček jazyka C++|
+|Rutina|Hlavička jazyka C|C++hlaviček|
 |-------------|--------------|------------------|
-|**creal**, **crealf**, **creall**|\<complex.h>|\<ccomplex>|
+|**creal**, **crealf**, **creall**|\<complex.h>|\<ccomplex >|
 
-**_Fcomplex**, **_Dcomplex**, a **_Lcomplex** typy jsou specifické pro společnost Microsoft ekvivalenty neimplementovaná nativní typy C99 **float _Complex** , **double _Complex**, a **long double _Complex**v uvedeném pořadí. Další informace o kompatibilitě naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
+Typy **_Fcomplex**, **_Dcomplex**a **_Lcomplex** jsou specifické pro společnost Microsoft ekvivalenty neimplementovaných nativních typů C99 typu **float _Complex**, **Double _Complex**a **Long Double _Complex**, v uvedeném pořadí. Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Viz také:
 

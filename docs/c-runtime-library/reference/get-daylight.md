@@ -1,10 +1,10 @@
 ---
 title: _get_daylight
 ms.date: 11/04/2016
-apiname:
+api_name:
 - __daylight
 - _get_daylight
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-time-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - get_daylight
 - _get_daylight
@@ -25,16 +28,16 @@ helpviewer_keywords:
 - daylight saving time offset
 - _get_daylight function
 ms.assetid: f85a6ba3-e187-4ca7-aed7-ffc694c8ac4c
-ms.openlocfilehash: 03c3386e59379f460d3c07dc310153d990c02b05
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9f63d3baa1e9411039d1482b4cbfbf4bce4e9872
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62332311"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70956049"
 ---
-# <a name="getdaylight"></a>_get_daylight
+# <a name="_get_daylight"></a>_get_daylight
 
-Načte posun na letní čas v hodinách.
+Načte časový posun letního času v hodinách.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -44,20 +47,20 @@ error_t _get_daylight( int* hours );
 
 ### <a name="parameters"></a>Parametry
 
-*hodiny*<br/>
-Posun v hodinách letního času.
+*hodin*<br/>
+Posun v hodinách letního času uložení.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Nula v případě úspěchu nebo s **errno** hodnotu, pokud dojde k chybě.
+Nula v případě úspěchu nebo **errno** hodnoty, pokud dojde k chybě.
 
 ## <a name="remarks"></a>Poznámky
 
-**_Get_daylight –** funkce zjišťuje počet hodin v rámci letního času jako celé číslo. Pokud letního času, výchozí posun je jedna hodina (i když několika málo oblastech sledovat posun dvou hodin).
+Funkce **_get_daylight** načítá počet hodin v letním čase jako celé číslo. Pokud je aktivní letní čas, je výchozím posunem jedna hodina (i když pár oblastí sleduje posun o dvě hodiny).
 
-Pokud *hodin* je **NULL**, je vyvolána obslužná rutina neplatného parametru, jak je popsáno v [Parameter Validation](../../c-runtime-library/parameter-validation.md). Pokud smí provádění pokračovat, tato funkce nastaví **errno** k **EINVAL** a vrátí **EINVAL**.
+Pokud je *počet hodin* **null**, je vyvolána obslužná rutina neplatného parametru, jak je popsáno v tématu [ověřování parametru](../../c-runtime-library/parameter-validation.md). Pokud provádění může pokračovat, tato funkce nastaví **errno** na **EINVAL** a vrátí **EINVAL**.
 
-Doporučujeme použít tuto funkci místo makro **_daylight** nebo zastaralé funkce **__daylight**.
+Doporučujeme použít tuto funkci namísto makra **_daylight** nebo zastaralé funkce **__daylight**.
 
 ## <a name="requirements"></a>Požadavky
 
@@ -65,7 +68,7 @@ Doporučujeme použít tuto funkci místo makro **_daylight** nebo zastaralé fu
 |-------------|---------------------|
 |**_get_daylight**|\<time.h>|
 
-Další informace najdete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace najdete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Viz také:
 

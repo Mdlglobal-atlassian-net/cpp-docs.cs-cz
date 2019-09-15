@@ -1,10 +1,10 @@
 ---
 title: __set_app_type
 ms.date: 11/04/2016
-apiname:
+api_name:
 - __set_app_type
 - _set_app_type
-apilocation:
+api_location:
 - msvcr90.dll
 - msvcr100.dll
 - msvcr110.dll
@@ -13,22 +13,25 @@ apilocation:
 - msvcr120.dll
 - msvcr110_clr0400.dll
 - api-ms-win-crt-runtime-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - __set_app_type
 helpviewer_keywords:
 - __set_app_type
 ms.assetid: f0ac0f4d-70e6-4e96-9e43-eb9d1515490c
-ms.openlocfilehash: f42ac1c173637cf85d727adf25ebf9079f4cb37c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4d72eecd454e6c01e88c6869c96b628902690383
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62343150"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70940229"
 ---
-# <a name="setapptype"></a>__set_app_type
+# <a name="__set_app_type"></a>__set_app_type
 
-Nastaví aktuální typ aplikace.
+Nastaví typ aktuální aplikace.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -45,7 +48,7 @@ Hodnota, která určuje typ aplikace. Možné hodnoty jsou:
 
 |Value|Popis|
 |-----------|-----------------|
-|_UNKNOWN_APP|Neznámý typ aplikace.|
+|_UNKNOWN_APP|Neznámý typ aplikace|
 |_CONSOLE_APP|Aplikace konzoly (příkazového řádku).|
 |_GUI_APP|Aplikace grafického uživatelského rozhraní (Windows).|
 

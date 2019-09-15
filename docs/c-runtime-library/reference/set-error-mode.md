@@ -1,9 +1,9 @@
 ---
 title: _set_error_mode
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _set_error_mode
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-runtime-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - set_error_mode
 - _set_error_mode
@@ -23,19 +26,19 @@ helpviewer_keywords:
 - _set_error_mode function
 - set_error_mode function
 ms.assetid: f0807be5-73d1-4a32-a701-3c9bdd139c5c
-ms.openlocfilehash: 8c95ed45423b791a688f05ea30f48e188826a797
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 15a6d72a79f0498fb7d81094ed3595dea1cf444f
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62356645"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70948566"
 ---
-# <a name="seterrormode"></a>_set_error_mode
+# <a name="_set_error_mode"></a>_set_error_mode
 
-Upraví **__error_mode** určit jiné než výchozí umístění, kde modul runtime jazyka C zapíše chybovou zprávu pro chybu, která může ukončit program.
+Upraví **__error_mode** pro určení nevýchozího umístění, kde modul runtime jazyka C zapíše chybovou zprávu pro chybu, která může ukončit program.
 
 > [!IMPORTANT]
-> Toto rozhraní API nelze použít v aplikacích, které jsou spouštěny v modulu Windows Runtime. Další informace najdete v tématu [CRT funkce nejsou podporovány v aplikacích pro univerzální platformu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> Toto rozhraní API nelze použít v aplikacích, které jsou spouštěny v prostředí Windows Runtime. Další informace najdete v tématu [funkce CRT nejsou v aplikacích Univerzální platforma Windows podporovány](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -48,28 +51,28 @@ int _set_error_mode(
 ### <a name="parameters"></a>Parametry
 
 *mode_val*<br/>
-Cíl chybové zprávy.
+Cíl chybových zpráv
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Vrátí původní nastavení nebo -1, pokud dojde k chybě.
+Vrátí staré nastavení nebo-1, pokud dojde k chybě.
 
 ## <a name="remarks"></a>Poznámky
 
-Určuje výstupní jímky chyby tak, že nastavíte hodnotu **__error_mode**. Můžete například přesměrujte výstup do standardní chyby nebo použít **MessageBox** rozhraní API.
+Ovládá výstupní jímku chyby nastavením hodnoty **__error_mode**. Můžete například směrovat výstup na standardní chybu nebo použít rozhraní API **MessageBox** .
 
-*Mode_val* parametr můžete nastavit na jedno z následujících hodnot.
+Parametr *mode_val* může být nastaven na jednu z následujících hodnot.
 
 |Parametr|Popis|
 |---------------|-----------------|
-|**_OUT_TO_DEFAULT**|Chyba jímky se určuje podle **__app_type**.|
-|**_OUT_TO_STDERR**|Chyba jímkou je standardní chyby.|
-|**_OUT_TO_MSGBOX**|Chyba jímkou je okno se zprávou.|
-|**_REPORT_ERRMODE**|Sestavy aktuální **__error_mode** hodnotu.|
+|**_OUT_TO_DEFAULT**|Chybový jímka Určuje **__app_type**.|
+|**_OUT_TO_STDERR**|Chybná jímka je standardní chyba.|
+|**_OUT_TO_MSGBOX**|Chybná jímka je okno se zprávou.|
+|**_REPORT_ERRMODE**|Vykázat aktuální hodnotu **__error_mode** .|
 
-Pokud je předána hodnota nejsou uvedeny, vyvolán obslužnou rutinu neplatného parametru, jak je popsáno v [Parameter Validation](../../c-runtime-library/parameter-validation.md). Pokud smí provádění pokračovat, **_set_error_mode –** nastaví **errno** k **EINVAL** a vrátí hodnotu -1.
+Pokud je předána jiná hodnota než uvedená, je vyvolána obslužná rutina neplatného parametru, jak je popsáno v tématu [ověřování parametru](../../c-runtime-library/parameter-validation.md). Pokud provádění může pokračovat, **_set_error_mode** nastaví **errno** na **EINVAL** a vrátí-1.
 
-Při použití s [vyhodnocení](assert-macro-assert-wassert.md), **_set_error_mode –** selhání příkazu se zobrazí v dialogovém okně a dá vám možnost výběru **Ignorovat** tlačítko, abyste mohli Pokračujte ke spuštění programu.
+Když se používá s [kontrolním](assert-macro-assert-wassert.md)výrazem, **_set_error_mode** zobrazí v dialogovém okně příkaz failed a nabídne vám možnost zvolit tlačítko **Ignorovat** , aby bylo možné pokračovat v běhu programu.
 
 ## <a name="requirements"></a>Požadavky
 

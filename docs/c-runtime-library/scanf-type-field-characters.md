@@ -1,69 +1,72 @@
 ---
 title: Znaky pole typu scanf
 ms.date: 11/04/2016
-apilocation:
+api_location:
 - msvcr90.dll
 - msvcr80.dll
 - msvcr100.dll
 - msvcr110_clr0400.dll
 - msvcr110.dll
 - msvcr120.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - scanf
 helpviewer_keywords:
 - scanf function, type field characters
 ms.assetid: 5d546a84-715b-44ca-b1c5-bbe997f9ff62
-ms.openlocfilehash: 10783ffd6b4f343e4dd768a01396878c186503fa
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 86b57aff9cba5065c7c8053dc26e63e3c0cae169
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62390877"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70957835"
 ---
 # <a name="scanf-type-field-characters"></a>Znaky pole typu scanf
 
-Následující informace platí pro některý z `scanf` řadu funkcí, včetně bezpečné verze, jako například `scanf_s`.
+Následující informace platí pro kteroukoli `scanf` rodinu funkcí, včetně zabezpečených verzí, `scanf_s`jako je například.
 
-`type` Znak, který je jediným povinná pole formátu, se zobrazí po všech polí volitelné formátu. `type` Znaků určuje, zda přidružený argument je interpretován jako znak, řetězec nebo číslo.
+`type` Znak je jediné požadované pole formátu, zobrazuje se za libovolnými volitelnými formátovacími poli. `type` Znak určuje, zda je přidružený argument interpretován jako znak, řetězec nebo číslo.
 
-### <a name="type-characters-for-scanf-functions"></a>Znaky typu scanf – funkce
+### <a name="type-characters-for-scanf-functions"></a>Znaky typů pro funkce scanf
 
-|Znak|Typ vstupu očekávání|Typ argumentu|Velikost argumentu v bezpečné verze?|
+|Znak|Očekával se typ vstupu.|Typ argumentu|Velikost argumentu v zabezpečené verzi?|
 |---------------|----------------------------|----------------------|--------------------------------------|
-|`c`|znak. Při použití s `scanf` funkce, určuje jednobajtový znak; při použití s `wscanf` funkce, určuje širokého znaku. Při čtení prázdných znaků, které se obvykle přeskočí `c` je zadán. Chcete-li si přečíst další prázdné znaky jednobajtový znak, použijte `%1s`; Pokud si chcete přečíst další-neprázdný široký znak, použijte `%1ws`.|Ukazatel na `char` při použití s `scanf` funkce, ukazatele na `wchar_t` při použití s `wscanf` funkce.|Povinný parametr. Velikost nezahrnuje prostor pro ukončovacího znaku null.|
-|`C`|Opačný velikost znaků. Při použití s `scanf` funkce, určuje širokého znaku; při použití s `wscanf` funkce, určuje jednobajtový znak. Při čtení prázdných znaků, které se obvykle přeskočí `C` je zadán. Chcete-li si přečíst další prázdné znaky jednobajtový znak, použijte `%1s`; Pokud si chcete přečíst další-neprázdný široký znak, použijte `%1ws`.|Ukazatel na `wchar_t` při použití s `scanf` funkce, ukazatele na `char` při použití s `wscanf` funkce.|Povinný parametr. Velikost argumentu nezahrnuje prostor pro ukončovacího znaku null.|
+|`c`|Optické. Při použití s `scanf` funkcemi, určuje jednobajtové znak; při použití s `wscanf` funkcemi určuje velký znak. Prázdné znaky, které jsou obvykle přeskočeny, jsou čteny `c` při zadání. Pro čtení dalšího neprázdného znaku s jedním bajtem, použijte `%1s`; pro čtení dalšího neprázdného znaku v širším prostoru, použijte. `%1ws`|Ukazatel na `char` , pokud se `scanf` používá s funkcemi, `wchar_t` ukazatel na při `wscanf` použití s funkcemi.|Povinný parametr. Velikost neobsahuje mezeru pro ukončovací znak null.|
+|`C`|Opačný znak velikosti Při použití s `scanf` funkcemi, určuje velký znak; při použití s `wscanf` funkcemi určuje znak s jedním bajtem. Prázdné znaky, které jsou obvykle přeskočeny, jsou čteny `C` při zadání. Pro čtení dalšího neprázdného znaku s jedním bajtem, použijte `%1s`; pro čtení dalšího neprázdného znaku v širším prostoru, použijte. `%1ws`|Ukazatel na `wchar_t` , pokud se `scanf` používá s funkcemi, `char` ukazatel na při `wscanf` použití s funkcemi.|Povinný parametr. Argument Size neobsahuje mezeru pro ukončovací znak null.|
 |`d`|Desítkové celé číslo.|Ukazatel na `int`.|Ne.|
-|`i`|Celé číslo. Šestnáctkové číslo, pokud vstupní řetězec začíná řetězcem "0 x" nebo "0 X", osmičkové, pokud řetězec začíná řetězcem "0", jinak decimal.|Ukazatel na `int`.|Ne.|
+|`i`|Celé číslo. Šestnáctková, pokud vstupní řetězec začíná na "0x" nebo "0X", osmičkové, pokud řetězec začíná "0", jinak Desítková.|Ukazatel na `int`.|Ne.|
 |`o`|Osmičkové celé číslo.|Ukazatel na `int`.|Ne.|
-|`p`|Adresa ukazatele v šestnáctkové číslice. Maximální počet číslic, přečtěte si závisí na velikosti ukazatele (32 nebo 64 bitů), která závisí na architektuře počítače. "0 x" nebo "0 X" jsou přijímány jako předpony.|Ukazatel na `void*`.|Ne.|
-|`u`|Desítkové celé číslo bez znaménka.|Ukazatel na `unsigned int`.|Ne.|
-|`x`|Šestnáctkové celé číslo.|Ukazatel na `int`.|Ne.|
-|`e`, `E`, `f`, `F`, `g`, `G`|S plovoucí desetinnou čárkou, který se skládá z volitelným znaménkem (+ nebo -), řadu jeden nebo více desítkových číslic obsahující desetinná čárka a volitelné exponent ("e" nebo "E"), za nímž následuje hodnotu volitelného znaménka.|Ukazatel na `float`.|Ne.|
-|`a`, `A`|Který se skládá z řady jeden nebo více šestnáctkových číslic s volitelnou desetinnou čárkou a exponent ("p" nebo "P") za nímž následuje Desítková hodnota s plovoucí desetinnou čárkou.|Ukazatel na `float`.|Ne.|
-|`n`|Žádný vstup číst z datového proudu nebo vyrovnávací paměti.|Ukazatel na `int`, do které je uložený počet znaků, které úspěšně načtena z datového proudu nebo uložit do vyrovnávací paměti až k danému bodu v aktuální volání `scanf` funkce nebo `wscanf` funkce.|Ne.|
-|`s`|Řetězec, až do první prázdné znaky (mezera, kartu nebo nový řádek). Ke čtení řetězce není oddělená znaky mezery, použijte hranaté závorky (`[ ]`), jak je popsáno v [specifikace šířky scanf](../c-runtime-library/scanf-width-specification.md).|Při použití s `scanf` funkce, označuje, že pole jednobajtový znak; při použití s `wscanf` funkce, označuje, že pole širokých znaků. V obou případech musí být dostatečně velký pro vstupní pole a ukončujícího znaku null, která se automaticky připojí pole znaků.|Povinný parametr. Velikost zahrnuje prostor pro ukončovacího znaku null.|
-|`S`|Velikost opak řetězec znaků, až do první prázdné znaky (mezera, kartu nebo nový řádek). Ke čtení řetězce není oddělená znaky mezery, použijte hranaté závorky (`[ ]`), jak je popsáno v [specifikace šířky scanf](../c-runtime-library/scanf-width-specification.md).|Při použití s `scanf` funkce, označuje, že pole širokého znaku; při použití s `wscanf` funkce, označuje, že pole bajtů. jedním znakem. V obou případech musí být dostatečně velký pro vstupní pole a ukončujícího znaku null, která se automaticky připojí pole znaků.|Povinný parametr. Velikost zahrnuje prostor pro ukončovacího znaku null.|
+|`p`|Adresa ukazatele v hexadecimálních číslech. Maximální počet čtených číslic závisí na velikosti ukazatele (32 nebo 64 bitů), což závisí na architektuře počítače. "0x" nebo "0X" jsou přijímány jako předpony.|Ukazatel na `void*`.|Ne.|
+|`u`|Celé číslo bez znaménka.|Ukazatel na `unsigned int`.|Ne.|
+|`x`|Hexadecimální celé číslo.|Ukazatel na `int`.|Ne.|
+|`e`, `E`, `f`, `F`, `g`, `G`|Hodnota s plovoucí desetinnou čárkou skládající se z volitelného znaménka (+ nebo-), řady jedné nebo více desítkových číslic, které obsahují desetinnou čárku, a volitelné exponent ("e" nebo "E") následovaný volitelnou celočíselnou hodnotou.|Ukazatel na `float`.|Ne.|
+|`a`, `A`|Hodnota s plovoucí desetinnou čárkou skládající se z řady jednoho nebo více hexadecimálních číslic, které obsahují volitelnou desetinnou čárku, a exponent ("p" nebo "P") následovaný desítkovou hodnotou.|Ukazatel na `float`.|Ne.|
+|`n`|Žádný vstup čtení z datového proudu nebo vyrovnávací paměti.|Ukazatel na `int`, do kterého je uložený počet znaků úspěšně čten z datového proudu nebo vyrovnávací paměti do tohoto bodu v aktuálním `scanf` volání funkcí nebo `wscanf` funkcí.|Ne.|
+|`s`|Řetězec, až do prvního prázdného znaku (mezera, tabulátor nebo nový řádek). Chcete-li číst řetězce neoddělené mezerami, použijte sadu hranatých závorek`[ ]`(), jak je popsáno v tématu [specifikace šířky scanf](../c-runtime-library/scanf-width-specification.md).|Při použití s `scanf` funkcemi znamená jedno bajtové pole znaků; při použití s funkcemi znamená `wscanf` pole s velkým znakem. V obou případech musí být pole znaků dostatečně velké pro vstupní pole a ukončující znak null, který je automaticky připojen.|Povinný parametr. Velikost zahrnuje místo pro ukončovací znak null.|
+|`S`|Textový řetězec s opačnou velikostí, až do prvního prázdného znaku (mezera, tabulátor nebo nový řádek). Chcete-li číst řetězce neoddělené mezerami, použijte sadu hranatých závorek`[ ]`(), jak je popsáno v tématu [specifikace šířky scanf](../c-runtime-library/scanf-width-specification.md).|Při použití s `scanf` funkcemi znamená, že pole s velkým znakem; při použití `wscanf` s funkcemi znamená pole s jedním bytem znaku. V obou případech musí být pole znaků dostatečně velké pro vstupní pole a ukončující znak null, který je automaticky připojen.|Povinný parametr. Velikost zahrnuje místo pro ukončovací znak null.|
 
-Argumenty velikosti v případě potřeby by měl předávat v seznamu parametrů ihned po argumentu, který se vztahují na. Například následující kód:
+Argumenty velikosti, pokud je potřeba, by měly být předány v seznamu parametrů hned za argumentem, na který se vztahují. Například následující kód:
 
 ```
 char string1[11], string2[9];
 scanf_s("%10s %8s", string1, 11, string2, 9);
 ```
 
-načte řetězec s délkou maximálně 10 do `string1`a řetězec s maximální délkou 8 do `string2`. Velikost vyrovnávací paměti by měla být aspoň jeden více než specifikace šířky od místa musí být vyhrazen pro ukončovacího znaku null.
+přečte řetězec o maximální délce 10 `string1`znaků a řetězec s maximální délkou `string2`8 znaků. Velikost vyrovnávací paměti by měla být aspoň jedna než specifikace šířky, protože místo musí být rezervované pro ukončovací znak null.
 
-Řetězec formátu může zpracovávat vstup jednobajtové nebo široký znak bez ohledu na to, zda je použit jednobajtového znaku a širokoznaká verze funkce. Díky tomu se číst jednobajtové nebo široké znaky s `scanf` funkce a `wscanf` funkce, pomocí specifikátorů formátu následujícím způsobem.
+Formátovací řetězec může zpracovat jednobajtové nebo stejné zadání znaků bez ohledu na to, zda je použita jednobajtové znak nebo verze s velkým znakem funkce. Proto pro čtení jednobajtových nebo znaků v `scanf` rámci funkcí a `wscanf` funkcí použijte specifikátory formátu následujícím způsobem.
 
-|Ke čtení znaků jako|Pomocí této funkce|S tyto specifikátory formátu|
+|Čtení znaku jako|Tato funkce se používá|S těmito specifikátory formátu|
 |--------------------------|-----------------------|----------------------------------|
-|jeden bajt|`scanf` Funkce|`c`, `hc`, nebo `hC`|
-|jeden bajt|`wscanf` Funkce|`C`, `hc`, nebo `hC`|
-|široký|`wscanf` Funkce|`c`, `lc`, nebo `lC`|
-|široký|`scanf` Funkce|`C`, `lc`, nebo `lC`|
+|jeden bajt|`scanf` – funkce|`c`, `hc`nebo`hC`|
+|jeden bajt|`wscanf` – funkce|`C`, `hc`nebo`hC`|
+|široký|`wscanf` – funkce|`c`, `lc`nebo`lC`|
+|široký|`scanf` – funkce|`C`, `lc`nebo`lC`|
 
-Kontrola řetězce s `scanf` funkce, a `wscanf` funkcí, použijte výše uvedené tabulky s typem specifikátory formátu `s` a `S` místo `c` a `C`.
+Chcete-li kontrolovat `scanf` řetězce s funkcemi `wscanf` a funkcemi, použijte výše uvedenou tabulku se `c` specifikátory typu `s` formátu a `S` místo a `C`.
 
 ## <a name="see-also"></a>Viz také:
 

@@ -1,9 +1,9 @@
 ---
 title: _get_timezone
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _get_timezone
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-time-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _get_timezone
 - get_timezone
@@ -24,16 +27,16 @@ helpviewer_keywords:
 - get_timezone function
 - _get_timezone function
 ms.assetid: 30ab0838-0ae9-4a2f-bfe6-a49ee443b21e
-ms.openlocfilehash: 26cf8114ab766bdb394d2db9ad5842622a447bd1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: cf77ca21383bcae6919b6c1d00b99c082ef99919
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62287440"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70955638"
 ---
-# <a name="gettimezone"></a>_get_timezone
+# <a name="_get_timezone"></a>_get_timezone
 
-Načte rozdíl v sekundách mezi místním a koordinovaný světový čas (UTC).
+Načte rozdíl v sekundách mezi koordinovaným světovým časem (UTC) a místním časem.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -45,18 +48,18 @@ error_t _get_timezone(
 
 ### <a name="parameters"></a>Parametry
 
-*sekundy*<br/>
-Rozdíl v sekundách mezi místním časem a UTC.
+*Second*<br/>
+Rozdíl v sekundách mezi časem UTC a místním časem.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Nula v případě úspěchu nebo s **errno** hodnotu, pokud dojde k chybě.
+Nula v případě úspěchu nebo **errno** hodnoty, pokud dojde k chybě.
 
 ## <a name="remarks"></a>Poznámky
 
-**_Get_timezone –** funkce načte rozdíl v sekundách mezi místním časem a UTC jako celé číslo. Výchozí hodnota je 28 800 sekund pro Tichomořský běžný čas (osm hodiny za časem UTC).
+Funkce **_get_timezone** načítá rozdíl v sekundách mezi časem UTC a místním časem jako celé číslo. Výchozí hodnota je 28 800 sekund, pro Tichomoří (běžný čas) (osm hodin za časem UTC).
 
-Pokud *sekund* je **NULL**, je vyvolána obslužná rutina neplatného parametru, jak je popsáno v [Parameter Validation](../../c-runtime-library/parameter-validation.md). Pokud smí provádění pokračovat, tato funkce nastaví **errno** k **EINVAL** a vrátí **EINVAL**.
+Pokud jsou sekundy **null**, je vyvolána obslužná rutina neplatného parametru, jak je popsáno v tématu [ověřování parametru](../../c-runtime-library/parameter-validation.md). Pokud provádění může pokračovat, tato funkce nastaví **errno** na **EINVAL** a vrátí **EINVAL**.
 
 ## <a name="requirements"></a>Požadavky
 
@@ -64,7 +67,7 @@ Pokud *sekund* je **NULL**, je vyvolána obslužná rutina neplatného parametru
 |-------------|---------------------|
 |**_get_timezone**|\<time.h>|
 
-Další informace najdete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace najdete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Viz také:
 

@@ -1,12 +1,12 @@
 ---
 title: _cprintf_p, _cprintf_p_l, _cwprintf_p, _cwprintf_p_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _cprintf_p_l
 - _cwprintf_p_l
 - _cwprintf_p
 - _cprintf_p
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - cprintf_p
 - cwprintf_p
@@ -43,19 +46,19 @@ helpviewer_keywords:
 - tcprintf_p function
 - cprintf_p function
 ms.assetid: 1f82fd7d-13c8-4c4a-a3e4-db0df3873564
-ms.openlocfilehash: ef4ac6a89749c2784e4935fcf83810e81b61ae11
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a02de28a61812147c192495c4794830f85567a10
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62348286"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70942651"
 ---
-# <a name="cprintfp-cprintfpl-cwprintfp-cwprintfpl"></a>_cprintf_p, _cprintf_p_l, _cwprintf_p, _cwprintf_p_l
+# <a name="_cprintf_p-_cprintf_p_l-_cwprintf_p-_cwprintf_p_l"></a>_cprintf_p, _cprintf_p_l, _cwprintf_p, _cwprintf_p_l
 
-Formátuje a tiskne na konzolu a podporuje parametry pozice ve formátovacím řetězci.
+Formátuje a tiskne do konzoly a podporuje poziční parametry ve formátovacím řetězci.
 
 > [!IMPORTANT]
-> Toto rozhraní API nelze použít v aplikacích, které jsou spouštěny v modulu Windows Runtime. Další informace najdete v tématu [CRT funkce nejsou podporovány v aplikacích pro univerzální platformu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> Toto rozhraní API nelze použít v aplikacích, které jsou spouštěny v prostředí Windows Runtime. Další informace najdete v tématu [funkce CRT nejsou v aplikacích Univerzální platforma Windows podporovány](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -82,13 +85,13 @@ int _cwprintf_p_l(
 
 ### <a name="parameters"></a>Parametry
 
-*Formát*<br/>
+*format*<br/>
 Řetězec řízení formátu
 
 *argument*<br/>
 Volitelné parametry.
 
-*Národní prostředí*<br/>
+*jazyka*<br/>
 Národní prostředí, které se má použít
 
 ## <a name="return-value"></a>Návratová hodnota
@@ -97,16 +100,16 @@ Počet vytištěných znaků nebo záporná hodnota, pokud dojde k chybě.
 
 ## <a name="remarks"></a>Poznámky
 
-Tyto funkce naformátují a vytisknou řadu znaků a hodnot přímo na konzoli pomocí **_putch** a **_putwch** funguje na výstupní znaky. Každý *argument* (pokud existuje) je převeden a uložen podle odpovídající specifikace formátu v *formátu*. Formát má stejnou formu a funkci, jako *formátu* parametr pro [printf_p –](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md) funkce. Rozdíl mezi **_cprintf_p –** a **cprintf_s –** je, že **_cprintf_p –** podporuje poziční parametry, které umožňují určit pořadí, ve kterém jsou argumenty použité ve formátovacím řetězci. Další informace najdete v tématu [printf_p – poziční parametry](../../c-runtime-library/printf-p-positional-parameters.md).
+Tyto funkce naformátují a tisknou řadu znaků a hodnot přímo do konzoly s použitím funkcí **_putch** a **_putwch** na výstupní znaky. Každý *argument* (pokud existuje) je převeden a výstup podle odpovídající specifikace formátu ve *formátu*. Formát má stejnou formu a funkci jako parametr *Format* pro funkci [printf_p](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md) . Rozdíl mezi **_cprintf_p** a **cprintf_s** je, že **_cprintf_p** podporuje poziční parametry, které umožňují určit pořadí, ve kterém jsou argumenty použity ve formátovacím řetězci. Další informace najdete v tématu [Printf_p pozičních parametrů](../../c-runtime-library/printf-p-positional-parameters.md).
 
-Na rozdíl od **fprintf_p –**, **printf_p –**, a **sprintf_p –** funkce ani **_cprintf_p –** ani **_cwprintf_p –** LF znaků ve výrazném kombinace return-line kanál (CR-LF) návrat na začátek řádku výstupu. K rozlišení je, že **_cwprintf_p –** zobrazí znaky Unicode při použití v systému Windows NT. Na rozdíl od **_cprintf_p –**, **_cwprintf_p –** používá aktuální nastavení národního prostředí konzoly.
+Na rozdíl od funkcí **fprintf_p**, **printf_p**a **sprintf_p** žádné **_cprintf_p** ani **_cwprintf_p** překládá znaky čárového kanálu do kombinací návratového kanálu návratového řádku (CR-LF) při výstupu. Důležitým rozdílem je to, že **_cwprintf_p** při použití v systému Windows NT zobrazuje znaky Unicode. Na rozdíl od **_cprintf_p**používá **_cwprintf_p** aktuální nastavení národního prostředí konzoly.
 
-Verze těchto funkcí s **_l** přípona jsou stejné s tím rozdílem, že používají parametr národního prostředí namísto aktuálního národního prostředí předaného.
+Verze těchto funkcí s příponou **_l** jsou stejné s tím rozdílem, že používají předaný parametr národního prostředí namísto aktuálního národního prostředí.
 
 > [!IMPORTANT]
-> Ujistěte se, že *formátu* není uživatelem definovaný řetězec.
+> Ujistěte se, že *Formát* není uživatelem definovaný řetězec.
 
-Také, jako jsou **_cprintf_s** a **_cwprintf_s –**, ověřují vstupní ukazatel a formátovací řetězec. Pokud *formátu* nebo *argument* jsou **NULL**, nebo řetězec formátu obsahuje neplatné formátovací znaky, tyto funkce vyvolají obslužnou rutinu neplatného parametru, jako popsané v [Parameter Validation](../../c-runtime-library/parameter-validation.md). Pokud smí provádění pokračovat, vrátí funkce hodnotu -1 a nastaví **errno** k **EINVAL**.
+Stejně tak jako **_cprintf_s** a **_cwprintf_s**ověřují vstupní ukazatel a formátovací řetězec. Pokud má parametr *Format* nebo *argument* **hodnotu null**nebo řetězec formátu obsahuje neplatné formátovací znaky, tyto funkce vyvolají obslužnou rutinu neplatného parametru, jak je popsáno v tématu [ověřování parametru](../../c-runtime-library/parameter-validation.md). Pokud provádění může pokračovat, vrátí tyto funkce hodnotu-1 a nastaví **errno** na **EINVAL**.
 
 ### <a name="generic-text-routine-mappings"></a>Mapování rutin obecného textu
 
@@ -119,10 +122,10 @@ Také, jako jsou **_cprintf_s** a **_cwprintf_s –**, ověřují vstupní ukaza
 
 |Rutina|Požadovaný hlavičkový soubor|
 |-------------|---------------------|
-|**_cprintf_p**, **_cprintf_p_l**|\<conio.h>|
-|**_cwprintf_p**, **_cwprintf_p_l**|\<conio.h>|
+|**_cprintf_p**, **_cprintf_p_l**|\<CONIO. h >|
+|**_cwprintf_p**, **_cwprintf_p_l**|\<CONIO. h >|
 
-Další informace o kompatibilitě naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Příklad
 

@@ -1,12 +1,12 @@
 ---
 title: _printf_p, _printf_p_l, _wprintf_p, _wprintf_p_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _printf_p
 - _wprintf_p
 - _printf_p_l
 - _wprintf_p_l
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - wprintf_p
 - _wprintf_p
@@ -39,16 +42,16 @@ helpviewer_keywords:
 - tprintf_p_l function
 - _printf_p_l function
 ms.assetid: 1b7e9ef9-a069-45db-af9d-c2730168322e
-ms.openlocfilehash: c7d798bde3ab68541bdcd64b768275b864694284
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: 555739fbcdd3503461d7b831660a94602f244aa3
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64345188"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70950270"
 ---
-# <a name="printfp-printfpl-wprintfp-wprintfpl"></a>_printf_p, _printf_p_l, _wprintf_p, _wprintf_p_l
+# <a name="_printf_p-_printf_p_l-_wprintf_p-_wprintf_p_l"></a>_printf_p, _printf_p_l, _wprintf_p, _wprintf_p_l
 
-Vytiskne formátovaný výstup do standardního výstupního datového proudu a umožní určení pořadí, ve kterém jsou parametry použity ve formátovacím řetězci.
+Vytiskne formátovaný výstup do standardního výstupního datového proudu a umožňuje zadání pořadí, ve kterém jsou parametry použity ve formátovacím řetězci.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -75,33 +78,33 @@ int _wprintf_p_l(
 
 ### <a name="parameters"></a>Parametry
 
-*Formát*<br/>
-Formátování ovládacího prvku.
+*format*<br/>
+Ovládací prvek Format
 
 *argument*<br/>
 Volitelné argumenty
 
-*Národní prostředí*<br/>
+*jazyka*<br/>
 Národní prostředí, které se má použít
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Vrátí počet vytištěných znaků nebo záporná hodnota, pokud dojde k chybě.
+Vrátí počet vytištěných znaků nebo zápornou hodnotu, pokud dojde k chybě.
 
 ## <a name="remarks"></a>Poznámky
 
-**_Printf_p –** funkce formátuje a vytiskne řadu znaků a hodnot do standardního výstupního datového proudu **stdout**. Pokud argumenty jsou podle *formátu* řetězce, *formátu* řetězec musí obsahovat specifikace, které určují výstupní formát pro argumenty (naleznete v tématu [printf_p – poziční parametry](../../c-runtime-library/printf-p-positional-parameters.md)).
+Funkce **_printf_p** formátuje a tiskne řadu znaků a hodnot do standardního výstupního proudu **stdout**. Pokud argumenty následují *formátovací* řetězec, *formátovací* řetězec musí obsahovat specifikace, které určují výstupní formát pro argumenty (viz [poziční parametry printf_p](../../c-runtime-library/printf-p-positional-parameters.md)).
 
-Rozdíl mezi **_printf_p –** a **printf_s** je, že **_printf_p –** podporuje poziční parametry, které umožňují určit pořadí, ve kterém jsou argumenty použité ve formátovacím řetězci. Další informace najdete v tématu [printf_p – poziční parametry](../../c-runtime-library/printf-p-positional-parameters.md).
+Rozdíl mezi **_printf_p** a **printf_s** je, že **_printf_p** podporuje poziční parametry, které umožňují určit pořadí, ve kterém jsou argumenty použity ve formátovacím řetězci. Další informace najdete v tématu [Printf_p pozičních parametrů](../../c-runtime-library/printf-p-positional-parameters.md).
 
-**_wprintf_p –** je verze širokého znaku **_printf_p –**; chovají stejně jako v případě, že datový proud je otevřen v režimu ANSI. **_printf_p –** aktuálně nepodporuje výstup do datového proudu UNICODE.
+**_wprintf_p** je **_printf_p**verze s velkým znakem; chovají se stejně jako v případě, že je datový proud otevřen v režimu ANSI. **_printf_p** v současné době nepodporuje výstup do datového proudu Unicode.
 
-Verze těchto funkcí s **_l** přípona jsou stejné s tím rozdílem, že používají parametr národního prostředí předaného namísto aktuálního národní prostředí pro vlákno.
+Verze těchto funkcí s příponou **_l** jsou stejné s tím rozdílem, že používají předaný parametr národního prostředí namísto aktuálního národního prostředí vlákna.
 
 > [!IMPORTANT]
-> Ujistěte se, že *formátu* není uživatelem definovaný řetězec.
+> Ujistěte se, že *Formát* není uživatelem definovaný řetězec.
 
-Pokud *formátu* nebo *argument* jsou **NULL**, nebo řetězec formátu obsahuje neplatné formátovací znaky, **_printf_p –** a **_wprintf_p –** funkce vyvolají obslužnou rutinu neplatného parametru, jak je popsáno v [Parameter Validation](../../c-runtime-library/parameter-validation.md). Pokud smí provádění pokračovat, vrátí funkce hodnotu -1 a nastaví **errno** k **EINVAL**.
+Pokud má parametr *Format* nebo *argument* **hodnotu null**nebo formátovací řetězec obsahuje neplatné formátovací znaky, funkce **_printf_p** a **_wprintf_p** vyvolají obslužnou rutinu neplatného parametru, jak je popsáno v tématu [ověřování parametru. ](../../c-runtime-library/parameter-validation.md). Pokud provádění může pokračovat, vrátí funkce hodnotu-1 a nastaví **errno** na **EINVAL**.
 
 ### <a name="generic-text-routine-mappings"></a>Mapování rutin obecného textu
 
@@ -115,9 +118,9 @@ Pokud *formátu* nebo *argument* jsou **NULL**, nebo řetězec formátu obsahuje
 |Rutina|Požadovaný hlavičkový soubor|
 |-------------|---------------------|
 |**_printf_p**, **_printf_p_l**|\<stdio.h>|
-|**_wprintf_p**, **_wprintf_p_l**|\<stdio.h > nebo \<wchar.h >|
+|**_wprintf_p**, **_wprintf_p_l**|\<stdio. h > nebo \<WCHAR. h >|
 
-Konzole není podporována v aplikacích pro univerzální platformu Windows (UPW). Standardní datový proud popisovačů, které jsou spojeny s konzolou, **stdin**, **stdout**, a **stderr**, musí být přesměrován před funkcí jazyka C za běhu můžete použít v aplikacích pro UWP . Další informace o kompatibilitě, naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
+Konzola není v aplikacích Univerzální platforma Windows (UWP) podporována. Standardní popisovače streamů, které jsou spojeny s konzolou, **stdin**, **stdout**a **stderr**, musí být přesměrované před tím, než je funkce modulu runtime jazyka C můžou použít v aplikacích pro UWP. Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Příklad
 
@@ -152,7 +155,7 @@ Width specifiers:     Hello
 ## <a name="see-also"></a>Viz také:
 
 [Podpora plovoucí desetinné čárky](../../c-runtime-library/floating-point-support.md)<br/>
-[Stream vstupně-výstupních operací](../../c-runtime-library/stream-i-o.md)<br/>
+[Vstup/výstup datového proudu](../../c-runtime-library/stream-i-o.md)<br/>
 [Národní prostředí](../../c-runtime-library/locale.md)<br/>
 [fopen, _wfopen](fopen-wfopen.md)<br/>
 [_fprintf_p, _fprintf_p_l, _fwprintf_p, _fwprintf_p_l](fprintf-p-fprintf-p-l-fwprintf-p-fwprintf-p-l.md)<br/>

@@ -1,10 +1,10 @@
 ---
 title: _memicmp, _memicmp_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _memicmp_l
 - _memicmp
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-string-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _memicmp
 - memicmp_l
@@ -27,16 +30,16 @@ helpviewer_keywords:
 - memicmp_l function
 - _memicmp_l function
 ms.assetid: 0a6eb945-4077-4f84-935d-1aaebe8db8cb
-ms.openlocfilehash: 8beb632c8bd2cfac486fc58fc930b94490bdecbc
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a463b9c79a76879311bb811b38e4aabcfd6e7226
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62285271"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70951840"
 ---
-# <a name="memicmp-memicmpl"></a>_memicmp, _memicmp_l
+# <a name="_memicmp-_memicmp_l"></a>_memicmp, _memicmp_l
 
-Porovná znaky ve dvou vyrovnávacích pamětech (velká a malá písmena).
+Porovná znaky ve dvou bufferech (bez rozlišení velkých a malých písmen).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -62,39 +65,39 @@ První vyrovnávací paměť.
 *buffer2*<br/>
 Druhá vyrovnávací paměť.
 
-*Počet*<br/>
+*výpočtu*<br/>
 Počet znaků.
 
-*Národní prostředí*<br/>
-Národní prostředí.
+*jazyka*<br/>
+Národní prostředí, které se má použít.
 
 ## <a name="return-value"></a>Návratová hodnota
 
 Návratová hodnota označuje vztah mezi vyrovnávacími pamětmi.
 
-|Návratová hodnota|Vztah prvních počet bajtů proměnných buf1 a buf2|
+|Návratová hodnota|Relace prvních počtů bajtů buf1 a buf2|
 |------------------|--------------------------------------------------------|
 |< 0|*buffer1* menší než *buffer2*.|
-|0|*buffer1* shodné s *buffer2*.|
+|0|*buffer1* se shodují s *buffer2*.|
 |> 0|*buffer1* větší než *buffer2*.|
 |**_NLSCMPERROR**|Došlo k chybě.|
 
 ## <a name="remarks"></a>Poznámky
 
-**_Memicmp –** funkce porovnává první z nich *počet* znaky ze dvou vyrovnávacích pamětech *buffer1* a *buffer2* bajt po bajtu. Porovnání nerozlišuje velká a malá písmena.
+Funkce **_memicmp** porovná první *počet* znaků dvou vyrovnávacích pamětí *buffer1* a *buffer2* bajt po bajtu. Porovnávání nerozlišuje velká a malá písmena.
 
-Pokud *buffer1* nebo *buffer2* je ukazatel s hodnotou null, tato funkce vyvolá obslužnou rutinu neplatného parametru, jak je popsáno v [Parameter Validation](../../c-runtime-library/parameter-validation.md). Pokud provádění může pokračovat, funkce vrátí **_NLSCMPERROR** a nastaví **errno** k **EINVAL**.
+Pokud je *buffer1* nebo *buffer2* ukazatel s hodnotou null, tato funkce vyvolá obslužnou rutinu neplatného parametru, jak je popsáno v tématu [ověřování parametru](../../c-runtime-library/parameter-validation.md). Pokud provádění může pokračovat, funkce vrátí **_NLSCMPERROR** a nastaví **errno** na **EINVAL**.
 
-**_memicmp –** používá aktuální národní prostředí pro chování závislé na národním prostředí **_memicmp_l –** je stejná s tím rozdílem, že používá národní prostředí předané. Další informace najdete v tématu [národní prostředí](../../c-runtime-library/locale.md).
+**_memicmp** používá aktuální národní prostředí pro chování závislé na národním prostředí; **_memicmp_l** je totožný s tím rozdílem, že místo toho používá národní prostředí. Další informace najdete v tématu [národní prostředí](../../c-runtime-library/locale.md).
 
 ## <a name="requirements"></a>Požadavky
 
 |Rutina|Požadovaný hlavičkový soubor|
 |-------------|---------------------|
-|**_memicmp**|\<Memory.h > nebo \<string.h >|
-|**_memicmp_l**|\<Memory.h > nebo \<string.h >|
+|**_memicmp**|\<Memory. h > nebo \<String. h >|
+|**_memicmp_l**|\<Memory. h > nebo \<String. h >|
 
-Další informace o kompatibilitě naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Příklad
 

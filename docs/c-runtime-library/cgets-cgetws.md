@@ -1,10 +1,10 @@
 ---
 title: _cgets, _cgetws
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _cgetws
 - _cgets
-apilocation:
+api_location:
 - msvcr100.dll
 - msvcr110.dll
 - msvcr80.dll
@@ -14,7 +14,10 @@ apilocation:
 - msvcr110_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-conio-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - cgetws
 - _cgetws
@@ -27,22 +30,22 @@ helpviewer_keywords:
 - cgetws function
 - cgets function
 ms.assetid: 4d5e134a-58c3-4f62-befd-5d235b0212f4
-ms.openlocfilehash: ea4d7be7631f22eecbea7c6727295c17d86dba06
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: aa258eaba34feec8ea25d780ea6392f195e37508
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62290167"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70944694"
 ---
-# <a name="cgets-cgetws"></a>_cgets, _cgetws
+# <a name="_cgets-_cgetws"></a>_cgets, _cgetws
 
-Získá znak řetězce z konzoly. Bezpečnější verze těchto funkcí jsou k dispozici. Zobrazit [_cgets_s _cgetws_s –](../c-runtime-library/reference/cgets-s-cgetws-s.md).
-
-> [!IMPORTANT]
->  Tyto funkce jsou zastaralé. Od v sadě Visual Studio 2015, nejsou k dispozici v CRT. Bezpečné verze těchto funkcí, _cgets_s a _cgetws_s –, jsou stále dostupné. Informace o těchto funkcích alternativní najdete v tématu [_cgets_s _cgetws_s –](../c-runtime-library/reference/cgets-s-cgetws-s.md).
+Získá řetězec znaků z konzoly. K dispozici jsou bezpečnější verze těchto funkcí; viz [_cgets_s, _cgetws_s](../c-runtime-library/reference/cgets-s-cgetws-s.md).
 
 > [!IMPORTANT]
->  Toto rozhraní API nelze použít v aplikacích, které jsou spouštěny v modulu Windows Runtime. Další informace najdete v tématu [CRT funkce nejsou podporovány v aplikacích pro univerzální platformu Windows](../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+>  Tyto funkce jsou zastaralé. Počínaje verzí Visual Studio 2015 nejsou k dispozici v CRT. Zabezpečené verze těchto funkcí, _cgets_s a _cgetws_s, jsou stále k dispozici. Informace o těchto alternativních funkcích naleznete v tématu [_cgets_s, _cgetws_s](../c-runtime-library/reference/cgets-s-cgetws-s.md).
+
+> [!IMPORTANT]
+>  Toto rozhraní API nelze použít v aplikacích, které jsou spouštěny v prostředí Windows Runtime. Další informace najdete v tématu [funkce CRT nejsou v aplikacích Univerzální platforma Windows podporovány](../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -65,20 +68,20 @@ wchar_t *_cgetws(
 
 #### <a name="parameters"></a>Parametry
 
-*Vyrovnávací paměti*<br/>
-Umístění úložiště pro data.
+*vyrovnávací paměti*<br/>
+Umístění úložiště pro data
 
 ## <a name="return-value"></a>Návratová hodnota
 
-`_cgets` a `_cgetws` vrací ukazatel na začátek řetězce, na `buffer[2]`. Pokud `buffer` je **NULL**, tyto funkce vyvolají obslužnou rutinu neplatného parametru, jak je popsáno v [Parameter Validation](../c-runtime-library/parameter-validation.md). Pokud provádění může pokračovat, vrátí **NULL** a nastavte `errno` k `EINVAL`.
+`_cgets`a `_cgetws` vrátí ukazatel na začátek řetězce, v `buffer[2]`. Pokud `buffer` je **null**, tyto funkce vyvolají obslužnou rutinu neplatného parametru, jak je popsáno v tématu [ověřování parametru](../c-runtime-library/parameter-validation.md). Pokud provádění může pokračovat, vrátí **hodnotu null** a nastaví `errno` na `EINVAL`.
 
 ## <a name="remarks"></a>Poznámky
 
-Tyto funkce přečtou řetězec znaků z konzole a uloží řetězec a jeho délka v umístění, na které odkazuje `buffer`. `buffer` Parametr musí být ukazatel na pole znaků. První prvek pole, `buffer[0]`, musí obsahovat maximální délku (ve znacích) řetězce ke čtení. Pole musí obsahovat dostatek prvků pro uložení řetězce, ukončujícího znaku null ('\0') a dalších 2 bajtů. Funkce přečte znaky, dokud na návrat na začátek řádku return-line kanál kombinaci (CR-LF) nebo je zadaný počet znaků pro čtení. Řetězec je uložen od `buffer[2]`. Pokud funkce přečte CR-LF, uloží znak null ('\0'). Funkce potom ukládá skutečnou délku řetězce v druhém prvku pole, `buffer[1]`.
+Tyto funkce čtou řetězec znaků z konzoly a uloží řetězec a jeho délku do umístění, na `buffer`které ukazuje. `buffer` Parametr musí být ukazatel na pole znaků. První prvek pole, `buffer[0]`, musí obsahovat maximální délku (ve znacích) řetězce, který se má přečíst. Pole musí obsahovat dostatek prvků pro uložení řetězce, ukončujícího znaku null (' \ 0 ') a dalších 2 bajtů. Funkce přečte znaky, dokud není přečtena kombinace datového kanálu návratového řádku (CR-LF) nebo zadaného počtu znaků. Řetězec je uložen od `buffer[2]`. Pokud funkce přečte CR-LF, uloží znak null (' \ 0 '). Funkce pak uloží skutečnou délku řetězce v druhém prvku pole, `buffer[1]`.
 
-Protože všechny klávesy úprav jsou aktivní, když `_cgets` nebo `_cgetws` je volána, když v konzole okna, stisknutím klávesy F3 Zopakuje poslední zadání.
+Vzhledem k tomu, že jsou všechny `_cgets` editační `_cgetws` klíče aktivní, když je v okně konzoly volána nebo, klávesa F3 opakuje poslední zadanou položku.
 
-V jazyce C++ mají tyto funkce přetížení šablon, která vyvolávají novější, zabezpečené protějšky těchto funkcí. Další informace najdete v tématu [přetížení zabezpečení šablony](../c-runtime-library/secure-template-overloads.md).
+V C++nástroji mají tyto funkce přetížení šablony, které vyvolávají novější a zabezpečené protějšky těchto funkcí. Další informace najdete v tématu [přetížení zabezpečení šablon](../c-runtime-library/secure-template-overloads.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapování rutin obecného textu
 
@@ -90,10 +93,10 @@ V jazyce C++ mají tyto funkce přetížení šablon, která vyvolávají nověj
 
 |Rutina|Požadovaný hlavičkový soubor|
 |-------------|---------------------|
-|`_cgets`|\<conio.h>|
-|`_cgetws`|\<conio.h > nebo \<wchar.h >|
+|`_cgets`|\<CONIO. h >|
+|`_cgetws`|\<CONIO. h > nebo \<WCHAR. h >|
 
-Další informace o kompatibilitě naleznete v tématu [kompatibility](../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Příklad
 

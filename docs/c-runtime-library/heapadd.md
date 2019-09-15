@@ -1,9 +1,9 @@
 ---
 title: _heapadd
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _heapadd
-apilocation:
+api_location:
 - msvcr100.dll
 - msvcr110_clr0400.dll
 - msvcr120.dll
@@ -11,7 +11,10 @@ apilocation:
 - msvcrt.dll
 - msvcr110.dll
 - msvcr90.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - heapadd
 - _heapadd
@@ -21,19 +24,19 @@ helpviewer_keywords:
 - heaps, adding memory
 - heapadd function
 ms.assetid: 4d691fe2-2763-49f4-afb1-62738b7cd3ff
-ms.openlocfilehash: 8cfd2a5a112a7a5b578f7b6dfcdcc3998596bc86
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4be87710519c9a389adbaf41fefddb9ea8dfb1e6
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62289608"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70940275"
 ---
-# <a name="heapadd"></a>_heapadd
+# <a name="_heapadd"></a>_heapadd
 
-Přidá do haldy paměti.
+Přidá paměť do haldy.
 
 > [!IMPORTANT]
->  Tato funkce je zastaralá. Od v sadě Visual Studio 2015, není k dispozici v CRT.
+>  Tato funkce je zastaralá. Počínaje verzí Visual Studio 2015 není k dispozici v CRT.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -47,28 +50,28 @@ int _heapadd(
 #### <a name="parameters"></a>Parametry
 
 *memblock*<br/>
-Ukazatel do haldy paměti.
+Ukazatel na paměť haldy.
 
-*Velikost*<br/>
-Velikost paměti, pokud chcete přidat, v bajtech.
+*hodnota*<br/>
+Velikost paměti, která se má přidat (v bajtech)
 
 ## <a name="return-value"></a>Návratová hodnota
 
-V případě úspěšného ověření `_heapadd` vrátí hodnotu 0; v opačném případě vrátí funkce hodnotu -1 a nastaví `errno` k `ENOSYS`.
+V případě úspěchu `_heapadd` vrátí hodnotu 0. v opačném případě vrátí funkce hodnotu- `errno` 1 `ENOSYS`a nastaví na.
 
 Další informace o tomto a dalších návratových kódech naleznete v tématu [_doserrno, errno, _sys_errlist a _sys_nerr](../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Poznámky
 
-Od verze Visual C++ verze 4.0, podkladová struktura haldy byl přesunut do knihovny C Runtime pro podporu nové funkce ladění. V důsledku toho `_heapadd` už není podporovaná na libovolné platformě, která je založena na rozhraní API systému Win32.
+Počínaje verzí Visual C++ 4,0 se podkladová struktura haldy přesunula do knihoven run-time jazyka C, aby podporovala nové funkce ladění. V důsledku `_heapadd` toho již není podporován na žádné platformě, která je založena na Win32 API.
 
 ## <a name="requirements"></a>Požadavky
 
 |Rutina|Požadovaný hlavičkový soubor|Volitelné záhlaví|
 |-------------|---------------------|---------------------|
-|`_heapadd`|\<malloc.h>|\<errno.h>|
+|`_heapadd`|\<. h >|\<errno.h>|
 
-Další informace o kompatibilitě naleznete v tématu [kompatibility](../c-runtime-library/compatibility.md) v úvodu.
+Další informace o kompatibilitě naleznete v úvodu v tématu [Kompatibilita](../c-runtime-library/compatibility.md) .
 
 ## <a name="see-also"></a>Viz také:
 

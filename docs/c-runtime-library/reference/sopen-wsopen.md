@@ -1,10 +1,10 @@
 ---
 title: _sopen, _wsopen
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _sopen
 - _wsopen
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _wsopen
 - wsopen
@@ -32,16 +35,16 @@ helpviewer_keywords:
 - files [C++], sharing
 - _wsopen function
 ms.assetid: a9d4cccf-06e9-414d-96fa-453fca88cc1f
-ms.openlocfilehash: b3773550fd32df75f0a3819767de1171daebaf0f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d337b2353ad15eade15235b4b5217a3b881bab1d
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62355390"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70948051"
 ---
-# <a name="sopen-wsopen"></a>_sopen, _wsopen
+# <a name="_sopen-_wsopen"></a>_sopen, _wsopen
 
-Otevře soubor pro sdílení. Bezpečnější verze těchto funkcí jsou k dispozici: viz [_sopen_s – _wsopen_s –](sopen-s-wsopen-s.md).
+Otevře soubor pro sdílení. Bezpečnější verze těchto funkcí jsou k dispozici: viz [_sopen_s, _wsopen_s](sopen-s-wsopen-s.md).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -62,29 +65,29 @@ int _wsopen(
 
 ### <a name="parameters"></a>Parametry
 
-*Název souboru*<br/>
+*Bitmap*<br/>
 Název souboru.
 
 *oflag*<br/>
-Druh operace povolena.
+Druh povolených operací.
 
 *shflag*<br/>
-Druh sdílení povolené.
+Typ sdílení je povolený.
 
 *pmode*<br/>
 Nastavení oprávnění.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Každá z těchto funkcí vrací popisovač souboru otevřený soubor.
+Každá z těchto funkcí vrátí popisovač souboru pro otevřený soubor.
 
-Pokud *filename* nebo *oflag* je **NULL** ukazatele, nebo pokud *oflag* nebo *shflag* není v platné rozsah hodnot, je vyvolána obslužná rutina neplatného parametru, jak je popsáno v [Parameter Validation](../../c-runtime-library/parameter-validation.md). Pokud smí provádění pokračovat, vrátí funkce hodnotu -1 a nastaví **errno** na jednu z následujících hodnot.
+Pokud je parametr *filename* nebo *oflag* ukazatel s **hodnotou null** , nebo pokud *oflag* nebo *Shflag* není v platném rozsahu hodnot, je vyvolána obslužná rutina neplatného parametru, jak je popsáno v tématu [ověřování parametru](../../c-runtime-library/parameter-validation.md). Pokud provádění může pokračovat, vrátí tyto funkce hodnotu-1 a nastaví **errno** na jednu z následujících hodnot.
 
-|Hodnota errno|Podmínka|
+|hodnota errno|Podmínka|
 |-|-|
-| **EACCES** | Zadaná cesta je adresář, nebo tento soubor je jen pro čtení, ale došlo k pokusu o operaci otevřít pro zápis. |
-| **EEXIST** | **_O_CREAT** a **_O_EXCL** příznaky byly zadány, ale *filename* již existuje. |
-| **EINVAL** | Neplatný *oflag* nebo *shflag* argument. |
+| **EACCES** | Daná cesta je adresář, nebo je soubor jen pro čtení, ale došlo k pokusu o operaci otevření pro zápis. |
+| **EEXIST** | Byly zadány příznaky **_O_CREAT** a **_O_EXCL** , ale *název souboru* již existuje. |
+| **EINVAL** | Neplatný argument *oflag* nebo *Shflag* |
 | **EMFILE** | Nejsou k dispozici žádné další popisovače souboru. |
 | **ENOENT** | Soubor nebo cesta nebyla nalezena. |
 
@@ -92,7 +95,7 @@ Další informace o těchto a dalších návratových kódech naleznete v témat
 
 ## <a name="remarks"></a>Poznámky
 
-**_Sopen** otevře soubor určený parametrem funkce *filename* a připraví ho na sdílené čtení nebo zápisu, podle definice *oflag* a *shflag* . **_wsopen –** je verze širokého znaku **_sopen**; *filename* argument **_wsopen –** je širokoznaký řetězec. **_wsopen –** a **_sopen** se jinak chovají stejně.
+Funkce **_sopen** otevře soubor určený parametrem *filename* a připraví soubor pro sdílené čtení nebo zápis, jak jsou definovány v *oflag* a *Shflag*. **_wsopen** je **_sopen**verze s velkým znakem; Argument *filename* pro **_wsopen** je řetězec s velkým znakem. **_wsopen** a **_sopen** se chovají stejně jinak.
 
 ### <a name="generic-text-routine-mappings"></a>Mapování rutin obecného textu
 
@@ -100,67 +103,67 @@ Další informace o těchto a dalších návratových kódech naleznete v témat
 |---------------------|--------------------------------------|--------------------|-----------------------|
 |**_tsopen**|**_sopen**|**_sopen**|**_wsopen**|
 
-Celočíselný výraz *oflag* je tvořen přidáním kombinování nejméně jeden z následujících konstant manifestu, které jsou definovány v \<fcntl.h >. Když dva nebo více konstant tvoří argument *oflag*, jsou kombinované pomocí bitového operátoru OR – operátor ( **&#124;** ).
+Celočíselný výraz *oflag* je tvořen kombinací jedné nebo více následujících konstant manifestu, které jsou definovány v \<fcntl. h >. V případě, že dvě nebo více konstant tvoří argument *oflag*, jsou kombinovány s bitovým operátorem **&#124;** or ().
 
-|*oflag* konstanty|Chování|
+|konstanta *oflag*|Chování|
 |-|-|
-| **_O_APPEND** | Přesune ukazatel na soubor na konec souboru před každou operaci zápisu. |
-| **_O_BINARY** | Otevře soubor v binárním (nepřeloženém) režimu. (Viz [fopen](fopen-wfopen.md) popis binárním režimu.) |
-| **_O_CREAT** | Vytvoří soubor a otevře jej pro zápis. Nemá žádný vliv, pokud souboru určeném *filename* existuje. *Pmode* argument je požadován při **_O_CREAT** určena. |
-| **_O_CREAT** &#124; **_O_SHORT_LIVED** | Vytvoří soubor jako dočasný a pokud je to možné není vyprázdnit na disk. *Pmode* argument je požadován při **_O_CREAT** určena. |
-| **_O_CREAT** &#124; **_O_TEMPORARY** | Vytvoří soubor jako dočasný; Při zavření posledního popisovač souboru, odstraní se tento soubor. *Pmode* argument je požadován při **_O_CREAT** určena. |
-| **_O_CREAT** &#124; ` _O_EXCL` | Vrací chybovou hodnotu, pokud soubor určený parametrem *filename* existuje. Platí pouze při použití s **_O_CREAT**. |
-| **_O_NOINHERIT** | Zabraňuje vytváření popisovače sdílený soubor. |
-| **_O_RANDOM** | Určuje, že je mezipaměť optimalizovaná pro, ale nikoliv omezená, náhodný přístup z disku. |
-| **_O_RDONLY** | Otevře se soubor jen pro čtení. Nelze zadat s **_O_RDWR** nebo **_O_WRONLY**. |
-| **_O_RDWR** | Otevře soubor pro čtení i zápis. Nelze zadat s **_O_RDONLY** nebo **_O_WRONLY**. |
-| **_O_SEQUENTIAL** | Určuje, že je mezipaměť optimalizovaná pro, ale nikoliv omezená, sekvenčním přístupem z disku. |
-| **_O_TEXT** | Otevře soubor v textovém (přeloženém) režimu. (Další informace najdete v tématu [textového a binárního režimu souboru vstupně-výstupních operací](../../c-runtime-library/text-and-binary-mode-file-i-o.md) a [fopen](fopen-wfopen.md).) |
-| **_O_TRUNC** | Otevře soubor a zkrátí ho na hodnotu nula length; soubor musí mít oprávnění k zápisu. Nelze zadat s **_O_RDONLY**. **_O_TRUNC** použít s **_O_CREAT** otevře existující soubor nebo vytvoří soubor. **Poznámka:** **_O_TRUNC** příznak odstraní obsah zadaného souboru. |
-| **_O_WRONLY** | Otevře soubor pro zápis. Nelze zadat s **_O_RDONLY** nebo **_O_RDWR**. |
+| **_O_APPEND** | Přesune ukazatel souboru na konec souboru před každou operací zápisu. |
+| **_O_BINARY** | Otevře soubor v binárním (nepřeloženém) režimu. (Popis binárního režimu najdete v tématu [fopen](fopen-wfopen.md) .) |
+| **_O_CREAT** | Vytvoří soubor a otevře jej pro zápis. Nemá žádný vliv, pokud soubor určený parametrem *filename* existuje. Je-li zadán parametr **_O_CREAT** , je požadován argument *pmode* . |
+| **_O_CREAT** &#124; **_O_SHORT_LIVED** | Vytvoří soubor jako dočasný a pokud je to možné, nebude se vyprázdnit na disk. Je-li zadán parametr **_O_CREAT** , je požadován argument *pmode* . |
+| **_O_CREAT** &#124; **_O_TEMPORARY** | Vytvoří soubor jako dočasný; po zavření posledního deskriptoru souboru se soubor odstraní. Je-li zadán parametr **_O_CREAT** , je požadován argument *pmode* . |
+| **_O_CREAT** &#124; ` _O_EXCL` | Vrací hodnotu chyby, pokud soubor určený parametrem *filename* existuje. Platí pouze při použití s **_O_CREAT**. |
+| **_O_NOINHERIT** | Zabraňuje vytvoření popisovače sdíleného souboru. |
+| **_O_RANDOM** | Určuje, že ukládání do mezipaměti je optimalizované pro, ale ne omezené na, náhodný přístup z disku. |
+| **_O_RDONLY** | Otevře soubor jen pro čtení. Nelze zadat pomocí **_O_RDWR** nebo **_O_WRONLY**. |
+| **_O_RDWR** | Otevře soubor pro čtení i zápis. Nelze zadat pomocí **_O_RDONLY** nebo **_O_WRONLY**. |
+| **_O_SEQUENTIAL** | Určuje, že ukládání do mezipaměti je optimalizované pro, ale ne omezené na, sekvenční přístup z disku. |
+| **_O_TEXT** | Otevře soubor v textovém (přeloženém) režimu. (Další informace najdete v tématu [vstupně-výstupní operace se soubory v textovém a binárním režimu](../../c-runtime-library/text-and-binary-mode-file-i-o.md) a [fopen](fopen-wfopen.md).) |
+| **_O_TRUNC** | Otevře soubor a zkrátí ho na nulovou délku. soubor musí mít oprávnění k zápisu. Nelze zadat pomocí **_O_RDONLY**. **_O_TRUNC** použité s **_O_CREAT** otevře existující soubor nebo vytvoří soubor. **Poznámka:** Příznak **_O_TRUNC** zničí obsah zadaného souboru. |
+| **_O_WRONLY** | Otevře soubor pouze pro zápis. Nelze zadat pomocí **_O_RDONLY** nebo **_O_RDWR**. |
 | **_O_U16TEXT** | Otevře soubor v režimu Unicode UTF-16. |
 | **_O_U8TEXT** | Otevře soubor v režimu Unicode UTF-8. |
 | **_O_WTEXT** | Otevře soubor v režimu Unicode. |
 
-Pokud chcete zadat režim přístupu k souboru, je nutné zadat buď **_O_RDONLY**, **_O_RDWR**, nebo **_O_WRONLY**. Není žádná výchozí hodnota pro režim přístupu.
+Chcete-li určit režim přístupu k souboru, je nutné zadat buď **_O_RDONLY**, **_O_RDWR**nebo **_O_WRONLY**. Neexistuje žádná výchozí hodnota pro režim přístupu.
 
-Když je soubor otevřen v režimu Unicode s použitím **_O_WTEXT**, **_O_U8TEXT**, nebo **_O_U16TEXT**, zadejte funkce převede data, která je pro čtení ze souboru o datech UTF-16 Uložit jako typ **wchar_t**. Funkce, které se zápis do souboru otevřeném v režimu Unicode očekávat vyrovnávacích pamětí, které obsahují data UTF-16 uložené jako typ **wchar_t**. Pokud soubor zakódován pomocí kódování UTF-8, je při zápisem a kódování UTF-8 obsah souboru je přeložit na UTF-16, když je pro čtení dat UTF-16 přeložit na UTF-8. Pokus o čtení nebo zápisu lichý počet bajtů v režimu Unicode způsobí chybu ověření parametru. Pro čtení nebo zápis dat, která je uložena ve svém programu jako UTF-8, použijte namísto režimu Unicode textová nebo binární režim souboru. Zodpovídáte za všechny požadované kódování překladu.
+Když se soubor otevře v režimu Unicode pomocí **_O_WTEXT**, **_O_U8TEXT**nebo **_O_U16TEXT**, funkce Input přeloží data načtená ze souboru do dat UTF-16 uložených jako typ **wchar_t**. Funkce, které zapisují do souboru otevřeného v režimu Unicode, očekávají vyrovnávací paměti, které obsahují data UTF-16 uložená jako typ **wchar_t**. Pokud je soubor kódovaný jako UTF-8, data UTF-16 se při zápisu přeloží na UTF-8 a obsah zakódovaný v kódování UTF-8 se převede na UTF-16 při čtení. Při pokusu o čtení nebo zápis lichého počtu bajtů v režimu Unicode dojde k chybě ověření parametru. Chcete-li číst nebo zapisovat data uložená v programu jako UTF-8, místo režimu Unicode použijte textový nebo binární souborový režim. Zodpovídáte za všechny požadované překlady kódování.
 
-Pokud **_sopen** volána s **_O_WRONLY** | **_O_APPEND** (režimu připojení) a **_O_WTEXT**, **_O_ U16TEXT**, nebo **_O_U8TEXT**, nejprve se pokusí otevřít soubor pro čtení a zápis, přečtěte si BOM a pak ho znovu otevřít pro zápis. Pokud otevřete soubor pro čtení a zápis selže, otevře soubor pro zápis a používá výchozí hodnota pro nastavení režimu Unicode.
+Pokud je volání **_sopen** s **_O_WRONLY** |  **_O_APPEND** (režim připojení) a **_O_WTEXT**, **_O_U16TEXT**nebo **_O_U8TEXT**, pokusí se nejprve otevřít soubor pro čtení a zápis, přečtěte si kusovník a znovu ho otevřít pro pouze zápis. Pokud soubor otevíráte pro čtení a zápis, otevře se soubor jenom pro zápis a použije se výchozí hodnota pro nastavení režimu Unicode.
 
-Argument *shflag* je konstantní výraz, který se skládá z jednoho z následujících konstant manifestu, které jsou definovány v \<share.h >.
+Argument *Shflag* je konstantní výraz skládající se z jedné z následujících konstant manifestu, které jsou definovány v \<> Share. h.
 
-|*shflag* konstanty|Chování|
+|konstanta *Shflag*|Chování|
 |-|-|
-| **_SH_DENYRW** | Zakazuje čtení a zápis do souboru. |
-| **_SH_DENYWR** | Odepřít přístup pro zápis do souboru. |
-| **_SH_DENYRD** | Odepřít přístup pro čtení do souboru. |
-| **_SH_DENYNO** | Povolí čtení a zápis. |
+| **_SH_DENYRW** | Zakazuje přístup pro čtení a zápis k souboru. |
+| **_SH_DENYWR** | Zakazuje přístup pro zápis do souboru. |
+| **_SH_DENYRD** | Odepře přístup pro čtení k souboru. |
+| **_SH_DENYNO** | Povolí přístup pro čtení a zápis. |
 
-*Pmode* se vyžaduje jenom v případě **_O_CREAT** určena. Pokud soubor neexistuje, *pmode* určuje nastavení oprávnění k souboru, které se nastavují při zavření poprvé nový soubor. V opačném případě *pmode* se ignoruje. *pmode* se celočíselný výraz, který obsahuje jeden nebo oba z konstant manifestu **_S_IWRITE** a **_S_IREAD**, které jsou definovány v \<sys\stat.h >. Když jsou uvedeny oba konstanty, jsou kombinované pomocí operátoru bitového operátoru OR. Význam *pmode* vypadá takto.
+Argument *pmode* je vyžadován pouze v případě, že je zadán parametr **_O_CREAT** . Pokud soubor neexistuje, *pmode* určuje nastavení oprávnění souboru, která jsou nastavena při prvním zavření nového souboru. V opačném případě se *pmode* ignoruje. *pmode* je celočíselný výraz, který obsahuje jednu nebo obě konstanty manifestu **_S_IWRITE** a **_S_IREAD**, které jsou definovány v \<sys\stat.h >. Pokud jsou zadány obě konstanty, jsou kombinovány s bitovým operátorem OR. Význam *pmode* je následující.
 
 |*pmode*|Význam|
 |-|-|
-| **_S_IREAD** | Povoleno jen čtení. |
-| **_S_IWRITE** | Zápis povolen. (V podstatě povoluje čtení a zápis.) |
-| **_S_IREAD** &#124; **_S_IWRITE** | Čtení a zápis povolen. |
+| **_S_IREAD** | Povoluje se pouze čtení. |
+| **_S_IWRITE** | Zápis povolen. (V důsledku toho povoluje čtení a zápis.) |
+| **_S_IREAD** &#124; **_S_IWRITE** | Čtení a zápis jsou povoleny. |
 
-Pokud tento parametr není zadaný oprávnění k zápisu, soubor je jen pro čtení. V operačním systému Windows jsou čitelné; všechny soubory není možné poskytnout oprávnění jen pro zápis. Proto režimy **_S_IWRITE** a **_S_IREAD** | **_S_IWRITE** jsou ekvivalentní.
+Pokud není uděleno oprávnění k zápisu, je soubor určen jen pro čtení. V operačním systému Windows jsou všechny soubory čitelné; není možné poskytovat oprávnění pouze pro zápis. Proto jsou režimy **_S_IWRITE** a **_S_IREAD** |  **_S_IWRITE** ekvivalentní.
 
-**_sopen** použije aktuální masku souboru oprávnění k *pmode* předtím, než jsou oprávnění. (Viz [_umask –](umask.md).)
+**_sopen** aplikuje aktuální masku oprávnění souboru na *pmode* před nastavením oprávnění. (Viz [_umask](umask.md).)
 
 ## <a name="requirements"></a>Požadavky
 
 |Rutina|Požadovaný hlavičkový soubor|Volitelné záhlaví|
 |-------------|---------------------|---------------------|
-|**_sopen**|\<io.h>|\<fcntl.h>, \<sys\types.h>, \<sys\stat.h>, \<share.h>|
-|**_wsopen**|\<IO.h > nebo \<wchar.h >|\<fcntl.h>, \<sys\types.h>, \<sys\stat.h>, \<share.h>|
+|**_sopen**|\<io.h>|\<fcntl. h >, \<sys\types.h >, \<sys\stat.h >, \<Share. h >|
+|**_wsopen**|\<IO. h > nebo \<WCHAR. h >|\<fcntl. h >, \<sys\types.h >, \<sys\stat.h >, \<Share. h >|
 
-Další informace o kompatibilitě naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Příklad
 
-Podívejte se na příklad pro [_locking –](locking.md).
+Podívejte se na příklad pro [_locking](locking.md).
 
 ## <a name="see-also"></a>Viz také:
 

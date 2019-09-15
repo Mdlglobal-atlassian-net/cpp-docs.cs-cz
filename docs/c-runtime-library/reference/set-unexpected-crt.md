@@ -1,9 +1,9 @@
 ---
 title: set_unexpected (CRT)
 ms.date: 11/04/2016
-apiname:
+api_name:
 - set_unexpected
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -14,7 +14,10 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - set_unexpected
 helpviewer_keywords:
@@ -22,16 +25,16 @@ helpviewer_keywords:
 - unexpected function
 - exception handling, termination
 ms.assetid: ebcef032-4771-48e5-88aa-2a1ab8750aa6
-ms.openlocfilehash: 6c38421e447ca7b3f263148f51f0ade5c59e2804
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 77c8f0ae8c64423a656a2ebbe1fe3ef6dbe1b794
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62356387"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70948307"
 ---
-# <a name="setunexpected-crt"></a>set_unexpected (CRT)
+# <a name="set_unexpected-crt"></a>set_unexpected (CRT)
 
-Nainstaluje vlastní funkci ukončení má být volána **neočekávané**.
+Nainstaluje vaši vlastní funkci ukončení, která se bude volat **neočekávaným**.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -42,29 +45,29 @@ unexpected_function set_unexpected( unexpected_function unexpFunction );
 ### <a name="parameters"></a>Parametry
 
 *unexpFunction*<br/>
-Ukazatel na funkci, která zapíšete do nahradit **neočekávané** funkce.
+Ukazatel na funkci, kterou napíšete, chcete-li nahradit **neočekávanou** funkci.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Vrátí ukazatel na funkci předchozí ukončení registrovaných **_set_unexpected** tak, aby předchozí funkci lze později obnovit. Pokud byla nastavena žádná předchozí funkce, vrácená hodnota slouží k obnovení výchozího chování; Tato hodnota může být **NULL**.
+Vrátí ukazatel na předchozí funkci ukončení registrovanou funkcí **_set_unexpected** , aby bylo možné předchozí funkci obnovit později. Pokud není nastavená žádná předchozí funkce, může se návratová hodnota použít k obnovení výchozího chování; Tato hodnota může být **null**.
 
 ## <a name="remarks"></a>Poznámky
 
-**Set_unexpected** funkce nainstaluje *unexpFunction* jako funkci volanou třídou **neočekávané**. **neočekávané** se nepoužívá v aktuální implementace zpracování výjimek jazyka C++. **Unexpected_function** typ je definován v EH. H jako ukazatel na uživatelské neočekávané funkce *unexpFunction* , která vrací **void**. Vaše vlastní *unexpFunction* funkce by neměly vracet volajícímu.
+Funkce **set_unexpected** nainstaluje *unexpFunction* jako funkci volanou **neočekávanou**. **neočekávaná** implementace se nepoužívá v C++ aktuální implementaci zpracování výjimek. Typ **unexpected_function** je definován ve eh. H jako ukazatel na uživatelem definovanou neočekávanou funkci *unexpFunction* , která vrací **void**. Vaše vlastní funkce *unexpFunction* by se neměla vracet volajícímu.
 
 ```cpp
 typedef void ( *unexpected_function )( );
 ```
 
-Ve výchozím nastavení **neočekávané** volání **ukončit**. Můžete změnit toto výchozí chování psaní vlastních ukončení funkce a volání **set_unexpected** s názvem funkce jako svůj argument. **neočekávané** volá poslední funkci předána jako argument pro **set_unexpected**.
+Ve výchozím nastavení **končí** **neočekávaná** volání. Toto výchozí chování můžete změnit vytvořením vlastní funkce ukončení a voláním **set_unexpected** s názvem vaší funkce jako argumentem. **neočekávaná** volání poslední funkce zadané jako argument pro **set_unexpected**.
 
-Na rozdíl od vlastních ukončení funkce nainstalované voláním **set_terminate**, může být vyvolána výjimka v rámci *unexpFunction*.
+Na rozdíl od funkce vlastní ukončení nainstalované voláním **set_terminate**může být výjimka vyvolána v rámci *unexpFunction*.
 
-V prostředí s více vlákny jsou neočekávané funkce udržovány odděleně pro každé vlákno. Každé nové vlákno je potřeba nainstalovat neočekávané funkce. Díky tomu se každé vlákno má na starosti vlastní neočekávané zpracování.
+V prostředí s více vlákny se neočekávané funkce uchovávají samostatně pro každé vlákno. Každé nové vlákno musí nainstalovat svou vlastní neočekávanou funkci. Proto každé vlákno má za následek neočekávané zpracování.
 
-V aktuální implementaci zpracování výjimek jazyka C++ společnosti Microsoft **neočekávané** volání **ukončit** ve výchozím nastavení a nikdy volán knihovny run-time zpracování výjimek. Neexistuje žádná konkrétní výhoda volání **neočekávané** spíše než **ukončit**.
+V současné implementaci zpracování výjimek od C++ společnosti Microsoft je **neočekávané** volání ve výchozím nastavení **ukončeno** a není nikdy voláno knihovnou run-time zpracovávající výjimky. Není k dispozici žádná zvláštní výhoda pro volání **neočekávaného** neúplného **ukončení**.
 
-Existuje jeden **set_unexpected** obslužné rutiny pro všechny dynamicky propojené knihovny DLL nebo exe; i v případě, že zavoláte **set_unexpected** vaše obslužná rutina může být nahrazena jinou nebo nahrazujete obslužnou rutinu nastavením jiného souboru DLL nebo EXE.
+Existuje jedna obslužná rutina **set_unexpected** pro všechny dynamicky propojené knihovny DLL nebo exe; i v případě, že zavoláte **set_unexpected** , může být obslužná rutina nahrazena jinou nebo, kterou nahrazujete obslužnou rutinu nastavenou jinou knihovnou DLL nebo exe.
 
 ## <a name="requirements"></a>Požadavky
 
@@ -72,7 +75,7 @@ Existuje jeden **set_unexpected** obslužné rutiny pro všechny dynamicky propo
 |-------------|---------------------|
 |**set_unexpected**|\<eh.h>|
 
-Další informace o kompatibilitě, naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Viz také:
 
@@ -80,5 +83,5 @@ Další informace o kompatibilitě, naleznete v tématu [kompatibility](../../c-
 [abort](abort.md)<br/>
 [_get_unexpected](get-unexpected.md)<br/>
 [set_terminate](set-terminate-crt.md)<br/>
-[ukončit](terminate-crt.md)<br/>
+[ruší](terminate-crt.md)<br/>
 [unexpected](unexpected-crt.md)<br/>

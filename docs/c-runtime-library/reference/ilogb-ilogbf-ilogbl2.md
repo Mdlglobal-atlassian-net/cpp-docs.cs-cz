@@ -1,11 +1,11 @@
 ---
 title: ilogb, ilogbf, ilogbl2
 ms.date: 04/05/2018
-apiname:
+api_name:
 - ilogb
 - ilogbf
 - ilogbl
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - ilogb
 - ilogbf
@@ -30,16 +33,16 @@ helpviewer_keywords:
 - ilogbf function
 - ilogbl function
 ms.assetid: 9ef19d57-1caa-41d5-8233-2faad3562fcb
-ms.openlocfilehash: 272544124dd8a8a666fc434516d3c45c73b1d011
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: fdafba039537358c9b6a1de21dc176ceea38b4fa
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62331672"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70954768"
 ---
 # <a name="ilogb-ilogbf-ilogbl"></a>ilogb, ilogbf, ilogbl
 
-Načte celé číslo, které představuje nevyváženého exponentu base-2 zadané hodnoty.
+Načte celé číslo, které představuje neposunutý exponent Base-2 zadané hodnoty.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -68,34 +71,34 @@ int ilogbl(
 ### <a name="parameters"></a>Parametry
 
 *x*<br/>
-Zadaná hodnota.
+Zadaná hodnota
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Pokud je úspěšná, vrátí exponent základu 2 *x* jako podepsané **int** hodnotu.
+V případě úspěchu vrátí exponent Base-2 hodnoty *x* jako hodnotu se znaménkem **int** .
 
-V opačném případě vrátí jednu z následujících hodnot, podle \<math.h >:
+V opačném případě vrátí jednu z následujících hodnot, která \<je definována v Math. h >:
 
 |Vstup|Výsledek|
 |-----------|------------|
 |±0|FP_ILOGB0|
-|±INF ±nan nekonečno|FP_ILOGBNAN|
+|± INF, ± NaN, neomezeno|FP_ILOGBNAN|
 
-Jsou hlášeny chyby uvedené v [_matherr](matherr.md).
+Chyby jsou hlášeny podle zadání v [_matherr](matherr.md).
 
 ## <a name="remarks"></a>Poznámky
 
-Protože jazyk C++ umožňuje přetížení, můžete volat přetížení **ilogb –** , která používají a vrací **float** a **dlouhé** **double** typy. V programu jazyka C **ilogb –** vždy převezme a vrátí **double**.
+Vzhledem C++ k tomu, že umožňuje přetížení, můžete volat přetížení **ilogb –** , která přijímají a vracejí typ **float** a **Long** **Double** . V programu v jazyce C **ilogb –** vždycky přebírá a vrací **Double**.
 
-Volání této funkce je podobný voláním ekvivalentní **logb –** funkce a pak přetypování návratová hodnota rovna **int**.
+Volání této funkce je podobné jako volání ekvivalentní funkce **logb –** a pak přetypování návratové hodnoty na **int**.
 
 ## <a name="requirements"></a>Požadavky
 
-|Rutina|Záhlaví C|Hlaviček jazyka C++|
+|Rutina|Hlavička jazyka C|C++hlaviček|
 |-------------|--------------|------------------|
-|**ilogb**, **ilogbf**, **ilogbl**|\<math.h>|\<cmath>|
+|**ilogb**, **ilogbf**, **ilogbl**|\<Math. h >|\<cmath >|
 
-Další informace o kompatibilitě, naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Viz také:
 

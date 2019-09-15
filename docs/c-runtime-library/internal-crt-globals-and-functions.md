@@ -1,7 +1,7 @@
 ---
-title: Interní CRT globální proměnné a funkce
+title: Interní globální úlohy a funkce pro CRT
 ms.date: 01/22/2019
-apiname:
+api_name:
 - __acrt_iob_func
 - __AdjustPointer
 - _assert
@@ -277,7 +277,7 @@ apiname:
 - _wsopen_dispatch
 - _Xbad_alloc
 - _Xlength_error
-apilocation:
+api_location:
 - api-ms-win-crt-math-l1-1-0.dll
 - api-ms-win-crt-heap-l1-1-0.dll
 - api-ms-win-crt-runtime-l1-1-0.dll
@@ -294,7 +294,10 @@ apilocation:
 - msvcp140_app.dll
 - ntdll.dll
 - ntoskrnl.exe
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - __acrt_iob_func
 - __AdjustPointer
@@ -848,22 +851,22 @@ helpviewer_keywords:
 - _Xbad_alloc
 - _Xlength_error
 ms.assetid: 99a27f11-fa5a-449e-bfbb-aab578d1cc4f
-ms.openlocfilehash: 462b9d80b61b8bda3afc5aec4d819e355adbbbd7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 252065039597b6176b42008b31b7082740bcc265
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62348052"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70940246"
 ---
-# <a name="internal-crt-globals-and-functions"></a>Interní CRT globální proměnné a funkce
+# <a name="internal-crt-globals-and-functions"></a>Interní globální úlohy a funkce pro CRT
 
-Knihovny jazyka C runtime (CRT) obsahuje funkce a globální proměnné, které se používají pouze pro podporu rozhraní Veřejná knihovna. Některé z nich jsou vystaveny jako podrobnosti implementace v hlavičkách veřejné. I když tyto funkce a globální proměnné jsou přístupné prostřednictvím veřejného exporty, nejsou určeny pro použití ve vašem kódu. Doporučujeme vám, že změníte veškerý kód, který používá tyto funkce a proměnné místo toho použít Veřejná knihovna ekvivalenty. Tyto funkce může změnit v závislosti na verzi. Zde jsou uvedeny při jejich identifikaci. Pokud existuje další dokumentaci, ale obecně, tyto podrobnosti implementace nejsou uvedené, jsou uvedeny odkazy.
+Knihovna modulu runtime jazyka C (CRT) obsahuje funkce a globální proměnné, které se používají pouze pro podporu rozhraní veřejné knihovny. Některé z nich jsou zveřejněné ve veřejných hlavičkách jako podrobnosti implementace. I když jsou tyto funkce a globální proměnné přístupné prostřednictvím veřejných exportů, nejsou určeny pro použití ve vašem kódu. Doporučujeme, abyste změnili veškerý kód, který používá tyto funkce a proměnné pro použití ekvivalentů veřejné knihovny. Tyto funkce se mohou změnit z verze na verzi. Jsou tady uvedené, abyste je mohli snadněji identifikovat. Odkazy jsou k dispozici, pokud existuje další dokumentace, ale obecně tyto podrobnosti implementace nejsou dokumentovány.
 
-## <a name="internal-crt-globals-and-value-macros"></a>Interní CRT globální proměnné a hodnotu makra
+## <a name="internal-crt-globals-and-value-macros"></a>Interní prvky globálních knihoven CRT a makra hodnot
 
-Tyto globální proměnné a definice maker slouží k implementaci CRT.
+Tyto globální proměnné a definice maker slouží k implementaci rozhraní CRT.
 
-|Název|
+|Name|
 |----------|
 |__badioinfo|
 |[_acmdln](../c-runtime-library/acmdln-tcmdln-wcmdln.md)|
@@ -878,11 +881,11 @@ Tyto globální proměnné a definice maker slouží k implementaci CRT.
 |[_wcmdln](../c-runtime-library/acmdln-tcmdln-wcmdln.md)|
 |__winitenv|
 
-## <a name="internal-crt-functions-and-function-macros"></a>Interní CRT funkcemi a makry – funkce
+## <a name="internal-crt-functions-and-function-macros"></a>Interní funkce CRT a makra funkcí
 
-Tyto funkce a funkce makra slouží k implementaci CRT a standardní knihovny C++.
+Tyto funkce a makra funkcí slouží k implementaci knihovny CRT a C++ standardní knihovny.
 
-|Název|
+|Name|
 |----------|
 |__acrt_iob_func|
 |__AdjustPointer|
@@ -1001,7 +1004,7 @@ Tyto funkce a funkce makra slouží k implementaci CRT a standardní knihovny C+
 |__FrameUnwindFilter|
 |_fread_nolock_s|
 |_free_base|
-|__free_locale –|
+|__free_locale|
 |_freea_s|
 |_freefls|
 |_ftol|
@@ -1109,7 +1112,7 @@ Tyto funkce a funkce makra slouží k implementaci CRT a standardní knihovny C+
 |__p\__wpgmptr|
 |_pctype|
 |[__pctype_func](../c-runtime-library/pctype-func.md)|
-|_pwctype –|
+|_pwctype|
 |__pwctype_func|
 |__pxcptinfoptrs|
 |_query_app_type|

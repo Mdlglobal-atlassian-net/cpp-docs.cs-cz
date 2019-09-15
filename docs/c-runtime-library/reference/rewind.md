@@ -1,9 +1,9 @@
 ---
 title: rewind
 ms.date: 11/04/2016
-apiname:
+api_name:
 - rewind
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - rewind
 helpviewer_keywords:
@@ -24,16 +27,16 @@ helpviewer_keywords:
 - file pointers [C++], repositioning
 - file pointers [C++]
 ms.assetid: 1a460ce1-28d8-4b5e-83a6-633dca29c28a
-ms.openlocfilehash: d2e50c34d48b5a9570691a8a702cd05c1a48242d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 084a6f3d7e817498bffb510d865f4a32021e4ce8
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62357561"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70949278"
 ---
 # <a name="rewind"></a>rewind
 
-Přemístí ukazatel na soubor na začátek souboru.
+Přemístí ukazatel souboru na začátek souboru.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -46,19 +49,19 @@ void rewind(
 ### <a name="parameters"></a>Parametry
 
 *stream*<br/>
-Ukazatel na **souboru** struktury.
+Ukazatel na strukturu **souborů** .
 
 ## <a name="remarks"></a>Poznámky
 
-**Rewind** funkce přemístí ukazatel na soubor přidružený k *stream* na začátku souboru. Volání **rewind** je podobný
+Funkce **Rewind** přemístí ukazatel souboru přidružený ke *streamu* na začátek souboru. Volání metody **Rewind** je podobné
 
-**fseek (void) (** _stream_**, 0 L, SEEK_SET);**
+**(void) fseek (** _Stream_ **, 0L, SEEK_SET);**
 
-Ale na rozdíl od [fseek](fseek-fseeki64.md), **rewind** vymaže indikátory chyb pro datový proud, stejně jako indikátor konce souboru. Navíc na rozdíl od [fseek](fseek-fseeki64.md), **rewind** nevrací hodnotu, která určuje, zda byl úspěšně přesunut ukazatel myši.
+Nicméně na rozdíl od [fseek](fseek-fseeki64.md), **převinutí** vymaže indikátory chyb pro datový proud a také indikátor konce souboru. Také na rozdíl od [fseek](fseek-fseeki64.md)nevrátí **Rewind** hodnotu k určení, zda byl ukazatel úspěšně přesunut.
 
-Pokud chcete vymazat vyrovnávací paměti klávesnice, použijte **rewind** pomocí datového proudu **stdin**, který je přidružen klávesnice ve výchozím nastavení.
+Chcete-li vymazat vyrovnávací paměť klávesnice, použijte příkaz **Rewind** s datovým proudem **stdin**, který je ve výchozím nastavení přidružen k této klávesnici.
 
-Pokud je datový proud **NULL** vyvolána ukazatel, obslužná rutina neplatného parametru, jak je popsáno v [Parameter Validation](../../c-runtime-library/parameter-validation.md). Pokud provádění může pokračovat, vrátí tato funkce a **errno** je nastavena na **EINVAL**.
+Pokud je datový proud ukazatel s **hodnotou null** , je vyvolána obslužná rutina neplatného parametru, jak je popsáno v tématu [ověřování parametru](../../c-runtime-library/parameter-validation.md). Pokud provádění může pokračovat, tato funkce vrátí a **errno** se nastaví na **EINVAL**.
 
 Informace o těchto a dalších chybových kódech naleznete v tématu [_doserrno, errno, _sys_errlist a _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
@@ -68,11 +71,11 @@ Informace o těchto a dalších chybových kódech naleznete v tématu [_doserrn
 |-------------|---------------------|
 |**rewind**|\<stdio.h>|
 
-Další informace o kompatibilitě, naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
 
 ## <a name="libraries"></a>Knihovny
 
-Všechny verze [běhových knihoven C](../../c-runtime-library/crt-library-features.md).
+Všechny verze [knihoven run-time jazyka C](../../c-runtime-library/crt-library-features.md).
 
 ## <a name="example"></a>Příklad
 
@@ -116,4 +119,4 @@ The values read are: 1 and -37
 
 ## <a name="see-also"></a>Viz také:
 
-[Stream vstupně-výstupních operací](../../c-runtime-library/stream-i-o.md)<br/>
+[Vstup/výstup datového proudu](../../c-runtime-library/stream-i-o.md)<br/>

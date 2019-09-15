@@ -1,9 +1,9 @@
 ---
 title: _malloca
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _malloca
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -14,7 +14,10 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - malloca
 - _malloca
@@ -23,16 +26,16 @@ helpviewer_keywords:
 - malloca function
 - _malloca function
 ms.assetid: 293992df-cfca-4bc9-b313-0a733a6bb936
-ms.openlocfilehash: 22a63002c900d69e8a7706a54acedf0b4b4f6376
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0b12b4adde710f2fc46b3a3790519006fabbb1fc
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62156867"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70952778"
 ---
-# <a name="malloca"></a>_malloca
+# <a name="_malloca"></a>_malloca
 
-Přidělí paměť v zásobníku. Toto je verze [_alloca](alloca.md) s rozšířeními zabezpečení, jak je popsáno v [funkce zabezpečení v CRT](../../c-runtime-library/security-features-in-the-crt.md).
+Přidělí paměť v zásobníku. Jedná se o verzi [_alloca](alloca.md) s vylepšeními zabezpečení, jak je popsáno v [části funkce zabezpečení v CRT](../../c-runtime-library/security-features-in-the-crt.md).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -44,39 +47,39 @@ void *_malloca(
 
 ### <a name="parameters"></a>Parametry
 
-*Velikost*<br/>
-Bajtů, které mají být přiděleny ze zásobníku.
+*hodnota*<br/>
+Bajtů, které se mají přidělit ze zásobníku.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-**_Malloca** rutinní vrátí **void** ukazatel do přiděleného místa, což je zaručeno, že jako vhodně zarovnaný pro úložiště libovolného typu objektu. Pokud *velikost* je 0, **_malloca** přiděluje položku nulové délky a vrátí platný ukazatel na danou položku.
+Rutina **_malloca** vrací ukazatel **void** do přiděleného místa, což je zaručeno, že bude vhodně zarovnána pro uložení libovolného typu objektu. Pokud je *Velikost* 0, **_malloca** přiděluje položku s nulovou délkou a vrátí platný ukazatel na tuto položku.
 
-Pokud *velikost* je větší než **_ALLOCA_S_THRESHOLD**, pak **_malloca** pokusí o přidělení na haldě a vrátí ukazatel s hodnotou null, pokud nelze přidělit prostor. Pokud *velikost* je menší než nebo rovna hodnotě **_ALLOCA_S_THRESHOLD**, pak **_malloca** pokusy o přidělení zásobníku a k výjimce přetečení zásobníku se generuje, pokud nelze v prostoru přidělit. Výjimky jazyka C++; není výjimce přetečení zásobníku je strukturovaných výjimek. Místo používání zpracování výjimek jazyka C++, je nutné použít [strukturovaného zpracování výjimek](../../cpp/structured-exception-handling-c-cpp.md) (SEH) pro zachycení této výjimky.
+Pokud je *Velikost* větší než **_ALLOCA_S_THRESHOLD**, pak se **_malloca** pokusí přidělit na haldu a vrátí ukazatel s hodnotou null, pokud nelze prostor přidělit. Pokud je *Velikost* menší nebo rovna **_ALLOCA_S_THRESHOLD**, pak se **_malloca** pokusí přidělit v zásobníku a výjimka přetečení zásobníku je vygenerována, pokud nelze prostor přidělit. Výjimka přetečení zásobníku není C++ výjimkou. Jedná se o strukturovanou výjimku. Namísto použití C++ zpracování výjimek je třeba pro zachycení této výjimky použít [strukturované zpracování výjimek](../../cpp/structured-exception-handling-c-cpp.md) (SEH).
 
 ## <a name="remarks"></a>Poznámky
 
-**_malloca** přiděluje *velikost* bajtů ze zásobníku programu nebo haldy, pokud požadavek překračuje velikost v bajtech Dal **_ALLOCA_S_THRESHOLD**. Rozdíl mezi **_malloca** a **_alloca** je, že **_alloca** vždy přiděluje v zásobníku, bez ohledu na velikost. Na rozdíl od **_alloca**, který nevyžaduje nebo povolit volání **bezplatné** uvolnit tak přidělené paměti **_malloca** vyžaduje použití [_freea –](freea.md)k uvolnění paměti. V režimu ladění **_malloca** vždy přidělí paměť z haldy.
+**_malloca** přiděluje bajty *velikosti* ze zásobníku programu nebo haldy, pokud požadavek překročí určitou velikost v bajtech vydaných pomocí **_ALLOCA_S_THRESHOLD**. Rozdíl mezi **_malloca** a **_alloca** je, že **_alloca** vždy přiděluje v zásobníku bez ohledu na velikost. Na rozdíl od **_alloca**, která nevyžaduje nebo nepovoluje volání **, aby uvolnilo** paměť, která je tak přidělena, **_malloca** vyžaduje použití [_freea](freea.md) k uvolnění paměti. V režimu ladění **_malloca** vždy přiděluje paměť z haldy.
 
-Existují omezení explicitně voláním **_malloca** v obslužné rutiny výjimek (EH). Rutiny EH, na kterých běží na procesorech x86 třídy pracovat v rámci své vlastní paměti: Provádějí své úkoly v paměti, který není založen na aktuální umístění ukazatel zásobníku nadřazené funkce. Většina běžných implementací zahrnují zpracování (SEH) systému Windows NT strukturovaných výjimek a výrazy klauzule catch C++. Proto se explicitně voláním **_malloca** v některém z následujících výsledků scénáře selhání programu při vrácení volání rutiny EH:
+Existují omezení pro explicitní volání **_malloca** v obslužné rutině výjimky (eh). Rutiny EH, které běží na procesorech x86, fungují ve vlastním zásobníku paměti: Provádějí své úkoly v paměťovém prostoru, který není založen na aktuálním umístění ukazatele zásobníku ohraničující funkce. Mezi nejběžnější implementace patří strukturované zpracování výjimek systému Windows NT (SEH) a C++ výrazy klauzule catch. Proto explicitní volání **_malloca** v některém z následujících scénářů způsobí selhání programu při návratu do rutiny Calling eh:
 
 - Výraz filtru výjimky SEH Windows NT: **__except** (`_malloca ()` )
 
-- Obslužná rutina poslední výjimky SEH Windows NT: **__finally** {`_malloca ()` }
+- Koncová obslužná rutina výjimky Windows NT SEH`_malloca ()` : __finally {}
 
-- Výraz klauzule catch C++ EH
+- C++Výraz klauzule catch pro EH
 
-Ale **_malloca** mohou být volány přímo z v rámci rutiny EH nebo ze zpětného volání s poskytované aplikací, která získá vyvolá jednu z výše uvedených scénářů EH.
+**_Malloca** lze však volat přímo z rutiny EH nebo z zpětného volání dodaného aplikací, které je vyvoláno jedním z výše uvedených scénářů eh.
 
 > [!IMPORTANT]
-> Ve Windows XP Pokud **_malloca** je volána uvnitř bloku try/catch, je nutné volat [_resetstkoflw](resetstkoflw.md) v bloku catch.
+> Pokud je v systému Windows XP volána **_malloca** uvnitř bloku try/catch, je nutné volat [_resetstkoflw](resetstkoflw.md) v bloku catch.
 
-Kromě výše uvedená omezení při použití [/CLR (kompilace Common Language Runtime)](../../build/reference/clr-common-language-runtime-compilation.md) možnost **_malloca** nelze použít v **__except** bloky. Další informace najdete v tématu [/CLR – omezení](../../build/reference/clr-restrictions.md).
+Kromě výše uvedených omezení při použití možnosti [/CLR (Common Language Runtime Compilation)](../../build/reference/clr-common-language-runtime-compilation.md) nelze použít **_malloca** v blocích **__except** . Další informace naleznete v tématu [omezení/CLR](../../build/reference/clr-restrictions.md).
 
 ## <a name="requirements"></a>Požadavky
 
 |Rutina|Požadovaný hlavičkový soubor|
 |-------------|---------------------|
-|**_malloca**|\<malloc.h>|
+|**_malloca**|\<. h >|
 
 ## <a name="example"></a>Příklad
 

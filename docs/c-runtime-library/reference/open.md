@@ -1,9 +1,9 @@
 ---
 title: open
 ms.date: 11/04/2016
-apiname:
+api_name:
 - open
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -14,19 +14,22 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - open
 helpviewer_keywords:
 - open function
 ms.assetid: e3139118-4da2-434b-a551-fcf3fccf49b5
-ms.openlocfilehash: 41cf59e17ad87dd9c2c8079ec48efa470a1eac3c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ebed6030b0736ade47b4bc4f6b4cb2456cca666e
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62156057"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70951161"
 ---
 # <a name="open"></a>open
 
-Tato funkce POSIX je zastaralá. Použít bitovou kopii ISO C++ splňující podmínky [_Otevřít](open-wopen.md) místo.
+Tato funkce POSIX je zastaralá. Místo toho použijte C++ [_open](open-wopen.md) ISO.

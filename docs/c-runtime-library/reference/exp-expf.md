@@ -1,11 +1,11 @@
 ---
-title: Exp, expf –, expl
+title: exp, expf, expl
 ms.date: 04/05/2018
-apiname:
+api_name:
 - expf
 - expl
 - exp
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _expl
 - expf
@@ -30,16 +33,16 @@ helpviewer_keywords:
 - calculating exponentials
 - exp function
 ms.assetid: 7070016d-1143-407e-9e9a-6b059bb88867
-ms.openlocfilehash: b9fb38adcc442e60864ec632cd92793f16e47502
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 380f3e861b3ae1ba2f57aa781c32829771612b9f
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62288185"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70941628"
 ---
-# <a name="exp-expf-expl"></a>Exp, expf –, expl
+# <a name="exp-expf-expl"></a>exp, expf, expl
 
-Vypočítá exponent.
+Vypočítá exponenciální hodnotu.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -64,32 +67,32 @@ long double expl(
 ### <a name="parameters"></a>Parametry
 
 *x*<br/>
-Plovoucí desetinné čárky hodnota, která se exponentiate základ přirozeného logaritmu *e* podle.
+Hodnota s plovoucí desetinnou čárkou, která má exponentiate přirozený logaritmus, je základem *e* .
 
 ## <a name="return-value"></a>Návratová hodnota
 
-**Exp** exponenciální hodnota s plovoucí desetinnou čárkou parametru, vrátí funkce *x*, pokud je úspěšná. To znamená, výsledek je *e*<sup>*x*</sup>, kde *e* je základ přirozeného logaritmu. Při přetečení, funkce vrátí INF (nekonečno) a na podtečení **exp** vrátí hodnotu 0.
+Funkce **exp** vrátí exponenciální hodnotu parametru s plovoucí desetinnou čárkou, *x*, pokud bylo úspěšné. To znamená, že výsledkem je *e*<sup>*x*</sup>, kde *e* je základem přirozeného logaritmu. Při přetečení vrátí funkce hodnotu INF (nekonečno) a v podtečení, **exp** vrátí hodnotu 0.
 
-|Vstup|Výjimka SEH|Výjimka Matherr|
+|Vstup|Výjimka SEH|Výjimka matherr|
 |-----------|-------------------|-----------------------|
-|Rozmezí tichý NaN neurčitý|Žádný|_DOMAIN|
-|Nekonečno přesností|NEPLATNÝ|_DOMAIN|
-|x ≥ 7.097827e + 002|NEPŘESNÉ + PŘETEČENÍ|PŘETEČENÍ|
-|X ≤-7.083964e + 002|NEPŘESNÉ + PODTEČENÍ|PODTEČENÍ|
+|Tiché NaN, neurčité|Žádné|_DOMAIN|
+|± Nekonečno|NENÍ|_DOMAIN|
+|× ≥ 7.097827 e + 002|NEPŘESNÉ A PŘETEČENÍ|PLNĚ|
+|× ≤-7.083964 e + 002|NEPŘESNÉ A PODTEČENÍ|PODTEČENÍ|
 
-**Exp** funkce má implementace, která používá Streaming SIMD Extensions 2 (SSE2). Zobrazit [_set_sse2_enable –](set-sse2-enable.md) informace a omezení používání implementace SSE2.
+Funkce **exp** má implementaci, která používá streaming SIMD Extensions 2 (SSE2). Informace a omezení použití implementace SSE2 najdete v tématu [_set_SSE2_enable](set-sse2-enable.md) .
 
 ## <a name="remarks"></a>Poznámky
 
-Jazyk C++ umožňuje přetížení, takže můžete volat přetížení **exp** trvají **float** nebo **long double** argument. V programu jazyka C **exp** vždy převezme a vrátí **double**.
+C++umožňuje přetížení, takže můžete volat přetížení **exp** , která přebírají argument **typu float** nebo **Long Double** . V programu v jazyce C, **exp** vždycky přebírá a vrací **Double**.
 
 ## <a name="requirements"></a>Požadavky
 
-|Funkce|Požadovaná hlavička C|Požadované hlaviček jazyka C++|
+|Funkce|Povinné záhlaví jazyka C|Požadovaná C++ hlavička|
 |--------------|---------------------|---|
-|**Exp**, **expf –**, **expl**|\<math.h>|\<cmath > nebo \<math.h >|
+|**exp**, **expf –** , **Expl**|\<Math. h >|\<cmath > nebo \<Math. h >|
 
-Další informace o kompatibilitě, naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Příklad
 

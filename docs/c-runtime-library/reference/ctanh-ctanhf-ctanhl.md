@@ -1,11 +1,11 @@
 ---
-title: ctanh ctanhf, ctanhl
+title: ctanh, ctanhf, ctanhl
 ms.date: 11/04/2016
-apiname:
+api_name:
 - ctanh
 - ctanhf
 - ctanhl
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - ctanh
 - ctanhf
@@ -30,14 +33,14 @@ helpviewer_keywords:
 - ctanhl function
 - ctanhf function
 ms.assetid: 807f2cd1-8740-4988-afff-5911c346385b
-ms.openlocfilehash: f63329e45fdcd3a26d613f73cd911fdf6fb10401
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: dae59dcd4a71045b27c6ba9501580bf981b9828f
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62288937"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70941954"
 ---
-# <a name="ctanh-ctanhf-ctanhl"></a>ctanh ctanhf, ctanhl
+# <a name="ctanh-ctanhf-ctanhl"></a>ctanh, ctanhf, ctanhl
 
 Vypočítá komplexní hyperbolický tangens komplexního čísla.
 
@@ -64,28 +67,28 @@ _Lcomplex ctanhl(
 ### <a name="parameters"></a>Parametry
 
 *z*<br/>
-Komplexní čísla, která představuje úhel v radiánech.
+Komplexní číslo představující úhel v radiánech.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Komplexní hyperbolický tangens *z*.
+Komplexní hyperbolický tangens *z.*
 
-|Vstup|Výjimka SEH|**_matherr** Exception|
+|Vstup|Výjimka SEH|**_matherr** Jímka|
 |-----------|-------------------|--------------------------|
-|± ∞, QNAN, IND|žádná|_DOMAIN|
-|Rozmezí ∞ (tan, tanf –)|NEPLATNÝ|_DOMAIN|
+|∞, QNAN, ZASÁHNOUT|žádná|_DOMAIN|
+|± ∞ (Tan; tanf –)|NENÍ|_DOMAIN|
 
 ## <a name="remarks"></a>Poznámky
 
-Protože C++ umožňuje přetížení, můžete volat přetížení **ctanh** , která používají a vrací **_Fcomplex** a **_Lcomplex** hodnoty. V programu jazyka C **ctanh** vždy převezme a vrátí **_Dcomplex** hodnotu.
+Vzhledem C++ k tomu, že umožňuje přetížení, můžete volat přetížení **ctanh** , která přijímají a vracejí hodnoty **_Fcomplex** a **_Lcomplex** . V programu v jazyce C **ctanh** vždycky přebírá a vrací hodnotu **_Dcomplex** .
 
 ## <a name="requirements"></a>Požadavky
 
-|Rutina|Záhlaví C|Hlaviček jazyka C++|
+|Rutina|Hlavička jazyka C|C++hlaviček|
 |-------------|--------------|------------------|
-|**ctanh**, **ctanhf**, **ctanhl**|\<complex.h>|\<ccomplex>|
+|**ctanh**, **ctanhf**, **ctanhl**|\<complex.h>|\<ccomplex >|
 
-Informace o kompatibilitě naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
+Informace o kompatibilitě najdete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Viz také:
 

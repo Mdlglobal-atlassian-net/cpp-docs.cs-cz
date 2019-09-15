@@ -1,9 +1,9 @@
 ---
 title: _CIlog10
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _CIlog10
-apilocation:
+api_location:
 - msvcr100.dll
 - msvcr120.dll
 - msvcr80.dll
@@ -12,7 +12,10 @@ apilocation:
 - msvcrt.dll
 - msvcr110.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - CIlog10
 - _CIlog10
@@ -20,16 +23,16 @@ helpviewer_keywords:
 - _CIlog10 intrinsic
 - CIlog10 intrinsic
 ms.assetid: 05d7fcaa-3cff-4cc5-8d44-015e7cacba24
-ms.openlocfilehash: 771ed103c8ab0fe29061086923189cc90eb047d9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c99fdab859acf280afc8a595696a17b2d03a47e4
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62290180"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70944613"
 ---
-# <a name="cilog10"></a>_CIlog10
+# <a name="_cilog10"></a>_CIlog10
 
-Provádí `log10` operace na nejvyšší hodnotu v zásobníku.
+`log10` Provede operaci na nejvyšší hodnotě v zásobníku.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -39,9 +42,9 @@ void __cdecl _CIlog10();
 
 ## <a name="remarks"></a>Poznámky
 
-Tato verze `log10` funkce má specializované konvence volání, které kompilátor rozpozná. Funkce urychluje provádění, protože kopie zabraňuje generovaných a pomáhá při přidělení registru.
+Tato verze `log10` funkce má specializovanou konvenci volání, kterou kompilátor rozumí. Funkce zrychlí spuštění, protože brání vygenerování kopií a pomáhá s přidělením registru.
 
-Výsledná hodnota je vloženy do horní části zásobníku.
+Výsledná hodnota je vložena do horní části zásobníku.
 
 ## <a name="requirements"></a>Požadavky
 

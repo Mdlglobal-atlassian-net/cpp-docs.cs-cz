@@ -1,9 +1,9 @@
 ---
 title: ___lc_collate_cp_func
 ms.date: 11/04/2016
-apiname:
+api_name:
 - ___lc_collate_cp_func
-apilocation:
+api_location:
 - msvcr120.dll
 - msvcrt.dll
 - msvcr100.dll
@@ -11,22 +11,25 @@ apilocation:
 - msvcr110_clr0400.dll
 - msvcr110.dll
 - msvcr90.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - ___lc_collate_cp_func
 helpviewer_keywords:
 - ___lc_collate_cp_func
 ms.assetid: 46ccc084-7ac9-4e5d-9138-e12cb5845615
-ms.openlocfilehash: fac8b7ba2e9568dd53509e5cccbb96a6b2f1df8d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d6a857760bf3b76481cc608ef8f015bca207f35f
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62342757"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70940145"
 ---
-# <a name="lccollatecpfunc"></a>___lc_collate_cp_func
+# <a name="___lc_collate_cp_func"></a>___lc_collate_cp_func
 
-Vnitřní funkce CRT. Načte aktuální znakové stránce kolace vlákna.
+Vnitřní funkce CRT. Načte aktuální znakovou stránku kolace vlákna.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -36,13 +39,13 @@ UINT ___lc_codepage_func(void);
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Aktuální znakové stránce kolace vlákna.
+Aktuální znaková stránka kolace vlákna.
 
 ## <a name="remarks"></a>Poznámky
 
-`___lc_collate_cp_func` je interní funkce CRT, který používá jiné funkce CRT získat aktuální znakové stránce kolace pro CRT data z úložiště thread local. Tyto informace jsou k dispozici také pomocí [_get_current_locale –](../c-runtime-library/reference/get-current-locale.md) funkce.
+`___lc_collate_cp_func`je interní funkce CRT, kterou používají jiné funkce CRT k získání aktuální znakové stránky kolace z thread localho úložiště pro data CRT. Tyto informace jsou také k dispozici pomocí funkce [_get_current_locale](../c-runtime-library/reference/get-current-locale.md) .
 
-Vnitřní funkce CRT jsou specifický pro implementaci a může změnit jednotlivých vydání. Nedoporučujeme jejich použití ve vašem kódu.
+Interní funkce CRT jsou specifické pro konkrétní implementaci a můžou se měnit s každou vydanou verzí. Nedoporučujeme jejich použití ve vašem kódu.
 
 ## <a name="requirements"></a>Požadavky
 

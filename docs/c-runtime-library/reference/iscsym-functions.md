@@ -1,7 +1,7 @@
 ---
-title: iscsym –, iscsymf –, __iscsym –, __iswcsym –, __iscsymf –, __iswcsymf –, _iscsym_l –, _iswcsym_l –, _iscsymf_l –, _iswcsymf_l –
+title: iscsym, iscsymf, __iscsym, __iswcsym, __iscsymf, __iswcsymf, _iscsym_l, _iswcsym_l, _iscsymf_l, _iswcsymf_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _iswcsym_l
 - __iswcsym
 - __iscsym
@@ -10,7 +10,7 @@ apiname:
 - __iswcsymf
 - __iscsymf
 - _iscsymf_l
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -22,7 +22,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-string-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _iswcsym_l
 - _iswcsymf_l
@@ -62,16 +65,16 @@ helpviewer_keywords:
 - iscsym function
 - iscsymf function
 ms.assetid: 944dfb99-f2b8-498c-9f55-dbcf370d0a2c
-ms.openlocfilehash: 8ee84243b98c08504ac0bb63593e39c32230b706
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ef5b2487fb49739f9a073adbc87546fb5d49d542
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62331633"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70954417"
 ---
-# <a name="iscsym-iscsymf-iscsym-iswcsym-iscsymf-iswcsymf-iscsyml-iswcsyml-iscsymfl-iswcsymfl"></a>iscsym –, iscsymf –, __iscsym –, __iswcsym –, __iscsymf –, __iswcsymf –, _iscsym_l –, _iswcsym_l –, _iscsymf_l –, _iswcsymf_l –
+# <a name="iscsym-iscsymf-__iscsym-__iswcsym-__iscsymf-__iswcsymf-_iscsym_l-_iswcsym_l-_iscsymf_l-_iswcsymf_l"></a>iscsym, iscsymf, __iscsym, __iswcsym, __iscsymf, __iswcsymf, _iscsym_l, _iswcsym_l, _iscsymf_l, _iswcsymf_l
 
-Určete, pokud celočíselná hodnota představuje znak, který může být použit v identifikátoru.
+Určí, zda celočíselná hodnota představuje znak, který může být použit v identifikátoru.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -111,28 +114,28 @@ int _iswcsymf_l(
 ### <a name="parameters"></a>Parametry
 
 *c*<br/>
-Celé číslo k testování. *c* musí být v rozsahu 0 – 255 úzkými znaky verze funkce.
+Celé číslo k otestování. jazyk *c* by měl být v rozsahu 0-255 pro verzi funkce s úzkým znakem.
 
-*Národní prostředí*<br/>
+*jazyka*<br/>
 Národní prostředí, které se má použít
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Obě **__iscsym –** a **__iswcsym –** vrátí nenulovou hodnotu, pokud *c* je písmeno, znak podtržení nebo číslice. Obě **__iscsymf –** a **__iswcsymf –** vrátí nenulovou hodnotu, pokud *c* písmenem nebo podtržítkem. Každá z těchto rutin vrátí hodnotu 0, pokud *c* nesplňuje testovací podmínku. Verze těchto funkcí s **_l** přípona jsou stejné s tím rozdílem, že používají *národní prostředí* předaný namísto aktuálního národního prostředí pro své chování závislé na národním prostředí. Další informace najdete v tématu [národní prostředí](../../c-runtime-library/locale.md).
+**__Iscsym** i **__iswcsym** vrací nenulovou hodnotu, pokud je *c* písmeno, podtržítko nebo číslice. **__Iscsymf** i **__iswcsymf** vrací nenulovou hodnotu, pokud je *c* písmeno nebo podtržítko. Každá z těchto rutin vrátí hodnotu 0, pokud *c* nesplňuje podmínky testu. Verze těchto funkcí s příponou **_l** jsou stejné s tím rozdílem, že používají předané *národní prostředí* namísto aktuálního národního prostředí pro své chování závislé na národním prostředí. Další informace najdete v tématu [národní prostředí](../../c-runtime-library/locale.md).
 
 ## <a name="remarks"></a>Poznámky
 
-Tyto rutiny jsou definovány jako makra, pokud je definován _CTYPE_DISABLE_MACROS preprocesor makro. Při použití verze – makro z těchto rutin argumenty mohou být vyhodnoceny více než jednou. Buďte opatrní při použití výrazů, které mají vedlejší účinky v rámci seznamu argumentů.
+Tyto rutiny jsou definovány jako makra, pokud není definován preprocesor makra _CTYPE_DISABLE_MACROS. Použijete-li verze makra těchto rutin, lze argumenty vyhodnotit více než jednou. Buďte opatrní při použití výrazů, které mají vedlejší účinky v rámci seznamu argumentů.
 
-Z důvodu zpětné kompatibility **iscsym –** a **iscsymf –** jsou definovány jako makra pouze tehdy, když [ &#95; &#95;STDC&#95; &#95; ](../../preprocessor/predefined-macros.md) není definované nebo je definován jako 0; v opačném případě nejsou definovány.
+Z důvodu zpětné kompatibility jsou **iscsym** a **iscsymf** definovány jako makra pouze v případě, že [ &#95; &#95;STDC&#95; ](../../preprocessor/predefined-macros.md) není definováno nebo je definován jako 0; v opačném případě nejsou definovány.
 
 ## <a name="requirements"></a>Požadavky
 
 |Rutina|Požadovaný hlavičkový soubor|
 |-------------|---------------------|
-|**iscsym**, **iscsymf**, **__iscsym**, **__iswcsym**, **__iscsymf**, **__iswcsymf**, **_iscsym_l**, **_iswcsym_l**, **_iscsymf_l**, **_iswcsymf_l**|C: \<ctype.h ><br /><br /> Jazyk C++: \<cctype – > nebo \<ctype.h >|
+|**iscsym**, **iscsymf**, **__iscsym**, **__iswcsym**, **__iscsymf**, **__iswcsymf**, **_iscsym_l**, **_iswcsym_l**, **_iscsymf_l**, **_iswcsymf_l**|C: \<CType. h ><br /><br /> C++: \<cctype > nebo \<CType. h >|
 
-**Iscsym –**, **iscsymf –**, **__iscsym –**, **__iswcsym –**, **__iscsymf –**, **__ iswcsymf**, **_iscsym_l –**, **_iswcsym_l –**, **_iscsymf_l –**, a **_iswcsymf_l –** jsou rutiny Specifické pro Microsoft. Další informace o kompatibilitě, naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
+Rutiny **iscsym**, **iscsymf**, **__iscsym**, **__iswcsym**, **__iscsymf**, **__iswcsymf**, **_iscsym_l**, **_iswcsym_l**, **_iscsymf_l**a **_iswcsymf_l** jsou specifické pro společnost Microsoft. Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Viz také:
 

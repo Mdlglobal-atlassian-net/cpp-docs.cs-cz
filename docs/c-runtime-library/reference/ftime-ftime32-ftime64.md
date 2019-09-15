@@ -1,11 +1,11 @@
 ---
 title: _ftime, _ftime32, _ftime64
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _ftime64
 - _ftime
 - _ftime32
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-time-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _ftime32
 - _ftime
@@ -35,16 +38,16 @@ helpviewer_keywords:
 - ftime32 function
 - time, getting current
 ms.assetid: 96bc464c-3bcd-41d5-a212-8bbd836b814a
-ms.openlocfilehash: 26178f8e559bddd3dafb7fa21edb822874244e93
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b8cc46a0a5470892e0bdfdcb0918c2757cdaf4c7
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62332713"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70956338"
 ---
-# <a name="ftime-ftime32-ftime64"></a>_ftime, _ftime32, _ftime64
+# <a name="_ftime-_ftime32-_ftime64"></a>_ftime, _ftime32, _ftime64
 
-Získání aktuálního času. Bezpečnější verze těchto funkcí jsou k dispozici. Zobrazit [_ftime_s _ftime32_s, _ftime64_s](ftime-s-ftime32-s-ftime64-s.md).
+Získá aktuální čas. K dispozici jsou bezpečnější verze těchto funkcí; viz [_ftime_s, _ftime32_s, _ftime64_s](ftime-s-ftime32-s-ftime64-s.md).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -57,34 +60,34 @@ void _ftime64( struct __timeb64 *timeptr );
 ### <a name="parameters"></a>Parametry
 
 *timeptr*<br/>
-Ukazatel **_timeb –**, **__timeb32**, nebo **__timeb64 –** struktury.
+Ukazatel na strukturu **_timeb**, **__timeb32**nebo **__timeb64** .
 
 ## <a name="remarks"></a>Poznámky
 
-**_Ftime** funkce získá aktuálním místním časem a uloží ho do struktury, na které odkazuje *timeptr*. **_Timeb –**, **__timeb32**, a **__timeb64 –** struktury jsou definovány v \<sys\\timeb.h >. Obsahují čtyři pole, které jsou uvedeny v následující tabulce.
+Funkce **_ftime** získá aktuální místní čas a uloží ji do struktury, na kterou odkazuje *timeptr*. Struktury **_timeb**, **__timeb32**a **__timeb64** jsou definovány v \<sys\\timeb. h >. Obsahují čtyři pole, která jsou uvedena v následující tabulce.
 
 |Pole|Popis|
 |-|-|
-|**dstflag**|Nenulové, pokud letní čas je aktuálně používána pro místní časové pásmo. (Viz [_tzset –](tzset.md) pro vysvětlení, jak se určují letní čas.)|
+|**dstflag**|Nenulové, pokud je letní čas v současnosti platný pro místní časové pásmo. (Viz [_tzset](tzset.md) pro vysvětlení, jak se určuje letní čas.)|
 |**millitm**|Zlomek sekundy v milisekundách.|
-|**čas**|Čas v řádu sekund od půlnoci (00: 00:00), 1. ledna 1970, koordinovaného univerzálního času (UTC).|
-|**timezone**|Rozdíl v řádech minut, přesun westward, mezi místním časem a UTC. Hodnota **časové pásmo** nastavit hodnotu globální proměnné **_timezone** (viz **_tzset –**).|
+|**čas**|Čas v sekundách od půlnoci (00:00:00), 1. ledna 1970, koordinovaný světový čas (UTC).|
+|**údaj**|Rozdíl v minutách, pohybování Westward, mezi časem UTC a místním časem. Hodnota **časového pásma** je nastavena z hodnoty globální proměnné **_timezone** (viz **_tzset**).|
 
-**_Ftime64** funkci, která používá **__timeb64 –** struktury, umožňuje vytvoření souboru data vyjadřují až do 23:59:59, 31 prosince 3000 UTC, zatímco **_ftime32**pouze představuje data do 23:59:59 18. ledna 2038 UTC. Půlnoc 1. ledna 1970 je dolní mez rozsahu kalendářních dat pro všechny tyto funkce.
+Funkce **_ftime64** , která používá strukturu **__timeb64** , umožňuje, aby data vytváření souborů byla vyjádřena až 23:59:59, 31. prosince 3000, UTC; zatímco **_ftime32** představuje pouze kalendářní data 23:59:59 do 18. ledna 2038, UTC. Půlnoc, 1. ledna 1970 je dolní mez rozsahu kalendářních dat pro všechny tyto funkce.
 
-**_Ftime** funkce je ekvivalentní volání **_ftime64**, a **_timeb –** obsahuje čas 64-bit, není-li **_USE_32BIT_TIME_T** je definován v takovém staré chování je v platnosti; **_ftime** používá čas 32bitová verze a **_timeb –** obsahuje čas 32-bit.
+Funkce **_ftime** je ekvivalentem **_ftime64**a **_timeb** obsahuje 64, pokud není definována **_USE_32BIT_TIME_T** , v takovém případě se stará chování projeví. **_ftime** používá 32ový čas a **_timeb** obsahuje 32-bit času.
 
-**_ftime** ověří jeho parametry. Je-li předán ukazatel s hodnotou null jako *timeptr*, funkce vyvolá obslužnou rutinu neplatného parametru, jak je popsáno v [Parameter Validation](../../c-runtime-library/parameter-validation.md). Pokud smí provádění pokračovat, funkce nastaví **errno** k **EINVAL**.
+**_ftime** ověří své parametry. Pokud byl předán ukazatel s hodnotou null jako *timeptr*, funkce vyvolá obslužnou rutinu neplatného parametru, jak je popsáno v tématu [ověřování parametru](../../c-runtime-library/parameter-validation.md). Pokud provádění může pokračovat, funkce nastaví **errno** na **EINVAL**.
 
 ## <a name="requirements"></a>Požadavky
 
 |Funkce|Požadovaný hlavičkový soubor|
 |--------------|---------------------|
-|**_ftime**|\<SYS/Types.h > a \<sys/timeb.h >|
-|**_ftime32**|\<SYS/Types.h > a \<sys/timeb.h >|
-|**_ftime64**|\<SYS/Types.h > a \<sys/timeb.h >|
+|**_ftime**|\<sys/Types. h > \<a sys/timeb. h >|
+|**_ftime32**|\<sys/Types. h > \<a sys/timeb. h >|
+|**_ftime64**|\<sys/Types. h > \<a sys/timeb. h >|
 
-Další informace o kompatibilitě naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Příklad
 

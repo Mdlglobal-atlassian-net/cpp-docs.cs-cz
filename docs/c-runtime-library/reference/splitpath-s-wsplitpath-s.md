@@ -1,10 +1,10 @@
 ---
 title: _splitpath_s, _wsplitpath_s
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _wsplitpath_s
 - _splitpath_s
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - ucrtbase.dll
 - api-ms-win-crt-filesystem-l1-1-0.dll
 - ntoskrnl.exe
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _wsplitpath_s
 - splitpath_s
@@ -31,16 +34,16 @@ helpviewer_keywords:
 - path names
 - wsplitpath_s function
 ms.assetid: 30fff3e2-cd00-4eb6-b5a2-65db79cb688b
-ms.openlocfilehash: 87af8bac525844c06fdfc16d7d13a06eef4d61ab
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f97c07ed01ae629fe3eb61346c6c0fcd8fa803f0
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62355026"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70958056"
 ---
-# <a name="splitpaths-wsplitpaths"></a>_splitpath_s, _wsplitpath_s
+# <a name="_splitpath_s-_wsplitpath_s"></a>_splitpath_s, _wsplitpath_s
 
-Název cesty rozdělí do komponenty. Jde o verzích [_splitpath – _wsplitpath –](splitpath-wsplitpath.md) s rozšířeními zabezpečení, jak je popsáno v [funkce zabezpečení v CRT](../../c-runtime-library/security-features-in-the-crt.md).
+Přeruší název cesty na součásti. Jedná se o verze [_splitpath, _wsplitpath](splitpath-wsplitpath.md) s vylepšeními zabezpečení, jak [je popsáno v části funkce zabezpečení v CRT](../../c-runtime-library/security-features-in-the-crt.md).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -88,93 +91,93 @@ errno_t _wsplitpath_s(
 ### <a name="parameters"></a>Parametry
 
 *Cesta*<br/>
-Úplná cesta.
+Úplná cesta
 
 *drive*<br/>
-Písmeno, za nímž následuje dvojtečka (**:**). Můžete předat **NULL** pro tento parametr, pokud není nutné písmeno jednotky.
+Písmeno jednotky následovaný dvojtečkou ( **:** ). Pokud nepotřebujete písmeno jednotky, můžete pro tento parametr předat **hodnotu null** .
 
 *driveNumberOfElements*<br/>
-Velikost *jednotky* vyrovnávací paměti ve znacích jednobajtové nebo široké. Pokud *jednotky* je **NULL**, tato hodnota musí být 0.
+Velikost vyrovnávací paměti *jednotky* v jednobajtových nebo velkých znacích. Pokud má jednotka **hodnotu null**, tato hodnota musí být 0.
 
 *dir*<br/>
-Cesta k adresáři, včetně koncového lomítka. Lomítka ( **/** ), zpětná lomítka ( **\\** ), nebo obě mohou být použity. Můžete předat **NULL** pro tento parametr, pokud není nutné cesta k adresáři.
+Cesta k adresáři, včetně koncového lomítka. Lze použít lomítka **/** (), zpětná lomítka ( **\\** ) nebo obojí. Pokud nepotřebujete cestu k adresáři, můžete pro tento parametr předat **hodnotu null** .
 
 *dirNumberOfElements*<br/>
-Velikost *dir* vyrovnávací paměti ve znacích jednobajtové nebo široké. Pokud *dir* je **NULL**, tato hodnota musí být 0.
+Velikost vyrovnávací paměti *adresáře* v jednobajtových nebo velkých znacích. Pokud má dir **hodnotu null**, tato hodnota musí být 0.
 
-*%{fname/*<br/>
-Základní název souboru (bez přípony). Můžete předat **NULL** pro tento parametr, pokud není nutné název souboru.
+*fname*<br/>
+Základní název souboru (bez přípony) Pokud název souboru nepotřebujete, můžete pro tento parametr předat **hodnotu null** .
 
 *nameNumberOfElements*<br/>
-Velikost *%{fname/* vyrovnávací paměti ve znacích jednobajtové nebo široké. Pokud *%{fname/* je **NULL**, tato hodnota musí být 0.
+Velikost vyrovnávací paměti *fname* v jednobajtových nebo velkých znacích. Pokud má fname **hodnotu null**, tato hodnota musí být 0.
 
 *ext*<br/>
-Příponu názvu souboru, včetně počáteční období (**.**). Můžete předat **NULL** pro tento parametr, pokud není nutné příponu názvu souboru.
+Přípona názvu souboru včetně úvodní tečky ( **.** ) Pokud nepotřebujete příponu filename, můžete pro tento parametr předat **hodnotu null** .
 
 *extNumberOfElements*<br/>
-Velikost *ext* vyrovnávací paměti ve znacích jednobajtové nebo široké. Pokud *ext* je **NULL**, tato hodnota musí být 0.
+Velikost *Rozšířené* vyrovnávací paměti v jednobajtových nebo velkých znacích. Pokud má EXT **hodnotu null**, tato hodnota musí být 0.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Nula v případě úspěchu; Kód chyby při selhání.
+Nula v případě úspěchu; chybový kód při selhání.
 
-### <a name="error-conditions"></a>Chybové podmínky
+### <a name="error-conditions"></a>Chybové stavy
 
 |Podmínka|Návratová hodnota|
 |---------------|------------------|
-|*cesta* je **NULL**|**EINVAL**|
-|*jednotky* je **NULL**, *driveNumberOfElements* je nulová|**EINVAL**|
-|*jednotky* jinou hodnotu než**NULL**, *driveNumberOfElements* je nula|**EINVAL**|
-|*příkaz dir* je **NULL**, *dirNumberOfElements* je nulová|**EINVAL**|
-|*příkaz dir* jinou hodnotu než**NULL**, *dirNumberOfElements* je nula|**EINVAL**|
-|*%{fname/* je **NULL**, *nameNumberOfElements* je nulová|**EINVAL**|
-|*%{fname/* jinou hodnotu než**NULL**, *nameNumberOfElements* je nula|**EINVAL**|
-|*ext* je **NULL**, *extNumberOfElements* je nulová|**EINVAL**|
-|*ext* jinou hodnotu než**NULL**, *extNumberOfElements* je nula|**EINVAL**|
+|*cesta* má **hodnotu null** .|**EINVAL**|
+|*jednotka* má **hodnotu null**, *driveNumberOfElements* je nenulová.|**EINVAL**|
+|*jednotka* je**nenulová**, *driveNumberOfElements* je nula.|**EINVAL**|
+|*dir* má **hodnotu null**, *dirNumberOfElements* je nenulový.|**EINVAL**|
+|*dir* má jinou**hodnotu než null**, *dirNumberOfElements* je nula.|**EINVAL**|
+|*fname* má **hodnotu null**, *nameNumberOfElements* není nula.|**EINVAL**|
+|*fname* je**null**, *nameNumberOfElements* je nula.|**EINVAL**|
+|Hodnota *EXT* má **hodnotu null**, *extNumberOfElements* je nenulová.|**EINVAL**|
+|hodnota *EXT* je jiná než**null**, *extNumberOfElements* je nula.|**EINVAL**|
 
-Pokud dojde k některé z výše uvedených podmínek, vyvolán obslužnou rutinu neplatného parametru, jak je popsáno v [Parameter Validation](../../c-runtime-library/parameter-validation.md) . Pokud smí provádění pokračovat, tyto funkce nastaví **errno** k **EINVAL** a vrátit **EINVAL**.
+Pokud nastane kterákoli z výše uvedených podmínek, je vyvolána obslužná rutina neplatného parametru, jak je popsáno v tématu [ověřování parametru](../../c-runtime-library/parameter-validation.md) . Pokud provádění může pokračovat, tyto funkce nastaví **errno** na **EINVAL** a vrátí **EINVAL**.
 
-Pokud některý z vyrovnávací paměti je příliš krátká pro uchování výsledku, tyto funkce, zrušte zaškrtnutí políčka vyrovnávací paměti na prázdné řetězce, nastavte **errno** k **ERANGE**a vrátí **ERANGE**.
+Pokud je některá z vyrovnávacích pamětí příliš krátká pro výsledek, tyto funkce vymažou všechny vyrovnávací paměti do prázdných řetězců, nastaví **errno** na **ERANGE**a vrátí **ERANGE**.
 
 ## <a name="remarks"></a>Poznámky
 
-**_Splitpath_s –** funkce rozdělí cestu do jeho čtyři součásti. **_splitpath_s –** automaticky zpracovává argumenty vícebajtových řetězců znaků podle potřeby, rozpozná vícebajtové znakové sekvence podle vícebajtové znakové stránky, která aktuálně používán. **_wsplitpath_s –** je verze širokého znaku **_splitpath_s –**; argumenty, které mají **_wsplitpath_s –** jsou širokoznaké řetězce. Tyto funkce chovají identicky jinak
+Funkce **_splitpath_s** přerušuje cestu na čtyři součásti. **_splitpath_s** automaticky zpracovává argumenty vícebajtového řetězce znaků podle potřeby a rozpozná vícebajtové znakové sekvence podle vícebajtové znakové stránky, která se právě používá. **_wsplitpath_s** je **_splitpath_s**verze s velkým znakem; argumenty **_wsplitpath_s** jsou řetězce s libovolným znakem. Tyto funkce se chovají identicky jinak.
 
 ### <a name="generic-text-routine-mappings"></a>Mapování rutin obecného textu
 
-|Rutina TCHAR.H|_UNICODE a _MBCS nejsou definovány|_MBCS definováno|_UNICODE definováno|
+|Rutina TCHAR.H|_UNICODE & _MBCS nejsou definovány.|_MBCS definováno|_UNICODE definováno|
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_tsplitpath_s**|**_splitpath_s**|**_splitpath_s**|**_wsplitpath_s**|
 
-Jednotlivé komponenty úplná cesta je uložena v samostatných vyrovnávací paměti; konstanty manifestu **_MAX_DRIVE**, **_MAX_DIR**, **_MAX_FNAME**, a **_MAX_EXT** (definované v STDLIB. H) zadejte maximální povolenou velikost pro každou komponentu souboru. Komponenty soubory větší než odpovídající konstant manifestu způsobit poškození haldy.
+Každá součást úplné cesty je uložena v samostatné vyrovnávací paměti; v manifestu jsou konstanty **_MAX_DRIVE**, **_MAX_DIR**, **_MAX_FNAME**a **_MAX_EXT** (definované v Stdlib. H) zadejte maximální povolenou velikost pro jednotlivé součásti souborů. Součásti souboru větší než odpovídající konstanty manifestu způsobují poškození haldy.
 
 V následující tabulce jsou uvedeny hodnoty konstant manifestu.
 
-|Název|Value|
+|Name|Value|
 |----------|-----------|
 |_MAX_DRIVE|3|
 |_MAX_DIR|256|
 |_MAX_FNAME|256|
 |_MAX_EXT|256|
 
-Pokud je úplná cesta neobsahuje součásti (například název_souboru), **_splitpath_s –** přiřadí prázdný řetězec odpovídající vyrovnávací paměti.
+Pokud úplná cesta neobsahuje komponentu (například filename), **_splitpath_s** přiřadí do odpovídající vyrovnávací paměti prázdný řetězec.
 
-V jazyce C++ je použití těchto funkcí zjednodušeno díky přetížení šablon; přetížení mohou odvodit délku vyrovnávací paměti automaticky, takže odpadá nutnost určit velikost argumentu. Další informace najdete v tématu [přetížení zabezpečení šablony](../../c-runtime-library/secure-template-overloads.md).
+V C++systému je použití těchto funkcí zjednodušeno díky přetížení šablon; přetížení mohou odvodit délku vyrovnávací paměti automaticky a eliminují nutnost zadat argument Size. Další informace najdete v tématu [přetížení zabezpečení šablon](../../c-runtime-library/secure-template-overloads.md).
 
-Ladicí verze těchto funkcí nejprve naplní vyrovnávací paměť hodnotou 0xFD. Chcete-li toto chování zakázat, použijte [_crtsetdebugfillthreshold –](crtsetdebugfillthreshold.md).
+Ladicí verze těchto funkcí nejprve naplní vyrovnávací paměť pomocí 0xFD. Pokud chcete toto chování zakázat, použijte [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md).
 
 ## <a name="requirements"></a>Požadavky
 
 |Rutina|Požadovaný hlavičkový soubor|
 |-------------|---------------------|
 |**_splitpath_s**|\<stdlib.h>|
-|**_wsplitpath_s**|\<stdlib.h > nebo \<wchar.h >|
+|**_wsplitpath_s**|\<Stdlib. h > nebo \<WCHAR. h >|
 
-Další informace o kompatibilitě, naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Příklad
 
-Podívejte se na příklad pro [_makepath_s – _wmakepath_s –](makepath-s-wmakepath-s.md).
+Podívejte se na příklad pro [_makepath_s, _wmakepath_s](makepath-s-wmakepath-s.md).
 
 ## <a name="see-also"></a>Viz také:
 

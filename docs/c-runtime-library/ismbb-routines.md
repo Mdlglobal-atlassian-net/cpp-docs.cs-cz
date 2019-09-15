@@ -1,7 +1,7 @@
 ---
 title: _ismbb – rutiny
 ms.date: 11/04/2016
-apilocation:
+api_location:
 - msvcr110.dll
 - msvcrt.dll
 - msvcr80.dll
@@ -9,7 +9,10 @@ apilocation:
 - msvcr120.dll
 - msvcr90.dll
 - msvcr100.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _ismbb
 - ismbb
@@ -17,16 +20,16 @@ helpviewer_keywords:
 - ismbb routines
 - _ismbb routines
 ms.assetid: d63c232e-3fe4-4844-aafd-2133846ece4b
-ms.openlocfilehash: d70604ce71d74bd73a3fea1b99beaf93f052e344
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 374c78ca222f9c63f6b37f26d4cf3a00f48f845e
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62343014"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70944533"
 ---
-# <a name="ismbb-routines"></a>_ismbb – rutiny
+# <a name="_ismbb-routines"></a>_ismbb – rutiny
 
-Testuje danou celočíselnou hodnotu `c` na určitou podmínku, pomocí aktuálního národního prostředí nebo zadané kategorie stavu převodu LC_CTYPE.
+Testuje zadanou celočíselnou hodnotu `c` pro konkrétní podmínku pomocí aktuálního národního prostředí nebo zadané kategorie stavu konverze LC_CTYPE.
 
 |||
 |-|-|
@@ -39,30 +42,30 @@ Testuje danou celočíselnou hodnotu `c` na určitou podmínku, pomocí aktuáln
 
 ## <a name="remarks"></a>Poznámky
 
-Každá rutina v sadě `_ismbb` testuje danou celočíselnou hodnotu `c` na určitou podmínku. Výsledek testu závisí na vícebajtové znakové stránky, který je v platnosti. Standardně je vícebajtová znaková stránka nastavena na ANSI znakovou stránku, která se získá z operačního systému při spuštění programu. Můžete použít [_getmbcp](../c-runtime-library/reference/getmbcp.md) se dotázat na vícebajtové znakové stránce, která se používá, nebo [_setmbcp](../c-runtime-library/reference/setmbcp.md) ho změnit.
+Každá rutina v `_ismbb` rodině testuje danou celočíselnou hodnotu `c` pro konkrétní podmínku. Výsledek testu závisí na vícebajtové znakové stránce, která je v platnosti. Ve výchozím nastavení je Vícebajtová znaková stránka nastavena na znakovou stránku ANSI, která se získá z operačního systému při spuštění programu. [_Getmbcp](../c-runtime-library/reference/getmbcp.md) můžete použít k dotazování na vícebajtovou znakovou stránku, která se používá, nebo [_setmbcp](../c-runtime-library/reference/setmbcp.md) ji změnit.
 
-Výstupní hodnota je ovlivněna nastavením `LC_CTYPE` kategorie nastavení národního prostředí; Další informace najdete v článku [setlocale _wsetlocale](../c-runtime-library/reference/setlocale-wsetlocale.md). Verze těchto funkcí, které nemají **_l** používají aktuální národní prostředí pro toto chování závislé na národním prostředí; ty, které mají **_l** přípona jsou identické, s výjimkou, že místo toho se použijte parametr národního prostředí, které je předáno.
+Výstupní hodnota je ovlivněna nastavením `LC_CTYPE` kategorie národního prostředí; další informace naleznete v tématu [setlocale, _wsetlocale](../c-runtime-library/reference/setlocale-wsetlocale.md). Verze těchto funkcí, které nemají příponu **_l** , používají aktuální národní prostředí pro toto chování závislé na národním prostředí; verze s příponou **_l** jsou stejné s tím rozdílem, že místo toho používají parametr národního prostředí, který je předán.
 
-Rutiny v `_ismbb` řady testování dané celé číslo `c` následujícím způsobem.
+Rutiny v `_ismbb` rodině testují dané celé číslo `c` následujícím způsobem.
 
-|Rutina|Testovací podmínky bajtu|
+|Rutina|Podmínka testu bajtů|
 |-------------|-------------------------|
 |[_ismbbalnum](../c-runtime-library/reference/ismbbalnum-ismbbalnum-l.md)|`isalnum` &#124;&#124; `_ismbbkalnum`.|
 |[_ismbbalpha](reference/ismbbalpha-ismbbalpha-l.md)|`isalpha` &#124;&#124; `_ismbbkalnum`.|
 |[_ismbbblank](../c-runtime-library/reference/ismbbblank-ismbbblank-l.md)|`isblank`|
-|[_ismbbgraph](../c-runtime-library/reference/ismbbgraph-ismbbgraph-l.md)|Stejné jako `_ismbbprint`, ale `_ismbbgraph` neobsahuje znak mezery (0x20).|
-|[_ismbbkalnum](../c-runtime-library/reference/ismbbkalnum-ismbbkalnum-l.md)|Ne-ASCII textový symbol jiný než interpunkce. Například pouze v kódové stránce 932 `_ismbbkalnum` testy pro alfanumerické znaky katakana.|
-|[_ismbbkana](../c-runtime-library/reference/ismbbkana-ismbbkana-l.md)|Katakana (0xA1 – 0xDF). Specifické pro znakovou stránku 932.|
-|[_ismbbkprint](../c-runtime-library/reference/ismbbkprint-ismbbkprint-l.md)|Ne-ASCII text nebo ne ASCII interpunkční symbol. Například pouze v kódové stránce 932 `_ismbbkprint` testy pro alfanumerické znaky katakana nebo interpunkční znaky katakana (rozsah: 0xA1 – 0xDF).|
-|[_ismbbkpunct](../c-runtime-library/reference/ismbbkpunct-ismbbkpunct-l.md)|Ne-ASCII interpunkce. Například pouze v kódové stránce 932 `_ismbbkpunct` interpunkční znaménka katakana.|
-|[_ismbblead](../c-runtime-library/reference/ismbblead-ismbblead-l.md)|První bajt vícebajtového znaku. Například v kódové stránce 932 pouze platné rozsahy jsou 0x81 – 0x9F, 0xE0 – 0xFC.|
+|[_ismbbgraph](../c-runtime-library/reference/ismbbgraph-ismbbgraph-l.md)|Stejné jako `_ismbbprint`, ale `_ismbbgraph` nezahrnuje znak mezery (0x20).|
+|[_ismbbkalnum](../c-runtime-library/reference/ismbbkalnum-ismbbkalnum-l.md)|Jiný textový symbol než ASCII jiný než interpunkční znaménko. Například pouze `_ismbbkalnum` v kódové stránce 932 testy pro znaky Katakana.|
+|[_ismbbkana](../c-runtime-library/reference/ismbbkana-ismbbkana-l.md)|Katakana (0xA1-0xDF). Specifické pro znakovou stránku 932.|
+|[_ismbbkprint](../c-runtime-library/reference/ismbbkprint-ismbbkprint-l.md)|Text jiný než ASCII nebo symbol interpunkce mimo ASCII. Například pouze `_ismbbkprint` v kódové stránce 932 testy pro znaky Katakana a interpunkční znaménka Katakana (rozsah: 0xA1-0xDF).|
+|[_ismbbkpunct](../c-runtime-library/reference/ismbbkpunct-ismbbkpunct-l.md)|Interpunkční znaménka jiné než ASCII. Například pouze `_ismbbkpunct` v kódové stránce 932 testy pro interpunkci Katakana.|
+|[_ismbblead](../c-runtime-library/reference/ismbblead-ismbblead-l.md)|První bajt vícebajtového znaku. Například v kódové stránce 932 jsou platné rozsahy 0x81-0x9F, 0xE0-0xFC.|
 |[_ismbbprint](../c-runtime-library/reference/ismbbprint-ismbbprint-l.md)|`isprint` &#124;&#124; `_ismbbkprint`. **ismbbprint** obsahuje znak mezery (0x20).|
 |[_ismbbpunct](../c-runtime-library/reference/ismbbpunct-ismbbpunct-l.md)|`ispunct` &#124;&#124; `_ismbbkpunct`.|
-|[_ismbbtrail](../c-runtime-library/reference/ismbbtrail-ismbbtrail-l.md)|Druhý bajt vícebajtového znaku. Například v kódové stránce 932 pouze platné rozsahy jsou 0x40 – 0x7E, 0x80 – 0xEC.|
+|[_ismbbtrail](../c-runtime-library/reference/ismbbtrail-ismbbtrail-l.md)|Druhý bajt vícebajtového znaku. Například v kódové stránce 932 jsou platné rozsahy 0x40-0x7E, 0x80-0xEC.|
 
-Následující tabulka zobrazuje hodnoty ORed, které tvoří testovací podmínky pro tyto rutiny. Konstanty manifestu `_BLANK`, `_DIGIT`, `_LOWER`, `_PUNCT`, a `_UPPER` jsou definovány v souboru Ctype.h.
+V následující tabulce jsou uvedeny hodnoty ORed, které tvoří testovací podmínky pro tyto rutiny. Konstanty `_BLANK`manifestu `_DIGIT` ,`_PUNCT`,, a`_UPPER` jsou definovány v CType. h. `_LOWER`
 
-|Rutina|_BLANK|_DIGIT|NIŽŠÍ|_PUNCT|HORNÍ|Non-<br /><br /> ASCII<br /><br /> text|Non-<br /><br /> ASCII<br /><br /> punct|
+|Rutina|_BLANK|_DIGIT|MALÝM|_PUNCT|UMÍSTIT|Bez<br /><br /> ASCII<br /><br /> text|Bez<br /><br /> ASCII<br /><br /> punct|
 |-------------|-------------|-------------|-----------|-------------|-----------|------------------------------|-------------------------------|
 |`_ismbbalnum`|—|x|x|—|x|x|—|
 |`_ismbbalpha`|—|—|x|—|x|x|—|
@@ -74,7 +77,7 @@ Následující tabulka zobrazuje hodnoty ORed, které tvoří testovací podmín
 |`_ismbbprint`|x|x|x|x|x|x|x|
 |`_ismbbpunct`|—|—|—|x|—|—|x|
 
-`_ismbb` Rutiny jsou implementovány jako funkce i makra. Další informace o způsobu volby některé implementace naleznete v tématu [doporučení k výběru mezi funkcemi a makry](../c-runtime-library/recommendations-for-choosing-between-functions-and-macros.md).
+`_ismbb` Rutiny jsou implementovány jako funkce i jako makra. Další informace o tom, jak zvolit jednu implementaci, najdete v tématu [doporučení pro výběr mezi funkcemi a makry](../c-runtime-library/recommendations-for-choosing-between-functions-and-macros.md).
 
 ## <a name="see-also"></a>Viz také:
 
